@@ -268,20 +268,20 @@ f1_keywords:
 - amp_short_vectors/Concurrency::graphics::uint_4::rba
 - amp_short_vectors/Concurrency::graphics::uint_4::set_yzx
 ms.assetid: 1cda9e2c-5970-4ced-ae54-d7ff3c6746f4
-ms.openlocfilehash: 413edb5c83dba465aff804658afc6931c7181e73
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: a795ed3c04f114b6e15d5d9161605988bab2778a
+ms.sourcegitcommit: a8ef52ff4a4944a1a257bdaba1a3331607fb8d0f
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62405441"
+ms.lasthandoff: 02/11/2020
+ms.locfileid: "77142411"
 ---
-# <a name="uint4-class"></a>uint_4, classe
+# <a name="uint_4-class"></a>uint_4, classe
 
-Représente un vecteur court de quatre entiers non signés.
+Représente un vecteur abrégé de quatre entiers non signés.
 
 ## <a name="syntax"></a>Syntaxe
 
-```
+```cpp
 class uint_4;
 ```
 
@@ -289,19 +289,19 @@ class uint_4;
 
 ### <a name="public-typedefs"></a>Typedefs publics
 
-|Nom|Description|
+|Name|Description|
 |----------|-----------------|
 |`value_type`||
 
 ### <a name="public-constructors"></a>Constructeurs publics
 
-|Nom|Description|
+|Name|Description|
 |----------|-----------------|
-|[uint_4 constructeur](#uint_4__ctor) |Surchargé. Par défaut constructeur initialise tous les éléments par 0.|
+|[Constructeur uint_4](#uint_4__ctor) |Surchargé. Le constructeur par défaut initialise tous les éléments avec 0.|
 
 ### <a name="public-methods"></a>M&#233;thodes publiques
 
-|Nom|Description|
+|Name|Description|
 |----------|-----------------|
 |uint_4::get_w||
 |uint_4::get_wx||
@@ -442,7 +442,7 @@ class uint_4;
 
 ### <a name="public-operators"></a>Op&#233;rateurs publics
 
-|Nom|Description|
+|Name|Description|
 |----------|-----------------|
 |uint_4::operator-||
 |uint_4::operator--||
@@ -455,13 +455,13 @@ class uint_4;
 
 ### <a name="public-constants"></a>Constantes publiques
 
-|Nom|Description|
+|Name|Description|
 |----------|-----------------|
-|[taille (constante)](#size)||
+|[taille, constante](#size)||
 
-### <a name="public-data-members"></a>Membres de données publics
+### <a name="public-data-members"></a>Membres de données publiques
 
-|Nom|Description|
+|Name|Description|
 |----------|-----------------|
 |uint_4::a||
 |uint_4::ab||
@@ -479,7 +479,7 @@ class uint_4;
 |uint_4::arbg||
 |uint_4::arg||
 |uint_4::argb||
-|uint_4::b||
+|uint_4 :: b||
 |uint_4::ba||
 |uint_4::bag||
 |uint_4::bagr||
@@ -495,7 +495,7 @@ class uint_4;
 |uint_4::brag||
 |uint_4::brg||
 |uint_4::brga||
-|uint_4::g||
+|uint_4 :: g||
 |uint_4::ga||
 |uint_4::gab||
 |uint_4::gabr||
@@ -543,23 +543,23 @@ class uint_4;
 |uint_4::wzxy||
 |uint_4::wzy||
 |uint_4::wzyx||
-|uint_4::x||
-|uint_4::xw||
-|uint_4::xwy||
+|uint_4 :: x||
+|uint_4 :: XW||
+|uint_4 :: xwy||
 |uint_4::xwyz||
 |uint_4::xwz||
 |uint_4::xwzy||
-|uint_4::xy||
+|uint_4 :: XY||
 |uint_4::xyw||
 |uint_4::xywz||
 |uint_4::xyz||
 |uint_4::xyzw||
 |uint_4::xz||
 |uint_4::xzw||
-|uint_4::xzwy||
+|uint_4 :: xzwy||
 |uint_4::xzy||
 |uint_4::xzyw||
-|uint_4::y||
+|uint_4 :: y||
 |uint_4::yw||
 |uint_4::ywx||
 |uint_4::ywxz||
@@ -576,39 +576,39 @@ class uint_4;
 |uint_4::yzx||
 |uint_4::yzxw||
 |uint_4::z||
-|uint_4::zw||
-|uint_4::zwx||
-|uint_4::zwxy||
-|uint_4::zwy||
-|uint_4::zwyx||
+|uint_4 :: ZW||
+|uint_4 :: zwx||
+|uint_4 :: zwxy||
+|uint_4 :: zwy||
+|uint_4 :: ZWYX||
 |uint_4::zx||
 |uint_4::zxw||
-|uint_4::zxwy||
+|uint_4 :: zxwy||
 |uint_4::zxy||
 |uint_4::zxyw||
-|uint_4::zy||
-|uint_4::zyw||
+|uint_4 :: ZY||
+|uint_4 :: Zyw||
 |uint_4::zywx||
-|uint_4::zyx||
+|uint_4 :: ZYX||
 |uint_4::zyxw||
 
 ## <a name="inheritance-hierarchy"></a>Hiérarchie d'héritage
 
 `uint_4`
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
-**En-tête :** amp_short_vectors.h
+**En-tête :** amp_short_vectors. h
 
-**Espace de noms :** Concurrency::graphics
+**Espace de noms :** Concurrency :: Graphics
 
-## <a name="uint_4__ctor"></a> uint_4
+## <a name="uint_4__ctor"></a>uint_4
 
-Par défaut constructeur initialise tous les éléments par 0.
+Le constructeur par défaut initialise tous les éléments avec 0.
 
 ### <a name="syntax"></a>Syntaxe
 
-```
+```cpp
 uint_4() restrict(amp,cpu);
 uint_4(
    unsigned int _V0,
@@ -639,31 +639,31 @@ explicit inline uint_4(
 ) restrict(amp,cpu);
 ```
 
-#### <a name="parameters"></a>Paramètres
+### <a name="parameters"></a>Paramètres
 
 *_V0*<br/>
-La valeur pour initialiser l’élément 0.
+Valeur pour initialiser l’élément 0.
 
 *_V1*<br/>
-La valeur pour initialiser l’élément 1.
+Valeur pour initialiser l’élément 1.
 
 *_V2*<br/>
-La valeur pour initialiser l’élément 2.
+Valeur pour initialiser l’élément 2.
 
 *_V3*<br/>
-La valeur pour initialiser l’élément 3.
+Valeur pour initialiser l’élément 3.
 
 *_V*<br/>
-La valeur pour l’initialisation.
+Valeur d’initialisation.
 
 *_Other*<br/>
-L’objet utilisé pour initialiser.
+Objet utilisé pour initialiser.
 
-## <a name="size"></a>size
+## <a name="size"></a>taille
 
 ### <a name="syntax"></a>Syntaxe
 
-```
+```cpp
 static const int size = 4;
 ```
 

@@ -11,112 +11,112 @@ f1_keywords:
 helpviewer_keywords:
 - message_processor class
 ms.assetid: 23afb052-daa7-44ed-bf24-d2513db748da
-ms.openlocfilehash: be6cb1c614a41919663a4cc063da66679556e498
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 88944b2d935eebd0e031be1431c2a0f4efa3d760
+ms.sourcegitcommit: a8ef52ff4a4944a1a257bdaba1a3331607fb8d0f
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62409945"
+ms.lasthandoff: 02/11/2020
+ms.locfileid: "77139469"
 ---
-# <a name="messageprocessor-class"></a>message_processor, classe
+# <a name="message_processor-class"></a>message_processor, classe
 
 La classe `message_processor` est la classe de base abstraite pour le traitement des objets `message`. Aucune garantie n'existe sur l'ordre des messages.
 
 ## <a name="syntax"></a>Syntaxe
 
-```
+```cpp
 template<class T>
 class message_processor;
 ```
 
-#### <a name="parameters"></a>Paramètres
+### <a name="parameters"></a>Paramètres
 
 *T*<br/>
-Le type de données de la charge utile dans les messages gérés par cet `message_processor` objet.
+Type de données de la charge utile au sein des messages gérés par cet objet `message_processor`.
 
 ## <a name="members"></a>Membres
 
 ### <a name="public-typedefs"></a>Typedefs publics
 
-|Nom|Description|
+|Name|Description|
 |----------|-----------------|
 |`type`|Alias de type pour `T`.|
 
 ### <a name="public-methods"></a>M&#233;thodes publiques
 
-|Nom|Description|
+|Name|Description|
 |----------|-----------------|
-|[async_send](#async_send)|En cas de substitution dans une classe dérivée, place de façon asynchrone des messages dans le bloc.|
-|[sync_send](#sync_send)|En cas de substitution dans une classe dérivée, place de façon synchrone des messages dans le bloc.|
-|[wait](#wait)|En cas de substitution dans une classe dérivée, attend que toutes les opérations asynchrones se termine.|
+|[async_send](#async_send)|En cas de substitution dans une classe dérivée, place les messages dans le bloc de manière asynchrone.|
+|[sync_send](#sync_send)|En cas de substitution dans une classe dérivée, place les messages dans le bloc de façon synchrone.|
+|[qu'](#wait)|En cas de substitution dans une classe dérivée, attend la fin de toutes les opérations asynchrones.|
 
 ### <a name="protected-methods"></a>Méthodes protégées
 
-|Nom|Description|
+|Name|Description|
 |----------|-----------------|
-|[process_incoming_message](#process_incoming_message)|En cas de substitution dans une classe dérivée, effectue le traitement de transfert de messages dans le bloc. Appelé à chaque fois qu’un nouveau message est ajouté et la file d’attente n’est pas vide.|
+|[process_incoming_message](#process_incoming_message)|En cas de substitution dans une classe dérivée, effectue le traitement en avant des messages dans le bloc. Appelée une fois chaque fois qu’un nouveau message est ajouté et que la file d’attente est vide.|
 
 ## <a name="inheritance-hierarchy"></a>Hiérarchie d'héritage
 
 `message_processor`
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
 **En-tête :** agents.h
 
 **Espace de noms :** concurrency
 
-##  <a name="async_send"></a> async_send
+## <a name="async_send"></a>async_send
 
-En cas de substitution dans une classe dérivée, place de façon asynchrone des messages dans le bloc.
+En cas de substitution dans une classe dérivée, place les messages dans le bloc de manière asynchrone.
 
-```
+```cpp
 virtual void async_send(_Inout_opt_ message<T>* _Msg) = 0;
 ```
 
 ### <a name="parameters"></a>Paramètres
 
 *_Msg*<br/>
-Un `message` objet à envoyer de façon asynchrone.
+Objet `message` à envoyer de façon asynchrone.
 
 ### <a name="remarks"></a>Notes
 
 Les implémentations de processeur doivent substituer cette méthode.
 
-##  <a name="process_incoming_message"></a> process_incoming_message
+## <a name="process_incoming_message"></a>process_incoming_message
 
-En cas de substitution dans une classe dérivée, effectue le traitement de transfert de messages dans le bloc. Appelé à chaque fois qu’un nouveau message est ajouté et la file d’attente n’est pas vide.
+En cas de substitution dans une classe dérivée, effectue le traitement en avant des messages dans le bloc. Appelée une fois chaque fois qu’un nouveau message est ajouté et que la file d’attente est vide.
 
-```
+```cpp
 virtual void process_incoming_message() = 0;
 ```
 
 ### <a name="remarks"></a>Notes
 
-Les implémentations de bloc de message doivent remplacer cette méthode.
+Les implémentations de bloc de message doivent substituer cette méthode.
 
-##  <a name="sync_send"></a> sync_send
+## <a name="sync_send"></a>sync_send
 
-En cas de substitution dans une classe dérivée, place de façon synchrone des messages dans le bloc.
+En cas de substitution dans une classe dérivée, place les messages dans le bloc de façon synchrone.
 
-```
+```cpp
 virtual void sync_send(_Inout_opt_ message<T>* _Msg) = 0;
 ```
 
 ### <a name="parameters"></a>Paramètres
 
 *_Msg*<br/>
-Un `message` objet à envoyer de façon synchrone.
+Objet `message` à envoyer de façon synchrone.
 
 ### <a name="remarks"></a>Notes
 
 Les implémentations de processeur doivent substituer cette méthode.
 
-##  <a name="wait"></a> attente
+## <a name="wait"></a>qu'
 
-En cas de substitution dans une classe dérivée, attend que toutes les opérations asynchrones se termine.
+En cas de substitution dans une classe dérivée, attend la fin de toutes les opérations asynchrones.
 
-```
+```cpp
 virtual void wait() = 0;
 ```
 

@@ -11,12 +11,12 @@ f1_keywords:
 helpviewer_keywords:
 - ScheduleGroup class
 ms.assetid: 86d380ff-f2e8-411c-b1a8-22bd3079824a
-ms.openlocfilehash: ce7734a1330f2d6e495565338879764482439d09
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 8686b5ef0906e3188a1e683d1190bbe6124cd19e
+ms.sourcegitcommit: a8ef52ff4a4944a1a257bdaba1a3331607fb8d0f
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62337542"
+ms.lasthandoff: 02/11/2020
+ms.locfileid: "77143266"
 ---
 # <a name="schedulegroup-class"></a>ScheduleGroup, classe
 
@@ -24,54 +24,54 @@ Représente une abstraction d'un groupe de planification. Les groupes de planifi
 
 ## <a name="syntax"></a>Syntaxe
 
-```
+```cpp
 class ScheduleGroup;
 ```
 
 ## <a name="members"></a>Membres
 
-### <a name="protected-constructors"></a>Constructeurs protégés
+### <a name="protected-constructors"></a>Constructeurs prot&#233;g&#233;s
 
-|Nom|Description|
+|Name|Description|
 |----------|-----------------|
 |[~ ScheduleGroup, destructeur](#dtor)||
 
 ### <a name="public-methods"></a>M&#233;thodes publiques
 
-|Nom|Description|
+|Name|Description|
 |----------|-----------------|
 |[Id](#id)|Retourne un identificateur pour le groupe de planification qui est unique dans le planificateur auquel le groupe appartient.|
-|[Référence](#reference)|Incrémente le décompte de références de groupe de planification.|
-|[Version release](#release)|Décrémente le planificateur groupe nombre de références.|
-|[ScheduleTask](#scheduletask)|Planifie une tâche légère dans le groupe de planification.|
+|[Référence](#reference)|Incrémente le nombre de références du groupe de planification.|
+|[Version release](#release)|Décrémente le nombre de références de groupe du planificateur.|
+|[ScheduleTask,](#scheduletask)|Planifie une tâche légère dans le groupe de planification.|
 
 ## <a name="inheritance-hierarchy"></a>Hiérarchie d'héritage
 
 `ScheduleGroup`
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
-**En-tête :** concrt.h
+**En-tête :** concrt. h
 
 **Espace de noms :** concurrency
 
-##  <a name="id"></a> Id
+## <a name="id"></a>Identifi
 
 Retourne un identificateur pour le groupe de planification qui est unique dans le planificateur auquel le groupe appartient.
 
-```
+```cpp
 virtual unsigned int Id() const = 0;
 ```
 
 ### <a name="return-value"></a>Valeur de retour
 
-Un identificateur pour le groupe de planification qui est unique dans le planificateur auquel le groupe appartient.
+Identificateur du groupe de planification qui est unique dans le planificateur auquel le groupe appartient.
 
-##  <a name="operator_delete"></a> opérateur delete
+## <a name="operator_delete"></a>opérateur delete
 
-Un `ScheduleGroup` détruit en interne par le runtime lorsque toutes les références externes à celle-ci sont libérés. Il ne peut pas être supprimé explicitement.
+Un objet `ScheduleGroup` est détruit en interne par le runtime lorsque toutes les références externes à celui-ci sont libérées. Elle ne peut pas être supprimée explicitement.
 
-```
+```cpp
 void operator delete(
     void* _PObject);
 
@@ -87,51 +87,51 @@ const char *,
 *_PObject*<br/>
 Pointeur vers l’objet à supprimer.
 
-##  <a name="reference"></a> Référence
+## <a name="reference"></a>Faire
 
-Incrémente le décompte de références de groupe de planification.
+Incrémente le nombre de références du groupe de planification.
 
-```
+```cpp
 virtual unsigned int Reference() = 0;
 ```
 
 ### <a name="return-value"></a>Valeur de retour
 
-Le décompte de références qui vient d’être incrémentée.
+Nombre de références récemment incrémentées.
 
 ### <a name="remarks"></a>Notes
 
-Cela est généralement utilisé pour gérer la durée de vie du groupe de planification pour la composition. Lorsque le décompte de références d’un groupe de planification atteint zéro, le groupe de planification est supprimé par le runtime. Un groupe de planification créé à l’aide du [CurrentScheduler::CreateScheduleGroup](currentscheduler-class.md#createschedulegroup) (méthode), ou le [Scheduler::CreateScheduleGroup](scheduler-class.md#createschedulegroup) méthode commence par un décompte de références d’un.
+Cette valeur est généralement utilisée pour gérer la durée de vie du groupe de planification pour la composition. Lorsque le nombre de références d’un groupe de planifications est égal à zéro, le groupe de planification est supprimé par le Runtime. Un groupe de planification créé à l’aide de la méthode [CurrentScheduler :: CreateScheduleGroup](currentscheduler-class.md#createschedulegroup) ou de la méthode [Scheduler :: CreateScheduleGroup](scheduler-class.md#createschedulegroup) démarre avec un décompte de références d’un.
 
-##  <a name="release"></a> Mise en production
+## <a name="release"></a>3/05
 
-Décrémente le planificateur groupe nombre de références.
+Décrémente le nombre de références de groupe du planificateur.
 
-```
+```cpp
 virtual unsigned int Release() = 0;
 ```
 
 ### <a name="return-value"></a>Valeur de retour
 
-Le décompte de références qui vient d’être décrémentée.
+Le décompte de références qui vient d’être décrémenté.
 
 ### <a name="remarks"></a>Notes
 
-Cela est généralement utilisé pour gérer la durée de vie du groupe de planification pour la composition. Lorsque le décompte de références d’un groupe de planification atteint zéro, le groupe de planification est supprimé par le runtime. Après avoir appelé la `Release` (méthode) le nombre de fois pour supprimer la création de référence nombre ainsi que les références supplémentaires placés à l’aide de la `Reference` (méthode), vous ne pourrez pas utiliser le groupe de planification. Cela entraînerait un comportement non défini.
+Cette valeur est généralement utilisée pour gérer la durée de vie du groupe de planification pour la composition. Lorsque le nombre de références d’un groupe de planifications est égal à zéro, le groupe de planification est supprimé par le Runtime. Une fois que vous avez appelé la méthode `Release` le nombre de fois spécifié pour supprimer le décompte de références de création et toute autre référence placée à l’aide de la méthode `Reference`, vous ne pouvez plus utiliser le groupe de planification. Cela entraînera un comportement indéfini.
 
-Un groupe de planification est associé à une instance de planificateur spécifique. Vous devez vous assurer que toutes les références au groupe de planification sont libérées avant toutes les références au planificateur, car ce dernier pourrait entraîner la destruction du planificateur. Permet de faire sinon les résultats dans un comportement non défini.
+Un groupe de planification est associé à une instance de planificateur particulière. Vous devez vous assurer que toutes les références au groupe de planification sont libérées avant que toutes les références au planificateur ne soient libérées, car ce dernier peut entraîner la destruction du planificateur. Sinon, le comportement n’est pas défini.
 
-##  <a name="dtor"></a> ~ScheduleGroup
+## <a name="dtor"></a>~ ScheduleGroup
 
-```
+```cpp
 virtual ~ScheduleGroup();
 ```
 
-##  <a name="scheduletask"></a> ScheduleTask
+## <a name="scheduletask"></a>ScheduleTask,
 
 Planifie une tâche légère dans le groupe de planification.
 
-```
+```cpp
 virtual void ScheduleTask(
     TaskProc _Proc,
     _Inout_opt_ void* _Data) = 0;
@@ -143,11 +143,11 @@ virtual void ScheduleTask(
 Pointeur vers la fonction à exécuter pour exécuter le corps de la tâche légère.
 
 *_Data*<br/>
-Un pointeur void vers les données qui seront passées en tant que paramètre au corps de la tâche.
+Pointeur void vers les données qui seront passées en tant que paramètre au corps de la tâche.
 
 ### <a name="remarks"></a>Notes
 
-Appel de la `ScheduleTask` méthode place implicitement un décompte de références sur le groupe de planification qui est supprimé par le runtime à un moment approprié après l’exécution de la tâche.
+L’appel de la méthode `ScheduleTask` place implicitement un décompte de références sur le groupe de planification qui est supprimé par le runtime à un moment approprié après l’exécution de la tâche.
 
 ## <a name="see-also"></a>Voir aussi
 

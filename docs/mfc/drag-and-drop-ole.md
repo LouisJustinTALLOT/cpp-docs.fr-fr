@@ -1,6 +1,7 @@
 ---
-title: Glisser-déplacer (OLE)
-ms.date: 11/04/2016
+title: OLE (glisser-déposer)
+description: Vue d’ensemble de la fonctionnalité glisser-déplacer OLE Microsoft Foundation Classes (MFC), comment implémenter une source de dépôt, une cible de déplacement et comment personnaliser le glisser-déplacer.
+ms.date: 02/09/2020
 helpviewer_keywords:
 - OLE server applications [MFC], drag and drop
 - drag and drop [MFC]
@@ -9,36 +10,86 @@ helpviewer_keywords:
 - drag and drop [MFC], about OLE drag and drop
 - OLE drag and drop [MFC]
 ms.assetid: a4595350-ca06-4400-88a1-f0175c76b77b
-ms.openlocfilehash: 98bd58745e56a62bf5700e9b5fe4963a7b584953
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: c601e8f0324510346513dc8da48dd1a83c95bceb
+ms.sourcegitcommit: a8ef52ff4a4944a1a257bdaba1a3331607fb8d0f
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62405922"
+ms.lasthandoff: 02/11/2020
+ms.locfileid: "77127866"
 ---
-# <a name="drag-and-drop-ole"></a>Glisser-déplacer (OLE)
+# <a name="ole-drag-and-drop"></a>OLE (glisser-déposer)
 
-La fonctionnalité glisser-déposer de l’OLE est essentiellement un raccourci pour copier et coller des données. Lorsque vous utilisez le Presse-papiers pour copier et coller des données, un certain nombre d'étapes sont nécessaires. Vous sélectionnez les données, cliquez sur **couper** ou **copie** à partir de la **modifier** menu, déplacement vers le fichier de destination, la fenêtre ou l’application, placez le curseur dans l’emplacement souhaité, puis cliquez sur **Coller** à partir de la **modifier** menu.
+La fonctionnalité glisser-déposer de l’OLE est essentiellement un raccourci pour copier et coller des données. Lorsque vous utilisez le Presse-papiers pour copier et coller des données, un certain nombre d'étapes sont nécessaires. Sélectionnez les données, puis choisissez **couper** ou **copier** dans le menu **Edition** . Ensuite, vous accédez à l’application ou à la fenêtre de destination et placez le curseur à l’emplacement cible. Enfin, vous choisissez **modifier** > **coller** dans le menu.
 
-La fonction Glisser-déplacer OLE est différente du mécanisme Glisser-déplacer du gestionnaire de fichiers, qui ne peut gérer que les noms de fichiers et est conçu spécifiquement pour transmettre les noms de fichiers aux applications. Cette fonction est beaucoup plus générale. Vous pouvez ainsi faire glisser toutes les données qui peuvent être placées dans le Presse-papiers.
+La fonctionnalité glisser-déplacer OLE est différente du mécanisme de glisser-déplacer du gestionnaire de fichiers. Le gestionnaire de fichiers peut uniquement gérer les noms de fichiers et est conçu spécifiquement pour transmettre les noms de fichiers aux applications. Le glisser-déplacer dans OLE est bien plus général. Vous pouvez ainsi faire glisser toutes les données qui peuvent être placées dans le Presse-papiers.
 
-Lorsque vous utilisez la fonction Glisser-déplacer OLE, vous supprimez deux étapes du processus. Sélectionnez les données de la fenêtre source (la "source de dépôt"), faites-la glisser vers la destination souhaitée (la "cible de dépôt"), puis déposez-la en relâchant le bouton de la souris. L'opération permet de se passer des menus ; elle est plus rapide que la séquence copier/coller. Le seul impératif est que la source de déplacement et la cible de dépôt doivent être ouvertes et au moins partiellement visibles à l'écran.
+Lorsque vous utilisez la fonction Glisser-déplacer OLE, vous supprimez deux étapes du processus. Vous sélectionnez les données dans la fenêtre source (la « source de dépôt »), puis vous les faites glisser vers la destination (la « cible de déplacement »). Vous la déposez en relâchant le bouton de la souris. L’opération élimine le besoin de menus et est plus rapide que la séquence de copie/collage. Il n’existe qu’une seule exigence : la source de dépôt et la cible de dépôt doivent être ouvertes et au moins partiellement visibles à l’écran.
 
-La fonction Glisser-déplacer OLE vous permet de transférer des données d'un emplacement à un autre au sein d'un document, entre des documents, ou entre des applications. Elle peut être implémentée dans un conteneur ou une application serveur, et toute application peut être une source de dépôt, une cible de dépôt, ou les deux. Si une application prend à la fois en charge la source de déplacement et la cible de dépôt, la fonction Glisser-déplacer est activée entre les fenêtres enfants, ou dans une fenêtre. Cette fonctionnalité facilite l’utilisation de votre application.
+À l’aide de la fonction glisser-déplacer OLE, les données peuvent être transférées facilement d’un emplacement à un autre : dans un document, entre différents documents ou entre des applications. Elle peut être implémentée dans un conteneur ou une application serveur. Toute application peut être une source de dépôt, une cible de dépôt, ou les deux. Si une application implémente la prise en charge de la source de dépôt et de la cible de dépôt, vous pouvez effectuer un glisser-déplacer entre les fenêtres enfants, ou dans une fenêtre. Cette fonctionnalité rend votre application beaucoup plus facile à utiliser.
 
-Si vous souhaitez uniquement utiliser les fonctionnalités de glisser-déplacer OLE, consultez [glisser -déplacer : Personnalisation](../mfc/drag-and-drop-customizing.md). Vous pouvez utiliser les techniques expliquées dans cet article pour créer des sources de déplacement d'applications autres que OLE. L’article [glisser -déplacer : Implémentation d’une cible de dépôt](../mfc/drag-and-drop-implementing-a-drop-target.md) décrit comment implémenter la prise en charge de la cible de dépôt de OLE et applications non-OLE. Il sera également utile d’examiner les exemples OLE MFC [OCLIENT](../overview/visual-cpp-samples.md) et [HIERSVR](../overview/visual-cpp-samples.md).
+Les articles sur les [objets de données et les sources de données (OLE)](../mfc/data-objects-and-data-sources-ole.md) expliquent comment implémenter le transfert de données dans vos applications. Il est également utile d’examiner les exemples OLE MFC [OCLIENT](../overview/visual-cpp-samples.md) et [HIERSVR](../overview/visual-cpp-samples.md).
 
-Si vous n’avez pas lu la [objets de données et Sources de données (OLE)](../mfc/data-objects-and-data-sources-ole.md) famille d’articles, vous souhaiterez faire maintenant. Ces articles décrivent les aspects fondamentaux du transfert de données, ainsi que leur implémentation dans vos applications.
+## <a name="implement-a-drop-source"></a>Implémenter une source de dépôt
 
-Pour plus d'informations sur la fonction Glisser-déplacer, consultez les rubriques suivantes :
+Pour faire en sorte que votre application fournisse des données à une opération de glisser-déplacer, vous devez implémenter une source de déplacement. L’implémentation de base d’une source de déplacement est relativement simple. La première étape consiste à déterminer les événements qui commencent une opération glisser. Les instructions d’interface utilisateur recommandées définissent le début d’une opération glisser comme lorsqu’un événement **WM_LBUTTONDOWN** se produit sur un point à l’intérieur de certaines données sélectionnées. Les exemples OLE MFC [OCLIENT](../overview/visual-cpp-samples.md) et [HIERSVR](../overview/visual-cpp-samples.md) suivent ces instructions.
 
-- [Glisser-déposer : Implémentation d’une source de déplacement](../mfc/drag-and-drop-implementing-a-drop-source.md)
+Si votre application est un conteneur et que les données sélectionnées sont un objet lié ou incorporé de type `COleClientItem`, appelez sa fonction membre `DoDragDrop`. Sinon, construisez un objet `COleDataSource`, initialisez-le avec la sélection et appelez la fonction membre `DoDragDrop` de l’objet source de données. Si votre application est un serveur, utilisez `COleServerItem::DoDragDrop`. Pour plus d’informations sur la personnalisation du comportement de glisser-déplacer standard, consultez la section [personnaliser le glisser-déplacer](#customize-drag-and-drop).
 
-- [Glisser-déposer : Implémentation d’une cible de déplacement](../mfc/drag-and-drop-implementing-a-drop-target.md)
+Si `DoDragDrop` retourne **DROPEFFECT_MOVE**, supprimez immédiatement les données sources du document source. Aucune autre valeur de retour de `DoDragDrop` n’a d’effet sur une source de dépôt.
 
-- [Glisser-déposer : Personnalisation](../mfc/drag-and-drop-customizing.md)
+Pour plus d’informations, consultez objets de données [OLE et sources de données : création et destruction](../mfc/data-objects-and-data-sources-creation-and-destruction.md) , [objets de données OLE et sources de données : manipulation](../mfc/data-objects-and-data-sources-manipulation.md)\.
+
+## <a name="implement-a-drop-target"></a>Implémenter une cible de déplacement
+
+Il faut un peu plus de travail pour implémenter une cible de déplacement qu’une source de déplacement, mais cela reste relativement simple.
+
+### <a name="to-implement-an-ole-drop-target"></a>Pour implémenter une cible de déplacement OLE
+
+1. Si ce n’est déjà fait, ajoutez un appel à `AfxOleInit` dans la fonction membre `InitInstance` de votre application. Cet appel est requis pour initialiser les bibliothèques OLE.
+
+1. Ajoutez une variable membre à chaque vue de l’application que vous souhaitez utiliser comme cible de dépôt. Cette variable membre doit être de type `COleDropTarget` ou une classe dérivée de celle-ci.
+
+1. À partir de la fonction de votre classe d’affichage qui gère le message de **WM_CREATE** (généralement `OnCreate`), appelez la fonction membre `Register` de la nouvelle variable membre. `Revoke` est appelée automatiquement pour vous lorsque votre vue est détruite.
+
+1. Substituez les fonctions suivantes. Si vous souhaitez obtenir le même comportement dans l’ensemble de votre application, substituez ces fonctions dans votre classe d’affichage. Si vous souhaitez modifier le comportement dans les cas isolés ou si vous souhaitez activer la suppression sur des fenêtres non`CView`, substituez ces fonctions dans votre classe dérivée de `COleDropTarget`.
+
+   | Écraser | Pour autoriser |
+   | -------- | -------- |
+   | `OnDragEnter` | Supprimer les opérations à effectuer dans la fenêtre. Appelé lorsque le curseur entre en première place dans la fenêtre. |
+   | `OnDragLeave` | Comportement spécial lorsque l’opération glisser quitte la fenêtre spécifiée. |
+   | `OnDragOver` | Supprimer les opérations à effectuer dans la fenêtre. Appelé lorsque le curseur est glissé dans la fenêtre. |
+   | `OnDrop` | Gestion des données déplacées dans la fenêtre spécifiée. |
+   | `OnScrollBy` | Comportement spécial pour lorsque le défilement est nécessaire dans la fenêtre cible. |
+
+Consultez MAINVIEW. CPP qui fait partie de l’exemple MFC OLE [OCLIENT](../overview/visual-cpp-samples.md) pour obtenir un exemple de la façon dont ces fonctions fonctionnent ensemble.
+
+Pour plus d’informations, consultez objets de données [OLE et sources de données : création et destruction](../mfc/data-objects-and-data-sources-creation-and-destruction.md) , [objets de données OLE et sources de données : manipulation](../mfc/data-objects-and-data-sources-manipulation.md)\.
+
+## <a name="customize-drag-and-drop"></a>Personnaliser le glisser-déplacer
+
+L’implémentation par défaut de la fonctionnalité de glisser-déplacer est suffisante pour la plupart des applications. Toutefois, certaines applications peuvent vous obliger à modifier ce comportement standard. Cette section explique les étapes nécessaires à la modification de ces paramètres par défaut. Vous pouvez utiliser cette technique pour créer des applications qui ne prennent pas en charge les documents composés dans des sources de dépôt.
+
+Si vous personnalisez le comportement de glisser-déplacer OLE standard ou si vous avez une application non-OLE, vous devez créer un objet `COleDataSource` pour contenir les données. Lorsque l’utilisateur démarre une opération de glisser-déplacer, votre code doit appeler la fonction `DoDragDrop` à partir de cet objet plutôt qu’à partir d’autres classes qui prennent en charge les opérations de glisser-déplacer.
+
+Si vous le souhaitez, vous pouvez créer un objet `COleDropSource` pour contrôler la suppression et remplacer certaines de ses fonctions selon le type de comportement que vous souhaitez modifier. Cet objet source Drop est ensuite passé à `COleDataSource::DoDragDrop` pour modifier le comportement par défaut de ces fonctions. Ces différentes options permettent de bénéficier d’une grande flexibilité dans la façon dont vous prenez en charge les opérations de glisser-déplacer dans votre application. Pour plus d’informations sur les sources de données, consultez l’article [objets de données et sources de données (OLE)](../mfc/data-objects-and-data-sources-ole.md).
+
+Vous pouvez substituer les fonctions suivantes pour personnaliser les opérations de glisser-déplacer :
+
+| Écraser | Pour personnaliser |
+| -------- | ------------ |
+| `OnBeginDrag` | Comment l’opération glisser commence après l’appel de `DoDragDrop`. |
+| `GiveFeedback` | Commentaires visuels, tels que l’apparence du curseur, pour différents résultats de dépôt. |
+| `QueryContinueDrag` | Fin d’une opération de glisser-déplacer. Cette fonction vous permet de vérifier les États des touches de modification pendant l’opération glisser. |
 
 ## <a name="see-also"></a>Voir aussi
 
-[OLE](../mfc/ole-in-mfc.md)<br/>
-[Objets de données et sources de données (OLE)](../mfc/data-objects-and-data-sources-ole.md)
+\ [OLE](../mfc/ole-in-mfc.md)
+[Objets de données et sources de données OLE](../mfc/data-objects-and-data-sources-ole.md)\
+[Objets de données OLE et sources de données : création et destruction](../mfc/data-objects-and-data-sources-creation-and-destruction.md)\
+[Objets de données et sources de données OLE : Manipulation](../mfc/data-objects-and-data-sources-manipulation.md)\
+[COleClientItem ::D odragdrop](../mfc/reference/coleclientitem-class.md#dodragdrop)\
+[COleDataSource, classe](../mfc/reference/coledatasource-class.md)\
+[COleDataSource ::D odragdrop](../mfc/reference/coledatasource-class.md#dodragdrop)\
+\ de la [classe COleDropSource](../mfc/reference/coledropsource-class.md)
+\ de la [classe COleDropTarget](../mfc/reference/coledroptarget-class.md)
+[CView :: OnDragLeave](../mfc/reference/cview-class.md#ondragleave)

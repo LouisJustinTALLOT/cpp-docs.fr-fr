@@ -8,20 +8,20 @@ f1_keywords:
 helpviewer_keywords:
 - improper_scheduler_detach class
 ms.assetid: 30132102-c900-4951-a470-b63b4e3aa2d2
-ms.openlocfilehash: 7e85ff8ea7ffb817c141094649cd39b8becccf53
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 2f5ad16893a898d4258762b25fea3d557607a3f8
+ms.sourcegitcommit: a8ef52ff4a4944a1a257bdaba1a3331607fb8d0f
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62262344"
+ms.lasthandoff: 02/11/2020
+ms.locfileid: "77141150"
 ---
-# <a name="improperschedulerdetach-class"></a>improper_scheduler_detach, classe
+# <a name="improper_scheduler_detach-class"></a>improper_scheduler_detach, classe
 
 Cette classe décrit une exception levée quand la méthode `CurrentScheduler::Detach` est appelée sur un contexte qui n'a pas été attaché à un planificateur à l'aide de la méthode `Attach` d'un objet `Scheduler`.
 
 ## <a name="syntax"></a>Syntaxe
 
-```
+```cpp
 class improper_scheduler_detach : public std::exception;
 ```
 
@@ -29,7 +29,7 @@ class improper_scheduler_detach : public std::exception;
 
 ### <a name="public-constructors"></a>Constructeurs publics
 
-|Nom|Description|
+|Name|Description|
 |----------|-----------------|
 |[improper_scheduler_detach](#ctor)|Surchargé. Construit un objet `improper_scheduler_detach`.|
 
@@ -39,17 +39,17 @@ class improper_scheduler_detach : public std::exception;
 
 `improper_scheduler_detach`
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
-**En-tête :** concrt.h
+**En-tête :** concrt. h
 
 **Espace de noms :** concurrency
 
-##  <a name="ctor"></a> improper_scheduler_detach
+## <a name="ctor"></a>improper_scheduler_detach
 
 Construit un objet `improper_scheduler_detach`.
 
-```
+```cpp
 explicit _CRTIMP improper_scheduler_detach(_In_z_ const char* _Message) throw();
 
 improper_scheduler_detach() throw();

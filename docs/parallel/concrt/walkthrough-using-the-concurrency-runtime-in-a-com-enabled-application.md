@@ -1,24 +1,24 @@
 ---
-title: 'Procédure pas à pas : Utilisation de l’runtime d’accès concurrentiel dans une application COM'
+title: "Procédure pas à pas : utilisation du runtime d'accès concurrentiel routage dans une application COM"
 ms.date: 04/25/2019
 helpviewer_keywords:
 - Concurrency Runtime, use with COM
 - COM, use with the Concurrency Runtime
 ms.assetid: a7c798b8-0fc8-4bee-972f-22ef158f7f48
-ms.openlocfilehash: 23488522287ab5767c88cd3a3e90c09392634f46
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: faa072ab2b5973ace0f0ca138dcedffa56044213
+ms.sourcegitcommit: a8ef52ff4a4944a1a257bdaba1a3331607fb8d0f
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69512099"
+ms.lasthandoff: 02/11/2020
+ms.locfileid: "77140628"
 ---
-# <a name="walkthrough-using-the-concurrency-runtime-in-a-com-enabled-application"></a>Procédure pas à pas : Utilisation de l’runtime d’accès concurrentiel dans une application COM
+# <a name="walkthrough-using-the-concurrency-runtime-in-a-com-enabled-application"></a>Procédure pas à pas : utilisation du runtime d'accès concurrentiel routage dans une application COM
 
 Ce document montre comment utiliser le runtime d’accès concurrentiel dans une application qui utilise le modèle COM (Component Object Model).
 
-## <a name="prerequisites"></a>Prérequis
+## <a name="prerequisites"></a>Conditions préalables requises
 
-Lisez les documents suivants avant de commencer cette procédure pas à pas:
+Lisez les documents suivants avant de commencer cette procédure pas à pas :
 
 - [Parallélisme des tâches](../../parallel/concrt/task-parallelism-concurrency-runtime.md)
 
@@ -36,29 +36,29 @@ Bien que l’utilisation de COM avec le runtime d’accès concurrentiel respect
 
 - Un thread doit appeler [CoInitializeEx](/windows/win32/api/combaseapi/nf-combaseapi-coinitializeex) avant d’utiliser la bibliothèque com.
 
-- Un thread peut appeler `CoInitializeEx` plusieurs fois tant qu’il fournit les mêmes arguments à chaque appel.
+- Un thread peut appeler plusieurs fois `CoInitializeEx`, à condition qu’il fournisse les mêmes arguments à chaque appel.
 
-- Pour chaque appel à `CoInitializeEx`, un thread doit également appeler [CoUninitialize](/windows/win32/api/combaseapi/nf-combaseapi-couninitialize). En d’autres termes, les `CoInitializeEx` appels `CoUninitialize` à et doivent être équilibrés.
+- Pour chaque appel à `CoInitializeEx`, un thread doit également appeler [CoUninitialize](/windows/win32/api/combaseapi/nf-combaseapi-couninitialize). En d’autres termes, les appels à `CoInitializeEx` et `CoUninitialize` doivent être équilibrés.
 
-- Pour passer d’un cloisonnement de thread à un autre, un thread doit libérer complètement la bibliothèque com avant `CoInitializeEx` d’appeler avec la nouvelle spécification de Threading.
+- Pour passer d’un cloisonnement de thread à un autre, un thread doit libérer complètement la bibliothèque COM avant d’appeler `CoInitializeEx` avec la nouvelle spécification de Threading.
 
 D’autres principes COM s’appliquent lorsque vous utilisez COM avec l’runtime d’accès concurrentiel. Par exemple, une application qui crée un objet dans un thread cloisonné (STA) et marshale cet objet vers un autre cloisonnement doit également fournir une boucle de message pour traiter les messages entrants. Souvenez-vous également que le marshaling d’objets entre les cloisonnements peut réduire les performances.
 
 ### <a name="using-com-with-the-parallel-patterns-library"></a>Utilisation de COM avec la bibliothèque de modèles parallèles
 
-Quand vous utilisez com avec un composant dans la bibliothèque de modèles parallèles (PPL), par exemple un groupe de tâches ou un algorithme parallèle, appelez `CoInitializeEx` avant d’utiliser la bibliothèque com pendant chaque tâche ou itération, et appelez `CoUninitialize` avant la fin de chaque tâche ou itération. . L’exemple suivant montre comment gérer la durée de vie de la bibliothèque COM avec un objet [Concurrency:: structured_task_group](../../parallel/concrt/reference/structured-task-group-class.md) .
+Quand vous utilisez COM avec un composant dans la bibliothèque de modèles parallèles (PPL), par exemple un groupe de tâches ou un algorithme parallèle, appelez `CoInitializeEx` avant d’utiliser la bibliothèque COM pendant chaque tâche ou itération, et appelez `CoUninitialize` avant la fin de chaque tâche ou itération. L’exemple suivant montre comment gérer la durée de vie de la bibliothèque COM avec un objet [Concurrency :: structured_task_group](../../parallel/concrt/reference/structured-task-group-class.md) .
 
 [!code-cpp[concrt-parallel-scripts#1](../../parallel/concrt/codesnippet/cpp/walkthrough-using-the-concurrency-runtime-in-a-com-enabled-application_1.cpp)]
 
-Vous devez vous assurer que la bibliothèque COM est correctement libérée lors de l’annulation d’une tâche ou d’un algorithme parallèle ou lorsque le corps de la tâche lève une exception. Pour garantir que la tâche appelle `CoUninitialize` avant de se fermer, utilisez un `try-finally` modèle de bloc ou le modèle RAII ( *Resource Acquisition Is Initialization* ). L’exemple suivant utilise un `try-finally` bloc pour libérer la bibliothèque COM lorsque la tâche se termine ou est annulée, ou lorsqu’une exception est levée.
+Vous devez vous assurer que la bibliothèque COM est correctement libérée lors de l’annulation d’une tâche ou d’un algorithme parallèle ou lorsque le corps de la tâche lève une exception. Pour garantir que la tâche appelle `CoUninitialize` avant de se fermer, utilisez un bloc `try-finally` ou le modèle RAII ( *Resource Acquisition Is Initialization* ). L’exemple suivant utilise un bloc `try-finally` pour libérer la bibliothèque COM lorsque la tâche se termine ou est annulée, ou lorsqu’une exception est levée.
 
 [!code-cpp[concrt-parallel-scripts#2](../../parallel/concrt/codesnippet/cpp/walkthrough-using-the-concurrency-runtime-in-a-com-enabled-application_2.cpp)]
 
-L’exemple suivant utilise le modèle RAII pour définir la `CCoInitializer` classe, qui gère la durée de vie de la bibliothèque com dans une étendue donnée.
+L’exemple suivant utilise le modèle RAII pour définir la classe `CCoInitializer`, qui gère la durée de vie de la bibliothèque COM dans une étendue donnée.
 
 [!code-cpp[concrt-parallel-scripts#3](../../parallel/concrt/codesnippet/cpp/walkthrough-using-the-concurrency-runtime-in-a-com-enabled-application_3.cpp)]
 
-Vous pouvez utiliser la `CCoInitializer` classe pour libérer automatiquement la bibliothèque COM lorsque la tâche se termine, comme suit.
+Vous pouvez utiliser la classe `CCoInitializer` pour libérer automatiquement la bibliothèque COM lorsque la tâche se termine, comme suit.
 
 [!code-cpp[concrt-parallel-scripts#4](../../parallel/concrt/codesnippet/cpp/walkthrough-using-the-concurrency-runtime-in-a-com-enabled-application_4.cpp)]
 
@@ -66,9 +66,9 @@ Pour plus d’informations sur l’annulation dans la runtime d’accès concurr
 
 ### <a name="using-com-with-asynchronous-agents"></a>Utilisation de COM avec des agents asynchrones
 
-Quand vous utilisez com avec des agents asynchrones `CoInitializeEx` , appelez avant d’utiliser la bibliothèque com dans la méthode Concurrency [:: agent:: Run](reference/agent-class.md#run) pour votre agent. Appelez `CoUninitialize` ensuite avant que `run` la méthode ne retourne. N’utilisez pas de routines de gestion COM dans le constructeur ou le destructeur de votre agent, et ne substituez pas l' [accès concurrentiel:: agent:: Start](reference/agent-class.md#start) ou Concurrency [:: agent::d une](reference/agent-class.md#done) méthode, car ces méthodes sont appelées à partir d’un thread différent de celui de la `run` méthode.
+Quand vous utilisez COM avec des agents asynchrones, appelez `CoInitializeEx` avant d’utiliser la bibliothèque COM dans la méthode [Concurrency :: agent :: Run](reference/agent-class.md#run) pour votre agent. Appelez ensuite `CoUninitialize` avant le retour de la méthode `run`. N’utilisez pas de routines de gestion COM dans le constructeur ou le destructeur de votre agent, et ne substituez pas l' [accès concurrentiel :: agent :: Start](reference/agent-class.md#start) ou [Concurrency :: agent ::d une](reference/agent-class.md#done) méthode, car ces méthodes sont appelées à partir d’un thread différent de la méthode `run`.
 
-L’exemple suivant montre une classe d’agent de base `CCoAgent`, nommée, qui gère la bibliothèque COM `run` dans la méthode.
+L’exemple suivant montre une classe d’agent de base, nommée `CCoAgent`, qui gère la bibliothèque COM dans la méthode `run`.
 
 [!code-cpp[concrt-parallel-scripts#5](../../parallel/concrt/codesnippet/cpp/walkthrough-using-the-concurrency-runtime-in-a-com-enabled-application_5.cpp)]
 
@@ -76,43 +76,43 @@ Un exemple complet est fourni plus loin dans cette procédure pas à pas.
 
 ### <a name="using-com-with-lightweight-tasks"></a>Utilisation de COM avec des tâches légères
 
-Le document [Planificateur de tâches](../../parallel/concrt/task-scheduler-concurrency-runtime.md) décrit le rôle des tâches légères dans le runtime d’accès concurrentiel. Vous pouvez utiliser com avec une tâche légère, comme vous le feriez avec n’importe quelle routine de thread `CreateThread` que vous transmettez à la fonction dans l’API Windows. L'exemple suivant le démontre.
+Le document [Planificateur de tâches](../../parallel/concrt/task-scheduler-concurrency-runtime.md) décrit le rôle des tâches légères dans le runtime d’accès concurrentiel. Vous pouvez utiliser COM avec une tâche légère, comme vous le feriez avec n’importe quelle routine de thread que vous transmettez à la fonction `CreateThread` dans l’API Windows. Cela est illustré par l'exemple suivant.
 
 [!code-cpp[concrt-parallel-scripts#6](../../parallel/concrt/codesnippet/cpp/walkthrough-using-the-concurrency-runtime-in-a-com-enabled-application_6.cpp)]
 
 ## <a name="an-example-of-a-com-enabled-application"></a>Exemple d’application COM
 
-Cette section présente une application com complète qui utilise l' `IScriptControl` interface pour exécuter un script qui calcule le n<sup>ième</sup> nombre de Fibonacci. Cet exemple appelle d’abord le script du thread principal, puis utilise la PPL et les agents pour appeler le script simultanément.
+Cette section présente une application COM complète qui utilise l’interface `IScriptControl` pour exécuter un script qui calcule le n<sup>ième</sup> nombre de Fibonacci. Cet exemple appelle d’abord le script du thread principal, puis utilise la PPL et les agents pour appeler le script simultanément.
 
-Considérez la fonction d’assistance suivante `RunScriptProcedure`,, qui appelle une procédure dans `IScriptControl` un objet.
+Considérez la fonction d’assistance suivante, `RunScriptProcedure`, qui appelle une procédure dans un objet `IScriptControl`.
 
 [!code-cpp[concrt-parallel-scripts#7](../../parallel/concrt/codesnippet/cpp/walkthrough-using-the-concurrency-runtime-in-a-com-enabled-application_7.cpp)]
 
-La `wmain` fonction crée un `IScriptControl` objet, y ajoute le code de script qui calcule le n<sup>ième</sup> nombre de Fibonacci, puis appelle `RunScriptProcedure` la fonction pour exécuter ce script.
+La fonction `wmain` crée un objet `IScriptControl`, y ajoute le code de script qui calcule le n<sup>ième</sup> nombre de Fibonacci, puis appelle la fonction `RunScriptProcedure` pour exécuter ce script.
 
 [!code-cpp[concrt-parallel-scripts#8](../../parallel/concrt/codesnippet/cpp/walkthrough-using-the-concurrency-runtime-in-a-com-enabled-application_8.cpp)]
 
 ### <a name="calling-the-script-from-the-ppl"></a>Appel du script à partir de la bibliothèque de modèles parallèles
 
-La fonction suivante, `ParallelFibonacci`, utilise l’algorithme Concurrency [::p arallel_for](reference/concurrency-namespace-functions.md#parallel_for) pour appeler le script en parallèle. Cette fonction utilise la `CCoInitializer` classe pour gérer la durée de vie de la bibliothèque com lors de chaque itération de la tâche.
+La fonction suivante, `ParallelFibonacci`, utilise l’algorithme [Concurrency ::p arallel_for](reference/concurrency-namespace-functions.md#parallel_for) pour appeler le script en parallèle. Cette fonction utilise la classe `CCoInitializer` pour gérer la durée de vie de la bibliothèque COM lors de chaque itération de la tâche.
 
 [!code-cpp[concrt-parallel-scripts#9](../../parallel/concrt/codesnippet/cpp/walkthrough-using-the-concurrency-runtime-in-a-com-enabled-application_9.cpp)]
 
-Pour utiliser la `ParallelFibonacci` fonction avec l’exemple, ajoutez le code suivant avant le `wmain` retour de la fonction.
+Pour utiliser la fonction `ParallelFibonacci` avec l’exemple, ajoutez le code suivant avant que la fonction `wmain` retourne.
 
 [!code-cpp[concrt-parallel-scripts#10](../../parallel/concrt/codesnippet/cpp/walkthrough-using-the-concurrency-runtime-in-a-com-enabled-application_10.cpp)]
 
 ### <a name="calling-the-script-from-an-agent"></a>Appel du script à partir d’un agent
 
-L’exemple suivant illustre la `FibonacciScriptAgent` classe, qui appelle une procédure de script pour calculer le n<sup>ième</sup> nombre de Fibonacci. La `FibonacciScriptAgent` classe utilise le passage de messages pour recevoir, du programme principal, des valeurs d’entrée à la fonction de script. La `run` méthode gère la durée de vie de la bibliothèque com tout au long de la tâche.
+L’exemple suivant illustre la classe `FibonacciScriptAgent`, qui appelle une procédure de script pour calculer le n<sup>ième</sup> nombre de Fibonacci. La classe `FibonacciScriptAgent` utilise le passage de messages pour recevoir, du programme principal, des valeurs d’entrée à la fonction de script. La méthode `run` gère la durée de vie de la bibliothèque COM tout au long de la tâche.
 
 [!code-cpp[concrt-parallel-scripts#11](../../parallel/concrt/codesnippet/cpp/walkthrough-using-the-concurrency-runtime-in-a-com-enabled-application_11.cpp)]
 
-La fonction suivante, `AgentFibonacci`, crée plusieurs `FibonacciScriptAgent` objets et utilise le passage de message pour envoyer plusieurs valeurs d’entrée à ces objets.
+La fonction suivante, `AgentFibonacci`, crée plusieurs objets `FibonacciScriptAgent` et utilise le passage de messages pour envoyer plusieurs valeurs d’entrée à ces objets.
 
 [!code-cpp[concrt-parallel-scripts#12](../../parallel/concrt/codesnippet/cpp/walkthrough-using-the-concurrency-runtime-in-a-com-enabled-application_12.cpp)]
 
-Pour utiliser la `AgentFibonacci` fonction avec l’exemple, ajoutez le code suivant avant le `wmain` retour de la fonction.
+Pour utiliser la fonction `AgentFibonacci` avec l’exemple, ajoutez le code suivant avant que la fonction `wmain` retourne.
 
 [!code-cpp[concrt-parallel-scripts#13](../../parallel/concrt/codesnippet/cpp/walkthrough-using-the-concurrency-runtime-in-a-com-enabled-application_13.cpp)]
 
@@ -149,9 +149,9 @@ fib(12) = 144
 
 ## <a name="compiling-the-code"></a>Compilation du code
 
-Copiez l’exemple de code et collez-le dans un projet Visual Studio, ou collez-le `parallel-scripts.cpp` dans un fichier nommé, puis exécutez la commande suivante dans une fenêtre d’invite de commandes Visual Studio.
+Copiez l’exemple de code et collez-le dans un projet Visual Studio, ou collez-le dans un fichier nommé `parallel-scripts.cpp` puis exécutez la commande suivante dans une fenêtre d’invite de commandes Visual Studio.
 
-**CL. exe/EHsc Parallel-scripts. cpp/Link ole32. lib**
+> **CL. exe/EHsc Parallel-scripts. cpp/Link ole32. lib**
 
 ## <a name="see-also"></a>Voir aussi
 

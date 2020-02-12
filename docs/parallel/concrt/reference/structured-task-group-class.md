@@ -13,20 +13,20 @@ f1_keywords:
 helpviewer_keywords:
 - structured_task_group class
 ms.assetid: 742afa8c-c7b6-482c-b0ba-04c809927b22
-ms.openlocfilehash: 27610539ab500a113ea41021744c55425fe9cd9b
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 93dd79b755f79dcb4857c1b1c4856362b0bd45dd
+ms.sourcegitcommit: a8ef52ff4a4944a1a257bdaba1a3331607fb8d0f
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62337191"
+ms.lasthandoff: 02/11/2020
+ms.locfileid: "77142630"
 ---
-# <a name="structuredtaskgroup-class"></a>structured_task_group, classe
+# <a name="structured_task_group-class"></a>structured_task_group, classe
 
 La classe `structured_task_group` représente une collection très structurée de travail parallèle. Vous pouvez mettre en file d'attente des tâches parallèles individuelles dans un `structured_task_group` à l'aide d'objets `task_handle`, attendre qu'elles se terminent ou annuler le groupe de tâches avant la fin de leur exécution, ce qui annule toutes les tâches dont l'exécution n'a pas commencé.
 
 ## <a name="syntax"></a>Syntaxe
 
-```
+```cpp
 class structured_task_group;
 ```
 
@@ -34,32 +34,32 @@ class structured_task_group;
 
 ### <a name="public-constructors"></a>Constructeurs publics
 
-|Nom|Description|
+|Name|Description|
 |----------|-----------------|
-|[structured_task_group](#ctor)|Surchargé. Construit un nouvel `structured_task_group` objet.|
-|[~ structured_task_group, destructeur](#dtor)|Détruit un objet `structured_task_group`. Vous êtes tenu d’appeler le `wait` ou `run_and_wait` méthode sur l’objet avant l’exécution du destructeur, sauf si le destructeur s’exécute comme résultat de déroulement de pile en raison d’une exception.|
+|[structured_task_group](#ctor)|Surchargé. Construit un nouvel objet `structured_task_group`.|
+|[Destructeur ~ structured_task_group](#dtor)|Détruit un objet `structured_task_group`. Vous devez appeler la méthode `wait` ou `run_and_wait` sur l’objet avant l’exécution du destructeur, sauf si le destructeur s’exécute à la suite d’un déroulement de pile en raison d’une exception.|
 
 ### <a name="public-methods"></a>M&#233;thodes publiques
 
-|Nom|Description|
+|Name|Description|
 |----------|-----------------|
-|[cancel](#cancel)|Permet un meilleur effort essaie d’annuler la sous-arborescence de travail rattachée à ce groupe de tâches. Chaque tâche planifiée sur le groupe de tâches sera annulée de manière transitive si possible.|
-|[is_canceling](#is_canceling)|Indique si le groupe de tâches est actuellement en cours d’annulation à l’appelant. Cela n’en indique pas nécessairement que le `cancel` méthode a été appelée sur le `structured_task_group` objet (bien que ce cas la méthode retourne **true**). Il peut arriver que le `structured_task_group` objet exécute inline et un groupe de tâches supplémentaire en haut de l’arborescence de travail a été annulé. Dans tels cas où le runtime peut déterminer avance annulation passera via cet `structured_task_group` objet, **true** s’affichera également.|
-|[run](#run)|Surchargé. Planifie une tâche sur le `structured_task_group` objet. L’appelant gère la durée de vie de la `task_handle` objet passé dans le `_Task_handle` paramètre. La version qui prend le paramètre `_Placement` force la tâche à être orientées vers l’exécution à l’emplacement spécifié par ce paramètre.|
-|[run_and_wait](#run_and_wait)|Surchargé. Planifie une tâche à exécuter inline dans le contexte d’appel avec l’aide de la `structured_task_group` objet pour la prise en charge complète de l’annulation. Si un `task_handle` objet est passé en tant que paramètre à `run_and_wait`, l’appelant est chargé de gérer la durée de vie de la `task_handle` objet. La fonction attend ensuite que tout le travail sur le `structured_task_group` objet est terminée ou annulé.|
-|[wait](#wait)|Attend que tout le travail sur le `structured_task_group` terminée ou est annulée.|
+|[cancel](#cancel)|Tente d’annuler la sous-arborescence du travail enracinée dans ce groupe de tâches. Chaque tâche planifiée sur le groupe de tâches est annulée de manière transitive, si possible.|
+|[is_canceling](#is_canceling)|Informe l’appelant si le groupe de tâches est actuellement au milieu d’une annulation. Cela n’indique pas nécessairement que la méthode `cancel` a été appelée sur l’objet `structured_task_group` (bien que cela qualifie certainement cette méthode pour retourner la **valeur true**). Cela peut être le cas lorsque l’objet `structured_task_group` s’exécute en ligne et qu’un groupe de tâches plus haut dans l’arborescence de travail a été annulé. Dans les cas tels que ceux où le runtime peut déterminer à l’avance que l’annulation passera par cet objet `structured_task_group`, la **valeur true** sera également retournée.|
+|[run](#run)|Surchargé. Planifie une tâche sur l’objet `structured_task_group`. L’appelant gère la durée de vie de l’objet `task_handle` passé dans le paramètre `_Task_handle`. La version qui accepte le paramètre `_Placement` entraîne l’exécution de la tâche à l’emplacement spécifié par ce paramètre.|
+|[run_and_wait](#run_and_wait)|Surchargé. Planifie l’exécution d’une tâche Inline sur le contexte appelant avec l’assistance de l’objet `structured_task_group` pour la prise en charge de l’annulation complète. Si un objet `task_handle` est passé en tant que paramètre à `run_and_wait`, l’appelant est responsable de la gestion de la durée de vie de l’objet `task_handle`. La fonction attend ensuite que tout le travail sur l’objet `structured_task_group` soit terminé ou a été annulé.|
+|[qu'](#wait)|Attend que tout le travail sur le `structured_task_group` soit terminé ou qu’il soit annulé.|
 
 ## <a name="remarks"></a>Notes
 
-Il existe plusieurs restrictions importantes sur l’utilisation d’un `structured_task_group` objet afin d’obtenir des performances :
+Il existe un certain nombre de restrictions graves placées sur l’utilisation d’un objet `structured_task_group` pour obtenir des performances :
 
-- Un seul `structured_task_group` objet ne peut pas être utilisé par plusieurs threads. Toutes les opérations sur un `structured_task_group` objet doit être effectué par le thread qui a créé l’objet. Les deux exceptions à cette règle sont les fonctions membres `cancel` et `is_canceling`. L’objet ne peut pas être dans la liste de capture d’une expression lambda et être utilisé dans une tâche, à moins que la tâche est à l’aide de l’une des opérations d’annulation.
+- Un objet `structured_task_group` unique ne peut pas être utilisé par plusieurs threads. Toutes les opérations sur un objet `structured_task_group` doivent être effectuées par le thread qui a créé l’objet. Les deux exceptions à cette règle sont les fonctions membres `cancel` et `is_canceling`. L’objet ne peut pas figurer dans la liste de capture d’une expression lambda et être utilisé dans une tâche, à moins que la tâche utilise l’une des opérations d’annulation.
 
-- Toutes les tâches planifiées pour un `structured_task_group` objet sont planifiées à l’aide de `task_handle` dont vous devez gérer explicitement la durée de vie des objets.
+- Toutes les tâches planifiées pour un objet `structured_task_group` sont planifiées à l’aide d’objets `task_handle` qui doivent gérer explicitement la durée de vie de.
 
-- Plusieurs groupes utilisables uniquement dans l’ordre absolument imbriqué. Si deux `structured_task_group` objets sont déclarés, le deuxième déclaré (celui interne) doit être détruit avant toute autre méthode sauf `cancel` ou `is_canceling` est appelée sur le premier (celui externe). Cette condition est vraie en cas de simplement déclarer plusieurs `structured_task_group` objets dans des portées identiques ou fonctionnellement imbriquées, ainsi que le cas d’une tâche qui a été en file d’attente pour le `structured_task_group` via la `run` ou `run_and_wait` méthodes.
+- Plusieurs groupes peuvent uniquement être utilisés dans un ordre absolument imbriqué. Si deux objets `structured_task_group` sont déclarés, le deuxième qui est déclaré (l’objet interne) doit être détruit avant toute méthode, à l’exception de `cancel` ou `is_canceling` est appelé sur le premier objet (externe). Cette condition est vraie dans le cas d’une simple déclaration de plusieurs objets `structured_task_group` dans les mêmes étendues ou dans des étendues imbriquées de manière fonctionnelle, ainsi que dans le cas d’une tâche qui a été mise en file d’attente dans la `structured_task_group` via les méthodes `run` ou `run_and_wait`.
 
-- Contrairement à générales `task_group` classe, tous les États dans le `structured_task_group` classe sont définitives. Après avoir en file d’attente de tâches pour le groupe et attendre qu’elles se terminent, vous ne pouvez pas utiliser le même groupe à nouveau.
+- Contrairement à la classe `task_group` générale, tous les États de la classe `structured_task_group` sont finaux. Une fois que vous avez mis en file d’attente des tâches dans le groupe et ATTENDU qu’elles se terminent, vous ne pouvez pas réutiliser le même groupe.
 
 Pour plus d’informations, consultez [parallélisme des tâches](../../../parallel/concrt/task-parallelism-concurrency-runtime.md).
 
@@ -67,45 +67,45 @@ Pour plus d’informations, consultez [parallélisme des tâches](../../../paral
 
 `structured_task_group`
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
-**En-tête :** ppl.h
+**En-tête :** ppl. h
 
 **Espace de noms :** concurrency
 
-##  <a name="cancel"></a> Annuler
+## <a name="cancel"></a>Annuler
 
-Permet un meilleur effort essaie d’annuler la sous-arborescence de travail rattachée à ce groupe de tâches. Chaque tâche planifiée sur le groupe de tâches sera annulée de manière transitive si possible.
+Tente d’annuler la sous-arborescence du travail enracinée dans ce groupe de tâches. Chaque tâche planifiée sur le groupe de tâches est annulée de manière transitive, si possible.
 
-```
+```cpp
 void cancel();
 ```
 
 ### <a name="remarks"></a>Notes
 
-Pour plus d’informations, consultez [l’annulation](../../../parallel/concrt/exception-handling-in-the-concurrency-runtime.md#cancellation).
+Pour plus d’informations, consultez [annulation](../../../parallel/concrt/exception-handling-in-the-concurrency-runtime.md#cancellation).
 
-##  <a name="is_canceling"></a> is_canceling
+## <a name="is_canceling"></a>is_canceling
 
-Indique si le groupe de tâches est actuellement en cours d’annulation à l’appelant. Cela n’en indique pas nécessairement que le `cancel` méthode a été appelée sur le `structured_task_group` objet (bien que ce cas la méthode retourne **true**). Il peut arriver que le `structured_task_group` objet exécute inline et un groupe de tâches supplémentaire en haut de l’arborescence de travail a été annulé. Dans tels cas où le runtime peut déterminer avance annulation passera via cet `structured_task_group` objet, **true** s’affichera également.
+Informe l’appelant si le groupe de tâches est actuellement au milieu d’une annulation. Cela n’indique pas nécessairement que la méthode `cancel` a été appelée sur l’objet `structured_task_group` (bien que cela qualifie certainement cette méthode pour retourner la **valeur true**). Cela peut être le cas lorsque l’objet `structured_task_group` s’exécute en ligne et qu’un groupe de tâches plus haut dans l’arborescence de travail a été annulé. Dans les cas tels que ceux où le runtime peut déterminer à l’avance que l’annulation passera par cet objet `structured_task_group`, la **valeur true** sera également retournée.
 
-```
+```cpp
 bool is_canceling();
 ```
 
 ### <a name="return-value"></a>Valeur de retour
 
-Une indication précisant si le `structured_task_group` objet est en cours d’annulation (ou est garantie comme étant peu de temps).
+Indique si l’objet `structured_task_group` est au milieu d’une annulation (ou s’il est garanti qu’il sera bientôt).
 
 ### <a name="remarks"></a>Notes
 
-Pour plus d’informations, consultez [l’annulation](../../../parallel/concrt/exception-handling-in-the-concurrency-runtime.md#cancellation).
+Pour plus d’informations, consultez [annulation](../../../parallel/concrt/exception-handling-in-the-concurrency-runtime.md#cancellation).
 
-##  <a name="run"></a> exécuter
+## <a name="run"></a>Utilisez
 
-Planifie une tâche sur le `structured_task_group` objet. L’appelant gère la durée de vie de la `task_handle` objet passé dans le `_Task_handle` paramètre. La version qui prend le paramètre `_Placement` force la tâche à être orientées vers l’exécution à l’emplacement spécifié par ce paramètre.
+Planifie une tâche sur l’objet `structured_task_group`. L’appelant gère la durée de vie de l’objet `task_handle` passé dans le paramètre `_Task_handle`. La version qui accepte le paramètre `_Placement` entraîne l’exécution de la tâche à l’emplacement spécifié par ce paramètre.
 
-```
+```cpp
 template<class _Function>
 void run(
     task_handle<_Function>& _Task_handle);
@@ -119,27 +119,27 @@ void run(
 ### <a name="parameters"></a>Paramètres
 
 *_Function*<br/>
-Le type de l’objet de fonction qui sera appelé pour exécuter le corps de la poignée de la tâche.
+Type de l’objet de fonction qui sera appelé pour exécuter le corps du handle de tâche.
 
 *_Task_handle*<br/>
-Handle vers le travail planifié. Notez que l’appelant est responsable de la durée de vie de cet objet. Le runtime continue à attendre qu’il live jusqu'à ce que le `wait` ou `run_and_wait` méthode a été appelée sur ce `structured_task_group` objet.
+Handle du travail en cours de planification. Notez que l’appelant est responsable de la durée de vie de cet objet. Le runtime continuera à attendre qu’il se poursuive jusqu’à ce que la méthode `wait` ou `run_and_wait` soit appelée sur cet objet `structured_task_group`.
 
 *_Placement*<br/>
-Une référence à l’emplacement où la tâche représentée par le `_Task_handle` paramètre doit s’exécuter.
+Référence à l’emplacement où la tâche représentée par le paramètre `_Task_handle` doit s’exécuter.
 
 ### <a name="remarks"></a>Notes
 
-Le runtime crée une copie de la fonction de travail que vous passez à cette méthode. Modifications d’état qui se produisent dans un objet de fonction que vous passez à cette méthode n’apparaîtra pas dans votre copie de cet objet de fonction.
+Le runtime crée une copie de la fonction de travail que vous transmettez à cette méthode. Les modifications d’État qui se produisent dans un objet de fonction que vous transmettez à cette méthode n’apparaîtront pas dans votre copie de cet objet de fonction.
 
-Si le `structured_task_group` résulte du déroulement d’une exception de la pile, vous n’avez pas besoin garantir qu’un appel a été effectué avec la valeur la `wait` ou `run_and_wait` (méthode). Dans ce cas, le destructeur annulera et attendez que la tâche représentée par le `_Task_handle` paramètre pour terminer.
+Si le `structured_task_group` est détruit à la suite d’un déroulement de pile à partir d’une exception, vous n’avez pas besoin de garantir qu’un appel a été effectué à la méthode `wait` ou `run_and_wait`. Dans ce cas, le destructeur est correctement annulé et attend la fin de la tâche représentée par le paramètre `_Task_handle`.
 
-Lève une [invalid_multiple_scheduling](invalid-multiple-scheduling-class.md) exception si la tâche gérer donné par le `_Task_handle` paramètre a déjà été planifié sur un objet de groupe de tâches via la `run` (méthode) et il n’y a eu aucun appel à soit le `wait` ou `run_and_wait` méthode sur ce groupe de tâches.
+Lève une exception [invalid_multiple_scheduling](invalid-multiple-scheduling-class.md) si le handle de tâche donné par le paramètre `_Task_handle` a déjà été planifié sur un objet de groupe de tâches par le biais de la méthode `run` et qu’il n’y a eu aucun appel intermédiaire à la méthode `wait` ou `run_and_wait` sur ce groupe de tâches.
 
-##  <a name="run_and_wait"></a> run_and_wait
+## <a name="run_and_wait"></a>run_and_wait
 
-Planifie une tâche à exécuter inline dans le contexte d’appel avec l’aide de la `structured_task_group` objet pour la prise en charge complète de l’annulation. Si un `task_handle` objet est passé en tant que paramètre à `run_and_wait`, l’appelant est chargé de gérer la durée de vie de la `task_handle` objet. La fonction attend ensuite que tout le travail sur le `structured_task_group` objet est terminée ou annulé.
+Planifie l’exécution d’une tâche Inline sur le contexte appelant avec l’assistance de l’objet `structured_task_group` pour la prise en charge de l’annulation complète. Si un objet `task_handle` est passé en tant que paramètre à `run_and_wait`, l’appelant est responsable de la gestion de la durée de vie de l’objet `task_handle`. La fonction attend ensuite que tout le travail sur l’objet `structured_task_group` soit terminé ou a été annulé.
 
-```
+```cpp
 template<class _Function>
 task_group_status run_and_wait(task_handle<_Function>& _Task_handle);
 
@@ -150,33 +150,33 @@ task_group_status run_and_wait(const _Function& _Func);
 ### <a name="parameters"></a>Paramètres
 
 *_Function*<br/>
-Le type de l’objet de fonction qui sera appelé pour exécuter la tâche.
+Type de l’objet de fonction qui sera appelé pour exécuter la tâche.
 
 *_Task_handle*<br/>
-Handle vers la tâche qui sera exécutée inline sur le contexte d’appel. Notez que l’appelant est responsable de la durée de vie de cet objet. Le runtime continue à attendre qu’il vivre jusqu'à la `run_and_wait` méthode termine son exécution.
+Handle vers la tâche qui est exécutée Inline sur le contexte d’appel. Notez que l’appelant est responsable de la durée de vie de cet objet. Le runtime continuera à attendre qu’il se poursuive jusqu’à la fin de l’exécution de la méthode `run_and_wait`.
 
 *_Func*<br/>
-Une fonction qui sera appelée pour appeler le corps du travail. Cela peut être une expression lambda ou un autre objet qui prend en charge une version de l’opérateur d’appel de fonction avec la signature `void operator()()`.
+Fonction qui sera appelée pour appeler le corps du travail. Il peut s’agir d’une expression lambda ou d’un autre objet qui prend en charge une version de l’opérateur d’appel de fonction avec la signature `void operator()()`.
 
 ### <a name="return-value"></a>Valeur de retour
 
-Indique si l’attente a été satisfaite ou le groupe de tâches a été annulé en raison d’une opération d’annulation explicite ou une exception levée par une de ses tâches. Pour plus d’informations, consultez [task_group_status](concurrency-namespace-enums.md)
+Indique si l’attente a été satisfaite ou si le groupe de tâches a été annulé, en raison d’une opération d’annulation explicite ou d’une exception levée à partir de l’une de ses tâches. Pour plus d’informations, consultez [task_group_status](concurrency-namespace-enums.md)
 
 ### <a name="remarks"></a>Notes
 
-Notez qu’une ou plusieurs des tâches planifiées pour cet `structured_task_group` objet peut-être s’exécuter inline dans le contexte d’appel.
+Notez qu’une ou plusieurs des tâches planifiées pour cet objet `structured_task_group` peuvent s’exécuter Inline sur le contexte d’appel.
 
-Si un ou plusieurs des tâches planifiées pour cet `structured_task_group` objet lève une exception, le runtime sélectionne une exception de ce type de son choix et se propager en dehors de l’appel à la `run_and_wait` (méthode).
+Si une ou plusieurs tâches planifiées pour cet objet `structured_task_group` lèvent une exception, le runtime sélectionne une telle exception de son choix et la propage en dehors de l’appel à la méthode `run_and_wait`.
 
-Une fois que cette fonction retourne, le `structured_task_group` objet soit considérée comme étant un état final et ne doit pas être utilisé. Notez que son utilisation après le `run_and_wait` méthode retourne entraîne un comportement non défini.
+Une fois que cette fonction a retourné une valeur, l’objet `structured_task_group` est considéré comme étant dans un état final et ne doit pas être utilisé. Notez que l’utilisation après le retour de la méthode `run_and_wait` entraînera un comportement indéfini.
 
-Dans le chemin d’accès non exceptionnel d’exécution, vous avez un mandat pour appeler cette méthode ou la `wait` méthode avant le destructeur de la `structured_task_group` s’exécute.
+Dans le chemin d’exécution non exceptionnel, vous avez l’autorisation d’appeler cette méthode ou la méthode `wait` avant l’exécution du destructeur du `structured_task_group`.
 
-##  <a name="ctor"></a> structured_task_group
+## <a name="ctor"></a>structured_task_group
 
-Construit un nouvel `structured_task_group` objet.
+Construit un nouvel objet `structured_task_group`.
 
-```
+```cpp
 structured_task_group();
 
 structured_task_group(cancellation_token _CancellationToken);
@@ -185,45 +185,45 @@ structured_task_group(cancellation_token _CancellationToken);
 ### <a name="parameters"></a>Paramètres
 
 *_CancellationToken*<br/>
-Un jeton d’annulation à associer à ce groupe de tâches structurés. Le groupe de tâches structurés sera annulé lorsque le jeton est annulé.
+Jeton d’annulation à associer à ce groupe de tâches structuré. Le groupe de tâches structuré est annulé lorsque le jeton est annulé.
 
 ### <a name="remarks"></a>Notes
 
-Le constructeur qui accepte un jeton d’annulation crée un `structured_task_group` qui sera annulée lors de l’annulation de la source associée au jeton. En fournissant un jeton d’annulation explicite isole également ce groupe de tâches structurés de participer à une annulation implicite d’un groupe parent avec un autre jeton ou aucun jeton.
+Le constructeur qui prend un jeton d’annulation crée une `structured_task_group` qui sera annulée lorsque la source associée au jeton est annulée. Le fait de fournir un jeton d’annulation explicite isole également ce groupe de tâches structuré de participer à une annulation implicite d’un groupe parent avec un jeton différent ou aucun jeton.
 
-##  <a name="dtor"></a> ~structured_task_group
+## <a name="dtor"></a>~ structured_task_group
 
-Détruit un objet `structured_task_group`. Vous êtes tenu d’appeler le `wait` ou `run_and_wait` méthode sur l’objet avant l’exécution du destructeur, sauf si le destructeur s’exécute comme résultat de déroulement de pile en raison d’une exception.
+Détruit un objet `structured_task_group`. Vous devez appeler la méthode `wait` ou `run_and_wait` sur l’objet avant l’exécution du destructeur, sauf si le destructeur s’exécute à la suite d’un déroulement de pile en raison d’une exception.
 
-```
+```cpp
 ~structured_task_group();
 ```
 
 ### <a name="remarks"></a>Notes
 
-Si le destructeur s’exécute en tant que le résultat de l’exécution normale (par exemple, pas déroulement de pile en raison d’une exception) et ni le `wait` ni `run_and_wait` méthodes ont été appelées, le destructeur peut lever une [missing_wait](missing-wait-class.md) exception.
+Si le destructeur s’exécute à la suite d’une exécution normale (par exemple, pas de déroulement de pile en raison d’une exception) et que ni les méthodes `wait`, ni `run_and_wait` n’ont été appelées, le destructeur peut lever une exception [missing_wait](missing-wait-class.md) .
 
-##  <a name="wait"></a> attente
+## <a name="wait"></a>qu'
 
-Attend que tout le travail sur le `structured_task_group` terminée ou est annulée.
+Attend que tout le travail sur le `structured_task_group` soit terminé ou qu’il soit annulé.
 
-```
+```cpp
 task_group_status wait();
 ```
 
 ### <a name="return-value"></a>Valeur de retour
 
-Indique si l’attente a été satisfaite ou le groupe de tâches a été annulé en raison d’une opération d’annulation explicite ou une exception levée par une de ses tâches. Pour plus d’informations, consultez [task_group_status](concurrency-namespace-enums.md)
+Indique si l’attente a été satisfaite ou si le groupe de tâches a été annulé, en raison d’une opération d’annulation explicite ou d’une exception levée à partir de l’une de ses tâches. Pour plus d’informations, consultez [task_group_status](concurrency-namespace-enums.md)
 
 ### <a name="remarks"></a>Notes
 
-Notez qu’une ou plusieurs des tâches planifiées pour cet `structured_task_group` objet peut-être s’exécuter inline dans le contexte d’appel.
+Notez qu’une ou plusieurs des tâches planifiées pour cet objet `structured_task_group` peuvent s’exécuter Inline sur le contexte d’appel.
 
-Si un ou plusieurs des tâches planifiées pour cet `structured_task_group` objet lève une exception, le runtime sélectionne une exception de ce type de son choix et se propager en dehors de l’appel à la `wait` (méthode).
+Si une ou plusieurs tâches planifiées pour cet objet `structured_task_group` lèvent une exception, le runtime sélectionne une telle exception de son choix et la propage en dehors de l’appel à la méthode `wait`.
 
-Une fois que cette fonction retourne, le `structured_task_group` objet soit considérée comme étant un état final et ne doit pas être utilisé. Notez que son utilisation après le `wait` méthode retourne entraîne un comportement non défini.
+Une fois que cette fonction a retourné une valeur, l’objet `structured_task_group` est considéré comme étant dans un état final et ne doit pas être utilisé. Notez que l’utilisation après le retour de la méthode `wait` entraînera un comportement indéfini.
 
-Dans le chemin d’accès non exceptionnel d’exécution, vous avez un mandat pour appeler cette méthode ou la `run_and_wait` méthode avant le destructeur de la `structured_task_group` s’exécute.
+Dans le chemin d’exécution non exceptionnel, vous avez l’autorisation d’appeler cette méthode ou la méthode `run_and_wait` avant l’exécution du destructeur du `structured_task_group`.
 
 ## <a name="see-also"></a>Voir aussi
 

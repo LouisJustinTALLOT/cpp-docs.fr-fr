@@ -1,42 +1,42 @@
 ---
-title: Énumérations d’espace de noms Concurrency::Graphics
+title: Concurrency::graphics, énumérations de l’espace de noms
 ms.date: 11/04/2016
 f1_keywords:
 - amp_graphics/concurrency::graphics::address_mode
 - amp_graphics/concurrency::graphics::filter_mode
 ms.assetid: 1d2e1859-a3d7-4d3d-8e03-1a877a86b3e0
-ms.openlocfilehash: 15499de29c70a4015f1412cab8e803d0a7fb043c
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 504de780a5db70def61fb47c7805b32e7de780b4
+ms.sourcegitcommit: a8ef52ff4a4944a1a257bdaba1a3331607fb8d0f
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62375650"
+ms.lasthandoff: 02/11/2020
+ms.locfileid: "77126890"
 ---
-# <a name="concurrencygraphics-namespace-enums"></a>Énumérations d’espace de noms Concurrency::Graphics
+# <a name="concurrencygraphics-namespace-enums"></a>Concurrency::graphics, énumérations de l’espace de noms
 
 |||
 |-|-|
-|[mode _De énumération](#address_mode)|[filter_mode, énumération](#filter_mode)|
+|[Énumération _mode](#address_mode)|[Énumération filter_mode](#filter_mode)|
 
-##  <a name="address_mode"></a>  address_mode, énumération
+## <a name="address_mode"></a>Énumération address_mode
 
-Type d’énumération permet de désigner des modes d’adresse pris en charge pour l’échantillonnage de texture.
+Type d’énumération utilisé pour désigner les modes d’adresse pris en charge pour l’échantillonnage de texture.
 
-```
+```cpp
 enum address_mode;
 ```
 
-##  <a name="filter_mode"></a>  filter_mode, énumération
+## <a name="filter_mode"></a>Énumération filter_mode
 
-Type d’énumération permet de désigner des modes de filtre pris en charge pour l’échantillonnage de texture.
+Type d’énumération utilisé pour désigner les modes de filtre pris en charge pour l’échantillonnage de texture.
 
-```
+```cpp
 enum filter_mode;
 ```
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
-**En-tête :** amp_graphics.h **Namespace :** Concurrency::graphics
+**En-tête :** amp_graphics. h **espace de noms :** Concurrency :: Graphics
 
 ## <a name="see-also"></a>Voir aussi
 

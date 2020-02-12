@@ -1,5 +1,5 @@
 ---
-title: Classe transformer
+title: transformer, classe
 ms.date: 11/04/2016
 f1_keywords:
 - transformer
@@ -18,60 +18,60 @@ f1_keywords:
 helpviewer_keywords:
 - transformer class
 ms.assetid: eea71925-7043-4a92-bfd4-dbc0ece5d081
-ms.openlocfilehash: c07017539bc0125e9e8c27e208480a50ccc7a719
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 75c7697087b8b3ad8ff15ae4d08f2b4701aaa36a
+ms.sourcegitcommit: a8ef52ff4a4944a1a257bdaba1a3331607fb8d0f
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62408067"
+ms.lasthandoff: 02/11/2020
+ms.locfileid: "77142352"
 ---
-# <a name="transformer-class"></a>Classe transformer
+# <a name="transformer-class"></a>transformer, classe
 
 Un bloc de messagerie `transformer` est un `propagator_block` à cible unique, à sources multiples et classé qui peut accepter des messages d'un type et est capable de stocker un nombre illimité de messages d'un type différent.
 
 ## <a name="syntax"></a>Syntaxe
 
-```
+```cpp
 template<class _Input, class _Output>
 class transformer : public propagator_block<single_link_registry<ITarget<_Output>>,
     multi_link_registry<ISource<_Input>>>;
 ```
 
-#### <a name="parameters"></a>Paramètres
+### <a name="parameters"></a>Paramètres
 
 *_Input*<br/>
 Type de charge utile des messages acceptés par la mémoire tampon.
 
 *_Output*<br/>
-Type de charge utile des messages stockés et propagée à la mémoire tampon.
+Type de charge utile des messages stockés et propagés par la mémoire tampon.
 
 ## <a name="members"></a>Membres
 
 ### <a name="public-constructors"></a>Constructeurs publics
 
-|Nom|Description|
+|Name|Description|
 |----------|-----------------|
 |[transformer](#ctor)|Surchargé. Construit un bloc de messagerie `transformer` .|
-|[~ transformer, destructeur](#dtor)|Détruit le `transformer` bloc de messagerie.|
+|[~ transformer, destructeur](#dtor)|Détruit le bloc de messagerie `transformer`.|
 
 ### <a name="protected-methods"></a>Méthodes protégées
 
-|Nom|Description|
+|Name|Description|
 |----------|-----------------|
-|[accept_message](#accept_message)|Accepte un message qui a été proposé par ce `transformer` bloc de messagerie, transfert de propriété à l’appelant.|
-|[consume_message](#consume_message)|Consomme un message précédemment proposé par le `transformer` et réservé par la cible, en transférant la propriété à l’appelant.|
-|[link_target_notification](#link_target_notification)|Rappel qui notifie qu’une nouvelle cible a été liée à ce `transformer` bloc de messagerie.|
-|[propagate_message](#propagate_message)|Passe de façon asynchrone un message à partir d’un `ISource` à ce bloc `transformer` bloc de messagerie. Elle est appelée par le `propagate` (méthode), lorsqu’elle est appelée par un bloc source.|
-|[propagate_to_any_targets](#propagate_to_any_targets)|Exécute la fonction de transformateur sur les messages d’entrée.|
-|[release_message](#release_message)|Libère une réservation de message précédent. (Substitue [source_block::release_message](source-block-class.md#release_message).)|
-|[reserve_message](#reserve_message)|Réserve un message précédemment proposé par ce `transformer` bloc de messagerie. (Substitue [source_block::reserve_message](source-block-class.md#reserve_message).)|
-|[resume_propagation](#resume_propagation)|Reprend la propagation après qu’une réservation a été libérée. (Substitue [source_block::resume_propagation](source-block-class.md#resume_propagation).)|
-|[send_message](#send_message)|Passe de façon synchrone un message à partir d’un `ISource` à ce bloc `transformer` bloc de messagerie. Elle est appelée par le `send` (méthode), lorsqu’elle est appelée par un bloc source.|
-|[supports_anonymous_source](#supports_anonymous_source)|Remplace le `supports_anonymous_source` méthode pour indiquer que ce bloc peut accepter des messages offerts par une source qui n’est pas liée. (Substitue [ITarget::supports_anonymous_source](itarget-class.md#supports_anonymous_source).)|
+|[accept_message](#accept_message)|Accepte un message qui a été proposé par ce bloc de messagerie `transformer`, en transférant la propriété à l’appelant.|
+|[consume_message](#consume_message)|Consomme un message précédemment offert par le `transformer` et réservé par la cible, en transférant la propriété à l’appelant.|
+|[link_target_notification](#link_target_notification)|Rappel qui signale qu’une nouvelle cible a été liée à ce `transformer` bloc de messagerie.|
+|[propagate_message](#propagate_message)|Passe de façon asynchrone un message d’un bloc de `ISource` à ce `transformer` bloc de messagerie. Elle est appelée par la méthode `propagate`, quand elle est appelée par un bloc source.|
+|[propagate_to_any_targets](#propagate_to_any_targets)|Exécute la fonction transformateur sur les messages d’entrée.|
+|[release_message](#release_message)|Libère une réservation de message précédente. (Substitue [source_block :: release_message](source-block-class.md#release_message).)|
+|[reserve_message](#reserve_message)|Réserve un message précédemment offert par ce `transformer` bloc de messagerie. (Substitue [source_block :: reserve_message](source-block-class.md#reserve_message).)|
+|[resume_propagation](#resume_propagation)|Reprend la propagation après la libération d’une réservation. (Substitue [source_block :: resume_propagation](source-block-class.md#resume_propagation).)|
+|[send_message](#send_message)|Transmet de façon synchrone un message d’un bloc de `ISource` à ce `transformer` bloc de messagerie. Elle est appelée par la méthode `send`, quand elle est appelée par un bloc source.|
+|[supports_anonymous_source](#supports_anonymous_source)|Substitue la méthode `supports_anonymous_source` pour indiquer que ce bloc peut accepter des messages qui lui sont offerts par une source qui n’est pas liée. (Substitue [ITarget :: supports_anonymous_source](itarget-class.md#supports_anonymous_source).)|
 
 ## <a name="remarks"></a>Notes
 
-Pour plus d’informations, consultez [des blocs de messages asynchrones](../../../parallel/concrt/asynchronous-message-blocks.md).
+Pour plus d’informations, consultez [blocs de messages asynchrones](../../../parallel/concrt/asynchronous-message-blocks.md).
 
 ## <a name="inheritance-hierarchy"></a>Hiérarchie d'héritage
 
@@ -85,63 +85,63 @@ Pour plus d’informations, consultez [des blocs de messages asynchrones](../../
 
 `transformer`
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
 **En-tête :** agents.h
 
 **Espace de noms :** concurrency
 
-##  <a name="accept_message"></a> accept_message
+## <a name="accept_message"></a>accept_message
 
-Accepte un message qui a été proposé par ce `transformer` bloc de messagerie, transfert de propriété à l’appelant.
+Accepte un message qui a été proposé par ce bloc de messagerie `transformer`, en transférant la propriété à l’appelant.
 
-```
+```cpp
 virtual message<_Output>* accept_message(runtime_object_identity _MsgId);
 ```
 
 ### <a name="parameters"></a>Paramètres
 
 *_MsgId*<br/>
-Le `runtime_object_identity` de le proposé `message` objet.
+`runtime_object_identity` de l’objet `message` proposé.
 
 ### <a name="return-value"></a>Valeur de retour
 
-Un pointeur vers le `message` que l’appelant a désormais la propriété de l’objet.
+Pointeur vers l’objet `message` dont l’appelant est désormais propriétaire.
 
-##  <a name="consume_message"></a> consume_message
+## <a name="consume_message"></a>consume_message
 
-Consomme un message précédemment proposé par le `transformer` et réservé par la cible, en transférant la propriété à l’appelant.
+Consomme un message précédemment offert par le `transformer` et réservé par la cible, en transférant la propriété à l’appelant.
 
-```
+```cpp
 virtual message<_Output>* consume_message(runtime_object_identity _MsgId);
 ```
 
 ### <a name="parameters"></a>Paramètres
 
 *_MsgId*<br/>
-Le `runtime_object_identity` de la `message` de l’objet ayant été consommé.
+`runtime_object_identity` de l’objet `message` qui est consommé.
 
 ### <a name="return-value"></a>Valeur de retour
 
-Un pointeur vers le `message` que l’appelant a désormais la propriété de l’objet.
+Pointeur vers l’objet `message` dont l’appelant est désormais propriétaire.
 
 ### <a name="remarks"></a>Notes
 
-Semblable à `accept`, mais est toujours précédé par un appel à `reserve`.
+Semblable à `accept`, mais est toujours précédé d’un appel à `reserve`.
 
-##  <a name="link_target_notification"></a> link_target_notification
+## <a name="link_target_notification"></a>link_target_notification
 
-Rappel qui notifie qu’une nouvelle cible a été liée à ce `transformer` bloc de messagerie.
+Rappel qui signale qu’une nouvelle cible a été liée à ce `transformer` bloc de messagerie.
 
-```
+```cpp
 virtual void link_target_notification(_Inout_ ITarget<_Output> *);
 ```
 
-##  <a name="propagate_message"></a> propagate_message
+## <a name="propagate_message"></a>propagate_message
 
-Passe de façon asynchrone un message à partir d’un `ISource` à ce bloc `transformer` bloc de messagerie. Elle est appelée par le `propagate` (méthode), lorsqu’elle est appelée par un bloc source.
+Passe de façon asynchrone un message d’un bloc de `ISource` à ce `transformer` bloc de messagerie. Elle est appelée par la méthode `propagate`, quand elle est appelée par un bloc source.
 
-```
+```cpp
 virtual message_status propagate_message(
     _Inout_ message<_Input>* _PMessage,
     _Inout_ ISource<_Input>* _PSource);
@@ -153,67 +153,67 @@ virtual message_status propagate_message(
 Pointeur vers l'objet `message`.
 
 *_PSource*<br/>
-Pointeur vers le bloc source qui transmet le message.
+Pointeur vers le bloc source qui offre le message.
 
 ### <a name="return-value"></a>Valeur de retour
 
-Un [message_status](concurrency-namespace-enums.md) indication de ce que la cible a décidé de faire avec le message.
+Une [message_status](concurrency-namespace-enums.md) indication de ce que la cible A décidé de faire avec le message.
 
-##  <a name="propagate_to_any_targets"></a> propagate_to_any_targets
+## <a name="propagate_to_any_targets"></a>propagate_to_any_targets
 
-Exécute la fonction de transformateur sur les messages d’entrée.
+Exécute la fonction transformateur sur les messages d’entrée.
 
-```
+```cpp
 virtual void propagate_to_any_targets(_Inout_opt_ message<_Output> *);
 ```
 
-##  <a name="release_message"></a> release_message
+## <a name="release_message"></a>release_message
 
-Libère une réservation de message précédent.
+Libère une réservation de message précédente.
 
-```
+```cpp
 virtual void release_message(runtime_object_identity _MsgId);
 ```
 
 ### <a name="parameters"></a>Paramètres
 
 *_MsgId*<br/>
-Le `runtime_object_identity` de la `message` de l’objet qui est libéré.
+`runtime_object_identity` de l’objet `message` en cours de libération.
 
-##  <a name="reserve_message"></a> reserve_message
+## <a name="reserve_message"></a>reserve_message
 
-Réserve un message précédemment proposé par ce `transformer` bloc de messagerie.
+Réserve un message précédemment offert par ce `transformer` bloc de messagerie.
 
-```
+```cpp
 virtual bool reserve_message(runtime_object_identity _MsgId);
 ```
 
 ### <a name="parameters"></a>Paramètres
 
 *_MsgId*<br/>
-Le `runtime_object_identity` de la `message` de l’objet en cours de réservation.
+`runtime_object_identity` de l’objet `message` qui est réservé.
 
 ### <a name="return-value"></a>Valeur de retour
 
-**true** si le message a été réservé avec succès, **false** dans le cas contraire.
+**true** si le message a été réservé, **false** dans le cas contraire.
 
 ### <a name="remarks"></a>Notes
 
-Après avoir `reserve` est appelée, si elle retourne **true**, soit `consume` ou `release` doit être appelé pour accepter ou libérer la propriété du message.
+Une fois `reserve` appelée, si elle retourne la **valeur true**, `consume` ou `release` doit être appelé pour accepter ou libérer la propriété du message.
 
-##  <a name="resume_propagation"></a> resume_propagation
+## <a name="resume_propagation"></a>resume_propagation
 
-Reprend la propagation après qu’une réservation a été libérée.
+Reprend la propagation après la libération d’une réservation.
 
-```
+```cpp
 virtual void resume_propagation();
 ```
 
-##  <a name="send_message"></a> send_message
+## <a name="send_message"></a>send_message
 
-Passe de façon synchrone un message à partir d’un `ISource` à ce bloc `transformer` bloc de messagerie. Elle est appelée par le `send` (méthode), lorsqu’elle est appelée par un bloc source.
+Transmet de façon synchrone un message d’un bloc de `ISource` à ce `transformer` bloc de messagerie. Elle est appelée par la méthode `send`, quand elle est appelée par un bloc source.
 
-```
+```cpp
 virtual message_status send_message(
     _Inout_ message<_Input>* _PMessage,
     _Inout_ ISource<_Input>* _PSource);
@@ -225,29 +225,29 @@ virtual message_status send_message(
 Pointeur vers l'objet `message`.
 
 *_PSource*<br/>
-Pointeur vers le bloc source qui transmet le message.
+Pointeur vers le bloc source qui offre le message.
 
 ### <a name="return-value"></a>Valeur de retour
 
-Un [message_status](concurrency-namespace-enums.md) indication de ce que la cible a décidé de faire avec le message.
+Une [message_status](concurrency-namespace-enums.md) indication de ce que la cible A décidé de faire avec le message.
 
-##  <a name="supports_anonymous_source"></a> supports_anonymous_source
+## <a name="supports_anonymous_source"></a>supports_anonymous_source
 
-Remplace le `supports_anonymous_source` méthode pour indiquer que ce bloc peut accepter des messages offerts par une source qui n’est pas liée.
+Substitue la méthode `supports_anonymous_source` pour indiquer que ce bloc peut accepter des messages qui lui sont offerts par une source qui n’est pas liée.
 
-```
+```cpp
 virtual bool supports_anonymous_source();
 ```
 
 ### <a name="return-value"></a>Valeur de retour
 
-**true** , car le bloc de ne pas reporter des messages proposés.
+**true** car le bloc n’ajourne pas les messages offerts.
 
-##  <a name="ctor"></a> transformateur
+## <a name="ctor"></a>transformer
 
 Construit un bloc de messagerie `transformer` .
 
-```
+```cpp
 transformer(
     _Transform_method const& _Func,
     _Inout_opt_ ITarget<_Output>* _PTarget = NULL);
@@ -283,13 +283,13 @@ transformer(
 ### <a name="parameters"></a>Paramètres
 
 *_Func*<br/>
-Une fonction qui sera appelée pour chaque message accepté.
+Fonction qui sera appelée pour chaque message accepté.
 
 *_PTarget*<br/>
-Pointeur vers un bloc cible à lier avec le transformateur.
+Pointeur vers un bloc cible à lier au transformateur.
 
 *_Filter*<br/>
-Une fonction de filtre qui détermine si les messages transmis doivent être acceptés.
+Fonction de filtre qui détermine si les messages offerts doivent être acceptés.
 
 *_PScheduler*<br/>
 Objet `Scheduler` dans lequel la tâche de propagation du bloc de messagerie `transformer` est planifiée.
@@ -303,13 +303,13 @@ Le runtime utilise le planificateur par défaut si vous ne spécifiez pas les pa
 
 Le type `_Transform_method` est un functor avec la signature `_Output (_Input const &)` qui est appelé par ce `transformer` bloc de messagerie pour traiter un message.
 
-Le type `filter_method` est un functor avec la signature `bool (_Input const &)` qui est appelé par ce `transformer` bloc de messagerie pour déterminer s’il doit accepter un message proposé.
+Le type `filter_method` est un functor avec la signature `bool (_Input const &)` qui est appelé par ce `transformer` bloc de messagerie pour déterminer s’il doit ou non accepter un message proposé.
 
-##  <a name="dtor"></a> ~transformer
+## <a name="dtor"></a>~ transformateur
 
-Détruit le `transformer` bloc de messagerie.
+Détruit le bloc de messagerie `transformer`.
 
-```
+```cpp
 ~transformer();
 ```
 

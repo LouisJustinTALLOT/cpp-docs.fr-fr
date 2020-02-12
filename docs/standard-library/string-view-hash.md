@@ -1,20 +1,20 @@
 ---
-title: hachage&lt;string_view&gt; spécialisation
+title: '&lt;de hachage string_view spécialisation&gt;'
 ms.date: 04/19/2019
 f1_keywords:
 - xstring/basic_string_view::hash
 helpviewer_keywords:
 - std::basic_string_view::hash
-ms.openlocfilehash: 60b6fdecc371ee950532dee3f69cc8dd07b8b5eb
-ms.sourcegitcommit: c6f8e6c2daec40ff4effd8ca99a7014a3b41ef33
+ms.openlocfilehash: 7a69473b6fe39655e7cf3154671017c39c453e29
+ms.sourcegitcommit: a8ef52ff4a4944a1a257bdaba1a3331607fb8d0f
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "64346957"
+ms.lasthandoff: 02/11/2020
+ms.locfileid: "77126173"
 ---
-# <a name="hashltstringviewgt-specialization"></a>hachage&lt;string_view&gt; spécialisation
+# <a name="hashltstring_viewgt-specialization"></a>&lt;de hachage string_view spécialisation&gt;
 
-Une spécialisation de modèle qui génère une valeur de hachage donnée un string_view.
+Spécialisation de modèle qui produit une valeur de hachage en fonction d’un string_view.
 
 ```cpp
 template <class CharType, class Traits>
@@ -29,7 +29,7 @@ struct hash<basic_string_view<CharType, Traits>>
 ```
 ### <a name="remarks"></a>Notes
 
-Le hachage d’un string_view est égal au hachage de l’objet de chaîne sous-jacent.
+Le hachage d’un string_view est égal au hachage de l’objet String sous-jacent.
 
 ### <a name="example"></a>Exemple
 

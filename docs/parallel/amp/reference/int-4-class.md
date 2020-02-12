@@ -268,20 +268,20 @@ f1_keywords:
 - amp_short_vectors/Concurrency::graphics::int_4::bg
 - amp_short_vectors/Concurrency::graphics::int_4::yxz
 ms.assetid: 01768c28-23a8-4965-8267-96834864f4eb
-ms.openlocfilehash: 7bcdd005ab5f530e08fc6e5326404d19f85faf4b
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 3ca8eb4c93b3e9cd9108712727d1f83421c9d679
+ms.sourcegitcommit: a8ef52ff4a4944a1a257bdaba1a3331607fb8d0f
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62180206"
+ms.lasthandoff: 02/11/2020
+ms.locfileid: "77126667"
 ---
-# <a name="int4-class"></a>int_4, classe
+# <a name="int_4-class"></a>int_4, classe
 
-Représente un vecteur court de quatre entiers.
+Représente un vecteur abrégé de quatre entiers.
 
 ## <a name="syntax"></a>Syntaxe
 
-```
+```cpp
 class int_4;
 ```
 
@@ -289,19 +289,19 @@ class int_4;
 
 ### <a name="public-typedefs"></a>Typedefs publics
 
-|Nom|Description|
+|Name|Description|
 |----------|-----------------|
 |`value_type`||
 
 ### <a name="public-constructors"></a>Constructeurs publics
 
-|Nom|Description|
+|Name|Description|
 |----------|-----------------|
-|[int_4 constructeur](#ctor)|Surchargé. Par défaut constructeur initialise tous les éléments par 0.|
+|[Constructeur int_4](#ctor)|Surchargé. Le constructeur par défaut initialise tous les éléments avec 0.|
 
 ### <a name="public-methods"></a>M&#233;thodes publiques
 
-|Nom|Description|
+|Name|Description|
 |----------|-----------------|
 |int_4::get_w||
 |int_4::get_wx||
@@ -442,7 +442,7 @@ class int_4;
 
 ### <a name="public-operators"></a>Op&#233;rateurs publics
 
-|Nom|Description|
+|Name|Description|
 |----------|-----------------|
 |int_4::operator-||
 |int_4::operator--||
@@ -455,20 +455,20 @@ class int_4;
 |int_4::operator~||
 |int_4::operator++||
 |int_4::operator+=||
-|int_4::operator<\<=||
+|int_4 :: Operator <\<=||
 |int_4::operator=||
 |int_4::operator-=||
 |int_4::operator>>=||
 
 ### <a name="public-constants"></a>Constantes publiques
 
-|Nom|Description|
+|Name|Description|
 |----------|-----------------|
-|[taille (constante)](#int_4__size)||
+|[taille, constante](#int_4__size)||
 
-### <a name="public-data-members"></a>Membres de données publics
+### <a name="public-data-members"></a>Membres de données publiques
 
-|Nom|Description|
+|Name|Description|
 |----------|-----------------|
 |int_4::a||
 |int_4::ab||
@@ -551,8 +551,8 @@ class int_4;
 |int_4::wzy||
 |int_4::wzyx||
 |int_4::x||
-|int_4::xw||
-|int_4::xwy||
+|int_4 :: XW||
+|int_4 :: xwy||
 |int_4::xwyz||
 |int_4::xwz||
 |int_4::xwzy||
@@ -563,7 +563,7 @@ class int_4;
 |int_4::xyzw||
 |int_4::xz||
 |int_4::xzw||
-|int_4::xzwy||
+|int_4 :: xzwy||
 |int_4::xzy||
 |int_4::xzyw||
 |int_4::y||
@@ -583,17 +583,17 @@ class int_4;
 |int_4::yzx||
 |int_4::yzxw||
 |int_4::z||
-|int_4::zw||
-|int_4::zwx||
-|int_4::zwxy||
+|int_4 :: ZW||
+|int_4 :: zwx||
+|int_4 :: zwxy||
 |int_4::zwy||
-|int_4::zwyx||
+|int_4 :: ZWYX||
 |int_4::zx||
 |int_4::zxw||
 |int_4::zxwy||
 |int_4::zxy||
 |int_4::zxyw||
-|int_4::zy||
+|int_4 :: ZY||
 |int_4::zyw||
 |int_4::zywx||
 |int_4::zyx||
@@ -603,17 +603,17 @@ class int_4;
 
 `int_4`
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
-**En-tête :** amp_short_vectors.h
+**En-tête :** amp_short_vectors. h
 
-**Espace de noms :** Concurrency::graphics
+**Espace de noms :** Concurrency :: Graphics
 
-##  <a name="ctor"></a> int_4
+## <a name="ctor"></a>int_4
 
-Par défaut constructeur initialise tous les éléments par 0.
+Le constructeur par défaut initialise tous les éléments avec 0.
 
-```
+```cpp
 int_4() restrict(amp,
     cpu);
 
@@ -656,26 +656,26 @@ explicit inline int_4(
 ### <a name="parameters"></a>Paramètres
 
 *_V0*<br/>
-La valeur pour initialiser l’élément 0.
+Valeur pour initialiser l’élément 0.
 
 *_V1*<br/>
-La valeur pour initialiser l’élément 1.
+Valeur pour initialiser l’élément 1.
 
 *_V2*<br/>
-La valeur pour initialiser l’élément 2.
+Valeur pour initialiser l’élément 2.
 
 *_V3*<br/>
-La valeur pour initialiser l’élément 3.
+Valeur pour initialiser l’élément 3.
 
 *_V*<br/>
-La valeur pour l’initialisation.
+Valeur d’initialisation.
 
 *_Other*<br/>
-L’objet utilisé pour initialiser.
+Objet utilisé pour initialiser.
 
-##  <a name="int_4__size"></a> Taille
+## <a name="int_4__size"></a>corps
 
-```
+```cpp
 static const int size = 4;
 ```
 

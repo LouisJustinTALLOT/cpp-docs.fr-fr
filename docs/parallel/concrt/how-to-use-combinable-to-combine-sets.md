@@ -1,26 +1,26 @@
 ---
-title: 'Procédure : Utiliser la classe combinable pour combiner des ensembles'
+title: 'Comment : utiliser la classe combinable pour combiner des ensembles'
 ms.date: 11/04/2016
 helpviewer_keywords:
 - combinable class, example
 - combining sets with combinable [Concurrency Runtime]
 ms.assetid: 66ffe8e3-6bbb-4e9f-b790-b612922a68a7
-ms.openlocfilehash: bf8a5bee65ea0ba1718c1d4d436b6af3e0b95961
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 7ccbb3e8bad5c4d3b6f4177afbfdba3e200681a5
+ms.sourcegitcommit: a8ef52ff4a4944a1a257bdaba1a3331607fb8d0f
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62345576"
+ms.lasthandoff: 02/11/2020
+ms.locfileid: "77142127"
 ---
-# <a name="how-to-use-combinable-to-combine-sets"></a>Procédure : Utiliser la classe combinable pour combiner des ensembles
+# <a name="how-to-use-combinable-to-combine-sets"></a>Comment : utiliser la classe combinable pour combiner des ensembles
 
-Cette rubrique montre comment utiliser le [concurrency::combinable](../../parallel/concrt/reference/combinable-class.md) classe permet de calculer l’ensemble de nombres premiers.
+Cette rubrique montre comment utiliser la classe [Concurrency :: combinable](../../parallel/concrt/reference/combinable-class.md) pour calculer le jeu de nombres premiers.
 
 ## <a name="example"></a>Exemple
 
-L’exemple suivant calcule le jeu de nombres premiers à deux reprises. Chaque calcul stocke le résultat dans un [std::bitset](../../standard-library/bitset-class.md) objet. L’exemple calcule d’abord le jeu en série, puis calcule en parallèle. L'exemple affiche également sur la console le temps requis pour effectuer les deux calculs.
+L’exemple suivant calcule le jeu de nombres premiers deux fois. Chaque calcul stocke le résultat dans un objet [std :: BitSet](../../standard-library/bitset-class.md) . L’exemple calcule d’abord le jeu en série, puis calcule le jeu en parallèle. L'exemple affiche également sur la console le temps requis pour effectuer les deux calculs.
 
-Cet exemple utilise le [concurrency::parallel_for](reference/concurrency-namespace-functions.md#parallel_for) algorithme et un `combinable` objet pour générer des jeux de thread local. Il utilise ensuite le [Concurrency::combinable :: combine_each](reference/combinable-class.md#combine_each) méthode pour combiner les groupes locaux de thread dans le jeu final.
+Cet exemple utilise l’algorithme [Concurrency ::p arallel_for](reference/concurrency-namespace-functions.md#parallel_for) et un objet `combinable` pour générer des jeux de threads locaux. Il utilise ensuite la méthode [Concurrency :: combinable :: combine_each](reference/combinable-class.md#combine_each) pour combiner les jeux de threads locaux dans le jeu final.
 
 [!code-cpp[concrt-parallel-combine-primes#1](../../parallel/concrt/codesnippet/cpp/how-to-use-combinable-to-combine-sets_1.cpp)]
 
@@ -34,12 +34,12 @@ parallel time: 78 ms
 
 ## <a name="compiling-the-code"></a>Compilation du code
 
-Copiez l’exemple de code et collez-le dans un projet Visual Studio ou collez-le dans un fichier nommé `parallel-combine-primes.cpp` , puis exécutez la commande suivante dans une fenêtre d’invite de commandes Visual Studio.
+Copiez l’exemple de code et collez-le dans un projet Visual Studio, ou collez-le dans un fichier nommé `parallel-combine-primes.cpp` puis exécutez la commande suivante dans une fenêtre d’invite de commandes Visual Studio.
 
-**cl.exe /EHsc parallel-combine-primes.cpp**
+> **CL. exe/EHsc Parallel-combine-primes. cpp**
 
 ## <a name="see-also"></a>Voir aussi
 
 [Conteneurs et objets parallèles](../../parallel/concrt/parallel-containers-and-objects.md)<br/>
 [combinable, classe](../../parallel/concrt/reference/combinable-class.md)<br/>
-[combinable::combine_each, méthode](reference/combinable-class.md#combine_each)
+[combinable :: combine_each, méthode](reference/combinable-class.md#combine_each)

@@ -8,20 +8,20 @@ f1_keywords:
 helpviewer_keywords:
 - bad_target class
 ms.assetid: e6dcddbf-9217-4fac-ac7f-7b8b4781d2f5
-ms.openlocfilehash: 04489151cedf1a47aeebd883e76b8d26b51031ef
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 023607ff142b7fa39165cc9b5280a8e9345a3645
+ms.sourcegitcommit: a8ef52ff4a4944a1a257bdaba1a3331607fb8d0f
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62337763"
+ms.lasthandoff: 02/11/2020
+ms.locfileid: "77142855"
 ---
-# <a name="badtarget-class"></a>bad_target, classe
+# <a name="bad_target-class"></a>bad_target, classe
 
 Cette classe décrit une exception levée quand un bloc de messagerie reçoit un pointeur vers une cible qui n'est pas valide pour l'opération en cours.
 
 ## <a name="syntax"></a>Syntaxe
 
-```
+```cpp
 class bad_target : public std::exception;
 ```
 
@@ -29,13 +29,13 @@ class bad_target : public std::exception;
 
 ### <a name="public-constructors"></a>Constructeurs publics
 
-|Nom|Description|
+|Name|Description|
 |----------|-----------------|
 |[bad_target](#ctor)|Surchargé. Construit un objet `bad_target`.|
 
 ## <a name="remarks"></a>Notes
 
-Cette exception est généralement levée pour des raisons telles que d’une cible essayant de consommer un message qui est réservé à une autre cible ou la libération d’une réservation qu’il ne contient pas.
+Cette exception est généralement levée pour des raisons telles qu’une cible qui tente d’utiliser un message réservé pour une autre cible ou libérant une réservation qu’il ne contient pas.
 
 ## <a name="inheritance-hierarchy"></a>Hiérarchie d'héritage
 
@@ -43,17 +43,17 @@ Cette exception est généralement levée pour des raisons telles que d’une ci
 
 `bad_target`
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
-**En-tête :** concrt.h
+**En-tête :** concrt. h
 
 **Espace de noms :** concurrency
 
-##  <a name="ctor"></a> bad_target
+## <a name="ctor"></a>bad_target
 
 Construit un objet `bad_target`.
 
-```
+```cpp
 explicit _CRTIMP bad_target(_In_z_ const char* _Message) throw();
 
 bad_target() throw();

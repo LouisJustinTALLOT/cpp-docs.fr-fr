@@ -4,50 +4,50 @@ ms.date: 11/04/2016
 helpviewer_keywords:
 - message passing functions
 ms.assetid: 42477c9e-a8a6-4dc4-a98e-93c6dc8c4dd0
-ms.openlocfilehash: 1a1790a08403bcc1d016a39e27c7a121c288af4d
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 4e1052a59f355c4ad5a7c6b57724268c24a209b4
+ms.sourcegitcommit: a8ef52ff4a4944a1a257bdaba1a3331607fb8d0f
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62185995"
+ms.lasthandoff: 02/11/2020
+ms.locfileid: "77143298"
 ---
 # <a name="message-passing-functions"></a>Fonctions de passage de messages
 
-La bibliothèque d’Agents asynchrones fournit plusieurs fonctions qui vous permettent de transmettre des messages entre composants.
+La bibliothèque d’agents asynchrones fournit plusieurs fonctions qui vous permettent de transmettre des messages entre les composants.
 
-Ces fonctions de transmission de messages sont utilisées avec les différents types de blocs de messages. Pour plus d’informations sur les types de blocs de messages qui sont définies par le Runtime d’accès concurrentiel, consultez [des blocs de messages asynchrones](../../parallel/concrt/asynchronous-message-blocks.md).
+Ces fonctions de passage de message sont utilisées avec les différents types de blocs de message. Pour plus d’informations sur les types de blocs de messages définis par le runtime d’accès concurrentiel, consultez [blocs de messages asynchrones](../../parallel/concrt/asynchronous-message-blocks.md).
 
-##  <a name="top"></a> Sections
+## <a name="top"></a> Sections
 
-Cette rubrique décrit les fonctions de passage de messages suivantes :
+Cette rubrique décrit les fonctions de passage de message suivantes :
 
-- [envoi et asend](#send)
+- [Send et asend](#send)
 
-- [recevoir et try_receive](#receive)
+- [réception et try_receive](#receive)
 
 - [Exemples](#examples)
 
-##  <a name="send"></a> envoi et asend
+## <a name="send"></a>Send et asend
 
-Le [concurrency::send](reference/concurrency-namespace-functions.md#send) fonction envoie un message à la cible spécifiée de façon synchrone et le [concurrency::asend](reference/concurrency-namespace-functions.md#asend) fonction envoie un message à la cible spécifiée de manière asynchrone. À la fois le `send` et `asend` fonctions patienter jusqu'à ce que la cible indique qu’il accepte ou refuse le message.
+La fonction [Concurrency :: Send](reference/concurrency-namespace-functions.md#send) envoie un message à la cible spécifiée de façon synchrone et la fonction [Concurrency :: asend](reference/concurrency-namespace-functions.md#asend) envoie un message à la cible spécifiée de manière asynchrone. Les fonctions `send` et `asend` attendent que la cible indique qu’elle accepte ou refuse le message.
 
-Le `send` fonction attend jusqu'à ce que la cible accepte ou refuse le message avant de retourner. Le `send` fonction renvoie **true** si le message a été remis et **false** dans le cas contraire. Étant donné que le `send` fonction fonctionne de façon synchrone, le `send` fonction attend que la cible recevoir le message avant de retourner.
+La fonction `send` attend que la cible accepte ou refuse le message avant qu’elle soit retournée. La fonction `send` retourne la **valeur true** si le message a été remis et **false** dans le cas contraire. Étant donné que la fonction `send` fonctionne de façon synchrone, la fonction `send` attend que la cible reçoive le message avant de retourner.
 
-À l’inverse, le `asend` fonction n’attend pas que la cible accepte ou refuse le message avant de retourner. Au lieu de cela, le `asend` fonction renvoie **true** si la cible accepte le message et prendra par la suite. Sinon, `asend` retourne **false** pour indiquer que la cible a refusé le message ou différé la décision sur la nécessité de prendre le message.
-
-[[Haut](#top)]
-
-##  <a name="receive"></a> recevoir et try_receive
-
-Le [concurrency::receive](reference/concurrency-namespace-functions.md#receive) et [concurrency::try_receive](reference/concurrency-namespace-functions.md#try_receive) fonctions lisent les données d’une source donnée. Le `receive` fonction attend des données deviennent disponibles, tandis que le `try_receive` fonction retourne immédiatement.
-
-Utilisez le `receive` fonctionner lorsque vous devez avoir les données pour continuer. Utilisez le `try_receive` fonctionner si vous ne devez pas bloquer le contexte actuel ou si vous n’avez pas à utiliser les données pour continuer.
+À l’inverse, la fonction `asend` n’attend pas que la cible accepte ou refuse le message avant de retourner. Au lieu de cela, la fonction `asend` retourne la **valeur true** si la cible accepte le message et la prendra finalement. Dans le cas contraire, `asend` retourne la **valeur false** pour indiquer que la cible a refusé le message ou a différé la décision de prendre le message.
 
 [[Haut](#top)]
 
-##  <a name="examples"></a> Exemples
+## <a name="receive"></a>réception et try_receive
 
-Pour obtenir des exemples qui utilisent la `send` et `asend`, et `receive` fonctions, consultez les rubriques suivantes :
+Les fonctions [Concurrency :: Receive](reference/concurrency-namespace-functions.md#receive) et [Concurrency :: try_receive](reference/concurrency-namespace-functions.md#try_receive) lisent les données d’une source donnée. La fonction `receive` attend que les données deviennent disponibles, tandis que la fonction `try_receive` retourne immédiatement.
+
+Utilisez la fonction `receive` lorsque vous devez disposer des données pour continuer. Utilisez la fonction `try_receive` si vous ne devez pas bloquer le contexte actuel ou si vous n’avez pas besoin de disposer des données pour continuer.
+
+[[Haut](#top)]
+
+## <a name="examples"></a> Exemples
+
+Pour obtenir des exemples qui utilisent les fonctions `send` et `asend`et `receive`, consultez les rubriques suivantes :
 
 - [Blocs de messages asynchrones](../../parallel/concrt/asynchronous-message-blocks.md)
 
@@ -72,4 +72,4 @@ Pour obtenir des exemples qui utilisent la `send` et `asend`, et `receive` fonct
 [Send, fonction](reference/concurrency-namespace-functions.md#send)<br/>
 [asend, fonction](reference/concurrency-namespace-functions.md#asend)<br/>
 [Receive, fonction](reference/concurrency-namespace-functions.md#receive)<br/>
-[try_receive, fonction](reference/concurrency-namespace-functions.md#try_receive)
+[try_receive fonction)](reference/concurrency-namespace-functions.md#try_receive)

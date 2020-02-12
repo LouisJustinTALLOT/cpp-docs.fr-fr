@@ -9,20 +9,20 @@ f1_keywords:
 helpviewer_keywords:
 - scheduler_resource_allocation_error class
 ms.assetid: 8b40449a-7abb-4d0a-bb85-c0e9a495ae97
-ms.openlocfilehash: 7f7254306253aabc33f46694f3da16734e6efccf
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 2955320b443fb61f26d9f07ca336a45c620e2aa9
+ms.sourcegitcommit: a8ef52ff4a4944a1a257bdaba1a3331607fb8d0f
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62160050"
+ms.lasthandoff: 02/11/2020
+ms.locfileid: "77143335"
 ---
-# <a name="schedulerresourceallocationerror-class"></a>scheduler_resource_allocation_error, classe
+# <a name="scheduler_resource_allocation_error-class"></a>scheduler_resource_allocation_error, classe
 
 Cette classe décrit une exception levée en raison d'un échec d'acquisition d'une ressource critique dans le runtime d'accès concurrentiel.
 
 ## <a name="syntax"></a>Syntaxe
 
-```
+```cpp
 class scheduler_resource_allocation_error : public std::exception;
 ```
 
@@ -30,19 +30,19 @@ class scheduler_resource_allocation_error : public std::exception;
 
 ### <a name="public-constructors"></a>Constructeurs publics
 
-|Nom|Description|
+|Name|Description|
 |----------|-----------------|
 |[scheduler_resource_allocation_error](#ctor)|Surchargé. Construit un objet `scheduler_resource_allocation_error`.|
 
 ### <a name="public-methods"></a>M&#233;thodes publiques
 
-|Nom|Description|
+|Name|Description|
 |----------|-----------------|
 |[get_error_code](#get_error_code)|Retourne le code d’erreur qui a provoqué l’exception.|
 
 ## <a name="remarks"></a>Notes
 
-Cette exception est généralement levée en cas d’échec d’un appel vers le système d’exploitation dans le Runtime d’accès concurrentiel. Le code d’erreur qui serait normalement retourné à partir d’un appel à la méthode Win32 `GetLastError` est convertie en une valeur de type `HRESULT` et peuvent être récupérées à l’aide de la `get_error_code` (méthode).
+Cette exception est généralement levée lorsqu’un appel au système d’exploitation à partir de l’runtime d’accès concurrentiel échoue. Code d’erreur qui serait normalement retourné à partir d’un appel à la méthode Win32 `GetLastError` est converti en une valeur de type `HRESULT` et peut être récupéré à l’aide de la méthode `get_error_code`.
 
 ## <a name="inheritance-hierarchy"></a>Hiérarchie d'héritage
 
@@ -50,29 +50,29 @@ Cette exception est généralement levée en cas d’échec d’un appel vers le
 
 `scheduler_resource_allocation_error`
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
-**En-tête :** concrt.h
+**En-tête :** concrt. h
 
 **Espace de noms :** concurrency
 
-##  <a name="get_error_code"></a> get_error_code
+## <a name="get_error_code"></a>get_error_code
 
 Retourne le code d’erreur qui a provoqué l’exception.
 
-```
+```cpp
 HRESULT get_error_code() const throw();
 ```
 
 ### <a name="return-value"></a>Valeur de retour
 
-Le `HRESULT` la valeur de l’erreur qui a provoqué l’exception.
+`HRESULT` valeur de l’erreur qui a provoqué l’exception.
 
-##  <a name="ctor"></a> scheduler_resource_allocation_error
+## <a name="ctor"></a>scheduler_resource_allocation_error
 
 Construit un objet `scheduler_resource_allocation_error`.
 
-```
+```cpp
 scheduler_resource_allocation_error(
     _In_z_ const char* _Message,
     HRESULT _Hresult) throw();
@@ -87,7 +87,7 @@ explicit _CRTIMP scheduler_resource_allocation_error(
 Message descriptif de l'erreur.
 
 *_Hresult*<br/>
-Le `HRESULT` la valeur de l’erreur qui a provoqué l’exception.
+`HRESULT` valeur de l’erreur qui a provoqué l’exception.
 
 ## <a name="see-also"></a>Voir aussi
 

@@ -28,20 +28,20 @@ f1_keywords:
 - amp_short_vectors/Concurrency::graphics::norm_2
 - amp_short_vectors/Concurrency::graphics::norm_2::operator--
 ms.assetid: 80703f9b-61f4-414a-93fd-bc774f7d3393
-ms.openlocfilehash: c48e6dd573e3303307cc8a0247a955aba62d809e
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 09bd33b5a8d9148c7959f69fcab4a260fe05c332
+ms.sourcegitcommit: a8ef52ff4a4944a1a257bdaba1a3331607fb8d0f
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62353051"
+ms.lasthandoff: 02/11/2020
+ms.locfileid: "77126498"
 ---
-# <a name="norm2-class"></a>norm_2, classe
+# <a name="norm_2-class"></a>norm_2, classe
 
-Représente un vecteur court de deux nombres normaux.
+Représente un vecteur abrégé de deux nombres normaux.
 
 ## <a name="syntax"></a>Syntaxe
 
-```
+```cpp
 class norm_2;
 ```
 
@@ -49,19 +49,19 @@ class norm_2;
 
 ### <a name="public-typedefs"></a>Typedefs publics
 
-|Nom|Description|
+|Name|Description|
 |----------|-----------------|
 |`value_type`||
 
 ### <a name="public-constructors"></a>Constructeurs publics
 
-|Nom|Description|
+|Name|Description|
 |----------|-----------------|
-|[norm_2 constructeur](#ctor)|Surchargé. Par défaut constructeur initialise tous les éléments par 0.|
+|[Constructeur norm_2](#ctor)|Surchargé. Le constructeur par défaut initialise tous les éléments avec 0.|
 
 ### <a name="public-methods"></a>M&#233;thodes publiques
 
-|Nom|Description|
+|Name|Description|
 |----------|-----------------|
 |norm_2::get_x||
 |norm_2::get_xy||
@@ -78,7 +78,7 @@ class norm_2;
 
 ### <a name="public-operators"></a>Op&#233;rateurs publics
 
-|Nom|Description|
+|Name|Description|
 |----------|-----------------|
 |norm_2::operator-||
 |norm_2::operator--||
@@ -91,38 +91,38 @@ class norm_2;
 
 ### <a name="public-constants"></a>Constantes publiques
 
-|Nom|Description|
+|Name|Description|
 |----------|-----------------|
-|[taille (constante)](#norm_2__size)||
+|[taille, constante](#norm_2__size)||
 
-### <a name="public-data-members"></a>Membres de données publics
+### <a name="public-data-members"></a>Membres de données publiques
 
-|Nom|Description|
+|Name|Description|
 |----------|-----------------|
-|norm_2::g||
+|norm_2 :: g||
 |norm_2::gr||
-|norm_2::r||
+|norm_2 :: r||
 |norm_2::rg||
-|norm_2::x||
+|norm_2 :: x||
 |norm_2::xy||
-|norm_2::y||
-|norm_2::yx||
+|norm_2 :: y||
+|norm_2 :: YX||
 
 ## <a name="inheritance-hierarchy"></a>Hiérarchie d'héritage
 
 `norm_2`
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
-**En-tête :** amp_short_vectors.h
+**En-tête :** amp_short_vectors. h
 
-**Espace de noms :** Concurrency::graphics
+**Espace de noms :** Concurrency :: Graphics
 
-##  <a name="ctor"></a> norm_2
+## <a name="ctor"></a>norm_2
 
-Par défaut constructeur initialise tous les éléments par 0.
+Le constructeur par défaut initialise tous les éléments avec 0.
 
-```
+```cpp
 norm_2() restrict(amp,
     cpu);
 
@@ -177,20 +177,20 @@ explicit inline norm_2(
 ### <a name="parameters"></a>Paramètres
 
 *_V0*<br/>
-La valeur pour initialiser l’élément 0.
+Valeur pour initialiser l’élément 0.
 
 *_V1*<br/>
-La valeur pour initialiser l’élément 1.
+Valeur pour initialiser l’élément 1.
 
 *_V*<br/>
-La valeur pour l’initialisation.
+Valeur d’initialisation.
 
 *_Other*<br/>
-L’objet utilisé pour initialiser.
+Objet utilisé pour initialiser.
 
-##  <a name="norm_2__size"></a> Taille
+## <a name="norm_2__size"></a>corps
 
-```
+```cpp
 static const int size = 2;
 ```
 

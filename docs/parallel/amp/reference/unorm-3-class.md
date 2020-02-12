@@ -72,20 +72,20 @@ f1_keywords:
 - amp_short_vectors/Concurrency::graphics::unorm_3::get_yz
 - amp_short_vectors/Concurrency::graphics::unorm_3::rbg
 ms.assetid: ea4e7a17-5256-464c-af28-8b01962564c0
-ms.openlocfilehash: befbf350bbd591d168f19e87c81370220d29ef9f
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: efca9b51f44a9eb64e6e9d89cc156ab0b2df5ae5
+ms.sourcegitcommit: a8ef52ff4a4944a1a257bdaba1a3331607fb8d0f
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62405519"
+ms.lasthandoff: 02/11/2020
+ms.locfileid: "77126186"
 ---
-# <a name="unorm3-class"></a>unorm_3, classe
+# <a name="unorm_3-class"></a>unorm_3, classe
 
-Représente un vecteur court de trois nombres normaux non signés.
+Représente un vecteur abrégé de trois nombres normaux non signés.
 
 ## <a name="syntax"></a>Syntaxe
 
-```
+```cpp
 class unorm_3;
 ```
 
@@ -93,19 +93,19 @@ class unorm_3;
 
 ### <a name="public-typedefs"></a>Typedefs publics
 
-|Nom|Description|
+|Name|Description|
 |----------|-----------------|
 |`value_type`||
 
 ### <a name="public-constructors"></a>Constructeurs publics
 
-|Nom|Description|
+|Name|Description|
 |----------|-----------------|
-|[unorm_3 constructeur](#ctor)|Surchargé. Par défaut constructeur initialise tous les éléments par 0.|
+|[Constructeur unorm_3](#ctor)|Surchargé. Le constructeur par défaut initialise tous les éléments avec 0.|
 
 ### <a name="public-methods"></a>M&#233;thodes publiques
 
-|Nom|Description|
+|Name|Description|
 |----------|-----------------|
 |unorm_3::get_x||
 |unorm_3::get_xy||
@@ -122,12 +122,12 @@ class unorm_3;
 |unorm_3::get_zxy||
 |unorm_3::get_zy||
 |unorm_3::get_zyx||
-|Unorm_3::ref_b||
-|Unorm_3::ref_g||
-|Unorm_3::ref_r||
+|Unorm_3 :: ref_b||
+|Unorm_3 :: ref_g||
+|Unorm_3 :: ref_r||
 |Unorm_3::ref_x||
 |Unorm_3::ref_y||
-|Unorm_3::ref_z||
+|Unorm_3 :: ref_z||
 |unorm_3::set_x||
 |unorm_3::set_xy||
 |unorm_3::set_xyz||
@@ -146,7 +146,7 @@ class unorm_3;
 
 ### <a name="public-operators"></a>Op&#233;rateurs publics
 
-|Nom|Description|
+|Name|Description|
 |----------|-----------------|
 |unorm_3::operator--||
 |unorm_3::operator*=||
@@ -158,60 +158,60 @@ class unorm_3;
 
 ### <a name="public-constants"></a>Constantes publiques
 
-|Nom|Description|
+|Name|Description|
 |----------|-----------------|
-|[taille (constante)](#unorm_3__size)||
+|[taille, constante](#unorm_3__size)||
 
-### <a name="public-data-members"></a>Membres de données publics
+### <a name="public-data-members"></a>Membres de données publiques
 
-|Nom|Description|
+|Name|Description|
 |----------|-----------------|
-|unorm_3::b||
+|unorm_3 :: b||
 |unorm_3::bg||
 |unorm_3::bgr||
-|unorm_3::br||
-|unorm_3::brg||
-|unorm_3::g||
+|unorm_3 :: BR||
+|unorm_3 :: BRG||
+|unorm_3 :: g||
 |unorm_3::gb||
 |unorm_3::gbr||
-|unorm_3::gr||
+|unorm_3 :: gr||
 |unorm_3::grb||
-|unorm_3::r||
-|unorm_3::rb||
+|unorm_3 :: r||
+|unorm_3 :: RB||
 |unorm_3::rbg||
-|unorm_3::rg||
+|unorm_3 :: RG||
 |unorm_3::rgb||
-|unorm_3::x||
-|unorm_3::xy||
+|unorm_3 :: x||
+|unorm_3 :: XY||
 |unorm_3::xyz||
 |unorm_3::xz||
 |unorm_3::xzy||
-|unorm_3::y||
+|unorm_3 :: y||
 |unorm_3::yx||
 |unorm_3::yxz||
 |unorm_3::yz||
 |unorm_3::yzx||
-|unorm_3::z||
+|unorm_3 :: z||
 |unorm_3::zx||
 |unorm_3::zxy||
-|unorm_3::zy||
-|unorm_3::zyx||
+|unorm_3 :: ZY||
+|unorm_3 :: ZYX||
 
 ## <a name="inheritance-hierarchy"></a>Hiérarchie d'héritage
 
 `unorm_3`
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
-**En-tête :** amp_short_vectors.h
+**En-tête :** amp_short_vectors. h
 
-**Espace de noms :** Concurrency::graphics
+**Espace de noms :** Concurrency :: Graphics
 
-##  <a name="ctor"></a> unorm_3
+## <a name="ctor"></a>unorm_3
 
-Par défaut constructeur initialise tous les éléments par 0.
+Le constructeur par défaut initialise tous les éléments avec 0.
 
-```
+```cpp
 unorm_3() restrict(amp,
     cpu);
 
@@ -263,23 +263,23 @@ explicit inline unorm_3(
 ### <a name="parameters"></a>Paramètres
 
 *_V0*<br/>
-La valeur pour initialiser l’élément 0.
+Valeur pour initialiser l’élément 0.
 
 *_V1*<br/>
-La valeur pour initialiser l’élément 1.
+Valeur pour initialiser l’élément 1.
 
 *_V2*<br/>
-La valeur pour initialiser l’élément 2.
+Valeur pour initialiser l’élément 2.
 
 *_V*<br/>
-La valeur pour l’initialisation.
+Valeur d’initialisation.
 
 *_Other*<br/>
-L’objet utilisé pour initialiser.
+Objet utilisé pour initialiser.
 
-##  <a name="unorm_3__size"></a> Taille
+## <a name="unorm_3__size"></a>corps
 
-```
+```cpp
 static const int size = 3;
 ```
 

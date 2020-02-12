@@ -21,12 +21,12 @@ f1_keywords:
 helpviewer_keywords:
 - Scheduler class
 ms.assetid: 34cf7961-048d-4852-8a5c-a32f823e3506
-ms.openlocfilehash: f27dace61b0764962a78695c2a4c6b180b09d7a3
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 77ad876b8352ab1ae86fde622b05712ec5f2cea9
+ms.sourcegitcommit: a8ef52ff4a4944a1a257bdaba1a3331607fb8d0f
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62160131"
+ms.lasthandoff: 02/11/2020
+ms.locfileid: "77142012"
 ---
 # <a name="scheduler-class"></a>Scheduler, classe
 
@@ -34,101 +34,101 @@ Représente une abstraction pour un planificateur de runtime d'accès concurrent
 
 ## <a name="syntax"></a>Syntaxe
 
-```
+```cpp
 class Scheduler;
 ```
 
 ## <a name="members"></a>Membres
 
-### <a name="protected-constructors"></a>Constructeurs protégés
+### <a name="protected-constructors"></a>Constructeurs prot&#233;g&#233;s
 
-|Nom|Description|
+|Name|Description|
 |----------|-----------------|
-|[Planificateur](#ctor)|Un objet de la `Scheduler` classe peut uniquement être créé à l’aide de méthodes de fabrique, ou implicitement.|
-|[~ Scheduler, destructeur](#dtor)|Un objet de la `Scheduler` classe est détruite implicitement lorsque toutes les références externes cessent d’exister.|
+|[Scheduler](#ctor)|Un objet de la classe `Scheduler` peut uniquement être créé à l’aide de méthodes de fabrique ou implicitement.|
+|[~ Destructeur du planificateur](#dtor)|Un objet de la classe `Scheduler` est implicitement détruit lorsque toutes les références externes à celui-ci cessent d’exister.|
 
 ### <a name="public-methods"></a>M&#233;thodes publiques
 
-|Nom|Description|
+|Name|Description|
 |----------|-----------------|
-|[Attacher](#attach)|Attache le planificateur au contexte d’appel. Une fois que cette méthode est retournée, le contexte d’appel est géré par le planificateur et le planificateur devient le planificateur actuel.|
-|[Create](#create)|Crée un nouveau planificateur dont le comportement est décrit par le `_Policy` paramètre, place une référence initiale sur le planificateur et retourne un pointeur vers elle.|
-|[CreateScheduleGroup](#createschedulegroup)|Surchargé. Crée un nouveau groupe de planification dans le planificateur. La version qui prend le paramètre `_Placement` entraîne des tâches au sein du groupe de planification qui vient d’être créé pour être orienté vers l’exécution à l’emplacement spécifié par ce paramètre.|
-|[GetNumberOfVirtualProcessors](#getnumberofvirtualprocessors)|Retourne le nombre actuel de processeurs virtuels pour le planificateur.|
-|[GetPolicy](#getpolicy)|Retourne une copie de la stratégie que le planificateur a été créé.|
+|[Attacher](#attach)|Attache le planificateur au contexte d’appel. Une fois que cette méthode a retourné une valeur, le contexte d’appel est géré par le planificateur et le planificateur devient le planificateur actuel.|
+|[Créer](#create)|Crée un planificateur dont le comportement est décrit par le paramètre `_Policy`, place une référence initiale sur le planificateur et retourne un pointeur vers celui-ci.|
+|[CreateScheduleGroup,](#createschedulegroup)|Surchargé. Crée un nouveau groupe de planification dans le planificateur. La version qui accepte le paramètre `_Placement` fait passer les tâches du groupe de planification nouvellement créé à l’exécution à l’emplacement spécifié par ce paramètre.|
+|[GetNumberOfVirtualProcessors,](#getnumberofvirtualprocessors)|Retourne le nombre actuel de processeurs virtuels pour le planificateur.|
+|[GetPolicy](#getpolicy)|Retourne une copie de la stratégie avec laquelle le planificateur a été créé.|
 |[Id](#id)|Retourne un identificateur unique pour le planificateur.|
-|[IsAvailableLocation](#isavailablelocation)|Détermine si un emplacement donné est disponible sur le planificateur.|
-|[Référence](#reference)|Incrémente le décompte de références du planificateur.|
-|[RegisterShutdownEvent](#registershutdownevent)|Événements Windows passé dans le `_Event` paramètre soit signalé lorsque le planificateur s’arrête et détruit proprement dit. Au moment de que l’événement est signalé, tout le travail avait été prévu pour le planificateur est terminé. Plusieurs événements d’arrêt peuvent être enregistrés via cette méthode.|
-|[Version release](#release)|Décrémente le planificateur décompte de références.|
-|[ResetDefaultSchedulerPolicy](#resetdefaultschedulerpolicy)|Réinitialise la stratégie du planificateur par défaut à la valeur par défaut du runtime. La prochaine fois qu’un planificateur par défaut est créé, il utilisera les paramètres de stratégie d’exécution par défaut.|
-|[ScheduleTask](#scheduletask)|Surchargé. Planifie une tâche légère dans le planificateur. La tâche légère sera placée dans un groupe de planification déterminé par le runtime. La version qui prend le paramètre `_Placement` force la tâche à être orientées vers l’exécution à l’emplacement spécifié.|
-|[SetDefaultSchedulerPolicy](#setdefaultschedulerpolicy)|Permet à une stratégie définie par l’utilisateur à utiliser pour créer le planificateur par défaut. Cette méthode peut être appelée uniquement lorsque aucun planificateur par défaut n’existe dans le processus. Une fois une stratégie par défaut a été définie, elle reste en vigueur jusqu’au prochain appel valid à un le `SetDefaultSchedulerPolicy` ou [ResetDefaultSchedulerPolicy](#resetdefaultschedulerpolicy) (méthode).|
+|[Isavailablelocation,](#isavailablelocation)|Détermine si un emplacement donné est disponible sur le planificateur.|
+|[Référence](#reference)|Incrémente le nombre de références du planificateur.|
+|[RegisterShutdownEvent,](#registershutdownevent)|Fait en sorte que le descripteur d’événement Windows passé dans le paramètre `_Event` soit signalé lorsque le planificateur s’arrête et se détruit lui-même. Au moment où l’événement est signalé, tout le travail qui avait été planifié dans le planificateur est terminé. Plusieurs événements d’arrêt peuvent être inscrits via cette méthode.|
+|[Version release](#release)|Décrémente le nombre de références du planificateur.|
+|[ResetDefaultSchedulerPolicy](#resetdefaultschedulerpolicy)|Rétablit la valeur par défaut d’exécution de la stratégie du planificateur par défaut. La prochaine fois qu’un planificateur par défaut sera créé, il utilisera les paramètres de stratégie par défaut du Runtime.|
+|[ScheduleTask,](#scheduletask)|Surchargé. Planifie une tâche légère dans le planificateur. La tâche légère est placée dans un groupe de planification déterminé par le Runtime. La version qui accepte le paramètre `_Placement` fait passer la tâche à l’exécution à l’emplacement spécifié.|
+|[SetDefaultSchedulerPolicy](#setdefaultschedulerpolicy)|Permet d’utiliser une stratégie définie par l’utilisateur pour créer le planificateur par défaut. Cette méthode peut être appelée uniquement lorsqu’aucun planificateur par défaut n’existe dans le processus. Une fois qu’une stratégie par défaut a été définie, elle reste en vigueur jusqu’au prochain appel valide à l' `SetDefaultSchedulerPolicy` ou à la méthode [ResetDefaultSchedulerPolicy](#resetdefaultschedulerpolicy) .|
 
 ## <a name="remarks"></a>Notes
 
-Le Planificateur de Runtime d’accès concurrentiel utilise des contextes d’exécution, qui correspondent aux contextes d’exécution de système d’exploitation, par exemple un thread, pour exécuter le travail en file d’attente à celui-ci par votre application. À tout moment, le niveau d’accès concurrentiel d’un planificateur est égal au nombre de processeur virtuel accordé à ce dernier par le Gestionnaire de ressources. Un processeur virtuel est une abstraction pour une ressource de traitement et est mappé à un thread matériel sur le système sous-jacent. Uniquement un contexte de planificateur unique puisse s’exécuter sur un processeur virtuel à un moment donné.
+Le planificateur runtime d’accès concurrentiel utilise des contextes d’exécution, qui mappent aux contextes d’exécution du système d’exploitation, tels qu’un thread, pour exécuter le travail mis en file d’attente par votre application. À tout moment, le niveau de concurrence d’un planificateur est égal au nombre de processeurs virtuels qui lui est accordé par le Gestionnaire des ressources. Un processeur virtuel est une abstraction d’une ressource de traitement qui est mappée à un thread matériel sur le système sous-jacent. Un seul contexte de planificateur peut s’exécuter sur un processeur virtuel à un moment donné.
 
-Le Runtime d’accès concurrentiel créera un planificateur par défaut par processus pour exécuter le travail parallèle. En outre, vous pouvez créer des instances de votre propre planificateur et les manipuler à l’aide de cette classe.
+Le runtime d’accès concurrentiel crée un planificateur par défaut par processus pour exécuter le travail parallèle. En outre, vous pouvez créer vos propres instances de planificateur et les manipuler à l’aide de cette classe.
 
 ## <a name="inheritance-hierarchy"></a>Hiérarchie d'héritage
 
 `Scheduler`
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
-**En-tête :** concrt.h
+**En-tête :** concrt. h
 
 **Espace de noms :** concurrency
 
-##  <a name="attach"></a> Attacher
+## <a name="attach"></a>Attacher
 
-Attache le planificateur au contexte d’appel. Une fois que cette méthode est retournée, le contexte d’appel est géré par le planificateur et le planificateur devient le planificateur actuel.
+Attache le planificateur au contexte d’appel. Une fois que cette méthode a retourné une valeur, le contexte d’appel est géré par le planificateur et le planificateur devient le planificateur actuel.
 
-```
+```cpp
 virtual void Attach() = 0;
 ```
 
 ### <a name="remarks"></a>Notes
 
-Attachement d’un planificateur implicitement la place une référence sur le planificateur.
+L’attachement d’un planificateur place implicitement une référence sur le planificateur.
 
-À un moment donné à l’avenir, vous devez appeler la [CurrentScheduler::Detach](currentscheduler-class.md#detach) méthode afin de permettre l’arrêt du planificateur.
+À un moment donné à l’avenir, vous devez appeler la méthode [CurrentScheduler ::D Etach](currentscheduler-class.md#detach) pour permettre au planificateur de s’arrêter.
 
-Si cette méthode est appelée à partir d’un contexte qui est déjà attaché à un autre planificateur, le planificateur existant est mémorisé comme le planificateur précédent, et le planificateur créé récemment devient le planificateur actuel. Lorsque vous appelez le `CurrentScheduler::Detach` méthode à un moment ultérieur, le planificateur précédent est restauré comme planificateur actuel.
+Si cette méthode est appelée à partir d’un contexte qui est déjà attaché à un autre planificateur, le planificateur existant est mémorisé comme planificateur précédent et le planificateur nouvellement créé devient le planificateur actuel. Quand vous appelez la méthode `CurrentScheduler::Detach` à un moment ultérieur, le planificateur précédent est restauré en tant que planificateur actuel.
 
-Cette méthode lève un [improper_scheduler_attach](improper-scheduler-attach-class.md) exception si ce planificateur est le planificateur actuel du contexte d’appel.
+Cette méthode lève une exception [improper_scheduler_attach](improper-scheduler-attach-class.md) si ce planificateur est le planificateur actuel du contexte d’appel.
 
-##  <a name="create"></a> Créer
+## <a name="create"></a> Créer
 
-Crée un nouveau planificateur dont le comportement est décrit par le `_Policy` paramètre, place une référence initiale sur le planificateur et retourne un pointeur vers elle.
+Crée un planificateur dont le comportement est décrit par le paramètre `_Policy`, place une référence initiale sur le planificateur et retourne un pointeur vers celui-ci.
 
-```
+```cpp
 static Scheduler* __cdecl Create(const SchedulerPolicy& _Policy);
 ```
 
 ### <a name="parameters"></a>Paramètres
 
 *_Policy*<br/>
-La stratégie du planificateur qui décrit le comportement du planificateur qui vient d’être créé.
+Stratégie du planificateur qui décrit le comportement du planificateur nouvellement créé.
 
 ### <a name="return-value"></a>Valeur de retour
 
-Pointeur vers un planificateur qui vient d’être créé. Cela `Scheduler` objet possède un décompte de références initial.
+Pointeur vers un planificateur nouvellement créé. Cet objet `Scheduler` a un nombre de références initial placé sur celui-ci.
 
 ### <a name="remarks"></a>Notes
 
-Une fois un planificateur est créé avec le `Create` (méthode), vous devez appeler la `Release` méthode à un moment donné dans le futur afin de supprimer le décompte de références initial et autoriser l’arrêt du planificateur.
+Après avoir créé un planificateur avec la méthode `Create`, vous devez appeler la méthode `Release` à un moment donné dans le futur afin de supprimer le nombre de références initiales et autoriser le planificateur à s’arrêter.
 
-Un planificateur créé avec cette méthode n’est pas attaché au contexte d’appel. Il peut être associé à un contexte à l’aide de la [attacher](#attach) (méthode).
+Un planificateur créé avec cette méthode n’est pas attaché au contexte d’appel. Il peut être attaché à un contexte à l’aide de la méthode [Attach](#attach) .
 
-Cette méthode peut lever diverses exceptions, y compris [scheduler_resource_allocation_error](scheduler-resource-allocation-error-class.md) et [invalid_scheduler_policy_value](invalid-scheduler-policy-value-class.md).
+Cette méthode peut lever diverses exceptions, notamment [scheduler_resource_allocation_error](scheduler-resource-allocation-error-class.md) et [invalid_scheduler_policy_value](invalid-scheduler-policy-value-class.md).
 
-##  <a name="createschedulegroup"></a> CreateScheduleGroup
+## <a name="createschedulegroup"></a>CreateScheduleGroup,
 
-Crée un nouveau groupe de planification dans le planificateur. La version qui prend le paramètre `_Placement` entraîne des tâches au sein du groupe de planification qui vient d’être créé pour être orienté vers l’exécution à l’emplacement spécifié par ce paramètre.
+Crée un nouveau groupe de planification dans le planificateur. La version qui accepte le paramètre `_Placement` fait passer les tâches du groupe de planification nouvellement créé à l’exécution à l’emplacement spécifié par ce paramètre.
 
-```
+```cpp
 virtual ScheduleGroup* CreateScheduleGroup() = 0;
 
 virtual ScheduleGroup* CreateScheduleGroup(location& _Placement) = 0;
@@ -137,161 +137,161 @@ virtual ScheduleGroup* CreateScheduleGroup(location& _Placement) = 0;
 ### <a name="parameters"></a>Paramètres
 
 *_Placement*<br/>
-Une référence à un emplacement où les tâches au sein du groupe de planification sera évoque largement l’exécution à.
+Référence à un emplacement où les tâches au sein du groupe de planification sont biaisées pour s’exécuter à.
 
 ### <a name="return-value"></a>Valeur de retour
 
-Pointeur vers le groupe de planification nouvellement créé. Cela `ScheduleGroup` objet possède un décompte de références initial.
+Pointeur vers le groupe de planification nouvellement créé. Cet objet `ScheduleGroup` a un nombre de références initial placé sur celui-ci.
 
 ### <a name="remarks"></a>Notes
 
-Vous devez appeler la [version](schedulegroup-class.md#release) méthode sur un groupe de planification lorsque vous avez terminé la planification de travail à ce dernier. Le planificateur détruira la planification de groupe lorsque tout le travail en file d’attente à ce dernier est terminée.
+Vous devez appeler la méthode [Release](schedulegroup-class.md#release) sur un groupe de planification lorsque vous avez terminé de planifier le travail. Le planificateur détruira le groupe de planification lorsque toutes les tâches mises en file d’attente seront terminées.
 
-Notez que si vous avez créé ce planificateur explicitement, vous devez libérer toutes les références pour planifier des groupes, avant de libérer votre référence sur le planificateur.
+Notez que si vous avez créé ce planificateur de manière explicite, vous devez libérer toutes les références aux groupes de planification qu’il contient avant de libérer vos références sur le planificateur.
 
-##  <a name="getnumberofvirtualprocessors"></a> GetNumberOfVirtualProcessors
+## <a name="getnumberofvirtualprocessors"></a>GetNumberOfVirtualProcessors,
 
 Retourne le nombre actuel de processeurs virtuels pour le planificateur.
 
-```
+```cpp
 virtual unsigned int GetNumberOfVirtualProcessors() const = 0;
 ```
 
 ### <a name="return-value"></a>Valeur de retour
 
-Le nombre de processeurs virtuels pour le planificateur actuel.
+Nombre actuel de processeurs virtuels pour le planificateur.
 
-##  <a name="getpolicy"></a> GetPolicy
+## <a name="getpolicy"></a>GetPolicy
 
-Retourne une copie de la stratégie que le planificateur a été créé.
+Retourne une copie de la stratégie avec laquelle le planificateur a été créé.
 
-```
+```cpp
 virtual SchedulerPolicy GetPolicy() const = 0;
 ```
 
 ### <a name="return-value"></a>Valeur de retour
 
-Une copie de la stratégie que le planificateur a été créé.
+Copie de la stratégie avec laquelle le planificateur a été créé.
 
-##  <a name="id"></a> Id
+## <a name="id"></a>Identifi
 
 Retourne un identificateur unique pour le planificateur.
 
-```
+```cpp
 virtual unsigned int Id() const = 0;
 ```
 
 ### <a name="return-value"></a>Valeur de retour
 
-Un identificateur unique pour le planificateur.
+Identificateur unique pour le planificateur.
 
-##  <a name="isavailablelocation"></a> IsAvailableLocation
+## <a name="isavailablelocation"></a>Isavailablelocation,
 
 Détermine si un emplacement donné est disponible sur le planificateur.
 
-```
+```cpp
 virtual bool IsAvailableLocation(const location& _Placement) const = 0;
 ```
 
 ### <a name="parameters"></a>Paramètres
 
 *_Placement*<br/>
-Une référence à l’emplacement d’une requête sur le planificateur.
+Référence à l’emplacement à propos duquel interroger le planificateur.
 
 ### <a name="return-value"></a>Valeur de retour
 
-Une indication de valeur déterminant l’emplacement spécifié par le `_Placement` argument n’est disponible sur le planificateur.
+Indique si l’emplacement spécifié par l’argument `_Placement` est ou non disponible sur le planificateur.
 
 ### <a name="remarks"></a>Notes
 
-Notez que la valeur de retour est un échantillonnage instantané si l’emplacement donné est disponible. En présence de plusieurs planificateurs, gestion des ressources dynamiques pour ajouter ou retirer des ressources à partir des planificateurs à tout moment. Le cas échéant, l’emplacement donné peut modifier la disponibilité.
+Notez que la valeur de retour est un échantillonnage instantané indiquant si l’emplacement donné est disponible. En présence de plusieurs planificateurs, la gestion dynamique des ressources peut ajouter ou retirer des ressources des planificateurs à tout moment. Si cela se produit, l’emplacement donné peut modifier la disponibilité.
 
-##  <a name="reference"></a> Référence
+## <a name="reference"></a>Faire
 
-Incrémente le décompte de références du planificateur.
+Incrémente le nombre de références du planificateur.
 
-```
+```cpp
 virtual unsigned int Reference() = 0 ;
 ```
 
 ### <a name="return-value"></a>Valeur de retour
 
-Le décompte de références qui vient d’être incrémentée.
+Nombre de références récemment incrémentées.
 
 ### <a name="remarks"></a>Notes
 
-Cela est généralement utilisé pour gérer la durée de vie du planificateur pour la composition. Lorsque le décompte de références d’un est compris planificateur à zéro, le planificateur s’arrête et CAPACITE de destruction lui-même fonctionne après tout sur le planificateur est terminée.
+Il est généralement utilisé pour gérer la durée de vie du planificateur pour la composition. Lorsque le nombre de références d’un planificateur est égal à zéro, le planificateur s’arrête et se détruit une fois que tout le travail sur le planificateur est terminé.
 
-La méthode lève un [improper_scheduler_reference](improper-scheduler-reference-class.md) exception si le nombre de références avant d’appeler le `Reference` méthode était zéro et l’appel est effectué à partir d’un contexte qui n’appartienne pas par le planificateur.
+La méthode lèvera une exception [improper_scheduler_reference](improper-scheduler-reference-class.md) si le décompte de références avant d’appeler la méthode `Reference` était égal à zéro et que l’appel est effectué à partir d’un contexte qui n’appartient pas au planificateur.
 
-##  <a name="registershutdownevent"></a> RegisterShutdownEvent
+## <a name="registershutdownevent"></a>RegisterShutdownEvent,
 
-Événements Windows passé dans le `_Event` paramètre soit signalé lorsque le planificateur s’arrête et détruit proprement dit. Au moment de que l’événement est signalé, tout le travail avait été prévu pour le planificateur est terminé. Plusieurs événements d’arrêt peuvent être enregistrés via cette méthode.
+Fait en sorte que le descripteur d’événement Windows passé dans le paramètre `_Event` soit signalé lorsque le planificateur s’arrête et se détruit lui-même. Au moment où l’événement est signalé, tout le travail qui avait été planifié dans le planificateur est terminé. Plusieurs événements d’arrêt peuvent être inscrits via cette méthode.
 
-```
+```cpp
 virtual void RegisterShutdownEvent(HANDLE _Event) = 0;
 ```
 
 ### <a name="parameters"></a>Paramètres
 
 *_Event*<br/>
-Handle vers un objet d’événement Windows qui sera signalé par l’exécution lorsque le planificateur s’arrête et détruit proprement dit.
+Handle d’un objet d’événement Windows qui sera signalé par le runtime lorsque le planificateur s’arrête et se détruit lui-même.
 
-##  <a name="release"></a> Mise en production
+## <a name="release"></a>3/05
 
-Décrémente le planificateur décompte de références.
+Décrémente le nombre de références du planificateur.
 
-```
+```cpp
 virtual unsigned int Release() = 0;
 ```
 
 ### <a name="return-value"></a>Valeur de retour
 
-Le décompte de références qui vient d’être décrémentée.
+Le décompte de références qui vient d’être décrémenté.
 
 ### <a name="remarks"></a>Notes
 
-Cela est généralement utilisé pour gérer la durée de vie du planificateur pour la composition. Lorsque le décompte de références d’un est compris planificateur à zéro, le planificateur s’arrête et CAPACITE de destruction lui-même fonctionne après tout sur le planificateur est terminée.
+Il est généralement utilisé pour gérer la durée de vie du planificateur pour la composition. Lorsque le nombre de références d’un planificateur est égal à zéro, le planificateur s’arrête et se détruit une fois que tout le travail sur le planificateur est terminé.
 
-##  <a name="resetdefaultschedulerpolicy"></a> ResetDefaultSchedulerPolicy
+## <a name="resetdefaultschedulerpolicy"></a>ResetDefaultSchedulerPolicy
 
-Réinitialise la stratégie du planificateur par défaut à la valeur par défaut du runtime. La prochaine fois qu’un planificateur par défaut est créé, il utilisera les paramètres de stratégie d’exécution par défaut.
+Rétablit la valeur par défaut d’exécution de la stratégie du planificateur par défaut. La prochaine fois qu’un planificateur par défaut sera créé, il utilisera les paramètres de stratégie par défaut du Runtime.
 
-```
+```cpp
 static void __cdecl ResetDefaultSchedulerPolicy();
 ```
 
 ### <a name="remarks"></a>Notes
 
-Cette méthode peut être appelée alors qu’un planificateur par défaut existe dans le processus. Il n’affecte pas la stratégie du planificateur par défaut existant. Toutefois, si le planificateur par défaut s’arrête et une nouvelle valeur par défaut ont été doit être créé à un moment ultérieur, le nouveau planificateur serait d’utiliser les paramètres de stratégie d’exécution par défaut.
+Cette méthode peut être appelée alors qu’un planificateur par défaut existe dans le processus. Elle n’affecte pas la stratégie du planificateur par défaut existant. Toutefois, si le planificateur par défaut devait être arrêté et qu’une nouvelle valeur par défaut devait être créée ultérieurement, le nouveau planificateur utilisera les paramètres de stratégie par défaut du Runtime.
 
-##  <a name="ctor"></a> Planificateur
+## <a name="ctor"></a>Planificateur
 
-Un objet de la `Scheduler` classe peut uniquement être créé à l’aide de méthodes de fabrique, ou implicitement.
+Un objet de la classe `Scheduler` peut uniquement être créé à l’aide de méthodes de fabrique ou implicitement.
 
-```
+```cpp
 Scheduler();
 ```
 
 ### <a name="remarks"></a>Notes
 
-Le planificateur du processus par défaut est créé implicitement lorsque vous utilisez beaucoup des fonctions runtime qui nécessitent un planificateur pour être attaché au contexte d’appel. Méthodes au sein de la `CurrentScheduler` classe et les fonctionnalités des bibliothèque de modèles parallèles et couches d’agents effectuent généralement une pièce jointe implicite.
+Le planificateur par défaut du processus est créé implicitement lorsque vous utilisez la plupart des fonctions d’exécution qui requièrent qu’un planificateur soit attaché au contexte d’appel. Les méthodes de la classe `CurrentScheduler` et les fonctionnalités de la bibliothèque PPL et des couches agents exécutent généralement une pièce jointe implicite.
 
-Vous pouvez également créer explicitement un planificateur via soit le `CurrentScheduler::Create` méthode ou le `Scheduler::Create` (méthode).
+Vous pouvez également créer un planificateur de manière explicite par le biais de la méthode `CurrentScheduler::Create` ou de la méthode `Scheduler::Create`.
 
-##  <a name="dtor"></a> ~Scheduler
+## <a name="dtor"></a>~ Scheduler
 
-Un objet de la `Scheduler` classe est détruite implicitement lorsque toutes les références externes cessent d’exister.
+Un objet de la classe `Scheduler` est implicitement détruit lorsque toutes les références externes à celui-ci cessent d’exister.
 
-```
+```cpp
 virtual ~Scheduler();
 ```
 
-##  <a name="scheduletask"></a> ScheduleTask
+## <a name="scheduletask"></a>ScheduleTask,
 
-Planifie une tâche légère dans le planificateur. La tâche légère sera placée dans un groupe de planification déterminé par le runtime. La version qui prend le paramètre `_Placement` force la tâche à être orientées vers l’exécution à l’emplacement spécifié.
+Planifie une tâche légère dans le planificateur. La tâche légère est placée dans un groupe de planification déterminé par le Runtime. La version qui accepte le paramètre `_Placement` fait passer la tâche à l’exécution à l’emplacement spécifié.
 
-```
+```cpp
 virtual void ScheduleTask(
     TaskProc _Proc,
     _Inout_opt_ void* _Data) = 0;
@@ -308,31 +308,31 @@ virtual void ScheduleTask(
 Pointeur vers la fonction à exécuter pour exécuter le corps de la tâche légère.
 
 *_Data*<br/>
-Un pointeur void vers les données qui seront passées en tant que paramètre au corps de la tâche.
+Pointeur void vers les données qui seront passées en tant que paramètre au corps de la tâche.
 
 *_Placement*<br/>
-Une référence à un emplacement où la tâche légère sera être évoque largement l’exécution à.
+Référence à un emplacement où la tâche légère sera biaisée pour s’exécuter à.
 
-##  <a name="setdefaultschedulerpolicy"></a> SetDefaultSchedulerPolicy
+## <a name="setdefaultschedulerpolicy"></a>SetDefaultSchedulerPolicy
 
-Permet à une stratégie définie par l’utilisateur à utiliser pour créer le planificateur par défaut. Cette méthode peut être appelée uniquement lorsque aucun planificateur par défaut n’existe dans le processus. Une fois une stratégie par défaut a été définie, elle reste en vigueur jusqu’au prochain appel valid à un le `SetDefaultSchedulerPolicy` ou [ResetDefaultSchedulerPolicy](#resetdefaultschedulerpolicy) (méthode).
+Permet d’utiliser une stratégie définie par l’utilisateur pour créer le planificateur par défaut. Cette méthode peut être appelée uniquement lorsqu’aucun planificateur par défaut n’existe dans le processus. Une fois qu’une stratégie par défaut a été définie, elle reste en vigueur jusqu’au prochain appel valide à l' `SetDefaultSchedulerPolicy` ou à la méthode [ResetDefaultSchedulerPolicy](#resetdefaultschedulerpolicy) .
 
-```
+```cpp
 static void __cdecl SetDefaultSchedulerPolicy(const SchedulerPolicy& _Policy);
 ```
 
 ### <a name="parameters"></a>Paramètres
 
 *_Policy*<br/>
-La stratégie à définir en tant que la stratégie du planificateur par défaut.
+Stratégie à définir en tant que stratégie du planificateur par défaut.
 
 ### <a name="remarks"></a>Notes
 
-Si le `SetDefaultSchedulerPolicy` méthode est appelée lorsqu’un planificateur par défaut existe déjà dans le processus, le runtime lève un [default_scheduler_exists](default-scheduler-exists-class.md) exception.
+Si la méthode `SetDefaultSchedulerPolicy` est appelée alors qu’un planificateur par défaut existe déjà dans le processus, le runtime lèvera une exception [default_scheduler_exists](default-scheduler-exists-class.md) .
 
 ## <a name="see-also"></a>Voir aussi
 
 [accès concurrentiel Namespace](concurrency-namespace.md)<br/>
 [Scheduler, classe](scheduler-class.md)<br/>
-[PolicyElementKey](concurrency-namespace-enums.md)<br/>
+[PolicyElementKey,](concurrency-namespace-enums.md)<br/>
 [Planificateur de tâches](../../../parallel/concrt/task-scheduler-concurrency-runtime.md)

@@ -6,20 +6,20 @@ f1_keywords:
 - AMP_SHORT_VECTORS/short_vector
 - AMP_SHORT_VECTORS/Concurrency::graphics::short_vector::short_vector Constructor
 ms.assetid: e4f50b8f-1150-437d-b58c-79c5fb883708
-ms.openlocfilehash: 012a70ae628a896c8202e46a5624f37f58b0781b
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 531b8d53eac8d997b7e8ca4d29aad7d34ef90e22
+ms.sourcegitcommit: a8ef52ff4a4944a1a257bdaba1a3331607fb8d0f
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62351545"
+ms.lasthandoff: 02/11/2020
+ms.locfileid: "77126433"
 ---
-# <a name="shortvector-structure"></a>short_vector Structure
+# <a name="short_vector-structure"></a>short_vector Structure
 
-short_vector fournit les définitions de métaprogrammation qui sont utiles pour la programmation des vecteurs courts de manière générique.
+short_vector fournit des définitions de la surprogrammation qui sont utiles pour la programmation de vecteurs courts de façon générique.
 
 ## <a name="syntax"></a>Syntaxe
 
-```
+```cpp
 template<
     typename _Scalar_type,
     int _Size
@@ -75,7 +75,7 @@ template<>
 struct short_vector<double, 4>;
 ```
 
-#### <a name="parameters"></a>Paramètres
+### <a name="parameters"></a>Paramètres
 
 *_Scalar_type*<br/>
 
@@ -85,29 +85,29 @@ struct short_vector<double, 4>;
 
 ### <a name="public-typedefs"></a>Typedefs publics
 
-|Nom|Description|
+|Name|Description|
 |----------|-----------------|
 |`type`||
 
 ### <a name="public-constructors"></a>Constructeurs publics
 
-|Nom|Description|
+|Name|Description|
 |----------|-----------------|
-|[short_vector::short_vector, constructeur](#ctor)||
+|[short_vector :: short_vector, constructeur](#ctor)||
 
 ## <a name="inheritance-hierarchy"></a>Hiérarchie d'héritage
 
 `short_vector`
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
-**En-tête :** amp_short_vectors.h
+**En-tête :** amp_short_vectors. h
 
-**Espace de noms :** Concurrency::graphics
+**Espace de noms :** Concurrency :: Graphics
 
-##  <a name="ctor"></a>  short_vector::short_vector, constructeur
+## <a name="ctor"></a>short_vector :: short_vector, constructeur
 
-```
+```cpp
 short_vector();
 ```
 

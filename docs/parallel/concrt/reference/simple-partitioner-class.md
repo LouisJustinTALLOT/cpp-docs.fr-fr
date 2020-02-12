@@ -8,20 +8,20 @@ f1_keywords:
 helpviewer_keywords:
 - simple_partitioner class
 ms.assetid: d7e997af-54d1-43f5-abe0-def72df6edb3
-ms.openlocfilehash: 372773926903da32f1690904b34cd143a04940dd
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 503f36b90c5eb3319f9aa2d56528172ffa95bb11
+ms.sourcegitcommit: a8ef52ff4a4944a1a257bdaba1a3331607fb8d0f
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62337243"
+ms.lasthandoff: 02/11/2020
+ms.locfileid: "77142495"
 ---
-# <a name="simplepartitioner-class"></a>simple_partitioner, classe
+# <a name="simple_partitioner-class"></a>simple_partitioner, classe
 
 La classe `simple_partitioner` représente un partitionnement statique de la plage itérée par `parallel_for`. Le partitionneur divise la plage en segments de sorte que chaque segment comporte au moins le nombre d'itérations spécifié par la taille du segment.
 
 ## <a name="syntax"></a>Syntaxe
 
-```
+```cpp
 class simple_partitioner;
 ```
 
@@ -29,41 +29,41 @@ class simple_partitioner;
 
 ### <a name="public-constructors"></a>Constructeurs publics
 
-|Nom|Description|
+|Name|Description|
 |----------|-----------------|
 |[simple_partitioner](#ctor)|Construit un objet `simple_partitioner`.|
-|[~ simple_partitioner, destructeur](#dtor)|Détruit un objet `simple_partitioner`.|
+|[Destructeur ~ simple_partitioner](#dtor)|Détruit un objet `simple_partitioner`.|
 
 ## <a name="inheritance-hierarchy"></a>Hiérarchie d'héritage
 
 `simple_partitioner`
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
-**En-tête :** ppl.h
+**En-tête :** ppl. h
 
 **Espace de noms :** concurrency
 
-##  <a name="dtor"></a> ~simple_partitioner
+## <a name="dtor"></a>~ simple_partitioner
 
 Détruit un objet `simple_partitioner`.
 
-```
+```cpp
 ~simple_partitioner();
 ```
 
-##  <a name="ctor"></a> simple_partitioner
+## <a name="ctor"></a>simple_partitioner
 
 Construit un objet `simple_partitioner`.
 
-```
+```cpp
 explicit simple_partitioner(_Size_type _Chunk_size);
 ```
 
 ### <a name="parameters"></a>Paramètres
 
 *_Chunk_size*<br/>
-La taille de partition minimale.
+Taille de partition minimale.
 
 ## <a name="see-also"></a>Voir aussi
 
