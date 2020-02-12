@@ -17,12 +17,12 @@ f1_keywords:
 helpviewer_keywords:
 - agent class
 ms.assetid: 1b09e3d2-5e37-4966-b016-907ef1512456
-ms.openlocfilehash: 98ad5f817361d8410e5a60648fb23baec06c42d7
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: f0092f5f90bbdf253c09dbdc80849c3db472212f
+ms.sourcegitcommit: a8ef52ff4a4944a1a257bdaba1a3331607fb8d0f
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62337750"
+ms.lasthandoff: 02/11/2020
+ms.locfileid: "77142897"
 ---
 # <a name="agent-class"></a>agent, classe
 
@@ -30,7 +30,7 @@ Classe destinée à être utilisée comme classe de base pour tous les agents in
 
 ## <a name="syntax"></a>Syntaxe
 
-```
+```cpp
 class agent;
 ```
 
@@ -38,49 +38,49 @@ class agent;
 
 ### <a name="public-constructors"></a>Constructeurs publics
 
-|Nom|Description|
+|Name|Description|
 |----------|-----------------|
 |[agent](#ctor)|Surchargé. Construit un agent.|
 |[~ agent, destructeur](#dtor)|Détruit l’agent.|
 
 ### <a name="public-methods"></a>M&#233;thodes publiques
 
-|Nom|Description|
+|Name|Description|
 |----------|-----------------|
-|[cancel](#cancel)|Déplace un agent à partir de le le `agent_created` ou `agent_runnable` États à la `agent_canceled` état.|
-|[start](#start)|Déplace un agent à partir de la `agent_created` l’état le `agent_runnable` d’état et il planifie l’exécution de.|
-|[status](#status)|Une source synchrone d’informations d’état de l’agent.|
+|[cancel](#cancel)|Déplace un agent des États `agent_created` ou `agent_runnable` vers l’État `agent_canceled`.|
+|[start](#start)|Déplace un agent de l’État `agent_created` vers l’État `agent_runnable`, et planifie son exécution.|
+|[statut](#status)|Source synchrone d’informations d’état de l’agent.|
 |[status_port](#status_port)|Source asynchrone d’informations d’état de l’agent.|
-|[wait](#wait)|Attend qu’un agent effectuer sa tâche.|
-|[wait_for_all](#wait_for_all)|Attend que tous les agents spécifiés pour effectuer leurs tâches.|
-|[wait_for_one](#wait_for_one)|Attend que l’un des agents spécifiés ait terminé sa tâche.|
+|[qu'](#wait)|Attend qu’un agent termine sa tâche.|
+|[wait_for_all](#wait_for_all)|Attend que tous les agents spécifiés terminent leurs tâches.|
+|[wait_for_one](#wait_for_one)|Attend la fin de la tâche de l’un des agents spécifiés.|
 
 ### <a name="protected-methods"></a>Méthodes protégées
 
-|Nom|Description|
+|Name|Description|
 |----------|-----------------|
-|[done](#done)|Déplace un agent dans le `agent_done` état indiquant que l’agent a terminé.|
-|[run](#run)|Représente la tâche principale d’un agent. `run` doit être substituée dans une classe dérivée et spécifie ce que l’agent doit faire après qu’elle a été démarré.|
+|[done](#done)|Déplace un agent dans l’État `agent_done`, indiquant que l’agent est terminé.|
+|[run](#run)|Représente la tâche principale d’un agent. `run` doit être substitué dans une classe dérivée, et spécifie ce que l’agent doit faire après son démarrage.|
 
 ## <a name="remarks"></a>Notes
 
-Pour plus d’informations, consultez [Agents asynchrones](../../../parallel/concrt/asynchronous-agents.md).
+Pour plus d’informations, consultez [agents asynchrones](../../../parallel/concrt/asynchronous-agents.md).
 
 ## <a name="inheritance-hierarchy"></a>Hiérarchie d'héritage
 
 `agent`
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
 **En-tête :** agents.h
 
 **Espace de noms :** concurrency
 
-##  <a name="ctor"></a> agent
+## <a name="ctor"></a>agent
 
 Construit un agent.
 
-```
+```cpp
 agent();
 
 agent(Scheduler& _PScheduler);
@@ -91,84 +91,84 @@ agent(ScheduleGroup& _PGroup);
 ### <a name="parameters"></a>Paramètres
 
 *_PScheduler*<br/>
-Le `Scheduler` de l’objet dans lequel la tâche d’exécution de l’agent est planifiée.
+Objet `Scheduler` dans lequel la tâche d’exécution de l’agent est planifiée.
 
 *_PGroup*<br/>
-Le `ScheduleGroup` de l’objet dans lequel la tâche d’exécution de l’agent est planifiée. L’objet `Scheduler` utilisé est suggéré par le groupe de planification.
+Objet `ScheduleGroup` dans lequel la tâche d’exécution de l’agent est planifiée. L’objet `Scheduler` utilisé est suggéré par le groupe de planification.
 
 ### <a name="remarks"></a>Notes
 
 Le runtime utilise le planificateur par défaut si vous ne spécifiez pas les paramètres `_PScheduler` ou `_PGroup` .
 
-##  <a name="dtor"></a> ~agent
+## <a name="dtor"></a>~ agent
 
 Détruit l’agent.
 
-```
+```cpp
 virtual ~agent();
 ```
 
 ### <a name="remarks"></a>Notes
 
-C’est une erreur pour détruire un agent qui n’est pas dans un état terminal (soit `agent_done` ou `agent_canceled`). Cela peut être évité en attendant que l’agent atteigne un état terminal dans le destructeur d’une classe qui hérite de la `agent` classe.
+Il s’agit d’une erreur de destruction d’un agent qui n’est pas dans un état terminal (`agent_done` ou `agent_canceled`). Cela peut être évité en attendant que l’agent atteigne un état terminal dans le destructeur d’une classe qui hérite de la classe `agent`.
 
-##  <a name="cancel"></a> Annuler
+## <a name="cancel"></a>Annuler
 
-Déplace un agent à partir de le le `agent_created` ou `agent_runnable` États à la `agent_canceled` état.
+Déplace un agent des États `agent_created` ou `agent_runnable` vers l’État `agent_canceled`.
 
-```
+```cpp
 bool cancel();
 ```
 
 ### <a name="return-value"></a>Valeur de retour
 
-**true** si l’agent a été annulée, **false** dans le cas contraire. Un agent ne peut pas être annulé si elle a déjà démarré ou est déjà terminée.
+**true** si l’agent a été annulé ; sinon, **false** . Un agent ne peut pas être annulé s’il a déjà démarré ou s’est déjà terminé.
 
-##  <a name="done"></a> Terminé
+## <a name="done"></a>cas
 
-Déplace un agent dans le `agent_done` état indiquant que l’agent a terminé.
+Déplace un agent dans l’État `agent_done`, indiquant que l’agent est terminé.
 
-```
+```cpp
 bool done();
 ```
 
 ### <a name="return-value"></a>Valeur de retour
 
-**true** si l’agent est déplacé vers le `agent_done` état, **false** dans le cas contraire. Impossible de déplacer un agent qui a été annulé à la `agent_done` état.
+**true** si l’agent est déplacé vers l’État `agent_done` ; sinon, **false** . Un agent qui a été annulé ne peut pas être déplacé vers l’État `agent_done`.
 
 ### <a name="remarks"></a>Notes
 
-Cette méthode doit être appelée à la fin de la `run` méthode, lorsque vous savez que l’exécution de votre agent est terminée.
+Cette méthode doit être appelée à la fin de la méthode `run`, lorsque vous savez que l’exécution de votre agent est terminée.
 
-##  <a name="run"></a> exécuter
+## <a name="run"></a>Utilisez
 
-Représente la tâche principale d’un agent. `run` doit être substituée dans une classe dérivée et spécifie ce que l’agent doit faire après qu’elle a été démarré.
+Représente la tâche principale d’un agent. `run` doit être substitué dans une classe dérivée, et spécifie ce que l’agent doit faire après son démarrage.
 
-```
+```cpp
 virtual void run() = 0;
 ```
 
 ### <a name="remarks"></a>Notes
 
-L’état de l’agent est passé à `agent_started` juste avant que cette méthode est appelée. La méthode doit appeler `done` sur l’agent avec un état approprié avant de retourner et ne peut pas lever des exceptions.
+L’état de l’agent est remplacé par `agent_started` juste avant que cette méthode soit appelée. La méthode doit appeler `done` sur l’agent avec un état approprié avant de retourner, et peut ne pas lever d’exceptions.
 
-##  <a name="start"></a> Démarrer
+## <a name="start"></a>activer
 
-Déplace un agent à partir de la `agent_created` l’état le `agent_runnable` d’état et il planifie l’exécution de.
+Déplace un agent de l’État `agent_created` vers l’État `agent_runnable`, et planifie son exécution.
 
-```
+```cpp
 bool start();
 ```
 
 ### <a name="return-value"></a>Valeur de retour
 
-**true** si l’agent a démarré correctement, **false** dans le cas contraire. Impossible de démarrer un agent qui a été annulé.
+**true** si l’agent a démarré correctement ; sinon, **false** . Impossible de démarrer un agent qui a été annulé.
 
-##  <a name="status"></a> État
+## <a name="status"></a>statu
 
-Une source synchrone d’informations d’état de l’agent.
+Source synchrone d’informations d’état de l’agent.
 
-```
+```cpp
 agent_status status();
 ```
 
@@ -176,23 +176,23 @@ agent_status status();
 
 Retourne l’état actuel de l’agent. Notez que cet état retourné peut changer immédiatement après avoir été retourné.
 
-##  <a name="status_port"></a> status_port
+## <a name="status_port"></a>status_port
 
 Source asynchrone d’informations d’état de l’agent.
 
-```
+```cpp
 ISource<agent_status>* status_port();
 ```
 
 ### <a name="return-value"></a>Valeur de retour
 
-Retourne une source de message qui peut envoyer des messages sur l’état actuel de l’agent.
+Retourne une source de message qui peut envoyer des messages concernant l’état actuel de l’agent.
 
-##  <a name="wait"></a> attente
+## <a name="wait"></a>qu'
 
-Attend qu’un agent effectuer sa tâche.
+Attend qu’un agent termine sa tâche.
 
-```
+```cpp
 static agent_status __cdecl wait(
     _Inout_ agent* _PAgent,
     unsigned int _Timeout = COOPERATIVE_TIMEOUT_INFINITE);
@@ -204,23 +204,23 @@ static agent_status __cdecl wait(
 Pointeur vers l’agent à attendre.
 
 *_Timeout*<br/>
-La durée maximale d’attente, en millisecondes.
+Durée maximale d’attente, en millisecondes.
 
 ### <a name="return-value"></a>Valeur de retour
 
-Le `agent_status` de l’agent lors de l’attente se termine. Il peut s’agir `agent_canceled` ou `agent_done`.
+`agent_status` de l’agent lorsque l’attente se termine. Il peut s’agir de `agent_canceled` ou `agent_done`.
 
 ### <a name="remarks"></a>Notes
 
-Une tâche d’agent est terminée lorsque l’agent passe le `agent_canceled` ou `agent_done` États.
+Une tâche de l’agent est terminée lorsque l’agent entre les États `agent_canceled` ou `agent_done`.
 
-Si le paramètre `_Timeout` a une valeur autre que la constante `COOPERATIVE_TIMEOUT_INFINITE`, l’exception [operation_timed_out](operation-timed-out-class.md) est levée si le délai spécifié expire avant que l’agent a terminé sa tâche.
+Si le paramètre `_Timeout` a une valeur autre que la constante `COOPERATIVE_TIMEOUT_INFINITE`, l’exception [operation_timed_out](operation-timed-out-class.md) est levée si l’intervalle de temps spécifié expire avant que l’agent n’ait terminé sa tâche.
 
-##  <a name="wait_for_all"></a> wait_for_all
+## <a name="wait_for_all"></a>wait_for_all
 
-Attend que tous les agents spécifiés pour effectuer leurs tâches.
+Attend que tous les agents spécifiés terminent leurs tâches.
 
-```
+```cpp
 static void __cdecl wait_for_all(
     size_t count,
     _In_reads_(count) agent** _PAgents,
@@ -231,28 +231,28 @@ static void __cdecl wait_for_all(
 ### <a name="parameters"></a>Paramètres
 
 *count*<br/>
-Le nombre de pointeurs d’agent présents dans le tableau `_PAgents`.
+Nombre de pointeurs d’agent présents dans le tableau `_PAgents`.
 
 *_PAgents*<br/>
-Un tableau de pointeurs vers les agents à attendre.
+Tableau de pointeurs vers les agents à attendre.
 
 *_PStatus*<br/>
-Pointeur vers un tableau d’états d’agent. Chaque valeur d’état représentera l’état de l’agent correspondant lorsque la méthode est retournée.
+Pointeur vers un tableau d’États de l’agent. Chaque valeur d’état représente l’état de l’agent correspondant lorsque la méthode est retournée.
 
 *_Timeout*<br/>
-La durée maximale d’attente, en millisecondes.
+Durée maximale d’attente, en millisecondes.
 
 ### <a name="remarks"></a>Notes
 
-Une tâche d’agent est terminée lorsque l’agent passe le `agent_canceled` ou `agent_done` États.
+Une tâche de l’agent est terminée lorsque l’agent entre les États `agent_canceled` ou `agent_done`.
 
-Si le paramètre `_Timeout` a une valeur autre que la constante `COOPERATIVE_TIMEOUT_INFINITE`, l’exception [operation_timed_out](operation-timed-out-class.md) est levée si le délai spécifié expire avant que l’agent a terminé sa tâche.
+Si le paramètre `_Timeout` a une valeur autre que la constante `COOPERATIVE_TIMEOUT_INFINITE`, l’exception [operation_timed_out](operation-timed-out-class.md) est levée si l’intervalle de temps spécifié expire avant que l’agent n’ait terminé sa tâche.
 
-##  <a name="wait_for_one"></a> wait_for_one
+## <a name="wait_for_one"></a>wait_for_one
 
-Attend que l’un des agents spécifiés ait terminé sa tâche.
+Attend la fin de la tâche de l’un des agents spécifiés.
 
-```
+```cpp
 static void __cdecl wait_for_one(
     size_t count,
     _In_reads_(count) agent** _PAgents,
@@ -264,25 +264,25 @@ static void __cdecl wait_for_one(
 ### <a name="parameters"></a>Paramètres
 
 *count*<br/>
-Le nombre de pointeurs d’agent présents dans le tableau `_PAgents`.
+Nombre de pointeurs d’agent présents dans le tableau `_PAgents`.
 
 *_PAgents*<br/>
-Un tableau de pointeurs vers les agents à attendre.
+Tableau de pointeurs vers les agents à attendre.
 
 *_Status*<br/>
-Une référence à une variable où l’état de l’agent sera placé.
+Référence à une variable où l’état de l’agent sera placé.
 
 *_Index*<br/>
-Une référence à une variable où l’index de l’agent sera placé.
+Référence à une variable dans laquelle l’index de l’agent sera placé.
 
 *_Timeout*<br/>
-La durée maximale d’attente, en millisecondes.
+Durée maximale d’attente, en millisecondes.
 
 ### <a name="remarks"></a>Notes
 
-Une tâche d’agent est terminée lorsque l’agent passe le `agent_canceled` ou `agent_done` États.
+Une tâche de l’agent est terminée lorsque l’agent entre les États `agent_canceled` ou `agent_done`.
 
-Si le paramètre `_Timeout` a une valeur autre que la constante `COOPERATIVE_TIMEOUT_INFINITE`, l’exception [operation_timed_out](operation-timed-out-class.md) est levée si le délai spécifié expire avant que l’agent a terminé sa tâche.
+Si le paramètre `_Timeout` a une valeur autre que la constante `COOPERATIVE_TIMEOUT_INFINITE`, l’exception [operation_timed_out](operation-timed-out-class.md) est levée si l’intervalle de temps spécifié expire avant que l’agent n’ait terminé sa tâche.
 
 ## <a name="see-also"></a>Voir aussi
 

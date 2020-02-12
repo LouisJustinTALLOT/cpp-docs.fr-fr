@@ -12,16 +12,16 @@ f1_keywords:
 - AMP_GRAPHICS/concurrency::sampler::graphics::border_color
 - AMP_GRAPHICS/concurrency::sampler::graphics::filter_mode
 ms.assetid: 9a6a9807-497d-402d-b092-8c4d86275b80
-ms.openlocfilehash: 1a66e4d025a7592b78839dbe5f25f9103da41224
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 8f47bf6e9b88dba1e94e9e2ed2b93c8d2d3f9b8c
+ms.sourcegitcommit: a8ef52ff4a4944a1a257bdaba1a3331607fb8d0f
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62352591"
+ms.lasthandoff: 02/11/2020
+ms.locfileid: "77126349"
 ---
 # <a name="sampler-class"></a>sampler, classe
 
-La classe d’échantillonnage regroupe les informations de configuration d’échantillonnage à utiliser pour l’échantillonnage de texture.
+La classe d’échantillonneur agrège les informations de configuration d’échantillonnage à utiliser pour l’échantillonnage de texture.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -33,45 +33,45 @@ class sampler;
 
 ### <a name="public-constructors"></a>Constructeurs publics
 
-|Nom|Description|
+|Name|Description|
 |----------|-----------------|
-|[échantillonneur, constructeur](#ctor)|Surchargé. Construit une instance d’échantillonnage.|
+|[sampler, constructeur](#ctor)|Surchargé. Construit une instance de l’échantillonneur.|
 
 ### <a name="public-methods"></a>M&#233;thodes publiques
 
-|Nom|Description|
+|Name|Description|
 |----------|-----------------|
-|[get_address_mode](#get_address_mode)|Retourne le `address_mode` qui est associé à l’objet d’échantillonnage.|
-|[get_border_color](#get_border_color)|Retourne la couleur de bordure qui est associé à l’objet d’échantillonnage.|
-|[get_filter_mode](#get_filter_mode)|Retourne le `filter_mode` qui est associé à l’objet d’échantillonnage.|
+|[get_address_mode](#get_address_mode)|Retourne le `address_mode` associé à l’objet d’échantillonnage.|
+|[get_border_color](#get_border_color)|Retourne la couleur de bordure associée à l’objet d’échantillonnage.|
+|[get_filter_mode](#get_filter_mode)|Retourne le `filter_mode` associé à l’objet d’échantillonnage.|
 
 ### <a name="public-operators"></a>Op&#233;rateurs publics
 
-|Nom|Description|
+|Name|Description|
 |----------|-----------------|
 |[operator=](#operator_eq)|Surchargé. Opérateur d'assignation.|
 
-### <a name="public-data-members"></a>Membres de données publics
+### <a name="public-data-members"></a>Membres de données publiques
 
-|Nom|Description|
+|Name|Description|
 |----------|-----------------|
-|[address_mode](#address_mode)|Obtient le mode d’adresse de la `sampler` objet.|
-|[border_color](#border_color)|Obtient la couleur de bordure de la `sampler` objet.|
-|[filter_mode](#filter_mode)|Obtient le mode de filtre de le `sampler` objet.|
+|[address_mode](#address_mode)|Obtient le mode d’adresse de l’objet `sampler`.|
+|[border_color](#border_color)|Obtient la couleur de bordure de l’objet `sampler`.|
+|[filter_mode](#filter_mode)|Obtient le mode de filtre de l’objet `sampler`.|
 
 ## <a name="inheritance-hierarchy"></a>Hiérarchie d'héritage
 
 `sampler`
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
-**En-tête :** amp_graphics.h
+**En-tête :** amp_graphics. h
 
-**Namespace :** concurrency::graphics
+**Espace de noms :** Concurrency :: Graphics
 
-##  <a name="ctor"></a> échantillonneur
+## <a name="ctor"></a>échantillonneur
 
-Construit une instance de la [sampler, classe](sampler-class.md).
+Construit une instance de la [classe d’échantillonnage](sampler-class.md).
 
 ```cpp
 sampler() restrict(cpu);    // [1] default constructor
@@ -106,46 +106,46 @@ sampler(                    // [6] move constructor
 ### <a name="parameters"></a>Paramètres
 
 *_Filter_mode*<br/>
-Mode de filtre à utiliser dans l’échantillonnage.
+Mode de filtre à utiliser pour l’échantillonnage.
 
 *_Address_mode*<br/>
-Le mode d’adressage à utiliser dans l’échantillonnage pour toutes les dimensions.
+Mode d’adressage à utiliser pour l’échantillonnage pour toutes les dimensions.
 
 *_Border_color*<br/>
-La couleur de bordure à utiliser si le mode d’adresse est address_border. La valeur par défaut est `float_4(0.0f, 0.0f, 0.0f, 0.0f)`.
+Couleur de la bordure à utiliser si le mode d’adresse est address_border. La valeur par défaut est `float_4(0.0f, 0.0f, 0.0f, 0.0f)`.
 
 *_Other*<br/>
-[5] constructeur de copie le `sampler` objet à copier dans le nouvel `sampler` instance.
+[5] constructeur de copie l’objet `sampler` à copier dans la nouvelle instance `sampler`.
 
-[6] constructeur de déplacement le `sampler` déplacer dans le nouvel objet `sampler` instance.
+[6] Déplacez le constructeur de l’objet `sampler` pour le déplacer dans la nouvelle instance `sampler`.
 
-##  <a name="address_mode"></a> address_mode
+## <a name="address_mode"></a>address_mode
 
-Obtient le mode d’adresse de la `sampler` objet.
+Obtient le mode d’adresse de l’objet `sampler`.
 
 ```cpp
 __declspec(property(get= get_address_mode)) Concurrency::graphics::address_mode address_mode;
 ```
 
-##  <a name="border_color"></a> border_color
+## <a name="border_color"></a>border_color
 
-Obtient la couleur de bordure de la `sampler` objet.
+Obtient la couleur de bordure de l’objet `sampler`.
 
 ```cpp
 __declspec(property(get= get_border_color)) Concurrency::graphics::float_4 border_color;
 ```
 
-##  <a name="filter_mode"></a> filter_mode
+## <a name="filter_mode"></a>filter_mode
 
-Obtient le mode de filtre de le `sampler` objet.
+Obtient le mode de filtre de l’objet `sampler`.
 
 ```cpp
 __declspec(property(get= get_filter_mode)) Concurrency::graphics::filter_mode filter_mode;
 ```
 
-##  <a name="get_address_mode"></a> get_address_mode
+## <a name="get_address_mode"></a>get_address_mode
 
-Retourne le mode de filtre qui est configuré pour ce `sampler`.
+Retourne le mode de filtre configuré pour ce `sampler`.
 
 ```cpp
 Concurrency::graphics::address_mode get_address_mode() const __GPU;
@@ -153,11 +153,11 @@ Concurrency::graphics::address_mode get_address_mode() const __GPU;
 
 ### <a name="return-value"></a>Valeur de retour
 
-Le mode d’adresse qui est configuré pour l’échantillonneur.
+Mode d’adresse configuré pour l’échantillonneur.
 
-##  <a name="get_border_color"></a> get_border_color
+## <a name="get_border_color"></a>get_border_color
 
-Retourne la couleur de bordure qui est configurée pour ce `sampler`.
+Retourne la couleur de bordure configurée pour ce `sampler`.
 
 ```cpp
 Concurrency::graphics::float_4 get_border_color() const restrict(amp, cpu);
@@ -165,11 +165,11 @@ Concurrency::graphics::float_4 get_border_color() const restrict(amp, cpu);
 
 ### <a name="return-value"></a>Valeur de retour
 
-Une valeur float_4 qui contient la couleur de bordure.
+Float_4 qui contient la couleur de la bordure.
 
-##  <a name="get_filter_mode"></a> get_filter_mode
+## <a name="get_filter_mode"></a>get_filter_mode
 
-Retourne le mode de filtre qui est configuré pour ce `sampler`.
+Retourne le mode de filtre configuré pour ce `sampler`.
 
 ```cpp
 Concurrency::graphics::filter_mode get_filter_mode() const restrict(amp, cpu);
@@ -177,11 +177,11 @@ Concurrency::graphics::filter_mode get_filter_mode() const restrict(amp, cpu);
 
 ### <a name="return-value"></a>Valeur de retour
 
-Le mode de filtre qui est configuré pour l’échantillonneur.
+Mode de filtre configuré pour l’échantillonneur.
 
-##  <a name="operator_eq"></a> operator=
+## <a name="operator_eq"></a>opérateur =
 
-Assigne la valeur d’un autre objet d’échantillonnage à un échantillonnage existant.
+Assigne la valeur d’un autre objet échantillonneur à un échantillonneur existant.
 
 ```cpp
 sampler& operator= (    // [1] copy assignment operator
@@ -194,13 +194,13 @@ sampler& operator= (    // [2] move assignment operator
 ### <a name="parameters"></a>Paramètres
 
 *_Other*<br/>
-[1] opérateur d’assignation de copie le `sampler` objet à copier dans cette `sampler`.
+[1] copier l’opérateur d’assignation l’objet `sampler` à copier dans ce `sampler`.
 
-[2] opérateur d’assignation de déplacement le `sampler` objet à déplacer dans cette `sampler`.
+[2] déplacer l’opérateur d’assignation l’objet `sampler` à déplacer dans ce `sampler`.
 
 ### <a name="return-value"></a>Valeur de retour
 
-Une référence à cette instance d’échantillonnage.
+Référence à cette instance de l’échantillonneur.
 
 ## <a name="see-also"></a>Voir aussi
 

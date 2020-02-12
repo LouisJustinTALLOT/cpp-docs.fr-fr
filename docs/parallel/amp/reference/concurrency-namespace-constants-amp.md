@@ -1,36 +1,36 @@
 ---
-title: Constantes d’espace de noms d’accès concurrentiel (AMP)
+title: Concurrency, constantes de l’espace de noms (AMP)
 ms.date: 11/04/2016
 f1_keywords:
 - amp/Concurrency::HLSL_MAX_NUM_BUFFERS
 - amp/Concurrency::MODULENAME_MAX_LENGTH
 ms.assetid: 13a8e8cd-2eec-4e60-a91d-5d271072747b
-ms.openlocfilehash: c6cdaa36f481bd4a703981bfa1bc0617860b0917
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 2d304728f5bdca8f4bfb39cdb26baad984e63097
+ms.sourcegitcommit: a8ef52ff4a4944a1a257bdaba1a3331607fb8d0f
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62348547"
+ms.lasthandoff: 02/11/2020
+ms.locfileid: "77126922"
 ---
-# <a name="concurrency-namespace-constants-amp"></a>Constantes d’espace de noms d’accès concurrentiel (AMP)
+# <a name="concurrency-namespace-constants-amp"></a>Concurrency, constantes de l’espace de noms (AMP)
 
 |||
 |-|-|
 |[HLSL_MAX_NUM_BUFFERS](#hlsl_max_num_buffers)|[MODULENAME_MAX_LENGTH](#modulename_max_length)|
 
-##  <a name="hlsl_max_num_buffers"></a>  HLSL_MAX_NUM_BUFFERS Constant
+## <a name="hlsl_max_num_buffers"></a>Constante HLSL_MAX_NUM_BUFFERS
 
-Le nombre maximal de mémoires tampons allouées par DirectX.
+Nombre maximal de mémoires tampons autorisées par DirectX.
 
-```
+```cpp
 static const UINT HLSL_MAX_NUM_BUFFERS = 64 + 128;
 ```
 
-##  <a name="modulename_max_length"></a>  MODULENAME_MAX_LENGTH Constant
+## <a name="modulename_max_length"></a>Constante MODULENAME_MAX_LENGTH
 
-Stocke la longueur maximale du nom du module. Cette valeur doit être identique sur le compilateur et le runtime.
+Stocke la longueur maximale du nom du module. Cette valeur doit être la même sur le compilateur et le Runtime.
 
-```
+```cpp
 static const UINT MODULENAME_MAX_LENGTH = 1024;
 ```
 

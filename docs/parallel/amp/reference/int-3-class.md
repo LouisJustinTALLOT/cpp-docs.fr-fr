@@ -72,20 +72,20 @@ f1_keywords:
 - amp_short_vectors/Concurrency::graphics::int_3::xz
 - amp_short_vectors/Concurrency::graphics::int_3::set_yz
 ms.assetid: d4af182f-30f1-455c-b16d-aa99cd314038
-ms.openlocfilehash: c7cef5c8d6750ba6e971be14aafce65020d05c10
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: bc35562466ee33585be03739695d24da043415c2
+ms.sourcegitcommit: a8ef52ff4a4944a1a257bdaba1a3331607fb8d0f
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62180236"
+ms.lasthandoff: 02/11/2020
+ms.locfileid: "77127814"
 ---
-# <a name="int3-class"></a>int_3, classe
+# <a name="int_3-class"></a>int_3, classe
 
-Représente un vecteur court de trois entiers.
+Représente un vecteur abrégé de trois entiers.
 
 ## <a name="syntax"></a>Syntaxe
 
-```
+```cpp
 class int_3;
 ```
 
@@ -93,19 +93,19 @@ class int_3;
 
 ### <a name="public-typedefs"></a>Typedefs publics
 
-|Nom|Description|
+|Name|Description|
 |----------|-----------------|
 |`value_type`||
 
 ### <a name="public-constructors"></a>Constructeurs publics
 
-|Nom|Description|
+|Name|Description|
 |----------|-----------------|
-|[int_3 constructeur](#ctor)|Surchargé. Par défaut constructeur initialise tous les éléments par 0.|
+|[Constructeur int_3](#ctor)|Surchargé. Le constructeur par défaut initialise tous les éléments avec 0.|
 
 ### <a name="public-methods"></a>M&#233;thodes publiques
 
-|Nom|Description|
+|Name|Description|
 |----------|-----------------|
 |int_3::get_x||
 |int_3::get_xy||
@@ -146,7 +146,7 @@ class int_3;
 
 ### <a name="public-operators"></a>Op&#233;rateurs publics
 
-|Nom|Description|
+|Name|Description|
 |----------|-----------------|
 |int_3::operator-||
 |int_3::operator--||
@@ -156,23 +156,23 @@ class int_3;
 |int_3::operator/=||
 |int_3::operator^=||
 |int_3::operator&#124;=||
-|int_3::operator~||
+|int_3 :: Operator ~||
 |int_3::operator++||
 |int_3::operator+=||
-|int_3::operator<\<=||
+|int_3 :: Operator <\<=||
 |int_3::operator=||
 |int_3::operator-=||
 |int_3::operator>>=||
 
 ### <a name="public-constants"></a>Constantes publiques
 
-|Nom|Description|
+|Name|Description|
 |----------|-----------------|
-|[taille (constante)](#size)||
+|[taille, constante](#size)||
 
-### <a name="public-data-members"></a>Membres de données publics
+### <a name="public-data-members"></a>Membres de données publiques
 
-|Nom|Description|
+|Name|Description|
 |----------|-----------------|
 |int_3::b||
 |int_3::bg||
@@ -202,26 +202,26 @@ class int_3;
 |int_3::z||
 |int_3::zx||
 |int_3::zxy||
-|int_3::zy||
+|int_3 :: ZY||
 |int_3::zyx||
 
 ## <a name="inheritance-hierarchy"></a>Hiérarchie d'héritage
 
 `int_3`
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
-**En-tête :** amp_short_vectors.h
+**En-tête :** amp_short_vectors. h
 
-**Espace de noms :** Concurrency::graphics
+**Espace de noms :** Concurrency :: Graphics
 
-## <a name="ctor"></a> int_3
+## <a name="ctor"></a>int_3
 
-Par défaut constructeur initialise tous les éléments par 0.
+Le constructeur par défaut initialise tous les éléments avec 0.
 
-## <a name="syntax"></a>Syntaxe
+### <a name="syntax"></a>Syntaxe
 
-```
+```cpp
 int_3() restrict(amp,cpu);
 int_3(
    int _V0,
@@ -254,25 +254,25 @@ explicit inline int_3(
 ### <a name="parameters"></a>Paramètres
 
 *_V0*<br/>
-La valeur pour initialiser l’élément 0.
+Valeur pour initialiser l’élément 0.
 
 *_V1*<br/>
-La valeur pour initialiser l’élément 1.
+Valeur pour initialiser l’élément 1.
 
 *_V2*<br/>
-La valeur pour initialiser l’élément 2.
+Valeur pour initialiser l’élément 2.
 
 *_V*<br/>
-La valeur pour l’initialisation.
+Valeur d’initialisation.
 
 *_Other*<br/>
-L’objet utilisé pour initialiser.
+Objet utilisé pour initialiser.
 
-## <a name="size"></a> Taille
+## <a name="size"></a>corps
 
-## <a name="syntax"></a>Syntaxe
+### <a name="syntax"></a>Syntaxe
 
-```
+```cpp
 static const int size = 3;
 ```
 
