@@ -28,20 +28,20 @@ f1_keywords:
 - amp_short_vectors/Concurrency::graphics::float_2::y
 - amp_short_vectors/Concurrency::graphics::float_2::g
 ms.assetid: b3ebd48e-f8c8-4f00-a640-357f702f0cae
-ms.openlocfilehash: 94a0936c1e5630ae53af9d9386d3c9248061ed71
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: af5116118c9821f5c1801789bff13f3de8d4026a
+ms.sourcegitcommit: a8ef52ff4a4944a1a257bdaba1a3331607fb8d0f
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62180269"
+ms.lasthandoff: 02/11/2020
+ms.locfileid: "77126654"
 ---
-# <a name="float2-class"></a>float_2, classe
+# <a name="float_2-class"></a>float_2, classe
 
-Représente un vecteur court de deux valeurs float.
+Représente un vecteur abrégé de deux valeurs float.
 
 ## <a name="syntax"></a>Syntaxe
 
-```
+```cpp
 class float_2;
 ```
 
@@ -49,19 +49,19 @@ class float_2;
 
 ### <a name="public-typedefs"></a>Typedefs publics
 
-|Nom|Description|
+|Name|Description|
 |----------|-----------------|
 |`value_type`||
 
 ### <a name="public-constructors"></a>Constructeurs publics
 
-|Nom|Description|
+|Name|Description|
 |----------|-----------------|
-|[float_2 constructeur](#ctor)|Surchargé. Par défaut constructeur initialise tous les éléments par 0.|
+|[Constructeur float_2](#ctor)|Surchargé. Le constructeur par défaut initialise tous les éléments avec 0.|
 
 ### <a name="public-methods"></a>M&#233;thodes publiques
 
-|Nom|Description|
+|Name|Description|
 |----------|-----------------|
 |float_2::get_x||
 |float_2::get_xy||
@@ -78,7 +78,7 @@ class float_2;
 
 ### <a name="public-operators"></a>Op&#233;rateurs publics
 
-|Nom|Description|
+|Name|Description|
 |----------|-----------------|
 |float_2::operator-||
 |float_2::operator--||
@@ -91,38 +91,38 @@ class float_2;
 
 ### <a name="public-constants"></a>Constantes publiques
 
-|Nom|Description|
+|Name|Description|
 |----------|-----------------|
-|[taille (constante)](#float_2__size)||
+|[taille, constante](#float_2__size)||
 
-### <a name="public-data-members"></a>Membres de données publics
+### <a name="public-data-members"></a>Membres de données publiques
 
-|Nom|Description|
+|Name|Description|
 |----------|-----------------|
-|float_2::g||
+|float_2 :: g||
 |float_2::gr||
-|float_2::r||
+|float_2 :: r||
 |float_2::rg||
-|float_2::x||
+|float_2 :: x||
 |float_2::xy||
-|float_2::y||
+|float_2 :: y||
 |float_2::yx||
 
 ## <a name="inheritance-hierarchy"></a>Hiérarchie d'héritage
 
 `float_2`
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
-**En-tête :** amp_short_vectors.h
+**En-tête :** amp_short_vectors. h
 
-**Espace de noms :** Concurrency::graphics
+**Espace de noms :** Concurrency :: Graphics
 
-##  <a name="ctor"></a> float_2
+## <a name="ctor"></a>float_2
 
-Par défaut constructeur initialise tous les éléments par 0.
+Le constructeur par défaut initialise tous les éléments avec 0.
 
-```
+```cpp
 float_2() restrict(amp,
     cpu);
 
@@ -163,20 +163,20 @@ explicit inline float_2(
 ### <a name="parameters"></a>Paramètres
 
 *_V0*<br/>
-La valeur pour initialiser l’élément 0.
+Valeur pour initialiser l’élément 0.
 
 *_V1*<br/>
-La valeur pour initialiser l’élément 1.
+Valeur pour initialiser l’élément 1.
 
 *_V*<br/>
-La valeur pour l’initialisation.
+Valeur d’initialisation.
 
 *_Other*<br/>
-L’objet utilisé pour initialiser.
+Objet utilisé pour initialiser.
 
-##  <a name="float_2__size"></a> Taille
+## <a name="float_2__size"></a>corps
 
-```
+```cpp
 static const int size = 2;
 ```
 

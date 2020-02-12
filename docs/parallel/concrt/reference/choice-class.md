@@ -1,5 +1,5 @@
 ---
-title: Classe choice
+title: choice, classe
 ms.date: 11/04/2016
 f1_keywords:
 - choice
@@ -20,68 +20,68 @@ f1_keywords:
 helpviewer_keywords:
 - choice class
 ms.assetid: 4157a539-d5c2-4161-b1ab-536ce2888397
-ms.openlocfilehash: aa4945bb5f9ef28937487ba504e23c461992b263
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 3e718d0d34580d3bf2f13937159e431134631218
+ms.sourcegitcommit: a8ef52ff4a4944a1a257bdaba1a3331607fb8d0f
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62337568"
+ms.lasthandoff: 02/11/2020
+ms.locfileid: "77142214"
 ---
-# <a name="choice-class"></a>Classe choice
+# <a name="choice-class"></a>choice, classe
 
 Un bloc de messagerie `choice` est un bloc à plusieurs sources et à cible unique qui représente une interaction de flux de contrôle avec un jeu de sources. Le bloc choice attend que l'une des multiples sources produise un message et propage l'index de la source qui a généré le message.
 
 ## <a name="syntax"></a>Syntaxe
 
-```
+```cpp
 template<
     class T
 >
 class choice: public ISource<size_t>;
 ```
 
-#### <a name="parameters"></a>Paramètres
+### <a name="parameters"></a>Paramètres
 
 *T*<br/>
-Un `tuple`-en fonction du type qui représente les charges utiles des sources d’entrée.
+Type basé sur `tuple`représentant les charges utiles des sources d’entrée.
 
 ## <a name="members"></a>Membres
 
 ### <a name="public-typedefs"></a>Typedefs publics
 
-|Nom|Description|
+|Name|Description|
 |----------|-----------------|
 |`type`|Alias de type pour `T`.|
 
 ### <a name="public-constructors"></a>Constructeurs publics
 
-|Nom|Description|
+|Name|Description|
 |----------|-----------------|
-|[choice](#ctor)|Surchargé. Construit un bloc de messagerie `choice` .|
-|[~ choice, destructeur](#dtor)|Détruit le `choice` bloc de messagerie.|
+|[sélectionnée](#ctor)|Surchargé. Construit un bloc de messagerie `choice` .|
+|[Destructeur ~ Choice](#dtor)|Détruit le bloc de messagerie `choice`.|
 
 ### <a name="public-methods"></a>M&#233;thodes publiques
 
-|Nom|Description|
+|Name|Description|
 |----------|-----------------|
-|[accept](#accept)|Accepte un message qui a été proposé par ce `choice` bloc, en transférant la propriété à l’appelant.|
-|[acquire_ref](#acquire_ref)|Acquiert un décompte de références sur ce `choice` bloc de messagerie, pour empêcher la suppression.|
-|[consume](#consume)|Consomme un message précédemment proposé par ce `choice` bloc de messagerie et réservé avec succès par la cible, en transférant la propriété à l’appelant.|
-|[has_value](#has_value)|Vérifie si cela `choice` bloc de messagerie a encore été initialisé avec une valeur.|
-|[index](#index)|Retourne un index dans le `tuple` représentant l’élément sélectionné par le `choice` bloc de messagerie.|
+|[valide](#accept)|Accepte un message qui a été proposé par ce bloc de `choice`, en transférant la propriété à l’appelant.|
+|[acquire_ref](#acquire_ref)|Acquiert un nombre de références sur ce bloc de messagerie `choice` pour empêcher la suppression.|
+|[Utiliser](#consume)|Consomme un message précédemment offert par ce `choice` bloc de messagerie et correctement réservé par la cible, en transférant la propriété à l’appelant.|
+|[has_value](#has_value)|Vérifie si ce `choice` bloc de messagerie a déjà été initialisé avec une valeur.|
+|[index](#index)|Retourne un index dans le `tuple` représentant l’élément sélectionné par le bloc de messagerie `choice`.|
 |[link_target](#link_target)|Lie un bloc cible à ce `choice` bloc de messagerie.|
 |[release](#release)|Libère une réservation de message réussie précédente.|
-|[release_ref](#release_ref)|Libère un décompte de références sur ce `choice` bloc de messagerie.|
-|[reserve](#reserve)|Réserve un message précédemment proposé par ce `choice` bloc de messagerie.|
-|[unlink_target](#unlink_target)|Dissocie un bloc cible de ce `choice` bloc de messagerie.|
-|[unlink_targets](#unlink_targets)|Dissocie toutes les cibles à partir de ce `choice` bloc de messagerie. (Substitue [ISource::unlink_targets](isource-class.md#unlink_targets).)|
-|[value](#value)|Obtient le message dont l’index a été sélectionnée par le `choice` bloc de messagerie.|
+|[release_ref](#release_ref)|Libère un nombre de références sur ce bloc de messagerie `choice`.|
+|[reserve](#reserve)|Réserve un message précédemment offert par ce `choice` bloc de messagerie.|
+|[unlink_target](#unlink_target)|Dissocie un bloc cible de cet `choice` bloc de messagerie.|
+|[unlink_targets](#unlink_targets)|Dissocie toutes les cibles de cette `choice` bloc de messagerie. (Substitue [ISource :: unlink_targets](isource-class.md#unlink_targets).)|
+|[value](#value)|Obtient le message dont l’index a été sélectionné par le bloc de messagerie `choice`.|
 
 ## <a name="remarks"></a>Notes
 
-Le bloc choice garantit que seul des messages entrants est consommé.
+Le bloc Choice garantit qu’un seul des messages entrants est consommé.
 
-Pour plus d’informations, consultez [des blocs de messages asynchrones](../../../parallel/concrt/asynchronous-message-blocks.md).
+Pour plus d’informations, consultez [blocs de messages asynchrones](../../../parallel/concrt/asynchronous-message-blocks.md).
 
 ## <a name="inheritance-hierarchy"></a>Hiérarchie d'héritage
 
@@ -89,17 +89,17 @@ Pour plus d’informations, consultez [des blocs de messages asynchrones](../../
 
 `choice`
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
 **En-tête :** agents.h
 
 **Espace de noms :** concurrency
 
-##  <a name="accept"></a> Accepter
+## <a name="accept"></a>valide
 
-Accepte un message qui a été proposé par ce `choice` bloc, en transférant la propriété à l’appelant.
+Accepte un message qui a été proposé par ce bloc de `choice`, en transférant la propriété à l’appelant.
 
-```
+```cpp
 virtual message<size_t>* accept(
     runtime_object_identity _MsgId,
     _Inout_ ITarget<size_t>* _PTarget);
@@ -108,20 +108,20 @@ virtual message<size_t>* accept(
 ### <a name="parameters"></a>Paramètres
 
 *_MsgId*<br/>
-Le `runtime_object_identity` de le proposé `message` objet.
+`runtime_object_identity` de l’objet `message` proposé.
 
 *_PTarget*<br/>
-Un pointeur vers le bloc cible qui appelle le `accept` (méthode).
+Pointeur vers le bloc cible qui appelle la méthode `accept`.
 
 ### <a name="return-value"></a>Valeur de retour
 
 Pointeur vers le message dont l’appelant est désormais propriétaire.
 
-##  <a name="acquire_ref"></a> acquire_ref
+## <a name="acquire_ref"></a>acquire_ref
 
-Acquiert un décompte de références sur ce `choice` bloc de messagerie, pour empêcher la suppression.
+Acquiert un nombre de références sur ce bloc de messagerie `choice` pour empêcher la suppression.
 
-```
+```cpp
 virtual void acquire_ref(_Inout_ ITarget<size_t>* _PTarget);
 ```
 
@@ -132,13 +132,13 @@ Pointeur vers le bloc cible qui appelle cette méthode.
 
 ### <a name="remarks"></a>Notes
 
-Cette méthode est appelée par un `ITarget` objet lié à cette source pendant le `link_target` (méthode).
+Cette méthode est appelée par un objet `ITarget` qui est lié à cette source pendant la méthode `link_target`.
 
-##  <a name="ctor"></a> choix
+## <a name="ctor"></a>sélectionnée
 
 Construit un bloc de messagerie `choice` .
 
-```
+```cpp
 explicit choice(
     T _Tuple);
 
@@ -174,19 +174,19 @@ Le runtime utilise le planificateur par défaut si vous ne spécifiez pas les pa
 
 La construction du déplacement ne s’exécute pas en présence d’un verrou, ce qui signifie que c’est à l’utilisateur de s’assurer qu’il n’y a pas de tâches non activables en vol au moment du déplacement. Sinon, de nombreuses courses peuvent se produire, ce qui aboutit à des exceptions ou à un état incohérent.
 
-##  <a name="dtor"></a> ~choice
+## <a name="dtor"></a>~ choix
 
-Détruit le `choice` bloc de messagerie.
+Détruit le bloc de messagerie `choice`.
 
-```
+```cpp
 ~choice();
 ```
 
-##  <a name="consume"></a> consommer
+## <a name="consume"></a>occuper
 
-Consomme un message précédemment proposé par ce `choice` bloc de messagerie et réservé avec succès par la cible, en transférant la propriété à l’appelant.
+Consomme un message précédemment offert par ce `choice` bloc de messagerie et correctement réservé par la cible, en transférant la propriété à l’appelant.
 
-```
+```cpp
 virtual message<size_t>* consume(
     runtime_object_identity _MsgId,
     _Inout_ ITarget<size_t>* _PTarget);
@@ -195,24 +195,24 @@ virtual message<size_t>* consume(
 ### <a name="parameters"></a>Paramètres
 
 *_MsgId*<br/>
-Le `runtime_object_identity` de réservée `message` objet.
+`runtime_object_identity` de l’objet `message` réservé.
 
 *_PTarget*<br/>
-Un pointeur vers le bloc cible qui appelle le `consume` (méthode).
+Pointeur vers le bloc cible qui appelle la méthode `consume`.
 
 ### <a name="return-value"></a>Valeur de retour
 
-Un pointeur vers le `message` que l’appelant a désormais la propriété de l’objet.
+Pointeur vers l’objet `message` dont l’appelant est désormais propriétaire.
 
 ### <a name="remarks"></a>Notes
 
-Le `consume` méthode est similaire à `accept`, mais doit toujours être précédé par un appel à `reserve` qui retourné **true**.
+La méthode `consume` est semblable à `accept`, mais doit toujours être précédée d’un appel à `reserve` qui a retourné la **valeur true**.
 
-##  <a name="has_value"></a> has_value
+## <a name="has_value"></a>has_value
 
-Vérifie si cela `choice` bloc de messagerie a encore été initialisé avec une valeur.
+Vérifie si ce `choice` bloc de messagerie a déjà été initialisé avec une valeur.
 
-```
+```cpp
 bool has_value() const;
 ```
 
@@ -220,40 +220,40 @@ bool has_value() const;
 
 **true** si le bloc a reçu une valeur, **false** dans le cas contraire.
 
-##  <a name="index"></a> index
+## <a name="index"></a>évaluer
 
-Retourne un index dans le `tuple` représentant l’élément sélectionné par le `choice` bloc de messagerie.
+Retourne un index dans le `tuple` représentant l’élément sélectionné par le bloc de messagerie `choice`.
 
-```
+```cpp
 size_t index();
 ```
 
 ### <a name="return-value"></a>Valeur de retour
 
-L’index de message.
+Index du message.
 
 ### <a name="remarks"></a>Notes
 
-Charge utile de message peut être extraite à l’aide de la `get` (méthode).
+La charge utile de message peut être extraite à l’aide de la méthode `get`.
 
-##  <a name="link_target"></a> link_target
+## <a name="link_target"></a>link_target
 
 Lie un bloc cible à ce `choice` bloc de messagerie.
 
-```
+```cpp
 virtual void link_target(_Inout_ ITarget<size_t>* _PTarget);
 ```
 
 ### <a name="parameters"></a>Paramètres
 
 *_PTarget*<br/>
-Un pointeur vers un `ITarget` à lier à ce bloc `choice` bloc de messagerie.
+Pointeur vers un bloc `ITarget` à lier à ce bloc de messagerie `choice`.
 
-##  <a name="release"></a> Mise en production
+## <a name="release"></a>3/05
 
 Libère une réservation de message réussie précédente.
 
-```
+```cpp
 virtual void release(
     runtime_object_identity _MsgId,
     _Inout_ ITarget<size_t>* _PTarget);
@@ -262,16 +262,16 @@ virtual void release(
 ### <a name="parameters"></a>Paramètres
 
 *_MsgId*<br/>
-Le `runtime_object_identity` de la `message` de l’objet qui est libéré.
+`runtime_object_identity` de l’objet `message` en cours de libération.
 
 *_PTarget*<br/>
-Un pointeur vers le bloc cible qui appelle le `release` (méthode).
+Pointeur vers le bloc cible qui appelle la méthode `release`.
 
-##  <a name="release_ref"></a> release_ref
+## <a name="release_ref"></a>release_ref
 
-Libère un décompte de références sur ce `choice` bloc de messagerie.
+Libère un nombre de références sur ce bloc de messagerie `choice`.
 
-```
+```cpp
 virtual void release_ref(_Inout_ ITarget<size_t>* _PTarget);
 ```
 
@@ -282,13 +282,13 @@ Pointeur vers le bloc cible qui appelle cette méthode.
 
 ### <a name="remarks"></a>Notes
 
-Cette méthode est appelée par un `ITarget` objet dissocié de cette source. Le bloc source est autorisé à libérer les ressources réservées pour le bloc cible.
+Cette méthode est appelée par un objet `ITarget` qui n’est pas lié à cette source. Le bloc source est autorisé à libérer toutes les ressources réservées pour le bloc cible.
 
-##  <a name="reserve"></a> réserver
+## <a name="reserve"></a>réserver
 
-Réserve un message précédemment proposé par ce `choice` bloc de messagerie.
+Réserve un message précédemment offert par ce `choice` bloc de messagerie.
 
-```
+```cpp
 virtual bool reserve(
     runtime_object_identity _MsgId,
     _Inout_ ITarget<size_t>* _PTarget);
@@ -297,49 +297,49 @@ virtual bool reserve(
 ### <a name="parameters"></a>Paramètres
 
 *_MsgId*<br/>
-Le `runtime_object_identity` de la `message` de l’objet en cours de réservation.
+`runtime_object_identity` de l’objet `message` qui est réservé.
 
 *_PTarget*<br/>
-Un pointeur vers le bloc cible qui appelle le `reserve` (méthode).
+Pointeur vers le bloc cible qui appelle la méthode `reserve`.
 
 ### <a name="return-value"></a>Valeur de retour
 
-**true** si le message a été réservé avec succès, **false** dans le cas contraire. Les réservations peuvent échouer pour de nombreuses raisons, notamment : le message a été déjà réservé ou accepté par une autre cible, la source peut refuser des réservations et ainsi de suite.
+**true** si le message a été réservé, **false** dans le cas contraire. Les réservations peuvent échouer pour de nombreuses raisons, notamment : le message a déjà été réservé ou accepté par une autre cible, la source peut refuser des réservations, et ainsi de suite.
 
 ### <a name="remarks"></a>Notes
 
-Après avoir appelé `reserve`, si elle réussit, vous devez appeler `consume` ou `release` afin d’accepter ou renoncer à la possession du message, respectivement.
+Une fois que vous avez appelé `reserve`, si elle est réussie, vous devez appeler `consume` ou `release` pour accepter ou abandonner la possession du message, respectivement.
 
-##  <a name="unlink_target"></a> unlink_target
+## <a name="unlink_target"></a>unlink_target
 
-Dissocie un bloc cible de ce `choice` bloc de messagerie.
+Dissocie un bloc cible de cet `choice` bloc de messagerie.
 
-```
+```cpp
 virtual void unlink_target(_Inout_ ITarget<size_t>* _PTarget);
 ```
 
 ### <a name="parameters"></a>Paramètres
 
 *_PTarget*<br/>
-Un pointeur vers un `ITarget` à dissocier de ce bloc `choice` bloc de messagerie.
+Pointeur vers un bloc `ITarget` à dissocier de ce `choice` bloc de messagerie.
 
-##  <a name="unlink_targets"></a> unlink_targets
+## <a name="unlink_targets"></a>unlink_targets
 
-Dissocie toutes les cibles à partir de ce `choice` bloc de messagerie.
+Dissocie toutes les cibles de cette `choice` bloc de messagerie.
 
-```
+```cpp
 virtual void unlink_targets();
 ```
 
 ### <a name="remarks"></a>Notes
 
-Cette méthode n’avez pas besoin d’être appelée à partir du destructeur parce que le destructeur pour interne `single_assignment` bloc dissocie correctement.
+Cette méthode n’a pas besoin d’être appelée à partir du destructeur, car le destructeur du bloc `single_assignment` interne se dissocie correctement.
 
-##  <a name="value"></a> Valeur
+## <a name="value"></a>ajoutée
 
-Obtient le message dont l’index a été sélectionnée par le `choice` bloc de messagerie.
+Obtient le message dont l’index a été sélectionné par le bloc de messagerie `choice`.
 
-```
+```cpp
 template <
     typename _Payload_type
 >
@@ -349,15 +349,15 @@ _Payload_type const& value();
 ### <a name="parameters"></a>Paramètres
 
 *_Payload_type*<br/>
-Le type de charge utile du message.
+Type de la charge utile de message.
 
 ### <a name="return-value"></a>Valeur de retour
 
-La charge utile du message.
+Charge de travail du message.
 
 ### <a name="remarks"></a>Notes
 
-Étant donné qu’un `choice` bloc de messagerie peut prendre des entrées avec les types de charge utile différente, vous devez spécifier le type de la charge utile au point de récupération. Vous pouvez déterminer le type en fonction du résultat de la `index` (méthode).
+Étant donné qu’un bloc de messagerie `choice` peut prendre des entrées avec différents types de charge utile, vous devez spécifier le type de la charge utile au point de récupération. Vous pouvez déterminer le type en fonction du résultat de la méthode `index`.
 
 ## <a name="see-also"></a>Voir aussi
 

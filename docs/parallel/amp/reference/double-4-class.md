@@ -268,20 +268,20 @@ f1_keywords:
 - amp_short_vectors/Concurrency::graphics::double_4::bag
 - amp_short_vectors/Concurrency::graphics::double_4::zwy
 ms.assetid: a81c1595-24c6-4b3f-9574-d5942275e5e8
-ms.openlocfilehash: 14e85a2c9ff21ed451cc6141ab7940f9c614c662
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: a9ca413573ebd741ea2a9a813a25ec2679aff5b7
+ms.sourcegitcommit: a8ef52ff4a4944a1a257bdaba1a3331607fb8d0f
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62180321"
+ms.lasthandoff: 02/11/2020
+ms.locfileid: "77139356"
 ---
-# <a name="double4-class"></a>double_4, classe
+# <a name="double_4-class"></a>double_4, classe
 
-Représente un vecteur court de quatre doubles.
+Représente un vecteur abrégé de quatre doubles.
 
 ## <a name="syntax"></a>Syntaxe
 
-```
+```cpp
 class double_4;
 ```
 
@@ -289,19 +289,19 @@ class double_4;
 
 ### <a name="public-typedefs"></a>Typedefs publics
 
-|Nom|Description|
+|Name|Description|
 |----------|-----------------|
 |`value_type`||
 
 ### <a name="public-constructors"></a>Constructeurs publics
 
-|Nom|Description|
+|Name|Description|
 |----------|-----------------|
-|[double_4 constructeur](#ctor)|Surchargé. Par défaut constructeur initialise tous les éléments par 0.|
+|[Constructeur double_4](#ctor)|Surchargé. Le constructeur par défaut initialise tous les éléments avec 0.|
 
 ### <a name="public-methods"></a>M&#233;thodes publiques
 
-|Nom|Description|
+|Name|Description|
 |----------|-----------------|
 |double_4::get_w||
 |double_4::get_wx||
@@ -442,7 +442,7 @@ class double_4;
 
 ### <a name="public-operators"></a>Op&#233;rateurs publics
 
-|Nom|Description|
+|Name|Description|
 |----------|-----------------|
 |double_4::operator-||
 |double_4::operator--||
@@ -455,13 +455,13 @@ class double_4;
 
 ### <a name="public-constants"></a>Constantes publiques
 
-|Nom|Description|
+|Name|Description|
 |----------|-----------------|
-|[taille (constante)](#double_4__size)||
+|[taille, constante](#double_4__size)||
 
-### <a name="public-data-members"></a>Membres de données publics
+### <a name="public-data-members"></a>Membres de données publiques
 
-|Nom|Description|
+|Name|Description|
 |----------|-----------------|
 |double_4::a||
 |double_4::ab||
@@ -504,7 +504,7 @@ class double_4;
 |double_4::gb||
 |double_4::gba||
 |double_4::gbar||
-|double_4::gbr||
+|double_4 :: GBR||
 |double_4::gbra||
 |double_4::gr||
 |double_4::gra||
@@ -545,7 +545,7 @@ class double_4;
 |double_4::wzyx||
 |double_4::x||
 |double_4::xw||
-|double_4::xwy||
+|double_4 :: xwy||
 |double_4::xwyz||
 |double_4::xwz||
 |double_4::xwzy||
@@ -556,7 +556,7 @@ class double_4;
 |double_4::xyzw||
 |double_4::xz||
 |double_4::xzw||
-|double_4::xzwy||
+|double_4 :: xzwy||
 |double_4::xzy||
 |double_4::xzyw||
 |double_4::y||
@@ -575,18 +575,18 @@ class double_4;
 |double_4::yzwx||
 |double_4::yzx||
 |double_4::yzxw||
-|double_4::z||
-|double_4::zw||
-|double_4::zwx||
-|double_4::zwxy||
-|double_4::zwy||
-|double_4::zwyx||
+|double_4 :: z||
+|double_4 :: ZW||
+|double_4 :: zwx||
+|double_4 :: zwxy||
+|double_4 :: zwy||
+|double_4 :: ZWYX||
 |double_4::zx||
-|double_4::zxw||
-|double_4::zxwy||
+|double_4 :: ZXW||
+|double_4 :: zxwy||
 |double_4::zxy||
 |double_4::zxyw||
-|double_4::zy||
+|double_4 :: ZY||
 |double_4::zyw||
 |double_4::zywx||
 |double_4::zyx||
@@ -596,17 +596,17 @@ class double_4;
 
 `double_4`
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
-**En-tête :** amp_short_vectors.h
+**En-tête :** amp_short_vectors. h
 
-**Espace de noms :** Concurrency::graphics
+**Espace de noms :** Concurrency :: Graphics
 
-##  <a name="ctor"></a> double_4
+## <a name="ctor"></a>double_4
 
-Par défaut constructeur initialise tous les éléments par 0.
+Le constructeur par défaut initialise tous les éléments avec 0.
 
-```
+```cpp
 double_4() restrict(amp,
     cpu);
 
@@ -649,26 +649,26 @@ explicit inline double_4(
 ### <a name="parameters"></a>Paramètres
 
 *_V0*<br/>
-La valeur pour initialiser l’élément 0.
+Valeur pour initialiser l’élément 0.
 
 *_V1*<br/>
-La valeur pour initialiser l’élément 1.
+Valeur pour initialiser l’élément 1.
 
 *_V2*<br/>
-La valeur pour initialiser l’élément 2.
+Valeur pour initialiser l’élément 2.
 
 *_V3*<br/>
-La valeur pour initialiser l’élément 3.
+Valeur pour initialiser l’élément 3.
 
 *_V*<br/>
-La valeur pour l’initialisation.
+Valeur d’initialisation.
 
 *_Other*<br/>
-L’objet utilisé pour initialiser.
+Objet utilisé pour initialiser.
 
-##  <a name="double_4__size"></a> Taille
+## <a name="double_4__size"></a>corps
 
-```
+```cpp
 static const int size = 4;
 ```
 

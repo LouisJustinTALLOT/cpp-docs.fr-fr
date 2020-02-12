@@ -1,5 +1,5 @@
 ---
-title: Classe timer
+title: timer, classe
 ms.date: 11/04/2016
 f1_keywords:
 - timer
@@ -18,25 +18,25 @@ f1_keywords:
 helpviewer_keywords:
 - timer class
 ms.assetid: 4f4dea51-de9f-40f9-93f5-dd724c567b49
-ms.openlocfilehash: e36441f53c9b53c9826ee92b2892142a522d7243
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: c39afc565a7ec775600b9c9fb6f15a89acdef57b
+ms.sourcegitcommit: a8ef52ff4a4944a1a257bdaba1a3331607fb8d0f
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62180119"
+ms.lasthandoff: 02/11/2020
+ms.locfileid: "77142528"
 ---
-# <a name="timer-class"></a>Classe timer
+# <a name="timer-class"></a>timer, classe
 
 Un bloc de messagerie `timer` est un `source_block` à cible unique, capable d'envoyer un message à sa cible après un délai spécifié ou à intervalles spécifiques.
 
 ## <a name="syntax"></a>Syntaxe
 
-```
+```cpp
 template<class T>
 class timer : public Concurrency::details::_Timer, public source_block<single_link_registry<ITarget<T>>>;
 ```
 
-#### <a name="parameters"></a>Paramètres
+### <a name="parameters"></a>Paramètres
 
 *T*<br/>
 Type de charge utile des messages de sortie de ce bloc.
@@ -45,34 +45,34 @@ Type de charge utile des messages de sortie de ce bloc.
 
 ### <a name="public-constructors"></a>Constructeurs publics
 
-|Nom|Description|
+|Name|Description|
 |----------|-----------------|
-|[timer](#ctor)|Surchargé. Construit un `timer` bloc de messagerie qui déclenchera un message donné après un intervalle spécifié.|
-|[~ timer, destructeur](#dtor)|Détruit un `timer` bloc de messagerie.|
+|[minute](#ctor)|Surchargé. Construit un bloc de messagerie `timer` qui déclenchera un message donné après un intervalle spécifié.|
+|[~ Timer, destructeur](#dtor)|Détruit un bloc de messagerie `timer`.|
 
 ### <a name="public-methods"></a>M&#233;thodes publiques
 
-|Nom|Description|
+|Name|Description|
 |----------|-----------------|
-|[pause](#pause)|Arrête le `timer` bloc de messagerie. S’il s’agit d’une répétition `timer` bloc de messagerie, il peut être redémarré avec une ultérieure `start()` appeler. Non extensible pour les minuteries, cela a le même effet qu’un `stop` appeler.|
-|[start](#start)|Démarre le `timer` bloc de messagerie. Le nombre spécifié de millisecondes après cet est appelé, la valeur spécifiée sera propagée en aval comme un `message`.|
-|[stop](#stop)|Arrête le `timer` bloc de messagerie.|
+|[suspen](#pause)|Arrête le bloc de messagerie `timer`. S’il s’agit d’un bloc de messagerie à répétition `timer`, il peut être redémarré avec un appel de `start()` suivant. Pour les minuteurs qui ne se répètent pas, cela a le même effet qu’un appel de `stop`.|
+|[start](#start)|Démarre le bloc de messagerie `timer`. Nombre de millisecondes spécifié après l’appel de, la valeur spécifiée est propagée en aval en tant que `message`.|
+|[stop](#stop)|Arrête le bloc de messagerie `timer`.|
 
 ### <a name="protected-methods"></a>Méthodes protégées
 
-|Nom|Description|
+|Name|Description|
 |----------|-----------------|
-|[accept_message](#accept_message)|Accepte un message qui a été proposé par ce `timer` bloc de messagerie, transfert de propriété à l’appelant.|
-|[consume_message](#consume_message)|Consomme un message précédemment proposé par le `timer` et réservé par la cible, en transférant la propriété à l’appelant.|
-|[link_target_notification](#link_target_notification)|Rappel qui notifie qu’une nouvelle cible a été liée à ce `timer` bloc de messagerie.|
-|[propagate_to_any_targets](#propagate_to_any_targets)|Essaie d’offrir le message généré par le `timer` bloc à toutes les cibles liées.|
-|[release_message](#release_message)|Libère une réservation de message précédent. (Substitue [source_block::release_message](source-block-class.md#release_message).)|
-|[reserve_message](#reserve_message)|Réserve un message précédemment proposé par ce `timer` bloc de messagerie. (Substitue [source_block::reserve_message](source-block-class.md#reserve_message).)|
-|[resume_propagation](#resume_propagation)|Reprend la propagation après qu’une réservation a été libérée. (Substitue [source_block::resume_propagation](source-block-class.md#resume_propagation).)|
+|[accept_message](#accept_message)|Accepte un message qui a été proposé par ce bloc de messagerie `timer`, en transférant la propriété à l’appelant.|
+|[consume_message](#consume_message)|Consomme un message précédemment offert par le `timer` et réservé par la cible, en transférant la propriété à l’appelant.|
+|[link_target_notification](#link_target_notification)|Rappel qui signale qu’une nouvelle cible a été liée à ce `timer` bloc de messagerie.|
+|[propagate_to_any_targets](#propagate_to_any_targets)|Tente d’offrir le message produit par le bloc `timer` à toutes les cibles liées.|
+|[release_message](#release_message)|Libère une réservation de message précédente. (Substitue [source_block :: release_message](source-block-class.md#release_message).)|
+|[reserve_message](#reserve_message)|Réserve un message précédemment offert par ce `timer` bloc de messagerie. (Substitue [source_block :: reserve_message](source-block-class.md#reserve_message).)|
+|[resume_propagation](#resume_propagation)|Reprend la propagation après la libération d’une réservation. (Substitue [source_block :: resume_propagation](source-block-class.md#resume_propagation).)|
 
 ## <a name="remarks"></a>Notes
 
-Pour plus d’informations, consultez [des blocs de messages asynchrones](../../../parallel/concrt/asynchronous-message-blocks.md).
+Pour plus d’informations, consultez [blocs de messages asynchrones](../../../parallel/concrt/asynchronous-message-blocks.md).
 
 ## <a name="inheritance-hierarchy"></a>Hiérarchie d'héritage
 
@@ -82,142 +82,142 @@ Pour plus d’informations, consultez [des blocs de messages asynchrones](../../
 
 `timer`
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
 **En-tête :** agents.h
 
 **Espace de noms :** concurrency
 
-##  <a name="accept_message"></a> accept_message
+## <a name="accept_message"></a>accept_message
 
-Accepte un message qui a été proposé par ce `timer` bloc de messagerie, transfert de propriété à l’appelant.
+Accepte un message qui a été proposé par ce bloc de messagerie `timer`, en transférant la propriété à l’appelant.
 
-```
+```cpp
 virtual message<T>* accept_message(runtime_object_identity _MsgId);
 ```
 
 ### <a name="parameters"></a>Paramètres
 
 *_MsgId*<br/>
-Le `runtime_object_identity` de le proposé `message` objet.
+`runtime_object_identity` de l’objet `message` proposé.
 
 ### <a name="return-value"></a>Valeur de retour
 
-Un pointeur vers le `message` que l’appelant a désormais la propriété de l’objet.
+Pointeur vers l’objet `message` dont l’appelant est désormais propriétaire.
 
-##  <a name="consume_message"></a> consume_message
+## <a name="consume_message"></a>consume_message
 
-Consomme un message précédemment proposé par le `timer` et réservé par la cible, en transférant la propriété à l’appelant.
+Consomme un message précédemment offert par le `timer` et réservé par la cible, en transférant la propriété à l’appelant.
 
-```
+```cpp
 virtual message<T>* consume_message(runtime_object_identity _MsgId);
 ```
 
 ### <a name="parameters"></a>Paramètres
 
 *_MsgId*<br/>
-Le `runtime_object_identity` de la `message` de l’objet ayant été consommé.
+`runtime_object_identity` de l’objet `message` qui est consommé.
 
 ### <a name="return-value"></a>Valeur de retour
 
-Un pointeur vers le `message` que l’appelant a désormais la propriété de l’objet.
+Pointeur vers l’objet `message` dont l’appelant est désormais propriétaire.
 
 ### <a name="remarks"></a>Notes
 
-Semblable à `accept`, mais est toujours précédé par un appel à `reserve`.
+Semblable à `accept`, mais est toujours précédé d’un appel à `reserve`.
 
-##  <a name="link_target_notification"></a> link_target_notification
+## <a name="link_target_notification"></a>link_target_notification
 
-Rappel qui notifie qu’une nouvelle cible a été liée à ce `timer` bloc de messagerie.
+Rappel qui signale qu’une nouvelle cible a été liée à ce `timer` bloc de messagerie.
 
-```
+```cpp
 virtual void link_target_notification(_Inout_ ITarget<T>* _PTarget);
 ```
 
 ### <a name="parameters"></a>Paramètres
 
 *_PTarget*<br/>
-Pointeur vers la cible qui vient d’être lié.
+Pointeur vers la cible nouvellement liée.
 
-##  <a name="pause"></a> pause
+## <a name="pause"></a>suspen
 
-Arrête le `timer` bloc de messagerie. S’il s’agit d’une répétition `timer` bloc de messagerie, il peut être redémarré avec une ultérieure `start()` appeler. Non extensible pour les minuteries, cela a le même effet qu’un `stop` appeler.
+Arrête le bloc de messagerie `timer`. S’il s’agit d’un bloc de messagerie à répétition `timer`, il peut être redémarré avec un appel de `start()` suivant. Pour les minuteurs qui ne se répètent pas, cela a le même effet qu’un appel de `stop`.
 
-```
+```cpp
 void pause();
 ```
 
-##  <a name="propagate_to_any_targets"></a> propagate_to_any_targets
+## <a name="propagate_to_any_targets"></a>propagate_to_any_targets
 
-Essaie d’offrir le message généré par le `timer` bloc à toutes les cibles liées.
+Tente d’offrir le message produit par le bloc `timer` à toutes les cibles liées.
 
-```
+```cpp
 virtual void propagate_to_any_targets(_Inout_opt_ message<T> *);
 ```
 
-##  <a name="release_message"></a> release_message
+## <a name="release_message"></a>release_message
 
-Libère une réservation de message précédent.
+Libère une réservation de message précédente.
 
-```
+```cpp
 virtual void release_message(runtime_object_identity _MsgId);
 ```
 
 ### <a name="parameters"></a>Paramètres
 
 *_MsgId*<br/>
-Le `runtime_object_identity` de la `message` de l’objet qui est libéré.
+`runtime_object_identity` de l’objet `message` en cours de libération.
 
-##  <a name="reserve_message"></a> reserve_message
+## <a name="reserve_message"></a>reserve_message
 
-Réserve un message précédemment proposé par ce `timer` bloc de messagerie.
+Réserve un message précédemment offert par ce `timer` bloc de messagerie.
 
-```
+```cpp
 virtual bool reserve_message(runtime_object_identity _MsgId);
 ```
 
 ### <a name="parameters"></a>Paramètres
 
 *_MsgId*<br/>
-Le `runtime_object_identity` de la `message` de l’objet en cours de réservation.
+`runtime_object_identity` de l’objet `message` qui est réservé.
 
 ### <a name="return-value"></a>Valeur de retour
 
-**true** si le message a été réservé avec succès, **false** dans le cas contraire.
+**true** si le message a été réservé, **false** dans le cas contraire.
 
 ### <a name="remarks"></a>Notes
 
-Après avoir `reserve` est appelée, si elle retourne **true**, soit `consume` ou `release` doit être appelé pour accepter ou libérer la propriété du message.
+Une fois `reserve` appelée, si elle retourne la **valeur true**, `consume` ou `release` doit être appelé pour accepter ou libérer la propriété du message.
 
-##  <a name="resume_propagation"></a> resume_propagation
+## <a name="resume_propagation"></a>resume_propagation
 
-Reprend la propagation après qu’une réservation a été libérée.
+Reprend la propagation après la libération d’une réservation.
 
-```
+```cpp
 virtual void resume_propagation();
 ```
 
-##  <a name="start"></a> Démarrer
+## <a name="start"></a>activer
 
-Démarre le `timer` bloc de messagerie. Le nombre spécifié de millisecondes après cet est appelé, la valeur spécifiée sera propagée en aval comme un `message`.
+Démarre le bloc de messagerie `timer`. Nombre de millisecondes spécifié après l’appel de, la valeur spécifiée est propagée en aval en tant que `message`.
 
-```
+```cpp
 void start();
 ```
 
-##  <a name="stop"></a> stop
+## <a name="stop"></a>erreur
 
-Arrête le `timer` bloc de messagerie.
+Arrête le bloc de messagerie `timer`.
 
-```
+```cpp
 void stop();
 ```
 
-##  <a name="ctor"></a> Minuteur
+## <a name="ctor"></a>minute
 
-Construit un `timer` bloc de messagerie qui déclenchera un message donné après un intervalle spécifié.
+Construit un bloc de messagerie `timer` qui déclenchera un message donné après un intervalle spécifié.
 
-```
+```cpp
 timer(
     unsigned int _Ms,
     T const& value,
@@ -242,19 +242,19 @@ timer(
 ### <a name="parameters"></a>Paramètres
 
 *_Ms*<br/>
-Le nombre de millisecondes qui doivent s’écouler après l’appel à démarrer pour le message spécifié à être propagée en aval.
+Nombre de millisecondes qui doivent s’écouler après l’appel de Start pour que le message spécifié soit propagé en aval.
 
 *value*<br/>
-La valeur qui sera propagée en aval lors de la minuterie s’écoule.
+Valeur qui sera propagée en aval lorsque la minuterie s’écoulera.
 
 *_PTarget*<br/>
-La cible à laquelle le minuteur se propageront son message.
+Cible vers laquelle la minuterie propage son message.
 
 *_Repeating*<br/>
-Si la valeur est true, indique que la minuterie déclenche périodiquement chaque `_Ms` millisecondes.
+Si la valeur est true, indique que la minuterie se déclenchera périodiquement toutes les `_Ms` millisecondes.
 
 *_Scheduler*<br/>
-Le `Scheduler` objet dans lequel la tâche de propagation pour le `timer` bloc de messagerie est planifiée est planifié.
+L’objet `Scheduler` dans lequel la tâche de propagation du bloc de messagerie `timer` est planifiée est planifiée.
 
 *_ScheduleGroup*<br/>
 Objet `ScheduleGroup` dans lequel la tâche de propagation du bloc de messagerie `timer` est planifiée. L’objet `Scheduler` utilisé est suggéré par le groupe de planification.
@@ -263,11 +263,11 @@ Objet `ScheduleGroup` dans lequel la tâche de propagation du bloc de messagerie
 
 Le runtime utilise le planificateur par défaut si vous ne spécifiez pas les paramètres `_Scheduler` ou `_ScheduleGroup` .
 
-##  <a name="dtor"></a> ~ timer
+## <a name="dtor"></a>~ minuterie
 
-Détruit un `timer` bloc de messagerie.
+Détruit un bloc de messagerie `timer`.
 
-```
+```cpp
 ~timer();
 ```
 

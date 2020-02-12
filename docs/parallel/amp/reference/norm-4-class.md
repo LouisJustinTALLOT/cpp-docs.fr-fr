@@ -268,20 +268,20 @@ f1_keywords:
 - amp_short_vectors/Concurrency::graphics::norm_4::set_zyx
 - amp_short_vectors/Concurrency::graphics::norm_4::wy
 ms.assetid: d628b2bf-2cdb-4dbb-95c6-cd778f5e991f
-ms.openlocfilehash: 06e08c24a92259e34be59a9f021ae13f38e974a5
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 08d19d25c3f9309553972e752daee75c9896a071
+ms.sourcegitcommit: a8ef52ff4a4944a1a257bdaba1a3331607fb8d0f
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62351574"
+ms.lasthandoff: 02/11/2020
+ms.locfileid: "77126472"
 ---
-# <a name="norm4-class"></a>norm_4, classe
+# <a name="norm_4-class"></a>norm_4, classe
 
-Représente un vecteur court de quatre nombres normales.
+Représente un vecteur abrégé de quatre nombres normaux.
 
 ## <a name="syntax"></a>Syntaxe
 
-```
+```cpp
 class norm_4;
 ```
 
@@ -289,19 +289,19 @@ class norm_4;
 
 ### <a name="public-typedefs"></a>Typedefs publics
 
-|Nom|Description|
+|Name|Description|
 |----------|-----------------|
 |`value_type`||
 
 ### <a name="public-constructors"></a>Constructeurs publics
 
-|Nom|Description|
+|Name|Description|
 |----------|-----------------|
-|[norm_4 constructeur](#ctor)|Surchargé. Par défaut constructeur initialise tous les éléments par 0.|
+|[Constructeur norm_4](#ctor)|Surchargé. Le constructeur par défaut initialise tous les éléments avec 0.|
 
 ### <a name="public-methods"></a>M&#233;thodes publiques
 
-|Nom|Description|
+|Name|Description|
 |----------|-----------------|
 |norm_4::get_w||
 |norm_4::get_wx||
@@ -442,9 +442,9 @@ class norm_4;
 
 ### <a name="public-operators"></a>Op&#233;rateurs publics
 
-|Nom|Description|
+|Name|Description|
 |----------|-----------------|
-|norm_4::operator-||
+|norm_4 :: Operator-||
 |norm_4::operator--||
 |norm_4::operator*=||
 |norm_4::operator/=||
@@ -455,21 +455,21 @@ class norm_4;
 
 ### <a name="public-constants"></a>Constantes publiques
 
-|Nom|Description|
+|Name|Description|
 |----------|-----------------|
-|[taille (constante)](#norm_4__size)||
+|[taille, constante](#norm_4__size)||
 
-### <a name="public-data-members"></a>Membres de données publics
+### <a name="public-data-members"></a>Membres de données publiques
 
-|Nom|Description|
+|Name|Description|
 |----------|-----------------|
 |norm_4::a||
 |norm_4::ab||
 |norm_4::abg||
 |norm_4::abgr||
 |norm_4::abr||
-|norm_4::abrg||
-|norm_4::ag||
+|norm_4 :: abrg||
+|norm_4 :: AG||
 |norm_4::agb||
 |norm_4::agbr||
 |norm_4::agr||
@@ -479,23 +479,23 @@ class norm_4;
 |norm_4::arbg||
 |norm_4::arg||
 |norm_4::argb||
-|norm_4::b||
+|norm_4 :: b||
 |norm_4::ba||
 |norm_4::bag||
 |norm_4::bagr||
-|norm_4::bar||
+|norm_4 :: bar||
 |norm_4::barg||
 |norm_4::bg||
 |norm_4::bga||
-|norm_4::bgar||
+|norm_4 :: BGAR||
 |norm_4::bgr||
 |norm_4::bgra||
-|norm_4::br||
+|norm_4 :: BR||
 |norm_4::bra||
 |norm_4::brag||
-|norm_4::brg||
-|norm_4::brga||
-|norm_4::g||
+|norm_4 :: BRG||
+|norm_4 :: brga||
+|norm_4 :: g||
 |norm_4::ga||
 |norm_4::gab||
 |norm_4::gabr||
@@ -506,12 +506,12 @@ class norm_4;
 |norm_4::gbar||
 |norm_4::gbr||
 |norm_4::gbra||
-|norm_4::gr||
+|norm_4 :: gr||
 |norm_4::gra||
 |norm_4::grab||
 |norm_4::grb||
 |norm_4::grba||
-|norm_4::r||
+|norm_4 :: r||
 |norm_4::ra||
 |norm_4::rab||
 |norm_4::rabg||
@@ -522,18 +522,18 @@ class norm_4;
 |norm_4::rbag||
 |norm_4::rbg||
 |norm_4::rbga||
-|norm_4::rg||
+|norm_4 :: RG||
 |norm_4::rga||
 |norm_4::rgab||
 |norm_4::rgb||
 |norm_4::rgba||
-|norm_4::w||
+|norm_4 :: w||
 |norm_4::wx||
 |norm_4::wxy||
 |norm_4::wxyz||
 |norm_4::wxz||
 |norm_4::wxzy||
-|norm_4::wy||
+|norm_4 :: WY||
 |norm_4::wyx||
 |norm_4::wyxz||
 |norm_4::wyz||
@@ -543,23 +543,23 @@ class norm_4;
 |norm_4::wzxy||
 |norm_4::wzy||
 |norm_4::wzyx||
-|norm_4::x||
-|norm_4::xw||
-|norm_4::xwy||
-|norm_4::xwyz||
+|norm_4 :: x||
+|norm_4 :: XW||
+|norm_4 :: xwy||
+|norm_4 :: xwyz||
 |norm_4::xwz||
 |norm_4::xwzy||
-|norm_4::xy||
+|norm_4 :: XY||
 |norm_4::xyw||
 |norm_4::xywz||
 |norm_4::xyz||
-|norm_4::xyzw||
+|norm_4 :: XYZW||
 |norm_4::xz||
 |norm_4::xzw||
-|norm_4::xzwy||
+|norm_4 :: xzwy||
 |norm_4::xzy||
 |norm_4::xzyw||
-|norm_4::y||
+|norm_4 :: y||
 |norm_4::yw||
 |norm_4::ywx||
 |norm_4::ywxz||
@@ -571,42 +571,42 @@ class norm_4;
 |norm_4::yxz||
 |norm_4::yxzw||
 |norm_4::yz||
-|norm_4::yzw||
+|norm_4 :: YZW||
 |norm_4::yzwx||
 |norm_4::yzx||
 |norm_4::yzxw||
-|norm_4::z||
-|norm_4::zw||
-|norm_4::zwx||
-|norm_4::zwxy||
-|norm_4::zwy||
-|norm_4::zwyx||
+|norm_4 :: z||
+|norm_4 :: ZW||
+|norm_4 :: zwx||
+|norm_4 :: zwxy||
+|norm_4 :: zwy||
+|norm_4 :: ZWYX||
 |norm_4::zx||
-|norm_4::zxw||
-|norm_4::zxwy||
+|norm_4 :: ZXW||
+|norm_4 :: zxwy||
 |norm_4::zxy||
 |norm_4::zxyw||
-|norm_4::zy||
-|norm_4::zyw||
+|norm_4 :: ZY||
+|norm_4 :: Zyw||
 |norm_4::zywx||
-|norm_4::zyx||
+|norm_4 :: ZYX||
 |norm_4::zyxw||
 
 ## <a name="inheritance-hierarchy"></a>Hiérarchie d'héritage
 
 `norm_4`
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
-**En-tête :** amp_short_vectors.h
+**En-tête :** amp_short_vectors. h
 
-**Espace de noms :** Concurrency::graphics
+**Espace de noms :** Concurrency :: Graphics
 
-##  <a name="ctor"></a> norm_4
+## <a name="ctor"></a>norm_4
 
-Par défaut constructeur initialise tous les éléments par 0.
+Le constructeur par défaut initialise tous les éléments avec 0.
 
-```
+```cpp
 norm_4() restrict(amp,
     cpu);
 
@@ -667,26 +667,26 @@ explicit inline norm_4(
 ### <a name="parameters"></a>Paramètres
 
 *_V0*<br/>
-La valeur pour initialiser l’élément 0.
+Valeur pour initialiser l’élément 0.
 
 *_V1*<br/>
-La valeur pour initialiser l’élément 1.
+Valeur pour initialiser l’élément 1.
 
 *_V2*<br/>
-La valeur pour initialiser l’élément 2.
+Valeur pour initialiser l’élément 2.
 
 *_V3*<br/>
-La valeur pour initialiser l’élément 3.
+Valeur pour initialiser l’élément 3.
 
 *_V*<br/>
-La valeur pour l’initialisation.
+Valeur d’initialisation.
 
 *_Other*<br/>
-L’objet utilisé pour initialiser.
+Objet utilisé pour initialiser.
 
-##  <a name="norm_4__size"></a> Taille
+## <a name="norm_4__size"></a>corps
 
-```
+```cpp
 static const int size = 4;
 ```
 

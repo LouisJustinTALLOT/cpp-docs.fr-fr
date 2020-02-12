@@ -2,12 +2,12 @@
 title: Utilisation des mosaïques
 ms.date: 11/19/2018
 ms.assetid: acb86a86-2b7f-43f1-8fcf-bcc79b21d9a8
-ms.openlocfilehash: 6c935134e033d12fc140c8d377ef59d0b47265fc
-ms.sourcegitcommit: a930a9b47bd95599265d6ba83bb87e46ae748949
+ms.openlocfilehash: e5cedde255846f61ed0aaadacbd9966c00a03c9d
+ms.sourcegitcommit: a8ef52ff4a4944a1a257bdaba1a3331607fb8d0f
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/22/2020
-ms.locfileid: "76518255"
+ms.lasthandoff: 02/11/2020
+ms.locfileid: "77126264"
 ---
 # <a name="using-tiles"></a>Utilisation des mosaïques
 
@@ -15,7 +15,7 @@ Vous pouvez utiliser la mosaïque pour optimiser l’accélération de votre app
 
 - variables de `tile_static`. Le principal avantage de la mosaïque est le gain de performance de l’accès `tile_static`. L’accès aux données dans `tile_static` mémoire peut être beaucoup plus rapide que l’accès aux données dans l’espace global (objets`array` ou `array_view`). Une instance d’une `tile_static` variable est créée pour chaque vignette, et tous les threads de la mosaïque ont accès à la variable. Dans un algorithme en mosaïque classique, les données sont copiées dans `tile_static` mémoire une fois à partir de la mémoire globale, puis consultées plusieurs fois à partir de la mémoire `tile_static`.
 
-- [tile_barrier :: Wait, méthode](reference/tile-barrier-class.md#wait). Un appel à `tile_barrier::wait` interrompt l’exécution du thread actuel jusqu’à ce que tous les threads de la même vignette atteignent l’appel à `tile_barrier::wait`. Vous ne pouvez pas garantir l’ordre dans lequel les threads s’exécuteront, seulement qu’aucun thread de la vignette ne s’exécutera après l’appel à `tile_barrier::wait` jusqu’à ce que tous les threads aient atteint l’appel. Cela signifie qu’à l’aide de la méthode `tile_barrier::wait`, vous pouvez effectuer des tâches en fonction de la mosaïque plutôt que d’un thread par thread. Un algorithme de mosaïque classique a du code pour initialiser la mémoire `tile_static` pour l’ensemble de la vignette, suivi d’un appel à `tile_barrer::wait`. Le code qui suit `tile_barrier::wait` contient des calculs qui requièrent l’accès à toutes les valeurs de `tile_static`.
+- [tile_barrier :: Wait, méthode](reference/tile-barrier-class.md#wait). Un appel à `tile_barrier::wait` interrompt l’exécution du thread actuel jusqu’à ce que tous les threads de la même vignette atteignent l’appel à `tile_barrier::wait`. Vous ne pouvez pas garantir l’ordre dans lequel les threads s’exécuteront, seulement qu’aucun thread de la vignette ne s’exécutera après l’appel à `tile_barrier::wait` jusqu’à ce que tous les threads aient atteint l’appel. Cela signifie qu’à l’aide de la méthode `tile_barrier::wait`, vous pouvez effectuer des tâches en fonction de la mosaïque plutôt que d’un thread par thread. Un algorithme de mosaïque classique a du code pour initialiser la mémoire `tile_static` pour l’ensemble de la vignette, suivi d’un appel à `tile_barrier::wait`. Le code qui suit `tile_barrier::wait` contient des calculs qui requièrent l’accès à toutes les valeurs de `tile_static`.
 
 - Indexation locale et globale. Vous avez accès à l’index du thread par rapport à l’intégralité de l’objet `array_view` ou `array` et à l’index relatif à la vignette. L’utilisation de l’index local peut faciliter la lecture et le débogage de votre code. En règle générale, vous utilisez l’indexation locale pour accéder aux variables de `tile_static` et l’indexation globale pour accéder aux variables `array` et `array_view`.
 
@@ -234,7 +234,7 @@ void SamplingExample() {
         }
         std::cout << "\n";
     }
-    // Output for SAMPLESSIZE = 2 is:
+    // Output for SAMPLESIZE = 2 is:
     //  4.5  6.5  8.5 10.5
     // 20.5 22.5 24.5 26.5
     // 36.5 38.5 40.5 42.5

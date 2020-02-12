@@ -13,12 +13,12 @@ f1_keywords:
 helpviewer_keywords:
 - concurrent_unordered_multiset class
 ms.assetid: 219d7d67-1ff0-45f4-9400-e9cc272991a4
-ms.openlocfilehash: c3b9b4e528a310d5a7e55dc6ce608076ad3e03bf
-ms.sourcegitcommit: a5fa9c6f4f0c239ac23be7de116066a978511de7
+ms.openlocfilehash: 92158d675b9526d1eb82a9b3f67c1c7263557d8e
+ms.sourcegitcommit: a8ef52ff4a4944a1a257bdaba1a3331607fb8d0f
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/20/2019
-ms.locfileid: "75297516"
+ms.lasthandoff: 02/11/2020
+ms.locfileid: "77143190"
 ---
 # <a name="concurrent_unordered_multiset-class"></a>concurrent_unordered_multiset, classe
 
@@ -26,7 +26,7 @@ La classe `concurrent_unordered_multiset` est un conteneur d’accès concurrent
 
 ## <a name="syntax"></a>Syntaxe
 
-```
+```cpp
 template <typename K,
     typename _Hasher = std::hash<K>,
     typename key_equality = std::equal_to<K>,
@@ -41,13 +41,13 @@ _Allocator_type,
     true>>;
 ```
 
-#### <a name="parameters"></a>Parameters
+### <a name="parameters"></a>Paramètres
 
 *K*<br/>
 Type de clé.
 
 *_Hasher*<br/>
-Type d’objet de la fonction de hachage. Cet argument est facultatif et sa valeur par défaut est `std::hash<K>`.
+Type d'objet de la fonction de hachage. Cet argument est facultatif et sa valeur par défaut est `std::hash<K>`.
 
 *key_equality*<br/>
 Type d’objet de fonction de comparaison d’égalité. Cet argument est facultatif et sa valeur par défaut est `std::equal_to<K>`.
@@ -55,13 +55,13 @@ Type d’objet de fonction de comparaison d’égalité. Cet argument est facult
 *_Allocator_type*<br/>
 Type qui représente l’objet allocateur stocké qui encapsule des détails sur l’allocation et la désallocation de mémoire pour le vecteur simultané. Cet argument est facultatif et sa valeur par défaut est `std::allocator<K>`.
 
-## <a name="members"></a>Members
+## <a name="members"></a>Membres
 
 ### <a name="public-typedefs"></a>Typedefs publics
 
 |Name|Description|
 |----------|-----------------|
-|`allocator_type`|Type d’un allocateur pour la gestion du stockage.|
+|`allocator_type`|Type d'un allocateur pour la gestion du stockage.|
 |`const_iterator`|Type d'un itérateur constant pour la séquence contrôlée.|
 |`const_local_iterator`|Type d’un itérateur de compartiment constant pour la séquence contrôlée.|
 |`const_pointer`|Type d'un pointeur constant vers un élément.|
@@ -75,7 +75,7 @@ Type qui représente l’objet allocateur stocké qui encapsule des détails sur
 |`pointer`|Type d'un pointeur vers un élément.|
 |`reference`|Type d'une référence à un élément.|
 |`size_type`|Type d'une distance non signée entre deux éléments.|
-|`value_type`|Type d’un élément.|
+|`value_type`|Type d'un élément.|
 
 ### <a name="public-constructors"></a>Constructeurs publics
 
@@ -83,7 +83,7 @@ Type qui représente l’objet allocateur stocké qui encapsule des détails sur
 |----------|-----------------|
 |[concurrent_unordered_multiset](#ctor)|Surchargé. Construit un multiensemble non ordonné simultané.|
 
-### <a name="public-methods"></a>Méthodes publiques
+### <a name="public-methods"></a>M&#233;thodes publiques
 
 |Name|Description|
 |----------|-----------------|
@@ -111,17 +111,17 @@ Pour plus d’informations sur la classe `concurrent_unordered_multiset`, consul
 
 `concurrent_unordered_multiset`
 
-## <a name="requirements"></a>Configuration requise pour
+## <a name="requirements"></a>Spécifications
 
 **En-tête :** concurrent_unordered_set. h
 
 **Espace de noms :** concurrency
 
-##  <a name="begin"></a>commencer
+## <a name="begin"></a>commencer
 
 Retourne un itérateur pointant vers le premier élément du conteneur simultané. Cette méthode est sécurisée pour l’accès concurrentiel.
 
-```
+```cpp
 iterator begin();
 
 const_iterator begin() const;
@@ -131,11 +131,11 @@ const_iterator begin() const;
 
 Itérateur vers le premier élément du conteneur simultané.
 
-##  <a name="cbegin"></a>cbegin
+## <a name="cbegin"></a>cbegin
 
 Retourne un itérateur const pointant vers le premier élément du conteneur simultané. Cette méthode est sécurisée pour l’accès concurrentiel.
 
-```
+```cpp
 const_iterator cbegin() const;
 ```
 
@@ -143,11 +143,11 @@ const_iterator cbegin() const;
 
 Itérateur const vers le premier élément du conteneur simultané.
 
-##  <a name="cend"></a>CEND
+## <a name="cend"></a>CEND
 
 Retourne un itérateur const pointant vers l’emplacement qui suit le dernier élément du conteneur simultané. Cette méthode est sécurisée pour l’accès concurrentiel.
 
-```
+```cpp
 const_iterator cend() const;
 ```
 
@@ -155,19 +155,19 @@ const_iterator cend() const;
 
 Itérateur const vers l’emplacement qui suit le dernier élément du conteneur simultané.
 
-##  <a name="clear"></a>effacé
+## <a name="clear"></a>effacé
 
 Efface tous les éléments dans le conteneur simultané. Cette fonction n’est pas sécurisée pour l’accès concurrentiel.
 
-```
+```cpp
 void clear();
 ```
 
-##  <a name="ctor"></a>concurrent_unordered_multiset
+## <a name="ctor"></a>concurrent_unordered_multiset
 
 Construit un multiensemble non ordonné simultané.
 
-```
+```cpp
 explicit concurrent_unordered_multiset(
     size_type _Number_of_buckets = 8,
     const hasher& _Hasher = hasher(),
@@ -196,7 +196,7 @@ concurrent_unordered_multiset(
     concurrent_unordered_multiset&& _Uset);
 ```
 
-### <a name="parameters"></a>Parameters
+### <a name="parameters"></a>Paramètres
 
 *_Iterator*<br/>
 Type de l'itérateur d'entrée.
@@ -232,15 +232,15 @@ Les quatrième et cinquième constructeurs spécifient une copie du `_Uset`multi
 
 Le dernier constructeur spécifie un déplacement de la `_Uset`de multiensemble non ordonnée simultanée.
 
-##  <a name="count"></a>saut
+## <a name="count"></a>saut
 
 Compte le nombre d’éléments qui correspondent à une clé spécifiée. Cette fonction est sécurisée pour l’accès concurrentiel.
 
-```
+```cpp
 size_type count(const key_type& KVal) const;
 ```
 
-### <a name="parameters"></a>Parameters
+### <a name="parameters"></a>Paramètres
 
 *KVal*<br/>
 Clé à rechercher.
@@ -249,11 +249,11 @@ Clé à rechercher.
 
 Nombre de fois où la clé apparaît dans le conteneur.
 
-##  <a name="empty"></a>vidé
+## <a name="empty"></a>vidé
 
 Vérifie l'absence d'éléments. Cette méthode est sécurisée pour l’accès concurrentiel.
 
-```
+```cpp
 bool empty() const;
 ```
 
@@ -265,11 +265,11 @@ bool empty() const;
 
 En présence d’insertions simultanées, si le conteneur simultané est vide, peut changer immédiatement après l’appel de cette fonction, avant que la valeur de retour ne soit même lue.
 
-##  <a name="end"></a>effet
+## <a name="end"></a>effet
 
 Retourne un itérateur pointant vers l’emplacement qui suit le dernier élément du conteneur simultané. Cette méthode est sécurisée pour l’accès concurrentiel.
 
-```
+```cpp
 iterator end();
 
 const_iterator end() const;
@@ -279,11 +279,11 @@ const_iterator end() const;
 
 Itérateur vers l’emplacement qui suit le dernier élément du conteneur simultané.
 
-##  <a name="equal_range"></a>equal_range
+## <a name="equal_range"></a>equal_range
 
 Recherche une plage qui correspond à une clé spécifiée. Cette fonction est sécurisée pour l’accès concurrentiel.
 
-```
+```cpp
 std::pair<iterator,
     iterator> equal_range(
     const key_type& KVal);
@@ -293,7 +293,7 @@ std::pair<const_iterator,
     const key_type& KVal) const;
 ```
 
-### <a name="parameters"></a>Parameters
+### <a name="parameters"></a>Paramètres
 
 *KVal*<br/>
 Valeur de clé à rechercher.
@@ -306,17 +306,17 @@ Valeur de clé à rechercher.
 
 Il est possible que les insertions simultanées provoquent l’insertion de clés supplémentaires après l’itérateur de début et avant l’itérateur de fin.
 
-##  <a name="find"></a>trouver
+## <a name="find"></a>trouver
 
 Recherche un élément qui correspond à une clé spécifiée. Cette fonction est sécurisée pour l’accès concurrentiel.
 
-```
+```cpp
 iterator find(const key_type& KVal);
 
 const_iterator find(const key_type& KVal) const;
 ```
 
-### <a name="parameters"></a>Parameters
+### <a name="parameters"></a>Paramètres
 
 *KVal*<br/>
 Valeur de clé à rechercher.
@@ -325,11 +325,11 @@ Valeur de clé à rechercher.
 
 Itérateur pointant sur l’emplacement du premier élément qui correspond à la clé fournie, ou l’itérateur `end()` si aucun élément de ce type n’existe.
 
-##  <a name="get_allocator"></a> get_allocator
+## <a name="get_allocator"></a>get_allocator
 
 Retourne l’objet allocateur stocké pour ce conteneur simultané. Cette méthode est sécurisée pour l’accès concurrentiel.
 
-```
+```cpp
 allocator_type get_allocator() const;
 ```
 
@@ -337,11 +337,11 @@ allocator_type get_allocator() const;
 
 Objet allocateur stocké pour ce conteneur simultané.
 
-##  <a name="hash_function"></a>hash_function
+## <a name="hash_function"></a>hash_function
 
 Retourne l’objet de fonction de hachage stocké.
 
-```
+```cpp
 hasher hash_function() const;
 ```
 
@@ -349,11 +349,11 @@ hasher hash_function() const;
 
 Objet de fonction de hachage stocké.
 
-##  <a name="insert"></a>Insérer
+## <a name="insert"></a>Insérer
 
 Ajoute des éléments à l’objet `concurrent_unordered_multiset`.
 
-```
+```cpp
 iterator insert(
     const value_type& value);
 
@@ -377,7 +377,7 @@ typename std::enable_if<!std::is_same<const_iterator,
     V&& value);
 ```
 
-### <a name="parameters"></a>Parameters
+### <a name="parameters"></a>Paramètres
 
 *_Iterator*<br/>
 Type d’itérateur utilisé pour l’insertion.
@@ -385,7 +385,7 @@ Type d’itérateur utilisé pour l’insertion.
 *V*<br/>
 Type de la valeur insérée.
 
-*valeur*<br/>
+*value*<br/>
 Valeur à insérer.
 
 *_Where*<br/>
@@ -411,11 +411,11 @@ La troisième fonction membre insère la séquence de valeurs d’éléments à 
 
 Les deux dernières fonctions membres se comportent de la même façon que les deux premières, sauf que `value` est utilisé pour construire la valeur insérée.
 
-##  <a name="key_eq"></a>key_eq
+## <a name="key_eq"></a>key_eq
 
 Objet de fonction de comparaison d’égalité stocké.
 
-```
+```cpp
 key_equal key_eq() const;
 ```
 
@@ -423,11 +423,11 @@ key_equal key_eq() const;
 
 Objet de fonction de comparaison d’égalité stocké.
 
-##  <a name="load_factor"></a>load_factor
+## <a name="load_factor"></a>load_factor
 
 Calcule et retourne le facteur de charge actuel du conteneur. Le facteur de charge est le nombre d’éléments dans le conteneur divisé par le nombre de compartiments.
 
-```
+```cpp
 float load_factor() const;
 ```
 
@@ -435,17 +435,17 @@ float load_factor() const;
 
 Facteur de charge pour le conteneur.
 
-##  <a name="max_load_factor"></a> max_load_factor
+## <a name="max_load_factor"></a>max_load_factor
 
 Obtient ou définit le facteur de charge maximal du conteneur. Le facteur de charge maximale est le plus grand nombre d’éléments que ne peut être dans un compartiment avant que le conteneur ne développe sa table interne.
 
-```
+```cpp
 float max_load_factor() const;
 
 void max_load_factor(float _Newmax);
 ```
 
-### <a name="parameters"></a>Parameters
+### <a name="parameters"></a>Paramètres
 
 `_Newmax`
 
@@ -453,11 +453,11 @@ void max_load_factor(float _Newmax);
 
 La première fonction membre retourne le facteur de charge maximale stockée. La deuxième fonction membre ne retourne pas de valeur, mais lève une exception [out_of_range](../../../standard-library/out-of-range-class.md) si le facteur de charge fourni n’est pas valide.
 
-##  <a name="max_size"></a>max_size
+## <a name="max_size"></a>max_size
 
 Retourne la taille maximale du conteneur simultané, déterminée par l’allocateur. Cette méthode est sécurisée pour l’accès concurrentiel.
 
-```
+```cpp
 size_type max_size() const;
 ```
 
@@ -469,17 +469,17 @@ Nombre maximal d’éléments qui peuvent être insérés dans ce conteneur simu
 
 Cette valeur limite supérieure peut en fait être supérieure à ce que le conteneur peut réellement contenir.
 
-##  <a name="operator_eq"></a>opérateur =
+## <a name="operator_eq"></a>opérateur =
 
 Assigne le contenu d’un autre objet `concurrent_unordered_multiset` à celui-ci. Cette méthode n’est pas sécurisée pour la concurrence.
 
-```
+```cpp
 concurrent_unordered_multiset& operator= (const concurrent_unordered_multiset& _Uset);
 
 concurrent_unordered_multiset& operator= (concurrent_unordered_multiset&& _Uset);
 ```
 
-### <a name="parameters"></a>Parameters
+### <a name="parameters"></a>Paramètres
 
 *_Uset*<br/>
 Objet `concurrent_unordered_multiset` source.
@@ -492,15 +492,15 @@ Référence à cet objet `concurrent_unordered_multiset`.
 
 Après l’effacement des éléments existants dans un multiensemble non ordonné simultané, `operator=` copie ou déplace le contenu de `_Uset` dans le multiensemble non ordonné simultané.
 
-##  <a name="rehash"></a>rehash
+## <a name="rehash"></a>rehash
 
 Régénère la table de hachage.
 
-```
+```cpp
 void rehash(size_type _Buckets);
 ```
 
-### <a name="parameters"></a>Parameters
+### <a name="parameters"></a>Paramètres
 
 *_Buckets*<br/>
 Nombre souhaité de compartiments.
@@ -511,11 +511,11 @@ La fonction membre modifie le nombre de compartiments pour qu’il soit au moins
 
 Elle lève une exception [out_of_range](../../../standard-library/out-of-range-class.md) si le nombre de compartiments n’est pas valide (0 ou supérieur au nombre maximal de compartiments).
 
-##  <a name="size"></a>corps
+## <a name="size"></a>corps
 
 Retourne le nombre d’éléments dans ce conteneur simultané. Cette méthode est sécurisée pour l’accès concurrentiel.
 
-```
+```cpp
 size_type size() const;
 ```
 
@@ -527,30 +527,30 @@ Nombre d’éléments dans le conteneur.
 
 En présence d’insertions simultanées, le nombre d’éléments dans le conteneur simultané peut changer immédiatement après l’appel de cette fonction, avant que la valeur de retour soit même lue.
 
-##  <a name="swap"></a>échange
+## <a name="swap"></a>échange
 
 Échange le contenu de deux objets `concurrent_unordered_multiset`. Cette méthode n’est pas sécurisée pour la concurrence.
 
-```
+```cpp
 void swap(concurrent_unordered_multiset& _Uset);
 ```
 
-### <a name="parameters"></a>Parameters
+### <a name="parameters"></a>Paramètres
 
 *_Uset*<br/>
 Objet `concurrent_unordered_multiset` à utiliser pour l’échange.
 
-##  <a name="unsafe_begin"></a>unsafe_begin
+## <a name="unsafe_begin"></a>unsafe_begin
 
 Retourne un itérateur au premier élément de ce conteneur pour un compartiment spécifique.
 
-```
+```cpp
 local_iterator unsafe_begin(size_type _Bucket);
 
 const_local_iterator unsafe_begin(size_type _Bucket) const;
 ```
 
-### <a name="parameters"></a>Parameters
+### <a name="parameters"></a>Paramètres
 
 *_Bucket*<br/>
 Index de compartiment.
@@ -559,15 +559,15 @@ Index de compartiment.
 
 Itérateur pointant vers le début du compartiment.
 
-##  <a name="unsafe_bucket"></a>unsafe_bucket
+## <a name="unsafe_bucket"></a>unsafe_bucket
 
 Retourne l’index de compartiment auquel une clé spécifique est mappée dans ce conteneur.
 
-```
+```cpp
 size_type unsafe_bucket(const key_type& KVal) const;
 ```
 
-### <a name="parameters"></a>Parameters
+### <a name="parameters"></a>Paramètres
 
 *KVal*<br/>
 Clé d’élément recherchée.
@@ -576,11 +576,11 @@ Clé d’élément recherchée.
 
 Index de compartiment pour la clé dans ce conteneur.
 
-##  <a name="unsafe_bucket_count"></a> unsafe_bucket_count
+## <a name="unsafe_bucket_count"></a>unsafe_bucket_count
 
 Retourne le nombre actuel de compartiments dans ce conteneur.
 
-```
+```cpp
 size_type unsafe_bucket_count() const;
 ```
 
@@ -588,15 +588,15 @@ size_type unsafe_bucket_count() const;
 
 Nombre actuel de compartiments dans ce conteneur.
 
-##  <a name="unsafe_bucket_size"></a>unsafe_bucket_size
+## <a name="unsafe_bucket_size"></a>unsafe_bucket_size
 
 Retourne le nombre d’éléments dans un compartiment spécifique de ce conteneur.
 
-```
+```cpp
 size_type unsafe_bucket_size(size_type _Bucket);
 ```
 
-### <a name="parameters"></a>Parameters
+### <a name="parameters"></a>Paramètres
 
 *_Bucket*<br/>
 Compartiment à rechercher.
@@ -605,15 +605,15 @@ Compartiment à rechercher.
 
 Nombre actuel de compartiments dans ce conteneur.
 
-##  <a name="unsafe_cbegin"></a>unsafe_cbegin
+## <a name="unsafe_cbegin"></a>unsafe_cbegin
 
 Retourne un itérateur au premier élément de ce conteneur pour un compartiment spécifique.
 
-```
+```cpp
 const_local_iterator unsafe_cbegin(size_type _Bucket) const;
 ```
 
-### <a name="parameters"></a>Parameters
+### <a name="parameters"></a>Paramètres
 
 *_Bucket*<br/>
 Index de compartiment.
@@ -622,15 +622,15 @@ Index de compartiment.
 
 Itérateur pointant vers le début du compartiment.
 
-##  <a name="unsafe_cend"></a>unsafe_cend
+## <a name="unsafe_cend"></a>unsafe_cend
 
 Retourne un itérateur à l’emplacement suivant le dernier élément d’un compartiment spécifique.
 
-```
+```cpp
 const_local_iterator unsafe_cend(size_type _Bucket) const;
 ```
 
-### <a name="parameters"></a>Parameters
+### <a name="parameters"></a>Paramètres
 
 *_Bucket*<br/>
 Index de compartiment.
@@ -639,17 +639,17 @@ Index de compartiment.
 
 Itérateur pointant vers le début du compartiment.
 
-##  <a name="unsafe_end"></a>unsafe_end
+## <a name="unsafe_end"></a>unsafe_end
 
 Retourne un itérateur au dernier élément de ce conteneur pour un compartiment spécifique.
 
-```
+```cpp
 local_iterator unsafe_end(size_type _Bucket);
 
 const_local_iterator unsafe_end(size_type _Bucket) const;
 ```
 
-### <a name="parameters"></a>Parameters
+### <a name="parameters"></a>Paramètres
 
 *_Bucket*<br/>
 Index de compartiment.
@@ -658,11 +658,11 @@ Index de compartiment.
 
 Itérateur pointant vers la fin du compartiment.
 
-##  <a name="unsafe_erase"></a>unsafe_erase
+## <a name="unsafe_erase"></a>unsafe_erase
 
 Supprime des éléments de la `concurrent_unordered_multiset` aux positions spécifiées. Cette méthode n’est pas sécurisée pour la concurrence.
 
-```
+```cpp
 iterator unsafe_erase(
     const_iterator _Where);
 
@@ -674,7 +674,7 @@ size_type unsafe_erase(
     const key_type& KVal);
 ```
 
-### <a name="parameters"></a>Parameters
+### <a name="parameters"></a>Paramètres
 
 *_Where*<br/>
 Position de l’itérateur à partir de laquelle effacer.
@@ -694,11 +694,11 @@ La première fonction membre supprime l’élément vers lequel pointe `_Where`.
 
 La troisième fonction membre supprime les éléments de la plage délimitée par [equal_range](#equal_range)(KVal).
 
-##  <a name="unsafe_max_bucket_count"></a> unsafe_max_bucket_count
+## <a name="unsafe_max_bucket_count"></a>unsafe_max_bucket_count
 
 Retourne le nombre maximal de compartiments dans ce conteneur.
 
-```
+```cpp
 size_type unsafe_max_bucket_count() const;
 ```
 

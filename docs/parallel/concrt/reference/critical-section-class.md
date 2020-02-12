@@ -14,20 +14,20 @@ f1_keywords:
 helpviewer_keywords:
 - critical_section class
 ms.assetid: fa3c89d6-be5d-4d1b-bddb-8232814e6cf6
-ms.openlocfilehash: f334b159ae39f48006a135c6e36d413b737a7344
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: aef3ae6100133374cb89098f118c447effafd840
+ms.sourcegitcommit: a8ef52ff4a4944a1a257bdaba1a3331607fb8d0f
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62296154"
+ms.lasthandoff: 02/11/2020
+ms.locfileid: "77143085"
 ---
-# <a name="criticalsection-class"></a>critical_section, classe
+# <a name="critical_section-class"></a>critical_section, classe
 
 Mutex non réentrant qui a explicitement connaissance du runtime d'accès concurrentiel.
 
 ## <a name="syntax"></a>Syntaxe
 
-```
+```cpp
 class critical_section;
 ```
 
@@ -35,160 +35,160 @@ class critical_section;
 
 ### <a name="public-typedefs"></a>Typedefs publics
 
-|Nom|Description|
+|Name|Description|
 |----------|-----------------|
 |`native_handle_type`|Référence à un objet `critical_section`.|
 
 ### <a name="public-classes"></a>Classes publiques
 
-|Nom|Description|
+|Name|Description|
 |----------|-----------------|
-|[critical_section::scoped_lock, classe](#critical_section__scoped_lock_class)|Un wrapper RAII sécurisé pour un `critical_section` objet.|
+|[critical_section :: scoped_lock, classe](#critical_section__scoped_lock_class)|Wrapper RAII de sécurité d’exception pour un objet `critical_section`.|
 
 ### <a name="public-constructors"></a>Constructeurs publics
 
-|Nom|Description|
+|Name|Description|
 |----------|-----------------|
 |[critical_section](#ctor)|Construit une nouvelle section critique.|
-|[~ critical_section, destructeur](#dtor)|Détruit une section critique.|
+|[Destructeur ~ critical_section](#dtor)|Détruit une section critique.|
 
 ### <a name="public-methods"></a>M&#233;thodes publiques
 
-|Nom|Description|
+|Name|Description|
 |----------|-----------------|
 |[lock](#lock)|Acquiert cette section critique.|
-|[native_handle](#native_handle)|Retourne un handle natif de plateforme spécifique, s’il en existe.|
-|[try_lock](#try_lock)|Tente d’acquérir le verrou sans se bloquer.|
+|[native_handle](#native_handle)|Retourne un handle natif spécifique à la plateforme, s’il en existe un.|
+|[try_lock](#try_lock)|Tente d’acquérir le verrou sans blocage.|
 |[try_lock_for](#try_lock_for)|Tente d’acquérir le verrou sans se bloquer pendant un nombre spécifique de millisecondes.|
 |[unlock](#unlock)|Déverrouille la section critique.|
 
 ## <a name="remarks"></a>Notes
 
-Pour plus d’informations, consultez [les Structures de données de synchronisation](../../../parallel/concrt/synchronization-data-structures.md).
+Pour plus d’informations, consultez [structures de données de synchronisation](../../../parallel/concrt/synchronization-data-structures.md).
 
 ## <a name="inheritance-hierarchy"></a>Hiérarchie d'héritage
 
 `critical_section`
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
-**En-tête :** concrt.h
+**En-tête :** concrt. h
 
 **Espace de noms :** concurrency
 
-##  <a name="ctor"></a> critical_section
+## <a name="ctor"></a>critical_section
 
 Construit une nouvelle section critique.
 
-```
+```cpp
 critical_section();
 ```
 
-##  <a name="dtor"></a> ~critical_section
+## <a name="dtor"></a>~ critical_section
 
 Détruit une section critique.
 
-```
+```cpp
 ~critical_section();
 ```
 
 ### <a name="remarks"></a>Notes
 
-Il est probable que le verrou n’est plus conservé lorsque le destructeur s’exécute. Ce qui permet de la section critique détruire avec le verrou conservé résultats en un comportement non défini.
+Il est supposé que le verrou n’est plus maintenu lors de l’exécution du destructeur. Le fait d’autoriser la destruction de la section critique avec le verrou toujours maintenu entraîne un comportement indéfini.
 
-##  <a name="lock"></a> Verrou
+## <a name="lock"></a>Lock
 
 Acquiert cette section critique.
 
-```
+```cpp
 void lock();
 ```
 
 ### <a name="remarks"></a>Notes
 
-Il est souvent préférable d’utiliser le [scoped_lock](#critical_section__scoped_lock_class) construction pour acquérir et libérer un `critical_section` objet dans une exception sûre.
+Il est souvent plus sûr d’utiliser la construction [scoped_lock](#critical_section__scoped_lock_class) pour acquérir et libérer un objet `critical_section` en toute sécurité.
 
-Si le verrou est déjà détenu par le contexte d’appel, un [improper_lock](improper-lock-class.md) exception sera levée.
+Si le verrou est déjà détenu par le contexte d’appel, une exception [improper_lock](improper-lock-class.md) sera levée.
 
-##  <a name="native_handle"></a> native_handle
+## <a name="native_handle"></a>native_handle
 
-Retourne un handle natif de plateforme spécifique, s’il en existe.
+Retourne un handle natif spécifique à la plateforme, s’il en existe un.
 
-```
+```cpp
 native_handle_type native_handle();
 ```
 
 ### <a name="return-value"></a>Valeur de retour
 
-Une référence à la section critique.
+Référence à la section critique.
 
 ### <a name="remarks"></a>Notes
 
-Un `critical_section` objet n’est pas associé à un handle natif de plateforme spécifique pour le système d’exploitation Windows. La méthode retourne simplement une référence à l’objet lui-même.
+Un objet `critical_section` n’est pas associé à un handle natif spécifique à une plateforme pour le système d’exploitation Windows. La méthode retourne simplement une référence à l’objet lui-même.
 
-##  <a name="critical_section__scoped_lock_class"></a>  critical_section::scoped_lock, classe
+## <a name="critical_section__scoped_lock_class"></a>critical_section :: scoped_lock, classe
 
-Un wrapper RAII sécurisé pour un `critical_section` objet.
+Wrapper RAII de sécurité d’exception pour un objet `critical_section`.
 
-```
+```cpp
 class scoped_lock;
 ```
 
-##  <a name="critical_section__scoped_lock_ctor"></a> scoped_lock::scoped_lock
+## <a name="critical_section__scoped_lock_ctor"></a>scoped_lock :: scoped_lock
 
-Construit un `scoped_lock` de l’objet et acquiert le `critical_section` objet passé dans le `_Critical_section` paramètre. Si la section critique est maintenue par un autre thread, cet appel bloquera.
+Construit un objet `scoped_lock` et acquiert l’objet `critical_section` passé dans le paramètre `_Critical_section`. Si la section critique est détenue par un autre thread, cet appel sera bloqué.
 
-```
+```cpp
 explicit _CRTIMP scoped_lock(critical_section& _Critical_section);
 ```
 
 ### <a name="parameters"></a>Paramètres
 
 *_Critical_section*<br/>
-La section critique à verrouiller.
+Section critique à verrouiller.
 
-##  <a name="critical_section__scoped_lock_dtor"></a> scoped_lock :: ~ scoped_lock
+## <a name="critical_section__scoped_lock_dtor"></a>scoped_lock :: ~ scoped_lock
 
-Détruit un `scoped_lock` de l’objet et libère la section critique fournie dans son constructeur.
+Détruit un objet `scoped_lock` et libère la section critique fournie dans son constructeur.
 
-```
+```cpp
 ~scoped_lock();
 ```
 
-##  <a name="try_lock"></a> try_lock
+## <a name="try_lock"></a>try_lock
 
-Tente d’acquérir le verrou sans se bloquer.
+Tente d’acquérir le verrou sans blocage.
 
-```
+```cpp
 bool try_lock();
 ```
 
 ### <a name="return-value"></a>Valeur de retour
 
-Si le verrou a été acquis, la valeur **true**; sinon, la valeur **false**.
+Si le verrou a été acquis, la valeur **true**; Sinon, la valeur **false**.
 
-##  <a name="try_lock_for"></a> try_lock_for
+## <a name="try_lock_for"></a>try_lock_for
 
 Tente d’acquérir le verrou sans se bloquer pendant un nombre spécifique de millisecondes.
 
-```
+```cpp
 bool try_lock_for(unsigned int _Timeout);
 ```
 
 ### <a name="parameters"></a>Paramètres
 
 *_Timeout*<br/>
-Le nombre de millisecondes à attendre avant l’expiration.
+Nombre de millisecondes à attendre avant l’expiration du délai d’attente.
 
 ### <a name="return-value"></a>Valeur de retour
 
-Si le verrou a été acquis, la valeur **true**; sinon, la valeur **false**.
+Si le verrou a été acquis, la valeur **true**; Sinon, la valeur **false**.
 
-##  <a name="unlock"></a> Déverrouiller
+## <a name="unlock"></a>bloquer
 
 Déverrouille la section critique.
 
-```
+```cpp
 void unlock();
 ```
 

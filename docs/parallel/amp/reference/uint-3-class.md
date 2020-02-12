@@ -72,20 +72,20 @@ f1_keywords:
 - amp_short_vectors/Concurrency::graphics::uint_3::set_xzy
 - amp_short_vectors/Concurrency::graphics::uint_3::operator-=
 ms.assetid: 5e22c277-9d4f-4a3a-b38c-a83d5fcab33c
-ms.openlocfilehash: c4f3c7e299c998989de24a07db3d607d21c958cf
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 40c8486b96ac4359e84d52697b8a34d3718e00e2
+ms.sourcegitcommit: a8ef52ff4a4944a1a257bdaba1a3331607fb8d0f
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62396156"
+ms.lasthandoff: 02/11/2020
+ms.locfileid: "77127723"
 ---
-# <a name="uint3-class"></a>uint_3, classe
+# <a name="uint_3-class"></a>uint_3, classe
 
-Représente un vecteur court de trois entiers non signés.
+Représente un vecteur abrégé de trois entiers non signés.
 
 ## <a name="syntax"></a>Syntaxe
 
-```
+```cpp
 class uint_3;
 ```
 
@@ -93,19 +93,19 @@ class uint_3;
 
 ### <a name="public-typedefs"></a>Typedefs publics
 
-|Nom|Description|
+|Name|Description|
 |----------|-----------------|
 |`value_type`||
 
 ### <a name="public-constructors"></a>Constructeurs publics
 
-|Nom|Description|
+|Name|Description|
 |----------|-----------------|
-|[uint_3 constructeur](#ctor)|Surchargé. Par défaut constructeur initialise tous les éléments par 0.|
+|[Constructeur uint_3](#ctor)|Surchargé. Le constructeur par défaut initialise tous les éléments avec 0.|
 
 ### <a name="public-methods"></a>M&#233;thodes publiques
 
-|Nom|Description|
+|Name|Description|
 |----------|-----------------|
 |uint_3::get_x||
 |uint_3::get_xy||
@@ -146,7 +146,7 @@ class uint_3;
 
 ### <a name="public-operators"></a>Op&#233;rateurs publics
 
-|Nom|Description|
+|Name|Description|
 |----------|-----------------|
 |uint_3::operator--||
 |uint_3::operator%=||
@@ -155,70 +155,70 @@ class uint_3;
 |uint_3::operator/=||
 |uint_3::operator^=||
 |uint_3::operator&#124;=||
-|uint_3::operator~||
+|uint_3 :: Operator ~||
 |uint_3::operator++||
 |uint_3::operator+=||
-|uint_3::operator<\<=||
+|uint_3 :: Operator <\<=||
 |uint_3::operator=||
 |uint_3::operator-=||
 |uint_3::operator>>=||
 
 ### <a name="public-constants"></a>Constantes publiques
 
-|Nom|Description|
+|Name|Description|
 |----------|-----------------|
-|[taille (constante)](#uint_3__size)||
+|[taille, constante](#uint_3__size)||
 
-### <a name="public-data-members"></a>Membres de données publics
+### <a name="public-data-members"></a>Membres de données publiques
 
-|Nom|Description|
+|Name|Description|
 |----------|-----------------|
-|uint_3::b||
+|uint_3 :: b||
 |uint_3::bg||
 |uint_3::bgr||
 |uint_3::br||
 |uint_3::brg||
-|uint_3::g||
+|uint_3 :: g||
 |uint_3::gb||
 |uint_3::gbr||
 |uint_3::gr||
 |uint_3::grb||
-|uint_3::r||
+|uint_3 :: r||
 |uint_3::rb||
 |uint_3::rbg||
 |uint_3::rg||
 |uint_3::rgb||
-|uint_3::x||
-|uint_3::xy||
+|uint_3 :: x||
+|uint_3 :: XY||
 |uint_3::xyz||
 |uint_3::xz||
 |uint_3::xzy||
-|uint_3::y||
+|uint_3 :: y||
 |uint_3::yx||
 |uint_3::yxz||
 |uint_3::yz||
 |uint_3::yzx||
-|uint_3::z||
+|uint_3 :: z||
 |uint_3::zx||
 |uint_3::zxy||
-|uint_3::zy||
-|uint_3::zyx||
+|uint_3 :: ZY||
+|uint_3 :: ZYX||
 
 ## <a name="inheritance-hierarchy"></a>Hiérarchie d'héritage
 
 `uint_3`
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
-**En-tête :** amp_short_vectors.h
+**En-tête :** amp_short_vectors. h
 
-**Espace de noms :** Concurrency::graphics
+**Espace de noms :** Concurrency :: Graphics
 
-##  <a name="ctor"></a> uint_3
+## <a name="ctor"></a>uint_3
 
-Par défaut constructeur initialise tous les éléments par 0.
+Le constructeur par défaut initialise tous les éléments avec 0.
 
-```
+```cpp
 uint_3() restrict(amp,
     cpu);
 
@@ -260,23 +260,23 @@ explicit inline uint_3(
 ### <a name="parameters"></a>Paramètres
 
 *_V0*<br/>
-La valeur pour initialiser l’élément 0.
+Valeur pour initialiser l’élément 0.
 
 *_V1*<br/>
-La valeur pour initialiser l’élément 1.
+Valeur pour initialiser l’élément 1.
 
 *_V2*<br/>
-La valeur pour initialiser l’élément 2.
+Valeur pour initialiser l’élément 2.
 
 *_V*<br/>
-La valeur pour l’initialisation.
+Valeur d’initialisation.
 
 *_Other*<br/>
-L’objet utilisé pour initialiser.
+Objet utilisé pour initialiser.
 
-##  <a name="uint_3__size"></a> Taille
+## <a name="uint_3__size"></a>corps
 
-```
+```cpp
 static const int size = 3;
 ```
 

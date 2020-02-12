@@ -1,5 +1,5 @@
 ---
-title: Fonctions d’espace de noms Concurrency::fast_math
+title: Concurrency::fast_math, fonctions de l’espace de noms
 ms.date: 11/04/2016
 f1_keywords:
 - amp_math/Concurrency::fast_math::acos
@@ -46,14 +46,14 @@ f1_keywords:
 - amp_math/Concurrency::fast_math::tanhf
 - amp_math/Concurrency::fast_math::trunc
 ms.assetid: f5763d62-795b-4de6-a7a5-c7115f158708
-ms.openlocfilehash: 96178ee72073e5063fc009f17ab21565f3cf1ab5
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 3652e02d9f3ff7b09ee7334dba20188e40344cb5
+ms.sourcegitcommit: a8ef52ff4a4944a1a257bdaba1a3331607fb8d0f
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62405616"
+ms.lasthandoff: 02/11/2020
+ms.locfileid: "77127005"
 ---
-# <a name="concurrencyfastmath-namespace-functions"></a>Fonctions d’espace de noms Concurrency::fast_math
+# <a name="concurrencyfast_math-namespace-functions"></a>Concurrency::fast_math, fonctions de l’espace de noms
 
 ||||
 |-|-|-|
@@ -66,25 +66,25 @@ ms.locfileid: "62405616"
 |[fabs](#fabs)|[fabsf](#fabsf)|[floor](#floor)|
 |[floorf](#floorf)|[fmax](#fmax)|[fmaxf](#fmaxf)|
 |[fmin](#fmin)|[fminf](#fminf)|[fmod](#fmod)|
-|[fmodf](#fmodf)|[frexp](#frexp)|[frexpf](#frexpf)|
-|[isfinite](#isfinite)|[isinf](#isinf)|[isnan](#isnan)|
-|[ldexp](#ldexp)|[ldexpf](#ldexpf)|[log](#log)|
+|[fmodf](#fmodf)|[frexp](#frexp)|[frexpf,](#frexpf)|
+|[isFinite,](#isfinite)|[isinf](#isinf)|[isnan](#isnan)|
+|[ldexp](#ldexp)|[ldexpf,](#ldexpf)|[log](#log)|
 |[log10](#log10)|[log10f](#log10f)|[log2](#log2)|
 |[log2f](#log2f)|[logf](#logf)|[modf](#modf)|
 |[modff](#modff)|[pow](#pow)|[powf](#powf)|
-|[round](#round)|[roundf](#roundf)|[rsqrt](#rsqrt)|
-|[rsqrtf](#rsqrtf)|[signbit](#signbit)|[signbitf](#signbitf)|
-|[sin](#sin)|[sincos](#sincos)|[sincosf](#sincosf)|
+|[round](#round)|[roundf](#roundf)|[rsqrt,](#rsqrt)|
+|[rsqrtf,](#rsqrtf)|[signbit](#signbit)|[signbitf,](#signbitf)|
+|[sin](#sin)|[SinCos,](#sincos)|[sincosf,](#sincosf)|
 |[sinf](#sinf)|[sinh](#sinh)|[sinhf](#sinhf)|
 |[sqrt](#sqrt)|[sqrtf](#sqrtf)|[tan](#tan)|
 |[tanf](#tanf)|[tanh](#tanh)|[tanhf](#tanhf)|
 |[trunc](#trunc)|[truncf](#truncf)|
 
-##  <a name="acos"></a>  acos
+## <a name="acos"></a>  acos
 
 Calcule l’arc cosinus de l’argument
 
-```
+```cpp
 inline float acos(float _X) restrict(amp);
 ```
 
@@ -95,13 +95,13 @@ Valeur à virgule flottante
 
 ### <a name="return-value"></a>Valeur de retour
 
-Retourne la valeur d’arc cosinus de l’argument
+Retourne la valeur de l’arc cosinus de l’argument
 
-##  <a name="acosf"></a>  acosf
+## <a name="acosf"></a>acosf
 
 Calcule l’arc cosinus de l’argument
 
-```
+```cpp
 inline float acosf(float _X) restrict(amp);
 ```
 
@@ -112,13 +112,13 @@ Valeur à virgule flottante
 
 ### <a name="return-value"></a>Valeur de retour
 
-Retourne la valeur d’arc cosinus de l’argument
+Retourne la valeur de l’arc cosinus de l’argument
 
-##  <a name="asin"></a>  asin
+## <a name="asin"></a>  asin
 
 Calcule l’arc sinus de l’argument
 
-```
+```cpp
 inline float asin(float _X) restrict(amp);
 ```
 
@@ -129,13 +129,13 @@ Valeur à virgule flottante
 
 ### <a name="return-value"></a>Valeur de retour
 
-Retourne la valeur d’arc sinus de l’argument
+Retourne la valeur de l’arc sinus de l’argument
 
-##  <a name="asinf"></a>  asinf
+## <a name="asinf"></a>ASInf,
 
 Calcule l’arc sinus de l’argument
 
-```
+```cpp
 inline float asinf(float _X) restrict(amp);
 ```
 
@@ -146,13 +146,13 @@ Valeur à virgule flottante
 
 ### <a name="return-value"></a>Valeur de retour
 
-Retourne la valeur d’arc sinus de l’argument
+Retourne la valeur de l’arc sinus de l’argument
 
-##  <a name="atan"></a>  atan
+## <a name="atan"></a>  atan
 
-Calcule l’arc tangente de l’argument
+Calcule l'arc tangente de l'argument.
 
-```
+```cpp
 inline float atan(float _X) restrict(amp);
 ```
 
@@ -163,13 +163,13 @@ Valeur à virgule flottante
 
 ### <a name="return-value"></a>Valeur de retour
 
-Retourne la valeur de l’arc tangente de l’argument
+Retourne la valeur d’arc tangente de l’argument.
 
-##  <a name="atan2"></a>  atan2
+## <a name="atan2"></a>  atan2
 
 Calcule l’arc tangente de _Y/_X
 
-```
+```cpp
 inline float atan2(
     float _Y,
     float _X) restrict(amp);
@@ -185,13 +185,13 @@ Valeur à virgule flottante
 
 ### <a name="return-value"></a>Valeur de retour
 
-Retourne la valeur de l’arc tangente de _Y/_X
+Retourne la valeur d’arc tangente de _Y/_X
 
-##  <a name="atan2f"></a>  atan2f
+## <a name="atan2f"></a>atan2f,
 
 Calcule l’arc tangente de _Y/_X
 
-```
+```cpp
 inline float atan2f(
     float _Y,
     float _X) restrict(amp);
@@ -207,13 +207,13 @@ Valeur à virgule flottante
 
 ### <a name="return-value"></a>Valeur de retour
 
-Retourne la valeur de l’arc tangente de _Y/_X
+Retourne la valeur d’arc tangente de _Y/_X
 
-##  <a name="atanf"></a>  atanf
+## <a name="atanf"></a>atanf,
 
-Calcule l’arc tangente de l’argument
+Calcule l'arc tangente de l'argument.
 
-```
+```cpp
 inline float atanf(float _X) restrict(amp);
 ```
 
@@ -224,13 +224,13 @@ Valeur à virgule flottante
 
 ### <a name="return-value"></a>Valeur de retour
 
-Retourne la valeur de l’arc tangente de l’argument
+Retourne la valeur d’arc tangente de l’argument.
 
-##  <a name="ceil"></a>  ceil
+## <a name="ceil"></a>ceil
 
 Calcule le plafond de l’argument
 
-```
+```cpp
 inline float ceil(float _X) restrict(amp);
 ```
 
@@ -241,13 +241,13 @@ Valeur à virgule flottante
 
 ### <a name="return-value"></a>Valeur de retour
 
-Renvoie la valeur plafond de l’argument
+Retourne le plafond de l’argument.
 
-##  <a name="ceilf"></a>  ceilf
+## <a name="ceilf"></a>ceilf,
 
 Calcule le plafond de l’argument
 
-```
+```cpp
 inline float ceilf(float _X) restrict(amp);
 ```
 
@@ -258,13 +258,13 @@ Valeur à virgule flottante
 
 ### <a name="return-value"></a>Valeur de retour
 
-Renvoie la valeur plafond de l’argument
+Retourne le plafond de l’argument.
 
-##  <a name="cosf"></a>  cosf
+## <a name="cosf"></a>cosf,
 
-Calcule le cosinus de l’argument
+Calcule le cosinus de l'argument.
 
-```
+```cpp
 inline float cosf(float _X) restrict(amp);
 ```
 
@@ -275,13 +275,13 @@ Valeur à virgule flottante
 
 ### <a name="return-value"></a>Valeur de retour
 
-Retourne la valeur de cosinus de l’argument
+Retourne la valeur cosinus de l’argument
 
-##  <a name="coshf"></a>  coshf
+## <a name="coshf"></a>coshf,
 
-Calcule la valeur de cosinus hyperbolique de l’argument
+Calcule la valeur du cosinus hyperbolique de l’argument.
 
-```
+```cpp
 inline float coshf(float _X) restrict(amp);
 ```
 
@@ -292,13 +292,13 @@ Valeur à virgule flottante
 
 ### <a name="return-value"></a>Valeur de retour
 
-Retourne la valeur de cosinus hyperbolique de l’argument
+Retourne la valeur du cosinus hyperbolique de l’argument.
 
-##  <a name="cos"></a>  cos
+## <a name="cos"></a>  cos
 
-Calcule le cosinus de l’argument
+Calcule le cosinus de l'argument.
 
-```
+```cpp
 inline float cos(float _X) restrict(amp);
 ```
 
@@ -309,13 +309,13 @@ Valeur à virgule flottante
 
 ### <a name="return-value"></a>Valeur de retour
 
-Retourne la valeur de cosinus de l’argument
+Retourne la valeur cosinus de l’argument
 
-##  <a name="cosh"></a>  cosh
+## <a name="cosh"></a>  cosh
 
-Calcule la valeur de cosinus hyperbolique de l’argument
+Calcule la valeur du cosinus hyperbolique de l’argument.
 
-```
+```cpp
 inline float cosh(float _X) restrict(amp);
 ```
 
@@ -326,13 +326,13 @@ Valeur à virgule flottante
 
 ### <a name="return-value"></a>Valeur de retour
 
-Retourne la valeur de cosinus hyperbolique de l’argument
+Retourne la valeur du cosinus hyperbolique de l’argument.
 
-##  <a name="exp"></a>  exp
+## <a name="exp"></a>  exp
 
-Calcule l’exponentielle de l’argument de base e
+Calcule la valeur exponentielle de base e de l’argument.
 
-```
+```cpp
 inline float exp(float _X) restrict(amp);
 ```
 
@@ -343,13 +343,13 @@ Valeur à virgule flottante
 
 ### <a name="return-value"></a>Valeur de retour
 
-Retourne la valeur exponentielle de l’argument de base e
+Retourne l’exponentiel de base e de l’argument
 
-##  <a name="exp2"></a>  exp2
+## <a name="exp2"></a>EXP2
 
-Calcule la valeur exponentielle de l’argument de base 2
+Calcule la valeur exponentielle de base 2 de l’argument.
 
-```
+```cpp
 inline float exp2(float _X) restrict(amp);
 ```
 
@@ -360,13 +360,13 @@ Valeur à virgule flottante
 
 ### <a name="return-value"></a>Valeur de retour
 
-Retourne la valeur exponentielle de l’argument de base 2
+Retourne l'exponentielle de base 2 de l'argument.
 
-##  <a name="exp2f"></a>  exp2f
+## <a name="exp2f"></a>exp2f,
 
-Calcule la valeur exponentielle de l’argument de base 2
+Calcule la valeur exponentielle de base 2 de l’argument.
 
-```
+```cpp
 inline float exp2f(float _X) restrict(amp);
 ```
 
@@ -377,13 +377,13 @@ Valeur à virgule flottante
 
 ### <a name="return-value"></a>Valeur de retour
 
-Retourne la valeur exponentielle de l’argument de base 2
+Retourne l'exponentielle de base 2 de l'argument.
 
-##  <a name="expf"></a>  expf
+## <a name="expf"></a>expf,
 
-Calcule l’exponentielle de l’argument de base e
+Calcule la valeur exponentielle de base e de l’argument.
 
-```
+```cpp
 inline float expf(float _X) restrict(amp);
 ```
 
@@ -394,13 +394,13 @@ Valeur à virgule flottante
 
 ### <a name="return-value"></a>Valeur de retour
 
-Retourne la valeur exponentielle de l’argument de base e
+Retourne l’exponentiel de base e de l’argument
 
-##  <a name="fabs"></a>  fabs
+## <a name="fabs"></a>FABS
 
-Retourne la valeur absolue de l’argument
+Retourne la valeur absolue de l’argument.
 
-```
+```cpp
 inline float fabs(float _X) restrict(amp);
 ```
 
@@ -411,13 +411,13 @@ Valeur entière
 
 ### <a name="return-value"></a>Valeur de retour
 
-Retourne la valeur absolue de l’argument
+Retourne la valeur absolue de l’argument.
 
-##  <a name="fabsf"></a>  fabsf
+## <a name="fabsf"></a>fabsf
 
-Retourne la valeur absolue de l’argument
+Retourne la valeur absolue de l’argument.
 
-```
+```cpp
 inline float fabsf(float _X) restrict(amp);
 ```
 
@@ -428,13 +428,13 @@ Valeur à virgule flottante
 
 ### <a name="return-value"></a>Valeur de retour
 
-Retourne la valeur absolue de l’argument
+Retourne la valeur absolue de l’argument.
 
-##  <a name="floor"></a>  floor
+## <a name="floor"></a>Floor
 
 Calcule le plancher de l’argument
 
-```
+```cpp
 inline float floor(float _X) restrict(amp);
 ```
 
@@ -445,13 +445,13 @@ Valeur à virgule flottante
 
 ### <a name="return-value"></a>Valeur de retour
 
-Retourne la valeur plancher de l’argument
+Retourne le plancher de l’argument.
 
-##  <a name="floorf"></a>  floorf
+## <a name="floorf"></a>floorf,
 
 Calcule le plancher de l’argument
 
-```
+```cpp
 inline float floorf(float _X) restrict(amp);
 ```
 
@@ -462,13 +462,13 @@ Valeur à virgule flottante
 
 ### <a name="return-value"></a>Valeur de retour
 
-Retourne la valeur plancher de l’argument
+Retourne le plancher de l’argument.
 
-##  <a name="fmax"></a>  fmax
+## <a name="fmax"></a>Fmax
 
 Déterminer la valeur numérique maximale des arguments
 
-```
+```cpp
 inline float max(
     float _X,
     float _Y) restrict(amp);
@@ -486,11 +486,11 @@ Valeur entière
 
 Retourne la valeur numérique maximale des arguments
 
-##  <a name="fmaxf"></a>  fmaxf
+## <a name="fmaxf"></a>fmaxf,
 
 Déterminer la valeur numérique maximale des arguments
 
-```
+```cpp
 inline float fmaxf(
     float _X,
     float _Y) restrict(amp);
@@ -508,11 +508,11 @@ Valeur à virgule flottante
 
 Retourne la valeur numérique maximale des arguments
 
-##  <a name="fmin"></a>  fmin
+## <a name="fmin"></a>fmin,
 
 Déterminer la valeur numérique minimale des arguments
 
-```
+```cpp
 inline float min(
     float _X,
     float _Y) restrict(amp);
@@ -530,11 +530,11 @@ Valeur entière
 
 Retourne la valeur numérique minimale des arguments
 
-##  <a name="fminf"></a>  fminf
+## <a name="fminf"></a>fminf,
 
 Déterminer la valeur numérique minimale des arguments
 
-```
+```cpp
 inline float fminf(
     float _X,
     float _Y) restrict(amp);
@@ -552,11 +552,11 @@ Valeur à virgule flottante
 
 Retourne la valeur numérique minimale des arguments
 
-##  <a name="fmod"></a>  fmod
+## <a name="fmod"></a>fmod
 
-Calcule le reste à virgule flottante de _X/_Y.
+Calcule le reste à virgule flottante de _X/_Y
 
-```
+```cpp
 inline float fmod(
     float _X,
     float _Y) restrict(amp);
@@ -572,13 +572,13 @@ Valeur à virgule flottante
 
 ### <a name="return-value"></a>Valeur de retour
 
-Retourne le reste à virgule flottante de _X/_Y.
+Retourne le reste à virgule flottante de _X/_Y
 
-##  <a name="fmodf"></a>  fmodf
+## <a name="fmodf"></a>fmodf,
 
 Calcule le reste à virgule flottante de _X/_Y.
 
-```
+```cpp
 inline float fmodf(
     float _X,
     float _Y) restrict(amp);
@@ -594,13 +594,13 @@ Valeur à virgule flottante
 
 ### <a name="return-value"></a>Valeur de retour
 
-Retourne le reste à virgule flottante de _X/_Y.
+Retourne le reste à virgule flottante de _X/_Y
 
-##  <a name="frexp"></a>  frexp
+## <a name="frexp"></a>frexp
 
 Obtient la mantisse et l’exposant de _X
 
-```
+```cpp
 inline float frexp(
     float _X,
     _Out_ int* _Exp) restrict(amp);
@@ -612,17 +612,17 @@ inline float frexp(
 Valeur à virgule flottante
 
 *_Exp*<br/>
-Retourne l’exposant entier de _X dans la valeur à virgule flottante
+Retourne l’exposant entier de _X dans une valeur à virgule flottante
 
 ### <a name="return-value"></a>Valeur de retour
 
 Retourne la mantisse _X
 
-##  <a name="frexpf"></a>  frexpf
+## <a name="frexpf"></a>frexpf,
 
 Obtient la mantisse et l’exposant de _X
 
-```
+```cpp
 inline float frexpf(
     float _X,
     _Out_ int* _Exp) restrict(amp);
@@ -634,17 +634,17 @@ inline float frexpf(
 Valeur à virgule flottante
 
 *_Exp*<br/>
-Retourne l’exposant entier de _X dans la valeur à virgule flottante
+Retourne l’exposant entier de _X dans une valeur à virgule flottante
 
 ### <a name="return-value"></a>Valeur de retour
 
 Retourne la mantisse _X
 
-##  <a name="isfinite"></a>  isfinite
+## <a name="isfinite"></a>isFinite,
 
 Détermine si l’argument a une valeur finie
 
-```
+```cpp
 inline int isfinite(float _X) restrict(amp);
 ```
 
@@ -657,11 +657,11 @@ Valeur à virgule flottante
 
 Retourne une valeur différente de zéro si et seulement si l’argument a une valeur finie
 
-##  <a name="isinf"></a>  isinf
+## <a name="isinf"></a>isinf,
 
-Détermine si l’argument est un nombre infini
+Détermine si l’argument est un infini
 
-```
+```cpp
 inline int isinf(float _X) restrict(amp);
 ```
 
@@ -674,11 +674,11 @@ Valeur à virgule flottante
 
 Retourne une valeur différente de zéro si et seulement si l’argument a une valeur infinie
 
-##  <a name="isnan"></a>  isnan
+## <a name="isnan"></a>isNaN
 
 Détermine si l’argument est une valeur NaN
 
-```
+```cpp
 inline int isnan(float _X) restrict(amp);
 ```
 
@@ -691,11 +691,11 @@ Valeur à virgule flottante
 
 Retourne une valeur différente de zéro si et seulement si l’argument a une valeur NaN
 
-##  <a name="ldexp"></a>  ldexp
+## <a name="ldexp"></a>ldexp
 
-Calcule un nombre réel à partir de la mantisse et l’exposant
+Calcule un nombre réel à partir de la mantisse et de l’exposant
 
-```
+```cpp
 inline float ldexp(
     float _X,
     int _Exp) restrict(amp);
@@ -713,11 +713,11 @@ Exposant entier
 
 Retourne _X \* 2 ^ _Exp
 
-##  <a name="ldexpf"></a>  ldexpf
+## <a name="ldexpf"></a>ldexpf,
 
-Calcule un nombre réel à partir de la mantisse et l’exposant
+Calcule un nombre réel à partir de la mantisse et de l’exposant
 
-```
+```cpp
 inline float ldexpf(
     float _X,
     int _Exp) restrict(amp);
@@ -735,11 +735,11 @@ Exposant entier
 
 Retourne _X \* 2 ^ _Exp
 
-##  <a name="log"></a>  log
+## <a name="log"></a>  log
 
-Calcule le logarithme en base e de l’argument
+Calcule le logarithme de base e de l’argument
 
-```
+```cpp
 inline float log(float _X) restrict(amp);
 ```
 
@@ -750,13 +750,13 @@ Valeur à virgule flottante
 
 ### <a name="return-value"></a>Valeur de retour
 
-Retourne le logarithme en base e de l’argument
+Retourne le logarithme de base e de l’argument
 
-##  <a name="log10"></a>  log10
+## <a name="log10"></a>  log10
 
-Calcule le logarithme en base 10 de l’argument
+Calcule le logarithme en base 10 de l’argument.
 
-```
+```cpp
 inline float log10(float _X) restrict(amp);
 ```
 
@@ -767,13 +767,13 @@ Valeur à virgule flottante
 
 ### <a name="return-value"></a>Valeur de retour
 
-Retourne le logarithme en base 10 de l’argument
+Retourne le logarithme en base 10 de l’argument.
 
-##  <a name="log10f"></a>  log10f
+## <a name="log10f"></a>log10f,
 
-Calcule le logarithme en base 10 de l’argument
+Calcule le logarithme en base 10 de l’argument.
 
-```
+```cpp
 inline float log10f(float _X) restrict(amp);
 ```
 
@@ -784,13 +784,13 @@ Valeur à virgule flottante
 
 ### <a name="return-value"></a>Valeur de retour
 
-Retourne le logarithme en base 10 de l’argument
+Retourne le logarithme en base 10 de l’argument.
 
-##  <a name="log2"></a>  log2
+## <a name="log2"></a>Log2
 
-Calcule le logarithme en base 2 de l’argument
+Calcule le logarithme de base 2 de l’argument.
 
-```
+```cpp
 inline float log2(float _X) restrict(amp);
 ```
 
@@ -801,13 +801,13 @@ Valeur à virgule flottante
 
 ### <a name="return-value"></a>Valeur de retour
 
-Retourne le logarithme base 2 de l’argument
+Retourne le logarithme de base 2 de l’argument.
 
-##  <a name="log2f"></a>  log2f
+## <a name="log2f"></a>log2f,
 
-Calcule le logarithme en base 2 de l’argument
+Calcule le logarithme de base 2 de l’argument.
 
-```
+```cpp
 inline float log2f(float _X) restrict(amp);
 ```
 
@@ -818,13 +818,13 @@ Valeur à virgule flottante
 
 ### <a name="return-value"></a>Valeur de retour
 
-Retourne le logarithme en base 10 de l’argument
+Retourne le logarithme en base 10 de l’argument.
 
-##  <a name="logf"></a>  logf
+## <a name="logf"></a>LogF,
 
-Calcule le logarithme en base e de l’argument
+Calcule le logarithme de base e de l’argument
 
-```
+```cpp
 inline float logf(float _X) restrict(amp);
 ```
 
@@ -835,13 +835,13 @@ Valeur à virgule flottante
 
 ### <a name="return-value"></a>Valeur de retour
 
-Retourne le logarithme en base e de l’argument
+Retourne le logarithme de base e de l’argument
 
-##  <a name="modf"></a>  modf
+## <a name="modf"></a>modf,
 
-Fractionne _X en une partie fractionnaire et une partie entière.
+Divise _X en parties fractionnaires et entières.
 
-```
+```cpp
 inline float modf(
     float _X,
     float* _Ip) restrict(amp);
@@ -853,17 +853,17 @@ inline float modf(
 Valeur à virgule flottante
 
 *_Ip*<br/>
-Reçoit la partie entière de la valeur
+Reçoit une partie entière de la valeur
 
 ### <a name="return-value"></a>Valeur de retour
 
 Retourne la partie fractionnaire signée de _X
 
-##  <a name="modff"></a>  modff
+## <a name="modff"></a>modff,
 
-Fractionne _X en une partie fractionnaire et une partie entière.
+Divise _X en parties fractionnaires et entières.
 
-```
+```cpp
 inline float modff(
     float _X,
     float* _Ip) restrict(amp);
@@ -875,17 +875,17 @@ inline float modff(
 Valeur à virgule flottante
 
 *_Ip*<br/>
-Reçoit la partie entière de la valeur
+Reçoit une partie entière de la valeur
 
 ### <a name="return-value"></a>Valeur de retour
 
 Retourne la partie fractionnaire signée de _X
 
-##  <a name="pow"></a>  pow
+## <a name="pow"></a>  pow
 
-Calcule _X élevé à la puissance _Y
+Calcule _X élevé à la puissance de _Y
 
-```
+```cpp
 inline float pow(
     float _X,
     float _Y) restrict(amp);
@@ -901,13 +901,13 @@ Valeur à virgule flottante, exposant
 
 ### <a name="return-value"></a>Valeur de retour
 
-Retourne la valeur de _X élevé à la puissance de _Y
+Retourne la valeur de _X élevée à la puissance de _Y
 
-##  <a name="powf"></a>  powf
+## <a name="powf"></a>powf,
 
-Calcule _X élevé à la puissance _Y
+Calcule _X élevé à la puissance de _Y
 
-```
+```cpp
 inline float powf(
     float _X,
     float _Y) restrict(amp);
@@ -923,11 +923,11 @@ Valeur à virgule flottante, exposant
 
 ### <a name="return-value"></a>Valeur de retour
 
-##  <a name="round"></a>  round
+## <a name="round"></a>Round
 
-Arrondit _X à l’entier le plus proche
+Arrondit _X à l’entier le plus proche.
 
-```
+```cpp
 inline float round(float _X) restrict(amp);
 ```
 
@@ -940,11 +940,11 @@ Valeur à virgule flottante
 
 Retourne l’entier le plus proche de _X
 
-##  <a name="roundf"></a>  roundf
+## <a name="roundf"></a>roundf,
 
-Arrondit _X à l’entier le plus proche
+Arrondit _X à l’entier le plus proche.
 
-```
+```cpp
 inline float roundf(float _X) restrict(amp);
 ```
 
@@ -957,11 +957,11 @@ Valeur à virgule flottante
 
 Retourne l’entier le plus proche de _X
 
-##  <a name="rsqrt"></a>  rsqrt
+## <a name="rsqrt"></a>rsqrt,
 
 Retourne la réciproque de la racine carrée de l’argument
 
-```
+```cpp
 inline float rsqrt(float _X) restrict(amp);
 ```
 
@@ -974,11 +974,11 @@ Valeur à virgule flottante
 
 Retourne la réciproque de la racine carrée de l’argument
 
-##  <a name="rsqrtf"></a>  rsqrtf
+## <a name="rsqrtf"></a>rsqrtf,
 
 Retourne la réciproque de la racine carrée de l’argument
 
-```
+```cpp
 inline float rsqrtf(float _X) restrict(amp);
 ```
 
@@ -991,11 +991,11 @@ Valeur à virgule flottante
 
 Retourne la réciproque de la racine carrée de l’argument
 
-##  <a name="signbit"></a>  signbit
+## <a name="signbit"></a>signbit,
 
 Détermine si le signe de _X est négatif
 
-```
+```cpp
 inline int signbit(float _X) restrict(amp);
 ```
 
@@ -1008,11 +1008,11 @@ Valeur à virgule flottante
 
 Retourne une valeur différente de zéro si et seulement si le signe de _X est négatif
 
-##  <a name="signbitf"></a>  signbitf
+## <a name="signbitf"></a>signbitf,
 
 Détermine si le signe de _X est négatif
 
-```
+```cpp
 inline int signbitf(float _X) restrict(amp);
 ```
 
@@ -1025,11 +1025,11 @@ Valeur à virgule flottante
 
 Retourne une valeur différente de zéro si et seulement si le signe de _X est négatif
 
-##  <a name="sin"></a>  sin
+## <a name="sin"></a>  sin
 
 Calcule la valeur du sinus de l’argument
 
-```
+```cpp
 inline float sin(float _X) restrict(amp);
 ```
 
@@ -1040,13 +1040,13 @@ Valeur à virgule flottante
 
 ### <a name="return-value"></a>Valeur de retour
 
-Retourne la valeur du sinus de l’argument
+Retourne la valeur sinus de l’argument.
 
-##  <a name="sinf"></a>  sinf
+## <a name="sinf"></a>sinf
 
 Calcule la valeur du sinus de l’argument
 
-```
+```cpp
 inline float sinf(float _X) restrict(amp);
 ```
 
@@ -1057,13 +1057,13 @@ Valeur à virgule flottante
 
 ### <a name="return-value"></a>Valeur de retour
 
-Retourne la valeur du sinus de l’argument
+Retourne la valeur sinus de l’argument.
 
-##  <a name="sincos"></a>  sincos
+## <a name="sincos"></a>SinCos,
 
-Calcule la valeur de sinus et le cosinus de _X
+Calcule la valeur du sinus et du cosinus de _X
 
-```
+```cpp
 inline void sincos(
     float _X,
     float* _S,
@@ -1076,16 +1076,16 @@ inline void sincos(
 Valeur à virgule flottante
 
 *_S*<br/>
-Retourne la valeur du sinus de _X
+Retourne la valeur de sinus de _X
 
 *_C*<br/>
-Retourne la valeur de cosinus de _X
+Retourne la valeur cosinus de _X
 
-##  <a name="sincosf"></a>  sincosf
+## <a name="sincosf"></a>sincosf,
 
-Calcule la valeur de sinus et le cosinus de _X
+Calcule la valeur du sinus et du cosinus de _X
 
-```
+```cpp
 inline void sincosf(
     float _X,
     float* _S,
@@ -1098,16 +1098,16 @@ inline void sincosf(
 Valeur à virgule flottante
 
 *_S*<br/>
-Retourne la valeur du sinus de _X
+Retourne la valeur de sinus de _X
 
 *_C*<br/>
-Retourne la valeur de cosinus de _X
+Retourne la valeur cosinus de _X
 
-##  <a name="sinh"></a>  sinh
+## <a name="sinh"></a>  sinh
 
-Calcule la valeur du sinus hyperbolique de l’argument
+Calcule la valeur du sinus hyperbolique de l’argument.
 
-```
+```cpp
 inline float sinh(float _X) restrict(amp);
 ```
 
@@ -1118,13 +1118,13 @@ Valeur à virgule flottante
 
 ### <a name="return-value"></a>Valeur de retour
 
-Retourne la valeur du sinus hyperbolique de l’argument
+Retourne la valeur du sinus hyperbolique de l’argument.
 
-##  <a name="sinhf"></a>  sinhf
+## <a name="sinhf"></a>sinhf,
 
-Calcule la valeur du sinus hyperbolique de l’argument
+Calcule la valeur du sinus hyperbolique de l’argument.
 
-```
+```cpp
 inline float sinhf(float _X) restrict(amp);
 ```
 
@@ -1135,13 +1135,13 @@ Valeur à virgule flottante
 
 ### <a name="return-value"></a>Valeur de retour
 
-Retourne la valeur du sinus hyperbolique de l’argument
+Retourne la valeur du sinus hyperbolique de l’argument.
 
-##  <a name="sqrt"></a>  sqrt
+## <a name="sqrt"></a>  sqrt
 
-Calcule la racine squre de l’argument
+Calcule la racine Squre de l’argument
 
-```
+```cpp
 inline float sqrt(float _X) restrict(amp);
 ```
 
@@ -1152,13 +1152,13 @@ Valeur à virgule flottante
 
 ### <a name="return-value"></a>Valeur de retour
 
-Retourne la racine squre de l’argument
+Retourne la racine Squre de l’argument
 
-##  <a name="sqrtf"></a>  sqrtf
+## <a name="sqrtf"></a>sqrtf,
 
-Calcule la racine squre de l’argument
+Calcule la racine Squre de l’argument
 
-```
+```cpp
 inline float sqrtf(float _X) restrict(amp);
 ```
 
@@ -1169,13 +1169,13 @@ Valeur à virgule flottante
 
 ### <a name="return-value"></a>Valeur de retour
 
-Retourne la racine squre de l’argument
+Retourne la racine Squre de l’argument
 
-##  <a name="tan"></a>  tan
+## <a name="tan"></a>  tan
 
-Calcule la valeur de la tangente de l’argument
+Calcule la valeur de tangente de l’argument
 
-```
+```cpp
 inline float tan(float _X) restrict(amp);
 ```
 
@@ -1186,13 +1186,13 @@ Valeur à virgule flottante
 
 ### <a name="return-value"></a>Valeur de retour
 
-Retourne la valeur de la tangente de l’argument
+Retourne la valeur de tangente de l’argument
 
-##  <a name="tanf"></a>  tanf
+## <a name="tanf"></a>Tanf,
 
-Calcule la valeur de la tangente de l’argument
+Calcule la valeur de tangente de l’argument
 
-```
+```cpp
 inline float tanf(float _X) restrict(amp);
 ```
 
@@ -1203,13 +1203,13 @@ Valeur à virgule flottante
 
 ### <a name="return-value"></a>Valeur de retour
 
-Retourne la valeur de la tangente de l’argument
+Retourne la valeur de tangente de l’argument
 
-##  <a name="tanh"></a>  tanh
+## <a name="tanh"></a>  tanh
 
-Calcule la valeur de la tangente hyperbolique de l’argument
+Calcule la valeur tangente hyperbolique de l’argument.
 
-```
+```cpp
 inline float tanh(float _X) restrict(amp);
 ```
 
@@ -1220,13 +1220,13 @@ Valeur à virgule flottante
 
 ### <a name="return-value"></a>Valeur de retour
 
-Retourne la valeur de la tangente hyperbolique de l’argument
+Retourne la valeur tangente hyperbolique de l’argument.
 
-##  <a name="tanhf"></a>  tanhf
+## <a name="tanhf"></a>tanhf,
 
-Calcule la valeur de la tangente hyperbolique de l’argument
+Calcule la valeur tangente hyperbolique de l’argument.
 
-```
+```cpp
 inline float tanhf(float _X) restrict(amp);
 ```
 
@@ -1237,13 +1237,13 @@ Valeur à virgule flottante
 
 ### <a name="return-value"></a>Valeur de retour
 
-Retourne la valeur de la tangente hyperbolique de l’argument
+Retourne la valeur tangente hyperbolique de l’argument.
 
-##  <a name="trunc"></a>  trunc
+## <a name="trunc"></a>trunc
 
-Tronque l’argument à la partie entière
+Tronque l’argument du composant entier
 
-```
+```cpp
 inline float trunc(float _X) restrict(amp);
 ```
 
@@ -1254,13 +1254,13 @@ Valeur à virgule flottante
 
 ### <a name="return-value"></a>Valeur de retour
 
-Retourne la partie entière de l’argument
+Retourne le composant entier de l’argument.
 
-##  <a name="truncf"></a>  truncf
+## <a name="truncf"></a>truncf,
 
-Tronque l’argument à la partie entière
+Tronque l’argument du composant entier
 
-```
+```cpp
 inline float truncf(float _X) restrict(amp);
 ```
 
@@ -1271,11 +1271,11 @@ Valeur à virgule flottante
 
 ### <a name="return-value"></a>Valeur de retour
 
-Retourne la partie entière de l’argument
+Retourne le composant entier de l’argument.
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
-**En-tête :** amp_math.h **Namespace :** Concurrency::fast_math
+**En-tête :** amp_math. h **espace de noms :** concurrency :: fast_math
 
 ## <a name="see-also"></a>Voir aussi
 

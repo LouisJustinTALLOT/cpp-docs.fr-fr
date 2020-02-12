@@ -4,18 +4,18 @@ ms.date: 11/04/2016
 helpviewer_keywords:
 - Concurrency Runtime, general best practices
 ms.assetid: ce5c784c-051e-44a6-be84-8b3e1139c18b
-ms.openlocfilehash: bb00c3ddb9a50a159174deccf8954f1e3bf1689d
-ms.sourcegitcommit: a5fa9c6f4f0c239ac23be7de116066a978511de7
+ms.openlocfilehash: 15bae5ba25da4987b076cf3de67cd8484fe47df8
+ms.sourcegitcommit: a8ef52ff4a4944a1a257bdaba1a3331607fb8d0f
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/20/2019
-ms.locfileid: "75302222"
+ms.lasthandoff: 02/11/2020
+ms.locfileid: "77141776"
 ---
 # <a name="general-best-practices-in-the-concurrency-runtime"></a>Meilleures pratiques en général du runtime d'accès concurrentiel
 
 Ce document décrit les meilleures pratiques qui s’appliquent à plusieurs zones du runtime d’accès concurrentiel.
 
-##  <a name="top"></a> Sections
+## <a name="top"></a> Sections
 
 Ce document contient les sections suivantes :
 
@@ -33,13 +33,13 @@ Ce document contient les sections suivantes :
 
 - [Ne pas utiliser d’objets d’accès concurrentiel dans des segments de données partagés](#shared-data)
 
-##  <a name="synchronization"></a>Utiliser les constructions de synchronisation coopérative lorsque cela est possible
+## <a name="synchronization"></a>Utiliser les constructions de synchronisation coopérative lorsque cela est possible
 
 Le runtime d’accès concurrentiel fournit de nombreuses constructions de concurrence sécurisée qui ne nécessitent pas d’objet de synchronisation externe. Par exemple, la classe [Concurrency :: concurrent_vector](../../parallel/concrt/reference/concurrent-vector-class.md) fournit des opérations d’ajout et d’accès à l’élément sécurisées pour l’accès concurrentiel. Ici, l’accès concurrentiel sécurisé signifie que les pointeurs ou les itérateurs sont toujours valides. Il ne s’agit pas d’une garantie d’initialisation d’élément ou d’un ordre de parcours particulier. Toutefois, dans les cas où vous avez besoin d’un accès exclusif à une ressource, le Runtime fournit les classes [Concurrency :: critical_section](../../parallel/concrt/reference/critical-section-class.md), [Concurrency :: reader_writer_lock](../../parallel/concrt/reference/reader-writer-lock-class.md)et [Concurrency :: Event](../../parallel/concrt/reference/event-class.md) . Ces types se comportent de manière coopérative ; par conséquent, le planificateur de tâches peut réallouer les ressources de traitement à un autre contexte lorsque la première tâche attend des données. Dans la mesure du possible, utilisez ces types de synchronisation au lieu d’autres mécanismes de synchronisation, tels que ceux fournis par l’API Windows, qui ne se comportent pas de manière coopérative. Pour plus d’informations sur ces types de synchronisation et un exemple de code, consultez [structures de données de synchronisation](../../parallel/concrt/synchronization-data-structures.md) et comparaison des [structures de données de synchronisation avec l’API Windows](../../parallel/concrt/comparing-synchronization-data-structures-to-the-windows-api.md).
 
 [[Haut](#top)]
 
-##  <a name="yield"></a>Évitez les tâches longues qui ne génèrent pas
+## <a name="yield"></a>Évitez les tâches longues qui ne génèrent pas
 
 Étant donné que le planificateur de tâches se comporte de manière coopérative, il ne fournit pas d’équité entre les tâches. Par conséquent, une tâche peut empêcher le démarrage d’autres tâches. Bien que cela soit acceptable dans certains cas, cela peut entraîner un blocage ou une privation.
 
@@ -47,7 +47,7 @@ L’exemple suivant effectue plus de tâches que le nombre de ressources de trai
 
 [!code-cpp[concrt-cooperative-tasks#1](../../parallel/concrt/codesnippet/cpp/general-best-practices-in-the-concurrency-runtime_1.cpp)]
 
-Cet exemple génère la sortie suivante :
+Cet exemple produit la sortie suivante :
 
 1: 250000000 1: 500000000 1: 750000000 1: 1000000000 2: 250000000 2: 500000000 2: 750000000 2: 1000000000
 
@@ -55,7 +55,7 @@ Il existe plusieurs façons d’activer la coopération entre les deux tâches. 
 
 [!code-cpp[concrt-cooperative-tasks#2](../../parallel/concrt/codesnippet/cpp/general-best-practices-in-the-concurrency-runtime_2.cpp)]
 
-Cet exemple génère la sortie suivante :
+Cet exemple produit la sortie suivante :
 
 ```Output
 1: 250000000
@@ -74,7 +74,7 @@ Il existe d’autres moyens d’activer la coopération entre les tâches de lon
 
 [[Haut](#top)]
 
-##  <a name="oversubscription"></a>Utiliser le surabonnement pour décaler les opérations qui bloquent ou ont une latence élevée
+## <a name="oversubscription"></a>Utiliser le surabonnement pour décaler les opérations qui bloquent ou ont une latence élevée
 
 Le runtime d’accès concurrentiel fournit des primitives de synchronisation, telles que [Concurrency :: critical_section](../../parallel/concrt/reference/critical-section-class.md), qui permettent aux tâches de se bloquer et de se céder les unes aux autres. Lorsqu’une tâche se bloque ou cède de façon coopérative, le planificateur de tâches peut réallouer les ressources de traitement à un autre contexte lorsque la première tâche attend des données.
 
@@ -88,7 +88,7 @@ Considérons la fonction suivante, `download`, qui télécharge le fichier à l�
 
 [[Haut](#top)]
 
-##  <a name="memory"></a>Utilisez des fonctions de gestion simultanée de la mémoire lorsque cela est possible
+## <a name="memory"></a>Utilisez des fonctions de gestion simultanée de la mémoire lorsque cela est possible
 
 Utilisez les fonctions de gestion de la mémoire, la [concurrence :: Alloc](reference/concurrency-namespace-functions.md#alloc) et l' [accès concurrentiel :: Free](reference/concurrency-namespace-functions.md#free), lorsque vous avez des tâches affinées qui allouez fréquemment de petits objets qui ont une durée de vie relativement courte. Le runtime d’accès concurrentiel détient un cache mémoire distinct pour chaque thread en cours d’exécution. Les fonctions `Alloc` et `Free` allouent et libèrent de la mémoire à partir de ces caches sans l’utilisation de verrous ou de barrières de mémoire.
 
@@ -96,7 +96,7 @@ Pour plus d’informations sur ces fonctions de gestion de la mémoire, consulte
 
 [[Haut](#top)]
 
-##  <a name="raii"></a>Utiliser RAII pour gérer la durée de vie des objets de concurrence
+## <a name="raii"></a>Utiliser RAII pour gérer la durée de vie des objets de concurrence
 
 Le runtime d’accès concurrentiel utilise la gestion des exceptions pour implémenter des fonctionnalités telles que l’annulation. Par conséquent, écrivez du code sécurisé au moment de l’exception quand vous appelez le runtime ou appelez une autre bibliothèque qui appelle le Runtime.
 
@@ -128,7 +128,7 @@ Pour obtenir des exemples supplémentaires qui utilisent le modèle RAII pour g�
 
 [[Haut](#top)]
 
-##  <a name="global-scope"></a>Ne pas créer d’objets de concurrence au niveau de la portée globale
+## <a name="global-scope"></a>Ne pas créer d’objets de concurrence au niveau de la portée globale
 
 Lorsque vous créez un objet d’accès concurrentiel au niveau de la portée globale, vous pouvez provoquer des problèmes tels que des violations d’accès mémoire ou des interblocages dans votre application.
 
@@ -142,7 +142,7 @@ Pour obtenir des exemples de la façon correcte de créer des objets `Scheduler`
 
 [[Haut](#top)]
 
-##  <a name="shared-data"></a>Ne pas utiliser d’objets d’accès concurrentiel dans des segments de données partagés
+## <a name="shared-data"></a>Ne pas utiliser d’objets d’accès concurrentiel dans des segments de données partagés
 
 La runtime d’accès concurrentiel ne prend pas en charge l’utilisation d’objets d’accès concurrentiel dans une section de données partagées, par exemple, une section de données créée par la directive [data_seg](../../preprocessor/data-seg.md)`#pragma`. Un objet d’accès concurrentiel partagé entre des limites de processus peut mettre le runtime dans un état incohérent ou non valide.
 

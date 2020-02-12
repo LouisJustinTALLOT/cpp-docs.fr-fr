@@ -9,20 +9,20 @@ f1_keywords:
 helpviewer_keywords:
 - runtime_exception class
 ms.assetid: 8fe3ce2c-3d4c-4b9c-95e8-e592f37adefd
-ms.openlocfilehash: 8ed3fb5edd861eaecd0bf9a39687a2a63fdfe695
-ms.sourcegitcommit: a61d17cffdd50f1c3c6e082a01bbcbc85b6cc5a7
+ms.openlocfilehash: 6ad784720833d2ae5de7d653d132ba144aec2677
+ms.sourcegitcommit: a8ef52ff4a4944a1a257bdaba1a3331607fb8d0f
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/21/2019
-ms.locfileid: "65975185"
+ms.lasthandoff: 02/11/2020
+ms.locfileid: "77126374"
 ---
-# <a name="runtimeexception-class"></a>runtime_exception (classe)
+# <a name="runtime_exception-class"></a>runtime_exception (classe)
 
-Le type de base pour les exceptions dans la bibliothèque C++ Accelerated Massive Parallelism (AMP).
+Type de base pour les exceptions dans C++ la bibliothèque amp (Accelerated massive parallelism).
 
 ### <a name="syntax"></a>Syntaxe
 
-```
+```cpp
 class runtime_exception : public std::exception;
 ```
 
@@ -30,22 +30,22 @@ class runtime_exception : public std::exception;
 
 ### <a name="public-constructors"></a>Constructeurs publics
 
-|Nom|Description|
+|Name|Description|
 |----------|-----------------|
-|[runtime_exception, constructeur](#ctor)|Initialise une nouvelle instance de la classe `runtime_exception`.|
-|[~ runtime_exception, destructeur](#dtor)|Détruit le `runtime_exception` objet.|
+|[Constructeur runtime_exception](#ctor)|Initialise une nouvelle instance de la classe `runtime_exception`.|
+|[Destructeur ~ runtime_exception](#dtor)|Détruit l’objet `runtime_exception`.|
 
 ### <a name="public-methods"></a>M&#233;thodes publiques
 
-|Nom|Description|
+|Name|Description|
 |----------|-----------------|
 |[get_error_code](#get_error_code)|Retourne le code d’erreur qui a provoqué l’exception.|
 
 ### <a name="public-operators"></a>Op&#233;rateurs publics
 
-|Nom|Description|
+|Name|Description|
 |----------|-----------------|
-|[operator=](#operator_eq)|Copie le contenu de l’objet `runtime_exception` objet dans celui-ci.|
+|[operator=](#operator_eq)|Copie le contenu de l’objet `runtime_exception` spécifié dans celui-ci.|
 
 ## <a name="inheritance-hierarchy"></a>Hiérarchie d'héritage
 
@@ -53,19 +53,19 @@ class runtime_exception : public std::exception;
 
 `runtime_exception`
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
-**En-tête :** amprt.h
+**En-tête :** amprt. h
 
-**Espace de noms :** Concurrence
+**Espace de noms :** Concurrency
 
-## <a name="ctor"></a>  runtime_exception, constructeur
+## <a name="ctor"></a>Constructeur runtime_exception
 
 Initialise une nouvelle instance de la classe.
 
 ### <a name="syntax"></a>Syntaxe
 
-```
+```cpp
 runtime_exception(
     const char * _Message,
     HRESULT _Hresult ) throw();
@@ -80,35 +80,35 @@ runtime_exception(
 ### <a name="parameters"></a>Paramètres
 
 *_Message*<br/>
-Une description de l’erreur qui a provoqué l’exception.
+Description de l’erreur qui a provoqué l’exception.
 
 *_Hresult*<br/>
 HRESULT de l’erreur qui a provoqué l’exception.
 
 *_Other*<br/>
-Le `runtime_exception` objet à copier.
+Objet `runtime_exception` à copier.
 
 ### <a name="return-value"></a>Valeur de retour
 
 Objet `runtime_exception`.
 
-## <a name="dtor"></a>  ~ runtime_exception, destructeur
+## <a name="dtor"></a>Destructeur ~ runtime_exception
 
-Détruit l’objet.
+Détruit l'objet.
 
 ### <a name="syntax"></a>Syntaxe
 
-```
+```cpp
 virtual ~runtime_exception() throw();
 ```
 
-## <a name="get_error_code"></a> get_error_code
+## <a name="get_error_code"></a>get_error_code
 
 Retourne le code d’erreur qui a provoqué l’exception.
 
 ### <a name="syntax"></a>Syntaxe
 
-```
+```cpp
 HRESULT get_error_code() const throw();
 ```
 
@@ -117,22 +117,22 @@ HRESULT get_error_code() const throw();
 HRESULT de l’erreur qui a provoqué l’exception.
 
 ## <a name="operator_eq"></a>  operator=
-  Copie le contenu de l’objet `runtime_exception` objet dans celui-ci.
+  Copie le contenu de l’objet `runtime_exception` spécifié dans celui-ci.
 
 ### <a name="syntax"></a>Syntaxe
 
-```
+```cpp
 runtime_exception & operator= (    const runtime_exception & _Other ) throw();
 ```
 
 ### <a name="parameters"></a>Paramètres
 
 *_Other*<br/>
-Le `runtime_exception` objet à copier.
+Objet `runtime_exception` à copier.
 
 ### <a name="return-value"></a>Valeur de retour
 
-Une référence à cet `runtime_exception` objet.
+Référence à cet objet `runtime_exception`.
 
 ## <a name="see-also"></a>Voir aussi
 

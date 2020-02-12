@@ -72,20 +72,20 @@ f1_keywords:
 - amp_short_vectors/Concurrency::graphics::norm_3::set_zx
 - amp_short_vectors/Concurrency::graphics::norm_3::bgr
 ms.assetid: 17081060-14ce-477e-a71a-9801b0f1d9e4
-ms.openlocfilehash: cec778e6cdc53871b7987ef5a2faf529eea6d4f3
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: f7123f047a92c377dedefbc5be11e30f5d77db46
+ms.sourcegitcommit: a8ef52ff4a4944a1a257bdaba1a3331607fb8d0f
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62351652"
+ms.lasthandoff: 02/11/2020
+ms.locfileid: "77142167"
 ---
-# <a name="norm3-class"></a>norm_3, classe
+# <a name="norm_3-class"></a>norm_3, classe
 
-Représente un vecteur court de trois nombres normaux.
+Représente un vecteur abrégé de trois nombres normaux.
 
 ## <a name="syntax"></a>Syntaxe
 
-```
+```cpp
 class norm_3;
 ```
 
@@ -93,19 +93,19 @@ class norm_3;
 
 ### <a name="public-typedefs"></a>Typedefs publics
 
-|Nom|Description|
+|Name|Description|
 |----------|-----------------|
 |`value_type`||
 
 ### <a name="public-constructors"></a>Constructeurs publics
 
-|Nom|Description|
+|Name|Description|
 |----------|-----------------|
-|[norm_3 constructeur](#ctor)|Surchargé. Par défaut constructeur initialise tous les éléments par 0.|
+|[Constructeur norm_3](#ctor)|Surchargé. Le constructeur par défaut initialise tous les éléments avec 0.|
 
 ### <a name="public-methods"></a>M&#233;thodes publiques
 
-|Nom|Description|
+|Name|Description|
 |----------|-----------------|
 |norm_3::get_x||
 |norm_3::get_xy||
@@ -146,7 +146,7 @@ class norm_3;
 
 ### <a name="public-operators"></a>Op&#233;rateurs publics
 
-|Nom|Description|
+|Name|Description|
 |----------|-----------------|
 |norm_3::operator-||
 |norm_3::operator--||
@@ -159,62 +159,62 @@ class norm_3;
 
 ### <a name="public-constants"></a>Constantes publiques
 
-|Nom|Description|
+|Name|Description|
 |----------|-----------------|
-|[taille (constante)](#size)||
+|[taille, constante](#size)||
 
-### <a name="public-data-members"></a>Membres de données publics
+### <a name="public-data-members"></a>Membres de données publiques
 
-|Nom|Description|
+|Name|Description|
 |----------|-----------------|
-|norm_3::b||
+|norm_3 :: b||
 |norm_3::bg||
 |norm_3::bgr||
-|norm_3::br||
-|norm_3::brg||
-|norm_3::g||
+|norm_3 :: BR||
+|norm_3 :: BRG||
+|norm_3 :: g||
 |norm_3::gb||
 |norm_3::gbr||
-|norm_3::gr||
+|norm_3 :: gr||
 |norm_3::grb||
-|norm_3::r||
-|norm_3::rb||
+|norm_3 :: r||
+|norm_3 :: RB||
 |norm_3::rbg||
-|norm_3::rg||
+|norm_3 :: RG||
 |norm_3::rgb||
-|norm_3::x||
-|norm_3::xy||
+|norm_3 :: x||
+|norm_3 :: XY||
 |norm_3::xyz||
 |norm_3::xz||
 |norm_3::xzy||
-|norm_3::y||
+|norm_3 :: y||
 |norm_3::yx||
 |norm_3::yxz||
 |norm_3::yz||
 |norm_3::yzx||
-|norm_3::z||
+|norm_3 :: z||
 |norm_3::zx||
 |norm_3::zxy||
-|norm_3::zy||
-|norm_3::zyx||
+|norm_3 :: ZY||
+|norm_3 :: ZYX||
 
 ## <a name="inheritance-hierarchy"></a>Hiérarchie d'héritage
 
 `norm_3`
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
-**En-tête :** amp_short_vectors.h
+**En-tête :** amp_short_vectors. h
 
-**Espace de noms :** Concurrency::graphics
+**Espace de noms :** Concurrency :: Graphics
 
-## <a name="ctor"></a> norm_3 constructeur
+## <a name="ctor"></a>Constructeur norm_3
 
-Par défaut constructeur initialise tous les éléments par 0.
+Le constructeur par défaut initialise tous les éléments avec 0.
 
-## <a name="syntax"></a>Syntaxe
+### <a name="syntax"></a>Syntaxe
 
-```
+```cpp
 norm_3() restrict(amp,cpu);
 norm_3(
    norm _V0,
@@ -257,28 +257,28 @@ explicit inline norm_3(
 ) restrict(amp,cpu);
 ```
 
-#### <a name="parameters"></a>Paramètres
+### <a name="parameters"></a>Paramètres
 
 *_V0*<br/>
-La valeur pour initialiser l’élément 0.
+Valeur pour initialiser l’élément 0.
 
 *_V1*<br/>
-La valeur pour initialiser l’élément 1.
+Valeur pour initialiser l’élément 1.
 
 *_V2*<br/>
-La valeur pour initialiser l’élément 2.
+Valeur pour initialiser l’élément 2.
 
 *_V*<br/>
-La valeur pour l’initialisation.
+Valeur d’initialisation.
 
 *_Other*<br/>
-L’objet utilisé pour initialiser.
+Objet utilisé pour initialiser.
 
-## <a name="a-namesize-size-constant"></a><a name="size"> taille (constante)
+## <a name="a-namesize-size-constant"></a>Constante de taille de <a name="size">
 
 ### <a name="syntax"></a>Syntaxe
 
-```
+```cpp
 static const int size = 3;
 ```
 

@@ -29,12 +29,12 @@ helpviewer_keywords:
 - single OpenMP directive
 - threadprivate OpenMP directive
 ms.assetid: 0562c263-344c-466d-843e-de830d918940
-ms.openlocfilehash: 108e23a91b2bd0041d95a2262007ce4f684fc671
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: 4db341cf58884263e414e24aacf888c8c88e57cc
+ms.sourcegitcommit: a8ef52ff4a4944a1a257bdaba1a3331607fb8d0f
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69512194"
+ms.lasthandoff: 02/11/2020
+ms.locfileid: "77142017"
 ---
 # <a name="openmp-directives"></a>Directives OpenMP
 
@@ -47,7 +47,7 @@ Pour le partage de travail parallèle :
 |Directive|Description|
 |---------|-----------|
 |[parallel](#parallel)|Définit une région parallèle, qui est le code qui sera exécuté par plusieurs threads en parallèle.|
-|[for](#for-openmp)|Fait en sorte que le travail `for` effectué dans une boucle à l’intérieur d’une zone parallèle soit divisé entre les threads.|
+|[for](#for-openmp)|Fait en sorte que le travail effectué dans une boucle `for` à l’intérieur d’une région parallèle soit divisé entre les threads.|
 |[sections](#sections-openmp)|Identifie les sections de code qui doivent être réparties entre tous les threads.|
 |[single](#single)|Vous permet de spécifier qu’une section de code doit être exécutée sur un seul thread, pas nécessairement le thread principal.|
 
@@ -60,7 +60,7 @@ Pour le maître et la synchronisation :
 |[barrier](#barrier)|Synchronise tous les threads d’une équipe ; tous les threads sont suspendus au niveau du cloisonnement, jusqu’à ce que tous les threads exécutent le cloisonnement.|
 |[atomic](#atomic)|Spécifie qu’un emplacement de mémoire sera mis à jour de manière atomique.|
 |[flush](#flush-openmp)|Spécifie que tous les threads ont la même vue de mémoire pour tous les objets partagés.|
-|[substitué](#ordered-openmp-directives)|Spécifie que le code sous une `for` boucle parallélisée doit être exécuté comme une boucle séquentielle.|
+|[substitué](#ordered-openmp-directives)|Spécifie que le code d’une boucle de `for` parallélisée doit être exécuté comme une boucle séquentielle.|
 
 Pour l’environnement de données :
 
@@ -72,7 +72,7 @@ Pour l’environnement de données :
 
 Spécifie qu’un emplacement de mémoire sera mis à jour de manière atomique.
 
-```
+```cpp
 #pragma omp atomic
    expression
 ```
@@ -84,7 +84,7 @@ Instruction qui contient la *lvalue*, dont l’emplacement de la mémoire doit �
 
 ### <a name="remarks"></a>Notes
 
-La `atomic` directive ne prend pas en charge les clauses.
+La directive `atomic` ne prend pas en charge les clauses.
 
 Pour plus d’informations, consultez [construction atomique 2.6.4](../../../parallel/openmp/2-6-4-atomic-construct.md).
 
@@ -117,25 +117,25 @@ Number of threads: 10
 
 Synchronise tous les threads d’une équipe ; tous les threads sont suspendus au niveau du cloisonnement, jusqu’à ce que tous les threads exécutent le cloisonnement.
 
-```
+```cpp
 #pragma omp barrier
 ```
 
 ### <a name="remarks"></a>Notes
 
-La `barrier` directive ne prend pas en charge les clauses.
+La directive `barrier` ne prend pas en charge les clauses.
 
 Pour plus d’informations, consultez [directive Barrier 2.6.3](../../../parallel/openmp/2-6-3-barrier-directive.md).
 
-### <a name="example"></a>Exemples
+### <a name="example"></a>Exemple
 
-Pour obtenir un exemple d’utilisation `barrier`de, consultez [Master](#master).
+Pour obtenir un exemple d’utilisation de `barrier`, consultez [maître](#master).
 
-## <a name="critical"></a>critical
+## <a name="critical"></a>critique
 
 Spécifie que le code est exécuté uniquement sur un thread à la fois.
 
-```
+```cpp
 #pragma omp critical [(name)]
 {
    code_block
@@ -149,11 +149,11 @@ Facultatif Nom permettant d’identifier le code critique. Le nom doit être pla
 
 ### <a name="remarks"></a>Notes
 
-La `critical` directive ne prend pas en charge les clauses.
+La directive `critical` ne prend pas en charge les clauses.
 
 Pour plus d’informations, consultez [construction critique 2.6.2](../../../parallel/openmp/2-6-2-critical-construct.md).
 
-### <a name="example"></a>Exemples
+### <a name="example"></a>Exemple
 
 ```cpp
 // omp_critical.cpp
@@ -211,11 +211,11 @@ int main()
 max = 29358
 ```
 
-## <a name="flush-openmp"></a>flush
+## <a name="flush-openmp"></a>postconsommation
 
 Spécifie que tous les threads ont la même vue de mémoire pour tous les objets partagés.
 
-```
+```cpp
 #pragma omp flush [(var)]
 ```
 
@@ -226,7 +226,7 @@ Facultatif Liste séparée par des virgules des variables qui représentent les 
 
 ### <a name="remarks"></a>Notes
 
-La `flush` directive ne prend pas en charge les clauses.
+La directive `flush` ne prend pas en charge les clauses.
 
 Pour plus d’informations, consultez [la directive 2.6.5 Flush](../../../parallel/openmp/2-6-5-flush-directive.md).
 
@@ -289,9 +289,9 @@ data = 2
 
 ## <a name="for-openmp"></a>pour
 
-Fait en sorte que le travail `for` effectué dans une boucle à l’intérieur d’une zone parallèle soit divisé entre les threads.
+Fait en sorte que le travail effectué dans une boucle `for` à l’intérieur d’une région parallèle soit divisé entre les threads.
 
-```
+```cpp
 #pragma omp [parallel] for [clauses]
    for_statement
 ```
@@ -302,11 +302,11 @@ Fait en sorte que le travail `for` effectué dans une boucle à l’intérieur d
 Facultatif Aucune ou plusieurs clauses, consultez la section **Notes** .
 
 *for_statement*<br/>
-`for` Boucle. Un comportement non défini se produit si le code utilisateur de `for` la boucle modifie la variable d’index.
+Boucle `for`. Un comportement non défini se produit si le code utilisateur de la `for` boucle modifie la variable d’index.
 
 ### <a name="remarks"></a>Notes
 
-La `for` directive prend en charge les clauses suivantes :
+La directive `for` prend en charge les clauses suivantes :
 
 - [private](openmp-clauses.md#private-openmp)
 - [firstprivate](openmp-clauses.md#firstprivate)
@@ -316,7 +316,7 @@ La `for` directive prend en charge les clauses suivantes :
 - [schedule](openmp-clauses.md#schedule)
 - [nowait](openmp-clauses.md#nowait)
 
-Si `parallel` est également spécifié, `clauses` peut être toute clause acceptée par les `parallel` directives `for` ou, à `nowait`l’exception de.
+Si `parallel` est également spécifié, `clauses` peut être toute clause acceptée par les directives `parallel` ou `for`, à l’exception de `nowait`.
 
 Pour plus d’informations, consultez [2.4.1 for Construct](../../../parallel/openmp/2-4-1-for-construct.md).
 
@@ -388,7 +388,7 @@ The sum of 1 through 10 is 55
 
 Spécifie que seul le thread principal doit exécuter une section du programme.
 
-```
+```cpp
 #pragma omp master
 {
    code_block
@@ -397,13 +397,13 @@ Spécifie que seul le thread principal doit exécuter une section du programme.
 
 ### <a name="remarks"></a>Notes
 
-La `master` directive ne prend pas en charge les clauses.
+La directive `master` ne prend pas en charge les clauses.
 
 La directive [unique](#single) vous permet de spécifier qu’une section de code doit être exécutée sur un seul thread, pas nécessairement le thread principal.
 
 Pour plus d’informations, consultez la page [construction principale de 2.6.1](../../../parallel/openmp/2-6-1-master-construct.md).
 
-### <a name="example"></a>Exemples
+### <a name="example"></a>Exemple
 
 ```cpp
 // omp_master.cpp
@@ -448,22 +448,22 @@ a[4] = 16
 
 ## <a name="ordered-openmp-directives"></a>substitué
 
-Spécifie que le code sous une `for` boucle parallélisée doit être exécuté comme une boucle séquentielle.
+Spécifie que le code d’une boucle de `for` parallélisée doit être exécuté comme une boucle séquentielle.
 
-```
+```cpp
 #pragma omp ordered
    structured-block
 ```
 
 ### <a name="remarks"></a>Notes
 
-La directive `ordered` doit être dans l’étendue dynamique d’une construction [for](#for-openmp) ou `parallel for` avec une clause `ordered`.
+La directive `ordered` doit se trouver dans l’étendue dynamique d’une construction [for](#for-openmp) ou `parallel for` avec une clause `ordered`.
 
-La `ordered` directive ne prend pas en charge les clauses.
+La directive `ordered` ne prend pas en charge les clauses.
 
 Pour plus d’informations, consultez [construction ordonnée 2.6.6](../../../parallel/openmp/2-6-6-ordered-construct.md).
 
-### <a name="example"></a>Exemples
+### <a name="example"></a>Exemple
 
 ```cpp
 // omp_ordered.cpp
@@ -521,7 +521,7 @@ test2() iteration 4
 
 Définit une région parallèle, qui est le code qui sera exécuté par plusieurs threads en parallèle.
 
-```
+```cpp
 #pragma omp parallel [clauses]
 {
    code_block
@@ -535,18 +535,18 @@ Facultatif Aucune ou plusieurs clauses, consultez la section **Notes** .
 
 ### <a name="remarks"></a>Notes
 
-La `parallel` directive prend en charge les clauses suivantes :
+La directive `parallel` prend en charge les clauses suivantes :
 
 - [if](openmp-clauses.md#if-openmp)
 - [private](openmp-clauses.md#private-openmp)
 - [firstprivate](openmp-clauses.md#firstprivate)
 - [default](openmp-clauses.md#default-openmp)
-- [shared](openmp-clauses.md#shared-openmp)
+- [partagé](openmp-clauses.md#shared-openmp)
 - [copyin](openmp-clauses.md#copyin)
 - [reduction](openmp-clauses.md#reduction)
 - [num_threads](openmp-clauses.md#num-threads)
 
-`parallel`peut également être utilisé avec [les directives](#sections-openmp) [for](#for-openmp) et.
+`parallel` peut également être utilisé avec [les directives](#sections-openmp) [for](#for-openmp) et.
 
 Pour plus d’informations, consultez [2,3 construction parallèle](../../../parallel/openmp/2-3-parallel-construct.md).
 
@@ -580,7 +580,7 @@ Hello from thread 3
 
 Identifie les sections de code qui doivent être réparties entre tous les threads.
 
-```
+```cpp
 #pragma omp [parallel] sections [clauses]
 {
    #pragma omp section
@@ -597,9 +597,9 @@ Facultatif Aucune ou plusieurs clauses, consultez la section **Notes** .
 
 ### <a name="remarks"></a>Notes
 
-La `sections` directive peut contenir zéro ou plusieurs `section` directives.
+La directive `sections` peut contenir zéro ou plusieurs directives `section`.
 
-La `sections` directive prend en charge les clauses suivantes :
+La directive `sections` prend en charge les clauses suivantes :
 
 - [private](openmp-clauses.md#private-openmp)
 - [firstprivate](openmp-clauses.md#firstprivate)
@@ -607,7 +607,7 @@ La `sections` directive prend en charge les clauses suivantes :
 - [reduction](openmp-clauses.md#reduction)
 - [nowait](openmp-clauses.md#nowait)
 
-Si `parallel` est également spécifié, `clauses` peut être toute clause acceptée par les `parallel` directives `sections` ou, à `nowait`l’exception de.
+Si `parallel` est également spécifié, `clauses` peut être toute clause acceptée par les directives `parallel` ou `sections`, à l’exception de `nowait`.
 
 Pour plus d’informations, consultez [2.4.2 sections Construct](../../../parallel/openmp/2-4-2-sections-construct.md).
 
@@ -638,7 +638,7 @@ Hello from thread 0
 
 Vous permet de spécifier qu’une section de code doit être exécutée sur un seul thread, pas nécessairement le thread principal.
 
-```
+```cpp
 #pragma omp single [clauses]
 {
    code_block
@@ -652,7 +652,7 @@ Facultatif Aucune ou plusieurs clauses, consultez la section **Notes** .
 
 ### <a name="remarks"></a>Notes
 
-La `single` directive prend en charge les clauses suivantes :
+La directive `single` prend en charge les clauses suivantes :
 
 - [private](openmp-clauses.md#private-openmp)
 - [firstprivate](openmp-clauses.md#firstprivate)
@@ -663,7 +663,7 @@ La directive [principale](#master) vous permet de spécifier qu’une section de
 
 Pour plus d’informations, consultez la section [2.4.3 simple Construct](../../../parallel/openmp/2-4-3-single-construct.md).
 
-### <a name="example"></a>Exemples
+### <a name="example"></a>Exemple
 
 ```cpp
 // omp_single.cpp
@@ -699,7 +699,7 @@ write output
 
 Spécifie qu’une variable est privée pour un thread.
 
-```
+```cpp
 #pragma omp threadprivate(var)
 ```
 
@@ -710,15 +710,15 @@ Liste de variables séparées par des virgules que vous souhaitez rendre privée
 
 ### <a name="remarks"></a>Notes
 
-La `threadprivate` directive ne prend pas en charge les clauses.
+La directive `threadprivate` ne prend pas en charge les clauses.
 
-La directive `threadprivate` est basée sur l’attribut de [thread](../../../cpp/thread.md) à l’aide du mot clé [__declspec](../../../cpp/declspec.md) ; limits on `__declspec(thread)` apply to `threadprivate`. Par exemple, une `threadprivate` variable existera dans n’importe quel thread démarré dans le processus, pas seulement les threads qui font partie d’une équipe de threads générées par une région parallèle. Tenez compte de ces détails d’implémentation. vous remarquerez peut-être que `threadprivate` les constructeurs d’un type défini par l’utilisateur sont plus souvent attendus.
+La directive `threadprivate` est basée sur l’attribut de [thread](../../../cpp/thread.md) à l’aide du mot clé [__declspec](../../../cpp/declspec.md) ; les limites sur les `__declspec(thread)` s’appliquent à `threadprivate`. Par exemple, une variable `threadprivate` existe dans tout thread démarré dans le processus, pas seulement les threads qui font partie d’une équipe de threads générées par une région parallèle. Tenez compte de ces détails d’implémentation. vous pouvez remarquer que les constructeurs d’un type défini par l’utilisateur `threadprivate` sont plus souvent appelés.
 
-Vous pouvez utiliser `threadprivate` dans une dll qui est chargée statiquement au démarrage du processus, mais vous ne `threadprivate` pouvez pas utiliser dans une dll qui sera chargée via [LoadLibrary](/windows/win32/api/libloaderapi/nf-libloaderapi-loadlibraryw) , comme les dll qui sont chargées avec [/delayload (différer le chargement de l’importation)](../../../build/reference/delayload-delay-load-import.md), qui utilise également `LoadLibrary`.
+Vous pouvez utiliser `threadprivate` dans une DLL qui est chargée statiquement au démarrage du processus, mais vous ne pouvez pas utiliser `threadprivate` dans une DLL qui sera chargée via [LoadLibrary](/windows/win32/api/libloaderapi/nf-libloaderapi-loadlibraryw) , comme les dll qui sont chargées avec [/delayload (différer le chargement de l’importation)](../../../build/reference/delayload-delay-load-import.md), qui utilise également `LoadLibrary`.
 
-Il `threadprivate` n’est pas garanti que son destructeur soit appelé pour une variable d’un type *destructible* . Par exemple :
+Il n’est pas garanti que son destructeur soit appelé pour une `threadprivate` variable d’un type *destructible* . Par exemple :
 
-```
+```cpp
 struct MyType
 {
     ~MyType();
@@ -733,10 +733,10 @@ int main()
 }
 ```
 
-Les utilisateurs n’ont aucun contrôle sur le moment où les threads constituant la région parallèle se terminent. Si ces threads existent lorsque le processus se termine, les threads ne sont pas notifiés de la sortie du processus et le destructeur `threaded_var` n’est pas appelé pour sur un thread, sauf celui qui se termine (ici, le thread principal). Par conséquent, le code ne doit pas `threadprivate` compter sur la destruction correcte des variables.
+Les utilisateurs n’ont aucun contrôle sur le moment où les threads constituant la région parallèle se terminent. Si ces threads existent lorsque le processus se termine, les threads ne sont pas notifiés de la sortie du processus et le destructeur n’est pas appelé pour `threaded_var` sur un thread, sauf celui qui se termine (ici, le thread principal). Le code ne doit donc pas compter sur la destruction correcte des variables de `threadprivate`.
 
 Pour plus d’informations, consultez [la directive 2.7.1 threadprivate](../../../parallel/openmp/2-7-1-threadprivate-directive.md).
 
-### <a name="example"></a>Exemples
+### <a name="example"></a>Exemple
 
-Pour obtenir un exemple d' `threadprivate`utilisation de, consultez [Private](openmp-clauses.md#private-openmp).
+Pour obtenir un exemple d’utilisation de `threadprivate`, consultez [Private](openmp-clauses.md#private-openmp).

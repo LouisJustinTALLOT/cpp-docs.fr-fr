@@ -8,20 +8,20 @@ f1_keywords:
 helpviewer_keywords:
 - missing_wait class
 ms.assetid: ff981875-bd43-47e3-806f-b03c9f418b18
-ms.openlocfilehash: 68d24d710eec4fd602e64cc3cbde810db2b1a495
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: cf81d1ee6c144da210da5b1f37aca7910ae37bc8
+ms.sourcegitcommit: a8ef52ff4a4944a1a257bdaba1a3331607fb8d0f
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62409965"
+ms.lasthandoff: 02/11/2020
+ms.locfileid: "77142389"
 ---
-# <a name="missingwait-class"></a>missing_wait, classe
+# <a name="missing_wait-class"></a>missing_wait, classe
 
 Cette classe décrit une exception levée quand il existe des tâches encore planifiées sur un objet `task_group` ou `structured_task_group` au moment où le destructeur d’objet s’exécute. Cette exception n'est jamais levée si le destructeur est atteint en raison d'un déroulement de pile consécutif à une exception.
 
 ## <a name="syntax"></a>Syntaxe
 
-```
+```cpp
 class missing_wait : public std::exception;
 ```
 
@@ -29,13 +29,13 @@ class missing_wait : public std::exception;
 
 ### <a name="public-constructors"></a>Constructeurs publics
 
-|Nom|Description|
+|Name|Description|
 |----------|-----------------|
 |[missing_wait](#ctor)|Surchargé. Construit un objet `missing_wait`.|
 
 ## <a name="remarks"></a>Notes
 
-Absence de flux d’exception, vous êtes chargé de l’appel le `wait` ou `run_and_wait` méthode d’un `task_group` ou `structured_task_group` objet avant d’autoriser la destruction de cet objet. Le runtime lève cette exception pour indiquer que vous avez oublié d’appeler le `wait` ou `run_and_wait` (méthode).
+En l’absence de workflow d’exception, vous êtes chargé d’appeler la méthode `wait` ou `run_and_wait` d’un objet `task_group` ou `structured_task_group` avant d’autoriser la destruction de cet objet. Le runtime lève cette exception pour indiquer que vous avez oublié d’appeler la méthode `wait` ou `run_and_wait`.
 
 ## <a name="inheritance-hierarchy"></a>Hiérarchie d'héritage
 
@@ -43,17 +43,17 @@ Absence de flux d’exception, vous êtes chargé de l’appel le `wait` ou `run
 
 `missing_wait`
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
-**En-tête :** concrt.h
+**En-tête :** concrt. h
 
 **Espace de noms :** concurrency
 
-##  <a name="ctor"></a> missing_wait
+## <a name="ctor"></a>missing_wait
 
 Construit un objet `missing_wait`.
 
-```
+```cpp
 explicit _CRTIMP missing_wait(_In_z_ const char* _Message) throw();
 
 missing_wait() throw();
@@ -68,6 +68,6 @@ Message descriptif de l'erreur.
 
 [accès concurrentiel Namespace](concurrency-namespace.md)<br/>
 [Classe task_group](task-group-class.md)<br/>
-[wait](task-group-class.md)<br/>
+[qu'](task-group-class.md)<br/>
 [run_and_wait](task-group-class.md)<br/>
 [structured_task_group, classe](structured-task-group-class.md)

@@ -72,20 +72,20 @@ f1_keywords:
 - amp_short_vectors/Concurrency::graphics::double_3::rbg
 - amp_short_vectors/Concurrency::graphics::double_3::get_yxz
 ms.assetid: baeb3ff0-2862-4c81-857e-b1a4c085be25
-ms.openlocfilehash: 6423220d8203b0d0fba73a4888f967e159db26de
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 981b3026e1efb6c3b4e06457a0eb1f986cdcaafa
+ms.sourcegitcommit: a8ef52ff4a4944a1a257bdaba1a3331607fb8d0f
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62180360"
+ms.lasthandoff: 02/11/2020
+ms.locfileid: "77126693"
 ---
-# <a name="double3-class"></a>double_3, classe
+# <a name="double_3-class"></a>double_3, classe
 
-Représente un vecteur court de trois valeurs de type double.
+Représente un vecteur abrégé de trois doubles.
 
 ## <a name="syntax"></a>Syntaxe
 
-```
+```cpp
 class double_3;
 ```
 
@@ -93,19 +93,19 @@ class double_3;
 
 ### <a name="public-typedefs"></a>Typedefs publics
 
-|Nom|Description|
+|Name|Description|
 |----------|-----------------|
 |value_type||
 
 ### <a name="public-constructors"></a>Constructeurs publics
 
-|Nom|Description|
+|Name|Description|
 |----------|-----------------|
-|[double_3 constructeur](#ctor)|Surchargé. Par défaut constructeur initialise tous les éléments par 0.|
+|[Constructeur double_3](#ctor)|Surchargé. Le constructeur par défaut initialise tous les éléments avec 0.|
 
 ### <a name="public-methods"></a>M&#233;thodes publiques
 
-|Nom|Description|
+|Name|Description|
 |----------|-----------------|
 |double_3::get_x||
 |double_3::get_xy||
@@ -146,7 +146,7 @@ class double_3;
 
 ### <a name="public-operators"></a>Op&#233;rateurs publics
 
-|Nom|Description|
+|Name|Description|
 |----------|-----------------|
 |double_3::operator-||
 |double_3::operator--||
@@ -159,13 +159,13 @@ class double_3;
 
 ### <a name="public-constants"></a>Constantes publiques
 
-|Nom|Description|
+|Name|Description|
 |----------|-----------------|
-|[taille (constante)](#double_3__size)||
+|[taille, constante](#double_3__size)||
 
-### <a name="public-data-members"></a>Membres de données publics
+### <a name="public-data-members"></a>Membres de données publiques
 
-|Nom|Description|
+|Name|Description|
 |----------|-----------------|
 |double_3::b||
 |double_3::bg||
@@ -192,27 +192,27 @@ class double_3;
 |double_3::yxz||
 |double_3::yz||
 |double_3::yzx||
-|double_3::z||
+|double_3 :: z||
 |double_3::zx||
 |double_3::zxy||
-|double_3::zy||
+|double_3 :: ZY||
 |double_3::zyx||
 
 ## <a name="inheritance-hierarchy"></a>Hiérarchie d'héritage
 
 `double_3`
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
-**En-tête :** amp_short_vectors.h
+**En-tête :** amp_short_vectors. h
 
-**Espace de noms :** Concurrency::graphics
+**Espace de noms :** Concurrency :: Graphics
 
-##  <a name="ctor"></a> double_3
+## <a name="ctor"></a>double_3
 
-Par défaut constructeur initialise tous les éléments par 0.
+Le constructeur par défaut initialise tous les éléments avec 0.
 
-```
+```cpp
 double_3() restrict(amp,
     cpu);
 
@@ -254,23 +254,23 @@ explicit inline double_3(
 ### <a name="parameters"></a>Paramètres
 
 *_V0*<br/>
-La valeur pour initialiser l’élément 0.
+Valeur pour initialiser l’élément 0.
 
 *_V1*<br/>
-La valeur pour initialiser l’élément 1.
+Valeur pour initialiser l’élément 1.
 
 *_V2*<br/>
-La valeur pour initialiser l’élément 2.
+Valeur pour initialiser l’élément 2.
 
 *_V*<br/>
-La valeur pour l’initialisation.
+Valeur d’initialisation.
 
 *_Other*<br/>
-L’objet utilisé pour initialiser.
+Objet utilisé pour initialiser.
 
-##  <a name="double_3__size"></a> Taille
+## <a name="double_3__size"></a>corps
 
-```
+```cpp
 static const int size = 3;
 ```
 

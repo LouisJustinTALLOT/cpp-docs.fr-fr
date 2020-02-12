@@ -268,20 +268,20 @@ f1_keywords:
 - amp_short_vectors/Concurrency::graphics::float_4::get_z
 - amp_short_vectors/Concurrency::graphics::float_4::set_xyzw
 ms.assetid: 10f92170-e58c-4afc-8198-fc5778d56038
-ms.openlocfilehash: 63dbc38fd4c5c6d668dda525416ec4ff2f05b50f
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: efff4e2263704dab35e5c212f6ef5d906e3f7c72
+ms.sourcegitcommit: a8ef52ff4a4944a1a257bdaba1a3331607fb8d0f
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62180282"
+ms.lasthandoff: 02/11/2020
+ms.locfileid: "77142179"
 ---
-# <a name="float4-class"></a>float_4, classe
+# <a name="float_4-class"></a>float_4, classe
 
-Représente un vecteur court de quatre valeurs en virgule flottante.
+Représente un vecteur abrégé de quatre valeurs float.
 
 ## <a name="syntax"></a>Syntaxe
 
-```
+```cpp
 class float_4;
 ```
 
@@ -289,19 +289,19 @@ class float_4;
 
 ### <a name="public-typedefs"></a>Typedefs publics
 
-|Nom|Description|
+|Name|Description|
 |----------|-----------------|
 |`value_type`||
 
 ### <a name="public-constructors"></a>Constructeurs publics
 
-|Nom|Description|
+|Name|Description|
 |----------|-----------------|
-|[float_4 constructeur](#ctor)|Surchargé. Par défaut constructeur initialise tous les éléments par 0.|
+|[Constructeur float_4](#ctor)|Surchargé. Le constructeur par défaut initialise tous les éléments avec 0.|
 
 ### <a name="public-methods"></a>M&#233;thodes publiques
 
-|Nom|Description|
+|Name|Description|
 |----------|-----------------|
 |float_4::get_w||
 |float_4::get_wx||
@@ -442,7 +442,7 @@ class float_4;
 
 ### <a name="public-operators"></a>Op&#233;rateurs publics
 
-|Nom|Description|
+|Name|Description|
 |----------|-----------------|
 |float_4::operator-||
 |float_4::operator--||
@@ -455,13 +455,13 @@ class float_4;
 
 ### <a name="public-constants"></a>Constantes publiques
 
-|Nom|Description|
+|Name|Description|
 |----------|-----------------|
-|[taille (constante)](#float_4__size)||
+|[taille, constante](#float_4__size)||
 
-### <a name="public-data-members"></a>Membres de données publics
+### <a name="public-data-members"></a>Membres de données publiques
 
-|Nom|Description|
+|Name|Description|
 |----------|-----------------|
 |float_4::a||
 |float_4::ab||
@@ -479,7 +479,7 @@ class float_4;
 |float_4::arbg||
 |float_4::arg||
 |float_4::argb||
-|float_4::b||
+|float_4 :: b||
 |float_4::ba||
 |float_4::bag||
 |float_4::bagr||
@@ -487,15 +487,15 @@ class float_4;
 |float_4::barg||
 |float_4::bg||
 |float_4::bga||
-|float_4::bgar||
+|float_4 :: BGAR||
 |float_4::bgr||
 |float_4::bgra||
-|float_4::br||
+|float_4 :: BR||
 |float_4::bra||
 |float_4::brag||
 |float_4::brg||
-|float_4::brga||
-|float_4::g||
+|float_4 :: brga||
+|float_4 :: g||
 |float_4::ga||
 |float_4::gab||
 |float_4::gabr||
@@ -506,34 +506,34 @@ class float_4;
 |float_4::gbar||
 |float_4::gbr||
 |float_4::gbra||
-|float_4::gr||
+|float_4 :: gr||
 |float_4::gra||
 |float_4::grab||
 |float_4::grb||
 |float_4::grba||
-|float_4::r||
+|float_4 :: r||
 |float_4::ra||
 |float_4::rab||
 |float_4::rabg||
 |float_4::rag||
 |float_4::ragb||
-|float_4::rb||
+|float_4 :: RB||
 |float_4::rba||
-|float_4::rbag||
+|float_4 :: rbag||
 |float_4::rbg||
 |float_4::rbga||
 |float_4::rg||
 |float_4::rga||
-|float_4::rgab||
+|float_4 :: rgab||
 |float_4::rgb||
 |float_4::rgba||
-|float_4::w||
+|float_4 :: w||
 |float_4::wx||
 |float_4::wxy||
 |float_4::wxyz||
 |float_4::wxz||
 |float_4::wxzy||
-|float_4::wy||
+|float_4 :: WY||
 |float_4::wyx||
 |float_4::wyxz||
 |float_4::wyz||
@@ -543,23 +543,23 @@ class float_4;
 |float_4::wzxy||
 |float_4::wzy||
 |float_4::wzyx||
-|float_4::x||
-|float_4::xw||
-|float_4::xwy||
+|float_4 :: x||
+|float_4 :: XW||
+|float_4 :: xwy||
 |float_4::xwyz||
 |float_4::xwz||
 |float_4::xwzy||
-|float_4::xy||
+|float_4 :: XY||
 |float_4::xyw||
 |float_4::xywz||
 |float_4::xyz||
 |float_4::xyzw||
 |float_4::xz||
 |float_4::xzw||
-|float_4::xzwy||
+|float_4 :: xzwy||
 |float_4::xzy||
 |float_4::xzyw||
-|float_4::y||
+|float_4 :: y||
 |float_4::yw||
 |float_4::ywx||
 |float_4::ywxz||
@@ -571,22 +571,22 @@ class float_4;
 |float_4::yxz||
 |float_4::yxzw||
 |float_4::yz||
-|float_4::yzw||
+|float_4 :: YZW||
 |float_4::yzwx||
 |float_4::yzx||
 |float_4::yzxw||
-|float_4::z||
-|float_4::zw||
-|float_4::zwx||
-|float_4::zwxy||
-|float_4::zwy||
-|float_4::zwyx||
+|float_4 :: z||
+|float_4 :: ZW||
+|float_4 :: zwx||
+|float_4 :: zwxy||
+|float_4 :: zwy||
+|float_4 :: ZWYX||
 |float_4::zx||
 |float_4::zxw||
 |float_4::zxwy||
 |float_4::zxy||
 |float_4::zxyw||
-|float_4::ZY||
+|float_4 :: ZY||
 |float_4::zyw||
 |float_4::zywx||
 |float_4::zyx||
@@ -596,17 +596,17 @@ class float_4;
 
 `float_4`
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
-**En-tête :** amp_short_vectors.h
+**En-tête :** amp_short_vectors. h
 
-**Espace de noms :** Concurrency::graphics
+**Espace de noms :** Concurrency :: Graphics
 
-##  <a name="ctor"></a> float_4
+## <a name="ctor"></a>float_4
 
-Par défaut constructeur initialise tous les éléments par 0.
+Le constructeur par défaut initialise tous les éléments avec 0.
 
-```
+```cpp
 float_4() restrict(amp,
     cpu);
 
@@ -649,26 +649,26 @@ explicit inline float_4(
 ### <a name="parameters"></a>Paramètres
 
 *_V0*<br/>
-La valeur pour initialiser l’élément 0.
+Valeur pour initialiser l’élément 0.
 
 *_V1*<br/>
-La valeur pour initialiser l’élément 1.
+Valeur pour initialiser l’élément 1.
 
 *_V2*<br/>
-La valeur pour initialiser l’élément 2.
+Valeur pour initialiser l’élément 2.
 
 *_V3*<br/>
-La valeur pour initialiser l’élément 3.
+Valeur pour initialiser l’élément 3.
 
 *_V*<br/>
-La valeur pour l’initialisation.
+Valeur d’initialisation.
 
 *_Other*<br/>
-L’objet utilisé pour initialiser.
+Objet utilisé pour initialiser.
 
-##  <a name="float_4__size"></a> Taille
+## <a name="float_4__size"></a>corps
 
-```
+```cpp
 static const int size = 4;
 ```
 

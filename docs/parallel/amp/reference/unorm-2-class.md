@@ -28,20 +28,20 @@ f1_keywords:
 - amp_short_vectors/Concurrency::graphics::unnorm_2::g
 - amp_short_vectors/Concurrency::graphics::unnorm_2::operator++
 ms.assetid: 62e88ea7-e29f-4f62-95ce-61a1f39f5e34
-ms.openlocfilehash: 33411511809fc9798f6fdf65f5331e2e587990ef
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 325a1532a079c8eff9c8dcdc5410dcbfe58fb914
+ms.sourcegitcommit: a8ef52ff4a4944a1a257bdaba1a3331607fb8d0f
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62405493"
+ms.lasthandoff: 02/11/2020
+ms.locfileid: "77126199"
 ---
-# <a name="unorm2-class"></a>unorm_2, classe
+# <a name="unorm_2-class"></a>unorm_2, classe
 
-Représente un vecteur court de deux nombres normaux non signés.
+Représente un vecteur abrégé de deux nombres normaux non signés.
 
 ## <a name="syntax"></a>Syntaxe
 
-```
+```cpp
 class unorm_2;
 ```
 
@@ -49,19 +49,19 @@ class unorm_2;
 
 ### <a name="public-typedefs"></a>Typedefs publics
 
-|Nom|Description|
+|Name|Description|
 |----------|-----------------|
 |`value_type`||
 
 ### <a name="public-constructors"></a>Constructeurs publics
 
-|Nom|Description|
+|Name|Description|
 |----------|-----------------|
-|[unorm_2 constructeur](#ctor)|Surchargé. Par défaut constructeur initialise tous les éléments par 0.|
+|[Constructeur unorm_2](#ctor)|Surchargé. Le constructeur par défaut initialise tous les éléments avec 0.|
 
 ### <a name="public-methods"></a>M&#233;thodes publiques
 
-|Nom|Description|
+|Name|Description|
 |----------|-----------------|
 |unorm_2::get_x||
 |unorm_2::get_xy||
@@ -78,7 +78,7 @@ class unorm_2;
 
 ### <a name="public-operators"></a>Op&#233;rateurs publics
 
-|Nom|Description|
+|Name|Description|
 |----------|-----------------|
 |unorm_2::operator--||
 |unorm_2::operator*=||
@@ -90,38 +90,38 @@ class unorm_2;
 
 ### <a name="public-constants"></a>Constantes publiques
 
-|Nom|Description|
+|Name|Description|
 |----------|-----------------|
 |unorm_2::size, constante||
 
-### <a name="public-data-members"></a>Membres de données publics
+### <a name="public-data-members"></a>Membres de données publiques
 
-|Nom|Description|
+|Name|Description|
 |----------|-----------------|
-|unorm_2::g||
+|unorm_2 :: g||
 |unorm_2::gr||
-|unorm_2::r||
+|unorm_2 :: r||
 |unorm_2::rg||
-|unorm_2::x||
-|unorm_2::xy||
-|unorm_2::y||
+|unorm_2 :: x||
+|unorm_2 :: XY||
+|unorm_2 :: y||
 |unorm_2::yx||
 
 ## <a name="inheritance-hierarchy"></a>Hiérarchie d'héritage
 
 `unorm_2`
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
-**En-tête :** amp_short_vectors.h
+**En-tête :** amp_short_vectors. h
 
-**Espace de noms :** Concurrency::graphics
+**Espace de noms :** Concurrency :: Graphics
 
-##  <a name="ctor"></a> unorm_2
+## <a name="ctor"></a>unorm_2
 
-Par défaut constructeur initialise tous les éléments par 0.
+Le constructeur par défaut initialise tous les éléments avec 0.
 
-```
+```cpp
 unorm_2() restrict(amp,
     cpu);
 
@@ -171,20 +171,20 @@ explicit inline unorm_2(
 ### <a name="parameters"></a>Paramètres
 
 *_V0*<br/>
-La valeur pour initialiser l’élément 0.
+Valeur pour initialiser l’élément 0.
 
 *_V1*<br/>
-La valeur pour initialiser l’élément 1.
+Valeur pour initialiser l’élément 1.
 
 *_V*<br/>
-La valeur pour l’initialisation.
+Valeur d’initialisation.
 
 *_Other*<br/>
-L’objet utilisé pour initialiser.
+Objet utilisé pour initialiser.
 
-##  <a name="unorm_2__size"></a> Taille
+## <a name="unorm_2__size"></a>corps
 
-```
+```cpp
 static const int size = 2;
 ```
 

@@ -6,20 +6,20 @@ f1_keywords:
 - AMP_SHORT_VECTORS/norm
 - AMP_SHORT_VECTORS/Concurrency::graphics::norm Constructor
 ms.assetid: 73002f3d-c25e-4119-bcd3-4c46c9b6abf1
-ms.openlocfilehash: 56f879ef2fc0d3010ab4f64fedaf2570dac565d1
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 272ac3685539eb03f773c8bc60d5938ed6c53876
+ms.sourcegitcommit: a8ef52ff4a4944a1a257bdaba1a3331607fb8d0f
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62351561"
+ms.lasthandoff: 02/11/2020
+ms.locfileid: "77126511"
 ---
 # <a name="norm-class"></a>norm, classe
 
-Représente un nombre de norme. Chaque élément est flottante nombre à virgule dans la plage [-1.0f, 1.0f].
+Représente un nombre normal. Chaque élément est un nombre à virgule flottante dans la plage de [-1.0 f, 1.0 f].
 
 ## <a name="syntax"></a>Syntaxe
 
-```
+```cpp
 class norm;
 ```
 
@@ -27,39 +27,39 @@ class norm;
 
 ### <a name="public-constructors"></a>Constructeurs publics
 
-|Nom|Description|
+|Name|Description|
 |----------|-----------------|
-|[Norm, constructeur](#ctor)|Surchargé. Constructeur par défaut. Initialiser à 0,0 f.|
+|[Constructeur normal](#ctor)|Surchargé. Constructeur par défaut. Initialiser à 0.0 f.|
 
 ### <a name="public-operators"></a>Op&#233;rateurs publics
 
-|Nom|Description|
+|Name|Description|
 |----------|-----------------|
-|norm::operator-||
-|norm::operator--||
-|Norm::operator float|Opérateur de conversion. Convertissez le nombre de norme flottante valeur de point.|
+|normal :: Operator-||
+|normal :: Operator--||
+|normal :: operator float|Opérateur de conversion. Convertit le nombre normal en valeur à virgule flottante.|
 |norm::operator*=||
-|norm::operator/=||
+|normal :: Operator/=||
 |norm::operator++||
 |norm::operator+=||
 |norm::operator=||
-|norm::operator-=||
+|normal :: Operator-=||
 
 ## <a name="inheritance-hierarchy"></a>Hiérarchie d'héritage
 
 `norm`
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
-**En-tête :** amp_short_vectors.h
+**En-tête :** amp_short_vectors. h
 
-**Espace de noms :** Concurrency::graphics
+**Espace de noms :** Concurrency :: Graphics
 
-##  <a name="ctor"></a> norme
+## <a name="ctor"></a>rendement
 
-Constructeur par défaut. Initialiser à 0,0 f.
+Constructeur par défaut. Initialiser à 0.0 f.
 
-```
+```cpp
 norm(
     void) restrict(amp,
     cpu);
@@ -92,10 +92,10 @@ norm(
 ### <a name="parameters"></a>Paramètres
 
 *_V*<br/>
-La valeur utilisée pour initialiser.
+Valeur utilisée pour initialiser.
 
 *_Other*<br/>
-L’objet utilisé pour initialiser.
+Objet utilisé pour initialiser.
 
 ## <a name="see-also"></a>Voir aussi
 

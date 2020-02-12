@@ -1,6 +1,7 @@
 ---
-title: vector, classe
-ms.date: 01/04/2020
+title: vector (classe)
+description: Référence pour l' C++ implémentation de la bibliothèque standard Microsoft de la classe Vector.
+ms.date: 02/07/2020
 f1_keywords:
 - vector/std::vector::allocator_type
 - vector/std::vector::const_iterator
@@ -86,14 +87,14 @@ helpviewer_keywords:
 - std::vector [C++], size
 - std::vector [C++], swap
 ms.assetid: a3e0a8f8-7565-4fe0-93e4-e4d74ae1b70d
-ms.openlocfilehash: 8c4284fecf09044ceab326d858d6ffccccdeaf45
-ms.sourcegitcommit: 27d9db019f6d84c94de9e6aff0170d918cee6738
+ms.openlocfilehash: ed987409dc99ea9b1dade632a5fa5deeb322347a
+ms.sourcegitcommit: a8ef52ff4a4944a1a257bdaba1a3331607fb8d0f
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/06/2020
-ms.locfileid: "75676962"
+ms.lasthandoff: 02/11/2020
+ms.locfileid: "77126225"
 ---
-# <a name="vector-class"></a>vector, classe
+# <a name="vector-class"></a>vector (classe)
 
 La C++ classe Vector de la bibliothèque standard est un modèle de classe pour les conteneurs de séquence. Un vecteur stocke les éléments d’un type donné dans une disposition linéaire et permet un accès aléatoire rapide à n’importe quel élément. Un vecteur est le conteneur préféré pour une séquence lorsque les performances d’accès aléatoire sont élevées.
 
@@ -104,7 +105,7 @@ template <class Type, class Allocator = allocator<Type>>
 class vector
 ```
 
-### <a name="parameters"></a>Parameters
+### <a name="parameters"></a>Paramètres
 
 *Type*\
 Type de données des éléments à stocker dans le vecteur.
@@ -122,7 +123,7 @@ La [classe vector\<bool >](../standard-library/vector-bool-class.md) est une sp�
 
 La [classe de référence vector\<bool >](../standard-library/vector-bool-class.md#reference_class) est une classe imbriquée dont les objets peuvent fournir des références aux éléments (bits uniques) au sein d’un objet Vector\<bool >.
 
-## <a name="members"></a>Members
+## <a name="members"></a>Membres
 
 ### <a name="constructors"></a>Constructeurs
 
@@ -130,7 +131,7 @@ La [classe de référence vector\<bool >](../standard-library/vector-bool-class.
 |-|-|
 |[vector](#vector)|Construit un vecteur de taille spécifique ou contenant des éléments de valeurs spécifiques, ou contenant un objet `allocator` spécifique, ou comme copie d'un autre vecteur.|
 
-### <a name="typedefs"></a>Typedef
+### <a name="typedefs"></a>Typedefs
 
 |||
 |-|-|
@@ -155,7 +156,7 @@ La [classe de référence vector\<bool >](../standard-library/vector-bool-class.
 |[at](#at)|Retourne une référence à l'élément à un emplacement spécifié dans le vecteur.|
 |[back](#back)|Retourne une référence au dernier élément du vecteur.|
 |[begin](#begin)|Retourne un itérateur à accès aléatoire pointant vers le premier élément dans le vecteur.|
-|[capacity](#capacity)|Retourne le nombre d'éléments que le vecteur peut contenir sans avoir à allouer plus de stockage.|
+|[capacité](#capacity)|Retourne le nombre d'éléments que le vecteur peut contenir sans avoir à allouer plus de stockage.|
 |[cbegin](#cbegin)|Retourne un itérateur const à accès aléatoire pointant vers le premier élément du vecteur.|
 |[cend](#cend)|Retourne un itérateur const à accès aléatoire qui pointe juste après la fin du vecteur.|
 |[crbegin](#crbegin)|Retourne un itérateur const qui pointe vers le premier élément d'un vecteur inversé.|
@@ -202,7 +203,7 @@ typedef Allocator allocator_type;
 
 ### <a name="example"></a>Exemple
 
-Consultez l’exemple de [get_allocator](#get_allocator) pour obtenir un exemple qui utilise `allocator_type`.
+Consultez l’exemple [get_allocator](#get_allocator) pour obtenir un exemple qui utilise `allocator_type`.
 
 ## <a name="assign"></a>assignés
 
@@ -216,7 +217,7 @@ template <class InputIterator>
 void assign(InputIterator first, InputIterator last);
 ```
 
-### <a name="parameters"></a>Parameters
+### <a name="parameters"></a>Paramètres
 
 *premier*\
 Position du premier élément dans la plage d'éléments à copier.
@@ -294,7 +295,7 @@ reference at(size_type position);
 const_reference at(size_type position) const;
 ```
 
-### <a name="parameters"></a>Parameters
+### <a name="parameters"></a>Paramètres
 
 *position*\
 Valeur de l'indice ou de la position de l'élément à référencer dans le vecteur.
@@ -790,7 +791,7 @@ int main()
 {
     using namespace std;
     vector<int> c1;
-    vector<int>::pointer c1 ptr;
+    vector<int>::pointer c1_ptr;
     vector<int>::const_pointer c1_cPtr;
 
     c1.push_back(1);
@@ -805,11 +806,11 @@ int main()
     cout << endl;
 
     cout << "The vector c1 now contains elements:";
-    c1 ptr = c1.data();
-    *c1 ptr = 20;
-    for (size_t n = c1.size(); 0 < n; --n, c1 ptr++)
+    c1_ptr = c1.data();
+    *c1_ptr = 20;
+    for (size_t n = c1.size(); 0 < n; --n, c1_ptr++)
     {
-        cout << " " << *c1 ptr;
+        cout << " " << *c1_ptr;
     }
     cout << endl;
 }
@@ -888,7 +889,7 @@ iterator emplace(
     Types&&... args);
 ```
 
-### <a name="parameters"></a>Parameters
+### <a name="parameters"></a>Paramètres
 
 *position*\
 Position dans l’objet [vector](../standard-library/vector-class.md) où le premier élément est inséré.
@@ -955,7 +956,7 @@ template <class... Types>
 void emplace_back(Types&&... args);
 ```
 
-### <a name="parameters"></a>Parameters
+### <a name="parameters"></a>Paramètres
 
 *arguments*\
 Arguments de constructeur. Selon les arguments fournis, la fonction déduit la surcharge de constructeur à appeler.
@@ -1071,7 +1072,7 @@ iterator erase(
     const_iterator last);
 ```
 
-### <a name="parameters"></a>Parameters
+### <a name="parameters"></a>Paramètres
 
 *position*\
 Position de l'élément à supprimer du vecteur.
@@ -1177,7 +1178,7 @@ int main( )
 }
 ```
 
-## <a name="get_allocator"></a> get_allocator
+## <a name="get_allocator"></a>get_allocator
 
 Retourne une copie de l’objet allocateur utilisé pour construire le vecteur.
 
@@ -1191,7 +1192,7 @@ Allocateur utilisé par le vecteur.
 
 ### <a name="remarks"></a>Notes
 
-Les allocateurs de la classe vector spécifient la façon dont la classe gère le stockage. Les allocateurs par défaut fournis avec les classes de conteneur de la bibliothèque standard C++ sont suffisants pour la plupart des besoins en programmation. L’écriture et l’utilisation de votre propre classe Allocator est C++ une fonctionnalité avancée.
+Les allocateurs de la classe vector spécifient la façon dont la classe gère le stockage. Les allocateurs par défaut fournis avec les classes de conteneur de bibliothèque C++ Standard suffisent à satisfaire la plupart des besoins en programmation. L’écriture et l’utilisation de votre propre classe Allocator est C++ une fonctionnalité avancée.
 
 ### <a name="example"></a>Exemple
 
@@ -1241,7 +1242,7 @@ void insert(
     InputIterator last);
 ```
 
-### <a name="parameters"></a>Parameters
+### <a name="parameters"></a>Paramètres
 
 *position*\
 Position dans le vecteur où le premier élément est inséré.
@@ -1340,11 +1341,11 @@ typedef implementation-defined iterator;
 
 ### <a name="remarks"></a>Notes
 
-Vous pouvez utiliser un type **iterator** pour changer la valeur d’un élément.
+Vous pouvez utiliser un type **iterator** pour modifier la valeur d’un élément.
 
 ### <a name="example"></a>Exemple
 
-Consultez l’exemple de [begin](#begin).
+Consultez l’exemple relatif à [begin](#begin).
 
 ## <a name="max_size"></a>max_size
 
@@ -1387,7 +1388,7 @@ reference operator[](size_type position);
 const_reference operator[](size_type position) const;
 ```
 
-### <a name="parameters"></a>Parameters
+### <a name="parameters"></a>Paramètres
 
 *position*\
 Position de l'élément de vecteur.
@@ -1433,7 +1434,7 @@ vector& operator=(const vector& right);
 vector& operator=(vector&& right);
 ```
 
-### <a name="parameters"></a>Parameters
+### <a name="parameters"></a>Paramètres
 
 \ *droit*
 L’objet [vector](../standard-library/vector-class.md) copié dans `vector`.
@@ -1493,7 +1494,7 @@ typedef typename Allocator::pointer pointer;
 
 ### <a name="remarks"></a>Notes
 
-Vous pouvez utiliser un type **pointer** pour modifier la valeur d’un élément.
+Un type **pointer** peut être utilisé pour modifier la valeur d’un élément.
 
 ### <a name="example"></a>Exemple
 
@@ -1547,7 +1548,7 @@ void push_back(const T& value);
 void push_back(T&& value);
 ```
 
-### <a name="parameters"></a>Parameters
+### <a name="parameters"></a>Paramètres
 
 *value*\
 Valeur à affecter à l'élément ajouté à la fin du vecteur.
@@ -1712,7 +1713,7 @@ Réserve une taille de stockage minimale pour un vecteur, en allouant plus d'esp
 void reserve(size_type count);
 ```
 
-### <a name="parameters"></a>Parameters
+### <a name="parameters"></a>Paramètres
 
 *nombre*\
 Taille de stockage minimale à allouer pour le vecteur.
@@ -1754,7 +1755,7 @@ void resize(size_type new_size);
 void resize(size_type new_size, Type value);
 ```
 
-### <a name="parameters"></a>Parameters
+### <a name="parameters"></a>Paramètres
 
 *new_size*\
 Nouvelle taille du vecteur.
@@ -1996,7 +1997,7 @@ friend void swap(
     vector<Type, Allocator>& right);
 ```
 
-### <a name="parameters"></a>Parameters
+### <a name="parameters"></a>Paramètres
 
 \ *droit*
 Vecteur qui fournit les éléments à permuter. Ou un vecteur dont les éléments doivent être échangés avec les éléments du vecteur à *gauche*.
@@ -2097,7 +2098,7 @@ template <class InputIterator>
 vector(InputIterator first, InputIterator last, const Allocator& allocator);
 ```
 
-### <a name="parameters"></a>Parameters
+### <a name="parameters"></a>Paramètres
 
 \ *Allocator*
 Classe allocator à utiliser avec cet objet. [get_allocator](#get_allocator) retourne la classe allocator de l’objet.
@@ -2235,5 +2236,5 @@ v1 = 0 0 0v2 = 2 2 2 2 2v3 = 1 1 1v4 = 2 2 2 2 2v5 = 0 1 2 3 4v6 = 1 2v7 = 2 2 2
 
 ## <a name="see-also"></a>Voir aussi
 
-[Sécurité des threads dans la bibliothèque standard C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)\
-[Référence de bibliothèque standard C++](../standard-library/cpp-standard-library-reference.md)
+[Sécurité des threads dans la bibliothèque C++ Standard](../standard-library/thread-safety-in-the-cpp-standard-library.md)\
+[Informations de référence sur la bibliothèque C++ Standard](../standard-library/cpp-standard-library-reference.md)

@@ -2,12 +2,12 @@
 title: 3. Fonctions de la bibliothèque du runtime
 ms.date: 05/13/2019
 ms.assetid: b226e512-6822-4cbe-a2ca-74cc2bb7e880
-ms.openlocfilehash: 553c9ff2ceff02dc7b72e9f11899dac9d1f0f612
-ms.sourcegitcommit: a6d63c07ab9ec251c48bc003ab2933cf01263f19
+ms.openlocfilehash: 6155eb87bd7a1a0533caf99afb3db8417854df30
+ms.sourcegitcommit: a8ef52ff4a4944a1a257bdaba1a3331607fb8d0f
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "74857955"
+ms.lasthandoff: 02/11/2020
+ms.locfileid: "77142955"
 ---
 # <a name="3-run-time-library-functions"></a>3. fonctions de la bibliothèque Runtime
 
@@ -42,7 +42,7 @@ Les fonctions décrites dans cette section affectent et analysent les threads, l
 
 ### <a name="311-omp_set_num_threads-function"></a>3.1.1 omp_set_num_threads fonction
 
-La fonction `omp_set_num_threads` définit le nombre de threads par défaut à utiliser pour les régions parallèles ultérieures qui ne spécifient pas de clause `num_threads`. Le format est le suivant :
+La fonction `omp_set_num_threads` définit le nombre de threads par défaut à utiliser pour les régions parallèles ultérieures qui ne spécifient pas de clause `num_threads`. au format suivant :
 
 ```cpp
 #include <omp.h>
@@ -66,7 +66,7 @@ Pour plus d’informations, consultez [omp_set_dynamic](#317-omp_set_dynamic-fun
 
 ### <a name="312-omp_get_num_threads-function"></a>3.1.2 omp_get_num_threads fonction
 
-La fonction `omp_get_num_threads` retourne le nombre de threads actuellement dans l’équipe qui exécute la région parallèle à partir de laquelle elle est appelée. Le format est le suivant :
+La fonction `omp_get_num_threads` retourne le nombre de threads actuellement dans l’équipe qui exécute la région parallèle à partir de laquelle elle est appelée. au format suivant :
 
 ```cpp
 #include <omp.h>
@@ -87,7 +87,7 @@ Pour plus d’informations, consultez [omp_set_dynamic](#317-omp_set_dynamic-fun
 
 ### <a name="313-omp_get_max_threads-function"></a>3.1.3 omp_get_max_threads fonction
 
-La fonction `omp_get_max_threads` retourne un entier qui est garanti au moins aussi grand que le nombre de threads qui seraient utilisés pour former une équipe si une région parallèle sans clause `num_threads` devait être affichée à ce stade du code. Le format est le suivant :
+La fonction `omp_get_max_threads` retourne un entier qui est garanti au moins aussi grand que le nombre de threads qui seraient utilisés pour former une équipe si une région parallèle sans clause `num_threads` devait être affichée à ce stade du code. au format suivant :
 
 ```cpp
 #include <omp.h>
@@ -96,13 +96,9 @@ int omp_get_max_threads(void);
 
 L’exemple suivant exprime une limite inférieure de la valeur de `omp_get_max_threads`:
 
-```
+> *Threads-utilisé-pour-Next-team* <= `omp_get_max_threads`
 
-threads-used-for-next-team
-<= omp_get_max_threads
-```
-
-Notez que si une autre région parallèle utilise la clause `num_threads` pour demander un nombre spécifique de threads, la garantie sur la limite inférieure du résultat de `omp_get_max_threads` aucun long blocage.
+Notez que si une autre région parallèle utilise la clause `num_threads` pour demander un nombre spécifique de threads, la garantie sur la limite inférieure du résultat de `omp_get_max_threads` ne contient plus.
 
 La valeur de retour de la fonction `omp_get_max_threads` peut être utilisée pour allouer dynamiquement un espace de stockage suffisant pour tous les threads de l’équipe formés à la région parallèle suivante.
 
@@ -117,7 +113,7 @@ La valeur de retour de la fonction `omp_get_max_threads` peut être utilisée po
 
 La fonction `omp_get_thread_num` retourne le numéro de thread, au sein de son équipe, du thread qui exécute la fonction. Le numéro de thread se situe entre 0 et `omp_get_num_threads()`-1, inclus. Le thread principal de l’équipe est le thread 0.
 
-Le format est le suivant :
+au format suivant :
 
 ```cpp
 #include <omp.h>
@@ -132,7 +128,7 @@ En cas d’appel à partir d’une région de série, `omp_get_thread_num` retou
 
 ### <a name="315-omp_get_num_procs-function"></a>fonction de omp_get_num_procs 3.1.5
 
-La fonction `omp_get_num_procs` retourne le nombre de processeurs disponibles pour le programme au moment où la fonction est appelée. Le format est le suivant :
+La fonction `omp_get_num_procs` retourne le nombre de processeurs disponibles pour le programme au moment où la fonction est appelée. au format suivant :
 
 ```cpp
 #include <omp.h>
@@ -141,7 +137,7 @@ int omp_get_num_procs(void);
 
 ### <a name="316-omp_in_parallel-function"></a>3.1.6 omp_in_parallel fonction)
 
-La fonction `omp_in_parallel` retourne une valeur différente de zéro si elle est appelée dans l’étendue dynamique d’une région parallèle s’exécutant en parallèle ; Sinon, elle retourne 0. Le format est le suivant :
+La fonction `omp_in_parallel` retourne une valeur différente de zéro si elle est appelée dans l’étendue dynamique d’une région parallèle s’exécutant en parallèle ; Sinon, elle retourne 0. au format suivant :
 
 ```cpp
 #include <omp.h>
@@ -152,7 +148,7 @@ Cette fonction retourne une valeur différente de zéro quand elle est appelée 
 
 ### <a name="317-omp_set_dynamic-function"></a>3.1.7 omp_set_dynamic fonction)
 
-La fonction `omp_set_dynamic` active ou désactive l’ajustement dynamique du nombre de threads disponibles pour l’exécution des régions parallèles. Le format est le suivant :
+La fonction `omp_set_dynamic` active ou désactive l’ajustement dynamique du nombre de threads disponibles pour l’exécution des régions parallèles. au format suivant :
 
 ```cpp
 #include <omp.h>
@@ -171,7 +167,7 @@ La valeur par défaut pour l’ajustement dynamique des threads est définie par
 
 #### <a name="microsoft-specific"></a>Spécifique à Microsoft
 
-La prise en charge actuelle de `omp_get_dynamic` et `omp_set_dynamic` se présente comme suit : 
+La prise en charge actuelle de `omp_get_dynamic` et `omp_set_dynamic` se présente comme suit :
 
 Le paramètre d’entrée de `omp_set_dynamic` n’affecte pas la stratégie de thread et ne modifie pas le nombre de threads. `omp_get_num_threads` retourne toujours le nombre défini par l’utilisateur, s’il est défini, ou le numéro de thread par défaut. Dans l’implémentation Microsoft actuelle, `omp_set_dynamic(0)` désactive le Threading dynamique afin que l’ensemble de threads existant puisse être réutilisé pour la région parallèle suivante. `omp_set_dynamic(1)` active le Threading dynamique en ignorant l’ensemble existant de threads et en créant un nouvel ensemble pour la région parallèle à venir. Le nombre de threads dans le nouvel ensemble est identique à celui de l’ancien jeu et est basé sur la valeur de retour de `omp_get_num_threads`. Par conséquent, pour des performances optimales, utilisez `omp_set_dynamic(0)` pour réutiliser les threads existants.
 
@@ -183,7 +179,7 @@ Le paramètre d’entrée de `omp_set_dynamic` n’affecte pas la stratégie de 
 
 ### <a name="318-omp_get_dynamic-function"></a>3.1.8 omp_get_dynamic fonction)
 
-La fonction `omp_get_dynamic` retourne une valeur différente de zéro si l’ajustement dynamique des threads est activé, et retourne 0 dans le cas contraire. Le format est le suivant :
+La fonction `omp_get_dynamic` retourne une valeur différente de zéro si l’ajustement dynamique des threads est activé, et retourne 0 dans le cas contraire. au format suivant :
 
 ```cpp
 #include <omp.h>
@@ -198,7 +194,7 @@ Si l’implémentation n’implémente pas l’ajustement dynamique du nombre de
 
 ### <a name="319-omp_set_nested-function"></a>3.1.9 omp_set_nested fonction)
 
-La fonction `omp_set_nested` active ou désactive le parallélisme imbriqué. Le format est le suivant :
+La fonction `omp_set_nested` active ou désactive le parallélisme imbriqué. au format suivant :
 
 ```cpp
 #include <omp.h>
@@ -220,7 +216,7 @@ Lorsque le parallélisme imbriqué est activé, le nombre de threads utilisés p
 
 ### <a name="3110-omp_get_nested-function"></a>3.1.10 omp_get_nested fonction)
 
-La fonction `omp_get_nested` retourne une valeur différente de zéro si le parallélisme imbriqué est activé et 0 si elle est désactivée. Pour plus d’informations sur le parallélisme imbriqué, consultez [omp_set_nested](#319-omp_set_nested-function). Le format est le suivant :
+La fonction `omp_get_nested` retourne une valeur différente de zéro si le parallélisme imbriqué est activé et 0 si elle est désactivée. Pour plus d’informations sur le parallélisme imbriqué, consultez [omp_set_nested](#319-omp_set_nested-function). au format suivant :
 
 ```cpp
 #include <omp.h>
@@ -253,7 +249,7 @@ Les fonctions de verrouillage OpenMP accèdent à la variable Lock de manière �
 
 ### <a name="321-omp_init_lock-and-omp_init_nest_lock-functions"></a>3.2.1 omp_init_lock et fonctions omp_init_nest_lock
 
-Ces fonctions fournissent le seul moyen d’initialiser un verrou. Chaque fonction initialise le verrou associé au *verrou* de paramètre pour une utilisation dans les appels à venir. Le format est le suivant :
+Ces fonctions fournissent le seul moyen d’initialiser un verrou. Chaque fonction initialise le verrou associé au *verrou* de paramètre pour une utilisation dans les appels à venir. au format suivant :
 
 ```cpp
 #include <omp.h>
@@ -265,7 +261,7 @@ L’état initial est déverrouillé (autrement dit, aucun thread ne possède le
 
 ### <a name="322-omp_destroy_lock-and-omp_destroy_nest_lock-functions"></a>3.2.2 omp_destroy_lock et fonctions omp_destroy_nest_lock
 
-Ces fonctions permettent de s’assurer que le *verrou* de la variable pointé de verrouillage n’est pas initialisé. Le format est le suivant :
+Ces fonctions permettent de s’assurer que le *verrou* de la variable pointé de verrouillage n’est pas initialisé. au format suivant :
 
 ```cpp
 #include <omp.h>
@@ -277,7 +273,7 @@ Il n’est pas conforme d’appeler l’une de ces routines avec une variable Lo
 
 ### <a name="323-omp_set_lock-and-omp_set_nest_lock-functions"></a>3.2.3 omp_set_lock et fonctions omp_set_nest_lock
 
-Chacune de ces fonctions bloque le thread qui exécute la fonction jusqu’à ce que le verrou spécifié soit disponible, puis définit le verrou. Un verrou simple est disponible s’il est déverrouillé. Un verrou imbriqué est disponible s’il est déverrouillé ou s’il est déjà détenu par le thread qui exécute la fonction. Le format est le suivant :
+Chacune de ces fonctions bloque le thread qui exécute la fonction jusqu’à ce que le verrou spécifié soit disponible, puis définit le verrou. Un verrou simple est disponible s’il est déverrouillé. Un verrou imbriqué est disponible s’il est déverrouillé ou s’il est déjà détenu par le thread qui exécute la fonction. au format suivant :
 
 ```cpp
 #include <omp.h>
@@ -291,7 +287,7 @@ Pour un verrou imbriqué, l’argument de la fonction `omp_set_nest_lock` doit p
 
 ### <a name="324-omp_unset_lock-and-omp_unset_nest_lock-functions"></a>3.2.4 omp_unset_lock et fonctions omp_unset_nest_lock
 
-Ces fonctions permettent de libérer la propriété d’un verrou. Le format est le suivant :
+Ces fonctions permettent de libérer la propriété d’un verrou. au format suivant :
 
 ```cpp
 #include <omp.h>
@@ -307,7 +303,7 @@ Pour un verrou imbriqué, la fonction `omp_unset_nest_lock` décrémente le nomb
 
 ### <a name="325-omp_test_lock-and-omp_test_nest_lock-functions"></a>3.2.5 omp_test_lock et fonctions omp_test_nest_lock
 
-Ces fonctions essaient de définir un verrou, mais ne bloquent pas l’exécution du thread. Le format est le suivant :
+Ces fonctions essaient de définir un verrou, mais ne bloquent pas l’exécution du thread. au format suivant :
 
 ```cpp
 #include <omp.h>
@@ -330,7 +326,7 @@ Les fonctions décrites dans cette section prennent en charge un minuteur d’ho
 
 ### <a name="331-omp_get_wtime-function"></a>fonction omp_get_wtime 3.3.1
 
-La fonction `omp_get_wtime` retourne une valeur à virgule flottante double précision égale à la durée d’horloge écoulée en secondes depuis une certaine « heure dans le passé ».  Le « temps passé » réel est arbitraire, mais il est garanti qu’il ne change pas pendant l’exécution du programme d’application. Le format est le suivant :
+La fonction `omp_get_wtime` retourne une valeur à virgule flottante double précision égale à la durée d’horloge écoulée en secondes depuis une certaine « heure dans le passé ».  Le « temps passé » réel est arbitraire, mais il est garanti qu’il ne change pas pendant l’exécution du programme d’application. au format suivant :
 
 ```cpp
 #include <omp.h>
@@ -352,7 +348,7 @@ Les heures retournées sont « horaires par thread », ce qui signifie qu’el
 
 ### <a name="332-omp_get_wtick-function"></a>3.3.2 omp_get_wtick fonction
 
-La fonction `omp_get_wtick` retourne une valeur à virgule flottante double précision égale au nombre de secondes entre les battements d’horloge successifs. Le format est le suivant :
+La fonction `omp_get_wtick` retourne une valeur à virgule flottante double précision égale au nombre de secondes entre les battements d’horloge successifs. au format suivant :
 
 ```cpp
 #include <omp.h>

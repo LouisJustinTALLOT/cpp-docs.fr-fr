@@ -8,20 +8,20 @@ f1_keywords:
 helpviewer_keywords:
 - unsupported_feature class
 ms.assetid: 6b1ab917-df13-48c7-9648-7cb2465a0ff5
-ms.openlocfilehash: 451318bfbcfb9c5e002677556944e3499c0ed5fb
-ms.sourcegitcommit: 00e26915924869cd7eb3c971a7d0604388abd316
+ms.openlocfilehash: 561f0a258943f6d7e1c0f1b5cae716592c931fbc
+ms.sourcegitcommit: a8ef52ff4a4944a1a257bdaba1a3331607fb8d0f
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/10/2019
-ms.locfileid: "65525419"
+ms.lasthandoff: 02/11/2020
+ms.locfileid: "77127710"
 ---
-# <a name="unsupportedfeature-class"></a>unsupported_feature, classe
+# <a name="unsupported_feature-class"></a>unsupported_feature, classe
 
 Exception levée lorsqu’une fonctionnalité non prise en charge est utilisée.
 
 ## <a name="syntax"></a>Syntaxe
 
-```
+```cpp
 class unsupported_feature : public runtime_exception;
 ```
 
@@ -29,9 +29,9 @@ class unsupported_feature : public runtime_exception;
 
 ### <a name="public-constructors"></a>Constructeurs publics
 
-|Nom|Description|
+|Name|Description|
 |----------|-----------------|
-|[unsupported_feature, constructeur](#unsupported_feature)|Construit une nouvelle instance de la `unsupported_feature` exception.|
+|[Constructeur unsupported_feature](#unsupported_feature)|Construit une nouvelle instance de l’exception `unsupported_feature`.|
 
 ## <a name="inheritance-hierarchy"></a>Hiérarchie d'héritage
 
@@ -41,13 +41,13 @@ class unsupported_feature : public runtime_exception;
 
 `unsupported_feature`
 
-## <a name="unsupported_feature"></a> unsupported_feature
+## <a name="unsupported_feature"></a>unsupported_feature
 
-  Construit une nouvelle instance de la `unsupported_feature` exception.
+  Construit une nouvelle instance de l’exception `unsupported_feature`.
 
 ### <a name="syntax"></a>Syntaxe
 
-```
+```cpp
 explicit unsupported_feature(
     const char * _Message ) throw();
 
@@ -57,17 +57,17 @@ unsupported_feature() throw();
 ### <a name="parameters"></a>Paramètres
 
 *_Message*<br/>
-Description de l'erreur.
+Description de l’erreur.
 
 ### <a name="return-value"></a>Valeur de retour
 
 Objet `unsupported_feature`.
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
-**En-tête :** amprt.h
+**En-tête :** amprt. h
 
-**Espace de noms :** Concurrence
+**Espace de noms :** Concurrency
 
 ## <a name="see-also"></a>Voir aussi
 
