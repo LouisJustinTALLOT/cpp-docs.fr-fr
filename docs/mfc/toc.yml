@@ -323,7 +323,7 @@
           items:
             - name: Automation
               href: automation.md
-            - name: Clients Automation
+            - name: clients Automation
               expanded: false
               items:
                 - name: Clients Automation
@@ -333,7 +333,7 @@
             - name: Serveurs Automation
               expanded: false
               items:
-                - name: Serveurs Automation
+                - name: Automation (serveurs)
                   href: automation-servers.md
                 - name: 'Serveurs Automation : Problèmes de durée de vie des objets'
                   href: automation-servers-object-lifetime-issues.md
@@ -428,17 +428,8 @@
               href: data-objects-and-data-sources-creation-and-destruction.md
             - name: 'Objets de données et sources de données : Manipulation'
               href: data-objects-and-data-sources-manipulation.md
-        - name: Glisser-déplacer (OLE)
-          expanded: false
-          items:
-            - name: Glisser-déplacer (OLE)
-              href: drag-and-drop-ole.md
-            - name: 'Glisser-déposer : Implémentation d’une source d’annulation'
-              href: drag-and-drop-implementing-a-drop-source.md
-            - name: 'Glisser-déposer : Implémentation d’une cible d’annulation'
-              href: drag-and-drop-implementing-a-drop-target.md
-            - name: 'Glisser-déposer : Personnalisation'
-              href: drag-and-drop-customizing.md
+        - name: Glisser-déposer OLE
+          href: drag-and-drop-ole.md
         - name: Menus et ressources (OLE)
           expanded: false
           items:
@@ -520,7 +511,7 @@
           items:
             - name: contrôles ActiveX ;
               href: activex-controls.md
-            - name: Contrôles ActiveX MFC
+            - name: contrôles ActiveX MFC
               expanded: false
               items:
                 - name: Contrôles ActiveX MFC
@@ -1304,7 +1295,7 @@
                 - name: Destruction d’objets de fenêtre
                   expanded: false
                   items:
-                    - name: Destruction d’objets de fenêtre
+                    - name: Destruction d’objets fenêtres
                       href: destroying-window-objects.md
                     - name: Séquence de destruction de fenêtres
                       href: window-destruction-sequence.md
@@ -1473,7 +1464,7 @@
       href: tn014-custom-controls.md
     - name: 'TN016 : Utilisation de l’héritage multiple C++ avec MFC'
       href: tn016-using-cpp-multiple-inheritance-with-mfc.md
-    - name: 'TN017 : Destruction d’objets de fenêtre'
+    - name: 'TN017 : Destruction d’objets fenêtres'
       href: tn017-destroying-window-objects.md
     - name: 'TN020 : Conventions de dénomination d’ID et de numérotation'
       href: tn020-id-naming-and-numbering-conventions.md
@@ -1663,7 +1654,7 @@
           href: windows-sockets-classes.md
         - name: Classes Internet Win32
           href: win32-internet-classes.md
-    - name: Classes OLE
+    - name: "classes\_OLE"
       expanded: false
       items:
         - name: Classes OLE
@@ -1708,7 +1699,7 @@
       href: walkthrough-adding-animation-to-an-mfc-project.md
 - name: Référence sur l’API MFC
   items:
-    - name: Classes MFC
+    - name: "classes\_MFC"
       expanded: false
       items:
         - name: Classes MFC
@@ -2749,7 +2740,7 @@
               href: reference/cdaoquerydefinfo-structure.md
             - name: Structure CDaoRelationInfo
               href: reference/cdaorelationinfo-structure.md
-            - name: CDaoRelationFieldInfo (structure)
+            - name: Structure CDaoRelationFieldInfo
               href: reference/cdaorelationfieldinfo-structure.md
             - name: Structure CDaoTableDefInfo
               href: reference/cdaotabledefinfo-structure.md
