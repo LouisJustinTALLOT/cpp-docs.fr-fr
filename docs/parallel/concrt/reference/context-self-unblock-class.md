@@ -8,20 +8,20 @@ f1_keywords:
 helpviewer_keywords:
 - context_self_unblock class
 ms.assetid: 9601cd28-4f40-4c2e-89ab-747068956331
-ms.openlocfilehash: 900dc68eac4441bd1db3818d3c1f30698b80a6e0
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 883d5630251a6ea13afba1164f221a0da1773c17
+ms.sourcegitcommit: a8ef52ff4a4944a1a257bdaba1a3331607fb8d0f
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62296174"
+ms.lasthandoff: 02/11/2020
+ms.locfileid: "77143113"
 ---
-# <a name="contextselfunblock-class"></a>context_self_unblock, classe
+# <a name="context_self_unblock-class"></a>context_self_unblock, classe
 
 Cette classe décrit une exception levée quand la méthode `Unblock` d'un objet `Context` est appelée à partir du même contexte. Elle indique une tentative par un contexte donné de se débloquer.
 
 ## <a name="syntax"></a>Syntaxe
 
-```
+```cpp
 class context_self_unblock : public std::exception;
 ```
 
@@ -29,7 +29,7 @@ class context_self_unblock : public std::exception;
 
 ### <a name="public-constructors"></a>Constructeurs publics
 
-|Nom|Description|
+|Name|Description|
 |----------|-----------------|
 |[context_self_unblock](#ctor)|Surchargé. Construit un objet `context_self_unblock`.|
 
@@ -39,17 +39,17 @@ class context_self_unblock : public std::exception;
 
 `context_self_unblock`
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
-**En-tête :** concrt.h
+**En-tête :** concrt. h
 
 **Espace de noms :** concurrency
 
-##  <a name="ctor"></a> context_self_unblock
+## <a name="ctor"></a>context_self_unblock
 
 Construit un objet `context_self_unblock`.
 
-```
+```cpp
 explicit _CRTIMP context_self_unblock(_In_z_ const char* _Message) throw();
 
 context_self_unblock() throw();

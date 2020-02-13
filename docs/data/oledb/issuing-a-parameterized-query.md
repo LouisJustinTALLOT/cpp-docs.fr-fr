@@ -4,16 +4,16 @@ ms.date: 10/19/2018
 helpviewer_keywords:
 - parameter queries, running using CCommand class
 ms.assetid: aedb0fce-52a4-4c97-a5c9-b2114be6c3b0
-ms.openlocfilehash: 1ac029d954fc6cefaae6349e01af7728ca0886fd
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 4964d63846e14c0eaf4ff7c7fc80e14237673f69
+ms.sourcegitcommit: a8ef52ff4a4944a1a257bdaba1a3331607fb8d0f
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62390657"
+ms.lasthandoff: 02/11/2020
+ms.locfileid: "77127636"
 ---
 # <a name="issuing-a-parameterized-query"></a>Émission d'une requête paramétrée
 
-L’exemple suivant émet une requête paramétrée simple qui Récupère les enregistrements avec un champ d’âge (qui est supérieur à 30) à partir d’une table dans une base de données Microsoft Access. Pour prendre en charge le paramètre, l’enregistrement de l’utilisateur doit avoir un mappage supplémentaire. Le code suivant, dans un projet ATL, utilise le `CCommand` classe au lieu du `CTable` classe utilisée dans l’exemple précédent, [parcourir un ensemble de lignes Simple](../../data/oledb/traversing-a-simple-rowset.md).
+L’exemple suivant présente une requête paramétrable simple qui extrait des enregistrements avec un champ d’âge (supérieur à 30) à partir d’une table dans une base de données Microsoft Access. Pour prendre en charge le paramètre, l’enregistrement de l’utilisateur doit avoir un mappage supplémentaire. Dans un projet ATL, le code suivant utilise la classe `CCommand` à la place de la classe `CTable` utilisée dans l’exemple précédent, en [parcourant un ensemble de lignes simple](../../data/oledb/traversing-a-simple-rowset.md).
 
 ```cpp
 #include <atldbcli.h>
@@ -51,7 +51,7 @@ int main()
 }
 ```
 
-L’enregistrement de l’utilisateur, `CArtists`, ressemble à ceci :
+L’enregistrement utilisateur, `CArtists`, ressemble à cet exemple :
 
 ```cpp
 class CArtists
