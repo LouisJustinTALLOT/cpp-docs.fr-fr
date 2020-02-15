@@ -1,50 +1,51 @@
 ---
 title: Options EDITBIN
-ms.date: 11/04/2016
+description: Guide de référence des options de ligne de commande de l’utilitaire Microsoft EDITBIN.
+ms.date: 02/09/2020
 f1_keywords:
 - editbin
 helpviewer_keywords:
 - EDITBIN program, options
 ms.assetid: 2da9f88e-cbab-4d64-bb66-ef700535230f
-ms.openlocfilehash: e7338c6a45d74aa8efac1b72683cca7661c62e0a
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: c27172522ceabeccd06d7b957aa791edc49beec8
+ms.sourcegitcommit: 8414cd91297dea88c480e208c7b5301db9972f19
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62271851"
+ms.lasthandoff: 02/14/2020
+ms.locfileid: "77257700"
 ---
 # <a name="editbin-options"></a>Options EDITBIN
 
-Vous pouvez y recourir pour modifier des fichiers objets, les fichiers exécutables et les bibliothèques de liens dynamiques (DLL). Options spécifient les modifications apportées par EDITBIN.
+Vous pouvez utiliser EDITBIN pour modifier des fichiers objets, des fichiers exécutables et des bibliothèques de liens dynamiques (dll). Les options spécifient les modifications apportées par EDITBIN.
 
-Une option est constituée d’un spécificateur d’option, qui est un tiret (-) ou une barre oblique (/), suivie du nom de l’option. Noms d’options ne peuvent pas être abrégés. Certaines options acceptent des arguments qui sont spécifiés après le signe deux-points ( :)). Aucun espace ni les onglets ne sont autorisés au sein de la spécification d’une option. Utiliser un ou plusieurs espaces ou des tabulations pour séparer les spécifications des options sur la ligne de commande. Les noms des options et leurs arguments de mot clé ou les arguments de nom de fichier ne respectent pas la casse. Par exemple, - bind et /BIND ont la même signification.
+Une option se compose d’un spécificateur d’option, qui est un tiret (`-`) ou une barre oblique (`/`), suivi du nom de l’option. Les noms d’options ne peuvent pas être abrégés. Certaines options acceptent les arguments spécifiés après un signe deux-points (`:`). Aucun espace ou onglet n’est autorisé dans une spécification d’option. Utilisez un ou plusieurs espaces ou tabulations pour séparer les spécifications de l’option sur la ligne de commande. Les noms des options et leurs arguments de mot clé ou de nom de fichier ne respectent pas la casse. Par exemple, `-bind` et `/BIND` signifient la même chose.
 
-EDITBIN a les options suivantes :
+EDITBIN offre les options suivantes :
 
 |Option|Objectif|
 |------------|-------------|
 |[/ALLOWBIND](allowbind.md)|Spécifie si une DLL peut être liée.|
-|[/ALLOWISOLATION](allowisolation.md)|Spécifie le comportement de recherche de manifeste de fichier exécutable ou de DLL.|
-|[/APPCONTAINER](appcontainer.md)|Spécifie si l’application doit s’exécuter au sein d’un AppContainer — par exemple, une application UWP.|
-|[/BIND](bind.md)|Définit les adresses pour les points d’entrée dans les objets spécifiés pour le temps de chargement de vitesse.|
-|[/DYNAMICBASE](dynamicbase.md)|Spécifie si la DLL ou une image exécutable pouvant être aléatoirement redéfinie au moment du chargement à l’aide de randomisation du format d’espace d’adresse (ASLR).|
-|[/ERRORREPORT](errorreport-editbin-exe.md)|Signale les erreurs internes à Microsoft.|
-|[/HEAP](heap.md)|Définit la taille du tas de l’image exécutable en octets.|
-|[/HIGHENTROPYVA](highentropyva.md)|Spécifie si la DLL ou une image exécutable prend en charge de forte entropie (64 bits) espace randomisation d’adresse (ASLR).|
-|[/INTEGRITYCHECK](integritycheck.md)|Spécifie s’il faut vérifier la signature numérique au moment du chargement.|
-|[/LARGEADDRESSAWARE](largeaddressaware.md)|Spécifie si l’objet prend en charge les adresses supérieures à deux gigaoctets.|
+|[/ALLOWISOLATION](allowisolation.md)|Spécifie le comportement de recherche de manifeste de fichier DLL ou exécutable.|
+|[/APPCONTAINER](appcontainer.md)|Spécifie si l’application doit s’exécuter dans un AppContainer, par exemple une application UWP.|
+|[/BIND](bind.md)|Définit les adresses des points d’entrée dans les objets spécifiés pour accélérer le temps de chargement.|
+|[/DYNAMICBASE](dynamicbase.md)|Spécifie si la DLL ou l’image exécutable peut être redéfinie de façon aléatoire au moment du chargement à l’aide de la randomisation du format d’espace d’adresse (ASLR).|
+|[/ERRORREPORT](errorreport-editbin-exe.md)| Action déconseillée. Le rapport d’erreurs est contrôlé par les paramètres d' [rapport d’erreurs Windows (WER)](/windows/win32/wer/windows-error-reporting) . |
+|[/HEAP](heap.md)|Définit en octets la taille du tas de l’image exécutable.|
+|[/HIGHENTROPYVA](highentropyva.md)|Spécifie si l’image DLL ou exécutable prend en charge la randomisation du format d’espace d’adresse (ASLR) de forte entropie (64 bits).|
+|[/INTEGRITYCHECK](integritycheck.md)|Spécifie si la signature numérique doit être vérifiée au moment du chargement.|
+|[/LARGEADDRESSAWARE](largeaddressaware.md)|Spécifie si l’objet prend en charge les adresses de plus de 2 gigaoctets.|
 |[/NOLOGO](nologo-editbin.md)|Supprime la bannière de démarrage EDITBIN.|
 |[/NXCOMPAT](nxcompat.md)|Spécifie si l’image exécutable est compatible avec la prévention de l’exécution des données Windows.|
 |[/REBASE](rebase.md)|Définit les adresses de base pour les objets spécifiés.|
 |[/RELEASE](release.md)|Définit la somme de contrôle dans l’en-tête.|
 |[/SECTION](section-editbin.md)|Remplace les attributs d’une section.|
-|[/STACK](stack.md)|Définit la taille de pile de l’image exécutable en octets.|
+|[/STACK](stack.md)|Définit la taille de la pile de l’image exécutable, en octets.|
 |[/SUBSYSTEM](subsystem.md)|Spécifie l’environnement d’exécution.|
-|[/SWAPRUN](swaprun.md)|Spécifie que l’image exécutable doit être copié dans le fichier d’échange et puis exécutez à partir de là.|
+|[/SWAPRUN](swaprun.md)|Spécifie que l’image exécutable est copiée dans le fichier d’échange, puis exécutée à partir de là.|
 |[/TSAWARE](tsaware.md)|Spécifie que l’application est conçue pour s’exécuter dans un environnement multi-utilisateur.|
 |[/VERSION](version.md)|Définit le numéro de version dans l’en-tête.|
 
 ## <a name="see-also"></a>Voir aussi
 
-[Outils de génération MSVC supplémentaires](c-cpp-build-tools.md)<br/>
+[Outils de génération MSVC supplémentaires](c-cpp-build-tools.md)\
 [Informations de référence sur EDITBIN](editbin-reference.md)

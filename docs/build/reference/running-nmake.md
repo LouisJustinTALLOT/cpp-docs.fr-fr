@@ -1,6 +1,7 @@
 ---
 title: Exécution de NMAKE
-ms.date: 10/29/2019
+description: Guide de référence des options de ligne de commande Microsoft NMAKE.
+ms.date: 02/09/2020
 helpviewer_keywords:
 - targets, building
 - response files, NMAKE
@@ -10,12 +11,12 @@ helpviewer_keywords:
 - NMAKE program, running
 - command files, NMAKE
 ms.assetid: 0421104d-8b7b-4bf3-86c1-928d9b7c1a8c
-ms.openlocfilehash: ed56b7cd69b683caa84f184d9d72e70aac12add3
-ms.sourcegitcommit: 6ed1bc5b26dc60a780c1fc5f2f19d57ba1dc47d8
+ms.openlocfilehash: bfada33a89c04d25bf7444cbf3b1e7ef3ed44385
+ms.sourcegitcommit: 8414cd91297dea88c480e208c7b5301db9972f19
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/30/2019
-ms.locfileid: "73144542"
+ms.lasthandoff: 02/14/2020
+ms.locfileid: "77257587"
 ---
 # <a name="running-nmake"></a>Exécution de NMAKE
 
@@ -33,14 +34,14 @@ Le fichier texte de *fichier de commandes* (ou fichier réponse) contient une en
 
 Les options NMAKE sont décrites dans le tableau suivant. Les options sont précédées d’une barre oblique (`/`) ou d’un tiret (`-`), et ne respectent pas la casse. Utilisez [`!CMDSWITCHES`](makefile-preprocessing-directives.md) pour modifier les paramètres d’option dans un Makefile ou dans Tools. ini.
 
-| Option | Fonction |
+| Option | Objectif |
 | ------------ | ------------- |
 | **/A** | Force la génération de toutes les cibles évaluées, même si elles ne sont pas obsolètes par rapport aux dépendants. Ne force pas les builds de cibles non associées. |
 | **/B** | Force la génération même si les horodateurs sont égaux. Recommandé uniquement pour les systèmes rapides (résolution de deux secondes ou moins). |
 | **/C** | Supprime la sortie par défaut, y compris les erreurs ou avertissements NMAKE non mortels, les horodateurs et le message de Copyright NMAKE. Supprime les avertissements émis par **/k**. |
 | **/D** | Affiche les horodateurs de chaque cible et dépendant évalués, ainsi qu’un message lorsqu’une cible n’existe pas. Utile avec **/p** pour déboguer un Makefile. Utilisez `!CMDSWITCHES` pour définir ou effacer **/d** dans le cadre d’un Makefile. |
 | **/E** | Fait en sorte que les variables d’environnement remplacent les définitions de macros Makefile. |
-| **/errorreport** [ **aucune** &#124; **invite** &#124; de **file d’attente d'** &#124; **envoi** ] | Si NMAKE. exe échoue au moment de l’exécution, vous pouvez utiliser **/errorreport** pour envoyer des informations à Microsoft sur ces erreurs internes.<br /><br /> Pour plus d’informations, consultez l’article [/errorReport (Signaler les erreurs internes du compilateur)](errorreport-report-internal-compiler-errors.md). |
+| **/errorreport** [ **aucune** &#124; **invite** &#124; de **file d’attente d'** &#124; **envoi** ] | Action déconseillée. Les paramètres de contrôle d' [rapport d’erreurs Windows (WER)](/windows/win32/wer/windows-error-reporting) signalent. |
 | **/F** *nom de fichier* | Spécifie *filename* comme Makefile. Les espaces ou les tabulations peuvent précéder le *nom de fichier*. Spécifiez **/f** une fois pour chaque Makefile. Pour fournir un Makefile à partir d’une entrée standard, spécifiez un tiret (`-`) pour le *nom de fichier*et terminez l’entrée au clavier par **F6** ou **Ctrl + Z**. |
 | **/G** | Affiche les Makefiles inclus dans la directive `!INCLUDE`. Pour plus d’informations, consultez [directives de prétraitement](makefile-preprocessing-directives.md)d’un Makefile. |
 | **/Help**, **/ ?** | Affiche un bref résumé de la syntaxe de la ligne de commande NMAKE. |
@@ -71,7 +72,7 @@ NMAKE retourne les codes de sortie suivants :
 | 1 | Build incomplète (émis uniquement quand l’utilisation de **/k** est utilisée) |
 | 2 | Erreur de programme, peut-être provoquée par l’un des problèmes suivants :<br /> -Erreur de syntaxe dans le Makefile<br /> -Code d’erreur ou de sortie d’une commande<br /> -Interruption par l’utilisateur |
 | 4 | Erreur système : mémoire insuffisante |
-| 255 | La cible n’est pas à jour (émis uniquement lorsque **/q** est utilisé) |
+| 255 | La cible n’est pas à jour (délivré uniquement lorsque **/q** est utilisé) |
 
 ## <a name="see-also"></a>Voir aussi
 

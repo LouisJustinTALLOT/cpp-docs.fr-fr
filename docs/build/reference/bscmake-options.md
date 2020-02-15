@@ -1,6 +1,7 @@
 ---
 title: Options BSCMAKE
-ms.date: 11/04/2016
+description: Référence aux options de ligne de commande de l’utilitaire Microsoft BSCMAKE.
+ms.date: 02/09/2020
 f1_keywords:
 - VC.Project.VCBscMakeTool.OutputFile
 - VC.Project.VCBscMakeTool.SuppressStartupBanner
@@ -29,69 +30,67 @@ helpviewer_keywords:
 - /Es BSCMAKE option
 - Ei BSCMAKE option
 ms.assetid: fa2f1e06-c684-41cf-80dd-6a554835ebd2
-ms.openlocfilehash: b1d62e8d122cb4f08feef60d6936359b3e246749
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: f0fd0e01d3325267ac175435aab65b5d0a9d47ea
+ms.sourcegitcommit: 8414cd91297dea88c480e208c7b5301db9972f19
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62272869"
+ms.lasthandoff: 02/14/2020
+ms.locfileid: "77257791"
 ---
 # <a name="bscmake-options"></a>Options BSCMAKE
 
 > [!WARNING]
-> Bien que BSCMAKE soit toujours installé avec Visual Studio, il n'est plus utilisé par l'environnement IDE. Depuis Visual Studio 2008, les informations de consultation et de symbole sont stockées automatiquement dans un fichier SQL Server .sdf, dans le dossier de solution.
+> Bien que BSCMAKE soit toujours installé avec Visual Studio, il n'est plus utilisé par l'environnement IDE. Depuis Visual Studio 2008, les informations de navigation et de symboles sont stockées automatiquement dans un fichier SQL Server *`.sdf`* dans le dossier de solution.
 
-Cette section décrit les options disponibles pour contrôler BSCMAKE. Plusieurs options contrôlent le contenu du fichier d’informations de consultation en excluant ou incluant certaines informations. Les options d’exclusion peuvent autoriser BSCMAKE accélère l’exécution et peuvent aboutir dans un fichier .bsc plus petit. Noms d’options respectent la casse (à l’exception de **/Help** et **/NOLOGO**).
+Cette section décrit les options disponibles pour le contrôle de BSCMAKE. Plusieurs options contrôlent le contenu du fichier d’informations de consultation en excluant ou incluant certaines informations. Les options d’exclusion peuvent permettre à BSCMAKE de s’exécuter plus rapidement et peuvent entraîner une plus petite *`.bsc`* fichier. Les noms d’option respectent la casse (à l’exception de **/Help** et **/nologo**).
 
-Uniquement **/NOLOGO** et **/o** sont disponibles dans l’environnement de développement Visual Studio.  Consultez [propriétés de compilateur et de build C++ définie dans Visual Studio](../working-with-project-properties.md) pour plus d’informations sur accéder aux pages de propriétés d’un projet.
+Seuls **/nologo** et **/o** sont disponibles dans l’environnement de développement Visual Studio.  Pour plus d’informations sur l’accès aux pages de propriétés d’un projet, consultez [ C++ définir des propriétés de compilation et de génération dans Visual Studio](../working-with-project-properties.md) .
 
-**/EI (** *filename*... **)**<br/>
-Exclut le contenu des fichiers include spécifié à partir du fichier d’informations de navigation. Pour spécifier plusieurs fichiers, séparez les noms par un espace et placez la liste entre parenthèses. Parenthèses ne sont pas nécessaires si vous spécifiez une seule *filename*. Utilisez **/Ei** avec la **/es** possibilité d’exclure des fichiers non exclus par **/es**.
+**/EI (nom de**_fichier_... **)** \
+Exclut le contenu des fichiers include spécifiés du fichier d’informations de consultation. Pour spécifier plusieurs fichiers, séparez les noms par un espace et mettez la liste entre parenthèses. Les parenthèses ne sont pas nécessaires si vous spécifiez un seul *nom de fichier*. Utilisez **/EI** avec l’option **/es** pour exclure les fichiers non exclus par **/es**.
 
-**/El**<br/>
-Exclut les symboles locaux. La valeur par défaut consiste à inclure les symboles locaux. Pour plus d’informations sur les symboles locaux, consultez [création d’un fichier .sbr](creating-an-dot-sbr-file.md).
+**/El**\
+Exclut les symboles locaux. La valeur par défaut consiste à inclure les symboles locaux. Pour plus d’informations sur les symboles locaux, consultez [création d’un fichier. SBR](creating-an-dot-sbr-file.md).
 
-**/Em**<br/>
-Exclut les symboles dans le corps de macros. Utilisez **/Em** à inclure uniquement les noms des macros dans le fichier d’informations de consultation. La valeur par défaut consiste à inclure les noms des macros et le résultat de l’expansion macro.
+**/Em**\
+Exclut les symboles dans le corps des macros. Utilisez **/em** pour inclure uniquement les noms des macros dans le fichier d’informations de consultation. La valeur par défaut consiste à inclure les noms des macros et le résultat des expansions de macro.
 
-**/Er (** *symbole*... **)**<br/>
-Exclut les symboles spécifiés à partir du fichier d’informations de navigation. Pour spécifier plusieurs noms de symboles, séparez-les par un espace et placez la liste entre parenthèses. Parenthèses ne sont pas nécessaires si vous spécifiez une seule *symbole*.
+**/Er (** _symbole_... **)** \
+Exclut les symboles spécifiés du fichier d’informations de consultation. Pour spécifier plusieurs noms de symboles, séparez les noms par un espace et mettez la liste entre parenthèses. Les parenthèses ne sont pas nécessaires si vous spécifiez un seul *symbole*.
 
-**/Es**<br/>
-Exclut le fichier d’informations de chaque fichier include spécifié avec un chemin d’accès absolu ou trouvé dans un chemin d’accès absolu spécifié dans la variable d’environnement INCLUDE. (En règle générale, il s’agit du système de fichiers include, qui contiennent un grand nombre d’informations que vous devrez peut-être pas dans votre fichier d’informations de consultation.) Cette option n’exclut pas les fichiers spécifiés sans un chemin d’accès ou avec des chemins d’accès relatifs ou des fichiers qui que se trouvent dans un chemin d’accès relatif dans INCLUDE. Vous pouvez utiliser la **/Ei** option avec **/es** pour exclure des fichiers qui **/es** n’exclut pas. Si vous souhaitez exclure certains fichiers qui **/es** exclut, utilisez **/Ei** au lieu de **/es** et répertorier les fichiers que vous souhaitez exclure.
+**/Es**\
+Exclut tous les fichiers include spécifiés avec un chemin d’accès absolu, ou trouvés dans un chemin d’accès absolu spécifié dans la variable d’environnement INCLUDe. (En général, ces fichiers sont les fichiers include système, qui contiennent de nombreuses informations dont vous n’aurez peut-être pas besoin dans votre fichier d’informations de consultation.) Cette option n’exclut pas les fichiers spécifiés sans chemin d’accès, ou avec des chemins d’accès relatifs, ou les fichiers trouvés dans un chemin d’accès relatif dans INCLUDe. Vous pouvez utiliser l’option **/EI** avec **/es** pour exclure les fichiers que **/es** n’exclut pas. Si vous souhaitez exclure uniquement certains fichiers, utilisez **/EI** au lieu de **/es**, puis répertoriez les fichiers que vous souhaitez exclure.
 
-**/errorreport:**[**none** &#124; **prompt** &#124; **queue** &#124; **send**]<br/>
-Vous permet d’envoyer des informations à Microsoft concernant des erreurs internes dans bscmake.exe.
+**/errorreport :** [**aucune** &#124; **invite** &#124; de **file d’attente d'** &#124; **envoi**] \
+Cette fonction est déconseillée. À compter de Windows Vista, le rapport d’erreurs est contrôlé par les paramètres d' [rapport d’erreurs Windows (WER)](/windows/win32/wer/windows-error-reporting) .
 
-Pour plus d’informations sur **/errorreport**, consultez [/errorReport (signaler les erreurs du compilateur interne)](errorreport-report-internal-compiler-errors.md).
+**/Help**\
+Affiche un résumé de la syntaxe de la ligne de commande BSCMAKE.
 
-**/HELP**<br/>
-Affiche un résumé de la syntaxe de ligne de commande BSCMAKE.
+**/Iu**\
+Comprend les symboles non référencés. Par défaut, BSCMAKE n’enregistre aucun symbole qui est défini mais qui n’est pas référencé. Si un fichier de *`.sbr`* a été compressé, cette option n’a aucun effet pour ce fichier d’entrée, car le compilateur a déjà supprimé les symboles non référencés.
 
-**/Iu**<br/>
-Inclut les symboles non référencés. Par défaut, BSCMAKE n’enregistre pas tous les symboles qui sont définies, mais non référencés. Si un fichier .sbr a été compressé, cette option n’a aucun effet sur ce fichier, car le compilateur a déjà supprimé les symboles non référencés.
+**/n**\
+Force une génération non incrémentielle. Utilisez **/n** pour forcer une version complète du fichier d’informations de consultation, qu’il existe ou non un fichier *`.bsc`* et pour empêcher la troncation des fichiers *`.sbr`* . Découvrez [Comment BSCMAKE génère un fichier. bsc](how-bscmake-builds-a-dot-bsc-file.md).
 
-**/n**<br/>
-Force une génération non incrémentielle. Utilisez **/n** pour forcer une génération complète du fichier d’informations de navigation ou non un fichier .bsc existe et pour empêcher la troncature des fichiers .sbr. Consultez [génération d’un fichier .bsc par BSCMAKE](how-bscmake-builds-a-dot-bsc-file.md).
+**/Nologo**\
+Supprime le message de Copyright BSCMAKE.
 
-**/NOLOGO**<br/>
-Supprime le message de copyright de BSCMAKE.
+**/o**\ de *noms* de fichiers
+Spécifie un nom pour le fichier d’informations de consultation. Par défaut, BSCMAKE donne au fichier d’informations de consultation le nom de base du premier fichier de *`.sbr`* et une extension de *`.bsc`* .
 
-**/o** *filename*<br/>
-Spécifie un nom pour le fichier d’informations de consultation. Par défaut, BSCMAKE donne le fichier d’informations de consultation le nom de base du premier fichier .sbr et une extension .bsc.
+**/S (nom de**_fichier_... **)** \
+Indique à BSCMAKE de traiter le fichier include spécifié la première fois qu’il est rencontré et de l’exclure dans le cas contraire. Utilisez cette option pour enregistrer le temps de traitement lorsqu’un fichier (par exemple, un en-tête ou un *`.h`* , un fichier pour un fichier source *`.c`* ou *`.cpp`* ) est inclus dans plusieurs fichiers sources, mais n’est pas modifié à chaque fois par les directives de prétraitement. Utilisez cette option si un fichier est modifié de manière non importante pour le fichier d’informations de consultation que vous créez. Pour spécifier plusieurs fichiers, séparez les noms par un espace et mettez la liste entre parenthèses. Les parenthèses ne sont pas nécessaires si vous spécifiez un seul *nom de fichier*. Si vous souhaitez exclure le fichier à chaque fois qu’il est inclus, utilisez l’option **/EI** ou **/es** .
 
-**/S (** *filename*... **)**<br/>
-Indique à BSCMAKE pour traiter le fichier include spécifié la première fois, qu'il est trouvé et exclure dans le cas contraire. Cette option permet de gagner du temps de traitement quand un fichier (par exemple, un en-tête, ou .h, fichier pour un .c ou .cpp source) est inclus dans plusieurs fichiers sources, mais n’est pas modifié par les directives de prétraitement chaque fois. Vous pouvez également utiliser cette option si un fichier est modifié dans les méthodes qui sont sans importance pour le fichier d’informations que vous créez. Pour spécifier plusieurs fichiers, séparez les noms par un espace et placez la liste entre parenthèses. Parenthèses ne sont pas nécessaires si vous spécifiez une seule *filename*. Si vous souhaitez exclure le fichier chaque fois qu’il est inclus, utilisez le **/Ei** ou **/es** option.
+**/v**\
+Fournit une sortie détaillée, qui inclut le nom de chaque fichier *`.sbr`* en cours de traitement et des informations sur l’exécution BSCMAKE complète.
 
-**/v**<br/>
-Fournit une sortie détaillée, qui inclut le nom de chaque fichier .sbr en cours de traitement et des informations sur le déroulement de BSCMAKE.
+**/?** \
+Affiche un bref résumé de la syntaxe de la ligne de commande BSCMAKE.
 
-**/?**<br/>
-Affiche un bref résumé de syntaxe de ligne de commande BSCMAKE.
+La ligne de commande suivante indique à BSCMAKE d’effectuer une build complète de MAIN. bsc à partir de trois fichiers *`.sbr`* . Il indique également à BSCMAKE d’exclure les instances dupliquées de TOOLBOX. h :
 
-La ligne de commande suivante indique à BSCMAKE pour effectuer une génération complète de MAIN.bsc à partir de trois fichiers .sbr. Il indique également que les instances en double de TOOLBOX.h :
-
-```
+```cmd
 BSCMAKE /n /S toolbox.h /o main.bsc file1.sbr file2.sbr file3.sbr
 ```
 

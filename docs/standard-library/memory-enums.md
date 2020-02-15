@@ -4,20 +4,20 @@ ms.date: 11/04/2016
 f1_keywords:
 - memory/std::pointer_safety
 ms.assetid: b9be0a7b-0beb-40b2-8183-911de371c6b9
-ms.openlocfilehash: b2f5b50dc1344b95e88742d346e32fc55f821336
-ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
+ms.openlocfilehash: 78cdb0fe6c0d9487500804d21fe4ad4870fcad0f
+ms.sourcegitcommit: 8414cd91297dea88c480e208c7b5301db9972f19
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68243846"
+ms.lasthandoff: 02/14/2020
+ms.locfileid: "77257830"
 ---
 # <a name="ltmemorygt-enums"></a>&lt;memory&gt;, énumérations
 
-## <a name="pointer_safety"></a> pointer_safety, énumération
+## <a name="pointer_safety"></a>Énumération pointer_safety
 
 Énumération des valeurs possibles retournées par `get_pointer_safety`.
 
-```
+```cpp
 class pointer_safety {
    relaxed,
    preferred,
@@ -27,7 +27,7 @@ class pointer_safety {
 
 ### <a name="remarks"></a>Notes
 
-L’étendue **enum** définit les valeurs qui peuvent être retournés par `get_pointer_safety()`:
+L' **énumération** délimitée définit les valeurs qui peuvent être retournées par `get_pointer_safety()`:
 
 `relaxed` : les pointeurs qui ne sont pas dérivés de manière sécurisée (pointeurs vers des objets d’alloués ou déclarés) sont traités comme ceux qui sont dérivés de manière sécurisée.
 

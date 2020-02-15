@@ -1,18 +1,18 @@
 ---
 title: Vue d'ensemble de LIB
 description: Vue d’ensemble de l’utilisation et des options de l’outil bibliothèque, lib. exe.
-ms.date: 09/25/2019
+ms.date: 02/09/2020
 f1_keywords:
 - Lib
 helpviewer_keywords:
 - LIB [C++], modes
 ms.assetid: e997d423-f574-434f-8b56-25585d137ee0
-ms.openlocfilehash: 7223ef0a624cf15c43bd067db8a7919efd27df17
-ms.sourcegitcommit: 1e6386be9084f70def7b3b8b4bab319a117102b2
+ms.openlocfilehash: 5829a65ab0dc4ef193236c9ae480856a17c5874c
+ms.sourcegitcommit: 8414cd91297dea88c480e208c7b5301db9972f19
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/30/2019
-ms.locfileid: "71685497"
+ms.lasthandoff: 02/14/2020
+ms.locfileid: "77257610"
 ---
 # <a name="overview-of-lib"></a>Vue d'ensemble de LIB
 
@@ -35,7 +35,7 @@ Le tableau suivant répertorie les options de lib. exe, ainsi qu’un lien vers 
 |Option|Description|
 |-|-|
 |**/DEF**|Créer une bibliothèque d’importation et un fichier d’exportation.<br/><br/>Pour plus d’informations, consultez [génération d’une bibliothèque d’importation et d’un fichier d’exportation](building-an-import-library-and-export-file.md).|
-|**/ERRORREPORT**|   Envoyer des informations à Microsoft sur les erreurs internes avec lib. exe.<br/><br/>Pour plus d’informations, consultez [Exécution de LIB](running-lib.md).|
+|**/ERRORREPORT**| Action déconseillée. Pour plus d’informations, consultez [Exécution de LIB](running-lib.md).|
 |**/EXPORT**|   Exporte une fonction à partir de votre programme.<br/><br/>Pour plus d’informations, consultez [génération d’une bibliothèque d’importation et d’un fichier d’exportation](building-an-import-library-and-export-file.md).|
 |**/EXTRACT**|   Créez un fichier objet (. obj) qui contient une copie d’un membre d’une bibliothèque existante.<br/><br/>Pour plus d’informations, consultez [extraction d’un membre de bibliothèque](extracting-a-library-member.md).|
 |**/INCLUDE**|   Ajoute un symbole à la table de symboles.<br/><br/>Pour plus d’informations, consultez [génération d’une bibliothèque d’importation et d’un fichier d’exportation](building-an-import-library-and-export-file.md).|
@@ -56,8 +56,8 @@ Le tableau suivant répertorie les options de lib. exe, ainsi qu’un lien vers 
 
 ## <a name="see-also"></a>Voir aussi
 
-[Référence LIB](lib-reference.md)<br/>
-[Fichiers d’entrée LIB](lib-input-files.md)<br/>
-[Fichiers de sortie LIB](lib-output-files.md)<br/>
-[Autre sortie LIB](other-lib-output.md)<br/>
+\ de [référence lib](lib-reference.md)
+[Fichiers d’entrée LIB](lib-input-files.md)\
+[Fichiers de sortie LIB](lib-output-files.md)\
+[Autre\ de sortie lib](other-lib-output.md)
 [Structure d’une bibliothèque](structure-of-a-library.md)

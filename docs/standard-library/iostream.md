@@ -14,12 +14,12 @@ f1_keywords:
 helpviewer_keywords:
 - iostream header
 ms.assetid: de5d39e1-7e77-4b55-bcd1-7c77b41515c8
-ms.openlocfilehash: 471b149eba32d163e6e3e54e1c2820bbe0b94133
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: 2906e802072c43a93c59ca40d15e032adeeeef97
+ms.sourcegitcommit: 8414cd91297dea88c480e208c7b5301db9972f19
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68449041"
+ms.lasthandoff: 02/14/2020
+ms.locfileid: "77257804"
 ---
 # <a name="ltiostreamgt"></a>&lt;iostream&gt;
 
@@ -32,19 +32,19 @@ Déclare des objets qui contrôlent la lecture et l'écriture des flux standard.
 ```
 
 > [!NOTE]
-> La \<bibliothèque de > iostream utilise `#include <ios>`les `#include <streambuf>`instructions `#include <istream>`,, `#include <ostream>` et.
+> La bibliothèque de > iostream \<utilise les instructions `#include <ios>`, `#include <streambuf>`, `#include <istream>`et `#include <ostream>`.
 
 ## <a name="remarks"></a>Notes
 
 Les objets se répartissent en deux groupes :
 
-- [CIN](#cin), [cout](#cout), [CERR](#cerr)et [obstruent](#clog) des octets orientés octet, en procédant à des transferts conventionnels de type «octet à un moment».
+- [CIN](#cin), [cout](#cout), [CERR](#cerr)et [obstruent](#clog) des octets orientés octet, en procédant à des transferts conventionnels de type « octet à un moment ».
 
 - [wcin](#wcin), [wcout](#wcout), [wcerr](#wcerr) et [wclog](#wclog) sont orientés largeur et traduisent vers et à partir des caractères larges que le programme manipule en interne.
 
 Une fois que vous effectuez certaines opérations sur un flux, telles que l’entrée standard, vous ne pouvez pas effectuer d’opérations d’une orientation différente sur le même flux. Par exemple, un programme ne peut pas fonctionner de façon interchangeable à la fois sur [CIN](#cin) et [wcin](#wcin).
 
-Tous les objets déclarés dans cet en-tête partagent une propriété particulière. vous pouvez supposer qu’ils sont construits avant les objets statiques que vous définissez, \<dans une unité de traduction qui comprend iostream >. De même, vous pouvez supposer que ces objets ne sont pas détruits avant les destructeurs pour les objets statiques que vous définissez. (Les flux de sortie, cependant, sont vidés durant l'arrêt du programme.) Par conséquent, vous pouvez sans risque lire ou écrire dans les flux standard avant le démarrage et après l'arrêt du programme.
+Tous les objets déclarés dans cet en-tête partagent une propriété particulière : vous pouvez supposer qu’ils sont construits avant les objets statiques que vous définissez, dans une unité de traduction qui comprend \<> iostream. De même, vous pouvez supposer que ces objets ne sont pas détruits avant les destructeurs pour les objets statiques que vous définissez. (Toutefois, les flux de sortie sont vidés durant l’arrêt du programme.) Par conséquent, vous pouvez en toute sécurité lire ou écrire dans les flux standard avant le démarrage du programme et après l’arrêt du programme.
 
 Toutefois, cette garantie n’est pas universelle. Un constructeur statique peut appeler une fonction dans une autre unité de traduction. La fonction appelée ne peut pas supposer que les objets déclarés dans cet en-tête ont été construits, étant donné l’ordre incertain dans lequel les unités de traduction participent à la construction statique. Pour utiliser ces objets dans ce contexte, vous devez d’abord construire un objet de classe [ios_base::Init](../standard-library/ios-base-class.md#init).
 
@@ -75,9 +75,9 @@ Objet [ostream](../standard-library/ostream-typedefs.md#ostream).
 
 #### <a name="remarks"></a>Notes
 
-L’objet contrôle les insertions non mises en mémoire tampon dans la sortie d’erreur standard sous forme de flux d’octets. Une fois l’objet construit, l’expression `cerr.`[flags](../standard-library/ios-base-class.md#flags) `&` [unitbuf](../standard-library/ios-functions.md#unitbuf) est différente de zéro, et `cerr.tie() == &cout`.
+L’objet contrôle les insertions non mises en mémoire tampon dans la sortie d’erreur standard sous forme de flux d’octets. Une fois l’objet construit, l’expression `cerr.`[indicateurs](../standard-library/ios-base-class.md#flags) `&` [unitbuf](../standard-library/ios-functions.md#unitbuf) est différent de zéro et `cerr.tie() == &cout`.
 
-#### <a name="example"></a>Exemples
+#### <a name="example"></a>Exemple
 
 ```cpp
 // iostream_cerr.cpp
@@ -174,9 +174,9 @@ Objet [ostream](../standard-library/ostream-typedefs.md#ostream).
 
 L’objet contrôle les insertions mises en mémoire tampon dans la sortie d’erreur standard sous forme de flux d’octets.
 
-#### <a name="example"></a>Exemples
+#### <a name="example"></a>Exemple
 
-Pour obtenir un exemple d’utilisation de `clog`, consultez [cerr](#cerr).
+Pour obtenir un exemple d’utilisation de [, consultez ](#cerr)cerr`clog`.
 
 ###  <a name="cout"></a>cout
 
@@ -196,7 +196,7 @@ L’objet contrôle les insertions dans la sortie standard sous forme de flux d�
 
 #### <a name="example"></a>Exemple
 
-Pour obtenir un exemple d’utilisation de `cout`, consultez [cerr](#cerr).
+Pour obtenir un exemple d’utilisation de [, consultez ](#cerr)cerr`cout`.
 
 ### <a name="wcerr"></a>wcerr
 
@@ -212,11 +212,11 @@ Objet [wostream](../standard-library/ostream-typedefs.md#wostream).
 
 #### <a name="remarks"></a>Notes
 
-L’objet contrôle les insertions non mises en mémoire tampon dans la sortie d’erreur standard sous forme de flux large. Une fois l’objet construit, l’expression `wcerr.`[flags](../standard-library/ios-base-class.md#flags) `&` [unitbuf](../standard-library/ios-functions.md#unitbuf) est différente de zéro.
+L’objet contrôle les insertions non mises en mémoire tampon dans la sortie d’erreur standard sous forme de flux large. Une fois l’objet construit, l’expression `wcerr.`[indicateurs](../standard-library/ios-base-class.md#flags) `&` [unitbuf](../standard-library/ios-functions.md#unitbuf) est différent de zéro.
 
 #### <a name="example"></a>Exemple
 
-Pour obtenir un exemple d’utilisation de `wcerr`, consultez [cerr](#cerr).
+Pour obtenir un exemple d’utilisation de [, consultez ](#cerr)cerr`wcerr`.
 
 ### <a name="wcin"></a>wcin
 
@@ -236,7 +236,7 @@ L’objet contrôle les extractions à partir de l’entrée standard en tant qu
 
 #### <a name="example"></a>Exemple
 
-Pour obtenir un exemple d’utilisation de `wcin`, consultez [cerr](#cerr).
+Pour obtenir un exemple d’utilisation de [, consultez ](#cerr)cerr`wcin`.
 
 ### <a name="wclog"></a>wclog
 
@@ -256,7 +256,7 @@ L’objet contrôle les insertions mises en mémoire tampon dans la sortie d’e
 
 #### <a name="example"></a>Exemple
 
-Pour obtenir un exemple d’utilisation de `wclog`, consultez [cerr](#cerr).
+Pour obtenir un exemple d’utilisation de [, consultez ](#cerr)cerr`wclog`.
 
 ### <a name="wcout"></a>wcout
 
@@ -274,13 +274,13 @@ Objet [wostream](../standard-library/ostream-typedefs.md#wostream).
 
 L'objet contrôle les insertions dans la sortie standard sous forme de flux large.
 
-#### <a name="example"></a>Exemples
+#### <a name="example"></a>Exemple
 
-Pour obtenir un exemple d’utilisation de `wcout`, consultez [cerr](#cerr).
+Pour obtenir un exemple d’utilisation de [, consultez ](#cerr)cerr`wcout`.
 
 Les instances de `CString` dans une instruction `wcout` doivent être converties en `const wchar_t*`, comme illustré dans l'exemple suivant.
 
-```
+```cpp
 CString cs("meow");
 
 wcout <<(const wchar_t*) cs <<endl;
@@ -290,7 +290,7 @@ Pour plus d’informations, consultez [Opérations CString de base](../atl-mfc-s
 
 ## <a name="see-also"></a>Voir aussi
 
-[Informations de référence sur les fichiers d’en-tête](../standard-library/cpp-standard-library-header-files.md)\
+[Référence de fichiers d’en-tête](../standard-library/cpp-standard-library-header-files.md)\
 [Sécurité des threads dans la bibliothèque C++ Standard](../standard-library/thread-safety-in-the-cpp-standard-library.md)\
 [iostream, programmation](../standard-library/iostream-programming.md)\
 [iostreams, conventions](../standard-library/iostreams-conventions.md)

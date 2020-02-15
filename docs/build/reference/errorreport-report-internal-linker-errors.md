@@ -1,6 +1,7 @@
 ---
-title: /ERRORREPORT (Signaler les erreurs internes de l'Éditeur de liens)
-ms.date: 12/28/2017
+title: /ERRORREPORT (Signaler les erreurs internes de l’Éditeur de liens)
+description: Guide de référence des options de ligne de commande Microsoft NMAKE.
+ms.date: 02/09/2020
 f1_keywords:
 - /ERRORREPORT
 - VC.Project.VCLinkerTool.ErrorReporting
@@ -9,44 +10,32 @@ helpviewer_keywords:
 - ERRORREPORT linker option
 - -ERRORREPORT linker option
 ms.assetid: f5fab595-a2f1-4eb0-ab5c-1c0fbd3d8c28
-ms.openlocfilehash: 26cc157cb7247a3a2ea7c10b415df1160540c9ad
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 5e919d4f7eb59524b9145c8e3e59613e60aef1d2
+ms.sourcegitcommit: 8414cd91297dea88c480e208c7b5301db9972f19
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62271727"
+ms.lasthandoff: 02/14/2020
+ms.locfileid: "77257687"
 ---
 # <a name="errorreport-report-internal-linker-errors"></a>/ERRORREPORT (Signaler les erreurs internes de l'Éditeur de liens)
 
-> **/errorreport:**[ **none** | **prompt** | **queue** | **send** ]
+L’option **/errorreport** est déconseillée. À compter de Windows Vista, le rapport d’erreurs est contrôlé par les paramètres d' [rapport d’erreurs Windows (WER)](/windows/win32/wer/windows-error-reporting) .
 
-## <a name="arguments"></a>Arguments
+## <a name="syntax"></a>Syntaxe
 
-**none**<br/>
-Les rapports sur les erreurs internes du compilateur ne seront pas collectés ni envoyés à Microsoft.
-
-**prompt**<br/>
-Vous invite à envoyer un rapport dès qu'une erreur interne du compilateur se produit. **invite** est la valeur par défaut lorsqu’une application est compilée dans l’environnement de développement.
-
-**queue**<br/>
-Met le rapport d’erreurs en file d’attente. Lorsque vous vous connectez avec des privilèges d’administrateur, une fenêtre s’affiche afin que vous pouvez signaler toute défaillance depuis la dernière fois que vous étiez connecté (vous ne serez pas invité à envoyer des rapports d’échecs plus d’une fois tous les trois jours). **file d’attente** est la valeur par défaut lorsqu’une application est compilée à une invite de commandes.
-
-**send**<br/>
-Envoie automatiquement des rapports d’erreurs internes du compilateur à Microsoft si le rapport est activé par les paramètres de service de rapport d’erreurs Windows.
+> **/Errorreport :** \[ **aucune** \| **invite** \| **file d’attente** \| **Envoyer** ]
 
 ## <a name="remarks"></a>Notes
 
-Le **/ERRORREPORT** option vous permet de fournir des informations sur l’erreur (ICE) interne du compilateur directement à Microsoft.
+Les arguments **/errorreport** sont remplacés par les paramètres de service rapport d’erreurs Windows. L’éditeur de liens envoie automatiquement des rapports d’erreurs internes à Microsoft, si la création de rapports est activée par Rapport d’erreurs Windows. Aucun rapport n’est envoyé s’il est désactivé par Rapport d’erreurs Windows.
 
-L’option **/errorreport : send** envoie automatiquement les informations d’erreur à Microsoft, si activé par les paramètres du service de rapport d’erreurs Windows.
+### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Pour définir cette option du compilateur dans l’environnement de développement Visual Studio
 
-### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Pour définir cette option du compilateur dans l'environnement de développement Visual Studio
+1. Ouvrez la boîte de dialogue **Pages de propriétés** du projet. Pour plus d’informations, consultez [Définir le compilateur C++ et les propriétés de build dans Visual Studio](../working-with-project-properties.md).
 
-1. Ouvrez la boîte de dialogue **Pages de propriétés** du projet. Pour plus d’informations, consultez [propriétés de compilateur et de build C++ définie dans Visual Studio](../working-with-project-properties.md).
+1. Ouvrez **Propriétés de Configuration** > **éditeur de liens** > page de propriétés **avancé** .
 
-1. Ouvrez le **propriétés de Configuration** > **l’éditeur de liens** > **avancé** page de propriétés.
-
-1. Modifier le **rapport d’erreurs** propriété.
+1. Modifiez la propriété **rapport d’erreurs** .
 
 ### <a name="to-set-this-compiler-option-programmatically"></a>Pour définir cette option du compilateur par programmation
 
@@ -54,6 +43,5 @@ L’option **/errorreport : send** envoie automatiquement les informations d’
 
 ## <a name="see-also"></a>Voir aussi
 
-[/errorReport (Signaler les erreurs internes du compilateur)](errorreport-report-internal-compiler-errors.md)<br/>
-[Informations de référence sur l’éditeur de liens MSVC](linking.md)<br/>
+\ de référence de l' [éditeur de liens MSVC](linking.md)
 [Options de l’éditeur de liens MSVC](linker-options.md)

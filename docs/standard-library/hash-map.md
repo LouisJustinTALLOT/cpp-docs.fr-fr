@@ -6,12 +6,12 @@ f1_keywords:
 - std::<hash_map>
 helpviewer_keywords:
 - hash_map header
-ms.openlocfilehash: e586a933c2a80b7e611bcd4b4714e300eb21a0ad
-ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
+ms.openlocfilehash: 6bb2ca0cc14bcc4a9b9df9877902de9181e0a768
+ms.sourcegitcommit: 8414cd91297dea88c480e208c7b5301db9972f19
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/21/2019
-ms.locfileid: "72689573"
+ms.lasthandoff: 02/14/2020
+ms.locfileid: "77258144"
 ---
 # <a name="lthash_mapgt"></a>&lt;hash_map&gt;
 
@@ -22,7 +22,7 @@ Définit les modèles de classe de conteneur hash_map et hash_multimap et leurs 
 
 ## <a name="syntax"></a>Syntaxe
 
-```
+```cpp
 #include <hash_map>
 ```
 
@@ -41,21 +41,21 @@ Définit les modèles de classe de conteneur hash_map et hash_multimap et leurs 
 
 ### <a name="classes"></a>Classes
 
-|Class|Description|
+|Classe|Description|
 |-|-|
-|[hash_compare, classe](hash-compare-class.md)|Décrit un objet qui peut être utilisé par l’un des conteneurs associatifs de hachage, hash_map, hash_multimap, hash_set ou hash_multiset, comme objet de paramètre par défaut `Traits` pour classer et hacher les éléments qu’ils contiennent.|
+|[hash_compare, classe](hash-compare-class.md)|Décrit un objet qui peut être utilisé par l’un des conteneurs associatifs de hachage (hash_map, hash_multimap, hash_set ou hash_multiset) comme un objet de paramètre par défaut `Traits` pour classer et hacher les éléments qu’ils contiennent.|
 |[value_compare, classe](value-compare-class.md)|Fournit un objet de fonction qui peut comparer les éléments d’un hash_map en comparant les valeurs de leurs clés pour déterminer leur ordre relatif dans le hash_map.|
 |[hash_map, classe](hash-map-class.md)|Sert au stockage et à la récupération rapide des données d’une collection dans laquelle chaque élément est une paire qui a une clé de tri dont la valeur est unique et une valeur de données associée.|
 |[hash_multimap, classe](hash-multimap-class.md)|Sert au stockage et à la récupération rapide des données d’une collection dans laquelle chaque élément est une paire qui a une clé de tri dont la valeur ne doit pas nécessairement être unique et une valeur de données associée.|
 
-## <a name="requirements"></a>spécifications
+## <a name="requirements"></a>Spécifications
 
-**En-tête :** \<hash_map>
+**En-tête :** \<hash_map >
 
 **Espace de noms :** stdext
 
 ## <a name="see-also"></a>Voir aussi
 
 [Référence de fichiers d’en-tête](cpp-standard-library-header-files.md)\
-[Sécurité des threads dans la bibliothèque standard C++](thread-safety-in-the-cpp-standard-library.md)\
-[Informations de référence sur la bibliothèque standard C++](cpp-standard-library-reference.md)
+[Sécurité des threads dans la bibliothèque C++ Standard](thread-safety-in-the-cpp-standard-library.md)\
+[Informations de référence sur la bibliothèque C++ Standard](cpp-standard-library-reference.md)

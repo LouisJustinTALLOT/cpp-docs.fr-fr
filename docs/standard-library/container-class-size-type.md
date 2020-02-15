@@ -4,14 +4,14 @@ ms.date: 11/04/2016
 helpviewer_keywords:
 - size_type typedef
 ms.assetid: e02de8af-e175-45a2-b006-835814a40e68
-ms.openlocfilehash: 8c9319e94d1f01eb066280a69971eef5d900384f
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: 8ef4f426289ba709f2e6fd3788880f878b9de260
+ms.sourcegitcommit: 8414cd91297dea88c480e208c7b5301db9972f19
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68454503"
+ms.lasthandoff: 02/14/2020
+ms.locfileid: "77258157"
 ---
-# <a name="container-classsizetype"></a>Conteneur Class::size_type
+# <a name="container-classsize_type"></a>Conteneur Class::size_type
 
 > [!NOTE]
 > Cette rubrique se trouve dans la C++ documentation de Microsoft comme un exemple non fonctionnel de conteneurs utilisés dans C++ la bibliothèque standard. Pour plus d’informations, consultez [Conteneurs de la bibliothèque standard C++](../standard-library/stl-containers.md).
@@ -20,15 +20,14 @@ Décrit un objet qui peut représenter la longueur de n’importe quelle séquen
 
 ## <a name="syntax"></a>Syntaxe
 
-```
-
+```cpp
 typedef T0 size_type;
 ```
 
 ## <a name="remarks"></a>Notes
 
-Il est décrit ici comme un synonyme du type `T0` non spécifié (généralement `Alloc::size_type`).
+Il est décrit ici comme un synonyme du type non spécifié `T0` (généralement `Alloc::size_type`).
 
 ## <a name="see-also"></a>Voir aussi
 
-[Sample Container, classe](../standard-library/sample-container-class.md)
+[Exemple de classe de conteneur](../standard-library/sample-container-class.md)

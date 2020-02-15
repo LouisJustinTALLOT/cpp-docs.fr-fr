@@ -12,12 +12,12 @@ helpviewer_keywords:
 - std::operator&amp; (bitset)
 - std::operator&gt;&gt; (bitset)
 - std::operator&lt;&lt; (bitset)
-ms.openlocfilehash: cd1dfc035fde06c4be0f90e1bd11b231d64ab811
-ms.sourcegitcommit: 4b0928a1a497648d0d327579c8262f25ed20d02e
+ms.openlocfilehash: 23c6abffe7e433a0550c45502a12e9adaf652a33
+ms.sourcegitcommit: 8414cd91297dea88c480e208c7b5301db9972f19
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/24/2019
-ms.locfileid: "72890129"
+ms.lasthandoff: 02/14/2020
+ms.locfileid: "77257986"
 ---
 # <a name="ltbitsetgt-operators"></a>&lt;bitset&gt;, opérateurs
 
@@ -73,11 +73,11 @@ bitset 2: 0011
 bitset 3: 0001
 ```
 
-## <a name="op_lt_lt"></a>&lt;d’opérateur&lt;
+## <a name="op_lt_lt"></a>&lt;d’opérateur &lt;
 
 Insère une représentation textuelle de la séquence de bits dans le flux de sortie.
 
-```
+```cpp
 template <class CharType, class Traits, size_t N>
 basic_ostream<CharType, Traits>& operator<<(
     basic_ostream<CharType, Traits>& ostr,
@@ -130,11 +130,11 @@ int main( )
 }
 ```
 
-## <a name="op_gt_gt"></a>&gt;d’opérateur&gt;
+## <a name="op_gt_gt"></a>&gt;d’opérateur &gt;
 
 Lit une chaîne de bits dans un bitset.
 
-```
+```cpp
 template <class CharType, class Traits, size_t Bits>
 basic_istream<CharType, Traits>& operator>> (
     basic_istream<CharType, Traits>& i_str,
@@ -157,7 +157,7 @@ La fonction de modèle retourne la chaîne *i_str*.
 
 La fonction de modèle surcharge `operator>>` pour stocker dans BitSet *Right* la valeur `bitset(str)`, où `str` est un objet de type [basic_string](basic-string-class.md)`< CharType, Traits, allocator< CharType > >&` extrait de *i_str*.
 
-La fonction de modèle extrait des éléments de *i_str* et les insère dans le BitSet jusqu’à ce que :
+La fonction de modèle extrait des éléments de *i_str* et les insère dans BitSet jusqu’à ce que :
 
 - Tous les éléments de bit ont été extraits du flux d’entrée et stockés dans le bitset.
 

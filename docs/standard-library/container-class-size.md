@@ -4,12 +4,12 @@ ms.date: 11/04/2016
 helpviewer_keywords:
 - size method
 ms.assetid: 67073661-2699-4534-ad3b-31a906658dc5
-ms.openlocfilehash: 3f76dd6d2ac2f55e585db2bdc71e8e3631338364
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: 473d179bf8fbb45d843fab75db1aeb2ea1df225c
+ms.sourcegitcommit: 8414cd91297dea88c480e208c7b5301db9972f19
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68450782"
+ms.lasthandoff: 02/14/2020
+ms.locfileid: "77257817"
 ---
 # <a name="container-classsize"></a>Conteneur Class::size
 
@@ -20,11 +20,10 @@ Retourne la longueur de la séquence contrôlée en temps constant, quelle qu’
 
 ## <a name="syntax"></a>Syntaxe
 
-```
-
+```cpp
 size_type size() const;
 ```
 
 ## <a name="see-also"></a>Voir aussi
 
-[Sample Container, classe](../standard-library/sample-container-class.md)
+[Exemple de classe de conteneur](../standard-library/sample-container-class.md)
