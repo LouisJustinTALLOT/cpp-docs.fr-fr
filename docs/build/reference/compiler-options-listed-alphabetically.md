@@ -1,18 +1,21 @@
 ---
 title: Options du compilateur classées par ordre alphabétique
-ms.date: 01/08/2020
+description: Liste de références dans l’ordre alphabétique des options deC++ ligne de commande du compilateur Microsoft C/du compilateur.
+ms.date: 02/09/2020
 helpviewer_keywords:
 - compiler options, C++
-ms.openlocfilehash: d64a41802c18627cf8e07f0d83b53fa5a4555f5b
-ms.sourcegitcommit: 0f4ee9056d65043fa5a715f0ad1031c0ed30e2b6
+ms.openlocfilehash: 6b3412378aa4bb36ea861a81758d2227df3432c6
+ms.sourcegitcommit: 8414cd91297dea88c480e208c7b5301db9972f19
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/05/2020
-ms.locfileid: "77034595"
+ms.lasthandoff: 02/14/2020
+ms.locfileid: "77257739"
 ---
 # <a name="compiler-options-listed-alphabetically"></a>Options du compilateur classées par ordre alphabétique
 
-Le tableau suivant dresse la liste complète des options du compilateur classées par ordre alphabétique. Pour obtenir une liste par catégorie, consultez [Options du compilateur classées par catégorie](compiler-options-listed-by-category.md).
+Ce tableau contient une liste alphabétique des options du compilateur. Pour obtenir la liste des options du compilateur par catégorie, consultez l’article [Options du compilateur classées par catégorie](compiler-options-listed-by-category.md) .
+
+## <a name="compiler-options"></a>Options du compilateur
 
 |Option|Objectif|
 |------------|-------------|
@@ -27,19 +30,19 @@ Le tableau suivant dresse la liste complète des options du compilateur classée
 |[/c](c-compile-without-linking.md)|Compile sans liaison.|
 |[/cgthreads](cgthreads-code-generation-threads.md)|Spécifie le nombre de threads de cl.exe à utiliser pour l'optimisation et la génération de code.|
 |[/clr](clr-common-language-runtime-compilation.md)|Produit un fichier de sortie à exécuter sur le CLR (Common Language Runtime).|
-|[/constexpr](constexpr-control-constexpr-evaluation.md)|Contrôle de l’évaluation de constexpr au moment de la compilation.|
+|[/constexpr](constexpr-control-constexpr-evaluation.md)|Contrôle de l’évaluation de **constexpr** au moment de la compilation.|
 |[/D](d-preprocessor-definitions.md)|Définit des constantes et des macros.|
 |[/Diagnostics](diagnostics-compiler-diagnostic-options.md)|Contrôle le format des messages de diagnostic.|
 |[/doc](doc-process-documentation-comments-c-cpp.md)|Traite les commentaires de documentation pour les diriger vers un fichier XML.|
 |[/E](e-preprocess-to-stdout.md)|Copie la sortie du préprocesseur vers une sortie standard.|
 |[/EH](eh-exception-handling-model.md)|Spécifie le modèle de gestion des exceptions.|
 |[/EP](ep-preprocess-to-stdout-without-hash-line-directives.md)|Copie la sortie du préprocesseur vers une sortie standard.|
-|[/errorReport](errorreport-report-internal-compiler-errors.md)|Vous permet de fournir des informations sur les erreurs internes du compilateur (ICE) C++ directement à l’équipe Microsoft.|
+|[/errorReport](errorreport-report-internal-compiler-errors.md)| Action déconseillée. Le rapport d’erreurs est contrôlé par les paramètres d' [rapport d’erreurs Windows (WER)](/windows/win32/wer/windows-error-reporting) . |
 |[/Execution-charset](execution-charset-set-execution-character-set.md)|Définir le jeu de caractères d’exécution.|
 |[/experimental : module](experimental-module.md)|Active la prise en charge des modules expérimentaux.|
 |[/experimental : préprocesseur](experimental-preprocessor.md)|Active la prise en charge de préprocesseur conforme aux expérimentations.|
 |[/F](f-set-stack-size.md)|Définit la taille de la pile.|
-|[/favor](favor-optimize-for-architecture-specifics.md)|Produit du code optimisé pour une architecture x64 spécifique ou pour les caractéristiques des micro-architectures à la fois dans les architectures AMD64 et EM64T (Extended Memory 64 Technology).|
+|[/favor](favor-optimize-for-architecture-specifics.md)|Produit du code optimisé pour une architecture x64 spécifique. Ou, pour les micro-architectures spécifiques dans les architectures AMD64 et EM64T.|
 |[/FA](fa-fa-listing-file.md)|Crée un fichier listing.|
 |[/Fa](fa-fa-listing-file.md)|Définit le nom du fichier listing.|
 |[/FC](fc-full-path-of-source-code-file-in-diagnostics.md)|Affiche le chemin d'accès complet des fichiers de code source passés à cl.exe dans un texte de diagnostic.|
@@ -52,7 +55,7 @@ Le tableau suivant dresse la liste complète des options du compilateur classée
 |[/fp](fp-specify-floating-point-behavior.md)|Spécifie le comportement de virgule flottante.|
 |[/Fp](fp-name-dot-pch-file.md)|Spécifie un nom de fichier d'en-tête précompilé.|
 |[/FR](fr-fr-create-dot-sbr-file.md)<br /><br /> [/Fr](fr-fr-create-dot-sbr-file.md)|Génère des fichiers browser. **/Fr** est déconseillé.|
-|[/FS](fs-force-synchronous-pdb-writes.md)|Force la sérialisation des écritures dans le fichier de base de données de programme (PDB) via MSPDBSRV.EXE.|
+|[/FS](fs-force-synchronous-pdb-writes.md)|Force la sérialisation de toutes les écritures dans le fichier de base de données du programme (PDB) via MSPDBSRV. Exécutable.|
 |[/FU](fu-name-forced-hash-using-file.md)|Impose l'utilisation d'un nom de fichier, comme s'il avait été passé à la directive [#using](../../preprocessor/hash-using-directive-cpp.md) .|
 |[/Fx](fx-merge-injected-code.md)|Fusionne le code injecté avec le fichier source.|
 |[/GA](ga-optimize-for-windows-application.md)|Optimise le code pour une application Windows.|
@@ -172,5 +175,5 @@ Le tableau suivant dresse la liste complète des options du compilateur classée
 
 ## <a name="see-also"></a>Voir aussi
 
-[Options du compilateur MSVC](compiler-options.md)<br/>
+[Options du compilateur MSVC](compiler-options.md)\
 [Syntaxe de la ligne de commande du compilateur MSVC](compiler-command-line-syntax.md)

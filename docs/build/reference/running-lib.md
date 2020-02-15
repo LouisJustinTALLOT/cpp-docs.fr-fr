@@ -1,7 +1,7 @@
 ---
 title: Exécution de LIB
 description: Décrit les options de ligne de commande que vous pouvez utiliser avec lib. exe.
-ms.date: 09/25/2019
+ms.date: 02/09/2020
 f1_keywords:
 - VC.Project.VCLibrarianTool.TargetMachine
 - Lib
@@ -27,12 +27,12 @@ helpviewer_keywords:
 - semicolon, command files
 - / command files
 ms.assetid: d54f5c81-7147-4b2c-a8db-68ce6eb1eabd
-ms.openlocfilehash: 0d65c8d8b3b0cd28c7cccda25bfd9512321172f9
-ms.sourcegitcommit: 1e6386be9084f70def7b3b8b4bab319a117102b2
+ms.openlocfilehash: 0688365fa83edcacd901321fead48c9c98df2faf
+ms.sourcegitcommit: 8414cd91297dea88c480e208c7b5301db9972f19
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/30/2019
-ms.locfileid: "71685543"
+ms.lasthandoff: 02/14/2020
+ms.locfileid: "77257557"
 ---
 # <a name="running-lib"></a>Exécution de LIB
 
@@ -40,15 +40,15 @@ Diverses options de ligne de commande peuvent être utilisées pour contrôler L
 
 ## <a name="lib-command-line"></a>Ligne de commande LIB
 
-Pour exécuter LIB, tapez la commande `lib` suivie des options et des noms de fichiers pour la tâche que vous utilisez LIB. LIB accepte également l’entrée de ligne de commande dans les fichiers de commandes, qui sont décrits dans la section suivante. LIB n’utilise pas de variable d’environnement.
+Pour exécuter LIB, tapez la commande `lib`, suivie des options et des noms de fichiers pour la tâche pour laquelle vous utilisez LIB. LIB accepte également l’entrée de ligne de commande dans les fichiers de commandes, qui sont décrits dans la section suivante. LIB n’utilise pas de variable d’environnement.
 
 ## <a name="lib-command-files"></a>Fichiers de commandes LIB
 
 Vous pouvez passer des arguments de ligne de commande à LIB dans un fichier de commandes à l’aide de la syntaxe suivante :
 
-> <em>Fichier de commandes</em> **lib \@**
+> <em>Fichier de commandes</em> **\@lib**
 
-Le fichier *de commande de* fichier est un fichier texte. Aucun espace ou tabulation n’est autorisé entre le signe arobase ( **\@** ) et le nom de fichier. Le nom du *fichier de commandes* n’a pas d’extension par défaut ; vous devez spécifier le nom de fichier complet, y compris toute extension. Les caractères génériques ne peuvent pas être utilisés. Vous pouvez spécifier un chemin d’accès absolu ou relatif avec le nom de fichier.
+Le fichier *de commande de* fichier est un fichier texte. Aucun espace ou tabulation n’est autorisé entre le signe arobase ( **\@** ) et le nom de fichier. Le nom du *fichier de commandes* n’a pas d’extension par défaut. Spécifiez le nom de fichier complet, y compris toute extension. Les caractères génériques ne peuvent pas être utilisés. Vous pouvez spécifier un chemin d’accès absolu ou relatif avec le nom de fichier.
 
 Dans le fichier de commandes, les arguments peuvent être séparés par des espaces ou des tabulations, comme ils le peuvent sur la ligne de commande. Les arguments peuvent également être séparés par des caractères de saut de ligne. Utilisez un point-virgule ( **;** ) pour marquer un commentaire. LIB ignore tout le texte du point-virgule jusqu’à la fin de la ligne.
 
@@ -56,26 +56,24 @@ Vous pouvez spécifier l’intégralité ou une partie de la ligne de commande d
 
 ## <a name="using-lib-options"></a>Utilisation des options LIB
 
-Une option se compose d’un spécificateur d’option, qui est soit un tiret ( **-** ), soit une barre oblique ( **/** ), suivi du nom de l’option. Les noms d’options ne peuvent pas être abrégés. Certaines options prennent un argument, spécifié après un signe deux-points ( **:** ). Aucun espace ou onglet n’est autorisé dans une spécification d’option. Utilisez un ou plusieurs espaces ou tabulations pour séparer les spécifications de l’option sur la ligne de commande. Les noms des options et leurs arguments de mot clé ou de nom de fichier ne respectent pas la casse, mais les identificateurs utilisés comme arguments respectent la casse. LIB traite les options dans l’ordre spécifié sur la ligne de commande et dans les fichiers de commandes. Si une option est répétée avec des arguments différents, le dernier à traiter est prioritaire.
+Une option se compose d’un spécificateur d’option, qui est un tiret ( **-** ) ou une barre oblique ( **/** ), suivi du nom de l’option. Les noms d’options ne peuvent pas être abrégés. Certaines options prennent un argument, spécifié après un signe deux-points ( **:** ). Aucun espace ou onglet n’est autorisé dans une spécification d’option. Utilisez un ou plusieurs espaces ou tabulations pour séparer les spécifications de l’option sur la ligne de commande. Les noms des options et leurs arguments de mot clé ou de nom de fichier ne respectent pas la casse, mais les identificateurs utilisés comme arguments respectent la casse. LIB traite les options dans l’ordre spécifié sur la ligne de commande et dans les fichiers de commandes. Si une option est répétée avec des arguments différents, le dernier à traiter est prioritaire.
 
 Les options suivantes s’appliquent à tous les modes de LIB :
 
-> &#124; MESSAGE &#124; DE LA **FILE D’ATTENTE** &#124; DE L' **ENVOI**DE **/ERRORREPORT** \[**NONE** ]
+> **/Errorreport** \[**aucune** &#124; **invite** &#124; de la **file d’attente d'** &#124; **envoi**]
 
-Si lib. exe échoue au moment de l’exécution, vous pouvez utiliser **/errorreport** pour envoyer des informations à Microsoft sur ces erreurs internes.
-
-Pour plus d’informations sur **/errorreport**, consultez [/errorreport (signaler les erreurs internes du compilateur)](errorreport-report-internal-compiler-errors.md).
+L’option/ERRORREPORT est déconseillée. À compter de Windows Vista, le rapport d’erreurs est contrôlé par les paramètres d' [rapport d’erreurs Windows (WER)](/windows/win32/wer/windows-error-reporting) .
 
 > **/LINKREPRO :** _chemin d’accès au répertoire_ \
 > **/LINKREPROTARGET :** _nom de fichier_
 
-Pour aider Microsoft à diagnostiquer les incidents lib. exe et les erreurs internes, vous pouvez utiliser l’option [/LINKREPRO](linkrepro.md) . Il génère une *reproduction de lien*, un ensemble d’artefacts de build qui permettent à Microsoft de reproduire un problème qui se produit pendant les opérations de la bibliothèque. L’option [/LINKREPROTARGET](linkreprotarget.md) peut être utilisée avec l’option **/LINKREPRO** . Il génère uniquement des artefacts de reproduction de lien lorsque lib. exe génère le fichier spécifié. Pour plus d’informations, consultez Guide pratique [pour signaler un problème avec C++ l’ensemble d’outils Microsoft](../../overview/how-to-report-a-problem-with-the-visual-cpp-toolset.md).
+Pour aider Microsoft à diagnostiquer les incidents lib. exe et les erreurs internes, vous pouvez utiliser l’option [/LINKREPRO](linkrepro.md) . Cette option génère une *reproduction de lien*, un ensemble d’artefacts de build qui permettent à Microsoft de reproduire un problème qui se produit pendant les opérations de la bibliothèque. L’option [/LINKREPROTARGET](linkreprotarget.md) peut être utilisée avec l’option **/LINKREPRO** . Il génère uniquement des artefacts de reproduction de lien lorsque lib. exe génère le fichier spécifié. Pour plus d’informations, consultez Guide pratique [pour signaler un problème avec C++ l’ensemble d’outils Microsoft](../../overview/how-to-report-a-problem-with-the-visual-cpp-toolset.md).
 
 > **/LTCG**
 
-« LTCG » représente la *génération de code durant l’édition de liens*. Cette fonctionnalité nécessite une collaboration entre le compilateur ([CL. exe](compiler-options.md)), lib et l’éditeur de liens ([Link](linker-options.md)) afin d’optimiser le code au-delà de ce que peut faire un composant.
+« LTCG » représente la *génération de code durant l’édition de liens*. Cette fonctionnalité nécessite une collaboration entre le compilateur ([CL. exe](compiler-options.md)), lib et l’éditeur de liens ([Link](linker-options.md)). Ensemble, ils peuvent optimiser le code au-delà de ce que n’importe quel composant peut faire lui-même.
 
-Pour LIB, l’option **/LTCG** spécifie que les entrées de cl. exe incluent les fichiers objets qui ont été générés à l’aide de l’option du compilateur [/GL](gl-whole-program-optimization.md) . Si LIB rencontre de telles entrées et que **/LTCG** n’est pas spécifié, le redémarre avec/LTCG activé après l’affichage d’un message d’information. En d’autres termes, il n’est pas nécessaire de définir explicitement cette option, mais elle accélère les performances de génération, car LIB n’a pas à redémarrer lui-même.
+L’option **/LTCG** de lib spécifie que les entrées de cl. exe incluent les fichiers objets générés à l’aide de l’option du compilateur [/GL](gl-whole-program-optimization.md) . Si LIB rencontre de telles entrées et que **/LTCG** n’est pas spécifié, il redémarre avec/LTCG activé après l’affichage d’un message d’information. En d’autres termes, il n’est pas nécessaire de définir cette option explicitement, mais elle accélère les performances de génération. Cela est dû au fait que LIB n’a pas à redémarrer lui-même.
 
 Dans le processus de génération, la sortie de LIB est envoyée à LINK. LINK possède sa propre option **/LTCG** distincte. Il est utilisé pour effectuer diverses optimisations, notamment l’optimisation de l’ensemble du programme et l’instrumentation de l’optimisation guidée par profil (PGO). Pour plus d’informations sur l’option de lien, consultez [/LTCG](ltcg-link-time-code-generation.md).
 
@@ -91,7 +89,7 @@ Supprime l’affichage du message de copyright et du numéro de version LIB et e
 
 Affiche des détails sur la progression de la session, y compris les noms des fichiers. obj en cours d’ajout. Les informations sont envoyées vers la sortie standard et peuvent être redirigées vers un fichier.
 
-> **/WX**[ **:NO**]
+> **/WX**[ **: no**]
 
 Considérer les avertissements comme des erreurs. Pour plus d’informations, consultez l’article [/WX (Traiter les avertissements de l’Éditeur de liens comme des erreurs)](wx-treat-linker-warnings-as-errors.md).
 

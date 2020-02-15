@@ -1,7 +1,7 @@
 ---
 title: Options de l’éditeur de liens MSVC
 description: Liste des options prises en charge par l’éditeur de liens Microsoft LINK.
-ms.date: 09/24/2019
+ms.date: 02/09/2020
 f1_keywords:
 - link
 helpviewer_keywords:
@@ -10,12 +10,12 @@ helpviewer_keywords:
 - libraries [C++], linking to COFF
 - LINK tool [C++], linker options
 ms.assetid: c1d51b8a-bd23-416d-81e4-900e02b2c129
-ms.openlocfilehash: c7a44be5bb21bf83d621bd57c45713bd01e22cb6
-ms.sourcegitcommit: a361362354f6ce51eda4ffdb016b81c24cd225cb
+ms.openlocfilehash: 12710aff1cf833e277e48ab2f13abc702c7d6c14
+ms.sourcegitcommit: 8414cd91297dea88c480e208c7b5301db9972f19
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/01/2019
-ms.locfileid: "71712700"
+ms.lasthandoff: 02/14/2020
+ms.locfileid: "77257544"
 ---
 # <a name="linker-options"></a>Options de l’éditeur de liens
 
@@ -31,7 +31,7 @@ Le tableau ci-dessous répertorie les options pour LINK.exe. Pour plus d’infor
 
 - [Mots réservés](reserved-words.md)
 
-Sur la ligne de commande, les options de l’éditeur de liens ne respectent pas la casse ; par exemple,/base et/BASE signifient la même chose. Pour plus d'informations sur la façon de spécifier une option quelconque sur la ligne de commande ou dans Visual Studio, consultez la documentation relative à cette option.
+Sur la ligne de commande, les options de l’éditeur de liens ne respectent pas la casse ; par exemple, `/base` et `/BASE` signifient la même chose. Pour plus d'informations sur la façon de spécifier une option quelconque sur la ligne de commande ou dans Visual Studio, consultez la documentation relative à cette option.
 
 Vous pouvez utiliser le pragma [comment](../../preprocessor/comment-c-cpp.md) pour spécifier des options de l'éditeur de liens.
 
@@ -64,21 +64,21 @@ Vous pouvez utiliser le pragma [comment](../../preprocessor/comment-c-cpp.md) po
 |[/DEPENDENTLOADFLAG](dependentloadflag.md)|Définit des indicateurs par défaut sur les charges de DLL dépendantes.|
 |[/DLL](dll-build-a-dll.md)|Génère une DLL.|
 |[/DRIVER](driver-windows-nt-kernel-mode-driver.md)|Crée un pilote en mode noyau.|
-|[/DYNAMICBASE](dynamicbase-use-address-space-layout-randomization.md)|Spécifie s’il convient de générer une image exécutable qui peut être redéfinie de façon aléatoire au moment du chargement en utilisant la fonctionnalité de randomisation du format d’espace d’adresse (ASLR).|
+|[/DYNAMICBASE](dynamicbase-use-address-space-layout-randomization.md)|Spécifie s’il faut générer une image exécutable qui est redéfinie au moment du chargement à l’aide de la fonctionnalité de randomisation du format d’espace d’adresse (ASLR).|
 |[/ENTRY](entry-entry-point-symbol.md)|Définit l’adresse de départ.|
-|[/errorReport](errorreport-report-internal-linker-errors.md)|Signale les erreurs internes de l’éditeur de liens à Microsoft.|
+|[/ERRORREPORT](errorreport-report-internal-linker-errors.md)| Action déconseillée. Le rapport d’erreurs est contrôlé par les paramètres d' [rapport d’erreurs Windows (WER)](/windows/win32/wer/windows-error-reporting) . |
 |[/EXPORT](export-exports-a-function.md)|Exporte une fonction.|
 |[/FILEALIGN](filealign.md)|Aligne les sections dans le fichier de sortie sur les multiples d’une valeur spécifiée.|
 |[/FIXED](fixed-fixed-base-address.md)|Crée un programme qui peut être chargé uniquement à son adresse de base préférée.|
 |[/FORCE](force-force-file-output.md)|Force un lien à se terminer même avec des symboles non résolus ou des symboles définis plusieurs fois.|
 |[/FUNCTIONPADMIN](functionpadmin-create-hotpatchable-image.md)|Crée une image qui peut être corrigée en mémoire.|
-|[/ GENPROFILE, /FASTGENPROFILE](genprofile-fastgenprofile-generate-profiling-instrumented-build.md)|Ces deux options spécifient la génération d’un fichier .pgd par l’éditeur de liens pour prendre en charge l’optimisation guidée par profil. /GENPROFILE et /FASTGENPROFILE utilisent des paramètres par défaut différents.|
+|[/ GENPROFILE, /FASTGENPROFILE](genprofile-fastgenprofile-generate-profiling-instrumented-build.md)|Ces deux options spécifient la génération d’un fichier *`.pgd`* par l’éditeur de liens pour prendre en charge l’optimisation guidée par profil (PGO). /GENPROFILE et /FASTGENPROFILE utilisent des paramètres par défaut différents.|
 |[/GUARD](guard-enable-guard-checks.md)|Active la protection du flux de contrôle.|
 |[/HEAP](heap-set-heap-size.md)|Définit la taille du tas, en octets.|
 |[/HIGHENTROPYVA](highentropyva-support-64-bit-aslr.md)|Spécifie la prise en charge de la fonctionnalité de randomisation du format d’espace d’adresse (ASLR) 64 bits de forte entropie.|
-|[/IDLOUT](idlout-name-midl-output-files.md)|Spécifie le nom du fichier .idl et d’autres fichiers de sortie MIDL.|
+|[/IDLOUT](idlout-name-midl-output-files.md)|Spécifie le nom du fichier de *`.idl`* et d’autres fichiers de sortie MIDL.|
 |[/IGNORE](ignore-ignore-specific-warnings.md)|Supprime la sortie des avertissements spécifiés de l’éditeur de liens.|
-|[/IGNOREIDL](ignoreidl-don-t-process-attributes-into-midl.md)|Empêche le traitement des informations d’attribut en un fichier .idl.|
+|[/IGNOREIDL](ignoreidl-don-t-process-attributes-into-midl.md)|Empêche le traitement des informations d’attribut dans un fichier *`.idl`* .|
 |[/IMPLIB](implib-name-import-library.md)|Remplace le nom par défaut de la bibliothèque d’importation.|
 |[/INCLUDE](include-force-symbol-references.md)|Force les références de symboles.|
 |[/INCREMENTAL](incremental-link-incrementally.md)|Contrôle l’édition de liens incrémentiels.|
@@ -100,7 +100,7 @@ Vous pouvez utiliser le pragma [comment](../../preprocessor/comment-c-cpp.md) po
 |[/MAPINFO](mapinfo-include-information-in-mapfile.md)|Inclut les informations spécifiées dans le fichier de mappage.|
 |[/MERGE](merge-combine-sections.md)|Combine des sections.|
 |[/MIDL](midl-specify-midl-command-line-options.md)|Spécifie les options de ligne de commande MIDL.|
-|[/NATVIS](natvis-add-natvis-to-pdb.md)|Ajoute des visualiseurs de débogueur à partir d’un fichier Natvis dans le fichier PDB.|
+|[/NATVIS](natvis-add-natvis-to-pdb.md)|Ajoute des visualiseurs du débogueur à partir d’un fichier baNatvis à la base de données du programme (PDB).|
 |[/NOASSEMBLY](noassembly-create-a-msil-module.md)|Supprime la création d’un assembly .NET Framework.|
 |[/NODEFAULTLIB](nodefaultlib-ignore-libraries.md)|Ignore toutes les bibliothèques par défaut (ou celles spécifiées) quand des références externes sont résolues.|
 |[/NOENTRY](noentry-no-entry-point.md)|Crée une DLL de ressource uniquement.|
@@ -109,22 +109,22 @@ Vous pouvez utiliser le pragma [comment](../../preprocessor/comment-c-cpp.md) po
 |[/OPT](opt-optimizations.md)|Contrôle les optimisations LINK.|
 |[/ORDER](order-put-functions-in-order.md)|Place les COMDAT dans l’image dans un ordre prédéterminé.|
 |[/OUT](out-output-file-name.md)|Spécifie le nom du fichier de sortie.|
-|[/PDB](pdb-use-program-database.md)|Crée un fichier de base de données de programme (PDB).|
+|[/PDB](pdb-use-program-database.md)|Crée un fichier PDB.|
 |[/PDBALTPATH](pdbaltpath-use-alternate-pdb-path.md)|Utilise un autre emplacement pour enregistrer un fichier PDB.|
-|[/PDBSTRIPPED](pdbstripped-strip-private-symbols.md)|Crée un fichier de base de données de programme (PDB) dépourvu de symboles privés.|
-|[/PGD](pgd-specify-database-for-profile-guided-optimizations.md)|Spécifie un fichier .pgd pour les optimisations guidées par profil.|
+|[/PDBSTRIPPED](pdbstripped-strip-private-symbols.md)|Crée un fichier PDB qui n’a pas de symboles privés.|
+|[/PGD](pgd-specify-database-for-profile-guided-optimizations.md)|Spécifie un fichier de *`.pgd`* pour les optimisations guidées par profil.|
 |[/POGOSAFEMODE](pogosafemode-linker-option.md)|**Obsolète** Crée une build instrumentée PGO thread-safe.|
 |[/PROFILE](profile-performance-tools-profiler.md)|Génère un fichier de sortie utilisable avec le profileur Outils d’analyse des performances.|
-|[/RELEASE](release-set-the-checksum.md)|Définit la somme de contrôle dans l’en-tête du fichier .exe.|
+|[/RELEASE](release-set-the-checksum.md)|Définit la somme de contrôle dans l’en-tête *`.exe`* .|
 |[/SAFESEH](safeseh-image-has-safe-exception-handlers.md)|Spécifie que l’image contiendra une table de gestionnaires d’exceptions sécurisés.|
 |[/SECTION](section-specify-section-attributes.md)|Remplace les attributs d’une section.|
 |[/SOURCELINK](sourcelink.md)|Spécifie un fichier SourceLink à ajouter au fichier PDB.|
 |[/STACK](stack-stack-allocations.md)|Définit la taille de la pile, en octets.|
 |[/STUB](stub-ms-dos-stub-file-name.md)|Attache un programme stub MS-DOS à un programme Win32.|
-|[/SUBSYSTEM](subsystem-specify-subsystem.md)|Indique au système d’exploitation comment exécuter le fichier .exe.|
+|[/SUBSYSTEM](subsystem-specify-subsystem.md)|Indique au système d’exploitation comment exécuter le fichier *`.exe`* .|
 |[/SWAPRUN](swaprun-load-linker-output-to-swap-file.md)|Indique au système d’exploitation de copier la sortie de l’éditeur de liens dans un fichier d’échange avant de l’exécuter.|
 |[/TLBID](tlbid-specify-resource-id-for-typelib.md)|Spécifie l’ID de ressource de la bibliothèque de types générée par l’éditeur de liens.|
-|[/TLBOUT](tlbout-name-dot-tlb-file.md)|Spécifie le nom du fichier .tlb et d’autres fichiers de sortie MIDL.|
+|[/TLBOUT](tlbout-name-dot-tlb-file.md)|Spécifie le nom du fichier de *`.tlb`* et d’autres fichiers de sortie MIDL.|
 |[/TSAWARE](tsaware-create-terminal-server-aware-application.md)|Crée une application conçue spécifiquement pour s’exécuter sous Terminal Server.|
 |[/USEPROFILE](useprofile.md)|Utilise les données d’apprentissage de l’optimisation guidée par profil pour créer une image optimisée.|
 |[/VERBOSE](verbose-print-progress-messages.md)|Imprime les messages de progression de l’éditeur de liens.|

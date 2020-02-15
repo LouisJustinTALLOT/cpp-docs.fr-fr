@@ -5,21 +5,20 @@ f1_keywords:
 - unordered_set/std::swap (set)
 - unordered_set/std::swap (unordered_multiset)
 ms.assetid: 66b35671-4023-4411-ad50-83786580d8ee
-ms.openlocfilehash: f34d818c1829baba1740bf2776b2d47a8808bf68
-ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
+ms.openlocfilehash: 6b6e764acc9fa3410a44a4a11760933328365852
+ms.sourcegitcommit: 8414cd91297dea88c480e208c7b5301db9972f19
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68243436"
+ms.lasthandoff: 02/14/2020
+ms.locfileid: "77257765"
 ---
-# <a name="ltunorderedsetgt-functions"></a>&lt;unordered_set&gt;, fonctions
+# <a name="ltunordered_setgt-functions"></a>&lt;unordered_set&gt;, fonctions
 
-## <a name="swap"></a> swap (unordered_set)
+## <a name="swap"></a>échange (unordered_set)
 
 Échange le contenu de deux conteneurs.
 
-```
-
+```cpp
 template <class Key, class Hash, class Pred, class Alloc>
 void swap(
    unordered_set <Key, Hash, Pred, Alloc>& left,
@@ -28,22 +27,22 @@ void swap(
 
 ### <a name="parameters"></a>Paramètres
 
-*Clé*\
+\ de *clé*
 Type de clé.
 
-*hachage*\
+\ de *hachage*
 Type d'objet de la fonction de hachage.
 
-*Pred*\
+*\ prévu*
 Type d’objet de fonction de comparaison d’égalité.
 
-*Alloc*\
+\ *Alloc*
 Classe allocator.
 
-*Gauche*\
+\ *gauche*
 Premier conteneur à échanger.
 
-*Oui*\
+\ *droit*
 Second conteneur à échanger.
 
 ### <a name="remarks"></a>Notes
@@ -103,11 +102,11 @@ return (0);
 [c] [b] [a]
 ```
 
-## <a name="swap_unordered_multiset"></a> swap (unordered_multiset)
+## <a name="swap_unordered_multiset"></a>échange (unordered_multiset)
 
 Échange le contenu de deux conteneurs.
 
-```
+```cpp
 template <class Key, class Hash, class Pred, class Alloc>
 void swap(
    unordered_multiset <Key, Hash, Pred, Alloc>& left,
@@ -116,22 +115,22 @@ void swap(
 
 ### <a name="parameters"></a>Paramètres
 
-*Clé*\
+\ de *clé*
 Type de clé.
 
-*hachage*\
+\ de *hachage*
 Type d'objet de la fonction de hachage.
 
-*Pred*\
+*\ prévu*
 Type d’objet de fonction de comparaison d’égalité.
 
-*Alloc*\
+\ *Alloc*
 Classe allocator.
 
-*Gauche*\
+\ *gauche*
 Premier conteneur à échanger.
 
-*Oui*\
+\ *droit*
 Second conteneur à échanger.
 
 ### <a name="remarks"></a>Notes

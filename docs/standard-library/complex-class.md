@@ -1,5 +1,5 @@
 ---
-title: complexe, classe
+title: complex (classe)
 ms.date: 03/27/2019
 f1_keywords:
 - complex/std::complex::value_type
@@ -10,14 +10,14 @@ helpviewer_keywords:
 - std::complex [C++], imag
 - std::complex [C++], real
 ms.assetid: d6492e1c-5eba-4bc5-835b-2a88001a5868
-ms.openlocfilehash: 687665d2ad8bf80f4f2db07ce11c4866ff1ee903
-ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
+ms.openlocfilehash: 0c72726bfb92965a2152830d7ce77ae13f763d35
+ms.sourcegitcommit: 8414cd91297dea88c480e208c7b5301db9972f19
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/21/2019
-ms.locfileid: "72688262"
+ms.lasthandoff: 02/14/2020
+ms.locfileid: "77257973"
 ---
-# <a name="complex-class"></a>complexe, classe
+# <a name="complex-class"></a>complex (classe)
 
 Le modèle de classe décrit un objet qui stocke deux objets de type `Type`, un qui représente la partie réelle d’un nombre complexe et un qui représente la partie imaginaire.
 
@@ -30,7 +30,7 @@ class complex
 
 ## <a name="remarks"></a>Notes
 
-Objet de la classe `Type` :
+Objet de la classe `Type`:
 
 - A un constructeur public par défaut, un destructeur, un constructeur de copie et un opérateur d’assignation avec un comportement conventionnel.
 
@@ -50,7 +50,7 @@ Des spécialisations explicites de modèle de classe complexe existent pour les 
 |-|-|
 |[complex](#complex)|Construit un nombre complexe à l'aide de la partie réelle et de la partie imaginaire spécifiées ou en tant que copie d'un autre nombre complexe.|
 
-### <a name="typedefs"></a>Typedef
+### <a name="typedefs"></a>Typedefs
 
 |||
 |-|-|
@@ -73,8 +73,6 @@ Des spécialisations explicites de modèle de classe complexe existent pour les 
 |[operator/=](#op_div_eq)|Divise un nombre complexe cible par un diviseur qui peut être complexe ou du même type que celui des parties réelle et imaginaire du nombre complexe.|
 |[operator=](#op_eq)|Assigne un nombre à un nombre complexe cible, où le nombre assigné peut être complexe ou du même type que celui des parties réelle et imaginaire du nombre complexe auquel il est assigné.|
 
-
-
 ## <a name="complex"></a>complexe
 
 Construit un nombre complexe à l'aide de la partie réelle et de la partie imaginaire spécifiées ou en tant que copie d'un autre nombre complexe.
@@ -91,13 +89,13 @@ constexpr complex(
 
 ### <a name="parameters"></a>Paramètres
 
-*_RealVal* \
+*_RealVal*\
 Valeur de la partie réelle utilisée pour initialiser le nombre complexe qui est construit.
 
-*_ImagVal* \
+*_ImagVal*\
 Valeur de la partie imaginaire utilisée pour initialiser le nombre complexe qui est construit.
 
-*complexNum* \
+*complexNum*\
 Nombre complexe dont la partie réelle et la partie imaginaire sont utilisées pour initialiser le nombre complexe qui est construit.
 
 ### <a name="remarks"></a>Notes
@@ -113,7 +111,7 @@ complex(const complex<Other>& right);
 
 est remplacé par :
 
-```
+```cpp
 complex(const complex& right);
 ```
 
@@ -416,10 +414,10 @@ complex<Type>& operator-=(const complex<Type>& complexNum);
 
 ### <a name="parameters"></a>Paramètres
 
-*complexNum* \
+*complexNum*\
 Nombre complexe à soustraire du nombre complexe cible.
 
-*_RealPart* \
+*_RealPart*\
 Nombre réel à soustraire du nombre complexe cible.
 
 ### <a name="return-value"></a>Valeur de retour
@@ -524,10 +522,10 @@ complex<Type>& operator/=(const complex<Type>& complexNum);
 
 ### <a name="parameters"></a>Paramètres
 
-*complexNum* \
+*complexNum*\
 Nombre complexe à soustraire du nombre complexe cible.
 
-*_RealPart* \
+*_RealPart*\
 Nombre réel à soustraire du nombre complexe cible.
 
 ### <a name="return-value"></a>Valeur de retour
@@ -749,7 +747,7 @@ The imaginary part of c1 is c1.imag() = 3.
 
 Type qui représente le type de données utilisé pour représenter les parties imaginaire et réelle d’un nombre complexe.
 
-```
+```cpp
 typedef Type value_type;
 ```
 
