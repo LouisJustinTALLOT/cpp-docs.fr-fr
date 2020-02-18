@@ -6,12 +6,12 @@ helpviewer_keywords:
 - Visual C++, development tools
 author: corob-msft
 ms.author: corob
-ms.openlocfilehash: d72ea2ab4fa83259152101b357c6b2b69e74c723
-ms.sourcegitcommit: 8762a3f9b5476b4dee03f0ee8064ea606550986e
+ms.openlocfilehash: 4e04e189b44fe61759a9422139d856ab8a09f201
+ms.sourcegitcommit: 7bea0420d0e476287641edeb33a9d5689a98cb98
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/04/2019
-ms.locfileid: "74810627"
+ms.lasthandoff: 02/17/2020
+ms.locfileid: "77415710"
 ---
 # <a name="overview-of-c-development-in-visual-studio"></a>Présentation du développement C++ dans Visual Studio
 
@@ -47,7 +47,7 @@ Visual Studio prend en charge tous les systèmes de projet ou outils de build pe
 
 ## <a name="add-to-source-control"></a>Ajouter au contrôle de code source
 
-Le contrôle de code source vous permet de coordonner le travail entre plusieurs développeurs, d’isoler le travail en cours du code de production, et de sauvegarder votre code source. Visual Studio prend en charge Git et [Team Foundation Version Control \(TFVC\)](/azure/devops/repos/tfvc/) par le biais de sa fenêtre **Team Explorer**. 
+Le contrôle de code source vous permet de coordonner le travail entre plusieurs développeurs, d’isoler le travail en cours du code de production, et de sauvegarder votre code source. Visual Studio prend en charge Git et [Team Foundation Version Control \(TFVC\)](/azure/devops/repos/tfvc/) par le biais de sa fenêtre **Team Explorer**.
 
 ::: moniker range="vs-2019"
 
@@ -75,7 +75,7 @@ Si votre programme a une interface utilisateur, vous pouvez utiliser un concepte
 
 Pour plus d’informations sur la conception d’une interface utilisateur pour une application plateforme Windows universelle, consultez [conception et interface utilisateur](https://developer.microsoft.com/windows/design).
 
-Pour plus d’informations sur la création d’une interface utilisateur pour une application MFC, consultez [Applications de bureau MFC](../mfc/mfc-desktop-applications.md). Pour plus d’informations sur les programmes Windows Win32, consultez [Applications de bureau Windows](../windows/windows-desktop-applications-cpp.md).
+Pour plus d’informations sur la création d’une interface utilisateur pour une application MFC, consultez [MFC Desktop Applications](../mfc/mfc-desktop-applications.md). Pour plus d’informations sur les programmes Windows Win32, consultez [Applications de bureau Windows](../windows/windows-desktop-applications-cpp.md).
 
 ## <a name="write-code"></a>Écrire du code
 
@@ -107,7 +107,7 @@ Vous pouvez démarrer le débogage en appuyant sur **F5**. L’exécution s’in
 
 Pour plus d'informations, consultez [Débogage dans Visual Studio](/visualstudio/debugger/debugging-in-visual-studio).
 
-## <a name="test"></a>Tester
+## <a name="test"></a>Test
 
 Visual Studio comprend le framework de tests unitaires Microsoft pour C++ et la prise en charge de Boost.Test, Google Test et CTest. Exécutez vos tests à partir de la fenêtre **Explorateur de tests** :
 
@@ -115,9 +115,9 @@ Visual Studio comprend le framework de tests unitaires Microsoft pour C++ et la 
 
 Pour plus d’informations, consultez [Vérification du code à l’aide de tests unitaires](/visualstudio/test/unit-test-your-code) et [Écrire des tests unitaires pour C/C++ dans Visual Studio](/visualstudio/test/writing-unit-tests-for-c-cpp).
 
-## <a name="analyze"></a>Analyze
+## <a name="analyze"></a>Analyser
 
-Visual Studio inclut des outils d’analyse statique du code qui peuvent détecter des problèmes potentiels dans votre code source. Ces outils incluent une implémentation des vérificateurs de règles [C++ Core Guidelines](https://github.com/isocpp/CppCoreGuidelines/blob/master/CppCoreGuidelines.md). Pour plus d’informations, consultez [Vue d’ensemble de l’analyse de code pour C/C++](/visualstudio/code-quality/code-analysis-for-c-cpp-overview).
+Visual Studio inclut des outils d’analyse statique du code qui peuvent détecter des problèmes potentiels dans votre code source. Ces outils incluent une implémentation des vérificateurs de règles [C++ Core Guidelines](https://github.com/isocpp/CppCoreGuidelines/blob/master/CppCoreGuidelines.md). Pour plus d’informations, consultez [Vue d’ensemble de l’analyse de code pour C/C++](/cpp/code-quality/code-analysis-for-c-cpp-overview).
 
 ## <a name="deploy-completed-applications"></a>Déployer des applications terminées
 
@@ -127,7 +127,7 @@ Vous pouvez également déployer un bureau C++ natif sur un autre ordinateur. Po
 
 Pour plus d’informations sur le déploiement d’un programme C++/CLI, consultez [Guide de déploiement pour les développeurs](/dotnet/framework/deployment/deployment-guide-for-developers).
 
-## <a name="next-steps"></a>Étapes suivantes :
+## <a name="next-steps"></a>Étapes suivantes
 
 Explorez davantage Visual Studio en suivant l’un de ces articles d’introduction :
 

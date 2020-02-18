@@ -3,12 +3,12 @@ title: Outils de l’IDE Visual Studio pour C++ la mise à niveau du code
 description: L' C++ éditeur de code et les outils d’analyse du code de Visual Studio vous C++ aident à moderniser votre base de code.
 ms.date: 11/13/2019
 ms.topic: conceptual
-ms.openlocfilehash: 3f85b955b688489bfc04c4bfc0605201e883e3d4
-ms.sourcegitcommit: 4dde7914608508e47c21cae03ac58fe953a0c29b
+ms.openlocfilehash: 409fc0a2fa6cd39c7751dc34b20b231ffbea3956
+ms.sourcegitcommit: 7bea0420d0e476287641edeb33a9d5689a98cb98
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/15/2019
-ms.locfileid: "74119532"
+ms.lasthandoff: 02/17/2020
+ms.locfileid: "77416150"
 ---
 # <a name="visual-studio-ide-tools-for-upgrading-c-code"></a>Outils de l’IDE Visual Studio pour C++ la mise à niveau du code
 
@@ -24,7 +24,7 @@ Visual Studio vous aide à mettre C++ à niveau du code hérité avec les option
 
 - Code conforme à toutes les versions de la norme, mais qui n’est plus considéré comme une meilleure pratique C++dans moderne.
 
-   Pour identifier le code où les modifications sont recommandées, exécutez l' [analyse du code](/visualstudio/code-quality/code-analysis-for-c-cpp-overview).
+   Pour identifier le code où les modifications sont recommandées, exécutez l' [analyse du code](/cpp/code-quality/code-analysis-for-c-cpp-overview).
 
 ## <a name="open-and-convert-a-legacy-project"></a>Ouvrir et convertir un projet hérité
 
@@ -74,7 +74,7 @@ Les erreurs et avertissements liés à l’analyse du code s’affichent égalem
 
 ![Avertissements d’analyse du code dans Liste d’erreurs](media/code-analysis-error-list.png "Avertissements d’analyse du code dans Liste d’erreurs")
 
-Vous pouvez modifier les règles actives et créer des ensembles de règles personnalisés. Pour plus d’informations sur l’utilisation de l’analyse du code, consultez [analyse du code pourC++ C/Overview](/visualstudio/code-quality/code-analysis-for-c-cpp-overview).
+Vous pouvez modifier les règles actives et créer des ensembles de règles personnalisés. Pour plus d’informations sur l’utilisation de l’analyse du code, consultez [analyse du code pourC++ C/Overview](/cpp/code-quality/code-analysis-for-c-cpp-overview).
 
 ## <a name="use-quick-actions-to-modernize-code"></a>Utiliser des actions rapides pour moderniser du code
 
@@ -101,13 +101,13 @@ L’appel à `AVERAGE` est désormais coloré en tant qu’appel de fonction, et
 
 ![appel de fonction constexpr](media/constexpr-function-call.png "appel de fonction constexpr")
 
-### <a name="initialize-variables"></a>Initialiser des variables
+### <a name="initialize-variables"></a>Initialiser les variables
 
 Les variables non initialisées peuvent contenir des valeurs aléatoires entraînant des bogues sérieux. L’analyse du code signale ces instances et l’éditeur fournit une action rapide :
 
 ![Initialiser la variable](media/init-variable.png "Initialiser une action rapide sur une variable")
 
-### <a name="convert-to-raw-string-literal"></a>Convertir en littéral de chaîne brute
+### <a name="convert-to-raw-string-literal"></a>Convertir en littéral de chaîne brut
 
 Les littéraux de chaîne bruts sont moins sujets aux erreurs et plus pratiques à taper que les chaînes avec des caractères d’échappement incorporés. Cliquez avec le bouton droit sur une chaîne et choisissez **actions rapides** pour la convertir en littéral de chaîne brute.
 

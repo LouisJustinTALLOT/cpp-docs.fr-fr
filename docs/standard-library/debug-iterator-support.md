@@ -11,12 +11,12 @@ helpviewer_keywords:
 - incompatible iterators
 - debug iterator support
 ms.assetid: f3f5bd15-4be8-4d64-a4d0-8bc0761c68b6
-ms.openlocfilehash: 3ccb618c9a3c6b21d6ffe3fbbce7b6c1140e0564
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: f43367fd58d8ab2a62fb2312efcd9fc9ec0cfc42
+ms.sourcegitcommit: 7bea0420d0e476287641edeb33a9d5689a98cb98
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68450588"
+ms.lasthandoff: 02/17/2020
+ms.locfileid: "77416203"
 ---
 # <a name="debug-iterator-support"></a>Debug Iterator Support
 
@@ -54,7 +54,7 @@ int main() {
 }
 ```
 
-## <a name="using-iteratordebuglevel"></a>Utilisation de _ITERATOR_DEBUG_LEVEL
+## <a name="using-_iterator_debug_level"></a>Utilisation de _ITERATOR_DEBUG_LEVEL
 
 Vous pouvez utiliser la macro de préprocesseur [_ITERATOR_DEBUG_LEVEL](../standard-library/iterator-debug-level.md) pour désactiver la fonctionnalité de débogage des itérateurs dans une version Debug. Ce programme n’effectue pas d’assertion, mais déclenche un comportement non défini.
 
@@ -148,7 +148,7 @@ int main() {
 
 ## <a name="destructors-for-debug-iterators"></a>Destructeurs pour les itérateurs de débogage
 
-Les itérateurs de débogage ont des destructeurs non triviaux. Si un destructeur ne s’exécute pas mais que la mémoire de l’objet est libérée, des violations d’accès et une altération des données peuvent se produire. Considérez cet exemple :
+Les itérateurs de débogage ont des destructeurs non triviaux. Si un destructeur ne s’exécute pas mais que la mémoire de l’objet est libérée, des violations d’accès et une altération des données peuvent se produire. Examinez cet exemple :
 
 ```cpp
 // iterator_debugging_5.cpp
@@ -165,7 +165,7 @@ struct derived : base {
    ~derived() {}
 };
 
- int main() {
+int main() {
    std::vector<int> vect( 10 );
    base * pb = new derived( vect.begin() );
    delete pb;  // doesn't call ~derived()

@@ -2,12 +2,12 @@
 title: Lire et comprendre du code C++ dans Visual Studio
 description: Utilisez l’éditeur de code C++ dans Visual Studio pour mettre en forme et comprendre votre code.
 ms.date: 05/28/2019
-ms.openlocfilehash: d4af4c9bc747540bada49de305c45cffc5c44374
-ms.sourcegitcommit: 069e3833bd821e7d64f5c98d0ea41fc0c5d22e53
+ms.openlocfilehash: 2ddeabd9d70ebb344fe6d14abe520ee51a42eebb
+ms.sourcegitcommit: 7bea0420d0e476287641edeb33a9d5689a98cb98
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/21/2019
-ms.locfileid: "74303047"
+ms.lasthandoff: 02/17/2020
+ms.locfileid: "77416132"
 ---
 # <a name="read-and-understand-c-code-in-visual-studio"></a>Lire et comprendre du code C++ dans Visual Studio
 
@@ -19,9 +19,9 @@ Visual Studio colore les éléments de la syntaxe pour différencier les types d
 
 ![Colorisation de code](../ide/media/code-outline-colorization.png "C++colorisation")
 
- Le code non utilisé (par exemple, le code sous une ligne #if 0) a une couleur estompée.
+Le code non utilisé (par exemple, le code sous une ligne #if 0) a une couleur estompée.
 
- ![Code inactif](../ide/media/inactive-code-cpp.png "C++code inactif")
+![Code inactif](../ide/media/inactive-code-cpp.png "C++code inactif")
 
 Vous pouvez personnaliser les couleurs en tapant « Polices » dans **Lancement rapide**, puis en choisissant **Polices et couleurs**. Dans la boîte de dialogue **Polices et couleurs**, faites défiler l’affichage jusqu’aux options C/C++, puis choisissez une police et/ou une couleur personnalisée(s).
 
@@ -35,7 +35,7 @@ Quand vous placez votre curseur devant une accolade, « { » ou « } », l�
 
 Les autres options du mode plan sont situées sous **Modifier** > **Mode Plan** dans le menu principal.
 
-## <a name="line-numbers"></a>numéros de ligne
+## <a name="line-numbers"></a>Numéros de ligne
 
 Vous pouvez ajouter des numéros de ligne à votre projet en accédant à **outils** > **options** > **éditeur de texte** > **tous les langages** > **général** ou en recherchant « ligne num » avec **lancement rapide (Ctrl + Q)** . Les numéros de ligne peuvent être définis pour tous les langages ou pour seulement quelques langages, notamment C++.
 
@@ -59,7 +59,7 @@ Pointez n’importe quelle variable, fonction ou autre symbole pour obtenir des 
 
 ::: moniker range="vs-2019"
 
-![Infos Express dans C&#43;&#43;](../ide/media/quick-info-vs2019.png "Infos express")
+![Infos Express dans C&#43;&#43;](../ide/media/quick-info-vs2019.png "Info express")
 
 L’info-bulle **Info express** contient un lien **Rechercher en ligne**. Accédez à **Outils** > **Options** > **Éditeur de texte** > **C++**  > **Vue** pour spécifier le fournisseur de recherche. 
 
@@ -71,7 +71,7 @@ Si votre code contient une erreur, vous pouvez pointer celle-ci afin qu’**Info
 
 ::: moniker range="<=vs-2017"
 
-![Infos Express dans C&#43;&#43;](../ide/media/quick-info.png "Infos express")
+![Infos Express dans C&#43;&#43;](../ide/media/quick-info.png "Info express")
 
 Si votre code contient une erreur, vous pouvez pointer celle-ci afin qu’**Info express** affiche le message d’erreur correspondant. Vous trouverez également le message d’erreur dans la fenêtre **Liste d’erreurs**.
 
@@ -83,13 +83,13 @@ Quand vous appelez une fonction, **Informations sur les paramètres** indique le
 
 ![Informations sur les paramètres en C&#43;&#43;](../ide/media/parameter-info.png "Informations sur les paramètres")
 
-## <a name="peek-definition"></a>Aperçu de la définition
+## <a name="peek-definition"></a>Aperçu de définition
 
 Pointez une déclaration de variable ou de fonction, cliquez avec le bouton droit, puis choisissez **Aperçu de la définition** pour afficher sa définition inline sans quitter l’emplacement actuel. Pour plus d’informations, consultez [Aperçu de la définition (Alt+F12)](/visualstudio/ide/how-to-view-and-edit-code-by-using-peek-definition-alt-plus-f12).
 
 ![C&#43; &#43; aperçu de définition](../ide/media/vs2015_cpp_peek_definition.png "vs2015_cpp_peek_definition")
 
-##  <a name="f1-help"></a>F1 Aide
+##  <a name="f1-help"></a>Aide (F1)
 
 Placez le curseur sur ou juste après un type, un mot clé ou une fonction, et appuyez sur **F1** pour accéder directement à la rubrique de référence appropriée sur docs.microsoft.com. **F1** fonctionne également sur les éléments de la liste d’erreurs et dans de nombreuses boîtes de dialogue.
 

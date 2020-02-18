@@ -5,12 +5,12 @@ ms.date: 07/02/2019
 ms.technology: cpp-ide
 helpviewer_keywords:
 - Visual C++, home page
-ms.openlocfilehash: 74e1b34549a8e8d0f1e22e6f40aacbd4429b272f
-ms.sourcegitcommit: 5f276064779d90a4cfda758f89e0c0f1e4d1a188
+ms.openlocfilehash: 0a4093860c7d06e8240e03b1487546f80da24b88
+ms.sourcegitcommit: 7bea0420d0e476287641edeb33a9d5689a98cb98
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/09/2020
-ms.locfileid: "75793785"
+ms.lasthandoff: 02/17/2020
+ms.locfileid: "77416100"
 ---
 # <a name="c-in-visual-studio"></a>C++ dans Visual Studio
 
@@ -82,7 +82,7 @@ Comment utiliser les fonctionnalités de productivité dans l’éditeur C++ po
 [Débogage du code natif](/visualstudio/debugger/debugging-native-code)<br/>
 Utiliser le débogueur Visual Studio avec des projets C++.
 
-[Vue d’ensemble de l’analyse du code C/C++](/visualstudio/code-quality/code-analysis-for-c-cpp-overview)<br/>
+[Vue d’ensemble de l’analyse du code C/C++](/cpp/code-quality/code-analysis-for-c-cpp-overview)<br/>
 Utilisez des annotations SAL ou les vérificateurs C++ Core Guidelines pour effectuer une analyse statique.
 
 [Écrire des tests unitaires pour C/C++ dans Visual Studio](/visualstudio/test/writing-unit-tests-for-c-cpp)<br/>
@@ -137,7 +137,7 @@ Les sections suivantes fournissent des informations sur les différentes bibliot
 [Référence sur les bibliothèques Runtime C](../c-runtime-library/c-run-time-library-reference.md)<br/>
 Inclut des solutions alternatives optimisées en matière de sécurité pour les fonctions connues pour poser des problèmes de sécurité.
 
-[Bibliothèque C++ standard](../standard-library/cpp-standard-library-reference.md)<br/>
+[Bibliothèque C++ Standard](../standard-library/cpp-standard-library-reference.md)<br/>
 Bibliothèque C++ standard.
 
 [Bibliothèque ATL (Active Template Library)](../atl/atl-com-desktop-components.md)<br/>
