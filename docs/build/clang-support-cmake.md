@@ -4,12 +4,12 @@ ms.date: 07/01/2019
 ms.description: Configure a CMake project in Visual Studio to use the Clang/LLVM toolchain.
 helpviewer_keywords:
 - Clang support for C++ CMake projects
-ms.openlocfilehash: b5a5985ad6a82d1c7ff45ceb3668273ec96292ec
-ms.sourcegitcommit: 6c1960089b92d007fc28c32af1e4bef0f85fdf0c
+ms.openlocfilehash: a71f9dc98f74247788558d1b7dccf3e117f43072
+ms.sourcegitcommit: 7bea0420d0e476287641edeb33a9d5689a98cb98
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/31/2019
-ms.locfileid: "75556719"
+ms.lasthandoff: 02/17/2020
+ms.locfileid: "77416021"
 ---
 # <a name="clangllvm-support-in-visual-studio-cmake-projects"></a>Prise en charge de Clang/LLVM dans les projets CMake Visual Studio
 
@@ -27,7 +27,7 @@ Vous pouvez utiliser Visual Studio avec Clang pour modifier et déboguer C++ des
 
 **Linux**: pour les projets cmake Linux, aucune prise en charge spéciale de Visual Studio n’est requise. Vous pouvez installer Clang à l’aide du gestionnaire de package de votre distribution et ajouter les commandes appropriées dans le fichier fichier CMakeLists. txt.
 
-## <a name="install"></a>Installez .
+## <a name="install"></a>Installer
 
 Pour une meilleure prise en charge de l’IDE dans Visual Studio, nous vous recommandons d’utiliser les outils du compilateur Clang les plus récents pour Windows. Si vous ne les avez pas déjà, vous pouvez les installer en ouvrant la Visual Studio installer et en choisissant  **C++ Clang compiler pour Windows** sous **Desktop C++ Development avec des** composants facultatifs. Lorsque vous utilisez une installation Clang personnalisée, vérifiez le  **C++ composant Clang-CL pour V142 Build Tools** .
 
@@ -74,7 +74,7 @@ Vous pouvez spécifier un autre emplacement en définissant les variables **CMAK
 
 Pour les configurations Windows, CMake appelle par défaut Clang en mode [Clang-CL](https://llvm.org/devmtg/2014-04/PDFs/Talks/clang-cl.pdf) et établit des liens avec l’implémentation Microsoft de la bibliothèque standard. Par défaut, **Clang-CL. exe** se trouve dans `C:\Program Files (x86)\Microsoft Visual Studio\2019\Common7\IDE\CommonExtensions\Microsoft\Llvm\bin`.
 
- Vous pouvez modifier ces valeurs dans les **paramètres cmake** sous **variables et cache cmake**. Cliquez sur **afficher les variables avancées**. Faites défiler la liste pour rechercher **CMAKE_CXX_COMPILER**, puis cliquez sur le bouton **Parcourir** pour spécifier un autre chemin d’accès du compilateur.
+Vous pouvez modifier ces valeurs dans les **paramètres cmake** sous **variables et cache cmake**. Cliquez sur **afficher les variables avancées**. Faites défiler la liste pour rechercher **CMAKE_CXX_COMPILER**, puis cliquez sur le bouton **Parcourir** pour spécifier un autre chemin d’accès du compilateur.
 
 ## <a name="edit-build-and-debug"></a>Modifier, générer et déboguer
 
