@@ -6,12 +6,12 @@ helpviewer_keywords:
 - 32-bit code porting
 - upgrading Visual C++ applications, 32-bit code
 ms.assetid: 18cdacaa-4742-43db-9e4c-2d9e73d8cc84
-ms.openlocfilehash: a18d2dbabdeec0f283fb4eca7ed52e616f9d224a
-ms.sourcegitcommit: b67b08472b6f1ee8f1c5684bba7056d3e0fc745f
+ms.openlocfilehash: bc9fb5628c1a628b91f306c346f2bbb1dea13de8
+ms.sourcegitcommit: 7bea0420d0e476287641edeb33a9d5689a98cb98
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/24/2020
-ms.locfileid: "76725719"
+ms.lasthandoff: 02/17/2020
+ms.locfileid: "77416108"
 ---
 # <a name="upgrade-c-projects-from-earlier-versions-of-visual-studio"></a>Mettre C++ à niveau des projets à partir de versions antérieures de Visual Studio
 
@@ -21,7 +21,7 @@ Si vous choisissez **non**, le projet n’est pas mis à niveau. Pour les projet
 
 Si vous choisissez **Oui**, le projet est mis à niveau sur place. Elle ne peut pas être reconvertie dans la version antérieure. Dans les scénarios de mise à niveau, c’est la raison pour laquelle il est recommandé d’effectuer une copie de sauvegarde des fichiers projet et solution existants.
 
-## <a name="upgrade-reports"></a>Rapports de mise à niveau
+## <a name="upgrade-reports"></a>Mettre à niveau des rapports
 
 Lorsque vous mettez à niveau un projet, vous recevez un rapport de mise à niveau. Le rapport est également enregistré dans le dossier de votre projet sous le UpgradeLog. htm. Le rapport de mise à niveau affiche un résumé des problèmes détectés lors de la conversion. Elle répertorie des informations sur les modifications apportées, notamment :
 
@@ -47,7 +47,7 @@ Certains projets et solutions mis à niveau peuvent être générés correctemen
 
 1. Définissez l’ensemble d’outils C++ de plateforme, le langage standard et la version de SDK Windows (le cas échéant) sur les versions préférées. ( **Propriétés** de la > de**projet** > **Propriétés de configuration** > **général**)
 
-1. Si vous avez un grand nombre d’erreurs, vous pouvez désactiver temporairement certaines options lorsque vous les corrigez. Pour désactiver l’option [/permissive-](../build/reference/permissive-standards-conformance.md) , utilisez les **Propriétés** de **projet** >  > **Propriétés de configuration** > **langage** **C/C++**  > . Pour désactiver l’option [d’analyse du code](/visualstudio/code-quality/code-analysis-for-c-cpp-overview) , utilisez les **Propriétés** de > de **projet** > **Propriétés de configuration** > l’analyse du **code**.
+1. Si vous avez un grand nombre d’erreurs, vous pouvez désactiver temporairement certaines options lorsque vous les corrigez. Pour désactiver l’option [/permissive-](../build/reference/permissive-standards-conformance.md) , utilisez les **Propriétés** de **projet** >  > **Propriétés de configuration** > **langage** **C/C++**  > . Pour désactiver l’option [d’analyse du code](/cpp/code-quality/code-analysis-for-c-cpp-overview) , utilisez les **Propriétés** de > de **projet** > **Propriétés de configuration** > l’analyse du **code**.
 
 1. Vérifiez que toutes les dépendances sont présentes et que les chemins d’accès include ou les emplacements de bibliothèque sont corrects. ( **Propriétés** du**projet** >  > **Propriétés de configuration** > **Répertoires VC + +** )
 
@@ -63,7 +63,7 @@ Certains projets et solutions mis à niveau peuvent être générés correctemen
 
 Pour les erreurs difficiles à corriger, essayez de rechercher ou de publier une question sur Stack Overflow [ C++ ](https://developercommunity.visualstudio.com/spaces/62/index.html)ou la communauté des développeurs.
 
-## <a name="in-this-section"></a>Dans cette section
+## <a name="in-this-section"></a>Contenu de cette section
 
 [Vue d’ensemble des problèmes de mise à niveau potentiels](overview-of-potential-upgrade-issues-visual-cpp.md)\
 [Mettez à niveau votre code vers la\ Universal CRT](upgrade-your-code-to-the-universal-crt.md)

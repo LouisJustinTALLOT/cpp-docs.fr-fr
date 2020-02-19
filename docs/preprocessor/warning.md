@@ -10,12 +10,12 @@ helpviewer_keywords:
 - pop warning pragma
 - warning pragma
 ms.assetid: 8e9a0dec-e223-4657-b21d-5417ebe29cc8
-ms.openlocfilehash: c6c9668f614f932b0a96f30ad3e0395e39ddc400
-ms.sourcegitcommit: d0504e2337bb671e78ec6dd1c7b05d89e7adf6a7
+ms.openlocfilehash: d8b110d459bba1e0b7e2fd6e2c95e7eed638fc99
+ms.sourcegitcommit: 7bea0420d0e476287641edeb33a9d5689a98cb98
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/02/2019
-ms.locfileid: "74683341"
+ms.lasthandoff: 02/17/2020
+ms.locfileid: "77416195"
 ---
 # <a name="warning-pragma"></a>warning (pragma)
 
@@ -37,8 +37,8 @@ Les paramètres spécificateur-avertissement suivants sont disponibles.
 |------------------------|-------------|
 |*1, 2, 3, 4*|Applique le niveau donné du ou des avertissements spécifiés. Active également un avertissement spécifié qui est désactivé par défaut.|
 |*default*|Réinitialise le comportement d'avertissement à sa valeur par défaut. Active également un avertissement spécifié qui est désactivé par défaut. L'avertissement est généré à son niveau par défaut, documenté.<br /><br /> Pour plus d’informations, consultez [avertissements du compilateur désactivés par défaut](../preprocessor/compiler-warnings-that-are-off-by-default.md).|
-|*désactive*|N’émettez pas le ou les messages d’avertissement spécifiés.|
-|*Erreurs*|Signale les avertissements spécifiés comme des erreurs.|
+|*disable*|N’émettez pas le ou les messages d’avertissement spécifiés.|
+|*error*|Signale les avertissements spécifiés comme des erreurs.|
 |*once*|Affiche le ou les messages spécifiés une seule fois.|
 |*supprimer*|Exécute un push de l'état actuel du pragma sur la pile, désactive l'avertissement spécifié pour la ligne suivante, puis dépile la pile d'avertissement afin que l'état pragma soit réinitialisé.|
 
@@ -54,10 +54,10 @@ Cette directive est fonctionnellement équivalente au code suivant :
 // Disable warning messages 4507 and 4034.
 #pragma warning( disable : 4507 34 )
 
-// Issue warning 4385 only once.
+// Issue warning C4385 only once.
 #pragma warning( once : 4385 )
 
-// Report warning 4164 as an error.
+// Report warning C4164 as an error.
 #pragma warning( error : 164 )
 ```
 
@@ -93,7 +93,7 @@ Le pragma **Warning** prend également en charge la syntaxe suivante, où *n* re
 
 Le pragma `warning( push )` stocke l’état d’avertissement actuel pour chaque avertissement. Le pragma `warning( push, n )` stocke l’état actuel pour chaque avertissement et définit le niveau d’avertissement global sur *n*.
 
-Le pragma `warning( pop )` dépile le dernier état d’avertissement envoyé sur la pile. Toutes les modifications que vous avez apportées à l’état d’avertissement entre les opérations *Push* et *pop* sont annulées. Considérez cet exemple :
+Le pragma `warning( pop )` dépile le dernier état d’avertissement envoyé sur la pile. Toutes les modifications que vous avez apportées à l’état d’avertissement entre les opérations *Push* et *pop* sont annulées. Examinez cet exemple :
 
 ```cpp
 #pragma warning( push )

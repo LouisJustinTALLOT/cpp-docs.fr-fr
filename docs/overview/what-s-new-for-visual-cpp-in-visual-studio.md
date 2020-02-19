@@ -3,12 +3,12 @@ title: Nouveautés de C++ dans Visual Studio
 ms.date: 07/02/2019
 ms.technology: cpp-ide
 ms.assetid: 8801dbdb-ca0b-491f-9e33-01618bff5ae9
-ms.openlocfilehash: 04cf4ecf447120302125c797bd70c00c62b5def9
-ms.sourcegitcommit: 5f276064779d90a4cfda758f89e0c0f1e4d1a188
+ms.openlocfilehash: df7cf44831781086f1b36d32ea9ed773a5dff9a4
+ms.sourcegitcommit: 7bea0420d0e476287641edeb33a9d5689a98cb98
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/09/2020
-ms.locfileid: "75793969"
+ms.lasthandoff: 02/17/2020
+ms.locfileid: "77415724"
 ---
 # <a name="whats-new-for-c-in-visual-studio"></a>Nouveautés de C++ dans Visual Studio
 
@@ -182,7 +182,7 @@ IntelliCode est désormais fourni en tant que composant facultatif dans la charg
 
 IncrediBuild est désormais fourni en tant que composant facultatif dans la charge de travail **Développement Desktop en C++** . Le moniteur de build IncrediBuild est entièrement intégré à l’IDE de Visual Studio. Pour en savoir plus, voir [Visualiser votre build avec le moniteur de build d’IncrediBuild et Visual Studio 2019](https://devblogs.microsoft.com/cppblog/visualize-your-build-with-incredibuilds-build-monitor-and-visual-studio-2019/).
 
-## <a name="debugging"></a>débogage
+## <a name="debugging"></a>Débogage
 
 - Pour les applications C++ exécutées sur Windows, les fichiers PDB se chargent désormais dans un processus 64 bits distinct. Ce changement résout plusieurs problèmes de plantage qui pouvaient survenir quand le débogueur manquait de mémoire au moment du débogage d’applications contenant de nombreux modules et fichiers PDB.
 
@@ -231,7 +231,7 @@ Le composant expérimental Clang/C2 a été supprimé. Utilisez l’ensemble d�
 
 - Nouveaux correctifs rapides pour des vérifications de variables non initialisées. Pour en savoir plus, voir [Nouveaux correctifs rapides d’analyse de code pour la mémoire non initialisée (C6001) et les avertissements d’utilisation avant init (C26494)](https://devblogs.microsoft.com/cppblog/new-code-analysis-quick-fixes-for-uninitialized-memory-c6001-and-use-before-init-c26494-warnings/).
 
-## <a name="unit-testing"></a>Test unitaire
+## <a name="unit-testing"></a>Test des unités
 
 Le modèle de projet de test C++ managé n’est plus disponible. Vous pouvez continuer à utiliser le framework de test C++ managé dans vos projets existants. Pour les nouveaux tests unitaires, utilisez un des frameworks de test natifs pour lesquels Visual Studio fournit des modèles (MSTest, Google Test) ou le modèle de projet de test C# managé.
 
@@ -515,7 +515,7 @@ Plusieurs opérations C++ qui utilisent le moteur IntelliSense pour la refactori
 
 |||
 |-|-|
-|Composant|Amélioration des performances|
+|Fonctionnalité|Amélioration des performances|
 |Renommer|x 5,3|
 |Changer la signature |x 4,5|
 |Rechercher toutes les références|x 4,7|
@@ -530,7 +530,7 @@ C++ prend maintenant en charge la fonctionnalité **Atteindre la définition** a
 
 - Nous avons ajouté une fonctionnalité de filtrage des erreurs et une aide pour les erreurs IntelliSense figurant dans la liste d’erreurs. Le fait de cliquer sur la colonne d’erreur permet maintenant un filtrage. De plus, en cliquant sur une erreur spécifique ou sur F1, une recherche en ligne est lancée sur le message d’erreur concerné.
 
-  ![Liste d'erreurs](media/ErrorList1.png "Liste d’erreurs")
+  ![Liste d'erreurs](media/ErrorList1.png "Liste d'erreurs")
 
   ![Liste d’erreurs filtré](media/ErrorList2.png "Liste d’erreurs filtrée")
 
@@ -647,7 +647,7 @@ L’ensemble d’outils Clang/C2 fourni avec Visual Studio 2017 prend désormai
 
 ## <a name="c-code-analysis"></a>Analyse du code C++
 
-Les vérificateurs principaux C++ permettant d’appliquer les [directives principales C++](https://github.com/isocpp/CppCoreGuidelines) sont désormais distribués avec Visual Studio. Il suffit d’activer les vérificateurs dans la boîte de dialogue **Code Analysis Extensions** (Extensions d’analyse du code) dans les pages de propriétés du projet pour que les extensions soient incluses quand vous exécutez l’analyse du code. Pour plus d’informations, consultez [Using the C++ Core Guidelines checkers](/visualstudio/code-quality/using-the-cpp-core-guidelines-checkers).
+Les vérificateurs principaux C++ permettant d’appliquer les [directives principales C++](https://github.com/isocpp/CppCoreGuidelines) sont désormais distribués avec Visual Studio. Il suffit d’activer les vérificateurs dans la boîte de dialogue **Code Analysis Extensions** (Extensions d’analyse du code) dans les pages de propriétés du projet pour que les extensions soient incluses quand vous exécutez l’analyse du code. Pour plus d’informations, consultez [Using the C++ Core Guidelines checkers](/cpp/code-quality/using-the-cpp-core-guidelines-checkers).
 
 ![CppCoreCheck](media/CppCoreCheck.png "Page de propriétés CppCoreCheck")
 
@@ -668,9 +668,9 @@ Les vérificateurs principaux C++ permettant d’appliquer les [directives princ
 ##### <a name="visual-studio-2017-version-157"></a>Visual Studio 2017 version 15.7
 
 - Ajout de la prise en charge de [/analyze:ruleset](../build/reference/analyze-code-analysis.md) qui vous permet de spécifier les règles d’analyse de code à exécuter.
-- Ajout de la prise en charge de règles C++ Core Guidelines supplémentaires.  Pour plus d’informations, consultez [Using the C++ Core Guidelines checkers](/visualstudio/code-quality/using-the-cpp-core-guidelines-checkers).
+- Ajout de la prise en charge de règles C++ Core Guidelines supplémentaires.  Pour plus d’informations, consultez [Using the C++ Core Guidelines checkers](/cpp/code-quality/using-the-cpp-core-guidelines-checkers).
 
-## <a name="unit-testing"></a>Test unitaire
+## <a name="unit-testing"></a>Test des unités
 
 ##### <a name="visual-studio-2017-version-155"></a>Visual Studio 2017 version 15.5
 
@@ -697,7 +697,7 @@ Visual Studio Graphics Diagnostics est un ensemble d’outils pour l’enregistr
 
 - **Recherche et filtrage dans la table des objets :** fournit un moyen rapide et facile de trouver les ressources que vous recherchez.
 
-  ![Rechercher](media/search.png)
+  ![Recherche](media/search.png)
 
 - **Historique des ressources :** cette nouvelle vue offre une façon simplifiée d’afficher tout l’historique des modifications d’une ressource utilisée pendant le rendu d’un frame capturé. Pour appeler l’historique d’une ressource, cliquez simplement sur l’icône de l’horloge en regard d’un lien hypertexte de ressource.
 

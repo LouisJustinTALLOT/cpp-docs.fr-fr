@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - BackInsertIterator Class
 ms.assetid: aecee1ff-100d-4129-b84b-1966f0923dbf
-ms.openlocfilehash: 02aee3101156b28dbd59ccd51c071e6774ca1e7a
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: be5a905725c2ed0f056f1686d17d87c74b9cdc5e
+ms.sourcegitcommit: 7bea0420d0e476287641edeb33a9d5689a98cb98
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62161600"
+ms.lasthandoff: 02/17/2020
+ms.locfileid: "77416057"
 ---
 # <a name="platformcollectionsbackinsertiterator-class"></a>Platform::Collections::BackInsertIterator, classe
 
@@ -39,30 +39,29 @@ La classe BackInsertIterator implémente les règles requises par la [back_inser
 
 ### <a name="public-constructors"></a>Constructeurs publics
 
-|Nom|Description|
+|Name|Description|
 |----------|-----------------|
-|[BackInsertIterator::BackInsertIterator](#ctor)|Initialise une nouvelle instance de la classe BackInsertIterator.|
+|[BackInsertIterator :: BackInsertIterator](#ctor)|Initialise une nouvelle instance de la classe BackInsertIterator.|
 
-### <a name="public-operators"></a>Op&#233;rateurs publics
+### <a name="public-operators"></a>Opérateurs publics
 
-|Nom|Description|
+|Name|Description|
 |----------|-----------------|
 |[BackInsertIterator::operator*, opérateur](#operator-dereference)|Extrait une référence au BackInsertIterator actif.|
 |[BackInsertIterator::operator++, opérateur](#operator-increment)|Retourne une référence au BackInsertIterator actif. L'itérateur est pas modifié.|
 |[BackInsertIterator::operator=, opérateur](#operator-assign)|Ajoute l'objet spécifié à la fin de la collection séquentielle en cours.|
 
-## <a name="inheritance-hierarchy"></a>Hiérarchie d'héritage
+## <a name="inheritance-hierarchy"></a>Hiérarchie d’héritage
 
 `BackInsertIterator`
 
-### <a name="requirements"></a>Configuration requise
+### <a name="requirements"></a>Spécifications
 
 **En-tête :** collection.h
 
-**Espace de noms :** Platform::Collections
-
+<a name="namespace-platformcollections"></a>**Espace de noms :** Platform::Collections
 ---
-## <a name="ctor"></a>  BackInsertIterator::BackInsertIterator Constructor
+## <a name="ctor"></a>BackInsertIterator :: BackInsertIterator, constructeur
 
 Initialise une nouvelle instance de la classe `BackInsertIterator`.
 
@@ -77,13 +76,13 @@ explicit BackInsertIterator(
 #### <a name="parameters"></a>Paramètres
 
 *v*<br/>
-Un IVector\<T > objet.
+Objet IVector\<T >.
 
 ### <a name="remarks"></a>Notes
 
 Un `BackInsertIterator` insère des éléments après le dernier élément de l'objet spécifié par le paramètre `v`.
 
-## <a name="operator-assign"></a>  BackInsertIterator::operator= Operator
+## <a name="operator-assign"></a>BackInsertIterator :: Operator =, opérateur
 
 Ajoute l'objet spécifié à la fin de la collection séquentielle en cours.
 
@@ -102,7 +101,7 @@ Objet à ajouter à la collection actuelle.
 
 Référence au BackInsertIterator actif.
 
-## <a name="operator-dereference"></a>  BackInsertIterator::operator* Operator
+## <a name="operator-dereference"></a>BackInsertIterator :: Operator *, opérateur
 
 Extrait une référence au BackInsertIterator actif.
 
@@ -120,7 +119,7 @@ Référence au BackInsertIterator actif.
 
 Cet opérateur retourne une référence au BackInsertIterator actif, et non à un élément dans la collection actuelle.
 
-## <a name="operator-increment"></a>  BackInsertIterator::operator++ Operator
+## <a name="operator-increment"></a>BackInsertIterator :: Operator + +, opérateur
 
 Retourne une référence au BackInsertIterator actif. L'itérateur est pas modifié.
 
@@ -141,8 +140,8 @@ Référence au BackInsertIterator actif.
 
 Par conception, le premier exemple de syntaxe préincrémente le BackInsertIterator actuel et la deuxième syntaxe postincrémente le BackInsertIterator actuel. Le type `int` dans la deuxième syntaxe n'indique pas un opérande entier réel mais une post-incrémentation.
 
-Toutefois, cet opérateur ne modifie pas réellement le BackInsertIterator. Au lieu de cela, l'opérateur retourne une référence à l'itérateur actuel non modifié. Il s’agit du même comportement que [opérateur *](#operator-dereference).
+Toutefois, cet opérateur ne modifie pas réellement le BackInsertIterator. Au lieu de cela, l'opérateur retourne une référence à l'itérateur actuel non modifié. Il s’agit du même comportement que l' [opérateur *](#operator-dereference).
 
 ## <a name="see-also"></a>Voir aussi
 
-[Plateforme Namespace](platform-namespace-c-cx.md)
+[Espace de noms de plateforme](platform-namespace-c-cx.md)
