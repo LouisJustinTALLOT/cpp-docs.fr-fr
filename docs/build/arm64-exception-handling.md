@@ -2,12 +2,12 @@
 title: Gestion des exceptions ARM64
 description: Décrit les conventions de gestion des exceptions et les données utilisées par Windows sur ARM64.
 ms.date: 11/19/2018
-ms.openlocfilehash: 1ed147a27cfeb545e2a5fe265df8113a5befac73
-ms.sourcegitcommit: 170f5de63b0fec8e38c252b6afdc08343f4243a6
+ms.openlocfilehash: 2304c04c5e9be31299e30bb48771f7c9777d1cd5
+ms.sourcegitcommit: b9aaaebe6e7dc5a18fe26f73cc7cf5fce09262c1
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/11/2019
-ms.locfileid: "72276837"
+ms.lasthandoff: 02/20/2020
+ms.locfileid: "77504482"
 ---
 # <a name="arm64-exception-handling"></a>Gestion des exceptions ARM64
 
@@ -23,7 +23,7 @@ L’exception qui déroule les conventions de données, et cette description, so
 
    - L’analyse du code est complexe. le compilateur doit veiller à générer uniquement des instructions que le dérouleur peut décoder.
 
-   - Si le déroulement ne peut pas être entièrement décrit à l’aide d’un code de déroulement, dans certains cas, il doit revenir au décodage d’instruction. Cela augmente la complexité globale et, idéalement, est évité.
+   - Si le déroulement ne peut pas être entièrement décrit à l’aide d’un code de déroulement, dans certains cas, il doit revenir au décodage d’instruction. Cela augmente la complexité globale et devrait idéalement être évité.
 
 1. Prendre en charge le déroulement dans le prologue intermédiaire et l’épilogue intermédiaire.
 
@@ -35,11 +35,11 @@ L’exception qui déroule les conventions de données, et cette description, so
 
    - Étant donné que les codes de déroulement sont susceptibles d’être verrouillés en mémoire, un faible encombrement garantit une surcharge minimale pour chaque binaire chargé.
 
-## <a name="assumptions"></a>Assumptions (Hypothèses)
+## <a name="assumptions"></a>Hypothèses
 
 Ces hypothèses sont prises dans la description de la gestion des exceptions :
 
-1. Les journaux et les épilogues ont tendance à refléter l’un ou l’autre. En tirant parti de cette caractéristique commune, la taille des métadonnées requises pour décrire le déroulement peut être sensiblement réduite. Dans le corps de la fonction, peu importe si les opérations du prologue sont annulées ou si les opérations de l’épilogue sont effectuées de manière anticipée. Les deux doivent produire des résultats identiques.
+1. Les journaux et les épilogues ont tendance à se mettre en miroir l’un l’autre. En tirant parti de cette caractéristique commune, la taille des métadonnées requises pour décrire le déroulement peut être sensiblement réduite. Dans le corps de la fonction, peu importe si les opérations du prologue sont annulées ou si les opérations de l’épilogue sont effectuées de manière anticipée. Les deux doivent produire des résultats identiques.
 
 1. Les fonctions ont tendance à être relativement petites. Plusieurs optimisations de l’espace reposent sur ce fait pour obtenir le compactage de données le plus efficace.
 
@@ -53,11 +53,11 @@ Ces hypothèses sont prises dans la description de la gestion des exceptions :
 
 ## <a name="arm64-stack-frame-layout"></a>Disposition des frames de pile ARM64
 
-(media/arm64-exception-handling-stack-frame.png "disposition du frame de pile") de la ![disposition Frame Frame]
+![disposition des frames de pile](media/arm64-exception-handling-stack-frame.png "disposition de la frame de pile")
 
 Pour les fonctions chaînées de frame, les paires FP et LR peuvent être enregistrées à n’importe quel emplacement dans la zone de variable locale, en fonction des considérations relatives à l’optimisation. L’objectif est d’optimiser le nombre de variables locales qui peuvent être atteintes par une seule instruction basée sur le pointeur de frame (x29) ou le pointeur de pile (SP). Toutefois, pour `alloca` fonctions, il doit être chaîné et x29 doit pointer vers le bas de la pile. Pour permettre une meilleure couverture du mode de Registre-paire-adressage, les zones d’enregistrement des registres non volatiles sont positionnées en haut de la pile de la zone locale. Voici des exemples qui illustrent plusieurs des séquences de prologue les plus efficaces. Par souci de clarté et de meilleure localité de cache, l’ordre de stockage des registres enregistrés par l’appelé dans tous les projournals canoniques est dans l’ordre croissant. `#framesz` ci-dessous représente la taille de la pile entière (à l’exception de la zone allouée). `#localsz` et `#outsz` dénotent la taille de la zone locale (y compris la zone d’enregistrement pour la paire de \<x29, LR >) et la taille de paramètre sortante, respectivement.
 
-1. Chained, #localsz \<= 512
+1. Chaîné, #localsz \<= 512
 
     ```asm
         stp    x19,x20,[sp,#-96]!        // pre-indexed, save in 1st FP/INT pair
@@ -132,7 +132,7 @@ Pour les fonctions chaînées de frame, les paires FP et LR peuvent être enregi
 
    Toutes les variables locales sont accessibles en fonction du SP. \<> x29 pointe vers le frame précédent.
 
-1. Chained, #framesz \<= 512, #outsz = 0
+1. Chaîné, #framesz \<= 512, #outsz = 0
 
     ```asm
         stp    x29,lr,[sp,#-framesz]!       // pre-indexed, save <x29,lr>
@@ -188,7 +188,7 @@ Les enregistrements. pdata sont un tableau ordonné d’éléments de longueur f
 
 Chaque enregistrement. pdata pour ARM64 a une longueur de 8 octets. Le format général de chaque enregistrement place l’adresse RVA 32 bits de la fonction Start dans le premier mot, suivi d’un second mot qui contient soit un pointeur vers un bloc. XData de longueur variable, soit un mot compressé qui décrit une séquence de déroulement de fonction canonique.
 
-mise en page de l’enregistrement ![. pdata]disposition(media/arm64-exception-handling-pdata-record.png ". pdata")
+![disposition des enregistrements. pdata](media/arm64-exception-handling-pdata-record.png "disposition des enregistrements. pdata")
 
 Les champs sont les suivants :
 
@@ -204,7 +204,7 @@ Les champs sont les suivants :
 
 Quand le format de déroulement compressé ne suffit pas à décrire le déroulement d'une fonction, un enregistrement .xdata de longueur variable doit être créé. L'adresse de cet enregistrement est stockée dans le deuxième mot de l'enregistrement .pdata. Le format du. XData est un ensemble de mots condensé de longueur variable :
 
-![. XData disposition]de l’enregistrement(media/arm64-exception-handling-xdata-record.png ". XData")
+![mise en page de l’enregistrement. XData](media/arm64-exception-handling-xdata-record.png "mise en page de l’enregistrement. XData")
 
 Ces données sont réparties en quatre sections :
 
@@ -336,7 +336,7 @@ Pour les fonctions dont les proépiloguess et les suivent la forme canonique dé
 
 Le format d’un enregistrement. pdata avec des données de déroulement compressées ressemble à ceci :
 
-![enregistrement. pdata avec les données de déroulement compressées](media/arm64-exception-handling-packed-unwind-data.png "enregistrement. pdata avec les données de déroulement compressées")
+![enregistrement. pdata avec des données de déroulement compressées](media/arm64-exception-handling-packed-unwind-data.png "enregistrement. pdata avec des données de déroulement compressées")
 
 Les champs sont les suivants :
 
@@ -375,14 +375,14 @@ Première #|Valeurs d’indicateur|nombre d’instructions|Opcode|Code de dérou
 -|-|-|-|-
 0|||`#intsz = RegI * 8;`<br/>`if (CR==01) #intsz += 8; // lr`<br/>`#fpsz = RegF * 8;`<br/>`if(RegF) #fpsz += 8;`<br/>`#savsz=((#intsz+#fpsz+8*8*H)+0xf)&~0xf)`<br/>`#locsz = #famsz - #savsz`|
 1|0 < **gion** < = 10|Gion/2 + **gion** %2|`stp x19,x20,[sp,#savsz]!`<br/>`stp x21,x22,[sp,#16]`<br/>`...`|`save_regp_x`<br/>`save_regp`<br/>`...`
-2|**CR**==01*|1|`str lr,[sp,#(intsz-8)]`\*|`save_reg`
+2|**CR**= = 01 *|1|`str lr,[sp,#(intsz-8)]`\*|`save_reg`
 3|0 < **RegF** < = 7|(RegF + 1)/2 +<br/>(RegF + 1) %2)|`stp d8,d9,[sp,#intsz]`\*\*<br/>`stp d10,d11,[sp,#(intsz+16)]`<br/>`...`<br/>`str d(8+RegF),[sp,#(intsz+fpsz-8)]`|`save_fregp`<br/>`...`<br/>`save_freg`
-4|**H** == 1|4|`stp x0,x1,[sp,#(intsz+fpsz)]`<br/>`stp x2,x3,[sp,#(intsz+fpsz+16)]`<br/>`stp x4,x5,[sp,#(intsz+fpsz+32)]`<br/>`stp x6,x7,[sp,#(intsz+fpsz+48)]`|`nop`<br/>`nop`<br/>`nop`<br/>`nop`
-5a|**CR** == 11 && #locsz<br/> <= 512|2|`stp x29,lr,[sp,#-locsz]!`<br/>`mov x29,sp`\*\*\*|`save_fplr_x`<br/>`set_fp`
-5b|**CR** == 11 &&<br/>512 < #locsz <= 4080|3|`sub sp,sp,#locsz`<br/>`stp x29,lr,[sp,0]`<br/>`add x29,sp,0`|`alloc_m`<br/>`save_fplr`<br/>`set_fp`
-5C|**CR** == 11 && #locsz > 4080|4|`sub sp,sp,4080`<br/>`sub sp,sp,#(locsz-4080)`<br/>`stp x29,lr,[sp,0]`<br/>`add x29,sp,0`|`alloc_m`<br/>`alloc_s`/`alloc_m`<br/>`save_fplr`<br/>`set_fp`
-5D|(**CR** == 00 \|\| **CR**==01) &&<br/>#locsz <= 4080|1|`sub sp,sp,#locsz`|`alloc_s`/`alloc_m`
-5e|(**CR** == 00 \|\| **CR**==01) &&<br/>#locsz > 4080|2|`sub sp,sp,4080`<br/>`sub sp,sp,#(locsz-4080)`|`alloc_m`<br/>`alloc_s`/`alloc_m`
+4|**H** = = 1|4|`stp x0,x1,[sp,#(intsz+fpsz)]`<br/>`stp x2,x3,[sp,#(intsz+fpsz+16)]`<br/>`stp x4,x5,[sp,#(intsz+fpsz+32)]`<br/>`stp x6,x7,[sp,#(intsz+fpsz+48)]`|`nop`<br/>`nop`<br/>`nop`<br/>`nop`
+5a|**CR** = = 11 & & #locsz<br/> <= 512|2|`stp x29,lr,[sp,#-locsz]!`<br/>`mov x29,sp`\*\*\*|`save_fplr_x`<br/>`set_fp`
+5b|**CR** = = 11 & &<br/>512 < #locsz <= 4080|3|`sub sp,sp,#locsz`<br/>`stp x29,lr,[sp,0]`<br/>`add x29,sp,0`|`alloc_m`<br/>`save_fplr`<br/>`set_fp`
+5C|**CR** = = 11 & & #locsz > 4080|4|`sub sp,sp,4080`<br/>`sub sp,sp,#(locsz-4080)`<br/>`stp x29,lr,[sp,0]`<br/>`add x29,sp,0`|`alloc_m`<br/>`alloc_s`/`alloc_m`<br/>`save_fplr`<br/>`set_fp`
+5D|(**CR** = = 00 \|\| **CR**= 01) & &<br/>#locsz <= 4080|1|`sub sp,sp,#locsz`|`alloc_s`/`alloc_m`
+5e|(**CR** = = 00 \|\| **CR**= 01) & &<br/>#locsz > 4080|2|`sub sp,sp,4080`<br/>`sub sp,sp,#(locsz-4080)`|`alloc_m`<br/>`alloc_s`/`alloc_m`
 
 \* si **CR** = = 01 et **gion** est un nombre impair, l’étape 2 et la dernière save_rep à l’étape 1 sont fusionnées en une seule save_regp.
 

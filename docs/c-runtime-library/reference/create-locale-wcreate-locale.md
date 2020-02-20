@@ -31,12 +31,12 @@ helpviewer_keywords:
 - create_locale function
 - __create_locale function
 ms.assetid: ca362464-9f4a-4ec6-ab03-316c55c5be81
-ms.openlocfilehash: a7098dc572ecdbefd891efc8443e977b01850fa4
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 58274b63a09847fb8593247bd2777cfa19935510
+ms.sourcegitcommit: f38f770bfda1c174d2b81fabda7c893b15bd83a1
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70938852"
+ms.lasthandoff: 02/20/2020
+ms.locfileid: "77473833"
 ---
 # <a name="_create_locale-_wcreate_locale"></a>_create_locale, _wcreate_locale
 
@@ -58,7 +58,7 @@ _locale_t _wcreate_locale(
 ### <a name="parameters"></a>Paramètres
 
 *category*<br/>
-Catégorie.
+Category :
 
 *locale*<br/>
 Spécificateur de paramètres régionaux.
@@ -69,39 +69,39 @@ Si *des paramètres régionaux et* une *catégorie* valides sont fournis, retour
 
 ## <a name="remarks"></a>Notes
 
-La fonction **_create_locale** vous permet de créer un objet qui représente certains paramètres spécifiques à une région, à utiliser dans les versions spécifiques aux paramètres régionaux de nombreuses fonctions CRT (fonctions avec le suffixe **_L** ). Le comportement est similaire à **setlocale**, sauf qu’au lieu d’appliquer les paramètres régionaux spécifiés à l’environnement actuel, les paramètres sont enregistrés dans une structure **_locale_t** qui est retournée. La structure **_locale_t** doit être libérée à l’aide de [_free_locale](free-locale.md) lorsqu’elle n’est plus nécessaire.
+La fonction **_create_locale** vous permet de créer un objet qui représente certains paramètres spécifiques à une région, à utiliser dans les versions spécifiques aux paramètres régionaux de nombreuses fonctions CRT (fonctions avec le suffixe **_L** ). Le comportement est similaire à **setlocale**, sauf qu’au lieu d’appliquer les paramètres régionaux spécifiés à l’environnement actuel, les paramètres sont enregistrés dans une structure **_locale_t** retournée. La structure **_locale_t** doit être libérée à l’aide de [_free_locale](free-locale.md) lorsqu’elle n’est plus nécessaire.
 
 **_wcreate_locale** est une version à caractères larges de **_create_locale**; l’argument de *paramètres régionaux* pour **_wcreate_locale** est une chaîne de caractères larges. dans le cas contraire, **_wcreate_locale** et **_create_locale** se comportent de la même façon.
 
 L’argument *Category* spécifie les parties du comportement spécifique aux paramètres régionaux qui sont affectées. Les indicateurs utilisés pour la *catégorie* et les parties du programme qu’elles affectent sont comme indiqué dans le tableau suivant :
 
-| indicateur de *catégorie* | Affecte |
+| indicateur de *catégorie* | Éléments affectés |
 |-----------------|---------|
 | **LC_ALL** |Toutes les catégories, comme indiqué ci-dessous. |
 | **LC_COLLATE** |Les fonctions **strcoll**, **_stricoll**, **wcscoll**, **_wcsicoll**, **strxfrm**, **_strncoll**, **_strnicoll**, **_wcsncoll**, **_wcsnicoll**et **wcsxfrm** . |
 | **LC_CTYPE** | Fonctions de gestion de caractères (à l’exception de **IsDigit**, **isxdigit**, **mbstowcs**et **mbtowc**, qui ne sont pas affectées). |
 | **LC_MONETARY** | Informations de mise en forme monétaire retournées par la fonction **localeconv** . |
-| **LC_NUMERIC** | Caractère de virgule décimale pour les routines de sortie mises en forme (telles que **printf**), pour les routines de conversion de données et pour les informations de mise en forme non monétaire retournées par **localeconv**. Outre le caractère de virgule décimale, **LC_NUMERIC** définit le séparateur de milliers et la chaîne de contrôle de regroupement retournés par [localeconv](localeconv.md). |
+| **LC_NUMERIC** | Caractère de virgule décimale pour les routines de sortie mises en forme (telles que **printf**), pour les routines de conversion de données et pour les informations de mise en forme non monétaire retournées par **localeconv**. Outre le caractère de virgule décimale, **LC_NUMERIC** définit le séparateur des milliers et la chaîne de contrôle de regroupement retournée par [localeconv](localeconv.md). |
 | **LC_TIME** | Fonctions **strftime** et **wcsftime** . |
 
 Cette fonction valide les paramètres de *catégorie* et de paramètres *régionaux* . Si le paramètre Category ne fait pas partie des valeurs indiquées dans le tableau précédent ou si les *paramètres régionaux* ont la **valeur null**, la fonction retourne la **valeur null**.
 
 L’argument de *paramètres régionaux* est un pointeur vers une chaîne qui spécifie les paramètres régionaux. Pour plus d’informations sur le format de l’argument de *paramètres régionaux* , consultez [noms de paramètres régionaux, langues et chaînes de pays/région](../../c-runtime-library/locale-names-languages-and-country-region-strings.md).
 
-L’argument des *paramètres régionaux* peut accepter un nom de paramètres régionaux, une chaîne de langue, une chaîne de langue et un pays/région, une page de codes ou une chaîne de langue, un pays/région et une page de codes. L’ensemble des noms de paramètres régionaux, des langues, des pays ou codes zone, et de pages de codes disponibles inclut tous ceux qui sont pris en charge par l’API Windows NLS, à l’exception des pages de codes qui requièrent plus de deux octets par caractère, par exemple, UTF-7 et UTF-8. Si vous fournissez une page de codes comme UTF-7 ou UTF-8, **_create_locale** échoue et retourne **null**. Le jeu de noms de paramètres régionaux pris en charge par **_create_locale** est décrit dans les [chaînes de noms, de langues et de pays/région](../../c-runtime-library/locale-names-languages-and-country-region-strings.md). L’ensemble de chaînes de langue et de pays/région prises en charge par **_create_locale** est répertorié dans chaînes de [langue](../../c-runtime-library/language-strings.md) et [chaînes de pays/région](../../c-runtime-library/country-region-strings.md).
+L’argument des *paramètres régionaux* peut accepter un nom de paramètres régionaux, une chaîne de langue, une chaîne de langue et un pays/région, une page de codes ou une chaîne de langue, un pays/région et une page de codes. L’ensemble des noms de paramètres régionaux, des langues, des codes de pays/région et des pages de codes disponibles comprend tous les pris en charge par l’API NLS Windows. Le jeu de noms de paramètres régionaux pris en charge par **_create_locale** est décrit dans les [chaînes de noms, de langues et de pays/région](../../c-runtime-library/locale-names-languages-and-country-region-strings.md). L’ensemble de chaînes de langue et de pays/région prises en charge par **_create_locale** sont répertoriés dans [chaînes de langue](../../c-runtime-library/language-strings.md) et [chaînes de pays/région](../../c-runtime-library/country-region-strings.md).
 
 Pour plus d’informations sur les paramètres régionaux, consultez [setlocale, _wsetlocale](setlocale-wsetlocale.md).
 
 Le nom précédent de cette fonction, **__create_locale** (avec deux traits de soulignement de début), est déconseillé.
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
 |Routine|En-tête requis|
 |-------------|---------------------|
 |**_create_locale**|\<locale.h>|
 |**_wcreate_locale**|\<locale.h> ou \<wchar.h>|
 
-Pour plus d'informations sur la compatibilité, voir [Compatibilité](../../c-runtime-library/compatibility.md).
+Pour plus d’informations sur la compatibilité, voir [Compatibilité](../../c-runtime-library/compatibility.md).
 
 ## <a name="example"></a>Exemple
 
