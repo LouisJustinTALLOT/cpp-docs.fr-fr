@@ -4,12 +4,12 @@ ms.date: 11/22/2019
 helpviewer_keywords:
 - CMake in Visual C++
 ms.assetid: 444d50df-215e-4d31-933a-b41841f186f8
-ms.openlocfilehash: fb7dc81648ae301962b952b0440d8a24b397c0d8
-ms.sourcegitcommit: a930a9b47bd95599265d6ba83bb87e46ae748949
+ms.openlocfilehash: 542a469393d3655418f69e5d51d59adfa824ad15
+ms.sourcegitcommit: 9a63e9b36d5e7fb13eab15c2c35bedad4fb03ade
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/22/2020
-ms.locfileid: "76518203"
+ms.lasthandoff: 02/25/2020
+ms.locfileid: "77600035"
 ---
 # <a name="cmakesettingsjson-schema-reference"></a>Informations de référence sur le schéma CMakeSettings.json
 
@@ -31,7 +31,7 @@ Le tableau `configurations` contient toutes les configurations d’un projet CMa
 
 Une `configuration` a les propriétés suivantes :
 
-- `addressSDanitizerEnabled`: si `true` compile le programme avec l’adresse de nettoyage (expérimental sur Windows). Sur Linux, compilez avec-FNO-omit-frame-pointer et le niveau d’optimisation du compilateur-OS ou-oo pour obtenir de meilleurs résultats.
+- `addressSanitizerEnabled`: si `true` compile le programme avec l’adresse de nettoyage (expérimental sur Windows). Sur Linux, compilez avec-FNO-omit-frame-pointer et le niveau d’optimisation du compilateur-OS ou-oo pour obtenir de meilleurs résultats.
 - `addressSanitizerRuntimeFlags`: indicateurs d’exécution passés à AddressSanitizer via la variable d’environnement ASAN_OPTIONS. Format : Indicateur1 = valeur : Indicateur2 = value2.
 - `buildCommandArgs` : spécifie des commutateurs de build natifs passés à CMake après --build --. Par exemple, si vous passez -v quand vous utilisez le générateur Ninja, cela oblige Ninja à sortir des lignes de commande. Consultez [Arguments de ligne de commande Ninja](#ninja) pour plus d’informations sur les commandes Ninja.
 - `buildRoot` : spécifie le répertoire dans lequel CMake génère les scripts de génération pour le générateur choisi.  Mappe sur **le commutateur-DCMAKE_BINARY_DIR** et spécifie où *CMakeCache. txt* sera créé. Si le dossier n’existe pas, il est créé. Les macros prises en charge incluent `${workspaceRoot}`, `${workspaceHash}`, `${projectFile}`, `${projectDir}`, `${thisFile}`, `${thisFileDir}`, `${name}`, `${generator}`, `${env.VARIABLE}`.
@@ -43,8 +43,8 @@ Une `configuration` a les propriétés suivantes :
 - `codeAnalysisRuleset` : spécifie l’ensemble de règles à utiliser lors de l’exécution de l’analyse du code. Il peut s’agir d’un chemin complet ou du nom d’un fichier d’ensemble de règles installé par Visual Studio.
 - `configurationType` : spécifie la configuration du type de build pour le générateur sélectionné. Possibilités :
 
-  - Déboguer
-  - Release
+  - Débogage
+  - Libérer
   - MinSizeRel
   - RelWithDebInfo
   
