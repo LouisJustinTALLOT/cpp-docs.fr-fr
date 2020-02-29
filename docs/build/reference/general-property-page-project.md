@@ -25,20 +25,20 @@ helpviewer_keywords:
 - Clean Build option
 - output files, setting directory
 - Unicode, creating C++ build configuration
-ms.openlocfilehash: 0fb6e1289b44940cabaee02e62690c94ec5bf131
-ms.sourcegitcommit: 7f5b29e24e1be9b5985044a030977485fea0b50c
+ms.openlocfilehash: eb172e7bd76816458a0efff7b053d136f52076ab
+ms.sourcegitcommit: a673f6a54cc97e3d4cd032b10aa8dce7f0539d39
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/17/2019
-ms.locfileid: "68299774"
+ms.lasthandoff: 02/28/2020
+ms.locfileid: "78166756"
 ---
 # <a name="general-property-page-project"></a>Général, page de propriétés (Projet)
 
 ::: moniker range=">=vs-2019"
 
-Cette rubrique s’applique aux projets Visual Studio pour Windows. Pour les projets Linux, consultez les informations de référence sur les [pages de propriétés Linux C++ ](../../linux/prop-pages-linux.md). Pour les projets CMake, consultez [projets cmake dans Visual Studio](../cmake-projects-in-visual-studio.md).
+Cette rubrique s’applique aux projets Visual Studio pour Windows. Pour les projets Linux, consultez les informations de référence sur les [pages de propriétés Linux C++ ](../../linux/prop-pages-linux.md). Pour les projets CMake, consultez [projets cmake dans Visual Studio](../cmake-projects-in-visual-studio.md). Pour les projets Android, consultez [Propriétés générales du projet C++(Android)](/cpp/cross-platform/general-android-prop-page). Pour les projets Makefile Android, consultez [Propriétés générales du projet C++ (Makefile Android)](/cpp/cross-platform/general-makefile-android-prop-page) .
 
-Lorsque vous cliquez avec le bouton droit sur un nœud de projet dans Explorateur de solutions, puis sélectionnez **Propriétés**, la page de propriétés **général** sous le nœud **Propriétés de configuration** dans le volet gauche affiche les propriétés suivantes:
+Lorsque vous cliquez avec le bouton droit sur un nœud de projet dans Explorateur de solutions, puis sélectionnez **Propriétés**, la page de propriétés **général** sous le nœud **Propriétés de configuration** dans le volet gauche affiche les propriétés suivantes :
 
 - **Répertoire de sortie**
 
@@ -88,27 +88,27 @@ Lorsque vous cliquez avec le bouton droit sur un nœud de projet dans Explorateu
 
    Pour cibler Windows 7 ou Windows Vista, utilisez la valeur **8.1** puisque le SDK Windows 8.1 offre une compatibilité descendante avec ces plateformes. En outre, vous devez définir la valeur appropriée pour **_WIN32_WINNT** dans targetver.h. Pour Windows 7, il s'agit de 0x0601. Consultez [Modification de WINVER et _WIN32_WINNT](../../porting/modifying-winver-and-win32-winnt.md).
 
-   Vous pouvez installer l’ensemble d’outils de plateforme Windows XP inclus dans Visual Studio pour utiliser la version actuelle des bibliothèques afin de générer des projets Windows XP et Windows 2003 Server. Pour plus d’informations sur l’obtention et l’utilisation de cet ensemble d’outils de plateforme, consultez [Configuration des programmes pour Windows XP](../configuring-programs-for-windows-xp.md). Pour plus d’informations sur la modification de l’ensemble d’outils de plateforme, consultez [Guide pratique pour modifier le framework cible et l’ensemble d’outils de plateforme](../how-to-modify-the-target-framework-and-platform-toolset.md).
+   Vous pouvez installer l’ensemble d’outils de plateforme Windows XP inclus dans Visual Studio pour utiliser la version actuelle des bibliothèques afin de générer des projets Windows XP et Windows 2003 Server. Pour plus d’informations sur l’obtention et l’utilisation de cet ensemble d’outils de plateforme, consultez [Configuration des programmes pour Windows XP](../configuring-programs-for-windows-xp.md). Pour plus d’informations sur la modification de l’ensemble d’outils de plateforme, consultez [Guide pratique pour modifier le framework cible et l’ensemble d’outils de la plateforme](../how-to-modify-the-target-framework-and-platform-toolset.md).
 
 - **Ensemble d’outils de plateforme**
 
-   Permet au projet de cibler une version différente des bibliothèques Visual C++ et du compilateur. Les projets C++ Visual Studio peuvent cibler l’ensemble d’outils par défaut installé par Visual Studio, ou l’un des ensembles d’outils installés par plusieurs versions précédentes de Visual Studio, y compris les ensembles d’outils qui créent des exécutables qui peuvent s’exécuter sur Windows XP. Pour plus d’informations sur la modification de l' [ensemble d’outils de plateforme, consultez Procédure: modifier le framework cible et l’ensemble d’outils de plateforme](../how-to-modify-the-target-framework-and-platform-toolset.md).
+   Permet au projet de cibler une version différente des bibliothèques Visual C++ et du compilateur. Les projets C++ Visual Studio peuvent cibler l’ensemble d’outils par défaut installé par Visual Studio, ou l’un des ensembles d’outils installés par plusieurs versions précédentes de Visual Studio, y compris les ensembles d’outils qui créent des exécutables pouvant s’exécuter sous Windows XP. Pour obtenir des informations sur le changement de l’ensemble d’outils de plateforme, consultez [Guide pratique pour modifier le framework cible et l’ensemble d’outils de la plateforme](../how-to-modify-the-target-framework-and-platform-toolset.md).
 
 - **C++Norme du langage**
 
-   Spécifie la norme de langue à utiliser. La valeur par défaut est/std: c++ 14. Spécifiez/std: c++ 17 pour utiliser les fonctionnalités C++ 17 ou/std: c++ + latest pour utiliser C++ 20 ou d’autres fonctionnalités expérimentales. Pour plus d’informations, consultez [/STD (spécifier la version du langage standard)](std-specify-language-standard-version.md) .
+   Spécifie la norme de langue à utiliser. La valeur par défaut est/std : c++ 14. Spécifiez/std : c++ 17 pour utiliser les fonctionnalités C++ 17 ou/std : c++ + latest pour utiliser C++ 20 ou d’autres fonctionnalités expérimentales. Pour plus d’informations, consultez [/STD (spécifier la version du langage standard)](std-specify-language-standard-version.md) .
 
 ::: moniker-end
 
 ::: moniker range="<=vs-2017"
 
-Dans Visual Studio 2015 et Visual Studio 2017, lorsque vous cliquez avec le bouton droit sur un nœud de projet dans **Explorateur de solutions**, et que vous sélectionnez **Propriétés**, la page de propriétés **général** sous le nœud **Propriétés de configuration** dans le volet gauche affiche deux sections de propriétés:
+Dans Visual Studio 2015 et Visual Studio 2017, lorsque vous cliquez avec le bouton droit sur un nœud de projet dans **Explorateur de solutions**, et que vous sélectionnez **Propriétés**, la page de propriétés **général** sous le nœud **Propriétés de configuration** dans le volet gauche affiche deux sections de propriétés :
 
-- Généralités
+- Général
 
 - Paramètres par défaut du projet
 
-## <a name="general"></a>Généralités
+## <a name="general"></a>Général
 
 - **Plateforme cible**
 
@@ -126,7 +126,7 @@ Dans Visual Studio 2015 et Visual Studio 2017, lorsque vous cliquez avec le bout
 
    Pour cibler Windows 7 ou Windows Vista, utilisez la valeur **8.1** puisque le SDK Windows 8.1 offre une compatibilité descendante avec ces plateformes. En outre, vous devez définir la valeur appropriée pour **_WIN32_WINNT** dans targetver.h. Pour Windows 7, il s'agit de 0x0601. Consultez [Modification de WINVER et _WIN32_WINNT](../../porting/modifying-winver-and-win32-winnt.md).
 
-   Vous pouvez installer l’ensemble d’outils de plateforme Windows XP inclus dans Visual Studio pour utiliser la version actuelle des bibliothèques afin de générer des projets Windows XP et Windows 2003 Server. Pour plus d’informations sur l’obtention et l’utilisation de cet ensemble d’outils de plateforme, consultez [Configuration des programmes pour Windows XP](../configuring-programs-for-windows-xp.md). Pour plus d’informations sur la modification de l’ensemble d’outils de plateforme, consultez [Guide pratique pour modifier le framework cible et l’ensemble d’outils de plateforme](../how-to-modify-the-target-framework-and-platform-toolset.md).
+   Vous pouvez installer l’ensemble d’outils de plateforme Windows XP inclus dans Visual Studio pour utiliser la version actuelle des bibliothèques afin de générer des projets Windows XP et Windows 2003 Server. Pour plus d’informations sur l’obtention et l’utilisation de cet ensemble d’outils de plateforme, consultez [Configuration des programmes pour Windows XP](../configuring-programs-for-windows-xp.md). Pour plus d’informations sur la modification de l’ensemble d’outils de plateforme, consultez [Guide pratique pour modifier le framework cible et l’ensemble d’outils de la plateforme](../how-to-modify-the-target-framework-and-platform-toolset.md).
 
 - **Répertoire de sortie**
 
@@ -162,14 +162,14 @@ Dans Visual Studio 2015 et Visual Studio 2017, lorsque vous cliquez avec le bout
 
 - **Ensemble d’outils de plateforme**
 
-   Permet au projet de cibler une version différente des bibliothèques Visual C++ et du compilateur. Les projets C++ Visual Studio peuvent cibler l’ensemble d’outils par défaut installé par Visual Studio, ou l’un des ensembles d’outils installés par plusieurs versions précédentes de Visual Studio, y compris les ensembles d’outils qui créent des exécutables qui peuvent s’exécuter sur Windows XP. Pour plus d’informations sur la modification de l' [ensemble d’outils de plateforme, consultez Procédure: modifier le framework cible et l’ensemble d’outils de plateforme](../how-to-modify-the-target-framework-and-platform-toolset.md).
+   Permet au projet de cibler une version différente des bibliothèques Visual C++ et du compilateur. Les projets C++ Visual Studio peuvent cibler l’ensemble d’outils par défaut installé par Visual Studio, ou l’un des ensembles d’outils installés par plusieurs versions précédentes de Visual Studio, y compris les ensembles d’outils qui créent des exécutables pouvant s’exécuter sous Windows XP. Pour obtenir des informations sur le changement de l’ensemble d’outils de plateforme, consultez [Guide pratique pour modifier le framework cible et l’ensemble d’outils de la plateforme](../how-to-modify-the-target-framework-and-platform-toolset.md).
 
 - **Activer la build incrémentielle managée**
 
    Pour les projets managés, active la détection de la visibilité externe quand vous générez des assemblys. Si un changement apporté à un projet managé n’est pas visible par d’autres projets, les projets dépendants ne sont pas regénérés. Il peut en résulter une réduction considérable des durées de génération dans les solutions qui incluent des projets managés.
 
 ## <a name="project-defaults"></a>Paramètres par défaut du projet
- 
+
 Les propriétés de la section Paramètres par défaut du projet représentent les propriétés par défaut que vous pouvez modifier. La définition de ces propriétés est accessible dans les fichiers .props dans *Installation Directory*\VC\VCProjectDefaults.
 
 - **Type de configuration**
