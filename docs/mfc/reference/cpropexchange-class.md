@@ -23,11 +23,11 @@ helpviewer_keywords:
 - CPropExchange [MFC], IsLoading
 ms.assetid: ed872180-e770-4942-892a-92139d501fab
 ms.openlocfilehash: e9ad7c363f2580200af20baeb0acd7a93c1f603b
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69502763"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78871769"
 ---
 # <a name="cpropexchange-class"></a>CPropExchange, classe
 
@@ -43,20 +43,20 @@ class AFX_NOVTABLE CPropExchange
 
 ### <a name="public-methods"></a>M&#233;thodes publiques
 
-|Nom|Description|
+|Name|Description|
 |----------|-----------------|
-|[CPropExchange::ExchangeBlobProp](#exchangeblobprop)|Échange une propriété d’objet BLOB (Binary Large Object).|
-|[CPropExchange::ExchangeFontProp](#exchangefontprop)|Échange une propriété font.|
-|[CPropExchange::ExchangePersistentProp](#exchangepersistentprop)|Échange une propriété entre un contrôle et un fichier.|
-|[CPropExchange::ExchangeProp](#exchangeprop)|Échange les propriétés de tout type intégré.|
-|[CPropExchange::ExchangeVersion](#exchangeversion)|Échange le numéro de version d’un contrôle OLE.|
-|[CPropExchange:: GetVersion](#getversion)|Récupère le numéro de version d’un contrôle OLE.|
-|[CPropExchange:: IsAsynchronous](#isasynchronous)|Détermine si les échanges de propriétés sont effectués de manière asynchrone.|
-|[CPropExchange::IsLoading](#isloading)|Indique si les propriétés sont chargées dans le contrôle ou enregistrées à partir de celle-ci.|
+|[CPropExchange :: ExchangeBlobProp](#exchangeblobprop)|Échange une propriété d’objet BLOB (Binary Large Object).|
+|[CPropExchange :: ExchangeFontProp](#exchangefontprop)|Échange une propriété font.|
+|[CPropExchange :: ExchangePersistentProp](#exchangepersistentprop)|Échange une propriété entre un contrôle et un fichier.|
+|[CPropExchange :: ExchangeProp](#exchangeprop)|Échange les propriétés de tout type intégré.|
+|[CPropExchange :: ExchangeVersion](#exchangeversion)|Échange le numéro de version d’un contrôle OLE.|
+|[CPropExchange :: GetVersion](#getversion)|Récupère le numéro de version d’un contrôle OLE.|
+|[CPropExchange :: IsAsynchronous](#isasynchronous)|Détermine si les échanges de propriétés sont effectués de manière asynchrone.|
+|[CPropExchange :: IsLoading](#isloading)|Indique si les propriétés sont chargées dans le contrôle ou enregistrées à partir de celle-ci.|
 
 ## <a name="remarks"></a>Notes
 
-`CPropExchange`n’a pas de classe de base.
+`CPropExchange` n’a pas de classe de base.
 
 Établit le contexte et la direction d’un échange de propriétés.
 
@@ -64,21 +64,21 @@ La persistance est l’échange des informations d’État du contrôle, génér
 
 L’infrastructure construit un objet dérivé de `CPropExchange` lorsqu’il est notifié que les propriétés d’un contrôle OLE doivent être chargées à partir de ou stockées dans un stockage persistant.
 
-L’infrastructure passe un pointeur vers cet `CPropExchange` objet à la fonction de `DoPropExchange` votre contrôle. Si vous avez utilisé un Assistant pour créer les fichiers de démarrage pour votre contrôle, la `DoPropExchange` fonction de `COleControl::DoPropExchange`votre contrôle appelle. La version de la classe de base échange les propriétés stock du contrôle; vous modifiez la version de votre classe dérivée pour échanger les propriétés que vous avez ajoutées à votre contrôle.
+L’infrastructure passe un pointeur vers cet objet `CPropExchange` à la fonction `DoPropExchange` de votre contrôle. Si vous avez utilisé un Assistant pour créer les fichiers de démarrage pour votre contrôle, la fonction `DoPropExchange` de votre contrôle appelle `COleControl::DoPropExchange`. La version de la classe de base échange les propriétés stock du contrôle ; vous modifiez la version de votre classe dérivée pour échanger les propriétés que vous avez ajoutées à votre contrôle.
 
-`CPropExchange`peut être utilisé pour sérialiser les propriétés d’un contrôle ou initialiser les propriétés d’un contrôle lors du chargement ou de la création d’un contrôle. Les `ExchangeProp` fonctions `ExchangeFontProp` membres et de `CPropExchange` peuvent stocker des propriétés et les charger à partir de différents médias.
+`CPropExchange` peut être utilisé pour sérialiser les propriétés d’un contrôle ou initialiser les propriétés d’un contrôle lors du chargement ou de la création d’un contrôle. Les fonctions membres `ExchangeProp` et `ExchangeFontProp` de `CPropExchange` sont en mesure de stocker des propriétés et de les charger à partir de différents médias.
 
-Pour plus d’informations sur `CPropExchange`l’utilisation de, [consultez l’article contrôles ActiveX MFC: Pages](../../mfc/mfc-activex-controls-property-pages.md)de propriétés.
+Pour plus d’informations sur l’utilisation de `CPropExchange`, consultez l’article [contrôles ActiveX MFC : pages de propriétés](../../mfc/mfc-activex-controls-property-pages.md).
 
 ## <a name="inheritance-hierarchy"></a>Hiérarchie d'héritage
 
 `CPropExchange`
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
-**En-tête:** afxctl. h
+**En-tête :** afxctl. h
 
-##  <a name="exchangeblobprop"></a>  CPropExchange::ExchangeBlobProp
+##  <a name="exchangeblobprop"></a>CPropExchange :: ExchangeBlobProp
 
 Sérialise une propriété qui stocke des données BLOB (Binary Large Object).
 
@@ -102,15 +102,15 @@ Valeur par défaut pour la propriété.
 
 ### <a name="return-value"></a>Valeur de retour
 
-Différent de zéro si l’échange a réussi; 0 en cas d’échec.
+Différent de zéro si l’échange a réussi ; 0 en cas d’échec.
 
 ### <a name="remarks"></a>Notes
 
 La valeur de la propriété est lue ou écrite dans, selon le cas, la variable référencée par *phBlob*. Si *hBlobDefault* est spécifié, il sera utilisé comme valeur par défaut de la propriété. Cette valeur est utilisée si, pour une raison quelconque, la sérialisation du contrôle échoue.
 
-Les fonctions `CArchivePropExchange::ExchangeBlobProp`, `CResetPropExchange::ExchangeBlobProp`et `CPropsetPropExchange::ExchangeBlobProp` remplacent cette fonction virtuelle pure.
+Les fonctions `CArchivePropExchange::ExchangeBlobProp`, `CResetPropExchange::ExchangeBlobProp`et `CPropsetPropExchange::ExchangeBlobProp` substituent cette fonction virtuelle pure.
 
-##  <a name="exchangefontprop"></a>  CPropExchange::ExchangeFontProp
+##  <a name="exchangefontprop"></a>CPropExchange :: ExchangeFontProp
 
 Échange une propriété de police entre un support de stockage et le contrôle.
 
@@ -127,26 +127,26 @@ virtual BOOL ExchangeFontProp(
 *pszPropName*<br/>
 Nom de la propriété en cours d’échange.
 
-*font*<br/>
+*son*<br/>
 Référence à un objet [CFontHolder](../../mfc/reference/cfontholder-class.md) qui contient la propriété font.
 
 *pFontDesc*<br/>
 Pointeur vers une structure [fontdesc](/windows/win32/api/olectl/ns-olectl-fontdesc) contenant des valeurs pour initialiser l’État par défaut de la propriété font lorsque *pFontDispAmbient* a la valeur null.
 
 *pFontDispAmbient*<br/>
-Pointeur vers l' `IFontDisp` interface d’une police à utiliser pour initialiser l’État par défaut de la propriété font.
+Pointeur vers l’interface `IFontDisp` d’une police à utiliser pour initialiser l’État par défaut de la propriété font.
 
 ### <a name="return-value"></a>Valeur de retour
 
-Différent de zéro si l’échange a réussi; 0 en cas d’échec.
+Différent de zéro si l’échange a réussi ; 0 en cas d’échec.
 
 ### <a name="remarks"></a>Notes
 
-Si la propriété font est chargée du support au contrôle, les caractéristiques de la police sont extraites du support et l’objet référencé `CFontHolder` par la *police* est initialisé avec eux. Si la propriété font est stockée, les caractéristiques de l’objet font sont écrites sur le support.
+Si la propriété font est chargée du support au contrôle, les caractéristiques de la police sont récupérées à partir du support et l’objet `CFontHolder` référencé par la *police* est initialisé avec eux. Si la propriété font est stockée, les caractéristiques de l’objet font sont écrites sur le support.
 
-Les fonctions `CArchivePropExchange::ExchangeFontProp`, `CResetPropExchange::ExchangeFontProp`et `CPropsetPropExchange::ExchangeFontProp` remplacent cette fonction virtuelle pure.
+Les fonctions `CArchivePropExchange::ExchangeFontProp`, `CResetPropExchange::ExchangeFontProp`et `CPropsetPropExchange::ExchangeFontProp` substituent cette fonction virtuelle pure.
 
-##  <a name="exchangepersistentprop"></a>  CPropExchange::ExchangePersistentProp
+##  <a name="exchangepersistentprop"></a>CPropExchange :: ExchangePersistentProp
 
 Échange une propriété entre le contrôle et un fichier.
 
@@ -164,9 +164,9 @@ virtual BOOL ExchangePersistentProp(
 Nom de la propriété en cours d’échange.
 
 *ppUnk*<br/>
-Pointeur vers une variable qui contient un pointeur vers l’interface de `IUnknown` la propriété (cette variable est généralement un membre de votre classe).
+Pointeur vers une variable qui contient un pointeur vers l’interface `IUnknown` de la propriété (cette variable est généralement un membre de votre classe).
 
-*iid*<br/>
+*vaut*<br/>
 ID d’interface de l’interface sur la propriété que le contrôle utilisera.
 
 *pUnkDefault*<br/>
@@ -174,15 +174,15 @@ Valeur par défaut pour la propriété.
 
 ### <a name="return-value"></a>Valeur de retour
 
-Différent de zéro si l’échange a réussi; 0 en cas d’échec.
+Différent de zéro si l’échange a réussi ; 0 en cas d’échec.
 
 ### <a name="remarks"></a>Notes
 
 Si la propriété est chargée à partir du fichier dans le contrôle, la propriété est créée et initialisée à partir du fichier. Si la propriété est stockée, sa valeur est écrite dans le fichier.
 
-Les fonctions `CArchivePropExchange::ExchangePersistentProp`, `CResetPropExchange::ExchangePersistentProp`et `CPropsetPropExchange::ExchangePersistentProp` remplacent cette fonction virtuelle pure.
+Les fonctions `CArchivePropExchange::ExchangePersistentProp`, `CResetPropExchange::ExchangePersistentProp`et `CPropsetPropExchange::ExchangePersistentProp` substituent cette fonction virtuelle pure.
 
-##  <a name="exchangeprop"></a>  CPropExchange::ExchangeProp
+##  <a name="exchangeprop"></a>CPropExchange :: ExchangeProp
 
 Échange une propriété entre un support de stockage et le contrôle.
 
@@ -220,15 +220,15 @@ Pointeur désignant une valeur par défaut pour la propriété.
 
 ### <a name="return-value"></a>Valeur de retour
 
-Différent de zéro si l’échange a réussi; 0 en cas d’échec.
+Différent de zéro si l’échange a réussi ; 0 en cas d’échec.
 
 ### <a name="remarks"></a>Notes
 
 Si la propriété est chargée du support au contrôle, la valeur de la propriété est récupérée à partir du support et stockée dans l’objet désigné par *pvProp*. Si la propriété est stockée sur le support, la valeur de l’objet pointé par *pvProp* est écrite sur le support.
 
-Les fonctions `CArchivePropExchange::ExchangeProp`, `CResetPropExchange::ExchangeProp`et `CPropsetPropExchange::ExchangeProp` remplacent cette fonction virtuelle pure.
+Les fonctions `CArchivePropExchange::ExchangeProp`, `CResetPropExchange::ExchangeProp`et `CPropsetPropExchange::ExchangeProp` substituent cette fonction virtuelle pure.
 
-##  <a name="exchangeversion"></a>  CPropExchange::ExchangeVersion
+##  <a name="exchangeversion"></a>CPropExchange :: ExchangeVersion
 
 Appelé par l’infrastructure pour gérer la persistance d’un numéro de version.
 
@@ -252,9 +252,9 @@ Indique si les données persistantes doivent être converties dans la version ac
 
 ### <a name="return-value"></a>Valeur de retour
 
-Différent de zéro si la fonction a réussi; Sinon, 0.
+Différent de zéro si la fonction a réussi ; Sinon, 0.
 
-##  <a name="getversion"></a>  CPropExchange::GetVersion
+##  <a name="getversion"></a>CPropExchange :: GetVersion
 
 Appelez cette fonction pour récupérer le numéro de version du contrôle.
 
@@ -266,7 +266,7 @@ DWORD GetVersion();
 
 Numéro de version du contrôle.
 
-##  <a name="isasynchronous"></a>CPropExchange:: IsAsynchronous
+##  <a name="isasynchronous"></a>CPropExchange :: IsAsynchronous
 
 Détermine si les échanges de propriétés sont effectués de manière asynchrone.
 
@@ -276,9 +276,9 @@ BOOL IsAsynchronous();
 
 ### <a name="return-value"></a>Valeur de retour
 
-Retourne la valeur TRUE si les propriétés sont échangées de façon asynchrone; sinon, FALSe.
+Retourne la valeur TRUE si les propriétés sont échangées de façon asynchrone ; sinon, FALSe.
 
-##  <a name="isloading"></a>  CPropExchange::IsLoading
+##  <a name="isloading"></a>CPropExchange :: IsLoading
 
 Appelez cette fonction pour déterminer si les propriétés sont chargées dans le contrôle ou enregistrées à partir de celle-ci.
 
@@ -288,9 +288,9 @@ BOOL IsLoading();
 
 ### <a name="return-value"></a>Valeur de retour
 
-Différent de zéro si les propriétés sont en cours de chargement; Sinon, 0.
+Différent de zéro si les propriétés sont en cours de chargement ; Sinon, 0.
 
 ## <a name="see-also"></a>Voir aussi
 
 [Graphique hiérarchique](../../mfc/hierarchy-chart.md)<br/>
-[COleControl::DoPropExchange](../../mfc/reference/colecontrol-class.md#dopropexchange)
+[COleControl ::D oPropExchange](../../mfc/reference/colecontrol-class.md#dopropexchange)

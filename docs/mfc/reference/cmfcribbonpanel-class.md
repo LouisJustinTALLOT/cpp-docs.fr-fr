@@ -1,5 +1,5 @@
 ---
-title: Cmfcribbonpanel, classe
+title: CMFCRibbonPanel, classe
 ms.date: 11/04/2016
 f1_keywords:
 - CMFCRibbonPanel
@@ -115,17 +115,17 @@ helpviewer_keywords:
 - CMFCRibbonPanel [MFC], ShowPopup
 ms.assetid: 51d70749-1140-4386-b103-f14082049ba6
 ms.openlocfilehash: 1ba7057405da2ebd7fd1bf699a69f97a650fa47c
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62389552"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78883601"
 ---
-# <a name="cmfcribbonpanel-class"></a>Cmfcribbonpanel, classe
+# <a name="cmfcribbonpanel-class"></a>CMFCRibbonPanel, classe
 
 Implémente un panneau qui contient un jeu d'éléments de ruban. Lorsque le panneau est dessiné, il affiche le plus d'éléments possible, selon la taille du panneau.
 
-Pour plus d’informations, consultez le code source situé dans le **VC\\atlmfc\\src\\mfc** dossier de votre installation de Visual Studio.
+Pour plus d’informations, consultez le code source situé dans le dossier **VC\\atlmfc\\src\\MFC** de votre installation Visual Studio.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -135,79 +135,79 @@ class CMFCRibbonPanel : public CObject
 
 ## <a name="members"></a>Membres
 
-### <a name="protected-constructors"></a>Constructeurs protégés
+### <a name="protected-constructors"></a>Constructeurs prot&#233;g&#233;s
 
-|Nom|Description|
+|Name|Description|
 |----------|-----------------|
-|[CMFCRibbonPanel::CMFCRibbonPanel](#cmfcribbonpanel)|Construit et initialise un objet `CMFCRibbonPanel`.|
+|[CMFCRibbonPanel :: CMFCRibbonPanel](#cmfcribbonpanel)|Construit et initialise un objet `CMFCRibbonPanel`.|
 
 ### <a name="public-methods"></a>M&#233;thodes publiques
 
-|Nom|Description|
+|Name|Description|
 |----------|-----------------|
-|[CMFCRibbonPanel::Add](#add)|Ajoute un élément de ruban dans le panneau.|
-|[CMFCRibbonPanel::AddSeparator](#addseparator)|Ajoute un séparateur dans le panneau de ruban.|
-|[CMFCRibbonPanel::AddToolBar](#addtoolbar)|Ajoute une barre d’outils dans le panneau de ruban.|
-|[CMFCRibbonPanel::FindByData](#findbydata)||
-|[CMFCRibbonPanel::FindByID](#findbyid)|Retourne un élément identifié par un ID de commande spécifié.|
-|[CMFCRibbonPanel::GetCaptionHeight](#getcaptionheight)||
-|[CMFCRibbonPanel::GetCount](#getcount)|Retourne le nombre d’éléments dans le volet du ruban.|
-|[CMFCRibbonPanel::GetData](#getdata)|Retourne les données définies par l’utilisateur associées au panneau.|
-|[CMFCRibbonPanel::GetDefaultButton](#getdefaultbutton)||
-|[CMFCRibbonPanel::GetDroppedDown](#getdroppeddown)||
-|[CMFCRibbonPanel::GetElement](#getelement)|Retourne l’élément de ruban situé à l’index spécifié.|
-|[CMFCRibbonPanel::GetElements](#getelements)|Récupère tous les éléments qui figurent dans le volet du ruban.|
-|[CMFCRibbonPanel::GetElementsByID](#getelementsbyid)||
-|[CMFCRibbonPanel::GetFocused](#getfocused)|Retourne un élément qui a le focus.|
-|[CMFCRibbonPanel::GetGalleryRect](#getgalleryrect)|Retourne un rectangle englobant de l’élément de galerie.|
-|[CMFCRibbonPanel::GetHighlighted](#gethighlighted)||
-|[CMFCRibbonPanel::GetIndex](#getindex)||
-|[CMFCRibbonPanel::GetItemIDsList](#getitemidslist)||
-|[CMFCRibbonPanel::GetName](#getname)||
-|[CMFCRibbonPanel::GetParentButton](#getparentbutton)||
-|[CMFCRibbonPanel::GetParentCategory](#getparentcategory)|Retourne la catégorie parente du Panneau de ruban.|
-|[CMFCRibbonPanel::GetParentMenuBar](#getparentmenubar)||
-|[CMFCRibbonPanel::GetPreferedMenuLocation](#getpreferedmenulocation)||
-|[CMFCRibbonPanel::GetPressed](#getpressed)||
-|[CMFCRibbonPanel::GetRect](#getrect)||
-|[CMFCRibbonPanel::GetVisibleElements](#getvisibleelements)|Obtient un tableau d’éléments visibles.|
-|[CMFCRibbonPanel::HasElement](#haselement)||
-|[CMFCRibbonPanel::HitTest](#hittest)||
-|[CMFCRibbonPanel::HitTestEx](#hittestex)||
-|[CMFCRibbonPanel::Insert](#insert)|Insère un élément de ruban à la position donnée.|
-|[CMFCRibbonPanel::InsertSeparator](#insertseparator)|Insère un séparateur à la position donnée.|
-|[CMFCRibbonPanel::IsCenterColumnVert](#iscentercolumnvert)|Spécifie si tous les éléments du Panneau de configuration doivent être centrées (aligné) verticalement, par colonne.|
-|[CMFCRibbonPanel::IsCollapsed](#iscollapsed)||
-|[CMFCRibbonPanel::IsHighlighted](#ishighlighted)||
-|[CMFCRibbonPanel::IsJustifyColumns](#isjustifycolumns)|Spécifie si toutes les colonnes du volet ont la même largeur.|
-|[CMFCRibbonPanel::IsMainPanel](#ismainpanel)||
-|[CMFCRibbonPanel::IsMenuMode](#ismenumode)||
-|[CMFCRibbonPanel::MakeGalleryItemVisible](#makegalleryitemvisible)|Fait défiler la galerie pour afficher l’élément de ruban spécifiée.|
-|[CMFCRibbonPanel::OnKey](#onkey)||
-|[CMFCRibbonPanel::RecalcWidths](#recalcwidths)||
-|[CMFCRibbonPanel::Remove](#remove)|Supprime et éventuellement un élément situé à l’index spécifié.|
-|[CMFCRibbonPanel::RemoveAll](#removeall)|Supprime tous les éléments à partir du Panneau de ruban.|
-|[CMFCRibbonPanel::Replace](#replace)|Remplace un élément par un autre en fonction de leurs valeurs d’index respectifs.|
-|[CMFCRibbonPanel::ReplaceByID](#replacebyid)|Remplace un élément avec un autre en fonction d’un ID de commande spécifié.|
-|[CMFCRibbonPanel::SetCenterColumnVert](#setcentercolumnvert)|Commandes du panneau pour aligner les éléments verticalement par colonne.|
-|[CMFCRibbonPanel::SetData](#setdata)|Données définies par l’utilisateur associe avec le volet du ruban.|
-|[CMFCRibbonPanel::SetElementMenu](#setelementmenu)|Assigne un menu contextuel à l’élément qui possède l’ID de commande donné.|
-|[CMFCRibbonPanel::SetElementRTC](#setelementrtc)|Ajoute un élément de ruban spécifié par les informations de classe d’exécution fournie au volet du ruban.|
-|[CMFCRibbonPanel::SetElementRTCByID](#setelementrtcbyid)|Ajoute un élément de ruban spécifié par les informations de classe d’exécution fournie au volet du ruban.|
-|[CMFCRibbonPanel::SetFocused](#setfocused)|Définit le focus sur l’élément de ruban spécifiée.|
-|[CMFCRibbonPanel::SetJustifyColumns](#setjustifycolumns)|Active ou désactive la justification de la colonne.|
-|[CMFCRibbonPanel::SetKeys](#setkeys)|Définit le raccourci clavier qui affiche le volet du ruban.|
-|[CMFCRibbonPanel::ShowPopup](#showpopup)||
+|[CMFCRibbonPanel :: Add](#add)|Ajoute un élément de ruban au panneau.|
+|[CMFCRibbonPanel :: AddSeparator](#addseparator)|Ajoute un séparateur au panneau du ruban.|
+|[CMFCRibbonPanel :: AddToolBar](#addtoolbar)|Ajoute une barre d’outils au panneau du ruban.|
+|[CMFCRibbonPanel :: FindByData](#findbydata)||
+|[CMFCRibbonPanel :: FindByID](#findbyid)|Retourne un élément identifié par un ID de commande spécifié.|
+|[CMFCRibbonPanel :: GetCaptionHeight](#getcaptionheight)||
+|[CMFCRibbonPanel :: GetCount](#getcount)|Retourne le nombre d’éléments dans le panneau du ruban.|
+|[CMFCRibbonPanel :: GetData](#getdata)|Retourne les données définies par l’utilisateur associées au panneau.|
+|[CMFCRibbonPanel :: GetDefaultButton](#getdefaultbutton)||
+|[CMFCRibbonPanel :: GetDroppedDown](#getdroppeddown)||
+|[CMFCRibbonPanel :: GetElement](#getelement)|Retourne l’élément de ruban situé à un index spécifié.|
+|[CMFCRibbonPanel :: GetElements](#getelements)|Récupère tous les éléments contenus dans le panneau du ruban.|
+|[CMFCRibbonPanel :: GetElementsByID](#getelementsbyid)||
+|[CMFCRibbonPanel :: GetFocused](#getfocused)|Retourne un élément qui a le focus.|
+|[CMFCRibbonPanel :: GetGalleryRect](#getgalleryrect)|Retourne un rectangle englobant de l’élément de la Galerie.|
+|[CMFCRibbonPanel :: GetHighlighted](#gethighlighted)||
+|[CMFCRibbonPanel :: GetIndex](#getindex)||
+|[CMFCRibbonPanel :: GetItemIDsList](#getitemidslist)||
+|[CMFCRibbonPanel :: GetName](#getname)||
+|[CMFCRibbonPanel :: GetParentButton](#getparentbutton)||
+|[CMFCRibbonPanel :: GetParentCategory](#getparentcategory)|Retourne la catégorie parente du panneau du ruban.|
+|[CMFCRibbonPanel :: GetParentMenuBar](#getparentmenubar)||
+|[CMFCRibbonPanel :: GetPreferedMenuLocation](#getpreferedmenulocation)||
+|[CMFCRibbonPanel :: GetPressed](#getpressed)||
+|[CMFCRibbonPanel :: GetRect](#getrect)||
+|[CMFCRibbonPanel :: GetVisibleElements](#getvisibleelements)|Obtient un tableau d’éléments visibles.|
+|[CMFCRibbonPanel :: HasElement](#haselement)||
+|[CMFCRibbonPanel :: HitTest](#hittest)||
+|[CMFCRibbonPanel :: HitTestEx](#hittestex)||
+|[CMFCRibbonPanel :: Insert](#insert)|Insère un élément de ruban à la position donnée.|
+|[CMFCRibbonPanel :: InsertSeparator](#insertseparator)|Insère un séparateur à la position donnée.|
+|[CMFCRibbonPanel :: IsCenterColumnVert](#iscentercolumnvert)|Spécifie si tous les éléments Panel doivent être centrés (alignés) verticalement, par colonne.|
+|[CMFCRibbonPanel :: IsCollapsed](#iscollapsed)||
+|[CMFCRibbonPanel :: IsHighlighted](#ishighlighted)||
+|[CMFCRibbonPanel :: IsJustifyColumns](#isjustifycolumns)|Spécifie si toutes les colonnes du panneau ont la même largeur.|
+|[CMFCRibbonPanel :: IsMainPanel](#ismainpanel)||
+|[CMFCRibbonPanel :: IsMenuMode](#ismenumode)||
+|[CMFCRibbonPanel :: MakeGalleryItemVisible](#makegalleryitemvisible)|Fait défiler la Galerie pour rendre l’élément de ruban spécifié visible.|
+|[CMFCRibbonPanel :: OnKey](#onkey)||
+|[CMFCRibbonPanel :: RecalcWidths](#recalcwidths)||
+|[CMFCRibbonPanel :: Remove](#remove)|Supprime et éventuellement un élément situé à l’index spécifié.|
+|[CMFCRibbonPanel :: RemoveAll](#removeall)|Supprime tous les éléments du panneau du ruban.|
+|[CMFCRibbonPanel :: replace](#replace)|Remplace un élément par un autre en fonction de leurs valeurs d’index respectives.|
+|[CMFCRibbonPanel :: ReplaceByID](#replacebyid)|Remplace un élément par un autre en fonction d’un ID de commande spécifié.|
+|[CMFCRibbonPanel :: SetCenterColumnVert](#setcentercolumnvert)|Trie le panneau pour aligner les éléments verticalement, par colonne.|
+|[CMFCRibbonPanel :: SetData](#setdata)|Associe les données définies par l’utilisateur au panneau du ruban.|
+|[CMFCRibbonPanel :: SetElementMenu](#setelementmenu)|Assigne un menu contextuel à l’élément qui a l’ID de commande donné.|
+|[CMFCRibbonPanel :: SetElementRTC](#setelementrtc)|Ajoute un élément de ruban spécifié par les informations de classe d’exécution fournies au panneau du ruban.|
+|[CMFCRibbonPanel :: SetElementRTCByID](#setelementrtcbyid)|Ajoute un élément de ruban spécifié par les informations de classe d’exécution fournies au panneau du ruban.|
+|[CMFCRibbonPanel :: SetFocused](#setfocused)|Définit le focus sur l’élément de ruban spécifié.|
+|[CMFCRibbonPanel :: SetJustifyColumns](#setjustifycolumns)|Active ou désactive la justification de colonne.|
+|[CMFCRibbonPanel :: setkeys](#setkeys)|Définit le raccourci clavier qui affiche le panneau du ruban.|
+|[CMFCRibbonPanel :: ShowPopup](#showpopup)||
 
 ## <a name="remarks"></a>Notes
 
-Volets de ruban sont des regroupements logiques de tâches associées que vous créez dans les catégories de ruban. Comme la taille des modifications du ruban, la disposition du panneau ajuste automatiquement pour afficher les éléments autant que possible.
+Les panneaux du ruban sont des regroupements logiques de tâches associées que vous créez dans les catégories de ruban. À mesure que la taille du ruban change, la disposition du panneau s’ajuste automatiquement pour afficher autant d’éléments que possible.
 
-Vous pouvez obtenir un ruban panneaux qui est contenue dans une catégorie de ruban en appelant le [CMFCRibbonCategory::GetPanel](../../mfc/reference/cmfcribboncategory-class.md#getpanel) (méthode).
+Vous pouvez obtenir un volet de ruban contenu dans une catégorie de ruban en appelant la méthode [CMFCRibbonCategory :: GetPanel](../../mfc/reference/cmfcribboncategory-class.md#getpanel) .
 
 ## <a name="example"></a>Exemple
 
-L’exemple suivant montre comment configurer un `CMFCRibbonPanel` objet à l’aide de différentes méthodes de la `CMFCRibbonPanel` classe. L’exemple montre comment définir le raccourci clavier qui affiche le volet du ruban, aligner les éléments dans le volet verticalement par colonne et activer la justification de la colonne. Cet extrait de code fait partie de la [exemple de démonstration de MS Office 2007](../../overview/visual-cpp-samples.md).
+L’exemple suivant montre comment configurer un objet `CMFCRibbonPanel` à l’aide de diverses méthodes de la classe `CMFCRibbonPanel`. L’exemple montre comment définir le raccourci clavier qui affiche le panneau du ruban, aligner les éléments dans le volet verticalement par colonne et activer la justification de colonne. Cet extrait de code fait partie de l' [exemple de démonstration de MS Office 2007](../../overview/visual-cpp-samples.md).
 
 [!code-cpp[NVC_MFC_MSOffice2007Demo#10](../../mfc/reference/codesnippet/cpp/cmfcribbonpanel-class_1.cpp)]
 
@@ -217,13 +217,13 @@ L’exemple suivant montre comment configurer un `CMFCRibbonPanel` objet à l’
 
 [CMFCRibbonPanel](../../mfc/reference/cmfcribbonpanel-class.md)
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
-**En-tête :** afxRibbonPanel.h
+**En-tête :** afxRibbonPanel. h
 
-##  <a name="add"></a>  CMFCRibbonPanel::Add
+##  <a name="add"></a>CMFCRibbonPanel :: Add
 
-Ajoute l’élément de ruban spécifiée dans le tableau d’éléments de ruban qui est contenu dans le volet du ruban.
+Ajoute l’élément de ruban spécifié au tableau d’éléments de ruban qui est contenu dans le panneau du ruban.
 
 ```
 virtual void Add(CMFCRibbonBaseElement* pElem);
@@ -231,14 +231,14 @@ virtual void Add(CMFCRibbonBaseElement* pElem);
 
 ### <a name="parameters"></a>Paramètres
 
-*pElem*<br/>
+*pEler*<br/>
 [in, out] Pointeur vers un élément de ruban.
 
 ### <a name="remarks"></a>Notes
 
-##  <a name="addseparator"></a>  CMFCRibbonPanel::AddSeparator
+##  <a name="addseparator"></a>CMFCRibbonPanel :: AddSeparator
 
-Ajoute un séparateur dans le panneau de ruban.
+Ajoute un séparateur au panneau du ruban.
 
 ```
 virtual void AddSeparator();
@@ -246,11 +246,11 @@ virtual void AddSeparator();
 
 ### <a name="remarks"></a>Notes
 
-Appelez cette méthode pour ajouter un séparateur dans le volet du ruban. Le séparateur sera ajouté en regard de l’élément de ruban qui a été ajoutée par l’appel précédent à [CMFCRibbonPanel::Add](#add). Pour insérer un séparateur à une position donnée, appelez [CMFCRibbonPanel::InsertSeparator](#insertseparator).
+Appelez cette méthode pour ajouter un séparateur au panneau du ruban. Le séparateur sera ajouté en regard de l’élément de ruban qui a été ajouté par l’appel précédent à [CMFCRibbonPanel :: Add](#add). Pour insérer un séparateur à une position donnée, appelez [CMFCRibbonPanel :: InsertSeparator](#insertseparator).
 
-##  <a name="addtoolbar"></a>  CMFCRibbonPanel::AddToolBar
+##  <a name="addtoolbar"></a>CMFCRibbonPanel :: AddToolBar
 
-Ajoute une barre d’outils dans le panneau de ruban.
+Ajoute une barre d’outils au panneau du ruban.
 
 ```
 CMFCRibbonButtonsGroup* AddToolBar(
@@ -263,28 +263,28 @@ UINT uiDisabledResID = 0);
 ### <a name="parameters"></a>Paramètres
 
 *uiToolbarResID*<br/>
-[in] Spécifie l’ID de ressource de la barre d’outils à ajouter.
+dans Spécifie l’ID de ressource de la barre d’outils à ajouter.
 
 *uiColdResID*<br/>
-[in] Spécifie l’ID de ressource d’images à froid de la barre d’outils.
+dans Spécifie l’ID de ressource des images froidles de la barre d’outils.
 
 *uiHotResID*<br/>
-[in] Spécifie l’ID de ressource d’images à chaud de la barre d’outils.
+dans Spécifie l’ID de ressource des images réactives de la barre d’outils.
 
 *uiDisabledResID*<br/>
-[in] Spécifie l’ID de ressource d’images désactivé de la barre d’outils.
+dans Spécifie l’ID de ressource des images désactivées de la barre d’outils.
 
 ### <a name="return-value"></a>Valeur de retour
 
-Appelez cette méthode pour ajouter une barre d’outils dans le volet du ruban. La barre d’outils apparaît en regard de l’élément de ruban ajouté par l’appel précédent à [CMFCRibbonPanel::Add](#add).
+Appelez cette méthode pour ajouter une barre d’outils au panneau du ruban. La barre d’outils sera ajoutée en regard de l’élément de ruban ajouté par l’appel précédent à [CMFCRibbonPanel :: Add](#add).
 
 ### <a name="remarks"></a>Notes
 
-Pour plus d’informations sur les barres d’outils, des images interactives, des images à froid et des images désactivés, consultez [cmfctoolbar, classe](../../mfc/reference/cmfctoolbar-class.md).
+Pour plus d’informations sur les barres d’outils, les images réactives, les images froides et les images désactivées, consultez [CMFCToolBar, classe](../../mfc/reference/cmfctoolbar-class.md).
 
-##  <a name="cmfcribbonpanel"></a>  CMFCRibbonPanel::CMFCRibbonPanel
+##  <a name="cmfcribbonpanel"></a>CMFCRibbonPanel :: CMFCRibbonPanel
 
-Crée et initialise un [CMFCRibbonPanel](../../mfc/reference/cmfcribbonpanel-class.md) objet.
+Construit et initialise un objet [CMFCRibbonPanel](../../mfc/reference/cmfcribbonpanel-class.md) .
 
 ```
 CMFCRibbonPanel(
@@ -297,17 +297,17 @@ CMFCRibbonPanel(CMFCRibbonGallery* pPaletteButton);
 ### <a name="parameters"></a>Paramètres
 
 *lpszName*<br/>
-[in] Le nom du Panneau de ruban.
+dans Nom du panneau du ruban.
 
 *hIcon*<br/>
-[in] Handle de l’icône du bouton par défaut pour le volet du ruban.
+dans Handle vers l’icône du bouton par défaut pour le panneau du ruban.
 
 *pPaletteButton*<br/>
-[in] Pointeur vers une galerie de ruban pour le volet du ruban.
+dans Pointeur vers une galerie du ruban pour le panneau du ruban.
 
-##  <a name="findbydata"></a>  CMFCRibbonPanel::FindByData
+##  <a name="findbydata"></a>CMFCRibbonPanel :: FindByData
 
-Récupère l’élément de ruban qui est associé avec les données spécifiées.
+Récupère l’élément de ruban associé aux données spécifiées.
 
 ```
 CMFCRibbonBaseElement* FindByData(DWORD_PTR dwData) const;
@@ -316,7 +316,7 @@ CMFCRibbonBaseElement* FindByData(DWORD_PTR dwData) const;
 ### <a name="parameters"></a>Paramètres
 
 *dwData*<br/>
-[in] Les données associées à un élément de ruban.
+dans Données associées à un élément de ruban.
 
 ### <a name="return-value"></a>Valeur de retour
 
@@ -324,9 +324,9 @@ Pointeur vers un élément de ruban si la méthode a réussi ; Sinon, NULL.
 
 ### <a name="remarks"></a>Notes
 
-##  <a name="findbyid"></a>  CMFCRibbonPanel::FindByID
+##  <a name="findbyid"></a>CMFCRibbonPanel :: FindByID
 
-Récupère l’élément de ruban qui est identifié par l’ID de commande spécifiée.
+Récupère l’élément de ruban qui est identifié par l’ID de commande spécifié.
 
 ```
 CMFCRibbonBaseElement* FindByID(UINT uiCmdID) const;
@@ -335,15 +335,15 @@ CMFCRibbonBaseElement* FindByID(UINT uiCmdID) const;
 ### <a name="parameters"></a>Paramètres
 
 *uiCmdID*<br/>
-[in] ID de commande d’un élément de ruban.
+dans ID de commande d’un élément de ruban.
 
 ### <a name="return-value"></a>Valeur de retour
 
-L’élément de ruban qui est identifiée par l’ID de la commande spécifiée ; Sinon, NULL si aucun élément de ruban n’est identifié avec l’ID de commande spécifiée.
+Élément de ruban identifié par l’ID de commande spécifié ; Sinon, NULL si aucun élément de ruban n’est identifié avec l’ID de commande spécifié.
 
-##  <a name="getcaptionheight"></a>  CMFCRibbonPanel::GetCaptionHeight
+##  <a name="getcaptionheight"></a>CMFCRibbonPanel :: GetCaptionHeight
 
-Récupère la hauteur d’une légende pour le volet du ruban.
+Récupère la hauteur d’une légende pour le panneau du ruban.
 
 ```
 int GetCaptionHeight() const;
@@ -351,13 +351,13 @@ int GetCaptionHeight() const;
 
 ### <a name="return-value"></a>Valeur de retour
 
-La hauteur, en pixels, d’une légende pour le volet du ruban.
+Hauteur, en pixels, d’une légende pour le panneau du ruban.
 
 ### <a name="remarks"></a>Notes
 
-##  <a name="getcount"></a>  CMFCRibbonPanel::GetCount
+##  <a name="getcount"></a>CMFCRibbonPanel :: GetCount
 
-Récupère le nombre d’éléments de ruban qui sont contenus dans le volet du ruban.
+Récupère le nombre d’éléments de ruban qui sont contenus dans le panneau du ruban.
 
 ```
 int GetCount() const;
@@ -365,9 +365,9 @@ int GetCount() const;
 
 ### <a name="return-value"></a>Valeur de retour
 
-Le nombre d’éléments de ruban qui sont contenus dans le volet du ruban.
+Nombre d’éléments de ruban contenus dans le panneau du ruban.
 
-##  <a name="getdata"></a>  CMFCRibbonPanel::GetData
+##  <a name="getdata"></a>CMFCRibbonPanel :: GetData
 
 Retourne les données définies par l’utilisateur associées au panneau.
 
@@ -377,11 +377,11 @@ DWORD_PTR GetData() const;
 
 ### <a name="return-value"></a>Valeur de retour
 
-Les données définies par l’utilisateur associées au panneau.
+Données définies par l’utilisateur associées au panneau.
 
-##  <a name="getdefaultbutton"></a>  CMFCRibbonPanel::GetDefaultButton
+##  <a name="getdefaultbutton"></a>CMFCRibbonPanel :: GetDefaultButton
 
-Récupère le bouton par défaut pour le volet du ruban.
+Récupère le bouton par défaut pour le panneau du ruban.
 
 ```
 CMFCRibbonButton& GetDefaultButton();
@@ -389,15 +389,15 @@ CMFCRibbonButton& GetDefaultButton();
 
 ### <a name="return-value"></a>Valeur de retour
 
-Le bouton par défaut pour le volet du ruban.
+Bouton par défaut pour le panneau du ruban.
 
 ### <a name="remarks"></a>Notes
 
-Le bouton par défaut s’affiche lorsqu’un panneau de ruban a un espace insuffisant pour afficher ses éléments de ruban.
+Le bouton par défaut s’affiche lorsqu’un volet du ruban ne dispose pas de suffisamment d’espace pour afficher ses éléments de ruban.
 
-##  <a name="getdroppeddown"></a>  CMFCRibbonPanel::GetDroppedDown
+##  <a name="getdroppeddown"></a>CMFCRibbonPanel :: GetDroppedDown
 
-Récupère un pointeur vers un élément de ruban si son menu contextuel est déroulée.
+Récupère un pointeur vers un élément de ruban si son menu contextuel est déplacé vers le haut.
 
 ```
 CMFCRibbonBaseElement* GetDroppedDown() const;
@@ -405,15 +405,15 @@ CMFCRibbonBaseElement* GetDroppedDown() const;
 
 ### <a name="return-value"></a>Valeur de retour
 
-Pointeur vers l’élément de ruban qui a son menu contextuel a déroulé ; Sinon, NULL si aucun élément de ruban n’a son menu contextuel a déroulé.
+Pointeur vers l’élément de ruban dont le menu contextuel est déplacé. Sinon, NULL si aucun élément de ruban n’a son menu contextuel.
 
 ### <a name="remarks"></a>Notes
 
-Uniquement les éléments de ruban qui sont contenus dans le volet du ruban sont testés.
+Seuls les éléments de ruban contenus dans le panneau du ruban sont testés.
 
-##  <a name="getelement"></a>  CMFCRibbonPanel::GetElement
+##  <a name="getelement"></a>CMFCRibbonPanel :: GetElement
 
-Retourne l’élément de ruban situé à l’index spécifié.
+Retourne l’élément de ruban situé à un index spécifié.
 
 ```
 CMFCRibbonBaseElement* GetElement(int nIndex) const;
@@ -422,15 +422,15 @@ CMFCRibbonBaseElement* GetElement(int nIndex) const;
 ### <a name="parameters"></a>Paramètres
 
 *nIndex*<br/>
-[in] Spécifie l’index de base zéro de l’élément à récupérer.
+dans Spécifie l’index de base zéro de l’élément à récupérer.
 
 ### <a name="return-value"></a>Valeur de retour
 
-Un pointeur valide vers l’élément de ruban base situé à la position *nIndex* dans le panneau de ruban, ou NULL s’il n’existe aucun élément à l’index spécifié.
+Pointeur valide vers l’élément de ruban de base situé à la position *nIndex* dans le panneau du ruban, ou null s’il n’y a aucun élément à l’index spécifié.
 
-##  <a name="getelements"></a>  CMFCRibbonPanel::GetElements
+##  <a name="getelements"></a>CMFCRibbonPanel :: GetElements
 
-Récupère tous les éléments de ruban qui sont contenus dans le volet du ruban.
+Récupère tous les éléments de ruban qui sont contenus dans le panneau du ruban.
 
 ```
 void GetElements(CArray<CMFCRibbonBaseElement*, CMFCRibbonBaseElement*>& arElements);
@@ -439,13 +439,13 @@ void GetElements(CArray<CMFCRibbonBaseElement*, CMFCRibbonBaseElement*>& arEleme
 ### <a name="parameters"></a>Paramètres
 
 *arElements*<br/>
-[out] Un tableau à remplir avec tous les éléments de ruban qui sont contenus dans le volet du ruban.
+à Tableau à remplir avec tous les éléments de ruban contenus dans le panneau du ruban.
 
 ### <a name="remarks"></a>Notes
 
-##  <a name="getelementsbyid"></a>  CMFCRibbonPanel::GetElementsByID
+##  <a name="getelementsbyid"></a>CMFCRibbonPanel :: GetElementsByID
 
-Ajoute les éléments de ruban qui ont l’ID de commande spécifiée dans le tableau spécifié.
+Ajoute des éléments de ruban qui ont l’ID de commande spécifié au tableau spécifié.
 
 ```
 void GetElementsByID(
@@ -456,18 +456,18 @@ CArray<CMFCRibbonBaseElement*, CMFCRibbonBaseElement*>& arElements);
 ### <a name="parameters"></a>Paramètres
 
 *uiCmdID*<br/>
-[in] ID de commande pour un élément de ruban.
+dans ID de commande pour un élément de ruban.
 
 *arElements*<br/>
-[in] Tableau d’éléments de ruban.
+dans Tableau d’éléments de ruban.
 
 ### <a name="remarks"></a>Notes
 
-Uniquement les éléments de ruban qui sont contenus dans le volet du ruban sont testés.
+Seuls les éléments de ruban contenus dans le panneau du ruban sont testés.
 
-##  <a name="gethighlighted"></a>  CMFCRibbonPanel::GetHighlighted
+##  <a name="gethighlighted"></a>CMFCRibbonPanel :: GetHighlighted
 
-Récupère l’élément de ruban qui est mis en surbrillance dans le volet du ruban.
+Récupère l’élément de ruban mis en surbrillance dans le panneau du ruban.
 
 ```
 CMFCRibbonBaseElement* GetHighlighted() const;
@@ -475,13 +475,13 @@ CMFCRibbonBaseElement* GetHighlighted() const;
 
 ### <a name="return-value"></a>Valeur de retour
 
-Pointeur vers l’élément de ruban qui est mis en surbrillance dans le volet du ruban.
+Pointeur vers l’élément de ruban mis en surbrillance dans le panneau du ruban.
 
 ### <a name="remarks"></a>Notes
 
-##  <a name="getindex"></a>  CMFCRibbonPanel::GetIndex
+##  <a name="getindex"></a>CMFCRibbonPanel :: GetIndex
 
-Récupère l’index de base zéro de l’élément de ruban spécifiée à partir du tableau d’éléments de ruban qui sont contenus dans le volet du ruban.
+Récupère l’index de base zéro de l’élément de ruban spécifié à partir du tableau d’éléments de ruban qui sont contenus dans le panneau du ruban.
 
 ```
 virtual int GetIndex(CMFCRibbonBaseElement* pElem) const;
@@ -489,18 +489,18 @@ virtual int GetIndex(CMFCRibbonBaseElement* pElem) const;
 
 ### <a name="parameters"></a>Paramètres
 
-*pElem*<br/>
-[in] Pointeur vers un élément de ruban.
+*pEler*<br/>
+dans Pointeur vers un élément de ruban.
 
 ### <a name="return-value"></a>Valeur de retour
 
-Index de base zéro de l’élément de ruban spécifiée si la méthode a réussi ; sinon -1.
+Index de base zéro de l’élément de ruban spécifié si la méthode a réussi ; sinon-1.
 
 ### <a name="remarks"></a>Notes
 
-##  <a name="getitemidslist"></a>  CMFCRibbonPanel::GetItemIDsList
+##  <a name="getitemidslist"></a>CMFCRibbonPanel :: GetItemIDsList
 
-Récupère les ID de commande pour tous les éléments de ruban dans le volet du ruban.
+Récupère les ID de commande pour tous les éléments de ruban dans le panneau du ruban.
 
 ```
 void GetItemIDsList(CList<UINT, UINT>& lstItems) const;
@@ -509,13 +509,13 @@ void GetItemIDsList(CList<UINT, UINT>& lstItems) const;
 ### <a name="parameters"></a>Paramètres
 
 *lstItems*<br/>
-[out] La liste des ID de commande pour les éléments de ruban qui sont contenus dans le volet du ruban.
+à Liste d’ID de commandes pour les éléments de ruban contenus dans le panneau du ruban.
 
 ### <a name="remarks"></a>Notes
 
-##  <a name="getname"></a>  CMFCRibbonPanel::GetName
+##  <a name="getname"></a>CMFCRibbonPanel :: GetName
 
-Récupère le nom du Panneau de ruban.
+Récupère le nom du panneau du ruban.
 
 ```
 LPCTSTR GetName() const;
@@ -523,11 +523,11 @@ LPCTSTR GetName() const;
 
 ### <a name="return-value"></a>Valeur de retour
 
-Le nom du Panneau de ruban.
+Nom du panneau du ruban.
 
 ### <a name="remarks"></a>Notes
 
-##  <a name="getparentbutton"></a>  CMFCRibbonPanel::GetParentButton
+##  <a name="getparentbutton"></a>CMFCRibbonPanel :: GetParentButton
 
 ```
 CMFCRibbonBaseElement* GetParentButton() const;
@@ -537,9 +537,9 @@ CMFCRibbonBaseElement* GetParentButton() const;
 
 ### <a name="remarks"></a>Notes
 
-##  <a name="getparentcategory"></a>  CMFCRibbonPanel::GetParentCategory
+##  <a name="getparentcategory"></a>CMFCRibbonPanel :: GetParentCategory
 
-Retourne la catégorie parente du Panneau de ruban.
+Retourne la catégorie parente du panneau du ruban.
 
 ```
 CMFCRibbonCategory* GetParentCategory() const;
@@ -549,7 +549,7 @@ CMFCRibbonCategory* GetParentCategory() const;
 
 Pointeur vers la catégorie de ruban qui contient ce panneau de ruban.
 
-##  <a name="getparentmenubar"></a>  CMFCRibbonPanel::GetParentMenuBar
+##  <a name="getparentmenubar"></a>CMFCRibbonPanel :: GetParentMenuBar
 
 ```
 CMFCRibbonPanelMenuBar* GetParentMenuBar() const;
@@ -559,9 +559,9 @@ CMFCRibbonPanelMenuBar* GetParentMenuBar() const;
 
 ### <a name="remarks"></a>Notes
 
-##  <a name="getpreferedmenulocation"></a>  CMFCRibbonPanel::GetPreferedMenuLocation
+##  <a name="getpreferedmenulocation"></a>CMFCRibbonPanel :: GetPreferedMenuLocation
 
-Récupère le rectangle d’affichage par défaut pour le menu contextuel du Panneau de ruban.
+Récupère le rectangle d’affichage par défaut pour le menu contextuel du panneau du ruban.
 
 ```
 virtual BOOL GetPreferedMenuLocation(CRect& rect);
@@ -569,20 +569,20 @@ virtual BOOL GetPreferedMenuLocation(CRect& rect);
 
 ### <a name="parameters"></a>Paramètres
 
-*rect*<br/>
-[out] Ce paramètre n’est pas utilisé.
+*rectangulaire*<br/>
+à Ce paramètre n’est pas utilisé.
 
 ### <a name="return-value"></a>Valeur de retour
 
-Retourne toujours FALSE.
+Retourne toujours FALSe.
 
 ### <a name="remarks"></a>Notes
 
-Cette méthode retourne toujours FALSE. Substituez cette méthode pour récupérer le rectangle d’affichage par défaut pour le menu contextuel du Panneau de ruban.
+Cette méthode retourne toujours FALSe. Substituez cette méthode pour récupérer le rectangle d’affichage par défaut pour le menu contextuel du panneau du ruban.
 
-##  <a name="getpressed"></a>  CMFCRibbonPanel::GetPressed
+##  <a name="getpressed"></a>CMFCRibbonPanel :: GetPressed
 
-Récupère un pointeur vers un élément de ruban sur le volet du ruban si actuellement, l’utilisateur appuie dessus.
+Récupère un pointeur désignant un élément de ruban sur le panneau du ruban si l’utilisateur clique actuellement dessus.
 
 ```
 CMFCRibbonBaseElement* GetPressed() const;
@@ -590,13 +590,13 @@ CMFCRibbonBaseElement* GetPressed() const;
 
 ### <a name="return-value"></a>Valeur de retour
 
-Un pointeur vers un élément de ruban si l’utilisateur appuie sur actuellement Sinon, NULL.
+Pointeur vers un élément de ruban si l’utilisateur appuie actuellement dessus ; Sinon, NULL.
 
 ### <a name="remarks"></a>Notes
 
-##  <a name="getrect"></a>  CMFCRibbonPanel::GetRect
+##  <a name="getrect"></a>CMFCRibbonPanel :: GetRect
 
-Récupère le rectangle d’affichage pour le volet du ruban.
+Récupère le rectangle d’affichage pour le panneau du ruban.
 
 ```
 const CRect& GetRect() const;
@@ -604,13 +604,13 @@ const CRect& GetRect() const;
 
 ### <a name="return-value"></a>Valeur de retour
 
-Le rectangle d’affichage pour le volet du ruban.
+Rectangle d’affichage du panneau du ruban.
 
 ### <a name="remarks"></a>Notes
 
-##  <a name="haselement"></a>  CMFCRibbonPanel::HasElement
+##  <a name="haselement"></a>CMFCRibbonPanel :: HasElement
 
-Indique si le volet du ruban contient l’élément de ruban spécifiée.
+Indique si le panneau du ruban contient l’élément de ruban spécifié.
 
 ```
 BOOL HasElement(const CMFCRibbonBaseElement* pElem) const;
@@ -618,18 +618,18 @@ BOOL HasElement(const CMFCRibbonBaseElement* pElem) const;
 
 ### <a name="parameters"></a>Paramètres
 
-*pElem*<br/>
-[in] Pointeur vers un élément de ruban.
+*pEler*<br/>
+dans Pointeur vers un élément de ruban.
 
 ### <a name="return-value"></a>Valeur de retour
 
-TRUE si le volet du ruban contient l’élément de ruban spécifiée ; Sinon, FALSE.
+TRUE si le panneau du ruban contient l’élément de ruban spécifié ; Sinon, FALSe.
 
 ### <a name="remarks"></a>Notes
 
-##  <a name="highlight"></a>  CMFCRibbonPanel::Highlight
+##  <a name="highlight"></a>CMFCRibbonPanel :: Highlight
 
-Définit la couleur de surbrillance pour le volet du ruban sélectionné et de l’élément de ruban spécifiée par le point.
+Définit la couleur de surbrillance pour le panneau du ruban sélectionné et pour l’élément de ruban spécifié par le point.
 
 ```
 virtual void Highlight(
@@ -640,16 +640,16 @@ CPoint point);
 ### <a name="parameters"></a>Paramètres
 
 *bHighlight*<br/>
-[in] TRUE pour mettre en évidence le volet du ruban ; FALSE pour supprimer la surbrillance dans le volet du ruban.
+dans TRUE pour mettre en surbrillance le panneau du ruban ; FALSe pour mettre en surbrillance le panneau du ruban.
 
 *point*<br/>
-[in] Les coordonnées x et y du pointeur, par rapport à l’angle supérieur gauche de la fenêtre.
+dans Coordonnées x et y du pointeur, par rapport à l’angle supérieur gauche de la fenêtre.
 
 ### <a name="remarks"></a>Notes
 
-##  <a name="hittest"></a>  CMFCRibbonPanel::HitTest
+##  <a name="hittest"></a>CMFCRibbonPanel :: HitTest
 
-Récupère un élément de ruban si le point spécifié se trouve qu’il contient.
+Récupère un élément de ruban si le point spécifié se trouve dans celui-ci.
 
 ```
 virtual CMFCRibbonBaseElement* HitTest(
@@ -660,22 +660,22 @@ BOOL bCheckPanelCaption = FALSE);
 ### <a name="parameters"></a>Paramètres
 
 *point*<br/>
-[in] Les coordonnées x et y du pointeur, par rapport à l’angle supérieur gauche de la fenêtre.
+dans Coordonnées x et y du pointeur, par rapport à l’angle supérieur gauche de la fenêtre.
 
 *bCheckPanelCaption*<br/>
-[in] TRUE pour tester la légende du Panneau de ruban ; Sinon, FALSE.
+dans TRUE pour tester la légende du panneau du ruban ; Sinon, FALSe.
 
 ### <a name="return-value"></a>Valeur de retour
 
-Pointeur vers un élément de ruban si le point spécifié se trouve qu’il contient ; Sinon, NULL.
+Pointeur vers un élément de ruban si le point spécifié se trouve dans celui-ci ; Sinon, NULL.
 
 ### <a name="remarks"></a>Notes
 
-Uniquement les éléments de ruban qui sont contenus dans le volet du ruban sont testés.
+Seuls les éléments de ruban contenus dans le panneau du ruban sont testés.
 
-##  <a name="hittestex"></a>  CMFCRibbonPanel::HitTestEx
+##  <a name="hittestex"></a>CMFCRibbonPanel :: HitTestEx
 
-Récupère l’index de base zéro de l’élément de ruban qui a le point spécifié qu’il contient.
+Récupère l’index de base zéro de l’élément de ruban qui contient le point spécifié.
 
 ```
 virtual int HitTestEx(CPoint point) const;
@@ -684,19 +684,19 @@ virtual int HitTestEx(CPoint point) const;
 ### <a name="parameters"></a>Paramètres
 
 *point*<br/>
-[in] Les coordonnées x et y du pointeur, par rapport à l’angle supérieur gauche de la fenêtre.
+dans Coordonnées x et y du pointeur, par rapport à l’angle supérieur gauche de la fenêtre.
 
 ### <a name="return-value"></a>Valeur de retour
 
-Index de base zéro de l’élément de ruban qui a le point spécifié qu’il contient ; sinon -1.
+Index de base zéro de l’élément de ruban qui contient le point spécifié. sinon-1.
 
 ### <a name="remarks"></a>Notes
 
-Uniquement les éléments de ruban qui sont contenus dans le volet du ruban sont testés.
+Seuls les éléments de ruban contenus dans le panneau du ruban sont testés.
 
-##  <a name="insert"></a>  CMFCRibbonPanel::Insert
+##  <a name="insert"></a>CMFCRibbonPanel :: Insert
 
-Insère l’élément de ruban spécifiée à la position spécifiée dans le tableau d’éléments de ruban qui est contenue dans le volet du ruban.
+Insère l’élément de ruban spécifié à la position spécifiée dans le tableau d’éléments du ruban qui est contenu dans le panneau du ruban.
 
 ```
 virtual BOOL Insert(
@@ -706,21 +706,21 @@ int nIndex);
 
 ### <a name="parameters"></a>Paramètres
 
-*pElem*<br/>
+*pEler*<br/>
 [in, out] Pointeur vers un élément de ruban.
 
 *nIndex*<br/>
-[in] Valeur de base zéro, allant de -1 au nombre d’éléments de ruban qui sont contenus dans le tableau.
+dans Valeur de base zéro, comprise entre-1 et le nombre d’éléments de ruban contenus dans le tableau.
 
 ### <a name="return-value"></a>Valeur de retour
 
-TRUE si l’élément de ruban a été inséré avec succès ; Sinon, FALSE.
+TRUE si l’élément de ruban a été inséré avec succès ; Sinon, FALSe.
 
 ### <a name="remarks"></a>Notes
 
-Si la valeur de *nIndex* est -1, ou si *nIndex* est égal au nombre d’éléments de ruban dans le tableau, l’élément de ruban spécifiée est ajouté à la fin du tableau. Si la valeur de *nIndex* est hors limites, la méthode échoue.
+Si la valeur de *nIndex* est égale à-1, ou si *nIndex* est égal au nombre d’éléments de ruban dans le tableau, l’élément de ruban spécifié est ajouté à la fin du tableau. Si la valeur de *nIndex* est hors limites, la méthode échoue.
 
-##  <a name="insertseparator"></a>  CMFCRibbonPanel::InsertSeparator
+##  <a name="insertseparator"></a>CMFCRibbonPanel :: InsertSeparator
 
 Insère un séparateur à la position donnée.
 
@@ -731,19 +731,19 @@ virtual BOOL InsertSeparator(int nIndex);
 ### <a name="parameters"></a>Paramètres
 
 *nIndex*<br/>
-[in] Spécifie l’index de base zéro où le séparateur est inséré.
+dans Spécifie l’index de base zéro où le séparateur est inséré.
 
 ### <a name="return-value"></a>Valeur de retour
 
-TRUE si le séparateur a été ajoutée avec succès ; Sinon, FALSE.
+TRUE si le séparateur a été inséré avec succès ; Sinon, FALSe.
 
 ### <a name="remarks"></a>Notes
 
-Appelez cette méthode pour insérer un séparateur à la position spécifiée par *nIndex*. Pour insérer un séparateur en regard de l’élément de ruban plus récemment ajoutée, appelez [CMFCRibbonPanel::AddSeparator](#addseparator).
+Appelez cette méthode pour insérer un séparateur à la position spécifiée par *nIndex*. Pour insérer un séparateur à côté de l’élément de ruban ajouté le plus récemment, appelez [CMFCRibbonPanel :: AddSeparator](#addseparator).
 
-##  <a name="iscentercolumnvert"></a>  CMFCRibbonPanel::IsCenterColumnVert
+##  <a name="iscentercolumnvert"></a>CMFCRibbonPanel :: IsCenterColumnVert
 
-Indique si la position verticale des éléments de ruban est centrée dans leur rectangle d’affichage.
+Indique si les positions verticales des éléments de ruban sont centrées dans leur rectangle d’affichage.
 
 ```
 BOOL IsCenterColumnVert() const;
@@ -751,11 +751,11 @@ BOOL IsCenterColumnVert() const;
 
 ### <a name="return-value"></a>Valeur de retour
 
-TRUE si la position verticale des éléments de ruban est centrée dans leur rectangle d’affichage ; Sinon, FALSE.
+TRUE si les positions verticales des éléments du ruban sont centrées dans leur rectangle d’affichage ; Sinon, FALSe.
 
-##  <a name="iscollapsed"></a>  CMFCRibbonPanel::IsCollapsed
+##  <a name="iscollapsed"></a>CMFCRibbonPanel :: IsCollapsed
 
-Indique si la taille d’affichage du Panneau de ruban est réduite dans la direction horizontale.
+Indique si la taille d’affichage du panneau du ruban est réduite dans le sens horizontal.
 
 ```
 BOOL IsCollapsed() const;
@@ -763,15 +763,15 @@ BOOL IsCollapsed() const;
 
 ### <a name="return-value"></a>Valeur de retour
 
-TRUE si la taille d’affichage du Panneau de ruban est réduite dans la direction horizontale ; Sinon, FALSE.
+TRUE si la taille d’affichage du panneau du ruban est réduite dans le sens horizontal ; Sinon, FALSe.
 
 ### <a name="remarks"></a>Notes
 
-Lorsqu’un ruban est réduit, il affiche uniquement son bouton par défaut, son nom et une flèche de déroulement.
+Quand un panneau de ruban est réduit, il affiche uniquement son bouton par défaut, son nom et une flèche de déroulement.
 
-##  <a name="ishighlighted"></a>  CMFCRibbonPanel::IsHighlighted
+##  <a name="ishighlighted"></a>CMFCRibbonPanel :: IsHighlighted
 
-Indique si l’affichage du Panneau de ruban est mis en surbrillance.
+Indique si l’affichage du panneau du ruban est mis en surbrillance.
 
 ```
 BOOL IsHighlighted() const;
@@ -779,15 +779,15 @@ BOOL IsHighlighted() const;
 
 ### <a name="return-value"></a>Valeur de retour
 
-TRUE si l’affichage du Panneau de ruban est mis en surbrillance ; Sinon, FALSE.
+TRUE si l’affichage du panneau du ruban est mis en surbrillance ; Sinon, FALSe.
 
 ### <a name="remarks"></a>Notes
 
-L’affichage d’un panneau de ruban est mis en surbrillance lorsque le pointeur se trouve sur celui-ci.
+L’affichage d’un panneau du ruban est mis en surbrillance lorsque le pointeur se trouve sur celui-ci.
 
-##  <a name="isjustifycolumns"></a>  CMFCRibbonPanel::IsJustifyColumns
+##  <a name="isjustifycolumns"></a>CMFCRibbonPanel :: IsJustifyColumns
 
-Indique si les dimensions d’affichage d’éléments de ruban qui se trouvent dans la même colonne dans le volet du ruban sont définies à la même largeur.
+Indique si les dimensions d’affichage des éléments de ruban qui se trouvent dans la même colonne dans le volet du ruban sont définies sur la même largeur.
 
 ```
 BOOL IsJustifyColumns() const;
@@ -795,11 +795,11 @@ BOOL IsJustifyColumns() const;
 
 ### <a name="return-value"></a>Valeur de retour
 
-TRUE si les dimensions d’affichage d’éléments de ruban qui se trouvent dans la même colonne dans le volet du ruban sont définies sur la même largeur ; Sinon, FALSE.
+TRUE si les dimensions d’affichage des éléments de ruban qui se trouvent dans la même colonne dans le panneau du ruban sont définies sur la même largeur ; Sinon, FALSe.
 
-##  <a name="ismainpanel"></a>  CMFCRibbonPanel::IsMainPanel
+##  <a name="ismainpanel"></a>CMFCRibbonPanel :: IsMainPanel
 
-Indique si le volet du ruban est le volet du ruban principale.
+Indique si le panneau du ruban est le panneau principal du ruban.
 
 ```
 virtual BOOL IsMainPanel() const;
@@ -807,15 +807,15 @@ virtual BOOL IsMainPanel() const;
 
 ### <a name="return-value"></a>Valeur de retour
 
-Retourne toujours FALSE.
+Retourne toujours FALSe.
 
 ### <a name="remarks"></a>Notes
 
-Cette méthode retourne toujours FALSE. Substituez cette méthode pour indiquer si le volet du ruban est le volet du ruban principale.
+Cette méthode retourne toujours FALSe. Substituez cette méthode pour indiquer si le panneau du ruban est le panneau principal du ruban.
 
-Le panneau de ruban principale s’affiche lorsque l’utilisateur sélectionne le bouton d’application.
+Le panneau principal du ruban s’affiche lorsque l’utilisateur sélectionne le bouton application.
 
-##  <a name="ismenumode"></a>  CMFCRibbonPanel::IsMenuMode
+##  <a name="ismenumode"></a>CMFCRibbonPanel :: IsMenuMode
 
 ```
 BOOL IsMenuMode() const;
@@ -825,7 +825,7 @@ BOOL IsMenuMode() const;
 
 ### <a name="remarks"></a>Notes
 
-##  <a name="onkey"></a>  CMFCRibbonPanel::OnKey
+##  <a name="onkey"></a>CMFCRibbonPanel :: OnKey
 
 ```
 virtual BOOL OnKey(UINT nChar);
@@ -833,15 +833,15 @@ virtual BOOL OnKey(UINT nChar);
 
 ### <a name="parameters"></a>Paramètres
 
-[in] *nChar*<br/>
+dans *nchar*<br/>
 
 ### <a name="return-value"></a>Valeur de retour
 
 ### <a name="remarks"></a>Notes
 
-##  <a name="recalcwidths"></a>  CMFCRibbonPanel::RecalcWidths
+##  <a name="recalcwidths"></a>CMFCRibbonPanel :: RecalcWidths
 
-Recalcule la largeur de chaque configuration de mise en page d’affichage pour le volet du ruban.
+Recalcule la largeur de chaque configuration de disposition d’affichage pour le panneau du ruban.
 
 ```
 virtual void RecalcWidths(
@@ -852,16 +852,16 @@ int nHeight);
 ### <a name="parameters"></a>Paramètres
 
 *pDC*<br/>
-[in] Pointeur vers un contexte de périphérique pour le volet du ruban.
+dans Pointeur vers un contexte de périphérique pour le panneau du ruban.
 
 *nHeight*<br/>
-[in] La hauteur du Panneau de ruban.
+dans Hauteur du panneau du ruban.
 
 ### <a name="remarks"></a>Notes
 
-Un panneau de ruban change sa configuration de disposition en tant que les modifications de la largeur disponible.
+Un panneau du ruban modifie sa configuration de disposition lorsque la largeur disponible change.
 
-##  <a name="remove"></a>  CMFCRibbonPanel::Remove
+##  <a name="remove"></a>CMFCRibbonPanel :: Remove
 
 Supprime et éventuellement un élément situé à l’index spécifié.
 
@@ -874,22 +874,22 @@ BOOL bDelete = TRUE);
 ### <a name="parameters"></a>Paramètres
 
 *nIndex*<br/>
-[in] Spécifie l’index de base zéro de l’élément est supprimé du Panneau de ruban.
+dans Spécifie l’index de base zéro de l’élément qui est supprimé du panneau du ruban.
 
-*bDelete*<br/>
-[in] TRUE pour supprimer l’élément en cours de suppression ; Sinon, FALSE.
+*bSupprimer*<br/>
+dans TRUE pour supprimer l’élément en cours de suppression ; Sinon, FALSe.
 
 ### <a name="return-value"></a>Valeur de retour
 
-TRUE si l’élément a été supprimé et supprimé (si *bDelete* a la valeur TRUE) ; FALSE si l’élément n’a pas été supprimé ou s’il existe aucun élément de ruban ne situé *nIndex*.
+TRUE si l’élément a été supprimé et supprimé (si *bSupprimer* a la valeur true); FALSe si l’élément n’a pas été supprimé ou s’il n’y a aucun élément de ruban situé dans *nIndex*.
 
 ### <a name="remarks"></a>Notes
 
-Appelez cette méthode pour supprimer un élément du Panneau de ruban.
+Appelez cette méthode pour supprimer un élément du panneau du ruban.
 
-##  <a name="removeall"></a>  CMFCRibbonPanel::RemoveAll
+##  <a name="removeall"></a>CMFCRibbonPanel :: RemoveAll
 
-Supprime tous les éléments de ruban à partir du Panneau de ruban.
+Supprime tous les éléments du ruban du panneau du ruban.
 
 ```
 void RemoveAll();
@@ -897,11 +897,11 @@ void RemoveAll();
 
 ### <a name="remarks"></a>Notes
 
-Tous les éléments de ruban sont supprimés à partir du Panneau de ruban et détruits.
+Tous les éléments de ruban sont supprimés du panneau du ruban et détruits.
 
-##  <a name="replace"></a>  CMFCRibbonPanel::Replace
+##  <a name="replace"></a>CMFCRibbonPanel :: replace
 
-Remplace un élément par un autre en fonction de leur valeur d’index.
+Remplace un élément par un autre en fonction de sa valeur d’index.
 
 ```
 BOOL Replace(
@@ -912,22 +912,22 @@ CMFCRibbonBaseElement* pElem);
 ### <a name="parameters"></a>Paramètres
 
 *nIndex*<br/>
-[in] Spécifie l’index de base zéro de l’élément à remplacer.
+dans Spécifie l’index de base zéro de l’élément à remplacer.
 
-*pElem*<br/>
-[in, out] Un pointeur valide vers l’élément qui remplace l’élément d’origine.
+*pEler*<br/>
+[in, out] Pointeur valide vers l’élément qui remplace l’élément d’origine.
 
 ### <a name="return-value"></a>Valeur de retour
 
-TRUE si l’élément de ruban d’origine a été remplacé avec succès par le nouvel élément de ruban ; FALSE si l’élément de ruban n’a pas été remplacée ou s’il n’existe aucun élément à l’index spécifié.
+TRUE si l’élément de ruban d’origine a été remplacé avec succès par le nouvel élément de ruban ; FALSe si l’élément de ruban n’a pas été remplacé ou s’il n’y a aucun élément à l’index spécifié.
 
 ### <a name="remarks"></a>Notes
 
-Pour remplacer un élément de ruban par ID de commande, appelez [CMFCRibbonPanel::ReplaceByID](#replacebyid).
+Pour remplacer un élément de ruban par un ID de commande, appelez [CMFCRibbonPanel :: ReplaceByID](#replacebyid).
 
-##  <a name="replacebyid"></a>  CMFCRibbonPanel::ReplaceByID
+##  <a name="replacebyid"></a>CMFCRibbonPanel :: ReplaceByID
 
-Remplace un élément avec un autre en fonction d’un ID de commande spécifié.
+Remplace un élément par un autre en fonction d’un ID de commande spécifié.
 
 ```
 BOOL ReplaceByID(
@@ -938,22 +938,22 @@ CMFCRibbonBaseElement* pElem);
 ### <a name="parameters"></a>Paramètres
 
 *uiCmdID*<br/>
-[in] Spécifie l’ID de commande de l’élément à remplacer.
+dans Spécifie l’ID de commande de l’élément à remplacer.
 
-*pElem*<br/>
-[in, out] Un pointeur valide vers l’élément qui remplacera l’élément d’origine.
+*pEler*<br/>
+[in, out] Pointeur valide vers l’élément qui remplace l’élément d’origine.
 
 ### <a name="return-value"></a>Valeur de retour
 
-TRUE si l’élément de ruban d’origine a été remplacé avec succès par le nouvel élément de ruban ; FALSE si l’élément de ruban a été pas remplacé ou si aucun élément avec la commande spécifiée l’ID existe réellement.
+TRUE si l’élément de ruban d’origine a été remplacé avec succès par le nouvel élément de ruban ; FALSe si l’élément de ruban n’a pas été remplacé ou si aucun élément avec l’ID de commande spécifié n’existe réellement.
 
 ### <a name="remarks"></a>Notes
 
-Pour remplacer un élément de ruban en fonction de position, appelez [CMFCRibbonPanel::Replace](#replace).
+Pour remplacer un élément de ruban en fonction de la position, appelez [CMFCRibbonPanel :: replace](#replace).
 
-##  <a name="setcentercolumnvert"></a>  CMFCRibbonPanel::SetCenterColumnVert
+##  <a name="setcentercolumnvert"></a>CMFCRibbonPanel :: SetCenterColumnVert
 
-Active ou désactive le centrage des positions verticales d’éléments de ruban dans leur rectangle d’affichage.
+Active ou désactive le centrage des positions verticales des éléments de ruban dans leur rectangle d’affichage.
 
 ```
 void SetCenterColumnVert(BOOL bSet = TRUE);
@@ -962,13 +962,13 @@ void SetCenterColumnVert(BOOL bSet = TRUE);
 ### <a name="parameters"></a>Paramètres
 
 *bSet*<br/>
-[in] TRUE pour centrer les positions verticales d’éléments de ruban dans leur rectangle d’affichage ; FALSE pour désactiver cette fonctionnalité.
+dans TRUE pour centrer les positions verticales des éléments du ruban dans leur rectangle d’affichage ; FALSe pour désactiver cette fonctionnalité.
 
 ### <a name="remarks"></a>Notes
 
-##  <a name="setdata"></a>  CMFCRibbonPanel::SetData
+##  <a name="setdata"></a>CMFCRibbonPanel :: SetData
 
-Données définies par l’utilisateur associe avec le volet du ruban.
+Associe les données définies par l’utilisateur au panneau du ruban.
 
 ```
 void SetData(DWORD_PTR dwData);
@@ -977,15 +977,15 @@ void SetData(DWORD_PTR dwData);
 ### <a name="parameters"></a>Paramètres
 
 *dwData*<br/>
-[in] Spécifie les données définies par l’utilisateur à définir.
+dans Spécifie les données définies par l’utilisateur à définir.
 
 ### <a name="remarks"></a>Notes
 
-Appelez cette méthode pour associer les données définies par l’utilisateur avec le volet du ruban.
+Appelez cette méthode pour associer les données définies par l’utilisateur au panneau du ruban.
 
-##  <a name="setelementmenu"></a>  CMFCRibbonPanel::SetElementMenu
+##  <a name="setelementmenu"></a>CMFCRibbonPanel :: SetElementMenu
 
-Assigne un menu contextuel à l’élément qui possède l’ID de commande donné.
+Assigne un menu contextuel à l’élément qui a l’ID de commande donné.
 
 ```
 BOOL SetElementMenu(
@@ -1004,31 +1004,31 @@ BOOL bRightAlign = FALSE);
 ### <a name="parameters"></a>Paramètres
 
 *uiCmdID*<br/>
-[in] Spécifie l’ID de commande de l’élément de ruban dans lequel le menu est ajouté.
+dans Spécifie l’ID de commande de l’élément de ruban où le menu est ajouté.
 
 *hMenu*<br/>
-[in] Spécifie le handle vers le menu Windows à ajouter au volet du ruban.
+dans Spécifie le handle du menu Windows à ajouter au panneau du ruban.
 
 *bIsDefautCommand*<br/>
-[in] TRUE pour spécifier que la commande associée à l’élément de ruban doit être exécutée si l’utilisateur clique sur l’élément de ruban. Dans ce cas, le menu est ouvert uniquement lorsque l’utilisateur clique sur la flèche en regard de l’élément de ruban. FALSE pour indiquer que la commande associée à l’élément de ruban ne doit pas être exécutée si l’utilisateur clique sur l’élément de ruban. Dans ce cas, le menu contextuel s’affiche, quel que soit l’endroit où l’utilisateur clique sur l’élément.
+dans TRUE pour spécifier que la commande associée à l’élément de ruban doit être exécutée si l’utilisateur clique sur l’élément de ruban. Dans ce cas, le menu est ouvert uniquement quand l’utilisateur clique sur la flèche en regard de l’élément de ruban. FALSe pour spécifier que la commande associée à l’élément de ruban ne doit pas être exécutée en cas de clic sur l’élément de ruban. Dans ce cas, le menu contextuel s’affiche, quel que soit l’endroit où l’utilisateur clique sur l’élément.
 
 *bRightAlign*<br/>
-[in] TRUE pour spécifier que le menu contextuel est aligné à droite ; Sinon, FALSE.
+dans TRUE pour spécifier que le menu contextuel est aligné à droite ; Sinon, FALSe.
 
 *uiMenuResID*<br/>
-[in] Spécifie l’ID de ressource du menu à ajouter au volet du ruban.
+dans Spécifie l’ID de ressource du menu à ajouter au panneau du ruban.
 
 ### <a name="return-value"></a>Valeur de retour
 
-TRUE si le menu a été assigné à l’élément de ruban ; Sinon, FALSE.
+TRUE si le menu a été assigné à l’élément de ruban ; Sinon, FALSe.
 
 ### <a name="remarks"></a>Notes
 
-Appelez cette méthode pour affecter un menu contextuel à l’élément de ruban qui a l’ID de commande donné.
+Appelez cette méthode pour assigner un menu contextuel à l’élément de ruban qui a l’ID de commande donné.
 
-##  <a name="setelementrtc"></a>  CMFCRibbonPanel::SetElementRTC
+##  <a name="setelementrtc"></a>CMFCRibbonPanel :: SetElementRTC
 
-Ajoute l’élément de ruban qui est spécifié par les informations de classe d’exécution fournie au volet du ruban.
+Ajoute l’élément de ruban spécifié par les informations de classe d’exécution fournies au panneau du ruban.
 
 ```
 CMFCRibbonBaseElement* SetElementRTC(
@@ -1039,22 +1039,22 @@ CRuntimeClass* pRTC);
 ### <a name="parameters"></a>Paramètres
 
 *nIndex*<br/>
-[in] Spécifie l’index de base zéro de l’élément de ruban à ajouter.
+dans Spécifie l’index de base zéro de l’élément de ruban à ajouter.
 
 *pRTC*<br/>
-[in, out] Un pointeur vers les informations de classe runtime de l’élément de ruban est ajouté au volet du ruban.
+[in, out] Pointeur vers les informations de classe d’exécution pour l’élément de ruban qui est ajouté au panneau du ruban.
 
 ### <a name="return-value"></a>Valeur de retour
 
-L’élément de ruban qui a été créé en utilisant les informations de classe runtime spécifié.
+Élément de ruban qui a été créé à l’aide des informations de classe d’exécution spécifiées.
 
 ### <a name="remarks"></a>Notes
 
-Si vous souhaitez ajouter un élément personnalisé (par exemple, un bouton de couleur) au volet du ruban, vous devez spécifier les informations de classe runtime de l’élément personnalisé. Le ruban stocke ces informations, crée l’élément personnalisé et remplace un élément existant qui se trouve (identifié par) ID de commande spécifié. Le ruban retourne ensuite un pointeur vers l’élément qui vient d’être créé.
+Si vous souhaitez ajouter un élément personnalisé (par exemple, un bouton de couleur) au panneau du ruban, vous devez spécifier les informations de classe d’exécution de l’élément personnalisé. Le ruban stocke ces informations, crée l’élément personnalisé et remplace un élément existant qui est localisé (identifié par) l’ID de commande spécifié. Le ruban retourne alors un pointeur vers l’élément nouvellement créé.
 
-##  <a name="setelementrtcbyid"></a>  CMFCRibbonPanel::SetElementRTCByID
+##  <a name="setelementrtcbyid"></a>CMFCRibbonPanel :: SetElementRTCByID
 
-Ajoute un élément de ruban qui est spécifié par les informations de classe d’exécution fournie au volet du ruban.
+Ajoute un élément de ruban spécifié par les informations de classe d’exécution fournies au panneau du ruban.
 
 ```
 CMFCRibbonBaseElement* SetElementRTCByID(
@@ -1065,22 +1065,22 @@ CRuntimeClass* pRTC);
 ### <a name="parameters"></a>Paramètres
 
 *uiCmdID*<br/>
-[in] Spécifie l’ID de commande de l’élément de ruban à ajouter.
+dans Spécifie l’ID de commande de l’élément de ruban à ajouter.
 
 *pRTC*<br/>
-[in, out] Un pointeur vers les informations de classe runtime associés à l’élément de ruban est ajouté au volet du ruban.
+[in, out] Pointeur vers les informations de classe d’exécution associées à l’élément de ruban qui est ajouté au panneau du ruban.
 
 ### <a name="return-value"></a>Valeur de retour
 
-L’élément de ruban qui a été créé en utilisant les informations de classe runtime spécifié.
+Élément de ruban qui a été créé à l’aide des informations de classe d’exécution spécifiées.
 
 ### <a name="remarks"></a>Notes
 
-Si vous souhaitez ajouter un élément personnalisé (par exemple, un bouton de couleur) au volet du ruban, vous devez spécifier les informations de classe runtime de l’élément personnalisé. Le ruban stocke ces informations, crée l’élément personnalisé et remplace un élément existant que se trouve par ID de commande spécifié. Ensuite, il retourne un pointeur vers l’élément qui vient d’être créé.
+Si vous souhaitez ajouter un élément personnalisé (par exemple, un bouton de couleur) au panneau du ruban, vous devez spécifier les informations de classe d’exécution de l’élément personnalisé. Le ruban stocke ces informations, crée l’élément personnalisé et remplace un élément existant localisé par l’ID de commande spécifié. Il retourne ensuite un pointeur vers l’élément nouvellement créé.
 
 ### <a name="example"></a>Exemple
 
-L’exemple suivant montre comment utiliser le `SetElementRTCByID` méthode :
+L’exemple suivant montre comment utiliser la méthode `SetElementRTCByID` :
 
 ```
 
@@ -1104,9 +1104,9 @@ pColorButton->EnableAutomaticButton(_T("Automatic"),
     0));
 ```
 
-##  <a name="setjustifycolumns"></a>  CMFCRibbonPanel::SetJustifyColumns
+##  <a name="setjustifycolumns"></a>CMFCRibbonPanel :: SetJustifyColumns
 
-Active ou désactive l’ajustement de la largeur des éléments de ruban dans la même colonne.
+Active ou désactive l’ajustement de la largeur des éléments du ruban dans la même colonne.
 
 ```
 void SetJustifyColumns(BOOL bSet = TRUE);
@@ -1115,15 +1115,15 @@ void SetJustifyColumns(BOOL bSet = TRUE);
 ### <a name="parameters"></a>Paramètres
 
 *bSet*<br/>
-[in] TRUE pour ajuster la largeur des éléments de ruban dans la même colonne à la largeur du plus grand élément de ruban dans la colonne ; FALSE pour désactiver cet ajustement de la largeur.
+dans TRUE pour ajuster la largeur des éléments du ruban dans la même colonne à la largeur du plus grand élément de ruban dans la colonne ; FALSe pour désactiver ce réglage de la largeur.
 
 ### <a name="remarks"></a>Notes
 
-Lorsque cette fonctionnalité est activée dans un panneau de ruban, les largeurs d’éléments de ruban dans la même colonne sont ajustées à la largeur du plus grand élément de ruban dans la même colonne.
+Lorsque cette fonctionnalité est activée dans un panneau du ruban, les largeurs des éléments du ruban dans la même colonne sont ajustées à la largeur du plus grand élément de ruban dans la même colonne.
 
-##  <a name="setkeys"></a>  CMFCRibbonPanel::SetKeys
+##  <a name="setkeys"></a>CMFCRibbonPanel :: setkeys
 
-Définit la touche d’accès pour le bouton par défaut du Panneau de ruban.
+Définit l’KeyTip pour le bouton par défaut du panneau du ruban.
 
 ```
 void SetKeys(LPCTSTR lpszKeys);
@@ -1132,15 +1132,15 @@ void SetKeys(LPCTSTR lpszKeys);
 ### <a name="parameters"></a>Paramètres
 
 *lpszKeys*<br/>
-[in] La touche d’accès pour le bouton par défaut du Panneau de ruban.
+dans KeyTip pour le bouton par défaut du panneau du ruban.
 
 ### <a name="remarks"></a>Notes
 
-Le bouton par défaut s’affiche lorsqu’un panneau de ruban a un espace insuffisant pour afficher ses éléments de ruban.
+Le bouton par défaut s’affiche lorsqu’un volet du ruban ne dispose pas de suffisamment d’espace pour afficher ses éléments de ruban.
 
-##  <a name="showpopup"></a>  CMFCRibbonPanel::ShowPopup
+##  <a name="showpopup"></a>CMFCRibbonPanel :: ShowPopup
 
-Crée et affiche un menu contextuel pour le volet du ruban.
+Crée et affiche un menu contextuel pour le panneau du ruban.
 
 ```
 CMFCRibbonPanelMenu* ShowPopup(CMFCRibbonDefaultPanelButton* pButton = NULL);
@@ -1149,19 +1149,19 @@ CMFCRibbonPanelMenu* ShowPopup(CMFCRibbonDefaultPanelButton* pButton = NULL);
 ### <a name="parameters"></a>Paramètres
 
 *pButton*<br/>
-[in] Pointeur vers le bouton par défaut pour le volet du ruban.
+dans Pointeur désignant le bouton par défaut pour le panneau du ruban.
 
 ### <a name="return-value"></a>Valeur de retour
 
-Pointeur vers le menu contextuel pour le volet du ruban si la méthode a réussi ; Sinon, NULL.
+Pointeur vers le menu contextuel du panneau du ruban si la méthode a réussi ; Sinon, NULL.
 
 ### <a name="remarks"></a>Notes
 
-Le menu contextuel pour le volet du ruban est uniquement disponible lorsque l’affichage du Panneau de ruban est réduit.
+Le menu contextuel du panneau du ruban est disponible uniquement lorsque l’affichage du panneau du ruban est réduit.
 
-##  <a name="setfocused"></a>  CMFCRibbonPanel::SetFocused
+##  <a name="setfocused"></a>CMFCRibbonPanel :: SetFocused
 
-Définit le focus sur l’élément de ruban spécifiée.
+Définit le focus sur l’élément de ruban spécifié.
 
 ```
 void SetFocused(CMFCRibbonBaseElement* pNewFocus);
@@ -1174,9 +1174,9 @@ Pointeur vers un élément de ruban qui reçoit le focus.
 
 ### <a name="remarks"></a>Notes
 
-##  <a name="makegalleryitemvisible"></a>  CMFCRibbonPanel::MakeGalleryItemVisible
+##  <a name="makegalleryitemvisible"></a>CMFCRibbonPanel :: MakeGalleryItemVisible
 
-Fait défiler la galerie pour afficher l’élément de ruban spécifiée.
+Fait défiler la Galerie pour rendre l’élément de ruban spécifié visible.
 
 ```
 void MakeGalleryItemVisible(CMFCRibbonBaseElement* pItem);
@@ -1189,9 +1189,9 @@ Pointeur vers un élément de ruban à afficher.
 
 ### <a name="remarks"></a>Notes
 
-##  <a name="iswindows7look"></a>  CMFCRibbonPanel::IsWindows7Look
+##  <a name="iswindows7look"></a>CMFCRibbonPanel :: IsWindows7Look
 
-Indique si le ruban parent a Windows 7 Rechercher (bouton d’application petit et rectangulaire).
+Indique si le ruban parent a Windows 7 look (petit bouton d’application rectangulaire).
 
 ```
 BOOL IsWindows7Look() const;
@@ -1199,11 +1199,11 @@ BOOL IsWindows7Look() const;
 
 ### <a name="return-value"></a>Valeur de retour
 
-TRUE si le ruban parent a Windows 7 à rechercher ; Sinon, FALSE.
+TRUE si le ruban parent a l’apparence de Windows 7 ; Sinon, FALSe.
 
 ### <a name="remarks"></a>Notes
 
-##  <a name="getvisibleelements"></a>  CMFCRibbonPanel::GetVisibleElements
+##  <a name="getvisibleelements"></a>CMFCRibbonPanel :: GetVisibleElements
 
 Récupère un tableau d’éléments visibles.
 
@@ -1216,13 +1216,13 @@ CMFCRibbonBaseElement*>& arElements);
 ### <a name="parameters"></a>Paramètres
 
 *arElements*<br/>
-Lorsque la fonction est retournée, ce paramètre contient un tableau d’éléments visibles.
+Quand la fonction retourne une valeur, ce paramètre contient un tableau d’éléments visibles.
 
 ### <a name="remarks"></a>Notes
 
-##  <a name="getgalleryrect"></a>  CMFCRibbonPanel::GetGalleryRect
+##  <a name="getgalleryrect"></a>CMFCRibbonPanel :: GetGalleryRect
 
-Retourne un rectangle englobant d’un élément de galerie.
+Retourne un rectangle englobant d’un élément de la Galerie.
 
 ```
 CRect GetGalleryRect();
@@ -1230,11 +1230,11 @@ CRect GetGalleryRect();
 
 ### <a name="return-value"></a>Valeur de retour
 
-Taille et la position de l’élément de galerie au sein de ce panneau.
+Taille et position de l’élément de la galerie dans ce panneau.
 
 ### <a name="remarks"></a>Notes
 
-##  <a name="getfocused"></a>  CMFCRibbonPanel::GetFocused
+##  <a name="getfocused"></a>CMFCRibbonPanel :: GetFocused
 
 Retourne un élément qui a le focus.
 
@@ -1244,7 +1244,7 @@ CMFCRibbonBaseElement* GetFocused() const;
 
 ### <a name="return-value"></a>Valeur de retour
 
-Pointeur vers un élément ayant le focus ou la valeur NULL.
+Pointeur vers un élément ayant le focus ou NULL.
 
 ### <a name="remarks"></a>Notes
 

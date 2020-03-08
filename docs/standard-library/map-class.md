@@ -89,11 +89,11 @@ helpviewer_keywords:
 - std::map [C++], value_comp
 ms.assetid: 7876f4c9-ebb4-4878-af1e-09364c43af0a
 ms.openlocfilehash: d25d8837c549b425416632ee07e23bb57fbd17ae
-ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
+ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/21/2019
-ms.locfileid: "72689416"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78856722"
 ---
 # <a name="map-class"></a>map, classe
 
@@ -113,18 +113,18 @@ class map;
 
 ### <a name="parameters"></a>Paramètres
 
-@No__t_1 de *clé*
+\ de *clé*
 Type de données clé à stocker dans la classe map.
 
-@No__t_1 de *type*
+*Type*\
 Type de données d'élément à stocker dans la classe map.
 
-@No__t_1 *traits*
+\ *traits*
 Type qui fournit un objet de fonction pouvant comparer deux valeurs d'éléments comme clés de tri afin de déterminer leur ordre relatif dans la classe map. Cet argument est facultatif et le prédicat binaire `less<Key>` est la valeur par défaut.
 
-Dans C++14, vous pouvez activer la recherche hétérogène en spécifiant le prédicat std::less<> qui n’a aucun paramètre de type. Pour plus d’informations, consultez [Recherche hétérogène dans les conteneurs associatifs](../standard-library/stl-containers.md#sequence_containers).
+Dans C++14, vous pouvez activer la recherche hétérogène en spécifiant le prédicat std::less<> qui n’a aucun paramètre de type. Pour plus d’informations, consultez [Recherche hétérogène dans les conteneurs associatifs](../standard-library/stl-containers.md#sequence_containers)
 
-@No__t_1 *Allocator*
+\ *Allocator*
 Type qui représente l'objet allocateur stocké qui contient des informations sur l'allocation et la désallocation de mémoire de la classe map. Cet argument est facultatif et sa valeur par défaut est `allocator<pair<const Key, Type> >`.
 
 ## <a name="remarks"></a>Notes
@@ -154,7 +154,7 @@ La classe map trie les éléments qu’elle contrôle en appelant un objet de fo
 > [!NOTE]
 > La fonction de comparaison est un prédicat binaire qui induit un ordre faible strict dans le sens mathématique du terme. Un prédicat binaire f (x, y) est un objet de fonction qui a deux objets d’argument x et y, et une valeur de retour **true** ou **false**. Un tri appliqué à un ensemble est un ordre faible strict si le prédicat binaire est irréflexif, antisymétrique et transitif, et si l’équivalence est transitive, où deux objets x et y sont définis comme équivalents lorsque f (x, y) et f (y, x) ont la **valeur false**. Si la plus élevée des conditions d'égalité entre les clés remplace celle de l'équivalence, alors le tri devient total (dans le sens où tous les éléments sont classés les uns par rapport aux autres), et les clés correspondantes seront alors impossibles à différencier les unes des autres.
 >
-> Dans C++14, vous pouvez activer la recherche hétérogène en spécifiant le prédicat `std::less<>` ou `std::greater<>` qui n'a aucun paramètre de type. Pour plus d’informations, consultez [Recherche hétérogène dans les conteneurs associatifs](../standard-library/stl-containers.md#sequence_containers).
+> Dans C++14, vous pouvez activer la recherche hétérogène en spécifiant le prédicat `std::less<>` ou `std::greater<>` qui n'a aucun paramètre de type. Pour plus d’informations, consultez [Recherche hétérogène dans les conteneurs associatifs](../standard-library/stl-containers.md#sequence_containers)
 
 ## <a name="members"></a>Membres
 
@@ -164,7 +164,7 @@ La classe map trie les éléments qu’elle contrôle en appelant un objet de fo
 |-|-|
 |[map](#map)|Construit une liste de taille spécifique ou contenant des éléments de valeurs spécifiques, ou contenant un `allocator` spécifique ou comme copie d'une autre classe map.|
 
-### <a name="typedefs"></a>Typedef
+### <a name="typedefs"></a>Typedefs
 
 |||
 |-|-|
@@ -184,7 +184,7 @@ La classe map trie les éléments qu’elle contrôle en appelant un objet de fo
 |[size_type](#size_type)|Typedef entier non signé pour le nombre d'éléments d'une classe map.|
 |[value_type](#value_type)|Typedef pour le type d'objet stocké comme élément dans une classe map.|
 
-### <a name="member-functions"></a>Fonctions membres
+### <a name="member-functions"></a>Fonctions Membre
 
 |Fonction membre|Description|
 |-|-|
@@ -354,7 +354,7 @@ Itérateur bidirectionnel **const** qui traite le premier élément de la plage,
 
 Avec la valeur de retour `cbegin`, les éléments de la plage ne peuvent pas être modifiés.
 
-Vous pouvez utiliser cette fonction membre à la place de la fonction membre `begin()` afin de garantir que la valeur de retour est `const_iterator`. En général, elle est utilisée conjointement avec le mot clé de déduction de type [auto](../cpp/auto-cpp.md), comme le montre l’exemple suivant. Dans l’exemple, considérez `Container` comme un conteneur modifiable (non **const**) de tout type qui prend en charge `begin()` et `cbegin()`.
+Vous pouvez utiliser cette fonction membre à la place de la fonction membre `begin()` afin de garantir que la valeur de retour est `const_iterator`. En général, elle est utilisée conjointement au mot clé de déduction de type [auto](../cpp/auto-cpp.md), comme le montre l’exemple suivant. Dans l’exemple, considérez `Container` comme un conteneur modifiable (non **const**) de tout type qui prend en charge `begin()` et `cbegin()`.
 
 ```cpp
 auto i1 = Container.begin();
@@ -380,7 +380,7 @@ Itérateur d’accès bidirectionnel **const** qui pointe juste après la fin de
 
 `cend` est utilisé pour vérifier si un itérateur a dépassé la fin de la plage.
 
-Vous pouvez utiliser cette fonction membre à la place de la fonction membre `end()` afin de garantir que la valeur de retour est `const_iterator`. En général, elle est utilisée conjointement avec le mot clé de déduction de type [auto](../cpp/auto-cpp.md), comme le montre l’exemple suivant. Dans l’exemple, considérez `Container` comme un conteneur modifiable (non **const**) de tout type qui prend en charge `end()` et `cend()`.
+Vous pouvez utiliser cette fonction membre à la place de la fonction membre `end()` afin de garantir que la valeur de retour est `const_iterator`. En général, elle est utilisée conjointement au mot clé de déduction de type [auto](../cpp/auto-cpp.md), comme le montre l’exemple suivant. Dans l’exemple, considérez `Container` comme un conteneur modifiable (non **const**) de tout type qui prend en charge `end()` et `cend()`.
 
 ```cpp
 auto i1 = Container.end();
@@ -448,17 +448,17 @@ typedef implementation-defined const_iterator;
 
 Un type `const_iterator` ne peut pas être utilisé pour changer la valeur d'un élément.
 
-Le `const_iterator` défini par la classe map pointe vers des éléments qui sont des objets de [value_type](#value_type), qui est de type `pair`\< **constKey**, **Type**>, dont le premier membre est la clé de l’élément et dont le deuxième membre est la référence mappée détenue par l’élément.
+La `const_iterator` définie par la classe Map pointe vers des éléments qui sont des objets de [Value_type](#value_type), qui est de type `pair`\< **constKey**, de **type**>, dont le premier membre est la clé de l’élément et dont le deuxième membre est la référence mappée détenue par l’élément.
 
 Pour déréférencer un `const_iterator` `cIter` pointant vers un élément dans une classe Map, utilisez l’opérateur `->`.
 
-Pour accéder à la valeur de la clé de l’élément, utilisez `cIter` -> **first**, ce qui équivaut à (\* `cIter`). **first**.
+Pour accéder à la valeur de la clé pour l’élément, utilisez `cIter` -> en **premier**, ce qui équivaut à (\* `cIter`). **first**.
 
-Pour accéder à la valeur de la référence mappée de l’élément, utilisez `cIter` -> **second**, ce qui équivaut à (\* `cIter`). **second**.
+Pour accéder à la valeur de la référence mappée de l’élément, utilisez `cIter` -> **seconde**, qui équivaut à (\* `cIter`). **second**.
 
 ### <a name="example"></a>Exemple
 
-Consultez l’exemple de [begin](#begin) pour obtenir un exemple qui utilise `const_iterator`.
+Pour obtenir un exemple qui utilise [, consultez l’exemple de ](#begin)begin`const_iterator`.
 
 ## <a name="const_pointer"></a>const_pointer
 
@@ -540,13 +540,13 @@ La `const_reverse_iterator` définie par la classe Map pointe vers des élément
 
 Pour déréférencer un `const_reverse_iterator crIter` pointant vers un élément dans une classe Map, utilisez l’opérateur `->`.
 
-Pour accéder à la valeur de la clé pour l’élément, utilisez `crIter`  ->  en**premier**, ce qui équivaut à (\* `crIter`). **tout d’abord**.
+Pour accéder à la valeur de la clé pour l’élément, utilisez `crIter` -> en **premier**, ce qui équivaut à (\* `crIter`). **tout d’abord**.
 
-Pour accéder à la valeur de la référence mappée de l’élément, utilisez `crIter`  -> **seconde**, qui équivaut à (\* `crIter`). **tout d’abord**.
+Pour accéder à la valeur de la référence mappée de l’élément, utilisez `crIter` -> **seconde**, qui équivaut à (\* `crIter`). **tout d’abord**.
 
 ### <a name="example"></a>Exemple
 
-Pour savoir comment déclarer et utiliser `const_reverse_iterator`, consultez l’exemple [rend](#rend).
+Pour savoir comment déclarer et utiliser [, consultez l’exemple ](#rend)rend`const_reverse_iterator`.
 
 ## <a name="count"></a>saut
 
@@ -630,7 +630,7 @@ Itérateur bidirectionnel inversé const qui traite le premier élément d’une
 
 ### <a name="remarks"></a>Notes
 
-`crbegin` est utilisé avec une classe `map` inversée de la même manière que [begin](#begin) est utilisé avec une classe `map`.
+`crbegin` est utilisé avec un `map` inversé de la même manière que [begin](#begin) est utilisé avec un `map`.
 
 Avec la valeur de retour `crbegin`, l’objet `map` ne peut pas être changé.
 
@@ -729,7 +729,7 @@ typedef allocator_type::difference_type difference_type;
 
 ### <a name="remarks"></a>Notes
 
-`difference_type` est le type retourné durant la soustraction ou l'incrémentation via les itérateurs du conteneur. `difference_type` est généralement utilisé pour représenter le nombre d’éléments de la plage *[ first,  last)* entre les itérateurs `first` et `last`. Il inclut l’élément vers lequel pointe `first` et la plage d’éléments allant jusqu’à l’élément (mais sans l’inclure) vers lequel pointe `last`.
+`difference_type` est le type retourné durant la soustraction ou l'incrémentation via les itérateurs du conteneur. `difference_type` est généralement utilisé pour représenter le nombre d’éléments de la plage *[ first,  last)* entre les itérateurs `first` et `last`. Il inclut l’élément sur lequel pointe `first` et la plage d’éléments allant jusqu’à l’élément (mais sans l’inclure) sur lequel pointe `last`.
 
 Notez que même si `difference_type` est disponible pour tous les itérateurs qui répondent aux exigences d’un itérateur d’entrée, ce qui inclut la classe des itérateurs bidirectionnels prise en charge par les conteneurs réversibles tels que set, la soustraction entre les itérateurs est prise en charge uniquement par les itérateurs à accès aléatoire fournis par un conteneur à accès aléatoire (vector, par exemple).
 
@@ -788,18 +788,18 @@ emplace(
 
 ### <a name="parameters"></a>Paramètres
 
-*arguments* \
+*arguments*\
 Arguments transmis pour construire un élément à insérer dans la classe map, sauf si elle contient déjà un élément dont la valeur est ordonnée de façon équivalente.
 
 ### <a name="return-value"></a>Valeur de retour
 
 Une [paire](../standard-library/pair-structure.md) dont le composant **bool** a la valeur true si une insertion a été effectuée, et false si la classe Map contenait déjà un élément de valeur équivalente dans le classement. Le composant itérateur de la paire de valeur de retour pointe sur l’élément qui vient d’être inséré si le composant **bool** a la valeur true ou sur l’élément existant si le composant **bool** a la valeur false.
 
-Pour accéder au composant itérateur d’une `pr` `pair`, utilisez `pr.first` ; pour le déréférencer, utilisez `*pr.first`. Pour accéder au composant **bool** , utilisez `pr.second`. Pour obtenir un exemple, voir l'exemple de code plus loin dans cet article.
+Pour accéder au composant itérateur d’une `pr``pair`, utilisez `pr.first`; pour le déréférencer, utilisez `*pr.first`. Pour accéder au composant **bool** , utilisez `pr.second`. Pour obtenir un exemple, voir l'exemple de code plus loin dans cet article.
 
 ### <a name="remarks"></a>Notes
 
-Aucun itérateur ou référence n’est invalidé par cette fonction.
+Aucun itérateur ni aucune référence ne sont invalidés par cette fonction.
 
 Durant le placement, si une exception est levée, l’état du conteneur n’est pas modifié.
 
@@ -863,7 +863,7 @@ int main()
 
 ## <a name="emplace_hint"></a>emplace_hint
 
-Insère un élément construit sur place (aucune opération de copie ni de déplacement n’est effectuée) avec un indicateur de positionnement.
+Insère un élément construit sur place (sans opération de copie ni de déplacement) avec un indicateur de positionnement.
 
 ```cpp
 template <class... Args>
@@ -874,21 +874,21 @@ iterator emplace_hint(
 
 ### <a name="parameters"></a>Paramètres
 
-*arguments* \
+*arguments*\
 Arguments transmis pour construire un élément à insérer dans la classe map, sauf si celle-ci contient déjà cet élément ou, plus généralement, si elle contient déjà un élément dont la clé est ordonnée de façon équivalente.
 
-*où* \
+*où*\
 Emplacement où commencer à rechercher le point d'insertion correct. (Si ce point précède immédiatement *, l'* insertion peut se produire dans le temps constant amorti plutôt que dans le temps logarithmique.)
 
 ### <a name="return-value"></a>Valeur de retour
 
-Itérateur vers l’élément qui vient d’être inséré.
+Un itérateur vers le nouvel élément inséré.
 
 Si l’insertion a échoué car l’élément existe déjà, retourne un itérateur vers l’élément existant avec sa clé.
 
 ### <a name="remarks"></a>Notes
 
-Aucun itérateur ou référence n’est invalidé par cette fonction.
+Aucun itérateur ni aucune référence ne sont invalidés par cette fonction.
 
 Durant le placement, si une exception est levée, l’état du conteneur n’est pas modifié.
 
@@ -1022,7 +1022,7 @@ Valeur de clé d’argument à comparer à la clé de tri d’un élément de la
 
 ### <a name="return-value"></a>Valeur de retour
 
-Pour accéder au premier itérateur d’une paire `pr` retournée par la fonction membre, utilisez `pr`. **first**, et pour déréférencer l’itérateur de la limite inférieure, utilisez \*( `pr`. **first**). Pour accéder au deuxième itérateur d’une paire `pr` retournée par la fonction membre, utilisez `pr`. **second**, et pour déréférencer l’itérateur de la limite supérieure (upper_bound), utilisez \*( `pr`. **second**).
+Pour accéder au premier itérateur d’une paire `pr` retournée par la fonction membre, utilisez `pr`. **first**, et pour déréférencer l’itérateur de la limite inférieure (lower_bound), utilisez \*( `pr`. **first**). Pour accéder au deuxième itérateur d’une paire `pr` retournée par la fonction membre, utilisez `pr`. **second**, et pour déréférencer l’itérateur de la limite supérieure (upper_bound), utilisez \*( `pr`. **second**).
 
 ### <a name="example"></a>Exemple
 
@@ -1102,21 +1102,21 @@ size_type erase(
 
 ### <a name="parameters"></a>Paramètres
 
-*Où* \
+*Où*\
 Position de l’élément à supprimer.
 
-*Premier* \
+*Premier*\
 Position du premier élément à supprimer.
 
-*Dernier* \
+*Dernier*\
 Position juste après le dernier élément à supprimer.
 
-@No__t_1 de *clé*
+\ de *clé*
 Valeur de clé des éléments à supprimer.
 
 ### <a name="return-value"></a>Valeur de retour
 
-Pour les deux premières fonctions membres, itérateur bidirectionnel qui désigne le premier élément restant après que tous les éléments ont été supprimés ou élément à la fin de la classe map si aucun élément de ce type n’existe.
+Pour les deux premières fonctions membres, itérateur bidirectionnel qui désigne le premier élément restant au-delà de tous les éléments supprimés, ou élément situé à la fin de l’objet map si aucun élément de ce type n’existe.
 
 Pour la troisième fonction membre, retourne le nombre d’éléments qui ont été supprimés de la classe map.
 
@@ -1301,7 +1301,7 @@ Allocateur utilisé par la classe map.
 
 ### <a name="remarks"></a>Notes
 
-Les allocateurs de la classe map spécifient la façon dont la classe gère le stockage. Les allocateurs par défaut fournis avec les classes de conteneur de la bibliothèque standard C++ sont suffisants pour la plupart des besoins en programmation. L'écriture et l'utilisation de votre propre classe d'allocateur font l'objet d'une rubrique avancée du langage C++.
+Les allocateurs de la classe map spécifient la façon dont la classe gère le stockage. Les allocateurs par défaut fournis avec les classes de conteneur de bibliothèque C++ Standard suffisent à satisfaire la plupart des besoins en programmation. L'écriture et l'utilisation de votre propre classe d'allocateur font l'objet d'une rubrique avancée du langage C++.
 
 ### <a name="example"></a>Exemple
 
@@ -1397,25 +1397,25 @@ IList);
 
 ### <a name="parameters"></a>Paramètres
 
-@No__t_1 *Val*
+\ *Val*
 Valeur d'un élément à insérer dans la classe map sauf si elle contient déjà un élément dont la clé est classée de manière équivalente.
 
-*Où* \
+*Où*\
 Emplacement où commencer à rechercher le point d'insertion correct. (Si ce point précède immédiatement *, l'* insertion peut se produire dans le temps constant amorti plutôt que dans le temps logarithmique.)
 
-*ValTy* \
+*ValTy*\
 Paramètre de modèle qui spécifie le type d’argument que le mappage peut utiliser pour construire un élément de [Value_type](#value_type), et parfait-transfère la valeur *Val* comme argument.
 
-*Premier* \
+*Premier*\
 Position du premier élément à copier.
 
-*Dernier* \
+*Dernier*\
 Position juste au-delà du dernier élément à copier.
 
-*InputIterator* \
+*InputIterator*\
 Argument de fonction de modèle qui remplit les conditions requises par un [itérateur d’entrée](../standard-library/input-iterator-tag-struct.md) qui pointe vers des éléments d’un type pouvant servir à construire des objets [value_type](#value_type).
 
-*IList* \
+*IList*\
 [initializer_list](../standard-library/initializer-list.md) à partir de laquelle copier les éléments.
 
 ### <a name="return-value"></a>Valeur de retour
@@ -1430,7 +1430,7 @@ Aucun itérateur, pointeur ou référence n'est invalidé par cette fonction.
 
 Durant l'insertion d'un seul élément, si une exception est levée, l'état du conteneur n'est pas modifié. Durant l'insertion de plusieurs éléments, si une exception est levée, le conteneur reste dans un état non spécifié mais valide.
 
-Pour accéder au composant itérateur d'une `pair` `pr` qui est retournée par les fonctions membres à un élément, utilisez `pr.first` ; pour déréférencer l'itérateur dans la paire retournée, utilisez `*pr.first`, qui vous donne un élément. Pour accéder au composant **bool** , utilisez `pr.second`. Pour obtenir un exemple, voir l'exemple de code plus loin dans cet article.
+Pour accéder au composant itérateur d’une `pair` `pr` retournée par les fonctions membres à un seul élément, utilisez `pr.first`; pour déréférencer l’itérateur dans la paire retournée, utilisez `*pr.first`, en vous donnant un élément. Pour accéder au composant **bool** , utilisez `pr.second`. Pour obtenir un exemple, voir l'exemple de code plus loin dans cet article.
 
 Le [value_type](#value_type) d’un conteneur est un typedef qui appartient au conteneur et, pour la classe map, `map<K, V>::value_type` est `pair<const K, V>`. La valeur d'un élément est une paire ordonnée dans laquelle le premier composant est égal à la valeur de clé et le second composant est égal à la valeur de données de l'élément.
 
@@ -1645,7 +1645,7 @@ Pour plus d’informations sur les *caractéristiques* , consultez la rubrique [
 
 ### <a name="example"></a>Exemple
 
-Pour découvrir comment déclarer et utiliser `key_compare`, consultez l’exemple relatif à [key_comp](#key_comp).
+Pour découvrir comment déclarer et utiliser [, consultez l’exemple relatif à ](#key_comp)key_comp`key_compare`.
 
 ## <a name="key_type"></a>key_type
 
@@ -1663,7 +1663,7 @@ Pour plus d’informations sur la *clé*, consultez la section Notes de la rubri
 
 ### <a name="example"></a>Exemple
 
-Pour découvrir comment déclarer et utiliser `key_type`, consultez l’exemple relatif à [value_type](#value_type).
+Pour découvrir comment déclarer et utiliser [, consultez l’exemple relatif à ](#value_type)value_type`key_type`.
 
 ## <a name="lower_bound"></a>lower_bound
 
@@ -1682,7 +1682,7 @@ Valeur de clé d’argument à comparer à la clé de tri d’un élément de la
 
 ### <a name="return-value"></a>Valeur de retour
 
-@No__t_0 ou `const_iterator` qui traite l’emplacement d’un élément dans une classe Map qui a une clé supérieure ou égale à la clé d’argument, ou qui traite l’emplacement qui suit le dernier élément de la classe Map si aucune correspondance n’est trouvée pour la clé.
+`iterator` ou `const_iterator` qui traite l’emplacement d’un élément dans une classe Map qui a une clé supérieure ou égale à la clé d’argument, ou qui traite l’emplacement qui suit le dernier élément de la classe Map si aucune correspondance n’est trouvée pour la clé.
 
 Si la valeur de retour de `lower_bound` est assignée à un `const_iterator`, l’objet map ne peut pas être changé. Si la valeur de retour de `lower_bound` est assignée à un `iterator`, l’objet Map peut être modifié.
 
@@ -1789,27 +1789,27 @@ map(
 
 ### <a name="parameters"></a>Paramètres
 
-*Al* \
+*Al*\
 Classe d’allocateur de stockage à utiliser pour cet objet map, qui est par défaut `Allocator`.
 
-*Comp* \
+*Comp*\
 Fonction de comparaison de type `const Traits` utilisée pour ordonner les éléments dans le mappage (par défaut, `hash_compare`).
 
-@No__t_1 *droit*
+\ *droit*
 Mappage dont l’ensemble construit doit être une copie.
 
-*Premier* \
+*Premier*\
 Position du premier élément de la plage d'éléments à copier.
 
-*Dernier* \
+*Dernier*\
 Position du premier élément au-delà de la plage d'éléments à copier.
 
-*IList* \
+*IList*\
 Initializer_list à partir de laquelle les éléments doivent être copiés.
 
 ### <a name="remarks"></a>Notes
 
-Tous les constructeurs stockent un type d’objet allocateur qui gère le stockage de mémoire de la classe map et peut être retourné ultérieurement en appelant [get_allocator](#get_allocator). Le paramètre d’allocateur est souvent omis dans les déclarations de classe, et des macros de prétraitement sont utilisées pour substituer des allocateurs de remplacement.
+Tous les constructeurs stockent un type d’objet allocateur qui gère le stockage de mémoire de la classe map et peut être retourné ultérieurement en appelant [get_allocator](#get_allocator). Le paramètre d’allocateur est souvent omis dans les déclarations de classe et des macros de prétraitement sont utilisées pour substituer des allocateurs de remplacement.
 
 Tous les constructeurs initialisent leur classe map.
 
@@ -1957,7 +1957,7 @@ Pour plus d’informations sur le *type* , consultez la rubrique [Map, classe](.
 
 ### <a name="example"></a>Exemple
 
-Pour découvrir comment déclarer et utiliser `mapped_type`, consultez l’exemple relatif à [value_type](#value_type).
+Pour découvrir comment déclarer et utiliser [, consultez l’exemple relatif à ](#value_type)value_type`mapped_type`.
 
 ## <a name="max_size"></a>max_size
 
@@ -2017,7 +2017,7 @@ Si la valeur de clé d’argument est introuvable, elle est insérée avec la va
 
 `operator[]` peut être utilisé pour insérer des éléments dans un mappage `m` à l’aide de `m[key] = DataValue;` où `DataValue` est la valeur de la `mapped_type` de l’élément avec une valeur de clé de *clé*.
 
-Lorsque vous utilisez `operator[]` pour insérer des éléments, la référence retournée n'indique pas si l'insertion va modifier un élément existant ou en créer un nouveau. Vous pouvez utiliser les fonctions membres [find](#find) et [insert](#insert) pour déterminer si un élément avec une clé spécifiée était déjà présent avant l’insertion.
+Lorsque vous utilisez `operator[]` pour insérer des éléments, la référence retournée n'indique pas si l'insertion va modifier un élément existant ou en créer un nouveau. Les fonctions membres [find](#find) et [insert](#insert) peuvent être utilisées pour déterminer si un élément avec une clé spécifiée est déjà présent avant une insertion.
 
 ### <a name="example"></a>Exemple
 
@@ -2396,11 +2396,11 @@ La `reverse_iterator` définie par la classe Map pointe vers des éléments qui 
 
 Pour déréférencer un *élément `reverse_iterator` qui pointe vers un* élément d’une classe Map, utilisez l’opérateur `->`.
 
-Pour accéder à la valeur de la clé de l’élément, utilisez `rIter` -> **first**, ce qui équivaut à (\* `rIter`). **first**. Pour accéder à la valeur de la référence mappée de l’élément, utilisez `rIter` -> **second**, ce qui équivaut à (\* `rIter`). **first**.
+Pour accéder à la valeur de la clé pour l’élément, utilisez `rIter` -> en **premier**, ce qui équivaut à (\* `rIter`). **first**. Pour accéder à la valeur de la référence mappée de l’élément, utilisez `rIter` -> **seconde**, qui équivaut à (\* `rIter`). **first**.
 
 ### <a name="example"></a>Exemple
 
-Pour découvrir comment déclarer et utiliser `reverse_iterator`, consultez l’exemple relatif à [rbegin](#rbegin).
+Pour découvrir comment déclarer et utiliser [, consultez l’exemple relatif à ](#rbegin)rbegin`reverse_iterator`.
 
 ## <a name="size"></a>corps
 
@@ -2456,7 +2456,7 @@ typedef typename allocator_type::size_type size_type;
 
 ### <a name="example"></a>Exemple
 
-Pour savoir comment déclarer et utiliser `size_type`, consultez l’exemple relatif à [size](#size).
+Pour savoir comment déclarer et utiliser [, consultez l’exemple relatif à ](#size)size`size_type`.
 
 ## <a name="swap"></a>échange
 
@@ -2545,7 +2545,7 @@ Valeur de clé d’argument à comparer à la valeur de clé de tri d’un élé
 
 ### <a name="return-value"></a>Valeur de retour
 
-@No__t_0 ou `const_iterator` qui traite l’emplacement d’un élément dans une classe Map qui a une clé supérieure à la clé d’argument, ou qui traite l’emplacement qui suit le dernier élément de la classe Map si aucune correspondance n’est trouvée pour la clé.
+`iterator` ou `const_iterator` qui traite l’emplacement d’un élément dans une classe Map qui a une clé supérieure à la clé d’argument, ou qui traite l’emplacement qui suit le dernier élément de la classe Map si aucune correspondance n’est trouvée pour la clé.
 
 Si la valeur de retour est assignée à un `const_iterator`, l’objet map ne peut pas être changé. Si la valeur de retour est assignée à un `iterator`, l’objet Map peut être modifié.
 
@@ -2614,7 +2614,7 @@ Retourne l’objet de fonction de comparaison utilisé par une classe map pour o
 
 ### <a name="remarks"></a>Notes
 
-Pour une carte *m*, si deux éléments *E1*(*K1*, *D1*) et *E2*(*K2*, *D2*) sont des objets de type `value_type`, où *K1* et *K1* sont leurs clés de type 0 et *D1* et *D2* sont leurs données de type 3, 4 sont équivalentes à 5. Un objet stocké définit la fonction membre
+Pour une carte *m*, si deux éléments *E1*(*K1*, *D1*) et *E2*(*K2*, *D2*) sont des objets de type `value_type`, où *K1* et *K1* sont leurs clés de type `key_type` et *D1* et *D2* sont leurs données de type `mapped_type`, `m.value_comp(e1, e2)` équivaut à `m.key_comp(k1, k2)`. Un objet stocké définit la fonction membre
 
 `bool operator( value_type& left, value_type& right);`
 
@@ -2730,6 +2730,6 @@ int main( )
 
 ## <a name="see-also"></a>Voir aussi
 
-[Conteneurs](../cpp/containers-modern-cpp.md)\
-[Sécurité des threads dans la bibliothèque standard C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)\
-[Informations de référence sur la bibliothèque standard C++](../standard-library/cpp-standard-library-reference.md)
+[Containers](../cpp/containers-modern-cpp.md)\
+[Sécurité des threads dans la bibliothèque C++ Standard](../standard-library/thread-safety-in-the-cpp-standard-library.md)\
+[Informations de référence sur la bibliothèque C++ Standard](../standard-library/cpp-standard-library-reference.md)

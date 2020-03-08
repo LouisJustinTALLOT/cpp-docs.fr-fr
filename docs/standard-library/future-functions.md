@@ -15,11 +15,11 @@ helpviewer_keywords:
 - std::make_error_condition [C++]
 - std::swap [C++]
 ms.openlocfilehash: 5435c3b9e10f151fc77c72b58c93510b6a867ce1
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68447327"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78865170"
 ---
 # <a name="ltfuturegt-functions"></a>&lt;future&gt;, fonctions
 
@@ -44,7 +44,7 @@ future<typename result_of<Fn(ArgTypes...)>::type>
 
 ### <a name="parameters"></a>Paramètres
 
-*renvoi*\
+\ de *stratégie*
 Valeur [launch](../standard-library/future-enums.md#launch).
 
 ### <a name="remarks"></a>Notes
@@ -63,9 +63,9 @@ La deuxième fonction retourne un objet `future<Ty>` dont l’*état asynchrone 
 
 À moins que `decay<Fn>::type` ne soit un type autre que launch, la deuxième fonction ne participe pas à la résolution de surcharge.
 
-La C++ norme indique que si la stratégie est Launch:: Async, la fonction crée un nouveau thread. Toutefois, l’implémentation Microsoft est actuellement non conforme. Il obtient ses threads à partir du pool de threads Windows, qui peut, dans certains cas, fournir un thread recyclé plutôt qu’un nouveau. Cela signifie que la `launch::async` stratégie est implémentée en `launch::async|launch::deferred`tant que.  Une autre implication de l’implémentation basée sur le pool de threads est qu’il n’y a aucune garantie que les variables locales de thread seront détruites lorsque le thread se terminera. Si le thread est recyclé et fourni à un nouvel appel à `async`, les anciennes variables existent toujours. Nous vous recommandons donc de ne pas utiliser de variables de thread local `async`avec.
+La C++ norme indique que si la stratégie est Launch :: Async, la fonction crée un nouveau thread. Toutefois, l’implémentation Microsoft est actuellement non conforme. Il obtient ses threads à partir du pool de threads Windows, qui peut, dans certains cas, fournir un thread recyclé plutôt qu’un nouveau. Cela signifie que la stratégie de `launch::async` est implémentée en tant que `launch::async|launch::deferred`.  Une autre implication de l’implémentation basée sur le pool de threads est qu’il n’y a aucune garantie que les variables locales de thread seront détruites lorsque le thread se terminera. Si le thread est recyclé et fourni à un nouvel appel à `async`, les anciennes variables existent toujours. Nous vous recommandons donc de ne pas utiliser de variables de thread local avec `async`.
 
-Si  la stratégie `launch::deferred`est, la fonction marque son état asynchrone associé comme contenant une *fonction différée* et retourne. Le premier appel à toute fonction non chronométrée qui attend que l’état asynchrone associé soit prêt appelle la fonction différée en évaluant `INVOKE(dfn, dargs..., Ty)`.
+Si la *stratégie* est `launch::deferred`, la fonction marque son état asynchrone associé comme contenant une *fonction différée* et retourne. Le premier appel à toute fonction non chronométrée qui attend que l’état asynchrone associé soit prêt appelle la fonction différée en évaluant `INVOKE(dfn, dargs..., Ty)`.
 
 Dans tous les cas, l’état asynchrone associé de l’objet `future` n’est pas défini sur *prêt* avant la fin de l’évaluation de `INVOKE(dfn, dargs..., Ty)`, en levant une exception ou en retournant normalement une valeur. Le résultat de l’état asynchrone associé est une exception, s’il en a été levée une, ou toute valeur retournée par l’évaluation.
 
@@ -92,7 +92,7 @@ inline error_code make_error_code(future_errc Errno) noexcept;
 
 ### <a name="parameters"></a>Paramètres
 
-*Errno*\
+\ *errno*
 Valeur [future_errc](../standard-library/future-enums.md#future_errc) qui identifie l’erreur signalée.
 
 ### <a name="return-value"></a>Valeur de retour
@@ -109,7 +109,7 @@ inline error_condition make_error_condition(future_errc Errno) noexcept;
 
 ### <a name="parameters"></a>Paramètres
 
-*Errno*\
+\ *errno*
 Valeur [future_errc](../standard-library/future-enums.md#future_errc) qui identifie l’erreur signalée.
 
 ### <a name="return-value"></a>Valeur de retour
@@ -130,10 +130,10 @@ void swap(packaged_task<Ty(ArgTypes...)>& Left, packaged_task<Ty(ArgTypes...)>& 
 
 ### <a name="parameters"></a>Paramètres
 
-*Gauche*\
+\ *gauche*
 Objet gauche `promise`.
 
-*Oui*\
+\ *droit*
 Objet droit `promise`.
 
 ## <a name="see-also"></a>Voir aussi

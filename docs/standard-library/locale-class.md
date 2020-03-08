@@ -22,11 +22,11 @@ helpviewer_keywords:
 - std::locale [C++], id
 ms.assetid: 7dd6d271-472d-4750-8fb5-ea8f55fbef62
 ms.openlocfilehash: 551bca93a30bee52dc4c838864df28cb747d91df
-ms.sourcegitcommit: 6ddfb8be5e5923a4d90a2c0f93f76a27ce7ac299
+ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/06/2019
-ms.locfileid: "74898840"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78856511"
 ---
 # <a name="locale-class"></a>locale, classe
 
@@ -144,7 +144,7 @@ Les règles de mise en forme numérique pour les insertions suivantes dans `cout
 |-|-|
 |[locale](#locale)|Crée des paramètres régionaux, une copie de paramètres régionaux ou une copie de paramètres régionaux où une facette ou une catégorie a été remplacée par une facette, ou une catégorie provenant d'autres paramètres régionaux.|
 
-### <a name="typedefs"></a>Typedef
+### <a name="typedefs"></a>Typedefs
 
 |Nom de type|Description|
 |-|-|
@@ -161,15 +161,15 @@ Les règles de mise en forme numérique pour les insertions suivantes dans `cout
 
 |||
 |-|-|
-|[classic](#classic)|La fonction membre statique retourne un objet de paramètres régionaux qui représente les paramètres régionaux classiques du langage C.|
+|[classique](#classic)|La fonction membre statique retourne un objet de paramètres régionaux qui représente les paramètres régionaux classiques du langage C.|
 |[global](#global)|Réinitialise les paramètres régionaux par défaut du programme.|
 
 ### <a name="operators"></a>Opérateurs
 
-|opérateur|Description|
+|Opérateur|Description|
 |-|-|
 |[operator=](#op_eq)|Assigne des paramètres régionaux.|
-|[!=, opérateur](#op_neq)|Vérifie l'inégalité de deux ensembles de paramètres régionaux.|
+|[operator!=](#op_neq)|Vérifie l'inégalité de deux ensembles de paramètres régionaux.|
 |[operator( )](#op_call)|Compare deux objets `basic_string`.|
 |[operator==](#op_eq_eq)|Vérifie l'égalité de deux ensembles de paramètres régionaux.|
 
@@ -180,9 +180,9 @@ Les règles de mise en forme numérique pour les insertions suivantes dans `cout
 |[facet](#facet_class)|Classe qui sert de classe de base pour toutes les facettes de paramètres régionaux.|
 |[`id`](#id_class)|La classe membre fournit un ID unique de facette utilisé comme index pour rechercher les facettes de paramètres régionaux.|
 
-## <a name="requirements"></a>Configuration requise pour
+## <a name="requirements"></a>Spécifications
 
-**En-tête :** \<locale>
+**En-tête :** \<paramètres régionaux >
 
 **Espace de noms :** std
 
@@ -290,7 +290,7 @@ template <class Facet>
 locale combine(const locale& source_locale) const;
 ```
 
-### <a name="parameters"></a>Parameters
+### <a name="parameters"></a>Paramètres
 
 *source_locale*\
 Paramètres régionaux contenant la facette à insérer dans les paramètres régionaux cibles.
@@ -358,7 +358,7 @@ Réinitialise les paramètres régionaux par défaut du programme. Cet appel aff
 static locale global(const locale& new_default_locale);
 ```
 
-### <a name="parameters"></a>Parameters
+### <a name="parameters"></a>Paramètres
 
 *new_default_locale*\
 Paramètres régionaux à utiliser comme paramètres régionaux par défaut par le programme.
@@ -435,7 +435,7 @@ locale(const locale& from_locale, const Facet* new_facet);
 ~locale();
 ```
 
-### <a name="parameters"></a>Parameters
+### <a name="parameters"></a>Paramètres
 
 *locale_name*\
 Nom de paramètres régionaux.
@@ -567,7 +567,7 @@ Vérifie l'inégalité de deux ensembles de paramètres régionaux.
 bool operator!=(const locale& right) const;
 ```
 
-### <a name="parameters"></a>Parameters
+### <a name="parameters"></a>Paramètres
 
 \ *droit*
 L’un des paramètres régionaux dont l’inégalité doit être testée.
@@ -631,7 +631,7 @@ bool operator()(
     const basic_string<CharType, Traits, Allocator>& right) const;
 ```
 
-### <a name="parameters"></a>Parameters
+### <a name="parameters"></a>Paramètres
 
 \ *gauche*
 Chaîne de gauche.
@@ -700,7 +700,7 @@ Vérifie l'égalité de deux ensembles de paramètres régionaux.
 bool operator==(const locale& right) const;
 ```
 
-### <a name="parameters"></a>Parameters
+### <a name="parameters"></a>Paramètres
 
 \ *droit*
 L’un des paramètres régionaux dont l’égalité doit être testée.

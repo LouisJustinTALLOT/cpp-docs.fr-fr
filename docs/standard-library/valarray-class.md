@@ -29,11 +29,11 @@ helpviewer_keywords:
 - std::valarray [C++], swap
 ms.assetid: 19b862f9-5d09-4003-8844-6ddd02c1a3a7
 ms.openlocfilehash: f116758591461614acfa7c171bff2b1675f453e4
-ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
+ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/21/2019
-ms.locfileid: "72684093"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78866248"
 ---
 # <a name="valarray-class"></a>valarray, classe
 
@@ -47,7 +47,7 @@ La classe est une représentation du concept mathématique d'un ensemble ordonn�
 
 - Il définit une variété de méthodes intéressantes pour indicer un objet `valarray<Type>`, en surchargeant l' [opérateur&#91;](#op_at).
 
-Objet de la classe `Type` :
+Objet de la classe `Type`:
 
 - a un constructeur public par défaut, un destructeur, un constructeur de copie et un opérateur d'affectation, avec un comportement conventionnel.
 
@@ -63,7 +63,7 @@ En particulier, aucune différence même minime ne peut exister entre la constru
 |-|-|
 |[valarray](#valarray)|Construit un `valarray` de taille spécifique ou avec des éléments d'une valeur spécifique, ou comme copie d'un autre `valarray` ou comme sous-ensemble d'un autre `valarray`.|
 
-### <a name="typedefs"></a>Typedef
+### <a name="typedefs"></a>Typedefs
 
 |||
 |-|-|
@@ -129,7 +129,7 @@ Un valarray dont les éléments ont eu `_Func` appliqué élément par élément
 
 ### <a name="remarks"></a>Notes
 
-La fonction membre retourne un objet de classe [valarray](../standard-library/valarray-class.md)  **\<Type >** [, de longueur longueur](#size), chacun des éléments dont *je* n' `_Func((*this)[I])`.
+La fonction membre retourne un objet de classe [valarray](../standard-library/valarray-class.md) **\<type >** [, de longueur longueur](#size), chacun des éléments dont *je* n' `_Func((*this)[I])`.
 
 ### <a name="example"></a>Exemple
 
@@ -191,7 +191,7 @@ valarray<Type> cshift(int count) const;
 
 ### <a name="parameters"></a>Paramètres
 
-*nombre* \
+*nombre*\
 Le nombre d’emplacements qui servira à décaler les éléments vers l’avant.
 
 ### <a name="return-value"></a>Valeur de retour
@@ -269,7 +269,7 @@ void free();
 
 ### <a name="remarks"></a>Notes
 
-Cette fonction non standard est équivalente à l’attribution d’un valarray vide. Exemple :
+Cette fonction non standard est équivalente à l’attribution d’un valarray vide. Par exemple :
 
 ```cpp
 valarray<T> v;
@@ -292,7 +292,7 @@ La valeur maximale des éléments dans le valarray d’opérandes.
 
 ### <a name="remarks"></a>Notes
 
-La fonction membre compare les valeurs en appliquant l' **opérateur \<** ou **opérateur >** entre les paires d’éléments de la classe `Type`, pour lesquels les opérateurs doivent être fournis pour l’élément `Type`.
+La fonction membre compare les valeurs en appliquant l' **opérateur\<** ou **opérateur >** entre les paires d’éléments de la classe `Type`, pour lesquels les opérateurs doivent être fournis pour l’élément `Type`.
 
 ### <a name="example"></a>Exemple
 
@@ -345,7 +345,7 @@ La valeur minimale des éléments dans le valarray d’opérandes.
 
 ### <a name="remarks"></a>Notes
 
-La fonction membre compare les valeurs en appliquant l' **opérateur \<** ou **opérateur >** entre les paires d’éléments de la classe `Type`, pour lesquels les opérateurs doivent être fournis pour l’élément `Type`.
+La fonction membre compare les valeurs en appliquant l' **opérateur\<** ou **opérateur >** entre les paires d’éléments de la classe `Type`, pour lesquels les opérateurs doivent être fournis pour l’élément `Type`.
 
 ### <a name="example"></a>Exemple
 
@@ -509,7 +509,7 @@ The remainders from the element-by-element division is the
 valarray: ( 0 -3 4 -7 1 -3 ).
 ```
 
-## <a name="op_and_eq"></a>&amp; d’opérateur =
+## <a name="op_and_eq"></a>&amp;d’opérateur =
 
 Obtient le résultat de l’opération de bits **AND** des éléments d’un tableau avec les éléments correspondants dans un valarray spécifié ou avec une valeur du type d’élément.
 
@@ -582,7 +582,7 @@ The element-by-element result of the logical AND operator&= is the
 valarray: ( 0 0 0 2 0 4 0 6 0 8 ).
 ```
 
-## <a name="op_gt_gt_eq"></a>&gt; d’opérateur &gt; =
+## <a name="op_gt_gt_eq"></a>&gt;d’opérateur &gt;=
 
 Décale vers la droite les bits de chaque élément d’un opérande de valarray d’un nombre spécifié de positions ou d’une quantité d’éléments spécifiée par un deuxième valarray.
 
@@ -653,7 +653,7 @@ The element-by-element result of the right shift is the
 valarray: ( 64 -32 16 -8 4 -2 1 -1 ).
 ```
 
-## <a name="op_lt_lt_eq"></a>&lt; d’opérateur &lt; =
+## <a name="op_lt_lt_eq"></a>&lt;d’opérateur &lt;=
 
 Décale vers la gauche les bits de chaque élément d’un opérande de valarray d’un nombre spécifié de positions ou d’une quantité d’éléments spécifiée par un deuxième valarray.
 
@@ -1127,16 +1127,16 @@ Le valarray qui doit être copié dans le valarray d’opérandes.
 \ *Val*
 La valeur à affecter aux éléments du valarray d’opérandes.
 
-*_Slicearray* \
+*_Slicearray*\
 Le slice_array qui doit être copié dans le valarray d’opérandes.
 
-*_Gslicearray* \
+*_Gslicearray*\
 Le gslice_array qui doit être copié dans le valarray d’opérandes.
 
-*_Maskarray* \
+*_Maskarray*\
 Le mask_array qui doit être copié dans le valarray d’opérandes.
 
-*_Indarray* \
+*_Indarray*\
 Le indirect_array qui doit être copié dans le valarray d’opérandes.
 
 ### <a name="return-value"></a>Valeur de retour
@@ -1237,19 +1237,19 @@ valarray<Type> operator[](const valarray<size_t>& _Indarray) const;
 
 ### <a name="parameters"></a>Paramètres
 
-*_Off* \
+*_Off*\
 L’index de l’élément auquel une valeur doit être affectée.
 
-*_Slicearray* \
+*_Slicearray*\
 Un slice_array d’un valarray qui spécifie un sous-ensemble qui doit être sélectionné ou retourné à un nouveau valarray.
 
-*_Gslicearray* \
+*_Gslicearray*\
 Un gslice_array d’un valarray qui spécifie un sous-ensemble qui doit être sélectionné ou retourné à un nouveau valarray.
 
-*_Boolarray* \
+*_Boolarray*\
 Un bool_array d’un valarray qui spécifie un sous-ensemble qui doit être sélectionné ou retourné à un nouveau valarray.
 
-*_Indarray* \
+*_Indarray*\
 Un indirect_array d’un valarray qui spécifie un sous-ensemble qui doit être sélectionné ou retourné à un nouveau valarray.
 
 ### <a name="return-value"></a>Valeur de retour
@@ -1258,7 +1258,7 @@ Une référence à un élément ou sa valeur à l’index spécifié, ou un sous
 
 ### <a name="remarks"></a>Notes
 
-L’opérateur membre est surchargé pour fournir plusieurs manières de sélectionner des séquences d’éléments parmi celles contrôlées par <strong>\*this</strong>. Le premier groupe de cinq opérateurs membres fonctionnent conjointement avec différentes surcharges de l’opérateur [operator=](#op_eq) (et d’autres opérateurs d’assignation) pour permettre le remplacement sélectif (découpage) de la séquence contrôlée. Les éléments sélectionnés doivent exister.
+L’opérateur membre est surchargé pour fournir plusieurs manières de sélectionner des séquences d’éléments parmi celles contrôlées par <strong>\*ce</strong>. Le premier groupe de cinq opérateurs membres fonctionnent conjointement avec différentes surcharges de l’opérateur [operator=](#op_eq) (et d’autres opérateurs d’assignation) pour permettre le remplacement sélectif (découpage) de la séquence contrôlée. Les éléments sélectionnés doivent exister.
 
 En cas de compilation avec [_ITERATOR_DEBUG_LEVEL](../standard-library/iterator-debug-level.md) défini sur 1 ou 2, une erreur d’exécution se produit si vous essayez d’accéder à un élément en dehors des limites du valarray.  Consultez [Itérateurs vérifiés](../standard-library/checked-iterators.md) pour plus d’informations.
 
@@ -1287,7 +1287,7 @@ Valarray dont les éléments sont l’élément **Xor** logique exclusif de l’
 
 ### <a name="remarks"></a>Notes
 
-Ou exclusif logique, connu sous le nom **XOR**, a la sémantique suivante : étant donnés les éléments *e*1 et *e*2, *e*1 **XOR** *e*2 a la valeur **true** si exactement un des éléments a la valeur true ; **false** si les deux éléments ont la valeur false ou si les deux éléments ont la valeur true.
+Le or logique exclusif, connu sous le terme **Xor**, a la sémantique suivante : éléments donnés *e*1 et *e*2, *e*1 **Xor** *e*2 est **vrai** si exactement l’un des éléments a la valeur true ; **false** si les deux éléments ont la valeur false ou si les deux éléments ont la valeur true.
 
 ### <a name="example"></a>Exemple
 
@@ -1364,7 +1364,7 @@ Valarray dont les éléments sont les `OR` au niveau du bit par élément de l�
 
 Une opération au niveau du bit peut uniquement être utilisée pour manipuler des bits dans les types de données **char** et **int** et les variantes, et non sur les types de données plus complexes **float**, **double**, **longdouble**, **void**, **bool**ou autres.
 
-L’opérateur de bits `OR` a la même table de vérité que l’opérateur `OR` logique, mais il s’applique au type de données au niveau des bits individuels. Étant donnés les bits *b*1 et *b*2, *b*1 `OR` *b*2 a la valeur **true** si au moins un des bits a la valeur true ; **false** si les deux bits ont la valeur false.
+L’opérateur de bits `OR` a la même table de vérité que l’opérateur `OR` logique, mais il s’applique au type de données au niveau des bits individuels. Les bits *b*1 et *b*2, *b*1 `OR` *b*2 ont la **valeur true** si au moins l’un des bits a la valeur true ; **false** si les deux bits ont la valeur false.
 
 ### <a name="example"></a>Exemple
 
@@ -1440,7 +1440,7 @@ Valarray de valeurs booléennes qui sont les `NOT` au niveau du bit des valeurs 
 
 Une opération au niveau du bit peut uniquement être utilisée pour manipuler des bits dans les types de données **char** et **int** et les variantes, et non sur les types de données plus complexes **float**, **double**, **longdouble**, **void**, **bool** ou other.
 
-L’opérateur de bits `NOT` a la même table de vérité que l’opérateur `NOT` logique, mais il s’applique au type de données au niveau des bits individuels. Étant donné le bit *b*, ~ *b* a la valeur true si *b* a la valeur false, et false si *b* a la valeur true. L’opérateur logique **NOT**[operator!](#op_not) s’applique au niveau d’un élément et compte toutes les valeurs différentes de zéro comme **true** : le résultat est un valarray de valeurs booléennes. Le `NOToperator~` au niveau du bit, en revanche, peut entraîner un valarray de valeurs autres que 0 ou 1, en fonction du résultat de l’opération au niveau du bit.
+L’opérateur de bits `NOT` a la même table de vérité que l’opérateur `NOT` logique, mais il s’applique au type de données au niveau des bits individuels. Étant donné le bit *b*, ~ *b* a la valeur true si *b* a la valeur false, et false si *b* a la valeur true. L’opérateur logique **NOT**[operator!](#op_not) s’applique au niveau d’un élément et compte toutes les valeurs différentes de zéro comme **true** : le résultat est un valarray de valeurs booléennes. Le `NOToperator~`au niveau du bit, en revanche, peut entraîner un valarray de valeurs autres que 0 ou 1, en fonction du résultat de l’opération au niveau du bit.
 
 ### <a name="example"></a>Exemple
 
@@ -1538,7 +1538,7 @@ void resize(
 
 ### <a name="parameters"></a>Paramètres
 
-*_Newsize* \
+*_Newsize*\
 Nombre d'éléments dans le valarray redimensionné.
 
 \ *Val*
@@ -1609,7 +1609,7 @@ valarray<Type> shift(int count) const;
 
 ### <a name="parameters"></a>Paramètres
 
-*nombre* \
+*nombre*\
 Le nombre d’emplacements qui servira à décaler les éléments vers l’avant.
 
 ### <a name="return-value"></a>Valeur de retour
@@ -1860,31 +1860,31 @@ valarray(
 
 ### <a name="parameters"></a>Paramètres
 
-*Nombre* \
+*Nombre*\
 Le nombre d’éléments qui doivent figurer dans le valarray.
 
-@No__t_1 *Val*
+\ *Val*
 La valeur à utiliser pour initialiser les éléments dans le valarray.
 
-@No__t_1 *ptr*
+\ *ptr*
 Le pointeur désignant les valeurs à utiliser pour initialiser les éléments dans le valarray.
 
-@No__t_1 *droit*
+\ *droit*
 Un valarray existant pour initialiser le nouveau valarray.
 
-*SliceArray* \
+*SliceArray*\
 Un slice_array dont les valeurs d’élément doivent être utilisées pour initialiser les éléments du valarray en cours de construction.
 
-*GsliceArray* \
+*GsliceArray*\
 Un gslice_array dont les valeurs d’élément doivent être utilisées pour initialiser les éléments du valarray en cours de construction.
 
-*MaskArray* \
+*MaskArray*\
 Un mask_array dont les valeurs d’élément doivent être utilisées pour initialiser les éléments du valarray en cours de construction.
 
-*IndArray* \
+*IndArray*\
 Un indirect_array dont les valeurs d’élément doivent être utilisées pour initialiser les éléments du valarray en cours de construction.
 
-*IList* \
+*IList*\
 Objet initializer_list contenant les éléments à copier.
 
 ### <a name="remarks"></a>Notes

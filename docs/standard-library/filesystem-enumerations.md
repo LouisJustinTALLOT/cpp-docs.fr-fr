@@ -12,19 +12,19 @@ f1_keywords:
 - filesystem/std::experimental::filesystem::perms
 ms.assetid: 0096c046-d101-464c-8259-b878a48280b0
 ms.openlocfilehash: f148347cd132a604622415c65bb3e0352f5308eb
-ms.sourcegitcommit: 069e3833bd821e7d64f5c98d0ea41fc0c5d22e53
+ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/21/2019
-ms.locfileid: "74303499"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78875822"
 ---
 # <a name="ltfilesystemgt-enumerations"></a>&lt;filesystem&gt;, énumérations
 
 Cette rubrique décrit les énumérations de l’en-tête filesystem.
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
-**En-tête :** \<experimental/filesystem>
+**En-tête :** \<> expérimentale/système de fichiers
 
 **Espace de noms :** std::experimental::filesystem
 
@@ -79,7 +79,7 @@ enum class directory_options {
 
 ### <a name="values"></a>Valeurs
 
-|Nom|Description|
+|Name|Description|
 |----------|-----------------|
 |`none`|Comportement par défaut : ignorer les liens symboliques vers les répertoires. Autorisation refusée est une erreur.|
 |`follow_directory_symlink`|Traiter les liens symboliques vers des répertoires comme des répertoires réels.|
@@ -107,7 +107,7 @@ enum class file_type {
 
 ### <a name="values"></a>Valeurs
 
-|Nom|Valeur|Description|
+|Name|Valeur|Description|
 |----------|-----------|-----------------|
 |`not_found`|-1|Représente un fichier qui n'existe pas.|
 |`none`|0|Représente un fichier qui n'a aucun attribut de type. (Non pris en charge.)|
@@ -116,7 +116,7 @@ enum class file_type {
 |`symlink`|3|Représente un lien symbolique. (Non pris en charge.)|
 |`block`|4|Représente un fichier spécial de bloc sur les systèmes UNIX. (Non pris en charge.)|
 |`character`|5|Représente un fichier spécial de caractères sur les systèmes UNIX. (Non pris en charge.)|
-|`fifo`|6\.|Représente un fichier FIFO sur les systèmes UNIX. (Non pris en charge.)|
+|`fifo`|6|Représente un fichier FIFO sur les systèmes UNIX. (Non pris en charge.)|
 |`socket`|7|Représente un socket sur les systèmes UNIX. (Non pris en charge.)|
 |`unknown`|8|Représente un fichier dont l'état ne peut pas être déterminé.|
 

@@ -12,11 +12,11 @@ helpviewer_keywords:
 - connection points [C++], notifying of events
 ms.assetid: eb7a563e-6bce-4cdf-8d20-8c6a5307781b
 ms.openlocfilehash: 694127ceccc1d1b55e5da9abca799dff77dcfc60
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69496939"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78864916"
 ---
 # <a name="cfirepropnotifyevent-class"></a>CFirePropNotifyEvent, classe
 
@@ -35,24 +35,24 @@ class CFirePropNotifyEvent
 
 ### <a name="public-methods"></a>M&#233;thodes publiques
 
-|Nom|Description|
+|Name|Description|
 |----------|-----------------|
 |[CFirePropNotifyEvent::FireOnChanged](#fireonchanged)|Statique Notifie le récepteur du conteneur qu’une propriété de contrôle a été modifiée.|
 |[CFirePropNotifyEvent::FireOnRequestEdit](#fireonrequestedit)|Statique Notifie le récepteur du conteneur qu’une propriété de contrôle va être modifiée.|
 
 ## <a name="remarks"></a>Notes
 
-`CFirePropNotifyEvent`a deux méthodes qui notifient le récepteur du conteneur qu’une propriété de contrôle a été modifiée ou est sur le paragraphe de changer.
+`CFirePropNotifyEvent` a deux méthodes qui informent le récepteur du conteneur qu’une propriété de contrôle a été modifiée ou qu’elle est sur le paragraphe de la modification.
 
-Si la classe qui implémente votre contrôle est `IPropertyNotifySink`dérivée `CFirePropNotifyEvent` de, les méthodes sont appelées `FireOnRequestEdit` lorsque `FireOnChanged`vous appelez ou. Si votre classe de contrôle n’est pas `IPropertyNotifySink`dérivée de, les appels à ces fonctions retournent S_OK.
+Si la classe qui implémente votre contrôle est dérivée de `IPropertyNotifySink`, les méthodes `CFirePropNotifyEvent` sont appelées lorsque vous appelez `FireOnRequestEdit` ou `FireOnChanged`. Si votre classe de contrôle n’est pas dérivée de `IPropertyNotifySink`, les appels à ces fonctions retournent S_OK.
 
 Pour plus d’informations sur la création de contrôles, consultez le [Didacticiel ATL](../../atl/active-template-library-atl-tutorial.md).
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
-**En-tête:** atlctl. h
+**En-tête :** atlctl. h
 
-##  <a name="fireonchanged"></a>  CFirePropNotifyEvent::FireOnChanged
+##  <a name="fireonchanged"></a>CFirePropNotifyEvent::FireOnChanged
 
 Avertit toutes les interfaces [IPropertyNotifySink](/windows/win32/api/ocidl/nn-ocidl-ipropertynotifysink) connectées (sur chaque point de connexion de l’objet) que la propriété d’objet spécifiée a changé.
 
@@ -65,7 +65,7 @@ static HRESULT FireOnChanged(IUnknown* pUnk, DISPID dispID);
 *pUnk*<br/>
 dans Pointeur vers le `IUnknown` de l’objet qui envoie la notification.
 
-*dispID*<br/>
+*Égal*<br/>
 dans Identificateur de la propriété qui a changé.
 
 ### <a name="return-value"></a>Valeur de retour
@@ -76,7 +76,7 @@ L’une des valeurs HRESULT standard.
 
 Cette fonction peut être appelée en toute sécurité même si votre contrôle ne prend pas en charge les points de connexion.
 
-##  <a name="fireonrequestedit"></a>  CFirePropNotifyEvent::FireOnRequestEdit
+##  <a name="fireonrequestedit"></a>CFirePropNotifyEvent::FireOnRequestEdit
 
 Avertit toutes les interfaces [IPropertyNotifySink](/windows/win32/api/ocidl/nn-ocidl-ipropertynotifysink) connectées (sur chaque point de connexion de l’objet) que la propriété d’objet spécifiée est sur le point de changer.
 
@@ -89,7 +89,7 @@ static HRESULT FireOnRequestEdit(IUnknown* pUnk, DISPID dispID);
 *pUnk*<br/>
 dans Pointeur vers le `IUnknown` de l’objet qui envoie la notification.
 
-*dispID*<br/>
+*Égal*<br/>
 dans Identificateur de la propriété à modifier.
 
 ### <a name="return-value"></a>Valeur de retour

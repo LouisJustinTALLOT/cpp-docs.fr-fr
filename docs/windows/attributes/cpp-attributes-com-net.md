@@ -7,11 +7,11 @@ helpviewer_keywords:
 - attributes [C++/CLI], reference topics
 ms.assetid: 613a3611-b3eb-4347-aa38-99b654600e1c
 ms.openlocfilehash: 4885edf57988d5f83b56ba6a71da85877354d3ce
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69491058"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78856440"
 ---
 # <a name="c-attributes-for-com-and-net"></a>Attributs C++ pour COM et .NET
 
@@ -34,7 +34,7 @@ Les attributs C++ s’étendent dans des directions qui ne sont actuellement pas
 
 - Remplace la grande quantité de code IDL requise par un composant COM par quelques attributs concis.
 
-Par exemple, pour implémenter un récepteur d’événements simple pour une classe ATL générique, vous pouvez appliquer l’attribut [event_receiver](event-receiver.md) à une classe spécifique `CMyReceiver`telle que. L' `event_receiver` attribut est ensuite compilé par le compilateur C++ Microsoft, qui insère le code approprié dans le fichier objet.
+Par exemple, pour implémenter un récepteur d’événements simple pour une classe ATL générique, vous pouvez appliquer l’attribut [event_receiver](event-receiver.md) à une classe spécifique telle que `CMyReceiver`. L’attribut `event_receiver` est ensuite compilé par le compilateur C++ Microsoft, qui insère le code approprié dans le fichier objet.
 
 ```cpp
 [event_receiver(com)]
@@ -45,7 +45,7 @@ class CMyReceiver
 }
 ```
 
-Vous pouvez ensuite configurer les méthodes `CMyReceiver` `handler1` et `handler2` gérer les événements (à l’aide de la fonction intrinsèque [_ _ Hook](../../cpp/hook.md)) à partir d’une source d’événement, que vous pouvez créer à l’aide de [event_source](event-source.md).
+Vous pouvez ensuite configurer les méthodes de `CMyReceiver` `handler1` et `handler2` pour gérer les événements (à l’aide de la fonction intrinsèque [__hook](../../cpp/hook.md)) à partir d’une source d’événement, que vous pouvez créer à l’aide de [event_source](event-source.md).
 
 ## <a name="basic-mechanics-of-attributes"></a>Mécanismes de base des attributs
 
@@ -55,7 +55,7 @@ Comme précédemment, lorsque le projet est généré, le compilateur analyse ch
 
 L’illustration suivante montre la relation entre le compilateur et le fournisseur d’attributs.
 
-![Communication d’attribut de composant](../media/vccompattrcomm.gif "Communication d’attribut de composant")
+![Communication d’attribut de composant](../media/vccompattrcomm.gif "Communication des attributs de composants")
 
 > [!NOTE]
 > L’utilisation des attributs ne modifie pas le contenu du fichier source. La seule fois où le code d’attribut généré est visible pendant les sessions de débogage. En outre, pour chaque fichier source du projet, vous pouvez générer un fichier texte qui affiche les résultats de la substitution d’attribut. Pour plus d’informations sur cette procédure, consultez [/FX (fusionner le code injecté)](../../build/reference/fx-merge-injected-code.md) et [débogage du code injecté](/visualstudio/debugger/how-to-debug-injected-code).

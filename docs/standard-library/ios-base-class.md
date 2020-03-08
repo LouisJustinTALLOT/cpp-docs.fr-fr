@@ -109,11 +109,11 @@ helpviewer_keywords:
 - std::ios_base [C++], xalloc
 ms.assetid: 0f9e0abc-f70f-49bc-aa1f-003859f56cfe
 ms.openlocfilehash: 17fb83cdbf882467f0ec330e05a6506b13051cab
-ms.sourcegitcommit: 4b0928a1a497648d0d327579c8262f25ed20d02e
+ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/24/2019
-ms.locfileid: "72890125"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78856514"
 ---
 # <a name="ios_base-class"></a>ios_base, classe
 
@@ -143,7 +143,7 @@ Un objet de la classe ios_base stocke également des informations d’état de f
 |-|-|
 |[ios_base](#ios_base)|Construit des objets `ios_base`.|
 
-### <a name="typedefs"></a>Typedef
+### <a name="typedefs"></a>Typedefs
 
 |||
 |-|-|
@@ -153,7 +153,7 @@ Un objet de la classe ios_base stocke également des informations d’état de f
 |[openmode](#openmode)|Décrit comment interagir avec un flux.|
 |[seekdir](#seekdir)|Spécifie le point de départ pour les opérations de décalage.|
 
-### <a name="enums"></a>Énumérations
+### <a name="enums"></a>Enums
 
 |||
 |-|-|
@@ -220,9 +220,9 @@ Un objet de la classe ios_base stocke également des informations d’état de f
 |-|-|
 |[operator=](#op_eq)|Opérateur d'affectation pour les objets `ios_base`.|
 
-## <a name="requirements"></a>spécifications
+## <a name="requirements"></a>Spécifications
 
-**En-tête :** \<ios>
+**En-tête :** \<iOS >
 
 **Espace de noms :** std
 
@@ -267,7 +267,7 @@ typedef void (__cdecl *event_callback)(
 *_E*\
 Correspond à l’[event](#event).
 
-*Atteindre la*\
+*_Base*\
 Flux dans lequel l’événement a été appelé.
 
 *_I*\
@@ -279,7 +279,7 @@ Ce type décrit un pointeur vers une fonction qui peut être inscrite avec [regi
 
 ### <a name="example"></a>Exemple
 
-Pour obtenir un exemple qui utilise `event_callback`, consultez [register_call](#register_callback).
+Pour obtenir un exemple qui utilise [, consultez ](#register_callback)register_call`event_callback`.
 
 ## <a name="failure"></a>toute
 
@@ -344,7 +344,7 @@ fmtflags flags(fmtflags fmtfl);
 
 ### <a name="parameters"></a>Paramètres
 
-*fmtfl* \
+*fmtfl*\
 Nouveau paramètre `fmtflags`.
 
 ### <a name="return-value"></a>Valeur de retour
@@ -465,7 +465,7 @@ locale getloc() const;
 
 ### <a name="return-value"></a>Valeur de retour
 
-Objet de paramètres régionaux stocké.
+Objet des paramètres régionaux stocké.
 
 ### <a name="example"></a>Exemple
 
@@ -532,7 +532,7 @@ ios_base();
 
 ### <a name="remarks"></a>Notes
 
-Le constructeur (protégé) ne fait rien. Un appel ultérieur à `basic_ios::`[init](../standard-library/basic-ios-class.md#init) doit initialiser l’objet avant qu’il puisse être détruit en toute sécurité. Par conséquent, la seule utilisation sécurisée pour la classe ios_base est la classe de base pour le modèle de classe [basic_ios](../standard-library/basic-ios-class.md).
+Le constructeur (protégé) ne fait rien. Un appel ultérieur à `basic_ios::`[init](../standard-library/basic-ios-class.md#init) doit initialiser l’objet avant qu’il puisse être détruit en toute sécurité. Ainsi, la seule utilisation sécurisée pour la classe ios_base est comme une classe de base pour le modèle de classe [basic_ios](../standard-library/basic-ios-class.md).
 
 ## <a name="iostate"></a>iostate
 
@@ -572,7 +572,7 @@ long& iword(int idx);
 
 ### <a name="parameters"></a>Paramètres
 
-*idx* \
+*idx*\
 Index de la valeur à stocker en tant que `iword`.
 
 ### <a name="remarks"></a>Notes
@@ -648,7 +648,7 @@ ios_base& operator=(const ios_base& right);
 ### <a name="parameters"></a>Paramètres
 
 \ *droit*
-Objet de type `ios_base`.
+Objet de type `ios_base`.
 
 ### <a name="return-value"></a>Valeur de retour
 
@@ -742,10 +742,10 @@ void register_callback(
 
 ### <a name="parameters"></a>Paramètres
 
-*pfn* \
+*pfn*\
 Pointeur vers la fonction de rappel.
 
-*idx* \
+*idx*\
 Nombre défini par l’utilisateur.
 
 ### <a name="remarks"></a>Notes
@@ -982,7 +982,7 @@ Indicateurs que vous souhaitez désactiver.
 
 ### <a name="remarks"></a>Notes
 
-La fonction membre appelle efficacement [Flags](#flags)(`~` *_Mask* **& Flags**) (effacer les bits sélectionnés).
+La fonction membre appelle efficacement [Flags](#flags)(`~` *_Mask* **indicateurs &** ) (effacer les bits sélectionnés).
 
 ### <a name="example"></a>Exemple
 
@@ -1010,7 +1010,7 @@ Paramètre de largeur actuel.
 
 ### <a name="remarks"></a>Notes
 
-La première fonction membre retourne la largeur du champ stocké. La deuxième fonction membre stocke *_Wide* dans la largeur de champ et retourne sa valeur stockée précédente.
+La première fonction membre retourne la largeur du champ stocké. La deuxième fonction membre stocke *_Wide* dans la largeur du champ et retourne sa valeur stockée précédente.
 
 ### <a name="example"></a>Exemple
 
@@ -1081,6 +1081,6 @@ testing
 
 ## <a name="see-also"></a>Voir aussi
 
-[Sécurité des threads dans la bibliothèque standard C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)\
+[Sécurité des threads dans la bibliothèque C++ Standard](../standard-library/thread-safety-in-the-cpp-standard-library.md)\
 [iostream, programmation](../standard-library/iostream-programming.md)\
 [iostreams, conventions](../standard-library/iostreams-conventions.md)

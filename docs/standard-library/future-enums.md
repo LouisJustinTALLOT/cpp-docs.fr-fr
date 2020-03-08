@@ -7,11 +7,11 @@ f1_keywords:
 - future/std::launch
 ms.assetid: 8c675645-db47-4cab-bc0e-7b87f8a302df
 ms.openlocfilehash: a5bcebd80b296a0b8416580aa03acc59ce3750cd
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68448219"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78865169"
 ---
 # <a name="ltfuturegt-enums"></a>&lt;future&gt;, énumérations
 

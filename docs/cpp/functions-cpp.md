@@ -9,11 +9,11 @@ helpviewer_keywords:
 - declarators, functions
 ms.assetid: 33ba01d5-75b5-48d2-8eab-5483ac7d2274
 ms.openlocfilehash: da30d647947e98146cd89f255c2e05991c1be562
-ms.sourcegitcommit: a5fa9c6f4f0c239ac23be7de116066a978511de7
+ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/20/2019
-ms.locfileid: "75301507"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78884152"
 ---
 # <a name="functions-c"></a>Fonctions (C++)
 
@@ -408,7 +408,7 @@ Il existe plusieurs façons de retourner plusieurs valeurs à partir d’une fon
 
 C++ prend en charge les pointeurs de fonction de la même manière que le langage C. Toutefois, une alternative de type plus sécurisé consiste généralement à utiliser un objet de fonction.
 
-Il est recommandé d’utiliser **typedef** pour déclarer un alias pour le type de pointeur de fonction si vous déclarez une fonction qui retourne un type de pointeur de fonction.  Exemple :
+Il est recommandé d’utiliser **typedef** pour déclarer un alias pour le type de pointeur de fonction si vous déclarez une fonction qui retourne un type de pointeur de fonction.  Par exemple
 
 ```cpp
 typedef int (*fp)(int);

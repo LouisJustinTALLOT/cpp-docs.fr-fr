@@ -16,11 +16,11 @@ helpviewer_keywords:
 - Iregistrar Interface
 ms.assetid: e88c04b7-0c93-4ae8-aeb9-ecd78f87421e
 ms.openlocfilehash: e347bdba1656a53cd705123a26650dad50d3892f
-ms.sourcegitcommit: effb516760c0f956c6308eeded48851accc96b92
+ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70927753"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78857138"
 ---
 # <a name="iregistrar-interface"></a>Interface IRegistrar
 
@@ -40,22 +40,22 @@ Pour plus d’informations, consultez la rubrique [utilisation de paramètres re
 
 ### <a name="public-methods"></a>M&#233;thodes publiques
 
-|Nom|Description|
+|Name|Description|
 |----------|-----------------|
-|[IRegistrar::ResourceRegisterSz](#resourceregistersz)|Inscrit la ressource. |
-|[IRegistrar::ResourceUnregisterSz](#resourceunregistersz)| Annule l’inscription de la ressource.|
-|[IRegistrar::FileRegister](#fileregister)|Inscrit le fichier.|
-|[IRegistrar::FileUnregister](#fileunregister)|Annule l’inscription du fichier.|
-|[IRegistrar::StringRegister](#stringregister)|Inscrit la chaîne.|
-|[IRegistrar::StringUnregister](#stringunregister)|Annule l’inscription de la chaîne|
-|[IRegistrar::ResourceRegister](#resourceregister)|Inscrit la ressource.|
-|[IRegistrar::ResourceUnregister](#resourceunregister)|Annule l’inscription de la ressource.|
+|[IRegistrar :: ResourceRegisterSz](#resourceregistersz)|Inscrit la ressource. |
+|[IRegistrar :: ResourceUnregisterSz](#resourceunregistersz)| Annule l’inscription de la ressource.|
+|[IRegistrar :: FileRegister](#fileregister)|Inscrit le fichier.|
+|[IRegistrar :: FileUnregister](#fileunregister)|Annule l’inscription du fichier.|
+|[IRegistrar :: StringRegister](#stringregister)|Inscrit la chaîne.|
+|[IRegistrar :: StringUnregister](#stringunregister)|Annule l’inscription de la chaîne|
+|[IRegistrar :: ResourceRegister](#resourceregister)|Inscrit la ressource.|
+|[IRegistrar :: ResourceUnregister](#resourceunregister)|Annule l’inscription de la ressource.|
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
 **En-tête :** atlifase. h
 
-##  <a name="resourceregistersz"></a>  IRegistrar::ResourceRegisterSz
+##  <a name="resourceregistersz"></a>IRegistrar :: ResourceRegisterSz
 
 Inscrit la ressource.
 
@@ -66,7 +66,7 @@ virtual HRESULT STDMETHODCALLTYPE ResourceRegisterSz(
     /* [in] */ _In_z_ LPCOLESTR szType) = 0;
 ```
 
-##  <a name="resourceunregistersz"></a>  IRegistrar::ResourceUnregisterSz
+##  <a name="resourceunregistersz"></a>IRegistrar :: ResourceUnregisterSz
 
 Annule l’inscription de la ressource.
 
@@ -77,7 +77,7 @@ virtual HRESULT STDMETHODCALLTYPE ResourceUnregisterSz(
     /* [in] */ _In_z_ LPCOLESTR szType) = 0;
 ```
 
-##  <a name="fileregister"></a>  IRegistrar::FileRegister
+##  <a name="fileregister"></a>IRegistrar :: FileRegister
 
 Inscrit le fichier.
 
@@ -86,7 +86,7 @@ virtual HRESULT STDMETHODCALLTYPE FileRegister(
     /* [in] */ _In_z_ LPCOLESTR fileName) = 0;
 ```
 
-##  <a name="fileunregister"></a>  IRegistrar::FileUnregister
+##  <a name="fileunregister"></a>IRegistrar :: FileUnregister
 
 Annule l’inscription du fichier.
 
@@ -95,7 +95,7 @@ virtual HRESULT STDMETHODCALLTYPE FileUnregister(
     /* [in] */ _In_z_ LPCOLESTR fileName) = 0;
 ```
 
-##  <a name="stringregister"></a>  IRegistrar::StringRegister
+##  <a name="stringregister"></a>IRegistrar :: StringRegister
 
 Inscrit les données de chaîne spécifiées.
 
@@ -104,7 +104,7 @@ virtual HRESULT STDMETHODCALLTYPE StringRegister(
     /* [in] */ _In_z_ LPCOLESTR data) = 0;
 ```
 
-##  <a name="stringunregister"></a>  IRegistrar::StringUnregister
+##  <a name="stringunregister"></a>IRegistrar :: StringUnregister
 
 Annule l’enregistrement des données de chaîne spécifiées.
 
@@ -113,7 +113,7 @@ virtualHRESULT STDMETHODCALLTYPE StringUnregister(
     /* [in] */ _In_z_ LPCOLESTR data) = 0;
 ```
 
-##  <a name="resourceregister"></a>  IRegistrar::ResourceRegister
+##  <a name="resourceregister"></a>IRegistrar :: ResourceRegister
 
 Inscrit la ressource.
 
@@ -124,7 +124,7 @@ virtual HRESULT STDMETHODCALLTYPE ResourceRegister(
     /* [in] */ _In_z_ LPCOLESTR szType) = 0;
 ```
 
-##  <a name="resourceunregister"></a>  IRegistrar::ResourceUnregister
+##  <a name="resourceunregister"></a>IRegistrar :: ResourceUnregister
 
 Annule l’inscription de la ressource.
 

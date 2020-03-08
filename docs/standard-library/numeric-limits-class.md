@@ -1,5 +1,5 @@
 ---
-title: numeric_limits (classe)
+title: numeric_limits, classe
 ms.date: 11/04/2016
 f1_keywords:
 - limits/std::numeric_limits
@@ -71,13 +71,13 @@ helpviewer_keywords:
 - std::numeric_limits [C++], traps
 ms.assetid: 9e817177-0e91-48e6-b680-0531c4b26625
 ms.openlocfilehash: 5373bd6a99605f5a63fb6aa2ed6de50c12b1c8f1
-ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
+ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/21/2019
-ms.locfileid: "72687618"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78876025"
 ---
-# <a name="numeric_limits-class"></a>numeric_limits (classe)
+# <a name="numeric_limits-class"></a>numeric_limits, classe
 
 Le modèle de classe décrit les propriétés arithmétiques des types numériques intégrés.
 
@@ -90,12 +90,12 @@ template <class Type>
 
 ### <a name="parameters"></a>Paramètres
 
-@No__t_1 de *type*
+*Type*\
 Type de données fondamental des éléments dont les propriétés sont testées, interrogées ou définies. Le *type* peut également être déclaré **const**, **volatile**ou **const volatile**.
 
 ## <a name="remarks"></a>Notes
 
-L’en-tête définit des spécialisations explicites pour les types **wchar_t**, **bool**, **char**, **signed char**, **unsigned char**, **short**, **unsigned short**, **int**, **unsigned int**, **long**, **unsigned long**, **float**, **double**, **long double**, long **long**, **unsigned long long**, **char16_t**et **char32_t**. Pour ces spécialisations explicites, le membre [numeric_limits :: is_specialized](#is_specialized) a la **valeur true**et tous les membres pertinents ont des valeurs significatives. Le programme peut fournir des spécialisations explicites supplémentaires. La plupart des fonctions membres de la classe décrivent ou testent les implémentations possibles de **float**.
+L’en-tête définit des spécialisations explicites pour les types **wchar_t**, **bool**, **char**, signed **char**, **unsigned char**, **short**, **unsigned short**, **int**, **unsigned int**, **long**, **unsigned long**, **float**, **double**, **long double**, long **long**, **unsigned long long**, **char16_t**et **char32_t**. Pour ces spécialisations explicites, le membre [numeric_limits :: is_specialized](#is_specialized) a la **valeur true**et tous les membres pertinents ont des valeurs significatives. Le programme peut fournir des spécialisations explicites supplémentaires. La plupart des fonctions membres de la classe décrivent ou testent les implémentations possibles de **float**.
 
 Pour une spécialisation arbitraire, aucun membre n'a de valeur significative. Un objet membre qui n’a pas de valeur explicite stocke zéro (ou **false**) et une fonction membre qui ne retourne pas de valeur significative retourne `Type(0)`.
 
@@ -1161,7 +1161,7 @@ Valeur normalisée minimale pour le type.
 
 #### <a name="remarks"></a>Notes
 
-La valeur minimale normalisée est INT_MIN pour le type **int** et FLT_MIN pour le type **float**. La valeur de retour est significative si [is_bounded](#is_bounded) a la valeur **true** ou si [is_signed](#is_signed) a la valeur **false**.
+La valeur normalisée minimale est INT_MIN pour le type **int** et FLT_MIN pour le type **float**. La valeur de retour est significative si [is_bounded](#is_bounded) a la valeur **true** ou si [is_signed](#is_signed) a la valeur **false**.
 
 #### <a name="example"></a>Exemple
 

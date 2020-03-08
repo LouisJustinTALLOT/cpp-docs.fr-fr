@@ -5,11 +5,11 @@ f1_keywords:
 - ostream/std::operator&lt;&lt;
 ms.assetid: 9282a62e-a3d1-4371-a284-fbc9515bb9a2
 ms.openlocfilehash: c80abcb08423b4bb269e7d60ac43ef97d197a0e9
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68453524"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78874805"
 ---
 # <a name="ltostreamgt-operators"></a>&lt;ostream&gt;, opérateurs
 
@@ -87,20 +87,20 @@ Un caractère.
 Type de l’élément.
 
 *_Ostr*\
-Objet `basic_ostream`.
+Objet `basic_ostream` .
 
-*Str*\
+*str*\
 Chaîne caractère.
 
 *_Tr*\
 Caractéristiques du caractère.
 
-*multiples*\
+\ *Val*
 Type
 
 ### <a name="return-value"></a>Valeur de retour
 
-flux.
+Flux.
 
 ### <a name="remarks"></a>Notes
 
@@ -115,7 +115,7 @@ basic_ostream<Elem, _Tr>& operator<<(
     const Elem *str);
 ```
 
-détermine la longueur N = `traits_type::` [longueur](../standard-library/char-traits-struct.md#length)(`str`) de la séquence à partir de *Str*, puis insère la séquence. Si N < `_Ostr.`[width](../standard-library/ios-base-class.md#width), la fonction insère également une répétition de caractères de remplissage -N `_Ostr.width`. La répétition précède la séquence si (`_Ostr`. [flags](../standard-library/ios-base-class.md#flags) & `adjustfield` != [left](../standard-library/ios-functions.md#left). Sinon, la répétition suit la séquence. La fonction retourne *_Ostr*.
+détermine la longueur N = `traits_type::`[longueur](../standard-library/char-traits-struct.md#length)(`str`) de la séquence à partir de *Str*, puis insère la séquence. Si N < `_Ostr.`[width](../standard-library/ios-base-class.md#width), la fonction insère également une répétition de caractères de remplissage -N `_Ostr.width`. La répétition précède la séquence si (`_Ostr`. [flags](../standard-library/ios-base-class.md#flags) & `adjustfield` != [left](../standard-library/ios-functions.md#left). Sinon, la répétition suit la séquence. La fonction retourne *_Ostr*.
 
 La fonction de modèle
 
@@ -146,7 +146,7 @@ basic_ostream<Elem, _Tr>& operator<<(
     const Elem *str);
 ```
 
-Hormis le fait que chaque élément *_Ch* de la séquence commençant à *Str* est converti en un `Elem` objet de `_Ostr.`type`_Ch`en`_Ostr.`appelant [put](../standard-library/basic-ostream-class.md#put)([Widening](../standard-library/basic-ios-class.md#widen)()).
+Hormis le fait que chaque élément *_Ch* de la séquence commençant à *Str* est converti en un objet de type `Elem` en appelant `_Ostr.`[put](../standard-library/basic-ostream-class.md#put)(`_Ostr.`[Widening](../standard-library/basic-ios-class.md#widen)(`_Ch`)).
 
 La fonction de modèle
 
@@ -166,7 +166,7 @@ basic_ostream<Elem, _Tr>& operator<<(
     Elem _Ch);
 ```
 
-Hormis le fait que *_Ch* est converti en un `Elem` objet de `_Ostr.put`type en `_Ch`appelant ( `_Ostr.widen`()).
+Hormis le fait que *_Ch* est converti en un objet de type `Elem` en appelant `_Ostr.put`(`_Ostr.widen`(`_Ch`)).
 
 La fonction de modèle
 
@@ -261,7 +261,7 @@ basic_ostream<_Elem, _Tr>& operator<<(
     T val);
 ```
 
-retourne `_Ostr` `<<` `val` (et convertit une [référence RValue](../cpp/rvalue-reference-declarator-amp-amp.md) à `_Ostr` en lvalue dans le processus).
+retourne `_Ostr` `<<` `val` (et convertit une [référence RValue](../cpp/rvalue-reference-declarator-amp-amp.md) en `_Ostr` en une lvalue dans le processus).
 
 ### <a name="example"></a>Exemple
 

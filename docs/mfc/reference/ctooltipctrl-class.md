@@ -73,11 +73,11 @@ helpviewer_keywords:
 - CToolTipCtrl [MFC], UpdateTipText
 ms.assetid: 8973f70c-b73a-46c7-908d-758f364b9a97
 ms.openlocfilehash: bf32671eb3535de1bf072e24bc642145e87c84ee
-ms.sourcegitcommit: 180f63704f6ddd07a4172a93b179cf0733fd952d
+ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70741415"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78865446"
 ---
 # <a name="ctooltipctrl-class"></a>CToolTipCtrl Class
 
@@ -93,58 +93,58 @@ class CToolTipCtrl : public CWnd
 
 ### <a name="public-constructors"></a>Constructeurs publics
 
-|Nom|Description|
+|Name|Description|
 |----------|-----------------|
-|[CToolTipCtrl::CToolTipCtrl](#ctooltipctrl)|Construit un objet `CToolTipCtrl`.|
+|[CToolTipCtrl :: CToolTipCtrl](#ctooltipctrl)|Construit un objet `CToolTipCtrl`.|
 
 ### <a name="public-methods"></a>M&#233;thodes publiques
 
-|Nom|Description|
+|Name|Description|
 |----------|-----------------|
-|[CToolTipCtrl::Activate](#activate)|Active et désactive le contrôle d’info-bulle.|
-|[CToolTipCtrl::AddTool](#addtool)|Inscrit un outil avec le contrôle d’info-bulle.|
+|[CToolTipCtrl :: Activate](#activate)|Active et désactive le contrôle d’info-bulle.|
+|[CToolTipCtrl :: AddTool](#addtool)|Inscrit un outil avec le contrôle d’info-bulle.|
 |[CToolTipCtrl :: AdjustRect](#adjustrect)|Effectue une conversion entre le rectangle d’affichage de texte d’un contrôle d’info-bulle et le rectangle de sa fenêtre.|
-|[CToolTipCtrl::Create](#create)|Crée un contrôle d’info-bulle et l’attache à `CToolTipCtrl` un objet.|
-|[CToolTipCtrl::CreateEx](#createex)|Crée un contrôle d’info-bulle avec les styles étendus Windows spécifiés et l' `CToolTipCtrl` attache à un objet.|
-|[CToolTipCtrl::DelTool](#deltool)|Supprime un outil du contrôle d’info-bulle.|
-|[CToolTipCtrl::GetBubbleSize](#getbubblesize)|Récupère la taille de l’info-bulle.|
-|[CToolTipCtrl::GetCurrentTool](#getcurrenttool)|Récupère des informations, telles que la taille, la position et le texte, de la fenêtre d’info-bulle affichée par le contrôle ToolTip actuel.|
-|[CToolTipCtrl::GetDelayTime](#getdelaytime)|Récupère les durées initiales, contextuelles et de réaffichages qui sont actuellement définies pour un contrôle d’info-bulle.|
-|[CToolTipCtrl::GetMargin](#getmargin)|Récupère les marges supérieure, gauche, inférieure et droite définies pour une fenêtre d’info-bulle.|
-|[CToolTipCtrl::GetMaxTipWidth](#getmaxtipwidth)|Récupère la largeur maximale d’une fenêtre d’info-bulle.|
-|[CToolTipCtrl::GetText](#gettext)|Récupère le texte qu’un contrôle d’info-bulle gère pour un outil.|
-|[CToolTipCtrl::GetTipBkColor](#gettipbkcolor)|Récupère la couleur d’arrière-plan dans une fenêtre d’info-bulle.|
-|[CToolTipCtrl::GetTipTextColor](#gettiptextcolor)|Récupère la couleur de texte dans une fenêtre d’info-bulle.|
-|[CToolTipCtrl::GetTitle](#gettitle)|Récupère le titre du contrôle ToolTip actuel.|
-|[CToolTipCtrl::GetToolCount](#gettoolcount)|Récupère le nombre d’outils maintenus par un contrôle d’info-bulle.|
-|[CToolTipCtrl::GetToolInfo](#gettoolinfo)|Récupère les informations qu’un contrôle d’info-bulle gère à propos d’un outil.|
-|[CToolTipCtrl::HitTest](#hittest)|Teste un point pour déterminer s’il se trouve dans le rectangle englobant de l’outil donné. Dans ce cas, récupère des informations sur l’outil.|
-|[CToolTipCtrl::Pop](#pop)|Supprime une fenêtre d’info-bulle affichée de l’affichage.|
-|[CToolTipCtrl::Popup](#popup)|Provoque l’affichage du contrôle ToolTip actuel aux coordonnées du dernier message de la souris.|
-|[CToolTipCtrl::RelayEvent](#relayevent)|Transmet un message de souris à un contrôle d’info-bulle pour traitement.|
-|[CToolTipCtrl::SetDelayTime](#setdelaytime)|Définit les durées initiales, contextuelles et de réaffichage pour un contrôle d’info-bulle.|
-|[CToolTipCtrl::SetMargin](#setmargin)|Définit les marges supérieure, gauche, inférieure et droite d’une fenêtre d’info-bulle.|
-|[CToolTipCtrl::SetMaxTipWidth](#setmaxtipwidth)|Définit la largeur maximale d’une fenêtre d’info-bulle.|
-|[CToolTipCtrl::SetTipBkColor](#settipbkcolor)|Définit la couleur d’arrière-plan dans une fenêtre d’info-bulle.|
-|[CToolTipCtrl::SetTipTextColor](#settiptextcolor)|Définit la couleur du texte dans une fenêtre d’info-bulle.|
-|[CToolTipCtrl::SetTitle](#settitle)|Ajoute une icône standard et une chaîne de titre à une info-bulle.|
-|[CToolTipCtrl::SetToolInfo](#settoolinfo)|Définit les informations gérées par une info-bulle pour un outil.|
-|[CToolTipCtrl::SetToolRect](#settoolrect)|Définit un nouveau rectangle englobant pour un outil.|
-|[CToolTipCtrl::SetWindowTheme](#setwindowtheme)|Définit le style visuel de la fenêtre d’info-bulle.|
-|[CToolTipCtrl::Update](#update)|Force le redessinage de l’outil actuel.|
-|[CToolTipCtrl::UpdateTipText](#updatetiptext)|Définit le texte d’info-bulle d’un outil.|
+|[CToolTipCtrl :: Create](#create)|Crée un contrôle d’info-bulle et l’attache à un objet `CToolTipCtrl`.|
+|[CToolTipCtrl :: CreateEx](#createex)|Crée un contrôle d’info-bulle avec les styles étendus Windows spécifiés et l’attache à un objet `CToolTipCtrl`.|
+|[CToolTipCtrl ::D elTool](#deltool)|Supprime un outil du contrôle d’info-bulle.|
+|[CToolTipCtrl :: GetBubbleSize](#getbubblesize)|Récupère la taille de l’info-bulle.|
+|[CToolTipCtrl :: GetCurrentTool](#getcurrenttool)|Récupère des informations, telles que la taille, la position et le texte, de la fenêtre d’info-bulle affichée par le contrôle ToolTip actuel.|
+|[CToolTipCtrl :: GetDelayTime](#getdelaytime)|Récupère les durées initiales, contextuelles et de réaffichages qui sont actuellement définies pour un contrôle d’info-bulle.|
+|[CToolTipCtrl :: GetMargin](#getmargin)|Récupère les marges supérieure, gauche, inférieure et droite définies pour une fenêtre d’info-bulle.|
+|[CToolTipCtrl :: GetMaxTipWidth](#getmaxtipwidth)|Récupère la largeur maximale d’une fenêtre d’info-bulle.|
+|[CToolTipCtrl :: GetText](#gettext)|Récupère le texte qu’un contrôle d’info-bulle gère pour un outil.|
+|[CToolTipCtrl :: GetTipBkColor](#gettipbkcolor)|Récupère la couleur d’arrière-plan dans une fenêtre d’info-bulle.|
+|[CToolTipCtrl :: GetTipTextColor](#gettiptextcolor)|Récupère la couleur de texte dans une fenêtre d’info-bulle.|
+|[CToolTipCtrl :: GetTitle](#gettitle)|Récupère le titre du contrôle ToolTip actuel.|
+|[CToolTipCtrl :: GetToolCount](#gettoolcount)|Récupère le nombre d’outils maintenus par un contrôle d’info-bulle.|
+|[CToolTipCtrl :: GetToolInfo](#gettoolinfo)|Récupère les informations qu’un contrôle d’info-bulle gère à propos d’un outil.|
+|[CToolTipCtrl :: HitTest](#hittest)|Teste un point pour déterminer s’il se trouve dans le rectangle englobant de l’outil donné. Dans ce cas, récupère des informations sur l’outil.|
+|[CToolTipCtrl ::P op](#pop)|Supprime une fenêtre d’info-bulle affichée de l’affichage.|
+|[CToolTipCtrl ::P opup](#popup)|Provoque l’affichage du contrôle ToolTip actuel aux coordonnées du dernier message de la souris.|
+|[CToolTipCtrl :: RelayEvent](#relayevent)|Transmet un message de souris à un contrôle d’info-bulle pour traitement.|
+|[CToolTipCtrl :: SetDelayTime](#setdelaytime)|Définit les durées initiales, contextuelles et de réaffichage pour un contrôle d’info-bulle.|
+|[CToolTipCtrl :: SetMargin](#setmargin)|Définit les marges supérieure, gauche, inférieure et droite d’une fenêtre d’info-bulle.|
+|[CToolTipCtrl :: SetMaxTipWidth](#setmaxtipwidth)|Définit la largeur maximale d’une fenêtre d’info-bulle.|
+|[CToolTipCtrl :: SetTipBkColor](#settipbkcolor)|Définit la couleur d’arrière-plan dans une fenêtre d’info-bulle.|
+|[CToolTipCtrl :: SetTipTextColor](#settiptextcolor)|Définit la couleur du texte dans une fenêtre d’info-bulle.|
+|[CToolTipCtrl :: SetTitle](#settitle)|Ajoute une icône standard et une chaîne de titre à une info-bulle.|
+|[CToolTipCtrl :: SetToolInfo](#settoolinfo)|Définit les informations gérées par une info-bulle pour un outil.|
+|[CToolTipCtrl :: SetToolRect](#settoolrect)|Définit un nouveau rectangle englobant pour un outil.|
+|[CToolTipCtrl :: SetWindowTheme](#setwindowtheme)|Définit le style visuel de la fenêtre d’info-bulle.|
+|[CToolTipCtrl :: Update](#update)|Force le redessinage de l’outil actuel.|
+|[CToolTipCtrl :: UpdateTipText](#updatetiptext)|Définit le texte d’info-bulle d’un outil.|
 
 ## <a name="remarks"></a>Notes
 
 Un « outil » est une fenêtre, telle qu’une fenêtre ou un contrôle enfant, ou une zone rectangulaire définie par l’application dans la zone cliente d’une fenêtre. Une info-bulle est masquée la plupart du temps, n’apparaissant que lorsque l’utilisateur place le curseur sur un outil et le laisse pendant environ une demi-seconde. L’info-bulle apparaît près du curseur et disparaît lorsque l’utilisateur clique sur un bouton de la souris ou déplace le curseur de l’outil.
 
-`CToolTipCtrl`fournit les fonctionnalités pour contrôler l’heure et la durée initiales de l’info-bulle, les largeurs de marge entourant le texte d’info-bulle, la largeur de la fenêtre d’info-bulle proprement dite et la couleur d’arrière-plan et de texte de l’info-bulle. Un seul contrôle d’info-bulle peut fournir des informations pour plusieurs outils.
+`CToolTipCtrl` fournit les fonctionnalités permettant de contrôler l’heure et la durée initiales de l’info-bulle, les largeurs de marge entourant le texte d’info-bulle, la largeur de la fenêtre d’info-bulle proprement dite et la couleur d’arrière-plan et de texte de l’info-bulle. Un seul contrôle d’info-bulle peut fournir des informations pour plusieurs outils.
 
-La `CToolTipCtrl` classe fournit les fonctionnalités du contrôle commun d’info-bulle Windows. Ce contrôle (et par conséquent `CToolTipCtrl` la classe) est uniquement disponible pour les programmes qui s’exécutent sous Windows 95/98 et Windows NT versions 3,51 et ultérieures.
+La classe `CToolTipCtrl` fournit les fonctionnalités du contrôle commun d’info-bulle Windows. Ce contrôle (et par conséquent la classe `CToolTipCtrl`) est uniquement disponible pour les programmes qui s’exécutent sous Windows 95/98 et Windows NT versions 3,51 et ultérieures.
 
 Pour plus d’informations sur l’activation des info-bulles, consultez info- [bulles dans Windows non dérivées de CFrameWnd](../../mfc/tool-tips-in-windows-not-derived-from-cframewnd.md).
 
-Pour plus d’informations sur `CToolTipCtrl`l’utilisation de, consultez [contrôles](../../mfc/controls-mfc.md) et [utilisation de CToolTipCtrl](../../mfc/using-ctooltipctrl.md).
+Pour plus d’informations sur l’utilisation de `CToolTipCtrl`, consultez [contrôles](../../mfc/controls-mfc.md) et [utilisation de CToolTipCtrl](../../mfc/using-ctooltipctrl.md).
 
 ## <a name="inheritance-hierarchy"></a>Hiérarchie d'héritage
 
@@ -156,11 +156,11 @@ Pour plus d’informations sur `CToolTipCtrl`l’utilisation de, consultez [cont
 
 `CToolTipCtrl`
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
 **En-tête :** afxcmn.h
 
-##  <a name="activate"></a>  CToolTipCtrl::Activate
+##  <a name="activate"></a>CToolTipCtrl :: Activate
 
 Appelez cette fonction pour activer ou désactiver un contrôle d’info-bulle.
 
@@ -179,11 +179,11 @@ Si *bActivate* a la valeur true, le contrôle est activé ; Si la valeur est FA
 
 Lorsqu’un contrôle d’info-bulle est actif, les informations d’info-bulle s’affichent lorsque le curseur se trouve sur un outil inscrit avec le contrôle. lorsqu’il est inactif, les informations relatives aux info-bulles ne s’affichent pas, même lorsque le curseur se trouve sur un outil.
 
-### <a name="example"></a>Exemples
+### <a name="example"></a>Exemple
 
   Consultez l’exemple de [CPropertySheet :: GetTabControl](../../mfc/reference/cpropertysheet-class.md#gettabcontrol).
 
-##  <a name="addtool"></a>  CToolTipCtrl::AddTool
+##  <a name="addtool"></a>CToolTipCtrl :: AddTool
 
 Inscrit un outil avec le contrôle d’info-bulle.
 
@@ -216,7 +216,7 @@ Pointeur vers une structure [Rect](/previous-versions/dd162897\(v=vs.85\)) conte
 ID de l’outil.
 
 *lpszText*<br/>
-Pointeur vers le texte de l’outil. Si ce paramètre contient la valeur LPSTR_TEXTCALLBACK, les messages de notification TTN_NEEDTEXT sont dirigés vers le parent de la fenêtre vers laquelle *pwnd* pointe.
+Pointeur vers le texte de l’outil. Si ce paramètre contient la valeur LPSTR_TEXTCALLBACK, TTN_NEEDTEXT messages de notification sont envoyés au parent de la fenêtre vers laquelle *pwnd* pointe.
 
 ### <a name="return-value"></a>Valeur de retour
 
@@ -229,13 +229,13 @@ Les paramètres *lpRectTool* et *nIDTool* doivent être tous deux valides, ou si
 Un contrôle d’info-bulle peut être associé à plusieurs outils. Appelez cette fonction pour inscrire un outil avec le contrôle d’info-bulle, afin que les informations stockées dans l’info-bulle s’affichent lorsque le curseur se trouve sur l’outil.
 
 > [!NOTE]
->  Vous ne pouvez pas définir une info-bulle sur un `AddTool`contrôle statique à l’aide de.
+>  Vous ne pouvez pas définir une info-bulle sur un contrôle statique à l’aide de `AddTool`.
 
 ### <a name="example"></a>Exemple
 
   Consultez l’exemple de [CPropertySheet :: GetTabControl](../../mfc/reference/cpropertysheet-class.md#gettabcontrol).
 
-##  <a name="adjustrect"></a>  CToolTipCtrl::AdjustRect
+##  <a name="adjustrect"></a>CToolTipCtrl :: AdjustRect
 
 Effectue une conversion entre le rectangle d’affichage de texte d’un contrôle ToolTip et le rectangle de sa fenêtre.
 
@@ -261,11 +261,11 @@ Différent de zéro si le rectangle est correctement ajusté ; Sinon, 0.
 
 Cette fonction membre calcule le rectangle d’affichage du texte d’un contrôle d’info-bulle à partir du rectangle de sa fenêtre, ou le rectangle de la fenêtre d’info-bulle nécessaire pour afficher un rectangle d’affichage de texte spécifié.
 
-Cette fonction membre implémente le comportement du [TTM_ADJUSTRECT](/windows/win32/Controls/ttm-adjustrect)de message Win32, comme décrit dans la SDK Windows.
+Cette fonction membre implémente le comportement de la [TTM_ADJUSTRECT](/windows/win32/Controls/ttm-adjustrect)de message Win32, comme décrit dans le SDK Windows.
 
-##  <a name="create"></a>  CToolTipCtrl::Create
+##  <a name="create"></a>CToolTipCtrl :: Create
 
-Crée un contrôle d’info-bulle et l’attache à `CToolTipCtrl` un objet.
+Crée un contrôle d’info-bulle et l’attache à un objet `CToolTipCtrl`.
 
 ```
 virtual BOOL Create(CWnd* pParentWnd, DWORD dwStyle = 0);
@@ -274,37 +274,37 @@ virtual BOOL Create(CWnd* pParentWnd, DWORD dwStyle = 0);
 ### <a name="parameters"></a>Paramètres
 
 *pParentWnd*<br/>
-Spécifie la fenêtre parente du contrôle d’info- `CDialog`bulle, généralement. Il ne doit pas être NULL.
+Spécifie la fenêtre parente du contrôle d’info-bulle, généralement un `CDialog`. Il ne doit pas être NULL.
 
 *dwStyle*<br/>
 Spécifie le style du contrôle d’info-bulle. Pour plus d’informations, consultez la section **Notes** .
 
 ### <a name="return-value"></a>Valeur de retour
 
-Différent de zéro si `CToolTipCtrl` l’objet est créé avec succès ; sinon, 0.
+Différent de zéro si l’objet `CToolTipCtrl` est créé avec succès ; Sinon, 0.
 
 ### <a name="remarks"></a>Notes
 
-Vous construisez `CToolTipCtrl` un en deux étapes. Tout d’abord, appelez le constructeur pour `CToolTipCtrl` construire l’objet, puis `Create` appelez pour créer le contrôle d’info-bulle et l' `CToolTipCtrl` attacher à l’objet.
+Vous construisez une `CToolTipCtrl` en deux étapes. Tout d’abord, appelez le constructeur pour construire l’objet `CToolTipCtrl`, puis appelez `Create` pour créer le contrôle d’info-bulle et l’attacher à l’objet `CToolTipCtrl`.
 
 Le paramètre *dwStyle* peut être n’importe quelle combinaison de [styles de fenêtre](../../mfc/reference/styles-used-by-mfc.md#window-styles). En outre, un contrôle d’info-bulle a deux styles spécifiques à la classe : TTS_ALWAYSTIP et TTS_NOPREFIX.
 
 |Style|Signification|
 |-----------|-------------|
 |TTS_ALWAYSTIP|Spécifie que l’info-bulle s’affiche lorsque le curseur se trouve sur un outil, que la fenêtre propriétaire du contrôle d’info-bulle soit active ou inactive. Sans ce style, le contrôle d’info-bulle apparaît lorsque la fenêtre propriétaire de l’outil est active, mais pas lorsqu’il est inactif.|
-|TTS_NOPREFIX|Ce style empêche le système de déformer le caractère perluète (&) d’une chaîne. Si un contrôle d’info-bulle n’a pas le style TTS_NOPREFIX, le système supprime automatiquement les caractères de l’esperluette, ce qui permet à une application d’utiliser la même chaîne qu’à la fois comme élément de menu et comme texte dans un contrôle d’info-bulle.|
+|TTS_NOPREFIX|Ce style empêche le système de déformer le caractère perluète (&) d’une chaîne. Si un contrôle d’info-bulle n’a pas le style de TTS_NOPREFIX, le système supprime automatiquement les caractères de l’esperluette, ce qui permet à une application d’utiliser la même chaîne qu’à la fois comme élément de menu et comme texte dans un contrôle d’info-bulle.|
 
 Un contrôle d’info-bulle a les styles de fenêtre WS_POPUP et WS_EX_TOOLWINDOW, que vous les spécifiiez ou non lors de la création du contrôle.
 
-Pour créer un contrôle d’info-bulle avec des styles Windows étendus, appelez [CToolTipCtrl :: CreateEx](#createex) au lieu de `Create`.
+Pour créer un contrôle d’info-bulle avec les styles Windows étendus, appelez [CToolTipCtrl :: CreateEx](#createex) au lieu de `Create`.
 
-### <a name="example"></a>Exemples
+### <a name="example"></a>Exemple
 
   Consultez l’exemple de [CPropertySheet :: GetTabControl](../../mfc/reference/cpropertysheet-class.md#gettabcontrol).
 
-##  <a name="createex"></a>  CToolTipCtrl::CreateEx
+##  <a name="createex"></a>CToolTipCtrl :: CreateEx
 
-Crée un contrôle (une fenêtre enfant) et l’associe à `CToolTipCtrl` l’objet.
+Crée un contrôle (une fenêtre enfant) et l’associe à l’objet `CToolTipCtrl`.
 
 ```
 virtual BOOL CreateEx(
@@ -330,9 +330,9 @@ Valeur différente de zéro en cas de réussite ; sinon, 0.
 
 ### <a name="remarks"></a>Notes
 
-Utilisez `CreateEx` au lieu `Create` de pour appliquer des styles Windows étendus, spécifiés par la préface de style étendu Windows **WS_EX_** .
+Utilisez `CreateEx` au lieu de `Create` pour appliquer des styles Windows étendus, spécifiés par la préversion de style étendu Windows **WS_EX_** .
 
-##  <a name="ctooltipctrl"></a>  CToolTipCtrl::CToolTipCtrl
+##  <a name="ctooltipctrl"></a>CToolTipCtrl :: CToolTipCtrl
 
 Construit un objet `CToolTipCtrl`.
 
@@ -344,11 +344,11 @@ CToolTipCtrl();
 
 Vous devez appeler `Create` après la construction de l’objet.
 
-### <a name="example"></a>Exemples
+### <a name="example"></a>Exemple
 
 [!code-cpp[NVC_MFCControlLadenDialog#74](../../mfc/codesnippet/cpp/ctooltipctrl-class_1.h)]
 
-##  <a name="deltool"></a>  CToolTipCtrl::DelTool
+##  <a name="deltool"></a>CToolTipCtrl ::D elTool
 
 Supprime l’outil spécifié par *pwnd* et *nIDTool* de la collection d’outils pris en charge par un contrôle d’info-bulle.
 
@@ -366,7 +366,7 @@ Pointeur vers la fenêtre qui contient l’outil.
 *nIDTool*<br/>
 ID de l’outil.
 
-##  <a name="getbubblesize"></a>  CToolTipCtrl::GetBubbleSize
+##  <a name="getbubblesize"></a>CToolTipCtrl :: GetBubbleSize
 
 Récupère la taille de l’info-bulle.
 
@@ -385,9 +385,9 @@ Taille de l’info-bulle.
 
 ### <a name="remarks"></a>Notes
 
-Cette fonction membre implémente le comportement du [TTM_GETBUBBLESIZE](/windows/win32/Controls/ttm-getbubblesize)de message Win32, comme décrit dans la SDK Windows.
+Cette fonction membre implémente le comportement de la [TTM_GETBUBBLESIZE](/windows/win32/Controls/ttm-getbubblesize)de message Win32, comme décrit dans le SDK Windows.
 
-##  <a name="getcurrenttool"></a>  CToolTipCtrl::GetCurrentTool
+##  <a name="getcurrenttool"></a>CToolTipCtrl :: GetCurrentTool
 
 Récupère des informations, telles que la taille, la position et le texte, de la fenêtre d’info-bulle affichée par le contrôle ToolTip actuel.
 
@@ -409,13 +409,13 @@ TRUE si les informations sont récupérées avec succès ; Sinon, FALSe.
 
 Cette méthode envoie le message [TTM_GETCURRENTTOOL](/windows/win32/Controls/ttm-getcurrenttool) , qui est décrit dans le SDK Windows.
 
-### <a name="example"></a>Exemples
+### <a name="example"></a>Exemple
 
 L’exemple de code suivant récupère des informations sur la fenêtre d’info-bulle actuelle.
 
 [!code-cpp[NVC_MFC_CToolBarCtrl_s1#6](../../mfc/reference/codesnippet/cpp/ctooltipctrl-class_2.cpp)]
 
-##  <a name="getdelaytime"></a>  CToolTipCtrl::GetDelayTime
+##  <a name="getdelaytime"></a>CToolTipCtrl :: GetDelayTime
 
 Récupère les durées initiales, contextuelles et de réaffichages actuellement définies pour un contrôle d’info-bulle.
 
@@ -428,11 +428,11 @@ int GetDelayTime(DWORD dwDuration) const;
 *dwDuration*<br/>
 Indicateur qui spécifie la valeur de durée qui sera extraite. Ce paramètre peut prendre l’une des valeurs suivantes :
 
-- TTDT_AUTOPOP récupère la durée pendant laquelle la fenêtre d’info-bulle reste visible si le pointeur est immobile dans le rectangle englobant d’un outil.
+- TTDT_AUTOPOP récupérer la durée pendant laquelle la fenêtre d’info-bulle reste visible si le pointeur est immobile dans le rectangle englobant d’un outil.
 
-- TTDT_INITIAL récupère la durée pendant laquelle le pointeur doit rester immobile dans le rectangle englobant d’un outil avant que la fenêtre d’info-bulle ne s’affiche.
+- TTDT_INITIAL récupérer la durée pendant laquelle le pointeur doit rester immobile dans le rectangle englobant d’un outil avant que la fenêtre d’info-bulle ne s’affiche.
 
-- TTDT_RESHOW récupère la durée nécessaire pour que les fenêtres d’info-bulle suivantes s’affichent lorsque le pointeur se déplace d’un outil à un autre.
+- TTDT_RESHOW récupérer le temps nécessaire pour que les fenêtres d’info-bulle suivantes s’affichent lorsque le pointeur se déplace d’un outil à un autre.
 
 ### <a name="return-value"></a>Valeur de retour
 
@@ -440,9 +440,9 @@ Délai spécifié, en millisecondes.
 
 ### <a name="remarks"></a>Notes
 
-Cette fonction membre implémente le comportement du [TTM_GETDELAYTIME](/windows/win32/Controls/ttm-getdelaytime)de message Win32, comme décrit dans la SDK Windows.
+Cette fonction membre implémente le comportement de la [TTM_GETDELAYTIME](/windows/win32/Controls/ttm-getdelaytime)de message Win32, comme décrit dans le SDK Windows.
 
-##  <a name="getmargin"></a>  CToolTipCtrl::GetMargin
+##  <a name="getmargin"></a>CToolTipCtrl :: GetMargin
 
 Récupère les marges supérieure, gauche, inférieure et droite définies pour une fenêtre d’info-bulle.
 
@@ -453,9 +453,9 @@ void GetMargin(LPRECT lprc) const;
 ### <a name="parameters"></a>Paramètres
 
 *lprc*<br/>
-Adresse d’une `RECT` structure qui recevra les informations sur les marges. Les membres de la structure [Rect](/previous-versions/dd162897\(v=vs.85\)) ne définissent pas de rectangle englobant. Dans le cadre de ce message, les membres de la structure sont interprétés comme suit :
+Adresse d’une structure `RECT` qui recevra les informations sur les marges. Les membres de la structure [Rect](/previous-versions/dd162897\(v=vs.85\)) ne définissent pas de rectangle englobant. Dans le cadre de ce message, les membres de la structure sont interprétés comme suit :
 
-|Membre|Représenter|
+|Membre|Représentation|
 |------------|--------------------|
 |`top`|Distance, en pixels, entre la bordure supérieure et la partie supérieure du texte de l’info-bulle.|
 |`left`|Distance entre la bordure gauche et l’extrémité gauche du texte info-bulle, en pixels.|
@@ -464,9 +464,9 @@ Adresse d’une `RECT` structure qui recevra les informations sur les marges. Le
 
 ### <a name="remarks"></a>Notes
 
-Cette fonction membre implémente le comportement du [TTM_GETMARGIN](/windows/win32/Controls/ttm-getmargin)de message Win32, comme décrit dans la SDK Windows.
+Cette fonction membre implémente le comportement de la [TTM_GETMARGIN](/windows/win32/Controls/ttm-getmargin)de message Win32, comme décrit dans le SDK Windows.
 
-##  <a name="getmaxtipwidth"></a>  CToolTipCtrl::GetMaxTipWidth
+##  <a name="getmaxtipwidth"></a>CToolTipCtrl :: GetMaxTipWidth
 
 Récupère la largeur maximale d’une fenêtre d’info-bulle.
 
@@ -480,9 +480,9 @@ Largeur maximale d’une fenêtre d’info-bulle.
 
 ### <a name="remarks"></a>Notes
 
-Cette fonction membre implémente le comportement du [TTM_GETMAXTIPWIDTH](/windows/win32/Controls/ttm-getmaxtipwidth)de message Win32, comme décrit dans la SDK Windows.
+Cette fonction membre implémente le comportement de la [TTM_GETMAXTIPWIDTH](/windows/win32/Controls/ttm-getmaxtipwidth)de message Win32, comme décrit dans le SDK Windows.
 
-##  <a name="gettext"></a>  CToolTipCtrl::GetText
+##  <a name="gettext"></a>CToolTipCtrl :: GetText
 
 Récupère le texte qu’un contrôle d’info-bulle gère pour un outil.
 
@@ -496,7 +496,7 @@ void GetText(
 ### <a name="parameters"></a>Paramètres
 
 *str*<br/>
-Référence à un `CString` objet qui reçoit le texte de l’outil.
+Référence à un objet `CString` qui reçoit le texte de l’outil.
 
 *pWnd*<br/>
 Pointeur vers la fenêtre qui contient l’outil.
@@ -506,9 +506,9 @@ ID de l’outil.
 
 ### <a name="remarks"></a>Notes
 
-Les paramètres *pwnd* et *nIDTool* identifient l’outil. Si cet outil a déjà été inscrit avec le contrôle d’info-bulle par le biais `CToolTipCtrl::AddTool`d’un appel précédent à, le texte de l’outil référencé par le paramètre *Str* est assigné à l’objet.
+Les paramètres *pwnd* et *nIDTool* identifient l’outil. Si cet outil a déjà été inscrit avec le contrôle d’info-bulle par le biais d’un appel précédent à `CToolTipCtrl::AddTool`, le texte de l’outil est assigné à l’objet référencé par le paramètre *Str* .
 
-##  <a name="gettipbkcolor"></a>  CToolTipCtrl::GetTipBkColor
+##  <a name="gettipbkcolor"></a>CToolTipCtrl :: GetTipBkColor
 
 Récupère la couleur d’arrière-plan dans une fenêtre d’info-bulle.
 
@@ -522,9 +522,9 @@ Valeur [COLORREF](/windows/win32/gdi/colorref) qui représente la couleur d’ar
 
 ### <a name="remarks"></a>Notes
 
-Cette fonction membre implémente le comportement du [TTM_GETTIPBKCOLOR](/windows/win32/Controls/ttm-gettipbkcolor)de message Win32, comme décrit dans la SDK Windows.
+Cette fonction membre implémente le comportement de la [TTM_GETTIPBKCOLOR](/windows/win32/Controls/ttm-gettipbkcolor)de message Win32, comme décrit dans le SDK Windows.
 
-##  <a name="gettiptextcolor"></a>  CToolTipCtrl::GetTipTextColor
+##  <a name="gettiptextcolor"></a>CToolTipCtrl :: GetTipTextColor
 
 Récupère la couleur de texte dans une fenêtre d’info-bulle.
 
@@ -538,9 +538,9 @@ Valeur [COLORREF](/windows/win32/gdi/colorref) qui représente la couleur du tex
 
 ### <a name="remarks"></a>Notes
 
-Cette fonction membre implémente le comportement du [TTM_GETTIPTEXTCOLOR](/windows/win32/Controls/ttm-gettiptextcolor)de message Win32, comme décrit dans la SDK Windows.
+Cette fonction membre implémente le comportement de la [TTM_GETTIPTEXTCOLOR](/windows/win32/Controls/ttm-gettiptextcolor)de message Win32, comme décrit dans le SDK Windows.
 
-##  <a name="gettitle"></a>  CToolTipCtrl::GetTitle
+##  <a name="gettitle"></a>CToolTipCtrl :: GetTitle
 
 Récupère le titre du contrôle ToolTip actuel.
 
@@ -558,7 +558,7 @@ void GetTitle(PTTGETTITLE pttgt) const;
 
 Cette méthode envoie le message [TTM_GETTITLE](/windows/win32/Controls/ttm-gettitle) , qui est décrit dans le SDK Windows.
 
-##  <a name="gettoolcount"></a>  CToolTipCtrl::GetToolCount
+##  <a name="gettoolcount"></a>CToolTipCtrl :: GetToolCount
 
 Récupère le nombre d’outils inscrits avec le contrôle d’info-bulle.
 
@@ -570,7 +570,7 @@ int GetToolCount() const;
 
 Nombre d’outils inscrits avec le contrôle d’info-bulle.
 
-##  <a name="gettoolinfo"></a>  CToolTipCtrl::GetToolInfo
+##  <a name="gettoolinfo"></a>CToolTipCtrl :: GetToolInfo
 
 Récupère les informations qu’un contrôle d’info-bulle gère à propos d’un outil.
 
@@ -584,7 +584,7 @@ BOOL GetToolInfo(
 ### <a name="parameters"></a>Paramètres
 
 *ToolInfo*<br/>
-Référence à un `TOOLINFO` objet qui reçoit le texte de l’outil.
+Référence à un objet `TOOLINFO` qui reçoit le texte de l’outil.
 
 *pWnd*<br/>
 Pointeur vers la fenêtre qui contient l’outil.
@@ -598,9 +598,9 @@ Valeur différente de zéro cas de réussite ; sinon, 0.
 
 ### <a name="remarks"></a>Notes
 
-Les `hwnd` membres `uId` et de la structure [TOOLINFO](/windows/win32/api/commctrl/ns-commctrl-tttoolinfoa) référencée par *CToolInfo* identifient l’outil. Si cet outil a été inscrit avec le contrôle d’info-bulle par le biais `AddTool`d’un `TOOLINFO` appel précédent à, la structure est remplie avec des informations sur l’outil.
+Les membres `hwnd` et `uId` de la structure [TOOLINFO](/windows/win32/api/commctrl/ns-commctrl-tttoolinfoa) référencée par *CToolInfo* identifient l’outil. Si cet outil a été inscrit avec le contrôle d’info-bulle par le biais d’un appel précédent à `AddTool`, la structure de `TOOLINFO` est remplie d’informations sur l’outil.
 
-##  <a name="hittest"></a>  CToolTipCtrl::HitTest
+##  <a name="hittest"></a>CToolTipCtrl :: HitTest
 
 Teste un point pour déterminer s’il se trouve dans le rectangle englobant de l’outil donné et, si c’est le cas, récupérer des informations sur l’outil.
 
@@ -617,7 +617,7 @@ BOOL HitTest(
 Pointeur vers la fenêtre qui contient l’outil.
 
 *pt*<br/>
-Pointeur vers un `CPoint` objet contenant les coordonnées du point à tester.
+Pointeur vers un objet `CPoint` contenant les coordonnées du point à tester.
 
 *lpToolInfo*<br/>
 Pointeur vers la structure [TOOLINFO](/windows/win32/api/commctrl/ns-commctrl-tttoolinfoa) qui contient des informations sur l’outil.
@@ -630,7 +630,7 @@ Différent de zéro si le point spécifié par les informations de test de posit
 
 Si cette fonction retourne une valeur différente de zéro, la structure vers laquelle pointe *lpToolInfo* est remplie avec des informations sur l’outil dans le rectangle où le point se trouve.
 
-La `TTHITTESTINFO` structure est définie comme suit :
+La structure `TTHITTESTINFO` est définie comme suit :
 
 ```cpp
 typedef struct _TT_HITTESTINFO { // tthti
@@ -650,9 +650,9 @@ typedef struct _TT_HITTESTINFO { // tthti
 
 - `ti`
 
-   Informations sur l’outil. Pour plus d’informations sur `TOOLINFO` la structure, consultez [CToolTipCtrl :: GetToolInfo](#gettoolinfo).
+   Informations sur l’outil. Pour plus d’informations sur la structure `TOOLINFO`, consultez [CToolTipCtrl :: GetToolInfo](#gettoolinfo).
 
-##  <a name="pop"></a>  CToolTipCtrl::Pop
+##  <a name="pop"></a>CToolTipCtrl ::P op
 
 Supprime une fenêtre d’info-bulle affichée de la vue.
 
@@ -662,9 +662,9 @@ void Pop();
 
 ### <a name="remarks"></a>Notes
 
-Cette fonction membre implémente le comportement du [TTM_POP](/windows/win32/Controls/ttm-pop)de message Win32, comme décrit dans la SDK Windows.
+Cette fonction membre implémente le comportement de la [TTM_POP](/windows/win32/Controls/ttm-pop)de message Win32, comme décrit dans le SDK Windows.
 
-##  <a name="popup"></a>  CToolTipCtrl::Popup
+##  <a name="popup"></a>CToolTipCtrl ::P opup
 
 Provoque l’affichage du contrôle ToolTip actuel aux coordonnées du dernier message de la souris.
 
@@ -676,13 +676,13 @@ void Popup();
 
 Cette méthode envoie le message [TTM_POPUP](/windows/win32/Controls/ttm-popup) , qui est décrit dans le SDK Windows.
 
-### <a name="example"></a>Exemples
+### <a name="example"></a>Exemple
 
 L’exemple de code suivant affiche une fenêtre d’info-bulle.
 
 [!code-cpp[NVC_MFC_CToolBarCtrl_s1#7](../../mfc/reference/codesnippet/cpp/ctooltipctrl-class_3.cpp)]
 
-##  <a name="relayevent"></a>  CToolTipCtrl::RelayEvent
+##  <a name="relayevent"></a>CToolTipCtrl :: RelayEvent
 
 Transmet un message de souris à un contrôle d’info-bulle pour traitement.
 
@@ -697,7 +697,7 @@ Pointeur vers une structure [MSG](/windows/win32/api/winuser/ns-winuser-msg) qui
 
 ### <a name="remarks"></a>Notes
 
-Un contrôle d’info-bulle traite uniquement les messages suivants, qui lui sont envoyés `RelayEvent`par :
+Un contrôle d’info-bulle traite uniquement les messages suivants, qui lui sont envoyés par `RelayEvent`:
 
 |WM_LBUTTONDOWN|WM_MOUSEMOVE|
 |---------------------|-------------------|
@@ -709,7 +709,7 @@ Un contrôle d’info-bulle traite uniquement les messages suivants, qui lui son
 
   Consultez l’exemple de [CPropertySheet :: GetTabControl](../../mfc/reference/cpropertysheet-class.md#gettabcontrol).
 
-##  <a name="setdelaytime"></a>  CToolTipCtrl::SetDelayTime
+##  <a name="setdelaytime"></a>CToolTipCtrl :: SetDelayTime
 
 Définit le délai d’attente pour un contrôle d’info-bulle.
 
@@ -736,7 +736,7 @@ Délai d’attente spécifié, en millisecondes.
 
 Le délai est la durée pendant laquelle le curseur doit rester sur un outil avant que la fenêtre d’info-bulle ne s’affiche. Le délai par défaut est de 500 millisecondes.
 
-##  <a name="setmargin"></a>  CToolTipCtrl::SetMargin
+##  <a name="setmargin"></a>CToolTipCtrl :: SetMargin
 
 Définit les marges supérieure, gauche, inférieure et droite d’une fenêtre d’info-bulle.
 
@@ -747,13 +747,13 @@ void SetMargin(LPRECT lprc);
 ### <a name="parameters"></a>Paramètres
 
 *lprc*<br/>
-Adresse d’une `RECT` structure qui contient les informations sur les marges à définir. Les membres de la `RECT` structure ne définissent pas de rectangle englobant. Pour obtenir une description des informations sur les marges, consultez [CToolTipCtrl :: getMargin](#getmargin) .
+Adresse d’une structure `RECT` qui contient les informations sur les marges à définir. Les membres de la structure `RECT` ne définissent pas de rectangle englobant. Pour obtenir une description des informations sur les marges, consultez [CToolTipCtrl :: getMargin](#getmargin) .
 
 ### <a name="remarks"></a>Notes
 
-Cette fonction membre implémente le comportement du [TTM_SETMARGIN](/windows/win32/Controls/ttm-setmargin)de message Win32, comme décrit dans la SDK Windows.
+Cette fonction membre implémente le comportement de la [TTM_SETMARGIN](/windows/win32/Controls/ttm-setmargin)de message Win32, comme décrit dans le SDK Windows.
 
-##  <a name="setmaxtipwidth"></a>  CToolTipCtrl::SetMaxTipWidth
+##  <a name="setmaxtipwidth"></a>CToolTipCtrl :: SetMaxTipWidth
 
 Définit la largeur maximale d’une fenêtre d’info-bulle.
 
@@ -772,9 +772,9 @@ Largeur maximale du Conseil.
 
 ### <a name="remarks"></a>Notes
 
-Cette fonction membre implémente le comportement du [TTM_SETMAXTIPWIDTH](/windows/win32/Controls/ttm-setmaxtipwidth)de message Win32, comme décrit dans la SDK Windows.
+Cette fonction membre implémente le comportement de la [TTM_SETMAXTIPWIDTH](/windows/win32/Controls/ttm-setmaxtipwidth)de message Win32, comme décrit dans le SDK Windows.
 
-##  <a name="settipbkcolor"></a>  CToolTipCtrl::SetTipBkColor
+##  <a name="settipbkcolor"></a>CToolTipCtrl :: SetTipBkColor
 
 Définit la couleur d’arrière-plan dans une fenêtre d’info-bulle.
 
@@ -784,14 +784,14 @@ void SetTipBkColor(COLORREF clr);
 
 ### <a name="parameters"></a>Paramètres
 
-*clr*<br/>
-Nouvelle couleur d’arrière-plan.
+*Language*<br/>
+Nouvelle couleur d'arrière-plan.
 
 ### <a name="remarks"></a>Notes
 
-Cette fonction membre implémente le comportement du [TTM_SETTIPBKCOLOR](/windows/win32/Controls/ttm-settipbkcolor)de message Win32, comme décrit dans la SDK Windows.
+Cette fonction membre implémente le comportement de la [TTM_SETTIPBKCOLOR](/windows/win32/Controls/ttm-settipbkcolor)de message Win32, comme décrit dans le SDK Windows.
 
-##  <a name="settiptextcolor"></a>  CToolTipCtrl::SetTipTextColor
+##  <a name="settiptextcolor"></a>CToolTipCtrl :: SetTipTextColor
 
 Définit la couleur du texte dans une fenêtre d’info-bulle.
 
@@ -801,14 +801,14 @@ void SetTipTextColor(COLORREF clr);
 
 ### <a name="parameters"></a>Paramètres
 
-*clr*<br/>
+*Language*<br/>
 Nouvelle couleur du texte.
 
 ### <a name="remarks"></a>Notes
 
-Cette fonction membre implémente le comportement du [TTM_SETTIPTEXTCOLOR](/windows/win32/Controls/ttm-settiptextcolor)de message Win32, comme décrit dans la SDK Windows.
+Cette fonction membre implémente le comportement de la [TTM_SETTIPTEXTCOLOR](/windows/win32/Controls/ttm-settiptextcolor)de message Win32, comme décrit dans le SDK Windows.
 
-##  <a name="settitle"></a>  CToolTipCtrl::SetTitle
+##  <a name="settitle"></a>CToolTipCtrl :: SetTitle
 
 Ajoute une icône standard et une chaîne de titre à une info-bulle.
 
@@ -832,9 +832,9 @@ Valeur différente de zéro cas de réussite ; sinon, 0.
 
 ### <a name="remarks"></a>Notes
 
-Cette fonction membre implémente le comportement du [TTM_SETTITLE](/windows/win32/Controls/ttm-settitle)de message Win32, comme décrit dans la SDK Windows.
+Cette fonction membre implémente le comportement de la [TTM_SETTITLE](/windows/win32/Controls/ttm-settitle)de message Win32, comme décrit dans le SDK Windows.
 
-##  <a name="settoolinfo"></a>  CToolTipCtrl::SetToolInfo
+##  <a name="settoolinfo"></a>CToolTipCtrl :: SetToolInfo
 
 Définit les informations gérées par une info-bulle pour un outil.
 
@@ -847,7 +847,7 @@ void SetToolInfo(LPTOOLINFO lpToolInfo);
 *lpToolInfo*<br/>
 Pointeur vers une structure [TOOLINFO](/windows/win32/api/commctrl/ns-commctrl-tttoolinfoa) qui spécifie les informations à définir.
 
-##  <a name="settoolrect"></a>  CToolTipCtrl::SetToolRect
+##  <a name="settoolrect"></a>CToolTipCtrl :: SetToolRect
 
 Définit un nouveau rectangle englobant pour un outil.
 
@@ -869,7 +869,7 @@ ID de l’outil.
 *lpRect*<br/>
 Pointeur vers une structure [Rect](/previous-versions/dd162897\(v=vs.85\)) spécifiant le nouveau rectangle englobant.
 
-##  <a name="setwindowtheme"></a>  CToolTipCtrl::SetWindowTheme
+##  <a name="setwindowtheme"></a>CToolTipCtrl :: SetWindowTheme
 
 Définit le style visuel de la fenêtre d’info-bulle.
 
@@ -888,9 +888,9 @@ La valeur de retour n’est pas utilisée.
 
 ### <a name="remarks"></a>Notes
 
-Cette fonction membre émule les fonctionnalités du message [TTM_SETWINDOWTHEME](/windows/win32/Controls/ttm-setwindowtheme) , comme décrit dans la SDK Windows.
+Cette fonction membre émule les fonctionnalités du message [TTM_SETWINDOWTHEME](/windows/win32/Controls/ttm-setwindowtheme) , comme décrit dans le SDK Windows.
 
-##  <a name="update"></a>  CToolTipCtrl::Update
+##  <a name="update"></a>CToolTipCtrl :: Update
 
 Force le redessinage de l’outil actuel.
 
@@ -898,7 +898,7 @@ Force le redessinage de l’outil actuel.
 void Update();
 ```
 
-##  <a name="updatetiptext"></a>  CToolTipCtrl::UpdateTipText
+##  <a name="updatetiptext"></a>CToolTipCtrl :: UpdateTipText
 
 Met à jour le texte d’info-bulle pour les outils de ce contrôle.
 

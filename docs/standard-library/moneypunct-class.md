@@ -47,11 +47,11 @@ helpviewer_keywords:
 - std::moneypunct [C++], thousands_sep
 ms.assetid: cf2650da-3e6f-491c-95d5-23e57f582ee6
 ms.openlocfilehash: 7960ee8b5e9ce6b27494e896e38bbf6b5256fe7e
-ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
+ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/21/2019
-ms.locfileid: "72689296"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78884004"
 ---
 # <a name="moneypunct-class"></a>moneypunct, classe
 
@@ -66,10 +66,10 @@ class moneypunct;
 
 ### <a name="parameters"></a>Paramètres
 
-*CharType* \
+*CharType*\
 Type utilisé dans le cadre d'un programme pour encoder des caractères.
 
-@No__t_1 *Intl*
+\ *Intl*
 Indicateur spécifiant si les conventions internationales doivent être respectées.
 
 ## <a name="remarks"></a>Notes
@@ -84,14 +84,14 @@ L’objet statique const intl stocke la valeur du paramètre de modèle *Intl*.
 |-|-|
 |[moneypunct](#moneypunct)|Constructeur d'objets de type `moneypunct`.|
 
-### <a name="typedefs"></a>Typedef
+### <a name="typedefs"></a>Typedefs
 
 |Nom de type|Description|
 |-|-|
 |[char_type](#char_type)|Type utilisé pour décrire un caractère utilisé par des paramètres régionaux.|
 |[string_type](#string_type)|Type qui décrit une chaîne contenant des caractères de type `CharType`.|
 
-### <a name="member-functions"></a>Fonctions membres
+### <a name="member-functions"></a>Fonctions Membre
 
 |Fonction membre|Description|
 |-|-|
@@ -114,9 +114,9 @@ L’objet statique const intl stocke la valeur du paramètre de modèle *Intl*.
 |[positive_sign](#positive_sign)|Retourne une séquence spécifique aux paramètres régionaux d'éléments à utiliser comme symbole du signe positif.|
 |[thousands_sep](#thousands_sep)|Retourne une séquence spécifique aux paramètres régionaux d'éléments à utiliser comme symbole de séparateur des milliers.|
 
-## <a name="requirements"></a>spécifications
+## <a name="requirements"></a>Spécifications
 
-**En-tête :** \<locale>
+**En-tête :** \<paramètres régionaux >
 
 **Espace de noms :** std
 
@@ -301,9 +301,9 @@ La fonction membre virtuelle protégée retourne une règle propre aux paramètr
 
 - `value` pour la correspondance ou la génération d’une valeur monétaire.
 
-Les composants d’un champ de sortie monétaire sont générés et les composants d’un champ d’entrée monétaire sont mis en correspondance dans l’ordre dans lequel ces éléments apparaissent dans `pattern::field`. Chacune des valeurs `sign`, `symbol`, `value` et `none` ou `space` doit apparaître exactement une fois. La valeur `none` ne doit pas apparaître en premier. La valeur space **ne doit pas** apparaître en premier ou en dernier. Si `Intl` a la valeur true, l’ordre est `symbol`, `sign`, `none`, puis `value`.
+Les composants d’un champ de sortie monétaire sont générés et les composants d’un champ d’entrée monétaire sont mis en correspondance dans l’ordre dans lequel ces éléments apparaissent dans `pattern::field`. Chacune des valeurs `sign`, `symbol`, `value`et `none` ou `space` doit apparaître exactement une fois. La valeur `none` ne doit pas apparaître en premier. La valeur space **ne doit pas** apparaître en premier ou en dernier. Si `Intl` a la valeur true, l’ordre est `symbol`, `sign`, `none`, puis `value`.
 
-La version de modèle de `moneypunct`\< **CharType**, **Intl**> retourne `{`**money_base::symbol**, **money_base::sign**, **money_base::value**, **money_base::none**`}`.
+La version de modèle de `moneypunct`\< **CharType**, **Intl**> retourne **`{`money_base :: Symbol**, **money_base :: sign**, **money_base :: value**, **money_base :: None**`}`.
 
 ### <a name="example"></a>Exemple
 
@@ -337,7 +337,7 @@ virtual pattern do_pos_format() const;
 
 La fonction membre virtuelle protégée retourne une règle propre aux paramètres régionaux pour déterminer comment générer un champ de sortie monétaire pour un montant positif. (Il détermine également comment faire correspondre les composants d’un champ d’entrée monétaire.) L’encodage est le même que pour [do_neg_format](#do_neg_format).
 
-La version de modèle de moneypunct\< **CharType**, **Inputlterator**> retourne `{`**money_base::symbol**, **money_base::sign**, **money_base::value**, **money_base::none**`}`.
+La version de modèle de moneypunct\< **CharType**, **Inputlterator**> retourne **`{`money_base :: Symbol**, **money_base :: sign**, **money_base :: value**, **money_base :: None**`}`.
 
 ### <a name="example"></a>Exemple
 
@@ -523,8 +523,8 @@ explicit moneypunct(size_t _Refs = 0);
 
 ### <a name="parameters"></a>Paramètres
 
-*_Refs* \
-Valeur entière utilisée pour spécifier le type de gestion de mémoire pour l’objet.
+*_Refs*\
+Valeur entière qui sert à spécifier le type de gestion de la mémoire pour l’objet.
 
 ### <a name="remarks"></a>Notes
 

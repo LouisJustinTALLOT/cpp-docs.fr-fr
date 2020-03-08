@@ -1,5 +1,5 @@
 ---
-title: Ccontextmenumanager, classe
+title: CContextMenuManager, classe
 ms.date: 11/04/2016
 f1_keywords:
 - CContextMenuManager
@@ -29,15 +29,15 @@ helpviewer_keywords:
 - CContextMenuManager [MFC], TrackPopupMenu
 ms.assetid: 1de20640-243c-47e1-85de-1baa4153bc83
 ms.openlocfilehash: c8a51a33c69b09d0ecd61520b5f1c9ff18c290a0
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62182223"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78868988"
 ---
-# <a name="ccontextmenumanager-class"></a>Ccontextmenumanager, classe
+# <a name="ccontextmenumanager-class"></a>CContextMenuManager, classe
 
-Le `CContextMenuManager` objet gère les menus contextuels, également connu sous les menus contextuels.
+L’objet `CContextMenuManager` gère les menus contextuels, également appelés menus contextuels.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -49,39 +49,39 @@ class CContextMenuManager : public CObject
 
 ### <a name="public-constructors"></a>Constructeurs publics
 
-|Nom|Description|
+|Name|Description|
 |----------|-----------------|
 |[CContextMenuManager::CContextMenuManager](#ccontextmenumanager)|Construit un objet `CContextMenuManager`.|
 |`CContextMenuManager::~CContextMenuManager`|Destructeur.|
 
 ### <a name="public-methods"></a>M&#233;thodes publiques
 
-|Nom|Description|
+|Name|Description|
 |----------|-----------------|
-|[CContextMenuManager::AddMenu](#addmenu)|Ajoute un menu contextuel.|
-|[CContextMenuManager::GetMenuById](#getmenubyid)|Retourne un handle vers le menu associé à l’ID de ressource fourni.|
-|[CContextMenuManager::GetMenuByName](#getmenubyname)|Retourne un handle vers le menu qui correspond au nom de menu fourni.|
+|[CContextMenuManager :: AjouterMenu](#addmenu)|Ajoute un nouveau menu contextuel.|
+|[CContextMenuManager::GetMenuById](#getmenubyid)|Retourne un handle au menu associé à l’ID de ressource fourni.|
+|[CContextMenuManager::GetMenuByName](#getmenubyname)|Retourne un handle au menu qui correspond au nom de menu fourni.|
 |[CContextMenuManager::GetMenuNames](#getmenunames)|Retourne une liste de noms de menu.|
-|[CContextMenuManager::LoadState](#loadstate)|Charge les menus contextuels stockées dans le Registre Windows.|
-|[CContextMenuManager::ResetState](#resetstate)|Efface les menus contextuels à partir du Gestionnaire de menu contextuel.|
-|[CContextMenuManager::SaveState](#savestate)|Enregistre des menus contextuels dans le Registre Windows.|
-|[CContextMenuManager::SetDontCloseActiveMenu](#setdontcloseactivemenu)|Contrôles si le `CContextMenuManager` ferme le menu contextuel actif quand il s’affiche un menu contextuel.|
+|[CContextMenuManager :: LoadState](#loadstate)|Charge les menus contextuels stockés dans le Registre Windows.|
+|[CContextMenuManager :: ResetState](#resetstate)|Efface les menus contextuels du gestionnaire de menus contextuels.|
+|[CContextMenuManager :: saveste](#savestate)|Enregistre les menus contextuels dans le Registre Windows.|
+|[CContextMenuManager::SetDontCloseActiveMenu](#setdontcloseactivemenu)|Contrôle si le `CContextMenuManager` ferme le menu contextuel actif lorsqu’il affiche un nouveau menu contextuel.|
 |[CContextMenuManager::ShowPopupMenu](#showpopupmenu)|Affiche le menu contextuel spécifié.|
-|[CContextMenuManager::TrackPopupMenu](#trackpopupmenu)|Affiche le menu contextuel spécifié. Retourne l’index de la commande de menu sélectionné.|
+|[CContextMenuManager :: TrackPopupMenu](#trackpopupmenu)|Affiche le menu contextuel spécifié. Retourne l’index de la commande de menu sélectionnée.|
 
 ## <a name="remarks"></a>Notes
 
-`CContextMenuManager` gère les menus contextuels et permet de s’assurer qu’ils ont une apparence cohérente.
+`CContextMenuManager` gère les menus contextuels et s’assure qu’ils ont une apparence cohérente.
 
-Vous ne devez pas créer un `CContextMenuManager` objet manuellement. L’infrastructure de votre application crée le `CContextMenuManager` objet. Toutefois, vous devez appeler [CWinAppEx::InitContextMenuManager](../../mfc/reference/cwinappex-class.md#initcontextmenumanager) lorsque votre application est initialisée. Après avoir initialisé le Gestionnaire de contexte, utilisez la méthode [CWinAppEx::GetContextMenuManager](../../mfc/reference/cwinappex-class.md#getcontextmenumanager) pour obtenir un pointeur vers le Gestionnaire de contexte pour votre application.
+Vous ne devez pas créer un objet `CContextMenuManager` manuellement. L’infrastructure de votre application crée l’objet `CContextMenuManager`. Toutefois, vous devez appeler [CWinAppEx :: InitContextMenuManager](../../mfc/reference/cwinappex-class.md#initcontextmenumanager) lorsque votre application est initialisée. Après l’initialisation du gestionnaire de contexte, utilisez la méthode [CWinAppEx :: GetContextMenuManager](../../mfc/reference/cwinappex-class.md#getcontextmenumanager) pour obtenir un pointeur vers le gestionnaire de contexte de votre application.
 
-Vous pouvez créer des menus contextuels lors de l’exécution en appelant `AddMenu`. Si vous souhaitez afficher le menu sans la première réception entrée d’utilisateur, appelez `ShowPopupMenu`. `TrackPopupMenu` est utilisé lorsque vous souhaitez créer un menu et attendez que l’entrée d’utilisateur. `TrackPopupMenu` Retourne l’index de la commande sélectionnée ou 0 si l’utilisateur a été quittée sans rien sélectionner.
+Vous pouvez créer des menus contextuels au moment de l’exécution en appelant `AddMenu`. Si vous souhaitez afficher le menu sans recevoir d’abord l’entrée de l’utilisateur, appelez `ShowPopupMenu`. `TrackPopupMenu` est utilisé lorsque vous souhaitez créer un menu et attendre une entrée utilisateur. `TrackPopupMenu` retourne l’index de la commande sélectionnée ou 0 si l’utilisateur s’est fermé sans sélectionner quoi que ce soit.
 
-Le `CContextMenuManager` peut également enregistrer et charger son état dans le Registre Windows.
+La `CContextMenuManager` peut également enregistrer et charger son état dans le Registre Windows.
 
 ## <a name="example"></a>Exemple
 
-L’exemple suivant montre comment ajouter un menu à un `CContextMenuManager` objet et comment ne pas fermer le menu contextuel actif lorsque le `CContextMenuManager` objet affiche un menu contextuel. Cet extrait de code fait partie de la [exemple des Pages personnalisées](../../overview/visual-cpp-samples.md).
+L’exemple suivant montre comment ajouter un menu à un objet `CContextMenuManager` et comment ne pas fermer le menu contextuel actif lorsque l’objet `CContextMenuManager` affiche un nouveau menu contextuel. Cet extrait de code fait partie de l' [exemple de pages personnalisées](../../overview/visual-cpp-samples.md).
 
 [!code-cpp[NVC_MFC_CustomPages#4](../../mfc/reference/codesnippet/cpp/ccontextmenumanager-class_1.cpp)]
 
@@ -91,13 +91,13 @@ L’exemple suivant montre comment ajouter un menu à un `CContextMenuManager` o
 
 `CContextMenuManager`
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
-**En-tête :** afxcontextmenumanager.h
+**En-tête :** afxcontextmenumanager. h
 
-##  <a name="addmenu"></a>  CContextMenuManager::AddMenu
+##  <a name="addmenu"></a>CContextMenuManager :: AjouterMenu
 
-Ajoute un menu contextuel pour le [CContextMenuManager](../../mfc/reference/ccontextmenumanager-class.md).
+Ajoute un nouveau menu contextuel au [CContextMenuManager](../../mfc/reference/ccontextmenumanager-class.md).
 
 ```
 BOOL AddMenu(
@@ -112,13 +112,13 @@ BOOL AddMenu(
 ### <a name="parameters"></a>Paramètres
 
 *uiMenuNameResId*<br/>
-[in] Un ID de ressource pour une chaîne qui contient le nom du nouveau menu.
+dans ID de ressource pour une chaîne qui contient le nom du nouveau menu.
 
 *uiMenuResId*<br/>
-[in] L’ID de ressource de menu.
+dans ID de ressource de menu.
 
 *lpszName*<br/>
-[in] Chaîne qui contient le nom du nouveau menu.
+dans Chaîne qui contient le nom du nouveau menu.
 
 ### <a name="return-value"></a>Valeur de retour
 
@@ -126,11 +126,11 @@ Différent de zéro si la méthode a réussi ; 0 si la méthode échoue.
 
 ### <a name="remarks"></a>Notes
 
-Cette méthode échoue si *uiMenuResId* n’est pas valide ou si un autre menu portant le même nom existe déjà dans le `CContextMenuManager`.
+Cette méthode échoue si *uiMenuResId* n’est pas valide ou si un autre menu portant le même nom figure déjà dans la `CContextMenuManager`.
 
-##  <a name="ccontextmenumanager"></a>  CContextMenuManager::CContextMenuManager
+##  <a name="ccontextmenumanager"></a>CContextMenuManager::CContextMenuManager
 
-Construit un [CContextMenuManager](../../mfc/reference/ccontextmenumanager-class.md) objet.
+Construit un objet [CContextMenuManager](../../mfc/reference/ccontextmenumanager-class.md) .
 
 ```
 CContextMenuManager();
@@ -138,11 +138,11 @@ CContextMenuManager();
 
 ### <a name="remarks"></a>Notes
 
-Dans la plupart des cas, vous ne devez pas créer un `CContextMenuManager` manuellement. L’infrastructure de votre application crée le `CContextMenuManager` objet. Vous devez appeler [CWinAppEx::InitContextMenuManager](../../mfc/reference/cwinappex-class.md#initcontextmenumanager) pendant l’initialisation de votre application. Pour obtenir un pointeur vers le Gestionnaire de contexte, appeler [CWinAppEx::GetContextMenuManager](../../mfc/reference/cwinappex-class.md#getcontextmenumanager).
+Dans la plupart des cas, vous ne devez pas créer une `CContextMenuManager` manuellement. L’infrastructure de votre application crée l’objet `CContextMenuManager`. Vous devez appeler [CWinAppEx :: InitContextMenuManager](../../mfc/reference/cwinappex-class.md#initcontextmenumanager) pendant l’initialisation de votre application. Pour obtenir un pointeur vers le gestionnaire de contexte, appelez [CWinAppEx :: GetContextMenuManager](../../mfc/reference/cwinappex-class.md#getcontextmenumanager).
 
-##  <a name="getmenubyid"></a>  CContextMenuManager::GetMenuById
+##  <a name="getmenubyid"></a>CContextMenuManager::GetMenuById
 
-Retourne un handle vers le menu associé à un ID de ressource donné.
+Retourne un handle au menu associé à un ID de ressource donné.
 
 ```
 HMENU GetMenuById(UINT nMenuResId) const;
@@ -151,15 +151,15 @@ HMENU GetMenuById(UINT nMenuResId) const;
 ### <a name="parameters"></a>Paramètres
 
 *nMenuResId*<br/>
-[in] L’ID de ressource pour le menu.
+dans ID de ressource pour le menu.
 
 ### <a name="return-value"></a>Valeur de retour
 
-Un handle vers le menu associé ou `NULL` si le menu est introuvable.
+Handle vers le menu ou le `NULL` associé si le menu est introuvable.
 
-##  <a name="getmenubyname"></a>  CContextMenuManager::GetMenuByName
+##  <a name="getmenubyname"></a>CContextMenuManager::GetMenuByName
 
-Retourne un handle à un menu spécifique.
+Retourne un handle vers un menu spécifique.
 
 ```
 HMENU GetMenuByName(
@@ -170,22 +170,22 @@ HMENU GetMenuByName(
 ### <a name="parameters"></a>Paramètres
 
 *lpszName*<br/>
-[in] Chaîne qui contient le nom du menu à récupérer.
+dans Chaîne qui contient le nom du menu à récupérer.
 
 *puiOrigResID*<br/>
-[out] Pointeur vers un UINT. Ce paramètre contient l’ID de ressource du menu spécifié, si trouvé.
+à Pointeur vers un UINT. Ce paramètre contient l’ID de ressource du menu spécifié, s’il est trouvé.
 
 ### <a name="return-value"></a>Valeur de retour
 
-Un handle vers le menu qui correspond au nom qui a été spécifié par *le caractère*. NULL s’il n’existe aucun menu appelé *le caractère*.
+Handle vers le menu qui correspond au nom spécifié par *lpszName*. NULL s’il n’y a aucun menu appelé *lpszName*.
 
 ### <a name="remarks"></a>Notes
 
-Si cette méthode trouve un menu qui correspond à *le caractère*, `GetMenuByName` stocke l’ID de ressource de menu dans le paramètre *puiOrigResID*.
+Si cette méthode trouve un menu qui correspond à *lpszName*, `GetMenuByName` stocke l’ID de ressource de menu dans le paramètre *puiOrigResID*.
 
-##  <a name="getmenunames"></a>  CContextMenuManager::GetMenuNames
+##  <a name="getmenunames"></a>CContextMenuManager::GetMenuNames
 
-Retourne la liste des noms de menu ajouté à la [CContextMenuManager](../../mfc/reference/ccontextmenumanager-class.md).
+Retourne la liste des noms de menu ajoutés au [CContextMenuManager](../../mfc/reference/ccontextmenumanager-class.md).
 
 ```
 void GetMenuNames(CStringList& listOfNames) const;
@@ -194,11 +194,11 @@ void GetMenuNames(CStringList& listOfNames) const;
 ### <a name="parameters"></a>Paramètres
 
 *listOfNames*<br/>
-[out] Une référence à un [CStringList](../../mfc/reference/cstringlist-class.md) paramètre. Cette méthode écrit la liste des noms de menu à ce paramètre.
+à Référence à un paramètre [CStringList](../../mfc/reference/cstringlist-class.md) . Cette méthode écrit la liste des noms de menu dans ce paramètre.
 
-##  <a name="loadstate"></a>  CContextMenuManager::LoadState
+##  <a name="loadstate"></a>CContextMenuManager :: LoadState
 
-Charge les informations associées à la [ccontextmenumanager, classe](../../mfc/reference/ccontextmenumanager-class.md) à partir du Registre Windows.
+Charge les informations associées à la [classe CContextMenuManager](../../mfc/reference/ccontextmenumanager-class.md) à partir du Registre Windows.
 
 ```
 virtual BOOL LoadState(LPCTSTR lpszProfileName = NULL);
@@ -207,21 +207,21 @@ virtual BOOL LoadState(LPCTSTR lpszProfileName = NULL);
 ### <a name="parameters"></a>Paramètres
 
 *lpszProfileName*<br/>
-[in] Chaîne qui contient le chemin d’accès relatif d’une clé de Registre.
+dans Chaîne qui contient le chemin d’accès relatif d’une clé de registre.
 
 ### <a name="return-value"></a>Valeur de retour
 
-Différent de zéro si la méthode réussit ; sinon 0.
+Différent de zéro si la méthode réussit ; Sinon, 0.
 
 ### <a name="remarks"></a>Notes
 
-Le *lpszProfileName* paramètre n’est pas le chemin d’accès absolu pour une entrée de Registre. Il est un chemin d’accès relatif qui est ajouté à la fin de la clé de Registre par défaut pour votre application. Pour obtenir ou définir la clé de Registre par défaut, utilisez les méthodes [CWinAppEx::GetRegistryBase](../../mfc/reference/cwinappex-class.md#getregistrybase) et [CWinAppEx::SetRegistryBase](../../mfc/reference/cwinappex-class.md#setregistrybase) respectivement.
+Le paramètre *lpszProfileName* n’est pas le chemin d’accès absolu d’une entrée de registre. Il s’agit d’un chemin d’accès relatif qui est ajouté à la fin de la clé de Registre par défaut pour votre application. Pour récupérer ou définir la clé de Registre par défaut, utilisez respectivement les méthodes [CWinAppEx :: GetRegistryBase](../../mfc/reference/cwinappex-class.md#getregistrybase) et [CWinAppEx :: SetRegistryBase](../../mfc/reference/cwinappex-class.md#setregistrybase) .
 
-Utilisez la méthode [CContextMenuManager::SaveState](#savestate) pour enregistrer les menus contextuels dans le Registre.
+Utilisez la méthode [CContextMenuManager :: saveste](#savestate) pour enregistrer les menus contextuels dans le registre.
 
-##  <a name="resetstate"></a>  CContextMenuManager::ResetState
+##  <a name="resetstate"></a>CContextMenuManager :: ResetState
 
-Efface tous les éléments dans les menus contextuels associés à la [ccontextmenumanager, classe](../../mfc/reference/ccontextmenumanager-class.md).
+Efface tous les éléments des menus contextuels associés à la [classe CContextMenuManager](../../mfc/reference/ccontextmenumanager-class.md).
 
 ```
 virtual BOOL ResetState();
@@ -229,15 +229,15 @@ virtual BOOL ResetState();
 
 ### <a name="return-value"></a>Valeur de retour
 
-TRUE si la méthode a réussi ; FALSE si une défaillance se produit.
+TRUE si la méthode réussit ; FALSe si une défaillance se produit.
 
 ### <a name="remarks"></a>Notes
 
-Cette méthode efface les menus contextuels et les supprime à partir de la `CContextMenuManager`.
+Cette méthode efface les menus contextuels et les supprime de la `CContextMenuManager`.
 
-##  <a name="savestate"></a>  CContextMenuManager::SaveState
+##  <a name="savestate"></a>CContextMenuManager :: saveste
 
-Enregistre les informations associées à la [ccontextmenumanager, classe](../../mfc/reference/ccontextmenumanager-class.md) dans le Registre Windows.
+Enregistre les informations associées à la [classe CContextMenuManager](../../mfc/reference/ccontextmenumanager-class.md) dans le Registre Windows.
 
 ```
 virtual BOOL SaveState(LPCTSTR lpszProfileName = NULL);
@@ -246,21 +246,21 @@ virtual BOOL SaveState(LPCTSTR lpszProfileName = NULL);
 ### <a name="parameters"></a>Paramètres
 
 *lpszProfileName*<br/>
-[in] Chaîne qui contient le chemin d’accès relatif d’une clé de Registre.
+dans Chaîne qui contient le chemin d’accès relatif d’une clé de registre.
 
 ### <a name="return-value"></a>Valeur de retour
 
-Différent de zéro si la méthode réussit ; sinon 0.
+Différent de zéro si la méthode réussit ; Sinon, 0.
 
 ### <a name="remarks"></a>Notes
 
-Le *lpszProfileName* paramètre n’est pas le chemin d’accès absolu pour une entrée de Registre. Il est un chemin d’accès relatif qui est ajouté à la fin de la clé de Registre par défaut pour votre application. Pour obtenir ou définir la clé de Registre par défaut, utilisez les méthodes [CWinAppEx::GetRegistryBase](../../mfc/reference/cwinappex-class.md#getregistrybase) et [CWinAppEx::SetRegistryBase](../../mfc/reference/cwinappex-class.md#setregistrybase) respectivement.
+Le paramètre *lpszProfileName* n’est pas le chemin d’accès absolu d’une entrée de registre. Il s’agit d’un chemin d’accès relatif qui est ajouté à la fin de la clé de Registre par défaut pour votre application. Pour récupérer ou définir la clé de Registre par défaut, utilisez respectivement les méthodes [CWinAppEx :: GetRegistryBase](../../mfc/reference/cwinappex-class.md#getregistrybase) et [CWinAppEx :: SetRegistryBase](../../mfc/reference/cwinappex-class.md#setregistrybase) .
 
-Utilisez la méthode [CContextMenuManager::LoadState](#loadstate) pour charger les menus contextuels à partir du Registre.
+Utilisez la méthode [CContextMenuManager :: LoadState](#loadstate) pour charger les menus contextuels à partir du Registre.
 
-##  <a name="setdontcloseactivemenu"></a>  CContextMenuManager::SetDontCloseActiveMenu
+##  <a name="setdontcloseactivemenu"></a>CContextMenuManager::SetDontCloseActiveMenu
 
-Contrôles si le [CContextMenuManager](../../mfc/reference/ccontextmenumanager-class.md) ferme le menu contextuel actif lorsqu’il affiche un menu contextuel.
+Contrôle si le [CContextMenuManager](../../mfc/reference/ccontextmenumanager-class.md) ferme le menu contextuel actif lorsqu’il affiche un nouveau menu contextuel.
 
 ```
 void SetDontCloseActiveMenu (BOOL bSet = TRUE);
@@ -269,13 +269,13 @@ void SetDontCloseActiveMenu (BOOL bSet = TRUE);
 ### <a name="parameters"></a>Paramètres
 
 *bSet*<br/>
-[in] Un paramètre booléen qui indique s’il faut fermer le menu contextuel actif. La valeur TRUE indique que le menu contextuel actif n’est pas fermé. La valeur FALSE indique que le menu contextuel actif est fermé.
+dans Paramètre booléen qui contrôle s’il faut fermer le menu contextuel actif. La valeur TRUE indique que le menu contextuel actif n’est pas fermé. La valeur FALSe indique que le menu contextuel actif est fermé.
 
 ### <a name="remarks"></a>Notes
 
 Par défaut, le `CContextMenuManager` ferme le menu contextuel actif.
 
-##  <a name="showpopupmenu"></a>  CContextMenuManager::ShowPopupMenu
+##  <a name="showpopupmenu"></a>CContextMenuManager::ShowPopupMenu
 
 Affiche le menu contextuel spécifié.
 
@@ -301,42 +301,42 @@ virtual CMFCPopupMenu* ShowPopupMenu(
 ### <a name="parameters"></a>Paramètres
 
 *uiMenuResId*<br/>
-[in] L’ID de ressource de menu qui affiche cette méthode.
+dans ID de ressource du menu affiché par cette méthode.
 
 *x*<br/>
-[in] Horizontal de décalage pour le menu contextuel dans les coordonnées clientes.
+dans Décalage horizontal du menu contextuel dans les coordonnées clientes.
 
 *y*<br/>
-[in] Le décalage vertical pour le menu contextuel dans les coordonnées clientes
+dans Décalage vertical du menu contextuel dans les coordonnées clientes
 
 *pWndOwner*<br/>
-[in] Pointeur vers la fenêtre parent du menu contextuel.
+dans Pointeur vers la fenêtre parente du menu contextuel.
 
 *bOwnMessage*<br/>
-[in] Un paramètre booléen qui indique la façon dont les messages sont routés. Si *bOwnMessage* est FALSE, standard MFC de routage. Sinon, *pWndOwner* reçoit les messages.
+dans Paramètre booléen qui indique comment les messages sont routés. Si *bOwnMessage* a la valeur false, le routage MFC standard est utilisé. Dans le cas contraire, *pWndOwner* reçoit les messages.
 
 *hmenuPopup*<br/>
-[in] Le handle du menu qui affiche cette méthode.
+dans Handle du menu affiché par cette méthode.
 
 *bAutoDestroy*<br/>
-[in] Un paramètre booléen qui indique si le menu est automatiquement détruit.
+dans Paramètre booléen qui indique si le menu sera automatiquement détruit.
 
 *bRightAlign*<br/>
-[in] Un paramètre booléen qui indique la manière dont les éléments de menu sont alignées. Si *bRightAlign* a la valeur TRUE, le menu est aligné à droite pour l’ordre de lecture de droite à gauche.
+dans Paramètre booléen qui indique comment les éléments de menu sont alignés. Si *bRightAlign* a la valeur true, le menu est aligné à droite pour l’ordre de lecture de droite à gauche.
 
 ### <a name="return-value"></a>Valeur de retour
 
-La première surcharge de méthode retourne zéro si la méthode affiche le menu avec succès ; sinon 0. La deuxième surcharge de méthode retourne un pointeur vers [CMFCPopupMenu](../../mfc/reference/cmfcpopupmenu-class.md) si le menu contextuel affiche correctement ; sinon, NULL.
+La première surcharge de méthode retourne une valeur différente de zéro si la méthode affiche le menu avec succès ; Sinon, 0. La deuxième surcharge de méthode retourne un pointeur vers [CMFCPopupMenu](../../mfc/reference/cmfcpopupmenu-class.md) si le menu contextuel s’affiche correctement ; Sinon, NULL.
 
 ### <a name="remarks"></a>Notes
 
-Cette méthode s’apparente à la méthode [CContextMenuManager::TrackPopupMenu](#trackpopupmenu) car les deux méthodes affichent un menu contextuel. Toutefois, `TrackPopupMenu` retourne l’index de la commande de menu sélectionné.
+Cette méthode ressemble à la méthode [CContextMenuManager :: TrackPopupMenu](#trackpopupmenu) dans le sens où les deux méthodes affichent un menu contextuel. Toutefois, `TrackPopupMenu` retourne l’index de la commande de menu sélectionnée.
 
-Si le paramètre *bAutoDestroy* est FALSE, vous devez appeler manuellement la hérité `DestroyMenu` méthode pour libérer des ressources mémoire. L’implémentation par défaut de `ShowPopupMenu` n’utilise pas le paramètre *bAutoDestroy*. Il est fourni pour une utilisation ultérieure ou pour les classes personnalisées dérivées de la `CContextMenuManager` classe.
+Si le paramètre *bAutoDestroy* a la valeur false, vous devez appeler manuellement la méthode `DestroyMenu` héritée pour libérer des ressources mémoire. L’implémentation par défaut de `ShowPopupMenu` n’utilise pas le paramètre *bAutoDestroy*. Elle est fournie pour une utilisation ultérieure ou pour les classes personnalisées dérivées de la classe `CContextMenuManager`.
 
-##  <a name="trackpopupmenu"></a>  CContextMenuManager::TrackPopupMenu
+##  <a name="trackpopupmenu"></a>CContextMenuManager :: TrackPopupMenu
 
-Affiche le menu contextuel spécifié et retourne l’index de la commande de menu contextuel sélectionné.
+Affiche le menu contextuel spécifié et retourne l’index de la commande de menu contextuel sélectionnée.
 
 ```
 virtual UINT TrackPopupMenu(
@@ -350,27 +350,27 @@ virtual UINT TrackPopupMenu(
 ### <a name="parameters"></a>Paramètres
 
 *hmenuPopup*<br/>
-[in] Le handle du menu contextuel qui affiche cette méthode.
+dans Handle du menu contextuel affiché par cette méthode.
 
 *x*<br/>
-[in] Horizontal de décalage pour le menu contextuel dans les coordonnées clientes.
+dans Décalage horizontal du menu contextuel dans les coordonnées clientes.
 
 *y*<br/>
-[in] Vertical de décalage pour le menu contextuel dans les coordonnées clientes.
+dans Décalage vertical du menu contextuel dans les coordonnées clientes.
 
 *pWndOwner*<br/>
-[in] Pointeur vers la fenêtre parent du menu contextuel.
+dans Pointeur vers la fenêtre parente du menu contextuel.
 
 *bRightAlign*<br/>
-[in] Un paramètre booléen qui indique l’alignement des éléments de menu. Si *bRightAlign* a la valeur TRUE, le menu est aligné à droite pour l’ordre de lecture de droite à gauche. Si *bRightAlign* est FALSE, le menu est aligné à gauche de l’ordre de lecture de gauche à droite.
+dans Paramètre booléen qui indique comment les éléments de menu sont alignés. Si *bRightAlign* a la valeur true, le menu est aligné à droite pour l’ordre de lecture de droite à gauche. Si *bRightAlign* a la valeur false, le menu est aligné à gauche pour l’ordre de lecture de gauche à droite.
 
 ### <a name="return-value"></a>Valeur de retour
 
-L’ID de commande de menu de la commande que l’utilisateur choisit ; 0 si l’utilisateur ferme le menu contextuel sans sélectionner une commande de menu.
+ID de commande de menu de la commande choisie par l’utilisateur ; 0 si l’utilisateur ferme le menu contextuel sans sélectionner une commande de menu.
 
 ### <a name="remarks"></a>Notes
 
-Cette méthode fonctionne comme un appel modal pour afficher un menu contextuel. L’application ne continuera pas à la ligne suivante dans le code jusqu'à ce que l’utilisateur ferme le menu contextuel ou sélectionne une commande. Une autre méthode que vous pouvez utiliser pour afficher un menu contextuel est [CContextMenuManager::ShowPopupMenu](#showpopupmenu). Cette méthode n’est pas un appel modal et ne retourne pas de l’ID de la commande sélectionnée.
+Cette méthode fonctionne comme un appel modal pour afficher un menu contextuel. L’application ne continue pas à la ligne suivante dans le code jusqu’à ce que l’utilisateur ferme le menu contextuel ou sélectionne une commande. Une autre méthode que vous pouvez utiliser pour afficher un menu contextuel est [CContextMenuManager :: ShowPopupMenu](#showpopupmenu). Cette méthode n’est pas un appel modal et ne retourne pas l’ID de la commande sélectionnée.
 
 ## <a name="see-also"></a>Voir aussi
 

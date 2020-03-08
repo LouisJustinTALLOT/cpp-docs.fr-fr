@@ -39,11 +39,11 @@ helpviewer_keywords:
 - std::time_get [C++], get_year
 ms.assetid: 869d5f5b-dbab-4628-8333-bdea7e272023
 ms.openlocfilehash: e605423b829305bd1e7bde8be4fdbf312c8ce3c1
-ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
+ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/21/2019
-ms.locfileid: "72685499"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78876189"
 ---
 # <a name="time_get-class"></a>time_get, classe
 
@@ -59,10 +59,10 @@ class time_get : public time_base;
 
 ### <a name="parameters"></a>Paramètres
 
-*CharType* \
+*CharType*\
 Type utilisé dans le cadre d'un programme pour encoder des caractères.
 
-*InputIterator* \
+*InputIterator*\
 Itérateur dont les valeurs temporelles sont lues.
 
 ## <a name="remarks"></a>Notes
@@ -75,14 +75,14 @@ Comme avec n'importe quelle facette de paramètres régionaux, l'ID d'objet stat
 |-|-|
 |[time_get](#time_get)|Constructeur des objets de type `time_get`.|
 
-### <a name="typedefs"></a>Typedef
+### <a name="typedefs"></a>Typedefs
 
 |Nom de type|Description|
 |-|-|
 |[char_type](#char_type)|Type utilisé pour décrire un caractère utilisé par des paramètres régionaux.|
 |[iter_type](#iter_type)|Type qui décrit un itérateur d'entrée.|
 
-### <a name="member-functions"></a>Fonctions membres
+### <a name="member-functions"></a>Fonctions Membre
 
 |Fonction membre|Description|
 |-|-|
@@ -101,9 +101,9 @@ Comme avec n'importe quelle facette de paramètres régionaux, l'ID d'objet stat
 |[get_weekday](#get_weekday)|Analyse une chaîne représentant le nom du jour de la semaine.|
 |[get_year](#get_year)|Analyse une chaîne représentant le nom de l'année.|
 
-## <a name="requirements"></a>spécifications
+## <a name="requirements"></a>Spécifications
 
-**En-tête :** \<locale>
+**En-tête :** \<paramètres régionaux >
 
 **Espace de noms :** std
 
@@ -217,22 +217,22 @@ iter_type first,
 
 ### <a name="parameters"></a>Paramètres
 
-*premier* \
+*premier*\
 Itérateur d'entrée qui indique le début de la séquence à convertir.
 
-*dernier* \
+*dernier*\
 Itérateur d'entrée qui indique la fin de la séquence.
 
-*iosbase* \
+*iosbase*\
 Objet de flux.
 
 \ d' *État*
 Champ dans iosbase où les éléments de masque binaire appropriés sont définis pour indiquer des erreurs.
 
-*ptm* \
+*ptm*\
 Pointeur vers la structure time, où l'heure doit être stockée.
 
-*fmt* \
+*fmt*\
 Caractère de spécificateur de conversion.
 
 \ *Mod*
@@ -310,19 +310,19 @@ virtual iter_type do_get_date(iter_type first,
 
 ### <a name="parameters"></a>Paramètres
 
-*premier* \
+*premier*\
 Itérateur d’entrée traitant le début de la séquence à convertir.
 
-*dernier* \
+*dernier*\
 Itérateur d’entrée traitant la fin de la séquence à convertir.
 
-*iosbase* \
-Indicateur de format qui, quand il est défini, indique que le symbole monétaire est facultatif. Dans le cas contraire, il est obligatoire.
+*iosbase*\
+Indicateur de format qui, quand il est spécifié, indique que le symbole monétaire est facultatif. Dans le cas contraire, il est obligatoire.
 
 \ d' *État*
 Définit les éléments de masque de bits appropriés pour l’état de flux selon que les opérations ont réussi ou non.
 
-*ptm* \
+*ptm*\
 Pointeur vers l’emplacement où les informations de date doivent être stockées.
 
 ### <a name="return-value"></a>Valeur de retour
@@ -331,7 +331,7 @@ Itérateur d’entrée qui traite le premier élément au-delà du champ d’ent
 
 ### <a name="remarks"></a>Notes
 
-La fonction membre protégée virtuelle tente de mettre en correspondance les éléments séquentiels en commençant par le premier dans la séquence [ `first`, `last`) jusqu’à ce qu’elle ait reconnu un champ d’entrée de date non vide, complet. En cas de réussite, elle convertit ce champ en sa valeur équivalente en tant que composants **TM :: tm \_mon**, **TM :: TM \_day**et **TM :: TM \_year**, et stocke les résultats dans `ptm->tm_mon`, `ptm->tm_day` et `ptm->tm_year`, respectivement. Elle retourne un itérateur désignant le premier élément au-delà du champ d’entrée de date. Dans le cas contraire, la fonction définit `iosbase::failbit` dans *État*. Elle retourne un itérateur désignant le premier élément au-delà de tout préfixe d’un champ d’entrée de date valide. Dans les deux cas, si la valeur de retour est égale à *Last*, la fonction définit `ios_base::eofbit` dans l' *État*.
+La fonction membre protégée virtuelle tente de mettre en correspondance les éléments séquentiels en commençant par le premier dans la séquence [ `first`, `last`) jusqu’à ce qu’elle ait reconnu un champ d’entrée de date non vide, complet. En cas de réussite, elle convertit ce champ en sa valeur équivalente en tant que composants **TM :: tm\_LUN**, **TM :: TM\_jour**et **TM :: TM\_année**, et stocke les résultats dans `ptm->tm_mon`, `ptm->tm_day`et `ptm->tm_year`, respectivement. Elle retourne un itérateur désignant le premier élément au-delà du champ d’entrée de date. Dans le cas contraire, la fonction définit `iosbase::failbit` dans *État*. Elle retourne un itérateur désignant le premier élément au-delà de tout préfixe d’un champ d’entrée de date valide. Dans les deux cas, si la valeur de retour est égale à *Last*, la fonction définit `ios_base::eofbit` dans l' *État*.
 
 Le format du champ d’entrée de date dépend des paramètres régionaux. Pour les paramètres régionaux par défaut, le champ d’entrée de date a la forme MMM JJ, AAAA, où :
 
@@ -361,19 +361,19 @@ virtual iter_type do_get_monthname(iter_type first,
 
 ### <a name="parameters"></a>Paramètres
 
-*premier* \
+*premier*\
 Itérateur d’entrée traitant le début de la séquence à convertir.
 
-*dernier* \
+*dernier*\
 Itérateur d’entrée traitant la fin de la séquence à convertir.
 
-*iosbase* \
-Non utilisé.
+*iosbase*\
+Inutilisé.
 
 \ d' *État*
 Paramètre de sortie qui définit les éléments de masque de bits appropriés pour l’état de flux selon que les opérations ont réussi ou non.
 
-*ptm* \
+*ptm*\
 Pointeur vers l’emplacement où les informations de mois doivent être stockées.
 
 ### <a name="return-value"></a>Valeur de retour
@@ -382,7 +382,7 @@ Itérateur d’entrée qui traite le premier élément au-delà du champ d’ent
 
 ### <a name="remarks"></a>Notes
 
-La fonction membre protégée virtuelle tente de mettre en correspondance les éléments séquentiels en commençant par le premier dans la séquence [ `first`, `last`) jusqu’à ce qu’elle ait reconnu un champ d’entrée de mois non vide, complet. En cas de réussite, elle convertit ce champ en sa valeur équivalente en tant que composant **TM :: tm \_mon**et stocke le résultat dans `ptm->tm_mon`. Elle retourne un itérateur désignant le premier élément au-delà du champ d’entrée de mois. Dans le cas contraire, la fonction définit `ios_base::failbit` dans *État*. Elle retourne un itérateur désignant le premier élément au-delà de tout préfixe d’un champ d’entrée de mois valide. Dans les deux cas, si la valeur de retour est égale à *Last*, la fonction définit `ios_base::eofbit` dans l' *État*.
+La fonction membre protégée virtuelle tente de mettre en correspondance les éléments séquentiels en commençant par le premier dans la séquence [ `first`, `last`) jusqu’à ce qu’elle ait reconnu un champ d’entrée de mois non vide, complet. En cas de réussite, elle convertit ce champ en sa valeur équivalente en tant que composant **TM :: tm\_LUN**, et stocke le résultat dans `ptm->tm_mon`. Elle retourne un itérateur désignant le premier élément au-delà du champ d’entrée de mois. Dans le cas contraire, la fonction définit `ios_base::failbit` dans *État*. Elle retourne un itérateur désignant le premier élément au-delà de tout préfixe d’un champ d’entrée de mois valide. Dans les deux cas, si la valeur de retour est égale à *Last*, la fonction définit `ios_base::eofbit` dans l' *État*.
 
 Le champ d’entrée du mois est une séquence qui correspond à la plus longue séquence d’un ensemble de séquences spécifiques aux paramètres régionaux, telles que Jan, janvier, Fév, février, etc. La valeur convertie est le nombre de mois depuis janvier.
 
@@ -404,19 +404,19 @@ virtual iter_type do_get_time(iter_type first,
 
 ### <a name="parameters"></a>Paramètres
 
-*premier* \
+*premier*\
 Itérateur d’entrée traitant le début de la séquence à convertir.
 
-*dernier* \
+*dernier*\
 Itérateur d’entrée traitant la fin de la séquence à convertir.
 
-*iosbase* \
-Non utilisé.
+*iosbase*\
+Inutilisé.
 
 \ d' *État*
 Définit les éléments de masque de bits appropriés pour l’état de flux selon que les opérations ont réussi ou non.
 
-*ptm* \
+*ptm*\
 Pointeur vers l’emplacement où les informations de date doivent être stockées.
 
 ### <a name="return-value"></a>Valeur de retour
@@ -425,7 +425,7 @@ Itérateur d’entrée qui traite le premier élément au-delà du champ d’ent
 
 ### <a name="remarks"></a>Notes
 
-La fonction membre protégée virtuelle tente de mettre en correspondance les éléments séquentiels en commençant par le premier dans la séquence [ `first`, `last`) jusqu’à ce qu’elle ait reconnu un champ d’entrée d’heure non vide, complet. En cas de réussite, elle convertit ce champ en sa valeur équivalente en tant que composants `tm::tm_hour`, `tm::tm_min` et `tm::tm_sec`, et stocke les résultats dans `ptm->tm_hour`, `ptm->tm_min` et `ptm->tm_sec`, respectivement. Elle retourne un itérateur désignant le premier élément au-delà du champ d’entrée d’heure. Dans le cas contraire, la fonction définit `ios_base::failbit` dans *État*. Elle retourne un itérateur désignant le premier élément au-delà de tout préfixe d’un champ d’entrée d’heure valide. Dans les deux cas, si la valeur de retour est égale à *Last*, la fonction définit `ios_base::eofbit` dans l' *État*.
+La fonction membre protégée virtuelle tente de mettre en correspondance les éléments séquentiels en commençant par le premier dans la séquence [ `first`, `last`) jusqu’à ce qu’elle ait reconnu un champ d’entrée d’heure non vide, complet. En cas de réussite, elle convertit ce champ en sa valeur équivalente en tant que composants `tm::tm_hour`, `tm::tm_min`et `tm::tm_sec`, et stocke les résultats dans `ptm->tm_hour`, `ptm->tm_min`et `ptm->tm_sec`, respectivement. Elle retourne un itérateur désignant le premier élément au-delà du champ d’entrée d’heure. Dans le cas contraire, la fonction définit `ios_base::failbit` dans *État*. Elle retourne un itérateur désignant le premier élément au-delà de tout préfixe d’un champ d’entrée d’heure valide. Dans les deux cas, si la valeur de retour est égale à *Last*, la fonction définit `ios_base::eofbit` dans l' *État*.
 
 Dans cette implémentation, le champ d’entrée d’heure a la forme HH:MM:SS, où :
 
@@ -455,19 +455,19 @@ virtual iter_type do_get_weekday(iter_type first,
 
 ### <a name="parameters"></a>Paramètres
 
-*premier* \
+*premier*\
 Itérateur d’entrée traitant le début de la séquence à convertir.
 
-*dernier* \
+*dernier*\
 Itérateur d’entrée traitant la fin de la séquence à convertir.
 
-*iosbase* \
-Indicateur de format qui, quand il est défini, indique que le symbole monétaire est facultatif. Dans le cas contraire, il est obligatoire.
+*iosbase*\
+Indicateur de format qui, quand il est spécifié, indique que le symbole monétaire est facultatif. Dans le cas contraire, il est obligatoire.
 
 \ d' *État*
 Définit les éléments de masque de bits appropriés pour l’état de flux selon que les opérations ont réussi ou non.
 
-*ptm* \
+*ptm*\
 Pointeur vers l’emplacement où les informations de jour de la semaine doivent être stockées.
 
 ### <a name="return-value"></a>Valeur de retour
@@ -476,7 +476,7 @@ Itérateur d’entrée qui traite le premier élément au-delà du champ d’ent
 
 ### <a name="remarks"></a>Notes
 
-La fonction membre protégée virtuelle tente de faire correspondre des éléments séquentiels en commençant au *premier* dans la séquence [`first`, `last`) jusqu’à ce qu’elle ait reconnu un champ d’entrée de jour de la semaine non vide et complet. En cas de réussite, elle convertit ce champ en sa valeur équivalente en tant que composant **TM :: tm \_wday**et stocke le résultat dans `ptm->tm_wday`. Elle retourne un itérateur désignant le premier élément au-delà du champ d’entrée de jour de la semaine. Dans le cas contraire, la fonction définit `ios_base::failbit` dans *État*. Elle retourne un itérateur désignant le premier élément au-delà de tout préfixe d’un champ d’entrée de jour de la semaine valide. Dans les deux cas, si la valeur de retour est égale à *Last*, la fonction définit `ios_base::eofbit` dans l' *État*.
+La fonction membre protégée virtuelle tente de faire correspondre des éléments séquentiels en commençant au *premier* dans la séquence [`first`, `last`) jusqu’à ce qu’elle ait reconnu un champ d’entrée de jour de la semaine non vide et complet. En cas de réussite, elle convertit ce champ en sa valeur équivalente en tant que composant **TM :: tm\_WDAY**et stocke le résultat dans `ptm->tm_wday`. Elle retourne un itérateur désignant le premier élément au-delà du champ d’entrée de jour de la semaine. Dans le cas contraire, la fonction définit `ios_base::failbit` dans *État*. Elle retourne un itérateur désignant le premier élément au-delà de tout préfixe d’un champ d’entrée de jour de la semaine valide. Dans les deux cas, si la valeur de retour est égale à *Last*, la fonction définit `ios_base::eofbit` dans l' *État*.
 
 Le champ d’entrée de jour de la semaine est une séquence qui correspond à la plus longue séquence d’un ensemble de séquences spécifiques aux paramètres régionaux, telles que Dim, Dimanche, Lun, Lundi, etc. La valeur convertie est le nombre de jours depuis Dimanche.
 
@@ -498,19 +498,19 @@ virtual iter_type do_get_year(iter_type first,
 
 ### <a name="parameters"></a>Paramètres
 
-*premier* \
+*premier*\
 Itérateur d’entrée traitant le début de la séquence à convertir.
 
-*dernier* \
+*dernier*\
 Itérateur d’entrée traitant la fin de la séquence à convertir.
 
-*iosbase* \
-Indicateur de format qui, quand il est défini, indique que le symbole monétaire est facultatif. Dans le cas contraire, il est obligatoire.
+*iosbase*\
+Indicateur de format qui, quand il est spécifié, indique que le symbole monétaire est facultatif. Dans le cas contraire, il est obligatoire.
 
 \ d' *État*
 Définit les éléments de masque de bits appropriés pour l’état de flux selon que les opérations ont réussi ou non.
 
-*ptm* \
+*ptm*\
 Pointeur vers l’emplacement où les informations d’année doivent être stockées.
 
 ### <a name="return-value"></a>Valeur de retour
@@ -519,7 +519,7 @@ Itérateur d’entrée qui traite le premier élément au-delà du champ d’ent
 
 ### <a name="remarks"></a>Notes
 
-La fonction membre protégée virtuelle tente de faire correspondre des éléments séquentiels en commençant au *premier* dans la séquence [`first`, `last`) jusqu’à ce qu’elle ait reconnu un champ d’entrée d’année non vide et complet. En cas de réussite, elle convertit ce champ en sa valeur équivalente en tant que composant **TM :: tm \_year**et stocke le résultat dans `ptm->tm_year`. Elle retourne un itérateur désignant le premier élément au-delà du champ d’entrée d’année. Dans le cas contraire, la fonction définit `ios_base::failbit` dans *État*. Elle retourne un itérateur désignant le premier élément au-delà de tout préfixe d’un champ d’entrée d’année valide. Dans les deux cas, si la valeur de retour est égale à *Last*, la fonction définit `ios_base::eofbit` dans l' *État*.
+La fonction membre protégée virtuelle tente de faire correspondre des éléments séquentiels en commençant au *premier* dans la séquence [`first`, `last`) jusqu’à ce qu’elle ait reconnu un champ d’entrée d’année non vide et complet. En cas de réussite, elle convertit ce champ en sa valeur équivalente en tant que composant **TM :: tm\_année**et stocke le résultat dans `ptm->tm_year`. Elle retourne un itérateur désignant le premier élément au-delà du champ d’entrée d’année. Dans le cas contraire, la fonction définit `ios_base::failbit` dans *État*. Elle retourne un itérateur désignant le premier élément au-delà de tout préfixe d’un champ d’entrée d’année valide. Dans les deux cas, si la valeur de retour est égale à *Last*, la fonction définit `ios_base::eofbit` dans l' *État*.
 
 Le champ d’entrée d’année est une séquence de chiffres décimaux dont la valeur numérique correspondante doit être comprise dans la plage [1900, 2036). La valeur stockée est égale à cette valeur moins 1900. Dans cette implémentation, les valeurs de la plage [69, 136) représentent la plage d’années [1969, 2036). Les valeurs de la plage [0, 69) sont également possibles, mais peuvent représenter la plage d’années [1900, 1969) ou [2000, 2069), selon l’environnement de traduction spécifique.
 
@@ -553,31 +553,31 @@ iter_type get(
 
 ### <a name="parameters"></a>Paramètres
 
-*premier* \
+*premier*\
 Itérateur d'entrée qui indique le début de la séquence à convertir.
 
-*dernier* \
+*dernier*\
 Itérateur d'entrée qui indique la fin de la séquence à convertir.
 
-*iosbase* \
-flux.
+*iosbase*\
+Flux.
 
 \ d' *État*
 Les éléments du masque de bits appropriés sont définis pour l'état du flux et indiquent les erreurs.
 
-*ptm* \
+*ptm*\
 Pointeur vers la structure time, où la date/heure doit être stockée.
 
-*fmt* \
+*fmt*\
 Caractère de spécificateur de conversion.
 
 \ *Mod*
 Caractère de modificateur facultatif.
 
-*fmt_first* \
+*fmt_first*\
 Pointe là où les directives de format commencent.
 
-*fmt_last* \
+*fmt_last*\
 Pointe vers la fin des directives de format.
 
 ### <a name="return-value"></a>Valeur de retour
@@ -610,19 +610,19 @@ iter_type get_date(iter_type first,
 
 ### <a name="parameters"></a>Paramètres
 
-*premier* \
+*premier*\
 Itérateur d’entrée traitant le début de la séquence à convertir.
 
-*dernier* \
+*dernier*\
 Itérateur d’entrée traitant la fin de la séquence à convertir.
 
-*iosbase* \
-Indicateur de format qui, quand il est défini, indique que le symbole monétaire est facultatif. Dans le cas contraire, il est obligatoire.
+*iosbase*\
+Indicateur de format qui, quand il est spécifié, indique que le symbole monétaire est facultatif. Dans le cas contraire, il est obligatoire.
 
 \ d' *État*
 Définit les éléments de masque de bits appropriés pour l’état de flux selon que les opérations ont réussi ou non.
 
-*ptm* \
+*ptm*\
 Pointeur vers l’emplacement où les informations de date doivent être stockées.
 
 ### <a name="return-value"></a>Valeur de retour
@@ -704,19 +704,19 @@ iter_type get_monthname(iter_type first,
 
 ### <a name="parameters"></a>Paramètres
 
-*premier* \
+*premier*\
 Itérateur d’entrée traitant le début de la séquence à convertir.
 
-*dernier* \
+*dernier*\
 Itérateur d’entrée traitant la fin de la séquence à convertir.
 
-*iosbase* \
-Non utilisé.
+*iosbase*\
+Inutilisé.
 
 \ d' *État*
 Paramètre de sortie qui définit les éléments de masque de bits appropriés pour l’état de flux selon que les opérations ont réussi ou non.
 
-*ptm* \
+*ptm*\
 Pointeur vers l’emplacement où les informations de mois doivent être stockées.
 
 ### <a name="return-value"></a>Valeur de retour
@@ -796,19 +796,19 @@ iter_type get_time(iter_type first,
 
 ### <a name="parameters"></a>Paramètres
 
-*premier* \
+*premier*\
 Itérateur d’entrée traitant le début de la séquence à convertir.
 
-*dernier* \
+*dernier*\
 Itérateur d’entrée traitant la fin de la séquence à convertir.
 
-*iosbase* \
-Non utilisé.
+*iosbase*\
+Inutilisé.
 
 \ d' *État*
 Définit les éléments de masque de bits appropriés pour l’état de flux selon que les opérations ont réussi ou non.
 
-*ptm* \
+*ptm*\
 Pointeur vers l’emplacement où les informations de date doivent être stockées.
 
 ### <a name="return-value"></a>Valeur de retour
@@ -877,19 +877,19 @@ iter_type get_weekday(iter_type first,
 
 ### <a name="parameters"></a>Paramètres
 
-*premier* \
+*premier*\
 Itérateur d’entrée traitant le début de la séquence à convertir.
 
-*dernier* \
+*dernier*\
 Itérateur d’entrée traitant la fin de la séquence à convertir.
 
-*iosbase* \
-Indicateur de format qui, quand il est défini, indique que le symbole monétaire est facultatif. Dans le cas contraire, il est obligatoire.
+*iosbase*\
+Indicateur de format qui, quand il est spécifié, indique que le symbole monétaire est facultatif. Dans le cas contraire, il est obligatoire.
 
 \ d' *État*
 Définit les éléments de masque de bits appropriés pour l’état de flux selon que les opérations ont réussi ou non.
 
-*ptm* \
+*ptm*\
 Pointeur vers l’emplacement où les informations de jour de la semaine doivent être stockées.
 
 ### <a name="return-value"></a>Valeur de retour
@@ -954,19 +954,19 @@ iter_type get_year(iter_type first,
 
 ### <a name="parameters"></a>Paramètres
 
-*premier* \
+*premier*\
 Itérateur d’entrée traitant le début de la séquence à convertir.
 
-*dernier* \
+*dernier*\
 Itérateur d’entrée traitant la fin de la séquence à convertir.
 
-*iosbase* \
-Indicateur de format qui, quand il est défini, indique que le symbole monétaire est facultatif. Dans le cas contraire, il est obligatoire.
+*iosbase*\
+Indicateur de format qui, quand il est spécifié, indique que le symbole monétaire est facultatif. Dans le cas contraire, il est obligatoire.
 
 \ d' *État*
 Définit les éléments de masque de bits appropriés pour l’état de flux selon que les opérations ont réussi ou non.
 
-*ptm* \
+*ptm*\
 Pointeur vers l’emplacement où les informations d’année doivent être stockées.
 
 ### <a name="return-value"></a>Valeur de retour
@@ -1041,7 +1041,7 @@ explicit time_get(size_t refs = 0);
 ### <a name="parameters"></a>Paramètres
 
 \ *REFS*
-Valeur entière utilisée pour spécifier le type de gestion de mémoire pour l’objet.
+Valeur entière qui sert à spécifier le type de gestion de la mémoire pour l’objet.
 
 ### <a name="remarks"></a>Notes
 
