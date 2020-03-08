@@ -6,13 +6,13 @@ f1_keywords:
 - hash_set/std::swap (hash_multiset)
 ms.assetid: 557a0162-3728-4537-97dc-f9f6cc7ece94
 ms.openlocfilehash: 2fbc05c16ba6629397bbb07bab30cb9315a16e1f
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68448595"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78883839"
 ---
-# <a name="lthashsetgt-functions"></a>&lt;hash_set&gt;, fonctions
+# <a name="lthash_setgt-functions"></a>&lt;hash_set&gt;, fonctions
 
 |||
 |-|-|
@@ -21,7 +21,7 @@ ms.locfileid: "68448595"
 ## <a name="swap"></a>  swap
 
 > [!NOTE]
-> Cette API est obsolète. L’alternative est [unordered_set, classe](../standard-library/unordered-set-class.md).
+> Cette API méthode est obsolète. L’alternative est [unordered_set, classe](../standard-library/unordered-set-class.md).
 
 Échange les éléments de deux hash_sets.
 
@@ -33,28 +33,28 @@ void swap(
 
 ### <a name="parameters"></a>Paramètres
 
-*Oui*\
-Hash_set qui fournit les éléments à échanger ou hash_set dont les éléments doivent être échangés avec ceux du hash_set à *gauche*.
+\ *droit*
+Hash_set qui fournit les éléments à permuter, ou le hash_set dont les éléments doivent être échangés avec ceux du hash_set *gauche*.
 
-*gauche*\
-Hash_set dont les éléments doivent être échangés avec ceux du *droit*hash_set.
+\ *gauche*
+Hash_set dont les éléments doivent être échangés avec ceux du hash_set *droit*.
 
 ### <a name="remarks"></a>Notes
 
-La `swap` fonction de modèle est un algorithme spécialisé sur la classe de conteneur hash_set pour exécuter `left.`la fonction`right`membre [swap](../standard-library/hash-set-class.md#swap)(). Il s’agit d’une instance du classement partiel des modèles de fonction par le compilateur. Quand des fonctions de modèle sont surchargées de sorte que la correspondance du modèle avec l’appel de fonction n’est pas unique, le compilateur sélectionne la version la plus spécialisée de la fonction de modèle. La version générale de la fonction de modèle
+La fonction de modèle `swap` est un algorithme spécialisé sur la classe de conteneur hash_set pour exécuter la fonction membre `left.`[swap](../standard-library/hash-set-class.md#swap)(`right`). Il s’agit d’une instance du classement partiel des modèles de fonction par le compilateur. Quand des fonctions de modèle sont surchargées de sorte que la correspondance du modèle avec l’appel de fonction n’est pas unique, le compilateur sélectionne la version la plus spécialisée de la fonction de modèle. La version générale de la fonction de modèle
 
 **template \<class T> void swap(T&, T&),**
 
-dans l’algorithme de classe fonctionne par assignation et il s’agit d’une opération lente. La version spécialisée dans chaque conteneur est beaucoup plus rapide, car elle peut fonctionner avec la représentation interne de la classe conteneur.
+dans l’algorithme de classe fonctionne par assignation et il s’agit d’une opération lente. La version spécialisée dans chaque conteneur est beaucoup plus rapide, car elle peut fonctionner avec la représentation interne de la classe de conteneur.
 
-### <a name="example"></a>Exemples
+### <a name="example"></a>Exemple
 
-Pour obtenir un exemple qui utilise la version de modèle de `swap`, consultez l’exemple de code de la classe membre [hash_set::swap](../standard-library/hash-set-class.md#swap).
+Pour obtenir un exemple qui utilise la version de modèle de [, consultez l’exemple de code de la classe membre ](../standard-library/hash-set-class.md#swap)hash_set::swap`swap`.
 
 ## <a name="swap_hash_multiset"></a>  swap (hash_multiset)
 
 > [!NOTE]
-> Cette API est obsolète. L’alternative est [unordered_set, classe](../standard-library/unordered-set-class.md).
+> Cette API méthode est obsolète. L’alternative est [unordered_set, classe](../standard-library/unordered-set-class.md).
 
 Échange les éléments de deux hash_multisets.
 
@@ -64,23 +64,23 @@ void swap(hash_multiset <Key, Traits, Allocator>& left, hash_multiset <Key, Trai
 
 ### <a name="parameters"></a>Paramètres
 
-*Oui*\
-Hash_multiset qui fournit les éléments à échanger ou hash_multiset dont les éléments doivent être échangés avec ceux du hash_multiset à *gauche*.
+\ *droit*
+Hash_multiset qui fournit les éléments à permuter, ou le hash_multiset dont les éléments doivent être échangés avec ceux du hash_multiset *gauche*.
 
-*gauche*\
-Hash_multiset dont les éléments doivent être échangés avec ceux du *droit*hash_multiset.
+\ *gauche*
+Hash_multiset dont les éléments doivent être échangés avec ceux du hash_multiset *droit*.
 
 ### <a name="remarks"></a>Notes
 
-La `swap` fonction de modèle est un algorithme spécialisé sur la classe de conteneur hash_multiset pour exécuter `left.`la fonction`right`membre [swap](../standard-library/hash-multiset-class.md#swap)(). Il s’agit d’une instance du classement partiel des modèles de fonction par le compilateur. Quand des fonctions de modèle sont surchargées de sorte que la correspondance du modèle avec l’appel de fonction n’est pas unique, le compilateur sélectionne la version la plus spécialisée de la fonction de modèle. La version générale de la fonction de modèle
+La fonction de modèle `swap` est un algorithme spécialisé sur la classe de conteneur hash_multiset pour exécuter la fonction membre `left.`[swap](../standard-library/hash-multiset-class.md#swap)(`right`). Il s’agit d’une instance du classement partiel des modèles de fonction par le compilateur. Quand des fonctions de modèle sont surchargées de sorte que la correspondance du modèle avec l’appel de fonction n’est pas unique, le compilateur sélectionne la version la plus spécialisée de la fonction de modèle. La version générale de la fonction de modèle
 
 **template \<class T> void swap(T&, T&),**
 
-dans l’algorithme de classe fonctionne par assignation et il s’agit d’une opération lente. La version spécialisée dans chaque conteneur est beaucoup plus rapide, car elle peut fonctionner avec la représentation interne de la classe conteneur.
+dans l’algorithme de classe fonctionne par assignation et il s’agit d’une opération lente. La version spécialisée dans chaque conteneur est beaucoup plus rapide, car elle peut fonctionner avec la représentation interne de la classe de conteneur.
 
-### <a name="example"></a>Exemples
+### <a name="example"></a>Exemple
 
-Pour obtenir un exemple qui utilise la version de modèle de `swap`, consultez l’exemple de code de la classe membre [hash_multiset::swap](../standard-library/hash-multiset-class.md#swap).
+Pour obtenir un exemple qui utilise la version de modèle de [, consultez l’exemple de code de la classe membre ](../standard-library/hash-multiset-class.md#swap)hash_multiset::swap`swap`.
 
 ## <a name="see-also"></a>Voir aussi
 

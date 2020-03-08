@@ -12,11 +12,11 @@ helpviewer_keywords:
 - macros, error reporting
 ms.assetid: 4da9b87f-ec5c-4a32-ab93-637780909b9d
 ms.openlocfilehash: b666ba3debe164118c9b40b90313646592b04876
-ms.sourcegitcommit: bf724dfc639b16d5410fab72183f8e6b781338bc
+ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/17/2019
-ms.locfileid: "71062036"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78855287"
 ---
 # <a name="debugging-and-error-reporting-macros"></a>Macros de débogage et de rapport d’erreurs
 
@@ -24,17 +24,17 @@ Ces macros fournissent des fonctionnalités de débogage et de suivi utiles.
 
 |||
 |-|-|
-|[_ATL_DEBUG_INTERFACES](#_atl_debug_interfaces)|Écrit, dans la fenêtre sortie, les fuites d’interface détectées quand `_Module.Term` est appelé.|
-|[_ATL_DEBUG_QI](#_atl_debug_qi)|Écrit tous les appels `QueryInterface` à dans la fenêtre sortie.|
-|[ATLASSERT](#atlassert)|Exécute les mêmes fonctionnalités que la macro _ [Assert](../../c-runtime-library/reference/assert-asserte-assert-expr-macros.md) trouvée dans la bibliothèque Runtime C.|
+|[_ATL_DEBUG_INTERFACES](#_atl_debug_interfaces)|Écrit, dans la fenêtre sortie, les fuites d’interface détectées lors de l’appel de `_Module.Term`.|
+|[_ATL_DEBUG_QI](#_atl_debug_qi)|Écrit tous les appels à `QueryInterface` dans la fenêtre sortie.|
+|[ATLASSERT](#atlassert)|Exécute les mêmes fonctionnalités que la macro [_ASSERTE](../../c-runtime-library/reference/assert-asserte-assert-expr-macros.md) trouvée dans la bibliothèque Runtime C.|
 |[ATLENSURE](#atlensure)|Effectue la validation des paramètres. Appeler `AtlThrow` si nécessaire|
 |[ATLTRACENOTIMPL](#atltracenotimpl)|Envoie un message à l’appareil de vidage indiquant que la fonction spécifiée n’est pas implémentée.|
 |[ATLTRACE](#atltrace)|Signale les avertissements à un périphérique de sortie, tel que la fenêtre du débogueur, en fonction des indicateurs et des niveaux indiqués. Inclus pour la compatibilité descendante.|
 |[ATLTRACE2](#atltrace2)|Signale les avertissements à un périphérique de sortie, tel que la fenêtre du débogueur, en fonction des indicateurs et des niveaux indiqués.|
 
-##  <a name="_atl_debug_interfaces"></a>  _ATL_DEBUG_INTERFACES
+##  <a name="_atl_debug_interfaces"></a>_ATL_DEBUG_INTERFACES
 
-Définissez cette macro avant d’inclure des fichiers d’en-tête `AddRef` ATL `Release` pour suivre tous les appels et sur les interfaces de vos composants dans la fenêtre sortie.
+Définissez cette macro avant d’inclure des fichiers d’en-tête ATL pour effectuer le suivi de tous les appels `AddRef` et `Release` sur les interfaces de vos composants dans la fenêtre sortie.
 
 ```
 #define _ATL_DEBUG_INTERFACES
@@ -46,26 +46,26 @@ La sortie du suivi s’affiche comme indiqué ci-dessous :
 
 `ATL: QIThunk - 2008         AddRef  :   Object = 0x00d81ba0   Refcount = 1   CBug - IBug`
 
-La première partie de chaque trace sera toujours `ATL: QIThunk`. Next est une valeur identifiant le *thunk d’interface* particulier utilisé. Un thunk d’interface est un objet utilisé pour conserver un décompte de références et fournir la fonctionnalité de traçage utilisée ici. Un nouveau thunk d’interface est créé à chaque appel `QueryInterface` à Except pour les `IUnknown` demandes d’interface (dans ce cas, le même thunk est retourné chaque fois pour se conformer aux règles d’identité de com).
+La première partie de chaque trace sera toujours `ATL: QIThunk`. Next est une valeur identifiant le *thunk d’interface* particulier utilisé. Un thunk d’interface est un objet utilisé pour conserver un décompte de références et fournir la fonctionnalité de traçage utilisée ici. Un nouveau thunk d’interface est créé à chaque appel à `QueryInterface` à l’exception des demandes de l’interface `IUnknown` (dans ce cas, le même thunk est retourné à chaque fois pour se conformer aux règles d’identité de COM).
 
-Ensuite, vous `AddRef` verrez `Release` ou indiquez quelle méthode a été appelée. Après cela, vous verrez une valeur identifiant l’objet dont le décompte de références d’interface a été modifié. La valeur traced est le pointeur **This** de l’objet.
+Vous verrez ensuite `AddRef` ou `Release` indiquant quelle méthode a été appelée. Après cela, vous verrez une valeur identifiant l’objet dont le décompte de références d’interface a été modifié. La valeur traced est le pointeur **This** de l’objet.
 
-Le nombre de références suivi est le nombre de références sur ce thunk après `AddRef` l’appel de ou `Release` de. Notez que ce nombre de références peut ne pas correspondre au nombre de références pour l’objet. Chaque thunk gère son propre nombre de références pour vous aider à se conformer pleinement aux règles de décompte de références de COM.
+Le nombre de références suivi est le nombre de références sur ce thunk après l’appel de `AddRef` ou `Release`. Notez que ce nombre de références peut ne pas correspondre au nombre de références pour l’objet. Chaque thunk gère son propre nombre de références pour vous aider à se conformer pleinement aux règles de décompte de références de COM.
 
-La dernière information tracée est le nom de l’objet et l’interface affectée par l' `AddRef` appel de ou. `Release`
+La dernière information tracée est le nom de l’objet et l’interface affectée par le `AddRef` ou l’appel de `Release`.
 
-Les fuites d’interface détectées lorsque le serveur s’arrête et `_Module.Term` sont appelées sont enregistrées de la manière suivante :
+Les fuites d’interface détectées lors de l’arrêt du serveur et de l’appel de `_Module.Term` sont enregistrées de la manière suivante :
 
 `ATL: QIThunk - 2005         LEAK    :   Object = 0x00d81ca0   Refcount = 1   MaxRefCount = 1   CBug - IBug`
 
 Les informations fournies ici correspondent directement aux informations fournies dans les instructions de suivi précédentes, ce qui vous permet d’examiner les décomptes de références pendant toute la durée de vie d’un thunk d’interface. En outre, vous pouvez avoir une indication du nombre maximal de références sur ce thunk d’interface.
 
 > [!NOTE]
-> _ATL_DEBUG_INTERFACES peut être utilisé dans les versions commerciales.
+> Les _ATL_DEBUG_INTERFACES peuvent être utilisés dans les versions commerciales.
 
-##  <a name="_atl_debug_qi"></a>  _ATL_DEBUG_QI
+##  <a name="_atl_debug_qi"></a>_ATL_DEBUG_QI
 
-Écrit tous les appels `QueryInterface` à dans la fenêtre sortie.
+Écrit tous les appels à `QueryInterface` dans la fenêtre sortie.
 
 ```
 #define _ATL_DEBUG_QI
@@ -73,13 +73,13 @@ Les informations fournies ici correspondent directement aux informations fournie
 
 ### <a name="remarks"></a>Notes
 
-En cas d’échec `QueryInterface` d’un appel à, la fenêtre sortie affiche :
+En cas d’échec d’un appel à `QueryInterface`, la fenêtre sortie affiche :
 
-*nom de l’interface* - `failed`
+*nom* de l’interface - `failed`
 
 ##  <a name="atlassert"></a>ATLASSERT
 
-La macro ATLASSERT effectue les mêmes fonctionnalités que la macro _ [Assert](../../c-runtime-library/reference/assert-asserte-assert-expr-macros.md) trouvée dans la bibliothèque Runtime C.
+La macro ATLASSERT effectue les mêmes fonctionnalités que la macro [_ASSERTE](../../c-runtime-library/reference/assert-asserte-assert-expr-macros.md) trouvée dans la bibliothèque Runtime C.
 
 ```
 ATLASSERT(booleanExpression);
@@ -94,7 +94,7 @@ Expression (pointeurs inclus) qui prend une valeur différente de zéro ou 0.
 
 Dans les versions Debug, ATLASSERT évalue *booleanExpression* et génère un rapport de débogage lorsque le résultat est false.
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
 **En-tête :** atldef. h
 
@@ -112,14 +112,14 @@ ATLENSURE_THROW(booleanExpression, hr);
 *booleanExpression*<br/>
 Spécifie une expression booléenne à tester.
 
-*hr*<br/>
+*h*<br/>
 Spécifie un code d’erreur à retourner.
 
 ### <a name="remarks"></a>Notes
 
 Ces macros fournissent un mécanisme permettant de détecter et d’informer l’utilisateur d’une utilisation incorrecte des paramètres.
 
-La macro appelle ATLASSERT et si la condition échoue aux `AtlThrow`appels.
+La macro appelle ATLASSERT et si la condition échoue à appeler `AtlThrow`.
 
 Dans le cas ATLENSURE, `AtlThrow` est appelé avec E_FAIL.
 
@@ -131,13 +131,13 @@ La différence entre ATLENSURE et ATLASSERT est que ATLENSURE lève une exceptio
 
 [!code-cpp[NVC_ATL_Utilities#108](../../atl/codesnippet/cpp/debugging-and-error-reporting-macros_1.cpp)]
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
 **En-tête :** afx.h
 
 ##  <a name="atltracenotimpl"></a>ATLTRACENOTIMPL
 
-Dans les versions Debug d’ATL, envoie la chaîne « *funcname* n’est pas implémentée » à l’unité de vidage et retourne E_NOTIMPL.
+Dans les versions Debug d’ATL, envoie la chaîne « *funcname* n’est pas implémentée » au périphérique de vidage et retourne E_NOTIMPL.
 
 ```
 ATLTRACENOTIMPL(funcname);
@@ -156,7 +156,7 @@ Dans les versions release, retourne simplement E_NOTIMPL.
 
 [!code-cpp[NVC_ATL_Utilities#127](../../atl/codesnippet/cpp/debugging-and-error-reporting-macros_2.cpp)]
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
 **En-tête :** ATLTRACE. h
 
@@ -181,7 +181,7 @@ dans Chaîne et variables à envoyer à la fenêtre sortie ou à toute applicati
 *category*<br/>
 dans Type d’événement ou de méthode à signaler. Consultez les notes pour obtenir la liste des catégories.
 
-*niveau*<br/>
+*level*<br/>
 dans Niveau de suivi à signaler. Pour plus d’informations, consultez les notes.
 
 *lpszFormat*<br/>
@@ -191,7 +191,7 @@ dans Chaîne mise en forme à envoyer au périphérique de vidage.
 
 Consultez [ATLTRACE2](#atltrace2) pour obtenir une description de ATLTRACE. ATLTRACE et ATLTRACE2 ont le même comportement, ATLTRACE est inclus à des fins de compatibilité descendante.
 
-##  <a name="atltrace2"></a>  ATLTRACE2
+##  <a name="atltrace2"></a>ATLTRACE2
 
 Signale les avertissements à un périphérique de sortie, tel que la fenêtre du débogueur, en fonction des indicateurs et des niveaux indiqués.
 
@@ -212,11 +212,11 @@ dans Chaîne à envoyer à la fenêtre sortie ou à n’importe quelle applicati
 *category*<br/>
 dans Type d’événement ou de méthode à signaler. Consultez les notes pour obtenir la liste des catégories.
 
-*niveau*<br/>
+*level*<br/>
 dans Niveau de suivi à signaler. Pour plus d’informations, consultez les notes.
 
 *lpszFormat*<br/>
-dans `printf`Chaîne de format de style à utiliser pour créer une chaîne à envoyer au périphérique de vidage.
+dans Chaîne de format de style `printf`à utiliser pour créer une chaîne à envoyer au périphérique de vidage.
 
 ### <a name="remarks"></a>Notes
 
@@ -228,7 +228,7 @@ Le paramètre *Category* répertorie les indicateurs de trace à définir. Ces i
 
 |Catégorie ATL|Description|
 |------------------|-----------------|
-|`atlTraceGeneral`|Génère des rapports sur toutes les applications ATL. Valeur par défaut.|
+|`atlTraceGeneral`|Génère des rapports sur toutes les applications ATL. La valeur par défaut.|
 |`atlTraceCOM`|Génère des rapports sur les méthodes COM.|
 |`atlTraceQI`|Signale les appels QueryInterface.|
 |`atlTraceRegistrar`|Signale l’inscription des objets.|
@@ -257,7 +257,7 @@ Le paramètre *Category* répertorie les indicateurs de trace à définir. Ces i
 |`traceDatabase`|Messages de la prise en charge des bases de données MFC.|
 |`traceInternet`|Messages du support Internet de MFC.|
 
-Pour déclarer une catégorie de trace personnalisée, déclarez une instance globale `CTraceCategory` de la classe comme suit :
+Pour déclarer une catégorie de trace personnalisée, déclarez une instance globale de la classe `CTraceCategory` comme suit :
 
 [!code-cpp[NVC_ATL_Utilities#109](../../atl/codesnippet/cpp/debugging-and-error-reporting-macros_3.cpp)]
 
@@ -267,7 +267,7 @@ Pour utiliser une catégorie définie par l’utilisateur :
 
 [!code-cpp[NVC_ATL_Utilities#110](../../atl/codesnippet/cpp/debugging-and-error-reporting-macros_4.cpp)]
 
-Pour spécifier que vous souhaitez filtrer les messages de trace, insérez les définitions de ces macros dans stdafx. h avant `#include <atlbase.h>` l’instruction.
+Pour spécifier que vous souhaitez filtrer les messages de trace, insérez les définitions de ces macros dans stdafx. h avant l’instruction `#include <atlbase.h>`.
 
 Vous pouvez également définir le filtre dans les directives de préprocesseur de la boîte de dialogue **pages de propriétés** . Cliquez sur l’onglet **préprocesseur** , puis insérez le global dans la zone de modification **définitions de préprocesseur** .
 
@@ -279,7 +279,7 @@ ATLTRACE2 limite le contenu de la chaîne à envoyer au périphérique de vidage
 
 ATLTRACE et ATLTRACE2 ont le même comportement, ATLTRACE est inclus à des fins de compatibilité descendante.
 
-### <a name="example"></a>Exemples
+### <a name="example"></a>Exemple
 
 [!code-cpp[NVC_ATL_Utilities#111](../../atl/codesnippet/cpp/debugging-and-error-reporting-macros_5.cpp)]
 
