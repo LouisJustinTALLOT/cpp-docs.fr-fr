@@ -23,11 +23,11 @@ helpviewer_keywords:
 - std::messages [C++], open
 ms.assetid: c4c71f40-4f24-48ab-9f7c-daccd8d5bd83
 ms.openlocfilehash: 704ee2ce40b4026cc066213181c96cf0f744d152
-ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
+ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/21/2019
-ms.locfileid: "72687684"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78884020"
 ---
 # <a name="messages-class"></a>messages, classe
 
@@ -44,7 +44,7 @@ class messages : public messages_base;
 
 ### <a name="parameters"></a>Paramètres
 
-*CharType* \
+*CharType*\
 Type utilisé dans un programme pour encoder des caractères dans des paramètres régionaux spécifiques.
 
 ## <a name="remarks"></a>Notes
@@ -59,14 +59,14 @@ Cette facette ouvre un catalogue de messages définis dans la classe de base mes
 |-|-|
 |[messages](#messages)|Fonction constructeur de facette de message.|
 
-### <a name="typedefs"></a>Typedef
+### <a name="typedefs"></a>Typedefs
 
 |Nom de type|Description|
 |-|-|
 |[char_type](#char_type)|Type de caractère utilisé pour afficher les messages.|
 |[string_type](#string_type)|Type qui décrit une chaîne de type `basic_string` qui contient des caractères de type `CharType`.|
 
-### <a name="member-functions"></a>Fonctions membres
+### <a name="member-functions"></a>Fonctions Membre
 
 |Fonction membre|Description|
 |-|-|
@@ -77,9 +77,9 @@ Cette facette ouvre un catalogue de messages définis dans la classe de base mes
 |[get](#get)|Récupère le catalogue de messages.|
 |[open](#open)|Ouvre le catalogue de messages.|
 
-## <a name="requirements"></a>spécifications
+## <a name="requirements"></a>Spécifications
 
-**En-tête :** \<locale>
+**En-tête :** \<paramètres régionaux >
 
 **Espace de noms :** std
 
@@ -105,7 +105,7 @@ void close(catalog _Catval) const;
 
 ### <a name="parameters"></a>Paramètres
 
-*_Catval* \
+*_Catval*\
 Catalogue à fermer.
 
 ### <a name="remarks"></a>Notes
@@ -122,7 +122,7 @@ virtual void do_close(catalog _Catval) const;
 
 ### <a name="parameters"></a>Paramètres
 
-*_Catval* \
+*_Catval*\
 Catalogue à fermer.
 
 ### <a name="remarks"></a>Notes
@@ -149,16 +149,16 @@ virtual string_type do_get(
 
 ### <a name="parameters"></a>Paramètres
 
-*_Catval* \
+*_Catval*\
 Valeur d’identification spécifiant le catalogue de messages dans lequel rechercher.
 
-*_* Définir \
+*_Set*\
 Premier identificateur utilisé pour localiser un message dans un catalogue de messages.
 
-*Corps* \
+*_Message*\
 Deuxième identificateur utilisé pour localiser un message dans un catalogue de messages.
 
-*_Dfault* \
+*_Dfault*\
 Chaîne à retourner en cas d’échec.
 
 ### <a name="return-value"></a>Valeur de retour
@@ -167,7 +167,7 @@ Elle retourne une copie de *_Dfault* en cas d’échec. Sinon, retourne une copi
 
 ### <a name="remarks"></a>Notes
 
-La fonction membre protégée tente d’obtenir une séquence de messages à partir du catalogue de messages *_Catval*. Elle peut utiliser *_ _* , *corps*et *_Dfault* .
+La fonction membre protégée tente d’obtenir une séquence de messages à partir du catalogue de messages *_Catval*. Pour ce faire, il peut utiliser *_Set*, *_Message*et *_Dfault* .
 
 ### <a name="example"></a>Exemple
 
@@ -185,10 +185,10 @@ virtual catalog do_open(
 
 ### <a name="parameters"></a>Paramètres
 
-*_Catname* \
+*_Catname*\
 Nom du catalogue dans lequel rechercher.
 
-*_Loc* \
+*_Loc*\
 Paramètres régionaux recherchés dans le catalogue.
 
 ### <a name="return-value"></a>Valeur de retour
@@ -197,7 +197,7 @@ Retourne une valeur inférieure à zéro en cas d’échec. Dans le cas contrair
 
 ### <a name="remarks"></a>Notes
 
-La fonction membre protégée tente d’ouvrir un catalogue de messages dont le nom est *_Catname*. Elle peut utiliser les paramètres régionaux *_Loc* .
+La fonction membre protégée tente d’ouvrir un catalogue de messages dont le nom est *_Catname*. Il peut utiliser les paramètres régionaux *_Loc* de cette manière.
 
 La valeur de retour doit être utilisée comme argument lors d’un appel ultérieur à [close](#close).
 
@@ -219,16 +219,16 @@ string_type get(
 
 ### <a name="parameters"></a>Paramètres
 
-*_Catval* \
+*_Catval*\
 Valeur d’identification spécifiant le catalogue de messages dans lequel rechercher.
 
-*_* Définir \
+*_Set*\
 Premier identificateur utilisé pour localiser un message dans un catalogue de messages.
 
-*Corps* \
+*_Message*\
 Deuxième identificateur utilisé pour localiser un message dans un catalogue de messages.
 
-*_Dfault* \
+*_Dfault*\
 Chaîne à retourner en cas d’échec.
 
 ### <a name="return-value"></a>Valeur de retour
@@ -254,10 +254,10 @@ protected: messages(
 
 ### <a name="parameters"></a>Paramètres
 
-*_Refs* \
-Valeur entière utilisée pour spécifier le type de gestion de mémoire pour l’objet.
+*_Refs*\
+Valeur entière qui sert à spécifier le type de gestion de la mémoire pour l’objet.
 
-*_Locname* \
+*_Locname*\
 Nom des paramètres régionaux.
 
 ### <a name="remarks"></a>Notes
@@ -286,10 +286,10 @@ catalog open(
 
 ### <a name="parameters"></a>Paramètres
 
-*_Catname* \
+*_Catname*\
 Nom du catalogue dans lequel rechercher.
 
-*_Loc* \
+*_Loc*\
 Paramètres régionaux recherchés dans le catalogue.
 
 ### <a name="return-value"></a>Valeur de retour
