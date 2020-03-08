@@ -7,15 +7,15 @@ f1_keywords:
 - new/std::set_new_handler
 ms.assetid: e250f06a-b025-4509-ae7a-5356d56aad7d
 ms.openlocfilehash: c912e5be07ea0ebdd3148d30c80c39a5f8cfa1a5
-ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
+ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68243665"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78854933"
 ---
 # <a name="ltnewgt-functions"></a>&lt;new&gt;, fonctions
 
-## <a name="get_new_handler"></a> get_new_handler
+## <a name="get_new_handler"></a>get_new_handler
 
 ```cpp
 new_handler get_new_handler() noexcept;
@@ -23,9 +23,9 @@ new_handler get_new_handler() noexcept;
 
 ### <a name="remarks"></a>Notes
 
-Retourne l’actuel `new_handler`.
+Renvoie l'actuel `new_handler`.
 
-## <a name="launder"></a> blanchiment
+## <a name="launder"></a>blanchi
 
 ```cpp
 template <class T>
@@ -34,18 +34,18 @@ template <class T>
 
 ### <a name="parameters"></a>Paramètres
 
-*PTR*\
-L’adresse d’un octet dans la mémoire qui contient un objet dont le type est similaire à *T*.
+\ *ptr*
+Adresse d’un octet en mémoire qui contient un objet dont le type est similaire à *T*.
 
 ### <a name="return-value"></a>Valeur de retour
 
-Une valeur de type *T\**  qui pointe vers X.
+Valeur de type *T\** qui pointe vers X.
 
 ### <a name="remarks"></a>Notes
 
-Également appelé une barrière de l’optimisation du pointeur.
+Également appelée barrière d’optimisation des pointeurs.
 
-Utilisé comme une expression constante lorsque la valeur de son argument peut être utilisée dans une expression constante. Un octet de stockage est accessible via une valeur de pointeur qui pointe vers un objet si, dans le stockage occupé par un autre objet, un objet avec un pointeur similaire.
+Utilisé en tant qu’expression constante lorsque la valeur de son argument peut être utilisée dans une expression constante. Un octet de stockage est accessible via une valeur de pointeur qui pointe vers un objet si dans le stockage occupé par un autre objet, un objet avec un pointeur similaire.
 
 ### <a name="example"></a>Exemple
 
@@ -59,9 +59,9 @@ const int b = p->n; // undefined behavior
 const int c = std::launder(p)->n; // OK
 ```
 
-## <a name="nothrow"></a> nothrow
+## <a name="nothrow"></a>nothrow
 
-Fournit un objet à utiliser en tant qu’argument pour le **nothrow** versions de **nouveau** et **supprimer**.
+Fournit un objet à utiliser comme argument pour les versions **nothrow** de **New** et **Delete**.
 
 ```cpp
 extern const std::nothrow_t nothrow;
@@ -73,11 +73,11 @@ L’objet est utilisé comme argument de fonction pour correspondre au type de p
 
 ### <a name="example"></a>Exemple
 
-Pour obtenir des exemples d’utilisation de `std::nothrow_t` comme paramètre de fonction, consultez [new, opérateur](../standard-library/new-operators.md#op_new) et [new &#91;&#93;, opérateur](../standard-library/new-operators.md#op_new_arr).
+Pour obtenir des exemples d’utilisation de [ comme paramètre de fonction, consultez ](../standard-library/new-operators.md#op_new)new, opérateur[ et ](../standard-library/new-operators.md#op_new_arr)new &#91;&#93;, opérateur`std::nothrow_t`.
 
-## <a name="set_new_handler"></a> set_new_handler
+## <a name="set_new_handler"></a>set_new_handler
 
-Installe une fonction de l’utilisateur qui doit être appelée lorsque **opérateur new** échoue dans sa tentative d’allocation de mémoire.
+Installe une fonction utilisateur qui doit être appelée lorsque l' **opérateur New** échoue lors de sa tentative d’allocation de mémoire.
 
 ```cpp
 new_handler set_new_handler(new_handler Pnew) throw();
@@ -86,7 +86,7 @@ new_handler set_new_handler(new_handler Pnew) throw();
 ### <a name="parameters"></a>Paramètres
 
 *Pnew*\
-Le `new_handler` doit être installé.
+`new_handler` à installer.
 
 ### <a name="return-value"></a>Valeur de retour
 
@@ -94,7 +94,7 @@ Le `new_handler` doit être installé.
 
 ### <a name="remarks"></a>Notes
 
-La fonction stocke *Pnew* dans statique [nouveau gestionnaire](../standard-library/new-typedefs.md#new_handler) pointeur qu’il gère, puis retourne la valeur précédemment stockée dans le pointeur. Le nouveau gestionnaire est utilisé par [opérateur new](../standard-library/new-operators.md#op_new)(**size_t**).
+La fonction stocke *PNEW* dans un [nouveau](../standard-library/new-typedefs.md#new_handler) pointeur de gestionnaire statique qu’elle gère, puis retourne la valeur précédemment stockée dans le pointeur. Le nouveau gestionnaire est utilisé par l' [opérateur New](../standard-library/new-operators.md#op_new)(**size_t**).
 
 ### <a name="example"></a>Exemple
 

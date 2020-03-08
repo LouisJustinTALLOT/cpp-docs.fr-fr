@@ -87,11 +87,11 @@ helpviewer_keywords:
 - std::multimap [C++], value_comp
 ms.assetid: 8796ae05-37c4-475a-9e61-75fde9d4a463
 ms.openlocfilehash: a4b066bf1620f8aaca1b0fc581348c73d5255591
-ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
+ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/21/2019
-ms.locfileid: "72687646"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78873971"
 ---
 # <a name="multimap-class"></a>multimap, classe
 
@@ -109,18 +109,18 @@ class multimap;
 
 ### <a name="parameters"></a>Paramètres
 
-@No__t_1 de *clé*
+\ de *clé*
 Type de données clé à stocker dans la classe multimap.
 
-@No__t_1 de *type*
+*Type*\
 Type de données d'élément à stocker dans la classe multimap.
 
-@No__t_1 *traits*
+\ *traits*
 Type qui fournit un objet de fonction pouvant comparer deux valeurs d'éléments comme clés de tri afin de déterminer leur ordre relatif dans la classe multimap. Le prédicat binaire `less<Key>` est la valeur par défaut.
 
-Dans C++14, vous pouvez activer la recherche hétérogène en spécifiant le prédicat `std::less<>` ou `std::greater<>` qui n'a aucun paramètre de type. Pour plus d’informations, consultez [Recherche hétérogène dans les conteneurs associatifs](../standard-library/stl-containers.md#heterogeneous-lookup-in-associative-containers-c14).
+Dans C++14, vous pouvez activer la recherche hétérogène en spécifiant le prédicat `std::less<>` ou `std::greater<>` qui n'a aucun paramètre de type. Pour plus d’informations, consultez [Recherche hétérogène dans les conteneurs associatifs](../standard-library/stl-containers.md#heterogeneous-lookup-in-associative-containers-c14)
 
-@No__t_1 *Allocator*
+\ *Allocator*
 Type qui représente l'objet allocateur stocké qui contient des informations sur l'allocation et la désallocation de mémoire de la classe map. Cet argument est facultatif et sa valeur par défaut est `allocator<pair <const Key, Type> >`.
 
 ## <a name="remarks"></a>Notes
@@ -147,7 +147,7 @@ La classe multimap doit être sélectionnée comme conteneur associatif lorsque 
 
 La classe multimap trie la séquence qu’elle contrôle en appelant un objet de fonction stocké de type [key_compare](#key_compare). Cet objet stocké est une fonction de comparaison à laquelle il est possible d’accéder en appelant la fonction membre [key_comp](#key_comp). En général, les éléments ne doivent pas être tout à fait comparables, afin que, à l'aide de deux événements quelconques donnés, il soit possible de déterminer, soit qu'ils soient équivalents (dans le sens où l'un n'est pas inférieur à l'autre), soit que l'un est inférieur à l'autre. Cela entraîne le tri des éléments non équivalents. D'un point de vue plus technique, la fonction de comparaison est un prédicat binaire qui induit un ordre faible strict au sens mathématique du terme. Un prédicat binaire `f(x,y)` est un objet de fonction qui a deux objets d'argument `x` et `y`, et une valeur de retour true ou false. Un tri appliqué à un ensemble est un ordre faible strict si le prédicat binaire est irréflexif, antisymétrique et transitif, et si l'équivalence est transitive, où deux objets `x` et `y` sont définis comme équivalents lorsque `f(x,y)` et `f(y,x)` sont false. Si la plus élevée des conditions d'égalité entre les clés remplace celle de l'équivalence, alors le tri devient total (dans le sens où tous les éléments sont classés les uns par rapport aux autres), et les clés correspondantes seront alors impossibles à différencier les unes des autres.
 
-Dans C++14, vous pouvez activer la recherche hétérogène en spécifiant le prédicat `std::less<>` ou `std::greater<>` qui n'a aucun paramètre de type. Pour plus d’informations, consultez [Recherche hétérogène dans les conteneurs associatifs](../standard-library/stl-containers.md#sequence_containers).
+Dans C++14, vous pouvez activer la recherche hétérogène en spécifiant le prédicat `std::less<>` ou `std::greater<>` qui n'a aucun paramètre de type. Pour plus d’informations, consultez [Recherche hétérogène dans les conteneurs associatifs](../standard-library/stl-containers.md#sequence_containers)
 
 ## <a name="members"></a>Membres
 
@@ -157,7 +157,7 @@ Dans C++14, vous pouvez activer la recherche hétérogène en spécifiant le pr�
 |-|-|
 |[multimap](#multimap)|Construit un `multimap` vide ou une copie de l'ensemble ou d'une partie d'un autre `multimap`.|
 
-### <a name="typedefs"></a>Typedef
+### <a name="typedefs"></a>Typedefs
 
 |Nom de type|Description|
 |-|-|
@@ -177,7 +177,7 @@ Dans C++14, vous pouvez activer la recherche hétérogène en spécifiant le pr�
 |[size_type](#size_type)|Type entier non signé qui fournit un pointeur vers un élément **const** dans un `multimap`.|
 |[value_type](#value_type)|Type qui fournit un objet de fonction pouvant comparer deux éléments comme clés de tri pour déterminer leur ordre relatif dans le `multimap`.|
 
-### <a name="member-functions"></a>Fonctions membres
+### <a name="member-functions"></a>Fonctions Membre
 
 |Fonction membre|Description|
 |-|-|
@@ -209,13 +209,13 @@ Dans C++14, vous pouvez activer la recherche hétérogène en spécifiant le pr�
 
 ### <a name="operators"></a>Opérateurs
 
-|opérateur|Description|
+|Opérateur|Description|
 |-|-|
 |[operator=](#op_eq)|Remplace les éléments d'un `multimap` par une copie d'un autre `multimap`.|
 
-## <a name="requirements"></a>spécifications
+## <a name="requirements"></a>Spécifications
 
-**En-tête :** \<map>
+**En-tête :** \<> de mappage
 
 **Espace de noms :** std
 
@@ -231,7 +231,7 @@ typedef Allocator allocator_type;
 
 ### <a name="example"></a>Exemple
 
-Consultez l’exemple de [get_allocator](#get_allocator) pour obtenir un exemple qui utilise `allocator_type`.
+Pour obtenir un exemple qui utilise [, consultez l’exemple relatif à ](#get_allocator)get_allocator`allocator_type`.
 
 ## <a name="begin"></a>  multimap::begin
 
@@ -304,7 +304,7 @@ Itérateur d’accès bidirectionnel **const** qui pointe vers le premier élém
 
 Avec la valeur de retour `cbegin`, les éléments de la plage ne peuvent pas être modifiés.
 
-Vous pouvez utiliser cette fonction membre à la place de la fonction membre `begin()` afin de garantir que la valeur de retour est `const_iterator`. En général, elle est utilisée conjointement avec le mot clé de déduction de type [auto](../cpp/auto-cpp.md), comme le montre l’exemple suivant. Dans l’exemple, considérez `Container` comme un conteneur modifiable (non **const**) de tout type qui prend en charge `begin()` et `cbegin()`.
+Vous pouvez utiliser cette fonction membre à la place de la fonction membre `begin()` afin de garantir que la valeur de retour est `const_iterator`. En général, elle est utilisée conjointement au mot clé de déduction de type [auto](../cpp/auto-cpp.md), comme le montre l’exemple suivant. Dans l’exemple, considérez `Container` comme un conteneur modifiable (non **const**) de tout type qui prend en charge `begin()` et `cbegin()`.
 
 ```cpp
 auto i1 = Container.begin();
@@ -330,7 +330,7 @@ Itérateur d’accès bidirectionnel **const** qui pointe juste après la fin de
 
 `cend` est utilisé pour vérifier si un itérateur a dépassé la fin de la plage.
 
-Vous pouvez utiliser cette fonction membre à la place de la fonction membre `end()` afin de garantir que la valeur de retour est `const_iterator`. En général, elle est utilisée conjointement avec le mot clé de déduction de type [auto](../cpp/auto-cpp.md), comme le montre l’exemple suivant. Dans l’exemple, considérez `Container` comme un conteneur modifiable (non **const**) de tout type qui prend en charge `end()` et `cend()`.
+Vous pouvez utiliser cette fonction membre à la place de la fonction membre `end()` afin de garantir que la valeur de retour est `const_iterator`. En général, elle est utilisée conjointement au mot clé de déduction de type [auto](../cpp/auto-cpp.md), comme le montre l’exemple suivant. Dans l’exemple, considérez `Container` comme un conteneur modifiable (non **const**) de tout type qui prend en charge `end()` et `cend()`.
 
 ```cpp
 auto i1 = Container.end();
@@ -406,7 +406,7 @@ Pour accéder à la valeur de la clé pour l’élément, utilisez `cIter->first
 
 ### <a name="example"></a>Exemple
 
-Pour obtenir un exemple qui utilise `const_iterator`, consultez l’exemple relatif à [begin](#begin).
+Consultez l’exemple de [begin](#begin) pour obtenir un exemple qui utilise `const_iterator`.
 
 ## <a name="const_pointer"></a>  multimap::const_pointer
 
@@ -492,7 +492,7 @@ Pour accéder à la valeur de la clé pour l’élément, utilisez `crIter->firs
 
 ### <a name="example"></a>Exemple
 
-Pour savoir comment déclarer et utiliser `const_reverse_iterator`, consultez l’exemple [rend](#rend).
+Pour savoir comment déclarer et utiliser [, consultez l’exemple ](#rend)rend`const_reverse_iterator`.
 
 ## <a name="count"></a>  multimap::count
 
@@ -577,11 +577,11 @@ Itérateur bidirectionnel inversé const qui traite le premier élément d’un 
 
 ### <a name="remarks"></a>Notes
 
-`crbegin` est utilisé avec une classe `multimap` inversée de la même manière que [begin](#begin) est utilisé avec une classe `multimap`.
+`crbegin` est utilisé avec un `multimap` inversé de la même manière que [begin](#begin) est utilisé avec un `multimap`.
 
 Avec la valeur de retour `crbegin`, l'objet `multimap` ne peut pas être changé.
 
-Vous pouvez utiliser `crbegin` pour itérer un objet `multimap` vers l’arrière.
+Vous pouvez utiliser `crbegin` pour itérer un `multimap` vers l’arrière.
 
 ### <a name="example"></a>Exemple
 
@@ -676,7 +676,7 @@ typedef typename allocator_type::difference_type difference_type;
 
 ### <a name="remarks"></a>Notes
 
-`difference_type` est le type retourné durant la soustraction ou l'incrémentation via les itérateurs du conteneur. Le `difference_type` est généralement utilisé pour représenter le nombre d’éléments dans la plage [*First*, *Last*) entre les itérateurs `first` et `last`, inclut l’élément désigné par `first` et la plage d’éléments allant jusqu’à, mais sans inclure , l’élément vers lequel pointe `last`.
+`difference_type` est le type retourné durant la soustraction ou l'incrémentation via les itérateurs du conteneur. Le `difference_type` est généralement utilisé pour représenter le nombre d’éléments de la plage [*First*, *Last*) entre les itérateurs `first` et `last`, inclut l’élément désigné par `first` et la plage d’éléments allant jusqu’à l’élément (mais sans l’inclure) vers lequel pointe `last`.
 
 Notez que même si `difference_type` est disponible pour tous les itérateurs qui répondent aux exigences d’un itérateur d’entrée, ce qui inclut la classe des itérateurs bidirectionnels prise en charge par les conteneurs réversibles tels que set, la soustraction entre les itérateurs n’est prise en charge que par les itérateurs à accès aléatoire fournis par un conteneur à accès aléatoire, par exemple vector.
 
@@ -726,7 +726,7 @@ The number of elements in the multimap m1 is: 4.
 
 ## <a name="emplace"></a>  multimap::emplace
 
-Insère un élément construit sur place (aucune opération de copie ou déplacement n’est effectuée).
+Insère un élément construit sur place (aucune opération de copie ni de déplacement n’est effectuée).
 
 ```cpp
 template <class... Args>
@@ -737,15 +737,15 @@ iterator emplace(Args&&... args);
 
 |Paramètre|Description|
 |-|-|
-|*attend*|Arguments transférés pour construire un élément à insérer dans le multimap.|
+|*args*|Arguments transférés pour construire un élément à insérer dans le multimap.|
 
 ### <a name="return-value"></a>Valeur de retour
 
-Itérateur vers l’élément qui vient d’être inséré.
+Un itérateur vers le nouvel élément inséré.
 
 ### <a name="remarks"></a>Notes
 
-Aucune référence aux éléments de conteneur n’est invalidée par cette fonction, mais elle peut invalider tous les itérateurs du conteneur.
+Aucune référence aux éléments conteneurs n’est invalidée par cette fonction, mais elle peut invalider tous les itérateurs du conteneur.
 
 Si une exception est levée pendant l’insertion, le conteneur n’est pas modifié et l’exception est levée une nouvelle fois.
 
@@ -794,7 +794,7 @@ int main()
 
 ## <a name="emplace_hint"></a>  multimap::emplace_hint
 
-Insère un élément construit sur place (aucune opération de copie ni de déplacement n’est effectuée) avec un indicateur de positionnement.
+Insère un élément construit sur place (sans opération de copie ni de déplacement) avec un indicateur de positionnement.
 
 ```cpp
 template <class... Args>
@@ -807,16 +807,16 @@ iterator emplace_hint(
 
 |Paramètre|Description|
 |-|-|
-|*attend*|Arguments transférés pour construire un élément à insérer dans le multimap.|
+|*args*|Arguments transférés pour construire un élément à insérer dans le multimap.|
 |*where*|Emplacement où commencer à rechercher le point d'insertion correct. (Si ce point précède immédiatement *, l'* insertion peut se produire dans le temps constant amorti plutôt que dans le temps logarithmique.)|
 
 ### <a name="return-value"></a>Valeur de retour
 
-Itérateur vers l’élément qui vient d’être inséré.
+Un itérateur vers le nouvel élément inséré.
 
 ### <a name="remarks"></a>Notes
 
-Aucune référence aux éléments de conteneur n’est invalidée par cette fonction, mais elle peut invalider tous les itérateurs du conteneur.
+Aucune référence aux éléments conteneurs n’est invalidée par cette fonction, mais elle peut invalider tous les itérateurs du conteneur.
 
 Durant le placement, si une exception est levée, l’état du conteneur n’est pas modifié.
 
@@ -910,7 +910,7 @@ Clé d’argument à comparer à la clé de tri d’un élément du multimap dan
 
 Paire d’itérateurs telle que le premier est la [lower_bound](#lower_bound) de la clé et le second est la [upper_bound](#upper_bound) de la clé.
 
-Pour accéder au premier itérateur d’une paire `pr` retournée par la fonction membre, utilisez `pr`. **first**, et pour déréférencer l’itérateur de la limite inférieure, utilisez \*( `pr`. **first**). Pour accéder au second itérateur d’une paire `pr` retournée par la fonction membre, utilisez `pr`. **second**, et pour déréférencer l’itérateur de la limite supérieure, utilisez \*( `pr`. **second**).
+Pour accéder au premier itérateur d’une paire `pr` retournée par la fonction membre, utilisez `pr`. **first**, et pour déréférencer l’itérateur de la limite inférieure, utilisez \*( `pr`. **first**). Pour accéder au deuxième itérateur d’une paire `pr` retournée par la fonction membre, utilisez `pr`. **second**, et pour déréférencer l’itérateur de la limite supérieure, utilisez \*( `pr`. **second**).
 
 ### <a name="example"></a>Exemple
 
@@ -990,21 +990,21 @@ size_type erase(
 
 ### <a name="parameters"></a>Paramètres
 
-*Où* \
+*Où*\
 Position de l’élément à supprimer.
 
-*Premier* \
+*Premier*\
 Position du premier élément à supprimer.
 
-*Dernier* \
+*Dernier*\
 Position juste après le dernier élément à supprimer.
 
-@No__t_1 de *clé*
+\ de *clé*
 Clé des éléments à supprimer.
 
 ### <a name="return-value"></a>Valeur de retour
 
-Pour les deux premières fonctions membres, itérateur bidirectionnel qui désigne le premier élément restant après que tous les éléments ont été supprimés ou élément à la fin de la classe map si aucun élément de ce type n’existe.
+Pour les deux premières fonctions membres, itérateur bidirectionnel qui désigne le premier élément restant au-delà de tous les éléments supprimés, ou élément situé à la fin de l’objet map si aucun élément de ce type n’existe.
 
 Pour la troisième fonction membre, retourne le nombre d’éléments qui ont été supprimés du multimap.
 
@@ -1113,7 +1113,7 @@ Allocateur utilisé par le multimap.
 
 ### <a name="remarks"></a>Notes
 
-Les allocateurs de la classe multimap spécifient la façon dont la classe gère le stockage. Les allocateurs par défaut fournis avec les classes de conteneur de la bibliothèque standard C++ sont suffisants pour la plupart des besoins en programmation. L'écriture et l'utilisation de votre propre classe d'allocateur font l'objet d'une rubrique avancée du langage C++.
+Les allocateurs de la classe multimap spécifient la façon dont la classe gère le stockage. Les allocateurs par défaut fournis avec les classes de conteneur de bibliothèque C++ Standard suffisent à satisfaire la plupart des besoins en programmation. L'écriture et l'utilisation de votre propre classe d'allocateur font l'objet d'une rubrique avancée du langage C++.
 
 ### <a name="example"></a>Exemple
 
@@ -1216,8 +1216,8 @@ IList);
 |*Multiples*|Valeur d'un élément à insérer dans la classe multimap.|
 |*Where*|Emplacement où commencer à rechercher le point d'insertion correct. (Si ce point précède immédiatement *, l'* insertion peut se produire dans le temps constant amorti plutôt que dans le temps logarithmique.)|
 |*ValTy*|Paramètre de modèle qui spécifie le type d’argument que le mappage peut utiliser pour construire un élément de [Value_type](../standard-library/map-class.md#value_type), et parfait-transfère la valeur *Val* comme argument.|
-|*Premier*|Position du premier élément à copier.|
-|*Famille*|Position juste au-delà du dernier élément à copier.|
+|*Première*|Position du premier élément à copier.|
+|*Dernière*|Position juste au-delà du dernier élément à copier.|
 |*InputIterator*|Argument de fonction de modèle qui remplit les conditions requises par un [itérateur d’entrée](../standard-library/input-iterator-tag-struct.md) qui pointe vers des éléments d’un type pouvant servir à construire des objets [value_type](../standard-library/map-class.md#value_type).|
 |*IList*|[initializer_list](../standard-library/initializer-list.md) à partir de laquelle copier les éléments.|
 
@@ -1235,7 +1235,7 @@ Durant l'insertion d'un seul élément, si une exception est levée, l'état du 
 
 Le [value_type](../standard-library/map-class.md#value_type) d’un conteneur est un typedef qui appartient au conteneur et, pour la classe map, `multimap<K, V>::value_type` est `pair<const K, V>`. La valeur d'un élément est une paire ordonnée dans laquelle le premier composant est égal à la valeur de clé et le second composant est égal à la valeur de données de l'élément.
 
-La fonction membre de plage (5) insère la séquence de valeurs d’éléments dans un Multimap qui correspond à chaque élément traité par un itérateur dans la plage `[First, Last)` ; par conséquent, la *dernière* n’est pas insérée. La fonction membre de conteneur `end()` fait référence à la position qui suit le dernier élément du conteneur. Par exemple, l'instruction `m.insert(v.begin(), v.end());` insère tous les éléments de `v` dans `m`.
+La fonction membre de plage (5) insère la séquence de valeurs d’éléments dans un Multimap qui correspond à chaque élément traité par un itérateur dans la plage `[First, Last)`; par conséquent, la *dernière* n’est pas insérée. La fonction membre de conteneur `end()` fait référence à la position qui suit le dernier élément du conteneur. Par exemple, l'instruction `m.insert(v.begin(), v.end());` insère tous les éléments de `v` dans `m`.
 
 La fonction membre de liste d’initialiseurs (6) utilise une [initializer_list](../standard-library/initializer-list.md) pour copier des éléments dans la classe map.
 
@@ -1351,7 +1351,7 @@ Un `iterator` de type peut être utilisé pour modifier la valeur d’un éléme
 
 ### <a name="example"></a>Exemple
 
-Pour savoir comment déclarer et utiliser `iterator`, consultez l’exemple relatif à [begin](#begin).
+Pour savoir comment déclarer et utiliser [, consultez l’exemple relatif à ](#begin)begin`iterator`.
 
 ## <a name="key_comp"></a>  multimap::key_comp
 
@@ -1440,7 +1440,7 @@ Pour plus d’informations sur `Traits`, consultez la rubrique [multimap, classe
 
 ### <a name="example"></a>Exemple
 
-Pour découvrir comment déclarer et utiliser `key_compare`, consultez l’exemple relatif à [key_comp](#key_comp).
+Pour savoir comment déclarer et utiliser [, consultez l’exemple de ](#key_comp)key_comp`key_compare`.
 
 ## <a name="key_type"></a>  multimap::key_type
 
@@ -1458,7 +1458,7 @@ Pour plus d’informations sur `Key`, consultez la section Notes de la rubrique 
 
 ### <a name="example"></a>Exemple
 
-Pour découvrir comment déclarer et utiliser `key_type`, consultez l’exemple relatif à [value_type](#value_type).
+Pour découvrir comment déclarer et utiliser [, consultez l’exemple relatif à ](#value_type)value_type`key_type`.
 
 ## <a name="lower_bound"></a>  multimap::lower_bound
 
@@ -1564,7 +1564,7 @@ Pour plus d’informations sur `Type`, consultez la rubrique [multimap, classe](
 
 ### <a name="example"></a>Exemple
 
-Pour découvrir comment déclarer et utiliser `key_type`, consultez l’exemple relatif à [value_type](#value_type).
+Pour découvrir comment déclarer et utiliser [, consultez l’exemple relatif à ](#value_type)value_type`key_type`.
 
 ## <a name="max_size"></a>  multimap::max_size
 
@@ -1655,20 +1655,20 @@ multimap(
 |-|-|
 |*&*|Classe d’allocateur de stockage à utiliser pour cet objet multimap, qui est par défaut Allocator.|
 |*Conformes*|Fonction de comparaison de type `constTraits` utilisée pour ordonner les éléments dans le mappage (par défaut, `Traits`).|
-|*Droite*|Mappage dont l’ensemble construit doit être une copie.|
-|*Premier*|Position du premier élément de la plage d'éléments à copier.|
-|*Famille*|Position du premier élément au-delà de la plage d'éléments à copier.|
-|*IList*|Initializer_list depuis laquelle copier les éléments.|
+|*Right*|Mappage dont l’ensemble construit doit être une copie.|
+|*Première*|Position du premier élément de la plage d'éléments à copier.|
+|*Dernière*|Position du premier élément au-delà de la plage d'éléments à copier.|
+|*IList*|initializer_list depuis laquelle copier les éléments.|
 
 ### <a name="remarks"></a>Notes
 
-Tous les constructeurs stockent un type d’objet allocateur qui gère le stockage de mémoire du multimap et peut être retourné ultérieurement en appelant [get_allocator](#get_allocator). Le paramètre d’allocateur est souvent omis dans les déclarations de classe, et des macros de prétraitement sont utilisées pour substituer des allocateurs de remplacement.
+Tous les constructeurs stockent un type d’objet allocateur qui gère le stockage de mémoire du multimap et peut être retourné ultérieurement en appelant [get_allocator](#get_allocator). Le paramètre d’allocateur est souvent omis dans les déclarations de classe et des macros de prétraitement sont utilisées pour substituer des allocateurs de remplacement.
 
 Tous les constructeurs initialisent leur multimap.
 
 Tous les constructeurs stockent un objet de fonction de type `Traits`, qui est utilisé pour établir un ordre parmi les clés du multimap et qui peut être retourné ultérieurement en appelant [key_comp](#key_comp).
 
-Les trois premiers constructeurs spécifient un Multimap initial vide, le second spécifiant le type de fonction de comparaison (*COMP*) à utiliser pour établir l’ordre des éléments et le troisième spécifie explicitement le type d’allocateur (*al*) à utiliser. servir. Le mot clé **Explicit** supprime certains genres de conversion de type automatique.
+Les trois premiers constructeurs spécifient un Multimap initial vide, le second spécifiant le type de fonction de comparaison (*COMP*) à utiliser pour établir l’ordre des éléments et le troisième spécifie explicitement le type d’allocateur (*al*) à utiliser. Le mot clé **Explicit** supprime certains genres de conversion de type automatique.
 
 Le quatrième constructeur spécifie une copie du *droit*Multimap.
 
@@ -2098,7 +2098,7 @@ Pour accéder à la valeur de la clé pour l’élément, utilisez `rIter->first
 
 ### <a name="example"></a>Exemple
 
-Consultez l’exemple relatif à [rbegin](#rbegin) pour savoir comment déclarer et utiliser `reverse_iterator`.
+Pour découvrir comment déclarer et utiliser [, consultez l’exemple relatif à ](#rbegin)rbegin`reverse_iterator`.
 
 ## <a name="size"></a>  multimap::size
 
@@ -2154,7 +2154,7 @@ typedef typename allocator_type::size_type size_type;
 
 ### <a name="example"></a>Exemple
 
-Pour découvrir comment déclarer et utiliser `size_type`, consultez l’exemple relatif à [size](#size).
+Pour savoir comment déclarer et utiliser [, consultez l’exemple ](#size)size`size_type`.
 
 ## <a name="swap"></a>  multimap::swap
 
@@ -2318,7 +2318,7 @@ Retourne l’objet de fonction de comparaison utilisé par un multimap pour ordo
 
 ### <a name="remarks"></a>Notes
 
-Pour un Multimap *m*, si deux éléments *E1*(*K1*, *D1*) et *E2*(*K2*, *D2*) sont des objets de type `value_type`, où *K1* et *K2* sont leurs clés de type 0 et *D1* et *D2* sont leurs données de type 3, 4 équivaut à 5.
+Pour un Multimap *m*, si deux éléments *E1*(*K1*, *D1*) et *E2*(*K2*, *D2*) sont des objets de type `value_type`, où *K1* et *K2* sont leurs clés de type `key_type` et *D1* et *D2* sont leurs données de type `mapped_type`, `m.value_comp(e1, e2)` équivaut à `m.key_comp(k1, k2)`.
 
 ### <a name="example"></a>Exemple
 
@@ -2438,6 +2438,6 @@ The values of the mapped elements are: 10 20.
 
 ## <a name="see-also"></a>Voir aussi
 
-[Conteneurs](../cpp/containers-modern-cpp.md)\
-[Sécurité des threads dans la bibliothèque standard C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)\
-[Informations de référence sur la bibliothèque standard C++](../standard-library/cpp-standard-library-reference.md)
+[Containers](../cpp/containers-modern-cpp.md)\
+[Sécurité des threads dans la bibliothèque C++ Standard](../standard-library/thread-safety-in-the-cpp-standard-library.md)\
+[Informations de référence sur la bibliothèque C++ Standard](../standard-library/cpp-standard-library-reference.md)

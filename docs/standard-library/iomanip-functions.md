@@ -27,11 +27,11 @@ helpviewer_keywords:
 - std::setprecision [C++]
 - std::setw [C++]
 ms.openlocfilehash: 944834e40a399622b5c85d95100d4ca3c3c2da93
-ms.sourcegitcommit: a930a9b47bd95599265d6ba83bb87e46ae748949
+ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/22/2020
-ms.locfileid: "76518463"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78856516"
 ---
 # <a name="ltiomanipgt-functions"></a>&lt;iomanip&gt;, fonctions
 
@@ -51,7 +51,7 @@ template <class Money>
 T7 get_money(Money& amount, bool use_intl);
 ```
 
-### <a name="parameters"></a>Parameters
+### <a name="parameters"></a>Paramètres
 
 *quantité*\
 Valeur monétaire extraite.
@@ -74,7 +74,7 @@ template <class Elem>
 T10 put_time(struct tm *time_ptr, const Elem *time_format);
 ```
 
-### <a name="parameters"></a>Parameters
+### <a name="parameters"></a>Paramètres
 
 *time_ptr*\
 Heure sous la forme d’une structure de temps.
@@ -95,7 +95,7 @@ template <class Money>
 T8 put_money(const Money& amount, bool use_intl);
 ```
 
-### <a name="parameters"></a>Parameters
+### <a name="parameters"></a>Paramètres
 
 *quantité*\
 Valeur monétaire à insérer dans le flux.
@@ -105,7 +105,7 @@ A la valeur **true** si le manipulateur doit utiliser le format international, *
 
 ### <a name="return-value"></a>Valeur de retour
 
-Renvoie `str`.
+Retourne `str`.
 
 ### <a name="remarks"></a>Notes
 
@@ -122,7 +122,7 @@ template <class Elem>
 T10 put_time(struct tm* time_ptr, const Elem* time_format);
 ```
 
-### <a name="parameters"></a>Parameters
+### <a name="parameters"></a>Paramètres
 
 *time_ptr*\
 Valeur de temps à écrire dans le flux, fournie dans une structure de temps.
@@ -145,7 +145,7 @@ quoted(std::string str, char delimiter, char escape) // or wide versions
 quoted(const char* str, char delimiter, char escape) // or wide versions
 ```
 
-### <a name="parameters"></a>Parameters
+### <a name="parameters"></a>Paramètres
 
 *str*\
 Std :: String, char\*, littéral de chaîne ou littéral de chaîne brute, ou une version étendue de l’une d’entre elles (par exemple, std :: wstring, wchar_t\*).
@@ -309,7 +309,7 @@ Efface les indicateurs spécifiés.
 T1 resetiosflags(ios_base::fmtflags mask);
 ```
 
-### <a name="parameters"></a>Parameters
+### <a name="parameters"></a>Paramètres
 
 *masque*\
 Indicateurs à effacer.
@@ -320,7 +320,7 @@ Le manipulateur retourne un objet qui, lorsqu’il est extrait ou inséré dans 
 
 ### <a name="example"></a>Exemple
 
-Pour obtenir un exemple d’utilisation de `resetiosflags`, consultez [setw](../standard-library/iomanip-functions.md#setw).
+Pour obtenir un exemple d’utilisation de [, consultez ](../standard-library/iomanip-functions.md#setw)setw`resetiosflags`.
 
 ## <a name="setbase"></a>  setbase
 
@@ -330,7 +330,7 @@ Définir la base pour les entiers.
 T3 setbase(int base);
 ```
 
-### <a name="parameters"></a>Parameters
+### <a name="parameters"></a>Paramètres
 
 *base*\
 Base numérique.
@@ -349,7 +349,7 @@ Le manipulateur retourne un objet qui, lorsqu’il est extrait ou inséré dans 
 
 ### <a name="example"></a>Exemple
 
-Pour obtenir un exemple d’utilisation de `setbase`, consultez [setw](../standard-library/iomanip-functions.md#setw).
+Pour obtenir un exemple d’utilisation de [, consultez ](../standard-library/iomanip-functions.md#setw)setw`setbase`.
 
 ## <a name="setfill"></a>  setfill
 
@@ -360,7 +360,7 @@ template <class Elem>
 T4 setfill(Elem Ch);
 ```
 
-### <a name="parameters"></a>Parameters
+### <a name="parameters"></a>Paramètres
 
 *Ch*\
 Caractère qui sera utilisé pour remplir les espaces dans un affichage aligné à droite.
@@ -371,7 +371,7 @@ Le manipulateur de modèle retourne un objet qui, lorsqu’il est extrait ou ins
 
 ### <a name="example"></a>Exemple
 
-Pour obtenir un exemple d’utilisation de `setfill`, consultez [setw](../standard-library/iomanip-functions.md#setw).
+Pour obtenir un exemple d’utilisation de [, consultez ](../standard-library/iomanip-functions.md#setw)setw`setfill`.
 
 ## <a name="setiosflags"></a>  setiosflags
 
@@ -381,7 +381,7 @@ Définit les indicateurs spécifiés.
 T2 setiosflags(ios_base::fmtflags mask);
 ```
 
-### <a name="parameters"></a>Parameters
+### <a name="parameters"></a>Paramètres
 
 *masque*\
 Indicateurs à définir.
@@ -392,7 +392,7 @@ Le manipulateur retourne un objet qui, lorsqu’il est extrait ou inséré dans 
 
 ### <a name="example"></a>Exemple
 
-Pour obtenir un exemple d’utilisation de `setiosflags`, consultez [setw](../standard-library/iomanip-functions.md#setw).
+Pour obtenir un exemple d’utilisation de [, consultez ](../standard-library/iomanip-functions.md#setw)setw`setiosflags`.
 
 ## <a name="setprecision"></a>  setprecision
 
@@ -402,7 +402,7 @@ Définit la précision des valeurs à virgule flottante.
 T5 setprecision(streamsize Prec);
 ```
 
-### <a name="parameters"></a>Parameters
+### <a name="parameters"></a>Paramètres
 
 *Prec*\
 Précision des valeurs à virgule flottante.
@@ -413,7 +413,7 @@ Le manipulateur retourne un objet qui, lorsqu’il est extrait ou inséré dans 
 
 ### <a name="example"></a>Exemple
 
-Pour obtenir un exemple d’utilisation de `setprecision`, consultez [setw](../standard-library/iomanip-functions.md#setw).
+Pour obtenir un exemple d’utilisation de [, consultez ](../standard-library/iomanip-functions.md#setw)setw`setprecision`.
 
 ## <a name="setw"></a>  setw
 
@@ -423,7 +423,7 @@ Spécifie la largeur du champ affichage pour l’élément suivant dans le flux.
 T6 setw(streamsize Wide);
 ```
 
-### <a name="parameters"></a>Parameters
+### <a name="parameters"></a>Paramètres
 
 *Large*\
 Largeur de la zone d’affichage.

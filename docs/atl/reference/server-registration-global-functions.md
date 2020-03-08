@@ -9,11 +9,11 @@ f1_keywords:
 - atlbase/ATL::AtlComModuleGetClassObject
 ms.assetid: c2f0a35d-857c-4538-a44d-c4ea0db63b06
 ms.openlocfilehash: f9c3697259e1cee2b1107ded785ca583d730b55e
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69495461"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78863178"
 ---
 # <a name="server-registration-global-functions"></a>Fonctions globales d’inscription de serveur
 
@@ -30,11 +30,11 @@ Ces fonctions assurent la prise en charge de l’inscription et de l’annulatio
 |[AtlComModuleRevokeClassObjects](#atlcommodulerevokeclassobjects)|Cette fonction est appelée pour révoquer des objets de classe d’un module COM.|
 |[AtlComModuleGetClassObject](#atlcommodulegetclassobject)|Cette fonction est appelée pour récupérer l’objet de classe.|
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
-**En-tête:** atlbase. h
+**En-tête :** atlbase. h
 
-##  <a name="atlcommoduleregisterserver"></a>  AtlComModuleRegisterServer
+##  <a name="atlcommoduleregisterserver"></a>AtlComModuleRegisterServer
 
 Cette fonction est appelée pour inscrire chaque objet du mappage d'objets.
 
@@ -58,15 +58,15 @@ Pointe vers le CLSID de l’objet à inscrire. Si la valeur est NULL, tous les o
 
 ### <a name="return-value"></a>Valeur de retour
 
-Retourne S_OK en cas de réussite, ou une erreur HRESULT en cas d’échec.
+Retourne S_OK en cas de réussite, ou un HRESULT d’erreur en cas d’échec.
 
 ### <a name="remarks"></a>Notes
 
-`AtlComModuleRegisterServer`parcourt le mappage d’objets générés automatiquement par ATL et inscrit chaque objet dans le mappage. Si *pCLSID* n’a pas la valeur null, seul l’objet référencé par *pCLSID* est inscrit; Sinon, tous les objets sont inscrits.
+`AtlComModuleRegisterServer` parcourt le mappage d’objets générés automatiquement par ATL et inscrit chaque objet dans le mappage. Si *pCLSID* n’a pas la valeur null, seul l’objet référencé par *pCLSID* est inscrit ; Sinon, tous les objets sont inscrits.
 
-Cette fonction est appelée par [CAtlComModule:: RegisterServer](catlcommodule-class.md#registerserver).
+Cette fonction est appelée par [CAtlComModule :: RegisterServer](catlcommodule-class.md#registerserver).
 
-##  <a name="atlcommoduleunregisterserver"></a>  AtlComModuleUnregisterServer
+##  <a name="atlcommoduleunregisterserver"></a>AtlComModuleUnregisterServer
 
 Cette fonction est appelée pour annuler l'inscription de chaque objet du mappage d'objets.
 
@@ -90,15 +90,15 @@ Pointe vers le CLSID de l’objet dont l’inscription doit être annulée. Si l
 
 ### <a name="return-value"></a>Valeur de retour
 
-Retourne S_OK en cas de réussite, ou une erreur HRESULT en cas d’échec.
+Retourne S_OK en cas de réussite, ou un HRESULT d’erreur en cas d’échec.
 
 ### <a name="remarks"></a>Notes
 
-`AtlComModuleUnregisterServer`parcourt le mappage d’objet ATL et annule l’inscription de chaque objet dans la classe Map. Si *pCLSID* n’a pas la valeur null, seul l’enregistrement de l’objet référencé par *pCLSID* est annulé; dans le cas contraire, tous les objets sont désinscrits.
+`AtlComModuleUnregisterServer` parcourt le mappage d’objet ATL et annule l’inscription de chaque objet dans la classe Map. Si *pCLSID* n’a pas la valeur null, seul l’enregistrement de l’objet référencé par *pCLSID* est annulé ; dans le cas contraire, tous les objets sont désinscrits.
 
-Cette fonction est appelée par [CAtlComModule:: UnregisterServer](catlcommodule-class.md#unregisterserver).
+Cette fonction est appelée par [CAtlComModule :: UnregisterServer](catlcommodule-class.md#unregisterserver).
 
-##  <a name="atlcommoduleregisterclassobjects"></a>  AtlComModuleRegisterClassObjects
+##  <a name="atlcommoduleregisterclassobjects"></a>AtlComModuleRegisterClassObjects
 
 Cette fonction est appelée pour inscrire des objets de classe.
 
@@ -122,13 +122,13 @@ Détermine les types de connexion à l’objet de classe. Les valeurs possibles 
 
 ### <a name="return-value"></a>Valeur de retour
 
-Retourne S_OK en cas de réussite, ou une erreur HRESULT en cas d’échec.
+Retourne S_OK en cas de réussite, ou un HRESULT d’erreur en cas d’échec.
 
 ### <a name="remarks"></a>Notes
 
-Cette fonction d’assistance est utilisée par [CComModule:: RegisterClassObjects](ccommodule-class.md#registerclassobjects) (obsolète dans ATL 7,0) et [CAtlExeModuleT:: RegisterClassObjects](catlexemodulet-class.md#registerclassobjects).
+Cette fonction d’assistance est utilisée par [CComModule :: RegisterClassObjects](ccommodule-class.md#registerclassobjects) (obsolète dans ATL 7,0) et [CAtlExeModuleT :: RegisterClassObjects](catlexemodulet-class.md#registerclassobjects).
 
-##  <a name="atlcommodulerevokeclassobjects"></a>  AtlComModuleRevokeClassObjects
+##  <a name="atlcommodulerevokeclassobjects"></a>AtlComModuleRevokeClassObjects
 
 Cette fonction est appelée pour supprimer la ou les fabriques de classes de la table des objets en cours d'exécution (ROT).
 
@@ -143,13 +143,13 @@ Pointeur vers le module COM.
 
 ### <a name="return-value"></a>Valeur de retour
 
-Retourne S_OK en cas de réussite, ou une erreur HRESULT en cas d’échec.
+Retourne S_OK en cas de réussite, ou un HRESULT d’erreur en cas d’échec.
 
 ### <a name="remarks"></a>Notes
 
-Cette fonction d’assistance est utilisée par [CComModule:: RevokeClassObjects](ccommodule-class.md#revokeclassobjects) (obsolète dans ATL 7,0) et [CAtlExeModuleT:: RevokeClassObjects](catlexemodulet-class.md#revokeclassobjects).
+Cette fonction d’assistance est utilisée par [CComModule :: RevokeClassObjects](ccommodule-class.md#revokeclassobjects) (obsolète dans ATL 7,0) et [CAtlExeModuleT :: RevokeClassObjects](catlexemodulet-class.md#revokeclassobjects).
 
-##  <a name="atlcommodulegetclassobject"></a>  AtlComModuleGetClassObject
+##  <a name="atlcommodulegetclassobject"></a>AtlComModuleGetClassObject
 
 Cette fonction est appelée pour retourner la fabrique de classe.
 
@@ -177,11 +177,11 @@ Pointeur vers le pointeur d’interface identifié par *riid*. Si l’objet ne p
 
 ### <a name="return-value"></a>Valeur de retour
 
-Retourne S_OK en cas de réussite, ou une erreur HRESULT en cas d’échec.
+Retourne S_OK en cas de réussite, ou un HRESULT d’erreur en cas d’échec.
 
 ### <a name="remarks"></a>Notes
 
-Cette fonction d’assistance est utilisée par [CComModule:: GetClassObject,](ccommodule-class.md#getclassobject) (obsolète dans ATL 7,0) et [CAtlDllModuleT:: GetClassObject,](catldllmodulet-class.md#getclassobject).
+Cette fonction d’assistance est utilisée par [CComModule :: GetClassObject,](ccommodule-class.md#getclassobject) (obsolète dans ATL 7,0) et [CAtlDllModuleT :: GetClassObject,](catldllmodulet-class.md#getclassobject).
 
 ## <a name="see-also"></a>Voir aussi
 
