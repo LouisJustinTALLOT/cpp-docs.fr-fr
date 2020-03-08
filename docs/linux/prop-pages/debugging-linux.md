@@ -2,12 +2,12 @@
 title: Débogage, propriétés (Linux C++) | Microsoft Docs
 ms.date: 06/07/2019
 ms.assetid: 0c1c0fcc-a49b-451c-a5cb-ce9711fac064
-ms.openlocfilehash: d76e398d648db7c5cf65e4ca2bb1665aef4359ad
-ms.sourcegitcommit: 8adabe177d557c74566c13145196c11cef5d10d4
-ms.translationtype: HT
+ms.openlocfilehash: 8a57e983a32e1ef1eca2bf2452df2cd39d453467
+ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/10/2019
-ms.locfileid: "66821400"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78883705"
 ---
 # <a name="c-debugging-properties-linux-c"></a>Débogage C++, propriétés (Linux C++)
 
@@ -19,9 +19,9 @@ La prise en charge Linux est disponible dans Visual Studio 2017 et ultérieur.
 
 ::: moniker range=">=vs-2017"
 
-Property | Description | Options
+Propriété | Description | Choices
 --- | ---| ---
-Machine de débogage distante | **Visual Studio 2019 version 16.1** : spécifie la machine sur laquelle déboguer le programme. Peut être différente de la machine de build distante spécifiée dans la page [Général](general-linux.md).
+Machine de débogage distante | **Visual Studio 2019 version 16,1**: spécifie l’ordinateur sur lequel le programme doit être débogué. Peut être différente de la machine de build distante spécifiée dans la page [Général](general-linux.md). Vous pouvez ajouter ou modifier une connexion à un ordinateur cible à l’aide des **outils** > **options** > **Gestionnaire de connexions** **inter-plateforme** > .
 Commande de prélancement | Commande exécutée dans l’interpréteur de commandes avant le démarrage du débogueur, qui peut être utilisée pour changer l’environnement de débogage.
 Programme | Chemin complet sur le système distant du programme à déboguer. S’il reste vide ou s’il n’est pas changé, il renvoie par défaut à la sortie du projet actuel.
 Arguments de programme | Arguments de ligne de commande à passer au programme en cours de débogage.
