@@ -25,15 +25,15 @@ helpviewer_keywords:
 - std::uncaught_exception [C++]
 - std::unexpected [C++]
 ms.openlocfilehash: 34a34c48be8bb0e319a7d0eebeccba805cafbc1f
-ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
+ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68246056"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78854902"
 ---
 # <a name="ltexceptiongt-functions"></a>&lt;exception&gt;, fonctions
 
-## <a name="current_exception"></a> current_exception
+## <a name="current_exception"></a>current_exception
 
 Obtient un pointeur intelligent vers l'exception actuelle.
 
@@ -49,13 +49,13 @@ Objet [exception_ptr](../standard-library/exception-typedefs.md#exception_ptr) q
 
 Appelez la fonction `current_exception` dans un bloc catch. Si une exception a été levée et si le bloc catch peut l'intercepter, la fonction `current_exception` retourne un objet `exception_ptr` qui référence l'exception. Sinon, la fonction retourne un objet `exception_ptr` null.
 
-Le `current_exception` fonction capture l’exception qui est en vol même si le **catch** instruction spécifie un [déclaration d’exception](../cpp/try-throw-and-catch-statements-cpp.md) instruction.
+La fonction `current_exception` capture l’exception qui est en vol, que l’instruction **catch** spécifie ou non une instruction de [déclaration d’exception](../cpp/try-throw-and-catch-statements-cpp.md) .
 
-Le destructeur de l’exception actuelle est appelé à la fin de la **catch** bloquer si vous ne pas lever à nouveau l’exception. Toutefois, même si vous appelez la fonction `current_exception` dans le destructeur, celle-ci retourne un objet `exception_ptr` qui référence l’exception actuelle.
+Le destructeur de l’exception actuelle est appelé à la fin du bloc **catch** si vous ne levez pas à nouveau l’exception. Toutefois, même si vous appelez la fonction `current_exception` dans le destructeur, celle-ci retourne un objet `exception_ptr` qui référence l’exception actuelle.
 
 Les appels successifs à la fonction `current_exception` retournent des objets `exception_ptr` qui font référence à des copies de l'exception actuelle. Par conséquent, les objets sont considérés comme inégaux car ils font référence à des copies, bien que les copies aient la même valeur binaire.
 
-## <a name="make_exception_ptr"></a> make_exception_ptr
+## <a name="make_exception_ptr"></a>make_exception_ptr
 
 Crée un objet [exception_ptr](../standard-library/exception-typedefs.md#exception_ptr) qui contient une copie d’une exception.
 
@@ -66,12 +66,12 @@ template <class E>
 
 ### <a name="parameters"></a>Paramètres
 
-*À l’exception*\
+*Sauf*\
 Classe avec l'exception à copier. Généralement, vous spécifiez un objet de [classe exception](../standard-library/exception-class.md) comme argument pour la fonction `make_exception_ptr`, bien que tout objet de classe puisse être l’argument.
 
 ### <a name="return-value"></a>Valeur de retour
 
-Un [exception_ptr](../standard-library/exception-typedefs.md#exception_ptr) objet pointant vers une copie de l’exception actuelle pour *sauf*.
+Objet [exception_ptr](../standard-library/exception-typedefs.md#exception_ptr) pointant vers une copie de l’exception actuelle pour *except*.
 
 ### <a name="remarks"></a>Notes
 
@@ -79,7 +79,7 @@ L’appel de la fonction `make_exception_ptr` équivaut à lever une exception 
 
 En général, une application ne requiert pas la fonction `make_exception_ptr`, et son utilisation est d'ailleurs déconseillée.
 
-## <a name="rethrow_exception"></a> rethrow_exception
+## <a name="rethrow_exception"></a>rethrow_exception
 
 Lève une exception passée comme paramètre.
 
@@ -89,14 +89,14 @@ void rethrow_exception(exception_ptr P);
 
 ### <a name="parameters"></a>Paramètres
 
-*P*\
-L'exception interceptée à lever de nouveau. Si *P* est une valeur null [exception_ptr](../standard-library/exception-typedefs.md#exception_ptr), la fonction lève [std::bad_exception](../standard-library/bad-exception-class.md).
+\ *P*
+L'exception interceptée à lever de nouveau. Si *P* est un [exception_ptr](../standard-library/exception-typedefs.md#exception_ptr)null, la fonction lève [std :: bad_exception](../standard-library/bad-exception-class.md).
 
 ### <a name="remarks"></a>Notes
 
 Après avoir enregistré une exception interceptée dans un objet `exception_ptr`, le thread principal peut traiter l'objet. Dans votre thread principal, appelez la fonction `rethrow_exception` avec l'objet `exception_ptr` en tant qu'argument. La fonction `rethrow_exception` extrait l'exception de l'objet `exception_ptr` puis lève l'exception dans le contexte du thread principal.
 
-## <a name="get_terminate"></a> get_terminate
+## <a name="get_terminate"></a>get_terminate
 
 Obtient la fonction `terminate_handler` actuelle.
 
@@ -104,7 +104,7 @@ Obtient la fonction `terminate_handler` actuelle.
 terminate_handler get_terminate();
 ```
 
-## <a name="set_terminate"></a> set_terminate
+## <a name="set_terminate"></a>set_terminate
 
 Génère un nouvel appel à `terminate_handler` à l'arrêt du programme.
 
@@ -123,7 +123,7 @@ Adresse de la fonction précédente utilisée à appeler à la fin.
 
 ### <a name="remarks"></a>Notes
 
-La fonction établit une nouvelle [terminate_handler](../standard-library/exception-typedefs.md#terminate_handler) que la fonction * *fnew*. Par conséquent, *fnew* ne doit pas être un pointeur null. La fonction retourne l’adresse du gestionnaire d’arrêt précédent.
+La fonction établit une nouvelle [terminate_handler](../standard-library/exception-typedefs.md#terminate_handler) en tant que fonction * *fnew*. Par conséquent, *fnew* ne doit pas être un pointeur null. La fonction retourne l’adresse du gestionnaire d’arrêt précédent.
 
 ### <a name="example"></a>Exemple
 
@@ -153,7 +153,7 @@ int main()
 }
 ```
 
-## <a name="get_unexpected"></a> get_unexpected
+## <a name="get_unexpected"></a>get_unexpected
 
 Obtient la fonction `unexpected_handler` actuelle.
 
@@ -161,7 +161,7 @@ Obtient la fonction `unexpected_handler` actuelle.
 unexpected_handler get_unexpected();
 ```
 
-## <a name="rethrow_if_nested"></a> rethrow_if_nested
+## <a name="rethrow_if_nested"></a>rethrow_if_nested
 
 ```cpp
 template <class E> 
@@ -170,9 +170,9 @@ template <class E>
 
 ### <a name="remarks"></a>Notes
 
-Si pas un type de classe polymorphe, ou si `nested_exception` n’est pas accessible ou ambigu, n’a aucun effet. Sinon, effectue un cast dynamique.
+S’il ne s’agit pas d’un type de classe polymorphe, ou si `nested_exception` est inaccessible ou ambigu, il n’y a aucun effet. Sinon, effectue un cast dynamique.
 
-## <a name="set_unexpected"></a> set_unexpected
+## <a name="set_unexpected"></a>set_unexpected
 
 Génère un nouveau `unexpected_handler` à appeler en cas d'exception inattendue.
 
@@ -220,7 +220,7 @@ int main()
 }
 ```
 
-## <a name="terminate"></a> Mettre fin à
+## <a name="terminate"></a>pire
 
 Appelle un gestionnaire d'arrêt.
 
@@ -230,15 +230,15 @@ void terminate();
 
 ### <a name="remarks"></a>Notes
 
-La fonction appelle un gestionnaire d’arrêt, une fonction de type **void**. Si `terminate` est appelée directement par le programme, le Gestionnaire d’arrêt est le plus récemment défini par un appel à [set_terminate](../standard-library/exception-functions.md#set_terminate). Si `terminate` est appelée pour plusieurs autres raisons pendant l’évaluation d’une expression throw, le Gestionnaire d’arrêt est celui en vigueur immédiatement après l’évaluation de l’expression throw.
+La fonction appelle un gestionnaire Terminate, une fonction de type **void**. Si `terminate` est appelé directement par le programme, le gestionnaire Terminate est le dernier défini par un appel à [set_terminate](../standard-library/exception-functions.md#set_terminate). Si `terminate` est appelée pour plusieurs autres raisons lors de l’évaluation d’une expression Throw, le gestionnaire Terminate est celui en vigueur immédiatement après l’évaluation de l’expression throw.
 
-Un gestionnaire d’arrêt ne peut pas retourner à son appelant. Au démarrage du programme, le Gestionnaire d’arrêt est une fonction qui appelle `abort`.
+Un gestionnaire d’arrêt ne peut pas retourner à son appelant. Au démarrage du programme, le gestionnaire d’arrêt est une fonction qui appelle `abort`.
 
 ### <a name="example"></a>Exemple
 
 Consultez [set_unexpected](../standard-library/exception-functions.md#set_unexpected) pour obtenir un exemple d’utilisation de `terminate`.
 
-## <a name="throw_with_nested"></a> throw_with_nested
+## <a name="throw_with_nested"></a>throw_with_nested
 
 ```cpp
 template <class T> [[noreturn]]
@@ -247,9 +247,9 @@ template <class T> [[noreturn]]
 
 ### <a name="remarks"></a>Notes
 
-Lève l’exception avec les exceptions imbriquées.
+Lève une exception avec des exceptions imbriquées.
 
-## <a name="uncaught_exception"></a> uncaught_exception
+## <a name="uncaught_exception"></a>uncaught_exception
 
 Retourne **true** uniquement si une exception levée est actuellement traitée.
 
@@ -259,7 +259,7 @@ bool uncaught_exception();
 
 ### <a name="return-value"></a>Valeur de retour
 
-Retourne **true** après la fin de l’évaluation d’une expression throw et avant la fin de l’initialisation de la déclaration d’exception dans le gestionnaire correspondant, ou appeler [inattendue](../standard-library/exception-functions.md#unexpected) comme résultat de la une expression throw. En particulier, `uncaught_exception` retournera **true** lorsqu’elle est appelée à partir d’un destructeur est appelé pendant un déroulement d’exception. Concernant les appareils, `uncaught_exception` est uniquement pris en charge sur Windows CE 5.00 et versions supérieures, notamment les plateformes Windows Mobile 2005.
+Retourne la **valeur true** après avoir terminé l’évaluation d’une expression Throw et avant de terminer l’initialisation de la déclaration d’exception dans le gestionnaire correspondant ou d’appeler [inattendue](../standard-library/exception-functions.md#unexpected) à la suite de l’expression throw. En particulier, `uncaught_exception` retourne la **valeur true** lorsqu’il est appelé à partir d’un destructeur qui est appelé pendant un déroulement d’exception. Concernant les appareils, `uncaught_exception` est uniquement pris en charge sur Windows CE 5.00 et versions supérieures, notamment les plateformes Windows Mobile 2005.
 
 ### <a name="example"></a>Exemple
 
@@ -314,7 +314,7 @@ In Test::~Test("outside try block")
         std::uncaught_exception( ) = 0
 ```
 
-## <a name="unexpected"></a> inattendue
+## <a name="unexpected"></a>erreur
 
 Appelle le gestionnaire d’exceptions inattendues.
 
@@ -326,7 +326,7 @@ void unexpected();
 
 La norme C++ nécessite l’appel de `unexpected` quand une fonction lève une exception qui n’est pas dans sa liste d’exceptions à lever. L’implémentation actuelle ne le prend pas en charge. L’exemple appelle `unexpected` directement, qui appelle le gestionnaire d’exceptions inattendues.
 
-La fonction appelle un gestionnaire d’exceptions inattendue, une fonction de type **void**. Si le programme appelle directement `unexpected`, le gestionnaire d’exceptions inattendues est le dernier défini par un appel à [set_unexpected](../standard-library/exception-functions.md#set_unexpected).
+La fonction appelle un gestionnaire inattendu, une fonction de type **void**. Si le programme appelle directement `unexpected`, le gestionnaire d’exceptions inattendues est le dernier défini par un appel à [set_unexpected](../standard-library/exception-functions.md#set_unexpected).
 
 Un gestionnaire d’exceptions inattendues ne peut pas retourner à son appelant. Il peut mettre fin à l’exécution en effectuant l’une des opérations suivantes :
 
@@ -334,7 +334,7 @@ Un gestionnaire d’exceptions inattendues ne peut pas retourner à son appelant
 
 - Levée d’un objet de type [bad_exception](../standard-library/bad-exception-class.md).
 
-- Appel [Terminer](../standard-library/exception-functions.md#terminate), `abort` ou **quitter**(`int`).
+- Appel de [Terminate](../standard-library/exception-functions.md#terminate), `abort` ou **Exit**(`int`).
 
 Au démarrage du programme, le gestionnaire d’exceptions inattendues est une fonction qui appelle [terminate](../standard-library/exception-functions.md#terminate).
 

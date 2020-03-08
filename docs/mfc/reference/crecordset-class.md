@@ -131,11 +131,11 @@ helpviewer_keywords:
 - CRecordset [MFC], m_strSort
 ms.assetid: dd89a21d-ef39-4aab-891b-1e373d67c855
 ms.openlocfilehash: 1ebdb18254171d28b5d5e02367596b79142df284
-ms.sourcegitcommit: 0cfc43f90a6cc8b97b24c42efcf5fb9c18762a42
+ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/05/2019
-ms.locfileid: "73626188"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78854029"
 ---
 # <a name="crecordset-class"></a>Classe CRecordset
 
@@ -219,7 +219,7 @@ class CRecordset : public CObject
 
 |Name|Description|
 |----------|-----------------|
-|[CRecordset :: m_hStmt](#m_hstmt)|Contient le descripteur d’instruction ODBC pour le Recordset. Tapez `HSTMT`.|
+|[CRecordset :: m_hstmt](#m_hstmt)|Contient le descripteur d’instruction ODBC pour le Recordset. Tapez `HSTMT`.|
 |[CRecordset :: m_nFields](#m_nfields)|Contient le nombre de membres de données de champ dans le Recordset. Tapez `UINT`.|
 |[CRecordset :: m_nParams](#m_nparams)|Contient le nombre de membres de données de paramètre dans le Recordset. Tapez `UINT`.|
 |[CRecordset :: m_pDatabase](#m_pdatabase)|Contient un pointeur vers l’objet `CDatabase` par le biais duquel le Recordset est connecté à une source de données.|
@@ -251,13 +251,13 @@ Dans une classe de `CRecordset` dérivée, l’échange de champs d’enregistre
 
 Pour plus d’informations sur les jeux d’enregistrements et l’échange de champs d’enregistrements, consultez les articles [vue d’ensemble : programmation de bases de données](../../data/data-access-programming-mfc-atl.md), [Recordset (ODBC)](../../data/odbc/recordset-odbc.md), [Recordset : récupération d’enregistrements en bloc (ODBC)](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md)et [RFX (Record Field Exchange](../../data/odbc/record-field-exchange-rfx.md)). Pour se concentrer sur les feuilles de réponse dynamiques et les instantanés, consultez les articles [feuille de réponse dynamique](../../data/odbc/dynaset.md) et [instantané](../../data/odbc/snapshot.md).
 
-## <a name="inheritance-hierarchy"></a>Hiérarchie d'héritage
+## <a name="inheritance-hierarchy"></a>Hiérarchie d’héritage
 
 [CObject](../../mfc/reference/cobject-class.md)
 
 `CRecordset`
 
-## <a name="requirements"></a>spécifications
+## <a name="requirements"></a>Spécifications
 
 **En-tête :** AFXDB. h
 
@@ -772,7 +772,7 @@ Vous pouvez utiliser `GetFieldValue` pour extraire dynamiquement des champs au m
 > [!NOTE]
 >  Si vous déclarez un objet Recordset sans dériver de `CRecordset`, la bibliothèque de curseurs ODBC n’est pas chargée. La bibliothèque de curseurs requiert que le jeu d’enregistrements ait au moins une colonne liée ; Toutefois, lorsque vous utilisez `CRecordset` directement, aucune des colonnes n’est liée. Les fonctions membres [CDatabase :: OpenEx](../../mfc/reference/cdatabase-class.md#openex) et [CDatabase :: Open](../../mfc/reference/cdatabase-class.md#open) contrôlent si la bibliothèque de curseurs sera chargée.
 
-`GetFieldValue` appelle la fonction API ODBC `SQLGetData`. Si votre pilote renvoie la valeur SQL_NO_TOTAL pour la longueur réelle de la valeur de champ, `GetFieldValue` lève une exception. Pour plus d’informations sur `SQLGetData`, consultez la SDK Windows.
+`GetFieldValue` appelle la fonction API ODBC `SQLGetData`. Si votre pilote génère la valeur SQL_NO_TOTAL pour la longueur réelle de la valeur de champ, `GetFieldValue` lève une exception. Pour plus d’informations sur `SQLGetData`, consultez la SDK Windows.
 
 ### <a name="example"></a>Exemple
 
@@ -916,7 +916,7 @@ Valeur d’État pour la ligne. Pour plus d'informations, consultez Notes.
 
 `GetRowStatus` retourne une valeur qui indique soit toute modification de l’État sur la ligne depuis sa dernière récupération à partir de la source de données, soit qu’aucune ligne correspondant à *wRow* n’a été extraite. Le tableau ci-dessous répertorie les valeurs de retour possibles.
 
-|Valeur d’État|Description|
+|Valeur d’état|Description|
 |------------------|-----------------|
 |SQL_ROW_SUCCESS|La ligne est inchangée.|
 |SQL_ROW_UPDATED|La ligne a été mise à jour.|
@@ -938,7 +938,7 @@ void GetStatus(CRecordsetStatus& rStatus) const;
 ### <a name="parameters"></a>Paramètres
 
 *rStatus*<br/>
-Référence à un objet `CRecordsetStatus`. Pour plus d'informations, consultez la section Notes.
+Référence à un objet `CRecordsetStatus`. Pour plus d'informations, consultez la section Remarques.
 
 ### <a name="remarks"></a>Notes
 
@@ -1040,7 +1040,7 @@ Différent de zéro si le jeu d’enregistrements est positionné sur un enregis
 
 Si vous faites défiler vers un enregistrement et que `IsDeleted` retourne TRUE (différent de zéro), vous devez faire défiler vers un autre enregistrement avant de pouvoir effectuer d’autres opérations sur les jeux d’enregistrements.
 
-Le résultat de `IsDeleted` dépend de nombreux facteurs, tels que le type de jeu d’enregistrements, la possibilité de mettre à jour votre jeu d’enregistrements, si vous avez spécifié l’option `CRecordset::skipDeletedRecords` lors de l’ouverture du Recordset, si votre pilote Pack a supprimé les enregistrements et s’il existe plusieurs utilisateurs.
+Le résultat de `IsDeleted` dépend de nombreux facteurs, tels que le type de jeu d’enregistrements, si votre jeu d’enregistrements peut être mis à jour, que vous ayez spécifié l’option `CRecordset::skipDeletedRecords` lors de l’ouverture du Recordset, si votre pilote a supprimé des enregistrements, et s’il y a plusieurs utilisateurs.
 
 Pour plus d’informations sur les `CRecordset::skipDeletedRecords` et la compression des pilotes, consultez la fonction membre [Open](#open) .
 
@@ -1173,7 +1173,7 @@ BOOL IsOpen() const;
 
 Différent de zéro si la fonction membre [Open](#open) ou [Requery](#requery) de l’objet Recordset a déjà été appelée et que le Recordset n’a pas été fermé ; Sinon, 0.
 
-##  <a name="m_hstmt"></a>CRecordset :: m_hStmt
+##  <a name="m_hstmt"></a>CRecordset :: m_hstmt
 
 Contient un handle vers la structure de données de l’instruction ODBC, de type HSTMT, associée au Recordset.
 
@@ -1316,7 +1316,7 @@ Le tableau suivant répertorie les valeurs possibles pour *wFetchType*, l’ense
 |SQL_FETCH_BOOKMARK|Ensemble de lignes à partir de la ligne dont la valeur de signet correspond à *nrows*.|[SetBookmark](#setbookmark)|
 
 > [!NOTE]
->  Pour les recordsets avant uniquement, `Move` est valide uniquement avec la valeur SQL_FETCH_NEXT pour *wFetchType*.
+>  Pour les recordsets avant uniquement, `Move` est valide uniquement avec une valeur de SQL_FETCH_NEXT pour *wFetchType*.
 
 > [!CAUTION]
 >  L’appel de `Move` lève une exception si le Recordset n’a pas d’enregistrement. Pour déterminer si le Recordset contient des enregistrements, appelez [IsBOF](#isbof) et [IsEOF](#iseof).
@@ -1514,7 +1514,7 @@ virtual BOOL Open(
 ### <a name="parameters"></a>Paramètres
 
 *nOpenType*<br/>
-Acceptez la valeur par défaut, AFX_DB_USE_DEFAULT_TYPE, ou utilisez l’une des valeurs suivantes à partir de l' `enum OpenType`:
+Acceptez la valeur par défaut, AFX_DB_USE_DEFAULT_TYPE ou utilisez l’une des valeurs suivantes à partir de la `enum OpenType`:
 
 - `CRecordset::dynaset` un jeu d’enregistrements avec défilement bidirectionnel. L’appartenance et la classification des enregistrements sont déterminées lors de l’ouverture du Recordset, mais les modifications apportées par d’autres utilisateurs aux valeurs de données sont visibles après une opération d’extraction. Les feuilles de réponse dynamiques sont également appelées recordsets pilotés par keyset.
 
@@ -1703,7 +1703,7 @@ Pour les jeux d’enregistrements ODBC, un paramètre de position absolue de 1 f
 Vous pouvez également passer des valeurs négatives à `SetAbsolutePosition`. Dans ce cas, la position du Recordset est évaluée à partir de la fin de l’ensemble d’enregistrements. Par exemple, `SetAbsolutePosition( -1 )` déplace le pointeur d’enregistrement actif vers le dernier enregistrement du Recordset.
 
 > [!NOTE]
->  La position absolue n’est pas destinée à être utilisée comme numéro d’enregistrement de substitution. Les signets sont toujours la méthode recommandée pour conserver et retourner à une position donnée, car la position d’un enregistrement change lorsque les enregistrements précédents sont supprimés. En outre, vous ne pouvez pas être certain qu’un enregistrement donné aura la même position absolue si le jeu d’enregistrements est recréé parce que l’ordre des enregistrements individuels au sein d’un jeu d’enregistrements n’est pas garanti, sauf s’il est créé avec une instruction SQL à l’aide d’une **clause ORDER BY** clause.
+>  La position absolue n’est pas destinée à être utilisée comme numéro d’enregistrement de substitution. Les signets sont toujours la méthode recommandée pour conserver et retourner à une position donnée, car la position d’un enregistrement change lorsque les enregistrements précédents sont supprimés. En outre, vous ne pouvez pas être certain qu’un enregistrement donné aura la même position absolue si le jeu d’enregistrements est recréé parce que l’ordre des enregistrements individuels au sein d’un jeu d’enregistrements n’est pas garanti, sauf s’il est créé avec une instruction SQL à l’aide d’une clause **order by** .
 
 Pour plus d’informations sur la navigation dans les jeux d’enregistrements et les signets, consultez les articles [jeu d’enregistrements : défilement (ODBC)](../../data/odbc/recordset-scrolling-odbc.md) et [Recordset : signets et positions absolues (ODBC)](../../data/odbc/recordset-bookmarks-and-absolute-positions-odbc.md).
 
@@ -1757,7 +1757,7 @@ Le fait de marquer les champs comme inchangés garantit que le champ n’est pas
 > [!NOTE]
 >  Cette fonction membre n’est pas applicable sur les recordsets qui utilisent l’extraction de lignes en bloc. Si vous avez implémenté l’extraction de lignes en bloc, `SetFieldDirty` entraîne l’échec d’une assertion. Pour plus d’informations sur l’extraction de lignes en bloc, consultez l’article [Recordset : extraction globale d’enregistrements en bloc (ODBC)](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md).
 
-Le Framework marque les membres de données de champ modifiés pour s’assurer qu’ils seront écrits dans l’enregistrement sur la source de données par le mécanisme RFX (Record Field Exchange). La modification de la valeur d’un champ définit généralement le champ modifié automatiquement. par conséquent, vous devrez rarement appeler `SetFieldDirty` vous-même, mais vous souhaiterez peut-être également vous assurer que les colonnes seront mises à jour ou insérées de manière explicite, quelle que soit la valeur des données de champ. membre.
+Le Framework marque les membres de données de champ modifiés pour s’assurer qu’ils seront écrits dans l’enregistrement sur la source de données par le mécanisme RFX (Record Field Exchange). La modification de la valeur d’un champ définit généralement le champ modifié automatiquement. par conséquent, vous devrez rarement appeler `SetFieldDirty` vous-même, mais vous souhaiterez peut-être également vous assurer que les colonnes seront mises à jour ou insérées de manière explicite, quelle que soit la valeur du membre de données de champ.
 
 > [!CAUTION]
 >  Appelez cette fonction membre uniquement après avoir appelé [Edit](#edit) ou [AddNew](#addnew).
@@ -1919,7 +1919,7 @@ Cette fonction membre virtuelle spécifie le nombre de lignes que vous souhaitez
 Appelez `SetRowsetSize` avant d’appeler `Open` pour définir initialement la taille de l’ensemble de lignes pour le Recordset. La taille de l’ensemble de lignes par défaut lors de l’implémentation de l’extraction de lignes en bloc est 25.
 
 > [!NOTE]
->  Soyez prudent lors de l’appel de `SetRowsetSize`. Si vous allouez manuellement le stockage pour les données (comme spécifié par l’option `CRecordset::userAllocMultiRowBuffers` du paramètre dwOptions dans `Open`), vous devez vérifier si vous devez réallouer ces mémoires tampons de stockage après avoir appelé `SetRowsetSize`, mais avant d’exécuter un curseur opération de navigation.
+>  Soyez prudent lors de l’appel de `SetRowsetSize`. Si vous allouez manuellement le stockage pour les données (comme spécifié par l’option `CRecordset::userAllocMultiRowBuffers` du paramètre dwOptions dans `Open`), vous devez vérifier si vous devez réallouer ces mémoires tampons de stockage après avoir appelé `SetRowsetSize`, mais avant d’effectuer une opération de navigation de curseur.
 
 Pour obtenir le paramètre actuel de la taille de l’ensemble de lignes, appelez [GetRowsetSize](#getrowsetsize).
 
