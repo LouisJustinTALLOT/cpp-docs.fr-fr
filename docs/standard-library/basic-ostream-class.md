@@ -21,15 +21,15 @@ helpviewer_keywords:
 - std::basic_ostream [C++], write
 ms.assetid: 5baadc65-b662-4fab-8c9f-94457c58cda1
 ms.openlocfilehash: 9025d595e79eed9f81aff77b931a2585359a8c3a
-ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
+ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/21/2019
-ms.locfileid: "72689972"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78874807"
 ---
 # <a name="basic_ostream-class"></a>basic_ostream, classe
 
-Ce modèle de classe décrit un objet qui contrôle l’insertion d’éléments et d’objets encodés dans une mémoire tampon de flux avec des éléments de type `Elem`, également appelés [char_type](../standard-library/basic-ios-class.md#char_type), dont les caractéristiques sont déterminées par la classe `Tr`, également appelée [ traits_type](../standard-library/basic-ios-class.md#traits_type).
+Ce modèle de classe décrit un objet qui contrôle l’insertion d’éléments et d’objets encodés dans une mémoire tampon de flux avec des éléments de type `Elem`, également appelés [char_type](../standard-library/basic-ios-class.md#char_type), dont les caractéristiques sont déterminées par la classe `Tr`, également appelées [traits_type](../standard-library/basic-ios-class.md#traits_type).
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -40,10 +40,10 @@ class basic_ostream : virtual public basic_ios<Elem, Tr>
 
 ### <a name="parameters"></a>Paramètres
 
-@No__t_1 *elem*
-`char_type`
+\ *elem*
+`char_type`.
 
-*Tr* \
+*Tr*\
 `traits_type` du caractère.
 
 ## <a name="remarks"></a>Notes
@@ -102,7 +102,7 @@ return (*this);
 
 Les deux groupes de fonctions appellent [SetState](../standard-library/basic-ios-class.md#setstate)(**badbit**) s’ils rencontrent un échec lors de l’insertion d’éléments.
 
-Un objet de classe basic_istream \< **Elem**, **Tr**> stocke seulement un objet de base public virtuel de classe [basic_ios](../standard-library/basic-ios-class.md) **\<Elem**, **Tr>** .
+Objet de classe basic_istream\< **elem**, **TR**> stocke uniquement un objet de base public virtuel de la classe [basic_ios](../standard-library/basic-ios-class.md) **\<elem**, **tr >** .
 
 ## <a name="example"></a>Exemple
 
@@ -114,7 +114,7 @@ Pour en savoir plus sur les flux de sortie, consultez l’exemple relatif à [ba
 |-|-|
 |[basic_ostream](#basic_ostream)|Construit un objet `basic_ostream`.|
 
-### <a name="member-functions"></a>Fonctions membres
+### <a name="member-functions"></a>Fonctions Membre
 
 |Fonction membre|Description|
 |-|-|
@@ -128,14 +128,14 @@ Pour en savoir plus sur les flux de sortie, consultez l’exemple relatif à [ba
 
 ### <a name="operators"></a>Opérateurs
 
-|opérateur|Description|
+|Opérateur|Description|
 |-|-|
 |[operator=](#op_eq)|Affecte la valeur du paramètre d'objet `basic_ostream` fourni à cet objet.|
 |[operator<<](#basic_ostream_operator_lt_lt)|Écrit dans le flux.|
 
-## <a name="requirements"></a>spécifications
+## <a name="requirements"></a>Spécifications
 
-**En-tête :** \<ostream>
+**En-tête :** \<ostream >
 
 **Espace de noms :** std
 
@@ -153,10 +153,10 @@ basic_ostream(basic_ostream&& right);
 
 ### <a name="parameters"></a>Paramètres
 
-*strbuf* \
+*strbuf*\
 Objet de type [basic_streambuf](../standard-library/basic-streambuf-class.md).
 
-*_Isstd* \
+*_Isstd*\
 **true** s’il s’agit d’un flux standard ; Sinon, **false**.
 
 \ *droit*
@@ -237,11 +237,11 @@ basic_ostream<Elem, Tr>& operator<<(const void* val);
 
 ### <a name="parameters"></a>Paramètres
 
-*Pfn* \
+*Pfn*\
 Pointeur de fonction.
 
-*strbuf* \
-Pointeur vers un objet `stream_buf` .
+*strbuf*\
+Pointeur vers un objet `stream_buf`.
 
 \ *Val*
 Élément à écrire dans le flux.
@@ -254,7 +254,7 @@ Référence à l’objet basic_ostream.
 
 L’en-tête \<ostream > définit également plusieurs opérateurs d’insertion globaux. Pour plus d’informations, consultez [opérateur < <](../standard-library/ostream-operators.md#op_lt_lt).
 
-La première fonction membre garantit qu’une expression de la forme `ostr << endl` appelle [Endl](../standard-library/ostream-functions.md#endl) **(OSTR)** , puis retourne **\*this**. Les deuxième et troisième fonctions garantissent que d’autres manipulateurs, comme [hex](../standard-library/ios-functions.md#hex), se comportent de la même façon. Les fonctions restantes sont toutes les fonctions de sortie mises en forme.
+La première fonction membre garantit qu’une expression de la forme `ostr << endl` appelle [Endl](../standard-library/ostream-functions.md#endl) **(OSTR)** , puis retourne **\*This**. Les deuxième et troisième fonctions garantissent que d’autres manipulateurs, comme [hex](../standard-library/ios-functions.md#hex), se comportent de la même façon. Les fonctions restantes sont toutes les fonctions de sortie mises en forme.
 
 La fonction
 
@@ -270,7 +270,7 @@ La fonction
 basic_ostream<Elem, Tr>& operator<<(bool val);
 ```
 
-Convertit `_Val` en champ booléen et l’insère en appelant [use_facet](../standard-library/basic-filebuf-class.md#open) **< Num_put \<Elem, outlt >** `(`[getloc](../standard-library/ios-base-class.md#getloc)). [put](#put)(**OutIt**([rdbuf](../standard-library/basic-ios-class.md#rdbuf)), **\*this**, `getloc`, **val**). Ici, `OutIt` est défini en tant que [ostreambuf_iterator](../standard-library/ostreambuf-iterator-class.md)  **\<Elem, TR >** . La fonction retourne **\*this**.
+Convertit `_Val` en champ booléen et l’insère en appelant [use_facet](../standard-library/basic-filebuf-class.md#open) **< num_put\<Elem, outlt >** `(`[getloc](../standard-library/ios-base-class.md#getloc)). [put](#put)(**OutIt**([rdbuf](../standard-library/basic-ios-class.md#rdbuf)), **\*this**, `getloc`, **val**). Ici, `OutIt` est défini comme [ostreambuf_iterator](../standard-library/ostreambuf-iterator-class.md) **\<Elem, TR >** . La fonction retourne **\*this**.
 
 Les fonctions
 
@@ -286,7 +286,7 @@ basic_ostream<Elem, Tr>& operator<<(unsigned long long val);
 basic_ostream<Elem, Tr>& operator<<(const void* val);
 ```
 
-chaque *convertit* une valeur en champ numérique et l’insère en appelant **use_facet < Num_put \<Elem, outlt >** (`getloc`). **put**(**OutIt**(`rdbuf`), **\*this**, `getloc`, **val**). Ici, **Outlt** est défini comme **ostreambuf_iterator\<Elem, Tr>** . La fonction retourne **\*this**.
+chaque *convertit* une valeur en champ numérique et l’insère en appelant **use_facet < num_put\<Elem, outlt >** (`getloc`). **put**(**OutIt**(`rdbuf`), **\*this**, `getloc`, **val**). Ici, **Outlt** est défini comme **ostreambuf_iterator\<Elem, Tr>** . La fonction retourne **\*this**.
 
 Les fonctions
 
@@ -296,7 +296,7 @@ basic_ostream<Elem, Tr>& operator<<(double val);
 basic_ostream<Elem, Tr>& operator<<(long double val);
 ```
 
-chaque *convertit* une valeur en champ numérique et l’insère en appelant **use_facet < Num_put \<Elem, outlt >** (`getloc`) **. put**(**outlt**(`rdbuf`), **\*this**, `getloc`, **Val**). Ici, **Outlt** est défini comme **ostreambuf_iterator\<Elem, Tr>** . La fonction retourne **\*this**.
+chaque *convertit* une valeur en champ numérique et l’insère en appelant **use_facet < num_put\<Elem, outlt >** (`getloc`) **. put**(**outlt**(`rdbuf`), **\*ce**`getloc`, **Val**). Ici, **Outlt** est défini comme **ostreambuf_iterator\<Elem, Tr>** . La fonction retourne **\*this**.
 
 ### <a name="example"></a>Exemple
 
@@ -375,7 +375,7 @@ basic_ostream<Elem, Tr>& put(char_type _Ch);
 
 ### <a name="parameters"></a>Paramètres
 
-*_Ch* \
+*_Ch*\
 Un caractère.
 
 ### <a name="return-value"></a>Valeur de retour
@@ -419,13 +419,13 @@ basic_ostream<Elem, Tr>& seekp(off_type _Off, ios_base::seekdir _Way);
 
 ### <a name="parameters"></a>Paramètres
 
-*_Pos* \
+*_Pos*\
 Position dans le flux.
 
-*_Off* \
+*_Off*\
 Décalage par rapport à *_Way*.
 
-*_Way* \
+*_Way*\
 Une des énumérations [ios_base::seekdir](../standard-library/ios-base-class.md#seekdir).
 
 ### <a name="return-value"></a>Valeur de retour
@@ -434,7 +434,7 @@ Référence à l’objet basic_ostream.
 
 ### <a name="remarks"></a>Notes
 
-Si [Fail](../standard-library/basic-ios-class.md#fail) a **la valeur false**, la première fonction membre appelle **newpos =** [rdbuf](../standard-library/basic-ios-class.md#rdbuf)  **->** [pubseekpos](../standard-library/basic-streambuf-class.md#pubseekpos)( *_Pos*), pour certains `pos_type` objet temporaire `newpos`. Si `fail` a la valeur false, la deuxième fonction appelle **newpos = rdbuf->** [pubseekoff](../standard-library/basic-streambuf-class.md#pubseekoff)( *_OFF, _Way*). Dans les deux cas, si (`off_type`)**newpos ==** (`off_type`)(-1) (l’opération de positionnement échoue), la fonction appelle **istr.** [setstate](../standard-library/basic-ios-class.md#setstate)(**failbit**). Les deux fonctions retournent **\*this**.
+Si [Fail](../standard-library/basic-ios-class.md#fail) a **la valeur false**, la première fonction membre appelle **newpos =** [rdbuf](../standard-library/basic-ios-class.md#rdbuf) **->** [pubseekpos](../standard-library/basic-streambuf-class.md#pubseekpos)( *_Pos*), pour certains `pos_type` `newpos`objet temporaire. Si `fail` a la valeur false, la deuxième fonction appelle **newpos = rdbuf->** [pubseekoff](../standard-library/basic-streambuf-class.md#pubseekoff)( *_OFF, _Way*). Dans les deux cas, si (`off_type`)**newpos ==** (`off_type`)(-1) (l’opération de positionnement échoue), la fonction appelle **istr.** [setstate](../standard-library/basic-ios-class.md#setstate)(**failbit**). Les deux fonctions retournent **\*this**.
 
 ### <a name="example"></a>Exemple
 
@@ -470,13 +470,13 @@ int main()
 
 La classe imbriquée décrit un objet dont la déclaration structure les fonctions de sortie mise en forme et les fonctions de sortie non mise en forme.
 
-classe Sentry {public : Explicit Sentry (basic_ostream \<Elem, TR > & _Ostr); opérateur bool () const ; ~ Sentry ();};
+classe Sentry {public : Explicit Sentry (basic_ostream\<elem, TR > & _Ostr); opérateur bool () const ; ~ Sentry ();};
 
 ### <a name="remarks"></a>Notes
 
 La classe imbriquée décrit un objet dont la déclaration structure les fonctions de sortie mise en forme et les fonctions de sortie non mise en forme. Si **ostr.** [good](../standard-library/basic-ios-class.md#good) est **true** et **ostr.** [tie](../standard-library/basic-ios-class.md#tie) n’est pas un pointeur null, le constructeur appelle **ostr.tie->** [flush](#flush). Le constructeur stocke ensuite la valeur retournée par `ostr.good` dans `status`. Un appel ultérieur à `operator bool` remet cette valeur stockée.
 
-Si `uncaught_exception` retourne **false** et [flags](../standard-library/ios-base-class.md#flags) **&** [unitbuf](../standard-library/ios-functions.md#unitbuf) est différent de zéro, le destructeur appelle [flush](#flush).
+Si `uncaught_exception` retourne la **valeur false** et que les [indicateurs](../standard-library/ios-base-class.md#flags) **&** [unitbuf](../standard-library/ios-functions.md#unitbuf) est différent de zéro, le destructeur appelle [flush](#flush).
 
 ## <a name="swap"></a>  basic_ostream::swap
 
@@ -493,7 +493,7 @@ Référence à un objet `basic_ostream`.
 
 ### <a name="remarks"></a>Notes
 
-La fonction membre appelle [basic_ios :: swap](../standard-library/basic-ios-class.md#swap) `(right)` pour échanger le contenu de cet objet pour le contenu de *Right*.
+La fonction membre appelle [basic_ios :: swap](../standard-library/basic-ios-class.md#swap)`(right)` pour échanger le contenu de cet objet pour le contenu de *Right*.
 
 ## <a name="tellp"></a>  basic_ostream::tellp
 
@@ -509,7 +509,7 @@ Position dans le flux de sortie.
 
 ### <a name="remarks"></a>Notes
 
-Si [fail](../standard-library/basic-ios-class.md#fail) est **false**, la fonction membre retourne [rdbuf](../standard-library/basic-ios-class.md#rdbuf) **->** [pubseekoff](../standard-library/basic-streambuf-class.md#pubseekoff)(0, `cur`, **in**). Sinon, elle retourne `pos_type`(-1).
+Si [Fail](../standard-library/basic-ios-class.md#fail) a la **valeur false**, la fonction membre retourne [rdbuf](../standard-library/basic-ios-class.md#rdbuf) **->** [pubseekoff](../standard-library/basic-streambuf-class.md#pubseekoff)(0, `cur`, **in**). Sinon, elle retourne `pos_type`(-1).
 
 ### <a name="example"></a>Exemple
 
@@ -525,10 +525,10 @@ basic_ostream<Elem, Tr>& write(const char_type* str, streamsize count);
 
 ### <a name="parameters"></a>Paramètres
 
-*nombre* \
+*nombre*\
 Nombre de caractères à placer dans le flux.
 
-*str* \
+*str*\
 Caractères à placer dans le flux.
 
 ### <a name="return-value"></a>Valeur de retour
@@ -545,6 +545,6 @@ Consultez [streamsize](../standard-library/ios-typedefs.md#streamsize) pour obte
 
 ## <a name="see-also"></a>Voir aussi
 
-[Sécurité des threads dans la bibliothèque standard C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)\
+[Sécurité des threads dans la bibliothèque C++ Standard](../standard-library/thread-safety-in-the-cpp-standard-library.md)\
 [iostream, programmation](../standard-library/iostream-programming.md)\
 [iostreams, conventions](../standard-library/iostreams-conventions.md)

@@ -5,11 +5,11 @@ ms.date: 01/10/2020
 ms.technology: cpp-ide
 ms.assetid: f50d459a-e18f-4b4e-814b-913e444cedd6
 ms.openlocfilehash: 7c3dddd62a66c746d92d2f931b97e354ee27d75f
-ms.sourcegitcommit: ba129dc55dc3ff638f3af5ac0e87ec2ca1cb2674
+ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/10/2020
-ms.locfileid: "75869712"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78857016"
 ---
 # <a name="vcpkg-a-c-package-manager-for-windows-linux-and-macos"></a>vcpkg : gestionnaire C++ de package pour Windows, Linux et MacOS
 
@@ -27,7 +27,7 @@ Vous pouvez également créer un clone vcpkg contenant des bibliothèques privé
 
 <sup>1</sup> *Remarque : les sources ne sont pas disponibles pour certaines bibliothèques propriétaires. Dans ce cas, vcpkg télécharge les fichiers binaires prégénérés compatibles.*
 
-## <a name="installation"></a>Installation de
+## <a name="installation"></a>Installation
 
 Clonez le dépôt vcpkg à partir de GitHub : [https://github.com/Microsoft/vcpkg](https://github.com/Microsoft/vcpkg). Vous pouvez télécharger vers n’importe quel emplacement de dossier de votre choix.
 
@@ -204,7 +204,7 @@ Une instance de vcpkg comporte les éléments suivants :
 
 ## <a name="command-line-reference"></a>Informations de référence sur la ligne de commande
 
-|Command|Description|
+|Commande|Description|
 |---------|---------|
 |**vcpkg Search \[Pat]**|Rechercher des packages disponibles pour l’installation|
 |**vcpkg install \<pkg>...**|Installer un package|

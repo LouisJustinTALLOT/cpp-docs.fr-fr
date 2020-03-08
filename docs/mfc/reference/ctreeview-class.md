@@ -1,5 +1,5 @@
 ---
-title: CTreeView (classe)
+title: CTreeView, classe
 ms.date: 11/04/2016
 f1_keywords:
 - CTreeView
@@ -11,15 +11,15 @@ helpviewer_keywords:
 - CTreeView [MFC], GetTreeCtrl
 ms.assetid: 5df583a6-d69f-42ca-9d8d-57e04558afff
 ms.openlocfilehash: fec8379a3944d981672754274f50dd4e60f71b61
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62323594"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78883991"
 ---
-# <a name="ctreeview-class"></a>CTreeView (classe)
+# <a name="ctreeview-class"></a>CTreeView, classe
 
-Simplifie l’utilisation du contrôle d’arborescence et de [CTreeCtrl](../../mfc/reference/ctreectrl-class.md), la classe qui encapsule la fonctionnalité de contrôle d’arborescence, avec l’architecture document / vue de MFC.
+Simplifie l’utilisation du contrôle d’arborescence et de [CTreeCtrl](../../mfc/reference/ctreectrl-class.md), la classe qui encapsule les fonctionnalités de contrôle d’arborescence, avec l’architecture document/vue de MFC.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -31,21 +31,21 @@ class CTreeView : public CCtrlView
 
 ### <a name="public-constructors"></a>Constructeurs publics
 
-|Nom|Description|
+|Name|Description|
 |----------|-----------------|
-|[CTreeView::CTreeView](#ctreeview)|Construit un objet `CTreeView`.|
+|[CTreeView :: CTreeView](#ctreeview)|Construit un objet `CTreeView`.|
 
 ### <a name="public-methods"></a>M&#233;thodes publiques
 
-|Nom|Description|
+|Name|Description|
 |----------|-----------------|
-|[CTreeView::GetTreeCtrl](#gettreectrl)|Retourne le contrôle d’arborescence associé à la vue.|
+|[CTreeView :: GetTreeCtrl](#gettreectrl)|Retourne le contrôle d’arborescence associé à la vue.|
 
 ## <a name="remarks"></a>Notes
 
-Pour plus d’informations sur cette architecture, consultez la vue d’ensemble pour le [CView](../../mfc/reference/cview-class.md) classe et les références croisées citées il.
+Pour plus d’informations sur cette architecture, consultez la vue d’ensemble de la classe [CView](../../mfc/reference/cview-class.md) et les références croisées citées ici.
 
-## <a name="inheritance-hierarchy"></a>Hiérarchie d'héritage
+## <a name="inheritance-hierarchy"></a>Hiérarchie d’héritage
 
 [CObject](../../mfc/reference/cobject-class.md)
 
@@ -59,11 +59,11 @@ Pour plus d’informations sur cette architecture, consultez la vue d’ensemble
 
 `CTreeView`
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
-**En-tête :** afxcview.h
+**En-tête :** afxcview. h
 
-##  <a name="ctreeview"></a>  CTreeView::CTreeView
+##  <a name="ctreeview"></a>CTreeView :: CTreeView
 
 Construit un objet `CTreeView`.
 
@@ -71,9 +71,9 @@ Construit un objet `CTreeView`.
 CTreeView();
 ```
 
-##  <a name="gettreectrl"></a>  CTreeView::GetTreeCtrl
+##  <a name="gettreectrl"></a>CTreeView :: GetTreeCtrl
 
-Retourne une référence au contrôle d’arborescence associée à la vue.
+Retourne une référence au contrôle d’arborescence associé à la vue.
 
 ```
 CTreeCtrl& GetTreeCtrl() const;
@@ -85,4 +85,4 @@ CTreeCtrl& GetTreeCtrl() const;
 [Graphique hiérarchique](../../mfc/hierarchy-chart.md)<br/>
 [CView, classe](../../mfc/reference/cview-class.md)<br/>
 [CCtrlView, classe](../../mfc/reference/cctrlview-class.md)<br/>
-[CTreeCtrl, classe](../../mfc/reference/ctreectrl-class.md)
+[CTreeCtrl Class](../../mfc/reference/ctreectrl-class.md)

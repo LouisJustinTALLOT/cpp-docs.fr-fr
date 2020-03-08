@@ -104,11 +104,11 @@ helpviewer_keywords:
 - CListBox [MFC], VKeyToItem
 ms.assetid: 7ba3c699-c286-4cd9-9066-532c41ec05d1
 ms.openlocfilehash: 5c3337641dcfc720a5f9fbccf5bb0614e97c3b54
-ms.sourcegitcommit: a930a9b47bd95599265d6ba83bb87e46ae748949
+ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/22/2020
-ms.locfileid: "76518424"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78865520"
 ---
 # <a name="clistbox-class"></a>CListBox, classe
 
@@ -120,65 +120,65 @@ Fournit les fonctionnalités d'une zone de liste Windows.
 class CListBox : public CWnd
 ```
 
-## <a name="members"></a>Members
+## <a name="members"></a>Membres
 
 ### <a name="public-constructors"></a>Constructeurs publics
 
 |Name|Description|
 |----------|-----------------|
-|[CListBox::CListBox](#clistbox)|Construit un objet `CListBox`.|
+|[CListBox :: CListBox](#clistbox)|Construit un objet `CListBox`.|
 
-### <a name="public-methods"></a>Méthodes publiques
+### <a name="public-methods"></a>M&#233;thodes publiques
 
 |Name|Description|
 |----------|-----------------|
 |[CComboBox::AddString](#addstring)|Ajoute une chaîne à une zone de liste.|
-|[CListBox::CharToItem](#chartoitem)|Substituez pour fournir une gestion de WM_CHAR personnalisée pour les zones de liste owner-draw qui n’ont pas de chaînes.|
-|[CListBox::CompareItem](#compareitem)|Appelé par l’infrastructure pour déterminer la position d’un nouvel élément dans une zone de liste owner-draw triée.|
-|[CListBox::Create](#create)|Crée la zone de liste Windows et l’attache à l’objet `CListBox`.|
-|[CListBox::DeleteItem](#deleteitem)|Appelé par le Framework lorsque l’utilisateur supprime un élément d’une zone de liste owner-draw.|
-|[CListBox::DeleteString](#deletestring)|Supprime une chaîne d’une zone de liste.|
-|[CListBox::Dir](#dir)|Ajoute des noms de fichiers, des lecteurs, ou les deux, du répertoire actif à une zone de liste.|
-|[CListBox::DrawItem](#drawitem)|Appelée par l’infrastructure quand un aspect visuel d’une zone de liste owner-draw change.|
-|[CListBox::FindString](#findstring)|Recherche une chaîne dans une zone de liste.|
+|[CListBox :: CharToItem](#chartoitem)|Substituez pour fournir une gestion de WM_CHAR personnalisée pour les zones de liste owner-draw qui n’ont pas de chaînes.|
+|[CListBox :: CompareItem](#compareitem)|Appelé par l’infrastructure pour déterminer la position d’un nouvel élément dans une zone de liste owner-draw triée.|
+|[CListBox :: Create](#create)|Crée la zone de liste Windows et l’attache à l’objet `CListBox`.|
+|[CListBox ::D eleteItem](#deleteitem)|Appelé par le Framework lorsque l’utilisateur supprime un élément d’une zone de liste owner-draw.|
+|[CListBox ::D eleteString](#deletestring)|Supprime une chaîne d’une zone de liste.|
+|[CListBox ::D IR](#dir)|Ajoute des noms de fichiers, des lecteurs, ou les deux, du répertoire actif à une zone de liste.|
+|[CListBox ::D rawItem](#drawitem)|Appelée par l’infrastructure quand un aspect visuel d’une zone de liste owner-draw change.|
+|[CListBox :: FindString](#findstring)|Recherche une chaîne dans une zone de liste.|
 |[CListBox :: FindExactString](#findstringexact)|Recherche la première chaîne de zone de liste qui correspond à une chaîne spécifiée.|
-|[CListBox::GetAnchorIndex](#getanchorindex)|Récupère l’index de base zéro de l’élément d’ancrage actuel dans une zone de liste.|
-|[CListBox::GetCaretIndex](#getcaretindex)|Détermine l’index de l’élément qui a le rectangle de focus dans une zone de liste à sélection multiple.|
-|[CListBox::GetCount](#getcount)|Retourne le nombre de chaînes dans une zone de liste.|
-|[CListBox::GetCurSel](#getcursel)|Retourne l’index de base zéro de la chaîne actuellement sélectionnée dans une zone de liste.|
-|[CListBox::GetHorizontalExtent](#gethorizontalextent)|Retourne la largeur, en pixels, pendant laquelle une zone de liste peut faire défiler horizontalement.|
-|[CListBox::GetItemData](#getitemdata)|Retourne une valeur associée à l’élément de zone de liste.|
-|[CListBox::GetItemDataPtr](#getitemdataptr)|Retourne un pointeur désignant un élément de zone de liste.|
-|[CListBox::GetItemHeight](#getitemheight)|Détermine la hauteur des éléments dans une zone de liste.|
-|[CListBox::GetItemRect](#getitemrect)|Retourne le rectangle englobant de l’élément de zone de liste tel qu’il est actuellement affiché.|
-|[CListBox::GetListBoxInfo](#getlistboxinfo)|Récupère le nombre d’éléments par colonne.|
-|[CListBox::GetLocale](#getlocale)|Récupère l’identificateur de paramètres régionaux pour une zone de liste.|
-|[CListBox::GetSel](#getsel)|Retourne l’état de sélection d’un élément de zone de liste.|
-|[CListBox::GetSelCount](#getselcount)|Retourne le nombre de chaînes actuellement sélectionnées dans une zone de liste à sélection multiple.|
-|[CListBox::GetSelItems](#getselitems)|Retourne les index des chaînes actuellement sélectionnées dans une zone de liste.|
-|[CListBox::GetText](#gettext)|Copie un élément de zone de liste dans une mémoire tampon.|
-|[CListBox::GetTextLen](#gettextlen)|Retourne la longueur, en octets, d’un élément de zone de liste.|
-|[CListBox::GetTopIndex](#gettopindex)|Retourne l’index de la première chaîne visible dans une zone de liste.|
-|[CListBox::InitStorage](#initstorage)|Préalloue des blocs de mémoire pour les éléments de zone de liste et les chaînes.|
+|[CListBox :: GetAnchorIndex](#getanchorindex)|Récupère l’index de base zéro de l’élément d’ancrage actuel dans une zone de liste.|
+|[CListBox :: GetCaretIndex](#getcaretindex)|Détermine l’index de l’élément qui a le rectangle de focus dans une zone de liste à sélection multiple.|
+|[CListBox :: GetCount](#getcount)|Retourne le nombre de chaînes dans une zone de liste.|
+|[CListBox :: GetCurSel](#getcursel)|Retourne l’index de base zéro de la chaîne actuellement sélectionnée dans une zone de liste.|
+|[CListBox :: GetHorizontalExtent](#gethorizontalextent)|Retourne la largeur, en pixels, pendant laquelle une zone de liste peut faire défiler horizontalement.|
+|[CListBox :: GetItemData](#getitemdata)|Retourne une valeur associée à l’élément de zone de liste.|
+|[CListBox :: GetItemDataPtr](#getitemdataptr)|Retourne un pointeur désignant un élément de zone de liste.|
+|[CListBox :: GetItemHeight](#getitemheight)|Détermine la hauteur des éléments dans une zone de liste.|
+|[CListBox :: GetItemRect](#getitemrect)|Retourne le rectangle englobant de l’élément de zone de liste tel qu’il est actuellement affiché.|
+|[CListBox :: GetListBoxInfo](#getlistboxinfo)|Récupère le nombre d’éléments par colonne.|
+|[CListBox :: GetLocale](#getlocale)|Récupère l’identificateur de paramètres régionaux pour une zone de liste.|
+|[CListBox :: GetSel](#getsel)|Retourne l’état de sélection d’un élément de zone de liste.|
+|[CListBox :: GetSelCount](#getselcount)|Retourne le nombre de chaînes actuellement sélectionnées dans une zone de liste à sélection multiple.|
+|[CListBox :: GetSelItems](#getselitems)|Retourne les index des chaînes actuellement sélectionnées dans une zone de liste.|
+|[CListBox :: GetText](#gettext)|Copie un élément de zone de liste dans une mémoire tampon.|
+|[CListBox :: GetTextLen](#gettextlen)|Retourne la longueur, en octets, d’un élément de zone de liste.|
+|[CListBox :: GetTopIndex](#gettopindex)|Retourne l’index de la première chaîne visible dans une zone de liste.|
+|[CListBox :: InitStorage](#initstorage)|Préalloue des blocs de mémoire pour les éléments de zone de liste et les chaînes.|
 |[CComboBox::InsertString](#insertstring)|Insère une chaîne à un emplacement spécifique dans une zone de liste.|
 |[CListBox :: ItemFromPoint](#itemfrompoint)|Retourne l’index de l’élément de zone de liste le plus proche d’un point.|
-|[CListBox::MeasureItem](#measureitem)|Appelée par l’infrastructure quand une zone de liste owner-draw est créée pour déterminer les dimensions de la zone de liste.|
-|[CListBox::ResetContent](#resetcontent)|Efface toutes les entrées d’une zone de liste.|
-|[CListBox::SelectString](#selectstring)|Recherche et sélectionne une chaîne dans une zone de liste à sélection unique.|
-|[CListBox::SelItemRange](#selitemrange)|Sélectionne ou désélectionne une plage de chaînes dans une zone de liste à sélection multiple.|
-|[CListBox::SetAnchorIndex](#setanchorindex)|Définit l’ancre dans une zone de liste à sélection multiple pour commencer une sélection étendue.|
-|[CListBox::SetCaretIndex](#setcaretindex)|Définit le rectangle de focus sur l’élément à l’index spécifié dans une zone de liste à sélection multiple.|
-|[CListBox::SetColumnWidth](#setcolumnwidth)|Définit la largeur de colonne d’une zone de liste multicolonne.|
-|[CListBox::SetCurSel](#setcursel)|Sélectionne une chaîne de zone de liste.|
-|[CListBox::SetHorizontalExtent](#sethorizontalextent)|Définit la largeur, en pixels, pendant laquelle une zone de liste peut faire défiler horizontalement.|
-|[CListBox::SetItemData](#setitemdata)|Définit une valeur associée à l’élément de zone de liste.|
-|[CListBox::SetItemDataPtr](#setitemdataptr)|Définit un pointeur vers l’élément de zone de liste.|
-|[CListBox::SetItemHeight](#setitemheight)|Définit la hauteur des éléments dans une zone de liste.|
-|[CListBox::SetLocale](#setlocale)|Définit l’identificateur de paramètres régionaux pour une zone de liste.|
-|[CListBox::SetSel](#setsel)|Sélectionne ou désélectionne un élément de zone de liste dans une zone de liste à sélection multiple.|
-|[CListBox::SetTabStops](#settabstops)|Définit les positions des taquets de tabulation dans une zone de liste.|
-|[CListBox::SetTopIndex](#settopindex)|Définit l’index de base zéro de la première chaîne visible dans une zone de liste.|
-|[CListBox::VKeyToItem](#vkeytoitem)|Substituez pour fournir une gestion des WM_KEYDOWN personnalisées pour les zones de liste avec le jeu de styles LBS_WANTKEYBOARDINPUT.|
+|[CListBox :: MeasureItem](#measureitem)|Appelée par l’infrastructure quand une zone de liste owner-draw est créée pour déterminer les dimensions de la zone de liste.|
+|[CListBox :: ResetContent](#resetcontent)|Efface toutes les entrées d’une zone de liste.|
+|[CListBox :: SelectString](#selectstring)|Recherche et sélectionne une chaîne dans une zone de liste à sélection unique.|
+|[CListBox :: SelItemRange](#selitemrange)|Sélectionne ou désélectionne une plage de chaînes dans une zone de liste à sélection multiple.|
+|[CListBox :: SetAnchorIndex](#setanchorindex)|Définit l’ancre dans une zone de liste à sélection multiple pour commencer une sélection étendue.|
+|[CListBox :: SetCaretIndex](#setcaretindex)|Définit le rectangle de focus sur l’élément à l’index spécifié dans une zone de liste à sélection multiple.|
+|[CListBox :: SetColumnWidth](#setcolumnwidth)|Définit la largeur de colonne d’une zone de liste multicolonne.|
+|[CListBox :: SetCurSel](#setcursel)|Sélectionne une chaîne de zone de liste.|
+|[CListBox :: SetHorizontalExtent](#sethorizontalextent)|Définit la largeur, en pixels, pendant laquelle une zone de liste peut faire défiler horizontalement.|
+|[CListBox :: SetItemData](#setitemdata)|Définit une valeur associée à l’élément de zone de liste.|
+|[CListBox :: SetItemDataPtr](#setitemdataptr)|Définit un pointeur vers l’élément de zone de liste.|
+|[CListBox :: SetItemHeight](#setitemheight)|Définit la hauteur des éléments dans une zone de liste.|
+|[CListBox :: SetLocale](#setlocale)|Définit l’identificateur de paramètres régionaux pour une zone de liste.|
+|[CListBox :: SetSel](#setsel)|Sélectionne ou désélectionne un élément de zone de liste dans une zone de liste à sélection multiple.|
+|[CListBox :: SetTabStops](#settabstops)|Définit les positions des taquets de tabulation dans une zone de liste.|
+|[CListBox :: SetTopIndex](#settopindex)|Définit l’index de base zéro de la première chaîne visible dans une zone de liste.|
+|[CListBox :: VKeyToItem](#vkeytoitem)|Substituez pour fournir une gestion des WM_KEYDOWN personnalisées pour les zones de liste avec le jeu de styles LBS_WANTKEYBOARDINPUT.|
 
 ## <a name="remarks"></a>Notes
 
@@ -226,7 +226,7 @@ Si vous créez un objet `CListBox` dans une fenêtre, vous devrez peut-être dé
 
 Si vous allouez de la mémoire dans l’objet `CListBox`, substituez le destructeur `CListBox` pour supprimer l’allocation.
 
-## <a name="inheritance-hierarchy"></a>Hiérarchie d'héritage
+## <a name="inheritance-hierarchy"></a>Hiérarchie d’héritage
 
 [CObject](../../mfc/reference/cobject-class.md)
 
@@ -236,11 +236,11 @@ Si vous allouez de la mémoire dans l’objet `CListBox`, substituez le destruct
 
 `CListBox`
 
-## <a name="requirements"></a>Configuration requise pour
+## <a name="requirements"></a>Spécifications
 
 **En-tête :** afxwin.h
 
-##  <a name="addstring"></a>  CListBox::AddString
+##  <a name="addstring"></a>CListBox :: AddString
 
 Ajoute une chaîne à une zone de liste.
 
@@ -248,7 +248,7 @@ Ajoute une chaîne à une zone de liste.
 int AddString(LPCTSTR lpszItem);
 ```
 
-### <a name="parameters"></a>Parameters
+### <a name="parameters"></a>Paramètres
 
 *lpszItem*<br/>
 Pointe vers la chaîne terminée par le caractère null qui doit être ajoutée.
@@ -267,7 +267,7 @@ Utilisez [InsertString](#insertstring) pour insérer une chaîne à un emplaceme
 
 [!code-cpp[NVC_MFC_CListBox#3](../../mfc/codesnippet/cpp/clistbox-class_1.cpp)]
 
-##  <a name="chartoitem"></a>  CListBox::CharToItem
+##  <a name="chartoitem"></a>CListBox :: CharToItem
 
 Appelée par l’infrastructure lorsque la fenêtre parente de la zone de liste reçoit un message WM_CHARTOITEM de la zone de liste.
 
@@ -277,7 +277,7 @@ virtual int CharToItem(
     UINT nIndex);
 ```
 
-### <a name="parameters"></a>Parameters
+### <a name="parameters"></a>Paramètres
 
 *nKey*<br/>
 Code ANSI du caractère tapé par l’utilisateur.
@@ -309,7 +309,7 @@ Une valeur de retour supérieure ou égale à 0 spécifie l’index d’un élé
 
 [!code-cpp[NVC_MFC_CListBox#4](../../mfc/codesnippet/cpp/clistbox-class_2.cpp)]
 
-##  <a name="clistbox"></a>  CListBox::CListBox
+##  <a name="clistbox"></a>CListBox :: CListBox
 
 Construit un objet `CListBox`.
 
@@ -325,7 +325,7 @@ Vous construisez un objet `CListBox` en deux étapes. Tout d’abord, appelez le
 
 [!code-cpp[NVC_MFC_CListBox#1](../../mfc/codesnippet/cpp/clistbox-class_3.cpp)]
 
-##  <a name="compareitem"></a>  CListBox::CompareItem
+##  <a name="compareitem"></a>CListBox :: CompareItem
 
 Appelé par l’infrastructure pour déterminer la position relative d’un nouvel élément dans une zone de liste owner-draw triée.
 
@@ -333,7 +333,7 @@ Appelé par l’infrastructure pour déterminer la position relative d’un nouv
 virtual int CompareItem(LPCOMPAREITEMSTRUCT lpCompareItemStruct);
 ```
 
-### <a name="parameters"></a>Parameters
+### <a name="parameters"></a>Paramètres
 
 *lpCompareItemStruct*<br/>
 Pointeur long vers une structure `COMPAREITEMSTRUCT`.
@@ -342,7 +342,7 @@ Pointeur long vers une structure `COMPAREITEMSTRUCT`.
 
 Indique la position relative des deux éléments décrits dans la structure [compareitemstruct,](/windows/win32/api/winuser/ns-winuser-compareitemstruct) . Il peut s’agir de l’une des valeurs suivantes :
 
-|Value|Signification|
+|Valeur|Signification|
 |-----------|-------------|
 |-1|L’élément 1 est trié avant l’élément 2.|
 |0|Les éléments 1 et 2 sont triés de la même façon.|
@@ -358,7 +358,7 @@ Par défaut, cette fonction membre ne fait rien. Si vous créez une zone de list
 
 [!code-cpp[NVC_MFC_CListBox#5](../../mfc/codesnippet/cpp/clistbox-class_4.cpp)]
 
-##  <a name="create"></a>  CListBox::Create
+##  <a name="create"></a>CListBox :: Create
 
 Crée la zone de liste Windows et l’attache à l’objet `CListBox`.
 
@@ -370,12 +370,12 @@ virtual BOOL Create(
     UINT nID);
 ```
 
-### <a name="parameters"></a>Parameters
+### <a name="parameters"></a>Paramètres
 
 *dwStyle*<br/>
 Spécifie le style de la zone de liste. Applique une combinaison de [styles de zone de liste](../../mfc/reference/styles-used-by-mfc.md#list-box-styles) à la zone.
 
-*rect*<br/>
+*rectangulaire*<br/>
 Spécifie la taille et la position de la zone de liste. Il peut s’agir d’un objet `CRect` ou d’une structure `RECT`.
 
 *pParentWnd*<br/>
@@ -416,7 +416,7 @@ Appliquez les [styles de fenêtre](../../mfc/reference/styles-used-by-mfc.md#win
 
 [!code-cpp[NVC_MFC_CListBox#2](../../mfc/codesnippet/cpp/clistbox-class_5.cpp)]
 
-##  <a name="deleteitem"></a>  CListBox::DeleteItem
+##  <a name="deleteitem"></a>CListBox ::D eleteItem
 
 Appelé par le Framework lorsque l’utilisateur supprime un élément d’un objet `CListBox` owner-draw ou détruit la zone de liste.
 
@@ -424,7 +424,7 @@ Appelé par le Framework lorsque l’utilisateur supprime un élément d’un ob
 virtual void DeleteItem(LPDELETEITEMSTRUCT lpDeleteItemStruct);
 ```
 
-### <a name="parameters"></a>Parameters
+### <a name="parameters"></a>Paramètres
 
 *lpDeleteItemStruct*<br/>
 Pointeur long vers une structure Windows [deleteitemstruct,](/windows/win32/api/winuser/ns-winuser-deleteitemstruct) qui contient des informations sur l’élément supprimé.
@@ -439,7 +439,7 @@ Consultez [CWnd :: OnDeleteItem](../../mfc/reference/cwnd-class.md#ondeleteitem
 
 [!code-cpp[NVC_MFC_CListBox#6](../../mfc/codesnippet/cpp/clistbox-class_6.cpp)]
 
-##  <a name="deletestring"></a>  CListBox::DeleteString
+##  <a name="deletestring"></a>CListBox ::D eleteString
 
 Supprime l’élément à la position *nIndex* de la zone de liste.
 
@@ -447,7 +447,7 @@ Supprime l’élément à la position *nIndex* de la zone de liste.
 int DeleteString(UINT nIndex);
 ```
 
-### <a name="parameters"></a>Parameters
+### <a name="parameters"></a>Paramètres
 
 *nIndex*<br/>
 Spécifie l’index de base zéro de la chaîne à supprimer.
@@ -464,7 +464,7 @@ Tous les éléments suivants *nIndex* descendent d’une position. Par exemple, 
 
 [!code-cpp[NVC_MFC_CListBox#7](../../mfc/codesnippet/cpp/clistbox-class_7.cpp)]
 
-##  <a name="dir"></a>  CListBox::Dir
+##  <a name="dir"></a>CListBox ::D IR
 
 Ajoute une liste de noms de fichiers, de lecteurs ou les deux à une zone de liste.
 
@@ -474,12 +474,12 @@ int Dir(
     LPCTSTR lpszWildCard);
 ```
 
-### <a name="parameters"></a>Parameters
+### <a name="parameters"></a>Paramètres
 
-*attr*<br/>
+*AVERTISSEMENT*<br/>
 Il peut s’agir de n’importe quelle combinaison des valeurs **enum** décrites dans `CFile::GetStatu`[s](../../mfc/reference/cfile-class.md#getstatus)ou de n’importe quelle combinaison des valeurs suivantes :
 
-|Value|Signification|
+|Valeur|Signification|
 |-----------|-------------|
 |0x0000|Le fichier peut être lu ou écrit.|
 |0x0001|Le fichier peut être lu à partir de laquelle il n’est pas écrit.|
@@ -501,7 +501,7 @@ Index de base zéro du dernier nom de fichier ajouté à la liste. La valeur de 
 
 [!code-cpp[NVC_MFC_CListBox#8](../../mfc/codesnippet/cpp/clistbox-class_8.cpp)]
 
-##  <a name="drawitem"></a>  CListBox::DrawItem
+##  <a name="drawitem"></a>CListBox ::D rawItem
 
 Appelée par l’infrastructure quand un aspect visuel d’une zone de liste owner-draw change.
 
@@ -509,7 +509,7 @@ Appelée par l’infrastructure quand un aspect visuel d’une zone de liste own
 virtual void DrawItem(LPDRAWITEMSTRUCT lpDrawItemStruct);
 ```
 
-### <a name="parameters"></a>Parameters
+### <a name="parameters"></a>Paramètres
 
 *lpDrawItemStruct*<br/>
 Pointeur long vers une structure [drawitemstruct,](/windows/win32/api/winuser/ns-winuser-drawitemstruct) qui contient des informations sur le type de dessin requis.
@@ -526,7 +526,7 @@ Consultez [CWnd :: OnDrawItem](../../mfc/reference/cwnd-class.md#ondrawitem) po
 
 [!code-cpp[NVC_MFC_CListBox#9](../../mfc/codesnippet/cpp/clistbox-class_9.cpp)]
 
-##  <a name="findstring"></a>  CListBox::FindString
+##  <a name="findstring"></a>CListBox :: FindString
 
 Recherche la première chaîne dans une zone de liste qui contient le préfixe spécifié sans modifier la sélection de la zone de liste.
 
@@ -536,7 +536,7 @@ int FindString(
     LPCTSTR lpszItem) const;
 ```
 
-### <a name="parameters"></a>Parameters
+### <a name="parameters"></a>Paramètres
 
 *nStartAfter*<br/>
 Contient l’index de base zéro de l’élément avant le premier élément dans lequel effectuer la recherche. Lorsque la recherche atteint le bas de la zone de liste, elle continue à partir du haut de la zone de liste jusqu’à l’élément spécifié par *nStartAfter*. Si *nStartAfter* est-1, la zone de liste entière est recherchée à partir du début.
@@ -556,7 +556,7 @@ Utilisez la fonction membre [SelectString](#selectstring) pour rechercher et sé
 
 [!code-cpp[NVC_MFC_CListBox#10](../../mfc/codesnippet/cpp/clistbox-class_10.cpp)]
 
-##  <a name="findstringexact"></a>  CListBox::FindStringExact
+##  <a name="findstringexact"></a>CListBox :: FindExactString
 
 Recherche la première chaîne de zone de liste qui correspond à la chaîne spécifiée dans *lpszFind*.
 
@@ -566,7 +566,7 @@ int FindStringExact(
     LPCTSTR lpszFind) const;
 ```
 
-### <a name="parameters"></a>Parameters
+### <a name="parameters"></a>Paramètres
 
 *nIndexStart*<br/>
 Spécifie l’index de base zéro de l’élément avant le premier élément dans lequel effectuer la recherche. Lorsque la recherche atteint le bas de la zone de liste, elle continue à partir du haut de la zone de liste jusqu’à l’élément spécifié par *nIndexStart*. Si *nIndexStart* est-1, la zone de liste entière est recherchée à partir du début.
@@ -580,13 +580,13 @@ Index de l’élément correspondant, ou LB_ERR si la recherche a échoué.
 
 ### <a name="remarks"></a>Notes
 
-Si la zone de liste a été créée avec un style owner-draw, mais sans le style [LBS_HASSTRINGS](../../mfc/reference/styles-used-by-mfc.md#list-box-styles), la fonction membre `FindStringExact` tente de faire correspondre la valeur du mot double à la valeur de *lpszFind*.
+Si la zone de liste a été créée avec un style owner-draw, mais sans le style [LBS_HASSTRINGS](../../mfc/reference/styles-used-by-mfc.md#list-box-styles) , la fonction membre `FindStringExact` tente de faire correspondre la valeur du mot double à la valeur de *lpszFind*.
 
 ### <a name="example"></a>Exemple
 
 [!code-cpp[NVC_MFC_CListBox#11](../../mfc/codesnippet/cpp/clistbox-class_11.cpp)]
 
-##  <a name="getanchorindex"></a>  CListBox::GetAnchorIndex
+##  <a name="getanchorindex"></a>CListBox :: GetAnchorIndex
 
 Récupère l’index de base zéro de l’élément d’ancrage actuel dans la zone de liste.
 
@@ -606,7 +606,7 @@ Dans une zone de liste à sélection multiple, l’élément d’ancrage est le 
 
   Consultez l’exemple pour [CListBox :: SetAnchorIndex](#setanchorindex).
 
-##  <a name="getcaretindex"></a>  CListBox::GetCaretIndex
+##  <a name="getcaretindex"></a>CListBox :: GetCaretIndex
 
 Détermine l’index de l’élément qui a le rectangle de focus dans une zone de liste à sélection multiple.
 
@@ -626,7 +626,7 @@ L’élément peut être ou non sélectionné.
 
   Consultez l’exemple pour [CListBox :: SetCaretIndex](#setcaretindex).
 
-##  <a name="getcount"></a>  CListBox::GetCount
+##  <a name="getcount"></a>CListBox :: GetCount
 
 Récupère le nombre d’éléments dans une zone de liste.
 
@@ -646,7 +646,7 @@ Le nombre retourné est supérieur à la valeur d’index du dernier élément (
 
 [!code-cpp[NVC_MFC_CListBox#12](../../mfc/codesnippet/cpp/clistbox-class_12.cpp)]
 
-##  <a name="getcursel"></a>  CListBox::GetCurSel
+##  <a name="getcursel"></a>CListBox :: GetCurSel
 
 Récupère l’index de base zéro de l’élément actuellement sélectionné, le cas échéant, dans une zone de liste à sélection unique.
 
@@ -668,7 +668,7 @@ N’appelez pas `GetCurSel` pour une zone de liste à sélection multiple. Utili
 
 [!code-cpp[NVC_MFC_CListBox#13](../../mfc/codesnippet/cpp/clistbox-class_13.cpp)]
 
-##  <a name="gethorizontalextent"></a>  CListBox::GetHorizontalExtent
+##  <a name="gethorizontalextent"></a>CListBox :: GetHorizontalExtent
 
 Récupère à partir de la zone de liste la largeur, en pixels, à laquelle il peut faire défiler horizontalement.
 
@@ -688,7 +688,7 @@ Cela s’applique uniquement si la zone de liste comporte une barre de défileme
 
 [!code-cpp[NVC_MFC_CListBox#14](../../mfc/codesnippet/cpp/clistbox-class_14.cpp)]
 
-##  <a name="getitemdata"></a>  CListBox::GetItemData
+##  <a name="getitemdata"></a>CListBox :: GetItemData
 
 Récupère la valeur de mot double fournie par l’application associée à l’élément de zone de liste spécifié.
 
@@ -696,7 +696,7 @@ Récupère la valeur de mot double fournie par l’application associée à l’
 DWORD_PTR GetItemData(int nIndex) const;
 ```
 
-### <a name="parameters"></a>Parameters
+### <a name="parameters"></a>Paramètres
 
 *nIndex*<br/>
 Spécifie l’index de base zéro de l’élément dans la zone de liste.
@@ -713,7 +713,7 @@ La valeur de mot double était le paramètre *dwItemData* d’un appel [SetItemD
 
 [!code-cpp[NVC_MFC_CListBox#15](../../mfc/codesnippet/cpp/clistbox-class_15.cpp)]
 
-##  <a name="getitemdataptr"></a>  CListBox::GetItemDataPtr
+##  <a name="getitemdataptr"></a>CListBox :: GetItemDataPtr
 
 Récupère la valeur 32 bits fournie par l’application associée à l’élément de zone de liste spécifié en tant que pointeur (**void** <strong>\*</strong>).
 
@@ -721,7 +721,7 @@ Récupère la valeur 32 bits fournie par l’application associée à l’élém
 void* GetItemDataPtr(int nIndex) const;
 ```
 
-### <a name="parameters"></a>Parameters
+### <a name="parameters"></a>Paramètres
 
 *nIndex*<br/>
 Spécifie l’index de base zéro de l’élément dans la zone de liste.
@@ -734,7 +734,7 @@ Récupère un pointeur, ou-1 si une erreur se produit.
 
 [!code-cpp[NVC_MFC_CListBox#16](../../mfc/codesnippet/cpp/clistbox-class_16.cpp)]
 
-##  <a name="getitemheight"></a>  CListBox::GetItemHeight
+##  <a name="getitemheight"></a>CListBox :: GetItemHeight
 
 Détermine la hauteur des éléments dans une zone de liste.
 
@@ -742,7 +742,7 @@ Détermine la hauteur des éléments dans une zone de liste.
 int GetItemHeight(int nIndex) const;
 ```
 
-### <a name="parameters"></a>Parameters
+### <a name="parameters"></a>Paramètres
 
 *nIndex*<br/>
 Spécifie l’index de base zéro de l’élément dans la zone de liste. Ce paramètre est utilisé uniquement si la zone de liste a le style LBS_OWNERDRAWVARIABLE ; dans le cas contraire, la valeur doit être 0.
@@ -755,7 +755,7 @@ Hauteur, en pixels, des éléments de la zone de liste. Si la zone de liste a le
 
 [!code-cpp[NVC_MFC_CListBox#17](../../mfc/codesnippet/cpp/clistbox-class_17.cpp)]
 
-##  <a name="getitemrect"></a>  CListBox::GetItemRect
+##  <a name="getitemrect"></a>CListBox :: GetItemRect
 
 Récupère les dimensions du rectangle qui délimite un élément de zone de liste tel qu’il est actuellement affiché dans la fenêtre de zone de liste.
 
@@ -765,7 +765,7 @@ int GetItemRect(
     LPRECT lpRect) const;
 ```
 
-### <a name="parameters"></a>Parameters
+### <a name="parameters"></a>Paramètres
 
 *nIndex*<br/>
 Spécifie l’index de base zéro de l’élément.
@@ -781,7 +781,7 @@ LB_ERR si une erreur se produit.
 
 [!code-cpp[NVC_MFC_CListBox#18](../../mfc/codesnippet/cpp/clistbox-class_18.cpp)]
 
-##  <a name="getlistboxinfo"></a>  CListBox::GetListBoxInfo
+##  <a name="getlistboxinfo"></a>CListBox :: GetListBoxInfo
 
 Récupère le nombre d’éléments par colonne.
 
@@ -797,7 +797,7 @@ Nombre d’éléments par colonne de l’objet `CListBox`.
 
 Cette fonction membre émule les fonctionnalités du message [LB_GETLISTBOXINFO](/windows/win32/Controls/lb-getlistboxinfo) , comme décrit dans le SDK Windows.
 
-##  <a name="getlocale"></a>  CListBox::GetLocale
+##  <a name="getlocale"></a>CListBox :: GetLocale
 
 Récupère les paramètres régionaux utilisés par la zone de liste.
 
@@ -817,7 +817,7 @@ Les paramètres régionaux sont utilisés, par exemple, pour déterminer l’ord
 
   Consultez l’exemple pour [CListBox :: setlocale](#setlocale).
 
-##  <a name="getsel"></a>  CListBox::GetSel
+##  <a name="getsel"></a>CListBox :: GetSel
 
 Récupère l’état de sélection d’un élément.
 
@@ -825,7 +825,7 @@ Récupère l’état de sélection d’un élément.
 int GetSel(int nIndex) const;
 ```
 
-### <a name="parameters"></a>Parameters
+### <a name="parameters"></a>Paramètres
 
 *nIndex*<br/>
 Spécifie l’index de base zéro de l’élément.
@@ -844,7 +844,7 @@ Pour récupérer l’index de l’élément de zone de liste actuellement sélec
 
 [!code-cpp[NVC_MFC_CListBox#19](../../mfc/codesnippet/cpp/clistbox-class_19.cpp)]
 
-##  <a name="getselcount"></a>  CListBox::GetSelCount
+##  <a name="getselcount"></a>CListBox :: GetSelCount
 
 Récupère le nombre total d’éléments sélectionnés dans une zone de liste à sélection multiple.
 
@@ -860,7 +860,7 @@ Nombre d’éléments sélectionnés dans une zone de liste. Si la zone de liste
 
   Consultez l’exemple pour [CListBox :: GetSelItems](#getselitems).
 
-##  <a name="getselitems"></a>  CListBox::GetSelItems
+##  <a name="getselitems"></a>CListBox :: GetSelItems
 
 Remplit une mémoire tampon avec un tableau d’entiers qui spécifie les numéros d’élément des éléments sélectionnés dans une zone de liste à sélection multiple.
 
@@ -870,7 +870,7 @@ int GetSelItems(
     LPINT rgIndex) const;
 ```
 
-### <a name="parameters"></a>Parameters
+### <a name="parameters"></a>Paramètres
 
 *nMaxItems*<br/>
 Spécifie le nombre maximal d’éléments sélectionnés dont les numéros d’élément doivent être placés dans la mémoire tampon.
@@ -886,7 +886,7 @@ Nombre réel d’éléments placés dans la mémoire tampon. Si la zone de liste
 
 [!code-cpp[NVC_MFC_CListBox#20](../../mfc/codesnippet/cpp/clistbox-class_20.cpp)]
 
-##  <a name="gettext"></a>  CListBox::GetText
+##  <a name="gettext"></a>CListBox :: GetText
 
 Obtient une chaîne à partir d’une zone de liste.
 
@@ -900,12 +900,12 @@ void GetText(
     CString& rString) const;
 ```
 
-### <a name="parameters"></a>Parameters
+### <a name="parameters"></a>Paramètres
 
 *nIndex*<br/>
 Spécifie l’index de base zéro de la chaîne à récupérer.
 
-*lpszBuffer*<br/>
+*Lpszbuffer a été*<br/>
 Pointe vers la mémoire tampon qui reçoit la chaîne. La mémoire tampon doit avoir suffisamment d’espace pour la chaîne et un caractère null de fin. La taille de la chaîne peut être déterminée à l’avance en appelant la fonction membre `GetTextLen`.
 
 *rString*<br/>
@@ -923,7 +923,7 @@ La deuxième forme de cette fonction membre remplit un objet `CString` avec le t
 
 [!code-cpp[NVC_MFC_CListBox#21](../../mfc/codesnippet/cpp/clistbox-class_21.cpp)]
 
-##  <a name="gettextlen"></a>  CListBox::GetTextLen
+##  <a name="gettextlen"></a>CListBox :: GetTextLen
 
 Obtient la longueur d’une chaîne dans un élément de zone de liste.
 
@@ -931,7 +931,7 @@ Obtient la longueur d’une chaîne dans un élément de zone de liste.
 int GetTextLen(int nIndex) const;
 ```
 
-### <a name="parameters"></a>Parameters
+### <a name="parameters"></a>Paramètres
 
 *nIndex*<br/>
 Spécifie l’index de base zéro de la chaîne.
@@ -944,7 +944,7 @@ Longueur de la chaîne en caractères, à l’exclusion du caractère null de fi
 
   Consultez l’exemple pour [CListBox :: gettext](#gettext).
 
-##  <a name="gettopindex"></a>  CListBox::GetTopIndex
+##  <a name="gettopindex"></a>CListBox :: GetTopIndex
 
 Récupère l’index de base zéro du premier élément visible dans une zone de liste.
 
@@ -964,7 +964,7 @@ Initialement, l’élément 0 se trouve en haut de la zone de liste, mais si vou
 
 [!code-cpp[NVC_MFC_CListBox#22](../../mfc/codesnippet/cpp/clistbox-class_22.cpp)]
 
-##  <a name="initstorage"></a>  CListBox::InitStorage
+##  <a name="initstorage"></a>CListBox :: InitStorage
 
 Alloue de la mémoire pour le stockage des éléments de la zone de liste.
 
@@ -974,7 +974,7 @@ int InitStorage(
     UINT nBytes);
 ```
 
-### <a name="parameters"></a>Parameters
+### <a name="parameters"></a>Paramètres
 
 *nItems*<br/>
 Spécifie le nombre d’éléments à ajouter.
@@ -998,7 +998,7 @@ Windows 95/98 uniquement : le paramètre *nItems* est limité aux valeurs 16 bi
 
 [!code-cpp[NVC_MFC_CListBox#23](../../mfc/codesnippet/cpp/clistbox-class_23.cpp)]
 
-##  <a name="insertstring"></a>  CListBox::InsertString
+##  <a name="insertstring"></a>CListBox :: InsertString
 
 Insère une chaîne dans la zone de liste.
 
@@ -1008,7 +1008,7 @@ int InsertString(
     LPCTSTR lpszItem);
 ```
 
-### <a name="parameters"></a>Parameters
+### <a name="parameters"></a>Paramètres
 
 *nIndex*<br/>
 Spécifie l’index de base zéro de la position où insérer la chaîne. Si ce paramètre a la valeur-1, la chaîne est ajoutée à la fin de la liste.
@@ -1022,13 +1022,13 @@ Index de base zéro de la position à laquelle la chaîne a été insérée. La 
 
 ### <a name="remarks"></a>Notes
 
-Contrairement à la fonction membre [AddString](#addstring), `InsertString` n’entraîne pas le tri d’une liste avec le style [LBS_SORT](../../mfc/reference/styles-used-by-mfc.md#list-box-styles).
+Contrairement à la fonction membre [AddString](#addstring) , `InsertString` n’entraîne pas le tri d’une liste avec le style [LBS_SORT](../../mfc/reference/styles-used-by-mfc.md#list-box-styles) .
 
 ### <a name="example"></a>Exemple
 
 [!code-cpp[NVC_MFC_CListBox#24](../../mfc/codesnippet/cpp/clistbox-class_24.cpp)]
 
-##  <a name="itemfrompoint"></a>  CListBox::ItemFromPoint
+##  <a name="itemfrompoint"></a>CListBox :: ItemFromPoint
 
 Détermine l’élément de zone de liste le plus proche du point spécifié dans *PT*.
 
@@ -1038,7 +1038,7 @@ UINT ItemFromPoint(
     BOOL& bOutside) const;
 ```
 
-### <a name="parameters"></a>Parameters
+### <a name="parameters"></a>Paramètres
 
 *pt*<br/>
 Point pour lequel Rechercher l’élément le plus proche, spécifié par rapport à l’angle supérieur gauche de la zone cliente de la zone de liste.
@@ -1058,7 +1058,7 @@ Vous pouvez utiliser cette fonction pour déterminer à quel élément de zone d
 
   Consultez l’exemple pour [CListBox :: SetAnchorIndex](#setanchorindex).
 
-##  <a name="measureitem"></a>  CListBox::MeasureItem
+##  <a name="measureitem"></a>CListBox :: MeasureItem
 
 Appelé par le Framework lorsqu’une zone de liste avec un style owner-draw est créée.
 
@@ -1066,7 +1066,7 @@ Appelé par le Framework lorsqu’une zone de liste avec un style owner-draw est
 virtual void MeasureItem(LPMEASUREITEMSTRUCT lpMeasureItemStruct);
 ```
 
-### <a name="parameters"></a>Parameters
+### <a name="parameters"></a>Paramètres
 
 *lpMeasureItemStruct*<br/>
 Pointeur long vers une structure [measureitemstruct,](/windows/win32/api/winuser/ns-winuser-measureitemstruct) .
@@ -1083,7 +1083,7 @@ Consultez [CWnd :: OnMeasureItem](../../mfc/reference/cwnd-class.md#onmeasureit
 
 [!code-cpp[NVC_MFC_CListBox#25](../../mfc/codesnippet/cpp/clistbox-class_25.cpp)]
 
-##  <a name="resetcontent"></a>  CListBox::ResetContent
+##  <a name="resetcontent"></a>CListBox :: ResetContent
 
 Supprime tous les éléments d’une zone de liste.
 
@@ -1095,7 +1095,7 @@ void ResetContent();
 
 [!code-cpp[NVC_MFC_CListBox#26](../../mfc/codesnippet/cpp/clistbox-class_26.cpp)]
 
-##  <a name="selectstring"></a>  CListBox::SelectString
+##  <a name="selectstring"></a>CListBox :: SelectString
 
 Recherche un élément de zone de liste qui correspond à la chaîne spécifiée et, si un élément correspondant est trouvé, il sélectionne l’élément.
 
@@ -1105,7 +1105,7 @@ int SelectString(
     LPCTSTR lpszItem);
 ```
 
-### <a name="parameters"></a>Parameters
+### <a name="parameters"></a>Paramètres
 
 *nStartAfter*<br/>
 Contient l’index de base zéro de l’élément avant le premier élément dans lequel effectuer la recherche. Lorsque la recherche atteint le bas de la zone de liste, elle continue à partir du haut de la zone de liste jusqu’à l’élément spécifié par *nStartAfter*. Si *nStartAfter* est-1, la zone de liste entière est recherchée à partir du début.
@@ -1131,7 +1131,7 @@ Utilisez la fonction membre `FindString` pour rechercher une chaîne sans sélec
 
 [!code-cpp[NVC_MFC_CListBox#27](../../mfc/codesnippet/cpp/clistbox-class_27.cpp)]
 
-##  <a name="selitemrange"></a>  CListBox::SelItemRange
+##  <a name="selitemrange"></a>CListBox :: SelItemRange
 
 Sélectionne plusieurs éléments consécutifs dans une zone de liste à sélection multiple.
 
@@ -1142,7 +1142,7 @@ int SelItemRange(
     int nLastItem);
 ```
 
-### <a name="parameters"></a>Parameters
+### <a name="parameters"></a>Paramètres
 
 *bSelect*<br/>
 Spécifie comment définir la sélection. Si *bSelect* a la valeur true, la chaîne est sélectionnée et mise en surbrillance ; Si la valeur est FALSe, la mise en surbrillance est supprimée et la chaîne n’est plus sélectionnée.
@@ -1165,7 +1165,7 @@ Utilisez cette fonction membre uniquement avec des zones de liste à sélection 
 
 [!code-cpp[NVC_MFC_CListBox#28](../../mfc/codesnippet/cpp/clistbox-class_28.cpp)]
 
-##  <a name="setanchorindex"></a>  CListBox::SetAnchorIndex
+##  <a name="setanchorindex"></a>CListBox :: SetAnchorIndex
 
 Définit l’ancre dans une zone de liste à sélection multiple pour commencer une sélection étendue.
 
@@ -1173,7 +1173,7 @@ Définit l’ancre dans une zone de liste à sélection multiple pour commencer 
 void SetAnchorIndex(int nIndex);
 ```
 
-### <a name="parameters"></a>Parameters
+### <a name="parameters"></a>Paramètres
 
 *nIndex*<br/>
 Spécifie l’index de base zéro de l’élément de zone de liste qui sera l’ancre.
@@ -1186,7 +1186,7 @@ Dans une zone de liste à sélection multiple, l’élément d’ancrage est le 
 
 [!code-cpp[NVC_MFC_CListBox#29](../../mfc/codesnippet/cpp/clistbox-class_29.cpp)]
 
-##  <a name="setcaretindex"></a>  CListBox::SetCaretIndex
+##  <a name="setcaretindex"></a>CListBox :: SetCaretIndex
 
 Définit le rectangle de focus sur l’élément à l’index spécifié dans une zone de liste à sélection multiple.
 
@@ -1196,7 +1196,7 @@ int SetCaretIndex(
     BOOL bScroll = TRUE);
 ```
 
-### <a name="parameters"></a>Parameters
+### <a name="parameters"></a>Paramètres
 
 *nIndex*<br/>
 Spécifie l’index de base zéro de l’élément qui recevra le rectangle de focus dans la zone de liste.
@@ -1216,7 +1216,7 @@ Si l’élément n’est pas visible, il fait l’objet d’un défilement dans 
 
 [!code-cpp[NVC_MFC_CListBox#30](../../mfc/codesnippet/cpp/clistbox-class_30.cpp)]
 
-##  <a name="setcolumnwidth"></a>  CListBox::SetColumnWidth
+##  <a name="setcolumnwidth"></a>CListBox :: SetColumnWidth
 
 Définit la largeur en pixels de toutes les colonnes dans une zone de liste multicolonne (créée avec le style [LBS_MULTICOLUMN](../../mfc/reference/styles-used-by-mfc.md#list-box-styles) ).
 
@@ -1224,7 +1224,7 @@ Définit la largeur en pixels de toutes les colonnes dans une zone de liste mult
 void SetColumnWidth(int cxWidth);
 ```
 
-### <a name="parameters"></a>Parameters
+### <a name="parameters"></a>Paramètres
 
 *cxWidth*<br/>
 Spécifie la largeur en pixels de toutes les colonnes.
@@ -1233,7 +1233,7 @@ Spécifie la largeur en pixels de toutes les colonnes.
 
 [!code-cpp[NVC_MFC_CListBox#31](../../mfc/codesnippet/cpp/clistbox-class_31.cpp)]
 
-##  <a name="setcursel"></a>  CListBox::SetCurSel
+##  <a name="setcursel"></a>CListBox :: SetCurSel
 
 Sélectionne une chaîne et la fait défiler en vue, si nécessaire.
 
@@ -1241,9 +1241,9 @@ Sélectionne une chaîne et la fait défiler en vue, si nécessaire.
 int SetCurSel(int nSelect);
 ```
 
-### <a name="parameters"></a>Parameters
+### <a name="parameters"></a>Paramètres
 
-*nSelect*<br/>
+*Nsélectionner*<br/>
 Spécifie l’index de base zéro de la chaîne à sélectionner. Si *nsélectionner* a la valeur-1, la zone de liste est définie sur ne pas sélectionner.
 
 ### <a name="return-value"></a>Valeur de retour
@@ -1262,7 +1262,7 @@ Pour définir ou supprimer une sélection dans une zone de liste à sélection m
 
 [!code-cpp[NVC_MFC_CListBox#32](../../mfc/codesnippet/cpp/clistbox-class_32.cpp)]
 
-##  <a name="sethorizontalextent"></a>  CListBox::SetHorizontalExtent
+##  <a name="sethorizontalextent"></a>CListBox :: SetHorizontalExtent
 
 Définit la largeur, en pixels, à laquelle une zone de liste peut faire défiler horizontalement.
 
@@ -1270,7 +1270,7 @@ Définit la largeur, en pixels, à laquelle une zone de liste peut faire défile
 void SetHorizontalExtent(int cxExtent);
 ```
 
-### <a name="parameters"></a>Parameters
+### <a name="parameters"></a>Paramètres
 
 *cxExtent*<br/>
 Spécifie le nombre de pixels par lesquels la zone de liste peut faire défiler horizontalement.
@@ -1287,7 +1287,7 @@ Cette fonction membre n’est pas utile pour les zones de liste multicolonnes. P
 
 [!code-cpp[NVC_MFC_CListBox#33](../../mfc/codesnippet/cpp/clistbox-class_33.cpp)]
 
-##  <a name="setitemdata"></a>  CListBox::SetItemData
+##  <a name="setitemdata"></a>CListBox :: SetItemData
 
 Définit une valeur associée à l’élément spécifié dans une zone de liste.
 
@@ -1297,7 +1297,7 @@ int SetItemData(
     DWORD_PTR dwItemData);
 ```
 
-### <a name="parameters"></a>Parameters
+### <a name="parameters"></a>Paramètres
 
 *nIndex*<br/>
 Spécifie l’index de base zéro de l’élément.
@@ -1313,7 +1313,7 @@ LB_ERR si une erreur se produit.
 
 [!code-cpp[NVC_MFC_CListBox#34](../../mfc/codesnippet/cpp/clistbox-class_34.cpp)]
 
-##  <a name="setitemdataptr"></a>  CListBox::SetItemDataPtr
+##  <a name="setitemdataptr"></a>CListBox :: SetItemDataPtr
 
 Définit la valeur 32 bits associée à l’élément spécifié dans une zone de liste pour qu’elle soit le pointeur spécifié ( **void** <strong>\*</strong>).
 
@@ -1323,7 +1323,7 @@ int SetItemDataPtr(
     void* pData);
 ```
 
-### <a name="parameters"></a>Parameters
+### <a name="parameters"></a>Paramètres
 
 *nIndex*<br/>
 Spécifie l’index de base zéro de l’élément.
@@ -1343,7 +1343,7 @@ Ce pointeur reste valide pendant toute la durée de vie de la zone de liste, mê
 
 [!code-cpp[NVC_MFC_CListBox#35](../../mfc/codesnippet/cpp/clistbox-class_35.cpp)]
 
-##  <a name="setitemheight"></a>  CListBox::SetItemHeight
+##  <a name="setitemheight"></a>CListBox :: SetItemHeight
 
 Définit la hauteur des éléments dans une zone de liste.
 
@@ -1353,7 +1353,7 @@ int SetItemHeight(
     UINT cyItemHeight);
 ```
 
-### <a name="parameters"></a>Parameters
+### <a name="parameters"></a>Paramètres
 
 *nIndex*<br/>
 Spécifie l’index de base zéro de l’élément dans la zone de liste. Ce paramètre est utilisé uniquement si la zone de liste a le style LBS_OWNERDRAWVARIABLE ; dans le cas contraire, la valeur doit être 0.
@@ -1373,7 +1373,7 @@ Si la zone de liste a le style [LBS_OWNERDRAWVARIABLE](../../mfc/reference/style
 
 [!code-cpp[NVC_MFC_CListBox#36](../../mfc/codesnippet/cpp/clistbox-class_36.cpp)]
 
-##  <a name="setlocale"></a>  CListBox::SetLocale
+##  <a name="setlocale"></a>CListBox :: SetLocale
 
 Définit l’identificateur de paramètres régionaux pour cette zone de liste.
 
@@ -1381,7 +1381,7 @@ Définit l’identificateur de paramètres régionaux pour cette zone de liste.
 LCID SetLocale(LCID nNewLocale);
 ```
 
-### <a name="parameters"></a>Parameters
+### <a name="parameters"></a>Paramètres
 
 *nNewLocale*<br/>
 Nouvelle valeur de l’identificateur de paramètres régionaux (LCID) à définir pour la zone de liste.
@@ -1398,7 +1398,7 @@ Si `SetLocale` n’est pas appelé, les paramètres régionaux par défaut sont 
 
 [!code-cpp[NVC_MFC_CListBox#37](../../mfc/codesnippet/cpp/clistbox-class_37.cpp)]
 
-##  <a name="setsel"></a>  CListBox::SetSel
+##  <a name="setsel"></a>CListBox :: SetSel
 
 Sélectionne une chaîne dans une zone de liste à sélection multiple.
 
@@ -1408,7 +1408,7 @@ int SetSel(
     BOOL bSelect = TRUE);
 ```
 
-### <a name="parameters"></a>Parameters
+### <a name="parameters"></a>Paramètres
 
 *nIndex*<br/>
 Contient l’index de base zéro de la chaîne à définir. Si la valeur est-1, la sélection est ajoutée ou supprimée dans toutes les chaînes, selon la valeur de *bSelect*.
@@ -1430,7 +1430,7 @@ Pour sélectionner un élément dans une zone de liste à sélection unique, uti
 
 [!code-cpp[NVC_MFC_CListBox#38](../../mfc/codesnippet/cpp/clistbox-class_38.cpp)]
 
-##  <a name="settabstops"></a>  CListBox::SetTabStops
+##  <a name="settabstops"></a>CListBox :: SetTabStops
 
 Définit les positions des taquets de tabulation dans une zone de liste.
 
@@ -1443,7 +1443,7 @@ BOOL SetTabStops(
     LPINT rgTabStops);
 ```
 
-### <a name="parameters"></a>Parameters
+### <a name="parameters"></a>Paramètres
 
 *cxEachStop*<br/>
 Les taquets de tabulation sont définis à chaque unité de boîte de dialogue *cxEachStop* . Pour obtenir une description d’une unité de boîte de dialogue, consultez *rgTabStops* .
@@ -1470,7 +1470,7 @@ Pour répondre à un appel à la fonction membre `SetTabStops`, la zone de liste
 
 [!code-cpp[NVC_MFC_CListBox#39](../../mfc/codesnippet/cpp/clistbox-class_39.cpp)]
 
-##  <a name="settopindex"></a>  CListBox::SetTopIndex
+##  <a name="settopindex"></a>CListBox :: SetTopIndex
 
 Garantit qu’un élément de zone de liste spécifique est visible.
 
@@ -1478,7 +1478,7 @@ Garantit qu’un élément de zone de liste spécifique est visible.
 int SetTopIndex(int nIndex);
 ```
 
-### <a name="parameters"></a>Parameters
+### <a name="parameters"></a>Paramètres
 
 *nIndex*<br/>
 Spécifie l’index de base zéro de l’élément de zone de liste.
@@ -1495,7 +1495,7 @@ Le système fait défiler la zone de liste jusqu’à ce que l’élément spéc
 
 [!code-cpp[NVC_MFC_CListBox#40](../../mfc/codesnippet/cpp/clistbox-class_40.cpp)]
 
-##  <a name="vkeytoitem"></a>  CListBox::VKeyToItem
+##  <a name="vkeytoitem"></a>CListBox :: VKeyToItem
 
 Appelée par l’infrastructure lorsque la fenêtre parente de la zone de liste reçoit un message WM_VKEYTOITEM de la zone de liste.
 
@@ -1505,7 +1505,7 @@ virtual int VKeyToItem(
     UINT nIndex);
 ```
 
-### <a name="parameters"></a>Parameters
+### <a name="parameters"></a>Paramètres
 
 *nKey*<br/>
 Code de la touche virtuelle de la touche sur laquelle l’utilisateur a appuyé. Pour obtenir la liste des codes de touches virtuelles standard, consultez Winuser. h
@@ -1545,6 +1545,6 @@ Une valeur de retour supérieure ou égale à 0 spécifie l’index d’un élé
 [CWnd, classe](../../mfc/reference/cwnd-class.md)<br/>
 [CButton, classe](../../mfc/reference/cbutton-class.md)<br/>
 [CComboBox, classe](../../mfc/reference/ccombobox-class.md)<br/>
-[CEdit, classe](../../mfc/reference/cedit-class.md)<br/>
+[CEdit Class](../../mfc/reference/cedit-class.md)<br/>
 [CScrollBar, classe](../../mfc/reference/cscrollbar-class.md)<br/>
 [CStatic, classe](../../mfc/reference/cstatic-class.md)

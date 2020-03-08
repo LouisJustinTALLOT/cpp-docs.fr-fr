@@ -18,11 +18,11 @@ helpviewer_keywords:
 - CurrentScheduler class
 ms.assetid: 31c20e0e-4cdf-49b4-8220-d726130aad2b
 ms.openlocfilehash: 6bf61af9ff55722553353a045c87501dbd27fad9
-ms.sourcegitcommit: a8ef52ff4a4944a1a257bdaba1a3331607fb8d0f
+ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/11/2020
-ms.locfileid: "77143077"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78867127"
 ---
 # <a name="currentscheduler-class"></a>CurrentScheduler, classe
 
@@ -55,7 +55,7 @@ class CurrentScheduler;
 
 S’il n’existe aucun planificateur (voir [Scheduler](scheduler-class.md)) associé au contexte d’appel, de nombreuses méthodes de la classe `CurrentScheduler` entraînent l’attachement du planificateur par défaut du processus. Cela peut également impliquer que le planificateur par défaut du processus est créé pendant un tel appel.
 
-## <a name="inheritance-hierarchy"></a>Hiérarchie d'héritage
+## <a name="inheritance-hierarchy"></a>Hiérarchie d’héritage
 
 `CurrentScheduler`
 
