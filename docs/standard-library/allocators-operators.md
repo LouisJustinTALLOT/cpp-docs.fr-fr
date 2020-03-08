@@ -6,19 +6,19 @@ f1_keywords:
 - allocators/std::operator==
 ms.assetid: b55d67cb-3c69-46bf-ad40-e845fb096c4e
 ms.openlocfilehash: b7429e298cdf14d727fc481db6c4a3bf8574b5e7
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62377886"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78875956"
 ---
 # <a name="ltallocatorsgt-operators"></a>&lt;allocators&gt;, opérateurs
 
-Ce sont les fonctions d’opérateur de modèle global définies dans &lt;allocateurs&gt;. Pour les fonctions d’opérateur de membre de classe, consultez la documentation de classe.
+Il s’agit des fonctions d’opérateur de modèle global définies dans &lt;allocators&gt;. Pour les fonctions d’opérateur de membre de classe, consultez la documentation de la classe.
 
 |||
 |-|-|
-|[!=, opérateur](#op_neq)|[operator==](#op_eq_eq)|
+|[operator!=](#op_neq)|[operator==](#op_eq_eq)|
 
 ## <a name="op_neq"></a>  operator!=
 

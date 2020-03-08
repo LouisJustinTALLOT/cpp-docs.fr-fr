@@ -10,19 +10,19 @@ f1_keywords:
 - array/std::array::operator==
 ms.assetid: c8f46282-f179-4909-9a01-639cb8e18c27
 ms.openlocfilehash: 3d65cd6b6b8549fd9964f6c5bb6d8b2d3c0a27b6
-ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
+ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/21/2019
-ms.locfileid: "72688471"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78875887"
 ---
 # <a name="ltarraygt-operators"></a>&lt;array&gt;, opérateurs
 
-L’en-tête \<array > comprend ces fonctions de modèle de comparaison de non-membre de **tableau** .
+L’en-tête de > de tableau \<comprend ces fonctions de modèle de comparaison de non-membre de **tableau** .
 
 ||||
 |-|-|-|
-|[!=, opérateur](#op_neq)|[operator&gt;](#op_gt)|[operator&gt;=](#op_gt_eq)|
+|[operator!=](#op_neq)|[operator&gt;](#op_gt)|[operator&gt;=](#op_gt_eq)|
 |[operator&lt;](#op_lt)|[operator&lt;=](#op_lt_eq)|[operator==](#op_eq_eq)|
 
 ## <a name="op_neq"></a>  operator!=
@@ -38,10 +38,10 @@ bool operator!=(
 
 ### <a name="parameters"></a>Paramètres
 
-*Ty* \
+*Ty*\
 Type d'un élément.
 
-*N* \
+*N*\
 Taille du tableau.
 
 \ *gauche*
@@ -111,10 +111,10 @@ bool operator<(
 
 ### <a name="parameters"></a>Paramètres
 
-*Ty* \
+*Ty*\
 Type d'un élément.
 
-*N* \
+*N*\
 Taille du tableau.
 
 \ *gauche*
@@ -184,10 +184,10 @@ bool operator<=(
 
 ### <a name="parameters"></a>Paramètres
 
-*Ty* \
+*Ty*\
 Type d'un élément.
 
-*N* \
+*N*\
 Taille du tableau.
 
 \ *gauche*
@@ -257,10 +257,10 @@ bool operator==(
 
 ### <a name="parameters"></a>Paramètres
 
-*Ty* \
+*Ty*\
 Type d'un élément.
 
-*N* \
+*N*\
 Taille du tableau.
 
 \ *gauche*
@@ -330,10 +330,10 @@ bool operator>(
 
 ### <a name="parameters"></a>Paramètres
 
-*Ty* \
+*Ty*\
 Type d'un élément.
 
-*N* \
+*N*\
 Taille du tableau.
 
 \ *gauche*
@@ -403,10 +403,10 @@ bool operator>=(
 
 ### <a name="parameters"></a>Paramètres
 
-*Ty* \
+*Ty*\
 Type d'un élément.
 
-*N* \
+*N*\
 Taille du tableau.
 
 \ *gauche*

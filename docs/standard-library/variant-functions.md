@@ -1,5 +1,5 @@
 ---
-title: '&lt;variante&gt; fonctions'
+title: '&lt;les fonctions de&gt; variant'
 ms.date: 04/04/2019
 f1_keywords:
 - variant/std::get
@@ -7,17 +7,17 @@ f1_keywords:
 - variant/std::holds_alternative
 - variant/std::visit
 ms.openlocfilehash: d558eb086e076ba22722080b0c19f3d5733136d2
-ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
+ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68268381"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78865754"
 ---
-# <a name="ltvariantgt-functions"></a>&lt;variante&gt; fonctions
+# <a name="ltvariantgt-functions"></a>&lt;les fonctions de&gt; variant
 
-## <a name="get"></a> Télécharger
+## <a name="get"></a>Télécharger
 
-Obtient la variante d’un objet.
+Obtient le variant d’un objet.
 
 ```cpp
 template <size_t I, class... Types>
@@ -38,9 +38,9 @@ template <class T, class... Types>
     constexpr const T&& get(const variant<Types...>&&);
 ```
 
-## <a name="get_if"></a> get_if
+## <a name="get_if"></a>get_if
 
-Obtient la variante d’un objet s’il existe.
+Obtient la variante d’un objet, le cas échéant.
 
 ```cpp
 template <size_t I, class... Types>
@@ -53,23 +53,23 @@ template <class T, class... Types>
     constexpr add_pointer_t<const T> get_if(const variant<Types...>*) noexcept;
 ```
 
-## <a name="holds_alternative"></a> holds_alternative
+## <a name="holds_alternative"></a>holds_alternative
 
-Retourner **true** si une variante existe.
+Retourne la **valeur true** si un variant existe.
 
 ```cpp
 template <class T, class... Types>
     constexpr bool holds_alternative(const variant<Types...>&) noexcept;
 ```
 
-## <a name="swap"></a> échange
+## <a name="swap"></a>échange
 
 ```cpp
 template <class... Types>
     void swap(variant<Types...>&, variant<Types...>&) noexcept(see below);
 ```
 
-## <a name="variant_npos"></a> variant_npos
+## <a name="variant_npos"></a>variant_npos
 
 ```cpp
 namespace std {
@@ -77,9 +77,9 @@ namespace std {
 }
 ```
 
-## <a name="visit"></a> visite
+## <a name="visit"></a>consultez
 
-Déplace vers la prochaine **variante**.
+Passe à la **variante**suivante.
 
 ```cpp
 template <class Visitor, class... Variants>

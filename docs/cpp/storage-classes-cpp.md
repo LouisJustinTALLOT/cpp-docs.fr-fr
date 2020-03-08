@@ -11,17 +11,17 @@ helpviewer_keywords:
 - storage classes [C++], basic concepts
 ms.assetid: f10e1c56-6249-4eb6-b08f-09ab1eef1992
 ms.openlocfilehash: ab00a5c64a32dc1dab5fef4bc15b722587bc2d6b
-ms.sourcegitcommit: a5fa9c6f4f0c239ac23be7de116066a978511de7
+ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/20/2019
-ms.locfileid: "75301312"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78856896"
 ---
 # <a name="storage-classes"></a>Classes de stockage
 
 Une *classe de stockage* dans le contexte C++ de déclarations de variables est un spécificateur de type qui régit la durée de vie, la liaison et l’emplacement de mémoire des objets. Un objet donné ne peut avoir qu'une seule classe de stockage. Les variables définies dans un bloc ont un stockage automatique, sauf spécification contraire à l’aide des spécificateurs **extern**, **static**ou **thread_local** . Les objets automatiques et les variables n'ont aucune liaison ; ils ne sont pas visibles pour le code en dehors du bloc. La mémoire est allouée automatiquement quand l’exécution entre dans le bloc et désallouée lors de la sortie du bloc.
 
-**Notes**
+**Remarques**
 
 1. Le mot clé [mutable](../cpp/mutable-data-members-cpp.md) peut être considéré comme un spécificateur de classe de stockage. Toutefois, il est uniquement disponible dans la liste des membres d'une définition de classe.
 
@@ -195,7 +195,7 @@ Points à noter concernant le spécificateur de **thread_local** :
 
 Sur Windows, **thread_local** est fonctionnellement équivalent à [__declspec (thread)](../cpp/thread.md) , sauf que **__declspec (thread)** peut être appliqué à une définition de type et qu’elle est valide dans le code C. Dans la mesure du possible, utilisez **thread_local** , car il C++ fait partie de la norme et est donc plus portable.
 
-##  <a name="register"></a>  register
+##  <a name="register"></a>annuler
 
 **Visual Studio 2017 version 15,3 et versions ultérieures** (disponibles avec [/std : c++ 17](../build/reference/std-specify-language-standard-version.md)) : le mot clé **Register** n’est plus une classe de stockage prise en charge. Le mot clé est toujours réservé dans le standard pour une utilisation ultérieure.
 

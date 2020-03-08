@@ -5,11 +5,11 @@ helpviewer_keywords:
 - breaking changes [C++]
 ms.assetid: b38385a9-a483-4de9-99a6-797488bc5110
 ms.openlocfilehash: 335db55f3b181021f4deb391358df5bbfb607815
-ms.sourcegitcommit: 7bea0420d0e476287641edeb33a9d5689a98cb98
+ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/17/2020
-ms.locfileid: "77415699"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78865491"
 ---
 # <a name="visual-c-change-history-2003---2015"></a>Historique des modifications de Visual C++ entre 2003 et 2015
 
@@ -22,7 +22,7 @@ Pour plus d’informations sur la version la plus récente de Visual Studio, con
 
 Quand vous effectuez une mise à niveau avec une nouvelle version de Visual Studio, vous pouvez rencontrer des erreurs de compilation et/ou d’exécution dans du code qui pouvait auparavant être compilé et exécuté correctement. Les modifications introduites dans la nouvelle version qui génèrent de tels problèmes sont appelées *modifications avec rupture*et elles sont généralement requises par des modifications apportées à la norme du langage C++, aux signatures des fonctions ou à la disposition des objets en mémoire.
 
-Pour éviter les erreurs d’exécution qui sont difficiles à détecter et diagnostiquer, nous vous recommandons de ne jamais établir de lien statique à des binaires compilés à l’aide d’une version différente du compilateur. En outre, lorsque vous mettez à niveau un projet EXE ou DLL, veillez à mettre à niveau les bibliothèques auxquelles il est lié. Ne transmettez pas des types de bibliothèques C++ standard ou Runtime C (CRT) entre des fichiers binaires (notamment des DLL) compilés à l’aide de différentes versions du compilateur. Pour plus d’informations, consultez [Erreurs potentielles de passage d’objets CRT entre frontières DLL](../c-runtime-library/potential-errors-passing-crt-objects-across-dll-boundaries.md).
+Pour éviter les erreurs d’exécution qui sont difficiles à détecter et diagnostiquer, nous vous recommandons de ne jamais établir de lien statique à des binaires compilés à l’aide d’une version différente du compilateur. En outre, lorsque vous mettez à niveau un projet EXE ou DLL, veillez à mettre à niveau les bibliothèques auxquelles il est lié. Ne transmettez pas des types de bibliothèques C++ standard ou Runtime C (CRT) entre des fichiers binaires (notamment des DLL) compilés à l’aide de différentes versions du compilateur. Pour plus d'informations, consultez [Potential Errors Passing CRT Objects Across DLL Boundaries](../c-runtime-library/potential-errors-passing-crt-objects-across-dll-boundaries.md).
 
 Ne rédigez jamais du code dépendant d’une disposition particulière pour un objet qui n’est pas une interface COM ou un objet POD. Si vous rédigez un tel code, vous devez vous assurer qu'il fonctionne après la mise à niveau. Pour plus d’informations, consultez [Portabilité aux limites ABI](../cpp/portability-at-abi-boundaries-modern-cpp.md).
 
@@ -38,7 +38,7 @@ En outre, les améliorations suivies de la conformité du compilateur peuvent pa
 
 ## <a name="VC_2015"></a> Modifications de la mise en conformité de Visual Studio 2015
 
-###  <a name="BK_CRT"></a> Bibliothèque Runtime C (CRT)
+###  <a name="BK_CRT"></a> Bibliothèque Runtime C (CRT)
 
 #### <a name="general-changes"></a>Modifications générales
 
@@ -257,7 +257,7 @@ En outre, les améliorations suivies de la conformité du compilateur peuvent pa
 
 - **smallheap**
 
-   L’option de lien `smallheap` a été supprimée. Consultez [Options de lien](../c-runtime-library/link-options.md).
+   L’option de lien `smallheap` a été supprimée. Consultez [Link Options](../c-runtime-library/link-options.md).
 
 #### <a name="stringh"></a>\<string.h>
 
@@ -645,7 +645,7 @@ Même si ces différences peuvent affecter votre code source ou d’autres artef
 
    La fonction `void operator delete(void *, size_t)` était un opérateur **placement delete** correspondant à la fonction **placement new**`void * operator new(size_t, size_t)` dans C++11. Avec la libération dimensionnée C++14, cette fonction delete est maintenant une *fonction de libération habituelle* (opérateur **delete** global). La norme impose que si l'utilisation d'un opérateur placement new recherche une fonction delete correspondante et trouve une fonction de désallocation habituelle, le programme est incorrect.
 
-   Par exemple, votre code définit à la fois un opérateur **placement new** et un opérateur **placement delete** :
+   Par exemple, votre code définit à la fois un opérateur **placement new** et un opérateur **placement delete** :
 
     ```cpp
     void * operator new(std::size_t, std::size_t);
@@ -662,7 +662,7 @@ Même si ces différences peuvent affecter votre code source ou d’autres artef
 
    Une autre solution consiste à éliminer complètement **placement new**. Si votre code utilise **placement new** pour implémenter un pool de mémoires où l’argument de positionnement correspond à la taille de l’objet alloué ou supprimé, la fonction de libération dimensionnée peut servir à remplacer votre propre code de pool de mémoires personnalisé. De plus, vous pouvez supprimer les fonctions de positionnement et les remplacer simplement par un opérateur **delete** à deux arguments.
 
-   Si vous ne souhaitez pas mettre à jour votre code immédiatement, vous pouvez revenir à l’ancien comportement en utilisant l’option de compilateur `/Zc:sizedDealloc-`. Si vous utilisez cette option, il n’y a pas de conflit avec votre opérateur **placement delete** puisque les fonctions delete à deux arguments n’existent pas.
+   Si vous ne voulez pas mettre à jour votre code tout de suite, vous pouvez revenir à l’ancien comportement en utilisant l’option de compilateur `/Zc:sizedDealloc-`. Si vous utilisez cette option, il n’y a pas de conflit avec votre opérateur **placement delete** puisque les fonctions delete à deux arguments n’existent pas.
 
 - **Membres de données d’union**
 
@@ -2491,7 +2491,7 @@ Même si ces différences peuvent affecter votre code source ou d’autres artef
     static_assert(std::is_convertible<X1&, X1>::value, "BOOM");static_assert(std::is_convertible<X2&, X2>::value, "BOOM");
     ```
 
-   Dans les versions précédentes du compilateur, les assertions statiques en bas de cet exemple réussissent, car `std::is_convertable<>::value` a été incorrectement défini sur **true**. Désormais, `std::is_convertable<>::value` a la valeur **false**, ce qui est correct et entraîne l’échec des assertions statiques.
+   Dans les versions précédentes du compilateur, les assertions statiques en bas de cet exemple réussissent, car `std::is_convertable<>::value` a été incorrectement défini sur **true**. Désormais, `std::is_convertable<>::value` a la bonne valeur **false**, ce qui entraîne l’échec des assertions statiques.
 
 - **Les constructeurs de copie et de déplacement ordinaires supprimés ou par défaut respectent les spécificateurs d’accès**
 

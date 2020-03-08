@@ -57,11 +57,11 @@ helpviewer_keywords:
 - std::unitbuf [C++]
 - std::uppercase [C++]
 ms.openlocfilehash: c3b1e2350d0923cbfddf95492842ae126859e29f
-ms.sourcegitcommit: 4b0928a1a497648d0d327579c8262f25ed20d02e
+ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/24/2019
-ms.locfileid: "72890068"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78856510"
 ---
 # <a name="ltiosgt-functions"></a>&lt;ios&gt;, fonctions
 
@@ -75,7 +75,7 @@ ios_base& boolalpha(ios_base& str);
 
 ### <a name="parameters"></a>Paramètres
 
-*str* \
+*str*\
 Référence à un objet de type [ios_base](../standard-library/ios-base-class.md), ou à un type qui hérite de `ios_base`.
 
 ### <a name="return-value"></a>Valeur de retour
@@ -127,7 +127,7 @@ ios_base& dec(ios_base& str);
 
 ### <a name="parameters"></a>Paramètres
 
-*str* \
+*str*\
 Référence à un objet de type [ios_base](../standard-library/ios-base-class.md), ou à un type qui hérite de `ios_base`.
 
 ### <a name="return-value"></a>Valeur de retour
@@ -185,7 +185,7 @@ Objet `ios_base`.
 
 ### <a name="remarks"></a>Notes
 
-Le manipulateur appelle effectivement `iosbase.`[ios_base :: unsetf](../standard-library/ios-base-class.md#unsetf)`(ios_base::floatfield)`, puis retourne *iosbase*.
+Le manipulateur appelle efficacement `iosbase.`[ios_base :: unsetf](../standard-library/ios-base-class.md#unsetf)`(ios_base::floatfield)`, puis retourne *iosbase*.
 
 ## <a name="fixed"></a>des
 
@@ -197,7 +197,7 @@ ios_base& fixed(ios_base& str);
 
 ### <a name="parameters"></a>Paramètres
 
-*str* \
+*str*\
 Référence à un objet de type [ios_base](../standard-library/ios-base-class.md), ou à un type qui hérite de `ios_base`.
 
 ### <a name="return-value"></a>Valeur de retour
@@ -245,7 +245,7 @@ ios_base& hex(ios_base& str);
 
 ### <a name="parameters"></a>Paramètres
 
-*str* \
+*str*\
 Référence à un objet de type [ios_base](../standard-library/ios-base-class.md), ou à un type qui hérite de `ios_base`.
 
 ### <a name="return-value"></a>Valeur de retour
@@ -286,7 +286,7 @@ ios_base& internal(ios_base& str);
 
 ### <a name="parameters"></a>Paramètres
 
-*str* \
+*str*\
 Référence à un objet de type [ios_base](../standard-library/ios-base-class.md), ou à un type qui hérite de `ios_base`.
 
 ### <a name="return-value"></a>Valeur de retour
@@ -344,7 +344,7 @@ ios_base& left(ios_base& str);
 
 ### <a name="parameters"></a>Paramètres
 
-*str* \
+*str*\
 Référence à un objet de type [ios_base](../standard-library/ios-base-class.md), ou à un type qui hérite de `ios_base`.
 
 ### <a name="return-value"></a>Valeur de retour
@@ -399,7 +399,7 @@ ios_base& noboolalpha(ios_base& str);
 
 ### <a name="parameters"></a>Paramètres
 
-*str* \
+*str*\
 Référence à un objet de type [ios_base](../standard-library/ios-base-class.md), ou à un type qui hérite de `ios_base`.
 
 ### <a name="return-value"></a>Valeur de retour
@@ -416,7 +416,7 @@ Par défaut, `noboolalpha` est activé.
 
 ### <a name="example"></a>Exemple
 
-Pour obtenir un exemple d’utilisation de `noboolalpha`, consultez [boolalpha](../standard-library/ios-functions.md#boolalpha).
+Pour obtenir un exemple d’utilisation de [, consultez ](../standard-library/ios-functions.md#boolalpha)boolalpha`noboolalpha`.
 
 ## <a name="noshowbase"></a>noshowbase
 
@@ -428,7 +428,7 @@ ios_base& noshowbase(ios_base& str);
 
 ### <a name="parameters"></a>Paramètres
 
-*str* \
+*str*\
 Référence à un objet de type [ios_base](../standard-library/ios-base-class.md), ou à un type qui hérite de `ios_base`.
 
 ### <a name="return-value"></a>Valeur de retour
@@ -443,7 +443,7 @@ Le manipulateur appelle efficacement `str.``(ios_base::showbase)`[unsetf](../sta
 
 ### <a name="example"></a>Exemple
 
-Pour obtenir un exemple d’utilisation de `noshowbase`, consultez [showbase](../standard-library/ios-functions.md#showbase).
+Pour obtenir un exemple d’utilisation de [, consultez ](../standard-library/ios-functions.md#showbase)showbase`noshowbase`.
 
 ## <a name="noshowpoint"></a>noshowpoint
 
@@ -455,7 +455,7 @@ ios_base& noshowpoint(ios_base& str);
 
 ### <a name="parameters"></a>Paramètres
 
-*str* \
+*str*\
 Référence à un objet de type [ios_base](../standard-library/ios-base-class.md), ou à un type qui hérite de `ios_base`.
 
 ### <a name="return-value"></a>Valeur de retour
@@ -502,7 +502,7 @@ ios_base& noshowpos(ios_base& str);
 
 ### <a name="parameters"></a>Paramètres
 
-*str* \
+*str*\
 Référence à un objet de type [ios_base](../standard-library/ios-base-class.md), ou à un type qui hérite de `ios_base`.
 
 ### <a name="return-value"></a>Valeur de retour
@@ -517,7 +517,7 @@ Le manipulateur appelle efficacement `str.``(ios_base::showps)`[unsetf](../stand
 
 ### <a name="example"></a>Exemple
 
-Pour obtenir un exemple d’utilisation de `noshowpos`, consultez [showpos](../standard-library/ios-functions.md#showpos).
+Pour obtenir un exemple d’utilisation de [, consultez ](../standard-library/ios-functions.md#showpos)showpos`noshowpos`.
 
 ## <a name="noskipws"></a>noskipws
 
@@ -529,7 +529,7 @@ ios_base& noskipws(ios_base& str);
 
 ### <a name="parameters"></a>Paramètres
 
-*str* \
+*str*\
 Référence à un objet de type [ios_base](../standard-library/ios-base-class.md), ou à un type qui hérite de `ios_base`.
 
 ### <a name="return-value"></a>Valeur de retour
@@ -571,7 +571,7 @@ ios_base& nounitbuf(ios_base& str);
 
 ### <a name="parameters"></a>Paramètres
 
-*str* \
+*str*\
 Référence à un objet de type [ios_base](../standard-library/ios-base-class.md), ou à un type qui hérite de `ios_base`.
 
 ### <a name="return-value"></a>Valeur de retour
@@ -594,7 +594,7 @@ ios_base& nouppercase(ios_base& str);
 
 ### <a name="parameters"></a>Paramètres
 
-*str* \
+*str*\
 Référence à un objet de type [ios_base](../standard-library/ios-base-class.md), ou à un type qui hérite de `ios_base`.
 
 ### <a name="return-value"></a>Valeur de retour
@@ -607,7 +607,7 @@ Le manipulateur appelle efficacement `str.``(ios_base::uppercase)`[unsetf](../st
 
 ### <a name="example"></a>Exemple
 
-Pour obtenir un exemple d’utilisation de `nouppercase`, consultez [uppercase](../standard-library/ios-functions.md#uppercase).
+Pour obtenir un exemple d’utilisation de [, consultez ](../standard-library/ios-functions.md#uppercase)uppercase`nouppercase`.
 
 ## <a name="oct"></a>personnalisation
 
@@ -619,7 +619,7 @@ ios_base& oct(ios_base& str);
 
 ### <a name="parameters"></a>Paramètres
 
-*str* \
+*str*\
 Référence à un objet de type [ios_base](../standard-library/ios-base-class.md), ou à un type qui hérite de `ios_base`.
 
 ### <a name="return-value"></a>Valeur de retour
@@ -646,7 +646,7 @@ ios_base& right(ios_base& str);
 
 ### <a name="parameters"></a>Paramètres
 
-*str* \
+*str*\
 Référence à un objet de type [ios_base](../standard-library/ios-base-class.md), ou à un type qui hérite de `ios_base`.
 
 ### <a name="return-value"></a>Valeur de retour
@@ -703,7 +703,7 @@ ios_base& scientific(ios_base& str);
 
 ### <a name="parameters"></a>Paramètres
 
-*str* \
+*str*\
 Référence à un objet de type [ios_base](../standard-library/ios-base-class.md), ou à un type qui hérite de `ios_base`.
 
 ### <a name="return-value"></a>Valeur de retour
@@ -748,7 +748,7 @@ ios_base& showbase(ios_base& str);
 
 ### <a name="parameters"></a>Paramètres
 
-*str* \
+*str*\
 Référence à un objet de type [ios_base](../standard-library/ios-base-class.md), ou à un type qui hérite de `ios_base`.
 
 ### <a name="return-value"></a>Valeur de retour
@@ -802,7 +802,7 @@ ios_base& showpoint(ios_base& str);
 
 ### <a name="parameters"></a>Paramètres
 
-*str* \
+*str*\
 Référence à un objet de type [ios_base](../standard-library/ios-base-class.md), ou à un type qui hérite de `ios_base`.
 
 ### <a name="return-value"></a>Valeur de retour
@@ -817,7 +817,7 @@ Le manipulateur appelle efficacement `str.``(ios_base::showpoint)`[SETF](../stan
 
 ### <a name="example"></a>Exemple
 
-Pour obtenir un exemple d’utilisation de `showpoint`, consultez [noshowpoint](../standard-library/ios-functions.md#noshowpoint).
+Pour obtenir un exemple d’utilisation de [, consultez ](../standard-library/ios-functions.md#noshowpoint)noshowpoint`showpoint`.
 
 ## <a name="showpos"></a>showpos
 
@@ -829,7 +829,7 @@ ios_base& showpos(ios_base& str);
 
 ### <a name="parameters"></a>Paramètres
 
-*str* \
+*str*\
 Référence à un objet de type [ios_base](../standard-library/ios-base-class.md), ou à un type qui hérite de `ios_base`.
 
 ### <a name="return-value"></a>Valeur de retour
@@ -874,7 +874,7 @@ ios_base& skipws(ios_base& str);
 
 ### <a name="parameters"></a>Paramètres
 
-*str* \
+*str*\
 Référence à un objet de type [ios_base](../standard-library/ios-base-class.md), ou à un type qui hérite de `ios_base`.
 
 ### <a name="return-value"></a>Valeur de retour
@@ -926,7 +926,7 @@ ios_base& unitbuf(ios_base& str);
 
 ### <a name="parameters"></a>Paramètres
 
-*str* \
+*str*\
 Référence à un objet de type [ios_base](../standard-library/ios-base-class.md), ou à un type qui hérite de `ios_base`.
 
 ### <a name="return-value"></a>Valeur de retour
@@ -939,7 +939,7 @@ Notez que `endl` vide aussi la mémoire tampon.
 
 [nounitbuf](../standard-library/ios-functions.md#nounitbuf) est activé par défaut.
 
-Le manipulateur appelle effectivement `str.`[setf](../standard-library/ios-base-class.md#setf)`(`[ios_base :: unitbuf](../standard-library/ios-base-class.md#fmtflags)`)`, puis retourne *Str*.
+Le manipulateur appelle efficacement `str.`[setf](../standard-library/ios-base-class.md#setf)`(`[ios_base :: unitbuf](../standard-library/ios-base-class.md#fmtflags)`)`, puis retourne *Str*.
 
 ## <a name="uppercase"></a>  uppercase
 
@@ -951,7 +951,7 @@ ios_base& uppercase(ios_base& str);
 
 ### <a name="parameters"></a>Paramètres
 
-*str* \
+*str*\
 Référence à un objet de type [ios_base](../standard-library/ios-base-class.md), ou à un type qui hérite de `ios_base`.
 
 ### <a name="return-value"></a>Valeur de retour

@@ -1,22 +1,22 @@
 ---
-title: '&lt;n’importe quel&gt; fonctions'
+title: '&lt;les fonctions de&gt;'
 ms.date: 04/04/2019
 f1_keywords:
 - any/std::any_cast
 - any/std::make_any
 - any/std::swap
 ms.openlocfilehash: bb5f8b4411477cfcd33613ee0395227dced784f6
-ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
+ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68268741"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78875908"
 ---
-# <a name="ltanygt-functions"></a>&lt;n’importe quel&gt; fonctions
+# <a name="ltanygt-functions"></a>&lt;les fonctions de&gt;
 
-## <a name="any_cast"></a> any_cast
+## <a name="any_cast"></a>any_cast
 
-Rend un objet dans un n’importe quel.
+Crée un objet en un.
 
 ```cpp
 template<class T>
@@ -31,9 +31,9 @@ template<class T>
     T* any_cast(any* operand) noexcept;
 ```
 
-## <a name="make_any"></a> make_any
+## <a name="make_any"></a>make_any
 
-Prend les valeurs et crée un objet de n’importe quel.
+Prend des valeurs et crée un objet any.
 
 ```cpp
 template <class T, class... Args>
@@ -42,9 +42,9 @@ template <class T, class U, class... Args>
     any make_any(initializer_list<U> il, Args&& ...args);
 ```
 
-## <a name="swap"></a> échange
+## <a name="swap"></a>échange
 
-Échange de tous les éléments de deux objets.
+Échange les éléments de deux objets.
 
 ```cpp
 void swap(any& left, any& right) noexcept;
@@ -52,8 +52,8 @@ void swap(any& left, any& right) noexcept;
 
 ### <a name="parameters"></a>Paramètres
 
-*Gauche*\
-Objet de type `any`.
+\ *gauche*
+Objet de type `any`.
 
-*Oui*\
-Objet de type `any`.
+\ *droit*
+Objet de type `any`.

@@ -13,15 +13,15 @@ helpviewer_keywords:
 - std::make_error_condition
 - std::system_category
 ms.openlocfilehash: ab4d0d1ee810df8f719bba762262eb03bf899408
-ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
+ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68245114"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78876262"
 ---
-# <a name="ltsystemerrorgt-functions"></a>&lt;system_error&gt;, fonctions
+# <a name="ltsystem_errorgt-functions"></a>&lt;system_error&gt;, fonctions
 
-## <a name="generic_category"></a> generic_category
+## <a name="generic_category"></a>generic_category
 
 Représente la catégorie des erreurs génériques.
 
@@ -31,23 +31,23 @@ const error_category& generic_category() noexcept;
 
 ### <a name="remarks"></a>Notes
 
-Le `generic_category` objet est une implémentation de [error_category](../standard-library/error-category-class.md).
+L’objet `generic_category` est une implémentation de [error_category](../standard-library/error-category-class.md).
 
-## <a name="is_error_code_enum_v"></a> is_error_code_enum_v
+## <a name="is_error_code_enum_v"></a>is_error_code_enum_v
 
 ```cpp
 template <class T> 
     inline constexpr bool is_error_code_enum_v = is_error_code_enum<T>::value;
 ```
 
-## <a name="is_error_condition_enum_v"></a> is_error_condition_enum_v
+## <a name="is_error_condition_enum_v"></a>is_error_condition_enum_v
 
 ```cpp
 template <class T> 
     inline constexpr bool is_error_condition_enum_v = is_error_condition_enum<T>::value;
 ```
 
-## <a name="make_error_code"></a> make_error_code
+## <a name="make_error_code"></a>make_error_code
 
 Crée un objet de code d’erreur.
 
@@ -57,8 +57,8 @@ error_code make_error_code(std::errc error) noexcept;
 
 ### <a name="parameters"></a>Paramètres
 
-*Erreur*\
-Le `std::errc` valeur d’énumération à stocker dans l’objet de code d’erreur.
+*erreur*\
+`std::errc` valeur d’énumération à stocker dans l’objet de code d’erreur.
 
 ### <a name="return-value"></a>Valeur de retour
 
@@ -66,7 +66,7 @@ L’objet de code d’erreur.
 
 ### <a name="remarks"></a>Notes
 
-## <a name="make_error_condition"></a> make_error_condition
+## <a name="make_error_condition"></a>make_error_condition
 
 Crée un objet de condition d’erreur.
 
@@ -76,8 +76,8 @@ error_condition make_error_condition(std::errc error) noexcept;
 
 ### <a name="parameters"></a>Paramètres
 
-*Erreur*\
-Le `std::errc` valeur d’énumération à stocker dans l’objet de code d’erreur.
+*erreur*\
+`std::errc` valeur d’énumération à stocker dans l’objet de code d’erreur.
 
 ### <a name="return-value"></a>Valeur de retour
 
@@ -85,7 +85,7 @@ L’objet de condition d’erreur.
 
 ### <a name="remarks"></a>Notes
 
-## <a name="system_category"></a> system_category
+## <a name="system_category"></a>system_category
 
 Représente la catégorie des erreurs provoquées par des dépassements de capacité du système de bas niveau.
 
@@ -95,4 +95,4 @@ const error_category& system_category() noexcept;
 
 ### <a name="remarks"></a>Notes
 
-Le `system_category` objet est une implémentation de [error_category](../standard-library/error-category-class.md).
+L’objet `system_category` est une implémentation de [error_category](../standard-library/error-category-class.md).

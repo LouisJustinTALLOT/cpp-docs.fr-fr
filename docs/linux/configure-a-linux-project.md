@@ -3,11 +3,11 @@ title: Configurer un projet Linux C++ dans Visual Studio
 ms.date: 06/11/2019
 ms.assetid: 4d7c6adf-54b9-4b23-bd23-5de0c825b768
 ms.openlocfilehash: 5d42ca587946d3b5adcbd3b6fe35a6c1e1bb9ae8
-ms.sourcegitcommit: 49e4fb3e0300fe86c814130661f1bf68b16e72e2
+ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/15/2020
-ms.locfileid: "76031369"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78865640"
 ---
 # <a name="configure-a-linux-project"></a>Configurer un projet Linux
 
@@ -31,7 +31,7 @@ Vous pouvez configurer un projet Linux pour cibler une machine Linux physique, u
 
 ::: moniker-end
 
-## <a name="general-settings"></a>Paramètres généraux
+## <a name="general-settings"></a>Paramètres généraux :
 
 Pour afficher les options de configuration, sélectionnez le menu **Projet > Propriétés** ou cliquez avec le bouton droit sur le projet dans l’**Explorateur de solutions** et sélectionnez **Propriétés** dans le menu contextuel. Les paramètres généraux s’affichent dans la section **Général**.
 

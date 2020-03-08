@@ -88,11 +88,11 @@ helpviewer_keywords:
 - std::vector [C++], swap
 ms.assetid: a3e0a8f8-7565-4fe0-93e4-e4d74ae1b70d
 ms.openlocfilehash: ed987409dc99ea9b1dade632a5fa5deeb322347a
-ms.sourcegitcommit: a8ef52ff4a4944a1a257bdaba1a3331607fb8d0f
+ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/11/2020
-ms.locfileid: "77126225"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78890855"
 ---
 # <a name="vector-class"></a>vector (classe)
 
@@ -1494,7 +1494,7 @@ typedef typename Allocator::pointer pointer;
 
 ### <a name="remarks"></a>Notes
 
-Un type **pointer** peut être utilisé pour modifier la valeur d’un élément.
+Vous pouvez utiliser un type **pointer** pour modifier la valeur d’un élément.
 
 ### <a name="example"></a>Exemple
 

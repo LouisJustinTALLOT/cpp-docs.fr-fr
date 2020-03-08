@@ -95,11 +95,11 @@ helpviewer_keywords:
 - std::basic_streambuf [C++], xsputn
 ms.assetid: 136af6c3-13bf-4501-9288-b93da26efac7
 ms.openlocfilehash: 1b43c2291499af87f2be1e5bec25717a30c28bfd
-ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
+ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/21/2019
-ms.locfileid: "72688432"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78856513"
 ---
 # <a name="basic_streambuf-class"></a>basic_streambuf, classe
 
@@ -114,15 +114,15 @@ class basic_streambuf;
 
 ### <a name="parameters"></a>Paramètres
 
-@No__t_1 *elem*
+\ *elem*
 Un [char_type](#char_type).
 
-*Tr* \
+*Tr*\
 Le [traits_type](#traits_type) du caractère.
 
 ## <a name="remarks"></a>Notes
 
-Le modèle de classe décrit une classe de base abstraite pour dériver une mémoire tampon de flux qui contrôle la transmission d’éléments vers et à partir d’une représentation spécifique d’un flux. Un objet de classe `basic_streambuf` permet de contrôler un flux avec des éléments de type *TR*, également appelé [char_type](#char_type), dont les caractéristiques sont déterminées par la classe [char_traits](../standard-library/char-traits-struct.md), également appelée [traits_type](#traits_type).
+Le modèle de classe décrit une classe de base abstraite pour dériver une mémoire tampon de flux qui contrôle la transmission d’éléments vers et à partir d’une représentation spécifique d’un flux. Un objet de classe `basic_streambuf` permet de contrôler un flux avec des éléments de type *TR*, également appelés [char_type](#char_type), dont les caractéristiques sont déterminées par la classe [char_traits](../standard-library/char-traits-struct.md), également appelée [traits_type](#traits_type).
 
 Chaque mémoire tampon de flux contrôle conceptuellement deux flux indépendants : un pour les extractions (entrée) et un pour les insertions (sortie). Une représentation spécifique peut cependant rendre l'un ou l'autre (ou les deux) de ces flux inaccessible. Elle conserve en général une relation entre les deux flux. Par exemple, les éléments que vous insérez dans le flux de sortie d’un objet [basic_stringbuf](../standard-library/basic-stringbuf-class.md)< `Elem`, `Tr`> sont ceux que vous extrayez par la suite de son flux d’entrée. Quand vous positionnez un flux d’un objet [basic_filebuf](../standard-library/basic-filebuf-class.md)< `Elem`, `Tr`>, vous positionnez l’autre flux en tandem.
 
@@ -164,7 +164,7 @@ Un objet de la classe `basic_streambuf`< `Elem`, `Tr`> stocke les six pointeurs 
 |-|-|
 |[basic_streambuf](#basic_streambuf)|Construit un objet de type `basic_streambuf`.|
 
-### <a name="typedefs"></a>Typedef
+### <a name="typedefs"></a>Typedefs
 
 |Nom de type|Description|
 |-|-|
@@ -174,7 +174,7 @@ Un objet de la classe `basic_streambuf`< `Elem`, `Tr`> stocke les six pointeurs 
 |[pos_type](#pos_type)|Associe un nom de type dans la portée `basic_streambuf` avec le paramètre de modèle `Elem`.|
 |[traits_type](#traits_type)|Associe un nom de type au paramètre de modèle `Tr`.|
 
-### <a name="member-functions"></a>Fonctions membres
+### <a name="member-functions"></a>Fonctions Membre
 
 |Fonction membre|Description|
 |-|-|
@@ -220,13 +220,13 @@ Un objet de la classe `basic_streambuf`< `Elem`, `Tr`> stocke les six pointeurs 
 
 ### <a name="operators"></a>Opérateurs
 
-|opérateur|Description|
+|Opérateur|Description|
 |-|-|
 |[operator=](#op_eq)|Assigne les valeurs de cet objet à partir d'un autre objet `basic_streambuf`.|
 
-## <a name="requirements"></a>spécifications
+## <a name="requirements"></a>Spécifications
 
-**En-tête :** \<streambuf>
+**En-tête :** \<streambuf >
 
 **Espace de noms :** std
 
@@ -305,7 +305,7 @@ void gbump(int count);
 
 ### <a name="parameters"></a>Paramètres
 
-*nombre* \
+*nombre*\
 Quantité de laquelle faire avancer le pointeur.
 
 ## <a name="getloc"></a>  basic_streambuf::getloc
@@ -318,7 +318,7 @@ locale getloc() const;
 
 ### <a name="return-value"></a>Valeur de retour
 
-Objet de paramètres régionaux stocké.
+Objet des paramètres régionaux stocké.
 
 ### <a name="remarks"></a>Notes
 
@@ -364,7 +364,7 @@ virtual void imbue(const locale& _Loc);
 
 ### <a name="parameters"></a>Paramètres
 
-*_Loc* \
+*_Loc*\
 Référence à des paramètres régionaux.
 
 ### <a name="remarks"></a>Notes
@@ -385,7 +385,7 @@ Nombre d’éléments prêts à être lus dans la mémoire tampon.
 
 ### <a name="remarks"></a>Notes
 
-Si une [position de lecture](../standard-library/basic-streambuf-class.md) est disponible, la fonction membre retourne [egptr](#egptr)  - [GPTR](#gptr). Sinon, elle retourne [showmanyc](#showmanyc).
+Si une [position de lecture](../standard-library/basic-streambuf-class.md) est disponible, la fonction membre retourne [egptr](#egptr) - [GPTR](#gptr). Sinon, elle retourne [showmanyc](#showmanyc).
 
 ### <a name="example"></a>Exemple
 
@@ -448,7 +448,7 @@ virtual int_type overflow(int_type _Meta = traits_type::eof());
 
 ### <a name="parameters"></a>Paramètres
 
-*_Meta* \
+*_Meta*\
 Caractère à insérer dans la mémoire tampon ou **traits_type::** [eof](../standard-library/char-traits-struct.md#eof).
 
 ### <a name="return-value"></a>Valeur de retour
@@ -457,7 +457,7 @@ Si la fonction ne peut pas réussir, elle retourne **traits_type::eof** ou lève
 
 ### <a name="remarks"></a>Notes
 
-Si *\_Meta* n’est pas égal à **traits_type :: EOF**, la fonction membre virtuelle protégée s’efforce d’insérer l’élément **traits_type ::** [to_char_type](../standard-library/char-traits-struct.md#to_char_type)( *\_Meta*) dans le flux de sortie. Elle peut le faire de différentes manières :
+Si *\_méta* n’est pas égal à **traits_type :: EOF**, la fonction membre virtuelle protégée s’efforce d’insérer l’élément **traits_type ::** [to_char_type](../standard-library/char-traits-struct.md#to_char_type)( *\_Meta*) dans le flux de sortie. Elle peut le faire de différentes manières :
 
 - Si une `write position` est disponible, elle peut stocker l’élément dans la position d’écriture et incrémenter le pointeur suivant pour la mémoire tampon de sortie.
 
@@ -483,7 +483,7 @@ virtual int_type pbackfail(int_type _Meta = traits_type::eof());
 
 ### <a name="parameters"></a>Paramètres
 
-*_Meta* \
+*_Meta*\
 Caractère à insérer dans la mémoire tampon ou **traits_type::** [eof](../standard-library/char-traits-struct.md#eof).
 
 ### <a name="return-value"></a>Valeur de retour
@@ -492,7 +492,7 @@ Si la fonction ne peut pas réussir, elle retourne **traits_type::eof** ou lève
 
 ### <a name="remarks"></a>Notes
 
-Si *\_Meta* est égal à **traits_type :: EOF**, l’élément à envoyer à nouveau est effectivement celui qui se trouve déjà dans le flux avant l’élément actuel. Sinon, cet élément est remplacé par **traits_type ::** [to_char_type](../standard-library/char-traits-struct.md#to_char_type)( *\_Meta*). La fonction peut remettre un élément de différentes manières :
+Si *\_métadonnées* est égale à **traits_type :: EOF**, l’élément à envoyer à nouveau est effectivement celui qui se trouve déjà dans le flux avant l’élément actuel. Sinon, cet élément est remplacé par **traits_type::** [to_char_type](../standard-library/char-traits-struct.md#to_char_type)( *\_Meta*). La fonction peut remettre un élément de différentes manières :
 
 - Si une position où remettre l’élément est disponible, elle peut stocker l’élément dans cette position et décrémenter le pointeur suivant pour la mémoire tampon d’entrée.
 
@@ -522,7 +522,7 @@ void pbump(int count);
 
 ### <a name="parameters"></a>Paramètres
 
-*nombre* \
+*nombre*\
 Nombre de caractères duquel avancer la position d’écriture.
 
 ## <a name="pos_type"></a>  basic_streambuf::pos_type
@@ -555,7 +555,7 @@ locale pubimbue(const locale& _Loc);
 
 ### <a name="parameters"></a>Paramètres
 
-*_Loc* \
+*_Loc*\
 Référence à des paramètres régionaux.
 
 ### <a name="return-value"></a>Valeur de retour
@@ -582,14 +582,14 @@ pos_type pubseekoff(off_type _Off,
 
 ### <a name="parameters"></a>Paramètres
 
-*_Off* \
+*_Off*\
 Position à rechercher relative à *_Way*.
 
-*_Way* \
+*_Way*\
 Point de départ des opérations de décalage. Consultez [seekdir](../standard-library/ios-base-class.md#seekdir) pour connaître les valeurs possibles.
 
-*_Which* \
-Spécifie le mode pour la position du pointeur. La valeur par défaut est de vous autoriser à modifier les positions de lecture et d’écriture.
+*_Which*\
+Spécifie le mode pour la position du pointeur. Par défaut, vous êtes autorisé à modifier les positions de lecture et d’écriture.
 
 ### <a name="return-value"></a>Valeur de retour
 
@@ -609,11 +609,11 @@ pos_type pubseekpos(pos_type _Sp, ios_base::openmode _Which = ios_base::in | ios
 
 ### <a name="parameters"></a>Paramètres
 
-*_Sp* \
+*_Sp*\
 Position à rechercher.
 
-*_Which* \
-Spécifie le mode pour la position du pointeur. La valeur par défaut est de vous autoriser à modifier les positions de lecture et d’écriture.
+*_Which*\
+Spécifie le mode pour la position du pointeur. Par défaut, vous êtes autorisé à modifier les positions de lecture et d’écriture.
 
 ### <a name="return-value"></a>Valeur de retour
 
@@ -635,10 +635,10 @@ basic_streambuf<Elem, Tr> *pubsetbuf(
 
 ### <a name="parameters"></a>Paramètres
 
-*_Buffer* \
+*_Buffer*\
 Pointeur vers `char_type` pour cette instanciation.
 
-*nombre* \
+*nombre*\
 Taille de la mémoire tampon.
 
 ### <a name="return-value"></a>Valeur de retour
@@ -711,14 +711,14 @@ virtual pos_type seekoff(
 
 ### <a name="parameters"></a>Paramètres
 
-*_Off* \
+*_Off*\
 Position à rechercher relative à *_Way*.
 
-*_Way* \
+*_Way*\
 Point de départ des opérations de décalage. Consultez [seekdir](../standard-library/ios-base-class.md#seekdir) pour connaître les valeurs possibles.
 
-*_Which* \
-Spécifie le mode pour la position du pointeur. La valeur par défaut est de vous autoriser à modifier les positions de lecture et d’écriture.
+*_Which*\
+Spécifie le mode pour la position du pointeur. Par défaut, vous êtes autorisé à modifier les positions de lecture et d’écriture.
 
 ### <a name="return-value"></a>Valeur de retour
 
@@ -748,11 +748,11 @@ virtual pos_type seekpos(pos_type _Sp, ios_base::openmode _Which = ios_base::in 
 
 ### <a name="parameters"></a>Paramètres
 
-*_Sp* \
+*_Sp*\
 Position à rechercher.
 
-*_Which* \
-Spécifie le mode pour la position du pointeur. La valeur par défaut est de vous autoriser à modifier les positions de lecture et d’écriture.
+*_Which*\
+Spécifie le mode pour la position du pointeur. Par défaut, vous êtes autorisé à modifier les positions de lecture et d’écriture.
 
 ### <a name="return-value"></a>Valeur de retour
 
@@ -778,10 +778,10 @@ virtual basic_streambuf<Elem, Tr> *setbuf(
 
 ### <a name="parameters"></a>Paramètres
 
-*_Buffer* \
+*_Buffer*\
 Pointeur vers une mémoire tampon.
 
-*nombre* \
+*nombre*\
 Taille de la mémoire tampon.
 
 ### <a name="return-value"></a>Valeur de retour
@@ -804,18 +804,18 @@ void setg(char_type* _Gbeg,
 
 ### <a name="parameters"></a>Paramètres
 
-*_Gbeg* \
+*_Gbeg*\
 Pointeur vers le début de la mémoire tampon.
 
-*_Gnext* \
+*_Gnext*\
 Pointeur vers un emplacement situé au milieu de la mémoire tampon.
 
-*_Gend* \
+*_Gend*\
 Pointeur vers la fin de la mémoire tampon.
 
 ## <a name="setp"></a>  basic_streambuf::setp
 
-Une fonction protégée qui stocke *_Pbeg* dans le pointeur de début et *_Pend* dans le pointeur de fin pour la mémoire tampon de sortie.
+Fonction protégée qui stocke *_Pbeg* dans le pointeur de début et *_Pend* dans le pointeur de fin pour la mémoire tampon de sortie.
 
 ```cpp
 void setp(char_type* _Pbeg, char_type* _Pend);
@@ -823,10 +823,10 @@ void setp(char_type* _Pbeg, char_type* _Pend);
 
 ### <a name="parameters"></a>Paramètres
 
-*_Pbeg* \
+*_Pbeg*\
 Pointeur vers le début de la mémoire tampon.
 
-*_Pend* \
+*_Pend*\
 Pointeur vers la fin de la mémoire tampon.
 
 ## <a name="sgetc"></a>  basic_streambuf::sgetc
@@ -882,7 +882,7 @@ streamsize sgetn(
 \ *ptr*
 Mémoire tampon qui contient les caractères extraits.
 
-*nombre* \
+*nombre*\
 Nombre d’éléments à lire.
 
 ### <a name="return-value"></a>Valeur de retour
@@ -982,8 +982,8 @@ int_type sputbackc(char_type _Ch);
 
 ### <a name="parameters"></a>Paramètres
 
-*_Ch* \
-Le caractère.
+*_Ch*\
+Caractère.
 
 ### <a name="return-value"></a>Valeur de retour
 
@@ -991,7 +991,7 @@ Retourne le caractère ou un échec.
 
 ### <a name="remarks"></a>Notes
 
-Si une position remise est disponible et que *_Ch* est égal au caractère stocké dans cette position, la fonction membre décrémente le pointeur suivant pour la mémoire tampon d’entrée et retourne **traits_type ::** [to_int_type](../standard-library/char-traits-struct.md#to_int_type)(`_Ch`). Sinon, elle retourne [pbackfail](#pbackfail)( `_Ch`).
+Si une position remise est disponible et que *_Ch* compare égal au caractère stocké dans cette position, la fonction membre décrémente le pointeur suivant pour la mémoire tampon d’entrée et retourne **traits_type ::** [to_int_type](../standard-library/char-traits-struct.md#to_int_type)(`_Ch`). Sinon, elle retourne [pbackfail](#pbackfail)( `_Ch`).
 
 ### <a name="example"></a>Exemple
 
@@ -1030,8 +1030,8 @@ int_type sputc(char_type _Ch);
 
 ### <a name="parameters"></a>Paramètres
 
-*_Ch* \
-Le caractère.
+*_Ch*\
+Caractère.
 
 ### <a name="return-value"></a>Valeur de retour
 
@@ -1039,7 +1039,7 @@ Retourne le caractère, en cas de réussite.
 
 ### <a name="remarks"></a>Notes
 
-Si une `write position` est disponible, la fonction membre stocke *_Ch* dans la position d’écriture, incrémente le pointeur suivant pour la mémoire tampon de sortie et retourne **traits_type ::** [to_int_type](../standard-library/char-traits-struct.md#to_int_type)(`_Ch`). Sinon, elle retourne [overflow](#overflow)( `_Ch`).
+Si une `write position` est disponible, la fonction membre stocke *_Ch* à la position d’écriture, incrémente le pointeur suivant pour la mémoire tampon de sortie et retourne **traits_type ::** [to_int_type](../standard-library/char-traits-struct.md#to_int_type)(`_Ch`). Sinon, elle retourne [overflow](#overflow)( `_Ch`).
 
 ### <a name="example"></a>Exemple
 
@@ -1076,7 +1076,7 @@ streamsize sputn(const char_type* ptr, streamsize count);
 \ *ptr*
 La chaîne de caractères.
 
-*nombre* \
+*nombre*\
 Le nombre de caractères.
 
 ### <a name="return-value"></a>Valeur de retour
@@ -1303,7 +1303,7 @@ virtual streamsize xsgetn(
 \ *ptr*
 Mémoire tampon qui contient les caractères extraits.
 
-*nombre* \
+*nombre*\
 Nombre d’éléments à extraire.
 
 ### <a name="return-value"></a>Valeur de retour
@@ -1327,7 +1327,7 @@ virtual streamsize xsputn(const char_type* ptr, streamsize count);
 \ *ptr*
 Pointeur vers les éléments à insérer.
 
-*nombre* \
+*nombre*\
 Nombre d’éléments à insérer.
 
 ### <a name="return-value"></a>Valeur de retour
@@ -1340,6 +1340,6 @@ La fonction membre virtuelle protégée insère jusqu’à *Count* éléments da
 
 ## <a name="see-also"></a>Voir aussi
 
-[Sécurité des threads dans la bibliothèque standard C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)\
+[Sécurité des threads dans la bibliothèque C++ Standard](../standard-library/thread-safety-in-the-cpp-standard-library.md)\
 [iostream, programmation](../standard-library/iostream-programming.md)\
 [iostreams, conventions](../standard-library/iostreams-conventions.md)

@@ -3,11 +3,11 @@ title: Fonctions de l’utilitaire HTTP ATL
 ms.date: 11/04/2016
 ms.assetid: 4db57ef2-31fa-4696-bbeb-79a9035033ed
 ms.openlocfilehash: ca6dfdfb02f5ef629c6eb523744260f177a3309b
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69497973"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78865024"
 ---
 # <a name="atl-http-utility-functions"></a>Fonctions de l’utilitaire HTTP ATL
 
@@ -24,11 +24,11 @@ Ces fonctions prennent en charge la manipulation des URL.
 |[RGBToHtml](#rgbtohtml)|Convertit une valeur [COLORREF](/windows/win32/gdi/colorref) en texte HTML correspondant à cette valeur de couleur.|
 |[SystemTimeToHttpDate](#systemtimetohttpdate)|Appelez cette fonction pour convertir une heure système en une chaîne au format approprié pour être utilisée dans les en-têtes HTTP.|
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
-**En-tête:** atlutil. h
+**En-tête :** atlutil. h
 
-## <a name="atlcanonicalizeurl"></a> AtlCanonicalizeUrl
+## <a name="atlcanonicalizeurl"></a>AtlCanonicalizeUrl
 
 Appelez cette fonction pour rendre canonique une URL, notamment afin de convertir les caractères et espaces non sécurisés en séquences d'échappement.
 
@@ -52,21 +52,21 @@ Mémoire tampon allouée par l’appelant pour recevoir l’URL canonique.
 Pointeur vers une variable qui contient la longueur en caractères de *szCanonicalized*. Si la fonction a abouti, la variable reçoit le nombre de caractères écrits dans la mémoire tampon, y compris le caractère null de fin. Si la fonction échoue, la variable reçoit la longueur requise en octets de la mémoire tampon, y compris l’espace pour le caractère null de fin.
 
 *dwFlags*<br/>
-Indicateurs ATL_URL contrôlant le comportement de cette fonction.
+ATL_URL indicateurs contrôlant le comportement de cette fonction.
 
-- ATL_URL_BROWSER_MODE n’encode pas ou ne décode pas les caractères après «#» ou «?», et ne supprime pas les espaces blancs de fin après «?». Si cette valeur n’est pas spécifiée, l’URL entière est encodée et l’espace blanc de fin est supprimé.
+- ATL_URL_BROWSER_MODE n’encode pas ou ne décode pas les caractères après « # » ou «  ? », et ne supprime pas les espaces blancs de fin après «  ? ». Si cette valeur n’est pas spécifiée, l’URL entière est encodée et l’espace blanc de fin est supprimé.
 
 - ATL_URL_DECODE convertit toutes les séquences% XX en caractères, y compris les séquences d’échappement, avant l’analyse de l’URL.
 
 - ATL_URL_ENCODE_PERCENT encode tous les signes de pourcentage rencontrés. Par défaut, les signes de pourcentage ne sont pas encodés.
 
-- ATL_URL_ENCODE_SPACES_ONLY encode uniquement les espaces.
+- ATL_URL_ENCODE_SPACES_ONLY code les espaces uniquement.
 
 - ATL_URL_ESCAPE convertit toutes les séquences d’échappement (% XX) en leurs caractères correspondants.
 
 - ATL_URL_NO_ENCODE ne convertit pas les caractères non sécurisés en séquences d’échappement.
 
-- ATL_URL_NO_META ne supprime pas les séquences Meta (telles que «.» et «..») de l’URL.
+- ATL_URL_NO_META ne supprime pas les séquences Meta (telles que « . » et « .. ») de l’URL.
 
 ### <a name="return-value"></a>Valeur de retour
 
@@ -76,7 +76,7 @@ Retourne la valeur TRUE en cas de réussite, FALSe en cas d’échec.
 
 Se comporte comme la version actuelle de [InternetCanonicalizeUrl](/windows/win32/api/wininet/nf-wininet-internetcanonicalizeurlw) , mais ne nécessite pas l’installation de WinInet ou d’Internet Explorer.
 
-## <a name="atlcombineurl"></a> AtlCombineUrl
+## <a name="atlcombineurl"></a>AtlCombineUrl
 
 Appelez cette fonction pour associer une URL de base et une URL relative en une URL unique et canonique.
 
@@ -149,13 +149,13 @@ Pointeur vers une variable DWORD. Si la fonction a abouti, *pdwStrLen* reçoit l
 Taille de la mémoire tampon *lpszStringOut*.
 
 *dwFlags*<br/>
-Indicateurs ATL_URL contrôlant le comportement de cette fonction. Pour connaître les valeurs possibles, consultez [ATLCanonicalizeUrl](#atlcanonicalizeurl) .
+ATL_URL indicateurs contrôlant le comportement de cette fonction. Pour connaître les valeurs possibles, consultez [ATLCanonicalizeUrl](#atlcanonicalizeurl) .
 
 ### <a name="return-value"></a>Valeur de retour
 
 Retourne la valeur TRUE en cas de réussite, FALSe en cas d’échec.
 
-## <a name="atlgetdefaulturlport"></a> AtlGetDefaultUrlPort
+## <a name="atlgetdefaulturlport"></a>AtlGetDefaultUrlPort
 
 Appelez cette fonction pour obtenir le numéro de port par défaut associé à un protocole ou un modèle Internet particulier.
 
@@ -170,9 +170,9 @@ Valeur [ATL_URL_SCHEME](atl-url-scheme-enum.md) identifiant le schéma pour lequ
 
 ### <a name="return-value"></a>Valeur de retour
 
-[ATL_URL_PORT](atl-typedefs.md#atl_url_port) associé au schéma ou au ATL_URL_INVALID_PORT_NUMBER spécifié si le schéma n’est pas reconnu.
+[ATL_URL_PORT](atl-typedefs.md#atl_url_port) associé au schéma ou ATL_URL_INVALID_PORT_NUMBER spécifié si le schéma n’est pas reconnu.
 
-## <a name="atlisunsafeurlchar"></a> AtlIsUnsafeUrlChar
+## <a name="atlisunsafeurlchar"></a>AtlIsUnsafeUrlChar
 
 Appelez cette fonction pour déterminer si un caractère peut être utilisé de manière sécurisée dans une URL.
 
@@ -182,12 +182,12 @@ inline BOOL AtlIsUnsafeUrlChar(char chIn) throw();
 
 ### <a name="parameters"></a>Paramètres
 
-*chIn*<br/>
+*Sell*<br/>
 Caractère à tester pour des raisons de sécurité.
 
 ### <a name="return-value"></a>Valeur de retour
 
-Retourne la valeur TRUE si le caractère d’entrée est unsafe; sinon, FALSe.
+Retourne la valeur TRUE si le caractère d’entrée est unsafe ; sinon, FALSe.
 
 ### <a name="remarks"></a>Notes
 
@@ -246,7 +246,7 @@ bool inline RGBToHtml(
 
 ### <a name="parameters"></a>Paramètres
 
-*color*<br/>
+*Couleur*<br/>
 Valeur de couleur RVB.
 
 *pbOut*<br/>
@@ -263,7 +263,7 @@ Retourne la valeur TRUE en cas de réussite, FALSe en cas d’échec.
 
 Une valeur de couleur HTML est un signe dièse suivi d’une valeur hexadécimale à 6 chiffres utilisant 2 chiffres pour chacun des composants rouge, vert et bleu de la couleur (par exemple, #FFFFFF est blanc).
 
-## <a name="systemtimetohttpdate"></a> SystemTimeToHttpDate
+## <a name="systemtimetohttpdate"></a>SystemTimeToHttpDate
 
 Appelez cette fonction pour convertir une heure système en une chaîne au format approprié pour être utilisée dans les en-têtes HTTP.
 
@@ -275,11 +275,11 @@ inline void SystemTimeToHttpDate(
 
 ### <a name="parameters"></a>Paramètres
 
-*st*<br/>
+*St*<br/>
 Heure système à obtenir sous la forme d’une chaîne de format HTTP.
 
 *strTime*<br/>
-Référence à une variable de chaîne pour recevoir la date et l’heure http, comme défini dans[https://www.ietf.org/rfc/rfc2616.txt](https://www.ietf.org/rfc/rfc2616.txt)RFC 2616 () et[https://www.ietf.org/rfc/rfc1123.txt](https://www.ietf.org/rfc/rfc1123.txt)RFC 1123 ().
+Référence à une variable de chaîne pour recevoir la date et l’heure HTTP comme défini dans RFC 2616 ([https://www.ietf.org/rfc/rfc2616.txt](https://www.ietf.org/rfc/rfc2616.txt)) et RFC 1123 ([https://www.ietf.org/rfc/rfc1123.txt](https://www.ietf.org/rfc/rfc1123.txt)).
 
 ## <a name="see-also"></a>Voir aussi
 

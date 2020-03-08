@@ -99,11 +99,11 @@ helpviewer_keywords:
 - std::list [C++], unique
 ms.assetid: d3707f4a-10fd-444f-b856-f9ca2077c1cd
 ms.openlocfilehash: d5f64f44ec62a8bd1862af2b8f9cb72b2d0210e4
-ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
+ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/21/2019
-ms.locfileid: "72687822"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78890851"
 ---
 # <a name="list-class"></a>list, classe
 
@@ -118,21 +118,21 @@ class list
 
 ### <a name="parameters"></a>Paramètres
 
-@No__t_1 de *type*
+*Type*\
 Type de données d'élément à stocker dans la liste.
 
-@No__t_1 *Allocator*
-Type qui représente l'objet allocateur stocké qui contient des informations sur l'allocation et la libération de mémoire de la liste. Cet argument est facultatif et sa valeur par défaut est **allocator** \<*type*>.
+\ *Allocator*
+Type qui représente l'objet allocateur stocké qui contient des informations sur l'allocation et la libération de mémoire de la liste. Cet argument est facultatif et sa valeur par défaut est **allocator**\<*type*>.
 
 ## <a name="remarks"></a>Notes
 
-Le choix du type de conteneur doit être basé en général sur le type de la recherche et de l'insertion requis par l'application. Les vecteurs doivent être le conteneur par défaut pour la gestion d'une séquence quand l'accès aléatoire à n'importe quel élément est primordial et que des insertions ou des suppressions d'éléments sont seulement nécessaires à la fin d'une séquence. Les performances du conteneur de classe deque sont supérieures quand l'accès aléatoire est nécessaire, et que les insertions et suppressions au début et à la fin d'une séquence sont cruciales.
+Le choix du type de conteneur doit être basé en général sur le type de la recherche et de l'insertion requis par l'application. Les vecteurs  doivent être le conteneur préféré pour la gestion d'une séquence quand l'accès aléatoire à n'importe quel élément est primordial et que des insertions ou des suppressions d'éléments sont nécessaires seulement à la fin d'une séquence. Les performances du conteneur de classe deque sont supérieures quand l'accès aléatoire est nécessaire, et que les insertions et suppressions au début et à la fin d'une séquence sont cruciales.
 
 Les fonctions membres de liste [merge](#merge), [reverse](#reverse), [unique](#unique), [remove](#remove) et [remove_if](#remove_if) ont été optimisées pour le traitement des objets de liste. Elles offrent une alternative de haute performance à leurs homologues génériques.
 
 La réallocation de liste se produit quand une fonction membre doit insérer ou effacer des éléments de la liste. Dans ce cas, seuls les itérateurs ou les références qui pointent vers les parties effacées de la séquence contrôlée deviennent non valides.
 
-Incluez C++ l’en-tête standard de la bibliothèque standard \<list > pour définir la liste des modèles de classe de [conteneur](../standard-library/stl-containers.md) et plusieurs modèles de prise en charge.
+Incluez C++ l’en-tête standard de la bibliothèque standard \<liste > pour définir la liste des modèles de classe de [conteneur](../standard-library/stl-containers.md) et plusieurs modèles de prise en charge.
 
 ## <a name="members"></a>Membres
 
@@ -140,9 +140,9 @@ Incluez C++ l’en-tête standard de la bibliothèque standard \<list > pour dé
 
 |||
 |-|-|
-|[liste](#list)|Construit une liste de taille spécifique ou contenant des éléments de valeurs spécifiques, ou contenant un `allocator` spécifique ou comme copie d'une autre liste.|
+|[list](#list)|Construit une liste de taille spécifique ou contenant des éléments de valeurs spécifiques, ou contenant un `allocator` spécifique ou comme copie d'une autre liste.|
 
-### <a name="typedefs"></a>Typedef
+### <a name="typedefs"></a>Typedefs
 
 |||
 |-|-|
@@ -204,7 +204,7 @@ Incluez C++ l’en-tête standard de la bibliothèque standard \<list > pour dé
 |-|-|
 |[operator=](#op_eq)|Remplace les éléments de la liste par une copie d'une autre liste.|
 
-## <a name="requirements"></a>spécifications
+## <a name="requirements"></a>Spécifications
 
 **En-tête** : \<list>
 
@@ -244,19 +244,19 @@ void assign(
 
 ### <a name="parameters"></a>Paramètres
 
-*Premier* \
+*Premier*\
 Position du premier élément de la plage d’éléments à copier à partir de la liste d’arguments.
 
-*Dernier* \
+*Dernier*\
 Position du premier élément juste après la plage d'éléments à copier à partir de la liste d'arguments.
 
-*Nombre* \
+*Nombre*\
 Nombre de copies d'un élément inséré dans la liste.
 
-@No__t_1 *Val*
+\ *Val*
 Valeur de l'élément inséré dans la liste.
 
-*IList* \
+*IList*\
 initializer_list qui contient les éléments à insérer.
 
 ### <a name="remarks"></a>Notes
@@ -329,7 +329,7 @@ Dernier élément de la liste. Si la liste est vide, la valeur de retour n'est p
 
 ### <a name="remarks"></a>Notes
 
-Si la valeur de retour de `back` est affectée à un `const_reference`, l'objet de liste ne peut pas être changé. Si la valeur de retour de `back` est affectée à un `reference`, l’objet de liste peut être changé.
+Si la valeur de retour de `back` est affectée à `const_reference`, l'objet de liste ne peut pas être changé. Si la valeur de retour de `back` est affectée à un `reference`, l’objet de liste peut être changé.
 
 En cas de compilation avec [_ITERATOR_DEBUG_LEVEL](../standard-library/iterator-debug-level.md) défini sur 1 ou 2, une erreur d’exécution se produit si vous essayez d’accéder à un élément d’une liste vide.  Consultez [Itérateurs vérifiés](../standard-library/checked-iterators.md) pour plus d’informations.
 
@@ -432,7 +432,7 @@ Itérateur d’accès bidirectionnel **const** qui pointe vers le premier élém
 
 Avec la valeur de retour `cbegin`, les éléments de la plage ne peuvent pas être modifiés.
 
-Vous pouvez utiliser cette fonction membre à la place de la fonction membre `begin()` afin de garantir que la valeur de retour est `const_iterator`. En général, elle est utilisée conjointement avec le mot clé de déduction de type [auto](../cpp/auto-cpp.md), comme le montre l’exemple suivant. Dans l’exemple, considérez `Container` comme un conteneur modifiable (non **const**) de tout type qui prend en charge `begin()` et `cbegin()`.
+Vous pouvez utiliser cette fonction membre à la place de la fonction membre `begin()` afin de garantir que la valeur de retour est `const_iterator`. En général, elle est utilisée conjointement au mot clé de déduction de type [auto](../cpp/auto-cpp.md), comme le montre l’exemple suivant. Dans l’exemple, considérez `Container` comme un conteneur modifiable (non **const**) de tout type qui prend en charge `begin()` et `cbegin()`.
 
 ```cpp
 auto i1 = Container.begin();
@@ -458,7 +458,7 @@ Itérateur forward bidirectionnel `const` qui pointe juste après la fin de la p
 
 `cend` est utilisé pour vérifier si un itérateur a dépassé la fin de la plage.
 
-Vous pouvez utiliser cette fonction membre à la place de la fonction membre `end()` afin de garantir que la valeur de retour est `const_iterator`. En général, elle est utilisée conjointement avec le mot clé de déduction de type [auto](../cpp/auto-cpp.md), comme le montre l’exemple suivant. Dans l’exemple, considérez `Container` comme un conteneur modifiable (non **const**) de tout type qui prend en charge `end()` et `cend()`.
+Vous pouvez utiliser cette fonction membre à la place de la fonction membre `end()` afin de garantir que la valeur de retour est `const_iterator`. En général, elle est utilisée conjointement au mot clé de déduction de type [auto](../cpp/auto-cpp.md), comme le montre l’exemple suivant. Dans l’exemple, considérez `Container` comme un conteneur modifiable (non **const**) de tout type qui prend en charge `end()` et `cend()`.
 
 ```cpp
 auto i1 = Container.end();
@@ -757,7 +757,7 @@ void emplace(iterator Where, Type&& val);
 
 ### <a name="parameters"></a>Paramètres
 
-*Où* \
+*Où*\
 Position dans l’objet [liste](../standard-library/list-class.md) cible où le premier élément est inséré.
 
 \ *Val*
@@ -981,13 +981,13 @@ iterator erase(iterator first, iterator last);
 
 ### <a name="parameters"></a>Paramètres
 
-*Où* \
+*Où*\
 Position de l'élément à supprimer de la liste.
 
-*premier* \
+*premier*\
 Position du premier élément supprimé de la liste.
 
-*dernier* \
+*dernier*\
 Position juste après le dernier élément supprimé de la liste.
 
 ### <a name="return-value"></a>Valeur de retour
@@ -1060,7 +1060,7 @@ Si la liste est vide, la valeur de retour n'est pas définie.
 
 ### <a name="remarks"></a>Notes
 
-Si la valeur de retour de `front` est affectée à un `const_reference`, l'objet de liste ne peut pas être changé. Si la valeur de retour de `front` est affectée à un `reference`, l’objet de liste peut être changé.
+Si la valeur de retour de `front` est affectée à `const_reference`, l'objet de liste ne peut pas être changé. Si la valeur de retour de `front` est affectée à un `reference`, l’objet de liste peut être changé.
 
 En cas de compilation avec [_ITERATOR_DEBUG_LEVEL](../standard-library/iterator-debug-level.md) défini sur 1 ou 2, une erreur d’exécution se produit si vous essayez d’accéder à un élément d’une liste vide.  Consultez [Itérateurs vérifiés](../standard-library/checked-iterators.md) pour plus d’informations.
 
@@ -1106,7 +1106,7 @@ Allocateur utilisé par la liste.
 
 ### <a name="remarks"></a>Notes
 
-Les allocateurs de la classe de liste spécifient la façon dont la classe gère le stockage. Les allocateurs par défaut fournis avec les classes de conteneur de la bibliothèque standard C++ sont suffisants pour la plupart des besoins en programmation. L'écriture et l'utilisation de votre propre classe d'allocateur font l'objet d'une rubrique avancée du langage C++.
+Les allocateurs de la classe de liste spécifient la façon dont la classe gère le stockage. Les allocateurs par défaut fournis avec les classes de conteneur de bibliothèque C++ Standard suffisent à satisfaire la plupart des besoins en programmation. L'écriture et l'utilisation de votre propre classe d'allocateur font l'objet d'une rubrique avancée du langage C++.
 
 ### <a name="example"></a>Exemple
 
@@ -1149,19 +1149,19 @@ void insert(iterator Where, InputIterator First, InputIterator Last);
 
 ### <a name="parameters"></a>Paramètres
 
-*Où* \
+*Où*\
 Position dans la liste cible où le premier élément est inséré.
 
-@No__t_1 *Val*
+\ *Val*
 Valeur de l'élément inséré dans la liste.
 
-*Nombre* \
+*Nombre*\
 Nombre d'éléments insérés dans la liste.
 
-*Premier* \
+*Premier*\
 Position du premier élément de la plage d'éléments dans la liste d'arguments à copier.
 
-*Dernier* \
+*Dernier*\
 Position du premier élément au-delà de la plage d’éléments dans la liste d’arguments à copier.
 
 ### <a name="return-value"></a>Valeur de retour
@@ -1278,25 +1278,25 @@ list(InputIterator First, InputIterator Last, const Allocator& Al);
 
 ### <a name="parameters"></a>Paramètres
 
-*Al* \
+*Al*\
 Classe allocator à utiliser avec cet objet.
 
-*Nombre* \
+*Nombre*\
 Nombre d'éléments dans la liste construite.
 
-@No__t_1 *Val*
+\ *Val*
 Valeur des éléments de la liste.
 
-@No__t_1 *droit*
+\ *droit*
 Liste dont la liste construite doit être une copie.
 
-*Premier* \
+*Premier*\
 Position du premier élément de la plage d'éléments à copier.
 
-*Dernier* \
+*Dernier*\
 Position du premier élément au-delà de la plage d'éléments à copier.
 
-*IList* \
+*IList*\
 initializer_list qui contient les éléments à copier.
 
 ### <a name="remarks"></a>Notes
@@ -1459,7 +1459,7 @@ void merge(list<Type, Allocator>& right, Traits comp);
 \ *droit*
 Liste d’arguments à fusionner avec la liste cible.
 
-*comp* \
+*comp*\
 Opérateur de comparaison utilisé pour classer les éléments de la liste cible.
 
 ### <a name="remarks"></a>Notes
@@ -1810,7 +1810,7 @@ Itérateur bidirectionnel inversé qui traite le premier élément dans une list
 
 `rbegin` est utilisé avec une liste inversée, de la même manière que [begin](#begin) est utilisé avec une liste.
 
-Si la valeur de retour de `rbegin` est affectée à un `const_reverse_iterator`, l'objet de liste ne peut pas être changé. Si la valeur de retour de `rbegin` est affectée à un `reverse_iterator`, l’objet de liste peut être changé.
+Si la valeur de retour de `rbegin` est affectée à `const_reverse_iterator`, l'objet de liste ne peut pas être changé. Si la valeur de retour de `rbegin` est affectée à un `reverse_iterator`, l’objet de liste peut être changé.
 
 `rbegin` peut servir à itérer une liste vers l'arrière.
 
@@ -2039,7 +2039,7 @@ Itérateur bidirectionnel inversé qui traite l’emplacement qui suit le dernie
 
 `rend` est utilisé avec une liste inversée de la même manière que [end](#end) est utilisé avec une liste.
 
-Si la valeur de retour de `rend` est affectée à un `const_reverse_iterator`, l'objet de liste ne peut pas être changé. Si la valeur de retour de `rend` est affectée à un `reverse_iterator`, l’objet de liste peut être changé.
+Si la valeur de retour de `rend` est affectée à `const_reverse_iterator`, l'objet de liste ne peut pas être changé. Si la valeur de retour de `rend` est affectée à un `reverse_iterator`, l’objet de liste peut être changé.
 
 Vous pouvez utiliser `rend` pour tester si un itérateur inversé a atteint la fin de sa liste.
 
@@ -2119,7 +2119,7 @@ void resize(size_type _Newsize, Type val);
 
 ### <a name="parameters"></a>Paramètres
 
-*_Newsize* \
+*_Newsize*\
 Nouvelle taille de la liste.
 
 \ *Val*
@@ -2301,14 +2301,14 @@ template <class Traits>
 
 ### <a name="parameters"></a>Paramètres
 
-*comp* \
+*comp*\
 Opérateur de comparaison utilisé pour classer les éléments consécutifs.
 
 ### <a name="remarks"></a>Notes
 
 La première fonction membre trie les éléments dans l’ordre croissant par défaut.
 
-La fonction de modèle membre classe les éléments en fonction de la *composition* de la classe `Traits` spécifiée par l’utilisateur.
+La fonction de modèle membre classe les éléments en fonction de la *composition* de la classe `Traits`spécifiée par l’utilisateur.
 
 ### <a name="example"></a>Exemple
 
@@ -2373,19 +2373,19 @@ void splice(const_iterator Where, list<Type, Allocator>&& Source, const_iterator
 
 ### <a name="parameters"></a>Paramètres
 
-*Où* \
+*Où*\
 Position dans la liste de destination avant laquelle l'insertion doit être effectuée.
 
 *Source*\
 Liste source qui doit être insérée dans la liste de destination.
 
-*Iter* \
+*Iter*\
 Élément à insérer à partir de la liste source.
 
-*Premier* \
+*Premier*\
 Premier élément de la plage à insérer à partir de la liste source.
 
-*Dernier* \
+*Dernier*\
 Première position au-delà du dernier élément de la plage à insérer à partir de la liste source.
 
 ### <a name="remarks"></a>Notes
@@ -2563,7 +2563,7 @@ Cette fonction suppose que la liste est triée, pour que tous les éléments dup
 
 La première fonction membre supprime chaque élément dont la valeur est égale à l'élément précédent.
 
-La deuxième fonction membre supprime chaque élément qui satisfait à la fonction de prédicat *prédite* par rapport à son élément précédent. Vous pouvez utiliser n’importe lequel des objets de fonction binaire déclarés dans l’en-tête \<functional > pour l’argument *prédit* ou vous pouvez créer les vôtres.
+La deuxième fonction membre supprime chaque élément qui satisfait à la fonction de prédicat *prédite* par rapport à son élément précédent. Vous pouvez utiliser n’importe lequel des objets de fonction binaire déclarés dans l’en-tête de > fonctionnel \<pour l’argument *prédit* ou vous pouvez créer les vôtres.
 
 ### <a name="example"></a>Exemple
 

@@ -37,11 +37,11 @@ helpviewer_keywords:
 - std::ctype [C++], widen
 ms.assetid: 3627154c-49d9-47b5-b28f-5bbedee38e3b
 ms.openlocfilehash: 640b2cc8506e498006feedbea6825a0e51a88209
-ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
+ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/21/2019
-ms.locfileid: "72688165"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78876307"
 ---
 # <a name="ctype-class"></a>ctype, classe
 
@@ -56,7 +56,7 @@ class ctype : public ctype_base;
 
 ### <a name="parameters"></a>Paramètres
 
-*CharType* \
+*CharType*\
 Type utilisé dans le cadre d'un programme pour encoder des caractères.
 
 ## <a name="remarks"></a>Notes
@@ -65,11 +65,11 @@ Comme avec n'importe quelle facette de paramètres régionaux, l'ID d'objet stat
 
 La C++ bibliothèque standard définit deux spécialisations explicites de ce modèle de classe :
 
-- `ctype<char>`, une spécialisation explicite dont les différences sont décrites séparément. Pour plus d’informations, consultez [ctype &lt;char &gt; Class](../standard-library/ctype-char-class.md).
+- `ctype<char>`, une spécialisation explicite dont les différences sont décrites séparément. Pour plus d’informations, consultez [ctype&lt;char&gt; Class](../standard-library/ctype-char-class.md).
 
 - `ctype<wchar_t>`, qui traite les éléments comme des caractères larges.
 
-Autres spécialisations du modèle de classe `ctype<CharType>` :
+Autres spécialisations du modèle de classe `ctype<CharType>`:
 
 - Convertit une valeur *ch* de type *CharType* en une valeur de type **char** avec l’expression `(char)ch`.
 
@@ -83,13 +83,13 @@ Toutes les autres opérations sont effectuées sur les valeurs **char** de la m�
 |-|-|
 |[ctype](#ctype)|Constructeur des objets de classe `ctype` qui servent de facettes de paramètres régionaux pour les caractères.|
 
-### <a name="typedefs"></a>Typedef
+### <a name="typedefs"></a>Typedefs
 
 |Nom de type|Description|
 |-|-|
 |[char_type](#char_type)|Type qui décrit un caractère utilisé par les paramètres régionaux.|
 
-### <a name="member-functions"></a>Fonctions membres
+### <a name="member-functions"></a>Fonctions Membre
 
 |Fonction membre|Description|
 |-|-|
@@ -108,9 +108,9 @@ Toutes les autres opérations sont effectuées sur les valeurs **char** de la m�
 |[toupper](#toupper)|Convertit un caractère ou une plage de caractères en majuscules.|
 |[widen](#widen)|Convertit un caractère de type **char** dans le jeu de caractères natif en caractère correspondant de type `CharType` utilisé par des paramètres régionaux.|
 
-## <a name="requirements"></a>spécifications
+## <a name="requirements"></a>Spécifications
 
-**En-tête :** \<locale>
+**En-tête :** \<paramètres régionaux >
 
 **Espace de noms :** std
 
@@ -140,8 +140,8 @@ explicit ctype(size_t _Refs = 0);
 
 ### <a name="parameters"></a>Paramètres
 
-*_Refs* \
-Valeur entière utilisée pour spécifier le type de gestion de mémoire pour l’objet.
+*_Refs*\
+Valeur entière qui sert à spécifier le type de gestion de la mémoire pour l’objet.
 
 ### <a name="remarks"></a>Notes
 
@@ -174,19 +174,19 @@ virtual const CharType *do_is(
 
 ### <a name="parameters"></a>Paramètres
 
-*maskVal* \
+*maskVal*\
 Valeur de masque pour laquelle le caractère doit être vérifié.
 
-*ch* \
+*ch*\
 Caractère dont les attributs doivent être vérifiés.
 
-*premier* \
+*premier*\
 Pointeur vers le premier caractère de la plage dont les attributs doivent être classés.
 
-*dernier* \
+*dernier*\
 Pointeur vers le caractère juste après le dernier caractère de la plage dont les attributs doivent être classés.
 
-*dest* \
+*dest*\
 Pointeur vers le début du tableau dans lequel les valeurs de masque qui caractérisent les attributs de chaque caractère doivent être stockées.
 
 ### <a name="return-value"></a>Valeur de retour
@@ -221,19 +221,19 @@ virtual const CharType* do_narrow(
 
 ### <a name="parameters"></a>Paramètres
 
-*ch* \
+*ch*\
 Caractère de type `Chartype` utilisé par les paramètres régionaux à convertir.
 
 \ *par défaut*
 Valeur par défaut assignée par la fonction membre aux caractères de type `CharType` qui n’ont pas de caractères équivalents de type **char**.
 
-*premier* \
+*premier*\
 Pointeur vers le premier caractère de la plage de caractères à convertir.
 
-*dernier* \
+*dernier*\
 Pointeur vers le caractère juste après le dernier caractère de la plage de caractères à convertir.
 
-*dest* \
+*dest*\
 Pointeur const vers le premier caractère de type **char** dans la plage de destination qui stocke la plage de caractères convertie.
 
 ### <a name="return-value"></a>Valeur de retour
@@ -244,7 +244,7 @@ La deuxième fonction membre protégée retourne un pointeur vers la plage de de
 
 ### <a name="remarks"></a>Notes
 
-La deuxième fonction de modèle de membre protégée stocke dans `dest` [`I`] la valeur `do_narrow` (`first` [`I`], `default`), pour `I` dans l’intervalle [0, `last`  -  `first`).
+La deuxième fonction de modèle de membre protégée stocke dans `dest`[`I`] la valeur `do_narrow`(`first` [`I`], `default`), pour `I` dans l’intervalle [0, `last` - `first`).
 
 ### <a name="example"></a>Exemple
 
@@ -263,13 +263,13 @@ virtual const CharType *do_scan_is(
 
 ### <a name="parameters"></a>Paramètres
 
-*maskVal* \
+*maskVal*\
 Valeur de masque qui doit correspondre à un caractère.
 
-*premier* \
+*premier*\
 Pointeur vers le premier caractère de la plage à analyser.
 
-*dernier* \
+*dernier*\
 Pointeur vers le caractère juste après le dernier caractère de la plage à analyser.
 
 ### <a name="return-value"></a>Valeur de retour
@@ -278,7 +278,7 @@ Pointeur vers le premier caractère d’une plage qui correspond à un masque sp
 
 ### <a name="remarks"></a>Notes
 
-La fonction membre protégée retourne le plus petit pointeur `ptr` dans la plage [`first`, `last`) pour lequel [do_is](#do_is)(`maskVal`, \* `ptr`) a la valeur true.
+La fonction membre protégée retourne le plus petit pointeur `ptr` dans la plage [`first`, `last`) pour laquelle [do_is](#do_is)(`maskVal`, \* `ptr`) a la valeur true.
 
 ### <a name="example"></a>Exemple
 
@@ -297,13 +297,13 @@ virtual const CharType *do_scan_not(
 
 ### <a name="parameters"></a>Paramètres
 
-*maskVal* \
+*maskVal*\
 Valeur de masque qui ne doit pas correspondre à un caractère.
 
-*premier* \
+*premier*\
 Pointeur vers le premier caractère de la plage à analyser.
 
-*dernier* \
+*dernier*\
 Pointeur vers le caractère juste après le dernier caractère de la plage à analyser.
 
 ### <a name="return-value"></a>Valeur de retour
@@ -312,7 +312,7 @@ Pointeur vers le premier caractère d’une plage qui ne correspond pas à un ma
 
 ### <a name="remarks"></a>Notes
 
-La fonction membre protégée retourne le plus petit pointeur `ptr` dans la plage [`first`, `last`) pour lequel [do_is](#do_is)(`maskVal`, \* `ptr`) a la valeur false.
+La fonction membre protégée retourne le plus petit pointeur `ptr` dans la plage [`first`, `last`) pour laquelle [do_is](#do_is)(`maskVal`, \* `ptr`) a la valeur false.
 
 ### <a name="example"></a>Exemple
 
@@ -332,13 +332,13 @@ virtual const CharType *do_tolower(
 
 ### <a name="parameters"></a>Paramètres
 
-*ch* \
-Caractère à convertir en minuscule.
+*ch*\
+Caractère à convertir en minuscules.
 
-*premier* \
+*premier*\
 Pointeur vers le premier caractère de la plage de caractères dont la casse doit être convertie.
 
-*dernier* \
+*dernier*\
 Pointeur vers le caractère juste après le dernier caractère de la plage de caractères dont la casse doit être convertie.
 
 ### <a name="return-value"></a>Valeur de retour
@@ -347,7 +347,7 @@ La première fonction membre protégée retourne la forme minuscule du paramètr
 
 ### <a name="remarks"></a>Notes
 
-La deuxième fonction de modèle de membre protégé remplace chaque élément `first` [`I`], par `I` dans l’intervalle [0, `last`  -  `first`), avec `do_tolower` (`first` [`I`]).
+La deuxième fonction de modèle de membre protégé remplace chaque élément `first` [`I`], par `I` dans l’intervalle [0, `last` - `first`), avec `do_tolower`(`first` [`I`]).
 
 ### <a name="example"></a>Exemple
 
@@ -367,13 +367,13 @@ virtual const CharType *do_toupper(
 
 ### <a name="parameters"></a>Paramètres
 
-*ch* \
-Caractère à convertir en majuscule.
+*ch*\
+Caractère à convertir en majuscules.
 
-*premier* \
+*premier*\
 Pointeur vers le premier caractère de la plage de caractères dont la casse doit être convertie.
 
-*dernier* \
+*dernier*\
 Pointeur vers le caractère juste après le dernier caractère de la plage de caractères dont la casse doit être convertie.
 
 ### <a name="return-value"></a>Valeur de retour
@@ -382,7 +382,7 @@ La première fonction membre protégée retourne la forme majuscule du paramètr
 
 ### <a name="remarks"></a>Notes
 
-La deuxième fonction de modèle de membre protégé remplace chaque élément `first` [`I`], par `I` dans l’intervalle [0, `last`  -  `first`), avec `do_toupper` (`first` [`I`]).
+La deuxième fonction de modèle de membre protégé remplace chaque élément `first` [`I`], par `I` dans l’intervalle [0, `last` - `first`), avec `do_toupper`(`first` [`I`]).
 
 ### <a name="example"></a>Exemple
 
@@ -406,13 +406,13 @@ virtual const char *do_widen(
 *byte*\
 Caractère de type **char** dans le jeu de caractères natif à convertir.
 
-*premier* \
+*premier*\
 Pointeur vers le premier caractère de la plage de caractères à convertir.
 
-*dernier* \
+*dernier*\
 Pointeur vers le caractère juste après le dernier caractère de la plage de caractères à convertir.
 
-*dest* \
+*dest*\
 Pointeur vers le premier caractère de type `CharType` dans la plage de destination qui stocke la plage de caractères convertis.
 
 ### <a name="return-value"></a>Valeur de retour
@@ -444,19 +444,19 @@ const CharType *is(
 
 ### <a name="parameters"></a>Paramètres
 
-*maskVal* \
+*maskVal*\
 Valeur de masque pour laquelle le caractère doit être vérifié.
 
-*ch* \
+*ch*\
 Caractère dont les attributs doivent être vérifiés.
 
-*premier* \
+*premier*\
 Pointeur vers le premier caractère de la plage dont les attributs doivent être classés.
 
-*dernier* \
+*dernier*\
 Pointeur vers le caractère juste après le dernier caractère de la plage dont les attributs doivent être classés.
 
-*dest* \
+*dest*\
 Pointeur vers le début du tableau dans lequel les valeurs de masque qui caractérisent les attributs de chaque caractère doivent être stockées.
 
 ### <a name="return-value"></a>Valeur de retour
@@ -524,19 +524,19 @@ const CharType* narrow(
 
 ### <a name="parameters"></a>Paramètres
 
-*ch* \
+*ch*\
 Caractère de type `Chartype` utilisé par les paramètres régionaux à convertir.
 
 \ *par défaut*
 Valeur par défaut assignée par la fonction membre aux caractères de type `CharType` qui n’ont pas de caractères équivalents de type **char**.
 
-*premier* \
+*premier*\
 Pointeur vers le premier caractère de la plage de caractères à convertir.
 
-*dernier* \
+*dernier*\
 Pointeur vers le caractère juste après le dernier caractère de la plage de caractères à convertir.
 
-*dest* \
+*dest*\
 Pointeur const vers le premier caractère de type **char** dans la plage de destination qui stocke la plage de caractères convertie.
 
 ### <a name="return-value"></a>Valeur de retour
@@ -588,13 +588,13 @@ const CharType *scan_is(
 
 ### <a name="parameters"></a>Paramètres
 
-*maskVal* \
+*maskVal*\
 Valeur de masque qui doit correspondre à un caractère.
 
-*premier* \
+*premier*\
 Pointeur vers le premier caractère de la plage à analyser.
 
-*dernier* \
+*dernier*\
 Pointeur vers le caractère juste après le dernier caractère de la plage à analyser.
 
 ### <a name="return-value"></a>Valeur de retour
@@ -644,13 +644,13 @@ const CharType *scan_not(
 
 ### <a name="parameters"></a>Paramètres
 
-*maskVal* \
+*maskVal*\
 Valeur de masque qui ne doit pas correspondre à un caractère.
 
-*premier* \
+*premier*\
 Pointeur vers le premier caractère de la plage à analyser.
 
-*dernier* \
+*dernier*\
 Pointeur vers le caractère juste après le dernier caractère de la plage à analyser.
 
 ### <a name="return-value"></a>Valeur de retour
@@ -699,13 +699,13 @@ const CharType *tolower(CharType* first, const CharType* last) const;
 
 ### <a name="parameters"></a>Paramètres
 
-*ch* \
-Caractère à convertir en minuscule.
+*ch*\
+Caractère à convertir en minuscules.
 
-*premier* \
+*premier*\
 Pointeur vers le premier caractère de la plage de caractères dont la casse doit être convertie.
 
-*dernier* \
+*dernier*\
 Pointeur vers le caractère juste après le dernier caractère de la plage de caractères dont la casse doit être convertie.
 
 ### <a name="return-value"></a>Valeur de retour
@@ -754,13 +754,13 @@ const CharType *toupper(CharType* first, const CharType* last) const;
 
 ### <a name="parameters"></a>Paramètres
 
-*ch* \
+*ch*\
 Caractère à convertir en majuscule.
 
-*premier* \
+*premier*\
 Pointeur vers le premier caractère de la plage de caractères dont la casse doit être convertie.
 
-*dernier* \
+*dernier*\
 Pointeur vers le caractère juste après le dernier caractère de la plage de caractères dont la casse doit être convertie.
 
 ### <a name="return-value"></a>Valeur de retour
@@ -812,13 +812,13 @@ const char *widen(const char* first, const char* last, CharType* dest) const;
 *byte*\
 Caractère de type char du jeu de caractères natifs à convertir.
 
-*premier* \
+*premier*\
 Pointeur vers le premier caractère de la plage de caractères à convertir.
 
-*dernier* \
+*dernier*\
 Pointeur vers le caractère juste après le dernier caractère de la plage de caractères à convertir.
 
-*dest* \
+*dest*\
 Pointeur vers le premier caractère de type `CharType` dans la plage de destination qui stocke la plage de caractères convertis.
 
 ### <a name="return-value"></a>Valeur de retour
