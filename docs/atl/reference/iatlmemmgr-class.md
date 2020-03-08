@@ -14,11 +14,11 @@ helpviewer_keywords:
 - memory, memory manager
 ms.assetid: 18b2c569-25fe-4464-bdb6-3b1abef7154a
 ms.openlocfilehash: a0d79ae95a0604ca75f03673873e99394a1bc295
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69496061"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78865069"
 ---
 # <a name="iatlmemmgr-class"></a>IAtlMemMgr, classe
 
@@ -52,11 +52,11 @@ Cette interface est implémentée par [CComHeap](../../atl/reference/ccomheap-cl
 
 [!code-cpp[NVC_ATL_Utilities#94](../../atl/codesnippet/cpp/iatlmemmgr-class_1.cpp)]
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
-**En-tête:** atlmem. h
+**En-tête :** atlmem. h
 
-##  <a name="allocate"></a>  IAtlMemMgr::Allocate
+##  <a name="allocate"></a>IAtlMemMgr :: Allocate
 
 Appelez cette méthode pour allouer un bloc de mémoire.
 
@@ -75,13 +75,13 @@ Retourne un pointeur vers le début du bloc de mémoire nouvellement alloué.
 
 ### <a name="remarks"></a>Notes
 
-Appelez [IAtlMemMgr:: Free](#free) ou [IAtlMemMgr::](#reallocate) Allocate pour libérer la mémoire allouée par cette méthode.
+Appelez [IAtlMemMgr :: Free](#free) ou [IAtlMemMgr :: Allocate](#reallocate) pour libérer la mémoire allouée par cette méthode.
 
-### <a name="example"></a>Exemples
+### <a name="example"></a>Exemple
 
 Pour obtenir un exemple, consultez la [vue d’ensemble de IAtlMemMgr](../../atl/reference/iatlmemmgr-class.md).
 
-##  <a name="free"></a>  IAtlMemMgr::Free
+##  <a name="free"></a>IAtlMemMgr :: Free
 
 Appelez cette méthode pour libérer un bloc de mémoire.
 
@@ -96,13 +96,13 @@ Pointeur vers la mémoire précédemment allouée par ce gestionnaire de mémoir
 
 ### <a name="remarks"></a>Notes
 
-Utilisez cette méthode pour libérer de la mémoire obtenue par [IAtlMemMgr::](#allocate) Allocate ou [IAtlMemMgr::](#reallocate)Allocate.
+Utilisez cette méthode pour libérer de la mémoire obtenue par [IAtlMemMgr :: Allocate](#allocate) ou [IAtlMemMgr :: Allocate](#reallocate).
 
 ### <a name="example"></a>Exemple
 
 Pour obtenir un exemple, consultez la [vue d’ensemble de IAtlMemMgr](../../atl/reference/iatlmemmgr-class.md).
 
-##  <a name="getsize"></a>  IAtlMemMgr::GetSize
+##  <a name="getsize"></a>IAtlMemMgr :: est à obtenir
 
 Appelez cette méthode pour récupérer la taille d’un bloc de mémoire alloué.
 
@@ -123,7 +123,7 @@ Retourne la taille du bloc de mémoire en octets.
 
 Pour obtenir un exemple, consultez la [vue d’ensemble de IAtlMemMgr](../../atl/reference/iatlmemmgr-class.md).
 
-##  <a name="reallocate"></a>  IAtlMemMgr::Reallocate
+##  <a name="reallocate"></a>IAtlMemMgr :: Reallocation
 
 Appelez cette méthode pour réallouer la mémoire allouée par ce gestionnaire de mémoire.
 
@@ -145,7 +145,7 @@ Retourne un pointeur vers le début du bloc de mémoire nouvellement alloué.
 
 ### <a name="remarks"></a>Notes
 
-Appelez [IAtlMemMgr:: Free](#free) ou [IAtlMemMgr::](#reallocate) Allocate pour libérer la mémoire allouée par cette méthode.
+Appelez [IAtlMemMgr :: Free](#free) ou [IAtlMemMgr :: Allocate](#reallocate) pour libérer la mémoire allouée par cette méthode.
 
 Conceptuellement, cette méthode libère la mémoire existante et alloue un nouveau bloc de mémoire. En réalité, la mémoire existante peut être étendue ou réutilisée.
 
@@ -153,9 +153,9 @@ Conceptuellement, cette méthode libère la mémoire existante et alloue un nouv
 
 Pour obtenir un exemple, consultez la [vue d’ensemble de IAtlMemMgr](../../atl/reference/iatlmemmgr-class.md).
 
-##  <a name="get_allowcontextmenu"></a>  IAxWinAmbientDispatch::get_AllowContextMenu
+##  <a name="get_allowcontextmenu"></a>IAxWinAmbientDispatch :: get_AllowContextMenu
 
-La `AllowContextMenu` propriété spécifie si le contrôle hébergé est autorisé à afficher son propre menu contextuel.
+La propriété `AllowContextMenu` spécifie si le contrôle hébergé est autorisé à afficher son propre menu contextuel.
 
 ```
 STDMETHOD(get_AllowContextMenu)(VARIANT_BOOL* pbAllowContextMenu);
@@ -174,9 +174,9 @@ Valeur HRESULT standard.
 
 L’implémentation de l’objet hôte ATL utilise VARIANT_TRUE comme valeur par défaut de cette propriété.
 
-##  <a name="get_allowshowui"></a>  IAxWinAmbientDispatch::get_AllowShowUI
+##  <a name="get_allowshowui"></a>IAxWinAmbientDispatch :: get_AllowShowUI
 
-La `AllowShowUI` propriété spécifie si le contrôle hébergé est autorisé à afficher sa propre interface utilisateur.
+La propriété `AllowShowUI` spécifie si le contrôle hébergé est autorisé à afficher sa propre interface utilisateur.
 
 ```
 STDMETHOD(get_AllowShowUI)(VARIANT_BOOL* pbAllowShowUI);
@@ -195,9 +195,9 @@ Valeur HRESULT standard.
 
 L’implémentation de l’objet hôte ATL utilise VARIANT_FALSE comme valeur par défaut de cette propriété.
 
-##  <a name="get_allowwindowlessactivation"></a>  IAxWinAmbientDispatch::get_AllowWindowlessActivation
+##  <a name="get_allowwindowlessactivation"></a>IAxWinAmbientDispatch :: get_AllowWindowlessActivation
 
-La `AllowWindowlessActivation` propriété spécifie si le conteneur autorise l’activation sans fenêtre.
+La propriété `AllowWindowlessActivation` spécifie si le conteneur autorise l’activation sans fenêtre.
 
 ```
 STDMETHOD(get_AllowWindowlessActivation)(VARIANT_BOOL* pbAllowWindowless);
@@ -216,9 +216,9 @@ Valeur HRESULT standard.
 
 L’implémentation de l’objet hôte ATL utilise VARIANT_TRUE comme valeur par défaut de cette propriété.
 
-##  <a name="get_backcolor"></a>  IAxWinAmbientDispatch::get_BackColor
+##  <a name="get_backcolor"></a>IAxWinAmbientDispatch :: get_BackColor
 
-La `BackColor` propriété spécifie la couleur d’arrière-plan ambiante du conteneur.
+La propriété `BackColor` spécifie la couleur d’arrière-plan ambiante du conteneur.
 
 ```
 STDMETHOD(get_BackColor)(OLE_COLOR* pclrBackground);
@@ -237,9 +237,9 @@ Valeur HRESULT standard.
 
 L’implémentation de l’objet hôte ATL utilise COLOR_BTNFACE ou COLOR_WINDOW comme valeur par défaut de cette propriété (selon que le parent de la fenêtre hôte est une boîte de dialogue ou non).
 
-##  <a name="get_displayasdefault"></a>  IAxWinAmbientDispatch::get_DisplayAsDefault
+##  <a name="get_displayasdefault"></a>IAxWinAmbientDispatch :: get_DisplayAsDefault
 
-`DisplayAsDefault`est une propriété ambiante qui permet à un contrôle de déterminer s’il s’agit du contrôle par défaut.
+`DisplayAsDefault` est une propriété ambiante qui permet à un contrôle de déterminer s’il s’agit du contrôle par défaut.
 
 ```
 STDMETHOD(get_DisplayAsDefault)(VARIANT_BOOL* pbDisplayAsDefault);
@@ -258,9 +258,9 @@ Valeur HRESULT standard.
 
 L’implémentation de l’objet hôte ATL utilise VARIANT_FALSE comme valeur par défaut de cette propriété.
 
-##  <a name="get_dochostdoubleclickflags"></a>  IAxWinAmbientDispatch::get_DocHostDoubleClickFlags
+##  <a name="get_dochostdoubleclickflags"></a>IAxWinAmbientDispatch :: get_DocHostDoubleClickFlags
 
-La `DocHostDoubleClickFlags` propriété spécifie l’opération qui doit avoir lieu en réponse à un double-clic.
+La propriété `DocHostDoubleClickFlags` spécifie l’opération qui doit avoir lieu en réponse à un double-clic.
 
 ```
 STDMETHOD(get_DocHostDoubleClickFlags)(DWORD* pdwDocHostDoubleClickFlags);
@@ -279,9 +279,9 @@ Valeur HRESULT standard.
 
 L’implémentation de l’objet hôte ATL utilise DOCHOSTUIDBLCLK_DEFAULT comme valeur par défaut de cette propriété.
 
-##  <a name="get_dochostflags"></a>  IAxWinAmbientDispatch::get_DocHostFlags
+##  <a name="get_dochostflags"></a>IAxWinAmbientDispatch :: get_DocHostFlags
 
-La `DocHostFlags` propriété spécifie les fonctionnalités de l’interface utilisateur de l’objet hôte.
+La propriété `DocHostFlags` spécifie les fonctionnalités de l’interface utilisateur de l’objet hôte.
 
 ```
 STDMETHOD(get_DocHostFlags)(DWORD* pdwDocHostFlags);
@@ -300,9 +300,9 @@ Valeur HRESULT standard.
 
 L’implémentation de l’objet hôte ATL utilise DOCHOSTUIFLAG_NO3DBORDER comme valeur par défaut de cette propriété.
 
-##  <a name="get_font"></a>  IAxWinAmbientDispatch::get_Font
+##  <a name="get_font"></a>IAxWinAmbientDispatch :: get_Font
 
-La `Font` propriété spécifie la police ambiante du conteneur.
+La propriété `Font` spécifie la police ambiante du conteneur.
 
 ```
 STDMETHOD(get_Font)(IFontDisp** pFont);
@@ -311,7 +311,7 @@ STDMETHOD(get_Font)(IFontDisp** pFont);
 ### <a name="parameters"></a>Paramètres
 
 *pFont*<br/>
-à Adresse d’un `IFontDisp` pointeur d’interface utilisé pour recevoir la valeur actuelle de cette propriété.
+à Adresse d’un pointeur d’interface `IFontDisp` utilisé pour recevoir la valeur actuelle de cette propriété.
 
 ### <a name="return-value"></a>Valeur de retour
 
@@ -321,9 +321,9 @@ Valeur HRESULT standard.
 
 L’implémentation de l’objet hôte ATL utilise la police de l’interface utilisateur graphique par défaut ou la police système comme valeur par défaut de cette propriété.
 
-##  <a name="get_forecolor"></a>  IAxWinAmbientDispatch::get_ForeColor
+##  <a name="get_forecolor"></a>IAxWinAmbientDispatch :: get_ForeColor
 
-La `ForeColor` propriété spécifie la couleur de premier plan ambiante du conteneur.
+La propriété `ForeColor` spécifie la couleur de premier plan ambiante du conteneur.
 
 ```
 STDMETHOD(get_ForeColor)(OLE_COLOR* pclrForeground);
@@ -342,9 +342,9 @@ Valeur HRESULT standard.
 
 L’implémentation de l’objet hôte ATL utilise la couleur de texte de la fenêtre système comme valeur par défaut de cette propriété.
 
-##  <a name="get_localeid"></a>  IAxWinAmbientDispatch::get_LocaleID
+##  <a name="get_localeid"></a>IAxWinAmbientDispatch :: get_LocaleID
 
-La `LocaleID` propriété spécifie l’ID de paramètres régionaux ambiants du conteneur.
+La propriété `LocaleID` spécifie l’ID de paramètres régionaux ambiants du conteneur.
 
 ```
 STDMETHOD(get_LocaleID)(LCID* plcidLocaleID);
@@ -365,7 +365,7 @@ L’implémentation de l’objet hôte ATL utilise les paramètres régionaux pa
 
 Avec cette méthode, vous pouvez découvrir le LocalID ambiant, c’est-à-dire le LocaleID du programme dans lequel votre contrôle est utilisé. Une fois que vous connaissez le LocaleID, vous pouvez appeler du code pour charger des sous-titres spécifiques aux paramètres régionaux, du texte du message d’erreur, etc. à partir d’un fichier de ressources ou d’une DLL satellite.
 
-##  <a name="get_messagereflect"></a>  IAxWinAmbientDispatch::get_MessageReflect
+##  <a name="get_messagereflect"></a>IAxWinAmbientDispatch :: get_MessageReflect
 
 La `MessageReflect` propriété ambiante spécifie si le conteneur doit refléter les messages dans le contrôle hébergé.
 
@@ -386,9 +386,9 @@ Valeur HRESULT standard.
 
 L’implémentation de l’objet hôte ATL utilise VARIANT_TRUE comme valeur par défaut de cette propriété.
 
-##  <a name="get_optionkeypath"></a>  IAxWinAmbientDispatch::get_OptionKeyPath
+##  <a name="get_optionkeypath"></a>IAxWinAmbientDispatch :: get_OptionKeyPath
 
-La `OptionKeyPath` propriété spécifie le chemin d’accès à la clé de Registre pour les paramètres utilisateur.
+La propriété `OptionKeyPath` spécifie le chemin d’accès à la clé de Registre pour les paramètres utilisateur.
 
 ```
 STDMETHOD(get_OptionKeyPath)(BSTR* pbstrOptionKeyPath);
@@ -403,7 +403,7 @@ STDMETHOD(get_OptionKeyPath)(BSTR* pbstrOptionKeyPath);
 
 Valeur HRESULT standard.
 
-##  <a name="get_showgrabhandles"></a>  IAxWinAmbientDispatch::get_ShowGrabHandles
+##  <a name="get_showgrabhandles"></a>IAxWinAmbientDispatch :: get_ShowGrabHandles
 
 La `ShowGrabHandles` propriété ambiante permet au contrôle de déterminer s’il doit se dessiner lui-même avec des poignées de manipulation.
 
@@ -424,7 +424,7 @@ Valeur HRESULT standard.
 
 L’implémentation de l’objet hôte ATL retourne toujours VARIANT_FALSE comme valeur de cette propriété.
 
-##  <a name="get_showhatching"></a>  IAxWinAmbientDispatch::get_ShowHatching
+##  <a name="get_showhatching"></a>IAxWinAmbientDispatch :: get_ShowHatching
 
 La `ShowHatching` propriété ambiante permet au contrôle de déterminer s’il doit se dessiner lui-même.
 
@@ -445,9 +445,9 @@ Valeur HRESULT standard.
 
 L’implémentation de l’objet hôte ATL retourne toujours VARIANT_FALSE comme valeur de cette propriété.
 
-##  <a name="get_usermode"></a>  IAxWinAmbientDispatch::get_UserMode
+##  <a name="get_usermode"></a>IAxWinAmbientDispatch :: get_UserMode
 
-La `UserMode` propriété spécifie le mode utilisateur ambiant du conteneur.
+La propriété `UserMode` spécifie le mode utilisateur ambiant du conteneur.
 
 ```
 STDMETHOD(get_UserMode)(VARIANT_BOOL* pbUserMode);
@@ -466,9 +466,9 @@ Valeur HRESULT standard.
 
 L’implémentation de l’objet hôte ATL utilise VARIANT_TRUE comme valeur par défaut de cette propriété.
 
-##  <a name="put_allowcontextmenu"></a>  IAxWinAmbientDispatch::put_AllowContextMenu
+##  <a name="put_allowcontextmenu"></a>IAxWinAmbientDispatch ::p ut_AllowContextMenu
 
-La `AllowContextMenu` propriété spécifie si le contrôle hébergé est autorisé à afficher son propre menu contextuel.
+La propriété `AllowContextMenu` spécifie si le contrôle hébergé est autorisé à afficher son propre menu contextuel.
 
 ```
 STDMETHOD(put_AllowContextMenu)(VARIANT_BOOL bAllowContextMenu);
@@ -487,9 +487,9 @@ Valeur HRESULT standard.
 
 L’implémentation de l’objet hôte ATL utilise VARIANT_TRUE comme valeur par défaut de cette propriété.
 
-##  <a name="put_allowshowui"></a>  IAxWinAmbientDispatch::put_AllowShowUI
+##  <a name="put_allowshowui"></a>IAxWinAmbientDispatch ::p ut_AllowShowUI
 
-La `AllowShowUI` propriété spécifie si le contrôle hébergé est autorisé à afficher sa propre interface utilisateur.
+La propriété `AllowShowUI` spécifie si le contrôle hébergé est autorisé à afficher sa propre interface utilisateur.
 
 ```
 STDMETHOD(put_AllowShowUI)(VARIANT_BOOL bAllowShowUI);
@@ -508,9 +508,9 @@ Valeur HRESULT standard.
 
 L’implémentation de l’objet hôte ATL utilise VARIANT_FALSE comme valeur par défaut de cette propriété.
 
-##  <a name="put_allowwindowlessactivation"></a>  IAxWinAmbientDispatch::put_AllowWindowlessActivation
+##  <a name="put_allowwindowlessactivation"></a>IAxWinAmbientDispatch ::p ut_AllowWindowlessActivation
 
-La `AllowWindowlessActivation` propriété spécifie si le conteneur autorise l’activation sans fenêtre.
+La propriété `AllowWindowlessActivation` spécifie si le conteneur autorise l’activation sans fenêtre.
 
 ```
 STDMETHOD(put_AllowWindowlessActivation)(VARIANT_BOOL bAllowWindowless);
@@ -529,9 +529,9 @@ Valeur HRESULT standard.
 
 L’implémentation de l’objet hôte ATL utilise VARIANT_TRUE comme valeur par défaut de cette propriété.
 
-##  <a name="put_backcolor"></a>  IAxWinAmbientDispatch::put_BackColor
+##  <a name="put_backcolor"></a>IAxWinAmbientDispatch ::p ut_BackColor
 
-La `BackColor` propriété spécifie la couleur d’arrière-plan ambiante du conteneur.
+La propriété `BackColor` spécifie la couleur d’arrière-plan ambiante du conteneur.
 
 ```
 STDMETHOD(put_BackColor)(OLE_COLOR clrBackground);
@@ -550,9 +550,9 @@ Valeur HRESULT standard.
 
 L’implémentation de l’objet hôte ATL utilise COLOR_BTNFACE ou COLOR_WINDOW comme valeur par défaut de cette propriété (selon que le parent de la fenêtre hôte est une boîte de dialogue ou non).
 
-##  <a name="put_displayasdefault"></a>  IAxWinAmbientDispatch::put_DisplayAsDefault
+##  <a name="put_displayasdefault"></a>IAxWinAmbientDispatch ::p ut_DisplayAsDefault
 
-`DisplayAsDefault`est une propriété ambiante qui permet à un contrôle de déterminer s’il s’agit du contrôle par défaut.
+`DisplayAsDefault` est une propriété ambiante qui permet à un contrôle de déterminer s’il s’agit du contrôle par défaut.
 
 ```
 STDMETHOD(put_DisplayAsDefault)(VARIANT_BOOL bDisplayAsDefault);
@@ -571,9 +571,9 @@ Valeur HRESULT standard.
 
 L’implémentation de l’objet hôte ATL utilise VARIANT_FALSE comme valeur par défaut de cette propriété.
 
-##  <a name="put_dochostdoubleclickflags"></a>  IAxWinAmbientDispatch::put_DocHostDoubleClickFlags
+##  <a name="put_dochostdoubleclickflags"></a>IAxWinAmbientDispatch ::p ut_DocHostDoubleClickFlags
 
-La `DocHostDoubleClickFlags` propriété spécifie l’opération qui doit avoir lieu en réponse à un double-clic.
+La propriété `DocHostDoubleClickFlags` spécifie l’opération qui doit avoir lieu en réponse à un double-clic.
 
 ```
 STDMETHOD(put_DocHostDoubleClickFlags)(DWORD dwDocHostDoubleClickFlags);
@@ -592,9 +592,9 @@ Valeur HRESULT standard.
 
 L’implémentation de l’objet hôte ATL utilise DOCHOSTUIDBLCLK_DEFAULT comme valeur par défaut de cette propriété.
 
-##  <a name="put_dochostflags"></a>  IAxWinAmbientDispatch::put_DocHostFlags
+##  <a name="put_dochostflags"></a>IAxWinAmbientDispatch ::p ut_DocHostFlags
 
-La `DocHostFlags` propriété spécifie les fonctionnalités de l’interface utilisateur de l’objet hôte.
+La propriété `DocHostFlags` spécifie les fonctionnalités de l’interface utilisateur de l’objet hôte.
 
 ```
 STDMETHOD(put_DocHostFlags)(DWORD dwDocHostFlags);
@@ -613,9 +613,9 @@ Valeur HRESULT standard.
 
 L’implémentation de l’objet hôte ATL utilise DOCHOSTUIFLAG_NO3DBORDER comme valeur par défaut de cette propriété.
 
-##  <a name="put_font"></a>  IAxWinAmbientDispatch::put_Font
+##  <a name="put_font"></a>IAxWinAmbientDispatch ::p ut_Font
 
-La `Font` propriété spécifie la police ambiante du conteneur.
+La propriété `Font` spécifie la police ambiante du conteneur.
 
 ```
 STDMETHOD(put_Font)(IFontDisp* pFont);
@@ -634,9 +634,9 @@ Valeur HRESULT standard.
 
 L’implémentation de l’objet hôte ATL utilise la police de l’interface utilisateur graphique par défaut ou la police système comme valeur par défaut de cette propriété.
 
-##  <a name="put_forecolor"></a>  IAxWinAmbientDispatch::put_ForeColor
+##  <a name="put_forecolor"></a>IAxWinAmbientDispatch ::p ut_ForeColor
 
-La `ForeColor` propriété spécifie la couleur de premier plan ambiante du conteneur.
+La propriété `ForeColor` spécifie la couleur de premier plan ambiante du conteneur.
 
 ```
 STDMETHOD(put_ForeColor)(OLE_COLOR clrForeground);
@@ -655,9 +655,9 @@ Valeur HRESULT standard.
 
 L’implémentation de l’objet hôte ATL utilise la couleur de texte de la fenêtre système comme valeur par défaut de cette propriété.
 
-##  <a name="put_localeid"></a>  IAxWinAmbientDispatch::put_LocaleID
+##  <a name="put_localeid"></a>IAxWinAmbientDispatch ::p ut_LocaleID
 
-La `LocaleID` propriété spécifie l’ID de paramètres régionaux ambiants du conteneur.
+La propriété `LocaleID` spécifie l’ID de paramètres régionaux ambiants du conteneur.
 
 ```
 STDMETHOD(put_LocaleID)(LCID lcidLocaleID);
@@ -676,7 +676,7 @@ Valeur HRESULT standard.
 
 L’implémentation de l’objet hôte ATL utilise les paramètres régionaux par défaut de l’utilisateur comme valeur par défaut de cette propriété.
 
-##  <a name="put_messagereflect"></a>  IAxWinAmbientDispatch::put_MessageReflect
+##  <a name="put_messagereflect"></a>IAxWinAmbientDispatch ::p ut_MessageReflect
 
 La `MessageReflect` propriété ambiante spécifie si le conteneur doit refléter les messages dans le contrôle hébergé.
 
@@ -697,9 +697,9 @@ Valeur HRESULT standard.
 
 L’implémentation de l’objet hôte ATL utilise VARIANT_TRUE comme valeur par défaut de cette propriété.
 
-##  <a name="put_optionkeypath"></a>  IAxWinAmbientDispatch::put_OptionKeyPath
+##  <a name="put_optionkeypath"></a>IAxWinAmbientDispatch ::p ut_OptionKeyPath
 
-La `OptionKeyPath` propriété spécifie le chemin d’accès à la clé de Registre pour les paramètres utilisateur.
+La propriété `OptionKeyPath` spécifie le chemin d’accès à la clé de Registre pour les paramètres utilisateur.
 
 ```
 STDMETHOD(put_OptionKeyPath)(BSTR bstrOptionKeyPath);
@@ -714,9 +714,9 @@ dans Nouvelle valeur de cette propriété.
 
 Valeur HRESULT standard.
 
-##  <a name="put_usermode"></a>  IAxWinAmbientDispatch::put_UserMode
+##  <a name="put_usermode"></a>IAxWinAmbientDispatch ::p ut_UserMode
 
-La `UserMode` propriété spécifie le mode utilisateur ambiant du conteneur.
+La propriété `UserMode` spécifie le mode utilisateur ambiant du conteneur.
 
 ```
 STDMETHOD(put_UserMode)(VARIANT_BOOL bUserMode);
@@ -735,7 +735,7 @@ Valeur HRESULT standard.
 
 L’implémentation de l’objet hôte ATL utilise VARIANT_TRUE comme valeur par défaut de cette propriété.
 
-##  <a name="setambientdispatch"></a>  IAxWinAmbientDispatchEx::SetAmbientDispatch
+##  <a name="setambientdispatch"></a>IAxWinAmbientDispatchEx::SetAmbientDispatch
 
 Cette méthode est appelée pour compléter l’interface de propriété ambiante par défaut par une interface définie par l’utilisateur.
 
@@ -750,13 +750,13 @@ Pointeur vers la nouvelle interface.
 
 ### <a name="return-value"></a>Valeur de retour
 
-Retourne S_OK en cas de réussite, ou une erreur HRESULT en cas d’échec.
+Retourne S_OK en cas de réussite, ou un HRESULT d’erreur en cas d’échec.
 
 ### <a name="remarks"></a>Notes
 
-Lorsque `SetAmbientDispatch` est appelé avec un pointeur vers une nouvelle interface, cette nouvelle interface est utilisée pour appeler toutes les propriétés ou méthodes demandées par le contrôle hébergé, si ces propriétés ne sont pas déjà fournies par [IAxWinAmbientDispatch](../../atl/reference/iaxwinambientdispatch-interface.md).
+Lorsque `SetAmbientDispatch` est appelée avec un pointeur vers une nouvelle interface, cette nouvelle interface est utilisée pour appeler toutes les propriétés ou méthodes demandées par le contrôle hébergé, si ces propriétés ne sont pas déjà fournies par [IAxWinAmbientDispatch](../../atl/reference/iaxwinambientdispatch-interface.md).
 
-##  <a name="attachcontrol"></a>  IAxWinHostWindow::AttachControl
+##  <a name="attachcontrol"></a>IAxWinHostWindow::AttachControl
 
 Joint un contrôle existant (et précédemment initialisé) à l’objet hôte à l’aide de la fenêtre identifiée par *HWND*.
 
@@ -767,7 +767,7 @@ STDMETHOD(AttachControl)(IUnknown* pUnkControl, HWND hWnd);
 ### <a name="parameters"></a>Paramètres
 
 *pUnkControl*<br/>
-dans Pointeur vers l' `IUnknown` interface du contrôle à attacher à l’objet hôte.
+dans Pointeur vers l’interface `IUnknown` du contrôle à attacher à l’objet hôte.
 
 *hWnd*<br/>
 dans Handle de la fenêtre à utiliser pour l’hébergement.
@@ -776,7 +776,7 @@ dans Handle de la fenêtre à utiliser pour l’hébergement.
 
 Valeur HRESULT standard.
 
-##  <a name="createcontrol"></a>  IAxWinHostWindow::CreateControl
+##  <a name="createcontrol"></a>IAxWinHostWindow :: CreateControl
 
 Crée un contrôle, l’initialise et l’héberge dans la fenêtre identifiée par *HWND*.
 
@@ -790,13 +790,13 @@ STDMETHOD(CreateControl)(
 ### <a name="parameters"></a>Paramètres
 
 *lpTricsData*<br/>
-dans Chaîne identifiant le contrôle à créer. Peut être un CLSID (doit inclure les accolades), ProgID, URL ou HTML brut (préfixé par **MSHTML:** ).
+dans Chaîne identifiant le contrôle à créer. Peut être un CLSID (doit inclure les accolades), ProgID, URL ou HTML brut (préfixé par **MSHTML :** ).
 
 *hWnd*<br/>
 dans Handle de la fenêtre à utiliser pour l’hébergement.
 
 *pStream*<br/>
-dans Pointeur d’interface pour un flux contenant des données d’initialisation pour le contrôle. Peut avoir la valeur NULL.
+dans Pointeur d’interface pour un flux contenant des données d’initialisation pour le contrôle. Sa valeur peut être NULL.
 
 ### <a name="return-value"></a>Valeur de retour
 
@@ -806,13 +806,13 @@ Valeur HRESULT standard.
 
 Cette fenêtre sera sous-classée par l’objet hôte exposant cette interface afin que les messages puissent être reflétés dans le contrôle et que d’autres fonctionnalités de conteneur fonctionnent.
 
-L’appel de cette méthode équivaut à appeler [IAxWinHostWindow:: CreateControlEx](#createcontrolex).
+L’appel de cette méthode équivaut à appeler [IAxWinHostWindow :: CreateControlEx](#createcontrolex).
 
-Pour créer un contrôle ActiveX sous licence, consultez [IAxWinHostWindowLic:: CreateControlLic](#createcontrollicex).
+Pour créer un contrôle ActiveX sous licence, consultez [IAxWinHostWindowLic :: CreateControlLic](#createcontrollicex).
 
-##  <a name="createcontrolex"></a>  IAxWinHostWindow::CreateControlEx
+##  <a name="createcontrolex"></a>IAxWinHostWindow::CreateControlEx
 
-Crée un contrôle ActiveX, l’initialise et l’héberge dans la fenêtre spécifiée, similaire à [IAxWinHostWindow:: CreateControl](#createcontrol).
+Crée un contrôle ActiveX, l’initialise et l’héberge dans la fenêtre spécifiée, similaire à [IAxWinHostWindow :: CreateControl](#createcontrol).
 
 ```
 STDMETHOD(CreateControlEx)(
@@ -827,22 +827,22 @@ STDMETHOD(CreateControlEx)(
 ### <a name="parameters"></a>Paramètres
 
 *lpTricsData*<br/>
-dans Chaîne identifiant le contrôle à créer. Peut être un CLSID (doit inclure les accolades), ProgID, URL ou HTML brut (avec le préfixe **MSHTML:** ).
+dans Chaîne identifiant le contrôle à créer. Peut être un CLSID (doit inclure les accolades), ProgID, URL ou HTML brut (avec le préfixe **MSHTML :** ).
 
 *hWnd*<br/>
 dans Handle de la fenêtre à utiliser pour l’hébergement.
 
 *pStream*<br/>
-dans Pointeur d’interface pour un flux contenant des données d’initialisation pour le contrôle. Peut avoir la valeur NULL.
+dans Pointeur d’interface pour un flux contenant des données d’initialisation pour le contrôle. Sa valeur peut être NULL.
 
 *ppUnk*<br/>
-à Adresse d’un pointeur qui recevra l' `IUnknown` interface du contrôle créé. Peut avoir la valeur NULL.
+à Adresse d’un pointeur qui recevra l’interface `IUnknown` du contrôle créé. Sa valeur peut être NULL.
 
 *riidAdvise*<br/>
 dans Identificateur d’interface d’une interface sortante sur l’objet contenu. Peut être IID_NULL.
 
 *punkAdvise*<br/>
-dans Pointeur vers l' `IUnknown` interface de l’objet récepteur à connecter au point de connexion sur l’objet contenu spécifié par `iidSink`.
+dans Pointeur vers l’interface `IUnknown` de l’objet récepteur à connecter au point de connexion sur l’objet contenu spécifié par `iidSink`.
 
 ### <a name="return-value"></a>Valeur de retour
 
@@ -850,11 +850,11 @@ Valeur HRESULT standard.
 
 ### <a name="remarks"></a>Notes
 
-Contrairement à `CreateControl` la méthode `CreateControlEx` , vous permet également de recevoir un pointeur d’interface vers le contrôle nouvellement créé et de configurer un récepteur d’événements pour recevoir des événements déclenchés par le contrôle.
+Contrairement à la méthode `CreateControl`, `CreateControlEx` vous permet également de recevoir un pointeur d’interface vers le contrôle nouvellement créé et de configurer un récepteur d’événements pour recevoir des événements déclenchés par le contrôle.
 
-Pour créer un contrôle ActiveX sous licence, consultez [IAxWinHostWindowLic:: CreateControlLicEx](#createcontrollicex).
+Pour créer un contrôle ActiveX sous licence, consultez [IAxWinHostWindowLic :: CreateControlLicEx](#createcontrollicex).
 
-##  <a name="querycontrol"></a>  IAxWinHostWindow::QueryControl
+##  <a name="querycontrol"></a>IAxWinHostWindow::QueryControl
 
 Retourne le pointeur d’interface spécifié fourni par le contrôle hébergé.
 
@@ -874,9 +874,9 @@ dans ID d’une interface sur le contrôle demandé.
 
 Valeur HRESULT standard.
 
-##  <a name="setexternaldispatch"></a>  IAxWinHostWindow::SetExternalDispatch
+##  <a name="setexternaldispatch"></a>IAxWinHostWindow::SetExternalDispatch
 
-Définit la dispinterface externe, qui est disponible pour les contrôles contenus par le biais de la méthode [IDocHostUIHandlerDispatch:: GetExternal](../../atl/reference/idochostuihandlerdispatch-interface.md) .
+Définit la dispinterface externe, qui est disponible pour les contrôles contenus par le biais de la méthode [IDocHostUIHandlerDispatch :: GetExternal](../../atl/reference/idochostuihandlerdispatch-interface.md) .
 
 ```
 STDMETHOD(SetExternalDispatch)(IDispatch* pDisp);
@@ -885,15 +885,15 @@ STDMETHOD(SetExternalDispatch)(IDispatch* pDisp);
 ### <a name="parameters"></a>Paramètres
 
 *pDisp*<br/>
-dans Pointeur vers une `IDispatch` interface.
+dans Pointeur vers une interface de `IDispatch`.
 
 ### <a name="return-value"></a>Valeur de retour
 
 Valeur HRESULT standard.
 
-##  <a name="setexternaluihandler"></a>  IAxWinHostWindow::SetExternalUIHandler
+##  <a name="setexternaluihandler"></a>IAxWinHostWindow::SetExternalUIHandler
 
-Appelez cette fonction pour définir l’interface [IDocHostUIHandlerDispatch](../../atl/reference/idochostuihandlerdispatch-interface.md) externe de l' `CAxWindow` objet.
+Appelez cette fonction pour définir l’interface [IDocHostUIHandlerDispatch](../../atl/reference/idochostuihandlerdispatch-interface.md) externe pour l’objet `CAxWindow`.
 
 ```
 STDMETHOD(SetExternalUIHandler)(IDocHostUIHandlerDispatch* pDisp);
@@ -902,7 +902,7 @@ STDMETHOD(SetExternalUIHandler)(IDocHostUIHandlerDispatch* pDisp);
 ### <a name="parameters"></a>Paramètres
 
 *pDisp*<br/>
-dans Pointeur vers une `IDocHostUIHandlerDispatch` interface.
+dans Pointeur vers une interface de `IDocHostUIHandlerDispatch`.
 
 ### <a name="return-value"></a>Valeur de retour
 
@@ -910,9 +910,9 @@ Valeur HRESULT standard.
 
 ### <a name="remarks"></a>Notes
 
-Cette fonction est utilisée par les contrôles (tels que le contrôle de navigateur Web) qui interrogent le site de `IDocHostUIHandlerDispatch` l’hôte pour l’interface.
+Cette fonction est utilisée par les contrôles (tels que le contrôle de navigateur Web) qui interrogent le site de l’hôte pour l’interface `IDocHostUIHandlerDispatch`.
 
-##  <a name="createcontrollic"></a>  IAxWinHostWindowLic::CreateControlLic
+##  <a name="createcontrollic"></a>IAxWinHostWindowLic::CreateControlLic
 
 Crée un contrôle sous licence, l’initialise et l’héberge dans la fenêtre identifiée par `hWnd`.
 
@@ -931,17 +931,17 @@ dans BSTR qui contient la clé de licence du contrôle.
 
 ### <a name="remarks"></a>Notes
 
-Pour obtenir une description des paramètres restants et de la valeur de retour, consultez [IAxWinHostWindow:: CreateControl](#createcontrol) .
+Pour obtenir une description des paramètres restants et de la valeur de retour, consultez [IAxWinHostWindow :: CreateControl](#createcontrol) .
 
-L’appel de cette méthode équivaut à appeler [IAxWinHostWindowLic:: CreateControlLicEx](#createcontrollicex)
+L’appel de cette méthode équivaut à appeler [IAxWinHostWindowLic :: CreateControlLicEx](#createcontrollicex)
 
 ### <a name="example"></a>Exemple
 
-Consultez [Hébergement de contrôles ActiveX à l’aide d’ATL AxHost](../../atl/hosting-activex-controls-using-atl-axhost.md) pour `IAxWinHostWindowLic::CreateControlLic`obtenir un exemple qui utilise.
+Consultez [Hébergement de contrôles ActiveX à l’aide d’ATL AxHost](../../atl/hosting-activex-controls-using-atl-axhost.md) pour obtenir un exemple qui utilise `IAxWinHostWindowLic::CreateControlLic`.
 
-##  <a name="createcontrollicex"></a>  IAxWinHostWindowLic::CreateControlLicEx
+##  <a name="createcontrollicex"></a>IAxWinHostWindowLic::CreateControlLicEx
 
-Crée un contrôle ActiveX sous licence, l’initialise et l’héberge dans la fenêtre spécifiée, similaire à [IAxWinHostWindow:: CreateControl](#createcontrol).
+Crée un contrôle ActiveX sous licence, l’initialise et l’héberge dans la fenêtre spécifiée, similaire à [IAxWinHostWindow :: CreateControl](#createcontrol).
 
 ```
 STDMETHOD(CreateControlLicEx)(
@@ -961,11 +961,11 @@ dans BSTR qui contient la clé de licence du contrôle.
 
 ### <a name="remarks"></a>Notes
 
-Pour obtenir une description des paramètres restants et de la valeur de retour, consultez [IAxWinHostWindow:: CreateControlEx](#createcontrolex) .
+Pour obtenir une description des paramètres restants et de la valeur de retour, consultez [IAxWinHostWindow :: CreateControlEx](#createcontrolex) .
 
 ### <a name="example"></a>Exemple
 
-Consultez [Hébergement de contrôles ActiveX à l’aide d’ATL AxHost](../../atl/hosting-activex-controls-using-atl-axhost.md) pour `IAxWinHostWindowLic::CreateControlLicEx`obtenir un exemple qui utilise.
+Consultez [Hébergement de contrôles ActiveX à l’aide d’ATL AxHost](../../atl/hosting-activex-controls-using-atl-axhost.md) pour obtenir un exemple qui utilise `IAxWinHostWindowLic::CreateControlLicEx`.
 
 ## <a name="see-also"></a>Voir aussi
 
