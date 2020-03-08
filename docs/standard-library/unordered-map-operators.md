@@ -6,17 +6,17 @@ f1_keywords:
 - unordered_map/std::operator==
 ms.assetid: 9d5add0b-84bd-4a79-bd82-3f58b55145ed
 ms.openlocfilehash: fe4877bc5b371a2570c18950bac36a003078ccc7
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68454779"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78873966"
 ---
-# <a name="ltunorderedmapgt-operators"></a>&lt;unordered_map&gt;, opérateurs
+# <a name="ltunordered_mapgt-operators"></a>&lt;unordered_map&gt;, opérateurs
 
 |||||
 |-|-|-|-|
-|[!=, opérateur](#op_neq)|[operator==](#op_eq_eq)|[!=, opérateur](#op_neq_multimap)|[operator==](#op_eq_eq_multimap)|
+|[operator!=](#op_neq)|[operator==](#op_eq_eq)|[operator!=](#op_neq_multimap)|[operator==](#op_eq_eq_multimap)|
 
 ## <a name="op_neq"></a>  operator!=
 
@@ -28,21 +28,21 @@ bool operator!=(const unordered_map <Key, Type, Hash, Pred, Allocator>& left, co
 
 ### <a name="parameters"></a>Paramètres
 
-*gauche*\
-Objet de type `unordered_map`.
+\ *gauche*
+Objet de type `unordered_map`.
 
-*Oui*\
-Objet de type `unordered_map`.
+\ *droit*
+Objet de type `unordered_map`.
 
 ### <a name="return-value"></a>Valeur de retour
 
-**true** si les unordered_maps ne sont pas égaux; **false** s’ils sont égaux.
+**true** si les unordered_maps ne sont pas égaux ; **false** s’ils sont égaux.
 
 ### <a name="remarks"></a>Notes
 
 La comparaison entre les objets unordered_map n’est pas affectée par l’ordre arbitraire dans lequel ils stockent leurs éléments. Deux objets unordered_map sont égaux s’ils ont le même nombre d’éléments et que les éléments d’un conteneur constituent une permutation des éléments de l’autre conteneur. Sinon, elles sont inégales.
 
-### <a name="example"></a>Exemples
+### <a name="example"></a>Exemple
 
 ```cpp
 // unordered_map_op_ne.cpp
@@ -92,15 +92,15 @@ bool operator==(const unordered_map <Key, Type, Hash, Pred, Allocator>& left, co
 
 ### <a name="parameters"></a>Paramètres
 
-*gauche*\
-Objet de type `unordered_map`.
+\ *gauche*
+Objet de type `unordered_map`.
 
-*Oui*\
-Objet de type `unordered_map`.
+\ *droit*
+Objet de type `unordered_map`.
 
 ### <a name="return-value"></a>Valeur de retour
 
-**true** si les unordered_maps sont égaux; **false** si elles ne sont pas égales.
+**true** si les unordered_maps sont égales ; **false** si elles ne sont pas égales.
 
 ### <a name="remarks"></a>Notes
 
@@ -156,21 +156,21 @@ bool operator!=(const unordered_multimap <Key, Type, Hash, Pred, Allocator>& lef
 
 ### <a name="parameters"></a>Paramètres
 
-*gauche*\
-Objet de type `unordered_multimap`.
+\ *gauche*
+Objet de type `unordered_multimap`.
 
-*Oui*\
-Objet de type `unordered_multimap`.
+\ *droit*
+Objet de type `unordered_multimap`.
 
 ### <a name="return-value"></a>Valeur de retour
 
-**true** si les unordered_multimaps ne sont pas égaux; **false** s’ils sont égaux.
+**true** si les unordered_multimaps ne sont pas égaux ; **false** s’ils sont égaux.
 
 ### <a name="remarks"></a>Notes
 
 La comparaison entre les objets unordered_multimap n’est pas affectée par l’ordre arbitraire dans lequel ils stockent leurs éléments. Deux objets unordered_multimap sont égaux s’ils ont le même nombre d’éléments et que les éléments d’un conteneur constituent une permutation des éléments de l’autre conteneur. Sinon, il ne sont pas égaux.
 
-### <a name="example"></a>Exemples
+### <a name="example"></a>Exemple
 
 ```cpp
 // unordered_multimap_op_ne.cpp
@@ -221,15 +221,15 @@ bool operator==(const unordered_multimap <Key, Type, Hash, Pred, Allocator>& lef
 
 ### <a name="parameters"></a>Paramètres
 
-*gauche*\
-Objet de type `unordered_multimap`.
+\ *gauche*
+Objet de type `unordered_multimap`.
 
-*Oui*\
-Objet de type `unordered_multimap`.
+\ *droit*
+Objet de type `unordered_multimap`.
 
 ### <a name="return-value"></a>Valeur de retour
 
-**true** si les unordered_multimaps sont égaux; **false** si elles ne sont pas égales.
+**true** si les unordered_multimaps sont égales ; **false** si elles ne sont pas égales.
 
 ### <a name="remarks"></a>Notes
 

@@ -21,11 +21,11 @@ helpviewer_keywords:
 - DAO [MFC], dialog data exchange (DDX) support
 ms.assetid: 0d8cde38-3a2c-4100-9589-ac80a7b1ce91
 ms.openlocfilehash: 8b216941837cd79492aa6cb707481073b5321bce
-ms.sourcegitcommit: 069e3833bd821e7d64f5c98d0ea41fc0c5d22e53
+ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/21/2019
-ms.locfileid: "74303447"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78866592"
 ---
 # <a name="dialog-data-exchange-functions-for-crecordview-and-cdaorecordview"></a>Échange de données de boîtes de dialogue pour CRecordView et CDaoRecordView
 
@@ -76,10 +76,10 @@ Pointeur vers un objet [CDataExchange](../../mfc/reference/cdataexchange-class.m
 *nIDC*<br/>
 ID d’un contrôle dans l’objet [CRecordView](../../mfc/reference/crecordview-class.md) ou [CDaoRecordView](../../mfc/reference/cdaorecordview-class.md) .
 
-*évaluer*<br/>
+*index*<br/>
 Référence à un membre de données de champ dans l’objet `CRecordset` ou `CDaoRecordset` associé.
 
-*jeu d’enregistrements*<br/>
+*pRecordset*<br/>
 Pointeur vers l’objet [CRecordset](../../mfc/reference/crecordset-class.md) ou [CDaoRecordset](../../mfc/reference/cdaorecordset-class.md) avec lequel les données sont échangées.
 
 ### <a name="remarks"></a>Notes
@@ -94,7 +94,7 @@ Pour plus d'informations sur DDX, consultez [Échange et validation de données 
 
 Consultez [DDX_FieldText](#ddx_fieldtext) pour obtenir un exemple de DDX_Field général. L’exemple est similaire pour `DDX_FieldCBIndex`.
 
-### <a name="requirements"></a>Configuration requise
+### <a name="requirements"></a>Spécifications
 
 **En-tête :** afxdao. h
 
@@ -124,10 +124,10 @@ Pointeur vers un objet [CDataExchange](../../mfc/reference/cdataexchange-class.m
 *nIDC*<br/>
 ID d’un contrôle dans l’objet [CRecordView](../../mfc/reference/crecordview-class.md) ou [CDaoRecordView](../../mfc/reference/cdaorecordview-class.md) .
 
-*valeur*<br/>
+*value*<br/>
 Référence à un membre de données de champ dans l’objet `CRecordset` ou `CDaoRecordset` associé.
 
-*jeu d’enregistrements*<br/>
+*pRecordset*<br/>
 Pointeur vers l’objet [CRecordset](../../mfc/reference/crecordset-class.md) ou [CDaoRecordset](../../mfc/reference/cdaorecordset-class.md) avec lequel les données sont échangées.
 
 ### <a name="remarks"></a>Notes
@@ -142,7 +142,7 @@ Pour plus d'informations sur DDX, consultez [Échange et validation de données 
 
 Consultez [DDX_FieldText](#ddx_fieldtext) pour obtenir un exemple de DDX_Field général. L’exemple comprend un appel à `DDX_FieldCBString`.
 
-### <a name="requirements"></a>Configuration requise
+### <a name="requirements"></a>Spécifications
 
   **En-tête** afxdao. h
 
@@ -172,10 +172,10 @@ Pointeur vers un objet [CDataExchange](../../mfc/reference/cdataexchange-class.m
 *nIDC*<br/>
 ID d’un contrôle dans l’objet [CRecordView](../../mfc/reference/crecordview-class.md) ou [CDaoRecordView](../../mfc/reference/cdaorecordview-class.md) .
 
-*valeur*<br/>
+*value*<br/>
 Référence à un membre de données de champ dans l’objet `CRecordset` ou `CDaoRecordset` associé.
 
-*jeu d’enregistrements*<br/>
+*pRecordset*<br/>
 Pointeur vers l’objet [CRecordset](../../mfc/reference/crecordset-class.md) ou [CDaoRecordset](../../mfc/reference/cdaorecordset-class.md) avec lequel les données sont échangées.
 
 ### <a name="remarks"></a>Notes
@@ -190,7 +190,7 @@ Pour plus d'informations sur DDX, consultez [Échange et validation de données 
 
 Consultez [DDX_FieldText](#ddx_fieldtext) pour obtenir un exemple de DDX_Field général. Les appels à `DDX_FieldCBStringExact` sont similaires.
 
-### <a name="requirements"></a>Configuration requise
+### <a name="requirements"></a>Spécifications
 
   **En-tête** afxdao. h
 
@@ -220,10 +220,10 @@ Pointeur vers un objet [CDataExchange](../../mfc/reference/cdataexchange-class.m
 *nIDC*<br/>
 ID de ressource du contrôle de case à cocher associé à la propriété de contrôle.
 
-*valeur*<br/>
+*value*<br/>
 Référence à une variable membre de la boîte de dialogue, du mode formulaire ou de l’objet de vue de contrôle avec lequel les données sont échangées.
 
-*jeu d’enregistrements*<br/>
+*pRecordset*<br/>
 Pointeur vers l’objet [CRecordset](../../mfc/reference/crecordset-class.md) ou [CDaoRecordset](../../mfc/reference/cdaorecordset-class.md) avec lequel les données sont échangées.
 
 ### <a name="remarks"></a>Notes
@@ -232,7 +232,7 @@ Lorsque `DDX_FieldCheck` est appelé, la *valeur* est définie sur l’état act
 
 Pour plus d'informations sur DDX, consultez [Échange et validation de données de boîtes de dialogue](../../mfc/dialog-data-exchange-and-validation.md).
 
-### <a name="requirements"></a>Configuration requise
+### <a name="requirements"></a>Spécifications
 
   **En-tête** afxdao. h
 
@@ -262,10 +262,10 @@ Pointeur vers un objet [CDataExchange](../../mfc/reference/cdataexchange-class.m
 *nIDC*<br/>
 ID d’un contrôle dans l’objet [CRecordView](../../mfc/reference/crecordview-class.md) ou [CDaoRecordView](../../mfc/reference/cdaorecordview-class.md) .
 
-*évaluer*<br/>
+*index*<br/>
 Référence à un membre de données de champ dans l’objet `CRecordset` ou `CDaoRecordset` associé.
 
-*jeu d’enregistrements*<br/>
+*pRecordset*<br/>
 Pointeur vers l’objet [CRecordset](../../mfc/reference/crecordset-class.md) ou [CDaoRecordset](../../mfc/reference/cdaorecordset-class.md) avec lequel les données sont échangées.
 
 ### <a name="remarks"></a>Notes
@@ -280,7 +280,7 @@ Pour plus d'informations sur DDX, consultez [Échange et validation de données 
 
 Consultez [DDX_FieldText](#ddx_fieldtext) pour obtenir un exemple de DDX_Field général.
 
-### <a name="requirements"></a>Configuration requise
+### <a name="requirements"></a>Spécifications
 
   **En-tête** afxdao. h
 
@@ -310,10 +310,10 @@ Pointeur vers un objet [CDataExchange](../../mfc/reference/cdataexchange-class.m
 *nIDC*<br/>
 ID d’un contrôle dans l’objet [CRecordView](../../mfc/reference/crecordview-class.md) ou [CDaoRecordView](../../mfc/reference/cdaorecordview-class.md) .
 
-*valeur*<br/>
+*value*<br/>
 Référence à un membre de données de champ dans l’objet `CRecordset` ou `CDaoRecordset` associé.
 
-*jeu d’enregistrements*<br/>
+*pRecordset*<br/>
 Pointeur vers l’objet [CRecordset](../../mfc/reference/crecordset-class.md) ou [CDaoRecordset](../../mfc/reference/cdaorecordset-class.md) avec lequel les données sont échangées.
 
 ### <a name="remarks"></a>Notes
@@ -328,7 +328,7 @@ Pour plus d'informations sur DDX, consultez [Échange et validation de données 
 
 Consultez [DDX_FieldText](#ddx_fieldtext) pour obtenir un exemple de DDX_Field général. Les appels à `DDX_FieldLBString` sont similaires.
 
-### <a name="requirements"></a>Configuration requise
+### <a name="requirements"></a>Spécifications
 
   **En-tête** afxdao. h
 
@@ -358,10 +358,10 @@ Pointeur vers un objet [CDataExchange](../../mfc/reference/cdataexchange-class.m
 *nIDC*<br/>
 ID d’un contrôle dans l’objet [CRecordView](../../mfc/reference/crecordview-class.md) ou [CDaoRecordView](../../mfc/reference/cdaorecordview-class.md) .
 
-*valeur*<br/>
+*value*<br/>
 Référence à un membre de données de champ dans l’objet `CRecordset` ou `CDaoRecordset` associé.
 
-*jeu d’enregistrements*<br/>
+*pRecordset*<br/>
 Pointeur vers l’objet [CRecordset](../../mfc/reference/crecordset-class.md) ou [CDaoRecordset](../../mfc/reference/cdaorecordset-class.md) avec lequel les données sont échangées.
 
 ### <a name="remarks"></a>Notes
@@ -376,7 +376,7 @@ Pour plus d'informations sur DDX, consultez [Échange et validation de données 
 
 Consultez [DDX_FieldText](#ddx_fieldtext) pour obtenir un exemple de DDX_Field général. Les appels à `DDX_FieldLBStringExact` sont similaires.
 
-### <a name="requirements"></a>Configuration requise
+### <a name="requirements"></a>Spécifications
 
   **En-tête** afxdao. h
 
@@ -406,10 +406,10 @@ Pointeur vers un objet [CDataExchange](../../mfc/reference/cdataexchange-class.m
 *nIDC*<br/>
 ID du premier dans un groupe (avec le style WS_GROUP) des contrôles de case d’option adjacents dans l’objet [CRecordView](../../mfc/reference/crecordview-class.md) ou [CDaoRecordView](../../mfc/reference/cdaorecordview-class.md) .
 
-*valeur*<br/>
+*value*<br/>
 Référence à un membre de données de champ dans l’objet `CRecordset` ou `CDaoRecordset` associé.
 
-*jeu d’enregistrements*<br/>
+*pRecordset*<br/>
 Pointeur vers l’objet [CRecordset](../../mfc/reference/crecordset-class.md) ou [CDaoRecordset](../../mfc/reference/cdaorecordset-class.md) avec lequel les données sont échangées.
 
 ### <a name="remarks"></a>Notes
@@ -424,7 +424,7 @@ Pour plus d'informations sur DDX, consultez [Échange et validation de données 
 
 Consultez [DDX_FieldText](#ddx_fieldtext) pour obtenir un exemple de DDX_Field général. Les appels à `DDX_FieldRadio` sont similaires.
 
-### <a name="requirements"></a>Configuration requise
+### <a name="requirements"></a>Spécifications
 
   **En-tête** afxdao. h
 
@@ -454,10 +454,10 @@ Pointeur vers un objet [CDataExchange](../../mfc/reference/cdataexchange-class.m
 *nIDC*<br/>
 ID du premier dans un groupe (avec le style WS_GROUP) des contrôles de case d’option adjacents dans l’objet [CRecordView](../../mfc/reference/crecordview-class.md) ou [CDaoRecordView](../../mfc/reference/cdaorecordview-class.md) .
 
-*valeur*<br/>
+*value*<br/>
 Référence à un membre de données de champ dans l’objet `CRecordset` ou `CDaoRecordset` associé.
 
-*jeu d’enregistrements*<br/>
+*pRecordset*<br/>
 Pointeur vers l’objet [CRecordset](../../mfc/reference/crecordset-class.md) ou [CDaoRecordset](../../mfc/reference/cdaorecordset-class.md) avec lequel les données sont échangées.
 
 ### <a name="remarks"></a>Notes
@@ -472,7 +472,7 @@ Pour plus d'informations sur DDX, consultez [Échange et validation de données 
 
 Consultez [DDX_FieldText](#ddx_fieldtext) pour obtenir un exemple de DDX_Field général. Les appels à `DDX_FieldScroll` sont similaires.
 
-### <a name="requirements"></a>Configuration requise
+### <a name="requirements"></a>Spécifications
 
   **En-tête** afxdao. h
 
@@ -503,10 +503,10 @@ Pointeur vers un objet [CDataExchange](cdataexchange-class.md) . L’infrastruct
 *nIDC*<br/>
 ID de ressource du contrôle Slider.
 
-*valeur*<br/>
+*value*<br/>
 Référence à la valeur à échanger. Ce paramètre contient ou sera utilisé pour définir la position actuelle du curseur du contrôle Slider.
 
-*jeu d’enregistrements*<br/>
+*pRecordset*<br/>
 Pointeur vers l’objet `CRecordset` ou `CDaoRecordset` associé avec lequel les données sont échangées.
 
 ### <a name="remarks"></a>Notes
@@ -523,7 +523,7 @@ Pour plus d'informations sur DDX, consultez [Échange et validation de données 
 
 Consultez [DDX_FieldText](#ddx_fieldtext) pour obtenir un exemple de DDX_Field général. Les appels à `DDX_FieldSlider` sont similaires.
 
-### <a name="requirements"></a>Configuration requise
+### <a name="requirements"></a>Spécifications
 
 **En-tête :** afxdao. h
 
@@ -649,10 +649,10 @@ Pointeur vers un objet [CDataExchange](../../mfc/reference/cdataexchange-class.m
 *nIDC*<br/>
 ID d’un contrôle dans l’objet [CRecordView](../../mfc/reference/crecordview-class.md) ou [CDaoRecordView](../../mfc/reference/cdaorecordview-class.md) .
 
-*valeur*<br/>
+*value*<br/>
 Référence à un membre de données de champ dans l’objet `CRecordset` ou `CDaoRecordset` associé. Le type de données de la valeur dépend de la version surchargée de `DDX_FieldText` que vous utilisez.
 
-*jeu d’enregistrements*<br/>
+*pRecordset*<br/>
 Pointeur vers l’objet [CRecordset](../../mfc/reference/crecordset-class.md) ou [CDaoRecordset](../../mfc/reference/cdaorecordset-class.md) avec lequel les données sont échangées. Ce pointeur permet à `DDX_FieldText` de détecter et de définir des valeurs NULL.
 
 ### <a name="remarks"></a>Notes
@@ -669,7 +669,7 @@ La fonction `DoDataExchange` suivante pour une [CRecordView](../../mfc/reference
 
 [!code-cpp[NVC_MFCDatabase#43](../../mfc/codesnippet/cpp/dialog-data-exchange-functions-for-crecordview-and-cdaorecordview_1.cpp)]
 
-### <a name="requirements"></a>Configuration requise
+### <a name="requirements"></a>Spécifications
 
   **En-tête** afxdao. h
 

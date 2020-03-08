@@ -1,5 +1,5 @@
 ---
-title: '&lt;string_view&gt; , typedefs'
+title: '&lt;string_view&gt; typedefs'
 ms.date: 04/19/2019
 f1_keywords:
 - xstring/std::string_view
@@ -7,13 +7,13 @@ f1_keywords:
 - xstring/std::u32string_view
 - xstring/std::wstring_view
 ms.openlocfilehash: c3367afe1353ac70abb74a59658a255614ac8470
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68459186"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78865845"
 ---
-# <a name="ltstringviewgt-typedefs"></a>&lt;string_view&gt; , typedefs
+# <a name="ltstring_viewgt-typedefs"></a>&lt;string_view&gt; typedefs
 
 ||||
 |-|-|-|
@@ -42,7 +42,7 @@ Pour obtenir la liste des constructeurs de chaînes, consultez [basic_string::ba
 
 ## <a name="u16string_view"></a>u16string_view
 
-Type qui décrit une spécialisation du modèle de classe [basic_string_view](../standard-library/basic-string-view-class.md) avec des éléments de `char16_t`type.
+Type qui décrit une spécialisation du modèle de classe [basic_string_view](../standard-library/basic-string-view-class.md) avec des éléments de type `char16_t`.
 
 ```cpp
 typedef basic_string_view<char16_t, char_traits<char16_t>> u16string_view;
@@ -54,7 +54,7 @@ Pour obtenir la liste des constructeurs de chaînes, consultez [basic_string::ba
 
 ## <a name="u32string_view"></a>u32string_view
 
-Type qui décrit une spécialisation du modèle de classe [basic_string_view](../standard-library/basic-string-view-class.md) avec des éléments de `char32_t`type.
+Type qui décrit une spécialisation du modèle de classe [basic_string_view](../standard-library/basic-string-view-class.md) avec des éléments de type `char32_t`.
 
 ```cpp
 typedef basic_string_view<char32_t, char_traits<char32_t>> u32string_view;
@@ -64,7 +64,7 @@ typedef basic_string_view<char32_t, char_traits<char32_t>> u32string_view;
 
 Pour obtenir la liste des constructeurs de chaînes, consultez [basic_string::basic_string](../standard-library/basic-string-class.md#basic_string).
 
-## <a name="wstring_view"></a>  wstring_view
+## <a name="wstring_view"></a>wstring_view
 
 Type qui décrit une spécialisation du modèle de classe [basic_string_view](../standard-library/basic-string-view-class.md) avec des éléments de type **wchar_t**.
 
@@ -85,8 +85,8 @@ basic_string_view<wchar_t> wstr(L"Hello");
 Pour obtenir la liste des constructeurs de chaînes, consultez [basic_string::basic_string](../standard-library/basic-string-class.md#basic_string).
 
 > [!NOTE]
-> La taille de **wchar_t** est de deux octets sur Windows, mais ce n’est pas nécessairement le cas pour toutes les plateformes. Si vous avez besoin d’un type de caractère large string_view dont la largeur est garantie pour rester identique sur toutes les plateformes, utilisez [u16string_view](../standard-library/string-view-typedefs.md#u16string_view) ou [u32string_view](../standard-library/string-view-typedefs.md#u32string_view).
+> La taille de **wchar_t** est de deux octets sur Windows, mais ce n’est pas nécessairement le cas pour toutes les plateformes. Si vous avez besoin d’un string_view type à caractères larges dont la largeur est garantie pour rester identique sur toutes les plateformes, utilisez [u16string_view](../standard-library/string-view-typedefs.md#u16string_view) ou [u32string_view](../standard-library/string-view-typedefs.md#u32string_view).
 
 ## <a name="see-also"></a>Voir aussi
 
-[\<string_view>](../standard-library/string-view.md)
+[\<string_view >](../standard-library/string-view.md)
