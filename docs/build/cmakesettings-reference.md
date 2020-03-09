@@ -5,11 +5,11 @@ helpviewer_keywords:
 - CMake in Visual C++
 ms.assetid: 444d50df-215e-4d31-933a-b41841f186f8
 ms.openlocfilehash: 542a469393d3655418f69e5d51d59adfa824ad15
-ms.sourcegitcommit: 9a63e9b36d5e7fb13eab15c2c35bedad4fb03ade
+ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/25/2020
-ms.locfileid: "77600035"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78865572"
 ---
 # <a name="cmakesettingsjson-schema-reference"></a>Informations de référence sur le schéma CMakeSettings.json
 
@@ -128,7 +128,7 @@ Quand la configuration active spécifie un générateur Visual Studio, MSBuild.e
 - `remotePreGenerateCommand`: spécifie la commande à exécuter avant d’exécuter CMake pour analyser le fichier *fichier CMakeLists. txt* .
 - `remotePrebuildCommand` : spécifie la commande à exécuter sur la machine distante avant la génération.
 - `remotePostbuildCommand` : spécifie la commande à exécuter sur la machine distante après la génération.
-- `variables`: contient une paire nom-valeur de variables cmake qui seront **passées sous la** forme d’une  *_valeur_ de _nom_=* à cmake. Si les instructions de génération de votre projet CMake spécifient l’ajout de toutes les variables directement au fichier *CMakeCache. txt* , nous vous recommandons de les ajouter ici à la place. L’exemple suivant indique comment spécifier les paires nom-valeur pour l’ensemble d’outils MSVC 14.14.26428 :
+- `variables`: contient une paire nom-valeur de variables cmake qui seront **passées sous la** forme d’une * _valeur_ de _nom_=* à cmake. Si les instructions de génération de votre projet CMake spécifient l’ajout de toutes les variables directement au fichier *CMakeCache. txt* , nous vous recommandons de les ajouter ici à la place. L’exemple suivant indique comment spécifier les paires nom-valeur pour l’ensemble d’outils MSVC 14.14.26428 :
 
 ```json
 "variables": [

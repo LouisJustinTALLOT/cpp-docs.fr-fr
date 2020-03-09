@@ -63,11 +63,11 @@ helpviewer_keywords:
 - CBaseTabbedPane [MFC], ShowTab
 ms.assetid: f22c0080-5b29-4a0a-8f74-8f0a4cd2dbcf
 ms.openlocfilehash: d7ffaa7274a8ed12944cdbc5dcbbdcb8fd3fd2b9
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62388590"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78883653"
 ---
 # <a name="cbasetabbedpane-class"></a>CBaseTabbedPane, classe
 
@@ -83,57 +83,57 @@ class CBaseTabbedPane : public CDockablePane
 
 ### <a name="public-constructors"></a>Constructeurs publics
 
-|Nom|Description|
+|Name|Description|
 |----------|-----------------|
 |`CBaseTabbedPane::CBaseTabbedPane`|Constructeur par défaut.|
 
 ### <a name="public-methods"></a>M&#233;thodes publiques
 
-|Nom|Description|
+|Name|Description|
 |----------|-----------------|
-|[CBaseTabbedPane::AddTab](#addtab)|Ajoute un nouvel onglet à un volet à onglets.|
-|[CBaseTabbedPane::AllowDestroyEmptyTabbedPane](#allowdestroyemptytabbedpane)|Spécifie si un volet à onglets vide peut être détruit.|
-|[CBaseTabbedPane::ApplyRestoredTabInfo](#applyrestoredtabinfo)|Applique les paramètres d’onglet, qui sont chargés à partir du Registre, à un volet à onglets.|
-|[CBaseTabbedPane::CanFloat](#canfloat)|Détermine si le volet peut flotter. (Substitue [CBasePane::CanFloat](../../mfc/reference/cbasepane-class.md#canfloat).)|
-|[CBaseTabbedPane::CanSetCaptionTextToTabName](#cansetcaptiontexttotabname)|Détermine si la légende pour le volet à onglets doit afficher le même texte sous l’onglet actif.|
-|[CBaseTabbedPane::ConvertToTabbedDocument](#converttotabbeddocument)|(Substitue [CDockablePane::ConvertToTabbedDocument](../../mfc/reference/cdockablepane-class.md#converttotabbeddocument).)|
-|[CBaseTabbedPane::DetachPane](#detachpane)|Convertit un ou plusieurs volets ancrables à des documents avec onglet MDI.|
-|[CBaseTabbedPane::EnableSetCaptionTextToTabName](#enablesetcaptiontexttotabname)|Active ou désactive la possibilité du volet à onglets pour synchroniser le texte de légende avec le texte d’étiquette sur l’onglet actif.|
-|[CBaseTabbedPane::FillDefaultTabsOrderArray](#filldefaulttabsorderarray)|Restaure l’ordre de tabulation interne dans un état par défaut.|
-|[CBaseTabbedPane::FindBarByTabNumber](#findbarbytabnumber)|Retourne un volet qui réside dans un onglet lorsque l’onglet est identifié par un index de base zéro de tabulation.|
+|[CBaseTabbedPane :: AddTab](#addtab)|Ajoute un nouvel onglet à un volet à onglets.|
+|[CBaseTabbedPane :: AllowDestroyEmptyTabbedPane](#allowdestroyemptytabbedpane)|Spécifie si un volet à onglets vide peut être détruit.|
+|[CBaseTabbedPane :: ApplyRestoredTabInfo](#applyrestoredtabinfo)|Applique les paramètres de tabulation, qui sont chargés à partir du Registre, à un volet à onglets.|
+|[CBaseTabbedPane :: CanFloat](#canfloat)|Détermine si le volet peut flotter. (Substitue [CBasePane :: CanFloat](../../mfc/reference/cbasepane-class.md#canfloat).)|
+|[CBaseTabbedPane :: CanSetCaptionTextToTabName](#cansetcaptiontexttotabname)|Détermine si la légende du volet à onglets doit afficher le même texte que l’onglet actif.|
+|[CBaseTabbedPane :: ConvertToTabbedDocument](#converttotabbeddocument)|(Substitue [CDockablePane :: ConvertToTabbedDocument](../../mfc/reference/cdockablepane-class.md#converttotabbeddocument).)|
+|[CBaseTabbedPane ::D etachPane](#detachpane)|Convertit un ou plusieurs volets ancrables en documents avec onglet MDI.|
+|[CBaseTabbedPane :: EnableSetCaptionTextToTabName](#enablesetcaptiontexttotabname)|Active ou désactive la capacité du volet à onglets à synchroniser le texte de légende avec le texte d’étiquette de l’onglet actif.|
+|[CBaseTabbedPane :: FillDefaultTabsOrderArray](#filldefaulttabsorderarray)|Restaure l’ordre de tabulation interne à un État par défaut.|
+|[CBaseTabbedPane :: FindBarByTabNumber](#findbarbytabnumber)|Retourne un volet qui se trouve dans un onglet lorsque l’onglet est identifié par un index de base zéro.|
 |||
-|[CBaseTabbedPane::FindPaneByID](#findpanebyid)|Retourne un volet qui est identifié par l’ID de volet.|
-|[CBaseTabbedPane::FloatTab](#floattab)|Fait flotter un volet, mais seulement si le volet réside actuellement dans un onglet détachable.|
-|[CBaseTabbedPane::GetDefaultTabsOrder](#getdefaulttabsorder)|Retourne l’ordre par défaut des onglets dans le volet.|
-|[CBaseTabbedPane::GetFirstVisibleTab](#getfirstvisibletab)|Récupère un pointeur vers le premier onglet affiché.|
-|[CBaseTabbedPane::GetMinSize](#getminsize)|Récupère la valeur minimale autorisée pour le volet. (Substitue [CPane::GetMinSize](../../mfc/reference/cpane-class.md#getminsize).)|
-|[CBaseTabbedPane::GetPaneIcon](#getpaneicon)|Retourne un handle vers l’icône du volet. (Substitue [CBasePane::GetPaneIcon](../../mfc/reference/cbasepane-class.md#getpaneicon).)|
-|[CBaseTabbedPane::GetPaneList](#getpanelist)|Retourne une liste de volets qui sont contenus dans le volet à onglets.|
-|[CBaseTabbedPane::GetTabArea](#gettabarea)|Retourne les rectangles englobants pour les zones d’onglet en haut et bas.|
-|[CBaseTabbedPane::GetTabsNum](#gettabsnum)|Retourne le nombre d’onglets dans une fenêtre de l’onglet.|
-|[CBaseTabbedPane::GetUnderlyingWindow](#getunderlyingwindow)|Obtient la fenêtre d’onglet (encapsulé) sous-jacent.|
-|[CBaseTabbedPane::GetVisibleTabsNum](#getvisibletabsnum)|Retourne le nombre d’onglets affichés.|
-|[CBaseTabbedPane::HasAutoHideMode](#hasautohidemode)|Détermine si le volet à onglets peut être basculé en mode de masquage automatique.|
-|[CBaseTabbedPane::IsHideSingleTab](#ishidesingletab)|Détermine si le volet à onglets est masqué si seul un onglet s’affiche.|
+|[CBaseTabbedPane :: FindPaneByID](#findpanebyid)|Retourne un volet identifié par l’ID du volet.|
+|[CBaseTabbedPane :: FloatTab](#floattab)|Fait flotter un volet, mais seulement si le volet réside actuellement dans un onglet détachable.|
+|[CBaseTabbedPane :: GetDefaultTabsOrder](#getdefaulttabsorder)|Retourne l’ordre par défaut des onglets dans le volet.|
+|[CBaseTabbedPane :: GetFirstVisibleTab](#getfirstvisibletab)|Récupère un pointeur vers le premier onglet affiché.|
+|[CBaseTabbedPane :: GetMinSize](#getminsize)|Récupère la taille minimale autorisée pour le volet. (Substitue [CPane :: GetMinSize](../../mfc/reference/cpane-class.md#getminsize).)|
+|[CBaseTabbedPane :: GetPaneIcon](#getpaneicon)|Retourne un handle vers l’icône du volet. (Substitue [CBasePane :: GetPaneIcon](../../mfc/reference/cbasepane-class.md#getpaneicon).)|
+|[CBaseTabbedPane :: GetPaneList](#getpanelist)|Retourne une liste de volets contenus dans le volet à onglets.|
+|[CBaseTabbedPane :: GetTabArea](#gettabarea)|Retourne les rectangles englobants pour les zones d’onglets supérieure et inférieure.|
+|[CBaseTabbedPane :: GetTabsNum](#gettabsnum)|Retourne le nombre d’onglets dans une fenêtre d’onglets.|
+|[CBaseTabbedPane :: GetUnderlyingWindow](#getunderlyingwindow)|Obtient la fenêtre d’onglets (encapsulée) sous-jacente.|
+|[CBaseTabbedPane :: GetVisibleTabsNum](#getvisibletabsnum)|Retourne le nombre d’onglets affichés.|
+|[CBaseTabbedPane :: HasAutoHideMode](#hasautohidemode)|Détermine si le volet à onglets peut être basculé en mode de masquage automatique.|
+|[CBaseTabbedPane :: IsHideSingleTab](#ishidesingletab)|Détermine si le volet à onglets est masqué si un seul onglet est affiché.|
 |`CBaseTabbedPane::LoadSiblingPaneIDs`|Utilisé en interne pendant la sérialisation.|
-|[CBaseTabbedPane::RecalcLayout](#recalclayout)|Recalcule les informations de disposition pour le volet. (Substitue [CPane::RecalcLayout](../../mfc/reference/cpane-class.md#recalclayout).)|
-|[CBaseTabbedPane::RemovePane](#removepane)|Supprime un volet dans le volet à onglets.|
+|[CBaseTabbedPane :: RecalcLayout](#recalclayout)|Recalcule les informations de disposition du volet. (Substitue [CPane :: RecalcLayout](../../mfc/reference/cpane-class.md#recalclayout).)|
+|[CBaseTabbedPane :: RemovePane](#removepane)|Supprime un volet du volet à onglets.|
 |`CBaseTabbedPane::SaveSiblingBarIDs`|Utilisé en interne pendant la sérialisation.|
-|`CBaseTabbedPane::Serialize`|(Substitue [CDockablePane::Serialize](cdockablepane-class.md).)|
+|`CBaseTabbedPane::Serialize`|(Substitue [CDockablePane :: Serialize](cdockablepane-class.md).)|
 |`CBaseTabbedPane::SerializeTabWindow`|Utilisé en interne pendant la sérialisation.|
-|[CBaseTabbedPane::SetAutoDestroy](#setautodestroy)|Détermine si la barre de contrôle à onglets est détruite automatiquement.|
-|[CBaseTabbedPane::SetAutoHideMode](#setautohidemode)|Affiche ou masque le volet d’ancrage affiché entre et mode de masquage automatique. (Substitue [CDockablePane::SetAutoHideMode](../../mfc/reference/cdockablepane-class.md#setautohidemode).)|
-|[CBaseTabbedPane::ShowTab](#showtab)|Affiche ou masque un onglet.|
+|[CBaseTabbedPane :: SetAutoDestroy](#setautodestroy)|Détermine si la barre de contrôle à onglets est détruite automatiquement.|
+|[CBaseTabbedPane :: SetAutoHideMode](#setautohidemode)|Bascule le volet d’ancrage entre le mode affiché et le mode de masquage automatique. (Substitue [CDockablePane :: SetAutoHideMode](../../mfc/reference/cdockablepane-class.md#setautohidemode).)|
+|[CBaseTabbedPane :: ShowTab](#showtab)|Affiche ou masque un onglet.|
 
 ## <a name="remarks"></a>Notes
 
-Cette classe est une classe abstraite et ne peut pas être instanciée. Il implémente les services qui sont communes à tous les types de volets à onglets.
+Cette classe est une classe abstraite qui ne peut pas être instanciée. Il implémente les services qui sont communs à tous les types de volets à onglets.
 
-Actuellement, la bibliothèque inclut deux classes dérivées de volet à onglets : [Ctabbedpane, classe](../../mfc/reference/ctabbedpane-class.md) et [CMFCOutlookBar, classe](../../mfc/reference/cmfcoutlookbar-class.md).
+Actuellement, la bibliothèque comprend deux classes de volet à onglets dérivées : la [classe CTabbedPane](../../mfc/reference/ctabbedpane-class.md) et la [classe CMFCOutlookBar](../../mfc/reference/cmfcoutlookbar-class.md).
 
-Un `CBaseTabbedPane` objet encapsule un pointeur vers un [CMFCBaseTabCtrl Class](../../mfc/reference/cmfcbasetabctrl-class.md) objet. [Classe CMFCBaseTabCtrl](../../mfc/reference/cmfcbasetabctrl-class.md) devient alors une fenêtre enfant du volet à onglets.
+Un objet `CBaseTabbedPane` encapsule un pointeur vers un objet de [classe CMFCBaseTabCtrl](../../mfc/reference/cmfcbasetabctrl-class.md) . La [classe CMFCBaseTabCtrl](../../mfc/reference/cmfcbasetabctrl-class.md) devient alors une fenêtre enfant du volet à onglets.
 
-Pour plus d’informations sur la création de volets à onglets, consultez [CDockablePane, classe](../../mfc/reference/cdockablepane-class.md), [ctabbedpane, classe](../../mfc/reference/ctabbedpane-class.md), et [CMFCOutlookBar, classe](../../mfc/reference/cmfcoutlookbar-class.md).
+Pour plus d’informations sur la création de volets à onglets, consultez classe [CDockablePane](../../mfc/reference/cdockablepane-class.md), classe [CTabbedPane](../../mfc/reference/ctabbedpane-class.md)et [classe CMFCOutlookBar](../../mfc/reference/cmfcoutlookbar-class.md).
 
 ## <a name="inheritance-hierarchy"></a>Hiérarchie d'héritage
 
@@ -151,11 +151,11 @@ Pour plus d’informations sur la création de volets à onglets, consultez [CDo
 
 `CBaseTabbedPane`
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
-**En-tête :** afxBaseTabbedPane.h
+**En-tête :** afxBaseTabbedPane. h
 
-##  <a name="addtab"></a>  CBaseTabbedPane::AddTab
+##  <a name="addtab"></a>CBaseTabbedPane :: AddTab
 
 Ajoute un nouvel onglet à un volet à onglets.
 
@@ -170,26 +170,26 @@ virtual BOOL AddTab(
 ### <a name="parameters"></a>Paramètres
 
 *pNewBar*<br/>
-[in, out] Pointeur vers le volet à ajouter. Ce pointeur peut devenir non valide après avoir appelé cette méthode. Pour plus d'informations, consultez la section Remarques.
+[in, out] Pointeur vers le volet à ajouter. Ce pointeur peut devenir non valide après l’appel de cette méthode. Pour plus d'informations, consultez la section Notes.
 
 *bVisible*<br/>
-[in] TRUE pour afficher l’onglet ; Sinon, FALSE.
+dans TRUE pour rendre l’onglet visible ; Sinon, FALSe.
 
 *bSetActive*<br/>
-[in] TRUE si l’onglet l’onglet actif ; Sinon, FALSE.
+dans TRUE pour rendre l’onglet actif. Sinon, FALSe.
 
 *bDetachable*<br/>
-[in] TRUE si l’onglet détachables ; Sinon, FALSE.
+dans TRUE pour rendre l’onglet amovible ; Sinon, FALSe.
 
 ### <a name="return-value"></a>Valeur de retour
 
-TRUE si le volet a été correctement ajouté sous forme d’onglet et a été détruit pas dans le processus. FALSE si le volet ajouté est un objet de type `CBaseTabbedPane`. Pour plus d'informations, consultez la section Remarques.
+TRUE si le volet a été ajouté avec succès comme onglet et n’a pas été détruit dans le processus. FALSe si le volet ajouté est un objet de type `CBaseTabbedPane`. Pour plus d'informations, consultez la section Notes.
 
 ### <a name="remarks"></a>Notes
 
-Appelez cette méthode pour ajouter un volet en tant qu’un nouvel onglet dans un volet à onglets. Si *pNewBar* pointe vers un objet de type `CBaseTabbedPane`, tous ses onglets sont copiés dans le volet à onglets, puis *pNewBar* est détruit. Par conséquent, *pNewBar* se transforme en un pointeur non valide et ne doit pas être utilisé.
+Appelez cette méthode pour ajouter un volet sous la forme d’un nouvel onglet sur un volet à onglets. Si *pNewBar* pointe vers un objet de type `CBaseTabbedPane`, tous ses onglets sont copiés dans le volet à onglets, puis *pNewBar* est détruit. Par conséquent, *pNewBar* devient un pointeur non valide et ne doit pas être utilisé.
 
-##  <a name="allowdestroyemptytabbedpane"></a>  CBaseTabbedPane::AllowDestroyEmptyTabbedPane
+##  <a name="allowdestroyemptytabbedpane"></a>CBaseTabbedPane :: AllowDestroyEmptyTabbedPane
 
 Spécifie si un volet à onglets vide peut être détruit.
 
@@ -199,15 +199,15 @@ virtual BOOL AllowDestroyEmptyTabbedPane() const;
 
 ### <a name="return-value"></a>Valeur de retour
 
-TRUE si un volet à onglets vide peut être détruit ; Sinon, FALSE. Toujours l’implémentation par défaut retourne la valeur TRUE.
+TRUE si un volet à onglets vide peut être détruit ; Sinon, FALSe. L’implémentation par défaut retourne toujours la valeur TRUE.
 
 ### <a name="remarks"></a>Notes
 
-Si un volet à onglets vide n’est pas autorisé à être détruit, le framework masque le volet à la place.
+Si un volet à onglets vide n’est pas autorisé à être détruit, le Framework masque à la place le volet.
 
-##  <a name="applyrestoredtabinfo"></a>  CBaseTabbedPane::ApplyRestoredTabInfo
+##  <a name="applyrestoredtabinfo"></a>CBaseTabbedPane :: ApplyRestoredTabInfo
 
-Charge les paramètres de tabulation définis à partir du Registre et les applique à un volet à onglets.
+Charge les paramètres de tabulation à partir du Registre et les applique à un volet à onglets.
 
 ```
 virtual void ApplyRestoredTabInfo(BOOL bUseTabIndexes = FALSE);
@@ -216,13 +216,13 @@ virtual void ApplyRestoredTabInfo(BOOL bUseTabIndexes = FALSE);
 ### <a name="parameters"></a>Paramètres
 
 *bUseTabIndexes*<br/>
-[in] Ce paramètre est utilisé en interne par l’infrastructure.
+dans Ce paramètre est utilisé en interne par le Framework.
 
 ### <a name="remarks"></a>Notes
 
-Cette méthode est appelée par l’infrastructure lors du rechargement des informations d’état d’ancrage à partir du Registre. La méthode obtient des informations sur l’ordre de tabulation et les noms des onglets pour un volet à onglets.
+Cette méthode est appelée par l’infrastructure quand elle recharge les informations d’état d’ancrage à partir du Registre. La méthode obtient des informations sur l’ordre des tabulations et les noms des onglets pour un volet à onglets.
 
-##  <a name="canfloat"></a>  CBaseTabbedPane::CanFloat
+##  <a name="canfloat"></a>CBaseTabbedPane :: CanFloat
 
 Spécifie si le volet à onglets peut flotter.
 
@@ -232,11 +232,11 @@ virtual BOOL CanFloat() const;
 
 ### <a name="return-value"></a>Valeur de retour
 
-TRUE si le volet peut flotter ; Sinon, FALSE.
+TRUE si le volet peut flotter ; Sinon, FALSe.
 
-##  <a name="cansetcaptiontexttotabname"></a>  CBaseTabbedPane::CanSetCaptionTextToTabName
+##  <a name="cansetcaptiontexttotabname"></a>CBaseTabbedPane :: CanSetCaptionTextToTabName
 
-Détermine si la légende pour le volet à onglets doit afficher le même texte sous l’onglet actif.
+Détermine si la légende du volet à onglets doit afficher le même texte que l’onglet actif.
 
 ```
 virtual BOOL CanSetCaptionTextToTabName() const;
@@ -244,15 +244,15 @@ virtual BOOL CanSetCaptionTextToTabName() const;
 
 ### <a name="return-value"></a>Valeur de retour
 
-TRUE si le texte de légende du volet à onglets est défini pour le texte de l’onglet actif ; Sinon, FALSE.
+TRUE si le texte de légende du volet à onglets est défini sur le texte de l’onglet actif ; Sinon, FALSe.
 
 ### <a name="remarks"></a>Notes
 
-La méthode est utilisée pour déterminer si le texte affiché sur les doublons de légende du volet à onglets l’étiquette de l’onglet actif. Vous pouvez activer ou désactiver cette fonctionnalité en appelant [CBaseTabbedPane::EnableSetCaptionTextToTabName](#enablesetcaptiontexttotabname).
+La méthode est utilisée pour déterminer si le texte affiché dans la légende du volet à onglets duplique l’étiquette de l’onglet actif. Vous pouvez activer ou désactiver cette fonctionnalité en appelant [CBaseTabbedPane :: EnableSetCaptionTextToTabName](#enablesetcaptiontexttotabname).
 
-##  <a name="converttotabbeddocument"></a>  CBaseTabbedPane::ConvertToTabbedDocument
+##  <a name="converttotabbeddocument"></a>CBaseTabbedPane :: ConvertToTabbedDocument
 
-Convertit un ou plusieurs volets ancrables à des documents avec onglet MDI.
+Convertit un ou plusieurs volets ancrables en documents avec onglet MDI.
 
 ```
 virtual void ConvertToTabbedDocument(BOOL bActiveTabOnly = TRUE);
@@ -261,11 +261,11 @@ virtual void ConvertToTabbedDocument(BOOL bActiveTabOnly = TRUE);
 ### <a name="parameters"></a>Paramètres
 
 *bActiveTabOnly*<br/>
-[in] Lorsque vous convertissez un volet à onglets, spécifiez TRUE pour convertir uniquement l’onglet actif. Spécifiez la valeur FALSE pour convertir tous les onglets dans le volet.
+dans Lorsque vous convertissez un volet à onglets, spécifiez TRUE pour convertir uniquement l’onglet actif. spécifiez FALSe pour convertir tous les onglets dans le volet.
 
-##  <a name="detachpane"></a>  CBaseTabbedPane::DetachPane
+##  <a name="detachpane"></a>CBaseTabbedPane ::D etachPane
 
-Détache un volet dans le volet à onglets.
+Détache un volet du volet à onglets.
 
 ```
 virtual BOOL DetachPane(
@@ -276,22 +276,22 @@ virtual BOOL DetachPane(
 ### <a name="parameters"></a>Paramètres
 
 *pBar*<br/>
-[in] Pointeur vers le volet à détacher.
+dans Pointeur vers le volet à détacher.
 
 *bHide*<br/>
-[in] Paramètre booléen qui spécifie si le framework masque le volet après que elle est détachée.
+dans Paramètre booléen qui spécifie si l’infrastructure masque le volet après son détachement.
 
 ### <a name="return-value"></a>Valeur de retour
 
-TRUE si le framework détache avec succès le volet. FALSE si *pBar* est NULL ou fait référence à un volet qui n’est pas dans le volet à onglets.
+TRUE si le Framework détache correctement le volet ; FALSe si *pBar* a la valeur null ou s’il fait référence à un volet qui ne se trouve pas dans le volet à onglets.
 
 ### <a name="remarks"></a>Notes
 
-Le framework flotte le volet détaché si possible. Pour plus d’informations, consultez [CBasePane::CanFloat](../../mfc/reference/cbasepane-class.md#canfloat).
+Le Framework flotte le volet détaché si possible. Pour plus d’informations, consultez [CBasePane :: CanFloat](../../mfc/reference/cbasepane-class.md#canfloat).
 
-##  <a name="enablesetcaptiontexttotabname"></a>  CBaseTabbedPane::EnableSetCaptionTextToTabName
+##  <a name="enablesetcaptiontexttotabname"></a>CBaseTabbedPane :: EnableSetCaptionTextToTabName
 
-Active ou désactive la possibilité du volet à onglets pour synchroniser le texte de légende avec le texte d’étiquette sur l’onglet actif.
+Active ou désactive la capacité du volet à onglets à synchroniser le texte de légende avec le texte d’étiquette de l’onglet actif.
 
 ```
 virtual void EnableSetCaptionTextToTabName(BOOL bEnable);
@@ -300,11 +300,11 @@ virtual void EnableSetCaptionTextToTabName(BOOL bEnable);
 ### <a name="parameters"></a>Paramètres
 
 *bEnable*<br/>
-[in] TRUE pour synchroniser la légende du volet à onglets avec la légende de l’onglet actif ; Sinon, FALSE.
+dans TRUE pour synchroniser la légende du volet à onglets avec la légende active de l’onglet. Sinon, FALSe.
 
-##  <a name="filldefaulttabsorderarray"></a>  CBaseTabbedPane::FillDefaultTabsOrderArray
+##  <a name="filldefaulttabsorderarray"></a>CBaseTabbedPane :: FillDefaultTabsOrderArray
 
-Restaure l’ordre de tabulation interne dans un état par défaut.
+Restaure l’ordre de tabulation interne à un État par défaut.
 
 ```
 void FillDefaultTabsOrderArray();
@@ -312,9 +312,9 @@ void FillDefaultTabsOrderArray();
 
 ### <a name="remarks"></a>Notes
 
-Cette méthode est appelée lorsque l’infrastructure restaure une barre Outlook dans un état initial.
+Cette méthode est appelée lorsque le Framework restaure l’état initial d’une barre Outlook.
 
-##  <a name="findpanebyid"></a>  CBaseTabbedPane::FindPaneByID
+##  <a name="findpanebyid"></a>CBaseTabbedPane :: FindPaneByID
 
 Retourne un volet identifié par l’ID du volet.
 
@@ -325,19 +325,19 @@ virtual CWnd* FindPaneByID(UINT uBarID);
 ### <a name="parameters"></a>Paramètres
 
 *uBarID*<br/>
-[in] Spécifie l’ID du volet à rechercher.
+dans Spécifie l’ID du volet à rechercher.
 
 ### <a name="return-value"></a>Valeur de retour
 
-Un pointeur vers le volet s’il a été trouvé ; Sinon, NULL.
+Pointeur vers le volet s’il a été trouvé ; Sinon, NULL.
 
 ### <a name="remarks"></a>Notes
 
-Cette méthode compare tous les onglets dans le volet et retourne l’un avec l’ID spécifié par le *uBarID* paramètre.
+Cette méthode compare tous les onglets du volet et retourne celui avec l’ID spécifié par le paramètre *uBarID* .
 
-##  <a name="findbarbytabnumber"></a>  CBaseTabbedPane::FindBarByTabNumber
+##  <a name="findbarbytabnumber"></a>CBaseTabbedPane :: FindBarByTabNumber
 
-Retourne un volet qui réside dans un onglet.
+Retourne un volet qui se trouve dans un onglet.
 
 ```
 virtual CWnd* FindBarByTabNumber(
@@ -348,10 +348,10 @@ virtual CWnd* FindBarByTabNumber(
 ### <a name="parameters"></a>Paramètres
 
 *nTabNum*<br/>
-[in] Spécifie l’index de base zéro de l’onglet à récupérer.
+dans Spécifie l’index de base zéro de l’onglet à récupérer.
 
 *bGetWrappedBar*<br/>
-[in] TRUE pour retourner la fenêtre sous-jacente (encapsulée) du volet au lieu du volet lui-même ; Sinon, FALSE. Cela s’applique uniquement aux volets dérivés de [CDockablePaneAdapter](../../mfc/reference/cdockablepaneadapter-class.md).
+dans TRUE pour retourner la fenêtre (encapsulée) sous-jacente du volet à la place du volet lui-même ; Sinon, FALSe. Cela s’applique uniquement aux volets dérivés de [CDockablePaneAdapter](../../mfc/reference/cdockablepaneadapter-class.md).
 
 ### <a name="return-value"></a>Valeur de retour
 
@@ -359,9 +359,9 @@ Si le volet est trouvé, un pointeur valide vers le volet recherché est retourn
 
 ### <a name="remarks"></a>Notes
 
-Appelez cette méthode pour récupérer le volet résidant dans l’onglet spécifié par le *nTabNum* paramètre.
+Appelez cette méthode pour récupérer le volet résidant dans l’onglet spécifié par le paramètre *nTabNum* .
 
-##  <a name="floattab"></a>  CBaseTabbedPane::FloatTab
+##  <a name="floattab"></a>CBaseTabbedPane :: FloatTab
 
 Fait flotter un volet, mais seulement si le volet réside actuellement dans un onglet détachable.
 
@@ -376,28 +376,28 @@ virtual BOOL FloatTab(
 ### <a name="parameters"></a>Paramètres
 
 *pBar*<br/>
-[in, out] Un pointeur vers le volet pour float.
+[in, out] Pointeur vers le volet à flotter.
 
 *nTabID*<br/>
-[in] Spécifie l’index de base zéro de l’onglet en float.
+dans Spécifie l’index de base zéro de l’onglet à détacher.
 
 *dockMethod*<br/>
-[in] Spécifie la méthode à utiliser pour détacher le volet. Pour plus d'informations, consultez la section Remarques.
+dans Spécifie la méthode à utiliser pour rendre le volet flottant. Pour plus d'informations, consultez la section Notes.
 
 *bHide*<br/>
-[in] TRUE pour masquer le volet avant flottante. Sinon, FALSE.
+dans TRUE pour masquer le volet avant qu’il ne soit flottant ; Sinon, FALSe.
 
 ### <a name="return-value"></a>Valeur de retour
 
-TRUE si le volet flottantes ; Sinon, FALSE.
+TRUE si le volet est dissocié ; Sinon, FALSe.
 
 ### <a name="remarks"></a>Notes
 
-Appelez cette méthode pour rendre flottant un volet qui se trouve actuellement dans un onglet détachable.
+Appelez cette méthode pour flotter un volet qui réside actuellement dans un onglet détachable.
 
-Si vous souhaitez détacher un volet par programme, spécifiez DM_SHOW pour la *dockMethod* paramètre. Si vous souhaitez détacher le volet dans la même position où il flottantes précédemment, spécifiez DM_DBL_CLICK comme le *dockMethod* paramètre.
+Si vous souhaitez détacher un volet par programme, spécifiez DM_SHOW pour le paramètre *dockMethod* . Si vous souhaitez faire flotter le volet à la même position que celle qu’il a flotter précédemment, spécifiez DM_DBL_CLICK comme paramètre *dockMethod* .
 
-##  <a name="getdefaulttabsorder"></a>  CBaseTabbedPane::GetDefaultTabsOrder
+##  <a name="getdefaulttabsorder"></a>CBaseTabbedPane :: GetDefaultTabsOrder
 
 Retourne l’ordre par défaut des onglets dans le volet.
 
@@ -407,13 +407,13 @@ const CArray<int,int>& GetDefaultTabsOrder();
 
 ### <a name="return-value"></a>Valeur de retour
 
-Un `CArray` objet qui spécifie l’ordre par défaut des onglets dans le volet.
+Objet `CArray` qui spécifie l’ordre par défaut des onglets dans le volet.
 
 ### <a name="remarks"></a>Notes
 
-L’infrastructure appelle cette méthode lorsqu’une barre Outlook est réinitialisée à son état initial.
+L’infrastructure appelle cette méthode quand une barre Outlook est réinitialisée à un état initial.
 
-##  <a name="getfirstvisibletab"></a>  CBaseTabbedPane::GetFirstVisibleTab
+##  <a name="getfirstvisibletab"></a>CBaseTabbedPane :: GetFirstVisibleTab
 
 Récupère un pointeur vers le premier onglet affiché.
 
@@ -424,32 +424,15 @@ virtual CWnd* GetFirstVisibleTab(int& iTabNum);
 ### <a name="parameters"></a>Paramètres
 
 *iTabNum*<br/>
-[in] Une référence à un entier. Cette méthode écrit l’index de base zéro du premier onglet affiché pour ce paramètre, ou -1 si non affichés onglet est trouvé.
+dans Référence à un entier. Cette méthode écrit l’index de base zéro du premier onglet affiché dans ce paramètre, ou-1 si aucun onglet affiché n’est trouvé.
 
 ### <a name="return-value"></a>Valeur de retour
 
-Si l’opération réussit, un pointeur vers le premier onglet affiché ; Sinon, NULL.
+En cas de réussite, pointeur vers le premier onglet affiché ; Sinon, NULL.
 
-##  <a name="getminsize"></a>  CBaseTabbedPane::GetMinSize
+##  <a name="getminsize"></a>CBaseTabbedPane :: GetMinSize
 
-Récupère la valeur minimale autorisée pour le volet.
-
-```
-virtual void GetMinSize(CSize& size) const;
-```
-
-### <a name="parameters"></a>Paramètres
-
-*size*<br/>
-[out] Un `CSize` objet qui est rempli avec la valeur minimale autorisée.
-
-### <a name="remarks"></a>Notes
-
-Si la gestion cohérente des tailles de volet minimale est active ( [CPane::m_bHandleMinSize](../../mfc/reference/cpane-class.md#m_bhandleminsize)), *taille* est rempli avec la valeur minimale autorisée pour l’onglet actif. Sinon, *taille* est rempli avec la valeur de retour de [CPane::GetMinSize](../../mfc/reference/cpane-class.md#getminsize).
-
-##  <a name="getpaneicon"></a>  CBaseTabbedPane::GetPaneIcon
-
-Récupère la valeur minimale autorisée pour le volet.
+Récupère la taille minimale autorisée pour le volet.
 
 ```
 virtual void GetMinSize(CSize& size) const;
@@ -458,15 +441,32 @@ virtual void GetMinSize(CSize& size) const;
 ### <a name="parameters"></a>Paramètres
 
 *size*<br/>
-[out] Un `CSize` objet qui est rempli avec la valeur minimale autorisée.
+à Objet `CSize` rempli avec la taille minimale autorisée.
 
 ### <a name="remarks"></a>Notes
 
-Si la gestion cohérente des tailles de volet minimale est active ( [CPane::m_bHandleMinSize](../../mfc/reference/cpane-class.md#m_bhandleminsize)), *taille* est rempli avec la valeur minimale autorisée pour l’onglet actif. Sinon, *taille* est rempli avec la valeur de retour de [CPane::GetMinSize](../../mfc/reference/cpane-class.md#getminsize).
+Si la gestion cohérente des tailles de volet minimales est active ( [CPane :: m_bHandleMinSize](../../mfc/reference/cpane-class.md#m_bhandleminsize)), la *taille* est remplie avec la taille minimale autorisée pour l’onglet actif. sinon, la *taille* est remplie avec la valeur de retour de [CPane :: GetMinSize](../../mfc/reference/cpane-class.md#getminsize).
 
-##  <a name="getpanelist"></a>  CBaseTabbedPane::GetPaneList
+##  <a name="getpaneicon"></a>CBaseTabbedPane :: GetPaneIcon
 
-Retourne une liste de volets qui sont contenus dans le volet à onglets.
+Récupère la taille minimale autorisée pour le volet.
+
+```
+virtual void GetMinSize(CSize& size) const;
+```
+
+### <a name="parameters"></a>Paramètres
+
+*size*<br/>
+à Objet `CSize` rempli avec la taille minimale autorisée.
+
+### <a name="remarks"></a>Notes
+
+Si la gestion cohérente des tailles de volet minimales est active ( [CPane :: m_bHandleMinSize](../../mfc/reference/cpane-class.md#m_bhandleminsize)), la *taille* est remplie avec la taille minimale autorisée pour l’onglet actif. sinon, la *taille* est remplie avec la valeur de retour de [CPane :: GetMinSize](../../mfc/reference/cpane-class.md#getminsize).
+
+##  <a name="getpanelist"></a>CBaseTabbedPane :: GetPaneList
+
+Retourne une liste de volets contenus dans le volet à onglets.
 
 ```
 virtual void GetPaneList(
@@ -476,15 +476,15 @@ virtual void GetPaneList(
 
 ### <a name="parameters"></a>Paramètres
 
-*lst*<br/>
-[out] Un `CObList` qui est rempli avec les volets qui sont contenus dans le volet à onglets.
+*LST*<br/>
+à `CObList` rempli avec les volets contenus dans le volet à onglets.
 
 *pRTCFilter*<br/>
-[in] Si elle n’est pas NULL, la liste retournée contient uniquement les volets qui sont de la classe runtime spécifié.
+dans Si la valeur n’est pas NULL, la liste retournée contient uniquement les volets qui appartiennent à la classe d’exécution spécifiée.
 
-##  <a name="gettabarea"></a>  CBaseTabbedPane::GetTabArea
+##  <a name="gettabarea"></a>CBaseTabbedPane :: GetTabArea
 
-Retourne les rectangles englobants pour les zones d’onglet en haut et bas.
+Retourne les rectangles englobants pour les zones d’onglets supérieure et inférieure.
 
 ```
 virtual void GetTabArea(
@@ -495,18 +495,18 @@ virtual void GetTabArea(
 ### <a name="parameters"></a>Paramètres
 
 *rectTabAreaTop*<br/>
-[out] Reçoit les coordonnées d’écran de la zone d’onglet supérieur.
+à Reçoit les coordonnées d’écran de la zone d’onglet supérieure.
 
 *rectTabAreaBottom*<br/>
-[out] Reçoit les coordonnées d’écran de la zone d’onglet inférieur.
+à Reçoit les coordonnées d’écran de la zone d’onglet inférieure.
 
 ### <a name="remarks"></a>Notes
 
-Appelez cette méthode pour déterminer les rectangles englobants, en coordonnées d’écran, pour les zones de l’onglet supérieure et inférieure.
+Appelez cette méthode pour déterminer les rectangles englobants, en coordonnées d’écran, pour les zones d’onglets supérieure et inférieure.
 
-##  <a name="gettabsnum"></a>  CBaseTabbedPane::GetTabsNum
+##  <a name="gettabsnum"></a>CBaseTabbedPane :: GetTabsNum
 
-Retourne le nombre d’onglets dans une fenêtre de l’onglet.
+Retourne le nombre d’onglets dans une fenêtre d’onglets.
 
 ```
 virtual int GetTabsNum() const;
@@ -514,11 +514,11 @@ virtual int GetTabsNum() const;
 
 ### <a name="return-value"></a>Valeur de retour
 
-Le nombre d’onglets dans le volet à onglets.
+Nombre d’onglets dans le volet à onglets.
 
-##  <a name="getunderlyingwindow"></a>  CBaseTabbedPane::GetUnderlyingWindow
+##  <a name="getunderlyingwindow"></a>CBaseTabbedPane :: GetUnderlyingWindow
 
-Obtient la fenêtre d’onglet (encapsulé) sous-jacent.
+Obtient la fenêtre d’onglets (encapsulée) sous-jacente.
 
 ```
 virtual CMFCBaseTabCtrl* GetUnderlyingWindow();
@@ -526,9 +526,9 @@ virtual CMFCBaseTabCtrl* GetUnderlyingWindow();
 
 ### <a name="return-value"></a>Valeur de retour
 
-Pointeur vers l’onglet de fenêtre sous-jacent.
+Pointeur vers la fenêtre d’onglet sous-jacente.
 
-##  <a name="getvisibletabsnum"></a>  CBaseTabbedPane::GetVisibleTabsNum
+##  <a name="getvisibletabsnum"></a>CBaseTabbedPane :: GetVisibleTabsNum
 
 Retourne le nombre d’onglets visibles.
 
@@ -538,13 +538,13 @@ virtual int GetVisibleTabsNum() const;
 
 ### <a name="return-value"></a>Valeur de retour
 
-Le nombre d’onglets visibles, ce qui sera supérieur ou égal à zéro.
+Nombre d’onglets visibles, qui seront supérieurs ou égaux à zéro.
 
 ### <a name="remarks"></a>Notes
 
 Appelez cette méthode pour déterminer le nombre d’onglets visibles dans le volet à onglets.
 
-##  <a name="hasautohidemode"></a>  CBaseTabbedPane::HasAutoHideMode
+##  <a name="hasautohidemode"></a>CBaseTabbedPane :: HasAutoHideMode
 
 Détermine si le volet à onglets peut passer en mode masquage automatique.
 
@@ -554,15 +554,15 @@ virtual BOOL HasAutoHideMode() const;
 
 ### <a name="return-value"></a>Valeur de retour
 
-TRUE si le volet peut être basculé en mode de masquage automatique ; Sinon, FALSE.
+TRUE si le volet peut être basculé en mode de masquage automatique ; Sinon, FALSe.
 
 ### <a name="remarks"></a>Notes
 
-Si le mode de masquage automatique est désactivé, aucun bouton pin ne s’affiche sur la légende du volet à onglets.
+Si le mode de masquage automatique est désactivé, aucun bouton pin n’est affiché dans la légende du volet à onglets.
 
-##  <a name="ishidesingletab"></a>  CBaseTabbedPane::IsHideSingleTab
+##  <a name="ishidesingletab"></a>CBaseTabbedPane :: IsHideSingleTab
 
-Détermine si le volet à onglets est masqué si seul un onglet s’affiche.
+Détermine si le volet à onglets est masqué si un seul onglet est affiché.
 
 ```
 virtual BOOL IsHideSingleTab() const;
@@ -570,15 +570,15 @@ virtual BOOL IsHideSingleTab() const;
 
 ### <a name="return-value"></a>Valeur de retour
 
-TRUE si la fenêtre de l’onglet n’est pas affichée quand il n'est qu’un seul onglet visible ; Sinon, FALSE.
+TRUE si la fenêtre d’onglet n’est pas affichée lorsqu’il n’y a qu’un seul onglet visible ; Sinon, FALSe.
 
 ### <a name="remarks"></a>Notes
 
-Si le volet ne s’affiche pas, car qu’un seul onglet est ouvert, vous pouvez appeler cette méthode pour déterminer si le volet à onglets fonctionne correctement.
+Si le volet n’est pas affiché parce qu’un seul onglet est ouvert, vous pouvez appeler cette méthode pour déterminer si le volet à onglets fonctionne correctement.
 
-##  <a name="removepane"></a>  CBaseTabbedPane::RemovePane
+##  <a name="removepane"></a>CBaseTabbedPane :: RemovePane
 
-Supprime un volet dans le volet à onglets.
+Supprime un volet du volet à onglets.
 
 ```
 virtual BOOL RemovePane(CWnd* pBar);
@@ -587,17 +587,17 @@ virtual BOOL RemovePane(CWnd* pBar);
 ### <a name="parameters"></a>Paramètres
 
 *pBar*<br/>
-[in, out] Pointeur vers le volet à supprimer dans le volet à onglets.
+[in, out] Pointeur vers le volet à supprimer du volet à onglets.
 
 ### <a name="return-value"></a>Valeur de retour
 
-TRUE si le volet a été supprimé avec succès à partir du volet à onglets et si le volet à onglets est toujours valide. FALSE si le dernier volet a été supprimé à partir du volet à onglets et le volet à onglets est sur le point d’être détruit. Si la valeur de retour est FALSE, n’utilisez pas le volet à onglets plus.
+TRUE si le volet a été correctement supprimé du volet à onglets et si le volet à onglets est toujours valide. FALSe si le dernier volet a été supprimé du volet à onglets et que le volet à onglets va être détruit. Si la valeur de retour est FALSe, n’utilisez plus le volet à onglets.
 
 ### <a name="remarks"></a>Notes
 
-Appelez cette méthode pour supprimer le volet spécifié par le *pBar* paramètre dans le volet à onglets.
+Appelez cette méthode pour supprimer le volet spécifié par le paramètre *pBar* du volet à onglets.
 
-##  <a name="setautodestroy"></a>  CBaseTabbedPane::SetAutoDestroy
+##  <a name="setautodestroy"></a>CBaseTabbedPane :: SetAutoDestroy
 
 Détermine si la barre de contrôle à onglets est détruite automatiquement.
 
@@ -608,13 +608,13 @@ void SetAutoDestroy(BOOL bAutoDestroy = TRUE);
 ### <a name="parameters"></a>Paramètres
 
 *bAutoDestroy*<br/>
-[in] TRUE si le volet à onglets a été créé dynamiquement et vous ne contrôlez pas sa durée de vie ; Sinon, FALSE.
+dans TRUE si le volet à onglets a été créé dynamiquement et que vous ne contrôlez pas sa durée de vie. Sinon, FALSe.
 
 ### <a name="remarks"></a>Notes
 
-Définir la destruction automatique mode True si vous créez un volet à onglets dynamiquement et si vous ne contrôlez pas sa durée de vie. Si destruction automatique mode a la valeur TRUE, le volet à onglets sera détruit automatiquement par l’infrastructure.
+Définissez le mode de destruction automatique sur TRUE si vous créez un volet à onglets de manière dynamique et si vous ne contrôlez pas sa durée de vie. Si le mode de destruction automatique a la valeur TRUE, le volet à onglets est détruit automatiquement par l’infrastructure.
 
-##  <a name="showtab"></a>  CBaseTabbedPane::ShowTab
+##  <a name="showtab"></a>CBaseTabbedPane :: ShowTab
 
 Affiche ou masque un onglet.
 
@@ -629,28 +629,28 @@ virtual BOOL ShowTab(
 ### <a name="parameters"></a>Paramètres
 
 *pBar*<br/>
-[in] Un pointeur vers le volet pour afficher ou masquer.
+dans Pointeur vers le volet à afficher ou masquer.
 
 *bShow*<br/>
-[in] TRUE pour afficher le volet. FALSE pour masquer le volet.
+dans TRUE pour afficher le volet ; FALSe pour masquer le volet.
 
 *bDelay*<br/>
-[in] TRUE pour différer l’ajustement de la disposition des onglets ; Sinon, FALSE.
+dans TRUE pour différer l’ajustement de la disposition des onglets ; Sinon, FALSe.
 
 *bActivate*<br/>
-[in] TRUE si l’onglet l’onglet actif ; Sinon, FALSE.
+dans TRUE pour rendre l’onglet actif. Sinon, FALSe.
 
 ### <a name="return-value"></a>Valeur de retour
 
-TRUE si l’onglet a été soit affiché ou masqué avec succès ; Sinon, FALSE.
+TRUE si l’onglet a été affiché ou masqué avec succès ; Sinon, FALSe.
 
 ### <a name="remarks"></a>Notes
 
-Lorsque vous appelez cette méthode, un volet est affiché ou masqué, selon la valeur de la *bShow* paramètre. Si vous masquez un onglet, et il est le dernier onglet visible dans l’onglet de fenêtre sous-jacent, le volet à onglets est masqué. Si vous affichez un onglet lorsqu’il n’existait auparavant aucun onglet visible, le volet à onglets s’affiche.
+Lorsque vous appelez cette méthode, un volet est affiché ou masqué, selon la valeur du paramètre *bShow* . Si vous masquez un onglet et qu’il s’agit du dernier onglet visible dans la fenêtre sous-jacente, le volet à onglets est masqué. Si vous affichez un onglet alors qu’il n’y avait précédemment aucun onglet visible, le volet à onglets s’affiche.
 
-##  <a name="recalclayout"></a>  CBaseTabbedPane::RecalcLayout
+##  <a name="recalclayout"></a>CBaseTabbedPane :: RecalcLayout
 
-Recalcule les informations de disposition pour le volet.
+Recalcule les informations de disposition du volet.
 
 ```
 virtual void RecalcLayout();
@@ -658,11 +658,11 @@ virtual void RecalcLayout();
 
 ### <a name="remarks"></a>Notes
 
-Si le volet est flottant, cette méthode notifie l’infrastructure pour redimensionner le volet de la taille actuelle de la mini-frame.
+Si le volet est flottant, cette méthode indique au Framework de redimensionner le volet à la taille actuelle du mini-frame.
 
-Si le volet est ancré, cette méthode ne fait rien.
+Si le volet est ancré, cette méthode n’a aucun effet.
 
-##  <a name="setautohidemode"></a>  CBaseTabbedPane::SetAutoHideMode
+##  <a name="setautohidemode"></a>CBaseTabbedPane :: SetAutoHideMode
 
 Définit le mode de masquage automatique pour les volets détachables dans le volet à onglets.
 
@@ -677,31 +677,31 @@ virtual CMFCAutoHideToolBar* SetAutoHideMode(
 ### <a name="parameters"></a>Paramètres
 
 *bMode*<br/>
-[in] TRUE pour activer le mode de masquage automatique ; FALSE pour activer le mode d’ancrage standard.
+dans TRUE pour activer le mode de masquage automatique ; FALSe pour activer le mode d’ancrage normal.
 
 *dwAlignment*<br/>
-[in] Spécifie l’alignement du volet masquage automatique qui doit être créé. Pour obtenir la liste des valeurs possibles, consultez [CPane::MoveByAlignment](../../mfc/reference/cpane-class.md#movebyalignment).
+dans Spécifie l’alignement du volet à masquage automatique à créer. Pour obtenir la liste des valeurs possibles, consultez [CPane :: MoveByAlignment](../../mfc/reference/cpane-class.md#movebyalignment).
 
 *pCurrAutoHideBar*<br/>
-[in, out] Pointeur vers la barre d’outils de masquage automatique en cours. Peut être NULL.
+[in, out] Pointeur vers la barre d’outils de masquage automatique en cours. Sa valeur peut être NULL.
 
 *bUseTimer*<br/>
-[in] Spécifie s’il faut utiliser l’effet de masquage automatique lorsque l’utilisateur bascule le volet en mode de masquage automatique, ou masquer le volet immédiatement.
+dans Spécifie s’il faut utiliser l’effet de masquage automatique lorsque l’utilisateur bascule le volet en mode de masquage automatique, ou pour masquer immédiatement le volet.
 
 ### <a name="return-value"></a>Valeur de retour
 
-Pointeur vers la barre d’outils de masquage automatique est créé lorsque vous passez au mode de masquage automatique, ou NULL si aucune barre d’outils n’est créé.
+Pointeur vers la barre d’outils de masquage automatique qui est créée lors du basculement en mode de masquage automatique, ou NULL si aucune barre d’outils n’est créée.
 
 ### <a name="remarks"></a>Notes
 
-L’infrastructure appelle cette méthode lorsqu’un utilisateur choisit le bouton épingler pour basculer le volet à onglets au mode de masquage automatique ou en mode d’ancrage normal.
+L’infrastructure appelle cette méthode quand un utilisateur clique sur le bouton épingler pour basculer le volet à onglets pour qu’il soit en mode de masquage automatique ou en mode d’ancrage normal.
 
-Mode de masquage automatique est défini pour chaque volet détachable dans le volet à onglets. Les volets qui sont non amovibles sont ignorés. Pour plus d’informations, consultez [CMFCBaseTabCtrl::EnableTabDetach](../../mfc/reference/cmfcbasetabctrl-class.md#enabletabdetach).
+Le mode de masquage automatique est défini pour chaque volet détachable dans le volet à onglets. Les volets qui ne sont pas détachables sont ignorés. Pour plus d’informations, consultez [CMFCBaseTabCtrl :: EnableTabDetach](../../mfc/reference/cmfcbasetabctrl-class.md#enabletabdetach).
 
-Appelez cette méthode pour basculer d’un volet à onglets pour le mode de masquage automatique par programmation. Le volet doit être ancré à la fenêtre frame principale ( [CDockablePane::GetDefaultPaneDivider](../../mfc/reference/cdockablepane-class.md#getdefaultpanedivider) doit retourner un pointeur valide vers le [CPaneDivider](../../mfc/reference/cpanedivider-class.md)).
+Appelez cette méthode pour faire basculer un volet à onglets pour masquer automatiquement le mode par programme. Le volet doit être ancré à la fenêtre frame principale ( [CDockablePane :: GetDefaultPaneDivider](../../mfc/reference/cdockablepane-class.md#getdefaultpanedivider) doit retourner un pointeur valide vers [CPaneDivider](../../mfc/reference/cpanedivider-class.md)).
 
 ## <a name="see-also"></a>Voir aussi
 
 [Graphique hiérarchique](../../mfc/hierarchy-chart.md)<br/>
 [Classes](../../mfc/reference/mfc-classes.md)<br/>
-[CDockablePane, classe](../../mfc/reference/cdockablepane-class.md)
+[CDockablePane Class](../../mfc/reference/cdockablepane-class.md)

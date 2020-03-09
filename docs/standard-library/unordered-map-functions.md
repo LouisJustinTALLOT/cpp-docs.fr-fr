@@ -9,13 +9,13 @@ ms.assetid: cf2e4115-f205-4a0e-90be-a143ffcc1f44
 helpviewer_keywords:
 - std::swap (unordered_map/multimap)
 ms.openlocfilehash: 8ad81157d12de017198afeeb48f3b329ef20dbde
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68454822"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78873967"
 ---
-# <a name="ltunorderedmapgt-functions"></a>&lt;unordered_map&gt;, fonctions
+# <a name="ltunordered_mapgt-functions"></a>&lt;unordered_map&gt;, fonctions
 
 |||
 |-|-|
@@ -34,25 +34,25 @@ void swap(
 
 ### <a name="parameters"></a>Paramètres
 
-*Essentiel*\
+\ de *clé*
 Type de clé.
 
 *Ty*\
 Type mappé.
 
-*Format*\
+\ de *hachage*
 Type d'objet de la fonction de hachage.
 
-*Prédit*\
+*\ prévu*
 Type d’objet de fonction de comparaison d’égalité.
 
-*Utilis*\
+\ *Alloc*
 Classe allocator.
 
-*gauche*\
+\ *gauche*
 Premier conteneur à échanger.
 
-*Oui*\
+\ *droit*
 Second conteneur à échanger.
 
 ### <a name="remarks"></a>Notes
@@ -127,25 +127,25 @@ void swap(
 
 ### <a name="parameters"></a>Paramètres
 
-*Essentiel*\
+\ de *clé*
 Type de clé.
 
 *Ty*\
 Type mappé.
 
-*Format*\
+\ de *hachage*
 Type d'objet de la fonction de hachage.
 
-*Prédit*\
+*\ prévu*
 Type d’objet de fonction de comparaison d’égalité.
 
-*Utilis*\
+\ *Alloc*
 Classe allocator.
 
-*gauche*\
+\ *gauche*
 Premier conteneur à échanger.
 
-*Oui*\
+\ *droit*
 Second conteneur à échanger.
 
 ### <a name="remarks"></a>Notes

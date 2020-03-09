@@ -135,11 +135,11 @@ helpviewer_keywords:
 - std::unordered_set::swap
 ms.assetid: ac08084e-05a7-48c0-9ae4-d40c529922dd
 ms.openlocfilehash: 1aebb30649d138b22c5b9dae95662f84a6bf39f2
-ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
+ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/21/2019
-ms.locfileid: "72684102"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78890731"
 ---
 # <a name="unordered_set-class"></a>unordered_set, classe
 
@@ -158,21 +158,21 @@ class unordered_set;
 
 ### <a name="parameters"></a>Paramètres
 
-@No__t_1 de *clé*
+\ de *clé*
 Type de clé.
 
-@No__t_1 de *hachage*
+\ de *hachage*
 Type d'objet de la fonction de hachage.
 
-*@No__t_1 prévu*
+*\ prévu*
 Type d’objet de fonction de comparaison d’égalité.
 
-@No__t_1 *Alloc*
+\ *Alloc*
 Classe allocator.
 
 ## <a name="members"></a>Membres
 
-### <a name="typedefs"></a>Typedef
+### <a name="typedefs"></a>Typedefs
 
 |||
 |-|-|
@@ -232,9 +232,9 @@ Classe allocator.
 
 ## <a name="remarks"></a>Notes
 
-L’objet trie la séquence qu’il contrôle en appelant deux objets stockés, un objet de fonction de comparaison de type [unordered_set :: key_equal](#key_equal) et un objet de fonction de hachage de type [unordered_set :: Hasher](#hasher). Pour accéder au premier objet stocké, appelez la fonction membre [unordered_set :: key_eq](#key_eq) `()` ; et vous accédez au deuxième objet stocké en appelant la fonction membre [unordered_set :: hash_function](#hash) `()`. Pour toutes les valeurs `X` et `Y` de type `Key`, l'appel `key_eq()(X, Y)` retourne true uniquement si les valeurs des deux arguments ont un classement équivalent. L'appel `hash_function()(keyval)` génère une distribution des valeurs de type `size_t`. Contrairement à la [classe unordered_multiset](../standard-library/unordered-multiset-class.md)de modèle de classe, un objet de type `unordered_set` garantit que `key_eq()(X, Y)` est toujours false pour deux éléments quelconques de la séquence contrôlée. Les clés sont uniques.
+L’objet trie la séquence qu’il contrôle en appelant deux objets stockés, un objet de fonction de comparaison de type [unordered_set :: key_equal](#key_equal) et un objet de fonction de hachage de type [unordered_set :: Hasher](#hasher). Pour accéder au premier objet stocké, appelez la fonction membre [unordered_set :: key_eq](#key_eq)`()`; et vous accédez au deuxième objet stocké en appelant la fonction membre [unordered_set :: hash_function](#hash)`()`. Pour toutes les valeurs `X` et `Y` de type `Key`, l'appel `key_eq()(X, Y)` retourne true uniquement si les valeurs des deux arguments ont un classement équivalent. L'appel `hash_function()(keyval)` génère une distribution des valeurs de type `size_t`. Contrairement à la [classe de unordered_multiset](../standard-library/unordered-multiset-class.md)de modèle de classe, un objet de type `unordered_set` garantit que `key_eq()(X, Y)` est toujours false pour deux éléments quelconques de la séquence contrôlée. Les clés sont uniques.
 
-L'objet stocke également un facteur de charge maximale, qui spécifie le nombre moyen maximal d'éléments souhaité par compartiment. Si l’insertion d’un élément amène [unordered_set :: load_factor](#load_factor) `()` à dépasser le facteur de charge maximale, le conteneur augmente le nombre de compartiments et reconstruit la table de hachage en fonction des besoins.
+L'objet stocke également un facteur de charge maximale, qui spécifie le nombre moyen maximal d'éléments souhaité par compartiment. Si vous insérez un élément, [unordered_set :: load_factor](#load_factor)`()` dépasse le facteur de charge maximale, le conteneur augmente le nombre de compartiments et reconstruit la table de hachage en fonction des besoins.
 
 L'ordre réel des éléments de la séquence contrôlée dépend de la fonction de hachage, de la fonction de comparaison, de l'ordre d'insertion, du facteur de charge maximale et du nombre de compartiments. En général, il n'est pas possible de prévoir l'ordre des éléments de la séquence contrôlée. Toutefois, vous avez la garantie que tous les sous-ensembles d'éléments dont le classement est équivalent sont adjacents dans la séquence contrôlée.
 
@@ -294,7 +294,7 @@ const_local_iterator begin(size_type nbucket) const;
 
 ### <a name="parameters"></a>Paramètres
 
-*nbucket* \
+*nbucket*\
 Numéro de compartiment.
 
 ### <a name="remarks"></a>Notes
@@ -367,7 +367,7 @@ size_type bucket(const Key& keyval) const;
 
 ### <a name="parameters"></a>Paramètres
 
-*keyval* \
+*keyval*\
 Valeur de clé à mapper.
 
 ### <a name="remarks"></a>Notes
@@ -507,7 +507,7 @@ size_type bucket_size(size_type nbucket) const;
 
 ### <a name="parameters"></a>Paramètres
 
-*nbucket* \
+*nbucket*\
 Numéro de compartiment.
 
 ### <a name="remarks"></a>Notes
@@ -568,7 +568,7 @@ Itérateur **const** Forward-Access qui pointe vers le premier élément de la p
 
 Avec la valeur de retour `cbegin`, les éléments de la plage ne peuvent pas être modifiés.
 
-Vous pouvez utiliser cette fonction membre à la place de la fonction membre `begin()` afin de garantir que la valeur de retour est `const_iterator`. En général, elle est utilisée conjointement avec le mot clé de déduction de type [auto](../cpp/auto-cpp.md), comme le montre l’exemple suivant. Dans l’exemple, considérez `Container` comme un conteneur modifiable (non **const**) de tout type qui prend en charge `begin()` et `cbegin()`.
+Vous pouvez utiliser cette fonction membre à la place de la fonction membre `begin()` afin de garantir que la valeur de retour est `const_iterator`. En général, elle est utilisée conjointement au mot clé de déduction de type [auto](../cpp/auto-cpp.md), comme le montre l’exemple suivant. Dans l’exemple, considérez `Container` comme un conteneur modifiable (non **const**) de tout type qui prend en charge `begin()` et `cbegin()`.
 
 ```cpp
 auto i1 = Container.begin();
@@ -594,7 +594,7 @@ Itérateur **const** Forward-Access qui pointe juste après la fin de la plage.
 
 `cend` est utilisé pour vérifier si un itérateur a dépassé la fin de la plage.
 
-Vous pouvez utiliser cette fonction membre à la place de la fonction membre `end()` afin de garantir que la valeur de retour est `const_iterator`. En général, elle est utilisée conjointement avec le mot clé de déduction de type [auto](../cpp/auto-cpp.md), comme le montre l’exemple suivant. Dans l’exemple, considérez `Container` comme un conteneur modifiable (non **const**) de tout type qui prend en charge `end()` et `cend()`.
+Vous pouvez utiliser cette fonction membre à la place de la fonction membre `end()` afin de garantir que la valeur de retour est `const_iterator`. En général, elle est utilisée conjointement au mot clé de déduction de type [auto](../cpp/auto-cpp.md), comme le montre l’exemple suivant. Dans l’exemple, considérez `Container` comme un conteneur modifiable (non **const**) de tout type qui prend en charge `end()` et `cend()`.
 
 ```cpp
 auto i1 = Container.end();
@@ -616,7 +616,7 @@ void clear();
 
 ### <a name="remarks"></a>Notes
 
-La fonction membre appelle [unordered_set :: erase](#erase) `(` [unordered_set :: Begin](#begin) `(),` [unordered_set :: end](#end) `())`.
+La fonction membre appelle [unordered_set :: erase](#erase)`(` [unordered_set :: Begin](#begin)`(),` [unordered_set :: end](#end)`())`.
 
 ### <a name="example"></a>Exemple
 
@@ -859,12 +859,12 @@ size_type count(const Key& keyval) const;
 
 ### <a name="parameters"></a>Paramètres
 
-*keyval* \
+*keyval*\
 Valeur de clé à rechercher.
 
 ### <a name="remarks"></a>Notes
 
-La fonction membre retourne le nombre d’éléments de la plage délimitée par [unordered_set :: equal_range](#equal_range) `(keyval)`.
+La fonction membre retourne le nombre d’éléments de la plage délimitée par [unordered_set :: equal_range](#equal_range)`(keyval)`.
 
 ### <a name="example"></a>Exemple
 
@@ -961,7 +961,7 @@ begin()-end() == -3
 
 ## <a name="emplace"></a>emplace
 
-Insère un élément construit sur place (aucune opération de copie ou déplacement n’est effectuée).
+Insère un élément construit sur place (aucune opération de copie ni de déplacement n’est effectuée).
 
 ```cpp
 template <class... Args>
@@ -972,18 +972,18 @@ Args&&... args);
 
 ### <a name="parameters"></a>Paramètres
 
-*arguments* \
+*arguments*\
 Arguments transférés pour construire un élément à insérer dans la classe unordered_set, sauf si elle contient déjà un élément dont la valeur est ordonnée de façon équivalente.
 
 ### <a name="return-value"></a>Valeur de retour
 
-@No__t_0 dont le composant **bool** retourne la valeur true si une insertion a été effectuée et false si l' `unordered_set` contenait déjà un élément dont la clé avait une valeur équivalente dans le classement, et dont le composant itérateur retourne l’adresse où un nouvel élément a été inséré ou l’emplacement où l’élément se trouvait déjà.
+`pair` dont le composant **bool** retourne la valeur true si une insertion a été effectuée et false si l' `unordered_set` contenait déjà un élément dont la clé avait une valeur équivalente dans le classement, et dont le composant itérateur retourne l’adresse où un nouvel élément a été inséré ou l’emplacement où l’élément se trouvait déjà.
 
 Pour accéder au composant itérateur d’une paire `pr` retournée par cette fonction membre, utilisez `pr.first` et, pour le déréférencer, utilisez `*(pr.first)`. Pour accéder au composant **bool** d’une paire `pr` retournée par cette fonction membre, utilisez `pr.second`.
 
 ### <a name="remarks"></a>Notes
 
-Aucun itérateur ou référence n’est invalidé par cette fonction.
+Aucun itérateur ni aucune référence ne sont invalidés par cette fonction.
 
 Durant l’insertion, si une exception est levée mais qu’elle ne se produit pas dans la fonction de hachage du conteneur, le conteneur n’est pas modifié. Si l'exception est levée dans la fonction de hachage, le résultat n'est pas défini.
 
@@ -991,7 +991,7 @@ Pour obtenir un exemple de code, consultez [set :: emplace](../standard-library
 
 ## <a name="emplace_hint"></a>emplace_hint
 
-Insère un élément construit sur place (aucune opération de copie ni de déplacement n’est effectuée) avec un indicateur de positionnement.
+Insère un élément construit sur place (sans opération de copie ni de déplacement) avec un indicateur de positionnement.
 
 ```cpp
 template <class... Args>
@@ -1002,21 +1002,21 @@ Args&&... args);
 
 ### <a name="parameters"></a>Paramètres
 
-*arguments* \
+*arguments*\
 Arguments transférés pour construire un élément à insérer dans la classe unordered_set, sauf si celle-ci contient déjà cet élément ou, plus généralement, si elle contient déjà un élément dont la clé est ordonnée de façon équivalente.
 
-*où* \
+*où*\
 Indicateur concernant l’emplacement où commencer à rechercher le point d’insertion correct.
 
 ### <a name="return-value"></a>Valeur de retour
 
-Itérateur vers l’élément qui vient d’être inséré.
+Un itérateur vers le nouvel élément inséré.
 
 Si l’insertion a échoué parce que l’élément existe déjà, retourne un itérateur vers l’élément existant.
 
 ### <a name="remarks"></a>Notes
 
-Aucun itérateur ou référence n’est invalidé par cette fonction.
+Aucun itérateur ni aucune référence ne sont invalidés par cette fonction.
 
 Durant l’insertion, si une exception est levée mais qu’elle ne se produit pas dans la fonction de hachage du conteneur, le conteneur n’est pas modifié. Si l'exception est levée dans la fonction de hachage, le résultat n'est pas défini.
 
@@ -1102,7 +1102,7 @@ const_local_iterator end(size_type nbucket) const;
 
 ### <a name="parameters"></a>Paramètres
 
-*nbucket* \
+*nbucket*\
 Numéro de compartiment.
 
 ### <a name="remarks"></a>Notes
@@ -1168,12 +1168,12 @@ equal_range(const Key& keyval) const;
 
 ### <a name="parameters"></a>Paramètres
 
-*keyval* \
+*keyval*\
 Valeur de clé à rechercher.
 
 ### <a name="remarks"></a>Notes
 
-La fonction membre retourne une paire d’itérateurs `X` de telle sorte que `[X.first, X.second)` délimite uniquement les éléments de la séquence contrôlée qui ont un classement équivalent avec *keyVal*. Si aucun de ces éléments n’existe, les deux itérateurs sont `end()`.
+La fonction membre retourne une paire d’itérateurs `X` de telle sorte que`[X.first, X.second)` délimite uniquement les éléments de la séquence contrôlée qui ont un classement équivalent avec *keyVal*. Si aucun de ces éléments n’existe, les deux itérateurs sont `end()`.
 
 ### <a name="example"></a>Exemple
 
@@ -1236,16 +1236,16 @@ size_type erase(const key_type& Key);
 
 ### <a name="parameters"></a>Paramètres
 
-*Où* \
+*Où*\
 Position de l’élément à supprimer.
 
-*Premier* \
+*Premier*\
 Position du premier élément à supprimer.
 
-*Dernier* \
+*Dernier*\
 Position juste après le dernier élément à supprimer.
 
-@No__t_1 de *clé*
+\ de *clé*
 Valeur de clé des éléments à supprimer.
 
 ### <a name="return-value"></a>Valeur de retour
@@ -1268,12 +1268,12 @@ const_iterator find(const Key& keyval) const;
 
 ### <a name="parameters"></a>Paramètres
 
-*keyval* \
+*keyval*\
 Valeur de clé à rechercher.
 
 ### <a name="remarks"></a>Notes
 
-La fonction membre retourne [unordered_set :: equal_range](#equal_range) `(keyval).first`.
+La fonction membre retourne [unordered_set :: equal_range](#equal_range)`(keyval).first`.
 
 ### <a name="example"></a>Exemple
 
@@ -1460,25 +1460,25 @@ void insert(initializer_list<value_type> IList);
 
 ### <a name="parameters"></a>Paramètres
 
-@No__t_1 *Val*
+\ *Val*
 Valeur d'un élément à insérer dans la classe unordered_set sauf si elle contient déjà un élément dont la clé est classée de manière équivalente.
 
-*Où* \
+*Où*\
 Emplacement où commencer à rechercher le point d'insertion correct.
 
-*ValTy* \
-Paramètre de modèle qui spécifie le type d’argument que le unordered_set peut utiliser pour construire un élément de [Value_type](../standard-library/map-class.md#value_type), et parfait-transfère la valeur *Val* en tant qu’argument.
+*ValTy*\
+Paramètre de modèle qui spécifie le type d’argument que l’unordered_set peut utiliser pour construire un élément de [Value_type](../standard-library/map-class.md#value_type), et parfait-transfère la valeur *Val* en tant qu’argument.
 
-*Premier* \
+*Premier*\
 Position du premier élément à copier.
 
-*Dernier* \
+*Dernier*\
 Position juste au-delà du dernier élément à copier.
 
-*InputIterator* \
+*InputIterator*\
 Argument de fonction de modèle qui remplit les conditions requises par un [itérateur d’entrée](../standard-library/input-iterator-tag-struct.md) qui pointe vers des éléments d’un type pouvant servir à construire des objets [value_type](../standard-library/map-class.md#value_type).
 
-*IList* \
+*IList*\
 [initializer_list](../standard-library/initializer-list.md) à partir de laquelle copier les éléments.
 
 ### <a name="return-value"></a>Valeur de retour
@@ -1493,13 +1493,13 @@ Aucun itérateur, pointeur ou référence n'est invalidé par cette fonction.
 
 Durant l'insertion d'un seul élément, si une exception est levée mais qu'elle ne se produit pas dans la fonction de hachage du conteneur, l'état du conteneur n'est pas modifié. Si l'exception est levée dans la fonction de hachage, le résultat n'est pas défini. Durant l'insertion de plusieurs éléments, si une exception est levée, le conteneur reste dans un état non spécifié mais valide.
 
-Pour accéder au composant itérateur d’une `pair` `pr` retournée par les fonctions membres à un seul élément, utilisez `pr.first` ; pour déréférencer l’itérateur dans la paire retournée, utilisez `*pr.first`, en vous donnant un élément. Pour accéder au composant **bool** , utilisez `pr.second`. Pour obtenir un exemple, voir l'exemple de code plus loin dans cet article.
+Pour accéder au composant itérateur d’une `pair` `pr` retournée par les fonctions membres à un seul élément, utilisez `pr.first`; pour déréférencer l’itérateur dans la paire retournée, utilisez`*pr.first`, en vous donnant un élément. Pour accéder au composant **bool** , utilisez `pr.second`. Pour obtenir un exemple, voir l'exemple de code plus loin dans cet article.
 
-Le [value_type](../standard-library/map-class.md#value_type) d’un conteneur est un typedef qui appartient au conteneur et, pour la classe set, `unordered_set<V>::value_type` est du type `const V`.
+La [value_type](../standard-library/map-class.md#value_type) d’un conteneur est un typedef qui appartient au conteneur et, pour la classe set, `unordered_set<V>::value_type` est du type `const V`.
 
-La fonction membre de plage (5) insère la séquence de valeurs d’éléments dans un unordered_set qui correspond à chaque élément traité par un itérateur dans la plage `[First, Last)` ; par conséquent, la *dernière* n’est pas insérée. La fonction membre de conteneur `end()` fait référence à la position qui suit le dernier élément du conteneur. Par exemple, l'instruction `s.insert(v.begin(), v.end());` tente d'insérer tous les éléments de `v` dans `s`. Seuls les éléments qui ont des valeurs uniques dans la plage sont insérés. Les doublons sont ignorés. Pour savoir quels éléments sont rejetés, utilisez les versions à un élément de `insert`.
+La fonction membre de plage (5) insère la séquence de valeurs d’éléments dans un unordered_set qui correspond à chaque élément traité par un itérateur dans la plage `[First, Last)`; par conséquent, la *dernière* n’est pas insérée. La fonction membre de conteneur `end()` fait référence à la position qui suit le dernier élément du conteneur. Par exemple, l'instruction `s.insert(v.begin(), v.end());` tente d'insérer tous les éléments de `v` dans `s`. Seuls les éléments qui ont des valeurs uniques dans la plage sont insérés. Les doublons sont ignorés. Pour savoir quels éléments sont rejetés, utilisez les versions à un élément de `insert`.
 
-La fonction membre de liste d’initialiseurs (6) utilise un [initializer_list](../standard-library/initializer-list.md) pour copier des éléments dans unordered_set.
+La fonction membre de liste d’initialiseurs (6) utilise un [initializer_list](../standard-library/initializer-list.md) pour copier des éléments dans le unordered_set.
 
 Pour plus d’informations sur l’insertion d’un élément construit sur place (aucune opération de copie ou déplacement n’est effectuée), consultez [set::emplace](../standard-library/set-class.md#emplace) et [set::emplace_hint](../standard-library/set-class.md#emplace_hint).
 
@@ -1878,7 +1878,7 @@ void max_load_factor(float factor);
 
 ### <a name="parameters"></a>Paramètres
 
-*facteur* \
+*facteur*\
 Nouveau facteur de charge maximale.
 
 ### <a name="remarks"></a>Notes
@@ -1968,7 +1968,7 @@ size_type max_size() const;
 
 ### <a name="remarks"></a>Notes
 
-La fonction membre retourne la longueur de la séquence la plus longue que l’objet peut contrôler.
+La fonction membre retourne la longueur de la séquence la plus longue que l'objet peut contrôler.
 
 ### <a name="example"></a>Exemple
 
@@ -2151,7 +2151,7 @@ void rehash(size_type nbuckets);
 
 ### <a name="parameters"></a>Paramètres
 
-*nbuckets* \
+*nbuckets*\
 Nombre de compartiments demandés.
 
 ### <a name="remarks"></a>Notes
@@ -2334,7 +2334,7 @@ Conteneur avec lequel faire l’échange.
 
 ### <a name="remarks"></a>Notes
 
-La fonction membre échange les séquences contrôlées entre `*this` et *Right*. Si [unordered_set :: get_allocator](#get_allocator) `() == right.get_allocator()`, elle le fait en temps constant, elle lève une exception uniquement en raison de la copie de l’objet de traits stocké de type `Tr` et n’invalide aucune référence, pointeur ou itérateur qui désignent des éléments dans le deux séquences contrôlées. Sinon, elle effectue un nombre d’affectations d’éléments et d’appels de constructeurs proportionnel au nombre d’éléments dans les deux séquences contrôlées.
+La fonction membre échange les séquences contrôlées entre `*this` et *Right*. Si [unordered_set :: get_allocator](#get_allocator)`() == right.get_allocator()`, elle le fait en temps constant, elle lève une exception uniquement en raison de la copie de l’objet de traits stocké de type `Tr`et n’invalide aucune référence, pointeur ou itérateur qui désignent des éléments dans les deux séquences contrôlées. Sinon, elle effectue un nombre d’affectations d’éléments et d’appels de constructeurs proportionnel au nombre d’éléments dans les deux séquences contrôlées.
 
 ### <a name="example"></a>Exemple
 
@@ -2437,25 +2437,25 @@ unordered_set(
 
 ### <a name="parameters"></a>Paramètres
 
-*InputIterator* \
+*InputIterator*\
 Type d'itérateur.
 
-*Al* \
+*Al*\
 Objet allocateur à stocker.
 
-*Comp* \
+*Comp*\
 Objet de fonction de comparaison à stocker.
 
-@No__t_1 de *hachage*
+\ de *hachage*
 Objet de fonction de hachage à stocker.
 
-*bucket_count* \
+*bucket_count*\
 Nombre minimal de compartiments.
 
-@No__t_1 *droit*
+\ *droit*
 Conteneur à copier.
 
-*IList* \
+*IList*\
 Objet initializer_list contenant les éléments à copier.
 
 ### <a name="remarks"></a>Notes
@@ -2464,9 +2464,9 @@ Le premier constructeur spécifie une copie de la séquence contrôlée par *Rig
 
 Tous les constructeurs initialisent également plusieurs valeurs stockées. Pour le constructeur de copie, les valeurs sont obtenues à partir de *Right*. Sinon :
 
-Le nombre minimal de compartiments est l’argument *bucket_count*, s’il est présent ; dans le cas contraire, il s’agit d’une valeur par défaut décrite ici comme valeur définie par l’implémentation `N0`.
+Le nombre minimal de compartiments est l’argument *bucket_count*, le cas échéant ; dans le cas contraire, il s’agit d’une valeur par défaut décrite ici comme valeur définie par l’implémentation `N0`.
 
-L’objet de fonction de hachage est le *hachage*d’argument, s’il existe ; dans le cas contraire, il est `Hash()`.
+l’objet de fonction de hachage est le *hachage*d’argument, s’il existe ; dans le cas contraire, il est `Hash()`.
 
 L’objet de fonction de comparaison est l’argument *COMP*, s’il est présent ; dans le cas contraire, il est `Comp()`.
 
