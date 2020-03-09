@@ -35,11 +35,11 @@ helpviewer_keywords:
 - std::basic_istream [C++], unget
 ms.assetid: c7c27111-de6d-42b4-95a3-a7e65259bf17
 ms.openlocfilehash: 68c7f7ffa9c32c16654e57c8249348d74cc83a5b
-ms.sourcegitcommit: ea9d78dbb93bf3f8841dde93dbc12bd66f6f32ff
+ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72778518"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78874808"
 ---
 # <a name="basic_istream-class"></a>basic_istream, classe
 
@@ -137,7 +137,7 @@ Consultez l’exemple de [basic_ifstream, classe](../standard-library/basic-ifst
 |-|-|
 |[basic_istream](#basic_istream)|Construit un objet de type `basic_istream`.|
 
-### <a name="member-functions"></a>Fonctions membres
+### <a name="member-functions"></a>Fonctions Membre
 
 |Fonction membre|Description|
 |-|-|
@@ -194,7 +194,7 @@ Objet `basic_istream` à copier.
 
 ### <a name="remarks"></a>Notes
 
-Le premier constructeur initialise la classe de base en appelant [`init`](../standard-library/basic-ios-class.md#init)`(strbuf)`. Il stocke également zéro dans le nombre d’extractions. Pour plus d’informations sur ce nombre d’extractions, consultez la section Notes de la vue d’ensemble de la [classe basic_istream](../standard-library/basic-istream-class.md) .
+Le premier constructeur initialise la classe de base en appelant [`init`](../standard-library/basic-ios-class.md#init)`(strbuf)`. Il stocke également zéro dans le nombre d’extractions. Pour plus d’informations sur ce nombre d’extractions, consultez la section Notes de la basic_istream vue d’ensemble de la [classe](../standard-library/basic-istream-class.md) .
 
 Le deuxième constructeur initialise la classe de base en appelant `move(right)`. Il stocke également `right.gcount()` dans le nombre d’extractions et stocke zéro dans le nombre d’extractions pour * Right * *.
 
