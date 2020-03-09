@@ -8,11 +8,11 @@ helpviewer_keywords:
 - .pch files, creating
 ms.assetid: e2cdb404-a517-4189-9771-c869c660cb1b
 ms.openlocfilehash: 071839df431071a7d8921d1b445094f886ad38e2
-ms.sourcegitcommit: 33a898bf976c65f998b4e88a84765a0cef4193a8
+ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/25/2019
-ms.locfileid: "72920110"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78884090"
 ---
 # <a name="precompiled-header-files"></a>Fichiers d'en-tête précompilés
 
@@ -122,7 +122,7 @@ Ce tableau répertorie les options du compilateur qui peuvent déclencher un ave
 |/E ou/EP|Copier la sortie du préprocesseur vers la sortie standard|Les en-têtes précompilés ne fonctionnent pas avec l’option/E ou/EP.|
 |/Fr ou/FR|Générer les informations du navigateur source Microsoft|Pour que les options/fr et/FR soient valides avec l’option/Yu, elles doivent également être appliquées lors de la création de l’en-tête précompilé. Les compilations suivantes qui utilisent l’en-tête précompilé génèrent également des informations sur le navigateur source. Les informations du navigateur sont placées dans un seul fichier. SBR et sont référencées par d’autres fichiers de la même manière que les informations CodeView. Vous ne pouvez pas remplacer le placement des informations du navigateur source.|
 |/GA,/GD,/GE,/GW ou/GW|Options de protocole Windows|Doit être identique entre la compilation qui a créé l’en-tête précompilé et la compilation en cours. Si ces options diffèrent, un message d’avertissement est obtenu.|
-|/Zi|Générer des informations de débogage complètes|Si cette option est activée lors de la création de l’en-tête précompilé, les compilations ultérieures qui utilisent la précompilation peuvent utiliser ces informations de débogage. Si/ZI n’est pas activé lors de la création de l’en-tête précompilé, les compilations suivantes qui utilisent la précompilation et l’option/Zi déclenchent un avertissement. Les informations de débogage sont placées dans le fichier objet actuel, et les symboles locaux définis dans l’en-tête précompilé ne sont pas disponibles pour le débogueur.|
+|/ZI|Générer des informations de débogage complètes|Si cette option est activée lors de la création de l’en-tête précompilé, les compilations ultérieures qui utilisent la précompilation peuvent utiliser ces informations de débogage. Si/ZI n’est pas activé lors de la création de l’en-tête précompilé, les compilations suivantes qui utilisent la précompilation et l’option/Zi déclenchent un avertissement. Les informations de débogage sont placées dans le fichier objet actuel, et les symboles locaux définis dans l’en-tête précompilé ne sont pas disponibles pour le débogueur.|
 
 > [!NOTE]
 >  La fonctionnalité d’en-tête précompilé est destinée à être utilisée C++ uniquement dans les fichiers C et source.
