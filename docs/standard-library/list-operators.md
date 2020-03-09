@@ -17,15 +17,15 @@ helpviewer_keywords:
 - std::operator&lt;= (list)
 - std::operator== (list)
 ms.openlocfilehash: 7b0b7540c1b9a55140405a55e8e034f9c6ec646c
-ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
+ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68246460"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78874425"
 ---
 # <a name="ltlistgt-operators"></a>&lt;list&gt;, opérateurs
 
-## <a name="op_neq"></a> opérateur ! =
+## <a name="op_neq"></a>opérateur ! =
 
 Teste si l'objet de liste situé à gauche de l'opérateur n'est pas égal à l'objet de liste situé à droite.
 
@@ -37,11 +37,11 @@ bool operator!=(
 
 ### <a name="parameters"></a>Paramètres
 
-*Gauche*\
-Objet de type `list`.
+\ *gauche*
+Objet de type `list`.
 
-*Oui*\
-Objet de type `list`.
+\ *droit*
+Objet de type `list`.
 
 ### <a name="return-value"></a>Valeur de retour
 
@@ -88,11 +88,11 @@ bool operator<(
 
 ### <a name="parameters"></a>Paramètres
 
-*Gauche*\
-Objet de type `list`.
+\ *gauche*
+Objet de type `list`.
 
-*Oui*\
-Objet de type `list`.
+\ *droit*
+Objet de type `list`.
 
 ### <a name="return-value"></a>Valeur de retour
 
@@ -131,7 +131,7 @@ List c1 is less than list c2.
 */
 ```
 
-## <a name="op_lt_eq"></a> Opérateur&lt;=
+## <a name="op_lt_eq"></a>&lt;d’opérateur =
 
 Teste si l'objet de liste situé à gauche de l'opérateur est inférieur ou égal à l'objet de liste situé à droite.
 
@@ -143,11 +143,11 @@ bool operator<=(
 
 ### <a name="parameters"></a>Paramètres
 
-*Gauche*\
-Objet de type `list`.
+\ *gauche*
+Objet de type `list`.
 
-*Oui*\
-Objet de type `list`.
+\ *droit*
+Objet de type `list`.
 
 ### <a name="return-value"></a>Valeur de retour
 
@@ -157,7 +157,7 @@ Objet de type `list`.
 
 La comparaison entre les objets de liste est basée sur une comparaison par paire de leurs éléments. La relation d'infériorité ou d'égalité entre deux objets est basée sur une comparaison de la première paire d'éléments inégaux.
 
-### <a name="example"></a>Exemples
+### <a name="example"></a>Exemple
 
 ```cpp
 // list_op_le.cpp
@@ -186,7 +186,7 @@ List c1 is less than or equal to list c2.
 */
 ```
 
-## <a name="op_eq_eq"></a> operator==
+## <a name="op_eq_eq"></a>opérateur = =
 
 Teste si l'objet de liste situé à gauche de l'opérateur est égal à l'objet de liste situé à droite.
 
@@ -198,11 +198,11 @@ bool operator==(
 
 ### <a name="parameters"></a>Paramètres
 
-*Gauche*\
-Objet de type `list`.
+\ *gauche*
+Objet de type `list`.
 
-*Oui*\
-Objet de type `list`.
+\ *droit*
+Objet de type `list`.
 
 ### <a name="return-value"></a>Valeur de retour
 
@@ -249,11 +249,11 @@ bool operator>(
 
 ### <a name="parameters"></a>Paramètres
 
-*Gauche*\
-Objet de type `list`.
+\ *gauche*
+Objet de type `list`.
 
-*Oui*\
-Objet de type `list`.
+\ *droit*
+Objet de type `list`.
 
 ### <a name="return-value"></a>Valeur de retour
 
@@ -292,7 +292,7 @@ List c1 is greater than list c2.
 */
 ```
 
-## <a name="op_gt_eq"></a> Opérateur&gt;=
+## <a name="op_gt_eq"></a>&gt;d’opérateur =
 
 Teste si l'objet de liste situé à gauche de l'opérateur est supérieur ou égal à l'objet de liste situé à droite.
 
@@ -304,11 +304,11 @@ bool operator>=(
 
 ### <a name="parameters"></a>Paramètres
 
-*Gauche*\
-Objet de type `list`.
+\ *gauche*
+Objet de type `list`.
 
-*Oui*\
-Objet de type `list`.
+\ *droit*
+Objet de type `list`.
 
 ### <a name="return-value"></a>Valeur de retour
 
@@ -318,7 +318,7 @@ Objet de type `list`.
 
 La comparaison entre les objets de liste est basée sur une comparaison par paire de leurs éléments. La relation de supériorité ou d'égalité entre deux objets est basée sur une comparaison de la première paire d'éléments inégaux.
 
-### <a name="example"></a>Exemples
+### <a name="example"></a>Exemple
 
 ```cpp
 // list_op_ge.cpp

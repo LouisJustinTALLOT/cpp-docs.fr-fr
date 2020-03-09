@@ -23,11 +23,11 @@ helpviewer_keywords:
 - std::queue [C++], size
 ms.assetid: 28c20ab0-3a72-4185-9e0f-5a44eea0e204
 ms.openlocfilehash: 512b9499e63933a71a27a87f91a3bef8a65339e1
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68458343"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78890852"
 ---
 # <a name="queue-class"></a>queue, classe
 
@@ -45,16 +45,16 @@ class queue
 *Type*\
 Type de données des éléments à stocker dans la classe queue
 
-*Conteneur*\
+\ de *conteneur*
 Type du conteneur sous-jacent utilisé pour implémenter la classe queue.
 
 ## <a name="remarks"></a>Notes
 
-Les éléments de la `Type` classe stipulés dans le premier paramètre de modèle d’un objet de file d’attente sont synonymes de [Value_type](#value_type) et doivent correspondre au type d' `Container` élément dans la classe de conteneur sous-jacente stipulée par le second modèle paramètre. `Type` Doit être assignable, afin qu’il soit possible de copier des objets de ce type et d’assigner des valeurs aux variables de ce type.
+Les éléments de la classe `Type` stipulés dans le premier paramètre de modèle d’un objet de file d’attente sont synonymes de [Value_type](#value_type) et doivent correspondre au type d’élément dans la classe de conteneur sous-jacente `Container` stipulé par le deuxième paramètre de modèle. Le `Type` doit pouvoir être assigné, afin qu’il soit possible de copier des objets de ce type et d’assigner des valeurs aux variables de ce type.
 
-Les classes de conteneur sous-jacentes appropriées pour la file d’attente incluent [deque](../standard-library/deque-class.md) et [List](../standard-library/list-class.md), ou tout autre `front`conteneur de séquences `pop_front`qui prend en charge les `back`opérations `push_back`de,, et. La classe de conteneur sous-jacent est encapsulée dans l'adaptateur de conteneur, qui expose seulement l'ensemble limité de fonctions membres du conteneur de séquence comme une interface publique.
+Les classes de conteneur sous-jacentes appropriées pour la file d’attente incluent [deque](../standard-library/deque-class.md) et [List](../standard-library/list-class.md), ou tout autre conteneur de séquences qui prend en charge les opérations de `front`, `back`, `push_back`et `pop_front`. La classe de conteneur sous-jacent est encapsulée dans l'adaptateur de conteneur, qui expose seulement l'ensemble limité de fonctions membres du conteneur de séquence comme une interface publique.
 
-Les objets de file d’attente sont comparables si et seulement si les `Type` éléments de la classe sont comparables à l’égalité, et sont moins comparables si et `Type` seulement si les éléments de la classe sont moins comparables.
+Les objets de la file d’attente sont comparables si et seulement si les éléments de la classe `Type` sont comparables à l’égalité, et sont moins comparables si et seulement si les éléments de la classe `Type` sont inférieurs à des valeurs comparables.
 
 Il y a trois types d’adaptateurs de conteneur définis dans la bibliothèque standard C++ : stack, queue et priority_queue. Chaque type limite les fonctionnalités d’une classe de conteneur sous-jacent pour fournir une interface contrôlée de façon précise à une structure de données standard.
 
@@ -72,7 +72,7 @@ Il y a trois types d’adaptateurs de conteneur définis dans la bibliothèque s
 |-|-|
 |[queue](#queue)|Construit un objet `queue` qui est vide ou qui est une copie de l'objet conteneur de base.|
 
-### <a name="typedefs"></a>Typedef
+### <a name="typedefs"></a>Typedefs
 
 |||
 |-|-|
@@ -107,11 +107,11 @@ Dernier élément de l’objet queue. Si l’objet queue est vide, la valeur de 
 
 ### <a name="remarks"></a>Notes
 
-Si la valeur de retour de `back` est assignée à une `const_reference`, l’objet queue ne peut pas être modifié. Si la valeur de retour `back` de est assignée `reference`à, l’objet de file d’attente peut être modifié.
+Si la valeur de retour de `back` est assignée à une `const_reference`, l’objet queue ne peut pas être modifié. Si la valeur de retour de `back` est assignée à un `reference`, l’objet de file d’attente peut être modifié.
 
-En cas de compilation avec [_ITERATOR_DEBUG_LEVEL](../standard-library/iterator-debug-level.md) défini sur 1 ou 2, une erreur d’exécution se produit si vous essayez d’accéder à un élément dans un objet queue vide.  Pour plus d’informations, consultez [Itérateurs vérifiés](../standard-library/checked-iterators.md).
+En cas de compilation avec [_ITERATOR_DEBUG_LEVEL](../standard-library/iterator-debug-level.md) défini sur 1 ou 2, une erreur d’exécution se produit si vous essayez d’accéder à un élément dans un objet queue vide.  Consultez [Itérateurs vérifiés](../standard-library/checked-iterators.md) pour plus d’informations.
 
-### <a name="example"></a>Exemples
+### <a name="example"></a>Exemple
 
 ```cpp
 // queue_back.cpp
@@ -151,9 +151,9 @@ Le type est un synonyme du paramètre de modèle `Container`. Deux classes de co
 
 Pour plus d’informations sur `Container`, consultez la section Notes de la rubrique [queue, classe](../standard-library/queue-class.md).
 
-### <a name="example"></a>Exemples
+### <a name="example"></a>Exemple
 
-Pour savoir comment déclarer et utiliser `container_type`, consultez l’exemple [queue](#queue).
+Pour savoir comment déclarer et utiliser [, consultez l’exemple ](#queue)queue`container_type`.
 
 ## <a name="empty"></a>vidé
 
@@ -167,7 +167,7 @@ bool empty() const;
 
 **true** si l’objet queue est vide. **false** s’il n’est pas vide.
 
-### <a name="example"></a>Exemples
+### <a name="example"></a>Exemple
 
 ```cpp
 // queue_empty.cpp
@@ -217,11 +217,11 @@ Premier élément de l’objet queue. Si l’objet queue est vide, la valeur de 
 
 ### <a name="remarks"></a>Notes
 
-Si la valeur de retour de `front` est assignée à une `const_reference`, l’objet queue ne peut pas être modifié. Si la valeur de retour `front` de est assignée `reference`à, l’objet de file d’attente peut être modifié.
+Si la valeur de retour de `front` est assignée à une `const_reference`, l’objet queue ne peut pas être modifié. Si la valeur de retour de `front` est assignée à un `reference`, l’objet de file d’attente peut être modifié.
 
 La fonction membre retourne un `reference` au premier élément de la séquence contrôlée, qui ne doit pas être vide.
 
-En cas de compilation avec [_ITERATOR_DEBUG_LEVEL](../standard-library/iterator-debug-level.md) défini sur 1 ou 2, une erreur d’exécution se produit si vous essayez d’accéder à un élément dans un objet queue vide.  Pour plus d’informations, consultez [Itérateurs vérifiés](../standard-library/checked-iterators.md).
+En cas de compilation avec [_ITERATOR_DEBUG_LEVEL](../standard-library/iterator-debug-level.md) défini sur 1 ou 2, une erreur d’exécution se produit si vous essayez d’accéder à un élément dans un objet queue vide.  Consultez [Itérateurs vérifiés](../standard-library/checked-iterators.md) pour plus d’informations.
 
 ### <a name="example"></a>Exemple
 
@@ -319,14 +319,14 @@ void push(const Type& val);
 
 ### <a name="parameters"></a>Paramètres
 
-*multiples*\
+\ *Val*
 Élément ajouté à l’arrière de l’objet queue.
 
 ### <a name="remarks"></a>Notes
 
 L’arrière de l’objet queue correspond à la position occupée par l’élément ajouté le plus récemment et au dernier élément à la fin du conteneur.
 
-### <a name="example"></a>Exemples
+### <a name="example"></a>Exemple
 
 ```cpp
 // queue_push.cpp
@@ -370,7 +370,7 @@ explicit queue(const container_type& right);
 
 ### <a name="parameters"></a>Paramètres
 
-*Oui*\
+\ *droit*
 Conteneur **const** dont l’objet queue construit doit être une copie.
 
 ### <a name="remarks"></a>Notes
@@ -437,7 +437,7 @@ size_type size() const;
 
 Longueur actuelle de l’objet queue.
 
-### <a name="example"></a>Exemples
+### <a name="example"></a>Exemple
 
 ```cpp
 // queue_size.cpp
@@ -480,7 +480,7 @@ Le type est un synonyme du `size_type` pour le conteneur de base adapté par la 
 
 ### <a name="example"></a>Exemple
 
-Pour savoir comment déclarer et utiliser `size_type`, consultez l’exemple [queue::front](#front).
+Pour savoir comment déclarer et utiliser [, consultez l’exemple ](#front)queue::front`size_type`.
 
 ## <a name="value_type"></a>value_type
 
@@ -527,4 +527,4 @@ The element at the front of the queue is 69.
 ## <a name="see-also"></a>Voir aussi
 
 [Sécurité des threads dans la bibliothèque C++ Standard](../standard-library/thread-safety-in-the-cpp-standard-library.md)\
-[Informations de référence sur la bibliothèque standard C++](../standard-library/cpp-standard-library-reference.md)
+[Informations de référence sur la bibliothèque C++ Standard](../standard-library/cpp-standard-library-reference.md)

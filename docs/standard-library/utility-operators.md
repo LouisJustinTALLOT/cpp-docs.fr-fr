@@ -17,18 +17,18 @@ helpviewer_keywords:
 - std::operator&lt;= (utility)
 - std::operator== (utility)
 ms.openlocfilehash: ec6c996487dc2e6c5ce628fe5e080b4f601479d9
-ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
+ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68246290"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78854859"
 ---
 # <a name="ltutilitygt-operators"></a>&lt;utility&gt;, opérateurs
 
 > [!NOTE]
-> À l’aide des opérateurs `Type&` figurent sous `namespace rel_ops`.
+> Les opérateurs qui utilisent `Type&` sont inclus sous `namespace rel_ops`.
 
-## <a name="op_neq"></a> opérateur ! =
+## <a name="op_neq"></a>opérateur ! =
 
 Teste si l'objet pair situé à gauche de l'opérateur n'est pas égal à l'objet pair situé à droite.
 
@@ -42,11 +42,11 @@ template <class T, class U>
 
 ### <a name="parameters"></a>Paramètres
 
-*Gauche*\
-Objet de type `pair`.
+\ *gauche*
+Objet de type `pair`.
 
-*Oui*\
-Objet de type `pair`.
+\ *droit*
+Objet de type `pair`.
 
 ### <a name="return-value"></a>Valeur de retour
 
@@ -103,7 +103,7 @@ The pairs p1 and p2 are not equal.
 The pairs p1 and p3 are equal.
 ```
 
-## <a name="op_eq_eq"></a> operator==
+## <a name="op_eq_eq"></a>opérateur = =
 
 Teste si l'objet pair situé à gauche de l'opérateur est égal à l'objet pair situé à droite.
 
@@ -114,11 +114,11 @@ constexpr bool operator==(const pair<T, U>& left, const pair<T, U>& right);
 
 ### <a name="parameters"></a>Paramètres
 
-*Gauche*\
-Objet de type `pair`.
+\ *gauche*
+Objet de type `pair`.
 
-*Oui*\
-Objet de type `pair`.
+\ *droit*
+Objet de type `pair`.
 
 ### <a name="return-value"></a>Valeur de retour
 
@@ -177,10 +177,10 @@ constexpr bool operator<(const pair<T, U>& left, const pair<T, U>& right);
 
 ### <a name="parameters"></a>Paramètres
 
-*Gauche*\
+\ *gauche*
 Objet de type `pair` situé à gauche de l'opérateur.
 
-*Oui*\
+\ *droit*
 Objet de type `pair` situé à droite de l'opérateur.
 
 ### <a name="return-value"></a>Valeur de retour
@@ -189,7 +189,7 @@ Objet de type `pair` situé à droite de l'opérateur.
 
 ### <a name="remarks"></a>Notes
 
-Le `left` `pair` objet est dit strictement inférieure à la `right` `pair` si l’objet *gauche* est inférieur et non égal à *droit*.
+L’objet `left` `pair` est dit qu’il est strictement inférieur à l’objet `pair` `right` si *Left* est inférieur à et différent de *Right*.
 
 Dans une comparaison de paires, le premier élément des valeurs des deux paires a la priorité la plus élevée. Si elles diffèrent, le résultat de leur comparaison est pris comme résultat de la comparaison de la paire. Si les valeurs des premiers éléments ne sont pas différentes, les valeurs des deuxièmes éléments sont comparées et le résultat de leur comparaison est pris comme résultat de la comparaison de la paire.
 
@@ -240,7 +240,7 @@ The pair p1 is less than the pair p2.
 The pair p1 is not less than the pair p3.
 ```
 
-## <a name="op_lt_eq"></a> Opérateur&lt;=
+## <a name="op_lt_eq"></a>&lt;d’opérateur =
 
 Teste si l'objet pair situé à gauche de l'opérateur est inférieur ou égal à l'objet pair situé à droite.
 
@@ -254,10 +254,10 @@ constexpr bool operator<=(const pair<T, U>& left, const pair<T, U>& right);
 
 ### <a name="parameters"></a>Paramètres
 
-*Gauche*\
+\ *gauche*
 Objet de type `pair` situé à gauche de l'opérateur.
 
-*Oui*\
+\ *droit*
 Objet de type `pair` situé à droite de l'opérateur.
 
 ### <a name="return-value"></a>Valeur de retour
@@ -268,7 +268,7 @@ Objet de type `pair` situé à droite de l'opérateur.
 
 Dans une comparaison de paires, le premier élément des valeurs des deux paires a la priorité la plus élevée. Si elles diffèrent, le résultat de leur comparaison est pris comme résultat de la comparaison de la paire. Si les valeurs des premiers éléments ne sont pas différentes, les valeurs des deuxièmes éléments sont comparées et le résultat de leur comparaison est pris comme résultat de la comparaison de la paire.
 
-### <a name="example"></a>Exemples
+### <a name="example"></a>Exemple
 
 ```cpp
 // utility_op_le.cpp
@@ -339,10 +339,10 @@ constexpr bool operator>(const pair<T, U>& left, const pair<T, U>& right);
 
 ### <a name="parameters"></a>Paramètres
 
-*Gauche*\
+\ *gauche*
 Objet de type `pair` situé à gauche de l'opérateur.
 
-*Oui*\
+\ *droit*
 Objet de type `pair` situé à droite de l'opérateur.
 
 ### <a name="return-value"></a>Valeur de retour
@@ -351,7 +351,7 @@ Objet de type `pair` situé à droite de l'opérateur.
 
 ### <a name="remarks"></a>Notes
 
-Le `left` `pair` objet est dit être strictement supérieure à la `right` `pair` si l’objet *gauche* est supérieur à et différent de *droit*.
+L’objet `left` `pair` est dit qu’il est strictement supérieur à l’objet `pair` `right` si *Left* est supérieur et différent de *Right*.
 
 Dans une comparaison de paires, le premier élément des valeurs des deux paires a la priorité la plus élevée. Si elles diffèrent, le résultat de leur comparaison est pris comme résultat de la comparaison de la paire. Si les valeurs des premiers éléments ne sont pas différentes, les valeurs des deuxièmes éléments sont comparées et le résultat de leur comparaison est pris comme résultat de la comparaison de la paire.
 
@@ -412,7 +412,7 @@ The pair p1 is greater than the pair p3.
 The pair p1 is not greater than the pair p4.
 ```
 
-## <a name="op_gt_eq"></a> Opérateur&gt;=
+## <a name="op_gt_eq"></a>&gt;d’opérateur =
 
 Teste si l'objet pair situé à gauche de l'opérateur est supérieur ou égal à l'objet pair situé à droite.
 
@@ -426,10 +426,10 @@ template <class T, class U>
 
 ### <a name="parameters"></a>Paramètres
 
-*Gauche*\
+\ *gauche*
 Objet de type `pair` situé à gauche de l'opérateur.
 
-*Oui*\
+\ *droit*
 Objet de type `pair` situé à droite de l'opérateur.
 
 ### <a name="return-value"></a>Valeur de retour
@@ -440,7 +440,7 @@ Objet de type `pair` situé à droite de l'opérateur.
 
 Dans une comparaison de paires, le premier élément des valeurs des deux paires a la priorité la plus élevée. Si elles diffèrent, le résultat de leur comparaison est pris comme résultat de la comparaison de la paire. Si les valeurs des premiers éléments ne sont pas différentes, les valeurs des deuxièmes éléments sont comparées et le résultat de leur comparaison est pris comme résultat de la comparaison de la paire.
 
-### <a name="example"></a>Exemples
+### <a name="example"></a>Exemple
 
 ```cpp
 // utility_op_ge.cpp

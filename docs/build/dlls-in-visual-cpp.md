@@ -10,11 +10,11 @@ helpviewer_keywords:
 - DLLs [C++], about DLLs
 ms.assetid: 5216bca4-51e2-466b-b221-0e3e776056f0
 ms.openlocfilehash: 7083924f137fa9283da40404c7d15183e59c0b1c
-ms.sourcegitcommit: b8c22e6d555cf833510753cba7a368d57e5886db
+ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/29/2020
-ms.locfileid: "76821419"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78872527"
 ---
 # <a name="create-cc-dlls-in-visual-studio"></a>Créer des CC++ /dll dans Visual Studio
 
@@ -121,7 +121,7 @@ Décrit comment les DLL et les bibliothèques incluses dans les MFC obéissent a
 [Appel de fonctions dll à partir d’applications Visual Basic](calling-dll-functions-from-visual-basic-applications.md)\
 Explique comment appeler des fonctions DLL à partir d'applications Visual Basic.
 
-## <a name="related-sections"></a>Rubriques connexes
+## <a name="related-sections"></a>Sections connexes
 
 [Utilisation de MFC dans le cadre d’une DLL](../mfc/tn011-using-mfc-as-part-of-a-dll.md)\
 Décrit les DLL MFC standard, qui vous permettent d’utiliser la bibliothèque MFC dans le cadre d’une bibliothèque de liens dynamiques Windows.

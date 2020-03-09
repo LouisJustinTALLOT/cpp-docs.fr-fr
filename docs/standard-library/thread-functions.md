@@ -15,11 +15,11 @@ helpviewer_keywords:
 - std::swap [C++]
 - std::yield [C++]
 ms.openlocfilehash: 8064cec7e94a909d7dc2e1b22142d362bb7b9488
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68458499"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78876168"
 ---
 # <a name="ltthreadgt-functions"></a>&lt;thread&gt;, fonctions
 
@@ -89,10 +89,10 @@ void swap(thread& Left, thread& Right) noexcept;
 
 ### <a name="parameters"></a>Paramètres
 
-*Gauche*\
+\ *gauche*
 Objet **thread** gauche.
 
-*Oui*\
+\ *droit*
 Objet **thread** approprié.
 
 ### <a name="remarks"></a>Notes
