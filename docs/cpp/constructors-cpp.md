@@ -7,11 +7,11 @@ helpviewer_keywords:
 - instance constructors
 ms.assetid: 3e9f7211-313a-4a92-9584-337452e061a9
 ms.openlocfilehash: 985c63c5c937f9e85b6898cdbcc61f347688b96d
-ms.sourcegitcommit: 00f50ff242031d6069aa63c81bc013e432cae0cd
+ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/30/2019
-ms.locfileid: "75546391"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78865777"
 ---
 # <a name="constructors-c"></a>Constructeurs (C++)
 
@@ -692,7 +692,7 @@ int main(){
 }
 ```
 
-## <a name="in-this-section"></a>Dans cette section
+## <a name="in-this-section"></a>Contenu de cette section
 
 - [Constructeurs de copie et opérateurs d’assignation de copie](copy-constructors-and-copy-assignment-operators-cpp.md)
 - [Constructeurs de déplacement et opérateurs d’assignation de déplacement](move-constructors-and-move-assignment-operators-cpp.md)
