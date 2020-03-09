@@ -11,15 +11,15 @@ f1_keywords:
 - memory/std::operator==
 ms.assetid: 257e3ba9-c4c2-4ae8-9b11-b156ba9c28de
 ms.openlocfilehash: 661f1bb4c0f5734d88dd23f73c69b362f59a76c2
-ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
+ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68243820"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78884069"
 ---
 # <a name="ltmemorygt-operators"></a>&lt;memory&gt;, opérateurs
 
-## <a name="op_neq"></a> opérateur ! =
+## <a name="op_neq"></a>opérateur ! =
 
 Teste l'inégalité entre des objets.
 
@@ -42,10 +42,10 @@ bool operator!=(
 
 ### <a name="parameters"></a>Paramètres
 
-*Gauche*\
+\ *gauche*
 L'un des objets dont l'inégalité doit être testée.
 
-*Oui*\
+\ *droit*
 L'un des objets dont l'inégalité doit être testée.
 
 *Ty1*\
@@ -60,7 +60,7 @@ Type contrôlé par le pointeur partagé de droite.
 
 ### <a name="remarks"></a>Notes
 
-Le premier opérateur de modèle retourne false. (Tous les allocateurs par défaut sont égaux).
+Le premier opérateur de modèle retourne false. (Tous les allocateurs par défaut sont égaux.)
 
 Les deuxième et troisième opérateurs de modèle retournent `!(left == right)`.
 
@@ -93,7 +93,7 @@ int main( )
 The allocator objects Alloc & v1Alloc are equal.
 ```
 
-### <a name="example"></a>Exemples
+### <a name="example"></a>Exemple
 
 ```cpp
 // std__memory__operator_ne.cpp
@@ -120,7 +120,7 @@ sp0 != sp0 == false
 sp0 != sp1 == true
 ```
 
-## <a name="op_eq_eq"></a> operator==
+## <a name="op_eq_eq"></a>opérateur = =
 
 Teste l'égalité entre des objets.
 
@@ -143,10 +143,10 @@ bool operator==(
 
 ### <a name="parameters"></a>Paramètres
 
-*Gauche*\
+\ *gauche*
 L'un des objets dont l'égalité doit être testée.
 
-*Oui*\
+\ *droit*
 L'un des objets dont l'égalité doit être testée.
 
 *Ty1*\
@@ -161,7 +161,7 @@ Type contrôlé par le pointeur partagé de droite.
 
 ### <a name="remarks"></a>Notes
 
-Le premier opérateur de modèle retourne true. (Tous les allocateurs par défaut sont égaux).
+Le premier opérateur de modèle retourne true. (Tous les allocateurs par défaut sont égaux.)
 
 Les deuxième et troisième opérateurs de modèle retournent `left.get() ==  right.get()`.
 
@@ -232,7 +232,7 @@ sp0 == sp0 == true
 sp0 == sp1 == false
 ```
 
-## <a name="op_gt_eq"></a> Opérateur&gt;=
+## <a name="op_gt_eq"></a>&gt;d’opérateur =
 
 Teste si un objet est supérieur ou égal à un second objet.
 
@@ -250,10 +250,10 @@ bool operator>=(
 
 ### <a name="parameters"></a>Paramètres
 
-*Gauche*\
+\ *gauche*
 L'un des objets à comparer.
 
-*Oui*\
+\ *droit*
 L'un des objets à comparer.
 
 *Ty1*\
@@ -284,10 +284,10 @@ bool operator<(
 
 ### <a name="parameters"></a>Paramètres
 
-*Gauche*\
+\ *gauche*
 L'un des objets à comparer.
 
-*Oui*\
+\ *droit*
 L'un des objets à comparer.
 
 *Ty1*\
@@ -296,7 +296,7 @@ Type contrôlé par le pointeur de gauche.
 *Ty2*\
 Type contrôlé par le pointeur de droite.
 
-## <a name="op_lt_eq"></a> Opérateur&lt;=
+## <a name="op_lt_eq"></a>&lt;d’opérateur =
 
 Teste si un objet est inférieur ou égal à un second objet.
 
@@ -314,10 +314,10 @@ bool operator<=(
 
 ### <a name="parameters"></a>Paramètres
 
-*Gauche*\
+\ *gauche*
 L'un des objets à comparer.
 
-*Oui*\
+\ *droit*
 L'un des objets à comparer.
 
 *Ty1*\
@@ -328,7 +328,7 @@ Type contrôlé par le pointeur partagé de droite.
 
 ### <a name="remarks"></a>Notes
 
-Retournent les opérateurs de modèle `left.get() <= right.get()`
+Les opérateurs de modèle retournent `left.get() <= right.get()`
 
 ## <a name="op_gt"></a>, opérateur&gt;
 
@@ -348,10 +348,10 @@ bool operator>(
 
 ### <a name="parameters"></a>Paramètres
 
-*Gauche*\
+\ *gauche*
 L'un des objets à comparer.
 
-*Oui*\
+\ *droit*
 L'un des objets à comparer.
 
 *Ty1*\
@@ -360,7 +360,7 @@ Type contrôlé par le pointeur partagé de gauche.
 *Ty2*\
 Type contrôlé par le pointeur partagé de droite.
 
-## <a name="op_lt_lt"></a> Opérateur&lt;&lt;
+## <a name="op_lt_lt"></a>&lt;d’opérateur &lt;
 
 Écrit le pointeur partagé dans le flux.
 
@@ -372,10 +372,10 @@ std::basic_ostream<Elem, Tr>& operator<<(std::basic_ostream<Elem, Tr>& out,
 
 ### <a name="parameters"></a>Paramètres
 
-*Elem*\
+\ *elem*
 Type de l’élément de flux.
 
-*TR*\
+*Tr*\
 Type de caractéristiques d’élément de flux.
 
 *Ty*\
@@ -384,7 +384,7 @@ Type contrôlé par le pointeur partagé.
 *out*\
 Flux de sortie.
 
-*SP*\
+*sp*\
 Pointeur partagé.
 
 ### <a name="remarks"></a>Notes

@@ -11,15 +11,15 @@ helpviewer_keywords:
 - std::get [C++]
 - std::swap [C++]
 ms.openlocfilehash: 61b5404d0f22cd902e35f6bee680df3c719804f2
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68456775"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78875886"
 ---
 # <a name="ltarraygt-functions"></a>&lt;array&gt;, fonctions
 
-L' \<en-tête > de tableau comprend deux fonctions non `get` membres `swap`, et, qui opèrent sur des objets **tableau** .
+L’en-tête de > de tableau \<comprend deux fonctions non membres, `get` et `swap`, qui opèrent sur des objets de **tableau** .
 
 |||
 |-|-|
@@ -42,11 +42,11 @@ constexpr T&& get(array<T, N>&& arr) noexcept;
 
 ### <a name="parameters"></a>Paramètres
 
-*Évaluer*\
+*Index*\
 Décalage de l’élément.
 
 *T*\
-Type d’un élément.
+Type d'un élément.
 
 *N*\
 Nombre d’éléments dans le tableau.
@@ -88,7 +88,7 @@ int main()
 
 ## <a name="swap"></a>  swap
 
-Une spécialisation de modèle non membre `std::swap` de qui échange deux objets de **tableau** .
+Une spécialisation de modèle non membre de `std::swap` qui échange deux objets **tableau** .
 
 ```cpp
 template <class Ty, std::size_t N>
@@ -98,15 +98,15 @@ void swap(array<Ty, N>& left, array<Ty, N>& right);
 ### <a name="parameters"></a>Paramètres
 
 *Ty*\
-Type d’un élément.
+Type d'un élément.
 
 *N*\
 Taille du tableau.
 
-*gauche*\
+\ *gauche*
 Premier tableau à échanger.
 
-*Oui*\
+\ *droit*
 Deuxième tableau à échanger.
 
 ### <a name="remarks"></a>Notes

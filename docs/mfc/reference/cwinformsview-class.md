@@ -1,5 +1,5 @@
 ---
-title: CWinFormsView, classe
+title: CWinFormsView (classe)
 ms.date: 11/04/2016
 f1_keywords:
 - CWinFormsView
@@ -11,13 +11,13 @@ helpviewer_keywords:
 - CWinFormsView [MFC], GetControl
 ms.assetid: d597e397-6529-469b-88f5-7f65a6b9e895
 ms.openlocfilehash: f4a5e6b88527dad8606092ccebd4899bba5181f6
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62323296"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78872445"
 ---
-# <a name="cwinformsview-class"></a>CWinFormsView, classe
+# <a name="cwinformsview-class"></a>CWinFormsView (classe)
 
 Fournit les fonctionnalités génériques pour l'hébergement d'un contrôle Windows Forms en tant que vue MFC.
 
@@ -31,39 +31,39 @@ class CWinFormsView : public CView;
 
 ### <a name="public-constructors"></a>Constructeurs publics
 
-|Nom|Description|
+|Name|Description|
 |----------|-----------------|
-|[CWinFormsView::CWinFormsView](#cwinformsview)|Construit un objet `CWinFormsView`.|
+|[CWinFormsView :: CWinFormsView](#cwinformsview)|Construit un objet `CWinFormsView`.|
 
 ### <a name="public-methods"></a>M&#233;thodes publiques
 
-|Nom|Description|
+|Name|Description|
 |----------|-----------------|
-|[CWinFormsView::GetControl](#getcontrol)|Récupère un pointeur vers le contrôle Windows Forms.|
+|[CWinFormsView :: GetControl](#getcontrol)|Récupère un pointeur désignant le contrôle de Windows Forms.|
 
 ### <a name="public-operators"></a>Op&#233;rateurs publics
 
-|Nom||
+|Name||
 |----------|-|
-|[Contrôle de CWinFormsView::operator ^](#operator_control)|Effectue un cast d’un type en un pointeur vers un contrôle Windows Forms.|
+|[CWinFormsView :: Operator, contrôle ^](#operator_control)|Effectue un cast d’un type en pointeur vers un contrôle de Windows Forms.|
 
 ## <a name="remarks"></a>Notes
 
-MFC utilise le `CWinFormsView` classe pour héberger un contrôle Windows Forms de .NET Framework au sein d’une vue MFC. Le contrôle est un enfant de la vue native et occupe la zone cliente de la vue MFC. Le résultat est similaire à un `CFormView` vue, ce qui vous permet de tirer parti du Concepteur Windows Forms et l’exécution pour créer des vues basées sur le formulaire riches.
+MFC utilise la classe `CWinFormsView` pour héberger un contrôle Windows Forms .NET Framework dans une vue MFC. Le contrôle est un enfant de la vue native et occupe toute la zone cliente de la vue MFC. Le résultat est similaire à une vue de `CFormView`, ce qui vous permet de tirer parti du concepteur de Windows Forms et du moment de l’exécution pour créer des vues riches basées sur des formulaires.
 
-Pour plus d’informations sur l’utilisation de Windows Forms, consultez [à l’aide d’un contrôle d’utilisateur Windows Form dans MFC](../../dotnet/using-a-windows-form-user-control-in-mfc.md).
-
-> [!NOTE]
->  Intégration de MFC Windows Forms fonctionne uniquement dans les projets qui se lient dynamiquement avec MFC (projets dans lesquels AFXDLL est défini).
+Pour plus d’informations sur l’utilisation de Windows Forms, consultez [utilisation d’un contrôle utilisateur Windows Form dans MFC](../../dotnet/using-a-windows-form-user-control-in-mfc.md).
 
 > [!NOTE]
->  CWinFormsView ne prend pas en charge la fenêtre de séparateur MFC ( [CSplitterWnd, classe](../../mfc/reference/csplitterwnd-class.md)). Actuellement uniquement Windows Forms séparateur contrôle est pris en charge.
+>  L’intégration des Windows Forms MFC fonctionne uniquement dans les projets qui sont liés de manière dynamique aux MFC (projets dans lesquels AFXDLL est défini).
 
-## <a name="requirements"></a>Configuration requise
+> [!NOTE]
+>  CWinFormsView ne prend pas en charge la fenêtre fractionné MFC ( [classe CSplitterWnd](../../mfc/reference/csplitterwnd-class.md)). Actuellement, seul le contrôle Splitter Windows Forms est pris en charge.
 
-**En-tête :** afxwinforms.h
+## <a name="requirements"></a>Spécifications
 
-##  <a name="cwinformsview"></a>  CWinFormsView::CWinFormsView
+**En-tête :** afxwinforms. h
+
+##  <a name="cwinformsview"></a>CWinFormsView :: CWinFormsView
 
 Construit un objet `CWinFormsView`.
 
@@ -78,15 +78,15 @@ Pointeur vers le type de données du contrôle utilisateur Windows Forms.
 
 ### <a name="example"></a>Exemple
 
-Dans l’exemple suivant, le `CUserView` hérite de la classe `CWinFormsView` et transmet le type de `UserControl1` à la `CWinFormsView` constructeur. `UserControl1` est un contrôle personnalisé dans ControlLibrary1.dll.
+Dans l’exemple suivant, la classe `CUserView` hérite de `CWinFormsView` et passe le type de `UserControl1` au constructeur `CWinFormsView`. `UserControl1` est un contrôle personnalisé dans ControlLibrary1. dll.
 
 [!code-cpp[NVC_MFC_Managed#1](../../mfc/reference/codesnippet/cpp/cwinformsview-class_1.h)]
 
 [!code-cpp[NVC_MFC_Managed#2](../../mfc/reference/codesnippet/cpp/cwinformsview-class_2.cpp)]
 
-##  <a name="getcontrol"></a>  CWinFormsView::GetControl
+##  <a name="getcontrol"></a>CWinFormsView :: GetControl
 
-Récupère un pointeur vers le contrôle Windows Forms.
+Récupère un pointeur désignant le contrôle de Windows Forms.
 
 ```
 System::Windows::Forms::Control^ GetControl() const;
@@ -94,15 +94,15 @@ System::Windows::Forms::Control^ GetControl() const;
 
 ### <a name="return-value"></a>Valeur de retour
 
-Pointeur vers un objet `System.Windows.Forms.Control` .
+Pointeur vers un objet `System.Windows.Forms.Control`.
 
 ### <a name="remarks"></a>Notes
 
-Pour obtenir un exemple montrant comment utiliser Windows Forms, consultez [à l’aide d’un contrôle d’utilisateur Windows Form dans MFC](../../dotnet/using-a-windows-form-user-control-in-mfc.md).
+Pour obtenir un exemple d’utilisation de Windows Forms, consultez [utilisation d’un contrôle utilisateur Windows Form dans MFC](../../dotnet/using-a-windows-form-user-control-in-mfc.md).
 
-##  <a name="operator_control"></a>  Contrôle de CWinFormsView::operator ^
+##  <a name="operator_control"></a>CWinFormsView :: Operator, contrôle ^
 
-Effectue un cast d’un type en un pointeur vers un contrôle Windows Forms.
+Effectue un cast d’un type en pointeur vers un contrôle de Windows Forms.
 
 ```
 operator System::Windows::Forms::Control^() const;
@@ -110,11 +110,11 @@ operator System::Windows::Forms::Control^() const;
 
 ### <a name="remarks"></a>Notes
 
-Cet opérateur vous permet de transmettre un `CWinFormsView` vue aux fonctions qui acceptent un pointeur vers un contrôle Windows Forms de type <xref:System.Windows.Forms.Control>.
+Cet opérateur vous permet de passer une vue `CWinFormsView` aux fonctions qui acceptent un pointeur vers un contrôle Windows Forms de type <xref:System.Windows.Forms.Control>.
 
 ### <a name="example"></a>Exemple
 
-  Consultez [CWinFormsView::GetControl](#getcontrol).
+  Consultez [CWinFormsView :: GetControl](#getcontrol).
 
 ## <a name="see-also"></a>Voir aussi
 

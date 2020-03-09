@@ -97,11 +97,11 @@ helpviewer_keywords:
 - std::array [C++], swap
 ms.assetid: fdfd43a5-b2b5-4b9e-991f-93bf10fb4293
 ms.openlocfilehash: e93f5089e62956e7473c95eb6835046b5fe992bf
-ms.sourcegitcommit: 217fac22604639ebd62d366a69e6071ad5b724ac
+ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/19/2019
-ms.locfileid: "74189406"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78883798"
 ---
 # <a name="array-class-c-standard-library"></a>array, classe (Bibliothèque C++ standard)
 
@@ -166,7 +166,7 @@ class array;
 
 ## <a name="remarks"></a>Notes
 
-Le type a un constructeur par défaut `array()` et un opérateur d'assignation par défaut `operator=`, et il satisfait aux conditions requises pour un `aggregate`. Par conséquent, les objets de type `array<Ty, N>` peuvent être initialisés à l'aide d'un initialiseur d'agrégat. Par exemple :
+Le type a un constructeur par défaut `array()` et un opérateur d'assignation par défaut `operator=`, et il satisfait aux conditions requises pour un `aggregate`. Par conséquent, les objets de type `array<Ty, N>` peuvent être initialisés à l'aide d'un initialiseur d'agrégat. Par exemple,
 
 ```cpp
 array<int, 4> ai = { 1, 2, 3 };
@@ -174,9 +174,9 @@ array<int, 4> ai = { 1, 2, 3 };
 
 crée l'objet `ai` qui contient quatre valeurs entières, initialise les trois premiers éléments respectivement aux valeurs 1, 2 et 3, et initialise le quatrième élément à la valeur 0.
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
-**En-tête :** \<array>
+**En-tête :** \<tableau >
 
 **Espace de noms :** std
 
