@@ -13,13 +13,13 @@ helpviewer_keywords:
 - std::istream_iterator [C++], traits_type
 ms.assetid: fb52a8cd-7f71-48d1-b73e-4b064e2a8d16
 ms.openlocfilehash: 941d625e388edc75dfe25a2de0e609c6d955ff19
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68447758"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78869888"
 ---
-# <a name="istreamiterator-class"></a>istream_iterator, classe
+# <a name="istream_iterator-class"></a>istream_iterator, classe
 
 Décrit un objet itérateur d'entrée. Elle extrait des objets de classe `Type` d’un flux d’entrée, auquel elle accède par le biais d’un objet qu’elle stocke, de type `pointer` vers `basic_istream`< `CharType`, `Traits`>.
 
@@ -42,7 +42,7 @@ Type de l'objet à extraire du flux d'entrée.
 *CharType*\
 Type qui représente le type de caractère de `istream_iterator`. Cet argument est facultatif et sa valeur par défaut est **char**.
 
-*Caractéristiques*\
+\ *traits*
 Type qui représente le type de caractère de `istream_iterator`. Cet argument est facultatif et sa valeur par défaut est `char_traits`< `CharType`>.
 
 *Distance*\
@@ -56,7 +56,7 @@ Après avoir construit ou incrémenté un objet de classe istream_iterator avec 
 |-|-|
 |[istream_iterator](#istream_iterator)|Construit un itérateur de fin de flux comme `istream_iterator` par défaut ou un `istream_iterator` initialisé sur le type de flux de l'itérateur à partir duquel il lit.|
 
-### <a name="typedefs"></a>Typedef
+### <a name="typedefs"></a>Typedefs
 
 |Nom de type|Description|
 |-|-|
@@ -72,9 +72,9 @@ Après avoir construit ou incrémenté un objet de classe istream_iterator avec 
 |[operator->](#op_arrow)|Retourne la valeur d'un membre, le cas échéant.|
 |[operator++](#op_add_add)|Extrait un objet incrémenté du flux d'entrée ou copie l'objet avant de l'incrémenter et retourne la copie.|
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
-**En-tête :** \<iterator>
+**En-tête :** \<itérateur >
 
 **Espace de noms :** std
 
@@ -143,7 +143,7 @@ Flux d’entrée à lire pour initialiser le `istream_iterator`.
 
 ### <a name="remarks"></a>Notes
 
-Le premier constructeur initialise le pointeur de flux d’entrée avec un pointeur Null et crée un itérateur de fin de flux. Le deuxième constructeur initialise le pointeur de flux d’entrée avec *& _Istr*, puis tente d’extraire et de stocker un objet `Type`de type.
+Le premier constructeur initialise le pointeur de flux d’entrée avec un pointeur Null et crée un itérateur de fin de flux. Le deuxième constructeur initialise le pointeur de flux d’entrée avec *& _Istr*, puis tente d’extraire et de stocker un objet de type `Type`.
 
 Vous pouvez utiliser l’itérateur de fin de flux pour tester si un `istream_iterator` a atteint la fin d’un flux.
 
@@ -191,11 +191,11 @@ typedef basic_istream<CharType, Traits> istream_type;
 
 ### <a name="remarks"></a>Notes
 
-Le type est un synonyme de `basic_istream`\< **CharType**, **Traits**>.
+Le type est un synonyme de `basic_istream`\< **CharType**, **traits**>.
 
-### <a name="example"></a>Exemples
+### <a name="example"></a>Exemple
 
-Pour découvrir comment déclarer et utiliser `istream_type`, consultez l’exemple relatif à [istream_iterator](#istream_iterator).
+Pour découvrir comment déclarer et utiliser [, consultez l’exemple relatif à ](#istream_iterator)istream_iterator`istream_type`.
 
 ## <a name="op_star"></a>  istream_iterator::operator*
 
@@ -255,7 +255,7 @@ Valeur d’un membre, le cas échéant.
 
 ### <a name="remarks"></a>Notes
 
-`i->m`équivaut à`(*i).m`
+`i->m` équivaut à `(*i).m`
 
 L'opérateur retourne `&*this`.
 
@@ -303,9 +303,9 @@ istream_iterator<Type, CharType, Traits, Distance> operator++(int);
 
 ### <a name="return-value"></a>Valeur de retour
 
-Le premier opérateur membre retourne une référence à l’objet incrémenté de type `Type` extrait à partir du flux d’entrée et la deuxième fonction membre retourne une copie de l’objet.
+Le premier opérateur membre retourne une référence à l’objet incrémenté de type `Type` extraite du flux d’entrée et la deuxième fonction membre retourne une copie de l’objet.
 
-### <a name="example"></a>Exemples
+### <a name="example"></a>Exemple
 
 ```cpp
 // istream_iterator_operator_incr.cpp
@@ -390,4 +390,4 @@ int main( )
 [iterator, struct](../standard-library/iterator-struct.md)\
 [\<iterator>](../standard-library/iterator.md)\
 [Sécurité des threads dans la bibliothèque C++ Standard](../standard-library/thread-safety-in-the-cpp-standard-library.md)\
-[Informations de référence sur la bibliothèque standard C++](../standard-library/cpp-standard-library-reference.md)
+[Informations de référence sur la bibliothèque C++ Standard](../standard-library/cpp-standard-library-reference.md)

@@ -18,47 +18,47 @@ helpviewer_keywords:
 - RegistryDataExchange function, global functions
 ms.assetid: d58b8a4e-975c-4417-8b34-d3c847f679b3
 ms.openlocfilehash: c5fdaceb47b6cd09dd9d66f26af1337a8dc6bbae
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62275077"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78863176"
 ---
 # <a name="registry-and-typelib-global-functions"></a>Fonctions globales du Registre et de TypeLib
 
-Ces fonctions fournissent la prise en charge pour le chargement et l’inscription d’une bibliothèque de types.
+Ces fonctions prennent en charge le chargement et l’inscription d’une bibliothèque de types.
 
 > [!IMPORTANT]
->  Les fonctions répertoriées dans les tableaux suivants ne peuvent pas être utilisées dans les applications qui s’exécutent dans le Windows Runtime.
+>  Les fonctions listées dans les tableaux suivants ne peuvent pas être utilisées dans les applications qui s’exécutent dans le Windows Runtime.
 
 |||
 |-|-|
 |[AfxRegCreateKey](#afxregcreatekey)|Crée la clé de Registre spécifiée.|
 |[AfxRegDeleteKey](#afxregdeletekey)|Supprime la clé de Registre spécifiée.|
-|[AfxRegisterPreviewHandler](#afxregisterpreviewhandler)|Un programme d’assistance pour inscrire un gestionnaire d’aperçus.|
-|[AfxUnregisterPreviewHandler](#afxunregisterpreviewhandler)| Un programme d’assistance pour annuler l’inscription d’un gestionnaire d’aperçus. |
+|[AfxRegisterPreviewHandler](#afxregisterpreviewhandler)|Une application d’assistance pour inscrire un gestionnaire d’aperçus.|
+|[AfxUnregisterPreviewHandler](#afxunregisterpreviewhandler)| Une application d’assistance pour annuler l’inscription d’un gestionnaire d’aperçus. |
 |[AtlRegisterTypeLib](#atlregistertypelib)|Cette fonction est appelée pour inscrire une bibliothèque de types.|
 |[AtlUnRegisterTypeLib](#atlunregistertypelib)|Cette fonction est appelée pour annuler l’inscription d’une bibliothèque de types|
 |[AfxRegOpenKey](#afxregopenkey)|Ouvre la clé de Registre spécifiée.|
 |[AfxRegOpenKeyEx](#afxregopenkeyex)|Ouvre la clé de Registre spécifiée.|
 |[AtlLoadTypeLib](#atlloadtypelib)|Cette fonction est appelée pour charger une bibliothèque de types.|
 |[AtlUpdateRegistryFromResourceD](#atlupdateregistryfromresourced)|Cette fonction est appelée pour mettre à jour le Registre à partir de la ressource fournie.|
-|[RegistryDataExchange](#registrydataexchange)|Cette fonction est appelée pour lire ou écrire dans le Registre système. Appelé par le [Macros d’échange de données de Registre](../../atl/reference/registry-data-exchange-macros.md).|
+|[RegistryDataExchange](#registrydataexchange)|Cette fonction est appelée pour lire ou écrire dans le Registre système. Appelée par les [macros d’échange de données du Registre](../../atl/reference/registry-data-exchange-macros.md).|
 
-Ces fonctions contrôlent quel nœud dans le Registre, le programme utilise pour stocker les informations.
+Ces fonctions contrôlent le nœud du registre utilisé par le programme pour stocker des informations.
 
 |||
 |-|-|
-|[AtlGetPerUserRegistration](#atlgetperuserregistration)|Récupère si l’application redirige l’accès au Registre vers le **HKEY_CURRENT_USER** ( **HKCU**) nœud.|
-|[AtlSetPerUserRegistration](#atlsetperuserregistration)|Définit si l’application redirige l’accès au Registre vers le **HKEY_CURRENT_USER** ( **HKCU**) nœud.|
+|[AtlGetPerUserRegistration](#atlgetperuserregistration)|Récupère si l’application redirige l’accès au registre vers le nœud **HKEY_CURRENT_USER** ( **HKCU**).|
+|[AtlSetPerUserRegistration](#atlsetperuserregistration)|Définit si l’application redirige l’accès au registre vers le nœud **HKEY_CURRENT_USER** ( **HKCU**).|
 
-### <a name="requirements"></a>Configuration requise
+### <a name="requirements"></a>Spécifications
 
-**En-tête :** atlbase.h
+**En-tête :** atlbase. h
 
-## <a name="atlgetperuserregistration"></a> AtlGetPerUserRegistration
+## <a name="atlgetperuserregistration"></a>AtlGetPerUserRegistration
 
-Utilisez cette fonction pour déterminer si l’application redirige l’accès au Registre pour le **HKEY_CURRENT_USER** (**HKCU**) nœud.
+Utilisez cette fonction pour déterminer si l’application redirige l’accès au registre vers le nœud **HKEY_CURRENT_USER** (**HKCU**).
 
 ### <a name="syntax"></a>Syntaxe
 
@@ -69,23 +69,23 @@ ATLINLINE ATLAPI AtlGetPerUserRegistration(bool* pEnabled);
 ### <a name="parameters"></a>Paramètres
 
 *pEnabled*<br/>
-[out] TRUE indique que les informations du Registre sont dirigées vers le **HKCU** nœud ; La valeur FALSE indique que l’application écrit les informations du Registre pour le nœud par défaut. Le nœud par défaut est **HKEY_CLASSES_ROOT** (**HKCR**).
+à La valeur TRUE indique que les informations du Registre sont dirigées vers le nœud **HKCU** . La valeur FALSe indique que l’application écrit les informations du Registre dans le nœud par défaut. Le nœud par défaut est **HKEY_CLASSES_ROOT** (**HKCR**).
 
 ### <a name="return-value"></a>Valeur de retour
 
-S_OK si la méthode réussite, sinon l’erreur HRESULT du code si une erreur se produit.
+S_OK si la méthode est réussie, sinon le code d’erreur HRESULT si une erreur se produit.
 
 ### <a name="remarks"></a>Notes
 
-La redirection du Registre n’est pas activée par défaut. Si vous activez cette option, l’accès au Registre est redirigé vers **HKEY_CURRENT_USER\Software\Classes**.
+La redirection du Registre n’est pas activée par défaut. Si vous activez cette option, l’accès au registre est redirigé vers **HKEY_CURRENT_USER \Software\Classes**.
 
-La redirection n’est pas globale. Uniquement les infrastructures MFC et ATL sont affectés par cette redirection de Registre.
+La redirection n’est pas globale. Seules les infrastructures MFC et ATL sont affectées par cette redirection du Registre.
 
-### <a name="requirements"></a>Configuration requise
+### <a name="requirements"></a>Spécifications
 
-**En-tête :** atlbase.h
+**En-tête :** atlbase. h
 
-## <a name="afxregcreatekey"></a> AfxRegCreateKey
+## <a name="afxregcreatekey"></a>AfxRegCreateKey
 
 Crée la clé de Registre spécifiée.
 
@@ -98,26 +98,26 @@ LONG AFXAPI AfxRegCreateKey(HKEY hKey, LPCTSTR lpSubKey, PHKEY phkResult, CAtlTr
 ### <a name="parameters"></a>Paramètres
 
 *hKey*<br/>
-Handle vers une clé de Registre ouverte.
+Handle d’une clé de Registre ouverte.
 
 *lpSubKey*<br/>
-Le nom d’une clé de cette fonction ouvre ou crée.
+Nom d’une clé que cette fonction ouvre ou crée.
 
 *phkResult*<br/>
-Pointeur vers une variable qui reçoit un handle à la clé ouvert ou créé.
+Pointeur vers une variable qui reçoit un handle vers la clé ouverte ou créée.
 
 *pTM*<br/>
-Pointeur vers un `CAtlTransactionManager` objet.
+Pointeur vers un objet `CAtlTransactionManager`.
 
 ### <a name="return-value"></a>Valeur de retour
 
-Si la fonction réussit, la valeur de retour est ERROR_SUCCESS. Si la fonction échoue, la valeur de retour est un code d’erreur différent de zéro défini dans Winerror.h.
+Si la fonction est réussie, la valeur de retour est ERROR_SUCCESS. Si la fonction échoue, la valeur de retour est un code d’erreur différent de zéro défini dans Winerror. h.
 
-### <a name="requirements"></a>Configuration requise
+### <a name="requirements"></a>Spécifications
 
 **En-tête :** afxpriv.h
 
-## <a name="afxregdeletekey"></a> AfxRegDeleteKey
+## <a name="afxregdeletekey"></a>AfxRegDeleteKey
 
 Supprime la clé de Registre spécifiée.
 
@@ -130,25 +130,25 @@ LONG AFXAPI AfxRegDeleteKey(HKEY hKey, LPCTSTR lpSubKey, CAtlTransactionManager*
 ### <a name="parameters"></a>Paramètres
 
 *hKey*<br/>
-Handle vers une clé de Registre ouverte.
+Handle d’une clé de Registre ouverte.
 
 *lpSubKey*<br/>
-Le nom de la clé à supprimer.
+Nom de la clé à supprimer.
 
 *pTM*<br/>
-Pointeur vers un `CAtlTransactionManager` objet.
+Pointeur vers un objet `CAtlTransactionManager`.
 
 ### <a name="return-value"></a>Valeur de retour
 
-Si la fonction réussit, la valeur de retour est ERROR_SUCCESS. Si la fonction échoue, la valeur de retour est un code d’erreur différent de zéro défini dans Winerror.h.
+Si la fonction est réussie, la valeur de retour est ERROR_SUCCESS. Si la fonction échoue, la valeur de retour est un code d’erreur différent de zéro défini dans Winerror. h.
 
-### <a name="requirements"></a>Configuration requise
+### <a name="requirements"></a>Spécifications
 
 **En-tête :** afxpriv.h
 
 ## <a name="afxregisterpreviewhandler"></a>
 
-Un programme d’assistance pour inscrire un gestionnaire d’aperçus.
+Une application d’assistance pour inscrire un gestionnaire d’aperçus.
 
 ### <a name="syntax"></a>Syntaxe
 
@@ -162,16 +162,16 @@ BOOL AFXAPI AfxRegisterPreviewHandler(LPCTSTR lpszCLSID, LPCTSTR lpszShortTypeNa
 Spécifie le CLSID du gestionnaire.
 
 *lpszShortTypeName*<br/>
-Spécifie le ProgID du gestionnaire.
+Spécifie l’identificateur de programme (ProgID) du gestionnaire.
 
 *lpszFilterExt*<br/>
-Spécifie l’extension de fichier enregistrée avec ce gestionnaire.
+Spécifie l’extension de fichier inscrite auprès de ce gestionnaire.
 
-### <a name="requirements"></a>Configuration requise
+### <a name="requirements"></a>Spécifications
 
 **En-tête :** afxdisp.h
 
-##  <a name="atlregistertypelib"></a>  AtlRegisterTypeLib
+##  <a name="atlregistertypelib"></a>AtlRegisterTypeLib
 
 Cette fonction est appelée pour inscrire une bibliothèque de types.
 
@@ -185,21 +185,21 @@ ATLAPI AtlRegisterTypeLib(HINSTANCE hInstTypeLib, LPCOLESTR lpszIndex);
 Handle de l’instance de module.
 
 *lpszIndex*<br/>
-Chaîne au format «\\\N », où N est l’index d’entier de la ressource de bibliothèque de type. Peut d’être NULL si aucun index n’est requis.
+Chaîne au format «\\\n », où N est l’index entier de la ressource de bibliothèque de types. Peut avoir la valeur NULL si aucun index n’est requis.
 
 ### <a name="return-value"></a>Valeur de retour
 
-Retourne S_OK en cas de réussite, ou une erreur HRESULT en cas d’échec.
+Retourne S_OK en cas de réussite, ou un HRESULT d’erreur en cas d’échec.
 
 ### <a name="remarks"></a>Notes
 
-Cette fonction d’assistance utilisée par [AtlComModuleUnregisterServer](server-registration-global-functions.md#atlcommoduleunregisterserver) et [CAtlComModule::RegisterTypeLib](../../atl/reference/catlcommodule-class.md#registertypelib).
+Cette fonction d’assistance est utilisée par [AtlComModuleUnregisterServer](server-registration-global-functions.md#atlcommoduleunregisterserver) et [CAtlComModule :: RegisterTypeLib](../../atl/reference/catlcommodule-class.md#registertypelib).
 
-### <a name="requirements"></a>Configuration requise
+### <a name="requirements"></a>Spécifications
 
-**En-tête :** atlbase.h
+**En-tête :** atlbase. h
 
-## <a name="afxregopenkey"></a> AfxRegOpenKey
+## <a name="afxregopenkey"></a>AfxRegOpenKey
 
 Ouvre la clé de Registre spécifiée.
 
@@ -212,26 +212,26 @@ LONG AFXAPI AfxRegOpenKey(HKEY hKey, LPCTSTR lpSubKey, PHKEY phkResult, CAtlTran
 ### <a name="parameters"></a>Paramètres
 
 *hKey*<br/>
-Handle vers une clé de Registre ouverte.
+Handle d’une clé de Registre ouverte.
 
 *lpSubKey*<br/>
-Le nom d’une clé de cette fonction ouvre ou crée.
+Nom d’une clé que cette fonction ouvre ou crée.
 
 *phkResult*<br/>
 Pointeur vers une variable qui reçoit un handle vers la clé créée.
 
 *pTM*<br/>
-Pointeur vers un `CAtlTransactionManager` objet.
+Pointeur vers un objet `CAtlTransactionManager`.
 
 ### <a name="return-value"></a>Valeur de retour
 
-Si la fonction réussit, la valeur de retour est ERROR_SUCCESS. Si la fonction échoue, la valeur de retour est un code d’erreur différent de zéro défini dans Winerror.h.
+Si la fonction est réussie, la valeur de retour est ERROR_SUCCESS. Si la fonction échoue, la valeur de retour est un code d’erreur différent de zéro défini dans Winerror. h.
 
-### <a name="requirements"></a>Configuration requise
+### <a name="requirements"></a>Spécifications
 
 **En-tête :** afxpriv.h
 
-## <a name="afxregopenkeyex"></a>  AfxRegOpenKeyEx
+## <a name="afxregopenkeyex"></a>AfxRegOpenKeyEx
 
 Ouvre la clé de Registre spécifiée.
 
@@ -244,34 +244,34 @@ LONG AFXAPI AfxRegOpenKeyEx(HKEY hKey, LPCTSTR lpSubKey, DWORD ulOptions, REGSAM
 ### <a name="parameters"></a>Paramètres
 
 *hKey*<br/>
-Handle vers une clé de Registre ouverte.
+Handle d’une clé de Registre ouverte.
 
 *lpSubKey*<br/>
-Le nom d’une clé de cette fonction ouvre ou crée.
+Nom d’une clé que cette fonction ouvre ou crée.
 
 *ulOptions*<br/>
 Ce paramètre est réservé et doit être égal à zéro.
 
 *samDesired*<br/>
-Masque qui spécifie les droits d’accès souhaité à la clé.
+Masque qui spécifie les droits d’accès souhaités à la clé.
 
 *phkResult*<br/>
-Pointeur vers une variable qui reçoit un handle à la clé ouvert.
+Pointeur vers une variable qui reçoit un handle vers la clé ouverte.
 
 *pTM*<br/>
-Pointeur vers un `CAtlTransactionManager` objet.
+Pointeur vers un objet `CAtlTransactionManager`.
 
 ### <a name="return-value"></a>Valeur de retour
 
-Si la fonction réussit, la valeur de retour est ERROR_SUCCESS. Si la fonction échoue, la valeur de retour est un code d’erreur différent de zéro défini dans Winerror.h.
+Si la fonction est réussie, la valeur de retour est ERROR_SUCCESS. Si la fonction échoue, la valeur de retour est un code d’erreur différent de zéro défini dans Winerror. h.
 
-### <a name="requirements"></a>Configuration requise
+### <a name="requirements"></a>Spécifications
 
 **En-tête :** afxpriv.h
 
-## <a name="afxunregisterpreviewhandler"></a> AfxUnregisterPreviewHandler
+## <a name="afxunregisterpreviewhandler"></a>AfxUnregisterPreviewHandler
 
-Un programme d’assistance pour annuler l’inscription d’un gestionnaire d’aperçus.
+Une application d’assistance pour annuler l’inscription d’un gestionnaire d’aperçus.
 
 ### <a name="syntax"></a>Syntaxe
 
@@ -282,15 +282,15 @@ BOOL AFXAPI AfxUnRegisterPreviewHandler(LPCTSTR lpszCLSID);
 ### <a name="parameters"></a>Paramètres
 
 *lpszCLSID*<br/>
-Spécifie le CLSID du gestionnaire doit être annulée.
+Spécifie le CLSID du gestionnaire dont l’inscription doit être annulée.
 
-### <a name="requirements"></a>Configuration requise
+### <a name="requirements"></a>Spécifications
 
 **En-tête :** afxdisp.h
 
-## <a name="atlsetperuserregistration"></a> AtlSetPerUserRegistration
+## <a name="atlsetperuserregistration"></a>AtlSetPerUserRegistration
 
-Définit si l’application redirige l’accès au Registre vers le **HKEY_CURRENT_USER** (**HKCU**) nœud.
+Définit si l’application redirige l’accès au registre vers le nœud **HKEY_CURRENT_USER** (**HKCU**).
 
 ### <a name="syntax"></a>Syntaxe
 
@@ -301,23 +301,23 @@ ATLINLINE ATLAPI AtlSetPerUserRegistration(bool bEnable);
 ### <a name="parameters"></a>Paramètres
 
 *bEnable*<br/>
-[in] TRUE indique que les informations du Registre sont dirigées vers le **HKCU** nœud ; La valeur FALSE indique que l’application écrit les informations du Registre pour le nœud par défaut. Le nœud par défaut est **HKEY_CLASSES_ROOT** (**HKCR**).
+dans La valeur TRUE indique que les informations du Registre sont dirigées vers le nœud **HKCU** . La valeur FALSe indique que l’application écrit les informations du Registre dans le nœud par défaut. Le nœud par défaut est **HKEY_CLASSES_ROOT** (**HKCR**).
 
 ### <a name="return-value"></a>Valeur de retour
 
-S_OK si la méthode réussite, sinon l’erreur HRESULT du code si une erreur se produit.
+S_OK si la méthode est réussie, sinon le code d’erreur HRESULT si une erreur se produit.
 
 ### <a name="remarks"></a>Notes
 
-La redirection du Registre n’est pas activée par défaut. Si vous activez cette option, l’accès au Registre est redirigé vers **HKEY_CURRENT_USER\Software\Classes**.
+La redirection du Registre n’est pas activée par défaut. Si vous activez cette option, l’accès au registre est redirigé vers **HKEY_CURRENT_USER \Software\Classes**.
 
-La redirection n’est pas globale. Uniquement les infrastructures MFC et ATL sont affectés par cette redirection de Registre.
+La redirection n’est pas globale. Seules les infrastructures MFC et ATL sont affectées par cette redirection du Registre.
 
-### <a name="requirements"></a>Configuration requise
+### <a name="requirements"></a>Spécifications
 
-**En-tête :** atlbase.h
+**En-tête :** atlbase. h
 
-##  <a name="atlunregistertypelib"></a>  AtlUnRegisterTypeLib
+##  <a name="atlunregistertypelib"></a>AtlUnRegisterTypeLib
 
 Cette fonction est appelée pour annuler l'inscription d'une bibliothèque de types.
 
@@ -335,21 +335,21 @@ ATLAPI AtlUnRegisterTypeLib(
 Handle de l’instance de module.
 
 *lpszIndex*<br/>
-Chaîne au format «\\\N », où N est l’index d’entier de la ressource de bibliothèque de type. Peut d’être NULL si aucun index n’est requis.
+Chaîne au format «\\\n », où N est l’index entier de la ressource de bibliothèque de types. Peut avoir la valeur NULL si aucun index n’est requis.
 
 ### <a name="return-value"></a>Valeur de retour
 
-Retourne S_OK en cas de réussite, ou une erreur HRESULT en cas d’échec.
+Retourne S_OK en cas de réussite, ou un HRESULT d’erreur en cas d’échec.
 
 ### <a name="remarks"></a>Notes
 
-Cette fonction d’assistance utilisée par [CAtlComModule::UnRegisterTypeLib](../../atl/reference/catlcommodule-class.md#unregistertypelib) et [AtlComModuleUnregisterServer](server-registration-global-functions.md#atlcommoduleunregisterserver).
+Cette fonction d’assistance est utilisée par [CAtlComModule :: UnRegisterTypeLib](../../atl/reference/catlcommodule-class.md#unregistertypelib) et [AtlComModuleUnregisterServer](server-registration-global-functions.md#atlcommoduleunregisterserver).
 
-### <a name="requirements"></a>Configuration requise
+### <a name="requirements"></a>Spécifications
 
-**En-tête :** atlbase.h
+**En-tête :** atlbase. h
 
-##  <a name="atlloadtypelib"></a>  AtlLoadTypeLib
+##  <a name="atlloadtypelib"></a>AtlLoadTypeLib
 
 Cette fonction est appelée pour charger une bibliothèque de types.
 
@@ -369,23 +369,23 @@ ATLINLINE ATLAPI AtlLoadTypeLib(
 Handle vers le module associé à la bibliothèque de types.
 
 *lpszIndex*<br/>
-Chaîne au format «\\\N », où N est l’index d’entier de la ressource de bibliothèque de type. Peut d’être NULL si aucun index n’est requis.
+Chaîne au format «\\\n », où N est l’index entier de la ressource de bibliothèque de types. Peut avoir la valeur NULL si aucun index n’est requis.
 
 *pbstrPath*<br/>
-Lors d’un retour, contient le chemin d’accès complet du module associé à la bibliothèque de types.
+En cas de retour réussi, contient le chemin d’accès complet du module associé à la bibliothèque de types.
 
 *ppTypeLib*<br/>
-Lors d’un retour, contient un pointeur vers un pointeur vers la bibliothèque de types chargés.
+En cas de retour réussi, contient un pointeur vers un pointeur vers la bibliothèque de types chargée.
 
 ### <a name="return-value"></a>Valeur de retour
 
-Retourne S_OK en cas de réussite, ou une erreur HRESULT en cas d’échec.
+Retourne S_OK en cas de réussite, ou un HRESULT d’erreur en cas d’échec.
 
 ### <a name="remarks"></a>Notes
 
-Cette fonction d’assistance utilisée par [AtlRegisterTypeLib](#atlregistertypelib) et [AtlUnRegisterTypeLib](#atlunregistertypelib).
+Cette fonction d’assistance est utilisée par [AtlRegisterTypeLib](#atlregistertypelib) et [AtlUnRegisterTypeLib](#atlunregistertypelib).
 
-##  <a name="atlupdateregistryfromresourced"></a>  AtlUpdateRegistryFromResourceD
+##  <a name="atlupdateregistryfromresourced"></a>AtlUpdateRegistryFromResourceD
 
 Cette fonction a été déconseillée dans Visual Studio 2013 et supprimée dans Visual Studio 2015.
 
@@ -393,7 +393,7 @@ Cette fonction a été déconseillée dans Visual Studio 2013 et supprimée dan
 <removed>
 ```
 
-##  <a name="registrydataexchange"></a>  RegistryDataExchange
+##  <a name="registrydataexchange"></a>RegistryDataExchange
 
 Cette fonction est appelée pour lire ou écrire dans le Registre système.
 
@@ -408,34 +408,34 @@ HRESULT RegistryDataExchange(
 
 ### <a name="parameters"></a>Paramètres
 
-*pT*<br/>
+*Unis*<br/>
 Pointeur vers l’objet actuel.
 
 *rdxOp*<br/>
-Une valeur d’énumération qui indique quelle opération la fonction doit effectuer. Consultez le tableau dans la section Notes pour les valeurs autorisées.
+Valeur enum qui indique l’opération que la fonction doit effectuer. Consultez le tableau dans la section Notes pour connaître les valeurs autorisées.
 
 *pItem*<br/>
-Pointeur vers les données qui doit être lues ou écrites dans le Registre. Les données peuvent également représenter une clé à supprimer à partir du Registre. La valeur par défaut est NULL.
+Pointeur vers les données à lire ou à écrire dans le registre. Les données peuvent également représenter une clé à supprimer du Registre. La valeur par défaut est NULL.
 
 ### <a name="return-value"></a>Valeur de retour
 
-Retourne S_OK en cas de réussite, ou une erreur HRESULT en cas d’échec.
+Retourne S_OK en cas de réussite, ou un HRESULT d’erreur en cas d’échec.
 
 ### <a name="remarks"></a>Notes
 
-Les macros [BEGIN_RDX_MAP](registry-data-exchange-macros.md#begin_rdx_map) et [END_RDX_MAP](registry-data-exchange-macros.md#end_rdx_map) développez à une fonction qui appelle `RegistryDataExchange`.
+Les macros [BEGIN_RDX_MAP](registry-data-exchange-macros.md#begin_rdx_map) et [END_RDX_MAP](registry-data-exchange-macros.md#end_rdx_map) se développent jusqu’à une fonction qui appelle `RegistryDataExchange`.
 
-Les valeurs enum possibles qui indiquent que l’opération la fonction doit effectuer sont affichées dans le tableau suivant :
+Les valeurs d’énumération possibles qui indiquent l’opération que la fonction doit effectuer sont indiquées dans le tableau suivant :
 
 |Valeur enum|Opération|
 |----------------|---------------|
 |eReadFromReg|Lire les données à partir du Registre.|
-|eWriteToReg|Écrire des données dans le Registre.|
-|eDeleteFromReg|Supprimer la clé du Registre.|
+|eWriteToReg|Écrire des données dans le registre.|
+|eDeleteFromReg|Supprimez la clé du Registre.|
 
-### <a name="requirements"></a>Configuration requise
+### <a name="requirements"></a>Spécifications
 
-**En-tête :** atlbase.h
+**En-tête :** atlbase. h
 
 ## <a name="see-also"></a>Voir aussi
 
