@@ -6,11 +6,11 @@ f1_keywords:
 - istream/std::ws
 ms.assetid: 0301ea0d-4ded-4841-83dd-4253b55b3188
 ms.openlocfilehash: fc512558969bc25d2b16afa2b93219e13d0b28ca
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68458765"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78874806"
 ---
 # <a name="ltistreamgt-functions"></a>&lt;istream&gt;, fonction
 
@@ -36,10 +36,10 @@ void swap(
 
 ### <a name="parameters"></a>Paramètres
 
-*gauche*\
+\ *gauche*
 Un flux.
 
-*Oui*\
+\ *droit*
 Un flux.
 
 ## <a name="ws"></a>  ws
@@ -57,17 +57,17 @@ Un flux.
 
 ### <a name="return-value"></a>Valeur de retour
 
-flux.
+Flux.
 
 ### <a name="remarks"></a>Notes
 
-Le manipulateur extrait et ignore tout élément `ch` pour lequel [use_facet](../standard-library/basic-filebuf-class.md#open)< **ctype**\< **Elem**> >( [getloc](../standard-library/ios-base-class.md#getloc)). **is**( **ctype**\< **Elem**>:: **space**, **ch**) a la valeur true.
+Le manipulateur extrait et ignore tous les éléments `ch` pour lesquels [use_facet](../standard-library/basic-filebuf-class.md#open)< **ctype**\< **elem**> > ( [getloc](../standard-library/ios-base-class.md#getloc)). **is**( **ctype**\< **elem**>:: **Space**, **ch**) a la valeur true.
 
 La fonction appelle [setstate](../standard-library/basic-ios-class.md#setstate)( **eofbit**) si elle rencontre la fin du fichier pendant l’extraction d’éléments. Elle retourne *_Istr*.
 
 ### <a name="example"></a>Exemple
 
-Pour obtenir un exemple d’utilisation de `ws`, consultez [operator>>](../standard-library/istream-operators.md#op_gt_gt).
+Pour obtenir un exemple d’utilisation de [, consultez ](../standard-library/istream-operators.md#op_gt_gt)operator>>`ws`.
 
 ## <a name="see-also"></a>Voir aussi
 
