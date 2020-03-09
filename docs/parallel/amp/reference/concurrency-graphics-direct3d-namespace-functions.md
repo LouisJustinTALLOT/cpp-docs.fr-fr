@@ -7,11 +7,11 @@ f1_keywords:
 - amp_graphics/Concurrency::graphics::direct3d::make_texture
 ms.assetid: 11ee1d42-333e-4ae9-95ac-4cf68c06d13d
 ms.openlocfilehash: 665732700ee6b85425f332a0eb96a5b75864a74e
-ms.sourcegitcommit: a8ef52ff4a4944a1a257bdaba1a3331607fb8d0f
+ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/11/2020
-ms.locfileid: "77126966"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78855797"
 ---
 # <a name="concurrencygraphicsdirect3d-namespace-functions"></a>Concurrency::graphics::direct3d, fonctions de l’espace de noms
 
@@ -163,7 +163,7 @@ Vecteur de 4 valeurs à ajouter à la somme masquée de différences absolues de
 
 Retourne un vecteur de 4 sommes. Chaque somme correspond à la somme masquée de différences absolues d’alignements d’octets différents entre la valeur de référence et la valeur source.
 
-## <a name="requirements"></a>Spécifications
+## <a name="requirements"></a>Configuration requise
 
 **En-tête :** amp_graphics. h
 

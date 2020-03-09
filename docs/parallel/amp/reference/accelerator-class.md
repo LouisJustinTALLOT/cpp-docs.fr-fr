@@ -41,11 +41,11 @@ helpviewer_keywords:
 - accelerator class
 ms.assetid: 37eed593-cf87-4611-9cdc-e98df6c2377a
 ms.openlocfilehash: 72a570ab28696730f835c42748a6ea12b865ca55
-ms.sourcegitcommit: a8ef52ff4a4944a1a257bdaba1a3331607fb8d0f
+ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/11/2020
-ms.locfileid: "77127161"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78855914"
 ---
 # <a name="accelerator-class"></a>accelerator, classe
 
@@ -61,14 +61,14 @@ class accelerator;
 
 ### <a name="public-constructors"></a>Constructeurs publics
 
-|Name|Description|
+|Nom|Description|
 |----------|-----------------|
 |[Constructeur d’accélérateurs](#ctor)|Initialise une nouvelle instance de la classe `accelerator`.|
 |[~ Accélérateur (destructeur)](#ctor)|Détruit l’objet `accelerator`.|
 
-### <a name="public-methods"></a>M&#233;thodes publiques
+### <a name="public-methods"></a>Méthodes publiques
 
-|Name|Description|
+|Nom|Description|
 |----------|-----------------|
 |[create_view](#create_view)|Crée et retourne un objet `accelerator_view` sur cet accélérateur.|
 |[get_all](#get_all)|Retourne un vecteur d’objets `accelerator` qui représentent tous les accélérateurs disponibles.|
@@ -90,7 +90,7 @@ class accelerator;
 
 ### <a name="public-operators"></a>Op&#233;rateurs publics
 
-|Name|Description|
+|Nom|Description|
 |----------|-----------------|
 |[operator!=](#operator_neq)|Compare cet objet `accelerator` avec un autre et retourne **false** s’ils sont identiques ; Sinon, retourne la **valeur true**.|
 |[operator=](#operator_eq)|Copie le contenu de l’objet `accelerator` spécifié dans celui-ci.|
@@ -98,7 +98,7 @@ class accelerator;
 
 ### <a name="public-data-members"></a>Membres de données publiques
 
-|Name|Description|
+|Nom|Description|
 |----------|-----------------|
 |[cpu_accelerator](#cpu_accelerator)|Obtient une constante de chaîne pour le `accelerator`de l’UC.|
 |[dedicated_memory](#dedicated_memory)|Obtient la mémoire dédiée pour le `accelerator`, en kilo-octets.|
@@ -127,7 +127,7 @@ Un accélérateur est une fonctionnalité matérielle qui est optimisée pour l�
 
 Vous pouvez construire un objet `accelerator` en énumérant les appareils disponibles, ou en obtenant l’appareil par défaut, le périphérique de référence ou le périphérique WARP.
 
-## <a name="requirements"></a>Spécifications
+## <a name="requirements"></a>Configuration requise
 
 **En-tête :** amprt. h
 

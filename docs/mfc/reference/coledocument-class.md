@@ -53,11 +53,11 @@ helpviewer_keywords:
 - COleDocument [MFC], OnUpdatePasteMenu
 ms.assetid: dc2ecb99-03e1-44c7-bb69-48056dd1b672
 ms.openlocfilehash: b92c796fdaa972966dcbfa85b1e34f267b6c629c
-ms.sourcegitcommit: 180f63704f6ddd07a4172a93b179cf0733fd952d
+ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70741609"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78867012"
 ---
 # <a name="coledocument-class"></a>COleDocument, classe
 
@@ -111,15 +111,15 @@ class COleDocument : public CDocument
 
 ## <a name="remarks"></a>Notes
 
-`COleDocument`est dérivé de `CDocument`, ce qui permet à vos applications OLE d’utiliser l’architecture document/vue fournie par le bibliothèque MFC (Microsoft Foundation Class).
+`COleDocument` est dérivée de `CDocument`, ce qui permet à vos applications OLE d’utiliser l’architecture document/vue fournie par le bibliothèque MFC (Microsoft Foundation Class).
 
-`COleDocument`traite un document comme une collection d’objets [CDocItem](../../mfc/reference/cdocitem-class.md) pour gérer des éléments OLE. Les applications conteneur et serveur requièrent une telle architecture, car leurs documents doivent pouvoir contenir des éléments OLE. Les classes [COleServerItem](../../mfc/reference/coleserveritem-class.md) et [COleClientItem](../../mfc/reference/coleclientitem-class.md) , dérivées de `CDocItem`, gèrent les interactions entre les applications et les éléments OLE.
+`COleDocument` traite un document comme une collection d’objets [CDocItem](../../mfc/reference/cdocitem-class.md) pour gérer des éléments OLE. Les applications conteneur et serveur requièrent une telle architecture, car leurs documents doivent pouvoir contenir des éléments OLE. Les classes [COleServerItem](../../mfc/reference/coleserveritem-class.md) et [COleClientItem](../../mfc/reference/coleclientitem-class.md) , dérivées de `CDocItem`, gèrent les interactions entre les applications et les éléments OLE.
 
-Si vous écrivez une application de conteneur simple, dérivez votre classe `COleDocument`de document à partir de. Si vous écrivez une application de conteneur qui prend en charge la liaison aux éléments incorporés contenus dans ses documents, dérivez votre classe de document à partir de [COleLinkingDoc](../../mfc/reference/colelinkingdoc-class.md). Si vous écrivez une application serveur ou un conteneur/serveur mixte, dérivez votre classe de document à partir de [COleServerDoc](../../mfc/reference/coleserverdoc-class.md). `COleLinkingDoc`et `COleServerDoc` sont dérivés `COleDocument`de, donc ces classes héritent de tous les `COleDocument` services `CDocument`disponibles dans et.
+Si vous écrivez une application de conteneur simple, dérivez votre classe de document de `COleDocument`. Si vous écrivez une application de conteneur qui prend en charge la liaison aux éléments incorporés contenus dans ses documents, dérivez votre classe de document à partir de [COleLinkingDoc](../../mfc/reference/colelinkingdoc-class.md). Si vous écrivez une application serveur ou un conteneur/serveur mixte, dérivez votre classe de document à partir de [COleServerDoc](../../mfc/reference/coleserverdoc-class.md). `COleLinkingDoc` et `COleServerDoc` sont dérivés de `COleDocument`, ces classes héritent donc de tous les services disponibles dans `COleDocument` et `CDocument`.
 
-Pour utiliser `COleDocument`, dérivez une classe de celle-ci et ajoutez des fonctionnalités permettant de gérer les données non-OLE de l’application, ainsi que les éléments incorporés ou liés. Si vous définissez `CDocItem`des classes dérivées de l’application pour stocker les données natives de l’application, vous pouvez `COleDocument` utiliser l’implémentation par défaut définie par pour stocker vos données OLE et non-OLE. Vous pouvez également concevoir vos propres structures de données pour le stockage de vos données non-OLE séparément des éléments OLE. Pour plus d’informations, consultez l' [article conteneurs : Fichiers](../../mfc/containers-compound-files.md)composés..
+Pour utiliser `COleDocument`, dérivez une classe de celle-ci et ajoutez des fonctionnalités permettant de gérer les données non-OLE de l’application, ainsi que les éléments incorporés ou liés. Si vous définissez des classes dérivées de `CDocItem`pour stocker les données natives de l’application, vous pouvez utiliser l’implémentation par défaut définie par `COleDocument` pour stocker vos données OLE et non-OLE. Vous pouvez également concevoir vos propres structures de données pour le stockage de vos données non-OLE séparément des éléments OLE. Pour plus d’informations, consultez l’article [Containers : Fichiers composés](../../mfc/containers-compound-files.md)..
 
-`CDocument`prend en charge l’envoi de votre document par courrier électronique si la prise en charge de la messagerie (MAPI) est présente. `COleDocument`a mis à jour [OnFileSendMail](#onfilesendmail) pour gérer correctement les documents composés. Pour plus d’informations, consultez les Articles prise en charge [MAPI](../../mfc/mapi.md) et [MAPI dans MFC](../../mfc/mapi-support-in-mfc.md).
+`CDocument` prend en charge l’envoi de votre document par courrier électronique si la prise en charge de la messagerie (MAPI) est présente. `COleDocument` a mis à jour [OnFileSendMail](#onfilesendmail) pour gérer correctement les documents composés. Pour plus d’informations, consultez les Articles prise en charge [MAPI](../../mfc/mapi.md) et [MAPI dans MFC](../../mfc/mapi-support-in-mfc.md).
 
 ## <a name="inheritance-hierarchy"></a>Hiérarchie d'héritage
 
@@ -150,7 +150,7 @@ Pointeur vers l’élément de document en cours d’ajout.
 
 ### <a name="remarks"></a>Notes
 
-Vous n’avez pas besoin d’appeler cette fonction explicitement quand elle est appelée par `COleClientItem` le `COleServerItem` constructeur ou qui accepte un pointeur vers un document.
+Vous n’avez pas besoin d’appeler cette fonction explicitement quand elle est appelée par le constructeur `COleClientItem` ou `COleServerItem` qui accepte un pointeur vers un document.
 
 ##  <a name="applyprintdevice"></a>  COleDocument::ApplyPrintDevice
 
@@ -164,10 +164,10 @@ BOOL ApplyPrintDevice(const PRINTDLG* ppd);
 ### <a name="parameters"></a>Paramètres
 
 *ptd*<br/>
-Pointeur vers une `DVTARGETDEVICE` structure de données qui contient des informations sur le nouvel appareil cible d’impression. Peut avoir la valeur NULL.
+Pointeur vers une structure de données `DVTARGETDEVICE`, qui contient des informations sur le nouvel appareil cible d’impression. Peut avoir la valeur NULL.
 
 *ppd*<br/>
-Pointeur vers une `PRINTDLG` structure de données qui contient des informations sur le nouvel appareil cible d’impression. Peut avoir la valeur NULL.
+Pointeur vers une structure de données `PRINTDLG`, qui contient des informations sur le nouvel appareil cible d’impression. Peut avoir la valeur NULL.
 
 ### <a name="return-value"></a>Valeur de retour
 
@@ -177,7 +177,7 @@ Différent de zéro si la fonction a réussi ; Sinon, 0.
 
 Cette fonction met à jour l’appareil cible d’impression pour tous les éléments, mais n’actualise pas le cache de présentation pour ces éléments. Pour mettre à jour le cache de présentation d’un élément, appelez [COleClientItem :: UpdateLink](../../mfc/reference/coleclientitem-class.md#updatelink).
 
-Les arguments de cette fonction contiennent des informations utilisées par OLE pour identifier l’appareil cible. La structure [PRINTDLG](/windows/win32/api/commdlg/ns-commdlg-printdlga) contient des informations que Windows utilise pour initialiser la boîte de dialogue d’impression courante. Une fois que l’utilisateur a fermé la boîte de dialogue, Windows retourne des informations sur les sélections de l’utilisateur dans cette structure. Le `m_pd` membre d’un objet [CPrintDialog](../../mfc/reference/cprintdialog-class.md) est une `PRINTDLG` structure.
+Les arguments de cette fonction contiennent des informations utilisées par OLE pour identifier l’appareil cible. La structure [PRINTDLG](/windows/win32/api/commdlg/ns-commdlg-printdlga) contient des informations que Windows utilise pour initialiser la boîte de dialogue d’impression courante. Une fois que l’utilisateur a fermé la boîte de dialogue, Windows retourne des informations sur les sélections de l’utilisateur dans cette structure. Le membre `m_pd` d’un objet [CPrintDialog](../../mfc/reference/cprintdialog-class.md) est une structure `PRINTDLG`.
 
 Pour plus d’informations, consultez la structure [PRINTDLG](/windows/win32/api/commdlg/ns-commdlg-printdlga) dans le SDK Windows.
 
@@ -206,7 +206,7 @@ Spécifie si la prise en charge des fichiers composés est activée ou désactiv
 
 ### <a name="remarks"></a>Notes
 
-C’est ce que l’on appelle également le stockage structuré. En général, vous appelez cette fonction à partir du `COleDocument`constructeur de votre classe dérivée de. Pour plus d’informations sur les documents composés, consultez [l’article conteneurs : Fichiers](../../mfc/containers-compound-files.md)composés..
+C’est ce que l’on appelle également le stockage structuré. En général, vous appelez cette fonction à partir du constructeur de votre classe dérivée de `COleDocument`. Pour plus d’informations sur les documents composés, consultez l’article [Containers : Fichiers composés](../../mfc/containers-compound-files.md)..
 
 Si vous n’appelez pas cette fonction membre, les documents sont stockés dans un format de fichier non structuré (« plat »).
 
@@ -239,8 +239,8 @@ COleClientItem* GetNextClientItem(POSITION& pos) const;
 
 ### <a name="parameters"></a>Paramètres
 
-*imprim*<br/>
-Référence à une valeur de position définie par un appel précédent à `GetNextClientItem`; la valeur initiale est retournée par `GetStartPosition` la fonction membre.
+*pos*<br/>
+Référence à une valeur de POSITION définie par un appel précédent à `GetNextClientItem`; la valeur initiale est retournée par la fonction membre `GetStartPosition`.
 
 ### <a name="return-value"></a>Valeur de retour
 
@@ -264,8 +264,8 @@ virtual CDocItem* GetNextItem(POSITION& pos) const;
 
 ### <a name="parameters"></a>Paramètres
 
-*imprim*<br/>
-Référence à une valeur de position définie par un appel précédent à `GetNextItem`; la valeur initiale est retournée par `GetStartPosition` la fonction membre.
+*pos*<br/>
+Référence à une valeur de POSITION définie par un appel précédent à `GetNextItem`; la valeur initiale est retournée par la fonction membre `GetStartPosition`.
 
 ### <a name="return-value"></a>Valeur de retour
 
@@ -289,8 +289,8 @@ COleServerItem* GetNextServerItem(POSITION& pos) const;
 
 ### <a name="parameters"></a>Paramètres
 
-*imprim*<br/>
-Référence à une valeur de position définie par un appel précédent à `GetNextServerItem`; la valeur initiale est retournée par `GetStartPosition` la fonction membre.
+*pos*<br/>
+Référence à une valeur de POSITION définie par un appel précédent à `GetNextServerItem`; la valeur initiale est retournée par la fonction membre `GetStartPosition`.
 
 ### <a name="return-value"></a>Valeur de retour
 
@@ -323,7 +323,7 @@ Pointeur vers l’élément OLE unique sélectionné ; NULL si aucun élément 
 
 ### <a name="remarks"></a>Notes
 
-L’implémentation par défaut recherche un seul élément sélectionné dans la liste des éléments OLE contenus et retourne un pointeur vers celui-ci. Si aucun élément n’est sélectionné ou si plusieurs éléments sont sélectionnés, la fonction retourne la valeur NULL. Vous devez substituer la `CView::IsSelected` fonction membre dans votre classe d’affichage pour que cette fonction fonctionne. Remplacez cette fonction si vous avez votre propre méthode de stockage des éléments OLE contenus.
+L’implémentation par défaut recherche un seul élément sélectionné dans la liste des éléments OLE contenus et retourne un pointeur vers celui-ci. Si aucun élément n’est sélectionné ou si plusieurs éléments sont sélectionnés, la fonction retourne la valeur NULL. Vous devez substituer la fonction membre `CView::IsSelected` dans votre classe d’affichage pour que cette fonction fonctionne. Remplacez cette fonction si vous avez votre propre méthode de stockage des éléments OLE contenus.
 
 ##  <a name="getstartposition"></a>  COleDocument::GetStartPosition
 
@@ -339,7 +339,7 @@ Valeur de POSITION qui peut être utilisée pour commencer l’itération dans l
 
 ### <a name="remarks"></a>Notes
 
-Transmettez la valeur retournée `GetNextClientItem`à `GetNextItem`, `GetNextServerItem`ou.
+Transmettez la valeur retournée à `GetNextItem`, `GetNextClientItem`ou `GetNextServerItem`.
 
 ##  <a name="hasblankitems"></a>  COleDocument::HasBlankItems
 
@@ -367,7 +367,7 @@ afx_msg void OnEditChangeIcon();
 
 ### <a name="remarks"></a>Notes
 
-`OnEditChangeIcon`crée et lance une `COleChangeIconDialog` boîte de dialogue changer d’icône.
+`OnEditChangeIcon` crée et lance une boîte de dialogue `COleChangeIconDialog` changer d’icône.
 
 ##  <a name="oneditconvert"></a>  COleDocument::OnEditConvert
 
@@ -379,7 +379,7 @@ afx_msg void OnEditConvert();
 
 ### <a name="remarks"></a>Notes
 
-`OnEditConvert`crée et lance une `COleConvertDialog` boîte de dialogue convertir.
+`OnEditConvert` crée et lance une boîte de dialogue `COleConvertDialog` convertir.
 
 Un exemple de conversion consiste à convertir un document Microsoft Word en un document WordPad.
 
@@ -393,7 +393,7 @@ afx_msg void OnEditLinks();
 
 ### <a name="remarks"></a>Notes
 
-`OnEditLinks`crée et lance une `COleLinksDialog` boîte de dialogue de liens qui permet à l’utilisateur de modifier les objets liés.
+`OnEditLinks` crée et lance une boîte de dialogue `COleLinksDialog` des liens qui permet à l’utilisateur de modifier les objets liés.
 
 ##  <a name="onfilesendmail"></a>  COleDocument::OnFileSendMail
 
@@ -405,9 +405,9 @@ afx_msg void OnFileSendMail();
 
 ### <a name="remarks"></a>Notes
 
-`OnFileSendMail`appelle `OnSaveDocument` pour sérialiser (enregistrer) les documents sans titre et modifiés dans un fichier temporaire, qui est ensuite envoyé par courrier électronique. Si le document n’a pas été modifié, un fichier temporaire n’est pas nécessaire. l’original est envoyé. `OnFileSendMail`charge MAPI32. DLL s’il n’a pas déjà été chargé.
+`OnFileSendMail` appelle `OnSaveDocument` pour sérialiser (enregistrer) les documents sans titre et modifiés dans un fichier temporaire, qui est ensuite envoyé par courrier électronique. Si le document n’a pas été modifié, un fichier temporaire n’est pas nécessaire. l’original est envoyé. `OnFileSendMail` charge MAPI32. DLL s’il n’a pas déjà été chargé.
 
-Contrairement à l’implémentation `OnFileSendMail` de `CDocument`pour, cette fonction gère correctement les fichiers composés.
+Contrairement à l’implémentation de `OnFileSendMail` pour `CDocument`, cette fonction gère correctement les fichiers composés.
 
 Pour plus d’informations, consultez les [rubriques MAPI](../../mfc/mapi.md) et la [prise en charge MAPI dans](../../mfc/mapi-support-in-mfc.md) les articles MFC.
 
@@ -439,11 +439,11 @@ afx_msg void OnUpdateEditChangeIcon(CCmdUI* pCmdUI);
 ### <a name="parameters"></a>Paramètres
 
 *pCmdUI*<br/>
-Pointeur vers une `CCmdUI` structure qui représente le menu qui a généré la commande de mise à jour. Le gestionnaire de mise à `Enable` jour appelle la fonction `CCmdUI` membre de la structure via *pCmdUI* pour mettre à jour l’interface utilisateur.
+Pointeur vers une structure `CCmdUI` qui représente le menu qui a généré la commande de mise à jour. Le gestionnaire de mise à jour appelle la fonction membre `Enable` de la structure `CCmdUI` par le biais de *pCmdUI* pour mettre à jour l’interface utilisateur.
 
 ### <a name="remarks"></a>Notes
 
-`OnUpdateEditChangeIcon`met à jour l’interface utilisateur de la commande selon qu’il existe ou non une icône valide dans le document. Substituez cette fonction pour modifier le comportement.
+`OnUpdateEditChangeIcon` met à jour l’interface utilisateur de la commande selon qu’il existe ou non une icône valide dans le document. Substituez cette fonction pour modifier le comportement.
 
 ##  <a name="onupdateeditlinksmenu"></a>  COleDocument::OnUpdateEditLinksMenu
 
@@ -456,11 +456,11 @@ afx_msg void OnUpdateEditLinksMenu(CCmdUI* pCmdUI);
 ### <a name="parameters"></a>Paramètres
 
 *pCmdUI*<br/>
-Pointeur vers une `CCmdUI` structure qui représente le menu qui a généré la commande de mise à jour. Le gestionnaire de mise à `Enable` jour appelle la fonction `CCmdUI` membre de la structure via *pCmdUI* pour mettre à jour l’interface utilisateur.
+Pointeur vers une structure `CCmdUI` qui représente le menu qui a généré la commande de mise à jour. Le gestionnaire de mise à jour appelle la fonction membre `Enable` de la structure `CCmdUI` par le biais de *pCmdUI* pour mettre à jour l’interface utilisateur.
 
 ### <a name="remarks"></a>Notes
 
-En commençant par le premier élément OLE du document, `OnUpdateEditLinksMenu` accède à chaque élément, teste si l’élément est un lien et, s’il s’agit d’un lien, active la commande links. Substituez cette fonction pour modifier le comportement.
+En commençant par le premier élément OLE du document, `OnUpdateEditLinksMenu` accède à chaque élément, vérifie si l’élément est un lien et, s’il s’agit d’un lien, active la commande links. Substituez cette fonction pour modifier le comportement.
 
 ##  <a name="onupdateobjectverbmenu"></a>  COleDocument::OnUpdateObjectVerbMenu
 
@@ -473,11 +473,11 @@ afx_msg void OnUpdateObjectVerbMenu(CCmdUI* pCmdUI);
 ### <a name="parameters"></a>Paramètres
 
 *pCmdUI*<br/>
-Pointeur vers une `CCmdUI` structure qui représente le menu qui a généré la commande de mise à jour. Le gestionnaire de mise à `Enable` jour appelle la fonction `CCmdUI` membre de la structure via *pCmdUI* pour mettre à jour l’interface utilisateur.
+Pointeur vers une structure `CCmdUI` qui représente le menu qui a généré la commande de mise à jour. Le gestionnaire de mise à jour appelle la fonction membre `Enable` de la structure `CCmdUI` par le biais de *pCmdUI* pour mettre à jour l’interface utilisateur.
 
 ### <a name="remarks"></a>Notes
 
-`OnUpdateObjectVerbMenu`met à jour l’interface utilisateur de la commande *ObjectName* selon qu’il existe ou non un objet valide dans le document. Si un objet existe, la commande *ObjectName* est activée dans le menu Edition. Quand cette commande de menu est sélectionnée, le sous-menu de verbes s’affiche. Le sous-menu de verbes contient toutes les commandes de verbe disponibles pour l’objet, telles que la modification, les propriétés, etc. Substituez cette fonction pour modifier le comportement.
+`OnUpdateObjectVerbMenu` met à jour l’interface utilisateur de la commande *ObjectName* selon qu’il existe ou non un objet valide dans le document. Si un objet existe, la commande *ObjectName* est activée dans le menu Edition. Quand cette commande de menu est sélectionnée, le sous-menu de verbes s’affiche. Le sous-menu de verbes contient toutes les commandes de verbe disponibles pour l’objet, telles que la modification, les propriétés, etc. Substituez cette fonction pour modifier le comportement.
 
 ##  <a name="onupdatepastelinkmenu"></a>  COleDocument::OnUpdatePasteLinkMenu
 
@@ -490,7 +490,7 @@ afx_msg void OnUpdatePasteLinkMenu(CCmdUI* pCmdUI);
 ### <a name="parameters"></a>Paramètres
 
 *pCmdUI*<br/>
-Pointeur vers une `CCmdUI` structure qui représente le menu qui a généré la commande de mise à jour. Le gestionnaire de mise à `Enable` jour appelle la fonction `CCmdUI` membre de la structure via *pCmdUI* pour mettre à jour l’interface utilisateur.
+Pointeur vers une structure `CCmdUI` qui représente le menu qui a généré la commande de mise à jour. Le gestionnaire de mise à jour appelle la fonction membre `Enable` de la structure `CCmdUI` par le biais de *pCmdUI* pour mettre à jour l’interface utilisateur.
 
 ### <a name="remarks"></a>Notes
 
@@ -507,7 +507,7 @@ afx_msg void OnUpdatePasteMenu(CCmdUI* pCmdUI);
 ### <a name="parameters"></a>Paramètres
 
 *pCmdUI*<br/>
-Pointeur vers une `CCmdUI` structure qui représente le menu qui a généré la commande de mise à jour. Le gestionnaire de mise à `Enable` jour appelle la fonction `CCmdUI` membre de la structure via *pCmdUI* pour mettre à jour l’interface utilisateur.
+Pointeur vers une structure `CCmdUI` qui représente le menu qui a généré la commande de mise à jour. Le gestionnaire de mise à jour appelle la fonction membre `Enable` de la structure `CCmdUI` par le biais de *pCmdUI* pour mettre à jour l’interface utilisateur.
 
 ### <a name="remarks"></a>Notes
 
