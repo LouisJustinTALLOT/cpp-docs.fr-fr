@@ -28,11 +28,11 @@ helpviewer_keywords:
 - char_traits class
 ms.assetid: 568e59f0-4521-4207-9223-9dcf6a16d620
 ms.openlocfilehash: efb926bc8c2ae55835391f884a0e3430e3da8aca
-ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
+ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/21/2019
-ms.locfileid: "72689901"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78856394"
 ---
 # <a name="char_traits-struct"></a>char_traits, struct
 
@@ -47,14 +47,14 @@ struct char_traits;
 
 ### <a name="parameters"></a>Paramètres
 
-*CharType* \
+*CharType*\
 Type de données de l'élément.
 
 ## <a name="remarks"></a>Notes
 
 Le struct de modèle décrit différentes caractéristiques de caractères pour le type `CharType`. Le modèle de classe [basic_string](../standard-library/basic-string-class.md) ainsi que plusieurs modèles de classe iostream, y compris [basic_ios](../standard-library/basic-ios-class.md), utilisent ces informations pour manipuler les éléments de type `CharType`. Un tel type d'élément ne doit pas requérir une construction ou une destruction explicite. Il doit fournir un constructeur par défaut, un constructeur de copie et un opérateur d'affectation avec la sémantique attendue. Une copie au niveau du bit doit avoir le même effet qu'une affectation. Aucune des fonctions membres de la structure char_traits ne peut lever des exceptions.
 
-### <a name="typedefs"></a>Typedef
+### <a name="typedefs"></a>Typedefs
 
 |Nom de type|Description|
 |-|-|
@@ -64,13 +64,13 @@ Le struct de modèle décrit différentes caractéristiques de caractères pour 
 |[pos_type](#pos_type)|Type entier qui peut représenter des positions dans un flux.|
 |[state_type](#state_type)|Type qui représente l'état de la conversion de caractères multi-octets dans un flux.|
 
-### <a name="member-functions"></a>Fonctions membres
+### <a name="member-functions"></a>Fonctions Membre
 
 |Fonction membre|Description|
 |-|-|
 |[assign](#assign)|Affecte la valeur d'un caractère à un autre.|
 |[compare](#compare)|Compare un nombre spécifié de caractères dans deux chaînes.|
-|[copy](#copy)|Copie un nombre spécifié de caractères d'une chaîne vers une autre. Obsolète. Utilisez [char_traits::_Copy_s](#copy_s) à la place.|
+|[copy](#copy)|Copie un nombre spécifié de caractères d'une chaîne vers une autre. Action déconseillée. Utilisez [char_traits::_Copy_s](#copy_s) à la place.|
 |[_Copy_s](#copy_s)|Copie un nombre spécifié de caractères d'une chaîne vers une autre.|
 |[eof](#eof)|Retourne le caractère de fin de fichier (EOF).|
 |[eq](#eq)|Teste si deux caractères `char_type` sont égaux.|
@@ -78,15 +78,15 @@ Le struct de modèle décrit différentes caractéristiques de caractères pour 
 |[find](#find)|Recherche la première occurrence d'un caractère spécifié dans une plage de caractères.|
 |[length](#length)|Retourne la longueur d'une chaîne.|
 |[lt](#lt)|Teste si un caractère est inférieur à un autre.|
-|[move](#move)|Copie un nombre spécifié de caractères d'une séquence vers une autre séquence qui la chevauche éventuellement. Obsolète. Utilisez [char_traits::_Move_s](#move_s) à la place.|
+|[move](#move)|Copie un nombre spécifié de caractères d'une séquence vers une autre séquence qui la chevauche éventuellement. Action déconseillée. Utilisez [char_traits::_Move_s](#move_s) à la place.|
 |[_Move_s](#move_s)|Copie un nombre spécifié de caractères d'une séquence vers une autre séquence qui la chevauche éventuellement.|
 |[not_eof](#not_eof)|Teste si un caractère est le caractère de fin de fichier (EOF).|
 |[to_char_type](#to_char_type)|Convertit un caractère `int_type` en caractère `char_type` correspondant et retourne le résultat.|
 |[to_int_type](#to_int_type)|Convertit un caractère `char_type` en caractère `int_type` correspondant et retourne le résultat.|
 
-## <a name="requirements"></a>spécifications
+## <a name="requirements"></a>Spécifications
 
-**En-tête :** \<string>
+**En-tête :** \<chaîne >
 
 **Espace de noms :** std
 
@@ -107,18 +107,18 @@ static char_type *assign(char_type* strTo,
 
 **_** *CharFrom* le caractère dont la valeur doit être affectée.
 
-*_CharTo* \
+*_CharTo*\
 Élément qui doit être auquel doit être affectée la valeur du caractère.
 
-*strTo* \
+*strTo*\
 Tableau de chaînes ou de caractères dont les éléments initiaux doivent recevoir des valeurs de caractère.
 
-*_Num* \
+*_Num*\
 Nombre d’éléments auxquels des valeurs vont être assignées.
 
 ### <a name="return-value"></a>Valeur de retour
 
-La deuxième fonction membre retourne un pointeur vers la chaîne dont les premiers éléments *_Num* ont reçu des valeurs de *_CharFrom*.
+La deuxième fonction membre retourne un pointeur vers la chaîne dont les premières *_Num* éléments ont été affectées à des valeurs de *_CharFrom*.
 
 ### <a name="example"></a>Exemple
 
@@ -189,13 +189,13 @@ static int compare(const char_type* str1,
 
 ### <a name="parameters"></a>Paramètres
 
-*str1* \
+*str1*\
 Première de deux chaînes à comparer à l’autre.
 
-*str2* \
+*str2*\
 Deuxième de deux chaînes à comparer à l’autre.
 
-*_Num* \
+*_Num*\
 Nombre d’éléments dans les chaînes à comparer.
 
 ### <a name="return-value"></a>Valeur de retour
@@ -255,13 +255,13 @@ static char_type *copy(char_type* _To,
 
 ### <a name="parameters"></a>Paramètres
 
-*_To* \
+*_To*\
 Élément au début du tableau de chaînes ou de caractères ciblé pour recevoir la séquence de caractères copiée.
 
-_ *From* \
+*_From*\
 Élément au début du tableau source de chaînes ou de caractères à copier.
 
-*_Num* \
+*_Num*\
 Nombre d’éléments à copier.
 
 ### <a name="return-value"></a>Valeur de retour
@@ -317,16 +317,16 @@ static char_type *_Copy_s(
 
 ### <a name="parameters"></a>Paramètres
 
-*dest* \
+*dest*\
 Tableau de chaînes ou de caractères ciblé pour recevoir la séquence de caractères copiée.
 
-*dest_size* \
+*dest_size*\
 La taille de *dest*. Si `char_type` est de **type char**, cette taille est en octets. Si `char_type` est **wchar_t**, cette taille est en mots.
 
-_ *From* \
+*_From*\
 Tableau source de chaînes ou de caractères à copier.
 
-*nombre* \
+*nombre*\
 Nombre d’éléments à copier.
 
 ### <a name="return-value"></a>Valeur de retour
@@ -429,10 +429,10 @@ static bool eq(const char_type& _Ch1, const char_type& _Ch2);
 
 ### <a name="parameters"></a>Paramètres
 
-*_Ch1* \
+*_Ch1*\
 Premier de deux caractères dont l’égalité est à vérifier.
 
-*_Ch2* \
+*_Ch2*\
 Deuxième de deux caractères dont l’égalité est à vérifier.
 
 ### <a name="return-value"></a>Valeur de retour
@@ -489,10 +489,10 @@ static bool eq_int_type(const int_type& _Ch1, const int_type& _Ch2);
 
 ### <a name="parameters"></a>Paramètres
 
-*_Ch1* \
+*_Ch1*\
 Premier des deux caractères dont l’égalité doit être testée en tant que `int_type`s.
 
-*_Ch2* \
+*_Ch2*\
 Deuxième de deux caractères dont l’égalité est à vérifier, représentés sous la forme d’un `int_type`s.
 
 ### <a name="return-value"></a>Valeur de retour
@@ -576,13 +576,13 @@ static const char_type* find(const char_type* str,
 
 ### <a name="parameters"></a>Paramètres
 
-*str* \
+*str*\
 Premier caractère de la chaîne dans laquelle s’effectue la recherche.
 
-*_Num* \
+*_Num*\
 Nombre de positions, à partir de la première, de la plage dans laquelle s’effectue la recherche.
 
-*_Ch* \
+*_Ch*\
 Caractère à rechercher dans la plage.
 
 ### <a name="return-value"></a>Valeur de retour
@@ -657,7 +657,7 @@ static size_t length(const char_type* str);
 
 ### <a name="parameters"></a>Paramètres
 
-*str* \
+*str*\
 Chaîne C dont la longueur doit être mesurée.
 
 ### <a name="return-value"></a>Valeur de retour
@@ -700,10 +700,10 @@ static bool lt(const char_type& _Ch1, const char_type& _Ch2);
 
 ### <a name="parameters"></a>Paramètres
 
-*_Ch1* \
+*_Ch1*\
 Premier de deux caractères dont la relation Inférieur à est à vérifier.
 
-*_Ch2* \
+*_Ch2*\
 Deuxième de deux caractères dont la relation Inférieur à est à vérifier.
 
 ### <a name="return-value"></a>Valeur de retour
@@ -763,13 +763,13 @@ static char_type *move(char_type* _To,
 
 ### <a name="parameters"></a>Paramètres
 
-*_To* \
+*_To*\
 Élément au début du tableau de chaînes ou de caractères ciblé pour recevoir la séquence de caractères copiée.
 
-_ *From* \
+*_From*\
 Élément au début du tableau source de chaînes ou de caractères à copier.
 
-*_Num* \
+*_Num*\
 Nombre d’éléments à copier à partir de la chaîne source.
 
 ### <a name="return-value"></a>Valeur de retour
@@ -840,16 +840,16 @@ static char_type *_Move_s(
 
 ### <a name="parameters"></a>Paramètres
 
-*dest* \
+*dest*\
 Élément au début du tableau de chaînes ou de caractères ciblé pour recevoir la séquence de caractères copiée.
 
-*dest_size* \
+*dest_size*\
 La taille de *dest*. Si `char_type` est de **type char**, il s’agit de bytes. Si `char_type` est **wchar_t**, il s’agit de mots.
 
-_ *From* \
+*_From*\
 Élément au début du tableau source de chaînes ou de caractères à copier.
 
-*nombre* \
+*nombre*\
 Nombre d’éléments à copier à partir de la chaîne source.
 
 ### <a name="return-value"></a>Valeur de retour
@@ -916,7 +916,7 @@ static int_type not_eof(const int_type& _Ch);
 
 ### <a name="parameters"></a>Paramètres
 
-*_Ch* \
+*_Ch*\
 Caractère représenté sous la forme d’un `int_type` à vérifier pour déterminer s’il est ou non le caractère EOF.
 
 ### <a name="return-value"></a>Valeur de retour
@@ -1024,14 +1024,14 @@ static char_type to_char_type(const int_type& _Ch);
 
 ### <a name="parameters"></a>Paramètres
 
-*_Ch* \
+*_Ch*\
 Caractère `int_type` à représenter sous la forme d’un `char_type`.
 
 ### <a name="return-value"></a>Valeur de retour
 
 Caractère `char_type` correspondant au caractère `int_type`.
 
-Une valeur de *_Ch* qui ne peut pas être représentée comme telle génère un résultat non spécifié.
+Une valeur de *_Ch* qui ne peut pas être représentée en tant que génère un résultat non spécifié.
 
 ### <a name="remarks"></a>Notes
 
@@ -1130,7 +1130,7 @@ static int_type to_int_type(const char_type& _Ch);
 
 ### <a name="parameters"></a>Paramètres
 
-*_Ch* \
+*_Ch*\
 Caractère `char_type` à représenter sous la forme d’un `int_type`.
 
 ### <a name="return-value"></a>Valeur de retour
@@ -1143,7 +1143,7 @@ Les opérations de conversion `to_int_type` et [to_char_type](#to_char_type) son
 
 `to_int_type` ( `to_char_type` ( *x* ) ) == *x*
 
-pour tout `int_type` *x* et
+pour tout `int_type` *x*et
 
 `to_char_type` ( `to_int_type` ( *x* ) ) == *x*
 

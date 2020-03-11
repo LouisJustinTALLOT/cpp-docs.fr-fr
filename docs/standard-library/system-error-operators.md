@@ -6,15 +6,15 @@ f1_keywords:
 - system_error/std::operator==
 ms.assetid: c14edefb-bd8a-4e90-88d3-c59c98e6f73c
 ms.openlocfilehash: 5cf6a455beb5654ef65f7411db4783a32c71d625
-ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
+ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68246213"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78876261"
 ---
-# <a name="ltsystemerrorgt-operators"></a>&lt;system_error&gt;, opérateurs
+# <a name="ltsystem_errorgt-operators"></a>&lt;system_error&gt;, opérateurs
 
-## <a name="op_eq_eq"></a> operator==
+## <a name="op_eq_eq"></a>opérateur = =
 
 Teste si l’objet situé à gauche de l’opérateur est égal à l’objet situé à droite.
 
@@ -31,10 +31,10 @@ bool operator==(const error_condition& left,
 
 ### <a name="parameters"></a>Paramètres
 
-*Gauche*\
+\ *gauche*
 Objet dont l’égalité doit être vérifiée.
 
-*Oui*\
+\ *droit*
 Objet dont l’égalité doit être vérifiée.
 
 ### <a name="return-value"></a>Valeur de retour
@@ -45,7 +45,7 @@ Objet dont l’égalité doit être vérifiée.
 
 Cette fonction retourne `left.category() == right.category() && left.value() == right.value()`.
 
-## <a name="op_neq"></a> opérateur ! =
+## <a name="op_neq"></a>opérateur ! =
 
 Teste si l’objet situé à gauche de l’opérateur n’est pas égal à l’objet situé à droite.
 
@@ -58,15 +58,15 @@ bool operator!=(const error_condition& left, const error_condition& right);
 
 ### <a name="parameters"></a>Paramètres
 
-*Gauche*\
+\ *gauche*
 Objet dont l’inégalité doit être vérifiée.
 
-*Oui*\
+\ *droit*
 Objet dont l’inégalité doit être vérifiée.
 
 ### <a name="return-value"></a>Valeur de retour
 
-**true** si l’objet passé dans *gauche* n’est pas égal à l’objet passé dans *droit*; sinon **false**.
+**true** si l’objet passé à *gauche* n’est pas égal à l’objet passé à *droite*; Sinon, **false**.
 
 ### <a name="remarks"></a>Notes
 
@@ -102,21 +102,21 @@ inline bool operator<(
 
 ### <a name="parameters"></a>Paramètres
 
-*Gauche*\
+\ *gauche*
 Objet à comparer.
 
-*Oui*\
+\ *droit*
 Objet à comparer.
 
 ### <a name="return-value"></a>Valeur de retour
 
-**true** si l’objet passé dans *gauche* est inférieur à l’objet passé dans *droite*; Sinon, **false**.
+**true** si l’objet passé à *gauche* est inférieur à l’objet passé à *droite*; Sinon, **false**.
 
 ### <a name="remarks"></a>Notes
 
 Cette fonction permet de tester l'ordre des erreurs.
 
-## <a name="op_ostream"></a> Opérateur&lt;&lt;
+## <a name="op_ostream"></a>&lt;d’opérateur &lt;
 
 ```cpp
 template <class charT, class traits> 

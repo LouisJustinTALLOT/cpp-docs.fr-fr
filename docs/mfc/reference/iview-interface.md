@@ -13,15 +13,15 @@ helpviewer_keywords:
 - views [MFC], classes
 ms.assetid: 9321f299-486e-4551-bee9-d2c4a7b91548
 ms.openlocfilehash: 22e08a70ff4cc742406a1489899c0ba1df7eb664
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62321940"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78872446"
 ---
 # <a name="iview-interface"></a>Interface IView
 
-Implémente plusieurs méthodes qui [CWinFormsView](../../mfc/reference/cwinformsview-class.md) utilise pour envoyer des notifications d’affichage à un contrôle géré.
+Implémente plusieurs méthodes que [CWinFormsView](../../mfc/reference/cwinformsview-class.md) utilise pour envoyer des notifications d’affichage à un contrôle managé.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -33,27 +33,27 @@ interface class IView
 
 ### <a name="public-methods"></a>M&#233;thodes publiques
 
-|Nom|Description|
+|Name|Description|
 |----------|-----------------|
-|[IView::OnActivateView](#onactivateview)|Appelé par MFC lorsqu’une vue est activée ou désactivée.|
-|[IView::OnInitialUpdate](#oninitialupdate)|Appelé par l’infrastructure une fois que la vue est d’abord attachée au document, mais avant l’affichage initial.|
-|[IView::OnUpdate](#onupdate)|Appelé par MFC, une fois que le document de la vue a été modifié ; Cette fonction permet l’affichage pour mettre à jour son affichage afin de refléter les modifications.|
+|[IView :: OnActivateView](#onactivateview)|Appelée par MFC lorsqu’une vue est activée ou désactivée.|
+|[IView :: OnInitialUpdate](#oninitialupdate)|Appelée par l’infrastructure après que la vue a été attachée pour la première fois au document, mais avant l’affichage initial de la vue.|
+|[IView :: OnUpdate](#onupdate)|Appelé par MFC après la modification du document de la vue ; Cette fonction permet à la vue de mettre à jour son affichage pour refléter les modifications.|
 
 ## <a name="remarks"></a>Notes
 
-`IView` implémente plusieurs méthodes qui `CWinFormsView` utilise pour transférer les notifications d’affichage communes à un contrôle géré hébergé. Il s’agit de [OnInitialUpdate](#oninitialupdate), [OnUpdate](#onupdate) et [OnActivateView](#onactivateview).
+`IView` implémente plusieurs méthodes que `CWinFormsView` utilise pour transférer des notifications d’affichage courantes à un contrôle managé hébergé. Il s’agit des [OnInitialUpdate](#oninitialupdate), [OnUpdate](#onupdate) et [OnActivateView](#onactivateview).
 
-`IView` est similaire à [CView](../../mfc/reference/cview-class.md), mais est utilisé uniquement avec des vues gérées et des contrôles.
+`IView` est similaire à [CView](../../mfc/reference/cview-class.md), mais est utilisé uniquement avec les vues et les contrôles managés.
 
-Pour plus d’informations sur l’utilisation de Windows Forms, consultez [à l’aide d’un contrôle d’utilisateur Windows Form dans MFC](../../dotnet/using-a-windows-form-user-control-in-mfc.md).
+Pour plus d’informations sur l’utilisation de Windows Forms, consultez [utilisation d’un contrôle utilisateur Windows Form dans MFC](../../dotnet/using-a-windows-form-user-control-in-mfc.md).
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
-En-tête : les afxwinforms.h (défini dans l’assembly atlmfc\lib\mfcmifc80.dll)
+En-tête : afxwinforms. h (défini dans l’assembly atlmfc\lib\mfcmifc80.dll)
 
-## <a name="onactivateview"></a> IView::OnActivateView
+## <a name="onactivateview"></a>IView :: OnActivateView
 
-Appelé par MFC lorsqu’une vue est activée ou désactivée.
+Appelée par MFC lorsqu’une vue est activée ou désactivée.
 ```
 void OnActivateView(bool activate);
 ```
@@ -61,25 +61,25 @@ void OnActivateView(bool activate);
 ## <a name="parameters"></a>Paramètres
 
 *activate*<br/>
-Indique si la vue est activée ou désactivée.
+Indique si la vue est en cours d’activation ou de désactivation.
 
-## <a name="oninitialupdate"></a> IView::OnInitialUpdate
+## <a name="oninitialupdate"></a>IView :: OnInitialUpdate
 
-Appelé par l’infrastructure une fois que la vue est d’abord attachée au document, mais avant l’affichage initial.
+Appelée par l’infrastructure après que la vue a été attachée pour la première fois au document, mais avant l’affichage initial de la vue.
 ```
 void OnInitialUpdate();
 ```
 
-## <a name="onupdate"></a> IView::OnUpdate
+## <a name="onupdate"></a>IView :: OnUpdate
 
-Appelé par MFC, une fois que le document de la vue a été modifié.
+Appelée par MFC après la modification du document de la vue.
 ```
 void OnUpdate();
 ```
 
 ## <a name="remarks"></a>Notes
 
-Cette fonction permet l’affichage pour mettre à jour son affichage afin de refléter les modifications.
+Cette fonction permet à la vue de mettre à jour son affichage pour refléter les modifications.
 
 ## <a name="see-also"></a>Voir aussi
 

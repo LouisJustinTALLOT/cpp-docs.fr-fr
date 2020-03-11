@@ -37,11 +37,11 @@ helpviewer_keywords:
 - .rct files [C++]
 ms.assetid: 82be732a-cdcd-4a58-8de7-976d1418f86b
 ms.openlocfilehash: c997c7a1b2d7fb3a852a42fa78faf2be6074705e
-ms.sourcegitcommit: 9aab425662a66825772f091112986952f341f7c8
+ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/16/2019
-ms.locfileid: "72444967"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78866119"
 ---
 # <a name="how-to-create-resources-c"></a>Comment : créer des ressources (C++)
 
@@ -119,8 +119,8 @@ La **affichage des ressources** Windows comprend la boîte de dialogue **Ajouter
 |---|---|
 | **Type de ressource** | Spécifiez le type de ressource que vous souhaitez créer.<br/><br/>Vous pouvez développer les catégories de ressources curseur et boîte de dialogue pour afficher des ressources supplémentaires, qui se trouvent dans *. \Microsoft Visual Studio \<version\>\VC\VCResourceTemplates\\< LCID\>\mfc.RCT*. Si vous devez ajouter des fichiers. RCT, placez-les ici ou spécifiez un autre [chemin d’accès include](../windows/how-to-specify-include-directories-for-resources.md). Les ressources affichées au niveau supérieur dans le contrôle d’arborescence sont les ressources par défaut fournies par Visual Studio. Les ressources des fichiers. RCT apparaissent au deuxième niveau sous la catégorie appropriée. Il n’existe pas de limite prédéfinie pour le nombre de fichiers. RCT que vous pouvez ajouter.<br/><br/> |
 | **Nouveau** | Créez une ressource en fonction du type sélectionné dans la zone **type de ressource** et ouvrez la ressource dans l’éditeur approprié.<br/><br/>Par exemple, si vous créez une ressource de boîte de dialogue, celle-ci ouvre la ressource dans l' [éditeur de boîtes de dialogue](../windows/dialog-editor.md). |
-| **Importerer** | Ouvrez la boîte de dialogue **Importer** pour accéder à la ressource que vous souhaitez importer dans votre projet actuel.<br/><br/>Vous pouvez importer une image bitmap, une icône, un curseur, du code HTML, du son (. WAV) ou un fichier de ressources personnalisé. |
-| **Personnalisé** | Ouvrez la boîte de dialogue **nouvelle ressource personnalisée** pour créer une ressource personnalisée.<br/><br/>Inclut également une propriété de **type de ressource** qui fournit une zone de texte vous permettant d’entrer le nom du type de ressource personnalisé. Le C++ visuel met automatiquement en majuscule le nom lorsque vous quittez. Les ressources personnalisées sont uniquement modifiées dans l' [Éditeur binaire](../windows/binary-editor.md). |
+| **Importer** | Ouvrez la boîte de dialogue **Importer** pour accéder à la ressource que vous souhaitez importer dans votre projet actuel.<br/><br/>Vous pouvez importer une image bitmap, une icône, un curseur, du code HTML, du son (. WAV) ou un fichier de ressources personnalisé. |
+| **Personnalisée** | Ouvrez la boîte de dialogue **nouvelle ressource personnalisée** pour créer une ressource personnalisée.<br/><br/>Inclut également une propriété de **type de ressource** qui fournit une zone de texte vous permettant d’entrer le nom du type de ressource personnalisé. Le C++ visuel met automatiquement en majuscule le nom lorsque vous quittez. Les ressources personnalisées sont uniquement modifiées dans l' [Éditeur binaire](../windows/binary-editor.md). |
 
 Lorsque vous créez une ressource, Visual C++ lui attribue un nom unique, par exemple, `IDD_Dialog1`. Vous pouvez personnaliser cet ID de ressource en modifiant les propriétés de la ressource dans l’éditeur de ressources associé ou dans la [fenêtre Propriétés](/visualstudio/ide/reference/properties-window).
 
@@ -183,7 +183,7 @@ Après la personnalisation d’un modèle de ressource, enregistrez vos modifica
 
 Une fois le fichier de script de ressources ouvert, dans le menu, accédez à **fichier** > **Enregistrer \<*nom*de fichier > sous**. Spécifiez un emplacement, puis choisissez **OK**.
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
 Win32
 

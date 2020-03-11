@@ -13,11 +13,11 @@ helpviewer_keywords:
 - std::slice [C++], stride
 ms.assetid: 00f0b03d-d657-4b81-ba53-5a9034bb2bf2
 ms.openlocfilehash: 830e345eb7522cef44dbf6e727a976fb79c1e081
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.sourcegitcommit: 49cf365176557456f56c994e06ea1a38f73e938b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68450358"
+ms.lasthandoff: 03/09/2020
+ms.locfileid: "78937433"
 ---
 # <a name="slice-class"></a>slice, classe
 
@@ -43,7 +43,7 @@ Les opérations sur les valarrays sont garanties uniquement si les sous-ensemble
 |-|-|
 |[slice](#slice)|Définit un sous-ensemble d'un `valarray` qui se compose d'un nombre d'éléments à égale distance les uns des autres et qui commencent à un élément spécifié.|
 
-### <a name="member-functions"></a>Fonctions membres
+### <a name="member-functions"></a>Fonctions Membre
 
 |Fonction membre|Description|
 |-|-|
@@ -51,9 +51,9 @@ Les opérations sur les valarrays sont garanties uniquement si les sous-ensemble
 |[start](#start)|Recherche l'index de départ d'un secteur d'un `valarray`.|
 |[stride](#stride)|Recherche la distance entre des éléments dans un secteur d'un `valarray`.|
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
-**En-tête :** \<valarray>
+**En-tête :** \<valarray >
 
 **Espace de noms :** std
 
@@ -142,12 +142,12 @@ Index valarray du premier élément dans le sous-ensemble.
 *_Len*\
 Nombre d’éléments dans le sous-ensemble.
 
-*progrès*\
+*stride*\
 Distance entre les éléments dans le sous-ensemble.
 
 ### <a name="return-value"></a>Valeur de retour
 
-Le constructeur par défaut stocke des zéros pour l’index de départ, la longueur totale et le stride. Le deuxième constructeur stocke *_StartIndex* pour l’index de départ, *_Len* pour la longueur totale et *Stride* pour Stride.
+Le constructeur par défaut stocke des zéros pour l’index de départ, la longueur totale et le stride. Le deuxième constructeur stocke *_StartIndex* pour l’index de départ, *_Len* pour la longueur totale et *Stride* pour le Stride.
 
 ### <a name="remarks"></a>Notes
 
@@ -206,7 +206,7 @@ size_t start() const;
 
 Index de départ d’une section d’un valarray.
 
-### <a name="example"></a>Exemples
+### <a name="example"></a>Exemple
 
 ```cpp
 // slice_start.cpp
@@ -312,4 +312,4 @@ The stride of slice vaSlice is: 3.
 
 ## <a name="see-also"></a>Voir aussi
 
-[Sécurité des threads dans la bibliothèque standard C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)
+[Sécurité des threads dans la bibliothèque C++ Standard](../standard-library/thread-safety-in-the-cpp-standard-library.md)

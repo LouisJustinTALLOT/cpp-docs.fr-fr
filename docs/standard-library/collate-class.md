@@ -23,11 +23,11 @@ helpviewer_keywords:
 - std::collate [C++], transform
 ms.assetid: 92168798-9628-4a2e-be6e-fa62dcd4d6a6
 ms.openlocfilehash: 88b04ad4f14faf4d152c0ce2b9c3477928263c52
-ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
+ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/21/2019
-ms.locfileid: "72689813"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78866151"
 ---
 # <a name="collate-class"></a>collate, classe
 
@@ -42,7 +42,7 @@ class collate : public locale::facet;
 
 ### <a name="parameters"></a>Paramètres
 
-*CharType* \
+*CharType*\
 Type utilisé dans le cadre d'un programme pour encoder des caractères.
 
 ## <a name="remarks"></a>Notes
@@ -55,14 +55,14 @@ Comme avec n'importe quelle facette de paramètres régionaux, l'ID d'objet stat
 |-|-|
 |[collate](#collate)|Constructeur des objets de la classe `collate` qui sert de facette de paramètres régionaux pour la gestion des conventions de tri de chaînes.|
 
-### <a name="typedefs"></a>Typedef
+### <a name="typedefs"></a>Typedefs
 
 |Nom de type|Description|
 |-|-|
 |[char_type](#char_type)|Type qui décrit un caractère de type `CharType`.|
 |[string_type](#string_type)|Type qui décrit une chaîne de type `basic_string` qui contient des caractères de type `CharType`.|
 
-### <a name="member-functions"></a>Fonctions membres
+### <a name="member-functions"></a>Fonctions Membre
 
 |Fonction membre|Description|
 |-|-|
@@ -73,9 +73,9 @@ Comme avec n'importe quelle facette de paramètres régionaux, l'ID d'objet stat
 |[hash](#hash)|Détermine la valeur de hachage d'une séquence en fonction de ses règles de facette.|
 |[transform](#transform)|Convertit une séquence de caractères de paramètres régionaux en une chaîne qui peut être utilisée dans des comparaisons lexicographiques avec d'autres séquences de caractères, elles aussi converties depuis les mêmes paramètres régionaux.|
 
-## <a name="requirements"></a>spécifications
+## <a name="requirements"></a>Spécifications
 
-**En-tête :** \<locale>
+**En-tête :** \<paramètres régionaux >
 
 **Espace de noms :** std
 
@@ -108,10 +108,10 @@ const char* _Locname,
 
 ### <a name="parameters"></a>Paramètres
 
-*_Refs* \
-Valeur entière utilisée pour spécifier le type de gestion de mémoire pour l’objet.
+*_Refs*\
+Valeur entière qui sert à spécifier le type de gestion de la mémoire pour l’objet.
 
-*_Locname* \
+*_Locname*\
 Nom des paramètres régionaux.
 
 ### <a name="remarks"></a>Notes
@@ -139,16 +139,16 @@ int compare(const CharType* first1,
 
 ### <a name="parameters"></a>Paramètres
 
-*first1* \
+*first1*\
 Pointeur vers le premier élément de la première séquence à comparer.
 
-*last1* \
+*last1*\
 Pointeur vers le dernier élément de la première séquence à comparer.
 
-*first2* \
+*first2*\
 Pointeur vers le premier élément de la deuxième séquence à comparer.
 
-*last2* \
+*last2*\
 Pointeur vers le dernier élément de la deuxième séquence à comparer.
 
 ### <a name="return-value"></a>Valeur de retour
@@ -205,16 +205,16 @@ virtual int do_compare(const CharType* first1,
 
 ### <a name="parameters"></a>Paramètres
 
-*first1* \
+*first1*\
 Pointeur vers le premier élément de la première séquence à comparer.
 
-*last1* \
+*last1*\
 Pointeur vers le dernier élément de la première séquence à comparer.
 
-*first2* \
+*first2*\
 Pointeur vers le premier élément de la deuxième séquence à comparer.
 
-*last2* \
+*last2*\
 Pointeur vers le dernier élément de la deuxième séquence à comparer.
 
 ### <a name="return-value"></a>Valeur de retour
@@ -245,10 +245,10 @@ virtual long do_hash(const CharType* first, const CharType* last) const;
 
 ### <a name="parameters"></a>Paramètres
 
-*premier* \
+*premier*\
 Pointeur vers le premier caractère de la séquence dont la valeur doit être déterminée.
 
-*dernier* \
+*dernier*\
 Pointeur vers le dernier caractère de la séquence dont la valeur doit être déterminée.
 
 ### <a name="return-value"></a>Valeur de retour
@@ -273,10 +273,10 @@ virtual string_type do_transform(const CharType* first, const CharType* last) co
 
 ### <a name="parameters"></a>Paramètres
 
-*premier* \
+*premier*\
 Pointeur vers le premier caractère de la séquence à convertir.
 
-*dernier* \
+*dernier*\
 Pointeur vers le dernier caractère de la séquence à convertir.
 
 ### <a name="return-value"></a>Valeur de retour
@@ -285,7 +285,7 @@ Chaîne qui est la séquence de caractères transformée.
 
 ### <a name="remarks"></a>Notes
 
-La fonction membre virtuelle protégée retourne un objet de la classe [string_type](#string_type) dont la séquence contrôlée est une copie de la séquence [ `first`, `last`). Si une classe dérivée de collate\< **CharType**> remplace [do_compare](#do_compare), elle doit également remplacer `do_transform` pour établir la correspondance. Quand elles sont passées à `collate::compare`, deux chaînes transformées doivent générer le même résultat que si vous passez les chaînes non transformées à comparer dans la classe dérivée.
+La fonction membre virtuelle protégée retourne un objet de la classe [string_type](#string_type) dont la séquence contrôlée est une copie de la séquence [ `first`, `last`). Si une classe dérivée de COLLATE\< **CharType**> substitue [do_compare](#do_compare), elle doit également remplacer `do_transform` pour qu’elle corresponde. Quand elles sont passées à `collate::compare`, deux chaînes transformées doivent générer le même résultat que si vous passez les chaînes non transformées à comparer dans la classe dérivée.
 
 ### <a name="example"></a>Exemple
 
@@ -301,10 +301,10 @@ long hash(const CharType* first, const CharType* last) const;
 
 ### <a name="parameters"></a>Paramètres
 
-*premier* \
+*premier*\
 Pointeur vers le premier caractère de la séquence dont la valeur doit être déterminée.
 
-*dernier* \
+*dernier*\
 Pointeur vers le dernier caractère de la séquence dont la valeur doit être déterminée.
 
 ### <a name="return-value"></a>Valeur de retour
@@ -371,10 +371,10 @@ string_type transform(const CharType* first, const CharType* last) const;
 
 ### <a name="parameters"></a>Paramètres
 
-*premier* \
+*premier*\
 Pointeur vers le premier caractère de la séquence à convertir.
 
-*dernier* \
+*dernier*\
 Pointeur vers le dernier caractère de la séquence à convertir.
 
 ### <a name="return-value"></a>Valeur de retour

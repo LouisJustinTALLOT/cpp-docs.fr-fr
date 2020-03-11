@@ -6,11 +6,11 @@ helpviewer_keywords:
 - containers, C++ Standard Library
 ms.assetid: 8e915ca1-19ba-4f0d-93c8-e2c3bfd638eb
 ms.openlocfilehash: 1119947534c030afaad64e4905e58365ffffd05e
-ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
+ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/21/2019
-ms.locfileid: "72686102"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78856719"
 ---
 # <a name="c-standard-library-containers"></a>Conteneurs de la bibliothèque standard C++
 
@@ -44,7 +44,7 @@ Un `set` est simplement un conteneur croissant d'éléments uniques. La valeur e
 
 `map` et `set` autorisent l'insertion d'une seule instance d'une clé ou d'un élément dans le conteneur. Si plusieurs instances d'éléments sont nécessaires, utilisez `multimap` ou `multiset`. Les versions non ordonnées sont `unordered_multimap` et `unordered_multiset`. Pour plus d’informations, consultez [multimap, classe](../standard-library/multimap-class.md), [unordered_multimap, classe](../standard-library/unordered-multimap-class.md), [multiset, classe](../standard-library/multiset-class.md) et [unordered_multiset, classe](../standard-library/unordered-multiset-class.md).
 
-Les maps et les sets ordonnés prennent en charge les itérateurs bidirectionnels et leurs équivalents non ordonnés prennent en charge les itérateurs vers l'avant. Pour plus d’informations, consultez [Itérateurs](../standard-library/iterators.md).
+Les maps et les sets ordonnés prennent en charge les itérateurs bidirectionnels et leurs équivalents non ordonnés prennent en charge les itérateurs vers l'avant. Pour plus d'informations, consultez [Itérateurs](../standard-library/iterators.md).
 
 ### <a name="heterogeneous-lookup-in-associative-containers-c14"></a>Recherche hétérogène dans les conteneurs associatifs (C++14)
 
@@ -121,7 +121,7 @@ int main()
 
 Les fonctions membres suivantes dans map, multimap, set et multiset ont été surchargées pour prendre en charge la recherche hétérogène :
 
-1. find
+1. trouver
 
 1. count
 
@@ -155,7 +155,7 @@ Certaines opérations sur les conteneurs peuvent également nécessiter un const
 
 ## <a name="accessing-container-elements"></a>Accès aux éléments de conteneurs
 
-Les éléments des conteneurs sont accessibles à l'aide d'itérateurs. Pour plus d’informations, consultez [Itérateurs](../standard-library/iterators.md).
+Les éléments des conteneurs sont accessibles à l'aide d'itérateurs. Pour plus d'informations, consultez [Itérateurs](../standard-library/iterators.md).
 
 > [!NOTE]
 > Vous pouvez également utiliser des [boucles for basées sur une plage](../cpp/range-based-for-statement-cpp.md) pour itérer des collections de la bibliothèque standard C++.
@@ -166,11 +166,11 @@ Tous les conteneurs surchargent l'opérateur == pour la comparaison de deux cont
 
 ### <a name="comparing-dissimilar-containers-c14"></a>Comparaison de conteneurs différents (C++14)
 
-En C++ 14 et versions ultérieures, vous pouvez comparer des conteneurs dissemblables et/ou des types d’éléments dissemblables à l’aide de l’une des surcharges de fonction `std::equal`, `std::mismatch` ou `std::is_permutation` qui prennent deux plages complètes. Ces surcharges vous permettent de comparer des conteneurs ayant des longueurs différentes. Elles sont beaucoup moins vulnérables aux erreurs des utilisateurs et sont optimisées pour retourner la valeur false en temps fixe quand des conteneurs de longueurs différentes sont comparés. C’est pourquoi nous vous recommandons d’utiliser ces surcharges sauf si (1) vous avez une raison très précise de ne pas le faire ou (2) vous utilisez un conteneur [std::list](../standard-library/list-class.md), qui ne tire pas profit des optimisations de double plage.
+En C++ 14 et versions ultérieures, vous pouvez comparer des conteneurs dissemblables et/ou des types d’éléments dissemblables à l’aide de l’une des surcharges de fonction `std::equal`, `std::mismatch`ou `std::is_permutation` qui prennent deux plages complètes. Ces surcharges vous permettent de comparer des conteneurs ayant des longueurs différentes. Elles sont beaucoup moins vulnérables aux erreurs des utilisateurs et sont optimisées pour retourner la valeur false en temps fixe quand des conteneurs de longueurs différentes sont comparés. C’est pourquoi nous vous recommandons d’utiliser ces surcharges sauf si (1) vous avez une raison très précise de ne pas le faire ou (2) vous utilisez un conteneur [std::list](../standard-library/list-class.md), qui ne tire pas profit des optimisations de double plage.
 
 ## <a name="see-also"></a>Voir aussi
 
-[Conteneurs](../cpp/containers-modern-cpp.md)\
+[Containers](../cpp/containers-modern-cpp.md)\
 [Informations de référence sur la bibliothèque standard C++](../standard-library/cpp-standard-library-reference.md)\
 [\<sample container>](../standard-library/sample-container.md)\
 [Sécurité des threads dans la bibliothèque C++ Standard](../standard-library/thread-safety-in-the-cpp-standard-library.md)

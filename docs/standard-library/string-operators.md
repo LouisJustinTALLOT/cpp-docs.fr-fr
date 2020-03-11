@@ -21,17 +21,17 @@ helpviewer_keywords:
 - std::operator&lt;&lt; (string)
 - std::operator&lt;= (string), std::operator== (string)
 ms.openlocfilehash: f9aa07f7ca30ded5f61e77a327efafe91aa5c269
-ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
+ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/21/2019
-ms.locfileid: "72685998"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78890900"
 ---
 # <a name="ltstringgt-operators"></a>&lt;string&gt;, opérateurs
 
 ||||
 |-|-|-|
-|[!=, opérateur](#op_neq)|[operator&gt;](#op_gt)|[operator&gt;&gt;](#op_gt_gt)|
+|[operator!=](#op_neq)|[operator&gt;](#op_gt)|[operator&gt;&gt;](#op_gt_gt)|
 |[operator&gt;=](#op_gt_eq)|[operator&lt;](#op_lt)|[operator&lt;&lt;](#op_lt_lt)|
 |[operator&lt;=](#op_lt_eq)|[operator+](#op_add)|[operator==](#op_eq_eq)|
 
@@ -115,7 +115,7 @@ Chaîne qui est la concaténation des chaînes d'entrée.
 
 ### <a name="remarks"></a>Notes
 
-La fonction chaque surcharge `operator+` pour concaténer deux objets de la [classe basic_string](../standard-library/basic-string-class.md)du modèle de classe. Toutes les `basic_string< CharType, Traits, Allocator>(Left).append(right)` retournent efficacement. Pour plus d’informations, consultez [Append](../standard-library/basic-string-class.md#append).
+La fonction chaque surcharge `operator+` pour concaténer deux objets de classe de modèle [basic_string](../standard-library/basic-string-class.md). Toutes les `basic_string< CharType, Traits, Allocator>(Left).append(right)`retournent efficacement. Pour plus d’informations, consultez [Append](../standard-library/basic-string-class.md#append).
 
 ### <a name="example"></a>Exemple
 
@@ -563,10 +563,10 @@ basic_ostream<CharType, Traits>& operator<<(
 
 ### <a name="parameters"></a>Paramètres
 
-*_Ostr* \
+*_Ostr*\
 Flux de sortie dans lequel s’effectue l’écriture.
 
-*str* \
+*str*\
 Chaîne à entrer dans le flux de sortie.
 
 ### <a name="return-value"></a>Valeur de retour
@@ -575,7 +575,7 @@ Chaîne à entrer dans le flux de sortie.
 
 ### <a name="remarks"></a>Notes
 
-L’opérateur de fonction de modèle Overloads **< <** pour insérer un objet *Str* de la classe template [basic_string](../standard-library/basic-string-class.md) dans le *\_Ostr*de flux. La fonction retourne effectivement `_Ostr.write( str.c_str, str.size )`.
+L’opérateur de fonction de modèle Overloads **< <** pour insérer un objet *Str* de classe template [Basic_string](../standard-library/basic-string-class.md) dans le flux *\_OSTR*. La fonction retourne effectivement `_Ostr.write( str.c_str, str.size )`.
 
 ## <a name="op_gt"></a>  operator&gt;
 
@@ -796,7 +796,7 @@ basic_istream<CharType, Traits>& operator>>(
 
 ### <a name="parameters"></a>Paramètres
 
-*_Istr* \
+*_Istr*\
 Le flux d’entrée utilisé pour extraire la séquence.
 
 \ *droit*
@@ -818,9 +818,9 @@ L’opérateur de surcharge de fonction de modèle **> >** pour remplacer la sé
 
 Une fois que la fonction a extrait `_Istr`. [max_size](../standard-library/basic-string-class.md#max_size) éléments.
 
-- Une fois que la fonction a extrait un élément *ch* pour lequel [use_facet](../standard-library/basic-filebuf-class.md#open)< **ctype**\< **CharType**> >( `getloc`). **is**( **ctype**\< **CharType**>:: **space**, *ch*) a la valeur true, auquel cas le caractère est replacé.
+- Une fois que la fonction a extrait un élément *ch* pour lequel [use_facet](../standard-library/basic-filebuf-class.md#open)< **CType**\< **CharType**> > (`getloc`). **is**( **ctype**\< **CharType**>:: **Space**, *ch*) a la valeur true, auquel cas le caractère est remis.
 
-Si la fonction n’extrait aucun élément, elle appelle [SetState](../standard-library/basic-ios-class.md#setstate)(`ios_base::failbit`). Dans tous les cas, elle appelle **istr**. **width**(0) et retourne \* **this**.
+Si la fonction n’extrait aucun élément, elle appelle [SetState](../standard-library/basic-ios-class.md#setstate)(`ios_base::failbit`). Dans tous les cas, elle appelle **istr**. **Width**(0) et **retourne \*.**
 
 ### <a name="example"></a>Exemple
 

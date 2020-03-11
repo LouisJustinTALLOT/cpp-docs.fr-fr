@@ -56,15 +56,15 @@ helpviewer_keywords:
 - std::basic_ios [C++], widen
 ms.assetid: 4fdcd8e1-62d2-4611-8a70-1e4f58434007
 ms.openlocfilehash: 614e26b2329edeec2cccb32c7ba18b23e9d5320d
-ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
+ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/21/2019
-ms.locfileid: "72688437"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78856512"
 ---
 # <a name="basic_ios-class"></a>basic_ios, classe
 
-Le modèle de classe décrit les fonctions membres et de stockage communes aux flux d’entrée (de classe de modèle [basic_istream](../standard-library/basic-istream-class.md)) et les flux de sortie (de classe de modèle [basic_ostream](../standard-library/basic-ostream-class.md)) qui dépendent des paramètres du modèle. (La classe [ios_base](../standard-library/ios-base-class.md) décrit ce qui est commun et non dépendant des paramètres de modèle.) Objet de classe **basic_ios \<class elem, les traits de classe >** permettent de contrôler un flux avec des éléments de type `Elem`, dont les caractéristiques sont déterminées par la classe `Traits`.
+Le modèle de classe décrit les fonctions membres et de stockage communes aux flux d’entrée (de classe de modèle [basic_istream](../standard-library/basic-istream-class.md)) et les flux de sortie (de modèle de classe [basic_ostream](../standard-library/basic-ostream-class.md)) qui dépendent des paramètres du modèle. (La classe [ios_base](../standard-library/ios-base-class.md) décrit ce qui est commun et non dépendant des paramètres de modèle.) Objet de classe **basic_ios\<classe elem, les traits de classe >** permettent de contrôler un flux avec des éléments de type `Elem`, dont les caractéristiques sont déterminées par la classe `Traits`.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -76,10 +76,10 @@ class basic_ios : public ios_base
 
 ### <a name="parameters"></a>Paramètres
 
-@No__t_1 *elem*
+\ *elem*
 Type.
 
-@No__t_1 *traits*
+\ *traits*
 Variable de type `char_traits`.
 
 ## <a name="remarks"></a>Notes
@@ -102,7 +102,7 @@ Un objet de classe **basic_ios\<class Elem, class Traits>** stocke :
 |-|-|
 |[basic_ios](#basic_ios)|Construit la classe `basic_ios`.|
 
-### <a name="typedefs"></a>Typedef
+### <a name="typedefs"></a>Typedefs
 
 |Nom de type|Description|
 |-|-|
@@ -112,7 +112,7 @@ Un objet de classe **basic_ios\<class Elem, class Traits>** stocke :
 |[pos_type](#pos_type)|Synonyme de `Traits::pos_type`.|
 |[traits_type](#traits_type)|Synonyme pour le paramètre du modèle `Traits`.|
 
-### <a name="member-functions"></a>Fonctions membres
+### <a name="member-functions"></a>Fonctions Membre
 
 |Fonction membre|Description|
 |-|-|
@@ -138,15 +138,15 @@ Un objet de classe **basic_ios\<class Elem, class Traits>** stocke :
 
 ### <a name="operators"></a>Opérateurs
 
-|opérateur|Description|
+|Opérateur|Description|
 |-|-|
 |[opérateur explicite bool](#op_bool)|Autorise l’utilisation d’un objet `basic_ios` en tant que valeur **booléenne**. La conversion de type automatique est désactivée pour éviter des effets secondaires involontaires courants.|
 |[opérateur void *](#op_void_star)|Indique si le flux est toujours en bon état.|
 |[operator!](#op_not)|Indique si le flux n'est pas en mauvais état.|
 
-## <a name="requirements"></a>spécifications
+## <a name="requirements"></a>Spécifications
 
-**En-tête :** \<ios>
+**En-tête :** \<iOS >
 
 **Espace de noms :** std
 
@@ -223,12 +223,12 @@ void clear(io_state state);
 \ d' *État*
 Facultatif Indicateurs à définir après l’effacement de tous les indicateurs. La valeur par défaut est `goodbit`.
 
-*redéclencher* \
+*redéclencher*\
 Facultatif Spécifie si l’exception doit être levée à nouveau. La valeur par défaut est **false** (ne déclenche pas à nouveau l’exception).
 
 ### <a name="remarks"></a>Notes
 
-Les indicateurs sont `goodbit`, `failbit`, `eofbit` et `badbit`. Testez ces indicateurs avec [good](#good), [bad](#bad), [eof](#eof) et [fail](#fail)
+Les indicateurs sont `goodbit`, `failbit`, `eofbit`et `badbit`. Testez ces indicateurs avec [good](#good), [bad](#bad), [eof](#eof) et [fail](#fail)
 
 La fonction membre remplace les informations d'état de flux stockées par :
 
@@ -260,7 +260,7 @@ Objet **this** pour le flux dans lequel vous copiez les indicateurs.
 
 ### <a name="remarks"></a>Notes
 
-La fonction membre signale le **\_event d’effacement**des événements de rappel. Il copie ensuite de *droite* dans **\*this** le caractère de remplissage, le pointeur de liaison et les informations de mise en forme. Avant de modifier le masque d’exception, il signale l’événement de rappel `copyfmt_event`. Si, une fois que la copie est terminée, **state &** [exceptions](#exceptions) est différent de zéro, la fonction appelle [clear](#clear) avec l’argument [rdstate](#rdstate). Elle retourne ensuite **\*this**.
+La fonction membre signale l’événement de rappel d' **effacement\_événement**. Il copie ensuite de *droite* vers **\*ce** caractère de remplissage, le pointeur de liaison et les informations de mise en forme. Avant de modifier le masque d’exception, il signale l’événement de rappel `copyfmt_event`. Si, une fois que la copie est terminée, **state &** [exceptions](#exceptions) est différent de zéro, la fonction appelle [clear](#clear) avec l’argument [rdstate](#rdstate). Elle retourne ensuite **\*this**.
 
 ### <a name="example"></a>Exemple
 
@@ -333,7 +333,7 @@ void exceptions(io_state Newexcept);
 
 ### <a name="parameters"></a>Paramètres
 
-*Newexcept* \
+*Newexcept*\
 Indicateurs pour lesquels vous voulez lever une exception.
 
 ### <a name="return-value"></a>Valeur de retour
@@ -421,7 +421,7 @@ char_type fill(char_type Char);
 
 ### <a name="parameters"></a>Paramètres
 
-@No__t_1 *char*
+\ *char*
 Caractère souhaité comme caractère de remplissage.
 
 ### <a name="return-value"></a>Valeur de retour
@@ -485,7 +485,7 @@ locale imbue(const locale& Loc);
 
 ### <a name="parameters"></a>Paramètres
 
-@No__t_1 *loc*
+\ *loc*
 Chaîne de paramètres régionaux.
 
 ### <a name="return-value"></a>Valeur de retour
@@ -528,10 +528,10 @@ void init(basic_streambuf<Elem,Traits>* _Sb, bool _Isstd = false);
 
 ### <a name="parameters"></a>Paramètres
 
-*_Sb* \
+*_Sb*\
 Mémoire tampon standard pour stocker les éléments d’entrée ou de sortie.
 
-*_Isstd* \
+*_Isstd*\
 Spécifie s’il s’agit d’un flux standard.
 
 ### <a name="remarks"></a>Notes
@@ -581,7 +581,7 @@ Objet `ios_base` à partir duquel déplacer les valeurs.
 
 ### <a name="remarks"></a>Notes
 
-La fonction membre protégée déplace toutes les valeurs stockées dans *Right* vers `*this`, à l’exception de la `stream buffer pointer` stockée, qui n’est pas modifiée dans *Right* et qui a pour valeur un pointeur null dans `*this`. Le `tie pointer` stocké est défini sur un pointeur null à *droite*.
+La fonction membre protégée déplace toutes les valeurs stockées dans *Right* vers `*this`, à l’exception de la `stream buffer pointer`stockée, qui n’est pas modifiée dans *Right* et qui a pour valeur un pointeur null dans `*this`. Le `tie pointer` stocké est défini sur un pointeur null à *droite*.
 
 ## <a name="narrow"></a>  basic_ios::narrow
 
@@ -593,7 +593,7 @@ char narrow(char_type Char, char Default = '\0') const;
 
 ### <a name="parameters"></a>Paramètres
 
-@No__t_1 *char*
+\ *char*
 **Caractère** à convertir.
 
 *Default*\
@@ -601,11 +601,11 @@ char narrow(char_type Char, char Default = '\0') const;
 
 ### <a name="return-value"></a>Valeur de retour
 
-**Caractère** équivalent à un `char_type` donné.
+**Caractère** équivalent à un `char_type`donné.
 
 ### <a name="remarks"></a>Notes
 
-La fonction membre retourne [use_facet](../standard-library/basic-filebuf-class.md#open) \<ctype \<E > > ( [getloc](../standard-library/ios-base-class.md#getloc)()). `narrow` (`Char`, `Default`).
+La fonction membre retourne [use_facet](../standard-library/basic-filebuf-class.md#open)\<CType\<E > > ( [getloc](../standard-library/ios-base-class.md#getloc)()).`narrow`(`Char`, `Default`).
 
 ### <a name="example"></a>Exemple
 
@@ -728,7 +728,7 @@ basic_streambuf<Elem, Traits>* _Sb);
 
 ### <a name="parameters"></a>Paramètres
 
-*_Sb* \
+*_Sb*\
 Un flux.
 
 ### <a name="remarks"></a>Notes
@@ -820,7 +820,7 @@ void setstate(iostate _State);
 
 ### <a name="parameters"></a>Paramètres
 
-@No__t_1 _ *State*
+*_State*\
 Indicateurs supplémentaires à définir.
 
 ### <a name="remarks"></a>Notes
@@ -870,12 +870,12 @@ basic_streambuf<Elem, Tr>* strbuf)
 
 ### <a name="parameters"></a>Paramètres
 
-*strbuf* \
+*strbuf*\
 Mémoire tampon de flux qui doit devenir la mémoire tampon de lecture.
 
 ### <a name="remarks"></a>Notes
 
-La fonction membre protégée stocke *strbuf* dans le `stream buffer pointer`. elle n’appelle pas `clear`.
+La fonction membre protégée stocke *strbuf* dans le `stream buffer pointer`. Elle n’appelle pas `clear`.
 
 ## <a name="tie"></a>  basic_ios::tie
 
@@ -889,7 +889,7 @@ basic_ostream<Elem, Traits>* str);
 
 ### <a name="parameters"></a>Paramètres
 
-*str* \
+*str*\
 Un flux.
 
 ### <a name="return-value"></a>Valeur de retour
@@ -936,7 +936,7 @@ char_type widen(char Char) const;
 
 ### <a name="parameters"></a>Paramètres
 
-@No__t_1 *char*
+\ *char*
 Caractère à convertir.
 
 ### <a name="return-value"></a>Valeur de retour
@@ -945,7 +945,7 @@ Recherche le `char_type` équivalent à un **caractère**donné.
 
 ### <a name="remarks"></a>Notes
 
-La fonction membre retourne [use_facet](../standard-library/basic-filebuf-class.md#open)< **ctype**\< **E**> >( [getloc](../standard-library/ios-base-class.md#getloc)). `widen`( `Char`).
+La fonction membre retourne [use_facet](../standard-library/basic-filebuf-class.md#open)< **ctype**\< **E**> > ( [getloc](../standard-library/ios-base-class.md#getloc)). `widen`( `Char`).
 
 ### <a name="example"></a>Exemple
 
@@ -982,10 +982,10 @@ Objet `basic_ios` utilisé pour échanger des valeurs.
 
 ### <a name="remarks"></a>Notes
 
-La fonction membre protégée échange toutes les valeurs stockées dans *Right* avec `*this` à l’exception du `stream buffer pointer` stocké.
+La fonction membre protégée échange toutes les valeurs stockées dans *Right* avec `*this` à l’exception du `stream buffer pointer`stocké.
 
 ## <a name="see-also"></a>Voir aussi
 
-[Sécurité des threads dans la bibliothèque standard C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)\
+[Sécurité des threads dans la bibliothèque C++ Standard](../standard-library/thread-safety-in-the-cpp-standard-library.md)\
 [iostream, programmation](../standard-library/iostream-programming.md)\
 [iostreams, conventions](../standard-library/iostreams-conventions.md)

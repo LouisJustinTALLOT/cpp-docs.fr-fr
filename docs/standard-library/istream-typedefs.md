@@ -8,11 +8,11 @@ f1_keywords:
 - istream/std::wistream
 ms.assetid: 55bc1f84-53a7-46ca-a36f-ac6ef75d0374
 ms.openlocfilehash: 9a25e4aa9ee42ea36d1bb8d6b196b36ff5c97758
-ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
+ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/21/2019
-ms.locfileid: "72689476"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78856517"
 ---
 # <a name="ltistreamgt-typedefs"></a>&lt;istream&gt;, typedefs
 

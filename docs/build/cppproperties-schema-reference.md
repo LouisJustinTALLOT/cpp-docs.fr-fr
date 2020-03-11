@@ -4,11 +4,11 @@ ms.date: 08/09/2019
 helpviewer_keywords:
 - CppProperties.json file [C++]
 ms.openlocfilehash: d59fca412a26d08f88ccbda20a2c0444cf33b1cb
-ms.sourcegitcommit: 6c1960089b92d007fc28c32af1e4bef0f85fdf0c
+ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/31/2019
-ms.locfileid: "75556667"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78856811"
 ---
 # <a name="cpppropertiesjson-reference"></a>Informations de référence sur CppProperties. JSON
 
@@ -64,7 +64,7 @@ Remarque : les valeurs `msvc-x86` et `msvc-x64` sont prises en charge uniquemen
 
 Visual Studio fournit les environnements prédéfinis suivants pour Microsoft C++ , qui correspondent aux invite de commandes développeur correspondants. Lorsque vous héritez de l’un de ces environnements, vous pouvez faire référence à l’une des variables d’environnement en utilisant la propriété globale `env` avec la syntaxe de macro suivante : $ {env.\<VARIABLE >}.
 
-|Nom de variable|Description|
+|Nom de la variable|Description|
 |-----------|-----------------|
 |vsdev|Environnement Visual Studio par défaut|
 |msvc_x86|Compiler pour x86 à l’aide d’outils x86|
@@ -77,7 +77,7 @@ Visual Studio fournit les environnements prédéfinis suivants pour Microsoft C+
 
 Quand la charge de travail Linux est installée, les environnements suivants sont disponibles pour cibler à distance Linux et WSL :
 
-|Nom de variable|Description|
+|Nom de la variable|Description|
 |-----------|-----------------|
 |linux_x86|Cibler Linux x86 à distance|
 |linux_x64|Cibler Linux x64 à distance|
@@ -162,7 +162,7 @@ Si votre projet contient un dossier include et que vous incluez également *Wind
 
 Si vous ne voyez pas la fonctionnalité IntelliSense que vous attendez, vous pouvez résoudre les problèmes en accédant à **Outils** > **options** > **éditeur de texte** > **C/C++**  > **avancé** et en affectant à **activer la journalisation** la **valeur true**. Pour commencer, essayez de définir le **niveau de journalisation** sur 5 et les **filtres de journalisation** sur 8.
 
-![Journaux de diagnostic](media/diagnostic-logging.png)
+![la journalisation des diagnostics.](media/diagnostic-logging.png)
 
 La sortie est dirigée vers le **fenêtre Sortie** et est visible lorsque vous choisissez **afficher la sortie à C++ partir de : journal visuel**. La sortie contient, entre autres choses, la liste des chemins d’accès include réels que IntelliSense tente d’utiliser. Si les chemins d’accès ne correspondent pas à ceux figurant dans *CppProperties. JSON*, essayez de fermer le dossier et de supprimer le sous-dossier *. vs* qui contient les données de navigation mises en cache.
 

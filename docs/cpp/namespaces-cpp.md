@@ -8,15 +8,15 @@ helpviewer_keywords:
 - namespaces [C++]
 ms.assetid: d1a5a9ab-1cad-47e6-a82d-385bb77f4188
 ms.openlocfilehash: ae3006dd1b17ec38240a318af6cfcac5c7d6bf49
-ms.sourcegitcommit: bd7ddc044f9083246614b602ef6a758775313214
+ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68866041"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78856668"
 ---
 # <a name="namespaces-c"></a>Espaces de noms (C++)
 
-Un espace de noms est une région déclarative qui fournit une portée aux identificateurs (noms de types, fonctions, variables, etc.) à l'intérieur. Les espaces de noms sont utilisés pour organiser le code en groupes logiques et pour éviter les conflits de noms qui peuvent se produire en particulier lorsque votre base de code inclut plusieurs bibliothèques. Tous les identificateurs de portée espace de noms sont visibles les uns pour les autres sans qualification. Les identificateurs en dehors de l’espace de noms peuvent accéder aux membres en utilisant le nom qualifié complet pour chaque `std::vector<std::string> vec;`identificateur, par exemple, ou par une [déclaration using](../cpp/using-declaration.md) pour un identificateur`using std::string`unique (), ou une [directive using](../cpp/namespaces-cpp.md#using_directives) pour All identificateurs dans l’espace de noms`using namespace std;`(). Le code dans les fichiers d'en-tête doit toujours utiliser le nom de l'espace de noms qualifié complet.
+Un espace de noms est une région déclarative qui fournit une portée aux identificateurs (noms de types, fonctions, variables, etc.) à l'intérieur. Les espaces de noms sont utilisés pour organiser le code en groupes logiques et pour éviter les conflits de noms qui peuvent se produire en particulier lorsque votre base de code inclut plusieurs bibliothèques. Tous les identificateurs de portée espace de noms sont visibles les uns pour les autres sans qualification. Les identificateurs en dehors de l’espace de noms peuvent accéder aux membres en utilisant le nom qualifié complet pour chaque identificateur, par exemple `std::vector<std::string> vec;`, ou en utilisant une [déclaration using](../cpp/using-declaration.md) pour un identificateur unique (`using std::string`), ou une [directive using](../cpp/namespaces-cpp.md#using_directives) pour tous les identificateurs de l’espace de noms (`using namespace std;`). Le code dans les fichiers d'en-tête doit toujours utiliser le nom de l'espace de noms qualifié complet.
 
 L'exemple suivant montre une déclaration d'espace de noms et trois façons pour le code en dehors de l'espace de noms d'accéder à leurs membres.
 
@@ -60,7 +60,7 @@ Func(mgr);
 
 ## <a id="using_directives"></a>directives using
 
-La directive **using** autorise l’utilisation de tous les noms dans un **espace de noms** sans le nom d’espace de *noms* comme qualificateur explicite. Utilisez une directive using dans un fichier d’implémentation (par exemple, *. cpp) si vous utilisez plusieurs identificateurs différents dans un espace de noms; Si vous utilisez uniquement un ou deux identificateurs, envisagez d’utiliser une déclaration using pour placer ces identificateurs uniquement dans la portée et non dans tous les identificateurs de l’espace de noms. Si une variable locale a le même nom qu'une variable d'espace de noms, la variable d'espace de noms est masquée. Le fait qu'une variable d'espace de noms porte le même nom qu'une variable globale est une erreur.
+La directive **using** autorise l’utilisation de tous les noms dans un **espace de noms** sans le nom d’espace de *noms* comme qualificateur explicite. Utilisez une directive using dans un fichier d’implémentation (par exemple, *. cpp) si vous utilisez plusieurs identificateurs différents dans un espace de noms ; Si vous utilisez uniquement un ou deux identificateurs, envisagez d’utiliser une déclaration using pour placer ces identificateurs uniquement dans la portée et non dans tous les identificateurs de l’espace de noms. Si une variable locale a le même nom qu'une variable d'espace de noms, la variable d'espace de noms est masquée. Le fait qu'une variable d'espace de noms porte le même nom qu'une variable globale est une erreur.
 
 > [!NOTE]
 >  Une directive using peut être placée en haut d'un fichier .cpp (au niveau de la portée de fichier) ou à l'intérieur d'une définition de classe ou de fonction.
@@ -81,7 +81,7 @@ namespace ContosoDataServer
 }
 ```
 
-Les implémentations de fonctions dans contosodata. cpp doivent utiliser le nom qualifié complet, même si vous placez une directive **using** en haut du fichier:
+Les implémentations de fonctions dans contosodata. cpp doivent utiliser le nom qualifié complet, même si vous placez une directive **using** en haut du fichier :
 
 ```cpp
 #include "contosodata.h"
@@ -98,7 +98,7 @@ int ContosoDataServer::Bar(){return 0;}
 
 Un espace de noms peut être déclaré dans plusieurs blocs, dans un seul fichier et dans plusieurs fichiers. Le compilateur joint les parties pendant le prétraitement et l'espace de noms obtenu contient tous les membres déclarés dans toutes les parties. Un exemple de ceci est l'espace de noms std qui est déclaré dans chacun des fichiers d'en-tête de la bibliothèque standard.
 
-Les membres d’un espace de noms nommé peuvent être définis en dehors de l’espace de noms dans lequel ils sont déclarés par une qualification explicite du nom qui est défini. Toutefois, la définition doit figurer après le point de déclaration dans un espace de noms qui englobe l'espace de noms de la déclaration. Par exemple :
+Les membres d'un espace de noms nommé peuvent être définis en dehors de l'espace de noms dans lequel ils sont déclarés par une qualification explicite du nom actuellement défini. Toutefois, la définition doit figurer après le point de déclaration dans un espace de noms qui englobe l'espace de noms de la déclaration. Par exemple :
 
 ```cpp
 // defining_namespace_members.cpp
@@ -123,7 +123,7 @@ Si un identificateur n'est pas déclaré dans un espace de noms explicite, il fa
 
 ## <a name="the-std-namespace"></a>Espace de noms std
 
-Tous C++ les types et les fonctions de bibliothèque standard sont `std` déclarés dans l’espace de noms `std`ou les espaces de noms imbriqués dans.
+Tous C++ les types et les fonctions de bibliothèque standard sont déclarés dans l’espace de noms `std` ou dans les espaces de noms imbriqués dans `std`.
 
 ## <a name="nested-namespaces"></a>Espaces de noms imbriqués
 

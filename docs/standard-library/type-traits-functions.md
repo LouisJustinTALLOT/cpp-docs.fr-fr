@@ -25,13 +25,13 @@ helpviewer_keywords:
 - std::is_trivially_move_assignable
 - std::is_trivially_move_constructible
 ms.openlocfilehash: 48ca51d56994f3d487af6744801acedf5c6cc79c
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68447043"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78874192"
 ---
-# <a name="lttypetraitsgt-functions"></a>&lt;type_traits&gt;, fonctions
+# <a name="lttype_traitsgt-functions"></a>&lt;type_traits&gt;, fonctions
 
 ||||
 |-|-|-|
@@ -43,7 +43,7 @@ ms.locfileid: "68447043"
 
 ## <a name="is_assignable"></a>  is_assignable
 
-Teste si une valeur *de type peut* être assignée *à un type* .
+Teste si une valeur *de type peut* être assignée *à* un type.
 
 ```cpp
 template <class To, class From>
@@ -52,10 +52,10 @@ struct is_assignable;
 
 ### <a name="parameters"></a>Paramètres
 
-*À*\
+*Pour*\
 Type de l'objet qui reçoit l'assignation.
 
-*De*\
+*À partir de*\
 Type de l'objet qui fournit la valeur.
 
 ### <a name="remarks"></a>Notes
@@ -222,7 +222,7 @@ Prédicat de type qui prend la valeur true si le type *T* peut être construit �
 
 ## <a name="is_nothrow_move_assignable"></a>  is_nothrow_move_assignable
 
-Teste si le type a un opérateur d’assignation par déplacement **nothrow**.
+Teste si le type a un opérateur d’assignation de déplacement **nothrow**.
 
 ```cpp
 template <class Ty>
@@ -280,7 +280,7 @@ Type à interroger.
 
 Une instance du prédicat de type a la valeur true si le type *T* est une classe qui a un opérateur d’assignation de copie trivial. sinon, sa valeur est false.
 
-Un constructeur d’assignation pour une classe *t* est trivial s’il est fourni implicitement, la classe *t* n’a pas de fonctions virtuelles, la classe *t* n’a aucune base virtuelle, les classes de toutes les données membres non statiques de type de classe ont une assignation triviale les opérateurs et les classes de tous les membres de données non statiques de type tableau de classe ont des opérateurs d’assignation trivial.
+Un constructeur d’assignation pour une classe *t* est trivial s’il est fourni implicitement, la classe *t* n’a pas de fonctions virtuelles, la classe *t* n’a aucune base virtuelle, les classes de tous les membres de données non statiques de type classe ont des opérateurs d’assignation trivial, et les classes de tous les membres de données non statiques de type tableau de classe ont des opérateurs d’assignation
 
 ## <a name="is_trivially_move_assignable"></a>  is_trivially_move_assignable
 
@@ -300,7 +300,7 @@ Type à interroger.
 
 Une instance du prédicat de type a la valeur true si le type *Ty* est une classe qui a un opérateur d’assignation de déplacement trivial. sinon, sa valeur est false.
 
-Un opérateur d’assignation de déplacement pour une classe *Ty* est trivial si:
+Un opérateur d’assignation de déplacement pour une classe *Ty* est trivial si :
 
 il est fourni implicitement ;
 
@@ -330,7 +330,7 @@ Type à interroger.
 
 Une instance du prédicat de type a la valeur true si le type *Ty* est une classe qui a un constructeur de déplacement trivial. sinon, sa valeur est false.
 
-Un constructeur de déplacement pour une classe *Ty* est trivial si:
+Un constructeur de déplacement pour une classe *Ty* est trivial si :
 
 il est déclaré implicitement ;
 

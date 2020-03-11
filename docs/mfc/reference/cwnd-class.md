@@ -819,11 +819,11 @@ helpviewer_keywords:
 - CWnd [MFC], m_hWnd
 ms.assetid: 49a832ee-bc34-4126-88b3-bc1d9974f6c4
 ms.openlocfilehash: 1f0338d827a9ec92747169ff2682e6d47485e4c2
-ms.sourcegitcommit: 21e168731b8fe0eaff18f070cee5d54aa5782c2d
+ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/24/2020
-ms.locfileid: "77567884"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78855499"
 ---
 # <a name="cwnd-class"></a>CWnd, classe
 
@@ -839,13 +839,13 @@ class CWnd : public CCmdTarget
 
 ### <a name="public-constructors"></a>Constructeurs publics
 
-|Nom|Description|
+|Name|Description|
 |----------|-----------------|
 |[CWnd :: CWnd](#cwnd)|Construit un objet `CWnd`.|
 
-### <a name="public-methods"></a>Méthodes publiques
+### <a name="public-methods"></a>M&#233;thodes publiques
 
-|Nom|Description|
+|Name|Description|
 |----------|-----------------|
 |[CWnd :: accDoDefaultAction](#accdodefaultaction)|Appelé par l'infrastructure pour effectuer l'action par défaut de l'objet.|
 |[CWnd :: accHitTest](#acchittest)|Appelé par l'infrastructure pour récupérer l'élément enfant ou l'objet enfant à un point déterminé de l'écran.|
@@ -1088,7 +1088,7 @@ class CWnd : public CCmdTarget
 
 ### <a name="protected-methods"></a>Méthodes protégées
 
-|Nom|Description|
+|Name|Description|
 |----------|-----------------|
 |[CWnd ::D &](#default)|Appelle la procédure de fenêtre par défaut, qui assure le traitement par défaut des messages de fenêtre qu'une application ne traite pas.|
 |[CWnd ::D efWindowProc](#defwindowproc)|Appelle la procédure de fenêtre par défaut, qui assure le traitement par défaut des messages de fenêtre qu'une application ne traite pas.|
@@ -1259,7 +1259,7 @@ class CWnd : public CCmdTarget
 
 ### <a name="public-operators"></a>Op&#233;rateurs publics
 
-|Nom|Description|
+|Name|Description|
 |----------|-----------------|
 |[CWnd :: Operator HWND](#operator_hwnd)|Appelé pour obtenir un handle de fenêtre.|
 |[CWnd :: Operator ! =](#operator_neq)|Détermine si une fenêtre n’est pas la même que la fenêtre dont le handle est [m_hWnd](#m_hwnd).|
@@ -1267,7 +1267,7 @@ class CWnd : public CCmdTarget
 
 ### <a name="public-data-members"></a>Membres de données publiques
 
-|Nom|Description|
+|Name|Description|
 |----------|-----------------|
 |[CWnd :: m_hWnd](#m_hwnd)|Indique le HWND attaché à ce `CWnd`.|
 
@@ -1295,7 +1295,7 @@ Pour plus d’informations sur l’utilisation de `CWnd`, consultez [fenêtres F
 
 `CWnd`
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
 **En-tête :** afxwin.h
 
@@ -10783,7 +10783,7 @@ Spécifie des informations supplémentaires dépendantes du message.
 Spécifie des informations supplémentaires dépendantes du message.
 
 *pResult*<br/>
-Résultat généré par la fenêtre enfant à retourner par la fenêtre parente. Peut avoir la valeur NULL.
+Résultat généré par la fenêtre enfant à retourner par la fenêtre parente. Sa valeur peut être NULL.
 
 ### <a name="return-value"></a>Valeur de retour
 
@@ -10813,7 +10813,7 @@ static BOOL PASCAL ReflectLastMsg(
 Handle d’une fenêtre enfant.
 
 *pResult*<br/>
-Résultat généré par la fenêtre enfant à retourner par la fenêtre parente. Peut avoir la valeur NULL.
+Résultat généré par la fenêtre enfant à retourner par la fenêtre parente. Sa valeur peut être NULL.
 
 ### <a name="return-value"></a>Valeur de retour
 

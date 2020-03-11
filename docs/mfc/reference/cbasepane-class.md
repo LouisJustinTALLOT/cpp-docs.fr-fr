@@ -167,11 +167,11 @@ helpviewer_keywords:
 - CBasePane [MFC], DoPaint
 ms.assetid: 8163dd51-d7c7-4def-9c74-61f8ecdfad82
 ms.openlocfilehash: 59291516c14ea6ff8b1d2fe515d121dd6f910cba
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69507456"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78866687"
 ---
 # <a name="cbasepane-class"></a>CBasePane, classe
 
@@ -187,134 +187,134 @@ class CBasePane : public CWnd
 
 ### <a name="public-constructors"></a>Constructeurs publics
 
-|Nom|Description|
+|Name|Description|
 |----------|-----------------|
 |`CBasePane::CBasePane`|Constructeur par défaut.|
 |`CBasePane::~CBasePane`|Destructeur.|
 
 ### <a name="public-methods"></a>M&#233;thodes publiques
 
-|Nom|Description|
+|Name|Description|
 |----------|-----------------|
-|`CBasePane::accHitTest`|Appelé par l'infrastructure pour récupérer l'élément enfant ou l'objet enfant à un point déterminé de l'écran. (Substitue [CWnd:: accHitTest](../../mfc/reference/cwnd-class.md#acchittest).)|
-|`CBasePane::accLocation`|Appelé par l’infrastructure pour récupérer l’emplacement d’affichage actuel de l’objet spécifié. (Substitue [CWnd:: accLocation](../../mfc/reference/cwnd-class.md#acclocation).)|
-|[CBasePane:: AccNotifyObjectFocusEvent](#accnotifyobjectfocusevent)|`CBasePane`n’utilise pas cette méthode.|
-|`CBasePane::accSelect`|Appelé par l'infrastructure pour modifier la sélection ou déplacer le focus clavier de l'objet spécifié. (Substitue [CWnd:: accSelect](../../mfc/reference/cwnd-class.md#accselect).)|
-|[CBasePane:: AddPane](#addpane)|Ajoute un volet au gestionnaire d’ancrage.|
-|[CBasePane:: AdjustDockingLayout](#adjustdockinglayout)|Redirige un appel vers le gestionnaire d’ancrage pour ajuster la disposition d’ancrage.|
-|[CBasePane:: AdjustLayout](#adjustlayout)|Appelé par le Framework lorsque le volet doit ajuster sa disposition interne.|
-|[CBasePane::CalcFixedLayout](#calcfixedlayout)|Calcule la taille horizontale d’une barre de contrôle.|
-|[CBasePane::CanAcceptPane](#canacceptpane)|Détermine si un autre volet peut être ancré dans le volet.|
-|[CBasePane::CanAutoHide](#canautohide)|Détermine si le volet prend en charge le mode de masquage automatique.|
-|[CBasePane::CanBeAttached](#canbeattached)|Détermine si le volet peut être ancré à un autre volet.|
-|[CBasePane::CanBeClosed](#canbeclosed)|Détermine si le volet peut être fermé.|
-|[CBasePane::CanBeDocked](#canbedocked)|Détermine si le volet peut être ancré à un autre volet.|
-|[CBasePane::CanBeResized](#canberesized)|Détermine si le volet peut être redimensionné.|
-|[CBasePane::CanBeTabbedDocument](#canbetabbeddocument)|Spécifie si le volet peut être converti en document avec onglet MDI.|
-|[CBasePane::CanFloat](#canfloat)|Détermine si le volet peut flotter.|
-|[CBasePane::CanFocus](#canfocus)|Spécifie si le volet peut recevoir le focus.|
-|[CBasePane::CopyState](#copystate)|Copie l’état d’un volet donné.|
-|[CBasePane::CreateDefaultMiniframe](#createdefaultminiframe)|Si le volet peut flotter, crée une fenêtre mini-frame.|
-|[CBasePane::CreateEx](#createex)|Crée le contrôle de volet.|
-|[CBasePane::DockPane](#dockpane)|Ancre un volet à un autre volet ou à une fenêtre frame.|
-|[CBasePane::DockPaneUsingRTTI](#dockpaneusingrtti)|Ancre le volet à l’aide des informations de type au moment de l’exécution.|
-|[CBasePane::DockToFrameWindow](#docktoframewindow)|Ancre un volet Ancrable à un frame.|
-|[CBasePane::DoesAllowDynInsertBefore](#doesallowdyninsertbefore)|Détermine si un autre volet peut être inséré dynamiquement entre ce volet et le frame parent.|
-|[CBasePane::EnableDocking](#enabledocking)|Active l’ancrage du volet au frame principal.|
-|[CBasePane::EnableGripper](#enablegripper)|Active ou désactive la pince. Si la pince est activée, l’utilisateur peut la faire glisser pour repositionner le volet.|
+|`CBasePane::accHitTest`|Appelé par l'infrastructure pour récupérer l'élément enfant ou l'objet enfant à un point déterminé de l'écran. (Substitue [CWnd :: accHitTest](../../mfc/reference/cwnd-class.md#acchittest).)|
+|`CBasePane::accLocation`|Appelé par l’infrastructure pour récupérer l’emplacement d’affichage actuel de l’objet spécifié. (Substitue [CWnd :: accLocation](../../mfc/reference/cwnd-class.md#acclocation).)|
+|[CBasePane :: AccNotifyObjectFocusEvent](#accnotifyobjectfocusevent)|`CBasePane` n’utilise pas cette méthode.|
+|`CBasePane::accSelect`|Appelé par l'infrastructure pour modifier la sélection ou déplacer le focus clavier de l'objet spécifié. (Substitue [CWnd :: accSelect](../../mfc/reference/cwnd-class.md#accselect).)|
+|[CBasePane :: AddPane](#addpane)|Ajoute un volet au gestionnaire d’ancrage.|
+|[CBasePane :: AdjustDockingLayout](#adjustdockinglayout)|Redirige un appel vers le gestionnaire d’ancrage pour ajuster la disposition d’ancrage.|
+|[CBasePane :: AdjustLayout](#adjustlayout)|Appelé par le Framework lorsque le volet doit ajuster sa disposition interne.|
+|[CBasePane :: CalcFixedLayout](#calcfixedlayout)|Calcule la taille horizontale d’une barre de contrôle.|
+|[CBasePane :: CanAcceptPane](#canacceptpane)|Détermine si un autre volet peut être ancré dans le volet.|
+|[CBasePane :: CanAutoHide](#canautohide)|Détermine si le volet prend en charge le mode de masquage automatique.|
+|[CBasePane :: CanBeAttached](#canbeattached)|Détermine si le volet peut être ancré à un autre volet.|
+|[CBasePane :: CanBeClosed](#canbeclosed)|Détermine si le volet peut être fermé.|
+|[CBasePane :: CanBeDocked](#canbedocked)|Détermine si le volet peut être ancré à un autre volet.|
+|[CBasePane :: CanBeResized](#canberesized)|Détermine si le volet peut être redimensionné.|
+|[CBasePane :: CanBeTabbedDocument](#canbetabbeddocument)|Spécifie si le volet peut être converti en document avec onglet MDI.|
+|[CBasePane :: CanFloat](#canfloat)|Détermine si le volet peut flotter.|
+|[CBasePane :: CanFocus](#canfocus)|Spécifie si le volet peut recevoir le focus.|
+|[CBasePane :: CopyState](#copystate)|Copie l’état d’un volet donné.|
+|[CBasePane :: CreateDefaultMiniframe](#createdefaultminiframe)|Si le volet peut flotter, crée une fenêtre mini-frame.|
+|[CBasePane :: CreateEx](#createex)|Crée le contrôle de volet.|
+|[CBasePane ::D ockPane](#dockpane)|Ancre un volet à un autre volet ou à une fenêtre frame.|
+|[CBasePane ::D ockPaneUsingRTTI](#dockpaneusingrtti)|Ancre le volet à l’aide des informations de type au moment de l’exécution.|
+|[CBasePane ::D ockToFrameWindow](#docktoframewindow)|Ancre un volet Ancrable à un frame.|
+|[CBasePane ::D oesAllowDynInsertBefore](#doesallowdyninsertbefore)|Détermine si un autre volet peut être inséré dynamiquement entre ce volet et le frame parent.|
+|[CBasePane :: EnableDocking](#enabledocking)|Active l’ancrage du volet au frame principal.|
+|[CBasePane :: EnableGripper](#enablegripper)|Active ou désactive la pince. Si la pince est activée, l’utilisateur peut la faire glisser pour repositionner le volet.|
 |`CBasePane::FillWindowRect`|Utilisé en interne.|
-|[CBasePane::FloatPane](#floatpane)|Flotte le volet.|
-|`CBasePane::get_accChild`|Appelé par l'infrastructure pour récupérer l'adresse d'une interface `IDispatch` pour l'enfant spécifié. (Substitue [CWnd:: get_accChild](../../mfc/reference/cwnd-class.md#get_accchild).)|
-|`CBasePane::get_accChildCount`|Appelé par l’infrastructure pour récupérer le nombre d’enfants qui appartiennent à cet objet. (Substitue [CWnd:: get_accChildCount](../../mfc/reference/cwnd-class.md#get_accchildcount).)|
-|`CBasePane::get_accDefaultAction`|Appelée par l’infrastructure pour récupérer une chaîne qui décrit l’action par défaut pour l’objet. (Substitue [CWnd:: get_accDefaultAction](../../mfc/reference/cwnd-class.md#get_accdefaultaction).)|
-|`CBasePane::get_accDescription`|Appelé par l'infrastructure pour récupérer une chaîne qui décrit l'aspect visuel de l'objet spécifié. (Substitue [CWnd:: get_accDescription](../../mfc/reference/cwnd-class.md#get_accdescription).)|
-|`CBasePane::get_accFocus`|Appelé par l'infrastructure pour récupérer l'objet qui a le focus clavier. (Substitue [CWnd:: get_accFocus](../../mfc/reference/cwnd-class.md#get_accfocus).)|
-|`CBasePane::get_accHelp`|Appelé par l’infrastructure pour récupérer une chaîne de propriété d’aide pour l’objet. (Substitue [CWnd:: get_accHelp](../../mfc/reference/cwnd-class.md#get_acchelp).)|
-|[CBasePane::get_accHelpTopic](#get_acchelptopic)|Appelé par l’infrastructure pour récupérer le chemin d’accès complet du fichier WinHelp associé à l’objet spécifié et l’identificateur de la rubrique appropriée dans ce fichier. (Substitue [CWnd:: get_accHelpTopic](../../mfc/reference/cwnd-class.md#get_acchelptopic).)|
-|`CBasePane::get_accKeyboardShortcut`|Appelé par l’infrastructure pour récupérer la touche de raccourci spécifiée pour l’objet. (Substitue [CWnd:: get_accKeyboardShortcut](../../mfc/reference/cwnd-class.md#get_acckeyboardshortcut).)|
-|`CBasePane::get_accName`|Appelé par l'infrastructure pour récupérer le nom de l'objet spécifié. (Substitue [CWnd:: get_accName](../../mfc/reference/cwnd-class.md#get_accname).)|
-|`CBasePane::get_accParent`|Appelé par l’infrastructure pour récupérer l' `IDispatch` interface du parent de l’objet. (Substitue [CWnd:: get_accParent](../../mfc/reference/cwnd-class.md#get_accparent).)|
-|`CBasePane::get_accRole`|Appelé par l'infrastructure pour récupérer les informations qui décrivent le rôle de l'objet spécifié. (Substitue [CWnd:: get_accRole](../../mfc/reference/cwnd-class.md#get_accrole).)|
-|[CBasePane::get_accSelection](#get_accselection)|Appelé par l'infrastructure pour récupérer les enfants sélectionnés de cet objet. (Substitue [CWnd:: get_accSelection](../../mfc/reference/cwnd-class.md#get_accselection).)|
-|`CBasePane::get_accState`|Appelé par l'infrastructure pour récupérer l'état actuel de l'objet spécifié. (Substitue [CWnd:: get_accState](../../mfc/reference/cwnd-class.md#get_accstate).)|
-|`CBasePane::get_accValue`|Appelé par l'infrastructure pour récupérer la valeur de l'objet spécifié. (Substitue [CWnd:: get_accValue](../../mfc/reference/cwnd-class.md#get_accvalue).)|
-|[CBasePane::GetCaptionHeight](#getcaptionheight)|Retourne la hauteur de légende.|
-|[CBasePane::GetControlBarStyle](#getcontrolbarstyle)|Retourne le style de barre de contrôle.|
-|[CBasePane:: GetCurrentAlignment](#getcurrentalignment)|Retourne l’alignement du volet actuel.|
-|[CBasePane:: GetDockingMode](#getdockingmode)|Retourne le mode d’ancrage actuel pour le volet.|
-|[CBasePane::GetDockSiteFrameWnd](#getdocksiteframewnd)|Retourne un pointeur vers la fenêtre qui est le site d’ancrage du volet.|
-|[CBasePane:: GetEnabledAlignment](#getenabledalignment)|Retourne les styles CBRS_ALIGN_ appliqués au volet.|
-|[CBasePane::GetMFCStyle](#getmfcstyle)|Retourne les styles de volet spécifiques à MFC.|
-|[CBasePane::GetPaneIcon](#getpaneicon)|Retourne un handle vers l’icône du volet.|
+|[CBasePane :: FloatPane](#floatpane)|Flotte le volet.|
+|`CBasePane::get_accChild`|Appelé par l'infrastructure pour récupérer l'adresse d'une interface `IDispatch` pour l'enfant spécifié. (Substitue [CWnd :: get_accChild](../../mfc/reference/cwnd-class.md#get_accchild).)|
+|`CBasePane::get_accChildCount`|Appelé par l’infrastructure pour récupérer le nombre d’enfants qui appartiennent à cet objet. (Substitue [CWnd :: get_accChildCount](../../mfc/reference/cwnd-class.md#get_accchildcount).)|
+|`CBasePane::get_accDefaultAction`|Appelée par l’infrastructure pour récupérer une chaîne qui décrit l’action par défaut pour l’objet. (Substitue [CWnd :: get_accDefaultAction](../../mfc/reference/cwnd-class.md#get_accdefaultaction).)|
+|`CBasePane::get_accDescription`|Appelé par l'infrastructure pour récupérer une chaîne qui décrit l'aspect visuel de l'objet spécifié. (Substitue [CWnd :: get_accDescription](../../mfc/reference/cwnd-class.md#get_accdescription).)|
+|`CBasePane::get_accFocus`|Appelé par l'infrastructure pour récupérer l'objet qui a le focus clavier. (Substitue [CWnd :: get_accFocus](../../mfc/reference/cwnd-class.md#get_accfocus).)|
+|`CBasePane::get_accHelp`|Appelé par l’infrastructure pour récupérer une chaîne de propriété d’aide pour l’objet. (Substitue [CWnd :: get_accHelp](../../mfc/reference/cwnd-class.md#get_acchelp).)|
+|[CBasePane :: get_accHelpTopic](#get_acchelptopic)|Appelé par l’infrastructure pour récupérer le chemin d’accès complet du fichier WinHelp associé à l’objet spécifié et l’identificateur de la rubrique appropriée dans ce fichier. (Substitue [CWnd :: get_accHelpTopic](../../mfc/reference/cwnd-class.md#get_acchelptopic).)|
+|`CBasePane::get_accKeyboardShortcut`|Appelé par l’infrastructure pour récupérer la touche de raccourci spécifiée pour l’objet. (Substitue [CWnd :: get_accKeyboardShortcut](../../mfc/reference/cwnd-class.md#get_acckeyboardshortcut).)|
+|`CBasePane::get_accName`|Appelé par l'infrastructure pour récupérer le nom de l'objet spécifié. (Substitue [CWnd :: get_accName](../../mfc/reference/cwnd-class.md#get_accname).)|
+|`CBasePane::get_accParent`|Appelé par l’infrastructure pour récupérer l’interface `IDispatch` pour le parent de l’objet. (Substitue [CWnd :: get_accParent](../../mfc/reference/cwnd-class.md#get_accparent).)|
+|`CBasePane::get_accRole`|Appelé par l'infrastructure pour récupérer les informations qui décrivent le rôle de l'objet spécifié. (Substitue [CWnd :: get_accRole](../../mfc/reference/cwnd-class.md#get_accrole).)|
+|[CBasePane :: get_accSelection](#get_accselection)|Appelé par l'infrastructure pour récupérer les enfants sélectionnés de cet objet. (Substitue [CWnd :: get_accSelection](../../mfc/reference/cwnd-class.md#get_accselection).)|
+|`CBasePane::get_accState`|Appelé par l'infrastructure pour récupérer l'état actuel de l'objet spécifié. (Substitue [CWnd :: get_accState](../../mfc/reference/cwnd-class.md#get_accstate).)|
+|`CBasePane::get_accValue`|Appelé par l'infrastructure pour récupérer la valeur de l'objet spécifié. (Substitue [CWnd :: get_accValue](../../mfc/reference/cwnd-class.md#get_accvalue).)|
+|[CBasePane :: GetCaptionHeight](#getcaptionheight)|Retourne la hauteur de légende.|
+|[CBasePane :: GetControlBarStyle](#getcontrolbarstyle)|Retourne le style de barre de contrôle.|
+|[CBasePane :: GetCurrentAlignment](#getcurrentalignment)|Retourne l’alignement du volet actuel.|
+|[CBasePane :: GetDockingMode](#getdockingmode)|Retourne le mode d’ancrage actuel pour le volet.|
+|[CBasePane :: GetDockSiteFrameWnd](#getdocksiteframewnd)|Retourne un pointeur vers la fenêtre qui est le site d’ancrage du volet.|
+|[CBasePane :: GetEnabledAlignment](#getenabledalignment)|Retourne les styles de CBRS_ALIGN_ appliqués au volet.|
+|[CBasePane :: GetMFCStyle](#getmfcstyle)|Retourne les styles de volet spécifiques à MFC.|
+|[CBasePane :: GetPaneIcon](#getpaneicon)|Retourne un handle vers l’icône du volet.|
 |`CBasePane::GetPaneRect`|Utilisé en interne.|
-|[CBasePane::GetPaneRow](#getpanerow)|Retourne un pointeur vers l’objet [CDockingPanesRow](../../mfc/reference/cdockingpanesrow-class.md)où le volet est ancré.|
-|[CBasePane::GetPaneStyle](#getpanestyle)|Retourne le style du volet.|
-|[CBasePane::GetParentDockSite](#getparentdocksite)|Retourne un pointeur vers le site d’ancrage parent.|
-|[CBasePane::GetParentMiniFrame](#getparentminiframe)|Retourne un pointeur vers la fenêtre mini-frame parente.|
-|[CBasePane::GetParentTabbedPane](#getparenttabbedpane)|Retourne un pointeur vers le volet à onglets parent.|
-|[CBasePane::GetParentTabWnd](#getparenttabwnd)|Retourne un pointeur vers la fenêtre parente qui se trouve à l’intérieur d’un onglet.|
-|[CBasePane::GetRecentVisibleState](#getrecentvisiblestate)|L’infrastructure appelle cette méthode lorsqu’un volet est restauré à partir d’une archive.|
-|[CBasePane:: HideInPrintPreviewMode](#hideinprintpreviewmode)|Spécifie si le volet est masqué en mode aperçu avant impression.|
-|[CBasePane::InsertPane](#insertpane)|Inscrit le volet spécifié auprès du gestionnaire d’ancrage.|
-|[CBasePane::IsAccessibilityCompatible](#isaccessibilitycompatible)|Spécifie si le volet prend en charge Active Accessibility.|
-|[CBasePane::IsAutoHideMode](#isautohidemode)|Détermine si un volet est en mode de masquage automatique.|
-|[CBasePane:: IsDialogControl](#isdialogcontrol)|Spécifie si le volet est un contrôle de boîte de dialogue.|
-|[CBasePane::IsDocked](#isdocked)|Détermine si le volet est ancré.|
-|[CBasePane::IsFloating](#isfloating)|Détermine si le volet est flottant.|
-|[CBasePane::IsHorizontal](#ishorizontal)|Détermine si le volet est ancré horizontalement.|
-|[CBasePane::IsInFloatingMultiPaneFrameWnd](#isinfloatingmultipaneframewnd)|Spécifie si le volet se trouve dans une fenêtre frame à plusieurs volets.|
-|[CBasePane:: IsMDITabbed](#ismditabbed)|Détermine si le volet a été ajouté à une fenêtre enfant MDI en tant que document à onglets.|
-|[CBasePane::IsPaneVisible](#ispanevisible)|Spécifie si l’indicateur WS_VISIBLE est défini pour le volet.|
-|[CBasePane::IsPointNearDockSite](#ispointneardocksite)|Détermine si un point spécifié est près du site d’ancrage.|
-|[CBasePane::IsResizable](#isresizable)|Détermine si le volet peut être redimensionné.|
-|[CBasePane::IsRestoredFromRegistry](#isrestoredfromregistry)|Détermine si le volet est restauré à partir du Registre.|
-|[CBasePane::IsTabbed](#istabbed)|Détermine si le volet a été inséré dans le contrôle onglet d’une fenêtre à onglets.|
+|[CBasePane :: GetPaneRow](#getpanerow)|Retourne un pointeur vers l’objet [CDockingPanesRow](../../mfc/reference/cdockingpanesrow-class.md)où le volet est ancré.|
+|[CBasePane :: GetPaneStyle](#getpanestyle)|Retourne le style du volet.|
+|[CBasePane :: GetParentDockSite](#getparentdocksite)|Retourne un pointeur vers le site d’ancrage parent.|
+|[CBasePane :: GetParentMiniFrame](#getparentminiframe)|Retourne un pointeur vers la fenêtre mini-frame parente.|
+|[CBasePane :: GetParentTabbedPane](#getparenttabbedpane)|Retourne un pointeur vers le volet à onglets parent.|
+|[CBasePane :: GetParentTabWnd](#getparenttabwnd)|Retourne un pointeur vers la fenêtre parente qui se trouve à l’intérieur d’un onglet.|
+|[CBasePane :: GetRecentVisibleState](#getrecentvisiblestate)|L’infrastructure appelle cette méthode lorsqu’un volet est restauré à partir d’une archive.|
+|[CBasePane :: HideInPrintPreviewMode](#hideinprintpreviewmode)|Spécifie si le volet est masqué en mode aperçu avant impression.|
+|[CBasePane :: InsertPane](#insertpane)|Inscrit le volet spécifié auprès du gestionnaire d’ancrage.|
+|[CBasePane :: IsAccessibilityCompatible](#isaccessibilitycompatible)|Spécifie si le volet prend en charge Active Accessibility.|
+|[CBasePane :: IsAutoHideMode](#isautohidemode)|Détermine si un volet est en mode de masquage automatique.|
+|[CBasePane :: IsDialogControl](#isdialogcontrol)|Spécifie si le volet est un contrôle de boîte de dialogue.|
+|[CBasePane :: IsDocked](#isdocked)|Détermine si le volet est ancré.|
+|[CBasePane :: IsFloating](#isfloating)|Détermine si le volet est flottant.|
+|[CBasePane :: IsHorizontal](#ishorizontal)|Détermine si le volet est ancré horizontalement.|
+|[CBasePane :: IsInFloatingMultiPaneFrameWnd](#isinfloatingmultipaneframewnd)|Spécifie si le volet se trouve dans une fenêtre frame à plusieurs volets.|
+|[CBasePane :: IsMDITabbed](#ismditabbed)|Détermine si le volet a été ajouté à une fenêtre enfant MDI en tant que document à onglets.|
+|[CBasePane :: IsPaneVisible](#ispanevisible)|Spécifie si l’indicateur de WS_VISIBLE est défini pour le volet.|
+|[CBasePane :: IsPointNearDockSite](#ispointneardocksite)|Détermine si un point spécifié est près du site d’ancrage.|
+|[CBasePane :: IsResizable](#isresizable)|Détermine si le volet peut être redimensionné.|
+|[CBasePane :: IsRestoredFromRegistry](#isrestoredfromregistry)|Détermine si le volet est restauré à partir du Registre.|
+|[CBasePane :: IsTabbed](#istabbed)|Détermine si le volet a été inséré dans le contrôle onglet d’une fenêtre à onglets.|
 |`CBasePane::IsTooltipTopmost`|Utilisé en interne.|
-|[CBasePane::IsVisible](#isvisible)|Détermine si le volet est visible.|
-|[CBasePane::LoadState](#loadstate)|Charge l’état du volet à partir du Registre.|
-|[CBasePane::MoveWindow](#movewindow)|Déplace le volet.|
-|[CBasePane::OnAfterChangeParent](#onafterchangeparent)|Appelé par le Framework lorsque le parent du volet a été modifié.|
-|[CBasePane::OnBeforeChangeParent](#onbeforechangeparent)|Appelée par l’infrastructure juste avant que le volet modifie sa fenêtre parente.|
-|[CBasePane:: OnDrawCaption](#ondrawcaption)|L’infrastructure appelle cette méthode lorsque la légende est dessinée.|
-|[CBasePane:: OnMovePaneDivider](#onmovepanedivider)|Cette méthode n’est pas utilisée actuellement.|
-|[CBasePane::OnPaneContextMenu](#onpanecontextmenu)|Appelée par le Framework lorsqu’il génère un menu qui contient une liste de volets.|
-|[CBasePane::OnRemoveFromMiniFrame](#onremovefromminiframe)|Appelé par le Framework lorsqu’un volet est supprimé de sa fenêtre mini-frame parente.|
-|[CBasePane::OnSetAccData](#onsetaccdata)|`CBasePane`n’utilise pas cette méthode.|
+|[CBasePane :: IsVisible](#isvisible)|Détermine si le volet est visible.|
+|[CBasePane :: LoadState](#loadstate)|Charge l’état du volet à partir du Registre.|
+|[CBasePane :: MoveWindow](#movewindow)|Déplace le volet.|
+|[CBasePane :: OnAfterChangeParent](#onafterchangeparent)|Appelé par le Framework lorsque le parent du volet a été modifié.|
+|[CBasePane :: OnBeforeChangeParent](#onbeforechangeparent)|Appelée par l’infrastructure juste avant que le volet modifie sa fenêtre parente.|
+|[CBasePane :: OnDrawCaption](#ondrawcaption)|L’infrastructure appelle cette méthode lorsque la légende est dessinée.|
+|[CBasePane :: OnMovePaneDivider](#onmovepanedivider)|Cette méthode n’est pas utilisée actuellement.|
+|[CBasePane :: OnPaneContextMenu](#onpanecontextmenu)|Appelée par le Framework lorsqu’il génère un menu qui contient une liste de volets.|
+|[CBasePane :: OnRemoveFromMiniFrame](#onremovefromminiframe)|Appelé par le Framework lorsqu’un volet est supprimé de sa fenêtre mini-frame parente.|
+|[CBasePane :: OnSetAccData](#onsetaccdata)|`CBasePane` n’utilise pas cette méthode.|
 |`CBasePane::OnUpdateCmdUI`|Utilisé en interne.|
-|[CBasePane::P aneFromPoint](#panefrompoint)|Retourne le volet qui contient le point donné.|
+|[CBasePane ::P aneFromPoint](#panefrompoint)|Retourne le volet qui contient le point donné.|
 |`CBasePane::PreTranslateMessage`|Utilisé par la classe [CWinApp](../../mfc/reference/cwinapp-class.md) pour traduire les messages de fenêtre avant qu’ils ne soient distribués aux fonctions Windows [TranslateMessage](/windows/win32/api/winuser/nf-winuser-translatemessage) et [DispatchMessage](/windows/win32/api/winuser/nf-winuser-dispatchmessage) . (Substitue [CWnd::PreTranslateMessage](../../mfc/reference/cwnd-class.md#pretranslatemessage).)|
-|[CBasePane::RecalcLayout](#recalclayout)|`CBasePane`n’utilise pas cette méthode.|
-|[CBasePane::RemovePaneFromDockManager](#removepanefromdockmanager)|Annule l’inscription d’un volet et le supprime de la liste dans le gestionnaire d’ancrage.|
-|[CBasePane::SaveState](#savestate)|Enregistre l'état du volet dans le Registre.|
-|[CBasePane::SelectDefaultFont](#selectdefaultfont)|Sélectionne la police par défaut pour un contexte de périphérique donné.|
+|[CBasePane :: RecalcLayout](#recalclayout)|`CBasePane` n’utilise pas cette méthode.|
+|[CBasePane :: RemovePaneFromDockManager](#removepanefromdockmanager)|Annule l’inscription d’un volet et le supprime de la liste dans le gestionnaire d’ancrage.|
+|[CBasePane :: saveste](#savestate)|Enregistre l'état du volet dans le Registre.|
+|[CBasePane :: SelectDefaultFont](#selectdefaultfont)|Sélectionne la police par défaut pour un contexte de périphérique donné.|
 |`CBasePane::Serialize`|Lit ou écrit cet objet dans une archive. (Substitue [CObject::Serialize](../../mfc/reference/cobject-class.md#serialize).)|
-|[CBasePane::SetControlBarStyle](#setcontrolbarstyle)|Définit le style de la barre de contrôle.|
-|[CBasePane::SetDockingMode](#setdockingmode)|Définit le mode d’ancrage du volet.|
+|[CBasePane :: SetControlBarStyle](#setcontrolbarstyle)|Définit le style de la barre de contrôle.|
+|[CBasePane :: SetDockingMode](#setdockingmode)|Définit le mode d’ancrage du volet.|
 |`CBasePane::SetMDITabbed`|Utilisé en interne.|
-|[CBasePane::SetPaneAlignment](#setpanealignment)|Définit l’alignement du volet.|
+|[CBasePane :: SetPaneAlignment](#setpanealignment)|Définit l’alignement du volet.|
 |`CBasePane::SetPaneRect`|Utilisé en interne.|
-|[CBasePane::SetPaneStyle](#setpanestyle)|Définit le style du volet.|
+|[CBasePane :: SetPaneStyle](#setpanestyle)|Définit le style du volet.|
 |`CBasePane::SetRestoredFromRegistry`|Utilisé en interne.|
-|[CBasePane:: SetWindowPos](#setwindowpos)|Modifie la taille, la position et l’ordre de plan d’un volet.|
-|[CBasePane::ShowPane](#showpane)|Affiche ou masque le volet.|
-|[CBasePane::StretchPane](#stretchpane)|Étire un volet sur le plan vertical ou horizontal.|
-|[CBasePane::UndockPane](#undockpane)|Supprime le volet du site d’ancrage, du curseur par défaut ou de la fenêtre mini-frame dans laquelle il est actuellement ancré.|
+|[CBasePane :: SetWindowPos](#setwindowpos)|Modifie la taille, la position et l’ordre de plan d’un volet.|
+|[CBasePane :: ShowPane](#showpane)|Affiche ou masque le volet.|
+|[CBasePane :: StretchPane](#stretchpane)|Étire un volet sur le plan vertical ou horizontal.|
+|[CBasePane :: UndockPane](#undockpane)|Supprime le volet du site d’ancrage, du curseur par défaut ou de la fenêtre mini-frame dans laquelle il est actuellement ancré.|
 
 ### <a name="protected-methods"></a>Méthodes protégées
 
-|Nom|Description|
+|Name|Description|
 |----------|-----------------|
-|[CBasePane::DoPaint](#dopaint)|Remplit l’arrière-plan du volet.|
+|[CBasePane ::D oPaint](#dopaint)|Remplit l’arrière-plan du volet.|
 
 ## <a name="remarks"></a>Notes
 
-Si vous souhaitez créer une classe de volet qui prend en charge les fonctionnalités d’ancrage étendues disponibles dans MFC, vous devez `CBasePane` la dériver à partir de ou de la [classe CPane](../../mfc/reference/cpane-class.md).
+Si vous souhaitez créer une classe de volet qui prend en charge les fonctionnalités d’ancrage étendues disponibles dans MFC, vous devez la dériver de `CBasePane` ou de la [classe CPane](../../mfc/reference/cpane-class.md).
 
 ## <a name="customization-tips"></a>Conseils de personnalisation
 
-Les conseils de personnalisation suivants s’appliquent `CBasePane Class` au et à toutes les classes qui héritent de celui-ci:
+Les conseils de personnalisation suivants s’appliquent au `CBasePane Class` et à toutes les classes qui en héritent :
 
-- Lorsque vous créez un volet, vous pouvez appliquer plusieurs nouveaux styles:
+- Lorsque vous créez un volet, vous pouvez appliquer plusieurs nouveaux styles :
 
   - AFX_CBRS_FLOAT rend le volet flottant.
 
@@ -324,25 +324,25 @@ Les conseils de personnalisation suivants s’appliquent `CBasePane Class` au et
 
   Il s’agit d’indicateurs que vous pouvez combiner avec une opération or au niveau du bit.
 
-`CBasePane`implémente les méthodes booléennes virtuelles suivantes pour refléter ces indicateurs: [CBasePane::CanBeClosed](#canbeclosed), [CBasePane::CanAutoHide](#canautohide), [CBasePane::CanFloat](#canfloat). Vous pouvez les substituer dans les classes dérivées pour personnaliser leur comportement.
+`CBasePane` implémente les méthodes booléennes virtuelles suivantes pour refléter ces indicateurs : [CBasePane :: CanBeClosed](#canbeclosed), [CBasePane :: CanAutoHide](#canautohide), [CBasePane :: CanFloat](#canfloat). Vous pouvez les substituer dans les classes dérivées pour personnaliser leur comportement.
 
-- Vous pouvez personnaliser le comportement d’ancrage en substituant [CBasePane:: CanAcceptPane](#canacceptpane). Si votre volet retourne la valeur FALSe à partir de cette méthode pour empêcher l’ancrage d’un autre volet.
+- Vous pouvez personnaliser le comportement d’ancrage en substituant [CBasePane :: CanAcceptPane](#canacceptpane). Si votre volet retourne la valeur FALSe à partir de cette méthode pour empêcher l’ancrage d’un autre volet.
 
-- Si vous souhaitez créer un volet statique qui ne peut pas flotter et qui empêche tout autre volet de s’ancrer avant celui-ci (similaire à la barre Outlook dans l’exemple OutlookDemo), créez-le comme non flottant et substituez [CBasePane::D oesallowdyninsertbefore](#doesallowdyninsertbefore) pour retourner Fausses. L’implémentation par défaut retourne la valeur FALSe si le volet est créé sans le style AFX_CBRS_FLOAT.
+- Si vous souhaitez créer un volet statique qui ne peut pas flotter et qui empêche tout autre volet de s’ancrer avant celui-ci (similaire à la barre Outlook dans l’exemple OutlookDemo), créez-le comme non flottant et substituez [CBasePane ::D oesallowdyninsertbefore](#doesallowdyninsertbefore) pour retourner false. L’implémentation par défaut retourne la valeur FALSe si le volet est créé sans le style AFX_CBRS_FLOAT.
 
 - Créez tous les volets avec des ID autres que-1.
 
-- Pour déterminer la visibilité du volet, utilisez [CBasePane:: IsVisible](#isvisible). Il gère correctement l’état de visibilité dans les modes avec onglets et les modes de masquage automatique.
+- Pour déterminer la visibilité du volet, utilisez [CBasePane :: IsVisible](#isvisible). Il gère correctement l’état de visibilité dans les modes avec onglets et les modes de masquage automatique.
 
-- Si vous souhaitez créer un volet redimensionnable non flottant, créez-le sans le style AFX_CBRS_FLOAT et appelez [CFrameWnd::D ockcontrolbar](../../mfc/reference/cframewnd-class.md#dockcontrolbar).
+- Si vous souhaitez créer un volet redimensionnable non flottant, créez-le sans le style AFX_CBRS_FLOAT et appelez [CFrameWnd ::D ockcontrolbar](../../mfc/reference/cframewnd-class.md#dockcontrolbar).
 
-- Pour exclure un volet d’une disposition d’ancrage ou pour supprimer une barre d’outils de sa barre d’ancrage, appelez [CBasePane:: UndockPane](#undockpane). N’appelez pas cette méthode pour les volets en mode de masquage automatique ou pour les volets qui se trouvent dans les onglets des fenêtres à onglets.
+- Pour exclure un volet d’une disposition d’ancrage ou pour supprimer une barre d’outils de sa barre d’ancrage, appelez [CBasePane :: UndockPane](#undockpane). N’appelez pas cette méthode pour les volets en mode de masquage automatique ou pour les volets qui se trouvent dans les onglets des fenêtres à onglets.
 
-- Si vous souhaitez flotter ou détacher un volet qui est en mode de masquage automatique, vous devez appeler [CDockablePane:: SetAutoHideMode](../../mfc/reference/cdockablepane-class.md#setautohidemode) avec false comme premier argument avant d’appeler [CBasePane:: FloatPane](#floatpane) ou [CBasePane:: UndockPane](#undockpane).
+- Si vous souhaitez flotter ou détacher un volet qui est en mode de masquage automatique, vous devez appeler [CDockablePane :: SetAutoHideMode](../../mfc/reference/cdockablepane-class.md#setautohidemode) avec false comme premier argument avant d’appeler [CBasePane :: FloatPane](#floatpane) ou [CBasePane :: UndockPane](#undockpane).
 
 ## <a name="example"></a>Exemple
 
-L’exemple suivant montre comment utiliser différentes méthodes de la classe `CBasePane` . L’exemple montre comment récupérer un volet de la `CFrameWndEx` classe et comment définir le mode d’ancrage, l’alignement du volet et le style du volet. Le code provient de l' [exemple Word Pad](../../overview/visual-cpp-samples.md).
+L’exemple suivant montre comment utiliser différentes méthodes de la classe `CBasePane` . L’exemple montre comment récupérer un volet de la classe `CFrameWndEx` et comment définir le mode d’ancrage, l’alignement du volet et le style du volet. Le code provient de l' [exemple Word Pad](../../overview/visual-cpp-samples.md).
 
 [!code-cpp[NVC_MFC_WordPad#2](../../mfc/reference/codesnippet/cpp/cbasepane-class_1.cpp)]
 
@@ -356,13 +356,13 @@ L’exemple suivant montre comment utiliser différentes méthodes de la classe 
 
 [CBasePane](../../mfc/reference/cbasepane-class.md)
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
-**En-tête:** afxbasepane. h
+**En-tête :** afxbasepane. h
 
-##  <a name="accnotifyobjectfocusevent"></a>  CBasePane::AccNotifyObjectFocusEvent
+##  <a name="accnotifyobjectfocusevent"></a>CBasePane :: AccNotifyObjectFocusEvent
 
-`CBasePane`n’utilise pas cette méthode.
+`CBasePane` n’utilise pas cette méthode.
 
 ```
 virtual void AccNotifyObjectFocusEvent(int);
@@ -371,9 +371,9 @@ virtual void AccNotifyObjectFocusEvent(int);
 ### <a name="parameters"></a>Paramètres
 
 *int*<br/>
-dans Non utilisé.
+[in] Non utilisé.
 
-##  <a name="addpane"></a>  CBasePane::AddPane
+##  <a name="addpane"></a>CBasePane :: AddPane
 
 Ajoute un volet au gestionnaire d’ancrage.
 
@@ -390,9 +390,9 @@ dans Pointeur vers un volet à ajouter.
 
 Il s’agit d’une méthode pratique qui ajoute un volet à un gestionnaire d’ancrage. À l’aide de cette méthode, il n’est pas nécessaire d’écrire du code qui analyse le type du frame parent.
 
-Pour plus d’informations, consultez [CDockingManager, classe](../../mfc/reference/cdockingmanager-class.md) et [CMDIFrameWndEx:: AddPane](../../mfc/reference/cmdiframewndex-class.md#addpane).
+Pour plus d’informations, consultez [CDockingManager, classe](../../mfc/reference/cdockingmanager-class.md) et [CMDIFrameWndEx :: AddPane](../../mfc/reference/cmdiframewndex-class.md#addpane).
 
-##  <a name="adjustdockinglayout"></a>  CBasePane::AdjustDockingLayout
+##  <a name="adjustdockinglayout"></a>CBasePane :: AdjustDockingLayout
 
 Redirige un appel vers le gestionnaire d’ancrage pour ajuster la disposition d’ancrage.
 
@@ -409,9 +409,9 @@ virtual void AdjustDockingLayout(HDWP hdwp=NULL);
 
 Il s’agit d’une méthode pratique qui ajuste la disposition d’ancrage. À l’aide de cette méthode, il n’est pas nécessaire d’écrire du code qui analyse le type du frame parent.
 
-Pour plus d’informations, consultez [CDockingManager:: AdjustDockingLayout](../../mfc/reference/cdockingmanager-class.md#adjustdockinglayout)
+Pour plus d’informations, consultez [CDockingManager :: AdjustDockingLayout](../../mfc/reference/cdockingmanager-class.md#adjustdockinglayout)
 
-##  <a name="adjustlayout"></a>  CBasePane::AdjustLayout
+##  <a name="adjustlayout"></a>CBasePane :: AdjustLayout
 
 Appelé par l’infrastructure pour ajuster la disposition interne d’un volet.
 
@@ -423,7 +423,7 @@ virtual void AdjustLayout();
 
 L’infrastructure appelle cette méthode lorsqu’un volet doit ajuster sa disposition interne. L’implémentation de base ne fait rien.
 
-##  <a name="calcfixedlayout"></a>  CBasePane::CalcFixedLayout
+##  <a name="calcfixedlayout"></a>CBasePane :: CalcFixedLayout
 
 Calcule la taille horizontale d’une barre de contrôle.
 
@@ -443,13 +443,13 @@ dans Indique que la barre est orientée horizontalement ou verticalement. Le par
 
 ### <a name="return-value"></a>Valeur de retour
 
-Taille de la barre de contrôle, en pixels, `CSize` d’un objet.
+Taille de la barre de contrôle, en pixels, d’un objet `CSize`.
 
 ### <a name="remarks"></a>Notes
 
-Consultez la section Notes dans [CControlBar:: CalcFixedLayout](../../mfc/reference/ccontrolbar-class.md#calcfixedlayout)
+Consultez la section Notes dans [CControlBar :: CalcFixedLayout](../../mfc/reference/ccontrolbar-class.md#calcfixedlayout)
 
-##  <a name="canacceptpane"></a>  CBasePane::CanAcceptPane
+##  <a name="canacceptpane"></a>CBasePane :: CanAcceptPane
 
 Détermine si un autre volet peut être ancré dans le volet.
 
@@ -464,17 +464,17 @@ dans Pointeur vers le volet à ancrer.
 
 ### <a name="return-value"></a>Valeur de retour
 
-TRUE si un autre volet peut être accepté; Sinon, FALSe.
+TRUE si un autre volet peut être accepté ; Sinon, FALSe.
 
 ### <a name="remarks"></a>Notes
 
 L’infrastructure appelle cette méthode avant d’ancrer le volet spécifié par *pBar* au volet actuel.
 
-Utilisez cette méthode et la méthode [CBasePane:: CanBeDocked](#canbedocked) pour contrôler la façon dont les volets s’ancrent à d’autres volets dans votre application.
+Utilisez cette méthode et la méthode [CBasePane :: CanBeDocked](#canbedocked) pour contrôler la façon dont les volets s’ancrent à d’autres volets dans votre application.
 
 L’implémentation par défaut retourne FALSe.
 
-##  <a name="canautohide"></a>  CBasePane::CanAutoHide
+##  <a name="canautohide"></a>CBasePane :: CanAutoHide
 
 Détermine si le volet prend en charge le mode de masquage automatique.
 
@@ -484,17 +484,17 @@ virtual BOOL CanAutoHide() const;
 
 ### <a name="return-value"></a>Valeur de retour
 
-TRUE si ce volet prend en charge le mode de masquage automatique; Sinon, FALSe.
+TRUE si ce volet prend en charge le mode de masquage automatique ; Sinon, FALSe.
 
 ### <a name="remarks"></a>Notes
 
 L’infrastructure appelle cette fonction pour déterminer si le volet prend en charge le mode de masquage automatique.
 
-Pendant la construction, vous pouvez définir cette capacité en passant l’indicateur AFX_CBRS_AUTOHIDE à [CBasePane:: CreateEx](#createex).
+Pendant la construction, vous pouvez définir cette capacité en passant l’indicateur AFX_CBRS_AUTOHIDE à [CBasePane :: CreateEx](#createex).
 
-L’implémentation par défaut vérifie l’indicateur AFX_CBRS_AUTOHIDE. Substituez cette méthode dans une classe dérivée pour personnaliser ce comportement.
+L’implémentation par défaut recherche l’indicateur AFX_CBRS_AUTOHIDE. Substituez cette méthode dans une classe dérivée pour personnaliser ce comportement.
 
-##  <a name="canbeattached"></a>  CBasePane::CanBeAttached
+##  <a name="canbeattached"></a>CBasePane :: CanBeAttached
 
 Détermine si le volet peut être ancré à un autre volet ou fenêtre frame.
 
@@ -504,13 +504,13 @@ virtual BOOL CanBeAttached() const;
 
 ### <a name="return-value"></a>Valeur de retour
 
-TRUE si le volet peut être ancré à un autre volet ou fenêtre frame; Sinon, FALSe.
+TRUE si le volet peut être ancré à un autre volet ou fenêtre frame ; Sinon, FALSe.
 
 ### <a name="remarks"></a>Notes
 
-L’implémentation par défaut retourne FALSe. Substituez cette méthode dans une classe dérivée pour activer ou désactiver la possibilité d’ancrer sans appeler [CBasePane:: EnableDocking](#enabledocking).
+L’implémentation par défaut retourne FALSe. Substituez cette méthode dans une classe dérivée pour activer ou désactiver la possibilité d’ancrer sans appeler [CBasePane :: EnableDocking](#enabledocking).
 
-##  <a name="canbeclosed"></a>  CBasePane::CanBeClosed
+##  <a name="canbeclosed"></a>CBasePane :: CanBeClosed
 
 Détermine si le volet peut être fermé.
 
@@ -520,17 +520,17 @@ virtual BOOL CanBeClosed() const;
 
 ### <a name="return-value"></a>Valeur de retour
 
-TRUE si le volet peut être fermé; Sinon, FALSe.
+TRUE si le volet peut être fermé ; Sinon, FALSe.
 
 ### <a name="remarks"></a>Notes
 
 L’infrastructure appelle cette méthode pour déterminer si le volet peut être fermé. Si la méthode retourne la valeur TRUE, un bouton **Fermer** est ajouté à la barre de titre du volet ou, si le volet est flottant, à la barre de titre de la fenêtre Miniframe du volet.
 
-Pendant la construction, vous pouvez définir cette capacité en passant l’indicateur AFX_CBRS_CLOSE à [CBasePane:: CreateEx](#createex).
+Pendant la construction, vous pouvez définir cette capacité en passant l’indicateur AFX_CBRS_CLOSE à [CBasePane :: CreateEx](#createex).
 
-L’implémentation par défaut vérifie l’indicateur AFX_CBRS_CLOSE.
+L’implémentation par défaut recherche l’indicateur AFX_CBRS_CLOSE.
 
-##  <a name="canbedocked"></a>  CBasePane::CanBeDocked
+##  <a name="canbedocked"></a>CBasePane :: CanBeDocked
 
 Détermine si le volet peut être ancré à un autre volet.
 
@@ -545,17 +545,17 @@ dans Pointeur vers un autre volet.
 
 ### <a name="return-value"></a>Valeur de retour
 
-TRUE si ce volet peut être ancré à un autre volet; Sinon, FALSe.
+TRUE si ce volet peut être ancré à un autre volet ; Sinon, FALSe.
 
 ### <a name="remarks"></a>Notes
 
 L’infrastructure appelle cette méthode avant d’ancrer le volet spécifié par *pDockBar* au volet actuel.
 
-Utilisez cette méthode et la méthode [CBasePane:: CanAcceptPane](#canacceptpane) pour contrôler la façon dont les volets s’ancrent à d’autres volets dans votre application.
+Utilisez cette méthode et la méthode [CBasePane :: CanAcceptPane](#canacceptpane) pour contrôler la façon dont les volets s’ancrent à d’autres volets dans votre application.
 
 L’implémentation par défaut retourne FALSe.
 
-##  <a name="canberesized"></a>  CBasePane::CanBeResized
+##  <a name="canberesized"></a>CBasePane :: CanBeResized
 
 Détermine si le volet peut être redimensionné.
 
@@ -565,13 +565,13 @@ virtual BOOL CanBeResized() const;
 
 ### <a name="return-value"></a>Valeur de retour
 
-TRUE si le volet peut être redimensionné; Sinon, FALSe.
+TRUE si le volet peut être redimensionné ; Sinon, FALSe.
 
 ### <a name="remarks"></a>Notes
 
-Cette méthode vérifie l’indicateur AFX_CBRS_RESIZE, qui est spécifié par défaut dans `CBasePane::OnCreate`. Si cet indicateur n’est pas spécifié, le gestionnaire d’ancrage signale le volet en interne comme immeuble au lieu de l’ancrer.
+Cette méthode recherche l’indicateur AFX_CBRS_RESIZE, qui est spécifié par défaut dans `CBasePane::OnCreate`. Si cet indicateur n’est pas spécifié, le gestionnaire d’ancrage signale le volet en interne comme immeuble au lieu de l’ancrer.
 
-##  <a name="canbetabbeddocument"></a>  CBasePane::CanBeTabbedDocument
+##  <a name="canbetabbeddocument"></a>CBasePane :: CanBeTabbedDocument
 
 Spécifie si le volet peut être converti en document avec onglet MDI.
 
@@ -581,13 +581,13 @@ virtual BOOL CanBeTabbedDocument() const;
 
 ### <a name="return-value"></a>Valeur de retour
 
-TRUE si le volet peut être converti en document à onglets; Sinon, FALSe. `CBasePane::CanBeTabbedDocument`retourne toujours FALSe.
+TRUE si le volet peut être converti en document à onglets ; Sinon, FALSe. `CBasePane::CanBeTabbedDocument` retourne toujours la valeur FALSe.
 
 ### <a name="remarks"></a>Notes
 
-Seuls les objets de `CBasePane`certains types dérivés, tels que la [classe CDockablePane](../../mfc/reference/cdockablepane-class.md), peuvent être convertis en documents avec onglet.
+Seuls les objets de certains types dérivés de `CBasePane`, tels que la [classe CDockablePane](../../mfc/reference/cdockablepane-class.md), peuvent être convertis en documents avec onglet.
 
-##  <a name="canfloat"></a>  CBasePane::CanFloat
+##  <a name="canfloat"></a>CBasePane :: CanFloat
 
 Détermine si le volet peut flotter.
 
@@ -597,20 +597,20 @@ virtual BOOL CanFloat() const;
 
 ### <a name="return-value"></a>Valeur de retour
 
-TRUE si le volet peut flotter; Sinon, FALSe.
+TRUE si le volet peut flotter ; Sinon, FALSe.
 
 ### <a name="remarks"></a>Notes
 
 L’infrastructure appelle cette méthode pour déterminer si le volet peut flotter.
 
-Pendant la construction, vous pouvez définir cette capacité en passant l’indicateur AFX_CBRS_FLOAT à [CBasePane:: CreateEx](#createex).
+Pendant la construction, vous pouvez définir cette capacité en passant l’indicateur AFX_CBRS_FLOAT à [CBasePane :: CreateEx](#createex).
 
 > [!NOTE]
 >  L’infrastructure suppose que les volets non flottants sont statiques et que leur état d’ancrage ne peut pas changer. Par conséquent, l’infrastructure n’enregistre pas l’état d’ancrage des volets non flottants.
 
-L’implémentation par défaut vérifie le style AFX_CBRS_FLOAT.
+L’implémentation par défaut recherche le style de AFX_CBRS_FLOAT.
 
-##  <a name="canfocus"></a>  CBasePane::CanFocus
+##  <a name="canfocus"></a>CBasePane :: CanFocus
 
 Spécifie si le volet peut recevoir le focus.
 
@@ -620,7 +620,7 @@ virtual BOOL CanFocus() const;
 
 ### <a name="return-value"></a>Valeur de retour
 
-TRUE si le volet peut recevoir le focus; Sinon, FALSe.
+TRUE si le volet peut recevoir le focus ; Sinon, FALSe.
 
 ### <a name="remarks"></a>Notes
 
@@ -628,7 +628,7 @@ Substituez cette méthode dans une classe dérivée pour contrôler le focus. Pa
 
 L’infrastructure essaie de définir le focus d’entrée lorsqu’un volet est ancré ou flotte.
 
-##  <a name="copystate"></a>  CBasePane::CopyState
+##  <a name="copystate"></a>CBasePane :: CopyState
 
 Copie l’état d’un volet donné.
 
@@ -645,7 +645,7 @@ dans Pointeur vers un autre volet.
 
 Cette méthode copie l’état de *pOrgBar* dans ce volet.
 
-##  <a name="createdefaultminiframe"></a>  CBasePane::CreateDefaultMiniframe
+##  <a name="createdefaultminiframe"></a>CBasePane :: CreateDefaultMiniframe
 
 Si le volet peut flotter, cette méthode crée une fenêtre mini-frame pour celui-ci.
 
@@ -668,7 +668,7 @@ L’infrastructure appelle cette méthode lorsqu’un volet passe à l’état f
 
 L’implémentation par défaut retourne la valeur NULL.
 
-##  <a name="createex"></a>  CBasePane::CreateEx
+##  <a name="createex"></a>CBasePane :: CreateEx
 
 Crée le contrôle de volet.
 
@@ -688,7 +688,7 @@ virtual BOOL CreateEx(
 ### <a name="parameters"></a>Paramètres
 
 *dwStyleEx*<br/>
-dans Les styles étendus (voir [CWnd:: CreateEx](../../mfc/reference/cwnd-class.md#createex) pour plus d’informations).
+dans Les styles étendus (voir [CWnd :: CreateEx](../../mfc/reference/cwnd-class.md#createex) pour plus d’informations).
 
 *lpszClassName*<br/>
 dans Nom de la classe de fenêtre.
@@ -697,34 +697,34 @@ dans Nom de la classe de fenêtre.
 dans Nom de la fenêtre.
 
 *dwStyle*<br/>
-dans Style de fenêtre (voir [CWnd:: CreateEx](../../mfc/reference/cwnd-class.md#createex)).
+dans Style de fenêtre (voir [CWnd :: CreateEx](../../mfc/reference/cwnd-class.md#createex)).
 
-*rect*<br/>
+*rectangulaire*<br/>
 dans Rectangle initial.
 
 *pParentWnd*<br/>
 dans Pointeur vers la fenêtre parente.
 
 *nID*<br/>
-dans Spécifie l’ID du volet. Doit être unique.
+dans Spécifie l’ID du volet. Elle doit être unique.
 
 *dwControlBarStyle*<br/>
 dans Indicateurs de style pour les volets.
 
 *pContext*<br/>
-dans Pointeur vers`CcreateContext`
+dans Pointeur vers `CcreateContext`
 
 ### <a name="return-value"></a>Valeur de retour
 
-TRUE si le volet est créé avec succès; Sinon, FALSe.
+TRUE si le volet est créé avec succès ; Sinon, FALSe.
 
 ### <a name="remarks"></a>Notes
 
-Crée une fenêtre de classe `lpszClassName`. Si vous spécifiez WS_CAPTION, cette méthode efface le bit de style WS_CAPTION `CBasePane::m_bHasCaption` et affecte à la valeur true, car la bibliothèque ne prend pas en charge les volets avec des légendes.
+Crée une fenêtre de classe `lpszClassName`. Si vous spécifiez WS_CAPTION, cette méthode efface le bit de style WS_CAPTION et définit `CBasePane::m_bHasCaption` sur TRUE, car la bibliothèque ne prend pas en charge les volets avec des légendes.
 
 Vous pouvez utiliser n’importe quelle combinaison de styles de fenêtre enfant et de styles de barre de contrôle MFC (CBRS_).
 
-La bibliothèque ajoute plusieurs nouveaux styles pour les volets. Le tableau suivant décrit les nouveaux styles:
+La bibliothèque ajoute plusieurs nouveaux styles pour les volets. Le tableau suivant décrit les nouveaux styles :
 
 |Style|Description|
 |-----------|-----------------|
@@ -738,7 +738,7 @@ La bibliothèque ajoute plusieurs nouveaux styles pour les volets. Le tableau su
 
 Pour utiliser les nouveaux styles, spécifiez-les dans *dwControlBarStyle*.
 
-##  <a name="dockpane"></a>  CBasePane::DockPane
+##  <a name="dockpane"></a>CBasePane ::D ockPane
 
 Ancre un volet à un autre volet ou à une fenêtre frame.
 
@@ -762,15 +762,15 @@ dans Spécifie la méthode d’ancrage.
 
 ### <a name="return-value"></a>Valeur de retour
 
-TRUE si la barre de contrôle a été correctement ancrée; Sinon, FALSe.
+TRUE si la barre de contrôle a été correctement ancrée ; Sinon, FALSe.
 
 ### <a name="remarks"></a>Notes
 
 Appelez cette fonction pour ancrer un volet à un autre volet ou à une barre d’ancrage ( [classe CDockSite](../../mfc/reference/cdocksite-class.md)) spécifiée par *pDockBar*, ou à un frame principal si *pDockBar* a la valeur null.
 
-*dockMethod* spécifie la façon dont le volet est ancré. Pour obtenir la liste des valeurs possibles, consultez [CPane::D ockpane](../../mfc/reference/cpane-class.md#dockpane) .
+*dockMethod* spécifie la façon dont le volet est ancré. Pour obtenir la liste des valeurs possibles, consultez [CPane ::D ockpane](../../mfc/reference/cpane-class.md#dockpane) .
 
-##  <a name="dockpaneusingrtti"></a>  CBasePane::DockPaneUsingRTTI
+##  <a name="dockpaneusingrtti"></a>CBasePane ::D ockPaneUsingRTTI
 
 Ancre le volet à l’aide des informations de type au moment de l’exécution.
 
@@ -783,7 +783,7 @@ void DockPaneUsingRTTI(BOOL bUseDockSite);
 *bUseDockSite*<br/>
 dans Si la valeur est TRUE, ancrez sur le site d’ancrage. Si la valeur est FALSe, ancrez au frame parent.
 
-##  <a name="docktoframewindow"></a>  CBasePane::DockToFrameWindow
+##  <a name="docktoframewindow"></a>CBasePane ::D ockToFrameWindow
 
 Ancre un volet Ancrable à un frame.
 
@@ -819,13 +819,13 @@ dans Si la valeur est TRUE et qu’il existe d’autres volets ancrables en côt
 
 ### <a name="return-value"></a>Valeur de retour
 
-TRUE si la méthode a réussi; Sinon, FALSe.
+TRUE si la méthode a réussi ; Sinon, FALSe.
 
 ### <a name="remarks"></a>Notes
 
 Cette méthode échoue si un séparateur de volet ( [classe CPaneDivider](../../mfc/reference/cpanedivider-class.md)) ne peut pas être créé. Dans le cas contraire, elle retourne toujours la valeur TRUE.
 
-##  <a name="doesallowdyninsertbefore"></a>  CBasePane::DoesAllowDynInsertBefore
+##  <a name="doesallowdyninsertbefore"></a>CBasePane ::D oesAllowDynInsertBefore
 
 Détermine si un autre volet peut être inséré dynamiquement entre ce volet et le frame parent.
 
@@ -835,7 +835,7 @@ virtual BOOL DoesAllowDynInsertBefore() const;
 
 ### <a name="return-value"></a>Valeur de retour
 
-TRUE si un utilisateur peut insérer un autre volet; Sinon, FALSe.
+TRUE si un utilisateur peut insérer un autre volet ; Sinon, FALSe.
 
 ### <a name="remarks"></a>Notes
 
@@ -847,7 +847,7 @@ Nous vous recommandons de substituer cette méthode et de retourner FALSe pour l
 
 L’implémentation par défaut retourne la valeur TRUE.
 
-##  <a name="dopaint"></a>  CBasePane::DoPaint
+##  <a name="dopaint"></a>CBasePane ::D oPaint
 
 Remplit l’arrière-plan du volet.
 
@@ -862,9 +862,9 @@ dans Pointeur vers un contexte de périphérique (Device Context).
 
 ### <a name="remarks"></a>Notes
 
-L’implémentation par défaut appelle le gestionnaire visuel actuel pour remplir l’arrière-plan ( [CMFCVisualManager:: OnFillBarBackground](../../mfc/reference/cmfcvisualmanager-class.md#onfillbarbackground)).
+L’implémentation par défaut appelle le gestionnaire visuel actuel pour remplir l’arrière-plan ( [CMFCVisualManager :: OnFillBarBackground](../../mfc/reference/cmfcvisualmanager-class.md#onfillbarbackground)).
 
-##  <a name="enabledocking"></a>  CBasePane::EnableDocking
+##  <a name="enabledocking"></a>CBasePane :: EnableDocking
 
 Active l’ancrage du volet au frame principal.
 
@@ -879,13 +879,13 @@ dans Spécifie l’alignement d’ancrage à activer.
 
 ### <a name="remarks"></a>Notes
 
-Appelez cette méthode pour activer l’alignement de l’ancrage sur le frame principal. Vous pouvez passer une combinaison d’indicateurs CBRS_ALIGN_ (pour plus d’informations, consultez [CControlBar:: EnableDocking](../../mfc/reference/ccontrolbar-class.md#enabledocking)).
+Appelez cette méthode pour activer l’alignement de l’ancrage sur le frame principal. Vous pouvez passer une combinaison d’indicateurs CBRS_ALIGN_ (pour plus d’informations, consultez [CControlBar :: EnableDocking](../../mfc/reference/ccontrolbar-class.md#enabledocking)).
 
-`EnableDocking`définit l’indicateur `CBasePane::m_dwEnabledAlignment` interne et le Framework vérifie cet indicateur lorsqu’un volet est ancré.
+`EnableDocking` définit l’indicateur interne `CBasePane::m_dwEnabledAlignment` et le Framework vérifie cet indicateur lorsqu’un volet est ancré.
 
-Appelez [CBasePane:: GetEnabledAlignment](#getenabledalignment) pour déterminer l’alignement d’ancrage d’un volet.
+Appelez [CBasePane :: GetEnabledAlignment](#getenabledalignment) pour déterminer l’alignement d’ancrage d’un volet.
 
-##  <a name="enablegripper"></a>  CBasePane::EnableGripper
+##  <a name="enablegripper"></a>CBasePane :: EnableGripper
 
 Active ou désactive la pince. Si la pince est activée, l’utilisateur peut la faire glisser pour repositionner le volet.
 
@@ -896,13 +896,13 @@ virtual void EnableGripper(BOOL bEnable);
 ### <a name="parameters"></a>Paramètres
 
 *bEnable*<br/>
-dans TRUE pour activer la pince; FALSe pour la désactiver.
+dans TRUE pour activer la pince ; FALSe pour la désactiver.
 
 ### <a name="remarks"></a>Notes
 
 L’infrastructure utilise cette méthode pour activer un pincement au lieu d’utiliser le style WS_CAPTION.
 
-##  <a name="floatpane"></a>  CBasePane::FloatPane
+##  <a name="floatpane"></a>CBasePane :: FloatPane
 
 Flotte le volet.
 
@@ -926,13 +926,13 @@ dans Spécifie si le volet flottant est visible (TRUE) ou masqué (FALSe).
 
 ### <a name="return-value"></a>Valeur de retour
 
-TRUE si le volet a été flottant avec succès; Sinon, FALSe.
+TRUE si le volet a été flottant avec succès ; Sinon, FALSe.
 
 ### <a name="remarks"></a>Notes
 
 Appelez cette méthode pour flotter un volet à la position d’écran spécifiée par *rectFloat*.
 
-##  <a name="get_acchelptopic"></a>  CBasePane::get_accHelpTopic
+##  <a name="get_acchelptopic"></a>CBasePane :: get_accHelpTopic
 
 L’infrastructure appelle cette méthode pour récupérer le chemin d’accès complet du fichier **WinHelp** associé à l’objet spécifié et l’identificateur de la rubrique appropriée dans ce fichier.
 
@@ -956,13 +956,13 @@ dans Identifie la rubrique du fichier **d’aide** associée à l’objet spéci
 
 ### <a name="return-value"></a>Valeur de retour
 
-`CBasePane`n’implémente pas cette méthode. Par conséquent `CBasePane::get_accHelpTopic` , retourne toujours S_FALSE.
+`CBasePane` n’implémente pas cette méthode. Par conséquent, `CBasePane::get_accHelpTopic` retourne toujours S_FALSE.
 
 ### <a name="remarks"></a>Notes
 
 Cette fonction fait partie de la prise en charge Active Accessibility dans MFC. Substituez cette fonction dans une classe dérivée pour fournir des informations d’aide sur votre objet.
 
-##  <a name="get_accselection"></a>  CBasePane::get_accSelection
+##  <a name="get_accselection"></a>CBasePane :: get_accSelection
 
 L’infrastructure appelle cette méthode pour récupérer les enfants sélectionnés de cet objet.
 
@@ -977,13 +977,13 @@ dans Reçoit des informations qui identifient les enfants sélectionnés.
 
 ### <a name="return-value"></a>Valeur de retour
 
-`CBasePane`n’implémente pas cette méthode. Si *pvarChildren* a la valeur null, cette méthode retourne E_INVALIDARG. Sinon, cette méthode retourne DISP_E_MEMBERNOTFOUND.
+`CBasePane` n’implémente pas cette méthode. Si *pvarChildren* a la valeur null, cette méthode retourne E_INVALIDARG. Sinon, cette méthode retourne DISP_E_MEMBERNOTFOUND.
 
 ### <a name="remarks"></a>Notes
 
 Cette fonction fait partie de la prise en charge Active Accessibility dans MFC. Substituez cette fonction dans une classe dérivée si vous avez des éléments d’interface utilisateur sans fenêtre autres que des contrôles ActiveX sans fenêtre.
 
-##  <a name="getcaptionheight"></a>  CBasePane::GetCaptionHeight
+##  <a name="getcaptionheight"></a>CBasePane :: GetCaptionHeight
 
 Retourne la hauteur de légende.
 
@@ -995,7 +995,7 @@ virtual int GetCaptionHeight() const;
 
 Hauteur de la légende.
 
-##  <a name="getcontrolbarstyle"></a>  CBasePane::GetControlBarStyle
+##  <a name="getcontrolbarstyle"></a>CBasePane :: GetControlBarStyle
 
 Retourne le style de barre de contrôle.
 
@@ -1005,7 +1005,7 @@ virtual DWORD GetControlBarStyle() const
 
 ### <a name="return-value"></a>Valeur de retour
 
-Combinaison d’opérations de bits or d’indicateurs AFX_CBRS_.
+Combinaison d’opérations de bits or d’AFX_CBRS_ indicateurs.
 
 ### <a name="remarks"></a>Notes
 
@@ -1018,7 +1018,7 @@ La valeur de retour est une combinaison des valeurs possibles suivantes.
 |AFX_CBRS_RESIZE|Active le redimensionnement de la barre de contrôle. Lorsque cet indicateur est défini, la barre de contrôle peut être placée dans un volet Ancrable.|
 |AFX_CBRS_CLOSE|Active le masquage de la barre de contrôle.|
 
-##  <a name="getcurrentalignment"></a>  CBasePane::GetCurrentAlignment
+##  <a name="getcurrentalignment"></a>CBasePane :: GetCurrentAlignment
 
 Retourne l’alignement du volet actuel.
 
@@ -1028,16 +1028,16 @@ virtual DWORD GetCurrentAlignment() const;
 
 ### <a name="return-value"></a>Valeur de retour
 
-Alignement actuel de la barre de contrôle. Le tableau suivant indique les valeurs possibles:
+Alignement actuel de la barre de contrôle. Le tableau suivant indique les valeurs possibles :
 
-|Valeur|Alignement|
+|Valeur|Alignment|
 |-----------|---------------|
 |CBRS_ALIGN_LEFT|Alignement à gauche.|
 |CBRS_ALIGN_RIGHT|Alignement à droite.|
 |CBRS_ALIGN_TOP|Alignement en haut.|
 |CBRS_ALIGN_BOTTOM|Alignement en bas.|
 
-##  <a name="getdockingmode"></a>  CBasePane::GetDockingMode
+##  <a name="getdockingmode"></a>CBasePane :: GetDockingMode
 
 Retourne le mode d’ancrage actuel pour le volet.
 
@@ -1053,11 +1053,11 @@ DT_STANDARD si le glissement du volet est indiqué sur l’écran par un rectang
 
 L’infrastructure appelle cette méthode pour déterminer le mode d’ancrage actuel du volet.
 
-Si `CBasePane::m_dockMode` la est non définie (DT_UNDEFINED), le mode d’ancrage est pris à partir du mode d’ancrage global (`AFX_GLOBAL_DATA::m_dockModeGlobal`).
+Si `CBasePane::m_dockMode` n’est pas défini (DT_UNDEFINED), le mode d’ancrage est extrait du mode d’ancrage global (`AFX_GLOBAL_DATA::m_dockModeGlobal`).
 
-En définissant *m_dockMode* ou en `GetDockingMode` remplaçant vous pouvez contrôler le mode d’ancrage de chaque volet.
+En définissant *m_dockMode* ou en remplaçant `GetDockingMode` vous pouvez contrôler le mode d’ancrage de chaque volet.
 
-##  <a name="getdocksiteframewnd"></a>  CBasePane::GetDockSiteFrameWnd
+##  <a name="getdocksiteframewnd"></a>CBasePane :: GetDockSiteFrameWnd
 
 Retourne un pointeur vers l’objet [CDockingPanesRow](../../mfc/reference/cdockingpanesrow-class.md)où le volet est ancré.
 
@@ -1073,9 +1073,9 @@ Pointeur vers le site d’ancrage du volet.
 
 Appelez cette méthode pour récupérer un pointeur vers le site d’ancrage du volet. Le site d’ancrage peut être une fenêtre frame principale si le volet est ancré au frame principal, ou une fenêtre mini-frame si le volet est flottant.
 
-##  <a name="getenabledalignment"></a>  CBasePane::GetEnabledAlignment
+##  <a name="getenabledalignment"></a>CBasePane :: GetEnabledAlignment
 
-Retourne les styles CBRS_ALIGN_ appliqués au volet.
+Retourne les styles de CBRS_ALIGN_ appliqués au volet.
 
 ```
 virtual DWORD GetEnabledAlignment() const;
@@ -1083,7 +1083,7 @@ virtual DWORD GetEnabledAlignment() const;
 
 ### <a name="return-value"></a>Valeur de retour
 
-Combinaison de styles CBRS_ALIGN_. Le tableau suivant présente les styles possibles:
+Combinaison de styles de CBRS_ALIGN_. Le tableau suivant présente les styles possibles :
 
 |Indicateur|Alignement activé|
 |----------|-----------------------|
@@ -1097,9 +1097,9 @@ Combinaison de styles CBRS_ALIGN_. Le tableau suivant présente les styles possi
 
 Appelez cette méthode pour déterminer l’alignement activé pour le volet. L’alignement activé désigne les côtés de la fenêtre frame principale dans laquelle un volet peut être ancré.
 
-Activez l’alignement de l’ancrage à l’aide de [CBasePane:: EnableDocking](#enabledocking).
+Activez l’alignement de l’ancrage à l’aide de [CBasePane :: EnableDocking](#enabledocking).
 
-##  <a name="getmfcstyle"></a>  CBasePane::GetMFCStyle
+##  <a name="getmfcstyle"></a>CBasePane :: GetMFCStyle
 
 Retourne les styles de volet qui sont spécifiques à MFC.
 
@@ -1111,7 +1111,7 @@ virtual DWORD GetMFCStyle() const;
 
 Combinaison de styles de volets spécifiques à la bibliothèque (AFX_CBRS_).
 
-##  <a name="getpaneicon"></a>  CBasePane::GetPaneIcon
+##  <a name="getpaneicon"></a>CBasePane :: GetPaneIcon
 
 Retourne un handle vers l’icône du volet.
 
@@ -1122,7 +1122,7 @@ virtual HICON GetPaneIcon(BOOL bBigIcon);
 ### <a name="parameters"></a>Paramètres
 
 *bBigIcon*<br/>
-dans Spécifie une icône de 32 pixel par 32 pixels si la valeur est TRUE; spécifie une icône de 16 pixels par 16 pixels si la valeur est FALSe.
+dans Spécifie une icône de 32 pixel par 32 pixels si la valeur est TRUE ; spécifie une icône de 16 pixels par 16 pixels si la valeur est FALSe.
 
 ### <a name="return-value"></a>Valeur de retour
 
@@ -1130,9 +1130,9 @@ Handle de l’icône du volet. En cas d’échec, retourne NULL.
 
 ### <a name="remarks"></a>Notes
 
-L’implémentation par défaut appelle [CWnd:: GetIcon](../../mfc/reference/cwnd-class.md#geticon).
+L’implémentation par défaut appelle [CWnd :: GetIcon](../../mfc/reference/cwnd-class.md#geticon).
 
-##  <a name="getpanerow"></a>  CBasePane::GetPaneRow
+##  <a name="getpanerow"></a>CBasePane :: GetPaneRow
 
 Retourne un pointeur vers l’objet [CDockingPanesRow](../../mfc/reference/cdockingpanesrow-class.md)où le volet est ancré.
 
@@ -1142,13 +1142,13 @@ CDockingPanesRow* GetPaneRow();
 
 ### <a name="return-value"></a>Valeur de retour
 
-Pointeur vers `CDockingPanesRow` si le volet est ancré, ou null s’il est flottant.
+Pointeur vers `CDockingPanesRow` si le volet est ancré, ou NULL s’il est flottant.
 
 ### <a name="remarks"></a>Notes
 
-Appelez cette méthode pour accéder à la ligne où un volet est ancré. Par exemple, pour réorganiser les volets d’une ligne particulière, `GetPaneRow` appelez, puis appelez [CDockingPanesRow:: ArrangePanes](../../mfc/reference/cdockingpanesrow-class.md#arrangepanes).
+Appelez cette méthode pour accéder à la ligne où un volet est ancré. Par exemple, pour réorganiser les volets d’une ligne particulière, appelez `GetPaneRow` puis appelez [CDockingPanesRow :: ArrangePanes](../../mfc/reference/cdockingpanesrow-class.md#arrangepanes).
 
-##  <a name="getpanestyle"></a>  CBasePane::GetPaneStyle
+##  <a name="getpanestyle"></a>CBasePane :: GetPaneStyle
 
 Retourne le style du volet.
 
@@ -1158,9 +1158,9 @@ virtual DWORD GetPaneStyle() const;
 
 ### <a name="return-value"></a>Valeur de retour
 
-Combinaison de styles de barre de contrôle (y compris les styles CBRS_) qui a été définie par la méthode [CBasePane:: SetPaneStyle](#setpanestyle) au moment de la création.
+Combinaison de styles de barre de contrôle (y compris les styles de CBRS_) qui a été définie par la méthode [CBasePane :: SetPaneStyle](#setpanestyle) au moment de la création.
 
-##  <a name="getparentdocksite"></a>  CBasePane::GetParentDockSite
+##  <a name="getparentdocksite"></a>CBasePane :: GetParentDockSite
 
 Retourne un pointeur vers le site d’ancrage parent.
 
@@ -1172,7 +1172,7 @@ virtual CDockSite* GetParentDockSite() const;
 
 Site d’ancrage parent.
 
-##  <a name="getparentminiframe"></a>  CBasePane::GetParentMiniFrame
+##  <a name="getparentminiframe"></a>CBasePane :: GetParentMiniFrame
 
 Retourne un pointeur vers la fenêtre mini-frame parente.
 
@@ -1187,7 +1187,7 @@ dans Si la valeur est TRUE, cette méthode ne vérifie pas les pointeurs non val
 
 ### <a name="return-value"></a>Valeur de retour
 
-Pointeur valide vers la fenêtre mini-frame parente si le volet est flottant; Sinon, NULL.
+Pointeur valide vers la fenêtre mini-frame parente si le volet est flottant ; Sinon, NULL.
 
 ### <a name="remarks"></a>Notes
 
@@ -1195,7 +1195,7 @@ Appelez cette fonction pour récupérer un pointeur vers la fenêtre mini-frame 
 
 Utilisez `GetParentMiniFrame` pour déterminer si le volet est flottant.
 
-##  <a name="getparenttabbedpane"></a>  CBasePane::GetParentTabbedPane
+##  <a name="getparenttabbedpane"></a>CBasePane :: GetParentTabbedPane
 
 Retourne un pointeur vers le volet à onglets parent.
 
@@ -1205,9 +1205,9 @@ CBaseTabbedPane* GetParentTabbedPane() const;
 
 ### <a name="return-value"></a>Valeur de retour
 
-Pointeur vers le volet avec onglets parent, le cas échéant; Sinon, NULL.
+Pointeur vers le volet avec onglets parent, le cas échéant ; Sinon, NULL.
 
-##  <a name="getparenttabwnd"></a>  CBasePane::GetParentTabWnd
+##  <a name="getparenttabwnd"></a>CBasePane :: GetParentTabWnd
 
 Retourne un pointeur vers la fenêtre parente qui se trouve à l’intérieur d’un onglet.
 
@@ -1226,9 +1226,9 @@ Pointeur valide vers la fenêtre à onglets parent ou NULL.
 
 ### <a name="remarks"></a>Notes
 
-Utilisez cette fonction pour récupérer un pointeur vers la fenêtre à onglets parents. Parfois, il n’est pas suffisant `GetParent`d’appeler, car un volet peut se trouver à l’intérieur d’un wrapper d’ancrage ( [classe CDockablePaneAdapter](../../mfc/reference/cdockablepaneadapter-class.md)) ou à l’intérieur d’un adaptateur de volet ( [classe CDockablePaneAdapter](../../mfc/reference/cdockablepaneadapter-class.md)). En utilisant `GetParentTabWnd` , vous serez en mesure de récupérer un pointeur valide dans ces cas (en supposant que le parent est une fenêtre à onglets).
+Utilisez cette fonction pour récupérer un pointeur vers la fenêtre à onglets parents. Parfois, il n’est pas suffisant d’appeler `GetParent`, car un volet peut se trouver à l’intérieur d’un wrapper d’ancrage ( [classe CDockablePaneAdapter](../../mfc/reference/cdockablepaneadapter-class.md)) ou à l’intérieur d’un adaptateur de volet ( [classe CDockablePaneAdapter](../../mfc/reference/cdockablepaneadapter-class.md)). En utilisant `GetParentTabWnd` vous serez en mesure de récupérer un pointeur valide dans ces cas (en supposant que le parent est une fenêtre à onglets).
 
-##  <a name="getrecentvisiblestate"></a>  CBasePane::GetRecentVisibleState
+##  <a name="getrecentvisiblestate"></a>CBasePane :: GetRecentVisibleState
 
 L’infrastructure appelle cette méthode lorsqu’un volet est restauré à partir d’une archive.
 
@@ -1240,7 +1240,7 @@ virtual BOOL GetRecentVisibleState() const;
 
 Valeur BOOLÉENNE qui spécifie l’état visible récent. Si la valeur est TRUE, le volet était visible lors de la sérialisation et doit être visible lors de la restauration. Si la valeur est FALSe, le volet a été masqué lorsqu’il est sérialisé et doit être masqué lors de la restauration.
 
-##  <a name="hideinprintpreviewmode"></a>  CBasePane::HideInPrintPreviewMode
+##  <a name="hideinprintpreviewmode"></a>CBasePane :: HideInPrintPreviewMode
 
 Spécifie si le volet est masqué en mode aperçu avant impression.
 
@@ -1250,13 +1250,13 @@ virtual BOOL HideInPrintPreviewMode() const;
 
 ### <a name="return-value"></a>Valeur de retour
 
-TRUE si le volet n’est pas affiché dans l’aperçu avant impression; Sinon, FALSe.
+TRUE si le volet n’est pas affiché dans l’aperçu avant impression ; Sinon, FALSe.
 
 ### <a name="remarks"></a>Notes
 
 Les volets de base ne sont pas affichés en mode aperçu avant impression. Par conséquent, cette méthode retourne toujours TRUE.
 
-##  <a name="insertpane"></a>  CBasePane::InsertPane
+##  <a name="insertpane"></a>CBasePane :: InsertPane
 
 Inscrit le volet spécifié auprès du gestionnaire d’ancrage.
 
@@ -1280,9 +1280,9 @@ dans Si la valeur est TRUE, *pControlBar* est inséré après *pTarget*. Si la v
 
 ### <a name="return-value"></a>Valeur de retour
 
-TRUE si la méthode est réussie; sinon, FALSe.
+TRUE si la méthode est réussie ; sinon, FALSe.
 
-##  <a name="isaccessibilitycompatible"></a>CBasePane:: IsAccessibilityCompatible
+##  <a name="isaccessibilitycompatible"></a>CBasePane :: IsAccessibilityCompatible
 
 Spécifie si le volet prend en charge Active Accessibility.
 
@@ -1292,9 +1292,9 @@ virtual BOOL IsAccessibilityCompatible();
 
 ### <a name="return-value"></a>Valeur de retour
 
-TRUE si le volet prend en charge Active Accessibility; Sinon, FALSe.
+TRUE si le volet prend en charge Active Accessibility ; Sinon, FALSe.
 
-##  <a name="isautohidemode"></a>  CBasePane::IsAutoHideMode
+##  <a name="isautohidemode"></a>CBasePane :: IsAutoHideMode
 
 Détermine si un volet est en mode de masquage automatique.
 
@@ -1304,13 +1304,13 @@ virtual BOOL IsAutoHideMode() const;
 
 ### <a name="return-value"></a>Valeur de retour
 
-TRUE si le volet est en mode de masquage automatique; Sinon, FALSe.
+TRUE si le volet est en mode de masquage automatique ; Sinon, FALSe.
 
 ### <a name="remarks"></a>Notes
 
 Les volets de base ne peuvent pas être masqués automatiquement. Cette méthode retourne toujours FALSe.
 
-##  <a name="isdialogcontrol"></a>CBasePane:: IsDialogControl
+##  <a name="isdialogcontrol"></a>CBasePane :: IsDialogControl
 
 Spécifie si le volet est un contrôle de boîte de dialogue.
 
@@ -1320,13 +1320,13 @@ BOOL IsDialogControl() const;
 
 ### <a name="return-value"></a>Valeur de retour
 
-TRUE si le volet est un contrôle de boîte de dialogue; Sinon, FALSe.
+TRUE si le volet est un contrôle de boîte de dialogue ; Sinon, FALSe.
 
 ### <a name="remarks"></a>Notes
 
 L’infrastructure utilise cette méthode pour garantir la cohérence de la disposition pour tous les volets.
 
-##  <a name="isdocked"></a>  CBasePane::IsDocked
+##  <a name="isdocked"></a>CBasePane :: IsDocked
 
 Détermine si le volet est ancré.
 
@@ -1336,9 +1336,9 @@ virtual BOOL IsDocked() const;
 
 ### <a name="return-value"></a>Valeur de retour
 
-TRUE si le parent du volet n’est pas une mini-frame ou si le volet flotte dans un mini-frame avec un autre volet; Sinon, FALSe.
+TRUE si le parent du volet n’est pas une mini-frame ou si le volet flotte dans un mini-frame avec un autre volet ; Sinon, FALSe.
 
-##  <a name="isfloating"></a>  CBasePane::IsFloating
+##  <a name="isfloating"></a>CBasePane :: IsFloating
 
 Détermine si le volet est flottant.
 
@@ -1348,13 +1348,13 @@ virtual BOOL IsFloating() const;
 
 ### <a name="return-value"></a>Valeur de retour
 
-TRUE si le volet est flottant; Sinon, FALSe.
+TRUE si le volet est flottant ; Sinon, FALSe.
 
 ### <a name="remarks"></a>Notes
 
-Cette méthode retourne la valeur inverse de [CBasePane:: IsDocked](#isdocked).
+Cette méthode retourne la valeur inverse de [CBasePane :: IsDocked](#isdocked).
 
-##  <a name="ishorizontal"></a>  CBasePane::IsHorizontal
+##  <a name="ishorizontal"></a>CBasePane :: IsHorizontal
 
 Détermine si le volet est ancré horizontalement.
 
@@ -1364,13 +1364,13 @@ virtual BOOL IsHorizontal() const;
 
 ### <a name="return-value"></a>Valeur de retour
 
-TRUE si le volet est ancré horizontalement; Sinon, FALSe.
+TRUE si le volet est ancré horizontalement ; Sinon, FALSe.
 
 ### <a name="remarks"></a>Notes
 
 L’implémentation par défaut vérifie l’alignement d’ancrage actuel pour CBRS_ORIENT_HORZ.
 
-##  <a name="isinfloatingmultipaneframewnd"></a>  CBasePane::IsInFloatingMultiPaneFrameWnd
+##  <a name="isinfloatingmultipaneframewnd"></a>CBasePane :: IsInFloatingMultiPaneFrameWnd
 
 Spécifie si le volet se trouve dans une fenêtre frame à plusieurs volets ( [classe CMultiPaneFrameWnd](../../mfc/reference/cmultipaneframewnd-class.md)).
 
@@ -1380,13 +1380,13 @@ virtual BOOL IsInFloatingMultiPaneFrameWnd() const;
 
 ### <a name="return-value"></a>Valeur de retour
 
-TRUE si le volet se trouve dans une fenêtre frame à plusieurs volets; Sinon, FALSe.
+TRUE si le volet se trouve dans une fenêtre frame à plusieurs volets ; Sinon, FALSe.
 
 ### <a name="remarks"></a>Notes
 
-Seuls les volets ancrables peuvent flotter dans une fenêtre frame à plusieurs volets. Par conséquent `CBasePane::IsInFloatingMultiPaneFrameWnd` , retourne toujours false.
+Seuls les volets ancrables peuvent flotter dans une fenêtre frame à plusieurs volets. Par conséquent, `CBasePane::IsInFloatingMultiPaneFrameWnd` retourne toujours la valeur FALSe.
 
-##  <a name="ismditabbed"></a>CBasePane:: IsMDITabbed
+##  <a name="ismditabbed"></a>CBasePane :: IsMDITabbed
 
 Détermine si le volet a été ajouté à une fenêtre enfant MDI en tant que document à onglets.
 
@@ -1396,11 +1396,11 @@ virtual BOOL IsMDITabbed() const;
 
 ### <a name="return-value"></a>Valeur de retour
 
-TRUE si le volet a été ajouté à une fenêtre enfant MDI en tant que document à onglets; Sinon, FALSe.
+TRUE si le volet a été ajouté à une fenêtre enfant MDI en tant que document à onglets ; Sinon, FALSe.
 
-##  <a name="ispanevisible"></a>  CBasePane::IsPaneVisible
+##  <a name="ispanevisible"></a>CBasePane :: IsPaneVisible
 
-Spécifie si l’indicateur WS_VISIBLE est défini pour le volet.
+Spécifie si l’indicateur de WS_VISIBLE est défini pour le volet.
 
 ```
 BOOL IsPaneVisible() const;
@@ -1408,13 +1408,13 @@ BOOL IsPaneVisible() const;
 
 ### <a name="return-value"></a>Valeur de retour
 
-TRUE si WS_VISIBLE est défini; Sinon, FALSe.
+TRUE si WS_VISIBLE est définie ; Sinon, FALSe.
 
 ### <a name="remarks"></a>Notes
 
-Utilisez [CBasePane:: IsVisible](#isvisible) pour déterminer la visibilité du volet.
+Utilisez [CBasePane :: IsVisible](#isvisible) pour déterminer la visibilité du volet.
 
-##  <a name="ispointneardocksite"></a>  CBasePane::IsPointNearDockSite
+##  <a name="ispointneardocksite"></a>CBasePane :: IsPointNearDockSite
 
 Détermine si un point spécifié est près du site d’ancrage.
 
@@ -1434,17 +1434,17 @@ dans Point spécifié.
 à Spécifie le bord vers lequel le point est proche. Les valeurs possibles sont CBRS_ALIGN_LEFT, CBRS_ALIGN_RIGHT, CBRS_ALIGN_TOP et CBRS_ALIGN_BOTTOM
 
 *bOuterEdge*<br/>
-à TRUE si le point est proche de la bordure externe du site d’ancrage; FALSe dans le cas contraire.
+à TRUE si le point est proche de la bordure externe du site d’ancrage ; FALSe dans le cas contraire.
 
 ### <a name="return-value"></a>Valeur de retour
 
-TRUE si le point est proche du site d’ancrage; Sinon, FALSe.
+TRUE si le point est proche du site d’ancrage ; Sinon, FALSe.
 
 ### <a name="remarks"></a>Notes
 
 Le point est proche du site d’accueil lorsqu’il se trouve dans la sensibilité définie dans le gestionnaire d’ancrage. La sensibilité par défaut est de 15 pixels.
 
-##  <a name="isresizable"></a>  CBasePane::IsResizable
+##  <a name="isresizable"></a>CBasePane :: IsResizable
 
 Détermine si le volet peut être redimensionné.
 
@@ -1454,7 +1454,7 @@ virtual BOOL IsResizable() const;
 
 ### <a name="return-value"></a>Valeur de retour
 
-TRUE si le volet peut être redimensionné par l’utilisateur; Sinon, FALSe.
+TRUE si le volet peut être redimensionné par l’utilisateur ; Sinon, FALSe.
 
 ### <a name="remarks"></a>Notes
 
@@ -1462,7 +1462,7 @@ Les volets de la [classe CDockablePane](../../mfc/reference/cdockablepane-class.
 
 La barre d’État ( [classe CMFCStatusBar](../../mfc/reference/cmfcstatusbar-class.md)) et la barre d’ancrage ( [classe CDockSite](../../mfc/reference/cdocksite-class.md)) ne peuvent pas être redimensionnées.
 
-##  <a name="isrestoredfromregistry"></a>  CBasePane::IsRestoredFromRegistry
+##  <a name="isrestoredfromregistry"></a>CBasePane :: IsRestoredFromRegistry
 
 Détermine si le volet est restauré à partir du Registre.
 
@@ -1472,9 +1472,9 @@ virtual BOOL IsRestoredFromRegistry() const;
 
 ### <a name="return-value"></a>Valeur de retour
 
-TRUE si le volet est restauré à partir du Registre; Sinon, FALSe.
+TRUE si le volet est restauré à partir du Registre ; Sinon, FALSe.
 
-##  <a name="istabbed"></a>  CBasePane::IsTabbed
+##  <a name="istabbed"></a>CBasePane :: IsTabbed
 
 Détermine si le volet a été inséré dans le contrôle onglet d’une fenêtre à onglets.
 
@@ -1484,13 +1484,13 @@ virtual BOOL IsTabbed() const;
 
 ### <a name="return-value"></a>Valeur de retour
 
-TRUE si la barre de contrôle est insérée dans un onglet d’une fenêtre à onglets; Sinon, FALSe.
+TRUE si la barre de contrôle est insérée dans un onglet d’une fenêtre à onglets ; Sinon, FALSe.
 
 ### <a name="remarks"></a>Notes
 
 Cette méthode récupère un pointeur vers le parent immédiat et détermine si la classe d’exécution du parent est la [classe CMFCBaseTabCtrl](../../mfc/reference/cmfcbasetabctrl-class.md).
 
-##  <a name="isvisible"></a>  CBasePane::IsVisible
+##  <a name="isvisible"></a>CBasePane :: IsVisible
 
 Détermine si le volet est visible.
 
@@ -1500,15 +1500,15 @@ virtual BOOL IsVisible() const;
 
 ### <a name="return-value"></a>Valeur de retour
 
-TRUE si le volet est visible; Sinon, FALSe.
+TRUE si le volet est visible ; Sinon, FALSe.
 
 ### <a name="remarks"></a>Notes
 
 Utilisez cette méthode pour déterminer la visibilité d’un volet. N’utilisez pas `::IsWindowVisible`.
 
-Si le volet n’est pas tabulé (consultez [CBasePane:: IsTabbed](#istabbed)), cette méthode vérifie le style WS_VISIBLE. Si le volet est tabulé, cette méthode vérifie la visibilité de la fenêtre à onglets parents. Si la fenêtre parente est visible, la fonction vérifie la visibilité de l’onglet du volet à l’aide de [CMFCBaseTabCtrl:: IsTabVisible](../../mfc/reference/cmfcbasetabctrl-class.md#istabvisible).
+Si le volet n’est pas tabulé (consultez [CBasePane :: IsTabbed](#istabbed)), cette méthode vérifie le style de WS_VISIBLE. Si le volet est tabulé, cette méthode vérifie la visibilité de la fenêtre à onglets parents. Si la fenêtre parente est visible, la fonction vérifie la visibilité de l’onglet du volet à l’aide de [CMFCBaseTabCtrl :: IsTabVisible](../../mfc/reference/cmfcbasetabctrl-class.md#istabvisible).
 
-##  <a name="loadstate"></a>  CBasePane::LoadState
+##  <a name="loadstate"></a>CBasePane :: LoadState
 
 Charge l'état du volet à partir du Registre.
 
@@ -1532,13 +1532,13 @@ dans ID du volet.
 
 ### <a name="return-value"></a>Valeur de retour
 
-TRUE si l’état du volet a été chargé avec succès; Sinon, FALSe.
+TRUE si l’état du volet a été chargé avec succès ; Sinon, FALSe.
 
 ### <a name="remarks"></a>Notes
 
-L’infrastructure appelle cette méthode pour charger l’état du volet à partir du Registre. Substituez-la dans une classe dérivée pour charger des informations supplémentaires enregistrées par [CBasePane:: saveste](#savestate).
+L’infrastructure appelle cette méthode pour charger l’état du volet à partir du Registre. Substituez-la dans une classe dérivée pour charger des informations supplémentaires enregistrées par [CBasePane :: saveste](#savestate).
 
-##  <a name="movewindow"></a>  CBasePane::MoveWindow
+##  <a name="movewindow"></a>CBasePane :: MoveWindow
 
 Déplace le volet.
 
@@ -1551,7 +1551,7 @@ virtual HDWP MoveWindow(
 
 ### <a name="parameters"></a>Paramètres
 
-*rect*<br/>
+*rectangulaire*<br/>
 dans Rectangle spécifiant le nouvel emplacement et la nouvelle taille du volet.
 
 *bRepaint*<br/>
@@ -1568,7 +1568,7 @@ Handle d’une structure de position de fenêtre différée, ou NULL.
 
 Si vous transmettez NULL comme paramètre *hdwp* , cette méthode déplace la fenêtre normalement. Si vous passez un handle, cette méthode effectue un déplacement de fenêtre différé. Vous pouvez obtenir un handle en appelant [BeginDeferWindowPos](/windows/win32/api/winuser/nf-winuser-begindeferwindowpos) ou en stockant la valeur de retour d’un appel précédent à cette méthode.
 
-##  <a name="onafterchangeparent"></a>  CBasePane::OnAfterChangeParent
+##  <a name="onafterchangeparent"></a>CBasePane :: OnAfterChangeParent
 
 Appelé par le Framework après que le parent du volet a été modifié.
 
@@ -1587,7 +1587,7 @@ L’infrastructure appelle cette méthode une fois que le parent du volet a chan
 
 L'implémentation par défaut n'exécute aucune opération.
 
-##  <a name="onbeforechangeparent"></a>  CBasePane::OnBeforeChangeParent
+##  <a name="onbeforechangeparent"></a>CBasePane :: OnBeforeChangeParent
 
 Appelée par l’infrastructure juste avant que le volet modifie sa fenêtre parente.
 
@@ -1611,7 +1611,7 @@ L’infrastructure appelle cette méthode juste avant que le parent du volet ne 
 
 L'implémentation par défaut n'exécute aucune opération.
 
-##  <a name="ondrawcaption"></a>  CBasePane::OnDrawCaption
+##  <a name="ondrawcaption"></a>CBasePane :: OnDrawCaption
 
 L’infrastructure appelle cette méthode lorsque la légende est dessinée.
 
@@ -1621,9 +1621,9 @@ virtual void OnDrawCaption();
 
 ### <a name="remarks"></a>Notes
 
-Cette méthode n’a aucune fonctionnalité pour `CBasePane` la classe.
+Cette méthode n’a aucune fonctionnalité pour la classe `CBasePane`.
 
-##  <a name="onmovepanedivider"></a>  CBasePane::OnMovePaneDivider
+##  <a name="onmovepanedivider"></a>CBasePane :: OnMovePaneDivider
 
 Cette méthode n’est pas utilisée actuellement.
 
@@ -1634,9 +1634,9 @@ virtual void OnMovePaneDivider(CPaneDivider* /* unused */);
 ### <a name="parameters"></a>Paramètres
 
 *inutilisé*<br/>
-dans Non utilisé.
+[in] Non utilisé.
 
-##  <a name="onpanecontextmenu"></a>  CBasePane::OnPaneContextMenu
+##  <a name="onpanecontextmenu"></a>CBasePane :: OnPaneContextMenu
 
 Appelée par le Framework lorsqu’il génère un menu qui contient une liste de volets.
 
@@ -1656,11 +1656,11 @@ dans Spécifie l’emplacement du menu contextuel.
 
 ### <a name="remarks"></a>Notes
 
-`OnPaneContextMenu`appelle le gestionnaire d’ancrage qui gère la liste des volets qui appartiennent à la fenêtre frame en cours. Cette méthode ajoute les noms des volets à un menu contextuel et les affiche. Les commandes du menu affichent ou masquent des volets individuels.
+`OnPaneContextMenu` appelle le gestionnaire d’ancrage qui gère la liste des volets qui appartiennent à la fenêtre frame en cours. Cette méthode ajoute les noms des volets à un menu contextuel et les affiche. Les commandes du menu affichent ou masquent des volets individuels.
 
 Substituez cette méthode pour personnaliser ce comportement.
 
-##  <a name="onremovefromminiframe"></a>  CBasePane::OnRemoveFromMiniFrame
+##  <a name="onremovefromminiframe"></a>CBasePane :: OnRemoveFromMiniFrame
 
 Appelé par le Framework lorsqu’un volet est supprimé de sa fenêtre mini-frame parente.
 
@@ -1679,9 +1679,9 @@ L’infrastructure appelle cette méthode lorsqu’un volet est supprimé de sa 
 
 L'implémentation par défaut n'exécute aucune opération.
 
-##  <a name="onsetaccdata"></a>  CBasePane::OnSetAccData
+##  <a name="onsetaccdata"></a>CBasePane :: OnSetAccData
 
-`CBasePane`n’utilise pas cette méthode.
+`CBasePane` n’utilise pas cette méthode.
 
 ```
 virtual BOOL OnSetAccData(long lVal);
@@ -1690,7 +1690,7 @@ virtual BOOL OnSetAccData(long lVal);
 ### <a name="parameters"></a>Paramètres
 
 *lVal*<br/>
-dans Non utilisé.
+[in] Non utilisé.
 
 ### <a name="return-value"></a>Valeur de retour
 
@@ -1698,7 +1698,7 @@ Cette méthode retourne toujours TRUE.
 
 ### <a name="remarks"></a>Notes
 
-##  <a name="panefrompoint"></a>  CBasePane::PaneFromPoint
+##  <a name="panefrompoint"></a>CBasePane ::P aneFromPoint
 
 Retourne le volet qui contient le point donné.
 
@@ -1726,17 +1726,17 @@ dans Si la valeur n’est pas NULL, la méthode recherche uniquement les volets 
 
 ### <a name="return-value"></a>Valeur de retour
 
-Objet `CBasePane`dérivé de qui contient le point donné, ou null si aucun volet n’a été trouvé.
+Objet dérivé de `CBasePane`qui contient le point donné, ou NULL si aucun volet n’a été trouvé.
 
-##  <a name="recalclayout"></a>  CBasePane::RecalcLayout
+##  <a name="recalclayout"></a>CBasePane :: RecalcLayout
 
-`CBasePane`n’utilise pas cette méthode.
+`CBasePane` n’utilise pas cette méthode.
 
 ```
 virtual void RecalcLayout();
 ```
 
-##  <a name="removepanefromdockmanager"></a>  CBasePane::RemovePaneFromDockManager
+##  <a name="removepanefromdockmanager"></a>CBasePane :: RemovePaneFromDockManager
 
 Annule l’inscription d’un volet et le supprime de la liste dans le gestionnaire d’ancrage.
 
@@ -1766,7 +1766,7 @@ dans Si la valeur est TRUE, la disposition d’ancrage est liée à la liste des
 *pBarReplacement*<br/>
 dans Pointeur vers un volet qui remplace le volet supprimé.
 
-##  <a name="savestate"></a>  CBasePane::SaveState
+##  <a name="savestate"></a>CBasePane :: saveste
 
 Enregistre l'état du volet dans le Registre.
 
@@ -1790,13 +1790,13 @@ dans ID du volet.
 
 ### <a name="return-value"></a>Valeur de retour
 
-TRUE si l’État a été enregistré avec succès; Sinon, FALSe.
+TRUE si l’État a été enregistré avec succès ; Sinon, FALSe.
 
 ### <a name="remarks"></a>Notes
 
 Le Framework appelle cette méthode lorsqu’il enregistre l’état du volet dans le registre. Substituez `SaveState` dans une classe dérivée pour stocker des informations supplémentaires.
 
-##  <a name="selectdefaultfont"></a>  CBasePane::SelectDefaultFont
+##  <a name="selectdefaultfont"></a>CBasePane :: SelectDefaultFont
 
 Sélectionne la police par défaut pour un contexte de périphérique donné.
 
@@ -1813,7 +1813,7 @@ dans Contexte de périphérique (Device Context).
 
 Pointeur vers l’objet de [classe CFont](../../mfc/reference/cfont-class.md) par défaut.
 
-##  <a name="setcontrolbarstyle"></a>  CBasePane::SetControlBarStyle
+##  <a name="setcontrolbarstyle"></a>CBasePane :: SetControlBarStyle
 
 Définit le style de la barre de contrôle.
 
@@ -1833,7 +1833,7 @@ dans Combinaison d’opérations de bits or des valeurs possibles suivantes.
 |AFX_CBRS_RESIZE|Active le redimensionnement de la barre de contrôle. Lorsque cet indicateur est défini, la barre de contrôle peut être placée dans un volet Ancrable.|
 |AFX_CBRS_CLOSE|Active le masquage de la barre de contrôle.|
 
-##  <a name="setdockingmode"></a>  CBasePane::SetDockingMode
+##  <a name="setdockingmode"></a>CBasePane :: SetDockingMode
 
 Définit le mode d’ancrage du volet.
 
@@ -1848,13 +1848,13 @@ dans Spécifie le nouveau mode d’ancrage du volet.
 
 ### <a name="remarks"></a>Notes
 
-Le Framework prend en charge deux modes d’ancrage: standard et immédiat.
+Le Framework prend en charge deux modes d’ancrage : standard et immédiat.
 
 Dans le mode d’ancrage standard, les volets et les fenêtres mini-frame sont déplacés à l’aide d’un rectangle de glissement. Dans le mode d’ancrage immédiat, les barres de contrôles et les fenêtres mini-frame sont immédiatement déplacées avec leur contexte.
 
-Initialement, le mode d’ancrage est défini globalement par [CDockingManager:: m_dockModeGlobal](../../mfc/reference/cdockingmanager-class.md#m_dockmodeglobal). Vous pouvez définir le mode d’ancrage de chaque volet individuellement à l' `SetDockingMode` aide de la méthode.
+Initialement, le mode d’ancrage est défini globalement par [CDockingManager :: m_dockModeGlobal](../../mfc/reference/cdockingmanager-class.md#m_dockmodeglobal). Vous pouvez définir le mode d’ancrage de chaque volet individuellement à l’aide de la méthode `SetDockingMode`.
 
-##  <a name="setpanealignment"></a>  CBasePane::SetPaneAlignment
+##  <a name="setpanealignment"></a>CBasePane :: SetPaneAlignment
 
 Définit l’alignement du volet.
 
@@ -1873,14 +1873,14 @@ En règle générale, l’infrastructure appelle cette méthode lorsqu’un vole
 
 Le tableau suivant indique les valeurs possibles pour *dwAlignment*:
 
-|Valeur|Alignement|
+|Valeur|Alignment|
 |-----------|---------------|
 |CBRS_ALIGN_LEFT|Alignement à gauche.|
 |CBRS_ALIGN_RIGHT|Alignement à droite.|
 |CBRS_ALIGN_TOP|Alignement en haut.|
 |CBRS_ALIGN_BOTTOM|Alignement en bas.|
 
-##  <a name="setpanestyle"></a>  CBasePane::SetPaneStyle
+##  <a name="setpanestyle"></a>CBasePane :: SetPaneStyle
 
 Définit le style du volet.
 
@@ -1895,11 +1895,11 @@ dans Spécifie le nouveau style à définir.
 
 ### <a name="remarks"></a>Notes
 
-Cette méthode peut être utilisée pour définir l’un des styles CBRS_ définis dans AFXRES. h. Étant donné que le style du volet et l’alignement du volet sont stockés ensemble, définissez le nouveau style en le combinant avec l’alignement actuel comme suit.
+Cette méthode peut être utilisée pour définir l’un des styles de CBRS_ définis dans AFXRES. h. Étant donné que le style du volet et l’alignement du volet sont stockés ensemble, définissez le nouveau style en le combinant avec l’alignement actuel comme suit.
 
 `pPane->SetPaneStyle (pPane->GetCurrentAlignment() | CBRS_TOOLTIPS);`
 
-##  <a name="setwindowpos"></a>CBasePane:: SetWindowPos
+##  <a name="setwindowpos"></a>CBasePane :: SetWindowPos
 
 Modifie la taille, la position et l’ordre de plan d’un volet.
 
@@ -1917,7 +1917,7 @@ virtual HDWP SetWindowPos(
 ### <a name="parameters"></a>Paramètres
 
 *pWndInsertAfter*<br/>
-dans Identifie l' `CWnd` objet qui précède cet `CWnd` objet dans l’ordre de plan. Pour plus d’informations, consultez [CWnd:: SetWindowPos](../../mfc/reference/cwnd-class.md#setwindowpos).
+dans Identifie l’objet `CWnd` qui précède cet objet `CWnd` dans l’ordre de plan. Pour plus d’informations, consultez [CWnd :: SetWindowPos](../../mfc/reference/cwnd-class.md#setwindowpos).
 
 *x*<br/>
 dans Spécifie la position du côté gauche de la fenêtre.
@@ -1925,14 +1925,14 @@ dans Spécifie la position du côté gauche de la fenêtre.
 *y*<br/>
 dans Spécifie la position du haut de la fenêtre.
 
-*cx*<br/>
+*adéquat*<br/>
 dans Spécifie la largeur de la fenêtre.
 
-*cy*<br/>
+*CY*<br/>
 dans Spécifie la hauteur de la fenêtre.
 
 *nFlags*<br/>
-dans Spécifie les options de taille et de position. Pour plus d’informations, consultez [CWnd:: SetWindowPos](../../mfc/reference/cwnd-class.md#setwindowpos).
+dans Spécifie les options de taille et de position. Pour plus d’informations, consultez [CWnd :: SetWindowPos](../../mfc/reference/cwnd-class.md#setwindowpos).
 
 *hdwp*<br/>
 dans Handle vers une structure qui contient des informations de taille et de position pour une ou plusieurs fenêtres.
@@ -1943,9 +1943,9 @@ Handle vers une structure de position de fenêtre différée mise à jour, ou NU
 
 ### <a name="remarks"></a>Notes
 
-Si *pWndInsertAfter* a la valeur null, cette méthode appelle [CWnd:: SetWindowPos](../../mfc/reference/cwnd-class.md#setwindowpos). Si *pWndInsertAfter* n’est pas null, cette méthode appelle `DeferWindowPos`.
+Si *pWndInsertAfter* a la valeur null, cette méthode appelle [CWnd :: SetWindowPos](../../mfc/reference/cwnd-class.md#setwindowpos). Si *pWndInsertAfter* n’est pas null, cette méthode appelle `DeferWindowPos`.
 
-##  <a name="showpane"></a>  CBasePane::ShowPane
+##  <a name="showpane"></a>CBasePane :: ShowPane
 
 Affiche ou masque le volet.
 
@@ -1969,11 +1969,11 @@ dans Si la valeur est TRUE, le volet est actif lorsqu’il est affiché.
 
 ### <a name="remarks"></a>Notes
 
-Cette méthode affiche ou masque un volet. Utilisez cette méthode au lieu `ShowWindow` de, car cette méthode notifie les responsables d’ancrage appropriés des modifications apportées à la visibilité du volet.
+Cette méthode affiche ou masque un volet. Utilisez cette méthode au lieu de `ShowWindow`, car cette méthode notifie les responsables de l’ancrage appropriés des modifications apportées à la visibilité du volet.
 
-Utilisez [CBasePane:: IsVisible](#isvisible) pour déterminer la visibilité actuelle d’un volet.
+Utilisez [CBasePane :: IsVisible](#isvisible) pour déterminer la visibilité actuelle d’un volet.
 
-##  <a name="stretchpane"></a>  CBasePane::StretchPane
+##  <a name="stretchpane"></a>CBasePane :: StretchPane
 
 Étire un volet sur le plan vertical ou horizontal.
 
@@ -1995,7 +1995,7 @@ dans Si la valeur est TRUE, étirez le volet verticalement. Si la valeur est FAL
 
 Taille du volet étiré.
 
-##  <a name="undockpane"></a>  CBasePane::UndockPane
+##  <a name="undockpane"></a>CBasePane :: UndockPane
 
 Supprime le volet du site d’ancrage, du curseur par défaut ou de la fenêtre mini-frame dans laquelle il est actuellement ancré.
 
@@ -2012,7 +2012,7 @@ Si la valeur est TRUE, la disposition d’ancrage n’est pas recalculée imméd
 
 Appelez cette méthode pour manipuler l’état du volet ou exclure le volet de la disposition d’ancrage.
 
-Si vous souhaitez continuer à utiliser ce volet, appelez [CBasePane::D ockpane](#dockpane) ou [CBasePane:: FloatPane](#floatpane) avant d’appeler cette méthode.
+Si vous souhaitez continuer à utiliser ce volet, appelez [CBasePane ::D ockpane](#dockpane) ou [CBasePane :: FloatPane](#floatpane) avant d’appeler cette méthode.
 
 ## <a name="see-also"></a>Voir aussi
 

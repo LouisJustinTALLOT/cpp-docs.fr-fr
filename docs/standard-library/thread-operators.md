@@ -19,17 +19,17 @@ helpviewer_keywords:
 - std::operator&lt;= (thread)
 - std::operator== (thread)
 ms.openlocfilehash: c0593b8016cf45abe64114958ccda84eb3704844
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68458444"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78876167"
 ---
 # <a name="ltthreadgt-operators"></a>&lt;thread&gt;, opérateurs
 
 ||||
 |-|-|-|
-|[!=, opérateur](#op_neq)|[operator&gt;](#op_gt)|[operator&gt;=](#op_gt_eq)|
+|[operator!=](#op_neq)|[operator&gt;](#op_gt)|[operator&gt;=](#op_gt_eq)|
 |[operator&lt;](#op_lt)|[operator&lt;&lt;](#op_lt_lt)|[operator&lt;=](#op_lt_eq)|
 |[operator==](#op_eq_eq)|
 
@@ -45,10 +45,10 @@ bool operator>= (
 
 ### <a name="parameters"></a>Paramètres
 
-*Gauche*\
+\ *gauche*
 Objet gauche `thread::id`.
 
-*Oui*\
+\ *droit*
 Objet droit `thread::id`.
 
 ### <a name="return-value"></a>Valeur de retour
@@ -71,10 +71,10 @@ bool operator> (
 
 ### <a name="parameters"></a>Paramètres
 
-*Gauche*\
+\ *gauche*
 Objet gauche `thread::id`.
 
-*Oui*\
+\ *droit*
 Objet droit `thread::id`.
 
 ### <a name="return-value"></a>Valeur de retour
@@ -97,10 +97,10 @@ bool operator<= (
 
 ### <a name="parameters"></a>Paramètres
 
-*Gauche*\
+\ *gauche*
 Objet gauche `thread::id`.
 
-*Oui*\
+\ *droit*
 Objet droit `thread::id`.
 
 ### <a name="return-value"></a>Valeur de retour
@@ -123,15 +123,15 @@ bool operator<(
 
 ### <a name="parameters"></a>Paramètres
 
-*Gauche*\
+\ *gauche*
 Objet gauche `thread::id`.
 
-*Oui*\
+\ *droit*
 Objet droit `thread::id`.
 
 ### <a name="return-value"></a>Valeur de retour
 
-**true** si *Left* précède  le classement total. Sinon, **false**.
+**true** si *Left* précède *le classement* total. Sinon, **false**.
 
 ### <a name="remarks"></a>Notes
 
@@ -151,10 +151,10 @@ bool operator!= (
 
 ### <a name="parameters"></a>Paramètres
 
-*Gauche*\
+\ *gauche*
 Objet gauche `thread::id`.
 
-*Oui*\
+\ *droit*
 Objet droit `thread::id`.
 
 ### <a name="return-value"></a>Valeur de retour
@@ -177,15 +177,15 @@ bool operator== (
 
 ### <a name="parameters"></a>Paramètres
 
-*Gauche*\
+\ *gauche*
 Objet gauche `thread::id`.
 
-*Oui*\
+\ *droit*
 Objet droit `thread::id`.
 
 ### <a name="return-value"></a>Valeur de retour
 
-**true** si les deux objets représentent le même thread d’exécution ou si aucun objet ne représente un thread d’exécution; Sinon, **false**.
+**true** si les deux objets représentent le même thread d’exécution ou si aucun objet ne représente un thread d’exécution ; Sinon, **false**.
 
 ### <a name="remarks"></a>Notes
 
@@ -203,11 +203,11 @@ basic_ostream<Elem, Tr>& operator<<(
 
 ### <a name="parameters"></a>Paramètres
 
-*OSTR*\
+*Ostr*\
 Objet [basic_ostream](../standard-library/basic-ostream-class.md).
 
-*Identifi*\
-Objet `thread::id`.
+*Id*\
+Objet `thread::id` .
 
 ### <a name="return-value"></a>Valeur de retour
 

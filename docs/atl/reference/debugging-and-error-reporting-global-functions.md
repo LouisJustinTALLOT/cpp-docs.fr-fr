@@ -1,5 +1,5 @@
 ---
-title: Fonctions globales de signalement des erreurs et débogage
+title: Fonctions globales de débogage et de rapport d’erreurs
 ms.date: 11/04/2016
 f1_keywords:
 - atlcomcli/ATL::AtlHresultFromLastError
@@ -9,25 +9,25 @@ helpviewer_keywords:
 - functions [ATL], error reporting
 ms.assetid: 11339c02-98cd-428d-b3b9-7deeb155a6a3
 ms.openlocfilehash: f7483b7473383958089b0c88d0b3c2645ddc2a4f
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62276657"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78864881"
 ---
-# <a name="debugging-and-error-reporting-global-functions"></a>Fonctions globales de signalement des erreurs et débogage
+# <a name="debugging-and-error-reporting-global-functions"></a>Fonctions globales de débogage et de rapport d’erreurs
 
-Ces fonctions fournissent des fonctionnalités de trace et de débogage utiles.
+Ces fonctions fournissent des fonctionnalités de débogage et de suivi utiles.
 
 |||
 |-|-|
-|[AtlHresultFromLastError](debugging-and-error-reporting-global-functions.md#atlhresultfromlasterror)|Retourne un `GetLastError` code d’erreur sous la forme d’une valeur HRESULT.|
+|[AtlHresultFromLastError](debugging-and-error-reporting-global-functions.md#atlhresultfromlasterror)|Retourne un `GetLastError` code d’erreur sous la forme d’un HRESULT.|
 |[AtlHresultFromWin32](debugging-and-error-reporting-global-functions.md#atlhresultfromwin32)|Convertit un code d'erreur Win32 en valeur HRESULT.|
-|[AtlReportError](debugging-and-error-reporting-global-functions.md#atlreporterror)|Configure `IErrorInfo` pour fournir des détails de l’erreur à un client.|
+|[AtlReportError](debugging-and-error-reporting-global-functions.md#atlreporterror)|Configure `IErrorInfo` pour fournir des détails d’erreur à un client.|
 |[AtlThrow](debugging-and-error-reporting-global-functions.md#atlthrow)|Lève un `CAtlException`.|
 |[AtlThrowLastWin32](debugging-and-error-reporting-global-functions.md#atlthrowlastwin32)|Appelez cette fonction pour signaler une erreur en fonction du résultat de la fonction Windows `GetLastError`.|
 
-##  <a name="atlhresultfromlasterror"></a>  AtlHresultFromLastError
+##  <a name="atlhresultfromlasterror"></a>AtlHresultFromLastError
 
 Retourne la dernière valeur du code d'erreur du thread appelant sous la forme d'une valeur HRESULT.
 
@@ -37,13 +37,13 @@ HRESULT AtlHresultFromLastError();
 
 ### <a name="remarks"></a>Notes
 
-`AtlHresultFromLastError` appels `GetLastError` pour obtenir la dernière erreur et retourne l’erreur après l’avoir converti à un HRESULT à l’aide de la macro HRESULT_FROM_WIN32.
+`AtlHresultFromLastError` appelle `GetLastError` pour obtenir la dernière erreur et retourne l’erreur après la conversion en HRESULT à l’aide de la macro HRESULT_FROM_WIN32.
 
-### <a name="requirements"></a>Configuration requise
+### <a name="requirements"></a>Spécifications
 
-**En-tête :** atlcomcli.h
+**En-tête :** atlcomcli. h
 
-##  <a name="atlhresultfromwin32"></a>  AtlHresultFromWin32
+##  <a name="atlhresultfromwin32"></a>AtlHresultFromWin32
 
 Convertit un code d'erreur Win32 en valeur HRESULT.
 
@@ -54,22 +54,22 @@ AtlHresultFromWin32(DWORD error);
 ### <a name="parameters"></a>Paramètres
 
 *error*<br/>
-La valeur d’erreur à convertir.
+Valeur d’erreur à convertir.
 
 ### <a name="remarks"></a>Notes
 
-Convertit un code d’erreur Win32 en une valeur HRESULT, à l’aide de la macro HRESULT_FROM_WIN32.
+Convertit un code d’erreur Win32 en HRESULT, à l’aide de la macro HRESULT_FROM_WIN32.
 
 > [!NOTE]
 >  Au lieu d’utiliser `HRESULT_FROM_WIN32(GetLastError())`, utilisez la fonction [AtlHresultFromLastError](debugging-and-error-reporting-global-functions.md#atlhresultfromlasterror).
 
-### <a name="requirements"></a>Configuration requise
+### <a name="requirements"></a>Spécifications
 
-**En-tête :** atlcomcli.h
+**En-tête :** atlcomcli. h
 
-##  <a name="atlreporterror"></a>  AtlReportError
+##  <a name="atlreporterror"></a>AtlReportError
 
-Configure le `IErrorInfo` interface pour fournir des informations d’erreur aux clients de l’objet.
+Configure l’interface `IErrorInfo` pour fournir des informations d’erreur aux clients de l’objet.
 
 ```
 HRESULT WINAPI AtlReportError(
@@ -119,52 +119,52 @@ HRESULT WINAPI AtlReportError(
 
 ### <a name="parameters"></a>Paramètres
 
-*clsid*<br/>
-[in] Le CLSID de l’objet qui signale l’erreur.
+*identificateur*<br/>
+dans CLSID de l’objet qui signale l’erreur.
 
 *lpszDesc*<br/>
-[in] Chaîne décrivant l’erreur. Les versions Unicode spécifient que *lpszDesc* est de type LPCOLESTR ; de la version ANSI spécifie un type de LPCSTR.
+dans Chaîne décrivant l’erreur. Les versions Unicode spécifient que *lpszDesc* est de type LPCOLESTR ; la version ANSI spécifie un type de LPCSTR.
 
-*iid*<br/>
-[in] IID de l’interface définissant l’erreur ou GUID_NULL si l’erreur est définie par le système d’exploitation.
+*vaut*<br/>
+dans IID de l’interface définissant l’erreur ou GUID_NULL si l’erreur est définie par le système d’exploitation.
 
 *hRes*<br/>
-[in] La valeur HRESULT que vous souhaitez retourné à l’appelant.
+dans HRESULT que vous souhaitez retourner à l’appelant.
 
 *nID*<br/>
-[in] L’identificateur de ressource où se trouve la chaîne de description d’erreur. Cette valeur doit être compris entre 0 x 0200 et 0xFFFF, inclus. Dans les versions debug, un **ASSERT** se produira si *nID* n’indexe pas une chaîne valide. Dans les versions release, la chaîne de description d’erreur est définie à « Erreur inconnue ».
+dans Identificateur de ressource dans lequel la chaîne de description de l’erreur est stockée. Cette valeur doit être comprise entre 0x0200 et 0xFFFF, inclus. Dans les versions Debug, une **assertion** se produit si *nid* n’indexe pas une chaîne valide. Dans les versions release, la chaîne de description d’erreur est définie sur « erreur inconnue ».
 
 *dwHelpID*<br/>
-[in] L’identificateur de contexte d’aide pour l’erreur.
+dans Identificateur du contexte d’aide pour l’erreur.
 
 *lpszHelpFile*<br/>
-[in] Le chemin d’accès et le nom du fichier d’aide décrivant l’erreur.
+dans Chemin d’accès et nom du fichier d’aide décrivant l’erreur.
 
 *hInst*<br/>
-[in] Handle de la ressource. Par défaut, ce paramètre est `__AtlBaseModuleModule::GetResourceInstance`, où `__AtlBaseModuleModule` est l’instance globale de [CAtlBaseModule](../../atl/reference/catlbasemodule-class.md) ou une classe dérivée à partir de celui-ci.
+dans Handle de la ressource. Par défaut, ce paramètre est `__AtlBaseModuleModule::GetResourceInstance`, où `__AtlBaseModuleModule` est l’instance globale de [CAtlBaseModule](../../atl/reference/catlbasemodule-class.md) ou une classe dérivée de celui-ci.
 
 ### <a name="return-value"></a>Valeur de retour
 
-Si le *hRes* paramètre est différent de zéro, retourne la valeur de *hRes*. Si *hRes* est zéro, les quatre premières versions de `AtlReportError` retourne DISP_E_EXCEPTION. Les deux dernières versions retournent le résultat de la macro **MAKE_HRESULT (1, FACILITY_ITF,** `nID` **)**.
+Si le paramètre *hres* est différent de zéro, retourne la valeur de *hres*. Si *hres* est égal à zéro, les quatre premières versions de `AtlReportError` retournent DISP_E_EXCEPTION. Les deux dernières versions renvoient le résultat de la macro **MAKE_HRESULT (1, FACILITY_ITF,** `nID` **)** .
 
 ### <a name="remarks"></a>Notes
 
-La chaîne *lpszDesc* est utilisé comme la description textuelle de l’erreur. Lorsque le client reçoit la *hRes* retour de `AtlReportError`, le client peut accéder à la `IErrorInfo` structure pour plus d’informations sur l’erreur.
+La chaîne *lpszDesc* est utilisée comme description textuelle de l’erreur. Lorsque le client reçoit le *hres* que vous retournez de `AtlReportError`, le client peut accéder à la structure `IErrorInfo` pour plus d’informations sur l’erreur.
 
 ### <a name="example"></a>Exemple
 
 [!code-cpp[NVC_ATL_COM#52](../../atl/codesnippet/cpp/debugging-and-error-reporting-global-functions_1.cpp)]
 
 > [!CAUTION]
->  N’utilisez pas `AtlReportError` dans C++ gestionnaires catch. Certaines substitutions de ces fonctions d’utiliser les macros de conversion de chaînes ATL en interne, qui à son tour le `_alloca` fonctionnent en interne. À l’aide de `AtlReportError` dans un bloc catch C++ gestionnaire peut provoquer des exceptions dans les gestionnaires catch C++.
+>  N’utilisez pas `AtlReportError` dans C++ les gestionnaires catch. Certaines substitutions de ces fonctions utilisent les macros de conversion de chaînes ATL en interne, qui à leur tour utilisent la fonction `_alloca` en interne. L’utilisation de `AtlReportError` C++ dans un gestionnaire catch peut provoquer C++ des exceptions dans les gestionnaires catch.
 
-### <a name="requirements"></a>Configuration requise
+### <a name="requirements"></a>Spécifications
 
-**En-tête :** atlcom.h
+**En-tête :** atlcom. h
 
-##  <a name="atlthrow"></a>  AtlThrow
+##  <a name="atlthrow"></a>AtlThrow
 
-Appelez cette fonction pour signaler une erreur selon un code d’état HRESULT.
+Appelez cette fonction pour signaler une erreur en fonction d’un code d’État HRESULT.
 
 ```
 __declspec(noreturn) inline void AtlThrow(HRESULT hr);
@@ -172,34 +172,34 @@ __declspec(noreturn) inline void AtlThrow(HRESULT hr);
 
 ### <a name="parameters"></a>Paramètres
 
-*hr*<br/>
+*h*<br/>
 Valeur HRESULT standard.
 
 ### <a name="remarks"></a>Notes
 
-Cette fonction est utilisée par le code ATL et MFC en cas d’une condition d’erreur. Elle peut également être appelée à partir de votre propre code. L’implémentation par défaut de cette fonction dépend de la définition de la _ATL_NO_EXCEPTIONS de symbole et sur le type de projet, MFC ou ATL.
+Cette fonction est utilisée par ATL et le code MFC dans le cas d’une condition d’erreur. Elle peut également être appelée à partir de votre propre code. L’implémentation par défaut de cette fonction dépend de la définition du symbole _ATL_NO_EXCEPTIONS et du type de projet, MFC ou ATL.
 
-Dans tous les cas, cette fonction effectue le suivi des HRESULT au débogueur.
+Dans tous les cas, cette fonction effectue le suivi de HRESULT au débogueur.
 
-Dans Visual Studio 2015 Update 3 et versions ultérieures, cette fonction est avec attributs __declspec (noreturn) pour éviter les fausses avertissements SAL.
+Dans Visual Studio 2015 Update 3 et versions ultérieures, cette fonction est attribuée __declspec (noreturn) pour éviter les fausses alertes SAL.
 
-Si _ATL_NO_EXCEPTIONS n’est pas défini dans un projet MFC, cette fonction lève un [CMemoryException](../../mfc/reference/cmemoryexception-class.md) ou un [COleException](../../mfc/reference/coleexception-class.md) selon la valeur de la valeur HRESULT.
+Si _ATL_NO_EXCEPTIONS n’est pas défini dans un projet MFC, cette fonction lève une [CMemoryException](../../mfc/reference/cmemoryexception-class.md) ou un [COleException](../../mfc/reference/coleexception-class.md) en fonction de la valeur de HRESULT.
 
-Si _ATL_NO_EXCEPTIONS n’est pas défini dans un projet ATL, la fonction lève un [CAtlException](../../atl/reference/catlexception-class.md).
+Si _ATL_NO_EXCEPTIONS n’est pas défini dans un projet ATL, la fonction lève une [CAtlException](../../atl/reference/catlexception-class.md).
 
 Si _ATL_NO_EXCEPTIONS est défini, la fonction provoque un échec d’assertion au lieu de lever une exception.
 
-Pour les projets ATL, il est possible de fournir votre propre implémentation de cette fonction à utiliser en cas de défaillance par ATL. Pour ce faire, définissez votre propre fonction avec la même signature que `AtlThrow` et #define `AtlThrow` par le nom de votre fonction. Cela doit être effectuée avant d’inclure atlexcept.h (ce qui signifie qu’elle doit être effectuée avant d’inclure des en-têtes ATL puisque atlbase.h comprend atlexcept.h). Attribut de votre fonction `__declspec(noreturn)` pour éviter les fausses avertissements SAL.
+Pour les projets ATL, il est possible de fournir votre propre implémentation de cette fonction pour qu’elle soit utilisée par ATL en cas d’échec. Pour ce faire, définissez votre propre fonction avec la même signature que `AtlThrow` et #define `AtlThrow` en tant que nom de votre fonction. Cela doit être fait avant d’inclure atlexcept. h (ce qui signifie qu’il doit être fait avant d’inclure des en-têtes ATL, car atlbase. h inclut atlexcept. h). Attributez votre fonction `__declspec(noreturn)` pour éviter les fausses avertissements SAL.
 
 ### <a name="example"></a>Exemple
 
 [!code-cpp[NVC_ATL_Windowing#95](../../atl/codesnippet/cpp/debugging-and-error-reporting-global-functions_2.h)]
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
-**En-tête :** atldef.h
+**En-tête :** atldef. h
 
-##  <a name="atlthrowlastwin32"></a>  AtlThrowLastWin32
+##  <a name="atlthrowlastwin32"></a>AtlThrowLastWin32
 
 Appelez cette fonction pour signaler une erreur en fonction du résultat de la fonction Windows `GetLastError`.
 
@@ -209,17 +209,17 @@ inline void AtlThrowLastWin32();
 
 ### <a name="remarks"></a>Notes
 
-Cette fonction effectue le suivi du résultat de `GetLastError` au débogueur.
+Cette fonction suit le résultat de `GetLastError` au débogueur.
 
-Si _ATL_NO_EXCEPTIONS n’est pas défini dans un projet MFC, cette fonction lève un [CMemoryException](../../mfc/reference/cmemoryexception-class.md) ou un [COleException](../../mfc/reference/coleexception-class.md) selon la valeur retournée par `GetLastError`.
+Si _ATL_NO_EXCEPTIONS n’est pas défini dans un projet MFC, cette fonction lève une [CMemoryException](../../mfc/reference/cmemoryexception-class.md) ou un [COleException](../../mfc/reference/coleexception-class.md) en fonction de la valeur retournée par `GetLastError`.
 
-Si _ATL_NO_EXCEPTIONS n’est pas défini dans un projet ATL, la fonction lève un [CAtlException](../../atl/reference/catlexception-class.md).
+Si _ATL_NO_EXCEPTIONS n’est pas défini dans un projet ATL, la fonction lève une [CAtlException](../../atl/reference/catlexception-class.md).
 
 Si _ATL_NO_EXCEPTIONS est défini, la fonction provoque un échec d’assertion au lieu de lever une exception.
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
-**En-tête :** atldef.h
+**En-tête :** atldef. h
 
 ## <a name="see-also"></a>Voir aussi
 

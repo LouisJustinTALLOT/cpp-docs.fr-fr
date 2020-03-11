@@ -17,11 +17,11 @@ helpviewer_keywords:
 - std::operatoroperator&lt; (forward_list)
 - std::operatoroperator&lt;= (forward_list)
 ms.openlocfilehash: 1ddfb56c7ff68ec10c7bb56af3495e4042acb83c
-ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
+ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/21/2019
-ms.locfileid: "72689687"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78874754"
 ---
 # <a name="ltforward_listgt-operators"></a>&lt;forward_list&gt;, opérateurs
 
@@ -38,14 +38,14 @@ bool operator==(
 ### <a name="parameters"></a>Paramètres
 
 \ *gauche*
-Objet de type `forward_list`.
+Objet de type `forward_list`.
 
 \ *droit*
-Objet de type `forward_list`.
+Objet de type `forward_list`.
 
 ### <a name="remarks"></a>Notes
 
-Cette fonction de modèle surcharge `operator==` pour comparer deux objets de `forward_list` de modèle de classe. La fonction retourne `distance(left.begin(), end()) == distance(right.begin(),right.end()) && equal(left. begin(),left. end(),right.begin())`.
+Cette fonction de modèle surcharge `operator==` pour comparer deux objets de `forward_list`de modèle de classe. La fonction retourne `distance(left.begin(), end()) == distance(right.begin(),right.end()) && equal(left. begin(),left. end(),right.begin())`.
 
 ## <a name="op_neq"></a>opérateur ! =
 
@@ -60,10 +60,10 @@ bool operator!=(
 ### <a name="parameters"></a>Paramètres
 
 \ *gauche*
-Objet de type `forward_list`.
+Objet de type `forward_list`.
 
 \ *droit*
-Objet de type `forward_list`.
+Objet de type `forward_list`.
 
 ### <a name="return-value"></a>Valeur de retour
 
@@ -86,10 +86,10 @@ bool operator<(
 ### <a name="parameters"></a>Paramètres
 
 \ *gauche*
-Objet de type `forward_list`.
+Objet de type `forward_list`.
 
 \ *droit*
-Objet de type `forward_list`.
+Objet de type `forward_list`.
 
 ### <a name="return-value"></a>Valeur de retour
 
@@ -97,9 +97,9 @@ Objet de type `forward_list`.
 
 ### <a name="remarks"></a>Notes
 
-Cette fonction de modèle surcharge `operator<` pour comparer deux objets de `forward_list` de modèle de classe. La fonction retourne `lexicographical_compare(lhs. begin(), lhs. end(), rhs.begin(), rhs.end())`.
+Cette fonction de modèle surcharge `operator<` pour comparer deux objets de `forward_list`de modèle de classe. La fonction retourne `lexicographical_compare(lhs. begin(), lhs. end(), rhs.begin(), rhs.end())`.
 
-## <a name="op_lt_eq"></a>&lt; d’opérateur =
+## <a name="op_lt_eq"></a>&lt;d’opérateur =
 
 Vérifie si l’objet de liste forward_list à gauche de l’opérateur est inférieur ou égal à l’objet de liste forward_list situé à droite.
 
@@ -112,10 +112,10 @@ bool operator<=(
 ### <a name="parameters"></a>Paramètres
 
 \ *gauche*
-Objet de type `forward_list`.
+Objet de type `forward_list`.
 
 \ *droit*
-Objet de type `forward_list`.
+Objet de type `forward_list`.
 
 ### <a name="return-value"></a>Valeur de retour
 
@@ -138,10 +138,10 @@ bool operator>(
 ### <a name="parameters"></a>Paramètres
 
 \ *gauche*
-Objet de type `forward_list`.
+Objet de type `forward_list`.
 
 \ *droit*
-Objet de type `forward_list`.
+Objet de type `forward_list`.
 
 ### <a name="return-value"></a>Valeur de retour
 
@@ -151,7 +151,7 @@ Objet de type `forward_list`.
 
 Cette fonction de modèle retourne `right < left`.
 
-## <a name="op_gt_eq"></a>&gt; d’opérateur =
+## <a name="op_gt_eq"></a>&gt;d’opérateur =
 
 Vérifie si l’objet de liste forward_list à gauche de l’opérateur est supérieur ou égal à l’objet de liste forward_list situé à droite.
 
@@ -164,10 +164,10 @@ bool operator>=(
 ### <a name="parameters"></a>Paramètres
 
 \ *gauche*
-Objet de type `forward_list`.
+Objet de type `forward_list`.
 
 \ *droit*
-Objet de type `forward_list`.
+Objet de type `forward_list`.
 
 ### <a name="return-value"></a>Valeur de retour
 

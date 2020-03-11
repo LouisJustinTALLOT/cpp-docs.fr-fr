@@ -13,11 +13,11 @@ helpviewer_keywords:
 - std::gslice [C++], stride
 ms.assetid: f47cffd0-ea59-4b13-848b-7a5ce1d7e2a3
 ms.openlocfilehash: 9290fabc86ffbdb051b7c61fe1600cd2f7f17dca
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68448899"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78866247"
 ---
 # <a name="gslice-class"></a>gslice, classe
 
@@ -29,9 +29,9 @@ La classe stocke les paramètres qui caractérisent un objet de type [gslice_arr
 
 - un index de départ ;
 
-- Vecteur de longueur de classe `valarray<size_t>`.
+- Vecteur de longueur de la classe `valarray<size_t>`.
 
-- Vecteur Stride de classe `valarray<size_t>`.
+- Vecteur Stride de la classe `valarray<size_t>`.
 
 Les deux vecteurs doivent avoir la même longueur.
 
@@ -45,7 +45,7 @@ Les opérations sur les valarrays sont garanties uniquement si les sous-ensemble
 |-|-|
 |[gslice](#gslice)|Définit un sous-ensemble d'un `valarray` composé de plusieurs sections du `valarray` qui commencent toutes à un élément spécifié.|
 
-### <a name="member-functions"></a>Fonctions membres
+### <a name="member-functions"></a>Fonctions Membre
 
 |Fonction membre|Description|
 |-|-|
@@ -53,9 +53,9 @@ Les opérations sur les valarrays sont garanties uniquement si les sous-ensemble
 |[start](#start)|Recherche l'index de départ d'un secteur général d'un `valarray`.|
 |[stride](#stride)|Recherche la distance entre des éléments dans un secteur général d'un `valarray`.|
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
-**En-tête :** \<valarray>
+**En-tête :** \<valarray >
 
 **Espace de noms :** std
 
@@ -89,7 +89,7 @@ Le constructeur par défaut stocke zéro pour l’index de départ et les vecteu
 
 ### <a name="remarks"></a>Notes
 
-**gslice** définit un sous-ensemble d’un valarray qui se compose de plusieurs sections du valarray, chacune commençant au même élément spécifié. La possibilité d’utiliser des tableaux pour définir plusieurs sections est la seule différence entre `gslice` et [slice::slice](../standard-library/slice-class.md#slice). La première tranche a un premier élément avec un index *_StartIndex*, un nombre d’éléments spécifié par le premier élément de *_LenArray*, et une valeur Stride donnée par le premier élément de *_IncArray*. L’ensemble de sections orthogonales suivant a ses premiers éléments donnés par la première section. Le deuxième élément de *_LenArray* spécifie le nombre d’éléments. La Stride est donnée par le deuxième élément de *_IncArray*. Une troisième dimension de sections prend les éléments du tableau à deux dimensions comme éléments de départ et procède de la même façon
+**gslice** définit un sous-ensemble d’un valarray qui se compose de plusieurs sections du valarray, chacune commençant au même élément spécifié. La possibilité d’utiliser des tableaux pour définir plusieurs sections est la seule différence entre `gslice` et [slice::slice](../standard-library/slice-class.md#slice). La première tranche a un premier élément avec un index de *_StartIndex*, un nombre d’éléments spécifié par le premier élément de *_LenArray*et une valeur de Stride donnée par le premier élément de *_IncArray*. L’ensemble de sections orthogonales suivant a ses premiers éléments donnés par la première section. Le deuxième élément de *_LenArray* spécifie le nombre d’éléments. La Stride est donnée par le deuxième élément de *_IncArray*. Une troisième dimension de sections prend les éléments du tableau à deux dimensions comme éléments de départ et procède de la même façon
 
 ### <a name="example"></a>Exemple
 
@@ -228,7 +228,7 @@ size_t start() const;
 
 Index de départ d’une section générale d’un valarray.
 
-### <a name="example"></a>Exemples
+### <a name="example"></a>Exemple
 
 ```cpp
 // gslice_start.cpp
@@ -349,4 +349,4 @@ vaGSlice.stride ( ) = ( 7 4 ).
 
 ## <a name="see-also"></a>Voir aussi
 
-[Sécurité des threads dans la bibliothèque standard C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)
+[Sécurité des threads dans la bibliothèque C++ Standard](../standard-library/thread-safety-in-the-cpp-standard-library.md)

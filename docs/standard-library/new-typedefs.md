@@ -5,15 +5,15 @@ f1_keywords:
 - new/std::new_handler
 ms.assetid: aef01de1-06b5-4b6c-aebc-2c9f423d7e47
 ms.openlocfilehash: 80123bc35422984ef92bdba6da45052d3461b1d7
-ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
+ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68245155"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78854932"
 ---
 # <a name="ltnewgt-typedefs"></a>&lt;new&gt;, typedefs
 
-## <a name="hardware_constructive_interference_size"></a> hardware_constructive_interference_size
+## <a name="hardware_constructive_interference_size"></a>hardware_constructive_interference_size
 
 ```cpp
 inline constexpr size_t hardware_constructive_interference_size = implementation-defined;
@@ -21,9 +21,9 @@ inline constexpr size_t hardware_constructive_interference_size = implementation
 
 ### <a name="remarks"></a>Notes
 
-Ce nombre correspond au maximum recommandé de taille de mémoire contiguë occupée par les deux objets accédés avec la localité temporelle de threads simultanés. Il doit être au moins `alignof(max_align_t)`.
+Ce nombre correspond à la taille maximale recommandée de la mémoire contiguë occupée par deux objets accessibles avec la localité temporelle par des threads simultanés. Elle doit être au moins `alignof(max_align_t)`.
 
-### <a name="example"></a>Exemples
+### <a name="example"></a>Exemple
 
 ```cpp
 struct together { 
@@ -40,7 +40,7 @@ struct kennel {
 static_assert(sizeof(together) <= hardware_constructive_interference_size);
 ```
 
-## <a name="hardware_destructive_interference_size"></a> hardware_destructive_interference_size
+## <a name="hardware_destructive_interference_size"></a>hardware_destructive_interference_size
 
 ```cpp
 inline constexpr size_t hardware_destructive_interference_size = implementation-defined;
@@ -48,9 +48,9 @@ inline constexpr size_t hardware_destructive_interference_size = implementation-
 
 ### <a name="remarks"></a>Notes
 
-Ce nombre est le décalage minimale recommandé entre deux objets accessibles simultanément afin d’éviter une dégradation des performances supplémentaires en raison d’une contention introduite par l’implémentation. Il doit être au moins `alignof(max_align_t)`.
+Ce nombre est le décalage minimal recommandé entre deux objets faisant l’objet d’un accès simultané pour éviter une dégradation des performances supplémentaire en raison de la contention introduite par l’implémentation. Elle doit être au moins `alignof(max_align_t)`.
 
-### <a name="example"></a>Exemples
+### <a name="example"></a>Exemple
 
 ```cpp
 struct keep_apart {
@@ -59,7 +59,7 @@ struct keep_apart {
 };
 ```
 
-## <a name="new_handler"></a> new_handler
+## <a name="new_handler"></a>new_handler
 
 Le type pointe vers une fonction pouvant être utilisée comme gestionnaire new.
 
@@ -69,8 +69,8 @@ typedef void (*new_handler)();
 
 ### <a name="remarks"></a>Notes
 
-Ce type de fonction de gestionnaire est appelé **opérateur new** ou `operator new[]` quand ils ne peuvent pas satisfaire une demande de stockage supplémentaire.
+Ce type de fonction de gestionnaire est appelé par **opérateur New** ou `operator new[]` lorsqu’ils ne peuvent pas répondre à une demande de stockage supplémentaire.
 
 ### <a name="example"></a>Exemple
 
-Pour obtenir un exemple utilisant `new_handler` comme valeur de retour, consultez [set_new_handler](../standard-library/new-functions.md#set_new_handler).
+Pour obtenir un exemple utilisant [ comme valeur de retour, consultez ](../standard-library/new-functions.md#set_new_handler)set_new_handler`new_handler`.

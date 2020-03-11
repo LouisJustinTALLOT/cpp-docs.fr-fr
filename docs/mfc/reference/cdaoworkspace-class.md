@@ -63,11 +63,11 @@ helpviewer_keywords:
 - CDaoWorkspace [MFC], m_pDAOWorkspace
 ms.assetid: 64f60de6-4df1-4d4a-a65b-c489b5257d52
 ms.openlocfilehash: c1d235035cee9342c8c54c7aaa4e05a96d5a37e3
-ms.sourcegitcommit: 069e3833bd821e7d64f5c98d0ea41fc0c5d22e53
+ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/21/2019
-ms.locfileid: "74303468"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78883866"
 ---
 # <a name="cdaoworkspace-class"></a>CDaoWorkspace (classe)
 
@@ -83,13 +83,13 @@ class CDaoWorkspace : public CObject
 
 ### <a name="public-constructors"></a>Constructeurs publics
 
-|Nom|Description|
+|Name|Description|
 |----------|-----------------|
 |[CDaoWorkspace :: CDaoWorkspace](#cdaoworkspace)|Construit un objet Workspace. Ensuite, appelez `Create` ou `Open`.|
 
-### <a name="public-methods"></a>Méthodes publiques
+### <a name="public-methods"></a>M&#233;thodes publiques
 
-|Nom|Description|
+|Name|Description|
 |----------|-----------------|
 |[CDaoWorkspace :: Append](#append)|Ajoute un espace de travail nouvellement créé à la collection d’espaces de travail du moteur de base de données.|
 |[CDaoWorkspace :: BeginTrans](#begintrans)|Commence une nouvelle transaction, qui s’applique à toutes les bases de données ouvertes dans l’espace de travail.|
@@ -120,7 +120,7 @@ class CDaoWorkspace : public CObject
 
 ### <a name="public-data-members"></a>Membres de données publiques
 
-|Nom|Description|
+|Name|Description|
 |----------|-----------------|
 |[CDaoWorkspace :: m_pDAOWorkspace](#m_pdaoworkspace)|Pointe vers l’objet de l’espace de travail DAO sous-jacent.|
 
@@ -131,7 +131,7 @@ Dans la plupart des cas, vous n’aurez pas besoin de plusieurs espaces de trava
 > [!NOTE]
 >  Les classes de base de données DAO sont distinctes des classes de base de données MFC basées sur Open Database Connectivity (ODBC). Tous les noms de classe de base de données DAO ont un préfixe « CDao ». En général, les classes MFC basées sur DAO sont plus puissantes que les classes MFC basées sur ODBC. Les classes basées sur DAO accèdent aux données via le moteur de base de données Microsoft Jet, y compris les pilotes ODBC. Ils prennent également en charge les opérations DDL (Data Definition Language), telles que la création de bases de données et l’ajout de tables et de champs par le biais des classes, sans devoir appeler DAO directement.
 
-## <a name="capabilities"></a>Capacités
+## <a name="capabilities"></a>Fonctionnalités
 
 La `CDaoWorkspace` de la classe fournit les éléments suivants :
 
@@ -147,7 +147,7 @@ La `CDaoWorkspace` de la classe fournit les éléments suivants :
 
 MFC n’implémente pas les collections Users et groups dans DAO, qui sont utilisées pour le contrôle de sécurité. Si vous avez besoin de ces aspects de DAO, vous devez les programmer par le biais d’appels directs à des interfaces DAO. Pour plus d’informations, consultez la [note technique 54](../../mfc/tn054-calling-dao-directly-while-using-mfc-dao-classes.md).
 
-## <a name="usage"></a>Utilisation
+## <a name="usage"></a>Usage
 
 Vous pouvez utiliser la classe `CDaoWorkspace` pour :
 
@@ -165,7 +165,7 @@ L’ouverture explicite de l’espace de travail par défaut ou l’ouverture d�
 
 Terminer une session d’espace de travail en fermant l’espace de travail avec la fonction membre [Close](#close) . `Close` ferme toutes les bases de données que vous n’avez pas fermées précédemment, en annulant toutes les transactions non validées.
 
-## <a name="transactions"></a>transactions
+## <a name="transactions"></a>Transactions
 
 DAO gère les transactions au niveau de l’espace de travail. par conséquent, les transactions sur un espace de travail avec plusieurs bases de données ouvertes s’appliquent à toutes les bases de données. Par exemple, si deux bases de données comportent des mises à jour non validées et que vous appelez [CommitTrans](#committrans), toutes les mises à jour sont validées. Si vous souhaitez limiter les transactions à une base de données unique, vous devez disposer d’un objet d’espace de travail distinct.
 
@@ -189,7 +189,7 @@ Pour plus d’informations sur l’appel de DAO directement et sur la sécurité
 
 `CDaoWorkspace`
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
 **En-tête :** afxdao. h
 
@@ -722,8 +722,8 @@ Bien que de nombreuses fonctions membres de `CDaoWorkspace` ne puissent être ap
 
 ||||
 |-|-|-|
-|[Créés](#create)|[GetVersion](#getversion)|[SetDefaultUser](#setdefaultuser)|
-|[GetIniPath](#getinipath)|[Périodes](#idle)|[SetIniPath](#setinipath)|
+|[Créer](#create)|[GetVersion](#getversion)|[SetDefaultUser](#setdefaultuser)|
+|[GetIniPath](#getinipath)|[Idle](#idle)|[SetIniPath](#setinipath)|
 |[GetLoginTimeout](#getlogintimeout)|[SetDefaultPassword](#setdefaultpassword)|[SetLoginTimeout](#setlogintimeout)|
 
 ##  <a name="repairdatabase"></a>CDaoWorkspace :: RepairDatabase
