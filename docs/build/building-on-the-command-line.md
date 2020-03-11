@@ -11,11 +11,11 @@ helpviewer_keywords:
 - command line [C++], compilers
 ms.assetid: 7ca9daed-a003-4162-842d-908f79058365
 ms.openlocfilehash: ec30cba8e119f96efc5bca156fa565db77904520
-ms.sourcegitcommit: 458dcc794e3841919c01a3a5ff6b9a3767f8861b
+ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/13/2019
-ms.locfileid: "74051495"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78856785"
 ---
 # <a name="use-the-microsoft-c-toolset-from-the-command-line"></a>Utiliser l’ensemble C++ d’outils Microsoft à partir de la ligne de commande
 
@@ -135,13 +135,13 @@ Cet argument facultatif spécifie l’architecture hôte et cible à utiliser. S
 |*architecture*|Compilateur|Architecture de l’ordinateur hôte|Architecture (cible) de sortie de build|
 |----------------------------|--------------|----------------------------------|-------------------------------|
 |**x86**|natif 32 bits x86|x86, x64|x86|
-|**x86\_amd64** ou **x86\_x64**|x64 sur x86 croisé|x86, x64|X64|
+|**x86\_amd64** ou **x86\_x64**|x64 sur x86 croisé|x86, x64|x64|
 |**x86_arm**|ARM sur x86 croisé|x86, x64|ARM|
 |**x86_arm64**|ARM64 sur x86 croisé|x86, x64|ARM64|
-|**amd64** ou **x64**|x64 64 bits natif|X64|X64|
-|**amd64\_x86** ou **x64\_x86**|x86 sur x64 croisé|X64|x86|
-|**amd64\_arm** ou **x64\_arm**|ARM sur x64 croisé|X64|ARM|
-|**amd64\_arm64** ou **x64\_arm64**|ARM64 sur x64 croisé|X64|ARM64|
+|**amd64** ou **x64**|x64 64 bits natif|x64|x64|
+|**amd64\_x86** ou **x64\_x86**|x86 sur x64 croisé|x64|x86|
+|**amd64\_arm** ou **x64\_arm**|ARM sur x64 croisé|x64|ARM|
+|**amd64\_arm64** ou **x64\_arm64**|ARM64 sur x64 croisé|x64|ARM64|
 
 *platform_type*<br/>
 Cet argument facultatif vous permet de spécifier **store** ou **uwp** en tant que type de plateforme. Par défaut, l’environnement est défini pour générer des applications de bureau ou console.
@@ -242,7 +242,7 @@ Utilisez NMAKE (nmake.exe) sur Windows pour générer des projets C++ basés sur
 
 Lorsque vous générez sur la ligne de commande, la commande F1 n’est pas disponible pour l’aide instantanée. Au lieu de cela, vous pouvez utiliser un moteur de recherche pour obtenir des informations sur les avertissements, les erreurs et les messages, ou bien vous pouvez utiliser les fichiers d’aide hors connexion. Pour utiliser la recherche dans [docs.Microsoft.com](https://docs.microsoft.com/cpp/), utilisez la zone de recherche en haut de la page.
 
-## <a name="in-this-section"></a>Dans cette section
+## <a name="in-this-section"></a>Contenu de cette section
 
 Ces articles montrent comment créer des applications sur la ligne de commande et décrivent comment personnaliser l’environnement de génération à partir de la ligne de commande. Certains montrent comment utiliser des ensembles d’outils 64 bits et cibler des plateformes x86, x64, ARM et ARM64. Ils décrivent également l’utilisation des outils de génération en ligne de commande MSBuild et NMAKE.
 
@@ -264,10 +264,10 @@ Comment définir des variables d’environnement pour utiliser un ensemble d’o
 [Référence NMAKE](reference/nmake-reference.md)<br/>
 Fournit des liens vers des articles qui décrivent l'utilitaire Microsoft Program Maintenance Utility (NMAKE.EXE).
 
-[MSBuild sur la ligne de commande - C++](msbuild-visual-cpp.md)<br/>
+[MSBuild sur la ligne de commande – C++](msbuild-visual-cpp.md)<br/>
 Fournit des liens vers des articles qui expliquent comment utiliser msbuild.exe à partir de la ligne de commande.
 
-## <a name="related-sections"></a>Rubriques connexes
+## <a name="related-sections"></a>Sections connexes
 
 [/MD,/MT,/LD (utiliser la bibliothèque Runtime)](reference/md-mt-ld-use-run-time-library.md)<br/>
 Décrit comment utiliser ces options de compilateur pour utiliser une bibliothèque runtime Debug ou Release.

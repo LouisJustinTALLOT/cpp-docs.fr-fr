@@ -10,11 +10,11 @@ helpviewer_keywords:
 - precision fields, printf function
 ms.assetid: 664b1717-2760-4c61-bd9c-22eee618d825
 ms.openlocfilehash: 024e757f57e62ba2b30048c783798180b4da2b9a
-ms.sourcegitcommit: a6d63c07ab9ec251c48bc003ab2933cf01263f19
+ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "74857864"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78865490"
 ---
 # <a name="format-specification-syntax-printf-and-wprintf-functions"></a>Syntaxe de spécification de format : fonctions printf et wprintf
 
@@ -59,12 +59,12 @@ Les types d’entiers tels que `short`, `int`, `long`, `long long`et leurs `unsi
 |--------------------|--------------|-------------------|
 |**c**|Caractère|Quand il est utilisé avec les fonctions `printf`, spécifie un caractère codé sur un octet ; quand il est utilisé avec les fonctions `wprintf`, spécifie un caractère large.|
 |**C**|Caractère|Quand il est utilisé avec les fonctions `printf`, spécifie un caractère large ; quand il est utilisé avec les fonctions `wprintf`, spécifie un caractère codé sur un octet.|
-|**d**|Entier|Entier décimal signé.|
-|**i**|Entier|Entier décimal signé.|
-|**o**|Entier|Entier octal non signé.|
-|**u**|Entier|Entier décimal non signé.|
-|**x**|Entier|Entier hexadécimal non signé ; utilise « abcdef ».|
-|**X**|Entier|Entier hexadécimal non signé ; utilise « ABCDEF ».|
+|**d**|Integer|Entier décimal signé.|
+|**i**|Integer|Entier décimal signé.|
+|**o**|Integer|Entier octal non signé.|
+|**u**|Integer|Entier décimal non signé.|
+|**x**|Integer|Entier hexadécimal non signé ; utilise « abcdef ».|
+|**X**|Integer|Entier hexadécimal non signé ; utilise « ABCDEF ».|
 |**e**|Virgule flottante|Valeur signée se présentant sous la forme [-]*d.dddd*__e±__*dd*\[*d*], où *d* correspond à un chiffre décimal, *dddd* à un ou plusieurs chiffres décimaux selon la précision spécifiée (ou six par défaut), et *dd*\[ *]* à deux ou trois chiffres décimaux, selon le [format de sortie](../c-runtime-library/set-output-format.md) et la taille de l’exposant.|
 |**E**|Virgule flottante|Identique au format **e** sauf que l’exposant est introduit par **E** et non par **e**.|
 |**f**|Virgule flottante|Valeur signée se présentant sous la forme [-]*dddd* __.__ *dddd*, où *dddd* correspond à un ou plusieurs chiffres décimaux. Le nombre de chiffres avant la virgule décimale dépend de l’ampleur du nombre, et le nombre de chiffres après la virgule décimale dépend de la précision demandée (ou six par défaut).|
@@ -81,7 +81,7 @@ Les types d’entiers tels que `short`, `int`, `long`, `long long`et leurs `unsi
 
 À compter de Visual Studio 2015, si l’argument qui correspond à un spécificateur de conversion de valeurs à virgule flottante (**a**, **A**, **e**, **E**, **f**, **F**, **g**, **G**) est infini, indéfini ou NaN, la sortie mise en forme est conforme à la norme C99. Ce tableau répertorie les sorties mises en forme :
 
-|Value|Output|
+|Valeur|Output|
 |-----------|------------|
 |infinity|`inf`|
 |NaN silencieux|`nan`|
@@ -92,7 +92,7 @@ Ces valeurs peuvent toutes être précédées d’un signe. Si un caractère sp�
 
 Avant Visual Studio 2015, le CRT utilisait un autre format non standard pour la sortie des valeurs infinies, indéfinies et NaN :
 
-|Value|Output|
+|Valeur|Output|
 |-----------|------------|
 |+ infini|`1.#INF` *chiffres aléatoires*|
 |- infini|`-1.#INF` *chiffres aléatoires*|
@@ -118,7 +118,7 @@ Dans une spécification de conversion, le premier champ facultatif contient des 
 
 ### <a name="flag-characters"></a>Caractères d’indicateur
 
-|Indicateur|Signification|Valeur par défaut|
+|Indicateur|Signification|Default|
 |----------|-------------|-------------|
 |**-**|Aligner à gauche le résultat selon la largeur de champ donnée.|Aligner à droite.|
 |**+**|Utilisez un signe (+ ou -) pour préfixer la valeur de sortie s’il s’agit d’un type signé.|Le signe apparaît uniquement pour les valeurs signées négatives (-).|
@@ -160,7 +160,7 @@ Le caractère *type* détermine soit l’interprétation de *precision*, soit la
 
 ### <a name="how-precision-values-affect-type"></a>Impact des valeurs de précision sur le type
 
-|Type|Signification|Valeur par défaut|
+|Type|Signification|Default|
 |----------|-------------|-------------|
 |**a**, **A**|La précision indique le nombre de chiffres après la virgule.|La précision par défaut s’élève à 13. Si la précision a la valeur 0, aucune virgule décimale n’est imprimée, sauf si l’indicateur **#** est utilisé.|
 |**c**, **C**|La précision n’a aucun effet.|Le caractère est imprimé.|

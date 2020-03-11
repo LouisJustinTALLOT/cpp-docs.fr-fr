@@ -8,11 +8,11 @@ f1_keywords:
 - string/std::wstring
 ms.assetid: fdca01e9-f2f1-4b59-abda-0093d760b3cc
 ms.openlocfilehash: 950ca5ae34b6469c3d79b7297d4fe7b7644d2fcf
-ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
+ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/21/2019
-ms.locfileid: "72688917"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78856518"
 ---
 # <a name="ltstringgt-typedefs"></a>&lt;string&gt;, typedefs
 
@@ -94,7 +94,7 @@ basic_string<wchar_t> wstr(L"");
 Pour obtenir la liste des constructeurs de chaînes, consultez [basic_string::basic_string](../standard-library/basic-string-class.md#basic_string).
 
 > [!NOTE]
-> La taille de **wchar_t** est définie par l’implémentation. Si votre code dépend de **wchar_t** pour avoir une certaine taille, vérifiez l’implémentation de votre plateforme (par exemple, avec `sizeof(wchar_t)`). Si vous avez besoin d’un type de chaîne de caractères dont la largeur reste identique sur toutes les plateformes, utilisez [string](../standard-library/string-typedefs.md#string), [u16string](../standard-library/string-typedefs.md#u16string) ou [u32string](../standard-library/string-typedefs.md#u32string).
+> La taille de **wchar_t** est définie par l’implémentation. Si votre code dépend d' **wchar_t** à une certaine taille, vérifiez l’implémentation de votre plateforme (par exemple, avec `sizeof(wchar_t)`). Si vous avez besoin d’un type de chaîne de caractères dont la largeur reste identique sur toutes les plateformes, utilisez [string](../standard-library/string-typedefs.md#string), [u16string](../standard-library/string-typedefs.md#u16string) ou [u32string](../standard-library/string-typedefs.md#u32string).
 
 ## <a name="see-also"></a>Voir aussi
 

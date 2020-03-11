@@ -10,11 +10,11 @@ helpviewer_keywords:
 - else keyword [C++]
 ms.assetid: f8c45cde-6bce-42ae-81db-426b3dbd4caa
 ms.openlocfilehash: 0e9de2d39e09e148c7e4f3ea82c3dadb173c2d0c
-ms.sourcegitcommit: 20a1356193fbe0ddd1002e798b952917eafc3439
+ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68661637"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78884150"
 ---
 # <a name="if-else-statement-c"></a>if-else, instruction (C++)
 
@@ -23,7 +23,7 @@ Contrôle la branche conditionnelle. Les instructions du *bloc If* ne sont exéc
 - TRUE
 - pointeur non null,
 - toute valeur arithmétique différente de zéro, ou
-- type de classe qui définit une conversion non ambiguë en type arithmétique, booléen ou pointeur. (Pour plus d’informations sur les conversions, consultez Conversions [standard](../cpp/standard-conversions.md).)
+- type de classe qui définit une conversion non ambiguë en type arithmétique, booléen ou pointeur. (Pour plus d’informations sur les conversions, consultez [conversions standard](../cpp/standard-conversions.md).)
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -64,7 +64,7 @@ else  // optional
 }
 ```
 
-## <a name="example"></a>Exemples
+## <a name="example"></a>Exemple
 
 ```cpp
 // if_else_statement.cpp
@@ -113,7 +113,7 @@ int main()
 
 ## <a name="if_with_init"></a>instruction if avec un initialiseur
 
-**Visual Studio 2017 version 15,3 et versions ultérieures** (disponible avec [/std: c++ 17](../build/reference/std-specify-language-standard-version.md)): Une instruction **If** peut également contenir une expression qui déclare et Initialise une variable nommée. Utilisez cette forme de l’instruction if si la variable est uniquement requise dans la portée du bloc If.
+**Visual Studio 2017 version 15,3 et versions ultérieures** (disponibles avec [/std : c++ 17](../build/reference/std-specify-language-standard-version.md)) : une instruction **If** peut également contenir une expression qui déclare et Initialise une variable nommée. Utilisez cette forme de l’instruction if si la variable est uniquement requise dans la portée du bloc If.
 
 ## <a name="example"></a>Exemple
 
@@ -161,11 +161,11 @@ int main()
 
 Dans toutes les formes de l’instruction **If** , *expression*, qui peut avoir n’importe quelle valeur à l’exception d’une structure, est évaluée, y compris tous les effets secondaires. Le contrôle passe de l’instruction **If** à l’instruction suivante dans le programme, sauf si l’une des *instructions*contient une instruction [break](../cpp/break-statement-cpp.md), [continue](../cpp/continue-statement-cpp.md)ou [goto](../cpp/goto-statement-cpp.md).
 
-La clause **else** d’une `if...else` instruction est associée à l’instruction **If** précédente la plus proche dans la même portée qui n’a pas d’instruction **else** correspondante.
+La clause **else** d’une instruction `if...else` est associée à l’instruction **If** précédente la plus proche dans la même portée qui n’a pas d’instruction **else** correspondante.
 
-## <a name="a-nameifconstexpr-if-constexpr-statements"></a><a name="if_constexpr">Si les instructions constexpr
+## <a name="a-nameif_constexpr-if-constexpr-statements"></a><a name="if_constexpr"> si les instructions constexpr
 
-**Visual Studio 2017 version 15,3 et versions ultérieures** (disponible avec [/std: c++ 17](../build/reference/std-specify-language-standard-version.md)): Dans les modèles de fonction, vous pouvez utiliser une instruction **If constexpr** pour prendre des décisions de création de branche au moment de la compilation sans avoir à recourir à plusieurs surcharges de fonction. Par exemple, vous pouvez écrire une seule fonction qui gère la décompression des paramètres (aucune surcharge de paramètre zéro n’est nécessaire):
+**Visual Studio 2017 version 15,3 et versions ultérieures** (disponibles avec [/std : c++ 17](../build/reference/std-specify-language-standard-version.md)) : dans les modèles de fonction, vous pouvez utiliser une instruction **If constexpr** pour prendre des décisions de création de branche au moment de la compilation sans avoir à recourir à plusieurs surcharges de fonction. Par exemple, vous pouvez écrire une seule fonction qui gère la décompression des paramètres (aucune surcharge de paramètre zéro n’est nécessaire) :
 
 ```cpp
 template <class T, class... Rest>

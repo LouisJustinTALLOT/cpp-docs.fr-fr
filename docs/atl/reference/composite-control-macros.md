@@ -9,33 +9,33 @@ helpviewer_keywords:
 - composite controls, macros
 ms.assetid: 17f2dd5e-07e6-4aa6-b965-7a361c78c45e
 ms.openlocfilehash: 685bf55910d4746463de30b17b71aa6d246db199
-ms.sourcegitcommit: da32511dd5baebe27451c0458a95f345144bd439
-ms.translationtype: HT
+ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/07/2019
-ms.locfileid: "65221100"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78857117"
 ---
 # <a name="composite-control-macros"></a>Macros de contrôle composite
 
-Ces macros définissent des tables de récepteurs d’événements et des entrées.
+Ces macros définissent les entrées et les mappages de récepteurs d’événements.
 
 |||
 |-|-|
-|[BEGIN_SINK_MAP](#begin_sink_map)|Marque le début de la table de récepteur d’événements pour le contrôle composite.|
-|[END_SINK_MAP](#end_sink_map)|Marque la fin de la table de récepteur d’événements pour le contrôle composite.|
-|[SINK_ENTRY](#sink_entry)|Entrée de la table de récepteur d’événements.|
-|[SINK_ENTRY_EX](#sink_entry_ex)|Entrée de la table de récepteur d’événements avec un paramètre supplémentaire.|
-|[SINK_ENTRY_EX_P](#sink_entry_ex)| (Visual Studio 2017) Similaire à SINK_ENTRY_EX, à ceci près qu’elle prend un pointeur vers un iid.|
-|[SINK_ENTRY_INFO](#sink_entry_info)|Entrée à la table de récepteur d’événements avec les informations de type fourni manuellement pour une utilisation avec [IDispEventSimpleImpl](../../atl/reference/idispeventsimpleimpl-class.md).|
-|[SINK_ENTRY_INFO_P](#sink_entry_info)| (Visual Studio 2017) Similaire à la macro SINK_ENTRY_INFO, à ceci près qu’elle prend un pointeur vers un iid.|
+|[BEGIN_SINK_MAP](#begin_sink_map)|Marque le début de la table de récepteurs d’événements pour le contrôle composite.|
+|[END_SINK_MAP](#end_sink_map)|Marque la fin du mappage de récepteur d’événements pour le contrôle composite.|
+|[SINK_ENTRY](#sink_entry)|Entrée dans la table de récepteurs d’événements.|
+|[SINK_ENTRY_EX](#sink_entry_ex)|Entrée de la table de récepteurs d’événements avec un paramètre supplémentaire.|
+|[SINK_ENTRY_EX_P](#sink_entry_ex)| (Visual Studio 2017) Semblable à SINK_ENTRY_EX sauf qu’il prend un pointeur vers iid.|
+|[SINK_ENTRY_INFO](#sink_entry_info)|Entrée dans le mappage du récepteur d’événements avec les informations de type fournies manuellement pour une utilisation avec [IDispEventSimpleImpl](../../atl/reference/idispeventsimpleimpl-class.md).|
+|[SINK_ENTRY_INFO_P](#sink_entry_info)| (Visual Studio 2017) Semblable à SINK_ENTRY_INFO sauf qu’il prend un pointeur vers iid.|
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
-**En-tête :** atlcom.h
+**En-tête :** atlcom. h
 
-##  <a name="begin_sink_map"></a>  BEGIN_SINK_MAP
+##  <a name="begin_sink_map"></a>BEGIN_SINK_MAP
 
-Déclare le début de la table de récepteur d’événements pour le contrôle composite.
+Déclare le début de la table de récepteurs d’événements pour le contrôle composite.
 
 ```
 BEGIN_SINK_MAP(_class)
@@ -44,7 +44,7 @@ BEGIN_SINK_MAP(_class)
 ### <a name="parameters"></a>Paramètres
 
 *_class*<br/>
-[in] Spécifie le contrôle.
+dans Spécifie le contrôle.
 
 ### <a name="example"></a>Exemple
 
@@ -52,11 +52,11 @@ BEGIN_SINK_MAP(_class)
 
 ### <a name="remarks"></a>Notes
 
-Implémentation de CE ATL de ActiveX événement récepteurs uniquement prend en charge valeurs de retour de type HRESULT ou void à partir de vos méthodes de gestionnaire d’événements ; toute autre valeur de retour est non pris en charge et son comportement est indéfini.
+L’implémentation ATL CE des récepteurs d’événements ActiveX ne prend en charge que les valeurs de retour de type HRESULT ou void de vos méthodes de gestionnaire d’événements ; toute autre valeur de retour n’est pas prise en charge et son comportement n’est pas défini.
 
-##  <a name="end_sink_map"></a>  END_SINK_MAP
+##  <a name="end_sink_map"></a>END_SINK_MAP
 
-Déclare la fin de la table de récepteur d’événements pour le contrôle composite.
+Déclare la fin de la table de récepteurs d’événements pour le contrôle composite.
 
 ```
 END_SINK_MAP()
@@ -68,11 +68,11 @@ END_SINK_MAP()
 
 ### <a name="remarks"></a>Notes
 
-Implémentation de CE ATL de ActiveX événement récepteurs uniquement prend en charge valeurs de retour de type HRESULT ou void à partir de vos méthodes de gestionnaire d’événements ; toute autre valeur de retour est non pris en charge et son comportement est indéfini.
+L’implémentation ATL CE des récepteurs d’événements ActiveX ne prend en charge que les valeurs de retour de type HRESULT ou void de vos méthodes de gestionnaire d’événements ; toute autre valeur de retour n’est pas prise en charge et son comportement n’est pas défini.
 
-##  <a name="sink_entry"></a>  SINK_ENTRY
+##  <a name="sink_entry"></a>SINK_ENTRY
 
-Déclare la fonction de gestionnaire (*fn*) pour l’événement spécifié (*dispid*), du contrôle identifié par *id*.
+Déclare la fonction de gestionnaire (*FN*) pour l’événement spécifié (*DISPID*) du contrôle identifié par l' *ID*.
 
 ```
 SINK_ENTRY( id, dispid, fn )
@@ -80,14 +80,14 @@ SINK_ENTRY( id, dispid, fn )
 
 ### <a name="parameters"></a>Paramètres
 
-*ID*<br/>
-[in] Identifie le contrôle.
+*id*<br/>
+dans Identifie le contrôle.
 
-*dispid*<br/>
-[in] Identifie l’événement spécifié.
+*égal*<br/>
+dans Identifie l’événement spécifié.
 
-*fn*<br/>
-[in] Nom de la fonction de gestionnaire d’événements. Cette fonction doit utiliser le `_stdcall` convention d’appel et avoir la signature dispinterface-style approprié.
+*FN*<br/>
+dans Nom de la fonction de gestionnaire d’événements. Cette fonction doit utiliser la Convention d’appel `_stdcall` et avoir la signature de style dispinterface appropriée.
 
 ### <a name="example"></a>Exemple
 
@@ -95,11 +95,11 @@ SINK_ENTRY( id, dispid, fn )
 
 ### <a name="remarks"></a>Notes
 
-Implémentation de CE ATL de ActiveX événement récepteurs uniquement prend en charge valeurs de retour de type HRESULT ou void à partir de vos méthodes de gestionnaire d’événements ; toute autre valeur de retour est non pris en charge et son comportement est indéfini.
+L’implémentation ATL CE des récepteurs d’événements ActiveX ne prend en charge que les valeurs de retour de type HRESULT ou void de vos méthodes de gestionnaire d’événements ; toute autre valeur de retour n’est pas prise en charge et son comportement n’est pas défini.
 
-##  <a name="sink_entry_ex"></a>  SINK_ENTRY_EX et SINK_ENTRY_EX_P
+##  <a name="sink_entry_ex"></a>SINK_ENTRY_EX et SINK_ENTRY_EX_P
 
-Déclare la fonction de gestionnaire (*fn*) pour l’événement spécifié (*dispid*), de l’interface de dispatch (*iid*), pour le contrôle identifié par *id*.
+Déclare la fonction de gestionnaire (*FN*) pour l’événement spécifié (*DISPID*) de l’interface de dispatch (*IID*) pour le contrôle identifié par l' *ID*.
 
 ```
 SINK_ENTRY_EX( id, iid, dispid, fn )
@@ -108,20 +108,20 @@ SINK_ENTRY_EX_P( id, piid, dispid, fn ) // (Visual Studio 2017)
 
 ### <a name="parameters"></a>Paramètres
 
-*ID*<br/>
-[in] Identifie le contrôle.
+*id*<br/>
+dans Identifie le contrôle.
 
-*iid*<br/>
-[in] Identifie l’interface de dispatch.
+*vaut*<br/>
+dans Identifie l’interface de dispatch.
 
 *piid*<br/>
-[in] Pointeur vers l’interface de dispatch.
+dans Pointeur vers l’interface de dispatch.
 
-*dispid*<br/>
-[in] Identifie l’événement spécifié.
+*égal*<br/>
+dans Identifie l’événement spécifié.
 
-*fn*<br/>
-[in] Nom de la fonction de gestionnaire d’événements. Cette fonction doit utiliser le `_stdcall` convention d’appel et avoir la signature dispinterface-style approprié.
+*FN*<br/>
+dans Nom de la fonction de gestionnaire d’événements. Cette fonction doit utiliser la Convention d’appel `_stdcall` et avoir la signature de style dispinterface appropriée.
 
 ### <a name="example"></a>Exemple
 
@@ -129,11 +129,11 @@ SINK_ENTRY_EX_P( id, piid, dispid, fn ) // (Visual Studio 2017)
 
 ### <a name="remarks"></a>Notes
 
-Implémentation de CE ATL de ActiveX événement récepteurs uniquement prend en charge valeurs de retour de type HRESULT ou void à partir de vos méthodes de gestionnaire d’événements ; toute autre valeur de retour est non pris en charge et son comportement est indéfini.
+L’implémentation ATL CE des récepteurs d’événements ActiveX ne prend en charge que les valeurs de retour de type HRESULT ou void de vos méthodes de gestionnaire d’événements ; toute autre valeur de retour n’est pas prise en charge et son comportement n’est pas défini.
 
-##  <a name="sink_entry_info"></a>  Macro SINK_ENTRY_INFO et SINK_ENTRY_INFO_P
+##  <a name="sink_entry_info"></a>SINK_ENTRY_INFO et SINK_ENTRY_INFO_P
 
-Utilisez la macro de macro SINK_ENTRY_INFO au sein d’une table de récepteur d’événements pour fournir les informations requises par [IDispEventSimpleImpl](../../atl/reference/idispeventsimpleimpl-class.md) pour acheminer les événements à la fonction gestionnaire approprié.
+Utilisez la macro SINK_ENTRY_INFO dans un mappage de récepteur d’événements pour fournir les informations nécessaires à [IDispEventSimpleImpl](../../atl/reference/idispeventsimpleimpl-class.md) pour acheminer les événements vers la fonction de gestionnaire appropriée.
 
 ```
 SINK_ENTRY_INFO( id, iid, dispid, fn, info )
@@ -142,27 +142,27 @@ SINK_ENTRY_INFO_P( id, piid, dispid, fn, info ) // (Visual Studio 2017)
 
 ### <a name="parameters"></a>Paramètres
 
-*ID*<br/>
-[in] Entier non signé identifier la source d’événement. Cette valeur doit correspondre à la *nID* paramètre de modèle utilisé dans les [IDispEventSimpleImpl](../../atl/reference/idispeventsimpleimpl-class.md) classe de base.
+*id*<br/>
+dans Entier non signé identifiant la source de l’événement. Cette valeur doit correspondre au paramètre de modèle *nid* utilisé dans la classe de base [IDispEventSimpleImpl](../../atl/reference/idispeventsimpleimpl-class.md) associée.
 
-*iid*<br/>
-[in] IID qui identifie l’interface de dispatch.
+*vaut*<br/>
+dans IID qui identifie l’interface de dispatch.
 
 *piid*<br/>
-[in] Pointeur vers l’IID qui identifie l’interface de dispatch.
+dans Pointeur vers l’IID qui identifie l’interface de dispatch.
 
-*dispid*<br/>
-[in] DISPID identifiant l’événement spécifié.
+*égal*<br/>
+dans DISPID identifiant l’événement spécifié.
 
-*fn*<br/>
-[in] Nom de la fonction de gestionnaire d’événements. Cette fonction doit utiliser le `_stdcall` convention d’appel et avoir la signature dispinterface-style approprié.
+*FN*<br/>
+dans Nom de la fonction de gestionnaire d’événements. Cette fonction doit utiliser la Convention d’appel `_stdcall` et avoir la signature de style dispinterface appropriée.
 
 *info*<br/>
-[in] Informations de type pour la fonction de gestionnaire d’événements. Ces informations de type sont fournies sous la forme d’un pointeur vers un `_ATL_FUNC_INFO` structure. CC_CDECL est la seule option prise en charge dans Windows CE pour le champ CALLCONV de la `_ATL_FUNC_INFO` structure. Toute autre valeur est non pris en charge par conséquent, son comportement non défini.
+dans Informations de type pour la fonction de gestionnaire d’événements. Ces informations de type sont fournies sous la forme d’un pointeur vers une structure `_ATL_FUNC_INFO`. CC_CDECL est la seule option prise en charge dans Windows CE pour le champ CALLCONV de la structure `_ATL_FUNC_INFO`. Tout autre valeur n’est pas prise en charge, donc son comportement n’est pas défini.
 
 ### <a name="remarks"></a>Notes
 
-Les paramètres de quatre premiers macro sont les mêmes que celles pour le [SINK_ENTRY_EX](#sink_entry_ex) (macro). Le paramètre final fournit des informations de type pour l’événement. Implémentation de CE ATL de ActiveX événement récepteurs uniquement prend en charge valeurs de retour de type HRESULT ou void à partir de vos méthodes de gestionnaire d’événements ; toute autre valeur de retour est non pris en charge et son comportement est indéfini.
+Les quatre premiers paramètres de macro sont les mêmes que ceux de la macro [SINK_ENTRY_EX](#sink_entry_ex) . Le dernier paramètre fournit des informations de type pour l’événement. L’implémentation ATL CE des récepteurs d’événements ActiveX ne prend en charge que les valeurs de retour de type HRESULT ou void de vos méthodes de gestionnaire d’événements ; toute autre valeur de retour n’est pas prise en charge et son comportement n’est pas défini.
 
 ## <a name="see-also"></a>Voir aussi
 

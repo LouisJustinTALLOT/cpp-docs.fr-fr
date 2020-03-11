@@ -15,11 +15,11 @@ helpviewer_keywords:
 - CDaoFieldExchange [MFC], m_prs
 ms.assetid: 350a663e-92ff-44ab-ad53-d94efa2e5823
 ms.openlocfilehash: cfffebd16c3c1d62dc4084b962c22911e4b46ae5
-ms.sourcegitcommit: 069e3833bd821e7d64f5c98d0ea41fc0c5d22e53
+ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/21/2019
-ms.locfileid: "74303886"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78867299"
 ---
 # <a name="cdaofieldexchange-class"></a>CDaoFieldExchange (classe)
 
@@ -35,16 +35,16 @@ class CDaoFieldExchange
 
 ## <a name="members"></a>Membres
 
-### <a name="public-methods"></a>Méthodes publiques
+### <a name="public-methods"></a>M&#233;thodes publiques
 
-|Nom|Description|
+|Name|Description|
 |----------|-----------------|
 |[CDaoFieldExchange :: IsValidOperation](#isvalidoperation)|Retourne une valeur différente de zéro si l’opération en cours est appropriée pour le type de champ en cours de mise à jour.|
 |[CDaoFieldExchange :: SetFieldType](#setfieldtype)|Spécifie le type de membre de données du jeu d’enregistrements (colonne ou paramètre) représenté par tous les appels suivants aux fonctions DFX jusqu’au prochain appel à `SetFieldType`.|
 
 ### <a name="public-data-members"></a>Membres de données publiques
 
-|Nom|Description|
+|Name|Description|
 |----------|-----------------|
 |[CDaoFieldExchange :: m_nOperation](#m_noperation)|Opération DFX effectuée par l’appel en cours à la fonction membre `DoFieldExchange` du Recordset.|
 |[CDaoFieldExchange :: m_prs](#m_prs)|Pointeur vers le Recordset sur lequel les opérations DFX sont exécutées.|
@@ -73,7 +73,7 @@ La fonction membre [IsValidOperation](#isvalidoperation) est fournie pour l’é
 
 `CDaoFieldExchange`
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
 **En-tête :** afxdao. h
 

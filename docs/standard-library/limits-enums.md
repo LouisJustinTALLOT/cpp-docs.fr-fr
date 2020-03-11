@@ -6,15 +6,15 @@ f1_keywords:
 - limits/std::float_round_style
 ms.assetid: c86680a2-ba97-4ed9-8c20-a448857d7dc5
 ms.openlocfilehash: 567e0538f59c40d57f85d652a8919be6e034cf0b
-ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
+ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68245356"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78876024"
 ---
 # <a name="ltlimitsgt-enums"></a>&lt;limits&gt;, énumérations
 
-## <a name="float_denorm_style"></a> float_denorm_style
+## <a name="float_denorm_style"></a>float_denorm_style
 
 L'énumération décrit les différentes méthodes qu'une implémentation peut choisir pour représenter une valeur à virgule flottante dénormalisée (trop petite pour être représentée comme valeur normalisée) :
 
@@ -29,17 +29,17 @@ enum float_denorm_style {
 
 L’énumération retourne :
 
-- `denorm_indeterminate` Si la présence ou l’absence de formes dénormalisées ne peut pas être déterminée au moment de la traduction.
+- `denorm_indeterminate` si la présence ou l’absence de formulaires dénormalisés ne peut pas être déterminée au moment de la traduction.
 
-- `denorm_absent` Si les formes dénormalisées sont absents.
+- `denorm_absent` si les formulaires dénormalisés sont absents.
 
-- `denorm_present` Si les formes dénormalisées sont présents.
+- `denorm_present` si des formulaires dénormalisés sont présents.
 
-### <a name="example"></a>Exemples
+### <a name="example"></a>Exemple
 
 Pour obtenir un exemple dans lequel les valeurs de cette énumération sont accessibles, consultez [numeric_limits::has_denorm](../standard-library/numeric-limits-class.md#has_denorm).
 
-## <a name="float_round_style"></a> float_round_style
+## <a name="float_round_style"></a>float_round_style
 
 L'énumération décrit les différentes méthodes qu'une implémentation peut choisir pour arrondir une valeur à virgule flottante en une valeur entière.
 
@@ -56,16 +56,16 @@ enum float_round_style {
 
 L’énumération retourne :
 
-- `round_indeterminate` Si le mode d’arrondi ne peut pas être déterminé.
+- `round_indeterminate` si la méthode d’arrondi ne peut pas être déterminée.
 
-- `round_toward_zero` Si l’arrondi vers zéro.
+- `round_toward_zero` si la valeur est arrondie à zéro.
 
-- `round_to_nearest` Si l’arrondi à l’entier le plus proche.
+- `round_to_nearest` si l’arrondi à l’entier le plus proche.
 
-- `round_toward_infinity` Si l’arrondi.
+- `round_toward_infinity` si l’arrondi est éloigné de zéro.
 
-- `round_toward_neg_infinity` Si l’arrondi au nombre entier plus négative.
+- `round_toward_neg_infinity` si la valeur est arrondie à un entier négatif.
 
-### <a name="example"></a>Exemples
+### <a name="example"></a>Exemple
 
 Pour obtenir un exemple dans lequel les valeurs de cette énumération sont accessibles, consultez [numeric_limits::round_style](../standard-library/numeric-limits-class.md#round_style).

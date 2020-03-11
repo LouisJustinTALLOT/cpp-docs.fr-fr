@@ -13,8 +13,8 @@ ms.openlocfilehash: 2ccc8a4ef707942963b85edc6db9e21e05610b54
 ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/05/2020
-ms.locfileid: "78332956"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78857005"
 ---
 # <a name="c-build-insights-sdk-event-table"></a>C++Kit de développement logiciel (SDK) Build Insights : table d’événements
 

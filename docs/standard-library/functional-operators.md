@@ -8,15 +8,15 @@ helpviewer_keywords:
 - functional operators
 ms.assetid: d4b3c760-f3e2-4b65-bdaa-d42e8dd6f5e1
 ms.openlocfilehash: b396e5c692129821c0deb9aef9469a5c54e600b0
-ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
+ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68243774"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78876346"
 ---
 # <a name="ltfunctionalgt-operators"></a>&lt;functional&gt;, opérateurs
 
-## <a name="op_eq_eq"></a> operator==
+## <a name="op_eq_eq"></a>opérateur = =
 
 Teste si l'objet pouvant être appelé est vide.
 
@@ -33,10 +33,10 @@ template <class Fty>
 *Fty*\
 Type de fonction à encapsuler.
 
-*F*\
+\ *f*
 Objet de function.
 
-*NPC*\
+\ *NPC*
 Pointeur null.
 
 ### <a name="remarks"></a>Notes
@@ -75,7 +75,7 @@ empty == true
 empty == false
 ```
 
-## <a name="op_neq"></a> opérateur ! =
+## <a name="op_neq"></a>opérateur ! =
 
 Vérifie si l’objet pouvant être appelé n’est pas vide.
 
@@ -92,17 +92,17 @@ template <class Fty>
 *Fty*\
 Type de fonction à encapsuler.
 
-*F*\
+\ *f*
 Objet de function.
 
-*NPC*\
+\ *NPC*
 Pointeur null.
 
 ### <a name="remarks"></a>Notes
 
 Les opérateurs prennent tous deux un argument qui est une référence à un objet `function` et un argument qui est une constante de pointeur null. Tous deux retournent la valeur true uniquement si l’objet `function` n’est pas vide.
 
-### <a name="example"></a>Exemples
+### <a name="example"></a>Exemple
 
 ```cpp
 // std__functional__operator_ne.cpp

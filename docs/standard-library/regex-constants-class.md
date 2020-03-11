@@ -83,13 +83,13 @@ helpviewer_keywords:
 - std::regex_constants [C++], collate
 ms.assetid: 4a69c0ba-c46d-46e4-bd29-6f4efb805f26
 ms.openlocfilehash: c8abca8109db9c781d63721b795feb01161fdb40
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68451672"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78876133"
 ---
-# <a name="regexconstants-namespace"></a>regex_constants, espace de noms
+# <a name="regex_constants-namespace"></a>regex_constants, espace de noms
 
 Espace de noms des indicateurs d'expression régulière.
 
@@ -113,9 +113,9 @@ L'espace de noms `regex_constants` inclut plusieurs types d'indicateurs et les v
 |[match_flag_type](#match_flag_type)|Indicateurs des options de correspondance d’expression régulière.|
 |[syntax_option_type](#syntax_option_type)|Indicateurs pour la sélection des options de syntaxe.|
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
-**En-tête :** \<regex>
+**En-tête :** \<Regex >
 
 **Espace de noms :** std
 
@@ -208,7 +208,7 @@ enum match_flag_type
 
 Le type est un type de masque de bits qui décrit les options à utiliser durant la mise en correspondance d’une séquence de texte par rapport à une expression régulière, ainsi que les indicateurs de format à utiliser durant le remplacement de texte. Vous pouvez combiner des options avec `|`.
 
-Options de correspondance :
+Options de correspondance :
 
 `match_default`
 
@@ -278,7 +278,7 @@ Spécificateurs de langage :
 
 `egrep` : compiler en egrep
 
-Modificateurs de syntaxe :
+Modificateurs de syntaxe :
 
 `icase` : les correspondances ne respectent pas la casse
 
@@ -291,10 +291,10 @@ Modificateurs de syntaxe :
 ## <a name="see-also"></a>Voir aussi
 
 [\<regex>](../standard-library/regex.md)\
-[regex_error, classe](../standard-library/regex-error-class.md)\
-[\<fonctions Regex >](../standard-library/regex-functions.md)\
-[regex_iterator, classe](../standard-library/regex-iterator-class.md)\
-[\<opérateurs > Regex](../standard-library/regex-operators.md)\
-[regex_token_iterator, classe](../standard-library/regex-token-iterator-class.md)\
-[regex_traits, classe](../standard-library/regex-traits-class.md)\
+[regex_error](../standard-library/regex-error-class.md) de la classe\
+[\<les fonctions de > regex](../standard-library/regex-functions.md)\
+[regex_iterator](../standard-library/regex-iterator-class.md) de la classe\
+[\<les opérateurs de > regex](../standard-library/regex-operators.md)\
+[regex_token_iterator](../standard-library/regex-token-iterator-class.md) de la classe\
+[regex_traits](../standard-library/regex-traits-class.md) de la classe\
 [\<regex>, typedefs](../standard-library/regex-typedefs.md)

@@ -3,11 +3,11 @@ title: 'Guide du portage : Spy++'
 ms.date: 10/23/2019
 ms.assetid: e558f759-3017-48a7-95a9-b5b779d5e51d
 ms.openlocfilehash: 5505e0dbf23dd02f4ae5924ff4f2bacff3f11eea
-ms.sourcegitcommit: 0cfc43f90a6cc8b97b24c42efcf5fb9c18762a42
+ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/05/2019
-ms.locfileid: "73627231"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78890939"
 ---
 # <a name="porting-guide-spy"></a>Guide du portage : Spy++
 
@@ -138,7 +138,7 @@ typedef std::basic_ostringstream<TCHAR> ostrstream;
 
 Comme le projet est actuellement généré avec MBCS (Multi-byte Character Set), **char** est le type de données caractères approprié. Toutefois, pour faciliter la mise à jour du code Unicode UTF-16, nous changeons le type par `TCHAR`, qui se résout en **char** ou **wchar_t** selon que la propriété **Jeu de caractères** est définie sur MBCS ou Unicode dans les paramètres du projet.
 
-Quelques éléments de code supplémentaires doivent également être mis à jour.  Nous avons remplacé le code `ios_base` de la classe de base par `ios` et ostream par basic_ostream\<T>. Nous ajoutons deux typedef supplémentaires, puis compilons cette section.
+Quelques éléments de code supplémentaires doivent également être mis à jour.  Nous avons remplacé le code `ios` de la classe de base par `ios_base` et ostream par basic_ostream\<T>. Nous ajoutons deux typedef supplémentaires, puis compilons cette section.
 
 ```cpp
 typedef std::basic_ostream<TCHAR> ostream;
@@ -636,7 +636,7 @@ Avec ces techniques, il a fallu environ une demi-journée pour convertir le code
 
 ##  <a name="deprecated_forscope"></a> Étape 13. /Zc:forScope- est déconseillé.
 
-Depuis Visual C++ 6.0, le compilateur est conforme à la norme actuelle, qui limite la portée des variables déclarées dans une boucle à la portée de la boucle elle-même. L’option de compilateur [/Zc:forScope](../build/reference/zc-forscope-force-conformance-in-for-loop-scope.md) (**Conformité forcée dans la portée d’une boucle For** dans les propriétés du projet) détermine si cela est signalé comme une erreur. Nous devons mettre à jour notre code pour le rendre conforme et ajouter des déclarations en dehors de la boucle. Pour éviter d’effectuer ces modifications dans le code, vous pouvez assigner la valeur `No (/Zc:forScope-)` à ce paramètre dans la section **Langage** des propriétés du projet C++. Toutefois, si `/Zc:forScope-` est supprimé dans une version ultérieure de Visual C++, vous devrez modifier votre code pour le rendre conforme à la norme.
+Depuis Visual C++ 6.0, le compilateur est conforme à la norme actuelle, qui limite la portée des variables déclarées dans une boucle à la portée de la boucle elle-même. L’option de compilateur [/Zc:forScope](../build/reference/zc-forscope-force-conformance-in-for-loop-scope.md) (**Conformité forcée dans la portée d’une boucle For** dans les propriétés du projet) détermine si cela est signalé comme une erreur. Nous devons mettre à jour notre code pour le rendre conforme et ajouter des déclarations en dehors de la boucle. Pour éviter d’effectuer ces modifications dans le code, vous pouvez assigner la valeur **à ce paramètre dans la section**Langage`No (/Zc:forScope-)` des propriétés du projet C++. Toutefois, si `/Zc:forScope-` est supprimé dans une version ultérieure de Visual C++, vous devrez modifier votre code pour le rendre conforme à la norme.
 
 Ces problèmes sont relativement faciles à corriger, mais les modifications à apporter peuvent être plus ou moins importantes en fonction de votre code. Voici un problème courant.
 
@@ -667,7 +667,7 @@ int CPerfTextDataBase::NumStrings(LPCTSTR mszStrings) const
 }
 ```
 
-## <a name="summary"></a>Récapitulatif
+## <a name="summary"></a>Résumé
 
 Il nous a fallu environ 20 heures de codage pendant une semaine pour porter la solution Spy++ conçue initialement en code Visual C++ 6.0 vers la dernière version du compilateur. Nous avons effectué la mise à niveau de huit versions du produit en même temps de Visual Studio 6.0 vers Visual Studio 2015. Il s’agit désormais de la démarche conseillée pour toutes les mises à niveau concernant les projets, petits et grands.
 

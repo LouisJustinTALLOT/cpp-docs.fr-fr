@@ -85,11 +85,11 @@ helpviewer_keywords:
 - std::experimental::filesystem::temp_directory_path
 - std::experimental::filesystem::u8path
 ms.openlocfilehash: 1ab57a6fc13a03d02963f3d7ecc80f63decb9487
-ms.sourcegitcommit: 6ddfb8be5e5923a4d90a2c0f93f76a27ce7ac299
+ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/06/2019
-ms.locfileid: "74898707"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78875821"
 ---
 # <a name="ltfilesystemgt-functions"></a>&lt;filesystem&gt;, fonctions
 
@@ -105,7 +105,7 @@ La fonction retourne le chemin d’accès absolu correspondant à *pval* par rap
 
 1. Si `pval.has_root_name() && pval.has_root_directory()` la fonction retourne *pval*.
 
-1. Si `pval.has_root_name() && !pval.has_root_directory()` la fonction retourne `pval.root_name()` / `absolute(base).root_directory()` / `absolute(base).relative_path()` / .
+1. Si `pval.has_root_name() && !pval.has_root_directory()` la fonction retourne `pval.root_name()` / `absolute(base).root_directory()` / `absolute(base).relative_path()` / .`pval.relative_path()`
 
 1. Si `!pval.has_root_name() && pval.has_root_directory()` la fonction retourne `absolute(base).root_name()` / *pval*.
 
@@ -184,7 +184,7 @@ Sinon, si `is_regular_file(f)`, alors :
 
 - Sinon, si `is_directory(f)`, `copy_file(from, to` / `from.filename(), opts)`.
 
-- Autrement, définissez sur `copy_file(from, to, opts)`.
+- Sinon, valeur `copy_file(from, to, opts)`.
 
 Sinon, si `is_directory(f) && (opts & copy_options::recursive || !opts)`, alors :
 

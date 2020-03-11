@@ -17,15 +17,15 @@ helpviewer_keywords:
 - std::operator&lt;= (set)
 - std::operator== (set)
 ms.openlocfilehash: 4618030cf81f79a085e16052c8b9c547201e3577
-ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
+ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68246401"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78875763"
 ---
 # <a name="ltsetgt-operators"></a>&lt;set&gt;, opérateurs
 
-## <a name="op_neq"></a> opérateur ! = (set)
+## <a name="op_neq"></a>opérateur ! = (Set)
 
 Teste si l’objet set situé à gauche de l’opérateur n’est pas égal à l’objet set situé à droite.
 
@@ -35,11 +35,11 @@ bool operator!=(const set <Key, Traits, Allocator>& left, const set <Key, Traits
 
 ### <a name="parameters"></a>Paramètres
 
-*Gauche*\
-Objet de type `set`.
+\ *gauche*
+Objet de type `set`.
 
-*Oui*\
-Objet de type `set`.
+\ *droit*
+Objet de type `set`.
 
 ### <a name="return-value"></a>Valeur de retour
 
@@ -86,7 +86,7 @@ The sets s1 and s3 are equal.
 */
 ```
 
-## <a name="op_lt"></a> opérateur&lt; (définir)
+## <a name="op_lt"></a>&lt; d’opérateur (Set)
 
 Teste si l’objet set situé à gauche de l’opérateur est inférieur à l’objet set situé à droite.
 
@@ -96,11 +96,11 @@ bool operator<(const set <Key, Traits, Allocator>& left, const set <Key, Traits,
 
 ### <a name="parameters"></a>Paramètres
 
-*Gauche*\
-Objet de type `set`.
+\ *gauche*
+Objet de type `set`.
 
-*Oui*\
-Objet de type `set`.
+\ *droit*
+Objet de type `set`.
 
 ### <a name="return-value"></a>Valeur de retour
 
@@ -147,7 +147,7 @@ The set s1 is not less than the set s3.
 */
 ```
 
-## <a name="op_lt_eq"></a> opérateur&lt;= (set)
+## <a name="op_lt_eq"></a>&lt;opérateur = (Set)
 
 Teste si l’objet set situé à gauche de l’opérateur est inférieur ou égal à l’objet set situé à droite.
 
@@ -157,11 +157,11 @@ bool operator!<=(const set <Key, Traits, Allocator>& left, const set <Key, Trait
 
 ### <a name="parameters"></a>Paramètres
 
-*Gauche*\
-Objet de type `set`.
+\ *gauche*
+Objet de type `set`.
 
-*Oui*\
-Objet de type `set`.
+\ *droit*
+Objet de type `set`.
 
 ### <a name="return-value"></a>Valeur de retour
 
@@ -171,7 +171,7 @@ Objet de type `set`.
 
 La comparaison entre les objets set est basée sur une comparaison par paire de leurs éléments. La relation d'infériorité ou d'égalité entre deux objets est basée sur une comparaison de la première paire d'éléments inégaux.
 
-### <a name="example"></a>Exemples
+### <a name="example"></a>Exemple
 
 ```cpp
 // set_op_le.cpp
@@ -216,7 +216,7 @@ The set s1 is greater than the set s3.
 Set s1 is less than or equal to the set s4.
 ```
 
-## <a name="op_eq_eq"></a> opérateur == (set)
+## <a name="op_eq_eq"></a>opérateur = = (Set)
 
 Teste si l’objet set situé à gauche de l’opérateur est égal à l’objet set situé à droite.
 
@@ -226,11 +226,11 @@ bool operator!==(const set <Key, Traits, Allocator>& left, const set <Key, Trait
 
 ### <a name="parameters"></a>Paramètres
 
-*Gauche*\
-Objet de type `set`.
+\ *gauche*
+Objet de type `set`.
 
-*Oui*\
-Objet de type `set`.
+\ *droit*
+Objet de type `set`.
 
 ### <a name="return-value"></a>Valeur de retour
 
@@ -278,7 +278,7 @@ The sets s1 and s2 are not equal.
 The sets s1 and s3 are equal.
 ```
 
-## <a name="op_gt"></a> opérateur&gt; (définir)
+## <a name="op_gt"></a>&gt; d’opérateur (Set)
 
 Teste si l’objet set situé à gauche de l’opérateur est supérieur à l’objet set situé à droite.
 
@@ -288,11 +288,11 @@ bool operator>(const set <Key, Traits, Allocator>& left, const set <Key, Traits,
 
 ### <a name="parameters"></a>Paramètres
 
-*Gauche*\
-Objet de type `set`.
+\ *gauche*
+Objet de type `set`.
 
-*Oui*\
-Objet de type `set`.
+\ *droit*
+Objet de type `set`.
 
 ### <a name="return-value"></a>Valeur de retour
 
@@ -339,7 +339,7 @@ The set s1 is greater than the set s3.
 */
 ```
 
-## <a name="op_gt_eq"></a> opérateur&gt;= (set)
+## <a name="op_gt_eq"></a>&gt;opérateur = (Set)
 
 Teste si l’objet set situé à gauche de l’opérateur est supérieur ou égal à l’objet set situé à droite.
 
@@ -349,11 +349,11 @@ bool operator!>=(const set <Key, Traits, Allocator>& left, const set <Key, Trait
 
 ### <a name="parameters"></a>Paramètres
 
-*Gauche*\
-Objet de type `set`.
+\ *gauche*
+Objet de type `set`.
 
-*Oui*\
-Objet de type `set`.
+\ *droit*
+Objet de type `set`.
 
 ### <a name="return-value"></a>Valeur de retour
 
@@ -363,7 +363,7 @@ Objet de type `set`.
 
 La comparaison entre les objets set est basée sur une comparaison par paire de leurs éléments. La relation de supériorité ou d'égalité entre deux objets est basée sur une comparaison de la première paire d'éléments inégaux.
 
-### <a name="example"></a>Exemples
+### <a name="example"></a>Exemple
 
 ```cpp
 // set_op_ge.cpp
@@ -408,7 +408,7 @@ Set s1 is greater than or equal to set s3.
 Set s1 is greater than or equal to set s4.
 ```
 
-## <a name="op_neq_multiset"></a> opérateur ! = (multiset)
+## <a name="op_neq_multiset"></a>Operator ! = (multiensemble)
 
 Teste si l’objet multiset situé à gauche de l’opérateur n’est pas égal à l’objet multiset situé à droite.
 
@@ -418,11 +418,11 @@ bool operator!=(const multiset <Key, Traits, Allocator>& left, const multiset <K
 
 ### <a name="parameters"></a>Paramètres
 
-*Gauche*\
-Objet de type `multiset`.
+\ *gauche*
+Objet de type `multiset`.
 
-*Oui*\
-Objet de type `multiset`.
+\ *droit*
+Objet de type `multiset`.
 
 ### <a name="return-value"></a>Valeur de retour
 
@@ -432,7 +432,7 @@ Objet de type `multiset`.
 
 La comparaison entre les objets multiset est basée sur une comparaison par paire de leurs éléments. Deux objets multiset sont égaux s’ils ont le même nombre d’éléments et si leurs éléments respectifs ont les mêmes valeurs. Sinon, elles sont inégales.
 
-### <a name="example"></a>Exemples
+### <a name="example"></a>Exemple
 
 ```cpp
 // multiset_op_ne.cpp
@@ -470,7 +470,7 @@ The multisets s1 and s2 are not equal.
 The multisets s1 and s3 are equal.
 ```
 
-## <a name="op_lt_multiset"></a> opérateur&lt; (multiset)
+## <a name="op_lt_multiset"></a>&lt; d’opérateur (multijeu)
 
 Teste si l’objet multiset situé à gauche de l’opérateur est inférieur à l’objet multiset situé à droite.
 
@@ -480,11 +480,11 @@ bool operator<(const multiset <Key, Traits, Allocator>& left, const multiset <Ke
 
 ### <a name="parameters"></a>Paramètres
 
-*Gauche*\
-Objet de type `multiset`.
+\ *gauche*
+Objet de type `multiset`.
 
-*Oui*\
-Objet de type `multiset`.
+\ *droit*
+Objet de type `multiset`.
 
 ### <a name="return-value"></a>Valeur de retour
 
@@ -494,7 +494,7 @@ Objet de type `multiset`.
 
 La comparaison entre les objets multiset est basée sur une comparaison par paire de leurs éléments. La relation d'infériorité entre deux objets est basée sur une comparaison de la première paire d'éléments inégaux.
 
-### <a name="example"></a>Exemples
+### <a name="example"></a>Exemple
 
 ```cpp
 // multiset_op_lt.cpp
@@ -536,7 +536,7 @@ The multiset s1 is less than the multiset s2.
 The multiset s1 is not less than the multiset s3.
 ```
 
-## <a name="op_lt_eq_multiset"></a> opérateur&lt;= (multiset)
+## <a name="op_lt_eq_multiset"></a>&lt;opérateur = (multiensemble)
 
 Teste si l’objet multiset situé à gauche de l’opérateur est inférieur ou égal à l’objet multiset situé à droite.
 
@@ -546,11 +546,11 @@ bool operator!<=(const multiset <Key, Traits, Allocator>& left, const multiset <
 
 ### <a name="parameters"></a>Paramètres
 
-*Gauche*\
-Objet de type `multiset`.
+\ *gauche*
+Objet de type `multiset`.
 
-*Oui*\
-Objet de type `multiset`.
+\ *droit*
+Objet de type `multiset`.
 
 ### <a name="return-value"></a>Valeur de retour
 
@@ -560,7 +560,7 @@ Objet de type `multiset`.
 
 La comparaison entre les objets multiset est basée sur une comparaison par paire de leurs éléments. La relation d'infériorité ou d'égalité entre deux objets est basée sur une comparaison de la première paire d'éléments inégaux.
 
-### <a name="example"></a>Exemples
+### <a name="example"></a>Exemple
 
 ```cpp
 // multiset_op_le.cpp
@@ -611,7 +611,7 @@ The multiset s1 is greater than the multiset s3.
 The multiset s1 is less than or equal to the multiset s4.
 ```
 
-## <a name="op_eq_eq_multiset"></a> opérateur == (multiset)
+## <a name="op_eq_eq_multiset"></a>opérateur = = (multiensemble)
 
 Teste si l’objet multiset situé à gauche de l’opérateur est égal à l’objet multiset situé à droite.
 
@@ -621,11 +621,11 @@ bool operator!==(const multiset <Key, Traits, Allocator>& left, const multiset <
 
 ### <a name="parameters"></a>Paramètres
 
-*Gauche*\
-Objet de type `multiset`.
+\ *gauche*
+Objet de type `multiset`.
 
-*Oui*\
-Objet de type `multiset`.
+\ *droit*
+Objet de type `multiset`.
 
 ### <a name="return-value"></a>Valeur de retour
 
@@ -635,7 +635,7 @@ Objet de type `multiset`.
 
 La comparaison entre les objets multiset est basée sur une comparaison par paire de leurs éléments. Deux objets multiset sont égaux s’ils ont le même nombre d’éléments et si leurs éléments respectifs ont les mêmes valeurs. Sinon, elles sont inégales.
 
-### <a name="example"></a>Exemples
+### <a name="example"></a>Exemple
 
 ```cpp
 // multiset_op_eq.cpp
@@ -673,7 +673,7 @@ The multisets s1 and s2 are not equal.
 The multisets s1 and s3 are equal.
 ```
 
-## <a name="op_gt_multiset"></a> opérateur&gt; (multiset)
+## <a name="op_gt_multiset"></a>&gt; d’opérateur (multijeu)
 
 Teste si l’objet multiset situé à gauche de l’opérateur est supérieur à l’objet multiset situé à droite.
 
@@ -683,11 +683,11 @@ bool operator>(const multiset <Key, Traits, Allocator>& left, const multiset <Ke
 
 ### <a name="parameters"></a>Paramètres
 
-*Gauche*\
-Objet de type `multiset`.
+\ *gauche*
+Objet de type `multiset`.
 
-*Oui*\
-Objet de type `multiset`.
+\ *droit*
+Objet de type `multiset`.
 
 ### <a name="return-value"></a>Valeur de retour
 
@@ -739,7 +739,7 @@ The multiset s1 is not greater than the multiset s2.
 The multiset s1 is greater than the multiset s3.
 ```
 
-## <a name="op_gt_eq_multiset"></a> opérateur&gt;= (multiset)
+## <a name="op_gt_eq_multiset"></a>&gt;opérateur = (multiensemble)
 
 Teste si l’objet multiset situé à gauche de l’opérateur est supérieur ou égal à l’objet multiset situé à droite.
 
@@ -749,11 +749,11 @@ bool operator!>=(const multiset <Key, Traits, Allocator>& left, const multiset <
 
 ### <a name="parameters"></a>Paramètres
 
-*Gauche*\
-Objet de type `multiset`.
+\ *gauche*
+Objet de type `multiset`.
 
-*Oui*\
-Objet de type `multiset`.
+\ *droit*
+Objet de type `multiset`.
 
 ### <a name="return-value"></a>Valeur de retour
 

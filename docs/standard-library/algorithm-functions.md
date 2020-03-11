@@ -201,11 +201,11 @@ helpviewer_keywords:
 - std::partition_copy [C++]
 - std::swap [C++]
 ms.openlocfilehash: 199634997397cca0008c60843b5d977633277331
-ms.sourcegitcommit: b8c22e6d555cf833510753cba7a368d57e5886db
+ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/29/2020
-ms.locfileid: "76821881"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78854098"
 ---
 # <a name="ltalgorithmgt-functions"></a>&lt;algorithm&gt;, fonctions
 
@@ -239,7 +239,7 @@ ForwardIterator adjacent_find(
     BinaryPredicate pred);
 ```
 
-### <a name="parameters"></a>Parameters
+### <a name="parameters"></a>Paramètres
 
 \ d' *exécution*
 Stratégie d’exécution à utiliser.
@@ -253,7 +253,7 @@ Itérateur vers l'avant ciblant la position juste après le dernier élément de
 *\ prévu*
 Prédicat binaire indiquant la condition à satisfaire par les valeurs des éléments adjacents de la plage dans laquelle s’effectue la recherche.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur retournée
 
 Itérateur vers l’avant vers le premier des éléments adjacents qui sont égaux entre eux (dans la première version) ou qui répondent à la condition donnée par le prédicat binaire (dans la deuxième version), à condition qu’une paire d’éléments de ce type soit trouvée. Dans le cas contraire, un itérateur pointant vers *Last* est retourné.
 
@@ -346,7 +346,7 @@ bool all_of(
     UnaryPredicate pred);
 ```
 
-### <a name="parameters"></a>Parameters
+### <a name="parameters"></a>Paramètres
 
 \ d' *exécution*
 Stratégie d’exécution à utiliser.
@@ -360,7 +360,7 @@ Itérateur d’entrée qui indique la fin d’une plage d’éléments dans laqu
 *\ prévu*
 Condition à vérifier. Il s’agit d’un objet de fonction de prédicat défini par l’utilisateur qui définit la condition à satisfaire par l’élément vérifié. Un prédicat unaire accepte un seul argument et retourne **true** ou **false**.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur retournée
 
 Retourne la **valeur true** si la condition est détectée à chaque élément de la plage indiquée ou si la plage est vide, et **false** dans le cas contraire.
 
@@ -422,7 +422,7 @@ bool any_of(
     UnaryPredicate pred);
 ```
 
-### <a name="parameters"></a>Parameters
+### <a name="parameters"></a>Paramètres
 
 \ d' *exécution*
 Stratégie d’exécution à utiliser.
@@ -436,7 +436,7 @@ Itérateur d’entrée qui indique la fin d’une plage d’éléments dans laqu
 *\ prévu*
 Condition à vérifier. Cette condition est fournie par un objet de fonction de prédicat défini par l’utilisateur. Le prédicat définit la condition à satisfaire par l’élément vérifié. Un prédicat unaire accepte un seul argument et retourne **true** ou **false**.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur retournée
 
 Retourne la **valeur true** si la condition est détectée au moins une fois dans la plage indiquée, **false** si la condition n’est jamais détectée.
 
@@ -499,7 +499,7 @@ bool binary_search(
     BinaryPredicate pred);
 ```
 
-### <a name="parameters"></a>Parameters
+### <a name="parameters"></a>Paramètres
 
 *premier*\
 Itérateur vers l'avant ciblant la position du premier élément de la plage dans laquelle s'effectue la recherche.
@@ -513,7 +513,7 @@ Valeur qui doit correspondre à la valeur de l’élément ou qui doit satisfair
 *\ prévu*
 Objet de fonction de prédicat défini par l’utilisateur qui définit la logique selon laquelle un élément est inférieur à un autre. Un prédicat binaire accepte deux arguments et retourne **true** quand la condition est satisfaite et **false** quand elle ne l’est pas.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur retournée
 
 **true** si un élément se trouve dans la plage qui est égale ou équivalente à la valeur spécifiée ; Sinon, **false**.
 
@@ -638,7 +638,7 @@ constexpr const Type& clamp(
     Compare pred);
 ```
 
-### <a name="parameters"></a>Parameters
+### <a name="parameters"></a>Paramètres
 
 *value*\
 Valeur à comparer en *majuscules* et en *minuscules*.
@@ -652,7 +652,7 @@ Limite supérieure des valeurs auxquelles fixer la *valeur* .
 *\ prévu*
 Prédicat utilisé pour comparer la valeur à la *valeur* *inférieure* ou *supérieure*. Un prédicat de comparaison prend deux arguments et retourne la **valeur true** si le premier est dans un sens inférieur à la seconde, et **false**dans le cas contraire.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur retournée
 
 Retourne une référence à *Lower* si `value < lower`, ou une référence à *Upper* si `upper < value`. Sinon, elle retourne une référence à *value*.
 
@@ -679,7 +679,7 @@ ForwardIterator2 copy(
     ForwardIterator2 result);
 ```
 
-### <a name="parameters"></a>Parameters
+### <a name="parameters"></a>Paramètres
 
 \ d' *exécution*
 Stratégie d’exécution à utiliser.
@@ -693,7 +693,7 @@ Itérateur d’entrée ciblant la position située de suite après le dernier é
 *destBeg*\
 Itérateur de sortie qui traite la position du premier élément dans la plage de destination.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur retournée
 
 Itérateur de sortie ciblant la position située un après le dernier élément de la plage de destination, autrement dit, l’itérateur adresse `result` + (*last* - *First*).
 
@@ -775,7 +775,7 @@ BidirectionalIterator2 copy_backward(
     BidirectionalIterator2 destEnd);
 ```
 
-### <a name="parameters"></a>Parameters
+### <a name="parameters"></a>Paramètres
 
 *premier*\
 Itérateur bidirectionnel se rapportant à la position du premier élément dans la plage source.
@@ -786,7 +786,7 @@ Itérateur bidirectionnel se rapportant à la position située immédiatement ap
 *destEnd*\
 Itérateur bidirectionnel se rapportant à la position située immédiatement après l'élément final dans la plage de destination.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur retournée
 
 Itérateur de sortie ciblant la position située de suite après le dernier élément de la plage de destination, autrement dit, l’itérateur traite *destEnd* -(*Last* - *First*).
 
@@ -881,7 +881,7 @@ ForwardIterator2 copy_if(
     UnaryPredicate pred);
 ```
 
-### <a name="parameters"></a>Parameters
+### <a name="parameters"></a>Paramètres
 
 \ d' *exécution*
 Stratégie d’exécution à utiliser.
@@ -898,7 +898,7 @@ Itérateur de sortie qui indique la destination des éléments copiés.
 *\ prévu*
 Condition pour laquelle chaque élément de la plage est vérifié. Cette condition est fournie par un objet de fonction de prédicat défini par l’utilisateur. Un prédicat unaire accepte un argument et retourne **true** ou **false**.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur retournée
 
 Itérateur de sortie dont la valeur de *dest* est incrémentée une fois pour chaque élément répondant à la condition. En d’autres termes, la valeur de retour moins *dest* est égale au nombre d’éléments copiés.
 
@@ -984,7 +984,7 @@ ForwardIterator2 copy_n(
     ForwardIterator2 dest);
 ```
 
-### <a name="parameters"></a>Parameters
+### <a name="parameters"></a>Paramètres
 
 \ d' *exécution*
 Stratégie d’exécution à utiliser.
@@ -998,7 +998,7 @@ Type entier signé ou non signé spécifiant le nombre d'éléments à copier.
 *dest*\
 Itérateur de sortie qui indique l'emplacement où les éléments doivent être copiés.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur retournée
 
 Retourne un itérateur de sortie indiquant où les éléments ont été copiés. Il est identique à la valeur retournée du paramètre *dest* .
 
@@ -1055,7 +1055,7 @@ count(
     const Type& value);
 ```
 
-### <a name="parameters"></a>Parameters
+### <a name="parameters"></a>Paramètres
 
 \ d' *exécution*
 Stratégie d’exécution à utiliser.
@@ -1069,7 +1069,7 @@ Itérateur d’entrée ciblant la position juste après le dernier élément de 
 *value*\
 Valeur des éléments à compter.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur retournée
 
 Type de différence du `InputIterator` qui compte le nombre d’éléments de la plage [*First*, *Last*) qui ont la *valeur*value.
 
@@ -1136,7 +1136,7 @@ count_if(
     UnaryPredicate pred);
 ```
 
-### <a name="parameters"></a>Parameters
+### <a name="parameters"></a>Paramètres
 
 \ d' *exécution*
 Stratégie d’exécution à utiliser.
@@ -1150,7 +1150,7 @@ Itérateur d'entrée qui traite la position située au-delà du dernier élémen
 *\ prévu*
 Objet de fonction de prédicat défini par l’utilisateur qui définit la condition à satisfaire si un élément doit être compté. Un prédicat unaire accepte un seul argument et retourne **true** ou **false**.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur retournée
 
 Nombre d’éléments qui satisfont la condition spécifiée par le prédicat.
 
@@ -1271,7 +1271,7 @@ bool equal(
     BinaryPredicate pred);
 ```
 
-### <a name="parameters"></a>Parameters
+### <a name="parameters"></a>Paramètres
 
 \ d' *exécution*
 Stratégie d’exécution à utiliser.
@@ -1291,7 +1291,7 @@ Itérateur d'entrée qui traite la position qui suit le dernier élément de la 
 *\ prévu*
 Objet de fonction de prédicat défini par l'utilisateur qui définit la condition à satisfaire si deux éléments sont à considérer comme équivalents. Un prédicat binaire accepte deux arguments et retourne **true** quand la condition est satisfaite et **false** quand elle ne l’est pas.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur retournée
 
 **true** si et seulement si les plages sont identiques ou équivalentes sous le prédicat binaire en cas de comparaison élément par élément ; sinon, **false**.
 
@@ -1355,7 +1355,7 @@ pair<ForwardIterator, ForwardIterator> equal_range(
     Compare pred);
 ```
 
-### <a name="parameters"></a>Parameters
+### <a name="parameters"></a>Paramètres
 
 *premier*\
 Itérateur vers l'avant ciblant la position du premier élément de la plage dans laquelle s'effectue la recherche.
@@ -1369,7 +1369,7 @@ Valeur recherchée dans la plage ordonnée.
 *\ prévu*
 Objet de fonction de prédicat défini par l’utilisateur qui définit la logique selon laquelle un élément est inférieur à un autre. Un prédicat de comparaison prend deux arguments et retourne la **valeur true** lorsque la valeur est satisfaite et **false** lorsqu’elle n’est pas satisfaite.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur retournée
 
 Paire d’itérateurs vers l’avant qui spécifient une sous-plage, contenue dans la plage recherchée, dans laquelle tous les éléments sont équivalents à la *valeur* dans le sens défini par le prédicat binaire utilisé ( *prédite* ou par défaut, inférieur à).
 
@@ -1521,7 +1521,7 @@ void fill(
     const Type& value);
 ```
 
-### <a name="parameters"></a>Parameters
+### <a name="parameters"></a>Paramètres
 
 \ d' *exécution*
 Stratégie d’exécution à utiliser.
@@ -1599,7 +1599,7 @@ ForwardIterator fill_n(
     const Type& value);
 ```
 
-### <a name="parameters"></a>Parameters
+### <a name="parameters"></a>Paramètres
 
 \ d' *exécution*
 Stratégie d’exécution à utiliser.
@@ -1613,7 +1613,7 @@ Type entier signé ou non signé spécifiant le nombre d’éléments auxquels a
 *value*\
 Valeur à assigner aux éléments de la plage [*First*, *First + Count*).
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur retournée
 
 Itérateur de l’élément qui suit le dernier élément rempli si le *nombre* > zéro, sinon le premier élément.
 
@@ -1688,7 +1688,7 @@ ForwardIterator find(
     const Type& value);
 ```
 
-### <a name="parameters"></a>Parameters
+### <a name="parameters"></a>Paramètres
 
 \ d' *exécution*
 Stratégie d’exécution à utiliser.
@@ -1702,7 +1702,7 @@ Itérateur d'entrée qui traite la position située au-delà du dernier élémen
 *value*\
 Valeur à rechercher.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur retournée
 
 Itérateur d'entrée qui traite la première occurrence de la valeur spécifiée dans la plage où effectuer la recherche. Si aucun élément n’est trouvé avec une valeur équivalente, retourne *Last*.
 
@@ -1753,7 +1753,7 @@ find_end(
     BinaryPredicate pred);
 ```
 
-### <a name="parameters"></a>Parameters
+### <a name="parameters"></a>Paramètres
 
 *first1*\
 Itérateur vers l'avant ciblant la position du premier élément de la plage dans laquelle s'effectue la recherche.
@@ -1770,7 +1770,7 @@ Itérateur vers l'avant ciblant la position juste après le dernier élément de
 *\ prévu*
 Objet de fonction de prédicat défini par l'utilisateur qui définit la condition à satisfaire si deux éléments sont à considérer comme équivalents. Un prédicat binaire accepte deux arguments et retourne **true** quand la condition est satisfaite et **false** quand elle ne l’est pas.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur retournée
 
 Itérateur vers l’avant ciblant la position du premier élément de la dernière sous-séquence dans [First1, last1) qui correspond à la séquence spécifiée [First2, last2).
 
@@ -1917,7 +1917,7 @@ find_first_of(
     BinaryPredicate pred);
 ```
 
-### <a name="parameters"></a>Parameters
+### <a name="parameters"></a>Paramètres
 
 *first1*\
 Itérateur vers l'avant ciblant la position du premier élément de la plage dans laquelle s'effectue la recherche.
@@ -1934,7 +1934,7 @@ Itérateur vers l'avant ciblant la position juste après le dernier élément de
 *\ prévu*
 Objet de fonction de prédicat défini par l'utilisateur qui définit la condition à satisfaire si deux éléments sont à considérer comme équivalents. Un prédicat binaire accepte deux arguments et retourne **true** quand la condition est satisfaite et **false** quand elle ne l’est pas.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur retournée
 
 Itérateur vers l’avant qui traite la position du premier élément de la première sous-séquence qui correspond à la séquence spécifiée ou qui est équivalente au sens spécifié par un prédicat binaire.
 
@@ -2061,7 +2061,7 @@ ForwardIterator find_if(
     UnaryPredicate pred);
 ```
 
-### <a name="parameters"></a>Parameters
+### <a name="parameters"></a>Paramètres
 
 *premier*\
 Itérateur d'entrée qui traite la position du premier élément de la plage à rechercher.
@@ -2072,7 +2072,7 @@ Itérateur d'entrée qui traite la position située au-delà du dernier élémen
 *\ prévu*
 Objet de fonction de prédicat défini par l’utilisateur ou [expression lambda](../cpp/lambda-expressions-in-cpp.md) qui définit la condition à satisfaire par l’élément recherché. Un prédicat unaire accepte un seul argument et retourne **true** s’il est satisfait ou **false** s’il n’est pas respecté. La signature de *prédit* doit être `bool pred(const T& arg);`, où `T` est un type dans lequel `InputIterator` peut être converti implicitement en cas de déréférencement. Le mot clé **const** s’affiche uniquement pour illustrer que l’objet de fonction ou l’expression lambda ne doit pas modifier l’argument.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur retournée
 
 Itérateur d’entrée qui fait référence au premier élément de la plage qui répond à la condition spécifiée par le prédicat (le prédicat donne la **valeur true**). Si aucun élément n’est trouvé pour satisfaire le prédicat, retourne *Last*.
 
@@ -2183,7 +2183,7 @@ ForwardIterator find_if_not(
     UnaryPredicate pred);
 ```
 
-### <a name="parameters"></a>Parameters
+### <a name="parameters"></a>Paramètres
 
 *premier*\
 Itérateur d'entrée qui traite la position du premier élément de la plage à rechercher.
@@ -2194,7 +2194,7 @@ Itérateur d'entrée qui traite la position située au-delà du dernier élémen
 *\ prévu*
 Objet de fonction de prédicat défini par l’utilisateur ou [expression lambda](../cpp/lambda-expressions-in-cpp.md) qui définit la condition à ne pas satisfaire par l’élément recherché. Un prédicat unaire accepte un seul argument et retourne **true** s’il est satisfait ou **false** s’il n’est pas respecté. La signature de *prédit* doit être `bool pred(const T& arg);`, où `T` est un type dans lequel `InputIterator` peut être converti implicitement en cas de déréférencement. Le mot clé **const** s’affiche uniquement pour illustrer que l’objet de fonction ou l’expression lambda ne doit pas modifier l’argument.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur retournée
 
 Itérateur d’entrée qui fait référence au premier élément de la plage qui ne satisfait pas la condition spécifiée par le prédicat (le prédicat donne la **valeur false**). Si tous les éléments répondent au prédicat (le prédicat donne la **valeur true** à chaque élément), retourne *Last*.
 
@@ -2223,7 +2223,7 @@ void for_each(
     Function func);
 ```
 
-### <a name="parameters"></a>Parameters
+### <a name="parameters"></a>Paramètres
 
 *premier*\
 Itérateur d’entrée ciblant la position du premier élément de la plage à traiter.
@@ -2234,7 +2234,7 @@ Itérateur d’entrée ciblant la position juste après le dernier élément de 
 \ *Func*
 Objet de fonction défini par l’utilisateur appliqué à chaque élément de la plage.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur retournée
 
 Copie de l’objet de fonction une fois qu’il a été appliqué à tous les éléments de la plage.
 
@@ -2394,7 +2394,7 @@ void generate(
     Generator gen);
 ```
 
-### <a name="parameters"></a>Parameters
+### <a name="parameters"></a>Paramètres
 
 *premier*\
 Itérateur vers l’avant ciblant la position du premier élément de la plage auquel les valeurs doivent être attribuées.
@@ -2475,7 +2475,7 @@ ForwardIterator generate_n(
     Generator gen);
 ```
 
-### <a name="parameters"></a>Parameters
+### <a name="parameters"></a>Paramètres
 
 \ d' *exécution*
 Stratégie d’exécution à utiliser.
@@ -2580,7 +2580,7 @@ bool includes(
     Compare pred);
 ```
 
-### <a name="parameters"></a>Parameters
+### <a name="parameters"></a>Paramètres
 
 \ d' *exécution*
 Stratégie d’exécution à utiliser.
@@ -2600,7 +2600,7 @@ Itérateur d’entrée ciblant la position juste après le dernier élément de 
 *\ prévu*
 Objet de fonction de prédicat défini par l’utilisateur qui définit la logique selon laquelle un élément est inférieur à un autre. Un prédicat de comparaison prend deux arguments et retourne la **valeur true** lorsque la valeur est satisfaite et **false** lorsqu’elle n’est pas satisfaite.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur retournée
 
 **true** si la première plage triée contient tous les éléments de la deuxième ; sinon, **false**.
 
@@ -2614,7 +2614,7 @@ Les plages sources triées doivent chacune être organisées comme une condition
 
 Les plages sources ne sont pas modifiées par l’algorithme `merge`.
 
-Les types de valeur des itérateurs d’entrée doivent être comparables en termes d’infériorité pour être classés. Ainsi, pour deux éléments donnés, il est possible de déterminer s’ils sont équivalents (dans le sens où ni l’un ni l’autre n’est inférieur à l’autre) ou si l’un est inférieur à l’autre. Cela entraîne le tri des éléments non équivalents. Plus précisément, l’algorithme vérifie si tous les éléments de la première plage triée sous un prédicat binaire spécifié sont ordonnés de la même façon que ceux de la deuxième plage triée.
+Les types de valeur des itérateurs d’entrée doivent être comparables en termes d’infériorité pour être classés. Ainsi, pour deux éléments donnés, il est possible de déterminer s’ils sont équivalents (dans le sens où ni l’un ni l’autre n’est inférieur à l’autre) ou si l’un est inférieur à l’autre. Cela entraîne le tri des éléments non équivalents. Plus précisément, l’algorithme vérifie si tous les éléments de la première plage triée sous un prédicat binaire spécifié sont ordonnés de la même façon que ceux de la deuxième plage triée.
 
 La complexité de l’algorithme est linéaire avec au maximum `2 * ((last1 - first1) - (last2 - first2)) - 1` comparaisons pour les plages sources non vides.
 
@@ -2801,7 +2801,7 @@ void inplace_merge(
     Compare pred);
 ```
 
-### <a name="parameters"></a>Parameters
+### <a name="parameters"></a>Paramètres
 
 \ d' *exécution*
 Stratégie d’exécution à utiliser.
@@ -2967,7 +2967,7 @@ bool is_heap(
     Compare pred);
 ```
 
-### <a name="parameters"></a>Parameters
+### <a name="parameters"></a>Paramètres
 
 \ d' *exécution*
 Stratégie d’exécution à utiliser.
@@ -2981,7 +2981,7 @@ Itérateur d’accès aléatoire qui indique la fin d’une plage.
 *\ prévu*
 Condition à vérifier pour ordonner des éléments. Un prédicat de comparaison accepte deux arguments et retourne **true** ou **false**.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur retournée
 
 Retourne la **valeur true** si les éléments de la plage spécifiée forment un tas, **false** dans le cas contraire.
 
@@ -3023,7 +3023,7 @@ RandomAccessIterator is_heap_until(
     Compare pred);
 ```
 
-### <a name="parameters"></a>Parameters
+### <a name="parameters"></a>Paramètres
 
 \ d' *exécution*
 Stratégie d’exécution à utiliser.
@@ -3037,7 +3037,7 @@ Itérateur à accès aléatoire qui spécifie le dernier élément de la plage o
 *\ prévu*
 Prédicat binaire qui spécifie la condition d'ordonnancement faible strict qui définit un tas. Le prédicat par défaut est `std::less<>` lorsque *prédit* n’est pas spécifié.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur retournée
 
 Retourne *Last* si la plage spécifiée forme un tas ou contient un ou plusieurs éléments. Sinon, retourne un itérateur pointant vers le premier élément trouvé qui ne remplit pas la condition de tas.
 
@@ -3066,7 +3066,7 @@ bool is_partitioned(
     UnaryPredicate pred);
 ```
 
-### <a name="parameters"></a>Parameters
+### <a name="parameters"></a>Paramètres
 
 \ d' *exécution*
 Stratégie d’exécution à utiliser.
@@ -3080,7 +3080,7 @@ Itérateur d’entrée qui indique la fin d’une plage.
 *\ prévu*
 Condition à vérifier. Cette condition est fournie par un objet de fonction de prédicat défini par l’utilisateur qui définit la condition à satisfaire par l’élément recherché. Un prédicat unaire accepte un seul argument et retourne **true** ou **false**.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur retournée
 
 Retourne la **valeur true** lorsque tous les éléments d’une plage donnée qui testent la **valeur true** pour une condition sont placés avant les éléments qui testent **false**, et sinon, retourne **false**.
 
@@ -3123,7 +3123,7 @@ bool is_permutation(
     BinaryPredicate pred);
 ```
 
-### <a name="parameters"></a>Parameters
+### <a name="parameters"></a>Paramètres
 
 *first1*\
 Itérateur vers l'avant qui fait référence au premier élément de la plage.
@@ -3140,7 +3140,7 @@ Itérateur vers l'avant qui fait référence à l'élément qui suit le dernier 
 *\ prévu*
 Prédicat qui teste l’équivalence et retourne une valeur **booléenne**.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur retournée
 
 **true** lorsque les plages peuvent être réorganisées pour être identiques en fonction du prédicat du comparateur ; Sinon, **false**.
 
@@ -3238,7 +3238,7 @@ bool is_sorted(
     Compare pred);
 ```
 
-### <a name="parameters"></a>Parameters
+### <a name="parameters"></a>Paramètres
 
 \ d' *exécution*
 Stratégie d’exécution à utiliser.
@@ -3290,7 +3290,7 @@ ForwardIterator is_sorted_until(
     Compare pred);
 ```
 
-### <a name="parameters"></a>Parameters
+### <a name="parameters"></a>Paramètres
 
 \ d' *exécution*
 Stratégie d’exécution à utiliser.
@@ -3304,7 +3304,7 @@ Itérateur vers l’avant qui indique la fin d’une plage.
 *\ prévu*
 Condition à vérifier pour déterminer un ordre entre deux éléments. Un prédicat de comparaison accepte deux arguments et retourne **true** ou **false**.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur retournée
 
 Retourne un `ForwardIterator` défini sur le dernier élément dans un ordre trié. La séquence triée commence par la *première*.
 
@@ -3323,7 +3323,7 @@ template<class ForwardIterator1, class ForwardIterator2>
 void iter_swap( ForwardIterator1 left, ForwardIterator2 right );
 ```
 
-### <a name="parameters"></a>Parameters
+### <a name="parameters"></a>Paramètres
 
 \ *gauche*
 Un des itérateurs vers l’avant dont la valeur est à échanger.
@@ -3508,7 +3508,7 @@ bool lexicographical_compare(
     Compare pred);
 ```
 
-### <a name="parameters"></a>Parameters
+### <a name="parameters"></a>Paramètres
 
 \ d' *exécution*
 Stratégie d’exécution à utiliser.
@@ -3528,7 +3528,7 @@ Itérateur d’entrée ciblant la position juste après le dernier élément de 
 *\ prévu*
 Objet de fonction de prédicat défini par l’utilisateur qui définit la logique selon laquelle un élément est inférieur à un autre. Un prédicat de comparaison prend deux arguments et retourne la **valeur true** lorsque la valeur est satisfaite et **false** lorsqu’elle n’est pas satisfaite.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur retournée
 
 **true** si la première plage est inférieure à la deuxième plage d’un point de vue lexicographique ; sinon **false**.
 
@@ -3656,7 +3656,7 @@ ForwardIterator lower_bound(
     BinaryPredicate pred );
 ```
 
-### <a name="parameters"></a>Parameters
+### <a name="parameters"></a>Paramètres
 
 *premier*\
 Itérateur vers l'avant ciblant la position du premier élément de la plage dans laquelle s'effectue la recherche.
@@ -3670,7 +3670,7 @@ Valeur dont la première position ou la première position possible est recherch
 *\ prévu*
 Objet de fonction de prédicat défini par l’utilisateur qui définit la logique selon laquelle un élément est inférieur à un autre. Un prédicat binaire accepte deux arguments et retourne **true** quand la condition est satisfaite et **false** quand elle ne l’est pas.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur retournée
 
 Itérateur vers l’avant situé à la position du premier élément d’une plage triée dont la valeur est supérieure ou égale à une valeur spécifiée, où l’équivalence est spécifiée par un prédicat binaire.
 
@@ -3793,7 +3793,7 @@ void make_heap(
     BinaryPredicate pred );
 ```
 
-### <a name="parameters"></a>Parameters
+### <a name="parameters"></a>Paramètres
 
 *premier*\
 Itérateur d’accès aléatoire ciblant la position du premier élément de la plage à convertir en tas.
@@ -3881,7 +3881,7 @@ constexpr Type& max(
     BinaryPredicate pred);
 ```
 
-### <a name="parameters"></a>Parameters
+### <a name="parameters"></a>Paramètres
 
 \ *gauche*
 Premier des deux objets comparés.
@@ -3895,7 +3895,7 @@ Prédicat binaire utilisé pour comparer deux objets.
 \ *inList*
 Liste d'initialiseurs qui contient les objets à comparer.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur retournée
 
 Le plus grand des deux objets, sauf si aucun n'est plus grand que l'autre ; dans ce cas, retourne le premier des deux objets. Dans le cas d'une initializer_list, retourne le plus grand des objets dans la liste.
 
@@ -4101,7 +4101,7 @@ ForwardIterator max_element(
     Compare pred);
 ```
 
-### <a name="parameters"></a>Parameters
+### <a name="parameters"></a>Paramètres
 
 \ d' *exécution*
 Stratégie d’exécution à utiliser.
@@ -4115,7 +4115,7 @@ Itérateur vers l’avant ciblant la position juste après le dernier élément 
 *\ prévu*
 Objet de fonction de prédicat défini par l’utilisateur qui définit la logique selon laquelle un élément est inférieur à un autre. Le prédicat de comparaison accepte deux arguments et doit retourner la **valeur true** lorsque le premier élément est inférieur au deuxième et **false** dans le cas contraire.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur retournée
 
 Itérateur vers l’avant ciblant la position de la première occurrence de l’élément le plus grand de la plage dans laquelle s’effectue la recherche.
 
@@ -4267,7 +4267,7 @@ ForwardIterator merge(
     Compare pred);
 ```
 
-### <a name="parameters"></a>Parameters
+### <a name="parameters"></a>Paramètres
 
 \ d' *exécution*
 Stratégie d’exécution à utiliser.
@@ -4290,7 +4290,7 @@ Itérateur de sortie ciblant la position du premier élément de la plage de des
 *\ prévu*
 Objet de fonction de prédicat défini par l’utilisateur qui définit la logique selon laquelle un élément est inférieur à un autre. Le prédicat de comparaison accepte deux arguments et doit retourner **true** lorsque le premier élément est inférieur au second, et **false** dans le cas contraire.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur retournée
 
 Itérateur de sortie ciblant la position située de suite après le dernier élément de la plage de destination triée.
 
@@ -4304,7 +4304,7 @@ Les plages sources triées doivent chacune être structurées comme condition pr
 
 L’opération est stable, car l’ordre relatif des éléments dans chaque plage est préservé dans la plage de destination. Les plages sources ne sont pas modifiées par l’algorithme `merge`.
 
-Les types de valeur des itérateurs d’entrée doivent être comparables en termes d’infériorité pour être classés. Ainsi, pour deux éléments donnés, il est possible de déterminer s’ils sont équivalents (dans le sens où ni l’un ni l’autre n’est inférieur à l’autre) ou si l’un est inférieur à l’autre. Cela entraîne le tri des éléments non équivalents. Quand il existe des éléments équivalents dans les deux plages sources, les éléments de la première plage précèdent ceux de la deuxième dans la plage de destination.
+Les types de valeur des itérateurs d’entrée doivent être comparables en termes d’infériorité pour être classés. Ainsi, pour deux éléments donnés, il est possible de déterminer s’ils sont équivalents (dans le sens où ni l’un ni l’autre n’est inférieur à l’autre) ou si l’un est inférieur à l’autre. Cela entraîne le tri des éléments non équivalents. Quand il existe des éléments équivalents dans les deux plages sources, les éléments de la première plage précèdent ceux de la deuxième dans la plage de destination.
 
 La complexité de l’algorithme est linéaire avec au maximum `(last1 - first1) - (last2 - first2) - 1` comparaisons.
 
@@ -4446,7 +4446,7 @@ constexpr Type min(
     BinaryPredicate pred);
 ```
 
-### <a name="parameters"></a>Parameters
+### <a name="parameters"></a>Paramètres
 
 \ *gauche*
 Premier des deux objets comparés.
@@ -4460,7 +4460,7 @@ Prédicat binaire utilisé pour comparer deux objets.
 \ *inList*
 `initializer_list` qui contient les membres à comparer.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur retournée
 
 Le plus petit des deux objets, sauf si aucun n’est plus petit que l’autre ; dans ce cas, retourne le premier des deux objets. Dans le cas d’une `initializer_list`, elle retourne le moins des objets de la liste.
 
@@ -4665,7 +4665,7 @@ ForwardIterator min_element(
     Compare pred);
 ```
 
-### <a name="parameters"></a>Parameters
+### <a name="parameters"></a>Paramètres
 
 \ d' *exécution*
 Stratégie d’exécution à utiliser.
@@ -4679,7 +4679,7 @@ Itérateur vers l’avant ciblant la position juste après le dernier élément 
 *\ prévu*
 Objet de fonction de prédicat défini par l’utilisateur qui définit la logique selon laquelle un élément est inférieur à un autre. Le prédicat de comparaison accepte deux arguments et doit retourner **true** lorsque le premier élément est inférieur au second, et **false** dans le cas contraire.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur retournée
 
 Itérateur vers l’avant ciblant la position de la première occurrence de l’élément le plus petit de la plage dans laquelle s’effectue la recherche.
 
@@ -4829,7 +4829,7 @@ pair<ForwardIterator, ForwardIterator> minmax_element(
     Compare pred);
 ```
 
-### <a name="parameters"></a>Parameters
+### <a name="parameters"></a>Paramètres
 
 \ d' *exécution*
 Stratégie d’exécution à utiliser.
@@ -4843,9 +4843,9 @@ Itérateur vers l’avant qui indique la fin d’une plage.
 *\ prévu*
 Objet de fonction de prédicat défini par l’utilisateur qui définit le sens dans lequel un élément est inférieur à un autre. Le prédicat de comparaison accepte deux arguments et doit retourner la **valeur true** lorsque le premier est inférieur au second, et **false** dans le cas contraire.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur retournée
 
-Retourne
+Retours
 
 `pair<ForwardIterator, ForwardIterator>( min_element(first, last), max_element(first, last))`.
 
@@ -4885,7 +4885,7 @@ constexpr pair<Type&, Type&> minmax(
     BinaryPredicate pred);
 ```
 
-### <a name="parameters"></a>Parameters
+### <a name="parameters"></a>Paramètres
 
 \ *gauche*
 Premier des deux objets comparés.
@@ -4901,7 +4901,7 @@ Prédicat binaire utilisé pour comparer deux objets.
 
 ### <a name="remarks"></a>Notes
 
-La première fonction de modèle retourne `pair<const Type&, const Type&>( right, left )` si *Right* est inférieur à *Left*. Sinon, il retourne `pair<const Type&, const Type&>( left, right )`.
+La première fonction de modèle retourne `pair<const Type&, const Type&>( right, left )` si *Right* est inférieur à *Left*. Sinon, `pair<const Type&, const Type&>( left, right )`est retourné.
 
 La deuxième fonction membre retourne une paire où le premier élément est le plus petit et le deuxième est le plus grand en cas de comparaison par le prédicat *prédit*.
 
@@ -4985,7 +4985,7 @@ mismatch(
     BinaryPredicate pred);
 ```
 
-### <a name="parameters"></a>Parameters
+### <a name="parameters"></a>Paramètres
 
 \ d' *exécution*
 Stratégie d’exécution à utiliser.
@@ -5005,7 +5005,7 @@ Itérateur d'entrée qui traite la position qui suit le dernier élément de la 
 *\ prévu*
 Objet de fonction de prédicat défini par l’utilisateur qui compare les éléments actuels dans chaque plage et détermine s’ils sont équivalents. Retourne **true** si la condition est satisfaite et **false** dans le cas contraire.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur retournée
 
 Paire d'itérateurs qui traite les positions de l'incohérence dans les deux plages, le premier itérateur de composant à la position dans la première plage et le deuxième itérateur de composant à la position dans la deuxième plage. S’il n’existe aucune différence entre les éléments dans les plages comparées ou si le prédicat binaire dans la deuxième version est satisfait par toutes les paires d’éléments dans les deux plages, le premier itérateur de composant pointe vers la position située juste après le dernier élément dans la première plage et le deuxième itérateur de composant pointe vers la position juste après le dernier élément testé dans la seconde plage.
 
@@ -5133,7 +5133,7 @@ ForwardIterator2 move(
     ForwardIterator2 result);
 ```
 
-### <a name="parameters"></a>Parameters
+### <a name="parameters"></a>Paramètres
 
 \ d' *exécution*
 Stratégie d’exécution à utiliser.
@@ -5163,7 +5163,7 @@ BidirectionalIterator2 move_backward(
     BidirectionalIterator2 destEnd);
 ```
 
-### <a name="parameters"></a>Parameters
+### <a name="parameters"></a>Paramètres
 
 *premier*\
 Itérateur qui indique le début d’une plage à partir de laquelle déplacer des éléments.
@@ -5197,7 +5197,7 @@ bool next_permutation(
     BinaryPredicate pred);
 ```
 
-### <a name="parameters"></a>Parameters
+### <a name="parameters"></a>Paramètres
 
 *premier*\
 Itérateur bidirectionnel ciblant la position du premier élément de la plage à permuter.
@@ -5208,7 +5208,7 @@ Itérateur bidirectionnel ciblant la position juste après le dernier élément 
 *\ prévu*
 Objet de fonction de prédicat défini par l’utilisateur qui définit le critère de comparaison à satisfaire par les éléments consécutifs dans l’ordre. Un prédicat binaire accepte deux arguments et retourne **true** quand la condition est satisfaite et **false** quand elle ne l’est pas.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur retournée
 
 **true** si la permutation lexicographique suivante existe et a remplacé l’ordre d’origine de la plage ; sinon **false**, auquel cas l’ordre est transformé selon la plus petite permutation lexicographique.
 
@@ -5393,7 +5393,7 @@ void nth_element(
     Compare pred);
 ```
 
-### <a name="parameters"></a>Parameters
+### <a name="parameters"></a>Paramètres
 
 \ d' *exécution*
 Stratégie d’exécution à utiliser.
@@ -5505,7 +5505,7 @@ bool none_of(
     UnaryPredicate pred);
 ```
 
-### <a name="parameters"></a>Parameters
+### <a name="parameters"></a>Paramètres
 
 \ d' *exécution*
 Stratégie d’exécution à utiliser.
@@ -5519,7 +5519,7 @@ Itérateur d’entrée qui indique la fin d’une plage d’éléments.
 *\ prévu*
 Condition à vérifier. Cette condition est fournie par un objet de fonction de prédicat défini par l’utilisateur qui définit la condition. Un prédicat unaire accepte un seul argument et retourne **true** ou **false**.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur retournée
 
 Retourne la **valeur true** si la condition n’est pas détectée au moins une fois dans la plage indiquée, et **false** si la condition est détectée.
 
@@ -5561,7 +5561,7 @@ void partial_sort(
     Compare pred);
 ```
 
-### <a name="parameters"></a>Parameters
+### <a name="parameters"></a>Paramètres
 
 \ d' *exécution*
 Stratégie d’exécution à utiliser.
@@ -5696,7 +5696,7 @@ RandomAccessIterator partial_sort_copy(
     Compare pred);
 ```
 
-### <a name="parameters"></a>Parameters
+### <a name="parameters"></a>Paramètres
 
 \ d' *exécution*
 Stratégie d’exécution à utiliser.
@@ -5716,7 +5716,7 @@ Itérateur d’accès aléatoire ciblant la position juste après le dernier él
 *\ prévu*
 Objet de fonction de prédicat défini par l’utilisateur qui définit le critère de comparaison à satisfaire par les éléments consécutifs dans l’ordre. Un prédicat binaire accepte deux arguments et retourne **true** quand la condition est satisfaite et **false** quand elle ne l’est pas.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur retournée
 
 Itérateur d’accès aléatoire ciblant l’élément de la plage de destination situé une position après le dernier élément inséré à partir de la plage source.
 
@@ -5821,7 +5821,7 @@ ForwardIterator partition(
     UnaryPredicate pred);
 ```
 
-### <a name="parameters"></a>Parameters
+### <a name="parameters"></a>Paramètres
 
 \ d' *exécution*
 Stratégie d’exécution à utiliser.
@@ -5835,7 +5835,7 @@ Itérateur bidirectionnel ciblant la position juste après le dernier élément 
 *\ prévu*
 Objet de fonction de prédicat défini par l’utilisateur qui définit la condition à satisfaire si un élément doit être classé. Un prédicat unaire accepte un seul argument et retourne **true** ou **false**.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur retournée
 
 Itérateur bidirectionnel ciblant la position du premier élément de la plage qui ne satisfait pas la condition du prédicat.
 
@@ -5911,7 +5911,7 @@ pair<ForwardIterator1, ForwardIterator2> partition_copy(
     UnaryPredicate pred);
 ```
 
-### <a name="parameters"></a>Parameters
+### <a name="parameters"></a>Paramètres
 
 \ d' *exécution*
 Stratégie d’exécution à utiliser.
@@ -5933,7 +5933,7 @@ Condition à vérifier. Cette condition est fournie par un objet de fonction de 
 
 ### <a name="remarks"></a>Notes
 
-La fonction de modèle copie chaque élément `X` dans `[first,last)` à `*dest1++` si `pred(X)` a la valeur true, ou `*dest2++` dans le cas contraire. Elle retourne `pair<OutputIterator1, OutputIterator2>(dest1, dest2)`.
+La fonction de modèle copie chaque élément `X` dans `[first,last)` à `*dest1++` si `pred(X)` a la valeur true, ou `*dest2++` dans le cas contraire. Il retourne `pair<OutputIterator1, OutputIterator2>(dest1, dest2)`.
 
 ## <a name="partition_point"></a>partition_point
 
@@ -5947,7 +5947,7 @@ ForwardIterator partition_point(
     UnaryPredicate pred);
 ```
 
-### <a name="parameters"></a>Parameters
+### <a name="parameters"></a>Paramètres
 
 *premier*\
 `ForwardIterator` qui indique le début d’une plage dans laquelle rechercher une condition.
@@ -5958,7 +5958,7 @@ ForwardIterator partition_point(
 *\ prévu*
 Condition à vérifier. Cette condition est fournie par un objet de fonction de prédicat défini par l’utilisateur qui définit la condition à satisfaire par l’élément recherché. Un prédicat unaire accepte un seul argument et retourne **true** ou **false**.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur retournée
 
 Retourne un `ForwardIterator` qui fait référence au premier élément qui ne respecte pas la condition testée par *prédit*, ou retourne le *dernier* si aucun n’est trouvé.
 
@@ -5983,7 +5983,7 @@ void pop_heap(
     BinaryPredicate pred);
 ```
 
-### <a name="parameters"></a>Parameters
+### <a name="parameters"></a>Paramètres
 
 *premier*\
 Itérateur d’accès aléatoire ciblant la position du premier élément du tas.
@@ -6092,7 +6092,7 @@ bool prev_permutation(
     BinaryPredicate pred);
 ```
 
-### <a name="parameters"></a>Parameters
+### <a name="parameters"></a>Paramètres
 
 *premier*\
 Itérateur bidirectionnel ciblant la position du premier élément de la plage à permuter.
@@ -6103,7 +6103,7 @@ Itérateur bidirectionnel ciblant la position juste après le dernier élément 
 *\ prévu*
 Objet de fonction de prédicat défini par l’utilisateur qui définit le critère de comparaison à satisfaire par les éléments consécutifs dans l’ordre. Un prédicat binaire accepte deux arguments et retourne **true** quand la condition est satisfaite et **false** quand elle ne l’est pas.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur retournée
 
 **true** si le vue lexicographique de permutation précédent existe et a remplacé le classement d’origine de la plage ; Sinon, **false**, auquel cas le classement est transformé en permutation vue lexicographique la plus grande.
 
@@ -6267,7 +6267,7 @@ void push_heap(
     BinaryPredicate pred);
 ```
 
-### <a name="parameters"></a>Parameters
+### <a name="parameters"></a>Paramètres
 
 *premier*\
 Itérateur d’accès aléatoire ciblant la position du premier élément du tas.
@@ -6386,7 +6386,7 @@ ForwardIterator remove(
     const Type& value);
 ```
 
-### <a name="parameters"></a>Parameters
+### <a name="parameters"></a>Paramètres
 
 \ d' *exécution*
 Stratégie d’exécution à utiliser.
@@ -6400,7 +6400,7 @@ Itérateur de transfert se rapportant à la position située immédiatement apr�
 *value*\
 Valeur qui doit être supprimée de la plage.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur retournée
 
 Itérateur de transfert se rapportant à la nouvelle position de fin de la plage modifiée, située immédiatement après l'élément final de la séquence restante exempte de la valeur spécifiée.
 
@@ -6484,7 +6484,7 @@ ForwardIterator2 remove_copy(
     const Type& value);
 ```
 
-### <a name="parameters"></a>Parameters
+### <a name="parameters"></a>Paramètres
 
 \ d' *exécution*
 Stratégie d’exécution à utiliser.
@@ -6501,7 +6501,7 @@ Itérateur de sortie ciblant la position du premier élément dans la plage de d
 *value*\
 Valeur qui doit être supprimée de la plage.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur retournée
 
 Itérateur de transfert ciblant la nouvelle position de fin de la plage de destination, de suite après le dernier élément de la copie de la séquence restante exempte de la valeur spécifiée.
 
@@ -6582,7 +6582,7 @@ ForwardIterator2 remove_copy_if(
     UnaryPredicate pred);
 ```
 
-### <a name="parameters"></a>Parameters
+### <a name="parameters"></a>Paramètres
 
 \ d' *exécution*
 Stratégie d’exécution à utiliser.
@@ -6599,7 +6599,7 @@ Itérateur de sortie ciblant la position du premier élément dans la plage de d
 *\ prévu*
 Prédicat unaire qui doit être satisfait si la valeur d’un élément doit être remplacée.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur retournée
 
 Itérateur de transfert ciblant la nouvelle position de fin de la plage de destination, de suite après le dernier élément de la séquence restante exempte des éléments satisfaisant le prédicat.
 
@@ -6615,7 +6615,7 @@ L' `operator==` utilisé pour déterminer l'égalité entre des éléments doit 
 
 La complexité est linéaire : il existe des comparaisons (`last` - `first`) pour l’égalité et au maximum (`last` - `first`).
 
-Pour plus d’informations sur le comportement de ces fonctions, consultez [Itérateurs vérifiés](../standard-library/checked-iterators.md).
+Pour plus d’informations sur le comportement de ces fonctions, consultez [Checked Iterators](../standard-library/checked-iterators.md).
 
 ### <a name="example"></a>Exemple
 
@@ -6687,7 +6687,7 @@ ForwardIterator remove_if(
     UnaryPredicate pred);
 ```
 
-### <a name="parameters"></a>Parameters
+### <a name="parameters"></a>Paramètres
 
 \ d' *exécution*
 Stratégie d’exécution à utiliser.
@@ -6701,7 +6701,7 @@ Itérateur vers l’avant pointant sur la position juste après le dernier élé
 *\ prévu*
 Prédicat unaire qui doit être satisfait si la valeur d’un élément doit être remplacée.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur retournée
 
 Itérateur de transfert se rapportant à la nouvelle position de fin de la plage modifiée, située immédiatement après l'élément final de la séquence restante exempte de la valeur spécifiée.
 
@@ -6790,7 +6790,7 @@ void replace(
     const Type& newVal);
 ```
 
-### <a name="parameters"></a>Parameters
+### <a name="parameters"></a>Paramètres
 
 \ d' *exécution*
 Stratégie d’exécution à utiliser.
@@ -6879,7 +6879,7 @@ ForwardIterator2 replace_copy(
     const Type& newVal);
 ```
 
-### <a name="parameters"></a>Parameters
+### <a name="parameters"></a>Paramètres
 
 \ d' *exécution*
 Stratégie d’exécution à utiliser.
@@ -6899,7 +6899,7 @@ Ancienne valeur des éléments remplacés.
 \ *newVal*
 Nouvelle valeur assignée aux éléments ayant l’ancienne valeur.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur retournée
 
 Itérateur de sortie pointant vers la position située de suite après le dernier élément de la plage de destination dans laquelle la séquence d’éléments modifiée est copiée.
 
@@ -6994,7 +6994,7 @@ ForwardIterator2 replace_copy_if(
     const Type& value);
 ```
 
-### <a name="parameters"></a>Parameters
+### <a name="parameters"></a>Paramètres
 
 \ d' *exécution*
 Stratégie d’exécution à utiliser.
@@ -7014,7 +7014,7 @@ Prédicat unaire qui doit être satisfait si la valeur d’un élément doit êt
 *value*\
 Nouvelle valeur assignée aux éléments dont l’ancienne valeur satisfait au prédicat.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur retournée
 
 Itérateur de sortie pointant vers la position située de suite après le dernier élément de la plage de destination dans laquelle la séquence d’éléments modifiée est copiée.
 
@@ -7115,7 +7115,7 @@ void replace_if(
     const Type& value);
 ```
 
-### <a name="parameters"></a>Parameters
+### <a name="parameters"></a>Paramètres
 
 \ d' *exécution*
 Stratégie d’exécution à utiliser.
@@ -7207,7 +7207,7 @@ void reverse(
     BidirectionalIterator last);
 ```
 
-### <a name="parameters"></a>Parameters
+### <a name="parameters"></a>Paramètres
 
 \ d' *exécution*
 Stratégie d’exécution à utiliser.
@@ -7284,7 +7284,7 @@ ForwardIterator reverse_copy(
     ForwardIterator result);
 ```
 
-### <a name="parameters"></a>Parameters
+### <a name="parameters"></a>Paramètres
 
 \ d' *exécution*
 Stratégie d’exécution à utiliser.
@@ -7298,7 +7298,7 @@ Itérateur bidirectionnel pointant vers la position située de suite après le d
 \ de *résultats*
 Itérateur de sortie pointant vers la position du premier élément de la plage de destination dans laquelle les éléments sont copiés.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur retournée
 
 Itérateur de sortie pointant vers la position située de suite après le dernier élément de la plage de destination dans laquelle la séquence d’éléments modifiée est copiée.
 
@@ -7366,7 +7366,7 @@ ForwardIterator rotate(
     ForwardIterator last);
 ```
 
-### <a name="parameters"></a>Parameters
+### <a name="parameters"></a>Paramètres
 
 \ d' *exécution*
 Stratégie d’exécution à utiliser.
@@ -7482,7 +7482,7 @@ ForwardIterator2 rotate_copy(
     ForwardIterator2 result);
 ```
 
-### <a name="parameters"></a>Parameters
+### <a name="parameters"></a>Paramètres
 
 \ d' *exécution*
 Stratégie d’exécution à utiliser.
@@ -7499,7 +7499,7 @@ Itérateur vers l’avant ciblant la position située de suite après le dernier
 \ de *résultats*
 Itérateur de sortie qui traite la position du premier élément dans la plage de destination.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur retournée
 
 Itérateur de sortie ciblant la position située de suite après le dernier élément de la plage de destination.
 
@@ -7625,7 +7625,7 @@ ForwardIterator search(
     const Searcher& searcher);
 ```
 
-### <a name="parameters"></a>Parameters
+### <a name="parameters"></a>Paramètres
 
 \ d' *exécution*
 Stratégie d’exécution à utiliser.
@@ -7648,7 +7648,7 @@ Objet de fonction de prédicat défini par l'utilisateur qui définit la conditi
 \ de *recherche*
 Recherche qui encapsule le modèle à rechercher et l’algorithme de recherche à utiliser. Pour plus d’informations sur les recherches, consultez [default_searcher](default-searcher-class.md)classe, classe [boyer_moore_horspool_searcher](boyer-moore-horspool-searcher-class.md)et [classe boyer_moore_searcher](boyer-moore-searcher-class.md).
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur retournée
 
 Itérateur vers l’avant qui traite la position du premier élément de la première sous-séquence qui correspond à la séquence spécifiée ou qui est équivalente au sens spécifié par un prédicat binaire.
 
@@ -7797,7 +7797,7 @@ ForwardIterator search_n(
     BinaryPredicate pred);
 ```
 
-### <a name="parameters"></a>Parameters
+### <a name="parameters"></a>Paramètres
 
 \ d' *exécution*
 Stratégie d’exécution à utiliser.
@@ -7817,7 +7817,7 @@ Valeur des éléments de la séquence recherchée.
 *\ prévu*
 Objet de fonction de prédicat défini par l'utilisateur qui définit la condition à satisfaire si deux éléments sont à considérer comme équivalents. Un prédicat binaire accepte deux arguments et retourne **true** quand la condition est satisfaite et **false** quand elle ne l’est pas.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur retournée
 
 Itérateur vers l’avant qui traite la position du premier élément de la première sous-séquence qui correspond à la séquence spécifiée ou qui est équivalente au sens spécifié par un prédicat binaire.
 
@@ -7954,7 +7954,7 @@ ForwardIterator set_difference(
     Compare pred);
 ```
 
-### <a name="parameters"></a>Parameters
+### <a name="parameters"></a>Paramètres
 
 \ d' *exécution*
 Stratégie d’exécution à utiliser.
@@ -7977,7 +7977,7 @@ Itérateur de sortie ciblant la position du premier élément dans la plage de d
 *\ prévu*
 Objet de fonction de prédicat défini par l’utilisateur qui définit la logique selon laquelle un élément est inférieur à un autre. Le prédicat binaire accepte deux arguments et doit retourner **true** quand le premier élément est inférieur au deuxième et **false** dans le cas contraire.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur retournée
 
 Itérateur de sortie ciblant la position située de suite après le dernier élément de la plage de destination triée représentant la différence des deux plages sources.
 
@@ -7991,7 +7991,7 @@ Les plages sources triées doivent chacune être structurées comme condition pr
 
 L’opération est stable, car l’ordre relatif des éléments dans chaque plage est préservé dans la plage de destination. Les plages sources ne sont pas modifiées par l’algorithme merge.
 
-Les types de valeur des itérateurs d’entrée doivent être comparables en termes d’infériorité pour être classés. Ainsi, pour deux éléments donnés, il est possible de déterminer s’ils sont équivalents (dans le sens où ni l’un ni l’autre n’est inférieur à l’autre) ou si l’un est inférieur à l’autre. Cela entraîne le tri des éléments non équivalents. Quand il existe des éléments équivalents dans les deux plages sources, les éléments de la première plage précèdent ceux de la deuxième dans la plage de destination. Si les plages sources contiennent des éléments en double (de telle sorte qu’il y a plus d’éléments dans la première plage source que dans la seconde), la plage de destination contient le nombre d’occurrences supplémentaires de ces éléments que contient la première plage source par rapport à la deuxième.
+Les types de valeur des itérateurs d’entrée doivent être comparables en termes d’infériorité pour être classés. Ainsi, pour deux éléments donnés, il est possible de déterminer s’ils sont équivalents (dans le sens où ni l’un ni l’autre n’est inférieur à l’autre) ou si l’un est inférieur à l’autre. Cela entraîne le tri des éléments non équivalents. Quand il existe des éléments équivalents dans les deux plages sources, les éléments de la première plage précèdent ceux de la deuxième dans la plage de destination. Si les plages sources contiennent des éléments en double (de telle sorte qu’il y a plus d’éléments dans la première plage source que dans la seconde), la plage de destination contient le nombre d’occurrences supplémentaires de ces éléments que contient la première plage source par rapport à la deuxième.
 
 La complexité de l’algorithme est linéaire avec au maximum `2 * ((last1 - first1) - (last2 - first2)) - 1` comparaisons pour les plages sources non vides.
 
@@ -8156,7 +8156,7 @@ ForwardIterator set_intersection(
     Compare pred);
 ```
 
-### <a name="parameters"></a>Parameters
+### <a name="parameters"></a>Paramètres
 
 \ d' *exécution*
 Stratégie d’exécution à utiliser.
@@ -8179,7 +8179,7 @@ Itérateur de sortie ciblant la position du premier élément dans la plage de d
 *\ prévu*
 Objet de fonction de prédicat défini par l’utilisateur qui définit la logique selon laquelle un élément est inférieur à un autre. Le prédicat binaire accepte deux arguments et doit retourner **true** quand le premier élément est inférieur au deuxième et **false** dans le cas contraire.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur retournée
 
 Itérateur de sortie ciblant la position située de suite après le dernier élément de la plage de destination triée représentant l’intersection des deux plages sources.
 
@@ -8193,7 +8193,7 @@ Les plages sources triées doivent chacune être structurées comme condition pr
 
 L’opération est stable, car l’ordre relatif des éléments dans chaque plage est préservé dans la plage de destination. Les plages sources ne sont pas modifiées par l’algorithme.
 
-Les types de valeur des itérateurs d’entrée doivent être comparables en termes d’infériorité pour être classés. Ainsi, pour deux éléments donnés, il est possible de déterminer s’ils sont équivalents (dans le sens où ni l’un ni l’autre n’est inférieur à l’autre) ou si l’un est inférieur à l’autre. Cela entraîne le tri des éléments non équivalents. Quand il existe des éléments équivalents dans les deux plages sources, les éléments de la première plage précèdent ceux de la deuxième dans la plage de destination. Si les plages sources contiennent des éléments en double, la plage de destination contient le nombre maximal de ces éléments qui figurent dans les deux plages sources.
+Les types de valeur des itérateurs d’entrée doivent être comparables en termes d’infériorité pour être classés. Ainsi, pour deux éléments donnés, il est possible de déterminer s’ils sont équivalents (dans le sens où ni l’un ni l’autre n’est inférieur à l’autre) ou si l’un est inférieur à l’autre. Cela entraîne le tri des éléments non équivalents. Quand il existe des éléments équivalents dans les deux plages sources, les éléments de la première plage précèdent ceux de la deuxième dans la plage de destination. Si les plages sources contiennent des éléments en double, la plage de destination contient le nombre maximal de ces éléments qui figurent dans les deux plages sources.
 
 La complexité de l’algorithme est linéaire avec au maximum `2 * ((last1 - first1) + (last2 - first2)) - 1` comparaisons pour les plages sources non vides.
 
@@ -8354,7 +8354,7 @@ ForwardIterator set_symmetric_difference(
     Compare pred);
 ```
 
-### <a name="parameters"></a>Parameters
+### <a name="parameters"></a>Paramètres
 
 \ d' *exécution*
 Stratégie d’exécution à utiliser.
@@ -8377,7 +8377,7 @@ Itérateur de sortie ciblant la position du premier élément dans la plage de d
 *\ prévu*
 Objet de fonction de prédicat défini par l’utilisateur qui définit la logique selon laquelle un élément est inférieur à un autre. Le prédicat binaire accepte deux arguments et doit retourner **true** quand le premier élément est inférieur au deuxième et **false** dans le cas contraire.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur retournée
 
 Itérateur de sortie ciblant la position située de suite après le dernier élément de la plage de destination triée représentant la différence symétrique des deux plages sources.
 
@@ -8391,7 +8391,7 @@ Les plages sources triées doivent chacune être structurées comme condition pr
 
 L’opération est stable, car l’ordre relatif des éléments dans chaque plage est préservé dans la plage de destination. Les plages sources ne sont pas modifiées par l’algorithme merge.
 
-Les types de valeur des itérateurs d’entrée doivent être comparables en termes d’infériorité pour être classés. Ainsi, pour deux éléments donnés, il est possible de déterminer s’ils sont équivalents (dans le sens où ni l’un ni l’autre n’est inférieur à l’autre) ou si l’un est inférieur à l’autre. Cela entraîne le tri des éléments non équivalents. Quand il existe des éléments équivalents dans les deux plages sources, les éléments de la première plage précèdent ceux de la deuxième dans la plage de destination. Si les plages sources contiennent des éléments en double, la plage de destination contient la valeur absolue du nombre d’occurrences supplémentaires de ces éléments que contient l’une des plages sources par rapport à la deuxième.
+Les types de valeur des itérateurs d’entrée doivent être comparables en termes d’infériorité pour être classés. Ainsi, pour deux éléments donnés, il est possible de déterminer s’ils sont équivalents (dans le sens où ni l’un ni l’autre n’est inférieur à l’autre) ou si l’un est inférieur à l’autre. Cela entraîne le tri des éléments non équivalents. Quand il existe des éléments équivalents dans les deux plages sources, les éléments de la première plage précèdent ceux de la deuxième dans la plage de destination. Si les plages sources contiennent des éléments en double, la plage de destination contient la valeur absolue du nombre d’occurrences supplémentaires de ces éléments que contient l’une des plages sources par rapport à la deuxième.
 
 La complexité de l’algorithme est linéaire avec au maximum `2 * ((last1 - first1) - (last2 - first2)) - 1` comparaisons pour les plages sources non vides.
 
@@ -8556,7 +8556,7 @@ ForwardIterator set_union(
     Compare pred);
 ```
 
-### <a name="parameters"></a>Parameters
+### <a name="parameters"></a>Paramètres
 
 \ d' *exécution*
 Stratégie d’exécution à utiliser.
@@ -8579,7 +8579,7 @@ Itérateur de sortie ciblant la position du premier élément dans la plage de d
 *\ prévu*
 Objet de fonction de prédicat défini par l’utilisateur qui définit la logique selon laquelle un élément est inférieur à un autre. Le prédicat binaire accepte deux arguments et doit retourner **true** quand le premier élément est inférieur au deuxième et **false** dans le cas contraire.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur retournée
 
 Itérateur de sortie ciblant la position située de suite après le dernier élément de la plage de destination triée représentant l’union des deux plages sources.
 
@@ -8593,7 +8593,7 @@ Les plages sources triées doivent chacune être structurées comme condition pr
 
 L’opération est stable, car l’ordre relatif des éléments dans chaque plage est préservé dans la plage de destination. Les plages sources ne sont pas modifiées par l’algorithme `merge`.
 
-Les types de valeur des itérateurs d’entrée doivent être comparables en termes d’infériorité pour être classés. Ainsi, pour deux éléments donnés, il est possible de déterminer s’ils sont équivalents (dans le sens où ni l’un ni l’autre n’est inférieur à l’autre) ou si l’un est inférieur à l’autre. Cela entraîne le tri des éléments non équivalents. Quand il existe des éléments équivalents dans les deux plages sources, les éléments de la première plage précèdent ceux de la deuxième dans la plage de destination. Si les plages sources contiennent des éléments en double, la plage de destination contient le nombre maximal de ces éléments qui figurent dans les deux plages sources.
+Les types de valeur des itérateurs d’entrée doivent être comparables en termes d’infériorité pour être classés. Ainsi, pour deux éléments donnés, il est possible de déterminer s’ils sont équivalents (dans le sens où ni l’un ni l’autre n’est inférieur à l’autre) ou si l’un est inférieur à l’autre. Cela entraîne le tri des éléments non équivalents. Quand il existe des éléments équivalents dans les deux plages sources, les éléments de la première plage précèdent ceux de la deuxième dans la plage de destination. Si les plages sources contiennent des éléments en double, la plage de destination contient le nombre maximal de ces éléments qui figurent dans les deux plages sources.
 
 La complexité de l’algorithme est linéaire avec au maximum `2 * ((last1 - first1) - (last2 - first2)) - 1` comparaisons.
 
@@ -8728,7 +8728,7 @@ void shuffle(
     UniformRandomNumberGenerator&& gen);
 ```
 
-### <a name="parameters"></a>Parameters
+### <a name="parameters"></a>Paramètres
 
 *premier*\
 Itérateur sur le premier élément de la plage à lire de façon aléatoire, compris. Doit remplir les conditions de `RandomAccessIterator` et `ValueSwappable`.
@@ -8773,7 +8773,7 @@ void sort(
     Compare pred);
 ```
 
-### <a name="parameters"></a>Parameters
+### <a name="parameters"></a>Paramètres
 
 \ d' *exécution*
 Stratégie d’exécution à utiliser.
@@ -8880,7 +8880,7 @@ void sort_heap(
     Compare pred);
 ```
 
-### <a name="parameters"></a>Parameters
+### <a name="parameters"></a>Paramètres
 
 *premier*\
 Itérateur d’accès aléatoire ciblant la position du premier élément du tas cible.
@@ -8982,7 +8982,7 @@ BidirectionalIterator stable_partition(
     UnaryPredicate pred);
 ```
 
-### <a name="parameters"></a>Parameters
+### <a name="parameters"></a>Paramètres
 
 \ d' *exécution*
 Stratégie d’exécution à utiliser.
@@ -8996,7 +8996,7 @@ Itérateur bidirectionnel ciblant la position juste après le dernier élément 
 *\ prévu*
 Objet de fonction de prédicat défini par l’utilisateur qui définit la condition à satisfaire si un élément doit être classé. Un prédicat unaire accepte un seul argument et retourne **true** s’il est satisfait ou **false** s’il n’est pas respecté.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur retournée
 
 Itérateur bidirectionnel ciblant la position du premier élément de la plage qui ne satisfait pas la condition du prédicat.
 
@@ -9083,7 +9083,7 @@ void stable_sort(
     Compare pred);
 ```
 
-### <a name="parameters"></a>Parameters
+### <a name="parameters"></a>Paramètres
 
 \ d' *exécution*
 Stratégie d’exécution à utiliser.
@@ -9187,7 +9187,7 @@ void swap(
     Type (& right)[N]);
 ```
 
-### <a name="parameters"></a>Parameters
+### <a name="parameters"></a>Paramètres
 
 \ *gauche*
 Pour le premier remplacement, premier objet dont le contenu est échangé. Pour le deuxième remplacement, premier tableau d’objets dont le contenu est échangé.
@@ -9274,7 +9274,7 @@ ForwardIterator2 swap_ranges(
     ForwardIterator2 first2);
 ```
 
-### <a name="parameters"></a>Parameters
+### <a name="parameters"></a>Paramètres
 
 \ d' *exécution*
 Stratégie d’exécution à utiliser.
@@ -9288,7 +9288,7 @@ Itérateur vers l’avant pointant juste après la dernière position de la prem
 *first2*\
 Itérateur vers l’avant pointant sur la première position de la deuxième plage dont les éléments doivent être échangés.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur retournée
 
 Itérateur vers l’avant pointant juste après la dernière position de la deuxième plage dont les éléments doivent être échangés.
 
@@ -9397,7 +9397,7 @@ ForwardIterator transform(
     BinaryOperation binary_op);
 ```
 
-### <a name="parameters"></a>Parameters
+### <a name="parameters"></a>Paramètres
 
 \ d' *exécution*
 Stratégie d’exécution à utiliser.
@@ -9417,7 +9417,7 @@ Itérateur de sortie qui traite la position du premier élément dans la plage d
 \ *Func*
 Objet de fonction unaire défini par l’utilisateur utilisé dans la première version de l’algorithme appliqué à chaque élément de la première plage source, ou objet de fonction binaire défini par l’utilisateur utilisé dans la deuxième version de l’algorithme appliqué par paire, dans un ordre vers l’avant, aux deux plages sources.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur retournée
 
 Itérateur de sortie qui traite la position située immédiatement après le dernier élément de la plage de destination qui reçoit les éléments de sortie transformés par l'objet de fonction.
 
@@ -9545,7 +9545,7 @@ ForwardIterator unique(
     BinaryPredicate pred);
 ```
 
-### <a name="parameters"></a>Parameters
+### <a name="parameters"></a>Paramètres
 
 \ d' *exécution*
 Stratégie d’exécution à utiliser.
@@ -9559,7 +9559,7 @@ Itérateur vers l’avant ciblant la position juste après le dernier élément 
 *\ prévu*
 Objet de fonction de prédicat défini par l'utilisateur qui définit la condition à satisfaire si deux éléments sont à considérer comme équivalents. Un prédicat binaire accepte deux arguments et retourne **true** quand la condition est satisfaite et **false** quand elle ne l’est pas.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur retournée
 
 Itérateur vers l’avant à la fin de la séquence modifiée qui ne contient aucun doublon consécutif, ciblant la position juste après le dernier élément non supprimé.
 
@@ -9698,7 +9698,7 @@ ForwardIterator2 unique_copy(ExecutionPolicy&& exec,
     BinaryPredicate pred);
 ```
 
-### <a name="parameters"></a>Parameters
+### <a name="parameters"></a>Paramètres
 
 \ d' *exécution*
 Stratégie d’exécution à utiliser.
@@ -9715,7 +9715,7 @@ Itérateur de sortie ciblant la position du premier élément dans la plage de d
 *\ prévu*
 Objet de fonction de prédicat défini par l'utilisateur qui définit la condition à satisfaire si deux éléments sont à considérer comme équivalents. Un prédicat binaire accepte deux arguments et retourne **true** quand la condition est satisfaite et **false** quand elle ne l’est pas.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur retournée
 
 Itérateur de sortie ciblant la position située de suite après le dernier élément dans la plage de destination recevant la copie avec suppression des doublons consécutifs.
 
@@ -9820,7 +9820,7 @@ ForwardIterator upper_bound(
     Compare pred);
 ```
 
-### <a name="parameters"></a>Parameters
+### <a name="parameters"></a>Paramètres
 
 *premier*\
 Position du premier élément de la plage dans laquelle effectuer la recherche.
@@ -9834,7 +9834,7 @@ Valeur dans la plage ordonnée qui doit être dépassée par la valeur de l’é
 *\ prévu*
 Objet de fonction de prédicat de comparaison défini par l’utilisateur qui définit le sens dans lequel un élément est inférieur à un autre. Un prédicat de comparaison prend deux arguments et retourne la **valeur true** lorsque la valeur est satisfaite et **false** lorsqu’elle n’est pas satisfaite.
 
-### <a name="return-value"></a>Valeur de retour
+### <a name="return-value"></a>Valeur retournée
 
 Itérateur vers l’avant ciblant la position du premier élément ayant une valeur supérieure à une valeur spécifiée.
 

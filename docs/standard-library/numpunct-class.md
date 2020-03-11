@@ -31,11 +31,11 @@ helpviewer_keywords:
 - std::numpunct [C++], truename
 ms.assetid: 73fb93cc-ac11-4c98-987c-bfa6267df596
 ms.openlocfilehash: 07285f5c014db1ddf419c372913cac0364538a55
-ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
+ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/21/2019
-ms.locfileid: "72689219"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78856522"
 ---
 # <a name="numpunct-class"></a>numpunct, classe
 
@@ -50,7 +50,7 @@ class numpunct : public locale::facet;
 
 ### <a name="parameters"></a>Paramètres
 
-*CharType* \
+*CharType*\
 Type utilisé dans un programme pour encoder des caractères dans des paramètres régionaux spécifiques.
 
 ## <a name="remarks"></a>Notes
@@ -63,14 +63,14 @@ Comme avec n'importe quelle facette de paramètres régionaux, l'ID d'objet stat
 |-|-|
 |[numpunct](#numpunct)|Constructeur des objets de type `numpunct`.|
 
-### <a name="typedefs"></a>Typedef
+### <a name="typedefs"></a>Typedefs
 
 |Nom de type|Description|
 |-|-|
 |[char_type](#char_type)|Type utilisé pour décrire un caractère utilisé par des paramètres régionaux.|
 |[string_type](#string_type)|Type qui décrit une chaîne contenant des caractères de type `CharType`.|
 
-### <a name="member-functions"></a>Fonctions membres
+### <a name="member-functions"></a>Fonctions Membre
 
 |Fonction membre|Description|
 |-|-|
@@ -85,9 +85,9 @@ Comme avec n'importe quelle facette de paramètres régionaux, l'ID d'objet stat
 |[thousands_sep](#thousands_sep)|Retourne un élément spécifique aux paramètres régionaux devant être utilisé comme séparateur des milliers.|
 |[truename](#truename)|Retourne une chaîne à utiliser comme représentation textuelle de la valeur **true**.|
 
-## <a name="requirements"></a>spécifications
+## <a name="requirements"></a>Spécifications
 
-**En-tête :** \<locale>
+**En-tête :** \<paramètres régionaux >
 
 **Espace de noms :** std
 
@@ -345,8 +345,8 @@ explicit numpunct(size_t _Refs = 0);
 
 ### <a name="parameters"></a>Paramètres
 
-*_Refs* \
-Valeur entière utilisée pour spécifier le type de gestion de mémoire pour l’objet.
+*_Refs*\
+Valeur entière qui sert à spécifier le type de gestion de la mémoire pour l’objet.
 
 ### <a name="remarks"></a>Notes
 

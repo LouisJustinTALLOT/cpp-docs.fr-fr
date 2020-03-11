@@ -107,11 +107,11 @@ helpviewer_keywords:
 - CFrameWnd [MFC], rectDefault
 ms.assetid: e2220aba-5bf4-4002-b960-fbcafcad01f1
 ms.openlocfilehash: d2e043c8c9f4ad86636cd0e9ea7d695826b6c8fb
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69506958"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78866431"
 ---
 # <a name="cframewnd-class"></a>CFrameWnd (classe)
 
@@ -127,77 +127,77 @@ class CFrameWnd : public CWnd
 
 ### <a name="public-constructors"></a>Constructeurs publics
 
-|Nom|Description|
+|Name|Description|
 |----------|-----------------|
-|[CFrameWnd::CFrameWnd](#cframewnd)|Construit un objet `CFrameWnd`.|
+|[CFrameWnd :: CFrameWnd](#cframewnd)|Construit un objet `CFrameWnd`.|
 
 ### <a name="public-methods"></a>M&#233;thodes publiques
 
-|Nom|Description|
+|Name|Description|
 |----------|-----------------|
-|[CFrameWnd::ActivateFrame](#activateframe)|Rend le frame visible et accessible à l’utilisateur.|
-|[CFrameWnd::BeginModalState](#beginmodalstate)|Définit la fenêtre frame sur modale.|
-|[CFrameWnd::Create](#create)|Appelez pour créer et initialiser la fenêtre frame Windows associée à l' `CFrameWnd` objet.|
-|[CFrameWnd::CreateView](#createview)|Crée une vue dans un frame qui n’est pas dérivé `CView`de.|
-|[CFrameWnd::DockControlBar](#dockcontrolbar)|Ancre une barre de contrôle.|
-|[CFrameWnd::EnableDocking](#enabledocking)|Permet à une barre de contrôle d’être ancrée.|
-|[CFrameWnd::EndModalState](#endmodalstate)|Met fin à l’État modal de la fenêtre frame. Active toutes les fenêtres désactivées `BeginModalState`par.|
-|[CFrameWnd::FloatControlBar](#floatcontrolbar)|Flotte une barre de contrôle.|
-|[CFrameWnd::GetActiveDocument](#getactivedocument)|Retourne l’objet `CDocument` actif.|
-|[CFrameWnd::GetActiveFrame](#getactiveframe)|Retourne l’objet `CFrameWnd` actif.|
-|[CFrameWnd::GetActiveView](#getactiveview)|Retourne l’objet `CView` actif.|
-|[CFrameWnd::GetControlBar](#getcontrolbar)|Récupère la barre de contrôle.|
-|[CFrameWnd::GetDockState](#getdockstate)|Récupère l’état d’ancrage d’une fenêtre frame.|
-|[CFrameWnd::GetMenuBarState](#getmenubarstate)|Récupère l’état d’affichage du menu dans l’application MFC actuelle.|
-|[CFrameWnd::GetMenuBarVisibility](#getmenubarvisibility)|Indique si le comportement par défaut du menu dans l’application MFC actuelle est soit masqué, soit visible.|
-|[CFrameWnd::GetMessageBar](#getmessagebar)|Retourne un pointeur vers la barre d’État qui appartient à la fenêtre frame.|
-|[CFrameWnd::GetMessageString](#getmessagestring)|Récupère le message correspondant à un ID de commande.|
-|[CFrameWnd::GetTitle](#gettitle)|Récupère le titre de la barre de contrôle associée.|
-|[CFrameWnd::InitialUpdateFrame](#initialupdateframe)|Entraîne l' `OnInitialUpdate` appel de la fonction membre appartenant à toutes les vues dans la fenêtre frame.|
-|[CFrameWnd::InModalState](#inmodalstate)|Retourne une valeur indiquant si une fenêtre frame est dans un État modal.|
-|[CFrameWnd::IsTracking](#istracking)|Détermine si la barre de fractionnement est en cours de déplacement.|
-|[CFrameWnd::LoadAccelTable](#loadacceltable)|Appelez pour charger une table d’accélérateurs.|
-|[CFrameWnd::LoadBarState](#loadbarstate)|Appelez pour restaurer les paramètres de la barre de contrôle.|
-|[CFrameWnd::LoadFrame](#loadframe)|Appelez pour créer dynamiquement une fenêtre frame à partir d’informations sur les ressources.|
-|[CFrameWnd::NegotiateBorderSpace](#negotiateborderspace)|Négocie l’espace de bordure dans la fenêtre frame.|
-|[CFrameWnd::OnBarCheck](#onbarcheck)|Appelé chaque fois qu’une action est exécutée sur la barre de contrôle spécifiée.|
-|[CFrameWnd::OnContextHelp](#oncontexthelp)|Gère l’aide de MAJ + F1 pour les éléments sur place.|
-|[CFrameWnd::OnSetPreviewMode](#onsetpreviewmode)|Définit la fenêtre frame principale de l’application dans et hors du mode d’aperçu avant impression.|
-|[CFrameWnd::OnUpdateControlBarMenu](#onupdatecontrolbarmenu)|Appelé par le Framework lorsque le menu associé est mis à jour.|
-|[CFrameWnd::RecalcLayout](#recalclayout)|Repositionne les barres de contrôles de `CFrameWnd` l’objet.|
-|[CFrameWnd::SaveBarState](#savebarstate)|Appelez pour enregistrer les paramètres de la barre de contrôle.|
-|[CFrameWnd::SetActivePreviewView](#setactivepreviewview)|Désigne la vue spécifiée comme étant la vue active de la version préliminaire complète.|
-|[CFrameWnd::SetActiveView](#setactiveview)|Définit l’objet `CView` actif.|
-|[CFrameWnd::SetDockState](#setdockstate)|Appelez pour ancrer la fenêtre frame dans la fenêtre principale.|
-|[CFrameWnd::SetMenuBarState](#setmenubarstate)|Définit l’état d’affichage du menu dans l’application MFC actuelle sur masqué ou affiché.|
-|[CFrameWnd::SetMenuBarVisibility](#setmenubarvisibility)|Définit le comportement par défaut du menu dans l’application MFC actuelle pour qu’il soit masqué ou visible.|
-|[CFrameWnd::SetMessageText](#setmessagetext)|Définit le texte d’une barre d’état standard.|
-|[CFrameWnd::SetProgressBarPosition](#setprogressbarposition)|Définit la position actuelle pour la barre de progression Windows 7 affichée sur la barre des tâches.|
-|[CFrameWnd::SetProgressBarRange](#setprogressbarrange)|Définit la plage de la barre de progression Windows 7 affichée sur la barre des tâches.|
-|[CFrameWnd::SetProgressBarState](#setprogressbarstate)|Définit le type et l’état de l’indicateur de progression affiché sur un bouton de la barre des tâches.|
-|[CFrameWnd::SetTaskbarOverlayIcon](#settaskbaroverlayicon)|Surchargé. Applique une superposition à un bouton de la barre des tâches pour indiquer l’état de l’application ou une notification à l’utilisateur.|
-|[CFrameWnd::SetTitle](#settitle)|Définit le titre de la barre de contrôle associée.|
-|[CFrameWnd::ShowControlBar](#showcontrolbar)|Appelez pour afficher la barre de contrôle.|
-|[CFrameWnd::ShowOwnedWindows](#showownedwindows)|Affiche toutes les fenêtres qui sont des descendants `CFrameWnd` de l’objet.|
+|[CFrameWnd :: ActivateFrame](#activateframe)|Rend le frame visible et accessible à l’utilisateur.|
+|[CFrameWnd :: BeginModalState](#beginmodalstate)|Définit la fenêtre frame sur modale.|
+|[CFrameWnd :: Create](#create)|Appelez pour créer et initialiser la fenêtre frame Windows associée à l’objet `CFrameWnd`.|
+|[CFrameWnd :: CreateView](#createview)|Crée une vue dans un frame qui n’est pas dérivé de `CView`.|
+|[CFrameWnd ::D ockControlBar](#dockcontrolbar)|Ancre une barre de contrôle.|
+|[CFrameWnd :: EnableDocking](#enabledocking)|Permet à une barre de contrôle d’être ancrée.|
+|[CFrameWnd :: EndModalState](#endmodalstate)|Met fin à l’État modal de la fenêtre frame. Active toutes les fenêtres désactivées par `BeginModalState`.|
+|[CFrameWnd :: FloatControlBar](#floatcontrolbar)|Flotte une barre de contrôle.|
+|[CFrameWnd :: GetActiveDocument](#getactivedocument)|Retourne l’objet de `CDocument` actif.|
+|[CFrameWnd :: GetActiveFrame](#getactiveframe)|Retourne l’objet de `CFrameWnd` actif.|
+|[CFrameWnd :: GetActiveView](#getactiveview)|Retourne l’objet de `CView` actif.|
+|[CFrameWnd :: GetControlBar](#getcontrolbar)|Récupère la barre de contrôle.|
+|[CFrameWnd :: GetDockState](#getdockstate)|Récupère l’état d’ancrage d’une fenêtre frame.|
+|[CFrameWnd :: GetMenuBarState](#getmenubarstate)|Récupère l’état d’affichage du menu dans l’application MFC actuelle.|
+|[CFrameWnd :: GetMenuBarVisibility](#getmenubarvisibility)|Indique si le comportement par défaut du menu dans l’application MFC actuelle est soit masqué, soit visible.|
+|[CFrameWnd :: GetMessageBar](#getmessagebar)|Retourne un pointeur vers la barre d’État qui appartient à la fenêtre frame.|
+|[CFrameWnd :: GetMessageString](#getmessagestring)|Récupère le message correspondant à un ID de commande.|
+|[CFrameWnd :: GetTitle](#gettitle)|Récupère le titre de la barre de contrôle associée.|
+|[CFrameWnd :: InitialUpdateFrame](#initialupdateframe)|Provoque l’appel de la fonction membre `OnInitialUpdate` appartenant à toutes les vues dans la fenêtre frame.|
+|[CFrameWnd :: InModalState](#inmodalstate)|Retourne une valeur indiquant si une fenêtre frame est dans un État modal.|
+|[CFrameWnd :: IsTracking](#istracking)|Détermine si la barre de fractionnement est en cours de déplacement.|
+|[CFrameWnd :: LoadAccelTable](#loadacceltable)|Appelez pour charger une table d’accélérateurs.|
+|[CFrameWnd :: LoadBarState](#loadbarstate)|Appelez pour restaurer les paramètres de la barre de contrôle.|
+|[CFrameWnd :: LoadFrame](#loadframe)|Appelez pour créer dynamiquement une fenêtre frame à partir d’informations sur les ressources.|
+|[CFrameWnd :: NegotiateBorderSpace](#negotiateborderspace)|Négocie l’espace de bordure dans la fenêtre frame.|
+|[CFrameWnd :: OnBarCheck](#onbarcheck)|Appelé chaque fois qu’une action est exécutée sur la barre de contrôle spécifiée.|
+|[CFrameWnd :: OnContextHelp](#oncontexthelp)|Gère l’aide de MAJ + F1 pour les éléments sur place.|
+|[CFrameWnd :: OnSetPreviewMode](#onsetpreviewmode)|Définit la fenêtre frame principale de l’application dans et hors du mode d’aperçu avant impression.|
+|[CFrameWnd :: OnUpdateControlBarMenu](#onupdatecontrolbarmenu)|Appelé par le Framework lorsque le menu associé est mis à jour.|
+|[CFrameWnd :: RecalcLayout](#recalclayout)|Repositionne les barres de contrôles de l’objet `CFrameWnd`.|
+|[CFrameWnd :: SaveBarState](#savebarstate)|Appelez pour enregistrer les paramètres de la barre de contrôle.|
+|[CFrameWnd :: SetActivePreviewView](#setactivepreviewview)|Désigne la vue spécifiée comme étant la vue active de la version préliminaire complète.|
+|[CFrameWnd :: SetActiveView](#setactiveview)|Définit l’objet Active `CView`.|
+|[CFrameWnd :: SetDockState](#setdockstate)|Appelez pour ancrer la fenêtre frame dans la fenêtre principale.|
+|[CFrameWnd :: SetMenuBarState](#setmenubarstate)|Définit l’état d’affichage du menu dans l’application MFC actuelle sur masqué ou affiché.|
+|[CFrameWnd :: SetMenuBarVisibility](#setmenubarvisibility)|Définit le comportement par défaut du menu dans l’application MFC actuelle pour qu’il soit masqué ou visible.|
+|[CFrameWnd :: SetMessageText](#setmessagetext)|Définit le texte d’une barre d’état standard.|
+|[CFrameWnd :: SetProgressBarPosition](#setprogressbarposition)|Définit la position actuelle pour la barre de progression Windows 7 affichée sur la barre des tâches.|
+|[CFrameWnd :: SetProgressBarRange](#setprogressbarrange)|Définit la plage de la barre de progression Windows 7 affichée sur la barre des tâches.|
+|[CFrameWnd :: SetProgressBarState](#setprogressbarstate)|Définit le type et l’état de l’indicateur de progression affiché sur un bouton de la barre des tâches.|
+|[CFrameWnd :: SetTaskbarOverlayIcon](#settaskbaroverlayicon)|Surchargé. Applique une superposition à un bouton de la barre des tâches pour indiquer l’état de l’application ou une notification à l’utilisateur.|
+|[CFrameWnd :: SetTitle](#settitle)|Définit le titre de la barre de contrôle associée.|
+|[CFrameWnd :: ShowControlBar](#showcontrolbar)|Appelez pour afficher la barre de contrôle.|
+|[CFrameWnd :: ShowOwnedWindows](#showownedwindows)|Affiche toutes les fenêtres qui sont des descendants de l’objet `CFrameWnd`.|
 
 ### <a name="protected-methods"></a>Méthodes protégées
 
-|Nom|Description|
+|Name|Description|
 |----------|-----------------|
-|[CFrameWnd::OnCreateClient](#oncreateclient)|Crée une fenêtre cliente pour le frame.|
-|[CFrameWnd::OnHideMenuBar](#onhidemenubar)|Appelé avant que le menu de l’application MFC actuelle soit masqué.|
-|[CFrameWnd::OnShowMenuBar](#onshowmenubar)|Appelé avant l’affichage du menu dans l’application MFC actuelle.|
+|[CFrameWnd :: OnCreateClient](#oncreateclient)|Crée une fenêtre cliente pour le frame.|
+|[CFrameWnd :: OnHideMenuBar](#onhidemenubar)|Appelé avant que le menu de l’application MFC actuelle soit masqué.|
+|[CFrameWnd :: OnShowMenuBar](#onshowmenubar)|Appelé avant l’affichage du menu dans l’application MFC actuelle.|
 
-### <a name="public-data-members"></a>Membres de données publics
+### <a name="public-data-members"></a>Membres de données publiques
 
-|Nom|Description|
+|Name|Description|
 |----------|-----------------|
-|[CFrameWnd::m_bAutoMenuEnable](#m_bautomenuenable)|Contrôle la fonctionnalité d’activation et de désactivation automatique pour les éléments de menu.|
-|[CFrameWnd::rectDefault](#rectdefault)|Transmettez cette `CRect` valeur statique en tant que paramètre `CFrameWnd` lors de la création d’un objet pour permettre aux fenêtres de choisir la taille et la position initiales de la fenêtre.|
+|[CFrameWnd :: m_bAutoMenuEnable](#m_bautomenuenable)|Contrôle la fonctionnalité d’activation et de désactivation automatique pour les éléments de menu.|
+|[CFrameWnd :: rectDefault](#rectdefault)|Transmettez ce `CRect` statique en tant que paramètre lors de la création d’un objet `CFrameWnd` pour permettre à Windows de choisir la taille et la position initiales de la fenêtre.|
 
 ## <a name="remarks"></a>Notes
 
-Pour créer une fenêtre frame utile pour votre application, dérivez une `CFrameWnd`classe de. Ajoutez des variables membres à la classe dérivée pour stocker des données spécifiques à votre application. Implémentez des fonctions membres de gestionnaire de messages et une table des messages dans la classe dérivée pour préciser ce qu'il advient quand des messages sont dirigés vers la fenêtre.
+Pour créer une fenêtre frame utile pour votre application, dérivez une classe de `CFrameWnd`. Ajoutez des variables membres à la classe dérivée pour stocker des données spécifiques à votre application. Implémentez des fonctions membres de gestionnaire de messages et une table des messages dans la classe dérivée pour préciser ce qu'il advient quand des messages sont dirigés vers la fenêtre.
 
 Il existe trois façons de construire une fenêtre frame :
 
@@ -207,41 +207,41 @@ Il existe trois façons de construire une fenêtre frame :
 
 - Créez-le indirectement à l’aide d’un modèle de document.
 
-Avant d’appeler `Create` ou `LoadFrame`, vous devez construire l’objet de fenêtre frame sur le tas à l’aide C++ de l’opérateur **New** . Avant d' `Create`appeler, vous pouvez également inscrire une classe de fenêtre à l’aide de la fonction globale [AfxRegisterWndClass](../../mfc/reference/application-information-and-management.md#afxregisterwndclass) pour définir les styles de l’icône et de la classe du frame.
+Avant d’appeler `Create` ou `LoadFrame`, vous devez construire l’objet de fenêtre frame sur le tas à l’aide C++ de l’opérateur **New** . Avant d’appeler `Create`, vous pouvez également inscrire une classe de fenêtre à l’aide de la fonction globale [AfxRegisterWndClass](../../mfc/reference/application-information-and-management.md#afxregisterwndclass) pour définir les styles de l’icône et de la classe pour le frame.
 
-Utilisez la `Create` fonction membre pour passer les paramètres de création du frame comme arguments immédiats.
+Utilisez la fonction membre `Create` pour passer les paramètres de création du frame en tant qu’arguments immédiats.
 
-`LoadFrame`requiert moins d’arguments `Create`que et récupère à la place la plupart de ses valeurs par défaut des ressources, y compris la légende, l’icône, la table d’accélérateur et le menu du frame. Pour être accessible par `LoadFrame`, toutes ces ressources doivent avoir le même ID de ressource (par exemple, IDR_MAINFRAME).
+`LoadFrame` requiert moins d’arguments que `Create`et récupère à la place la plupart de ses valeurs par défaut à partir des ressources, notamment la légende, l’icône, la table d’accélérateur et le menu du frame. Pour être accessible par `LoadFrame`, toutes ces ressources doivent avoir le même ID de ressource (par exemple, IDR_MAINFRAME).
 
-Lorsqu’un `CFrameWnd` objet contient des vues et des documents, ceux-ci sont créés indirectement par le Framework plutôt que directement par le programmeur. L' `CDocTemplate` objet orchestre la création du frame, la création des vues conteneur et la connexion des vues au document approprié. Les paramètres du `CDocTemplate` constructeur spécifient le `CRuntimeClass` des trois classes impliquées (document, Frame et vue). Un `CRuntimeClass` objet est utilisé par l’infrastructure pour créer dynamiquement des frames lorsqu’ils sont spécifiés par l’utilisateur (par exemple, à l’aide de la commande fichier nouveau ou de la fenêtre interface multidocument (MDI) nouvelle commande).
+Quand un objet `CFrameWnd` contient des vues et des documents, il est créé indirectement par le Framework plutôt que directement par le programmeur. L’objet `CDocTemplate` orchestre la création du frame, la création des vues conteneur et la connexion des vues au document approprié. Les paramètres du constructeur `CDocTemplate` spécifient le `CRuntimeClass` des trois classes impliquées (document, Frame et vue). Un objet `CRuntimeClass` est utilisé par l’infrastructure pour créer dynamiquement des frames lorsqu’ils sont spécifiés par l’utilisateur (par exemple, à l’aide de la commande fichier nouveau ou de la fenêtre interface multidocument (MDI) nouvelle).
 
-Une classe de fenêtre frame dérivée `CFrameWnd` de doit être déclarée avec DECLARE_DYNCREATE pour que le mécanisme RUNTIME_CLASS ci-dessus fonctionne correctement.
+Une classe de fenêtre frame dérivée de `CFrameWnd` doit être déclarée avec DECLARE_DYNCREATE afin que le mécanisme de RUNTIME_CLASS ci-dessus fonctionne correctement.
 
-Un `CFrameWnd` contient des implémentations par défaut pour exécuter les fonctions suivantes d’une fenêtre principale dans une application classique pour Windows :
+Une `CFrameWnd` contient des implémentations par défaut pour exécuter les fonctions suivantes d’une fenêtre principale dans une application classique pour Windows :
 
-- Une `CFrameWnd` fenêtre frame effectue le suivi d’une vue actuellement active qui est indépendante de la fenêtre active de Windows ou du focus d’entrée actuel. Lorsque le frame est réactivé, la vue active est notifiée en appelant `CView::OnActivateView`.
+- Une fenêtre frame `CFrameWnd` effectue le suivi d’une vue actuellement active qui est indépendante de la fenêtre active de Windows ou du focus d’entrée actuel. Lorsque le frame est réactivé, la vue active est notifiée en appelant `CView::OnActivateView`.
 
-- Les messages de commande et de nombreux messages de notification de frame courants, y `OnSetFocus`compris `OnHScroll`ceux qui `OnVScroll` sont gérés `CWnd`par les fonctions, et de `CFrameWnd` , sont délégués par une fenêtre frame à la vue actuellement active.
+- Les messages de commande et de nombreux messages de notification de frame courants, y compris ceux qui sont gérés par les fonctions `OnSetFocus`, `OnHScroll`et `OnVScroll` de `CWnd`, sont délégués par une fenêtre frame `CFrameWnd` à la vue actuellement active.
 
 - La vue actuellement active (ou la fenêtre frame enfant MDI active dans le cas d’un frame MDI) peut déterminer la légende de la fenêtre frame. Cette fonctionnalité peut être désactivée en désactivant le bit de style FWS_ADDTOTITLE de la fenêtre frame.
 
-- Une `CFrameWnd` fenêtre frame gère le positionnement des barres de contrôles, des vues et d’autres fenêtres enfants dans la zone cliente de la fenêtre frame. Une fenêtre frame effectue également une mise à jour du temps d’inactivité de la barre d’outils et d’autres boutons de la barre de contrôle. Une `CFrameWnd` fenêtre frame possède également des implémentations par défaut de commandes pour activer et désactiver la barre d’outils et la barre d’État.
+- Une fenêtre frame `CFrameWnd` gère le positionnement des barres de contrôles, des vues et d’autres fenêtres enfants dans la zone cliente de la fenêtre frame. Une fenêtre frame effectue également une mise à jour du temps d’inactivité de la barre d’outils et d’autres boutons de la barre de contrôle. Une fenêtre frame `CFrameWnd` possède également des implémentations par défaut de commandes pour activer/désactiver la barre d’outils et la barre d’État.
 
-- Une `CFrameWnd` fenêtre frame gère la barre de menus principale. Lorsqu’un menu contextuel s’affiche, la fenêtre frame utilise le mécanisme UPDATE_COMMAND_UI pour déterminer les éléments de menu qui doivent être activés, désactivés ou activés. Lorsque l’utilisateur sélectionne un élément de menu, la fenêtre frame met à jour la barre d’État avec la chaîne de message de cette commande.
+- Une fenêtre frame `CFrameWnd` gère la barre de menus principale. Lorsqu’un menu contextuel s’affiche, la fenêtre frame utilise le mécanisme UPDATE_COMMAND_UI pour déterminer les éléments de menu qui doivent être activés, désactivés ou activés. Lorsque l’utilisateur sélectionne un élément de menu, la fenêtre frame met à jour la barre d’État avec la chaîne de message de cette commande.
 
-- Une `CFrameWnd` fenêtre frame a une table d’accélérateurs facultative qui convertit automatiquement les accélérateurs clavier.
+- Une fenêtre frame de `CFrameWnd` a une table d’accélérateurs facultative qui traduit automatiquement les accélérateurs clavier.
 
-- Une `CFrameWnd` fenêtre frame a un ID d’aide facultatif défini `LoadFrame` avec qui est utilisé pour l’aide contextuelle. Une fenêtre frame est l’orchestrateur principal d’États semimodal tels que l’aide contextuelle (MAJ + F1) et les modes d’aperçu avant impression.
+- Une fenêtre frame de `CFrameWnd` a un ID d’aide facultatif défini avec `LoadFrame` utilisé pour l’aide contextuelle. Une fenêtre frame est l’orchestrateur principal d’États semimodal tels que l’aide contextuelle (MAJ + F1) et les modes d’aperçu avant impression.
 
-- Une `CFrameWnd` fenêtre frame ouvre un fichier déplacé à partir du gestionnaire de fichiers et déposé dans la fenêtre frame. Si une extension de fichier est enregistrée et associée à l’application, la fenêtre frame répond à la demande d’ouverture DDE (Dynamic Data Exchange) qui se produit lorsque l’utilisateur ouvre un fichier de données dans le gestionnaire `ShellExecute` de fichiers ou lorsque la fonction Windows est appelée.
+- Une fenêtre frame de `CFrameWnd` ouvre un fichier déplacé à partir du gestionnaire de fichiers et déposé dans la fenêtre frame. Si une extension de fichier est inscrite et associée à l’application, la fenêtre frame répond à la demande d’ouverture DDE (Dynamic Data Exchange) qui se produit lorsque l’utilisateur ouvre un fichier de données dans le gestionnaire de fichiers ou lorsque la fonction Windows `ShellExecute` est appelée.
 
-- Si la fenêtre frame est la fenêtre d’application principale (autrement dit `CWinThread::m_pMainWnd`,), lorsque l’utilisateur ferme l’application, la fenêtre frame invite l’utilisateur à enregistrer tous les documents modifiés ( `OnClose` pour `OnQueryEndSession`et).
+- Si la fenêtre frame est la fenêtre d’application principale (autrement dit, `CWinThread::m_pMainWnd`), lorsque l’utilisateur ferme l’application, la fenêtre frame invite l’utilisateur à enregistrer tous les documents modifiés (pour `OnClose` et `OnQueryEndSession`).
 
 - Si la fenêtre frame est la fenêtre d’application principale, la fenêtre frame est le contexte pour l’exécution de WinHelp. La fermeture de la fenêtre frame va arrêter WINHELP. EXE s’il a été lancé pour obtenir de l’aide pour cette application.
 
-N’utilisez pas l' C++ opérateur **Delete** pour détruire une fenêtre frame. Utilisez plutôt `CWnd::DestroyWindow`. L' `CFrameWnd` implémentation de `PostNcDestroy` supprimera l' C++ objet lorsque la fenêtre sera détruite. Lorsque l’utilisateur ferme la fenêtre frame, le gestionnaire `OnClose` par défaut appellera `DestroyWindow`.
+N’utilisez pas l' C++ opérateur **Delete** pour détruire une fenêtre frame. Utilisez `CWnd::DestroyWindow` à la place. L’implémentation `CFrameWnd` de `PostNcDestroy` supprimera l' C++ objet lorsque la fenêtre sera détruite. Lorsque l’utilisateur ferme la fenêtre frame, le gestionnaire de `OnClose` par défaut appellera `DestroyWindow`.
 
-Pour plus d’informations `CFrameWnd`sur, consultez [fenêtres Frame](../../mfc/frame-windows.md).
+Pour plus d’informations sur les `CFrameWnd`, consultez [fenêtres Frame](../../mfc/frame-windows.md).
 
 ## <a name="inheritance-hierarchy"></a>Hiérarchie d'héritage
 
@@ -253,11 +253,11 @@ Pour plus d’informations `CFrameWnd`sur, consultez [fenêtres Frame](../../mfc
 
 `CFrameWnd`
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
 **En-tête :** afxwin.h
 
-##  <a name="activateframe"></a>  CFrameWnd::ActivateFrame
+##  <a name="activateframe"></a>CFrameWnd :: ActivateFrame
 
 Appelez cette fonction membre pour activer et restaurer la fenêtre frame afin qu’elle soit visible et accessible à l’utilisateur.
 
@@ -282,7 +282,7 @@ Substituez cette fonction membre pour modifier la façon dont un frame est activ
 
 [!code-cpp[NVC_MFCWindowing#1](../../mfc/reference/codesnippet/cpp/cframewnd-class_1.cpp)]
 
-##  <a name="beginmodalstate"></a>  CFrameWnd::BeginModalState
+##  <a name="beginmodalstate"></a>CFrameWnd :: BeginModalState
 
 Appelez cette fonction membre pour rendre modale une fenêtre frame.
 
@@ -290,9 +290,9 @@ Appelez cette fonction membre pour rendre modale une fenêtre frame.
 virtual void BeginModalState();
 ```
 
-##  <a name="cframewnd"></a>  CFrameWnd::CFrameWnd
+##  <a name="cframewnd"></a>CFrameWnd :: CFrameWnd
 
-Construit un `CFrameWnd` objet, mais ne crée pas la fenêtre frame visible.
+Construit un objet `CFrameWnd`, mais ne crée pas la fenêtre frame visible.
 
 ```
 CFrameWnd();
@@ -302,9 +302,9 @@ CFrameWnd();
 
 Appelez `Create` pour créer la fenêtre visible.
 
-##  <a name="create"></a>  CFrameWnd::Create
+##  <a name="create"></a>CFrameWnd :: Create
 
-Appelez pour créer et initialiser la fenêtre frame Windows associée à l' `CFrameWnd` objet.
+Appelez pour créer et initialiser la fenêtre frame Windows associée à l’objet `CFrameWnd`.
 
 ```
 virtual BOOL Create(
@@ -321,15 +321,15 @@ virtual BOOL Create(
 ### <a name="parameters"></a>Paramètres
 
 *lpszClassName*<br/>
-Pointe vers une chaîne de caractères se terminant par un caractère null qui nomme la classe Windows. Le nom de la classe peut être n’importe quel `AfxRegisterWndClass` nom enregistré avec la `RegisterClass` fonction globale ou la fonction Windows. Si la valeur est null, utilise les attributs `CFrameWnd` par défaut prédéfinis.
+Pointe vers une chaîne de caractères se terminant par un caractère null qui nomme la classe Windows. Le nom de la classe peut être n’importe quel nom enregistré avec la fonction globale `AfxRegisterWndClass` ou la fonction Windows `RegisterClass`. Si la valeur est NULL, utilise les attributs `CFrameWnd` par défaut prédéfinis.
 
 *lpszWindowName*<br/>
 Pointe vers une chaîne de caractères se terminant par un caractère null qui représente le nom de la fenêtre. Utilisé comme texte pour la barre de titre.
 
 *dwStyle*<br/>
-Spécifie les attributs de [style](../../mfc/reference/styles-used-by-mfc.md#window-styles) de fenêtre. Incluez le style FWS_ADDTOTITLE si vous souhaitez que la barre de titre affiche automatiquement le nom du document représenté dans la fenêtre.
+Spécifie les attributs de [style](../../mfc/reference/styles-used-by-mfc.md#window-styles) de fenêtre. Incluez le style de FWS_ADDTOTITLE si vous souhaitez que la barre de titre affiche automatiquement le nom du document représenté dans la fenêtre.
 
-*rect*<br/>
+*rectangulaire*<br/>
 Spécifie la taille et la position de la fenêtre. La valeur *rectDefault* permet à Windows de spécifier la taille et la position de la nouvelle fenêtre.
 
 *pParentWnd*<br/>
@@ -350,11 +350,11 @@ Valeur différente de zéro si l’initialisation réussit ; Sinon, 0.
 
 ### <a name="remarks"></a>Notes
 
-Construisez `CFrameWnd` un objet en deux étapes. Tout d’abord, appelez le constructeur, qui construit `CFrameWnd` l’objet, puis appelle `Create`, qui crée la fenêtre frame Windows et l’attache à l' `CFrameWnd` objet. `Create`Initialise le nom de la classe et le nom de la fenêtre de la fenêtre et enregistre les valeurs par défaut pour son style, son parent et son menu associé.
+Construisez un objet `CFrameWnd` en deux étapes. Tout d’abord, appelez le constructeur, qui construit l’objet `CFrameWnd`, puis appelez `Create`, qui crée la fenêtre frame Windows et l’attache à l’objet `CFrameWnd`. `Create` Initialise le nom de la classe et le nom de la fenêtre de la fenêtre et enregistre les valeurs par défaut pour son style, son parent et son menu associé.
 
-Utilisez `LoadFrame` plutôt que `Create` de charger la fenêtre frame à partir d’une ressource au lieu de spécifier ses arguments.
+Utilisez `LoadFrame` plutôt que `Create` pour charger la fenêtre frame à partir d’une ressource au lieu de spécifier ses arguments.
 
-##  <a name="createview"></a>  CFrameWnd::CreateView
+##  <a name="createview"></a>CFrameWnd :: CreateView
 
 Appelez `CreateView` pour créer une vue dans un frame.
 
@@ -374,13 +374,13 @@ Numéro d’identification d’une vue.
 
 ### <a name="return-value"></a>Valeur de retour
 
-Pointeur vers un `CWnd` objet en cas de réussite ; sinon, null.
+Pointeur vers un objet `CWnd` en cas de réussite ; Sinon, NULL.
 
 ### <a name="remarks"></a>Notes
 
-Utilisez cette fonction membre pour créer des « vues » qui ne `CView`sont pas dérivées dans un frame. Après avoir `CreateView`appelé, vous devez définir manuellement la vue sur active et la définir pour qu’elle soit visible ; ces tâches ne sont `CreateView`pas exécutées automatiquement par.
+Utilisez cette fonction membre pour créer des « vues » qui ne sont pas `CView`dérivées dans un frame. Après avoir appelé `CreateView`, vous devez définir manuellement la vue sur active et la définir pour qu’elle soit visible. ces tâches ne sont pas exécutées automatiquement par `CreateView`.
 
-##  <a name="dockcontrolbar"></a>  CFrameWnd::DockControlBar
+##  <a name="dockcontrolbar"></a>CFrameWnd ::D ockControlBar
 
 Entraîne l’ancrage d’une barre de contrôle à la fenêtre frame.
 
@@ -399,13 +399,13 @@ Pointe vers la barre de contrôle à ancrer.
 *nDockBarID*<br/>
 Détermine les côtés de la fenêtre frame à prendre en compte pour l’ancrage. Il peut être égal à 0 ou à un ou plusieurs des éléments suivants :
 
-- Ancrez AFX_IDW_DOCKBAR_TOP sur le côté supérieur de la fenêtre frame.
+- AFX_IDW_DOCKBAR_TOP ancrer sur le côté supérieur de la fenêtre frame.
 
 - AFX_IDW_DOCKBAR_BOTTOM ancrer sur le côté inférieur de la fenêtre frame.
 
-- Ancre AFX_IDW_DOCKBAR_LEFT sur le côté gauche de la fenêtre frame.
+- AFX_IDW_DOCKBAR_LEFT ancrer sur le côté gauche de la fenêtre frame.
 
-- Ancre AFX_IDW_DOCKBAR_RIGHT sur le côté droit de la fenêtre frame.
+- AFX_IDW_DOCKBAR_RIGHT ancrer sur le côté droit de la fenêtre frame.
 
 Si la valeur est égale à 0, la barre de contrôle peut être ancrée à n’importe quel côté activé pour l’ancrage dans la fenêtre frame de destination.
 
@@ -416,7 +416,7 @@ Détermine, en coordonnées d’écran, où la barre de contrôle sera ancrée d
 
 La barre de contrôle sera ancrée à l’un des côtés de la fenêtre frame spécifiée dans les appels à [CControlBar :: EnableDocking](../../mfc/reference/ccontrolbar-class.md#enabledocking) et [CFrameWnd :: EnableDocking](#enabledocking). Le côté choisi est déterminé par *nDockBarID*.
 
-##  <a name="enabledocking"></a>  CFrameWnd::EnableDocking
+##  <a name="enabledocking"></a>CFrameWnd :: EnableDocking
 
 Appelez cette fonction pour activer les barres de contrôle ancrables dans une fenêtre frame.
 
@@ -443,11 +443,11 @@ Spécifie les côtés de la fenêtre frame qui peuvent servir de sites d’ancra
 
 Par défaut, les barres de contrôle sont ancrées à un côté de la fenêtre frame dans l’ordre suivant : haut, bas, gauche, droite.
 
-### <a name="example"></a>Exemples
+### <a name="example"></a>Exemple
 
   Consultez l’exemple de [CToolBar :: Create](../../mfc/reference/ctoolbar-class.md#create).
 
-##  <a name="endmodalstate"></a>  CFrameWnd::EndModalState
+##  <a name="endmodalstate"></a>CFrameWnd :: EndModalState
 
 Appelez cette fonction membre pour changer une fenêtre frame modale en fenêtre frame non modale.
 
@@ -457,9 +457,9 @@ virtual void EndModalState();
 
 ### <a name="remarks"></a>Notes
 
-`EndModalState`Active toutes les fenêtres désactivées par [BeginModalState](#beginmodalstate).
+`EndModalState` active toutes les fenêtres désactivées par [BeginModalState](#beginmodalstate).
 
-##  <a name="floatcontrolbar"></a>  CFrameWnd::FloatControlBar
+##  <a name="floatcontrolbar"></a>CFrameWnd :: FloatControlBar
 
 Appelez cette fonction pour empêcher l’ancrage d’une barre de contrôle à la fenêtre frame.
 
@@ -497,9 +497,9 @@ En règle générale, cette opération est effectuée au démarrage de l’appli
 
 Cette fonction est appelée par l’infrastructure quand l’utilisateur provoque une opération de déplacement en relâchant le bouton gauche de la souris tout en faisant glisser la barre de contrôle sur un emplacement qui n’est pas disponible pour l’ancrage.
 
-##  <a name="getactivedocument"></a>  CFrameWnd::GetActiveDocument
+##  <a name="getactivedocument"></a>CFrameWnd :: GetActiveDocument
 
-Appelez cette fonction membre pour obtenir un pointeur vers le actuel `CDocument` attaché à la vue active actuelle.
+Appelez cette fonction membre pour obtenir un pointeur vers le `CDocument` actuel attaché à la vue active actuelle.
 
 ```
 virtual CDocument* GetActiveDocument();
@@ -509,7 +509,7 @@ virtual CDocument* GetActiveDocument();
 
 Pointeur vers le [CDocument](../../mfc/reference/cdocument-class.md)actuel. S’il n’y a aucun document actif, retourne la valeur NULL.
 
-##  <a name="getactiveframe"></a>  CFrameWnd::GetActiveFrame
+##  <a name="getactiveframe"></a>CFrameWnd :: GetActiveFrame
 
 Appelez cette fonction membre pour obtenir un pointeur vers la fenêtre enfant MDI (multiple document interface) active d’une fenêtre frame MDI.
 
@@ -525,9 +525,9 @@ Pointeur vers la fenêtre enfant MDI active. Si l’application est une applicat
 
 S’il n’existe aucun enfant MDI actif ou si l’application est une interface SDI (single document interface), le pointeur **This** implicite est retourné.
 
-##  <a name="getactiveview"></a>  CFrameWnd::GetActiveView
+##  <a name="getactiveview"></a>CFrameWnd :: GetActiveView
 
-Appelez cette fonction membre pour obtenir un pointeur vers la vue active (le cas échéant) attachée à une fenêtre `CFrameWnd`Frame ().
+Appelez cette fonction membre pour obtenir un pointeur vers la vue active (le cas échéant) attachée à une fenêtre frame (`CFrameWnd`).
 
 ```
 CView* GetActiveView() const;
@@ -539,11 +539,11 @@ Pointeur vers le [CView](../../mfc/reference/cview-class.md)actuel. S’il n’e
 
 ### <a name="remarks"></a>Notes
 
-Cette fonction retourne la valeur NULL lorsqu’elle est appelée pour une fenêtre `CMDIFrameWnd`frame principale MDI (). Dans une application MDI, la fenêtre frame principale MDI n’est associée à aucune vue. Au lieu de cela, chaque fenêtre `CMDIChildWnd`enfant individuelle () possède une ou plusieurs vues associées. L’affichage actif dans une application MDI peut être obtenu en recherchant d’abord la fenêtre enfant MDI active, puis en recherchant la vue active de cette fenêtre enfant. La fenêtre enfant MDI active est accessible en appelant la fonction `MDIGetActive` ou `GetActiveFrame` comme illustré dans l’exemple suivant :
+Cette fonction retourne la valeur NULL quand elle est appelée pour une fenêtre frame principale MDI (`CMDIFrameWnd`). Dans une application MDI, la fenêtre frame principale MDI n’est associée à aucune vue. Au lieu de cela, chaque fenêtre enfant individuelle (`CMDIChildWnd`) possède une ou plusieurs vues associées. L’affichage actif dans une application MDI peut être obtenu en recherchant d’abord la fenêtre enfant MDI active, puis en recherchant la vue active de cette fenêtre enfant. La fenêtre enfant MDI active est accessible en appelant la fonction `MDIGetActive` ou `GetActiveFrame` comme illustré ci-dessous :
 
 [!code-cpp[NVC_MFCWindowing#2](../../mfc/reference/codesnippet/cpp/cframewnd-class_2.cpp)]
 
-##  <a name="getcontrolbar"></a>  CFrameWnd::GetControlBar
+##  <a name="getcontrolbar"></a>CFrameWnd :: GetControlBar
 
 Appelez `GetControlBar` pour accéder à la barre de contrôle associée à l’ID.
 
@@ -562,13 +562,13 @@ Pointeur vers la barre de contrôle associée à l’ID.
 
 ### <a name="remarks"></a>Notes
 
-Le paramètre *nid* fait référence à l’identificateur unique passé à la `Create` méthode de la barre de contrôle. Pour plus d’informations sur les barres de contrôles, reportez-vous à la rubrique intitulée [barres de contrôles](../../mfc/control-bars.md).
+Le paramètre *nid* fait référence à l’identificateur unique passé à la méthode `Create` de la barre de contrôle. Pour plus d’informations sur les barres de contrôles, reportez-vous à la rubrique intitulée [barres de contrôles](../../mfc/control-bars.md).
 
-`GetControlBar`retourne la barre de contrôle même si elle est flottante et, par conséquent, n’est pas une fenêtre enfant du frame.
+`GetControlBar` retourne la barre de contrôle même s’il est flottant et n’est donc pas une fenêtre enfant du frame.
 
-##  <a name="getdockstate"></a>  CFrameWnd::GetDockState
+##  <a name="getdockstate"></a>CFrameWnd :: GetDockState
 
-Appelez cette fonction membre pour stocker des informations d’État sur les barres de contrôle de la `CDockState` fenêtre frame dans un objet.
+Appelez cette fonction membre pour stocker des informations d’État sur les barres de contrôles de la fenêtre frame dans un objet `CDockState`.
 
 ```
 void GetDockState(CDockState& state) const;
@@ -581,9 +581,9 @@ Contient l’état actuel des barres de contrôles de la fenêtre frame lors du 
 
 ### <a name="remarks"></a>Notes
 
-Vous pouvez ensuite écrire le contenu de `CDockState` dans le stockage `CDockState::SaveState` à `Serialize`l’aide de ou de. Si, par la suite, vous souhaitez restaurer les barres de contrôle à un état précédent, `CDockState::LoadState` chargez l’état `SetDockState` avec ou `Serialize`, puis appelez pour appliquer l’état précédent aux barres de contrôles de la fenêtre frame.
+Vous pouvez ensuite écrire le contenu de `CDockState` dans le stockage à l’aide de `CDockState::SaveState` ou `Serialize`. Si, par la suite, vous souhaitez restaurer les barres de contrôle à un état précédent, chargez l’état avec `CDockState::LoadState` ou `Serialize`, puis appelez `SetDockState` pour appliquer l’état précédent aux barres de contrôles de la fenêtre frame.
 
-##  <a name="getmenubarstate"></a>  CFrameWnd::GetMenuBarState
+##  <a name="getmenubarstate"></a>CFrameWnd :: GetMenuBarState
 
 Récupère l’état d’affichage du menu dans l’application MFC actuelle.
 
@@ -603,7 +603,7 @@ La valeur de retour peut avoir les valeurs suivantes :
 
 Si une erreur d’exécution se produit, cette méthode effectue une assertion en mode débogage et lève une exception dérivée de la classe [CException](../../mfc/reference/cexception-class.md) .
 
-##  <a name="getmenubarvisibility"></a>  CFrameWnd::GetMenuBarVisibility
+##  <a name="getmenubarvisibility"></a>CFrameWnd :: GetMenuBarVisibility
 
 Indique si l’État par défaut du menu dans l’application MFC actuelle est masqué ou visible.
 
@@ -613,19 +613,19 @@ virtual DWORD CFrameWnd::GetMenuBarVisibility();
 
 ### <a name="return-value"></a>Valeur de retour
 
-Cette méthode retourne l’une des valeurs suivantes :
+La méthode retourne l'une des valeurs suivantes :
 
 - AFX_MBV_KEEPVISIBLE (0x01)-le menu s’affiche à tout moment et, par défaut, n’a pas le focus.
 
 - AFX_MBV_DISPLAYONFOCUS (0x02) : le menu est masqué par défaut. Si le menu est masqué, appuyez sur la touche ALT pour afficher le menu et lui attribuer le focus. Si le menu s’affiche, appuyez sur la touche ALT ou ÉCHAP pour le masquer.
 
-- AFX_MBV_ DISPLAYONFOCUS (0x02) &#124; AFX_MBV_DISPLAYONF10 (0x04) (combinaison au niveau du bit (or))-le menu est masqué par défaut. Si le menu est masqué, appuyez sur la touche F10 pour afficher le menu et lui attribuer le focus. Si le menu s’affiche, appuyez sur la touche F10 pour activer ou désactiver le menu. Le menu s’affiche jusqu’à ce que vous appuyiez sur la touche ALT ou ÉCHAP pour le masquer.
+- AFX_MBV_ DISPLAYONFOCUS (0x02) &#124; AFX_MBV_DISPLAYONF10 (0x04) (combinaison au niveau du bit (ou))-le menu est masqué par défaut. Si le menu est masqué, appuyez sur la touche F10 pour afficher le menu et lui attribuer le focus. Si le menu s’affiche, appuyez sur la touche F10 pour activer ou désactiver le menu. Le menu s’affiche jusqu’à ce que vous appuyiez sur la touche ALT ou ÉCHAP pour le masquer.
 
 ### <a name="remarks"></a>Notes
 
 Si une erreur d’exécution se produit, cette méthode effectue une assertion en mode débogage et lève une exception dérivée de la classe [CException](../../mfc/reference/cexception-class.md) .
 
-##  <a name="getmessagebar"></a>  CFrameWnd::GetMessageBar
+##  <a name="getmessagebar"></a>CFrameWnd :: GetMessageBar
 
 Appelez cette fonction membre pour obtenir un pointeur vers la barre d’État.
 
@@ -637,7 +637,7 @@ virtual CWnd* GetMessageBar();
 
 Pointeur désignant la fenêtre de la barre d’État.
 
-##  <a name="getmessagestring"></a>  CFrameWnd::GetMessageString
+##  <a name="getmessagestring"></a>CFrameWnd :: GetMessageString
 
 Substituez cette fonction pour fournir des chaînes personnalisées pour les ID de commande.
 
@@ -653,13 +653,13 @@ virtual void GetMessageString(
 ID de ressource du message souhaité.
 
 *rMessage*<br/>
-`CString`objet dans lequel placer le message.
+`CString` objet dans lequel placer le message.
 
 ### <a name="remarks"></a>Notes
 
 L’implémentation par défaut charge simplement la chaîne spécifiée par *nid* à partir du fichier de ressources. Cette fonction est appelée par l’infrastructure lorsque la chaîne de message de la barre d’État doit être mise à jour.
 
-##  <a name="gettitle"></a>  CFrameWnd::GetTitle
+##  <a name="gettitle"></a>CFrameWnd :: GetTitle
 
 Récupère le titre de l’objet Window.
 
@@ -671,9 +671,9 @@ CString GetTitle() const;
 
 Objet [CString](../../atl-mfc-shared/reference/cstringt-class.md) contenant le titre actuel de l’objet Window.
 
-##  <a name="initialupdateframe"></a>  CFrameWnd::InitialUpdateFrame
+##  <a name="initialupdateframe"></a>CFrameWnd :: InitialUpdateFrame
 
-Appelez `IntitialUpdateFrame` après avoir créé un nouveau frame `Create`avec.
+Appelez `IntitialUpdateFrame` après avoir créé un nouveau Frame avec `Create`.
 
 ```
 void InitialUpdateFrame(
@@ -684,18 +684,18 @@ void InitialUpdateFrame(
 ### <a name="parameters"></a>Paramètres
 
 *pDoc*<br/>
-Pointe vers le document auquel la fenêtre frame est associée. Peut avoir la valeur NULL.
+Pointe vers le document auquel la fenêtre frame est associée. Sa valeur peut être NULL.
 
 *bMakeVisible*<br/>
 Si la valeur est TRUE, indique que le frame doit devenir visible et actif. Si la valeur est FALSe, aucun descendant n’est rendu visible.
 
 ### <a name="remarks"></a>Notes
 
-Toutes les vues de cette fenêtre frame reçoivent alors leurs `OnInitialUpdate` appels.
+Toutes les vues de cette fenêtre frame reçoivent alors leurs appels `OnInitialUpdate`.
 
 En outre, s’il n’y avait pas précédemment une vue active, la vue principale de la fenêtre frame est rendue active. La vue principale est une vue avec un ID enfant de AFX_IDW_PANE_FIRST. Enfin, la fenêtre frame est rendue visible si *bMakeVisible* est différent de zéro. Si *bMakeVisible* a la valeur 0, le focus actuel et l’état visible de la fenêtre frame restent inchangés. Il n’est pas nécessaire d’appeler cette fonction lors de l’utilisation de l’implémentation du fichier New et du fichier ouvert de l’infrastructure.
 
-##  <a name="inmodalstate"></a>  CFrameWnd::InModalState
+##  <a name="inmodalstate"></a>CFrameWnd :: InModalState
 
 Appelez cette fonction membre pour vérifier si une fenêtre frame est modale ou non modale.
 
@@ -707,7 +707,7 @@ BOOL InModalState() const;
 
 Valeur différente de zéro si oui ; Sinon, 0.
 
-##  <a name="istracking"></a>  CFrameWnd::IsTracking
+##  <a name="istracking"></a>CFrameWnd :: IsTracking
 
 Appelez cette fonction membre pour déterminer si la barre de fractionnement dans la fenêtre est en cours de déplacement.
 
@@ -719,7 +719,7 @@ BOOL IsTracking() const;
 
 Différent de zéro si une opération de fractionnement est en cours ; Sinon, 0.
 
-##  <a name="loadacceltable"></a>  CFrameWnd::LoadAccelTable
+##  <a name="loadacceltable"></a>CFrameWnd :: LoadAccelTable
 
 Appelez pour charger la table d’accélérateurs spécifiée.
 
@@ -744,7 +744,7 @@ Les tables d’accélérateurs chargées à partir des ressources sont automatiq
 
 Si vous appelez `LoadFrame` pour créer la fenêtre frame, le Framework charge une table d’accélérateurs avec les ressources de menu et d’icône, et un appel ultérieur à cette fonction membre est alors inutile.
 
-##  <a name="loadbarstate"></a>  CFrameWnd::LoadBarState
+##  <a name="loadbarstate"></a>CFrameWnd :: LoadBarState
 
 Appelez cette fonction pour restaurer les paramètres de chaque barre de contrôles appartenant à la fenêtre frame.
 
@@ -763,7 +763,7 @@ Les informations restaurées incluent la visibilité, l’orientation horizontal
 
 Les paramètres que vous souhaitez restaurer doivent être écrits dans le registre avant d’appeler `LoadBarState`. Écrivez les informations dans le registre en appelant [CWinApp :: SetRegistryKey](../../mfc/reference/cwinapp-class.md#setregistrykey). Écrivez les informations dans le fichier INI en appelant [SaveBarState](#savebarstate).
 
-##  <a name="loadframe"></a>  CFrameWnd::LoadFrame
+##  <a name="loadframe"></a>CFrameWnd :: LoadFrame
 
 Appelez pour créer dynamiquement une fenêtre frame à partir d’informations sur les ressources.
 
@@ -781,7 +781,7 @@ virtual BOOL LoadFrame(
 ID des ressources partagées associées à la fenêtre frame.
 
 *dwDefaultStyle*<br/>
-[Style](../../mfc/reference/styles-used-by-mfc.md#window-styles)du frame. Incluez le style FWS_ADDTOTITLE si vous souhaitez que la barre de titre affiche automatiquement le nom du document représenté dans la fenêtre.
+[Style](../../mfc/reference/styles-used-by-mfc.md#window-styles)du frame. Incluez le style de FWS_ADDTOTITLE si vous souhaitez que la barre de titre affiche automatiquement le nom du document représenté dans la fenêtre.
 
 *pParentWnd*<br/>
 Pointeur vers le parent du frame.
@@ -791,15 +791,15 @@ Pointeur vers une structure [CCreateContext](../../mfc/reference/ccreatecontext-
 
 ### <a name="remarks"></a>Notes
 
-Construisez `CFrameWnd` un objet en deux étapes. Tout d’abord, appelez le constructeur, qui construit `CFrameWnd` l’objet, puis appelle `LoadFrame`, qui charge la fenêtre frame Windows et les ressources associées et attache la fenêtre frame à l' `CFrameWnd` objet. Le paramètre *nIDResource* spécifie le menu, la table d’accélérateurs, l’icône et la ressource de type chaîne du titre de la fenêtre frame.
+Construisez un objet `CFrameWnd` en deux étapes. Tout d’abord, appelez le constructeur, qui construit l’objet `CFrameWnd`, puis appelez `LoadFrame`, qui charge la fenêtre frame Windows et les ressources associées et attache la fenêtre frame à l’objet `CFrameWnd`. Le paramètre *nIDResource* spécifie le menu, la table d’accélérateurs, l’icône et la ressource de type chaîne du titre de la fenêtre frame.
 
-Utilisez la `Create` fonction membre plutôt que `LoadFrame` lorsque vous souhaitez spécifier tous les paramètres de création de la fenêtre frame.
+Utilisez la fonction membre `Create` plutôt que `LoadFrame` lorsque vous souhaitez spécifier tous les paramètres de création de la fenêtre frame.
 
 Le Framework appelle `LoadFrame` lorsqu’il crée une fenêtre frame à l’aide d’un objet modèle de document.
 
-L’infrastructure utilise l’argument *pContext* pour spécifier les objets à connecter à la fenêtre frame, y compris tous les objets de vue contenus. Vous pouvez affecter la valeur NULL à l’argument *pContext* lorsque `LoadFrame`vous appelez.
+L’infrastructure utilise l’argument *pContext* pour spécifier les objets à connecter à la fenêtre frame, y compris tous les objets de vue contenus. Vous pouvez affecter la valeur NULL à l’argument *pContext* lorsque vous appelez `LoadFrame`.
 
-##  <a name="m_bautomenuenable"></a>  CFrameWnd::m_bAutoMenuEnable
+##  <a name="m_bautomenuenable"></a>CFrameWnd :: m_bAutoMenuEnable
 
 Lorsque ce membre de données est activé (valeur par défaut), les éléments de menu qui n’ont pas de gestionnaires ON_UPDATE_COMMAND_UI ou ON_COMMAND sont automatiquement désactivés lorsque l’utilisateur extrait un menu.
 
@@ -809,20 +809,20 @@ BOOL m_bAutoMenuEnable;
 
 ### <a name="remarks"></a>Notes
 
-Les éléments de menu qui ont un gestionnaire ON_COMMAND mais aucun gestionnaire ON_UPDATE_COMMAND_UI ne sont automatiquement activés.
+Éléments de menu qui ont un gestionnaire de ON_COMMAND mais aucun gestionnaire de ON_UPDATE_COMMAND_UI n’est automatiquement activé.
 
 Lorsque ce membre de données est défini, les éléments de menu sont automatiquement activés de la même façon que les boutons de la barre d’outils.
 
 > [!NOTE]
-> `m_bAutoMenuEnable`n’a aucun effet sur les éléments de menu de niveau supérieur.
+> `m_bAutoMenuEnable` n’a aucun effet sur les éléments de menu de niveau supérieur.
 
-Ce membre de données simplifie l’implémentation des commandes facultatives basées sur la sélection actuelle et réduit la nécessité d’écrire des gestionnaires ON_UPDATE_COMMAND_UI pour activer et désactiver les éléments de menu.
+Ce membre de données simplifie l’implémentation des commandes facultatives en fonction de la sélection actuelle et réduit la nécessité d’écrire des gestionnaires ON_UPDATE_COMMAND_UI pour l’activation et la désactivation des éléments de menu.
 
-### <a name="example"></a>Exemples
+### <a name="example"></a>Exemple
 
 [!code-cpp[NVC_MFCWindowing#3](../../mfc/reference/codesnippet/cpp/cframewnd-class_3.cpp)]
 
-##  <a name="negotiateborderspace"></a>  CFrameWnd::NegotiateBorderSpace
+##  <a name="negotiateborderspace"></a>CFrameWnd :: NegotiateBorderSpace
 
 Appelez cette fonction membre pour négocier l’espace de bordure dans une fenêtre frame pendant l’activation d’OLE InPlace.
 
@@ -835,7 +835,7 @@ virtual BOOL NegotiateBorderSpace(
 ### <a name="parameters"></a>Paramètres
 
 *nBorderCmd*<br/>
-Contient l’une des valeurs suivantes à partir `enum BorderCmd`de :
+Contient l’une des valeurs suivantes de l' `enum BorderCmd`:
 
 - `borderGet` = 1
 
@@ -852,9 +852,9 @@ Valeur différente de zéro cas de réussite ; sinon, 0.
 
 ### <a name="remarks"></a>Notes
 
-Cette fonction membre est l' `CFrameWnd` implémentation de la négociation de l’espace de bordure OLE.
+Cette fonction membre est l’implémentation `CFrameWnd` de la négociation de l’espace de bordure OLE.
 
-##  <a name="onbarcheck"></a>  CFrameWnd::OnBarCheck
+##  <a name="onbarcheck"></a>CFrameWnd :: OnBarCheck
 
 Appelé chaque fois qu’une action est exécutée sur la barre de contrôle spécifiée.
 
@@ -871,7 +871,7 @@ ID de la barre de contrôle affichée.
 
 Différent de zéro si la barre de contrôle existait ; Sinon, 0.
 
-##  <a name="oncontexthelp"></a>  CFrameWnd::OnContextHelp
+##  <a name="oncontexthelp"></a>CFrameWnd :: OnContextHelp
 
 Gère l’aide de MAJ + F1 pour les éléments sur place.
 
@@ -885,13 +885,13 @@ Pour activer l’aide contextuelle, vous devez ajouter un
 
 [!code-cpp[NVC_MFCDocViewSDI#16](../../mfc/codesnippet/cpp/cframewnd-class_4.cpp)]
 
-dans votre `CFrameWnd` table des messages de classe et ajoutez également une entrée de table d’accélérateurs, en général Shift + F1, pour activer cette fonction membre.
+dans votre table de messages de classe `CFrameWnd` et ajoutez également une entrée de table d’accélérateurs, en général SHIFT + F1, pour activer cette fonction membre.
 
-Si votre application est un conteneur OLE, `OnContextHelp` place tous les éléments sur place contenus dans l’objet de fenêtre frame en mode d’aide. Le curseur se transforme en flèche et en point d’interrogation, et l’utilisateur peut déplacer le pointeur de la souris et appuyer sur le bouton gauche de la souris pour sélectionner une boîte de dialogue, une fenêtre, un menu ou un bouton de commande. Cette fonction membre appelle la fonction `WinHelp` Windows avec le contexte d’aide de l’objet situé sous le curseur.
+Si votre application est un conteneur OLE, `OnContextHelp` place tous les éléments sur place contenus dans l’objet de fenêtre frame en mode d’aide. Le curseur se transforme en flèche et en point d’interrogation, et l’utilisateur peut déplacer le pointeur de la souris et appuyer sur le bouton gauche de la souris pour sélectionner une boîte de dialogue, une fenêtre, un menu ou un bouton de commande. Cette fonction membre appelle la fonction Windows `WinHelp` avec le contexte d’aide de l’objet situé sous le curseur.
 
-##  <a name="oncreateclient"></a>  CFrameWnd::OnCreateClient
+##  <a name="oncreateclient"></a>CFrameWnd :: OnCreateClient
 
-Appelé par le Framework pendant l’exécution de `OnCreate`.
+Appelée par l’infrastructure lors de l’exécution de `OnCreate`.
 
 ```
 virtual BOOL OnCreateClient(
@@ -915,14 +915,14 @@ Valeur différente de zéro cas de réussite ; sinon, 0.
 
 N’appelez jamais cette fonction.
 
-L’implémentation par défaut de cette fonction crée `CView` un objet à partir des informations fournies dans *pContext*, si possible.
+L’implémentation par défaut de cette fonction crée un objet `CView` à partir des informations fournies dans *pContext*, si possible.
 
-Substituez cette fonction pour substituer les valeurs passées dans `CCreateContext` l’objet ou pour modifier la façon dont les contrôles dans la zone cliente principale de la fenêtre frame sont créés. Les `CCreateContext` membres que vous pouvez substituer sont décrits dans la classe [CCreateContext](../../mfc/reference/ccreatecontext-structure.md) .
+Substituez cette fonction pour substituer les valeurs passées dans l’objet `CCreateContext` ou pour modifier la façon dont les contrôles dans la zone cliente principale de la fenêtre frame sont créés. Les membres `CCreateContext` que vous pouvez substituer sont décrits dans la classe [CCreateContext](../../mfc/reference/ccreatecontext-structure.md) .
 
 > [!NOTE]
->  Ne remplacez pas les valeurs passées dans `CREATESTRUCT` la structure. Ils sont destinés à un usage informatif uniquement. Si vous souhaitez substituer le rectangle de fenêtre initial, par exemple, remplacez la `CWnd` fonction membre [PreCreateWindow](../../mfc/reference/cwnd-class.md#precreatewindow).
+>  Ne remplacez pas les valeurs passées dans la structure `CREATESTRUCT`. Ils sont destinés à un usage informatif uniquement. Si vous souhaitez substituer le rectangle de fenêtre initial, par exemple, remplacez la fonction membre `CWnd` [PreCreateWindow](../../mfc/reference/cwnd-class.md#precreatewindow).
 
-##  <a name="onhidemenubar"></a>  CFrameWnd::OnHideMenuBar
+##  <a name="onhidemenubar"></a>CFrameWnd :: OnHideMenuBar
 
 Cette fonction est appelée lorsque le système est sur le paragraphe de masquer la barre de menus dans l’application MFC actuelle.
 
@@ -934,7 +934,7 @@ virtual void OnHideMenuBar();
 
 Ce gestionnaire d’événements permet à votre application d’effectuer des actions personnalisées lorsque le système est sur le paragraphe de masquer le menu. Vous ne pouvez pas empêcher le menu d’être masqué, mais vous pouvez, par exemple, appeler d’autres méthodes pour récupérer le style de menu ou l’État.
 
-##  <a name="onsetpreviewmode"></a>  CFrameWnd::OnSetPreviewMode
+##  <a name="onsetpreviewmode"></a>CFrameWnd :: OnSetPreviewMode
 
 Appelez cette fonction membre pour définir la fenêtre frame principale de l’application dans et en dehors du mode Aperçu avant impression.
 
@@ -950,7 +950,7 @@ virtual void OnSetPreviewMode(
 Spécifie s’il faut ou non placer l’application en mode aperçu avant impression. Définir sur TRUE pour passer en mode aperçu avant impression, FALSe pour annuler le mode aperçu.
 
 *pState*<br/>
-Pointeur vers une `CPrintPreviewState` structure.
+Pointeur vers une structure `CPrintPreviewState`.
 
 ### <a name="remarks"></a>Notes
 
@@ -958,7 +958,7 @@ L’implémentation par défaut désactive toutes les barres d’outils standard
 
 Substituez cette fonction membre pour personnaliser le masquage et l’affichage des barres de contrôles et d’autres parties de fenêtre frame pendant l’aperçu avant impression. Appelez l’implémentation de la classe de base à partir de la version substituée.
 
-##  <a name="onshowmenubar"></a>  CFrameWnd::OnShowMenuBar
+##  <a name="onshowmenubar"></a>CFrameWnd :: OnShowMenuBar
 
 Cette fonction est appelée lorsque le système est sur le présent d’afficher la barre de menus dans l’application MFC actuelle.
 
@@ -970,7 +970,7 @@ virtual void OnShowMenuBar();
 
 Ce gestionnaire d’événements permet à votre application d’effectuer des actions personnalisées lorsque le menu est sur le présent affiché. Vous ne pouvez pas empêcher l’affichage du menu, mais vous pouvez, par exemple, appeler d’autres méthodes pour récupérer le style de menu ou l’État.
 
-##  <a name="onupdatecontrolbarmenu"></a>  CFrameWnd::OnUpdateControlBarMenu
+##  <a name="onupdatecontrolbarmenu"></a>CFrameWnd :: OnUpdateControlBarMenu
 
 Appelé par le Framework lorsque le menu associé est mis à jour.
 
@@ -983,7 +983,7 @@ afx_msg void OnUpdateControlBarMenu(CCmdUI* pCmdUI);
 *pCmdUI*<br/>
 Pointeur vers un objet [CCmdUI](../../mfc/reference/ccmdui-class.md) représentant le menu qui a généré la commande de mise à jour. Le gestionnaire de mise à jour appelle la fonction membre [Enable](../../mfc/reference/ccmdui-class.md#enable) de l’objet `CCmdUI` par le biais de *pCmdUI* pour mettre à jour l’interface utilisateur.
 
-##  <a name="recalclayout"></a>  CFrameWnd::RecalcLayout
+##  <a name="recalclayout"></a>CFrameWnd :: RecalcLayout
 
 Appelé par le Framework lorsque les barres de contrôles standard sont activées ou désactivées ou lorsque la fenêtre frame est redimensionnée.
 
@@ -998,19 +998,19 @@ Détermine si l’élément sur place actif pour la fenêtre frame reçoit une n
 
 ### <a name="remarks"></a>Notes
 
-L’implémentation par défaut de cette fonction membre appelle `CWnd` la fonction `RepositionBars` membre pour repositionner toutes les barres de contrôle dans le frame et dans la fenêtre cliente principale (généralement `CView` a ou MdiClient).
+L’implémentation par défaut de cette fonction membre appelle la fonction membre `CWnd` `RepositionBars` pour repositionner toutes les barres de contrôles dans le frame et dans la fenêtre cliente principale (généralement un `CView` ou MDICLIENT).
 
 Substituez cette fonction membre pour contrôler l’apparence et le comportement des barres de contrôle après la modification de la disposition de la fenêtre frame. Par exemple, appelez-le quand vous activez ou désactivez les barres de contrôle ou ajoutez une autre barre de contrôle.
 
-##  <a name="rectdefault"></a>  CFrameWnd::rectDefault
+##  <a name="rectdefault"></a>CFrameWnd :: rectDefault
 
-Transmettez cette `CRect` valeur statique en tant que paramètre lors de la création d’une fenêtre pour permettre aux fenêtres de choisir la taille et la position initiales de la fenêtre.
+Transmettez ce `CRect` statique en tant que paramètre lors de la création d’une fenêtre pour permettre aux fenêtres de choisir la taille et la position initiales de la fenêtre.
 
 ```
 static AFX_DATA const CRect rectDefault;
 ```
 
-##  <a name="savebarstate"></a>  CFrameWnd::SaveBarState
+##  <a name="savebarstate"></a>CFrameWnd :: SaveBarState
 
 Appelez cette fonction pour stocker des informations sur chaque barre de contrôles appartenant à la fenêtre frame.
 
@@ -1027,7 +1027,7 @@ Nom d’une section dans le fichier d’initialisation ou clé dans le Registre 
 
 Ces informations peuvent être lues à partir du fichier d’initialisation à l’aide de [LoadBarState](#loadbarstate). Les informations stockées incluent la visibilité, l’orientation horizontale/verticale, l’état de l’ancrage et la position de la barre de contrôle.
 
-##  <a name="setactivepreviewview"></a>  CFrameWnd::SetActivePreviewView
+##  <a name="setactivepreviewview"></a>CFrameWnd :: SetActivePreviewView
 
 Désigne la vue spécifiée comme étant la vue active de la version préliminaire complète.
 
@@ -1042,7 +1042,7 @@ Pointeur vers une vue à activer.
 
 ### <a name="remarks"></a>Notes
 
-##  <a name="setactiveview"></a>  CFrameWnd::SetActiveView
+##  <a name="setactiveview"></a>CFrameWnd :: SetActiveView
 
 Appelez cette fonction membre pour définir la vue active.
 
@@ -1058,15 +1058,15 @@ void SetActiveView(
 Spécifie un pointeur vers un objet [CView](../../mfc/reference/cview-class.md) , ou null pour aucune vue active.
 
 *bNotify*<br/>
-Spécifie si la vue doit être notifiée de l’activation. Si la valeur `OnActivateView` est true, est appelé pour la nouvelle vue ; si la valeur est false, ce n’est pas le cas.
+Spécifie si la vue doit être notifiée de l’activation. Si la valeur est TRUE, `OnActivateView` est appelé pour la nouvelle vue ; Si la valeur est FALSe, ce n’est pas le cas.
 
 ### <a name="remarks"></a>Notes
 
-L’infrastructure appellera cette fonction automatiquement lorsque l’utilisateur change le focus en vue dans la fenêtre frame. Vous pouvez appeler `SetActiveView` explicitement pour définir le focus sur la vue spécifiée.
+L’infrastructure appellera cette fonction automatiquement lorsque l’utilisateur change le focus en vue dans la fenêtre frame. Vous pouvez appeler explicitement `SetActiveView` pour modifier le focus sur la vue spécifiée.
 
-##  <a name="setdockstate"></a>  CFrameWnd::SetDockState
+##  <a name="setdockstate"></a>CFrameWnd :: SetDockState
 
-Appelez cette fonction membre pour appliquer les informations d’État stockées `CDockState` dans un objet aux barres de contrôles de la fenêtre frame.
+Appelez cette fonction membre pour appliquer les informations d’État stockées dans un objet `CDockState` aux barres de contrôles de la fenêtre frame.
 
 ```
 void SetDockState(const CDockState& state);
@@ -1079,9 +1079,9 @@ Appliquez l’État stocké aux barres de contrôles de la fenêtre frame.
 
 ### <a name="remarks"></a>Notes
 
-Pour restaurer un état précédent des barres de contrôles, vous pouvez charger l’État stocké `CDockState::LoadState` avec `Serialize`ou, puis `SetDockState` utiliser pour l’appliquer aux barres de contrôles de la fenêtre frame. L’état précédent est stocké dans `CDockState` l’objet avec`GetDockState`
+Pour restaurer un état précédent des barres de contrôles, vous pouvez charger l’État stocké avec `CDockState::LoadState` ou `Serialize`, puis utiliser `SetDockState` pour l’appliquer aux barres de contrôles de la fenêtre frame. L’état précédent est stocké dans l’objet `CDockState` avec `GetDockState`
 
-##  <a name="setmenubarstate"></a>  CFrameWnd::SetMenuBarState
+##  <a name="setmenubarstate"></a>CFrameWnd :: SetMenuBarState
 
 Définit l’état d’affichage du menu dans l’application MFC actuelle sur masqué ou affiché.
 
@@ -1103,7 +1103,7 @@ TRUE si cette méthode modifie correctement l’état du menu ; Sinon, FALSe.
 
 Si une erreur d’exécution se produit, cette méthode effectue une assertion en mode débogage et lève une exception dérivée de la classe [CException](../../mfc/reference/cexception-class.md) .
 
-##  <a name="setmenubarvisibility"></a>  CFrameWnd::SetMenuBarVisibility
+##  <a name="setmenubarvisibility"></a>CFrameWnd :: SetMenuBarVisibility
 
 Définit le comportement par défaut du menu dans l’application MFC actuelle pour qu’il soit masqué ou visible.
 
@@ -1123,7 +1123,7 @@ Si la valeur du paramètre *nStyle* n’est pas valide, cette méthode déclare 
 
 Cette méthode affecte l’état des menus dans les applications écrites pour Windows Vista et versions ultérieures.
 
-##  <a name="setmessagetext"></a>  CFrameWnd::SetMessageText
+##  <a name="setmessagetext"></a>CFrameWnd :: SetMessageText
 
 Appelez cette fonction pour placer une chaîne dans le volet de la barre d’État dont l’ID est égal à 0.
 
@@ -1144,7 +1144,7 @@ ID de ressource de chaîne de la chaîne à placer dans la barre d’État.
 
 Il s’agit généralement du volet le plus à gauche et le plus long de la barre d’État.
 
-##  <a name="setprogressbarposition"></a>  CFrameWnd::SetProgressBarPosition
+##  <a name="setprogressbarposition"></a>CFrameWnd :: SetProgressBarPosition
 
 Définit la position actuelle de la barre de progression Windows 7 affichée sur la barre des tâches.
 
@@ -1155,11 +1155,11 @@ void SetProgressBarPosition(int nProgressPos);
 ### <a name="parameters"></a>Paramètres
 
 *nProgressPos*<br/>
-Spécifie la position à définir. Elle doit être comprise dans la `SetProgressBarRange`plage définie par.
+Spécifie la position à définir. Elle doit être comprise dans la plage définie par `SetProgressBarRange`.
 
 ### <a name="remarks"></a>Notes
 
-##  <a name="setprogressbarrange"></a>  CFrameWnd::SetProgressBarRange
+##  <a name="setprogressbarrange"></a>CFrameWnd :: SetProgressBarRange
 
 Définit la plage de la barre de progression Windows 7 affichée sur la barre des tâches.
 
@@ -1179,7 +1179,7 @@ Valeur maximale.
 
 ### <a name="remarks"></a>Notes
 
-##  <a name="setprogressbarstate"></a>  CFrameWnd::SetProgressBarState
+##  <a name="setprogressbarstate"></a>CFrameWnd :: SetProgressBarState
 
 Définit le type et l’état de l’indicateur de progression affiché sur un bouton de la barre des tâches.
 
@@ -1190,11 +1190,11 @@ void SetProgressBarState(TBPFLAG tbpFlags);
 ### <a name="parameters"></a>Paramètres
 
 *tbpFlags*<br/>
-Indicateurs qui contrôlent l’état actuel du bouton de progression. Spécifiez un seul des indicateurs suivants, car tous les États s’excluent mutuellement : TBPF_NOPROGRESS, TBPF_INDETERMINATE, TBPF_NORMAL, TBPF_ERROR, TBPF_PAUSED.
+Indicateurs qui contrôlent l’état actuel du bouton de progression. Spécifiez un seul des indicateurs suivants, car tous les États sont mutuellement exclusifs : TBPF_NOPROGRESS, TBPF_INDETERMINATE, TBPF_NORMAL, TBPF_ERROR, TBPF_PAUSED.
 
 ### <a name="remarks"></a>Notes
 
-##  <a name="settaskbaroverlayicon"></a>  CFrameWnd::SetTaskbarOverlayIcon
+##  <a name="settaskbaroverlayicon"></a>CFrameWnd :: SetTaskbarOverlayIcon
 
 Surchargé. Applique une superposition à un bouton de la barre des tâches pour indiquer l’état de l’application ou pour notifier l’utilisateur.
 
@@ -1225,7 +1225,7 @@ TRUE en cas de réussite ; FALSe si la version du système d’exploitation est
 
 ### <a name="remarks"></a>Notes
 
-##  <a name="settitle"></a>  CFrameWnd::SetTitle
+##  <a name="settitle"></a>CFrameWnd :: SetTitle
 
 Définit le titre de l’objet Window.
 
@@ -1238,7 +1238,7 @@ void SetTitle(LPCTSTR lpszTitle);
 *lpszTitle*<br/>
 Pointeur vers une chaîne de caractères contenant le titre de l’objet Window.
 
-##  <a name="showcontrolbar"></a>  CFrameWnd::ShowControlBar
+##  <a name="showcontrolbar"></a>CFrameWnd :: ShowControlBar
 
 Appelez cette fonction membre pour afficher ou masquer la barre de contrôle.
 
@@ -1260,9 +1260,9 @@ Si la valeur est TRUE, spécifie que la barre de contrôle doit être affichée.
 *bDelay*<br/>
 Si la valeur est TRUE, retarde l’affichage de la barre de contrôle. Si la valeur est FALSe, affiche immédiatement la barre de contrôle.
 
-##  <a name="showownedwindows"></a>  CFrameWnd::ShowOwnedWindows
+##  <a name="showownedwindows"></a>CFrameWnd :: ShowOwnedWindows
 
-Appelez cette fonction membre pour afficher toutes les fenêtres qui sont des descendants `CFrameWnd` de l’objet.
+Appelez cette fonction membre pour afficher toutes les fenêtres qui sont des descendants de l’objet `CFrameWnd`.
 
 ```
 void ShowOwnedWindows(BOOL bShow);

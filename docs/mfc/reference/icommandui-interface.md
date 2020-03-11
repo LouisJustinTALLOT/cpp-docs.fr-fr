@@ -15,11 +15,11 @@ helpviewer_keywords:
 - ICommandUI interface [MFC]
 ms.assetid: 134afe8d-dcdf-47ca-857a-a166a6b665dd
 ms.openlocfilehash: a7bb3ab5ed292cef8108e937e67bc9e2ccc1ebce
-ms.sourcegitcommit: 3caf5261b3ea80d9cf14038c116ba981d655cd13
+ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/11/2019
-ms.locfileid: "70907883"
+ms.lasthandoff: 03/06/2020
+ms.locfileid: "78866579"
 ---
 # <a name="icommandui-interface"></a>Interface ICommandUI
 
@@ -35,23 +35,23 @@ interface class ICommandUI
 
 ### <a name="public-methods"></a>M&#233;thodes publiques
 
-|Nom|Description|
+|Name|Description|
 |----------|-----------------|
 |[icommandui__Check](#check)|Affecte l’état d’activation approprié à l’élément d’interface utilisateur pour cette commande.|
 |[ICommandUI::ContinueRouting](#continuerouting)|Indique au mécanisme de routage de commande de continuer à acheminer le message actuel vers le dessous de la chaîne de gestionnaires.|
-|[ICommandUI::Enabled](#enabled)|Active ou désactive l’élément d’interface utilisateur pour cette commande.|
-|[ICommandUI :: ID](#id)|Obtient l’ID de l’objet d’interface utilisateur représenté par `ICommandUI` l’objet.|
-|[ICommandUI::Index](#index)|Obtient l’index de l’objet d’interface utilisateur représenté par `ICommandUI` l’objet.|
-|[ICommandUI::Radio](#radio)|Affecte l’état d’activation approprié à l’élément d’interface utilisateur pour cette commande.|
-|[ICommandUI::Text](#text)|Définit le texte de l’élément d’interface utilisateur pour cette commande.|
+|[ICommandUI :: Enabled](#enabled)|Active ou désactive l’élément d’interface utilisateur pour cette commande.|
+|[ICommandUI :: ID](#id)|Obtient l’ID de l’objet d’interface utilisateur représenté par l’objet `ICommandUI`.|
+|[ICommandUI :: index](#index)|Obtient l’index de l’objet d’interface utilisateur représenté par l’objet `ICommandUI`.|
+|[ICommandUI :: radio](#radio)|Affecte l’état d’activation approprié à l’élément d’interface utilisateur pour cette commande.|
+|[ICommandUI :: Text](#text)|Définit le texte de l’élément d’interface utilisateur pour cette commande.|
 
 ## <a name="remarks"></a>Notes
 
-Cette interface fournit des méthodes et des propriétés qui gèrent les commandes de l’interface utilisateur. `ICommandUI`est similaire à la [classe CCmdUI](../../mfc/reference/ccmdui-class.md), sauf `ICommandUI` que est utilisé pour les applications MFC qui interagissent avec les composants .net.
+Cette interface fournit des méthodes et des propriétés qui gèrent les commandes de l’interface utilisateur. `ICommandUI` est similaire à la [classe CCmdUI](../../mfc/reference/ccmdui-class.md), à ceci près que `ICommandUI` est utilisé pour les applications MFC qui interagissent avec les composants .net.
 
-`ICommandUI`est utilisé dans un gestionnaire ON_UPDATE_COMMAND_UI dans une classe dérivée de [ICommandTarget](../../mfc/reference/icommandtarget-interface.md). Lorsqu’un utilisateur d’une application active (sélectionne ou clique) un menu, chaque élément de menu est affiché comme activé ou désactivé. La cible de chaque commande de menu fournit ces informations en implémentant un gestionnaire ON_UPDATE_COMMAND_UI. Pour chacun des objets de l’interface utilisateur de commande de votre application, utilisez l' [Assistant classe](mfc-class-wizard.md) pour créer une entrée de table des messages et un prototype de fonction pour chaque gestionnaire.
+`ICommandUI` est utilisé dans un gestionnaire de ON_UPDATE_COMMAND_UI dans une classe dérivée de [ICommandTarget](../../mfc/reference/icommandtarget-interface.md). Lorsqu’un utilisateur d’une application active (sélectionne ou clique) un menu, chaque élément de menu est affiché comme activé ou désactivé. La cible de chaque commande de menu fournit ces informations en implémentant un gestionnaire de ON_UPDATE_COMMAND_UI. Pour chacun des objets de l’interface utilisateur de commande de votre application, utilisez l' [Assistant classe](mfc-class-wizard.md) pour créer une entrée de table des messages et un prototype de fonction pour chaque gestionnaire.
 
-Pour plus d’informations sur l' `ICommandUI` utilisation de l’interface dans le routage des [commandes, consultez Procédure : Ajoutez le routage des commandes au contrôle](../../dotnet/how-to-add-command-routing-to-the-windows-forms-control.md)Windows Forms.
+Pour plus d’informations sur l’utilisation de l’interface `ICommandUI` dans le routage des commandes, consultez [Comment : ajouter le routage des commandes au contrôle Windows Forms](../../dotnet/how-to-add-command-routing-to-the-windows-forms-control.md).
 
 Pour plus d’informations sur l’utilisation de Windows Forms, consultez [utilisation d’un contrôle utilisateur Windows Form dans MFC](../../dotnet/using-a-windows-form-user-control-in-mfc.md).
 
@@ -80,7 +80,7 @@ void ContinueRouting();
 
 ## <a name="remarks"></a>Notes
 
-Il s’agit d’une fonction membre avancée qui doit être utilisée conjointement avec un gestionnaire ON_COMMAND_EX qui retourne FALSe. Pour plus d’informations, consultez Technical note TN006 : Tables des messages.
+Il s’agit d’une fonction membre avancée qui doit être utilisée conjointement avec un gestionnaire de ON_COMMAND_EX qui retourne FALSe. Pour plus d’informations, consultez Technical note TN006 : messages Maps.
 
 ## <a name="enabled"></a>ICommandUI :: Enabled
 
@@ -137,7 +137,7 @@ property String^ Text;
 
 Cette propriété définit le texte de l’élément d’interface utilisateur pour cette commande. Définissez le texte sur un handle de chaîne de texte.
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
 **En-tête :** afxwinforms. h (défini dans l’assembly atlmfc\lib\mfcmifc80.dll)
 
