@@ -1,17 +1,18 @@
 ---
 title: Littéraux définis par l’utilisateurC++()
-ms.date: 12/10/2019
+description: Décrit l’objectif et l’utilisation de littéraux définis par l’utilisateur C++dans standard.
+ms.date: 02/10/2020
 ms.assetid: ff4a5bec-f795-4705-a2c0-53788fd57609
-ms.openlocfilehash: 31b8f1dfb261839c04a6829132975ada9c09d619
-ms.sourcegitcommit: a5fa9c6f4f0c239ac23be7de116066a978511de7
+ms.openlocfilehash: a6636be414fa4dc199ce10fca1b33f092492575f
+ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/20/2019
-ms.locfileid: "75301299"
+ms.lasthandoff: 03/11/2020
+ms.locfileid: "79090567"
 ---
 # <a name="user-defined-literals"></a>Littéraux définis par l’utilisateur
 
-Il existe cinq catégories principales de littéraux dans C++: entier, caractère, virgule flottante, chaîne, booléen et pointeur.  Depuis C++11, vous pouvez définir vos propres littéraux en fonction de ces catégories pour fournir des raccourcis syntaxiques aux idiomes courants et augmenter la sécurité de type. Par exemple, supposons que vous avez une classe Distance. Vous pouvez définir un littéral pour les kilomètres et un autre pour les miles, et encourager l'utilisateur à être explicite sur les unités de mesure en écrivant simplement : d auto = 42,0_km ou d auto = 42,0_mi. Les littéraux définis par l’utilisateur ne présentent aucun avantage ni inconvénient en termes de performances ; ils sont principalement utilisés pour des raisons pratiques ou pour la déduction de type au moment de la compilation. La bibliothèque standard a des littéraux définis par l’utilisateur pour std : String, std :: Complex et pour les unités dans les opérations de temps et de durée dans l’en-tête \<Chrono >:
+Il existe six catégories principales de littéraux dans C++: entier, caractère, virgule flottante, chaîne, booléen et pointeur. À compter C++ de 11, vous pouvez définir vos propres littéraux en fonction de ces catégories, afin de fournir des raccourcis syntaxiques pour les idiomes courants et accroître la sécurité des types. Par exemple, imaginons que vous avez une classe `Distance`. Vous pouvez définir un littéral pour les kilomètres et un autre pour les miles, et encourager l’utilisateur à être explicite sur les unités de mesure en écrivant : `auto d = 42.0_km` ou `auto d = 42.0_mi`. Les littéraux définis par l’utilisateur n’ont pas d’avantage en termes de performances ou d’inconvénient. ils sont principalement utilisés pour des raisons pratiques ou pour la déduction de type au moment de la compilation. La bibliothèque standard a des littéraux définis par l’utilisateur pour `std::string`, par `std::complex`et pour les unités dans les opérations de temps et de durée dans l’en-tête \<Chrono >:
 
 ```cpp
 Distance d = 36.0_mi + 42.0_km;         // Custom UDL (see below)
@@ -40,74 +41,85 @@ ReturnType operator "" _r(const char*);              // Raw literal operator
 template<char...> ReturnType operator "" _t();       // Literal operator template
 ```
 
-Les noms d'opérateur dans l'exemple précédent sont des espaces réservés pour le nom que vous fournissez ; toutefois, le caractère de soulignement de début est requis. (Seule la bibliothèque standard est autorisée à définir des littéraux sans le trait de soulignement.) Le type de retour est l’endroit où vous personnalisez la conversion ou toute autre opération effectuée par le littéral. En outre, chacun de ces opérateurs peut être défini en tant que `constexpr`.
+Les noms d'opérateur dans l'exemple précédent sont des espaces réservés pour le nom que vous fournissez ; toutefois, le caractère de soulignement de début est requis. (Seule la bibliothèque standard est autorisée à définir des littéraux sans le trait de soulignement.) Le type de retour est l’endroit où vous personnalisez la conversion ou d’autres opérations effectuées par le littéral. En outre, chacun de ces opérateurs peut être défini en tant que `constexpr`.
 
 ## <a name="cooked-literals"></a>Littéraux traités
 
-Dans le code source, n'importe quel littéral défini ou non par l'utilisateur est essentiellement une séquence de caractères alphanumériques, comme `101`, ou `54.7`, ou `"hello"` ou `true`. Le compilateur interprète la séquence comme un entier, float, const char\* chaîne, et ainsi de suite. Un littéral défini par l’utilisateur qui accepte comme entrée quel que soit le type que le compilateur assigne à la valeur littérale est informellement connu sous le nom de *littéral cuit*. Tous les opérateurs ci-dessus, à l'exception de `_r` et `_t`, sont des littéraux traités. Par exemple, un littéral `42.0_km` établit une liaison avec un opérateur nommé _km ayant une signature similaire à _b et le littéral `42_km` établit une liaison avec un opérateur ayant une signature similaire à _a.
+Dans le code source, tout littéral, qu’il soit ou non défini par l’utilisateur, est essentiellement une séquence de caractères alphanumériques, comme `101`ou `54.7`, ou `"hello"` ou `true`. Le compilateur interprète la séquence comme un entier, float, const char\* chaîne, et ainsi de suite. Un littéral défini par l’utilisateur qui accepte comme entrée quel que soit le type que le compilateur assigne à la valeur littérale est informellement connu sous le nom de *littéral cuit*. Tous les opérateurs ci-dessus, à l'exception de `_r` et `_t`, sont des littéraux traités. Par exemple, un littéral `42.0_km` établit une liaison avec un opérateur nommé _km ayant une signature similaire à _b et le littéral `42_km` établit une liaison avec un opérateur ayant une signature similaire à _a.
 
-L'exemple suivant montre comment des littéraux définis par l'utilisateur peuvent encourager les appelants à être explicites sur leur entrée. Pour créer une `Distance`, l'utilisateur doit spécifier explicitement des kilomètres ou des miles à l'aide du littéral défini par l'utilisateur approprié. Bien sûr, vous pouvez également obtenir le même résultat par d'autres moyens, mais les littéraux définis par l'utilisateur sont moins détaillés que les alternatives.
+L'exemple suivant montre comment des littéraux définis par l'utilisateur peuvent encourager les appelants à être explicites sur leur entrée. Pour créer une `Distance`, l'utilisateur doit spécifier explicitement des kilomètres ou des miles à l'aide du littéral défini par l'utilisateur approprié. Vous pouvez obtenir le même résultat d’une manière ou d’une autre, mais les littéraux définis par l’utilisateur sont moins détaillés que les alternatives.
 
 ```cpp
+// UDL_Distance.cpp
+
+#include <iostream>
+#include <string>
+
 struct Distance
 {
 private:
     explicit Distance(long double val) : kilometers(val)
     {}
 
-    friend Distance operator"" _km(long double  val);
+    friend Distance operator"" _km(long double val);
     friend Distance operator"" _mi(long double val);
+
     long double kilometers{ 0 };
 public:
+    const static long double km_per_mile;
     long double get_kilometers() { return kilometers; }
-    Distance operator+(Distance& other)
+
+    Distance operator+(Distance other)
     {
         return Distance(get_kilometers() + other.get_kilometers());
     }
 };
 
-Distance operator"" _km(long double  val)
+const long double Distance::km_per_mile = 1.609344L;
+
+Distance operator"" _km(long double val)
 {
     return Distance(val);
 }
 
 Distance operator"" _mi(long double val)
 {
-    return Distance(val * 1.6);
+    return Distance(val * Distance::km_per_mile);
 }
-int main(int argc, char* argv[])
+
+int main()
 {
     // Must have a decimal point to bind to the operator we defined!
     Distance d{ 402.0_km }; // construct using kilometers
-    cout << "Kilometers in d: " << d.get_kilometers() << endl; // 402
+    std::cout << "Kilometers in d: " << d.get_kilometers() << std::endl; // 402
 
     Distance d2{ 402.0_mi }; // construct using miles
-    cout << "Kilometers in d2: " << d2.get_kilometers() << endl;  //643.2
+    std::cout << "Kilometers in d2: " << d2.get_kilometers() << std::endl;  //646.956
 
     // add distances constructed with different units
     Distance d3 = 36.0_mi + 42.0_km;
-    cout << "d3 value = " << d3.get_kilometers() << endl; // 99.6
+    std::cout << "d3 value = " << d3.get_kilometers() << std::endl; // 99.9364
 
     // Distance d4(90.0); // error constructor not accessible
 
-    string s;
-    getline(cin, s);
+    std::string s;
+    std::getline(std::cin, s);
     return 0;
 }
 ```
 
-Notez que le nombre littéral doit utiliser une valeur décimale, sinon il serait interprété en tant qu'entier et le type ne serait pas compatible avec l'opérateur. Notez également que pour l’entrée à virgule flottante, le type doit être **long double**, et pour les types intégraux, il doit **être long long.**
+Le nombre littéral doit utiliser une valeur décimale. Dans le cas contraire, le nombre est interprété comme un entier et le type ne sera pas compatible avec l’opérateur. Pour une entrée à virgule flottante, le type doit être **long double**, et pour les types intégraux, il doit **être long long.**
 
 ## <a name="raw-literals"></a>Littéraux bruts
 
-Dans un littéral défini par l'utilisateur brut, l'opérateur que vous définissez accepte le littéral comme une séquence de valeurs char. Il vous revient d'interpréter cette séquence comme un nombre, une chaîne ou tout autre type. Dans la liste des opérateurs présentée plus haut dans cette page, `_r` et `_t` peuvent être utilisés pour définir des littéraux bruts :
+Dans un littéral défini par l’utilisateur brut, l’opérateur que vous définissez accepte le littéral sous la forme d’une séquence de valeurs char. C’est à vous d’interpréter cette séquence comme un nombre ou une chaîne ou un autre type. Dans la liste des opérateurs présentée plus haut dans cette page, `_r` et `_t` peuvent être utilisés pour définir des littéraux bruts :
 
 ```cpp
 ReturnType operator "" _r(const char*);              // Raw literal operator
 template<char...> ReturnType operator "" _t();       // Literal operator template
 ```
 
-Vous pouvez utiliser des littéraux bruts pour fournir une interprétation personnalisée d'une séquence d'entrée différente de celle que le compilateur exécute. Par exemple, vous pouvez définir un littéral qui convertit la séquence `4.75987` en un type Decimal personnalisé au lieu d'un type à virgule flottante IEEE 754. Les littéraux bruts, comme les littéraux traités, peuvent également servir à effectuer la validation lors de la compilation des séquences d'entrée.
+Vous pouvez utiliser des littéraux bruts pour fournir une interprétation personnalisée d’une séquence d’entrée différente du comportement normal du compilateur. Par exemple, vous pouvez définir un littéral qui convertit la séquence `4.75987` en un type Decimal personnalisé au lieu d'un type à virgule flottante IEEE 754. Les littéraux bruts, comme les littéraux cuits, peuvent également être utilisés pour la validation au moment de la compilation des séquences d’entrée.
 
 ### <a name="example-limitations-of-raw-literals"></a>Exemple : limitations des littéraux bruts
 
