@@ -29,11 +29,11 @@ helpviewer_keywords:
 - COleDataObject [MFC], Release
 ms.assetid: d1cc84be-2e1c-4bb3-a8a0-565eb08aaa34
 ms.openlocfilehash: e706489a84ad564949e2c2d3d193173fc19b9828
-ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
+ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/06/2020
-ms.locfileid: "78883651"
+ms.lasthandoff: 03/16/2020
+ms.locfileid: "79421155"
 ---
 # <a name="coledataobject-class"></a>COleDataObject, classe
 
@@ -80,7 +80,7 @@ Pour plus d’informations, consultez la structure [STGMEDIUM](/windows/win32/ap
 
 Pour plus d’informations sur l’utilisation des objets de données dans votre application, consultez l’article [objets de données et sources de données (OLE)](../../mfc/data-objects-and-data-sources-ole.md).
 
-## <a name="inheritance-hierarchy"></a>Hiérarchie d'héritage
+## <a name="inheritance-hierarchy"></a>Hiérarchie d’héritage
 
 `COleDataObject`
 

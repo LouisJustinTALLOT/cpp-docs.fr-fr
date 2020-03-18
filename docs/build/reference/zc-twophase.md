@@ -5,17 +5,16 @@ ms.date: 12/03/2019
 f1_keywords:
 - twoPhase
 - /Zc:twoPhase
-- VC.Project.VCCLCompilerTool.EnforceTypeConversionRules
 helpviewer_keywords:
 - twoPhase
 - disable two-phase name lookup
 - /Zc:twoPhase
-ms.openlocfilehash: a2ede9f0875bf718d63361201cf8923666078f7a
-ms.sourcegitcommit: a6d63c07ab9ec251c48bc003ab2933cf01263f19
+ms.openlocfilehash: 3464759793a2dd243024a9f3f52263f76514033a
+ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "74856954"
+ms.lasthandoff: 03/17/2020
+ms.locfileid: "79438641"
 ---
 # <a name="zctwophase--disable-two-phase-name-lookup"></a>/Zc:twoPhase- (Désactiver la recherche de nom en deux phases)
 
@@ -23,7 +22,7 @@ L’option **/Zc : twoPhase-** , sous **/permissive-** , indique au compilateur
 
 ## <a name="syntax"></a>Syntaxe
 
-> **/Zc:twoPhase-**
+> **/Zc : twoPhase-**
 
 ## <a name="remarks"></a>Notes
 
@@ -51,7 +50,7 @@ Par conséquent, si le corps du modèle contient des erreurs de syntaxe, mais qu
 
 Un autre effet de ce comportement est la résolution de surcharge. Le comportement non standard se produit en raison de la façon dont le flux de jetons est développé au niveau du site d’instanciation. Les symboles qui n’étaient pas visibles au niveau de la déclaration de modèle peuvent être visibles au point d’instanciation. Cela signifie qu’ils peuvent participer à la résolution de surcharge. Vous pouvez constater que le comportement des modèles change en fonction du code qui n’était pas visible au niveau de la définition du modèle, contrairement à la norme.
 
-Par exemple, prenons le code suivant :
+Considérez par exemple le code suivant :
 
 ```cpp
 // zctwophase.cpp
@@ -191,9 +190,9 @@ Sous **/permissive-/Zc : twoPhase-** et dans les compilateurs plus anciens, le 
 
 Pour plus d’informations sur les problèmes de conformité, consultez [ C++ améliorations de la conformité dans Visual Studio](../../overview/cpp-conformance-improvements.md) et [comportement non standard](../../cpp/nonstandard-behavior.md).
 
-### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Pour définir cette option du compilateur dans l'environnement de développement Visual Studio
+### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Pour définir cette option du compilateur dans l’environnement de développement Visual Studio
 
-1. Ouvrez la boîte de dialogue **Pages de propriété** du projet. Pour plus d’informations, consultez [Définir le compilateur C++ et les propriétés de build dans Visual Studio](../working-with-project-properties.md).
+1. Ouvrez la boîte de dialogue **Pages de propriété** du projet. Pour plus d’informations, consultez [Définir le compilateur C++ et les propriétés de build dans Visual Studio](../working-with-project-properties.md).
 
 1. Sélectionnez la page de propriétés **Propriétés de configuration** > **C/C++**  > **Ligne de commande**.
 

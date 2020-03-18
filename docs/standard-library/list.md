@@ -1,20 +1,19 @@
 ---
-title: '&lt;liste&gt;'
+title: '&lt;list&gt;'
 ms.date: 11/04/2016
 f1_keywords:
 - <list>
-- std::<list>
 helpviewer_keywords:
 - list header
 ms.assetid: 2345823b-5612-44d8-95d3-aa96ed076d17
-ms.openlocfilehash: c81990f14c6f9dc2400362015b838df5aed86429
-ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
+ms.openlocfilehash: 6b67434d36146de87a124fc02f49971425943dc5
+ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/21/2019
-ms.locfileid: "72689431"
+ms.lasthandoff: 03/17/2020
+ms.locfileid: "79447278"
 ---
-# <a name="ltlistgt"></a>&lt;liste&gt;
+# <a name="ltlistgt"></a>&lt;list&gt;
 
 Définit la liste de modèles de classe de conteneur et plusieurs modèles de prise en charge.
 
@@ -25,7 +24,7 @@ Définit la liste de modèles de classe de conteneur et plusieurs modèles de pr
 ```
 
 > [!NOTE]
-> La bibliothèque de > \<list utilise également l’instruction `#include <initializer_list>`.
+> La bibliothèque de > de liste de \<utilise également l’instruction `#include <initializer_list>`.
 
 ## <a name="members"></a>Membres
 
@@ -33,7 +32,7 @@ Définit la liste de modèles de classe de conteneur et plusieurs modèles de pr
 
 |||
 |-|-|
-|[!=, opérateur](../standard-library/list-operators.md#op_neq)|Teste si l'objet de liste situé à gauche de l'opérateur n'est pas égal à l'objet de liste situé à droite.|
+|[operator!=](../standard-library/list-operators.md#op_neq)|Teste si l'objet de liste situé à gauche de l'opérateur n'est pas égal à l'objet de liste situé à droite.|
 |[operator<](../standard-library/list-operators.md#op_lt)|Teste si l'objet de liste situé à gauche de l'opérateur est inférieur à l'objet de liste situé à droite.|
 |[operator\<=](../standard-library/list-operators.md#op_gt_eq)|Teste si l'objet de liste situé à gauche de l'opérateur est inférieur ou égal à l'objet de liste situé à droite.|
 |[operator==](../standard-library/list-operators.md#op_eq_eq)|Teste si l'objet de liste situé à gauche de l'opérateur est égal à l'objet de liste situé à droite.|
@@ -55,5 +54,5 @@ Définit la liste de modèles de classe de conteneur et plusieurs modèles de pr
 ## <a name="see-also"></a>Voir aussi
 
 [Référence de fichiers d’en-tête](../standard-library/cpp-standard-library-header-files.md)\
-[Sécurité des threads dans la bibliothèque standard C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)\
-[Informations de référence sur la bibliothèque standard C++](../standard-library/cpp-standard-library-reference.md)
+[Sécurité des threads dans la bibliothèque C++ Standard](../standard-library/thread-safety-in-the-cpp-standard-library.md)\
+[Informations de référence sur la bibliothèque C++ Standard](../standard-library/cpp-standard-library-reference.md)

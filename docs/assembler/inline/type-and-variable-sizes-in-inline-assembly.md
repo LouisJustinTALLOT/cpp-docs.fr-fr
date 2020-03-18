@@ -2,9 +2,6 @@
 title: Tailles de type et de variable dans l'assembly inline
 ms.date: 08/30/2018
 ms.topic: reference
-f1_keywords:
-- length
-- Type
 helpviewer_keywords:
 - variables, length
 - size, getting in inline assembly
@@ -16,26 +13,26 @@ helpviewer_keywords:
 - variables, type
 - variables, size
 ms.assetid: b62c2f2b-a7ad-4145-bae4-d890db86d348
-ms.openlocfilehash: 36c97ee866ca449e9bbcf514e464a13f24f12cd9
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: cdb8bddccbea0ef711cb0be4bbac60f7457c625c
+ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62166891"
+ms.lasthandoff: 03/17/2020
+ms.locfileid: "79441569"
 ---
 # <a name="type-and-variable-sizes-in-inline-assembly"></a>Tailles de type et de variable dans l'assembly inline
 
-**Section spécifique à Microsoft**
+**Section spécifique de Microsoft**
 
-Le **longueur**, **taille**, et **TYPE** opérateurs ont une signification limitée dans l’assembly inline. Ils ne peuvent pas du tout être utilisés avec l'opérateur `DUP` (car vous ne pouvez pas définir des données avec des directives ou des opérateurs MASM). Toutefois, vous pouvez les utiliser pour rechercher la taille des variables ou types C ou C++ :
+Les opérateurs de **longueur**, de **taille**et de **type** ont une signification limitée dans l’assembly inline. Ils ne peuvent pas du tout être utilisés avec l'opérateur `DUP` (car vous ne pouvez pas définir des données avec des directives ou des opérateurs MASM). Toutefois, vous pouvez les utiliser pour rechercher la taille des variables ou types C ou C++ :
 
-- Le **longueur** opérateur peut retourner le nombre d’éléments dans un tableau. Il retourne la valeur 1 pour les variables non-tableau.
+- L’opérateur de **longueur** peut retourner le nombre d’éléments d’un tableau. Il retourne la valeur 1 pour les variables non-tableau.
 
-- Le **taille** opérateur peut retourner la taille d’une variable C ou C++. Taille d’une variable est le produit de ses **longueur** et **TYPE**.
+- L’opérateur **Size** peut retourner la taille d’une variable C C++ ou. La taille d’une variable est le produit de sa **longueur** et de son **type**.
 
-- Le **TYPE** opérateur peut retourner la taille d’une variable ou de type C ou C++. Si la variable est un tableau, **TYPE** retourne la taille d’un seul élément du tableau.
+- L’opérateur de **type** peut retourner la taille d’un type C++ ou d’une variable C ou. Si la variable est un tableau, **type** retourne la taille d’un élément unique du tableau.
 
-Par exemple, si votre programme comporte un élément de 8 **int** tableau,
+Par exemple, si votre programme comporte un tableau **int** à 8 éléments,
 
 ```cpp
 int arr[8];
@@ -45,11 +42,11 @@ les expressions C et d'assembly suivantes génèrent la taille d'un tableau `arr
 
 |__asm|C|Size|
 |-------------|-------|----------|
-|**LONGUEUR** arr|`sizeof`(arr)/`sizeof`(arr[0])|8|
-|**TAILLE** arr|`sizeof`(arr)|32|
-|**TYPE** arr|`sizeof`(arr[0])|4|
+|**Longueur** arr|`sizeof`(arr)/`sizeof`(arr[0])|8|
+|**Taille** arr|`sizeof`(arr)|32|
+|**Tapez** arr|`sizeof`(arr[0])|4|
 
-**FIN de la section spécifique à Microsoft**
+**Fin de la section spécifique de Microsoft**
 
 ## <a name="see-also"></a>Voir aussi
 

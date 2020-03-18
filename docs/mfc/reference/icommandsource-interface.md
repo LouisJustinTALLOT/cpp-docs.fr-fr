@@ -1,5 +1,5 @@
 ---
-title: ICommandSource, Interface
+title: Interface ICommandSource
 ms.date: 03/27/2019
 f1_keywords:
 - ICommandSource
@@ -17,16 +17,16 @@ f1_keywords:
 helpviewer_keywords:
 - ICommandSource interface [MFC]
 ms.assetid: a4b1f698-c09f-4ba8-9b13-0e74a0a4967e
-ms.openlocfilehash: eed7abbbb40c532ad596f683b6ed2c98a0cadf9b
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: a57ca6f36546a17b9a35ebea875ff01b43de1332
+ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62322080"
+ms.lasthandoff: 03/17/2020
+ms.locfileid: "79445714"
 ---
-# <a name="icommandsource-interface"></a>ICommandSource, Interface
+# <a name="icommandsource-interface"></a>Interface ICommandSource
 
-Gère les commandes envoyées à partir d’un objet de source de commande à un contrôle utilisateur.
+Gère les commandes envoyées à partir d’un objet source de commande à un contrôle utilisateur.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -38,34 +38,35 @@ interface class ICommandSource
 
 ### <a name="public-methods"></a>M&#233;thodes publiques
 
-|Nom|Description|
+|Name|Description|
 |----------|-----------------|
-|[ICommandSource::AddCommandHandler](#addcommandhandler)|Ajoute un gestionnaire de commandes à un objet de source de commande.|
-|[ICommandSource::AddCommandRangeHandler](#addcommandrangehandler)|Ajoute un groupe de gestionnaires de commandes à un objet de source de commande.|
-|[ICommandSource::AddCommandRangeUIHandler](#addcommandrangeuihandler)|Ajoute un groupe de gestionnaires de messages de commande interface utilisateur à un objet de source de commande.|
-|[ICommandSource::AddCommandUIHandler](#addcommandrangeuihandler)|Ajoute un gestionnaire de messages de commande interface utilisateur à un objet de source de commande.|
-|[ICommandSource::PostCommand](#postcommand)|Publie un message sans attendre qu’il soit traité.|
-|[ICommandSource::RemoveCommandHandler](#removecommandhandler)|Supprime un gestionnaire de commandes à partir d’un objet de source de commande.|
-|[ICommandSource::RemoveCommandRangeHandler](#removecommandrangehandler)|Supprime un groupe de gestionnaires de commandes à partir d’un objet de source de commande.|
-|[ICommandSource::RemoveCommandRangeUIHandler](#removecommandrangeuihandler)|Supprime un groupe de gestionnaires de messages de commande interface utilisateur à partir d’un objet de source de commande.|
-|[ICommandSource::RemoveCommandUIHandler](#removecommandrangeuihandler)|Supprime un gestionnaire de messages de commande interface utilisateur à partir d’un objet de source de commande.|
-|[ICommandSource::SendCommand](#sendcommand)|Envoie un message et attend qu’il soit traité avant de retourner.|
+|[ICommandSource :: AddCommandHandler](#addcommandhandler)|Ajoute un gestionnaire de commandes à un objet source de commande.|
+|[ICommandSource :: AddCommandRangeHandler](#addcommandrangehandler)|Ajoute un groupe de gestionnaires de commandes à un objet source de commande.|
+|[ICommandSource :: AddCommandRangeUIHandler](#addcommandrangeuihandler)|Ajoute un groupe de gestionnaires de messages de commande d’interface utilisateur à un objet source de commande.|
+|[ICommandSource :: AddCommandUIHandler](#addcommandrangeuihandler)|Ajoute un gestionnaire de messages de commande d’interface utilisateur à un objet source de commande.|
+|[ICommandSource ::P ostCommand](#postcommand)|Publie un message sans attendre qu’il soit traité.|
+|[ICommandSource :: RemoveCommandHandler](#removecommandhandler)|Supprime un gestionnaire de commandes d’un objet source de commande.|
+|[ICommandSource :: RemoveCommandRangeHandler](#removecommandrangehandler)|Supprime un groupe de gestionnaires de commandes d’un objet source de commande.|
+|[ICommandSource :: RemoveCommandRangeUIHandler](#removecommandrangeuihandler)|Supprime un groupe de gestionnaires de messages de commande d’interface utilisateur d’un objet source de commande.|
+|[ICommandSource :: RemoveCommandUIHandler](#removecommandrangeuihandler)|Supprime un gestionnaire de messages de commande de l’interface utilisateur d’un objet source de commande.|
+|[ICommandSource :: SendCommand](#sendcommand)|Envoie un message et attend qu’il soit traité avant de retourner.|
 
 ### <a name="remarks"></a>Notes
 
-Lorsque vous hébergez un contrôle utilisateur dans une vue de MFC, [CWinFormsView, classe](../../mfc/reference/cwinformsview-class.md) commandes d’itinéraires et mise à jour de commande des messages de l’interface utilisateur pour le contrôle utilisateur pour lui permettre de gérer les commandes MFC (par exemple, les éléments de menu de frame et boutons de barre d’outils). En implémentant [ICommandTarget, Interface](../../mfc/reference/icommandtarget-interface.md), vous donner le contrôle utilisateur, une référence à la `ICommandSource` objet.
+Quand vous hébergez un contrôle utilisateur dans une vue MFC, la [classe CWinFormsView](../../mfc/reference/cwinformsview-class.md) achemine les commandes et met à jour les messages de l’interface utilisateur de commande au contrôle utilisateur pour lui permettre de gérer les commandes MFC (par exemple, les éléments de menu Frame et les boutons de barre d’outils). En implémentant l' [interface ICommandTarget](../../mfc/reference/icommandtarget-interface.md), vous donnez à l’utilisateur le contrôle d’une référence à l’objet `ICommandSource`.
 
-Voir [Guide pratique pour Ajouter le routage des commandes au contrôle Windows Forms](../../dotnet/how-to-add-command-routing-to-the-windows-forms-control.md) pour obtenir un exemple montrant comment utiliser `ICommandTarget`.
+Consultez [Comment : ajouter le routage des commandes au contrôle Windows Forms](../../dotnet/how-to-add-command-routing-to-the-windows-forms-control.md) pour obtenir un exemple d’utilisation de `ICommandTarget`.
 
-Pour plus d’informations sur l’utilisation de Windows Forms, consultez [à l’aide d’un contrôle d’utilisateur Windows Form dans MFC](../../dotnet/using-a-windows-form-user-control-in-mfc.md).
+Pour plus d’informations sur l’utilisation de Windows Forms, consultez [utilisation d’un contrôle utilisateur Windows Form dans MFC](../../dotnet/using-a-windows-form-user-control-in-mfc.md).
 
-### <a name="requirements"></a>Configuration requise
+### <a name="requirements"></a>Spécifications
 
-**En-tête :** afxwinforms.h (défini dans l’assembly atlmfc\lib\mfcmifc80.dll)
+**En-tête :** afxwinforms. h (défini dans l’assembly atlmfc\lib\mfcmifc80.dll)
 
-## <a name="addcommandhandler"></a>  ICommandSource::AddCommandHandler
+## <a name="addcommandhandler"></a>ICommandSource :: AddCommandHandler
 
-Ajoute un gestionnaire de commandes à un objet de source de commande.
+Ajoute un gestionnaire de commandes à un objet source de commande.
+
 ```
 void AddCommandHandler(
     unsigned int cmdID,
@@ -77,16 +78,17 @@ void AddCommandHandler(
 *cmdID*<br/>
 ID de la commande.
 *cmdHandler*<br/>
-Handle vers la méthode de gestionnaire de commande.
+Handle de la méthode du gestionnaire de commandes.
 
 ### <a name="remarks"></a>Notes
 
-Cette méthode ajoute la cmdHandler de gestionnaire de commande à l’objet de source de commande et mappe le gestionnaire à cmdID.
-Voir [Guide pratique pour Ajouter le routage des commandes au contrôle Windows Forms](../../dotnet/how-to-add-command-routing-to-the-windows-forms-control.md) pour obtenir un exemple montrant comment utiliser AddCommandHandler.
+Cette méthode ajoute le gestionnaire de commandes cmdHandler à l’objet source de la commande et mappe le gestionnaire à cmdID.
+Consultez [Comment : ajouter le routage des commandes au contrôle Windows Forms](../../dotnet/how-to-add-command-routing-to-the-windows-forms-control.md) pour obtenir un exemple d’utilisation de AddCommandHandler.
 
-## <a name="addcommandrangehandler"></a> ICommandSource::AddCommandRangeHandler
+## <a name="addcommandrangehandler"></a>ICommandSource :: AddCommandRangeHandler
 
-Ajoute un groupe de gestionnaires de commandes à un objet de source de commande.
+Ajoute un groupe de gestionnaires de commandes à un objet source de commande.
+
 ```
 void AddCommandRangeHandler(
     unsigned int cmdIDMin,
@@ -101,14 +103,15 @@ Index de début de la plage d’ID de commande.
 *cmdIDMax*<br/>
 Index de fin de la plage d’ID de commande.
 *cmdHandler*<br/>
-Handle vers la méthode de gestionnaire de message à laquelle les commandes sont mappées.
+Handle de la méthode de gestionnaire de messages à laquelle les commandes sont mappées.
 ### <a name="remarks"></a>Notes
 
-Cette méthode mappe une plage contiguë d’ID de commande à un seul gestionnaire de messages et l’ajoute à l’objet de source de commande. Cela est utilisé pour gérer un groupe de boutons associés avec une méthode.
+Cette méthode mappe une plage contiguë d’ID de commandes à un seul gestionnaire de messages et l’ajoute à l’objet source de la commande. Cela permet de gérer un groupe de boutons associés avec une méthode.
 
-## <a name="addcommandrangeuihandler"></a> ICommandSource::AddCommandRangeUIHandler
+## <a name="addcommandrangeuihandler"></a>ICommandSource :: AddCommandRangeUIHandler
 
-Ajoute un groupe de gestionnaires de messages de commande interface utilisateur à un objet de source de commande.
+Ajoute un groupe de gestionnaires de messages de commande d’interface utilisateur à un objet source de commande.
+
 ```
 void AddCommandRangeUIHandler(
     unsigned int cmdIDMin,
@@ -123,15 +126,16 @@ Index de début de la plage d’ID de commande.
 *cmdIDMax*<br/>
 Index de fin de la plage d’ID de commande.
 *cmdHandler*<br/>
-Handle vers la méthode de gestionnaire de message à laquelle les commandes sont mappées.
+Handle de la méthode de gestionnaire de messages à laquelle les commandes sont mappées.
 
 ### <a name="remarks"></a>Notes
 
-Cette méthode mappe une plage contiguë d’ID de commande à un gestionnaire de messages de commande interface utilisateur unique et l’ajoute à l’objet de source de commande. Cela est utilisé pour gérer un groupe de boutons associés avec une méthode.
+Cette méthode mappe une plage contiguë d’ID de commandes à un gestionnaire de messages de commande d’interface utilisateur unique et l’ajoute à l’objet source de la commande. Cela permet de gérer un groupe de boutons associés avec une méthode.
 
-## <a name="addcommanduihandler"></a> ICommandSource::AddCommandUIHandler
+## <a name="addcommanduihandler"></a>ICommandSource :: AddCommandUIHandler
 
-Ajoute un gestionnaire de messages de commande interface utilisateur à un objet de source de commande.
+Ajoute un gestionnaire de messages de commande d’interface utilisateur à un objet source de commande.
+
 ```
 void AddCommandUIHandler(
     unsigned int cmdID,
@@ -143,15 +147,16 @@ void AddCommandUIHandler(
 *cmdID*<br/>
 ID de la commande.
 *cmdUIHandler*<br/>
-Handle vers la méthode de gestionnaire de message de commande utilisateur interface.
+Handle de la méthode du gestionnaire de messages de commande de l’interface utilisateur.
 
 ### <a name="remarks"></a>Notes
 
-Cette méthode ajoute la cmdHandler Gestionnaire message de commande d’interface utilisateur à l’objet de source de commande et mappe le gestionnaire à cmdID.
+Cette méthode ajoute le gestionnaire de messages de commande de l’interface utilisateur cmdHandler à l’objet source de la commande et mappe le gestionnaire à cmdID.
 
-## <a name="postcommand"></a> ICommandSource::PostCommand
+## <a name="postcommand"></a>ICommandSource ::P ostCommand
 
 Publie un message sans attendre qu’il soit traité.
+
 ```
 void PostCommand(unsigned int command);
 ```
@@ -159,14 +164,15 @@ void PostCommand(unsigned int command);
 ### <a name="parameters"></a>Paramètres
 
 *command*<br/>
-L’ID de commande du message à publier.
+ID de commande du message à publier.
 ### <a name="remarks"></a>Notes
 
-Cette méthode publie façon asynchrone le message mappé à l’ID spécifié par la commande. Il appelle CWnd::PostMessage pour placer le message dans la file d’attente de messages de la fenêtre et puis retourne sans attendre que la fenêtre correspondante traiter le message.
+Cette méthode publie de manière asynchrone le message mappé à l’ID spécifié par la commande. Il appelle CWnd ::P ostMessage pour placer le message dans la file d’attente de messages de la fenêtre, puis retourne sans attendre que la fenêtre correspondante traite le message.
 
-## <a name="removecommandhandler"></a> ICommandSource::RemoveCommandHandler
+## <a name="removecommandhandler"></a>ICommandSource :: RemoveCommandHandler
 
-Supprime un gestionnaire de commandes à partir d’un objet de source de commande.
+Supprime un gestionnaire de commandes d’un objet source de commande.
+
 ```
 void RemoveCommandHandler(unsigned int cmdID);
 ```
@@ -177,11 +183,12 @@ void RemoveCommandHandler(unsigned int cmdID);
 ID de la commande.
 ### <a name="remarks"></a>Notes
 
-Cette méthode supprime le Gestionnaire de commandes mappé à cmdID à partir de l’objet de source de commande.
+Cette méthode supprime le gestionnaire de commandes mappé à cmdID de l’objet source de la commande.
 
-## <a name="removecommandrangehandler"></a> ICommandSource::RemoveCommandRangeHandler
+## <a name="removecommandrangehandler"></a>ICommandSource :: RemoveCommandRangeHandler
 
-Supprime un groupe de gestionnaires de commandes à partir d’un objet de source de commande.
+Supprime un groupe de gestionnaires de commandes d’un objet source de commande.
+
 ```
 void RemoveCommandRangeUIHandler(
     unsigned int cmdIDMin,
@@ -196,11 +203,12 @@ Index de début de la plage d’ID de commande.
 Index de fin de la plage d’ID de commande.
 ### <a name="remarks"></a>Notes
 
-Cette méthode supprime un groupe de gestionnaires de messages, mappé à l’ID de commande spécifiés par cmdIDMin et cmdIDMax, à partir de l’objet de source de commande.
+Cette méthode supprime un groupe de gestionnaires de messages, mappé aux ID de commande spécifiés par cmdIDMin et cmdIDMax, à partir de l’objet source de la commande.
 
-## <a name="removecommandrangeuihandler"></a> ICommandSource::RemoveCommandRangeUIHandler
+## <a name="removecommandrangeuihandler"></a>ICommandSource :: RemoveCommandRangeUIHandler
 
-Supprime un groupe de gestionnaires de messages de commande interface utilisateur à partir d’un objet de source de commande.
+Supprime un groupe de gestionnaires de messages de commande d’interface utilisateur d’un objet source de commande.
+
 ```
 void RemoveCommandRangeUIHandler(
     unsigned int cmdIDMin,
@@ -215,11 +223,12 @@ Index de début de la plage d’ID de commande.
 Index de fin de la plage d’ID de commande.
 ### <a name="remarks"></a>Notes
 
-Cette méthode supprime un groupe de gestionnaires de messages de commande interface utilisateur, mappé à l’ID de commande spécifiés par cmdIDMin et cmdIDMax, à partir de l’objet de source de commande.
+Cette méthode supprime un groupe de gestionnaires de messages de commande d’interface utilisateur, mappés aux ID de commande spécifiés par cmdIDMin et cmdIDMax, à partir de l’objet source de la commande.
 
-## <a name="removecommanduihandler"></a> ICommandSource::RemoveCommandUIHandler
+## <a name="removecommanduihandler"></a>ICommandSource :: RemoveCommandUIHandler
 
-Supprime un gestionnaire de messages de commande interface utilisateur à partir d’un objet de source de commande.
+Supprime un gestionnaire de messages de commande de l’interface utilisateur d’un objet source de commande.
+
 ```
 void RemoveCommandUIHandler(unsigned int cmdID);
 ```
@@ -230,11 +239,12 @@ void RemoveCommandUIHandler(unsigned int cmdID);
 ID de la commande.
 ### <a name="remarks"></a>Notes
 
-Cette méthode supprime le Gestionnaire de messages de commande d’interface utilisateur mappé à cmdID à partir de l’objet de source de commande.
+Cette méthode supprime le gestionnaire de messages de commande de l’interface utilisateur mappé à cmdID à partir de l’objet source de la commande.
 
-## <a name="sendcommand"></a> ICommandSource::SendCommand
+## <a name="sendcommand"></a>ICommandSource :: SendCommand
 
 Envoie un message et attend qu’il soit traité avant de retourner.
+
 ```
 void SendCommand(unsigned int command);
 ```
@@ -242,10 +252,10 @@ void SendCommand(unsigned int command);
 ### <a name="parameters"></a>Paramètres
 
 *command*<br/>
-L’ID de commande du message à envoyer.
+ID de commande du message à envoyer.
 ### <a name="remarks"></a>Notes
 
-Cette méthode envoie de façon synchrone le message mappé à l’ID spécifié par la commande. Il appelle CWnd::SendMessage pour placer le message dans la file d’attente de messages de la fenêtre et attend jusqu'à ce que cette procédure de fenêtre ait traité le message avant de retourner.
+Cette méthode envoie de façon synchrone le message mappé à l’ID spécifié par la commande. Il appelle CWnd :: SendMessage pour placer le message dans la file d’attente de messages de la fenêtre et attend que cette procédure de fenêtre ait traité le message avant de retourner.
 ## <a name="see-also"></a>Voir aussi
 
 [Guide pratique pour ajouter le routage des commandes au contrôle Windows Forms](../../dotnet/how-to-add-command-routing-to-the-windows-forms-control.md)<br/>

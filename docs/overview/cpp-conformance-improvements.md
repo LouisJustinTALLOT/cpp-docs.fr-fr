@@ -1,14 +1,14 @@
 ---
 title: Améliorations de la conformité de C++
-ms.date: 12/04/2019
+ms.date: 03/16/2020
 description: Microsoft C++ dans Visual Studio arrive progressivement à une conformité totale avec la norme du langage C ++20.
 ms.technology: cpp-language
-ms.openlocfilehash: e9c2a69c8d33ea692a76a5642a15b581567c2c63
-ms.sourcegitcommit: 5f276064779d90a4cfda758f89e0c0f1e4d1a188
+ms.openlocfilehash: 31c64ca8ce6b13af89a2e19bccd1de1bfb99543a
+ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/09/2020
-ms.locfileid: "75793841"
+ms.lasthandoff: 03/17/2020
+ms.locfileid: "79446786"
 ---
 # <a name="c-conformance-improvements-in-visual-studio"></a>Améliorations de la conformité de C++ dans Visual Studio
 
@@ -571,7 +571,7 @@ void f(T (&buffer)[Size], int& size_read)
 
 ### <a name="user-provided-specializations-of-type-traits"></a>Spécialisations fournies par l’utilisateur de traits de type
 
-En conformité avec la sous-clause *meta. rqmts* de la norme, le compilateur MSVC génère désormais une erreur lorsqu’il rencontre une spécialisation définie par l’utilisateur de l’un des modèles d’type_traits spécifiés dans l’espace de noms `std`. Sauf indication contraire, ces spécialisations entraînent un comportement indéfini. L’exemple suivant présente un comportement indéfini, car il enfreint la règle et le `static_assert` échoue avec l’erreur **C2338**.
+En conformité avec la sous-clause *meta. rqmts* de la norme, le compilateur MSVC génère désormais une erreur lorsqu’il rencontre une spécialisation définie par l’utilisateur de l’un des modèles d' `type_traits` spécifiés dans l’espace de noms `std`. Sauf indication contraire, ces spécialisations entraînent un comportement indéfini. L’exemple suivant présente un comportement indéfini, car il enfreint la règle et le `static_assert` échoue avec l’erreur **C2338**.
 
 ```cpp
 #include <type_traits>
@@ -583,7 +583,7 @@ struct std::is_fundamental<S> : std::true_type {};
 static_assert(std::is_fundamental<S>::value, "fail");
 ```
 
-Pour éviter cette erreur, définissez un struct qui hérite de la type_trait souhaitée, et spécialisons que :
+Pour éviter cette erreur, définissez un struct qui hérite de l' `type_trait`préféré et spécialisez-le :
 
 ```cpp
 #include <type_traits>
@@ -603,19 +603,19 @@ static_assert(my_is_fundamental<S>::value, "fail");
 
 Le compilateur MSVC implémente désormais les modifications suivantes aux opérateurs de comparaison par [P1630R1](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2019/p1630r1.html) lorsque l’option [/std : c + + la plus récente](../build/reference/std-specify-language-standard-version.md) est activée :
 
-Le compilateur ne réécritra plus les expressions avec `operator==` s’ils impliquent un type de retour qui n’est pas un **bool**. Le code suivant génère désormais l' *erreur C2088 : ' ! = ' : non conforme pour struct*:
+Le compilateur ne réécrit plus les expressions à l’aide de `operator==` s’ils impliquent un type de retour qui n’est pas un **booléen**. Le code suivant génère désormais l' *erreur C2088 : ' ! = ' : non conforme pour struct*:
 
 ```cpp
 struct U {
-  operator bool() const;
+    operator bool() const;
 };
 
 struct S {
-  U operator==(const S&) const;
+    U operator==(const S&) const;
 };
 
 bool neq(const S& lhs, const S& rhs) {
-  return lhs != rhs;
+    return lhs != rhs;
 }
 ```
 
@@ -658,13 +658,13 @@ Pour éviter cette erreur, définissez un corps pour l’opérateur :
 #include <compare>
 
 union S {
-  int a;
-  char b;
-  auto operator<=>(const S&) const { ... }
-}; 
+    int a;
+    char b;
+    auto operator<=>(const S&) const { ... }
+};
 
 bool lt(const S& lhs, const S& rhs) {
-  return lhs < rhs;
+    return lhs < rhs;
 }
 ```
 
@@ -696,6 +696,195 @@ struct U {
 bool lt(const U& lhs, const U& rhs) {
     return lhs < rhs;
 }
+```
+
+## <a name="improvements_165"></a>Améliorations de la conformité dans Visual Studio 2019 version 16,5
+
+### <a name="explicit-specialization-declaration-without-an-initializer-is-not-a-definition"></a>Une déclaration de spécialisation explicite sans initialiseur n’est pas une définition
+
+Sous `/permissive-`, MSVC applique désormais une règle standard selon laquelle les déclarations de spécialisation explicite sans initialiseurs ne sont pas des définitions. Auparavant, la déclaration serait considérée comme une définition avec un initialiseur par défaut. L’effet est observable au moment de la liaison, car un programme qui dépend de ce comportement peut maintenant avoir des symboles non résolus. Cet exemple génère désormais une erreur :
+
+```cpp
+template <typename> struct S {
+    static int a;
+};
+
+// In permissive-, this declaration is not a definition and the program will not link.
+template <> int S<char>::a;
+
+int main() {
+    return S<char>::a;
+}
+```
+
+```Output
+error LNK2019: unresolved external symbol "public: static int S<char>::a" (?a@?$S@D@@2HA) referenced in function _main
+at link time.
+```
+
+Pour résoudre le problème, ajoutez un initialiseur :
+
+```cpp
+template <typename> struct S {
+    static int a;
+};
+
+// Add an initializer for the declaration to be a definition.
+template <> int S<char>::a{};
+
+int main() {
+    return S<char>::a;
+}
+```
+
+### <a name="preprocessor-output-preserves-newlines"></a>La sortie du préprocesseur préserve les nouvelles lignes
+
+Le préprocesseur expérimental préserve désormais les sauts de lignes et les espaces blancs lors de l’utilisation de `/P` ou `/E` avec `/experimental:preprocessor`. Cette modification peut être désactivée à l’aide de `/d1experimental:preprocessor:oldWhitespace`.
+
+Étant donné cet exemple de source,
+
+```cpp
+#define m()
+line m(
+) line
+```
+
+La sortie précédente de `/E` était :
+
+```Output
+line line
+#line 2
+```
+
+La nouvelle sortie de `/E` est désormais :
+
+```Output
+line
+ line
+```
+
+### <a name="import-and-module-keywords-are-context-dependent"></a>les mots clés’import’et’module’dépendent du contexte
+
+Par P1857R1, les directives de préprocesseur d’importation et de module ont des restrictions supplémentaires sur leur syntaxe. Cet exemple n’est plus compilé :
+
+```cpp
+import // Invalid
+m;
+```
+
+Il génère le message d’erreur suivant :
+
+```Output
+error C2146: syntax error: missing ';' before identifier 'm'
+```
+
+Pour résoudre le problème, conservez l’importation sur la même ligne :
+
+```cpp
+import m; // OK
+```
+
+### <a name="removal-of-stdweak_equality-and-stdstrong_equality"></a>Suppression de std :: weak_equality et std :: strong_equality
+
+La fusion de P1959R0 requiert que le compilateur supprime le comportement et les références aux types `std::weak_equality` et `std::strong_equality`.
+
+Le code de cet exemple n’est plus compilé :
+
+```cpp
+#include <compare>
+
+struct S {
+    std::strong_equality operator<=>(const S&) const = default;
+};
+
+void f() {
+    nullptr<=>nullptr;
+    &f <=> &f;
+    &S::operator<=> <=> &S::operator<=>;
+}
+```
+
+L’exemple génère désormais les erreurs suivantes :
+
+```Output
+error C2039: 'strong_equality': is not a member of 'std'
+error C2143: syntax error: missing ';' before '<=>'
+error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+error C7546: binary operator '<=>': unsupported operand types 'nullptr' and 'nullptr'
+error C7546: binary operator '<=>': unsupported operand types 'void (__cdecl *)(void)' and 'void (__cdecl *)(void)'
+error C7546: binary operator '<=>': unsupported operand types 'int (__thiscall S::* )(const S &) const' and 'int (__thiscall S::* )(const S &) const'
+```
+
+Pour résoudre le problème, mettez à jour pour préférer les opérateurs relationnels intégrés et remplacez les types supprimés :
+
+```cpp
+#include <compare>
+
+struct S {
+    std::strong_ordering operator<=>(const S&) const = default; // prefer 'std::strong_ordering'
+};
+
+void f() {
+    nullptr != nullptr; // use pre-existing builtin operator != or ==.
+    &f != &f;
+    &S::operator<=> != &S::operator<=>;
+}
+```
+
+### <a name="tls-guard-changes"></a>Modifications de la protection TLS
+
+Auparavant, les variables locales de thread dans les dll n’étaient pas correctement initialisées avant leur première utilisation sur les threads qui existaient avant le chargement de la DLL, à l’exception du thread qui a chargé la DLL. Ce défaut a été corrigé.
+Les variables locales de thread dans une telle DLL sont initialisées immédiatement avant leur première utilisation sur ces threads.
+
+Ce nouveau comportement de test de l’initialisation sur les utilisations de variables locales de thread peut être désactivé à l’aide du commutateur de compilateur `/Zc:tlsGuards-`. Ou, en ajoutant l’attribut `[[msvc:no_tls_guard]]` à des variables locales de thread particulières.
+
+### <a name="better-diagnosis-of-call-to-deleted-functions"></a>Meilleur diagnostic de l’appel aux fonctions supprimées
+
+Notre compilateur était plus permissif sur les appels de fonctions supprimées précédemment. Par exemple, si les appels sont survenus dans le contexte d’un corps de modèle, nous ne diagnostiquerons pas l’appel. De plus, s’il existe plusieurs instances d’appels aux fonctions supprimées, nous n’allons émettre qu’un seul diagnostic. À présent, nous allons émettre un diagnostic pour chacun d’eux.
+
+L’une des conséquences du nouveau comportement peut entraîner une petite modification avec rupture : le code qui a appelé une fonction supprimée n’est pas diagnostiqué s’il n’était jamais nécessaire pour la génération de code. À présent, nous le diagnostiquerons à l’avance.
+
+Cet exemple montre le code qui génère désormais une erreur :
+
+```cpp
+struct S {
+  S() = delete;
+  S(int) { }
+};
+
+struct U {
+  U() = delete;
+  U(int i): s{ i } { }
+
+  S s{};
+};
+
+U u{ 0 };
+```
+
+```Output
+error C2280: 'S::S(void)': attempting to reference a deleted function
+note: see declaration of 'S::S'
+note: 'S::S(void)': function was explicitly deleted
+```
+
+Pour résoudre le problème, supprimez les appels aux fonctions supprimées :
+
+```cpp
+struct S {
+  S() = delete;
+  S(int) { }
+};
+
+struct U {
+  U() = delete;
+  U(int i): s{ i } { }
+
+  S s;  // Do not call the deleted ctor of 'S'.
+};
+
+U u{ 0 };
 ```
 
 ## <a name="update_160"></a>Correctifs de bogues et modifications de comportement dans Visual Studio 2019
@@ -919,7 +1108,7 @@ La fonctionnalité de débogage d’itérateur a été adaptée pour unwrapper c
 
 ### <a name="fixes-for-xkeycheckh-keyword-enforcement"></a>Correctifs pour l’application du mot clé \<xkeycheck.h>
 
-L’application du mot clé « macro-isé » de la bibliothèque Standard \<xkeycheck.h> a été corrigée pour émettre l’actuel mot-clé à problème détecté plutôt qu’un message générique. Elle prend aussi en charge les mots clés C++20 et évite qu’IntelliSense indique que des mots clés aléatoires sont des macros.
+La macro de la bibliothèque standard remplaçant une mise en œuvre de mot clé \<xkeycheck. h > a été corrigée pour émettre le mot clé de problème réel détecté plutôt qu’un message générique. Elle prend aussi en charge les mots clés C++20 et évite qu’IntelliSense indique que des mots clés aléatoires sont des macros.
 
 ### <a name="allocator-types-no-longer-deprecated"></a>Les types d’allocateurs ne sont plus déconseillés
 
@@ -931,7 +1120,7 @@ Un `static_cast` parasite, non demandé par la norme, qui supprimait accidentell
 
 ### <a name="various-filesystem-correctness-fixes"></a>Corrections diverses de \<filesystem>
 
-- Correction de l’échec de `std::filesystem::last_write_time` lors d’une tentative de changement de l’heure de la dernière écriture d’un répertoire.
+- Correction `std::filesystem::last_write_time` échec lors de la tentative de modification de l’heure de la dernière écriture d’un répertoire.
 - Désormais, le constructeur `std::filesystem::directory_entry` stocke un résultat en échec plutôt que de lever une exception quand un chemin cible qui n’existe pas est fourni.
 - La version à 2 paramètres `std::filesystem::create_directory` a été changée pour appeler la version à 1 paramètre, car la fonction `CreateDirectoryExW` sous-jacente utiliserait `copy_symlink` si `existing_p` était un symlink.
 - `std::filesystem::directory_iterator` n’échoue plus lorsqu’un symkink rompu est trouvé.
@@ -969,7 +1158,7 @@ La fonction de réserve de conteneur non ordonnée `reserve` maintenant pour N �
 
 - De nombreuses fonctions de conteneur internes à la bibliothèque Standard ont été rendues privées pour une meilleure expérience IntelliSense. Des correctifs supplémentaires pour marquer les membres comme privés sont attendus dans les prochaines versions de MSVC.
 
-- Les problèmes de sécurité d’exception, où les conteneurs basés sur des nœuds comme `list`, `map` et `unordered_map` étaient altérés, ont été résolus. Pendant une opération de réaffectation `propagate_on_container_copy_assignment` ou `propagate_on_container_move_assignment`, nous libérons le nœud sentinelle du conteneur avec l’ancien allocateur, procédons à l’affectation de POCCA/POCMA sur l’ancien allocateur, puis tentons d’obtenir le nœud sentinelle auprès du nouvel allocateur. Si cette allocation échoue, le conteneur est altéré et ne peut même pas être détruit, car un nœud sentinelle est un invariant codé en dur dans la structure de données. Ce code a été corrigé pour allouer le nouveau nœud sentinelle de l’allocateur du conteneur source avant de détruire le nœud sentinelle existant.
+- Les problèmes de sécurité d’exception, où les conteneurs basés sur des nœuds comme `list`, `map` et `unordered_map` étaient altérés, ont été résolus. Au cours d’une opération de réaffectation `propagate_on_container_copy_assignment` ou `propagate_on_container_move_assignment`, nous libérerons le nœud Sentinel du conteneur avec l’ancien allocateur, effectuons l’assignation POCCA/POCMA sur l’ancien allocateur, puis nous essayons d’acquérir le nœud Sentinel à partir du nouvel allocateur. Si cette allocation a échoué, le conteneur a été endommagé et n’a pas pu être détruit, car le propriétaire d’un nœud Sentinel est un invariant de structure de données matérielles. Ce code a été corrigé pour allouer le nouveau nœud Sentinel à partir de l’allocateur du conteneur source avant de détruire le nœud Sentinel existant.
 
 - Les conteneurs ont été résolus pour toujours copier/déplacer/échanger les allocateurs en fonction de `propagate_on_container_copy_assignment`, `propagate_on_container_move_assignment` et `propagate_on_container_swap`, même pour les allocateurs déclarés `is_always_equal`.
 
@@ -2847,7 +3036,7 @@ int main()
 
 En mode [/permissive-](../build/reference/permissive-standards-conformance.md) , le compilateur requiert désormais que le mot clé **template** précède un template-Name lorsqu’il vient après un spécificateur-Name-Name-specifier dépendant.
 
-Le code suivant dans le mode [/permissive-](../build/reference/permissive-standards-conformance.md) génère désormais l’erreur C7510 *'example' : un nom de modèle dépendant doit être précédé de 'template'. Remarque : voir la référence à l’instanciation du modèle de classe 'X<T>' en cours de compilation* :
+Le code suivant en mode [/permissive-](../build/reference/permissive-standards-conformance.md) déclenche désormais C7510 : *« example » : l’utilisation du nom de modèle dépendant doit être préfixée avec « template ». Remarque : consultez la référence à l’instanciation de modèle de classe « X\<t > » en cours de compilation*:
 
 ```cpp
 template<typename T> struct Base

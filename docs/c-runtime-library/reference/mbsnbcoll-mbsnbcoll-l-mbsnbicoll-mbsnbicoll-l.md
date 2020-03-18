@@ -23,13 +23,9 @@ api_type:
 topic_type:
 - apiref
 f1_keywords:
-- mbsnbicoll
-- mbsnbcoll
-- mbsnbicoll_l
 - _mbsnbcoll
+- _mbsnbcoll_l
 - _mbsnbicoll
-- _ftcsnicoll
-- _ftcsncoll
 - mbsnbcoll_l
 helpviewer_keywords:
 - _mbsnbcoll_l function
@@ -42,15 +38,15 @@ helpviewer_keywords:
 - _tcsncoll function
 - _mbsnbicoll function
 - _mbsnbicoll_l function
-- tcsncoll function
-- tcsnicoll function
+- _tcsncoll_l function
+- _tcsnicoll_l function
 ms.assetid: d139ed63-ccba-4458-baa2-61cbcef03e94
-ms.openlocfilehash: 72c435060a6ac62213a50ba1d9fb9ef7d83fcb33
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: d759bda0133a95406a586011d39d69074283bf97
+ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70952279"
+ms.lasthandoff: 03/17/2020
+ms.locfileid: "79438208"
 ---
 # <a name="_mbsnbcoll-_mbsnbcoll_l-_mbsnbicoll-_mbsnbicoll_l"></a>_mbsnbcoll, _mbsnbcoll_l, _mbsnbicoll, _mbsnbicoll_l
 
@@ -88,7 +84,7 @@ int _mbsnbicoll_l(
 
 ### <a name="parameters"></a>Paramètres
 
-*string1*, *string2*<br/>
+*Chaîne1*, *Chaîne2*<br/>
 Chaînes à comparer.
 
 *count*<br/>
@@ -101,7 +97,7 @@ Paramètres régionaux à utiliser.
 
 La valeur de retour indique la relation des sous-chaînes de *Chaîne1* et *Chaîne2*.
 
-|Valeur de retour|Description|
+|Valeur retournée|Description|
 |------------------|-----------------|
 |< 0|*Chaîne1* sous-chaîne inférieure à *Chaîne2* sous-chaîne.|
 |0|*Chaîne1* sous-chaîne identique à la sous-chaîne *Chaîne2* .|
@@ -117,7 +113,7 @@ Pour certaines pages de codes et les jeux de caractères correspondants, l’ord
 
 Étant donné que les fonctions **coll** rassemblent les chaînes vue lexicographique à des fins de comparaison, tandis que les fonctions **CMP** testent simplement l’égalité des chaînes, les fonctions **coll** sont beaucoup plus lentes que les versions **CMP** correspondantes. Par conséquent, les fonctions **coll** ne doivent être utilisées que s’il existe une différence entre l’ordre du jeu de caractères et l’ordre des caractères lexicographique dans la page de codes actuelle, et si cette différence présente un intérêt pour la comparaison.
 
-La valeur de sortie est affectée par la valeur du paramètre de catégorie **LC_CTYPE** des paramètres régionaux. Pour plus d’informations, consultez [setlocale](setlocale-wsetlocale.md). Les versions de ces fonctions sans le suffixe **_l** utilisent les paramètres régionaux pour ce comportement dépendant des paramètres régionaux ; les versions avec le suffixe **_l** sont identiques, sauf qu’elles utilisent à la place les paramètres régionaux transmis. Pour plus d’informations, consultez [Locale](../../c-runtime-library/locale.md).
+La valeur de sortie est affectée par la valeur du paramètre de catégorie **LC_CTYPE** des paramètres régionaux. Pour plus d’informations, consultez [setlocale](setlocale-wsetlocale.md). Les versions de ces fonctions sans le suffixe **_l** utilisent les paramètres régionaux pour ce comportement dépendant des paramètres régionaux ; les versions avec le suffixe **_l** sont identiques, sauf qu’elles utilisent à la place les paramètres régionaux transmis. Pour plus d'informations, consultez [Locale](../../c-runtime-library/locale.md).
 
 ### <a name="generic-text-routine-mappings"></a>Mappages de routines de texte générique
 
@@ -128,7 +124,7 @@ La valeur de sortie est affectée par la valeur du paramètre de catégorie **LC
 |**_tcsnicoll**|[_strnicoll](strnicoll-wcsnicoll-mbsnicoll-strnicoll-l-wcsnicoll-l-mbsnicoll-l.md)|**_mbsnbicoll**|[_wcsnicoll](strnicoll-wcsnicoll-mbsnicoll-strnicoll-l-wcsnicoll-l-mbsnicoll-l.md)|
 |**_tcsnicoll_l**|[_strnicoll_l](strnicoll-wcsnicoll-mbsnicoll-strnicoll-l-wcsnicoll-l-mbsnicoll-l.md)|**_mbsnbicoll_l**|[_wcsnicoll_l](strnicoll-wcsnicoll-mbsnicoll-strnicoll-l-wcsnicoll-l-mbsnicoll-l.md)|
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
 |Routine|En-tête requis|
 |-------------|---------------------|
@@ -137,7 +133,7 @@ La valeur de sortie est affectée par la valeur du paramètre de catégorie **LC
 |**_mbsnbicoll**|\<mbstring.h>|
 |**_mbsnbicoll_l**|\<mbstring.h>|
 
-Pour plus d'informations sur la compatibilité, voir [Compatibilité](../../c-runtime-library/compatibility.md).
+Pour plus d’informations sur la compatibilité, voir [Compatibilité](../../c-runtime-library/compatibility.md).
 
 ## <a name="see-also"></a>Voir aussi
 

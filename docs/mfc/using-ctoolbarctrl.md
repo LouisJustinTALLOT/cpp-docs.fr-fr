@@ -1,24 +1,22 @@
 ---
 title: Utilisation de CToolBarCtrl
 ms.date: 11/04/2016
-f1_keywords:
-- CToolBarCtrl
 helpviewer_keywords:
 - CToolBarCtrl class [MFC]
 - toolbar controls [MFC], creating
 ms.assetid: 13cf3753-135b-4a3e-a850-ed30177fcf9d
-ms.openlocfilehash: 70bb563b7dd4558ab1943ad87ee3db5b877951e6
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: a82a763ca357feccbe5b61d4f85d6038563c1c11
+ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62411667"
+ms.lasthandoff: 03/17/2020
+ms.locfileid: "79442240"
 ---
 # <a name="using-ctoolbarctrl"></a>Utilisation de CToolBarCtrl
 
-Vous pouvez utiliser le contrôle de barre d’outils ([CToolBarCtrl](../mfc/reference/ctoolbarctrl-class.md)) pour créer une fenêtre de contrôle contenant des boutons et des espaces facultatifs. Chaque bouton dans la fenêtre de contrôle de barre d’outils envoie un message de commande à la fenêtre parente lorsque l’utilisateur les sélectionne. En règle générale, les boutons dans une barre d’outils correspondent aux éléments de menu de l’application, en fournissant un moyen plus direct et supplémentaire pour l’utilisateur accéder aux commandes de l’application.
+Vous pouvez utiliser le contrôle ToolBar ([CToolBarCtrl](../mfc/reference/ctoolbarctrl-class.md)) pour créer une fenêtre de contrôle contenant des boutons et des espaces facultatifs. Chaque bouton de la fenêtre de contrôle de barre d’outils envoie un message de commande à la fenêtre parente lorsque l’utilisateur le choisit. En règle générale, les boutons d’une barre d’outils correspondent aux éléments du menu de l’application, ce qui offre un moyen supplémentaire et plus direct à l’utilisateur d’accéder aux commandes d’une application.
 
-## <a name="what-do-you-want-to-know-more-about"></a>Ce que vous souhaitez en savoir plus sur
+## <a name="what-do-you-want-to-know-more-about"></a>Que voulez-vous en savoir plus sur
 
 - [Méthodes de création d’une barre d’outils](../mfc/methods-of-creating-a-toolbar.md)
 

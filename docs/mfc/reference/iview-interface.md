@@ -12,12 +12,12 @@ helpviewer_keywords:
 - IView class [MFC]
 - views [MFC], classes
 ms.assetid: 9321f299-486e-4551-bee9-d2c4a7b91548
-ms.openlocfilehash: 22e08a70ff4cc742406a1489899c0ba1df7eb664
-ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
-ms.translationtype: HT
+ms.openlocfilehash: e8afa7a5f5a7692f88ace4da08209b80f902b603
+ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/16/2020
-ms.locfileid: "79420819"
+ms.lasthandoff: 03/17/2020
+ms.locfileid: "79445663"
 ---
 # <a name="iview-interface"></a>Interface IView
 
@@ -54,6 +54,7 @@ En-tête : afxwinforms. h (défini dans l’assembly atlmfc\lib\mfcmifc80.dll)
 ## <a name="onactivateview"></a>IView :: OnActivateView
 
 Appelée par MFC lorsqu’une vue est activée ou désactivée.
+
 ```
 void OnActivateView(bool activate);
 ```
@@ -66,6 +67,7 @@ Indique si la vue est en cours d’activation ou de désactivation.
 ## <a name="oninitialupdate"></a>IView :: OnInitialUpdate
 
 Appelée par l’infrastructure après que la vue a été attachée pour la première fois au document, mais avant l’affichage initial de la vue.
+
 ```
 void OnInitialUpdate();
 ```
@@ -73,6 +75,7 @@ void OnInitialUpdate();
 ## <a name="onupdate"></a>IView :: OnUpdate
 
 Appelée par MFC après la modification du document de la vue.
+
 ```
 void OnUpdate();
 ```

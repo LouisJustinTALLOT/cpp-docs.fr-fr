@@ -1,8 +1,6 @@
 ---
 title: Pages de codes
 ms.date: 11/04/2016
-f1_keywords:
-- c.international
 helpviewer_keywords:
 - character sets [C++], code pages
 - ANSI [C++], code pages
@@ -12,12 +10,12 @@ helpviewer_keywords:
 - code pages [C++], types of
 - locale code pages [C++]
 ms.assetid: 4a26fc42-185a-4add-98bf-a7b314ae6186
-ms.openlocfilehash: 83c54a3d624ddad4de6c359c44c3b4be80c95a6e
-ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
-ms.translationtype: HT
+ms.openlocfilehash: 13b31b7d7750158caf498d92db67fd3e61856c5c
+ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/11/2019
-ms.locfileid: "57738570"
+ms.lasthandoff: 03/17/2020
+ms.locfileid: "79443502"
 ---
 # <a name="code-pages"></a>Pages de codes
 
@@ -35,7 +33,7 @@ La bibliothèque Runtime Microsoft utilise les types suivants de pages de codes�
 
    définit également les paramètres régionaux sur la page de codes ANSI par défaut du système.
 
-- Page de codes des paramètres régionaux. Le comportement d'un certain nombre de routines d'exécution dépend des paramètres régionaux actuels, qui incluent la page de codes des paramètres régionaux. Pour plus d’informations, consultez [Routines dépendantes des paramètres régionaux](../c-runtime-library/locale.md). Par défaut, toutes les routines dépendantes des paramètres régionaux de la bibliothèque Runtime Microsoft utilisent la page de codes correspondant aux paramètres régionaux "C". Au moment de l’exécution, vous pouvez modifier ou interroger la page de codes des paramètres régionaux utilisée avec un appel à [setlocale](../c-runtime-library/reference/setlocale-wsetlocale.md).
+- Page de codes des paramètres régionaux. Le comportement d'un certain nombre de routines d'exécution dépend des paramètres régionaux actuels, qui incluent la page de codes des paramètres régionaux. (Pour plus d’informations, consultez [routines dépendantes des paramètres régionaux](../c-runtime-library/locale.md).) Par défaut, toutes les routines dépendantes des paramètres régionaux de la bibliothèque Runtime Microsoft utilisent la page de codes qui correspond aux paramètres régionaux « C ». Au moment de l’exécution, vous pouvez modifier ou interroger la page de codes des paramètres régionaux utilisée avec un appel à [setlocale](../c-runtime-library/reference/setlocale-wsetlocale.md).
 
 - Page de codes multioctets. Le comportement de la plupart des routines de caractères multioctets dans la bibliothèque Runtime dépend de la page de codes multioctets actuelle. Par défaut, ces routines utilisent la page de codes ANSI par défaut du système. Au moment de l’exécution, vous pouvez interroger et modifier la page de codes multioctets avec [_getmbcp](../c-runtime-library/reference/getmbcp.md) et [_setmbcp](../c-runtime-library/reference/setmbcp.md), respectivement.
 

@@ -2,24 +2,24 @@
 title: __inword
 ms.date: 09/02/2019
 f1_keywords:
-- __indword_cpp
-- __indword
+- __inword_cpp
+- __inword
 helpviewer_keywords:
 - in instruction
 - __inword intrinsic
 ms.assetid: 5c617edd-6709-40a1-aad2-40d5e39283c6
-ms.openlocfilehash: cfb6e5a11bed5feec3435ab604d22b8f532d3400
-ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
+ms.openlocfilehash: 7daaf1abd5089716061f118e30e9534e5c5c18ee
+ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/03/2019
-ms.locfileid: "70217526"
+ms.lasthandoff: 03/17/2020
+ms.locfileid: "79440978"
 ---
 # <a name="__inword"></a>__inword
 
-**Section spécifique à Microsoft**
+**Section spécifique de Microsoft**
 
-Lit les données à partir du port spécifié `in` à l’aide de l’instruction.
+Lit les données à partir du port spécifié à l’aide de l’instruction `in`.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -31,26 +31,26 @@ unsigned short __inword(
 
 ### <a name="parameters"></a>Paramètres
 
-*Importer*\
+\ de *port*
 dans Port à partir duquel effectuer la lecture.
 
-## <a name="return-value"></a>Valeur de retour
+## <a name="return-value"></a>Valeur retournée
 
 Mot des données lues.
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
-|Intrinsèque|Architecture|
+|Intrinsic|Architecture|
 |---------------|------------------|
 |`__inword`|x86, x64|
 
-**Fichier d’en-tête** \<> Intro. h
+**Fichier d’en-tête** \<Intro. h >
 
 ## <a name="remarks"></a>Notes
 
 Cette routine est disponible uniquement en tant qu'intrinsèque.
 
-**FIN de la section spécifique à Microsoft**
+**Fin de la section spécifique de Microsoft**
 
 ## <a name="see-also"></a>Voir aussi
 

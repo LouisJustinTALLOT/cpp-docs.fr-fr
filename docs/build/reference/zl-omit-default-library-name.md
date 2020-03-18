@@ -2,7 +2,7 @@
 title: /Zl (Omettre le nom de la bibliothèque par défaut)
 ms.date: 11/04/2016
 f1_keywords:
-- /zi
+- /zl
 - VC.Project.VCCLCompilerTool.OmitDefaultLibName
 helpviewer_keywords:
 - -Zl compiler option [C++]
@@ -11,12 +11,12 @@ helpviewer_keywords:
 - /Zl compiler option [C++]
 - default libraries, omitting names
 ms.assetid: b27d39d0-44d6-498c-84ae-27c1326fee59
-ms.openlocfilehash: 1bcb90dbf071253dc0561845e3bd713dc42d5aef
-ms.sourcegitcommit: 573b36b52b0de7be5cae309d45b68ac7ecf9a6d8
+ms.openlocfilehash: c72377314abf755469075c7a4b431f4b8a64ee7f
+ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/10/2019
-ms.locfileid: "74988553"
+ms.lasthandoff: 03/17/2020
+ms.locfileid: "79438622"
 ---
 # <a name="zl-omit-default-library-name"></a>/Zl (Omettre le nom de la bibliothèque par défaut)
 
@@ -54,9 +54,9 @@ void Test() {
 }
 ```
 
-### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Pour définir cette option du compilateur dans l'environnement de développement Visual Studio
+### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Pour définir cette option du compilateur dans l’environnement de développement Visual Studio
 
-1. Ouvrez la boîte de dialogue **Pages de propriété** du projet. Pour plus d’informations, consultez [Définir le compilateur C++ et les propriétés de build dans Visual Studio](../working-with-project-properties.md).
+1. Ouvrez la boîte de dialogue **Pages de propriété** du projet. Pour plus d’informations, consultez [Définir le compilateur C++ et les propriétés de build dans Visual Studio](../working-with-project-properties.md).
 
 1. Cliquez sur le dossier **C/C++** .
 

@@ -20,12 +20,12 @@ helpviewer_keywords:
 - databases [MFC], dialog data exchange (DDX) support
 - DAO [MFC], dialog data exchange (DDX) support
 ms.assetid: 0d8cde38-3a2c-4100-9589-ac80a7b1ce91
-ms.openlocfilehash: 8b216941837cd79492aa6cb707481073b5321bce
-ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
-ms.translationtype: HT
+ms.openlocfilehash: 48ffe6f124b91ee8ad60452f26d895bc2698779b
+ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/16/2020
-ms.locfileid: "79421358"
+ms.lasthandoff: 03/17/2020
+ms.locfileid: "79447309"
 ---
 # <a name="dialog-data-exchange-functions-for-crecordview-and-cdaorecordview"></a>Échange de données de boîtes de dialogue pour CRecordView et CDaoRecordView
 
@@ -476,7 +476,8 @@ Consultez [DDX_FieldText](#ddx_fieldtext) pour obtenir un exemple de DDX_Field g
 
   **En-tête** afxdao. h
 
-  ## <a name="ddx_fieldslider"></a>DDX_FieldSlider
+## <a name="ddx_fieldslider"></a>DDX_FieldSlider
+
 La fonction `DDX_FieldSlider` synchronise la position Thumb d’un contrôle Slider dans une vue d’enregistrement et un membre de données de champ **int** d’un jeu d’enregistrements associé à la vue d’enregistrement (ou avec la variable de type entier que vous choisissez de mapper).
 
 ### <a name="syntax"></a>Syntaxe

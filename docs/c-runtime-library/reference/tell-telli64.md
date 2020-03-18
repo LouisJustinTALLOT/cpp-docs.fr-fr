@@ -21,7 +21,6 @@ api_type:
 topic_type:
 - apiref
 f1_keywords:
-- tell
 - telli64
 - _telli64
 - _tell
@@ -33,12 +32,12 @@ helpviewer_keywords:
 - telli64 function
 - _telli64 function
 ms.assetid: 1500e8f9-8fec-4253-9eec-ec66125dfc9b
-ms.openlocfilehash: 54f672a1b230103d6f9ae1c45d2c9e487764939e
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: f092bdfdb27dd73baf159da60ba66bd5809aaf61
+ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70946255"
+ms.lasthandoff: 03/17/2020
+ms.locfileid: "79443672"
 ---
 # <a name="_tell-_telli64"></a>_tell, _telli64
 
@@ -57,7 +56,7 @@ __int64 _telli64(
 
 ### <a name="parameters"></a>Paramètres
 
-*handle*<br/>
+*traitée*<br/>
 Descripteur de fichier faisant référence au fichier ouvert.
 
 ## <a name="return-value"></a>Valeur de retour
@@ -66,19 +65,19 @@ Position actuelle du pointeur de fichier. Sur les appareils incapables de recher
 
 Une valeur de retour de-1L indique une erreur. Si *handle* est un descripteur de fichier non valide, le gestionnaire de paramètres non valides est appelé, comme décrit dans [validation de paramètre](../../c-runtime-library/parameter-validation.md). Si l’exécution est autorisée à se poursuivre, ces fonctions définissent **errno** à **EBADF** et retournent-1L.
 
-Pour plus d’informations sur ce code de retour et sur les autres codes, consultez [_doserrno, errno, _sys_errlist, and _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md) .
+Pour plus d’informations sur ce code de retour et les autres, consultez [_doserrno, errno, _sys_errlist et _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
 
 ## <a name="remarks"></a>Notes
 
 La fonction **_tell** obtient la position actuelle du pointeur de fichier (le cas échéant) associé à l’argument de *handle* . La position est exprimée en nombre d’octets à partir du début du fichier. Pour la fonction **_telli64** , cette valeur est exprimée sous la forme d’un entier 64 bits.
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
 |Routine|En-tête requis|
 |-------------|---------------------|
 |**_tell**, **_telli64**|\<io.h>|
 
-Pour plus d'informations sur la compatibilité, voir [Compatibilité](../../c-runtime-library/compatibility.md).
+Pour plus d’informations sur la compatibilité, voir [Compatibilité](../../c-runtime-library/compatibility.md).
 
 ## <a name="example"></a>Exemple
 
@@ -120,7 +119,7 @@ Line one.
 Line two.
 ```
 
-### <a name="output"></a>Sortie
+### <a name="output"></a>Output
 
 ```Output
 Current file position is: 20
