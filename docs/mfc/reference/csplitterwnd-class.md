@@ -72,12 +72,12 @@ helpviewer_keywords:
 - CSplitterWnd [MFC], OnDrawSplitter
 - CSplitterWnd [MFC], OnInvertTracker
 ms.assetid: fd0de258-6dbe-4552-9e47-a39de0471d51
-ms.openlocfilehash: 065735c13a3e763208142eb6bc989d3a496221f0
-ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
-ms.translationtype: HT
+ms.openlocfilehash: bee6deed3052d6cc923e432e97ad9a7904060cb6
+ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/16/2020
-ms.locfileid: "79421456"
+ms.lasthandoff: 03/17/2020
+ms.locfileid: "79447439"
 ---
 # <a name="csplitterwnd-class"></a>CSplitterWnd, classe
 
@@ -179,7 +179,7 @@ Pour plus d’informations sur la création de fenêtres fractionnées dynamique
 
 - Exemple MFC [VIEWEX](../../overview/visual-cpp-samples.md).
 
-## <a name="inheritance-hierarchy"></a>Hiérarchie d’héritage
+## <a name="inheritance-hierarchy"></a>Hiérarchie d'héritage
 
 [CObject](../../mfc/reference/cobject-class.md)
 
@@ -522,17 +522,17 @@ Pointeur vers la vue d’origine du message de défilement.
 *nScrollCode*<br/>
 Code-barres de défilement qui indique la requête de défilement de l’utilisateur. Ce paramètre est composé de deux parties : un octet de poids faible, qui détermine le type de défilement horizontalement et un octet de poids fort, qui détermine le type de défilement qui se produit verticalement :
 
-    - SB_BOTTOM fait défiler vers le bas.
+- SB_BOTTOM fait défiler vers le bas.
 
-    - SB_LINEDOWN fait défiler d’une ligne vers le dessous.
+- SB_LINEDOWN fait défiler d’une ligne vers le dessous.
 
-    - SB_LINEUP fait défiler d’une ligne vers le haut.
+- SB_LINEUP fait défiler d’une ligne vers le haut.
 
-    - SB_PAGEDOWN fait défiler une page vers le dessous.
+- SB_PAGEDOWN fait défiler une page vers le dessous.
 
-    - SB_PAGEUP fait défiler d’une page vers le haut.
+- SB_PAGEUP fait défiler d’une page vers le haut.
 
-    - SB_TOP fait défiler vers le haut.
+- SB_TOP fait défiler vers le haut.
 
 *bDoScroll*<br/>
 Détermine si l’action de défilement spécifiée se produit. Si *bDoScroll* a la valeur true (autrement dit, s’il existe une fenêtre enfant et si les fenêtres fractionnées comportent une plage de défilement), l’action de défilement spécifiée peut avoir lieu ; Si *bDoScroll* a la valeur false (autrement dit, s’il n’existe aucune fenêtre enfant ou si les vues fractionnées n’ont pas de plage de défilement), le défilement ne se produit pas.
@@ -709,9 +709,9 @@ DWORD GetScrollStyle() const;
 
 Un ou plusieurs des indicateurs de style Windows suivants, en cas de réussite :
 
-    - WS_HSCROLL si le séparateur gère actuellement des barres de défilement horizontales partagées.
+- WS_HSCROLL si le séparateur gère actuellement des barres de défilement horizontales partagées.
 
-    - WS_VSCROLL si le séparateur gère actuellement des barres de défilement verticales partagées.
+- WS_VSCROLL si le séparateur gère actuellement des barres de défilement verticales partagées.
 
 Si la valeur est zéro, la fenêtre fractionnée ne gère pas actuellement les barres de défilement partagées.
 
@@ -810,13 +810,13 @@ Pointeur vers le contexte de périphérique dans lequel dessiner. Si le *contrô
 *nType*<br/>
 Valeur de la `enum ESplitType`, qui peut être l’une des suivantes :
 
-    - `splitBox` la zone de glissement du séparateur.
+- `splitBox` la zone de glissement du séparateur.
 
-    - `splitBar` la barre qui apparaît entre les deux fenêtres fractionnées.
+- `splitBar` la barre qui apparaît entre les deux fenêtres fractionnées.
 
-    - `splitIntersection` l’intersection des fenêtres fractionnées. Cet élément n’est pas appelé lors de l’exécution sur Windows 95/98.
+- `splitIntersection` l’intersection des fenêtres fractionnées. Cet élément n’est pas appelé lors de l’exécution sur Windows 95/98.
 
-    - `splitBorder` les bordures de la fenêtre fractionnée.
+- `splitBorder` les bordures de la fenêtre fractionnée.
 
 *rectangulaire*<br/>
 Référence à un objet [CRect](../../atl-mfc-shared/reference/crect-class.md) spécifiant la taille et la forme des fenêtres fractionnées.

@@ -41,11 +41,11 @@ helpviewer_keywords:
 - accelerator class
 ms.assetid: 37eed593-cf87-4611-9cdc-e98df6c2377a
 ms.openlocfilehash: 72a570ab28696730f835c42748a6ea12b865ca55
-ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
+ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/06/2020
-ms.locfileid: "78855914"
+ms.lasthandoff: 03/16/2020
+ms.locfileid: "79422268"
 ---
 # <a name="accelerator-class"></a>accelerator, classe
 
@@ -61,14 +61,14 @@ class accelerator;
 
 ### <a name="public-constructors"></a>Constructeurs publics
 
-|Nom|Description|
+|Name|Description|
 |----------|-----------------|
 |[Constructeur d’accélérateurs](#ctor)|Initialise une nouvelle instance de la classe `accelerator`.|
 |[~ Accélérateur (destructeur)](#ctor)|Détruit l’objet `accelerator`.|
 
-### <a name="public-methods"></a>Méthodes publiques
+### <a name="public-methods"></a>M&#233;thodes publiques
 
-|Nom|Description|
+|Name|Description|
 |----------|-----------------|
 |[create_view](#create_view)|Crée et retourne un objet `accelerator_view` sur cet accélérateur.|
 |[get_all](#get_all)|Retourne un vecteur d’objets `accelerator` qui représentent tous les accélérateurs disponibles.|
@@ -88,17 +88,17 @@ class accelerator;
 |[set_default](#set_default)|Retourne le chemin d’accès de l’accélérateur par défaut.|
 |[set_default_cpu_access_type](#set_default_cpu_access_type)|Définit le [access_type](concurrency-namespace-enums-amp.md#access_type)d’UC par défaut pour les tableaux et les allocations de mémoire implicites effectuées sur ce `accelerator`.|
 
-### <a name="public-operators"></a>Op&#233;rateurs publics
+### <a name="public-operators"></a>Opérateurs publics
 
-|Nom|Description|
+|Name|Description|
 |----------|-----------------|
 |[operator!=](#operator_neq)|Compare cet objet `accelerator` avec un autre et retourne **false** s’ils sont identiques ; Sinon, retourne la **valeur true**.|
 |[operator=](#operator_eq)|Copie le contenu de l’objet `accelerator` spécifié dans celui-ci.|
 |[operator==](#operator_eq_eq)|Compare cet objet `accelerator` avec un autre et retourne la **valeur true** s’ils sont identiques ; Sinon, retourne **false**.|
 
-### <a name="public-data-members"></a>Membres de données publiques
+### <a name="public-data-members"></a>Membres de données publics
 
-|Nom|Description|
+|Name|Description|
 |----------|-----------------|
 |[cpu_accelerator](#cpu_accelerator)|Obtient une constante de chaîne pour le `accelerator`de l’UC.|
 |[dedicated_memory](#dedicated_memory)|Obtient la mémoire dédiée pour le `accelerator`, en kilo-octets.|
@@ -117,7 +117,7 @@ class accelerator;
 |[supports_limited_double_precision](#supports_limited_double_precision)|Indique si l’accélérateur prend en charge les mathématiques à double précision de façon limitée.|
 |[version](#version)|Obtient la version du `accelerator`.|
 
-## <a name="inheritance-hierarchy"></a>Hiérarchie d'héritage
+## <a name="inheritance-hierarchy"></a>Hiérarchie d’héritage
 
 `accelerator`
 
@@ -127,7 +127,7 @@ Un accélérateur est une fonctionnalité matérielle qui est optimisée pour l�
 
 Vous pouvez construire un objet `accelerator` en énumérant les appareils disponibles, ou en obtenant l’appareil par défaut, le périphérique de référence ou le périphérique WARP.
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
 **En-tête :** amprt. h
 

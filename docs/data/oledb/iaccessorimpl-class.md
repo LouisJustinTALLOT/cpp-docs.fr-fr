@@ -7,7 +7,6 @@ f1_keywords:
 - ATL::IAccessorImpl::IAccessorImpl
 - IAccessorImpl::IAccessorImpl
 - IAccessorImpl.IAccessorImpl
-- IAccessorImpl
 - ATL::IAccessorImpl::AddRefAccessor
 - AddRefAccessor
 - IAccessorImpl::AddRefAccessor
@@ -37,16 +36,16 @@ helpviewer_keywords:
 - GetBindings method
 - ReleaseAccessor method
 ms.assetid: 768606da-8b71-417c-a62c-88069ce7730d
-ms.openlocfilehash: a4f98cdfea9ea1e82ec0a3de09e292604a6c199f
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: f1865089100ac7f60e8c011e72eedb3d0a3f8470
+ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62409042"
+ms.lasthandoff: 03/17/2020
+ms.locfileid: "79447070"
 ---
 # <a name="iaccessorimpl-class"></a>IAccessorImpl, classe
 
-Fournit une implémentation de la [IAccessor](/previous-versions/windows/desktop/ms719672(v=vs.85)) interface.
+Fournit une implémentation de l’interface [IAccessor](/previous-versions/windows/desktop/ms719672(v=vs.85)) .
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -60,15 +59,15 @@ class ATL_NO_VTABLE IAccessorImpl : public IAccessorImplBase<BindType>
 ### <a name="parameters"></a>Paramètres
 
 *T*<br/>
-Votre classe d’objet ensemble de lignes ou de la commande.
+Classe d’objet Rowset ou Command.
 
 *BindType*<br/>
-Unité de stockage pour les informations de liaison. La valeur par défaut est le `ATLBINDINGS` structure (consultez atldb.h).
+Unité de stockage pour les informations de liaison. La valeur par défaut est la structure `ATLBINDINGS` (consultez Atldb. h).
 
 *BindingVector*<br/>
-Unité de stockage pour les informations de colonne. La valeur par défaut est [CAtlMap](../../atl/reference/catlmap-class.md) où l’élément clé est une valeur HACCESSOR et l’élément de la valeur est un pointeur vers un `BindType` structure.
+Unité de stockage pour les informations de colonne. La valeur par défaut est [CAtlMap](../../atl/reference/catlmap-class.md) où l’élément Key est une valeur hAccessor et l’élément value est un pointeur vers une structure `BindType`.
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
 **En-tête :** atldb.h
 
@@ -80,20 +79,20 @@ Unité de stockage pour les informations de colonne. La valeur par défaut est [
 |-|-|
 |[IAccessorImpl](#iaccessorimpl)|Constructeur.|
 
-### <a name="interface-methods"></a>Méthodes d’interface
+### <a name="interface-methods"></a>Méthodes d'interface
 
 |||
 |-|-|
 |[AddRefAccessor](#addrefaccessor)|Ajoute un décompte de références à un accesseur existant.|
-|[CreateAccessor](#createaccessor)|Crée un accesseur à partir d’un jeu de liaisons.|
+|[CreateAccessor](#createaccessor)|Crée un accesseur à partir d'un jeu de liaisons.|
 |[GetBindings](#getbindings)|Retourne les liaisons dans un accesseur.|
 |[ReleaseAccessor](#releaseaccessor)|Libère un accesseur.|
 
 ## <a name="remarks"></a>Notes
 
-Ce champ est obligatoire sur les ensembles de lignes et de commandes. OLE DB requiert des fournisseurs implémenter un HACCESSOR, qui est une balise à un tableau de [DBBINDING](/previous-versions/windows/desktop/ms716845(v=vs.85)) structures. HACCESSORs fournis par `IAccessorImpl` sont des adresses de la `BindType` structures. Par défaut, `BindType` est défini comme un `ATLBINDINGS` dans `IAccessorImpl`de définition de modèle. `BindType` fournit un mécanisme utilisé par `IAccessorImpl` pour suivre le nombre d’éléments dans son `DBBINDING` ainsi que d’un nombre et accesseur des indicateurs de référence de tableau.
+Cela est obligatoire sur les ensembles de lignes et les commandes. OLE DB exige que les fournisseurs implémentent un HACCESSOR, qui est une balise d’un tableau de structures [DBBINDING](/previous-versions/windows/desktop/ms716845(v=vs.85)) . Les HACCESSORs fournis par `IAccessorImpl` sont des adresses des structures `BindType`. Par défaut, `BindType` est défini en tant que `ATLBINDINGS` dans la définition de modèle de `IAccessorImpl`. `BindType` fournit un mécanisme utilisé par `IAccessorImpl` pour suivre le nombre d’éléments dans son tableau `DBBINDING`, ainsi qu’un nombre de références et des indicateurs d’accesseur.
 
-## <a name="iaccessorimpl"></a> IAccessorImpl::IAccessorImpl
+## <a name="iaccessorimpl"></a>IAccessorImpl :: IAccessorImpl
 
 Constructeur.
 
@@ -103,7 +102,7 @@ Constructeur.
 IAccessorImpl();
 ```
 
-## <a name="addrefaccessor"></a> IAccessorImpl::AddRefAccessor
+## <a name="addrefaccessor"></a>IAccessorImpl :: AddRefAccessor
 
 Ajoute un décompte de références à un accesseur existant.
 
@@ -116,11 +115,11 @@ STDMETHOD(AddRefAccessor)(HACCESSOR hAccessor,
 
 #### <a name="parameters"></a>Paramètres
 
-Consultez [IAccessor::AddRefAccessor](/previous-versions/windows/desktop/ms714978(v=vs.85)) dans le *de référence du programmeur OLE DB*.
+Consultez [IAccessor :: AddRefAccessor](/previous-versions/windows/desktop/ms714978(v=vs.85)) dans le *Guide de référence du programmeur OLE DB*.
 
-## <a name="createaccessor"></a> IAccessorImpl::CreateAccessor
+## <a name="createaccessor"></a>IAccessorImpl :: CreateAccessor
 
-Crée un accesseur à partir d’un jeu de liaisons.
+Crée un accesseur à partir d'un jeu de liaisons.
 
 ### <a name="syntax"></a>Syntaxe
 
@@ -135,11 +134,11 @@ STDMETHOD(CreateAccessor)(DBACCESSORFLAGS dwAccessorFlags,
 
 #### <a name="parameters"></a>Paramètres
 
-Consultez [IAccessor::CreateAccessor](/previous-versions/windows/desktop/ms720969(v=vs.85)) dans le *de référence du programmeur OLE DB*.
+Consultez [IAccessor :: CreateAccessor](/previous-versions/windows/desktop/ms720969(v=vs.85)) dans le *Guide de référence du programmeur OLE DB*.
 
-## <a name="getbindings"></a> IAccessorImpl::GetBindings
+## <a name="getbindings"></a>IAccessorImpl :: GetBindings
 
-Retourne les liaisons de colonnes de base du consommateur dans un accesseur.
+Retourne les liaisons de colonnes de base à partir du consommateur dans un accesseur.
 
 ### <a name="syntax"></a>Syntaxe
 
@@ -152,9 +151,9 @@ STDMETHOD(GetBindings)(HACCESSOR hAccessor,
 
 #### <a name="parameters"></a>Paramètres
 
-Consultez [IAccessor::GetBindings](/previous-versions/windows/desktop/ms721253(v=vs.85)) dans le *de référence du programmeur OLE DB*.
+Consultez [IAccessor :: GetBindings](/previous-versions/windows/desktop/ms721253(v=vs.85)) dans le *Guide de référence du programmeur OLE DB*.
 
-## <a name="releaseaccessor"></a> IAccessorImpl::ReleaseAccessor
+## <a name="releaseaccessor"></a>IAccessorImpl :: ReleaseAccessor
 
 Libère un accesseur.
 
@@ -167,9 +166,9 @@ STDMETHOD(ReleaseAccessor)(HACCESSOR hAccessor,
 
 #### <a name="parameters"></a>Paramètres
 
-Consultez [IAccessor::ReleaseAccessor](/previous-versions/windows/desktop/ms719717(v=vs.85)) dans le *de référence du programmeur OLE DB*.
+Consultez [IAccessor :: ReleaseAccessor](/previous-versions/windows/desktop/ms719717(v=vs.85)) dans le *Guide de référence du programmeur OLE DB*.
 
 ## <a name="see-also"></a>Voir aussi
 
-[Modèles du fournisseur OLE DB](../../data/oledb/ole-db-provider-templates-cpp.md)<br/>
+[Modèles du fournisseur OLE DB](../../data/oledb/ole-db-provider-templates-cpp.md)<br/>
 [Architecture des modèles du fournisseur OLE DB](../../data/oledb/ole-db-provider-template-architecture.md)

@@ -1,21 +1,19 @@
 ---
-title: 'Bibliothèques sécurisées: Bibliothèque standard C++'
+title: 'Bibliothèques sécurisées : bibliothèque standard C++'
 ms.date: 11/04/2016
-f1_keywords:
-- _SCL_SECURE_NO_DEPRECATE
 helpviewer_keywords:
 - Safe Libraries
 - Safe Libraries, C++ Standard Library
 - Safe C++ Standard Library
 ms.assetid: 3993340f-1f29-4d81-b3f5-52a52bc8e148
-ms.openlocfilehash: 782a3610909de01e1a1991dee3a74aee9a131da3
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: e352489ca12b5815aab5517defc72571abe177fb
+ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68454546"
+ms.lasthandoff: 03/17/2020
+ms.locfileid: "79446097"
 ---
-# <a name="safe-libraries-c-standard-library"></a>Bibliothèques sécurisées: Bibliothèque standard C++
+# <a name="safe-libraries-c-standard-library"></a>Bibliothèques sécurisées : bibliothèque standard C++
 
 Plusieurs améliorations ont été apportées aux bibliothèques fournies avec Microsoft C++, y compris la C++ bibliothèque standard, pour les rendre plus sécurisées.
 
@@ -42,7 +40,7 @@ Si vous appelez une des méthodes potentiellement dangereuses ci-dessus, ou si v
 
 [Checked Iterators](../standard-library/checked-iterators.md)
 
-[Debug Iterator Support](../standard-library/debug-iterator-support.md)
+[Prise en charge de l’itérateur de débogage](../standard-library/debug-iterator-support.md)
 
 ## <a name="see-also"></a>Voir aussi
 

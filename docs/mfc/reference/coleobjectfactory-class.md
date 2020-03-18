@@ -37,11 +37,11 @@ helpviewer_keywords:
 - COleObjectFactory [MFC], VerifyUserLicense
 ms.assetid: ab179c1e-4af2-44aa-a576-37c48149b427
 ms.openlocfilehash: 22805550d13ecb400b151495363e5eda2dfb3b76
-ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
+ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/06/2020
-ms.locfileid: "78856974"
+ms.lasthandoff: 03/16/2020
+ms.locfileid: "79421540"
 ---
 # <a name="coleobjectfactory-class"></a>COleObjectFactory (classe)
 
@@ -99,7 +99,7 @@ La classe `COleObjectFactory` possède des fonctions membres pour exécuter les 
 
 Pour plus d’informations sur la création d’objets, consultez les articles [objets de données et sources de données (OLE)](../../mfc/data-objects-and-data-sources-ole.md) , [objets de données et sources de données : création et destruction](../../mfc/data-objects-and-data-sources-creation-and-destruction.md). Pour plus d’informations sur l’inscription, consultez l’article [inscription](../../mfc/registration.md).
 
-## <a name="inheritance-hierarchy"></a>Hiérarchie d'héritage
+## <a name="inheritance-hierarchy"></a>Hiérarchie d’héritage
 
 [CObject](../../mfc/reference/cobject-class.md)
 

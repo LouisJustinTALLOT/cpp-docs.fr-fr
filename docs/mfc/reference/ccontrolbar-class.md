@@ -45,11 +45,11 @@ helpviewer_keywords:
 - CControlBar [MFC], m_pInPlaceOwner
 ms.assetid: 4d668c55-9b42-4838-97ac-cf2b3000b82c
 ms.openlocfilehash: 41e40b3da7b4a294fe396a9d93f7c6a93593ff95
-ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
+ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/06/2020
-ms.locfileid: "78866429"
+ms.lasthandoff: 03/16/2020
+ms.locfileid: "79420532"
 ---
 # <a name="ccontrolbar-class"></a>CControlBar Class
 
@@ -63,7 +63,7 @@ class CControlBar : public CWnd
 
 ## <a name="members"></a>Membres
 
-### <a name="protected-constructors"></a>Constructeurs prot&#233;g&#233;s
+### <a name="protected-constructors"></a>Constructeurs protégés
 
 |Name|Description|
 |----------|-----------------|
@@ -90,7 +90,7 @@ class CControlBar : public CWnd
 |[CControlBar :: SetBorders](#setborders)|Définit les valeurs de bordure de la barre de contrôle.|
 |[CControlBar :: SetInPlaceOwner](#setinplaceowner)|Modifie le propriétaire sur place d’une barre de contrôle.|
 
-### <a name="public-data-members"></a>Membres de données publiques
+### <a name="public-data-members"></a>Membres de données publics
 
 |Name|Description|
 |----------|-----------------|
@@ -109,7 +109,7 @@ Pour plus d’informations sur `CControlBar`, consultez :
 
 - [Note technique 31 : barres de contrôles](../../mfc/tn031-control-bars.md).
 
-## <a name="inheritance-hierarchy"></a>Hiérarchie d'héritage
+## <a name="inheritance-hierarchy"></a>Hiérarchie d’héritage
 
 [CObject](../../mfc/reference/cobject-class.md)
 
@@ -191,8 +191,8 @@ Si *bStretch* a la valeur true, étire la dimension le long de l’orientation f
 |--------------|-----------|----------------|-----------------|--------------------------|
 |TRUE|TRUE|Étirement horizontal|Orienté horizontalement|Pas d’ancrage|
 |TRUE|FALSE|Étirement vertical|Orienté verticalement|Pas d’ancrage|
-|FALSE|TRUE|Aucun étirement disponible|Orienté horizontalement|Docking|
-|FALSE|FALSE|Aucun étirement disponible|Orienté verticalement|Docking|
+|FALSE|TRUE|Aucun étirement disponible|Orienté horizontalement|Ancrage|
+|FALSE|FALSE|Aucun étirement disponible|Orienté verticalement|Ancrage|
 
 ##  <a name="calcinsiderect"></a>CControlBar :: CalcInsideRect
 

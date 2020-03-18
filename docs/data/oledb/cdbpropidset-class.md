@@ -11,7 +11,6 @@ f1_keywords:
 - ATL.CDBPropIDSet.AddPropertyID
 - ATL::CDBPropIDSet::AddPropertyID
 - ATL::CDBPropIDSet::CDBPropIDSet
-- CDBPropIDSet
 - CDBPropIDSet.CDBPropIDSet
 - CDBPropIDSet::CDBPropIDSet
 - ATL.CDBPropIDSet.CDBPropIDSet
@@ -21,7 +20,6 @@ f1_keywords:
 - CDBPropIDSet::operator=
 - CDBPropIDSet.SetGUID
 - ATL::CDBPropIDSet::SetGUID
-- SetGUID
 - ATL.CDBPropIDSet.SetGUID
 - CDBPropIDSet::SetGUID
 helpviewer_keywords:
@@ -33,16 +31,16 @@ helpviewer_keywords:
 - operator=, property sets
 - SetGUID method
 ms.assetid: 52bb806c-9581-494d-9af7-50d8a4834805
-ms.openlocfilehash: 9e878af3acf4c4d3a6ca785454c4bb072f17cf09
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: e2fced2ed0e32af15e75c7290733fdc2b4b34dc9
+ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62209319"
+ms.lasthandoff: 03/17/2020
+ms.locfileid: "79447456"
 ---
 # <a name="cdbpropidset-class"></a>CDBPropIDSet, classe
 
-Hérite de la `DBPROPIDSET` structurer et ajoute un constructeur qui initialise les champs clés, ainsi que les [AddPropertyID](../../data/oledb/cdbpropidset-addpropertyid.md) accéder à la méthode.
+Hérite de la structure `DBPROPIDSET` et ajoute un constructeur qui initialise les champs clés ainsi que la méthode d’accès [AddPropertyID](../../data/oledb/cdbpropidset-addpropertyid.md) .
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -50,7 +48,7 @@ Hérite de la `DBPROPIDSET` structurer et ajoute un constructeur qui initialise 
 class CDBPropIDSet : public tagDBPROPIDSET
 ```
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
 **En-tête :** atldbcli.h
 
@@ -62,21 +60,21 @@ class CDBPropIDSet : public tagDBPROPIDSET
 |-|-|
 |[AddPropertyID](#addpropertyid)|Ajoute une propriété à l’ensemble d’ID de propriété.|
 |[CDBPropIDSet](#cdbpropidset)|Constructeur.|
-|[SetGUID](#setguid)|Définit le GUID de l’ID de propriété de jeu.|
+|[SetGUID](#setguid)|Définit le GUID de l’ID de propriété défini.|
 
 ### <a name="operators"></a>Opérateurs
 
 |||
 |-|-|
-|[operator =](#op_equal)|Assigne le contenu d’une propriété ID définie à un autre.|
+|[opérateur =](#op_equal)|Attribue le contenu d’un ensemble d’ID de propriété à un autre.|
 
 ## <a name="remarks"></a>Notes
 
-Utilisation de consommateurs OLE DB `DBPROPIDSET` structures pour passer un tableau d’ID de propriété pour lequel le consommateur souhaite obtenir des informations de propriété. Les propriétés identifiées dans un seul [DBPROPIDSET](/previous-versions/windows/desktop/ms717981(v=vs.85)) structure appartiennent à une propriété est définie.
+OLE DB consommateurs utilisent des structures `DBPROPIDSET` pour passer un tableau d’ID de propriété pour lequel le consommateur souhaite obtenir des informations de propriété. Les propriétés identifiées dans une structure [DBPROPIDSET](/previous-versions/windows/desktop/ms717981(v=vs.85)) unique appartiennent à un jeu de propriétés.
 
-## <a name="addpropertyid"></a> CDBPropIDSet::AddPropertyID
+## <a name="addpropertyid"></a>CDBPropIDSet :: AddPropertyID
 
-Ajoute un ID de propriété à l’ensemble d’ID de propriété.
+Ajoute un ID de propriété à l’ID de propriété défini.
 
 ### <a name="syntax"></a>Syntaxe
 
@@ -87,11 +85,11 @@ bool AddPropertyID(DBPROPID propid) throw();
 #### <a name="parameters"></a>Paramètres
 
 *propid*<br/>
-[in] Définir l’ID de propriété à ajouter à l’ID de propriété.
+dans ID de propriété à ajouter à l’ID de propriété défini.
 
-## <a name="cdbpropidset"></a> CDBPropIDSet::CDBPropIDSet
+## <a name="cdbpropidset"></a>CDBPropIDSet :: CDBPropIDSet
 
-Constructeur. Initialise le `rgProperties`, `cProperties`et (éventuellement) `guidPropertySet` champs de la [DBPROPIDSET](/previous-versions/windows/desktop/ms717981(v=vs.85)) structure.
+Constructeur. Initialise les champs `rgProperties`, `cProperties`et (éventuellement) `guidPropertySet` de la structure [DBPROPIDSET](/previous-versions/windows/desktop/ms717981(v=vs.85)) .
 
 ### <a name="syntax"></a>Syntaxe
 
@@ -106,14 +104,14 @@ CDBPropIDSet();
 #### <a name="parameters"></a>Paramètres
 
 *guid*<br/>
-[in] GUID utilisé pour initialiser le `guidPropertySet` champ.
+dans GUID utilisé pour initialiser le champ `guidPropertySet`.
 
 *propidset*<br/>
-[in] Un autre `CDBPropIDSet` objet pour la construction de copie.
+dans Un autre objet `CDBPropIDSet` pour la construction de copie.
 
-## <a name="setguid"></a> CDBPropIDSet::SetGUID
+## <a name="setguid"></a>CDBPropIDSet :: SetGUID
 
-Définit le champ GUID dans le `DBPROPIDSET` structure.
+Définit le champ GUID dans la structure `DBPROPIDSET`.
 
 ### <a name="syntax"></a>Syntaxe
 
@@ -124,15 +122,15 @@ void SetGUID(const GUID& guid) throw();
 #### <a name="parameters"></a>Paramètres
 
 *guid*<br/>
-[in] Un GUID utilisé pour définir le `guidPropertySet` champ la [DBPROPIDSET](/previous-versions/windows/desktop/ms717981(v=vs.85)) structure.
+dans GUID utilisé pour définir le champ `guidPropertySet` de la structure [DBPROPIDSET](/previous-versions/windows/desktop/ms717981(v=vs.85)) .
 
 ### <a name="remarks"></a>Notes
 
-Ce champ peut être défini le [constructeur](../../data/oledb/cdbpropidset-cdbpropidset.md) également. Appelez cette fonction si vous utilisez le constructeur par défaut pour cette classe.
+Ce champ peut également être défini par le [constructeur](../../data/oledb/cdbpropidset-cdbpropidset.md) . Appelez cette fonction si vous utilisez le constructeur par défaut pour cette classe.
 
-## <a name="op_equal"></a> CDBPropIDSet::operator =
+## <a name="op_equal"></a>CDBPropIDSet :: Operator =
 
-Assigne le contenu d’une propriété ID est défini à un autre jeu de propriétés d’ID.
+Attribue le contenu d’un ID de propriété à un autre jeu de propriétés d’ID.
 
 ### <a name="syntax"></a>Syntaxe
 
@@ -142,5 +140,5 @@ CDBPropIDSet& operator =(CDBPropIDSet& propset) throw();
 
 ## <a name="see-also"></a>Voir aussi
 
-[Modèles du consommateur OLE DB](../../data/oledb/ole-db-consumer-templates-cpp.md)<br/>
+[OLE DB (modèles du consommateur)](../../data/oledb/ole-db-consumer-templates-cpp.md)<br/>
 [Référence des modèles du consommateur OLE DB](../../data/oledb/ole-db-consumer-templates-reference.md)

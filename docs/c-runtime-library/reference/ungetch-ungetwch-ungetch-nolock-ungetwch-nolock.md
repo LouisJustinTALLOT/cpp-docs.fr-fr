@@ -27,7 +27,6 @@ f1_keywords:
 - ungetwch
 - ungetch_nolock
 - _ungetwch
-- ungetch
 - ungetwch_nolock
 - _ungetch
 - _ungettch_nolock
@@ -47,12 +46,12 @@ helpviewer_keywords:
 - ungetwch_nolock function
 - _ungetwch function
 ms.assetid: 70ae71c6-228c-4883-a57d-de6d5f873825
-ms.openlocfilehash: 2f6b782334df710ac9fe6359fda77b40a31e060c
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 5fd34d0c975ee49bce688cd902a6df856b5d6963
+ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70945908"
+ms.lasthandoff: 03/17/2020
+ms.locfileid: "79443751"
 ---
 # <a name="_ungetch-_ungetwch-_ungetch_nolock-_ungetwch_nolock"></a>_ungetch, _ungetwch, _ungetch_nolock, _ungetwch_nolock
 
@@ -89,7 +88,7 @@ Les deux fonctions retournent le caractère *c* en cas de réussite. En cas d’
 
 ## <a name="remarks"></a>Notes
 
-Ces fonctions renvoient le caractère *c* vers la console, ce qui fait que *c* est le prochain caractère lu par **_getch** ou **_getche** (ou **_getwch** ou **_getwche**). **_ungetch** et **_ungetwch** échouent s’ils sont appelés plusieurs fois avant la lecture suivante. L’argument *c* ne peut pas être **EOF** (ou **WEOF**).
+Ces fonctions renvoient le caractère *c* vers la console, ce qui fait que *c* est le caractère suivant lu par **_getch** ou **_getche** (ou **_getwch** ou **_getwche**). **_ungetch** et **_ungetwch** échouent s’ils sont appelés plusieurs fois avant la lecture suivante. L’argument *c* ne peut pas être **EOF** (ou **WEOF**).
 
 Les versions avec suffixe **_nolock** sont identiques, à ceci près qu’elles ne sont pas protégées contre les interférences avec d’autres threads. Elles peuvent être plus rapides, car elles n’entraînent pas la surcharge liée au verrouillage des autres threads. Utilisez ces fonctions uniquement dans les contextes thread-safe, tels que les applications à un seul thread ou lorsque la portée appelante gère déjà l'isolation des threads.
 
@@ -100,14 +99,14 @@ Les versions avec suffixe **_nolock** sont identiques, à ceci près qu’elles 
 |**_ungettch**|**_ungetch**|**_ungetch**|**_ungetwch**|
 |**_ungettch_nolock**|**_ungetch_nolock**|**_ungetch_nolock**|**_ungetwch_nolock**|
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
 |Routine|En-tête requis|
 |-------------|---------------------|
 |**_ungetch**, **_ungetch_nolock**|\<conio.h>|
 |**_ungetwch**, **_ungetwch_nolock**|\<conio.h> ou \<wchar.h>|
 
-Pour plus d'informations sur la compatibilité, voir [Compatibilité](../../c-runtime-library/compatibility.md).
+Pour plus d’informations sur la compatibilité, voir [Compatibilité](../../c-runtime-library/compatibility.md).
 
 ## <a name="example"></a>Exemple
 

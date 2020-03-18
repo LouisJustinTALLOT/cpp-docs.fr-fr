@@ -1,5 +1,5 @@
 ---
-title: OLE (glisser-déposer)
+title: Glisser-déposer OLE
 description: Vue d’ensemble de la fonctionnalité glisser-déplacer OLE Microsoft Foundation Classes (MFC), comment implémenter une source de dépôt, une cible de déplacement et comment personnaliser le glisser-déplacer.
 ms.date: 02/09/2020
 helpviewer_keywords:
@@ -11,13 +11,13 @@ helpviewer_keywords:
 - OLE drag and drop [MFC]
 ms.assetid: a4595350-ca06-4400-88a1-f0175c76b77b
 ms.openlocfilehash: c601e8f0324510346513dc8da48dd1a83c95bceb
-ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
+ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/06/2020
-ms.locfileid: "78855489"
+ms.lasthandoff: 03/16/2020
+ms.locfileid: "79420350"
 ---
-# <a name="ole-drag-and-drop"></a>OLE (glisser-déposer)
+# <a name="ole-drag-and-drop"></a>Glisser-déposer OLE
 
 La fonctionnalité glisser-déposer de l’OLE est essentiellement un raccourci pour copier et coller des données. Lorsque vous utilisez le Presse-papiers pour copier et coller des données, un certain nombre d'étapes sont nécessaires. Sélectionnez les données, puis choisissez **couper** ou **copier** dans le menu **Edition** . Ensuite, vous accédez à l’application ou à la fenêtre de destination et placez le curseur à l’emplacement cible. Enfin, vous choisissez **modifier** > **coller** dans le menu.
 

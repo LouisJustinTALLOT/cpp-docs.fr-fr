@@ -2,43 +2,43 @@
 title: /Zc:, trigrammes (substitution de trigrammes) (C++)
 ms.date: 03/06/2018
 f1_keywords:
-- /Zc
+- /Zc:trigraphs
 helpviewer_keywords:
 - -Zc compiler options (C++)
 - /Zc compiler options (C++)
 - Conformance compiler options
 - Zc compiler options (C++)
 ms.assetid: e3d6058f-400d-4966-a3aa-800cfdf69cbf
-ms.openlocfilehash: 7a20123603030dfe719cd8990018f795df137981
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 0e4c98e09551d39e3ff7978767b21f1d2c5bb318
+ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62316000"
+ms.lasthandoff: 03/17/2020
+ms.locfileid: "79438649"
 ---
 # <a name="zctrigraphs-trigraphs-substitution"></a>/Zc:, trigrammes (substitution de trigrammes) (C++)
 
-Lorsque **/Zc : trigraphs** est spécifié, le compilateur remplace une séquence de caractères (trigraphe) à l’aide d’un caractère de ponctuation correspondant.
+Quand **/Zc : trigraphes** est spécifié, le compilateur remplace une séquence de caractères trigraphes à l’aide d’un caractère de ponctuation correspondant.
 
 ## <a name="syntax"></a>Syntaxe
 
-> **/Zc:trigraphs**[**-**]
+> **/Zc : trigraphes**[ **-** ]
 
 ## <a name="remarks"></a>Notes
 
-Un *trigraphe* se compose de deux points d’interrogation consécutifs (« ?? ») suivi d’un troisième caractère unique. La norme du langage C prend en charge des trigraphes pour les fichiers sources qui utilisent un jeu de caractères qui ne contient-elle pas de représentation graphique pour certains caractères de ponctuation. Par exemple, lorsque les trigraphes sont activées, le compilateur remplace le « ?? = « trigraphe en utilisant le caractère « # ». Jusqu'à C ++ 14, trigraphes sont pris en charge, comme dans C. La norme C ++ 17 supprime les trigraphes du langage C++. Dans le code C++, le **/Zc : trigraphs** option du compilateur permet la substitution des séquences de trigraphe par le caractère de ponctuation correspondant. **/Zc:trigraphs-** désactive la substitution de trigrammes.
+Un *trigraphe* se compose de deux points d’interrogation consécutifs («  ?? ») suivis d’un troisième caractère unique. La norme du langage C prend en charge les trigraphes pour les fichiers sources qui utilisent un jeu de caractères qui ne contient pas de représentations graphiques pratiques pour certains caractères de ponctuation. Par exemple, lorsque les trigraphes sont activés, le compilateur remplace le « ?? = "trigraphe à l’aide du caractère' # '. En C++ 14, les trigraphes sont pris en charge comme en C. La norme C++ 17 supprime les C++ trigraphes du langage. Dans C++ le code, l’option de compilateur **/Zc : trigraphes** permet la substitution des séquences de trigraphes par le caractère de ponctuation correspondant. **/Zc : trigraphes-** désactive la substitution de trigraphes.
 
-Le **/Zc : trigraphs** option est désactivée par défaut, et l’option n’est pas affecté lorsque le [/ permissive-](permissive-standards-conformance.md) option est spécifiée.
+L’option **/Zc : trigraphes** est désactivée par défaut, et l’option n’est pas affectée quand l’option [/permissive-](permissive-standards-conformance.md) est spécifiée.
 
-Pour obtenir la liste des trigraphes de C/C++ et un exemple qui montre comment utiliser des trigraphes, consultez [trigraphes](../../c-language/trigraphs.md).
+Pour obtenir la liste des CC++ /trigraphes, ainsi qu’un exemple qui montre comment utiliser les trigraphes, consultez [trigraphes](../../c-language/trigraphs.md).
 
-## <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Pour définir cette option du compilateur dans l'environnement de développement Visual Studio
+## <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Pour définir cette option du compilateur dans l’environnement de développement Visual Studio
 
-1. Ouvrez la boîte de dialogue **Pages de propriété** du projet. Pour plus d’informations, consultez [propriétés de compilateur et de build C++ définie dans Visual Studio](../working-with-project-properties.md).
+1. Ouvrez la boîte de dialogue **Pages de propriété** du projet. Pour plus d’informations, consultez [Définir le compilateur C++ et les propriétés de build dans Visual Studio](../working-with-project-properties.md).
 
-1. Sélectionnez le **propriétés de Configuration** > **C/C++** > **ligne de commande** page de propriétés.
+1. Sélectionnez la page de propriétés **Propriétés de configuration** > **C/C++**  > **Ligne de commande**.
 
-1. Modifier le **des Options supplémentaires** propriété à inclure **/Zc : trigraphs** ou **/Zc:trigraphs-** , puis **OK**.
+1. Modifiez la propriété **options supplémentaires** pour inclure **/Zc : trigraphes** ou **/Zc : trigraphes-** , puis choisissez **OK**.
 
 ## <a name="see-also"></a>Voir aussi
 

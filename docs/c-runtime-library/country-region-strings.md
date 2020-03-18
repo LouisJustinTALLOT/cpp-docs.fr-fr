@@ -1,21 +1,19 @@
 ---
 title: Chaînes de pays-région
 ms.date: 11/04/2016
-f1_keywords:
-- c.strings
 helpviewer_keywords:
 - country/region strings
 ms.assetid: 5baf0ccf-0d9b-40dc-83bd-323705287930
-ms.openlocfilehash: 49eb6bc4473d9e54c06c3bf9290f8c3c96640415
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
-ms.translationtype: HT
+ms.openlocfilehash: 8556e005618a1b69c47498a07e218284dcb1164f
+ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69500245"
+ms.lasthandoff: 03/17/2020
+ms.locfileid: "79443434"
 ---
-# <a name="countryregion-strings"></a>chaînes pays/région
+# <a name="countryregion-strings"></a>Country/Region Strings
 
-Les chaînes de pays et de région peuvent être combinés avec une chaîne de langue pour créer une spécification de paramètres régionaux pour les fonctions `setlocale`, `_wsetlocale`, `_create_locale`et `_wcreate_locale` . Pour obtenir des listes des noms de pays et de régions pris en charge par différentes versions du système d’exploitation Windows, consultez les colonnes **Langue**, **Emplacement** et **Balise de langue** de la table dans l’[annexe A : Comportement du produit](https://msdn.microsoft.com/library/cc233982.aspx) dans [MS-LCID] : Référence de l’identificateur de paramètres régionaux (LCID) de Windows. Pour obtenir un exemple de code énumérant les noms de paramètres régionaux disponibles et les valeurs associées, consultez [NLS : exemple d’API basées sur un nom](/windows/win32/intl/nls--name-based-apis-sample).
+Les chaînes de pays et de région peuvent être combinés avec une chaîne de langue pour créer une spécification de paramètres régionaux pour les fonctions `setlocale`, `_wsetlocale`, `_create_locale`et `_wcreate_locale` . Pour obtenir des listes des noms de pays et de régions pris en charge par différentes versions du système d’exploitation Windows, consultez les colonnes **Langue**, **Emplacement** et **Balise de langue** de la table dans [Appendix A: Product Behavior](https://msdn.microsoft.com/library/cc233982.aspx) dans [MS-LCID] : référence d’identificateur de code de langue (LCID) Windows. Pour obtenir un exemple de code énumérant les noms de paramètres régionaux disponibles et les valeurs associées, consultez [NLS : exemple d’API en fonction du nom](/windows/win32/intl/nls--name-based-apis-sample).
 
 ## <a name="additional-supported-country-and-region-strings"></a>Chaînes de pays et de région supplémentaires prises en charge
 
@@ -23,20 +21,20 @@ L’implémentation de la bibliothèque runtime Microsoft C prend également en 
 
 |Chaîne de pays/région|Abréviation|Nom des paramètres régionaux équivalents|
 |----------------------------|------------------|----------------------------|
-|america|USA|en-US|
+|america|États-Unis|fr-FR|
 |britain|GBR|en-GB|
 |china|CHN|zh-CN|
-|czech|CZE|cs-CZ|
+|tchèque|CZE|cs-CZ|
 |england|GBR|en-GB|
 |great britain|GBR|en-GB|
-|holland|NLD|NL-NL|
+|holland|NLD|nl-NL|
 |hong-kong|HKG|zh-HK|
 |new-zealand|NZL|en-NZ|
 |nz|NZL|en-NZ|
 |pr china|CHN|zh-CN|
 |pr-china|CHN|zh-CN|
 |puerto-rico|PRI|es-PR|
-|slovak|SVK|sk-SK|
+|slovaque|SVK|sk-SK|
 |south africa|ZAF|af-ZA|
 |south korea|KOR|ko-KR|
 |south-africa|ZAF|af-ZA|
@@ -44,8 +42,8 @@ L’implémentation de la bibliothèque runtime Microsoft C prend également en 
 |trinidad & tobago|TTO|en-TT|
 |uk|GBR|en-GB|
 |united-kingdom|GBR|en-GB|
-|united-states|USA|en-US|
-|us|USA|en-US|
+|united-states|États-Unis|fr-FR|
+|us|États-Unis|fr-FR|
 
 ## <a name="see-also"></a>Voir aussi
 

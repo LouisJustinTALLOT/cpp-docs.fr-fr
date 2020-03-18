@@ -75,11 +75,11 @@ helpviewer_keywords:
 - CButton [MFC], SetTextMargin
 ms.assetid: cdc76d5b-31da-43c5-bc43-fde4cb39de5b
 ms.openlocfilehash: 669bdb18e378c4dc39bdc6d51ca1ebe7f93fa839
-ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
+ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/06/2020
-ms.locfileid: "78870610"
+ms.lasthandoff: 03/16/2020
+ms.locfileid: "79418831"
 ---
 # <a name="cbutton-class"></a>CButton, classe
 
@@ -172,7 +172,7 @@ Si vous créez un objet `CButton` à partir d’une ressource de boîte de dialo
 
 Si vous créez un objet `CButton` dans une fenêtre, vous devrez peut-être le détruire. Si vous créez l’objet `CButton` sur le tas à l’aide de la fonction **New** , vous devez appeler **Delete** sur l’objet pour le détruire lorsque l’utilisateur ferme le contrôle Button Windows. Si vous créez l’objet `CButton` sur la pile, ou qu’il est incorporé dans l’objet de boîte de dialogue parent, il est détruit automatiquement.
 
-## <a name="inheritance-hierarchy"></a>Hiérarchie d'héritage
+## <a name="inheritance-hierarchy"></a>Hiérarchie d’héritage
 
 [CObject](../../mfc/reference/cobject-class.md)
 

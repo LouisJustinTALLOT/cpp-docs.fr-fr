@@ -3,11 +3,11 @@ title: Types triviaux, à disposition standard, POD et littéraux
 ms.date: 04/05/2018
 ms.assetid: 2b23a7be-9bad-49fc-8298-31a9a7c556b0
 ms.openlocfilehash: 2745302b3ebd7927e9d839e4661e884a2bd91042
-ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
+ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/06/2020
-ms.locfileid: "78865775"
+ms.lasthandoff: 03/16/2020
+ms.locfileid: "79418390"
 ---
 # <a name="trivial-standard-layout-pod-and-literal-types"></a>Types triviaux, à disposition standard, POD et littéraux
 
@@ -188,8 +188,8 @@ int main()
 Un type de littéral est un type dont la disposition peut être déterminée au moment de la compilation. Voici les types de littéral disponibles :
 
 - void
-- types scalaires
-- références
+- Types scalaires
+- Références
 - Tableaux de types void, de types scalaires ou de références
 - Classe contenant un destructeur trivial, et un ou plusieurs constructeurs constexpr autres que des constructeurs de copie ou de déplacement. Tous les membres de données non statiques et classes de base doivent également être des types de littéral et être non volatiles.
 

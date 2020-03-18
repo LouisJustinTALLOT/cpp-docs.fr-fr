@@ -14,12 +14,12 @@ f1_keywords:
 helpviewer_keywords:
 - ICommandUI interface [MFC]
 ms.assetid: 134afe8d-dcdf-47ca-857a-a166a6b665dd
-ms.openlocfilehash: a7bb3ab5ed292cef8108e937e67bc9e2ccc1ebce
-ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
+ms.openlocfilehash: 0740ad024e0ca7fd56ecf9178ca57b22dc66b79e
+ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/06/2020
-ms.locfileid: "78866579"
+ms.lasthandoff: 03/17/2020
+ms.locfileid: "79445691"
 ---
 # <a name="icommandui-interface"></a>Interface ICommandUI
 
@@ -60,6 +60,7 @@ Pour plus d’informations sur la façon dont les commandes de l’interface uti
 ## <a name="check"></a>ICommandUI :: Check
 
 Affecte l’état d’activation approprié à l’élément d’interface utilisateur pour cette commande.
+
 ```
 property UICheckState Check;
 ```
@@ -74,6 +75,7 @@ Cette propriété affecte l’état d’activation approprié à l’élément d
 ## <a name="continuerouting"></a>ICommandUI::ContinueRouting
 
 Indique au mécanisme de routage des commandes de continuer à acheminer le message actuel vers le dessous de la chaîne de gestionnaires.
+
 ```
 void ContinueRouting();
 ```
@@ -85,6 +87,7 @@ Il s’agit d’une fonction membre avancée qui doit être utilisée conjointem
 ## <a name="enabled"></a>ICommandUI :: Enabled
 
 Active ou désactive l’élément d’interface utilisateur pour cette commande.
+
 ```
 property bool Enabled;
 ```
@@ -96,6 +99,7 @@ Cette propriété active ou désactive l’élément d’interface utilisateur p
 ## <a name="id"></a>ICommandUI :: ID
 
 Obtient l’ID de l’objet d’interface utilisateur représenté par l’objet ICommandUI.
+
 ```
 property unsigned int ID;
 ```
@@ -107,6 +111,7 @@ Cette propriété obtient l’ID (un handle) de l’élément de menu, du bouton
 ## <a name="index"></a>ICommandUI :: index
 
 Obtient l’index de l’objet d’interface utilisateur représenté par l’objet ICommandUI.
+
 ```
 property unsigned int Index;
 ```
@@ -118,6 +123,7 @@ Cette propriété obtient l’index (un handle) de l’élément de menu, du bou
 ## <a name="radio"></a>ICommandUI :: radio
 
 Affecte l’état d’activation approprié à l’élément d’interface utilisateur pour cette commande.
+
 ```
 property bool Radio;
 ```
@@ -129,6 +135,7 @@ Cette propriété affecte l’état d’activation approprié à l’élément d
 ## <a name="text"></a>ICommandUI :: Text
 
 Définit le texte de l’élément d’interface utilisateur pour cette commande.
+
 ```
 property String^ Text;
 ```

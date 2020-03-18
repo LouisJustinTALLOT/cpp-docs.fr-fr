@@ -9,7 +9,6 @@ f1_keywords:
 - CUtlProps::IsValidValue
 - CUtlProps.IsValidValue
 - IsValidValue
-- CUtlProps
 - OnPropertyChanged
 - CUtlProps.OnPropertyChanged
 - CUtlProps::OnPropertyChanged
@@ -30,16 +29,16 @@ helpviewer_keywords:
 - OnPropertyChanged method
 - SetPropValue method
 ms.assetid: bb525178-765c-4e23-a110-c0fd70c05437
-ms.openlocfilehash: 3f1af90bcf454a3651dd8de65bbee7cb6b5960ca
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: bbeae4faad4d650d8dc44a61a22b1fcc63a0bc15
+ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62176113"
+ms.lasthandoff: 03/17/2020
+ms.locfileid: "79441035"
 ---
 # <a name="cutlprops-class"></a>CUtlProps, classe
 
-Implémente des propriétés d’une série d’interfaces de propriété OLE DB (par exemple, `IDBProperties`, `IDBProperties`, et `IRowsetInfo`).
+Implémente des propriétés pour diverses OLE DB interfaces de propriété (par exemple, `IDBProperties`, `IDBProperties`et `IRowsetInfo`).
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -51,9 +50,9 @@ class ATL_NO_VTABLE CUtlProps : public CUtlPropsBase
 ### <a name="parameters"></a>Paramètres
 
 *T*<br/>
-La classe qui contient le `BEGIN_PROPSET_MAP`.
+Classe qui contient l' `BEGIN_PROPSET_MAP`.
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
 **En-tête :** atldb.h
 
@@ -65,19 +64,19 @@ La classe qui contient le `BEGIN_PROPSET_MAP`.
 |-|-|
 |[GetPropValue](#getpropvalue)|Obtient une propriété à partir d’un jeu de propriétés.|
 |[IsValidValue](#isvalidvalue)|Utilisé pour valider une valeur avant de définir une propriété.|
-|[OnInterfaceRequested](#oninterfacerequested)|Gère les demandes d’une interface facultative lorsqu’un consommateur appelle une méthode sur une interface de la création d’objet.|
-|[OnPropertyChanged](#onpropertychanged)|Appelé après la définition d’une propriété de gérer des propriétés chaînées.|
+|[OnInterfaceRequested](#oninterfacerequested)|Gère les demandes pour une interface facultative lorsqu’un consommateur appelle une méthode sur une interface de création d’objet.|
+|[OnPropertyChanged](#onpropertychanged)|Appelée après la définition d’une propriété pour gérer les propriétés chaînées.|
 |[SetPropValue](#setpropvalue)|Définit une propriété dans un jeu de propriétés.|
 
 ## <a name="remarks"></a>Notes
 
 La plupart de cette classe est un détail d’implémentation.
 
-`CUtlProps` Pour définir les propriétés en interne, contient deux membres : [GetPropValue](../../data/oledb/cutlprops-getpropvalue.md) et [SetPropValue](../../data/oledb/cutlprops-setpropvalue.md).
+`CUtlProps` contient deux membres pour la définition des propriétés en interne : [GetPropValue](../../data/oledb/cutlprops-getpropvalue.md) et [SetPropValue](../../data/oledb/cutlprops-setpropvalue.md).
 
 Pour plus d’informations sur les macros utilisées dans un mappage de jeu de propriétés, consultez [BEGIN_PROPSET_MAP](../../data/oledb/begin-propset-map.md) et [END_PROPSET_MAP](../../data/oledb/end-propset-map.md).
 
-## <a name="getpropvalue"></a> CUtlProps::GetPropValue
+## <a name="getpropvalue"></a>CUtlProps :: GetPropValue
 
 Obtient une propriété à partir d’un jeu de propriétés.
 
@@ -92,19 +91,19 @@ OUT_OF_LINE HRESULT GetPropValue(const GUID* pguidPropSet,
 #### <a name="parameters"></a>Paramètres
 
 *pguidPropSet*<br/>
-[in] Le GUID pour le PropSet.
+dans GUID pour PropSet.
 
 *dwPropId*<br/>
-[in] L’index de la propriété.
+dans Index de la propriété.
 
 *pvValue*<br/>
-[out] Un pointeur vers un variant qui contient la nouvelle valeur de propriété.
+à Pointeur vers un variant qui contient la nouvelle valeur de propriété.
 
 ### <a name="return-value"></a>Valeur de retour
 
-`Failure` sur la défaillance et S_OK en cas de réussite.
+`Failure` en cas d’échec et S_OK en cas de réussite.
 
-## <a name="isvalidvalue"></a> CUtlProps::IsValidValue
+## <a name="isvalidvalue"></a>CUtlProps :: IsValidValue
 
 Utilisé pour valider une valeur avant de définir une propriété.
 
@@ -118,22 +117,22 @@ virtual HRESULT CUtlPropsBase::IsValidValue(ULONG /* iCurSet */,
 #### <a name="parameters"></a>Paramètres
 
 *iCurSet*<br/>
-L’index dans le tableau de jeu de propriétés ; zéro s’il n'existe qu’une seule propriété ensemble.
+Index dans le tableau de jeux de propriétés ; zéro s’il n’y a qu’un seul jeu de propriétés.
 
 *pDBProp*<br/>
-L’ID de propriété et la nouvelle valeur dans un [DBPROP](/previous-versions/windows/desktop/ms717970(v=vs.85)) structure.
+L’ID de propriété et la nouvelle valeur dans une structure [DBPROP](/previous-versions/windows/desktop/ms717970(v=vs.85)) .
 
 ### <a name="return-value"></a>Valeur de retour
 
-Une valeur HRESULT standard. La valeur de retour par défaut est S_OK.
+HRESULT standard. La valeur de retour par défaut est S_OK.
 
 ### <a name="remarks"></a>Notes
 
-Si vous avez des routines de validation à exécuter sur une valeur que vous allez utiliser pour définir une propriété, vous devez substituer cette fonction. Par exemple, vous pourriez valider DBPROP_AUTH_PASSWORD sur une table de mot de passe pour déterminer une valeur valide.
+Si vous souhaitez exécuter des routines de validation sur une valeur que vous allez utiliser pour définir une propriété, vous devez remplacer cette fonction. Par exemple, vous pouvez valider DBPROP_AUTH_PASSWORD par rapport à une table de mots de passe pour déterminer une valeur valide.
 
-## <a name="oninterfacerequested"></a> CUtlProps::OnInterfaceRequested
+## <a name="oninterfacerequested"></a>CUtlProps :: OnInterfaceRequested
 
-Gère les demandes d’une interface facultative lorsqu’un consommateur appelle une méthode sur l’un de l’objet des interfaces de création.
+Gère les demandes pour une interface facultative lorsqu’un consommateur appelle une méthode sur l’une des interfaces de création d’objet.
 
 ### <a name="syntax"></a>Syntaxe
 
@@ -144,15 +143,15 @@ virtual HRESULT CUtlPropsBase::OnInterfaceRequested(REFIID riid);
 #### <a name="parameters"></a>Paramètres
 
 *riid*<br/>
-[in] IID pour l’interface demandée. Pour plus d’informations, consultez la description de la *riid* paramètre de `ICommand::Execute` dans le *de référence du programmeur OLE DB* (dans le *MDAC SDK*).
+dans IID de l’interface demandée. Pour plus d’informations, consultez la description du paramètre *riid* de `ICommand::Execute` dans le *Guide de référence du programmeur OLE DB* (dans le *Kit de développement logiciel (SDK) MDAC*).
 
 ### <a name="remarks"></a>Notes
 
-`OnInterfaceRequested` gère les demandes de consommateur d’une interface facultative lorsqu’un consommateur appelle une méthode sur l’un de l’objet des interfaces de création (tel que `IDBCreateSession`, `IDBCreateCommand`, `IOpenRowset`, ou `ICommand`). Il définit la propriété OLE DB correspondante pour l’interface demandée. Par exemple, si le consommateur demande `IID_IRowsetLocate`, `OnInterfaceRequested` définit le `DBPROP_IRowsetLocate` interface. Cela tient à jour l’état correct lors de la création de l’ensemble de lignes.
+`OnInterfaceRequested` gère les demandes de consommateur pour une interface facultative lorsqu’un consommateur appelle une méthode sur l’une des interfaces de création d’objet (par exemple, `IDBCreateSession`, `IDBCreateCommand`, `IOpenRowset`ou `ICommand`). Elle définit la propriété OLE DB correspondante pour l’interface demandée. Par exemple, si le consommateur demande `IID_IRowsetLocate`, `OnInterfaceRequested` définit l’interface `DBPROP_IRowsetLocate`. Cela maintient l’état correct lors de la création de l’ensemble de lignes.
 
 Cette méthode est appelée lorsque le consommateur appelle `IOpenRowset::OpenRowset` ou `ICommand::Execute`.
 
-Si un consommateur s’ouvre un objet et demande une interface facultative, le fournisseur doit définir la propriété associée à cette interface avec la valeur VARIANT_TRUE. Pour permettre le traitement spécifique à la propriété, `OnInterfaceRequested` est appelée avant que le fournisseur `Execute` méthode est appelée. Par défaut, `OnInterfaceRequested` gère les interfaces suivantes :
+Si un consommateur ouvre un objet et demande une interface facultative, le fournisseur doit définir la propriété associée à cette interface sur VARIANT_TRUE. Pour autoriser le traitement spécifique à la propriété, `OnInterfaceRequested` est appelé avant l’appel de la méthode `Execute` du fournisseur. Par défaut, `OnInterfaceRequested` gère les interfaces suivantes :
 
 - `IRowsetLocate`
 
@@ -164,11 +163,11 @@ Si un consommateur s’ouvre un objet et demande une interface facultative, le f
 
 - `IRowsetScroll`
 
-Si vous souhaitez gérer d’autres interfaces, remplacez cette fonction dans votre classe de source, de session, de commande ou d’ensemble de lignes de données pour les fonctions de processus. Votre substitution doit passer par les interfaces de propriétés set/get normal pour vous assurer que la définition des propriétés définit également toutes les propriétés chaînées (consultez [OnPropertyChanged](../../data/oledb/cutlprops-onpropertychanged.md)).
+Si vous souhaitez gérer d’autres interfaces, remplacez cette fonction dans la source de données, la session, la commande ou la classe rowset pour traiter les fonctions. Votre remplacement doit passer par les interfaces de propriétés set/obten normales pour s’assurer que les propriétés de définition définissent également toutes les propriétés chaînées (consultez [OnPropertyChanged](../../data/oledb/cutlprops-onpropertychanged.md)).
 
-## <a name="onpropertychanged"></a> CUtlProps::OnPropertyChanged
+## <a name="onpropertychanged"></a>CUtlProps :: OnPropertyChanged
 
-Appelé après la définition d’une propriété de gérer des propriétés chaînées.
+Appelée après la définition d’une propriété pour gérer les propriétés chaînées.
 
 ### <a name="syntax"></a>Syntaxe
 
@@ -180,26 +179,26 @@ virtual HRESULT OnPropertyChanged(ULONG /* iCurSet */,
 #### <a name="parameters"></a>Paramètres
 
 *iCurSet*<br/>
-L’index dans le tableau de jeu de propriétés ; zéro s’il n'existe qu’une seule propriété ensemble.
+Index dans le tableau de jeux de propriétés ; zéro s’il n’y a qu’un seul jeu de propriétés.
 
 *pDBProp*<br/>
-L’ID de propriété et la nouvelle valeur dans un [DBPROP](/previous-versions/windows/desktop/ms717970(v=vs.85)) structure.
+L’ID de propriété et la nouvelle valeur dans une structure [DBPROP](/previous-versions/windows/desktop/ms717970(v=vs.85)) .
 
 ### <a name="return-value"></a>Valeur de retour
 
-Une valeur HRESULT standard. La valeur de retour par défaut est S_OK.
+HRESULT standard. La valeur de retour par défaut est S_OK.
 
 ### <a name="remarks"></a>Notes
 
-Si vous souhaitez gérer des propriétés chaînées, telles que les signets ou mises à jour dont les valeurs dépendent de la valeur d’une autre propriété, vous devez substituer cette fonction.
+Si vous souhaitez gérer les propriétés chaînées, telles que les signets ou les mises à jour dont les valeurs sont dépendantes de la valeur d’une autre propriété, vous devez substituer cette fonction.
 
 ### <a name="example"></a>Exemple
 
-Dans cette fonction, l’utilisateur obtient l’ID de propriété à partir de la `DBPROP*` paramètre. À présent, il est possible de comparer l’identificateur par rapport à une propriété de chaîne. Lorsque la propriété est trouvée, `SetProperties` est appelée avec la propriété qui sera désormais être définie conjointement avec l’autre propriété. Dans ce cas, si elles Obtient le `DBPROP_IRowsetLocate`, `DBPROP_LITERALBOOKMARKS`, ou `DBPROP_ORDEREDBOOKMARKS` propriété, peut définir le `DBPROP_BOOKMARKS` propriété.
+Dans cette fonction, l’utilisateur obtient l’ID de propriété à partir du paramètre `DBPROP*`. À présent, il est possible de comparer l’ID par rapport à une propriété à chaîner. Lorsque la propriété est trouvée, `SetProperties` est appelée avec la propriété qui est maintenant définie conjointement avec l’autre propriété. Dans ce cas, si l’un d’eux obtient la propriété `DBPROP_IRowsetLocate`, `DBPROP_LITERALBOOKMARKS`ou `DBPROP_ORDEREDBOOKMARKS`, vous pouvez définir la propriété `DBPROP_BOOKMARKS`.
 
 [!code-cpp[NVC_OLEDB_Provider#2](../../data/oledb/codesnippet/cpp/cutlprops-onpropertychanged_1.h)]
 
-## <a name="setpropvalue"></a> CUtlProps::SetPropValue
+## <a name="setpropvalue"></a>CUtlProps :: SetPropValue
 
 Définit une propriété dans un jeu de propriétés.
 
@@ -214,19 +213,19 @@ HRESULT SetPropValue(const GUID* pguidPropSet,
 #### <a name="parameters"></a>Paramètres
 
 *pguidPropSet*<br/>
-[in] Le GUID pour le PropSet.
+dans GUID pour PropSet.
 
 *dwPropId*<br/>
-[in] L’index de la propriété.
+dans Index de la propriété.
 
 *pvValue*<br/>
-[in] Un pointeur vers un variant qui contient la nouvelle valeur de propriété.
+dans Pointeur vers un variant qui contient la nouvelle valeur de propriété.
 
 ### <a name="return-value"></a>Valeur de retour
 
-`Failure` sur la défaillance et S_OK en cas de réussite.
+`Failure` en cas d’échec et S_OK en cas de réussite.
 
 ## <a name="see-also"></a>Voir aussi
 
-[Modèles du fournisseur OLE DB](../../data/oledb/ole-db-provider-templates-cpp.md)<br/>
+[Modèles du fournisseur OLE DB](../../data/oledb/ole-db-provider-templates-cpp.md)<br/>
 [Architecture des modèles du fournisseur OLE DB](../../data/oledb/ole-db-provider-template-architecture.md)

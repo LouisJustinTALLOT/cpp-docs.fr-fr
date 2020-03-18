@@ -81,11 +81,11 @@ helpviewer_keywords:
 - CStringT class
 ms.assetid: 7cacc59c-425f-40f1-8f5b-6db921318ec9
 ms.openlocfilehash: a411ed54a73a0dee49ebbd9ccacbd7c6f8e69ca5
-ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
+ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/06/2020
-ms.locfileid: "78856311"
+ms.lasthandoff: 03/16/2020
+ms.locfileid: "79418208"
 ---
 # <a name="cstringt-class"></a>CStringT (classe)
 
@@ -263,7 +263,7 @@ les objets `CString` présentent également les caractéristiques suivantes :
 > [!NOTE]
 >  Le code qui utilisait précédemment des méthodes non documentées de `CString` (telles que `AssignCopy`) doit être remplacé par le code qui utilise les méthodes documentées suivantes de `CStringT` (par exemple, `GetBuffer` ou `ReleaseBuffer`). Ces méthodes sont héritées de `CSimpleStringT`.
 
-## <a name="inheritance-hierarchy"></a>Hiérarchie d'héritage
+## <a name="inheritance-hierarchy"></a>Hiérarchie d’héritage
 
 [CSimpleStringT](../../atl-mfc-shared/reference/csimplestringt-class.md)
 

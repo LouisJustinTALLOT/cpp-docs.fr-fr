@@ -75,11 +75,11 @@ helpviewer_keywords:
 - CAsyncSocket [MFC], m_hSocket
 ms.assetid: cca4d5a1-aa0f-48bd-843e-ef0e2d7fc00b
 ms.openlocfilehash: 4e14052d400268a8852298113ba9b51fda713dc8
-ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
+ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/06/2020
-ms.locfileid: "78855285"
+ms.lasthandoff: 03/16/2020
+ms.locfileid: "79418887"
 ---
 # <a name="casyncsocket-class"></a>CAsyncSocket (classe)
 
@@ -141,14 +141,14 @@ class CAsyncSocket : public CObject
 |[CAsyncSocket :: OnReceive](#onreceive)|Avertit un socket d’écoute qu’il y a des données à récupérer en appelant `Receive`.|
 |[CAsyncSocket :: OnSend](#onsend)|Avertit un socket qu’il peut envoyer des données en appelant `Send`.|
 
-### <a name="public-operators"></a>Op&#233;rateurs publics
+### <a name="public-operators"></a>Opérateurs publics
 
 |Name|Description|
 |----------|-----------------|
 |[CAsyncSocket :: Operator =](#operator_eq)|Assigne une nouvelle valeur à un objet `CAsyncSocket`.|
 |[CAsyncSocket :: Operator, SOCKET](#operator_socket)|Utilisez cet opérateur pour récupérer le handle de SOCKET de l’objet `CAsyncSocket`.|
 
-### <a name="public-data-members"></a>Membres de données publiques
+### <a name="public-data-members"></a>Membres de données publics
 
 |Name|Description|
 |----------|-----------------|
@@ -167,7 +167,7 @@ Pour utiliser un objet `CAsyncSocket`, appelez son constructeur, puis appelez la
 
 Pour plus d’informations, consultez [Windows Sockets : utilisation de la classe CAsyncSocket](../../mfc/windows-sockets-using-class-casyncsocket.md) et des Articles connexes., ainsi que l' [API Windows Sockets 2](/windows/win32/WinSock/windows-sockets-start-page-2).
 
-## <a name="inheritance-hierarchy"></a>Hiérarchie d'héritage
+## <a name="inheritance-hierarchy"></a>Hiérarchie d’héritage
 
 [CObject](../../mfc/reference/cobject-class.md)
 

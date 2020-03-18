@@ -53,11 +53,11 @@ helpviewer_keywords:
 - CPropertySheet [MFC], m_psh
 ms.assetid: 8461ccff-d14f-46e0-a746-42ad642ef94e
 ms.openlocfilehash: 23d17aee2aacbc1484c0f3e181bc824546ab49a2
-ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
+ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/06/2020
-ms.locfileid: "78865447"
+ms.lasthandoff: 03/16/2020
+ms.locfileid: "79421008"
 ---
 # <a name="cpropertysheet-class"></a>CPropertySheet (classe)
 
@@ -103,7 +103,7 @@ class CPropertySheet : public CWnd
 |[CPropertySheet :: SetWizardButtons](#setwizardbuttons)|Active les boutons de l’Assistant.|
 |[CPropertySheet :: SetWizardMode](#setwizardmode)|Active le mode Assistant.|
 
-### <a name="public-data-members"></a>Membres de données publiques
+### <a name="public-data-members"></a>Membres de données publics
 
 |Name|Description|
 |----------|-----------------|
@@ -147,7 +147,7 @@ Pour créer une boîte de dialogue de type assistant, suivez les mêmes étapes 
 
 Pour plus d’informations sur l’utilisation des objets `CPropertySheet`, consultez l’article [feuilles de propriétés et pages de propriétés](../../mfc/property-sheets-and-property-pages-in-mfc.md).
 
-## <a name="inheritance-hierarchy"></a>Hiérarchie d'héritage
+## <a name="inheritance-hierarchy"></a>Hiérarchie d’héritage
 
 [CObject](../../mfc/reference/cobject-class.md)
 

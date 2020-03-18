@@ -5,11 +5,11 @@ helpviewer_keywords:
 - breaking changes [C++]
 ms.assetid: b38385a9-a483-4de9-99a6-797488bc5110
 ms.openlocfilehash: 335db55f3b181021f4deb391358df5bbfb607815
-ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
+ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/06/2020
-ms.locfileid: "78865491"
+ms.lasthandoff: 03/16/2020
+ms.locfileid: "79416934"
 ---
 # <a name="visual-c-change-history-2003---2015"></a>Historique des modifications de Visual C++ entre 2003 et 2015
 
@@ -423,7 +423,7 @@ Même si ces différences peuvent affecter votre code source ou d’autres artef
 
 ###  <a name="VS_RTM"></a> Améliorations de la conformité dans Visual Studio 2015
 
-- Option /Zc:forScope-
+- /Zc:forScope-
 
    L’option de compilateur `/Zc:forScope-` est dépréciée. Elle sera supprimée dans une version ultérieure.
 
@@ -3302,7 +3302,7 @@ L’énumération `SchedulerType` d’`UmsThreadDefault` est dépréciée. La sp
 
 - La variable d’environnement __MSVCRT_HEAP_SELECT n’est plus prise en charge. Cette variable d’environnement est supprimée et rien ne la remplace.
 
-### <a name="microsoft-macro-assembler-reference"></a>Informations de référence sur Microsoft Macro Assembler
+### <a name="microsoft-macro-assembler-reference"></a>Référence de Microsoft Macro Assembler
 
 - Plusieurs directives ont été supprimées du compilateur Référence de Microsoft Macro Assembler. Les directives supprimées sont `.186`, `.286`, `.286P`, `.287`, `.8086`, `.8087` et `.NO87`.
 

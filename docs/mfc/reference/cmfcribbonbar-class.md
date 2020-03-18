@@ -189,11 +189,11 @@ helpviewer_keywords:
 - CMFCRibbonBar [MFC], TranslateChar
 ms.assetid: a65d06fa-1a28-4cc0-8971-bc9d7c9198fe
 ms.openlocfilehash: 3656b6a135757a4658f2ef08b80a54efffe89012
-ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
+ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/06/2020
-ms.locfileid: "78883692"
+ms.lasthandoff: 03/16/2020
+ms.locfileid: "79420259"
 ---
 # <a name="cmfcribbonbar-class"></a>CMFCRibbonBar, classe
 
@@ -321,7 +321,7 @@ Vous pouvez utiliser la classe `CMFCRibbonStatusBar` pour implémenter une barre
 
 Pour plus d’informations sur l’ajout d’une barre de ruban à votre application MFC existante, consultez [procédure pas à pas : mise à jour de l’application Scribble MFC](../../mfc/walkthrough-updating-the-mfc-scribble-application-part-1.md).
 
-## <a name="inheritance-hierarchy"></a>Hiérarchie d'héritage
+## <a name="inheritance-hierarchy"></a>Hiérarchie d’héritage
 
 [CObject](../../mfc/reference/cobject-class.md)
 

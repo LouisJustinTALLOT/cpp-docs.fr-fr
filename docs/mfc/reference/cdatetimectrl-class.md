@@ -41,11 +41,11 @@ helpviewer_keywords:
 - CDateTimeCtrl [MFC], SetTime
 ms.assetid: 7113993b-5d37-4148-939f-500a190c5bdc
 ms.openlocfilehash: ec9060ba60c4d9877e5ee32bc68da0134f0ccf20
-ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
+ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/06/2020
-ms.locfileid: "78866932"
+ms.lasthandoff: 03/16/2020
+ms.locfileid: "79418684"
 ---
 # <a name="cdatetimectrl-class"></a>CDateTimeCtrl (classe)
 
@@ -94,7 +94,7 @@ Vous pouvez personnaliser le contrôle de sélecteur de date et d’heure en app
 
 Le contrôle de sélecteur de date et d’heure utilise également des notifications et des rappels, qui sont décrits dans [utilisation de CDateTimeCtrl](../../mfc/using-cdatetimectrl.md).
 
-## <a name="inheritance-hierarchy"></a>Hiérarchie d'héritage
+## <a name="inheritance-hierarchy"></a>Hiérarchie d’héritage
 
 [CObject](../../mfc/reference/cobject-class.md)
 

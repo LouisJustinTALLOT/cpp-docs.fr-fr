@@ -1,8 +1,6 @@
 ---
 title: Qu'est-ce qu'un objet CArchive ?
 ms.date: 11/04/2016
-f1_keywords:
-- CArchive
 helpviewer_keywords:
 - archive objects [MFC]
 - archives [MFC], for serialization
@@ -10,23 +8,23 @@ helpviewer_keywords:
 - CArchive class [MFC], about CArchive class [MFC]
 - buffering, serializable objects
 ms.assetid: 843f1825-288d-4d89-a1fa-70e1f92d9b8b
-ms.openlocfilehash: 4bae451168449ce3e120ba9d172a615864ac2157
-ms.sourcegitcommit: c6f8e6c2daec40ff4effd8ca99a7014a3b41ef33
+ms.openlocfilehash: 0a78385c81c43a4b0c925bbe89ccd3937873ee8b
+ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "64346376"
+ms.lasthandoff: 03/17/2020
+ms.locfileid: "79446021"
 ---
 # <a name="what-is-a-carchive-object"></a>Qu'est-ce qu'un objet CArchive ?
 
-Un `CArchive` objet fournit un mécanisme de mise en mémoire tampon de type sécurisé pour l’écriture ou la lecture des objets sérialisables vers ou depuis un `CFile` objet. Généralement le `CFile` objet représente un fichier de disque ; Toutefois, il peut également être un fichier de mémoire (`CSharedFile` objet), représentant peut-être le Presse-papiers.
+Un objet `CArchive` fournit un mécanisme de mise en mémoire tampon de type sécurisé pour l’écriture ou la lecture d’objets sérialisables vers ou à partir d’un objet `CFile`. En général, l’objet `CFile` représente un fichier disque ; Toutefois, il peut également s’agir d’un fichier de mémoire (objet`CSharedFile`), qui représente peut-être le presse-papiers.
 
-A compte tenu de `CArchive` stocke l’objet (écrit, sérialise) données ou charge (lit, désérialise) les données, mais jamais les deux. La durée de vie d’un `CArchive` objet est limité à une seule passe via l’écriture des objets dans un fichier ou de la lecture des objets à partir d’un fichier. Par conséquent, deux successivement créé `CArchive` objets sont nécessaires pour sérialiser les données dans un fichier et ensuite de le désérialiser à partir du fichier.
+Un objet `CArchive` donné stocke (écrit, sérialise) des données ou charge (lit, désérialise) des données, mais jamais les deux à la fois. La durée de vie d’un objet `CArchive` est limitée à l’écriture d’objets dans un fichier ou à la lecture d’objets à partir d’un fichier. Par conséquent, deux objets `CArchive` créés successivement sont requis pour sérialiser des données dans un fichier, puis le désérialiser à partir du fichier.
 
-En cas d’une archive stocke des objets dans un fichier, l’archive attache le `CRuntimeClass` nom aux objets. Ensuite, quand une autre archive charge les objets d’un fichier vers la mémoire, le `CObject`-objets dérivés sont reconstruits dynamiquement selon le `CRuntimeClass` des objets. Un objet donné peut être référencé plusieurs fois, telle qu’elle est écrite dans le fichier par l’archive de stockage. L’archive de chargement, toutefois, sera reconstruire l’objet d’une seule fois. Les détails sur la façon dont une archive attache `CRuntimeClass` informations pour les objets et reconstruit, en prenant en compte possible de plusieurs références, sont décrits dans [Technical Note 2](../mfc/tn002-persistent-object-data-format.md).
+Lorsqu’un archivage stocke des objets dans un fichier, l’archive joint le nom de `CRuntimeClass` aux objets. Ensuite, lorsqu’une autre archive charge des objets à partir d’un fichier vers la mémoire, les objets dérivés de `CObject`sont reconstruits dynamiquement en fonction de la `CRuntimeClass` des objets. Un objet donné peut être référencé plusieurs fois lorsqu’il est écrit dans le fichier par l’archive de stockage. Toutefois, l’archive de chargement ne reconstruit l’objet qu’une seule fois. Les détails sur la façon dont une archive joint `CRuntimeClass` informations aux objets et reconstruit les objets, en tenant compte de plusieurs références possibles, sont décrits dans [Technical Note 2](../mfc/tn002-persistent-object-data-format.md).
 
-Comme les données sont sérialisées dans une archive, l’archive accumule les données jusqu'à ce que sa mémoire tampon est saturée. Puis l’archive écrit sa mémoire tampon dans le `CFile` objet vers lequel pointe le `CArchive` objet. De même, que vous lire les données à partir d’une archive, il lit les données à partir du fichier à sa mémoire tampon, puis à partir de la mémoire tampon vers l’objet désérialisé. Cette mise en mémoire tampon permet de réduire le nombre de fois où qu'un disque dur lecture physique, ce qui améliore les performances de votre application.
+À mesure que les données sont sérialisées dans une archive, l’archive accumule les données jusqu’à ce que la mémoire tampon soit saturée. Ensuite, l’archive écrit sa mémoire tampon dans l’objet `CFile` vers lequel pointe l’objet `CArchive`. De même, lorsque vous lisez des données à partir d’une archive, elles lisent les données du fichier dans sa mémoire tampon, puis à partir de la mémoire tampon vers votre objet désérialisé. Cette mise en mémoire tampon réduit le nombre de lectures physiques d’un disque dur, ce qui améliore les performances de votre application.
 
 ## <a name="see-also"></a>Voir aussi
 
-[Sérialisation : Sérialisation d’un objet](../mfc/serialization-serializing-an-object.md)
+[Sérialisation : sérialisation d’un objet](../mfc/serialization-serializing-an-object.md)

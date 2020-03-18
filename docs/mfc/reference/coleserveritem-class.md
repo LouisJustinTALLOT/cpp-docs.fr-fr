@@ -75,11 +75,11 @@ helpviewer_keywords:
 - COleServerItem [MFC], m_sizeExtent
 ms.assetid: 80256df6-3888-4256-944b-787d4b2e6b0d
 ms.openlocfilehash: dcae304e8571ecb5743002638ea23f13c3e21517
-ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
+ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/06/2020
-ms.locfileid: "78884103"
+ms.lasthandoff: 03/16/2020
+ms.locfileid: "79421085"
 ---
 # <a name="coleserveritem-class"></a>COleServerItem, classe
 
@@ -93,7 +93,7 @@ class COleServerItem : public CDocItem
 
 ## <a name="members"></a>Membres
 
-### <a name="protected-constructors"></a>Constructeurs prot&#233;g&#233;s
+### <a name="protected-constructors"></a>Constructeurs protégés
 
 |Name|Description|
 |----------|-----------------|
@@ -141,7 +141,7 @@ class COleServerItem : public CDocItem
 |[COleServerItem :: OnOpen](#onopen)|Appelé par le Framework pour afficher l’élément OLE dans sa propre fenêtre de niveau supérieur.|
 |[COleServerItem :: OnShow](#onshow)|Appelé lorsque le conteneur demande l’affichage de l’élément.|
 
-### <a name="public-data-members"></a>Membres de données publiques
+### <a name="public-data-members"></a>Membres de données publics
 
 |Name|Description|
 |----------|-----------------|
@@ -157,7 +157,7 @@ Pour utiliser `COleServerItem`, dérivez une classe de celle-ci et implémentez 
 
 Pour plus d’informations sur les serveurs et les rubriques connexes, consultez l’article [serveurs : implémentation d’un serveur](../../mfc/servers-implementing-a-server.md) et « création d’une application conteneur/serveur » dans l’article [conteneurs : fonctionnalités avancées](../../mfc/containers-advanced-features.md).
 
-## <a name="inheritance-hierarchy"></a>Hiérarchie d'héritage
+## <a name="inheritance-hierarchy"></a>Hiérarchie d’héritage
 
 [CObject](../../mfc/reference/cobject-class.md)
 

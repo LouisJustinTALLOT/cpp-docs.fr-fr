@@ -7,7 +7,6 @@ f1_keywords:
 - IColumnsInfoImpl
 - ATL.IColumnsInfoImpl
 - ATL::IColumnsInfoImpl<T>
-- GetColumnInfo
 - ATL::IColumnsInfoImpl::GetColumnInfo
 - ATL.IColumnsInfoImpl.GetColumnInfo
 - ATL::IColumnsInfoImpl<T>::GetColumnInfo
@@ -27,16 +26,16 @@ helpviewer_keywords:
 - GetColumnInfo method
 - MapColumnIDs method
 ms.assetid: ba74c1c5-2eda-4452-8b57-84919fa0d066
-ms.openlocfilehash: d9fbe95f87cfdf51ae9c52c7890e6f6c4075c89a
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 2eb7714762de8ccf810a8fdd04ee33ae24e9d431
+ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62409146"
+ms.lasthandoff: 03/17/2020
+ms.locfileid: "79447062"
 ---
 # <a name="icolumnsinfoimpl-class"></a>IColumnsInfoImpl, classe
 
-Fournit une implémentation de la [IColumnsInfo](/previous-versions/windows/desktop/ms724541(v=vs.85)) interface.
+Fournit une implémentation de l’interface [IColumnsInfo](/previous-versions/windows/desktop/ms724541(v=vs.85)) .
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -52,7 +51,7 @@ class ATL_NO_VTABLE IColumnsInfoImpl :
 *T*<br/>
 Votre classe, dérivée de `IColumnsInfoImpl`.
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
 **En-tête :** atldb.h
 
@@ -62,16 +61,16 @@ Votre classe, dérivée de `IColumnsInfoImpl`.
 
 |||
 |-|-|
-|[GetColumnInfo](#getcolumninfo)|Retourne les métadonnées de colonne requises par la plupart des consommateurs.|
-|[MapColumnIDs](#mapcolumnids)|Retourne un tableau d’ordinaux des colonnes dans un ensemble de lignes qui sont identifiés par l’ID de colonne spécifié.|
+|[GetColumnInfo](#getcolumninfo)|Retourne les métadonnées de colonne exigées par la plupart des consommateurs.|
+|[MapColumnIDs](#mapcolumnids)|Retourne un tableau des numéros des colonnes dans un jeu de lignes identifiées par les ID de colonne spécifiés.|
 
 ## <a name="remarks"></a>Notes
 
-Une interface obligatoire sur les ensembles de lignes et de commandes. Pour modifier le comportement de votre fournisseur de `IColumnsInfo` implémentation, vous devez modifier le mappage de colonnes du fournisseur.
+Interface obligatoire sur les ensembles de lignes et les commandes. Pour modifier le comportement de l’implémentation `IColumnsInfo` de votre fournisseur, vous devez modifier le mappage de colonnes du fournisseur.
 
-## <a name="getcolumninfo"></a> IColumnsInfoImpl::GetColumnInfo
+## <a name="getcolumninfo"></a>Icolumnsinfoimpl, :: GetColumnInfo
 
-Retourne les métadonnées de colonne requises par la plupart des consommateurs.
+Retourne les métadonnées de colonne exigées par la plupart des consommateurs.
 
 ### <a name="syntax"></a>Syntaxe
 
@@ -83,11 +82,11 @@ STDMETHOD (GetColumnInfo)(DBORDINAL* pcColumns,
 
 #### <a name="parameters"></a>Paramètres
 
-Consultez [IColumnsInfo::GetColumnInfo](/previous-versions/windows/desktop/ms722704\(v=vs.85\)) dans le *de référence du programmeur OLE DB*.
+Consultez [IColumnsInfo :: GetColumnInfo](/previous-versions/windows/desktop/ms722704\(v=vs.85\)) dans le *Guide de référence du programmeur OLE DB*.
 
-## <a name="mapcolumnids"></a> IColumnsInfoImpl::MapColumnIDs
+## <a name="mapcolumnids"></a>Icolumnsinfoimpl, :: MapColumnIDs
 
-Retourne un tableau d’ordinaux des colonnes dans un ensemble de lignes qui sont identifiés par l’ID de colonne spécifié.
+Retourne un tableau des numéros des colonnes dans un jeu de lignes identifiées par les ID de colonne spécifiés.
 
 ### <a name="syntax"></a>Syntaxe
 
@@ -99,9 +98,9 @@ STDMETHOD (MapColumnIDs)(DBORDINAL cColumnIDs,
 
 #### <a name="parameters"></a>Paramètres
 
-Consultez [IColumnsInfo::MapColumnIDs](/previous-versions/windows/desktop/ms714200(v=vs.85)) dans le *de référence du programmeur OLE DB*.
+Consultez [IColumnsInfo :: MapColumnIDs](/previous-versions/windows/desktop/ms714200(v=vs.85)) dans le *Guide de référence du programmeur OLE DB*.
 
 ## <a name="see-also"></a>Voir aussi
 
-[Modèles du fournisseur OLE DB](../../data/oledb/ole-db-provider-templates-cpp.md)<br/>
+[Modèles du fournisseur OLE DB](../../data/oledb/ole-db-provider-templates-cpp.md)<br/>
 [Architecture des modèles du fournisseur OLE DB](../../data/oledb/ole-db-provider-template-architecture.md)

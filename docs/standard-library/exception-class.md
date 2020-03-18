@@ -2,16 +2,16 @@
 title: exception, classe
 ms.date: 11/04/2016
 f1_keywords:
-- exception
+- exception/std::exception
 helpviewer_keywords:
 - exception class
 ms.assetid: 4f181f67-5888-4b50-89a6-745091ffb2fe
-ms.openlocfilehash: 90906469e923d29dd886930bd36944e4292bd9cd
-ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
+ms.openlocfilehash: 5bef8190889ae00298760ea395fb524f557c2be2
+ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68246066"
+ms.lasthandoff: 03/17/2020
+ms.locfileid: "79446829"
 ---
 # <a name="exception-class"></a>exception, classe
 
@@ -36,11 +36,11 @@ class exception {
 
 Plus précisément, cette classe de base est la racine des classes d’exception standard définies dans [\<stdexcept>](../standard-library/stdexcept.md). La valeur de chaîne C retournée par `what` est non définie par le constructeur par défaut, mais peut être définie par les constructeurs pour certaines classes dérivées comme une chaîne C définie par l’implémentation. Aucune des fonctions membres ne lève d'exception.
 
-Le **int** paramètre vous permet de spécifier qu’aucune mémoire ne doit être allouée. La valeur de la **int** est ignoré.
+Le paramètre **int** vous permet de spécifier qu’aucune mémoire ne doit être allouée. La valeur de **int** est ignorée.
 
 > [!NOTE]
 > Les constructeurs `exception(const char* const &message)` et `exception(const char* const &message, int)` sont des extensions Microsoft pour la bibliothèque C++ Standard.
 
-## <a name="example"></a>Exemples
+## <a name="example"></a>Exemple
 
 Pour obtenir des exemples d’utilisation des classes d’exception standard qui héritent de la classe `exception`, consultez l’une des classes définies dans [\<stdexcept>](../standard-library/stdexcept.md).

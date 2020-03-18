@@ -2,17 +2,15 @@
 title: Options EDITBIN
 description: Guide de référence des options de ligne de commande de l’utilitaire Microsoft EDITBIN.
 ms.date: 02/09/2020
-f1_keywords:
-- editbin
 helpviewer_keywords:
 - EDITBIN program, options
 ms.assetid: 2da9f88e-cbab-4d64-bb66-ef700535230f
-ms.openlocfilehash: c27172522ceabeccd06d7b957aa791edc49beec8
-ms.sourcegitcommit: 8414cd91297dea88c480e208c7b5301db9972f19
+ms.openlocfilehash: 9fd4170e5ee020780963d83936f1a9fd08d2be11
+ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/14/2020
-ms.locfileid: "77257700"
+ms.lasthandoff: 03/17/2020
+ms.locfileid: "79439976"
 ---
 # <a name="editbin-options"></a>Options EDITBIN
 

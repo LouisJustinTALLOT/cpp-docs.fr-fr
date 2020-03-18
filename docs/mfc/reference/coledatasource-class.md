@@ -37,11 +37,11 @@ helpviewer_keywords:
 - COleDataSource [MFC], SetClipboard
 ms.assetid: 02c8ee7d-8e10-4463-8613-bb2a0305ca69
 ms.openlocfilehash: 5cd573590bc1adb303e0b4c5cd600b9fa6c685b2
-ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
+ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/06/2020
-ms.locfileid: "78855746"
+ms.lasthandoff: 03/16/2020
+ms.locfileid: "79421134"
 ---
 # <a name="coledatasource-class"></a>COleDataSource, classe
 
@@ -88,7 +88,7 @@ Chaque fois que vous souhaitez préparer des données pour un transfert, vous de
 
 Pour plus d’informations sur les sources de données et le transfert de données, consultez l’article [objets de données et sources de données (OLE)](../../mfc/data-objects-and-data-sources-ole.md). En outre, les rubriques de l’article [presse-papiers](../../mfc/clipboard.md) décrivent le mécanisme OLE Clipboard.
 
-## <a name="inheritance-hierarchy"></a>Hiérarchie d'héritage
+## <a name="inheritance-hierarchy"></a>Hiérarchie d’héritage
 
 [CObject](../../mfc/reference/cobject-class.md)
 

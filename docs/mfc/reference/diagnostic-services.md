@@ -18,12 +18,12 @@ helpviewer_keywords:
 - diagnostics [MFC], diagnostic services
 - diagnostic functions and variables [MFC]
 ms.assetid: 8d78454f-9fae-49c2-88c9-d3fabd5393e8
-ms.openlocfilehash: 4cf3f53d1e238218b4eb892dc92e3c823dcc1296
-ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
-ms.translationtype: HT
+ms.openlocfilehash: 6880a6a3d25738bd0480168902044530d06f7e7f
+ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/16/2020
-ms.locfileid: "79421400"
+ms.lasthandoff: 03/17/2020
+ms.locfileid: "79446212"
 ---
 # <a name="diagnostic-services"></a>Services de diagnostic
 
@@ -109,6 +109,7 @@ Cet exemple de code provoque un avertissement du compilateur si _AFX_SECURE_NO_W
 // define this before including any afx files in *pch.h* (*stdafx.h* in Visual Studio 2017 and earlier)
 #define _AFX_SECURE_NO_WARNINGS
 ```
+
 ```cpp
 CRichEditCtrl* pRichEdit = new CRichEditCtrl;
 pRichEdit->Create(WS_CHILD|WS_VISIBLE|WS_BORDER|ES_MULTILINE,
@@ -635,7 +636,8 @@ Pour utiliser correctement cette fonction :
 - Fichier IMAGEHLP. La DLL doit se trouver sur votre chemin d’accès. Si vous n’avez pas cette DLL, la fonction affichera un message d’erreur. Pour plus d’informations sur l’ensemble de fonctions fourni par IMAGEHLP, consultez [bibliothèque d’aide](/windows/win32/Debug/image-help-library) sur les images.
 
 - Les modules qui ont des frames sur la pile doivent inclure des informations de débogage. S’ils ne contiennent pas d’informations de débogage, la fonction génère toujours une trace de la pile, mais la trace sera moins détaillée.
-  ### <a name="requirements"></a>Spécifications
+
+### <a name="requirements"></a>Spécifications
 
 **En-tête :** afx.h
 

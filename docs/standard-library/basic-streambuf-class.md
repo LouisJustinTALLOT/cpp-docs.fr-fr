@@ -95,11 +95,11 @@ helpviewer_keywords:
 - std::basic_streambuf [C++], xsputn
 ms.assetid: 136af6c3-13bf-4501-9288-b93da26efac7
 ms.openlocfilehash: 1b43c2291499af87f2be1e5bec25717a30c28bfd
-ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
+ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/06/2020
-ms.locfileid: "78856513"
+ms.lasthandoff: 03/16/2020
+ms.locfileid: "79416864"
 ---
 # <a name="basic_streambuf-class"></a>basic_streambuf, classe
 
@@ -983,7 +983,7 @@ int_type sputbackc(char_type _Ch);
 ### <a name="parameters"></a>Paramètres
 
 *_Ch*\
-Caractère.
+Le caractère.
 
 ### <a name="return-value"></a>Valeur de retour
 
@@ -1031,7 +1031,7 @@ int_type sputc(char_type _Ch);
 ### <a name="parameters"></a>Paramètres
 
 *_Ch*\
-Caractère.
+Le caractère.
 
 ### <a name="return-value"></a>Valeur de retour
 

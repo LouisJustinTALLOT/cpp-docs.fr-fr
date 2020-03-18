@@ -1,8 +1,6 @@
 ---
 title: CCmdUI, classe
 ms.date: 11/04/2016
-f1_keywords:
-- CCmdUI
 helpviewer_keywords:
 - updating user interface objects [MFC]
 - user interface objects [MFC], updating
@@ -10,21 +8,21 @@ helpviewer_keywords:
 - update handlers [MFC]
 - toolbars [MFC], updating
 ms.assetid: 2f2bae62-8c29-45a4-bbce-490eb01907d5
-ms.openlocfilehash: 8e0af0703924d6fae626d3753b8523efe0c56652
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 105aa7ad6c5cc6a5563dbde8145327a2b3d066a1
+ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62306299"
+ms.lasthandoff: 03/17/2020
+ms.locfileid: "79447143"
 ---
 # <a name="the-ccmdui-class"></a>CCmdUI, classe
 
-Lorsqu’il achemine une commande de mise à jour vers son gestionnaire, l’infrastructure transmet un pointeur vers le Gestionnaire d’un `CCmdUI` objet (ou à un objet d’un `CCmdUI`-classe dérivée). Cet objet représente le bouton de barre d’outils ou élément de menu ou un autre objet d’interface utilisateur qui a généré la commande. Le Gestionnaire de mise à jour appelle les fonctions de membres le `CCmdUI` structure via le pointeur pour mettre à jour de l’objet d’interface utilisateur. Par exemple, Voici un gestionnaire de mise à jour pour l’effacer tout élément de menu :
+Lorsqu’il achemine une commande de mise à jour vers son gestionnaire, le Framework passe au gestionnaire un pointeur vers un objet `CCmdUI` (ou vers un objet d’une classe dérivée de `CCmdUI`). Cet objet représente l’élément de menu ou le bouton de barre d’outils ou tout autre objet d’interface utilisateur qui a généré la commande. Le gestionnaire de mise à jour appelle les fonctions membres de la structure `CCmdUI` via le pointeur pour mettre à jour l’objet interface utilisateur. Par exemple, voici un gestionnaire de mise à jour pour l’élément de menu effacer tout :
 
 [!code-cpp[NVC_MFCDocView#3](../mfc/codesnippet/cpp/the-ccmdui-class_1.cpp)]
 
-Ce gestionnaire appelle le `Enable` fonction membre d’un objet avec un accès à l’élément de menu. `Enable` rend l’élément disponible pour utilisation.
+Ce gestionnaire appelle la fonction membre `Enable` d’un objet ayant accès à l’élément de menu. `Enable` rend l’élément disponible.
 
 ## <a name="see-also"></a>Voir aussi
 
-[Guide pratique pour Mettre à jour des objets d’interface utilisateur](../mfc/how-to-update-user-interface-objects.md)
+[Guide pratique pour mettre à jour des objets d’interface utilisateur](../mfc/how-to-update-user-interface-objects.md)

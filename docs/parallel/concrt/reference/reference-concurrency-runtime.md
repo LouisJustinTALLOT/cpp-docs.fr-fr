@@ -217,7 +217,6 @@ f1_keywords:
 - concurrent_vector/Concurrency::details::_Concurrent_vector_base_v4::_Segment_t
 - concrt/Concurrency::details::_ReentrantPPLLock::_Scoped_lock
 - ppl/Concurrency::_Task_handle_base_with_dtor::_Task_handle_base
-- DWORD
 - concurrent_queue/Concurrency::details::_Concurrent_queue_base_v4::_Internal_empty
 - concrt/Concurrency::details::_TaskCollection::_Wait
 - agents/Concurrency::_Order_node_base::consume_message
@@ -453,25 +452,25 @@ helpviewer_keywords:
 - LPSECURITY_ATTRIBUTES typedef
 - HRESULT typedef
 ms.assetid: a057c776-7caa-4605-8f33-9815cf6f9b27
-ms.openlocfilehash: fa1156aa6406f1c34712e845612147a42b753184
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: e1ae4616400069b44e23e30e3df69aae6dec6592
+ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62180145"
+ms.lasthandoff: 03/17/2020
+ms.locfileid: "79446283"
 ---
 # <a name="reference-concurrency-runtime"></a>Référence (runtime d'accès concurrentiel)
 
-Cette section contient des informations de référence pour le Runtime d’accès concurrentiel.
+Cette section contient des informations de référence sur le runtime d’accès concurrentiel.
 
 > [!Note]
-> Le C++ norme du langage réserve l’utilisation des identificateurs qui commencent par un caractère de soulignement (_) pour les implémentations telles que les bibliothèques. N'utilisez pas ces noms dans votre code. Le comportement des éléments de code, dont les noms suivent cette convention n'est pas garanti et est susceptible de changer dans les futures mises à jour. Pour ces raisons, ces éléments de code sont omis de la documentation du Runtime d’accès concurrentiel.
+> La C++ norme du langage réserve l’utilisation des identificateurs qui commencent par un trait de soulignement (_) pour les implémentations telles que les bibliothèques. N'utilisez pas ces noms dans votre code. Le comportement des éléments de code, dont les noms suivent cette convention n'est pas garanti et est susceptible de changer dans les futures mises à jour. Pour ces raisons, ces éléments de code sont omis de la documentation de runtime d’accès concurrentiel.
 
 ## <a name="in-this-section"></a>Dans cette section
 
 [accès concurrentiel Namespace](concurrency-namespace.md)<br/>
-L’espace de noms d’accès concurrentiel fournit des classes et des fonctions qui vous donnent accès au Runtime d’accès concurrentiel, une infrastructure de programmation simultanée pour C++. Pour plus d'informations, consultez [Concurrency Runtime](../concurrency-runtime.md).
+L’espace de noms d’accès concurrentiel fournit des classes et des fonctions qui vous permettent d’accéder au runtime d’accès concurrentiel, C++une infrastructure de programmation simultanée pour. Pour plus d’informations, consultez [Runtime d’accès concurrentiel](../concurrency-runtime.md).
 
 [espace de noms std](std-namespace.md)
 
-[stdx namespace](stdx-namespace.md)
+[espace de noms stdx,](stdx-namespace.md)

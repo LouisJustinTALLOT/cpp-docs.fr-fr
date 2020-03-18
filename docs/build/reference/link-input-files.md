@@ -1,8 +1,6 @@
 ---
 title: Fichiers d'entrée LINK
 ms.date: 11/04/2016
-f1_keywords:
-- link
 helpviewer_keywords:
 - files [C++], LINK
 - module definition files
@@ -14,43 +12,43 @@ helpviewer_keywords:
 - import libraries [C++], linker files
 - command input to linker files [C++]
 ms.assetid: bb26fcc5-509a-4620-bc3e-b6c6e603a412
-ms.openlocfilehash: 48ad9423ae35c22a97a873fe6a2a0479c12ab33b
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 25d8e20903a97186e2c32a079fd74ece3626b7fa
+ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62291507"
+ms.lasthandoff: 03/17/2020
+ms.locfileid: "79439345"
 ---
 # <a name="link-input-files"></a>Fichiers d'entrée LINK
 
-Vous fournissez l’éditeur de liens avec les fichiers qui contiennent des objets, des bibliothèques standards, ressources, les définitions de module et d’importation d’entrée de commande. LIEN n’utilise pas les extensions de fichier pour faire des hypothèses sur le contenu d’un fichier. Au lieu de cela, le lien examine chaque fichier d’entrée pour déterminer quel type de fichier, il s’agit.
+Vous fournissez à l’éditeur de liens des fichiers contenant des objets, des bibliothèques d’importation et standard, des ressources, des définitions de module et une entrée de commande. LINK n’utilise pas d’extensions de fichier pour faire des hypothèses sur le contenu d’un fichier. Au lieu de cela, LINK examine chaque fichier d’entrée pour déterminer le type de fichier.
 
-Fichiers d’objet sur la ligne de commande sont traités dans l’ordre de qu'apparition sur la ligne de commande. Bibliothèques sont recherchés dans l’ordre de ligne de commande, avec la restriction suivante : Les symboles non résolus lorsque mise dans un fichier de l’objet à partir d’une bibliothèque sont recherchés dans cette bibliothèque tout d’abord, puis sur les bibliothèques suivantes à partir de la ligne de commande et [/DEFAULTLIB (spécifier la bibliothèque par défaut)](defaultlib-specify-default-library.md) directives, puis pour toutes les bibliothèques au début de la ligne de commande.
+Les fichiers objets sur la ligne de commande sont traités dans l’ordre dans lequel ils apparaissent sur la ligne de commande. Les bibliothèques sont également recherchées dans l’ordre des lignes de commande, avec les signes suivants : les symboles qui ne sont pas résolus lors de l’intégration d’un fichier objet à partir d’une bibliothèque sont d’abord recherchés dans cette bibliothèque, puis dans les bibliothèques suivantes à partir de la ligne de commande et de la ligne de commande [/DEFAULTLIB (spécifier la bibliothèque par défaut)](defaultlib-specify-default-library.md)
 
 > [!NOTE]
->  LIEN n’accepte plus de point-virgule (ou tout autre caractère) comme le début d’un commentaire dans les fichiers de réponse et les fichiers de commande. Des points-virgules sont reconnus uniquement au début des commentaires dans les fichiers de définition de module (.def).
+>  Le lien n’accepte plus de point-virgule (ou tout autre caractère) comme début de commentaire dans les fichiers réponse et les fichiers de commande. Les points-virgules sont reconnus uniquement comme le début des commentaires dans les fichiers de définition de module (. def).
 
-LIEN utilise les types de fichiers d’entrée suivants :
+LINK utilise les types de fichiers d’entrée suivants :
 
-- [fichiers .obj](dot-obj-files-as-linker-input.md)
+- [fichiers. obj](dot-obj-files-as-linker-input.md)
 
-- [fichiers .netmodule](netmodule-files-as-linker-input.md)
+- [fichiers. netmodule](netmodule-files-as-linker-input.md)
 
-- [fichiers .lib](dot-lib-files-as-linker-input.md)
+- [fichiers. lib](dot-lib-files-as-linker-input.md)
 
-- [fichiers .exp](dot-exp-files-as-linker-input.md)
+- [fichiers. exp](dot-exp-files-as-linker-input.md)
 
-- [fichiers .def](dot-def-files-as-linker-input.md)
+- [fichiers. def](dot-def-files-as-linker-input.md)
 
-- [.pdb files](dot-pdb-files-as-linker-input.md)
+- [fichiers. pdb](dot-pdb-files-as-linker-input.md)
 
-- [fichiers .res](dot-res-files-as-linker-input.md)
+- [fichiers. res](dot-res-files-as-linker-input.md)
 
-- [fichiers .exe](dot-exe-files-as-linker-input.md)
+- [fichiers. exe](dot-exe-files-as-linker-input.md)
 
-- [fichiers .txt](dot-txt-files-as-linker-input.md)
+- [fichiers. txt](dot-txt-files-as-linker-input.md)
 
-- [fichiers .ilk](dot-ilk-files-as-linker-input.md)
+- [fichiers. ilk](dot-ilk-files-as-linker-input.md)
 
 ## <a name="see-also"></a>Voir aussi
 

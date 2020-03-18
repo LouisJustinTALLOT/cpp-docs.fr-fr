@@ -1,8 +1,6 @@
 ---
-title: 'TN064 : Threads cloisonnés dans les contrôles ActiveX'
+title: 'TN064 : modèle de thread apartment dans les contrôles ActiveX'
 ms.date: 11/04/2016
-f1_keywords:
-- vc.controls.activex
 helpviewer_keywords:
 - OLE controls [MFC], container support
 - containers [MFC], multithreaded
@@ -10,14 +8,14 @@ helpviewer_keywords:
 - multithread container [MFC]
 - apartment model threading [MFC]
 ms.assetid: b2ab4c88-6954-48e2-9a74-01d4a60df073
-ms.openlocfilehash: 2c6b9dd3ed244f7169e5055eebe7a34e3345e841
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: f490e82e179da4614eea345136a9edfb1d320705
+ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69513327"
+ms.lasthandoff: 03/17/2020
+ms.locfileid: "79442118"
 ---
-# <a name="tn064-apartment-model-threading-in-activex-controls"></a>TN064 : Threads cloisonnés dans les contrôles ActiveX
+# <a name="tn064-apartment-model-threading-in-activex-controls"></a>TN064 : modèle de thread apartment dans les contrôles ActiveX
 
 > [!NOTE]
 >  La note technique suivante n'a pas été mise à jour depuis son inclusion initiale dans la documentation en ligne. Par conséquent, certaines procédures et rubriques peuvent être obsolètes ou incorrectes. Pour obtenir les informations les plus récentes, il est recommandé de rechercher l'objet qui vous intéresse dans l'index de la documentation en ligne.
@@ -40,7 +38,7 @@ Activer le modèle de thread apartment est facile pour la plupart des contrôles
 
 ## <a name="protecting-shared-data"></a>Protection des données partagées
 
-Si votre contrôle utilise des données partagées, telles qu'une variable membre statique, l'accès à ces données doivent être protégées par une section critique pour éviter que plusieurs threads modifient les données en même temps. Pour installer une section critique à cet effet, déclarez une variable membre statique de la classe `CCriticalSection` dans la classe de votre contrôle. Utilisez les `Lock` fonctions `Unlock` membres et de cet objet de section critique partout où votre code accède aux données partagées.
+Si votre contrôle utilise des données partagées, telles qu'une variable membre statique, l'accès à ces données doivent être protégées par une section critique pour éviter que plusieurs threads modifient les données en même temps. Pour installer une section critique à cet effet, déclarez une variable membre statique de la classe `CCriticalSection` dans la classe de votre contrôle. Utilisez les fonctions membres `Lock` et `Unlock` de cet objet de section critique partout où votre code accède aux données partagées.
 
 Considérons, par exemple, une classe de contrôle qui doit contenir une chaîne partagée par toutes les instances. Cette chaîne peut être maintenue dans une variable membre statique et être protégée par une section critique. La déclaration de classe du contrôle contient les éléments suivants :
 
@@ -76,7 +74,7 @@ if (_strShared.Empty())
 
 ## <a name="registering-an-apartment-model-aware-control"></a>Enregistrement d'un contrôle compatible avec le modèle apartment
 
-Les contrôles qui prennent en charge le modèle de thread cloisonné doivent indiquer cette fonctionnalité dans le registre, en ajoutant la valeur nommée «ThreadingModel» avec la valeur «Apartment» dans leur entrée de Registre ID de classe sous l' *ID* \\  **de classe. Clé InprocServer32** . Pour faire en sorte que cette clé soit automatiquement inscrite pour votre contrôle, transmettez l’indicateur *afxregapartmentthreading en* dans `AfxOleRegisterControlClass`le sixième paramètre à:
+Les contrôles qui prennent en charge le modèle de thread cloisonné doivent indiquer cette fonctionnalité dans le registre, en ajoutant la valeur nommée « ThreadingModel » avec la valeur « Apartment » dans leur entrée de registre de l’ID de classe sous l' *ID de classe*\\la clé **InprocServer32** . Pour faire en sorte que cette clé soit automatiquement inscrite pour votre contrôle, transmettez l’indicateur *afxregapartmentthreading en* dans le sixième paramètre à `AfxOleRegisterControlClass`:
 
 ```
 BOOL CSampleCtrl::CSampleCtrlFactory::UpdateRegistry(BOOL bRegister)

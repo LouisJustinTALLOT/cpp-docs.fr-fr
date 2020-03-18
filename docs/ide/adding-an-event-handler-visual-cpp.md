@@ -3,19 +3,18 @@ title: Ajouter un gestionnaire d’événements
 ms.date: 11/12/2018
 f1_keywords:
 - vc.codewiz.eventhandler.overview
-- vc.codewiz.eventhandler.overview
 helpviewer_keywords:
 - event handlers, adding
 - properties [Visual Studio], MSBuild
 - MSBuild, properties
 - event handler wizard [C++]
 ms.assetid: 050bebf0-a9e0-474b-905c-796fe5ac8fc3
-ms.openlocfilehash: 96e5b8777bb8b0c976277a06e8ad49b3334921fb
-ms.sourcegitcommit: c1f646c8b72f330fa8cf5ddb0f8f261ba10d16f0
-ms.translationtype: HT
+ms.openlocfilehash: 0d852991c29281a7ecf912bd3d764d9916ef10f7
+ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/21/2019
-ms.locfileid: "58328569"
+ms.lasthandoff: 03/17/2020
+ms.locfileid: "79447505"
 ---
 # <a name="add-an-event-handler"></a>Ajouter un gestionnaire d’événements
 
@@ -41,7 +40,7 @@ Vous pouvez ajouter un événement à la classe implémentant la boîte de dialo
 
 Une autre solution consiste à ajouter les gestionnaires d’événements à partir de la [fenêtre Propriétés](/visualstudio/ide/reference/properties-window). Pour plus d’informations, consultez [Ajout de gestionnaires d’événements pour les contrôles de boîte de dialogue](../windows/adding-event-handlers-for-dialog-box-controls.md).
 
-## <a name="in-this-section"></a>Dans cette section
+## <a name="in-this-section"></a>Contenu de cette section
 
 - [Assistant Gestionnaire d’événements](#event-handler-wizard)
 

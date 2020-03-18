@@ -18,7 +18,6 @@ f1_keywords:
 - ATL.CDataSource.GetProperties
 - CDataSource.GetProperties
 - ATL::CDataSource::GetProperties
-- GetProperties
 - ATL::CDataSource::GetProperty
 - ATL.CDataSource.GetProperty
 - CDataSource.GetProperty
@@ -57,12 +56,12 @@ helpviewer_keywords:
 - OpenWithPromptFileName method
 - OpenWithServiceComponents method
 ms.assetid: 99bf862c-9d5c-4117-9501-aa0e2672085c
-ms.openlocfilehash: 3cb522d1f6ed256f8e042bc2f978e8bc5100888c
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: d97138b548a3e303898ee2bafde88af38aa78f40
+ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "70311902"
+ms.lasthandoff: 03/17/2020
+ms.locfileid: "79445302"
 ---
 # <a name="cdatasource-class"></a>CDataSource, classe
 
@@ -74,7 +73,7 @@ Correspond à un objet de source de données OLE DB, qui représente une connexi
 class CDataSource
 ```
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
 **En-tête :** atldbcli.h
 
@@ -84,11 +83,11 @@ class CDataSource
 
 |||
 |-|-|
-|[Fermer](#close)|Ferme la connexion.|
+|[Close](#close)|Ferme la connexion.|
 |[GetInitializationString](#getinitializationstring)|Récupère la chaîne d’initialisation de la source de données qui est actuellement ouverte.|
 |[GetProperties](#getproperties)|Obtient les valeurs des propriétés actuellement définies pour la source de données connectée.|
 |[GetProperty](#getproperty)|Obtient la valeur d’une propriété unique actuellement définie pour la source de données connectée.|
-|[Ouvrir](#open)|Crée une connexion à un fournisseur (source de données) à l' `CLSID`aide `ProgID`d’un, `CEnumerator` d’un ou d’un moniker fourni par l’appelant.|
+|[Ouvrir](#open)|Crée une connexion à un fournisseur (source de données) à l’aide d’un `CLSID`, d’un `ProgID`ou d’un moniker `CEnumerator` fourni par l’appelant.|
 |[OpenFromFileName](#openfromfilename)|Ouvre une source de données à partir d'un fichier spécifié par le nom de fichier fourni par l'utilisateur.|
 |[OpenFromInitializationString](#openfrominitializationstring)|Ouvre la source de données spécifiée par une chaîne d’initialisation.|
 |[OpenWithPromptFileName](#openwithpromptfilename)|Permet à l’utilisateur de sélectionner un fichier de liaison de données créé précédemment pour ouvrir la source de données correspondante.|
@@ -96,13 +95,13 @@ class CDataSource
 
 ## <a name="remarks"></a>Notes
 
-Une ou plusieurs sessions de base de données peuvent être créées pour une seule connexion. Ces sessions sont représentées par `CSession`. Vous devez appeler [CDataSource :: Open](../../data/oledb/cdatasource-open.md) pour ouvrir la connexion avant de créer une session `CSession::Open`avec.
+Une ou plusieurs sessions de base de données peuvent être créées pour une seule connexion. Ces sessions sont représentées par `CSession`. Vous devez appeler [CDataSource :: Open](../../data/oledb/cdatasource-open.md) pour ouvrir la connexion avant de créer une session avec `CSession::Open`.
 
-Pour obtenir un exemple d’utilisation `CDataSource`de, consultez l’exemple [CatDB](../../overview/visual-cpp-samples.md) .
+Pour obtenir un exemple d’utilisation de `CDataSource`, consultez l’exemple [CatDB](../../overview/visual-cpp-samples.md) .
 
 ## <a name="close"></a>CDataSource :: Close
 
-Ferme la connexion en relâchant le `m_spInit` pointeur.
+Ferme la connexion en libérant le pointeur `m_spInit`.
 
 ### <a name="syntax"></a>Syntaxe
 
@@ -195,7 +194,7 @@ Pour afficher plusieurs propriétés, utilisez [GetProperties](../../data/oledb/
 
 ## <a name="open"></a>CDataSource :: Open
 
-Ouvre une connexion à une source de données à `CLSID`l' `ProgID`aide d' `CEnumerator` un moniker, ou ou invite l’utilisateur à utiliser une boîte de dialogue de localisateur.
+Ouvre une connexion à une source de données à l’aide d’un `CLSID`, `ProgID`ou `CEnumerator` moniker ou invite l’utilisateur à utiliser une boîte de dialogue localisateur.
 
 ### <a name="syntax"></a>Syntaxe
 
@@ -240,8 +239,8 @@ HRESULT Open(LPCSTR szProgID,
 
 #### <a name="parameters"></a>Paramètres
 
-*clsid*<br/>
-dans `CLSID` Du fournisseur de données.
+*identificateur*<br/>
+dans `CLSID` du fournisseur de données.
 
 *pPropSet*<br/>
 dans Pointeur vers un tableau de structures [DBPROPSET](/previous-versions/windows/desktop/ms714367(v=vs.85)) contenant des propriétés et des valeurs à définir. Consultez [jeux de propriétés et groupes de propriétés](/previous-versions/windows/desktop/ms713696(v=vs.85)) dans le *Guide de référence du programmeur OLE DB* dans le SDK Windows.
@@ -289,7 +288,7 @@ Le code suivant montre comment ouvrir une source de données Jet 4.0 avec les m
 
 [!code-cpp[NVC_OLEDB_Consumer#7](../../data/oledb/codesnippet/cpp/cdatasource-open_1.cpp)]
 
-## <a name="openfromfilename"></a> CDataSource::OpenFromFileName
+## <a name="openfromfilename"></a>CDataSource :: OpenFromFileName
 
 Ouvre une source de données à partir d'un fichier spécifié par le nom de fichier fourni par l'utilisateur.
 
@@ -331,9 +330,9 @@ HRESULT OpenFromInitializationString(LPCOLESTR szInitializationString,
 dans Chaîne d’initialisation.
 
 *fPromptForInfo*<br/>
-dans Si cet argument a la valeur **true**, `OpenFromInitializationString` définit la propriété DBPROP_INIT_PROMPT sur DBPROMPT_COMPLETEREQUIRED, qui spécifie que l’utilisateur doit être invité uniquement si des informations supplémentaires sont nécessaires. Cela est utile dans les situations où la chaîne d’initialisation spécifie une base de données qui requiert un mot de passe, mais la chaîne ne contient pas le mot de passe. L’utilisateur sera invité à entrer un mot de passe (ou toute autre information manquante) lors de la tentative de connexion à la base de données.
+dans Si cet argument a la valeur **true**, `OpenFromInitializationString` affecte à la propriété DBPROP_INIT_PROMPT la valeur DBPROMPT_COMPLETEREQUIRED, qui spécifie que l’utilisateur est invité uniquement si des informations supplémentaires sont nécessaires. Cela est utile dans les situations où la chaîne d’initialisation spécifie une base de données qui requiert un mot de passe, mais la chaîne ne contient pas le mot de passe. L’utilisateur sera invité à entrer un mot de passe (ou toute autre information manquante) lors de la tentative de connexion à la base de données.
 
-La valeur par défaut est **false**, ce qui indique que l’utilisateur n’est jamais invité (définit DBPROP_INIT_PROMPT sur DBPROMPT_NOPROMPT).
+La valeur par défaut est **false**, ce qui indique que l’utilisateur n’est jamais invité (définit DBPROP_INIT_PROMPT pour DBPROMPT_NOPROMPT).
 
 ### <a name="return-value"></a>Valeur de retour
 
@@ -343,7 +342,7 @@ HRESULT standard.
 
 Cette méthode ouvre un objet source de données à l'aide des composants de service d'oledb32.dll ; cette DLL contient l'implémentation des fonctionnalités Composants de service, telles que la mise en pool de ressources, l'inscription de transaction automatique, etc.
 
-## <a name="openwithpromptfilename"></a> CDataSource::OpenWithPromptFileName
+## <a name="openwithpromptfilename"></a>CDataSource :: OpenWithPromptFileName
 
 Cette méthode présente une invite à l'utilisateur sous la forme d'une boîte de dialogue, puis ouvre une source de données correspondant au fichier spécifié par l'utilisateur.
 
@@ -392,8 +391,8 @@ HRESULT OpenWithServiceComponents (LPCSTR szProgID,
 
 #### <a name="parameters"></a>Paramètres
 
-*clsid*<br/>
-dans `CLSID` D’un fournisseur de données.
+*identificateur*<br/>
+dans `CLSID` d’un fournisseur de données.
 
 *szProgID*<br/>
 [in] ID de programme d'un fournisseur de données.

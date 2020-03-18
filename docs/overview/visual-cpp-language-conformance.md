@@ -5,12 +5,12 @@ ms.technology: cpp-language
 ms.assetid: 475da6e9-0d78-4b4e-bd23-f41c406c4efe
 author: corob-msft
 ms.author: corob
-ms.openlocfilehash: e029752ebaae5debb33d8e4a3920c5572f4d923b
-ms.sourcegitcommit: a5fa9c6f4f0c239ac23be7de116066a978511de7
+ms.openlocfilehash: a20f76cf1657db2082fefadc03276b399235cbc9
+ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/20/2019
-ms.locfileid: "75302144"
+ms.lasthandoff: 03/17/2020
+ms.locfileid: "79446776"
 ---
 # <a name="microsoft-c-language-conformance-table"></a>Tableau de conformité du langage Microsoft C++
 
@@ -25,12 +25,12 @@ Pour plus d’informations sur les améliorations apportées à Visual Studio 20
 
 | | |
 |----|---|
-|__Fonctionnalités principales du langage C++03/11__|__Prise en charge__|
+|__Fonctionnalités principales du langage C++03/11__|__Pris en charge__|
 |&nbsp;&nbsp;Tout le reste|VS 2015 <sup>[A](#note_A)</sup>|
 |&nbsp;&nbsp;Recherche de noms en deux phases|VS 2017 15.7 <sup>[B](#note_B)</sup>|
 |&nbsp;&nbsp;[N2634 SFINAE sur les expressions](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2008/n2634.html)|VS 2017 15.7|
 |&nbsp;&nbsp;[N1653 Préprocesseur C99](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2004/n1653.htm)|Partiel <sup>[C](#note_C)</sup>|
-|__Fonctionnalités principales du langage C++14__|__Prise en charge__|
+|__Fonctionnalités principales du langage C++14__|__Pris en charge__|
 |&nbsp;&nbsp;[N3323 Formulation optimisée pour les conversions contextuelles](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2012/n3323.pdf)|VS 2013|
 |&nbsp;&nbsp;[N3472 Littéraux binaires](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2012/n3472.pdf)|VS 2015|
 |&nbsp;&nbsp;[N3638 Types de retour auto et decltype(auto)](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2013/n3638.html)|VS 2015|
@@ -42,7 +42,7 @@ Pour plus d’informations sur les améliorations apportées à Visual Studio 20
 |&nbsp;&nbsp;[N3651 Modèles de variables](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2013/n3651.pdf)|VS 2015.2|
 |&nbsp;&nbsp;[N3652 Fonctions constexpr étendues](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2013/n3652.html)|VS 2017 15.0|
 |&nbsp;&nbsp;[N3653 Initialiseurs de membres par défaut pour les agrégats](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2013/n3653.html)|VS 2017 15.0|
-|__Fonctionnalités principales du langage C++17__|__Prise en charge__|
+|__Fonctionnalités principales du langage C++17__|__Pris en charge__|
 |&nbsp;&nbsp;[N4086 Suppression des trigraphes](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2014/n4086.html)|VS 2010 <sup>[14](#note_14)</sup>|
 |&nbsp;&nbsp;[N3922 Nouvelles règles pour auto avec braced-init-lists](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2014/n3922.html)|VS 2015 <sup>[14](#note_14)</sup>|
 |&nbsp;&nbsp;[N4051 typename dans les paramètres template template](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2014/n4051.html)|VS 2015 <sup>[14](#note_14)</sup>|
@@ -83,7 +83,7 @@ Pour plus d’informations sur les améliorations apportées à Visual Studio 20
 |&nbsp;&nbsp;[P0145R3 Affinement de l’ordre d’évaluation des expressions](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2016/p0145r3.pdf)<br/>&nbsp;&nbsp;[P0400R0 Ordre d’évaluation des arguments de la fonction](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2016/p0400r0.html)|VS 2017 15.7 <sup>[17](#note_17)</sup>|
 |&nbsp;&nbsp;[P0195R2 Expansions de pack dans les déclarations using](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2016/p0195r2.html)|VS 2017 15.7 <sup>[17](#note_17)</sup>|
 |&nbsp;&nbsp;[P0283R2 Écartement d’attributs non reconnus](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2016/p0283r2.html)|VS 2015 <sup>[14](#note_14)</sup>|
-|__Fonctionnalités principales du langage C++17 (rapports des anomalies)__|__Prise en charge__|
+|__Fonctionnalités principales du langage C++17 (rapports des anomalies)__|__Pris en charge__|
 |&nbsp;&nbsp;[P0702R1 Résolution de la déduction d’argument de modèle de classe pour les ctors de la liste d’initialiseurs](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2017/p0702r1.html)|VS 2017 15.7 <sup>[17](#note_17)</sup>|
 |&nbsp;&nbsp;[P0961R1 Assouplissement des règles de recherche d’un point de personnalisation de liaisons structurées](http://open-std.org/JTC1/SC22/WG21/docs/papers/2018/p0961r1.html)|VS 2019 16.0 <sup>[17](#note_17)</sup>|
 |&nbsp;&nbsp;[P0969R0 Autorisation des liaisons structurées aux membres accessibles](http://open-std.org/JTC1/SC22/WG21/docs/papers/2018/p0969r0.pdf)|VS 2019 16.0 <sup>[17](#note_17)</sup>|
@@ -95,7 +95,7 @@ Pour plus d’informations sur les améliorations apportées à Visual Studio 20
 |&nbsp;&nbsp;[P0859R0 CWG 1581 : quand les fonctions membres constexpr sont-elles définies](https://wg21.link/p0859r0)|Non|
 |&nbsp;&nbsp;[P1009R2 Déduction de la taille du tableau des nouvelles expressions](https://wg21.link/P1009R2)|Non|
 |&nbsp;&nbsp;[P1286R2 Contra CWG DR1778](https://wg21.link/P1286R2)|Non|
-|__Fonctionnalités principales du langage C++20__|__Prise en charge__|
+|__Fonctionnalités principales du langage C++20__|__Pris en charge__|
 |&nbsp;&nbsp;[P0704R1 Résolution des pointeurs const lvalue qualifiés ref vers des membres](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2017/p0704r1.html)|VS 2015 <sup>[14](#note_14)</sup>|
 |&nbsp;&nbsp;[P1041R4 Transformer les littéraux de chaîne char16_t/char32_t en UTF-16/32](https://wg21.link/P1041R4)|VS 2015 <sup>[14](#note_14)</sup>|
 |&nbsp;&nbsp;[P1330R0 Modification du membre actif d’une union à l’intérieur de constexpr](https://wg21.link/P1330R0)|VS 2017 15.0 <sup>[14](#note_14)</sup>|
@@ -120,7 +120,7 @@ Pour plus d’informations sur les améliorations apportées à Visual Studio 20
 |&nbsp;&nbsp;[P1099R5 à l’aide d’enum](https://wg21.link/P1099R5)|VS 2019 16,4 <sup> [20](#note_20)</sup>|
 |&nbsp;&nbsp;[P1186R3 quand vous utilisez \<=>](https://wg21.link/P1186R3)|VS 2019 16,4 <sup> [20](#note_20)</sup>|
 |&nbsp;&nbsp;[P1630R1 Spaces nécessitent une optimisation](https://wg21.link/P1630R1)|VS 2019 16,4 <sup> [20](#note_20)</sup>|
-|&nbsp;&nbsp;[P0641R2 Incompatibilité de const avec le constructeur de copie par défaut](https://wg21.link/P0641R2)|Partial|
+|&nbsp;&nbsp;[P0641R2 Incompatibilité de const avec le constructeur de copie par défaut](https://wg21.link/P0641R2)|Partiel|
 |&nbsp;&nbsp;[P0306R4 Ajout de \_\_VA_OPT\_\_ pour l’omission de virgule et la suppression de virgule](https://wg21.link/P0306R4)|Non|
 |&nbsp;&nbsp;[P0315R4 Autorisation de lambdas dans des contextes non évalués](https://wg21.link/P0315R4)|Non|
 |&nbsp;&nbsp;[P0479R5 \[\[attributs\]\] probables \[\[ et \]\]peu probables](https://wg21.link/P0479R5)|Non|
@@ -152,7 +152,7 @@ Pour plus d’informations sur les améliorations apportées à Visual Studio 20
 
 | | |
 |---|---|
-|__Fonctionnalités de bibliothèque standard C++20__|__Prise en charge__|
+|__Fonctionnalités de bibliothèque standard C++20__|__Pris en charge__|
 |&nbsp;&nbsp;[P0809R0 Comparaison de conteneurs non ordonnés](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2018/p0809r0.pdf)| VS 2010 <sup>[14](#note_14)</sup>|
 |&nbsp;&nbsp;[P0858R0 Exigences de l’itérateur constexpr](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2018/p0858r0.html)|VS 2017 15.3 <sup>[17](#note_17)</sup>|
 |&nbsp;&nbsp;[P0777R1 Prévention des dégradations inutiles](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2017/p0777r1.pdf)|VS 2017 15.7 <sup>[14](#note_14)</sup>|
@@ -183,20 +183,20 @@ Pour plus d’informations sur les améliorations apportées à Visual Studio 20
 |&nbsp;&nbsp;[P0202R3 constexpr pour \<algorithm> et exchange()](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2017/p0202r3.html)|Non|
 |&nbsp;&nbsp;[P0339R6 polymorphic_allocator<>](https://wg21.link/P0339R6)|Non|
 |&nbsp;&nbsp;[P0340R3 underlying_type compatible avec SFINAE](https://wg21.link/P0340R3)|Non|
-|&nbsp;&nbsp;[P0355R7 Calendriers et fuseaux horaires \<chrono>](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2018/p0355r7.html)|Non|
+|&nbsp;&nbsp;[P0355R7 \<Calendriers et fuseaux horaires chrono>](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2018/p0355r7.html)|Non|
 |&nbsp;&nbsp;[P0356R5 bind_front()](https://wg21.link/P0356R5)|Non|
 |&nbsp;&nbsp;[P0357R3 Prise en charge de types incomplets dans reference_wrapper](https://wg21.link/P0357R3)|Non|
 |&nbsp;&nbsp;[P0415R1 constexpr pour \<complex> (à nouveau)](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2017/p0415r1.html)|Non|
 |&nbsp;&nbsp;[P0439R0 Classe enum memory_order](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2016/p0439r0.html)|Non|
 |&nbsp;&nbsp;[P0475R1 Élision de copie garantie pour la construction par morceaux](https://wg21.link/P0475R1)|Non|
-|&nbsp;&nbsp;[P0476R2 <bit> bit_cast](https://wg21.link/P0476R2)|Non|
+|&nbsp;&nbsp;[P0476R2 \<bits > bit_cast](https://wg21.link/P0476R2)|Non|
 |&nbsp;&nbsp;[P0528R3 Comparaison et échange atomique avec remplissage de Bits](https://wg21.link/P0528R3)|Non|
-|&nbsp;&nbsp;[P0556R3 <bit> ispow2(), ceil2(), floor2(), log2p1()](https://wg21.link/P0556R3)|Non|
+|&nbsp;&nbsp;[P0556R3 \<bits > ispow2 (), ceil2 (), floor2 (), log2p1 ()](https://wg21.link/P0556R3)|Non|
 |&nbsp;&nbsp;[P0591R4 Fonctions utilitaires pour la construction de Uses-Allocator](https://wg21.link/P0591R4)|Non|
 |&nbsp;&nbsp;[P0608R3 Amélioration du constructeur de conversion/opérateur d’assignation de variante](https://wg21.link/P0608R3)|Non|
 |&nbsp;&nbsp;[P0619R4 Suppression des fonctionnalités déconseillées de C++17 dans C++20](https://wg21.link/P0619R4)|Non|
 |&nbsp;&nbsp;[P0653R2 to_address()](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2017/p0653r2.html)|Non|
-|&nbsp;&nbsp;[P0655R1 visit<R>()](https://wg21.link/P0655R1)|Non|
+|&nbsp;&nbsp;[P0655R1\<R > ()](https://wg21.link/P0655R1)|Non|
 |&nbsp;&nbsp;[P0674R1 make_shared() pour tableaux](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2017/p0674r1.html)|Non|
 |&nbsp;&nbsp;[P0718R2 atomic\<shared_ptr\<T>>, atomic\<weak_ptr\<T>>](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2017/p0718r2.html)|Non|
 |&nbsp;&nbsp;[P0738R2 Nettoyage de istream_iterator](https://wg21.link/P0738R2)|Non|
@@ -220,7 +220,7 @@ Pour plus d’informations sur les améliorations apportées à Visual Studio 20
 |&nbsp;&nbsp;[P1227R2 std::ssize() signé, span::size non signé](https://wg21.link/P1227R2)|Non|
 |&nbsp;&nbsp;[P1285R0 Amélioration des exigences d’exhaustivité pour les caractéristiques de type](https://wg21.link/P1285R0)|Non|
 |&nbsp;&nbsp;[P1357R1 is_bounded_array, is_unbounded_array](https://wg21.link/P1357R1)|Non|
-|__Fonctionnalités de bibliothèque standard C++17__|__Prise en charge__|
+|__Fonctionnalités de bibliothèque standard C++17__|__Pris en charge__|
 |&nbsp;&nbsp;[LWG 2221 Opérateur de sortie formaté pour nullptr](https://cplusplus.github.io/LWG/issue2221)|VS 2019 16.1|
 |&nbsp;&nbsp;[N3911 void_t](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2014/n3911.pdf)|VS 2015 <sup>[14](#note_14)</sup>|
 |&nbsp;&nbsp;[N4089 Conversions sécurisées dans unique_ptr\<T[]>](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2014/n4089.pdf)|VS 2015 <sup>[14](#note_14)</sup>|
@@ -303,7 +303,7 @@ Pour plus d’informations sur les améliorations apportées à Visual Studio 20
 |&nbsp;&nbsp;[P0607R0 Variables inline pour la bibliothèque standard](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2017/p0607r0.html)|VS 2017 15.5 <sup>[17](#note_17)</sup>|
 |&nbsp;&nbsp;[P0618R0 Dépréciation de \<codecvt>](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2017/p0618r0.html)|VS 2017 15.5 <sup>[17](#note_17)</sup>|
 |&nbsp;&nbsp;[P0682R1 Réparation de conversions de chaînes élémentaires](https://wg21.link/P0682R1)|VS 2015 15.7 <sup>[17](#note_17)</sup>|
-|__Fonctionnalités de bibliothèque standard C++14__|__Prise en charge__|
+|__Fonctionnalités de bibliothèque standard C++14__|__Pris en charge__|
 |&nbsp;&nbsp;[N3462 Utilisation de result_of compatible avec SFINAE](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2012/n3462.html)|VS 2015.2|
 |&nbsp;&nbsp;[N3302 constexpr pour \<complex>](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2011/n3302.html)|VS 2015|
 |&nbsp;&nbsp;[N3469 constexpr pour \<chrono>](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2012/n3469.html)|VS 2015|
@@ -350,15 +350,15 @@ __VS 2019 16,2__ indique les fonctionnalités prises en charge dans Visual Studi
 __VS 2019 16,3__ indique les fonctionnalités prises en charge dans Visual Studio 2019 version 16,3. \
 __VS 2019 16,4__ indique les fonctionnalités prises en charge dans Visual Studio 2019 version 16,4.
 
-### <a name="notes"></a>Remarques
+### <a name="notes"></a>Notes
 
 <a name="note_A"></a>__A__ En mode [/std:c++14](../build/reference/std-specify-language-standard-version.md), les spécifications d’exceptions dynamiques restent non implémentées, et `throw()` est toujours traité comme un synonyme de `__declspec(nothrow)`. Dans C++17, la plupart des spécifications d’exceptions dynamiques ont été supprimées par P0003R5, laissant un vestige : `throw()` est déconseillé et doit se comporter comme synonyme de `noexcept`. Dans [/std : mode c++ 17](../build/reference/std-specify-language-standard-version.md) , MSVC est maintenant conforme à la norme en donnant à `throw()` le même comportement que `noexcept`, c’est-à-dire la mise en œuvre via la terminaison.
 
-L’option de compilateur [/Zc:noexceptTypes](../build/reference/zc-noexcepttypes.md) requiert l’ancien comportement de `__declspec(nothrow)`. Il est vraisemblable que `throw()` soit supprimé de C++20. Pour faciliter la migration de code en réponse à ces changements dans la norme et notre implémentation, de nouveaux avertissements du compilateur pour les problèmes de spécification d’exception ont été ajoutés sous [/std:c++17](../build/reference/std-specify-language-standard-version.md) et [/permissive-](../build/reference/permissive-standards-conformance.md).
+L’option de compilateur [/Zc:noexceptTypes](../build/reference/zc-noexcepttypes.md) requiert l’ancien comportement de `__declspec(nothrow)`. Il est probable que `throw()` sera supprimé en C++ 20. Pour faciliter la migration de code en réponse à ces changements dans la norme et notre implémentation, de nouveaux avertissements du compilateur pour les problèmes de spécification d’exception ont été ajoutés sous [/std:c++17](../build/reference/std-specify-language-standard-version.md) et [/permissive-](../build/reference/permissive-standards-conformance.md).
 
 <a name="note_B"></a>__B__ Pris en charge dans le mode [/permissive-](../build/reference/permissive-standards-conformance.md) dans Visual Studio 2017 15.7. Pour plus d’informations, consultez [prise en charge de la recherche de noms en deux phases dans MSVC](https://devblogs.microsoft.com/cppblog/two-phase-name-lookup-support-comes-to-msvc/).
 
-<a name="note_C"></a>__C__ La prise en charge par le compilateur des règles de préprocesseur C99 est incomplète dans Visual Studio 2017. Nous recherchons le préprocesseur et avons commencé à expédier ces modifications dans Visual Studio 2017 version 15,8 avec le commutateur de compilateur de [préprocesseur/experimental :](../build/reference/experimental-preprocessor.md) .
+<a name="note_C"></a>__C__ la prise en charge par le compilateur des règles de préprocesseur C99 est incomplète dans Visual Studio 2017. Nous recherchons le préprocesseur et avons commencé à expédier ces modifications dans Visual Studio 2017 version 15,8 avec le commutateur de compilateur de [préprocesseur/experimental :](../build/reference/experimental-preprocessor.md) .
 
 <a name="note_D"></a>__D__ Pris en charge sous [/std:c++14](../build/reference/std-specify-language-standard-version.md) avec un avertissement pouvant être supprimé, [C4984](../error-messages/compiler-warnings/compiler-warning-c4984.md).
 

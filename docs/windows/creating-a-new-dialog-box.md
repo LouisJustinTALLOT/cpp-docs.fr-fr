@@ -1,8 +1,6 @@
 ---
-title: 'Procédure : Créer une boîte de dialogue (C++)'
+title: 'Comment : créer une boîte de dialogue (C++)'
 ms.date: 02/15/2019
-f1_keywords:
-- vc.editors.dialog
 helpviewer_keywords:
 - dialog boxes [C++], creating
 - Dialog Editor [C++], creating dialog boxes
@@ -14,35 +12,35 @@ helpviewer_keywords:
 - dialog boxes [C++], size
 - dialog boxes [C++], positioning
 ms.assetid: 303de801-c4f8-42e1-b622-353f6423f688
-ms.openlocfilehash: 28ed6c8be262e0446b828cfa3e6e9fe2ba53672a
-ms.sourcegitcommit: 6cf0c67acce633b07ff31b56cebd5de3218fd733
+ms.openlocfilehash: 380cf58180913f538c1c326d6aaf49947b694063
+ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/24/2019
-ms.locfileid: "67344209"
+ms.lasthandoff: 03/17/2020
+ms.locfileid: "79445420"
 ---
-# <a name="how-to-create-a-dialog-box-c"></a>Procédure : Créer une boîte de dialogue (C++)
+# <a name="how-to-create-a-dialog-box-c"></a>Comment : créer une boîte de dialogue (C++)
 
-L’emplacement et la taille d’une boîte de dialogue C++ et que l’emplacement et la taille des contrôles qu’il contient, sont mesurés en unités de boîte de dialogue. Les valeurs pour les contrôles individuels et de la boîte de dialogue s’affichent dans le coin inférieur droit de l’état de Visual Studio barre lorsque vous les sélectionnez.
+L’emplacement et la taille d' C++ une boîte de dialogue, ainsi que l’emplacement et la taille des contrôles qu’elle contient, sont mesurés en unités de boîte de dialogue. Les valeurs des contrôles individuels et de la boîte de dialogue s’affichent dans le coin inférieur droit de la barre d’état de Visual Studio lorsque vous les sélectionnez.
 
 > [!NOTE]
-> Si votre projet ne contient pas déjà un fichier .rc, consultez [création d’un fichier de Script de ressources](../windows/how-to-create-a-resource-script-file.md).
+> Si votre projet ne contient pas déjà un fichier. RC, consultez [création d’un fichier de script de ressources](../windows/how-to-create-a-resource-script-file.md).
 
-## <a name="how-to"></a>Comment
+## <a name="how-to"></a>Procédure
 
-Le **boîte de dialogue Éditeur** vous permet de :
+L' **éditeur de boîtes de dialogue** vous permet d’activer les éléments suivants :
 
-### <a name="to-create-a-new-dialog-box"></a>Pour créer une nouvelle boîte de dialogue
+### <a name="to-create-a-new-dialog-box"></a>Pour créer une boîte de dialogue
 
-1. Dans [affichage des ressources](how-to-create-a-resource-script-file.md#create-resources), cliquez sur votre *.rc* fichier et sélectionnez **ajouter une ressource**.
+1. Dans [affichage des ressources](how-to-create-a-resource-script-file.md#create-resources), cliquez avec le bouton droit sur votre fichier *. RC* , puis sélectionnez **Ajouter une ressource**.
 
-1. Dans le **ajouter une ressource** boîte de dialogue, sélectionnez **boîte de dialogue** dans le **Type de ressource** liste, puis choisissez **New**.
+1. Dans la boîte de dialogue **Ajouter une ressource** , sélectionnez **boîte de dialogue** dans la liste **type de ressource** , puis choisissez **nouveau**.
 
-   Si un signe plus ( **+** ) apparaît en regard du **boîte de dialogue** type de ressource, cela signifie que les modèles de boîte de dialogue sont disponibles. Sélectionnez le signe plus pour développer la liste des modèles, sélectionnez un modèle et choisissez **New**.
+   Si un signe plus ( **+** ) s’affiche en regard du type de ressource de **boîte** de dialogue, cela signifie que les modèles de boîte de dialogue sont disponibles. Sélectionnez le signe plus (+) pour développer la liste des modèles, sélectionnez un modèle, puis choisissez **nouveau**.
 
-   La nouvelle boîte de dialogue s’ouvre dans le **boîte de dialogue Éditeur**.
+   La nouvelle boîte de dialogue s’ouvre dans l' **éditeur de boîtes de dialogue**.
 
-Vous pouvez également ouvrir des boîtes de dialogue existantes dans l’éditeur de boîte de dialogue pour la modification.
+Vous pouvez également ouvrir des boîtes de dialogue existantes dans l’éditeur de boîtes de dialogue pour les modifier.
 
 ### <a name="to-create-a-dialog-box-that-a-user-cant-exit"></a>Pour créer une boîte de dialogue qu’un utilisateur ne peut pas quitter
 
@@ -50,32 +48,32 @@ Vous pouvez créer une boîte de dialogue d’exécution qu’un utilisateur ne 
 
 1. Dans le volet **Propriétés** de la boîte de dialogue, affectez la valeur **false** à la propriété **Menu système**.
 
-   Ce paramètre désactive le menu système de boîte de dialogue et **fermer** bouton.
+   Ce paramètre désactive le menu système de la boîte de dialogue et le bouton **Fermer** .
 
 1. Dans le formulaire de boîte de dialogue, supprimez les boutons **Annuler** et **OK** .
 
-   Au moment de l’exécution, un utilisateur ne peuvent pas quitter une boîte de dialogue modale qui possède ces caractéristiques.
+   Au moment de l’exécution, un utilisateur ne peut pas quitter une boîte de dialogue modale qui possède ces caractéristiques.
 
-Pour activer le test de ce type de boîte de dialogue, la fonction de boîte de dialogue test détecte quand **ÉCHAP** est enfoncé. **ÉCHAP** est également appelé la touche virtuelle VK_ESCAPE. Quelle que soit la façon dont la boîte de dialogue est conçue de comportement au moment de l’exécution, vous pouvez terminer le mode de test en appuyant sur **ÉCHAP**.
+Pour permettre le test de ce type de boîte de dialogue, la fonction de test de la boîte de dialogue détecte quand la **touche Échap** est enfoncée. La touche **Échap** est également appelée clé virtuelle VK_ESCAPE. Quelle que soit la façon dont la boîte de dialogue est conçue pour se comporter au moment de l’exécution, vous pouvez terminer le mode test en appuyant sur **Échap**.
 
 > [!NOTE]
-> Pour les applications MFC, pour créer une boîte de dialogue que les utilisateurs ne peuvent pas quitter, vous devez substituer le comportement par défaut de `OnOK` et `OnCancel` , car même si vous supprimez les boutons associés, la boîte de dialogue peut toujours être ignorée en appuyant sur  **Entrez** ou **ÉCHAP**.
+> Pour les applications MFC, pour créer une boîte de dialogue que les utilisateurs ne peuvent pas quitter, vous devez remplacer le comportement par défaut de `OnOK` et `OnCancel`, car même si vous supprimez les boutons associés, la boîte de dialogue peut toujours être ignorée en appuyant sur **entrée** ou **Échap**.
 
 ### <a name="to-specify-the-location-and-size-of-a-dialog-box"></a>Pour spécifier l’emplacement et la taille d’une boîte de dialogue
 
-Il existe des propriétés que vous pouvez définir dans le [fenêtre Propriétés](/visualstudio/ide/reference/properties-window) pour spécifier où une boîte de dialogue s’affiche à l’écran.
+Vous pouvez définir des propriétés dans la [fenêtre Propriétés](/visualstudio/ide/reference/properties-window) pour spécifier l’emplacement d’affichage d’une boîte de dialogue à l’écran.
 
-- La valeur booléenne **Center** propriété.
+- Propriété de **Centre** booléenne.
 
-   Si vous définissez la valeur sur **True**, la boîte de dialogue s’affiche toujours dans le centre de l’écran. Si vous définissez cette propriété sur **False**, vous pouvez ensuite définir le **XPos** et **YPos** propriétés.
+   Si vous définissez la valeur sur **true**, la boîte de dialogue s’affiche toujours au centre de l’écran. Si vous affectez à cette propriété la **valeur false**, vous pouvez définir les propriétés **xpos** et **YPos** .
 
-- Le **XPos** et **YPos** propriétés qui sont utilisées pour définir explicitement l’emplacement à l’écran la boîte de dialogue s’affiche.
+- Les propriétés **xpos** et **YPos** utilisées pour définir explicitement l’emplacement où la boîte de dialogue s’affiche à l’écran.
 
    Ces propriétés de position sont des valeurs de décalage à partir de l’angle supérieur gauche de la zone d’affichage, qui est définie comme `{X=0, Y=0}`.
 
-- Le **Absolute Align** propriété qui affecte la position.
+- Propriété d' **alignement absolu** qui affecte la position.
 
-   Si **True**, les coordonnées sont exprimées par rapport à l’écran. Si **False**, les coordonnées sont exprimées par rapport à la fenêtre du propriétaire de la boîte de dialogue.
+   Si la **valeur est true**, les coordonnées sont relatives à l’écran. Si la **valeur est false**, les coordonnées sont relatives à la fenêtre du propriétaire de la boîte de dialogue.
 
 ### <a name="to-test-a-dialog-box"></a>Pour tester une boîte de dialogue
 
@@ -90,19 +88,19 @@ Lorsque vous créez une boîte de dialogue, vous pouvez simuler et tester son co
 - Tester les raccourcis clavier pour les contrôles dans la boîte de dialogue
 
 > [!NOTE]
-> Connexions au code de boîte de dialogue effectuées à l’aide des Assistants ne sont pas incluses dans la simulation.
+> Les connexions au code de boîte de dialogue effectuées à l’aide d’assistants ne sont pas incluses dans la simulation.
 
-Quand vous testez une boîte de dialogue, elle s’affiche généralement à un emplacement qui est relatif à la fenêtre principale du programme. Si vous avez défini la boîte de dialogue **Absolute Align** propriété **True**, la boîte de dialogue affiche à une position qui est relative à l’angle supérieur gauche de l’écran.
+Quand vous testez une boîte de dialogue, elle s’affiche généralement à un emplacement qui est relatif à la fenêtre principale du programme. Si vous avez défini la propriété **Absolute align** de la boîte de dialogue sur **true**, la boîte de dialogue s’affiche à une position relative au coin supérieur gauche de l’écran.
 
-1. Lorsque le **boîte de dialogue Éditeur** est la fenêtre active, accédez au menu **Format** > **boîte de dialogue Test**.
+1. Lorsque l' **éditeur de boîtes de dialogue** est la fenêtre active, accédez à menu **format** > **boîte de dialogue test**.
 
-1. Pour arrêter la simulation, appuyez sur **ÉCHAP** ou sélectionnez le **fermer** bouton dans la boîte de dialogue que vous testez.
+1. Pour mettre fin à la simulation, appuyez sur **Échap** ou sélectionnez le bouton **Fermer** dans la boîte de dialogue que vous testez.
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
 Win32
 
 ## <a name="see-also"></a>Voir aussi
 
 [Éditeur de boîtes de dialogue](../windows/dialog-editor.md)<br/>
-[Guide pratique pour Gérer les contrôles de boîte de dialogue](../windows/controls-in-dialog-boxes.md)<br/>
+[Comment : gérer les contrôles de boîte de dialogue](../windows/controls-in-dialog-boxes.md)<br/>

@@ -41,11 +41,11 @@ helpviewer_keywords:
 - CPrintDialog [MFC], m_pd
 ms.assetid: 5bdb2424-adf8-433d-a97c-df11a83bc4e4
 ms.openlocfilehash: ccc673d665d6d5beb92f398b21e6ffd313a58fc9
-ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
+ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/06/2020
-ms.locfileid: "78855496"
+ms.lasthandoff: 03/16/2020
+ms.locfileid: "79421141"
 ---
 # <a name="cprintdialog-class"></a>CPrintDialog, classe
 
@@ -85,7 +85,7 @@ class CPrintDialog : public CCommonDialog
 |[CPrintDialog ::P rintRange](#printrange)|Détermine s’il faut imprimer uniquement une plage de pages spécifiée.|
 |[CPrintDialog ::P rintSelection](#printselection)|Détermine s’il faut imprimer uniquement les éléments actuellement sélectionnés.|
 
-### <a name="public-data-members"></a>Membres de données publiques
+### <a name="public-data-members"></a>Membres de données publics
 
 |Name|Description|
 |----------|-----------------|
@@ -124,7 +124,7 @@ Pour traiter le même message différemment selon qu’il s’agit d’une boît
 
 Pour plus d’informations sur l’utilisation de `CPrintDialog`, consultez [classes de boîtes de dialogue communes](../../mfc/common-dialog-classes.md).
 
-## <a name="inheritance-hierarchy"></a>Hiérarchie d'héritage
+## <a name="inheritance-hierarchy"></a>Hiérarchie d’héritage
 
 [CObject](../../mfc/reference/cobject-class.md)
 

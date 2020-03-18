@@ -1,17 +1,15 @@
 ---
 title: Robustesse
 ms.date: 11/04/2016
-f1_keywords:
-- c.runtime
 helpviewer_keywords:
 - robustness [CRT]
 ms.assetid: 7f1a87f8-eff9-4b76-ae9b-d133d3de6adf
-ms.openlocfilehash: 108b4c9dde08adf1a3c54c810f68be69bf150472
-ms.sourcegitcommit: 180f63704f6ddd07a4172a93b179cf0733fd952d
+ms.openlocfilehash: 5e13152b2c31511cce4df9976d6c800960c099a5
+ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70739600"
+ms.lasthandoff: 03/17/2020
+ms.locfileid: "79444890"
 ---
 # <a name="robustness"></a>Robustesse
 
@@ -19,7 +17,7 @@ Les fonctions suivantes de la bibliothèque Runtime C permettent d'améliorer la
 
 ## <a name="run-time-robustness-functions"></a>Fonctions de robustesse à l'exécution
 
-|Fonction|Utilisez|
+|Fonction|Utilisation|
 |--------------|---------|
 |[_set_new_handler](../c-runtime-library/reference/set-new-handler.md)|Transfère le contrôle à votre mécanisme de gestion des erreurs si l’opérateur **new** ne peut pas allouer de mémoire.|
 |[_set_se_translator](../c-runtime-library/reference/set-se-translator.md)|Gère les exceptions Win32 (exceptions structurées par C) en tant qu'exceptions typées C++.|

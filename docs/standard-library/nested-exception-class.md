@@ -1,19 +1,19 @@
 ---
-title: nested_exception, classe
+title: Classe nested_exception
 ms.date: 11/04/2016
 f1_keywords:
-- exception/std::bad_exception
+- exception/std::nested_exception
 helpviewer_keywords:
-- bad_exception class
+- nested_exception class
 ms.assetid: 5ae2c4ef-c7ad-4469-8a9e-a773e86bb000
-ms.openlocfilehash: 5741b3aa255f915500f5fe79ab5374c8c86f8814
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: ed58eb6cc074b54ae6801d2b11089af9a79f8c8f
+ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68460180"
+ms.lasthandoff: 03/17/2020
+ms.locfileid: "79441616"
 ---
-# <a name="nestedexception-class"></a>nested_exception, classe
+# <a name="nested_exception-class"></a>Classe nested_exception
 
 La classe décrit une exception à utiliser avec l’héritage multiple. Il capture l’exception actuellement gérée et la stocke pour une utilisation ultérieure.
 
@@ -57,7 +57,7 @@ exception_ptr nested_ptr() const;
 
 #### <a name="return-value"></a>Valeur de retour
 
-Exception stockée capturée par `nested_exception` cet objet.
+Exception stockée capturée par cet objet `nested_exception`.
 
 ### <a name="rethrow_nested"></a>rethrow_nested
 
@@ -69,13 +69,13 @@ Exception stockée capturée par `nested_exception` cet objet.
 
 Si `nested_ptr()` retourne un pointeur null, la fonction appelle `std::terminate()`. Dans le cas contraire, il lève l’exception stockée capturée par `*this`.
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
-**En-tête :** \<exception>
+**En-tête :** \<exception >
 
 **Espace de noms :** std
 
 ## <a name="see-also"></a>Voir aussi
 
-[Classe d’exception](../standard-library/exception-class.md)\
-[Sécurité des threads dans la bibliothèque standard C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)
+\ de la [classe d’exception](../standard-library/exception-class.md)
+[Sécurité des threads dans la bibliothèque C++ Standard](../standard-library/thread-safety-in-the-cpp-standard-library.md)

@@ -29,11 +29,11 @@ helpviewer_keywords:
 - message map ranges
 ms.assetid: 531b15ce-32b5-4ca0-a849-bb519616c731
 ms.openlocfilehash: b88b745e3b70cf030f77f247ab03cd69d910109f
-ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
+ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/06/2020
-ms.locfileid: "78855506"
+ms.lasthandoff: 03/16/2020
+ms.locfileid: "79420931"
 ---
 # <a name="message-map-macros-mfc"></a>Macros de table des messages (MFC)
 
@@ -304,7 +304,7 @@ ON_MESSAGE( message, memberFxn )
 ### <a name="parameters"></a>Paramètres
 
 *message*<br/>
-ID du message.
+ID de message.
 
 *memberFxn*<br/>
 Nom de la fonction de gestionnaire de messages à laquelle le message est mappé.
@@ -555,7 +555,7 @@ ON_THREAD_MESSAGE( message, memberFxn )
 ### <a name="parameters"></a>Paramètres
 
 *message*<br/>
-ID du message.
+ID de message.
 
 *memberFxn*<br/>
 Nom de la fonction de gestionnaire de messages `CWinThread`à laquelle le message est mappé.
@@ -581,7 +581,7 @@ ON_UPDATE_COMMAND_UI( messageId, memberFxn )
 ### <a name="parameters"></a>Paramètres
 
 *ID*<br/>
-ID du message.
+ID de message.
 
 *memberFxn*<br/>
 Nom de la fonction de gestionnaire de messages à laquelle le message est mappé.

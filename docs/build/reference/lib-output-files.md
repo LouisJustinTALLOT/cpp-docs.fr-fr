@@ -1,27 +1,25 @@
 ---
 title: Fichiers de sortie LIB
 ms.date: 11/04/2016
-f1_keywords:
-- Lib
 helpviewer_keywords:
 - output files, LIB
 ms.assetid: e73d2f9b-a42d-402b-b7e3-3a94bebb317e
-ms.openlocfilehash: d7a6352665f12307bfa54025a32f9f7b84311dac
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 8aeb46b0249ddf4155277866f7d8537bbfa98244
+ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62269698"
+ms.lasthandoff: 03/17/2020
+ms.locfileid: "79439386"
 ---
 # <a name="lib-output-files"></a>Fichiers de sortie LIB
 
-Les fichiers de sortie produits par LIB varient selon le mode dans lequel il est utilisé, comme indiqué dans le tableau suivant.
+Les fichiers de sortie produits par LIB dépendent du mode dans lequel il est utilisé, comme indiqué dans le tableau suivant.
 
-|Mode|Sortie|
+|Mode|Output|
 |----------|------------|
-|Par défaut (création ou modification d’une bibliothèque)|Bibliothèque COFF (.lib)|
-|Extraction d’un membre avec /EXTRACT|Fichier objet (.obj)|
-|Création d’une exportation de fichier et de bibliothèque avec /DEF d’importation|Bibliothèque d’importation (.lib) et fichier d’exportation (.exp)|
+|Par défaut (création ou modification d’une bibliothèque)|Bibliothèque COFF (. lib)|
+|Extraction d’un membre avec/EXTRACT|Fichier objet (. obj)|
+|Génération d’un fichier d’exportation et d’une bibliothèque d’importation avec/DEF|Importer une bibliothèque (. lib) et un fichier d’exportation (. exp)|
 
 ## <a name="see-also"></a>Voir aussi
 

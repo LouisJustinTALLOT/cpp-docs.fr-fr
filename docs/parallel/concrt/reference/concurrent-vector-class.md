@@ -1,5 +1,5 @@
 ---
-title: concurrent_vector, classe
+title: Classe concurrent_vector
 ms.date: 11/04/2016
 f1_keywords:
 - concurrent_vector
@@ -34,13 +34,13 @@ helpviewer_keywords:
 - concurrent_vector class
 ms.assetid: a217b4ac-af2b-4d41-94eb-09a75ee28622
 ms.openlocfilehash: 002f1e3f691de3315810efed8f7d8f6c547cf653
-ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
+ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/06/2020
-ms.locfileid: "78854153"
+ms.lasthandoff: 03/16/2020
+ms.locfileid: "79417249"
 ---
-# <a name="concurrent_vector-class"></a>concurrent_vector, classe
+# <a name="concurrent_vector-class"></a>Classe concurrent_vector
 
 La classe `concurrent_vector` est une classe de conteneur de séquence qui autorise un accès aléatoire à tout élément. Elle permet les opérations d'ajout d'accès concurrentiel sécurisé, d'accès à un élément, d'accès à un itérateur et de traversée d'itérateur. Ici, l’accès concurrentiel sécurisé signifie que les pointeurs ou les itérateurs sont toujours valides. Il ne s’agit pas d’une garantie d’initialisation d’élément ou d’un ordre de parcours particulier.
 
@@ -117,7 +117,7 @@ Type qui représente l’objet allocateur stocké qui encapsule des détails sur
 |[size](#size)|Retourne le nombre d’éléments dans le vecteur simultané. Cette méthode est sécurisée pour l’accès concurrentiel.|
 |[swap](#swap)|Échange le contenu de deux vecteurs simultanés. Cette méthode n’est pas sécurisée pour la concurrence.|
 
-### <a name="public-operators"></a>Op&#233;rateurs publics
+### <a name="public-operators"></a>Opérateurs publics
 
 |Name|Description|
 |----------|-----------------|
@@ -128,7 +128,7 @@ Type qui représente l’objet allocateur stocké qui encapsule des détails sur
 
 Pour plus d’informations sur la classe `concurrent_vector`, consultez [conteneurs et objets parallèles](../../../parallel/concrt/parallel-containers-and-objects.md).
 
-## <a name="inheritance-hierarchy"></a>Hiérarchie d'héritage
+## <a name="inheritance-hierarchy"></a>Hiérarchie d’héritage
 
 `_Concurrent_vector_base_v4`
 

@@ -27,11 +27,11 @@ helpviewer_keywords:
 - COleDispatchDriver [MFC], m_lpDispatch
 ms.assetid: 3ed98daf-cdc7-4374-8a0c-cf695a8d3657
 ms.openlocfilehash: fa88147b57b0506f7f9ab96d4a5d2f43fdd75458
-ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
+ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/06/2020
-ms.locfileid: "78855504"
+ms.lasthandoff: 03/16/2020
+ms.locfileid: "79421260"
 ---
 # <a name="coledispatchdriver-class"></a>COleDispatchDriver, classe
 
@@ -63,14 +63,14 @@ class COleDispatchDriver
 |[COleDispatchDriver :: ReleaseDispatch](#releasedispatch)|Libère une connexion `IDispatch`.|
 |[COleDispatchDriver :: SetProperty](#setproperty)|Définit une propriété Automation.|
 
-### <a name="public-operators"></a>Op&#233;rateurs publics
+### <a name="public-operators"></a>Opérateurs publics
 
 |Name|Description|
 |----------|-----------------|
 |[COleDispatchDriver :: Operator =](#operator_eq)|Copie la valeur source dans l’objet `COleDispatchDriver`.|
 |[COleDispatchDriver :: Operator LPDISPATCH](#operator_lpdispatch)|Accède au pointeur de `IDispatch` sous-jacent.|
 
-### <a name="public-data-members"></a>Membres de données publiques
+### <a name="public-data-members"></a>Membres de données publics
 
 |Name|Description|
 |----------|-----------------|
@@ -91,7 +91,7 @@ Pour plus d’informations sur l’utilisation de `COleDispatchDriver`, consulte
 
 - [Serveurs Automation](../../mfc/automation-servers.md)
 
-## <a name="inheritance-hierarchy"></a>Hiérarchie d'héritage
+## <a name="inheritance-hierarchy"></a>Hiérarchie d’héritage
 
 `COleDispatchDriver`
 

@@ -1,55 +1,55 @@
 ---
-title: Cuintarray, classe
+title: CUIntArray, classe
 ms.date: 11/04/2016
 f1_keywords:
 - CUIntArray
 - AFXCOLL/CUIntArray
-- AFXCOLL/CObArray::CObArray
-- AFXCOLL/CObArray::Add
-- AFXCOLL/CObArray::Append
-- AFXCOLL/CObArray::Copy
-- AFXCOLL/CObArray::ElementAt
-- AFXCOLL/CObArray::FreeExtra
-- AFXCOLL/CObArray::GetAt
-- AFXCOLL/CObArray::GetCount
-- AFXCOLL/CObArray::GetData
-- AFXCOLL/CObArray::GetSize
-- AFXCOLL/CObArray::GetUpperBound
-- AFXCOLL/CObArray::InsertAt
-- AFXCOLL/CObArray::IsEmpty
-- AFXCOLL/CObArray::RemoveAll
-- AFXCOLL/CObArray::RemoveAt
-- AFXCOLL/CObArray::SetAt
-- AFXCOLL/CObArray::SetAtGrow
-- AFXCOLL/CObArray::SetSize
+- AFXCOLL/CUIntArray::CUIntArray
+- AFXCOLL/CUIntArray::Add
+- AFXCOLL/CUIntArray::Append
+- AFXCOLL/CUIntArray::Copy
+- AFXCOLL/CUIntArray::ElementAt
+- AFXCOLL/CUIntArray::FreeExtra
+- AFXCOLL/CUIntArray::GetAt
+- AFXCOLL/CUIntArray::GetCount
+- AFXCOLL/CUIntArray::GetData
+- AFXCOLL/CUIntArray::GetSize
+- AFXCOLL/CUIntArray::GetUpperBound
+- AFXCOLL/CUIntArray::InsertAt
+- AFXCOLL/CUIntArray::IsEmpty
+- AFXCOLL/CUIntArray::RemoveAll
+- AFXCOLL/CUIntArray::RemoveAt
+- AFXCOLL/CUIntArray::SetAt
+- AFXCOLL/CUIntArray::SetAtGrow
+- AFXCOLL/CUIntArray::SetSize
 helpviewer_keywords:
-- CObArray [MFC], CObArray
-- CObArray [MFC], Add
-- CObArray [MFC], Append
-- CObArray [MFC], Copy
-- CObArray [MFC], ElementAt
-- CObArray [MFC], FreeExtra
-- CObArray [MFC], GetAt
-- CObArray [MFC], GetCount
-- CObArray [MFC], GetData
-- CObArray [MFC], GetSize
-- CObArray [MFC], GetUpperBound
-- CObArray [MFC], InsertAt
-- CObArray [MFC], IsEmpty
-- CObArray [MFC], RemoveAll
-- CObArray [MFC], RemoveAt
-- CObArray [MFC], SetAt
-- CObArray [MFC], SetAtGrow
-- CObArray [MFC], SetSize
+- CUIntArray [MFC], CUIntArray
+- CUIntArray [MFC], Add
+- CUIntArray [MFC], Append
+- CUIntArray [MFC], Copy
+- CUIntArray [MFC], ElementAt
+- CUIntArray [MFC], FreeExtra
+- CUIntArray [MFC], GetAt
+- CUIntArray [MFC], GetCount
+- CUIntArray [MFC], GetData
+- CUIntArray [MFC], GetSize
+- CUIntArray [MFC], GetUpperBound
+- CUIntArray [MFC], InsertAt
+- CUIntArray [MFC], IsEmpty
+- CUIntArray [MFC], RemoveAll
+- CUIntArray [MFC], RemoveAt
+- CUIntArray [MFC], SetAt
+- CUIntArray [MFC], SetAtGrow
+- CUIntArray [MFC], SetSize
 ms.assetid: d71f3d8f-ef9f-4e48-9b69-7782c0e2ddf7
-ms.openlocfilehash: 39d5fd4707f1c03de78cf9fd078655389c93ba17
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 932062ec289a34cffcd929853233a0c7c81a7a72
+ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62323542"
+ms.lasthandoff: 03/17/2020
+ms.locfileid: "79447544"
 ---
-# <a name="cuintarray-class"></a>Cuintarray, classe
+# <a name="cuintarray-class"></a>CUIntArray, classe
 
 Prend en charge des tableaux d'entiers non signés.
 
@@ -61,7 +61,7 @@ class CUIntArray : public CObject
 
 ## <a name="members"></a>Membres
 
-Les fonctions membres de `CUIntArray` sont similaires aux fonctions membres de classe [CObArray](../../mfc/reference/cobarray-class.md). Ainsi, vous pouvez utiliser la documentation de référence de `CObArray` pour connaître les spécificités des fonctions membres. Partout où vous voyez un `CObject` pointeur en tant que paramètre de fonction ou valeur de retour, remplacez UINT.
+Les fonctions membres de `CUIntArray` sont similaires aux fonctions membres de la classe [CObArray](../../mfc/reference/cobarray-class.md). Ainsi, vous pouvez utiliser la documentation de référence de `CObArray` pour connaître les spécificités des fonctions membres. Chaque fois que vous voyez un pointeur de `CObject` sous la forme d’un paramètre de fonction ou d’une valeur de retour, substituez un UINT.
 
 `CObject* CObArray::GetAt( int <nIndex> ) const;`
 
@@ -71,43 +71,43 @@ par exemple, se traduit par
 
 ### <a name="public-constructors"></a>Constructeurs publics
 
-|Nom|Description|
+|Name|Description|
 |----------|-----------------|
-|[CObArray::CObArray](../../mfc/reference/cobarray-class.md#cobarray)|Construit un tableau vide.|
+|[CUIntArray::CUIntArray](../../mfc/reference/cobarray-class.md#cobarray)|Construit un tableau vide.|
 
 ### <a name="public-methods"></a>M&#233;thodes publiques
 
-|Nom|Description|
+|Name|Description|
 |----------|-----------------|
-|[CObArray::Add](../../mfc/reference/cobarray-class.md#add)|Ajoute un élément à la fin du tableau ; étend le tableau si nécessaire.|
-|[CObArray::Append](../../mfc/reference/cobarray-class.md#append)|Ajoute un autre tableau au tableau ; étend le tableau si nécessaire.|
-|[CObArray::Copy](../../mfc/reference/cobarray-class.md#copy)|Copie un autre tableau dans le tableau ; étend le tableau si nécessaire.|
-|[CObArray::ElementAt](../../mfc/reference/cobarray-class.md#elementat)|Retourne une référence temporaire au pointeur d'élément dans le tableau.|
-|[CObArray::FreeExtra](../../mfc/reference/cobarray-class.md#freeextra)|Libère toute la mémoire inutilisée au-dessus de la limite supérieure actuelle.|
-|[CObArray::GetAt](../../mfc/reference/cobarray-class.md#getat)|Retourne la valeur à un index donné.|
-|[CObArray::GetCount](../../mfc/reference/cobarray-class.md#getcount)|Obtient le nombre d'éléments dans ce tableau.|
-|[CObArray::GetData](../../mfc/reference/cobarray-class.md#getdata)|Autorise l'accès aux éléments du tableau. Peut être NULL.|
-|[CObArray::GetSize](../../mfc/reference/cobarray-class.md#getsize)|Obtient le nombre d'éléments dans ce tableau.|
-|[CObArray::GetUpperBound](../../mfc/reference/cobarray-class.md#getupperbound)|Retourne le plus grand index valide.|
-|[CObArray::InsertAt](../../mfc/reference/cobarray-class.md#insertat)|Insère un élément (ou tous les éléments d'un autre tableau) à un index spécifique.|
-|[CObArray::IsEmpty](../../mfc/reference/cobarray-class.md#isempty)|Détermine si le tableau est vide.|
-|[CObArray::RemoveAll](../../mfc/reference/cobarray-class.md#removeall)|Supprime tous les éléments de ce tableau.|
-|[CObArray::RemoveAt](../../mfc/reference/cobarray-class.md#removeat)|Supprime un élément à un index spécifique.|
-|[CObArray::SetAt](../../mfc/reference/cobarray-class.md#setat)|Définit la valeur d'un index donné. Le tableau n'est pas autorisé à s'étendre.|
-|[CObArray::SetAtGrow](../../mfc/reference/cobarray-class.md#setatgrow)|Définit la valeur d'un index donné. Le tableau est étendu si nécessaire.|
-|[CObArray::SetSize](../../mfc/reference/cobarray-class.md#setsize)|Définit le nombre d'éléments que ce tableau doit contenir.|
+|[CUIntArray :: Add](../../mfc/reference/cobarray-class.md#add)|Ajoute un élément à la fin du tableau ; étend le tableau si nécessaire.|
+|[CUIntArray :: Append](../../mfc/reference/cobarray-class.md#append)|Ajoute un autre tableau au tableau ; étend le tableau si nécessaire.|
+|[CUIntArray :: Copy](../../mfc/reference/cobarray-class.md#copy)|Copie un autre tableau dans le tableau ; étend le tableau si nécessaire.|
+|[CUIntArray :: ElementAt](../../mfc/reference/cobarray-class.md#elementat)|Retourne une référence temporaire au pointeur d'élément dans le tableau.|
+|[CUIntArray::FreeExtra](../../mfc/reference/cobarray-class.md#freeextra)|Libère toute la mémoire inutilisée au-dessus de la limite supérieure actuelle.|
+|[CUIntArray :: GetAt](../../mfc/reference/cobarray-class.md#getat)|Retourne la valeur à un index donné.|
+|[CUIntArray :: GetCount](../../mfc/reference/cobarray-class.md#getcount)|Obtient le nombre d'éléments dans ce tableau.|
+|[CUIntArray :: GetData](../../mfc/reference/cobarray-class.md#getdata)|Autorise l'accès aux éléments du tableau. Sa valeur peut être NULL.|
+|[CUIntArray :: est à obtenir](../../mfc/reference/cobarray-class.md#getsize)|Obtient le nombre d'éléments dans ce tableau.|
+|[CUIntArray :: GetUpperBound](../../mfc/reference/cobarray-class.md#getupperbound)|Retourne le plus grand index valide.|
+|[CUIntArray :: InsertAt](../../mfc/reference/cobarray-class.md#insertat)|Insère un élément (ou tous les éléments d'un autre tableau) à un index spécifique.|
+|[CUIntArray :: IsEmpty](../../mfc/reference/cobarray-class.md#isempty)|Détermine si le tableau est vide.|
+|[CUIntArray :: RemoveAll](../../mfc/reference/cobarray-class.md#removeall)|Supprime tous les éléments de ce tableau.|
+|[CUIntArray :: RemoveAt](../../mfc/reference/cobarray-class.md#removeat)|Supprime un élément à un index spécifique.|
+|[CUIntArray :: SetAt](../../mfc/reference/cobarray-class.md#setat)|Définit la valeur d'un index donné. Le tableau n'est pas autorisé à s'étendre.|
+|[CUIntArray::SetAtGrow](../../mfc/reference/cobarray-class.md#setatgrow)|Définit la valeur d'un index donné. Le tableau est étendu si nécessaire.|
+|[CUIntArray :: configure](../../mfc/reference/cobarray-class.md#setsize)|Définit le nombre d'éléments que ce tableau doit contenir.|
 
 ### <a name="public-operators"></a>Op&#233;rateurs publics
 
-|Nom|Description|
+|Name|Description|
 |----------|-----------------|
-|[CObArray::operator \[ \]](../../mfc/reference/cobarray-class.md#operator_at)|Définit ou obtient l'élément au niveau de l'index spécifié.|
+|[CUIntArray :: Operator \[ \]](../../mfc/reference/cobarray-class.md#operator_at)|Définit ou obtient l'élément au niveau de l'index spécifié.|
 
 ## <a name="remarks"></a>Notes
 
-Entier non signé ou UINT, diffère de mots et de mots doubles dans la mesure où la taille physique du UINT peut changer en fonction de la cible, environnement d’exploitation. UINT est la même taille qu’un mot double.
+Un entier non signé, ou UINT, diffère des mots et des mots doubles en ce que la taille physique d’un UINT peut changer en fonction de l’environnement d’exploitation cible. Un UINT a la même taille qu’un mot double.
 
-`CUIntArray` incorpore le [IMPLEMENT_DYNAMIC](run-time-object-model-services.md#implement_dynamic) macro pour prendre en charge d’accès de type au moment de l’exécution et le vidage à un [CDumpContext](../../mfc/reference/cdumpcontext-class.md) objet. Si vous avez besoin d’un vidage d’éléments de l’entier non signé individuels, vous devez définir la profondeur du contexte de vidage à 1 ou supérieur. Tableaux d’entiers non signés ne peut pas être sérialisés.
+`CUIntArray` incorpore la macro [IMPLEMENT_DYNAMIC](run-time-object-model-services.md#implement_dynamic) pour prendre en charge l’accès aux types au moment de l’exécution et le vidage sur un objet [CDumpContext](../../mfc/reference/cdumpcontext-class.md) . Si vous avez besoin d’un vidage d’éléments entiers non signés individuels, vous devez définir la profondeur du contexte de vidage sur une valeur supérieure ou égale à 1. Les tableaux d’entiers non signés ne peuvent pas être sérialisés.
 
 > [!NOTE]
 >  Avant d'utiliser un tableau, utilisez `SetSize` pour définir sa taille et lui allouer la mémoire nécessaire. Si vous n'utilisez pas `SetSize`, l'ajout d'éléments à votre tableau risque d'entraîner de fréquentes opérations de réallocation et de copie de ce dernier. Les opérations fréquentes de réallocation et de copie sont inefficaces et peuvent fragmenter la mémoire.
@@ -120,9 +120,9 @@ Pour plus d’informations sur l’utilisation de `CUIntArray`, consultez l’ar
 
 `CUIntArray`
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
-**En-tête :** afxcoll.h
+**En-tête :** afxcoll. h
 
 ## <a name="see-also"></a>Voir aussi
 

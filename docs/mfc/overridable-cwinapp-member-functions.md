@@ -1,23 +1,21 @@
 ---
 title: Fonctions membres CWinApp remplaçables
 ms.date: 11/04/2016
-f1_keywords:
-- CWinApp
 helpviewer_keywords:
 - overriding [MFC], overridable functions in CWinApp
 - application class [MFC]
 - CWinApp class [MFC], overridables
 ms.assetid: 07183d5e-734b-45d9-a8b6-9dde4adac0b4
-ms.openlocfilehash: 35db009f86a0cb984f70a349a3ecdd93bfefb0f0
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 28ba243bd755e25db5f2cb03d08013f082fbc918
+ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62297078"
+ms.lasthandoff: 03/17/2020
+ms.locfileid: "79447268"
 ---
 # <a name="overridable-cwinapp-member-functions"></a>Fonctions membres CWinApp remplaçables
 
-[CWinApp](../mfc/reference/cwinapp-class.md) fournit plusieurs fonctions membres clés substituables (`CWinApp` substitue ces membres à partir de la classe [CWinThread](../mfc/reference/cwinthread-class.md), à partir de laquelle `CWinApp` dérive) :
+[CWinApp](../mfc/reference/cwinapp-class.md) fournit plusieurs fonctions membres substituables clés (`CWinApp` Substitue ces membres de la classe [CWinThread](../mfc/reference/cwinthread-class.md), à partir de laquelle `CWinApp` dérive) :
 
 - [InitInstance](../mfc/initinstance-member-function.md)
 
@@ -27,8 +25,8 @@ ms.locfileid: "62297078"
 
 - [OnIdle](../mfc/onidle-member-function.md)
 
-La seule `CWinApp` que vous devez substituer la fonction membre est `InitInstance`.
+La seule fonction membre `CWinApp` que vous devez substituer est `InitInstance`.
 
 ## <a name="see-also"></a>Voir aussi
 
-[CWinApp : Classe d’application](../mfc/cwinapp-the-application-class.md)
+[CWinApp : classe d’application](../mfc/cwinapp-the-application-class.md)

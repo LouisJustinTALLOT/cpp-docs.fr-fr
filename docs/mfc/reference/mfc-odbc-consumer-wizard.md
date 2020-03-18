@@ -4,18 +4,18 @@ ms.date: 08/29/2019
 helpviewer_keywords:
 - wizards [MFC]
 ms.assetid: f64a890b-a252-4887-88a1-782a7cd4ff3d
-ms.openlocfilehash: 84fdc0d180f5b1b0f2e64c3597cb474611ad3914
-ms.sourcegitcommit: e10a5feea193c249ddc5a6faba48e7c6d8784e73
+ms.openlocfilehash: fd7e8df6692889914af2dd060ac42ed4ca3ebb8b
+ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/30/2019
-ms.locfileid: "70177435"
+ms.lasthandoff: 03/17/2020
+ms.locfileid: "79446411"
 ---
 # <a name="mfc-odbc-consumer-wizard"></a>Consommateur ODBC MFC (Assistant)
 
 ::: moniker range="vs-2019"
 
-Cet Assistant n’est pas disponible dans Visual Studio 2019 et ultérieur.
+Cet Assistant n’est pas disponible dans Visual Studio 2019 et versions ultérieures.
 
 ::: moniker-end
 
@@ -29,13 +29,13 @@ Cet Assistant Configure une classe de Recordset ODBC et les liaisons de données
 
   Le bouton **source de données** vous permet de configurer la source de données spécifiée à l’aide du pilote ODBC spécifié. Pour plus d’informations sur les fichiers de source de données (DSN), consultez [sources de données de fichiers](/sql/odbc/reference/file-data-sources) dans le kit de développement logiciel (SDK) ODBC.
 
-  La boîte de dialogue **Sélectionner une source de données** comporte deux onglets:
+  La boîte de dialogue **Sélectionner une source de données** comporte deux onglets :
 
   - Onglet **source de données de fichier** :
 
      La zone **regarder dans** spécifie le répertoire dans lequel sélectionner les fichiers à utiliser comme sources de données. La valeur par défaut est \Program Files\Common Files\ODBC\Data Sources. Les sources de données de fichiers existantes (fichiers. DSN) s’affichent dans la zone de liste principale. Vous pouvez configurer les sources de données à l’avance à l’aide de l’onglet **fichier DSN** de l’administrateur de la [source de données ODBC](/sql/odbc/admin/odbc-data-source-administrator)ou en créer d’autres à l’aide de cette boîte de dialogue.
 
-     Pour créer une source de données de fichier à partir de cette boîte `New` de dialogue, cliquez sur pour spécifier un nom de DSN; la boîte de dialogue **créer une nouvelle source de données** s’affiche. Dans la boîte de dialogue **créer une nouvelle source de données** , sélectionnez un pilote `Next`approprié, cliquez sur **Parcourir**, puis sélectionnez le nom du fichier à utiliser comme source de données (vous devez sélectionner «tous les fichiers» pour afficher les fichiers non DSN, tels que les fichiers. xls). cliquez sur , puis cliquez sur **Terminer.** `Next` (Si vous avez sélectionné un fichier non DSN, vous obtiendrez une boîte de dialogue spécifique au pilote, telle que «installation ODBC pour Microsoft Excel», qui convertira le fichier en un nom de source de donnée.)
+     Pour créer une nouvelle source de données de fichier à partir de cette boîte de dialogue, cliquez sur `New` pour spécifier un nom de source de données ; la boîte de dialogue **créer une nouvelle source de données** s’affiche. Dans la boîte de dialogue **créer une nouvelle source de données** , sélectionnez un pilote approprié, puis cliquez sur `Next`; Cliquez sur **Parcourir**, puis sélectionnez le nom du fichier à utiliser comme source de données (vous devez sélectionner « tous les fichiers » pour afficher les fichiers non DSN, tels que les fichiers. xls). Cliquez sur `Next`, puis sur **Terminer**. (Si vous avez sélectionné un fichier non DSN, vous obtiendrez une boîte de dialogue spécifique au pilote, telle que « installation ODBC pour Microsoft Excel », qui convertira le fichier en un nom de source de donnée.)
 
      > [!NOTE]
      > Vous pouvez également créer au préalable une nouvelle source de données de fichier à l’aide de l’administrateur de la source de données ODBC. Dans le menu **Démarrer** , sélectionnez **paramètres**, **panneau**de configuration, **Outils d’administration**, **sources de données (ODBC)** , puis **administrateur de source de données ODBC**.
@@ -44,7 +44,7 @@ Cet Assistant Configure une classe de Recordset ODBC et les liaisons de données
 
      Pour plus d’informations sur les DSN, consultez [sources de données de fichiers](/sql/odbc/reference/file-data-sources) dans le kit de développement logiciel (SDK) ODBC.
 
-  - Onglet **source de données** de l’ordinateur:
+  - Onglet **source de données** de l’ordinateur :
 
      Cet onglet répertorie les sources de données système et utilisateur. Les sources de données utilisateur sont spécifiques à un utilisateur sur cet ordinateur. Les sources de données système peuvent être utilisées par tous les utilisateurs sur cet ordinateur ou sur un service à l’échelle du système. Voir les [sources de données machine](/sql/odbc/reference/machine-data-sources) dans le kit de développement logiciel (SDK) ODBC
 
@@ -54,7 +54,7 @@ Cet Assistant Configure une classe de Recordset ODBC et les liaisons de données
 
 - **Classe**
 
-      The name of the consumer class, based by default on the name of the file or machine data source that you selected.
+   Nom de la classe de consommateur, basé par défaut sur le nom de la source de données du fichier ou de l’ordinateur que vous avez sélectionné.
 
 - **Fichier .h**
 
@@ -68,13 +68,13 @@ Cet Assistant Configure une classe de Recordset ODBC et les liaisons de données
 
    Spécifie si le Recordset est une feuille de réponse dynamique (par défaut) ou un instantané.
 
-   - **Feuille de réponse dynamique**: Spécifie que le jeu d’enregistrements est une feuille de réponse dynamique. Une feuille de réponse dynamique est le résultat d’une requête qui fournit une vue indexée dans les données de la base de données interrogée. Un dynaset met en cache uniquement un index intégral des données d’origine et offre donc un gain de performances sur un instantané. L’index pointe directement vers chaque enregistrement trouvé à la suite d’une requête et indique si un enregistrement est supprimé. Vous avez également accès aux informations mises à jour dans les enregistrements interrogés. Il s'agit de la valeur par défaut.
+   - **Dynaset**: spécifie que le jeu d’enregistrements est une feuille de réponse dynamique. Une feuille de réponse dynamique est le résultat d’une requête qui fournit une vue indexée dans les données de la base de données interrogée. Un dynaset met en cache uniquement un index intégral des données d’origine et offre donc un gain de performances sur un instantané. L’index pointe directement vers chaque enregistrement trouvé à la suite d’une requête et indique si un enregistrement est supprimé. Vous avez également accès aux informations mises à jour dans les enregistrements interrogés. Il s’agit de la valeur par défaut.
 
-   - **Instantané**: Spécifie que le jeu d’enregistrements est un instantané. Un instantané est le résultat d’une requête et est une vue d’une base de données à un moment donné. Tous les enregistrements trouvés à la suite de la requête sont mis en cache, de sorte que vous ne voyez pas les modifications apportées aux enregistrements d’origine.
+   - **Snapshot**: spécifie que le jeu d’enregistrements est un instantané. Un instantané est le résultat d’une requête et est une vue d’une base de données à un moment donné. Tous les enregistrements trouvés à la suite de la requête sont mis en cache, de sorte que vous ne voyez pas les modifications apportées aux enregistrements d’origine.
 
 - **Lier toutes les colonnes**
 
-   Spécifie si toutes les colonnes de la table sélectionnée sont liées. Si vous activez cette case à cocher (par défaut), toutes les colonnes sont liées; Si vous ne cochez pas cette case, aucune colonne n’est liée et vous devez les lier manuellement dans la classe Recordset.
+   Spécifie si toutes les colonnes de la table sélectionnée sont liées. Si vous activez cette case à cocher (par défaut), toutes les colonnes sont liées ; Si vous ne cochez pas cette case, aucune colonne n’est liée et vous devez les lier manuellement dans la classe Recordset.
 
 ::: moniker-end
 

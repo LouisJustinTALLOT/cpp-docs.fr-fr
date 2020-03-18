@@ -37,11 +37,11 @@ helpviewer_keywords:
 - CComboBoxEx [MFC], SetWindowTheme
 ms.assetid: 33ca960a-2409-478c-84a4-a2ee8ecfe8f7
 ms.openlocfilehash: 7d46f175a62cda7f1ff08327830f1dffe2967727
-ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
+ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/06/2020
-ms.locfileid: "78865546"
+ms.lasthandoff: 03/16/2020
+ms.locfileid: "79420511"
 ---
 # <a name="ccomboboxex-class"></a>CComboBoxEx (classe)
 
@@ -57,13 +57,13 @@ class CComboBoxEx : public CComboBox
 
 ### <a name="public-constructors"></a>Constructeurs publics
 
-|Nom|Description|
+|Name|Description|
 |----------|-----------------|
 |[CComboBoxEx :: CComboBoxEx](#ccomboboxex)|Construit un objet `CComboBoxEx`.|
 
-### <a name="public-methods"></a>Méthodes publiques
+### <a name="public-methods"></a>M&#233;thodes publiques
 
-|Nom|Description|
+|Name|Description|
 |----------|-----------------|
 |[CComboBoxEx :: Create](#create)|Crée la zone de liste déroulante et l’attache à l’objet `CComboBoxEx`.|
 |[CComboBoxEx :: CreateEx](#createex)|Crée une zone de liste déroulante avec les styles étendus Windows spécifiés et l’attache à un objet `ComboBoxEx`.|
@@ -88,7 +88,7 @@ En utilisant `CComboBoxEx` pour créer des contrôles de zone de liste déroulan
 
 Dans une zone de liste modifiable standard, le propriétaire de la zone de liste déroulante est chargé de dessiner une image en créant la zone de liste déroulante comme contrôle owner-draw. Lorsque vous utilisez `CComboBoxEx`, vous n’avez pas besoin de définir les styles de dessin CBS_OWNERDRAWFIXED et CBS_HASSTRINGS, car ils sont implicites. Dans le cas contraire, vous devez écrire du code pour effectuer des opérations de dessin. Un contrôle de `CComboBoxEx` prend en charge jusqu’à trois images par élément : une pour un état sélectionné, une pour un État non sélectionné et une pour une image de superposition.
 
-## <a name="styles"></a>cellule
+## <a name="styles"></a>Styles
 
 `CComboBoxEx` prend en charge les styles CBS_SIMPLE, CBS_DROPDOWN, CBS_DROPDOWNLIST et WS_CHILD. Tous les autres styles passés lorsque vous créez la fenêtre sont ignorés par le contrôle. Une fois la fenêtre créée, vous pouvez fournir d’autres styles de zone de liste déroulante en appelant la fonction membre `CComboBoxEx` [SetExtendedStyle](#setextendedstyle). Avec ces styles, vous pouvez :
 
@@ -108,7 +108,7 @@ Les informations d’élément, telles que les index pour les éléments et les 
 
 Pour une discussion conceptuelle détaillée, consultez [utilisation de CComboBoxEx](../../mfc/using-ccomboboxex.md).
 
-## <a name="inheritance-hierarchy"></a>Hiérarchie d'héritage
+## <a name="inheritance-hierarchy"></a>Hiérarchie d’héritage
 
 [CObject](../../mfc/reference/cobject-class.md)
 
@@ -120,7 +120,7 @@ Pour une discussion conceptuelle détaillée, consultez [utilisation de CComboBo
 
 `CComboBoxEx`
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
 **En-tête :** afxcmn.h
 
