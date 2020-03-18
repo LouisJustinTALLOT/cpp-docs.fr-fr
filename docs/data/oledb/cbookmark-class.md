@@ -11,7 +11,6 @@ f1_keywords:
 - CBookmark::CBookmark
 - ATL.CBookmark.CBookmark
 - CBookmark.CBookmark
-- CBookmark
 - ATL::CBookmark<0>::CBookmark<0>
 - ATL.CBookmark<0>.CBookmark<0>
 - CBookmark<0>::CBookmark<0>
@@ -67,12 +66,12 @@ helpviewer_keywords:
 - operator =, bookmarks
 - operator=, bookmarks
 ms.assetid: bc942f95-6f93-41d9-bb6e-bcdae4ae0b7a
-ms.openlocfilehash: fb2e3ec99471405f9c6521e0b70672c1da1b755c
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 89c7e62e51adbe96bee870b4baa8a35784b61ac0
+ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62209388"
+ms.lasthandoff: 03/17/2020
+ms.locfileid: "79447251"
 ---
 # <a name="cbookmark-class"></a>CBookmark, classe
 
@@ -91,9 +90,9 @@ class CBookmark< 0 > : public CBookmarkBase
 ### <a name="parameters"></a>Paramètres
 
 *nSize*<br/>
-La taille de la mémoire tampon de signet en octets. Lorsque *nSize* est égal à zéro, la mémoire tampon de signet sera créée dynamiquement au moment de l’exécution.
+Taille de la mémoire tampon du signet, en octets. Lorsque *nSize* est égal à zéro, la mémoire tampon du signet est créée dynamiquement au moment de l’exécution.
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
 **En-tête :** atldbcli.h
 
@@ -112,13 +111,13 @@ La taille de la mémoire tampon de signet en octets. Lorsque *nSize* est égal �
 
 |||
 |-|-|
-|[operator =](#operator)|Assigne un `CBookmark` classe vers un autre.|
+|[opérateur =](#operator)|Assigne une classe `CBookmark` à une autre.|
 
 ## <a name="remarks"></a>Notes
 
-`CBookmark<0>` est une spécialisation de modèle de `CBookmark`; sa mémoire tampon est créé dynamiquement au moment de l’exécution.
+`CBookmark<0>` est une spécialisation de modèle de `CBookmark`; sa mémoire tampon est créée dynamiquement au moment de l’exécution.
 
-## <a name="cbookmark"></a> CBookmark::CBookmark
+## <a name="cbookmark"></a>CBookmark :: CBookmark
 
 Constructeur.
 
@@ -132,16 +131,16 @@ CBookmark(DBLENGTH nSize);
 #### <a name="parameters"></a>Paramètres
 
 *nSize*<br/>
-[in] Taille de la mémoire tampon de signet en octets.
+dans Taille de la mémoire tampon du signet, en octets.
 
 ### <a name="remarks"></a>Notes
 
-La première fonction définit la mémoire tampon sur NULL et la taille de mémoire tampon à 0. La deuxième fonction définit la taille de mémoire tampon sur *nSize*et la mémoire tampon de tableau d’octets de *nSize* octets.
+La première fonction affecte la valeur NULL à la mémoire tampon et la taille de la mémoire tampon à 0. La deuxième fonction définit la taille de la mémoire tampon sur *nSize*et la mémoire tampon sur un tableau d’octets *nSize* octets.
 
 > [!NOTE]
->  Cette fonction est disponible uniquement dans `CBookmark<0>`.
+>  Cette fonction est uniquement disponible dans `CBookmark<0>`.
 
-## <a name="getbuffer"></a> CBookmark::GetBuffer
+## <a name="getbuffer"></a>CBookmark :: GetBuffer
 
 Récupère le pointeur vers la mémoire tampon de signet.
 
@@ -155,9 +154,9 @@ virtual BYTE* GetBuffer() const throw();
 
 Pointeur vers la mémoire tampon de signet.
 
-## <a name="getsize"></a> CBookmark::GetSize
+## <a name="getsize"></a>CBookmark :: dela
 
-Récupère la taille de la mémoire tampon de signet.
+Récupère la taille de la mémoire tampon du signet.
 
 ### <a name="syntax"></a>Syntaxe
 
@@ -169,9 +168,9 @@ virtual DBLENGTH GetSize() const throw();
 
 Taille de la mémoire tampon en octets.
 
-## <a name="setbookmark"></a> CBookmark::SetBookmark
+## <a name="setbookmark"></a>CBookmark :: SetBookmark
 
-Copie la valeur de signet référencée par *pBuffer* à la `CBookmark` mettre en mémoire tampon et définit la taille de mémoire tampon sur *nSize*.
+Copie la valeur de signet référencée par *pbuffer* dans la mémoire tampon de `CBookmark` et définit la taille de la mémoire tampon sur *nSize*.
 
 ### <a name="syntax"></a>Syntaxe
 
@@ -182,22 +181,22 @@ HRESULT SetBookmark(DBLENGTH nSize, BYTE* pBuffer) throw();
 #### <a name="parameters"></a>Paramètres
 
 *nSize*<br/>
-[in] La taille de la mémoire tampon de signet.
+dans Taille de la mémoire tampon du signet.
 
 *pBuffer*<br/>
-[in] Pointeur vers le tableau d’octets contenant la valeur du signet.
+dans Pointeur vers le tableau d’octets contenant la valeur de signet.
 
 ### <a name="return-value"></a>Valeur de retour
 
-Une valeur HRESULT standard.
+HRESULT standard.
 
 ### <a name="remarks"></a>Notes
 
-Cette fonction est disponible uniquement dans `CBookmark<0>`.
+Cette fonction est uniquement disponible dans `CBookmark<0>`.
 
-## <a name="operator"></a> CBookmark::operator =
+## <a name="operator"></a>CBookmark :: Operator =
 
-Assigne un `CBookmark` objet vers un autre.
+Assigne un objet `CBookmark` à un autre.
 
 ### <a name="syntax"></a>Syntaxe
 
@@ -211,5 +210,5 @@ Cet opérateur est nécessaire uniquement dans `CBookmark<0>`.
 
 ## <a name="see-also"></a>Voir aussi
 
-[Modèles du consommateur OLE DB](../../data/oledb/ole-db-consumer-templates-cpp.md)<br/>
+[OLE DB (modèles du consommateur)](../../data/oledb/ole-db-consumer-templates-cpp.md)<br/>
 [Référence des modèles du consommateur OLE DB](../../data/oledb/ole-db-consumer-templates-reference.md)

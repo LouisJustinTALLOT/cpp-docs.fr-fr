@@ -5,6 +5,9 @@ f1_keywords:
 - __int128_cpp
 - __wchar_t_cpp
 - char_cpp
+- char8_t_cpp
+- char16_t_cpp
+- char32_t_cpp
 - double_cpp
 - float_cpp
 - int_cpp
@@ -43,12 +46,12 @@ helpviewer_keywords:
 - storing types [C++]
 - data types [C++], void
 ms.assetid: 58b0106a-0406-4b74-a430-7cbd315c0f89
-ms.openlocfilehash: f6bfc72bf279d09e89423866d9cb46ad3496b49c
-ms.sourcegitcommit: a5fa9c6f4f0c239ac23be7de116066a978511de7
+ms.openlocfilehash: e67d31e18ebbb6afd9d98542e4a6aa236b2d3e71
+ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/20/2019
-ms.locfileid: "75301494"
+ms.lasthandoff: 03/17/2020
+ms.locfileid: "79445308"
 ---
 # <a name="built-in-types-c"></a>Types intégrés (C++)
 
@@ -66,7 +69,7 @@ Le tableau suivant décrit les restrictions sur les tailles de type par rapport 
 
 ### <a name="built-in-type-size-restrictions"></a>Restrictions de taille de type intégré
 
-|Catégorie|Type|Sommaire|
+|Category|Type|Contents|
 |--------------|----------|--------------|
 |Intégral|**char**|Le type **char** est un type intégral qui contient généralement les membres du jeu de caractères d’exécution de base ; par défaut, il C++s’agit de ASCII dans Microsoft.<br /><br /> Le C++ compilateur traite les variables de type **char**, **signed char**et **unsigned char** comme ayant des types différents. Les variables de type **char** sont promues en **int** comme s’il s’agissait de type **signed char** par défaut, sauf si l’option de compilation/j est utilisée. Dans ce cas, elles sont traitées en tant que type **unsigned char** et sont promues en **int** sans extension de signature.|
 ||**bool**|Le type **bool** est un type intégral qui peut avoir l’une des deux valeurs **true** ou **false**. Sa taille n'est pas spécifiée.|
@@ -80,20 +83,20 @@ Le tableau suivant décrit les restrictions sur les tailles de type par rapport 
 ||**double**|Le type **double** est un type à virgule flottante supérieur ou égal au type **float**, mais inférieur ou égal à la taille du type **long double**.<br /><br /> Spécifique à Microsoft : la représentation de **long double** et **double** est identique. Toutefois, les types **long double** et **double** sont des types distincts.|
 ||**long double**|Le type **long double** est un type à virgule flottante supérieur ou égal au type **double**.|
 
-**Section spécifique à Microsoft**
+**Section spécifique de Microsoft**
 
 Le tableau suivant répertorie la quantité de stockage requise pour les types intégrés dans Microsoft C++. En particulier, Notez que **long** est de 4 octets, même sur les systèmes d’exploitation 64 bits.
 
 ### <a name="sizes-of-built-in-types"></a>Tailles des types intégrés
 
-|Type|Taille|
+|Type|Size|
 |----------|----------|
 |**bool**, **char**, **unsigned char**, signed **char**, **__int8**|1 octet|
 |**__int16**, **short**, **unsigned short**, **wchar_t** **__wchar_t**|2 octets|
-|**float**, **__int32**, **int**, **unsigned int**, **long**, **unsigned long**|4 octets|
-|**double**, **__int64**, **long double**, **long long**|8 octets|
+|**float**, **__int32**, **int**, **unsigned int**, **long**, **unsigned long**|4 octets|
+|**double**, **__int64**, **long double**, long **long**|8 octets|
 
-**Fin de la section spécifique à Microsoft**
+**Fin de la section spécifique de Microsoft**
 
 Consultez les informations relatives aux [plages de types de données](data-type-ranges.md) pour obtenir un résumé de la plage de valeurs de chaque type.
 
@@ -101,4 +104,4 @@ Pour plus d'informations sur la conversion de type, consultez [Conversions stand
 
 ## <a name="see-also"></a>Voir aussi
 
-[Plages de types de données](data-type-ranges.md)
+[plages de types de données](data-type-ranges.md)

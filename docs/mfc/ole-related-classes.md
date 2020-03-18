@@ -1,35 +1,33 @@
 ---
 title: Classes liées à OLE
 ms.date: 11/04/2016
-f1_keywords:
-- vc.classes.ole
 helpviewer_keywords:
 - ActiveX classes [MFC]
 - OLE classes [MFC]
 - OLE [MFC], classes
 ms.assetid: 2135cf54-1d9d-4e0e-91b4-943b3440effa
-ms.openlocfilehash: 7d58072d133b9348558804b848ecfda4497931e1
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: dfcc07b3fbd0c5badce8e397f4d52bc7d8d3028c
+ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62378295"
+ms.lasthandoff: 03/17/2020
+ms.locfileid: "79447609"
 ---
 # <a name="ole-related-classes"></a>Classes liées à OLE
 
-Ces classes fournissent un nombre de services différents, allant des exceptions dans le fichier d’entrée et de sortie.
+Ces classes fournissent un certain nombre de services différents, allant des exceptions à l’entrée et à la sortie de fichier.
 
 [COleObjectFactory](../mfc/reference/coleobjectfactory-class.md)<br/>
-Utilisé pour créer des éléments de demande à partir d’autres conteneurs. Cette classe sert de classe de base pour les types de fabriques, y compris les plus spécifiques `COleTemplateServer`.
+Utilisé pour créer des éléments quand ils sont demandés à partir d’autres conteneurs. Cette classe sert de classe de base pour des types de fabriques plus spécifiques, y compris `COleTemplateServer`.
 
 [COleMessageFilter](../mfc/reference/colemessagefilter-class.md)<br/>
-Utilisé pour gérer l’accès concurrentiel avec OLE légère à distance procédure appels (LRPC).
+Utilisé pour gérer l’accès concurrentiel avec les appels de procédure distante (LRPC) légers OLE.
 
 [COleStreamFile](../mfc/reference/colestreamfile-class.md)<br/>
-Utilise le modèle COM `IStream` interface pour fournir `CFile` accès aux fichiers composés. Cette classe (dérivée de `CFile`) permet la sérialisation MFC utiliser un stockage structuré OLE.
+Utilise l’interface de `IStream` COM pour fournir aux `CFile` l’accès aux fichiers composés. Cette classe (dérivée de `CFile`) permet à la sérialisation MFC d’utiliser le stockage structuré OLE.
 
 [CRectTracker](../mfc/reference/crecttracker-class.md)<br/>
-Utilisé pour permettre le déplacement, redimensionnement et réorientation des éléments de la place.
+Utilisé pour autoriser le déplacement, le redimensionnement et la réorientation des éléments sur place.
 
 ## <a name="see-also"></a>Voir aussi
 

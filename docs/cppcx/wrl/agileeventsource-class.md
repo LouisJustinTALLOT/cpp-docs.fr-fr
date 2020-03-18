@@ -4,15 +4,14 @@ ms.date: 10/03/2018
 ms.topic: reference
 f1_keywords:
 - event/Microsoft::WRL::AgileEventSource
-- event/Microsoft::WRL::InvokeModeOptions
 helpviewer_keywords:
 - AgileEventSource class
-ms.openlocfilehash: fa1e0a72d865b2993e149f6e4d2b57fe13463a61
-ms.sourcegitcommit: b8c22e6d555cf833510753cba7a368d57e5886db
+ms.openlocfilehash: 7a919c0b2aa778ba1db19c3bfc3871542e8f9569
+ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/29/2020
-ms.locfileid: "76821738"
+ms.lasthandoff: 03/17/2020
+ms.locfileid: "79441267"
 ---
 # <a name="agileeventsource-class"></a>AgileEventSource, classe
 
@@ -30,7 +29,7 @@ class AgileEventSource :
         TDelegateInterface, TEventSourceOptions>;
 ```
 
-## <a name="parameters"></a>Parameters
+## <a name="parameters"></a>Paramètres
 
 *TDelegateInterface*<br/>
 Interface à un délégué qui représente un gestionnaire d’événements.
@@ -48,15 +47,15 @@ La grande majorité des composants de la Windows Runtime sont des composants agi
 
 `AgileEventSource`
 
-## <a name="requirements"></a>Configuration requise pour
+## <a name="requirements"></a>Spécifications
 
 **En-tête :** Event. h
 
 **Espace de noms :** Microsoft::WRL
 
-## <a name="members"></a>Members
+## <a name="members"></a>Membres
 
-### <a name="public-methods"></a>Méthodes publiques
+### <a name="public-methods"></a>M&#233;thodes publiques
 
 |Name|Description|
 |----------|-----------------|
@@ -75,7 +74,7 @@ HRESULT Add(
 );
 ```
 
-### <a name="parameters"></a>Parameters
+### <a name="parameters"></a>Paramètres
 
 *delegateInterface*<br/>
 Interface à un objet délégué, qui représente un gestionnaire d’événements.

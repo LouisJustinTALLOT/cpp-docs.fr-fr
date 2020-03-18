@@ -1,29 +1,27 @@
 ---
 title: Utilisation de CReBarCtrl
 ms.date: 11/19/2018
-f1_keywords:
-- CReBarCtrl
 helpviewer_keywords:
 - child windows [MFC], rebar controls
 - combo boxes [MFC], in rebar controls
 - rebar controls
 ms.assetid: 2c0aeec2-ffc3-44b8-97b5-0f56e116a338
-ms.openlocfilehash: 5e0a2e9d9eedd99bb2fca39f328c49d27fe7b6ce
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 2578ddbb626da4959c81cf37a38082315ec8c6a0
+ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62411896"
+ms.lasthandoff: 03/17/2020
+ms.locfileid: "79441965"
 ---
 # <a name="using-crebarctrl"></a>Utilisation de CReBarCtrl
 
-Un contrôle rebar agit comme un conteneur pour les fenêtres enfants. Ces fenêtres enfants, souvent d’autres contrôles, sont affectés à une bande de contrôle rebar. Un contrôle rebar peut contenir une ou plusieurs bandes, chaque bande ayant n’importe quelle combinaison d’une barre de redimensionnement, une image bitmap, une étiquette de texte et une fenêtre enfant. Toutefois, les bandes ne peut pas contenir plus d’une fenêtre enfant.
+Un contrôle rebar agit comme un conteneur pour les fenêtres enfants. Ces fenêtres enfants, souvent d’autres contrôles, sont assignées à une bande de contrôle rebar. Un contrôle rebar peut contenir une ou plusieurs bandes, chaque bande ayant n’importe quelle combinaison d’une barre de redimensionnement, d’une image bitmap, d’une étiquette de texte et d’une fenêtre enfant. Toutefois, les bandes ne peuvent pas contenir plus d’une fenêtre enfant.
 
-L’illustration suivante montre un contrôle rebar avec deux bandes. Une contient une barre de redimensionnement, une étiquette de texte (« Address ») et une fenêtre enfant de zone de liste déroulante. L’autre bande contient une barre de redimensionnement, une étiquette de texte et une barre d’outils plat (implémentée avec une fenêtre enfant).
+L’illustration suivante montre un contrôle rebar avec deux bandes. L’un contient une barre de redimensionnement, une étiquette de texte (« Address ») et une fenêtre enfant de zone de liste déroulante. L’autre bande contient une barre de redimensionnement, une étiquette de texte et une barre d’outils plate (implémentée avec une fenêtre enfant).
 
-![Contrôle rebar avec deux bandes](../mfc/media/vc4ruz1.gif "contrôle Rebar avec deux bandes")
+![Contrôle rebar avec deux bandes](../mfc/media/vc4ruz1.gif "Contrôle rebar avec deux bandes")
 
-## <a name="what-do-you-want-to-know-more-about"></a>Ce que vous souhaitez en savoir plus sur
+## <a name="what-do-you-want-to-know-more-about"></a>Que voulez-vous en savoir plus sur
 
 - [CReBar et CReBarCtrl](../mfc/crebar-vs-crebarctrl.md)
 

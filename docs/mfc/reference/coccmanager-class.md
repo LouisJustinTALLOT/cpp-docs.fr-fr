@@ -31,11 +31,11 @@ helpviewer_keywords:
 - COccManager [MFC], SplitDialogTemplate
 ms.assetid: 7d47aeed-d1ab-48e3-b4cf-d429718e370a
 ms.openlocfilehash: c2a49e3396879e5f1e0864ab5342b57541c6b36c
-ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
+ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/06/2020
-ms.locfileid: "78865936"
+ms.lasthandoff: 03/16/2020
+ms.locfileid: "79416759"
 ---
 # <a name="coccmanager-class"></a>COccManager, classe
 
@@ -70,7 +70,7 @@ class COccManager : public CNoTrackObject
 
 La classe de base, `CNoTrackObject`, est une classe de base non documentée (située dans AFXTLS. H). Conçu pour être utilisé par l’infrastructure MFC, les classes dérivées de la classe `CNoTrackObject` sont exemptes de la détection des fuites de mémoire. Il n’est pas recommandé de dériver directement de `CNoTrackObject`.
 
-## <a name="inheritance-hierarchy"></a>Hiérarchie d'héritage
+## <a name="inheritance-hierarchy"></a>Hiérarchie d’héritage
 
 `CNoTrackObject`
 

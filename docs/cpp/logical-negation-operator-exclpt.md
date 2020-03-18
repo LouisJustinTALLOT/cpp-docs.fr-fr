@@ -3,18 +3,17 @@ title: 'Opérateur de négation logique : !'
 ms.date: 08/27/2018
 f1_keywords:
 - '!'
-- Not
 helpviewer_keywords:
 - '! operator'
 - NOT operator
 - logical negation
 ms.assetid: 650add9f-a7bc-426c-b01d-5fc6a81c8b62
-ms.openlocfilehash: 7b37e5108ca01d782c13508c0cd7a96b096cd745
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 06142ef15fcdbafdbae4b892772a04b117c087f6
+ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62216406"
+ms.lasthandoff: 03/17/2020
+ms.locfileid: "79446540"
 ---
 # <a name="logical-negation-operator-"></a>Opérateur de négation logique : !
 
@@ -26,13 +25,13 @@ ms.locfileid: "62216406"
 
 ## <a name="remarks"></a>Notes
 
-L’opérateur de négation logique (**!**) inverse la signification de son opérande. L’opérande doit être de type arithmétique ou pointeur (ou une expression qui a pour valeur le type arithmétique ou pointeur). L’opérande est converti implicitement en type **bool**. Le résultat est TRUE si l’opérande converti est FALSE ; le résultat est FALSE si l’opérande converti est TRUE. Le résultat est de type **bool**.
+L’opérateur de négation logique ( **!** ) inverse la signification de son opérande. L’opérande doit être de type arithmétique ou pointeur (ou une expression qui a pour valeur le type arithmétique ou pointeur). L’opérande est implicitement converti en type **bool**. Le résultat est TRUE si l’opérande converti est FALSe ; le résultat est FALSe si l’opérande converti est TRUE. Le résultat est de type **bool**.
 
-Pour une expression *e*, l’expression unaire `!e` est équivalente à l’expression `(e == 0)`, sauf lorsque les opérateurs surchargés sont impliqués.
+Pour une expression *e*, l’expression unaire `!e` est équivalente à l’expression `(e == 0)`, sauf lorsque des opérateurs surchargés sont impliqués.
 
 ## <a name="operator-keyword-for-"></a>Mot clé Operator pour !
 
-Le **pas** opérateur est une orthographe de remplacement de **!**. Il existe deux façons d’accéder à la **pas** opérateur dans vos programmes : inclure le fichier d’en-tête \<iso646.h >, ou compiler avec la [/Za](../build/reference/za-ze-disable-language-extensions.md) option du compilateur (désactiver les extensions de langage).
+L’opérateur **not** est une autre orthographe de **!** . Il existe deux façons d’accéder à l’opérateur **not** dans vos programmes : incluez le fichier d’en-tête \<ISO646. h > ou compilez avec l’option de compilateur [/za](../build/reference/za-ze-disable-language-extensions.md) (désactivation des extensions de langage).
 
 ## <a name="example"></a>Exemple
 

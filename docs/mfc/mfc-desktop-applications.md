@@ -1,22 +1,21 @@
 ---
-title: MFC, applications de bureau
+title: Applications de bureau MFC
 ms.date: 07/28/2019
 f1_keywords:
 - MFC
-- mfc
 helpviewer_keywords:
 - libraries, MFC
 - class libraries, MFC
 - MFC, about MFC
 ms.assetid: 7101cb18-a681-495c-8f2b-069ad20c72f7
-ms.openlocfilehash: f23a41a0dbaedb7063617accee3afe4ba833d59c
-ms.sourcegitcommit: 720b74dddb1cdf4e570d55103158304ee1df81f8
+ms.openlocfilehash: e9921d18e9ec060f61959278b68906338f02b5b7
+ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/29/2019
-ms.locfileid: "68607537"
+ms.lasthandoff: 03/17/2020
+ms.locfileid: "79447712"
 ---
-# <a name="mfc-desktop-applications"></a>MFC, applications de bureau
+# <a name="mfc-desktop-applications"></a>Applications de bureau MFC
 
 La bibliothèque MFC (Microsoft Foundation Class) fournit un wrapper orienté objet pour une grande partie des API Win32 et COM. Bien qu'elle puisse servir à créer des applications bureautiques très simples, elle est très utile pour développer des interfaces utilisateur plus complexes avec plusieurs contrôles. Vous pouvez utiliser MFC pour créer des applications avec des interfaces utilisateur de style Office. Pour obtenir de la documentation sur la plateforme Windows elle-même, consultez la [documentation Windows](/windows/index). Pour plus d’informations sur la création C++ d’applications Windows dans sans MFC, consultez créer des applications [Windows pour ordinateur de bureau à l’aide de l’API Win32](/windows/win32/index).
 
@@ -44,7 +43,7 @@ Détaille visuellement les relations de classes dans la bibliothèque de classes
 [Vue d’ensemble de la classe](class-library-overview.md)<br/>
 Répertorie les classes de la bibliothèque MFC en fonction de la catégorie.
 
-[Procédures pas à pas](walkthroughs-mfc.md)<br/>
+[Procédures pas à pas](walkthroughs-mfc.md)<br/>
 Contient des articles qui décrivent pas à pas diverses tâches associées aux fonctionnalités de la bibliothèque MFC.
 
 [Notes techniques](mfc-technical-notes.md)<br/>
@@ -71,7 +70,7 @@ Guide des fonctionnalités dans Visual Studio pour la création d'applications M
 [Utilisation des fichiers de ressources](../windows/working-with-resource-files.md)<br/>
 Comment utiliser des fichiers de ressources pour gérer les données de l'interface utilisateur statique, comme les chaînes de l'interface utilisateur et la disposition des boîtes de dialogue.
 
-## <a name="related-sections"></a>Rubriques connexes
+## <a name="related-sections"></a>Sections connexes
 
 [Catégories du graphique hiérarchique](hierarchy-chart-categories.md)<br/>
 Décrit le graphique de la hiérarchie MFC par catégorie.

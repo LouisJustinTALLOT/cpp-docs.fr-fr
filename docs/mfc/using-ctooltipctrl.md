@@ -1,24 +1,22 @@
 ---
 title: Utilisation de CToolTipCtrl
 ms.date: 11/04/2016
-f1_keywords:
-- CToolTipCtrl
 helpviewer_keywords:
 - CToolTipCtrl class [MFC], creating tool tips
 - CToolTipCtrl class
 ms.assetid: 8fc58a04-4792-4223-a092-d349d11344da
-ms.openlocfilehash: 06f296fc21a6ad4480755289d30b5ff4ac27ca8e
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 9a750a9927f5cf36cb0232b3ce1bac1720f7020f
+ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62411619"
+ms.lasthandoff: 03/17/2020
+ms.locfileid: "79442204"
 ---
 # <a name="using-ctooltipctrl"></a>Utilisation de CToolTipCtrl
 
-Le [CToolTipCtrl](../mfc/reference/ctooltipctrl-class.md) classe encapsule les fonctionnalités d’un contrôle d’info-bulle Info, une petite fenêtre contextuelle qui affiche une seule ligne de texte qui décrit l’objectif d’un outil dans une application. Une info-bulle est masquée à la plupart du temps, qui apparaissent uniquement lorsque l’utilisateur place le curseur sur un outil et il il quitte ensuite pendant environ une demi-seconde. L’info-bulle s’affiche près du curseur et disparaît lorsque l’utilisateur clique sur un bouton de la souris ou déplace le curseur de l’outil.
+La classe [CToolTipCtrl](../mfc/reference/ctooltipctrl-class.md) encapsule les fonctionnalités d’un contrôle d’info-bulle, une petite fenêtre contextuelle qui affiche une seule ligne de texte décrivant l’objectif d’un outil dans une application. Une info-bulle est masquée la plupart du temps, n’apparaissant que lorsque l’utilisateur place le curseur sur un outil et le laisse pendant environ une demi-seconde. L’info-bulle apparaît près du curseur et disparaît lorsque l’utilisateur clique sur un bouton de la souris ou déplace le curseur de l’outil.
 
-## <a name="what-do-you-want-to-know-more-about"></a>Ce que vous souhaitez en savoir plus sur
+## <a name="what-do-you-want-to-know-more-about"></a>Que voulez-vous en savoir plus sur
 
 - [Méthodes de création d’info-bulles](../mfc/methods-of-creating-tool-tips.md)
 

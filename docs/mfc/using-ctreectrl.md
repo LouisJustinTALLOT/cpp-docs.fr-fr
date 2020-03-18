@@ -1,26 +1,24 @@
 ---
 title: Utilisation de CTreeCtrl
 ms.date: 11/04/2016
-f1_keywords:
-- CTreeCtrl
 helpviewer_keywords:
 - CTreeCtrl class [MFC], about CTreeCtrl
 - tree controls [MFC], using
 ms.assetid: 6a262f2c-3540-43e5-b03f-e4b6f9cb0325
-ms.openlocfilehash: ab73ea66af27e6c1de43ff09074a9539f7518700
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 443ad948e7d48eaefbb74165a0072966b22439b9
+ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62411654"
+ms.lasthandoff: 03/17/2020
+ms.locfileid: "79442187"
 ---
 # <a name="using-ctreectrl"></a>Utilisation de CTreeCtrl
 
-Un contrôle d’arborescence, représenté par la classe [CTreeCtrl](../mfc/reference/ctreectrl-class.md), est une fenêtre qui affiche une liste hiérarchique des éléments, tels que les en-têtes dans un document, les entrées dans un index, ou que les fichiers et répertoires sur un disque. Chaque élément se compose d’une étiquette et une image bitmap facultative, et chaque élément peut avoir une liste de sous-éléments associés. En cliquant sur un élément, l’utilisateur peut développer et réduire la liste associée de sous-éléments. L’arborescence de répertoires dans le volet gauche de l’Explorateur de fichiers est un exemple d’un contrôle d’arborescence.
+Un contrôle d’arborescence, représenté par la classe [CTreeCtrl](../mfc/reference/ctreectrl-class.md), est une fenêtre qui affiche une liste hiérarchique d’éléments, tels que les en-têtes d’un document, les entrées dans un index ou les fichiers et répertoires sur un disque. Chaque élément est constitué d’une étiquette et d’une image bitmap facultative, et chaque élément peut être associé à une liste de sous-éléments. En cliquant sur un élément, l’utilisateur peut développer et réduire la liste associée de sous-éléments. L’arborescence de répertoires dans le volet gauche de l’Explorateur de fichiers est un exemple de contrôle d’arborescence.
 
-## <a name="what-do-you-want-to-know-more-about"></a>Ce que vous souhaitez en savoir plus sur
+## <a name="what-do-you-want-to-know-more-about"></a>Que voulez-vous en savoir plus sur
 
-- [CTreeCtrl et CTreeView](../mfc/ctreectrl-vs-ctreeview.md)
+- [CTreeCtrl par rapport à CTreeView](../mfc/ctreectrl-vs-ctreeview.md)
 
 - [Utilisation de contrôles d’arborescence](../mfc/using-tree-controls.md)
 

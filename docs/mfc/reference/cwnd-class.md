@@ -819,11 +819,11 @@ helpviewer_keywords:
 - CWnd [MFC], m_hWnd
 ms.assetid: 49a832ee-bc34-4126-88b3-bc1d9974f6c4
 ms.openlocfilehash: 1f0338d827a9ec92747169ff2682e6d47485e4c2
-ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
+ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/06/2020
-ms.locfileid: "78855499"
+ms.lasthandoff: 03/16/2020
+ms.locfileid: "79420987"
 ---
 # <a name="cwnd-class"></a>CWnd, classe
 
@@ -1257,7 +1257,7 @@ class CWnd : public CCmdTarget
 |[CWnd :: ResizeDynamicLayout](#resizedynamiclayout)|Appelé par l'infrastructure quand la taille de fenêtre change pour ajuster la disposition des fenêtres enfants, si la disposition dynamique est activée pour la fenêtre.|
 |[CWnd :: WindowProc](#windowproc)|Fournit une procédure de fenêtre pour un `CWnd`. Par défaut, les messages sont distribués via la table des messages|
 
-### <a name="public-operators"></a>Op&#233;rateurs publics
+### <a name="public-operators"></a>Opérateurs publics
 
 |Name|Description|
 |----------|-----------------|
@@ -1265,7 +1265,7 @@ class CWnd : public CCmdTarget
 |[CWnd :: Operator ! =](#operator_neq)|Détermine si une fenêtre n’est pas la même que la fenêtre dont le handle est [m_hWnd](#m_hwnd).|
 |[CWnd :: Operator = =](#operator_eq_eq)|Détermine si une fenêtre est identique à la fenêtre dont le handle est [m_hWnd](#m_hwnd).|
 
-### <a name="public-data-members"></a>Membres de données publiques
+### <a name="public-data-members"></a>Membres de données publics
 
 |Name|Description|
 |----------|-----------------|
@@ -1287,7 +1287,7 @@ Dans la bibliothèque MFC (Microsoft Foundation Class), d'autres classes sont d�
 
 Pour plus d’informations sur l’utilisation de `CWnd`, consultez [fenêtres Frame](../../mfc/frame-windows.md) et [objets Window](../../mfc/window-objects.md).
 
-## <a name="inheritance-hierarchy"></a>Hiérarchie d'héritage
+## <a name="inheritance-hierarchy"></a>Hiérarchie d’héritage
 
 [CObject](../../mfc/reference/cobject-class.md)
 

@@ -21,11 +21,11 @@ helpviewer_keywords:
 - Context class
 ms.assetid: c0d553f3-961d-4ecd-9a29-4fa4351673b8
 ms.openlocfilehash: 7c47d9db64b0af7d5413abed3f85e9d41a591fa2
-ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
+ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/06/2020
-ms.locfileid: "78865489"
+ms.lasthandoff: 03/16/2020
+ms.locfileid: "79422177"
 ---
 # <a name="context-class"></a>Context, classe
 
@@ -39,7 +39,7 @@ class Context;
 
 ## <a name="members"></a>Membres
 
-### <a name="protected-constructors"></a>Constructeurs prot&#233;g&#233;s
+### <a name="protected-constructors"></a>Constructeurs protégés
 
 |Name|Description|
 |----------|-----------------|
@@ -71,7 +71,7 @@ Le planificateur runtime d’accès concurrentiel (consultez [Scheduler](schedul
 
 Le planificateur est coopératif par nature et un contexte d’exécution peut produire son processeur virtuel dans un contexte différent à tout moment s’il souhaite entrer dans un état d’attente. Lorsque l’attente est satisfaite, il ne peut pas reprendre tant qu’un processeur virtuel disponible à partir du planificateur ne commence pas à l’exécuter.
 
-## <a name="inheritance-hierarchy"></a>Hiérarchie d'héritage
+## <a name="inheritance-hierarchy"></a>Hiérarchie d’héritage
 
 `Context`
 

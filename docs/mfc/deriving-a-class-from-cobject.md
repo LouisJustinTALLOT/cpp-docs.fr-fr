@@ -1,8 +1,6 @@
 ---
 title: Dérivation d'une classe de CObject
 ms.date: 11/04/2016
-f1_keywords:
-- CObject
 helpviewer_keywords:
 - DECLARE_DYNCREATE macro [MFC]
 - DECLARE_SERIAL macro [MFC]
@@ -13,55 +11,55 @@ helpviewer_keywords:
 - CObject class [MFC], deriving serializable classes
 - CObject class [MFC], deriving from
 ms.assetid: 5ea4ea41-08b5-4bd8-b247-c5de8c152a27
-ms.openlocfilehash: 26fdab5165ca098c5d7813ebf44983c261094449
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 860af88512acb33ff3035b3a04609165953d80a8
+ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62152057"
+ms.lasthandoff: 03/17/2020
+ms.locfileid: "79446977"
 ---
 # <a name="deriving-a-class-from-cobject"></a>Dérivation d'une classe de CObject
 
-Cet article décrit la procédure minimale nécessaire de dériver une classe à partir de [CObject](../mfc/reference/cobject-class.md). Autres `CObject` articles de la classe décrivent les étapes nécessaires pour tirer parti des spécifiques `CObject` fonctionnalités, telles que la sérialisation et la prise en charge du débogage diagnostic.
+Cet article décrit les étapes minimales nécessaires pour dériver une classe de [CObject](../mfc/reference/cobject-class.md). D’autres Articles de la classe `CObject` décrivent les étapes nécessaires pour tirer parti de fonctionnalités `CObject` spécifiques, telles que la prise en charge du débogage de la sérialisation et du diagnostic.
 
-Dans les discussions de `CObject`, les termes « fichier d’interface » et « fichier d’implémentation » sont fréquemment utilisées. Le fichier d’interface (souvent appelé le fichier d’en-tête, ou. H) contient la déclaration de classe et toute autre information nécessaire pour utiliser la classe. Le fichier d’implémentation (ou). Fichier CPP) contient la définition de classe, ainsi que le code qui implémente les fonctions membres de classe. Par exemple, pour une classe nommée `CPerson`, vous créez généralement un fichier de l’interface nommé PERSON. H et un fichier d’implémentation nommé PERSON. CPP. Toutefois, pour certaines petites classes qui ne seront pas partagés entre les applications, il est parfois plus facile de combiner l’interface et l’implémentation dans une seule. Fichier CPP.
+Dans les discussions de `CObject`, les termes « fichier d’interface » et « fichier d’implémentation » sont fréquemment utilisés. Fichier d’interface (souvent appelé fichier d’en-tête ou. H) contient la déclaration de classe et toutes les autres informations nécessaires à l’utilisation de la classe. Fichier d’implémentation (ou. CPP) contient la définition de classe ainsi que le code qui implémente les fonctions membres de classe. Par exemple, pour une classe nommée `CPerson`, vous créez généralement un fichier d’interface nommé PERSON. H et un fichier d’implémentation nommé PERSON. Cotisations. Toutefois, pour certaines petites classes qui ne seront pas partagées entre les applications, il est parfois plus facile de combiner l’interface et l’implémentation en une seule. Fichier CPP.
 
-Vous pouvez choisir à partir de quatre niveaux de fonctionnalité lorsque vous dérivez une classe à partir de `CObject`:
+Vous pouvez choisir parmi quatre niveaux de fonctionnalités lors de la dérivation d’une classe à partir d' `CObject`:
 
-- Fonctionnalités de base : Aucune prise en charge pour les informations de classe d’exécution ou de sérialisation n’inclut, mais la gestion de mémoire de diagnostic.
+- Fonctionnalités de base : aucune prise en charge des informations de classe d’exécution ou de la sérialisation, mais elle comprend la gestion de la mémoire de diagnostic.
 
-- Fonctionnalités de base et prise en charge des informations de classe d’exécution.
+- Fonctionnalités de base et prise en charge des informations de classe au moment de l’exécution.
 
-- Fonctionnalités de base et prise en charge des informations de classe d’exécution et la création dynamique.
+- Fonctionnalités de base et prise en charge des informations de classe au moment de l’exécution et de la création dynamique.
 
-- Fonctionnalités de base et prise en charge des informations de classe d’exécution, la création dynamique et la sérialisation.
+- Fonctionnalités de base et prise en charge des informations de classe au moment de l’exécution, de la création dynamique et de la sérialisation.
 
-Classes conçues pour être réutilisée (ceux qui vous servira ultérieurement des classes de base) doivent inclure au moins prise en charge de la classe d’exécution et de prise en charge de la sérialisation, si n’importe quel besoin de sérialisation ultérieure.
+Les classes conçues pour être réutilisées (celles qui seront par la suite utilisées comme classes de base) doivent au moins inclure la prise en charge de la classe d’exécution et la prise en charge de la sérialisation, si un futur besoin de sérialisation est attendu.
 
-Vous choisissez le niveau de fonctionnalité à l’aide des macros de déclaration et d’implémentation spécifiques dans la déclaration et l’implémentation des classes que vous dérivez de `CObject`.
+Vous choisissez le niveau de fonctionnalité en utilisant des macros de déclaration et d’implémentation spécifiques dans la déclaration et l’implémentation des classes que vous dérivez de `CObject`.
 
 Le tableau suivant montre la relation entre les macros utilisées pour prendre en charge la sérialisation et les informations d’exécution.
 
-### <a name="macros-used-for-serialization-and-run-time-information"></a>Utilisé pour la sérialisation et des informations sur l’exécution des macros
+### <a name="macros-used-for-serialization-and-run-time-information"></a>Macros utilisées pour les informations de sérialisation et d’exécution
 
-|Macro utilisé|CObject::IsKindOf|CRuntimeClass::<br /><br /> CreateObject|CArchive::operator>><br /><br /> CArchive::operator <<|
+|Macro utilisée|CObject::IsKindOf|CRuntimeClass ::<br /><br /> CreateObject|CArchive :: operator > ><br /><br /> CArchive :: Operator < <|
 |----------------|-----------------------|--------------------------------------|-------------------------------------------------------|
-|Base `CObject` fonctionnalités|Non|Non|Non|
+|Fonctionnalités de base de `CObject`|Non|Non|Non|
 |`DECLARE_DYNAMIC`|Oui|Non|Non|
 |`DECLARE_DYNCREATE`|Oui|Oui|Non|
 |`DECLARE_SERIAL`|Oui|Oui|Oui|
 
-#### <a name="to-use-basic-cobject-functionality"></a>Pour utiliser les fonctionnalités CObject de base
+#### <a name="to-use-basic-cobject-functionality"></a>Pour utiliser la fonctionnalité CObject de base
 
-1. Utilisez la syntaxe C++ normale pour dériver votre classe de `CObject` (ou à partir d’une classe dérivée de `CObject`).
+1. Utilisez la syntaxe C++ normale pour dériver votre classe de `CObject` (ou d’une classe dérivée de `CObject`).
 
-   L’exemple suivant montre le cas le plus simple, la dérivation d’une classe à partir de `CObject`:
+   L’exemple suivant montre le cas le plus simple, la dérivation d’une classe à partir d' `CObject`:
 
    [!code-cpp[NVC_MFCCObjectSample#1](../mfc/codesnippet/cpp/deriving-a-class-from-cobject_1.h)]
 
-Normalement, toutefois, vous voudrez peut-être substituer certaines des `CObject`de fonctions membres pour gérer les particularités de votre nouvelle classe. Par exemple, vous souhaiterez généralement remplacer le `Dump` fonction de `CObject` pour fournir la sortie de débogage pour le contenu de votre classe. Pour plus d’informations sur la procédure de remplacement `Dump`, consultez l’article [objet Dump personnalisation](/previous-versions/visualstudio/visual-studio-2010/sc15kz85(v=vs.100)). Vous pouvez également substituer la `AssertValid` fonction de `CObject` pour effectuer un test personnalisé pour valider la cohérence des données membres des objets de classe. Pour obtenir une description de la procédure de remplacement `AssertValid`, consultez [MFC ASSERT_VALID et CObject::AssertValid](reference/diagnostic-services.md#assert_valid).
+En règle générale, toutefois, vous pouvez être amené à substituer certaines des fonctions membres de `CObject`pour gérer les détails de votre nouvelle classe. Par exemple, vous souhaiterez peut-être remplacer la fonction `Dump` de `CObject` pour fournir une sortie de débogage pour le contenu de votre classe. Pour plus d’informations sur la façon de substituer des `Dump`, consultez l’article [Personnalisation du dump d’objets](/previous-versions/visualstudio/visual-studio-2010/sc15kz85(v=vs.100)). Vous pouvez également remplacer la fonction `AssertValid` de `CObject` pour fournir des tests personnalisés afin de valider la cohérence des données membres des objets de classe. Pour obtenir une description de la façon de substituer des `AssertValid`, consultez [MFC ASSERT_VALID et CObject :: AssertValid](reference/diagnostic-services.md#assert_valid).
 
-L’article [spécifiant les niveaux de fonctionnalité](../mfc/specifying-levels-of-functionality.md) explique comment spécifier d’autres niveaux de fonctionnalité, y compris les informations de classe d’exécution, la création d’objets dynamiques et la sérialisation.
+L’article [spécification des niveaux de fonctionnalité](../mfc/specifying-levels-of-functionality.md) décrit comment spécifier d’autres niveaux de fonctionnalité, y compris les informations de classe d’exécution, la création d’objets dynamiques et la sérialisation.
 
 ## <a name="see-also"></a>Voir aussi
 

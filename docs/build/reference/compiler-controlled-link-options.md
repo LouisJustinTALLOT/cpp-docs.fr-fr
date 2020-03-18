@@ -1,8 +1,6 @@
 ---
-title: Compiler-Controlled LINK Options
+title: Options LINK contrôlées par le compilateur
 ms.date: 11/04/2016
-f1_keywords:
-- link
 helpviewer_keywords:
 - LINK tool [C++], compiler-controlled options
 - linker [C++], CL compiler control
@@ -10,35 +8,35 @@ helpviewer_keywords:
 - cl.exe compiler [C++], features that affect linking
 - cl.exe compiler [C++], controlling linker
 ms.assetid: e4c03896-c99c-4599-8502-e0f4bebe69d0
-ms.openlocfilehash: bc7a6cc596f138daa373042abca51642c24cf737
-ms.sourcegitcommit: c6f8e6c2daec40ff4effd8ca99a7014a3b41ef33
+ms.openlocfilehash: f631d0ebbbd9e60fe5d54aac6fb158461d3f4d38
+ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "64342855"
+ms.lasthandoff: 03/17/2020
+ms.locfileid: "79440110"
 ---
-# <a name="compiler-controlled-link-options"></a>Compiler-Controlled LINK Options
+# <a name="compiler-controlled-link-options"></a>Options LINK contrôlées par le compilateur
 
-Le compilateur appelle automatiquement la liaison, sauf si vous spécifiez l’option /c. CL fournit un certain contrôle sur l’éditeur de liens par le biais des options de ligne de commande et les arguments. Le tableau suivant récapitule les fonctionnalités du compilateur affectant la liaison.
+Le compilateur CL appelle automatiquement LINK, sauf si vous spécifiez l’option/c. CL fournit un contrôle sur l’éditeur de liens via les options de ligne de commande et les arguments. Le tableau suivant récapitule les fonctionnalités de CL qui affectent la liaison.
 
-|Spécification du compilateur|Action du compilateur qui affecte le lien|
+|Spécification CL|Action CL qui affecte LINK|
 |----------------------|---------------------------------|
-|Toute extension de nom de fichier autre que .c, .cxx, .cpp ou .def|Transmet un nom de fichier comme entrée de lien|
-|*filename*.def|Passe /DEF :*filename*.def|
-|/F*number*|Passe/Stack :*nombre*|
-|/Fd*filename*|Passe/PDB :*nom de fichier*|
-|/Fe*filename*|Passe/OUT :*nom de fichier*|
-|/Fm*filename*|Passe/Map :*nom de fichier*|
-|/Gy|Crée des fonctions packagées (COMDAT) ; Active la liaison au niveau des fonctions|
-|/LD|Passe /DLL|
-|/LDd|Passe /DLL|
+|Toute extension de nom de fichier autre que. c,. cxx,. cpp ou. def|Passe un nom de fichier comme entrée à lier|
+|*filename*. def|Passe/DEF :*filename*. def|
+|/F*nombre*|Passe/STACK :*Number*|
+|*Nom de fichier* /FD|Passe/PDB :*filename*|
+|/Fe*nom de fichier*|Passe/OUT :*filename*|
+|*Nom de fichier* /FM|Passe/MAP :*filename*|
+|/Gy|Crée des fonctions packagées (COMDAT); active la liaison au niveau des fonctions|
+|/LD|Passe/DLL|
+|/LDd|Passe/DLL|
 |/link|Passe le reste de la ligne de commande à LINK|
-|/MD ou /MT|Place un nom de bibliothèque par défaut dans le fichier .obj|
-|/ MDd ou /MTd|Place un nom de bibliothèque par défaut dans le fichier .obj. Définit le symbole **_DEBUG**|
-|/nologo|Passe /NOLOGO|
-|/Zd|Passes/Debug|
-|/ Zi ou/Z7|Passes/Debug|
-|/Zl|Omet le nom de la bibliothèque par défaut à partir du fichier .obj|
+|/MD ou/MT|Place un nom de bibliothèque par défaut dans le fichier. obj|
+|/MDd ou/MTd|Place un nom de bibliothèque par défaut dans le fichier. obj. Définit le symbole **_DEBUG**|
+|/nologo|Passe/NOLOGO|
+|/Zd|Passe/DEBUG|
+|/Zi ou/Z7|Passe/DEBUG|
+|/Zl|Omet le nom de la bibliothèque par défaut du fichier. obj|
 
 Pour plus d’informations, consultez [Options du compilateur MSVC](compiler-options.md).
 

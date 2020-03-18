@@ -1,8 +1,6 @@
 ---
 title: Console et port E/S
 ms.date: 11/04/2016
-f1_keywords:
-- c.io
 helpviewer_keywords:
 - routines, console and port I/O
 - routines
@@ -11,12 +9,12 @@ helpviewer_keywords:
 - I/O [CRT], port
 - I/O routines, console and port I/O
 ms.assetid: 0eee1c92-9b3d-41e0-a43a-257e546eeec8
-ms.openlocfilehash: 55f97a70f2ce12f6363d234e9bbc9384d7ee9fe1
-ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
-ms.translationtype: HT
+ms.openlocfilehash: 5b4dc2a081ea11bd84d932f55b5b247de81f296a
+ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/11/2019
-ms.locfileid: "57752374"
+ms.lasthandoff: 03/17/2020
+ms.locfileid: "79443446"
 ---
 # <a name="console-and-port-io"></a>Console et port E/S
 
@@ -24,7 +22,7 @@ Ces routines lisent et écrivent sur votre console ou sur le port spécifié. Le
 
 ## <a name="console-and-port-io-routines"></a>Routines d'E/S de console et de port
 
-|Routine|Utilisez|
+|Routine|Utilisation|
 |-------------|---------|
 |[_cgets, _cgetws](../c-runtime-library/cgets-cgetws.md), [_cgets_s, _cgetws_s](../c-runtime-library/reference/cgets-s-cgetws-s.md)|Lire une chaîne de la console|
 |[_cprintf, _cwprintf](../c-runtime-library/reference/cprintf-cprintf-l-cwprintf-cwprintf-l.md), [_cprintf_s, _cprintf_s_l, _cwprintf_s, _cwprintf_s_l](../c-runtime-library/reference/cprintf-s-cprintf-s-l-cwprintf-s-cwprintf-s-l.md)|Écrire des données mises en forme dans la console|

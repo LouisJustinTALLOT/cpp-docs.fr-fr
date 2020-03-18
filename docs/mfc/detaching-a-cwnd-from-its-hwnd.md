@@ -1,8 +1,6 @@
 ---
 title: Détachement d'un objet CWnd de son HWND
 ms.date: 11/04/2016
-f1_keywords:
-- CWnd
 helpviewer_keywords:
 - HWND, detaching CWnd from
 - removing HWNDs from CWnds
@@ -10,24 +8,24 @@ helpviewer_keywords:
 - detaching CWnds from HWNDs
 - Detach method (CWnd class)
 ms.assetid: 6efadf84-0517-4a3f-acfd-216e088f19c6
-ms.openlocfilehash: 259af94958f88643e9c3ce725b25c4e92cc38226
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: f7a6f97ba9f1dd3a928a5450c1a899ce09a4ac5f
+ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62394570"
+ms.lasthandoff: 03/17/2020
+ms.locfileid: "79446958"
 ---
 # <a name="detaching-a-cwnd-from-its-hwnd"></a>Détachement d'un objet CWnd de son HWND
 
-Si vous avez besoin de contourner l’objet -`HWND` relation, MFC fournit une autre `CWnd` fonction membre, [détachement](../mfc/reference/cwnd-class.md#detach), qui déconnecte l’objet fenêtre C++ à partir de la fenêtre de Windows. Cela empêche le destructeur de détruire la fenêtre Windows quand l’objet est détruit.
+Si vous avez besoin de contourner la relation objet-`HWND`, MFC fournit une autre `CWnd` fonction membre, [Detach](../mfc/reference/cwnd-class.md#detach), qui déconnecte l' C++ objet Window de la fenêtre Windows. Cela empêche le destructeur de détruire la fenêtre Windows lorsque l’objet est détruit.
 
-## <a name="what-do-you-want-to-know-more-about"></a>Ce que vous souhaitez en savoir plus sur
+## <a name="what-do-you-want-to-know-more-about"></a>Que voulez-vous en savoir plus sur
 
 - [Création de fenêtres](../mfc/creating-windows.md)
 
-- [Séquence de destruction de fenêtres](../mfc/window-destruction-sequence.md)
+- [Séquence de destruction de fenêtre](../mfc/window-destruction-sequence.md)
 
-- [Allocation et libération de mémoire Windows](../mfc/allocating-and-deallocating-window-memory.md)
+- [Allocation et libération de la mémoire Windows](../mfc/allocating-and-deallocating-window-memory.md)
 
 ## <a name="see-also"></a>Voir aussi
 

@@ -9,15 +9,12 @@ f1_keywords:
 - CAccessorRowset::Bind
 - CAccessorRowset::CAccessorRowset
 - CAccessorRowset.CAccessorRowset
-- CAccessorRowset
 - ATL.CAccessorRowset.CAccessorRowset
 - ATL::CAccessorRowset::CAccessorRowset
 - CAccessorRowset.Close
 - CAccessorRowset::Close
 - CAccessorRowset::FreeRecordMemory
 - CAccessorRowset.FreeRecordMemory
-- FreeRecordMemory
-- GetColumnInfo
 - CAccessorRowset.GetColumnInfo
 - CAccessorRowset::GetColumnInfo
 helpviewer_keywords:
@@ -30,16 +27,16 @@ helpviewer_keywords:
 - FreeRecordMemory method
 - GetColumnInfo method
 ms.assetid: bd4f58ed-cebf-4d43-8985-1e5fcbf06953
-ms.openlocfilehash: af38695ccee79e539782dc3f695a567f72fa41c7
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 77c4eebae6ede5d74e24421cc4d3951c78e08777
+ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62283803"
+ms.lasthandoff: 03/17/2020
+ms.locfileid: "79447272"
 ---
 # <a name="caccessorrowset-class"></a>CAccessorRowset, classe
 
-Encapsule un ensemble de lignes et de ses accesseurs associés dans une classe unique.
+Encapsule un ensemble de lignes et ses accesseurs associés dans une classe unique.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -55,9 +52,9 @@ class CAccessorRowset : public TAccessor, public TRowset<TAccessor>
 Classe d’accesseur.
 
 *TRowset*<br/>
-Une classe rowset.
+Classe d’ensemble de lignes.
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
 **En-tête :** atldbcli.h
 
@@ -67,19 +64,19 @@ Une classe rowset.
 
 |||
 |-|-|
-|[Bind](#bind)|Crée des liaisons (utilisée lorsque `bBind` est spécifié en tant que **false** dans [CCommand::Open](../../data/oledb/ccommand-open.md)).|
-|[CAccessorRowset](#caccessorrowset)|Constructeur.|
-|[Fermer](#close)|Ferme l’ensemble de lignes et de tous les accesseurs.|
-|[FreeRecordMemory](#freerecordmemory)|Libère toutes les colonnes dans l’enregistrement actif qui doivent être libérées.|
-|[GetColumnInfo](#getcolumninfo)|Implémente [IColumnsInfo::GetColumnInfo](/previous-versions/windows/desktop/ms722704\(v=vs.85\)).|
+|[Bind](#bind)|Crée des liaisons (utilisé lorsque `bBind` est spécifié avec la **valeur false** dans [CCommand :: Open](../../data/oledb/ccommand-open.md)).|
+|[CAccessorRowset,](#caccessorrowset)|Constructeur.|
+|[Close](#close)|Ferme l’ensemble de lignes et tous les accesseurs.|
+|[FreeRecordMemory](#freerecordmemory)|Libère toutes les colonnes de l’enregistrement actif qui doivent être libérées.|
+|[GetColumnInfo](#getcolumninfo)|Implémente [IColumnsInfo :: GetColumnInfo](/previous-versions/windows/desktop/ms722704\(v=vs.85\)).|
 
 ## <a name="remarks"></a>Notes
 
-Classe `TAccessor` gère l’accesseur. Classe *TRowset* gère l’ensemble de lignes.
+La classe `TAccessor` gère l’accesseur. La classe *TRowset* gère l’ensemble de lignes.
 
-## <a name="bind"></a> CAccessorRowset::Bind
+## <a name="bind"></a>CAccessorRowset :: bind
 
-Crée les liaisons, si vous avez spécifié `bBind` comme **false** dans [CCommand::Open](../../data/oledb/ccommand-open.md).
+Crée les liaisons si vous avez spécifié `bBind` la **valeur false** dans [CCommand :: Open](../../data/oledb/ccommand-open.md).
 
 ### <a name="syntax"></a>Syntaxe
 
@@ -89,11 +86,11 @@ HRESULT Bind();
 
 ### <a name="return-value"></a>Valeur de retour
 
-Une valeur HRESULT standard.
+HRESULT standard.
 
-## <a name="caccessorrowset"></a> CAccessorRowset::CAccessorRowset
+## <a name="caccessorrowset"></a>CAccessorRowset :: CAccessorRowset
 
-Initialise le `CAccessorRowset` objet.
+Initialise l'objet `CAccessorRowset`.
 
 ### <a name="syntax"></a>Syntaxe
 
@@ -101,9 +98,9 @@ Initialise le `CAccessorRowset` objet.
 CAccessorRowset();
 ```
 
-## <a name="close"></a> CAccessorRowset::Close
+## <a name="close"></a>CAccessorRowset :: Close
 
-Libère tous les accesseurs actives et l’ensemble de lignes.
+Libère les accesseurs actifs et l’ensemble de lignes.
 
 ### <a name="syntax"></a>Syntaxe
 
@@ -113,11 +110,11 @@ void Close();
 
 ### <a name="remarks"></a>Notes
 
-Libère la mémoire associée.
+Libère toute mémoire associée.
 
-## <a name="freerecordmemory"></a> CAccessorRowset::FreeRecordMemory
+## <a name="freerecordmemory"></a>CAccessorRowset :: FreeRecordMemory
 
-Libère toutes les colonnes dans l’enregistrement actif qui doivent être libérées.
+Libère toutes les colonnes de l’enregistrement actif qui doivent être libérées.
 
 ### <a name="syntax"></a>Syntaxe
 
@@ -125,9 +122,9 @@ Libère toutes les colonnes dans l’enregistrement actif qui doivent être lib�
 void FreeRecordMemory();
 ```
 
-## <a name="getcolumninfo"></a> CAccessorRowset::GetColumnInfo
+## <a name="getcolumninfo"></a>CAccessorRowset :: GetColumnInfo
 
-Obtient des informations sur les colonnes à partir de l’ensemble de lignes ouvert.
+Obtient les informations de colonne à partir de l’ensemble de lignes ouvert.
 
 ### <a name="syntax"></a>Syntaxe
 
@@ -142,19 +139,19 @@ HRESULT GetColumnInfo(DBORDINAL* pColumns,
 
 #### <a name="parameters"></a>Paramètres
 
-Consultez [IColumnsInfo::GetColumnInfo](/previous-versions/windows/desktop/ms722704\(v=vs.85\)) dans le *de référence du programmeur OLE DB*.
+Consultez [IColumnsInfo :: GetColumnInfo](/previous-versions/windows/desktop/ms722704\(v=vs.85\)) dans le *Guide de référence du programmeur OLE DB*.
 
 ### <a name="return-value"></a>Valeur de retour
 
-Une valeur HRESULT standard.
+HRESULT standard.
 
 ### <a name="remarks"></a>Notes
 
-L’utilisateur doit libérer les informations de la colonne retournée et de la mémoire tampon de chaîne. Utilisez la deuxième version de cette méthode lorsque vous utilisez [CDynamicAccessor](../../data/oledb/cdynamicaccessor-class.md) et avez besoin de remplacer les liaisons.
+L’utilisateur doit libérer les informations de colonne retournées et la mémoire tampon de chaîne. Utilisez la deuxième version de cette méthode lorsque vous utilisez [CDynamicAccessor](../../data/oledb/cdynamicaccessor-class.md) et que vous devez substituer les liaisons.
 
-Pour plus d’informations, consultez [IColumnsInfo::GetColumnInfo](/previous-versions/windows/desktop/ms722704\(v=vs.85\)) dans le *de référence du programmeur OLE DB*.
+Pour plus d’informations, consultez [IColumnsInfo :: GetColumnInfo](/previous-versions/windows/desktop/ms722704\(v=vs.85\)) dans le *Guide de référence du programmeur OLE DB*.
 
 ## <a name="see-also"></a>Voir aussi
 
-[Modèles du consommateur OLE DB](../../data/oledb/ole-db-consumer-templates-cpp.md)<br/>
+[OLE DB (modèles du consommateur)](../../data/oledb/ole-db-consumer-templates-cpp.md)<br/>
 [Référence des modèles du consommateur OLE DB](../../data/oledb/ole-db-consumer-templates-reference.md)

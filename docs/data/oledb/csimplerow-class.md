@@ -12,7 +12,6 @@ f1_keywords:
 - CSimpleRow.AddRefRow
 - CSimpleRow.Compare
 - CSimpleRow::Compare
-- CSimpleRow
 - ATL::CSimpleRow::CSimpleRow
 - CSimpleRow.CSimpleRow
 - ATL.CSimpleRow.CSimpleRow
@@ -35,16 +34,16 @@ helpviewer_keywords:
 - m_dwRef
 - m_iRowset
 ms.assetid: 06d9621d-60cc-4508-8b0c-528d1b1a809b
-ms.openlocfilehash: 19b90f4454e784907366ef6cf7e3e7e1b9ada799
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 00d8164425ada573020971f66312b2282cc72c45
+ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62390930"
+ms.lasthandoff: 03/17/2020
+ms.locfileid: "79441138"
 ---
 # <a name="csimplerow-class"></a>CSimpleRow, classe
 
-Fournit une implémentation par défaut pour le handle de ligne, qui est utilisé dans le [IRowsetImpl](../../data/oledb/irowsetimpl-class.md) classe.
+Fournit une implémentation par défaut pour le handle de ligne, qui est utilisé dans la classe [IRowsetImpl](../../data/oledb/irowsetimpl-class.md) .
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -52,7 +51,7 @@ Fournit une implémentation par défaut pour le handle de ligne, qui est utilis�
 class CSimpleRow
 ```
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
 **En-tête :** atldb.h
 
@@ -63,24 +62,24 @@ class CSimpleRow
 |||
 |-|-|
 |[AddRefRow](#addrefrow)|Ajoute un décompte de références à un handle de ligne existant.|
-|[Compare](#compare)|Compare deux lignes pour voir s’ils font référence à la même instance de ligne.|
+|[Compare](#compare)|Compare deux lignes pour voir si elles font référence à la même instance de ligne.|
 |[CSimpleRow](#csimplerow)|Constructeur.|
 |[ReleaseRow](#releaserow)|Libère des lignes.|
 
-### <a name="data-members"></a>Membres de données
+### <a name="data-members"></a>Données membres
 
 |||
 |-|-|
-|[m_dwRef](#dwref)|Le décompte de références à un handle de ligne existant.|
-|[m_iRowset](#irowset)|Un index à l’ensemble de lignes qui représente le curseur.|
+|[m_dwRef](#dwref)|Décompte de références à un handle de ligne existant.|
+|[m_iRowset](#irowset)|Index de l’ensemble de lignes représentant le curseur.|
 
 ## <a name="remarks"></a>Notes
 
-Un handle de ligne est logiquement une balise unique pour une ligne de résultat. `IRowsetImpl` Crée un `CSimpleRow` pour chaque ligne demandée dans [IRowsetImpl::GetNextRows](../../data/oledb/irowsetimpl-getnextrows.md). `CSimpleRow` peut également être remplacé par votre propre implémentation de la poignée de ligne, car il s’agit d’un argument de modèle par défaut à `IRowsetImpl`. La seule exigence pour remplacer cette classe est d’avoir à la classe de remplacement de fournir un constructeur qui accepte un seul paramètre de type **LONG**.
+Un descripteur de ligne est logiquement une étiquette unique pour une ligne de résultats. `IRowsetImpl` crée une `CSimpleRow` pour chaque ligne demandée dans [IRowsetImpl :: GetNextRows](../../data/oledb/irowsetimpl-getnextrows.md). `CSimpleRow` peut également être remplacé par votre propre implémentation du handle de ligne, car il s’agit d’un argument template par défaut pour `IRowsetImpl`. La seule exigence de remplacer cette classe est d’avoir la classe de remplacement qui fournit un constructeur qui accepte un paramètre unique de type **long**.
 
-## <a name="addrefrow"></a> CSimpleRow::AddRefRow
+## <a name="addrefrow"></a>CSimpleRow :: AddRefRow
 
-Ajoute un décompte de références à un handle de ligne existant de façon thread-safe.
+Ajoute un décompte de références à un handle de ligne existant de manière thread-safe.
 
 ### <a name="syntax"></a>Syntaxe
 
@@ -88,9 +87,9 @@ Ajoute un décompte de références à un handle de ligne existant de façon thr
 DWORD AddRefRow();
 ```
 
-## <a name="compare"></a> CSimpleRow::Compare
+## <a name="compare"></a>CSimpleRow :: compare
 
-Compare deux lignes pour voir s’ils font référence à la même instance de ligne.
+Compare deux lignes pour voir si elles font référence à la même instance de ligne.
 
 ### <a name="syntax"></a>Syntaxe
 
@@ -101,13 +100,13 @@ HRESULT Compare(CSimpleRow* pRow);
 #### <a name="parameters"></a>Paramètres
 
 *pRow*<br/>
-Pointeur vers un objet `CSimpleRow` .
+Pointeur vers un objet `CSimpleRow`.
 
 ### <a name="return-value"></a>Valeur de retour
 
-Une valeur HRESULT, généralement S_OK, indiquant les deux lignes sont la même instance de ligne ou S_FALSE, indiquant les deux lignes sont différents. Consultez [IRowsetIdentity::IsSameRow](/previous-versions/windows/desktop/ms719629(v=vs.85)) dans le *de référence du programmeur OLE DB* pour les autres valeurs de retour possibles.
+Une valeur HRESULT, généralement S_OK, indiquant que les deux lignes sont la même instance de ligne, ou S_FALSE, indiquant que les deux lignes sont différentes. Consultez [IRowsetIdentity :: IsSameRow](/previous-versions/windows/desktop/ms719629(v=vs.85)) dans le *Guide de référence du programmeur OLE DB* pour d’autres valeurs de retour possibles.
 
-## <a name="csimplerow"></a> CSimpleRow::CSimpleRow
+## <a name="csimplerow"></a>CSimpleRow :: CSimpleRow
 
 Constructeur.
 
@@ -120,13 +119,13 @@ CSimpleRow(DBCOUNTITEM iRowsetCur);
 #### <a name="parameters"></a>Paramètres
 
 *iRowsetCur*<br/>
-[in] Index de l’ensemble de lignes en cours.
+dans Index de l’ensemble de lignes actif.
 
 ### <a name="remarks"></a>Notes
 
-Jeux [m_iRowset](../../data/oledb/csimplerow-m-irowset.md) à *iRowsetCur*.
+Définit [m_iRowset](../../data/oledb/csimplerow-m-irowset.md) sur *iRowsetCur*.
 
-## <a name="releaserow"></a> CSimpleRow::ReleaseRow
+## <a name="releaserow"></a>CSimpleRow :: ReleaseRow
 
 Libère les lignes de manière thread-safe.
 
@@ -136,9 +135,9 @@ Libère les lignes de manière thread-safe.
 DWORD ReleaseRow();
 ```
 
-## <a name="dwref"></a> CSimpleRow::m_dwRef
+## <a name="dwref"></a>CSimpleRow :: m_dwRef
 
-Le décompte de références à un handle de ligne existant.
+Décompte de références à un handle de ligne existant.
 
 ### <a name="syntax"></a>Syntaxe
 
@@ -146,9 +145,9 @@ Le décompte de références à un handle de ligne existant.
 DWORD m_dwRef;
 ```
 
-## <a name="irowset"></a> CSimpleRow::m_iRowset
+## <a name="irowset"></a>CSimpleRow :: m_iRowset
 
-Index de l’ensemble de lignes qui représente le curseur.
+Index de l’ensemble de lignes représentant le curseur.
 
 ### <a name="syntax"></a>Syntaxe
 
@@ -158,6 +157,6 @@ KeyType m_iRowset;
 
 ## <a name="see-also"></a>Voir aussi
 
-[Modèles du fournisseur OLE DB](../../data/oledb/ole-db-provider-templates-cpp.md)<br/>
+[Modèles du fournisseur OLE DB](../../data/oledb/ole-db-provider-templates-cpp.md)<br/>
 [Architecture des modèles du fournisseur OLE DB](../../data/oledb/ole-db-provider-template-architecture.md)<br/>
 [IRowsetImpl, classe](../../data/oledb/irowsetimpl-class.md)

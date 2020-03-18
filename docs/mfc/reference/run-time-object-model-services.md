@@ -4,12 +4,12 @@ ms.date: 03/27/2019
 helpviewer_keywords:
 - run-time object model services macros
 ms.assetid: 4a3e79df-2ee3-43a4-8193-20298828de85
-ms.openlocfilehash: f8b891467d91d0c945b6c59c90dbc49fd7cbcb30
-ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
-ms.translationtype: HT
+ms.openlocfilehash: a4e471decd07cb2025b833513403b64f43105d0c
+ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/16/2020
-ms.locfileid: "79421344"
+ms.lasthandoff: 03/17/2020
+ms.locfileid: "79446440"
 ---
 # <a name="run-time-object-model-services"></a>Services du modèle objet au moment de l'exécution
 
@@ -340,11 +340,11 @@ Nom de l’objet exposé à d’autres applications (entre guillemets).
 *nFlags*<br/>
 Contient un ou plusieurs des indicateurs suivants :
 
-   - `afxRegInsertable` permet d’afficher le contrôle dans la boîte de dialogue Insérer un objet pour les objets OLE.
-   - `afxRegApartmentThreading` définit le modèle de thread dans le registre sur ThreadingModel = Apartment.
-   - `afxRegFreeThreading` définit le modèle de thread dans le registre sur ThreadingModel = Free.
+- `afxRegInsertable` permet d’afficher le contrôle dans la boîte de dialogue Insérer un objet pour les objets OLE.
+- `afxRegApartmentThreading` définit le modèle de thread dans le registre sur ThreadingModel = Apartment.
+- `afxRegFreeThreading` définit le modèle de thread dans le registre sur ThreadingModel = Free.
 
-         You can combine the two flags `afxRegApartmentThreading` and `afxRegFreeThreading` to set ThreadingModel=Both. See [InprocServer32](/windows/win32/com/inprocserver32) in the Windows SDK for more information on threading model registration.
+Vous pouvez combiner les deux indicateurs `afxRegApartmentThreading` et `afxRegFreeThreading` pour définir ThreadingModel = both. Pour plus d’informations sur l’inscription du modèle de thread, consultez [InprocServer32](/windows/win32/com/inprocserver32) dans le SDK Windows.
 
 composants *l*, *W1*, *W2*, *B1*, *B2*, *B3*, *B4*, *B5*, *B6*, *B7*et *B8* du CLSID de la classe.
 

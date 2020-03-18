@@ -1,26 +1,24 @@
 ---
 title: Utilisation de CImageList
 ms.date: 11/04/2016
-f1_keywords:
-- CImageList
 helpviewer_keywords:
 - image list control
 - CImageList class [MFC], using
 ms.assetid: 3d2a909e-d641-46b7-aada-81cab1a29b41
-ms.openlocfilehash: c3e4cec75ce23beb2a617d672170f86c608ca0a2
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 09fd0e95ce2981afbebbfe10d87b26f88a7b5e13
+ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62411836"
+ms.lasthandoff: 03/17/2020
+ms.locfileid: "79447227"
 ---
 # <a name="using-cimagelist"></a>Utilisation de CImageList
 
-Une liste d’images, représentée par la classe [CImageList](../mfc/reference/cimagelist-class.md), est une collection d’images de même taille, chacun d’eux peut être référencé par son index. Listes d’images permettent de gérer efficacement de grands ensembles d’icônes ou de bitmaps. Listes d’images pas eux-mêmes sont des contrôles dans la mesure où ils ne sont pas windows ; Toutefois, ils sont utilisés avec différents types de contrôles, y compris les contrôles de liste ([CListCtrl](../mfc/reference/clistctrl-class.md)), contrôles d’arborescence ([CTreeCtrl](../mfc/reference/ctreectrl-class.md)) et contrôles onglet ([CTabCtrl](../mfc/reference/ctabctrl-class.md)).
+Une liste d’images, représentée par la classe [CImageList](../mfc/reference/cimagelist-class.md), est une collection d’images de même taille, dont chacune peut être référencée par son index. Les listes d’images permettent de gérer efficacement de grands ensembles d’icônes ou de bitmaps. Les listes d’images ne sont pas elles-mêmes des contrôles dans la mesure où elles ne sont pas Windows. Toutefois, ils sont utilisés avec plusieurs types différents de contrôles, notamment les contrôles de liste ([CListCtrl](../mfc/reference/clistctrl-class.md)), les contrôles d’arborescence ([CTreeCtrl](../mfc/reference/ctreectrl-class.md)) et les contrôles d’onglet ([CTabCtrl](../mfc/reference/ctabctrl-class.md)).
 
-Toutes les images dans une liste d’images sont contenues dans une seule grande bitmap au format de l’appareil à l’écran. Une liste d’images peut également inclure une bitmap monochrome contenant des masques utilisés pour dessiner des images en toute transparence (style d’icône). `CImageList` Fournit des fonctions membres qui vous permettent de dessiner des images, créer et détruire des listes d’images, ajouter et supprimer des images, remplacez les images, fusionner des images et faire glisser des images.
+Toutes les images d’une liste d’images sont contenues dans une seule bitmap de grande largeur au format de l’appareil d’écran. Une liste d’images peut également inclure une bitmap monochrome qui contient des masques utilisés pour dessiner des images en toute transparence (style d’icône). `CImageList` fournit des fonctions membres qui vous permettent de dessiner des images, de créer et de détruire des listes d’images, d’ajouter et de supprimer des images, de remplacer des images, de fusionner des images et de faire glisser des images.
 
-## <a name="what-do-you-want-to-know-more-about"></a>Ce que vous souhaitez en savoir plus sur
+## <a name="what-do-you-want-to-know-more-about"></a>Que voulez-vous en savoir plus sur
 
 - [Types de listes d’images](../mfc/types-of-image-lists.md)
 

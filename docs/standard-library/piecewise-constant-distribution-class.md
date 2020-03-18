@@ -26,14 +26,14 @@ helpviewer_keywords:
 - std::piecewise_constant_distribution [C++], param_type
 - std::piecewise_constant_distribution [C++], param_type
 ms.assetid: 2c9a21fa-623e-4d63-b827-3f1556b6dedb
-ms.openlocfilehash: 62cfba1fda3d9a42788e8dd47144705fb05c6787
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: db537e7cfab70c2ac4e235a752216b892882f8cf
+ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68455243"
+ms.lasthandoff: 03/17/2020
+ms.locfileid: "79446201"
 ---
-# <a name="piecewiseconstantdistribution-class"></a>piecewise_constant_distribution, classe
+# <a name="piecewise_constant_distribution-class"></a>piecewise_constant_distribution, classe
 
 Génère une distribution constante par morceaux qui présente des intervalles de largeur variable avec une probabilité uniforme dans chaque intervalle.
 
@@ -98,7 +98,7 @@ La fonction de propriété `intervals()` retourne un `vector<result_type>` avec 
 
 La fonction de propriété `densities()` retourne un `vector<result_type>` avec les densités stockées pour chaque ensemble d'intervalles, qui sont calculées en fonction des poids fournis dans les paramètres du constructeur.
 
-Le membre de propriété `param()` définit ou retourne le package de paramètres de distribution stockés `param_type`.
+Le membre de propriété `param()` définit ou retourne le package de paramètres de distribution stocké `param_type`.
 
 Les fonctions membres `min()` et `max()` retournent respectivement le plus petit et le plus grand résultat possible.
 
@@ -212,9 +212,9 @@ Distribution for 100 samples:
     14-15 ::::::::
 ```
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
-**En-tête :** \<random>
+**En-tête :** \<> aléatoire
 
 **Espace de noms :** std
 
@@ -248,10 +248,10 @@ explicit piecewise_constant_distribution(const param_type& parm);
 
 ### <a name="parameters"></a>Paramètres
 
-*premieri*\
+*premier*\
 Itérateur d'entrée du premier élément de la plage de distribution.
 
-*dernier*\
+*dernier*\i
 Itérateur d'entrée du dernier élément de la plage de distribution.
 
 *firstW*\
@@ -260,19 +260,19 @@ Itérateur d'entrée du premier élément de la plage de poids.
 *intervalles*\
 Un [initializer_list](../cpp/initializers.md) avec les intervalles de la distribution.
 
-*saut*\
+*nombre*\
 Nombre d'éléments dans la plage de distribution.
 
 *xmin*\
 Valeur la plus faible de la plage de distribution.
 
-*XMAX*\
+*xmax*\
 Valeur la plus élevée de la plage de distribution. Doit être supérieure à *xmin*.
 
 *weightfunc*\
 Objet représentant la fonction de probabilité pour la distribution. Le paramètre et la valeur de retour doivent être convertibles en **double**.
 
-*Parm*\
+*param*\
 Structure de paramètre utilisée pour construire la distribution.
 
 ### <a name="remarks"></a>Notes
@@ -280,6 +280,7 @@ Structure de paramètre utilisée pour construire la distribution.
 Le constructeur par défaut définit les paramètres stockés pour qu'il y ait un intervalle, de 0 à 1, avec une densité de probabilité de 1.
 
 Le constructeur de plage d'itérateurs
+
 ```cpp
 template <class InputIteratorI, class InputIteratorW>
 piecewise_constant_distribution(InputIteratorI firstI, InputIteratorI lastI,
@@ -289,6 +290,7 @@ piecewise_constant_distribution(InputIteratorI firstI, InputIteratorI lastI,
 construit un objet de distribution avec des intervalles à partir des itérateurs sur la séquence [ `firstI`, `lastI`) et une séquence de poids correspondante commençant à `firstW`.
 
 Le constructeur de listes d'initialiseurs
+
 ```cpp
 template <class UnaryOperation>
 piecewise_constant_distribution(initializer_list<result_type>
@@ -299,15 +301,17 @@ intervals,
 construit un objet de distribution avec des intervalles à partir des *intervalles* de la liste d’initialiseurs et des poids générés à partir de la fonction *weightfunc*.
 
 Le constructeur défini en tant que
+
 ```cpp
 template <class UnaryOperation>
 piecewise_constant_distribution(size_t count, result_type xmin, result_type xmax,
     UnaryOperation weightfunc);
 ```
 
-construit un objet de distribution avec des intervalles de *nombre* répartis uniformément sur `xmin,xmax`[], en assignant chaque pondération d’intervalle conformément à la fonction *weightfunc*, et *weightfunc* doit accepter un paramètre et avoir un retour valeur, qui sont convertibles en `double`. **Condition préalable :** `xmin < xmax`
+construit un objet de distribution avec des intervalles de *nombre* répartis uniformément sur [`xmin,xmax`], en assignant chaque poids d’intervalle conformément à la fonction *weightfunc*, et *weightfunc* doit accepter un paramètre et avoir une valeur de retour, tous deux convertibles en `double`. **Condition préalable :** `xmin < xmax`
 
 Le constructeur défini en tant que
+
 ```cpp
 explicit piecewise_constant_distribution(const param_type& parm);
 ```

@@ -1,19 +1,16 @@
 ---
 title: Opérateurs new et delete
 ms.date: 11/19/2019
-f1_keywords:
-- delete_cpp
-- new
 helpviewer_keywords:
 - new keyword [C++]
 - delete keyword [C++]
 ms.assetid: fa721b9e-0374-4f04-bb87-032ea775bcc8
-ms.openlocfilehash: c64b15f1e1e63b1e743743883429ffd11007de0a
-ms.sourcegitcommit: 654aecaeb5d3e3fe6bc926bafd6d5ace0d20a80e
+ms.openlocfilehash: 2fd665ce2570bbe7750684057cdf7f517f6f64f3
+ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/20/2019
-ms.locfileid: "74246451"
+ms.lasthandoff: 03/17/2020
+ms.locfileid: "79445448"
 ---
 # <a name="new-and-delete-operators"></a>Opérateurs new et delete
 
@@ -23,7 +20,7 @@ La **nouvelle** fonction dans la C++ bibliothèque standard prend en charge le c
 
 Pour obtenir la liste des fichiers de bibliothèque qui composent la bibliothèque Runtime C C++ et la bibliothèque standard, consultez fonctionnalités de la [bibliothèque CRT](../c-runtime-library/crt-library-features.md).
 
-##  <a id="new_operator"></a> Nouvel opérateur
+##  <a id="new_operator"> </a> Nouvel opérateur
 
 Lorsqu’une instruction telle que la suivante est rencontrée dans un programme, elle se traduit par un appel à la fonction **operator new**:
 
@@ -39,7 +36,7 @@ Les deux étendues pour les **nouvelles fonctions opérateur** sont décrites da
 
 ### <a name="scope-for-operator-new-functions"></a>Étendue pour les nouvelles fonctions opérateur
 
-|Opérateur|Portée|
+|Opérateur|Étendue|
 |--------------|-----------|
 |**:: operator new**|Global|
 |*Class-Name* **:: operator new**|Classe|
@@ -83,7 +80,7 @@ L’argument fourni entre parenthèses à **New** est passé à `Blanks::operato
 Blanks *SomeBlanks = new Blanks;
 ```
 
-Le compilateur prend en charge les opérateurs **New** et **Delete** du tableau membre dans une déclaration de classe. Exemple :
+Le compilateur prend en charge les opérateurs **New** et **Delete** du tableau membre dans une déclaration de classe. Par exemple :
 
 ```cpp
 class MyClass
@@ -124,7 +121,7 @@ int main() {
 
 Il existe une autre façon de gérer les demandes d’allocation de mémoire qui ont échoué. Écrivez une routine de récupération personnalisée pour gérer un tel échec, puis enregistrez votre fonction en appelant la fonction runtime [_set_new_handler](../c-runtime-library/reference/set-new-handler.md) .
 
-##  <a id="delete_operator"></a> Opérateur delete
+##  <a id="delete_operator"> </a> Opérateur delete
 
 La mémoire allouée dynamiquement à l’aide de l’opérateur **New** peut être libérée à l’aide de l’opérateur **Delete** . L’opérateur delete appelle la fonction **operator delete** , qui libère de la mémoire dans le pool disponible. L’utilisation de l’opérateur **Delete** entraîne également l’appel du destructeur de classe (le cas échéant).
 
@@ -193,7 +190,7 @@ int main( int argc, char *argv[] ) {
 
 Le code précédent peut être utilisé pour détecter les fuites de mémoire, c'est-à-dire la mémoire qui est allouée sur le magasin libre mais jamais récupérée. Pour effectuer cette détection, les opérateurs **New** et **Delete** globaux sont redéfinis pour compter l’allocation et la désallocation de mémoire.
 
-Le compilateur prend en charge les opérateurs **New** et **Delete** du tableau membre dans une déclaration de classe. Exemple :
+Le compilateur prend en charge les opérateurs **New** et **Delete** du tableau membre dans une déclaration de classe. Par exemple :
 
 ```cpp
 // spec1_the_operator_delete_function2.cpp

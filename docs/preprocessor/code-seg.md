@@ -1,21 +1,20 @@
 ---
-title: code_seg, pragma
+title: code_seg (pragma)
 ms.date: 08/29/2019
 f1_keywords:
-- code_seg_CPP
 - vc-pragma.code_seg
 helpviewer_keywords:
 - pragmas, code_seg
 - code_seg pragma
 ms.assetid: bf4faac1-a511-46a6-8d9e-456851d97d56
-ms.openlocfilehash: 0144b3ed220c39cd30aeb8e53bc2aa3c0381b668
-ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
+ms.openlocfilehash: 65d702273593dc7fba68cc040f700b01a2c5e4a7
+ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/03/2019
-ms.locfileid: "70218310"
+ms.lasthandoff: 03/17/2020
+ms.locfileid: "79446474"
 ---
-# <a name="code_seg-pragma"></a>code_seg, pragma
+# <a name="code_seg-pragma"></a>code_seg (pragma)
 
 Spécifie la section de texte (segment) où les fonctions sont stockées dans le fichier objet (. obj).
 
@@ -26,11 +25,11 @@ Spécifie la section de texte (segment) où les fonctions sont stockées dans le
 
 ### <a name="parameters"></a>Paramètres
 
-**souleve**\
+\ **Push**
 Facultatif Place un enregistrement sur la pile interne du compilateur. Un **Push** peut avoir un *identificateur* et un *nom de section*.
 
-**roulant**\
-Facultatif Supprime un enregistrement du haut de la pile interne du compilateur. Une **liste** déroulante peut avoir un *identificateur* et un *nom de section*. Vous pouvez dépiler plusieurs enregistrements à l’aide d’une seule commande **pop** en utilisant l' *identificateur*. La *section-Name* devient le nom de la section de texte active après le pop.
+\ **pop**
+Facultatif Supprime un enregistrement du haut de la pile interne du compilateur. Une **liste déroulante** peut avoir un *identificateur* et un *nom de section*. Vous pouvez dépiler plusieurs enregistrements à l’aide d’une seule commande **pop** en utilisant l' *identificateur*. La *section-Name* devient le nom de la section de texte active après le pop.
 
 *identificateur*\
 Facultatif En cas d’utilisation avec **Push**, assigne un nom à l’enregistrement sur la pile interne du compilateur. Lorsqu’elle est utilisée avec **pop**, la directive dépile les enregistrements de la pile interne jusqu’à ce que l' *identificateur* soit supprimé. Si l' *identificateur* est introuvable sur la pile interne, rien n’est dépilé.
@@ -45,9 +44,9 @@ Facultatif Ignoré, mais inclus pour la compatibilité avec les versions C++ de 
 
 Une *section* dans un fichier objet est un bloc de données nommé qui est chargé en mémoire en tant qu’unité. Une *section de texte* est une section qui contient du code exécutable. Dans cet article, les termes *segment* et *section* ont la même signification.
 
-La directive de pragma **code_seg** indique au compilateur de placer tout le code d’objet suivant à partir de l’unité de traduction dans une section de texte nommée *section-Name*. Par défaut, la section de texte utilisée pour les fonctions dans un fichier objet `.text`est nommée. Une directive de pragma **code_seg** sans paramètre de *nom de section* rétablit le nom de la section de texte pour `.text`le code d’objet suivant sur.
+La directive **code_seg** pragma indique au compilateur de placer tout le code d’objet suivant à partir de l’unité de traduction dans une section de texte nommée *section-Name*. Par défaut, la section de texte utilisée pour les fonctions dans un fichier objet est nommée `.text`. Une **code_seg** directive pragma sans paramètre de *nom de section* réinitialise le nom de la section de texte pour que le code d’objet suivant soit `.text`.
 
-La directive pragma **code_seg** ne contrôle pas le positionnement du code objet généré pour les modèles instanciés. Il ne contrôle pas non plus le code généré implicitement par le compilateur, comme les fonctions membres spéciales. Pour contrôler ce code, nous vous recommandons d’utiliser à la place l’attribut [_ _ declspec (code_seg (...))](../cpp/code-seg-declspec.md) . Elle vous permet de contrôler le placement de tout le code d’objet, y compris le code généré par le compilateur.
+La directive **code_seg** pragma ne contrôle pas le placement du code objet généré pour les modèles instanciés. Il ne contrôle pas non plus le code généré implicitement par le compilateur, comme les fonctions membres spéciales. Pour contrôler ce code, nous vous recommandons d’utiliser à la place l’attribut [__declspec (code_seg (...))](../cpp/code-seg-declspec.md) . Elle vous permet de contrôler le placement de tout le code d’objet, y compris le code généré par le compilateur.
 
 Pour obtenir la liste des noms qui ne doivent pas être utilisés pour créer une section, consultez [/section](../build/reference/section-specify-section-attributes.md).
 
@@ -57,7 +56,7 @@ Vous pouvez utiliser [DUMPBIN. EXE](../build/reference/dumpbin-command-line.md) 
 
 ## <a name="example"></a>Exemple
 
-Cet exemple montre comment utiliser la directive pragma **code_seg** pour contrôler où le code objet est placé:
+Cet exemple montre comment utiliser la directive **code_seg** pragma pour contrôler où le code objet est placé :
 
 ```cpp
 // pragma_directive_code_seg.cpp
@@ -82,5 +81,5 @@ int main() {
 
 ## <a name="see-also"></a>Voir aussi
 
-[code_seg (_ _ declspec)](../cpp/code-seg-declspec.md)\
-[Directives pragma et mot clé __Pragma](../preprocessor/pragma-directives-and-the-pragma-keyword.md)
+[code_seg (__declspec)](../cpp/code-seg-declspec.md)\
+[Directives pragma et mot clé __pragma](../preprocessor/pragma-directives-and-the-pragma-keyword.md)

@@ -115,7 +115,6 @@ f1_keywords:
 - LNK1298
 - LNK1299
 - LNK1300
-- LNK1301
 - LNK1303
 - LNK1304
 - LNK1305
@@ -126,7 +125,6 @@ f1_keywords:
 - LNK1315
 - LNK1316
 - LNK1317
-- LNK1318
 - LNK1319
 - LNK1320
 - LNK1321
@@ -203,7 +201,6 @@ f1_keywords:
 - LNK2035
 - LNK2036
 - LNK2037
-- LNK2038
 - LNK2040
 - LNK2041
 - LNK2042
@@ -216,7 +213,6 @@ f1_keywords:
 - LNK4017
 - LNK4018
 - LNK4019
-- LNK4020
 - LNK4030
 - LNK4031
 - LNK4038
@@ -317,12 +313,12 @@ helpviewer_keywords:
 - linker [C++], errors and warnings
 - errors [C++], linker
 ms.assetid: d4b12c0f-4dae-48b2-9b9e-fedf94c94cb0
-ms.openlocfilehash: 8e611cd20374c912de8d648f51c97177e0d070f1
-ms.sourcegitcommit: 3caf5261b3ea80d9cf14038c116ba981d655cd13
+ms.openlocfilehash: e845ba44476508892be63f0a99f8b2c2fedf0d8e
+ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/11/2019
-ms.locfileid: "70907847"
+ms.lasthandoff: 03/17/2020
+ms.locfileid: "79445461"
 ---
 # <a name="linker-tools-errors-and-warnings-lnkxxxx"></a>Erreurs et avertissements des outils Éditeur de liens (LNKxxxx)
 
@@ -403,6 +399,7 @@ Les outils de l’éditeur de liens LINK, LIB, DUMPBIN et EDITBIN partagent un e
 [Erreur des outils Éditeur de liens LNK2028](../../error-messages/tool-errors/linker-tools-error-lnk2028.md) \
 [Erreur des outils Éditeur de liens LNK2031](../../error-messages/tool-errors/linker-tools-error-lnk2031.md) \
 [Erreur des outils Éditeur de liens LNK2033](../../error-messages/tool-errors/linker-tools-error-lnk2033.md) \
+[Erreur des outils Éditeur de liens LNK2038](../../error-messages/tool-errors/linker-tools-error-lnk2038.md) \
 [Erreur des outils Éditeur de liens LNK2039](../../error-messages/tool-errors/linker-tools-error-lnk2039.md)
 
 ## <a name="linker-tools-warnings"></a>Avertissements des outils Éditeur de liens

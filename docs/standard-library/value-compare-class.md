@@ -2,18 +2,18 @@
 title: value_compare, classe
 ms.date: 11/04/2016
 f1_keywords:
-- value_compare
+- hash_map/std::value_compare
 helpviewer_keywords:
 - value_compare class
 ms.assetid: c306c5b9-3505-4357-aa6b-216451b951ed
-ms.openlocfilehash: 0e057a6229c903402a51b34a8f4e844e80ace187
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: d64d51869ca8db1ed42e9d33691f59da4473d8d0
+ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68452367"
+ms.lasthandoff: 03/17/2020
+ms.locfileid: "79447565"
 ---
-# <a name="valuecompare-class"></a>value_compare, classe
+# <a name="value_compare-class"></a>value_compare, classe
 
 Fournit un objet de fonction qui peut comparer les éléments d’un hash_map en comparant les valeurs de leurs clés pour déterminer leur ordre relatif dans le hash_map.
 
@@ -39,7 +39,7 @@ protected:
 
 ## <a name="remarks"></a>Notes
 
-Les critères de comparaison fournis par value_compare `value_types` entre les éléments entiers contenus par un hash_map sont induits d’une comparaison entre les clés des éléments respectifs par la construction de la classe auxiliaire. L’opérateur de fonction membre utilise l' `comp` objet de `key_compare` type stocké dans l’objet de fonction fourni par value_compare pour comparer les composants de clé de tri de deux éléments.
+Les critères de comparaison fournis par value_compare entre `value_types` d’éléments entiers contenus dans un hash_map sont induits d’une comparaison entre les clés des éléments respectifs par la construction de la classe auxiliaire. L’opérateur de fonction membre utilise l’objet `comp` de type `key_compare` stocké dans l’objet de fonction fourni par value_compare pour comparer les composants de clé de tri de deux éléments.
 
 Pour les objets hash_set et hash_multiset, qui sont des conteneurs simples dans lesquels les valeurs de clé sont identiques aux valeurs d’élément, value_compare équivaut à `key_compare` ; pour les objets hash_map et hash_multimap, ce n’est pas le cas, car la valeur des éléments `pair` de type n’est pas identique à la valeur de la clé de l’élément.
 
@@ -47,9 +47,9 @@ Pour les objets hash_set et hash_multiset, qui sont des conteneurs simples dans 
 
 Consultez l’exemple [hash_map::value_comp](../standard-library/hash-map-class.md#value_comp) qui illustre comment déclarer et utiliser value_compare.
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
-**En-tête :** \<hash_map>
+**En-tête :** \<hash_map >
 
 **Espace de noms :** stdext
 
@@ -57,4 +57,4 @@ Consultez l’exemple [hash_map::value_comp](../standard-library/hash-map-class.
 
 [binary_function, struct](../standard-library/binary-function-struct.md)\
 [Sécurité des threads dans la bibliothèque C++ Standard](../standard-library/thread-safety-in-the-cpp-standard-library.md)\
-[Informations de référence sur la bibliothèque standard C++](../standard-library/cpp-standard-library-reference.md)
+[Informations de référence sur la bibliothèque C++ Standard](../standard-library/cpp-standard-library-reference.md)

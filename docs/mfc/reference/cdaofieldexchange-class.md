@@ -15,11 +15,11 @@ helpviewer_keywords:
 - CDaoFieldExchange [MFC], m_prs
 ms.assetid: 350a663e-92ff-44ab-ad53-d94efa2e5823
 ms.openlocfilehash: cfffebd16c3c1d62dc4084b962c22911e4b46ae5
-ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
+ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/06/2020
-ms.locfileid: "78867299"
+ms.lasthandoff: 03/16/2020
+ms.locfileid: "79420623"
 ---
 # <a name="cdaofieldexchange-class"></a>CDaoFieldExchange (classe)
 
@@ -42,7 +42,7 @@ class CDaoFieldExchange
 |[CDaoFieldExchange :: IsValidOperation](#isvalidoperation)|Retourne une valeur différente de zéro si l’opération en cours est appropriée pour le type de champ en cours de mise à jour.|
 |[CDaoFieldExchange :: SetFieldType](#setfieldtype)|Spécifie le type de membre de données du jeu d’enregistrements (colonne ou paramètre) représenté par tous les appels suivants aux fonctions DFX jusqu’au prochain appel à `SetFieldType`.|
 
-### <a name="public-data-members"></a>Membres de données publiques
+### <a name="public-data-members"></a>Membres de données publics
 
 |Name|Description|
 |----------|-----------------|
@@ -69,7 +69,7 @@ Un objet `CDaoFieldExchange` fournit les informations de contexte nécessaires �
 
 La fonction membre [IsValidOperation](#isvalidoperation) est fournie pour l’écriture de vos propres routines DFX personnalisées. Vous utiliserez fréquemment [SetFieldType](#setfieldtype) dans vos fonctions [CDaoRecordset ::D ofieldexchange](../../mfc/reference/cdaorecordset-class.md#dofieldexchange) . Pour plus d’informations sur les fonctions DFX globales, consultez [fonctions d’échange de champs d’enregistrement](../../mfc/reference/record-field-exchange-functions.md). Pour plus d’informations sur l’écriture de routines DFX personnalisées pour vos propres types de données, consultez la [note technique 53](../../mfc/tn053-custom-dfx-routines-for-dao-database-classes.md).
 
-## <a name="inheritance-hierarchy"></a>Hiérarchie d'héritage
+## <a name="inheritance-hierarchy"></a>Hiérarchie d’héritage
 
 `CDaoFieldExchange`
 

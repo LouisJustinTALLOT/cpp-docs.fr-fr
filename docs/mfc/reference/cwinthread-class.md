@@ -51,11 +51,11 @@ helpviewer_keywords:
 - CWinThread [MFC], m_pMainWnd
 ms.assetid: 10cdc294-4057-4e76-ac7c-a8967a89af0b
 ms.openlocfilehash: 43154e1ec4c6b856ad203a4b9ac49e4f4bcf9576
-ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
+ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/06/2020
-ms.locfileid: "78866558"
+ms.lasthandoff: 03/16/2020
+ms.locfileid: "79421414"
 ---
 # <a name="cwinthread-class"></a>CWinThread (classe)
 
@@ -96,13 +96,13 @@ class CWinThread : public CCmdTarget
 |[CWinThread :: SetThreadPriority](#setthreadpriority)|Définit la priorité du thread actuel.|
 |[CWinThread :: SuspendThread](#suspendthread)|Incrémente le nombre de suspensions d’un thread.|
 
-### <a name="public-operators"></a>Op&#233;rateurs publics
+### <a name="public-operators"></a>Opérateurs publics
 
 |Name|Description|
 |----------|-----------------|
 |[CWinThread :: Operator, HANDLE](#operator_handle)|Récupère le handle de l’objet `CWinThread`.|
 
-### <a name="public-data-members"></a>Membres de données publiques
+### <a name="public-data-members"></a>Membres de données publics
 
 |Name|Description|
 |----------|-----------------|
@@ -128,7 +128,7 @@ Au lieu d’appeler `AfxBeginThread`, vous pouvez construire un objet dérivé d
 
 Pour plus d’informations sur les `CWinThread`, consultez les articles sur les [ C++ multithreads avec et MFC](../../parallel/multithreading-with-cpp-and-mfc.md), [Multithreading : création de threads d’interface utilisateur](../../parallel/multithreading-creating-user-interface-threads.md), [Multithreading : création de threads de travail](../../parallel/multithreading-creating-worker-threads.md)et [Multithreading : comment utiliser les classes de synchronisation](../../parallel/multithreading-how-to-use-the-synchronization-classes.md).
 
-## <a name="inheritance-hierarchy"></a>Hiérarchie d'héritage
+## <a name="inheritance-hierarchy"></a>Hiérarchie d’héritage
 
 [CObject](../../mfc/reference/cobject-class.md)
 

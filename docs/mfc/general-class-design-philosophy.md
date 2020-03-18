@@ -1,8 +1,6 @@
 ---
 title: Philosophie générale de conception des classes
 ms.date: 11/04/2016
-f1_keywords:
-- vc.classes.mfc
 helpviewer_keywords:
 - designing classes [MFC]
 - MFC, Windows API
@@ -10,40 +8,40 @@ helpviewer_keywords:
 - classes [MFC], MFC class design
 - Windows API [MFC], and MFC
 ms.assetid: e6861ae0-1581-4d9c-9ddf-63f9afcdb913
-ms.openlocfilehash: 4dfa11c73703f5f2d3d17f8278610d32178af679
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 34a173802e3fa43615c05da4ce747592f851228f
+ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62219617"
+ms.lasthandoff: 03/17/2020
+ms.locfileid: "79441185"
 ---
 # <a name="general-class-design-philosophy"></a>Philosophie générale de conception des classes
 
-Microsoft Windows a été conçue bien avant que le langage C++ sont devenus populaires. Étant donné que des milliers d’applications utilisent l’interface de programmation d’application (API) Windows du langage C, cette interface est conservée pour un avenir proche. N’importe quelle interface C++ Windows doit par conséquent être créé sur l’API du langage C procédural. Cela garantit que les applications C++ sera en mesure de coexister avec les applications C.
+Microsoft Windows a été conçu longtemps avant C++ que la langue ne soit devenue populaire. Étant donné que des milliers d’applications utilisent l’interface de programmation d’applications (API) Windows en langage C, cette interface sera conservée dans un avenir prévisible. Toute C++ interface Windows doit donc être générée en plus de l’API de langage C. Cela garantit que C++ les applications seront en mesure de coexister avec les applications C.
 
-La bibliothèque Microsoft Foundation Class est une interface orientée objet pour Windows qui répond aux objectifs de conception suivantes :
+Le bibliothèque MFC (Microsoft Foundation Class) est une interface orientée objet vers Windows qui répond aux objectifs de conception suivants :
 
-- Réduction significative de l’effort nécessaire pour écrire une application pour Windows.
+- Réduction significative de l’effort d’écriture d’une application pour Windows.
 
-- Vitesse d’exécution comparable à celle de l’API de langage C.
+- Vitesse d’exécution comparable à celle de l’API du langage C.
 
-- Surcharge de la taille minimum de code.
+- Surcharge minimale de la taille du code.
 
-- Possibilité d’appeler directement de n’importe quelle fonction C de Windows.
+- Possibilité d’appeler directement une fonction C Windows.
 
-- Faciliter la conversion des applications C existantes à C++.
+- Conversion plus facile des applications C existantes C++en.
 
-- Possibilité de tirer parti de la base existante de Windows en langage C expérience de programmation.
+- Possibilité de tirer parti de la base existante de l’expérience de programmation Windows en langage C.
 
-- Une utilisation plus simple de l’API Windows avec C++ qu’avec C.
+- Utilisation plus facile de l’API Windows C++ avec C.
 
-- Plus facile à utiliser encore des abstractions puissantes de compliquée des fonctionnalités telles que les contrôles ActiveX, prise en charge de la base de données, l’impression, barres d’outils et barres d’état.
+- Il est plus facile d’utiliser des abstractions puissantes de fonctionnalités complexes, telles que les contrôles ActiveX, la prise en charge des bases de données, l’impression, les barres d’outils et les barres d’État.
 
-- API Windows True pour C++ qui utilise efficacement les fonctionnalités du langage C++.
+- Véritable API Windows pour C++ qui utilise C++ efficacement les fonctionnalités de langage.
 
 Pour plus d’informations sur la conception de la bibliothèque MFC, consultez :
 
-- [L’infrastructure d’Application](../mfc/application-framework.md)
+- [Infrastructure d’application](../mfc/application-framework.md)
 
 - [Relation avec l’API du langage C](../mfc/relationship-to-the-c-language-api.md)
 

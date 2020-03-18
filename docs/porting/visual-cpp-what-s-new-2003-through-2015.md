@@ -2,12 +2,12 @@
 title: Nouveautés de Visual C++ entre 2003 et 2015
 ms.date: 07/02/2019
 ms.assetid: c4afde6f-3d75-40bf-986f-be57e3818e26
-ms.openlocfilehash: 6a3db2c9af2bcd9201f696756053cedb0788571a
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
-ms.translationtype: HT
+ms.openlocfilehash: 1e5454e749d93a817caa9ca13553e203f96e038b
+ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69510301"
+ms.lasthandoff: 03/17/2020
+ms.locfileid: "79446493"
 ---
 # <a name="visual-c-what39s-new-2003-through-2015"></a>Nouveautés de Visual C++ entre 2003 et 2015
 
@@ -42,7 +42,7 @@ Même si ces différences peuvent affecter votre code source ou d’autres artef
     Command line warning  D9035: option 'Zc:forScope-' has been deprecated and will be removed in a future release
    ```
 
-   Cette option était généralement utilisée pour autoriser du code non standard utilisant des variables de boucle après le point où, selon la norme, elles devraient être hors de portée. Elle était nécessaire uniquement en cas de compilation avec l’option `/Za`, car sans `/Za`, l’utilisation d’une variable de boucle for après la fin de la boucle est toujours autorisée. Si vous ne vous souciez pas de la conformité aux normes (par exemple, si le code n’est pas destiné à d’autres compilateurs), vous pouvez éventuellement désactiver l’option `/Za` (ou assigner à la propriété **Désactivation des extensions de langage** la valeur **Non**). Si vous souhaitez écrire un code portable, conforme aux normes, vous devez réécrire votre code afin qu'il soit conforme à la norme en déplaçant la déclaration de ces variables vers un point extérieur à la boucle.
+   Cette option était généralement utilisée pour autoriser du code non standard utilisant des variables de boucle après le point où, selon la norme, elles devraient être hors de portée. Elle était nécessaire uniquement en cas de compilation avec l’option `/Za`, car sans `/Za`, l’utilisation d’une variable de boucle for après la fin de la boucle est toujours autorisée. Si vous ne vous souciez pas de la conformité aux normes (par exemple, si le code n’est pas destiné à d’autres compilateurs), vous pouvez éventuellement désactiver l’option `/Za` (ou affecter à la propriété **Désactivation des extensions de langage** la valeur **Non**). Si vous souhaitez écrire un code portable, conforme aux normes, vous devez réécrire votre code afin qu'il soit conforme à la norme en déplaçant la déclaration de ces variables vers un point extérieur à la boucle.
 
    ```cpp
     // zc_forScope.cpp
@@ -147,7 +147,7 @@ Même si ces différences peuvent affecter votre code source ou d’autres artef
 
 - **Gestion des exceptions**
 
-   Quelques modifications ont été apportées à la gestion des exceptions. Tout d'abord, les objets d'exception doivent pouvoir être copiés ou déplacés. Le code suivant se compile dans Visual Studio 2013, mais pas dans Visual Studio 2015 :
+   Quelques modifications ont été apportées à la gestion des exceptions. Tout d'abord, les objets d'exception doivent pouvoir être copiés ou déplacés. Le code suivant se compile dans Visual Studio 2013, mais pas dans Visual Studio 2015 :
 
    ```cpp
     struct S {
@@ -179,7 +179,7 @@ Même si ces différences peuvent affecter votre code source ou d’autres artef
 
    Pour mettre à jour votre code, vérifiez que le constructeur de copie de l’objet d’exception est public et qu’il n’est pas marqué **explicit**.
 
-   L'interception d'une exception par sa valeur exige que l'objet d'exception puisse être copié. Le code suivant se compile dans Visual Studio 2013, mais pas dans Visual Studio 2015 :
+   L'interception d'une exception par sa valeur exige que l'objet d'exception puisse être copié. Le code suivant se compile dans Visual Studio 2013, mais pas dans Visual Studio 2015 :
 
    ```cpp
     struct B {
@@ -255,30 +255,30 @@ Même si ces différences peuvent affecter votre code source ou d’autres artef
 
    Une modification a été apportée à l’opérateur **delete** pour le rendre conforme à la norme C++14. Vous trouverez les détails relatifs au changement de normes sur la page décrivant la [libération dimensionnée C++](https://isocpp.org/files/papers/n3778.html). Les changements ajoutent une forme de l’opérateur **delete** global, qui accepte un paramètre de taille. Il s’agit d’un changement cassant pour la raison suivante : si vous utilisiez un opérateur **delete** avec la même signature (pour correspondre à un opérateur **placement new**), vous recevrez une erreur de compilation (C2956, qui se produit au point où l’opérateur **placement new** est utilisé, car il s’agit de la position dans le code où le compilateur tente d’identifier l’opérateur **delete** correspondant approprié).
 
-   La fonction `void operator delete(void *, size_t)` était un opérateur **placement delete** correspondant à la fonction **placement new** `void * operator new(size_t, size_t)` dans C++11. Avec la libération dimensionnée C++14, cette fonction **delete** est à présent une *fonction de libération habituelle* (opérateur **delete** global). Selon la norme, si l’utilisation d’un opérateur **placement new** recherche une fonction **delete** correspondante et trouve une fonction de libération habituelle, le programme est incorrect.
+   La fonction `void operator delete(void *, size_t)` était un opérateur **placement delete** correspondant à la fonction **placement new**`void * operator new(size_t, size_t)` dans C++11. Avec la libération dimensionnée C++14, cette fonction **delete** est à présent une *fonction de libération habituelle* (opérateur **delete** global). Selon la norme, si l’utilisation d’un opérateur **placement new** recherche une fonction **delete** correspondante et trouve une fonction de libération habituelle, le programme est incorrect.
 
-   Par exemple, votre code définit à la fois un opérateur **placement new** et un opérateur **placement delete** :
+   Par exemple, votre code définit à la fois un opérateur **placement new** et un opérateur **placement delete** :
 
    ```cpp
     void * operator new(std::size_t, std::size_t);
     void operator delete(void*, std::size_t) noexcept;
    ```
 
-   Le problème se produit en raison de la correspondance dans les signatures de fonction entre un opérateur **placement delete** que vous avez défini et le nouvel opérateur **delete** dimensionné global. Déterminez si vous pouvez utiliser un autre type que `size_t` pour les opérateurs **placement new** et **delete**.  Notez que le type du **typedef** `size_t` dépend du compilateur. Il s’agit d’un **typedef** pour **unsigned int** en Visual C++. Il est recommandé d'utiliser un type énuméré tel que :
+   Le problème se produit en raison de la correspondance dans les signatures de fonction entre un opérateur **placement delete** que vous avez défini et le nouvel opérateur **delete** dimensionné global. Déterminez si vous pouvez utiliser un autre type que `size_t` pour les opérateurs **placement new** et **delete**.  Notez que le type de `size_t` **typedef** dépend du compilateur ; Il s’agit d’un **typedef** pour **unsigned int** dans Visual C++. Il est recommandé d'utiliser un type énuméré tel que :
 
    ```cpp
     enum class my_type : size_t {};
    ```
 
-   Changez ensuite votre définition de placement **new** et **delete** pour utiliser ce type en tant que second argument à la place de `size_t`. Vous devez également mettre à jour les appels à **placement new** afin de passer le nouveau type (par exemple, en utilisant `static_cast<my_type>` pour effectuer une conversion à partir de la valeur entière) et mettre à jour la définition de **new** et **delete** pour réeffectuer un cast vers le type entier. Vous n’avez pas besoin d’utiliser un **enum** pour cela. Un type de classe avec un membre `size_t` fonctionne également.
+   Changez ensuite votre définition de placement **new** et **delete** pour utiliser ce type en tant que second argument à la place de `size_t`. Vous devez également mettre à jour les appels à **placement New** pour transmettre le nouveau type (par exemple, en utilisant `static_cast<my_type>` pour effectuer une conversion à partir de la valeur entière) et mettre à jour la définition de **New** et **Delete** pour effectuer un cast en retour vers le type entier. Vous n’avez pas besoin d’utiliser un **enum** pour ce. un type de classe avec un membre `size_t` fonctionne également.
 
    Une autre solution consiste à éliminer complètement **placement new**. Si votre code utilise **placement new** pour implémenter un pool de mémoires où l’argument de positionnement correspond à la taille de l’objet alloué ou supprimé, la fonction de libération dimensionnée peut servir à remplacer votre propre code de pool de mémoires personnalisé. De plus, vous pouvez supprimer les fonctions de positionnement et les remplacer simplement par un opérateur **delete** à deux arguments.
 
-   Si vous ne souhaitez pas mettre à jour votre code immédiatement, vous pouvez revenir à l’ancien comportement en utilisant l’option de compilateur `/Zc:sizedDealloc-`. Si vous utilisez cette option, les fonctions **delete** à deux arguments n’existent pas et ne provoquent pas de conflit avec votre opérateur **placement delete**.
+   Si vous ne voulez pas mettre à jour votre code tout de suite, vous pouvez revenir à l’ancien comportement en utilisant l’option de compilateur `/Zc:sizedDealloc-`. Si vous utilisez cette option, les fonctions **Delete** à deux arguments n’existent pas et ne provoquent pas de conflit avec votre opérateur **placement Delete** .
 
 - **Membres de données d’union**
 
-   Les membres de données d'unions ne peuvent plus posséder de types de référence. Le code suivant se compile correctement dans Visual Studio 2013, mais génère une erreur dans Visual Studio 2015.
+   Les membres de données d'unions ne peuvent plus posséder de types de référence. Le code suivant se compile correctement dans Visual Studio 2013, mais génère une erreur dans Visual Studio 2015.
 
    ```cpp
     union U1 {
@@ -514,7 +514,7 @@ Même si ces différences peuvent affecter votre code source ou d’autres artef
 
 - **Classes de base virtuelles privées et héritage indirect**
 
-   Les versions précédentes du compilateur autorisaient une classe dérivée à appeler des fonctions membres de ses classes de base `private virtual` *dérivées indirectement*. Cet ancien comportement était incorrect et non conforme à la norme C++. Le compilateur n’accepte plus de code écrit de cette façon. Il émet dans ce cas l’erreur du compilateur C2280.
+   Les versions précédentes du compilateur permettaient à une classe dérivée d’appeler des fonctions membres de ses classes de base `private virtual` *indirectement dérivées* . Cet ancien comportement était incorrect et non conforme à la norme C++. Le compilateur n’accepte plus de code écrit de cette façon. Il émet dans ce cas l’erreur du compilateur C2280.
 
    ```Output
     error C2280: 'void *S3::__delDtor(unsigned int)': attempting to reference a deleted function
@@ -821,7 +821,7 @@ Même si ces différences peuvent affecter votre code source ou d’autres artef
 
    Des exemples des autres avertissements restaurés sont fournis dans leur documentation.
 
-- **#include : utilisation du spécificateur de répertoire parent '..' dans le chemin** (concerne uniquement `/Wall` `/WX`)
+- **#include : utilisation du spécificateur de répertoire parent'.. 'dans le chemin d’accès** (affecte uniquement `/Wall` `/WX`)
 
    Les versions précédentes du compilateur ne détectaient pas l’utilisation du spécificateur de répertoire parent ’..’ dans le chemin d’accès des directives  `#include` . Le code écrit de cette manière est généralement conçu pour inclure des en-têtes qui existent en dehors du projet en utilisant de manière incorrecte des chemins d’accès relatifs au projet. Cet ancien comportement créait un risque que le programme puisse être compilé en incluant un fichier source différent de celui prévu par le programmeur, ou que ces chemins d’accès relatifs ne soient pas portables vers d’autres environnements de génération. Désormais, le compilateur détecte et informe le programmeur du code écrit de cette façon, et il émet un avertissement C4464 facultatif si cette fonctionnalité est activée.
 
@@ -843,7 +843,7 @@ Même si ces différences peuvent affecter votre code source ou d’autres artef
 
    De plus, bien que le compilateur ne donne pas de diagnostic spécifique, nous vous recommandons également de ne pas utiliser le spécificateur de répertoire parent ".." pour spécifier les répertoires Include de votre projet.
 
-- **#pragma optimize() s’étend au-delà de la fin du fichier d’en-tête** (affecte uniquement `/Wall` `/WX`)
+- **#pragma optimize () s’étend au-delà de la fin du fichier d’en-tête** (affecte uniquement `/Wall` `/WX`)
 
    Les versions précédentes du compilateur ne détectaient pas les modifications apportées aux paramètres de l’indicateur d’optimisation qui échappent un fichier d’en-tête inclus dans une unité de traduction. Désormais, le compilateur détecte et informe le programmeur du code écrit de cette façon, et il émet un avertissement C4426 facultatif à l’emplacement du `#include`incriminé, si cette fonctionnalité est activée. Cet avertissement est émis uniquement si le modifications entrent en conflit avec les indicateurs d’optimisation définis par des arguments de ligne de commande au compilateur.
 
@@ -876,7 +876,7 @@ Même si ces différences peuvent affecter votre code source ou d’autres artef
     #include "C4426.h"
    ```
 
-- **Incompatibilité de #pragma warning(push)** et de **#pragma warning(pop)** (affecte uniquement `/Wall` `/WX`)
+- **Incompatibilité #pragma avertissement (push)** et **#pragma avertissement (POP)** (affecte uniquement `/Wall` `/WX`)
 
    Les versions précédentes du compilateur ne détectaient pas les associations des modifications d’état `#pragma warning(push)` aux modifications d’état `#pragma warning(pop)` dans un autre fichier source, qui sont rarement souhaitées. Cet ancien comportement créait un risque que le programme soit compilé avec un autre ensemble d’avertissements activé que celui prévu par le programmeur, ce qui pouvait provoquer un comportement incorrect en mode silencieux. Désormais, le compilateur détecte et informe le programmeur du code écrit de cette façon, et il émet un avertissement C5031 facultatif à l’emplacement du `#pragma warning(pop)` correspondant, si cette fonctionnalité est activée. Cet avertissement inclut une note faisant référence à l’emplacement du `#pragma warning(push)` correspondant.
 
@@ -932,9 +932,9 @@ Même si ces différences peuvent affecter votre code source ou d’autres artef
 
    Bien que rare, le code écrit de cette manière est parfois intentionnel. Le code écrit de cette manière est sensible aux modifications de l’ordre de `#include`. Dans la mesure du possible, nous conseillons que les fichiers de code source gèrent l’état d’avertissement de façon autonome.
 
-- **#pragma warning(push) sans correspondance** (affecte uniquement `/Wall` `/WX`)
+- **Avertissement de #pragma sans correspondance (push)** (affecte uniquement `/Wall` `/WX`)
 
-   Les versions précédentes du compilateur ne détectaient pas les modifications d’état `#pragma warning(push)` sans correspondance à la fin d’une unité de traduction. Désormais, le compilateur détecte le code écrit de cette façon et le notifie au programmeur. Il émet également un avertissement C5032 facultatif à l’emplacement du `#pragma warning(push)` sans correspondance, si cette fonctionnalité est activée. Cet avertissement est émis uniquement s’il n’y a aucune erreur de compilation dans l’unité de traduction.
+   Les versions précédentes du compilateur ne détectaient pas les modifications d’état `#pragma warning(push)` sans correspondance à la fin d’une unité de traduction. Désormais, le compilateur détecte le code écrit de cette façon et notifie le programmeur. De plus, il émet un avertissement C5032 facultatif à l’emplacement du `#pragma warning(push)` sans correspondance, si cette fonctionnalité est activée. Cet avertissement est émis uniquement s’il n’y a aucune erreur de compilation dans l’unité de traduction.
 
    ```Output
     warning C5032: detected #pragma warning(push) with no corresponding #pragma warning(pop)
@@ -985,7 +985,7 @@ Même si ces différences peuvent affecter votre code source ou d’autres artef
     warning C4720: unreachable code
    ```
 
-   Dans de nombreux cas, cet avertissement peut être émis uniquement lors de la compilation avec les optimisations activées, car les optimisations peuvent intégrer plus d’appels de fonction, supprimer le code redondant ou permettre de déterminer que du code est inaccessible. Nous avons constaté que de nouvelles instances de l’avertissement C4720 étaient fréquentes dans les blocs **try/catch**, en particulier en cas d’utilisation de [std::find](assetId:///std::find?qualifyHint=False&autoUpgrade=True).
+   Dans de nombreux cas, cet avertissement peut être émis uniquement lors de la compilation avec les optimisations activées, car les optimisations peuvent intégrer plus d’appels de fonction, supprimer le code redondant ou permettre de déterminer que du code est inaccessible. Nous avons constaté que de nouvelles instances de l’avertissement C4720 étaient fréquentes dans les blocs **try/catch**, en particulier en cas d’utilisation de [std::find](assetId:///std::find?qualifyHint=False&autoUpgrade=True).
 
    Exemple (avant)
 
@@ -1053,7 +1053,7 @@ Même si ces différences peuvent affecter votre code source ou d’autres artef
     }
    ```
 
-   Quand ce nouveau comportement analyse une expression **decltype** dans laquelle il manque le mot clé **typename** obligatoire pour spécifier qu’un nom dépendant est un type, le compilateur génère l’avertissement C4346, ainsi que l’erreur C2923.
+   Quand ce nouveau comportement analyse une expression **decltype** dans laquelle il manque le mot clé **typename** obligatoire pour spécifier qu’un nom dépendant est un type, le compilateur génère l’avertissement C4346, ainsi que l’erreur C2923.
 
    ```Output
     warning C4346: 'S2<T>::Type': dependent name is not a type
@@ -1104,7 +1104,7 @@ Même si ces différences peuvent affecter votre code source ou d’autres artef
     };
    ```
 
-- `volatile` **Les variables membres n’autorisent pas les constructeurs et les opérateurs d’assignation définis implicitement** Dans les versions précédentes du compilateur, il était possible de générer automatiquement les constructeurs de copie/déplacement par défaut et les opérateurs d’assignation de copie/déplacement par défaut pour une classe ayant des variables membres **volatile**. Cet ancien comportement était incorrect et non conforme à la norme C++. À présent, le compilateur considère qu’une classe avec des variables de membre volatiles a des opérateurs de construction et d’assignation non triviaux, ce qui empêche la génération automatique des implémentations par défaut de ces opérateurs. Quand une telle classe est membre d’une union (ou d’une union anonyme au sein d’une classe), les constructeurs de copie/déplacement et les opérateurs d’assignation de copie/déplacement de l’union (ou de la classe contenant l’union anonyme) sont implicitement définis comme étant supprimés. Toute tentative de construction ou de copie de l’union (ou de la classe contenant l’union anonyme) sans avoir défini explicitement ces constructeurs ou opérateurs est considérée comme une erreur. Dans ce cas, le compilateur génère l’erreur C2280.
+- `volatile` **variables membres empêchent les constructeurs et les opérateurs d’assignation définis implicitement,** les versions précédentes du compilateur autorisaient une classe qui a des variables de membre **volatiles** pour lesquelles les constructeurs de copie/déplacement par défaut et les opérateurs d’assignation de copie/déplacement par défaut sont générés automatiquement. Cet ancien comportement était incorrect et non conforme à la norme C++. À présent, le compilateur considère qu’une classe avec des variables de membre volatiles a des opérateurs de construction et d’assignation non triviaux, ce qui empêche la génération automatique des implémentations par défaut de ces opérateurs. Quand une telle classe est membre d’une union (ou d’une union anonyme au sein d’une classe), les constructeurs de copie/déplacement et les opérateurs d’assignation de copie/déplacement de l’union (ou de la classe contenant l’union anonyme) sont implicitement définis comme étant supprimés. Toute tentative de construction ou de copie de l’union (ou de la classe contenant l’union anonyme) sans avoir défini explicitement ces constructeurs ou opérateurs est considérée comme une erreur. Dans ce cas, le compilateur génère l’erreur C2280.
 
    ```Output
     error C2280: 'B::B(const B &)': attempting to reference a deleted function
@@ -1279,7 +1279,7 @@ Même si ces différences peuvent affecter votre code source ou d’autres artef
 
    Aucun diagnostic du compilateur n’est associé à cette modification.
 
-   Exemples
+   Exemple
 
    ```cpp
     #include <type_traits>
@@ -1444,7 +1444,7 @@ Même si ces différences peuvent affecter votre code source ou d’autres artef
     };
    ```
 
-- **Fichiers d’en-tête précompilés (PCH) et directives #include incompatibles** (concerne uniquement `/Wall` `/WX`)
+- **Fichiers d’en-tête précompilés (PCH) et directives de #include incompatibles** (affecte uniquement `/Wall` `/WX`)
 
    Les versions précédentes du compilateur acceptaient les directives `#include` incompatibles dans les fichiers sources entre les compilations `-Yc` et `-Yu` lors de l’utilisation de fichiers d’en-tête précompilés (PCH). Le code écrit de cette façon n’est plus accepté par le compilateur. Le compilateur émet désormais l’avertissement CC4598 pour faciliter l’identification des directives `#include` incompatibles lors de l’utilisation de fichiers PCH.
 
@@ -1488,7 +1488,7 @@ Même si ces différences peuvent affecter votre code source ou d’autres artef
     #include "c.h"
    ```
 
-- **Fichiers d’en-tête précompilés (PCH) et répertoires include incompatibles** (concerne uniquement `/Wall` `/WX`)
+- **Fichiers d’en-tête précompilés (PCH) et répertoires Include incompatibles** (affecte uniquement `/Wall` `/WX`)
 
    Les versions précédentes du compilateur acceptaient les arguments de ligne de commande des répertoires Include `-I` incompatibles passés au compilateur entre les compilations `-Yc` et `-Yu` lors de l’utilisation de fichiers d’en-tête précompilés (PCH). Le code écrit de cette façon n’est plus accepté par le compilateur.   Le compilateur émet désormais l’avertissement CC4599 pour faciliter l’identification des arguments de ligne de commande des répertoires Include (`-I`) incompatibles lors de l’utilisation de fichiers PCH.
 
@@ -1550,12 +1550,12 @@ Tous les conteneurs prennent désormais en charge les spécifications d'élémen
 Prise en charge des fonctionnalités C++14 suivantes :
 
 - « Foncteurs d’opérateurs transparents » less<>, greater<>, plus<>, multiplies<>, et ainsi de suite.
-- make_unique<T>(args...) et make_unique<T[]>(n)
+- make_unique\<T > (args...) et make_unique < T [] > (n)
 - Fonctions non membres cbegin()/cend(), rbegin()/rend() et crbegin()/crend().
 - \<atomic> a bénéficié de nombreuses améliorations en matière de performances.
 - \<type_traits> a bénéficié de correctifs importants en matière de stabilisation et de code.
 
-### <a name="breaking-changes"></a>Modifications avec rupture
+### <a name="breaking-changes"></a>Dernières modifications
 
 Cette prise en charge améliorée des normes ISO C/C++ peut nécessiter des modifications du code existant afin qu’il soit conforme à C++11 et se compile correctement en Visual C++ dans Visual Studio 2013.
 
@@ -1582,7 +1582,7 @@ Cette prise en charge améliorée des normes ISO C/C++ peut nécessiter des modi
 
 - **Prise en charge des types encadrés dans les structs de valeur.**
 
-   Vous pouvez désormais définir des types valeur à l’aide de champs qui peuvent avoir une valeur null, par exemple `IBox<int>^` par opposition à **int**. Cela signifie que les champs peuvent avoir une valeur ou être égaux à **nullptr**.
+   Vous pouvez maintenant définir des types valeur en utilisant des champs qui peuvent avoir la valeur null, par exemple, `IBox<int>^` par opposition à **int**. Cela signifie que les champs peuvent avoir une valeur ou être égaux à **nullptr**.
 
 - **Informations plus détaillées sur l’exception.**
 
@@ -1618,7 +1618,7 @@ Cette prise en charge améliorée des normes ISO C/C++ peut nécessiter des modi
 
 - Prise en charge du pipeline de contenu d’image pour le format DDS alpha prémultiplié.
 - L’éditeur d’images utilise l’alpha prémultiplié en interne pour le rendu, ce qui évite d’effectuer le rendu d’artefacts tels que les halos sombres.
-- Éditeurs d’images et de modèle. La création d’un filtre défini par l’utilisateur est maintenant prise en charge dans le concepteur Shader de l’éditeur d’images et de l’éditeur de modèle.
+- Éditeurs d’images et de modèle. La création d'un filtre défini par l'utilisateur est maintenant prise en charge dans le Concepteur shader de l'Éditeur d'images et de l'Éditeur de modèles.
 
 ### <a name="ide-and-productivity"></a>Environnement IDE et productivité
 
@@ -1636,7 +1636,7 @@ Cette prise en charge améliorée des normes ISO C/C++ peut nécessiter des modi
 
 - Ajoute le point-virgule pour les types de classe.
 - Effectue une saisie semi-automatique des parenthèses pour les littéraux de chaîne bruts.
-- Effectue une saisie semi-automatique des commentaires multilignes (/\* \*/)
+- Termine les commentaires sur plusieurs lignes (/\* \*/)
 
 **Rechercher toutes les références** résout maintenant automatiquement les références et les filtre en arrière-plan après avoir affiché la liste des correspondances textuelles.
 
@@ -1854,7 +1854,7 @@ La plupart des avertissements `/analyze` (analyse du code d’entreprise) ont é
 
 #### <a name="animation-and-d2d-support"></a>Prise en charge de l’animation et prise en charge D2D
 
-MFC prend désormais en charge l’animation et les graphiques Direct2D. La bibliothèque MFC comprend plusieurs nouvelles classes et fonctions MFC pour prendre en charge cette fonctionnalité. Il existe également deux nouvelles procédures pas à pas montrant comment ajouter un objet D2D et un objet d’animation à un projet. Ces procédures pas à pas sont **Procédure pas à pas : ajout d’un objet D2D à un projet MFC (MFC)** et **Procédure pas à pas : ajout d’une animation à un projet MFC**.
+MFC prend désormais en charge l’animation et les graphiques Direct2D. La bibliothèque MFC comprend plusieurs nouvelles classes et fonctions MFC pour prendre en charge cette fonctionnalité. Il existe également deux nouvelles procédures pas à pas montrant comment ajouter un objet D2D et un objet d’animation à un projet. Ces procédures pas à pas sont **Procédure pas à pas : ajout d’un objet D2D à un projet MFC** et **Procédure pas à pas : ajout d’une animation à un projet MFC**.
 
 ### <a name="ide"></a>IDE
 
@@ -1878,9 +1878,9 @@ En raison de cette séparation des tâches, les fonctionnalités de navigation t
 
 **Assistant Classe MFC.** Visual C++ 2010 rétablit l’outil Assistant classe MFC très apprécié. L’Assistant Classe MFC est un moyen pratique d’ajouter des classes, des messages et des variables à un projet sans avoir à modifier manuellement des ensembles de fichiers sources.
 
-**Assistant Contrôle ATL.** L’Assistant Contrôle ATL ne remplit plus automatiquement le champ `ProgID`. Si un contrôle ATL n’a pas de `ProgID`, les autres outils risquent de ne pas fonctionner avec lui. La boîte de dialogue **Insérer un contrôle ActiveX** est un exemple d’outil pour lequel les contrôles doivent avoir un `ProgID`. Pour plus d’informations sur cette boîte de dialogue, consultez **Insérer un contrôle ActiveX, boîte de dialogue**.
+**Assistant Contrôle ATL.** L’Assistant Contrôle ATL ne remplit plus automatiquement le champ `ProgID`. Si un contrôle ATL n’a pas de `ProgID`, les autres outils risquent de ne pas fonctionner avec lui. La boîte de dialogue `ProgID`Insérer un contrôle ActiveX**est un exemple d’outil pour lequel les contrôles doivent avoir un**. Pour plus d’informations sur cette boîte de dialogue, consultez **Insérer un contrôle ActiveX, boîte de dialogue**.
 
-### <a name="microsoft-macro-assembler-reference"></a>Référence de Microsoft Macro Assembler
+### <a name="microsoft-macro-assembler-reference"></a>Informations de référence sur Microsoft Macro Assembler
 
 L’ajout du type de données YMMWORD prend en charge les opérandes multimédias 256 bits inclus dans les instructions Advanced Vector Extensions (AVX) d’Intel.
 
@@ -1940,7 +1940,7 @@ L’ajout du type de données YMMWORD prend en charge les opérandes multimédia
 
 ### <a name="linker-changes"></a>Changements de l’éditeur de liens
 
-- Les informations de contrôle de compte d’utilisateur sont maintenant incorporées dans des fichiers manifeste pour les exécutables par l’éditeur de liens Visual C++ (link.exe). Cette fonction est activée par défaut. Pour plus d’informations sur la manière de désactiver cette fonctionnalité ou de modifier le comportement par défaut, consultez `/MANIFESTUAC` (Incorporer des informations sur le contrôle de compte d’utilisateur dans le manifeste).
+- Les informations de contrôle de compte d’utilisateur sont maintenant incorporées dans des fichiers manifeste pour les exécutables par l’éditeur de liens Visual C++ (link.exe). Cette fonctionnalité est activée par défaut. Pour plus d’informations sur la manière de désactiver cette fonctionnalité ou de modifier le comportement par défaut, consultez `/MANIFESTUAC` (Incorporer des informations sur le contrôle de compte d’utilisateur dans le manifeste).
 - L’éditeur de liens dispose désormais de l’option `/DYNAMICBASE` pour activer la fonctionnalité de randomisation du format d’espace d’adressage de Windows Vista. Cette option modifie l’en-tête d’un exécutable pour indiquer si l’application doit être rebasée de façon aléatoire au moment du chargement.
 
 ## <a name="whats-new-for-c-in-visual-studio-2005"></a>Nouveautés de C++ dans Visual Studio 2005
@@ -1999,7 +1999,7 @@ Des changements importants ont été apportés au compilateur dans cette version
 - L’option de compilateur `/G` (Optimiser pour le processeur) a été ajoutée.
 - L’option de compilateur `/G` (Optimiser pour le processeur) a été ajoutée.
 - Les options de compilateur `/G3`, `/G4`, `/G5`, `/G6`, `/G7` et `/GB` ont été supprimées. Le compilateur utilise désormais un « modèle mixte » qui tente de créer le meilleur fichier de sortie pour toutes les architectures.
-- La fonction `/Gf` a été supprimée. Utilisez `/GF` (Supprimer les doublons) à la place.
+- `/Gf` a été supprimé. Utilisez `/GF` (Supprimer les doublons) à la place.
 - `/GL` (Optimisation de l’ensemble du programme) est désormais compatible avec `/CLRHEADER`.
 - `/GR` est désormais activé par défaut.
 - `/GS` (Vérification de la sécurité de la mémoire tampon) fournit désormais une protection de sécurité pour les paramètres de pointeur vulnérables. `/GS` est désormais activé par défaut. Désormais, `/GS` fonctionne également sur les fonctions compilées en MSIL avec `/clr` (Compilation pour le Common Language Runtime).
@@ -2018,7 +2018,7 @@ Des changements importants ont été apportés au compilateur dans cette version
 
 ### <a name="profile-guided-optimizations"></a>Optimisations guidées par profil
 
-- La fonction `/QI0f` a été supprimée.
+- `/QI0f` a été supprimé.
 - `/QIfdiv` a été supprimé.
 - L’option de compilateur `/QIPF_B` (Errata pour l’exécution pas à pas UC B) a été ajoutée.
 - L’option de compilateur `/QIPF_C` (Errata pour l’exécution pas à pas UC C) a été ajoutée.
@@ -2197,7 +2197,7 @@ Des changements importants ont été apportés au compilateur dans cette version
 
 - Informations sur la façon d’exécuter une application Extensions managées pour C++ générée avec le compilateur de la version actuelle sur une version précédente du runtime.
 - Questions fréquentes (FAQ) sur les extensions managées pour C++.
-- Une procédure pas à pas a été ajoutée afin de savoir comment porter une application native existante pour utiliser des Extensions managées pour C++ : Procédure pas à pas : portage d’une application C++ native pour interagir avec les composants du .NET Framework.
+- Une procédure pas à pas a été ajoutée, indiquant comment porter une application native existante pour utiliser les extensions managées pour C++ : Procédure pas à pas : Portage d’une application C++ native pour interagir avec les composants .NET Framework.
 - Vous pouvez maintenant créer un délégué sur une méthode d’un type valeur.
 - La conformité du compilateur à la norme C++ a été considérablement améliorée pour Visual C++ .NET 2003.
 - L’option de compilateur `/arch` a été ajoutée.

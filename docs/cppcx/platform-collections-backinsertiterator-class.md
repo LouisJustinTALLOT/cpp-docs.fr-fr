@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - BackInsertIterator Class
 ms.assetid: aecee1ff-100d-4129-b84b-1966f0923dbf
-ms.openlocfilehash: be5a905725c2ed0f056f1686d17d87c74b9cdc5e
-ms.sourcegitcommit: 7bea0420d0e476287641edeb33a9d5689a98cb98
+ms.openlocfilehash: 79854d8ead089aeba88fbdc151fdc0788dd181c1
+ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/17/2020
-ms.locfileid: "77416057"
+ms.lasthandoff: 03/17/2020
+ms.locfileid: "79445785"
 ---
 # <a name="platformcollectionsbackinsertiterator-class"></a>Platform::Collections::BackInsertIterator, classe
 
@@ -43,7 +43,7 @@ La classe BackInsertIterator implémente les règles requises par la [back_inser
 |----------|-----------------|
 |[BackInsertIterator :: BackInsertIterator](#ctor)|Initialise une nouvelle instance de la classe BackInsertIterator.|
 
-### <a name="public-operators"></a>Opérateurs publics
+### <a name="public-operators"></a>Op&#233;rateurs publics
 
 |Name|Description|
 |----------|-----------------|
@@ -51,7 +51,7 @@ La classe BackInsertIterator implémente les règles requises par la [back_inser
 |[BackInsertIterator::operator++, opérateur](#operator-increment)|Retourne une référence au BackInsertIterator actif. L'itérateur est pas modifié.|
 |[BackInsertIterator::operator=, opérateur](#operator-assign)|Ajoute l'objet spécifié à la fin de la collection séquentielle en cours.|
 
-## <a name="inheritance-hierarchy"></a>Hiérarchie d’héritage
+## <a name="inheritance-hierarchy"></a>Hiérarchie d'héritage
 
 `BackInsertIterator`
 
@@ -59,8 +59,8 @@ La classe BackInsertIterator implémente les règles requises par la [back_inser
 
 **En-tête :** collection.h
 
-<a name="namespace-platformcollections"></a>**Espace de noms :** Platform::Collections
----
+**Espace de noms :** Platform::Collections
+
 ## <a name="ctor"></a>BackInsertIterator :: BackInsertIterator, constructeur
 
 Initialise une nouvelle instance de la classe `BackInsertIterator`.
@@ -68,7 +68,6 @@ Initialise une nouvelle instance de la classe `BackInsertIterator`.
 ## <a name="syntax"></a>Syntaxe
 
 ```
-
 explicit BackInsertIterator(
    Windows::Foundation::Collections::IVector<T>^ v);
 ```
@@ -126,7 +125,6 @@ Retourne une référence au BackInsertIterator actif. L'itérateur est pas modif
 ## <a name="syntax"></a>Syntaxe
 
 ```
-
 BackInsertIterator& operator++();
 
 BackInsertIterator operator++(int);

@@ -21,11 +21,11 @@ helpviewer_keywords:
 - CSocket [MFC], OnMessagePending
 ms.assetid: 7f23c081-d24d-42e3-b511-8053ca53d729
 ms.openlocfilehash: a861e557b7368d13d615aaf796faded93c72b040
-ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
+ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/06/2020
-ms.locfileid: "78854545"
+ms.lasthandoff: 03/16/2020
+ms.locfileid: "79421169"
 ---
 # <a name="csocket-class"></a>CSocket (classe)
 
@@ -82,7 +82,7 @@ Dans l’exemple suivant, `m_dwExpected` est le nombre approximatif d’octets q
 
 Pour plus d’informations, consultez [Windows Sockets dans MFC](../../mfc/windows-sockets-in-mfc.md), [Windows Sockets : utilisation de sockets avec des archives](../../mfc/windows-sockets-using-sockets-with-archives.md), [Windows Sockets : fonctionnement des sockets avec les archives](../../mfc/windows-sockets-how-sockets-with-archives-work.md), [Windows Sockets : séquence d’opérations](../../mfc/windows-sockets-sequence-of-operations.md), [Windows Sockets : exemple de sockets utilisant des archives](../../mfc/windows-sockets-example-of-sockets-using-archives.md).
 
-## <a name="inheritance-hierarchy"></a>Hiérarchie d'héritage
+## <a name="inheritance-hierarchy"></a>Hiérarchie d’héritage
 
 [CObject](../../mfc/reference/cobject-class.md)
 

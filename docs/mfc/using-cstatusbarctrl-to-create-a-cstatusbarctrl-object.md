@@ -1,36 +1,34 @@
 ---
 title: Utilisation de CStatusBarCtrl pour créer un objet CStatusBarCtrl
 ms.date: 11/04/2016
-f1_keywords:
-- CStatusBarCtrl
 helpviewer_keywords:
 - status bar controls [MFC], creating
 - CStatusBarCtrl class [MFC], creating
 ms.assetid: 365c2b65-12de-49e6-9a2e-416c6ee10d60
-ms.openlocfilehash: 3242986d66de7d423b8ab744a691ca1904328de8
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 12d5664b9fc59c4569ec2ee7db4ae883911f7bcd
+ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62411706"
+ms.lasthandoff: 03/17/2020
+ms.locfileid: "79442385"
 ---
 # <a name="using-cstatusbarctrl-to-create-a-cstatusbarctrl-object"></a>Utilisation de CStatusBarCtrl pour créer un objet CStatusBarCtrl
 
 Voici un exemple d’utilisation classique de [CStatusBarCtrl](../mfc/reference/cstatusbarctrl-class.md):
 
-### <a name="to-use-a-status-bar-control-with-parts"></a>Pour utiliser un contrôle de barre d’état avec des parties
+### <a name="to-use-a-status-bar-control-with-parts"></a>Pour utiliser un contrôle de barre d’État avec des parties
 
-1. Construire la `CStatusBarCtrl` objet.
+1. Construisez l’objet `CStatusBarCtrl`.
 
-1. Appelez [SetMinHeight](../mfc/reference/cstatusbarctrl-class.md#setminheight) si vous souhaitez définir la hauteur minimale du contrôle de barre d’état de zone de dessin.
+1. Appelez [SetMinHeight](../mfc/reference/cstatusbarctrl-class.md#setminheight) si vous souhaitez définir la hauteur minimale de la zone de dessin du contrôle de barre d’État.
 
-1. Appelez [SetBkColor](../mfc/reference/cstatusbarctrl-class.md#setbkcolor) pour définir la couleur d’arrière-plan du contrôle de barre d’état.
+1. Appelez [SetBkColor](../mfc/reference/cstatusbarctrl-class.md#setbkcolor) pour définir la couleur d’arrière-plan du contrôle de barre d’État.
 
-1. Appelez [SetParts](../mfc/reference/cstatusbarctrl-class.md#setparts) pour définir le nombre de parties dans un barre d’état contrôle et les coordonnées du bord droit de chaque partie.
+1. Appelez [SetParts](../mfc/reference/cstatusbarctrl-class.md#setparts) pour définir le nombre de parties dans un contrôle de barre d’État et la coordonnée du bord droit de chaque partie.
 
-1. Appelez [SetText](../mfc/reference/cstatusbarctrl-class.md#settext) pour définir le texte dans une partie donnée du contrôle de barre d’état. Le message invalide la partie du contrôle qui a changé, provoquant l’affichage du nouveau texte lorsque le contrôle reçoit ensuite le message WM_PAINT.
+1. Appelez [SetText](../mfc/reference/cstatusbarctrl-class.md#settext) pour définir le texte dans une partie donnée du contrôle de barre d’État. Le message invalide la partie du contrôle qui a changé, provoquant l’affichage du nouveau texte lorsque le contrôle reçoit ensuite le message de WM_PAINT.
 
-Dans certains cas, la barre d’état doit afficher une ligne de texte. Dans ce cas, effectuer un appel à [SetSimple](../mfc/reference/cstatusbarctrl-class.md#setsimple). Cela place le contrôle de barre d’état en mode « simple », qui affiche une seule ligne de texte.
+Dans certains cas, la barre d’État ne doit afficher qu’une ligne de texte. Dans ce cas, effectuez un appel à [SetSimple](../mfc/reference/cstatusbarctrl-class.md#setsimple). Cela place le contrôle de barre d’État en mode « simple », qui affiche une seule ligne de texte.
 
 ## <a name="see-also"></a>Voir aussi
 

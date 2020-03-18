@@ -1,5 +1,5 @@
 ---
-title: 'Comment : utiliser parallel_invoke pour écrire une routine de tri parallèle'
+title: 'Comment : utiliser parallel_invoke pour écrire une routine de tri parallèle'
 ms.date: 11/04/2016
 helpviewer_keywords:
 - task_handle class, example
@@ -9,13 +9,13 @@ helpviewer_keywords:
 - improving parallel performance with task groups [Concurrency Runtime]
 ms.assetid: 53979a2a-525d-4437-8952-f1ff85b37673
 ms.openlocfilehash: 6acac3f6bc82db6e6981f83715c7ee88cfd06fbd
-ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
+ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/06/2020
-ms.locfileid: "78855398"
+ms.lasthandoff: 03/16/2020
+ms.locfileid: "79422289"
 ---
-# <a name="how-to-use-parallel_invoke-to-write-a-parallel-sort-routine"></a>Comment : utiliser parallel_invoke pour écrire une routine de tri parallèle
+# <a name="how-to-use-parallel_invoke-to-write-a-parallel-sort-routine"></a>Comment : utiliser parallel_invoke pour écrire une routine de tri parallèle
 
 Ce document explique comment utiliser l’algorithme [parallel_invoke](../../parallel/concrt/parallel-algorithms.md#parallel_invoke) pour améliorer les performances de l’algorithme de tri bitonique. L’algorithme de tri bitonique divise de manière récursive la séquence d’entrée en partitions triées plus petites. L’algorithme de tri bitonique peut s’exécuter en parallèle, car chaque opération de partition est indépendante de toutes les autres opérations.
 
