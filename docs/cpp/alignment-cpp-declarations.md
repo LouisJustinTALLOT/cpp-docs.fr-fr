@@ -1,19 +1,16 @@
 ---
-title: Alignement
+title: Alignment
 description: Comment l’alignement des données est spécifié C++dans moderne.
 ms.date: 12/11/2019
-f1_keywords:
-- alignas_cpp
-- alignof_cpp
 ms.assetid: a986d510-ccb8-41f8-b905-433df9183485
-ms.openlocfilehash: 23c14d99e5f540a5065d01a31146b7334ac1c0b3
-ms.sourcegitcommit: a5fa9c6f4f0c239ac23be7de116066a978511de7
+ms.openlocfilehash: 13f09366501de2482b8ae9ea430898d6c32134c2
+ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/20/2019
-ms.locfileid: "75301663"
+ms.lasthandoff: 03/17/2020
+ms.locfileid: "79443671"
 ---
-# <a name="alignment"></a>Alignement
+# <a name="alignment"></a>Alignment
 
 Une des fonctionnalités de bas niveau de C++ est la possibilité de spécifier avec précision l’alignement des objets en mémoire afin d’exploiter au mieux les capacités d’une architecture matérielle spécifique. Par défaut, le compilateur aligne les membres de classe et de struct sur leur valeur de taille : `bool` et `char` sur des limites de 1 octet, `short` sur les limites de 2 octets, `int`, `long`et `float` sur des limites de 4 octets, et `long long`, `double`et `long double` sur des limites de 8 octets. 
 

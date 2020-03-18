@@ -1,30 +1,28 @@
 ---
 title: Utilisation de CProgressCtrl
 ms.date: 11/04/2016
-f1_keywords:
-- CProgressCtrl
 helpviewer_keywords:
 - progress controls [MFC]
 - CProgressCtrl class [MFC], using
 - progress controls [MFC], CProgressCtrl
 - progress controls [MFC], using
 ms.assetid: 61473270-196b-41ab-bf2b-467f46673539
-ms.openlocfilehash: eb332d0c6eb55dddcd20d6d4f07fe6f666c015ab
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: a575a766650a77b0908f0fa3016139239b23dc56
+ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62411747"
+ms.lasthandoff: 03/17/2020
+ms.locfileid: "79441905"
 ---
 # <a name="using-cprogressctrl"></a>Utilisation de CProgressCtrl
 
-Vous pouvez utiliser le contrôle de progression pour indiquer la progression d’une opération longue. Il est un rectangle qui se remplit progressivement avec la couleur de surbrillance du système en tant que l’opération progresse.
+Vous pouvez utiliser le contrôle Progress pour indiquer la progression d’une opération de longue durée. Il s’agit d’un rectangle qui est progressivement rempli avec la couleur de surbrillance du système au fur et à mesure de l’avancement de l’opération.
 
-Le contrôle de progression est représenté dans MFC par la classe [CProgressCtrl](../mfc/reference/cprogressctrl-class.md).
+Le contrôle Progress est représenté dans MFC par la classe [CProgressCtrl](../mfc/reference/cprogressctrl-class.md).
 
-Lorsque vous créez initialement le contrôle de progression, vous spécifiez sa taille et la position, la fenêtre parente (généralement une boîte de dialogue) et son ID. À l’aide de la *dwStyle* paramètre, vous pouvez d’également spécifier différents styles de fenêtre pour le contrôle et les styles de mode de remplissage.
+Lorsque vous créez initialement le contrôle Progress, vous spécifiez sa taille et sa position, la fenêtre parente (généralement une boîte de dialogue) et l’ID. En utilisant le paramètre *dwStyle* , vous pouvez également spécifier différents styles de fenêtre pour le contrôle et des styles pour son remplissage.
 
-## <a name="what-do-you-want-to-know-more-about"></a>Ce que vous souhaitez en savoir plus sur
+## <a name="what-do-you-want-to-know-more-about"></a>Que voulez-vous en savoir plus sur
 
 - [Styles du contrôle Progress](../mfc/styles-for-the-progress-control.md)
 

@@ -1,19 +1,17 @@
 ---
 title: Mappages de routine
 ms.date: 11/04/2016
-f1_keywords:
-- c.mappings
 helpviewer_keywords:
 - _tWinMain
 - TCHAR.H data types, list of routine mappings
 - generic-text mappings
 ms.assetid: 38f33d3b-0f7b-430d-8a4f-75e27c6f1c42
-ms.openlocfilehash: 60a05b8102df1ecb9bb6f66eda15ff10cb12b32a
-ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
-ms.translationtype: HT
+ms.openlocfilehash: 245a44a6722bdf704a5ce750dd285eb3eac66609
+ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/11/2019
-ms.locfileid: "57746889"
+ms.lasthandoff: 03/17/2020
+ms.locfileid: "79444859"
 ---
 # <a name="routine-mappings"></a>Mappages de routine
 

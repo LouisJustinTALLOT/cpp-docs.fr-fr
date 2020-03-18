@@ -1,29 +1,27 @@
 ---
 title: Utilisation de CHeaderCtrl
 ms.date: 11/04/2016
-f1_keywords:
-- CHeaderCtrl
 helpviewer_keywords:
 - header controls [MFC], using
 - CHeaderCtrl class [MFC]
 ms.assetid: fb3e512b-9539-43c4-a7e7-3fafd6d0706e
-ms.openlocfilehash: bf99aad508aee52bc8d345ca084ef96ef40f803b
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 74e306368d7354bbc9f8281a8bf7fa857b6bf524
+ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62386406"
+ms.lasthandoff: 03/17/2020
+ms.locfileid: "79444004"
 ---
 # <a name="using-cheaderctrl"></a>Utilisation de CHeaderCtrl
 
-Utiliser un contrôle header, représenté par la classe [CHeaderCtrl](../mfc/reference/cheaderctrl-class.md), pour afficher des en-têtes de colonne pour obtenir la liste en colonnes. Par exemple, un contrôle header peut être utile pour implémenter les contrôles de la colonne dans une feuille de calcul.
+Utilisez un contrôle header, représenté par la classe [CHeaderCtrl](../mfc/reference/cheaderctrl-class.md), pour afficher des en-têtes de colonnes pour une liste en colonnes. Par exemple, un contrôle header peut être utile pour implémenter des contrôles Column dans une feuille de calcul.
 
-Le contrôle header est généralement divisé en plusieurs parties, appelées « éléments d’en-tête », chacune portant le titre de la colonne associée de texte ou des nombres. Selon les styles que vous définissez, vous pouvez fournir un nombre de méthodes directes aux utilisateurs de manipuler des éléments d’en-tête.
+Le contrôle header est généralement divisé en plusieurs parties, appelées « éléments d’en-tête », chacune portant un titre pour la colonne de texte ou les nombres associés. Selon les styles que vous définissez, vous pouvez fournir un certain nombre de méthodes directes permettant aux utilisateurs de manipuler les éléments d’en-tête.
 
 > [!NOTE]
->  [CListCtrl](../mfc/reference/clistctrl-class.md) fournit un contrôle d’en-tête incorporé, et [CListView](../mfc/reference/clistview-class.md) encapsule `CListCtrl` dans une classe MFC. En règle générale, pensez à utiliser `CHeaderCtrl` aux listes d’étiquette que vous souhaitez dessiner vous-même.
+>  [CListCtrl](../mfc/reference/clistctrl-class.md) fournit un contrôle d’en-tête incorporé, et [CListView](../mfc/reference/clistview-class.md) encapsule `CListCtrl` dans une classe MFC. En général, pensez à utiliser `CHeaderCtrl` pour étiqueter les listes que vous avez l’intention de dessiner vous-même.
 
-## <a name="what-do-you-want-to-know-more-about"></a>Ce que vous souhaitez en savoir plus sur
+## <a name="what-do-you-want-to-know-more-about"></a>Que voulez-vous en savoir plus sur
 
 - [Contrôle Header et contrôle List](../mfc/header-control-and-list-control.md)
 

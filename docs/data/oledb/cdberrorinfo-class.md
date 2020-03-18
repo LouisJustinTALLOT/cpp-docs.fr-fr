@@ -8,19 +8,15 @@ f1_keywords:
 - ATL.CDBErrorInfo.GetAllErrorInfo
 - CDBErrorInfo::GetAllErrorInfo
 - ATL::CDBErrorInfo::GetAllErrorInfo
-- GetAllErrorInfo
 - CDBErrorInfo.GetAllErrorInfo
 - CDBErrorInfo::GetBasicErrorInfo
 - ATL.CDBErrorInfo.GetBasicErrorInfo
 - CDBErrorInfo.GetBasicErrorInfo
 - ATL::CDBErrorInfo::GetBasicErrorInfo
-- GetBasicErrorInfo
 - CDBErrorInfo::GetCustomErrorObject
 - ATL.CDBErrorInfo.GetCustomErrorObject
 - CDBErrorInfo.GetCustomErrorObject
 - ATL::CDBErrorInfo::GetCustomErrorObject
-- GetCustomErrorObject
-- GetErrorInfo
 - ATL.CDBErrorInfo.GetErrorInfo
 - CDBErrorInfo.GetErrorInfo
 - ATL::CDBErrorInfo::GetErrorInfo
@@ -29,11 +25,9 @@ f1_keywords:
 - CDBErrorInfo::GetErrorParameters
 - ATL::CDBErrorInfo::GetErrorParameters
 - CDBErrorInfo.GetErrorParameters
-- GetErrorParameters
 - CDBErrorInfo.GetErrorRecords
 - ATL.CDBErrorInfo.GetErrorRecords
 - ATL::CDBErrorInfo::GetErrorRecords
-- GetErrorRecords
 - CDBErrorInfo::GetErrorRecords
 helpviewer_keywords:
 - CDBErrorInfo class
@@ -44,16 +38,16 @@ helpviewer_keywords:
 - GetErrorParameters method
 - GetErrorRecords method
 ms.assetid: 9a5c18a2-ee3e-40f5-ab4c-581288d7f737
-ms.openlocfilehash: bc13137a4222ba51cf3745f9706353d48068a072
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 2d2b21652fd5ee3604c3c72c2168c3d9a495caf1
+ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62209332"
+ms.lasthandoff: 03/17/2020
+ms.locfileid: "79447467"
 ---
 # <a name="cdberrorinfo-class"></a>CDBErrorInfo, classe
 
-Fournit la prise en charge pour le traitement d’erreur OLE DB à l’aide de OLE DB [IErrorRecords](/previous-versions/windows/desktop/ms718112(v=vs.85)) interface.
+Prend en charge OLE DB le traitement des erreurs à l’aide de l’interface OLE DB [IErrorRecords](/previous-versions/windows/desktop/ms718112(v=vs.85)) .
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -61,7 +55,7 @@ Fournit la prise en charge pour le traitement d’erreur OLE DB à l’aide de O
 class CDBErrorInfo
 ```
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
 **En-tête :** atldbcli.h
 
@@ -71,20 +65,20 @@ class CDBErrorInfo
 
 |||
 |-|-|
-|[GetAllErrorInfo](#getallerrorinfo)|Retourne toutes les informations d’erreur contenues dans un enregistrement d’erreur.|
-|[GetBasicErrorInfo](#getbasicerrorinfo)|Appels [IErrorRecords::GetBasicErrorInfo](/previous-versions/windows/desktop/ms723907(v=vs.85)) pour retourner des informations de base sur l’erreur spécifiée.|
-|[GetCustomErrorObject](#getcustomerrorobject)|Appels [IErrorRecords::GetCustomErrorObject](/previous-versions/windows/desktop/ms725417(v=vs.85)) pour retourner un pointeur vers une interface sur un objet d’erreur personnalisé.|
-|[GetErrorInfo](#geterrorinfo)|Appels [IErrorRecords::GetErrorInfo](/previous-versions/windows/desktop/ms711230(v=vs.85)) pour retourner un `IErrorInfo` pointeur d’interface vers l’enregistrement spécifié.|
-|[GetErrorParameters](#geterrorparameters)|Appels [IErrorRecords::GetErrorParameters](/previous-versions/windows/desktop/ms715793(v=vs.85)) pour retourner les paramètres de l’erreur.|
+|[GetAllErrorInfo](#getallerrorinfo)|Retourne toutes les informations sur les erreurs contenues dans un enregistrement d’erreur.|
+|[GetBasicErrorInfo](#getbasicerrorinfo)|Appelle [IErrorRecords :: GetBasicErrorInfo](/previous-versions/windows/desktop/ms723907(v=vs.85)) pour retourner des informations de base sur l’erreur spécifiée.|
+|[GetCustomErrorObject](#getcustomerrorobject)|Appelle [IErrorRecords :: GetCustomErrorObject](/previous-versions/windows/desktop/ms725417(v=vs.85)) pour retourner un pointeur vers une interface sur un objet d’erreur personnalisé.|
+|[GetErrorInfo](#geterrorinfo)|Appelle [IErrorRecords :: GetErrorInfo](/previous-versions/windows/desktop/ms711230(v=vs.85)) pour retourner un pointeur d’interface `IErrorInfo` vers l’enregistrement spécifié.|
+|[GetErrorParameters](#geterrorparameters)|Appelle [IErrorRecords :: GetErrorParameters](/previous-versions/windows/desktop/ms715793(v=vs.85)) pour retourner les paramètres d’erreur.|
 |[GetErrorRecords](#geterrorrecords)|Obtient les enregistrements d’erreur pour l’objet spécifié.|
 
 ## <a name="remarks"></a>Notes
 
-Cette interface retourne un ou plusieurs enregistrements d’erreur à l’utilisateur. Appelez [CDBErrorInfo::GetErrorRecords](../../data/oledb/cdberrorinfo-geterrorrecords.md) tout d’abord, pour obtenir le nombre d’enregistrements d’erreur. Puis à appeler une de l’accès aux fonctions, telles que [CDBErrorInfo::GetAllErrorInfo](../../data/oledb/cdberrorinfo-getallerrorinfo.md)pour récupérer les informations d’erreur pour chaque enregistrement.
+Cette interface retourne un ou plusieurs enregistrements d’erreur à l’utilisateur. Appelez [CDBErrorInfo :: GetErrorRecords](../../data/oledb/cdberrorinfo-geterrorrecords.md) en premier, pour obtenir le nombre d’enregistrements d’erreur. Appelez ensuite l’une des fonctions d’accès, telles que [CDBErrorInfo :: GetAllErrorInfo](../../data/oledb/cdberrorinfo-getallerrorinfo.md), pour récupérer les informations d’erreur pour chaque enregistrement.
 
-## <a name="getallerrorinfo"></a> CDBErrorInfo::GetAllErrorInfo
+## <a name="getallerrorinfo"></a>CDBErrorInfo :: GetAllErrorInfo
 
-Retourne tous les types d’informations d’erreur contenues dans un enregistrement d’erreur.
+Retourne tous les types d’informations d’erreur contenus dans un enregistrement d’erreur.
 
 ### <a name="syntax"></a>Syntaxe
 
@@ -100,41 +94,41 @@ HRESULT GetAllErrorInfo(ULONG ulRecordNum,
 #### <a name="parameters"></a>Paramètres
 
 *ulRecordNum*<br/>
-[in] Numéro de base zéro de l’enregistrement pour lequel retourner les informations d’erreur.
+dans Numéro de base zéro de l’enregistrement pour lequel retourner les informations d’erreur.
 
 *lcid*<br/>
-[in] L’ID de paramètres régionaux pour les informations d’erreur à retourner.
+dans ID de paramètres régionaux pour les informations d’erreur à retourner.
 
 *pbstrDescription*<br/>
-[out] Pointeur vers une description de l’erreur ou la valeur NULL si les paramètres régionaux ne sont pas pris en charge. Consultez la section Notes.
+à Pointeur vers une description textuelle de l’erreur ou NULL si les paramètres régionaux ne sont pas pris en charge. Consultez la section Notes.
 
 *pbstrSource*<br/>
-[out] Un pointeur vers une chaîne contenant le nom du composant qui a généré l’erreur.
+à Pointeur vers une chaîne contenant le nom du composant qui a généré l’erreur.
 
 *pguid*<br/>
-[out] Un pointeur vers le GUID de l’interface ayant défini l’erreur.
+à Pointeur vers le GUID de l’interface qui a défini l’erreur.
 
 *pdwHelpContext*<br/>
-[out] Pointeur vers l’ID de contexte d’aide pour l’erreur.
+à Pointeur vers l’ID de contexte d’aide pour l’erreur.
 
 *pbstrHelpFile*<br/>
-[out] Un pointeur vers une chaîne contenant le chemin d’accès au fichier d’aide qui décrit l’erreur.
+à Pointeur vers une chaîne contenant le chemin d’accès au fichier d’aide qui décrit l’erreur.
 
 ### <a name="return-value"></a>Valeur de retour
 
-S_OK en cas de réussite. Consultez [IErrorRecords::GetErrorInfo](/previous-versions/windows/desktop/ms711230(v=vs.85)) dans le *de référence du programmeur OLE DB* pour les autres valeurs de retour.
+S_OK, en cas de réussite. Consultez [IErrorRecords :: GetErrorInfo](/previous-versions/windows/desktop/ms711230(v=vs.85)) dans le *Guide de référence du programmeur OLE DB* pour les autres valeurs de retour.
 
 ### <a name="remarks"></a>Notes
 
-La valeur de sortie *pbstrDescription* est obtenu en interne en appelant `IErrorInfo::GetDescription`, qui définit la valeur null si les paramètres régionaux ne sont pas pris en charge, ou si les deux conditions suivantes sont remplies :
+La valeur de sortie de *pbstrDescription* est obtenue en interne en appelant `IErrorInfo::GetDescription`, qui définit la valeur sur null si les paramètres régionaux ne sont pas pris en charge, ou si les deux conditions suivantes sont vraies :
 
-1. la valeur de *lcid* n’est pas aux États-Unis Anglais et
+1. la valeur du *LCID* n’est pas l’anglais des États-Unis et
 
-1. la valeur de *lcid* est différent de la valeur retournée par GetUserDefaultLCID.
+1. la valeur de *LCID* n’est pas égale à la valeur retournée par GetUserDefaultLCID.
 
-## <a name="getbasicerrorinfo"></a> CDBErrorInfo::GetBasicErrorInfo
+## <a name="getbasicerrorinfo"></a>CDBErrorInfo :: GetBasicErrorInfo
 
-Appels [IErrorRecords::GetBasicErrorInfo](/previous-versions/windows/desktop/ms723907(v=vs.85)) pour retourner des informations de base sur l’erreur, telles que le code de retour et le numéro d’erreur spécifique au fournisseur.
+Appelle [IErrorRecords :: GetBasicErrorInfo](/previous-versions/windows/desktop/ms723907(v=vs.85)) pour retourner des informations de base sur l’erreur, telles que le code de retour et le numéro d’erreur spécifique au fournisseur.
 
 ### <a name="syntax"></a>Syntaxe
 
@@ -145,15 +139,15 @@ HRESULT GetBasicErrorInfo(ULONG ulRecordNum,
 
 #### <a name="parameters"></a>Paramètres
 
-Consultez [IErrorRecords::GetBasicErrorInfo](/previous-versions/windows/desktop/ms723907(v=vs.85)) dans le *de référence du programmeur OLE DB*.
+Consultez [IErrorRecords :: GetBasicErrorInfo](/previous-versions/windows/desktop/ms723907(v=vs.85)) dans le *Guide de référence du programmeur OLE DB*.
 
 ### <a name="return-value"></a>Valeur de retour
 
-Une valeur HRESULT standard.
+HRESULT standard.
 
-## <a name="getcustomerrorobject"></a> CDBErrorInfo::GetCustomErrorObject
+## <a name="getcustomerrorobject"></a>CDBErrorInfo :: GetCustomErrorObject
 
-Appels [IErrorRecords::GetCustomErrorObject](/previous-versions/windows/desktop/ms725417(v=vs.85)) pour retourner un pointeur vers une interface sur un objet d’erreur personnalisé.
+Appelle [IErrorRecords :: GetCustomErrorObject](/previous-versions/windows/desktop/ms725417(v=vs.85)) pour retourner un pointeur vers une interface sur un objet d’erreur personnalisé.
 
 ### <a name="syntax"></a>Syntaxe
 
@@ -164,15 +158,15 @@ HRESULT GetCustomErrorObject(ULONG ulRecordNum,
 
 #### <a name="parameters"></a>Paramètres
 
-Consultez [IErrorRecords::GetCustomErrorObject](/previous-versions/windows/desktop/ms725417(v=vs.85)) dans le *de référence du programmeur OLE DB*.
+Consultez [IErrorRecords :: GetCustomErrorObject](/previous-versions/windows/desktop/ms725417(v=vs.85)) dans le *Guide de référence du programmeur OLE DB*.
 
 ### <a name="return-value"></a>Valeur de retour
 
-Une valeur HRESULT standard.
+HRESULT standard.
 
-## <a name="geterrorinfo"></a> CDBErrorInfo::GetErrorInfo
+## <a name="geterrorinfo"></a>CDBErrorInfo :: GetErrorInfo
 
-Appels [IErrorRecords::GetErrorInfo](/previous-versions/windows/desktop/ms711230(v=vs.85)) pour retourner un [IErrorInfo](/previous-versions/windows/desktop/ms718112(v=vs.85)) pointeur d’interface vers l’enregistrement spécifié.
+Appelle [IErrorRecords :: GetErrorInfo](/previous-versions/windows/desktop/ms711230(v=vs.85)) pour retourner un pointeur d’interface [IErrorInfo](/previous-versions/windows/desktop/ms718112(v=vs.85)) à l’enregistrement spécifié.
 
 ### <a name="syntax"></a>Syntaxe
 
@@ -183,15 +177,15 @@ HRESULT GetErrorInfo(ULONG ulRecordNum,
 
 #### <a name="parameters"></a>Paramètres
 
-Consultez [IErrorRecords::GetErrorInfo](/previous-versions/windows/desktop/ms711230(v=vs.85)) dans le *de référence du programmeur OLE DB*.
+Consultez [IErrorRecords :: GetErrorInfo](/previous-versions/windows/desktop/ms711230(v=vs.85)) dans le *Guide de référence du programmeur OLE DB*.
 
 ### <a name="return-value"></a>Valeur de retour
 
-Une valeur HRESULT standard.
+HRESULT standard.
 
-## <a name="geterrorparameters"></a> CDBErrorInfo::GetErrorParameters
+## <a name="geterrorparameters"></a>CDBErrorInfo :: GetErrorParameters
 
-Appels [IErrorRecords::GetErrorParameters](/previous-versions/windows/desktop/ms715793(v=vs.85)) pour retourner les paramètres de l’erreur.
+Appelle [IErrorRecords :: GetErrorParameters](/previous-versions/windows/desktop/ms715793(v=vs.85)) pour retourner les paramètres d’erreur.
 
 ### <a name="syntax"></a>Syntaxe
 
@@ -202,13 +196,13 @@ HRESULT GetErrorParameters(ULONG ulRecordNum,
 
 #### <a name="parameters"></a>Paramètres
 
-Consultez [IErrorRecords::GetErrorParameters](/previous-versions/windows/desktop/ms715793(v=vs.85)) dans le *de référence du programmeur OLE DB*.
+Consultez [IErrorRecords :: GetErrorParameters](/previous-versions/windows/desktop/ms715793(v=vs.85)) dans le *Guide de référence du programmeur OLE DB*.
 
 ### <a name="return-value"></a>Valeur de retour
 
-Une valeur HRESULT standard.
+HRESULT standard.
 
-## <a name="geterrorrecords"></a> CDBErrorInfo::GetErrorRecords
+## <a name="geterrorrecords"></a>CDBErrorInfo :: GetErrorRecords
 
 Obtient les enregistrements d’erreur pour l’objet spécifié.
 
@@ -225,24 +219,24 @@ HRESULT GetErrorRecords(ULONG* pcRecords) throw();
 #### <a name="parameters"></a>Paramètres
 
 *pUnk*<br/>
-[in] Interface à l’objet pour lequel obtenir les enregistrements d’erreur.
+dans Interface de l’objet pour lequel obtenir les enregistrements d’erreur.
 
-*iid*<br/>
-[in] IID de l’interface associée à l’erreur.
+*vaut*<br/>
+dans IID de l’interface associée à l’erreur.
 
 *pcRecords*<br/>
-[out] Un pointeur vers le nombre (base 1) des enregistrements d’erreur.
+à Pointeur vers le nombre d’enregistrements d’erreur (base un).
 
 ### <a name="return-value"></a>Valeur de retour
 
-Une valeur HRESULT standard.
+HRESULT standard.
 
 ### <a name="remarks"></a>Notes
 
-Utiliser la première forme de la fonction si vous souhaitez vérifier quelle interface pour obtenir les informations d’erreur à partir de. Sinon, utilisez la deuxième forme.
+Utilisez la première forme de la fonction si vous souhaitez vérifier l’interface à partir de laquelle obtenir les informations d’erreur. Dans le cas contraire, utilisez le deuxième formulaire.
 
 ## <a name="see-also"></a>Voir aussi
 
 [DBViewer](../../overview/visual-cpp-samples.md)<br/>
-[Modèles du consommateur OLE DB](../../data/oledb/ole-db-consumer-templates-cpp.md)<br/>
+[OLE DB (modèles du consommateur)](../../data/oledb/ole-db-consumer-templates-cpp.md)<br/>
 [Référence des modèles du consommateur OLE DB](../../data/oledb/ole-db-consumer-templates-reference.md)

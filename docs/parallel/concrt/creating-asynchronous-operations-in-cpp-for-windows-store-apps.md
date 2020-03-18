@@ -5,12 +5,12 @@ helpviewer_keywords:
 - Windows 8.x apps, creating C++ async operations
 - Creating C++ async operations
 ms.assetid: a57cecf4-394a-4391-a957-1d52ed2e5494
-ms.openlocfilehash: cc6c5315757b4a1602eba53ebafb573dd88caed2
-ms.sourcegitcommit: a8ef52ff4a4944a1a257bdaba1a3331607fb8d0f
+ms.openlocfilehash: 2ceb22afa5e6d071c1cb8dae79327eaaf08e3ee1
+ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/11/2020
-ms.locfileid: "77141797"
+ms.lasthandoff: 03/17/2020
+ms.locfileid: "79445107"
 ---
 # <a name="creating-asynchronous-operations-in-c-for-uwp-apps"></a>Création d’opérations asynchrones dans C++ pour les applications UWP
 
@@ -31,7 +31,7 @@ L’utilisation de la programmation asynchrone est un composant clé du modèle 
 
 - Le comportement de la fonction `create_async` dépend du type de retour de la fonction de travail passée. Une fonction de travail qui retourne une tâche ( `task<T>` ou `task<void>`) s'exécute de manière synchrone dans le contexte qui a appelé `create_async`. Une fonction de travail qui retourne `T` ou `void` s'exécute dans un contexte arbitraire.
 
-- Il est possible d'utiliser la méthode [concurrency::task::then](reference/task-class.md#then) pour créer une chaîne de tâches qui s'exécutent l'une après l'autre. Dans une application UWP, le contexte par défaut pour les continuations d’une tâche dépend de la manière dont cette tâche a été construite. Si la tâche a été créée en passant une action asynchrone au constructeur de tâche, ou en passant une expression lambda qui retourne une action asynchrone, le contexte par défaut pour toutes les continuations de cette tâche est le contexte actuel. Si la tâche n'est pas générée à partir d'une action asynchrone, un contexte arbitraire est utilisé par défaut pour les continuations de la tâche. Il est possible de substituer le contexte par défaut avec la classe [concurrency::task_continuation_context](../../parallel/concrt/reference/task-continuation-context-class.md) .
+- Il est possible d'utiliser la méthode [concurrency::task::then](reference/task-class.md#then) pour créer une chaîne de tâches qui s'exécutent l'une après l'autre. Dans une application UWP, le contexte par défaut pour les continuations d’une tâche dépend de la manière dont cette tâche a été construite. Si la tâche a été créée en passant une action asynchrone au constructeur de tâche, ou en passant une expression lambda qui retourne une action asynchrone, le contexte par défaut pour toutes les continuations de cette tâche est le contexte actuel. Si la tâche n’est pas construite à partir d’une action asynchrone, un contexte arbitraire est utilisé par défaut pour les continuations de la tâche. Il est possible de substituer le contexte par défaut avec la classe [concurrency::task_continuation_context](../../parallel/concrt/reference/task-continuation-context-class.md) .
 
 ## <a name="in-this-document"></a>Dans ce document
 
@@ -90,7 +90,7 @@ L’exemple suivant montre les différentes façons de créer un objet `IAsyncAc
 
 [!code-cpp[concrt-windowsstore-primes#100](../../parallel/concrt/codesnippet/cpp/creating-asynchronous-operations-in-cpp-for-windows-store-apps_1.cpp)]
 
-## <a name="example-component"></a> Exemple : créer un composant Windows Runtime C++ et le consommer à partir de C#
+## <a name="example-component"></a>Exemple : création d' C++ un composant Windows Runtime et utilisation de celui-ci à partir de C\#
 
 Prenons l’exemple d’une application qui C# utilise XAML et pour définir l' C++ interface utilisateur et un composant Windows Runtime pour effectuer des opérations nécessitant de nombreuses ressources de calcul. Dans cet exemple, le composant C++ calcule les nombres premiers inclus dans un intervalle donné. Pour illustrer les différences entre les quatre Windows Runtime interfaces de tâches asynchrones, démarrez, dans Visual Studio, en créant une **solution vide** et en la nommant `Primes`. Ajoutez ensuite à la solution un projet **Composant Windows Runtime** et nommez-le `PrimesLibrary`. Ajoutez le code suivant au fichier d'en-tête généré en C++ (cet exemple renomme Class1.h en Primes.h). Chaque méthode `public` définit une des quatre interfaces asynchrones. Les méthodes qui retournent une valeur retournent un objet [Windows :: Foundation :: Collections :: IVector\<int >](/uwp/api/Windows.Foundation.Collections.IVector_T_) . Les méthodes qui signalent la progression génèrent des valeurs `double` qui définissent le pourcentage de travail global effectué.
 
@@ -188,7 +188,7 @@ L’illustration suivante montre les résultats de l’application `CommonWords`
 
 ![Windows Runtime l’application CommonWords](../../parallel/concrt/media/concrt_windows_common_words.png "Windows Runtime l’application CommonWords")
 
-Dans cet exemple, il est possible de prendre en charge l'annulation, car les objets `task` qui prennent en charge l'utilisation de `create_async` utilisent un jet d'annulation implicite. Définissez la fonction de travail pour prendre un objet `cancellation_token` si vos tâches doivent répondre à l'annulation de manière coopérative. Pour plus d’informations sur l’annulation dans la bibliothèque PPL, consultez [Cancellation in the PPL](cancellation-in-the-ppl.md)
+Dans cet exemple, il est possible de prendre en charge l’annulation, car les objets `task` qui prennent en charge `create_async` utilisent un jeton d’annulation implicite. Définissez la fonction de travail pour prendre un objet `cancellation_token` si vos tâches doivent répondre à l'annulation de manière coopérative. Pour plus d’informations sur l’annulation dans la bibliothèque PPL, consultez [Cancellation in the PPL](cancellation-in-the-ppl.md)
 
 ## <a name="see-also"></a>Voir aussi
 
