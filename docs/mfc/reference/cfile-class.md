@@ -61,11 +61,11 @@ helpviewer_keywords:
 - CFile [MFC], m_pTM
 ms.assetid: b2eb5757-d499-4e67-b044-dd7d1abaa0f8
 ms.openlocfilehash: a9161764f6c8646766a73add01c25cce5619ad19
-ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
+ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/06/2020
-ms.locfileid: "78855293"
+ms.lasthandoff: 03/16/2020
+ms.locfileid: "79418705"
 ---
 # <a name="cfile-class"></a>CFile, classe
 
@@ -113,20 +113,20 @@ class CFile : public CObject
 |[CFile :: UnlockRange](#unlockrange)|Déverrouille une plage d’octets dans un fichier.|
 |[CFile :: Write](#write)|Écrit (sans mise en mémoire tampon) des données dans un fichier à la position de fichier actuelle.|
 
-### <a name="public-operators"></a>Op&#233;rateurs publics
+### <a name="public-operators"></a>Opérateurs publics
 
 |Name|Description|
 |----------|-----------------|
 |[HANDLE CFile :: Operator](#operator_handle)|Handle d’un objet `CFile`.|
 
-### <a name="public-data-members"></a>Membres de données publiques
+### <a name="public-data-members"></a>Membres de données publics
 
 |Name|Description|
 |----------|-----------------|
 |[CFile :: hFileNull](#hfilenull)|Détermine si l’objet `CFile` a un handle valide.|
 |[CFile :: m_hFile](#m_hfile)|Contient généralement le descripteur de fichier du système d’exploitation.|
 
-### <a name="protected-data-members"></a>Membres de données protégées
+### <a name="protected-data-members"></a>Membres de données protégés
 
 |Name|Description|
 |----------|-----------------|
@@ -144,7 +144,7 @@ Normalement, un fichier disque est ouvert automatiquement sur `CFile` constructi
 
 Pour plus d’informations sur l’utilisation de `CFile`, consultez les articles [fichiers dans MFC](../../mfc/files-in-mfc.md) et [gestion des fichiers](../../c-runtime-library/file-handling.md) dans la référence de la *bibliothèque Runtime*.
 
-## <a name="inheritance-hierarchy"></a>Hiérarchie d'héritage
+## <a name="inheritance-hierarchy"></a>Hiérarchie d’héritage
 
 [CObject](../../mfc/reference/cobject-class.md)
 

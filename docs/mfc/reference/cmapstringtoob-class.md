@@ -35,11 +35,11 @@ helpviewer_keywords:
 - CMapStringToOb [MFC], SetAt
 ms.assetid: 09653980-b885-4f3a-8594-0aeb7f94c601
 ms.openlocfilehash: b56e9052533269ba62d248312f07ac16db71bf4a
-ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
+ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/06/2020
-ms.locfileid: "78876372"
+ms.lasthandoff: 03/16/2020
+ms.locfileid: "79418537"
 ---
 # <a name="cmapstringtoob-class"></a>CMapStringToOb, classe
 
@@ -77,7 +77,7 @@ class CMapStringToOb : public CObject
 |[CMapStringToOb::RemoveKey](#removekey)|Supprime un élément spécifié par une clé.|
 |[CMapStringToOb :: SetAt](#setat)|Insère un élément dans la classe Map ; remplace un élément existant si une clé correspondante est trouvée.|
 
-### <a name="public-operators"></a>Op&#233;rateurs publics
+### <a name="public-operators"></a>Opérateurs publics
 
 |Name|Description|
 |----------|-----------------|
@@ -97,7 +97,7 @@ Quand un objet `CMapStringToOb` est supprimé ou que ses éléments sont supprim
 
 La dérivation de classe de mappage est similaire à la dérivation de liste. Consultez les [Collections](../../mfc/collections.md) d’articles pour obtenir une illustration de la dérivation d’une classe de liste à usage spécial.
 
-## <a name="inheritance-hierarchy"></a>Hiérarchie d'héritage
+## <a name="inheritance-hierarchy"></a>Hiérarchie d’héritage
 
 [CObject](../../mfc/reference/cobject-class.md)
 

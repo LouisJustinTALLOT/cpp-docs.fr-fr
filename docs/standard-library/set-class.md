@@ -87,11 +87,11 @@ helpviewer_keywords:
 - std::set [C++], value_comp
 ms.assetid: 8991f9aa-5509-4440-adc1-371512d32018
 ms.openlocfilehash: f1718b1cd362e54f63388b46025804ccc0396851
-ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
+ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/06/2020
-ms.locfileid: "78865128"
+ms.lasthandoff: 03/16/2020
+ms.locfileid: "79419566"
 ---
 # <a name="set-class"></a>set, classe
 
@@ -2006,7 +2006,7 @@ Position du premier élément de la plage d'éléments à copier.
 Position du premier élément au-delà de la plage d'éléments à copier.
 
 *IList*\
-initializer_list depuis laquelle copier les éléments.
+Initializer_list depuis laquelle copier les éléments.
 
 ### <a name="remarks"></a>Notes
 

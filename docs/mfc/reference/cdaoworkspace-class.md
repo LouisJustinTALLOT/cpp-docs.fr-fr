@@ -63,11 +63,11 @@ helpviewer_keywords:
 - CDaoWorkspace [MFC], m_pDAOWorkspace
 ms.assetid: 64f60de6-4df1-4d4a-a65b-c489b5257d52
 ms.openlocfilehash: c1d235035cee9342c8c54c7aaa4e05a96d5a37e3
-ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
+ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/06/2020
-ms.locfileid: "78883866"
+ms.lasthandoff: 03/16/2020
+ms.locfileid: "79420490"
 ---
 # <a name="cdaoworkspace-class"></a>CDaoWorkspace (classe)
 
@@ -118,7 +118,7 @@ class CDaoWorkspace : public CObject
 |[CDaoWorkspace :: SetIsolateODBCTrans](#setisolateodbctrans)|Spécifie si plusieurs transactions qui impliquent la même source de données ODBC sont isolées en forçant plusieurs connexions à la source de données.|
 |[CDaoWorkspace :: SetLoginTimeout](#setlogintimeout)|Définit le nombre de secondes avant qu’une erreur ne se produise lorsque l’utilisateur tente de se connecter à une source de données ODBC.|
 
-### <a name="public-data-members"></a>Membres de données publiques
+### <a name="public-data-members"></a>Membres de données publics
 
 |Name|Description|
 |----------|-----------------|
@@ -183,7 +183,7 @@ D’autres opérations de base de données sont également fournies, telles que 
 
 Pour plus d’informations sur l’appel de DAO directement et sur la sécurité DAO, consultez la [note technique 54](../../mfc/tn054-calling-dao-directly-while-using-mfc-dao-classes.md).
 
-## <a name="inheritance-hierarchy"></a>Hiérarchie d'héritage
+## <a name="inheritance-hierarchy"></a>Hiérarchie d’héritage
 
 [CObject](../../mfc/reference/cobject-class.md)
 

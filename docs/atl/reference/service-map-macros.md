@@ -8,11 +8,11 @@ f1_keywords:
 - atlcom/ATL::SERVICE_ENTRY_CHAIN
 ms.assetid: ca02a125-454a-4cf6-aac2-1c5585025ed4
 ms.openlocfilehash: ab130b2401dc9885f82fd5668a2d722a96dd289b
-ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
+ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/06/2020
-ms.locfileid: "78862512"
+ms.lasthandoff: 03/16/2020
+ms.locfileid: "79417473"
 ---
 # <a name="service-map-macros"></a>Macros Service Map
 
@@ -131,7 +131,7 @@ La valeur HRESULT retournée est l’un des éléments suivants :
 |S_OK|Le service a été correctement créé ou récupéré.|
 |E_INVALIDARG|Un ou plusieurs arguments ne sont pas valides.|
 |E_OUTOFMEMORY|La mémoire est insuffisante pour créer le service.|
-|E_UNEXPECTED|une erreur inconnue s'est produite.|
+|E_UNEXPECTED|Une erreur inconnue s'est produite.|
 |E_NOINTERFACE|L’interface demandée ne fait pas partie de ce service, ou le service est inconnu.|
 
 ### <a name="remarks"></a>Notes

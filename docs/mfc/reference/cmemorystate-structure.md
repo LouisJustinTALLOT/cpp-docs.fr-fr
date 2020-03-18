@@ -9,11 +9,11 @@ helpviewer_keywords:
 - detecting memory leaks [MFC]
 ms.assetid: 229d9de7-a6f3-4cc6-805b-5a9d9b1bfe1d
 ms.openlocfilehash: a110e1345cb970c117de125bd8105e1bc86eaf94
-ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
+ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/06/2020
-ms.locfileid: "78855286"
+ms.lasthandoff: 03/16/2020
+ms.locfileid: "79420686"
 ---
 # <a name="cmemorystate-structure"></a>CMemoryState, structure
 
@@ -67,7 +67,7 @@ Pour plus d’informations sur l’utilisation de `CMemoryState` et d’autres d
 > [!NOTE]
 >  Les déclarations d’objets de type `CMemoryState` et les appels aux fonctions membres doivent être placés entre crochets par les directives `#if defined(_DEBUG)/#endif`. Les diagnostics de la mémoire sont alors inclus uniquement dans les builds de débogage de votre programme.
 
-## <a name="inheritance-hierarchy"></a>Hiérarchie d'héritage
+## <a name="inheritance-hierarchy"></a>Hiérarchie d’héritage
 
 `CMemoryState`
 

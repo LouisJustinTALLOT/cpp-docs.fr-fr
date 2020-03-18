@@ -119,11 +119,11 @@ helpviewer_keywords:
 - CWinAppEx [MFC], m_bForceImageReset
 ms.assetid: a3d3e053-3e22-463f-9444-c73abb1bb9d7
 ms.openlocfilehash: c222567703d0e57480c00f6f2bf9e78f16979150
-ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
+ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/06/2020
-ms.locfileid: "78869931"
+ms.lasthandoff: 03/16/2020
+ms.locfileid: "79420882"
 ---
 # <a name="cwinappex-class"></a>CWinAppEx, classe
 
@@ -224,7 +224,7 @@ La plupart des fonctionnalités fournies par l’infrastructure MFC dépendent d
 
 Une fois que vous avez incorporé `CWinAppEx` dans votre application, vous pouvez initialiser l’un des gestionnaires d’applications. Avant d’utiliser un gestionnaire d’applications, vous devez l’initialiser en appelant la méthode Initialize appropriée. Pour obtenir un pointeur vers un gestionnaire spécifique, appelez la méthode d’obtention associée. La classe `CWinAppEx` gère les gestionnaires d’applications suivants : [classe CMouseManager](../../mfc/reference/cmousemanager-class.md), classe [CContextMenuManager](../../mfc/reference/ccontextmenumanager-class.md), classe [CKeyboardManager](../../mfc/reference/ckeyboardmanager-class.md), [classe CUserToolsManager](../../mfc/reference/cusertoolsmanager-class.md)et [classe CMenuTearOffManager](../../mfc/reference/cmenutearoffmanager-class.md).
 
-## <a name="inheritance-hierarchy"></a>Hiérarchie d'héritage
+## <a name="inheritance-hierarchy"></a>Hiérarchie d’héritage
 
 [CObject](../../mfc/reference/cobject-class.md)
 

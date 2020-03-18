@@ -16,11 +16,11 @@ helpviewer_keywords:
 - IDispEventSimpleImpl class
 ms.assetid: 971d82b7-a921-47fa-a4d8-909bed377ab0
 ms.openlocfilehash: 3ceb436e4f20a17ecd086fb68f9c1cfdcbe0be3e
-ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
+ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/06/2020
-ms.locfileid: "78864730"
+ms.lasthandoff: 03/16/2020
+ms.locfileid: "79417648"
 ---
 # <a name="idispeventsimpleimpl-class"></a>IDispEventSimpleImpl, classe
 
@@ -49,9 +49,9 @@ Pointeur vers l’IID de l’dispinterface d’événement implémentée par cet
 
 ## <a name="members"></a>Membres
 
-### <a name="public-methods"></a>Méthodes publiques
+### <a name="public-methods"></a>M&#233;thodes publiques
 
-|Nom|Description|
+|Name|Description|
 |----------|-----------------|
 |[IDispEventSimpleImpl :: Advise](#advise)|Établit une connexion avec la source d’événements par défaut.|
 |[IDispEventSimpleImpl ::D ispEventAdvise](#dispeventadvise)|Établit une connexion avec la source de l’événement.|
@@ -87,7 +87,7 @@ L’implémentation ATL CE des récepteurs d’événements ActiveX ne prend en 
 
 Pour plus d’informations, consultez [prise en charge de IDispEventImpl](../../atl/supporting-idispeventimpl.md).
 
-## <a name="inheritance-hierarchy"></a>Hiérarchie d'héritage
+## <a name="inheritance-hierarchy"></a>Hiérarchie d’héritage
 
 `_IDispEvent`
 
@@ -95,7 +95,7 @@ Pour plus d’informations, consultez [prise en charge de IDispEventImpl](../../
 
 `IDispEventSimpleImpl`
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
 **En-tête :** atlcom. h
 

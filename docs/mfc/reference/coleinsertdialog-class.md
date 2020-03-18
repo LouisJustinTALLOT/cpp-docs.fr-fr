@@ -25,11 +25,11 @@ helpviewer_keywords:
 - COleInsertDialog [MFC], m_io
 ms.assetid: a9ec610b-abde-431e-bd01-c40159a66dbb
 ms.openlocfilehash: a884f946b60be0567f39477f434db8efe041e393
-ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
+ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/06/2020
-ms.locfileid: "78855500"
+ms.lasthandoff: 03/16/2020
+ms.locfileid: "79421701"
 ---
 # <a name="coleinsertdialog-class"></a>COleInsertDialog, classe
 
@@ -61,7 +61,7 @@ class COleInsertDialog : public COleDialog
 |[COleInsertDialog::GetPathName](#getpathname)|Obtient le chemin d’accès complet au fichier choisi dans la boîte de dialogue.|
 |[COleInsertDialog::GetSelectionType](#getselectiontype)|Obtient le type d’objet sélectionné.|
 
-### <a name="public-data-members"></a>Membres de données publiques
+### <a name="public-data-members"></a>Membres de données publics
 
 |Name|Description|
 |----------|-----------------|
@@ -78,7 +78,7 @@ Pour plus d’informations, consultez la structure [OLEUIINSERTOBJECT](/windows/
 
 Pour plus d’informations sur les boîtes de dialogue spécifiques à OLE, consultez l’article [boîtes de dialogue dans OLE](../../mfc/dialog-boxes-in-ole.md).
 
-## <a name="inheritance-hierarchy"></a>Hiérarchie d'héritage
+## <a name="inheritance-hierarchy"></a>Hiérarchie d’héritage
 
 [CObject](../../mfc/reference/cobject-class.md)
 

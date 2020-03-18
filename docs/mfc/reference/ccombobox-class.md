@@ -109,11 +109,11 @@ helpviewer_keywords:
 - CComboBox [MFC], ShowDropDown
 ms.assetid: 4e73b5df-0d2e-4658-9706-38133fb10513
 ms.openlocfilehash: b54a1913073ca0b23aeb17a57b16f589a074637b
-ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
+ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/06/2020
-ms.locfileid: "78890809"
+ms.lasthandoff: 03/16/2020
+ms.locfileid: "79418817"
 ---
 # <a name="ccombobox-class"></a>CComboBox (classe)
 
@@ -248,7 +248,7 @@ Si vous incorporez un objet `CComboBox` dans un autre objet Window, vous n’ave
 
 **Remarque** Si vous souhaitez gérer des messages WM_KEYDOWN et WM_CHAR, vous devez sous-classer les contrôles de zone de liste et de modification de la zone de liste déroulante, dériver des classes de `CEdit` et `CListBox`, et ajouter des gestionnaires pour ces messages aux classes dérivées. Pour plus d’informations, consultez [CWnd :: SubclassWindow](../../mfc/reference/cwnd-class.md#subclasswindow).
 
-## <a name="inheritance-hierarchy"></a>Hiérarchie d'héritage
+## <a name="inheritance-hierarchy"></a>Hiérarchie d’héritage
 
 [CObject](../../mfc/reference/cobject-class.md)
 

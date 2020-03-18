@@ -53,11 +53,11 @@ helpviewer_keywords:
 - CArchive [MFC], m_pDocument
 ms.assetid: 9e950d23-b874-456e-ae4b-fe00781a7699
 ms.openlocfilehash: 3cf5c3b7a79e846928b5a7ee0af12a3324e141a3
-ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
+ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/06/2020
-ms.locfileid: "78855284"
+ms.lasthandoff: 03/16/2020
+ms.locfileid: "79418894"
 ---
 # <a name="carchive-class"></a>CArchive (classe)
 
@@ -103,14 +103,14 @@ class CArchive
 |[CArchive :: WriteObject](#writeobject)|Appelle la fonction de `Serialize` d’un objet pour le stockage.|
 |[CArchive :: WriteString](#writestring)|Écrit une seule ligne de texte.|
 
-### <a name="public-operators"></a>Op&#233;rateurs publics
+### <a name="public-operators"></a>Opérateurs publics
 
 |Name|Description|
 |----------|-----------------|
 |[CArchive :: Operator &lt;&lt;](#operator_lt_lt)|Stocke les objets et les types primitifs dans l’archive.|
 |[CArchive :: Operator &gt;&gt;](#operator_gt_gt)|Charge les objets et les types primitifs à partir de l’archive.|
 
-### <a name="public-data-members"></a>Membres de données publiques
+### <a name="public-data-members"></a>Membres de données publics
 
 |Name|Description|
 |----------|-----------------|
@@ -134,7 +134,7 @@ Les opérateurs d’extraction surchargés ( **>>** ) et d’insertion ( **<<** 
 
 Pour plus d’informations sur `CArchive`, consultez les articles [sérialisation](../../mfc/serialization-in-mfc.md) et [Windows Sockets : utilisation de sockets avec des archives](../../mfc/windows-sockets-using-sockets-with-archives.md).
 
-## <a name="inheritance-hierarchy"></a>Hiérarchie d'héritage
+## <a name="inheritance-hierarchy"></a>Hiérarchie d’héritage
 
 `CArchive`
 

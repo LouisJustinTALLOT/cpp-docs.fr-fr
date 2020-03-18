@@ -6,11 +6,11 @@ helpviewer_keywords:
 - Visual C++, x64 calling conventions
 ms.assetid: 750f3d97-1706-4840-b2fc-41a007329a08
 ms.openlocfilehash: 11d29b6c31ccecfe5b9c51c2f9311213bd4a6732
-ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
+ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/06/2020
-ms.locfileid: "78865598"
+ms.lasthandoff: 03/16/2020
+ms.locfileid: "79417193"
 ---
 # <a name="x64-software-conventions"></a>Conventions des logiciels x64
 
@@ -194,24 +194,24 @@ Le tableau suivant explique comment chaque registre est utilisé dans les appels
 ||||
 |-|-|-|
 |Inscrire|Statut|Utilisation|
-|RAX|Volatile|Registre des valeurs de retour|
-|RCX|Volatile|Premier argument entier|
-|RDX|Volatile|Deuxième argument entier|
-|R8|Volatile|Troisième argument entier|
-|R9|Volatile|Quatrième argument entier|
-|R10:R11|Volatile|Doit être conservé si nécessaire par l'appelant ; utilisé dans les instructions syscall/sysret|
+|RAX|Volatil|Registre des valeurs de retour|
+|RCX|Volatil|Premier argument entier|
+|RDX|Volatil|Deuxième argument entier|
+|R8|Volatil|Troisième argument entier|
+|R9|Volatil|Quatrième argument entier|
+|R10:R11|Volatil|Doit être conservé si nécessaire par l'appelant ; utilisé dans les instructions syscall/sysret|
 |R12:R15|Non volatil|Doit être conservé par l'appelé|
 |RDI|Non volatil|Doit être conservé par l'appelé|
 |RSI|Non volatil|Doit être conservé par l'appelé|
 |RBX|Non volatil|Doit être conservé par l'appelé|
 |RBP|Non volatil|Peut être utilisé comme pointeur de frame ; doit être conservé par l'appelé|
 |RSP|Non volatil|Pointeur de pile|
-|XMM0, YMM0|Volatile|Premier argument FP ; premier argument de type vectoriel quand `__vectorcall` est utilisé|
-|XMM1, YMM1|Volatile|Deuxième argument FP ; deuxième argument de type vectoriel quand `__vectorcall` est utilisé|
-|XMM2, YMM2|Volatile|Troisième argument FP ; troisième argument de type vectoriel quand `__vectorcall` est utilisé|
-|XMM3, YMM3|Volatile|Quatrième argument FP ; quatrième argument de type vectoriel quand `__vectorcall` est utilisé|
-|XMM4, YMM4|Volatile|Doit être conservé si nécessaire par l’appelant ; cinquième argument de type vectoriel quand `__vectorcall` est utilisé|
-|XMM5, YMM5|Volatile|Doit être conservé si nécessaire par l'appelant ; sixième argument de type vectoriel quand `__vectorcall` est utilisé|
+|XMM0, YMM0|Volatil|Premier argument FP ; premier argument de type vectoriel quand `__vectorcall` est utilisé|
+|XMM1, YMM1|Volatil|Deuxième argument FP ; deuxième argument de type vectoriel quand `__vectorcall` est utilisé|
+|XMM2, YMM2|Volatil|Troisième argument FP ; troisième argument de type vectoriel quand `__vectorcall` est utilisé|
+|XMM3, YMM3|Volatil|Quatrième argument FP ; quatrième argument de type vectoriel quand `__vectorcall` est utilisé|
+|XMM4, YMM4|Volatil|Doit être conservé si nécessaire par l’appelant ; cinquième argument de type vectoriel quand `__vectorcall` est utilisé|
+|XMM5, YMM5|Volatil|Doit être conservé si nécessaire par l'appelant ; sixième argument de type vectoriel quand `__vectorcall` est utilisé|
 |XMM6:XMM15, YMM6:YMM15|Non volatil (XMM), volatil (moitié supérieure de YMM)|Doit être conservé par l’appelé. Les registres YMM doivent être conservés si nécessaire par l'appelant.|
 
 Sur la sortie de la fonction et sur l’entrée de la fonction pour les appels de la bibliothèque Runtime C et les appels système Windows, l’indicateur de direction dans le registre des indicateurs de l’UC est supposé être effacé.

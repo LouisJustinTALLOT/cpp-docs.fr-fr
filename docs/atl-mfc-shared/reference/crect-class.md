@@ -35,11 +35,11 @@ helpviewer_keywords:
 - RECT structure
 ms.assetid: dee4e752-15d6-4db4-b68f-1ad65b2ed6ca
 ms.openlocfilehash: 13f86c411cca98f5817d1b3b2d9162ae8af8b734
-ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
+ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/06/2020
-ms.locfileid: "78866530"
+ms.lasthandoff: 03/16/2020
+ms.locfileid: "79418250"
 ---
 # <a name="crect-class"></a>CRect, classe
 
@@ -87,7 +87,7 @@ class CRect : public tagRECT
 |[CRect :: UnionRect](#unionrect)|Définit `CRect` égal à l’Union de deux rectangles.|
 |[CRect :: width](#width)|Calcule la largeur de `CRect`.|
 
-### <a name="public-operators"></a>Op&#233;rateurs publics
+### <a name="public-operators"></a>Opérateurs publics
 
 |Name|Description|
 |----------|-----------------|
@@ -122,7 +122,7 @@ Soyez prudent lors de la manipulation d’un `CRect` avec les fonctions membres 
 
 Lorsque vous utilisez des opérateurs de `CRect` surchargés, le premier opérande doit être un `CRect`; la seconde peut être soit une structure [Rect](/windows/win32/api/windef/ns-windef-rect) , soit un objet `CRect`.
 
-## <a name="inheritance-hierarchy"></a>Hiérarchie d'héritage
+## <a name="inheritance-hierarchy"></a>Hiérarchie d’héritage
 
 `tagRECT`
 

@@ -1,20 +1,18 @@
 ---
 title: Gestion du temps
 ms.date: 11/04/2016
-f1_keywords:
-- c.memory
 helpviewer_keywords:
 - dates, run-time library members
 - time, time management
 - date functions
 - time functions
 ms.assetid: 93599220-c011-45d5-978f-12182abfdd2f
-ms.openlocfilehash: e9842d8c24089c7fbb33745c3bf5d4edb1d29343
-ms.sourcegitcommit: 7d64c5f226f925642a25e07498567df8bebb00d4
-ms.translationtype: HT
+ms.openlocfilehash: 24859a0b35274881b03b960807904ed38b19e354
+ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/08/2019
-ms.locfileid: "65446788"
+ms.lasthandoff: 03/17/2020
+ms.locfileid: "79444592"
 ---
 # <a name="time-management"></a>Gestion du temps
 
@@ -24,7 +22,7 @@ Les routines **_ftime** et **localtime** utilisent la variable d’environnement
 
 ### <a name="time-routines"></a>Routines de temps
 
-|Fonction|Utilisez|
+|Fonction|Utilisation|
 |--------------|---------|
 |[asctime, _wasctime](../c-runtime-library/reference/asctime-wasctime.md), [asctime_s, _wasctime_s](../c-runtime-library/reference/asctime-s-wasctime-s.md)|Convertit une heure du type **struct tm** en chaîne de caractères. Les versions de ces fonctions qui ont le suffixe **_s** sont plus sécurisées.|
 |[horloge](../c-runtime-library/reference/clock.md)|Renvoie le temps horloge écoulé pour le processus.|
@@ -44,10 +42,10 @@ Les routines **_ftime** et **localtime** utilisent la variable d’environnement
 |[_utime, _utime32, _utime64, _wutime, _wutime32, _wutime64](../c-runtime-library/reference/utime-utime32-utime64-wutime-wutime32-wutime64.md)|Définit l’heure de modification du fichier spécifié en fonction de l’heure actuelle ou de la valeur d’heure stockée dans la structure.|
 
 > [!NOTE]
-> Dans toutes les versions de Microsoft C/C++ à l’exception de Microsoft C/C++ version 7.0, et dans toutes les versions de Visual C++, l’heure actuelle renvoyée par la fonction time correspond au nombre de secondes écoulées depuis le 1er janvier 1970 à minuit. Dans Microsoft C/C++ version 7.0, l’heure actuelle retournée par **time** est le nombre de secondes écoulées depuis le 31 décembre 1899 à minuit.
+> Dans toutes les versions de Microsoft C/C++ à l’exception de Microsoft C/C++ version 7.0, et dans toutes les versions de Visual C++, l’heure actuelle retournée par la fonction time correspond au nombre de secondes écoulées depuis le 1er janvier 1970 à minuit. Dans Microsoft C/C++ version 7.0, l’heure actuelle retournée par **time** est le nombre de secondes écoulées depuis le 31 décembre 1899 à minuit.
 
 > [!NOTE]
-> Dans les versions de Visual C++ et de Microsoft C/C++ antérieures à Visual Studio 2005, **time_t** était une valeur **long** **int** (32 bits) et ne pouvait donc pas être utilisé pour les dates postérieures au 19 janvier 2038 à 3:14:07 (heure UTC). **time_t** est maintenant équivalent à **__time64_t** par défaut. Toutefois, le fait de définir **_USE_32BIT_TIME_T** remplace **time_t** par **__time32_t** et force de nombreuses fonctions time à appeler les versions qui acceptent la valeur **time_t** 32 bits. Pour plus d’informations, consultez [Types standard](../c-runtime-library/standard-types.md) et les commentaires dans la documentation pour les fonctions de temps individuelles.
+> Dans les versions de C++ Visual et Microsoft CC++ /antérieures à visual Studio 2005, **time_t** était un **long** **int** (32 bits) et ne pouvait donc pas être utilisé pour les dates passées au-3:14:07 delà du 19 janvier 2038, UTC. **time_t** est maintenant équivalent à **__time64_t** par défaut. Toutefois, le fait de définir **_USE_32BIT_TIME_T** remplace **time_t** par **__time32_t** et force de nombreuses fonctions time à appeler les versions qui acceptent la valeur **time_t** 32 bits. Pour plus d’informations, consultez [Types standard](../c-runtime-library/standard-types.md) et les commentaires dans la documentation pour les fonctions de temps individuelles.
 
 ## <a name="see-also"></a>Voir aussi
 

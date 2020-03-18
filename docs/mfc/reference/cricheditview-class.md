@@ -101,11 +101,11 @@ helpviewer_keywords:
 - CRichEditView [MFC], m_nWordWrap
 ms.assetid: bd576b10-4cc0-4050-8f76-e1a0548411e4
 ms.openlocfilehash: b32578cc3c9ad4f7a89b8ee76449259c0fa0b43b
-ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
+ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/06/2020
-ms.locfileid: "78883654"
+ms.lasthandoff: 03/16/2020
+ms.locfileid: "79421477"
 ---
 # <a name="cricheditview-class"></a>CRichEditView (classe)
 
@@ -179,7 +179,7 @@ class CRichEditView : public CCtrlView
 |[CRichEditView :: QueryAcceptData](#queryacceptdata)|Les requêtes pour voir les données sur le `IDataObject`.|
 |[CRichEditView :: WrapChanged](#wrapchanged)|Ajuste le périphérique de sortie cible pour cette vue RichEdit, en fonction de la valeur de `m_nWordWrap`.|
 
-### <a name="public-data-members"></a>Membres de données publiques
+### <a name="public-data-members"></a>Membres de données publics
 
 |Name|Description|
 |----------|-----------------|
@@ -196,7 +196,7 @@ Ce contrôle commun Windows (et par conséquent l' [CRichEditCtrl](../../mfc/ref
 
 Pour obtenir un exemple d’utilisation d’une vue RichEdit dans une application MFC, consultez l’exemple d’application [WordPad](../../overview/visual-cpp-samples.md) .
 
-## <a name="inheritance-hierarchy"></a>Hiérarchie d'héritage
+## <a name="inheritance-hierarchy"></a>Hiérarchie d’héritage
 
 [CObject](../../mfc/reference/cobject-class.md)
 

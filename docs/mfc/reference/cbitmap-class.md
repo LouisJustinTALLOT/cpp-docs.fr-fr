@@ -35,11 +35,11 @@ helpviewer_keywords:
 - CBitmap [MFC], SetBitmapDimension
 ms.assetid: 3980616a-c59d-495a-86e6-62bd3889c84c
 ms.openlocfilehash: 7161a4cf4484b6cc9e76e6955de558ca6e9121ca
-ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
+ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/06/2020
-ms.locfileid: "78855494"
+ms.lasthandoff: 03/16/2020
+ms.locfileid: "79418957"
 ---
 # <a name="cbitmap-class"></a>CBitmap, classe
 
@@ -77,7 +77,7 @@ class CBitmap : public CGdiObject
 |[CBitmap :: SetBitmapBits](#setbitmapbits)|Affecte les valeurs de bits spécifiées aux bits d’une image bitmap.|
 |[CBitmap :: SetBitmapDimension](#setbitmapdimension)|Affecte une largeur et une hauteur à une image bitmap en unités de 0,1 mm.|
 
-### <a name="public-operators"></a>Op&#233;rateurs publics
+### <a name="public-operators"></a>Opérateurs publics
 
 |Name|Description|
 |----------|-----------------|
@@ -89,7 +89,7 @@ Pour utiliser un objet `CBitmap`, construisez l’objet, attachez-lui un handle 
 
 Pour plus d’informations sur l’utilisation d’objets graphiques comme `CBitmap`, consultez [objets graphiques](../../mfc/graphic-objects.md).
 
-## <a name="inheritance-hierarchy"></a>Hiérarchie d'héritage
+## <a name="inheritance-hierarchy"></a>Hiérarchie d’héritage
 
 [CObject](../../mfc/reference/cobject-class.md)
 

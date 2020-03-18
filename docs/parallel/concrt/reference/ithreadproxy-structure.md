@@ -12,11 +12,11 @@ helpviewer_keywords:
 - IThreadProxy structure
 ms.assetid: feb89241-a555-4e61-ad48-40add54daeca
 ms.openlocfilehash: b87694393af4634ec97d05070aa5513cd132098a
-ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
+ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/06/2020
-ms.locfileid: "78854152"
+ms.lasthandoff: 03/16/2020
+ms.locfileid: "79417158"
 ---
 # <a name="ithreadproxy-structure"></a>IThreadProxy, structure
 
@@ -43,7 +43,7 @@ struct IThreadProxy;
 
 Les proxys de thread sont associés aux contextes d’exécution représentés par l’interface `IExecutionContext` comme un moyen de distribuer le travail.
 
-## <a name="inheritance-hierarchy"></a>Hiérarchie d'héritage
+## <a name="inheritance-hierarchy"></a>Hiérarchie d’héritage
 
 `IThreadProxy`
 

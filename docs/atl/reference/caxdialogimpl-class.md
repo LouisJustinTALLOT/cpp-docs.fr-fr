@@ -18,11 +18,11 @@ helpviewer_keywords:
 - ATL, dialog boxes
 ms.assetid: 817df483-3fa8-44e7-8487-72ba0881cd27
 ms.openlocfilehash: 548d2aed0644187b4b8dee1e472b581f1f92d6a1
-ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
+ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/06/2020
-ms.locfileid: "78865054"
+ms.lasthandoff: 03/16/2020
+ms.locfileid: "79418012"
 ---
 # <a name="caxdialogimpl-class"></a>CAxDialogImpl, classe
 
@@ -61,7 +61,7 @@ Classe de fenêtre de base pour `CDialogImplBaseT`.
 |[CAxDialogImpl :: GetIDD](#getidd)|Appelez cette méthode pour accéder à l’ID de ressource du modèle de boîte de dialogue|
 |[CAxDialogImpl :: IsDialogMessage](#isdialogmessage)|Appelez cette méthode pour déterminer si un message est destiné à cette boîte de dialogue et, si c’est le cas, traiter le message.|
 
-### <a name="protected-data-members"></a>Membres de données protégées
+### <a name="protected-data-members"></a>Membres de données protégés
 
 |Name|Description|
 |----------|-----------------|
@@ -85,7 +85,7 @@ Notez qu’un contrôle ActiveX dans une boîte de dialogue modale créée avec 
 
 Pour plus d’informations sur les `CAxDialogImpl`, consultez [Forum aux questions sur la relation contenant-contenu de contrôle ATL](../../atl/atl-control-containment-faq.md).
 
-## <a name="inheritance-hierarchy"></a>Hiérarchie d'héritage
+## <a name="inheritance-hierarchy"></a>Hiérarchie d’héritage
 
 [CMessageMap](../../atl/reference/cmessagemap-class.md)
 

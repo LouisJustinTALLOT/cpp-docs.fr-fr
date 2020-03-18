@@ -43,11 +43,11 @@ helpviewer_keywords:
 - CArray [MFC], SetSize
 ms.assetid: fead8b00-4cfd-4625-ad0e-251df62ba92f
 ms.openlocfilehash: f82dbf7dce2e14bf760bb76d23d23f667797ee0f
-ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
+ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/06/2020
-ms.locfileid: "78874509"
+ms.lasthandoff: 03/16/2020
+ms.locfileid: "79418859"
 ---
 # <a name="carray-class"></a>CArray (classe)
 
@@ -98,7 +98,7 @@ Paramètre de modèle qui spécifie le type d’argument utilisé pour accéder 
 |[CArray :: SetAtGrow](#setatgrow)|Définit la valeur d'un index donné. Le tableau est étendu si nécessaire.|
 |[CArray :: assets](#setsize)|Définit le nombre d'éléments que ce tableau doit contenir.|
 
-### <a name="public-operators"></a>Op&#233;rateurs publics
+### <a name="public-operators"></a>Opérateurs publics
 
 |Name|Description|
 |----------|-----------------|
@@ -124,7 +124,7 @@ La dérivation de classe de tableau est semblable à la dérivation de liste.
 
 Pour plus d’informations sur l’utilisation de `CArray`, consultez l’article [Collections](../../mfc/collections.md).
 
-## <a name="inheritance-hierarchy"></a>Hiérarchie d'héritage
+## <a name="inheritance-hierarchy"></a>Hiérarchie d’héritage
 
 [CObject](../../mfc/reference/cobject-class.md)
 

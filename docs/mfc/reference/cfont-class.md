@@ -21,11 +21,11 @@ helpviewer_keywords:
 - CFont [MFC], GetLogFont
 ms.assetid: 3fad6bfe-d6ce-4ab9-967a-5ce0aa102800
 ms.openlocfilehash: c37b2f657105e0065e0cddb2c508424bd6c89b0a
-ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
+ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/06/2020
-ms.locfileid: "78866605"
+ms.lasthandoff: 03/16/2020
+ms.locfileid: "79418621"
 ---
 # <a name="cfont-class"></a>CFont, classe
 
@@ -56,7 +56,7 @@ class CFont : public CGdiObject
 |[CFont :: FromHandle](#fromhandle)|Retourne un pointeur vers un objet `CFont` lorsqu’un HFONT Windows est fourni.|
 |[CFont :: GetLogFont](#getlogfont)|Remplit un `LOGFONT` avec des informations sur la police logique attachée à l’objet `CFont`.|
 
-### <a name="public-operators"></a>Op&#233;rateurs publics
+### <a name="public-operators"></a>Opérateurs publics
 
 |Name|Description|
 |----------|-----------------|
@@ -70,7 +70,7 @@ Les fonctions `CreatePointFont` et `CreatePointFontIndirect` sont souvent plus f
 
 Pour plus d’informations sur les `CFont`, consultez [objets graphiques](../../mfc/graphic-objects.md).
 
-## <a name="inheritance-hierarchy"></a>Hiérarchie d'héritage
+## <a name="inheritance-hierarchy"></a>Hiérarchie d’héritage
 
 [CObject](../../mfc/reference/cobject-class.md)
 

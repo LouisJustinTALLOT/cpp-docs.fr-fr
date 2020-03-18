@@ -12,11 +12,11 @@ helpviewer_keywords:
 - ScheduleGroup class
 ms.assetid: 86d380ff-f2e8-411c-b1a8-22bd3079824a
 ms.openlocfilehash: 8686b5ef0906e3188a1e683d1190bbe6124cd19e
-ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
+ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/06/2020
-ms.locfileid: "78867125"
+ms.lasthandoff: 03/16/2020
+ms.locfileid: "79417130"
 ---
 # <a name="schedulegroup-class"></a>ScheduleGroup, classe
 
@@ -30,7 +30,7 @@ class ScheduleGroup;
 
 ## <a name="members"></a>Membres
 
-### <a name="protected-constructors"></a>Constructeurs prot&#233;g&#233;s
+### <a name="protected-constructors"></a>Constructeurs protégés
 
 |Name|Description|
 |----------|-----------------|
@@ -45,7 +45,7 @@ class ScheduleGroup;
 |[Version release](#release)|Décrémente le nombre de références de groupe du planificateur.|
 |[ScheduleTask,](#scheduletask)|Planifie une tâche légère dans le groupe de planification.|
 
-## <a name="inheritance-hierarchy"></a>Hiérarchie d'héritage
+## <a name="inheritance-hierarchy"></a>Hiérarchie d’héritage
 
 `ScheduleGroup`
 
