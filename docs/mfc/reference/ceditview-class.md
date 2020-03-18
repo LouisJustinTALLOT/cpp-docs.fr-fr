@@ -41,11 +41,11 @@ helpviewer_keywords:
 - CEditView [MFC], dwStyleDefault
 ms.assetid: bf38255c-fcbe-450c-95b2-3c5e35f86c37
 ms.openlocfilehash: e9b7dea980e607c776e2d50c679042c765080fdb
-ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
+ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/06/2020
-ms.locfileid: "78872493"
+ms.lasthandoff: 03/16/2020
+ms.locfileid: "79418656"
 ---
 # <a name="ceditview-class"></a>Classe CEditView
 
@@ -90,7 +90,7 @@ class CEditView : public CCtrlView
 |[CEditView :: OnReplaceSel](#onreplacesel)|Remplace la sélection actuelle.|
 |[CEditView :: OnTextNotFound](#ontextnotfound)|Appelé lorsqu’une opération de recherche ne parvient pas à faire correspondre un texte supplémentaire.|
 
-### <a name="public-data-members"></a>Membres de données publiques
+### <a name="public-data-members"></a>Membres de données publics
 
 |Name|Description|
 |----------|-----------------|
@@ -128,7 +128,7 @@ Les objets de type `CEditView` (ou de types dérivés de `CEditView`) présenten
 
 Pour plus d’informations sur les `CEditView`, consultez [classes d’affichage dérivées disponibles dans MFC](../../mfc/derived-view-classes-available-in-mfc.md).
 
-## <a name="inheritance-hierarchy"></a>Hiérarchie d'héritage
+## <a name="inheritance-hierarchy"></a>Hiérarchie d’héritage
 
 [CObject](../../mfc/reference/cobject-class.md)
 

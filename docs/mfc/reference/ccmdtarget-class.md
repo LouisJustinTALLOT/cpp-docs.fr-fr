@@ -47,11 +47,11 @@ helpviewer_keywords:
 - CCmdTarget [MFC], RestoreWaitCursor
 ms.assetid: 8883b132-2057-4ce0-a5f2-88979f8f2b13
 ms.openlocfilehash: 583b685295bf77910ef134776c1c4fa39baf93ad
-ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
+ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/06/2020
-ms.locfileid: "78867030"
+ms.lasthandoff: 03/16/2020
+ms.locfileid: "79420525"
 ---
 # <a name="ccmdtarget-class"></a>CCmdTarget, classe
 
@@ -107,7 +107,7 @@ Pour obtenir une vue d’ensemble des cibles de commande et du routage de `OnCmd
 
 Les tables de dispatch, similaires aux tables des messages, sont utilisées pour exposer les fonctionnalités de `IDispatch` OLE Automation. En exposant cette interface, les autres applications (telles que Visual Basic) peuvent appeler votre application.
 
-## <a name="inheritance-hierarchy"></a>Hiérarchie d'héritage
+## <a name="inheritance-hierarchy"></a>Hiérarchie d’héritage
 
 [CObject](../../mfc/reference/cobject-class.md)
 

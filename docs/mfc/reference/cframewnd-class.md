@@ -107,11 +107,11 @@ helpviewer_keywords:
 - CFrameWnd [MFC], rectDefault
 ms.assetid: e2220aba-5bf4-4002-b960-fbcafcad01f1
 ms.openlocfilehash: d2e043c8c9f4ad86636cd0e9ea7d695826b6c8fb
-ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
+ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/06/2020
-ms.locfileid: "78866431"
+ms.lasthandoff: 03/16/2020
+ms.locfileid: "79418628"
 ---
 # <a name="cframewnd-class"></a>CFrameWnd (classe)
 
@@ -188,7 +188,7 @@ class CFrameWnd : public CWnd
 |[CFrameWnd :: OnHideMenuBar](#onhidemenubar)|Appelé avant que le menu de l’application MFC actuelle soit masqué.|
 |[CFrameWnd :: OnShowMenuBar](#onshowmenubar)|Appelé avant l’affichage du menu dans l’application MFC actuelle.|
 
-### <a name="public-data-members"></a>Membres de données publiques
+### <a name="public-data-members"></a>Membres de données publics
 
 |Name|Description|
 |----------|-----------------|
@@ -243,7 +243,7 @@ N’utilisez pas l' C++ opérateur **Delete** pour détruire une fenêtre frame.
 
 Pour plus d’informations sur les `CFrameWnd`, consultez [fenêtres Frame](../../mfc/frame-windows.md).
 
-## <a name="inheritance-hierarchy"></a>Hiérarchie d'héritage
+## <a name="inheritance-hierarchy"></a>Hiérarchie d’héritage
 
 [CObject](../../mfc/reference/cobject-class.md)
 

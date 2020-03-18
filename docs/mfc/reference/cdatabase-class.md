@@ -51,11 +51,11 @@ helpviewer_keywords:
 - CDatabase [MFC], m_hdbc
 ms.assetid: bd0de70a-e3c3-4441-bcaa-bbf434426ca8
 ms.openlocfilehash: ebc36d82af9bfe12ab30a86214e58610b5eaab95
-ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
+ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/06/2020
-ms.locfileid: "78866268"
+ms.lasthandoff: 03/16/2020
+ms.locfileid: "79418754"
 ---
 # <a name="cdatabase-class"></a>CDatabase, classe
 
@@ -100,7 +100,7 @@ class CDatabase : public CObject
 |[CDatabase :: SetLoginTimeout](#setlogintimeout)|Définit le nombre de secondes au terme desquelles une tentative de connexion à la source de données expire.|
 |[CDatabase :: SetQueryTimeout](#setquerytimeout)|Définit le nombre de secondes après lequel les opérations de requête de base de données expirent. Affecte tous les appels de `Open`, `AddNew`, `Edit`et `Delete` du Recordset ultérieurs.|
 
-### <a name="public-data-members"></a>Membres de données publiques
+### <a name="public-data-members"></a>Membres de données publics
 
 |Name|Description|
 |----------|-----------------|
@@ -117,7 +117,7 @@ Pour utiliser `CDatabase`, construisez un objet `CDatabase` et appelez sa foncti
 
 Pour plus d’informations sur `CDatabase`, consultez les articles [source de données (ODBC)](../../data/odbc/data-source-odbc.md) et [vue d’ensemble : programmation de bases de données](../../data/data-access-programming-mfc-atl.md).
 
-## <a name="inheritance-hierarchy"></a>Hiérarchie d'héritage
+## <a name="inheritance-hierarchy"></a>Hiérarchie d’héritage
 
 [CObject](../../mfc/reference/cobject-class.md)
 

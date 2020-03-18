@@ -239,11 +239,11 @@ helpviewer_keywords:
 - CMFCBaseTabCtrl [MFC], m_bAutoDestroyWindow
 ms.assetid: 7270c55f-6f6e-4dd2-b0d2-291afeac3882
 ms.openlocfilehash: 8a1637c77c326ddcfcb7f4dcb834ab6f6b2c0cf1
-ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
+ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/06/2020
-ms.locfileid: "78866686"
+ms.lasthandoff: 03/16/2020
+ms.locfileid: "79420602"
 ---
 # <a name="cmfcbasetabctrl-class"></a>CMFCBaseTabCtrl Class
 
@@ -407,7 +407,7 @@ Les conseils suivants se rapportent à `CMFCBaseTabCtrl Class` et à toutes les 
 
 - Les objets dérivés de la [classe CWnd](../../mfc/reference/cwnd-class.md) peuvent être placés sur une barre de contrôle ou un onglet Ancrable. Pour que l’ensemble du contrôle soit ancré, vous devez rendre l’objet `CWnd` Ancrable. Pour ce faire, MFC utilise une classe wrapper. Cette classe wrapper est la [CDockablePaneAdapter Class](../../mfc/reference/cdockablepaneadapter-class.md). Les objets `CWnd` qui sont ajoutés à une barre de contrôle ou à un onglet ancrable sont inclus dans un wrapper à l'intérieur d'un objet `CDockablePaneAdapter` . Vous pouvez désactiver l'inclusion automatique dans un wrapper en attribuant au paramètre `m_bEnableWrapping` de votre objet `CMFCBaseTablCtrl` la valeur `FALSE`. Vous pouvez aussi changer la classe que votre application doit utiliser comme wrapper à l’aide de la méthode [CMFCBaseTabCtrl::SetDockingBarWrapperRTC](#setdockingbarwrapperrtc).
 
-## <a name="inheritance-hierarchy"></a>Hiérarchie d'héritage
+## <a name="inheritance-hierarchy"></a>Hiérarchie d’héritage
 
 [CObject](../../mfc/reference/cobject-class.md)
 

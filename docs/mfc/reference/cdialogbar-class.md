@@ -11,11 +11,11 @@ helpviewer_keywords:
 - CDialogBar [MFC], Create
 ms.assetid: da2f7a30-970c-44e3-87f0-6094bd002cab
 ms.openlocfilehash: af84c5239a9cb3cbddb1ab4f0230e5b1a3373573
-ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
+ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/06/2020
-ms.locfileid: "78883619"
+ms.lasthandoff: 03/16/2020
+ms.locfileid: "79420476"
 ---
 # <a name="cdialogbar-class"></a>CDialogBar (classe)
 
@@ -52,7 +52,7 @@ Pour plus d’informations sur `CDialogBar`, consultez les [barres de boîte de 
 > [!NOTE]
 >  Dans la version actuelle, un objet `CDialogBar` ne peut pas héberger des contrôles Windows Forms. Pour plus d’informations sur les contrôles Windows Forms C++dans Visual, consultez [utilisation d’un contrôle utilisateur Windows Form dans MFC](../../dotnet/using-a-windows-form-user-control-in-mfc.md).
 
-## <a name="inheritance-hierarchy"></a>Hiérarchie d'héritage
+## <a name="inheritance-hierarchy"></a>Hiérarchie d’héritage
 
 [CObject](../../mfc/reference/cobject-class.md)
 

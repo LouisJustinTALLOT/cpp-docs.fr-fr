@@ -85,11 +85,11 @@ helpviewer_keywords:
 - CMenu [MFC], m_hMenu
 ms.assetid: 40cacfdc-d45c-4ec7-bf28-991c72812499
 ms.openlocfilehash: 1cd7be72dc6c9a38fae4f5ccc1a15c184a2d4466
-ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
+ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/06/2020
-ms.locfileid: "78855505"
+ms.lasthandoff: 03/16/2020
+ms.locfileid: "79420805"
 ---
 # <a name="cmenu-class"></a>CMenu, classe
 
@@ -151,7 +151,7 @@ class CMenu : public CObject
 |[CMenu :: TrackPopupMenu](#trackpopupmenu)|Affiche un menu contextuel flottant à l’emplacement spécifié et effectue le suivi de la sélection des éléments dans le menu contextuel.|
 |[CMenu :: TrackPopupMenuEx](#trackpopupmenuex)|Affiche un menu contextuel flottant à l’emplacement spécifié et effectue le suivi de la sélection des éléments dans le menu contextuel.|
 
-### <a name="public-operators"></a>Op&#233;rateurs publics
+### <a name="public-operators"></a>Opérateurs publics
 
 |Name|Description|
 |----------|-----------------|
@@ -159,7 +159,7 @@ class CMenu : public CObject
 |[CMenu :: Operator ! =](#operator_neq)|Détermine si deux objets de menu ne sont pas égaux.|
 |[CMenu :: Operator = =](#operator_eq_eq)|Détermine si deux objets de menu sont égaux.|
 
-### <a name="public-data-members"></a>Membres de données publiques
+### <a name="public-data-members"></a>Membres de données publics
 
 |Name|Description|
 |----------|-----------------|
@@ -173,7 +173,7 @@ Créez un objet `CMenu` sur le frame de pile en tant que local, puis appelez les
 
 Vous pouvez utiliser la fonction membre [LoadMenuIndirect](#loadmenuindirect) pour créer un menu à partir d’un modèle en mémoire, mais un menu créé à partir d’une ressource par un appel à [LoadMenu](#loadmenu) est plus facile à gérer, et la ressource de menu elle-même peut être créée et modifiée par l’éditeur de menus.
 
-## <a name="inheritance-hierarchy"></a>Hiérarchie d'héritage
+## <a name="inheritance-hierarchy"></a>Hiérarchie d’héritage
 
 [CObject](../../mfc/reference/cobject-class.md)
 

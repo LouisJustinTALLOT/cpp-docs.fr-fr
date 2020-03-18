@@ -22,11 +22,11 @@ helpviewer_keywords:
 - Scheduler class
 ms.assetid: 34cf7961-048d-4852-8a5c-a32f823e3506
 ms.openlocfilehash: 77ad876b8352ab1ae86fde622b05712ec5f2cea9
-ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
+ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/06/2020
-ms.locfileid: "78867126"
+ms.lasthandoff: 03/16/2020
+ms.locfileid: "79422114"
 ---
 # <a name="scheduler-class"></a>Scheduler, classe
 
@@ -40,7 +40,7 @@ class Scheduler;
 
 ## <a name="members"></a>Membres
 
-### <a name="protected-constructors"></a>Constructeurs prot&#233;g&#233;s
+### <a name="protected-constructors"></a>Constructeurs protégés
 
 |Name|Description|
 |----------|-----------------|
@@ -71,7 +71,7 @@ Le planificateur runtime d’accès concurrentiel utilise des contextes d’exé
 
 Le runtime d’accès concurrentiel crée un planificateur par défaut par processus pour exécuter le travail parallèle. En outre, vous pouvez créer vos propres instances de planificateur et les manipuler à l’aide de cette classe.
 
-## <a name="inheritance-hierarchy"></a>Hiérarchie d'héritage
+## <a name="inheritance-hierarchy"></a>Hiérarchie d’héritage
 
 `Scheduler`
 

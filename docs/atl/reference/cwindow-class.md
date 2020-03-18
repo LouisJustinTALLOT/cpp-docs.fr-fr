@@ -154,11 +154,11 @@ helpviewer_keywords:
 - CWindow class
 ms.assetid: fefa00c8-f053-4bcf-87bc-dc84f5386683
 ms.openlocfilehash: f6d52c8fce8e1437e87f9f251b7f5f050efa6fed
-ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
+ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/06/2020
-ms.locfileid: "78864732"
+ms.lasthandoff: 03/16/2020
+ms.locfileid: "79417809"
 ---
 # <a name="cwindow-class"></a>CWindow (classe)
 
@@ -329,14 +329,14 @@ class CWindow
 |[CWindow :: ValidateRgn](#validatergn)|Valide la zone cliente dans la région spécifiée.|
 |[CWindow :: WinHelp](#winhelp)|Démarre l’aide de Windows.|
 
-### <a name="public-operators"></a>Op&#233;rateurs publics
+### <a name="public-operators"></a>Opérateurs publics
 
 |Name|Description|
 |----------|-----------------|
 |[CWindow :: Operator HWND](#operator_hwnd)|Convertit l’objet `CWindow` en HWND.|
 |[CWindow :: Operator =](#operator_eq)|Assigne un HWND à l’objet `CWindow`.|
 
-### <a name="public-data-members"></a>Membres de données publiques
+### <a name="public-data-members"></a>Membres de données publics
 
 |Name|Description|
 |----------|-----------------|

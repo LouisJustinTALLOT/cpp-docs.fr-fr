@@ -167,11 +167,11 @@ helpviewer_keywords:
 - CDaoRecordset [MFC], m_strSort
 ms.assetid: 2322067f-1027-4662-a5d7-aa2fc7488630
 ms.openlocfilehash: 96118645aa656e97fcb93a0fd223045208ab03a3
-ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
+ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/06/2020
-ms.locfileid: "78867300"
+ms.lasthandoff: 03/16/2020
+ms.locfileid: "79418789"
 ---
 # <a name="cdaorecordset-class"></a>CDaoRecordset (classe)
 
@@ -268,7 +268,7 @@ class CDaoRecordset : public CObject
 |[CDaoRecordset :: SetPercentPosition](#setpercentposition)|Définit la position de l’enregistrement en cours à un emplacement correspondant à un pourcentage du nombre total d’enregistrements dans un Recordset.|
 |[CDaoRecordset :: Update](#update)|Termine une opération de `AddNew` ou de `Edit` en enregistrant les données nouvelles ou modifiées sur la source de données.|
 
-### <a name="public-data-members"></a>Membres de données publiques
+### <a name="public-data-members"></a>Membres de données publics
 
 |Name|Description|
 |----------|-----------------|
@@ -319,7 +319,7 @@ Utilisez les fonctions membres et les membres de données de l’objet pour fair
 
 Pour obtenir des informations connexes, consultez la rubrique « objet Recordset » dans l’aide de DAO.
 
-## <a name="inheritance-hierarchy"></a>Hiérarchie d'héritage
+## <a name="inheritance-hierarchy"></a>Hiérarchie d’héritage
 
 [CObject](../../mfc/reference/cobject-class.md)
 

@@ -27,11 +27,11 @@ helpviewer_keywords:
 - CCmdUI [MFC], m_pSubMenu
 ms.assetid: 04eaaaf5-f510-48ab-b425-94665ba24766
 ms.openlocfilehash: 42aec2937cd81ebbb50482321b8deae001723d3a
-ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
+ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/06/2020
-ms.locfileid: "78883618"
+ms.lasthandoff: 03/16/2020
+ms.locfileid: "79418824"
 ---
 # <a name="ccmdui-class"></a>CCmdUI, classe
 
@@ -55,7 +55,7 @@ class CCmdUI
 |[CCmdUI :: SetRadio](#setradio)|Comme la fonction membre `SetCheck`, mais fonctionne sur les groupes radio.|
 |[CCmdUI :: SetText](#settext)|Définit le texte de l’élément d’interface utilisateur pour cette commande.|
 
-### <a name="public-data-members"></a>Membres de données publiques
+### <a name="public-data-members"></a>Membres de données publics
 
 |Name|Description|
 |----------|-----------------|
@@ -87,7 +87,7 @@ Le tableau suivant résume l’effet que les fonctions membres de `CCmdUI`ont su
 
 Pour plus d’informations sur l’utilisation de cette classe, consultez [Comment mettre à jour des objets d’interface utilisateur](../../mfc/how-to-update-user-interface-objects.md).
 
-## <a name="inheritance-hierarchy"></a>Hiérarchie d'héritage
+## <a name="inheritance-hierarchy"></a>Hiérarchie d’héritage
 
 `CCmdUI`
 

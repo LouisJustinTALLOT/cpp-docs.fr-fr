@@ -13,11 +13,11 @@ helpviewer_keywords:
 - Object class
 ms.assetid: 709e84a8-0bff-471b-bc14-63e424080b5a
 ms.openlocfilehash: 77313f8c4dcc87fa9de852afe2d60e614f8fc3a3
-ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
+ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/06/2020
-ms.locfileid: "78865741"
+ms.lasthandoff: 03/16/2020
+ms.locfileid: "79418348"
 ---
 # <a name="platformobject-class"></a>Platform::Object, classe
 
@@ -47,7 +47,7 @@ public ref class Object : Object
 |[ToString](#tostring)|Retourne une chaîne qui représente l'objet actif. Peut être substituée.|
 |[GetType](#gettype)|Obtient un [Platform::Type](../cppcx/platform-type-class.md) qui décrit l'instance actuelle.|
 
-## <a name="inheritance-hierarchy"></a>Hiérarchie d'héritage
+## <a name="inheritance-hierarchy"></a>Hiérarchie d’héritage
 
 `Object`
 

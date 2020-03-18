@@ -41,11 +41,11 @@ helpviewer_keywords:
 - CPropertyPage [MFC], m_psp
 ms.assetid: d9000a21-aa81-4530-85d9-f43432afb4dc
 ms.openlocfilehash: 6a6223708c83f7a5b3e6532a2016660d558f8270
-ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
+ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/06/2020
-ms.locfileid: "78865429"
+ms.lasthandoff: 03/16/2020
+ms.locfileid: "79421036"
 ---
 # <a name="cpropertypage-class"></a>CPropertyPage (classe)
 
@@ -85,7 +85,7 @@ class CPropertyPage : public CDialog
 |[CPropertyPage :: QuerySiblings](#querysiblings)|Transfère le message à chaque page de la feuille de propriétés.|
 |[CPropertyPage :: SetModified](#setmodified)|Appelez pour activer ou désactiver le bouton Appliquer maintenant.|
 
-### <a name="public-data-members"></a>Membres de données publiques
+### <a name="public-data-members"></a>Membres de données publics
 
 |Name|Description|
 |----------|-----------------|
@@ -99,7 +99,7 @@ Vous pouvez créer un type de boîte de dialogue d’onglet appelé Assistant, q
 
 Pour plus d’informations sur l’établissement d’une feuille de propriétés en tant qu’assistant, consultez [CPropertySheet :: SetWizardMode](../../mfc/reference/cpropertysheet-class.md#setwizardmode). Pour plus d’informations sur l’utilisation d’objets `CPropertyPage`, consultez l’article [feuilles de propriétés et pages de propriétés](../../mfc/property-sheets-and-property-pages-in-mfc.md).
 
-## <a name="inheritance-hierarchy"></a>Hiérarchie d'héritage
+## <a name="inheritance-hierarchy"></a>Hiérarchie d’héritage
 
 [CObject](../../mfc/reference/cobject-class.md)
 

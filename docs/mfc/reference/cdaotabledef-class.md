@@ -73,11 +73,11 @@ helpviewer_keywords:
 - CDaoTableDef [MFC], m_pDatabase
 ms.assetid: 7c5d2254-8475-43c4-8a6c-2d32ead194c9
 ms.openlocfilehash: 485fe3533916e5e59bc87084f58acfb37368ac32
-ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
+ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/06/2020
-ms.locfileid: "78883865"
+ms.lasthandoff: 03/16/2020
+ms.locfileid: "79418761"
 ---
 # <a name="cdaotabledef-class"></a>CDaoTableDef, classe
 
@@ -132,7 +132,7 @@ class CDaoTableDef : public CObject
 |[CDaoTableDef :: SetValidationRule](#setvalidationrule)|Définit une valeur qui valide les données d’un champ au fur et à mesure qu’elles sont modifiées ou ajoutées à une table.|
 |[CDaoTableDef :: SetValidationText](#setvalidationtext)|Définit une valeur qui spécifie le texte du message affiché par votre application si la valeur d’un objet champ ne satisfait pas la règle de validation spécifiée.|
 
-### <a name="public-data-members"></a>Membres de données publiques
+### <a name="public-data-members"></a>Membres de données publics
 
 |Name|Description|
 |----------|-----------------|
@@ -179,7 +179,7 @@ Pour utiliser un objet TableDef afin de créer un objet `CDaoRecordset`, vous cr
 
 Lorsque vous avez fini d’utiliser un objet TableDef, appelez sa fonction membre [Close](../../mfc/reference/cdaorecordset-class.md#close) ; Détruisez ensuite l’objet TableDef.
 
-## <a name="inheritance-hierarchy"></a>Hiérarchie d'héritage
+## <a name="inheritance-hierarchy"></a>Hiérarchie d’héritage
 
 [CObject](../../mfc/reference/cobject-class.md)
 
@@ -318,7 +318,7 @@ Pointeur vers une expression de chaîne spécifiant le nom de ce champ.
 *nType*<br/>
 Valeur indiquant le type de données du champ. Le paramètre peut prendre l’une des valeurs suivantes :
 
-|Type|Taille (octets)|Description|
+|Type|Taille (en octets)|Description|
 |----------|--------------------|-----------------|
 |`dbBoolean`|1 octet|BOOL|
 |`dbByte`|BYTE|

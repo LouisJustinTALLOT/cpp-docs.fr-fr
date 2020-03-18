@@ -16,11 +16,11 @@ helpviewer_keywords:
 - reader_writer_lock class
 ms.assetid: 91a59cd2-ca05-4b74-8398-d826d9f86736
 ms.openlocfilehash: 1a7386e527b5327d928bfdcb3281c88666f1b106
-ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
+ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/06/2020
-ms.locfileid: "78867161"
+ms.lasthandoff: 03/16/2020
+ms.locfileid: "79417123"
 ---
 # <a name="reader_writer_lock-class"></a>reader_writer_lock, classe
 
@@ -58,11 +58,11 @@ class reader_writer_lock;
 |[try_lock_read](#try_lock_read)|Tente d’acquérir le verrou lecteur-writer en tant que lecteur sans blocage.|
 |[unlock](#unlock)|Déverrouille le verrou lecteur-writer en fonction de la personne qui l’a verrouillé, lecteur ou enregistreur.|
 
-## <a name="remarks"></a>Notes 
+## <a name="remarks"></a>Notes
 
 Pour plus d’informations, consultez [structures de données de synchronisation](../../../parallel/concrt/synchronization-data-structures.md).
 
-## <a name="inheritance-hierarchy"></a>Hiérarchie d'héritage
+## <a name="inheritance-hierarchy"></a>Hiérarchie d’héritage
 
 `reader_writer_lock`
 
@@ -80,7 +80,7 @@ Acquiert le verrou lecteur-writer en tant que writer.
 void lock();
 ```
 
-### <a name="remarks"></a>Notes 
+### <a name="remarks"></a>Notes
 
 Il est souvent plus sûr d’utiliser la construction [scoped_lock](#scoped_lock_class) pour acquérir et libérer un objet `reader_writer_lock` en tant qu’enregistreur, de manière sécurisée.
 
@@ -98,7 +98,7 @@ Acquiert le verrou lecteur-writer en tant que lecteur. En présence d’enregist
 void lock_read();
 ```
 
-### <a name="remarks"></a>Notes 
+### <a name="remarks"></a>Notes
 
 Il est souvent plus sûr d’utiliser la construction [scoped_lock_read](#scoped_lock_read_class) pour acquérir et libérer un objet `reader_writer_lock` en tant que lecteur de façon sécurisée.
 
@@ -120,7 +120,7 @@ Détruit l’objet `reader_writer_lock`.
 ~reader_writer_lock();
 ```
 
-### <a name="remarks"></a>Notes 
+### <a name="remarks"></a>Notes
 
 Il est supposé que le verrou n’est plus maintenu lors de l’exécution du destructeur. Autoriser le verrou de l’enregistreur de lecteur à se détruire avec le verrou conservé entraîne un comportement indéfini.
 
@@ -216,7 +216,7 @@ Déverrouille le verrou lecteur-writer en fonction de la personne qui l’a verr
 void unlock();
 ```
 
-### <a name="remarks"></a>Notes 
+### <a name="remarks"></a>Notes
 
 Si des Writers attendent sur le verrou, la libération du verrou passera toujours au writer suivant dans l’ordre FIFO. Ce verrou est biaisé vers les writers et peut priver les lecteurs d’un chargement continu d’enregistreurs.
 

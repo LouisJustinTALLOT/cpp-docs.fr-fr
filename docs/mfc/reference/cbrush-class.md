@@ -25,11 +25,11 @@ helpviewer_keywords:
 - CBrush [MFC], GetLogBrush
 ms.assetid: e5ef2c62-dd95-4973-9090-f52f605900e1
 ms.openlocfilehash: a99d8c8022d23f627320b66c3f376be803c9c839
-ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
+ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/06/2020
-ms.locfileid: "78876046"
+ms.lasthandoff: 03/16/2020
+ms.locfileid: "79420539"
 ---
 # <a name="cbrush-class"></a>CBrush, classe
 
@@ -62,7 +62,7 @@ class CBrush : public CGdiObject
 |[CBrush :: FromHandle](#fromhandle)|Retourne un pointeur vers un objet `CBrush` en fonction d’un handle vers un objet Windows `HBRUSH`.|
 |[CBrush :: GetLogBrush](#getlogbrush)|Obtient une structure [logbrush,](/windows/win32/api/wingdi/ns-wingdi-logbrush) .|
 
-### <a name="public-operators"></a>Op&#233;rateurs publics
+### <a name="public-operators"></a>Opérateurs publics
 
 |Name|Description|
 |----------|-----------------|
@@ -76,7 +76,7 @@ Les pinceaux peuvent être pleins, hachurés ou à motif.
 
 Pour plus d’informations sur les `CBrush`, consultez [objets graphiques](../../mfc/graphic-objects.md).
 
-## <a name="inheritance-hierarchy"></a>Hiérarchie d'héritage
+## <a name="inheritance-hierarchy"></a>Hiérarchie d’héritage
 
 [CObject](../../mfc/reference/cobject-class.md)
 

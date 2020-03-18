@@ -193,11 +193,11 @@ helpviewer_keywords:
 - CWinApp [MFC], m_pDataRecoveryHandler
 ms.assetid: e426a3cd-0d15-40d6-bd55-beaa5feb2343
 ms.openlocfilehash: e65ad8b5d8b14ff747adc55b517d9e695d9cbb66
-ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
+ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/06/2020
-ms.locfileid: "78855498"
+ms.lasthandoff: 03/16/2020
+ms.locfileid: "79421001"
 ---
 # <a name="cwinapp-class"></a>CWinApp (classe)
 
@@ -304,7 +304,7 @@ class CWinApp : public CWinThread
 |[CWinApp :: SetRegistryKey](#setregistrykey)|Entraîne le stockage des paramètres de l’application dans le registre au lieu de. Fichiers INI.|
 |[CWinApp :: UnregisterShellFileTypes](#unregistershellfiletypes)|Annule l’inscription de tous les types de documents de l’application dans le gestionnaire de fichiers Windows.|
 
-### <a name="public-data-members"></a>Membres de données publiques
+### <a name="public-data-members"></a>Membres de données publics
 
 |Name|Description|
 |----------|-----------------|
@@ -321,7 +321,7 @@ class CWinApp : public CWinThread
 |[CWinApp :: m_pszProfileName](#m_pszprofilename)|De l’application. Nom de fichier INI.|
 |[CWinApp :: m_pszRegistryKey](#m_pszregistrykey)|Utilisé pour déterminer la clé de registre complète pour le stockage des paramètres de profil d’application.|
 
-### <a name="protected-data-members"></a>Membres de données protégées
+### <a name="protected-data-members"></a>Membres de données protégés
 
 |Name|Description|
 |----------|-----------------|
@@ -359,7 +359,7 @@ Consultez [CWinApp : la classe d’application](../../mfc/cwinapp-the-applicati
 
 Le membre de données `m_hPrevInstance` n’existe plus. Pour déterminer si une autre instance de l’application est en cours d’exécution, utilisez un mutex nommé. Si l’ouverture du mutex échoue, aucune autre instance de l’application n’est en cours d’exécution.
 
-## <a name="inheritance-hierarchy"></a>Hiérarchie d'héritage
+## <a name="inheritance-hierarchy"></a>Hiérarchie d’héritage
 
 [CObject](../../mfc/reference/cobject-class.md)
 

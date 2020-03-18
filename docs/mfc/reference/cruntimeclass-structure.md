@@ -10,11 +10,11 @@ helpviewer_keywords:
 - run-time class [MFC], CRuntimeClass structure
 ms.assetid: de62b6ef-90d4-420f-8c70-f58b36976a2b
 ms.openlocfilehash: 92979a10c18d9759e0ecc9f0785e56a97c0f0642
-ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
+ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/06/2020
-ms.locfileid: "78874023"
+ms.lasthandoff: 03/16/2020
+ms.locfileid: "79421442"
 ---
 # <a name="cruntimeclass-structure"></a>Structure CRuntimeClass
 
@@ -36,7 +36,7 @@ struct CRuntimeClass
 |[CRuntimeClass :: FromName](#fromname)|Crée un objet au moment de l’exécution en utilisant le nom de classe familier.|
 |[CRuntimeClass :: IsDerivedFrom](#isderivedfrom)|Détermine si la classe est dérivée de la classe spécifiée.|
 
-### <a name="public-data-members"></a>Membres de données publiques
+### <a name="public-data-members"></a>Membres de données publics
 
 |Name|Description|
 |----------|-----------------|
@@ -57,7 +57,7 @@ La possibilité de déterminer la classe d’un objet au moment de l’exécutio
 
 Pour plus d’informations sur l’utilisation de `CRuntimeClass`, consultez l’article [accès aux informations de classe d’exécution](../../mfc/accessing-run-time-class-information.md).
 
-## <a name="inheritance-hierarchy"></a>Hiérarchie d'héritage
+## <a name="inheritance-hierarchy"></a>Hiérarchie d’héritage
 
 `CRuntimeClass`
 

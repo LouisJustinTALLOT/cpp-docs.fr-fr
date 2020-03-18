@@ -14,11 +14,11 @@ helpviewer_keywords:
 - Microsoft::WRL::Details::ComPtrRefBase::ptr_ data member
 ms.assetid: 6d344c1a-cc13-4a3f-8a0d-f167ccb9348f
 ms.openlocfilehash: df4e2aa1ce650fd5b1f04baf2f7c4cd2fb4cff93
-ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
+ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/06/2020
-ms.locfileid: "78865819"
+ms.lasthandoff: 03/16/2020
+ms.locfileid: "79418313"
 ---
 # <a name="comptrrefbase-class"></a>ComPtrRefBase (classe)
 
@@ -48,20 +48,20 @@ Name            | Description
 --------------- | -------------------------------------------------
 `InterfaceType` | Synonyme du type de paramètre de modèle *T*.
 
-### <a name="public-operators"></a>Op&#233;rateurs publics
+### <a name="public-operators"></a>Opérateurs publics
 
 Name                                                                       | Description
 -------------------------------------------------------------------------- | -----------------------------------------------------------------------------------------------------
 [ComPtrRefBase :: Operator IInspectable * *](#operator-iinspectable-star-star) | Effectue un cast du membre de données de [PTR_](#ptr) actuel en pointeur pointeur vers un pointeur vers l’interface `IInspectable`.
 [ComPtrRefBase :: Operator IUnknown * *](#operator-iunknown-star-star)         | Effectue un cast du membre de données de [PTR_](#ptr) actuel en pointeur pointeur vers un pointeur vers l’interface `IUnknown`.
 
-### <a name="protected-data-members"></a>Membres de données protégées
+### <a name="protected-data-members"></a>Membres de données protégés
 
 Name                        | Description
 --------------------------- | ----------------------------------------------------------------
 [ComPtrRefBase ::p tr_](#ptr) | Pointeur vers le type spécifié par le paramètre de modèle actuel.
 
-## <a name="inheritance-hierarchy"></a>Hiérarchie d'héritage
+## <a name="inheritance-hierarchy"></a>Hiérarchie d’héritage
 
 `ComPtrRefBase`
 

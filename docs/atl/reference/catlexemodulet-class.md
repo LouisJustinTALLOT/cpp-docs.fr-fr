@@ -23,11 +23,11 @@ helpviewer_keywords:
 - CAtlExeModuleT class
 ms.assetid: 82245f3d-91d4-44fa-aa86-7cc7fbd758d9
 ms.openlocfilehash: d37cc8e97d29cbedfeb4ba79502d44529485399f
-ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
+ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/06/2020
-ms.locfileid: "78863179"
+ms.lasthandoff: 03/16/2020
+ms.locfileid: "79418054"
 ---
 # <a name="catlexemodulet-class"></a>CAtlExeModuleT, classe
 
@@ -70,7 +70,7 @@ Votre classe dérivée de `CAtlExeModuleT`.
 |[CAtlExeModuleT :: Unlock](#unlock)|Décrémente le nombre de verrous du module.|
 |[CAtlExeModuleT :: WinMain](#winmain)|Cette méthode implémente le code requis pour exécuter un EXE.|
 
-### <a name="public-data-members"></a>Membres de données publiques
+### <a name="public-data-members"></a>Membres de données publics
 
 |Name|Description|
 |----------|-----------------|
@@ -88,7 +88,7 @@ Le membre de données [CAtlExeModuleT :: m_bDelayShutdown](#m_bdelayshutdown) e
 
 Pour plus d’informations sur les modules dans ATL, consultez [ATL Module classes](../../atl/atl-module-classes.md).
 
-## <a name="inheritance-hierarchy"></a>Hiérarchie d'héritage
+## <a name="inheritance-hierarchy"></a>Hiérarchie d’héritage
 
 [_ATL_MODULE](atl-typedefs.md#_atl_module)
 

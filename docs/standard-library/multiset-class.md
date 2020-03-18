@@ -87,11 +87,11 @@ helpviewer_keywords:
 - std::multiset [C++], value_comp
 ms.assetid: 630e8c10-0ce9-4ad9-8d79-9e91a600713f
 ms.openlocfilehash: 83980094562e1c0083a879d1dc9aab591dc52d02
-ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
+ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/06/2020
-ms.locfileid: "78873970"
+ms.lasthandoff: 03/16/2020
+ms.locfileid: "79419832"
 ---
 # <a name="multiset-class"></a>multiset, classe
 
@@ -1569,7 +1569,7 @@ multiset (
 |*Right*|Multiset dont le multiset construit doit être une copie.|
 |*Première*|Position du premier élément de la plage d'éléments à copier.|
 |*Dernière*|Position du premier élément au-delà de la plage d'éléments à copier.|
-|*IList*|initializer_list depuis laquelle copier les éléments.|
+|*IList*|Initializer_list depuis laquelle copier les éléments.|
 
 ### <a name="remarks"></a>Notes
 

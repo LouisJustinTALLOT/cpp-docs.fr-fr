@@ -1,24 +1,22 @@
 ---
 title: Utilisation de CStatusBarCtrl
 ms.date: 11/04/2016
-f1_keywords:
-- CStatusBarCtrl
 helpviewer_keywords:
 - CStatusBarCtrl class [MFC], using
 - status bar controls [MFC], about status bar controls
 ms.assetid: 08b39f83-580d-439a-b93e-7ef9e2a5702a
-ms.openlocfilehash: b02b37cee930c0fa2522583c5c331bb4e0563ef4
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: ee691d013d578f4c16fa9eadabd05f8710f32d8e
+ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62411693"
+ms.lasthandoff: 03/17/2020
+ms.locfileid: "79442333"
 ---
 # <a name="using-cstatusbarctrl"></a>Utilisation de CStatusBarCtrl
 
-Vous pouvez utiliser le contrôle de barre d’état ([CStatusBarCtrl](../mfc/reference/cstatusbarctrl-class.md)) pour créer une fenêtre de contrôle qui reflète les différents types d’informations d’état de l’application. La fenêtre d’état peut être divisée en parties qui affichent plusieurs types d’informations.
+Vous pouvez utiliser le contrôle de barre d’État ([CStatusBarCtrl](../mfc/reference/cstatusbarctrl-class.md)) pour créer une fenêtre de contrôle qui reflète différents genres d’informations d’État sur l’application. La fenêtre d’État peut être divisée en plusieurs parties qui affichent plusieurs types d’informations.
 
-## <a name="what-do-you-want-to-know-more-about"></a>Ce que vous souhaitez en savoir plus sur
+## <a name="what-do-you-want-to-know-more-about"></a>Que voulez-vous en savoir plus sur
 
 - [Méthodes de création d’une barre d’état](../mfc/methods-of-creating-a-status-bar.md)
 

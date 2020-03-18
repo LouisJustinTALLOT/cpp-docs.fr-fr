@@ -265,11 +265,11 @@ helpviewer_keywords:
 - CListCtrl [MFC], Update
 ms.assetid: fe08a1ca-4b05-4ff7-a12a-ee4c765a2197
 ms.openlocfilehash: c8f1b8a9ed0ca8437ba40e77b47448d1bb209d20
-ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
-ms.translationtype: MT
+ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/06/2020
-ms.locfileid: "78855507"
+ms.lasthandoff: 03/16/2020
+ms.locfileid: "79418677"
 ---
 # <a name="clistctrl-class"></a>CListCtrl (classe)
 
@@ -502,7 +502,7 @@ Les icônes, les images d’élément d’en-tête et les États définis par l�
 
 Par défaut, un contrôle List View détruit les listes d’images qui lui sont assignées lorsqu’il est détruit ; Toutefois, le développeur peut personnaliser ce comportement en détruisant chaque liste d’images lorsqu’elle n’est plus utilisée, comme déterminé par l’application. Pour plus d’informations, consultez [utilisation de CListCtrl : éléments de liste et listes d’images](../list-items-and-image-lists.md).
 
-## <a name="inheritance-hierarchy"></a>Hiérarchie d'héritage
+## <a name="inheritance-hierarchy"></a>Hiérarchie d’héritage
 
 [CObject](cobject-class.md)
 

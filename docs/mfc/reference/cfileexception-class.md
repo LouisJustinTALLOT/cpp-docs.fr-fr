@@ -25,11 +25,11 @@ helpviewer_keywords:
 - CFileException [MFC], m_strFileName
 ms.assetid: f6491bb9-bfbc-42fd-a952-b33f9b62323f
 ms.openlocfilehash: a3514c76d4136fe2bc0b096cc382e6f7f4dd3392
-ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
+ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/06/2020
-ms.locfileid: "78855292"
+ms.lasthandoff: 03/16/2020
+ms.locfileid: "79418649"
 ---
 # <a name="cfileexception-class"></a>CFileException, classe
 
@@ -59,7 +59,7 @@ class CFileException : public CException
 |[CFileException :: ThrowErrno](#throwerrno)|Lève une exception de fichier en fonction d’un numéro d’erreur d’exécution.|
 |[CFileException :: ThrowOsError](#throwoserror)|Lève une exception de fichier en fonction du numéro d’erreur du système d’exploitation.|
 
-### <a name="public-data-members"></a>Membres de données publiques
+### <a name="public-data-members"></a>Membres de données publics
 
 |Name|Description|
 |----------|-----------------|
@@ -73,7 +73,7 @@ La classe `CFileException` comprend des membres de données publics qui contienn
 
 les objets `CFileException` sont construits et levés dans `CFile` fonctions membres et dans les fonctions membres des classes dérivées. Vous pouvez accéder à ces objets dans l’étendue d’une expression **catch** . Pour la portabilité, utilisez uniquement le code de cause pour obtenir la raison d’une exception. Pour plus d’informations sur les exceptions, consultez l’article [gestion des exceptions (MFC)](../../mfc/exception-handling-in-mfc.md).
 
-## <a name="inheritance-hierarchy"></a>Hiérarchie d'héritage
+## <a name="inheritance-hierarchy"></a>Hiérarchie d’héritage
 
 [CObject](../../mfc/reference/cobject-class.md)
 

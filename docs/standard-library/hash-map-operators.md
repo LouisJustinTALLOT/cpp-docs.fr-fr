@@ -6,11 +6,11 @@ f1_keywords:
 - hash_map/std::operator==
 ms.assetid: 24b9bb9e-e983-4060-bce5-2c7c8161ee61
 ms.openlocfilehash: c4cc73feb3c8163a2be9f0122f57eaa0fb8ab3b8
-ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
+ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/06/2020
-ms.locfileid: "78856694"
+ms.lasthandoff: 03/16/2020
+ms.locfileid: "79419013"
 ---
 # <a name="lthash_mapgt-operators"></a>&lt;hash_map&gt;, opérateurs
 
@@ -22,7 +22,7 @@ ms.locfileid: "78856694"
 ## <a name="op_neq"></a>  operator!=
 
 > [!NOTE]
-> Cette API méthode est obsolète. L’alternative est [unordered_map, classe](unordered-map-class.md).
+> Cette API est obsolète. L’alternative est [unordered_map, classe](unordered-map-class.md).
 
 Vérifie si l’objet hash_map situé à gauche de l’opérateur n’est pas égal à l’objet hash_map situé à droite.
 
@@ -91,7 +91,7 @@ The hash_maps hm1 and hm3 are equal.
 ## <a name="op_eq_eq"></a>  operator==
 
 > [!NOTE]
-> Cette API méthode est obsolète. L’alternative est [unordered_map, classe](unordered-map-class.md).
+> Cette API est obsolète. L’alternative est [unordered_map, classe](unordered-map-class.md).
 
 Vérifie si l’objet hash_map situé à gauche de l’opérateur est égal à l’objet hash_map situé à droite.
 
@@ -158,7 +158,7 @@ The hash_maps hm1 and hm3 are equal.
 ## <a name="op_neq_mm"></a>opérateur ! = (hash_multimap)
 
 > [!NOTE]
-> Cette API méthode est obsolète. L’alternative est [unordered_multimap Class](unordered-multimap-class.md).
+> Cette API est obsolète. L’alternative est [unordered_multimap Class](unordered-multimap-class.md).
 
 Vérifie si l’objet hash_multimap situé à gauche de l’opérateur n’est pas égal à l’objet hash_multimap situé à droite.
 
@@ -225,7 +225,7 @@ The hash_multimaps hm1 and hm3 are equal.
 ## <a name="op_eq_eq_mm"></a>opérateur = = (hash_multimap)
 
 > [!NOTE]
-> Cette API méthode est obsolète. L’alternative est [unordered_multimap Class](unordered-multimap-class.md).
+> Cette API est obsolète. L’alternative est [unordered_multimap Class](unordered-multimap-class.md).
 
 Vérifie si l’objet hash_multimap situé à gauche de l’opérateur est égal à l’objet hash_multimap situé à droite.
 
