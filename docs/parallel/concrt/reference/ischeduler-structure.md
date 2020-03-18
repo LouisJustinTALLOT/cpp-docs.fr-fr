@@ -15,11 +15,11 @@ helpviewer_keywords:
 - IScheduler structure
 ms.assetid: 471de85a-2b1a-4b6d-ab81-2eff2737161e
 ms.openlocfilehash: cd7b04b0dc5ca1bc496ce87a6459d00ed5813bf7
-ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
+ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/06/2020
-ms.locfileid: "78854147"
+ms.lasthandoff: 03/16/2020
+ms.locfileid: "79422219"
 ---
 # <a name="ischeduler-structure"></a>IScheduler, structure
 
@@ -49,7 +49,7 @@ struct IScheduler;
 
 Si vous implémentez un planificateur personnalisé qui communique avec le Gestionnaire des ressources, vous devez fournir une implémentation de l’interface `IScheduler`. Cette interface est une extrémité d’un canal bidirectionnel de communication entre un planificateur et le Gestionnaire des ressources. L’autre extrémité est représentée par les interfaces `IResourceManager` et `ISchedulerProxy` qui sont implémentées par le Gestionnaire des ressources.
 
-## <a name="inheritance-hierarchy"></a>Hiérarchie d'héritage
+## <a name="inheritance-hierarchy"></a>Hiérarchie d’héritage
 
 `IScheduler`
 

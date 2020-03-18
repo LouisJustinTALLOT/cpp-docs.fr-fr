@@ -17,11 +17,11 @@ helpviewer_keywords:
 - composite controls, CComCompositeControl class
 ms.assetid: 1304b931-27e8-4fbc-be8e-bb226ad887fb
 ms.openlocfilehash: b57eaf105bfca1a49d53b5e5e99969b0fa2fc82f
-ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
+ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/06/2020
-ms.locfileid: "78864950"
+ms.lasthandoff: 03/16/2020
+ms.locfileid: "79417907"
 ---
 # <a name="ccomcompositecontrol-class"></a>CComCompositeControl, classe
 
@@ -61,7 +61,7 @@ Votre classe, dérivée de [CComObjectRoot](../../atl/reference/ccomobjectroot-c
 |[CComCompositeControl::CreateControlWindow](#createcontrolwindow)|Appelez cette méthode pour créer la fenêtre de contrôle et conseiller tout contrôle hébergé.|
 |[CComCompositeControl::SetBackgroundColorFromAmbient](#setbackgroundcolorfromambient)|Appelez cette méthode pour définir la couleur d’arrière-plan du contrôle composite à l’aide de la couleur d’arrière-plan du conteneur.|
 
-### <a name="public-data-members"></a>Membres de données publiques
+### <a name="public-data-members"></a>Membres de données publics
 
 |Name|Description|
 |----------|-----------------|
@@ -88,7 +88,7 @@ Un contrôle implémenté par une classe dérivée de `CComCompositeControl`a un
 
 [!code-cpp[NVC_ATL_COM#14](../../atl/codesnippet/cpp/ccomcompositecontrol-class_2.h)]
 
-## <a name="inheritance-hierarchy"></a>Hiérarchie d'héritage
+## <a name="inheritance-hierarchy"></a>Hiérarchie d’héritage
 
 `WinBase`
 

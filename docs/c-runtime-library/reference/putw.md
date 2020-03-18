@@ -21,19 +21,18 @@ topic_type:
 - apiref
 f1_keywords:
 - _putw
-- putw
 helpviewer_keywords:
 - integers, writing to streams
 - putw function
 - streams, writing integers to
 - _putw function
 ms.assetid: 83d63644-249d-4a39-87e5-3b7aa313968d
-ms.openlocfilehash: 0515ae911a653bde1208b1711bf33dd8b4e2f8e1
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: be2ee5c1b3706b1f2a0847415ab4a82a6a4bbe4f
+ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70949753"
+ms.lasthandoff: 03/17/2020
+ms.locfileid: "79443726"
 ---
 # <a name="_putw"></a>_putw
 
@@ -53,7 +52,7 @@ int _putw(
 *binint*<br/>
 Entier binaire à sortir.
 
-*stream*<br/>
+*train*<br/>
 Pointeur désignant la structure **FILE**.
 
 ## <a name="return-value"></a>Valeur de retour
@@ -64,15 +63,15 @@ Pour obtenir des informations sur ces codes d’erreur et les autres, consultez 
 
 ## <a name="remarks"></a>Notes
 
-La fonction **_putw** écrit une valeur binaire de type **int** à la position actuelle du *flux.* **_putw** n’affecte pas l’alignement des éléments dans le flux et n’assume pas l’alignement spécial. **_putw** est principalement destiné à la compatibilité avec les bibliothèques précédentes. Des problèmes de portabilité peuvent survenir avec **_putw** , car la taille d’un **int** et l’ordre des octets dans un **int** diffèrent entre les systèmes.
+La fonction **_putw** écrit une valeur binaire de type **int** à la position actuelle du *flux.* **_putw** n’affecte pas l’alignement des éléments dans le flux et n’assume pas l’alignement spécial. **_putw** est principalement destiné à la compatibilité avec les bibliothèques précédentes. Des problèmes de portabilité peuvent survenir avec **_putw** car la taille d’un **int** et l’ordre des octets dans un **int** diffèrent entre les systèmes.
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
 |Routine|En-tête requis|
 |-------------|---------------------|
 |**_putw**|\<stdio.h>|
 
-Pour plus d'informations sur la compatibilité, voir [Compatibilité](../../c-runtime-library/compatibility.md).
+Pour plus d’informations sur la compatibilité, voir [Compatibilité](../../c-runtime-library/compatibility.md).
 
 ## <a name="libraries"></a>Bibliothèques
 
@@ -110,7 +109,7 @@ int main( void )
 }
 ```
 
-### <a name="output"></a>Sortie
+### <a name="output"></a>Output
 
 ```Output
 Wrote ten words

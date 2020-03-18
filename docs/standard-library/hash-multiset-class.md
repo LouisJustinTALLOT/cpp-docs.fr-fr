@@ -87,16 +87,16 @@ helpviewer_keywords:
 - stdext::hash_multiset::value_comp
 ms.assetid: 0580397a-a76e-40ad-aea2-5c6f3a9d0a21
 ms.openlocfilehash: 7881b1d6775206fbea40c3ba4b15572a6d4b3580
-ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
+ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/06/2020
-ms.locfileid: "78865129"
+ms.lasthandoff: 03/16/2020
+ms.locfileid: "79421680"
 ---
 # <a name="hash_multiset-class"></a>hash_multiset, classe
 
 > [!NOTE]
-> Cette API méthode est obsolète. L’alternative est [unordered_multiset, classe](../standard-library/unordered-multiset-class.md).
+> Cette API est obsolète. L’alternative est [unordered_multiset, classe](../standard-library/unordered-multiset-class.md).
 
 La classe conteneur hash_multiset est une extension de la bibliothèque de classes C++, et elle est utilisée pour le stockage et la récupération rapide des données d’une collection dans laquelle les valeurs des éléments contenus servent de valeurs de clés et ne doivent pas obligatoirement être uniques.
 
@@ -206,7 +206,7 @@ L’itérateur fourni par la classe hash_multiset est un itérateur bidirectionn
 
 |Opérateur|Description|
 |-|-|
-|[hash_multiset::operator=](#op_eq)|Remplace les éléments du hash_multiset par une copie d'un autre hash_multiset.|
+|[hash_multiset::operator=](#op_eq)|Remplace les éléments du hash_multiset par une copie d’un autre hash_multiset.|
 
 ## <a name="requirements"></a>Spécifications
 
@@ -217,7 +217,7 @@ L’itérateur fourni par la classe hash_multiset est un itérateur bidirectionn
 ## <a name="allocator_type"></a>  hash_multiset::allocator_type
 
 > [!NOTE]
-> Cette API méthode est obsolète. L’alternative est [unordered_multiset, classe](../standard-library/unordered-multiset-class.md).
+> Cette API est obsolète. L’alternative est [unordered_multiset, classe](../standard-library/unordered-multiset-class.md).
 
 Type représentant la classe allocator pour l’objet hash_multiset.
 
@@ -232,7 +232,7 @@ Consultez l’exemple de [get_allocator](#get_allocator) pour obtenir un exemple
 ## <a name="begin"></a>  hash_multiset::begin
 
 > [!NOTE]
-> Cette API méthode est obsolète. L’alternative est [unordered_multiset, classe](../standard-library/unordered-multiset-class.md).
+> Cette API est obsolète. L’alternative est [unordered_multiset, classe](../standard-library/unordered-multiset-class.md).
 
 Retourne un itérateur qui traite le premier élément du hash_multiset.
 
@@ -293,7 +293,7 @@ The first element of hms1 is now 2
 ## <a name="cbegin"></a>  hash_multiset::cbegin
 
 > [!NOTE]
-> Cette API méthode est obsolète. L’alternative est [unordered_multiset, classe](../standard-library/unordered-multiset-class.md).
+> Cette API est obsolète. L’alternative est [unordered_multiset, classe](../standard-library/unordered-multiset-class.md).
 
 Retourne un itérateur const qui traite le premier élément du hash_multiset.
 
@@ -340,7 +340,7 @@ The first element of hs1 is 1
 ## <a name="cend"></a>  hash_multiset::cend
 
 > [!NOTE]
-> Cette API méthode est obsolète. L’alternative est [unordered_multiset, classe](../standard-library/unordered-multiset-class.md).
+> Cette API est obsolète. L’alternative est [unordered_multiset, classe](../standard-library/unordered-multiset-class.md).
 
 Retourne un itérateur const qui traite l’emplacement situé après le dernier élément d’un hash_multiset.
 
@@ -388,7 +388,7 @@ The last element of hs1 is 3
 ## <a name="clear"></a>  hash_multiset::clear
 
 > [!NOTE]
-> Cette API méthode est obsolète. L’alternative est [unordered_multiset, classe](../standard-library/unordered-multiset-class.md).
+> Cette API est obsolète. L’alternative est [unordered_multiset, classe](../standard-library/unordered-multiset-class.md).
 
 Efface tous les éléments d’un hash_multiset.
 
@@ -432,7 +432,7 @@ The size of the hash_multiset after clearing is 0.
 ## <a name="const_iterator"></a>  hash_multiset::const_iterator
 
 > [!NOTE]
-> Cette API méthode est obsolète. L’alternative est [unordered_multiset, classe](../standard-library/unordered-multiset-class.md).
+> Cette API est obsolète. L’alternative est [unordered_multiset, classe](../standard-library/unordered-multiset-class.md).
 
 Type qui fournit un itérateur bidirectionnel capable de lire un élément **const** dans le hash_multiset.
 
@@ -451,7 +451,7 @@ Consultez l’exemple de [begin](#begin) pour obtenir un exemple qui utilise `co
 ## <a name="const_pointer"></a>  hash_multiset::const_pointer
 
 > [!NOTE]
-> Cette API méthode est obsolète. L’alternative est [unordered_multiset, classe](../standard-library/unordered-multiset-class.md).
+> Cette API est obsolète. L’alternative est [unordered_multiset, classe](../standard-library/unordered-multiset-class.md).
 
 Type qui fournit un pointeur vers un élément **const** dans un hash_multiset.
 
@@ -468,7 +468,7 @@ Dans la plupart des cas, vous devez utiliser un [iterator const](#const_iterator
 ## <a name="const_reference"></a>  hash_multiset::const_reference
 
 > [!NOTE]
-> Cette API méthode est obsolète. L’alternative est [unordered_multiset, classe](../standard-library/unordered-multiset-class.md).
+> Cette API est obsolète. L’alternative est [unordered_multiset, classe](../standard-library/unordered-multiset-class.md).
 
 Type qui fournit une référence à un élément **const** stocké dans un hash_multiset pour la lecture et l’exécution d’opérations **const**.
 
@@ -515,7 +515,7 @@ The first element in the hash_multiset is 10.
 ## <a name="const_reverse_iterator"></a>  hash_multiset::const_reverse_iterator
 
 > [!NOTE]
-> Cette API méthode est obsolète. L’alternative est [unordered_multiset, classe](../standard-library/unordered-multiset-class.md).
+> Cette API est obsolète. L’alternative est [unordered_multiset, classe](../standard-library/unordered-multiset-class.md).
 
 Type qui fournit un itérateur bidirectionnel capable de lire tout élément **const** dans le hash_multiset.
 
@@ -534,7 +534,7 @@ Pour savoir comment déclarer et utiliser [, consultez l’exemple ](#rend)rend`
 ## <a name="count"></a>  hash_multiset::count
 
 > [!NOTE]
-> Cette API méthode est obsolète. L’alternative est [unordered_multiset, classe](../standard-library/unordered-multiset-class.md).
+> Cette API est obsolète. L’alternative est [unordered_multiset, classe](../standard-library/unordered-multiset-class.md).
 
 Retourne le nombre d'éléments d'un hash_multiset dont la clé correspond à une clé spécifiée par un paramètre.
 
@@ -597,7 +597,7 @@ The number of elements in hms1 with a sort key of 2 is: 0.
 ## <a name="crbegin"></a>  hash_multiset::crbegin
 
 > [!NOTE]
-> Cette API méthode est obsolète. L’alternative est [unordered_multiset, classe](../standard-library/unordered-multiset-class.md).
+> Cette API est obsolète. L’alternative est [unordered_multiset, classe](../standard-library/unordered-multiset-class.md).
 
 Retourne un itérateur const qui traite le premier élément d’un hash_multiset inversé.
 
@@ -649,7 +649,7 @@ The first element in the reversed hash_multiset is 30.
 ## <a name="crend"></a>  hash_multiset::crend
 
 > [!NOTE]
-> Cette API méthode est obsolète. L’alternative est [unordered_multiset, classe](../standard-library/unordered-multiset-class.md).
+> Cette API est obsolète. L’alternative est [unordered_multiset, classe](../standard-library/unordered-multiset-class.md).
 
 Retourne un itérateur const qui traite l’emplacement qui suit le dernier élément d’un hash_multiset inversé.
 
@@ -702,7 +702,7 @@ The last element in the reversed hash_multiset is 10.
 ## <a name="difference_type"></a>  hash_multiset::difference_type
 
 > [!NOTE]
-> Cette API méthode est obsolète. L’alternative est [unordered_multiset, classe](../standard-library/unordered-multiset-class.md).
+> Cette API est obsolète. L’alternative est [unordered_multiset, classe](../standard-library/unordered-multiset-class.md).
 
 Type entier signé qui fournit la différence entre deux itérateurs qui font référence à des éléments du même hash_multiset.
 
@@ -782,7 +782,7 @@ The number of elements in the hash_multiset hms1 is 3.
 ## <a name="emplace"></a>  hash_multiset::emplace
 
 > [!NOTE]
-> Cette API méthode est obsolète. L’alternative est [unordered_multiset, classe](../standard-library/unordered-multiset-class.md).
+> Cette API est obsolète. L’alternative est [unordered_multiset, classe](../standard-library/unordered-multiset-class.md).
 
 Insère un élément construit sur place dans un hash_multiset.
 
@@ -832,7 +832,7 @@ After the emplace insertion, hms3 contains a.
 ## <a name="emplace_hint"></a>  hash_multiset::emplace_hint
 
 > [!NOTE]
-> Cette API méthode est obsolète. L’alternative est [unordered_multiset, classe](../standard-library/unordered-multiset-class.md).
+> Cette API est obsolète. L’alternative est [unordered_multiset, classe](../standard-library/unordered-multiset-class.md).
 
 Insère un élément construit sur place dans un hash_multiset, avec un indicateur de positionnement.
 
@@ -888,7 +888,7 @@ After the emplace insertion, hms1 contains a.
 ## <a name="empty"></a>  hash_multiset::empty
 
 > [!NOTE]
-> Cette API méthode est obsolète. L’alternative est [unordered_multiset, classe](../standard-library/unordered-multiset-class.md).
+> Cette API est obsolète. L’alternative est [unordered_multiset, classe](../standard-library/unordered-multiset-class.md).
 
 Teste si un hash_multiset est vide.
 
@@ -937,7 +937,7 @@ The hash_multiset hms2 is empty.
 ## <a name="end"></a>  hash_multiset::end
 
 > [!NOTE]
-> Cette API méthode est obsolète. L’alternative est [unordered_multiset, classe](../standard-library/unordered-multiset-class.md).
+> Cette API est obsolète. L’alternative est [unordered_multiset, classe](../standard-library/unordered-multiset-class.md).
 
 Retourne un itérateur qui traite l’emplacement suivant le dernier élément du hash_multiset.
 
@@ -1000,7 +1000,7 @@ The last element of hms1 is now 2
 ## <a name="equal_range"></a>  hash_multiset::equal_range
 
 > [!NOTE]
-> Cette API méthode est obsolète. L’alternative est [unordered_multiset, classe](../standard-library/unordered-multiset-class.md).
+> Cette API est obsolète. L’alternative est [unordered_multiset, classe](../standard-library/unordered-multiset-class.md).
 
 Retourne une paire d’itérateurs, respectivement au premier élément d’un hash_multiset ayant une clé supérieure à celle spécifiée et au premier élément d’un hash_multiset ayant une clé supérieure ou égale à la clé spécifiée.
 
@@ -1087,7 +1087,7 @@ The hash_multiset hms1 doesn't have an element with a key less than 40.
 ## <a name="erase"></a>  hash_multiset::erase
 
 > [!NOTE]
-> Cette API méthode est obsolète. L’alternative est [unordered_multiset, classe](../standard-library/unordered-multiset-class.md).
+> Cette API est obsolète. L’alternative est [unordered_multiset, classe](../standard-library/unordered-multiset-class.md).
 
 Supprime d'un emplacement spécifié un élément ou une plage d'éléments compris dans un hash_multiset ou supprime les éléments qui correspondent à une clé spécifiée.
 
@@ -1210,7 +1210,7 @@ is deleted, the hash_multiset hms3 is: 0 3.
 ## <a name="find"></a>  hash_multiset::find
 
 > [!NOTE]
-> Cette API méthode est obsolète. L’alternative est [unordered_multiset, classe](../standard-library/unordered-multiset-class.md).
+> Cette API est obsolète. L’alternative est [unordered_multiset, classe](../standard-library/unordered-multiset-class.md).
 
 Retourne un itérateur qui traite le premier emplacement d’un élément d’un hash_multiset ayant une clé équivalente à une clé spécifiée.
 
@@ -1288,7 +1288,7 @@ The element of hms1 with a key matching that of the last element is: 30.
 ## <a name="get_allocator"></a>  hash_multiset::get_allocator
 
 > [!NOTE]
-> Cette API méthode est obsolète. L’alternative est [unordered_multiset, classe](../standard-library/unordered-multiset-class.md).
+> Cette API est obsolète. L’alternative est [unordered_multiset, classe](../standard-library/unordered-multiset-class.md).
 
 Retourne une copie de l’objet allocateur utilisé pour construire le hash_multiset.
 
@@ -1364,7 +1364,7 @@ int main( )
 ## <a name="hash_multiset"></a>  hash_multiset::hash_multiset
 
 > [!NOTE]
-> Cette API méthode est obsolète. L’alternative est [unordered_multiset, classe](../standard-library/unordered-multiset-class.md).
+> Cette API est obsolète. L’alternative est [unordered_multiset, classe](../standard-library/unordered-multiset-class.md).
 
 Construit un `hash_multiset` vide ou une copie de l'ensemble ou d'une partie d'un autre `hash_multiset`.
 
@@ -1451,7 +1451,7 @@ L’ordre réel des éléments dans un conteneur d’ensemble haché dépend de 
 ## <a name="insert"></a>  hash_multiset::insert
 
 > [!NOTE]
-> Cette API méthode est obsolète. L’alternative est [unordered_multiset, classe](../standard-library/unordered-multiset-class.md).
+> Cette API est obsolète. L’alternative est [unordered_multiset, classe](../standard-library/unordered-multiset-class.md).
 
 Insère un élément ou une plage d’éléments dans un hash_multiset.
 
@@ -1520,7 +1520,7 @@ L’insertion peut se produire dans le temps constant amorti pour la version d�
 ## <a name="iterator"></a>  hash_multiset::iterator
 
 > [!NOTE]
-> Cette API méthode est obsolète. L’alternative est [unordered_multiset, classe](../standard-library/unordered-multiset-class.md).
+> Cette API est obsolète. L’alternative est [unordered_multiset, classe](../standard-library/unordered-multiset-class.md).
 
 Type qui fournit un itérateur bidirectionnel capable de lire ou de modifier tout élément d’un hash_multiset.
 
@@ -1539,7 +1539,7 @@ Consultez l’exemple de [Begin](#begin) pour obtenir un exemple de la façon de
 ## <a name="key_comp"></a>  hash_multiset::key_comp
 
 > [!NOTE]
-> Cette API méthode est obsolète. L’alternative est [unordered_multiset, classe](../standard-library/unordered-multiset-class.md).
+> Cette API est obsolète. L’alternative est [unordered_multiset, classe](../standard-library/unordered-multiset-class.md).
 
 Récupère une copie de l’objet de comparaison utilisé pour trier les clés dans un hash_multiset.
 
@@ -1615,7 +1615,7 @@ int main( )
 ## <a name="key_compare"></a>  hash_multiset::key_compare
 
 > [!NOTE]
-> Cette API méthode est obsolète. L’alternative est [unordered_multiset, classe](../standard-library/unordered-multiset-class.md).
+> Cette API est obsolète. L’alternative est [unordered_multiset, classe](../standard-library/unordered-multiset-class.md).
 
 Type qui fournit deux objets de fonction, un prédicat binaire de la comparaison de classe qui peut comparer deux valeurs d’éléments d’un hash_multiset pour déterminer leur ordre relatif et un prédicat unaire qui hache les éléments.
 
@@ -1638,7 +1638,7 @@ Pour découvrir comment déclarer et utiliser [, consultez l’exemple relatif �
 ## <a name="key_type"></a>  hash_multiset::key_type
 
 > [!NOTE]
-> Cette API méthode est obsolète. L’alternative est [unordered_multiset, classe](../standard-library/unordered-multiset-class.md).
+> Cette API est obsolète. L’alternative est [unordered_multiset, classe](../standard-library/unordered-multiset-class.md).
 
 Type qui fournit un objet de fonction pouvant comparer des clés de tri pour déterminer l’ordre relatif de deux éléments dans le hash_multiset.
 
@@ -1661,7 +1661,7 @@ Pour découvrir comment déclarer et utiliser [, consultez l’exemple relatif �
 ## <a name="lower_bound"></a>  hash_multiset::lower_bound
 
 > [!NOTE]
-> Cette API méthode est obsolète. L’alternative est [unordered_multiset, classe](../standard-library/unordered-multiset-class.md).
+> Cette API est obsolète. L’alternative est [unordered_multiset, classe](../standard-library/unordered-multiset-class.md).
 
 Retourne un itérateur au premier élément d’un hash_multiset avec une valeur de clé supérieure ou égale à celle de la clé spécifiée.
 
@@ -1728,7 +1728,7 @@ int main() {
 ## <a name="max_size"></a>  hash_multiset::max_size
 
 > [!NOTE]
-> Cette API méthode est obsolète. L’alternative est [unordered_multiset, classe](../standard-library/unordered-multiset-class.md).
+> Cette API est obsolète. L’alternative est [unordered_multiset, classe](../standard-library/unordered-multiset-class.md).
 
 Retourne la longueur maximale du hash_multiset.
 
@@ -1766,9 +1766,9 @@ int main( )
 ## <a name="op_eq"></a>  hash_multiset::operator=
 
 > [!NOTE]
-> Cette API méthode est obsolète. L’alternative est [unordered_multiset, classe](../standard-library/unordered-multiset-class.md).
+> Cette API est obsolète. L’alternative est [unordered_multiset, classe](../standard-library/unordered-multiset-class.md).
 
-Remplace les éléments du hash_multiset par une copie d'un autre hash_multiset.
+Remplace les éléments du hash_multiset par une copie d’un autre hash_multiset.
 
 ```cpp
 hash_multiset& operator=(const hash_multiset& right);
@@ -1827,7 +1827,7 @@ int main( )
 ## <a name="pointer"></a>  hash_multiset::pointer
 
 > [!NOTE]
-> Cette API méthode est obsolète. L’alternative est [unordered_multiset, classe](../standard-library/unordered-multiset-class.md).
+> Cette API est obsolète. L’alternative est [unordered_multiset, classe](../standard-library/unordered-multiset-class.md).
 
 Type qui fournit un pointeur vers un élément d’un hash_multiset.
 
@@ -1844,7 +1844,7 @@ Dans la plupart des cas, vous devez utiliser un [iterator](#iterator) pour accé
 ## <a name="rbegin"></a>  hash_multiset::rbegin
 
 > [!NOTE]
-> Cette API méthode est obsolète. L’alternative est [unordered_multiset, classe](../standard-library/unordered-multiset-class.md).
+> Cette API est obsolète. L’alternative est [unordered_multiset, classe](../standard-library/unordered-multiset-class.md).
 
 Retourne un itérateur traitant le premier élément d’un hash_multiset inversé.
 
@@ -1927,7 +1927,7 @@ After the erasure, the first element in the reversed hash_multiset is 20.
 ## <a name="reference"></a>  hash_multiset::reference
 
 > [!NOTE]
-> Cette API méthode est obsolète. L’alternative est [unordered_multiset, classe](../standard-library/unordered-multiset-class.md).
+> Cette API est obsolète. L’alternative est [unordered_multiset, classe](../standard-library/unordered-multiset-class.md).
 
 Type qui fournit une référence à un élément stocké dans un hash_multiset.
 
@@ -1977,7 +1977,7 @@ The first element in the hash_multiset is now 15.
 ## <a name="rend"></a>  hash_multiset::rend
 
 > [!NOTE]
-> Cette API méthode est obsolète. L’alternative est [unordered_multiset, classe](../standard-library/unordered-multiset-class.md).
+> Cette API est obsolète. L’alternative est [unordered_multiset, classe](../standard-library/unordered-multiset-class.md).
 
 Retourne un itérateur qui traite l’emplacement suivant le dernier élément d’un hash_multiset inversé.
 
@@ -2063,7 +2063,7 @@ After the erasure, the last element in the reversed hash_multiset is 20.
 ## <a name="reverse_iterator"></a>  hash_multiset::reverse_iterator
 
 > [!NOTE]
-> Cette API méthode est obsolète. L’alternative est [unordered_multiset, classe](../standard-library/unordered-multiset-class.md).
+> Cette API est obsolète. L’alternative est [unordered_multiset, classe](../standard-library/unordered-multiset-class.md).
 
 Type qui fournit un itérateur bidirectionnel capable de lire ou de modifier tout élément d’un hash_multiset inversé.
 
@@ -2082,7 +2082,7 @@ Pour découvrir comment déclarer et utiliser [, consultez l’exemple relatif �
 ## <a name="size"></a>  hash_multiset::size
 
 > [!NOTE]
-> Cette API méthode est obsolète. L’alternative est [unordered_multiset, classe](../standard-library/unordered-multiset-class.md).
+> Cette API est obsolète. L’alternative est [unordered_multiset, classe](../standard-library/unordered-multiset-class.md).
 
 Retourne le nombre d’éléments dans le hash_multiset.
 
@@ -2129,7 +2129,7 @@ The hash_multiset length is now 2.
 ## <a name="size_type"></a>  hash_multiset::size_type
 
 > [!NOTE]
-> Cette API méthode est obsolète. L’alternative est [unordered_multiset, classe](../standard-library/unordered-multiset-class.md).
+> Cette API est obsolète. L’alternative est [unordered_multiset, classe](../standard-library/unordered-multiset-class.md).
 
 Type entier non signé qui peut représenter le nombre d’éléments d’un hash_multiset.
 
@@ -2146,7 +2146,7 @@ Pour découvrir comment déclarer et utiliser [, consultez l’exemple relatif �
 ## <a name="swap"></a>  hash_multiset::swap
 
 > [!NOTE]
-> Cette API méthode est obsolète. L’alternative est [unordered_multiset, classe](../standard-library/unordered-multiset-class.md).
+> Cette API est obsolète. L’alternative est [unordered_multiset, classe](../standard-library/unordered-multiset-class.md).
 
 Échange les éléments de deux hash_multisets.
 
@@ -2220,7 +2220,7 @@ After swapping with hms3, list hms1 is: 300.
 ## <a name="upper_bound"></a>  hash_multiset::upper_bound
 
 > [!NOTE]
-> Cette API méthode est obsolète. L’alternative est [unordered_multiset, classe](../standard-library/unordered-multiset-class.md).
+> Cette API est obsolète. L’alternative est [unordered_multiset, classe](../standard-library/unordered-multiset-class.md).
 
 Retourne un itérateur au premier élément d’un hash_multiset avec une valeur de clé supérieure à celle de la clé spécifiée.
 
@@ -2298,7 +2298,7 @@ that of the initial element of hms1 is: 20.
 ## <a name="value_comp"></a>  hash_multiset::value_comp
 
 > [!NOTE]
-> Cette API méthode est obsolète. L’alternative est [unordered_multiset, classe](../standard-library/unordered-multiset-class.md).
+> Cette API est obsolète. L’alternative est [unordered_multiset, classe](../standard-library/unordered-multiset-class.md).
 
 Récupère une copie de l’objet de comparaison utilisé pour trier les valeurs d’éléments d’un hash_multiset.
 
@@ -2379,7 +2379,7 @@ vc2( 2,3 ) returns value of false, where vc2 is the function object of hms2.
 ## <a name="value_compare"></a>  hash_multiset::value_compare
 
 > [!NOTE]
-> Cette API méthode est obsolète. L’alternative est [unordered_multiset, classe](../standard-library/unordered-multiset-class.md).
+> Cette API est obsolète. L’alternative est [unordered_multiset, classe](../standard-library/unordered-multiset-class.md).
 
 Type qui fournit deux objets de fonction, un prédicat binaire de la comparaison de classe qui peut comparer deux valeurs d’éléments d’un hash_multiset pour déterminer leur ordre relatif et un prédicat unaire qui hache les éléments.
 
@@ -2402,7 +2402,7 @@ Consultez l’exemple relatif à [value_comp](#value_comp) qui illustre comment 
 ## <a name="value_type"></a>  hash_multiset::value_type
 
 > [!NOTE]
-> Cette API méthode est obsolète. L’alternative est [unordered_multiset, classe](../standard-library/unordered-multiset-class.md).
+> Cette API est obsolète. L’alternative est [unordered_multiset, classe](../standard-library/unordered-multiset-class.md).
 
 Type qui décrit un objet stocké comme élément d’un hash_multiset en sa capacité de valeur.
 

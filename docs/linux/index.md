@@ -3,16 +3,18 @@ layout: LandingPage
 title: Documentation sur le développement Linux avec C++
 description: Créez et déboguez des applications exécutées sur Linux.
 ms.topic: landing-page
-ms.openlocfilehash: ee956f25914e1996acb6776d9ecbb8c9e79c689b
-ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
+ms.openlocfilehash: 9c09e9bd590ece013a2ee7d85017b3e046394232
+ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
 ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/03/2019
-ms.locfileid: "70216106"
+ms.lasthandoff: 03/17/2020
+ms.locfileid: "79441511"
 ---
 # <a name="linux-development-with-c-documentation"></a>Documentation sur le développement Linux avec C++
 
 Utilisez Visual Studio 2017 et versions ultérieures pour créer et déboguer des applications exécutées sur des ordinateurs distants Linux ou sur un sous-système Windows pour Linux.
+
+<!-- markdownlint-disable MD033 -->
 
 <ul class="panelContent cardsF">
     <li>

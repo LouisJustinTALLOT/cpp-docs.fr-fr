@@ -29,11 +29,11 @@ helpviewer_keywords:
 - COlePasteSpecialDialog [MFC], m_ps
 ms.assetid: 0e82ef9a-9bbe-457e-8240-42c86a0534f7
 ms.openlocfilehash: f4174369620f14f2d1ac410aa5d756c75097ad0f
-ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
+ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/06/2020
-ms.locfileid: "78855501"
+ms.lasthandoff: 03/16/2020
+ms.locfileid: "79421246"
 ---
 # <a name="colepastespecialdialog-class"></a>COlePasteSpecialDialog, classe
 
@@ -67,13 +67,13 @@ class COlePasteSpecialDialog : public COleDialog
 |[COlePasteSpecialDialog::GetPasteIndex](#getpasteindex)|Obtient l’index des options de collage disponibles qui a été choisi par l’utilisateur.|
 |[COlePasteSpecialDialog::GetSelectionType](#getselectiontype)|Obtient le type de sélection choisi.|
 
-### <a name="public-data-members"></a>Membres de données publiques
+### <a name="public-data-members"></a>Membres de données publics
 
 |Name|Description|
 |----------|-----------------|
 |[COlePasteSpecialDialog :: m_ps](#m_ps)|Structure de type OLEUIPASTESPECIAL qui contrôle la fonction de la boîte de dialogue.|
 
-## <a name="remarks"></a>Notes 
+## <a name="remarks"></a>Notes
 
 Créez un objet de la classe `COlePasteSpecialDialog` lorsque vous souhaitez appeler cette boîte de dialogue. Après la construction d’un objet `COlePasteSpecialDialog`, vous pouvez utiliser les fonctions membres [AddFormat](#addformat) et [AddStandardFormats](#addstandardformats) pour ajouter des formats de presse-papiers à la boîte de dialogue. Vous pouvez également utiliser la structure [m_ps](#m_ps) pour initialiser les valeurs ou les États des contrôles dans la boîte de dialogue. La structure `m_ps` est de type OLEUIPASTESPECIAL.
 
@@ -81,7 +81,7 @@ Pour plus d’informations, consultez la structure [OLEUIPASTESPECIAL](/windows/
 
 Pour plus d’informations sur les boîtes de dialogue spécifiques à OLE, consultez l’article [boîtes de dialogue dans OLE](../../mfc/dialog-boxes-in-ole.md).
 
-## <a name="inheritance-hierarchy"></a>Hiérarchie d'héritage
+## <a name="inheritance-hierarchy"></a>Hiérarchie d’héritage
 
 [CObject](../../mfc/reference/cobject-class.md)
 
@@ -149,7 +149,7 @@ Indicateur qui détermine si la case à cocher Afficher sous forme d’icône es
 *Clignote*<br/>
 Indicateur qui détermine si la case d’option Coller le lien est activée lorsque ce format est choisi dans la zone de liste.
 
-### <a name="remarks"></a>Notes 
+### <a name="remarks"></a>Notes
 
 Cette fonction peut être appelée pour ajouter des formats standard tels que CF_TEXT ou CF_TIFF ou des formats personnalisés que votre application a inscrits auprès du système. Pour plus d’informations sur le collage d’objets de données dans votre application, consultez l’article [objets de données et sources de données : manipulation](../../mfc/data-objects-and-data-sources-manipulation.md).
 
@@ -187,7 +187,7 @@ void AddStandardFormats(BOOL bEnableLink = TRUE);
 *bEnableLink*<br/>
 Indicateur qui détermine s’il faut ajouter CF_LINKSOURCE à la liste des formats que votre application peut coller.
 
-### <a name="remarks"></a>Notes 
+### <a name="remarks"></a>Notes
 
 - CF_BITMAP
 
@@ -231,7 +231,7 @@ Pointe vers le [COleDataObject](../../mfc/reference/coledataobject-class.md) pou
 *pParentWnd*<br/>
 Pointe vers l’objet de fenêtre parent ou propriétaire (de type `CWnd`) auquel l’objet de boîte de dialogue appartient. Si la valeur est NULL, la fenêtre parente de la boîte de dialogue est définie sur la fenêtre d’application principale.
 
-### <a name="remarks"></a>Notes 
+### <a name="remarks"></a>Notes
 
 Cette fonction construit uniquement un objet `COlePasteSpecialDialog`. Pour afficher la boîte de dialogue, appelez la fonction [DoModal](#domodal) .
 
@@ -254,7 +254,7 @@ Pointe vers une instance de `COleClientItem`. Ne peut pas avoir la valeur NULL.
 
 Différent de zéro si l’élément a été créé avec succès ; Sinon, 0.
 
-### <a name="remarks"></a>Notes 
+### <a name="remarks"></a>Notes
 
 Cette fonction doit uniquement être appelée une fois que [DoModal](#domodal) retourne IDOK.
 
@@ -276,7 +276,7 @@ virtual INT_PTR DoModal();
 
 - IDABORT si une erreur s’est produite. Si IDABORT est retourné, appelez la fonction membre `COleDialog::GetLastError` pour obtenir plus d’informations sur le type d’erreur qui s’est produit. Pour obtenir la liste des erreurs possibles, consultez la fonction [OleUIPasteSpecial](/windows/win32/api/oledlg/nf-oledlg-oleuipastespecialw) dans la SDK Windows.
 
-### <a name="remarks"></a>Notes 
+### <a name="remarks"></a>Notes
 
 Si vous souhaitez initialiser les différents contrôles de boîte de dialogue en définissant les membres de la structure [m_ps](#m_ps) , vous devez le faire avant d’appeler `DoModal`, mais après la construction de l’objet de boîte de dialogue.
 
@@ -298,7 +298,7 @@ Méthode nécessaire pour restituer l’objet.
 
 - DVASPECT_ICON retourné si la case à cocher Afficher comme icône a été activée lorsque la boîte de dialogue a été fermée.
 
-### <a name="remarks"></a>Notes 
+### <a name="remarks"></a>Notes
 
 Appelez cette fonction uniquement lorsque [DoModal](#domodal) retourne IDOK.
 
@@ -328,7 +328,7 @@ int GetPasteIndex() const;
 
 Index dans le tableau de structures de `OLEUIPASTEENTRY` qui a été sélectionné par l’utilisateur. Le format qui correspond à l’index sélectionné doit être utilisé lors de l’opération de collage.
 
-### <a name="remarks"></a>Notes 
+### <a name="remarks"></a>Notes
 
 Pour plus d’informations, consultez la structure [OLEUIPASTEENTRY](/windows/win32/api/oledlg/ns-oledlg-oleuipasteentryw) dans le SDK Windows.
 
@@ -344,7 +344,7 @@ UINT GetSelectionType() const;
 
 Retourne le type de sélection effectuée.
 
-### <a name="remarks"></a>Notes 
+### <a name="remarks"></a>Notes
 
 Les valeurs de type de retour sont spécifiées par le type d’énumération `Selection` déclaré dans la classe `COlePasteSpecialDialog`.
 
@@ -375,7 +375,7 @@ Structure de type OLEUIPASTESPECIAL utilisée pour contrôler le comportement de
 OLEUIPASTESPECIAL m_ps;
 ```
 
-### <a name="remarks"></a>Notes 
+### <a name="remarks"></a>Notes
 
 Les membres de cette structure peuvent être modifiés directement ou via des fonctions membres.
 

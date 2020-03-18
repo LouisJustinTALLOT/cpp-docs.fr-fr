@@ -335,11 +335,11 @@ helpviewer_keywords:
 - COleControl [MFC], SetInitialDataFormats
 ms.assetid: 53e95299-38e8-447b-9c5f-a381d27f5123
 ms.openlocfilehash: 97c605426ed0ac869714f0f83d4957f7f6ce7d87
-ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
+ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/06/2020
-ms.locfileid: "78855747"
+ms.lasthandoff: 03/16/2020
+ms.locfileid: "79421589"
 ---
 # <a name="colecontrol-class"></a>Classe COleControl
 
@@ -558,7 +558,7 @@ Les objets de contrôle OLE peuvent également créer une fenêtre uniquement lo
 
 Pour plus d’informations sur le développement d’une infrastructure de contrôle OLE, consultez les articles [contrôles ActiveX MFC](../../mfc/mfc-activex-controls.md) et [vue d’ensemble : création d’un programme de contrôle ActiveX MFC](../../mfc/reference/mfc-activex-control-wizard.md). Pour plus d’informations sur l’optimisation des contrôles OLE, y compris les contrôles sans fenêtre et sans scintillement, consultez [contrôles ActiveX MFC : optimisation](../../mfc/mfc-activex-controls-optimization.md).
 
-## <a name="inheritance-hierarchy"></a>Hiérarchie d'héritage
+## <a name="inheritance-hierarchy"></a>Hiérarchie d’héritage
 
 [CObject](../../mfc/reference/cobject-class.md)
 

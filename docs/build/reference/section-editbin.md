@@ -2,19 +2,19 @@
 title: /SECTION (EDITBIN)
 ms.date: 11/04/2016
 f1_keywords:
-- /section
+- /section_editbin
 helpviewer_keywords:
 - -SECTION editbin option
 - SECTION editbin option
 - alignment characters in sections
 - /SECTION editbin option
 ms.assetid: 4680ab4e-c984-4251-8241-93440cad7615
-ms.openlocfilehash: 8bcc925b34118630c872a0147b93291626b7c19b
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 770e1d1c1cf288a7fe68f5bd076791d43f5b8572
+ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62318600"
+ms.lasthandoff: 03/17/2020
+ms.locfileid: "79438912"
 ---
 # <a name="section-editbin"></a>/SECTION (EDITBIN)
 
@@ -24,28 +24,28 @@ ms.locfileid: "62318600"
 
 ## <a name="remarks"></a>Notes
 
-Cette option modifie les attributs d’une section, en substituant les attributs qui ont été définis lorsque le fichier objet de la section a été compilé ou lié.
+Cette option modifie les attributs d’une section, en substituant les attributs qui ont été définis lors de la compilation ou de la liaison du fichier objet pour la section.
 
-Après le signe deux-points ( **:** ), spécifiez la *nom* de la section. Pour modifier le nom de section, procédez comme *nom* par un signe égal (=) et un *newname* pour la section.
+Après les deux-points ( **:** ), spécifiez le *nom* de la section. Pour modifier le nom de la section, faites suivre le *nom* d’un signe égal (=) et d’un *NewName* pour la section.
 
-Pour définir ou modifier la section `attributes`, spécifier une virgule (**,**) suivie d’un ou plusieurs caractères des attributs. Pour exclure un attribut, faites précéder son caractère avec un point d’exclamation ( !). Les caractères suivants spécifient les attributs de la mémoire :
+Pour définir ou modifier le `attributes`de la section, spécifiez une virgule ( **,** ) suivie d’un ou plusieurs caractères d’attributs. Pour nier un attribut, faites précéder son caractère d’un point d’exclamation ( !). Les caractères suivants spécifient les attributs de mémoire :
 
 |Attribut|Paramètre|
 |---------------|-------------|
 |c|code|
-|d|Pouvant être éliminée|
+|d|pouvant être éliminée|
 |e|executable|
-|i|données initialisée|
-|k|mise en cache mémoire virtuelle|
-|m|lien Supprimer|
-|o|informations sur les liens|
+|i|données initialisées|
+|k|mémoire virtuelle mise en cache|
+|m|supprimer un lien|
+|o|informations sur le lien|
 |p|mémoire virtuelle paginée|
-|r|read|
-|s|partagés|
-|u|données non initialisé|
-|s|écriture|
+|r|lire|
+|s|shared|
+|u|données non initialisées|
+|w|écrire|
 
-Contrôle *alignement*, spécifiez le caractère **A** suivie par l’un des caractères suivants pour définir la taille de l’alignement en octets, comme suit :
+Pour contrôler l' *alignement*, spécifiez le caractère **A** suivi de l’un des caractères suivants pour définir la taille de l’alignement en octets, comme suit :
 
 |Caractère|Taille d’alignement en octets|
 |---------------|-----------------------------|
@@ -56,9 +56,9 @@ Contrôle *alignement*, spécifiez le caractère **A** suivie par l’un des car
 |p|16|
 |t|32|
 |s|64|
-|x|Aucun alignement|
+|x|aucun alignement|
 
-Spécifiez le `attributes` et *alignement* caractères sous forme de chaîne sans espace blanc. Les caractères ne respectent pas la casse.
+Spécifiez les `attributes` et les caractères d' *alignement* sous la forme d’une chaîne sans espace blanc. Les caractères ne respectent pas la casse.
 
 ## <a name="see-also"></a>Voir aussi
 

@@ -1,9 +1,6 @@
 ---
 title: Macros courantes pour les commandes et les propriétés MSBuild
 ms.date: 08/02/2019
-f1_keywords:
-- VC.Project.VCCLCompilerTool.GenerateXMLDocumentationFiles
-- VC.Project.VCCLCompilerTool.XMLDocumentationFileName
 helpviewer_keywords:
 - $(FrameworkSDKDir) macro
 - ProjectName macro $(ProjectName)
@@ -93,12 +90,12 @@ helpviewer_keywords:
 - $(PlatformShortName) macro
 - SolutionPath macro $(SolutionPath)
 ms.assetid: 239bd708-2ea9-4687-b264-043f1febf98b
-ms.openlocfilehash: e2c7fe6f2ea63f2cbd259e4114843fcfc28fcd84
-ms.sourcegitcommit: 573b36b52b0de7be5cae309d45b68ac7ecf9a6d8
+ms.openlocfilehash: 5038416a8df3282b426d3298c73520f78e962766
+ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/10/2019
-ms.locfileid: "74988328"
+ms.lasthandoff: 03/17/2020
+ms.locfileid: "79440168"
 ---
 # <a name="common-macros-for-msbuild-commands-and-properties"></a>Macros courantes pour les commandes et les propriétés MSBuild
 
@@ -125,7 +122,7 @@ Ce tableau décrit un sous-ensemble couramment utilisé des macros disponibles. 
 |**$(IntDir)**|Chemin du répertoire spécifié pour les fichiers intermédiaires. S’il s’agit d’un chemin d’accès relatif, les fichiers intermédiaires sont placés dans ce chemin d’accès ajouté au répertoire du projet. Ce chemin doit se terminer par une barre oblique. Il correspond à la valeur de la propriété **Intermediate Directory** . N’utilisez pas **$ (OutDir)** pour définir cette propriété.|
 |**$(OutDir)**|Chemin du répertoire des fichiers de sortie. S’il s’agit d’un chemin d’accès relatif, les fichiers de sortie sont placés dans ce chemin d’accès ajouté au répertoire du projet. Ce chemin doit se terminer par une barre oblique. Il correspond à la valeur de la propriété du **Répertoire de sortie** . N’utilisez pas **$ (IntDir)** pour définir cette propriété.|
 |**$(Platform)**|Nom de la plateforme de projet actuelle, par exemple, « Win32 ».|
-|**$(PlatformShortName)**|Nom abrégé de l’architecture actuelle, par exemple « x86 » ou « x64 ».|
+|**$ (PlatformShortName)**|Nom abrégé de l’architecture actuelle, par exemple « x86 » ou « x64 ».|
 |**$(ProjectDir)**|Répertoire du projet (défini au format lecteur + chemin), se termine par une barre oblique inverse « \\ ».|
 |**$(ProjectExt)**|L’extension de fichier du projet. Elle inclut le point (« . ») avant l’extension de fichier.|
 |**$(ProjectFileName)**|Le nom de fichier du projet (défini comme étant nom de base + extension de fichier).|

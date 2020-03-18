@@ -75,11 +75,11 @@ helpviewer_keywords:
 - CImageList [MFC], m_hImageList
 ms.assetid: b6d1a704-1c82-4548-8a8f-77972adc98a5
 ms.openlocfilehash: 1555209ce0f1c2caacbfb4b01107775db948d230
-ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
+ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/06/2020
-ms.locfileid: "78890705"
+ms.lasthandoff: 03/16/2020
+ms.locfileid: "79420357"
 ---
 # <a name="cimagelist-class"></a>CImageList (classe)
 
@@ -136,13 +136,13 @@ class CImageList : public CObject
 |[CImageList :: SetOverlayImage](#setoverlayimage)|Ajoute l’index de base zéro d’une image à la liste d’images à utiliser comme masques de superposition.|
 |[CImageList :: Write](#write)|Écrit une liste d’images dans une archive.|
 
-### <a name="public-operators"></a>Op&#233;rateurs publics
+### <a name="public-operators"></a>Opérateurs publics
 
 |Name|Description|
 |----------|-----------------|
 |[CImageList :: Operator HIMAGELIST](#operator_himagelist)|Retourne le HIMAGELIST attaché au `CImageList`.|
 
-### <a name="public-data-members"></a>Membres de données publiques
+### <a name="public-data-members"></a>Membres de données publics
 
 |Name|Description|
 |----------|-----------------|
@@ -156,7 +156,7 @@ Ce contrôle (et par conséquent la classe `CImageList`) est uniquement disponib
 
 Pour plus d’informations sur l’utilisation de `CImageList`, consultez [contrôles](../../mfc/controls-mfc.md) et [utilisation de CImageList](../../mfc/using-cimagelist.md).
 
-## <a name="inheritance-hierarchy"></a>Hiérarchie d'héritage
+## <a name="inheritance-hierarchy"></a>Hiérarchie d’héritage
 
 [CObject](../../mfc/reference/cobject-class.md)
 

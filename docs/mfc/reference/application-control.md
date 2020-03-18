@@ -5,11 +5,11 @@ helpviewer_keywords:
 - application control [MFC]
 ms.assetid: c1f69f15-e0fe-4515-9f36-d63d31869deb
 ms.openlocfilehash: cb4ad19dfad06b793f226324d8e28c37c084ad67
-ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
+ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/06/2020
-ms.locfileid: "78855685"
+ms.lasthandoff: 03/16/2020
+ms.locfileid: "79418901"
 ---
 # <a name="application-control"></a>Contrôle d'application
 
@@ -271,7 +271,7 @@ Les symboles sont remplis comme suit :
 |Symbole|Valeur|
 |------------|-----------|
 |%1|ID de classe, mis en forme en tant que chaîne|
-|%2|Nom de classe|
+|%2|Nom de la classe|
 |%3|Chemin d’accès au fichier exécutable|
 |4|Nom de type abrégé|
 |%5|Nom de type long|

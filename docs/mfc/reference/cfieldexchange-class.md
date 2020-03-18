@@ -11,11 +11,11 @@ helpviewer_keywords:
 - CFieldExchange [MFC], SetFieldType
 ms.assetid: 24c5c0b3-06a6-430e-9b6f-005a2c65e29f
 ms.openlocfilehash: e66b3ed16d4f21d46567c37bfaf7929d32f63b8e
-ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
+ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/06/2020
-ms.locfileid: "78866275"
+ms.lasthandoff: 03/16/2020
+ms.locfileid: "79420406"
 ---
 # <a name="cfieldexchange-class"></a>CFieldExchange, classe
 
@@ -57,7 +57,7 @@ Un objet `CFieldExchange` fournit les informations de contexte nécessaires à l
 
 La plupart des fonctions membres et membres de données de la classe sont fournis pour l’écriture de vos propres routines RFX personnalisées. Vous allez utiliser `SetFieldType` fréquemment. Pour plus d’informations, consultez les articles [Record Field Exchange (RFX)](../../data/odbc/record-field-exchange-rfx.md) et [Recordset (ODBC)](../../data/odbc/recordset-odbc.md). Pour plus d’informations sur l’extraction de lignes en bloc, consultez l’article [Recordset : extraction globale d’enregistrements en bloc (ODBC)](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md). Pour plus d’informations sur les fonctions RFX et les fonctions globales RFX en bloc, consultez [Record Field Exchange Functions](../../mfc/reference/record-field-exchange-functions.md) dans la section macros MFC et globales de cette référence.
 
-## <a name="inheritance-hierarchy"></a>Hiérarchie d'héritage
+## <a name="inheritance-hierarchy"></a>Hiérarchie d’héritage
 
 `CFieldExchange`
 

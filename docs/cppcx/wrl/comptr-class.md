@@ -1,5 +1,5 @@
 ---
-title: ComPtr, classe
+title: ComPtr (classe)
 ms.date: 07/26/2019
 ms.topic: reference
 f1_keywords:
@@ -52,13 +52,13 @@ helpviewer_keywords:
 - Microsoft::WRL::ComPtr::~ComPtr, destructor
 ms.assetid: a6551902-6819-478a-8df7-b6f312ab1fb0
 ms.openlocfilehash: 1e20a991c8f32027aeea6a17df0534aa6e1c2c43
-ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
+ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/06/2020
-ms.locfileid: "78865707"
+ms.lasthandoff: 03/16/2020
+ms.locfileid: "79418320"
 ---
-# <a name="comptr-class"></a>ComPtr, classe
+# <a name="comptr-class"></a>ComPtr (classe)
 
 Crée un type de *pointeur intelligent* représentant l'interface spécifiée par le paramètre de modèle. `ComPtr` met à jour automatiquement un décompte de références pour le pointeur d'interface sous-jacent et libère l'interface lorsque le décompte de références atteint zéro.
 
@@ -124,7 +124,7 @@ Name                                        | Description
 [ComPtr :: Internaladdref,](#internaladdref)   | Incrémente le décompte de références de l’interface associée à ce `ComPtr`.
 [ComPtr :: InternalRelease,](#internalrelease) | Exécute une opération de mise en service COM sur l’interface associée à ce `ComPtr`.
 
-### <a name="public-operators"></a>Op&#233;rateurs publics
+### <a name="public-operators"></a>Opérateurs publics
 
 Name                                                                                           | Description
 ---------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------
@@ -135,13 +135,13 @@ Name                                                                            
 [ComPtr :: Operator ! =](#operator-inequality)                                                     | Indique si deux objets `ComPtr` ne sont pas égaux.
 [ComPtr :: Operator Microsoft :: WRL ::D étails :: Booltype,](#operator-microsoft-wrl-details-booltype) | Indique si un `ComPtr` gère la durée de vie des objets d’une interface.
 
-### <a name="protected-data-members"></a>Membres de données protégées
+### <a name="protected-data-members"></a>Membres de données protégés
 
 Name                 | Description
 -------------------- | ------------------------------------------------------------------------------------------
 [ComPtr ::p tr_](#ptr) | Contient un pointeur vers l’interface qui est associée à et gérée par cette `ComPtr`.
 
-## <a name="inheritance-hierarchy"></a>Hiérarchie d'héritage
+## <a name="inheritance-hierarchy"></a>Hiérarchie d’héritage
 
 `ComPtr`
 

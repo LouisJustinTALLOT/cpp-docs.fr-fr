@@ -37,11 +37,11 @@ helpviewer_keywords:
 - CSimpleStringT class
 ms.assetid: 15814fcb-5b8f-4425-a97e-3b61fc9b48d8
 ms.openlocfilehash: c033346b7a687a1c6778ad23e30ee0e73c787ad8
-ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
+ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/06/2020
-ms.locfileid: "78865075"
+ms.lasthandoff: 03/16/2020
+ms.locfileid: "79418194"
 ---
 # <a name="csimplestringt-class"></a>CSimpleStringT, classe
 
@@ -110,7 +110,7 @@ Type de caractère de la classe String. Il peut s'agir d'une des méthodes suiva
 |[CSimpleStringT :: TRUNCATE](#truncate)|Tronque la chaîne à une longueur spécifiée.|
 |[CSimpleStringT::UnlockBuffer](#unlockbuffer)|Active le décompte de références et libère la chaîne dans la mémoire tampon.|
 
-### <a name="public-operators"></a>Op&#233;rateurs publics
+### <a name="public-operators"></a>Opérateurs publics
 
 |Name|Description|
 |----------|-----------------|

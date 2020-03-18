@@ -1,19 +1,18 @@
 ---
-title: '&lt;code > (commentaires de documentation C++)'
+title: '&lt;> de codeC++ (commentaires de documentation)'
 ms.date: 11/04/2016
 f1_keywords:
-- code
 - <code>
 helpviewer_keywords:
 - <code> C++ XML tag
 - code C++ XML tag
 ms.assetid: 687db3f8-d435-4a90-b781-8da503fa39bc
-ms.openlocfilehash: d368f3c82afd028ce557db7d0507b3a6a4d7c118
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: bacd95f9c93a439e5bab7a556ac2724a042411b8
+ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62272409"
+ms.lasthandoff: 03/17/2020
+ms.locfileid: "79440155"
 ---
 # <a name="ltcodegt"></a>&lt;code&gt;
 

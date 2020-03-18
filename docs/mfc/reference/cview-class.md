@@ -53,11 +53,11 @@ helpviewer_keywords:
 - CView [MFC], OnUpdate
 ms.assetid: 9cff3c56-7564-416b-b9a4-71a9254ed755
 ms.openlocfilehash: f6be846e80209ce94c84222d61c37a7964baad03
-ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
+ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/06/2020
-ms.locfileid: "78855493"
+ms.lasthandoff: 03/16/2020
+ms.locfileid: "79421568"
 ---
 # <a name="cview-class"></a>CView, classe
 
@@ -71,7 +71,7 @@ class AFX_NOVTABLE CView : public CWnd
 
 ## <a name="members"></a>Membres
 
-### <a name="protected-constructors"></a>Constructeurs prot&#233;g&#233;s
+### <a name="protected-constructors"></a>Constructeurs protégés
 
 |Name|Description|
 |----------|-----------------|
@@ -149,7 +149,7 @@ Outre `CScrollView`, le bibliothèque MFC (Microsoft Foundation Class) fournit n
 
 La classe `CView` a également une classe d’implémentation dérivée nommée `CPreviewView`, qui est utilisée par l’infrastructure pour effectuer un aperçu avant impression. Cette classe assure la prise en charge des fonctionnalités propres à la fenêtre d’aperçu avant impression, telles qu’une barre d’outils, un aperçu d’une seule page ou d’une seule page, ainsi que le zoom, c’est-à-dire l’agrandissement de l’image prévisualisée. Vous n’avez pas besoin d’appeler ou de substituer les fonctions membres de `CPreviewView`, sauf si vous souhaitez implémenter votre propre interface pour l’aperçu avant impression (par exemple, si vous souhaitez prendre en charge la modification en mode aperçu avant impression). Pour plus d’informations sur l’utilisation de `CView`, consultez [architecture de document/vue](../../mfc/document-view-architecture.md) et [impression](../../mfc/printing.md). En outre, consultez la [note technique 30](../../mfc/tn030-customizing-printing-and-print-preview.md) pour plus d’informations sur la personnalisation de l’aperçu avant impression.
 
-## <a name="inheritance-hierarchy"></a>Hiérarchie d'héritage
+## <a name="inheritance-hierarchy"></a>Hiérarchie d’héritage
 
 [CObject](../../mfc/reference/cobject-class.md)
 

@@ -115,11 +115,11 @@ helpviewer_keywords:
 - CMFCRibbonPanel [MFC], ShowPopup
 ms.assetid: 51d70749-1140-4386-b103-f14082049ba6
 ms.openlocfilehash: 1ba7057405da2ebd7fd1bf699a69f97a650fa47c
-ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
+ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/06/2020
-ms.locfileid: "78883601"
+ms.lasthandoff: 03/16/2020
+ms.locfileid: "79420252"
 ---
 # <a name="cmfcribbonpanel-class"></a>CMFCRibbonPanel, classe
 
@@ -135,7 +135,7 @@ class CMFCRibbonPanel : public CObject
 
 ## <a name="members"></a>Membres
 
-### <a name="protected-constructors"></a>Constructeurs prot&#233;g&#233;s
+### <a name="protected-constructors"></a>Constructeurs protégés
 
 |Name|Description|
 |----------|-----------------|
@@ -211,7 +211,7 @@ L’exemple suivant montre comment configurer un objet `CMFCRibbonPanel` à l’
 
 [!code-cpp[NVC_MFC_MSOffice2007Demo#10](../../mfc/reference/codesnippet/cpp/cmfcribbonpanel-class_1.cpp)]
 
-## <a name="inheritance-hierarchy"></a>Hiérarchie d'héritage
+## <a name="inheritance-hierarchy"></a>Hiérarchie d’héritage
 
 [CObject](../../mfc/reference/cobject-class.md)
 
