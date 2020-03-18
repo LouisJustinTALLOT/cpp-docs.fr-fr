@@ -1,8 +1,6 @@
 ---
 title: E/S de fichier en mode texte et binaire
 ms.date: 04/11/2018
-f1_keywords:
-- c.io
 helpviewer_keywords:
 - files [C++], open functions
 - I/O [CRT], text files
@@ -15,12 +13,12 @@ helpviewer_keywords:
 - translation modes (file I/O)
 - binary access
 ms.assetid: 3196e321-8b87-4609-b302-cd6f3c516051
-ms.openlocfilehash: 2c875350aedadb55d8f96fb682d6215030be2198
-ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
-ms.translationtype: HT
+ms.openlocfilehash: 75d302e625747d6e02e1d904c21542530d70d02f
+ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/11/2019
-ms.locfileid: "57738583"
+ms.lasthandoff: 03/17/2020
+ms.locfileid: "79444630"
 ---
 # <a name="text-and-binary-mode-file-io"></a>E/S de fichier en mode texte et binaire
 
@@ -28,7 +26,7 @@ Les opérations d’E/S sur les fichiers ont lieu dans l’un des deux modes de 
 
 - Conserver le paramètre de valeur par défaut actuel et spécifier le mode alternatif uniquement lorsque vous ouvrez les fichiers sélectionnés.
 
-- Utiliser la fonction [_set_fmode](../c-runtime-library/reference/set-fmode.md) pour modifier le mode par défaut pour les nouveaux fichiers ouverts. Utiliser [_get_fmode](../c-runtime-library/reference/get-fmode.md) pour rechercher le mode par défaut en cours. Le paramètre par défaut est le mode texte (**_O_TEXT**).
+- Utiliser la fonction [_set_fmode](../c-runtime-library/reference/set-fmode.md) pour modifier le mode par défaut pour les nouveaux fichiers ouverts. Utiliser [_get_fmode](../c-runtime-library/reference/get-fmode.md) pour rechercher le mode par défaut en cours. Le paramètre par défaut est le mode texte ( **_O_TEXT**).
 
 - Modifiez le mode de traduction par défaut directement en définissant la variable globale [_fmode](../c-runtime-library/fmode.md) dans votre programme. La fonction **_set_fmode** définit la valeur de cette variable, mais elle peut également être définie directement.
 

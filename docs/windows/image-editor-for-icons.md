@@ -9,11 +9,8 @@ f1_keywords:
 - vc.editors.bitmap
 - vc.editors.dialog.GridSettings
 - vc.editors.gridsettings
-- vc.editors.bitmap
 - vc.editors.icon
 - vc.editors.texttool
-- vc.editors.bitmap
-- vc.editors.icon
 helpviewer_keywords:
 - editors, images
 - resource editors [C++], graphics
@@ -42,12 +39,12 @@ helpviewer_keywords:
 - Image editor [C++], grid settings
 - grid settings, Image editor
 ms.assetid: 586d2b8b-0348-4883-a85d-1ff0ddbf14dd
-ms.openlocfilehash: 0f8fe228b804538b6a0d0377f05d79c34e787587
-ms.sourcegitcommit: 389c559918d9bfaf303d262ee5430d787a662e92
+ms.openlocfilehash: 9c1c09f8ffe0ef8d4759b9242ba30e8fafaaeb01
+ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/25/2019
-ms.locfileid: "69514222"
+ms.lasthandoff: 03/17/2020
+ms.locfileid: "79443768"
 ---
 # <a name="image-editor-for-icons-c"></a>Éditeur d’images pour lesC++icônes ()
 
@@ -86,25 +83,25 @@ Le menu **image** , qui s’affiche uniquement lorsque l' **éditeur d’images*
 |**Dessin opaque**|Lorsque cette option est sélectionnée, la sélection actuelle est opaque.<br/><br/>Lorsque cette option est désactivée, la sélection actuelle est transparente.|
 |**Éditeur de barres d’outils**|Ouvre la [boîte de dialogue nouvelle ressource de barre d’outils](../windows/new-toolbar-resource-dialog-box.md).|
 |**Paramètres de la grille**|Ouvre la boîte de dialogue Paramètres de la **grille** dans laquelle vous pouvez spécifier des grilles pour votre image.|
-|**Nouveau type d’image**|Ouvre la [boîte \<de dialogue nouveau type d’image de > d’appareil](../windows/new-device-image-type-dialog-box-image-editor-for-icons.md).<br/><br/>Une seule ressource icône peut contenir plusieurs images de différentes tailles et les fenêtres peuvent utiliser la taille d’icône appropriée en fonction de l’affichage. Un nouveau type d’appareil ne modifie pas la taille de l’icône, mais crée plutôt une nouvelle image dans l’icône. S’applique uniquement aux icônes et aux curseurs.|
-|**Type d’image icône/curseur actuel**|Ouvre un sous-menu qui répertorie les neuf premières images de curseur ou d’icône disponibles. La dernière commande du sous-menu, **plus**, ouvre la boîte de [dialogue Ouvrir \<l’image du > d’appareil](../windows/open-device-image-dialog-box-image-editor-for-icons.md).|
+|**Nouveau type d’image**|Ouvre la [boîte de dialogue nouveau type d’image du > de l’appareil \<](../windows/new-device-image-type-dialog-box-image-editor-for-icons.md).<br/><br/>Une seule ressource icône peut contenir plusieurs images de différentes tailles et les fenêtres peuvent utiliser la taille d’icône appropriée en fonction de l’affichage. Un nouveau type d’appareil ne modifie pas la taille de l’icône, mais crée plutôt une nouvelle image dans l’icône. S’applique uniquement aux icônes et aux curseurs.|
+|**Type d’image icône/curseur actuel**|Ouvre un sous-menu qui répertorie les neuf premières images de curseur ou d’icône disponibles. La dernière commande du sous-menu, **plus**, ouvre la boîte de [dialogue ouvrir l’image > de l’appareil \<](../windows/open-device-image-dialog-box-image-editor-for-icons.md).|
 |**Supprimer le type d’image**|Supprime l’image d’appareil sélectionnée.|
-|**Outils**|Lance un sous-menu qui contient tous les outils disponibles à partir de la barre d’outils de l' **éditeur d’images** .|
+|**outils**|Lance un sous-menu qui contient tous les outils disponibles à partir de la barre d’outils de l' **éditeur d’images** .|
 
 La boîte de dialogue Paramètres de la **grille** vous permet de spécifier les paramètres de grille pour votre image et d’afficher des quadrillages sur l’image modifiée. Les lignes sont utiles pour la modification de l’image, mais elles ne sont pas enregistrées dans le cadre de l’image elle-même.
 
-|Property|Description|
+|Propriété|Description|
 |---|---|
 |**Grille de pixels**|Lorsque cette option est activée, une grille apparaît autour de chaque pixel de l' **éditeur d’images**.<br/><br/>La grille s’affiche uniquement avec une résolution de 4 × et supérieure.|
 |**Grille mosaïque**|Lorsqu’elle est sélectionnée, cette option affiche une grille autour des blocs de pixels dans l' **éditeur d’images**, spécifiée par les valeurs d’espacement de la grille.|
 |**Width**|Spécifie la largeur de chaque bloc de mosaïques.<br/><br/>Cette propriété est utile lors du dessin de bitmaps contenant plusieurs images disposées à intervalles réguliers.|
 |**Height**|Spécifie la hauteur de chaque bloc de mosaïques.<br/><br/>Cette propriété est utile lors du dessin de bitmaps contenant plusieurs images disposées à intervalles réguliers.|
 
-## <a name="toolbar"></a>ToolBar
+## <a name="toolbar"></a>Barre d'outils
 
 La barre d’outils de l' **éditeur d’images** contient des outils de dessin, de peinture, d’entrée de texte, d’effacement et de manipulation de vues. Il contient également un sélecteur d’options, avec lequel vous pouvez sélectionner des options pour utiliser chaque outil. Par exemple, vous pouvez choisir parmi différentes largeurs de pinceau, facteurs d’agrandissement et styles de ligne.
 
-Tous les outils disponibles dans la barre d’outils de l' **éditeur d’images** sont également disponibles dans les**Outils**d' **image** > de menu. Pour utiliser la barre d’outils de l' **éditeur d’images** et le sélecteur d' **options** , sélectionnez l’outil ou l’option de votre choix.
+Tous les outils disponibles dans la barre d’outils de l' **éditeur d’images** sont également disponibles à partir de l' **image** de menu > **Outils**. Pour utiliser la barre d’outils de l' **éditeur d’images** et le sélecteur d' **options** , sélectionnez l’outil ou l’option de votre choix.
 
 ![Barre d’outils Éditeur d’images](../mfc/media/vcimageeditortoolbar.gif "vcImageEditorToolbar")<br/>
 Barre d’outils **éditeur d’images**
@@ -114,7 +111,7 @@ Barre d’outils **éditeur d’images**
 
 Étant donné que la plupart des outils de dessin sont disponibles à partir du [clavier](../windows/accelerator-keys-image-editor-for-icons.md), il est parfois utile de masquer la barre d’outils de l' **éditeur d’images** .
 
-- Pour afficher ou masquer la barre d’outils de l' **éditeur d’images** , accédez à menu **Afficher** > les**barres d’outils** et choisissez **éditeur d’images**.
+- Pour afficher ou masquer la barre d’outils de l' **éditeur d’images** , accédez à la **vue** menu > les **barres d’outils** et choisissez **éditeur d’images**.
 
 > [!NOTE]
 > Les éléments de cette barre d’outils s’affichent non disponibles lorsqu’un fichier image du projet ou de la solution en cours n’est pas ouvert dans l' **éditeur d’images**.
@@ -130,7 +127,7 @@ Sélecteur d' **option** dans la barre d’outils de l' **éditeur d’images**
 
 Utilisez la boîte de dialogue **outil texte** pour ajouter du texte à une ressource curseur, bitmap ou icône.
 
-Pour accéder à cette boîte de dialogue, ouvrez l' **éditeur d’images** et accédez au menu**Outils**d' **image** > , puis sélectionnez la commande **outil texte** .
+Pour accéder à cette boîte de dialogue, ouvrez l' **éditeur d’images** et accédez à l' **image** de menu > **Outils**, puis sélectionnez la commande **outil texte** .
 
 > [!TIP]
 > Vous pouvez cliquer avec le bouton droit sur la boîte de dialogue **outil texte** pour accéder à un menu contextuel par défaut qui contient une liste de commandes Windows standard.
@@ -139,7 +136,7 @@ Ouvrez la boîte de dialogue police de l' **outil texte** pour modifier la polic
 
 Pour accéder à cette boîte de dialogue, sélectionnez le bouton **police** dans la boîte de dialogue **outil texte** . Les propriétés disponibles sont les suivantes :
 
-|Property|Description|
+|Propriété|Description|
 |---|---|
 |**Police**|Répertorie les polices disponibles.|
 |**Style de police**|Répertorie les styles disponibles pour la police spécifiée.|
@@ -151,11 +148,11 @@ Pour accéder à cette boîte de dialogue, sélectionnez le bouton **police** da
 
 Voici un exemple qui montre comment ajouter du texte à une icône dans une application Windows et comment manipuler la police de votre texte.
 
-1. Créez une C++ application Windows Forms. Pour plus d’informations, consultez [Guide pratique pour Créer des applications](/previous-versions/visualstudio/visual-studio-2008/s69bf10x(v%3dvs.90))Windows Forms. Un fichier *app. ico* est ajouté à votre projet par défaut.
+1. Créez une C++ application Windows Forms. Pour plus d’informations, consultez [Comment : créer des Applications Windows Forms](/previous-versions/visualstudio/visual-studio-2008/s69bf10x(v%3dvs.90)). Un fichier *app. ico* est ajouté à votre projet par défaut.
 
 1. Dans **Explorateur de solutions**, double-cliquez sur le fichier *app. ico*. L' **éditeur d’images** s’ouvre.
 
-1. Accédez à menu**Outils** d' **image** > et sélectionnez **outil texte**.
+1. Accédez à l' **image** de menu > **Outils** et sélectionnez **outil texte**.
 
 1. Dans la boîte de dialogue **outil texte** , *C++* tapez dans la zone de texte vide. Ce texte s’affiche dans une zone redimensionnable située dans l’angle supérieur gauche d' *app. ico* dans l' **éditeur d’images**.
 
@@ -171,7 +168,7 @@ Voici un exemple qui montre comment ajouter du texte à une icône dans une appl
 
    - Sélectionnez **10** dans la liste des tailles de points disponibles répertoriées dans la zone de liste **taille** .
 
-   - Cliquez sur **OK**. La boîte de dialogue police de l' **outil texte** se ferme et les nouveaux paramètres de police s’appliquent à votre texte.
+   - Choisissez **OK**. La boîte de dialogue police de l' **outil texte** se ferme et les nouveaux paramètres de police s’appliquent à votre texte.
 
 1. Choisissez **Fermer** dans la boîte de dialogue **outil texte** . La zone redimensionnable autour de votre texte disparaît de l' **éditeur d’images**.
 
@@ -200,7 +197,7 @@ Par défaut, l' **éditeur d’images** affiche la vue dans le volet gauche à l
 
 1. Sélectionnez le volet de l' **éditeur d’images** dont vous souhaitez modifier le facteur d’agrandissement.
 
-1. Dans la barre d’outils de l' **éditeur d’images** , sélectionnez la flèche à droite de l’outil **loupe** et sélectionnez le facteur d’agrandissement dans le sous-menu : **1x**, **2x**, **6**ou **8x**.
+1. Dans la barre d’outils de l' **éditeur d’images** , sélectionnez la flèche à droite de l’outil **loupe** , puis sélectionnez le facteur d’agrandissement dans le sous-menu : **1x**, **2x**, **6**ou **8x**.
 
    > [!NOTE]
    > Pour sélectionner un facteur d’agrandissement différent de ceux listés dans l’outil **loupe** , utilisez les touches accélérateur.
@@ -209,13 +206,13 @@ Par défaut, l' **éditeur d’images** affiche la vue dans le volet gauche à l
 
 Pour tous les volets de l' **éditeur d’images** dont le facteur d’agrandissement est supérieur ou égal à 4, vous pouvez afficher une grille qui délimite les pixels individuels dans l’image.
 
-1. Accédez au menu**paramètres de grille**de l' **image** > .
+1. Accédez à **image** du menu > paramètres de la **grille**.
 
 1. Activez la case à cocher **grille en pixels** pour afficher la grille, ou désactivez la case à cocher pour masquer la grille.
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
-Aucun.
+None
 
 ## <a name="see-also"></a>Voir aussi
 

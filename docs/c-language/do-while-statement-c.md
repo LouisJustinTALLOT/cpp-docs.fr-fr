@@ -3,16 +3,15 @@ title: do-while, instruction (C)
 ms.date: 11/04/2016
 f1_keywords:
 - do
-- while
 helpviewer_keywords:
 - do-while keyword [C]
 ms.assetid: f2ac20a6-10c7-4a08-b5e3-c3b3639dbeaf
-ms.openlocfilehash: 052b02beca49f5de19c6f68cc475edb5f5daf6e2
-ms.sourcegitcommit: f4be868c0d1d78e550fba105d4d3c993743a1f4b
-ms.translationtype: HT
+ms.openlocfilehash: 3658fe7635ad77db6d6e08ff9d7c30e29d665721
+ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56147501"
+ms.lasthandoff: 03/17/2020
+ms.locfileid: "79438590"
 ---
 # <a name="do-while-statement-c"></a>do-while, instruction (C)
 
@@ -20,7 +19,7 @@ L'instruction *do-while* vous permet de répéter une instruction ou une instruc
 
 ## <a name="syntax"></a>Syntaxe
 
-*iteration-statement*: &nbsp;&nbsp;&nbsp;&nbsp;**do**  *statement*  **while (**  *expression*  **) ;**
+*Iteration-Statement*: &nbsp;&nbsp;&nbsp;&nbsp;instruction **do***statement***while (** *expression* **);**
 
 L'élément *expression* dans une instruction *do-while* est évalué après l'exécution du corps de la boucle. Par conséquent, le corps de la boucle est toujours exécuté au moins une fois.
 

@@ -3,12 +3,12 @@ title: Déployer, exécuter et déboguer votre projet Linux C++ dans Visual Stu
 description: Décrit comment compiler, exécuter et déboguer du code sur la cible distante au sein d’un projet Linux C++ dans Visual Studio.
 ms.date: 06/07/2019
 ms.assetid: f7084cdb-17b1-4960-b522-f84981bea879
-ms.openlocfilehash: 70770385bde859d47532b130463a1cc54e32a570
-ms.sourcegitcommit: fde637f823494532314790602c2819f889706ff6
-ms.translationtype: HT
+ms.openlocfilehash: 183554814ef48a93c11d782a89e04c43fcce5e9f
+ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/13/2019
-ms.locfileid: "67042762"
+ms.lasthandoff: 03/17/2020
+ms.locfileid: "79441660"
 ---
 # <a name="deploy-run-and-debug-your-linux-project"></a>Déployer, exécuter et déboguer un projet Linux
 
@@ -135,7 +135,7 @@ Dans Visual Studio 2019 version 16.1, vous pouvez séparer votre machine de buil
 
 ### <a name="msbuild-based-projects"></a>Projets MSBuild
 
-Par défaut, la machine de débogage distante est identique à celle de build distante (**Propriétés de configuration** > **Général** > **Machine de build distante**). Pour spécifier une nouvelle machine de débogage à distance, cliquez sur le projet dans **l’Explorateur de solutions** et accédez à **Propriétés de configuration** > **Débogage**  >  **Machine de débogage distante**.  
+Par défaut, la machine de débogage distante est identique à celle de build distante (**Propriétés de configuration** > **Général** > **Machine de build distante**). Pour spécifier une nouvelle machine de débogage à distance, cliquez sur le projet dans **l’Explorateur de solutions** et accédez à **Propriétés de configuration** > **Débogage** > **Machine de débogage distante**.  
 
 ![Machine de débogage Linux distante](media/linux-remote-debug-machine.png)
 
@@ -191,11 +191,12 @@ Si vous souhaitez avoir le contrôle total sur votre déploiement, vous pouvez a
 ]
 
 ```
+
 ::: moniker-end
 
 ## <a name="next-steps"></a>Étapes suivantes
 
-- Pour déboguer des appareils ARM sur Linux, consultez ce billet de blog : [Debugging an embedded ARM device in Visual Studio](https://blogs.msdn.microsoft.com/vcblog/2018/01/10/debugging-an-embedded-arm-device-in-visual-studio/).
+- Pour déboguer les appareils ARM sur Linux, consultez ce billet de blog : [Debugging an embedded ARM device in Visual Studio](https://blogs.msdn.microsoft.com/vcblog/2018/01/10/debugging-an-embedded-arm-device-in-visual-studio/).
 
 ## <a name="see-also"></a>Voir aussi
 

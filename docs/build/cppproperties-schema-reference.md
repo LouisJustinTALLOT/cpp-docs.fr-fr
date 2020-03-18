@@ -3,12 +3,12 @@ title: Informations de référence sur CppProperties. JSON
 ms.date: 08/09/2019
 helpviewer_keywords:
 - CppProperties.json file [C++]
-ms.openlocfilehash: d59fca412a26d08f88ccbda20a2c0444cf33b1cb
-ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
-ms.translationtype: HT
+ms.openlocfilehash: c276b566d8efc116c8789fd7ebec17dc2017a00d
+ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/16/2020
-ms.locfileid: "79417368"
+ms.lasthandoff: 03/17/2020
+ms.locfileid: "79442555"
 ---
 # <a name="cpppropertiesjson-reference"></a>Informations de référence sur CppProperties. JSON
 
@@ -28,7 +28,7 @@ Une configuration peut avoir l’une des propriétés suivantes :
 |`forcedInclude`|En-tête à inclure automatiquement dans chaque unité de compilation (correspond à /FI dans MSVC ou -include dans clang)|
 |`undefines`|Liste des macros non définies (correspond à /U dans MSVC)|
 |`intelliSenseMode`|Moteur IntelliSense à utiliser Vous pouvez spécifier l’une des variantes prédéfinies spécifiques à l’architecture pour MSVC, GCC ou Clang.|
-|`environments`|Ensembles de variables définis par l’utilisateur qui se comportent comme des variables d’environnement dans une invite de commandes et sont accessibles avec le $ {env.<VARIABLE>} macrovirus.|
+|`environments`|Des ensembles de variables définis par l’utilisateur qui se comportent comme des variables d’environnement dans une invite de commandes et sont accessibles à l’aide de la macro $ {env.\<VARIABLE >}.|
 
 ### <a name="intellisensemode-values"></a>valeurs intelliSenseMode
 

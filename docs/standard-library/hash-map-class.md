@@ -88,17 +88,17 @@ helpviewer_keywords:
 - stdext::hash_map::upper_bound
 - stdext::hash_map::value_comp
 ms.assetid: 40879dfc-51ba-4a59-9f9e-26208de568a8
-ms.openlocfilehash: e993b694e03c83ef2b2bc96ecefc2d37e48f7747
-ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
-ms.translationtype: HT
+ms.openlocfilehash: 4e13402fbff40ff810e71f78f43060cb59f03cd9
+ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/16/2020
-ms.locfileid: "79419027"
+ms.lasthandoff: 03/17/2020
+ms.locfileid: "79441630"
 ---
 # <a name="hash_map-class"></a>hash_map, classe
 
 > [!NOTE]
-> Cette API est obsolète. L’alternative est [unordered_map, classe](../standard-library/unordered-map-class.md).
+> Cette API méthode est obsolète. L’alternative est [unordered_map, classe](../standard-library/unordered-map-class.md).
 
 Stocke et récupère des données rapidement auprès d’une collection dans laquelle chaque élément est une paire qui a une clé de tri dont la valeur est unique et une valeur de données associée.
 
@@ -124,7 +124,7 @@ Type de données de l'élément à stocker dans l'objet hash_map.
 Type qui inclut les deux objets de fonction, une de comparaison de classes capable de comparer deux valeurs d'éléments comme clés de tri pour déterminer leur ordre relatif, et une fonction de hachage qui est un prédicat unaire qui mappe les valeurs de clé des éléments à des entiers non signés de type `size_t`. Cet argument est facultatif, et hash_compare <`Key`, moins <`Key`> > est la valeur par défaut.
 
 \ *Allocator*
-Type qui représente l'objet allocateur stocké qui encapsule des informations détaillées sur l'allocation et la désallocation de mémoire de la classe hash_map. Cet argument est facultatif et la valeur par défaut est allocator<pair <const `Key`, `Type`>>.
+Type qui représente l'objet allocateur stocké qui encapsule des informations détaillées sur l'allocation et la désallocation de mémoire de la classe hash_map. Cet argument est facultatif et la valeur par défaut est Allocator\<paire < const `Key`, `Type`> >.
 
 ## <a name="remarks"></a>Notes
 
@@ -229,7 +229,7 @@ L’itérateur fourni par la classe hash_map est un itérateur bidirectionnel. T
 ## <a name="allocator_type"></a>  hash_map::allocator_type
 
 > [!NOTE]
-> Cette API est obsolète. L’alternative est [unordered_map, classe](../standard-library/unordered-map-class.md).
+> Cette API méthode est obsolète. L’alternative est [unordered_map, classe](../standard-library/unordered-map-class.md).
 
 Type représentant la classe allocator pour l’objet hash_map.
 
@@ -244,7 +244,7 @@ Consultez l’exemple de [get_allocator](#get_allocator) pour obtenir un exemple
 ## <a name="at"></a>  hash_map::at
 
 > [!NOTE]
-> Cette API est obsolète. L’alternative est [unordered_map, classe](../standard-library/unordered-map-class.md).
+> Cette API méthode est obsolète. L’alternative est [unordered_map, classe](../standard-library/unordered-map-class.md).
 
 Recherche un élément dans un hash_map avec une valeur de clé spécifiée.
 
@@ -298,7 +298,7 @@ int main( )
 ## <a name="begin"></a>  hash_map::begin
 
 > [!NOTE]
-> Cette API est obsolète. L’alternative est [unordered_map, classe](../standard-library/unordered-map-class.md).
+> Cette API méthode est obsolète. L’alternative est [unordered_map, classe](../standard-library/unordered-map-class.md).
 
 Retourne un itérateur qui traite le premier élément du hash_map.
 
@@ -359,7 +359,7 @@ The first element of hm1 is now 1.
 ## <a name="cbegin"></a>  hash_map::cbegin
 
 > [!NOTE]
-> Cette API est obsolète. L’alternative est [unordered_map, classe](../standard-library/unordered-map-class.md).
+> Cette API méthode est obsolète. L’alternative est [unordered_map, classe](../standard-library/unordered-map-class.md).
 
 Retourne un itérateur const qui traite le premier élément du hash_map.
 
@@ -403,7 +403,7 @@ The first element of hm1 is 2.
 ## <a name="cend"></a>  hash_map::cend
 
 > [!NOTE]
-> Cette API est obsolète. L’alternative est [unordered_map, classe](../standard-library/unordered-map-class.md).
+> Cette API méthode est obsolète. L’alternative est [unordered_map, classe](../standard-library/unordered-map-class.md).
 
 Retourne un itérateur const qui traite l’emplacement situé après le dernier élément d’un hash_map.
 
@@ -454,7 +454,7 @@ The value of last element of hm1 is 30.
 ## <a name="clear"></a>  hash_map::clear
 
 > [!NOTE]
-> Cette API est obsolète. L’alternative est [unordered_map, classe](../standard-library/unordered-map-class.md).
+> Cette API méthode est obsolète. L’alternative est [unordered_map, classe](../standard-library/unordered-map-class.md).
 
 Efface tous les éléments d'un hash_map.
 
@@ -504,7 +504,7 @@ The size of the hash_map after clearing is 0.
 ## <a name="const_iterator"></a>  hash_map::const_iterator
 
 > [!NOTE]
-> Cette API est obsolète. L’alternative est [unordered_map, classe](../standard-library/unordered-map-class.md).
+> Cette API méthode est obsolète. L’alternative est [unordered_map, classe](../standard-library/unordered-map-class.md).
 
 Type qui fournit un itérateur bidirectionnel capable de lire un élément **const** dans le hash_map.
 
@@ -529,7 +529,7 @@ Consultez l’exemple de [begin](#begin) pour obtenir un exemple qui utilise `co
 ## <a name="const_pointer"></a>  hash_map::const_pointer
 
 > [!NOTE]
-> Cette API est obsolète. L’alternative est [unordered_map, classe](../standard-library/unordered-map-class.md).
+> Cette API méthode est obsolète. L’alternative est [unordered_map, classe](../standard-library/unordered-map-class.md).
 
 Type qui fournit un pointeur vers un élément **const** dans un hash_map.
 
@@ -546,7 +546,7 @@ Dans la plupart des cas, vous devez utiliser un [iterator](#iterator) pour accé
 ## <a name="const_reference"></a>  hash_map::const_reference
 
 > [!NOTE]
-> Cette API est obsolète. L’alternative est [unordered_map, classe](../standard-library/unordered-map-class.md).
+> Cette API méthode est obsolète. L’alternative est [unordered_map, classe](../standard-library/unordered-map-class.md).
 
 Type qui fournit une référence à un élément **const** stocké dans un hash_map pour la lecture et l’exécution d’opérations **const**.
 
@@ -602,7 +602,7 @@ The data value of the first element in the hash_map is 10.
 ## <a name="const_reverse_iterator"></a>  hash_map::const_reverse_iterator
 
 > [!NOTE]
-> Cette API est obsolète. L’alternative est [unordered_map, classe](../standard-library/unordered-map-class.md).
+> Cette API méthode est obsolète. L’alternative est [unordered_map, classe](../standard-library/unordered-map-class.md).
 
 Type qui fournit un itérateur bidirectionnel capable de lire tout élément **const** dans le hash_map.
 
@@ -627,7 +627,7 @@ Pour savoir comment déclarer et utiliser [, consultez l’exemple ](#rend)rend`
 ## <a name="count"></a>  hash_map::count
 
 > [!NOTE]
-> Cette API est obsolète. L’alternative est [unordered_map, classe](../standard-library/unordered-map-class.md).
+> Cette API méthode est obsolète. L’alternative est [unordered_map, classe](../standard-library/unordered-map-class.md).
 
 Retourne le nombre d'éléments d'un hash_map dont la clé correspond à une clé spécifiée par un paramètre.
 
@@ -699,7 +699,7 @@ The number of elements in hm1 with a sort key of 3 is: 0.
 ## <a name="crbegin"></a>  hash_map::crbegin
 
 > [!NOTE]
-> Cette API est obsolète. L’alternative est [unordered_map, classe](../standard-library/unordered-map-class.md).
+> Cette API méthode est obsolète. L’alternative est [unordered_map, classe](../standard-library/unordered-map-class.md).
 
 Retourne un itérateur const qui traite le premier élément d’un hash_map inversé.
 
@@ -751,7 +751,7 @@ The first element of the reversed hash_map hm1 is 3.
 ## <a name="crend"></a>  hash_map::crend
 
 > [!NOTE]
-> Cette API est obsolète. L’alternative est [unordered_map, classe](../standard-library/unordered-map-class.md).
+> Cette API méthode est obsolète. L’alternative est [unordered_map, classe](../standard-library/unordered-map-class.md).
 
 Retourne un itérateur const qui traite l’emplacement qui suit le dernier élément d’un hash_map inversé.
 
@@ -806,7 +806,7 @@ The last element of the reversed hash_map hm1 is 3.
 ## <a name="difference_type"></a>  hash_map::difference_type
 
 > [!NOTE]
-> Cette API est obsolète. L’alternative est [unordered_map, classe](../standard-library/unordered-map-class.md).
+> Cette API méthode est obsolète. L’alternative est [unordered_map, classe](../standard-library/unordered-map-class.md).
 
 Type entier signé qui peut être utilisé pour représenter le nombre d’éléments d’un hash_map au sein d’une plage, parmi les éléments pointés par les itérateurs.
 
@@ -876,7 +876,7 @@ The values of the mapped elements are: 10 20 20.
 ## <a name="emplace"></a>  hash_map::emplace
 
 > [!NOTE]
-> Cette API est obsolète. L’alternative est [unordered_map, classe](../standard-library/unordered-map-class.md).
+> Cette API méthode est obsolète. L’alternative est [unordered_map, classe](../standard-library/unordered-map-class.md).
 
 Insère un élément construit sur place dans un hash_map.
 
@@ -935,7 +935,7 @@ After the emplace insertion, hm1 contains:
 ## <a name="emplace_hint"></a>  hash_map::emplace_hint
 
 > [!NOTE]
-> Cette API est obsolète. L’alternative est [unordered_map, classe](../standard-library/unordered-map-class.md).
+> Cette API méthode est obsolète. L’alternative est [unordered_map, classe](../standard-library/unordered-map-class.md).
 
 Insère un élément construit sur place dans un hash_map, avec un indicateur de positionnement.
 
@@ -995,7 +995,7 @@ After the emplace insertion, hm1 contains:
 ## <a name="empty"></a>  hash_map::empty
 
 > [!NOTE]
-> Cette API est obsolète. L’alternative est [unordered_map, classe](../standard-library/unordered-map-class.md).
+> Cette API méthode est obsolète. L’alternative est [unordered_map, classe](../standard-library/unordered-map-class.md).
 
 Teste si un hash_map est vide.
 
@@ -1046,7 +1046,7 @@ The hash_map hm2 is empty.
 ## <a name="end"></a>  hash_map::end
 
 > [!NOTE]
-> Cette API est obsolète. L’alternative est [unordered_map, classe](../standard-library/unordered-map-class.md).
+> Cette API méthode est obsolète. L’alternative est [unordered_map, classe](../standard-library/unordered-map-class.md).
 
 Retourne un itérateur qui traite l’emplacement suivant le dernier élément du hash_map.
 
@@ -1117,7 +1117,7 @@ The value of last element of hm1 is now 20.
 ## <a name="equal_range"></a>  hash_map::equal_range
 
 > [!NOTE]
-> Cette API est obsolète. L’alternative est [unordered_map, classe](../standard-library/unordered-map-class.md).
+> Cette API méthode est obsolète. L’alternative est [unordered_map, classe](../standard-library/unordered-map-class.md).
 
 Retourne une paire d’itérateurs, respectivement au premier élément d’un hash_map ayant une clé supérieure à celle spécifiée et au premier élément d’un hash_map ayant une clé supérieure ou égale à la clé spécifiée.
 
@@ -1204,7 +1204,7 @@ The hash_map hm1 doesn't have an element with a key less than 40.
 ## <a name="erase"></a>  hash_map::erase
 
 > [!NOTE]
-> Cette API est obsolète. L’alternative est [unordered_map, classe](../standard-library/unordered-map-class.md).
+> Cette API méthode est obsolète. L’alternative est [unordered_map, classe](../standard-library/unordered-map-class.md).
 
 Supprime d'un emplacement spécifié un élément ou une plage d'éléments compris dans un hash_map ou supprime les éléments qui correspondent à une clé spécifiée.
 
@@ -1328,7 +1328,7 @@ of the 2nd element is deleted, the hash_map hm3 is: 0 3.
 ## <a name="find"></a>  hash_map::find
 
 > [!NOTE]
-> Cette API est obsolète. L’alternative est [unordered_map, classe](../standard-library/unordered-map-class.md).
+> Cette API méthode est obsolète. L’alternative est [unordered_map, classe](../standard-library/unordered-map-class.md).
 
 Retourne un itérateur qui traite le premier emplacement d’un élément d’un hash_map ayant une clé équivalente à une clé spécifiée.
 
@@ -1407,7 +1407,7 @@ The element of hm1 with a key matching that of the last element is: 30.
 ## <a name="get_allocator"></a>  hash_map::get_allocator
 
 > [!NOTE]
-> Cette API est obsolète. L’alternative est [unordered_map, classe](../standard-library/unordered-map-class.md).
+> Cette API méthode est obsolète. L’alternative est [unordered_map, classe](../standard-library/unordered-map-class.md).
 
 Retourne une copie de l’objet allocateur utilisé pour construire le hash_map.
 
@@ -1483,7 +1483,7 @@ int main( )
 ## <a name="hash_map"></a>  hash_map::hash_map
 
 > [!NOTE]
-> Cette API est obsolète. L’alternative est [unordered_map, classe](../standard-library/unordered-map-class.md).
+> Cette API méthode est obsolète. L’alternative est [unordered_map, classe](../standard-library/unordered-map-class.md).
 
 Construit un hash_map vide ou une copie de l’ensemble ou d’une partie d’un autre hash_map.
 
@@ -1561,7 +1561,7 @@ Le dernier constructeur déplace le hash_map *droit*.
 ## <a name="insert"></a>  hash_map::insert
 
 > [!NOTE]
-> Cette API est obsolète. L’alternative est [unordered_map, classe](../standard-library/unordered-map-class.md).
+> Cette API méthode est obsolète. L’alternative est [unordered_map, classe](../standard-library/unordered-map-class.md).
 
 Insère un élément ou une plage d’éléments dans un hash_map.
 
@@ -1727,7 +1727,7 @@ After the move insertion, hm4 contains:
 ## <a name="iterator"></a>  hash_map::iterator
 
 > [!NOTE]
-> Cette API est obsolète. L’alternative est [unordered_map, classe](../standard-library/unordered-map-class.md).
+> Cette API méthode est obsolète. L’alternative est [unordered_map, classe](../standard-library/unordered-map-class.md).
 
 Type qui fournit un itérateur bidirectionnel capable de lire ou de modifier tout élément d’un hash_map.
 
@@ -1752,7 +1752,7 @@ Consultez l’exemple de [Begin](#begin) pour obtenir un exemple de la façon de
 ## <a name="key_comp"></a>  hash_map::key_comp
 
 > [!NOTE]
-> Cette API est obsolète. L’alternative est [unordered_map, classe](../standard-library/unordered-map-class.md).
+> Cette API méthode est obsolète. L’alternative est [unordered_map, classe](../standard-library/unordered-map-class.md).
 
 Récupère une copie de l’objet de comparaison utilisé pour trier les clés dans un hash_map.
 
@@ -1828,7 +1828,7 @@ int main( )
 ## <a name="key_compare"></a>  hash_map::key_compare
 
 > [!NOTE]
-> Cette API est obsolète. L’alternative est [unordered_map, classe](../standard-library/unordered-map-class.md).
+> Cette API méthode est obsolète. L’alternative est [unordered_map, classe](../standard-library/unordered-map-class.md).
 
 Type qui fournit un objet de fonction pouvant comparer deux clés de tri pour déterminer l’ordre relatif de deux éléments dans la classe map.
 
@@ -1849,7 +1849,7 @@ Pour découvrir comment déclarer et utiliser [, consultez l’exemple relatif �
 ## <a name="key_type"></a>  hash_map::key_type
 
 > [!NOTE]
-> Cette API est obsolète. L’alternative est [unordered_map, classe](../standard-library/unordered-map-class.md).
+> Cette API méthode est obsolète. L’alternative est [unordered_map, classe](../standard-library/unordered-map-class.md).
 
 Type qui décrit l’objet de clé de tri qui constitue chaque élément du hash_map.
 
@@ -1870,7 +1870,7 @@ Pour découvrir comment déclarer et utiliser [, consultez l’exemple relatif �
 ## <a name="lower_bound"></a>  hash_map::lower_bound
 
 > [!NOTE]
-> Cette API est obsolète. L’alternative est [unordered_map, classe](../standard-library/unordered-map-class.md).
+> Cette API méthode est obsolète. L’alternative est [unordered_map, classe](../standard-library/unordered-map-class.md).
 
 Retourne un itérateur pointant vers le premier élément d’un hash_map qui a une valeur de clé supérieure ou égale à celle d’une clé spécifiée.
 
@@ -1947,7 +1947,7 @@ The element of hm1 with a key matching that of the last element is: 30.
 ## <a name="mapped_type"></a>  hash_map::mapped_type
 
 > [!NOTE]
-> Cette API est obsolète. L’alternative est [unordered_map, classe](../standard-library/unordered-map-class.md).
+> Cette API méthode est obsolète. L’alternative est [unordered_map, classe](../standard-library/unordered-map-class.md).
 
 Type qui représente le type de données stockées dans un hash_map.
 
@@ -1968,7 +1968,7 @@ Pour découvrir comment déclarer et utiliser [, consultez l’exemple relatif �
 ## <a name="max_size"></a>  hash_map::max_size
 
 > [!NOTE]
-> Cette API est obsolète. L’alternative est [unordered_map, classe](../standard-library/unordered-map-class.md).
+> Cette API méthode est obsolète. L’alternative est [unordered_map, classe](../standard-library/unordered-map-class.md).
 
 Retourne la longueur maximale du hash_map.
 
@@ -2007,7 +2007,7 @@ int main( )
 ## <a name="op_at"></a>  hash_map::operator[]
 
 > [!NOTE]
-> Cette API est obsolète. L’alternative est [unordered_map, classe](../standard-library/unordered-map-class.md).
+> Cette API méthode est obsolète. L’alternative est [unordered_map, classe](../standard-library/unordered-map-class.md).
 
 Insère un élément dans un objet `hash_map` avec une valeur de clé spécifiée.
 
@@ -2104,7 +2104,7 @@ int main( )
 ## <a name="op_eq"></a>  hash_map::operator=
 
 > [!NOTE]
-> Cette API est obsolète. L’alternative est [unordered_map, classe](../standard-library/unordered-map-class.md).
+> Cette API méthode est obsolète. L’alternative est [unordered_map, classe](../standard-library/unordered-map-class.md).
 
 Remplace les éléments du hash_map par une copie d’un autre hash_map.
 
@@ -2165,7 +2165,7 @@ int main( )
 ## <a name="pointer"></a>  hash_map::pointer
 
 > [!NOTE]
-> Cette API est obsolète. L’alternative est [unordered_map, classe](../standard-library/unordered-map-class.md).
+> Cette API méthode est obsolète. L’alternative est [unordered_map, classe](../standard-library/unordered-map-class.md).
 
 Type qui fournit un pointeur vers un élément d’un hash_map.
 
@@ -2182,7 +2182,7 @@ Dans la plupart des cas, vous devez utiliser un [iterator](#iterator) pour accé
 ## <a name="rbegin"></a>  hash_map::rbegin
 
 > [!NOTE]
-> Cette API est obsolète. L’alternative est [unordered_map, classe](../standard-library/unordered-map-class.md).
+> Cette API méthode est obsolète. L’alternative est [unordered_map, classe](../standard-library/unordered-map-class.md).
 
 Retourne un itérateur traitant le premier élément d’un hash_map inversé.
 
@@ -2266,7 +2266,7 @@ After the erasure, the first element in the reversed hash_map is 2.
 ## <a name="reference"></a>  hash_map::reference
 
 > [!NOTE]
-> Cette API est obsolète. L’alternative est [unordered_map, classe](../standard-library/unordered-map-class.md).
+> Cette API méthode est obsolète. L’alternative est [unordered_map, classe](../standard-library/unordered-map-class.md).
 
 Type qui fournit une référence à un élément stocké dans un hash_map.
 
@@ -2329,7 +2329,7 @@ The modified data value of first element is 15.
 ## <a name="rend"></a>  hash_map::rend
 
 > [!NOTE]
-> Cette API est obsolète. L’alternative est [unordered_map, classe](../standard-library/unordered-map-class.md).
+> Cette API méthode est obsolète. L’alternative est [unordered_map, classe](../standard-library/unordered-map-class.md).
 
 Retourne un itérateur qui traite l’emplacement suivant le dernier élément d’un hash_map inversé.
 
@@ -2419,7 +2419,7 @@ After the erasure, the last element in the reversed hash_map is 2.
 ## <a name="reverse_iterator"></a>  hash_map::reverse_iterator
 
 > [!NOTE]
-> Cette API est obsolète. L’alternative est [unordered_map, classe](../standard-library/unordered-map-class.md).
+> Cette API méthode est obsolète. L’alternative est [unordered_map, classe](../standard-library/unordered-map-class.md).
 
 Type qui fournit un itérateur bidirectionnel capable de lire ou de modifier tout élément d’un hash_map inversé.
 
@@ -2444,7 +2444,7 @@ Pour découvrir comment déclarer et utiliser [, consultez l’exemple relatif �
 ## <a name="size"></a>  hash_map::size
 
 > [!NOTE]
-> Cette API est obsolète. L’alternative est [unordered_map, classe](../standard-library/unordered-map-class.md).
+> Cette API méthode est obsolète. L’alternative est [unordered_map, classe](../standard-library/unordered-map-class.md).
 
 Retourne le nombre d'éléments figurant dans le hash_map.
 
@@ -2494,7 +2494,7 @@ The hash_map length is now 2.
 ## <a name="size_type"></a>  hash_map::size_type
 
 > [!NOTE]
-> Cette API est obsolète. L’alternative est [unordered_map, classe](../standard-library/unordered-map-class.md).
+> Cette API méthode est obsolète. L’alternative est [unordered_map, classe](../standard-library/unordered-map-class.md).
 
 Type entier non signé qui peut représenter le nombre d’éléments d’un hash_map.
 
@@ -2511,7 +2511,7 @@ Pour découvrir comment déclarer et utiliser [, consultez l’exemple relatif �
 ## <a name="swap"></a>  hash_map::swap
 
 > [!NOTE]
-> Cette API est obsolète. L’alternative est [unordered_map, classe](../standard-library/unordered-map-class.md).
+> Cette API méthode est obsolète. L’alternative est [unordered_map, classe](../standard-library/unordered-map-class.md).
 
 Échange les éléments de deux hash_maps.
 
@@ -2585,7 +2585,7 @@ After swapping with hm3, hash_map hm1 is: 300.
 ## <a name="upper_bound"></a>  hash_map::upper_bound
 
 > [!NOTE]
-> Cette API est obsolète. L’alternative est [unordered_map, classe](../standard-library/unordered-map-class.md).
+> Cette API méthode est obsolète. L’alternative est [unordered_map, classe](../standard-library/unordered-map-class.md).
 
 Retourne un itérateur pointant vers le premier élément d’un hash_map qui a une valeur de clé supérieure à celle d’une clé spécifiée.
 
@@ -2663,7 +2663,7 @@ of the initial element of hm1 is: 20.
 ## <a name="value_comp"></a>  hash_map::value_comp
 
 > [!NOTE]
-> Cette API est obsolète. L’alternative est [unordered_map, classe](../standard-library/unordered-map-class.md).
+> Cette API méthode est obsolète. L’alternative est [unordered_map, classe](../standard-library/unordered-map-class.md).
 
 Retourne un objet de fonction qui détermine l’ordre des éléments d’un hash_map en comparant leurs valeurs de clés.
 
@@ -2731,7 +2731,7 @@ int main( )
 ## <a name="value_type"></a>  hash_map::value_type
 
 > [!NOTE]
-> Cette API est obsolète. L’alternative est [unordered_map, classe](../standard-library/unordered-map-class.md).
+> Cette API méthode est obsolète. L’alternative est [unordered_map, classe](../standard-library/unordered-map-class.md).
 
 Type qui représente le type d’objet stocké dans un hash_map.
 

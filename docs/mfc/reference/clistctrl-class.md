@@ -264,12 +264,12 @@ helpviewer_keywords:
 - CListCtrl [MFC], SubItemHitTest
 - CListCtrl [MFC], Update
 ms.assetid: fe08a1ca-4b05-4ff7-a12a-ee4c765a2197
-ms.openlocfilehash: c8f1b8a9ed0ca8437ba40e77b47448d1bb209d20
-ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
-ms.translationtype: HT
+ms.openlocfilehash: 83d7c0223e2ca4a40560e29932beca1f17f74f80
+ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/16/2020
-ms.locfileid: "79418677"
+ms.lasthandoff: 03/17/2020
+ms.locfileid: "79442680"
 ---
 # <a name="clistctrl-class"></a>CListCtrl (classe)
 
@@ -502,7 +502,7 @@ Les icônes, les images d’élément d’en-tête et les États définis par l�
 
 Par défaut, un contrôle List View détruit les listes d’images qui lui sont assignées lorsqu’il est détruit ; Toutefois, le développeur peut personnaliser ce comportement en détruisant chaque liste d’images lorsqu’elle n’est plus utilisée, comme déterminé par l’application. Pour plus d’informations, consultez [utilisation de CListCtrl : éléments de liste et listes d’images](../list-items-and-image-lists.md).
 
-## <a name="inheritance-hierarchy"></a>Hiérarchie d’héritage
+## <a name="inheritance-hierarchy"></a>Hiérarchie d'héritage
 
 [CObject](cobject-class.md)
 
@@ -1381,6 +1381,7 @@ public:
 ### <a name="example"></a>Exemple
 
 L’exemple de code suivant illustre la méthode `GetGroupInfoByIndex`. Dans une section précédente de cet exemple de code, nous avons créé un contrôle List-View qui affiche deux colonnes intitulées « ClientID » et « grade » dans une vue rapport. L’exemple de code suivant récupère des informations sur le groupe dont l’index est 0, si ce groupe existe.
+
 ```cpp
     // GetGroupInfoByIndex
     const int GROUP_HEADER_BUFFER_SIZE = 40;
@@ -1457,6 +1458,7 @@ Cette méthode envoie le message [LVM_GETGROUPRECT](/windows/win32/Controls/lvm-
 ### <a name="example"></a>Exemple
 
 L’exemple de code suivant définit une variable, `m_listCtrl`, qui est utilisée pour accéder au contrôle List-View actuel. Cette variable est utilisée dans l'exemple suivant.
+
 ```cpp
 public:
     // Variable used to access the list control.
@@ -4240,6 +4242,7 @@ int CALLBACK CompareFunc(LPARAM lParam1,
     LPARAM lParam2,
     LPARAM lParamSort);
 ```
+
 La fonction de comparaison doit retourner une valeur négative si le premier élément doit précéder le deuxième, une valeur positive si le premier élément doit suivre le deuxième, ou zéro si les deux éléments sont égaux.
 
 Le paramètre *lParam1* est la valeur 32 bits associée au premier élément qui est comparé, tandis que le paramètre *lParam2* est la valeur associée au deuxième élément. Il s’agit des valeurs qui ont été spécifiées dans le membre *lParam* de la structure [LVITEM](/windows/win32/api/commctrl/ns-commctrl-lvitemw) des éléments quand elles ont été insérées dans la liste. Le paramètre *lParamSort* est identique à la valeur *dwData* .
@@ -4300,6 +4303,7 @@ int CALLBACK CompareFunc(LPARAM lParam1,
     LPARAM lParam2,
     LPARAM lParamSort);
 ```
+
 Ce message est semblable à [LVM_SORTITEMS](/windows/win32/Controls/lvm-sortitems), à l’exception du type d’informations passé à la fonction de comparaison. Dans [LVM_SORTITEMS](/windows/win32/Controls/lvm-sortitems), *lParam1* et *lParam2* sont les valeurs des éléments à comparer. Dans [LVM_SORTITEMSEX](/windows/win32/Controls/lvm-sortitemsex), *lParam1* est l’index actuel du premier élément à comparer et *lParam2* est l’index actuel du deuxième élément. Vous pouvez envoyer un message [LVM_GETITEMTEXT](/windows/win32/Controls/lvm-getitemtext) pour récupérer des informations supplémentaires sur un élément.
 
 La fonction de comparaison doit retourner une valeur négative si le premier élément doit précéder le deuxième, une valeur positive si le premier élément doit suivre le deuxième, ou zéro si les deux éléments sont égaux.

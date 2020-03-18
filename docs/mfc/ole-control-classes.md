@@ -1,8 +1,6 @@
 ---
 title: Classes de contrôle OLE
 ms.date: 11/04/2016
-f1_keywords:
-- vc.classes.ole
 helpviewer_keywords:
 - ActiveX classes [MFC]
 - custom controls [MFC], classes
@@ -12,16 +10,16 @@ helpviewer_keywords:
 - OLE control classes [MFC]
 - reusable component classes [MFC]
 ms.assetid: 96495ec3-319e-4163-b839-1af0428ed9dd
-ms.openlocfilehash: 86470c3e3e66d6aee2ce532570cea096641d2c1d
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 47c28520d592c4bd49ab6cb40edbb2f5ddf59846
+ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62186086"
+ms.lasthandoff: 03/17/2020
+ms.locfileid: "79447649"
 ---
 # <a name="ole-control-classes"></a>Classes de contrôle OLE
 
-Voici les principales classes que vous utilisez lorsque vous entrez des contrôles OLE. Le `COleControlModule` classe dans un module de contrôle OLE s’apparente à la [CWinApp](../mfc/reference/cwinapp-class.md) classe dans une application. Chaque module implémente un ou plusieurs contrôles OLE ; ces contrôles sont représentés par des objets `COleControl`. Ces contrôles communiquent avec leurs conteneurs à l'aide des objets `CConnectionPoint`.
+Voici les principales classes que vous utilisez lorsque vous entrez des contrôles OLE. La classe `COleControlModule` dans un module de contrôle OLE est semblable à la classe [CWinApp](../mfc/reference/cwinapp-class.md) dans une application. Chaque module implémente un ou plusieurs contrôles OLE ; ces contrôles sont représentés par des objets `COleControl`. Ces contrôles communiquent avec leurs conteneurs à l'aide des objets `CConnectionPoint`.
 
 Les classes `CPictureHolder` et `CFontHolder` encapsulent les interfaces COM pour les images et les polices, tandis que les classes `COlePropertyPage` et `CPropExchange` vous aident à implémenter les pages de propriétés et la persistance de propriété de votre contrôle.
 

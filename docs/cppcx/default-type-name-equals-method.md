@@ -1,19 +1,17 @@
 ---
 title: default::(type_name)::Equals, méthode
 ms.date: 12/30/2016
-f1_keywords:
-- VCCORLIB/Platform::Object::Equals
 ms.assetid: 4450f835-06fc-4758-8d0a-72cf00007873
-ms.openlocfilehash: ef34e50e6561481eafd7de635bdbcc1b6cd4c8b4
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 57143da18e98ed2d034343726ac96a92b4d1b23c
+ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62389383"
+ms.lasthandoff: 03/17/2020
+ms.locfileid: "79444328"
 ---
-# <a name="defaulttypenameequals-method"></a>default::(type_name)::Equals, méthode
+# <a name="defaulttype_nameequals-method"></a>default::(type_name)::Equals, méthode
 
-Détermine si l'objet spécifié est identique à l'objet actuel.
+Détermine si l'objet spécifié est égal à l'objet actuel.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -32,11 +30,11 @@ Objet à comparer.
 
 **true** si les objets sont égaux, sinon **false**.
 
-### <a name="requirements"></a>Configuration requise
+### <a name="requirements"></a>Spécifications
 
-**Prise en charge minimale du client :** Windows 8
+**Client minimal pris en charge :** Windows 8
 
-**Serveur pris en charge minimale :** Windows Server 2012
+**Serveur minimal pris en charge :** Windows Server 2012
 
 **Espace de noms** : par défaut
 

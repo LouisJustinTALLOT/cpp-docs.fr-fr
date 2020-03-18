@@ -3,11 +3,6 @@ title: '&lt;filesystem&gt;'
 description: Décrit les classes, les fonctions et les types dans l’en-tête filesystem C++ de la bibliothèque standard.
 ms.date: 01/22/2020
 f1_keywords:
-- filesystem/std::experimental::filesystem::directory_entry
-- filesystem/std::experimental::filesystem::recursive_directory_iterator
-- filesystem/std::experimental::filesystem::path
-- filesystem/std::experimental::filesystem::filesystem_error
-- filesystem/std::experimental::filesystem::directory_iterator
 - <filesystem>
 ms.assetid: 5005753b-46fa-43e1-8d4e-1b38617d3cfd
 no-loc:
@@ -17,12 +12,12 @@ no-loc:
 - wchar_t
 - char16_t
 - char32_t
-ms.openlocfilehash: dbe6dc89d5460a08ffafd86aa3fcd01222c82166
-ms.sourcegitcommit: b67b08472b6f1ee8f1c5684bba7056d3e0fc745f
+ms.openlocfilehash: f9e384953a4e675ad6235a274c447031976a1585
+ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/24/2020
-ms.locfileid: "76725680"
+ms.lasthandoff: 03/17/2020
+ms.locfileid: "79441710"
 ---
 # &lt;filesystem&gt;
 
@@ -98,7 +93,7 @@ Enfin, `path` objets ont une fonctionnalité importante : vous pouvez les utili
 
 Pour plus d’informations et d’exemples de code, consultez [navigationC++dans le système de fichiers ()](../standard-library/file-system-navigation.md).
 
-## <a name="members"></a>Members
+## <a name="members"></a>Membres
 
 ### <a name="classes"></a>Classes
 
@@ -111,7 +106,7 @@ Pour plus d’informations et d’exemples de code, consultez [navigationC++dans
 |[classe recursive_directory_iterator](../standard-library/recursive-directory-iterator-class.md)|Décrit un itérateur d'entrée qui parcourt les noms de fichiers dans un répertoire de système de fichiers. L'itérateur peut également descendre dans des sous-répertoires.|
 |[classe file_status](../standard-library/file-status-class.md)|Encapsule un `file_type`.|
 
-### <a name="structs"></a>Structures
+### <a name="structs"></a>Structs
 
 |||
 |-|-|
@@ -129,7 +124,7 @@ Pour plus d’informations et d’exemples de code, consultez [navigationC++dans
 
 |||
 |-|-|
-|[copy_options](../standard-library/filesystem-enumerations.md#copy_options)|Énumération utilisée avec [copy_file](../standard-library/filesystem-functions.md#copy_file) qui détermine le comportement si un fichier de destination existe déjà.|
+|[copy_options](../standard-library/filesystem-enumerations.md#copy_options)|Énumération utilisée avec [copy_file](../standard-library/filesystem-functions.md#copy_file) et qui détermine le comportement si un fichier de destination existe déjà.|
 |[directory_options](../standard-library/filesystem-enumerations.md#directory_options)|Énumération qui spécifie les options pour les itérateurs de répertoire.|
 |[file_type](../standard-library/filesystem-enumerations.md#file_type)|Énumération pour les types de fichiers.|
 |[perm_options](../standard-library/filesystem-enumerations.md#perm_options)| Énumère les options de la fonction `permissions`. |

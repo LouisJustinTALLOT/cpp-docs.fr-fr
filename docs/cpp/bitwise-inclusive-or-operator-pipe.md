@@ -1,8 +1,7 @@
 ---
-title: 'Au niveau du bit opérateur OR inclusif : |'
+title: 'Opérateur de bits OU inclusif : |'
 ms.date: 06/14/2018
 f1_keywords:
-- bitor
 - '|'
 helpviewer_keywords:
 - OR operator [C++], bitwise inclusive
@@ -10,28 +9,28 @@ helpviewer_keywords:
 - inclusive OR operator
 - '| operator'
 ms.assetid: 4c8a6a68-d828-447d-875a-aedb4ce3aa9a
-ms.openlocfilehash: 848bf3b2ec61084b59ab5b1ee6807f6066a4675e
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 0df3493930206d655c0d9bca8a2468151aa3c2c6
+ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62184284"
+ms.lasthandoff: 03/17/2020
+ms.locfileid: "79445512"
 ---
-# <a name="bitwise-inclusive-or-operator-"></a>Au niveau du bit opérateur OR inclusif : |
+# <a name="bitwise-inclusive-or-operator-"></a>Opérateur de bits OU inclusif : |
 
 ## <a name="syntax"></a>Syntaxe
 
-> *expression1* **|** *expression2*
+> *expression1* **|** *Expression2*
 
 ## <a name="remarks"></a>Notes
 
-L’opérateur OR inclusif au niveau du bit (**&#124;**) compare chaque bit de son premier opérande au bit correspondant de son second opérande. Si l'un des bits est 1, le bit correspondant de résultat a la valeur 1. Sinon, le bit de résultat correspondant a la valeur 0.
+L’opérateur de bits OR inclusif ( **&#124;** ) compare chaque bit de son premier opérande au bit correspondant de son second opérande. Si l'un des deux bits a pour valeur 1, le bit obtenu correspondant a pour valeur 1. Sinon, il a pour valeur 0.
 
-Les deux opérandes de l’opérateur OR inclusif de bits doivent être de types intégraux. Les conversions arithmétiques habituelles traitées dans [Conversions Standard](standard-conversions.md) sont appliquées aux opérandes.
+Les deux opérandes de l’opérateur OR inclusif de bits doivent être de types intégraux. Les conversions arithmétiques habituelles traitées dans les [conversions standard](standard-conversions.md) sont appliquées aux opérandes.
 
-## <a name="operator-keyword-for-124"></a>Mot clé operator pour&#124;
+## <a name="operator-keyword-for-124"></a>Mot clé Operator pour&#124;
 
-Le **bitor** opérateur est l’équivalent textuel de **&#124;**. Il existe deux façons d’accéder à la **bitor** opérateur dans vos programmes : inclure le fichier d’en-tête \<iso646.h >, ou compiler avec la [/Za](../build/reference/za-ze-disable-language-extensions.md) option du compilateur (désactiver les extensions de langage).
+L’opérateur **BITOR** est l’équivalent textuel de **&#124;** . Il existe deux façons d’accéder à l’opérateur **BITOR** dans vos programmes : incluez le fichier d’en-tête \<ISO646. h > ou compilez avec l’option de compilateur [/za](../build/reference/za-ze-disable-language-extensions.md) (désactivation des extensions de langage).
 
 ## <a name="example"></a>Exemple
 

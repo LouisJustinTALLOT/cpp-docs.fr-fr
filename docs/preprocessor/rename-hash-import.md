@@ -1,17 +1,15 @@
 ---
 title: renommer l’attribut d’importation
 ms.date: 08/29/2019
-f1_keywords:
-- Rename
 helpviewer_keywords:
 - rename attribute
 ms.assetid: 5c5c6153-1087-4b7b-87fb-fc59b90b9975
-ms.openlocfilehash: ef1f64e0c268f850899efe499f7b1ad3991dd570
-ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
+ms.openlocfilehash: 520369f0308078fead2947e27a512f25a3ad3fab
+ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/03/2019
-ms.locfileid: "70216663"
+ms.lasthandoff: 03/17/2020
+ms.locfileid: "79447483"
 ---
 # <a name="rename-import-attribute"></a>renommer l’attribut d’importation
 
@@ -21,11 +19,11 @@ Offre une solution de contournement pour les problèmes de collisions de noms.
 
 ## <a name="syntax"></a>Syntaxe
 
-> **#import** *bibliothèque de types* **Rename (** «*OldName*» **,** «*NewName*» **)**
+> renommage de la *bibliothèque de types* **#import** **(** «*OldName*» **,** «*NewName*» **)**
 
 ### <a name="parameters"></a>Paramètres
 
-*OldName*\
+\ *OldName*
 Ancien nom dans la bibliothèque de types.
 
 *NewName*\
@@ -40,7 +38,7 @@ L’attribut **Rename** peut être utilisé lorsqu’un nom dans la bibliothèqu
 > [!NOTE]
 > Le remplacement concerne un nom utilisé dans la bibliothèque de types et pas un nom utilisé dans le fichier d'en-tête résultant.
 
-Par exemple, supposons qu'une propriété nommée `MyParent` existe dans une bibliothèque de types et qu'une macro `GetMyParent` est définie dans un fichier d'en-tête et utilisée avant `#import`. Étant `GetMyParent` donné que est le nom par défaut d’une fonction wrapper pour la `get` propriété de gestion des erreurs, une collision de nom se produit. Pour contourner le problème, utilisez l'attribut suivant dans l'instruction `#import` :
+Par exemple, supposons qu'une propriété nommée `MyParent` existe dans une bibliothèque de types et qu'une macro `GetMyParent` est définie dans un fichier d'en-tête et utilisée avant `#import`. Étant donné que `GetMyParent` est le nom par défaut d’une fonction wrapper pour la propriété de `get` de gestion des erreurs, une collision de nom se produit. Pour contourner le problème, utilisez l'attribut suivant dans l'instruction `#import` :
 
 ```cpp
 #import MyTypeLib.tlb rename("MyParent","MyParentX")
@@ -52,11 +50,11 @@ ce qui renomme le nom `MyParent` dans la bibliothèque de types. Une tentative d
 #import MyTypeLib.tlb rename("GetMyParent","GetMyParentX")
 ```
 
-Cela est dû au fait `GetMyParent` que le nom ne se produit que dans le fichier d’en-tête de la bibliothèque de types résultant.
+Cela est dû au fait que le nom `GetMyParent` se produit uniquement dans le fichier d’en-tête de la bibliothèque de types résultant.
 
 **Spécifique C++ à la fin**
 
 ## <a name="see-also"></a>Voir aussi
 
-[attributs #import](../preprocessor/hash-import-attributes-cpp.md)\
+[attributs de #import](../preprocessor/hash-import-attributes-cpp.md)\
 [#import directive](../preprocessor/hash-import-directive-cpp.md)

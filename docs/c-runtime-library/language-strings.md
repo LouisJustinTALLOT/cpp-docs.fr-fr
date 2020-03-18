@@ -1,21 +1,19 @@
 ---
 title: Language Strings
 ms.date: 11/04/2016
-f1_keywords:
-- c.strings
 helpviewer_keywords:
 - language strings
 ms.assetid: bbee63b1-af0b-4e44-9eaf-dd3e265c05fd
-ms.openlocfilehash: a9e6eaa65516b5b49022526f24e220dec83b2c26
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
-ms.translationtype: HT
+ms.openlocfilehash: 18a94d33f9ca382bb6c7cd77a4f2b33ed800f2c6
+ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69500072"
+ms.lasthandoff: 03/17/2020
+ms.locfileid: "79438252"
 ---
 # <a name="language-strings"></a>Language Strings
 
-Les fonctions [setlocale](../c-runtime-library/reference/setlocale-wsetlocale.md) et [_create_locale](../c-runtime-library/reference/create-locale-wcreate-locale.md) peuvent utiliser les langues prises en charge par l’API NLS Windows sur les systèmes d’exploitation qui n’utilisent pas la page de codes Unicode. Pour obtenir la liste des langues prises en charge par la version du système d’exploitation Windows, consultez l’[annexe A : Comportement du produit](https://msdn.microsoft.com/library/cc233982.aspx) dans [MS-LCID] : Référence de l’identificateur de paramètres régionaux (LCID) de Windows. La chaîne de langue peut être une des valeurs des colonnes **Langue** et **Balise de la langue** de la liste des langues prises en charge. Pour obtenir un exemple de code énumérant les noms de paramètres régionaux disponibles et les valeurs associées, consultez [NLS : exemple d’API basées sur un nom](/windows/win32/intl/nls--name-based-apis-sample).
+Les fonctions [setlocale](../c-runtime-library/reference/setlocale-wsetlocale.md) et [_create_locale](../c-runtime-library/reference/create-locale-wcreate-locale.md) peuvent utiliser les langues prises en charge par l’API NLS Windows sur les systèmes d’exploitation qui n’utilisent pas la page de codes Unicode. Pour voir une liste des langues prises en charge par la version du système d’exploitation, consultez [Appendix A: Product Behavior](https://msdn.microsoft.com/library/cc233982.aspx) dans [MS-LCID] : Informations de référence Windows LCID (Language Code Identifier). La chaîne de langue peut être une des valeurs des colonnes **Langue** et **Balise de la langue** de la liste des langues prises en charge. Pour obtenir un exemple de code énumérant les noms de paramètres régionaux disponibles et les valeurs associées, consultez [NLS : exemple d’API en fonction du nom](/windows/win32/intl/nls--name-based-apis-sample).
 
 ## <a name="additional-supported-language-strings"></a>Chaînes de langues supplémentaires pris en charge
 
@@ -23,12 +21,12 @@ L’implémentation de la bibliothèque runtime Microsoft C prend également en 
 
 |Chaîne de langue|Nom des paramètres régionaux équivalents|
 |---------------------|----------------------------|
-|american|en-US|
-|american english|en-US|
-|american-english|en-US|
-|australian|en-AU|
-|belgian|nl-BE|
-|canadian|en-CA|
+|américain|fr-FR|
+|american english|fr-FR|
+|american-english|fr-FR|
+|australien|en-AU|
+|belge|nl-BE|
+|canadien|en-CA|
 |chh|zh-HK|
 |chi|zh-SG|
 |chinois|zh|
@@ -37,7 +35,7 @@ L’implémentation de la bibliothèque runtime Microsoft C prend également en 
 |chinese-singapore|zh-SG|
 |chinese-traditional|zh-TW|
 |dutch-belgian|nl-BE|
-|english-american|en-US|
+|english-american|fr-FR|
 |english-aus|en-AU|
 |english-belize|en-BZ|
 |english-can|en-CA|
@@ -48,8 +46,8 @@ L’implémentation de la bibliothèque runtime Microsoft C prend également en 
 |english-south africa|en-ZA|
 |english-trinidad y tobago|en-TT|
 |english-uk|en-GB|
-|english-us|en-US|
-|english-usa|en-US|
+|english-us|fr-FR|
+|english-usa|fr-FR|
 |french-belgian|fr-BE|
 |french-canadian|fr-CA|
 |french-luxembourg|fr-LU|
@@ -60,10 +58,10 @@ L’implémentation de la bibliothèque runtime Microsoft C prend également en 
 |german-swiss|de-CH|
 |irish-english|en-IE|
 |italian-swiss|it-CH|
-|norvégien|Non|
+|norvégien|non|
 |norwegian-bokmal|nb-NO|
 |norwegian-nynorsk|nn-NO|
-|portuguese-brazilian|pt-BR|
+|portuguese-brazilian|pt-br|
 |spanish-argentina|es-AR|
 |spanish-bolivia|es-BO|
 |spanish-chile|es-CL|
@@ -84,10 +82,10 @@ L’implémentation de la bibliothèque runtime Microsoft C prend également en 
 |spanish-uruguay|es-UY|
 |spanish-venezuela|es-VE|
 |swedish-finland|sv-FI|
-|swiss|de-CH|
+|suisse|de-CH|
 |uk|en-GB|
-|us|en-US|
-|usa|en-US|
+|us|fr-FR|
+|usa|fr-FR|
 
 ## <a name="see-also"></a>Voir aussi
 

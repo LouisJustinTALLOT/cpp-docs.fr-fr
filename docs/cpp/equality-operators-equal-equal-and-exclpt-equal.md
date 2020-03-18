@@ -2,7 +2,6 @@
 title: "Opérateurs d'égalité : == et !="
 ms.date: 11/04/2016
 f1_keywords:
-- not_eq
 - '!='
 - ==
 helpviewer_keywords:
@@ -14,12 +13,12 @@ helpviewer_keywords:
 - not_eq operator
 - equal to operator
 ms.assetid: ba4e9659-2392-4fb4-be5a-910a2a6df45a
-ms.openlocfilehash: d6248d4a31c478b62e5fbe304d9bde9b51b7cb06
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 7e42b66438579bc9be6274863366762b8b4ffbe9
+ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62392165"
+ms.lasthandoff: 03/17/2020
+ms.locfileid: "79444396"
 ---
 # <a name="equality-operators--and-"></a>Opérateurs d'égalité : == et !=
 
@@ -36,11 +35,11 @@ Les opérateurs d'égalité binaires comparent l'égalité ou l'inégalité stri
 
 Les opérateurs d'égalité, égal à (`==`) et différent de (`!=`), ont une priorité inférieure aux opérateurs relationnels, mais ils se comportent de la même manière. Le type de résultat de ces opérateurs est **bool**.
 
-L’opérateur égal à (`==`) renvoie **true** (1) si les deux opérandes ont la même valeur ; sinon, elle retourne **false** (0). L’opérateur non-égal à (`!=`) renvoie **true** si les opérandes n’ont pas la même valeur ; sinon, elle retourne **false**.
+L’opérateur égal à (`==`) retourne la valeur **true** (1) si les deux opérandes ont la même valeur ; Sinon, elle retourne **false** (0). L’opérateur « égal à » (`!=`) retourne la valeur **true** si les opérandes n’ont pas la même valeur ; Sinon, elle retourne **false**.
 
 ## <a name="operator-keyword-for-"></a>Mot clé d'opérateur pour !=
 
-L'opérateur `not_eq` est l'équivalent textuel de `!=`. Il existe deux façons d’accéder à la `not_eq` opérateur dans vos programmes : inclure le fichier d’en-tête `iso646.h`, ou compiler avec la [/Za](../build/reference/za-ze-disable-language-extensions.md) option du compilateur (désactiver les extensions de langage).
+L'opérateur `not_eq` est l'équivalent textuel de `!=`. Il existe deux façons d’accéder à l’opérateur `not_eq` dans vos programmes : incluez le fichier d’en-tête `iso646.h`ou compilez avec l’option de compilateur [/za](../build/reference/za-ze-disable-language-extensions.md) (désactivation des extensions de langage).
 
 ## <a name="example"></a>Exemple
 
