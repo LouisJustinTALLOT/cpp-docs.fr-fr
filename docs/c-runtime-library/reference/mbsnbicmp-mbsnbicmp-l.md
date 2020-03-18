@@ -21,15 +21,9 @@ api_type:
 topic_type:
 - apiref
 f1_keywords:
-- _strnicmp
-- _wcsnicmp_l
 - _mbsnbicmp
 - mbsnbicmp
 - mbsnbicmp_l
-- _tcsnicmp
-- _strnicmp_l
-- _tcsnicmp_l
-- _wcsnicmp
 - _mbsnbicmp_l
 helpviewer_keywords:
 - _tcsnicmp_l function
@@ -43,12 +37,12 @@ helpviewer_keywords:
 - mbsnbicmp function
 - _wcsnicmp function
 ms.assetid: ddb44974-8b0c-42f0-90d0-56c9350bae0c
-ms.openlocfilehash: 19ffa4c47f0144ba136607fe5cef09e9bd65374f
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: c7a4d5def115101c9f3fbd6c53d649ab5b122f1c
+ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70952190"
+ms.lasthandoff: 03/17/2020
+ms.locfileid: "79442832"
 ---
 # <a name="_mbsnbicmp-_mbsnbicmp_l"></a>_mbsnbicmp, _mbsnbicmp_l
 
@@ -69,7 +63,7 @@ int _mbsnbicmp(
 
 ### <a name="parameters"></a>Paramètres
 
-*string1*, *string2*<br/>
+*Chaîne1*, *Chaîne2*<br/>
 Chaîne terminée par Null à comparer.
 
 *count*<br/>
@@ -79,7 +73,7 @@ Nombre d'octets à comparer.
 
 La valeur de retour indique la relation entre les sous-chaînes.
 
-|Valeur de retour|Description|
+|Valeur retournée|Description|
 |------------------|-----------------|
 |< 0|*Chaîne1* sous-chaîne inférieure à *Chaîne2* sous-chaîne.|
 |0|*Chaîne1* sous-chaîne identique à la sous-chaîne *Chaîne2* .|
@@ -91,7 +85,7 @@ En cas d’erreur, **_mbsnbicmp** retourne **_NLSCMPERROR**, qui est défini dan
 
 La fonction **_mbsnbicmp** effectue une comparaison ordinale d’au plus le premier *nombre* d’octets de *string1* et *Chaîne2*. La comparaison est effectuée en convertissant chaque caractère en minuscules ; [_mbsnbcmp](mbsnbcmp-mbsnbcmp-l.md) est une version de **_mbsnbicmp**qui respecte la casse. La comparaison se termine si un caractère null de fin est atteint dans l’une ou l’autre des chaînes avant que les caractères *Count* soient comparés. Si les chaînes sont égales lorsqu’un caractère null de fin est atteint dans l’une ou l’autre des chaînes avant que les caractères *Count* soient comparés, la chaîne la plus courte est inférieure.
 
-**_mbsnbicmp** est similaire à [_mbsnbcmp](mbsnbcmp-mbsnbcmp-l.md), à ceci près qu’elle compare des chaînes jusqu’au *nombre* d’octets au lieu de caractères.
+**_mbsnbicmp** est semblable à [_mbsnbcmp](mbsnbcmp-mbsnbcmp-l.md), à ceci près qu’elle compare des chaînes jusqu’au *nombre* d’octets au lieu de caractères.
 
 La comparaison de deux chaînes contenant des caractères qui se trouvent entre « Z » et « a » dans la table ASCII (« [ », « \\ », « ] », « ^ », « _ » et « \` ») donne des résultats différents selon leur casse. Par exemple, les deux chaînes « ABCDe » et « ABCD ^ » sont comparées de façon unidirectionnelle si la comparaison est en minuscules (« ABCDE » > « ABCD ^ ») et l’autre méthode (« ABCDe » < « ABCD ^ ») si elle est en majuscules.
 
@@ -106,13 +100,13 @@ Si *Chaîne1* ou *Chaîne2* est un pointeur null, **_mbsnbicmp** appelle le gest
 |**_tcsnicmp**|**_strnicmp**|**_mbsnbicmp**|**_wcsnicmp**|
 |**_tcsnicmp_l**|**_strnicmp_l**|**_mbsnbicmp_l**|**_wcsnicmp_l**|
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
 |Routine|En-tête requis|
 |-------------|---------------------|
 |**_mbsnbicmp**|\<mbstring.h>|
 
-Pour plus d'informations sur la compatibilité, voir [Compatibilité](../../c-runtime-library/compatibility.md).
+Pour plus d’informations sur la compatibilité, voir [Compatibilité](../../c-runtime-library/compatibility.md).
 
 ## <a name="example"></a>Exemple
 

@@ -1,27 +1,25 @@
 ---
-title: 'Classe CObject : Questions fréquemment posées'
+title: 'Classe CObject : Forum Aux Questions'
 ms.date: 11/04/2016
-f1_keywords:
-- CObject
 helpviewer_keywords:
 - CObject class [MFC], FAQ
 ms.assetid: 809a8b99-a2f8-4e16-8b4b-023c94f4125c
-ms.openlocfilehash: 6c8d6e46346599d832a921345ef208d76b1d4c14
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 44a66473de6bbdccb6fe460ce6c2a5b94a2a556f
+ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62326779"
+ms.lasthandoff: 03/17/2020
+ms.locfileid: "79445140"
 ---
-# <a name="cobject-class-frequently-asked-questions"></a>Classe CObject : Questions fréquemment posées
+# <a name="cobject-class-frequently-asked-questions"></a>Classe CObject : Forum Aux Questions
 
 Cette section traite des questions sur la classe `CObject`.
 
-## <a name="what-do-you-want-to-know-more-about"></a>Ce que vous souhaitez en savoir plus sur
+## <a name="what-do-you-want-to-know-more-about"></a>Que voulez-vous en savoir plus sur
 
-- [Dois-je dériver les nouvelles classes de CObject](do-i-have-to-derive-new-classes-from-cobject-q.md)
+- [Dois-je dériver de nouvelles classes de CObject ?](do-i-have-to-derive-new-classes-from-cobject-q.md)
 
-- [Quel est le tarif dériver une classe de CObject](what-does-it-cost-me-to-derive-a-class-from-cobject-q.md)
+- [Combien coûte-t-il pour dériver une classe de CObject ?](what-does-it-cost-me-to-derive-a-class-from-cobject-q.md)
 
 ## <a name="see-also"></a>Voir aussi
 

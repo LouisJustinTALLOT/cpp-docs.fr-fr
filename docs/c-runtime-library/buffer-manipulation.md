@@ -1,18 +1,16 @@
 ---
 title: Manipulation de la mémoire tampon
 ms.date: 04/04/2018
-f1_keywords:
-- c.memory
 helpviewer_keywords:
 - buffers, manipulation routines
 - buffers
 ms.assetid: 164f4860-ce66-412c-8291-396fbd70f03e
-ms.openlocfilehash: e8a449cbfa6a52ccc2346e2215ce187c09d677e9
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
-ms.translationtype: HT
+ms.openlocfilehash: a79bfdb33d2bff5e18c916a2e116ab03251afdf1
+ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50590500"
+ms.lasthandoff: 03/17/2020
+ms.locfileid: "79443588"
 ---
 # <a name="buffer-manipulation"></a>Manipulation de la mémoire tampon
 
@@ -20,7 +18,7 @@ Utilisez ces routines pour utiliser des zones de mémoire octet par octet.
 
 ## <a name="buffer-manipulation-routines"></a>Routines de manipulation de la mémoire tampon
 
-|Routine|Utilisez|
+|Routine|Utilisation|
 |-------------|---------|
 |[_memccpy](../c-runtime-library/reference/memccpy.md)|Copier des caractères d’une mémoire tampon à une autre jusqu’à ce qu’un caractère donné ou un nombre donné de caractères ait été copié|
 |[memchr, wmemchr](../c-runtime-library/reference/memchr-wmemchr.md)|Retourner le pointeur vers la première occurrence, dans un nombre spécifié de caractères, d’un caractère donné de la mémoire tampon|

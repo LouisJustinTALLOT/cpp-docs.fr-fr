@@ -5,7 +5,6 @@ f1_keywords:
 - IOpenRowsetImpl
 - IOpenRowsetImpl.CreateRowset
 - IOpenRowsetImpl::CreateRowset
-- CreateRowset
 - OpenRowset
 - IOpenRowsetImpl::OpenRowset
 - IOpenRowsetImpl.OpenRowset
@@ -14,16 +13,16 @@ helpviewer_keywords:
 - CreateRowset method
 - OpenRowset method
 ms.assetid: d259cedc-1db4-41cf-bc9f-5030907ab486
-ms.openlocfilehash: 6f0dfb90b0ea79e115f459968558e48ae9827e40
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 66fce9d2ffe63798738be1658a5328e907395a54
+ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62390774"
+ms.lasthandoff: 03/17/2020
+ms.locfileid: "79446328"
 ---
 # <a name="iopenrowsetimpl-class"></a>IOpenRowsetImpl, classe
 
-Fournit l’implémentation pour le `IOpenRowset` interface.
+Fournit l’implémentation pour l’interface `IOpenRowset`.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -37,7 +36,7 @@ class IOpenRowsetImpl : public IOpenRowset
 *SessionClass*<br/>
 Votre classe, dérivée de `IOpenRowsetImpl`.
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
 **En-tête :** atldb.h
 
@@ -47,16 +46,16 @@ Votre classe, dérivée de `IOpenRowsetImpl`.
 
 |||
 |-|-|
-|[CreateRowset](#createrowset)|Crée un objet d’ensemble de lignes. Pas appelée directement par l’utilisateur.|
-|[OpenRowset](#openrowset)|Ouvre et retourne un ensemble de lignes qui inclut toutes les lignes à partir d’une seule table de base ou un index. (Pas dans ATLDB. H)|
+|[CreateRowset](#createrowset)|Crée un objet d’ensemble de lignes. Non appelé directement par l’utilisateur.|
+|[OpenRowset](#openrowset)|Ouvre et retourne un ensemble de lignes qui comprend toutes les lignes d’une table ou d’un index de base unique. (Pas dans ATLDB. Manutention|
 
 ## <a name="remarks"></a>Notes
 
-Le [IOpenRowset](/previous-versions/windows/desktop/ms716946(v=vs.85)) interface est obligatoire pour un objet de session. Il s’ouvre et retourne un ensemble de lignes qui inclut toutes les lignes à partir d’une seule table de base ou un index.
+L’interface [IOpenRowset](/previous-versions/windows/desktop/ms716946(v=vs.85)) est obligatoire pour un objet de session. Elle ouvre et retourne un ensemble de lignes qui comprend toutes les lignes d’une table ou d’un index de base unique.
 
-## <a name="createrowset"></a> IOpenRowsetImpl::CreateRowset
+## <a name="createrowset"></a>Iopenrowsetimpl, :: CreateRowset
 
-Crée un objet d’ensemble de lignes. Pas appelée directement par l’utilisateur. Consultez [IOpenRowset::OpenRowset](/previous-versions/windows/desktop/ms716724(v=vs.85)) dans le *de référence du programmeur OLE DB.*
+Crée un objet d’ensemble de lignes. Non appelé directement par l’utilisateur. Consultez [IOpenRowset :: OpenRowset](/previous-versions/windows/desktop/ms716724(v=vs.85)) dans le *Guide de référence du programmeur OLE DB.*
 
 ### <a name="syntax"></a>Syntaxe
 
@@ -75,16 +74,16 @@ HRESULT CreateRowset(IUnknown* pUnkOuter,
 #### <a name="parameters"></a>Paramètres
 
 *RowsetClass*<br/>
-Un membre de classe de modèle représentant la classe d’ensemble de lignes de l’utilisateur. Généralement, généré par l’Assistant.
+Membre de classe de modèle qui représente la classe d’ensemble de lignes de l’utilisateur. Généralement généré par l’Assistant.
 
 *pRowsetObj*<br/>
-[out] Pointeur vers un objet d’ensemble de lignes. En général, ce paramètre n’est pas utilisé, mais il peut être utilisé si vous devez effectuer plus de travail sur l’ensemble de lignes avant de le transmettre à un objet COM. La durée de vie de *pRowsetObj* est liée par *ppRowset*.
+à Pointeur vers un objet d’ensemble de lignes. En général, ce paramètre n’est pas utilisé, mais il peut être utilisé si vous devez effectuer davantage de travail sur l’ensemble de lignes avant de le passer à un objet COM. La durée de vie de *pRowsetObj* est liée par *ppRowset*.
 
-Pour les autres paramètres, consultez [IOpenRowset::OpenRowset](/previous-versions/windows/desktop/ms716724(v=vs.85)) dans le *de référence du programmeur OLE DB.*
+Pour les autres paramètres, consultez [IOpenRowset :: OpenRowset](/previous-versions/windows/desktop/ms716724(v=vs.85)) dans le *Guide de référence du programmeur OLE DB.*
 
-## <a name="openrowset"></a> IOpenRowsetImpl::OpenRowset
+## <a name="openrowset"></a>Iopenrowsetimpl, :: OpenRowset
 
-Ouvre et retourne un ensemble de lignes qui inclut toutes les lignes à partir d’une seule table de base ou un index.
+Ouvre et retourne un ensemble de lignes qui comprend toutes les lignes d’une table ou d’un index de base unique.
 
 ### <a name="syntax"></a>Syntaxe
 
@@ -100,13 +99,13 @@ HRESULT OpenRowset(IUnknown* pUnkOuter,
 
 #### <a name="parameters"></a>Paramètres
 
-Consultez [IOpenRowset::OpenRowset](/previous-versions/windows/desktop/ms716724(v=vs.85)) dans le *de référence du programmeur OLE DB*.
+Consultez [IOpenRowset :: OpenRowset](/previous-versions/windows/desktop/ms716724(v=vs.85)) dans le *Guide de référence du programmeur OLE DB*.
 
 ### <a name="remarks"></a>Notes
 
-Cette méthode est introuvable dans ATLDB. H. Lorsque vous créez un fournisseur, il est créé par l’Assistant objet ATL.
+Cette méthode est introuvable dans ATLDB. Manutention. Elle est créée par l’Assistant objet ATL lorsque vous créez un fournisseur.
 
 ## <a name="see-also"></a>Voir aussi
 
-[Modèles du fournisseur OLE DB](../../data/oledb/ole-db-provider-templates-cpp.md)<br/>
+[Modèles du fournisseur OLE DB](../../data/oledb/ole-db-provider-templates-cpp.md)<br/>
 [Architecture des modèles du fournisseur OLE DB](../../data/oledb/ole-db-provider-template-architecture.md)
