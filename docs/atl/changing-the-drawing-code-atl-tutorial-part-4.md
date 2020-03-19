@@ -5,12 +5,12 @@ ms.date: 09/26/2018
 helpviewer_keywords:
 - _ATL_MIN_CRT macro
 ms.assetid: 08ff14e8-aa49-4139-a110-5d071939cf1e
-ms.openlocfilehash: df89837e8f453443dc092a1b96e9c3f395fa2353
-ms.sourcegitcommit: a8ef52ff4a4944a1a257bdaba1a3331607fb8d0f
+ms.openlocfilehash: 4244dae532f467f28a5ca53e15ee601344999233
+ms.sourcegitcommit: 44eeb065c3148d0484de791080a3f963109744fc
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/11/2020
-ms.locfileid: "77127378"
+ms.lasthandoff: 03/18/2020
+ms.locfileid: "79509373"
 ---
 # <a name="changing-the-drawing-code-atl-tutorial-part-4"></a>Changement du code de dessin (Didacticiel ATL, partie 4)
 
@@ -111,12 +111,15 @@ Régénérez le contrôle. Assurez-vous que le fichier PolyCtl. htm est fermé s
     > [!NOTE]
     > Pour les erreurs impliquant `ATL::CW2AEX`, dans script. cpp, remplacez Line `TRACE( "XActiveScriptSite::GetItemInfo( %s )\n", pszNameT );` par `TRACE( "XActiveScriptSite::GetItemInfo( %s )\n", pszNameT.m_psz );`et Line `TRACE( "Source Text: %s\n", COLE2CT( bstrSourceLineText ) );` par `TRACE( "Source Text: %s\n", bstrSourceLineText );`.<br/>
     > Pour les erreurs impliquant `HMONITOR`, ouvrez StdAfx. h dans le projet `TCProps` et remplacez :
+    >
     > ```
     > #ifndef WINVER
     > #define WINVER 0x0400
     > #endif
     > ```
+    >
     > par
+    >
     > ```
     > #ifndef WINVER
     > #define WINVER 0x0500

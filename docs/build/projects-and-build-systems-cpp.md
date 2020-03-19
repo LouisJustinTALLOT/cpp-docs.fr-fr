@@ -10,12 +10,12 @@ helpviewer_keywords:
 - C++, build options
 ms.assetid: fa6ed4ff-334a-4d99-b5e2-a1f83d2b3008
 ms.topic: overview
-ms.openlocfilehash: 1548f82b62163600b5220c553bebcea72020abbc
-ms.sourcegitcommit: 7750e4c291d56221c8893120c56a1fe6c9af60d6
+ms.openlocfilehash: df3b768c139bc4dc000c185d7153fd4aa38ae94a
+ms.sourcegitcommit: 44eeb065c3148d0484de791080a3f963109744fc
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/25/2019
-ms.locfileid: "71274741"
+ms.lasthandoff: 03/18/2020
+ms.locfileid: "79509449"
 ---
 # <a name="cc-projects-and-build-systems-in-visual-studio"></a>C/C++ Projects et systèmes de génération dans Visual Studio
 
@@ -25,7 +25,7 @@ Vous pouvez utiliser Visual Studio pour modifier, compiler et générer toute C+
 
 Pour *générer* un C++ programme, vous pouvez compiler le code source à partir d’un ou de plusieurs fichiers, puis lier ces fichiers dans un fichier exécutable (. exe), une bibliothèque de chargement dynamique (. dll) ou une bibliothèque statique (. lib). 
 
-La C++ compilation de base implique trois étapes principales:
+La C++ compilation de base implique trois étapes principales :
 
 - Le C++ préprocesseur transforme toutes les définitions de #directives et de macro dans chaque fichier source. Cela crée une *unité de traduction*.
 - Le C++ compilateur compile chaque unité de traduction en fichiers objets (. obj), en appliquant les options du compilateur qui ont été définies.
@@ -33,18 +33,19 @@ La C++ compilation de base implique trois étapes principales:
 
 ## <a name="the-msvc-toolset"></a>Ensemble d’outils MSVC
 
-Le compilateur C++ Microsoft, l’éditeur de liens, les bibliothèques standard et les utilitaires associés comprennent l’ensemble d’outils du compilateur MSVC (également appelé chaîne d’outils ou «outils de génération»). Celles-ci sont incluses dans Visual Studio. Vous pouvez également télécharger et utiliser l’ensemble d’outils en tant que package autonome gratuitement à partir de l' [emplacement de téléchargement des outils de génération pour Visual Studio 2019](https://visualstudio.microsoft.com/downloads/#build-tools-for-visual-studio-2019).
+Le compilateur C++ Microsoft, l’éditeur de liens, les bibliothèques standard et les utilitaires associés comprennent l’ensemble d’outils du compilateur MSVC (également appelé chaîne d’outils ou « outils de génération »). Celles-ci sont incluses dans Visual Studio. Vous pouvez également télécharger et utiliser l’ensemble d’outils en tant que package autonome gratuitement à partir de l' [emplacement de téléchargement des outils de génération pour Visual Studio 2019](https://visualstudio.microsoft.com/downloads/#build-tools-for-visual-studio-2019).
 
 Vous pouvez générer des programmes simples en appelant le compilateur MSVC (cl. exe) directement à partir de la ligne de commande. La commande suivante accepte un fichier de code source unique et appelle CL. exe pour générer un fichier exécutable appelé *Hello. exe*: 
 
 ```cmd
 cl /EHsc hello.cpp
 ```
+
 Notez que, ici, le compilateur (cl. exe) appelle automatiquement C++ le préprocesseur et l’éditeur de liens pour générer le fichier de sortie final.  Pour plus d’informations, consultez [génération sur la ligne de commande](building-on-the-command-line.md).
 
 ## <a name="build-systems-and-projects"></a>Créer des systèmes et des projets
 
-La plupart des programmes réels utilisent un type de *système de génération* pour gérer les complexités de la compilation de plusieurs fichiers sources pour plusieurs configurations (par exemple, débogage et mise en version), plusieurs plateformes (x86, x64, ARM, etc.), des étapes de génération personnalisée, voire plusieurs exécutables qui doivent être compilés dans un certain ordre. Vous définissez des paramètres dans un ou plusieurs fichiers de configuration de build, et le système de génération accepte ce fichier comme entrée avant d’appeler le compilateur. L’ensemble des fichiers de code source et des fichiers de configuration de build nécessaires pour générer un fichier exécutable est appelé *projet*. 
+La plupart des programmes réels utilisent un type de *système de génération* pour gérer les complexités de la compilation de plusieurs fichiers sources pour plusieurs configurations (par exemple, débogage et version), plusieurs plateformes (x86, x64, ARM, etc.), des étapes de génération personnalisée et même plusieurs exécutables qui doivent être compilés dans un certain ordre. Vous définissez des paramètres dans un ou plusieurs fichiers de configuration de build, et le système de génération accepte ce fichier comme entrée avant d’appeler le compilateur. L’ensemble des fichiers de code source et des fichiers de configuration de build nécessaires pour générer un fichier exécutable est appelé *projet*. 
 
 La liste suivante présente différentes options pour les projets Visual Studio C++:
 
@@ -77,7 +78,7 @@ Explique comment utiliser le compilateur C/C++ et les outils de génération dir
 
 [Génération de dll dans Visual Studio](dlls-in-visual-cpp.md) Comment créer, déboguer et déployer desC++ C/dll (bibliothèques partagées) dans Visual Studio.
 
-[Procédure pas à pas : Création et utilisation d’une bibliothèque](walkthrough-creating-and-using-a-static-library-cpp.md) statique création d’un fichier binaire. lib.
+[Procédure pas à pas : création et utilisation d’une bibliothèque statique](walkthrough-creating-and-using-a-static-library-cpp.md) Comment créer un fichier binaire. lib.
 
 [Génération d’applicationsC++ C/isolées et d’assemblys côte à côte](building-c-cpp-isolated-applications-and-side-by-side-assemblies.md) Décrit le modèle de déploiement pour les applications de bureau Windows, en fonction de l’idée des applications isolées et des assemblys côte à côte.
 

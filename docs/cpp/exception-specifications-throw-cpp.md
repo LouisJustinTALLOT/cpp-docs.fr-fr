@@ -8,12 +8,12 @@ helpviewer_keywords:
 - throw keyword [C++]
 - noexcept keyword [C++]
 ms.assetid: 4d3276df-6f31-4c7f-8cab-b9d2d003a629
-ms.openlocfilehash: 8245704de16ba94dbe0479a3c19d2a83fb170989
-ms.sourcegitcommit: 654aecaeb5d3e3fe6bc926bafd6d5ace0d20a80e
+ms.openlocfilehash: 4c7cc6027a3af4c300b88389cb29e3ccf091514e
+ms.sourcegitcommit: 44eeb065c3148d0484de791080a3f963109744fc
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/20/2019
-ms.locfileid: "74245883"
+ms.lasthandoff: 03/18/2020
+ms.locfileid: "79509408"
 ---
 # <a name="exception-specifications-throw-noexcept-c"></a>Spécifications d’exception (throw, noexcept)C++()
 
@@ -24,11 +24,13 @@ Avant C++ 17, il existait deux genres de spécifications d’exception. La *spé
 ```cpp
 void MyFunction(int i) throw();
 ```
+
 indique au compilateur que la fonction ne lève pas d'exception. Toutefois, en mode **/std : c++ 14** , cela peut entraîner un comportement indéfini si la fonction lève une exception. Par conséquent, nous vous recommandons d’utiliser l’opérateur [noexcept](../cpp/noexcept-cpp.md) au lieu de celui-ci :
 
 ```cpp
 void MyFunction(int i) noexcept;
 ```
+
 Le tableau suivant résume l’implémentation Microsoft C++ des spécifications d’exception :
 
 |Spécification d'exception|Signification|

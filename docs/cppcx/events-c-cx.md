@@ -3,12 +3,12 @@ title: Événements (C++/CX)
 description: Comment utiliser C++/CX pour créer et utiliser des gestionnaires d’événements dans le Windows Runtime.
 ms.date: 02/03/2020
 ms.assetid: 31c8e08a-00ad-40f9-8f7e-124864aaad58
-ms.openlocfilehash: 45f9a7bc17d9a695613ce551dae796b2cd2e0e6f
-ms.sourcegitcommit: ba4180a2d79d7e391f2f705797505d4aedbc2a5e
+ms.openlocfilehash: b40f71b183561b52047c1f7316def3d895465d2a
+ms.sourcegitcommit: 44eeb065c3148d0484de791080a3f963109744fc
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/03/2020
-ms.locfileid: "76972199"
+ms.lasthandoff: 03/18/2020
+ms.locfileid: "79509367"
 ---
 # <a name="events-ccx"></a>Événements (C++/CX)
 
@@ -28,7 +28,7 @@ L'exemple suivant montre comment déclarer et déclencher un événement : Notez
 
 [!code-cpp[cx_events#01](../cppcx/codesnippet/CPP/cx_events/class1.h#01)]
 
-### <a name="usage"></a>Contrôle
+### <a name="usage"></a>Utilisation
 
 L'exemple suivant montre comment une classe d'abonnement utilise l'opérateur `+=` pour s'abonner à l'événement et fournir un gestionnaire d'événements à appeler lorsque l'événement se déclenche. Notez que la fonction qui est fournie correspond à la signature du délégué défini côté serveur de publication dans l'espace de noms `EventTest` .
 
@@ -49,7 +49,7 @@ L'exemple suivant indique comment ajouter des méthodes add, remove et raise per
 
 ## <a name="removing-an-event-handler-from-the-subscriber-side"></a>Suppression d'un gestionnaire d'événements du côté abonné
 
-Dans certains cas rares, vous pouvez supprimer un gestionnaire d'événements pour un événement auquel vous vous êtes précédemment abonné. Par exemple, vous pouvez le remplacer par un autre gestionnaire d'événements ou vous pouvez supprimer des ressources qui sont détenues par celui-ci. Pour supprimer un gestionnaire, vous devez enregistrer EventRegistrationToken qui est retourné par l'opération `+=` . Vous pouvez ensuite utiliser l'opérateur `-=` du jeton pour supprimer un gestionnaire d'événements.  Toutefois, le gestionnaire d'origine peut être appelé même après avoir été supprimé. Par exemple, une condition de concurrence peut survenir lorsque la source de l’événement obtient une liste de gestionnaires et commence à les appeler. Si un gestionnaire d’événements est supprimé alors que cela se produit, la liste devient obsolète. Par conséquent, si vous envisagez de supprimer un gestionnaire d’événements, créez un indicateur de membre. Définissez-le si l’événement est supprimé, puis dans le gestionnaire d’événements, vérifiez l’indicateur et retournez immédiatement s’il est défini. L'exemple suivant illustre le modèle de base.
+Dans certains cas rares, vous pouvez supprimer un gestionnaire d'événements pour un événement auquel vous vous êtes précédemment abonné. Par exemple, vous pouvez le remplacer par un autre gestionnaire d'événements ou vous pouvez supprimer des ressources qui sont détenues par celui-ci. Pour supprimer un gestionnaire, vous devez enregistrer EventRegistrationToken qui est retourné par l'opération `+=` . Vous pouvez ensuite utiliser l'opérateur `-=` du jeton pour supprimer un gestionnaire d'événements.  Toutefois, le gestionnaire d'origine peut être appelé même après avoir été supprimé. Par exemple, une condition de concurrence peut survenir lorsque la source d’événements obtient une liste de gestionnaires et commence à les appeler. Si un gestionnaire d’événements est supprimé alors que cela se produit, la liste devient obsolète. Par conséquent, si vous envisagez de supprimer un gestionnaire d’événements, créez un indicateur de membre. Définissez-le si l’événement est supprimé, puis dans le gestionnaire d’événements, vérifiez l’indicateur et retournez immédiatement s’il est défini. L'exemple suivant illustre le modèle de base.
 
 [!code-cpp[cx_events#04](../cppcx/codesnippet/CPP/eventsupportinvs/eventclientclass.h#04)]
 
