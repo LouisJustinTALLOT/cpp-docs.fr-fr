@@ -2,12 +2,12 @@
 title: Générer une application OpenGL ES sur Android et iOS
 ms.date: 10/09/2019
 ms.assetid: 76a67886-df57-4a81-accb-2e3c2eaf607b
-ms.openlocfilehash: 23dd9dbb1ff32050494e0d1d105cd55de3123fbb
-ms.sourcegitcommit: a673f6a54cc97e3d4cd032b10aa8dce7f0539d39
+ms.openlocfilehash: 3709cfcc681f265d08758f97422ae16e98a66a1c
+ms.sourcegitcommit: 8e285a766523e653aeeb34d412dc6f615ef7b17b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/28/2020
-ms.locfileid: "78177674"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80079668"
 ---
 # <a name="build-an-opengl-es-application-on-android-and-ios"></a>Générer une application OpenGL ES sur Android et iOS
 
@@ -109,7 +109,7 @@ La solution créée par le modèle définit l’application Android en tant que 
 
    Les projets de bibliothèque et d’application Android Native Activity générés placent le C++ code partagé dans une bibliothèque dynamique. Il comprend du code « Glue » pour interagir avec la plateforme Android. La majeure partie du code d’application se trouve dans la bibliothèque. Le manifeste, les ressources et les instructions de génération se trouvent dans le projet d’empaquetage. Le code partagé est appelé à partir de main.cpp dans le projet NativeActivity. Pour plus d’informations sur la programmation d’une activité Android Native Activity, consultez la page [Concepts](https://developer.android.com/ndk/guides/concepts.html) du NDK Android.
 
-   Visual Studio génère des projets Android Native Activity à l’aide du NDK Android. Elle utilise Clang comme ensemble d’outils de plateforme. Visual Studio mappe les propriétés du projet dans les commandes de compilation, de liaison et de débogage sur la plateforme cible. Pour plus d’informations, ouvrez la boîte de dialogue **Pages de propriétés** pour le projet MyOpenGLESApp.Android.NativeActivity. Pour plus d’informations sur les commutateurs de ligne de commande, consultez le [manuel de l’utilisateur du compilateur Clang](http://clang.llvm.org/docs/UsersManual.html).
+   Visual Studio génère des projets Android Native Activity à l’aide du NDK Android. Elle utilise Clang comme ensemble d’outils de plateforme. Visual Studio mappe les propriétés du projet dans les commandes de compilation, de liaison et de débogage sur la plateforme cible. Pour plus d’informations, ouvrez la boîte de dialogue **Pages de propriétés** pour le projet MyOpenGLESApp.Android.NativeActivity. Pour plus d’informations sur les commutateurs de ligne de commande, consultez le [manuel de l’utilisateur du compilateur Clang](https://clang.llvm.org/docs/UsersManual.html).
 
 ## <a name="build-and-run-the-ios-app-on-an-ios-device"></a>Générer et exécuter l’application iOS sur un appareil iOS
 

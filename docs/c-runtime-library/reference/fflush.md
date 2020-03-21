@@ -26,12 +26,12 @@ helpviewer_keywords:
 - flushing
 - fflush function
 ms.assetid: 8bbc753f-dc74-4e77-b563-74da2835e92b
-ms.openlocfilehash: 966ff5622faaccd2d9e501b39da99b010e841c22
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 4597a013054a549047b4467c5bfed605e55e7656
+ms.sourcegitcommit: 8e285a766523e653aeeb34d412dc6f615ef7b17b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70940944"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80077341"
 ---
 # <a name="fflush"></a>fflush
 
@@ -47,7 +47,7 @@ int fflush(
 
 ### <a name="parameters"></a>Paramètres
 
-*stream*<br/>
+*train*<br/>
 Pointeur désignant la structure **FILE**.
 
 ## <a name="return-value"></a>Valeur de retour
@@ -55,7 +55,7 @@ Pointeur désignant la structure **FILE**.
 **fflush** retourne 0 si la mémoire tampon a été vidée avec succès. La valeur 0 est également retournée si le flux spécifié n’a aucune mémoire tampon ou est ouvert en lecture seule. Une valeur de retour de **EOF** indique une erreur.
 
 > [!NOTE]
-> Si **fflush** retourne **EOF**, les données ont peut-être été perdues en raison d’un échec d’écriture. Lors de la configuration d’un gestionnaire d’erreurs critique, il est plus sûr de désactiver la mise en mémoire tampon avec la fonction **setvbuf** ou d’utiliser des routines d’e/s de bas niveau telles que **_open**, **Fermer**et _ **Write** au lieu des fonctions d’e/s de flux.
+> Si **fflush** retourne **EOF**, les données ont peut-être été perdues en raison d’un échec d’écriture. Lors de la configuration d’un gestionnaire d’erreurs critique, il est plus sûr de désactiver la mise en mémoire tampon avec la fonction **setvbuf** ou d’utiliser des routines d’e/s de bas niveau, telles que **_open**, **_close**et **_Write** au lieu des fonctions d’e/s de flux.
 
 ## <a name="remarks"></a>Notes
 
@@ -63,19 +63,19 @@ La fonction **fflush** vide le *flux*de flux. Si le flux a été ouvert en mode 
 
 Si *Stream* a la **valeur null**, le comportement est le même qu’un appel à **fflush** sur chaque flux ouvert. Tous les flux ouverts en mode d’écriture et tous les flux ouverts en mode de mise à jour où la dernière opération était une écriture sont vidés. L’appel n’a aucun effet sur les autres flux.
 
-Les mémoires tampons sont normalement gérées par le système d’exploitation, qui détermine à quel moment les données doivent être automatiquement écrites sur le disque : quand une mémoire tampon est saturée, quand un flux est fermé ou quand un programme se termine normalement sans fermer le flux. La fonctionnalité de validation sur disque de la bibliothèque runtime garantit que les données critiques sont écrites directement sur le disque plutôt que dans les mémoires tampons du système d’exploitation. Sans réécrire un programme existant, vous pouvez activer cette fonctionnalité en liant les fichiers objets du programme avec COMMODE.OBJ. Dans le fichier exécutable résultant, les appels à **_flushall** écrivent le contenu de toutes les mémoires tampons sur le disque. Seuls **_flushall** et **fflush** sont affectés par le mode. obj de commode.
+Les mémoires tampons sont normalement gérées par le système d’exploitation, qui détermine à quel moment les données doivent être automatiquement écrites sur le disque : quand une mémoire tampon est saturée, quand un flux est fermé ou quand un programme se termine normalement sans fermer le flux. La fonctionnalité de validation sur disque de la bibliothèque runtime garantit que les données critiques sont écrites directement sur le disque plutôt que dans les mémoires tampons du système d’exploitation. Sans réécrire un programme existant, vous pouvez activer cette fonctionnalité en liant les fichiers objets du programme avec COMMODE.OBJ. Dans le fichier exécutable résultant, les appels à **_flushall** écrivent le contenu de toutes les mémoires tampons sur le disque. Seuls les **_flushall** et les **fflush** sont affectés par le mode. obj.
 
 Pour plus d’informations sur le contrôle de la fonctionnalité de validation sur disque, consultez [E/S de flux](../../c-runtime-library/stream-i-o.md), [fopen](fopen-wfopen.md) et [_fdopen](fdopen-wfdopen.md).
 
 Cette fonction verrouille le thread appelant et est donc thread-safe. Pour une version sans verrouillage, consultez **_fflush_nolock**.
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
 |Fonction|En-tête requis|
 |--------------|---------------------|
 |**fflush**|\<stdio.h>|
 
-Pour plus d’informations sur la compatibilité, voir consultez [Compatibilité](../../c-runtime-library/compatibility.md).
+Pour plus d’informations sur la compatibilité, voir [Compatibilité](../../c-runtime-library/compatibility.md).
 
 ## <a name="example"></a>Exemple
 
@@ -103,10 +103,10 @@ int main(void)
 
         // Write data to a file immediately instead of buffering.
         fflush(my_file);
-    
+
         if (my_number == 5)
         {
-            // Without using fflush, no data was written to the file 
+            // Without using fflush, no data was written to the file
             // prior to the crash, so the data is lost.
             *crash_the_program = 5;
         }

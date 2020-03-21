@@ -3,16 +3,16 @@ title: Alignment
 description: Comment l’alignement des données est spécifié C++dans moderne.
 ms.date: 12/11/2019
 ms.assetid: a986d510-ccb8-41f8-b905-433df9183485
-ms.openlocfilehash: 13f09366501de2482b8ae9ea430898d6c32134c2
-ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
+ms.openlocfilehash: 45b22742394a0b1c159e8b8102a26802a2441929
+ms.sourcegitcommit: 8e285a766523e653aeeb34d412dc6f615ef7b17b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/17/2020
-ms.locfileid: "79443671"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80076113"
 ---
 # <a name="alignment"></a>Alignment
 
-Une des fonctionnalités de bas niveau de C++ est la possibilité de spécifier avec précision l’alignement des objets en mémoire afin d’exploiter au mieux les capacités d’une architecture matérielle spécifique. Par défaut, le compilateur aligne les membres de classe et de struct sur leur valeur de taille : `bool` et `char` sur des limites de 1 octet, `short` sur les limites de 2 octets, `int`, `long`et `float` sur des limites de 4 octets, et `long long`, `double`et `long double` sur des limites de 8 octets. 
+Une des fonctionnalités de bas niveau de C++ est la possibilité de spécifier avec précision l’alignement des objets en mémoire afin d’exploiter au mieux les capacités d’une architecture matérielle spécifique. Par défaut, le compilateur aligne les membres de classe et de struct sur leur valeur de taille : `bool` et `char` sur des limites de 1 octet, `short` sur les limites de 2 octets, `int`, `long`et `float` sur des limites de 4 octets, et `long long`, `double`et `long double` sur des limites de 8 octets.
 
 Dans la plupart des scénarios, vous n’avez pas à vous soucier de l’alignement, car l’alignement par défaut est déjà optimal. Toutefois, dans certains cas, vous pouvez obtenir des améliorations significatives en matière de performances, ou économiser de la mémoire, en spécifiant un alignement personnalisé pour vos structures de données. Avant Visual Studio 2015, vous pouviez utiliser les mots clés spécifiques à Microsoft `__alignof` et `declspec(alignas)` pour spécifier un alignement supérieur à la valeur par défaut. À compter de Visual Studio 2015, vous devez utiliser les mots clés standard C++ 11 **alignof** et **alignas** pour une portabilité maximale du code. Les nouveaux mots clés se comportent de la même façon que les extensions spécifiques à Microsoft. La documentation de ces extensions s’applique également aux nouveaux mots clés. Pour plus d’informations, consultez [__Alignof Operator](../cpp/alignof-operator.md) et [align](../cpp/align-cpp.md). La C++ norme ne spécifie pas le comportement de compression pour l’alignement sur les limites inférieures à la valeur par défaut du compilateur pour la plateforme cible. vous devez donc toujours utiliser Microsoft #pragma [Pack](../preprocessor/pack.md) dans ce cas.
 

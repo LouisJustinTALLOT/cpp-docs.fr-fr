@@ -8,12 +8,12 @@ helpviewer_keywords:
 - default arguments
 - declarators, functions
 ms.assetid: 33ba01d5-75b5-48d2-8eab-5483ac7d2274
-ms.openlocfilehash: da30d647947e98146cd89f255c2e05991c1be562
-ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
+ms.openlocfilehash: fbc8b108ea958f526156e7f81a75a2918a0a8903
+ms.sourcegitcommit: 8e285a766523e653aeeb34d412dc6f615ef7b17b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/16/2020
-ms.locfileid: "79418446"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80076158"
 ---
 # <a name="functions-c"></a>Fonctions (C++)
 
@@ -261,7 +261,7 @@ Une variable déclarée à l’intérieur d’un corps de fonction est appelée 
 
 En C++, une variable locale peut être déclarée comme statique. La variable n'est visible que dans le corps de fonction, mais une seule copie de la variable existe pour toutes les instances de la fonction. Les objets statiques locaux sont détruits durant l’arrêt spécifié par `atexit`. Si un objet statique n’a pas été construit car le flux de contrôle du programme a contourné sa déclaration, aucune tentative de destruction de cet objet n’est effectuée.
 
-##  <a name="type_deduction"></a>Déduction de type dans les types de retour (C++ 14)
+##  <a name="type-deduction-in-return-types-c14"></a><a name="type_deduction"></a>Déduction de type dans les types de retour (C++ 14)
 
 En C++ 14, vous pouvez utiliser **auto** pour indiquer au compilateur de déduire le type de retour du corps de la fonction sans avoir à fournir un type de retour de fin. Notez que **auto déduit automatiquement** une valeur de retour par valeur. Utilisez `auto&&` pour indiquer au compilateur de déduire une référence.
 
@@ -277,7 +277,7 @@ auto Add2(const Lhs& lhs, const Rhs& rhs)
 
 Notez que **auto** ne conserve pas la caractère const du type qu’il déduit. Pour les fonctions de transfert dont la valeur de retour doit préserver la nature const ou ref de ses arguments, vous pouvez utiliser le mot clé **decltype (auto)** , qui utilise les règles d’inférence de type **decltype** et conserve toutes les informations de type. **decltype (auto)** peut être utilisé comme valeur de retour ordinaire sur le côté gauche, ou comme valeur de retour de fin.
 
-L’exemple suivant (basé sur le code de [N3493](http://www.open-std.org/JTC1/SC22/WG21/docs/papers/2013/n3493.html)) affiche **decltype (auto)** utilisé pour activer le transfert parfait des arguments de fonction dans un type de retour qui n’est pas connu jusqu’à ce que le modèle soit instancié.
+L’exemple suivant (basé sur le code de [N3493](https://wg21.link/n3493)) affiche **decltype (auto)** utilisé pour activer le transfert parfait des arguments de fonction dans un type de retour qui n’est pas connu jusqu’à ce que le modèle soit instancié.
 
 ```cpp
 template<typename F, typename Tuple = tuple<T...>, int... I>
@@ -295,7 +295,7 @@ template<typename F, typename Tuple = tuple<T...>,
 }
 ```
 
-## <a name="multi_val"></a>Retour de plusieurs valeurs à partir d’une fonction
+## <a name="returning-multiple-values-from-a-function"></a><a name="multi_val"></a>Retour de plusieurs valeurs à partir d’une fonction
 
 Il existe plusieurs façons de retourner plusieurs valeurs à partir d’une fonction :
 

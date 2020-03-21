@@ -33,12 +33,12 @@ helpviewer_keywords:
 - m_strCommandText
 - m_strIndexText
 ms.assetid: e97614b3-b11d-4806-a0d3-b9401331473f
-ms.openlocfilehash: 9c2e5923fe35287a7586cd4b52bc60e4a5b27b2d
-ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
+ms.openlocfilehash: 956648babf987d156cac753f8373518a83362013
+ms.sourcegitcommit: 8e285a766523e653aeeb34d412dc6f615ef7b17b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/17/2020
-ms.locfileid: "79441148"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80079676"
 ---
 # <a name="crowsetimpl-class"></a>CRowsetImpl, classe
 
@@ -55,7 +55,7 @@ template <
    class RowClass = CSimpleRow,
    class RowsetInterface = IRowsetImpl <T, IRowset>
 >
-class CRowsetImpl : 
+class CRowsetImpl :
    public CComObjectRootEx<CreatorClass::_ThreadModel>,
    public CRowsetBaseImpl<T, Storage, ArrayType, RowsetInterface>,
    public IRowsetInfoImpl<T, CreatorClass::_PropClass>
@@ -116,7 +116,7 @@ Si vous créez une classe dérivée de `CRowsetImpl`pour implémenter l’ensemb
 
 Pour implémenter l’une des méthodes de `Execute` dérivées de `CRowsetImpl`, vous devez remplir vos mémoires tampons de données internes ([m_rgRowData](../../data/oledb/crowsetimpl-m-rgrowdata.md)).
 
-## <a name="namefromdbid"></a>CRowsetImpl :: NameFromDBID
+## <a name="crowsetimplnamefromdbid"></a><a name="namefromdbid"></a>CRowsetImpl :: NameFromDBID
 
 Extrait une chaîne d’un `DBID` et la copie dans le *BSTR* passé.
 
@@ -147,7 +147,7 @@ HRESULT standard. Selon que la `DBID` est une table ou un index (indiqué par *b
 
 Cette méthode est appelée par les implémentations `CRowsetImpl` de [ValidateCommandID](../../data/oledb/crowsetimpl-validatecommandid.md) et [GetCommandFromID](../../data/oledb/crowsetimpl-getcommandfromid.md).
 
-## <a name="setcommandtext"></a>CRowsetImpl :: SetCommandText
+## <a name="crowsetimplsetcommandtext"></a><a name="setcommandtext"></a>CRowsetImpl :: SetCommandText
 
 Valide et stocke le `DBID`s dans les deux chaînes ([m_strCommandText](../../data/oledb/crowsetimpl-m-strcommandtext.md) et [m_strIndexText](../../data/oledb/crowsetimpl-m-strindextext.md)).
 
@@ -176,7 +176,7 @@ La méthode `SetCommentText` est appelée par `CreateRowset`, méthode statique 
 
 Cette méthode délègue son travail en appelant [ValidateCommandID](../../data/oledb/crowsetimpl-validatecommandid.md) et [GetCommandFromID](../../data/oledb/crowsetimpl-getcommandfromid.md) via un pointeur converti.
 
-## <a name="getcolumninfo"></a>CRowsetImpl :: GetColumnInfo
+## <a name="crowsetimplgetcolumninfo"></a><a name="getcolumninfo"></a>CRowsetImpl :: GetColumnInfo
 
 Récupère les informations de colonne pour une demande de client particulière.
 
@@ -209,7 +209,7 @@ L’exemple suivant illustre l’utilisation de `GetColumnInfo`. Dans cet exempl
 
 [!code-cpp[NVC_OLEDB_Provider#1](../../data/oledb/codesnippet/cpp/crowsetimpl-getcolumninfo_1.h)]
 
-## <a name="getcommandfromid"></a>CRowsetImpl :: GetCommandFromID
+## <a name="crowsetimplgetcommandfromid"></a><a name="getcommandfromid"></a>CRowsetImpl :: GetCommandFromID
 
 Vérifie si l’un des paramètres ou les deux contiennent des valeurs de chaîne et, si tel est le cas, copie les valeurs de chaîne dans les données membres [m_strCommandText](../../data/oledb/crowsetimpl-m-strcommandtext.md) et [m_strIndexText](../../data/oledb/crowsetimpl-m-strindextext.md).
 
@@ -236,7 +236,7 @@ HRESULT standard.
 
 Cette méthode est appelée via un upcast statique par `CRowsetImpl` pour remplir les données membres [m_strCommandText](../../data/oledb/crowsetimpl-m-strcommandtext.md) et [m_strIndexText](../../data/oledb/crowsetimpl-m-strindextext.md). Par défaut, cette méthode vérifie si un ou les deux paramètres contiennent des valeurs de chaîne. Si elles contiennent des valeurs de chaîne, cette méthode copie les valeurs de chaîne dans les membres de données. En plaçant une méthode avec cette signature dans votre classe dérivée de `CRowsetImpl`, votre méthode sera appelée à la place de l’implémentation de base.
 
-## <a name="validatecommandid"></a>CRowsetImpl :: ValidateCommandID
+## <a name="crowsetimplvalidatecommandid"></a><a name="validatecommandid"></a>CRowsetImpl :: ValidateCommandID
 
 Vérifie si l’un ou les deux `DBID`s contiennent des valeurs de chaîne et, si tel est le cas, les copie dans ses membres de données [m_strCommandText](../../data/oledb/crowsetimpl-m-strcommandtext.md) et [m_strIndexText](../../data/oledb/crowsetimpl-m-strindextext.md).
 
@@ -263,7 +263,7 @@ HRESULT standard.
 
 Cette méthode est appelée via un upcast statique par `CRowsetImpl` pour remplir ses membres de données [m_strCommandText](../../data/oledb/crowsetimpl-m-strcommandtext.md) et [m_strIndexText](../../data/oledb/crowsetimpl-m-strindextext.md). Par défaut, cette méthode vérifie si l’un ou les deux `DBID`s contiennent des valeurs de chaîne et, si tel est le cas, les copie dans ses membres de données. En plaçant une méthode avec cette signature dans votre classe dérivée de `CRowsetImpl`, votre méthode sera appelée à la place de l’implémentation de base.
 
-## <a name="rgrowdata"></a>CRowsetImpl :: m_rgRowData
+## <a name="crowsetimplm_rgrowdata"></a><a name="rgrowdata"></a>CRowsetImpl :: m_rgRowData
 
 Par défaut, une `CAtlArray` qui templatizes sur l’argument de modèle d’enregistrement de l’utilisateur pour `CRowsetImpl`.
 
@@ -277,7 +277,7 @@ ArrayType CRowsetBaseImpl::m_rgRowData;
 
 *ArrayType* est un paramètre de modèle pour `CRowsetImpl`.
 
-## <a name="strcommandtext"></a>CRowsetImpl :: m_strCommandText
+## <a name="crowsetimplm_strcommandtext"></a><a name="strcommandtext"></a>CRowsetImpl :: m_strCommandText
 
 Contient la commande initiale de l’ensemble de lignes.
 
@@ -287,7 +287,7 @@ Contient la commande initiale de l’ensemble de lignes.
 CComBSTR CRowsetBaseImpl::m_strCommandText;
 ```
 
-## <a name="strindextext"></a>CRowsetImpl :: m_strIndexText
+## <a name="crowsetimplm_strindextext"></a><a name="strindextext"></a>CRowsetImpl :: m_strIndexText
 
 Contient l’index initial de l’ensemble de lignes.
 

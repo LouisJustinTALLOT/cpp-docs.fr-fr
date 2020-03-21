@@ -8,12 +8,12 @@ helpviewer_keywords:
 - compiling programs [C++]
 - C program compiling [C++]
 ms.assetid: 7e74cc2d-54b1-49de-b7ad-d3ae6b39ab8d
-ms.openlocfilehash: d91ee36d26e307577aa56560eb95bef5ed03305b
-ms.sourcegitcommit: 458dcc794e3841919c01a3a5ff6b9a3767f8861b
+ms.openlocfilehash: 1b4e7f0f188ce7b3003f12cb7acafaf15a03d86a
+ms.sourcegitcommit: 8e285a766523e653aeeb34d412dc6f615ef7b17b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/13/2019
-ms.locfileid: "74051533"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80078252"
 ---
 # <a name="walkthrough-compile-a-c-program-on-the-command-line"></a>Procédure pas à pas : compiler un programme C sur la ligne de commande
 
@@ -21,7 +21,7 @@ Visual C++ inclut un compilateur C que vous pouvez utiliser pour créer toutes s
 
 Cette procédure pas à pas montre comment créer un programme de style C de base, « Hello, World », à l’aide d’un éditeur de texte, puis le compiler sur la ligne de commande. Si vous préférez travailler dans C++ sur la ligne de commande, consultez [procédure pas à pas : C++ compilation d’un programme natif sur la ligne de commande](walkthrough-compiling-a-native-cpp-program-on-the-command-line.md). Si vous souhaitez essayer l’IDE Visual Studio au lieu d’utiliser la ligne de commande, consultez [procédure pas à pas : utilisation de projetsC++et de solutions ()](../ide/walkthrough-working-with-projects-and-solutions-cpp.md) ou [utilisation de C++ l’IDE de Visual Studio pour le développement bureautique](../ide/using-the-visual-studio-ide-for-cpp-desktop-development.md).
 
-## <a name="prerequisites"></a>Configuration requise
+## <a name="prerequisites"></a>Conditions préalables requises
 
 Pour effectuer cette procédure pas à pas, vous devez avoir installé Visual Studio et les C++ composants visuels facultatifs, ou les outils de génération pour Visual Studio.
 
@@ -63,9 +63,8 @@ Si vous utilisez une autre version de Windows, recherchez dans le menu Démarrer
 Si vous avez installé Microsoft Visual C++ Build Tools 2015 sur Windows 10, ouvrez le menu **Démarrer** , puis faites défiler et ouvrez le dossier  **C++ Visual Build Tools** . Choisissez **Visual C++ 2015 invite de commandes des outils natifs x86** pour ouvrir la fenêtre d’invite de commandes.
 
 Si vous utilisez une autre version de Windows, recherchez dans le menu Démarrer ou la page de démarrage un dossier Visual Studio Tools contenant un raccourci d’invite de commandes développeur. Vous pouvez également utiliser la fonction de recherche Windows pour rechercher « invite de commandes développeur » et en choisir une qui correspond à la version installée de Visual Studio. Utilisez le raccourci pour ouvrir la fenêtre d’invite de commandes.
-   
-::: moniker-end
 
+::: moniker-end
 
 Ensuite, vérifiez que l’invite C++ de commandes Visual Developer est correctement configurée. Dans la fenêtre d’invite de commandes, entrez `cl` et vérifiez que la sortie ressemble à ceci :
 

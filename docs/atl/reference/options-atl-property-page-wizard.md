@@ -6,15 +6,14 @@ f1_keywords:
 helpviewer_keywords:
 - ATL Property Page Wizard, options
 ms.assetid: a7107779-b2ea-4f99-b84b-7f3e0c504bc8
-ms.openlocfilehash: 205f6d3debafe22373355af12ef88c83d6a01911
-ms.sourcegitcommit: fc1de63a39f7fcbfe2234e3f372b5e1c6a286087
-ms.translationtype: HT
+ms.openlocfilehash: a46a55cca221293e83a72bf0c2670e2343c744b0
+ms.sourcegitcommit: 8e285a766523e653aeeb34d412dc6f615ef7b17b
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65707000"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80076208"
 ---
 # <a name="options-atl-property-page-wizard"></a>Options, Assistant Page de propriétés ATL
-
 
 ::: moniker range="vs-2019"
 
@@ -34,10 +33,10 @@ Utilisez cette page de l’Assistant pour définir le modèle de thread et le ni
 
    |Option|Description|
    |------------|-----------------|
-   |**Single**|La page de propriétés s’exécute uniquement dans le thread COM principal.|
-   |**Apartment**|La page de propriétés peut être créée dans n’importe quel thread unique cloisonné. Valeur par défaut.|
+   |**Unique**|La page de propriétés s’exécute uniquement dans le thread COM principal.|
+   |**Apartment**|La page de propriétés peut être créée dans n’importe quel thread unique cloisonné. La valeur par défaut.|
 
-- **Aggregation**
+- **Agrégation**
 
    Ajoute la prise en charge de l’agrégation pour la page de propriétés que vous créez. Consultez [Agrégation](../../atl/aggregation.md) pour plus d’informations.
 

@@ -12,12 +12,12 @@ helpviewer_keywords:
 - IPF, command-line compiler
 - x64 [C++], command-line compiler
 ms.assetid: 4da93a19-e20d-4778-902a-5eee9a6a90b5
-ms.openlocfilehash: 9e8a671a7fe67150e1b867c62231173429f7b6ed
-ms.sourcegitcommit: 7bea0420d0e476287641edeb33a9d5689a98cb98
+ms.openlocfilehash: 60399994cd5fc2f39efeadc6ffcf917138aada37
+ms.sourcegitcommit: 8e285a766523e653aeeb34d412dc6f615ef7b17b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/17/2020
-ms.locfileid: "77415926"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80078541"
 ---
 # <a name="how-to-enable-a-64-bit-x64-hosted-msvc-toolset-on-the-command-line"></a>Comment : activer un ensemble d’outils MSVC hébergé x64 64 bits sur la ligne de commande
 
@@ -25,7 +25,7 @@ Visual Studio inclut des compilateurs C++, des éditeurs de liens et d’autres 
 
 ## <a name="use-a-64-bit-hosted-developer-command-prompt-shortcut"></a>Utilisez un raccourci d’invite de commandes développeur 64 bits
 
-Pour accéder à ces invites de commandes sur Windows 10, dans le menu **Démarrer**, ouvrez le dossier correspondant à votre version de Visual Studio, par exemple **Visual Studio 2019**, puis choisissez une des invites de commandes développeur d’un outil croisé ou natif x64. 
+Pour accéder à ces invites de commandes sur Windows 10, dans le menu **Démarrer**, ouvrez le dossier correspondant à votre version de Visual Studio, par exemple **Visual Studio 2019**, puis choisissez une des invites de commandes développeur d’un outil croisé ou natif x64.
 
 ![Invite de commandes des outils natifs x64](media/x64-native-tools-command-prompt.png "Outils natifs x64 du menu Démarrer")
 

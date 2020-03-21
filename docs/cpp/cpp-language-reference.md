@@ -5,16 +5,16 @@ ms.date: 12/10/2019
 helpviewer_keywords:
 - C++, language reference
 ms.assetid: 4be9cacb-c862-4391-894a-3a118c9c93ce
-ms.openlocfilehash: 8d828c1b151e37380c123003c245f6b83243f84a
-ms.sourcegitcommit: a5fa9c6f4f0c239ac23be7de116066a978511de7
+ms.openlocfilehash: f00d4eb5dc69ee0ab95ea864e63091b041a1853f
+ms.sourcegitcommit: 8e285a766523e653aeeb34d412dc6f615ef7b17b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/20/2019
-ms.locfileid: "75301585"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80079924"
 ---
 # <a name="c-language-reference"></a>Référence du langage C++
 
-Cette référence explique le C++ langage de programmation tel qu’il est C++ implémenté dans le compilateur Microsoft. L’organisation est basée sur [*le manuel de C++ référence annoté*](http://www.stroustrup.com/arm.html) par Margaret Ellis et Bjarne Stroustrup, ainsi que sur la norme C++ internationale ANSI/iso (ISO/IEC FDIS 14882). Les implémentations spécifiques à Microsoft des fonctionnalités du langage C++ sont incluses.
+Cette référence explique le C++ langage de programmation tel qu’il est C++ implémenté dans le compilateur Microsoft. L’organisation est basée sur *le manuel de C++ référence annoté* par Margaret Ellis et Bjarne Stroustrup, ainsi que sur la norme C++ internationale ANSI/iso (ISO/IEC FDIS 14882). Les implémentations spécifiques à Microsoft des fonctionnalités du langage C++ sont incluses.
 
 Pour obtenir une vue d' C++ ensemble des pratiques de programmation modernes, consultez la [page Bienvenue dans C++ ](welcome-back-to-cpp-modern-cpp.md).
 
@@ -96,7 +96,7 @@ Informations sur le comportement non standard du compilateur C++ Microsoft.
 [Bienvenue dans C++](welcome-back-to-cpp-modern-cpp.md)<br/>
 Vue d’ensemble des C++ pratiques de programmation modernes pour l’écriture de programmes sécurisés, corrects et efficaces.
 
-## <a name="related-sections"></a>Rubriques connexes
+## <a name="related-sections"></a>Sections connexes
 
 [Extensions de composant pour les plateformes Runtime](../extensions/component-extensions-for-runtime-platforms.md)<br/>
 Documentation de référence sur l’utilisation C++ du compilateur Microsoft pour cibler .net.

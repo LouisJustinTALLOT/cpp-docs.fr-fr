@@ -2,16 +2,16 @@
 title: Vue d'ensemble de la programmation Windows en C++
 ms.date: 09/17/2019
 ms.assetid: efc691d7-21f3-47ae-ae56-cab999ccf59d
-ms.openlocfilehash: 96a03194059f59f57780bfd70cab3065d6a1aff0
-ms.sourcegitcommit: 76cc69b482ada8ebf0837e8cdfd4459661f996dd
+ms.openlocfilehash: cd95332721f51ed2d17c3205cba5f1456a1037b9
+ms.sourcegitcommit: 8e285a766523e653aeeb34d412dc6f615ef7b17b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/19/2019
-ms.locfileid: "71127192"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80075487"
 ---
 # <a name="overview-of-windows-programming-in-c"></a>Vue d'ensemble de la programmation Windows en C++
 
-Il existe plusieurs grandes catégories d’applications Windows que vous pouvez créer avec C++. Chacun possède son propre modèle de programmation et un ensemble de bibliothèques spécifiques à Windows, C++ mais la bibliothèque standard et les C++ bibliothèques tierces peuvent être utilisées dans l’un d’eux. 
+Il existe plusieurs grandes catégories d’applications Windows que vous pouvez créer avec C++. Chacun possède son propre modèle de programmation et un ensemble de bibliothèques spécifiques à Windows, C++ mais la bibliothèque standard et les C++ bibliothèques tierces peuvent être utilisées dans l’un d’eux.
 
 Cette section explique comment utiliser Visual Studio et les bibliothèques wrappers MFC/ATL pour créer des programmes Windows. Pour obtenir de la documentation sur la plateforme Windows elle-même, consultez la [documentation Windows](/windows/index).
 
@@ -21,9 +21,9 @@ C++les applications console s’exécutent à partir de la ligne de commande dan
 
 ## <a name="native-desktop-client-applications"></a>Applications clientes Native Desktop
 
-Une *application cliente de bureau Native* est une C++ application c ou Window qui utilise les API Windows c natives d’origine [ou les API COM (Component Object Model)](/windows/win32/apiindex/windows-api-list) pour accéder au système d’exploitation. Ces API sont elles-mêmes écrites principalement en C. Il existe plusieurs façons de créer une application de bureau Native : Vous pouvez programmer en utilisant directement les API Win32, à l’aide d’une boucle de message de style C qui traite les événements du système d’exploitation. Ou vous pouvez programmer à l’aide de *Microsoft Foundation classes* (MFC), une bibliothèque orientée C++ objet légère qui encapsule Win32. Aucune approche n’est considérée comme « moderne » par rapport à la plateforme Windows universelle (UWP), mais les deux sont toujours entièrement prises en charge et ont des millions de lignes de code s’exécutant dans le monde aujourd’hui. Une application Win32 qui s’exécute dans une fenêtre exige que le développeur travaille explicitement avec des messages Windows dans une fonction de procédure Windows. Malgré le nom, une application Win32 peut être compilée en tant que binaire 32 bits (x86) ou 64 bits (x64). Dans l’IDE de Visual Studio, les termes x86 et Win32 sont synonymes.
+Une *application cliente de bureau Native* est une C++ application c ou Window qui utilise les API Windows c natives d’origine [ou les API COM (Component Object Model)](/windows/win32/apiindex/windows-api-list) pour accéder au système d’exploitation. Ces API sont elles-mêmes écrites principalement en C. Il existe plusieurs façons de créer une application de bureau Native : vous pouvez programmer à l’aide des API Win32 directement, à l’aide d’une boucle de message de style C qui traite les événements du système d’exploitation. Ou vous pouvez programmer à l’aide de *Microsoft Foundation classes* (MFC), une bibliothèque orientée C++ objet légère qui encapsule Win32. Aucune approche n’est considérée comme « moderne » par rapport à la plateforme Windows universelle (UWP), mais les deux sont toujours entièrement prises en charge et ont des millions de lignes de code s’exécutant dans le monde aujourd’hui. Une application Win32 qui s’exécute dans une fenêtre exige que le développeur travaille explicitement avec des messages Windows dans une fonction de procédure Windows. Malgré le nom, une application Win32 peut être compilée en tant que binaire 32 bits (x86) ou 64 bits (x64). Dans l’IDE de Visual Studio, les termes x86 et Win32 sont synonymes.
 
-Pour vous familiariser avec la C++ programmation Windows traditionnelle, consultez [prise en main C++de Win32 et ](/windows/win32/LearnWin32/learn-to-program-for-windows). Une fois que vous aurez appris à utiliser Win32, il sera plus facile d’en savoir plus sur les [applications de bureau MFC](../mfc/mfc-desktop-applications.md). Pour obtenir un exemple d’application C++ de bureau classique qui utilise des graphiques sophistiqués, consultez [Hilo : Développement C++ d’applications pour](https://msdn.microsoft.com/library/windows/desktop/ff708696.aspx)Windows.
+Pour vous familiariser avec la C++ programmation Windows traditionnelle, consultez [prise en main C++de Win32 et ](/windows/win32/LearnWin32/learn-to-program-for-windows). Une fois que vous aurez appris à utiliser Win32, il sera plus facile d’en savoir plus sur les [applications de bureau MFC](../mfc/mfc-desktop-applications.md). Pour obtenir un exemple d’application C++ de bureau classique qui utilise des graphiques sophistiqués, consultez [Hilo : développement C++ d’applications pour Windows](https://msdn.microsoft.com/library/windows/desktop/ff708696.aspx).
 
 ### <a name="c-or-net"></a>C++ou .NET ?
 
@@ -77,13 +77,13 @@ Le [Gestionnaire de package vcpkg](../build/vcpkg.md) vous permet d’installer 
 
 Les bibliothèques Microsoft incluent :
 
-- Microsoft Foundation Classes (MFC) : Une infrastructure orientée objet pour la création de programmes Windows traditionnels (notamment des applications d’entreprise) qui possèdent des interfaces utilisateur riches qui présentent des boutons, des zones de liste, des arborescences et d’autres contrôles. Pour plus d'informations, consultez [MFC Desktop Applications](../mfc/mfc-desktop-applications.md).
+- Bibliothèque MFC (Microsoft Foundation Classes) : infrastructure orientée objet conçue pour la création de programmes Windows traditionnels (notamment des applications d’entreprise) qui possèdent des interfaces utilisateur riches dotées de boutons, de zones de liste, d’arborescences et d’autres contrôles. Pour plus d'informations, consultez [MFC Desktop Applications](../mfc/mfc-desktop-applications.md).
 
-- Active Template Library (ATL) : Bibliothèque d’assistance puissante pour créer des composants COM. Pour plus d'informations, consultez [ATL COM Desktop Components](../atl/atl-com-desktop-components.md).
+- Bibliothèque ATL (Active Template Library) : bibliothèque d'assistance puissante pour créer des composants COM. Pour plus d'informations, consultez [ATL COM Desktop Components](../atl/atl-com-desktop-components.md).
 
-- C++AMP (C++ Accelerated massive parallelism) : Bibliothèque qui permet un travail de calcul général à hautes performances sur le GPU. Pour plus d'informations, consultez [C++ AMP (C++ Accelerated Massive Parallelism)](../parallel/amp/cpp-amp-cpp-accelerated-massive-parallelism.md).
+- C++ AMP (C++ Accelerated Massive Parallelism) : bibliothèque qui permet un travail de calcul général à hautes performances sur le GPU. Pour plus d'informations, consultez [C++ AMP (C++ Accelerated Massive Parallelism)](../parallel/amp/cpp-amp-cpp-accelerated-massive-parallelism.md).
 
-- Runtime d’accès concurrentiel : Bibliothèque qui simplifie le travail de programmation parallèle et asynchrone pour les appareils multicœur et à plusieurs cœurs. Pour plus d'informations, consultez [Concurrency Runtime](../parallel/concrt/concurrency-runtime.md).
+- Runtime d'accès concurrentiel : bibliothèque qui simplifie le travail de programmation parallèle et asynchrone pour les appareils dotés de plusieurs cœurs, voire de nombreux cœurs. Pour plus d’informations, consultez [Runtime d’accès concurrentiel](../parallel/concrt/concurrency-runtime.md).
 
 De nombreux scénarios de programmation Windows requièrent également le Kit de développement logiciel Windows, qui inclut les fichiers d'en-tête qui permettent l'accès aux composants du système d'exploitation Windows. Par défaut, Visual Studio installe le SDK Windows en tant que composant de C++ la charge de travail de bureau, ce qui permet le développement d’applications Windows universelles. Pour développer des applications UWP, vous avez besoin de la version Windows 10 du SDK Windows. Pour plus d’informations, consultez [Windows 10 SDK](https://dev.windows.com/downloads/windows-10-sdk). (Pour plus d’informations sur les kits de développement logiciel (SDK) Windows pour les versions antérieures de Windows, consultez l' [archive SDK Windows](https://developer.microsoft.com/windows/downloads/sdk-archive)).
 
@@ -95,10 +95,10 @@ D'autres plateformes, telles que Xbox et Azure, possèdent leurs propres Kits de
 
 Visual Studio inclut un débogueur puissant pour le code natif, des outils d’analyse statique, des outils de débogage graphique, un éditeur de code complet, la prise en charge des tests unitaires et de nombreux autres outils et utilitaires. Pour plus d’informations, consultez la page prise en main du développement [avec Visual Studio](/visualstudio/ide/get-started-developing-with-visual-studio)et [vue d’ensemble du C++ développement dans Visual Studio](../overview/overview-of-cpp-development.md).
 
-## <a name="in-this-section"></a>Dans cette section
-|Titre|Description|
+## <a name="in-this-section"></a>Contenu de cette section
+|Intitulé|Description|
 |-----------|-----------------|
-|[Procédure pas à pas : Création d’un programme C++ standard](walkthrough-creating-a-standard-cpp-program-cpp.md)| Créez une application console Windows.|
+|[Procédure pas à pas : C++ création d’un programme standard](walkthrough-creating-a-standard-cpp-program-cpp.md)| Créez une application console Windows.|
 |[Procédure pas à pas : création d’applications de bureau Windows (C++)](walkthrough-creating-windows-desktop-applications-cpp.md)|Créer une application de bureau Windows native.|
 |[Assistant Windows Desktop](windows-desktop-wizard.md)|Utilisez l’Assistant pour créer des projets Windows.|
 |[Bibliothèque ATL (Active Template Library)](../atl/atl-com-desktop-components.md)|Utilisez la bibliothèque ATL pour créer des composants COM C++dans.|
@@ -107,15 +107,15 @@ Visual Studio inclut un débogueur puissant pour le code natif, des outils d’a
 |[Accès aux données](../data/data-access-in-cpp.md)| OLE DB et ODBC|
 |[Texte et chaînes](../text/text-and-strings-in-visual-cpp.md)|Différents types de chaînes sur Windows.|
 |[Ressources pour la création d’un jeu à l’aide de DirectX](resources-for-creating-a-game-using-directx.md)
-|[Guide pratique pour utiliser le kit SDK Windows 10 dans une application de bureau Windows](how-to-use-the-windows-10-sdk-in-a-windows-desktop-application.md)|SDK Windows|
+|[Procédure : utilisation du kit SDK Windows 10 dans une application de bureau Windows](how-to-use-the-windows-10-sdk-in-a-windows-desktop-application.md)|Kit de développement logiciel (SDK) Windows|
 |[Utilisation des fichiers de ressources](working-with-resource-files.md)|Comment ajouter des images, des icônes, des tables de chaînes et d’autres ressources à une application de bureau.|
 |[Ressources pour la création d’un jeu àC++l’aide de DirectX ()](resources-for-creating-a-game-using-directx.md)|Liens vers du contenu pour la création C++de jeux dans.|
-|[Guide pratique pour utiliser le kit SDK Windows 10 dans une application de bureau Windows](how-to-use-the-windows-10-sdk-in-a-windows-desktop-application.md)|Contient les étapes pour configurer votre projet à générer avec le Kit de développement logiciel (SDK) Windows 10.|
+|[Procédure : utilisation du kit SDK Windows 10 dans une application de bureau Windows](how-to-use-the-windows-10-sdk-in-a-windows-desktop-application.md)|Contient les étapes pour configurer votre projet à générer avec le Kit de développement logiciel (SDK) Windows 10.|
 |[Déploiement des applications de bureau natives](deploying-native-desktop-applications-visual-cpp.md)|Déployez des applications natives sur Windows.|
 
 ## <a name="related-articles"></a>Articles connexes
 
-|Titre|Description|
+|Intitulé|Description|
 |-----------|-----------------|
 |[C++ dans Visual Studio](../overview/visual-cpp-in-visual-studio.md)|Rubrique parente pour C++ le contenu du développeur Visual.|
 [Développement .NET avec C++/CLI](../dotnet/dotnet-programming-with-cpp-cli-visual-cpp.md)|Créer des wrappers pour C++ les bibliothèques natives qui lui permettent de communiquer avec les applications et composants .net.|

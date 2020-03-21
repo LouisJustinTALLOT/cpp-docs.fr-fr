@@ -4,12 +4,12 @@ description: Comment utiliser des pointeurs bruts dansC++
 ms.date: 11/19/2019
 helpviewer_keywords:
 - pointers [C++]
-ms.openlocfilehash: 9ea498c254bc37dc8dc550232127cb2db3bc0886
-ms.sourcegitcommit: 654aecaeb5d3e3fe6bc926bafd6d5ace0d20a80e
+ms.openlocfilehash: 2dbb4f11fc0c08578e82371e8df77e9643313879
+ms.sourcegitcommit: 8e285a766523e653aeeb34d412dc6f615ef7b17b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/20/2019
-ms.locfileid: "74250659"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80077145"
 ---
 # <a name="raw-pointers-c"></a>Pointeurs brutsC++()
 
@@ -45,7 +45,7 @@ Un pointeur (s’il n’est pas déclaré comme **const**) peut être incrément
     const int* pconst = &c; // declare a non-const pointer to const int
     const int c2 = 2;
     pconst = &c2;  // OK pconst itself isn't const
-    const int* const pconst2 = &c; 
+    const int* const pconst2 = &c;
     // pconst2 = &c2; // Error! pconst2 is const.
 ```
 
@@ -168,7 +168,7 @@ int main()
 
 Certaines opérations arithmétiques peuvent être effectuées sur des pointeurs non const pour qu’ils pointent vers un nouvel emplacement de mémoire. Un pointeur peut être incrémenté et décrémenté à l’aide des opérateurs **++** , **+=** , **-=** et **--** . Cette technique peut être utilisée dans les tableaux et est particulièrement utile dans les tampons de données non typées. **Void\*** incrémente de la taille d’un **caractère** (1 octet). Un pointeur typé incrémente par taille du type vers lequel il pointe.
 
-L’exemple suivant montre comment les opérations arithmétiques sur les pointeurs peuvent être utilisées pour accéder à des pixels individuels dans une image bitmap sur Windows. Notez l’utilisation des opérateurs **New** et **Delete**, ainsi que l’opérateur de déréférencement. 
+L’exemple suivant montre comment les opérations arithmétiques sur les pointeurs peuvent être utilisées pour accéder à des pixels individuels dans une image bitmap sur Windows. Notez l’utilisation des opérateurs **New** et **Delete**, ainsi que l’opérateur de déréférencement.
 
 ```cpp
 #include <Windows.h>
@@ -235,7 +235,7 @@ int main()
 
 ## <a name="void-pointers"></a>pointeurs void *
 
-Un pointeur vers **void** pointe simplement vers un emplacement de mémoire brut. Il est parfois nécessaire d’utiliser des pointeurs de **\*void** , par exemple lors C++ de la transmission entre du code et des fonctions C. 
+Un pointeur vers **void** pointe simplement vers un emplacement de mémoire brut. Il est parfois nécessaire d’utiliser des pointeurs de **\*void** , par exemple lors C++ de la transmission entre du code et des fonctions C.
 
 Quand un pointeur typé est casté en un pointeur void, le contenu de l’emplacement de mémoire n’est pas modifié, mais les informations de type sont perdues, ce qui vous permet d’effectuer des opérations d’incrémentation ou de décrémentation. Un emplacement de mémoire peut être casté, par exemple, de MyClass * à void *, puis de nouveau vers MyClass *. Ces opérations sont par nature sujettes aux erreurs et nécessitent une attention particulière pour éviter les erreurs. Moderne C++ déconseille l’utilisation de pointeurs void, sauf nécessité absolue.
 
@@ -290,7 +290,7 @@ int main()
 }
 ```
 
-## <a name="pointers_to_functions"></a>Pointeurs vers des fonctions
+## <a name="pointers-to-functions"></a><a name="pointers_to_functions"></a>Pointeurs vers des fonctions
 
 Dans la programmation de style C, les pointeurs de fonction sont utilisés principalement pour passer des fonctions à d’autres fonctions. Dans ce scénario, l’appelant peut personnaliser le comportement d’une fonction sans la modifier. Dans moderne C++, les [expressions lambda](lambda-expressions-in-cpp.md) fournissent la même fonctionnalité avec une sécurité de type supérieure et d’autres avantages.
 

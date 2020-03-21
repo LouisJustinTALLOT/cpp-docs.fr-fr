@@ -3,12 +3,12 @@ title: Déployer, exécuter et déboguer votre projet Linux C++ dans Visual Stu
 description: Décrit comment compiler, exécuter et déboguer du code sur la cible distante au sein d’un projet Linux C++ dans Visual Studio.
 ms.date: 06/07/2019
 ms.assetid: f7084cdb-17b1-4960-b522-f84981bea879
-ms.openlocfilehash: 183554814ef48a93c11d782a89e04c43fcce5e9f
-ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
+ms.openlocfilehash: e68feab3a71cd5bb3f6b88eee52f0872ef4bb213
+ms.sourcegitcommit: 8e285a766523e653aeeb34d412dc6f615ef7b17b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/17/2020
-ms.locfileid: "79441660"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80077835"
 ---
 # <a name="deploy-run-and-debug-your-linux-project"></a>Déployer, exécuter et déboguer un projet Linux
 
@@ -35,7 +35,7 @@ Il existe plusieurs façons de manipuler et déboguer votre projet Linux.
 ## <a name="debug-your-linux-project"></a>Déboguer votre projet Linux
 
 1. Sélectionnez le mode de débogage dans la page de propriétés **Débogage**.
-   
+
    ::: moniker range="vs-2019"
 
    GDB est utilisé pour déboguer les applications exécutées sur Linux. Lors du débogage sur un système distant (pas WSL), GDB peut s’exécuter dans deux modes différents, que vous pouvez sélectionner à partir de l’option **Mode de débogage** dans la page de propriétés **Débogage** du projet :
@@ -51,7 +51,6 @@ Il existe plusieurs façons de manipuler et déboguer votre projet Linux.
    ![Options GDB](media/vs2017-debugger-settings.png)
 
    ::: moniker-end
-
 
    - En mode **gdbserver**, GDB s’exécute localement et se connecte à gdbserver sur le système distant.  Notez qu’il s’agit du seul mode que la fenêtre de console Linux prend en charge.
 
@@ -129,7 +128,7 @@ ExePath="C:\temp\ConsoleApplication17\ConsoleApplication17\bin\x64\Debug\Console
 
 ::: moniker range="vs-2019"
 
-## <a name="separate_build_debug"></a> Spécifier des machines différentes pour effectuer le build et déboguer
+## <a name="specify-different-machines-for-building-and-debugging"></a><a name="separate_build_debug"></a> Spécifier des machines différentes pour effectuer le build et déboguer
 
 Dans Visual Studio 2019 version 16.1, vous pouvez séparer votre machine de build distante de votre machine de débogage distante pour les projets Linux basés sur MSBuild et les projets CMake qui ciblent une machine Linux distante. Par exemple, vous pouvez maintenant utiliser la compilation croisée sur x64 et déployer sur un appareil ARM lors du ciblage de scénarios IoT.
 

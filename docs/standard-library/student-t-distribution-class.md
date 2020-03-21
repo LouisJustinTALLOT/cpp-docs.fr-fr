@@ -21,12 +21,12 @@ helpviewer_keywords:
 - std::student_t_distribution [C++], max
 - std::student_t_distribution [C++], param_type
 ms.assetid: 87b48127-9311-4d07-95df-833ed46bf0b1
-ms.openlocfilehash: ebf9324d478a12476b548dc62455e205b9261430
-ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
+ms.openlocfilehash: 5a4e7306dbfee4f1482ee81d3470f166697e3ab6
+ms.sourcegitcommit: 8e285a766523e653aeeb34d412dc6f615ef7b17b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/21/2019
-ms.locfileid: "72685868"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80076382"
 ---
 # <a name="student_t_distribution-class"></a>student_t_distribution, classe
 
@@ -64,8 +64,8 @@ public:
 
 ### <a name="parameters"></a>Paramètres
 
-*RealType* \
-Le type de résultat à virgule flottante, par défaut, est **double**. Pour découvrir les types possibles, consultez [\<random>](../standard-library/random.md).
+*RealType*\
+Le type de résultat à virgule flottante, par défaut, est **double**. Pour connaître les types possibles, consultez [\<random>](../standard-library/random.md).
 
 ## <a name="remarks"></a>Notes
 
@@ -80,7 +80,7 @@ La fonction de propriété `n()` retourne la valeur du paramètre de distributio
 
 Pour plus d’informations sur les classes de distribution et leurs membres, consultez [\<random>](../standard-library/random.md).
 
-Pour obtenir des informations détaillées sur la distribution *T* de Student, consultez l’article de Wolfram MathWorld sur la [distribution T de Student](http://mathworld.wolfram.com/Studentst-Distribution.html).
+Pour obtenir des informations détaillées sur la distribution *T* de Student, consultez l’article de Wolfram MathWorld sur la [distribution T de Student](https://mathworld.wolfram.com/Studentst-Distribution.html).
 
 ## <a name="example"></a>Exemple
 
@@ -157,13 +157,13 @@ Distribution for 10 samples:
     10: 92.7084335614
 ```
 
-## <a name="requirements"></a>spécifications
+## <a name="requirements"></a>Spécifications
 
-**En-tête :** \<random>
+**En-tête :** \<> aléatoire
 
 **Espace de noms :** std
 
-## <a name="student_t_distribution"></a>  student_t_distribution::student_t_distribution
+## <a name="student_t_distributionstudent_t_distribution"></a><a name="student_t_distribution"></a>  student_t_distribution::student_t_distribution
 
 Construit la distribution.
 
@@ -177,7 +177,7 @@ explicit student_t_distribution(const param_type& parm);
 *n*\
 Paramètre de distribution `n`.
 
-*param* \
+*param*\
 Package de paramètres utilisé pour construire la distribution.
 
 ### <a name="remarks"></a>Notes
@@ -186,9 +186,9 @@ Package de paramètres utilisé pour construire la distribution.
 
 Le premier constructeur construit un objet dont la valeur `n` stockée contient la valeur *n*.
 
-Le deuxième constructeur construit un objet dont les paramètres stockés sont initialisés à partir de *parm*. Vous pouvez obtenir et définir les paramètres actuels d'une distribution existante en appelant la fonction membre `param()`.
+Le second constructeur construit un objet dont les paramètres stockés sont initialisés à partir de *parm*. Vous pouvez obtenir et définir les paramètres actuels d'une distribution existante en appelant la fonction membre `param()`.
 
-## <a name="param_type"></a>  student_t_distribution::param_type
+## <a name="student_t_distributionparam_type"></a><a name="param_type"></a>  student_t_distribution::param_type
 
 Stocke tous les paramètres de la distribution.
 

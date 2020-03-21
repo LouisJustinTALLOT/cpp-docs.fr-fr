@@ -9,19 +9,19 @@ helpviewer_keywords:
 - projects [MFC], creating
 - DLLs [MFC], creating
 ms.assetid: 05540b93-4781-4a90-aadf-55158313f5b2
-ms.openlocfilehash: 649a47abea23aedb9aa97bb4923e7a800348e27e
-ms.sourcegitcommit: bf1940a39029dbbd861f95480f55e5e8bd25cda0
+ms.openlocfilehash: 6a1718e1f347be46b2f228479d3dbd30027b3160
+ms.sourcegitcommit: 8e285a766523e653aeeb34d412dc6f615ef7b17b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/28/2019
-ms.locfileid: "70108477"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80077443"
 ---
 # <a name="creating-an-mfc-dll-project"></a>Création d'un projet DLL MFC
 
 Une DLL MFC est un fichier binaire qui agit comme une bibliothèque partagée de fonctions qui peuvent être utilisées simultanément par plusieurs applications. Le moyen le plus simple de créer un projet DLL MFC consiste à utiliser l’Assistant DLL MFC.
 
 > [!NOTE]
->  L’apparence des fonctionnalités dans l’IDE peut dépendre de vos paramètres actifs ou de l’édition et peut différer de ceux décrits dans l’aide de. Pour modifier vos paramètres, choisissez **Importation et exportation de paramètres** dans le menu **Outils** . Pour plus d’informations, consultez [Personnaliser l’IDE Visual Studio](/visualstudio/ide/personalizing-the-visual-studio-ide).
+>  L’apparence des fonctionnalités dans l’IDE peut dépendre de vos paramètres actifs ou de l’édition et peut différer de ceux décrits dans l’aide de. Pour modifier vos paramètres, choisissez **Paramètres d'importation et d'exportation** dans le menu **Outils** . Pour plus d’informations, consultez [Personnaliser l’IDE Visual Studio](/visualstudio/ide/personalizing-the-visual-studio-ide).
 
 ### <a name="to-create-an-mfc-dll-project-using-the-mfc-dll-wizard"></a>Pour créer un projet DLL MFC à l’aide de l’Assistant DLL MFC
 
@@ -41,4 +41,3 @@ Une fois votre projet créé, vous pouvez visualiser les fichiers créés dans l
 [Types de projets C++ dans Visual Studio](/visualstudio/debugger/debugging-preparation-visual-cpp-project-types)<br/>
 [Ajout de fonctionnalités à l’aide des Assistants Code](../../ide/adding-functionality-with-code-wizards-cpp.md)<br/>
 [Pages de propriétés](../../build/reference/property-pages-visual-cpp.md)
-

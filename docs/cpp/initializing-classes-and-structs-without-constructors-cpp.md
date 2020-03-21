@@ -3,12 +3,12 @@ title: Initialisation des accolades pour les classes, les structs et les unions
 description: Utiliser l’initialisation des accolades avec C++ n’importe quelle classe, struct ou Union
 ms.date: 11/19/2019
 ms.assetid: 3e55c3d6-1c6b-4084-b9e5-221b151402f4
-ms.openlocfilehash: a2c9db4572b0dde94c42ec6768a0f3bed7766a96
-ms.sourcegitcommit: 15677b0e4d2518847ce59b158990b25c4077e565
+ms.openlocfilehash: 2f04401c7fca417baec09fa3023e14b9b85ea63c
+ms.sourcegitcommit: 8e285a766523e653aeeb34d412dc6f615ef7b17b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/03/2020
-ms.locfileid: "75652622"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80075882"
 ---
 # <a name="brace-initialization"></a>Initialisation de l’accolade
 
@@ -147,7 +147,7 @@ initializer_list<int> int_list{5, 6, 7};
 ```
 
 > [!IMPORTANT]
->  Pour utiliser cette classe, vous devez inclure l’en-tête [\<initializer_list](../standard-library/initializer-list.md) .
+>  Pour utiliser cette classe, vous devez inclure l’en-tête [>\<initializer_list](../standard-library/initializer-list.md) .
 
 Une `initializer_list` peut être copiée. Dans ce cas, les membres de la nouvelle liste sont des références aux membres de la liste d’origine :
 
@@ -166,7 +166,6 @@ map<int, string> m1{ {1, "a"}, {2, "b"} };
 string s{ 'a', 'b', 'c' };
 regex rgx{ 'x', 'y', 'z' };
 ```
-
 
 ## <a name="see-also"></a>Voir aussi
 

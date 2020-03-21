@@ -25,12 +25,12 @@ helpviewer_keywords:
 - GetReferencedRowset method
 - GetSpecification method
 ms.assetid: 9c654155-7727-464e-bd31-143e68391a47
-ms.openlocfilehash: 7389ba689fb1f371b5fbf73045dcdc78cd465d88
-ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
+ms.openlocfilehash: 691871bfc4a9e63167611a3228807fb12e32d1cb
+ms.sourcegitcommit: 8e285a766523e653aeeb34d412dc6f615ef7b17b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/17/2020
-ms.locfileid: "79446188"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80077869"
 ---
 # <a name="irowsetinfoimpl-class"></a>IRowsetInfoImpl, classe
 
@@ -41,7 +41,7 @@ Fournit une implémentation pour l’interface [IRowsetInfo](/previous-versions/
 ```cpp
 template <class T, class PropClass = T>
 class ATL_NO_VTABLE IRowsetInfoImpl :
-   public IRowsetInfo, 
+   public IRowsetInfo,
    public CUtlProps<PropClass>
 ```
 
@@ -71,7 +71,7 @@ Classe de propriété définissable par l’utilisateur qui A par défaut la val
 
 Interface obligatoire sur les ensembles de lignes. Cette classe implémente les propriétés de l’ensemble de lignes à l’aide du [mappage de jeu de propriétés](../../data/oledb/begin-propset-map.md) défini dans votre classe de commande. Bien que la classe d’ensemble de lignes semble utiliser les jeux de propriétés de la classe de commande, l’ensemble de lignes est fourni avec sa propre copie des propriétés au moment de l’exécution, lorsqu’il est créé par un objet de commande ou de session.
 
-## <a name="getproperties"></a>IRowsetInfoImpl :: GetProperties
+## <a name="irowsetinfoimplgetproperties"></a><a name="getproperties"></a>IRowsetInfoImpl :: GetProperties
 
 Retourne les paramètres actuels des propriétés dans le groupe de `DBPROPSET_ROWSET`.
 
@@ -88,7 +88,7 @@ STDMETHOD (GetProperties )(const ULONG cPropertyIDSets,
 
 Consultez [IRowsetInfo :: GetProperties](/previous-versions/windows/desktop/ms719611(v=vs.85)) dans le *Guide de référence du programmeur OLE DB*.
 
-## <a name="getreferencedrowset"></a>IRowsetInfoImpl :: GetReferencedRowset
+## <a name="irowsetinfoimplgetreferencedrowset"></a><a name="getreferencedrowset"></a>IRowsetInfoImpl :: GetReferencedRowset
 
 Retourne un pointeur d’interface vers l’ensemble de lignes auquel un signet s’applique.
 
@@ -104,7 +104,7 @@ STDMETHOD (GetReferencedRowset )(DBORDINAL iOrdinal,
 
 Consultez [IRowsetInfo :: GetReferencedRowset](/previous-versions/windows/desktop/ms721145(v=vs.85)) dans le *Guide de référence du programmeur OLE DB*. Le paramètre *iOrdinal* doit être une colonne de signets.
 
-## <a name="getspecification"></a>IRowsetInfoImpl :: GetSpecification
+## <a name="irowsetinfoimplgetspecification"></a><a name="getspecification"></a>IRowsetInfoImpl :: GetSpecification
 
 Retourne un pointeur d'interface sur l'objet (commande ou session) qui a créé ce jeu de lignes.
 

@@ -11,12 +11,12 @@ helpviewer_keywords:
 - Build system changes, $(Inherit)
 - Build system changes, $(NoInherit)
 ms.assetid: e564d95f-a6cc-4d97-b57e-1a71daf66f4a
-ms.openlocfilehash: afa9324d6074db72fd065cfa07c16349f86a615c
-ms.sourcegitcommit: 0cfc43f90a6cc8b97b24c42efcf5fb9c18762a42
+ms.openlocfilehash: ce3eb9e51a103aa54b74c7b5b4f775eb402269f1
+ms.sourcegitcommit: 8e285a766523e653aeeb34d412dc6f615ef7b17b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/05/2019
-ms.locfileid: "73626600"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80076954"
 ---
 # <a name="vcbuild-vs-msbuild-build-system-changes-in-visual-studio-2010"></a>VCBuild et MSBuild : générer des modifications du système dans Visual Studio 2010
 
@@ -63,7 +63,7 @@ Lorsque **Explorateur de solutions** est utilisé pour ajouter un fichier à un 
 
 ## <a name="vc-directories-settings"></a>Paramètres des répertoires VC + +
 
-Les paramètres des répertoires Visual C++ sont spécifiés dans la [page de propriétés des répertoires VC++](../ide/vcpp-directories-property-page.md). Dans Visual Studio 2008 et versions antérieures, les paramètres des répertoires s’appliquent par utilisateur et la liste des répertoires exclus est spécifiée dans le fichier *SYSINCL. dat* . 
+Les paramètres des répertoires Visual C++ sont spécifiés dans la [page de propriétés des répertoires VC++](../ide/vcpp-directories-property-page.md). Dans Visual Studio 2008 et versions antérieures, les paramètres des répertoires s’appliquent par utilisateur et la liste des répertoires exclus est spécifiée dans le fichier *SYSINCL. dat* .
 
 Vous ne pouvez pas changer les paramètres des répertoires VC++ si vous exécutez [devenv /resetsettings](/visualstudio/ide/reference/resetsettings-devenv-exe) sur la ligne de commande. Vous ne pouvez pas non plus changer les paramètres si vous ouvrez le menu **Outils**, cliquez sur **Importation et exportation de paramètres**, puis sélectionnez l’option **Réinitialiser tous les paramètres**.
 
@@ -71,7 +71,7 @@ Pour migrer les paramètres des répertoires VC + + à partir d’un fichier *. 
 
 1. Ouvrez le menu **Outils** , cliquez sur **importation et exportation de paramètres** .
 2. Sélectionnez **Importer les paramètres d’environnement sélectionnés**
-3. Suivez les instructions de l’Assistant.
+3. Suivez les indications fournies par l'Assistant.
 
 ## <a name="see-also"></a>Voir aussi
 

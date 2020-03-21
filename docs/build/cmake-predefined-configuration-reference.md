@@ -4,12 +4,12 @@ ms.description: Visual Studio provides several predefined build configurations f
 ms.date: 06/12/2019
 helpviewer_keywords:
 - CMake redefined configurations
-ms.openlocfilehash: f7a8594fb4cdedd4a1f5640914155ccd1eacdc14
-ms.sourcegitcommit: 44eeb065c3148d0484de791080a3f963109744fc
+ms.openlocfilehash: 296977a08a869b1da2ed8ca292fc39e0df6324b4
+ms.sourcegitcommit: 8e285a766523e653aeeb34d412dc6f615ef7b17b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/18/2020
-ms.locfileid: "79509430"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80078754"
 ---
 # <a name="cmake-predefined-build-configurations"></a>Configurations de build CMake prédéfinies
 
@@ -34,7 +34,6 @@ Dans un projet CMake, les configurations de build sont stockées dans un fichier
 - MinGW Release
 
 Lorsque vous choisissez une configuration, elle est ajoutée au fichier *CMakeSettings. JSON* dans le dossier racine du projet. Vous pouvez ensuite l’utiliser pour générer votre projet. Pour plus d’informations sur les propriétés de configuration, consultez [référence CMakeSettings](cmakesettings-reference.md).
-
 
 ## <a name="linux-predefined-build-configurations"></a>Configurations de build Linux prédéfinies :
 
@@ -381,7 +380,6 @@ Dans un projet CMake, les configurations de build sont stockées dans un fichier
 - Clang
 
 Quand vous choisissez une configuration, celle-ci est ajoutée au fichier CMakeSettings.json dans le dossier racine du projet. Vous pouvez ensuite l’utiliser pour générer votre projet.
-
 
 ```json
 {

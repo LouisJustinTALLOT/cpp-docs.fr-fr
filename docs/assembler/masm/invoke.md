@@ -6,16 +6,16 @@ f1_keywords:
 helpviewer_keywords:
 - INVOKE directive
 ms.assetid: 12d9bb40-33b9-411e-b801-45a1d675967e
-ms.openlocfilehash: 7a005e5e70a2696ca89fb0ad1a3ff02aab8ffe5a
-ms.sourcegitcommit: 0781c69b22797c41630601a176b9ea541be4f2a3
+ms.openlocfilehash: ba1377359ba9bc960e5d7d2a55df15adfe0d5d33
+ms.sourcegitcommit: 8e285a766523e653aeeb34d412dc6f615ef7b17b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/20/2019
-ms.locfileid: "75317186"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80076221"
 ---
 # <a name="invoke"></a>INVOKE
 
-(uniquement MASM 32 bits.) Appelle la procédure à l’adresse donnée par l' *expression*, en passant les arguments sur la pile ou dans les registres en fonction des conventions d’appel standard du type de langage.     
+(uniquement MASM 32 bits.) Appelle la procédure à l’adresse donnée par l' *expression*, en passant les arguments sur la pile ou dans les registres en fonction des conventions d’appel standard du type de langage.
 
 ## <a name="syntax"></a>Syntaxe
 

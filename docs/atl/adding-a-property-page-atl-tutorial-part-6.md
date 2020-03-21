@@ -3,17 +3,17 @@ title: Ajout d'une page de propriétés (Didacticiel ATL, Partie 6)
 ms.custom: get-started-article
 ms.date: 09/27/2018
 ms.assetid: df80d255-e7ea-49d9-b940-3f012e90cf9b
-ms.openlocfilehash: 2c487d1446f5d1050868f2066359e9639f474ba3
-ms.sourcegitcommit: 00e26915924869cd7eb3c971a7d0604388abd316
-ms.translationtype: HT
+ms.openlocfilehash: 467ae19c372e24b2d368002cb83367b7087136fd
+ms.sourcegitcommit: 8e285a766523e653aeeb34d412dc6f615ef7b17b
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/10/2019
-ms.locfileid: "65524683"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80078769"
 ---
 # <a name="adding-a-property-page-atl-tutorial-part-6"></a>Ajout d'une page de propriétés (Didacticiel ATL, Partie 6)
 
-> [!NOTE] 
-> L’Assistant Fournisseur OLE DB ATL n’est pas disponible dans Visual Studio 2019 et versions ultérieures.
+> [!NOTE]
+> L’Assistant Fournisseur OLE DB ATL n’est pas disponible dans Visual Studio 2019 et les versions ultérieures.
 
 Les pages de propriétés sont implémentées en tant qu’objets COM distincts, ce qui leur permet d’être partagées si nécessaire. Au cours de cette étape, vous allez exécuter les tâches suivantes pour ajouter une page de propriétés au contrôle :
 
@@ -151,4 +151,4 @@ Ensuite, vous allez placer votre contrôle sur une page Web.
 
 ## <a name="see-also"></a>Voir aussi
 
-[Tutoriel](../atl/active-template-library-atl-tutorial.md)
+[Didacticiel](../atl/active-template-library-atl-tutorial.md)

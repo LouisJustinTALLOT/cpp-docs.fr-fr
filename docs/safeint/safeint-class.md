@@ -10,18 +10,18 @@ helpviewer_keywords:
 - SafeInt class
 - SafeInt class, constructor
 ms.assetid: 27a8f087-2511-46f9-8d76-2aeb66ca272f
-ms.openlocfilehash: 1fc7ec438d83be1a92d8fa9d699f4172aba842e4
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
-ms.translationtype: HT
+ms.openlocfilehash: c69dc7ed5e34d98d5acff8f2bc28c34761bd31c6
+ms.sourcegitcommit: 8e285a766523e653aeeb34d412dc6f615ef7b17b
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "65515554"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80076818"
 ---
 # <a name="safeint-class"></a>SafeInt, classe
 
 Étend les primitifs entiers afin d’éviter les débordements d’entiers et permet de comparer les différents types d’entiers.
 
-> [!NOTE] 
+> [!NOTE]
 > La dernière version de cette bibliothèque se trouve dans [https://github.com/dcleblanc/SafeInt](https://github.com/dcleblanc/SafeInt).
 
 ## <a name="syntax"></a>Syntaxe
@@ -53,7 +53,7 @@ class SafeInt;
 |---------------------------|--------------------|
 | [SafeInt::SafeInt](#safeint)  |  Constructeur par défaut. |
 
-### <a name="assignment-operators"></a>Opérateurs d'assignation
+### <a name="assignment-operators"></a>Opérateurs d’affectation
 
 | Name  |  Syntaxe |
 |----|---------|
@@ -162,7 +162,7 @@ class SafeInt;
 | &#124;=  |  `template<typename U>`<br /><br /> `SafeInt<T,E>& operator&#124;= (U rhs) throw()` |
 | &#124;=  |  `template<typename U>`<br /><br /> `SafeInt<T,E>& operator&#124;= (SafeInt<U, E> rhs) throw()` |
 
-## <a name="remarks"></a>Remarques
+## <a name="remarks"></a>Notes
 
 La classe `SafeInt` protège contre les dépassements sur les entiers dans les opérations mathématiques. Par exemple, vous pouvez ajouter deux entiers 8 bits, l’un avec une valeur de 200 et l’autre avec une valeur de 100. L’opération mathématique correcte serait 100 + 200 = 300. Toutefois, en raison de la limitation de l’entier 8 bits, le bit supérieur sera perdu et le compilateur retournera 44 (300 - 2<sup>8</sup>) comme résultat. Toute opération dépendant de cette équation mathématique générera un comportement inattendu.
 
@@ -229,7 +229,7 @@ Deux options sont disponibles pour personnaliser la stratégie d’erreur. La pr
 
 **Espace de noms :** msl::utilities
 
-## <a name="safeint"></a>SafeInt::SafeInt
+## <a name="safeintsafeint"></a><a name="safeint"></a>SafeInt::SafeInt
 
 Construit un objet `SafeInt`.
 
@@ -268,7 +268,7 @@ SafeInt (
 
 U Le type de données stockées dans `SafeInt`. Il peut s’agit d’un type booléen, d’un type de caractère ou d’un type entier. S’il s’agit d’un type entier, il peut être signé ou non signé, et être compris entre 8 et 64 bits.
 
-### <a name="remarks"></a>Remarques
+### <a name="remarks"></a>Notes
 
 Le paramètre d’entrée pour le constructeur, *i* ou *u*, doit être un type booléen, de caractère ou entier. S’il s’agit d’un autre type de paramètre, la classe `SafeInt` appelle [static_assert](../cpp/static-assert.md) pour indiquer un paramètre d’entrée non valide.
 

@@ -3,12 +3,12 @@ title: Convention d’appel x64
 description: Détails de la Convention d’appel ABI x64 par défaut.
 ms.date: 12/17/2018
 ms.assetid: 41ca3554-b2e3-4868-9a84-f1b46e6e21d9
-ms.openlocfilehash: 2cad00ac7f2cb5fe086fa262a0f512330997391f
-ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
+ms.openlocfilehash: 5b9801eff6a9789313d083fdd6ed69c3076643ad
+ms.sourcegitcommit: 8e285a766523e653aeeb34d412dc6f615ef7b17b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/16/2020
-ms.locfileid: "79417165"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80078084"
 ---
 # <a name="x64-calling-convention"></a>Convention d’appel x64
 
@@ -147,7 +147,7 @@ Les registres RAX, RCX, RDX, R8, R9, R10, R11, XMM0-5 et les parties supérieure
 Les registres RBX, RBP, RDI, RSI, RSP, R12, R13, R14, R15 et XMM6-15 sont considérés comme non volatils et doivent être enregistrés et restaurés par une fonction qui les utilise.
 
 ## <a name="function-pointers"></a>Pointeurs fonction
- 
+
 Les pointeurs de fonction sont simplement des pointeurs vers l’étiquette de la fonction respective. Il n’existe aucune configuration de table des matières pour les pointeurs de fonction.
 
 ## <a name="floating-point-support-for-older-code"></a>Prise en charge de la virgule flottante pour le code plus ancien

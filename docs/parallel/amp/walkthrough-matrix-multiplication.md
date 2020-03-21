@@ -2,18 +2,18 @@
 title: 'Procédure pas à pas : Multiplication des matrices'
 ms.date: 04/23/2019
 ms.assetid: 61172e8b-da71-4200-a462-ff3a908ab0cf
-ms.openlocfilehash: 341800e258f89db340d206ebe04bc20d4763ad1a
-ms.sourcegitcommit: a930a9b47bd95599265d6ba83bb87e46ae748949
+ms.openlocfilehash: a84383aa02b3f8300774e18ba2b27655d07b72ae
+ms.sourcegitcommit: 8e285a766523e653aeeb34d412dc6f615ef7b17b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/22/2020
-ms.locfileid: "76518489"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80075708"
 ---
 # <a name="walkthrough-matrix-multiplication"></a>Procédure pas à pas : Multiplication des matrices
 
 Cette procédure pas à pas montre comment utiliser C++ amp pour accélérer l’exécution de la multiplication de matrice. Deux algorithmes sont présentés : un sans mosaïque et un avec une mosaïque.
 
-## <a name="prerequisites"></a>Prerequisites
+## <a name="prerequisites"></a>Conditions préalables requises
 
 Avant de commencer :
 
@@ -33,7 +33,7 @@ Les instructions de création d’un nouveau projet varient en fonction de la ve
 
 1. Dans la barre de menus, choisissez **fichier** > **nouveau** **projet** > pour ouvrir la boîte de dialogue **créer un nouveau projet** .
 
-1. En haut de la boîte de dialogue, définissez **Langage** sur **C++** , **Plateforme** sur **Windows** et **Type de projet** sur **Console**. 
+1. En haut de la boîte de dialogue, définissez **Langage** sur **C++** , **Plateforme** sur **Windows** et **Type de projet** sur **Console**.
 
 1. Dans la liste filtrée des types de projets, choisissez **projet vide** , puis **suivant**. Dans la page suivante, entrez *MatrixMultiply* dans la zone **nom** pour spécifier un nom pour le projet, puis spécifiez l’emplacement du projet si vous le souhaitez.
 

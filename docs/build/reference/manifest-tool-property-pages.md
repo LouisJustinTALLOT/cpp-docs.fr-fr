@@ -24,16 +24,16 @@ f1_keywords:
 - VC.Project.VCManifestTool.UpdateFileHashesSearchPath
 - vc.project.AdditionalOptionsPage
 ms.assetid: f33499c4-7733-42d9-80e3-8a5018786965
-ms.openlocfilehash: d9b074667614da8d83fae7b00b49bf63c9390b69
-ms.sourcegitcommit: effb516760c0f956c6308eeded48851accc96b92
+ms.openlocfilehash: 20ca118b3aacb02333d49b67d13de30f11dc5d8d
+ms.sourcegitcommit: 8e285a766523e653aeeb34d412dc6f615ef7b17b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70927677"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80079499"
 ---
 # <a name="manifest-tool-property-pages"></a>Pages de propriétés de l'outil Manifeste
 
-Utilisez ces pages pour spécifier les options générales pour [Mt. exe](/windows/win32/sbscs/mt-exe). Ces pages se trouvent sous**Propriétés** > du **projet** > **Propriétés** > de configuration**outil manifeste**.
+Utilisez ces pages pour spécifier les options générales pour [Mt. exe](/windows/win32/sbscs/mt-exe). Ces pages se trouvent sous **Propriétés** du **projet** >  > **Propriétés de configuration** > **outil manifeste**.
 
 ## <a name="general-property-page"></a>Général, page de propriétés
 
@@ -49,9 +49,9 @@ Utilisez ces pages pour spécifier les options générales pour [Mt. exe](/windo
 
 Utilise l’option /identity afin de spécifier une chaîne d’identité qui comprend les attributs pour [l’élément \<assemblyIdentity>](/visualstudio/deployment/assemblyidentity-element-clickonce-application). Une chaîne d’identité commence par la valeur de l’attribut `name`, suivie des paires *attribut* = *valeur*. Les attributs dans une chaîne d’identité sont délimités par une virgule.
 
-Voici un exemple de chaîne d’identité :`Microsoft.Windows.Common-Controls, processorArchitecture=x86, version=6.0.0.0, type=win32, publicKeyToken=6595b64144ccf1df`
+Voici un exemple de chaîne d’identité : `Microsoft.Windows.Common-Controls, processorArchitecture=x86, version=6.0.0.0, type=win32, publicKeyToken=6595b64144ccf1df`
 
-## <a name="input-and-output-property-page"></a>Page de propriétés d’entrée et de sortie     
+## <a name="input-and-output-property-page"></a>Page de propriétés d’entrée et de sortie
 
 ###  <a name="additional-manifest-files"></a>Fichiers manifeste supplémentaires
 
@@ -97,7 +97,7 @@ Utilisé avec-managedAssembly. -Category provoque la génération des balises de
 
 Spécifie si l’application prend en charge DPI. Par défaut, le paramètre a la valeur **Oui** pour les projets MFC et **Non** pour les autres projets parce que seuls les projets MFC présentent une prise en charge DPI intégrée. Vous pouvez remplacer le paramètre par **Oui** si vous ajoutez du code pour gérer différents paramètres DPI. Votre application peut apparaître floue ou petite si vous la définissez comme prenant en charge DPI quand ce n’est pas le cas.
 
-**Choix**
+**Choices**
 
 - **Aucun**
 - **Prise en charge des résolutions élevées**
@@ -105,7 +105,7 @@ Spécifie si l’application prend en charge DPI. Par défaut, le paramètre a l
 
 ## <a name="isolated-com-property-page"></a>Page de propriétés COM isolé
 
-Pour plus d’informations sur le modèle COM isolé, consultez [applications isolées](/windows/win32/SbsCs/isolated-applications) et [procédure : Générez des applications isolées pour](../how-to-build-isolated-applications-to-consume-com-components.md)consommer des composants com.
+Pour plus d’informations sur le modèle COM isolé, consultez [applications isolées](/windows/win32/SbsCs/isolated-applications) et [Comment : générer des applications isolées pour consommer des composants com](../how-to-build-isolated-applications-to-consume-com-components.md).
 
 ###  <a name="type-library-file"></a>Fichier bibliothèque de types
 
@@ -136,7 +136,6 @@ Spécifie le chemin de recherche à utiliser lors de la mise à jour des hachage
 ###  <a name="additional-options"></a>Options supplémentaires
 
 Options supplémentaires
-
 
 ## <a name="see-also"></a>Voir aussi
 

@@ -47,12 +47,12 @@ f1_keywords:
 - VC.Project.VCMidlTool.RedirectOutputAndErrors
 - VC.Project.VCMidlTool.MinimumTargetSystem
 - vc.project.AdditionalOptionsPage
-ms.openlocfilehash: e9c9cb75d326642c86405992a4bf9d7da9e578df
-ms.sourcegitcommit: effb516760c0f956c6308eeded48851accc96b92
+ms.openlocfilehash: 260936d01a611f061b0b4fa9a5c087ff38cc66a3
+ms.sourcegitcommit: 8e285a766523e653aeeb34d412dc6f615ef7b17b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70927695"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80076131"
 ---
 # <a name="midl-property-pages"></a>Pages de propriétés MIDL
 
@@ -62,15 +62,15 @@ Les pages de propriétés MIDL sont disponibles en tant que propriété d’él�
 
 ### <a name="preprocessor-definitions"></a>Définitions de préprocesseur
 
-Spécifie une ou plusieurs définitions, y compris les macros MIDL\[([/d](/windows/win32/midl/-d))\].
+Spécifie une ou plusieurs définitions, y compris les macros MIDL ([/d](/windows/win32/midl/-d))\[les macros\]).
 
 ### <a name="additional-include-directories"></a>Autres répertoires Include
 
-Spécifie un ou plusieurs répertoires à ajouter au chemin d’accès include ([/i](/windows/win32/midl/-i)\[Path\]).
+Spécifie un ou plusieurs répertoires à ajouter au chemin d’accès include ([/i](/windows/win32/midl/-i)\[chemin d’accès\]).
 
 ### <a name="additional-metadata-directories"></a>Répertoires de métadonnées supplémentaires
 
-Spécifiez le répertoire contenant le fichier Windows. Foundation. WinMD (chemin\]d’accès[/metadata_dir](/windows/win32/midl/-metadata-dir) \[).
+Spécifiez le répertoire contenant le fichier Windows. Foundation. WinMD ([/metadata_dir](/windows/win32/midl/-metadata-dir) \[chemin d’accès\]).
 
 ### <a name="enable-windows-runtime"></a>Activer Windows Runtime
 
@@ -84,11 +84,11 @@ Ignorez les répertoires actuels et INCLUDe ([/no_def_idir](/windows/win32/midl/
 
 Force la compatibilité avec mktyplib. exe version 2,03 ([/mktyplib203](/windows/win32/midl/-mktyplib203)).
 
-### <a name="warning-level"></a>Niveau d’avertissement
+### <a name="warning-level"></a>Niveau d'avertissement
 
 Sélectionne la rigueur des erreurs de code MIDL ([/w](/windows/win32/midl/-w)).
 
-**Choix**
+**Choices**
 
 - **1**
 - **1**
@@ -108,7 +108,7 @@ Supprimer l’affichage de la bannière de démarrage et du message d’informat
 
 Spécifie le type de caractère par défaut du compilateur C qui sera utilisé pour compiler le code généré. ([/char](/windows/win32/midl/-char) signé | unsigned | ascii7).
 
-**Choix**
+**Choices**
 
 - **Signé** -signé
 - Non **signé** -non signé
@@ -118,7 +118,7 @@ Spécifie le type de caractère par défaut du compilateur C qui sera utilisé p
 
 Spécifie l’environnement à cibler ([/env](/windows/win32/midl/-env) Arm32 | Win32 | ia64 | x64).
 
-**Choix**
+**Choices**
 
 - **Non défini** -Win32
 - **Microsoft Windows 32** bits-Win32
@@ -133,7 +133,7 @@ Générez des stubs entièrement interprétés avec des extensions et des proxie
 
 ### <a name="suppress-compiler-warnings"></a>Supprimer les avertissements du compilateur
 
-Supprimez les messages d’avertissement du compilateur ([/no_warn](/windows/win32/midl/-no-warn)).
+Supprimer les messages d’avertissement du compilateur ([/no_warn](/windows/win32/midl/-no-warn)).
 
 ### <a name="application-configuration-mode"></a>Mode de configuration de l’application
 
@@ -157,7 +157,7 @@ Spécifie le répertoire de sortie ([/out](/windows/win32/midl/-out) [Directory]
 
 Spécifie le nom du fichier de métadonnées généré ([/winmd](/windows/win32/midl/-winmd) filename).
 
-### <a name="header-file"></a>Fichier d’en-tête
+### <a name="header-file"></a>Fichier d'en-tête
 
 Spécifie le nom du fichier d’en-tête généré ([/h](/windows/win32/midl/-h) filename).
 
@@ -185,7 +185,7 @@ Spécifie le nom du fichier bibliothèque de types (nom de fichier[/TLB](/window
 
 Générer le fichier stub du client uniquement ([/client](/windows/win32/midl/-client) [stub | None]).
 
-**Choix**
+**Choices**
 
 - **Stub-stub**
 - **Aucun** -aucun
@@ -194,7 +194,7 @@ Générer le fichier stub du client uniquement ([/client](/windows/win32/midl/-c
 
 Générer le fichier stub du serveur uniquement ([/Server](/windows/win32/midl/-server) [stub | None]).
 
-**Choix**
+**Choices**
 
 - **Stub-stub**
 - **Aucun** -aucun
@@ -211,7 +211,7 @@ Spécifiez le fichier stub du serveur ([/sstub](/windows/win32/midl/-sstub) [fic
 
 Spécifie le format de fichier de bibliothèque de types ([/oldtlb |/newtlb]).
 
-**Choix**
+**Choices**
 
 - **NewFormat** -nouveau format
 - **OldFormat** -ancien format
@@ -230,7 +230,7 @@ Spécifie une ou plusieurs non-définition, y compris les macros MIDL ([/u](/win
 
 Sélectionnez l’option de vérification des erreurs ([/Error All | None]).
 
-**Choix**
+**Choices**
 
 - **EnableCustom** -tout
 - **Tout** -tout
@@ -242,7 +242,7 @@ Rechercher les erreurs de mémoire insuffisante (attribution de[/Error](/windows
 
 ### <a name="check-bounds"></a>Vérifier les limites
 
-Vérifiez la taille par rapport à la spécification de longueur de transmission ([/Error](/windows/win32/midl/-error) bounds_check).
+Vérifiez la taille par rapport à la spécification de longueur de transmission ([/error](/windows/win32/midl/-error) bounds_check).
 
 ### <a name="check-enum-range"></a>Vérifier la plage d’énumération
 
@@ -254,7 +254,7 @@ Vérifiez que les pointeurs de référence sont non null ([/Error](/windows/win3
 
 ### <a name="check-stub-data"></a>Vérifier les données stub
 
-Émettez une vérification supplémentaire pour la validité des données stub côté serveur ([/Error](/windows/win32/midl/-error) stub_data).
+Émet une vérification supplémentaire pour la validité des données stub côté serveur ([/error](/windows/win32/midl/-error) stub_data).
 
 ### <a name="prepend-with-abi-namespace"></a>Ajouter au début l’espace de noms’ABI'
 
@@ -262,13 +262,13 @@ Ajoutez l’espace de noms’ABI’à tous les types.  ([/ns_prefix](/windows/wi
 
 ### <a name="validate-parameters"></a>Valider les paramètres
 
-Générez des informations supplémentaires pour valider les paramètres ([/Robust](/windows/win32/midl/-robust) | [/no_robust](/windows/win32/midl/-no-robust)).
+Générez des informations supplémentaires pour valider les paramètres ([/robust](/windows/win32/midl/-robust) | [/no_robust](/windows/win32/midl/-no-robust)).
 
 ### <a name="struct-member-alignment"></a>Alignement des membres de la structure
 
 Spécifie le niveau de compression des structures dans le système cible (/ZpN).
 
-**Choix**
+**Choices**
 
 - **Non défini** -non défini
 - **1 octet** -Zp1
@@ -283,6 +283,3 @@ Redirige la sortie de l’écran vers un fichier (fichier[/o](/windows/win32/mid
 ### <a name="minimum-target-system"></a>Système cible minimal
 
 Définissez le système cible minimal ([/target](/windows/win32/midl/-target) String).
-
-
-

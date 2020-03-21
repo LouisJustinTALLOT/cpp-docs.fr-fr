@@ -11,16 +11,16 @@ helpviewer_keywords:
 - objects [C++], adding to ATL projects
 - ATL Control Wizard
 ms.assetid: c0adcbd0-07fe-4c55-a8fd-8c2c65ecdaad
-ms.openlocfilehash: deaac8f2d6aac02d0cd751e6abebb3b67051200f
-ms.sourcegitcommit: fc1de63a39f7fcbfe2234e3f372b5e1c6a286087
+ms.openlocfilehash: 415432eb2f5e0bc8f58fc84edaf8409ee8792f27
+ms.sourcegitcommit: 8e285a766523e653aeeb34d412dc6f615ef7b17b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65706845"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80075313"
 ---
 # <a name="adding-objects-and-controls-to-an-atl-project"></a>Ajout d’objets et de contrôles à un projet ATL
 
-> [!NOTE] 
+> [!NOTE]
 > L’Assistant Composant ATL COM+ 1.0, l’Assistant Consommateur OLE DB ATL et l’Assistant Composant ASP ATL ne sont pas disponibles dans Visual Studio 2019 et ultérieur.
 
 Vous pouvez utiliser l’un des Assistants de code ATL pour ajouter un objet ou un contrôle à vos projets ATL ou MFC. Pour chaque objet ou contrôle COM que vous ajoutez, l’Assistant génère des fichiers .cpp et .h, mais également un fichier .rgs pour une prise en charge du registre basée sur un script. Les Assistants de code ATL suivants sont disponibles dans Visual Studio :

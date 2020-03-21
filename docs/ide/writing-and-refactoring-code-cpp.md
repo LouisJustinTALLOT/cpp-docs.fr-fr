@@ -4,12 +4,12 @@ description: Utilisez l’éditeur de code C++ dans Visual Studio pour mettre e
 ms.date: 05/31/2019
 ms.assetid: 56ffb9e9-514f-41f4-a3cf-fd9ce2daf3b6
 ms.topic: overview
-ms.openlocfilehash: da3f4e7d783561dba8250652a0715e51e71cc387
-ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
+ms.openlocfilehash: 6d920ec302e8385d900d74152ee5ad17851fdaac
+ms.sourcegitcommit: 8e285a766523e653aeeb34d412dc6f615ef7b17b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/17/2020
-ms.locfileid: "79438165"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80077844"
 ---
 # <a name="edit-and-refactor-c-code-in-visual-studio"></a>Modifier et refactoriser du code C++ dans Visual Studio
 
@@ -70,15 +70,15 @@ Un bouton ne s’affiche que s’il est pertinent pour votre session IntelliSens
 
 ## <a name="template-intellisense"></a>Modèle IntelliSense
 
-Quand le signe insertion est à l’intérieur d’une définition de modèle, une **Barre de modèles** s’affiche, qui vous permet de fournir des exemples d’arguments de modèle pour IntelliSense. 
+Quand le signe insertion est à l’intérieur d’une définition de modèle, une **Barre de modèles** s’affiche, qui vous permet de fournir des exemples d’arguments de modèle pour IntelliSense.
 
 ![Modèle&#43; &#43; C IntelliSense afficher les instanciations existantes](../ide/media/template-intellisense-cpp-1.png "Modèle IntelliSense afficher les instanciations existantes")
 
-Cliquez sur l’icône **\<t >** pour développer/réduire la **barre du modèle**. Cliquez sur l’icône en forme de crayon ou double-cliquez sur la **Barre de modèles** pour ouvrir la fenêtre **Modifier**. 
+Cliquez sur l’icône **\<t >** pour développer/réduire la **barre du modèle**. Cliquez sur l’icône en forme de crayon ou double-cliquez sur la **Barre de modèles** pour ouvrir la fenêtre **Modifier**.
 
 ![IntelliSense&#43; &#43; de modèle C](../ide/media/template-intellisense-cpp-3.png "Modèle IntelliSense")
 
-Les modifications apportées dans la fenêtre sont appliquées directement au code source afin que vous puissiez voir les effets en temps réel. 
+Les modifications apportées dans la fenêtre sont appliquées directement au code source afin que vous puissiez voir les effets en temps réel.
 
 La Barre de modèles peut remplir automatiquement la liste des candidats en fonction des instanciations dans votre code. Cliquez sur **Ajouter toutes les instanciations existantes** pour afficher la liste de tous les arguments concrets ayant servi à instancier le modèle dans l’ensemble de votre base de code.
 
@@ -94,13 +94,13 @@ Les informations de la **Barre de modèles** sont traitées comme étant propres
 
 Si l’éditeur détecte des problèmes dans votre code, il ajoute des tildes colorés sous ceux-ci. Les tildes rouges indiquent du code impossible à compiler. Les tildes verts indiquent d’autres types de problèmes qui peuvent s’avérer sérieux. Vous pouvez ouvrir la fenêtre **Liste d’erreurs** pour obtenir plus d’informations sur les problèmes.
 
-Pour certains types d’erreurs ainsi que les modèles de codage courants, l’éditeur propose un **Correctif rapide** sous la forme d’une ampoule qui apparaît quand vous placez le curseur sur le tilde. Cliquez sur la flèche vers le bas pour afficher les suggestions. 
+Pour certains types d’erreurs ainsi que les modèles de codage courants, l’éditeur propose un **Correctif rapide** sous la forme d’une ampoule qui apparaît quand vous placez le curseur sur le tilde. Cliquez sur la flèche vers le bas pour afficher les suggestions.
 
 Dans l’exemple suivant, un `vector` a été déclaré, mais aucune définition n’a été trouvée. L’éditeur suggère donc d’inclure le fichier d’en-tête nécessaire :
 
 ![Correctif&#43; &#43; rapide C](../ide/media/quick-fix-for-header-cpp.png "C++Correctif rapide")
 
-L’éditeur propose également des correctifs rapides pour certaines opportunités de refactorisation. Par exemple, si vous déclarez une classe dans un fichier d’en-tête, Visual Studio suggère de créer une définition pour celle-ci dans un fichier .cpp distinct. 
+L’éditeur propose également des correctifs rapides pour certaines opportunités de refactorisation. Par exemple, si vous déclarez une classe dans un fichier d’en-tête, Visual Studio suggère de créer une définition pour celle-ci dans un fichier .cpp distinct.
 
 ![Correctif&#43; &#43; rapide C](../ide/media/quick-fix.png "C++Correctif rapide")
 

@@ -1,5 +1,5 @@
 ---
-title: 'Recordset : Création et fermeture de recordsets (ODBC)'
+title: 'Recordset : création et fermeture de recordsets (ODBC)'
 ms.date: 05/09/2019
 helpviewer_keywords:
 - ODBC recordsets, creating
@@ -9,17 +9,17 @@ helpviewer_keywords:
 - ODBC recordsets, closing
 - ODBC recordsets, opening
 ms.assetid: 8d2aac23-4396-4ce2-8c60-5ecf1b360d3d
-ms.openlocfilehash: b4896dff711d87db05334afc0345c15da2fa23e6
-ms.sourcegitcommit: fc1de63a39f7fcbfe2234e3f372b5e1c6a286087
-ms.translationtype: HT
+ms.openlocfilehash: e7aa4c0fc2a0acfe7b8df2f50f99bf44eb1ef456
+ms.sourcegitcommit: 8e285a766523e653aeeb34d412dc6f615ef7b17b
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65707986"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80075922"
 ---
-# <a name="recordset-creating-and-closing-recordsets-odbc"></a>Recordset : Création et fermeture de recordsets (ODBC)
+# <a name="recordset-creating-and-closing-recordsets-odbc"></a>Recordset : création et fermeture de recordsets (ODBC)
 
-> [!NOTE] 
-> L’Assistant Consommateur ODBC MFC n’est pas disponible dans Visual Studio 2019 et ultérieur. Vous pouvez toujours créer un consommateur manuellement.
+> [!NOTE]
+> L’Assistant Consommateur ODBC MFC n’est pas disponible dans Visual Studio 2019 et ultérieur. Vous pouvez quand même créer un consommateur manuellement.
 
 Cette rubrique s’applique aux classes ODBC MFC.
 
@@ -33,7 +33,7 @@ Cette rubrique explique :
 
 - [Quand et comment fermer un objet recordset](#_core_closing_a_recordset).
 
-##  <a name="_core_creating_recordsets_at_run_time"></a> Création de recordsets au moment de l’exécution
+##  <a name="creating-recordsets-at-run-time"></a><a name="_core_creating_recordsets_at_run_time"></a> Création de recordsets au moment de l’exécution
 
 Pour pouvoir créer des objets recordset dans votre programme, vous écrivez généralement des classes recordset propres à l’application. Pour plus d’informations sur cette étape préliminaire, consultez [Ajout d’un consommateur ODBC MFC](../../mfc/reference/adding-an-mfc-odbc-consumer.md).
 
@@ -57,7 +57,7 @@ Dans votre appel à [Open](../../mfc/reference/crecordset-class.md#open), vous p
 
 - Spécifiez si le recordset est une feuille de réponse dynamique ou un instantané. Par défaut, les recordsets s’ouvrent comme des instantanés. Sinon, vous pouvez spécifier un recordset de type avant uniquement, ce qui permet uniquement le défilement avant, un seul enregistrement à la fois.
 
-   Par défaut, un recordset utilise le type par défaut stocké dans le membre de données `m_nDefaultType` de `CRecordset`. Les Assistants écrivent du code pour initialiser `m_nDefaultType` sur le type de recordset que vous choisissez dans l’Assistant. Au lieu d’accepter cette valeur par défaut, vous pouvez la remplacer par un autre type de recordset.
+   Par défaut, un recordset utilise le type par défaut stocké dans le membre de données `CRecordset` de `m_nDefaultType`. Les Assistants écrivent du code pour initialiser `m_nDefaultType` sur le type de recordset que vous choisissez dans l’Assistant. Au lieu d’accepter cette valeur par défaut, vous pouvez la remplacer par un autre type de recordset.
 
 - Spécifiez une chaîne pour remplacer l’instruction SQL **SELECT** par défaut construite par le recordset.
 
@@ -74,12 +74,12 @@ if(!rsStudent.Open(CRecordset::snapshot, NULL, CRecordset::readOnly))
 // Use the snapshot to operate on its records...
 ```
 
-Après avoir appelé `Open`, utilisez les fonctions membres et les membre de données de l’objet pour utiliser les enregistrements. Dans certains cas, vous pouvez réinterroger ou actualiser le recordset pour introduire les changements qui se sont produits au niveau de la source de données. Pour plus d’informations, consultez [Recordset : Lancement d’une nouvelle requête sur un recordset (ODBC)](../../data/odbc/recordset-requerying-a-recordset-odbc.md).
+Après avoir appelé `Open`, utilisez les fonctions membres et les membre de données de l’objet pour utiliser les enregistrements. Dans certains cas, vous pouvez réinterroger ou actualiser le recordset pour introduire les changements qui se sont produits au niveau de la source de données. Pour plus d’informations, consultez [Recordset : rerequête d’un Recordset (ODBC)](../../data/odbc/recordset-requerying-a-recordset-odbc.md).
 
 > [!TIP]
->  La chaîne de connexion que vous utilisez pendant le développement peut ne pas être la même que celle dont vos utilisateurs finaux ont besoin. Pour trouver des idées sur la généralisation de votre application à cet égard, consultez [Source de données : Gestion des connexions (ODBC)](../../data/odbc/data-source-managing-connections-odbc.md).
+>  La chaîne de connexion que vous utilisez pendant le développement peut ne pas être la même que celle dont vos utilisateurs finaux ont besoin. Pour obtenir des idées sur la généralisation de votre application, consultez [source de données : gestion des connexions (ODBC)](../../data/odbc/data-source-managing-connections-odbc.md).
 
-##  <a name="_core_setting_recordset_options"></a> Définition des options de recordset
+##  <a name="setting-recordset-options"></a><a name="_core_setting_recordset_options"></a> Définition des options de recordset
 
 Après avoir construit votre objet recordset, mais avant d’appeler `Open` pour sélectionner des enregistrements, vous pouvez définir des options pour contrôler le comportement du recordset. Pour tous les recordsets, vous pouvez :
 
@@ -96,7 +96,7 @@ Vous pouvez également définir l’option suivante si les conditions sont rempl
 > [!NOTE]
 >  Pour affecter la sélection d’enregistrements, vous devez définir ces options avant d’appeler la fonction membre `Open`.
 
-##  <a name="_core_closing_a_recordset"></a> Fermeture d’un recordset
+##  <a name="closing-a-recordset"></a><a name="_core_closing_a_recordset"></a> Fermeture d’un recordset
 
 Quand vous n’avez plus besoin de votre recordset, vous devez le supprimer et désallouer sa mémoire.
 
@@ -113,5 +113,5 @@ Quand vous n’avez plus besoin de votre recordset, vous devez le supprimer et d
 ## <a name="see-also"></a>Voir aussi
 
 [Recordset (ODBC)](../../data/odbc/recordset-odbc.md)<br/>
-[Recordset : Défilement (ODBC)](../../data/odbc/recordset-scrolling-odbc.md)<br/>
-[Recordset : Ajout, modification et suppression d’enregistrements (ODBC)](../../data/odbc/recordset-adding-updating-and-deleting-records-odbc.md)
+[Recordset : défilement (ODBC)](../../data/odbc/recordset-scrolling-odbc.md)<br/>
+[Recordset : ajout, modification et suppression d’enregistrements (ODBC)](../../data/odbc/recordset-adding-updating-and-deleting-records-odbc.md)

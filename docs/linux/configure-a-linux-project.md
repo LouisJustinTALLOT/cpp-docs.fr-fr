@@ -2,12 +2,12 @@
 title: Configurer un projet Linux C++ dans Visual Studio
 ms.date: 06/11/2019
 ms.assetid: 4d7c6adf-54b9-4b23-bd23-5de0c825b768
-ms.openlocfilehash: 5d42ca587946d3b5adcbd3b6fe35a6c1e1bb9ae8
-ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
+ms.openlocfilehash: 853afc39412ecd07f3ec6c9ad42d0ab599bfe17e
+ms.sourcegitcommit: 8e285a766523e653aeeb34d412dc6f615ef7b17b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/16/2020
-ms.locfileid: "79419384"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80077724"
 ---
 # <a name="configure-a-linux-project"></a>Configurer un projet Linux
 
@@ -17,9 +17,9 @@ La prise en charge Linux est disponible dans Visual Studio 2017 et ultérieur.
 
 ::: moniker-end
 
-Cette rubrique explique comment configurer un projet Linux C++ comme décrit dans [Créer un projet Linux C++ dans Visual Studio](create-a-new-linux-project.md). Pour les projets CMake Linux, consultez [Configurer un projet CMake Linux](cmake-linux-project.md). 
+Cette rubrique explique comment configurer un projet Linux C++ comme décrit dans [Créer un projet Linux C++ dans Visual Studio](create-a-new-linux-project.md). Pour les projets CMake Linux, consultez [Configurer un projet CMake Linux](cmake-linux-project.md).
 
-Vous pouvez configurer un projet Linux pour cibler une machine Linux physique, une machine virtuelle ou le [sous-système Windows pour Linux](/windows/wsl/about) (WSL). 
+Vous pouvez configurer un projet Linux pour cibler une machine Linux physique, une machine virtuelle ou le [sous-système Windows pour Linux](/windows/wsl/about) (WSL).
 
 ::: moniker range="vs-2019"
 
@@ -92,7 +92,7 @@ Lors de la génération sur des systèmes distants, les fichiers sources sur vot
 
 ![Événements de build](media/settings_buildevents.png)
 
-## <a name="remote_intellisense"></a> IntelliSense pour les en-têtes sur les systèmes distants
+## <a name="intellisense-for-headers-on-remote-systems"></a><a name="remote_intellisense"></a> IntelliSense pour les en-têtes sur les systèmes distants
 
 Quand vous ajoutez une nouvelle connexion dans le **Gestionnaire de connexions**, Visual Studio détecte automatiquement les répertoires include pour le compilateur sur le système distant. Visual Studio compresse ensuite ces fichiers et les copie dans un répertoire sur votre ordinateur Windows local. Après cela, chaque fois que vous utilisez cette connexion dans un projet Visual Studio ou CMake, les en-têtes dans ces répertoires sont utilisés pour fournir IntelliSense.
 

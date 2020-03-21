@@ -4,12 +4,12 @@ ms.date: 05/08/2019
 helpviewer_keywords:
 - ATL projects, adding components
 ms.assetid: 11670681-8671-4122-96a4-2e52f8dadce0
-ms.openlocfilehash: 24b4698ebc8dd4f61dfd88ad14e64d4f70b2ef35
-ms.sourcegitcommit: fc1de63a39f7fcbfe2234e3f372b5e1c6a286087
-ms.translationtype: HT
+ms.openlocfilehash: eaecd0d4e6e2b024ce3312719e7104298d3f9a66
+ms.sourcegitcommit: 8e285a766523e653aeeb34d412dc6f615ef7b17b
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65707032"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80075282"
 ---
 # <a name="atl-com-10-component-wizard"></a>Assistant Composant COM+ 1.0 ATL
 
@@ -25,11 +25,11 @@ Utilisez cet Assistant pour ajouter un objet à votre projet qui prend en charge
 
 Vous pouvez spécifier si l’objet prend en charge les interfaces doubles et Automation. Vous pouvez également indiquer la prise en charge de l’interface des informations d’erreur, du contrôle d’objet amélioré, des transactions et de la file d’attente de messages asynchrones.
 
-## <a name="remarks"></a>Remarques
+## <a name="remarks"></a>Notes
 
 À partir de Visual Studio 2008, le script d’inscription produit par cet Assistant inscrit ses composants COM sous **HKEY_CURRENT_USER** et non plus **HKEY_LOCAL_MACHINE**. Pour modifier ce comportement, définissez l’option **Inscrire le composant pour tous les utilisateurs** de l’Assistant ATL.
 
-## <a name="names"></a>Noms
+## <a name="names"></a>noms
 
 Spécifiez les noms de l’objet, de l’interface et des classes à ajouter à votre projet. À l’exception du champ **Nom court**, tous les autres champs peuvent être modifiés indépendamment des autres. Si vous modifiez le contenu du champ **Nom court**, la modification se reflète dans les noms de tous les autres champs de cette page. Si vous modifiez le nom **CoClasse** dans la section COM, la modification se reflète dans les champs **Type** et **ProgID**. Toutefois, le nom dans le champ **Interface** n’est pas modifié. Ce comportement de nommage est conçu pour rendre tous les noms faciles à identifier lors du développement de votre contrôle.
 
@@ -76,7 +76,7 @@ Fournit des informations sur la fonctionnalité COM de l’objet.
 
 - **Type**
 
-   Définit la description de l’objet qui s’affiche dans le registre
+   Définit la description de l’objet qui apparaîtra dans le registre
 
 - **Interface**
 
@@ -85,9 +85,9 @@ Fournit des informations sur la fonctionnalité COM de l’objet.
 - **ProgID**
 
    Définit le nom que les conteneurs peuvent utiliser au lieu du CLSID de l’objet.
-   
+
 ::: moniker-end
 
 ## <a name="see-also"></a>Voir aussi
 
-[Ajout d’un composant ATL COM+ 1.0](../../atl/reference/adding-an-atl-com-plus-1-0-component.md)
+[Composant ATL COM+ 1.0](../../atl/reference/adding-an-atl-com-plus-1-0-component.md)
