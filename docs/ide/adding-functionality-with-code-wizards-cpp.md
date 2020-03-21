@@ -4,12 +4,12 @@ ms.date: 05/14/2019
 helpviewer_keywords:
 - code wizards [C++]
 ms.assetid: 6afb7ef9-7056-423d-b244-91bb4236d1d7
-ms.openlocfilehash: 360f206ff4dae0b49650e131ccd86ecf9a0ed87d
-ms.sourcegitcommit: 3caf5261b3ea80d9cf14038c116ba981d655cd13
+ms.openlocfilehash: cb77b2ce74f962df0a4c7472b037cb7a73effc2d
+ms.sourcegitcommit: 8e285a766523e653aeeb34d412dc6f615ef7b17b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/11/2019
-ms.locfileid: "70907489"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80077708"
 ---
 # <a name="adding-functionality-with-code-wizards-c"></a>Ajout de fonctionnalités à l’aide des Assistants Code (C++)
 
@@ -26,7 +26,6 @@ Après avoir créé un projet, vous pouvez changer ses fonctionnalités ou en aj
 - Consommateur ODBC MFC
 - Classe MFC à partir d’un contrôle ActiveX
 - Classe MFC à partir d’une bibliothèque de types.
-
 
 > [!NOTE]
 >  Vous pouvez ajouter des gestionnaires de messages et y mapper des messages et remplacer des fonctions virtuelles MFC à l’aide de l' [Assistant classe MFC](../mfc/reference/mfc-class-wizard.md).

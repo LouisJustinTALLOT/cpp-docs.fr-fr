@@ -2,18 +2,18 @@
 title: Navigation dans le système de fichiers
 ms.date: 11/04/2016
 ms.assetid: f7cc5f5e-a541-4e00-87c7-a3769ef6096d
-ms.openlocfilehash: ea9bf44a11087180d3bd02c5dcd5d1acfa4b9e57
-ms.sourcegitcommit: a930a9b47bd95599265d6ba83bb87e46ae748949
+ms.openlocfilehash: f5fe8d29baae76b1e7fb851bf04f4c6b32215a8e
+ms.sourcegitcommit: 8e285a766523e653aeeb34d412dc6f615ef7b17b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/22/2020
-ms.locfileid: "76518502"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80076540"
 ---
 # <a name="file-system-navigation"></a>Navigation dans le système de fichiers
 
-L’en-tête \<filesystem> implémente la spécification technique de système de fichiers C++ (C++ File System Technical Specification) ISO/IEC TS 18822:2015 (Projet final : [ISO/IEC JTC 1/SC 22/WG 21 N4100](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2014/n4100.pdf)), et a des types et des fonctions qui vous permettent d’écrire du code indépendant des plateformes pour naviguer dans le système de fichiers. Comme il est interplateforme, il contient des API qui ne s'appliquent pas aux systèmes Windows. Par exemple, cela signifie que `is_fifo(const path&)` retourne toujours la **valeur false** sur Windows.
+L’en-tête \<filesystem> implémente la spécification technique de système de fichiers C++ (C++ File System Technical Specification) ISO/IEC TS 18822:2015 (Projet final : [ISO/IEC JTC 1/SC 22/WG 21 N4100](https://wg21.link/n4100)), et a des types et des fonctions qui vous permettent d’écrire du code indépendant des plateformes pour naviguer dans le système de fichiers. Comme il est interplateforme, il contient des API qui ne s'appliquent pas aux systèmes Windows. Par exemple, cela signifie que `is_fifo(const path&)` retourne toujours la **valeur false** sur Windows.
 
-## <a name="overview"></a>Vue d'ensemble de
+## <a name="overview"></a>Vue d’ensemble
 
 Utilisez les API \<filesystem> pour les tâches suivantes :
 
@@ -29,7 +29,7 @@ Utilisez les API \<filesystem> pour les tâches suivantes :
 
 Pour plus d’informations sur les E/S de fichiers avec la bibliothèque standard, consultez [iostream, programmation](../standard-library/iostream-programming.md).
 
-## <a name="paths"></a>Chemins d'accès
+## <a name="paths"></a>Chemins
 
 ### <a name="constructing-and-composing-paths"></a>Construction et composition de chemins d'accès
 
@@ -41,7 +41,7 @@ path pathToDisplay2(L"\\FileSystemTest\\SubDir3");  // Still OK as always
 path pathToDisplay3(LR"(\FileSystemTest\SubDir3)"); // Raw string literals are OK, too.
 ```
 
-Pour concaténer deux chemins, utilisez les opérateurs `/` et `/=` surchargés, qui sont similaires aux opérateurs `+` et `+=` sur `std::string` et `std::wstring`. Si vous n’indiquez pas ces opérateurs, l’objet `path` les fournit.
+Pour concaténer deux chemins, utilisez les opérateurs `/` et `/=` surchargés, qui sont similaires aux opérateurs `+` et `+=` sur `std::string` et `std::wstring`. Si ce n’est pas le cas, l’objet `path` fournira facilement les séparateurs.
 
 ```cpp
 path myRoot("C:/FileSystemTest");  // no trailing separator, no problem!

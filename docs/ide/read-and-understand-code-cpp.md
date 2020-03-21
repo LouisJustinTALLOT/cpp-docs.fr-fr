@@ -2,12 +2,12 @@
 title: Lire et comprendre du code C++ dans Visual Studio
 description: Utilisez l’éditeur de code C++ dans Visual Studio pour mettre en forme et comprendre votre code.
 ms.date: 05/28/2019
-ms.openlocfilehash: 2ddeabd9d70ebb344fe6d14abe520ee51a42eebb
-ms.sourcegitcommit: 7bea0420d0e476287641edeb33a9d5689a98cb98
+ms.openlocfilehash: aa9008900ae631668d7a87fb413dd389696f3454
+ms.sourcegitcommit: 8e285a766523e653aeeb34d412dc6f615ef7b17b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/17/2020
-ms.locfileid: "77416132"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80079046"
 ---
 # <a name="read-and-understand-c-code-in-visual-studio"></a>Lire et comprendre du code C++ dans Visual Studio
 
@@ -59,9 +59,9 @@ Pointez n’importe quelle variable, fonction ou autre symbole pour obtenir des 
 
 ::: moniker range="vs-2019"
 
-![Infos Express dans C&#43;&#43;](../ide/media/quick-info-vs2019.png "Info express")
+![Infos Express dans C&#43;&#43;](../ide/media/quick-info-vs2019.png "Infos express")
 
-L’info-bulle **Info express** contient un lien **Rechercher en ligne**. Accédez à **Outils** > **Options** > **Éditeur de texte** > **C++**  > **Vue** pour spécifier le fournisseur de recherche. 
+L’info-bulle **Info express** contient un lien **Rechercher en ligne**. Accédez à **Outils** > **Options** > **Éditeur de texte** > **C++**  > **Vue** pour spécifier le fournisseur de recherche.
 
 Si votre code contient une erreur, vous pouvez pointer celle-ci afin qu’**Info express** affiche le message d’erreur correspondant. Vous trouverez également le message d’erreur dans la fenêtre Liste d’erreurs.
 
@@ -71,7 +71,7 @@ Si votre code contient une erreur, vous pouvez pointer celle-ci afin qu’**Info
 
 ::: moniker range="<=vs-2017"
 
-![Infos Express dans C&#43;&#43;](../ide/media/quick-info.png "Info express")
+![Infos Express dans C&#43;&#43;](../ide/media/quick-info.png "Infos express")
 
 Si votre code contient une erreur, vous pouvez pointer celle-ci afin qu’**Info express** affiche le message d’erreur correspondant. Vous trouverez également le message d’erreur dans la fenêtre **Liste d’erreurs**.
 

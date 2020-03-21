@@ -4,12 +4,12 @@ description: Description BNF de MASM pour x64.
 ms.date: 12/17/2019
 helpviewer_keywords:
 - MASM (Microsoft Macro Assembler), BNF reference
-ms.openlocfilehash: 29eae0b110f99f1f417e153f18aa2ac3aff5c69b
-ms.sourcegitcommit: 0781c69b22797c41630601a176b9ea541be4f2a3
+ms.openlocfilehash: 1a9577292e60db73838e5e6b850a4634db959fd6
+ms.sourcegitcommit: 8e285a766523e653aeeb34d412dc6f615ef7b17b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/20/2019
-ms.locfileid: "75322805"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80075462"
 ---
 # <a name="microsoft-macro-assembler-bnf-grammar"></a>Grammaire BNF de Microsoft Macro Assembler
 
@@ -26,7 +26,7 @@ La grammaire BNF autorise les définitions récursives. Par exemple, la grammair
 ## <a name="masm-nonterminals"></a>Non-Terminals MASM
 
 *;;* \
-&nbsp;&nbsp;&nbsp;&nbsp;*endOfLine* | 
+&nbsp;&nbsp;&nbsp;&nbsp;*endOfLine* | *comment*
 
 *= Dir*\
 &nbsp;&nbsp;&nbsp;&nbsp;*id* = *immExpr* ;;
@@ -35,7 +35,7 @@ La grammaire BNF autorise les définitions récursives. Par exemple, la grammair
 &nbsp;&nbsp;&nbsp;&nbsp;+ | -
 
 *aExpr*\
-&nbsp;&nbsp;&nbsp;terme *&nbsp;*  | *aExpr*
+&nbsp;&nbsp;&nbsp;terme *&nbsp;*  | *aExpr* *term* && 
 
 *altId*\
 &nbsp;&nbsp;&nbsp;*ID* de &nbsp;
@@ -63,10 +63,10 @@ La grammaire BNF autorise les définitions récursives. Par exemple, la grammair
 &nbsp;&nbsp;&nbsp;&nbsp;*segmentRegister* : *assumeSegVal*
 
 *assumeSegVal*\
-&nbsp;&nbsp;&nbsp;&nbsp;*frameExpr* | **Nothing** | 
+&nbsp;&nbsp;&nbsp;&nbsp;*frameExpr* | **Nothing** | **ERROR**
 
 *assumeVal*\
-&nbsp;&nbsp;&nbsp;&nbsp;*qualifiedType* | **Nothing** | 
+&nbsp;&nbsp;&nbsp;&nbsp;*qualifiedType* | **Nothing** | **ERROR**
 
 *bcdConst*\
 &nbsp;&nbsp;&nbsp;&nbsp;⟦ *Sign* ⟧ *decNumber*
@@ -218,7 +218,7 @@ La grammaire BNF autorise les définitions récursives. Par exemple, la grammair
 &nbsp;&nbsp;&nbsp;&nbsp;*generalDir* | *segmentDef*
 
 *directiveList*\
-&nbsp;&nbsp;&nbsp;&nbsp;*directive* | *directiveList*
+&nbsp;&nbsp;&nbsp;&nbsp;*directive* | *directiveList* *directive*
 
 *distance*\
 &nbsp;&nbsp;&nbsp;&nbsp;*nearfar* | **NEAR16** | **NEAR32** | **FAR16** | **FAR32**
@@ -245,8 +245,8 @@ La grammaire BNF autorise les définitions récursives. Par exemple, la grammair
 &nbsp;&nbsp;&nbsp;&nbsp;*E07* *addOp* *E08* | *E08*
 
 *e08*\
-&nbsp;&nbsp;&nbsp;&nbsp; *E09* élevé\
-&nbsp;&nbsp;&nbsp;&nbsp;|  *E09* faible\
+&nbsp;&nbsp;&nbsp;&nbsp;**HIGH** *E09* élevé\
+&nbsp;&nbsp;&nbsp;&nbsp;| **LOW** *E09* faible\
 &nbsp;&nbsp;&nbsp;&nbsp;| **highword,** *E09*\
 &nbsp;&nbsp;&nbsp;&nbsp;| **lowword,** *E09*\
 &nbsp;&nbsp;&nbsp;&nbsp;| *E09*
@@ -269,16 +269,16 @@ La grammaire BNF autorise les définitions récursives. Par exemple, la grammair
 *e11*\
 &nbsp;&nbsp;&nbsp;&nbsp;( *expr* ) \
 &nbsp;&nbsp;&nbsp;&nbsp;| ⟦ *expr* ⟧ \
-&nbsp;&nbsp;&nbsp;&nbsp;*ID* de **largeur** | 
-&nbsp;&nbsp;&nbsp;&nbsp;*ID* de **masque** | 
-&nbsp;&nbsp;&nbsp;&nbsp;sizeArg **Size** | 
+&nbsp;&nbsp;&nbsp;&nbsp;*ID* de **largeur** | \
+&nbsp;&nbsp;&nbsp;&nbsp;*ID* de **masque** | \
+&nbsp;&nbsp;&nbsp;&nbsp;sizeArg **Size** *sizeArg* | \
 &nbsp;&nbsp;&nbsp;&nbsp;| **sizeof** *sizeArg*\
-&nbsp;&nbsp;&nbsp;&nbsp;*ID* de **longueur** | 
+&nbsp;&nbsp;&nbsp;&nbsp;*ID* de **longueur** | \
 &nbsp;&nbsp;&nbsp;&nbsp;| **lengthof,** *\*
 &nbsp;&nbsp;&nbsp;&nbsp;| *recordConst*\
 &nbsp;&nbsp;&nbsp;&nbsp;| *string*\
 &nbsp;&nbsp;&nbsp;&nbsp;| *constante*\
-&nbsp;&nbsp;&nbsp;&nbsp;*type* | 
+&nbsp;&nbsp;&nbsp;&nbsp;*type* | \
 &nbsp;&nbsp;&nbsp;&nbsp;| *id*\
 &nbsp;&nbsp;&nbsp;&nbsp;| **$**\
 &nbsp;&nbsp;&nbsp;&nbsp;| *segmentRegister*\
@@ -417,7 +417,7 @@ La grammaire BNF autorise les définitions récursives. Par exemple, la grammair
 &nbsp;&nbsp;&nbsp;&nbsp;**St** *expr*
 
 *frameExpr*\
-&nbsp;&nbsp;&nbsp;&nbsp; *id* de segment\
+&nbsp;&nbsp;&nbsp;&nbsp;**SEG** *id* de segment\
 &nbsp;&nbsp;&nbsp;&nbsp;| **Dgroup** : *ID*\
 &nbsp;&nbsp;&nbsp;&nbsp;| *segmentRegister* : *ID*\
 &nbsp;&nbsp;&nbsp;&nbsp;*ID* de | 
@@ -442,7 +442,7 @@ La grammaire BNF autorise les définitions récursives. Par exemple, la grammair
 &nbsp;&nbsp;&nbsp;&nbsp;AX | EAX | CX | ECX | DX | EDX | BX | EBX | DI | EDI | SI | ESI | BP | EBP | SP | ESP | RSP | R8W | R8D | R9W | R9D | R12D | R13W | R13D | R14W | R14D
 
 *groupDir*\
-&nbsp;&nbsp;&nbsp;&nbsp; **groupe** GroupID *segIdList*
+&nbsp;&nbsp;&nbsp;&nbsp;*groupId* **groupe** GroupID *segIdList*
 
 \ *GroupID*
 &nbsp;&nbsp;&nbsp;*ID* de &nbsp;
@@ -466,7 +466,7 @@ La grammaire BNF autorise les définitions récursives. Par exemple, la grammair
 *ifStatement*\
 &nbsp;&nbsp;&nbsp;&nbsp;**si** *constExpr*\
 &nbsp;&nbsp;&nbsp;&nbsp;| **IFE** *constExpr*\
-&nbsp;&nbsp;&nbsp;&nbsp;|  *textItem* -appel d’offres\
+&nbsp;&nbsp;&nbsp;&nbsp;| **IFB** *textItem* -appel d’offres\
 &nbsp;&nbsp;&nbsp;&nbsp;| **IFNB** *textItem*\
 &nbsp;&nbsp;&nbsp;&nbsp;| **ifdef** *ID*\
 &nbsp;&nbsp;&nbsp;&nbsp;| **ifndef** *ID*\
@@ -590,7 +590,7 @@ La grammaire BNF autorise les définitions récursives. Par exemple, la grammair
 &nbsp;&nbsp;&nbsp;&nbsp;*ID* de | ( *macroArgList* )
 
 *macroDir*\
-&nbsp;&nbsp; *&nbsp;&nbsp;⟦* *macroParmList* ⟧;; \
+&nbsp;&nbsp; *&nbsp;&nbsp;⟦* **MACRO** *macroParmList* ⟧;; \
 &nbsp;&nbsp;&nbsp;&nbsp;*macroBody*\
 &nbsp;&nbsp;&nbsp;&nbsp;**ENDM** ;;
 
@@ -650,7 +650,7 @@ La grammaire BNF autorise les définitions récursives. Par exemple, la grammair
 &nbsp;&nbsp;&nbsp;&nbsp;**tous** | **aucun** | **NOTPUBLIC**
 
 *memOption*\
-&nbsp;&nbsp;&nbsp;&nbsp;**minuscule** | **petite** | **moyenne** | **compact** | **grande** |  grande | **plate**
+&nbsp;&nbsp;&nbsp;&nbsp;**minuscule** | **petite** | **moyenne** | **compact** | **grande** | **HUGE** grande | **plate**
 
 *mnémonique*\
 &nbsp;&nbsp;&nbsp;&nbsp;nom d’instruction.
@@ -676,7 +676,7 @@ La grammaire BNF autorise les définitions récursives. Par exemple, la grammair
 &nbsp;&nbsp;&nbsp;&nbsp;*ID* ;; \
 
 *nearfar*\
-&nbsp;&nbsp;&nbsp;&nbsp;**presque** | 
+&nbsp;&nbsp;&nbsp;&nbsp;**presque** | **FAR**
 
 *nestedStruct*\
 &nbsp;&nbsp;&nbsp;&nbsp;*structHdr* ⟦ *ID* ⟧;; \
@@ -701,7 +701,7 @@ La grammaire BNF autorise les définitions récursives. Par exemple, la grammair
 *optionItem*\
 &nbsp;&nbsp;&nbsp;&nbsp;**CASEMAP** : *mapType*\
 &nbsp;&nbsp;&nbsp;&nbsp;| **DOTNAME** | **NODOTNAME**\
-&nbsp;&nbsp;&nbsp;&nbsp;de l’émulateur **|  | **
+&nbsp;&nbsp;&nbsp;&nbsp;de **EMULATOR** l’émulateur **|  | ** \
 &nbsp;&nbsp;&nbsp;&nbsp;| **épilogue** : *macroId*\
 &nbsp;&nbsp;&nbsp;&nbsp;| **EXPR16** | **EXPR32**\
 &nbsp;&nbsp;&nbsp;&nbsp;| **Language** : *langType*\
@@ -714,7 +714,7 @@ La grammaire BNF autorise les définitions récursives. Par exemple, la grammair
 &nbsp;&nbsp;&nbsp;&nbsp;| **OLDMACROS** | **NOOLDMACROS**\
 &nbsp;&nbsp;&nbsp;&nbsp;| **OLDSTRUCTS** | **NOOLDSTRUCTS**\
 &nbsp;&nbsp;&nbsp;&nbsp;| **proc** : *oVisibility*\
-&nbsp;&nbsp;&nbsp;&nbsp;**prologue** | *macroId*
+&nbsp;&nbsp;&nbsp;&nbsp;**prologue** | *macroId*\
 &nbsp;&nbsp;&nbsp;&nbsp;| **ReadOnly** | **noreadonly**\
 &nbsp;&nbsp;&nbsp;&nbsp;| **étendue** | nolimited **\**
 &nbsp;&nbsp;&nbsp;&nbsp;| **segment** : *segSize*\
@@ -730,7 +730,7 @@ La grammaire BNF autorise les définitions récursives. Par exemple, la grammair
 &nbsp;&nbsp;&nbsp;&nbsp;**ou** | **Xor**
 
 *oVisibility*\
-&nbsp;&nbsp;&nbsp;&nbsp;**PUBLIC** | **exportation** **privée**
+&nbsp;&nbsp;&nbsp;&nbsp;**PUBLIC** | **exportation** **privée** | 
 
 *pageDir*\
 &nbsp;&nbsp;&nbsp;&nbsp;**page** ⟦ *pageExpr* ⟧;;
@@ -803,7 +803,7 @@ La grammaire BNF autorise les définitions récursives. Par exemple, la grammair
 &nbsp;&nbsp;&nbsp;&nbsp;*ID* **proto** *protoSpec*
 
 *pubDef*\
-&nbsp;&nbsp;&nbsp;&nbsp;⟦ *langType* ⟧
+&nbsp;&nbsp;&nbsp;&nbsp;⟦ *langType* ⟧ *id*
 
 *publicDir*\
 &nbsp;&nbsp;&nbsp;&nbsp;**public** *pubList* ;;
@@ -856,10 +856,10 @@ La grammaire BNF autorise les définitions récursives. Par exemple, la grammair
 &nbsp;&nbsp;&nbsp;&nbsp;*specialRegister* | *gpRegister* | *byteRegister* | *qwordRegister* |  *fpuRegister* | *SIMDRegister* | *segmentRegister*
 
 *regList*\
-&nbsp;&nbsp;&nbsp;&nbsp;*inscrire* le *Registre* | regList
+&nbsp;&nbsp;&nbsp;&nbsp;*inscrire* le *regList* *Registre* | regList
 
 *relOp*\
-&nbsp;&nbsp;&nbsp;&nbsp;EQ | NE | LT | LE | GT | &
+&nbsp;&nbsp;&nbsp;&nbsp;EQ | NE | LT | LE | GT | &AMP;
 
 *repeatBlock*\
 &nbsp;&nbsp;&nbsp;&nbsp; **. RÉPÉTER** ;; \
@@ -960,7 +960,7 @@ La grammaire BNF autorise les définitions récursives. Par exemple, la grammair
 &nbsp;&nbsp;&nbsp;&nbsp;*stringChar* | *sText* *stringChar*
 
 *string*\
-&nbsp;&nbsp;&nbsp;&nbsp;*quot* ⟦ *sText* ⟧
+&nbsp;&nbsp;&nbsp;&nbsp;*quot* ⟦ *sText* ⟧ *quote*
 
 *stringChar*\
 &nbsp;&nbsp; *&nbsp;&nbsp;guillemets* *|* N’importe quel caractère sauf quot.
@@ -1000,7 +1000,7 @@ La grammaire BNF autorise les définitions récursives. Par exemple, la grammair
 &nbsp;&nbsp;&nbsp;&nbsp;*simpleExpr* | ! *simpleExpr*
 
 *text*\
-&nbsp;&nbsp;&nbsp;&nbsp;*textLiteral* |  *|* ! *texte* de caractère | *caractère* | ! *caractère*
+&nbsp;&nbsp;&nbsp;&nbsp;*textLiteral* |  *|* ! *character* *texte* de caractère | *caractère* | ! *caractère*
 
 *textDir*\
 &nbsp;&nbsp;&nbsp;&nbsp;*ID* *textMacroDir* ;;
@@ -1034,14 +1034,14 @@ La grammaire BNF autorise les définitions récursives. Par exemple, la grammair
 &nbsp;&nbsp;&nbsp;&nbsp;*titleType* *arbitraryText* ;;
 
 *titleType*\
-&nbsp;&nbsp;&nbsp;&nbsp;**TITLE** |  **SUBTTL**
+&nbsp;&nbsp;&nbsp;&nbsp;**TITLE** | **SUBTITLE** **SUBTTL** | 
 
-*type*\
+\ de *type*
 &nbsp;&nbsp;&nbsp;&nbsp;*structTag*\
 &nbsp;&nbsp;&nbsp;&nbsp;| *unionTag*\
 &nbsp;&nbsp;&nbsp;&nbsp;| *recordTag*\
 &nbsp;&nbsp;&nbsp;&nbsp;| *distance*\
-&nbsp;&nbsp;&nbsp;&nbsp;*type de données* | 
+&nbsp;&nbsp;&nbsp;&nbsp;*type de données* | \
 &nbsp;&nbsp;&nbsp;&nbsp;| *typeid*
 
 *typedefDir*\
@@ -1071,4 +1071,3 @@ qualificateur **TYPEDEF** &nbsp;&nbsp;&nbsp;&nbsp;*typeid*
 
 *xmmRegister*\
 &nbsp;&nbsp;&nbsp;&nbsp;XMM0 | XMM1 | XMM2 | XMM3 | XMM4 | XMM5 | XMM6 | XMM7 | XMM8 | XMM9 | XMM10 | XMM11 | XMM12 | XMM13 | XMM14 | XMM15\
-

@@ -4,12 +4,12 @@ ms.date: 11/22/2019
 helpviewer_keywords:
 - CMake in Visual C++
 ms.assetid: 444d50df-215e-4d31-933a-b41841f186f8
-ms.openlocfilehash: 542a469393d3655418f69e5d51d59adfa824ad15
-ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
+ms.openlocfilehash: ac92d9dfa5266227fb3bd4a3749ab50f425a2d90
+ms.sourcegitcommit: 8e285a766523e653aeeb34d412dc6f615ef7b17b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/16/2020
-ms.locfileid: "79417389"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80078720"
 ---
 # <a name="cmakesettingsjson-schema-reference"></a>Informations de référence sur le schéma CMakeSettings.json
 
@@ -21,13 +21,13 @@ Les projets CMake sont pris en charge dans Visual Studio 2017 et versions ultér
 
 ::: moniker range=">=vs-2017"
 
-Le fichier **CMakeSettings. JSON** contient des informations que Visual Studio utilise pour IntelliSense et pour construire les arguments de ligne de commande qu’il transmet à cmake. exe pour un *environnement*de *configuration* et de compilateur spécifié. Une configuration spécifie les propriétés qui s’appliquent à une plateforme et à un type de build spécifiques, par exemple, `x86-Debug` ou `Linux-Release`. Chaque configuration spécifie un environnement, qui encapsule des informations sur l’ensemble d’outils du compilateur, par exemple MSVC, GCC ou Clang. CMake utilise les arguments de ligne de commande pour régénérer le fichier *CMakeCache. txt* racine et d’autres fichiers de projet pour le projet. Les valeurs peuvent être remplacées dans les fichiers *fichier CMakeLists. txt* . 
+Le fichier **CMakeSettings. JSON** contient des informations que Visual Studio utilise pour IntelliSense et pour construire les arguments de ligne de commande qu’il transmet à cmake. exe pour un *environnement*de *configuration* et de compilateur spécifié. Une configuration spécifie les propriétés qui s’appliquent à une plateforme et à un type de build spécifiques, par exemple, `x86-Debug` ou `Linux-Release`. Chaque configuration spécifie un environnement, qui encapsule des informations sur l’ensemble d’outils du compilateur, par exemple MSVC, GCC ou Clang. CMake utilise les arguments de ligne de commande pour régénérer le fichier *CMakeCache. txt* racine et d’autres fichiers de projet pour le projet. Les valeurs peuvent être remplacées dans les fichiers *fichier CMakeLists. txt* .
 
 Vous pouvez ajouter ou supprimer des configurations dans l’IDE, puis les modifier directement dans le fichier JSON ou utiliser l' **éditeur de paramètres cmake** (Visual Studio 2019 et versions ultérieures). Vous pouvez facilement basculer entre les configurations dans l’IDE pour générer les différents fichiers projet. Pour plus d’informations, consultez [personnaliser les paramètres de build cmake dans Visual Studio](customize-cmake-settings.md) .
 
 ## <a name="configurations"></a>Configurations
 
-Le tableau `configurations` contient toutes les configurations d’un projet CMake. Pour plus d’informations sur les configurations prédéfinies, consultez [référence de configuration](cmake-predefined-configuration-reference.md) prédéfinie cmake. Vous pouvez ajouter n’importe quel nombre de configurations prédéfinies ou personnalisées au fichier. 
+Le tableau `configurations` contient toutes les configurations d’un projet CMake. Pour plus d’informations sur les configurations prédéfinies, consultez [référence de configuration](cmake-predefined-configuration-reference.md) prédéfinie cmake. Vous pouvez ajouter n’importe quel nombre de configurations prédéfinies ou personnalisées au fichier.
 
 Une `configuration` a les propriétés suivantes :
 
@@ -148,7 +148,7 @@ Quand la configuration active spécifie un générateur Visual Studio, MSBuild.e
 Notez que si vous ne définissez pas le `"type"`, le type de `"STRING"` est supposé par défaut.
 - `remoteCopyOptimizations`: propriétés de **Visual Studio 2019 version 16,5 ou ultérieure** pour le contrôle de la copie source sur la cible distante. Les optimisations sont activées par défaut. Comprend `remoteCopyUseOptimizations`, `rsyncSingleDirectoryCommandArgs`et `remoteCopySourcesMaxSmallChange`.
 
-## <a name="environments"></a>Environnements
+## <a name="environments"></a><a name="environments"></a>Environnements
 
 Un *environnement* encapsule les variables d’environnement qui sont définies dans le processus que Visual Studio utilise pour appeler cmake. exe. Pour les projets MSVC, les variables sont celles qui sont définies dans une [invite de commandes développeur](building-on-the-command-line.md) pour une plateforme spécifique. Par exemple, l’environnement `msvc_x64_x64` est le même que l’exécution de la **invite de commandes développeur pour vs 2017** ou **Invite de commandes développeur pour vs 2019** avec les arguments **-ARCH = amd64-host_arch = amd64** . Vous pouvez utiliser la syntaxe `env.{<variable_name>}` dans *CMakeSettings. JSON* pour référencer les variables d’environnement individuelles, par exemple pour construire des chemins d’accès aux dossiers.  Les environnements prédéfinis suivants sont fournis :
 
@@ -175,7 +175,7 @@ Dans `CMakeSettings.json`, vous pouvez définir des variables d’environnement 
 - `namespace` : nomme l’environnement afin que ses variables puissent être référencées à partir d’une configuration sous la forme `namespace.variable`. L’objet d’environnement par défaut est appelé `env` et est rempli avec certaines variables d’environnement système, y compris `%USERPROFILE%`.
 - `environment` : identifie de façon unique ce groupe de variables. Permet au groupe d’être hérité plus tard dans une entrée `inheritEnvironments`.
 - `groupPriority`: entier qui spécifie la priorité de ces variables lors de leur évaluation. Les éléments dont la valeur est élevée sont évalués en premier.
-- `inheritEnvironments`: tableau de valeurs qui spécifient le jeu d’environnements hérités par ce groupe. Cette fonctionnalité vous permet d’hériter les environnements par défaut et de créer des variables d’environnement personnalisées qui sont passées à CMake.exe quand il s’exécute. 
+- `inheritEnvironments`: tableau de valeurs qui spécifient le jeu d’environnements hérités par ce groupe. Cette fonctionnalité vous permet d’hériter les environnements par défaut et de créer des variables d’environnement personnalisées qui sont passées à CMake.exe quand il s’exécute.
 
 **Visual Studio 2019 version 16,4 et versions ultérieures :** Les cibles de débogage sont automatiquement lancées avec l’environnement que vous spécifiez dans *CMakeSettings. JSON*. Vous pouvez remplacer ou ajouter des variables d’environnement par cible ou par tâche dans [Launch. vs. JSON](launch-vs-schema-reference-cpp.md) et [Tasks. vs. JSON](tasks-vs-json-schema-reference-cpp.md).
 
@@ -269,7 +269,7 @@ Les macros suivantes peuvent être utilisées dans *CMakeSettings. JSON*:
 
 Toutes les références aux macros et aux variables d’environnement dans *CMakeSettings. JSON* sont développées avant d’être passées à la ligne de commande cmake. exe.
 
-## <a name="ninja"></a> Arguments de ligne de commande Ninja
+## <a name="ninja-command-line-arguments"></a><a name="ninja"></a> Arguments de ligne de commande Ninja
 
 Si les cibles ne sont pas spécifiées, génère la cible « par défaut ».
 

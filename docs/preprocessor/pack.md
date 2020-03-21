@@ -8,12 +8,12 @@ helpviewer_keywords:
 - pragmas, pack
 - pack pragma
 ms.assetid: e4209cbb-5437-4b53-b3fe-ac264501d404
-ms.openlocfilehash: 3572bd0d0b0e8149f527c1c43eca5870783b13a8
-ms.sourcegitcommit: e5192a25c084eda9eabfa37626f3274507e026b3
+ms.openlocfilehash: 4fa0990de25b624b670ababfd8e66f340e2fb8f3
+ms.sourcegitcommit: 8e285a766523e653aeeb34d412dc6f615ef7b17b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/12/2019
-ms.locfileid: "73965254"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80079980"
 ---
 # <a name="pack-pragma"></a>pack (pragma)
 
@@ -35,7 +35,7 @@ Facultatif Affiche la valeur d’octet actuelle pour l’alignement de compressi
 Facultatif Exécute un push de la valeur d’alignement de compression actuelle sur la pile interne du compilateur et définit la valeur d’alignement de la compression actuelle sur *n*. Si *n* n’est pas spécifié, la valeur actuelle de l’alignement de compression fait l’objet d’un push.
 
 \ **pop**
-Facultatif Supprime l’enregistrement du haut de la pile interne du compilateur. Si *n* n’est pas spécifié avec **pop**, la valeur de compression associée à l’enregistrement obtenu en haut de la pile est la nouvelle valeur d’alignement de la compression. Si *n* est spécifié, par exemple, `#pragma pack(pop, 16)`, *n* devient la nouvelle valeur d’alignement de la compression. Si vous utilisez un *identificateur*, par exemple `#pragma pack(pop, r1)`, tous les enregistrements de la pile sont dépilés jusqu’à ce que l’enregistrement qui a l' *identificateur* soit trouvé. Cet enregistrement est dépilé et la valeur de compression associée à l’enregistrement obtenu en haut de la pile est la nouvelle valeur d’alignement de la compression. Si vous utilisez un *identificateur* qui n’est trouvé dans aucun enregistrement sur la pile, le **pop** est ignoré. 
+Facultatif Supprime l’enregistrement du haut de la pile interne du compilateur. Si *n* n’est pas spécifié avec **pop**, la valeur de compression associée à l’enregistrement obtenu en haut de la pile est la nouvelle valeur d’alignement de la compression. Si *n* est spécifié, par exemple, `#pragma pack(pop, 16)`, *n* devient la nouvelle valeur d’alignement de la compression. Si vous utilisez un *identificateur*, par exemple `#pragma pack(pop, r1)`, tous les enregistrements de la pile sont dépilés jusqu’à ce que l’enregistrement qui a l' *identificateur* soit trouvé. Cet enregistrement est dépilé et la valeur de compression associée à l’enregistrement obtenu en haut de la pile est la nouvelle valeur d’alignement de la compression. Si vous utilisez un *identificateur* qui n’est trouvé dans aucun enregistrement sur la pile, le **pop** est ignoré.
 
 L’instruction `#pragma pack (pop, r1, 2)` équivaut à `#pragma pack (pop, r1)` suivi de `#pragma pack(2)`.
 

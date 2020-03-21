@@ -3,12 +3,12 @@ title: Installer la charge de travail Linux C++ dans Visual Studio
 description: Décrit comment télécharger, installer et configurer la charge de travail Linux pour C++ dans Visual Studio.
 ms.date: 06/11/2019
 ms.assetid: e11b40b2-f3a4-4f06-b788-73334d58dfd9
-ms.openlocfilehash: 1dad17756cbc12fdf65250b7c54314ff2a645287
-ms.sourcegitcommit: e5192a25c084eda9eabfa37626f3274507e026b3
+ms.openlocfilehash: 719fb9a04c3b0090a1ae5442f881ba6b7d2136c5
+ms.sourcegitcommit: 8e285a766523e653aeeb34d412dc6f615ef7b17b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/12/2019
-ms.locfileid: "73966212"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80077641"
 ---
 # <a name="download-install-and-set-up-the-linux-workload"></a>Télécharger, installer et configurer la charge de travail Linux
 
@@ -20,11 +20,11 @@ Les projets Linux sont pris en charge dans Visual Studio 2017 et ultérieur.
 
 ::: moniker range=">=vs-2017"
 
-Vous pouvez utiliser l’IDE de Visual Studio sur Windows pour créer, modifier et C++ déboguer des projets qui s’exécutent sur un système Linux distant, une machine virtuelle ou le [sous-système Windows pour Linux](/windows/wsl/about). 
+Vous pouvez utiliser l’IDE de Visual Studio sur Windows pour créer, modifier et C++ déboguer des projets qui s’exécutent sur un système Linux distant, une machine virtuelle ou le [sous-système Windows pour Linux](/windows/wsl/about).
 
-Vous pouvez travailler sur votre base de code existante qui utilise CMake sans avoir à la convertir en projet Visual Studio. Si votre base de code est multiplateforme, vous pouvez cibler Windows et Linux à partir de Visual Studio. Par exemple, vous pouvez modifier, générer et déboguer votre code sur Windows à l’aide de Visual Studio, puis recibler rapidement le projet pour Linux pour la génération et le débogage dans un environnement Linux. Les fichiers d’en-tête Linux sont automatiquement copiés sur votre ordinateur local, où Visual Studio les utilise pour fournir une prise en charge complète d’IntelliSense (saisie semi-automatique des instructions, atteindre la définition, etc.). 
- 
-Tous ces scénarios nécessitent la charge de travail de **développement Linux en C++** . 
+Vous pouvez travailler sur votre base de code existante qui utilise CMake sans avoir à la convertir en projet Visual Studio. Si votre base de code est multiplateforme, vous pouvez cibler Windows et Linux à partir de Visual Studio. Par exemple, vous pouvez modifier, générer et déboguer votre code sur Windows à l’aide de Visual Studio, puis recibler rapidement le projet pour Linux pour la génération et le débogage dans un environnement Linux. Les fichiers d’en-tête Linux sont automatiquement copiés sur votre ordinateur local, où Visual Studio les utilise pour fournir une prise en charge complète d’IntelliSense (saisie semi-automatique des instructions, atteindre la définition, etc.).
+
+Tous ces scénarios nécessitent la charge de travail de **développement Linux en C++** .
 
 ::: moniker-end
 
@@ -162,7 +162,7 @@ La prise en charge du développement C++ Linux est disponible dans Visual Studio
 
 ## <a name="next-steps"></a>Étapes suivantes
 
-Vous êtes maintenant prêt à créer ou ouvrir un projet Linux et à le configurer pour qu’il s’exécute sur le système cible. Pour plus d'informations, voir :
+Vous êtes maintenant prêt à créer ou ouvrir un projet Linux et à le configurer pour qu’il s’exécute sur le système cible. Pour plus d'informations, consultez les pages suivantes :
 
 - [Créer un projet Linux](create-a-new-linux-project.md)
 - [Configurer un projet CMake Linux](cmake-linux-project.md)

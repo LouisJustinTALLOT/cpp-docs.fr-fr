@@ -14,12 +14,12 @@ f1_keywords:
 - VC.Project.VCResourceCompilerTool.ResourceOutputFileName
 - VC.Project.VCResourceCompilerTool.NullTerminateStrings
 - vc.project.AdditionalOptionsPage
-ms.openlocfilehash: 916b6615d80000d601c909f771a1ec8f1b947927
-ms.sourcegitcommit: e10a5feea193c249ddc5a6faba48e7c6d8784e73
+ms.openlocfilehash: 4f3688da4feb11f673e11372e5df086dc8c7e21a
+ms.sourcegitcommit: 8e285a766523e653aeeb34d412dc6f615ef7b17b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/30/2019
-ms.locfileid: "70177338"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80078288"
 ---
 # <a name="resources-property-page"></a>Ressources, page de propriétés
 
@@ -35,17 +35,17 @@ Spécifie une ou plusieurs définitions pour le compilateur de ressources. (/d [
 
 Annule la définition d’un symbole. /u.
 
-## <a name="culture"></a>culture
+## <a name="culture"></a>Culture
 
 Répertorie la culture (par exemple, anglais (États-Unis) ou italien) utilisée dans les ressources. (/l [num])
 
 ## <a name="additional-include-directories"></a>Autres répertoires Include
 
-Spécifie un ou plusieurs répertoires à ajouter au chemin d’accès include; Utilisez un point-virgule de délimitation si plusieurs. (/I [chemin])
+Spécifie un ou plusieurs répertoires à ajouter au chemin d’accès include ; Utilisez un point-virgule de délimitation si plusieurs. (/I [chemin])
 
 ## <a name="ignore-standard-include-paths"></a>Ignorer les chemins d’accès Include standard
 
-Empêche le compilateur de ressources de rechercher les fichiers include dans les répertoires spécifiés dans les variables d’environnement INCLUDe. /PATH
+Empêche le compilateur de ressources de rechercher les fichiers include dans les répertoires spécifiés dans les variables d’environnement INCLUDe. /Path
 
 ## <a name="show-progress"></a>Afficher la progression
 
@@ -59,7 +59,7 @@ Supprimer l’affichage de la bannière de démarrage et du message d’informat
 
 Spécifie le nom du fichier de ressources (/FO [fichier])
 
-## <a name="null-terminate-strings"></a>Chaînes de fin null 
+## <a name="null-terminate-strings"></a>Chaînes de fin null
 
 Ajoutez la valeur null à toutes les chaînes des tables de chaînes. /n
 

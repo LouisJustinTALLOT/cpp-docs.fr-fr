@@ -6,12 +6,12 @@ ms.date: 08/19/2019
 ms.topic: tutorial
 ms.devlang: cpp
 ms.assetid: 45138d70-719d-42dc-90d7-1d0ca31a2f54
-ms.openlocfilehash: ff1b5295f9fefd681ea76d09349415b59ceac1f2
-ms.sourcegitcommit: 9d4ffb8e6e0d70520a1e1a77805785878d445b8a
-ms.translationtype: HT
+ms.openlocfilehash: 27522a6960546dc935ea3d9bce974eb36789c0aa
+ms.sourcegitcommit: 8e285a766523e653aeeb34d412dc6f615ef7b17b
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/20/2019
-ms.locfileid: "69631303"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80079291"
 ---
 # <a name="create-a-c-console-app-project"></a>Créer un projet d’application console C++
 
@@ -19,7 +19,7 @@ ms.locfileid: "69631303"
 
 Habituellement, le programmeur C++ commence par créer une application « Hello, world ! » qu’il exécute sur la ligne de commande. C’est ce que vous allez créer avec Visual Studio dans cet article ; ensuite, nous passerons à quelque chose de plus complexe : une application de calculatrice.
 
-## <a name="prerequisites"></a>Prérequis
+## <a name="prerequisites"></a>Conditions préalables requises
 
 - Visual Studio avec la charge de travail **Développement Desktop en C++** doit être installé et en cours d’exécution sur votre ordinateur. S’il n’est pas installé, consultez [Installer la prise en charge de C++ dans Visual Studio](../build/vscpp-step-0-installation.md).
 
@@ -29,13 +29,13 @@ Visual Studio organise le code des applications dans des *projets*, et vos proje
 
 1. Si vous venez de démarrer Visual Studio, vous verrez la boîte de dialogue Visual Studio 2019. Choisissez **Créer un projet** pour démarrer.
 
-   ![La boîte de dialogue initiale de Visual Studio 2019](./media/calc-vs2019-initial-dialog.png "La boîte de dialogue initiale de Visual Studio 2019")
+   ![Boîte de dialogue initiale de Visual Studio 2019](./media/calc-vs2019-initial-dialog.png "Boîte de dialogue initiale de Visual Studio 2019")
 
    Sinon, sans la barre des menus de Visual Studio, choisissez **Fichier** > **Nouveau** > **Projet**. La fenêtre **Créer un projet** s’ouvre.
 
 1. Dans la liste des modèles de projet, choisissez **Application console**, puis choisissez **Suivant**.
 
-   ![Choisissez le modèle Application console](./media/calc-vs2019-choose-console-app.png "Choisissez le modèle Application console")
+   ![Choisir le modèle d’application console](./media/calc-vs2019-choose-console-app.png "Choisir le modèle d’application console")
 
    > [!Important]
    > Veillez à choisir la version C++ du modèle **Application Console**. Elle présente les mots clés **C++** , **Windows** et **Console**, et l’icône a « ++ » dans le coin.
@@ -75,13 +75,13 @@ Le modèle d’une nouvelle application console Windows crée une application C+
 
 1. Pour générer le projet, choisissez **Générer la solution** dans le menu **Générer**. La fenêtre **Sortie** affiche les résultats de la génération.
 
-   ![Générer le projet](./media/calc-vs2019-build-your-project.png "Générer le projet")
+   ![Générer le projet](./media/calc-vs2019-build-your-project.png "Créer le projet")
 
 1. Pour exécuter le projet, dans la barre de menus, choisissez **Déboguer**, **Démarrer sans débogage**.
 
    ![Démarrer le projet](./media/calc-vs2019-hello-world-console.png "Démarrer le projet")
 
-   Une fenêtre de console s’ouvre, puis exécute votre application. Quand vous démarrez une application console dans Visual Studio, celui-ci exécute votre code, puis affiche le message « Appuyez sur une touche pour fermer cette fenêtre. . » afin de vous permettre de voir la sortie. Félicitations ! Vous venez de créer votre première application console « Hello, world ! » dans Visual Studio.
+   Une fenêtre de console s’ouvre, puis exécute votre application. Quand vous démarrez une application console dans Visual Studio, celui-ci exécute votre code, puis affiche le message « Appuyez sur une touche pour fermer cette fenêtre. . . » afin de vous permettre de voir la sortie. Félicitations ! Vous venez de créer votre première application console « Hello, world ! » dans Visual Studio.
 
 1. Appuyez sur une touche pour fermer la fenêtre de console et revenir à Visual Studio.
 
@@ -140,7 +140,7 @@ Il est temps d’ajouter une logique mathématique.
 
 ### <a name="to-add-a-calculator-class"></a>Pour ajouter une classe Calculator
 
-1. Dans le menu **Projet**, choisissez **Ajouter une classe**. Dans la zone d’édition **Nom de la classe**, entrez *Calculator*. Cliquez sur **OK**. Deux nouveaux fichiers sont ajoutés à votre projet. Pour enregistrer simultanément tous vos fichiers modifiés, appuyez sur **Ctrl + Maj + S**. Il s’agit du raccourci clavier pour **Fichier** > **Enregistrer tout**. La barre d’outils comprend également un bouton **Enregistrer tout**, représenté par deux disquettes, qui se trouve à côté du bouton **Enregistrer**. En général, il est recommandé de cliquer régulièrement sur **Enregistrer tout** pour ne rater aucun fichier lorsque vous enregistrez.
+1. Dans le menu **Projet**, choisissez **Ajouter une classe**. Dans la zone d’édition **Nom de la classe**, entrez *Calculator*. Choisissez **OK**. Deux nouveaux fichiers sont ajoutés à votre projet. Pour enregistrer simultanément tous vos fichiers modifiés, appuyez sur **Ctrl + Maj + S**. Il s’agit du raccourci clavier pour **Fichier** > **Enregistrer tout**. La barre d’outils comprend également un bouton **Enregistrer tout**, représenté par deux disquettes, qui se trouve à côté du bouton **Enregistrer**. En général, il est recommandé de cliquer régulièrement sur **Enregistrer tout** pour ne rater aucun fichier lorsque vous enregistrez.
 
    ![Créer la classe Calculator](./media/calc-vs2019-create-calculator-class.png "Créer la classe Calculator")
 
@@ -148,7 +148,7 @@ Il est temps d’ajouter une logique mathématique.
 
    ![Explorateur de solutions](./media/calc-vs2019-solution-explorer.png "Explorateur de solutions")
 
-   Trois onglets doivent être ouverts dans l’éditeur : *CalculatorTutorial.cpp*, *Calculator.h* et *Calculator.cpp*. Si vous fermez accidentellement l’un d’eux, vous pouvez le rouvrir en double-cliquant dessus dans la fenêtre **Explorateur de solutions**.
+   Vous devez maintenant avoir trois onglets ouverts dans l’éditeur : *CalculatorTutorial. cpp*, *Calculator. h*et *Calculator. cpp*. Si vous fermez accidentellement l’un d’eux, vous pouvez le rouvrir en double-cliquant dessus dans la fenêtre **Explorateur de solutions**.
 
 1. Dans **Calculator.h**, supprimez les lignes `Calculator();` et `~Calculator();` qui ont été générées, puisque vous n’en avez pas besoin ici. Ensuite, ajoutez la ligne de code suivante pour que le fichier ressemble à ceci :
 
@@ -161,7 +161,7 @@ Il est temps d’ajouter une logique mathématique.
     };
     ```
 
-   > Explication du code :
+   > Présentation du code
    >
    > - La ligne que vous avez ajoutée déclare une nouvelle fonction appelée `Calculate`, que nous allons utiliser pour effectuer des opérations arithmétiques (additions, soustractions, multiplications et divisions).
    > - Le code C++ est organisé en fichiers d’*en-tête* (.h) et en fichiers *sources* (.cpp). D’autres extensions de fichier sont prises en charge par différents compilateurs, mais il s’agit là des principales extensions à connaître. Les fonctions et les variables sont normalement *déclarées* (c’est-à-dire qu’un nom et un type leur sont attribués) dans les fichiers d’en-tête, et sont *implémentées* (ou définies) dans les fichiers sources. Pour accéder au code défini dans un autre fichier, vous pouvez utiliser `#include "filename.h"`, où « filename.h » correspond au nom du fichier qui déclare les variables ou les fonctions que vous souhaitez utiliser.
@@ -170,13 +170,13 @@ Il est temps d’ajouter une logique mathématique.
 
 1. Vous verrez une ligne verte ondulée s’afficher sous `Calculate`. Cela se produit parce que nous n’avons pas défini la fonction `Calculate` dans le fichier .cpp. Placez le curseur sur le mot, cliquez sur l’icône représentant une ampoule (dans ce cas, un tournevis), puis choisissez **Créer la définition de « Calculate » dans Calculator.cpp**.
 
-   ![Créer la définition de Calculate](./media/calc-vs2019-create-definition.png "Créer la définition de Calculate")
+   ![Créer une définition du calcul](./media/calc-vs2019-create-definition.png "Créer une définition du calcul")
 
    Une fenêtre contextuelle s’affiche pour vous montrer comment le code a été modifié dans l’autre fichier. Le code a été ajouté à *Calculator.cpp*.
 
-   ![Fenêtre contextuelle avec la définition de Calculate](./media/calc-vs2019-pop-up-definition.png "Fenêtre contextuelle avec la définition de Calculate")
+   ![Fenêtre contextuelle avec définition de Calculate](./media/calc-vs2019-pop-up-definition.png "Fenêtre contextuelle avec définition de Calculate")
 
-   Pour l’instant, il retourne seulement 0.0. Nous allons changer cela. Appuyez sur **Échap** pour fermer la fenêtre contextuelle.
+   Pour l’instant, il retourne seulement 0.0. Nous allons y remédier. Appuyez sur **Échap** pour fermer la fenêtre contextuelle.
 
 1. Basculez vers le fichier *Calculator.cpp* dans la fenêtre d’éditeur. Supprimez les sections `Calculator()` et `~Calculator()` (comme vous l’avez fait dans le fichier .h), puis ajoutez le code suivant à `Calculate()` :
 
@@ -201,7 +201,7 @@ Il est temps d’ajouter une logique mathématique.
     }
     ```
 
-   > Explication du code :
+   > Présentation du code
    >
    > - La fonction `Calculate` consomme un nombre, un opérateur et un deuxième nombre, puis exécute l’opération demandée sur les nombres.
    > - L’instruction switch vérifie quel opérateur a été fourni et exécute uniquement le cas correspondant à cette opération. Le cas default: peut servir de solution de secours si l’utilisateur tape un opérateur qui n’est pas accepté, pour éviter que le programme ne s’arrête. En règle générale, il est préférable de gérer les entrées d’utilisateur non valides de façon plus élégante, mais cela n’entre pas dans le cadre de ce tutoriel.
@@ -246,7 +246,7 @@ Si vous générez et que vous exécutez le code à ce stade, il s’arrête néa
     }
     ```
 
-   > Explication du code :
+   > Présentation du code
    >
    > - Dans la mesure où les programmes C++ commencent toujours à la fonction `main()`, nous devons appeler notre autre code. Une instruction `#include` est donc nécessaire.
    > - Certaines variables initiales (`x`, `y`, `oper` et `result`) sont déclarées pour stocker respectivement le premier nombre, le deuxième nombre, l’opérateur et le résultat final. Il est toujours bon de leur donner des valeurs initiales pour éviter un comportement non défini, ce que nous allons faire ici.
@@ -274,7 +274,7 @@ Il est maintenant temps de retester le programme pour vous assurer que tout fonc
 
 1. Définissez un point d’arrêt sur la ligne `result = c.Calculate(x, oper, y);`, juste après que l’utilisateur a été invité à taper une entrée. Pour définir le point d’arrêt, cliquez en regard de la ligne sur la barre grise verticale située sur le bord gauche de la fenêtre de l’éditeur. Un point rouge apparaît.
 
-   ![Définir un point d’arrêt](./media/calc-vs2019-set-breakpoint.png "Définir un point d’arrêt")
+   ![Définir un point d’arrêt](./media/calc-vs2019-set-breakpoint.png "Définir un point d'arrêt")
 
    Désormais, lorsque nous déboguerons le programme, son exécution s’arrêtera toujours au niveau de cette ligne. Nous savons déjà que le programme fonctionne pour les cas simples. Et comme nous ne souhaitons pas suspendre l’exécution à chaque fois, nous allons donc rendre le point d’arrêt conditionnel.
 
@@ -286,17 +286,17 @@ Il est maintenant temps de retester le programme pour vous assurer que tout fonc
 
 1. Pour déboguer le programme, appuyez sur **F5** ou choisissez le bouton **Débogueur Windows local** (le bouton de la barre d’outils qui est représenté par une flèche verte). Dans votre application de console, si vous entrez quelque chose comme « 5-0 », le programme se comporte normalement et continue de s’exécuter. Toutefois, si vous tapez « 10 / 0 », il s’arrête au point d’arrêt. Vous pouvez même placer un nombre quelconque d’espaces entre l’opérateur et les nombres. `cin` est suffisamment intelligent pour analyser l’entrée de façon appropriée.
 
-   ![Interrompre l’exécution au point d’arrêt conditionnel](./media/calc-vs2019-debug-breakpoint.png "Interrompre l’exécution au point d’arrêt conditionnel")
+   ![Suspendre au point d’arrêt conditionnel](./media/calc-vs2019-debug-breakpoint.png "Suspendre au point d’arrêt conditionnel")
 
 ### <a name="useful-windows-in-the-debugger"></a>Fenêtres utiles du débogueur
 
 Lorsque vous déboguez votre code, vous pouvez remarquer que de nouvelles fenêtres s’affichent. Ces fenêtres peuvent vous aider lors du débogage. Intéressons-nous à la fenêtre **Automatique**. La fenêtre **Automatique** montre les valeurs actuelles des variables qui sont utilisées au moins trois lignes avant la ligne actuelle. Pour afficher toutes les variables de cette fonction, basculez vers la fenêtre **Variables locales**. Vous pouvez réellement modifier les valeurs de ces variables pendant le débogage, pour voir l’impact de modifications sur le programme. Ici, nous n’y toucherons pas.
 
-   ![Fenêtre Variables locales](./media/calc-vs2019-debug-locals.png "Fenêtre Variables locales")
+   ![Fenêtre variables locales](./media/calc-vs2019-debug-locals.png "Fenêtre variables locales")
 
 Vous pouvez également pointer sur les variables directement dans le code pour afficher leur valeur au moment où leur exécution est suspendue. Cliquez sur la fenêtre d’éditeur pour la mettre en mode focus.
 
-   ![Passer la souris sur les variables pour voir leur valeur](./media/calc-vs2019-hover-tooltip.png "Passer la souris sur les variables pour voir leur valeur")
+   ![Pointer pour afficher les valeurs de la variable actuelle](./media/calc-vs2019-hover-tooltip.png "Pointer pour afficher les valeurs de la variable actuelle")
 
 ### <a name="to-continue-debugging"></a>Pour continuer le débogage
 
@@ -359,7 +359,7 @@ Nous allons traiter le problème de la division par zéro d’une façon plus ap
 
 1. À présent, appuyez une fois sur **F5**. L’exécution du programme continue jusqu’à ce qu’il doive s’interrompre pour demander une entrée utilisateur. Entrez à nouveau `10 / 0`. Maintenant, un message plus utile s’affiche. L’utilisateur est invité à taper une entrée supplémentaire, et le programme continue de s’exécuter normalement.
 
-   ![Résultat final après modifications](./media/calc-vs2019-final-verification.png "Résultat final après modifications")
+   ![Résultat final après les modifications](./media/calc-vs2019-final-verification.png "Résultat final après les modifications")
 
    > [!Note]
    > Quand vous modifiez du code en mode débogage, il y a un risque que le code devienne obsolète. Cela se produit lorsque le débogueur exécute le code qu’il n’a pas encore mis à jour. Lorsque cela se produit, le débogueur affiche une boîte de dialogue pour vous en informer. Parfois, vous devrez appuyer sur **F5** pour actualiser le code exécuté. Si vous apportez une modification à l’intérieur d’une fonction alors que le point d’exécution se trouve à l’intérieur de cette fonction, vous devrez effectuer un pas à pas sortant sur la fonction, puis y retourner pour obtenir le code mis à jour. Si cela ne fonctionne pas pour une raison quelconque et si vous voyez un message d’erreur, vous pouvez arrêter le débogage en cliquant sur le carré rouge dans la barre d’outils située sous les menus en haut de l’IDE. Ensuite, vous pouvez redémarrer le débogage en appuyant sur **F5** ou en choisissant la flèche verte située à côté du bouton Arrêter dans la barre d’outils.
@@ -377,7 +377,7 @@ Nous allons traiter le problème de la division par zéro d’une façon plus ap
 
 ## <a name="the-finished-app"></a>L’application terminée
 
-Félicitations ! Vous venez de terminer le code de l’application de calculatrice, après l’avoir généré et débogué dans Visual Studio.
+Félicitations ! Vous venez de terminer le code de l’application de calculatrice, après l’avoir généré et débogué dans Visual Studio.
 
 ## <a name="next-steps"></a>Étapes suivantes
 
@@ -389,7 +389,7 @@ Félicitations ! Vous venez de terminer le code de l’application de calculatr
 
 Habituellement, le programmeur C++ commence par créer une application « Hello, world ! » qu’il exécute sur la ligne de commande. C’est ce que vous allez créer avec Visual Studio dans cet article ; ensuite, nous passerons à quelque chose de plus complexe : une application de calculatrice.
 
-## <a name="prerequisites"></a>Prérequis
+## <a name="prerequisites"></a>Conditions préalables requises
 
 - Visual Studio avec la charge de travail **Développement Desktop en C++** doit être installé et en cours d’exécution sur votre ordinateur. S’il n’est pas installé, consultez [Installer la prise en charge de C++ dans Visual Studio](../build/vscpp-step-0-installation.md).
 
@@ -416,13 +416,13 @@ Visual Studio organise le code des applications dans des *projets*, et vos proje
 
     int main()
     {
-        std::cout << "Hello World!\n"; 
+        std::cout << "Hello World!\n";
     }
 
     // Run program: Ctrl + F5 or Debug > Start Without Debugging menu
     // Debug program: F5 or Debug > Start Debugging menu
 
-    // Tips for Getting Started: 
+    // Tips for Getting Started:
     //   1. Use the Solution Explorer window to add/manage files
     //   2. Use the Team Explorer window to connect to source control
     //   3. Use the Output window to see build output and other messages
@@ -437,13 +437,13 @@ Le modèle d’une nouvelle application console Windows crée une simple applica
 
 1. Pour générer le projet, choisissez **Générer la solution** dans le menu **Générer**. La fenêtre **Sortie** affiche les résultats de la génération.
 
-   ![Générer le projet](./media/calculator-initial-build-output.png "Générer le projet")
+   ![Générer le projet](./media/calculator-initial-build-output.png "Créer le projet")
 
 1. Pour exécuter le projet, dans la barre de menus, choisissez **Déboguer**, **Démarrer sans débogage**.
 
    ![Démarrer le projet](./media/calculator-hello-world-console.png "Démarrer le projet")
 
-   Une fenêtre de console s’ouvre, puis exécute votre application. Lorsque vous démarrez une application console dans Visual Studio, celui-ci exécute votre code, puis affiche le message « Appuyez sur une touche pour continuer . » afin de vous permettre de voir la sortie. Félicitations ! Vous venez de créer votre première application console « Hello, world ! » dans Visual Studio.
+   Une fenêtre de console s’ouvre, puis exécute votre application. Lorsque vous démarrez une application console dans Visual Studio, celui-ci exécute votre code, puis affiche le message « Appuyez sur une touche pour continuer . . » afin de vous permettre de voir la sortie. Félicitations ! Vous venez de créer votre première application console « Hello, world ! » dans Visual Studio.
 
 1. Appuyez sur une touche pour fermer la fenêtre de console et revenir à Visual Studio.
 
@@ -496,7 +496,7 @@ Maintenant, nous allons transformer le code de ce modèle en application de calc
 
 1. Pour exécuter l’application, appuyez sur **Ctrl + F5** ou accédez au menu **Déboguer**, puis choisissez **Démarrer sans débogage**. Si une fenêtre contextuelle **Ce projet est obsolète** s’affiche, vous pouvez sélectionner **Ne plus afficher cette boîte de dialogue**, puis choisir **Oui** pour générer votre application. Vous devriez voir apparaître une fenêtre de console affichant le texte spécifié dans le code.
 
-   ![Générer et démarrer votre application](./media/calculator-first-launch.gif "Générer et démarrer votre application")
+   ![Créer et démarrer votre application](./media/calculator-first-launch.gif "Créer et démarrer votre application")
 
 1. Lorsque vous avez terminé, fermez la fenêtre de console.
 
@@ -506,7 +506,7 @@ Il est temps d’ajouter une logique mathématique.
 
 ### <a name="to-add-a-calculator-class"></a>Pour ajouter une classe Calculator
 
-1. Dans le menu **Projet**, choisissez **Ajouter une classe**. Dans la zone d’édition **Nom de la classe**, entrez *Calculator*. Cliquez sur **OK**. Deux nouveaux fichiers sont ajoutés à votre projet. Pour enregistrer simultanément tous vos fichiers modifiés, appuyez sur **Ctrl + Maj + S**. Il s’agit du raccourci clavier pour **Fichier** > **Enregistrer tout**. La barre d’outils comprend également un bouton **Enregistrer tout**, représenté par deux disquettes, qui se trouve à côté du bouton **Enregistrer**. En général, il est recommandé de cliquer régulièrement sur **Enregistrer tout** pour ne rater aucun fichier lorsque vous enregistrez.
+1. Dans le menu **Projet**, choisissez **Ajouter une classe**. Dans la zone d’édition **Nom de la classe**, entrez *Calculator*. Choisissez **OK**. Deux nouveaux fichiers sont ajoutés à votre projet. Pour enregistrer simultanément tous vos fichiers modifiés, appuyez sur **Ctrl + Maj + S**. Il s’agit du raccourci clavier pour **Fichier** > **Enregistrer tout**. La barre d’outils comprend également un bouton **Enregistrer tout**, représenté par deux disquettes, qui se trouve à côté du bouton **Enregistrer**. En général, il est recommandé de cliquer régulièrement sur **Enregistrer tout** pour ne rater aucun fichier lorsque vous enregistrez.
 
    ![Créer la classe Calculator](./media/calculator-create-class.gif "Créer la classe Calculator")
 
@@ -514,7 +514,7 @@ Il est temps d’ajouter une logique mathématique.
 
    ![Explorateur de solutions](./media/calculator-solution-explorer.png "Explorateur de solutions")
 
-   Trois onglets doivent être ouverts dans l’éditeur : *CalculatorTutorial.cpp*, *Calculator.h* et *Calculator.cpp*. Si vous fermez accidentellement l’un d’eux, vous pouvez le rouvrir en double-cliquant dessus dans la fenêtre **Explorateur de solutions**.
+   Vous devez maintenant avoir trois onglets ouverts dans l’éditeur : *CalculatorTutorial. cpp*, *Calculator. h*et *Calculator. cpp*. Si vous fermez accidentellement l’un d’eux, vous pouvez le rouvrir en double-cliquant dessus dans la fenêtre **Explorateur de solutions**.
 
 1. Dans **Calculator.h**, supprimez les lignes `Calculator();` et `~Calculator();` qui ont été générées, puisque vous n’en avez pas besoin ici. Ensuite, ajoutez la ligne de code suivante pour que le fichier ressemble à ceci :
 
@@ -527,7 +527,7 @@ Il est temps d’ajouter une logique mathématique.
     };
     ```
 
-   > Explication du code :
+   > Présentation du code
    >
    > - La ligne que vous avez ajoutée déclare une nouvelle fonction appelée `Calculate`, que nous allons utiliser pour effectuer des opérations arithmétiques (additions, soustractions, multiplications et divisions).
    > - Le code C++ est organisé en fichiers d’*en-tête* (.h) et en fichiers *sources* (.cpp). D’autres extensions de fichier sont prises en charge par différents compilateurs, mais il s’agit là des principales extensions à connaître. Les fonctions et les variables sont normalement *déclarées* (c’est-à-dire qu’un nom et un type leur sont attribués) dans les fichiers d’en-tête, et sont *implémentées* (ou définies) dans les fichiers sources. Pour accéder au code défini dans un autre fichier, vous pouvez utiliser `#include "filename.h"`, où « filename.h » correspond au nom du fichier qui déclare les variables ou les fonctions que vous souhaitez utiliser.
@@ -536,9 +536,9 @@ Il est temps d’ajouter une logique mathématique.
 
 1. Vous verrez une ligne verte ondulée s’afficher sous `Calculate`. Cela se produit parce que nous n’avons pas défini la fonction `Calculate` dans le fichier .cpp. Placez le curseur sur le mot, cliquez sur l’icône représentant une ampoule, puis choisissez **Créer la définition de 'Calculate' dans Calculator.cpp**. Une fenêtre contextuelle s’affiche pour vous montrer comment le code a été modifié dans l’autre fichier. Le code a été ajouté à *Calculator.cpp*.
 
-   ![Créer la définition de Calculate](./media/calculator-create-definition.gif "Créer la définition de Calculate")
+   ![Créer une définition du calcul](./media/calculator-create-definition.gif "Créer une définition du calcul")
 
-   Pour l’instant, il retourne seulement 0.0. Nous allons changer cela. Appuyez sur **Échap** pour fermer la fenêtre contextuelle.
+   Pour l’instant, il retourne seulement 0.0. Nous allons y remédier. Appuyez sur **Échap** pour fermer la fenêtre contextuelle.
 
 1. Basculez vers le fichier *Calculator.cpp* dans la fenêtre d’éditeur. Supprimez les sections `Calculator()` et `~Calculator()` (comme vous l’avez fait dans le fichier .h), puis ajoutez le code suivant à `Calculate()` :
 
@@ -564,7 +564,7 @@ Il est temps d’ajouter une logique mathématique.
     }
     ```
 
-   > Explication du code :
+   > Présentation du code
    >
    > - La fonction `Calculate` consomme un nombre, un opérateur et un deuxième nombre, puis exécute l’opération demandée sur les nombres.
    > - L’instruction switch vérifie quel opérateur a été fourni et exécute uniquement le cas correspondant à cette opération. Le cas default: peut servir de solution de secours si l’utilisateur tape un opérateur qui n’est pas accepté, pour éviter que le programme ne s’arrête. En règle générale, il est préférable de gérer les entrées d’utilisateur non valides de façon plus élégante, mais cela n’entre pas dans le cadre de ce tutoriel.
@@ -610,7 +610,7 @@ Si vous générez et que vous exécutez le code à ce stade, il s’arrête néa
     }
     ```
 
-   > Explication du code :
+   > Présentation du code
    >
    > - Dans la mesure où les programmes C++ commencent toujours à la fonction `main()`, nous devons appeler notre autre code. Une instruction `#include` est donc nécessaire.
    > - Certaines variables initiales (`x`, `y`, `oper` et `result`) sont déclarées pour stocker respectivement le premier nombre, le deuxième nombre, l’opérateur et le résultat final. Il est toujours bon de leur donner des valeurs initiales pour éviter un comportement non défini, ce que nous allons faire ici.
@@ -638,7 +638,7 @@ Il est maintenant temps de retester le programme pour vous assurer que tout fonc
 
 1. Définissez un point d’arrêt sur la ligne `result = c.Calculate(x, oper, y);`, juste après que l’utilisateur a été invité à taper une entrée. Pour définir le point d’arrêt, cliquez en regard de la ligne sur la barre grise verticale située sur le bord gauche de la fenêtre de l’éditeur. Un point rouge apparaît.
 
-   ![Définir un point d’arrêt](./media/calculator-set-breakpoint.gif "Définir un point d’arrêt")
+   ![Définir un point d’arrêt](./media/calculator-set-breakpoint.gif "Définir un point d'arrêt")
 
    Désormais, lorsque nous déboguerons le programme, son exécution s’arrêtera toujours au niveau de cette ligne. Nous savons déjà que le programme fonctionne pour les cas simples. Et comme nous ne souhaitons pas suspendre l’exécution à chaque fois, nous allons donc rendre le point d’arrêt conditionnel.
 
@@ -650,21 +650,21 @@ Il est maintenant temps de retester le programme pour vous assurer que tout fonc
 
 1. Pour déboguer le programme, appuyez sur **F5** ou choisissez le bouton **Débogueur Windows local** (le bouton de la barre d’outils qui est représenté par une flèche verte). Dans votre application de console, si vous entrez quelque chose comme « 5-0 », le programme se comporte normalement et continue de s’exécuter. Toutefois, si vous tapez « 10 / 0 », il s’arrête au point d’arrêt. Vous pouvez même placer n’importe quel nombre d’espaces entre l’opérateur et les nombres. `cin` est suffisamment intelligent pour analyser l’entrée.
 
-   ![Interrompre l’exécution au point d’arrêt conditionnel](./media/calculator-debug-conditional.gif "Interrompre l’exécution au point d’arrêt conditionnel")
+   ![Suspendre au point d’arrêt conditionnel](./media/calculator-debug-conditional.gif "Suspendre au point d’arrêt conditionnel")
 
 ### <a name="useful-windows-in-the-debugger"></a>Fenêtres utiles du débogueur
 
 Lorsque vous déboguez votre code, vous pouvez remarquer que de nouvelles fenêtres s’affichent. Ces fenêtres peuvent vous aider lors du débogage. Intéressons-nous à la fenêtre **Automatique**. La fenêtre **Automatique** montre les valeurs actuelles des variables qui sont utilisées au moins trois lignes avant la ligne actuelle.
 
-   ![Fenêtre Automatique](./media/calculator-autos.png "Fenêtre Automatique")
+   ![Fenêtre automatique](./media/calculator-autos.png "Fenêtre automatique")
 
 Pour afficher toutes les variables de cette fonction, basculez vers la fenêtre **Variables locales**. Vous pouvez réellement modifier les valeurs de ces variables pendant le débogage, pour voir l’impact de modifications sur le programme. Ici, nous n’y toucherons pas.
 
-   ![Fenêtre Variables locales](./media/calculator-locals.png "Fenêtre Variables locales")
+   ![Fenêtre variables locales](./media/calculator-locals.png "Fenêtre variables locales")
 
 Vous pouvez également pointer sur les variables directement dans le code pour afficher leur valeur au moment où leur exécution est suspendue. Cliquez sur la fenêtre d’éditeur pour la mettre en mode focus.
 
-   ![Passer la souris sur les variables pour voir leur valeur](./media/calculator-hover-tooltip.gif "Passer la souris sur les variables pour voir leur valeur")
+   ![Pointer pour afficher les valeurs de la variable actuelle](./media/calculator-hover-tooltip.gif "Pointer pour afficher les valeurs de la variable actuelle")
 
 ### <a name="to-continue-debugging"></a>Pour continuer le débogage
 
@@ -674,7 +674,7 @@ Vous pouvez également pointer sur les variables directement dans le code pour a
 
 1. Continuez à utiliser **F10** pour effectuer un **pas à pas principal** sur chaque ligne, jusqu’à ce que vous retourniez à la fonction `main()` de l’autre fichier et que vous vous arrêtiez à la ligne `cout`.
 
-   ![Pas à pas sortant sur Calculate et vérification du résultat](./media/calculator-undefined-zero.gif "Pas à pas sortant sur Calculate et vérification du résultat")
+   ![Pas à pas sortant de calculer et vérifier le résultat](./media/calculator-undefined-zero.gif "Pas à pas sortant de calculer et vérifier le résultat")
 
    Il semble que le programme agisse comme attendu : il accepte le premier nombre et le divise par le deuxième. Sur la ligne `cout`, pointez sur la variable `result` ou regardez `result` dans la fenêtre **Automatique**. Vous verrez que sa valeur est « inf ». Cette valeur est incorrecte et nous allons donc la corriger. La ligne `cout` ne fait que générer la valeur qui est stockée dans `result`. Ainsi, lorsque vous avancez d’une ligne à l’aide de **F10**, la fenêtre de console affiche :
 
@@ -730,11 +730,11 @@ Nous allons traiter le problème de la division par zéro d’une façon plus ap
 
 1. À présent, appuyez une fois sur **F5**. L’exécution du programme continue jusqu’à ce qu’il doive s’interrompre pour demander une entrée utilisateur. Entrez à nouveau `10 / 0`. Maintenant, un message plus utile s’affiche. L’utilisateur est invité à taper une entrée supplémentaire, et le programme continue de s’exécuter normalement.
 
-   ![Résultat final après modifications](./media/calculator-final-verification.gif "Résultat final après modifications")
+   ![Résultat final après les modifications](./media/calculator-final-verification.gif "Résultat final après les modifications")
 
    > [!Note]
    > Quand vous modifiez du code en mode débogage, il y a un risque que le code devienne obsolète. Cela se produit lorsque le débogueur exécute le code qu’il n’a pas encore mis à jour. Lorsque cela se produit, le débogueur affiche une boîte de dialogue pour vous en informer. Parfois, vous devrez appuyer sur **F5** pour actualiser le code exécuté. Si vous apportez une modification à l’intérieur d’une fonction alors que le point d’exécution se trouve à l’intérieur de cette fonction, vous devrez effectuer un pas à pas sortant sur la fonction, puis y retourner pour obtenir le code mis à jour. Si cela ne fonctionne pas pour une raison quelconque et si vous voyez un message d’erreur, vous pouvez arrêter le débogage en cliquant sur le carré rouge dans la barre d’outils située sous les menus en haut de l’IDE. Ensuite, vous pouvez redémarrer le débogage en appuyant sur **F5** ou en choisissant la flèche verte située à côté du bouton Arrêter dans la barre d’outils.
-   
+
    > Comprendre les raccourcis d’exécution et de débogage
    >
    > - **F5** (qui correspond à **Déboguer** > **Démarrer le débogage**) démarre une session de débogage si aucune n’est déjà active, puis exécute le programme jusqu’à ce qu’un point d’arrêt soit atteint ou qu’une entrée utilisateur soit nécessaire. Si aucune entrée utilisateur n’est nécessaire et qu’aucun point d’arrêt ne peut être atteint, l’exécution du programme prend fin et la fenêtre de console se ferme. Si vous devez exécuter un programme du type « Hello World », utilisez **Ctrl + F5** ou définissez un point d’arrêt avant d’appuyer sur **F5** pour maintenir la fenêtre ouverte.
@@ -748,7 +748,7 @@ Nous allons traiter le problème de la division par zéro d’une façon plus ap
 
 ## <a name="the-finished-app"></a>L’application terminée
 
-Félicitations ! Vous venez de terminer le code de l’application de calculatrice, après l’avoir généré et débogué dans Visual Studio.
+Félicitations ! Vous venez de terminer le code de l’application de calculatrice, après l’avoir généré et débogué dans Visual Studio.
 
 ## <a name="next-steps"></a>Étapes suivantes
 

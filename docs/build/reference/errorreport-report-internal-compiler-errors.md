@@ -8,12 +8,12 @@ helpviewer_keywords:
 - /errorReport compiler option [C++]
 - -errorReport compiler option [C++]
 ms.assetid: 819828f8-b0a5-412c-9c57-bf822f17e667
-ms.openlocfilehash: afc366728e62029ffbd3993e2fdd740e3aaf3369
-ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
+ms.openlocfilehash: 9efe96ed2611795e1fef408ad07b49d65261c3b1
+ms.sourcegitcommit: 8e285a766523e653aeeb34d412dc6f615ef7b17b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/17/2020
-ms.locfileid: "79439888"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80075086"
 ---
 # <a name="errorreport-report-internal-compiler-errors"></a>/errorReport (Signaler les erreurs internes du compilateur)
 
@@ -29,7 +29,6 @@ ms.locfileid: "79439888"
 Une erreur interne du compilateur est générée lorsque le compilateur ne peut pas traiter un fichier de code source. Lorsqu’une glace se produit, le compilateur ne produit pas de fichier de sortie ou tout diagnostic utile que vous pouvez utiliser pour corriger votre code.
 
 Les arguments **/errorreport** sont remplacés par les paramètres de service rapport d’erreurs Windows. Le compilateur envoie automatiquement des rapports d’erreurs internes à Microsoft, si la création de rapports est activée par Rapport d’erreurs Windows. Aucun rapport n’est envoyé s’il est désactivé par Rapport d’erreurs Windows.
-
 
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Pour définir cette option du compilateur dans l’environnement de développement Visual Studio
 

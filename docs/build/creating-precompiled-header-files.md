@@ -7,18 +7,18 @@ helpviewer_keywords:
 - cl.exe compiler, precompiling code
 - .pch files, creating
 ms.assetid: e2cdb404-a517-4189-9771-c869c660cb1b
-ms.openlocfilehash: 071839df431071a7d8921d1b445094f886ad38e2
-ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
+ms.openlocfilehash: 6333e105a20612d6cbdf8d4b4d4abf47286c4e9b
+ms.sourcegitcommit: 8e285a766523e653aeeb34d412dc6f615ef7b17b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/16/2020
-ms.locfileid: "79417375"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80078582"
 ---
 # <a name="precompiled-header-files"></a>Fichiers d'en-tête précompilés
 
-Lorsque vous créez un projet dans Visual Studio, un *fichier d’en-tête précompilé* nommé *pch. h* est ajouté au projet. (Dans Visual Studio 2017 et versions antérieures, le fichier était appelé *stdafx. h*.) L’objectif du fichier est d’accélérer le processus de génération. Tous les fichiers d’en-tête stables, par exemple les en-têtes de bibliothèque standard tels que `<vector>`, doivent être inclus ici. L’en-tête précompilé est compilé uniquement quand celui-ci, ou les fichiers qu’il contient, sont modifiés. Si vous apportez uniquement des modifications dans le code source de votre projet, la génération ignorera la compilation pour l’en-tête précompilé. 
+Lorsque vous créez un projet dans Visual Studio, un *fichier d’en-tête précompilé* nommé *pch. h* est ajouté au projet. (Dans Visual Studio 2017 et versions antérieures, le fichier était appelé *stdafx. h*.) L’objectif du fichier est d’accélérer le processus de génération. Tous les fichiers d’en-tête stables, par exemple les en-têtes de bibliothèque standard tels que `<vector>`, doivent être inclus ici. L’en-tête précompilé est compilé uniquement quand celui-ci, ou les fichiers qu’il contient, sont modifiés. Si vous apportez uniquement des modifications dans le code source de votre projet, la génération ignorera la compilation pour l’en-tête précompilé.
 
-Les options du compilateur pour les en-têtes précompilés sont [/y](reference/y-precompiled-headers.md). Dans les pages de propriétés du projet, les options se trouvent sous **Propriétés de ConfigurationC++ > en-têtes précompilés C/>** . Vous pouvez choisir de ne pas utiliser d’en-têtes précompilés, et vous pouvez spécifier le nom du fichier d’en-tête, ainsi que le nom et le chemin d’accès du fichier de sortie. 
+Les options du compilateur pour les en-têtes précompilés sont [/y](reference/y-precompiled-headers.md). Dans les pages de propriétés du projet, les options se trouvent sous **Propriétés de ConfigurationC++ > en-têtes précompilés C/>** . Vous pouvez choisir de ne pas utiliser d’en-têtes précompilés, et vous pouvez spécifier le nom du fichier d’en-tête, ainsi que le nom et le chemin d’accès du fichier de sortie.
 
 ## <a name="custom-precompiled-code"></a>Code précompilé personnalisé
 

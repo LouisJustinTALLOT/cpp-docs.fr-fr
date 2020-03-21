@@ -4,24 +4,22 @@ ms.date: 05/21/2019
 helpviewer_keywords:
 - tools and platforms [C++]
 ms.assetid: 3d88607b-9cc4-490a-8d4c-31ee7610a26f
-ms.openlocfilehash: a7514e5cc52b24740b82cc067e77955c4784c9f0
-ms.sourcegitcommit: 8bb2bea1384b290b7570b01608a86c7488ae7a02
-ms.translationtype: HT
+ms.openlocfilehash: 03a28c87bd0a122229a7e93b7077b1d6e3fea53f
+ms.sourcegitcommit: 8e285a766523e653aeeb34d412dc6f615ef7b17b
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/26/2019
-ms.locfileid: "67400638"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80079252"
 ---
 # <a name="c-tools-and-features-in-visual-studio-editions"></a>Outils et fonctionnalités C++ dans les éditions de Visual Studio
 
-
 ::: moniker range=">=vs-2019"
 
-
-Les fonctionnalités C++ suivantes sont disponibles dans Visual Studio 2019. Sauf indication contraire, toutes les fonctionnalités sont disponibles dans toutes les éditions : Visual Studio Community, Visual Studio Professional et Visual Studio Enterprise. Certaines fonctionnalités nécessitent des charges de travail ou des composants facultatifs spécifiques que vous pouvez installer avec Visual Studio Installer.
+Les fonctionnalités C++ suivantes sont disponibles dans Visual Studio 2019. Sauf indication contraire, toutes les fonctionnalités sont disponibles dans toutes les éditions : Communauté Visual Studio, Visual Studio Professional et Visual Studio Enterprise. Certaines fonctionnalités nécessitent des charges de travail ou des composants facultatifs spécifiques que vous pouvez installer avec Visual Studio Installer.
 
 ## <a name="platforms"></a>Plateformes
 
-- Bureau Windows
+- Windows Desktop
 - Plateforme Windows universelle ((téléphone, tablette, PC, Xbox, IoT et HoloLens))
 - Linux
 - Android
@@ -35,12 +33,12 @@ Les fonctionnalités C++ suivantes sont disponibles dans Visual Studio 2019. Sa
 - Clang/LLVM
   - Sur Windows, Clang/LLVM 7.0, ciblant x86 ou x64 (prise en charge de CMake uniquement). D’autres versions Clang peuvent fonctionner, mais ne sont pas officiellement prises en charge.
   - Sur Linux, toutes les installations Clang/LLVM prises en charge par le distributeur.
- 
+
 ## <a name="c-workloads"></a>Charges de travail C++
 
 Visual Studio comprend les charges de travail suivantes pour le développement C++. Vous pouvez les installer toutes ou une partie, ainsi que d’autres charges de travail telles que Développement .NET Desktop, Développement Python, Développement Azure, Développement d’extension Visual Studio et autres.
 
-### <a name="desktop-development-with-c"></a>Développement Desktop avec C++
+### <a name="desktop-development-with-c"></a>Développement Desktop en C++
 
 Inclus :
 - Fonctionnalités de bureau de base C++
@@ -111,7 +109,7 @@ Composants facultatifs :
 - Outils de profilage C++
 - SDK Windows 10 (10.0.17763.0)
 - IntelliCode
-- IntelliTrace (Enterprise uniquement)
+- IntelliTrace (version Enterprise uniquement)
 - SDK Windows 10 (10.0.17134.0)
 - SDK Windows 10 (10.0.16299.0)
 - IncrediBuild - Accélération de build
@@ -135,7 +133,6 @@ Composants facultatifs :
 - Kit Android NDK (R16B) (32 bits)
 - Outils de développement C++ iOS
 - IncrediBuild - Accélération de build
-
 
 ## <a name="individual-components"></a>Composants individuels
 
@@ -198,11 +195,11 @@ Plateforme Windows universelle (C++/CX) :
 - Applications vide
 - Application DirectX 11 et XAML
 - DirectX 11 App
-- Application DirectX 12 
-- Application de tests unitaires 
-- DLL 
-- Composant Windows Runtime 
-- Bibliothèque statique 
+- Application DirectX 12
+- Application de tests unitaires
+- DLL
+- Composant Windows Runtime
+- Bibliothèque statique
 - Projet de création de packages d’application Windows
 
 Linux :
@@ -237,7 +234,7 @@ Linux :
 - Débogage managé
 - Utilisation du GPU
 - Utilisation de la mémoire
-- Remote Debugging
+- Débogage à distance
 - Débogage SQL
 - Analyse statique du code
 
@@ -248,11 +245,11 @@ Linux :
 - Concepteur/éditeur HTML
 - Éditeur XML
 - Éditeur de code source
-- Fonctionnalités de productivité : Refactorisation, moteur IntelliSense EDG, mise en forme du code C++
+- Fonctionnalités de productivité : refactorisation, moteur IntelliSense EDG C++ , mise en forme du code
 - Concepteur Windows Forms
 - Concepteur de données
 - Éditeur de ressources natives (fichiers .rc)
-- éditeurs de ressources
+- Éditeurs de ressources
 - Éditeur de modèle
 - Concepteur Shader
 - Validation de dépendances dynamique (Enterprise uniquement)
@@ -264,7 +261,7 @@ Linux :
 
 - Concepteur de données
 - Objets de données
-- Services Web
+- Services web
 - Explorateur de serveurs
 
 ## <a name="automation-and-extensibility"></a>Automatisation et extensibilité
@@ -286,14 +283,14 @@ Linux :
 - Gestion de cas de test (Enterprise uniquement)
 - Intégration du débogueur de la carte du code (Enterprise uniquement)
 - Live Unit Testing (Enterprise uniquement)
-- IntelliTrace (Enterprise uniquement)
+- IntelliTrace (version Enterprise uniquement)
 - IntelliTest (Enterprise uniquement)
 - Microsoft Fakes (isolement de tests unitaires) (Enterprise uniquement)
 - Couverture du code (Enterprise uniquement)
 
 ## <a name="see-also"></a>Voir aussi
 
-[Installer Visual Studio](/visualstudio/install/install-visual-studio)<br/>
+[Installation de Visual Studio](/visualstudio/install/install-visual-studio)<br/>
 [Nouveautés de Visual Studio](/visualstudio/ide/whats-new-in-visual-studio)<br/>
 [Types de projets C++ dans Visual Studio](../build/reference/visual-cpp-project-types.md)
 
@@ -308,11 +305,11 @@ Les tableaux suivants présentent les fonctionnalités Visual C++ disponibles da
 ||||||
 |-|-|-|-|-|
 |Plateforme|Visual Studio Express pour Windows 10|Visual Studio Express pour Windows Desktop|Visual Studio Community/Professional|Visual Studio Enterprise|
-|Bureau Windows||X|X|X|
+|Windows Desktop||X|X|X|
 |Plateforme Windows universelle ((téléphone, tablette, PC, Xbox, IoT et HoloLens))|X||X|X|
 |Linux|X|X|
 |Microsoft Store 8.1|||X|X|
-|Windows Phone 8.0|||X|X|
+|Windows Phone 8.0|||X|X|
 |Android|||X|X|
 |iOS|||X|X|
 
@@ -345,7 +342,7 @@ Les tableaux suivants présentent les fonctionnalités Visual C++ disponibles da
 |Applications Direct3D|X||X|X|
 |DLL (Windows universel)|X||X|X|
 |Bibliothèque statique (Windows universel)|X||X|X|
-|Composant Windows Runtime|X||X|X|
+|Composant Windows Runtime|X||X|X|
 |Application de tests unitaires (Windows universel)|X||X|X|
 |Projet ATL|||X|X|
 |Bibliothèque de classes (CLR)||X|X|X|
@@ -393,7 +390,7 @@ Les tableaux suivants présentent les fonctionnalités Visual C++ disponibles da
 |Débogage managé||X|X|X|
 |Utilisation du GPU|X||X|X|
 |Utilisation de la mémoire|X||X|X|
-|Remote Debugging|X|X|X|X|
+|Débogage à distance|X|X|X|X|
 |Débogage SQL|||X|X|
 |Analyse statique du code|Limité|Limité|X|X|
 
@@ -406,11 +403,11 @@ Les tableaux suivants présentent les fonctionnalités Visual C++ disponibles da
 |Concepteur/éditeur HTML|X|X|X|X|
 |Éditeur XML|X|X|X|X|
 |Éditeur de code source|X|X|X|X|
-|Fonctionnalités de productivité : Refactorisation, IntelliSense, mise en forme du code C++|X|X|X|X|
+|Fonctionnalités de productivité : refactorisation, IntelliSense, mise en forme de code C++|X|X|X|X|
 |Concepteur Windows Forms||X|X|X|
 |Concepteur de données|||X|X|
 |Éditeur de ressources natives (fichiers .rc)|||X|X|
-|éditeurs de ressources|X|X|X|X|
+|Éditeurs de ressources|X|X|X|X|
 |Éditeur de modèle|X||X|X|
 |Concepteur Shader|X||X|X|
 
@@ -420,7 +417,7 @@ Les tableaux suivants présentent les fonctionnalités Visual C++ disponibles da
 |------------------|---------------------------------------|-----------------------------------------------|---------------------------------------------|------------------------------|
 |Concepteur de données|||X|X|
 |Objets de données|||X|X|
-|Services Web|||X|X|
+|Services web|||X|X|
 |Explorateur de serveurs|||X|X|
 
 ## <a name="build-and-project-systems"></a>Systèmes de génération et de projet
@@ -456,12 +453,12 @@ Les tableaux suivants présentent les fonctionnalités Visual C++ disponibles da
 |Test manuel||||X|
 |Tests exploratoires||||X|
 |Gestion de cas de test||||X|
-|Carte de code et graphiques de dépendance|||Lecture seule|X|
+|Carte de code et graphiques de dépendance|||en lecture seule|X|
 |Débogage des cartes de code||||X|
 
 ## <a name="see-also"></a>Voir aussi
 
-[Installer Visual Studio](/visualstudio/install/install-visual-studio)<br/>
+[Installation de Visual Studio](/visualstudio/install/install-visual-studio)<br/>
 [Nouveautés de Visual Studio](/visualstudio/ide/whats-new-in-visual-studio)<br/>
 [Types de projets C++ dans Visual Studio](../build/reference/visual-cpp-project-types.md)
 

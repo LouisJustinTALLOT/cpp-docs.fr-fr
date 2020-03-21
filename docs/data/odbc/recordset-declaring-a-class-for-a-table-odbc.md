@@ -1,21 +1,21 @@
 ---
-title: 'Recordset : Déclaration d’une classe pour une table (ODBC)'
+title: "Recordset : déclaration de la classe d'une table (ODBC)"
 ms.date: 05/09/2019
 helpviewer_keywords:
 - ODBC recordsets, declaring class for tables
 - recordsets, declaring classes for tables
 ms.assetid: 3fe286c2-3f3d-493d-9d8c-762310939d08
-ms.openlocfilehash: ea17f131552fe7f71d9106a8979bb661955fe850
-ms.sourcegitcommit: fc1de63a39f7fcbfe2234e3f372b5e1c6a286087
-ms.translationtype: HT
+ms.openlocfilehash: b6e7f4456b5ff29cec854d1b4818fda965e04b96
+ms.sourcegitcommit: 8e285a766523e653aeeb34d412dc6f615ef7b17b
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65707951"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80076987"
 ---
-# <a name="recordset-declaring-a-class-for-a-table-odbc"></a>Recordset : Déclaration d’une classe pour une table (ODBC)
+# <a name="recordset-declaring-a-class-for-a-table-odbc"></a>Recordset : déclaration de la classe d'une table (ODBC)
 
-> [!NOTE] 
-> L’Assistant Consommateur ODBC MFC n’est pas disponible dans Visual Studio 2019 et ultérieur. Vous pouvez toujours créer un consommateur manuellement.
+> [!NOTE]
+> L’Assistant Consommateur ODBC MFC n’est pas disponible dans Visual Studio 2019 et ultérieur. Vous pouvez quand même créer un consommateur manuellement.
 
 Cette rubrique s’applique aux classes ODBC MFC.
 
@@ -30,6 +30,6 @@ Voici d’autres utilisations possibles des recordsets :
 ## <a name="see-also"></a>Voir aussi
 
 [Recordset (ODBC)](../../data/odbc/recordset-odbc.md)<br/>
-[Recordset : Création et fermeture de recordsets (ODBC)](../../data/odbc/recordset-creating-and-closing-recordsets-odbc.md)<br/>
-[Recordset : Déclaration de la classe d’une requête prédéfinie (ODBC)](../../data/odbc/recordset-declaring-a-class-for-a-predefined-query-odbc.md)<br/>
-[Recordset : Création d’une jointure (ODBC)](../../data/odbc/recordset-performing-a-join-odbc.md)
+[Recordset : création et fermeture de recordsets (ODBC)](../../data/odbc/recordset-creating-and-closing-recordsets-odbc.md)<br/>
+[Recordset : déclaration de la classe d’une requête prédéfinie (ODBC)](../../data/odbc/recordset-declaring-a-class-for-a-predefined-query-odbc.md)<br/>
+[Recordset : création d’une jointure (ODBC)](../../data/odbc/recordset-performing-a-join-odbc.md)

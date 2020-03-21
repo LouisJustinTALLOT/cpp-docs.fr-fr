@@ -2,12 +2,12 @@
 title: Naviguer dans le code C++ dans Visual Studio
 description: Utilisez les différents outils dans Visual Studio pour naviguer dans votre codebase C++.
 ms.date: 05/28/2019
-ms.openlocfilehash: 0877fe64e913ab394d9605b9ff0b9825febca793
-ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
+ms.openlocfilehash: 932694db70019924557259d4defe802b53ef0f89
+ms.sourcegitcommit: 8e285a766523e653aeeb34d412dc6f615ef7b17b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/17/2020
-ms.locfileid: "79446612"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80079078"
 ---
 # <a name="navigate-c-code-in-visual-studio"></a>Naviguer dans le code C++ dans Visual Studio
 
@@ -31,7 +31,7 @@ Vous pouvez accéder à la définition d’un symbole de code en cliquant avec l
 
 ## <a name="go-to"></a>Atteindre
 
-**Atteindre** fait référence à un ensemble de fonctionnalités de navigation qui fournissent chacune un type de résultat spécifique basé sur des filtres que vous spécifiez. 
+**Atteindre** fait référence à un ensemble de fonctionnalités de navigation qui fournissent chacune un type de résultat spécifique basé sur des filtres que vous spécifiez.
 
 Vous pouvez ouvrir **Atteindre** avec **Ctrl+,** . Cette action crée une zone de recherche au-dessus du document en cours de modification.
 
@@ -82,7 +82,7 @@ Vous pouvez exécuter une recherche de texte pour quoi que ce soit dans votre so
 
 ![Recherche&#43; &#43; C](../ide/media/find-cpp.png "Rechercher")
 
-La fonctionnalité **Rechercher dans les fichiers** est une version plus puissante de la fonctionnalité **Rechercher** qui affiche les résultats dans la fenêtre **Résultats de la recherche**. Vous pouvez, entre autres, effectuer une recherche dans des dépendances de code externes et filtrer par types de fichiers. 
+La fonctionnalité **Rechercher dans les fichiers** est une version plus puissante de la fonctionnalité **Rechercher** qui affiche les résultats dans la fenêtre **Résultats de la recherche**. Vous pouvez, entre autres, effectuer une recherche dans des dépendances de code externes et filtrer par types de fichiers.
 
 ![C&#43; &#43; chercher dans les fichiers](../ide/media/find-in-files-cpp.png "Rechercher dans les fichiers")
 

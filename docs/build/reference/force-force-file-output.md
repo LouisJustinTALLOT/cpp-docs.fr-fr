@@ -10,12 +10,12 @@ helpviewer_keywords:
 - /FORCE linker option
 - -FORCE linker option
 ms.assetid: b1e9a218-a5eb-4e60-a4a4-65b4be15e5da
-ms.openlocfilehash: 28b1c21382832c8775ffe0406038a482e74076c5
-ms.sourcegitcommit: 7f5b29e24e1be9b5985044a030977485fea0b50c
+ms.openlocfilehash: d1d85174290faa95e73c63a25f7d80c554e83ace
+ms.sourcegitcommit: 8e285a766523e653aeeb34d412dc6f615ef7b17b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/17/2019
-ms.locfileid: "68299721"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80079625"
 ---
 # <a name="force-force-file-output"></a>/FORCE (Forcer la sortie d'un fichier)
 
@@ -27,11 +27,11 @@ ms.locfileid: "68299721"
 
 L’option/FORCE indique à l’éditeur de liens de créer un fichier. exe ou une DLL valide même si un symbole est référencé mais pas défini ou s’il est multiplié par plusieurs.
 
-L’option/FORCE peut accepter un argument facultatif:
+L’option/FORCE peut accepter un argument facultatif :
 
-- Utilisez/FORCE: MULTIPLE pour créer un fichier de sortie, qu’il s’agisse d’une liaison ou pas de plusieurs définitions pour un symbole.
+- Utilisez/FORCE : MULTIPLE pour créer un fichier de sortie, qu’il s’agisse d’une liaison ou pas de plusieurs définitions pour un symbole.
 
-- Utilisez/FORCE: Unresolved pour créer un fichier de sortie, que LINK trouve ou non un symbole non défini. /FORCE: Unresolved est ignoré si le symbole de point d’entrée n’est pas résolu.
+- Utilisez/FORCE : Unresolved pour créer un fichier de sortie, que LINK trouve ou non un symbole non défini. /FORCE : Unresolved est ignoré si le symbole de point d’entrée n’est pas résolu.
 
 /FORCE sans argument implique à la fois plusieurs et non résolus.
 
@@ -41,7 +41,7 @@ Si un module est compilé avec **/CLR**, **/force** ne crée pas d’image.
 
 ### <a name="to-set-this-linker-option-in-the-visual-studio-development-environment"></a>Pour définir cette option de l'éditeur de liens dans l'environnement de développement Visual Studio
 
-1. Dans **Explorateur de solutions** , cliquez avec le bouton droit sur le projet et choisissez **Propriétés**. 
+1. Dans **Explorateur de solutions** , cliquez avec le bouton droit sur le projet et choisissez **Propriétés**.
 
 1. Cliquez sur le dossier **Éditeur de liens**.
 

@@ -3,12 +3,12 @@ title: Création du projet (Didacticiel ATL, Partie 1)
 ms.custom: get-started-article
 ms.date: 08/19/2019
 ms.assetid: f6b727d1-390a-4b27-b82f-daadcd9fc059
-ms.openlocfilehash: b4c18d83feb6c61b603bb1880960193cf9150f9b
-ms.sourcegitcommit: 44eeb065c3148d0484de791080a3f963109744fc
+ms.openlocfilehash: 31ecee084f620256820a685df1f0e6891046fb8f
+ms.sourcegitcommit: 8e285a766523e653aeeb34d412dc6f615ef7b17b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/18/2020
-ms.locfileid: "79509391"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80075331"
 ---
 # <a name="creating-the-project-atl-tutorial-part-1"></a>Création du projet (Didacticiel ATL, Partie 1)
 
@@ -45,7 +45,7 @@ Ce didacticiel vous guide pas à pas dans un projet ATL sans attributs qui crée
 
     L’emplacement du code source est généralement défini par défaut sur \Utilisateurs\\\<nom d’utilisateur > \source\repos, et un nouveau dossier est créé automatiquement.
 
-1. Dans Visual Studio 2019, acceptez les valeurs par défaut et cliquez sur **OK**. 
+1. Dans Visual Studio 2019, acceptez les valeurs par défaut et cliquez sur **OK**.
    Dans Visual Studio 2017, cliquez sur **OK** pour ouvrir l’Assistant **projet ATL** . Cliquez sur paramètres de l' **application** pour afficher les options disponibles. Étant donné que ce projet crée un contrôle et qu’un contrôle doit être un serveur in-process, laissez le **type d’application** en tant que dll. Cliquez sur **OK**.
 
 Visual Studio crée le projet en générant plusieurs fichiers. Vous pouvez afficher ces fichiers dans **Explorateur de solutions** en développant l’objet `Polygon`. Les fichiers sont répertoriés ci-dessous.

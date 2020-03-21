@@ -7,39 +7,39 @@ helpviewer_keywords:
 - OLE DB providers, calling
 - OLE DB providers, testing
 ms.assetid: e4aa30c1-391b-41f8-ac73-5270e46fd712
-ms.openlocfilehash: a9601b2afe40133a5cc88589b530b5ed549ac81e
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: a173e1466179dfb40a33d7bdb4a94eabdbf23cc0
+ms.sourcegitcommit: 8e285a766523e653aeeb34d412dc6f615ef7b17b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62389227"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80079060"
 ---
 # <a name="testing-the-read-only-provider"></a>Test du fournisseur accessible en lecture seule
 
-Pour tester un fournisseur, vous avez besoin d’un consommateur. Il est utile si le consommateur à faire correspondre avec le fournisseur. Les modèles du consommateur OLE DB constituent un simple wrapper autour d’OLE DB et correspondent aux objets COM du fournisseur. Étant donné que la source est livrée avec les modèles du consommateur, il est facile de déboguer un fournisseur avec eux. Les modèles de consommateurs sont également un moyen très simple et rapide pour développer des applications grand public.
+Pour tester un fournisseur, vous avez besoin d’un consommateur. Cela permet à l’utilisateur d’établir une correspondance avec le fournisseur. Les modèles de consommateur OLE DB sont un wrapper léger autour des OLE DB et correspondent aux objets COM du fournisseur. Étant donné que la source est fournie avec les modèles de consommateur, il est facile de déboguer un fournisseur avec eux. Les modèles de consommateurs sont également un moyen très court et rapide de développer des applications grand public.
 
-L’exemple dans cette rubrique crée une application d’Assistant Application MFC par défaut pour un consommateur de test. L’application de test est ajouté un code de modèle du consommateur OLE DB, une boîte de dialogue simple.
+L’exemple de cette rubrique crée une application d’Assistant Application MFC par défaut pour un consommateur de test. L’application de test est une boîte de dialogue simple avec OLE DB code du modèle de consommateur ajouté.
 
-## <a name="to-create-the-test-application"></a>Pour créer l’application de test
+## <a name="to-create-the-test-application"></a>Pour créer l'application de test
 
-1. Dans le menu **Fichier** , cliquez sur **Nouveau**, puis sur **Projet**.
+1. Dans le menu **Fichier**, cliquez sur **Nouveau**, puis sur **Projet**.
 
-1. Dans le **Types de projets** volet, sélectionnez le **installé** > **Visual C++** > **MFC/ATL** dossier. Dans le **modèles** volet, sélectionnez **Application MFC**.
+1. Dans le volet **types de projets** , sélectionnez le dossier **installé** > **Visual C++**  > **MFC/ATL** . Dans le volet **modèles** , sélectionnez **application MFC**.
 
-1. Nom de projet, entrez *TestProv*, puis cliquez sur **OK**.
+1. Pour le nom du projet, entrez *TestProv*, puis cliquez sur **OK**.
 
-   Le **Application MFC** Assistant s’affiche.
+   L’Assistant **application MFC** s’affiche.
 
-1. Sur le **Type d’Application** page, sélectionnez **basée sur un dialogue**.
+1. Sur la page **type d’application** , sélectionnez basée sur une boîte de **dialogue**.
 
-1. Sur le **fonctionnalités avancées** page, sélectionnez **Automation**, puis cliquez sur **Terminer**.
+1. Dans la page **fonctionnalités avancées** , sélectionnez **Automation**, puis cliquez sur **Terminer**.
 
 > [!NOTE]
-> L’application ne nécessite pas de prise en charge Automation si vous ajoutez `CoInitialize` dans `CTestProvApp::InitInstance`.
+> L’application ne nécessite pas de prise en charge d’Automation si vous ajoutez des `CoInitialize` dans `CTestProvApp::InitInstance`.
 
-Vous pouvez afficher et modifier le **TestProv** boîte de dialogue (IDD_TESTPROV_DIALOG) en le sélectionnant dans **affichage des ressources**. Placez les deux zones de liste, un pour chaque chaîne dans l’ensemble de lignes dans la boîte de dialogue. Désactiver la propriété de tri pour les deux zones de liste en appuyant sur **Alt**+**entrée** lorsqu’une zone de liste est sélectionnée et en définissant le **tri** propriété **False**. En outre, placez un **exécuter** bouton dans la boîte de dialogue pour extraire le fichier. Le terminé **TestProv** boîte de dialogue doit avoir deux zones de liste intitulées « String 1 » et « String 2 », respectivement ; il a également **OK**, **Annuler**, et **exécuter**  boutons.
+Vous pouvez afficher et modifier la boîte de dialogue **TestProv** (IDD_TESTPROV_DIALOG) en la sélectionnant dans **affichage des ressources**. Placez deux zones de liste, une pour chaque chaîne de l’ensemble de lignes, dans la boîte de dialogue. Désactivez la propriété de tri pour les deux zones de liste en appuyant sur **Alt**+**entrée** quand une zone de liste est sélectionnée et en affectant à la propriété de **Tri** la **valeur false**. Placez également un bouton **exécuter** dans la boîte de dialogue pour extraire le fichier. La boîte de dialogue **TestProv** terminée doit comporter deux zones de liste intitulées « chaîne 1 » et « chaîne 2 », respectivement. Il contient également les boutons **OK**, **Annuler**et **exécuter** .
 
-Ouvrez le fichier d’en-tête pour la classe de boîte de dialogue (en l’occurrence TestProvDlg.h). Ajoutez le code suivant au fichier d’en-tête (en dehors de toutes les déclarations de classe) :
+Ouvrez le fichier d’en-tête pour la classe dialog (dans ce cas TestProvDlg. h). Ajoutez le code suivant au fichier d’en-tête (en dehors des déclarations de classe) :
 
 ```cpp
 ////////////////////////////////////////////////////////////////////////
@@ -61,9 +61,9 @@ END_COLUMN_MAP()
 };
 ```
 
-Le code représente un enregistrement utilisateur qui définit les colonnes seront dans l’ensemble de lignes. Lorsque le client appelle la méthode `IAccessor::CreateAccessor`, il utilise ces entrées pour spécifier les colonnes à lier. Les modèles du consommateur OLE DB vous permettent également de lier les colonnes dynamiquement. Les macros COLUMN_ENTRY sont la version côté client des macros PROVIDER_COLUMN_ENTRY. Les deux macros COLUMN_ENTRY spécifient l’ordinal, d’un membre de type, longueur et les données pour les deux chaînes.
+Le code représente un enregistrement d’utilisateur qui définit les colonnes qui se trouvent dans l’ensemble de lignes. Lorsque le client appelle `IAccessor::CreateAccessor`, il utilise ces entrées pour spécifier les colonnes à lier. Les modèles de consommateur OLE DB vous permettent également de lier des colonnes dynamiquement. Les macros COLUMN_ENTRY sont la version côté client des macros PROVIDER_COLUMN_ENTRY. Les deux macros COLUMN_ENTRY spécifient l’ordinal, le type, la longueur et le membre de données des deux chaînes.
 
-Ajouter une fonction gestionnaire pour le **exécuter** bouton en appuyant sur **Ctrl** en double-cliquant sur le **exécuter** bouton. Placez le code suivant dans la fonction :
+Ajoutez une fonction de gestionnaire pour le bouton **exécuter** en appuyant sur **CTRL** et en double-cliquant sur le bouton **exécuter** . Placez le code suivant dans la fonction :
 
 ```cpp
 ///////////////////////////////////////////////////////////////////////
@@ -92,19 +92,19 @@ void CTestProvDlg::OnRun()
 }
 ```
 
-Le `CCommand`, `CDataSource`, et `CSession` classes appartiennent tous à des modèles du consommateur OLE DB. Chaque classe simule un objet COM dans le fournisseur. Le `CCommand` objet prend la `CProvider` classe, déclarée dans le fichier d’en-tête, comme un paramètre de modèle. Le `CProvider` paramètre représente les liaisons que vous utilisez pour accéder aux données à partir du fournisseur. 
+Les classes `CCommand`, `CDataSource`et `CSession` appartiennent toutes aux modèles de consommateur OLE DB. Chaque classe reproduit un objet COM dans le fournisseur. L’objet `CCommand` prend la classe `CProvider`, déclarée dans le fichier d’en-tête, en tant que paramètre de modèle. Le paramètre `CProvider` représente des liaisons que vous utilisez pour accéder aux données du fournisseur.
 
-Les lignes pour ouvrir chacune des classes créent chaque objet COM dans le fournisseur. Pour localiser le fournisseur, utilisez le `ProgID` du fournisseur. Vous pouvez obtenir le `ProgID` à partir du Registre système ou en consultant le fichier Custom.rgs (ouvrez le répertoire du fournisseur et recherchez le `ProgID` clé).
+Les lignes permettant d’ouvrir chacune des classes créent chaque objet COM dans le fournisseur. Pour localiser le fournisseur, utilisez la `ProgID` du fournisseur. Vous pouvez obtenir l' `ProgID` à partir du Registre système ou en consultant le fichier. RGS personnalisé (Ouvrez le répertoire du fournisseur et recherchez la clé de `ProgID`).
 
-Le fichier MyData.txt est inclus avec le `MyProv` exemple. Pour créer un fichier de votre choix, utilisez un éditeur et tapez un nombre pair de chaînes, en appuyant sur **entrée** entre chaque chaîne. Modifiez le nom de chemin d’accès si vous déplacez le fichier.
+Le fichier MyData. txt est inclus dans l’exemple `MyProv`. Pour créer un fichier, utilisez un éditeur et tapez un nombre pair de chaînes, en appuyant sur **entrée** entre chaque chaîne. Modifiez le nom du chemin d’accès si vous déplacez le fichier.
 
-Passez la chaîne « c:\\\samples\\\myprov\\\MyData.txt » dans le `table.Open` ligne. Si vous parcourez le `Open` appel, vous voyez que cette chaîne est passée à la `SetCommandText` méthode dans le fournisseur. Notez que le `ICommandText::Execute` méthode utilisé cette chaîne.
+Transmettez la chaîne « c :\\\Samples\\\myprov\\\MyData.txt » dans la ligne de `table.Open`. Si vous exécutez pas à pas l’appel `Open`, vous constatez que cette chaîne est passée à la méthode `SetCommandText` dans le fournisseur. Notez que la méthode `ICommandText::Execute` a utilisé cette chaîne.
 
-Pour extraire les données, appelez `MoveNext` sur la table. `MoveNext` appelle le `IRowset::GetNextRows`, `GetRowCount`, et `GetData` fonctions. Lorsqu’il n’y a plus aucune ligne (autrement dit, la position actuelle dans l’ensemble de lignes est supérieure à `GetRowCount`), la boucle se termine.
+Pour extraire les données, appelez `MoveNext` sur la table. `MoveNext` appelle les fonctions `IRowset::GetNextRows`, `GetRowCount`et `GetData`. Lorsqu’il n’y a plus de lignes (autrement dit, la position actuelle dans l’ensemble de lignes est supérieure à `GetRowCount`), la boucle se termine.
 
-Lorsqu’il n’y a plus aucune ligne, les fournisseurs retournent DB_S_ENDOFROWSET. La valeur DB_S_ENDOFROWSET n’est pas une erreur. Vous devez toujours vérifier par rapport à S_OK pour annuler une boucle d’extraction de données et de ne pas utiliser la macro SUCCEEDED.
+Lorsqu’il n’y a plus de lignes, les fournisseurs retournent DB_S_ENDOFROWSET. La valeur de DB_S_ENDOFROWSET n’est pas une erreur. Vous devez toujours vérifier S_OK pour annuler une boucle d’extraction de données et ne pas utiliser la macro SUCCEEDED.
 
-Vous devez maintenant être en mesure de générer et tester le programme.
+Vous devez maintenant être en mesure de générer et de tester le programme.
 
 ## <a name="see-also"></a>Voir aussi
 

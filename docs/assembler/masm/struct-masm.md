@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - STRUCT directive
 ms.assetid: 70c3ba6b-00db-461e-8dd9-eafd3ae5b3c8
-ms.openlocfilehash: 054a834b7d97ca7df01ab510fde21de22f2acf3d
-ms.sourcegitcommit: 0781c69b22797c41630601a176b9ea541be4f2a3
+ms.openlocfilehash: 2524a8ade318bd29ebcd4e4273089598798302db
+ms.sourcegitcommit: 8e285a766523e653aeeb34d412dc6f615ef7b17b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/20/2019
-ms.locfileid: "75318421"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80078912"
 ---
 # <a name="struct"></a>STRUCT
 
@@ -19,12 +19,12 @@ Déclare un type structure avec les déclarations de *champ*spécifiées. Chaque
 
 ## <a name="syntax"></a>Syntaxe
 
-> **⟦** *align*⟧ ⟦ __,__ **ununique**⟧ *Field-declarations*\
-> **fin** du nom
+> *name* **⟦** *align*⟧ ⟦ __,__ **ununique**⟧ *Field-declarations*\
+> *name* **fin** du nom
 
 ## <a name="remarks"></a>Notes
 
-L’argument *Name* doit être le même dans l’instruction d’ouverture et de fermeture. 
+L’argument *Name* doit être le même dans l’instruction d’ouverture et de fermeture.
 
 ## <a name="see-also"></a>Voir aussi
 

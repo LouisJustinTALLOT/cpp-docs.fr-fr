@@ -48,18 +48,18 @@ helpviewer_keywords:
 - reading data [C++], from the console
 - _cwscanf_l function
 ms.assetid: dbfe7547-b577-4567-a1cb-893fa640e669
-ms.openlocfilehash: 8b996e510d6a8c106aa88a60a8da456d36a4b3e5
-ms.sourcegitcommit: ea9d78dbb93bf3f8841dde93dbc12bd66f6f32ff
+ms.openlocfilehash: 973642aa113c8db4174b399f22e980daba95ce41
+ms.sourcegitcommit: 8e285a766523e653aeeb34d412dc6f615ef7b17b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72778309"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80079993"
 ---
 # <a name="_cscanf-_cscanf_l-_cwscanf-_cwscanf_l"></a>_cscanf, _cscanf_l, _cwscanf, _cwscanf_l
 
 Lit les données mises en forme à partir de la console. Des versions plus sécurisées de ces fonctions sont disponibles ; consultez [_cscanf_s, _cscanf_s_l, _cwscanf_s, _cwscanf_s_l](cscanf-s-cscanf-s-l-cwscanf-s-cwscanf-s-l.md).
 
-> [!NOTE] 
+> [!NOTE]
 > Dans Visual Studio 2015, la famille de fonctions `printf` et `scanf` a été déclarée comme **inline** et déplacée vers les en-têtes `<stdio.h>` et `<conio.h>`. Si vous migrez du code plus ancien, vous pouvez voir l’erreur *LNK2019* en relation avec ces fonctions. Pour plus d’informations, [consultez C++ historique des modifications visuelles 2003-2015](../../porting/visual-cpp-change-history-2003-2015.md#stdio_and_conio).
 
 > [!IMPORTANT]
@@ -105,7 +105,7 @@ Le nombre de champs qui ont été correctement convertis et assignés. La valeur
 
 ## <a name="remarks"></a>Notes
 
-La fonction **_cscanf** lit les données directement à partir de la console dans les emplacements donnés par *argument*. La fonction [_getche](getch-getwch.md) est utilisée pour lire les caractères. Chaque paramètre facultatif doit être un pointeur vers une variable dont le type correspond à un spécificateur de type au *format*. Le format contrôle l’interprétation des champs d’entrée et a les mêmes forme et fonction que le paramètre *format* pour la fonction [scanf](scanf-scanf-l-wscanf-wscanf-l.md) . Alors que **_cscanf** retourne normalement le caractère d’entrée, il ne le fait pas si le dernier appel était à **_ungetch**.
+La fonction **_cscanf** lit les données directement à partir de la console dans les emplacements donnés par *argument*. La fonction [_getche](getch-getwch.md) est utilisée pour lire les caractères. Chaque paramètre facultatif doit être un pointeur vers une variable dont le type correspond à un spécificateur de type au *format*. Le format contrôle l’interprétation des champs d’entrée et a les mêmes forme et fonction que le paramètre *format* pour la fonction [scanf](scanf-scanf-l-wscanf-wscanf-l.md) . Tandis que **_cscanf** retourne normalement le caractère d’entrée, il ne le fait pas si le dernier appel devait **_ungetch**.
 
 Cette fonction valide ses paramètres. Si format a la **valeur null**, le gestionnaire de paramètres non valides est appelé, comme décrit dans [validation de paramètre](../../c-runtime-library/parameter-validation.md). Si l’exécution est autorisée à se poursuivre, **errno** a la valeur **EINVAL** et la fonction retourne **EOF**.
 
@@ -118,7 +118,7 @@ Les versions de ces fonctions avec le suffixe **_L** sont identiques, sauf qu’
 |**_tcscanf**|**_cscanf**|**_cscanf**|**_cwscanf**|
 |**_tcscanf_l**|**_cscanf_l**|**_cscanf_l**|**_cwscanf_l**|
 
-## <a name="requirements"></a>spécifications
+## <a name="requirements"></a>Spécifications
 
 |Routine|En-tête requis|
 |-------------|---------------------|

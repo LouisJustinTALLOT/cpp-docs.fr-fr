@@ -17,16 +17,16 @@ helpviewer_keywords:
 - std::basic_string_view::operator&lt;
 - std::basic_string_view::operator&lt;&lt;
 - std::basic_string_view::operator&lt;=, std::basic_string_view::operator==
-ms.openlocfilehash: 871b7dc93f5d548897cf77e55dbacf5a104cbee9
-ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
+ms.openlocfilehash: 1bf4fa82e10d236828059a37c639e3a3b64bc5f9
+ms.sourcegitcommit: 8e285a766523e653aeeb34d412dc6f615ef7b17b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/17/2020
-ms.locfileid: "79446763"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80076404"
 ---
 # <a name="ltstring_viewgt-operators"></a>&lt;string_view opérateurs&gt;
 
-Utilisez ces opérateurs pour comparer deux objets string_view, ou un string_view et un autre objet String (par exemple [std :: String](basic-string-class.md)ou **char\*** ) pour lequel une conversion implicite est fournie. 
+Utilisez ces opérateurs pour comparer deux objets string_view, ou un string_view et un autre objet String (par exemple [std :: String](basic-string-class.md)ou **char\*** ) pour lequel une conversion implicite est fournie.
 
 ||||
 |-|-|-|
@@ -34,7 +34,7 @@ Utilisez ces opérateurs pour comparer deux objets string_view, ou un string_vie
 |[operator&lt;](#op_lt)|[operator&lt;&lt;](#op_lt_lt)|[operator&lt;=](#op_lt_eq)|
 |[operator==](#op_eq_eq)|[«», opérateur](#op_sv)|
 
-## <a name="op_neq"></a>opérateur ! =
+## <a name="operator"></a><a name="op_neq"></a>opérateur ! =
 
 Teste si l’objet situé à gauche de l’opérateur n’est pas égal à l’objet situé à droite.
 
@@ -69,11 +69,11 @@ Tout type de chaîne convertible ou objet de type `basic_string_view` à compare
 
 ### <a name="remarks"></a>Notes
 
-Une conversion implicite doit exister de *convertible_string_type* au string_view de l’autre côté. 
+Une conversion implicite doit exister de *convertible_string_type* au string_view de l’autre côté.
 
 La comparaison est basée sur une comparaison lexicographique par paire des séquences de caractères. S’ils ont le même nombre d’éléments et que les éléments sont tous égaux, les deux objets sont égaux. Sinon, elles sont inégales.
 
-## <a name="op_eq_eq"></a>opérateur = =
+## <a name="operator"></a><a name="op_eq_eq"></a>opérateur = =
 
 Teste si l’objet situé à gauche de l’opérateur est égal à l’objet situé à droite.
 
@@ -108,12 +108,11 @@ Tout type de chaîne convertible ou objet de type `basic_string_view` à compare
 
 ### <a name="remarks"></a>Notes
 
-Une conversion implicite doit exister de *convertible_string_type* au string_view de l’autre côté. 
+Une conversion implicite doit exister de *convertible_string_type* au string_view de l’autre côté.
 
 La comparaison est basée sur une comparaison lexicographique par paire des séquences de caractères. S’ils ont le même nombre d’éléments et que les éléments sont tous égaux, les deux objets sont égaux.
 
-
-## <a name="op_lt"></a>, opérateur&lt;
+## <a name="operatorlt"></a><a name="op_lt"></a>, opérateur&lt;
 
 Teste si l’objet situé à gauche de l’opérateur est inférieur à l’objet situé à droite sidestring_view
 
@@ -148,7 +147,7 @@ Tout type de chaîne convertible ou objet de type `basic_string_view` à compare
 
 ### <a name="remarks"></a>Notes
 
-Une conversion implicite doit exister de *convertible_string_type* au string_view de l’autre côté. 
+Une conversion implicite doit exister de *convertible_string_type* au string_view de l’autre côté.
 
 La comparaison est basée sur une comparaison lexicographique par paire des séquences de caractères. Lorsque la première paire inégale de caractères est rencontrée, le résultat de cette comparaison est retourné. Si aucun caractère inégal n’est trouvé, mais qu’une séquence est plus petite, la séquence la plus petite est inférieure à la plus longue. En d’autres termes, « cat » est inférieur à « chats ».
 
@@ -174,7 +173,7 @@ int main()
 }
 ```
 
-## <a name="op_lt_eq"></a>&lt;d’opérateur =
+## <a name="operatorlt"></a><a name="op_lt_eq"></a>&lt;d’opérateur =
 
 Teste si l’objet situé à gauche de l’opérateur est inférieur ou égal à l’objet situé à droite.
 
@@ -211,7 +210,7 @@ Tout type de chaîne convertible ou objet de type `basic_string_view` à compare
 
 Consultez [&lt;d’opérateur ](#op_lt).
 
-## <a name="op_lt_lt"></a>&lt;d’opérateur &lt;
+## <a name="operatorltlt"></a><a name="op_lt_lt"></a>&lt;d’opérateur &lt;
 
 Écrit un string_view dans un flux de sortie.
 
@@ -237,7 +236,7 @@ flux de sortie dans lequel l’écriture est effectuée.
 
 Utilisez cet opérateur pour insérer le contenu d’un string_view dans un flux de sortie, par exemple à l’aide de [std :: cout](iostream.md#cout).
 
-## <a name="op_gt"></a>, opérateur&gt;
+## <a name="operatorgt"></a><a name="op_gt"></a>, opérateur&gt;
 
 Teste si l’objet situé à gauche de l’opérateur est supérieur à l’objet situé à droite.
 
@@ -274,7 +273,7 @@ Tout type de chaîne convertible ou objet de type `basic_string_view` à compare
 
 Consultez [&lt;d’opérateur ](#op_lt).
 
-## <a name="op_gt_eq"></a>&gt;d’opérateur =
+## <a name="operatorgt"></a><a name="op_gt_eq"></a>&gt;d’opérateur =
 
 Teste si l’objet situé à gauche de l’opérateur est supérieur ou égal à l’objet situé à droite.
 
@@ -311,9 +310,9 @@ Tout type de chaîne convertible ou objet de type `basic_string_view` à compare
 
 Consultez [&lt;d’opérateur ](#op_lt).
 
-## <a name="op_sv"></a>opérateur «» (string_view littéral)
+## <a name="operator-sv-string_view-literal"></a><a name="op_sv"></a>opérateur «» (string_view littéral)
 
-Construit un string_view à partir d’un littéral de chaîne. Requiert l’espace de noms `std::literals::string_view_literals`. 
+Construit un string_view à partir d’un littéral de chaîne. Requiert l’espace de noms `std::literals::string_view_literals`.
 
 ### <a name="example"></a>Exemple
 

@@ -4,12 +4,12 @@ ms.date: 11/04/2016
 f1_keywords:
 - <cstdint>
 ms.assetid: 87afafb2-c630-4383-a2fc-a6b47c639e21
-ms.openlocfilehash: 9f4839ed6166e328feac4ae89fcce0637abce993
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: 142ea2b341dad307dea98d1406803a1e7eca5e78
+ms.sourcegitcommit: 8e285a766523e653aeeb34d412dc6f615ef7b17b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68447474"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80076643"
 ---
 # <a name="ltcstdintgt"></a>&lt;cstdint&gt;
 
@@ -24,7 +24,7 @@ Inclut l’en-tête \<stdint.h> de la bibliothèque C Standard et ajoute les no
 ## <a name="types"></a>Types
 
 ```cpp
-namespace std { 
+namespace std {
     using int8_t = signed integer type; // optional
     using int16_t = signed integer type; // optional
     using int32_t = signed integer type; // optional
@@ -71,5 +71,5 @@ SIZE_MAX
 
 ## <a name="see-also"></a>Voir aussi
 
-[Informations de référence sur les fichiers d’en-tête](../standard-library/cpp-standard-library-header-files.md)\
-[Vue d’ensemble de la bibliothèque C++ Standard](../standard-library/cpp-standard-library-overview.md)
+[Référence de fichiers d’en-tête](../standard-library/cpp-standard-library-header-files.md)\
+[Vue d’ensemble de la bibliothèque standard C++](../standard-library/cpp-standard-library-overview.md)

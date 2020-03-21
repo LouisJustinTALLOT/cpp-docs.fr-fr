@@ -1,18 +1,18 @@
 ---
-title: pages de propriétés de l'Éditeur de liens
+title: Pages de propriétés de l'Éditeur de liens
 ms.date: 07/24/2019
 ms.topic: article
 ms.assetid: 7e7671e5-a35a-4e67-9bdb-661d75c4d11e
-ms.openlocfilehash: 55fcefd826ec6ecb153adad495e21ce97aa432f1
-ms.sourcegitcommit: effb516760c0f956c6308eeded48851accc96b92
+ms.openlocfilehash: fd0befd7b8ed4e7a4209c3c80602be2f2a99422f
+ms.sourcegitcommit: 8e285a766523e653aeeb34d412dc6f615ef7b17b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70927701"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80079599"
 ---
-# <a name="linker-property-pages"></a>pages de propriétés de l'Éditeur de liens
+# <a name="linker-property-pages"></a>Pages de propriétés de l'Éditeur de liens
 
-Les propriétés suivantes se trouvent sous**Propriétés** > du **projet** > **éditeur de liens**propriétés > de**configuration**. Pour plus d’informations sur l’éditeur de liens, consultez [CL appelle l’éditeur](cl-invokes-the-linker.md) de liens et les options de l' [éditeur de liens](linker-options.md).
+Les propriétés suivantes se trouvent sous **Propriétés** du **projet** >  > **Propriétés de configuration** > éditeur de **liens**. Pour plus d’informations sur l’éditeur de liens, consultez [CL appelle l’éditeur](cl-invokes-the-linker.md) de liens et les options de l' [éditeur de liens](linker-options.md).
 
 ## <a name="general-property-page"></a>Général, page de propriétés
 
@@ -24,10 +24,10 @@ L’option [/out](out-output-file-name.md) substitue le nom et l’emplacement p
 
 Affiche les messages de progression de l’éditeur de liens
 
-**Choix**
+**Choices**
 
 - **Non défini** -pas de commentaires.
-- **Afficher tous les messages de progression** -affiche tous les messages d’avancement. 
+- **Afficher tous les messages de progression** -affiche tous les messages d’avancement.
 - **Pour les bibliothèques recherchées** , affiche les messages de progression indiquant uniquement les bibliothèques recherchées.
 - **À propos du repli COMDAT lors de la liaison optimisée** : affiche des informations sur le repli COMDAT pendant la liaison optimisée.
 - **À propos des données supprimées pendant la liaison optimisée** : affiche des informations sur les fonctions et les données supprimées pendant la liaison optimisée.
@@ -40,11 +40,11 @@ L’option [/version](version-version-information.md) indique à l’éditeur de
 
 ### <a name="enable-incremental-linking"></a>Activation des liens incrémentiels
 
-Active les liens incrémentiels. ([/INCREMENTAL](incremental-link-incrementally.md),/INCREMENTAL : NO)
+Active les liens incrémentiels. ([/INCREMENTAL](incremental-link-incrementally.md),/Incremental : no)
 
 ### <a name="suppress-startup-banner"></a>Supprimer la bannière de démarrage
 
-L’option [/nologo](nologo-suppress-startup-banner-linker.md) empêche l’affichage du message de copyright et du numéro de version. 
+L’option [/nologo](nologo-suppress-startup-banner-linker.md) empêche l’affichage du message de copyright et du numéro de version.
 
 ### <a name="ignore-import-library"></a>Bibliothèque d’importation ignorée
 
@@ -68,7 +68,7 @@ La redirection par utilisateur force toutes les écritures dans HKCR à être re
 
 Permet à l’utilisateur de substituer le chemin de la bibliothèque d’environnement. ([/LIBPATH](libpath-additional-libpath.md): Folder)
 
-### <a name="link-library-dependencies"></a>Lier les dépendances de la bibliothèque
+### <a name="link-library-dependencies"></a>Dépendances de bibliothèque de liens
 
 Indique s’il convient de lier les fichiers .lib produits par les projets dépendants. En général, vous souhaitez créer un lien dans les fichiers. lib, mais ce n’est peut-être pas le cas pour certaines dll.
 
@@ -82,7 +82,7 @@ Pour plus d’informations sur l’accès à la page de propriétés **général
 
 ### <a name="link-status"></a>État du lien
 
-Spécifie si l’éditeur de liens doit afficher un indicateur de progression indiquant quel pourcentage du lien est terminé. La valeur par défaut est de ne pas afficher ces informations d’État. ([/LTCG](ltcg-link-time-code-generation.md): ÉTAT | LTCG : NOSTATUS)
+Spécifie si l’éditeur de liens doit afficher un indicateur de progression indiquant quel pourcentage du lien est terminé. La valeur par défaut est de ne pas afficher ces informations d’État. ([/LTCG](ltcg-link-time-code-generation.md): état | LTCG : NOSTATUS)
 
 ### <a name="prevent-dll-binding"></a>Empêcher la liaison de DLL
 
@@ -96,17 +96,17 @@ Spécifie si l’éditeur de liens doit afficher un indicateur de progression in
 
 L’option [/force](force-force-file-output.md) indique à l’éditeur de liens de créer un fichier. exe ou une dll même si un symbole est référencé mais pas défini, ou s’il est défini sur multiplier. Il peut créer un fichier. exe non valide.
 
-**Choix**
+**Choices**
 
 - **Activé** -/force sans argument implique à la fois plusieurs et non résolus.
 - **Symbole défini par multiplication uniquement** -utilisez/force : multiple pour créer un fichier de sortie, même si Link trouve plusieurs définitions pour un symbole.
-- **Symbole non défini uniquement** -utilisez/force : Unresolved pour créer un fichier de sortie si Link trouve un symbole non défini. /FORCE: Unresolved est ignoré si le symbole de point d’entrée n’est pas résolu.
+- **Symbole non défini uniquement** -utilisez/force : Unresolved pour créer un fichier de sortie si Link trouve un symbole non défini. /FORCE : Unresolved est ignoré si le symbole de point d’entrée n’est pas résolu.
 
 ### <a name="create-hot-patchable-image"></a>Créer une image corrigeable à chaud
 
 Prépare une image pour la mise à jour à chaud.
 
-**Choix**
+**Choices**
 
 - **Activé** : prépare une image pour la mise à jour à chaud.
 - **Image x86 uniquement** -prépare une image x86 pour la mise à jour à chaud.
@@ -125,7 +125,7 @@ Spécifie des éléments supplémentaires à ajouter à la ligne de commande de 
 
 ### <a name="ignore-all-default-libraries"></a>Ignorer toutes les bibliothèques par défaut
 
-L’option [/NODEFAULTLIB](nodefaultlib-ignore-libraries.md) indique à l’éditeur de liens de supprimer une ou plusieurs bibliothèques par défaut de la liste des bibliothèques qu’il recherche lors de la résolution des références externes. 
+L’option [/NODEFAULTLIB](nodefaultlib-ignore-libraries.md) indique à l’éditeur de liens de supprimer une ou plusieurs bibliothèques par défaut de la liste des bibliothèques qu’il recherche lors de la résolution des références externes.
 
 ### <a name="ignore-specific-default-libraries"></a>Bibliothèques par défaut spécifiques ignorées
 
@@ -133,7 +133,7 @@ Spécifie un ou plusieurs noms de bibliothèques par défaut à ignorer. Sépare
 
 ### <a name="module-definition-file"></a>Fichier de définition de module
 
-L’option [/def](def-specify-module-definition-file.md) passe un fichier de définition de module (. def) à l’éditeur de liens. Un seul fichier. def peut être spécifié pour la liaison. 
+L’option [/def](def-specify-module-definition-file.md) passe un fichier de définition de module (. def) à l’éditeur de liens. Un seul fichier. def peut être spécifié pour la liaison.
 
 ### <a name="add-module-to-assembly"></a>Ajouter un module à l’assembly
 
@@ -149,7 +149,7 @@ L’option [/include](include-force-symbol-references.md) indique à l’éditeu
 
 ### <a name="delay-loaded-dlls"></a>Dll à chargement différé
 
-L’option [/delayload](delayload-delay-load-import.md) entraîne le chargement différé des dll. Le nom de la dll spécifie une DLL pour différer le chargement. 
+L’option [/delayload](delayload-delay-load-import.md) entraîne le chargement différé des dll. Le nom de la dll spécifie une DLL pour différer le chargement.
 
 ### <a name="assembly-link-resource"></a>Ressource de lien d’assembly
 
@@ -171,17 +171,17 @@ L’option [/ASSEMBLYLINKRESOURCE](assemblylinkresource-link-to-dotnet-framework
 
 ### <a name="allow-isolation"></a>Autoriser l’isolation
 
-Spécifie un comportement pour la recherche de manifeste. ([/ALLOWISOLATION](allowisolation-manifest-lookup.md): NON)
+Spécifie un comportement pour la recherche de manifeste. ([/ALLOWISOLATION](allowisolation-manifest-lookup.md): non)
 
 ### <a name="enable-user-account-control-uac"></a>Activer le contrôle de compte d’utilisateur (UAC)
 
-Spécifie si le contrôle de compte d’utilisateur est activé ou non.  ([/MANIFESTUAC](manifestuac-embeds-uac-information-in-manifest.md),/MANIFESTUAC : NO)
+Spécifie si le contrôle de compte d’utilisateur est activé ou non.  ([/MANIFESTUAC](manifestuac-embeds-uac-information-in-manifest.md),/MANIFESTUAC : no)
 
 ### <a name="uac-execution-level"></a>Niveau d’exécution du contrôle de compte d’utilisateur
 
 Spécifie le niveau d’exécution demandé pour l’application lors de l’exécution avec le contrôle de compte d’utilisateur.  (/MANIFESTUAC : Level = [valeur])
 
-**Choix**
+**Choices**
 
 - **asInvoker** -niveau d’exécution UAC : en tant que demandeur.
 - **highestAvailable** -niveau d’exécution du contrôle de compte d’utilisateur : disponible le plus élevé.
@@ -197,12 +197,12 @@ Spécifie s’il faut ignorer les niveaux de protection de l’interface utilisa
 
 Cette option permet de créer des informations de débogage pour le fichier. exe ou la DLL.
 
-**Choix**
+**Choices**
 
 - **Non** : ne produit aucune information de débogage.
 - **Générer des informations de débogage** -créer une base de données de programme (PDB) complète idéale pour la distribution vers le serveur de symboles Microsoft.
-- **Générer des informations de débogage optimisées pour des liens plus rapides** : produit une base de données de programme (PDB) idéale pour le cycle de modification-lien-débogage. 
-- **Générer des informations de débogage optimisées pour le partage et la publication** : produit une base de données de programme (PDB) idéale pour le cycle de modification-lien-débogage. 
+- **Générer des informations de débogage optimisées pour des liens plus rapides** : produit une base de données de programme (PDB) idéale pour le cycle de modification-lien-débogage.
+- **Générer des informations de débogage optimisées pour le partage et la publication** : produit une base de données de programme (PDB) idéale pour le cycle de modification-lien-débogage.
 
 ### <a name="generate-program-database-file"></a>Générer le fichier de base de données du programme
 
@@ -216,7 +216,7 @@ L’option [/PDBSTRIPPED](pdbstripped-strip-private-symbols.md) crée un deuxiè
 
 L’option [/Map](map-generate-mapfile.md) indique à l’éditeur de liens de créer un mappage.
 
-### <a name="map-file-name"></a>Nom de fichier de mappage
+### <a name="map-file-name"></a>Nom de fichier du mappage
 
 Nom spécifié par l’utilisateur pour le mappage. Il remplace le nom par défaut.
 
@@ -234,7 +234,7 @@ L’option [/MapInfo](mapinfo-include-information-in-mapfile.md) indique à l’
 
 L’option [/Subsystem](subsystem-specify-subsystem.md) indique au système d’exploitation comment exécuter le fichier. exe. Le choix du sous-système affecte le symbole de point d’entrée (ou la fonction de point d’entrée) choisi par l’éditeur de liens.
 
-**Choix**
+**Choices**
 
 - **Non défini** -aucun sous-système défini.
 - **Console** : application en mode caractères Win32. Les applications console reçoivent une console par le système d’exploitation. Si main ou wmain est défini, CONSOLE est la valeur par défaut.
@@ -272,7 +272,7 @@ L’option [/LARGEADDRESSAWARE](largeaddressaware-handle-large-addresses.md) ind
 
 ### <a name="terminal-server"></a>Terminal Server
 
-L’option [/TSAWARE](tsaware-create-terminal-server-aware-application.md) définit un indicateur dans le champ IMAGE_OPTIONAL_HEADER DllCharacteristics de l’en-tête facultatif de l’image du programme. Si cet indicateur est défini, le serveur Terminal Server n’apportera aucune modification à l’application.
+L’option [/TSAWARE](tsaware-create-terminal-server-aware-application.md) définit un indicateur dans le champ IMAGE_OPTIONAL_HEADER DllCharacteristics dans l’en-tête facultatif de l’image du programme. Si cet indicateur est défini, le serveur Terminal Server n’apportera aucune modification à l’application.
 
 ### <a name="swap-run-from-cd"></a>Échange d’exécution à partir du CD
 
@@ -286,7 +286,7 @@ L’option [/SWAPRUN](swaprun-load-linker-output-to-swap-file.md) indique au sys
 
 Utilisez l’option [/Driver](driver-windows-nt-kernel-mode-driver.md) de l’éditeur de liens pour générer un pilote en mode noyau Windows NT.
 
-**Choix**
+**Choices**
 
 - **Non défini** -paramètre de pilote par défaut.
 - **Pilote-pilote**
@@ -295,11 +295,11 @@ Utilisez l’option [/Driver](driver-windows-nt-kernel-mode-driver.md) de l’é
 
 ## <a name="optimization-property-page"></a>Page de propriétés optimisation
 
-### <a name="references"></a>Références
+### <a name="references"></a>References
 
 [/OPT](opt-optimizations.md): Ref élimine les fonctions et/ou les données qui ne sont jamais référencées alors que/opt : NOREF conserve les fonctions et/ou les données qui ne sont jamais référencées.
 
-### <a name="enable-comdat-folding"></a>Activer le pliage COMDAT
+### <a name="enable-comdat-folding"></a>Activer le repli COMDAT
 
 Utilisez [/OPT](opt-optimizations.md): ICF\[= iterations] pour effectuer un repli COMDAT identique.
 
@@ -315,7 +315,7 @@ Spécifiez le fichier. PGD pour les optimisations guidées par profil. ([/PGD](p
 
 Spécifie la génération du code durant l’édition de liens. ([/LTCG](ltcg-link-time-code-generation.md))
 
-**Choix**
+**Choices**
 
 - **Default** -paramètre LTCG par défaut.
 - Utiliser la génération de **code durant l’édition de liens rapide** : utilisez la génération de code durant l’édition de liens avec [/FASTGENPROFILE](genprofile-fastgenprofile-generate-profiling-instrumented-build.md).
@@ -352,7 +352,7 @@ Vous permet de spécifier l’ID de ressource de la bibliothèque de types gén�
 
 Active ou désactive la génération de métadonnées Windows.
 
-**Choix**
+**Choices**
 
 - **Oui** : active la génération des fichiers de métadonnées Windows.
 - **Non** : désactive la génération de fichiers de métadonnées Windows.
@@ -381,7 +381,7 @@ L’option [/entry](entry-entry-point-symbol.md) spécifie une fonction de point
 
 ### <a name="no-entry-point"></a>Aucun point d’entrée
 
-L’option [/noentry](noentry-no-entry-point.md)est requise pour la création d’une dll de ressources uniquement. Utilisez cette option pour empêcher Link de lier une référence à `_main` dans la dll.
+L’option [/noentry](noentry-no-entry-point.md)est requise pour la création d’une dll de ressources uniquement. Utilisez cette option pour empêcher LINK de lier une référence à `_main` dans la DLL.
 
 ### <a name="set-checksum"></a>Définir la somme de contrôle
 
@@ -389,19 +389,19 @@ L’option [/Release](release-set-the-checksum.md) définit la somme de contrôl
 
 ### <a name="base-address"></a>Adresse de base
 
-Définit une adresse de base pour le programme. ([/Base](base-base-address.md): {address\[, size] | @filename, Key})
+Définit une adresse de base pour le programme. ([/Base](base-base-address.md): {Address\[, taille] | @filename, clé})
 
 ### <a name="randomized-base-address"></a>Adresse de base aléatoire
 
-Adresse de base aléatoire. ([/DYNAMICBASE](dynamicbase-use-address-space-layout-randomization.md)\[: NO])
+Adresse de base aléatoire. ([/Dynamicbase](dynamicbase-use-address-space-layout-randomization.md)\[: no])
 
 ### <a name="fixed-base-address"></a>Adresse de base fixe
 
-Crée un programme qui peut être chargé uniquement à son adresse de base préférée. ([/FIXED](fixed-fixed-base-address.md)\[: NO])
+Crée un programme qui peut être chargé uniquement à son adresse de base préférée. ([/Fixed](fixed-fixed-base-address.md)\[: no])
 
 ### <a name="data-execution-prevention-dep"></a>Prévention de l’exécution des données (DEP)
 
-Marque un fichier exécutable comme ayant été testé pour qu’il soit compatible avec la fonctionnalité de prévention de l’exécution des données Windows. ([/NXCOMPAT](nxcompat-compatible-with-data-execution-prevention.md)\[: NO])
+Marque un fichier exécutable comme ayant été testé pour qu’il soit compatible avec la fonctionnalité de prévention de l’exécution des données Windows. ([/Nxcompat](nxcompat-compatible-with-data-execution-prevention.md)\[: no])
 
 ### <a name="turn-off-assembly-generation"></a>Désactiver la génération de l’assembly
 
@@ -409,13 +409,13 @@ L’option [/noAssembly](noassembly-create-a-msil-module.md) indique à l’édi
 
 ### <a name="unload-delay-loaded-dll"></a>Décharger la DLL à chargement différé
 
-Le qualificateur **Unload** indique à la fonction d’assistance de chargement différé de prendre en charge le déchargement explicite de la dll. ([/DELAY](delay-delay-load-import-settings.md): UNLOAD)
+Le qualificateur **Unload** indique à la fonction d’assistance de chargement différé de prendre en charge le déchargement explicite de la dll. ([/delay](delay-delay-load-import-settings.md): Unload)
 
 ### <a name="nobind-delay-loaded-dll"></a>DLL à chargement différé NOBIND
 
-Le qualificateur **NOBIND** indique à l’éditeur de liens de ne pas inclure une IAT pouvant être liée dans l’image finale. L'option par défaut consiste à créer la table IAT pouvant être liée pour les DLL chargées en différé. ([/DELAY](delay-delay-load-import-settings.md): NOBIND)
+Le qualificateur **NOBIND** indique à l’éditeur de liens de ne pas inclure une IAT pouvant être liée dans l’image finale. L'option par défaut consiste à créer la table IAT pouvant être liée pour les DLL chargées en différé. ([/delay](delay-delay-load-import-settings.md): nobind)
 
-### <a name="import-library"></a>Importer la bibliothèque
+### <a name="import-library"></a>Bibliothèque d'importation
 
 Remplace le nom par défaut de la bibliothèque d’importation. ([/IMPLIB](implib-name-import-library.md): NomFichier)
 
@@ -427,7 +427,7 @@ L’option [/Merge](merge-combine-sections.md) combine la première section (fro
 
 L’option [/machine](machine-specify-target-platform.md) spécifie la plateforme cible pour le programme.
 
-**Choix**
+**Choices**
 
 - **Non défini**
 - **MachineARM**
@@ -445,13 +445,13 @@ L’option [/machine](machine-specify-target-platform.md) spécifie la plateform
 
 ### <a name="profile"></a>Profil
 
-Génère un fichier de sortie utilisable avec le profileur Outils d’analyse des performances. Requiert la définition de GenerateDebugInformation (/[/Debug](debug-generate-debug-info.md)). ([/PROFILE](profile-performance-tools-profiler.md))
+Génère un fichier de sortie utilisable avec le profileur Outils d’analyse des performances. Requiert la définition de GenerateDebugInformation (/[/Debug](debug-generate-debug-info.md)). ([/Profile](profile-performance-tools-profiler.md))
 
 ### <a name="clr-thread-attribute"></a>Attribut de thread CLR
 
 Spécifiez explicitement l’attribut de thread pour le point d’entrée de votre programme CLR.
 
-**Choix**
+**Choices**
 
 - **Attribut de thread MTA** : applique l’attribut MTAThreadAttribute au point d’entrée de votre programme.
 - **Attribut de thread STA** : applique l’attribut STAThreadAttribute au point d’entrée de votre programme.
@@ -461,7 +461,7 @@ Spécifiez explicitement l’attribut de thread pour le point d’entrée de vot
 
 Définit le type (IJW, pure ou sécurisée) d’une image CLR.
 
-**Choix**
+**Choices**
 
 - **Forcer l’image IJW**
 - **Forcer l’image IL pure**
@@ -484,11 +484,11 @@ Signer partiellement un assembly. Utilisez [/delaysign](delaysign-partially-sign
 
 [/CLRUNMANAGEDCODECHECK](clrunmanagedcodecheck-add-suppressunmanagedcodesecurityattribute.md) spécifie si l’éditeur de liens applique SuppressUnmanagedCodeSecurityAttribute aux appels PInvoke générés par l’éditeur de liens à partir du code managé dans des DLL natives.
 
-### <a name="error-reporting"></a>Rapport d’erreurs
+### <a name="error-reporting"></a>Rapport d'erreurs
 
 Vous permet de signaler les erreurs internes du compilateur (ICE) directement à l'équipe Visual C++.
 
-**Choix**
+**Choices**
 
 - **PromptImmediately** -invite immédiatement.
 - **File** d’attente pour la prochaine connexion-file d’attente pour la prochaine connexion.
@@ -503,7 +503,7 @@ L’option [/align](align-section-alignment.md) spécifie l’alignement de chaq
 
 [/CLRSUPPORTLASTERROR](clrsupportlasterror-preserve-last-error-code-for-pinvoke-calls.md), qui est activé par défaut, conserve le dernier code d’erreur des fonctions appelées via le mécanisme P/Invoke, qui vous permet d’appeler des fonctions natives dans des dll, à partir du code compilé avec/CLR.
 
-**Choix**
+**Choices**
 
 - **Activé** : activez CLRSupportLastError.
 - **Désactivé** : désactive CLRSupportLastError.

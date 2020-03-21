@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - .CODE directive
 ms.assetid: 2b8c882c-c0d2-4fa3-8335-e6b12717a4f4
-ms.openlocfilehash: 0975e96e670400b7fa221ae2d1b9982b5cee613b
-ms.sourcegitcommit: 0781c69b22797c41630601a176b9ea541be4f2a3
+ms.openlocfilehash: 7e53befcc46319d0ecf2287ab96a19a73a0b0b85
+ms.sourcegitcommit: 8e285a766523e653aeeb34d412dc6f615ef7b17b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/20/2019
-ms.locfileid: "75314144"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80076277"
 ---
 # <a name="code"></a>.CODE
 
@@ -23,7 +23,7 @@ ms.locfileid: "75314144"
 > ⟦ *segmentItem* ⟧... \
 > ⟦ *codesegmentnameId* **se termine**;; ⟧\
 
-### <a name="parameters"></a>Parameters
+### <a name="parameters"></a>Paramètres
 
 *nom*\
 Paramètre facultatif qui spécifie le nom du segment de code. Le nom par défaut est **_TEXT** pour les [modèles](dot-model.md)minuscules, petits, compacts et plats. Le nom par défaut est *modulename*_TEXT pour d’autres modèles.
@@ -33,4 +33,3 @@ Paramètre facultatif qui spécifie le nom du segment de code. Le nom par défau
 Informations de référence sur les [Directives](directives-reference.md)\
 [. ](dot-data.md)\ de données
 [Syntaxe BNF de MASM](masm-bnf-grammar.md)
-

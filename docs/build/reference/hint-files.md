@@ -11,12 +11,12 @@ helpviewer_keywords:
 - cpp.stop
 - Class View, hint file
 ms.assetid: 17194f66-cf62-4523-abec-77db0675ab65
-ms.openlocfilehash: ca111fcb8b0fc511fda3bbb3a4769ebc9fdd28bc
-ms.sourcegitcommit: 217fac22604639ebd62d366a69e6071ad5b724ac
+ms.openlocfilehash: de299f17686d68956e9847d47743d8931734d4ad
+ms.sourcegitcommit: 8e285a766523e653aeeb34d412dc6f615ef7b17b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/19/2019
-ms.locfileid: "74189004"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80075206"
 ---
 # <a name="hint-files"></a>Fichiers hint
 
@@ -96,7 +96,7 @@ Il existe deux catégories de macros qui perturbent l’analyseur :
 
 Après l’exécution de l’une des Actions rapides, l’analyseur effectue une nouvelle analyse des fichiers affectés par le fichier hint.
 
-Par défaut, la macro à problème est mise en surbrillance comme suggestion. La mise en surbrillance peut être remplacée par quelque chose de plus notable, par exemple une ligne ondulée (tilde) rouge ou verte. Utilisez l’option **Macros dans les régions ignorées par la navigation** dans la section **Tildes du code** sous **Outils** > **Options**  >  **Éditeur de texte** > **C/C++**  > **Vue**.
+Par défaut, la macro à problème est mise en surbrillance comme suggestion. La mise en surbrillance peut être remplacée par quelque chose de plus notable, par exemple une ligne ondulée (tilde) rouge ou verte. Utilisez l’option **Macros dans les régions ignorées par la navigation** dans la section **Tildes du code** sous **Outils** > **Options** > **Éditeur de texte** > **C/C++**  > **Vue**.
 
 ![Macros dans l’option zones de navigation ignorées.](media/skipped-regions-squiggle-option.png "Option de tilde de régions ignorée.")
 
@@ -150,13 +150,13 @@ Les indicateurs utilisent cette syntaxe :
 
 |Syntaxe|Signification|
 |------------|-------------|
-|`#define` *nom de l’indicateur* *chaîne de remplacement*<br /><br /> `#define` *nom de l’indicateur* `(` *paramètre*, ...`)`*chaîne de remplacement*|Une directive de préprocesseur qui définit un nouvel indicateur ou redéfinit un indicateur existant. Après la directive, le préprocesseur remplace chaque occurrence de *nom de l’indicateur* dans le code source par *chaîne de remplacement*.<br /><br /> La deuxième forme de la syntaxe définit un indicateur de type fonction. Si un indicateur de type fonction apparaît dans le code source, le préprocesseur remplace d’abord chaque occurrence de *paramètre* dans *chaîne de remplacement* par l’argument correspondant dans le code source, puis remplace *nom de l’indicateur* par *chaîne de remplacement*.|
+|*indicateur de `#define`-chaîne de remplacement de nom* *replacement-string*<br /><br /> `#define` *Hint-name* `(` *Parameter*,...`)`*remplacement-String*|Une directive de préprocesseur qui définit un nouvel indicateur ou redéfinit un indicateur existant. Après la directive, le préprocesseur remplace chaque occurrence de *nom de l’indicateur* dans le code source par *chaîne de remplacement*.<br /><br /> La deuxième forme de la syntaxe définit un indicateur de type fonction. Si un indicateur de type fonction apparaît dans le code source, le préprocesseur remplace d’abord chaque occurrence de *paramètre* dans *chaîne de remplacement* par l’argument correspondant dans le code source, puis remplace *nom de l’indicateur* par *chaîne de remplacement*.|
 |`@<`|*Chaîne de remplacement* spécifique à un fichier hint qui indique le début d’un ensemble d’éléments de mappage.|
 |`@=`|*Chaîne de remplacement* spécifique à un fichier hint qui indique un élément de table intermédiaire. Une table peut avoir plusieurs éléments de table.|
 |`@>`|*Chaîne de remplacement* spécifique à un fichier hint qui indique la fin d’un ensemble d’éléments de mappage.|
-|`#undef` *nom de l’indicateur*|Directive de préprocesseur qui supprime un indicateur existant. Le nom de l’indicateur est fourni par l’identificateur de *nom de l’indicateur*.|
-|`//` *commentaire*|Commentaire sur une seule ligne.|
-|`/*` *commentaire* `*/`|Commentaire multiligne.|
+|*nom de l’indicateur de* `#undef`|Directive de préprocesseur qui supprime un indicateur existant. Le nom de l’indicateur est fourni par l’identificateur de *nom de l’indicateur*.|
+|`//` un *Commentaire*|Commentaire sur une seule ligne.|
+|`/*` le *commentaire* `*/`|Commentaire multiligne.|
 
 ## <a name="example"></a>Exemple
 
@@ -248,4 +248,3 @@ Ces remarques s’appliquent à la liste précédente :
 [#define, directive (C/C++)](../../preprocessor/hash-define-directive-c-cpp.md)<br>
 [#undef, directive (C/C++)](../../preprocessor/hash-undef-directive-c-cpp.md)<br>
 [Annotations SAL](../../c-runtime-library/sal-annotations.md)<br>
-

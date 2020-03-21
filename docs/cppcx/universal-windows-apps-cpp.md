@@ -3,18 +3,18 @@ title: Applications de plateforme Windows universelle (C++)
 ms.date: 03/30/2018
 ms.assetid: 357121cc-d390-4bae-b34a-39614861a9f4
 ms.topic: overview
-ms.openlocfilehash: 11a32504dfdd380f621c380994f4f53073547a57
-ms.sourcegitcommit: 7750e4c291d56221c8893120c56a1fe6c9af60d6
+ms.openlocfilehash: cd90f76cf2ee9b4ca9cb2ceea970cd24b0bf24cf
+ms.sourcegitcommit: 8e285a766523e653aeeb34d412dc6f615ef7b17b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/25/2019
-ms.locfileid: "71274705"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80079915"
 ---
 # <a name="universal-windows-apps-c"></a>Applications de plateforme Windows universelle (C++)
 
 La plateforme Windows universelle (UWP) est l’interface de programmation moderne pour Windows. Avec UWP, vous écrivez une application ou un composant une fois et vous la déployez sur n’importe quel appareil Windows 10. Vous pouvez écrire un composant dans C++ et les applications écrites dans n’importe quel autre langage compatible UWP peuvent l’utiliser.
 
-La plus grande partie de la documentation UWP se trouve dans l’arborescence de contenu Windows dans [plateforme Windows universelle documentation](/windows/uwp/). Vous y trouverez des didacticiels de démarrage, ainsi que de la documentation de référence. 
+La plus grande partie de la documentation UWP se trouve dans l’arborescence de contenu Windows dans [plateforme Windows universelle documentation](/windows/uwp/). Vous y trouverez des didacticiels de démarrage, ainsi que de la documentation de référence.
 
 Pour les nouveaux composants et applications UWP, nous vous recommandons d’utiliser [ C++/WinRT](/windows/uwp/cpp-and-winrt-apis/), une nouvelle projection de langage c++ 17 standard pour les API Windows Runtime. C++/WinRT est disponible dans le kit de développement logiciel (SDK) Windows 10 à partir de la version 1803. C++/WinRT est entièrement implémenté dans les fichiers d’en-tête et est conçu pour vous fournir un accès de première classe à l’API Windows moderne. Contrairement à C++l’implémentation de/CX. C++/WinRT n’utilise pas de syntaxe non standard ou d’extensions de langage Microsoft, et il tire pleinement C++ parti du compilateur pour créer une sortie hautement optimisée. Pour plus d’informations, consultez [présentation C++de/WinRT](/windows/uwp/cpp-and-winrt-apis/intro-to-using-cpp-with-winrt).
 
@@ -26,7 +26,7 @@ Vous pouvez utiliser le convertisseur d’application Desktop Bridge pour empaqu
 |-|-|
 |[C++Référence du langage/CX](visual-c-language-reference-c-cx.md)|Décrit l’ensemble des extensions qui simplifient C++ la consommation des API Windows Runtime et activent la gestion des erreurs basée sur les exceptions.|
 |[Génération d’applications et de bibliothèques (C++/CX)](building-apps-and-libraries-c-cx.md)|Décrit comment créer des DLL et des bibliothèques statiques qui sont accessibles à partir d’une application ou d’un composant C++/CX.|
-|[Tutoriel : Créer une application UWP « Hello, World » dans C++/CX](/windows/uwp/get-started/create-a-basic-windows-10-app-in-cpp)|Une procédure pas à pas qui présente les concepts de base du C++développement d’applications UWP dans/CX. |
+|[Didacticiel : créer une application UWP « Hello, World » dans C++/CX](/windows/uwp/get-started/create-a-basic-windows-10-app-in-cpp)|Une procédure pas à pas qui présente les concepts de base du C++développement d’applications UWP dans/CX. |
 |[Création de composants Windows Runtime C++dans/CX](/windows/uwp/winrt-components/creating-windows-runtime-components-in-cpp)|Décrit comment créer des dll que d’autres applications et composants UWP peuvent consommer.|
 |[Programmation de jeux UWP](/windows/uwp/gaming/)|Décrit comment utiliser DirectX et/CX C++pour créer des jeux.|
 

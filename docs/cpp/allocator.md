@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - __declspec keyword [C++], allocator
 - allocator __declspec keyword
-ms.openlocfilehash: 2e2615829f6491bf660859fbc86ebcd07a56c5fe
-ms.sourcegitcommit: a6d63c07ab9ec251c48bc003ab2933cf01263f19
+ms.openlocfilehash: 39708e8cfff7f61c3a3f763f87e1a3da36f0d4b1
+ms.sourcegitcommit: 8e285a766523e653aeeb34d412dc6f615ef7b17b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "74857682"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80077258"
 ---
 # <a name="allocator"></a>allocator
 
@@ -22,7 +22,7 @@ Le spécificateur de déclaration d' **Allocator** peut être appliqué aux fonc
 ## <a name="syntax"></a>Syntaxe
 
 ```
-   __declspec(allocator) 
+   __declspec(allocator)
 ```
 
 ## <a name="remarks"></a>Notes

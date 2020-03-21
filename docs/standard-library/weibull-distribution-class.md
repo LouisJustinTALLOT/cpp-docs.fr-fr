@@ -26,12 +26,12 @@ helpviewer_keywords:
 - std::weibull_distribution [C++], param_type
 - std::weibull_distribution [C++], param_type
 ms.assetid: f20b49d3-1b9a-41af-8db4-baf800eaa02b
-ms.openlocfilehash: 2c1e53c529be8c589f51b9011cee42e5f6f1165b
-ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
+ms.openlocfilehash: 8524ec61f1d785c8ab4a7b3dbef76bba69ddb6d6
+ms.sourcegitcommit: 8e285a766523e653aeeb34d412dc6f615ef7b17b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/21/2019
-ms.locfileid: "72688513"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80075531"
 ---
 # <a name="weibull_distribution-class"></a>weibull_distribution, classe
 
@@ -70,8 +70,8 @@ class weibull_distribution
 
 ### <a name="parameters"></a>Paramètres
 
-*RealType* \
-Le type de résultat à virgule flottante, par défaut, est **double**. Pour découvrir les types possibles, consultez [\<random>](../standard-library/random.md).
+*RealType*\
+Le type de résultat à virgule flottante, par défaut, est **double**. Pour connaître les types possibles, consultez [\<random>](../standard-library/random.md).
 
 ## <a name="remarks"></a>Notes
 
@@ -94,7 +94,7 @@ Les fonctions membres `operator()` retournent la valeur générée suivante d’
 
 Pour plus d’informations sur les classes de distribution et leurs membres, consultez [\<random>](../standard-library/random.md).
 
-Pour plus d’informations sur la distribution de Weibull, consultez l’article de Wolfram MathWorld [Distribution de Weibull](http://mathworld.wolfram.com/WeibullDistribution.html).
+Pour plus d’informations sur la distribution de Weibull, consultez l’article de Wolfram MathWorld [Distribution de Weibull](https://mathworld.wolfram.com/WeibullDistribution.html).
 
 ## <a name="example"></a>Exemple
 
@@ -155,7 +155,7 @@ int main()
 }
 ```
 
-## <a name="output"></a>Sortie
+## <a name="output"></a>Output
 
 Première exécution :
 
@@ -207,13 +207,13 @@ Distribution for 10 samples:
     10: 24.7220241239
 ```
 
-## <a name="requirements"></a>spécifications
+## <a name="requirements"></a>Spécifications
 
-**En-tête :** \<random>
+**En-tête :** \<> aléatoire
 
 **Espace de noms :** std
 
-## <a name="weibull_distribution"></a>  weibull_distribution::weibull_distribution
+## <a name="weibull_distributionweibull_distribution"></a><a name="weibull_distribution"></a>  weibull_distribution::weibull_distribution
 
 ```cpp
 explicit weibull_distribution(result_type a = 1.0, result_type b = 1.0);
@@ -225,10 +225,10 @@ explicit weibull_distribution(const param_type& parm);
 *\*
 Paramètre de distribution `a`.
 
-*b* \
+*b*\
 Paramètre de distribution `b`.
 
-*param* \
+*param*\
 Structure `param_type` utilisée pour construire la distribution.
 
 ### <a name="remarks"></a>Notes
@@ -237,9 +237,9 @@ Structure `param_type` utilisée pour construire la distribution.
 
 Le premier constructeur construit un objet dont la valeur `a` stockée contient la valeur *a* et dont la valeur `b` stockée contient la valeur *b*.
 
-Le deuxième constructeur construit un objet dont les paramètres stockés sont initialisés à partir de *parm*. Vous pouvez obtenir et définir les paramètres actuels d'une distribution existante en appelant la fonction membre `param()`.
+Le second constructeur construit un objet dont les paramètres stockés sont initialisés à partir de *parm*. Vous pouvez obtenir et définir les paramètres actuels d'une distribution existante en appelant la fonction membre `param()`.
 
-## <a name="param_type"></a>  weibull_distribution::param_type
+## <a name="weibull_distributionparam_type"></a><a name="param_type"></a>  weibull_distribution::param_type
 
 Stocke les paramètres de la distribution.
 
@@ -260,7 +260,7 @@ struct param_type {
 *\*
 Paramètre de distribution `a`.
 
-*b* \
+*b*\
 Paramètre de distribution `b`.
 
 \ *droit*

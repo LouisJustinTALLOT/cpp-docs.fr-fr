@@ -6,17 +6,17 @@ helpviewer_keywords:
 - record selection, MFC ODBC classes
 - ODBC recordsets, selecting records
 ms.assetid: 7f0b3a4a-9941-4475-a612-9ec8d15b7691
-ms.openlocfilehash: 745c0c35e42426242d92d720d5dcd3de631fb17b
-ms.sourcegitcommit: fc1de63a39f7fcbfe2234e3f372b5e1c6a286087
-ms.translationtype: HT
+ms.openlocfilehash: 8388cd5c8c53a4595dc9b44430077421ee8680bf
+ms.sourcegitcommit: 8e285a766523e653aeeb34d412dc6f615ef7b17b
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65707806"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80079796"
 ---
 # <a name="selecting-and-manipulating-records"></a>Sélection et manipulation d'enregistrements
 
-> [!NOTE] 
-> L’Assistant Consommateur ODBC MFC n’est pas disponible dans Visual Studio 2019 et ultérieur. Vous pouvez toujours créer un consommateur manuellement.
+> [!NOTE]
+> L’Assistant Consommateur ODBC MFC n’est pas disponible dans Visual Studio 2019 et ultérieur. Vous pouvez quand même créer un consommateur manuellement.
 
 Normalement, quand vous sélectionnez des enregistrements d’une source de données à l’aide d’une instruction SQL **SELECT**, vous obtenez un jeu de résultats, qui est un jeu d’enregistrements issus d’une table ou d’une requête. Avec les classes de base de données, vous utilisez un objet recordset pour sélectionner le jeu de résultats et y accéder. Il s’agit d’un objet d’une classe propre à l’application que vous dérivez de la classe [CRecordset](../../mfc/reference/crecordset-class.md). Quand vous définissez une classe recordset, vous spécifiez la source de données à lui associer, la table à utiliser et les colonnes de la table. L’Assistant Application MFC ou **Ajouter une classe** (comme décrit dans [Ajout d’un consommateur ODBC MFC](../../mfc/reference/adding-an-mfc-odbc-consumer.md)) crée une classe avec une connexion à une source de données spécifique. Les Assistants écrivent la fonction membre [GetDefaultSQL](../../mfc/reference/crecordset-class.md#getdefaultsql) de la classe `CRecordset` pour retourner le nom de table.
 

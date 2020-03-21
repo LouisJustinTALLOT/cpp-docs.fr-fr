@@ -12,16 +12,16 @@ helpviewer_keywords:
 - std::make_error_code
 - std::make_error_condition
 - std::system_category
-ms.openlocfilehash: ab4d0d1ee810df8f719bba762262eb03bf899408
-ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
+ms.openlocfilehash: 2ddeb256c974294e2e46d516219a6b5b0cac3ae2
+ms.sourcegitcommit: 8e285a766523e653aeeb34d412dc6f615ef7b17b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/16/2020
-ms.locfileid: "79422422"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80076345"
 ---
 # <a name="ltsystem_errorgt-functions"></a>&lt;system_error&gt;, fonctions
 
-## <a name="generic_category"></a>generic_category
+## <a name="generic_category"></a><a name="generic_category"></a>generic_category
 
 Représente la catégorie des erreurs génériques.
 
@@ -33,21 +33,21 @@ const error_category& generic_category() noexcept;
 
 L’objet `generic_category` est une implémentation de [error_category](../standard-library/error-category-class.md).
 
-## <a name="is_error_code_enum_v"></a>is_error_code_enum_v
+## <a name="is_error_code_enum_v"></a><a name="is_error_code_enum_v"></a>is_error_code_enum_v
 
 ```cpp
-template <class T> 
+template <class T>
     inline constexpr bool is_error_code_enum_v = is_error_code_enum<T>::value;
 ```
 
-## <a name="is_error_condition_enum_v"></a>is_error_condition_enum_v
+## <a name="is_error_condition_enum_v"></a><a name="is_error_condition_enum_v"></a>is_error_condition_enum_v
 
 ```cpp
-template <class T> 
+template <class T>
     inline constexpr bool is_error_condition_enum_v = is_error_condition_enum<T>::value;
 ```
 
-## <a name="make_error_code"></a>make_error_code
+## <a name="make_error_code"></a><a name="make_error_code"></a>make_error_code
 
 Crée un objet de code d’erreur.
 
@@ -66,7 +66,7 @@ L’objet de code d’erreur.
 
 ### <a name="remarks"></a>Notes
 
-## <a name="make_error_condition"></a>make_error_condition
+## <a name="make_error_condition"></a><a name="make_error_condition"></a>make_error_condition
 
 Crée un objet de condition d’erreur.
 
@@ -85,7 +85,7 @@ L’objet de condition d’erreur.
 
 ### <a name="remarks"></a>Notes
 
-## <a name="system_category"></a>system_category
+## <a name="system_category"></a><a name="system_category"></a>system_category
 
 Représente la catégorie des erreurs provoquées par des dépassements de capacité du système de bas niveau.
 

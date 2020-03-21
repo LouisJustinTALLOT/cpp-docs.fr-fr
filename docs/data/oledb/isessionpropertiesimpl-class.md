@@ -12,12 +12,12 @@ helpviewer_keywords:
 - GetProperties method
 - SetProperties method
 ms.assetid: ca0ba254-c7dc-4c52-abec-cf895a0c6a63
-ms.openlocfilehash: 50052e13371482fa0a8b6d66ef666b9801837501
-ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
+ms.openlocfilehash: c1a3539ea4ea705ad8bd1e40acda965ef66e2051
+ms.sourcegitcommit: 8e285a766523e653aeeb34d412dc6f615ef7b17b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/17/2020
-ms.locfileid: "79444028"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80077711"
 ---
 # <a name="isessionpropertiesimpl-class"></a>ISessionPropertiesImpl, classe
 
@@ -28,7 +28,7 @@ Fournit une implémentation de l’interface [ISessionProperties](/previous-vers
 ```cpp
 template <class T, class PropClass = T>
 class ATL_NO_VTABLE ISessionPropertiesImpl :
-   public ISessionProperties, 
+   public ISessionProperties,
    public CUtlProps<PropClass>
 ```
 
@@ -57,7 +57,7 @@ Classe de propriété définissable par l’utilisateur qui A par défaut la val
 
 Interface obligatoire sur les sessions. Cette classe implémente les propriétés de session en appelant une fonction statique définie par le [mappage de jeu de propriétés](../../data/oledb/begin-propset-map.md). Le mappage de jeu de propriétés doit être spécifié dans votre classe de session.
 
-## <a name="getproperties"></a>Isessionpropertiesimpl, :: GetProperties
+## <a name="isessionpropertiesimplgetproperties"></a><a name="getproperties"></a>Isessionpropertiesimpl, :: GetProperties
 
 Retourne la liste des propriétés dans le groupe de propriétés `DBPROPSET_SESSION` qui sont actuellement définies sur la session.
 
@@ -74,7 +74,7 @@ STDMETHOD(GetProperties)(ULONG cPropertyIDSets,
 
 Consultez [ISessionProperties :: GetProperties](/previous-versions/windows/desktop/ms723643(v=vs.85)) dans le *Guide de référence du programmeur OLE DB*.
 
-## <a name="setproperties"></a>Isessionpropertiesimpl, :: SetProperties
+## <a name="isessionpropertiesimplsetproperties"></a><a name="setproperties"></a>Isessionpropertiesimpl, :: SetProperties
 
 Définit les propriétés du groupe de propriétés `DBPROPSET_SESSION`.
 

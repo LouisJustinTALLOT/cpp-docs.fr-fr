@@ -2,12 +2,12 @@
 title: 'Guide du portage : Scribble MFC'
 ms.date: 10/23/2019
 ms.assetid: 8ddb517d-89ba-41a1-ab0d-4d2c6d9047e8
-ms.openlocfilehash: c5e0e8fecd99e4f03077574da7b7fcb3e538762b
-ms.sourcegitcommit: 0cfc43f90a6cc8b97b24c42efcf5fb9c18762a42
+ms.openlocfilehash: 789d29effeea76045a4a10fbca19f20d06778f7c
+ms.sourcegitcommit: 8e285a766523e653aeeb34d412dc6f615ef7b17b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/05/2019
-ms.locfileid: "73627212"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80076968"
 ---
 # <a name="porting-guide-mfc-scribble"></a>Guide du portage : Scribble MFC
 
@@ -23,15 +23,15 @@ Avant de tenter la mise à niveau, vérifiez que la charge de travail Windows De
 
 Sauvegardez ensuite l’ensemble de la solution et tout son contenu.
 
-Enfin, ouvrez la solution dans la dernière version de Visual Studio et autorisez l’Assistant à convertir le projet. 
+Enfin, ouvrez la solution dans la dernière version de Visual Studio et autorisez l’Assistant à convertir le projet.
 
 Notez que vous pouvez aussi exécuter devenv avec l'option `/Upgrade` sur la ligne de commande au lieu d'utiliser l'Assistant pour mettre à niveau vos projets. Consultez [/Upgrade (devenv.exe)](/visualstudio/ide/reference/upgrade-devenv-exe). Cette méthode est utile pour automatiser le processus de mise à niveau d'un grand nombre de projets.
 
-### <a name="step-1-converting-the-project-file"></a>Étape 1. Conversion du fichier projet
+### <a name="step-1-converting-the-project-file"></a>Étape 1. Conversion du fichier projet
 
 Quand vous ouvrez un ancien fichier projet dans Visual Studio, Visual Studio propose de convertir le fichier projet vers la version la plus récente, que nous avons acceptée. La boîte de dialogue suivante s'est affichée :
 
-![Examiner les modifications apportées au projet et à la solution](../porting/media/scribbleprojectupgrade.PNG "Examen des modifications de projet et de solution")
+![Examiner les modifications apportées au projet et à la solution](../porting/media/scribbleprojectupgrade.PNG "Revue des modifications de projet et de solution")
 
 Une erreur s'est produite. Le message nous informe que la cible Itanium n'est pas disponible et ne sera donc pas convertie.
 
@@ -47,7 +47,7 @@ Visual Studio affiche ensuite un rapport de migration qui répertorie tous les p
 
 Dans ce cas, les problèmes signalés étaient tous des avertissements, et Visual Studio a effectué les modifications appropriées dans le fichier projet. La grande différence en ce qui concerne le projet est que l'outil de build utilisé est maintenant msbuild au lieu de vcbuild. Cette modification a été introduite dans Visual Studio 2010. D'autres modifications ont été apportées, notamment une réorganisation de la séquence d'éléments dans le fichier projet. Aucun des problèmes signalés ne nécessitait une attention particulière pour ce projet simple.
 
-### <a name="step-2-getting-it-to-build"></a>Étape 2. Préparation de la build
+### <a name="step-2-getting-it-to-build"></a>Étape 2. Préparation de la build
 
 Avant de générer la build, nous vérifions l'ensemble d'outils de plateforme pour savoir quelle version du compilateur est utilisée par le système de projet. Dans la boîte de dialogue Propriétés du projet, sous **Propriétés de configuration**, dans la catégorie **Général**, examinez la propriété **Ensemble d’outils de plateforme**. La propriété indique la version de Visual Studio et le numéro de version des outils de plateforme, qui est ici v141 pour la version Visual Studio 2017 des outils. Quand vous convertissez un projet qui a été initialement compilé avec Visual Studio 2010, 2012, 2013 ou 2015, l’ensemble d’outils n’est pas automatiquement mis à jour avec le dernier ensemble d’outils.
 
@@ -73,7 +73,7 @@ Ce n’est pas une erreur, mais un avertissement très fréquent pendant la mise
 
 Si le code utilise des parties de l'API Windows qui ne sont pas disponibles dans la version de Windows spécifiée avec cette macro, cela produit une erreur de compilateur. Dans le cas de Scribble, il n'y a pas d'erreur.
 
-### <a name="step-3-testing-and-debugging"></a>Étape 3. Test et débogage
+### <a name="step-3-testing-and-debugging"></a>Étape 3. Test et débogage
 
 Comme il n'existe pas de suite de tests, nous avons simplement démarré l'application et testé ses fonctionnalités manuellement via l'interface utilisateur. Nous n'avons observé aucun problème.
 

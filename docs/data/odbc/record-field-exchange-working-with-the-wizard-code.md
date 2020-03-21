@@ -1,5 +1,5 @@
 ---
-title: 'Record Field Exchange : utilisation du code de l’Assistant'
+title: "Record Field Exchange : utilisation du code écrit par l'Assistant"
 ms.date: 05/09/2019
 helpviewer_keywords:
 - DoFieldExchange method, overriding
@@ -15,17 +15,17 @@ helpviewer_keywords:
 - overriding, DoFieldExchange
 - m_nFields data member, initializing
 ms.assetid: f00d882a-ff1b-4a75-9717-98d8762bb237
-ms.openlocfilehash: 81b26e61f64623d1e3da5ed207d0e8e43350229d
-ms.sourcegitcommit: fc1de63a39f7fcbfe2234e3f372b5e1c6a286087
-ms.translationtype: HT
+ms.openlocfilehash: 1149ab2b85c9cd803da0cd2d2ed6d931a020764e
+ms.sourcegitcommit: 8e285a766523e653aeeb34d412dc6f615ef7b17b
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65708005"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80077082"
 ---
-# <a name="record-field-exchange-working-with-the-wizard-code"></a>Record Field Exchange : utilisation du code de l’Assistant
+# <a name="record-field-exchange-working-with-the-wizard-code"></a>Record Field Exchange : utilisation du code écrit par l'Assistant
 
-> [!NOTE] 
-> L’Assistant Consommateur ODBC MFC n’est pas disponible dans Visual Studio 2019 et ultérieur. Vous pouvez toujours créer un consommateur manuellement.
+> [!NOTE]
+> L’Assistant Consommateur ODBC MFC n’est pas disponible dans Visual Studio 2019 et ultérieur. Vous pouvez quand même créer un consommateur manuellement.
 
 Cette rubrique explique le code que les Assistants Application MFC et **Ajout de classe** (comme décrit dans [Ajout d’un consommateur ODBC MFC](../../mfc/reference/adding-an-mfc-odbc-consumer.md)) écrivent pour prendre en charge RFX et comment vous pouvez modifier ce code.
 
@@ -40,7 +40,7 @@ Quand vous créez une classe recordset avec l’Assistant Application MFC ou **A
 
 - Initialisation des membres de données de champ de recordset dans le constructeur de la classe recordset
 
-##  <a name="_core_the_field_data_member_declarations"></a> Déclarations des membres de données de champ
+##  <a name="field-data-member-declarations"></a><a name="_core_the_field_data_member_declarations"></a> Déclarations des membres de données de champ
 
 Les Assistants écrivent une déclaration de classe recordset dans un fichier .h qui ressemble à ce qui suit pour la classe `CSections` :
 
@@ -78,7 +78,7 @@ Si vous ajoutez des membres de données de paramètre ou de nouveaux membres de 
 
 Remarquez également que l’Assistant substitue la fonction membre `DoFieldExchange` de la classe `CRecordset`.
 
-##  <a name="_core_the_dofieldexchange_override"></a> Remplacement de DoFieldExchange
+##  <a name="dofieldexchange-override"></a><a name="_core_the_dofieldexchange_override"></a> Remplacement de DoFieldExchange
 
 [DoFieldExchange](../../mfc/reference/crecordset-class.md#dofieldexchange) est au cœur de RFX. Le framework appelle `DoFieldExchange` quand il a besoin de déplacer des données depuis la source de données vers le recordset ou inversement. De plus, `DoFieldExchange` prend en charge l’obtention d’informations sur les membres de données de champ par le biais des fonctions membres [IsFieldDirty](../../mfc/reference/crecordset-class.md#isfielddirty) et [IsFieldNull](../../mfc/reference/crecordset-class.md#isfieldnull).
 
@@ -109,7 +109,7 @@ Notez les fonctionnalités clés suivantes de la fonction :
 
 - Le pointeur `pFX` vers un objet [CFieldExchange](../../mfc/reference/cfieldexchange-class.md) que le framework passe quand il appelle `DoFieldExchange`. L’objet `CFieldExchange` spécifie l’opération que doit effectuer `DoFieldExchange`, la direction de transfert et d’autres informations de contexte.
 
-##  <a name="_core_the_recordset_constructor"></a> Constructeur de recordset
+##  <a name="recordset-constructor"></a><a name="_core_the_recordset_constructor"></a> Constructeur de recordset
 
 Le constructeur de recordset écrit par l’Assistant contient deux éléments associés à RFX :
 

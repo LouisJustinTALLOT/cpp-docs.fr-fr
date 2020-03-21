@@ -6,12 +6,12 @@ f1_keywords:
 - -std
 - VC.Project.VCCLCompilerTool.CppLanguageStandard
 ms.assetid: 0acb74ba-1aa8-4c05-b96c-682988dc19bd
-ms.openlocfilehash: 4583bef3ef3033b6ba493ccac1c4fc5360c70e35
-ms.sourcegitcommit: 0cfc43f90a6cc8b97b24c42efcf5fb9c18762a42
+ms.openlocfilehash: 52aa99cf5bdf7ddcf83a8423b946a03d2ca95d2d
+ms.sourcegitcommit: 8e285a766523e653aeeb34d412dc6f615ef7b17b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/05/2019
-ms.locfileid: "73624891"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80079269"
 ---
 # <a name="std-specify-language-standard-version"></a>/std (Spécifier la version de la norme du langage)
 
@@ -27,15 +27,15 @@ L’option **/std** est disponible dans Visual Studio 2017 et ultérieur. Elle 
 
 L’option par défaut **/std:c++14** active l’ensemble des fonctionnalités C++14 implémentées par le compilateur MSVC. Cette option désactive la prise en charge par le compilateur et la bibliothèque standard des fonctionnalités qui ont été changées ou introduites dans les versions plus récentes de la norme du langage, à l’exception de certaines fonctionnalités C++17 déjà implémentées dans les versions précédentes du compilateur MSVC. Pour éviter que les utilisateurs ayant déjà créé des dépendances sur les fonctionnalités disponibles à compter de Visual Studio 2015 Update 2 ne subissent de changements cassants, ces fonctionnalités restent activées quand l’option **/std:c++14** est spécifiée :
 
-- [Règles pour auto avec braced-init-lists](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2014/n3922.html)
+- [Règles pour auto avec braced-init-lists](https://wg21.link/n3922)
 
-- [typename dans template template-parameter](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2014/n4051.html)
+- [typename dans template template-parameter](https://wg21.link/n4051)
 
-- [Suppression des trigraphes](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2014/n4086.html)
+- [Suppression des trigraphes](https://wg21.link/n4086)
 
-- [Attributs pour espaces de noms et énumérateurs](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2014/n4266.html)
+- [Attributs pour espaces de noms et énumérateurs](https://wg21.link/n4266)
 
-- [Littéraux de caractère u8](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2014/n4267.html)
+- [Littéraux de caractère u8](https://wg21.link/n4267)
 
 Pour plus d’informations sur les fonctionnalités C++ 14 et C++ 17 qui sont activées quand **/std : c++ 14** est spécifié, consultez les notes dans la [table de conformité du langage Microsoft C++ ](../../overview/visual-cpp-language-conformance.md).
 
@@ -44,7 +44,7 @@ L’option **/std:c++17** active l’ensemble complet des fonctionnalités C++17
 L’option **/std:c++latest** active les fonctionnalités de bibliothèque et de langage post-C++17 actuellement implémentées dans le compilateur et les bibliothèques. Celles-ci peuvent inclure des fonctionnalités du brouillon de C++20 et des mises à jour visant à remédier aux défauts de la norme C++ qui ne figurent pas dans C++17, ainsi que des propositions expérimentales pour le brouillon de la norme. Pour obtenir la liste des fonctionnalités de langage et de bibliothèque prises en charge, consultez [Nouveautés de Visual C++](../../overview/what-s-new-for-visual-cpp-in-visual-studio.md). L’option **/std:c++latest** n’active pas les fonctionnalités protégées par le commutateur **/experimental**, mais peut être tenue de les activer.
 
 > [!IMPORTANT]
-> Les fonctionnalités de compilateur et de bibliothèque activées par **/std:c++latest** représentent les fonctionnalités susceptibles d’apparaître dans une future norme C++, ainsi que les fonctionnalités C++20 approuvées. Les fonctionnalités qui n’ont pas été approuvées peuvent faire l’objet de changements cassants ou peuvent être supprimées sans préavis, et sont fournies en l’état. 
+> Les fonctionnalités de compilateur et de bibliothèque activées par **/std:c++latest** représentent les fonctionnalités susceptibles d’apparaître dans une future norme C++, ainsi que les fonctionnalités C++20 approuvées. Les fonctionnalités qui n’ont pas été approuvées peuvent faire l’objet de changements cassants ou peuvent être supprimées sans préavis, et sont fournies en l’état.
 
 L’option **/std** en vigueur durant une compilation C++ peut être détectée au moyen de la macro de préprocesseur [\_MSVC\_LANG](../../preprocessor/predefined-macros.md). Pour plus d’informations, consultez [Macros de préprocesseur](../../preprocessor/predefined-macros.md).
 
@@ -53,9 +53,9 @@ Les options **/std:c++14** et **/std:c++latest** sont disponibles à compter de 
 > [!NOTE]
 > Selon le niveau de mise à jour ou la version du compilateur MSVC, les fonctionnalités C++17 peuvent ne pas être entièrement implémentées ou conformes quand vous spécifiez les options **/std:c++17**. Pour obtenir une vue C++ d’ensemble de la conformité de C++ la langue dans Visual par version Release, consultez [table de conformité linguistique Microsoft C++ ](../../overview/visual-cpp-language-conformance.md).
 
-### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Pour définir cette option du compilateur dans l'environnement de développement Visual Studio
+### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Pour définir cette option du compilateur dans l’environnement de développement Visual Studio
 
-1. Ouvrez la boîte de dialogue **Pages de propriété** du projet. Pour obtenir des informations, consultez [Définir le compilateur C++ et les propriétés de build dans Visual Studio](../working-with-project-properties.md).
+1. Ouvrez la boîte de dialogue **Pages de propriété** du projet. Pour plus d’informations, consultez [Définir le compilateur C++ et les propriétés de build dans Visual Studio](../working-with-project-properties.md).
 
 1. Sélectionnez **Propriétés de configuration**, **C/C++** , **Langage**.
 

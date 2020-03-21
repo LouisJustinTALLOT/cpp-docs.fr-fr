@@ -1,5 +1,5 @@
 ---
-title: 'Recordset : calcul de totaux et obtention d’autres résultats d’agrégation (ODBC)'
+title: 'Recordset : calculs de totaux et autres résultats de regroupement (ODBC)'
 ms.date: 11/04/2016
 helpviewer_keywords:
 - SQL, retrieving aggregate values from recordsets
@@ -10,17 +10,17 @@ helpviewer_keywords:
 - SQL Server projects, retrieving aggregate values from recordsets
 - SQL aggregate values, retrieving from recordsets
 ms.assetid: 94500662-22a4-443e-82d7-acbe6eca447b
-ms.openlocfilehash: 29906366e6e9a5a852fcf40d9e7ecc8593d1b0b0
-ms.sourcegitcommit: fc1de63a39f7fcbfe2234e3f372b5e1c6a286087
-ms.translationtype: HT
+ms.openlocfilehash: 38a458eb6634d5075315c9c0bbd2cb215bc76eda
+ms.sourcegitcommit: 8e285a766523e653aeeb34d412dc6f615ef7b17b
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65707843"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80075900"
 ---
-# <a name="recordset-obtaining-sums-and-other-aggregate-results-odbc"></a>Recordset : calcul de totaux et obtention d’autres résultats d’agrégation (ODBC)
+# <a name="recordset-obtaining-sums-and-other-aggregate-results-odbc"></a>Recordset : calculs de totaux et autres résultats de regroupement (ODBC)
 
-> [!NOTE] 
-> L’Assistant Consommateur ODBC MFC n’est pas disponible dans Visual Studio 2019 et ultérieur. Vous pouvez toutefois créer un consommateur manuellement.
+> [!NOTE]
+> L’Assistant Consommateur ODBC MFC n’est pas disponible dans Visual Studio 2019 et ultérieur. Vous pouvez quand même créer un consommateur manuellement.
 
 Cette rubrique s’applique aux classes ODBC MFC.
 
@@ -36,10 +36,10 @@ Cette rubrique explique comment obtenir les résultats d’agrégation avec les 
 
 - **COUNT** comptabilise le nombre d’enregistrements dans une colonne de n’importe quel type de données.
 
-Ces fonctions SQL s’utilisent pour obtenir des informations statistiques sur les enregistrements contenus dans une source de données plutôt que pour extraire des enregistrements de la source de données. Le recordset créé se compose généralement d’un seul enregistrement (si toutes les colonnes sont des agrégats) contenant une valeur. (Il peut y avoir plusieurs enregistrements si vous avez utilisé une clause **GROUP BY**.) Cette valeur est le résultat de l’opération de calcul ou d’extraction effectuée par la fonction SQL.
+Ces fonctions SQL s’utilisent pour obtenir des informations statistiques sur les enregistrements contenus dans une source de données plutôt que pour extraire des enregistrements de la source de données. Le recordset créé se compose généralement d’un seul enregistrement (si toutes les colonnes sont des agrégats) contenant une valeur. (Il peut y avoir plus d’un enregistrement si vous avez utilisé une clause **Group by** .) Cette valeur est le résultat du calcul ou de l’extraction effectué par la fonction SQL.
 
 > [!TIP]
->  Quand vous ajoutez une clause SQL **GROUP BY** (et éventuellement une clause **HAVING**) à l’instruction SQL, placez-la à la fin de `m_strFilter`. Par exemple :
+>  Quand vous ajoutez une clause SQL **GROUP BY** (et éventuellement une clause **HAVING**) à l’instruction SQL, placez-la à la fin de `m_strFilter`. Par exemple :
 
 ```
 m_strFilter = "sales > 10 GROUP BY SALESPERSON_ID";
@@ -56,7 +56,7 @@ Vous pouvez limiter le nombre d’enregistrements utilisés pour obtenir des ré
 
 - **MAX** et **MIN** retournent le même type de données que les colonnes utilisées pour le calcul.
 
-     Par exemple, l’Assistant **Ajouter une classe** crée `long` `m_lSales` dans le cas d’une colonne Sales, mais vous devez le remplacer par un membre de données `double m_dblSumSales` pouvant contenir le résultat de l’agrégation. Lisez l'exemple suivant.
+     Par exemple, l’Assistant **Ajout de classes** crée `long` `m_lSales` pour s’adapter à une colonne de ventes, mais vous devez le remplacer par un membre de données `double m_dblSumSales` pour s’adapter au résultat de l’agrégat. Consultez l’exemple qui suit.
 
 #### <a name="to-obtain-an-aggregate-result-for-a-recordset"></a>Pour obtenir un résultat d’agrégation à partir d’un recordset
 
@@ -68,7 +68,7 @@ Vous pouvez limiter le nombre d’enregistrements utilisés pour obtenir des ré
     RFX_Long(pFX, "Sales", m_lSales);
     ```
 
-     Par :
+     par :
 
     ```
     RFX_Double(pFX, "Sum(Sales)", m_dblSumSales)
@@ -85,7 +85,7 @@ Si vous utilisez une classe [CRecordView](../../mfc/reference/crecordview-class.
 DDX_FieldText(pDX, IDC_SUMSALES, m_pSet->m_lSales, m_pSet);
 ```
 
-À :
+Par :
 
 ```
 DDX_FieldText(pDX, IDC_SUMSALES, m_pSet->m_dblSumSales, m_pSet);
@@ -94,4 +94,4 @@ DDX_FieldText(pDX, IDC_SUMSALES, m_pSet->m_dblSumSales, m_pSet);
 ## <a name="see-also"></a>Voir aussi
 
 [Recordset (ODBC)](../../data/odbc/recordset-odbc.md)<br/>
-[Recordset : Sélection d’enregistrements par les recordsets (ODBC)](../../data/odbc/recordset-how-recordsets-select-records-odbc.md)
+[Recordset : sélection d’enregistrements par les recordsets (ODBC)](../../data/odbc/recordset-how-recordsets-select-records-odbc.md)

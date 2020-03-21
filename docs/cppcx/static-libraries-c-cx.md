@@ -2,12 +2,12 @@
 title: Bibliothèques statiques (C++/CX)
 ms.date: 02/03/2017
 ms.assetid: 7faf53c8-fa21-42cc-8246-d32533ef9dfa
-ms.openlocfilehash: f62ef03cfdf2f424fd4a50c2e866d73b5bdce7fc
-ms.sourcegitcommit: 069e3833bd821e7d64f5c98d0ea41fc0c5d22e53
+ms.openlocfilehash: 42c247650f778dcc9dbfa13d27cbb0244c0ebbc2
+ms.sourcegitcommit: 8e285a766523e653aeeb34d412dc6f615ef7b17b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/21/2019
-ms.locfileid: "74302939"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80077979"
 ---
 # <a name="static-libraries-ccx"></a>Bibliothèques statiques (C++/CX)
 
@@ -15,16 +15,15 @@ Une bibliothèque statique qui est utilisée dans une application plateforme Win
 
 ## <a name="creating-static-libraries"></a>Création de bibliothèques statiques
 
-
 Les instructions de création d’un nouveau projet varient en fonction de la version de Visual Studio que vous avez installée. Assurez-vous que le sélecteur de version dans le coin supérieur gauche est défini sur la version correcte.
 
 ::: moniker range="vs-2019"
 
 ### <a name="to-create-a-uwp-static-library-in-visual-studio-2019"></a>Pour créer une bibliothèque statique UWP dans Visual Studio 2019
 
-1. Dans la barre de menus, choisissez **Fichier** > **Nouveau** > **Projet** pour ouvrir la boîte de dialogue **Créer un projet**.
+1. Dans la barre de menus, choisissez **fichier** > **nouveau** **projet** > pour ouvrir la boîte de dialogue **créer un nouveau projet** .
 
-1. En haut de la boîte de dialogue, définissez Language **C++** sur, Set **Platform** to **Windows**, puis définissez **type de projet** sur **UWP**. 
+1. En haut de la boîte de dialogue, **Language** définissez Language **C++** sur, Set **Platform** to **Windows**, puis définissez **type de projet** sur **UWP**.
 
 1. Dans la liste filtrée des types de projets, choisissez **bibliothèque statique (Windows universel C++-/CX)** , puis choisissez **suivant**. Dans la page suivante, donnez un nom au projet et spécifiez l’emplacement du projet si vous le souhaitez.
 

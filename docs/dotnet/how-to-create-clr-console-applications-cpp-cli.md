@@ -1,18 +1,18 @@
 ---
-title: 'Procédure : Créer des Applications Console CLR (C++ / c++ / CLI)'
+title: 'Comment : créer des applications console CLR (C++/CLI)'
 ms.date: 11/04/2016
 helpviewer_keywords:
 - console applications, templates
 - CLR console applications, project template
 ms.assetid: e89bce3c-706f-4ae0-8a90-cb1a0f674e70
-ms.openlocfilehash: ba0fa81aa42f946dbaf005c00380573e44312c5a
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 610efc8b0780422fc89e3bf9708ba488fe7d1f47
+ms.sourcegitcommit: 8e285a766523e653aeeb34d412dc6f615ef7b17b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62387474"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80080050"
 ---
-# <a name="how-to-create-clr-console-applications-ccli"></a>Procédure : Créer des Applications Console CLR (C++ / c++ / CLI)
+# <a name="how-to-create-clr-console-applications-ccli"></a>Comment : créer des applications console CLR (C++/CLI)
 
 Vous pouvez utiliser le modèle Application console pour créer un projet d’application console qui a déjà les références et les fichiers principaux d’un projet.
 
@@ -22,7 +22,7 @@ Quand vous utilisez le modèle Application console pour créer un projet, il ajo
 
 - Références à ces espaces de noms .NET Framework :
 
-   - <xref:System.AppDomainManager>: Contient des classes fondamentales et des classes de base qui définissent les valeurs couramment utilisées et les types de données de référence, événements et gestionnaires d’événements, interfaces, attributs et des exceptions de traitement.
+   - <xref:System.AppDomainManager>: contient des classes fondamentales et des classes de base qui définissent des valeurs et des types de données de référence, des événements et des gestionnaires d’événements, des interfaces, des attributs et des exceptions de traitement couramment utilisés.
 
    - mscorlib  : DLL de l’assembly qui prend en charge le développement .NET Framework.
 
@@ -30,7 +30,7 @@ Quand vous utilisez le modèle Application console pour créer un projet, il ajo
 
    - Console (fichier .cpp) : le fichier source et le point d’entrée principal entrée dans l’application que vous venez de créer. Il identifie le fichier .dll du projet et l’espace de noms du projet. Fournissez votre propre code dans ce fichier.
 
-   - AssemblyInfo.cpp : contient des attributs, fichiers, ressources, types, informations de contrôle de version, informations de signature, etc., que vous pouvez utiliser pour modifier les métadonnées de l’assembly du projet. Pour plus d’informations, consultez [contenu d’un Assembly](/dotnet/framework/app-domains/assembly-contents).
+   - AssemblyInfo.cpp : contient des attributs, fichiers, ressources, types, informations de contrôle de version, informations de signature, etc., que vous pouvez utiliser pour modifier les métadonnées de l’assembly du projet. Pour plus d’informations, consultez contenu de l' [assembly](/dotnet/framework/app-domains/assembly-contents).
 
    - Stdafx.cpp : utilisé pour générer un fichier d’en-tête précompilé nommé Win32.pch et un fichier de types précompilé nommé StdAfx.obj.
 
@@ -40,7 +40,7 @@ Quand vous utilisez le modèle Application console pour créer un projet, il ajo
 
    - resource.h : un fichier include généré pour app.rc.
 
-- Fichiers de ressources :
+- Les fichiers de ressources :
 
    - app.rc : le fichier de script de ressources d’un programme.
 
@@ -50,7 +50,7 @@ Quand vous utilisez le modèle Application console pour créer un projet, il ajo
 
 ## <a name="to-create-a-common-language-runtime-clr-console-app-project"></a>Pour créer un projet d’application console CLR (Common Language Runtime)
 
-1. Dans la barre de menus, sélectionnez **Fichier**, **Nouveau**, **Projet**.
+1. Dans le menu principal, sélectionnez **Fichier**, **Nouveau**, **Projet**.
 
 1. Dans la boîte de dialogue **Nouveau projet** , sous **Modèles installés**, sélectionnez le nœud **Visual C++** , sélectionnez le nœud **CLR** , puis sélectionnez le modèle Application console.
 
@@ -63,4 +63,3 @@ Quand vous utilisez le modèle Application console pour créer un projet, il ajo
 ## <a name="see-also"></a>Voir aussi
 
 [Projets CLR](../build/reference/files-created-for-clr-projects.md)
-

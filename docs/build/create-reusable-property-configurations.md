@@ -3,16 +3,16 @@ title: Partager ou réutiliser des paramètres de projet Visual Studio-C++
 ms.date: 07/17/2019
 helpviewer_keywords:
 - project properties [C++], reusable
-ms.openlocfilehash: 49a0153edc5678777c937423ba2bdbd2d92a6a35
-ms.sourcegitcommit: 069e3833bd821e7d64f5c98d0ea41fc0c5d22e53
+ms.openlocfilehash: 451e22997f81753abf0c8d55d3b9e8d097cc6d5d
+ms.sourcegitcommit: 8e285a766523e653aeeb34d412dc6f615ef7b17b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/21/2019
-ms.locfileid: "74303213"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80078705"
 ---
 # <a name="share-or-reuse-visual-studio-project-settings"></a>Partager ou réutiliser les paramètres de projet Visual Studio
 
-Pour créer un groupe de paramètres personnalisé que vous pouvez partager avec d’autres personnes ou réutiliser dans plusieurs projets, utilisez **Gestionnaire de propriétés** pour créer une *feuille de propriétés* (fichier. props) afin de stocker les paramètres pour chaque type de projet que vous souhaitez pouvoir réutiliser ou partager avec d’autres utilisateurs. L’utilisation des feuilles de propriétés est beaucoup moins sujette aux erreurs que d’autres façons de créer des paramètres « globaux ». 
+Pour créer un groupe de paramètres personnalisé que vous pouvez partager avec d’autres personnes ou réutiliser dans plusieurs projets, utilisez **Gestionnaire de propriétés** pour créer une *feuille de propriétés* (fichier. props) afin de stocker les paramètres pour chaque type de projet que vous souhaitez pouvoir réutiliser ou partager avec d’autres utilisateurs. L’utilisation des feuilles de propriétés est beaucoup moins sujette aux erreurs que d’autres façons de créer des paramètres « globaux ».
 
 > [!IMPORTANT]
 > **Fichiers .user et pourquoi ils posent un problème**

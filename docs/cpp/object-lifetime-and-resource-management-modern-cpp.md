@@ -1,17 +1,17 @@
 ---
-title: Gestion des ressources et de la durée de vie des objets (RAII)
+title: Gestion de la durée de vie et des ressources d’objet
 description: Suivez le principe de RAII dans moderne C++ pour éviter les fuites de ressources.
 ms.date: 11/19/2019
 ms.topic: conceptual
 ms.assetid: 8aa0e1a1-e04d-46b1-acca-1d548490700f
-ms.openlocfilehash: 01867ec0a71ba54bb6534da1b408cb0610d652a7
-ms.sourcegitcommit: 069e3833bd821e7d64f5c98d0ea41fc0c5d22e53
+ms.openlocfilehash: d30b5296b35bec7f8949057becfaeeea61ef09a0
+ms.sourcegitcommit: 8e285a766523e653aeeb34d412dc6f615ef7b17b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/21/2019
-ms.locfileid: "74303366"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80078033"
 ---
-# <a name="object-lifetime-and-resource-management-raii"></a>Gestion des ressources et de la durée de vie des objets (RAII)
+# <a name="object-lifetime-and-resource-management-raii"></a>Gestion de la durée de vie et des ressources d’objet
 
 Contrairement aux langages C++ managés, n’a pas de *garbage collection*automatique. Il s’agit d’un processus interne qui libère de la mémoire du tas et d’autres ressources au cours de l’exécution d’un programme. Un C++ programme est chargé de retourner toutes les ressources acquises au système d’exploitation. L’échec de la libération d’une ressource inutilisée est appelé une *fuite*. Les ressources divulguées ne sont pas disponibles pour les autres programmes jusqu’à ce que le processus se termine. En particulier, les fuites de mémoire sont une cause courante de bogues dans la programmation de style C.
 
@@ -41,7 +41,7 @@ void functionUsingWidget () {
 ```
 
 Dans l’exemple suivant, `w` possède une ressource mémoire et doit donc avoir du code dans son destructeur pour supprimer la mémoire.
- 
+
 ```cpp
 class widget
 {
@@ -93,4 +93,4 @@ La conception de C++ garantit que les objets sont détruits lorsqu’ils sont ho
 
 [Bienvenue dansC++](../cpp/welcome-back-to-cpp-modern-cpp.md)<br/>
 [Informations de référence sur le langage C++](../cpp/cpp-language-reference.md)<br/>
-[Bibliothèque standard C++](../standard-library/cpp-standard-library-reference.md)
+[Bibliothèque C++ Standard](../standard-library/cpp-standard-library-reference.md)

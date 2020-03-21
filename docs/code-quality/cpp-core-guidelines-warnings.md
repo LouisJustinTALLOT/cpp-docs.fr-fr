@@ -3,12 +3,12 @@ title: C++Avertissements des instructions de base
 ms.date: 10/16/2019
 ms.topic: conceptual
 ms.assetid: 7c83814a-f21d-4323-ad5f-13bac40d3e38
-ms.openlocfilehash: f499374c84973be09e2f02e6d2f2e6d9a6548363
-ms.sourcegitcommit: 7bea0420d0e476287641edeb33a9d5689a98cb98
+ms.openlocfilehash: 544c737470a6578e65e82bb3c8cf1824ec93895f
+ms.sourcegitcommit: 8e285a766523e653aeeb34d412dc6f615ef7b17b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/17/2020
-ms.locfileid: "77418829"
+ms.lasthandoff: 03/21/2020
+ms.locfileid: "80079966"
 ---
 # <a name="using-the-c-core-guidelines-checkers"></a>Utilisation des vérificateurs C++ Core Guidelines
 
@@ -16,7 +16,7 @@ Les C++ directives principales sont un ensemble portable d’instructions, de r�
 
 ## <a name="the-c-core-guidelines-project"></a>Le C++ projet de recommandations principales
 
-Créé par Bjarne Stroustrup et d’autres, C++ les recommandations de base sont un guide d' C++ utilisation de la sécurité moderne et efficace. Les directives insistent sur la sécurité des types statiques et la sécurité des ressources. Ils identifient les moyens d’éliminer ou de réduire les parties les plus sujettes aux erreurs du langage, et de vous suggérer comment rendre votre code plus simple et plus performant de manière fiable. Ces recommandations sont gérées par la C++ base standard. Pour en savoir plus, consultez la documentation, C++ [ C++ les instructions principales](http://isocpp.github.io/CppCoreGuidelines/CppCoreGuidelines)et accédez aux fichiers de projet de base de documentation sur [GitHub](https://github.com/isocpp/CppCoreGuidelines).
+Créé par Bjarne Stroustrup et d’autres, C++ les recommandations de base sont un guide d' C++ utilisation de la sécurité moderne et efficace. Les directives insistent sur la sécurité des types statiques et la sécurité des ressources. Ils identifient les moyens d’éliminer ou de réduire les parties les plus sujettes aux erreurs du langage, et de vous suggérer comment rendre votre code plus simple et plus performant de manière fiable. Ces recommandations sont gérées par la C++ base standard. Pour en savoir plus, consultez la documentation, C++ [ C++ les instructions principales](https://isocpp.github.io/CppCoreGuidelines/CppCoreGuidelines)et accédez aux fichiers de projet de base de documentation sur [GitHub](https://github.com/isocpp/CppCoreGuidelines).
 
 ## <a name="enable-the-c-core-check-guidelines-in-code-analysis"></a>Activer les C++ instructions de contrôle de base dans l’analyse du code
 
@@ -151,7 +151,7 @@ Au lieu de #pragmas, vous pouvez utiliser les options de ligne de commande dans 
 
 Vous pouvez utiliser l’option de ligne de commande pour désactiver temporairement l’ensemble de l’analyse du code d’un fichier en spécifiant `/analyze-`. Cela génère un avertissement *D9025 remplaçant'/Analyze’par'/Analyze-'* , ce qui vous rappelle de réactiver l’analyse du code ultérieurement.
 
-## <a name="corecheck_per_file"></a>Activation du C++ vérificateur des instructions de base sur des fichiers de projet spécifiques
+## <a name="enabling-the-c-core-guidelines-checker-on-specific-project-files"></a><a name="corecheck_per_file"></a>Activation du C++ vérificateur des instructions de base sur des fichiers de projet spécifiques
 
 Parfois, il peut être utile d’effectuer une analyse du code ciblé tout en tirant parti de l’IDE de Visual Studio. Voici un exemple de scénario qui peut être utilisé pour des projets volumineux afin d’économiser du temps de génération et de faciliter le filtrage des résultats.
 
@@ -219,9 +219,9 @@ Vous devrez définir quelques variables d’environnement et utiliser les option
 
 ## <a name="use-the-guideline-support-library"></a>Utiliser la bibliothèque de prise en charge des instructions
 
-La bibliothèque de prise en charge des instructions est conçue pour vous aider à suivre les instructions principales. Le portail GSL comprend des définitions qui vous permettent de remplacer des constructions sujettes aux erreurs par des alternatives plus sûres. Par exemple, vous pouvez remplacer une paire `T*, length` de paramètres par le type `span<T>`. Le portail GSL est disponible sur [http://www.nuget.org/packages/Microsoft.Gsl](https://www.nuget.org/packages/Microsoft.Gsl). La bibliothèque étant Open source, vous pouvez afficher les sources, créer des commentaires ou contribuer. Le projet se trouve sur [https://github.com/Microsoft/GSL](https://github.com/Microsoft/GSL).
+La bibliothèque de prise en charge des instructions est conçue pour vous aider à suivre les instructions principales. Le portail GSL comprend des définitions qui vous permettent de remplacer des constructions sujettes aux erreurs par des alternatives plus sûres. Par exemple, vous pouvez remplacer une paire `T*, length` de paramètres par le type `span<T>`. Le portail GSL est disponible sur [https://www.nuget.org/packages/Microsoft.Gsl](https://www.nuget.org/packages/Microsoft.Gsl). La bibliothèque étant Open source, vous pouvez afficher les sources, créer des commentaires ou contribuer. Le projet se trouve sur [https://github.com/Microsoft/GSL](https://github.com/Microsoft/GSL).
 
-## <a name="vs2015_corecheck"></a>Utiliser les C++ instructions de contrôle de base dans les projets Visual Studio 2015
+## <a name="use-the-c-core-check-guidelines-in-visual-studio-2015-projects"></a><a name="vs2015_corecheck"></a>Utiliser les C++ instructions de contrôle de base dans les projets Visual Studio 2015
 
 Si vous utilisez Visual Studio 2015, les C++ ensembles de règles d’analyse du code de contrôle de base ne sont pas installés par défaut. Vous devez effectuer quelques étapes supplémentaires avant de pouvoir activer les C++ outils d’analyse du code de vérification de base dans Visual Studio 2015. Microsoft fournit une prise en charge pour les projets Visual Studio 2015 à l’aide d’un package NuGet. Le package est nommé Microsoft. CppCoreCheck et est disponible sur [http://www.nuget.org/packages/Microsoft.CppCoreCheck](https://www.nuget.org/packages/Microsoft.CppCoreCheck). Pour ce package, vous devez avoir au moins Visual Studio 2015 avec la mise à jour 1 installée.
 
