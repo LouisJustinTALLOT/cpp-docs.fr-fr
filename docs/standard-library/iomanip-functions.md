@@ -26,12 +26,12 @@ helpviewer_keywords:
 - std::setiosflags [C++]
 - std::setprecision [C++]
 - std::setw [C++]
-ms.openlocfilehash: 944834e40a399622b5c85d95100d4ca3c3c2da93
-ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
+ms.openlocfilehash: 7fd523dc9184ae613cf8a52969a497b6b4761cf6
+ms.sourcegitcommit: eff68e4e82be292a5664616b16a526df3e9d1cda
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/16/2020
-ms.locfileid: "79421638"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80150820"
 ---
 # <a name="ltiomanipgt-functions"></a>&lt;iomanip&gt;, fonctions
 
@@ -42,7 +42,7 @@ ms.locfileid: "79421638"
 |[setbase](#setbase)|[setfill](#setfill)|[setiosflags](#setiosflags)|
 |[setprecision](#setprecision)|[setw](#setw)|
 
-## <a name="iomanip_get_money"></a>  get_money
+## <a name="get_money"></a><a name="iomanip_get_money"></a>  get_money
 
 Extrait une valeur monétaire à partir d’un flux en utilisant le format souhaité, et retourne la valeur dans un paramètre.
 
@@ -65,7 +65,7 @@ Le manipulateur retourne un objet qui, lorsqu’il est extrait du `str`de flux, 
 
 `Money` doit être de type `long double` ou une instanciation de `basic_string` avec le même élément et les mêmes paramètres de caractéristiques que `str`.
 
-## <a name="iomanip_get_time"></a>  get_time
+## <a name="get_time"></a><a name="iomanip_get_time"></a>  get_time
 
 Extrait une valeur de temps à partir d’un flux à l’aide du format souhaité. Retourne la valeur dans un paramètre en tant que structure de temps.
 
@@ -86,7 +86,7 @@ Format à utiliser pour obtenir la valeur de temps.
 
 Le manipulateur retourne un objet qui, quand il est extrait à partir du flux `str`, se comporte comme un `formatted input function` qui appelle la fonction membre `get` pour la facette de paramètres régionaux `time_get` associée à `str`, en utilisant `tptr` pour indiquer la structure de temps et `fmt` pour indiquer le début d’une chaîne de format terminée par un caractère Null. En cas de réussite, l’appel stocke dans la structure de temps les valeurs associées à tous les champs de temps extraits. Le manipulateur retourne ensuite `str`.
 
-## <a name="iomanip_put_money"></a>  put_money
+## <a name="put_money"></a><a name="iomanip_put_money"></a>  put_money
 
 Insère une valeur monétaire dans un flux en utilisant le format souhaité.
 
@@ -113,7 +113,7 @@ Le manipulateur retourne un objet qui, quand il est inséré dans le flux `str`,
 
 `Money` doit être de type `long double` ou une instanciation de `basic_string` avec le même élément et les mêmes paramètres de caractéristiques que `str`.
 
-## <a name="iomanip_put_time"></a>  put_time
+## <a name="put_time"></a><a name="iomanip_put_time"></a>  put_time
 
 Écrit une valeur de temps à partir d’une structure de temps dans un flux à l’aide d’un format spécifié.
 
@@ -134,7 +134,7 @@ Format à utiliser pour écrire la valeur de temps.
 
 Le manipulateur retourne un objet qui, quand il est inséré dans le flux `str`, se comporte comme un `formatted output function`. La fonction de sortie appelle la fonction membre `put` pour la facette de paramètres régionaux `time_put` associée à `str`. La fonction de sortie utilise *time_ptr* pour indiquer la structure de temps et *time_format* pour indiquer le début d’une chaîne de format terminée par le caractère null. En cas de réussite, l’appel insère le texte littéral à partir de la chaîne de format et les valeurs converties à partir de la structure de temps. Le manipulateur retourne ensuite `str`.
 
-## <a name="quoted"></a>  quoted
+## <a name="quoted"></a><a name="quoted"></a>  quoted
 
 **(Nouveauté dans C++14)** Manipulateur iostream qui permet d’effectuer facilement un aller-retour de chaînes dans et hors de flux à l’aide des opérateurs >> et <<.
 
@@ -301,7 +301,7 @@ Press Enter to exit
 */
 ```
 
-## <a name="resetiosflags"></a>  resetiosflags
+## <a name="resetiosflags"></a><a name="resetiosflags"></a>  resetiosflags
 
 Efface les indicateurs spécifiés.
 
@@ -322,7 +322,7 @@ Le manipulateur retourne un objet qui, lorsqu’il est extrait ou inséré dans 
 
 Pour obtenir un exemple d’utilisation de [, consultez ](../standard-library/iomanip-functions.md#setw)setw`resetiosflags`.
 
-## <a name="setbase"></a>  setbase
+## <a name="setbase"></a><a name="setbase"></a>  setbase
 
 Définir la base pour les entiers.
 
@@ -337,7 +337,7 @@ Base numérique.
 
 ### <a name="return-value"></a>Valeur de retour
 
-Le manipulateur retourne un objet qui, lorsqu’il est extrait ou inséré dans le `str`de flux, appelle `str.setf(mask, `[ios_base :: basefield](../standard-library/ios-base-class.md#fmtflags)`)`, puis retourne `str`. Ici, `mask` est déterminé comme suit :
+Le manipulateur retourne un objet qui, lorsqu’il est extrait ou inséré dans le `str`de flux, appelle `str.setf(mask,` [ios_base :: basefield](../standard-library/ios-base-class.md#fmtflags)`)`, puis retourne `str`. Ici, `mask` est déterminé comme suit :
 
 - Si *base* est 8, `mask` est `ios_base::`[Oct](../standard-library/ios-functions.md#oct).
 
@@ -351,7 +351,7 @@ Le manipulateur retourne un objet qui, lorsqu’il est extrait ou inséré dans 
 
 Pour obtenir un exemple d’utilisation de [, consultez ](../standard-library/iomanip-functions.md#setw)setw`setbase`.
 
-## <a name="setfill"></a>  setfill
+## <a name="setfill"></a><a name="setfill"></a>  setfill
 
 Définit le caractère qui sera utilisé pour remplir les espaces dans un affichage aligné à droite.
 
@@ -373,7 +373,7 @@ Le manipulateur de modèle retourne un objet qui, lorsqu’il est extrait ou ins
 
 Pour obtenir un exemple d’utilisation de [, consultez ](../standard-library/iomanip-functions.md#setw)setw`setfill`.
 
-## <a name="setiosflags"></a>  setiosflags
+## <a name="setiosflags"></a><a name="setiosflags"></a>  setiosflags
 
 Définit les indicateurs spécifiés.
 
@@ -394,7 +394,7 @@ Le manipulateur retourne un objet qui, lorsqu’il est extrait ou inséré dans 
 
 Pour obtenir un exemple d’utilisation de [, consultez ](../standard-library/iomanip-functions.md#setw)setw`setiosflags`.
 
-## <a name="setprecision"></a>  setprecision
+## <a name="setprecision"></a><a name="setprecision"></a>  setprecision
 
 Définit la précision des valeurs à virgule flottante.
 
@@ -415,7 +415,7 @@ Le manipulateur retourne un objet qui, lorsqu’il est extrait ou inséré dans 
 
 Pour obtenir un exemple d’utilisation de [, consultez ](../standard-library/iomanip-functions.md#setw)setw`setprecision`.
 
-## <a name="setw"></a>  setw
+## <a name="setw"></a><a name="setw"></a>  setw
 
 Spécifie la largeur du champ affichage pour l’élément suivant dans le flux.
 

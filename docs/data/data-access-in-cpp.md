@@ -8,12 +8,12 @@ helpviewer_keywords:
 - data [C++], data access technologies
 - data access [C++], class libraries for databases
 ms.assetid: 95da6237-bbe2-480a-ae50-3a520051ceff
-ms.openlocfilehash: e9222f16ef6356c2d89401690bda7e6d27f8aba6
-ms.sourcegitcommit: fc1de63a39f7fcbfe2234e3f372b5e1c6a286087
-ms.translationtype: HT
+ms.openlocfilehash: a1645c1116daa66c578a6d6e697ab168e4006af9
+ms.sourcegitcommit: eff68e4e82be292a5664616b16a526df3e9d1cda
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65708030"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80150951"
 ---
 # <a name="data-access-in-visual-c"></a>Accès aux données dans Visual C++
 
@@ -37,23 +37,23 @@ Interface principalement héritée qui est toujours nécessaire dans certains sc
 [Se connecter à SQL Database avec C et C++](/azure/sql-database/sql-database-develop-cplusplus-simple)<br/>
 Connectez-vous à Azure SQL Database à partir d’applications C ou C++.
 
-[Bibliothèque cliente Stockage Microsoft Azure pour C++](https://github.com/Azure/azure-storage-cpp)<br/>
+[Microsoft Azure Storage Client Library for C++](https://github.com/Azure/azure-storage-cpp)<br/>
 Le service [Stockage Azure](/azure/storage/storage-introduction) est une solution de stockage cloud pour les applications modernes qui s’appuient sur la durabilité, la disponibilité et la scalabilité afin de répondre aux besoins de leurs clients. Connectez-vous au service Stockage Azure à partir de C++ à l’aide de la bibliothèque cliente de stockage Azure pour C++.
 
 [Pilote ODBC pour SQL Server](/sql/connect/odbc/microsoft-odbc-driver-for-sql-server)<br/>
 Le dernier pilote ODBC fournit un accès robuste aux données de Microsoft SQL Server et Microsoft Azure SQL Database pour les applications C/C++. Fournit la prise en charge des fonctionnalités comme Always Encrypted, Azure Active Directory et les groupes de disponibilité AlwaysOn. Également disponible pour Mac OS et Linux.
 
-[OLE DB Driver for SQL Server](/sql/connect/oledb/oledb-driver-for-sql-server)<br/>
+[OLE DB Driver pour SQL Server](/sql/connect/oledb/oledb-driver-for-sql-server)<br/>
 Le dernier pilote OLE DB est une API d’accès aux données autonome qui prend en charge Microsoft SQL Server et Microsoft Azure SQL Database.
 
 [Centre de développement Microsoft Azure C et C++](https://azure.microsoft.com/develop/cpp/)<br/>
 Azure facilite la création d’applications C++ avec plus de souplesse, de scalabilité et de fiabilité à l’aide des outils que vous aimez.
 
-[Guide pratique pour utiliser le stockage Blob à partir de C++](https://docs.microsoft.com/azure/storage/storage-c-plus-plus-how-to-use-blobs)<br/>
-Le stockage Blob Azure est un service qui stocke les données non structurées dans le cloud en tant qu’objets/objets blob. Le stockage Blob permet de stocker n’importe quel type de données texte ou binaires, par exemple un document, un fichier multimédia ou un programme d’installation d’application. Le stockage Blob est également appelé stockage d’objets.
+[Utilisation du stockage d'objets blob à partir de C++](https://docs.microsoft.com/azure/storage/storage-c-plus-plus-how-to-use-blobs)<br/>
+Le stockage d’objets blob Azure est un service qui stocke des données non structurées dans le cloud en tant qu’objets/blobs. Ce service peut stocker tout type de données texte ou binaires, par exemple, un document, un fichier multimédia ou un programme d’installation d’application. Le stockage d’objets blob est également appelé Stockage Blob.
 
 [Guide de référence du programmeur ODBC](https://docs.microsoft.com/sql/odbc/reference/odbc-programmer-s-reference)<br/>
-L’interface ODBC est conçue pour une utilisation avec le langage de programmation C. L’utilisation de l’interface ODBC concerne trois domaines : les instructions SQL, les appels de fonction ODBC et la programmation en C.
+L’interface ODBC est conçue pour une utilisation avec le langage de programmation C. L’utilisation de l’interface ODBC s’étend sur trois domaines : les instructions SQL, les appels de fonctions ODBC et la programmation en C.
 
 ## <a name="see-also"></a>Voir aussi
 

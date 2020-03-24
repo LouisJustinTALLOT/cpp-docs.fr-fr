@@ -14,12 +14,12 @@ helpviewer_keywords:
 - std::num_get [C++], do_get
 - std::num_get [C++], get
 ms.assetid: 9933735d-3918-4b17-abad-5fca2adc62d7
-ms.openlocfilehash: bf6623bb61e7a217fcc18a268a583a7ecea4931d
-ms.sourcegitcommit: 4b0928a1a497648d0d327579c8262f25ed20d02e
+ms.openlocfilehash: 58ff645a381fd55c591a2566b2e698f0e9821935
+ms.sourcegitcommit: eff68e4e82be292a5664616b16a526df3e9d1cda
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/24/2019
-ms.locfileid: "72889991"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80150614"
 ---
 # <a name="num_get-class"></a>num_get, classe
 
@@ -34,10 +34,10 @@ class num_get : public locale::facet;
 
 ### <a name="parameters"></a>Paramètres
 
-*CharType* \
+*CharType*\
 Type utilisé dans un programme pour encoder des caractères dans des paramètres régionaux spécifiques.
 
-*InputIterator* \
+*InputIterator*\
 Type d'itérateur depuis lequel les fonctions get numériques lisent leur entrée.
 
 ## <a name="remarks"></a>Notes
@@ -50,27 +50,27 @@ Comme avec n'importe quelle facette de paramètres régionaux, l'ID d'objet stat
 |-|-|
 |[num_get](#num_get)|Constructeur des objets de type `num_get` utilisés pour extraire des valeurs numériques depuis des séquences.|
 
-### <a name="typedefs"></a>Typedef
+### <a name="typedefs"></a>Typedefs
 
 |Nom de type|Description|
 |-|-|
 |[char_type](#char_type)|Type utilisé pour décrire un caractère utilisé par des paramètres régionaux.|
 |[iter_type](#iter_type)|Type qui décrit un itérateur d'entrée.|
 
-### <a name="member-functions"></a>Fonctions membres
+### <a name="member-functions"></a>Fonctions Membre
 
 |Fonction membre|Description|
 |-|-|
 |[do_get](#do_get)|Fonction virtuelle appelée pour extraire une valeur numérique ou booléenne depuis une séquence de caractères.|
 |[get](#get)|Extrait une valeur numérique ou booléenne d'une séquence de caractères.|
 
-## <a name="requirements"></a>spécifications
+## <a name="requirements"></a>Spécifications
 
-**En-tête :** \<locale>
+**En-tête :** \<paramètres régionaux >
 
 **Espace de noms :** std
 
-## <a name="char_type"></a>  num_get::char_type
+## <a name="num_getchar_type"></a><a name="char_type"></a>  num_get::char_type
 
 Type utilisé pour décrire un caractère utilisé par des paramètres régionaux.
 
@@ -82,7 +82,7 @@ typedef CharType char_type;
 
 Le type est un synonyme du paramètre de modèle **CharType**.
 
-## <a name="do_get"></a>  num_get::do_get
+## <a name="num_getdo_get"></a><a name="do_get"></a>  num_get::do_get
 
 Fonction virtuelle appelée pour extraire une valeur numérique ou booléenne depuis une séquence de caractères.
 
@@ -167,13 +167,13 @@ virtual iter_type do_get(
 
 ### <a name="parameters"></a>Paramètres
 
-*premier* \
+*premier*\
 Début de la plage de caractères à partir de laquelle lire le nombre.
 
-*dernier* \
+*dernier*\
 Fin de la plage de caractères à partir de laquelle lire le nombre.
 
-*iosbase* \
+*iosbase*\
 [ios_base](../standard-library/ios-base-class.md) dont les indicateurs sont utilisés par la conversion.
 
 \ d' *État*
@@ -211,11 +211,11 @@ Si `iosbase.flags() & ios_base::basefield == 0`, la spécification de conversion
 
 Autrement, la spécification de conversion est `ld`.
 
-Le format d’un champ d’entrée d’entier est également déterminé par la [facette de paramètres régionaux](../standard-library/locale-class.md#facet_class)`fac` retournée par l’appel de [use_facet](../standard-library/locale-functions.md#use_facet) `<`[numpunct](../standard-library/numpunct-class.md)`<Elem>(iosbase.`[ios_base ::`())`getloc](../standard-library/ios-base-class.md#getloc) . Plus précisément :
+Le format d’un champ d’entrée d’entier est également déterminé par la [facette de paramètres régionaux](../standard-library/locale-class.md#facet_class)`fac` retournée par l’appel [use_facet](../standard-library/locale-functions.md#use_facet) `<`[numpunct](../standard-library/numpunct-class.md)`<Elem>(iosbase.`[ios_base :: getloc](../standard-library/ios-base-class.md#getloc)`())`. Plus précisément :
 
-`fac.`[numpunct :: grouping](../standard-library/numpunct-class.md#grouping)`()` détermine la façon dont les chiffres sont regroupés à gauche de la virgule décimale
+`fac.`[numpunct::grouping](../standard-library/numpunct-class.md#grouping)`()` détermine comment les chiffres sont regroupés à gauche de la virgule décimale.
 
-`fac.`[numpunct ::`()` thousands_sep](../standard-library/numpunct-class.md#thousands_sep) détermine la séquence qui sépare les groupes de chiffres à gauche de la virgule décimale.
+`fac.`[numpunct::thousands_sep](../standard-library/numpunct-class.md#thousands_sep)`()` détermine la séquence qui sépare les groupes de chiffres à gauche de la virgule décimale.
 
 Si aucune instance de `fac.thousands_sep()` ne se produit dans le champ d’entrée numérique, aucune contrainte de regroupement n’est imposée. Autrement, toute contrainte de regroupement imposée par `fac.grouping()` est appliquée, et les séparateurs sont supprimés avant que la conversion d’analyse ait lieu.
 
@@ -329,7 +329,7 @@ Un champ d’entrée booléen peut avoir deux formes. Si `iosbase.flags() & ios_
 
 Consultez l’exemple relatif à [get](#get), où la fonction membre virtuelle est appelée par `do_get`.
 
-## <a name="get"></a>  num_get::get
+## <a name="num_getget"></a><a name="get"></a>  num_get::get
 
 Extrait une valeur numérique ou booléenne d'une séquence de caractères.
 
@@ -414,13 +414,13 @@ iter_type get(
 
 ### <a name="parameters"></a>Paramètres
 
-*premier* \
+*premier*\
 Début de la plage de caractères à partir de laquelle lire le nombre.
 
-*dernier* \
+*dernier*\
 Fin de la plage de caractères à partir de laquelle lire le nombre.
 
-*iosbase* \
+*iosbase*\
 [ios_base](../standard-library/ios-base-class.md) dont les indicateurs sont utilisés par la conversion.
 
 \ d' *État*
@@ -441,7 +441,7 @@ La première fonction membre protégée virtuelle tente de faire correspondre de
 
 Le champ d’entrée d’entier est converti par les mêmes règles que celles utilisées par les fonctions d’analyse pour la correspondance et la conversion d’une série d’éléments **char** à partir d’un fichier. Chacun de ces éléments **char** est supposé être mappé à un élément équivalent de type `CharType` par un simple mappage un-à-un. La spécification de conversion d’analyse équivalente est déterminée comme suit :
 
-- Si `iosbase.`[indicateurs](../standard-library/ios-base-class.md#flags)` & ios_base::basefield == ios_base::`[Oct](../standard-library/ios-functions.md#oct), la spécification de conversion est `lo`.
+- Si `iosbase.`[indicateurs](../standard-library/ios-base-class.md#flags)`& ios_base::basefield == ios_base::`[Oct](../standard-library/ios-functions.md#oct), la spécification de conversion est `lo`.
 
 - Si `iosbase.flags & ios_base::basefield == ios_base::`[hex](../standard-library/ios-functions.md#hex), la spécification de conversion est `lx`.
 
@@ -551,7 +551,7 @@ int main( )
 }
 ```
 
-## <a name="iter_type"></a>  num_get::iter_type
+## <a name="num_getiter_type"></a><a name="iter_type"></a>  num_get::iter_type
 
 Type qui décrit un itérateur d'entrée.
 
@@ -563,7 +563,7 @@ typedef InputIterator iter_type;
 
 Le type est un synonyme du paramètre de modèle `InputIterator`.
 
-## <a name="num_get"></a>  num_get::num_get
+## <a name="num_getnum_get"></a><a name="num_get"></a>  num_get::num_get
 
 Constructeur des objets de type `num_get` utilisés pour extraire des valeurs numériques depuis des séquences.
 

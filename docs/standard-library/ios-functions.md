@@ -56,16 +56,16 @@ helpviewer_keywords:
 - std::skipws [C++]
 - std::unitbuf [C++]
 - std::uppercase [C++]
-ms.openlocfilehash: c3b1e2350d0923cbfddf95492842ae126859e29f
-ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
+ms.openlocfilehash: 3ba2ba463bbd59bd8febccb73c37cc3b79a4c75b
+ms.sourcegitcommit: eff68e4e82be292a5664616b16a526df3e9d1cda
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/16/2020
-ms.locfileid: "79421610"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80150627"
 ---
 # <a name="ltiosgt-functions"></a>&lt;ios&gt;, fonctions
 
-## <a name="boolalpha"></a>boolalpha
+## <a name="boolalpha"></a><a name="boolalpha"></a>boolalpha
 
 Indique que les variables de type [bool](../cpp/bool-cpp.md) apparaissent comme **true** ou **false** dans le flux.
 
@@ -117,7 +117,7 @@ true
 true
 ```
 
-## <a name="dec"></a>decembre
+## <a name="dec"></a><a name="dec"></a>decembre
 
 Indique que les variables de type entier sont affichées en notation de base 10.
 
@@ -170,7 +170,7 @@ int main( )
 100
 ```
 
-## <a name="ios_defaultfloat"></a>&lt;iOS&gt; defaultfloat
+## <a name="ltiosgt-defaultfloat"></a><a name="ios_defaultfloat"></a>&lt;iOS&gt; defaultfloat
 
 Configure les indicateurs d'un objet `ios_base` pour utiliser un format d'affichage par défaut pour les valeurs de type float.
 
@@ -187,7 +187,7 @@ Objet `ios_base`.
 
 Le manipulateur appelle efficacement `iosbase.`[ios_base :: unsetf](../standard-library/ios-base-class.md#unsetf)`(ios_base::floatfield)`, puis retourne *iosbase*.
 
-## <a name="fixed"></a>des
+## <a name="fixed"></a><a name="fixed"></a>des
 
 Indique qu'un nombre à virgule flottante est affiché en notation décimale fixe.
 
@@ -235,7 +235,7 @@ int main( )
 1.1
 ```
 
-## <a name="hex"></a>séquence
+## <a name="hex"></a><a name="hex"></a>séquence
 
 Indique que les variables de type entier sont affichées en notation de base 16.
 
@@ -262,13 +262,13 @@ Le manipulateur appelle effectivement `str` **.** [SETF](../standard-library/ios
 
 Pour obtenir un exemple d’utilisation de `hex`, consultez [Dec](../standard-library/ios-functions.md#dec) .
 
-## <a name="hexfloat"></a>hexfloat
+## <a name="hexfloat"></a><a name="hexfloat"></a>hexfloat
 
 ```cpp
 ios_base& hexfloat (ios_base& str);
 ```
 
-## <a name="io_errc"></a>io_errc
+## <a name="io_errc"></a><a name="io_errc"></a>io_errc
 
 ```cpp
 enum class io_errc {
@@ -276,7 +276,7 @@ enum class io_errc {
 };
 ```
 
-## <a name="internal"></a>intérieurs
+## <a name="internal"></a><a name="internal"></a>intérieurs
 
 Aligne à gauche le signe d'un nombre et aligne à droite le nombre.
 
@@ -297,7 +297,7 @@ Référence à l’objet à partir duquel *Str* est dérivé.
 
 [showpos](../standard-library/ios-functions.md#showpos) provoque l’affichage du signe pour les nombres positifs.
 
-Le manipulateur appelle efficacement `str.`[setf](../standard-library/ios-base-class.md#setf)`(`[ios_base :: Internal](../standard-library/ios-base-class.md#fmtflags)`, `[ios_base :: adjustfield](../standard-library/ios-base-class.md#fmtflags)`)`, puis retourne *Str*.
+Le manipulateur appelle efficacement `str.`[setf](../standard-library/ios-base-class.md#setf)`(`[ios_base :: Internal](../standard-library/ios-base-class.md#fmtflags)`,` [ios_base :: adjustfield](../standard-library/ios-base-class.md#fmtflags)`)`, puis retourne *Str*.
 
 ### <a name="example"></a>Exemple
 
@@ -322,19 +322,19 @@ int main( void )
 -..123.456
 ```
 
-## <a name="is_error_code_enum"></a>is_error_code_enum
+## <a name="is_error_code_enum"></a><a name="is_error_code_enum"></a>is_error_code_enum
 
 ```cpp
 template <> struct is_error_code_enum<io_errc> : public true_type { };
 ```
 
-## <a name="iostream_category"></a>iostream_category
+## <a name="iostream_category"></a><a name="iostream_category"></a>iostream_category
 
 ```cpp
 const error_category& iostream_category() noexcept;
 ```
 
-## <a name="left"></a>gauche
+## <a name="left"></a><a name="left"></a>gauche
 
 Fait en sorte que le texte qui n'est pas aussi large que la largeur de sortie apparaisse dans le flux aligné avec la marge de gauche.
 
@@ -377,19 +377,19 @@ int main( )
         5
 ```
 
-## <a name="make_error_code"></a>make_error_code
+## <a name="make_error_code"></a><a name="make_error_code"></a>make_error_code
 
 ```cpp
 error_code make_error_code(io_errc e) noexcept;
 ```
 
-## <a name="make_error_condition"></a>make_error_condition
+## <a name="make_error_condition"></a><a name="make_error_condition"></a>make_error_condition
 
 ```cpp
 error_condition make_error_condition(io_errc e) noexcept;
 ```
 
-## <a name="noboolalpha"></a>noboolalpha
+## <a name="noboolalpha"></a><a name="noboolalpha"></a>noboolalpha
 
 Indique que les variables de type [bool](../cpp/bool-cpp.md) apparaissent comme 1 ou 0 dans le flux.
 
@@ -418,7 +418,7 @@ Par défaut, `noboolalpha` est activé.
 
 Pour obtenir un exemple d’utilisation de [, consultez ](../standard-library/ios-functions.md#boolalpha)boolalpha`noboolalpha`.
 
-## <a name="noshowbase"></a>noshowbase
+## <a name="noshowbase"></a><a name="noshowbase"></a>noshowbase
 
 Désactive l'indication de la base de notation dans laquelle un nombre est affiché.
 
@@ -445,7 +445,7 @@ Le manipulateur appelle efficacement `str.``(ios_base::showbase)`[unsetf](../sta
 
 Pour obtenir un exemple d’utilisation de [, consultez ](../standard-library/ios-functions.md#showbase)showbase`noshowbase`.
 
-## <a name="noshowpoint"></a>noshowpoint
+## <a name="noshowpoint"></a><a name="noshowpoint"></a>noshowpoint
 
 Affiche uniquement la partie entière des nombres à virgule flottante dont la partie fractionnaire est égale à zéro.
 
@@ -492,7 +492,7 @@ int main( )
 5
 ```
 
-## <a name="noshowpos"></a>noshowpos
+## <a name="noshowpos"></a><a name="noshowpos"></a>noshowpos
 
 Fait en sorte que les nombres positifs ne soient pas signés explicitement.
 
@@ -519,7 +519,7 @@ Le manipulateur appelle efficacement `str.``(ios_base::showps)`[unsetf](../stand
 
 Pour obtenir un exemple d’utilisation de [, consultez ](../standard-library/ios-functions.md#showpos)showpos`noshowpos`.
 
-## <a name="noskipws"></a>noskipws
+## <a name="noskipws"></a><a name="noskipws"></a>noskipws
 
 Fait en sorte que les espaces soient lus par le flux d'entrée.
 
@@ -561,7 +561,7 @@ int main() {
 }
 ```
 
-## <a name="nounitbuf"></a>nounitbuf
+## <a name="nounitbuf"></a><a name="nounitbuf"></a>nounitbuf
 
 Fait en sorte que la sortie soit mise en mémoire tampon et traitée quand la mémoire tampon est pleine.
 
@@ -584,7 +584,7 @@ Référence à l’objet à partir duquel *Str* est dérivé.
 
 Le manipulateur appelle efficacement `str.``(ios_base::unitbuf)`[unsetf](../standard-library/ios-base-class.md#unsetf) , puis retourne *Str*.
 
-## <a name="nouppercase"></a>nouppercase
+## <a name="nouppercase"></a><a name="nouppercase"></a>nouppercase
 
 Spécifie que les chiffres hexadécimaux et l'exposant en notation scientifique apparaissent en minuscules.
 
@@ -609,7 +609,7 @@ Le manipulateur appelle efficacement `str.``(ios_base::uppercase)`[unsetf](../st
 
 Pour obtenir un exemple d’utilisation de [, consultez ](../standard-library/ios-functions.md#uppercase)uppercase`nouppercase`.
 
-## <a name="oct"></a>personnalisation
+## <a name="oct"></a><a name="oct"></a>personnalisation
 
 Indique que les variables de type entier sont affichées en notation de base 8.
 
@@ -636,7 +636,7 @@ Le manipulateur appelle efficacement `str.``(ios_base::oct, ios_base::basefield)
 
 Pour obtenir un exemple d’utilisation de `oct`, consultez [Dec](../standard-library/ios-functions.md#dec) .
 
-## <a name="right"></a>Oui
+## <a name="right"></a><a name="right"></a>Oui
 
 Fait en sorte que le texte qui n'est pas aussi large que la largeur de sortie apparaisse dans le flux aligné avec la marge de droite.
 
@@ -693,7 +693,7 @@ int main( )
                    5
 ```
 
-## <a name="scientific"></a>nature
+## <a name="scientific"></a><a name="scientific"></a>nature
 
 Fait en sorte que les nombres à virgule flottante soient affichés à l’aide de la notation scientifique.
 
@@ -738,7 +738,7 @@ int main( )
 1.002300e+002
 ```
 
-## <a name="showbase"></a>ShowBase
+## <a name="showbase"></a><a name="showbase"></a>ShowBase
 
 Indique la base de notation dans laquelle un nombre est affiché.
 
@@ -792,7 +792,7 @@ int main( )
 144
 ```
 
-## <a name="showpoint"></a>showpoint
+## <a name="showpoint"></a><a name="showpoint"></a>showpoint
 
 Affiche la partie entière d'un nombre à virgule flottante et les chiffres à droite de la virgule décimale même quand la partie fractionnaire est égale à zéro.
 
@@ -819,7 +819,7 @@ Le manipulateur appelle efficacement `str.``(ios_base::showpoint)`[SETF](../stan
 
 Pour obtenir un exemple d’utilisation de [, consultez ](../standard-library/ios-functions.md#noshowpoint)noshowpoint`showpoint`.
 
-## <a name="showpos"></a>showpos
+## <a name="showpos"></a><a name="showpos"></a>showpos
 
 Fait en sorte que les nombres positifs soient signés explicitement.
 
@@ -864,7 +864,7 @@ int main( )
 +1
 ```
 
-## <a name="skipws"></a>skipws
+## <a name="skipws"></a><a name="skipws"></a>skipws
 
 Fait en sorte que les espaces ne soient pas lus par le flux d'entrée.
 
@@ -916,7 +916,7 @@ Enter three characters: 1 2 3
 .3.
 ```
 
-## <a name="unitbuf"></a>unitbuf
+## <a name="unitbuf"></a><a name="unitbuf"></a>unitbuf
 
 Fait en sorte que la sortie soit traitée quand la mémoire tampon n'est pas vide.
 
@@ -941,7 +941,7 @@ Notez que `endl` vide aussi la mémoire tampon.
 
 Le manipulateur appelle efficacement `str.`[setf](../standard-library/ios-base-class.md#setf)`(`[ios_base :: unitbuf](../standard-library/ios-base-class.md#fmtflags)`)`, puis retourne *Str*.
 
-## <a name="uppercase"></a>  uppercase
+## <a name="uppercase"></a><a name="uppercase"></a>  uppercase
 
 Spécifie que les chiffres hexadécimaux et l'exposant en notation scientifique apparaissent en majuscules.
 
