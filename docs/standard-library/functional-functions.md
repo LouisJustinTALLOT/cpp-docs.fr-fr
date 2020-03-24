@@ -29,12 +29,12 @@ helpviewer_keywords:
 - std::bit_xor [C++]
 - std::cref [C++]
 ms.assetid: c34d0b45-50a7-447a-9368-2210d06339a4
-ms.openlocfilehash: 546d8c61e875dd7c295e892359e39fa5a76867b4
-ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
+ms.openlocfilehash: d5a1b0d106774ede13b0e23d4bacb8fbbc47d28f
+ms.sourcegitcommit: eff68e4e82be292a5664616b16a526df3e9d1cda
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/16/2020
-ms.locfileid: "79421799"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80150678"
 ---
 # <a name="ltfunctionalgt-functions"></a>&lt;functional&gt;, fonctions
 
@@ -51,7 +51,7 @@ Ces fonctions sont dépréciées dans C++ 17 :
 |-|-|
 |[not1](#not1)|[not2](#not2)|
 
-## <a name="bind"></a>établis
+## <a name="bind"></a><a name="bind"></a>établis
 
 Lie des arguments à un objet pouvant être appelé.
 
@@ -81,7 +81,7 @@ N-ième argument de l’appel.
 
 Les types `FT, T1, T2, ..., TN` doivent être Copy-constructible, et `INVOKE(fn, t1, ..., tN)` doit être une expression valide pour certaines valeurs `w1, w2, ..., wN`.
 
-La première fonction de modèle retourne un wrapper d’appel de transfert `g` avec un type de résultat faible. L’effet de `g(u1, u2, ..., uM)` est `INVOKE(f, v1, v2, ..., vN, `[invoke_result](../standard-library/invoke-result-class.md)`<FT cv (V1, V2, ..., VN)>::type)`, où `cv` est le qualificateur cv d' `g` et les valeurs et types des arguments liés `v1, v2, ..., vN` sont déterminés comme indiqué ci-dessous. Vous l’utilisez pour lier des arguments à un objet pouvant être appelé afin de créer un objet pouvant être appelé avec une liste d’arguments personnalisés.
+La première fonction de modèle retourne un wrapper d’appel de transfert `g` avec un type de résultat faible. L’effet de `g(u1, u2, ..., uM)` est `INVOKE(f, v1, v2, ..., vN,` [invoke_result](../standard-library/invoke-result-class.md)`<FT cv (V1, V2, ..., VN)>::type)`, où `cv` est le qualificateur cv d' `g` et les valeurs et types des arguments liés `v1, v2, ..., vN` sont déterminés comme indiqué ci-dessous. Vous l’utilisez pour lier des arguments à un objet pouvant être appelé afin de créer un objet pouvant être appelé avec une liste d’arguments personnalisés.
 
 La deuxième fonction de modèle retourne un wrapper d’appel de transfert `g` avec un type imbriqué `result_type` qui est un synonyme de `RTy`. L’effet de `g(u1, u2, ..., uM)` est `INVOKE(f, v1, v2, ..., vN, RTy)`, où `cv` désigne les qualificateurs cv de `g`, et les valeurs et types des arguments liés `v1, v2, ..., vN` sont déterminés comme indiqué ci-dessous. Vous l’utilisez pour lier des arguments à un objet pouvant être appelé afin de créer un objet pouvant être appelé avec une liste d’arguments personnalisés et un type de retour spécifié.
 
@@ -152,7 +152,7 @@ int main()
 3^2 == 9
 ```
 
-## <a name="bind1st"></a>bind1st
+## <a name="bind1st"></a><a name="bind1st"></a>bind1st
 
 Fonction de modèle d’assistance qui crée un adaptateur pour convertir un objet de fonction binaire en objet de fonction unaire. Elle lie le premier argument de la fonction binaire à une valeur spécifiée. Déconseillé dans C++ 11, supprimé en C++ 17.
 
@@ -246,7 +246,7 @@ The number of elements in v1 greater than 5 is: 4.
 The number of elements in v1 less than 10 is: 2.
 ```
 
-## <a name="bind2nd"></a>bind2nd
+## <a name="bind2nd"></a><a name="bind2nd"></a>bind2nd
 
 Fonction de modèle d’assistance qui crée un adaptateur pour convertir un objet de fonction binaire en objet de fonction unaire. Elle lie le deuxième argument de la fonction binaire à une valeur spécifiée. Déconseillé dans C++ 11, supprimé en C++ 17.
 
@@ -340,7 +340,7 @@ The number of elements in v1 greater than 15 is: 2.
 The number of elements in v1 less than 10 is: 2.
 ```
 
-## <a name="bit_and"></a>bit_and
+## <a name="bit_and"></a><a name="bit_and"></a>bit_and
 
 Objet de fonction prédéfini qui effectue une opération and au niveau du bit (`operator&`binaire) sur ses arguments.
 
@@ -381,7 +381,7 @@ Résultat de `Left & Right`. Le modèle spécialisé effectue un transfert parfa
 
 Le foncteur `bit_and` est limité aux types intégraux pour les types de données de base ou aux types définis par l’utilisateur qui implémentent `operator&` binaire.
 
-## <a name="bit_not"></a>bit_not
+## <a name="bit_not"></a><a name="bit_not"></a>bit_not
 
 Objet de fonction prédéfini qui effectue une opération de complément au niveau du bit (NOT) (unaire `operator~`) sur son argument. Ajouté en C++ 14.
 
@@ -417,7 +417,7 @@ Résultat de `~ Right`. Le modèle spécialisé effectue un transfert parfait du
 
 Le foncteur `bit_not` est limité aux types intégraux pour les types de données de base ou aux types définis par l’utilisateur qui implémentent `operator~` binaire.
 
-## <a name="bit_or"></a>bit_or
+## <a name="bit_or"></a><a name="bit_or"></a>bit_or
 
 Objet de fonction prédéfini qui effectue une opération or au niveau du bit (`operator|`) sur ses arguments.
 
@@ -458,7 +458,7 @@ Résultat de `Left | Right`. Le modèle spécialisé effectue un transfert parfa
 
 Le foncteur `bit_or` est limité aux types intégraux pour les types de données de base ou aux types définis par l'utilisateur qui implémentent `operator|`.
 
-## <a name="bit_xor"></a>bit_xor
+## <a name="bit_xor"></a><a name="bit_xor"></a>bit_xor
 
 Objet de fonction prédéfini qui effectue une opération de bits XOR (`operator^`binaire) sur ses arguments.
 
@@ -499,7 +499,7 @@ Résultat de `Left ^ Right`. Le modèle spécialisé effectue un transfert parfa
 
 Le foncteur `bit_xor` est limité aux types intégraux pour les types de données de base ou aux types définis par l’utilisateur qui implémentent `operator^` binaire.
 
-## <a name="cref"></a>CREF
+## <a name="cref"></a><a name="cref"></a>CREF
 
 Construit un `reference_wrapper` const à partir d'un argument.
 
@@ -555,7 +555,7 @@ cref(i) = 1
 cref(neg)(i) = -1
 ```
 
-## <a name="invoke"></a>déclenché
+## <a name="invoke"></a><a name="invoke"></a>déclenché
 
 Appelle tout objet pouvant être appelé avec les arguments donnés. Ajouté en C++ 17.
 
@@ -676,7 +676,7 @@ pd->n_: 42
 42 is divisible by 7.
 ```
 
-## <a name="mem_fn"></a>mem_fn
+## <a name="mem_fn"></a><a name="mem_fn"></a>mem_fn
 
 Génère un wrapper d'appel simple.
 
@@ -739,7 +739,7 @@ int main()
 3*2 == 6
 ```
 
-## <a name="mem_fun"></a>mem_fun
+## <a name="mem_fun"></a><a name="mem_fun"></a>mem_fun
 
 Fonctions de modèle d’assistance utilisées pour construire des adaptateurs d’objets de fonction pour des fonctions membres en cas d’initialisation avec des arguments de pointeur. Déconseillé dans C++ 11 pour la [mem_fn](#mem_fn) et la [liaison](#bind), et supprimé en c++ 17.
 
@@ -826,7 +826,7 @@ int main( )
 }
 ```
 
-## <a name="mem_fun_ref"></a>mem_fun_ref
+## <a name="mem_fun_ref"></a><a name="mem_fun_ref"></a>mem_fun_ref
 
 Fonctions de modèle d’assistance utilisées pour construire des adaptateurs d’objet de fonction pour des fonctions membres en cas d’initialisation avec des arguments de référence. Déconseillé dans C++ 11, supprimé en C++ 17.
 
@@ -931,7 +931,7 @@ The original values stored in v2 are: 1 2 3 4 5 6 7 8 9 10 11 12 13
 With the even numbers removed, the remaining values are: 1 3 5 7 9 11 13
 ```
 
-## <a name="not1"></a>not1
+## <a name="not1"></a><a name="not1"></a>not1
 
 Retourne le complément d’un prédicat unaire. Déconseillé pour [not_fn](#not_fn) en c++ 17.
 
@@ -1003,7 +1003,7 @@ The number of elements in v1 greater than 10 is: 5.
 The number of elements in v1 not greater than 10 is: 3.
 ```
 
-## <a name="not2"></a>not2
+## <a name="not2"></a><a name="not2"></a>not2
 
 Retourne le complément d’un prédicat binaire. Déconseillé pour [not_fn](#not_fn) en c++ 17.
 
@@ -1079,7 +1079,7 @@ Sorted vector v1 = ( 41 6262 6262 6334 18467 19169 26500 )
 Resorted vector v1 = ( 26500 19169 18467 6334 6262 6262 41 )
 ```
 
-## <a name="not_fn"></a>not_fn
+## <a name="not_fn"></a><a name="not_fn"></a>not_fn
 
 Le modèle de fonction `not_fn` prend un objet pouvant être appelé et retourne un objet pouvant être appelé. Lorsque l’objet pouvant être appelé retourné est appelé par la suite avec certains arguments, il passe à l’objet pouvant être appelé d’origine et nie logiquement le résultat. Il conserve le comportement de la qualification const et de la catégorie valeur de l’objet pouvant être appelé encapsulé. `not_fn` est une nouveauté de C++ 17 et remplace le `std::not1`, le `std::not2`, le `std::unary_negate`et l' `std::binary_negate`déconseillés.
 
@@ -1179,7 +1179,7 @@ Elements divisible by three: 2
 Elements not divisible by three: 5
 ```
 
-## <a name="ptr_fun"></a>ptr_fun
+## <a name="ptr_fun"></a><a name="ptr_fun"></a>ptr_fun
 
 Fonctions de modèle d’assistance utilisées pour convertir des pointeurs de fonction unaires et binaires, respectivement, en fonctions adaptables unaires et binaires. Déconseillé dans C++ 11, supprimé en C++ 17.
 
@@ -1210,7 +1210,7 @@ Un pointeur de fonction est un objet de fonction. Il peut être passé à n’im
 
 [!code-cpp[functional_ptr_fun#1](../standard-library/codesnippet/CPP/functional-functions_1.cpp)]
 
-## <a name="ref"></a>Réf
+## <a name="ref"></a><a name="ref"></a>Réf
 
 Construit un `reference_wrapper` à partir d'un argument.
 
@@ -1302,7 +1302,7 @@ tiger lion cougar
 tiger cougar
 ```
 
-## <a name="swap"></a>échange
+## <a name="swap"></a><a name="swap"></a>échange
 
 Échange deux objets `function`.
 

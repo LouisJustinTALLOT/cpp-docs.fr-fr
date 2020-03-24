@@ -4,12 +4,12 @@ ms.date: 10/21/2019
 helpviewer_keywords:
 - breaking changes [C++]
 ms.assetid: b38385a9-a483-4de9-99a6-797488bc5110
-ms.openlocfilehash: d9e8778e970b6b672d6198770ad0c7ab5a4674b9
-ms.sourcegitcommit: 8e285a766523e653aeeb34d412dc6f615ef7b17b
+ms.openlocfilehash: 6dd14bf9f53030920bb5114fb3a52499444ff10a
+ms.sourcegitcommit: eff68e4e82be292a5664616b16a526df3e9d1cda
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/21/2020
-ms.locfileid: "80076845"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80150756"
 ---
 # <a name="visual-c-change-history-2003---2015"></a>Historique des modifications de Visual C++ entre 2003 et 2015
 
@@ -22,13 +22,13 @@ Pour plus d’informations sur la version la plus récente de Visual Studio, con
 
 Quand vous effectuez une mise à niveau avec une nouvelle version de Visual Studio, vous pouvez rencontrer des erreurs de compilation et/ou d’exécution dans du code qui pouvait auparavant être compilé et exécuté correctement. Les modifications introduites dans la nouvelle version qui génèrent de tels problèmes sont appelées *modifications avec rupture*et elles sont généralement requises par des modifications apportées à la norme du langage C++, aux signatures des fonctions ou à la disposition des objets en mémoire.
 
-Pour éviter les erreurs d’exécution qui sont difficiles à détecter et diagnostiquer, nous vous recommandons de ne jamais établir de lien statique à des binaires compilés à l’aide d’une version différente du compilateur. En outre, lorsque vous mettez à niveau un projet EXE ou DLL, veillez à mettre à niveau les bibliothèques auxquelles il est lié. Ne transmettez pas des types de bibliothèques C++ standard ou Runtime C (CRT) entre des fichiers binaires (notamment des DLL) compilés à l’aide de différentes versions du compilateur. Pour plus d'informations, consultez [Potential Errors Passing CRT Objects Across DLL Boundaries](../c-runtime-library/potential-errors-passing-crt-objects-across-dll-boundaries.md).
+Pour éviter les erreurs d’exécution qui sont difficiles à détecter et diagnostiquer, nous vous recommandons de ne jamais établir de lien statique à des binaires compilés à l’aide d’une version différente du compilateur. En outre, lorsque vous mettez à niveau un projet EXE ou DLL, veillez à mettre à niveau les bibliothèques auxquelles il est lié. Ne transmettez pas des types de bibliothèques C++ standard ou Runtime C (CRT) entre des fichiers binaires (notamment des DLL) compilés à l’aide de différentes versions du compilateur. Pour plus d’informations, consultez [Erreurs potentielles de passage d’objets CRT entre frontières DLL](../c-runtime-library/potential-errors-passing-crt-objects-across-dll-boundaries.md).
 
 Ne rédigez jamais du code dépendant d’une disposition particulière pour un objet qui n’est pas une interface COM ou un objet POD. Si vous rédigez un tel code, vous devez vous assurer qu'il fonctionne après la mise à niveau. Pour plus d’informations, consultez [Portabilité aux limites ABI](../cpp/portability-at-abi-boundaries-modern-cpp.md).
 
 En outre, les améliorations suivies de la conformité du compilateur peuvent parfois modifier la façon dont le compilateur comprend votre code source existant. Par exemple, vous pouvez être confronté à des erreurs nouvelles ou différentes pendant la génération, ou même à des différences de comportement dans le code qui auparavant était généré et paraissait s’exécuter correctement. Même s’il ne s’agit pas là de changements cassants tels que ceux présentés dans ce document, vous devrez peut-être apporter des changements à votre code source pour résoudre ces problèmes :
 
-- [Modifications avec rupture de la bibliothèque C Runtime (CRT)](#BK_CRT)
+- [Modifications avec rupture de la bibliothèque Runtime C (CRT)](#BK_CRT)
 
 - [Modifications avec rupture de la bibliothèque C++ standard](#BK_STL)
 
@@ -38,13 +38,13 @@ En outre, les améliorations suivies de la conformité du compilateur peuvent pa
 
 ## <a name="visual-studio-2015-conformance-changes"></a><a name="VC_2015"></a> Modifications de la mise en conformité de Visual Studio 2015
 
-###  <a name="c-runtime-library-crt"></a><a name="BK_CRT"></a> Bibliothèque Runtime C (CRT)
+###  <a name="c-runtime-library-crt"></a><a name="BK_CRT"></a> Bibliothèque Runtime C (CRT)
 
 #### <a name="general-changes"></a>Modifications générales
 
 - **Fichiers binaires refactorisés**
 
-   La bibliothèque CRT a été refactorisée en deux fichiers binaires différents, la bibliothèque Universal CRT (ucrtbase), qui contient la plupart des fonctionnalités standard, et une bibliothèque runtime VC (vcruntime). La bibliothèque vcruntime contient les fonctionnalités associées au compilateur, telles que la gestion des exceptions, et les intrinsèques. Si vous utilisez les paramètres de projet par défaut, cette modification n’a aucune incidence, car l’éditeur de liens utilise automatiquement les nouvelles bibliothèques par défaut. Si vous avez défini, dans l’**éditeur de liens**, la propriété **Ignorer toutes les bibliothèques par défaut** du projet sur **Oui**, ou si vous utilisez l’option `/NODEFAULTLIB` de l’éditeur de liens sur la ligne de commande, vous devez mettre à jour votre liste de bibliothèques (dans la propriété **Dépendances supplémentaires**) pour inclure les nouvelles bibliothèques refactorisées. Remplacez l'ancienne bibliothèque CRT (libcmt.lib, libcmtd.lib, msvcrt.lib, msvcrtd.lib) par les bibliothèques refactorisées équivalentes. Pour chacune des deux bibliothèques refactorisées, il existe des versions statiques (.lib) et dynamiques (.dll), ainsi que des versions release (sans suffixe) et debug (avec le suffixe « d »). Les versions dynamiques ont une bibliothèque d'importation avec laquelle vous établissez une liaison. Les deux bibliothèques refactorisées sont Universal CRT, en particulier ucrtbase.dll ou ucrtbase.lib, ucrtbased.dll ou ucrtbased.lib, et la bibliothèque runtime VC, libvcruntime.lib, vcruntime*version*.dll, libvcruntimed.lib et vcruntimed*version*.dll. La *version* dans Visual Studio 2015 et Visual Studio 2017 est 140. Consultez [CRT Library Features](../c-runtime-library/crt-library-features.md).
+   La bibliothèque CRT a été refactorisée en deux fichiers binaires différents, la bibliothèque Universal CRT (ucrtbase), qui contient la plupart des fonctionnalités standard, et une bibliothèque runtime VC (vcruntime). La bibliothèque vcruntime contient les fonctionnalités associées au compilateur, telles que la gestion des exceptions, et les intrinsèques. Si vous utilisez les paramètres de projet par défaut, cette modification n’a aucune incidence, car l’éditeur de liens utilise automatiquement les nouvelles bibliothèques par défaut. Si vous avez défini, dans l’**éditeur de liens**, la propriété **Ignorer toutes les bibliothèques par défaut** du projet sur **Oui**, ou si vous utilisez l’option `/NODEFAULTLIB` de l’éditeur de liens sur la ligne de commande, vous devez mettre à jour votre liste de bibliothèques (dans la propriété **Dépendances supplémentaires**) pour inclure les nouvelles bibliothèques refactorisées. Remplacez l'ancienne bibliothèque CRT (libcmt.lib, libcmtd.lib, msvcrt.lib, msvcrtd.lib) par les bibliothèques refactorisées équivalentes. Pour chacune des deux bibliothèques refactorisées, il existe des versions statiques (.lib) et dynamiques (.dll), ainsi que des versions release (sans suffixe) et debug (avec le suffixe « d »). Les versions dynamiques ont une bibliothèque d'importation avec laquelle vous établissez une liaison. Les deux bibliothèques refactorisées sont Universal CRT, en particulier ucrtbase.dll ou ucrtbase.lib, ucrtbased.dll ou ucrtbased.lib, et la bibliothèque runtime VC, libvcruntime.lib, vcruntime*version*.dll, libvcruntimed.lib et vcruntimed*version*.dll. La *version* dans Visual Studio 2015 et Visual Studio 2017 est 140. Consultez [Fonctionnalités de bibliothèque CRT](../c-runtime-library/crt-library-features.md).
 
 #### <a name="localeh"></a>\<locale.h>
 
@@ -257,7 +257,7 @@ En outre, les améliorations suivies de la conformité du compilateur peuvent pa
 
 - **smallheap**
 
-   L’option de lien `smallheap` a été supprimée. Consultez [Link Options](../c-runtime-library/link-options.md).
+   L’option de lien `smallheap` a été supprimée. Consultez [Options de lien](../c-runtime-library/link-options.md).
 
 #### <a name="stringh"></a>\<string.h>
 
@@ -2173,7 +2173,7 @@ Même si ces différences peuvent affecter votre code source ou d’autres artef
     warning C4720: unreachable code
     ```
 
-   Dans de nombreux cas, cet avertissement peut être émis uniquement lors de la compilation avec les optimisations activées, car les optimisations peuvent intégrer plus d’appels de fonction, supprimer le code redondant ou permettre de déterminer que du code est inaccessible. Nous avons constaté que de nouvelles instances de l’avertissement C4720 étaient fréquentes dans les blocs **try/catch**, en particulier en cas d’utilisation de [std::find](assetId:///std::find?qualifyHint=False&autoUpgrade=True).
+   Dans de nombreux cas, cet avertissement peut être émis uniquement lors de la compilation avec les optimisations activées, car les optimisations peuvent intégrer plus d’appels de fonction, supprimer le code redondant ou permettre de déterminer que du code est inaccessible. Nous avons constaté que de nouvelles instances de l’avertissement C4720 étaient fréquentes dans les blocs **try/catch**, en particulier en cas d’utilisation de [std::find](assetId:///std::find?qualifyHint=False&autoUpgrade=True).
 
    Exemple (avant)
 
@@ -2467,7 +2467,7 @@ Même si ces différences peuvent affecter votre code source ou d’autres artef
 
 - **std::is_convertable détecte désormais l’auto-affectation** (bibliothèque standard)
 
-   Les versions précédentes du trait de type `std::is_convertable` ne détectent pas correctement l’auto-affectation d’un type de classe quand son constructeur de copie est supprimé ou privé. Désormais, `std::is_convertable<>::value` a la valeur **false** (ce qui est correct) quand il est appliqué à un type de classe ayant un constructeur de copie supprimé ou privé.
+   Les versions précédentes du trait de type `std::is_convertable` ne détectent pas correctement l’auto-affectation d’un type de classe quand son constructeur de copie est supprimé ou privé. Désormais, `std::is_convertable<>::value` a la valeur **false** (ce qui est correct) quand il est appliqué à un type de classe avec un constructeur de copie supprimé ou privé.
 
    Aucun diagnostic du compilateur n’est associé à cette modification.
 
@@ -3040,7 +3040,7 @@ L’énumération `SchedulerType` d’`UmsThreadDefault` est dépréciée. La sp
 
 ### <a name="standard-library"></a>Bibliothèque standard
 
-- En raison d’un changement cassant entre les normes C++98/03 et C++11, l’utilisation d’arguments template explicites pour appeler `make_pair()` (comme dans `make_pair<int, int>(x, y)`) ne permet généralement pas la compilation en Visual C++ dans Visual Studio 2012. La solution consiste à toujours appeler `make_pair() ` sans arguments template explicites, comme dans `make_pair(x, y)`. L’indication d’arguments template explicites va à l’encontre de l’objectif de la fonction. Si vous avez besoin d’un contrôle précis sur le type résultant, utilisez `pair` au lieu de `make_pair`, comme dans `pair<short, short>(int1, int2)`.
+- En raison d’un changement cassant entre les normes C++98/03 et C++11, l’utilisation d’arguments template explicites pour appeler `make_pair()` (comme dans `make_pair<int, int>(x, y)`) ne permet généralement pas la compilation en Visual C++ dans Visual Studio 2012. La solution consiste à toujours appeler `make_pair()` sans arguments template explicites, comme dans `make_pair(x, y)`. L’indication d’arguments template explicites va à l’encontre de l’objectif de la fonction. Si vous avez besoin d’un contrôle précis sur le type résultant, utilisez `pair` au lieu de `make_pair`, comme dans `pair<short, short>(int1, int2)`.
 
 - Autre modification avec rupture entre les normes C++ 98/03 et C++ 11 : quand un est implicitement convertible en B et que B est implicitement convertible en C, mais A n’est pas implicitement convertible en C, C++ 98/03 et Visual Studio 2010 autorisé `pair<A, X>` être converti (implicitement ou explicitement) en `pair<C, X>`. (L’autre type, X, n’est pas intéressant ici et n’est pas spécifique au premier type de la paire.) Le C++ compilateur dans Visual Studio 2012 détecte qu’un n’est pas implicitement convertible en C, et supprime la conversion de paire de la résolution de surcharge. Ce changement est positif dans de nombreux scénarios. Par exemple, la surcharge de `func(const pair<int, int>&)` et `func(const pair<string, string>&)`, et l’appel de `func()` avec `pair<const char *, const char *>`, permettent maintenant la compilation. Toutefois, cette modification altère le code qui reposait sur des conversions de paires agressives. Ce code peut généralement être corrigé en effectuant une partie de la conversion explicitement, par exemple, en passant `make_pair(static_cast<B>(a), x)` à une fonction qui attend `pair<C, X>`.
 

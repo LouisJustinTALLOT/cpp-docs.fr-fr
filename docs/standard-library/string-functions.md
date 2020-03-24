@@ -28,12 +28,12 @@ helpviewer_keywords:
 - std::swap [C++]
 - std::to_string [C++]
 - std::to_wstring [C++]
-ms.openlocfilehash: 828aeb975178850f5c0a7ea3b7e982bbadd6e7c4
-ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
+ms.openlocfilehash: 459e46f6aa144c591173a159c282658b120b1af3
+ms.sourcegitcommit: eff68e4e82be292a5664616b16a526df3e9d1cda
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/16/2020
-ms.locfileid: "79419489"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80150601"
 ---
 # <a name="ltstringgt-functions"></a>&lt;string&gt;, fonctions
 
@@ -44,7 +44,7 @@ ms.locfileid: "79419489"
 |[stoll](#stoll)|[stoul](#stoul)|[stoull](#stoull)|
 |[swap](#swap)|[to_string](#to_string)|[to_wstring](#to_wstring)|
 
-## <a name="getline"></a>  getline
+## <a name="getline"></a><a name="getline"></a>  getline
 
 Extrait des chaînes du flux d'entrée, ligne par ligne.
 
@@ -156,7 +156,7 @@ int main()
 }
 ```
 
-## <a name="stod"></a>  stod
+## <a name="stod"></a><a name="stod"></a>  stod
 
 Convertit une séquence de caractères en valeur **double**.
 
@@ -184,9 +184,9 @@ Valeur de **type double** .
 
 ### <a name="remarks"></a>Notes
 
-La fonction convertit la séquence d’éléments de *Str* en valeur `val` de type **double** comme si elle appelle `strtod( str.c_str(), _Eptr)`, où `_Eptr` est un objet interne à la fonction. Si ` str.c_str() == *_Eptr`, elle lève un objet de type `invalid_argument`. Si cet appel définit `errno`, elle lève un objet de type `out_of_range`. Sinon, si *idx* n’est pas un pointeur null, la fonction stocke `*_Eptr -  str.c_str()` dans `*idx` et retourne `val`.
+La fonction convertit la séquence d’éléments de *Str* en valeur `val` de type **double** comme si elle appelle `strtod( str.c_str(), _Eptr)`, où `_Eptr` est un objet interne à la fonction. Si `str.c_str() == *_Eptr`, elle lève un objet de type `invalid_argument`. Si cet appel définit `errno`, elle lève un objet de type `out_of_range`. Sinon, si *idx* n’est pas un pointeur null, la fonction stocke `*_Eptr -  str.c_str()` dans `*idx` et retourne `val`.
 
-## <a name="stof"></a>  stof
+## <a name="stof"></a><a name="stof"></a>  stof
 
 Convertit une séquence de caractères en type flottant.
 
@@ -213,9 +213,9 @@ Valeur flottante.
 
 ### <a name="remarks"></a>Notes
 
-La fonction convertit la séquence d’éléments de *Str* en valeur `val` de type **float** comme si elle appelle `strtof( str.c_str(), _Eptr)`, où `_Eptr` est un objet interne à la fonction. Si ` str.c_str() == *_Eptr`, elle lève un objet de type `invalid_argument`. Si cet appel définit `errno`, elle lève un objet de type `out_of_range`. Sinon, si *idx* n’est pas un pointeur null, la fonction stocke `*_Eptr -  str.c_str()` dans `*idx` et retourne `val`.
+La fonction convertit la séquence d’éléments de *Str* en valeur `val` de type **float** comme si elle appelle `strtof( str.c_str(), _Eptr)`, où `_Eptr` est un objet interne à la fonction. Si `str.c_str() == *_Eptr`, elle lève un objet de type `invalid_argument`. Si cet appel définit `errno`, elle lève un objet de type `out_of_range`. Sinon, si *idx* n’est pas un pointeur null, la fonction stocke `*_Eptr -  str.c_str()` dans `*idx` et retourne `val`.
 
-## <a name="stoi"></a>  stoi
+## <a name="stoi"></a><a name="stoi"></a>  stoi
 
 Convertit une séquence de caractères en entier.
 
@@ -251,7 +251,7 @@ La fonction `stoi` convertit la séquence de caractères de *Str* en une valeur 
 
 Si `str.c_str() == *_Eptr`, `stoi` lève un objet de type `invalid_argument`. Si un tel appel définit `errno`, ou si la valeur retournée ne peut pas être représentée en tant qu’objet de type **int**, elle lève un objet de type `out_of_range`. Sinon, si *idx* n’est pas un pointeur null, la fonction stocke `*_Eptr - str.c_str()` dans `*idx`.
 
-## <a name="stol"></a>  stol
+## <a name="stol"></a><a name="stol"></a>  stol
 
 Convertit une séquence de caractères en **long**.
 
@@ -281,9 +281,9 @@ Valeur entière de type long.
 
 ### <a name="remarks"></a>Notes
 
-La fonction convertit la séquence d’éléments de *Str* en valeur `val` de type **long** comme si elle appelle `strtol( str.c_str(), _Eptr, idx)`, où `_Eptr` est un objet interne à la fonction. Si ` str.c_str() == *_Eptr`, elle lève un objet de type `invalid_argument`. Si cet appel définit `errno`, elle lève un objet de type `out_of_range`. Sinon, si *idx* n’est pas un pointeur null, la fonction stocke `*_Eptr -  str.c_str()` dans `*idx` et retourne `val`.
+La fonction convertit la séquence d’éléments de *Str* en valeur `val` de type **long** comme si elle appelle `strtol( str.c_str(), _Eptr, idx)`, où `_Eptr` est un objet interne à la fonction. Si `str.c_str() == *_Eptr`, elle lève un objet de type `invalid_argument`. Si cet appel définit `errno`, elle lève un objet de type `out_of_range`. Sinon, si *idx* n’est pas un pointeur null, la fonction stocke `*_Eptr -  str.c_str()` dans `*idx` et retourne `val`.
 
-## <a name="stold"></a>  stold
+## <a name="stold"></a><a name="stold"></a>  stold
 
 Convertit une séquence de caractères en **long double**.
 
@@ -310,9 +310,9 @@ Valeur de **type long double** .
 
 ### <a name="remarks"></a>Notes
 
-La fonction convertit la séquence d’éléments de *Str* en valeur `val` de type **long double** comme si elle appelle `strtold( str.c_str(), _Eptr)`, où `_Eptr` est un objet interne à la fonction. Si ` str.c_str() == *_Eptr`, elle lève un objet de type `invalid_argument`. Si cet appel définit `errno`, elle lève un objet de type `out_of_range`. Sinon, si *idx* n’est pas un pointeur null, la fonction stocke `*_Eptr -  str.c_str()` dans `*idx` et retourne `val`.
+La fonction convertit la séquence d’éléments de *Str* en valeur `val` de type **long double** comme si elle appelle `strtold( str.c_str(), _Eptr)`, où `_Eptr` est un objet interne à la fonction. Si `str.c_str() == *_Eptr`, elle lève un objet de type `invalid_argument`. Si cet appel définit `errno`, elle lève un objet de type `out_of_range`. Sinon, si *idx* n’est pas un pointeur null, la fonction stocke `*_Eptr -  str.c_str()` dans `*idx` et retourne `val`.
 
-## <a name="stoll"></a>  stoll
+## <a name="stoll"></a><a name="stoll"></a>  stoll
 
 Convertit une séquence de caractères en **longue**longue.
 
@@ -342,9 +342,9 @@ Valeur **de type long long.**
 
 ### <a name="remarks"></a>Notes
 
-La fonction convertit la séquence d’éléments de *Str* en valeur `val` de type **long** comme si elle appelle `strtoll( str.c_str(), _Eptr, idx)`, où `_Eptr` est un objet interne à la fonction. Si ` str.c_str() == *_Eptr`, elle lève un objet de type `invalid_argument`. Si cet appel définit `errno`, elle lève un objet de type `out_of_range`. Sinon, si *idx* n’est pas un pointeur null, la fonction stocke `*_Eptr -  str.c_str()` dans `*idx` et retourne `val`.
+La fonction convertit la séquence d’éléments de *Str* en valeur `val` de type **long** comme si elle appelle `strtoll( str.c_str(), _Eptr, idx)`, où `_Eptr` est un objet interne à la fonction. Si `str.c_str() == *_Eptr`, elle lève un objet de type `invalid_argument`. Si cet appel définit `errno`, elle lève un objet de type `out_of_range`. Sinon, si *idx* n’est pas un pointeur null, la fonction stocke `*_Eptr -  str.c_str()` dans `*idx` et retourne `val`.
 
-## <a name="stoul"></a>  stoul
+## <a name="stoul"></a><a name="stoul"></a>  stoul
 
 Convertit une séquence de caractères en type long non signé.
 
@@ -374,9 +374,9 @@ Valeur entière de type long non signé.
 
 ### <a name="remarks"></a>Notes
 
-La fonction convertit la séquence d’éléments de *Str* en valeur `val` de type **unsigned long** comme si elle appelle `strtoul( str.c_str(), _Eptr, idx)`, où `_Eptr` est un objet interne à la fonction. Si ` str.c_str() == *_Eptr`, elle lève un objet de type `invalid_argument`. Si cet appel définit `errno`, elle lève un objet de type `out_of_range`. Sinon, si *idx* n’est pas un pointeur null, la fonction stocke `*_Eptr -  str.c_str()` dans `*idx` et retourne `val`.
+La fonction convertit la séquence d’éléments de *Str* en valeur `val` de type **unsigned long** comme si elle appelle `strtoul( str.c_str(), _Eptr, idx)`, où `_Eptr` est un objet interne à la fonction. Si `str.c_str() == *_Eptr`, elle lève un objet de type `invalid_argument`. Si cet appel définit `errno`, elle lève un objet de type `out_of_range`. Sinon, si *idx* n’est pas un pointeur null, la fonction stocke `*_Eptr -  str.c_str()` dans `*idx` et retourne `val`.
 
-## <a name="stoull"></a>  stoull
+## <a name="stoull"></a><a name="stoull"></a>  stoull
 
 Convertit une séquence de caractères en une valeur **unsigned long long**.
 
@@ -406,9 +406,9 @@ Valeur long long **non signée** .
 
 ### <a name="remarks"></a>Notes
 
-La fonction convertit la séquence d’éléments de *Str* en valeur `val` de type **unsigned long** comme si elle appelle `strtoull( str.c_str(), _Eptr, idx)`, où `_Eptr` est un objet interne à la fonction. Si ` str.c_str() == *_Eptr`, elle lève un objet de type `invalid_argument`. Si cet appel définit `errno`, elle lève un objet de type `out_of_range`. Sinon, si *idx* n’est pas un pointeur null, la fonction stocke `*_Eptr -  str.c_str()` dans `*idx` et retourne `val`.
+La fonction convertit la séquence d’éléments de *Str* en valeur `val` de type **unsigned long** comme si elle appelle `strtoull( str.c_str(), _Eptr, idx)`, où `_Eptr` est un objet interne à la fonction. Si `str.c_str() == *_Eptr`, elle lève un objet de type `invalid_argument`. Si cet appel définit `errno`, elle lève un objet de type `out_of_range`. Sinon, si *idx* n’est pas un pointeur null, la fonction stocke `*_Eptr -  str.c_str()` dans `*idx` et retourne `val`.
 
-## <a name="swap"></a>  swap
+## <a name="swap"></a><a name="swap"></a>  swap
 
 Échange les tableaux de caractères de deux chaînes.
 
@@ -464,7 +464,7 @@ The basic_string s1 = Tweedledum.
 The basic_string s2 = Tweedledee.
 ```
 
-## <a name="to_string"></a>  to_string
+## <a name="to_string"></a><a name="to_string"></a>  to_string
 
 Convertit une valeur en `string`.
 
@@ -512,7 +512,7 @@ La fonction convertit la valeur *Val* en une séquence d’éléments stockés d
 
 La fonction retourne `string(Buf)`.
 
-## <a name="to_wstring"></a>  to_wstring
+## <a name="to_wstring"></a><a name="to_wstring"></a>  to_wstring
 
 Convertit une valeur en une chaîne étendue.
 
