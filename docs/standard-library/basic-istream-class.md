@@ -34,12 +34,12 @@ helpviewer_keywords:
 - std::basic_istream [C++], tellg
 - std::basic_istream [C++], unget
 ms.assetid: c7c27111-de6d-42b4-95a3-a7e65259bf17
-ms.openlocfilehash: 68c7f7ffa9c32c16654e57c8249348d74cc83a5b
-ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
+ms.openlocfilehash: d614e00657de82b014af94df161775790ae417d3
+ms.sourcegitcommit: eff68e4e82be292a5664616b16a526df3e9d1cda
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/16/2020
-ms.locfileid: "79416920"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80150777"
 ---
 # <a name="basic_istream-class"></a>basic_istream, classe
 
@@ -169,7 +169,7 @@ Consultez l’exemple de [basic_ifstream, classe](../standard-library/basic-ifst
 
 **Espace de noms :** std
 
-## <a name="basic_istream"></a>  basic_istream::basic_istream
+## <a name="basic_istreambasic_istream"></a><a name="basic_istream"></a>  basic_istream::basic_istream
 
 Construit un objet de type `basic_istream`.
 
@@ -202,7 +202,7 @@ Le deuxième constructeur initialise la classe de base en appelant `move(right)`
 
 Consultez l’exemple de [basic_ifstream::basic_ifstream](../standard-library/basic-ifstream-class.md#basic_ifstream) pour en savoir plus sur les flux d’entrée.
 
-## <a name="gcount"></a>  basic_istream::gcount
+## <a name="basic_istreamgcount"></a><a name="gcount"></a>  basic_istream::gcount
 
 Retourne le nombre de caractères lus au cours de la dernière entrée non mise en forme.
 
@@ -249,7 +249,7 @@ Type the letter 'a': a
 1
 ```
 
-## <a name="get"></a>  basic_istream::get
+## <a name="basic_istreamget"></a><a name="get"></a>  basic_istream::get
 
 Lit un ou plusieurs caractères dans le flux d'entrée.
 
@@ -332,7 +332,7 @@ int main( )
 1111
 ```
 
-## <a name="getline"></a>  basic_istream::getline
+## <a name="basic_istreamgetline"></a><a name="getline"></a>  basic_istream::getline
 
 Obtient une ligne du flux d’entrée.
 
@@ -397,7 +397,7 @@ int main( )
 121
 ```
 
-## <a name="ignore"></a>  basic_istream::ignore
+## <a name="basic_istreamignore"></a><a name="ignore"></a>  basic_istream::ignore
 
 Ignore un certain nombre d'éléments à partir de la position de lecture actuelle.
 
@@ -445,7 +445,7 @@ Type 'abcdef': abcdef
 def
 ```
 
-## <a name="op_gt_gt"></a>  basic\_istream::operator>>
+## <a name="basic_istreamoperator"></a><a name="op_gt_gt"></a>  basic\_istream::operator>>
 
 Appelle une fonction sur le flux d'entrée ou lit les données mises en forme dans le flux d'entrée.
 
@@ -574,7 +574,7 @@ int main( )
 }
 ```
 
-## <a name="op_eq"></a>  basic_istream::operator=
+## <a name="basic_istreamoperator"></a><a name="op_eq"></a>  basic_istream::operator=
 
 Affecte le `basic_istream` du côté droit de l'opérateur à cet objet. Il s’agit d’une assignation de déplacement qui implique une référence `rvalue` qui ne laisse pas de copie.
 
@@ -595,7 +595,7 @@ Retourne __* This__.
 
 L’opérateur membre appelle `swap(right)`.
 
-## <a name="peek"></a>  basic_istream::peek
+## <a name="basic_istreampeek"></a><a name="peek"></a>  basic_istream::peek
 
 Retourne le caractère suivant à lire.
 
@@ -640,7 +640,7 @@ Type 'abcde': abcde
 a abcde
 ```
 
-## <a name="putback"></a>  basic_istream::putback
+## <a name="basic_istreamputback"></a><a name="putback"></a>  basic_istream::putback
 
 Place un caractère spécifié dans le flux.
 
@@ -686,7 +686,7 @@ int main( )
 qwq
 ```
 
-## <a name="read"></a>  basic_istream::read
+## <a name="basic_istreamread"></a><a name="read"></a>  basic_istream::read
 
 Lit un nombre spécifié de caractères dans le flux et les stocke dans un tableau.
 
@@ -747,7 +747,7 @@ Type 'abcde': abcde
 abcde
 ```
 
-## <a name="readsome"></a>  basic_istream::readsome
+## <a name="basic_istreamreadsome"></a><a name="readsome"></a>  basic_istream::readsome
 
 Lit le nombre spécifié de valeurs de caractère.
 
@@ -806,7 +806,7 @@ int main( )
 }
 ```
 
-## <a name="seekg"></a>  basic_istream::seekg
+## <a name="basic_istreamseekg"></a><a name="seekg"></a>  basic_istream::seekg
 
 Déplace la position de lecture dans un flux.
 
@@ -838,7 +838,7 @@ La première fonction membre effectue une recherche absolue, la deuxième foncti
 > [!NOTE]
 > N’utilisez pas la deuxième fonction membre avec des fichiers texte, car la norme C++ ne prend pas en charge les recherches relative dans des fichiers texte.
 
-Si [`fail`](../standard-library/basic-ios-class.md#fail) a la valeur false, la première fonction membre appelle `newpos = `[`rdbuf`](../standard-library/basic-ios-class.md#rdbuf)`->`[`pubseekpos`](../standard-library/basic-streambuf-class.md#pubseekpos)`(pos)`, pour certains `pos_type` objet temporaire `newpos`. Si `fail` a la valeur false, la deuxième fonction appelle `newpos = rdbuf->`[`pubseekoff`](../standard-library/basic-streambuf-class.md#pubseekoff)`( off, way)`. Dans les deux cas, si `(off_type)newpos == (off_type)(-1)` (l’opération de positionnement échoue), la fonction appelle `istr.`[`setstate`](../standard-library/basic-ios-class.md#setstate)`(failbit)`. Les deux fonctions retournent __* This__.
+Si [`fail`](../standard-library/basic-ios-class.md#fail) a la valeur false, la première fonction membre appelle `newpos =` [`rdbuf`](../standard-library/basic-ios-class.md#rdbuf)`->`[`pubseekpos`](../standard-library/basic-streambuf-class.md#pubseekpos)`(pos)`, pour certains `pos_type` objet temporaire `newpos`. Si `fail` a la valeur false, la deuxième fonction appelle `newpos = rdbuf->`[`pubseekoff`](../standard-library/basic-streambuf-class.md#pubseekoff)`( off, way)`. Dans les deux cas, si `(off_type)newpos == (off_type)(-1)` (l’opération de positionnement échoue), la fonction appelle `istr.`[`setstate`](../standard-library/basic-ios-class.md#setstate)`(failbit)`. Les deux fonctions retournent __* This__.
 
 Si [`fail`](../standard-library/basic-ios-class.md#fail) a la valeur true, les fonctions membres ne font rien.
 
@@ -863,7 +863,7 @@ int main ( )
 }
 ```
 
-## <a name="sentry"></a>  basic_istream::sentry
+## <a name="basic_istreamsentry"></a><a name="sentry"></a>  basic_istream::sentry
 
 La classe imbriquée décrit un objet dont la déclaration structure les fonctions d’entrée avec et sans mise en forme.
 
@@ -883,11 +883,11 @@ Si `_Istr.`[`good`](../standard-library/basic-ios-class.md#good) a la valeur tru
 
 - Appelle `_Istr.`[`tie`](../standard-library/basic-ios-class.md#tie)`->`[`flush`](../standard-library/basic-ostream-class.md#flush) si `_Istr.tie` n’est pas un pointeur null.
 
-- Appelle efficacement [`ws`](../standard-library/istream-functions.md#ws)`(_Istr)` si `_Istr.`[`flags`](../standard-library/ios-base-class.md#flags)` & `[`skipws`est différent](../standard-library/ios-functions.md#skipws) de zéro.
+- Appelle efficacement [`ws`](../standard-library/istream-functions.md#ws)`(_Istr)` si `_Istr.`[`flags`](../standard-library/ios-base-class.md#flags) `&` [`skipws`est différent](../standard-library/ios-functions.md#skipws) de zéro.
 
 Si, après une telle préparation, `_Istr.good` a la valeur false, le constructeur appelle `_Istr.`[`setstate`](../standard-library/basic-ios-class.md#setstate)`(failbit)`. Dans tous les cas, le constructeur stocke la valeur retournée par `_Istr.good` dans `status`. Un appel ultérieur à `operator bool` remet cette valeur stockée.
 
-## <a name="swap"></a>  basic_istream::swap
+## <a name="basic_istreamswap"></a><a name="swap"></a>  basic_istream::swap
 
 Échange le contenu de deux objets `basic_istream`.
 
@@ -904,7 +904,7 @@ Référence lvalue à un objet `basic_istream`.
 
 La fonction membre appelle [`basic_ios::swap`](../standard-library/basic-ios-class.md#swap)`(right)`. Elle échange également le nombre d’extractions avec le nombre d’extractions pour *Right*.
 
-## <a name="sync"></a>  basic_istream::sync
+## <a name="basic_istreamsync"></a><a name="sync"></a>  basic_istream::sync
 
 Synchronise le périphérique d’entrée associé au flux avec la mémoire tampon du flux.
 
@@ -916,7 +916,7 @@ int sync();
 
 Si [`rdbuf`](../standard-library/basic-ios-class.md#rdbuf) est un pointeur null, la fonction retourne-1. Dans le cas contraire, il appelle `rdbuf->`[`pubsync`](../standard-library/basic-streambuf-class.md#pubsync). Si cet appel retourne-1, la fonction appelle [`setstate`](../standard-library/basic-ios-class.md#setstate)`(badbit)` et retourne-1. Sinon, la fonction retourne zéro.
 
-## <a name="tellg"></a>  basic_istream::tellg
+## <a name="basic_istreamtellg"></a><a name="tellg"></a>  basic_istream::tellg
 
 Indique la position de lecture actuelle dans le flux.
 
@@ -958,7 +958,7 @@ int main()
 }
 ```
 
-## <a name="unget"></a>  basic_istream::unget
+## <a name="basic_istreamunget"></a><a name="unget"></a>  basic_istream::unget
 
 Replace le dernier caractère lu dans le flux.
 
