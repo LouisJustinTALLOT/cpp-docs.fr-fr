@@ -10,29 +10,29 @@ helpviewer_keywords:
 - rowsets, event notifications
 - OLE DB providers, notifications
 ms.assetid: 305a1103-0c87-40c8-94bc-7fbbdd52ae32
-ms.openlocfilehash: b35c1d3d6ff7d5d74493e843575f7448c4df8d8f
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 4b630a9728770a5e35e6d6300cf465b90238350c
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62283797"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80209777"
 ---
 # <a name="receiving-notifications"></a>Réception des notifications
 
-OLE DB fournit des interfaces pour recevoir des notifications lorsque des événements se produisent. Ceux-ci sont décrits dans [Notifications de l’objet OLE DB](/previous-versions/windows/desktop/ms725406(v=vs.85)) dans le **de référence du programmeur OLE DB**. Le programme d’installation de ces événements utilise le mécanisme de point de connexion COM standard. Par exemple, un objet ATL qui souhaite récupérer des événements via `IRowsetNotify` implémente le `IRowsetNotify` interface en ajoutant `IRowsetNotify` à la liste de classe dérivée et en l’exposant via une macro COM_INTERFACE_ENTRY.
+OLE DB fournit des interfaces pour recevoir des notifications lorsque des événements se produisent. Celles-ci sont décrites dans [OLE DB les notifications d’objets](/previous-versions/windows/desktop/ms725406(v=vs.85)) dans le **Guide de référence du programmeur OLE DB**. La configuration de ces événements utilise le mécanisme de point de connexion COM standard. Par exemple, un objet ATL qui souhaite récupérer des événements via `IRowsetNotify` implémente l’interface `IRowsetNotify` en ajoutant `IRowsetNotify` à la liste dérivée de la classe et en l’exposant via une macro COM_INTERFACE_ENTRY.
 
-`IRowsetNotify` a trois méthodes, qui peuvent être appelées à différents moments. Si vous souhaitez répondre à une seule de ces méthodes, vous pouvez utiliser la [IRowsetNotifyImpl](../../data/oledb/irowsetnotifyimpl-class.md) (classe), qui retourne E_NOTIMPL pour les méthodes qui ne vous intéressent pas.
+`IRowsetNotify` a trois méthodes, qui peuvent être appelées à différents moments. Si vous souhaitez répondre à une seule de ces méthodes, vous pouvez utiliser la classe [IRowsetNotifyImpl](../../data/oledb/irowsetnotifyimpl-class.md) , qui retourne E_NOTIMPL pour les méthodes qui ne vous intéressent pas.
 
-Lorsque vous créez l’ensemble de lignes, vous devez indiquer au fournisseur que vous souhaitez l’objet d’ensemble de lignes retourné pour prendre en charge `IConnectionPointContainer`, qui est nécessaire pour configurer la notification.
+Lorsque vous créez l’ensemble de lignes, vous devez indiquer au fournisseur que l’objet d’ensemble de lignes retourné doit prendre en charge `IConnectionPointContainer`, ce qui est nécessaire pour configurer la notification.
 
-Le code suivant montre comment ouvrir l’ensemble de lignes à partir d’un objet ATL et utiliser le `AtlAdvise` (fonction) pour configurer le récepteur de notification. `AtlAdvise` Retourne un cookie qui est utilisé lorsque vous appelez `AtlUnadvise`.
+Le code suivant montre comment ouvrir l’ensemble de lignes à partir d’un objet ATL et utiliser la fonction `AtlAdvise` pour configurer le récepteur de notifications. `AtlAdvise` retourne un cookie qui est utilisé lorsque vous appelez `AtlUnadvise`.
 
 ```cpp
 CDBPropSet propset(DBPROPSET_ROWSET);
 propset.AddProperty(DBPROP_IConnectionPointContainer, true);
 ```
 
-Ensuite, il est utilisé par le code suivant :
+Ensuite, utilisé par le code suivant :
 
 ```cpp
 product.Open(session, _T("Products"), &propset);

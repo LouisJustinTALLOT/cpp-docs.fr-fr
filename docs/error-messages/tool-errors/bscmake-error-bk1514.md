@@ -6,21 +6,21 @@ f1_keywords:
 helpviewer_keywords:
 - BK1514
 ms.assetid: 7c7e2504-a490-44ab-bb1f-47385ee2f4b0
-ms.openlocfilehash: 410c24b67e76bb2d412e1594abbb4a668c79aa1e
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 14f74bba69db5bf3e02aecedd4540ef8a90d576b
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62324478"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80197624"
 ---
 # <a name="bscmake-error-bk1514"></a>Erreur BSCMAKE BK1514
 
-tous les. Fichiers SBR ont été tronqués, aucun trouvé dans le nom de fichier
+tous les. Fichiers SBR tronqués, aucun trouvé dans le nom de fichier
 
-Aucun des fichiers .sbr spécifiés pour une mise à jour faisaient partie du fichier d’informations (.bsc) Parcourir d’origine. Pour rechercher les noms des fichiers .sbr qui a provoqué cette erreur, lisez le [BK4502](../../error-messages/tool-errors/bscmake-warning-bk4502.md) avertissements qui la précèdent.
+Aucun des fichiers. SBR spécifiés pour une mise à jour ne fait partie du fichier d’informations de consultation d’origine (. bsc). Pour rechercher les noms des fichiers. sbr qui ont provoqué cette erreur, lisez les avertissements [BK4502](../../error-messages/tool-errors/bscmake-warning-bk4502.md) qui le précèdent.
 
 ### <a name="to-fix-by-checking-the-following-possible-causes"></a>Pour corriger en vérifiant les causes possibles suivantes
 
-1. Nom de fichier incorrect spécifié pour .sbr ou .bsc.
+1. Nom de fichier incorrect spécifié pour le fichier. SBR ou. bsc.
 
-1. Fichier .bsc endommagé nécessitant BSCMAKE pour le régénérer.
+1. Fichier. bsc endommagé requis BSCMAKE pour le régénérer.

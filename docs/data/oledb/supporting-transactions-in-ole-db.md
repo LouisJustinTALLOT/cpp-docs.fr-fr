@@ -9,50 +9,50 @@ helpviewer_keywords:
 - databases [C++], transactions
 - distributed transactions [C++]
 ms.assetid: 3d72e583-ad38-42ff-8f11-e2166d60a5a7
-ms.openlocfilehash: 3c71200e39641a69443599e0445f89f469aceeda
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: e7ec4f69b4bba497446c94afb94cb5a1d648f7c7
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62389266"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80209540"
 ---
 # <a name="supporting-transactions-in-ole-db"></a>Prise en charge des transactions dans OLE DB
 
-Un [transaction](../../data/transactions-mfc-data-access.md) consiste à regrouper ou du lot, une série de mises à jour à une source de données afin que toutes réussissent et sont validées en même temps ou (si l’une d’elles échoue), aucun n’est validée et toute la transaction est restaurée. Ce processus garantit l’intégrité du résultat sur la source de données.
+Une [transaction](../../data/transactions-mfc-data-access.md) est un moyen de regrouper ou de traiter par lot une série de mises à jour d’une source de données de sorte que toutes les opérations réussissent et soient validées simultanément ou (si l’une d’entre elles échoue), aucune n’est validée et la totalité de la transaction est restaurée. Ce processus garantit l’intégrité du résultat sur la source de données.
 
 OLE DB prend en charge les transactions avec les trois méthodes suivantes :
 
-- [ITransactionLocal::StartTransaction](/previous-versions/windows/desktop/ms709786(v=vs.85))
+- [ITransactionLocal :: StartTransaction](/previous-versions/windows/desktop/ms709786(v=vs.85))
 
-- [ITransaction::Commit](/previous-versions/windows/desktop/ms713008(v=vs.85))
+- [ITransaction :: Commit](/previous-versions/windows/desktop/ms713008(v=vs.85))
 
-- [ITransaction::Abort](/previous-versions/windows/desktop/ms709833(v=vs.85))
+- [ITransaction :: Abort](/previous-versions/windows/desktop/ms709833(v=vs.85))
 
-## <a name="relationship-of-sessions-and-transactions"></a>Relations des Sessions et Transactions
+## <a name="relationship-of-sessions-and-transactions"></a>Relation entre les sessions et les transactions
 
-Un objet de source de données unique peut créer un ou plusieurs objets de session, chacun d’eux peut être à l’intérieur ou en dehors de l’étendue d’une transaction à un moment donné.
+Un objet de source de données unique peut créer un ou plusieurs objets de session, chacun pouvant être à l’intérieur ou à l’extérieur de l’étendue d’une transaction à un moment donné.
 
-Quand une session n’entre pas une transaction, tout le travail effectué au sein de cette session sur le magasin de données est immédiatement validé sur chaque appel de méthode. (Cela est parfois appelé mode de validation automatique ou implicite.)
+Lorsqu’une session n’entre pas dans une transaction, tout le travail effectué dans cette session sur le magasin de données est immédiatement validé pour chaque appel de méthode. (Parfois appelé mode de validation automatique ou mode implicite).
 
-Lorsqu’une session entre une transaction, les tout le travail effectué au sein de cette session sur le magasin de données fait partie de cette transaction et soit validé ou abandonné comme une seule unité. (Cela est parfois appelé mode de validation manuelle.)
+Lorsqu’une session entre dans une transaction, tout le travail effectué dans cette session sur le magasin de données fait partie de cette transaction et est validé ou abandonné en tant qu’unité unique. (Cette opération est parfois appelée mode de validation manuelle).
 
-Prise en charge de la transaction est spécifique au fournisseur. Si le fournisseur que vous utilisez prend en charge les transactions, un objet de session qui prend en charge `ITransaction` et `ITransactionLocal` pouvez entrer une transaction (non imbriqué). La classe de modèles OLE DB [CSession](../../data/oledb/csession-class.md) prend en charge ces interfaces et est la méthode recommandée pour implémenter la prise en charge des transactions dans Visual C++.
+La prise en charge des transactions est spécifique au fournisseur. Si le fournisseur que vous utilisez prend en charge les transactions, un objet de session qui prend en charge `ITransaction` et `ITransactionLocal` peut entrer une transaction (non imbriquée). La classe de modèles OLE DB [CSession](../../data/oledb/csession-class.md) prend en charge ces interfaces et constitue la méthode recommandée pour implémenter C++la prise en charge des transactions dans Visual.
 
-## <a name="starting-and-ending-the-transaction"></a>Début et fin de la Transaction
+## <a name="starting-and-ending-the-transaction"></a>Démarrage et fin de la transaction
 
-Vous appelez le `StartTransaction`, `Commit`, et `Abort` méthodes dans l’objet d’ensemble de lignes dans le consommateur.
+Vous appelez les méthodes `StartTransaction`, `Commit`et `Abort` dans l’objet rowset dans le consommateur.
 
-Appel `ITransactionLocal::StartTransaction` démarre une nouvelle transaction locale. Lorsque vous démarrez la transaction, toutes les modifications mandatées par les opérations ultérieures ne sont pas appliquées au magasin de données jusqu'à ce que vous validez la transaction.
+L’appel de `ITransactionLocal::StartTransaction` démarre une nouvelle transaction locale. Lorsque vous démarrez la transaction, toutes les modifications imposées par les opérations ultérieures ne sont pas appliquées au magasin de données tant que vous n’avez pas validé la transaction.
 
-Appel `ITransaction::Commit` ou `ITransaction::Abort` met fin à la transaction. `Commit` toutes les modifications dans l’étendue de la transaction à appliquer au magasin de données. `Abort` causes de toutes les modifications dans l’étendue de la transaction doit être annulée et le magasin de données est laissé dans un état, il avaient avant le démarrage de la transaction.
+L’appel de `ITransaction::Commit` ou `ITransaction::Abort` met fin à la transaction. `Commit` entraîne l’application de toutes les modifications dans l’étendue de la transaction à la Banque de données. `Abort` entraîne l’annulation de toutes les modifications dans l’étendue de la transaction et la Banque de données reste dans l’État où elle se trouvait avant le démarrage de la transaction.
 
 ## <a name="nested-transactions"></a>Transactions imbriquées
 
-Un [imbriqués transaction](/previous-versions/windows/desktop/ms716985(v=vs.85)) se produit lorsque vous démarrez une nouvelle transaction locale lorsqu’une transaction active existe déjà sur la session. La nouvelle transaction est démarrée en tant que transaction imbriquée sous la transaction en cours. Si le fournisseur ne prend pas en charge les transactions imbriquées, l’appel `StartTransaction` lorsqu’il existe déjà une transaction active dans la session renvoie XACT_E_XTIONEXISTS.
+Une [transaction imbriquée](/previous-versions/windows/desktop/ms716985(v=vs.85)) se produit lorsque vous démarrez une nouvelle transaction locale alors qu’une transaction active existe déjà dans la session. La nouvelle transaction est lancée sous la forme d’une transaction imbriquée sous la transaction en cours. Si le fournisseur ne prend pas en charge les transactions imbriquées, l’appel de `StartTransaction` lorsqu’une transaction est déjà active sur la session retourne XACT_E_XTIONEXISTS.
 
 ## <a name="distributed-transactions"></a>Transactions distribuées
 
-Une transaction distribuée est une transaction qui met à jour des données distribuées ; Autrement dit, les données sur plusieurs systèmes informatiques en réseau. Si vous souhaitez prendre en charge des transactions sur un système distribué, vous devez utiliser le .NET Framework plutôt que la prise en charge des transactions OLE DB.
+Une transaction distribuée est une transaction qui met à jour des données distribuées ; autrement dit, les données de plusieurs systèmes informatiques en réseau. Si vous souhaitez prendre en charge les transactions sur un système distribué, vous devez utiliser le .NET Framework plutôt que la prise en charge des transactions OLE DB.
 
 ## <a name="see-also"></a>Voir aussi
 

@@ -13,12 +13,12 @@ helpviewer_keywords:
 - software exceptions [C++]
 - formats [C++], exception codes
 ms.assetid: be1376c3-c46a-4f52-ad1d-c2362840746a
-ms.openlocfilehash: 7c58ae2e2b6635345a162d11d2b75a9865d37751
-ms.sourcegitcommit: 654aecaeb5d3e3fe6bc926bafd6d5ace0d20a80e
+ms.openlocfilehash: f50d84bd034cc6eeb00dc17cb3b7272a988b6731
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/20/2019
-ms.locfileid: "74246404"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80179131"
 ---
 # <a name="raising-software-exceptions"></a>Déclenchement d'exceptions logicielles
 
@@ -61,7 +61,7 @@ if (lpstr == NULL)
 
 Si vous souhaitez déclencher simplement une exception, vous pouvez définir les trois derniers paramètres à 0. Les trois derniers paramètres sont utiles pour transmettre des informations supplémentaires et définir un indicateur qui empêche les gestionnaires de poursuivre l'exécution. Pour plus d’informations, consultez la fonction [RaiseException](/windows/win32/api/errhandlingapi/nf-errhandlingapi-raiseexception) dans la SDK Windows.
 
-Dans vos filtres de gestion des exceptions, vous pouvez ensuite tester les codes que vous avez définis. Exemple :
+Dans vos filtres de gestion des exceptions, vous pouvez ensuite tester les codes que vous avez définis. Par exemple :
 
 ```cpp
 __try {

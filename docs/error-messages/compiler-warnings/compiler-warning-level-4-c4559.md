@@ -6,24 +6,24 @@ f1_keywords:
 helpviewer_keywords:
 - C4559
 ms.assetid: ed542f60-454d-45cb-85da-987ede61b1ab
-ms.openlocfilehash: afb4fb493c7c3e34ca691720a30d74517b0ab5b7
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 0788824dd4180476d81d9682f99fb95883b8c4f0
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62220871"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80198339"
 ---
 # <a name="compiler-warning-level-4-c4559"></a>Avertissement du compilateur (niveau 4) C4559
 
-> «*fonction*' : redéfinition ; la __declspec gains (fonction) (*modificateur*)
+> '*fonction*' : redéfinition ; la fonction gagne __declspec (*modificateur*)
 
 ## <a name="remarks"></a>Notes
 
-Une fonction a été redéfinie ou redéclarée et la deuxième définition ou déclaration un **__declspec** modificateur (*modificateur*). Cet avertissement possède un caractère informatif. Pour résoudre cet avertissement, supprimez une des définitions.
+Une fonction a été redéfinie ou redéclarée et la deuxième définition ou déclaration a ajouté un modificateur de **__declspec** (*modificateur*). Cet avertissement est à caractère informatif. Pour résoudre cet avertissement, supprimez l’une des définitions.
 
 ## <a name="example"></a>Exemple
 
-L’exemple suivant génère l’erreur C4559 :
+L’exemple suivant génère l’C4559 :
 
 ```cpp
 // C4559.cpp

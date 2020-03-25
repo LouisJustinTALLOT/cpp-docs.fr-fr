@@ -3,12 +3,12 @@ title: classe enum (C++/CLI et C++/CX)
 ms.date: 10/12/2018
 ms.topic: reference
 ms.assetid: 8010fa8c-bad6-45b4-8214-b4db64d7ffe1
-ms.openlocfilehash: da9097a02de08fd1615f5401d08c438c5f64c139
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
-ms.translationtype: HT
+ms.openlocfilehash: 6305d41febfe4d55b2b84062e76ff62c3ea2b18a
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "65516594"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80182134"
 ---
 # <a name="enum-class--ccli-and-ccx"></a>classe enum (C++/CLI et C++/CX)
 
@@ -16,7 +16,7 @@ Déclare une énumération dans la portée espace de noms, qui est un type défi
 
 ## <a name="all-runtimes"></a>Tous les runtimes
 
-### <a name="remarks"></a>Remarques
+### <a name="remarks"></a>Notes
 
 Les langages C++/CX et C++/CLI prennent en charge **public enum class** et **private enum class**, qui sont similaires à la classe C++ standard **enum class**, mais avec l’ajout du spécificateur d’accessibilité. Sous **/clr**, le type C++11 **enum class** est autorisé, mais il génère l’avertissement C4472 qui vise à s’assurer que vous voulez bien le type d’énumération ISO et non le type C++/CX et C++/CLI. Pour plus d’informations sur le mot clé C++ **enum** de la norme ISO, consultez [Énumérations](../cpp/enumerations-cpp.md).
 
@@ -53,11 +53,11 @@ La valeur de chaque énumérateur est une expression constante définie implicit
 *var*<br/>
 (Facultatif) Nom d’une variable du type de l’énumération.
 
-### <a name="remarks"></a>Remarques
+### <a name="remarks"></a>Notes
 
 Pour plus d’informations et d’exemples, consultez [Énumérations](../cppcx/enums-c-cx.md).
 
-Notez que le compilateur émet des messages d’erreur si l’expression constante qui définit la valeur d’un énumérateur ne peut pas être représentée par *underlying-type*.  Cependant, le compilateur ne signale pas d’erreur pour une valeur non appropriée pour le type sous-jacent. Par exemple :
+Notez que le compilateur émet des messages d’erreur si l’expression constante qui définit la valeur d’un énumérateur ne peut pas être représentée par *underlying-type*.  Cependant, le compilateur ne signale pas d’erreur pour une valeur non appropriée pour le type sous-jacent. Par exemple :
 
 - Si *underlying-type* a la valeur numeric et qu’un énumérateur spécifie la valeur maximale pour ce type, la valeur de la prochaine énumération définie implicitement ne peut pas être représentée.
 
@@ -97,7 +97,7 @@ Nom de l’énumération. Les énumérations managées anonymes ne sont pas auto
 *var*<br/>
 (Facultatif) Nom d’une variable du type de l’énumération.
 
-### <a name="remarks"></a>Remarques
+### <a name="remarks"></a>Notes
 
 **enum class** et **enum struct** sont des déclarations équivalentes.
 

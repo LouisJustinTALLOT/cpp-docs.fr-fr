@@ -7,19 +7,19 @@ helpviewer_keywords:
 - CXX0029
 - CAN0029
 ms.assetid: 562b2132-e9cb-4591-a5bf-bc7179a7f40e
-ms.openlocfilehash: 4d6fbeaeb2524fd1e4ef2c8e79846003d916b357
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 205e0e0ceb0cfdadce612dd02819467542185264
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62359850"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80195628"
 ---
 # <a name="expression-evaluator-error-cxx0029"></a>Évaluateur d'expression, erreur CXX0029
 
 pointeur non struct
 
-L’opérateur de sélection de membre (**->**) a été appliqué à une expression qui n’est pas un pointeur vers une structure.
+L’opérateur de sélection de membres ( **->** ) a été appliqué à une expression qui n’est pas un pointeur vers une structure.
 
-Vérifiez que l’expression entière est entre parenthèses correctement, ou effectuer un cast de type de l’expression d’adresse pour le type de pointeur de structure approprié.
+Vérifiez que l’expression entière est correctement placée entre parenthèses, ou tapez effectuez un cast de l’expression d’adresse vers le type de pointeur de structure approprié.
 
 Cette erreur est identique à CAN0029.

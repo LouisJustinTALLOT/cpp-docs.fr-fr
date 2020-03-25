@@ -7,12 +7,12 @@ helpviewer_keywords:
 - mixed-mode applications, intermediate language
 - projects [C++], converting to intermediate language
 ms.assetid: 855f9e3c-4f09-4bfe-8eab-a45f68292be9
-ms.openlocfilehash: 05ece23e6d79fc399085099deebcde0aa4a92c64
-ms.sourcegitcommit: 9d4ffb8e6e0d70520a1e1a77805785878d445b8a
+ms.openlocfilehash: 8b22f3aaf706fa096f6c25ab8e9fdab6dc512cd8
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/20/2019
-ms.locfileid: "70311625"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80208802"
 ---
 # <a name="converting-projects-from-mixed-mode-to-pure-intermediate-language"></a>Conversion de projets du mode mixte en langage intermédiaire pur
 
@@ -27,7 +27,7 @@ Si vous utilisez une version antérieure de l’ensemble d' C++ outils du compil
 
 1. Supprimer les liens vers les [bibliothèques Runtime C](../c-runtime-library/crt-library-features.md) (CRT) :
 
-   1. Dans le fichier. cpp définissant le point d’entrée de votre application, remplacez le point `Main()`d’entrée par. L' `Main()` utilisation de indique que votre projet n’est pas lié au CRT.
+   1. Dans le fichier. cpp définissant le point d’entrée de votre application, remplacez le point d’entrée par `Main()`. L’utilisation de `Main()` indique que votre projet n’est pas lié au CRT.
 
    2. Dans Explorateur de solutions, cliquez avec le bouton droit sur votre projet et sélectionnez **Propriétés** dans le menu contextuel pour ouvrir les pages de propriétés de votre application.
 
@@ -38,14 +38,14 @@ Si vous utilisez une version antérieure de l’ensemble d' C++ outils du compil
       > [!NOTE]
       > Vous n’avez pas besoin de définir cette propriété pour Windows Forms applications, car le champ **sous-système** est défini sur **Windows (/SUBSYSTEM : Windows)** par défaut.
 
-   5. Dans *stdafx. h*, commentez toutes les `#include` instructions. Par exemple, dans les applications console :
+   5. Dans *stdafx. h*, commentez toutes les instructions `#include`. Par exemple, dans les applications console :
 
       ```cpp
       // #include <iostream>
       // #include <tchar.h>
       ```
 
-       \- ou -
+       -ou-
 
        Par exemple, dans les applications Windows Forms :
 
@@ -56,7 +56,7 @@ Si vous utilisez une version antérieure de l’ensemble d' C++ outils du compil
       // #include <tchar.h>
       ```
 
-   6. Pour les applications Windows Forms, dans Form1. cpp, commentez `#include` l’instruction qui fait référence à Windows. h. Par exemple :
+   6. Pour les applications Windows Forms, dans Form1. cpp, commentez l’instruction `#include` qui référence Windows. h. Par exemple :
 
       ```cpp
       // #include <windows.h>
@@ -77,10 +77,10 @@ Si vous utilisez une version antérieure de l’ensemble d' C++ outils du compil
 
    |Structure|Description|
    |---------------|-----------------|
-   |[Boolean](/dotnet/api/system.boolean)|Représente une valeur booléenne.|
+   |[Booléen](/dotnet/api/system.boolean)|Représente une valeur booléenne.|
    |[Byte](/dotnet/api/system.byte)|Représente un entier non signé 8 bits.|
    |[Char](/dotnet/api/system.char)|Représente un caractère Unicode.|
-   |[DateTime](/dotnet/api/system.datetime)|Représente un instant, généralement exprimé sous la forme d'une date et d'une heure.|
+   |[DateTime](/dotnet/api/system.datetime)|Représente un instant, généralement exprimé sous la forme d’une date ou d’une heure.|
    |[Decimal](/dotnet/api/system.decimal)|Représente un nombre décimal.|
    |[Double](/dotnet/api/system.double)|Représente un nombre à virgule flottante double précision.|
    |[Guid](/dotnet/api/system.guid)|Représente un GUID (identificateur global unique).|
@@ -89,10 +89,10 @@ Si vous utilisez une version antérieure de l’ensemble d' C++ outils du compil
    |[Int64](/dotnet/api/system.int64)|Représente un entier signé 64 bits.|
    |[IntPtr](/dotnet/api/system.intptr)|Type spécifique à la plateforme, utilisé pour représenter un pointeur ou un handle.|
    |[SByte](/dotnet/api/system.byte)|Représente un entier 8 bits signé.|
-   |[Single](/dotnet/api/system.single)|Représente un nombre à virgule flottante simple précision.|
+   |[Unique](/dotnet/api/system.single)|Représente un nombre à virgule flottante simple précision.|
    |[TimeSpan](/dotnet/api/system.timespan)|Représente un intervalle de temps.|
    |[UInt16](/dotnet/api/system.uint16)|Représente un entier non signé 16 bits.|
    |[UInt32](/dotnet/api/system.uint32)|Représente un entier non signé 32 bits.|
    |[UInt64](/dotnet/api/system.uint64)|Représente un entier non signé 64 bits.|
    |[UIntPtr](/dotnet/api/system.uintptr)|Type spécifique à la plateforme, utilisé pour représenter un pointeur ou un handle.|
-   |[Void](/dotnet/api/system.void)|Indique une méthode qui ne retourne pas de valeur ; autrement dit, la méthode a le type de retour void.|
+   |[Nullité](/dotnet/api/system.void)|Indique une méthode qui ne retourne pas de valeur ; autrement dit, la méthode a le type de retour void.|

@@ -6,28 +6,28 @@ helpviewer_keywords:
 - connections [C++], data source
 - OLE DB consumer templates [C++], data sources
 ms.assetid: 6ee52216-e082-4869-a1d6-ce561cfb76e5
-ms.openlocfilehash: 2c11230d106b50e8120dfa9f4e283e97700d2739
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 0514f6a9285936c85608f08774c1d377fd72d6ab
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62175998"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80211053"
 ---
 # <a name="data-sources-and-sessions"></a>Sources de données et sessions
 
-La figure suivante montre les classes qui prennent en charge la connexion et l’accès à une source de données. Chaque classe est basée sur une implémentation de composant OLE DB standard.
+L’illustration suivante montre les classes qui prennent en charge la connexion à une source de données et l’accès à celle-ci. Chaque classe est basée sur une implémentation de composant OLE DB standard.
 
-![Classes de données source et de la session](../../data/oledb/media/vcdatasourcesessionclasses.gif "des classes de données source et de session") <br/>
+![Classes de source de données et de session](../../data/oledb/media/vcdatasourcesessionclasses.gif "Classes de source de données et de session") <br/>
 Classes de source de données et de session
 
-Les classes sont :
+Les classes sont les suivantes :
 
-- [CDataSource](../../data/oledb/cdatasource-class.md) cette classe instancie l’objet de source de données, qui crée et gère une connexion à une source de données via un fournisseur OLE DB. La source de données accepte des informations telles que les informations source de données adresse et d’authentification sous la forme d’une chaîne de connexion.
+- [CDataSource](../../data/oledb/cdatasource-class.md) Cette classe instancie l’objet source de données, qui crée et gère une connexion à une source de données via un fournisseur OLE DB. La source de données prend des informations telles que l’adresse de la source de données et les informations d’authentification sous la forme d’une chaîne de connexion.
 
-   Il est également important de souligner que la classe d’assistance [CEnumerator](../../data/oledb/cenumerator-class.md) est souvent utilisée avant toute connexion est établie pour obtenir une liste des fournisseurs disponibles inscrits sur le système. Cela vous permet de sélectionner un fournisseur comme une source de données. Par exemple, le **propriétés des liaisons de données** boîte de dialogue utilise cette classe pour remplir la liste des fournisseurs sur le **fournisseurs** onglet. Il équivaut à la `SQLBrowseConnect` ou `SQLDriverConnect` (fonction).
+   Il est également intéressant de noter que la classe d’assistance [CEnumerator](../../data/oledb/cenumerator-class.md) est souvent utilisée avant l’établissement d’une connexion afin d’obtenir la liste des fournisseurs disponibles inscrits sur un système. Cela vous permet de sélectionner un fournisseur comme source de données. Par exemple, la boîte de dialogue **Propriétés des liaisons de données** utilise cette classe pour remplir la liste des fournisseurs sous l’onglet **fournisseurs** . Elle équivaut à la fonction `SQLBrowseConnect` ou `SQLDriverConnect`.
 
-- [CSession](../../data/oledb/csession-class.md) cette classe instancie l’objet de session, qui représente une session d’accès unique à la source de données. Toutefois, vous pouvez créer plusieurs sessions sur une source de données. Pour chaque session, vous pouvez créer des ensembles de lignes, commandes et d’autres objets pour accéder aux données à partir de la source de données. La session gère des transactions.
+- [CSession](../../data/oledb/csession-class.md) Cette classe instancie l’objet de session, qui représente une session d’accès unique à la source de données. Toutefois, vous pouvez créer plusieurs sessions sur une source de données. Pour chaque session, vous pouvez créer des ensembles de lignes, des commandes et d’autres objets pour accéder aux données de la source de données. La session gère les transactions.
 
 ## <a name="see-also"></a>Voir aussi
 
-[Modèles du consommateur OLE DB](../../data/oledb/ole-db-consumer-templates-cpp.md)
+[OLE DB (modèles du consommateur)](../../data/oledb/ole-db-consumer-templates-cpp.md)

@@ -6,15 +6,15 @@ f1_keywords:
 helpviewer_keywords:
 - C2175
 ms.assetid: 3a8fa90b-2b29-414a-bb55-cf27c2bf989a
-ms.openlocfilehash: 4c4af877d771d4e45c9336f1eb4a29fd45fa79fd
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: c7d045accae170f4f7f17835ff535a044ff91219
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62175483"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80206919"
 ---
 # <a name="compiler-error-c2175"></a>Erreur du compilateur C2175
 
-« paramètres régionaux » : paramètres régionaux non valide
+'locale' : paramètres régionaux non valides
 
-Les paramètres régionaux spécifiés ne sont pas valide. Consultez [chaînes de langues et pays/région](../../c-runtime-library/locale-names-languages-and-country-region-strings.md) dans le *Run-Time Library Reference* pour les paramètres régionaux pris en charge.
+Les paramètres régionaux spécifiés ne sont pas valides. Consultez [chaînes de langue et de pays/région](../../c-runtime-library/locale-names-languages-and-country-region-strings.md) dans la référence de la *bibliothèque Runtime* pour connaître les paramètres régionaux pris en charge.

@@ -6,25 +6,25 @@ f1_keywords:
 helpviewer_keywords:
 - LNK1309
 ms.assetid: 10146071-883f-4849-97d1-c7468f90efbb
-ms.openlocfilehash: ea675ca835dfc3fe4881e5fabbea746a4442b10a
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 88b05512fd45adb6dc96a6c130ceccb74f3ab14e
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62187441"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80194900"
 ---
 # <a name="linker-tools-error-lnk1309"></a>Erreur des outils Éditeur de liens LNK1309
 
-> *type1* module détecté ; non valide avec commutateur CLRIMAGETYPE :*type2*
+> module *type1* détecté ; non valide avec le commutateur/CLRIMAGETYPE :*type2*
 
 ## <a name="remarks"></a>Notes
 
-Un type d’image CLR a été demandé avec **CLRIMAGETYPE** mais l’éditeur de liens n’a pas pu produire une image de ce type, car un ou plusieurs modules étaient incompatibles avec ce type.
+Un type d’image CLR a été demandé avec **/CLRIMAGETYPE** , mais l’éditeur de liens n’a pas pu produire une image de ce type, car un ou plusieurs modules étaient incompatibles avec ce type.
 
-Par exemple, l’erreur LNK1309 s’affiche si vous spécifiez **/CLRIMAGETYPE:safe** et que vous passez un module généré avec **/CLR : pure**.
+Par exemple, vous verrez LNK1309 si vous spécifiez **/CLRIMAGETYPE : safe** et que vous transmettez un module généré avec **/clr : pure**.
 
-Le **/CLR : pure** et **/CLR : safe** les bibliothèques de prise en charge et les options du compilateur sont déconseillés dans Visual Studio 2015 et non pris en charge dans Visual Studio 2017.
+Les options de compilateur **/clr : pure** et **/clr : safe** et les bibliothèques de prise en charge sont dépréciées dans Visual Studio 2015 et ne sont pas prises en charge dans Visual Studio 2017.
 
-Vous verrez également LNK1309 si vous essayez de générer une application pure CLR de confiance partiel à l’aide de ptrustu [d] .lib. Pour plus d’informations sur la création d’une application partiellement approuvée, consultez [Comment : Créer une Application partiellement approuvée en supprimant la dépendance de la DLL de la bibliothèque CRT](../../dotnet/create-a-partially-trusted-application.md).
+Vous verrez également LNK1309 si vous tentez de générer une application pure CLR partiellement approuvée à l’aide de ptrustu [d]. lib. Pour plus d’informations sur la création d’une application de niveau de confiance partielle, consultez Guide pratique [pour créer une application de confiance partielle en supprimant la dépendance sur la dll de bibliothèque CRT](../../dotnet/create-a-partially-trusted-application.md).
 
-Pour plus d’informations, consultez [/clr (Compilation pour le Common Language Runtime)](../../build/reference/clr-common-language-runtime-compilation.md) et [CLRIMAGETYPE (spécifier Type de CLR Image)](../../build/reference/clrimagetype-specify-type-of-clr-image.md).
+Pour plus d’informations, consultez [/clr (compilation pour le Common Language Runtime)](../../build/reference/clr-common-language-runtime-compilation.md) et [/CLRIMAGETYPE (spécifier le type d’image CLR)](../../build/reference/clrimagetype-specify-type-of-clr-image.md).

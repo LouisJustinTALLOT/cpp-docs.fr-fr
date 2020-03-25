@@ -5,20 +5,20 @@ helpviewer_keywords:
 - global constants
 - constants, global
 ms.assetid: df5a9bd4-d0a8-4c1c-956e-b481d0bded7d
-ms.openlocfilehash: 2f0621f52fe445f8f2058ef902824ddc1f5e2bb5
-ms.sourcegitcommit: 283cb64fd7958a6b7fbf0cd8534de99ac8d408eb
+ms.openlocfilehash: cabe5e92a496181d60536d7274eca388aba5c068
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64856103"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80195472"
 ---
 # <a name="global-constants-in-c"></a>Constantes globales en C++
 
-Constantes globales en C++ ont une liaison statique. Cela est différent de C. Si vous essayez d’utiliser un global constante en C++ dans plusieurs fichiers, vous obtenez une erreur externe non résolue. Le compilateur optimise les constantes globales, en laissant aucun espace réservé pour la variable.
+C++les constantes globales ont une liaison statique. Cela est différent de C. Si vous essayez d’utiliser une constante globale dans C++ dans plusieurs fichiers, vous recevez une erreur externe non résolue. Le compilateur optimise les constantes globales, ne laissant aucun espace réservé pour la variable.
 
-Pour résoudre cette erreur consiste à inclure les initialisations dans un fichier d’en-tête et inclure cet en-tête dans vos fichiers CPP lorsque cela est nécessaire, comme s’il s’agissait de prototype de fonction. Une autre possibilité consiste à rendre la variable non constante et utiliser une référence constante lors de l’évaluation il.
+Une façon de résoudre cette erreur consiste à inclure les initialisations const dans un fichier d’en-tête et à inclure cet en-tête dans vos fichiers CPP lorsque cela est nécessaire, comme s’il s’agissait d’un prototype de fonction. Une autre possibilité consiste à rendre la variable non constante et à utiliser une référence constante lors de son évaluation.
 
-L’exemple suivant génère l’erreur C2019 :
+L’exemple suivant génère l’C2019 :
 
 ```cpp
 // global_constants.cpp

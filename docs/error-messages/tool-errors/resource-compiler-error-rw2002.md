@@ -6,16 +6,16 @@ f1_keywords:
 helpviewer_keywords:
 - RW2002
 ms.assetid: b1d1a49b-b50b-4b0b-9f09-c7762e2dbe8f
-ms.openlocfilehash: 1726e6ce74dfd7b6b0c6e4b69771a826cdf07774
-ms.sourcegitcommit: 389c559918d9bfaf303d262ee5430d787a662e92
+ms.openlocfilehash: 9c5c2824778a679627bd3008276849890f43ac7e
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/24/2019
-ms.locfileid: "71230408"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80190688"
 ---
 # <a name="resource-compiler-error-rw2002"></a>Erreur RW2002 du compilateur de ressources
 
-Erreur d’analyse
+Erreur d'analyse
 
 ### <a name="to-fix-by-checking-the-following-possible-causes"></a>Pour corriger en vérifiant les causes possibles suivantes
 
@@ -69,7 +69,7 @@ Erreur d’analyse
 
 1. **Nom de classe de contrôle ATTENDU**
 
-   Le `class` champ d’une instruction de **contrôle** dans l’instruction **Dialog** doit être de l’un des types suivants : BUTTON, COMBOBOX, EDIT, LISTBOX, SCROLLBAR, STATIC ou défini par l’utilisateur. Assurez-vous que la classe est correctement orthographiée.
+   Le champ `class` d’une instruction de **contrôle** dans l’instruction **Dialog** doit être de l’un des types suivants : Button, ComboBox, Edit, ListBox, ScrollBar, static ou défini par l’utilisateur. Assurez-vous que la classe est correctement orthographiée.
 
 1. **Nom de type de police ATTENDU**
 
@@ -85,7 +85,7 @@ Erreur d’analyse
 
 1. **Valeur de commande numérique attendue**
 
-   Le compilateur de ressources attendait un champ *idValue* numérique dans l’instruction **Accelerators** . Assurez-vous que vous avez `#define` utilisé une constante pour spécifier la valeur et que la constante est correctement orthographiée.
+   Le compilateur de ressources attendait un champ *idValue* numérique dans l’instruction **Accelerators** . Assurez-vous que vous avez utilisé une constante `#define` pour spécifier la valeur et que la constante est correctement orthographiée.
 
 1. **Constante numérique attendue dans la table de chaînes**
 
@@ -109,7 +109,7 @@ Erreur d’analyse
 
 1. **Nombre attendu pour l’ID**
 
-   Nombre attendu pour le `id` champ d’une instruction de contrôle dans l’instruction **Dialog** . Vérifiez que vous disposez d’un numéro `#define` ou d’une instruction pour l’ID de contrôle.
+   Nombre attendu pour le champ `id` d’une instruction de contrôle dans l’instruction **Dialog** . Vérifiez que vous disposez d’une instruction Number ou `#define` pour l’ID de contrôle.
 
 1. **Chaîne entre guillemets attendue dans la classe Dialog**
 
@@ -141,7 +141,7 @@ Erreur d’analyse
 
 1. **Type de contrôle non valide**
 
-   Chaque instruction de contrôle dans une instruction **Dialog** doit être l’une des suivantes : CHECKBOX, COMBOBOX, CONTROL, CTEXT, DEFPUSHBUTTON, EDITTEXT, GROUPBOX, ICÔNE, LISTBOX, LTEXT, PUSHBUTTON, RADIOBUTTON, RTEXT, SCROLLBAR. Assurez-vous que ces instructions de contrôle sont correctement orthographiées.
+   Chaque instruction de contrôle dans une instruction **Dialog** doit être l’une des suivantes : CheckBox, ComboBox, Control, CTEXT, DEFPUSHBUTTON, EditText, GroupBox, Icon, ListBox, LTEXT, PUSHBUTTON, RadioButton, rtext, ScrollBar. Assurez-vous que ces instructions de contrôle sont correctement orthographiées.
 
 1. **Type non valide**
 

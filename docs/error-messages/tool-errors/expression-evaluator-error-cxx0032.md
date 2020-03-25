@@ -7,17 +7,17 @@ helpviewer_keywords:
 - CXX0032
 - CAN0032
 ms.assetid: 78f56977-6b6d-42e2-b71d-c392525bb18b
-ms.openlocfilehash: 77e17b7a758ea2892115b75a626b6d796ad42234
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 509a9a70eca076fd232901bd9c1cbbb545f98304
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62397040"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80195551"
 ---
 # <a name="expression-evaluator-error-cxx0032"></a>Évaluateur d'expression, erreur CXX0032
 
-division par 0
+Division par 0
 
-L’expression contient un diviseur de zéro, ce qui n’est pas conforme. Cette diviseur peut être le nombre littéral zéro, ou il peut être une expression qui prend la valeur zéro.
+L’expression contient un diviseur de zéro, ce qui n’est pas conforme. Ce diviseur peut être le nombre littéral zéro, ou il peut s’agir d’une expression qui prend la valeur zéro.
 
 Cette erreur est identique à CAN0032.

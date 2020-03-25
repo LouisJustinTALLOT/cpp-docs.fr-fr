@@ -9,16 +9,16 @@ helpviewer_keywords:
 - scope resolution operator
 - ':: operator'
 ms.assetid: fd5de9d3-c716-4e12-bae9-03a16fd79a50
-ms.openlocfilehash: e601bed976009a72a43545d8d38a38d75e93a137
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 07c2884ed0ba114c22a0c71bbaf7268d6f6931a4
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62267366"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80178884"
 ---
 # <a name="scope-resolution-operator-"></a>Opérateur de résolution de portée : ::
 
-L’opérateur de résolution de portée **::** sert à identifier et lever l’ambiguïté des identificateurs utilisés dans différentes portées. Pour plus d’informations sur l’étendue, consultez [étendue](../cpp/scope-visual-cpp.md).
+L’opérateur de résolution de portée **::** est utilisé pour identifier et lever l’ambiguïté des identificateurs utilisés dans différentes portées. Pour plus d’informations sur l’étendue, consultez [scope](../cpp/scope-visual-cpp.md).
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -150,7 +150,7 @@ int main() {
 
 ## <a name="with-scoped-enumerations"></a>Avec des énumérations délimitées
 
-L’opérateur de résolution de portée est également utilisé avec les valeurs d’une énumération délimitée [déclarations d’énumération](../cpp/enumerations-cpp.md), comme dans l’exemple suivant :
+L’opérateur de résolution de portée est également utilisé avec les valeurs des [déclarations d’énumération](../cpp/enumerations-cpp.md)d’énumération délimitées, comme dans l’exemple suivant :
 
 ```cpp
 enum class EnumA{

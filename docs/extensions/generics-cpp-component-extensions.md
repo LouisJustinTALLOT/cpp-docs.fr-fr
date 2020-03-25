@@ -8,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - generics [C++]
 ms.assetid: c7ccc316-a411-4c00-b2e2-f0c0eadc6cfd
-ms.openlocfilehash: 31998cf77e3f3cfdc6bc19ad2fc57a50da77e0f6
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
-ms.translationtype: HT
+ms.openlocfilehash: 29c6b22189ea1f644c0fa52ec0f4d605604361ba
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "65516344"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80181991"
 ---
 # <a name="generics--ccli-and-ccx"></a>Génériques (C++/CLI et C++/CX)
 
@@ -49,7 +49,7 @@ Informations sur la définition et l’utilisation des fonctions et méthodes g�
 [Classes génériques (C++-CLI)](generic-classes-cpp-cli.md)<br/>
 Informations sur la définition et l’utilisation des classes génériques.
 
-## <a name="related-sections"></a>Rubriques connexes
+## <a name="related-sections"></a>Sections connexes
 
 [Guide pratique pour itérer au sein d’une collection générique en utilisant for each](../dotnet/how-to-iterate-over-a-generic-collection-with-for-each.md)<br/>
 Utiliser le mot clé [for each, in](../dotnet/for-each-in.md) sur une collection générique.

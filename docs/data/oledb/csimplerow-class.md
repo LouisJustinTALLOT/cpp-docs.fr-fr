@@ -34,12 +34,12 @@ helpviewer_keywords:
 - m_dwRef
 - m_iRowset
 ms.assetid: 06d9621d-60cc-4508-8b0c-528d1b1a809b
-ms.openlocfilehash: 00d8164425ada573020971f66312b2282cc72c45
-ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
+ms.openlocfilehash: 2b08e0e8f3b5b43f79019c70e3fe32ae9064dee9
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/17/2020
-ms.locfileid: "79441138"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80211118"
 ---
 # <a name="csimplerow-class"></a>CSimpleRow, classe
 
@@ -77,7 +77,7 @@ class CSimpleRow
 
 Un descripteur de ligne est logiquement une étiquette unique pour une ligne de résultats. `IRowsetImpl` crée une `CSimpleRow` pour chaque ligne demandée dans [IRowsetImpl :: GetNextRows](../../data/oledb/irowsetimpl-getnextrows.md). `CSimpleRow` peut également être remplacé par votre propre implémentation du handle de ligne, car il s’agit d’un argument template par défaut pour `IRowsetImpl`. La seule exigence de remplacer cette classe est d’avoir la classe de remplacement qui fournit un constructeur qui accepte un paramètre unique de type **long**.
 
-## <a name="addrefrow"></a>CSimpleRow :: AddRefRow
+## <a name="csimplerowaddrefrow"></a><a name="addrefrow"></a>CSimpleRow :: AddRefRow
 
 Ajoute un décompte de références à un handle de ligne existant de manière thread-safe.
 
@@ -87,7 +87,7 @@ Ajoute un décompte de références à un handle de ligne existant de manière t
 DWORD AddRefRow();
 ```
 
-## <a name="compare"></a>CSimpleRow :: compare
+## <a name="csimplerowcompare"></a><a name="compare"></a>CSimpleRow :: compare
 
 Compare deux lignes pour voir si elles font référence à la même instance de ligne.
 
@@ -106,7 +106,7 @@ Pointeur vers un objet `CSimpleRow`.
 
 Une valeur HRESULT, généralement S_OK, indiquant que les deux lignes sont la même instance de ligne, ou S_FALSE, indiquant que les deux lignes sont différentes. Consultez [IRowsetIdentity :: IsSameRow](/previous-versions/windows/desktop/ms719629(v=vs.85)) dans le *Guide de référence du programmeur OLE DB* pour d’autres valeurs de retour possibles.
 
-## <a name="csimplerow"></a>CSimpleRow :: CSimpleRow
+## <a name="csimplerowcsimplerow"></a><a name="csimplerow"></a>CSimpleRow :: CSimpleRow
 
 Constructeur.
 
@@ -125,7 +125,7 @@ dans Index de l’ensemble de lignes actif.
 
 Définit [m_iRowset](../../data/oledb/csimplerow-m-irowset.md) sur *iRowsetCur*.
 
-## <a name="releaserow"></a>CSimpleRow :: ReleaseRow
+## <a name="csimplerowreleaserow"></a><a name="releaserow"></a>CSimpleRow :: ReleaseRow
 
 Libère les lignes de manière thread-safe.
 
@@ -135,7 +135,7 @@ Libère les lignes de manière thread-safe.
 DWORD ReleaseRow();
 ```
 
-## <a name="dwref"></a>CSimpleRow :: m_dwRef
+## <a name="csimplerowm_dwref"></a><a name="dwref"></a>CSimpleRow :: m_dwRef
 
 Décompte de références à un handle de ligne existant.
 
@@ -145,7 +145,7 @@ Décompte de références à un handle de ligne existant.
 DWORD m_dwRef;
 ```
 
-## <a name="irowset"></a>CSimpleRow :: m_iRowset
+## <a name="csimplerowm_irowset"></a><a name="irowset"></a>CSimpleRow :: m_iRowset
 
 Index de l’ensemble de lignes représentant le curseur.
 

@@ -8,22 +8,22 @@ helpviewer_keywords:
 - declaring functions [C++], specialization of function template
 - specialization of function templates
 ms.assetid: eb0fcb73-eaed-42a1-9b83-14b055a34bf8
-ms.openlocfilehash: 3d91383f895f1a8be983efe42f685419ca988823
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: c9d77cef790bdd0a65651ffb7246e685175482b1
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62184267"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80179989"
 ---
 # <a name="explicit-specialization-of-function-templates"></a>Spécialisation explicite de modèles de fonctions
 
-Avec un modèle de fonction, vous pouvez définir un comportement spécial pour un type spécifique en fournissant une spécialisation explicite (substitution) du modèle de fonction pour ce type. Exemple :
+Avec un modèle de fonction, vous pouvez définir un comportement spécial pour un type spécifique en fournissant une spécialisation explicite (substitution) du modèle de fonction pour ce type. Par exemple :
 
 ```cpp
 template<> void MySwap(double a, double b);
 ```
 
-Cette déclaration vous permet de définir une fonction différente pour **double** variables. Comme les fonctions sans modèle, les conversions de type standard (comme la promotion d’une variable de type **float** à **double**) sont appliquées.
+Cette déclaration vous permet de définir une fonction différente pour les variables **double** . À l’instar des fonctions non basées sur les modèles, les conversions de type standard (telles que la promotion d’une variable de type **float** en **double**) sont appliquées.
 
 ## <a name="example"></a>Exemple
 

@@ -6,16 +6,16 @@ f1_keywords:
 helpviewer_keywords:
 - C4160
 ms.assetid: a9610cb7-cac4-4a74-8b4e-049030ebb92b
-ms.openlocfilehash: 988c1fcbe0826582dceaa527811c688711fd8906
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 8eb53d3f00c717df0e657ede3de6dd71d4a0bb47
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62391840"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80176167"
 ---
 # <a name="compiler-warning-level-1-c4160"></a>Avertissement du compilateur (niveau 1) C4160
 
-> #<a name="pragma-pop--did-not-find-previously-pushed-identifier-identifier"></a>pragma (pop,...) : n’a pas trouvé l’identificateur '*identificateur*'
+> #<a name="pragma-pop--did-not-find-previously-pushed-identifier-identifier"></a>pragma (,... pop) : impossible de trouver l’identificateur'*identifier*'ayant précédemment fait l’objet d’un push
 
 ## <a name="remarks"></a>Notes
 
@@ -23,7 +23,7 @@ Une instruction pragma dans votre code source tente de dépiler un identificateu
 
 ## <a name="example"></a>Exemple
 
-L’exemple suivant génère l’erreur C4160 et montre comment la corriger :
+L’exemple suivant génère l’C4160 et montre comment la corriger :
 
 ```cpp
 // C4160.cpp

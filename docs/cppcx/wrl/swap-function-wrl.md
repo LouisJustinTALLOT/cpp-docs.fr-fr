@@ -5,16 +5,16 @@ ms.topic: reference
 f1_keywords:
 - internal/Microsoft::WRL::Details::Swap
 ms.assetid: ed134a08-ceb7-4279-aa02-a183c3a426ea
-ms.openlocfilehash: 97d24f1f4453e948c621651e029254db1b0de712
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: e665dbca025da56ba81c3fdf1749b2d653b78c00
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62398145"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80213562"
 ---
 # <a name="swap-function-wrl"></a>Swap, fonction (WRL)
 
-Prend en charge l’infrastructure WRL et n’est pas destinée à être utilisée directement depuis votre code.
+Prend en charge l’infrastructure WRL et n’est pas destiné à être utilisé directement à partir de votre code.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -39,11 +39,11 @@ Le deuxième argument.
 
 Échange les valeurs des deux arguments spécifiés.
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
-**En-tête :** internal.h
+**En-tête :** Internal. h
 
-**Espace de noms :** Microsoft::WRL::Details
+**Espace de noms :** Microsoft :: WRL ::D étails
 
 ## <a name="see-also"></a>Voir aussi
 

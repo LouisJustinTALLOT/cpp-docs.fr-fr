@@ -32,12 +32,12 @@ helpviewer_keywords:
 - SetGUID method
 - AddProperty method
 ms.assetid: 54190149-c277-4679-b81a-ef484d4d1c00
-ms.openlocfilehash: 08cab967fbfbd4b3207e96a4fdbd2d2dbc6da793
-ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
+ms.openlocfilehash: e2bb01e6acb9298b08fddc3117ec93dd7c0c2417
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/17/2020
-ms.locfileid: "79447452"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80212017"
 ---
 # <a name="cdbpropset-class"></a>CDBPropSet, classe
 
@@ -73,7 +73,7 @@ class CDBPropSet : public tagDBPROPSET
 
 Les fournisseurs de OLE DB et les consommateurs utilisent des structures `DBPROPSET` pour passer des tableaux de structures de `DBPROP`. Chaque structure `DBPROP` représente une propriété unique qui peut être définie.
 
-## <a name="addproperty"></a>CDBPropSet :: AddProperty
+## <a name="cdbpropsetaddproperty"></a><a name="addproperty"></a>CDBPropSet :: AddProperty
 
 Ajoute une propriété au jeu de propriétés.
 
@@ -124,7 +124,7 @@ dans Valeur de devise CY utilisée pour initialiser la valeur de propriété de 
 
 **true** si la propriété a été correctement ajoutée. Dans le cas contraire, la valeur est **false**.
 
-## <a name="cdbpropset"></a>CDBPropSet :: CDBPropSet
+## <a name="cdbpropsetcdbpropset"></a><a name="cdbpropset"></a>CDBPropSet :: CDBPropSet
 
 Constructeur. Initialise les champs `rgProperties`, `cProperties`et `guidPropertySet` de la structure [DBPROPSET](/previous-versions/windows/desktop/ms714367(v=vs.85)) .
 
@@ -146,7 +146,7 @@ dans GUID utilisé pour initialiser le champ `guidPropertySet`.
 *propset*<br/>
 dans Un autre objet `CDBPropSet` pour la construction de copie.
 
-## <a name="setguid"></a>CDBPropSet :: SetGUID
+## <a name="cdbpropsetsetguid"></a><a name="setguid"></a>CDBPropSet :: SetGUID
 
 Définit le champ `guidPropertySet` dans la structure `DBPROPSET`.
 
@@ -165,7 +165,7 @@ dans GUID utilisé pour définir le champ `guidPropertySet` de la structure [DBP
 
 Ce champ peut également être défini par le [constructeur](../../data/oledb/cdbpropset-cdbpropset.md) .
 
-## <a name="op_equal"></a>CDBPropSet :: Operator =
+## <a name="cdbpropsetoperator-"></a><a name="op_equal"></a>CDBPropSet :: Operator =
 
 Assigne le contenu d’une propriété à un autre jeu de propriétés.
 

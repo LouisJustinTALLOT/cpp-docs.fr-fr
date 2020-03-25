@@ -6,15 +6,15 @@ f1_keywords:
 helpviewer_keywords:
 - C2526
 ms.assetid: 0f8c554c-f990-457e-bcae-b6f273481825
-ms.openlocfilehash: 909f1d0d9b2d0ad16948f07a086f29ab194731e2
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 3267b84aa913ec8b8d070fdc0a206abfa0c5a636
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62282259"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80202603"
 ---
 # <a name="compiler-error-c2526"></a>Erreur du compilateur C2526
 
-'identificateur1' : Fonction de liaison C ne peut pas retourner C++ classe 'identificateur2'
+'identificateur1 ' : la fonction de liaison C ne C++ peut pas retourner la classe’identificateur2 '
 
 Une fonction définie avec une liaison C ne peut pas retourner un type défini par l’utilisateur.

@@ -7,35 +7,35 @@ helpviewer_keywords:
 - CXX0036
 - CAN0036
 ms.assetid: 383404be-df5b-4eec-b113-df21bb5d269d
-ms.openlocfilehash: d7961d92760cc5ac325b4bc9f187d4ee2298479a
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 164fd9ee00071e218e5bb4f3ab00febc618725a7
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62397027"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80195498"
 ---
 # <a name="expression-evaluator-error-cxx0036"></a>Évaluateur d'expression, erreur CXX0036
 
-contexte incorrect {...} spécification
+contexte incorrect {...} specification
 
-Ce message peut être généré par plusieurs erreurs dans l’utilisation de l’opérateur de contexte (**{}**).
+Ce message peut être généré par l’une des erreurs suivantes dans l’utilisation de l’opérateur de contexte ( **{}** ).
 
-- La syntaxe de l’opérateur de contexte (**{}**) a été donné de façon incorrecte.
+- La syntaxe de l’opérateur de contexte ( **{}** ) a été incorrecte.
 
-   La syntaxe de l’opérateur de contexte est :
+   La syntaxe de l’opérateur de contexte est la suivante :
 
-     {*function*,*module*,*dll*}*expression*
+     {*fonction*,*module*,*dll*} *expression*
 
-   Spécifie le contexte de *expression*. L’opérateur de contexte a la même priorité et l’utilisation en tant qu’un cast de type.
+   Spécifie le contexte de l' *expression*. L’opérateur de contexte a la même priorité et utilisation qu’un cast de type.
 
-   Virgules de fin peuvent être omis. Si un des *fonction*, *module*, ou *dll* contient une virgule littérale, vous devez placer l’intégralité du nom entre parenthèses.
+   Les virgules de fin peuvent être omises. Si l’une des *fonctions*, *modules*ou *dll* contient une virgule littérale, vous devez placer le nom entier entre parenthèses.
 
-- Le nom de fonction a été mal orthographié ou n’existe pas dans la bibliothèque de liens dynamiques ou le module spécifié.
+- Le nom de la fonction n’a pas été orthographié correctement ou n’existe pas dans le module ou la bibliothèque de liens dynamiques spécifiés.
 
-   Étant donné que C est un langage qui respecte la casse, *fonction* doivent figurer dans la casse car il est défini dans la source.
+   Étant donné que C est un langage qui respecte la casse, la *fonction* doit être fournie dans le cas exact, car elle est définie dans la source.
 
 - Le module ou la DLL est introuvable.
 
-   Vérifiez le nom de chemin d’accès complet du module spécifié ou de la DLL.
+   Vérifiez le nom du chemin d’accès complet du module ou de la DLL spécifiés.
 
 Cette erreur est identique à CAN0036.

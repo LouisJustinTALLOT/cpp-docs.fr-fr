@@ -6,23 +6,23 @@ f1_keywords:
 helpviewer_keywords:
 - U1051
 ms.assetid: fede5cd5-dac3-47b7-b86d-e1acfb78699f
-ms.openlocfilehash: ddf1d262fb8dfc6e63b0bf5cc098b7b140539310
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 9c6b939c97f993e42049677292374377d825d474
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62367198"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80193678"
 ---
 # <a name="nmake-fatal-error-u1051"></a>Erreur irrécupérable NMAKE U1051
 
-Mémoire insuffisante
+mémoire insuffisante
 
-NMAKE a manqué de mémoire, y compris la mémoire virtuelle, car le makefile est trop volumineux ou complexes.
+NMAKE ne dispose pas de suffisamment de mémoire, y compris la mémoire virtuelle, car le Makefile était trop grand ou complexe.
 
 ### <a name="to-fix-by-using-the-following-possible-solutions"></a>Pour résoudre ce problème, appliquez les solutions possibles suivantes.
 
 1. Libérez de l’espace sur le disque.
 
-1. Augmenter la taille de fichier d’échange de Windows NT ou le fichier d’échange Windows.
+1. Augmentez la taille du fichier d’échange Windows NT ou du fichier d’échange Windows.
 
-1. Si une partie seulement du makefile est utilisée, divisez le makefile en fichiers distincts ou utiliser **! IF** pour limiter la quantité NMAKE doit traiter les directives de prétraitement. Le **! IF** sont les suivantes : **! IF**, `!IFDEF`, **! IFNDEF**, **! ELSE IF**, **! AUTRE** `IFDEF`, et **! AUTRE** `IFNDEF`.
+1. Si seule une partie du Makefile est utilisée, divisez le Makefile en fichiers distincts ou utilisez **! Si** les directives de prétraitement limitent la quantité que doit traiter NMAKE. Le **! Si** les directives incluent **! Si**, `!IFDEF`, **! IFNDEF**, **! Sinon, si**, **! SINON** `IFDEF`, et **! SINON** `IFNDEF`.

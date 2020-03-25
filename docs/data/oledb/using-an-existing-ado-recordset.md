@@ -6,18 +6,18 @@ helpviewer_keywords:
 - OLE DB consumer templates, ADO recordsets
 - recordsets [C++], using in OLE DB
 ms.assetid: a9b1de8a-d379-49b1-a26e-578741e9f6a8
-ms.openlocfilehash: eb558bb319bb5ddb61d0383846099d708f99c627
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 48f6eb3bac34b37f495b9492e19b4197ed69cca3
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62389006"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80209350"
 ---
 # <a name="using-an-existing-ado-recordset"></a>Utilisation d'un recordset ADO existant
 
-Pour combiner des modèles du consommateur OLE DB et Active Data Objects (ADO), utilisez ADO pour ouvrir un jeu d’enregistrements (correspondant à un ensemble de lignes dans les modèles du consommateur OLE DB). Lorsque vous avez un jeu d’enregistrements, procédez comme suit pour vous connecter à un ensemble de lignes OLE DB :
+Pour mélanger OLE DB modèles de consommateur et ADO (Active Data Objects), utilisez ADO pour ouvrir un Recordset (correspondant à un ensemble de lignes dans les modèles de consommateur OLE DB). Lorsque vous disposez d’un jeu d’enregistrements, procédez comme suit pour vous connecter à un ensemble de lignes OLE DB :
 
-1. Appelez `QueryInterface` pour le `IRowset` et `IAccessor` des pointeurs.
+1. Appelez `QueryInterface` pour les pointeurs de `IRowset` et de `IAccessor`.
 
     ```cpp
     IRowset* lpRowset = NULL;
@@ -27,9 +27,9 @@ Pour combiner des modèles du consommateur OLE DB et Active Data Objects (ADO), 
     ```
 
     > [!NOTE]
-    > *lpUnk* pointe vers le `IUnknown` objet de l’objet recordset ADO.
+    > *lpUnk* pointe vers l’objet `IUnknown` de l’objet Recordset ADO.
 
-1. Attachez l’accesseur et un ensemble de lignes à leurs classes de modèles du consommateur OLE DB appropriés.
+1. Attachez l’accesseur et l’ensemble de lignes à leurs classes de modèle de consommateur OLE DB appropriées.
 
     ```cpp
     CRowset rs;

@@ -30,12 +30,12 @@ helpviewer_keywords:
 - cursors [C++], importing and exporting
 - images [C++], exporting
 ms.assetid: 65f523e8-017f-4fc6-82d1-083c56d9131f
-ms.openlocfilehash: 718de310bc4fb0cb0072065bc4e7b7adadb182aa
-ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
+ms.openlocfilehash: 0af4e8faeb3d8606fb351b193364a2748fbc944e
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/16/2020
-ms.locfileid: "79421197"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80215212"
 ---
 # <a name="how-to-manage-resources-c"></a>Comment : gérer les ressources (C++)
 
@@ -46,7 +46,7 @@ Vous pouvez copier des ressources d’un fichier vers un autre sans les modifier
 Vous pouvez facilement copier des ressources à partir d’une ressource ou d’un fichier exécutable existant dans votre fichier de ressources actuel. Pour copier des ressources, vous devez ouvrir les deux fichiers contenant les ressources en même temps et faire glisser les éléments d’un fichier vers un autre ou les copier et les coller entre les deux fichiers. Cette méthode fonctionne pour les fichiers de script de ressources (. RC) et les fichiers de modèle de ressource (. RCT) et comme fichiers exécutables (. exe).
 
 > [!NOTE]
-> Visual C++ contient des exemples de fichiers de ressources que vous pouvez utiliser dans votre propre application. Pour plus d’informations, consultez [bibliothèque d’images : ressources communes](https://github.com/Microsoft/VCSamples).
+> Visual C++ contient des exemples de fichiers de ressources que vous pouvez utiliser dans votre propre application. Pour plus d’informations, consultez [bibliothèque d’images : ressources communes](https://github.com/Microsoft/VCSamples/tree/master/VC2010Samples/MFC/general).
 
 Vous ne pouvez pas effectuer des opérations de glisser-déplacer, copier, couper ou coller entre les fichiers de ressources du projet (**affichage des ressources**) et les fichiers. RC autonomes ouverts dans les fenêtres de document. Vous pouvez le faire dans les versions précédentes du produit. Utilisez uniquement la méthode de glisser-déplacer entre les fichiers. RC qui sont ouverts en dehors du projet.
 
@@ -130,4 +130,4 @@ Win32
 
 [Fichiers de ressources](../windows/resource-files-visual-studio.md)<br/>
 [Comment : créer des ressources](../windows/how-to-create-a-resource-script-file.md)<br/>
-[Guide pratique pour inclure des ressources au moment de la compilation](../windows/how-to-include-resources-at-compile-time.md)<br/>
+[Guide pratique pour inclure des ressources au moment de la compilation](../windows/how-to-include-resources-at-compile-time.md)

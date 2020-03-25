@@ -22,16 +22,16 @@ helpviewer_keywords:
 - m_strCommandText
 - SetCommandText method
 ms.assetid: 9c2715cc-1e55-4468-8327-85341617ed46
-ms.openlocfilehash: de9e930056db7b91968ca1ce471a87809693376a
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: d91221dd509122ebbd6490c2de7fab1ce51eb2f8
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62408977"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80210728"
 ---
 # <a name="icommandtextimpl-class"></a>ICommandTextImpl, classe
 
-Fournit une implémentation pour le [ICommandText](/previous-versions/windows/desktop/ms714914(v=vs.85)) interface.
+Fournit une implémentation pour l’interface [ICommandText](/previous-versions/windows/desktop/ms714914(v=vs.85)) .
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -44,32 +44,32 @@ class ATL_NO_VTABLE ICommandTextImpl
 ### <a name="parameters"></a>Paramètres
 
 *T*<br/>
-Dérivé de la classe de commande `ICommandTextImpl`.
+Classe de commande dérivée de `ICommandTextImpl`.
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
-**En-tête :** altdb.h
+**En-tête :** altdb. h
 
 ## <a name="members"></a>Membres
 
-### <a name="interface-methods"></a>Méthodes d’interface
+### <a name="interface-methods"></a>Méthodes d'interface
 
 |||
 |-|-|
 |[GetCommandText](#getcommandtext)|Retourne la commande de texte définie par le dernier appel à [SetCommandText](../../data/oledb/icommandtextimpl-setcommandtext.md).|
-|[SetCommandText](#setcommandtext)|Définit le texte de commande, en remplaçant le texte de commande existant.|
+|[SetCommandText](#setcommandtext)|Définit le texte de la commande, en remplaçant le texte de la commande existante.|
 
-### <a name="data-members"></a>Membres de données
+### <a name="data-members"></a>Données membres
 
 |||
 |-|-|
-|[m_strCommandText](#strcommandtext)|Stocke le texte de commande.|
+|[m_strCommandText](#strcommandtext)|Stocke le texte de la commande.|
 
 ## <a name="remarks"></a>Notes
 
-Une interface obligatoire sur les commandes.
+Interface obligatoire sur les commandes.
 
-## <a name="getcommandtext"></a> ICommandTextImpl::GetCommandText
+## <a name="icommandtextimplgetcommandtext"></a><a name="getcommandtext"></a>ICommandTextImpl :: GetCommandText
 
 Retourne la commande de texte définie par le dernier appel à [SetCommandText](../../data/oledb/icommandtextimpl-setcommandtext.md).
 
@@ -82,11 +82,11 @@ STDMETHOD(GetCommandText)(GUID * pguidDialect,
 
 #### <a name="parameters"></a>Paramètres
 
-Consultez [ICommandText::GetCommandText](/previous-versions/windows/desktop/ms709825(v=vs.85)) dans le *de référence du programmeur OLE DB*. Le *pguidDialect* paramètre est ignoré par défaut.
+Consultez [ICommandText :: GetCommandText](/previous-versions/windows/desktop/ms709825(v=vs.85)) dans le *Guide de référence du programmeur OLE DB*. Le paramètre *pguidDialect* est ignoré par défaut.
 
-## <a name="setcommandtext"></a> ICommandTextImpl::SetCommandText
+## <a name="icommandtextimplsetcommandtext"></a><a name="setcommandtext"></a>ICommandTextImpl :: SetCommandText
 
-Définit le texte de commande, en remplaçant le texte de commande existant.
+Définit le texte de la commande, en remplaçant le texte de la commande existante.
 
 ### <a name="syntax"></a>Syntaxe
 
@@ -97,11 +97,11 @@ STDMETHOD(SetCommandText)(REFGUID rguidDialect,
 
 #### <a name="parameters"></a>Paramètres
 
-Consultez [ICommandText::SetCommandText](/previous-versions/windows/desktop/ms709757(v=vs.85)) dans le *de référence du programmeur OLE DB*.
+Consultez [ICommandText :: SetCommandText](/previous-versions/windows/desktop/ms709757(v=vs.85)) dans le *Guide de référence du programmeur OLE DB*.
 
-## <a name="strcommandtext"></a> ICommandTextImpl::m_strCommandText
+## <a name="icommandtextimplm_strcommandtext"></a><a name="strcommandtext"></a>ICommandTextImpl :: m_strCommandText
 
-Stocke la chaîne de texte de commande.
+Stocke la chaîne de texte de la commande.
 
 ### <a name="syntax"></a>Syntaxe
 
@@ -111,5 +111,5 @@ CComBSTR m_strCommandText;
 
 ## <a name="see-also"></a>Voir aussi
 
-[Modèles du fournisseur OLE DB](../../data/oledb/ole-db-provider-templates-cpp.md)<br/>
+[Modèles du fournisseur OLE DB](../../data/oledb/ole-db-provider-templates-cpp.md)<br/>
 [Architecture des modèles du fournisseur OLE DB](../../data/oledb/ole-db-provider-template-architecture.md)

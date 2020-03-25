@@ -7,16 +7,16 @@ helpviewer_keywords:
 - templates, OLE DB provider
 - OLE DB providers, templates
 ms.assetid: c90b7523-dbff-431c-be06-eed9055710d2
-ms.openlocfilehash: 79b225fb45c05a0b324f441654e63c6ea9f4918f
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 21e02f3630b9235ec200452d3b79b04710458823
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62165786"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80209240"
 ---
 # <a name="working-with-ole-db-provider-templates"></a>Utilisation des modèles du fournisseur OLE DB
 
-Pour savoir comment utiliser les modèles de fournisseur OLE DB, consultez les rubriques suivantes :
+Pour savoir comment utiliser les modèles de fournisseur d’OLE DB, consultez les rubriques suivantes :
 
 - [Ajout d’une interface à votre fournisseur](../../data/oledb/adding-an-interface-to-your-provider.md)
 
@@ -37,4 +37,4 @@ Pour savoir comment utiliser les modèles de fournisseur OLE DB, consultez les r
 ## <a name="see-also"></a>Voir aussi
 
 [Référence des modèles du fournisseur OLE DB](../../data/oledb/ole-db-provider-templates-reference.md)<br/>
-[Modèles du consommateur OLE DB](../../data/oledb/ole-db-consumer-templates-cpp.md)
+[OLE DB (modèles du consommateur)](../../data/oledb/ole-db-consumer-templates-cpp.md)

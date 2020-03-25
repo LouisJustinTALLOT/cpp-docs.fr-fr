@@ -9,12 +9,12 @@ helpviewer_keywords:
 - volatile objects
 - objects [C++], volatile
 ms.assetid: 81db4a85-ed5a-4a2c-9a53-5d07a771d2de
-ms.openlocfilehash: 572fe244a076492e3f3316dd6d00f6fe7d7c3c9c
-ms.sourcegitcommit: a6d63c07ab9ec251c48bc003ab2933cf01263f19
+ms.openlocfilehash: 6d193c530cbe0258d8713883b769fe4828a248c1
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "74857201"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80187425"
 ---
 # <a name="volatile-c"></a>volatile (C++)
 
@@ -56,7 +56,7 @@ Si vous êtes familiarisé avec le C# mot clé volatile ou si vous connaissez le
 
 **Section spécifique de Microsoft**
 
-Lorsque l’option **/volatile : ms** du compilateur est utilisée, par défaut lorsque des architectures autres que ARM sont ciblées, le compilateur génère du code supplémentaire pour conserver l’ordre des références aux objets volatiles, en plus de la gestion des références à d’autres objets globaux. En particulier :
+Lorsque l’option **/volatile : ms** du compilateur est utilisée, par défaut lorsque des architectures autres que ARM sont ciblées, le compilateur génère du code supplémentaire pour conserver l’ordre des références aux objets volatiles, en plus de la gestion des références à d’autres objets globaux. En particulier :
 
 - L’écriture dans un objet volatile (également appelée "écriture volatile") a une sémantique Release, c’est-à-dire, une référence à un objet global ou statique qui se produit avant qu’une écriture dans un objet volatile de la séquence d’instructions ne se produise avant cette écriture volatile dans le fichier binaire compilé.
 

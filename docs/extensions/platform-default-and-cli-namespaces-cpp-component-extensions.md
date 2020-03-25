@@ -9,12 +9,12 @@ helpviewer_keywords:
 - lang namespace
 - cli namespace
 ms.assetid: 9d38bd1e-dc78-47d1-a84b-9b4683e52c9c
-ms.openlocfilehash: db6c73d6c52bf97aea5d0fbeeeebdeef87f692cc
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: aedb8b7954eaa4bb1cf1060725103cd725c3f180
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "70311644"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80181822"
 ---
 # <a name="platform-default-and-cli-namespaces--ccli-and-ccx"></a>Plateforme, valeur par défaut et espaces de noms cli (C++/CLI et C++/CX)
 
@@ -28,7 +28,7 @@ Visual Studio offre un espace de noms par défaut pour votre projet lorsque vous
 
 Pour plus d’informations, consultez [Espaces de noms et visibilité de type (C++/CX)](../cppcx/namespaces-and-type-visibility-c-cx.md).
 
-### <a name="requirements"></a>Configuration requise
+### <a name="requirements"></a>Spécifications
 
 Option du compilateur : `/ZW`
 
@@ -54,7 +54,7 @@ Les fonctionnalités de langage suivantes se trouvent dans l’espace de noms **
 
 - [safe_cast](safe-cast-cpp-component-extensions.md)
 
-### <a name="requirements"></a>Configuration requise
+### <a name="requirements"></a>Spécifications
 
 Option du compilateur : `/clr`
 

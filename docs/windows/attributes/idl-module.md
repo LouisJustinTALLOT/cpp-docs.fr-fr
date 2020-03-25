@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - idl_module attribute
 ms.assetid: 3578b337-e38a-4334-b747-15404c02dbc0
-ms.openlocfilehash: 8838a833552ae7066dbcf17b4f676d6626c069f8
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: 6dd0a34d5d957838613bde2c9e05d5ef26a1f678
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69514674"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80168042"
 ---
 # <a name="idl_module"></a>idl_module
 
@@ -29,7 +29,7 @@ function declaration
 *name*<br/>
 Nom défini par l’utilisateur pour le bloc de code qui s’affiche dans le fichier. idl.
 
-*dllname*<br/>
+*DllName*<br/>
 Facultatif Fichier. dll qui contient l’exportation.
 
 *uuid*<br/>
@@ -57,7 +57,7 @@ Fonction que vous allez définir.
 
 L’attribut **idl_module** C++ vous permet de spécifier le point d’entrée dans un fichier. dll, ce qui vous permet d’importer à partir d’un fichier. dll.
 
-L’attribut **idl_module** a des fonctionnalités similaires à l’attribut MIDL du [module](/windows/win32/Midl/module) .
+L’attribut **idl_module** possède des fonctionnalités similaires à l’attribut MIDL du [module](/windows/win32/Midl/module) .
 
 Vous pouvez exporter n’importe quoi à partir d’un objet COM que vous pouvez exporter à partir d’un fichier. dll en plaçant un point d’entrée de DLL dans le bloc de bibliothèque d’un fichier. idl.
 
@@ -76,7 +76,7 @@ Le code suivant illustre l’utilisation de l’attribut **idl_module** :
 void FuncName(int i);
 ```
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
 ### <a name="attribute-context"></a>Contexte d'attribut
 
@@ -84,8 +84,8 @@ void FuncName(int i);
 |-|-|
 |**S'applique à**|N'importe où|
 |**Renouvelable**|Non|
-|**Attributs requis**|Aucun|
-|**Attributs non valides**|Aucun|
+|**Attributs requis**|None|
+|**Attributs non valides**|None|
 
 Pour plus d'informations, consultez [Contextes d'attribut](cpp-attributes-com-net.md#contexts).
 

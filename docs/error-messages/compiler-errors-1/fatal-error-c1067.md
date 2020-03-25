@@ -6,21 +6,21 @@ f1_keywords:
 helpviewer_keywords:
 - C1067
 ms.assetid: e2c94be6-4573-4571-aac9-73d657fe9f96
-ms.openlocfilehash: f8fe301e25d9ecb5cc67397f9537e0bbd86c0627
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 3b016790220d409435ff7ea53c6f48899a9e8f1c
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62165851"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80204345"
 ---
 # <a name="fatal-error-c1067"></a>Erreur irrécupérable C1067
 
-limite du compilateur : Limite de 64 Ko sur la taille d’un enregistrement de type a été dépassé.
+limite du compilateur : la limite de 64 Ko pour la taille d’un enregistrement de type a été dépassée
 
-Cette erreur peut se produire si un symbole a un nom décoré dépassant 247 caractères.  Pour résoudre, raccourcissez le nom du symbole.
+Cette erreur peut se produire si un symbole a un nom décoré dépassant 247 caractères.  Pour résoudre le nom du symbole, raccourcissez-le.
 
-Lorsque le compilateur génère des informations de débogage, il émet des enregistrements de type pour définir les types rencontrés dans le code source.  Par exemple, les enregistrements de type incluent des structures simples et des listes d’arguments de fonctions.  Certains de ces enregistrements de type peuvent être des grandes listes.
+Lorsque le compilateur génère des informations de débogage, il émet des enregistrements de type pour définir les types rencontrés dans le code source.  Par exemple, les enregistrements de type incluent des structures simples et des listes d’arguments de fonctions.  Certains de ces enregistrements de type peuvent être des listes volumineuses.
 
-Il existe une limite de 64 Ko de la taille de l’enregistrement de n’importe quel type.  Si vous dépassez cette limite de 64 Ko cette erreur se produit.
+La taille d’un enregistrement de type est limitée à 64 Ko.  Si cette limite de 64 Ko est dépassée, cette erreur se produit.
 
-C1067 peut également se produire s’il existe de nombreux symboles portant des noms longs ou si une classe, struct ou union comporte trop de membres.
+C1067 peut également se produire s’il existe de nombreux symboles avec des noms longs ou si une classe, un struct ou une Union possède trop de membres.

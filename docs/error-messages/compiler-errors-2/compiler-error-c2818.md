@@ -6,15 +6,15 @@ f1_keywords:
 helpviewer_keywords:
 - C2818
 ms.assetid: 715fc7c9-0c6d-452b-b7f5-1682cea5e907
-ms.openlocfilehash: f6e33d0e0ee139138df7d8e11357100b3ec3a1a9
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 00952e55f1b732bd9af3733f5c0ec575a39116fe
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62388694"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80202107"
 ---
 # <a name="compiler-error-c2818"></a>Erreur du compilateur C2818
 
-application de surchargé 'operator ->' est récurrente à travers le type 'type'
+l’application de’operator-> 'surchargé est récursive à travers le type’type'
 
-Une redéfinition de l’opérateur de l’accès de membre de classe contient une récursive `return` instruction. Pour redéfinir le `->` opérateur avec la récurrence, vous devez déplacer la routine récursive à une fonction appelée à partir de l’opérateur de substituer la fonction.
+Une redéfinition de l’opérateur d’accès aux membres de la classe contient une instruction `return` récursive. Pour redéfinir l’opérateur `->` avec la récursivité, vous devez déplacer la routine récursive vers une fonction distincte appelée à partir de la fonction de substitution d’opérateur.

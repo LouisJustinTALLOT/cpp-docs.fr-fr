@@ -6,24 +6,24 @@ f1_keywords:
 helpviewer_keywords:
 - C4326
 ms.assetid: d44d2c4e-9456-42d3-b35b-4ba4b2d42ec7
-ms.openlocfilehash: d14a1902db4dcf2224ce6a58db120a81ebb5620f
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 32bcd85b1cd1bb6c89678daae02f4f31a9318b6d
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62327351"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80162970"
 ---
 # <a name="compiler-warning-level-1-c4326"></a>Avertissement du compilateur (niveau 1) C4326
 
-> type de retour de '*fonction*'doit être'*type1*« au lieu de »*type2*'
+> le type de retour de'*Function*'doit être'*type1*'au lieu de'*type2*'
 
 ## <a name="remarks"></a>Notes
 
-Une fonction a retourné un type autre que *type1*. Par exemple, à l’aide de [/Za](../../build/reference/za-ze-disable-language-extensions.md), **principal** n’a pas retourné un **int**.
+Une fonction a retourné un type autre que *type1*. Par exemple, à l’aide de [/za](../../build/reference/za-ze-disable-language-extensions.md), **main** n’a pas retourné un **int**.
 
 ## <a name="example"></a>Exemple
 
-L’exemple suivant génère l’erreur C4326 et montre comment la corriger :
+L’exemple suivant génère l’opération C4326 et montre comment la corriger :
 
 ```cpp
 // C4326.cpp

@@ -2,12 +2,12 @@
 title: Fonctions utilisées par défaut et supprimées explicitement
 ms.date: 11/04/2016
 ms.assetid: 5a588478-fda2-4b3f-a279-db3967f5e07e
-ms.openlocfilehash: aa03ca826eebe467e45e2bb7e0bc47537d40f366
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: b43588aac1d246c83f5281456625eeb0ff36b94d
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62184324"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80179976"
 ---
 # <a name="explicitly-defaulted-and-deleted-functions"></a>Fonctions utilisées par défaut et supprimées explicitement
 
@@ -15,7 +15,7 @@ En C++11, les fonctions utilisées par défaut et supprimées vous permettent de
 
 ## <a name="benefits-of-explicitly-defaulted-and-deleted-functions"></a>Avantages des fonctions utilisées par défaut et supprimées explicitement
 
-En C++, le compilateur génère automatiquement le constructeur par défaut, le constructeur de copie, l'opérateur d'assignation de copie et le destructeur pour un type s'il ne déclare pas le sien. Ces fonctions sont appelées les *fonctions membres spéciales*, et ils sont permettent à des types simples définis par l’utilisateur en C++ se comportent comme des structures en C. Autrement dit, vous pouvez créer, copier et les détruire sans effort de codage supplémentaire. C++11 fournit la sémantique de déplacement au langage et ajoute le constructeur de déplacement et l'opérateur d'assignation de mouvement à la liste des fonctions membres spéciales que le compilateur peut générer automatiquement.
+En C++, le compilateur génère automatiquement le constructeur par défaut, le constructeur de copie, l'opérateur d'assignation de copie et le destructeur pour un type s'il ne déclare pas le sien. Ces fonctions sont connues sous le nom de *fonctions membres spéciales*, et c’est ce qui rend les types simples C++ définis par l’utilisateur dans se comporter comme les structures en C. Autrement dit, vous pouvez les créer, les copier et les détruire sans effort de codage supplémentaire. C++11 fournit la sémantique de déplacement au langage et ajoute le constructeur de déplacement et l'opérateur d'assignation de mouvement à la liste des fonctions membres spéciales que le compilateur peut générer automatiquement.
 
 Cela est pratique pour les types simples, mais les types complexes définissent eux-mêmes souvent une ou plusieurs des fonctions membres spéciales, et cela peut empêcher d'autres fonctions membres spéciales d'être générées automatiquement. Dans la pratique :
 
@@ -43,7 +43,7 @@ Cela est pratique pour les types simples, mais les types complexes définissent 
 >
 > Dans les deux cas, Visual Studio continue à générer automatiquement les fonctions nécessaires implicitement, sans émettre d'avertissement.
 
-Les conséquences de ces règles peuvent également se répercuter dans la hiérarchie des objets. Par exemple, si pour une raison quelconque une classe de base n’est pas un constructeur par défaut qui peut être appelé à partir d’une classe dérivée, autrement dit, un **public** ou **protégé** constructeur qui n’accepte aucun paramètre — ensuite une classe qui dérive d’elle ne peut pas générer automatiquement son propre constructeur par défaut.
+Les conséquences de ces règles peuvent également se répercuter dans la hiérarchie des objets. Par exemple, si, pour une raison quelconque, une classe de base ne peut pas avoir un constructeur par défaut qui peut être appelé à partir d’une classe dérivée (autrement dit, un constructeur **public** ou **protégé** qui ne prend aucun paramètre), une classe qui en dérive ne peut pas générer automatiquement son propre constructeur par défaut.
 
 Ces règles peuvent compliquer l'implémentation d'idiomes C++ qui devraient pourtant être simples, courants et de types définis par l'utilisateur (par exemple, rendre un type défini par l'utilisateur impossible à copier en déclarant le constructeur de copie et l'opérateur d'assignation de copie en privé et en ne les définissant pas).
 
@@ -95,7 +95,7 @@ Des idiomes similaires existent pour créer des types définis par l'utilisateur
 
 Vous pouvez définir par défaut n'importe laquelle des fonctions membres spéciales : pour établir explicitement que la fonction membre spéciale utilise l'implémentation par défaut, pour définir la fonction membre spéciale avec un qualificateur d'accès non public ou pour rétablir une fonction membre spéciale dont la génération automatique a été empêchée par d'autres circonstances.
 
-Vous définissez par défaut une fonction membre spéciale en la déclarant comme dans cet exemple : 
+Vous définissez par défaut une fonction membre spéciale en la déclarant comme dans cet exemple :
 
 ```cpp
 struct widget
@@ -132,7 +132,7 @@ void call_with_true_double_only(float) =delete;
 void call_with_true_double_only(double param) { return; }
 ```
 
-Notez que, dans l’exemple précédent que l’appel `call_with_true_double_only` à l’aide un **float** argument provoque une erreur du compilateur, contrairement à l’appel `call_with_true_double_only` à l’aide un **int** argument ne serait pas ; dans le **int** cas, l’argument sera promu de **int** à **double** et appellera avec succès le **double** version de la fonction, Bien que cela pourrait s’avérer ce qui est prévu. Pour garantir qu’un appel à cette fonction à l’aide d’un argument non double provoque une erreur du compilateur, vous pouvez déclarer une version de modèle de la fonction supprimée.
+Notez que dans l’exemple précédent, l’appel de `call_with_true_double_only` à l’aide d’un argument **float** provoque une erreur du compilateur, mais l’appel de `call_with_true_double_only` à l’aide d’un argument **int** ne le ferait pas ; dans le cas **int** , l’argument sera promu de **int** en **double** et appellera correctement la version **double** de la fonction, même si ce n’est peut-être pas ce qui est prévu. Pour garantir qu’un appel à cette fonction à l’aide d’un argument non double provoque une erreur du compilateur, vous pouvez déclarer une version de modèle de la fonction supprimée.
 
 ```cpp
 template < typename T >

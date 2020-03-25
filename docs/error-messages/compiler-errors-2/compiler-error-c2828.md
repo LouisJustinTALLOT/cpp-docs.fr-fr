@@ -6,16 +6,16 @@ f1_keywords:
 helpviewer_keywords:
 - C2828
 ms.assetid: d8df6ed4-5954-46c2-b59b-52881d4e923d
-ms.openlocfilehash: d6dc742a181d8aebc041d9ffadd6256d3b7c9348
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: e5984573074b07ae4cbd961ad7d8821173e0b04b
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62406858"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80201886"
 ---
 # <a name="compiler-error-c2828"></a>Erreur du compilateur C2828
 
-'operator opérateur' ne peut pas être globalement substitué par une forme binaire
+'operator opérateur’ne peut pas être globalement substitué par une forme binaire
 
 L’opérateur ne peut pas avoir une forme binaire en dehors d’un objet.
 

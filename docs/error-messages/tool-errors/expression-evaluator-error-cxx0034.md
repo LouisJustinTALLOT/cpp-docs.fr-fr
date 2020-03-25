@@ -7,19 +7,19 @@ helpviewer_keywords:
 - CAN0034
 - CXX0034
 ms.assetid: afcee5f1-beff-489f-aea6-04f55e76364f
-ms.openlocfilehash: 34cb7de7382f43d41ab8f92343b4ae57eee2ed67
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: d764ce8b243c7004f95650f93e7a44a36962cef4
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62397066"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80195485"
 ---
 # <a name="expression-evaluator-error-cxx0034"></a>Évaluateur d'expression, erreur CXX0034
 
 **types incompatibles avec l’opérateur**
 
-Les types d’opérande spécifiés ne sont pas autorisés pour l’opération.
+Les types d’opérandes spécifiés ne sont pas valides pour l’opération.
 
-Par exemple, un pointeur ne peut pas être multiplié par n’importe quelle valeur.
+Par exemple, un pointeur ne peut pas être multiplié par une valeur.
 
-Vous devrez peut-être taper convertir les opérandes dans un type compatible avec l’opérateur.
+Vous devrez peut-être taper le cast des opérandes en un type compatible avec l’opérateur.

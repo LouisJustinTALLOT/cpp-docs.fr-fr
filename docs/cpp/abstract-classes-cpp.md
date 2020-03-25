@@ -7,12 +7,12 @@ helpviewer_keywords:
 - abstract classes [C++]
 - derived classes [C++], abstract classes [C++]
 ms.assetid: f0c5975b-39de-4d68-9640-6ce57f4632e6
-ms.openlocfilehash: a7b41a2cabc2cff2eca24cf50c6c30d5190d39a9
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 2ea9d3765f65434cb738c2b7c53f9499bba24545
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62385087"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80181692"
 ---
 # <a name="abstract-classes-c"></a>Classes abstraites (C++)
 
@@ -53,9 +53,9 @@ Une autre restriction est que si le constructeur d'une classe abstraite appelle 
 
 Les fonctions virtuelles pures peuvent être définies pour les classes abstraites, mais elles peuvent être appelées directement en utilisant la syntaxe suivante :
 
-*abstract-class-name*::*function-name*()
+*abstract-class-name*::*Function-name*()
 
-C’est utile lors de la création des hiérarchies de classes dont les classes de base incluent des destructeurs virtuels purs, car les destructeurs de classe de base sont toujours appelés dans le processus de destruction d’un objet. Prenons l'exemple suivant :
+C’est utile lors de la création des hiérarchies de classes dont les classes de base incluent des destructeurs virtuels purs, car les destructeurs de classe de base sont toujours appelés dans le processus de destruction d’un objet. Prenons l’exemple suivant :
 
 ```cpp
 // Declare an abstract base class with a pure virtual destructor.

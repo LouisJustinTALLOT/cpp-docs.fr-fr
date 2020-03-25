@@ -7,16 +7,16 @@ helpviewer_keywords:
 - property __declspec keyword
 - __declspec keyword [C++], property
 ms.assetid: f3b850ba-bf48-4df7-a1d6-8259d97309ce
-ms.openlocfilehash: ece1016b7a18873dfa477b0f8b6ae4271a0f8001
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 03f71739698fd20a01fd72567ce5b9babc176327
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62301485"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80179300"
 ---
 # <a name="property-c"></a>property (C++)
 
-**Section spécifique à Microsoft**
+**Section spécifique de Microsoft**
 
 Cet attribut peut être appliqué à des « données membres virtuelles » non statiques dans une définition de classe ou de structure. Le compilateur traite ces « données membres virtuelles » comme des données membres en changeant leurs références en appels de fonction.
 
@@ -30,9 +30,9 @@ Cet attribut peut être appliqué à des « données membres virtuelles » non
 
 ## <a name="remarks"></a>Notes
 
-Lorsque le compilateur détecte une donnée membre déclarée avec cet attribut sur la droite d’un opérateur de sélection de membres («**.**« ou »**->**»), il convertit l’opération à un `get` ou `put` (fonction), selon que cette expression est une l-value ou une r-value. En savoir plus compliqué contextes, tels que «`+=`», une réécriture est effectuée par ces deux approches `get` et `put`.
+Lorsque le compilateur voit un membre de données déclaré avec cet attribut à droite d’un opérateur de sélection de membres (« **.** » ou « **->** »), il convertit l’opération en une fonction `get` ou `put`, selon qu’une expression est une l-value ou une r-value. Dans les contextes plus complexes, tels que «`+=`», une réécriture est effectuée en effectuant `get` et `put`.
 
-Cet attribut peut également être utilisé dans la déclaration d'un tableau vide dans une définition de classe ou de structure. Exemple :
+Cet attribut peut également être utilisé dans la déclaration d'un tableau vide dans une définition de classe ou de structure. Par exemple :
 
 ```cpp
 __declspec(property(get=GetX, put=PutX)) int x[];
@@ -40,7 +40,7 @@ __declspec(property(get=GetX, put=PutX)) int x[];
 
 L'instruction ci-dessus indique que `x[]` peut être utilisé avec un ou plusieurs index de tableau. Dans ce cas, `i=p->x[a][b]` est converti en `i=p->GetX(a, b)` et `p->x[a][b] = i` est converti en `p->PutX(a, b, i);`
 
-**FIN de la section spécifique à Microsoft**
+**Fin de la section spécifique de Microsoft**
 
 ## <a name="example"></a>Exemple
 

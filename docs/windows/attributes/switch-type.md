@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - switch_type attribute
 ms.assetid: e24544dc-b3bc-48ae-b249-f967db49271e
-ms.openlocfilehash: c3a4187c629238fa464a607c0b653f857fa44b6a
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: b4264681a55f45c8a4a2696e8cebbbd0eb12a4ed
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69513949"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80214524"
 ---
 # <a name="switch_type"></a>switch_type
 
@@ -57,7 +57,7 @@ struct SizedValue2 {
 
 Pour obtenir un exemple d’utilisation de **switch_type**, consultez l’exemple de [cas](case-cpp.md) .
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
 ### <a name="attribute-context"></a>Contexte d'attribut
 
@@ -65,8 +65,8 @@ Pour obtenir un exemple d’utilisation de **switch_type**, consultez l’exempl
 |-|-|
 |**S'applique à**|**typedef**|
 |**Renouvelable**|Non|
-|**Attributs requis**|Aucun|
-|**Attributs non valides**|Aucun|
+|**Attributs requis**|None|
+|**Attributs non valides**|None|
 
 Pour plus d'informations sur les contextes d'attribut, consultez [Contextes d'attribut](cpp-attributes-com-net.md#contexts).
 

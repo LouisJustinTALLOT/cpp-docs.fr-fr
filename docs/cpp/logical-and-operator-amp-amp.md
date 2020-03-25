@@ -8,12 +8,12 @@ helpviewer_keywords:
 - AND operator
 - '&& operator'
 ms.assetid: 50cfa664-a8c4-4b31-9bab-2f80d7cd2d1f
-ms.openlocfilehash: 0843ba95467c3ae0d735476de48a8195a59788f0
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: b21d91009c455b67af6fae88fceafeeaf8043301
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62368654"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80179430"
 ---
 # <a name="logical-and-operator-ampamp"></a>Opérateur AND logique : &amp;&amp;
 
@@ -25,7 +25,7 @@ expression && expression
 
 ## <a name="remarks"></a>Notes
 
-L’opérateur AND logique (**&&**) retourne la valeur booléenne TRUE si les deux opérandes sont TRUE et FALSE sinon. Les opérandes sont convertis implicitement en type **bool** avant l’évaluation et le résultat est de type **bool**. L'opérateur logique présente une associativité de gauche à droite.
+L’opérateur AND logique ( **&&** ) retourne la valeur booléenne true si les deux opérandes ont la valeur true et retourne false dans le cas contraire. Les opérandes sont implicitement convertis en type **bool** avant l’évaluation, et le résultat est de type **bool**. L'opérateur logique présente une associativité de gauche à droite.
 
 Les opérandes de l’opérateur logique AND n’ont pas besoin d’être du même type, mais ils doivent être de type intégral ou de type pointeur. Les opérandes sont souvent des expressions relationnelles ou d’égalité.
 
@@ -41,9 +41,9 @@ char *pch = 0;
 
 Si `pch` est null (0), le côté droit de l'expression n'est jamais évalué. Par conséquent, l'assignation via un pointeur null est impossible.
 
-## <a name="operator-keyword-for-"></a>Mot clé operator pour & &
+## <a name="operator-keyword-for-"></a>Mot clé Operator pour & &
 
-Le **et** opérateur est l’équivalent textuel de **&&**. Il existe deux façons d’accéder à la **et** opérateur dans vos programmes : inclure le fichier d’en-tête `iso646.h`, ou compiler avec la [/Za](../build/reference/za-ze-disable-language-extensions.md) option du compilateur (désactiver les extensions de langage).
+L’opérateur **and** est l’équivalent textuel de **&&** . Il existe deux façons d’accéder à l’opérateur **and** dans vos programmes : incluez le fichier d’en-tête `iso646.h`ou compilez avec l’option de compilateur [/za](../build/reference/za-ze-disable-language-extensions.md) (désactivation des extensions de langage).
 
 ## <a name="example"></a>Exemple
 
@@ -69,6 +69,6 @@ int main() {
 
 ## <a name="see-also"></a>Voir aussi
 
-[Opérateurs C++ intégrés priorité et associativité](cpp-built-in-operators-precedence-and-associativity.md)<br/>
+[C++Priorité et associativité des opérateurs intégrés](cpp-built-in-operators-precedence-and-associativity.md)<br/>
 [Opérateurs intégrés, priorité et associativité C++](../cpp/cpp-built-in-operators-precedence-and-associativity.md)<br/>
 [Opérateurs logiques C](../c-language/c-logical-operators.md)

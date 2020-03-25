@@ -8,12 +8,12 @@ helpviewer_keywords:
 - partial
 - C++/CX, partial
 ms.assetid: 43adf1f5-10c5-44aa-a66f-7507e2bdabf8
-ms.openlocfilehash: 37406060c3569c417c14bcc98561f8f52a7c6201
-ms.sourcegitcommit: 28eae422049ac3381c6b1206664455dbb56cbfb6
+ms.openlocfilehash: ad8faa08a2c85e777cbc8721e5842e708b9e6cb1
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/31/2019
-ms.locfileid: "70311946"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80181848"
 ---
 # <a name="partial--ccli-and-ccx"></a>partiel (C++/CLI et C++/CX)
 
@@ -53,23 +53,23 @@ Le nom du type défini.
 
 Une classe partielle prend en charge les scénarios dans lesquels vous modifiez une partie d’une définition de classe dans un fichier, et un logiciel de génération de code automatique, par exemple le concepteur XAML, modifie le code de la même classe dans un autre fichier. L’utilisation d’une classe partielle vous permet d’empêcher le générateur de code automatique de remplacer votre code. Dans un projet Visual Studio, le modificateur **partial** est appliqué automatiquement au fichier généré.
 
-Contenu : Hormis deux exceptions, une définition de classe partielle peut contenir tout ce que la définition de classe complète peut contenir si le mot clé **partial** a été omis. Toutefois, vous ne pouvez pas spécifier d’accessibilité de classe (par exemple, `public partial class X { ... };`), ou **declspec**.
+Contenu : à deux exceptions près, une définition de classe partielle peut contenir tout ce que la définition de classe complète peut contenir si le mot clé **Partial** a été omis. Toutefois, vous ne pouvez pas spécifier d’accessibilité de classe (par exemple, `public partial class X { ... };`), ou **declspec**.
 
 Les spécificateurs d’accès utilisés dans une définition de classe partielle pour *identifier* n’affectent pas l’accessibilité par défaut dans une définition de classe partielle ou complète suivante pour *identifier*. Les définitions incluses des membres de données statiques sont autorisées.
 
-Déclaration : Une définition partielle d’un *identifier* de classe présente uniquement le nom *identifier*, mais *identifier* ne peut pas être utilisé d’une manière qui requiert une définition de classe. Le nom *identifier* ne peut pas être utilisé pour déterminer la taille d’*identifier*, ni pour utiliser une base ou un membre d’*identifier* jusqu’à ce que le compilateur rencontre la définition complète d’*identifier*.
+Déclaration : une définition partielle d’un *identificateur* de classe introduit uniquement l' *identificateur*de nom, mais l' *identificateur* ne peut pas être utilisé d’une manière qui requiert une définition de classe. Le nom *identifier* ne peut pas être utilisé pour déterminer la taille d’*identifier*, ni pour utiliser une base ou un membre d’*identifier* jusqu’à ce que le compilateur rencontre la définition complète d’*identifier*.
 
-Nombre et classement : Il peut y avoir zéro définition de classe partielle ou plus pour *identifier*. Chaque définition de classe partielle d’*identifier* doit précéder lexicalement la définition complète d’*identifier* (s’il existe une définition complète ; sinon, la classe ne peut pas être utilisée, sauf si elle a été déclarée avant), mais ne doit pas obligatoirement précéder les déclarations anticipées d’*identifier*. Toutes les class-keys doivent correspondre.
+Nombre et classement : il peut y avoir zéro ou plusieurs définitions de classes partielles pour l' *identificateur*. Chaque définition de classe partielle d’*identifier* doit précéder lexicalement la définition complète d’*identifier* (s’il existe une définition complète ; sinon, la classe ne peut pas être utilisée, sauf si elle a été déclarée avant), mais ne doit pas obligatoirement précéder les déclarations anticipées d’*identifier*. Toutes les class-keys doivent correspondre.
 
-Définition complète : Dans la phase de définition complète de la classe *identifier*, le comportement est identique comme si la définition de *identifier* a déclaré toutes les classes de base, les membres, etc., dans l’ordre dans lequel ils ont été rencontrés et définis dans les classes partielles.
+Définition complète : au point de la définition complète de l' *identificateur*de classe, le comportement est le même que si la définition de l' *identificateur* avait déclaré toutes les classes de base, les membres, etc. dans l’ordre dans lequel ils ont été rencontrés et définis dans les classes partielles.
 
-Modèles : Une classe partielle ne peut pas être un modèle.
+Modèles : une classe partielle ne peut pas être un modèle.
 
-Génériques : Une classe partielle peut être générique si la définition complète peut être générique. Mais toutes les classes partielles et complètes doivent avoir exactement les mêmes paramètres génériques, y compris les noms de paramètres formels.
+Génériques : une classe partielle peut être générique si la définition complète peut être générique. Mais toutes les classes partielles et complètes doivent avoir exactement les mêmes paramètres génériques, y compris les noms de paramètres formels.
 
 Pour plus d’informations sur l’utilisation du mot clé **partial**, consultez [Classes partielles (C++/CX)](https://go.microsoft.com/fwlink/p/?LinkId=249023).
 
-### <a name="requirements"></a>Configuration requise
+### <a name="requirements"></a>Spécifications
 
 Option du compilateur : `/ZW`
 

@@ -21,109 +21,109 @@ helpviewer_keywords:
 - data resources [C++]
 - resources [C++], creating
 ms.assetid: 2483c48b-1252-4dbc-826b-82e6c1a0e9cb
-ms.openlocfilehash: 832dbf711307b81527bcaff0d1e1b8138f208e46
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 591a6714f1adabb30fda446cad0e79e2c28c30ad
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62407035"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80215239"
 ---
 # <a name="binary-editor-c"></a>Éditeur binaire (C++)
 
 > [!CAUTION]
-> Modification des ressources telles que les boîtes de dialogue, des images ou des menus dans le **éditeur binaire** est dangereux. Une modification incorrecte peut endommager la ressource et la rendre illisible dans son éditeur natif.
+> La modification de ressources telles que des boîtes de dialogue, des images ou des menus dans l' **Éditeur binaire** est dangereuse. Une modification incorrecte peut endommager la ressource et la rendre illisible dans son éditeur natif.
 
-Le **éditeur binaire** permet de modifier n’importe quelle ressource au niveau binaire au format hexadécimal ou ASCII. Vous pouvez également utiliser la [commande Rechercher](/visualstudio/ide/reference/find-command) pour rechercher des chaînes ASCII ou des octets hexadécimaux. Utilisez le **éditeur binaire** uniquement lorsque vous avez besoin afficher ou de légères modifications à des ressources personnalisées ou des types de ressources non pris en charge par l’environnement Visual Studio. Le **éditeur binaire** n’est pas disponible dans les éditions Express.
+L' **Éditeur binaire** vous permet de modifier n’importe quelle ressource au niveau binaire au format hexadécimal ou ASCII. Vous pouvez également utiliser la [commande Rechercher](/visualstudio/ide/reference/find-command) pour rechercher des chaînes ASCII ou des octets hexadécimaux. Utilisez l' **Éditeur binaire** uniquement lorsque vous avez besoin d’afficher ou d’apporter des modifications mineures à des ressources personnalisées ou à des types de ressources non pris en charge par l’environnement Visual Studio. L' **Éditeur binaire** n’est pas disponible dans les éditions Express.
 
-- Pour ouvrir le **éditeur binaire** sur un nouveau fichier, accédez au menu **fichier** > **New** > **fichier**, sélectionnez le type de fichier à modifier, puis sélectionnez la flèche à côté du **Open** bouton, puis choisissez **ouvrir avec** > **éditeur binaire**.
+- Pour ouvrir l' **Éditeur binaire** sur un nouveau fichier, accédez à **fichier** de menu **New** > nouveau **fichier**de > , sélectionnez le type de fichier à modifier, puis sélectionnez la flèche déroulante en regard du bouton **ouvrir** et choisissez **Ouvrir avec** > **Éditeur binaire**.
 
-- Pour ouvrir le **éditeur binaire** sur un fichier existant, accédez au menu **fichier** > **ouvrir** > **fichier**, sélectionnez le fichier à modifier, puis sélectionnez la flèche à côté du **Open** bouton, puis choisissez **ouvrir avec** > **éditeur binaire**.
+- Pour ouvrir l' **Éditeur binaire** sur un fichier existant, accédez au menu **fichier** > **ouvrez** > **fichier**, sélectionnez le fichier que vous souhaitez modifier, puis sélectionnez la flèche déroulante en regard du bouton **ouvrir** et choisissez **Ouvrir avec** > **Éditeur binaire**.
 
-   ![Éditeur binaire](../mfc/media/vcbinaryeditor2.gif "vcBinaryEditor2")<br/>
-   Données binaires pour une boîte de dialogue affichée dans le **éditeur binaire**
+   ![Binary Editor](../mfc/media/vcbinaryeditor2.gif "vcBinaryEditor2")<br/>
+   Données binaires pour une boîte de dialogue affichée dans l' **Éditeur binaire**
 
-Seules certaines valeurs ASCII sont représentées dans le **éditeur binaire** (0 x 20 à 0x7E). Les caractères étendus sont affichés sous forme de points dans la section de valeur ASCII panneau droit de la **éditeur binaire**. Les caractères imprimables sont des valeurs ASCII comprises entre 32 et 126.
+Seules certaines valeurs ASCII sont représentées dans l' **Éditeur binaire** (0X20 à 0x7E). Les caractères étendus sont affichés sous forme de points dans la section valeur ASCII du volet droit de l' **Éditeur binaire**. Les caractères imprimables sont des valeurs ASCII 32 à 126.
 
 > [!TIP]
-> Lors de l’utilisation du **éditeur binaire**, dans de nombreux cas vous pouvez avec le bouton droit pour afficher un menu contextuel de commandes spécifiques à la ressource. Les commandes disponibles varient selon la cible du pointeur. Par exemple, si vous cliquez en pointant sur le **éditeur binaire** avec des valeurs hexadécimales sélectionnées, le menu contextuel affiche les **couper**, **copie**et **Coller** commandes.
+> Lorsque vous utilisez l' **Éditeur binaire**, dans de nombreux cas, vous pouvez cliquer avec le bouton droit pour afficher un menu contextuel de commandes spécifiques à la ressource. Les commandes disponibles varient selon la cible du pointeur. Par exemple, si vous cliquez avec le bouton droit de la souris en pointant sur l' **Éditeur binaire** avec des valeurs hexadécimales sélectionnées, le menu contextuel affiche les commandes **couper**, **copier**et **coller** .
 
-## <a name="how-to"></a>Comment
+## <a name="how-to"></a>Procédure
 
-Le **éditeur binaire** vous permet de :
+L' **Éditeur binaire** vous permet d’activer les éléments suivants :
 
 ### <a name="to-open-a-windows-desktop-resource-for-binary-editing"></a>Pour ouvrir une ressource de bureau Windows pour l’édition binaire
 
 1. Dans [Affichage des ressources](how-to-create-a-resource-script-file.md#create-resources), sélectionnez le fichier de ressources que vous souhaitez modifier.
 
-1. Cliquez sur la ressource et sélectionnez **Open Data binaire**.
+1. Cliquez avec le bouton droit sur la ressource et sélectionnez **ouvrir les données binaires**.
 
 > [!NOTE]
-> Si vous utilisez le **affichage des ressources** fenêtre pour ouvrir une ressource ayant un format que Visual Studio ne reconnaît pas, comme RCDATA ou une ressource personnalisée, la ressource s’ouvre automatiquement dans le **éditeur binaire**.
+> Si vous utilisez la fenêtre **affichage des ressources** pour ouvrir une ressource ayant un format que Visual Studio ne reconnaît pas, comme RCDATA ou une ressource personnalisée, la ressource est automatiquement ouverte dans l' **Éditeur binaire**.
 
 ### <a name="to-open-a-managed-resource-for-binary-editing"></a>Pour ouvrir une ressource managée pour l’édition binaire
 
-1. Dans **l’Explorateur de solutions**, sélectionnez le fichier de ressources que vous souhaitez modifier.
+1. Dans **Explorateur de solutions**, sélectionnez le fichier de ressources spécifique que vous souhaitez modifier.
 
-1. Cliquez sur la ressource et sélectionnez **ouvrir avec**.
+1. Cliquez avec le bouton droit sur la ressource, puis sélectionnez **Ouvrir avec**.
 
 1. Dans la boîte de dialogue **Ouvrir avec** , sélectionnez **Éditeur binaire**.
 
 > [!NOTE]
-> Vous pouvez utiliser la [Éditeur d’images](../windows/image-editor-for-icons.md) et **éditeur binaire** pour travailler avec des fichiers de ressources dans les projets managés. Toutes les ressources managées que vous souhaitez modifier doivent être liées. Les éditeurs de ressources Visual Studio ne prennent pas en charge la modification des ressources incorporées.
+> Vous pouvez utiliser l' [éditeur d’images](../windows/image-editor-for-icons.md) et l' **Éditeur binaire** pour travailler avec des fichiers de ressources dans des projets managés. Toutes les ressources managées que vous souhaitez modifier doivent être liées. Les éditeurs de ressources Visual Studio ne prennent pas en charge la modification des ressources incorporées.
 
 ### <a name="to-edit-a-resource"></a>Pour modifier une ressource
 
-Si vous souhaitez utiliser le **éditeur binaire** sur une ressource déjà en cours de modification dans une autre fenêtre d’éditeur, fermez tout d’abord l’autre fenêtre d’éditeur.
+Si vous souhaitez utiliser l' **Éditeur binaire** sur une ressource déjà en cours de modification dans une autre fenêtre d’éditeur, fermez d’abord l’autre fenêtre de l’éditeur.
 
 1. Sélectionnez l’octet que vous souhaitez modifier.
 
-   Le **onglet** touche déplace le focus entre les sections hexadécimale et ASCII de la **éditeur binaire**. Vous pouvez utiliser la **PG.préc** et **PG.suiv** clés pour vous déplacer dans l’écran d’une ressource à la fois.
+   La touche **Tab** déplace le focus entre les sections hexadécimale et ASCII de l' **Éditeur binaire**. Vous pouvez utiliser les touches **PG** . **suiv et PG. suiv** . pour vous déplacer dans la ressource un écran à la fois.
 
 1. Tapez la nouvelle valeur.
 
-   La valeur change immédiatement dans à la fois les sections hexadécimale et ASCII et le focus passe à la valeur suivante dans la ligne.
+   La valeur change immédiatement dans les sections hexadécimale et ASCII et le focus passe à la valeur suivante dans la ligne.
 
 > [!NOTE]
-> Le **éditeur binaire** accepte les modifications automatiquement lorsque vous fermez l’éditeur.
+> L' **Éditeur binaire** accepte les modifications automatiquement quand vous fermez l’éditeur.
 
 ### <a name="to-find-binary-data"></a>Pour rechercher des données binaires
 
 Vous pouvez rechercher des chaînes ASCII ou des octets hexadécimaux. Par exemple, pour rechercher *Hello*, vous pouvez rechercher la chaîne *Hello* ou sa valeur hexadécimale, *48 65 6C 6C 6F*.
 
-1. Accédez au menu **modifier** > [trouver](/visualstudio/ide/reference/find-command).
+1. Accédez au menu **modifier** > [Rechercher](/visualstudio/ide/reference/find-command).
 
-1. Dans le **rechercher** zone, sélectionnez une chaîne de recherche précédente à partir de la liste déroulante ou tapez les données que vous souhaitez rechercher.
+1. Dans la zone **Rechercher** , sélectionnez une chaîne de recherche précédente dans la liste déroulante ou tapez les données que vous souhaitez rechercher.
 
-1. Sélectionnez un de la **trouver** options et choisissez **suivant**.
+1. Sélectionnez l’une des options de **recherche** , puis choisissez **suivant**.
 
 ### <a name="to-create-a-new-custom-or-data-resource"></a>Pour créer une ressource personnalisée ou une ressource de données
 
-Vous pouvez créer une nouvelle ressource personnalisée ou de données en plaçant la ressource dans un fichier distinct à l’aide de la syntaxe de fichier de script (.rc) de ressource normale, puis en incluant ce fichier en double-cliquant sur votre projet dans **l’Explorateur de solutions** et en sélectionnant  **Include des ressources**.
+Vous pouvez créer une ressource personnalisée ou une ressource de données en plaçant la ressource dans un fichier distinct à l’aide de la syntaxe de fichier de script de ressources normal (. RC), puis en incluant ce fichier en cliquant avec le bouton droit sur votre projet dans **Explorateur de solutions** et en sélectionnant **inclure les ressources**.
 
 1. [Créez un fichier .rc](../windows/how-to-create-a-resource-script-file.md) qui contient la ressource personnalisée ou de données.
 
    Vous pouvez taper des données personnalisées dans un fichier .rc en tant que chaînes entre guillemets terminées par un caractère Null, ou sous forme d’entiers au format octal, hexadécimal ou décimal.
 
-1. Dans **l’Explorateur de solutions**, cliquez sur le fichier .rc du projet et sélectionnez **Include des ressources**.
+1. Dans **Explorateur de solutions**, cliquez avec le bouton droit sur le fichier. RC de votre projet, puis sélectionnez **include des ressources**.
 
-1. Dans le **Directives de compilation** , tapez un `#include` instruction qui fournit le nom du fichier contenant la ressource personnalisée, par exemple :
+1. Dans la zone **directives au moment** de la compilation, tapez une instruction `#include` qui donne le nom du fichier contenant votre ressource personnalisée, par exemple :
 
     ```cpp
     #include mydata.rc
     ```
 
-   Assurez-vous que la syntaxe et l’orthographe de ce que vous tapez sont correctes. Le contenu de la **Directives de compilation** boîte est inséré dans le fichier de script de ressources exactement comme vous les tapez.
+   Assurez-vous que la syntaxe et l’orthographe de ce que vous tapez sont correctes. Le contenu de la zone **directives au moment** de la compilation est inséré dans le fichier de script de ressources exactement à mesure que vous les tapez.
 
 1. Sélectionnez **OK** pour enregistrer vos modifications.
 
-Une autre façon de créer une ressource personnalisée consiste à importer un fichier externe en tant que ressource personnalisée, consultez [Comment : Gérer les ressources](../windows/how-to-import-and-export-resources.md).
+Une autre façon de créer une ressource personnalisée consiste à importer un fichier externe en tant que ressource personnalisée, consultez [How to : Manage Resources](../windows/how-to-import-and-export-resources.md).
 
 > [!NOTE]
-> Création de nouvelles ressources personnalisée ou de données nécessite Win32.
+> La création de nouvelles ressources personnalisées ou de données requiert Win32.
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
-Aucun.
+None
 
 ## <a name="see-also"></a>Voir aussi
 

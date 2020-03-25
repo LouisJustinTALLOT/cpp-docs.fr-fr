@@ -1,24 +1,24 @@
 ---
-title: Attribution
+title: Affectation
 ms.date: 11/04/2016
 helpviewer_keywords:
 - operators [C++], assignment
 - assignment operators [C++], overloaded
 ms.assetid: d87e4f89-f8f5-42c1-9d3c-184bca9d0e15
-ms.openlocfilehash: 1e6d715011cfaab7e250e23a9a31bb3f0c83f36a
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: f1697a8de3dff6c46de01db6bbff5447c03b6282
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62184337"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80190701"
 ---
-# <a name="assignment"></a>Attribution
+# <a name="assignment"></a>Affectation
 
-L’opérateur d’assignation (**=**) est à proprement parler, un opérateur binaire. Sa déclaration est identique à celle de tout autre opérateur binaire, avec les exceptions suivantes :
+L’opérateur d’assignation ( **=** ) est, strictement parlant, un opérateur binaire. Sa déclaration est identique à celle de tout autre opérateur binaire, avec les exceptions suivantes :
 
-- Il doit s'agir d'une fonction membre non statique. Ne **opérateur =** peuvent être déclarées comme une fonction non membre.
+- Il doit s'agir d'une fonction membre non statique. Aucun **opérateur =** ne peut être déclaré en tant que fonction non membre.
 - Il n'est pas hérité par les classes dérivées.
-- Une valeur par défaut **opérateur =** fonction peut être générée par le compilateur pour les types de classe, si aucune n’existe.
+- Une fonction **Operator =** par défaut peut être générée par le compilateur pour les types de classe, s’il n’en existe aucun.
 
 L'exemple suivant montre comment déclarer un opérateur d'assignation :
 
@@ -49,13 +49,13 @@ int main()
 }
 ```
 
-L’argument fourni est le côté droit de l’expression. L'opérateur retourne l'objet pour conserver le comportement de l'opérateur d'assignation, qui retourne la valeur du côté gauche une fois l'assignation terminée. Cela permet le chaînage des affectations, telles que :
+L’argument fourni est le côté droit de l’expression. L'opérateur retourne l'objet pour conserver le comportement de l'opérateur d'assignation, qui retourne la valeur du côté gauche une fois l'assignation terminée. Cela permet d’enchaîner des assignations, telles que :
 
 ```cpp
 pt1 = pt2 = pt3;
 ```
 
-L’opérateur d’assignation de copie est à ne pas confondre avec le constructeur de copie. Celle-ci est appelée pendant la construction d’un nouvel objet à partir d’une existante :
+L’opérateur d’assignation de copie ne doit pas être confondu avec le constructeur de copie. Ce dernier est appelé pendant la construction d’un nouvel objet à partir d’un objet existant :
 
 ```cpp
 // Copy constructor is called--not overloaded copy assignment operator!
@@ -66,7 +66,7 @@ Point pt4(pt1); // Copy constructor call.
 ```
 
 > [!NOTE]
-> Il est recommandé de suivre le [règle de trois](https://en.wikipedia.org/wiki/Rule_of_three_(C%2B%2B_programming)) qu’une classe qui définit un opérateur d’assignation de copie doit également définir explicitement le constructeur de copie, le destructeur et, en commençant par C ++ 11, déplacent constructeur et déplacer l’attribution d’opérateur.
+> Il est recommandé de suivre la [règle de trois](https://en.wikipedia.org/wiki/Rule_of_three_(C%2B%2B_programming)) qu’une classe qui définit un opérateur d’assignation de copie doit également définir explicitement le constructeur de copie, le destructeur et, à partir de c++ 11, le constructeur de déplacement et l’opérateur d’assignation de déplacement.
 
 ## <a name="see-also"></a>Voir aussi
 

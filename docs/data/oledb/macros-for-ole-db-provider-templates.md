@@ -50,12 +50,12 @@ helpviewer_keywords:
 - END_SCHEMA_MAP macro
 - SCHEMA_ENTRY macro
 ms.assetid: 909482c5-64ab-4e52-84a9-1c07091db183
-ms.openlocfilehash: b11455c1de13321bce52fbc3be906014b2844aee
-ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
+ms.openlocfilehash: 2fda4d9f003e84247527d964685e631532d4c366
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/17/2020
-ms.locfileid: "79442407"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80210143"
 ---
 # <a name="macros-for-ole-db-provider-templates"></a>Macros pour les modèles du fournisseur OLE DB
 
@@ -101,7 +101,7 @@ Les macros du fournisseur de modèles OLE DB offrent des fonctionnalités dans l
 
 **En-tête :** atldb.h
 
-### <a name="begin_property_set"></a>BEGIN_PROPERTY_SET
+### <a name="begin_property_set"></a><a name="begin_property_set"></a>BEGIN_PROPERTY_SET
 
 Marque le début d’un jeu de propriétés dans un mappage de jeu de propriétés.
 
@@ -120,7 +120,7 @@ dans GUID de la propriété.
 
 Consultez [BEGIN_PROPSET_MAP](../../data/oledb/begin-propset-map.md).
 
-### <a name="begin_property_set_ex"></a>BEGIN_PROPERTY_SET_EX
+### <a name="begin_property_set_ex"></a><a name="begin_property_set_ex"></a>BEGIN_PROPERTY_SET_EX
 
 Marque le début d’un jeu de propriétés dans un mappage de jeu de propriétés.
 
@@ -142,7 +142,7 @@ dans UPROPSET_HIDDEN pour les jeux de propriétés que vous ne souhaitez pas exp
 
 Consultez [BEGIN_PROPSET_MAP](../../data/oledb/begin-propset-map.md).
 
-### <a name="begin_propset_map"></a>BEGIN_PROPSET_MAP
+### <a name="begin_propset_map"></a><a name="begin_propset_map"></a>BEGIN_PROPSET_MAP
 
 Marque le début des entrées de mappage du jeu de propriétés.
 
@@ -169,7 +169,7 @@ Voici un exemple de mappage de jeu de propriétés :
 
 [!code-cpp[NVC_OLEDB_Provider#3](../../data/oledb/codesnippet/cpp/begin-propset-map_1.h)]
 
-### <a name="chain_property_set"></a>CHAIN_PROPERTY_SET
+### <a name="chain_property_set"></a><a name="chain_property_set"></a>CHAIN_PROPERTY_SET
 
 Cette macro chaîne des groupes de propriétés.
 
@@ -191,7 +191,7 @@ Vous pouvez chaîner un jeu de propriétés d’une autre classe à votre propre
 > [!CAUTION]
 >  Utilisez cette macro avec modération. Une utilisation incorrecte peut provoquer l’échec des tests de conformité de OLE DB par un consommateur.
 
-### <a name="end_property_set"></a>END_PROPERTY_SET
+### <a name="end_property_set"></a><a name="end_property_set"></a>END_PROPERTY_SET
 
 Marque la fin d’un jeu de propriétés.
 
@@ -210,7 +210,7 @@ dans GUID de la propriété.
 
 Consultez [BEGIN_PROPSET_MAP](../../data/oledb/begin-propset-map.md).
 
-### <a name="end_propset_map"></a>END_PROPSET_MAP
+### <a name="end_propset_map"></a><a name="end_propset_map"></a>END_PROPSET_MAP
 
 Marque la fin des entrées de mappage du jeu de propriétés.
 
@@ -224,7 +224,7 @@ END_PROPSET_MAP()
 
 Consultez [BEGIN_PROPSET_MAP](../../data/oledb/begin-propset-map.md).
 
-### <a name="property_info_entry"></a>PROPERTY_INFO_ENTRY
+### <a name="property_info_entry"></a><a name="property_info_entry"></a>PROPERTY_INFO_ENTRY
 
 Représente une propriété spécifique dans un jeu de propriétés.
 
@@ -247,7 +247,7 @@ Cette macro attribue à la propriété de type `DWORD` une valeur par défaut d�
 
 Consultez [BEGIN_PROPSET_MAP](../../data/oledb/begin-propset-map.md).
 
-### <a name="property_info_entry_ex"></a>PROPERTY_INFO_ENTRY_EX
+### <a name="property_info_entry_ex"></a><a name="property_info_entry_ex"></a>PROPERTY_INFO_ENTRY_EX
 
 Représente une propriété spécifique dans un jeu de propriétés.
 
@@ -282,7 +282,7 @@ Avec cette macro, vous pouvez spécifier directement la valeur de propriété de
 
 Consultez [BEGIN_PROPSET_MAP](../../data/oledb/begin-propset-map.md).
 
-### <a name="property_info_entry_value"></a>PROPERTY_INFO_ENTRY_VALUE
+### <a name="property_info_entry_value"></a><a name="property_info_entry_value"></a>PROPERTY_INFO_ENTRY_VALUE
 
 Représente une propriété spécifique dans un jeu de propriétés.
 
@@ -308,7 +308,7 @@ Avec cette macro, vous pouvez spécifier directement la valeur de propriété de
 
 Consultez [BEGIN_PROPSET_MAP](../../data/oledb/begin-propset-map.md).
 
-### <a name="begin_provider_column_map"></a>BEGIN_PROVIDER_COLUMN_MAP
+### <a name="begin_provider_column_map"></a><a name="begin_provider_column_map"></a>BEGIN_PROVIDER_COLUMN_MAP
 
 Marque le début des entrées de mappage de colonne du fournisseur.
 
@@ -329,7 +329,7 @@ Voici un exemple de mappage de colonne de fournisseur :
 
 [!code-cpp[NVC_OLEDB_Provider#4](../../data/oledb/codesnippet/cpp/begin-provider-column-map_1.h)]
 
-### <a name="end_provider_column_map"></a>END_PROVIDER_COLUMN_MAP
+### <a name="end_provider_column_map"></a><a name="end_provider_column_map"></a>END_PROVIDER_COLUMN_MAP
 
 Marque la fin des entrées de mappage de colonne du fournisseur.
 
@@ -343,7 +343,7 @@ END_PROVIDER_COLUMN_MAP()
 
 Consultez [BEGIN_PROVIDER_COLUMN_MAP](../../data/oledb/begin-provider-column-map.md).
 
-### <a name="provider_column_entry"></a>PROVIDER_COLUMN_ENTRY
+### <a name="provider_column_entry"></a><a name="provider_column_entry"></a>PROVIDER_COLUMN_ENTRY
 
 Représente une colonne spécifique prise en charge par le fournisseur.
 
@@ -364,7 +364,7 @@ dans Numéro de la colonne. À moins que la colonne ne soit une colonne de signe
 *member*<br/>
 dans Variable membre dans `dataClass` correspondant à la colonne.
 
-### <a name="provider_column_entry_fixed"></a>PROVIDER_COLUMN_ENTRY_FIXED
+### <a name="provider_column_entry_fixed"></a><a name="provider_column_entry_fixed"></a>PROVIDER_COLUMN_ENTRY_FIXED
 
 Représente une colonne spécifique prise en charge par le fournisseur.
 
@@ -396,7 +396,7 @@ Vous permet de spécifier le type de données de la colonne.
 
 Consultez [BEGIN_PROVIDER_COLUMN_MAP](../../data/oledb/begin-provider-column-map.md).
 
-### <a name="provider_column_entry_gn"></a>PROVIDER_COLUMN_ENTRY_GN
+### <a name="provider_column_entry_gn"></a><a name="provider_column_entry_gn"></a>PROVIDER_COLUMN_ENTRY_GN
 
 Représente une colonne spécifique prise en charge par le fournisseur.
 
@@ -436,7 +436,7 @@ GUID d’ensemble de lignes de schéma. Pour obtenir la liste des ensembles de l
 
 Vous permet de spécifier la taille de la colonne, le type de données, la précision, l’échelle et le GUID de l’ensemble de lignes de schéma.
 
-### <a name="provider_column_entry_length"></a>PROVIDER_COLUMN_ENTRY_LENGTH
+### <a name="provider_column_entry_length"></a><a name="provider_column_entry_length"></a>PROVIDER_COLUMN_ENTRY_LENGTH
 
 Représente une colonne spécifique prise en charge par le fournisseur.
 
@@ -468,7 +468,7 @@ Vous permet de spécifier la taille de la colonne.
 
 Consultez [BEGIN_PROVIDER_COLUMN_MAP](../../data/oledb/begin-provider-column-map.md).
 
-### <a name="provider_column_entry_str"></a>PROVIDER_COLUMN_ENTRY_STR
+### <a name="provider_column_entry_str"></a><a name="provider_column_entry_str"></a>PROVIDER_COLUMN_ENTRY_STR
 
 Représente une colonne spécifique prise en charge par le fournisseur.
 
@@ -497,7 +497,7 @@ Utilisez cette macro lorsque les données de la colonne sont supposées être [D
 
 Consultez [BEGIN_PROVIDER_COLUMN_MAP](../../data/oledb/begin-provider-column-map.md).
 
-### <a name="provider_column_entry_type_length"></a>PROVIDER_COLUMN_ENTRY_TYPE_LENGTH
+### <a name="provider_column_entry_type_length"></a><a name="provider_column_entry_type_length"></a>PROVIDER_COLUMN_ENTRY_TYPE_LENGTH
 
 Représente une colonne spécifique prise en charge par le fournisseur.
 
@@ -528,7 +528,7 @@ dans Variable membre dans la classe de données qui stocke les données.
 
 Semblable à [PROVIDER_COLUMN_ENTRY_LENGTH](../../data/oledb/provider-column-entry-length.md) , mais vous permet également de spécifier le type de données de la colonne, ainsi que la taille.
 
-### <a name="provider_column_entry_wstr"></a>PROVIDER_COLUMN_ENTRY_WSTR
+### <a name="provider_column_entry_wstr"></a><a name="provider_column_entry_wstr"></a>PROVIDER_COLUMN_ENTRY_WSTR
 
 Représente une colonne spécifique prise en charge par le fournisseur.
 
@@ -553,7 +553,7 @@ dans Variable membre dans la classe de données qui stocke les données.
 
 Utilisez cette macro lorsque les données de la colonne sont une chaîne de caractères Unicode terminée par un caractère null, [DBTYPE_WSTR](/previous-versions/windows/desktop/ms711251(v=vs.85)).
 
-### <a name="begin_schema_map"></a>BEGIN_SCHEMA_MAP
+### <a name="begin_schema_map"></a><a name="begin_schema_map"></a>BEGIN_SCHEMA_MAP
 
 Indique le début d’un mappage de schéma.
 
@@ -572,7 +572,7 @@ Classe qui contient le mappage. En général, il s’agit de la classe session.
 
 Pour plus d’informations sur les ensembles de lignes de schéma, consultez [IDBSchemaRowset](/previous-versions/windows/desktop/ms713686(v=vs.85)) dans le SDK Windows.
 
-### <a name="end_schema_map"></a>END_SCHEMA_MAP
+### <a name="end_schema_map"></a><a name="end_schema_map"></a>END_SCHEMA_MAP
 
 Indique la fin du mappage de schéma.
 
@@ -586,7 +586,7 @@ END_SCHEMA_MAP()
 
 Pour plus d’informations, consultez la [classe IDBSchemaRowsetImpl](../../data/oledb/idbschemarowsetimpl-class.md).
 
-### <a name="schema_entry"></a>SCHEMA_ENTRY
+### <a name="schema_entry"></a><a name="schema_entry"></a>SCHEMA_ENTRY
 
 Associe un GUID à une classe.
 

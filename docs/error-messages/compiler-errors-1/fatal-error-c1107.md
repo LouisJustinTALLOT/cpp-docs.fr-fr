@@ -6,17 +6,17 @@ f1_keywords:
 helpviewer_keywords:
 - C1107
 ms.assetid: 541a4d9f-10bc-4dd8-b68e-15e548f3dc0a
-ms.openlocfilehash: 135e8da1b49eb1d86f6186e8683ced2f5152a3a1
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 6e8df232b4d3f3b18eb7c37bcc418ca030a93aef
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62257762"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80203786"
 ---
 # <a name="fatal-error-c1107"></a>Erreur irrécupérable C1107
 
-Impossible de trouver l’assembly 'fichier' : spécifiez le chemin de recherche des assemblys en utilisant /AI ou en définissant la variable d’environnement LIBPATH
+Impossible de trouver l’assembly’fichier' : spécifiez le chemin de recherche de l’assembly en utilisant/AI ou en définissant la variable d’environnement LIBPATH
 
-Un fichier de métadonnées a été passé à un [#using](../../preprocessor/hash-using-directive-cpp.md) directive le compilateur n’a pas pu localiser.
+Un fichier de métadonnées a été passé à une directive de [#using](../../preprocessor/hash-using-directive-cpp.md) que le compilateur n’a pas pu localiser.
 
-LIBPATH, qui est décrite dans la rubrique pour `#using`et le [/AI](../../build/reference/ai-specify-metadata-directories.md) option du compilateur permettent de spécifier les répertoires dans lesquels le compilateur recherche les fichiers de métadonnées référencés.
+LIBPATH, qui est décrit dans la rubrique pour `#using`, et l’option du compilateur [/ai](../../build/reference/ai-specify-metadata-directories.md) vous permettent de spécifier les répertoires dans lesquels le compilateur recherchera les fichiers de métadonnées référencés.

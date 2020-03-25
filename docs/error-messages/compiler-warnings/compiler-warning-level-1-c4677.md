@@ -1,19 +1,19 @@
 ---
-title: Avertissement du compilateur (niveau 1) C4677
+title: Avertissement du compilateur (niveau 1) C4677
 ms.date: 11/04/2016
 f1_keywords:
 - C4677
 helpviewer_keywords:
 - C4677
 ms.assetid: a8d656a1-e2ff-4f8b-9028-201765131026
-ms.openlocfilehash: 8567e7392537507a25121977448ac47ec079316b
-ms.sourcegitcommit: 458dcc794e3841919c01a3a5ff6b9a3767f8861b
+ms.openlocfilehash: 5b31fd22c917b2c0f505ca189425f8160f62f748
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/13/2019
-ms.locfileid: "74051370"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80175543"
 ---
-# <a name="compiler-warning-level-1-c4677"></a>Avertissement du compilateur (niveau 1) C4677
+# <a name="compiler-warning-level-1-c4677"></a>Avertissement du compilateur (niveau 1) C4677
 
 'fonction' : la signature d’un membre non privé contient un type privé d’assembly’private_type'
 

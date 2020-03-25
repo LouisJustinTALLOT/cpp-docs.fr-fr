@@ -8,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - sealed keyword [C++]
 ms.assetid: 3d0d688a-41aa-45f5-a25a-65c44206521e
-ms.openlocfilehash: 493f6597d146480714848b37154cc8bacd37113a
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
-ms.translationtype: HT
+ms.openlocfilehash: ab5d5b32ceb87a3b1ccf08d170889dd4825f6c17
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "65516004"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80181796"
 ---
 # <a name="sealed--ccli-and-ccx"></a>sealed (C++/CLI et C++/CX)
 
@@ -39,13 +39,13 @@ Nom de la fonction ou de la classe.
 *return-type*<br/>
 Type retourné par une fonction.
 
-## <a name="remarks"></a>Remarques
+## <a name="remarks"></a>Notes
 
 Dans le premier exemple de syntaxe, une classe est sealed. Dans le deuxième exemple, une fonction virtuelle est sealed.
 
 Utilisez le mot clé **sealed** pour les classes de référence et leurs fonctions membres virtuelles. Pour plus d’informations, consultez [Spécificateurs de substitution et compilations natives](../dotnet/how-to-declare-override-specifiers-in-native-compilations-cpp-cli.md).
 
-Vous pouvez détecter au moment de la compilation si un type est sealed à l’aide de la caractéristique de type `__is_sealed(type)`. Pour plus d’informations, consultez [Prise en charge du compilateur pour les caractéristiques de type](compiler-support-for-type-traits-cpp-component-extensions.md).
+Vous pouvez détecter au moment de la compilation si un type est sealed à l’aide de la caractéristique de type `__is_sealed(type)`. Pour plus d’informations, consultez [Compiler Support for Type Traits](compiler-support-for-type-traits-cpp-component-extensions.md) (Prise en charge du compilateur pour les caractéristiques de type).
 
 **sealed** est un mot clé contextuel.  Pour plus d’informations, consultez [Mots clés contextuels](context-sensitive-keywords-cpp-component-extensions.md).
 
