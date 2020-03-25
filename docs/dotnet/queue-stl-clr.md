@@ -57,12 +57,12 @@ helpviewer_keywords:
 - to_array member [STL/CLR]
 - value_type member [STL/CLR]
 ms.assetid: 9ea7dec3-ea98-48ff-87d0-a5afc924aaf2
-ms.openlocfilehash: 08f90ef6be7a5eeb560add9c60a6578057fbb310
-ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
+ms.openlocfilehash: 5339472574bced99d833a0b60e8b72b10b0fa989
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/17/2020
-ms.locfileid: "79447517"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80208362"
 ---
 # <a name="queue-stlclr"></a>queue (STL/CLR)
 
@@ -150,7 +150,7 @@ L’objet alloue et libère du stockage pour la séquence qu’il contrôle via 
 
 ## <a name="members"></a>Membres
 
-## <a name="assign"></a>queue :: assign (STL/CLR)
+## <a name="queueassign-stlclr"></a><a name="assign"></a>queue :: assign (STL/CLR)
 
 Remplace tous les éléments.
 
@@ -204,7 +204,7 @@ a b c
 a b c
 ```
 
-## <a name="back"></a>queue :: Back (STL/CLR)
+## <a name="queueback-stlclr"></a><a name="back"></a>queue :: Back (STL/CLR)
 
 Accède au dernier élément.
 
@@ -256,7 +256,7 @@ back() = c
 a b x
 ```
 
-## <a name="back_item"></a>queue :: back_item (STL/CLR)
+## <a name="queueback_item-stlclr"></a><a name="back_item"></a>queue :: back_item (STL/CLR)
 
 Accède au dernier élément.
 
@@ -308,7 +308,7 @@ back_item = c
 a b x
 ```
 
-## <a name="const_reference"></a>queue :: const_reference (STL/CLR)
+## <a name="queueconst_reference-stlclr"></a><a name="const_reference"></a>queue :: const_reference (STL/CLR)
 
 Type d'une référence constante à un élément.
 
@@ -352,7 +352,7 @@ int main()
 a b c
 ```
 
-## <a name="container_type"></a>queue :: container_type (STL/CLR)
+## <a name="queuecontainer_type-stlclr"></a><a name="container_type"></a>queue :: container_type (STL/CLR)
 
 Type du conteneur sous-jacent.
 
@@ -394,7 +394,7 @@ int main()
 a b c
 ```
 
-## <a name="difference_type"></a>file d’attente ::d ifference_type (STL/CLR)
+## <a name="queuedifference_type-stlclr"></a><a name="difference_type"></a>file d’attente ::d ifference_type (STL/CLR)
 
 Types d’une distance signée entre deux éléments.
 
@@ -452,7 +452,7 @@ pushing 2 = -2
 popping 3 = 3
 ```
 
-## <a name="empty"></a>queue :: Empty (STL/CLR)
+## <a name="queueempty-stlclr"></a><a name="empty"></a>queue :: Empty (STL/CLR)
 
 Vérifie l'absence d'éléments.
 
@@ -506,7 +506,7 @@ size() = 0
 empty() = True
 ```
 
-## <a name="front"></a>queue :: Front (STL/CLR)
+## <a name="queuefront-stlclr"></a><a name="front"></a>queue :: Front (STL/CLR)
 
 Accède au premier élément.
 
@@ -558,7 +558,7 @@ front() = a
 x b c
 ```
 
-## <a name="front_item"></a>queue :: front_item (STL/CLR)
+## <a name="queuefront_item-stlclr"></a><a name="front_item"></a>queue :: front_item (STL/CLR)
 
 Accède au premier élément.
 
@@ -610,7 +610,7 @@ front_item = a
 x b c
 ```
 
-## <a name="generic_container"></a>queue :: generic_container (STL/CLR)
+## <a name="queuegeneric_container-stlclr"></a><a name="generic_container"></a>queue :: generic_container (STL/CLR)
 
 Type de l’interface générique pour l’adaptateur de conteneur.
 
@@ -673,7 +673,7 @@ a b c d
 a b c d e
 ```
 
-## <a name="generic_value"></a>queue :: generic_value (STL/CLR)
+## <a name="queuegeneric_value-stlclr"></a><a name="generic_value"></a>queue :: generic_value (STL/CLR)
 
 Type d’un élément à utiliser avec l’interface générique pour le conteneur.
 
@@ -731,7 +731,7 @@ a b c
 a b c
 ```
 
-## <a name="get_container"></a>queue :: get_container (STL/CLR)
+## <a name="queueget_container-stlclr"></a><a name="get_container"></a>queue :: get_container (STL/CLR)
 
 Accède au conteneur sous-jacent.
 
@@ -772,7 +772,7 @@ int main()
 a b c
 ```
 
-## <a name="op_as"></a>queue :: Operator = (STL/CLR)
+## <a name="queueoperator-stlclr"></a><a name="op_as"></a>queue :: Operator = (STL/CLR)
 
 Remplace la séquence contrôlée.
 
@@ -826,7 +826,7 @@ a b c
 a b c
 ```
 
-## <a name="pop"></a>file d’attente ::p op (STL/CLR)
+## <a name="queuepop-stlclr"></a><a name="pop"></a>file d’attente ::p op (STL/CLR)
 
 Supprime le dernier élément.
 
@@ -874,7 +874,7 @@ a b c
 b c
 ```
 
-## <a name="push"></a>file d’attente ::p par émission (STL/CLR)
+## <a name="queuepush-stlclr"></a><a name="push"></a>file d’attente ::p par émission (STL/CLR)
 
 Ajoute un nouveau dernier élément.
 
@@ -915,7 +915,7 @@ int main()
 a b c
 ```
 
-## <a name="queue"></a>queue :: queue (STL/CLR)
+## <a name="queuequeue-stlclr"></a><a name="queue"></a>queue :: queue (STL/CLR)
 
 Construit un objet adaptateur de conteneur.
 
@@ -1008,7 +1008,7 @@ x x x x x
 x x x x x
 ```
 
-## <a name="reference"></a>queue :: Reference (STL/CLR)
+## <a name="queuereference-stlclr"></a><a name="reference"></a>queue :: Reference (STL/CLR)
 
 Type d'une référence à un élément.
 
@@ -1057,7 +1057,7 @@ a b c
 a b x
 ```
 
-## <a name="size"></a>queue :: Size (STL/CLR)
+## <a name="queuesize-stlclr"></a><a name="size"></a>queue :: Size (STL/CLR)
 
 Compte le nombre d'éléments.
 
@@ -1111,7 +1111,7 @@ size() = 2 after popping
 size() = 4 after adding 2
 ```
 
-## <a name="size_type"></a>queue :: size_type (STL/CLR)
+## <a name="queuesize_type-stlclr"></a><a name="size_type"></a>queue :: size_type (STL/CLR)
 
 Type d’une distance signée entre deux éléments.
 
@@ -1160,7 +1160,7 @@ a b c
 size difference = 2
 ```
 
-## <a name="to_array"></a>queue :: to_array (STL/CLR)
+## <a name="queueto_array-stlclr"></a><a name="to_array"></a>queue :: to_array (STL/CLR)
 
 Copie la séquence contrôlée dans un nouveau tableau.
 
@@ -1210,7 +1210,7 @@ a b c d
 a b c
 ```
 
-## <a name="value_type"></a>queue :: value_type (STL/CLR)
+## <a name="queuevalue_type-stlclr"></a><a name="value_type"></a>queue :: value_type (STL/CLR)
 
 Type d'un élément.
 
@@ -1255,7 +1255,7 @@ int main()
 a b c
 ```
 
-## <a name="op_neq"></a>Operator ! = (file d’attente) (STL/CLR)
+## <a name="operator-queue-stlclr"></a><a name="op_neq"></a>Operator ! = (file d’attente) (STL/CLR)
 
 Comparaison n’est pas égale à la file d’attente.
 
@@ -1326,7 +1326,7 @@ a b d
 [a b c] != [a b d] is True
 ```
 
-## <a name="op_lt"></a>&lt; d’opérateur (file d’attente) (STL/CLR)
+## <a name="operatorlt-queue-stlclr"></a><a name="op_lt"></a>&lt; d’opérateur (file d’attente) (STL/CLR)
 
 File d’attente inférieure à la comparaison.
 
@@ -1397,7 +1397,7 @@ a b d
 [a b c] < [a b d] is True
 ```
 
-## <a name="op_lteq"></a>opérateur&lt;= (file d’attente) (STL/CLR)
+## <a name="operatorlt-queue-stlclr"></a><a name="op_lteq"></a>opérateur&lt;= (file d’attente) (STL/CLR)
 
 Comparaison de la file d’attente inférieure ou égale.
 
@@ -1468,7 +1468,7 @@ a b d
 [a b d] <= [a b c] is False
 ```
 
-## <a name="op_eq"></a>opérateur = = (file d’attente) (STL/CLR)
+## <a name="operator-queue-stlclr"></a><a name="op_eq"></a>opérateur = = (file d’attente) (STL/CLR)
 
 Comparaison égale à la file d’attente.
 
@@ -1539,7 +1539,7 @@ a b d
 [a b c] == [a b d] is False
 ```
 
-## <a name="op_gt"></a>&gt; d’opérateur (file d’attente) (STL/CLR)
+## <a name="operatorgt-queue-stlclr"></a><a name="op_gt"></a>&gt; d’opérateur (file d’attente) (STL/CLR)
 
 File d’attente supérieure à la comparaison.
 
@@ -1610,7 +1610,7 @@ a b d
 [a b d] > [a b c] is True
 ```
 
-## <a name="op_gteq"></a>opérateur&gt;= (file d’attente) (STL/CLR)
+## <a name="operatorgt-queue-stlclr"></a><a name="op_gteq"></a>opérateur&gt;= (file d’attente) (STL/CLR)
 
 Comparaison de la file d’attente supérieure ou égale.
 

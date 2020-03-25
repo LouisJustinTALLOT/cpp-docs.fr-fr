@@ -3,12 +3,12 @@ title: 'Comment : utiliser winmdidl.exe et midlrt.exe pour créer les fichiers 
 ms.date: 11/04/2016
 ms.topic: reference
 ms.assetid: 4be8ba11-c223-44ad-9256-7e1edae9a7bc
-ms.openlocfilehash: 3aa7cd28a37ec7187cc3c87927a83e45eeda2a4e
-ms.sourcegitcommit: 5f276064779d90a4cfda758f89e0c0f1e4d1a188
+ms.openlocfilehash: bceb4aff22f6ebba9c8705b3b5a55d0478f244c9
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/09/2020
-ms.locfileid: "75791668"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80213536"
 ---
 # <a name="how-to-use-winmdidlexe-and-midlrtexe-to-create-h-files-from-windows-metadata"></a>Comment : utiliser winmdidl.exe et midlrt.exe pour créer les fichiers .h à partir des métadonnées Windows
 
@@ -38,7 +38,7 @@ Empêche l'affichage dans la console du message de copyright et du numéro de ve
 **/suppressversioncheck**<br/>
 Non utilisé.
 
-**/time**<br/>
+**/Time**<br/>
 Affiche la durée totale d'exécution dans la sortie de la console.
 
 **/OutDir :** <em>Rép</em><br/>

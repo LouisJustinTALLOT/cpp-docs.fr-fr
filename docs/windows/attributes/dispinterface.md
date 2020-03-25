@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - dispinterface attribute
 ms.assetid: 61c5a4a1-ae92-47e9-8ee4-f847be90172b
-ms.openlocfilehash: 6360c5e97eae19d7b2d74b3b43d4feae07d4b091
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: 66567b0a1b043136e0a754e3a52bbdd7c463e178
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69501626"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80168237"
 ---
 # <a name="dispinterface"></a>dispinterface
 
@@ -38,11 +38,11 @@ dispinterface helloPro
 
 n’est pas valide pour l’attribut **dispinterface** .
 
-## <a name="example"></a>Exemples
+## <a name="example"></a>Exemple
 
 Pour obtenir un exemple montrant comment utiliser [dispinterface](bindable.md) , consultez l’exemple de **bindable**.
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
 ### <a name="attribute-context"></a>Contexte d'attribut
 
@@ -50,7 +50,7 @@ Pour obtenir un exemple montrant comment utiliser [dispinterface](bindable.md) ,
 |-|-|
 |**S'applique à**|**interface**|
 |**Renouvelable**|Non|
-|**Attributs requis**|Aucun|
+|**Attributs requis**|None|
 |**Attributs non valides**|`dual`, `object`, `oleautomation`, `local`, `ms_union`|
 
 Pour plus d'informations, consultez [Contextes d'attribut](cpp-attributes-com-net.md#contexts).

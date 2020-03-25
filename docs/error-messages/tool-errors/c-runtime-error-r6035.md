@@ -6,24 +6,24 @@ f1_keywords:
 helpviewer_keywords:
 - R6035
 ms.assetid: f8fb50b8-18bf-4258-b96a-b0a9de468d16
-ms.openlocfilehash: cbade3ce8686c8c293b8d40a73c546805e42215d
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 7c497347689bcfc5528280bd22aa5183d5fafd61
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62399978"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80197002"
 ---
 # <a name="c-runtime-error-r6035"></a>Erreur Runtime C R6035
 
-Bibliothèque Microsoft Visual C++ Runtime, erreur R6035 - un module de cette application initialisation du cookie de sécurité global du module alors qu’une fonction s’appuyer sur ce cookie de sécurité est active.  Appelez __security_init_cookie précédemment.
+Bibliothèque Microsoft C++ Visual Runtime, erreur R6035-un module de cette application initialise le cookie de sécurité global du module lorsqu’une fonction qui s’appuie sur ce cookie de sécurité est active.  Appelez __security_init_cookie précédemment.
 
-[__security_init_cookie](../../c-runtime-library/reference/security-init-cookie.md) doit être appelée avant la première utilisation du cookie de sécurité global.
+[__security_init_cookie](../../c-runtime-library/reference/security-init-cookie.md) doit être appelé avant la première utilisation du cookie de sécurité global.
 
-Le cookie de sécurité global est utilisé pour la protection de dépassement de mémoire tampon dans le code compilé avec [/GS (vérification de la sécurité de la mémoire tampon)](../../build/reference/gs-buffer-security-check.md) et dans le code qui utilise la gestion structurée des exceptions. Pour l’essentiel, à l’entrée à une fonction protégée de saturation, le cookie est placé sur la pile, et à la sortie, la valeur sur la pile est comparée à celle du cookie global. Une différence entre eux indique qu’un dépassement de mémoire tampon s’est produite et entraîne l’arrêt immédiat du programme.
+Le cookie de sécurité global est utilisé pour la protection contre le dépassement de mémoire tampon dans le code compilé avec [/GS (vérification de la sécurité de la mémoire tampon)](../../build/reference/gs-buffer-security-check.md) et dans le code qui utilise la gestion structurée des exceptions. Essentiellement, à l’entrée dans une fonction protégée contre le dépassement de délai, le cookie est placé sur la pile et, à la sortie, la valeur sur la pile est comparée au cookie global. Toute différence entre elles indique qu’un dépassement de mémoire tampon s’est produit et entraîne l’arrêt immédiat du programme.
 
-Erreur R6035 indique qu’un appel à `__security_init_cookie` a été effectuée après l’entrée dans une fonction protégée. Si l’exécution doit continuer, un dépassement de mémoire tampon parasite serait détecté car le cookie de la pile ne correspondrait plus au cookie global.
+L’erreur R6035 indique qu’un appel à `__security_init_cookie` a été effectué après l’entrée d’une fonction protégée. Si l’exécution devait se poursuivre, un dépassement de mémoire tampon parasite est détecté, car le cookie sur la pile ne correspondrait plus au cookie global.
 
-Prenons l’exemple suivant de la DLL. Le point d’entrée DLL est la valeur DllEntryPoint via l’éditeur de liens [/ENTRY (symbole de Point d’entrée)](../../build/reference/entry-entry-point-symbol.md) option. Cela contourne l’initialisation du CRT qui initialise normalement le cookie de sécurité global, la DLL proprement dite doit donc appeler `__security_init_cookie`.
+Prenons l’exemple de DLL suivant. Le point d’entrée de la DLL a la valeur DllEntryPoint via l’option de l’éditeur de liens [/entry (symbole du point d’entrée)](../../build/reference/entry-entry-point-symbol.md) . Cela contourne l’initialisation du CRT qui initialiserait normalement le cookie de sécurité global, de sorte que la DLL elle-même doit appeler `__security_init_cookie`.
 
 ```
 // Wrong way to call __security_init_cookie
@@ -42,7 +42,7 @@ void DllInitialize() {
 }
 ```
 
-Cet exemple génère l’erreur R6035 car DllEntryPoint utilise la gestion structurée des exceptions et donc, le cookie de sécurité pour détecter les dépassements de mémoire tampon. Au terme du délai que lorsque DllInitialize est appelé, le cookie de sécurité global a déjà été mis sur la pile.
+Cet exemple génère l’erreur R6035, car DllEntryPoint utilise la gestion structurée des exceptions et utilise donc le cookie de sécurité pour détecter les dépassements de mémoire tampon. Lors de l’appel de DllInitialize, le cookie de sécurité global a déjà été placé sur la pile.
 
 La méthode correcte est illustrée dans cet exemple :
 
@@ -63,10 +63,10 @@ void DllEntryHelper() {
 }
 ```
 
-Dans ce cas, DllEntryPoint n’est pas protégé contre les dépassements de mémoire tampon (il n’a aucune mémoire tampon de chaîne locale et n’utilise pas structurée des exceptions) ; Par conséquent, elle peut appeler en toute sécurité `__security_init_cookie`. Il appelle ensuite une fonction d’assistance qui est protégée.
+Dans ce cas, DllEntryPoint n’est pas protégé contre les dépassements de mémoire tampon (il n’a aucune mémoire tampon de chaîne locale et n’utilise pas la gestion structurée des exceptions); par conséquent, il peut appeler `__security_init_cookie`en toute sécurité. Il appelle ensuite une fonction d’assistance qui est protégée.
 
 > [!NOTE]
->  Message d’erreur R6035 est uniquement généré par le x86 de débogage CRT, et uniquement pour la gestion structurée des exceptions, mais la condition est une erreur sur toutes les plateformes et pour toutes les formes de l’exception gestion, tels que C++ EH.
+>  Le message d’erreur R6035 est généré uniquement par le CRT de débogage x86 et uniquement pour la gestion structurée des exceptions, mais la condition est une erreur sur toutes les plateformes, et pour C++ toutes les formes de gestion des exceptions, telles que Eh.
 
 ## <a name="see-also"></a>Voir aussi
 

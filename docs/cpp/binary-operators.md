@@ -6,12 +6,12 @@ helpviewer_keywords:
 - operators [C++], binary
 - binary operators [C++]
 ms.assetid: c0e7fbff-bc87-4708-8333-504ac09ee83e
-ms.openlocfilehash: 700d8fd784862c3e9f81fcde839063ff0a4696bb
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 030ae71fec7a0d1572804f30d09f6f9b2749e436
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62176653"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80181302"
 ---
 # <a name="binary-operators"></a>Opérateurs binaires
 
@@ -19,14 +19,14 @@ Le tableau suivant affiche une liste des opérateurs qui peuvent être surcharg�
 
 ## <a name="redefinable-binary-operators"></a>Opérateurs binaires redéfinissables
 
-|Opérateur|Nom|
+|Opérateur|Name|
 |--------------|----------|
-|**,**|Virgule|
-|**\!=**|Inégalité|
-|**%**|Modulo|
+|**,**|Comma|
+|**!=**|Inégalité|
+|**%**|Modulus|
 |**%=**|Modulo/assignation|
-|**&**|Opération de bits AND|
-|**&&**|AND logique|
+|**&**|ET au niveau du bit|
+|**&&**|ET logique|
 |**&=**|Opération de bits AND/assignation|
 |**&#42;**|Multiplication|
 |**&#42;=**|Multiplication/assignation|
@@ -42,7 +42,7 @@ Le tableau suivant affiche une liste des opérateurs qui peuvent être surcharg�
 |**<<**|Décalage vers la gauche|
 |**<<=**|Décalage vers la gauche/assignation|
 |**<=**|Inférieur ou égal à|
-|**=**|Attribution|
+|**=**|Affectation|
 |**==**|Égalité|
 |**>**|Supérieur à|
 |**>=**|Supérieur ou égal à|
@@ -50,21 +50,21 @@ Le tableau suivant affiche une liste des opérateurs qui peuvent être surcharg�
 |**>>=**|Décalage vers la droite/assignation|
 |**^**|OR exclusive|
 |**^=**|OR exclusive/assignation|
-|**&#124;**|Opération de bits OR inclusive|
+|**&#124;**|Opération OR inclusive au niveau du bit|
 |**&#124;=**|OR inclusive au niveau du bit/assignation|
-|**&#124;&#124;**|OR logique|
+|**&#124;&#124;**|OU logique|
 
 Pour déclarer une fonction d'opérateur binaire en tant que membre non statique, vous devez la déclarer comme suit :
 
-> *ret-type* **operator** *op* **(** *arg* **)**
+> *RET-type* **Operator** *op* **(** *arg* **)**
 
-où *ret-type* est le type de retour, *op* est un des opérateurs répertoriés dans le tableau précédent, et *arg* est un argument de n’importe quel type.
+où *RET-type* est le type de retour, *op* est l’un des opérateurs listés dans le tableau précédent et *arg* est un argument de n’importe quel type.
 
 Pour déclarer une fonction d'opérateur binaire en tant que fonction globale, vous devez la déclarer comme suit :
 
-> *ret-type* **operator** *op* **(** _arg1_**,** _arg2_ **)**
+> *RET-type* **Operator** *op* **(** _Arg1_ **,** _Arg2_ **)**
 
-où *ret-type* et *op* sont celles décrites pour les fonctions d’opérateur de membre et *arg1* et *arg2* sont des arguments. Au moins un des arguments doit être de type classe.
+où *RET-type* et *op* sont décrits pour les fonctions d’opérateur de membre et *Arg1* et *Arg2* sont des arguments. Au moins un des arguments doit être de type classe.
 
 > [!NOTE]
 > Il n’existe aucune restriction sur les types de retour des opérateurs binaires. En revanche, la plupart des opérateurs binaires définis par l’utilisateur retournent un type de classe ou une référence à un type de classe.

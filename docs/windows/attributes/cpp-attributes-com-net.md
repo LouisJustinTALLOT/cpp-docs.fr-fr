@@ -6,12 +6,12 @@ ms.topic: conceptual
 helpviewer_keywords:
 - attributes [C++/CLI], reference topics
 ms.assetid: 613a3611-b3eb-4347-aa38-99b654600e1c
-ms.openlocfilehash: 4885edf57988d5f83b56ba6a71da85877354d3ce
-ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
+ms.openlocfilehash: 734d82a30df3e143a6f47cb1b3eca2cd778830bd
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/16/2020
-ms.locfileid: "79421316"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80214927"
 ---
 # <a name="c-attributes-for-com-and-net"></a>Attributs C++ pour COM et .NET
 
@@ -78,7 +78,7 @@ Certains projets contiennent plusieurs fichiers. idl indépendants. Ils sont uti
 
 En outre, l’éditeur C++ de liens visuel génère toutes les informations relatives aux attributs IDL dans un fichier MIDL unique. Il n’existe aucun moyen de générer deux bibliothèques de types à partir d’un seul projet.
 
-## <a name="contexts"></a>Contextes d’attribut
+## <a name="attribute-contexts"></a><a name="contexts"></a>Contextes d’attribut
 
 C++les attributs peuvent être décrits à l’aide de quatre champs de base : la cible à laquelle ils peuvent être appliqués (**s’applique à**), s’ils sont reproductibles ou non (**reproductibles**), la présence requise d’autres attributs (**attributs requis**) et des incompatibilités avec d’autres attributs (**attributs non valides**). Ces champs sont répertoriés dans une table associée dans la rubrique de référence de chaque attribut. Chacun de ces champs est décrit ci-dessous.
 

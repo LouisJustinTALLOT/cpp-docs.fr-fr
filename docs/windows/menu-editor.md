@@ -39,12 +39,12 @@ helpviewer_keywords:
 - commands [C++], deleting from menus
 - menus [C++], deleting
 ms.assetid: 421fb215-6e12-4ec9-a3af-82d77f87bfa6
-ms.openlocfilehash: a21ff3ba736bd345e4b8399a761b5a8d9db531ac
-ms.sourcegitcommit: 9aab425662a66825772f091112986952f341f7c8
+ms.openlocfilehash: 3671dbe33b2d6e373e2df3d54267c6aac5bbf20d
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/16/2019
-ms.locfileid: "72444985"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80214446"
 ---
 # <a name="menu-editor-c"></a>Éditeur de menusC++()
 
@@ -53,13 +53,13 @@ Les menus permettent d’organiser les commandes de manière logique et de les t
 > [!TIP]
 > Lorsque vous utilisez l' **éditeur de menus**, dans de nombreux cas, vous pouvez cliquer avec le bouton droit pour afficher un menu contextuel des commandes fréquemment utilisées. Les commandes disponibles varient selon la cible du pointeur.
 
-## <a name="how-to"></a>Comment
+## <a name="how-to"></a>Procédure
 
 L' **éditeur de menus** vous permet d’activer les éléments suivants :
 
 ### <a name="to-create-a-standard-menu"></a>Pour créer un menu standard
 
-1. Accédez à la **vue**de menu  > **autres fenêtres** > **affichage des ressources** et cliquez avec le bouton droit sur l’en-tête du **menu** . Sélectionnez **Ajouter une ressource**, puis **menu**.
+1. Accédez à la **vue** de menu > **autres > Windows** **affichage des ressources** et cliquez avec le bouton droit sur l’en-tête du **menu** . Sélectionnez **Ajouter une ressource**, puis **menu**.
 
 1. Sélectionnez la zone **nouvel élément** (le rectangle qui contient le *type ici*) dans la barre de menus.
 
@@ -190,7 +190,7 @@ Normalement, lorsque vous travaillez dans l' **éditeur de menus**, une ressourc
 > [!TIP]
 > Pour revenir à l’affichage de la barre de menus, sélectionnez Afficher à nouveau **sous forme de fenêtre contextuelle** . Cette action supprime la coche et retourne votre affichage de la barre de menus.
 
-## <a name="requirements"></a>spécifications
+## <a name="requirements"></a>Spécifications
 
 Win32
 

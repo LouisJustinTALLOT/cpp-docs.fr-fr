@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C4129
 ms.assetid: a4190c64-4bfb-48fd-8e98-52720bc0d878
-ms.openlocfilehash: ab3108c60c18276e8e4797c7cfde1b66535dbaaa
-ms.sourcegitcommit: 0cfc43f90a6cc8b97b24c42efcf5fb9c18762a42
+ms.openlocfilehash: 1a48fc806f3274a59c99be25ac7a0e7b03a0454b
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/05/2019
-ms.locfileid: "73627422"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80176219"
 ---
 # <a name="compiler-warning-level-1-c4129"></a>Avertissement du compilateur (niveau 1) C4129
 

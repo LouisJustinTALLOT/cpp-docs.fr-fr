@@ -1,5 +1,5 @@
 ---
-title: AsWeak (fonction)
+title: AsWeak, fonction
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -7,14 +7,14 @@ f1_keywords:
 helpviewer_keywords:
 - AsWeak function
 ms.assetid: a6f10cfc-c1d6-4761-adb9-1a119cc99913
-ms.openlocfilehash: 45df6332fccb2a22284eb6478c7554d87318ca78
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: d11f55d57f4053fd6d46b727a8ed91b340d1764b
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62398847"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80214173"
 ---
-# <a name="asweak-function"></a>AsWeak (fonction)
+# <a name="asweak-function"></a>AsWeak, fonction
 
 Récupère une référence faible à une instance spécifiée.
 
@@ -31,23 +31,23 @@ HRESULT AsWeak(
 ### <a name="parameters"></a>Paramètres
 
 *T*<br/>
-Un pointeur vers le type de paramètre *p*.
+Pointeur vers le type de paramètre *p*.
 
 *p*<br/>
-Une instance d’un type.
+Instance d’un type.
 
 *pWeak*<br/>
-Lorsque cette opération se termine, un pointeur vers une référence faible au paramètre *p*.
+Lorsque cette opération est terminée, il s’agit d’un pointeur vers une référence faible au paramètre *p*.
 
 ## <a name="return-value"></a>Valeur de retour
 
-S_OK, si cette opération est réussie ; Sinon, une erreur HRESULT qui indique la cause de l’échec.
+S_OK, si cette opération réussit ; Sinon, une erreur HRESULT qui indique la cause de l’échec.
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
 **En-tête :** client.h
 
-**Espace de noms :** Microsoft::wrl
+**Espace de noms :** Microsoft::WRL
 
 ## <a name="see-also"></a>Voir aussi
 

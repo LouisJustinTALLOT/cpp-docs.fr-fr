@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - helpfile attribute
 ms.assetid: d75161c1-1363-4019-ae09-e7e3b8a3971e
-ms.openlocfilehash: 538cdbb38ac525cfee03a641f3e62e22a69f8e2b
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: 1f928fa281c99630ad52ce1fde184c44e9387263
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69501549"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80166976"
 ---
 # <a name="helpfile"></a>helpfile
 
@@ -36,7 +36,7 @@ L’attribut **HelpFile** C++ a les mêmes fonctionnalités que l’attribut MID
 
 Consultez l’exemple du [module](module-cpp.md) pour obtenir un exemple d’utilisation de **HelpFile**.
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
 ### <a name="attribute-context"></a>Contexte d'attribut
 
@@ -44,8 +44,8 @@ Consultez l’exemple du [module](module-cpp.md) pour obtenir un exemple d’uti
 |-|-|
 |**S'applique à**|**interface**, **typedef**, **classe**, méthode, **propriété**|
 |**Renouvelable**|Non|
-|**Attributs requis**|Aucun|
-|**Attributs non valides**|Aucun|
+|**Attributs requis**|None|
+|**Attributs non valides**|None|
 
 Pour plus d'informations, consultez [Contextes d'attribut](cpp-attributes-com-net.md#contexts).
 

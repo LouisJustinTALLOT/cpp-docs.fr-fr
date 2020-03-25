@@ -1,21 +1,21 @@
 ---
-title: db_accessor (C++ attribut COM)
+title: db_accessor (C++ attribut com)
 ms.date: 10/02/2018
 f1_keywords:
 - vc-attr.db_accessor
 helpviewer_keywords:
 - db_accessor attribute
 ms.assetid: ec407a9f-24d7-4822-96d4-7cc6a0301815
-ms.openlocfilehash: bfb287261fce4ebf189801c308f57513f2c9f113
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 1e9725dad39974b828d87bd8b4cdeac623f4e12f
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62148248"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80214862"
 ---
-# <a name="dbaccessor"></a>db_accessor
+# <a name="db_accessor"></a>db_accessor
 
-Groupes `db_column` attributs participer `IAccessor`-en fonction de liaison.
+Groupes `db_column` attributs qui participent à la liaison basée sur `IAccessor`.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -26,24 +26,24 @@ Groupes `db_column` attributs participer `IAccessor`-en fonction de liaison.
 #### <a name="parameters"></a>Paramètres
 
 *num*<br/>
-Spécifie le nombre d’accesseur (un index d’entier de base zéro). Vous devez spécifier les numéros d’accesseur croissant classer, à l’aide des entiers ou valeurs définies.
+Spécifie le numéro d’accesseur (un index entier de base zéro). Vous devez spécifier des numéros d’accesseur par ordre croissant, en utilisant des entiers ou des valeurs définies.
 
 *auto*<br/>
-Valeur booléenne qui spécifie si l’accesseur est récupéré automatiquement (TRUE) ou non récupéré (FALSE).
+Valeur booléenne qui spécifie si l’accesseur est récupéré automatiquement (TRUE) ou non (FALSe).
 
 ## <a name="remarks"></a>Notes
 
-**db_accessor** définit l’accesseur OLE DB sous-jacent pour suivantes `db_column` et `db_param` attributs au sein de la même classe ou fonction. **db_accessor** est utilisable au niveau de membre et est utilisé pour le groupe `db_column` attributs qui participent à OLE DB `IAccessor`-liaison basée sur. Il est utilisé conjointement avec soit le `db_table` ou `db_command` attributs. Appel de cet attribut est similaire à l’appel le [BEGIN_ACCESSOR](../../data/oledb/begin-accessor.md) et [END_ACCESSOR](../../data/oledb/end-accessor.md) macros.
+**db_accessor** définit l’accesseur OLE DB sous-jacent pour les attributs `db_column` et `db_param` suivants dans la même classe ou la même fonction. **db_accessor** est utilisable au niveau du membre et est utilisé pour regrouper les attributs `db_column` qui participent à OLE DB liaison basée sur `IAccessor`. Il est utilisé conjointement avec les attributs `db_table` ou `db_command`. L’appel de cet attribut est semblable à l’appel des macros [BEGIN_ACCESSOR](../../data/oledb/begin-accessor.md) et [END_ACCESSOR](../../data/oledb/end-accessor.md) .
 
-**db_accessor** génère un ensemble de lignes et le lie aux mappages d’accesseur correspondant. Si vous n’appelez pas **db_accessor**accesseur 0 est automatiquement générée et toutes les liaisons de colonne seront mappées à ce bloc d’accesseur.
+**db_accessor** génère un ensemble de lignes et le lie aux mappages d’accesseur correspondants. Si vous n’appelez pas **db_accessor**, l’accesseur 0 est généré automatiquement, et toutes les liaisons de colonne sont mappées à ce bloc d’accesseur.
 
-**db_accessor** liaisons de colonne dans un ou plusieurs accesseurs de la base de données des groupes. Pour une présentation des scénarios dans lesquels vous devez utiliser plusieurs accesseurs, consultez [à l’aide de plusieurs accesseurs sur un ensemble de lignes](../../data/oledb/using-multiple-accessors-on-a-rowset.md). Consultez également « Utilisateur enregistrement prise en charge pour plusieurs accesseurs » dans [enregistrements utilisateur](../../data/oledb/user-records.md).
+**db_accessor** groupe les liaisons de colonne de base de données dans un ou plusieurs accesseurs. Pour plus d’informations sur les scénarios dans lesquels vous devez utiliser plusieurs accesseurs, consultez [utilisation de plusieurs accesseurs sur un ensemble de lignes](../../data/oledb/using-multiple-accessors-on-a-rowset.md). Consultez également la rubrique « prise en charge des enregistrements utilisateur pour plusieurs accesseurs » dans [enregistrements utilisateur](../../data/oledb/user-records.md).
 
-Lorsque le fournisseur d’attributs consommateur applique cet attribut à une classe, le compilateur renomme la classe à \_ *Nom_de_votre_classe*accesseur, où *Nom_de_votre_classe* est le nom que vous avez donné à la classe et le compilateur crée également une classe appelée *Nom_de_votre_classe*, qui dérive à son \_ *Nom_de_votre_classe*accesseur.  Dans l’affichage de classes, vous verrez les deux classes.
+Lorsque le fournisseur d’attributs du consommateur applique cet attribut à une classe, le compilateur renomme la classe en \_accesseur *YourClassName*, où *YourClassName* est le nom que vous avez donné à la classe, et le compilateur crée également une classe appelée *YourClassName*, qui dérive de \_accesseur *YourClassName*.  Dans l’affichage de classes, vous verrez les deux classes.
 
 ## <a name="example"></a>Exemple
 
-L’exemple suivant utilise **db_accessor** pour grouper les colonnes dans la table Orders à partir de la base de données Northwind dans deux accesseurs. Accesseur 0 est un accesseur automatique, et l’accesseur 1 n’est pas.
+L’exemple suivant utilise **db_accessor** pour regrouper des colonnes de la table Orders de la base de données Northwind en deux accesseurs. L’accesseur 0 est un accesseur automatique et l’accesseur 1 ne l’est pas.
 
 ```cpp
 // cpp_attr_ref_db_accessor.cpp
@@ -65,7 +65,7 @@ public:
 };
 ```
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
 ### <a name="attribute-context"></a>Contexte d'attribut
 
@@ -73,8 +73,8 @@ public:
 |-|-|
 |**S'applique à**|Blocs d’attributs|
 |**Renouvelable**|Non|
-|**Attributs requis**|Aucun.|
-|**Attributs non valides**|Aucun.|
+|**Attributs requis**|None|
+|**Attributs non valides**|None|
 
 Pour plus d'informations sur les contextes d'attribut, consultez [Contextes d'attribut](cpp-attributes-com-net.md#contexts).
 

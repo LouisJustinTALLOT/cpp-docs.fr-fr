@@ -5,12 +5,12 @@ ms.date: 11/04/2016
 helpviewer_keywords:
 - expressions [C++]
 ms.assetid: aaa1f250-7185-4113-b682-3f5e995943d1
-ms.openlocfilehash: c2dc4f1654b7e76bf9506f82d6d613684258c174
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 908a0f2dd304a5b5f9d3b70e80fafbfe3574ece1
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62184014"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80179937"
 ---
 # <a name="expressions-c"></a>Expressions (C++)
 
@@ -22,7 +22,7 @@ Cette section décrit les expressions C++. Les expressions sont des séquences d
 
 - Génération d'« effets secondaires ». (Les effets secondaires sont toutes les actions autres que l'évaluation de l'expression ; par exemple, la modification de la valeur d'un objet.)
 
-En C++, les opérateurs peuvent être surchargés et leurs significations peuvent être définies par l'utilisateur. Toutefois, leur priorité et le nombre d'opérandes qu'ils supportent ne peuvent pas être modifiés. Cette section décrit la syntaxe et la sémantique des opérateurs tels qu'ils sont fournis avec le langage, non surchargés. En plus de [types d’expressions](../cpp/types-of-expressions.md) et [sémantique des expressions](../cpp/semantics-of-expressions.md), les rubriques suivantes :
+En C++, les opérateurs peuvent être surchargés et leurs significations peuvent être définies par l'utilisateur. Toutefois, leur priorité et le nombre d'opérandes qu'ils supportent ne peuvent pas être modifiés. Cette section décrit la syntaxe et la sémantique des opérateurs tels qu'ils sont fournis avec le langage, non surchargés. Outre les [types d’expressions](../cpp/types-of-expressions.md) et la [sémantique des expressions](../cpp/semantics-of-expressions.md), les rubriques suivantes sont traitées :
 
 - [Expressions primaires](../cpp/primary-expressions.md)
 
@@ -36,9 +36,9 @@ En C++, les opérateurs peuvent être surchargés et leurs significations peuven
 
 - [Opérateur conditionnel](../cpp/conditional-operator-q.md)
 
-- [Expressions de constantes](../cpp/cpp-constant-expressions.md)
+- [Expressions constantes](../cpp/cpp-constant-expressions.md)
 
-- [Opérateurs de casting](../cpp/casting-operators.md)
+- [Opérateurs de cast](../cpp/casting-operators.md)
 
 - [Informations de type au moment de l’exécution](../cpp/run-time-type-information.md)
 
@@ -48,7 +48,7 @@ Rubriques sur les opérateurs dans d'autres sections :
 
 - [Opérateurs surchargés](../cpp/operator-overloading.md)
 
-- [typeid](../extensions/typeid-cpp-component-extensions.md) (C++ / c++ / CLI)
+- [typeid](../extensions/typeid-cpp-component-extensions.md) (C++/CLI)
 
     > [!NOTE]
     >  Les opérateurs pour les types intégrés ne peuvent pas être surchargés ; leur comportement est prédéfini.
