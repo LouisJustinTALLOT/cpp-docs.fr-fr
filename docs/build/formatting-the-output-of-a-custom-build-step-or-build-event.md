@@ -9,12 +9,12 @@ helpviewer_keywords:
 - build steps [C++], output format
 - builds [C++], custom build steps
 ms.assetid: 92ad3e38-24d7-4b89-90e6-5a16f5f998da
-ms.openlocfilehash: b0e9a7514704742524f97e55c06ef47c7b36631b
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 09bf8485a352d6ec2c1297f8a1be508cb7476c31
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62195366"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80169823"
 ---
 # <a name="formatting-the-output-of-a-custom-build-step-or-build-event"></a>Mise en forme de la sortie d'une étape de génération personnalisée ou d'un événement de build
 
@@ -30,9 +30,9 @@ Si la sortie d’un événement de build ou d’une étape de build personnalis�
 
 La sortie doit avoir le format suivant :
 
-> {<em>nomfichier</em>**(**<em>numéroligne</em> \[**,** <em>numérocolonne</em>]**)** &#124; *nomoutil*} **:** \[ <em>texte</em> ] {**error** &#124; **warning**} <em>code+numéro</em>**:**<em>chaîne localisable</em> \[ <em>texte</em> ]
+> {<em>filename</em> **(** <em>line #</em> \[ **,** <em>Column #</em>] **)** &#124; *ToolName*} **:** \[ <em>n’importe quel texte</em> ] { **Warning** **Error** &#124; } <em>code + number</em> **:** <em>chaîne localisable</em> \[ <em>tout texte</em> ]
 
-Où :
+Où :
 
 - {*a* &#124; *b*} correspond à un choix de *a* ou *b*.
 
@@ -40,7 +40,7 @@ Où :
 
 - L’élément **en gras** est un littéral.
 
-Exemple :
+Par exemple :
 
 > C:\\*sourcefile.cpp*(134) : erreur C2143 : erreur de syntaxe : ';' manquant avant '}'
 >

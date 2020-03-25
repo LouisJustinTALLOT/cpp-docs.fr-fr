@@ -7,12 +7,12 @@ helpviewer_keywords:
 - templates, C++
 - templates [C++]
 ms.assetid: 90fcc14a-2092-47af-9d2e-dba26d25b872
-ms.openlocfilehash: 36ada3cc3b933e99e9b29b3b58463f6bc526fc7d
-ms.sourcegitcommit: 00f50ff242031d6069aa63c81bc013e432cae0cd
+ms.openlocfilehash: 5f8322d850084ca53e946dcff1b67dc81b493fe3
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/30/2019
-ms.locfileid: "75546404"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80160773"
 ---
 # <a name="templates-c"></a>Modèles (C++)
 
@@ -57,7 +57,7 @@ int minimum(const int& lhs, const int& rhs)
 
 Les règles relatives à la façon dont le compilateur effectue la déduction de type dans les modèles de fonction sont basées sur les règles des fonctions ordinaires. Pour plus d’informations, consultez [résolution de surcharge des appels de modèle de fonction](../cpp/overload-resolution-of-function-template-calls.md).
 
-## <a id="type_parameters"></a>Paramètres de type
+## <a name="type-parameters"></a><a id="type_parameters"></a>Paramètres de type
 
 Dans le modèle `minimum` ci-dessus, Notez que le paramètre de type *t* n’est pas qualifié tant qu’il n’est pas utilisé dans les paramètres d’appel de fonction, où les qualificateurs const et de référence sont ajoutés.
 
@@ -151,7 +151,7 @@ auto v2 = constant<true>;   // v2 == true, decltype(v2) is bool
 auto v3 = constant<'a'>;    // v3 == 'a', decltype(v3) is char
 ```
 
-## <a id="template_parameters"></a>Modèles en tant que paramètres de modèle
+## <a name="templates-as-template-parameters"></a><a id="template_parameters"></a>Modèles en tant que paramètres de modèle
 
 Un modèle peut être un paramètre de modèle. Dans cet exemple, MyClass2 a deux paramètres de modèle : un paramètre TypeName *T* et un paramètre de modèle *arr*:
 

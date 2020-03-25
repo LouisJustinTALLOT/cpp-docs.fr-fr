@@ -33,12 +33,12 @@ helpviewer_keywords:
 - _access_s function
 - _waccess_s function
 ms.assetid: fb3004fc-dcd3-4569-8b27-d817546e947e
-ms.openlocfilehash: 0550b8fb42cb62d1a175960d6b0d4ed4dbecdcac
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: e7e61369635a1a59ef16aa6262650d9648277eb0
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70939906"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80171318"
 ---
 # <a name="_access_s-_waccess_s"></a>_access_s, _waccess_s
 
@@ -79,7 +79,7 @@ Pour plus d’informations, consultez [errno, _doserrno, _sys_errlist et _sys_ne
 
 ## <a name="remarks"></a>Notes
 
-Lorsqu’elle est utilisée avec des fichiers, la fonction **_access_s** détermine si le fichier spécifié existe et est accessible comme spécifié par la valeur de *mode*. Lorsqu’il est utilisé avec des répertoires, **_access_s** détermine uniquement si le répertoire spécifié existe. Dans les systèmes d’exploitation Windows 2000 et versions ultérieures, tous les répertoires disposent d’un accès en lecture et en écriture.
+Lorsqu’elle est utilisée avec des fichiers, la fonction **_access_s** détermine si le fichier spécifié existe et est accessible comme spécifié par la valeur du *mode*. En cas d’utilisation avec des répertoires, **_access_s** détermine uniquement si le répertoire spécifié existe. Dans les systèmes d’exploitation Windows 2000 et versions ultérieures, tous les répertoires disposent d’un accès en lecture et en écriture.
 
 |Valeur du mode|Test réalisé sur le fichier|
 |----------------|---------------------|
@@ -88,9 +88,9 @@ Lorsqu’elle est utilisée avec des fichiers, la fonction **_access_s** déterm
 |04|Autorisation de lecture.|
 |06|Autorisations de lecture et d’écriture.|
 
-L’autorisation de lecture ou d’écriture dans le fichier n’est pas suffisante pour assurer la possibilité d’ouvrir un fichier. Par exemple, si un fichier est verrouillé par un autre processus, il n’est peut-être pas accessible même si **_access_s** retourne 0.
+L’autorisation de lecture ou d’écriture dans le fichier n’est pas suffisante pour assurer la possibilité d’ouvrir un fichier. Par exemple, si un fichier est verrouillé par un autre processus, il peut ne pas être accessible même si **_access_s** retourne 0.
 
-**_waccess_s** est une version à caractères larges de **_access_s**, où l’argument de *chemin d’accès* à **_waccess_s** est une chaîne de caractères larges. Sinon, **_waccess_s** et **_access_s** se comportent de la même façon.
+**_waccess_s** est une version à caractères larges de **_access_s**, où l’argument de *chemin d’accès* à **_waccess_s** est une chaîne de caractères larges. Dans le cas contraire, **_waccess_s** et **_access_s** se comportent de la même façon.
 
 Ces fonctions valident leurs paramètres. Si *path* a la valeur null ou que le *mode* ne spécifie pas de mode valide, le gestionnaire de paramètres non valides est appelé, comme décrit dans [validation de paramètre](../../c-runtime-library/parameter-validation.md). Si l'exécution est autorisée à se poursuivre, ces fonctions attribuent à `errno` la valeur `EINVAL` et retournent `EINVAL`.
 
@@ -100,7 +100,7 @@ Ces fonctions valident leurs paramètres. Si *path* a la valeur null ou que le *
 |---------------------|--------------------------------------|--------------------|-----------------------|
 |`_taccess_s`|**_access_s**|**_access_s**|**_waccess_s**|
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
 |Routine|En-tête requis|En-tête facultatif|
 |-------------|---------------------|---------------------|
@@ -109,7 +109,7 @@ Ces fonctions valident leurs paramètres. Si *path* a la valeur null ou que le *
 
 ## <a name="example"></a>Exemple
 
-Cet exemple utilise **_access_s** pour vérifier le fichier nommé crt_access_s. c afin de déterminer s’il existe et si l’écriture est autorisée.
+Cet exemple utilise **_access_s** pour vérifier le fichier nommé crt_access_s. c pour voir s’il existe et si l’écriture est autorisée.
 
 ```C
 // crt_access_s.c

@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - Makefile projects [C++]
 ms.assetid: dd077af3-97a8-48fb-baaa-cf7e07ddef61
-ms.openlocfilehash: 861cd88440a697ce5a3abc83109526227ae42f8e
-ms.sourcegitcommit: bd7ddc044f9083246614b602ef6a758775313214
+ms.openlocfilehash: b96b7a1663e5d5886615dd976900f8eda9daeccc
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68866131"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80169888"
 ---
 # <a name="create-a-c-makefile-project"></a>Créer un projet Makefile C++
 
@@ -19,10 +19,10 @@ Un *makefile* est un fichier texte qui contient des instructions indiquant comme
 
 Si vous avez un projet makefile existant, ces choix vous sont proposés si vous voulez le coder et/ou le déboguer dans l’IDE Visual Studio :
 
-- Créez un projet Makefile dans Visual Studio qui utilise votre Makefile existant pour configurer un fichier .vcxproj que Visual Studio utilisera pour IntelliSense. (Vous n’aurez pas toutes les fonctionnalités de l’IDE que vous obtenez avec un projet MSBuild natif.) Consultez [Pour créer un projet Makefile](#create_a_makefile_project) ci-dessous.
-- Utilisez l’Assistant **Créer un projet à partir de fichiers de code existants** pour créer un projet MSBuild natif à partir de votre code source. Le Makefile d’origine ne sera pas utilisé après cela. Pour plus d'informations, voir [Procédure : créer un projet C++ à partir de code existant](../how-to-create-a-cpp-project-from-existing-code.md).
-- **Visual Studio 2017 et versions ultérieures** : Utilisez la fonctionnalité **Ouvrir un dossier** pour modifier et générer un projet Makefile en l’état sans aucune intervention du système MSBuild. Pour plus d’informations, consultez [Projets Dossier ouvert pour C++](../open-folder-projects-cpp.md).
-- **Visual Studio 2019 et ultérieur** : Créez un projet Makefile UNIX pour Linux.
+- Créez un projet Makefile dans Visual Studio qui utilise votre Makefile existant pour configurer un fichier .vcxproj que Visual Studio utilisera pour IntelliSense. (Vous ne disposez pas de toutes les fonctionnalités IDE que vous obtiendrez avec un projet MSBuild natif.) Consultez [pour créer un projet Makefile](#create_a_makefile_project) ci-dessous.
+- Utilisez l’Assistant **Créer un projet à partir de fichiers de code existants** pour créer un projet MSBuild natif à partir de votre code source. Le Makefile d’origine ne sera pas utilisé après cela. Pour plus d’informations, consultez [Guide pratique pour créer un projet C++ à partir d’un code existant](../how-to-create-a-cpp-project-from-existing-code.md).
+- **Visual Studio 2017 et versions ultérieures**: utilisez la fonctionnalité **ouvrir un dossier** pour modifier et générer un projet Makefile tel quel, sans aucune implication du système MSBuild. Pour plus d’informations, consultez [Projets Dossier ouvert pour C++](../open-folder-projects-cpp.md).
+- **Visual Studio 2019 et versions ultérieures**: créez un projet Makefile UNIX pour Linux.
 
 ## <a name="a-namecreate_a_makefile_project-to-create-a-makefile-project-with-the-makefile-project-template"></a><a name="create_a_makefile_project"> Pour créer un projet Makefile avec le modèle de projet Makefile
 
@@ -38,9 +38,9 @@ Le fichier de sortie que vous spécifiez dans le projet n'a pas d'incidence sur 
 
 ### <a name="to-create-a-makefile-project-in-visual-studio-2019"></a>Pour créer un projet Makefile dans Visual Studio 2019
 
-1. Dans le menu principal de Visual Studio, choisissez **Fichier** > **Nouveau** > **Projet** et tapez « makefile » dans la zone de recherche. Sinon, dans la boîte de dialogue **Nouveau projet**, développez **Visual C++**   >  **Général** (Visual Studio 2015) ou **Autre** (Visual Studio 2017), puis choisissez entre les deux options selon si vous ciblez Windows ou Linux.
+1. Dans le menu principal de Visual Studio, choisissez **Fichier** > **Nouveau** > **Projet** et tapez « makefile » dans la zone de recherche. Sinon, dans la boîte de dialogue **Nouveau projet**, développez **Visual C++**  > **Général** (Visual Studio 2015) ou **Autre** (Visual Studio 2017), puis choisissez entre les deux options selon si vous ciblez Windows ou Linux.
 
-1. **Windows uniquement** : Dans la page **Paramètres de configuration Debug**, indiquez les informations relatives à la commande, à la sortie, au nettoyage et à la regénération pour les builds Debug et Retail. Cliquez sur **Suivant** si vous souhaitez spécifier différents paramètres pour une configuration Release.
+1. **Windows uniquement**: dans la page **paramètres de configuration de débogage** , fournissez les informations de commande, de sortie, de nettoyage et de régénération pour les builds de débogage et de vente au détail. Cliquez sur **Suivant** si vous souhaitez spécifier différents paramètres pour une configuration Release.
 
 1. Cliquez sur **Terminer** pour fermer la boîte de dialogue et ouvrir le projet que vous venez de créer dans l’**Explorateur de solutions**.
 
@@ -64,15 +64,15 @@ Vous pouvez afficher et modifier les propriétés du projet dans sa page de prop
 
 Une fois que vous avez créé un projet Makefile, vous pouvez afficher et modifier chacune des options suivantes dans la page **Nmake** de la page de propriétés du projet.
 
-- **Ligne de commande Build :** Spécifie la ligne de commande à exécuter quand l’utilisateur sélectionne Générer dans le menu Générer. Cette option est affichée dans le champ Ligne de commande Build de la page Nmake de la page de propriétés du projet.
+- **Ligne de commande de build :** Spécifie la ligne de commande à exécuter lorsque l’utilisateur sélectionne générer dans le menu Générer. Cette option est affichée dans le champ Ligne de commande Build de la page Nmake de la page de propriétés du projet.
 
-- **Output:** Spécifie le nom du fichier qui doit contenir la sortie de la ligne de commande. Par défaut, cette option est basée sur le nom du projet. Cette option est affichée dans le champ Sortie de la page Nmake de la page de propriétés du projet.
+- **Sortie :** Spécifie le nom du fichier qui contiendra la sortie de la ligne de commande. Par défaut, cette option est basée sur le nom du projet. Cette option est affichée dans le champ Sortie de la page Nmake de la page de propriétés du projet.
 
-- **Commandes de nettoyage :** Spécifie la ligne de commande à exécuter quand l’utilisateur sélectionne Nettoyer dans le menu Générer. Cette option est affichée dans le champ Ligne de commande Clean de la page Nmake de la page de propriétés du projet.
+- **Commandes Clean :** Spécifie la ligne de commande à exécuter lorsque l’utilisateur sélectionne nettoyer dans le menu Générer. Cette option est affichée dans le champ Ligne de commande Clean de la page Nmake de la page de propriétés du projet.
 
-- **Ligne de commande Rebuild :** Spécifie la ligne de commande à exécuter quand l’utilisateur sélectionne Regénérer dans le menu Générer. Cette option est affichée dans le champ Ligne de commande Rebuild All de la page Nmake de la page de propriétés du projet.
+- **Ligne de commande Rebuild :** Spécifie la ligne de commande à exécuter lorsque l’utilisateur sélectionne régénérer dans le menu Générer. Cette option est affichée dans le champ Ligne de commande Rebuild All de la page Nmake de la page de propriétés du projet.
 
-## <a name="how-to-enable-intellisense-for-makefile-projects"></a>Procédure : activer IntelliSense pour des projets Makefile
+## <a name="how-to-enable-intellisense-for-makefile-projects"></a>Comment : activer IntelliSense pour des projets Makefile
 
 IntelliSense ne fonctionne pas dans les projets Makefile quand des paramètres de projet, ou options du compilateur, sont incorrectement configurés. Suivez ces étapes pour configurer des projets Makefile afin qu’IntelliSense fonctionne comme prévu :
 
@@ -86,7 +86,7 @@ IntelliSense ne fonctionne pas dans les projets Makefile quand des paramètres d
 
    - Définissez la propriété **Chemin de recherche Include** de façon à spécifier la liste des répertoires dans lesquels le compilateur effectue ses recherches afin de résoudre les références de fichier passées aux directives de préprocesseur dans votre projet Makefile. Pour plus d’informations, consultez [/I (Autres répertoires Include)](i-additional-include-directories.md).
 
-    - Pour les projets qui sont générés à l’aide de CL.EXE depuis une fenêtre Commande, définissez la variable d’environnement **INCLUDE** de façon à spécifier les répertoires dans lesquels le compilateur effectue ses recherches afin de résoudre les références de fichier passées aux directives de préprocesseur dans votre projet Makefile.
+   - Pour les projets qui sont générés à l’aide de CL.EXE depuis une fenêtre Commande, définissez la variable d’environnement **INCLUDE** de façon à spécifier les répertoires dans lesquels le compilateur effectue ses recherches afin de résoudre les références de fichier passées aux directives de préprocesseur dans votre projet Makefile.
 
    - Définissez la propriété **Fichiers Include forcés** pour spécifier les fichiers d’en-tête à traiter lors de la génération de votre projet Makefile. Pour plus d’informations, consultez [/FI (Nom du fichier Include imposé)](fi-name-forced-include-file.md).
 
@@ -106,6 +106,6 @@ La prochaine fois que vous ouvrez votre projet Makefile dans l’environnement d
 
 [Utilisation de la fonctionnalité IntelliSense](/visualstudio/ide/using-intellisense)<br>
 [NMAKE, référence](nmake-reference.md)<br>
-[Guide pratique pour créer un projet C++ à partir de code existant](../how-to-create-a-cpp-project-from-existing-code.md)
-[Caractères spéciaux dans un makefile](special-characters-in-a-makefile.md)<br/>
+[Comment : créer un projet C++ à partir d’un code existant](../how-to-create-a-cpp-project-from-existing-code.md)
+des [caractères spéciaux dans un Makefile](special-characters-in-a-makefile.md)<br/>
 [Contenu d’un makefile](contents-of-a-makefile.md)<br/>

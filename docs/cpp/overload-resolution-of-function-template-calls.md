@@ -4,12 +4,12 @@ ms.date: 11/04/2016
 helpviewer_keywords:
 - function templates overload resolution
 ms.assetid: a2918748-2cbb-4fc6-a176-e256f120bee4
-ms.openlocfilehash: a736e89565bb7ab6bc49c3c0f65d12fc9508200c
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: d96046c629e812e342ce86b850b6d52a57094997
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62379127"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80188439"
 ---
 # <a name="overload-resolution-of-function-template-calls"></a>Résolution de surcharge des appels de modèles de fonctions
 

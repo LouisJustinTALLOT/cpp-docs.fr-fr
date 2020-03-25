@@ -20,12 +20,12 @@ f1_keywords:
 helpviewer_keywords:
 - __RTDynamicCast
 ms.assetid: 56aa2d7a-aa47-46ef-830d-e37175611239
-ms.openlocfilehash: c4b0caadf20d6c5494acf47ee5a788b5ee009c47
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: a5384966ff96c4e4831ba06f7c67467156a9ecd2
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70957338"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80170070"
 ---
 # <a name="__rtdynamiccast"></a>__RTDynamicCast
 
@@ -72,7 +72,7 @@ Pointeur vers le sous-objet approprié, en cas de réussite ; sinon, **NULL**.
 
 Convertit `inptr` en objet de type `TargetType`. Le type de `inptr` doit être un pointeur si `TargetType` est un pointeur ou une l-value si `TargetType` est une référence. `TargetType` doit être un pointeur ou une référence à un type de classe précédemment défini, ou un pointeur vers void.
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
 |Routine|En-tête requis|
 |-------------|---------------------|

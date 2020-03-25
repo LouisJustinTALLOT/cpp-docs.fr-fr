@@ -1,19 +1,19 @@
 ---
-title: Avertissement du compilateur (niveau 1) C4661
+title: Avertissement du compilateur (niveau 1) C4661
 ms.date: 11/04/2016
 f1_keywords:
 - C4661
 helpviewer_keywords:
 - C4661
 ms.assetid: 603bb8b7-356d-4eef-924b-64d769bac5bd
-ms.openlocfilehash: d9d608c0e9baf05c327e17fa7159e25e27fb5cf3
-ms.sourcegitcommit: 458dcc794e3841919c01a3a5ff6b9a3767f8861b
+ms.openlocfilehash: 43a3287787f831db23423412a9baf959929adfae
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/13/2019
-ms.locfileid: "74051408"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80199459"
 ---
-# <a name="compiler-warning-level-1-c4661"></a>Avertissement du compilateur (niveau 1) C4661
+# <a name="compiler-warning-level-1-c4661"></a>Avertissement du compilateur (niveau 1) C4661
 
 'identificateur' : aucune définition appropriée fournie pour la demande d’instanciation explicite du modèle
 

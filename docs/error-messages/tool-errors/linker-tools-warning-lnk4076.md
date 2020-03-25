@@ -6,15 +6,15 @@ f1_keywords:
 helpviewer_keywords:
 - LNK4076
 ms.assetid: c424d43b-abb3-4df4-be66-8907b859a555
-ms.openlocfilehash: 05a05c63b9b63aafc52854aa9dcdcccbdc6f8d70
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 3f5c5f6bd33fd0e43ccf3c7b55ab54a3cc25ba68
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62182304"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80183434"
 ---
 # <a name="linker-tools-warning-lnk4076"></a>Avertissement des outils Éditeur de liens LNK4076
 
-fichier d’état incrémentiel non valide 'nom_fichier' ; liaison non incrémentielle
+fichier d’état incrémentiel non valide’nom_fichier'; liaison non incrémentielle
 
-LIEN ne peut pas écrire dans le fichier d’état incrémentiel (.ilk). Soit `filename` est endommagé ou il n’est pas une base de données de liaison incrémentielle. Supprimez le fichier et les relier.
+Le lien ne peut pas écrire dans le fichier d’état incrémentiel (. ilk). Soit `filename` est endommagé, soit il ne s’agit pas d’une base de données de liaison incrémentielle. Supprimez le fichier et reliez-le.

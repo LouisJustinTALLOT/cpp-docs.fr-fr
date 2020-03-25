@@ -1,19 +1,19 @@
 ---
-title: Avertissement du compilateur (niveau 1) C4632
+title: Avertissement du compilateur (niveau 1) C4632
 ms.date: 11/04/2016
 f1_keywords:
 - C4632
 helpviewer_keywords:
 - C4632
 ms.assetid: 9e35d205-cf21-4e34-8bd5-e1e7b0e2cdd3
-ms.openlocfilehash: 4a24e54b443707775375a2adf833748eae347ce8
-ms.sourcegitcommit: 458dcc794e3841919c01a3a5ff6b9a3767f8861b
+ms.openlocfilehash: 3a5e6ef8cb461f609ff06fad227b8c7bce81e58c
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/13/2019
-ms.locfileid: "74052579"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80199553"
 ---
-# <a name="compiler-warning-level-1-c4632"></a>Avertissement du compilateur (niveau 1) C4632
+# <a name="compiler-warning-level-1-c4632"></a>Avertissement du compilateur (niveau 1) C4632
 
 Commentaire de document XML : fichier-accès refusé : raison
 

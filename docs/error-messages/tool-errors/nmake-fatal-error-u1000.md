@@ -6,15 +6,15 @@ f1_keywords:
 helpviewer_keywords:
 - U1000
 ms.assetid: 49b9bd9e-f1bc-4b55-a171-c748e40b195e
-ms.openlocfilehash: 2b101041e2d57b8b47528bb49c9c76c28a2670e4
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 8ffbccb0b759147a0cd6dadb321231d357fcb8c1
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62393166"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80173476"
 ---
 # <a name="nmake-fatal-error-u1000"></a>Erreur irrécupérable NMAKE U1000
 
-> Erreur de syntaxe : ')' manquant dans l’appel de macro
+> erreur de syntaxe : ') 'manquant dans l’appel de la macro
 
-Une parenthèse ouvrante, **(**, semblait sans parenthèse fermante, **)**, dans un appel de macro. La forme correcte est **$(**<em>nom</em>**)**; **$** <em>n</em> est autorisée pour les noms de caractères.
+Une parenthèse ouvrante **(** , est apparue sans parenthèse droite correspondante, **)** dans un appel de macro. La forme correcte est **$ (** <em>Name</em> **)** ; **$** <em>n</em> est autorisé pour les noms à un seul caractère.

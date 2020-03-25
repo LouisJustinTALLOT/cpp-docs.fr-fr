@@ -6,15 +6,15 @@ f1_keywords:
 helpviewer_keywords:
 - LNK4096
 ms.assetid: ef6fba38-59a1-4d86-bcac-cadf44d87a36
-ms.openlocfilehash: 5b561d5e9c48d806be566aec104f63743d4409e8
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 28d7bd2918c90716ab9d7eba67b59ca345fc5a17
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62408119"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80183343"
 ---
 # <a name="linker-tools-warning-lnk4096"></a>Avertissement des outils Éditeur de liens LNK4096
 
-/ Valeur BASE « number » n’est pas valide pour Windows 95 et Windows 98 ; image ne peut pas s’exécuter
+La valeur/BASE « Number » n’est pas valide pour Windows 95 et Windows 98 ; l’image risque de ne pas s’exécuter
 
-L’adresse de base que vous avez spécifié n’est pas valide. Fichiers exécutables Windows 95 et Windows 98 doivent avoir une adresse de base supérieure à 0 x 400000. Pour plus d’informations sur les adresses de base, consultez le [/de BASE](../../build/reference/base-base-address.md) option de l’éditeur de liens.
+L’adresse de base que vous avez spécifiée n’est pas valide. Les fichiers exécutables Windows 95 et Windows 98 doivent avoir une adresse de base supérieure à 0x400000. Pour plus d’informations sur les adresses de base, consultez l’option [/base](../../build/reference/base-base-address.md) de l’éditeur de liens.

@@ -6,18 +6,18 @@ f1_keywords:
 helpviewer_keywords:
 - C3390
 ms.assetid: 84800a87-c8e6-45aa-82ae-02f816dc8d97
-ms.openlocfilehash: c624d3b0379d057b0ed566deffc2a0efcc324f88
-ms.sourcegitcommit: c4528a7424d35039454f17778baf1b5f98fbbee7
+ms.openlocfilehash: 4c0544df55fc71ace697d7e0a53ba303706e1378
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "76912874"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80201121"
 ---
 # <a name="compiler-error-c3390"></a>Erreur du compilateur C3390
 
 'type_arg' : argument de type non valide pour le paramètre générique 'param' du générique 'generic_type', doit être un type référence
 
-Un type générique a été instancié de manière incorrecte.  Vérifiez la définition du type.  Pour plus d’informations, consultez [Génériques](../../extensions/generics-cpp-component-extensions.md).
+Un type générique a été instancié de manière incorrecte.  Vérifiez la définition du type.  Pour plus d’informations, consultez la page [Génériques](../../extensions/generics-cpp-component-extensions.md).
 
 ## <a name="example"></a>Exemple
 

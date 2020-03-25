@@ -8,12 +8,12 @@ helpviewer_keywords:
 - interface class keyword
 - interface struct keyword
 ms.assetid: 3ccea701-f50b-4da7-ad6b-f0ee1203e2b9
-ms.openlocfilehash: 60e8965e3ef2538554d8c664b35bd0849bd5e69e
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
-ms.translationtype: HT
+ms.openlocfilehash: cb4566a0094db6d9e0cc97d81718a18a6df5cf18
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "65515704"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80172163"
 ---
 # <a name="interface-class--ccli-and-ccx"></a>classe d’interface (C++/CLI et C++/CX)
 
@@ -43,7 +43,7 @@ L’accessibilité de *base_interface*.  La seule accessibilité autorisée pour
 *base_interface*<br/>
 (Facultatif) Interface de base pour le *nom* de l’interface.
 
-### <a name="remarks"></a>Remarques
+### <a name="remarks"></a>Notes
 
 **interface struct** équivaut à **interface class**.
 
@@ -53,7 +53,7 @@ Une interface définit comment une classe peut être implémentée. Une interfac
 
 Une classe ou un struct qui dérivent d’une interface doivent implémenter tous les membres de l’interface. Lors de l’implémentation du *nom* de l’interface, vous devez également implémenter les interfaces dans la liste `base_interface`.
 
-Pour plus d'informations, voir :
+Pour plus d'informations, consultez les pages suivantes :
 
 - [Constructeur d’interface statique](../dotnet/how-to-define-an-interface-static-constructor-cpp-cli.md)
 
@@ -61,13 +61,13 @@ Pour plus d'informations, voir :
 
 Pour plus d’informations sur les autres types CLR, consultez [Classes et structs](classes-and-structs-cpp-component-extensions.md).
 
-Au moment de la compilation, vous pouvez détecter si un type est une interface avec `__is_interface_class(type)`. Pour plus d’informations, consultez [Prise en charge du compilateur pour les caractéristiques de type](compiler-support-for-type-traits-cpp-component-extensions.md).
+Au moment de la compilation, vous pouvez détecter si un type est une interface avec `__is_interface_class(type)`. Pour plus d’informations, consultez [Compiler Support for Type Traits](compiler-support-for-type-traits-cpp-component-extensions.md) (Prise en charge du compilateur pour les caractéristiques de type).
 
 Dans l’environnement de développement, vous pouvez obtenir l’aide F1 pour ces mots clés en surlignant le mot clé (par exemple, `interface class`) et en appuyant sur F1.
 
 ## <a name="windows-runtime"></a>Windows Runtime
 
-### <a name="remarks"></a>Remarques
+### <a name="remarks"></a>Notes
 
 (Aucune note de cette fonctionnalité de langage ne s’applique qu’au Windows Runtime.)
 
@@ -77,7 +77,7 @@ Option du compilateur : `/ZW`
 
 ## <a name="common-language-runtime"></a>Common Language Runtime
 
-### <a name="remarks"></a>Remarques
+### <a name="remarks"></a>Notes
 
 (Aucune note de cette fonctionnalité de langage ne s’applique qu’au Common Language Runtime.)
 

@@ -6,18 +6,18 @@ helpviewer_keywords:
 - dynamic accessors
 - overriding, dynamic accessors
 ms.assetid: cbefd156-6da5-490d-b795-c2d7d874f7ce
-ms.openlocfilehash: 01beab80fb8574e0caa4ad3054d174c60106ce94
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: d46531f2d4075df98081886dfdfd1f2cf65d9948
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62282934"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80209844"
 ---
 # <a name="overriding-a-dynamic-accessor"></a>Substitution d’un accesseur dynamique
 
-Lorsque vous utilisez un accesseur dynamique tel que `CDynamicAccessor`, la commande `Open` méthode crée un accesseur pour vous automatiquement, selon les informations de colonne de l’ensemble de lignes ouvert. Vous pouvez substituer l’accesseur dynamique pour contrôler exactement comment les colonnes sont liées.
+Quand vous utilisez un accesseur dynamique tel que `CDynamicAccessor`, la méthode `Open` de commande crée automatiquement un accesseur, en fonction des informations de colonne de l’ensemble de lignes ouvert. Vous pouvez substituer l’accesseur dynamique pour contrôler exactement la manière dont les colonnes sont liées.
 
-Pour substituer l’accesseur dynamique, passez **false** comme dernier paramètre à la `CCommand::Open` (méthode). Cela empêche `Open` de créer un accesseur automatiquement. Vous pouvez ensuite appeler `GetColumnInfo` et appelez `AddBindEntry` pour chaque colonne que vous voulez lier. Le code suivant montre comment procéder :
+Pour substituer l’accesseur dynamique, passez la **valeur false** comme dernier paramètre à la méthode `CCommand::Open`. Cela empêche `Open` de créer automatiquement un accesseur. Vous pouvez ensuite appeler `GetColumnInfo` et appeler `AddBindEntry` pour chaque colonne que vous souhaitez lier. Le code suivant montre comment procéder :
 
 ```cpp
 USES_CONVERSION;

@@ -9,18 +9,18 @@ helpviewer_keywords:
 - Clear method [C++]
 - VARIANT object
 ms.assetid: 844d43fa-9628-4643-a877-c1e129838b4e
-ms.openlocfilehash: 698dbfe77c82ac2f0425ed1c1bff4d917ed86f4e
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: bd6a9ebc58845e88e5e82a4e29f5ccc2a46bebfb
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62165891"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80160474"
 ---
-# <a name="varianttclear"></a>_variant_t::Clear
+# <a name="_variant_tclear"></a>_variant_t::Clear
 
-**Section spécifique à Microsoft**
+**Section spécifique de Microsoft**
 
-Efface le texte encapsulé `VARIANT` objet.
+Efface l’objet `VARIANT` encapsulé.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -30,9 +30,9 @@ void Clear( );
 
 ## <a name="remarks"></a>Notes
 
-Appels `VariantClear` sur encapsulé `VARIANT` objet.
+Appelle `VariantClear` sur l’objet `VARIANT` encapsulé.
 
-**FIN de la section spécifique à Microsoft**
+**Fin de la section spécifique de Microsoft**
 
 ## <a name="see-also"></a>Voir aussi
 

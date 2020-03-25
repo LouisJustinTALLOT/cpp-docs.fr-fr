@@ -6,19 +6,19 @@ f1_keywords:
 helpviewer_keywords:
 - C2545
 ms.assetid: 51598eb9-0c57-4306-a0cd-3862980f3672
-ms.openlocfilehash: 7f43ecfa74667c8cc6562bf1feaf4e8d0927f690
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: c5150bbf36813ad7319830736b25cc55bec21f33
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62397469"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80202469"
 ---
 # <a name="compiler-error-c2545"></a>Erreur du compilateur C2545
 
-'opérateur' : Impossible de trouver l’opérateur surchargé
+'opérateur' : impossible de trouver l’opérateur surchargé
 
 L’opérateur ne peut pas être utilisé avec les opérandes fournis. Vous devez fournir un opérateur surchargé avec les opérandes requis.
 
 Cette erreur peut être provoquée si les opérandes ont un type incorrect.
 
-Cette erreur peut être résolue si vous définissez un opérateur de conversion ou un constructeur qui accepte un seul paramètre.
+Cette erreur peut être résolue si vous définissez un opérateur de conversion ou un constructeur qui accepte un paramètre unique.

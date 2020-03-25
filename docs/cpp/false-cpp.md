@@ -6,16 +6,16 @@ f1_keywords:
 helpviewer_keywords:
 - false keyword [C++]
 ms.assetid: cc13aec5-1f02-4d38-8dbf-5473ea2b354f
-ms.openlocfilehash: 5fc27c7f1dfde7d1f686f0a752652773ade9cc0e
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: f363e309b91e44472447d040aa36752750afec6f
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62183724"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80188933"
 ---
 # <a name="false-c"></a>false (C++)
 
-Le mot clé est une des deux valeurs d’une variable de type [bool](../cpp/bool-cpp.md) ou une expression conditionnelle (une expression conditionnelle est maintenant un **true** expression booléenne). Par exemple, si `i` est une variable de type **bool**, le `i = false;` instruction assigne **false** à `i`.
+Le mot clé est l’une des deux valeurs d’une variable de type [bool](../cpp/bool-cpp.md) ou d’une expression conditionnelle (une expression conditionnelle est maintenant une **véritable** expression booléenne). Par exemple, si `i` est une variable de type **bool**, l’instruction `i = false;` affecte la **valeur false** à `i`.
 
 ## <a name="example"></a>Exemple
 

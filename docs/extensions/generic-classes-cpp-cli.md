@@ -9,12 +9,12 @@ helpviewer_keywords:
 - generic classes
 - generics [C++], declaring generic classes
 ms.assetid: 0beb99e1-1ec4-4fee-9836-ce9657d67a3a
-ms.openlocfilehash: 71850807f6332f31195ef9bafbd9468f48cb6fb3
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
-ms.translationtype: HT
+ms.openlocfilehash: 78f4bf3abb98aab5e626e8ada538a22bdbca2912
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "65516384"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80172358"
 ---
 # <a name="generic-classes-ccli"></a>Classes génériques (C++/CLI)
 
@@ -33,25 +33,25 @@ class-body
 } [declarators] [;]
 ```
 
-## <a name="remarks"></a>Remarques
+## <a name="remarks"></a>Notes
 
 Dans la syntaxe ci-dessus, les termes suivants sont utilisés :
 
-*Attributs*<br/>
+*attributes*<br/>
 (Facultatif) Informations déclaratives supplémentaires. Pour plus d’informations sur les attributs et les classes d’attributs, consultez Attributs.
 
 *class-key*<br/>
 **class** ou **typename**
 
-*type-parameter-identifier(s)*, une liste d’identificateurs séparée par des virgules spécifiant les noms des paramètres de type.
+*type-parameter-identifier(s)* , une liste d’identificateurs séparée par des virgules spécifiant les noms des paramètres de type.
 
 *constraint-clauses*<br/>
 Une liste (non séparée par des virgules) de clauses **where** spécifiant les contraintes pour les paramètres de type. Son format est le suivant :
 
-> **where** *type-parameter-identifier* **:** *constraint-list*  **...**
+> **où** *type-Parameter-identifier* **:** *Constraint-List*  **...**
 
 *constraint-list*<br/>
-*class-or-interface*[`,` *...*]
+*Class-or-interface*[`,` *...* ]
 
 *accessibility-modifiers*<br/>
 Modificateurs d’accessibilité pour la classe générique. Pour Windows Runtime, le seul modificateur autorisé est **private**. Pour common language runtime, les modificateurs autorisés sont **private** et **public**.
@@ -276,7 +276,7 @@ Les règles spéciales suivantes s’appliquent aux méthodes dans les classes g
 
 Les méthodes des classes génériques qui ne comportent aucun paramètre de type supplémentaire sont généralement appelées non génériques, même si elles sont implicitement paramétrées par la classe générique englobante.
 
-La signature d’une méthode non générique peut inclure un ou plusieurs paramètres de type de la classe englobante, directement ou dans un type construit ouvert. Par exemple :
+La signature d’une méthode non générique peut inclure un ou plusieurs paramètres de type de la classe englobante, directement ou dans un type construit ouvert. Par exemple :
 
 `void MyMethod(MyClass<ItemType> x) {}`
 
@@ -341,7 +341,7 @@ Amount: $123.00**
 
 ## <a name="generic-methods-in-generic-classes"></a>Méthodes génériques au sein de classes génériques
 
-Vous pouvez déclarer des méthodes génériques dans des classes génériques ou non génériques. Par exemple :
+Vous pouvez déclarer des méthodes génériques dans des classes génériques ou non génériques. Par exemple :
 
 ## <a name="example"></a>Exemple
 

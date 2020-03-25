@@ -34,12 +34,12 @@ helpviewer_keywords:
 - _waccess function
 - taccess function
 ms.assetid: ba34f745-85c3-49e5-a7d4-3590bd249dd3
-ms.openlocfilehash: 90092b5d1c250fd79be107b0c36ee5641f70b30c
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 54e112db1e0d7d4ec5495d02cf56a62b51607140
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70943938"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80170382"
 ---
 # <a name="_access-_waccess"></a>_access, _waccess
 
@@ -85,15 +85,15 @@ Lorsqu’elle est utilisée avec des fichiers, la fonction **_access** détermin
 |valeur du *mode*|Test réalisé sur le fichier|
 |------------------|---------------------|
 |00|Existence uniquement|
-|02|En écriture seule|
+|02|Écriture seule|
 |04|Lecture seule|
-|06|Opérations de lecture et d’écriture|
+|06|Lecture et écriture|
 
 Cette fonction vérifie uniquement si le fichier et le répertoire sont en lecture seule ou non ; elle ne vérifie pas les paramètres de sécurité du système de fichiers. Pour cela, vous avez besoin d’un jeton d’accès. Pour plus d’informations sur la sécurité du système de fichiers, consultez [Access Tokens](/windows/win32/SecAuthZ/access-tokens) (Jetons d’accès). Il existe une classe ATL pour fournir cette fonctionnalité ; consultez [CAccessToken, classe](../../atl/reference/caccesstoken-class.md).
 
 **_waccess** est une version à caractères larges de **_access**; l’argument *path* de **_waccess** est une chaîne de caractères larges. dans le cas contraire, **_waccess** et **_access** se comportent de la même façon.
 
-Cette fonction valide ses paramètres. Si *path* a la valeur null ou que le *mode* ne spécifie pas de mode valide, le gestionnaire de paramètres non valides est appelé, comme décrit dans [validation de paramètre](../../c-runtime-library/parameter-validation.md). Si l’exécution est autorisée à se poursuivre, la fonction définit `errno` avec la valeur `EINVAL` et retourne -1.
+Cette fonction valide ses paramètres. Si *path* a la valeur null ou que le *mode* ne spécifie pas de mode valide, le gestionnaire de paramètres non valides est appelé, comme décrit dans [validation de paramètre](../../c-runtime-library/parameter-validation.md). Si l’exécution est autorisée à se poursuivre, la fonction affecte à `errno` la valeur `EINVAL` et retourne -1.
 
 ### <a name="generic-text-routine-mappings"></a>Mappages de routines de texte générique
 
@@ -101,7 +101,7 @@ Cette fonction valide ses paramètres. Si *path* a la valeur null ou que le *mod
 |---------------------|--------------------------------------|--------------------|-----------------------|
 |`_taccess`|**_access**|**_access**|**_waccess**|
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
 |Routine|En-tête requis|En-têtes facultatifs|
 |-------------|---------------------|----------------------|

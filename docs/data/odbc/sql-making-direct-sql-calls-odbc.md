@@ -1,5 +1,5 @@
 ---
-title: 'SQL : Appels SQL directs (ODBC)'
+title: 'SQL : appels SQL directs (ODBC)'
 ms.date: 11/04/2016
 helpviewer_keywords:
 - SQL, direct calls from ODBC
@@ -8,33 +8,33 @@ helpviewer_keywords:
 - SQL calls
 - direct SQL calls from ODBC
 ms.assetid: 091988d2-f5a5-4c2d-aa09-8779a9fb9607
-ms.openlocfilehash: fd528e7abb713e4b3eb2bd5388a29958a1bb006c
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 9240a227cdc4004d1e6e2b7ac26946ca233b71ec
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62329970"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80212626"
 ---
-# <a name="sql-making-direct-sql-calls-odbc"></a>SQL : Appels SQL directs (ODBC)
+# <a name="sql-making-direct-sql-calls-odbc"></a>SQL : appels SQL directs (ODBC)
 
 Cette rubrique explique :
 
-- Quand utiliser SQL directe appelle.
+- Quand utiliser des appels SQL directs.
 
-- [Comment faire diriger SQL appelle à la source de données](#_core_making_direct_sql_function_calls).
+- [Comment effectuer des appels SQL directs à la source de données](#_core_making_direct_sql_function_calls).
 
 > [!NOTE]
->  Ces informations s’appliquent aux classes ODBC MFC. Si vous travaillez avec les classes DAO MFC, consultez la rubrique « Comparaison de Microsoft Jet Database Engine SQL et ANSI SQL » dans l’aide de DAO.
+>  Ces informations s’appliquent aux classes ODBC MFC. Si vous utilisez les classes DAO MFC, consultez la rubrique « Comparaison de Microsoft Jet Moteur de base de données SQL et ANSI SQL » dans l’aide de DAO.
 
-##  <a name="_core_when_to_call_sql_directly"></a> Quand appeler SQL directement
+##  <a name="when-to-call-sql-directly"></a><a name="_core_when_to_call_sql_directly"></a>Quand appeler SQL directement
 
-Pour créer des tables, supprimer (delete) tables, modifier des tables existantes, créer des index et exécuter d’autres fonctions SQL qui modifient le [Source de données (ODBC)](../../data/odbc/data-source-odbc.md) schéma, vous devez émettre une instruction SQL directement à la source de données à l’aide de la base de données Langage de définition (DDL). Lorsque vous utilisez un Assistant pour créer un jeu d’enregistrements pour une table (au moment du design), vous pouvez choisir les colonnes de la table à représenter dans le jeu d’enregistrements. Cela ne permet pas pour les colonnes que vous ou un autre utilisateur de la source de données ajouter à la table ultérieurement, une fois que votre programme a été compilé. Les classes de base de données ne prennent pas en charge DDL directement, mais vous pouvez toujours écrire du code pour lier d’une nouvelle colonne à votre jeu d’enregistrements dynamiquement, en cours d’exécution. Pour plus d’informations sur la procédure à suivre cette liaison, consultez [jeu d’enregistrements : Liaison dynamique des colonnes de données (ODBC)](../../data/odbc/recordset-dynamically-binding-data-columns-odbc.md).
+Pour créer des tables, supprimer des tables, modifier des tables existantes, créer des index et effectuer d’autres fonctions SQL qui modifient le schéma de la [source de données (ODBC)](../../data/odbc/data-source-odbc.md) , vous devez émettre une instruction SQL directement à la source de données à l’aide du langage de définition de base de données (DDL). Quand vous utilisez un Assistant pour créer un jeu d’enregistrements pour une table (au moment du Design), vous pouvez choisir les colonnes de la table à représenter dans le Recordset. Cela n’autorise pas les colonnes que vous ou un autre utilisateur de la source de données ajoute à la table ultérieurement, une fois votre programme compilé. Les classes de base de données ne prennent pas en charge DDL directement, mais vous pouvez toujours écrire du code pour lier une nouvelle colonne à votre jeu d’enregistrements de manière dynamique, au moment de l’exécution. Pour plus d’informations sur la façon d’effectuer cette liaison, consultez [Recordset : liaison dynamique des colonnes de données (ODBC)](../../data/odbc/recordset-dynamically-binding-data-columns-odbc.md).
 
-Vous pouvez utiliser le SGBD lui-même pour modifier le schéma ou un autre outil qui vous permet d’effectuer les fonctions DDL. Vous pouvez également utiliser des appels de fonction ODBC pour l’envoi d’instructions SQL, telles que l’appel d’une requête prédéfinie (procédure stockée) qui ne retourne pas d’enregistrements.
+Vous pouvez utiliser le SGBD lui-même pour modifier le schéma ou un autre outil qui vous permet d’exécuter des fonctions DDL. Vous pouvez également utiliser des appels de fonction ODBC pour envoyer des instructions SQL, telles que l’appel d’une requête prédéfinie (procédure stockée) qui ne retourne pas d’enregistrements.
 
-##  <a name="_core_making_direct_sql_function_calls"></a> Appels de fonction SQL directs
+##  <a name="making-direct-sql-function-calls"></a><a name="_core_making_direct_sql_function_calls"></a>Appels directs des fonctions SQL
 
-Vous pouvez exécuter directement un appel SQL en utilisant un [CDatabase, classe](../../mfc/reference/cdatabase-class.md) objet. Configurer votre chaîne d’instruction SQL (généralement dans un `CString`) et transmettez-le à la [CDatabase::ExecuteSQL](../../mfc/reference/cdatabase-class.md#executesql) fonction membre de votre `CDatabase` objet. Si vous utilisez des appels de fonction ODBC pour envoyer une instruction SQL qui retourne normalement des enregistrements, les enregistrements sont ignorés.
+Vous pouvez exécuter directement un appel SQL à l’aide d’un objet de [classe CDatabase](../../mfc/reference/cdatabase-class.md) . Configurez votre chaîne d’instruction SQL (généralement dans un `CString`) et transmettez-la à la fonction membre [CDatabase :: ExecuteSQL](../../mfc/reference/cdatabase-class.md#executesql) de votre objet `CDatabase`. Si vous utilisez des appels de fonction ODBC pour envoyer une instruction SQL qui retourne normalement des enregistrements, ceux-ci sont ignorés.
 
 ## <a name="see-also"></a>Voir aussi
 

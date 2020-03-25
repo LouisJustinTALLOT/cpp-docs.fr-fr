@@ -6,12 +6,12 @@ helpviewer_keywords:
 - data types [C++], function return types
 - functions [C++], return types
 ms.assetid: 5b73be1d-2dc7-41df-ab0a-adcba36f2ad1
-ms.openlocfilehash: a2d7fa9ddbc1d4a2f922b5a20930e150ae991f38
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 5e84643713dcbcb278fe7ce07c5d55f3593ec2ef
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62403436"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80188296"
 ---
 # <a name="reference-type-function-returns"></a>Retours de fonction de type référence
 
@@ -23,9 +23,9 @@ Les fonctions peuvent être déclarées pour retourner un type référence. Il e
 
 - L'objet référencé ne sort pas de la portée lors du retour de la fonction.
 
-Tout comme il peut être plus efficace de passer des objets volumineux *à* fonctions par référence, elle peut également être plus efficace pour retourner des objets volumineux *de* fonctions par référence. Le protocole de retour par référence élimine le besoin de copier l'objet dans un emplacement temporaire avant de le retourner.
+Tout comme il peut être plus efficace de passer des objets volumineux *à* des fonctions par référence, il peut également être plus efficace de retourner *des objets volumineux à partir de* fonctions par référence. Le protocole de retour par référence élimine le besoin de copier l'objet dans un emplacement temporaire avant de le retourner.
 
-Les types de retour par référence peuvent également être utiles lorsque la fonction doit prendre une l-value. La plupart des opérateurs surchargés appartiennent à cette catégorie, notamment l'opérateur d'assignation. Opérateurs surchargés sont décrits dans [opérateurs surchargés](../cpp/operator-overloading.md).
+Les types de retour par référence peuvent également être utiles lorsque la fonction doit prendre une l-value. La plupart des opérateurs surchargés appartiennent à cette catégorie, notamment l'opérateur d'assignation. Les opérateurs surchargés sont couverts par les [opérateurs surchargés](../cpp/operator-overloading.md).
 
 ## <a name="example"></a>Exemple
 
@@ -73,7 +73,7 @@ cout << "x = " << ThePoint.x() << "\n"
 }
 ```
 
-## <a name="output"></a>Sortie
+## <a name="output"></a>Output
 
 ```Output
 x = 7
@@ -86,7 +86,7 @@ Notez également que, dans main, l'objet Point reste dans la portée et ses memb
 
 Les déclarations des types référence doivent contenir des initialiseurs sauf dans les cas suivants :
 
-- Explicite **extern** déclaration
+- Déclaration **extern** explicite
 
 - Déclaration d'une classe membre
 
@@ -108,8 +108,8 @@ Foo& GetFoo()
 } // f is destroyed here
 ```
 
-Le compilateur émet un avertissement dans ce cas : `warning C4172: returning address of local variable or temporary`. Dans des programmes simples, il est possible qu'occasionnellement aucune violation d'accès ne se produise si la référence est accessible par l'appelant avant le remplacement de l'emplacement de mémoire. C'est le fruit du hasard. Tenez compte de l'avertissement.
+Dans ce cas, le compilateur émet un avertissement : `warning C4172: returning address of local variable or temporary`. Dans des programmes simples, il est possible qu'occasionnellement aucune violation d'accès ne se produise si la référence est accessible par l'appelant avant le remplacement de l'emplacement de mémoire. C'est le fruit du hasard. Tenez compte de l'avertissement.
 
 ## <a name="see-also"></a>Voir aussi
 
-[Références](../cpp/references-cpp.md)
+[Informations de référence](../cpp/references-cpp.md)

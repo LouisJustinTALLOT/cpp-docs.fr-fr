@@ -56,12 +56,12 @@ helpviewer_keywords:
 - OpenWithPromptFileName method
 - OpenWithServiceComponents method
 ms.assetid: 99bf862c-9d5c-4117-9501-aa0e2672085c
-ms.openlocfilehash: d97138b548a3e303898ee2bafde88af38aa78f40
-ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
+ms.openlocfilehash: 646d4b3548a1c5ee1bdfaf64f7823fa584abaac5
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/17/2020
-ms.locfileid: "79445302"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80212012"
 ---
 # <a name="cdatasource-class"></a>CDataSource, classe
 
@@ -99,7 +99,7 @@ Une ou plusieurs sessions de base de données peuvent être créées pour une se
 
 Pour obtenir un exemple d’utilisation de `CDataSource`, consultez l’exemple [CatDB](../../overview/visual-cpp-samples.md) .
 
-## <a name="close"></a>CDataSource :: Close
+## <a name="cdatasourceclose"></a><a name="close"></a>CDataSource :: Close
 
 Ferme la connexion en libérant le pointeur `m_spInit`.
 
@@ -109,7 +109,7 @@ Ferme la connexion en libérant le pointeur `m_spInit`.
 void Close() throw();
 ```
 
-## <a name="getinitializationstring"></a>CDataSource :: GetInitializationString
+## <a name="cdatasourcegetinitializationstring"></a><a name="getinitializationstring"></a>CDataSource :: GetInitializationString
 
 Récupère la chaîne d’initialisation d’une source de données qui est actuellement ouverte.
 
@@ -136,7 +136,7 @@ HRESULT standard.
 
 La chaîne d’initialisation résultante peut être utilisée pour rouvrir ultérieurement cette connexion à la source de données.
 
-## <a name="getproperties"></a>CDataSource :: GetProperties
+## <a name="cdatasourcegetproperties"></a><a name="getproperties"></a>CDataSource :: GetProperties
 
 Retourne les informations de propriété demandées pour l’objet de source de données connecté.
 
@@ -161,7 +161,7 @@ HRESULT standard.
 
 Pour obtenir une seule propriété, utilisez [GetProperty](../../data/oledb/cdatasource-getproperty.md).
 
-## <a name="getproperty"></a>CDataSource :: GetProperty
+## <a name="cdatasourcegetproperty"></a><a name="getproperty"></a>CDataSource :: GetProperty
 
 Retourne la valeur d’une propriété spécifiée pour l’objet de source de données connecté.
 
@@ -192,7 +192,7 @@ HRESULT standard.
 
 Pour afficher plusieurs propriétés, utilisez [GetProperties](../../data/oledb/cdatasource-getproperties.md).
 
-## <a name="open"></a>CDataSource :: Open
+## <a name="cdatasourceopen"></a><a name="open"></a>CDataSource :: Open
 
 Ouvre une connexion à une source de données à l’aide d’un `CLSID`, `ProgID`ou `CEnumerator` moniker ou invite l’utilisateur à utiliser une boîte de dialogue localisateur.
 
@@ -288,7 +288,7 @@ Le code suivant montre comment ouvrir une source de données Jet 4.0 avec les m
 
 [!code-cpp[NVC_OLEDB_Consumer#7](../../data/oledb/codesnippet/cpp/cdatasource-open_1.cpp)]
 
-## <a name="openfromfilename"></a>CDataSource :: OpenFromFileName
+## <a name="cdatasourceopenfromfilename"></a><a name="openfromfilename"></a>CDataSource :: OpenFromFileName
 
 Ouvre une source de données à partir d'un fichier spécifié par le nom de fichier fourni par l'utilisateur.
 
@@ -313,7 +313,7 @@ HRESULT standard.
 
 Cette méthode ouvre un objet source de données à l'aide des composants de service d'oledb32.dll ; cette DLL contient l'implémentation des fonctionnalités Composants de service, telles que la mise en pool de ressources, l'inscription de transaction automatique, etc. Pour plus d’informations, consultez la référence OLE DB dans le [Guide du programmeur OLE DB](/previous-versions/windows/desktop/ms713643(v=vs.85)).
 
-## <a name="openfrominitializationstring"></a>CDataSource :: OpenFromInitializationString
+## <a name="cdatasourceopenfrominitializationstring"></a><a name="openfrominitializationstring"></a>CDataSource :: OpenFromInitializationString
 
 Ouvre une source de données spécifiée par la chaîne d’initialisation fournie par l’utilisateur.
 
@@ -342,7 +342,7 @@ HRESULT standard.
 
 Cette méthode ouvre un objet source de données à l'aide des composants de service d'oledb32.dll ; cette DLL contient l'implémentation des fonctionnalités Composants de service, telles que la mise en pool de ressources, l'inscription de transaction automatique, etc.
 
-## <a name="openwithpromptfilename"></a>CDataSource :: OpenWithPromptFileName
+## <a name="cdatasourceopenwithpromptfilename"></a><a name="openwithpromptfilename"></a>CDataSource :: OpenWithPromptFileName
 
 Cette méthode présente une invite à l'utilisateur sous la forme d'une boîte de dialogue, puis ouvre une source de données correspondant au fichier spécifié par l'utilisateur.
 
@@ -373,7 +373,7 @@ HRESULT standard.
 
 Cette méthode ouvre un objet source de données à l'aide des composants de service d'oledb32.dll ; cette DLL contient l'implémentation des fonctionnalités Composants de service, telles que la mise en pool de ressources, l'inscription de transaction automatique, etc. Pour plus d’informations, consultez la référence OLE DB dans le [Guide du programmeur OLE DB](/previous-versions/windows/desktop/ms713643(v=vs.85)).
 
-## <a name="openwithservicecomponents"></a>CDataSource :: OpenWithServiceComponents
+## <a name="cdatasourceopenwithservicecomponents"></a><a name="openwithservicecomponents"></a>CDataSource :: OpenWithServiceComponents
 
 Ouvre un objet source de données à l'aide des composants de service d'oledb32.dll.
 

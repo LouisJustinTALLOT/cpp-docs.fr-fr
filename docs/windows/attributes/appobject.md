@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - appobject attribute
 ms.assetid: 8ce30b73-e945-403e-a755-6bc78078a695
-ms.openlocfilehash: e02cedff70ac32f7edfdb92b240269c34befee7e
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: ebbb3ce71dc9b947ef49a42ee41a5ce2d5abbb34
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69490931"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80168510"
 ---
 # <a name="appobject"></a>appobject
 
@@ -46,16 +46,16 @@ class A : public ICustom {
 };
 ```
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
 ### <a name="attribute-context"></a>Contexte d'attribut
 
 |||
 |-|-|
-|**S'applique à**|**class**, **struct**|
+|**S'applique à**|**classe**, **struct**|
 |**Renouvelable**|Non|
 |**Attributs requis**|`coclass`|
-|**Attributs non valides**|Aucun|
+|**Attributs non valides**|None|
 
 Pour plus d'informations sur les contextes d'attribut, consultez [Contextes d'attribut](cpp-attributes-com-net.md#contexts).
 

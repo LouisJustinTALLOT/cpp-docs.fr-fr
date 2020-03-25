@@ -6,29 +6,29 @@ f1_keywords:
 helpviewer_keywords:
 - R6030
 ms.assetid: 0238a6c3-a033-4046-8adc-f8f99d961153
-ms.openlocfilehash: 7f5c61d9b39b1d655bcbf3d42ea870370ddf2842
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 5d7160623d4e1eb83240c09e637c780fefc0d43d
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62400017"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80197117"
 ---
 # <a name="c-runtime-error-r6030"></a>Erreur Runtime C R6030
 
 CRT non initialisé
 
 > [!NOTE]
-> Si vous rencontrez ce message d’erreur lors de l’exécution d’une application, l’application a été arrêtée, car il a un problème interne. Ce problème est souvent dû à certains programmes de logiciels de sécurité, ou rarement, par un bogue dans le programme.
+> Si vous rencontrez ce message d’erreur lors de l’exécution d’une application, l’application a été arrêtée, car elle présente un problème interne. Ce problème est le plus souvent causé par certains programmes logiciels de sécurité, ou rarement, par un bogue dans le programme.
 >
 > Vous pouvez essayer de suivre les étapes ci-après pour corriger cette erreur :
 >
-> - Votre logiciel de sécurité peut avoir des instructions spécifiques pour atténuer ce problème. Consultez le site Web de votre fournisseur de logiciels de sécurité pour plus d’informations. Vous pouvez également vérifier les versions mises à jour de votre logiciel de sécurité, ou essayer le logiciel de sécurité différentes.
-> - Utilisez le **applications et fonctionnalités** ou **programmes et fonctionnalités** page dans le **le panneau de configuration** pour réparer ou réinstaller le programme.
-> - Vérifiez **mise à jour Windows** dans le **le panneau de configuration** mises à jour logicielles.
-> - Recherchez une version mise à jour de l’application. Contactez le fournisseur de l’application si le problème persiste.
+> - Votre logiciel de sécurité peut contenir des instructions spécifiques pour atténuer ce problème. Pour plus d’informations, consultez le site Web de votre fournisseur de logiciels de sécurité. Vous pouvez également rechercher les versions mises à jour de votre logiciel de sécurité ou essayer différents logiciels de sécurité.
+> - Utilisez la page **applications et fonctionnalités** ou **programmes et fonctionnalités** du **panneau de configuration** pour réparer ou réinstaller le programme.
+> - Cochez **Windows Update** dans le **panneau de configuration** pour les mises à jour logicielles.
+> - Recherchez une version mise à jour de l’application. Si le problème persiste, contactez le fournisseur de l’application.
 
 **Informations pour les programmeurs**
 
-Cette erreur se produit si vous utilisez le Runtime C (CRT), mais le code de démarrage du CRT n’a pas été exécuté. Il est possible d’obtenir cette erreur si le commutateur de l’éditeur de liens [/Entry](../../build/reference/entry-entry-point-symbol.md) est utilisée pour remplacer la valeur par défaut à partir d’adresses, généralement **mainCRTStartup**, **wmainCRTStartup** pour un console EXE, **WinMainCRTStartup** ou **wWinMainCRTStartup** pour un EXE Windows, ou **_DllMainCRTStartup** pour une DLL. Sauf si l’une des fonctions ci-dessus est appelée au démarrage, le Runtime C ne sera pas initialisé. Ces fonctions de démarrage sont normalement appelées par défaut lorsque vous liez à la bibliothèque runtime C et que vous utilisez la normale **principal**, **wmain**, **WinMain**, ou  **DllMain** points d’entrée.
+Cette erreur se produit si vous utilisez le runtime C (CRT), mais que le code de démarrage du CRT n’a pas été exécuté. Il est possible d’obtenir cette erreur si le commutateur de l’éditeur de liens [/entry](../../build/reference/entry-entry-point-symbol.md) est utilisé pour remplacer l’adresse de départ par défaut, généralement **mainCRTStartup**, **wmainCRTStartup** pour un exe de console, **WinMainCRTStartup** ou **wWinMainCRTStartup** pour un exe Windows, ou **_DllMainCRTStartup** pour une dll. À moins que l’une des fonctions ci-dessus ne soit appelée au démarrage, le runtime C ne sera pas initialisé. Ces fonctions de démarrage sont généralement appelées par défaut lorsque vous liez à la bibliothèque Runtime C et utilisent les points d’entrée **principaux**, **wmain**, **WinMain**ou **DllMain** normaux.
 
-Il est également possible d’obtenir cette erreur quand un autre programme utilise des techniques d’injection de code pour intercepter certains appels de bibliothèque DLL. Certains programmes de sécurité intrusives utilisent cette technique. Dans les versions de Visual C++ antérieures à Visual Studio 2015, il est possible d’utiliser une bibliothèque CRT liée statiquement pour résoudre le problème, mais cela n’est pas recommandé pour des raisons de sécurité et application des mises à jour. Corriger ce problème peut nécessiter une action de l’utilisateur final.
+Vous pouvez également recevoir cette erreur lorsqu’un autre programme utilise des techniques d’injection de code pour intercepter certains appels de bibliothèque DLL. Certains programmes de sécurité intrusifs utilisent cette technique. Dans les versions de C++ Visual antérieures à visual studio 2015, il est possible d’utiliser une bibliothèque CRT liée de manière statique pour résoudre le problème, mais cela n’est pas recommandé pour des raisons de sécurité et de mise à jour d’application. La correction de ce problème peut nécessiter l’intervention de l’utilisateur final.

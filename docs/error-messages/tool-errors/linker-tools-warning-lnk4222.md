@@ -6,16 +6,16 @@ f1_keywords:
 helpviewer_keywords:
 - LNK4222
 ms.assetid: b7bb1794-41fb-4c83-b9b0-59c0d786a7da
-ms.openlocfilehash: 52a4fee532eb9997dcf013f95246b27fdffc4c20
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: f74379861ad04142fd78a8e307af165072c9cadd
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62160404"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80183031"
 ---
 # <a name="linker-tools-warning-lnk4222"></a>Avertissement des outils Éditeur de liens LNK4222
 
-un symbole exporté 'symbol' ne doit pas être assigné un ordinal
+un symbole exporté’Symbol’ne doit pas être assigné à un ordinal
 
 Les symboles suivants ne doivent pas être exportés par ordinal :
 
@@ -33,7 +33,7 @@ Les symboles suivants ne doivent pas être exportés par ordinal :
 
 - `DllUnregisterServer`
 
-Ces fonctions sont toujours situées par nom, à l’aide de `GetProcAddress`. L’éditeur de liens vous avertit à ce sujet est de type d’exportation, car cela peut entraîner une image plus grande. Cela peut se produire si la plage de vos exportations ordinales est grande avec relativement peu d’exportations. Par exemple :
+Ces fonctions sont toujours situées par nom, à l’aide de `GetProcAddress`. L’éditeur de liens avertit ce type d’exportation, car cela peut entraîner une image plus grande. Cela peut se produire si la plage de vos exportations ordinales est importante avec relativement peu d’exportations. Par exemple,
 
 ```
 EXPORTS
@@ -41,7 +41,7 @@ EXPORTS
    MyOtherAPI      @100
 ```
 
-nécessite 100 emplacements dans la table d’adresses exportation dont 98 remplisseur simplement (2-99). D'un autre côté
+nécessite 100 emplacements dans la table d’adresses d’exportation avec 98 (2-99) le remplissage. D'un autre côté
 
 ```
 EXPORTS
@@ -49,4 +49,4 @@ EXPORTS
    MyOtherAPI      @100
 ```
 
-nécessite deux emplacements. (N’oubliez pas que vous pouvez également exporter avec la [/EXPORT](../../build/reference/export-exports-a-function.md) option de l’éditeur de liens.)
+nécessite deux emplacements. (Sachez que vous pouvez également exporter avec l’option de l’éditeur de liens [/Export](../../build/reference/export-exports-a-function.md) .)

@@ -1,19 +1,19 @@
 ---
-title: Avertissement du compilateur (niveau 1) C4928
+title: Avertissement du compilateur (niveau 1) C4928
 ms.date: 11/04/2016
 f1_keywords:
 - C4928
 helpviewer_keywords:
 - C4928
 ms.assetid: 77235d7f-9360-45cb-8348-d148c605c4a3
-ms.openlocfilehash: cb05dfc42ae5bcd6f7a30f4ee249eb866ac4179a
-ms.sourcegitcommit: 458dcc794e3841919c01a3a5ff6b9a3767f8861b
+ms.openlocfilehash: 54abb1072d8911fb7287b786f5a4254a710af815
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/13/2019
-ms.locfileid: "74050171"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80199327"
 ---
-# <a name="compiler-warning-level-1-c4928"></a>Avertissement du compilateur (niveau 1) C4928
+# <a name="compiler-warning-level-1-c4928"></a>Avertissement du compilateur (niveau 1) C4928
 
 initialisation de copie non conforme ; plusieurs conversions définies par l'utilisateur ont été appliquées implicitement
 

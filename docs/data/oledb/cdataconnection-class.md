@@ -61,12 +61,12 @@ helpviewer_keywords:
 - operator CSession*
 - CSession* operator
 ms.assetid: 77432d85-4e20-49ec-a0b0-142137828471
-ms.openlocfilehash: e966ce8d0f8b277c0edde2b0b9b345a11c6a964c
-ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
+ms.openlocfilehash: 385445081f84f65ff7030466a238a5a96abd63be
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/17/2020
-ms.locfileid: "79442493"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80212059"
 ---
 # <a name="cdataconnection-class"></a>CDataConnection, classe
 
@@ -115,7 +115,7 @@ Avec `CDataConnection`, il vous suffit de créer un objet de connexion, de lui t
 > [!NOTE]
 >  Si vous créez une application de base de données qui doit gérer plusieurs sessions, vous devez utiliser [OpenNewSession](../../data/oledb/cdataconnection-opennewsession.md).
 
-## <a name="cdataconnection"></a>CDataConnection :: CDataConnection
+## <a name="cdataconnectioncdataconnection"></a><a name="cdataconnection"></a>CDataConnection :: CDataConnection
 
 Instancie et initialise un objet `CDataConnection`.
 
@@ -137,7 +137,7 @@ La première substitution crée un objet `CDataConnection` avec les paramètres 
 
 Le deuxième remplacement crée un nouvel objet `CDataConnection` avec des paramètres équivalents à l’objet de connexion de données que vous spécifiez.
 
-## <a name="copy"></a>CDataConnection :: Copy
+## <a name="cdataconnectioncopy"></a><a name="copy"></a>CDataConnection :: Copy
 
 Crée une copie d’une connexion de données existante.
 
@@ -152,7 +152,7 @@ CDataConnection& Copy(const CDataConnection & ds) throw();
 *SD*<br/>
 dans Référence à une connexion de données existante à copier.
 
-## <a name="open"></a>CDataConnection :: Open
+## <a name="cdataconnectionopen"></a><a name="open"></a>CDataConnection :: Open
 
 Ouvre une connexion à une source de données à l’aide d’une chaîne d’initialisation.
 
@@ -171,7 +171,7 @@ dans Chaîne d’initialisation de la source de données.
 
 HRESULT standard.
 
-## <a name="opennewsession"></a>CDataConnection :: OpenNewSession
+## <a name="cdataconnectionopennewsession"></a><a name="opennewsession"></a>CDataConnection :: OpenNewSession
 
 Ouvre une nouvelle session à l’aide de la source de données de l’objet de connexion actuel.
 
@@ -194,7 +194,7 @@ La nouvelle session utilise l’objet de source de données contenu de l’objet
 
 HRESULT standard.
 
-## <a name="op_bool"></a>CDataConnection :: Operator BOOL
+## <a name="cdataconnectionoperator-bool"></a><a name="op_bool"></a>CDataConnection :: Operator BOOL
 
 Détermine si la session active est ouverte ou non.
 
@@ -208,7 +208,7 @@ operator BOOL() throw();
 
 Retourne la valeur **bool** (typedef MFC). **True** signifie que la session active est ouverte ; **False** signifie que la session active est fermée.
 
-## <a name="op_bool_ole"></a>CDataConnection :: operator bool (OLE DB)
+## <a name="cdataconnectionoperator-bool-ole-db"></a><a name="op_bool_ole"></a>CDataConnection :: operator bool (OLE DB)
 
 Détermine si la session active est ouverte ou non.
 
@@ -222,7 +222,7 @@ operator bool() throw();
 
 Retourne une **bool** valeur booléenneC++ (type de données). **true** signifie que la session active est ouverte ; **false** signifie que la session active est fermée.
 
-## <a name="op_cdata_amp"></a>CDataConnection :: Operator CDataSource&amp;
+## <a name="cdataconnectionoperator-cdatasourceamp"></a><a name="op_cdata_amp"></a>CDataConnection :: Operator CDataSource&amp;
 
 Retourne une référence à l’objet `CDataSource` contenu.
 
@@ -244,7 +244,7 @@ Si vous avez une fonction (comme `func` ci-dessous) qui prend une référence `C
 
 [!code-cpp[NVC_OLEDB_Consumer#4](../../data/oledb/codesnippet/cpp/cdataconnection-operator-cdatasource-amp_2.cpp)]
 
-## <a name="op_cdata_star"></a>CDataConnection :: Operator CDataSource *
+## <a name="cdataconnectionoperator-cdatasource"></a><a name="op_cdata_star"></a>CDataConnection :: Operator CDataSource *
 
 Retourne un pointeur désignant l’objet `CDataSource` contenu.
 
@@ -260,7 +260,7 @@ Cet opérateur retourne un pointeur vers l’objet `CDataSource` contenu, ce qui
 
 Pour obtenir un exemple d’utilisation, consultez [Operator CDataSource &](../../data/oledb/cdataconnection-operator-cdatasource-amp.md) .
 
-## <a name="op_csession_amp"></a>CDataConnection :: Operator CSession&amp;
+## <a name="cdataconnectionoperator-csessionamp"></a><a name="op_csession_amp"></a>CDataConnection :: Operator CSession&amp;
 
 Retourne une référence à l’objet `CSession` contenu.
 
@@ -282,7 +282,7 @@ Si vous avez une fonction (comme `func` ci-dessous) qui prend une référence `C
 
 [!code-cpp[NVC_OLEDB_Consumer#6](../../data/oledb/codesnippet/cpp/cdataconnection-operator-csession-amp_2.cpp)]
 
-## <a name="op_csession_star"></a>CDataConnection :: Operator CSession *
+## <a name="cdataconnectionoperator-csession"></a><a name="op_csession_star"></a>CDataConnection :: Operator CSession *
 
 Retourne un pointeur désignant l’objet `CSession` contenu.
 

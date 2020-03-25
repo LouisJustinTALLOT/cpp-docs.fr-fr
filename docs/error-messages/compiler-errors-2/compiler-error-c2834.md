@@ -6,15 +6,15 @@ f1_keywords:
 helpviewer_keywords:
 - C2834
 ms.assetid: 28f9f6eb-ab2a-4e64-aaaa-9d14f955de41
-ms.openlocfilehash: fb4a0e6f3f6ec227b978ae0b7d3864b2134de986
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: a6a7bc0591fd51c808c303e94eeaaffd6111ffcd
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62406819"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80201917"
 ---
 # <a name="compiler-error-c2834"></a>Erreur du compilateur C2834
 
-'operator opérateur' doit être globalement qualifié
+'operator opérateur’doit être globalement qualifié
 
-Le `new` et `delete` opérateurs sont liées à la classe dans laquelle ils résident. Résolution de portée ne peut pas être utilisée pour sélectionner une version de `new` ou `delete` d’une autre classe. Pour implémenter plusieurs formes de la `new` ou `delete` opérateur, créer une version de l’opérateur avec des paramètres formels supplémentaires.
+Les opérateurs `new` et `delete` sont liés à la classe où ils résident. La résolution de portée ne peut pas être utilisée pour sélectionner une version de `new` ou `delete` à partir d’une autre classe. Pour implémenter plusieurs formes de l’opérateur `new` ou `delete`, créez une version de l’opérateur avec des paramètres formels supplémentaires.

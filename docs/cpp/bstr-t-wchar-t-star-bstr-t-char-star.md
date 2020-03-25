@@ -8,16 +8,16 @@ helpviewer_keywords:
 - operator wchar_t* [C++]
 - operator char* [C++]
 ms.assetid: acd9f4a7-b427-42c2-aaae-acae21cab317
-ms.openlocfilehash: bfc149b0f0688bed567bf202fddb4ab2c3102630
-ms.sourcegitcommit: c6f8e6c2daec40ff4effd8ca99a7014a3b41ef33
+ms.openlocfilehash: 5fdce29b0be7e9aabae9e3c602822045a7bccafd
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "64345151"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80190298"
 ---
-# <a name="bstrtwchart-bstrtchar"></a>_bstr_t::wchar_t\*, _bstr_t::char\*
+# <a name="_bstr_twchar_t-_bstr_tchar"></a>_bstr_t::wchar_t\*, _bstr_t::char\*
 
-**Section spécifique à Microsoft**
+**Section spécifique de Microsoft**
 
 Retourne les caractères BSTR sous la forme d'un tableau de caractères étroits ou larges.
 
@@ -34,7 +34,7 @@ operator char*( ) const;
 
 Ces opérateurs peuvent être utilisés pour extraire les données de type caractère encapsulées par l'objet `BSTR`. L'assignation d'une nouvelle valeur au pointeur retourné ne modifie pas les données BSTR d'origine.
 
-**FIN de la section spécifique à Microsoft**
+**Fin de la section spécifique de Microsoft**
 
 ## <a name="see-also"></a>Voir aussi
 

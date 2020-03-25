@@ -14,12 +14,12 @@ helpviewer_keywords:
 - .def files
 - licensing ActiveX controls
 ms.assetid: 2b0ee2e0-ae81-4185-9bb9-11da3c99a283
-ms.openlocfilehash: 078c83a9c95c1b143af2037240d5cc0a16211827
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: 27e15f8dec693c6b7e70f3e03f274dcbc4f04677
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69492871"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80169017"
 ---
 # <a name="file-types-created-for-visual-studio-c-projects"></a>Types de fichiers créés pour les C++ projets Visual Studio
 
@@ -29,7 +29,7 @@ De nombreux types de fichiers sont associés à des projets Visual Studio pour l
 
 - [Projets CLR](files-created-for-clr-projects.md)
 
-- [Fichiers d’en-tête et fichiers sources de contrôle ou de programme ATL](atl-program-or-control-source-and-header-files.md)
+- [Fichiers d'en-tête et fichiers sources de contrôle ou de programme ATL](atl-program-or-control-source-and-header-files.md)
 
 - [Fichiers d'en-tête et fichiers sources de contrôle ou de programme MFC](mfc-program-or-control-source-and-header-files.md)
 
@@ -37,29 +37,29 @@ De nombreux types de fichiers sont associés à des projets Visual Studio pour l
 
 - [Fichiers de ressources](resource-files-cpp.md)
 
-- [Fichiers d’aide (WinHelp)](help-files-winhelp.md)
+- [Fichiers d'aide (WinHelp)](help-files-winhelp.md)
 
 - [Fichiers hint](hint-files.md)
 
 Lorsque vous créez un projet Visual Studio, vous pouvez le créer dans une nouvelle solution, ou vous pouvez ajouter un projet à une solution existante. Les applications élaborées sont généralement développées avec plusieurs projets dans une même solution.
 
-En règle générale, les projets produisent un EXE ou une DLL. Les projets peuvent être dépendants les uns des autres; pendant le processus de génération, l’environnement Visual Studio vérifie les dépendances dans et entre les projets. Chaque projet a généralement le code source principal. Selon le type de projet, il peut avoir de nombreux autres fichiers contenant différents aspects du projet. Le contenu de ces fichiers est indiqué par l'extension de fichier. L'environnement de développement Visual Studio tient compte des extensions de fichiers pour traiter le contenu des fichiers pendant la génération.
+En règle générale, les projets produisent un EXE ou une DLL. Les projets peuvent être dépendants les uns des autres ; pendant le processus de génération, l’environnement Visual Studio vérifie les dépendances dans et entre les projets. Chaque projet a généralement le code source principal. Selon le type de projet, il peut avoir de nombreux autres fichiers contenant différents aspects du projet. Le contenu de ces fichiers est indiqué par l'extension de fichier. L'environnement de développement Visual Studio tient compte des extensions de fichiers pour traiter le contenu des fichiers pendant la génération.
 
 Le tableau suivant présente les fichiers courants d’un projet Visual Studio et les identifie avec leur extension de fichier.
 
-|Extension de fichier|Type|Sommaire|
+|Extension de fichier|Type|Contents|
 |--------------------|----------|--------------|
 |.asmx|Source|Fichier de déploiement.|
-|.asp|source|Fichier ASP (Active Server Page).|
+|.asp|Source|Fichier ASP (Active Server Page).|
 |.atp|Projet|Fichier projet de modèle d'application.|
 |.bmp, .dib, .gif, .jpg, .jpe, .png|Ressource|Fichiers image généraux.|
 |.bsc|Compilation|Fichier de code d'explorateur.|
-|.cpp, .c|source|Fichiers de code source principaux de votre application.|
+|.cpp, .c|Source|Fichiers de code source principaux de votre application.|
 |.cur|Ressource|Fichier graphique de bitmap de curseur.|
 |.dbp|Projet|Fichier projet de base de données.|
-|.disco|source|Fichier document de découverte dynamique. Gère la découverte des services web XML.|
+|.disco|Source|Fichier document de découverte dynamique. Gère la découverte des services web XML.|
 |.exe, .dll|Projet|Fichiers exécutables ou de bibliothèque de liens dynamiques.|
-|.h|source|Fichier d'en-tête (include).|
+|.h|Source|Fichier d'en-tête (include).|
 |.htm, .html, .xsp, .asp, .htc, .hta, .xml|Ressource|Fichiers web communs.|
 |.HxC|Projet|Fichier projet d'aide.|
 |.ico|Ressource|Fichier graphique de bitmap d'icône.|

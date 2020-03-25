@@ -9,16 +9,16 @@ helpviewer_keywords:
 - operator overloading [C++], examples
 - subscript operator
 ms.assetid: eb151281-6733-401d-9787-39ab6754c62c
-ms.openlocfilehash: 376cacc3f70995c271a29b741ad266049da45785
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 8974f6619af462050fc8a02798fe44007ea928e4
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62330548"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80160890"
 ---
 # <a name="subscripting"></a>Indices
 
-L’opérateur d’indice (**[]**), comme l’opérateur d’appel de fonction, est considéré comme un opérateur binaire. L’opérateur d’indice doit être une fonction membre non statique qui accepte un seul argument. Cet argument peut être de tout type et désigne l’indice de tableau souhaité.
+L’opérateur d’indice ( **[]** ), comme l’opérateur d’appel de fonction, est considéré comme un opérateur binaire. L’opérateur d’indice doit être une fonction membre non statique qui accepte un seul argument. Cet argument peut être de tout type et désigne l’indice de tableau souhaité.
 
 ## <a name="example"></a>Exemple
 
@@ -91,9 +91,9 @@ Element: [10] = 10
 
 ## <a name="comments"></a>Commentaires
 
-Lorsque `i` atteint 10 dans le programme précédent, **operator []** détecte qu’un indice hors limite est utilisé et émet un message d’erreur.
+Lorsque `i` atteint 10 dans le programme précédent, **Operator []** détecte qu’un indice hors limites est utilisé et émet un message d’erreur.
 
-Notez que la fonction **operator []** retourne un type référence. Il s'agit par conséquent d'une l-value, ce qui vous permet d'utiliser des expressions indicées de chaque côté des opérateurs d'assignation.
+Notez que la fonction **Operator []** retourne un type référence. Il s'agit par conséquent d'une l-value, ce qui vous permet d'utiliser des expressions indicées de chaque côté des opérateurs d'assignation.
 
 ## <a name="see-also"></a>Voir aussi
 

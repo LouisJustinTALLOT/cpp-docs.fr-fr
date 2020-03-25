@@ -6,12 +6,12 @@ helpviewer_keywords:
 - __nullptr keyword (C++)
 - nullptr keyword [C++]
 ms.assetid: 594cfbf7-06cb-4366-9ede-c0b703e1d095
-ms.openlocfilehash: 05aaaa8a0d0056e0f5318f5e9329d90824760728
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
-ms.translationtype: HT
+ms.openlocfilehash: 02da716959deb7fcffa7a63a8308279a765c4569
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "65515634"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80172112"
 ---
 # <a name="nullptr--ccli-and-ccx"></a>nullptr (C++/CLI et C++/CX)
 
@@ -23,7 +23,7 @@ Le mot clé **__nullptr** spécifique à Microsoft a la même signification que 
 
 Le mot clé **nullptr** est équivalent à **Nothing** dans Visual Basic et à **null** dans C#.
 
-## <a name="usage"></a>Utilisation
+## <a name="usage"></a>Usage
 
 Le mot clé **nullptr** peut être utilisé partout où un descripteur, un pointeur natif ou un argument de fonction peut être utilisé.
 
@@ -221,7 +221,7 @@ int main() {
 
 ## <a name="requirements"></a>Spécifications
 
-Option du compilateur : (Non requis ; pris en charge par toutes les options de génération de code, y compris `/ZW` et `/clr`)
+Option du compilateur : (non obligatoire ; prise en charge par toutes les options de génération de code, y compris `/ZW` et `/clr`)
 
 ## <a name="see-also"></a>Voir aussi
 

@@ -39,12 +39,12 @@ helpviewer_keywords:
 - _abs64 function
 - calculating absolute values
 ms.assetid: 60f789d1-4a1e-49f5-9e4e-0bdb277ea26a
-ms.openlocfilehash: df5b6a30bf219b78f77f11604d3bbbe3b954c59f
-ms.sourcegitcommit: a6d63c07ab9ec251c48bc003ab2933cf01263f19
+ms.openlocfilehash: a21bdbcb54d7fecf00b3c782c562d60ccc866dcc
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "74857851"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80171409"
 ---
 # <a name="abs-labs-llabs-_abs64"></a>abs, labs, llabs, _abs64
 
@@ -67,7 +67,7 @@ long double abs( long double n );   // C++ only
 float abs( float n );   // C++ only
 ```
 
-### <a name="parameters"></a>Parameters
+### <a name="parameters"></a>Paramètres
 
 *n*<br/>
 Valeur numérique.
@@ -82,14 +82,14 @@ Les fonctions **ABS**, **Labs**, **LLabs** et **_abs64** retournent la valeur ab
 
 **Spécifique à Microsoft**: étant donné que la plage d’entiers négatifs qui peuvent être représentés à l’aide d’un type intégral est supérieure à la plage d’entiers positifs qui peuvent être représentés à l’aide de ce type, il est possible de fournir un argument à ces fonctions qui ne peuvent pas être converties. Si la valeur absolue de l’argument ne peut pas être représentée par le type de retour, les fonctions **ABS** retournent la valeur d’argument inchangée. Plus précisément, `abs(INT_MIN)` retourne `INT_MIN`, `labs(LONG_MIN)` retourne `LONG_MIN`, `llabs(LLONG_MIN)` retourne `LLONG_MIN`, tandis que `_abs64(_I64_MIN)` retourne `_I64_MIN`. Cela signifie que les fonctions **ABS** ne peuvent pas être utilisées pour garantir une valeur positive.
 
-## <a name="requirements"></a>Configuration requise pour
+## <a name="requirements"></a>Spécifications
 
 |Routine|En-tête C requis|En-tête C++ requis|
 |-------------|-----------------------|---------------------------|
-|**abs**, **labs**, **llabs**|\<math.h> ou \<stdlib.h>|\<cmath>, \<cstdlib>, \<stdlib.h> ou \<math.h>|
+|**ABS**, **Labs**, **LLabs**|\<math.h> ou \<stdlib.h>|\<cmath>, \<cstdlib>, \<stdlib.h> ou \<math.h>|
 |**_abs64**|\<stdlib.h>|\<cstdlib> ou \<stdlib.h>|
 
-Pour utiliser les versions surchargées de l’ABS C++dans, vous devez inclure l’en-tête \<cmath >.
+Pour utiliser les versions surchargées de **abs** l’ABS C++dans, vous devez inclure l’en-tête \<cmath >.
 
 ## <a name="example"></a>Exemple
 

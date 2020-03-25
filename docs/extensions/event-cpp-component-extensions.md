@@ -8,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - event keyword [C++]
 ms.assetid: c4998e42-883c-4419-bbf4-36cdc979dd27
-ms.openlocfilehash: 8b34a4f146cc7961ee1176580def6319185693e9
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: 90682ba699f6316cb6b38a3b78c44e853cd5473f
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "70311664"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80172384"
 ---
 # <a name="event--ccli-and-ccx"></a>événement (C++/CLI et C++/CX)
 
@@ -79,7 +79,7 @@ Pour plus d’informations, consultez [Événements (C++/CX)](../cppcx/events-c-
 
 Si vous envisagez d'ajouter, puis de supprimer un gestionnaire d'événements, vous devez enregistrer la structure EventRegistrationToken retournée par l'opération d'ajout. Ensuite, dans l'opération de suppression, vous devez utiliser la structure EventRegistrationToken enregistrée pour identifier le gestionnaire d'événements à supprimer.
 
-### <a name="requirements"></a>Configuration requise
+### <a name="requirements"></a>Spécifications
 
 Option du compilateur : `/ZW`
 
@@ -165,7 +165,7 @@ Pour plus d’informations sur les événements C++/CLI, consultez
 
 - [Événements dans une interface](../dotnet/how-to-use-events-in-cpp-cli.md)
 
-### <a name="requirements"></a>Configuration requise
+### <a name="requirements"></a>Spécifications
 
 Option du compilateur : `/clr`
 
@@ -230,7 +230,7 @@ OnClick: 7, 3.14159
 OnDblClick: Hello
 ```
 
-L’exemple de code suivant illustre la logique utilisée pour générer la méthode `raise` d’un événement trivial : Si l’événement a un ou plusieurs abonnés, appeler la méthode `raise` implicitement ou explicitement appelle le délégué. Si le type de retour du délégué n’est pas **void** et que le nombre d’abonnés à l’événement s’élève à zéro, la méthode `raise` retourne la valeur par défaut pour le type délégué. En l'absence d'abonnés à l'événement, l'appel à la méthode `raise` entraîne un retour simple et aucune exception n'est levée. Si le type de retour du délégué n’est pas **void**, le type délégué est retourné.
+L'exemple de code suivant illustre la logique utilisée pour générer la méthode `raise` d'un événement trivial : si l'événement a un ou plusieurs abonnés, l'appel à la méthode `raise` permet d'appeler implicitement ou explicitement le délégué. Si le type de retour du délégué n’est pas **void** et que le nombre d’abonnés à l’événement s’élève à zéro, la méthode `raise` retourne la valeur par défaut pour le type délégué. En l'absence d'abonnés à l'événement, l'appel à la méthode `raise` entraîne un retour simple et aucune exception n'est levée. Si le type de retour du délégué n’est pas **void**, le type délégué est retourné.
 
 ```cpp
 // trivial_events.cpp

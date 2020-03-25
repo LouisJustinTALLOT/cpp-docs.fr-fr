@@ -7,21 +7,21 @@ helpviewer_keywords:
 - CXX0052
 - CAN0052
 ms.assetid: 5060d479-d0a4-4682-b858-c8b9a4f324e6
-ms.openlocfilehash: 12b4aff2c07e81a77b1a822fa15beb972a7e1e05
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 5b9596313a80cb555f7daf4b65eda54a1d23a1ab
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62299579"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80184799"
 ---
 # <a name="expression-evaluator-error-cxx0052"></a>Évaluateur d'expression, erreur CXX0052
 
-fonction membre non présente
+fonction membre absente
 
-Une fonction membre a été spécifiée comme un point d’arrêt, mais est introuvable. Définition d’un point d’arrêt sur une fonction qui a été inline peut provoquer cette erreur.
+Une fonction membre a été spécifiée en tant que point d’arrêt mais n’a pas pu être trouvée. La définition d’un point d’arrêt au niveau d’une fonction inline peut provoquer cette erreur.
 
-Recompiler le fichier avec incorporation (inlining) fermées de force (/ Ob0) pour définir un point d’arrêt dans cette fonction.
+Recompilez le fichier avec l’incorporation forcée (/Ob0) pour définir un point d’arrêt dans cette fonction.
 
-Une expression a appelé une fonction qui n’était pas définie.
+Une expression a appelé une fonction qui n’a pas été définie.
 
 Cette erreur est identique à CAN0052.

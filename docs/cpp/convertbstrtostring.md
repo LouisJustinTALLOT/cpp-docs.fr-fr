@@ -6,18 +6,18 @@ f1_keywords:
 helpviewer_keywords:
 - ConvertBSTRToString function
 ms.assetid: ab6ce555-3d75-4e9c-9cb8-ada6d8ce43b1
-ms.openlocfilehash: df123dc218aa770a67536bf1bad7d8bafcf4c318
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 1d0ad8727dd4d5ec06a45ec26c67dd3ad268f524
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62392321"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80189519"
 ---
 # <a name="convertbstrtostring"></a>ConvertBSTRToString
 
-**Section spécifique à Microsoft**
+**Section spécifique de Microsoft**
 
-Convertit un `BSTR` valeur à un `char *`.
+Convertit une valeur `BSTR` en `char *`.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -32,7 +32,7 @@ Variable BSTR.
 
 ## <a name="remarks"></a>Notes
 
-**ConvertBSTRToString** alloue une chaîne, vous devez supprimer.
+**ConvertBSTRToString** alloue une chaîne que vous devez supprimer.
 
 ## <a name="example"></a>Exemple
 
@@ -60,13 +60,13 @@ BSTR text: Test
 char * text: Test
 ```
 
-**FIN de la section spécifique à Microsoft**
+**Fin de la section spécifique de Microsoft**
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
-**En-tête :** \<comutil.h >
+**En-tête :** \<comutil. h >
 
-**Lib :** comsuppw.lib ou comsuppwd.lib (voir [/Zc : wchar_t (wchar_t est un Type natif)](../build/reference/zc-wchar-t-wchar-t-is-native-type.md) pour plus d’informations)
+**Lib :** comsuppw. lib ou comsuppwd. lib (consultez [/Zc : Wchar_t (Wchar_t est un type natif)](../build/reference/zc-wchar-t-wchar-t-is-native-type.md) pour plus d’informations)
 
 ## <a name="see-also"></a>Voir aussi
 

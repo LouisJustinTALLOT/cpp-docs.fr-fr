@@ -5,18 +5,18 @@ f1_keywords:
 - VC.Project.VCFileConfiguration.ExcludedFromBuild
 - VC.Project.VCFileConfiguration.Tool
 ms.assetid: 26e3711e-9e7d-4e8d-bc4c-2474538efdad
-ms.openlocfilehash: 41366e2eae479c3d00f79cc47da9100b22129d50
-ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
+ms.openlocfilehash: a9281a0ea02bd9b1fd529453cb9a67e54e4ddda7
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/03/2019
-ms.locfileid: "70218185"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80168970"
 ---
 # <a name="general-property-page-file"></a>Général, page de propriétés (Fichier)
 
 Cette rubrique s’applique aux projets Windows. Pour les projets autres que Windows, [consultez C++ référence de la page de propriétés Linux](../../linux/prop-pages-linux.md).
 
-Lorsque vous cliquez avec le bouton droit sur un nœud de fichier **Explorateur de solutions**, la page de propriétés **général** sous le nœud **Propriétés de configuration** s’ouvre. Il contient les propriétés suivantes:
+Lorsque vous cliquez avec le bouton droit sur un nœud de fichier **Explorateur de solutions**, la page de propriétés **général** sous le nœud **Propriétés de configuration** s’ouvre. Il contient les propriétés suivantes :
 
 - **Exclu de la Build**
 
@@ -24,7 +24,7 @@ Lorsque vous cliquez avec le bouton droit sur un nœud de fichier **Explorateur 
 
    Pour accéder par programmation à cette propriété, consultez <xref:Microsoft.VisualStudio.VCProjectEngine.VCFileConfiguration.ExcludedFromBuild%2A>.
 
-- **Contenu** (S’applique uniquement aux applications UWP.) Spécifie si le fichier contient du contenu à inclure dans le package d’application.
+- **Contenu** (s’applique uniquement aux applications UWP.) Spécifie si le fichier contient du contenu à inclure dans le package d’application.
 
 - **Type d’élément**
 
@@ -34,26 +34,26 @@ Lorsque vous cliquez avec le bouton droit sur un nœud de fichier **Explorateur 
 
    ![Page de propriétés général d’un élément de projet](media/file-general-item-type.png "Choix du type d’élément")
 
-    Le tableau suivant répertorie les types d’éléments par défaut:
+    Le tableau suivant répertorie les types d’éléments par défaut :
 
     |Extension de fichier|Type d'élément|Outil par défaut|
     |-|-|-|
     |. AppX|Définition de l’application XAML|[Package App Pack](/windows/win32/appxpkg/make-appx-package--makeappx-exe-)|
     |. HLSL,. CSO|Compilateur HLSL|[fxc. exe](/windows/win32/direct3dtools/fxc)|
     |.h|C/C++ en-tête|[Préprocesseur C/C++](../../preprocessor/c-cpp-preprocessor-reference.md)|
-    |N/A|Ne participe pas à la Build|N/A|
-    |. xml,. XSLT,. Xsl|xml|[Éditeur XML](/visualstudio/xml-tools/xml-editor)|
+    |n/a|Ne participe pas à la Build|n/a|
+    |. xml,. XSLT,. Xsl|Xml|[Éditeur XML](/visualstudio/xml-tools/xml-editor)|
     |. resw,. resjson|Ressource PRI (applications UWP)|[MakePri. exe](/windows/uwp/app-resources/compile-resources-manually-with-makepri)|
     ||Support (UWP)|[Package App Pack](/windows/win32/appxpkg/make-appx-package--makeappx-exe-)|
-    |. xsd|Outil XML Data Generator Tool|[Outil XML Schema Definition (XSD. exe)](/dotnet/standard/serialization/xml-schema-definition-tool-xsd-exe) (Nécessite une charge de travail .NET. Non inclus dans MSVC.)|
+    |.xsd|Outil XML Data Generator Tool|[Outil XML Schema Definition (XSD. exe)](/dotnet/standard/serialization/xml-schema-definition-tool-xsd-exe) (nécessite une charge de travail .net. Non inclus dans MSVC.)|
     ||Outil Manifeste|[Mt. exe](/windows/win32/sbscs/mt-exe)|
     |.rc|Ressource|[Compilateur de ressources Windows (RC. exe)](/windows/win32/menurc/resource-compiler)|
     |. appxmanifest|Manifeste du package d’application|[Package App Pack](/windows/win32/appxpkg/make-appx-package--makeappx-exe-)|
     |.obj|Object|[C/C++ éditeur de liens (Link. exe)](cl-invokes-the-linker.md)|
-    |. ttf|Police|N/A|
-    |.txt|Text|N/A|
-    |N/A|Outil de génération personnalisée|Défini par l’utilisateur|
-    |N/A|Copier le fichier|N/A|
+    |. ttf|Police|n/a|
+    |.txt|Texte|n/a|
+    |n/a|Outil de génération personnalisée|Défini par l’utilisateur|
+    |n/a|Copier le fichier|n/a|
     |. appxlayout|Disposition de package d’application|[Package App Pack](/windows/win32/appxpkg/make-appx-package--makeappx-exe-)|
     |.resx|Ressource gérée par le compilateur|[Resgen.exe (Resource File Generator)](/dotnet/framework/tools/resgen-exe-resource-file-generator)|
     |. natvis|C++Fichier de visualisation du débogueur|[Framework Natvis](/visualstudio/debugger/create-custom-views-of-native-objects)|

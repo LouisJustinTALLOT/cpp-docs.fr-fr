@@ -6,27 +6,27 @@ f1_keywords:
 helpviewer_keywords:
 - R6028
 ms.assetid: 81e99079-4388-4244-a4f7-4641c508871c
-ms.openlocfilehash: 4992641c2456f0322b5c52eb907b159904e4c9f0
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 1c165b7c9351e34ef6316962cd90663f2b6152ab
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62380511"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80197130"
 ---
 # <a name="c-runtime-error-r6028"></a>Erreur Runtime C R6028
 
 impossible d'initialiser le tas
 
 > [!NOTE]
-> Si vous rencontrez ce message d’erreur lors de l’exécution d’une application, l’application a été arrêtée, car il a un problème de mémoire interne. Il existe plusieurs raisons à cette erreur, mais souvent, elle est provoquée par une condition de mémoire extrêmement faible, un bogue dans le programme, ou par les pilotes de matériel défectueux.
+> Si vous rencontrez ce message d’erreur lors de l’exécution d’une application, l’application a été arrêtée, car elle présente un problème de mémoire interne. Cette erreur peut avoir plusieurs causes, mais elle est souvent due à une condition de mémoire extrêmement faible, à un bogue dans le programme ou à des pilotes matériels défectueux.
 >
 > Vous pouvez essayer de suivre les étapes ci-après pour corriger cette erreur :
 >
-> - Fermez les autres applications en cours d’exécution ou redémarrer votre ordinateur pour libérer la mémoire.
-> - Utilisez le **applications et fonctionnalités** ou **programmes et fonctionnalités** page dans le **le panneau de configuration** pour réparer ou réinstaller le programme.
-> - Si l’application fonctionnait avant une installation récente d’une autre application ou de pilote, utilisez le **applications et fonctionnalités** ou **programmes et fonctionnalités** page dans le **le panneau de configuration** pour supprimer le nouvelle application ou le pilote, puis réessayez votre application.
-> - Consultez le site Web du fabricant de votre matériel ou **mise à jour Windows** dans le **le panneau de configuration** des mises à jour de pilote et du logiciel.
-> - Recherchez une version mise à jour de l’application. Contactez le fournisseur de l’application si le problème persiste.
+> - Fermez les autres applications en cours d’exécution ou redémarrez votre ordinateur pour libérer de la mémoire.
+> - Utilisez la page **applications et fonctionnalités** ou **programmes et fonctionnalités** du **panneau de configuration** pour réparer ou réinstaller le programme.
+> - Si l’application fonctionnait avant une installation récente d’une autre application ou d’un pilote, utilisez la page **applications et fonctionnalités** ou **programmes et fonctionnalités** dans le **panneau de configuration** pour supprimer la nouvelle application ou le pilote, puis réessayez d’exécuter votre application.
+> - Consultez le site Web de votre fournisseur de matériel ou **Windows Update** dans le **panneau de configuration** pour les mises à jour des logiciels et des pilotes.
+> - Recherchez une version mise à jour de l’application. Si le problème persiste, contactez le fournisseur de l’application.
 
 **Informations pour les programmeurs**
 

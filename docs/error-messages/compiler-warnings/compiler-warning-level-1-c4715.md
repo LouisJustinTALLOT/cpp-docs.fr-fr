@@ -1,19 +1,19 @@
 ---
-title: Avertissement du compilateur (niveau 1) C4715
+title: Avertissement du compilateur (niveau 1) C4715
 ms.date: 11/04/2016
 f1_keywords:
 - C4715
 helpviewer_keywords:
 - C4715
 ms.assetid: 1c819bf7-0d8b-4f5e-b338-9cc292870439
-ms.openlocfilehash: 268a26f5de1bb7f757a8e7cba6d3f5e6ddff882e
-ms.sourcegitcommit: 458dcc794e3841919c01a3a5ff6b9a3767f8861b
+ms.openlocfilehash: 7dba86d591f18fd7c9c562078204916000d47384
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/13/2019
-ms.locfileid: "74052475"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80175322"
 ---
-# <a name="compiler-warning-level-1-c4715"></a>Avertissement du compilateur (niveau 1) C4715
+# <a name="compiler-warning-level-1-c4715"></a>Avertissement du compilateur (niveau 1) C4715
 
 'fonction' : les chemins de contrôle ne retournent pas tous une valeur
 

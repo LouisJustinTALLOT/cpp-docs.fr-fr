@@ -6,15 +6,15 @@ f1_keywords:
 helpviewer_keywords:
 - PG1087
 ms.assetid: 50785d68-17a2-4d82-bee2-8c514faf61c6
-ms.openlocfilehash: 2e214560996ff69aa049da3f905a6f7acbe9927b
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 1d0d908e53812a666cf354976aca416e9f2736da
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62359720"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80193028"
 ---
 # <a name="profile-guided-optimization-warning-pg1087"></a>Avertissement de l'optimisation guidée par profil PG1087
 
-Le fichier PGC 'fichier' n’est pas valid.
+Le fichier PGC’fichier’n’est pas valide.
 
-Un fichier .pgc est endommagé, probablement en raison d’un achèvement anormal d’une session de profilage.  Réexécutez le scénario de profilage et se terminer normalement.
+Un fichier. PGC est endommagé, peut-être en raison d’une fin anormale d’une session de profilage.  Réexécutez le scénario de profilage et terminez normalement.

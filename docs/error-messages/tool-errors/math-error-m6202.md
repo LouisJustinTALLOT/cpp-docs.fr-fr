@@ -6,17 +6,17 @@ f1_keywords:
 helpviewer_keywords:
 - M6202
 ms.assetid: 4d17045f-c6dc-4705-9512-e9af12c35fb4
-ms.openlocfilehash: c216c4d01513868dd56f47c7d5ca7f8b734d1797
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: b8a3a4ab87a410c4cee8f7e4a1a0517c169d0364
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62393231"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80173658"
 ---
 # <a name="math-error-m6202"></a>Erreur mathématique M6202
 
-'fonction' : erreur
+'fonction' : erreur _SING
 
-Un argument de la fonction était une valeur de singularité pour cette fonction. La fonction n’est pas définie pour cet argument.
+Un argument de la fonction donnée était une valeur de singularité pour cette fonction. La fonction n’est pas définie pour cet argument.
 
-Cette erreur appelle le `_matherr` fonction avec le nom de fonction, ses arguments et le type d’erreur. Vous pouvez réécrire la `_matherr` fonction permettant de personnaliser la gestion de certaines erreurs mathématiques à virgule flottante d’exécution.
+Cette erreur appelle la fonction `_matherr` avec le nom de la fonction, ses arguments et le type d’erreur. Vous pouvez réécrire la fonction `_matherr` pour personnaliser la gestion de certaines erreurs mathématiques à virgule flottante au moment de l’exécution.

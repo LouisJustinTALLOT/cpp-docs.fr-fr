@@ -1,19 +1,19 @@
 ---
-title: Avertissement du compilateur (niveau 3) C4359
+title: Avertissement du compilateur (niveau 3) C4359
 ms.date: 11/04/2016
 f1_keywords:
 - C4359
 helpviewer_keywords:
 - C4359
 ms.assetid: d8fe993c-ef82-45a0-a43d-c29f9d1bacdb
-ms.openlocfilehash: 7da4d231a341f8d4d4e8c1e82fc1fc8b9893778a
-ms.sourcegitcommit: 458dcc794e3841919c01a3a5ff6b9a3767f8861b
+ms.openlocfilehash: 5cb65bab1f6490d1c39b20bfba2b3ecc68da664d
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/13/2019
-ms.locfileid: "74051609"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80198690"
 ---
-# <a name="compiler-warning-level-3-c4359"></a>Avertissement du compilateur (niveau 3) C4359
+# <a name="compiler-warning-level-3-c4359"></a>Avertissement du compilateur (niveau 3) C4359
 
 'type' : l’alignement réel (8) est supérieur à la valeur spécifiée dans __declspec (align ())
 

@@ -1,19 +1,19 @@
 ---
-title: Avertissement du compilateur (niveau 1) C4544
+title: Avertissement du compilateur (niveau 1) C4544
 ms.date: 11/04/2016
 f1_keywords:
 - C4544
 helpviewer_keywords:
 - C4544
 ms.assetid: 11ee04df-41ae-435f-af44-881e801315a8
-ms.openlocfilehash: 094662270569c7362b7bb3c4953a466b19ed2e65
-ms.sourcegitcommit: e5192a25c084eda9eabfa37626f3274507e026b3
+ms.openlocfilehash: 6aee8ba6b07e02f012755f609d8a5089cea280b1
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/12/2019
-ms.locfileid: "73966481"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80186281"
 ---
-# <a name="compiler-warning-level-1-c4544"></a>Avertissement du compilateur (niveau 1) C4544
+# <a name="compiler-warning-level-1-c4544"></a>Avertissement du compilateur (niveau 1) C4544
 
 'déclaration' : argument template par défaut ignoré sur cette déclaration de modèle
 

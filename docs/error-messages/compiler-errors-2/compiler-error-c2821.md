@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C2821
 ms.assetid: e8d71988-a968-4484-94db-e8c3bad74a4a
-ms.openlocfilehash: 5c725d9648a7800c68a2fbff20e594a400c296c8
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: d099c4a0f6e1ea77a25213e3873b8a0814e28dcd
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62208182"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80201993"
 ---
 # <a name="compiler-error-c2821"></a>Erreur du compilateur C2821
 
-premier paramètre formel de 'operator new' doit être 'unsigned int'
+le premier paramètre formel de’operator new’doit être’unsigned int'
 
-Le premier paramètre formel de le [opérateur new](../../standard-library/new-operators.md#op_new) doit être non signée `int`.
+Le premier paramètre formel de l' [opérateur New](../../standard-library/new-operators.md#op_new) doit être un `int`non signé.
 
 ## <a name="example"></a>Exemple
 
-L’exemple suivant génère l’erreur C2821 :
+L’exemple suivant génère l’C2821 :
 
 ```cpp
 // C2821.cpp

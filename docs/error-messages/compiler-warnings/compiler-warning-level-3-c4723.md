@@ -6,19 +6,19 @@ f1_keywords:
 helpviewer_keywords:
 - C4723
 ms.assetid: 07669d14-3fd8-4a43-94bc-b61c50e58460
-ms.openlocfilehash: b970c9ee02339fa3b48135d321638db7e64baf82
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 3a47c6f7e83abfc785d602d8ee0734be5d0fa962
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62401616"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80174087"
 ---
 # <a name="compiler-warning-level-3-c4723"></a>Avertissement du compilateur (niveau 3) C4723
 
-division potentielle par 0
+Division potentielle par 0
 
-Le second opérande dans une opération de division évalué à zéro au moment de la compilation, ce qui donne des résultats indéfinis.
+Le second opérande d’une opération de division est évalué à zéro au moment de la compilation, ce qui donne des résultats indéfinis.
 
-Cet avertissement est émis uniquement lorsque vous utilisez [/Og](../../build/reference/og-global-optimizations.md) ou une option d’optimisation qui implique /Og.
+Cet avertissement est émis uniquement lors de l’utilisation d' [/og](../../build/reference/og-global-optimizations.md) ou d’une option d’optimisation qui implique/og.
 
-Le compilateur peut avoir générée à l’opérande de zéro.
+Le compilateur a peut-être généré l’opérande zéro.

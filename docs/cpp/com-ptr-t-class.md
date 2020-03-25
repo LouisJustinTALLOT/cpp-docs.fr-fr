@@ -6,63 +6,63 @@ f1_keywords:
 helpviewer_keywords:
 - _com_ptr_t class
 ms.assetid: 3753a8a0-03d4-4cfd-8a9a-74872ea53971
-ms.openlocfilehash: ce19dbc5f55460bb4bdbdee17f4fbbbcc8c6fd60
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: eeaab22ded537cbbb211a79596b8383251af3ab7
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62154901"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80189900"
 ---
-# <a name="comptrt-class"></a>_com_ptr_t, classe
+# <a name="_com_ptr_t-class"></a>_com_ptr_t, classe
 
-**Section spécifique à Microsoft**
+**Section spécifique de Microsoft**
 
-Un **_com_ptr_t** objet encapsule un pointeur d’interface COM et est appelé un pointeur « intelligent ». Cette classe de modèle gère l’allocation des ressources et la désallocation via des appels de fonction à la `IUnknown` fonctions membres : `QueryInterface`, `AddRef`, et `Release`.
+Un objet **_com_ptr_t** encapsule un pointeur d’interface com et est appelé pointeur « intelligent ». Cette classe de modèle gère l’allocation et la désallocation des ressources via des appels de fonction aux fonctions membres de `IUnknown` : `QueryInterface`, `AddRef`et `Release`.
 
-Un pointeur intelligent est généralement référencé par la définition de typedef fournie par la macro _COM_SMARTPTR_TYPEDEF. Cette macro prend un nom d’interface et l’IID et déclare une spécialisation de **_com_ptr_t** par le nom de l’interface plus un suffixe de `Ptr`. Exemple :
+Un pointeur intelligent est généralement référencé par la définition de typedef fournie par la macro _COM_SMARTPTR_TYPEDEF. Cette macro accepte un nom d’interface et l’IID, et déclare une spécialisation de **_com_ptr_t** avec le nom de l’interface plus un suffixe de `Ptr`. Par exemple :
 
 ```cpp
 _COM_SMARTPTR_TYPEDEF(IMyInterface, __uuidof(IMyInterface));
 ```
 
-déclare le **_com_ptr_t** spécialisation `IMyInterfacePtr`.
+déclare le `IMyInterfacePtr`de spécialisation **_com_ptr_t** .
 
-Un ensemble de [modèles de fonction](../cpp/relational-function-templates.md), pas les membres de ce modèle de classe, les comparaisons de prise en charge avec un pointeur intelligent sur le côté droit de l’opérateur de comparaison.
+Un jeu de [modèles de fonction](../cpp/relational-function-templates.md), et non des membres de cette classe de modèle, prend en charge les comparaisons avec un pointeur intelligent à droite de l’opérateur de comparaison.
 
 ### <a name="construction"></a>Construction
 
 |||
 |-|-|
-|[_com_ptr_t](../cpp/com-ptr-t-com-ptr-t.md)|Construit un **_com_ptr_t** objet.|
+|[_com_ptr_t](../cpp/com-ptr-t-com-ptr-t.md)|Construit un objet **_com_ptr_t** .|
 
 ### <a name="low-level-operations"></a>Opérations de bas niveau
 
 |||
 |-|-|
-|[AddRef](../cpp/com-ptr-t-addref.md)|Appelle le `AddRef` fonction membre de `IUnknown` sur le pointeur d’interface encapsulé.|
+|[AddRef](../cpp/com-ptr-t-addref.md)|Appelle la fonction membre `AddRef` de `IUnknown` sur le pointeur d’interface encapsulé.|
 |[Attacher](../cpp/com-ptr-t-attach.md)|Encapsule un pointeur d'interface brut du type de ce pointeur intelligent.|
-|[CreateInstance](../cpp/com-ptr-t-createinstance.md)|Crée une nouvelle instance d’un objet doté d’un `CLSID` ou `ProgID`.|
+|[CreateInstance](../cpp/com-ptr-t-createinstance.md)|Crée une nouvelle instance d’un objet en fonction d’un `CLSID` ou d’un `ProgID`.|
 |[Détacher](../cpp/com-ptr-t-detach.md)|Extrait et retourne le pointeur d'interface encapsulé.|
-|[GetActiveObject](../cpp/com-ptr-t-getactiveobject.md)|S’attache à une instance existante d’un objet doté d’un `CLSID` ou `ProgID`.|
+|[GetActiveObject](../cpp/com-ptr-t-getactiveobject.md)|Attache à une instance existante d’un objet en fonction d’un `CLSID` ou d’un `ProgID`.|
 |[GetInterfacePtr](../cpp/com-ptr-t-getinterfaceptr.md)|Retourne le pointeur d'interface encapsulé.|
-|[QueryInterface](../cpp/com-ptr-t-queryinterface.md)|Appelle le `QueryInterface` fonction membre de `IUnknown` sur le pointeur d’interface encapsulé.|
-|[Version release](../cpp/com-ptr-t-release.md)|Appelle le `Release` fonction membre de `IUnknown` sur le pointeur d’interface encapsulé.|
+|[QueryInterface](../cpp/com-ptr-t-queryinterface.md)|Appelle la fonction membre `QueryInterface` de `IUnknown` sur le pointeur d’interface encapsulé.|
+|[Version release](../cpp/com-ptr-t-release.md)|Appelle la fonction membre `Release` de `IUnknown` sur le pointeur d’interface encapsulé.|
 
 ### <a name="operators"></a>Opérateurs
 
 |||
 |-|-|
-|[operator =](../cpp/com-ptr-t-operator-equal.md)|Assigne une nouvelle valeur à un existant **_com_ptr_t** objet.|
-|[operators ==, !=, \<, >, \<=, >=](../cpp/com-ptr-t-relational-operators.md)|Comparer l’objet pointeur intelligent vers un autre pointeur intelligent, le pointeur d’interface brut, ou NULL.|
+|[opérateur =](../cpp/com-ptr-t-operator-equal.md)|Assigne une nouvelle valeur à un objet **_com_ptr_t** existant.|
+|[opérateurs = =, ! =, \<, >, \<=, > =](../cpp/com-ptr-t-relational-operators.md)|Comparent l'objet pointeur intelligent avec un autre pointeur intelligent, un pointeur d'interface brut ou NULL.|
 |[Extracteurs](../cpp/com-ptr-t-extractors.md)|Récupérez le pointeur d'interface COM encapsulé.|
 
-**FIN de la section spécifique à Microsoft**
+**Fin de la section spécifique de Microsoft**
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
-**En-tête :** \<comip.h >
+**En-tête :** \<COMIP. h >
 
-**Lib :** comsuppw.lib ou comsuppwd.lib (voir [/Zc : wchar_t (wchar_t est un Type natif)](../build/reference/zc-wchar-t-wchar-t-is-native-type.md) pour plus d’informations)
+**Lib :** comsuppw. lib ou comsuppwd. lib (consultez [/Zc : Wchar_t (Wchar_t est un type natif)](../build/reference/zc-wchar-t-wchar-t-is-native-type.md) pour plus d’informations)
 
 ## <a name="see-also"></a>Voir aussi
 

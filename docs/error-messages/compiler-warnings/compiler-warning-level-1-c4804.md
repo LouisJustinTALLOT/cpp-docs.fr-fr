@@ -1,19 +1,19 @@
 ---
-title: Avertissement du compilateur (niveau 1) C4804
+title: Avertissement du compilateur (niveau 1) C4804
 ms.date: 11/04/2016
 f1_keywords:
 - C4804
 helpviewer_keywords:
 - C4804
 ms.assetid: 069e8f44-3ef6-43bb-8524-4116fc6eea83
-ms.openlocfilehash: 97ad076325b11329896d98367fb3ac311ec5ded9
-ms.sourcegitcommit: 458dcc794e3841919c01a3a5ff6b9a3767f8861b
+ms.openlocfilehash: 3f1b349599c77bc001911431fe0d83496ca3dfce
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/13/2019
-ms.locfileid: "74051571"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80199405"
 ---
-# <a name="compiler-warning-level-1-c4804"></a>Avertissement du compilateur (niveau 1) C4804
+# <a name="compiler-warning-level-1-c4804"></a>Avertissement du compilateur (niveau 1) C4804
 
 'Operation' : utilisation risquée du type’bool’dans l’opération
 

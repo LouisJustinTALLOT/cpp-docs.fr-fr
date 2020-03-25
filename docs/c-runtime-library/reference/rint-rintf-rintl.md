@@ -30,12 +30,12 @@ helpviewer_keywords:
 - rint function
 - rintl function
 ms.assetid: 312ae3e6-278c-459a-9393-11b8f87d9184
-ms.openlocfilehash: 57c4dc60d6b4d29e5c46fa6f1d03d0710ed44309
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: ac9db3ee5a50bb334754a8a1191638a319829b97
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70949268"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80170889"
 ---
 # <a name="rint-rintf-rintl"></a>rint, rintf, rintl
 
@@ -63,22 +63,22 @@ Valeur à virgule flottante à arrondir.
 
 Les fonctions **Primer** retournent une valeur à virgule flottante qui représente l’entier le plus proche de *x*. Les valeurs à mi-chemin sont arrondies en fonction du paramètre actuel du mode d’arrondi à virgule flottante, comme les fonctions **nearbyint** . Contrairement aux fonctions **nearbyint** , les fonctions d' **Imprimer** peuvent déclencher l’exception de virgule flottante **FE_INEXACT** si le résultat est différent de la valeur de l’argument. Aucun retour d'erreur.
 
-|Entrée|Exception SEH|_ **matherr** Titre|
+|Entrée|Exception SEH|**_matherr** Titre|
 |-----------|-------------------|--------------------------|
-|± ∞, QNAN, IND|none|none|
-|Nombres dénormalisés|EXCEPTION_FLT_UNDERFLOW|none|
+|± ∞, QNAN, IND|Aucun|Aucun|
+|Nombres dénormalisés|EXCEPTION_FLT_UNDERFLOW|Aucun|
 
 ## <a name="remarks"></a>Notes
 
 Étant C++ donné que autorise la surcharge, vous pouvez appeler des surcharges d' **Imprimer** qui acceptent et retournent des valeurs **float** et **long** **double** . Dans un programme C, **Primer** accepte et retourne toujours un **double**.
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
 |Fonction|En-tête C|En-tête C++|
 |--------------|--------------|------------------|
-|**rint**, **rintf**, **rintl**|\<math.h>|\<cmath>|
+|**Primer**, **rintf**, **rintl**|\<math.h>|\<cmath>|
 
-Pour plus d'informations sur la compatibilité, voir [Compatibilité](../../c-runtime-library/compatibility.md).
+Pour plus d’informations sur la compatibilité, voir [Compatibilité](../../c-runtime-library/compatibility.md).
 
 ## <a name="example"></a>Exemple
 

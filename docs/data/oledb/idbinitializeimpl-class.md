@@ -38,12 +38,12 @@ helpviewer_keywords:
 - m_dwStatus
 - m_pCUtlPropInfo
 ms.assetid: e4182f81-0443-44f5-a0d3-e7e075d6f883
-ms.openlocfilehash: 1fc60db6db341d0667e24a81ae0f1394f54497ff
-ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
+ms.openlocfilehash: ff74ae93f01c7e8588a0eff1f48d3f6f0e6d5e81
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/17/2020
-ms.locfileid: "79447371"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80210767"
 ---
 # <a name="idbinitializeimpl-class"></a>IDBInitializeImpl, classe
 
@@ -91,7 +91,7 @@ Votre classe, dérivée de `IDBInitializeImpl`.
 
 Interface obligatoire sur les objets de source de données et l’interface facultative sur les énumérateurs.
 
-## <a name="idbinitializeimpl"></a>IDBInitializeImpl :: IDBInitializeImpl
+## <a name="idbinitializeimplidbinitializeimpl"></a><a name="idbinitializeimpl"></a>IDBInitializeImpl :: IDBInitializeImpl
 
 Constructeur.
 
@@ -105,7 +105,7 @@ IDBInitializeImpl();
 
 Initialise tous les membres de données.
 
-## <a name="initialize"></a>IDBInitializeImpl :: Initialize
+## <a name="idbinitializeimplinitialize"></a><a name="initialize"></a>IDBInitializeImpl :: Initialize
 
 Initialise l’objet source de données en préparant sa prise en charge des propriétés.
 
@@ -119,7 +119,7 @@ STDMETHOD(Initialize)(void);
 
 Consultez [IDBInitialize :: Initialize](/previous-versions/windows/desktop/ms718026(v=vs.85)) dans le *OLE DB Guide de référence du programmeur*.
 
-## <a name="uninitialize"></a>IDBInitializeImpl :: Uninitialize
+## <a name="idbinitializeimpluninitialize"></a><a name="uninitialize"></a>IDBInitializeImpl :: Uninitialize
 
 Place l’objet source de données dans un État non initialisé en libérant des ressources internes telles que la prise en charge des propriétés.
 
@@ -133,7 +133,7 @@ STDMETHOD(Uninitialize)(void);
 
 Consultez [IDBInitialize :: Uninitialize](/previous-versions/windows/desktop/ms719648(v=vs.85)) dans le *Guide de référence du programmeur OLE DB*.
 
-## <a name="dwstatus"></a>IDBInitializeImpl :: m_dwStatus
+## <a name="idbinitializeimplm_dwstatus"></a><a name="dwstatus"></a>IDBInitializeImpl :: m_dwStatus
 
 Indicateurs de source de données.
 
@@ -161,7 +161,7 @@ enum DATASOURCE_FLAGS {
 |`DSF_PERSIST_DIRTY`|Définit si l’objet source de données nécessite une persistance (autrement dit, si des modifications ont été apportées).|
 |`DSF_INITIALIZED`|Définit si la source de données a été initialisée.|
 
-## <a name="pcutlpropinfo"></a>IDBInitializeImpl :: m_pCUtlPropInfo
+## <a name="idbinitializeimplm_pcutlpropinfo"></a><a name="pcutlpropinfo"></a>IDBInitializeImpl :: m_pCUtlPropInfo
 
 Pointeur vers l’objet d’implémentation pour les informations sur les propriétés de base de données.
 

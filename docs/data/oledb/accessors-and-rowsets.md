@@ -17,39 +17,39 @@ helpviewer_keywords:
 - accessors [C++], rowsets
 - rowsets [C++], supported types
 ms.assetid: edc9c8b3-1a2d-4c2d-869f-7e058c631042
-ms.openlocfilehash: 21043e22b37084fa543bf6b8a0fc176c3b8be788
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 45180b3ac2647c9f4f5d25a1322794552bd79004
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62384930"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80212379"
 ---
 # <a name="accessors-and-rowsets"></a>Accesseurs et jeux de lignes
 
-Pour définir et récupérer des données, les modèles OLE DB utilisent un accesseur et un ensemble de lignes via la [CAccessorRowset](../../data/oledb/caccessorrowset-class.md) classe. Cette classe peut gérer plusieurs accesseurs de différents types.
+Pour définir et récupérer des données, OLE DB modèles utilisent un accesseur et un ensemble de lignes via la classe [CAccessorRowset](../../data/oledb/caccessorrowset-class.md) . Cette classe peut gérer plusieurs accesseurs de types différents.
 
 ## <a name="accessor-types"></a>Types d’accesseurs
 
-Tous les accesseurs dérivent [CAccessorBase](../../data/oledb/caccessorbase-class.md). `CAccessorBase` fournit le paramètre et liaison de colonne.
+Tous les accesseurs dérivent de [CAccessorBase](../../data/oledb/caccessorbase-class.md). `CAccessorBase` fournit la liaison de paramètres et de colonnes.
 
-La figure suivante montre les types d’accesseurs.
+L’illustration suivante montre les types d’accesseurs.
 
-![Types d’accesseurs](../../data/oledb/media/vcaccessortypes.gif "types d’accesseurs")<br/>
-Classes d’accesseurs
+![Types d’accesseurs](../../data/oledb/media/vcaccessortypes.gif "Types d'accesseurs")<br/>
+Classes d’accesseur
 
-- [CAccessor](../../data/oledb/caccessor-class.md) utiliser cet accesseur lorsque vous connaissez la structure de la source de la base de données au moment du design. `CAccessor` lie statiquement un enregistrement de base de données qui contient la mémoire tampon, à la source de données.
+- [CAccessor](../../data/oledb/caccessor-class.md) Utilisez cet accesseur lorsque vous connaissez la structure de la source de base de données au moment de la conception. `CAccessor` lie statiquement un enregistrement de base de données, qui contient la mémoire tampon, à la source de données.
 
-- [CDynamicAccessor](../../data/oledb/cdynamicaccessor-class.md) utiliser cet accesseur lorsque vous ne savez pas la structure de la base de données au moment du design. `CDynamicAccessor` appels `IColumnsInfo::GetColumnInfo` pour obtenir les informations de colonne de base de données. Il crée et gère un accesseur et la mémoire tampon.
+- [CDynamicAccessor](../../data/oledb/cdynamicaccessor-class.md) Utilisez cet accesseur lorsque vous ne connaissez pas la structure de la base de données au moment de la conception. `CDynamicAccessor` appelle `IColumnsInfo::GetColumnInfo` pour récupérer les informations de colonne de base de données. Il crée et gère un accesseur et la mémoire tampon.
 
-- [CDynamicParameterAccessor](../../data/oledb/cdynamicparameteraccessor-class.md) cet accesseur permet de gérer les types de commande inconnue. Lorsque vous préparez les commandes, `CDynamicParameterAccessor` peut obtenir des informations sur les paramètres à partir de la `ICommandWithParameters` interface, si le fournisseur prend en charge `ICommandWithParameters`.
+- [CDynamicParameterAccessor](../../data/oledb/cdynamicparameteraccessor-class.md) Utilisez cet accesseur pour gérer les types de commande inconnus. Lorsque vous préparez les commandes, `CDynamicParameterAccessor` pouvez récupérer des informations sur les paramètres à partir de l’interface `ICommandWithParameters`, si le fournisseur prend en charge `ICommandWithParameters`.
 
-- [CDynamicStringAccessor](../../data/oledb/cdynamicstringaccessor-class.md), [CDynamicStringAccessorA](../../data/oledb/cdynamicstringaccessora-class.md), et [CDynamicStringAccessorW](../../data/oledb/cdynamicstringaccessorw-class.md) Utilisez ces classes lorsque vous n’avez aucune connaissance du schéma de base de données. `CDynamicStringAccessorA` Récupère des données en tant que chaînes ANSI ; `CDynamicStringAccessorW` récupère les données comme des chaînes Unicode.
+- [CDynamicStringAccessor](../../data/oledb/cdynamicstringaccessor-class.md), [CDynamicStringAccessorA](../../data/oledb/cdynamicstringaccessora-class.md)et [CDynamicStringAccessorW,](../../data/oledb/cdynamicstringaccessorw-class.md) utilisent ces classes lorsque vous n’avez aucune connaissance du schéma de base de données. `CDynamicStringAccessorA` récupère les données sous forme de chaînes ANSI ; `CDynamicStringAccessorW` récupère les données sous forme de chaînes Unicode.
 
-- [CManualAccessor](../../data/oledb/cmanualaccessor-class.md) avec cette classe, vous pouvez utiliser les types de données si le fournisseur peut convertir le type. Il gère les colonnes de résultats et les paramètres de commande.
+- [CManualAccessor](../../data/oledb/cmanualaccessor-class.md) Avec cette classe, vous pouvez utiliser les types de données de votre choix si le fournisseur peut convertir le type. Il gère à la fois les colonnes de résultat et les paramètres de commande.
 
-Le tableau suivant récapitule la prise en charge dans les types d’accesseur modèle OLE DB.
+Le tableau suivant résume la prise en charge des types d’accesseurs de modèle OLE DB.
 
-|Type d’accesseur|dynamique|Gère les paramètres|Mémoire tampon|Plusieurs accesseurs|
+|Type d’accesseur|Dynamique|Gère les paramètres|Buffer|Accesseurs multiples|
 |-------------------|-------------|--------------------|------------|------------------------|
 |`CAccessor`|Non|Oui|Utilisateur|Oui|
 |`CDynamicAccessor`|Oui|Non|modèles OLE DB|Non|
@@ -57,17 +57,17 @@ Le tableau suivant récapitule la prise en charge dans les types d’accesseur m
 |`CDynamicStringAccessor[A,W]`|Oui|Non|modèles OLE DB|Non|
 |`CManualAccessor`|Oui|Oui|Utilisateur|Oui|
 
-## <a name="rowset-types"></a>Types de l’ensemble de lignes
+## <a name="rowset-types"></a>Types d’ensembles de lignes
 
-Les modèles OLE DB prennent en charge trois types d’ensembles de lignes (voir la figure précédente) : unique des ensembles de lignes (implémentée par [CRowset](../../data/oledb/crowset-class.md)), en bloc d’ensembles de lignes (implémentée par [CBulkRowset](../../data/oledb/cbulkrowset-class.md)) et les ensembles de lignes (implémentés de tableau par [CArrayRowset](../../data/oledb/carrayrowset-class.md)). Extraction des ensembles de lignes unique une seule ligne gérer lorsque `MoveNext` est appelée. Ensembles de lignes en bloc peuvent extraire plusieurs handles de ligne. Ensembles de lignes de tableau sont des ensembles de lignes qui sont accessibles à l’aide de la syntaxe de tableau.
+Les modèles OLE DB prennent en charge trois types d’ensembles de lignes (voir la figure précédente) : ensembles de lignes simples (implémentés par [CRowset](../../data/oledb/crowset-class.md)), ensembles de lignes en bloc (implémentés par [CBulkRowset](../../data/oledb/cbulkrowset-class.md)) et ensembles de lignes de tableau (implémentés par [CArrayRowset](../../data/oledb/carrayrowset-class.md)). Les ensembles de lignes uniques extraient un handle de ligne unique lorsque `MoveNext` est appelée. Les ensembles de lignes en bloc peuvent extraire plusieurs handles de ligne. Les ensembles de lignes de tableau sont des ensembles de lignes accessibles à l’aide de la syntaxe de tableau.
 
-La figure suivante montre les types de l’ensemble de lignes.
+L’illustration suivante montre les types d’ensembles de lignes.
 
-![Graphique de RowsetType](../../data/oledb/media/vcrowsettypes.gif "graphique de RowsetType")<br/>
-Classes de l’ensemble de lignes
+![Graphique RowsetType](../../data/oledb/media/vcrowsettypes.gif "Graphique de RowsetType")<br/>
+Classes d’ensemble de lignes
 
-[Ensembles de lignes de schéma](../../data/oledb/obtaining-metadata-with-schema-rowsets.md) n’accéder aux données dans les données stocker, mais à la place accéder aux informations sur le magasin de données, appelée métadonnées. Ensembles de lignes de schéma sont généralement utilisés dans les situations dans lesquelles la structure de base de données n’est pas connue au moment de la compilation et doit être obtenue en cours d’exécution.
+Les [ensembles de lignes de schéma](../../data/oledb/obtaining-metadata-with-schema-rowsets.md) n’accèdent pas aux données dans le magasin de données, mais les informations sur le magasin de données, appelées métadonnées. Les ensembles de lignes de schéma sont généralement utilisés dans les situations où la structure de la base de données n’est pas connue au moment de la compilation et doit être obtenue au moment de l’exécution.
 
 ## <a name="see-also"></a>Voir aussi
 
-[Modèles du consommateur OLE DB](../../data/oledb/ole-db-consumer-templates-cpp.md)
+[OLE DB (modèles du consommateur)](../../data/oledb/ole-db-consumer-templates-cpp.md)

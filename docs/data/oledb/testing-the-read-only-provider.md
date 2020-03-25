@@ -7,12 +7,12 @@ helpviewer_keywords:
 - OLE DB providers, calling
 - OLE DB providers, testing
 ms.assetid: e4aa30c1-391b-41f8-ac73-5270e46fd712
-ms.openlocfilehash: a173e1466179dfb40a33d7bdb4a94eabdbf23cc0
-ms.sourcegitcommit: 8e285a766523e653aeeb34d412dc6f615ef7b17b
+ms.openlocfilehash: dc3c4ea36aa9dac64f2aa7861fd5d51927c77ecd
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/21/2020
-ms.locfileid: "80079060"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80209497"
 ---
 # <a name="testing-the-read-only-provider"></a>Test du fournisseur accessible en lecture seule
 
@@ -22,7 +22,7 @@ L’exemple de cette rubrique crée une application d’Assistant Application MF
 
 ## <a name="to-create-the-test-application"></a>Pour créer l'application de test
 
-1. Dans le menu **Fichier**, cliquez sur **Nouveau**, puis sur **Projet**.
+1. Dans le menu **Fichier** , cliquez sur **Nouveau**, puis sur **Projet**.
 
 1. Dans le volet **types de projets** , sélectionnez le dossier **installé** > **Visual C++**  > **MFC/ATL** . Dans le volet **modèles** , sélectionnez **application MFC**.
 

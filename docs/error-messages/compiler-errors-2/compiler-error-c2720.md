@@ -6,18 +6,18 @@ f1_keywords:
 helpviewer_keywords:
 - C2720
 ms.assetid: 9ee3aab7-711b-4f5a-b2f1-cb62b130f1ce
-ms.openlocfilehash: c6499fd3f279099ea7c5b31860e70bdaa285e3f9
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 24f4329ee631eafc7c2670d9ebf28609c22e7592
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62383046"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80202131"
 ---
 # <a name="compiler-error-c2720"></a>Erreur du compilateur C2720
 
-> «*identificateur*' : '*spécificateur*' spécificateur de classe de stockage non conforme sur les membres
+> '*identificateur*' : spécificateur de classe de stockage'*specifier*'non conforme sur les membres
 
-La classe de stockage ne peut pas être utilisée sur les membres de classe en dehors de la déclaration. Pour corriger cette erreur, supprimez les éléments inutiles [classe de stockage](../../cpp/storage-classes-cpp.md) spécificateur de la définition du membre en dehors de la déclaration de classe.
+La classe de stockage ne peut pas être utilisée sur les membres de classe en dehors de la déclaration. Pour corriger cette erreur, supprimez le spécificateur de [classe de stockage](../../cpp/storage-classes-cpp.md) inutile de la définition du membre en dehors de la déclaration de classe.
 
 ## <a name="example"></a>Exemple
 

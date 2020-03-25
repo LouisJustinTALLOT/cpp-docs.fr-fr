@@ -6,16 +6,16 @@ f1_keywords:
 helpviewer_keywords:
 - C2827
 ms.assetid: cb3e5814-0c92-40e4-b620-98578ae3003a
-ms.openlocfilehash: 7f1f19b91580bffa1133ae11ab91f2243153a389
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 8da60b895ad5dab0713d736142225053d14301c1
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62406871"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80201940"
 ---
 # <a name="compiler-error-c2827"></a>Erreur du compilateur C2827
 
-'operator opérateur' ne peut pas être globalement substitué par une forme unaire
+'operator opérateur’ne peut pas être globalement substitué par une forme unaire
 
 L’opérateur ne peut pas avoir une forme unaire en dehors d’un objet.
 

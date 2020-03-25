@@ -6,17 +6,17 @@ f1_keywords:
 helpviewer_keywords:
 - C4420
 ms.assetid: 44a37754-7ddd-4764-a5f7-d33e05c20091
-ms.openlocfilehash: a4a7e91e7845cc0fc25d5a6fad16ae7b7e327952
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 72ab87b34e07717112f5af1727a216b4f786ae0d
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62408171"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80186788"
 ---
 # <a name="compiler-warning-level-1-c4420"></a>Avertissement du compilateur (niveau 1) C4420
 
-'opérateur' : opérateur non disponible, à l’aide de 'operator' à la place. vérification de l’exécution peut être compromise.
+'operator' : opérateur non disponible, à l’aide de’operator’à la place ; la vérification au moment de l’exécution peut être compromise
 
-Cet avertissement est généré lorsque vous utilisez le [que /RTCv](../../build/reference/rtc-run-time-error-checks.md) (vector, new et delete/vérification) et qu’aucune forme vecteur n’est trouvée. Dans ce cas, la forme non vecteur est utilisée.
+Cet avertissement est généré quand vous utilisez [/RTCv](../../build/reference/rtc-run-time-error-checks.md) (contrôle Vector New/Delete) et quand aucune forme vectorielle n’est trouvée. Dans ce cas, la forme non vectorielle est utilisée.
 
-Dans l’ordre pour que /RTCv fonctionne correctement, le compilateur doit toujours appeler la forme de vecteur de [nouveau](../../cpp/new-operator-cpp.md)/[supprimer](../../cpp/delete-operator-cpp.md) si la syntaxe vecteur a été utilisée.
+Pour que/RTCv fonctionne correctement, le compilateur doit toujours appeler la forme vectorielle de [new](../../cpp/new-operator-cpp.md)/[Delete](../../cpp/delete-operator-cpp.md) si la syntaxe du vecteur a été utilisée.

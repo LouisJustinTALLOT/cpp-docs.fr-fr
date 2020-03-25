@@ -6,23 +6,23 @@ f1_keywords:
 helpviewer_keywords:
 - PRJ0029
 ms.assetid: f02c09c6-09f3-4d44-8cd4-9a25336be1ea
-ms.openlocfilehash: 1daac3435bc8f1b4bd4ed8462caf3b8eaa397e22
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 16a9e7dd31f3aa80cdb73f48c37215deca45113d
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62298033"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80191949"
 ---
 # <a name="project-build-warning-prj0029"></a>Avertissement de génération de projet PRJ0029
 
-La propriété 'Sorties' de l’étape de génération personnalisée au niveau du projet n’est pas définie. L’étape de génération personnalisée va être ignorée.
+La propriété’sorties’de l’étape de génération personnalisée au niveau du projet n’est pas définie. L’étape de génération personnalisée sera ignorée.
 
-Une étape de génération personnalisée n’a pas été exécutée car aucune sortie n’a été spécifié.
+Une étape de génération personnalisée n’a pas été exécutée, car aucune sortie n’a été spécifiée.
 
-Pour résoudre cette erreur, procédez comme suit :
+Pour résoudre cette erreur, effectuez l’une des opérations suivantes :
 
-- Exclure l’étape de génération personnalisée de la génération.
+- Excluez l’étape de génération personnalisée de la Build.
 
-- Ajouter une sortie.
+- Ajoutez une sortie.
 
-- Supprimez le contenu de la commande de l’étape de génération personnalisée.
+- Supprimer le contenu de la commande de l’étape de génération personnalisée.

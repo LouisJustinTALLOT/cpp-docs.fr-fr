@@ -6,15 +6,15 @@ f1_keywords:
 helpviewer_keywords:
 - LNK4086
 ms.assetid: ea1eecbb-ba2c-41bb-9a4f-fa0808a4b92d
-ms.openlocfilehash: c6a5a0714e070e6cf3aee8efcdfbdfa07fa9ee69
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 6e012ceb5e20855353c69bbcde85fb78afad2011
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62399929"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80183421"
 ---
 # <a name="linker-tools-warning-lnk4086"></a>Avertissement des outils Éditeur de liens LNK4086
 
-point d’entrée 'function' n’est pas __stdcall avec des octets de 'nombre' arguments ; image ne peut pas s’exécuter
+le point d’entrée’fonction’n’est pas __stdcall avec’nombre’octets d’arguments ; l’image risque de ne pas s’exécuter
 
-Le point d’entrée pour une DLL doit être `__stdcall`. Soit recompiler la fonction avec le [/Gz](../../build/reference/gd-gr-gv-gz-calling-convention.md) soit spécifier `__stdcall` ou WINAPI lorsque vous définissez la fonction.
+Le point d’entrée d’une DLL doit être `__stdcall`. Recompilez la fonction avec l’option [/gz](../../build/reference/gd-gr-gv-gz-calling-convention.md) ou spécifiez `__stdcall` ou WINAPI quand vous définissez la fonction.

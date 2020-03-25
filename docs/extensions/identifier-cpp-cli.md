@@ -8,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - __identifier keyword [C++]
 ms.assetid: 348428af-afa7-4ff3-b571-acf874301cf2
-ms.openlocfilehash: 395f1443f4eef16d9eea44c23a6e3288daf03d14
-ms.sourcegitcommit: c4528a7424d35039454f17778baf1b5f98fbbee7
+ms.openlocfilehash: 0da32aae9a8c2c7f21ee9576e1e1147822314a36
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "76912839"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80172176"
 ---
 # <a name="__identifier-ccli"></a>__identifier (C++/CLI)
 
@@ -33,7 +33,7 @@ L’utilisation du mot clé **__identifier** pour les identificateurs qui ne son
 
 ## <a name="windows-runtime"></a>Windows Runtime
 
-### <a name="requirements"></a>Configuration requise pour
+### <a name="requirements"></a>Spécifications
 
 Option du compilateur : `/ZW`
 
@@ -67,7 +67,7 @@ int main() {
 
 Le mot clé **__identifier** est valide avec l’option du compilateur `/clr`.
 
-### <a name="requirements"></a>Configuration requise pour
+### <a name="requirements"></a>Spécifications
 
 Option du compilateur : `/clr`
 

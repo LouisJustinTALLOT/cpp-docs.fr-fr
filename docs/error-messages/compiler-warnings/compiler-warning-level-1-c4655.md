@@ -6,16 +6,16 @@ f1_keywords:
 helpviewer_keywords:
 - C4655
 ms.assetid: 540f2c7a-e4a1-49af-84b4-03eeea1bbf41
-ms.openlocfilehash: aff78dbed217a6d9c5bc2a315ef12a33fe6caf0d
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: d4c409c2d69099853a872142e05ef0fcda5a7655
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62374662"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80199529"
 ---
 # <a name="compiler-warning-level-1-c4655"></a>Avertissement du compilateur (niveau 1) C4655
 
-> «*symbole*' : type de variable postérieur à la dernière génération, ou défini différemment à un autre emplacement
+> '*symbol*' : le type de variable est nouveau depuis la dernière génération, ou est défini différemment à un autre endroit
 
 ## <a name="remarks"></a>Notes
 

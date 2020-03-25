@@ -1,19 +1,19 @@
 ---
-title: Avertissement du compilateur (niveau 1) C4929
+title: Avertissement du compilateur (niveau 1) C4929
 ms.date: 11/04/2016
 f1_keywords:
 - C4929
 helpviewer_keywords:
 - C4929
 ms.assetid: 95f8ab4f-4468-4caa-acd5-8f4592f03b3c
-ms.openlocfilehash: f8ed1252d61748047077defb4e7e77c85e596107
-ms.sourcegitcommit: 458dcc794e3841919c01a3a5ff6b9a3767f8861b
+ms.openlocfilehash: 8f8f5f9febf762ddff1d35baa2686162ff6653e2
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/13/2019
-ms.locfileid: "74052270"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80199301"
 ---
-# <a name="compiler-warning-level-1-c4929"></a>Avertissement du compilateur (niveau 1) C4929
+# <a name="compiler-warning-level-1-c4929"></a>Avertissement du compilateur (niveau 1) C4929
 
 'file' : TypeLibrary contient une Union ; qualificateur’embedded_idl’ignoré
 

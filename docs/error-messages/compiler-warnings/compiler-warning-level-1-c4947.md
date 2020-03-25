@@ -6,16 +6,16 @@ f1_keywords:
 helpviewer_keywords:
 - C4947
 ms.assetid: 5a1d484e-b4c7-4de2-a145-d8dcfc2fc1d2
-ms.openlocfilehash: d18632e51a53205d151bb84b2cf2051d2882211f
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 102e6b73d2c1a0622ac8934272cd26b63a2be580
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62393419"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80199095"
 ---
 # <a name="compiler-warning-level-1-c4947"></a>Avertissement du compilateur (niveau 1) C4947
 
-'type_ou_membre' : marqué comme obsolète
+'type_or_member' : marqué comme obsolète
 
 Un membre ou un type a été marqué comme obsolète avec la classe <xref:System.ObsoleteAttribute> .
 

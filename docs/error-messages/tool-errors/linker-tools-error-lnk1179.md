@@ -6,24 +6,24 @@ f1_keywords:
 helpviewer_keywords:
 - LNK1179
 ms.assetid: 4b1536d7-0d3d-4f29-a9c1-6fa5cf6cb665
-ms.openlocfilehash: 71aba1f20cfaf5b6b9ec33d43ebde594e381921f
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: a267019f1be08cc8dcffdff3b4ba0b73357cccd4
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62391411"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80183955"
 ---
 # <a name="linker-tools-error-lnk1179"></a>Erreur des outils Éditeur de liens LNK1179
 
-fichier non valide ou endommagé : COMDAT 'NomFichier' dupliqué
+fichier non valide ou endommagé : COMDAT’nom_fichier’dupliqué
 
-Un module objet contenait deux ou plusieurs COMDAT portant le même nom.
+Un module objet contient au moins deux COMDAT portant le même nom.
 
-Cette erreur peut être due à l’aide de [/H](../../build/reference/h-restrict-length-of-external-names.md), ce qui limite la longueur des noms externes, et [/Gy](../../build/reference/gy-enable-function-level-linking.md), qui regroupe les fonctions dans les COMDAT.
+Cette erreur peut être due à l’utilisation de [/h](../../build/reference/h-restrict-length-of-external-names.md), qui limite la longueur des noms externes, et [/Gy](../../build/reference/gy-enable-function-level-linking.md), qui empaquette les fonctions dans les COMDAT.
 
 ## <a name="example"></a>Exemple
 
-Dans le code suivant, `function1` et `function2` sont identiques dans les huit premiers caractères. Compilation avec **/Gy** et **H8** génère une erreur de lien.
+Dans le code suivant, les `function1` et `function2` sont identiques dans les huit premiers caractères. La compilation avec **/Gy** et **/H8** génère une erreur de liaison.
 
 ```
 void function1(void);

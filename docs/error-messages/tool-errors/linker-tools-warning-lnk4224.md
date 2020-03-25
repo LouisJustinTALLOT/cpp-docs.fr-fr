@@ -6,28 +6,28 @@ f1_keywords:
 helpviewer_keywords:
 - LNK4224
 ms.assetid: 8624b70e-0b93-43cf-b457-834d38632d0b
-ms.openlocfilehash: eb0a019cc80e5218a52697b8bcd5e91b811d04d3
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 9e52dd533d897e729aba5f2b43ea6c019a024d43
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62160391"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80182979"
 ---
 # <a name="linker-tools-warning-lnk4224"></a>Avertissement des outils Éditeur de liens LNK4224
 
-> *option* n’est plus pris en charge ; ignoré
+> l' *option* n’est plus prise en charge ; pas
 
 ## <a name="remarks"></a>Notes
 
-Une option de l’éditeur de liens obsolètes, non valide a été spécifiée et ignorée.
+Une option d’éditeur de liens non valide et obsolète a été spécifiée et ignorée.
 
-Par exemple, LNK4224 peut se produire si une directive /comment apparaît dans. obj. La directive /comment aurait été ajoutée via le [commentaire (C/C++)](../../preprocessor/comment-c-cpp.md) pragma, à l’aide de l’option exestr déconseillée. Utilisez dumpbin [/ALL](../../build/reference/all.md) pour afficher les directives de l’éditeur de liens dans un fichier .obj.
+Par exemple, LNK4224 peut se produire si une directive/comment apparaît dans. obj. La directive/comment aurait été ajoutée via le pragma [Comment (C/C++)](../../preprocessor/comment-c-cpp.md) , à l’aide de l’option exestr déconseillée. Utilisez DUMPBIN [/All](../../build/reference/all.md) pour afficher les directives de l’éditeur de liens dans un fichier. obj.
 
-Si possible, modifiez la source pour le fichier .obj et supprimez le pragma. Si vous ignorez cet avertissement, il est possible qu’un .executable compilé avec **/CLR : pure** ne fonctionnera pas comme prévu. Le **/CLR : pure** option du compilateur est déconseillée dans Visual Studio 2015 et non pris en charge dans Visual Studio 2017.
+Si possible, modifiez la source du. objet supprimez le pragma. Si vous ignorez cet avertissement, il est possible qu’un fichier. Executable compilé avec **/clr : pure** ne s’exécute pas comme prévu. L’option de compilateur **/clr : pure** est déconseillée dans visual studio 2015 et n’est pas prise en charge dans visual studio 2017.
 
 ## <a name="example"></a>Exemple
 
-L’exemple suivant génère l’erreur LNK4224.
+L’exemple suivant génère l’LNK4224.
 
 ```cpp
 // LNK4224.cpp

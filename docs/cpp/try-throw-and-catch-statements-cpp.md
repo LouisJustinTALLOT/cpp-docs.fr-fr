@@ -19,12 +19,12 @@ helpviewer_keywords:
 - throwing exceptions [C++]
 - throw keyword [C++], throw() vs. throw(...)
 ms.assetid: 15e6a87b-b8a5-4032-a7ef-946c644ba12a
-ms.openlocfilehash: 31ed5f7a17b9b45dbbecf5ccb29d2b51a7635eaa
-ms.sourcegitcommit: 654aecaeb5d3e3fe6bc926bafd6d5ace0d20a80e
+ms.openlocfilehash: 03f7f6f5a1a2842ad7fb0ba2715fada130277e70
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/20/2019
-ms.locfileid: "74245141"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80187984"
 ---
 # <a name="try-throw-and-catch-statements-c"></a>Instructions try, throw et catch (C++)
 
@@ -74,7 +74,7 @@ MyData GetNetworkResource()
 
 ## <a name="remarks"></a>Notes
 
-Le code qui suit la clause **try** est la section protégée du code. L' expression Throw *lève*, en d’autres termes, une exception. Le bloc de code après la clause **catch** est le gestionnaire d’exceptions. Il s’agit du gestionnaire qui *intercepte* l’exception levée si les types des expressions **throw** et **catch** sont compatibles. Pour obtenir la liste des règles qui régissent la correspondance des types dans les blocs **catch** , consultez [la rubrique évaluation des blocs catch](../cpp/how-catch-blocks-are-evaluated-cpp.md). Si l’instruction **catch** spécifie des points de suspension (...) au lieu d’un type, le bloc **catch** gère chaque type d’exception. Quand vous compilez avec l’option [/EHa](../build/reference/eh-exception-handling-model.md) , celles-ci peuvent inclure des exceptions structurées en C et des exceptions asynchrones générées par le système ou générées par l’application, telles que la protection de la mémoire, la division par zéro et les violations de virgule flottante. Étant donné que les blocs **catch** sont traités dans l’ordre du programme pour trouver un type correspondant, un gestionnaire de points de suspension doit être le dernier gestionnaire du bloc **try** associé. Utilisez `catch(...)` avec précaution ; n'autorisez pas un programme à continuer sans que le bloc catch sache comment gérer l'exception spécifique qui est interceptée. En général, un bloc `catch(...)` est utilisé pour enregistrer des erreurs et effectuer un nettoyage spécial avant l'arrêt de l'exécution du programme.
+Le code qui suit la clause **try** est la section protégée du code. L' **throw** expression Throw *lève*, en d’autres termes, une exception. Le bloc de code après la clause **catch** est le gestionnaire d’exceptions. Il s’agit du gestionnaire qui *intercepte* l’exception levée si les types des expressions **throw** et **catch** sont compatibles. Pour obtenir la liste des règles qui régissent la correspondance des types dans les blocs **catch** , consultez [la rubrique évaluation des blocs catch](../cpp/how-catch-blocks-are-evaluated-cpp.md). Si l’instruction **catch** spécifie des points de suspension (...) au lieu d’un type, le bloc **catch** gère chaque type d’exception. Quand vous compilez avec l’option [/EHa](../build/reference/eh-exception-handling-model.md) , celles-ci peuvent inclure des exceptions structurées en C et des exceptions asynchrones générées par le système ou générées par l’application, telles que la protection de la mémoire, la division par zéro et les violations de virgule flottante. Étant donné que les blocs **catch** sont traités dans l’ordre du programme pour trouver un type correspondant, un gestionnaire de points de suspension doit être le dernier gestionnaire du bloc **try** associé. Utilisez `catch(...)` avec précaution ; n'autorisez pas un programme à continuer sans que le bloc catch sache comment gérer l'exception spécifique qui est interceptée. En général, un bloc `catch(...)` est utilisé pour enregistrer des erreurs et effectuer un nettoyage spécial avant l'arrêt de l'exécution du programme.
 
 Une expression **throw** qui n’a pas d’opérande lève de nouveau l’exception en cours de traitement. Nous recommandons ce format lorsqu'une exception est levée à nouveau, car celui-ci préserve les informations de type polymorphe de l'exception d'origine. Une telle expression doit uniquement être utilisée dans un gestionnaire **catch** ou dans une fonction appelée à partir d’un gestionnaire **catch** . L'objet d'une exception levée à nouveau est l'objet de l'exception d'origine, pas une copie.
 

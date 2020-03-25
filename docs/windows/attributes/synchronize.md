@@ -1,17 +1,17 @@
 ---
-title: synchroniser (attribut de COM C++)
+title: Synchronize (C++ attribut com)
 ms.date: 10/02/2018
 f1_keywords:
 - vc-attr.synchronize
 helpviewer_keywords:
 - synchronize attribute
 ms.assetid: 15fc8544-955d-4765-b3d5-0f619c8b3f40
-ms.openlocfilehash: ea5236b887fb0df2a0acdd1e4050c66a4719072b
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: a0f4702de4cfde8586cc573f9ff5a6195984d207
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62407131"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80214511"
 ---
 # <a name="synchronize"></a>synchronize
 
@@ -25,15 +25,15 @@ Synchronise l’accès à la méthode cible.
 
 ## <a name="remarks"></a>Notes
 
-Le **synchroniser** attribut C++ implémente la prise en charge pour la synchronisation de la méthode cible d’un objet. La synchronisation permet plusieurs objets à utiliser une ressource commune (par exemple, une méthode d’une classe) en contrôlant l’accès de la méthode cible.
+L’attribut **Synchronize** C++ implémente la prise en charge de la synchronisation de la méthode cible d’un objet. La synchronisation permet à plusieurs objets d’utiliser une ressource commune (telle qu’une méthode d’une classe) en contrôlant l’accès de la méthode cible.
 
-Le code inséré par cet attribut appelle la bonne `Lock` (méthode) (déterminé par le modèle de thread) au début de la méthode cible. Lorsque la méthode est fermée, `Unlock` est appelée automatiquement. Pour plus d’informations sur ces fonctions, consultez [CComAutoThreadModule::Lock](../../atl/reference/ccomautothreadmodule-class.md#lock)
+Le code inséré par cet attribut appelle la méthode de `Lock` appropriée (déterminée par le modèle de thread) au début de la méthode cible. Quand la méthode est quittée, `Unlock` est appelé automatiquement. Pour plus d’informations sur ces fonctions, consultez [CComAutoThreadModule :: Lock](../../atl/reference/ccomautothreadmodule-class.md#lock)
 
-Cet attribut exige que l’attribut [coclass](coclass.md), [progid](progid.md)ou [vi_progid](vi-progid.md) (ou un autre attribut qui implique l’un de ceux-ci) soit également appliqué au même élément. Si un attribut unique est utilisé, les deux autres sont appliqués automatiquement. Par exemple, si `progid` est appliquée, `vi_progid` et `coclass` sont également appliquées.
+Cet attribut exige que l’attribut [coclass](coclass.md), [progid](progid.md)ou [vi_progid](vi-progid.md) (ou un autre attribut qui implique l’un de ceux-ci) soit également appliqué au même élément. Si un attribut unique est utilisé, les deux autres sont appliqués automatiquement. Par exemple, si `progid` est appliqué, `vi_progid` et `coclass` sont également appliqués.
 
 ## <a name="example"></a>Exemple
 
-Le code suivant fournit la synchronisation pour le `UpdateBalance` méthode de la `CMyClass` objet.
+Le code suivant fournit la synchronisation pour la méthode `UpdateBalance` de l’objet `CMyClass`.
 
 ```cpp
 // cpp_attr_ref_synchronize.cpp
@@ -60,7 +60,7 @@ class CMyClass {
 };
 ```
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
 ### <a name="attribute-context"></a>Contexte d'attribut
 
@@ -68,8 +68,8 @@ class CMyClass {
 |-|-|
 |**S'applique à**|Méthode de classe, méthode|
 |**Renouvelable**|Non|
-|**Attributs requis**|Un ou plusieurs des opérations suivantes : `coclass`, `progid`, ou `vi_progid`.|
-|**Attributs non valides**|Aucun.|
+|**Attributs requis**|Une ou plusieurs des valeurs suivantes : `coclass`, `progid`ou `vi_progid`.|
+|**Attributs non valides**|None|
 
 Pour plus d'informations sur les contextes d'attribut, consultez [Contextes d'attribut](cpp-attributes-com-net.md#contexts).
 

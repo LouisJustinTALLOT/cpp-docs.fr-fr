@@ -6,15 +6,15 @@ f1_keywords:
 helpviewer_keywords:
 - LNK1188
 ms.assetid: 4af574b0-5b41-4580-9a37-52a634add995
-ms.openlocfilehash: 69ac20522aebb7391319c0de210e06b305f3fd0d
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: b18a93c7434ee3d66f42829f373bd916a65369bd
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62226476"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80195173"
 ---
 # <a name="linker-tools-error-lnk1188"></a>Erreur des outils Éditeur de liens LNK1188
 
-BADFIXUPSECTION :: cible de correction non valide 'symbol' ; possible de section de longueur zéro
+BADFIXUPSECTION :: cible de correction non valide’Symbol'; section de longueur zéro possible
 
-Au cours d’un lien VxD, la cible d’un réadressage n’avait pas d’une section. Avec LINK386 (une version antérieure), un enregistrement OMF GROUP (généré par une directive MASM GROUP) ont été utilisé pour combiner la section de longueur zéro par une autre section de longueur non nulle. Le format COFF ne prend pas en charge la directive de groupe et de sections de longueur nulle. Lorsque le lien convertit automatiquement ce type d’objet OMF au format COFF, cette erreur peut se produire.
+Pendant un lien VxD, la cible d’un déplacement n’avait pas de section. Avec LINK386 (une version antérieure), un enregistrement de groupe OMF (généré par une directive de groupe MASM) peut avoir été utilisé pour combiner la section de longueur zéro et une autre section de longueur différente de zéro. Le format COFF ne prend pas en charge la directive de groupe et les sections de longueur nulle. Quand LINK convertit automatiquement ce type d’objets OMF en COFF, cette erreur peut se produire.

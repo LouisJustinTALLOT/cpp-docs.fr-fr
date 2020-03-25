@@ -6,21 +6,21 @@ f1_keywords:
 helpviewer_keywords:
 - LNK1200
 ms.assetid: 55771145-915e-4006-ac6c-ac702041eb2f
-ms.openlocfilehash: c99b25a83836f1ee0bc6ba622e42ea382c377172
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 9dcc37bd74a25e29726529346b1578bb8b18ac3e
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62213548"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80195134"
 ---
 # <a name="linker-tools-error-lnk1200"></a>Erreur des outils Éditeur de liens LNK1200
 
-Erreur de lecture de base de données du programme 'nom_fichier'
+erreur lors de la lecture de la base de données du programme’nom_fichier'
 
-La base de données du programme (PDB) n’a pas pu être lu.
+Impossible de lire la base de données du programme (PDB).
 
-Cette erreur peut être dû à l’endommagement du fichier.
+Cette erreur peut être due à l’endommagement d’un fichier.
 
-Si `filename` est le fichier PDB d’un fichier objet, recompilez le fichier objet en utilisant [/Zi](../../build/reference/z7-zi-zi-debug-information-format.md).
+Si `filename` est le PDB d’un fichier objet, recompilez le fichier objet à l’aide de [/Zi](../../build/reference/z7-zi-zi-debug-information-format.md).
 
-Si `filename` est le fichier PDB pour le fichier de sortie principal, et cette erreur s’est produite au cours d’une édition de liens incrémentielle, supprimez le PDB et rétablir.
+Si `filename` est le PDB du fichier de sortie principal et que cette erreur s’est produite lors d’un lien incrémentiel, supprimez le PDB et reliez-le.

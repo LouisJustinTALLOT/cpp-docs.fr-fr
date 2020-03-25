@@ -5,18 +5,18 @@ helpviewer_keywords:
 - IDE [C++]
 - Visual Studio IDE [C++]
 ms.assetid: d985c230-8e81-49d6-92be-2db9cac8d023
-ms.openlocfilehash: 7a9559f1aac9f0bd26b35dd03729ab86ad695b04
-ms.sourcegitcommit: fc1de63a39f7fcbfe2234e3f372b5e1c6a286087
-ms.translationtype: HT
+ms.openlocfilehash: 2cf2844fd4247c3c69648823302a6ad56ff5fd45
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "66182769"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80171774"
 ---
 # <a name="using-the-visual-studio-ide-for-c-desktop-development"></a>Utilisation de l'IDE de Visual Studio pour le développement de bureau C++
 
 L’environnement de développement intégré (IDE) Visual Studio offre un ensemble de fonctionnalités qui vous aident à gérer les projets de code, petits et grands, à écrire et refactoriser votre code ainsi qu’à détecter et corriger les erreurs à l’aide de l’analyse statique et de puissants outils de débogage. Cet ensemble d’articles est conçu pour vous guider tout au long de chaque étape nécessaire pour gérer vos projets, écrire, tester et déboguer votre code, puis le déployer sur un autre ordinateur.
 
-## <a name="prerequisites"></a>Prérequis
+## <a name="prerequisites"></a>Conditions préalables requises
 
 Si vous n’avez pas encore installé Visual Studio, le moment est venu. Pour connaître les liens de téléchargement et suivre une procédure pas à pas rapide, consultez [Installer la prise en charge de C++ dans Visual Studio](../build/vscpp-step-0-installation.md). Pour plus d’informations sur l’installation de Visual Studio en général et obtenir des conseils de dépannage si un problème se produit, consultez [Installer Visual Studio](/visualstudio/install/install-visual-studio). Veillez à choisir la charge de travail **Développement Desktop en C++** pour inclure les compilateurs, outils et bibliothèques C++ quand vous installez Visual Studio, car ils ne sont pas installés par défaut.
 
@@ -38,19 +38,19 @@ Pour installer Visual Studio 2015, accédez à [Télécharger d’anciennes ver
 
 Une fois que vous avez terminé votre installation de Visual Studio, vous êtes prêt à continuer.
 
-## <a name="get-started"></a>Prise en main
+## <a name="get-started"></a>Bien démarrer
 
 Pour commencer à utiliser l’IDE Visual Studio pour générer des applications C++, passez en revue chacune des rubriques ci-dessous dans l’ordre. Chacune d’elles s’appuie sur le travail effectué dans les rubriques précédentes :
 
 - [Procédure pas à pas : utilisation de projets et de solutions (C++)](walkthrough-working-with-projects-and-solutions-cpp.md)
 
-- [Procédure pas à pas : Génération d’un projet (C++)](walkthrough-building-a-project-cpp.md)
+- [Procédure pas à pas : génération d’un projet (C++)](walkthrough-building-a-project-cpp.md)
 
-- [Procédure pas à pas : Test d’un projet (C++)](walkthrough-testing-a-project-cpp.md)
+- [Procédure pas à pas : test d’un projet (C++)](walkthrough-testing-a-project-cpp.md)
 
-- [Procédure pas à pas : Débogage d'un projet (C++)](walkthrough-debugging-a-project-cpp.md)
+- [Procédure pas à pas : débogage d’un projet (C++)](walkthrough-debugging-a-project-cpp.md)
 
-- [Procédure pas à pas : Déploiement de votre programme (C++)](walkthrough-deploying-your-program-cpp.md)
+- [Procédure pas à pas : déploiement de votre programme (C++)](walkthrough-deploying-your-program-cpp.md)
 
 ## <a name="next-steps"></a>Étapes suivantes
 

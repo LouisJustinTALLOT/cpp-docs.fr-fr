@@ -26,12 +26,12 @@ helpviewer_keywords:
 - maximum macro
 - __max macro
 ms.assetid: 05c936f6-0e22-45d6-a58d-4bc102e9dae2
-ms.openlocfilehash: dac82ecd1c96d1edf9175a29797d93c65bc19c99
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 4cdfd99ec344cd357900d76dfc7f9400046e448a
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70952748"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80170187"
 ---
 # <a name="__max"></a>__max
 
@@ -56,15 +56,15 @@ Valeurs de tout type numérique à comparer.
 
 La macro **__max** compare deux valeurs et retourne la valeur de la plus grande. Les arguments peuvent être de n’importe quel type de données numérique, signé ou non signé. Les deux arguments et la valeur de retour doivent être du même type de données.
 
-L’argument retourné est évalué deux fois par la macro. Cela peut entraîner des résultats inattendus si l’argument est une expression qui modifie sa valeur lors de son évaluation, par `*p++`exemple.
+L’argument retourné est évalué deux fois par la macro. Cela peut provoquer des résultats inattendus si l’argument est une expression qui modifie sa valeur lors de son évaluation, par exemple `*p++`.
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
 |Macro|En-tête requis|
 |-------------|---------------------|
 |**__max**|\<stdlib.h>|
 
-## <a name="example"></a>Exemples
+## <a name="example"></a>Exemple
 
 Pour plus d’informations, consultez l’exemple pour [__min](min.md).
 

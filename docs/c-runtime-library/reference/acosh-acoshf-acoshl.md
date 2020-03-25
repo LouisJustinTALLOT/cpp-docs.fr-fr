@@ -33,12 +33,12 @@ helpviewer_keywords:
 - acosh function
 - acoshl function
 ms.assetid: 6985c4d7-9e2a-44ce-9a9b-5a43015f15f7
-ms.openlocfilehash: b547bc0db23f446672c8838419aeb9b0f32c16c3
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: da1d6024cc9f00ebfc7696ddedf92ea9f25728a1
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70944080"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80170356"
 ---
 # <a name="acosh-acoshf-acoshl"></a>acosh, acoshf, acoshl
 
@@ -66,22 +66,22 @@ Valeur à virgule flottante.
 
 Les fonctions **acosh** retournent le cosinus hyperbolique inverse (arc cosinus hyperbolique) de *x*. Ces fonctions sont valides sur le domaine *x* ≥ 1. Si *x* est inférieur à 1, `errno` a la valeur `EDOM` et le résultat est une valeur NaN silencieuse. Si *x* est une valeur NaN, indéfinie ou infinie silencieuse, la même valeur est retournée.
 
-|Entrée|Exception SEH|`_matherr`|
+|Entrée|Exception SEH|Exception `_matherr`|
 |-----------|-------------------|--------------------------|
-|± QNAN, IND, INF|none|none|
-|*x* < 1|none|none|
+|± QNAN, IND, INF|Aucun|Aucun|
+|*x* < 1|Aucun|Aucun|
 
 ## <a name="remarks"></a>Notes
 
 Lorsque vous utilisez C++, vous pouvez appeler des surcharges de **acosh** qui acceptent et retournent des valeurs **float** ou **long** **double** . Dans un programme C, **acosh** accepte et retourne toujours la valeur **double**.
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
 |Fonction|En-tête C|En-tête C++|
 |--------------|--------------|------------------|
 |**acosh**, **acoshf**, **acoshl**|\<math.h>|\<cmath>|
 
-Pour plus d'informations sur la compatibilité, voir [Compatibilité](../../c-runtime-library/compatibility.md).
+Pour plus d’informations sur la compatibilité, voir [Compatibilité](../../c-runtime-library/compatibility.md).
 
 ## <a name="example"></a>Exemple
 

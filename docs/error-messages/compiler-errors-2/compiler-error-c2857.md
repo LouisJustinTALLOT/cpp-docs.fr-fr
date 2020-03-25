@@ -6,28 +6,28 @@ f1_keywords:
 helpviewer_keywords:
 - C2857
 ms.assetid: b57302bd-58ec-45ae-992a-1e282d5eeccc
-ms.openlocfilehash: 10c0ea3b54ded29bf80f83713cea33428dca6ca0
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 11b620f9748ac85e731d79b0652c0392375b2ea4
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62350437"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80201849"
 ---
 # <a name="compiler-error-c2857"></a>Erreur du compilateur C2857
 
-> ' #include ' instruction spécifiée avec le/Yc*filename* option de ligne de commande est introuvable dans le fichier source
+> l’instruction' #include’spécifiée avec l’option de ligne de commande/YC*filename* est introuvable dans le fichier source
 
-Le [/Yc](../../build/reference/yc-create-precompiled-header-file.md) option spécifie le nom d’un fichier include qui n’est pas inclus dans le fichier source en cours de compilation.
+L’option [/Yc](../../build/reference/yc-create-precompiled-header-file.md) spécifie le nom d’un fichier include qui n’est pas inclus dans le fichier source en cours de compilation.
 
 ## <a name="remarks"></a>Notes
 
-Lorsque vous utilisez le **/Yc**<em>filename</em> option sur un fichier source pour créer un fichier d’en-tête précompilé (PCH), que le fichier source doit inclure le *nom de fichier* fichier d’en-tête. Chaque fichier inclus dans le fichier source, y compris le texte spécifié *filename*, est inclus dans le fichier d’en-tête Précompilé. Dans d’autres fichiers de code source compilés à l’aide de la **/Yu**<em>filename</em> permet d’utiliser l’en-tête Précompilé du fichier, un include de *filename* doit être la première ligne sans commentaire dans le fichier. Le compilateur ignore quoi que ce soit dans le fichier source avant cette include.
+Lorsque vous utilisez l’option **/Yc**<em>filename</em> sur un fichier source pour créer un fichier d’en-tête précompilé (PCH), ce fichier source doit inclure le fichier d’en-tête de *nom* de fichier. Chaque fichier inclus dans le fichier source, jusqu’à et y compris le *nom*de fichier spécifié, est inclus dans le fichier PCH. Dans les autres fichiers sources compilés à l’aide de l’option **/Yu**<em>filename</em> pour utiliser le fichier PCH, un include de *filename* doit être la première ligne sans commentaire dans le fichier. Le compilateur ignore tout ce qui se trouve dans le fichier source avant que celle-ci soit incluse.
 
-Cette erreur peut être provoquée par un `#include "filename"` instruction dans un bloc de compilation conditionnelle n’est pas compilé dans votre fichier de source de fichier PCH.
+Cette erreur peut être causée par une instruction `#include "filename"` dans un bloc de compilation conditionnelle qui n’est pas compilé dans votre fichier source PCH.
 
 ## <a name="example"></a>Exemple
 
-En règle générale, un fichier source dans votre projet est désigné en tant que fichier PCH source et un fichier d’en-tête est utilisé en tant que le fichier d’en-tête PCH. Un fichier d’en-tête PCH classique comprend tous les en-têtes de bibliothèque utilisés dans votre projet, mais les en-têtes non locales qui sont en cours de développement. Dans cet exemple, le fichier d’en-tête PCH nommé *my_pch.h*.
+Dans l’utilisation courante, un fichier source de votre projet est désigné comme fichier source PCH et un fichier d’en-tête est utilisé comme fichier d’en-tête PCH. Un fichier d’en-tête PCH type contient tous les en-têtes de bibliothèque utilisés dans votre projet, mais pas les en-têtes locaux qui sont toujours en cours de développement. Dans cet exemple, le fichier d’en-tête PCH est nommé *my_pch. h*.
 
 ```cpp
 // my_pch.h
@@ -35,7 +35,7 @@ En règle générale, un fichier source dans votre projet est désigné en tant 
 #include <stdio.h>
 ```
 
-Le fichier de source de fichier PCH est compilé à l’aide de la **/Yc**<em>my_pch.h</em> option. Si le compilateur ne trouve pas un include de ce fichier d’en-tête PCH, il génère C2857 :
+Le fichier source PCH est compilé à l’aide de l’option **/yc**<em>my_pch. h</em> . Si le compilateur ne trouve pas d’inclusion de ce fichier d’en-tête PCH, il génère C2857 :
 
 ```cpp
 // my_pch.cpp
@@ -46,7 +46,7 @@ Le fichier de source de fichier PCH est compilé à l’aide de la **/Yc**<em>my
 #endif
 ```
 
-Pour utiliser ce fichier PCH, les fichiers source doivent être compilés à l’aide de la **/Yu**<em>my_pch.h</em> option. Le fichier d’en-tête PCH doit être tout d’abord inclus dans les fichiers sources qui utilisent l’en-tête Précompilé :
+Pour utiliser ce fichier PCH, les fichiers sources doivent être compilés à l’aide de l’option **/yu**<em>my_pch. h</em> . Le fichier d’en-tête PCH doit être inclus en premier dans les fichiers sources qui utilisent le fichier PCH :
 
 ```cpp
 // C2857.cpp

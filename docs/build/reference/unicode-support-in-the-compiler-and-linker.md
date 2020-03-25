@@ -8,44 +8,44 @@ f1_keywords:
 - VC.Project.VCXDCMakeTool.UseUnicodeResponseFiles
 helpviewer_keywords:
 - Unicode, Visual C++
-ms.openlocfilehash: 71458ab345670c0a5715576a7da80c4e6ff2955b
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 420b01263320cf86df3f99da4523cc2b8bb4d4b6
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62317326"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80168835"
 ---
 # <a name="unicode-support-in-the-compiler-and-linker"></a>Prise en charge Unicode dans le compilateur et l'éditeur de liens
 
-La plupart des outils de génération Visual C++ prend en charge Unicode entrées et sorties.
+La plupart C++ des outils de génération d’éléments visuels prennent en charge les entrées et sorties Unicode.
 
 ## <a name="filenames"></a>Noms de fichiers
 
-Noms de fichiers spécifiés sur la ligne de commande ou dans les directives du compilateur (tel que `#include`) peut contenir des caractères Unicode.
+Les noms de fichiers spécifiés sur la ligne de commande ou dans les directives de compilateur (par exemple `#include`) peuvent contenir des caractères Unicode.
 
 ## <a name="source-code-files"></a>Fichiers de code source
 
-Les caractères Unicode sont pris en charge dans les identificateurs, les macros, les littéraux de chaîne et de caractère et dans des commentaires.  Noms de caractères universels sont également pris en charge.
+Les caractères Unicode sont pris en charge dans les identificateurs, les macros, les littéraux de chaîne et de caractère et dans les commentaires.  Les noms de caractères universels sont également pris en charge.
 
-Unicode peuvent être entré dans un fichier de code source dans les encodages suivants :
+Unicode peut être entré dans un fichier de code source dans les encodages suivants :
 
-- UTF-16 little endian avec ou sans marque d’ordre d’octet (BOM)
+- UTF-16 Little endian avec ou sans marque d’ordre d’octet (BOM)
 
-- UTF-16 big endian avec ou sans BOM
+- UTF-16 Big endian avec ou sans BOM
 
-- UTF-8 avec BOM
+- UTF-8 with BOM
 
-## <a name="output"></a>Sortie
+## <a name="output"></a>Output
 
-Pendant la compilation, le compilateur génère des diagnostics sur la console au format UTF-16.  Les caractères qui peuvent être affichés sur votre console dépendent des propriétés de la fenêtre de console.  Il est redirigé vers un fichier de sortie du compilateur dans la page de codes de console ANSI actuelle.
+Pendant la compilation, le compilateur génère des diagnostics sur la console en UTF-16.  Les caractères qui peuvent être affichés sur votre console dépendent des propriétés de la fenêtre de console.  La sortie de compilateur redirigée vers un fichier se trouve dans la page de codes de la console ANSI actuelle.
 
-## <a name="linker-response-files-and-def-files"></a>Fichiers de réponse de l’éditeur de liens et. Fichiers DEF
+## <a name="linker-response-files-and-def-files"></a>Fichiers réponse de l’éditeur de liens et. Fichiers DEF
 
-Fichiers réponse et fichiers DEF peuvent être soit UTF-16 avec une marque BOM ou ANSI.
+Les fichiers réponse et les fichiers DEF peuvent être au format UTF-16 avec une marque de nomenclature ou ANSI.
 
-## <a name="asm-and-cod-dumps"></a>dumps .asm et .cod
+## <a name="asm-and-cod-dumps"></a>Dumps. asm et. COD
 
-dumps .asm et .cod est au format ANSI par défaut pour la compatibilité avec MASM. Utilisez [/FAu](fa-fa-listing-file.md) en sortie UTF-8. Notez que si vous spécifiez **/FAS**, la source par recoupement sera directement affichée et peut sembler altérée, par exemple, si vous n’avez pas spécifié et que le code source est UTF-8 **/FAsu**.
+les dumps. asm et. COD sont par défaut en ANSI pour des compatibilités avec MASM. Utilisez [/FAu](fa-fa-listing-file.md) pour la sortie UTF-8. Notez que si vous spécifiez **/FAS**, la source mélangée est directement imprimée et peut paraître tronquée, par exemple si le code source est UTF-8 et que vous n’avez pas spécifié **/fasu**.
 
 ## <a name="see-also"></a>Voir aussi
 

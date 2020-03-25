@@ -6,26 +6,26 @@ f1_keywords:
 helpviewer_keywords:
 - C4772
 ms.assetid: dafe6fd8-9faf-41f5-9d66-a55838742c14
-ms.openlocfilehash: 95243ab66d5d0296e1c316ff8dde7add75a030cd
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 89156b2f29fd21160e6abddc3ecb21efaee6dde1
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62385457"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80175128"
 ---
 # <a name="compiler-warning-level-1-c4772"></a>Avertissement du compilateur (niveau 1) C4772
 
-> \#importation référencé d’un type à partir d’une bibliothèque de types manquante ; «*type manquant*' utilisé comme espace réservé
+> \#importer référence un type à partir d’une bibliothèque de types manquante ; '*Missing-type*'utilisé en tant qu’espace réservé
 
-Une bibliothèque de types a été référencée avec la [#import](../../preprocessor/hash-import-directive-cpp.md) directive. Toutefois, la bibliothèque de types contenait une référence à une autre bibliothèque de types qui n’est pas référencée avec `#import`. Cet autre fichier .tlb est introuvable par le compilateur.
+Une bibliothèque de types a été référencée avec la directive [#import](../../preprocessor/hash-import-directive-cpp.md) . Toutefois, la bibliothèque de types contenait une référence à une autre bibliothèque de types qui n’a pas été référencée avec `#import`. Ce fichier. tlb est introuvable par le compilateur.
 
-Notez que le compilateur ne recherche pas de bibliothèques de types dans des répertoires différents si vous utilisez le [/I (autres répertoires Include)](../../build/reference/i-additional-include-directories.md) option du compilateur pour spécifier ces répertoires. Si vous souhaitez que le compilateur recherche des bibliothèques de types dans des répertoires différents, ajoutez ces répertoires à la variable d’environnement PATH.
+Notez que le compilateur ne trouvera pas les bibliothèques de types dans les différents répertoires si vous utilisez l’option de compilateur [/i (autres répertoires Include)](../../build/reference/i-additional-include-directories.md) pour spécifier ces répertoires. Si vous souhaitez que le compilateur trouve des bibliothèques de types dans des répertoires différents, ajoutez ces répertoires à la variable d’environnement PATH.
 
-Par défaut, cet avertissement est émis en tant qu’erreur. C4772 ne peut pas être supprimée avec/W0.
+Par défaut, cet avertissement est émis en tant qu’erreur. C4772 ne peut pas être supprimé avec/W0.
 
 ## <a name="example"></a>Exemple
 
-Il s’agit de la première bibliothèque de types nécessaire pour reproduire l’erreur C4772.
+Il s’agit de la première bibliothèque de types nécessaire pour reproduire C4772.
 
 ```IDL
 // c4772a.idl
@@ -40,7 +40,7 @@ library C4772aLib
 };
 ```
 
-Il s’agit de la bibliothèque de types deuxième nécessaire pour reproduire l’erreur C4772.
+Il s’agit de la deuxième bibliothèque de types nécessaire pour reproduire C4772.
 
 ```IDL
 // c4772b.idl
@@ -58,7 +58,7 @@ library C4772bLib
 };
 ```
 
-L’exemple suivant génère l’erreur C4772 :
+L’exemple suivant génère l’C4772 :
 
 ```cpp
 // C4772.cpp

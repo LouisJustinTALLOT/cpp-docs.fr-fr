@@ -1,19 +1,19 @@
 ---
-title: Avertissement du compilateur (niveau 1) C4731
+title: Avertissement du compilateur (niveau 1) C4731
 ms.date: 11/04/2016
 f1_keywords:
 - C4731
 helpviewer_keywords:
 - C4731
 ms.assetid: 5658c24c-3e6f-4505-835b-1fb92d47cab0
-ms.openlocfilehash: b2591756dfaa8887affbe4e470f1c98738b6b680
-ms.sourcegitcommit: 458dcc794e3841919c01a3a5ff6b9a3767f8861b
+ms.openlocfilehash: 72483b734a1463b7b211c49ef21a01536ffa0ea1
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/13/2019
-ms.locfileid: "74052426"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80185722"
 ---
-# <a name="compiler-warning-level-1-c4731"></a>Avertissement du compilateur (niveau 1) C4731
+# <a name="compiler-warning-level-1-c4731"></a>Avertissement du compilateur (niveau 1) C4731
 
 'pointeur' : Registre de pointeur de frame’Register’modifié par le code assembleur inline
 

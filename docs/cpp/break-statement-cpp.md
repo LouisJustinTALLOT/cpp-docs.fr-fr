@@ -6,16 +6,16 @@ f1_keywords:
 helpviewer_keywords:
 - break keyword [C++]
 ms.assetid: 63739928-8985-4b05-93ce-016322e6da3d
-ms.openlocfilehash: 3dda0b19fffaaf725ab363a0c4fe70d2ca54e3f7
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 23d31e1456106d5f82c4a13079c72c231b8477bd
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62267713"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80190480"
 ---
 # <a name="break-statement-c"></a>break, instruction (C++)
 
-Le **saut** instruction arrête l’exécution de l’englobante la plus proche boucle ou instruction conditionnelle dans laquelle elle apparaît. Le contrôle est passé à l'instruction qui suit l'instruction terminée, le cas échéant.
+L’instruction **break** termine l’exécution de la boucle englobante ou de l’instruction conditionnelle la plus proche dans laquelle elle apparaît. Le contrôle est passé à l'instruction qui suit l'instruction terminée, le cas échéant.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -25,17 +25,17 @@ break;
 
 ## <a name="remarks"></a>Notes
 
-Le **saut** instruction est utilisée avec l’instruction conditionnelle [basculer](../cpp/switch-statement-cpp.md) instruction et avec le [faire](../cpp/do-while-statement-cpp.md), [pour](../cpp/for-statement-cpp.md), et [lors de la](../cpp/while-statement-cpp.md) instructions de boucle.
+L’instruction **break** est utilisée avec l’instruction [de commutateur](../cpp/switch-statement-cpp.md) conditionnel et avec les instructions [do](../cpp/do-while-statement-cpp.md), [for](../cpp/for-statement-cpp.md)et [while](../cpp/while-statement-cpp.md) .
 
-Dans un **basculer** instruction, le **saut** instruction provoque le programme à exécuter l’instruction suivante en dehors de la **basculer** instruction. Sans un **saut** chaque instruction, à partir de la mise en correspondance **cas** étiquette à la fin de la **basculer** instruction, y compris le **par défaut**clause, est exécutée.
+Dans une instruction **switch** , l’instruction **break** fait en sorte que le programme exécute l’instruction suivante à l’extérieur de l’instruction **switch** . Sans instruction **break** , chaque instruction de l’étiquette **case** correspondante jusqu’à la fin de l’instruction **switch** , y compris la clause **default** , est exécutée.
 
-Dans les boucles, le **saut** instruction arrête l’exécution de l’englobante la plus proche **faire**, **pour**, ou **tandis que** instruction. Le contrôle est passé à l'instruction qui suit l'instruction terminée, le cas échéant.
+Dans les boucles, l’instruction **break** termine l’exécution de l’instruction **do**, **for**ou **while** la plus proche. Le contrôle est passé à l'instruction qui suit l'instruction terminée, le cas échéant.
 
-Dans les instructions imbriquées, le **saut** instruction se termine uniquement le **faire**, **pour**, **basculer**, ou **lors de la**instruction qui l’englobe immédiatement. Vous pouvez utiliser un **retourner** ou **goto** instruction pour transférer le contrôle de la plus profondément imbriquée des structures.
+Dans les instructions imbriquées, l’instruction **break** met fin uniquement **à**l’instruction **do**, for, **switch**ou **while** qui l’englobe immédiatement. Vous pouvez utiliser une instruction **Return** ou **goto** pour transférer le contrôle à partir de structures plus profondément imbriquées.
 
 ## <a name="example"></a>Exemple
 
-Le code suivant montre comment utiliser le **saut** instruction dans un **pour** boucle.
+Le code suivant montre comment utiliser l’instruction **break** dans une boucle **for** .
 
 ```cpp
 #include <iostream>
@@ -71,7 +71,7 @@ In each case:
 3
 ```
 
-Le code suivant montre comment utiliser **saut** dans un **tandis que** boucle et une **faire** boucle.
+Le code suivant montre comment utiliser **break** dans une boucle **while** et une boucle **do** .
 
 ```cpp
 #include <iostream>
@@ -104,7 +104,7 @@ In each case:
 0123
 ```
 
-Le code suivant montre comment utiliser **saut** dans une instruction switch. Vous devez utiliser **saut** dans tous les cas si vous souhaitez traiter chaque cas séparément ; si vous n’utilisez pas **saut**, l’exécution du code passera au cas suivant.
+Le code suivant montre comment utiliser **break** dans une instruction switch. Vous devez utiliser **break** dans tous les cas si vous souhaitez gérer chaque cas séparément. Si vous n’utilisez pas **break**, l’exécution du code passe au cas suivant.
 
 ```cpp
 #include <iostream>

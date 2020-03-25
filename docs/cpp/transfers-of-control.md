@@ -5,18 +5,18 @@ helpviewer_keywords:
 - control flow, branching
 - control flow, transferring control
 ms.assetid: aa51e7f2-060f-4106-b0fe-331f04357423
-ms.openlocfilehash: 1fc487628f26dcac097109bc71fa960e501d0797
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: c9a46ccb1cf519080c5105855e41ecd3ebc23f77
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62266814"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80188049"
 ---
 # <a name="transfers-of-control"></a>Transferts de contrôle
 
-Vous pouvez utiliser la **goto** instruction ou un **cas** étiquette dans un **basculer** instruction pour spécifier un programme branche après un initialiseur. Ce code est conforme sauf si la déclaration qui contient l'initialiseur figure dans un bloc se trouvant lui-même dans le bloc dans lequel l'instruction de saut s'exécute.
+Vous pouvez utiliser l’instruction **goto** ou une étiquette **case** dans une instruction **switch** pour spécifier un programme qui rebranche un initialiseur. Ce code est conforme sauf si la déclaration qui contient l'initialiseur figure dans un bloc se trouvant lui-même dans le bloc dans lequel l'instruction de saut s'exécute.
 
-L'exemple suivant montre une boucle qui déclare et initialise les objets `total`, `ch` et `i`. Il est également un erronée **goto** instruction qui transfère le contrôle après un initialiseur.
+L'exemple suivant montre une boucle qui déclare et initialise les objets `total`, `ch` et `i`. Il y a également une instruction **goto** erronée qui transfère le contrôle après un initialiseur.
 
 ```cpp
 // transfers_of_control.cpp
@@ -48,6 +48,6 @@ int main()
 }
 ```
 
-Dans l’exemple précédent, le **goto** instruction tente de transférer le contrôle après l’initialisation de `i`. Toutefois, si `i` était déclaré mais non initialisé, le transfert serait conforme.
+Dans l’exemple précédent, l’instruction **goto** tente de transférer le contrôle au-delà de l’initialisation de `i`. Toutefois, si `i` était déclaré mais non initialisé, le transfert serait conforme.
 
-Les objets `total` et `ch`, déclarés dans le bloc qui sert le *instruction* de la **tandis que** instruction, sont détruits lors de la sortie de ce bloc à l’aide de la  **saut** instruction.
+Les objets `total` et `ch`, déclarés dans le bloc qui sert d' *instruction* de l’instruction **while** , sont détruits lors de la sortie de ce bloc à l’aide de l’instruction **break** .

@@ -2,12 +2,12 @@
 title: Convertir en littéral de chaîne brut
 ms.date: 11/16/2016
 ms.assetid: fffbfee4-66ee-42ba-aeb9-df07fb702c51
-ms.openlocfilehash: bf492e6796b9d2342b5952abb093bddd5ede114b
-ms.sourcegitcommit: b032daf81cb5fdb1f5a988277ee30201441c4945
-ms.translationtype: HT
+ms.openlocfilehash: 5636e00bfe8655d84fb2e4b64e0391324ab35d7d
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51692591"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80171812"
 ---
 # <a name="convert-to-raw-string-literal"></a>Convertir en littéral de chaîne brut
 
@@ -17,7 +17,7 @@ ms.locfileid: "51692591"
 
 **Pourquoi :** vous pouvez doubler la séquence d’échappement, mais cela aboutit souvent à des chaînes illisibles et qui prêtent à confusion.  L’utilisation de littéraux de chaînes brutes facilite la lecture des chaînes.
 
-**Comment :**
+**Comment :**
 
 1. placez le curseur texte ou de la souris sur la chaîne faisant l’objet d’une séquence d’échappement à convertir.
 

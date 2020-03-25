@@ -6,17 +6,17 @@ f1_keywords:
 helpviewer_keywords:
 - M6102
 ms.assetid: dbd2241f-6595-431e-9597-d9dbdb3a0ca2
-ms.openlocfilehash: 73c4b48819937ed4b49c80969c18701c8820956e
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 146ca1f51b15ee87475bc2007d63259d70450f38
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62383864"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80173762"
 ---
 # <a name="math-error-m6102"></a>Erreur mathématique M6102
 
 Denormal
 
-Une opération a généré un très petit nombre à virgule flottante, ce qui n’est pas valide en raison d’une perte de précision. Denormal exceptions de virgule flottante sont généralement masquées, d'où leur être interceptées et exploitées.
+Une opération a généré un très petit nombre à virgule flottante, qui n’est pas valide en raison d’une perte de précision. Les exceptions de virgule flottante dénormales sont généralement masquées, ce qui leur permet d’être interceptées et exploitées.
 
-Programme se termine par le code de sortie 130.
+Le programme se termine avec le code de sortie 130.

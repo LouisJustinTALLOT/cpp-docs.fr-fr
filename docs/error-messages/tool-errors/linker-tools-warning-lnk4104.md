@@ -6,18 +6,18 @@ f1_keywords:
 helpviewer_keywords:
 - LNK4104
 ms.assetid: ca6728db-d616-419a-a570-65e8445c6079
-ms.openlocfilehash: 3d89b27c32b33b917abb7fc140eebf5924142423
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 604dccf01b3dffc0060546bebf19d64c16ebf965
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62298540"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80193964"
 ---
 # <a name="linker-tools-warning-lnk4104"></a>Avertissement des outils Éditeur de liens LNK4104
 
-exportation du symbole 'symbole' doit être PRIVATE
+l’exportation du symbole’Symbol’doit être privée
 
-Le `symbol` peut prendre l’une des opérations suivantes :
+La `symbol` peut être l’une des suivantes :
 
 - `DllCanUnloadNow`
 
@@ -49,4 +49,4 @@ Le `symbol` peut prendre l’une des opérations suivantes :
 
 - `RasCustomEntryDlg`
 
-Cet avertissement est émis lorsque vous générez une bibliothèque d’importation pour une DLL et exporter une des fonctions ci-dessus sans spécifier comme privés dans le fichier de définition de module. En règle générale, ces fonctions sont exportées pour une utilisation uniquement par OLE. En les plaçant dans la bibliothèque d’importation peuvent entraîner un comportement inhabituel lorsqu’un programme lié à la bibliothèque de manière incorrecte effectue des appels pour eux. Pour plus d’informations sur le mot clé privé, consultez [exportations](../../build/reference/exports.md).
+Cet avertissement est émis lorsque vous générez une bibliothèque d’importation pour une DLL et que vous exportez l’une des fonctions ci-dessus sans la spécifier comme privée dans le fichier de définition de module. En général, ces fonctions sont exportées uniquement pour une utilisation par OLE. Le fait de les placer dans la bibliothèque d’importation peut entraîner un comportement inhabituel lorsqu’un programme lié à la bibliothèque effectue incorrectement des appels à ces derniers. Pour plus d’informations sur le mot clé PRIVATE, consultez [exportations](../../build/reference/exports.md).

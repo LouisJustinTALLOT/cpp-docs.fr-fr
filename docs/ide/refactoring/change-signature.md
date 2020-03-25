@@ -2,12 +2,12 @@
 title: Changer la signature
 ms.date: 11/16/2016
 ms.assetid: 8daaa060-7305-4035-99d2-8b460b4f4454
-ms.openlocfilehash: ec42fd00ecf48fb700042f02543e3fe194fe6975
-ms.sourcegitcommit: 7c05ebd2c75e9326fe774e95cbce7f150ba2eeba
-ms.translationtype: HT
+ms.openlocfilehash: 1599a7900e33db61994ea75581f9d87b1aee83f9
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/21/2018
-ms.locfileid: "52281946"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80171903"
 ---
 # <a name="change-signature"></a>Changer la signature
 
@@ -17,7 +17,7 @@ ms.locfileid: "52281946"
 
 **Pourquoi :** vous pourriez manuellement changer ces paramètres vous-même, puis rechercher tous les appels à cette fonction et les modifier un par un, mais cela peut entraîner des erreurs.  Cet outil de refactorisation effectuera automatiquement cette tâche.
 
-**Comment :**
+**Comment :**
 
 1. placez le curseur texte ou de la souris dans le nom de la méthode à modifier ou dans l’une de ses utilisations :
 
@@ -39,8 +39,8 @@ ms.locfileid: "52281946"
    | ------ | ---
    | **Haut/bas**    | Déplacer le paramètre sélectionné vers le haut ou le bas de la liste
    | **Ajouter**        | Ajouter un nouveau paramètre à la liste
-   | **Supprimer**     | Supprimer le paramètre sélectionné de la liste
-   | **Modifier**     | Modifier le paramètre sélectionné en changeant son type et/ou nom, en indiquant s’il est facultatif et ce que serait sa valeur injectée
+   | **Remove**     | Supprimer le paramètre sélectionné de la liste
+   | **Modify**     | Modifier le paramètre sélectionné en changeant son type et/ou nom, en indiquant s’il est facultatif et ce que serait sa valeur injectée
    | **Rétablir**     | Rétablir l’état d’origine du paramètre sélectionné
    | **Tout rétablir** | Rétablir l’état d’origine de tous les paramètres
 
@@ -56,7 +56,7 @@ ms.locfileid: "52281946"
    | Entrée | Description
    | ----- | ---
    | **Type**               | Type du paramètre (int, double, float, etc.)
-   | **Name**               | Nom du paramètre
+   | **Nom**               | Nom du paramètre
    | **Paramètre facultatif** | Spécifie éventuellement le paramètre
    | **Valeur injectée**     | Valeur insérée dans tous les appels à la fonction où le paramètre n’est pas spécifié (valide uniquement pour **Ajouter**)
    | **Valeur par défaut**      | Valeur utilisée par la fonction si l’appelant n’en spécifie aucune (valide uniquement pour **Paramètre facultatif**)

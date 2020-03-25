@@ -6,40 +6,40 @@ f1_keywords:
 helpviewer_keywords:
 - U1033
 ms.assetid: c146f7b5-7d5c-4329-a522-28a648546016
-ms.openlocfilehash: 3b1df28e3cd7b27a9e7a130d9d71c1af68db9aec
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 4511b15c84479c3531a3bea85964e2768de0181f
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62324361"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80173385"
 ---
 # <a name="nmake-fatal-error-u1033"></a>Erreur irrécupérable NMAKE U1033
 
-Erreur de syntaxe : 'string' inattendu
+erreur de syntaxe : 'String’inattendu
 
-La chaîne ne fait pas partie de la syntaxe valide d’un makefile.
+La chaîne ne fait pas partie de la syntaxe valide pour un Makefile.
 
 ### <a name="to-fix-by-checking-the-following-possible-causes"></a>Pour corriger en vérifiant les causes possibles suivantes
 
-1. Si la valeur de la fermeture des crochets pointus (**<<**) pour un fichier inline ne sont pas au début d’une ligne, l’erreur suivante se produit :
+1. Si le jeu de parenthèses fermantes ( **<<** ) d’un fichier Inline ne se trouve pas au début d’une ligne, l’erreur suivante se produit :
 
     ```
     syntax error : 'EOF' unexpected
     ```
 
-1. Si une définition de macro dans le makefile contenue un signe égal (**=**) sans précédente nom ou si le nom en cours est une macro se développe vers rien, l’erreur suivante se produit :
+1. Si une définition de macro dans le makefile contient un signe égal ( **=** ) sans nom précédent ou si le nom défini est une macro qui se développe en rien, l’erreur suivante se produit :
 
     ```
     syntax error : '=' unexpected
     ```
 
-1. Si le point-virgule (**;**) dans une ligne de commentaire dans les outils. INI n’est pas au début de la ligne, l’erreur suivante se produit :
+1. Si le point-virgule ( **;** ) dans une ligne de commentaire dans Tools. INI ne se trouve pas au début de la ligne, l’erreur suivante se produit :
 
     ```
     syntax error : ';' unexpected
     ```
 
-1. Si le makefile a été mis en forme par un traitement de texte, l’erreur suivante peut se produire :
+1. Si le Makefile a été mis en forme par un traitement de texte, l’erreur suivante peut se produire :
 
     ```
     syntax error : ':' unexpected

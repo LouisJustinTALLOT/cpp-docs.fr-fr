@@ -10,12 +10,12 @@ helpviewer_keywords:
 - distributing applications [C++]
 ms.assetid: 37f1691e-d67c-41e4-926e-528a237a9bac
 ms.topic: overview
-ms.openlocfilehash: af3141a8fd626a909de93b219bf3b6d8186f0623
-ms.sourcegitcommit: 7750e4c291d56221c8893120c56a1fe6c9af60d6
+ms.openlocfilehash: e9ae5db05c0835bb65a65cdccf58ab7f7d1b789f
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/25/2019
-ms.locfileid: "71274758"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80160188"
 ---
 # <a name="deploying-native-desktop-applications-visual-c"></a>Déploiement des applications de bureau natives (Visual C++)
 
@@ -41,7 +41,7 @@ Les articles de cette section de la documentation expliquent comment vous assure
 
 - [Choix d’une méthode de déploiement](choosing-a-deployment-method.md)
 
-- [Déploiement du CRT universel](universal-crt-deployment.md).
+- [Déploiement de Universal CRT](universal-crt-deployment.md).
 
 - [Redistribution des fichiers Visual C++](redistributing-visual-cpp-files.md)
 
@@ -49,11 +49,11 @@ Les articles de cette section de la documentation expliquent comment vous assure
 
 - [Redistribution d’applications clientes web](redistributing-web-client-applications.md)
 
-- [Déploiement de ClickOnce pour les applications Visual C++](clickonce-deployment-for-visual-cpp-applications.md)
+- [ClickOnce Deployment for Visual C++ Applications](clickonce-deployment-for-visual-cpp-applications.md)
 
 - [Exécution d’une application C++ /clr sur une version antérieure du runtime](running-a-cpp-clr-application-on-a-previous-runtime-version.md)
 
-## <a name="related-sections"></a>Rubriques connexes
+## <a name="related-sections"></a>Sections connexes
 
 - [Génération d’applications isolées et d’assemblys côte à côte C/C++](../build/building-c-cpp-isolated-applications-and-side-by-side-assemblies.md)
 

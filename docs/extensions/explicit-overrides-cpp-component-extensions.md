@@ -5,12 +5,12 @@ ms.topic: reference
 helpviewer_keywords:
 - overriding, override [C++]
 ms.assetid: 4ec3eaf5-163b-4df8-8f16-7a2ec04c3d0f
-ms.openlocfilehash: b80e49489c0b0d26469ba9f8b77e80a962668e35
-ms.sourcegitcommit: b8c22e6d555cf833510753cba7a368d57e5886db
+ms.openlocfilehash: c199301794daaa140ede2fd99b0ae755cea70f97
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/29/2020
-ms.locfileid: "76821636"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80172371"
 ---
 # <a name="explicit-overrides--ccli-and-ccx"></a>Substitutions explicites (C++/CLI et C++/CX)
 
@@ -25,7 +25,7 @@ overriding-function-declarator = type::function [,type::function] { overriding-f
 overriding-function-declarator = function { overriding-function-definition }
 ```
 
-### <a name="parameters"></a>Parameters
+### <a name="parameters"></a>Paramètres
 
 *overriding-function-declarator*<br/>
 Type de retour, nom et liste d’arguments de la fonction de substitution.  Notez que la fonction de substitution n’a pas à avoir le même nom que la fonction qui est remplacée.
@@ -47,7 +47,7 @@ Pour des informations concernant la modification des types hérités ou de compo
 
 ## <a name="windows-runtime"></a>Windows Runtime
 
-### <a name="requirements"></a>Configuration requise pour
+### <a name="requirements"></a>Spécifications
 
 Option du compilateur : `/ZW`
 
@@ -57,7 +57,7 @@ Option du compilateur : `/ZW`
 
 Pour plus d’informations sur les substitutions explicites dans du code natif ou compilé avec `/clr:oldSyntax`, consultez [Substitutions explicites](../cpp/explicit-overrides-cpp.md).
 
-### <a name="requirements"></a>Configuration requise pour
+### <a name="requirements"></a>Spécifications
 
 Option du compilateur : `/clr`
 

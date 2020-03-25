@@ -5,16 +5,16 @@ helpviewer_keywords:
 - makefiles
 - makefiles, contents
 ms.assetid: 29362adb-d963-4c00-84a6-b38c2ffe6a36
-ms.openlocfilehash: 59aa21e74a7e127816fea7534861469579d5b60f
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 208b2dcf6c170c6c4fdc814a299a2657adc364a4
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62294094"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80169914"
 ---
 # <a name="contents-of-a-makefile"></a>Contenu d'un makefile
 
-Un makefile contient :
+Un makefile contient les éléments suivants :
 
 - [Blocs de description](description-blocks.md)
 
@@ -24,13 +24,13 @@ Un makefile contient :
 
 - [Règles d’inférence](inference-rules.md)
 
-- [Directives dot](dot-directives.md)
+- [Directives point](dot-directives.md)
 
 - [Directives de prétraitement](makefile-preprocessing.md)
 
 ## <a name="remarks"></a>Notes
 
-Autres fonctionnalités que vous pouvez utiliser dans un makefile sont [des caractères génériques](wildcards-and-nmake.md), [longs](long-filenames-in-a-makefile.md), [commentaires](comments-in-a-makefile.md), et [caractères spéciaux](special-characters-in-a-makefile.md).
+Les autres fonctionnalités que vous pouvez utiliser dans un Makefile sont les caractères [génériques](wildcards-and-nmake.md), les [noms](long-filenames-in-a-makefile.md)de fichiers longs, les [Commentaires](comments-in-a-makefile.md)et les [caractères spéciaux](special-characters-in-a-makefile.md).
 
 Pour obtenir un exemple, consultez [exemple de Makefile](sample-makefile.md).
 

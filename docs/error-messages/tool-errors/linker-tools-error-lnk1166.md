@@ -6,17 +6,17 @@ f1_keywords:
 helpviewer_keywords:
 - LNK1166
 ms.assetid: d69548a8-0efb-44e1-90b7-b27636a4b575
-ms.openlocfilehash: 5be078133d849070e4d1eec8a970740ffe5511a9
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 1e154b0ed24e3e13bc0e73c938a6da94692af7ad
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62254956"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80184019"
 ---
 # <a name="linker-tools-error-lnk1166"></a>Erreur des outils Éditeur de liens LNK1166
 
-ne peut pas ajuster le code à l’offset = offset, va = valeur
+Impossible d’ajuster le code à offset = offset, va = value
 
-LIEN n’a pas pu compléter le code en fonction des besoins.
+Le lien n’a pas pu remplir le code si nécessaire.
 
-Certaines instructions ne sont pas autorisées à franchir les limites de page sur certains processeurs. LIEN tente d’ajouter des panneaux pour corriger cette situation. Dans ce cas, lien ne pourrait pas contourner le problème.
+Certaines instructions ne sont pas autorisées à franchir les limites de la page sur certains processeurs. Le lien tente d’ajouter des tampons pour corriger cette situation. Dans ce cas, LINK n’a pas pu résoudre le problème.

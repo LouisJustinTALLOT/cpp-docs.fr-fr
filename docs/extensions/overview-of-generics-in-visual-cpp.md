@@ -12,12 +12,12 @@ helpviewer_keywords:
 - open constructed types [C++]
 - constructed types, closed [C++]
 ms.assetid: 21f10637-0fce-4916-b925-6c86a126d3aa
-ms.openlocfilehash: 38d33faec3610495e8cc5e97db2e81bd74be8b8b
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
-ms.translationtype: HT
+ms.openlocfilehash: a1a66b6464bf952a530dbf1ea188bfd681d684d0
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "65515664"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80172072"
 ---
 # <a name="overview-of-generics-in-ccli"></a>Vue d’ensemble des génériques dans C++/CLI
 
@@ -124,7 +124,7 @@ int main() {
 
 Ces restrictions s'appliquent aux opérateurs également. Un paramètre de type générique sans contrainte ne peut pas utiliser les opérateurs `==` et `!=` pour comparer deux instances du paramètre de type, au cas où le type ne prendrait pas en charge ces opérateurs. Ces contrôles sont nécessaires pour les génériques, mais pas pour les modèles, car les génériques peuvent être spécialisés pendant l'exécution avec n'importe quelle classe satisfaisant aux contraintes, lorsqu'il est trop tard pour vérifier l'utilisation de membres non valides.
 
-Une instance par défaut du paramètre de type peut être créée à l'aide de l'opérateur `()`. Par exemple :
+Une instance par défaut du paramètre de type peut être créée à l'aide de l'opérateur `()`. Par exemple :
 
 `T t = T();`
 

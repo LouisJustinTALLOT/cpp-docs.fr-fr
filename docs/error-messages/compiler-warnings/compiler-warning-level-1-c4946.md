@@ -1,19 +1,19 @@
 ---
-title: Avertissement du compilateur (niveau 1) C4946
+title: Avertissement du compilateur (niveau 1) C4946
 ms.date: 11/04/2016
 f1_keywords:
 - C4946
 helpviewer_keywords:
 - C4946
 ms.assetid: b85cbef0-e053-4de6-9b14-7b0f82d40495
-ms.openlocfilehash: 238e842202bfde05f41d5ab7bc4e3eb2b8b63735
-ms.sourcegitcommit: 458dcc794e3841919c01a3a5ff6b9a3767f8861b
+ms.openlocfilehash: 3b829eb7cdd0adc58a3ddb225115a4b188a2336f
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/13/2019
-ms.locfileid: "74050202"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80199070"
 ---
-# <a name="compiler-warning-level-1-c4946"></a>Avertissement du compilateur (niveau 1) C4946
+# <a name="compiler-warning-level-1-c4946"></a>Avertissement du compilateur (niveau 1) C4946
 
 reinterpret_cast utilisé entre des classes connexes : 'classe1' et 'classe2'
 

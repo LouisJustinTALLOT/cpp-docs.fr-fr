@@ -6,26 +6,26 @@ f1_keywords:
 helpviewer_keywords:
 - LNK2031
 ms.assetid: 18ed4b6e-3e75-443c-bbd8-2f6030dc89ee
-ms.openlocfilehash: 003b9a58bfb08130f034530f59e2de27efa2ae8d
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 096ccb7ff443d24e0d53e73a5950faa1e85aeae6
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62298917"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80194562"
 ---
 # <a name="linker-tools-error-lnk2031"></a>Erreur des outils Éditeur de liens LNK2031
 
-> Impossible de générer p/invoke pour «*function_declaration*» *nom_décoré*; convention d’appel manquante dans les métadonnées
+> Impossible de générer p/Invoke pour «*function_declaration*» *Decorated_Name*; Convention d’appel manquante dans les métadonnées
 
 ## <a name="remarks"></a>Notes
 
-Lorsque vous tentez d’importer une fonction native dans une image pure, n’oubliez pas que les conventions d’appel implicites diffèrent entre les compilations natives et pures. Pour plus d’informations sur les images purs, consultez [Code pur et vérifiable (C++ / c++ / CLI)](../../dotnet/pure-and-verifiable-code-cpp-cli.md).
+Lorsque vous tentez d’importer une fonction native dans une image pure, n’oubliez pas que les conventions d’appel implicites diffèrent entre les compilations native et pure. Pour plus d’informations sur les images pures, consultez [Code pur et vérifiableC++(/CLI)](../../dotnet/pure-and-verifiable-code-cpp-cli.md).
 
-Le **/CLR : pure** option du compilateur est déconseillée dans Visual Studio 2015 et non pris en charge dans Visual Studio 2017.
+L’option de compilateur **/clr : pure** est déconseillée dans visual studio 2015 et n’est pas prise en charge dans visual studio 2017.
 
 ## <a name="example"></a>Exemple
 
-Cet exemple de code génère un composant avec une fonction exportée native, dont la convention d’appel est implicitement [__cdecl](../../cpp/cdecl.md).
+Cet exemple de code génère un composant avec une fonction exportée, native, dont la Convention d’appel est implicitement [__cdecl](../../cpp/cdecl.md).
 
 ```cpp
 // LNK2031.cpp
@@ -37,7 +37,7 @@ extern "C" {
 
 ## <a name="example"></a>Exemple
 
-L’exemple suivant crée un client pur qui utilise la fonction native. Toutefois, la convention d’appel sous **/CLR : pure** est [__clrcall](../../cpp/clrcall.md). L’exemple suivant génère l’erreur LNK2031.
+L’exemple suivant crée un client pur qui utilise la fonction native. Toutefois, la Convention d’appel sous **/clr : pure** est [__clrcall](../../cpp/clrcall.md). L’exemple suivant génère l’LNK2031.
 
 ```cpp
 // LNK2031_b.cpp
@@ -52,7 +52,7 @@ int main() {
 
 ## <a name="example"></a>Exemple
 
-L’exemple suivant montre comment utiliser la fonction native à partir d’une image pure. Notez l’explicite **__cdecl** appelant spécificateur de la convention.
+L’exemple suivant montre comment utiliser la fonction native à partir d’une image pure. Notez le spécificateur de convention d’appel explicite **__cdecl** .
 
 ```cpp
 // LNK2031_c.cpp

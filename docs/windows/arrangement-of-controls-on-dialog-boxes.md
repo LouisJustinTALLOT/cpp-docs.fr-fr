@@ -1,5 +1,5 @@
 ---
-title: 'Procédure : Contrôles de disposition (C++) | Microsoft Docs'
+title: 'Comment : mettre en page desC++contrôles () | Microsoft Docs'
 ms.date: 02/15/2019
 f1_keywords:
 - vc.editors.dialog.grouping
@@ -80,151 +80,151 @@ helpviewer_keywords:
 - CListBox class, scroll bar width
 - scroll bars [C++], width
 ms.assetid: 832491cf-98af-42e5-a854-2cb135fd45c6
-ms.openlocfilehash: 878b7371dfa77880d68f1001444ed44b84d7240c
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: ee732cfb414f011e95edbbb57b218d81179d44f3
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62391072"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80168575"
 ---
-# <a name="how-to-layout-controls-c"></a>Procédure : Contrôles de disposition (C++)
+# <a name="how-to-layout-controls-c"></a>Comment : mettre en page desC++contrôles ()
 
-Le **boîte de dialogue Éditeur** fournit des outils de disposition qui alignent et dimensionnent un contrôle automatiquement. Pour la plupart des tâches, vous pouvez utiliser la [barre d’outils Éditeur de boîte de dialogue](../windows/showing-or-hiding-the-dialog-editor-toolbar.md). Tous les **boîte de dialogue Éditeur** des commandes de barre d’outils sont également disponibles sur le **Format** menu et la plupart ont [touches de raccourci](../windows/accelerator-keys-for-the-dialog-editor.md).
+L' **éditeur de boîtes de dialogue** fournit des outils de disposition qui alignent et dimensionnent automatiquement les contrôles. Pour la plupart des tâches, vous pouvez utiliser la [barre d’outils](../windows/showing-or-hiding-the-dialog-editor-toolbar.md)de l’éditeur de boîtes de dialogue. Toutes les commandes de la barre d’outils de l' **éditeur de boîtes de dialogue** sont également disponibles dans le menu **format** , et la plupart ont des [touches de raccourci](../windows/accelerator-keys-for-the-dialog-editor.md).
 
-De nombreuses commandes de disposition pour les boîtes de dialogue sont disponibles uniquement lorsque plus d’un contrôle est sélectionné. Vous pouvez sélectionner un ou plusieurs contrôles, et lorsque plus d’un contrôle est sélectionné, le premier que vous sélectionnez est par défaut du contrôle dominant.
+De nombreuses commandes de disposition pour les boîtes de dialogue sont disponibles uniquement lorsque plusieurs contrôles sont sélectionnés. Vous pouvez sélectionner un ou plusieurs contrôles, et lorsque plusieurs contrôles sont sélectionnés, le premier contrôle sélectionné est par défaut le contrôle dominant.
 
-L’emplacement, la hauteur et la largeur du contrôle actuel sont affichés dans le coin inférieur droit de la barre d’état. Lorsque la boîte de dialogue est activée, la barre d’état affiche la position de la boîte de dialogue sous la forme dans son ensemble et sa hauteur et sa largeur.
+L’emplacement, la hauteur et la largeur du contrôle actuel s’affichent dans l’angle inférieur droit de la barre d’État. Lorsque la boîte de dialogue entière est sélectionnée, la barre d’état affiche la position de la boîte de dialogue dans son ensemble, ainsi que sa hauteur et sa largeur.
 
 ## <a name="arrange-controls"></a>Organiser les contrôles
 
-Vous pouvez organiser les contrôles dans les boîtes de dialogue avec le **boîte de dialogue Éditeur** dans un des trois états différents :
+Vous pouvez organiser les contrôles des boîtes de dialogue avec l' **éditeur de boîtes de dialogue** dans l’un des trois États suivants :
 
-- Avec les repères et marges sur, définissez comme valeur par défaut.
+- Avec les repères et les marges sur, définissez par défaut.
 
 - Avec la grille de disposition sur.
 
-- Sans les fonctionnalités du composant logiciel enfichable ou d’alignement.
+- Sans fonctions d’alignement ou d’alignement.
 
-Le [barre d’outils Éditeur de boîte de dialogue](../windows/showing-or-hiding-the-dialog-editor-toolbar.md) contient des boutons qui contrôlent l’état.
+La [barre d’outils](../windows/showing-or-hiding-the-dialog-editor-toolbar.md) de l’éditeur de boîtes de dialogue contient des boutons qui contrôlent l’État.
 
-- Pour modifier l’état, sélectionnez l’icône appropriée, ou accédez au menu **Format** > **Guide paramètres**.
+- Pour modifier l’État, sélectionnez l’icône appropriée ou accédez au menu **Format** > **paramètres du repère**.
 
-Le **Guide paramètres** boîte de dialogue a les propriétés suivantes :
+La boîte de dialogue **paramètres du repère** a les propriétés suivantes :
 
 |Propriété|Description|
 |---|---|
-|**Repères de disposition**|Affiche les paramètres pour les repères de disposition.|
+|**Repères de mise en page**|Affiche les paramètres des repères de mise en page.|
 |**Aucun**|Masque les outils de disposition.|
-|**Règles et repères**|Lorsque l’option est activée, les règles sont ajoutées aux outils de mise en page et permet guides à placer dans les règles. Les guides par défaut sont les marges.|
-|**Grid**|Crée une grille de disposition. Nouveaux contrôles sont automatiquement alignés sur la grille.|
-|**Espacement de la grille**|Affiche les paramètres pour l’espacement de la grille en unités de boîte de dialogue (DLU).|
-|**Largeur : DLU**|Définit la largeur de la grille de disposition en DLU. Une DLU horizontale correspond à la largeur moyenne de la police de la boîte de dialogue divisée par 4.|
-|**Hauteur : DLU**|Définit la hauteur de la grille de disposition dans DLU. Une DLU verticale correspond à la hauteur moyenne de la police de la boîte de dialogue divisée par 8.|
+|**Règles et repères**|Lorsque cette option est activée, ajoute des règles aux outils de disposition et permet de placer les repères dans les règles. Les repères par défaut sont les marges.|
+|**Grid**|Crée une grille de disposition. Les nouveaux contrôles s’alignent automatiquement sur la grille.|
+|**Espacement de la grille**|Affiche les paramètres de l’espacement de la grille en unités de boîte de dialogue (DLU).|
+|**Largeur : dlu**|Définit la largeur de la grille de disposition dans des unités de configuration. Un DLU horizontal est la largeur moyenne de la police de la boîte de dialogue divisée par 4.|
+|**Hauteur : dlu**|Définit la hauteur de la grille de disposition dans des unités de configuration. Une DLU verticale est la hauteur moyenne de la police de la boîte de dialogue divisée par 8.|
 
 ### <a name="guides-and-margins"></a>Repères et marges
 
-Si vous déplacez des contrôles, ajout de contrôles, ou réorganiser une disposition en cours, repères et marges peuvent aider à vous aligner précisément les contrôles dans une boîte de dialogue.
+Que vous déplaciez des contrôles, ajoutiez des contrôles ou réorganisiez une disposition actuelle, les repères et les marges peuvent vous aider à aligner les contrôles avec précision dans une boîte de dialogue.
 
-Lorsque vous créez une boîte de dialogue, quatre guides modifiés appelés marges sont fournis et apparaissent sous forme de lignes en pointillés bleues.
+Lorsque vous créez une boîte de dialogue, quatre repères modifiés appelés marges sont fournis et apparaissent sous forme de lignes en pointillés bleus.
 
-- Pour déplacer les marges, faites glisser la marge à la nouvelle position.
+- Pour déplacer des marges, faites glisser la marge vers la nouvelle position.
 
-- Pour faire disparaître une marge, déplacez la marge à la position zéro.
+- Pour faire disparaître une marge, déplacez la marge vers la position zéro.
 
-- Afin de rétablir la marge, placez le pointeur sur la marge position zéro et déplacez la marge à la position.
+- Pour rétablir la marge, placez le pointeur sur la position zéro de la marge et déplacez la marge dans la position.
 
-Les repères s’affichent en bleu traits en pointillés dans la boîte de dialogue affichées dans l’éditeur et les flèches correspondantes dans les règles en haut et sur le côté gauche de la **boîte de dialogue Éditeur**. Les poignées de redimensionnement de contrôles alignent sur les repères lorsque les contrôles sont déplacés et guides s’aligner sur les contrôles si aucun contrôle précédemment aligné sur le guide. Lorsqu’un repère est déplacé, les contrôles qui dépendent, sont également déplacent. Les contrôles alignés sur plusieurs repères sont redimensionnés lorsqu’un des guides est déplacé.
+Les repères apparaissent sous forme de lignes en pointillés bleus dans la boîte de dialogue affichée dans l’éditeur et les flèches correspondantes dans les règles situées en haut et sur le côté gauche de l' **éditeur de boîtes de dialogue**. Les poignées de dimensionnement des contrôles s’alignent sur des repères lorsque les contrôles sont déplacés, et les repères sont alignés sur les contrôles si aucun contrôle n’a été précédemment aligné sur le repère. Quand un repère est déplacé, les contrôles qui y sont alignés se déplacent également. Les contrôles alignés sur plusieurs guides sont redimensionnés lorsque l’un des repères est déplacé.
 
-- Pour créer un repère au sein de la règle, sélectionnez une seule fois pour créer un repère, ou double-cliquez sur pour lancer le **Guide paramètres** boîte de dialogue où vous pouvez spécifier les paramètres du guide.
+- Pour créer un repère dans la règle, sélectionnez une fois pour créer un repère, ou double-cliquez pour ouvrir la boîte de dialogue **paramètres du repère** dans laquelle vous pouvez spécifier les paramètres du repère.
 
-- Pour définir un guide sur la boîte de dialogue, sélectionnez le guide et faites-le glisser vers une nouvelle position ou sélectionnez la flèche dans la règle pour faire glisser le repère associé.
+- Pour définir un repère sur la boîte de dialogue, sélectionnez le repère et faites-le glisser vers une nouvelle position, ou sélectionnez la flèche dans la règle pour faire glisser le repère associé.
 
-   Les coordonnées du guide sont affichées dans la barre d’état en bas de la fenêtre et dans la règle ou déplacement le pointeur sur la flèche dans la règle pour afficher la position exacte de ce guide.
+   Les coordonnées du repère s’affichent dans la barre d’État en bas de la fenêtre et dans la règle ou déplacent le pointeur sur la flèche dans la règle pour afficher la position exacte du repère.
 
-- Pour supprimer un repère, faites glisser le repère en dehors de la boîte de dialogue, ou faites glisser la flèche correspondante hors de la règle.
+- Pour supprimer un repère, faites-le glisser hors de la boîte de dialogue ou faites glisser la flèche correspondante en dehors de la règle.
 
-Les graduations dans les règles qui déterminent l’espacement des guides et des contrôles sont définies par les unités de boîte de dialogue (DLU). Une DLU est basée sur la taille de la police de la boîte de dialogue, normalement 8 points MS Shell Dlg. Une DLU horizontale est la largeur moyenne de la police de la boîte de dialogue divisée en quatre parties. Une DLU verticale est la hauteur moyenne de la police divisée par 8.
+Les graduations des règles qui déterminent l’espacement des repères et des contrôles sont définies par les unités de boîte de dialogue (DLU). Un DLU est basé sur la taille de la police de la boîte de dialogue, en général 8 points MS Shell Dlg. Un DLU horizontal est la largeur moyenne de la police de la boîte de dialogue divisée par quatre. Une DLU verticale est la hauteur moyenne de la police divisée par 8.
 
-- Pour modifier les intervalles entre les graduations, accédez au menu **Format** > **Guide paramètres**, puis dans le **espacement de la grille** champ, spécifiez une nouvelle largeur et hauteur DLU.
+- Pour modifier l’intervalle des graduations, accédez au menu **Format** > paramètres du repère, puis dans le champ **espacement** de la grille, spécifiez une nouvelle largeur et une hauteur dans des unités de **configuration**de réseau.
 
 ### <a name="layout-grid"></a>Grille de disposition
 
-Lorsque vous placez ou réorganiser les contrôles dans une boîte de dialogue, utilisez la grille de disposition pour un positionnement plus précis. Lorsque la grille est activée, les contrôles seront aligne sur les lignes en pointillés de la grille comme si elle était aimantée.
+Lorsque vous placez ou réorganisez des contrôles dans une boîte de dialogue, utilisez la grille de disposition pour un positionnement plus précis. Lorsque la grille est activée, les contrôles s’alignent sur les lignes en pointillés de la grille comme si elles étaient magnétisées.
 
-- Pour activer ou désactiver les la grille de disposition, accédez au menu **Format** > **Guide paramètres** et activez ou désactivez le **grille** bouton.
+- Pour activer ou désactiver la grille de disposition, accédez au menu **Format** > **paramètres du repère** , puis activez ou désactivez la case à cocher **grille** .
 
-   Vous pouvez toujours contrôler la grille de la personne **boîte de dialogue Éditeur** windows à l’aide de la **bascule grille** bouton sur le [barre d’outils Éditeur de boîte de dialogue](../windows/showing-or-hiding-the-dialog-editor-toolbar.md).
+   Vous pouvez toujours contrôler la grille dans les fenêtres de l' **éditeur de boîtes de dialogue** individuelles à l’aide du bouton Activer la **grille** de la [barre d’outils](../windows/showing-or-hiding-the-dialog-editor-toolbar.md)de l’éditeur de boîtes de dialogue.
 
-- Pour modifier la taille de la grille de disposition, accédez au menu **Format** > **Guide paramètres** et tapez la hauteur et largeur dans DLU pour les cellules dans la grille. La largeur ou hauteur minimale est de 4.
+- Pour modifier la taille de la grille de disposition, accédez au menu **Format** > **paramètres du repère** , puis tapez la hauteur et la largeur des cellules de la grille dans la section dlu. La hauteur ou la largeur minimale est 4.
 
 ### <a name="disable-guides"></a>Désactiver les repères
 
-Vous pouvez utiliser les touches spéciales conjointement avec la souris pour désactiver l’alignement sur les guides. À l’aide de la **Alt** clé désactive les effets d’alignement du guide sélectionnée. Déplacement d’un repère avec le **MAJ** clé empêche le déplacement avec le guide de contrôles alignés.
+Vous pouvez utiliser des touches spéciales conjointement avec la souris pour désactiver l’effet d’alignement des repères. L’utilisation de la touche **ALT** désactive les effets d’alignement du repère sélectionné. En déplaçant un repère avec la touche **MAJ** , vous empêchez les contrôles alignés de se déplacer avec le repère.
 
-- Pour désactiver l’alignement sur les repères, faites glisser le contrôle tout en maintenant enfoncée la **Alt** clé.
+- Pour désactiver l’effet d’alignement des repères, faites-le glisser tout en maintenant la touche **ALT** enfoncée.
 
-- Pour déplacer des repères sans déplacer les contrôles alignés, faites glisser le repère tout en maintenant enfoncée la **MAJ** clé.
+- Pour déplacer des repères sans déplacer les contrôles alignés, faites glisser le repère tout en maintenant la touche **MAJ** enfoncée.
 
-- Pour désactiver les repères, accédez au menu **Format** > **Guide paramètres**. Ensuite, sous **repères de disposition**, sélectionnez **aucun**.
+- Pour désactiver les repères, accédez au menu **Format** > **paramètres du repère**. Ensuite, sous **repères de mise en page**, sélectionnez **aucun**.
 
    > [!TIP]
-   > Vous pouvez également utiliser le raccourci dans le menu **Format** > **activer/désactiver les repères**.
+   > Vous pouvez également utiliser le raccourci dans le menu **Format** > les **repères bascule**.
 
 ## <a name="select-controls"></a>Sélectionner des contrôles
 
-Sélectionner des contrôles à la taille, aligner, déplacer, copier, ou supprimez-les, puis terminez l’opération que vous souhaitez. Dans la plupart des cas, vous devez sélectionner plusieurs contrôles à utiliser les outils de dimensionnement et d’alignement sur le [barre d’outils Éditeur de boîte de dialogue](../windows/showing-or-hiding-the-dialog-editor-toolbar.md).
+Sélectionnez des contrôles pour les dimensionner, les aligner, les déplacer, les copier ou les supprimer, puis terminez l’opération souhaitée. Dans la plupart des cas, vous devez sélectionner plusieurs contrôles pour utiliser les outils de dimensionnement et d’alignement sur la [barre d’outils](../windows/showing-or-hiding-the-dialog-editor-toolbar.md)de l’éditeur de boîtes de dialogue.
 
-Lorsqu’un contrôle est sélectionné, il a une bordure ombrée autour avec solide (actif) ou vides (inactives) poignées, carrés de petites taille qui s’affichent dans la bordure de sélection de redimensionnement. Lorsque plusieurs contrôles sont sélectionnés, le contrôle dominant doté de poignées de redimensionnement solide et tous les autres contrôles sélectionnés ont des poignées de redimensionnement creux.
+Lorsqu’un contrôle est sélectionné, il est entouré d’une bordure grise avec des poignées de redimensionnement Unies (actives) ou vides (inactives), de petits carrés qui apparaissent dans la bordure de sélection. Lorsque plusieurs contrôles sont sélectionnés, le contrôle dominant a des poignées de redimensionnement solides et tous les autres contrôles sélectionnés ont des poignées de dimensionnement creuses.
 
-- Pour sélectionner des contrôles, dans le [fenêtre Boîte à outils](/visualstudio/ide/reference/toolbox), sélectionnez le **pointeur** outil et utilisez une des étapes suivantes pour effectuer votre sélection :
+- Pour sélectionner des contrôles, dans la [fenêtre boîte à outils](/visualstudio/ide/reference/toolbox), sélectionnez l’outil **pointeur** et utilisez l’une des étapes suivantes pour effectuer votre sélection :
 
-  - Faites glisser le pointeur pour dessiner une zone de sélection autour des contrôles que vous souhaitez sélectionner dans votre boîte de dialogue. Lorsque vous relâchez le bouton de la souris, tous les contrôles à l’intérieur ou à l’intersection de la zone de sélection sont sélectionnés.
+  - Faites glisser le pointeur pour dessiner une zone de sélection autour des contrôles que vous souhaitez sélectionner dans votre boîte de dialogue. Lorsque vous relâchez le bouton de la souris, tous les contrôles à l’intérieur et à l’intersection de la zone de sélection sont sélectionnés.
 
-  - Maintenez la **MAJ** la clé, sélectionnez les contrôles que vous souhaitez inclure dans la sélection.
+  - Maintenez la touche **MAJ** enfoncée et sélectionnez les contrôles que vous souhaitez inclure dans la sélection.
 
-  - Maintenez la **Ctrl** la clé, sélectionnez les contrôles que vous souhaitez inclure dans la sélection.
+  - Maintenez la touche **CTRL** enfoncée et sélectionnez les contrôles que vous souhaitez inclure dans la sélection.
 
-- Pour ajouter ou supprimer un contrôle du groupe de contrôles sélectionnés, maintenez la **MAJ** la clé, sélectionnez le contrôle que vous souhaitez ajouter ou supprimer.
+- Pour ajouter ou supprimer un contrôle du groupe de contrôles sélectionnés, maintenez la touche **MAJ** enfoncée et sélectionnez le contrôle que vous souhaitez ajouter ou supprimer.
 
-### <a name="dominant-controls"></a>Contrôles dominants
+### <a name="dominant-controls"></a>Contrôles dominant
 
-Lorsque vous êtes de dimensionnement ou aligner plusieurs contrôles, la **boîte de dialogue Éditeur** utilise le contrôle dominant pour déterminer comment les autres contrôles sont dimensionnés ou alignés. Par défaut, le contrôle dominant est le premier contrôle sélectionné.
+Lorsque vous dimensionnez ou Alignez plusieurs contrôles, l' **éditeur de boîtes de dialogue** utilise le contrôle dominant pour déterminer comment les autres contrôles sont dimensionnés ou alignés. Par défaut, le contrôle dominant est le premier contrôle sélectionné.
 
-- Pour spécifier le contrôle dominant, maintenez la **Ctrl** la clé, sélectionnez le contrôle que vous souhaitez utiliser pour influencer la taille ou l’emplacement d’autres contrôles *premier*. Maintenez la **Ctrl** clé et la sélection d’un contrôle au sein d’une sélection fera également qui contrôlent le contrôle dominant dans cette sélection.
+- Pour spécifier le contrôle dominant, maintenez la touche **CTRL** enfoncée et sélectionnez le contrôle que vous souhaitez utiliser pour influencer d' *abord*la taille ou l’emplacement des autres contrôles. Si vous maintenez la touche **CTRL** enfoncée et que vous sélectionnez un contrôle dans une sélection, cela permet également de contrôler le contrôle dominant dans cette sélection.
 
-- Pour modifier le contrôle dominant, effacer la sélection actuelle en la sélectionnant à l’extérieur de tous les contrôles actuellement sélectionnés et répétez la procédure ci-dessus, en sélectionnant un autre contrôle *premier*.
+- Pour modifier le contrôle dominant, effacez la sélection actuelle en sélectionnant l’extérieur de tous les contrôles actuellement sélectionnés et répétez la procédure ci-dessus, en sélectionnant d' *abord*un autre contrôle.
 
 > [!NOTE]
-> Les poignées de redimensionnement du contrôle dominant sont pleines tandis que celles des contrôles secondaires sont vides. Le dimensionnement ou l’alignement est basé sur le contrôle dominant.
+> Les poignées de redimensionnement du contrôle dominant sont solides, tandis que les poignées des contrôles subordonnés sont vides. Tout redimensionnement ou alignement supplémentaire est basé sur le contrôle dominant.
 
 ## <a name="size-controls"></a>Contrôles de taille
 
-Utilisez les poignées de redimensionnement pour redimensionner un contrôle. Lorsque le pointeur est positionné sur une poignée de redimensionnement, il change de forme pour indiquer les sens dans lequel le contrôle peut être redimensionné. Poignées de redimensionnement active sont correctes et si une poignée de redimensionnement est vide, le contrôle ne peut pas être redimensionné le long de cet axe.
+Utilisez les poignées de redimensionnement pour redimensionner un contrôle. Lorsque le pointeur est positionné sur une poignée de dimensionnement, il change de forme pour indiquer les directions dans lesquelles le contrôle peut être redimensionné. Les poignées de dimensionnement actives sont solides et si une poignée de redimensionnement est vide, le contrôle ne peut pas être redimensionné sur cet axe.
 
-- Pour dimensionner un contrôle, sélectionnez le contrôle et faites glisser les poignées de redimensionnement pour modifier la taille.
+- Pour dimensionner un contrôle, sélectionnez le contrôle, puis faites glisser les poignées de redimensionnement pour modifier la taille.
 
-  - Taille des handles en haut et côtés modifier la taille horizontale ou verticale.
+  - Les poignées de taille situées en haut et les côtés modifient la taille horizontale ou verticale.
 
-  - Handles de taille dans les angles modifier la taille horizontale et verticale.
+  - Les poignées de taille au niveau des angles modifient à la fois les tailles horizontale et verticale.
 
    > [!TIP]
-   > Vous pouvez redimensionner le contrôle d’unité une boîte de dialogue (DLU) à la fois en maintenant enfoncée la **MAJ** enfoncée et en utilisant le **droite** et **vers le bas** touches de direction.
+   > Vous pouvez redimensionner le contrôle d’une unité de boîte de dialogue (DLU) à la fois en maintenant la touche **MAJ** enfoncée et en utilisant les touches de direction **droite** et **bas** .
 
-- Pour dimensionner automatiquement un contrôle pour s’adapter au texte qu’il contient, accédez au menu **Format** ou cliquez sur le contrôle, puis choisissez **ajuster au contenu**.
+- Pour dimensionner automatiquement un contrôle en fonction du texte qu’il contient, accédez à menu **format** ou cliquez avec le bouton droit sur le contrôle, puis choisissez **taille du contenu**.
 
-- Pour rendre les contrôles de la même taille, sélectionnez les contrôles que vous souhaitez redimensionner et accédez au menu **Format** > **Uniformiser la taille**, puis choisissez **à la fois**, **Hauteur**, ou **largeur**.
+- Pour que les contrôles aient la même taille, sélectionnez les contrôles que vous souhaitez redimensionner et accédez au menu **Format** > **définissez la même taille**, puis sélectionnez **les deux**, la **hauteur**ou la **largeur**.
 
    Vous redimensionnez un groupe de contrôles en fonction de la taille du contrôle dominant, qui est le contrôle sélectionné en premier dans la série. La taille finale des contrôles dans le groupe dépend de la taille du contrôle dominant.
 
-- Taille d’un groupe de contrôles avec des guides, à un repère d’alignement côté « un » de contrôle (ou des contrôles), puis faites glisser un guide pour l’autre côté du contrôle (ou des contrôles). Vous pouvez maintenant passer des repères de dimensionner le contrôle (ou les contrôles).
+- Pour dimensionner un groupe de contrôles avec des repères, vous pouvez aligner un côté du contrôle (ou des contrôles) sur un repère, puis faire glisser un repère de l’autre côté du contrôle (ou des contrôles). Vous pouvez maintenant déplacer l’un ou l’autre guide pour dimensionner le contrôle (ou les contrôles).
 
-   Si nécessaire, avec plusieurs contrôles, taille de chacun d’eux à s’aligner sur le second guide.
+   Si nécessaire avec plusieurs contrôles, redimensionnez-les pour les aligner sur le deuxième repère.
 
 ### <a name="other-controls"></a>Autres contrôles
 
-Vous pouvez dimensionner une zone de liste déroulante lorsque vous l’ajoutez à la boîte de dialogue. Vous pouvez également spécifier la taille de la zone de liste déroulante. Pour plus d’informations, consultez [Ajout de valeurs à un contrôle Combo Box](../windows/adding-values-to-a-combo-box-control.md).
+Vous pouvez dimensionner une zone de liste déroulante lorsque vous l’ajoutez à la boîte de dialogue. Vous pouvez également spécifier la taille de la zone de liste déroulante. Pour plus d’informations, consultez [Ajout de valeurs à un contrôle de zone de liste déroulante](../windows/adding-values-to-a-combo-box-control.md).
 
-1. Sélectionnez le bouton de flèche de déroulement à droite de la zone de liste déroulante.
+1. Sélectionnez le bouton de la flèche déroulante à droite de la zone de liste déroulante.
 
    ![Flèche sur une zone de liste déroulante dans un projet MFC](../mfc/media/vccomboboxarrow.gif "vcComboBoxArrow")
 
@@ -232,59 +232,59 @@ Vous pouvez dimensionner une zone de liste déroulante lorsque vous l’ajoutez 
 
 1. Utilisez la poignée de redimensionnement inférieure pour modifier la taille initiale de la zone de liste déroulante.
 
-   ![Liste déroulante&#45;redimensionnement de la zone dans un projet MFC](../mfc/media/vccomboboxsizing.gif "vcComboBoxSizing")
+   ![Dimensionnement de zone de liste déroulante&#45;dans un projet MFC](../mfc/media/vccomboboxsizing.gif "vcComboBoxSizing")
 
-1. Sélectionnez la flèche déroulante à nouveau pour fermer la partie de la liste déroulante de la zone de liste déroulante.
+1. Sélectionnez de nouveau la flèche déroulante pour fermer la partie de liste déroulante de la zone de liste déroulante.
 
 > [!NOTE]
-> Lorsque vous ajoutez une zone de liste avec une barre de défilement horizontale à une boîte de dialogue à l’aide de MFC, la barre de défilement ne s’affichent automatiquement dans votre application.
+> Quand vous ajoutez une zone de liste avec une barre de défilement horizontale à une boîte de dialogue à l’aide de MFC, la barre de défilement ne s’affiche pas automatiquement dans votre application.
 >
-> Définissez une largeur maximale pour l’élément le plus large en appelant [CListBox::SetHorizontalExtent](../mfc/reference/clistbox-class.md#sethorizontalextent) dans votre code. Sans cette valeur est définie, la barre de défilement ne s’affichent, même lorsque les éléments dans la zone de liste sont plus larges que la zone.
+> Définissez une largeur maximale pour l’élément le plus large en appelant [CListBox :: SetHorizontalExtent](../mfc/reference/clistbox-class.md#sethorizontalextent) dans votre code. Si cette valeur n’est pas définie, la barre de défilement ne s’affiche pas, même lorsque les éléments de la zone de liste sont plus larges que la zone.
 
 ## <a name="align-controls"></a>Aligner les contrôles
 
-- Pour aligner des contrôles, sélectionnez les contrôles que vous souhaitez aligner. Accédez au menu **Format** > **Align** et choisissez une des alignements suivants :
+- Pour aligner les contrôles, sélectionnez les contrôles que vous souhaitez aligner. Accédez au menu **Format** > **Aligner** et choisissez l’un des alignements suivants :
 
-   |Alignement|Description|
+   |Alignment|Description|
    |-----|-----------|
-   |**Côtés gauches**|Aligne les contrôles sélectionnés sur leurs côtés gauches.|
-   |**Centres**|Aligne les contrôles sélectionnés sur leur centre horizontalement.|
-   |**Droits**|Aligne les contrôles sélectionnés sur leurs côtés.|
-   |**ToPS**|Aligne les contrôles sélectionnés sur leurs bords supérieurs.|
-   |**Middles**|Aligne les contrôles sélectionnés verticalement sur leur milieu.|
-   |**Bases**|Aligne les contrôles sélectionnés sur le bord inférieur.|
+   |**Les côtés gauches**|Aligne les contrôles sélectionnés sur leurs côtés gauches.|
+   |**Ateliers**|Aligne horizontalement les contrôles sélectionnés sur leurs points centraux.|
+   |**Droits**|Aligne les contrôles sélectionnés sur leurs côtés droits.|
+   |**Sommets**|Aligne les contrôles sélectionnés sur leurs bords supérieurs.|
+   |**Les milieux**|Aligne verticalement les contrôles sélectionnés sur leurs points centraux.|
+   |**Les bases**|Aligne les contrôles sélectionnés sur leurs bords inférieurs.|
 
-   Veillez à sélectionner le contrôle que vous souhaitez être tout d’abord dominant ou définissez-le comme contrôle dominant avant d’exécuter l’alignement ou de dimensionnement de commande comme la position finale du groupe de contrôles dépend de la position du contrôle dominant.
+   Veillez à sélectionner le contrôle à dominer en premier ou à le définir comme étant le contrôle dominant avant d’exécuter la commande d’alignement ou de dimensionnement, car la position finale du groupe de contrôles dépend de la position du contrôle dominant.
 
-- À uniformément les contrôles d’espace, sélectionnez les contrôles que vous souhaitez réorganiser. Accédez au menu **Format** > **Espace uniformément** et choisissez une des espacements suivants :
+- Pour espacer uniformément les contrôles, sélectionnez les contrôles que vous souhaitez réorganiser. Accédez à **format** de menu > **espace uniformément** et choisissez l’un des alignements suivants :
 
    |Espacement|Description|
    |---|---|
-   |**Sur**|Contrôles d’espace uniformément entre le plus à gauche et le plus à droite contrôle sélectionné.|
-   |**Vers le bas**|Contrôles d’espace uniformément entre le premier et le plus bas contrôle sélectionné.|
+   |**Uniformément**|Espace les contrôles uniformément entre le contrôle le plus à gauche et le contrôle le plus à droite sélectionné.|
+   |**Descendre**|Espacer les contrôles uniformément entre le contrôle le plus haut et le contrôle le plus bas sélectionné.|
 
-- Pour centrer les contrôles, sélectionnez l’ou les contrôles que vous souhaitez réorganiser. Accédez au menu **Format** > **Centrer dans la boîte de dialogue** et choisissez une des options suivantes :
+- Pour centrer les contrôles, sélectionnez le ou les contrôles que vous souhaitez réorganiser. Accédez au menu **Format** > **centrer dans la boîte de dialogue** et choisissez l’une des options suivantes :
 
    |Disposition|Description|
    |---|---|
    |**Vertical**|Centrer les contrôles verticalement dans la boîte de dialogue.|
    |**Horizontal**|Centrer les contrôles horizontalement dans la boîte de dialogue.|
 
-- Pour aligner les boutons de commande, sélectionnez un ou plusieurs boutons de commande. Accédez au menu **Format** > **réorganiser les boutons**, puis choisissez une des options suivantes :
+- Pour aligner les boutons de commande, sélectionnez un ou plusieurs boutons de commande. Accédez au menu **Format** > **Réorganiser les boutons**, puis choisissez l’une des options suivantes :
 
    |Disposition|Description|
    |---|---|
-   |**Droite**|Aligne le bord droit de la boîte de dialogue de boutons.|
-   |**Bas**|Aligne le bord inférieur de la boîte de dialogue de boutons.|
+   |**Right**|Aligne les boutons de commande le long du bord droit de la boîte de dialogue.|
+   |**Bas**|Aligne les boutons de commande le long du bord inférieur de la boîte de dialogue.|
 
    Si vous sélectionnez un contrôle autre qu’un bouton de commande, sa position n’est pas affectée.
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
 Win32
 
 ## <a name="see-also"></a>Voir aussi
 
 [Gérer les contrôles de boîte de dialogue](controls-in-dialog-boxes.md)<br/>
-[Guide pratique pour ajouter, modifier, ou supprimer des contrôles](adding-editing-or-deleting-controls.md)<br/>
-[Guide pratique pour définir les valeurs et l’accès au contrôle](defining-mnemonics-access-keys.md)<br/>
+[Comment : ajouter, modifier ou supprimer des contrôles](adding-editing-or-deleting-controls.md)<br/>
+[Comment : définir l’accès aux contrôles et les valeurs](defining-mnemonics-access-keys.md)<br/>

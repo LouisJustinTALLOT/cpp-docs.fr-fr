@@ -26,12 +26,12 @@ helpviewer_keywords:
 - _aligned_free function
 - aligned_free function
 ms.assetid: ed1ce952-cdfc-4682-85cc-f75d4101603d
-ms.openlocfilehash: 44556d3f044a567f4903ef14a4b2a9b353af02ff
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 0fa28be550050a7eec2a515cfb47d98fb26591d0
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70943970"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80170967"
 ---
 # <a name="_aligned_free"></a>_aligned_free
 
@@ -56,7 +56,7 @@ Pointeur vers le bloc de mémoire qui a été retourné à la fonction `_aligned
 
 Cette fonction ne valide pas son paramètre, contrairement à d’autres fonctions CRT _aligned. Si *memblock* est un pointeur null, cette fonction n’exécute simplement aucune action. Elle ne modifie pas `errno` et elle n’appelle pas le gestionnaire de paramètres non valides. Si une erreur se produit dans la fonction en raison de la non-utilisation de fonctions _aligned au préalable pour allouer le bloc de mémoire ou qu’une erreur d’alignement de mémoire se produit en raison d’un désastre imprévu, la fonction génère un rapport de débogage à partir des [macros _RPT, _RPTF, _RPTW, _RPTFW](rpt-rptf-rptw-rptfw-macros.md).
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
 |Routine|En-tête requis|
 |-------------|---------------------|

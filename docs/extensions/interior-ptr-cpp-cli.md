@@ -9,14 +9,14 @@ f1_keywords:
 helpviewer_keywords:
 - interior_ptr keyword [C++]
 ms.assetid: 25160f74-569e-492d-9e3c-67ece7486baa
-ms.openlocfilehash: 0fba04efeaa634f5e21600768297aee0d999d1c6
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
-ms.translationtype: HT
+ms.openlocfilehash: 264ac0a56996b0dcbeeb64246623eca1a3fc73ff
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "65515694"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80172150"
 ---
-# <a name="interiorptr-ccli"></a>interior_ptr (C++/CLI)
+# <a name="interior_ptr-ccli"></a>interior_ptr (C++/CLI)
 
 Un *pointeur intérieur* déclare un pointeur vers un type référence, mais pas vers l’objet lui-même. Un pointeur intérieur peut pointer vers un descripteur de référence, un descripteur de type valeur ou boxed, un membre d’un type managé ou un élément d’un groupe managé.
 
@@ -56,7 +56,7 @@ Nom de la variable **interior_ptr**.
 *initializer*<br/>
 Membre d’un type référence, d’un élément ou d’un groupe managé, ou de tout autre type d’objet qu’il est possible d’assigner à un pointeur natif.
 
-### <a name="remarks"></a>Remarques
+### <a name="remarks"></a>Notes
 
 Un pointeur natif n’est pas en mesure d’effectuer le suivi d’un élément étant donné que son emplacement change dans le tas managé, ce qui entraîne le déplacement des instances d’un objet par le récupérateur de mémoire. Pour qu’un pointeur fasse correctement référence à l’instance, le runtime doit mettre à jour le pointeur sur l’objet qui vient d’être positionné.
 

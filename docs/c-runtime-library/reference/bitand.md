@@ -23,12 +23,12 @@ f1_keywords:
 helpviewer_keywords:
 - bitand function
 ms.assetid: 279cf9b5-fac1-49de-b329-f1a31b3481fe
-ms.openlocfilehash: 6b76637585ff33199a8a45d6624c1dcdef5af7c4
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 771631275ea03cc9d3a6105aa51cd428f1720763
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70943603"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80171253"
 ---
 # <a name="bitand"></a>bitand
 
@@ -45,7 +45,7 @@ Une alternative à l’opérateur &.
 
 La macro génère l'opérateur
 
-## <a name="example"></a>Exemples
+## <a name="example"></a>Exemple
 
 ```cpp
 // iso646_bitand.cpp
@@ -71,6 +71,6 @@ int main( )
 0
 ```
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
-**En-tête :** \<iso646.h>
+**En-tête :** \<ISO646. h >

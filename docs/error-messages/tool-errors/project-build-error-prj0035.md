@@ -6,21 +6,21 @@ f1_keywords:
 helpviewer_keywords:
 - PRJ0035
 ms.assetid: 0667116d-338c-40a4-972c-da875f778cb5
-ms.openlocfilehash: e221fd85f1260ed04d49b43dea3d13407f504847
-ms.sourcegitcommit: c6f8e6c2daec40ff4effd8ca99a7014a3b41ef33
+ms.openlocfilehash: 8486c4f62f637f6f7e9826a289c21f8f194eb9f3
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "64345296"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80192170"
 ---
 # <a name="project-build-error-prj0035"></a>Erreur de génération de projet PRJ0035
 
-> Fichier XML «*fichier*' contient du code Unicode qui n’a pas pu être traduit dans la page de code ANSI de l’utilisateur.
+> Le fichier XML'*fichier*'contient du contenu Unicode qui n’a pas pu être traduit dans la page de codes ANSI de l’utilisateur.
 >
 > *Contenu UNICODE du fichier*
 
-*fichier* est le fichier XML créé en tant que la ligne de commande à l’outil de déploiement Web.
+le *fichier est le fichier XML* créé en tant que ligne de commande pour l’outil de déploiement Web.
 
-Le système de projet trouvé des caractères Unicode dans une propriété sur la page de propriétés de déploiement Web ne peut pas être traduite correctement en ANSI.
+Le système de projet a trouvé des caractères Unicode dans certaines propriétés de la page de propriétés de déploiement Web qui ne peuvent pas être traduits correctement en ANSI.
 
-La résolution de cette erreur consiste à mettre à jour le contenu de la propriété à utiliser ANSI ou pour installer la page de codes sur votre ordinateur et définissez-la comme la valeur par défaut du système.
+La résolution de cette erreur consiste à mettre à jour le contenu de la propriété pour utiliser ANSI ou pour installer la page de codes sur votre ordinateur et la définir comme valeur système par défaut.

@@ -6,19 +6,19 @@ f1_keywords:
 helpviewer_keywords:
 - U1078
 ms.assetid: 24087955-9362-4ddf-9966-e0de43ea4647
-ms.openlocfilehash: cfccb9139fc1081a2651c2f54381517dce765ca8
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: d1529e98f851accee071f4f233cc9bf518c70324
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62366886"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80193652"
 ---
 # <a name="nmake-fatal-error-u1078"></a>Erreur irrécupérable NMAKE U1078
 
-dépassement de constante à 'expression'
+dépassement de constante à’expression'
 
-L’expression donnée contient une constante qui dépasse la plage de-2 147 483 648 à 2 147 483 647. La constante apparaît dans une des situations suivantes :
+L’expression donnée contient une constante qui dépasse la plage comprise entre-2 147 483 648 et 2 147 483 647. La constante est apparue dans l’une des situations suivantes :
 
-- Une expression spécifiée avec une directive de préprocesseur
+- Une expression spécifiée avec une directive de prétraitement
 
-- Un niveau d’erreur spécifié avec le tiret (**-**) modificateur de commande
+- Un niveau d’erreur spécifié avec le modificateur de commande Dash ( **-** )

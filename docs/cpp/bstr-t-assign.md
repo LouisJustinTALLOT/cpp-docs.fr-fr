@@ -6,18 +6,18 @@ f1_keywords:
 helpviewer_keywords:
 - Assign method [C++]
 ms.assetid: 2e209bbe-77ca-4598-86d5-6c2ea213f43c
-ms.openlocfilehash: 922c29849361d3a116df32671a2c49ac3b4988fd
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 09af33f4ed246c459d5c78d8d23d5316ad9c07c6
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62396131"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80190640"
 ---
-# <a name="bstrtassign"></a>_bstr_t::Assign
+# <a name="_bstr_tassign"></a>_bstr_t::Assign
 
-**Section spécifique à Microsoft**
+**Section spécifique de Microsoft**
 
-Copie un `BSTR` dans le `BSTR` encapsulé par un **_**`bstr_t`.
+Copie un `BSTR` dans le `BSTR` encapsulé par un **_** `bstr_t`.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -34,7 +34,7 @@ void Assign(
 
 ## <a name="remarks"></a>Notes
 
-**Affecter** effectue une copie binaire, ce qui signifie que toute la durée de la `BSTR` est copiée, indépendamment du contenu.
+**Assign** effectue une copie binaire, ce qui signifie que la longueur totale du `BSTR` est copiée, quel que soit le contenu.
 
 ## <a name="example"></a>Exemple
 
@@ -109,7 +109,7 @@ bstrWrapper = changing BSTR
 bstrWrapper2 = some text
 ```
 
-**FIN de la section spécifique à Microsoft**
+**Fin de la section spécifique de Microsoft**
 
 ## <a name="see-also"></a>Voir aussi
 

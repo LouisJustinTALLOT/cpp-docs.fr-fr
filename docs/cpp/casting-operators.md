@@ -6,28 +6,28 @@ helpviewer_keywords:
 - operators [C++], casting
 - casting operators [C++]
 ms.assetid: 16240348-26bc-4f77-8eab-57253f00ce52
-ms.openlocfilehash: e2ac8e9079b1d30dca077363bbb6cef35960902e
-ms.sourcegitcommit: c6f8e6c2daec40ff4effd8ca99a7014a3b41ef33
+ms.openlocfilehash: eac274a0207be675b8d13532c3110c6e71bd55c9
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "64345097"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80190096"
 ---
 # <a name="casting-operators"></a>Opérateurs de casting
 
 Il existe plusieurs opérateurs de cast spécifiques au langage C++. Ces opérateurs ont pour but de supprimer une partie de l'ambiguïté et du risque inhérents aux casts en langage C de style ancien. Ces opérateurs sont :
 
-- [dynamic_cast](../cpp/dynamic-cast-operator.md) utilisé pour la conversion des types polymorphes.
+- [dynamic_cast](../cpp/dynamic-cast-operator.md) Utilisé pour la conversion des types polymorphes.
 
-- [static_cast](../cpp/static-cast-operator.md) utilisé pour la conversion des types non polymorphes.
+- [static_cast](../cpp/static-cast-operator.md) Utilisé pour la conversion des types des non polymorphes.
 
-- [const_cast](../cpp/const-cast-operator.md) permet de supprimer le **const**, **volatile**, et **__unaligned** attributs.
+- [const_cast](../cpp/const-cast-operator.md) Utilisé pour supprimer les attributs **const**, **volatile**et **__unaligned** .
 
-- [reinterpret_cast](../cpp/reinterpret-cast-operator.md) utilisé pour la réinterprétation simple des bits.
+- [reinterpret_cast](../cpp/reinterpret-cast-operator.md) Utilisé pour la réinterprétation simple de bits.
 
-- [safe_cast](../extensions/safe-cast-cpp-component-extensions.md) utilisé dans C++/CLI pour produire du code MSIL vérifiable.
+- [safe_cast](../extensions/safe-cast-cpp-component-extensions.md) Utilisé dans C++/CLI pour produire du code MSIL vérifiable.
 
-Utilisez **const_cast** et **reinterpret_cast** en dernier recours, car ces opérateurs présentent les mêmes risques que les casts de style ancien. Ils sont néanmoins encore nécessaires pour remplacer complètement les casts de style ancien.
+Utilisez **const_cast** et **reinterpret_cast** en dernier recours, car ces opérateurs présentent les mêmes dangers que les anciens casts de style. Ils sont néanmoins encore nécessaires pour remplacer complètement les casts de style ancien.
 
 ## <a name="see-also"></a>Voir aussi
 

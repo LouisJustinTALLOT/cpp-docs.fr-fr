@@ -7,16 +7,16 @@ helpviewer_keywords:
 - while keyword [C++]
 - while keyword [C++], syntax
 ms.assetid: 358dbe76-5e5e-4af5-b575-c2293c636899
-ms.openlocfilehash: 669618e9807109be18117968b1f5b6f49ec15e07
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 0dfbbb2865c9cf0a23b04ce213a0e739e29c27da
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62325414"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80187321"
 ---
 # <a name="while-statement-c"></a>while, instruction (C++)
 
-Exécute *instruction* à plusieurs reprises jusqu'à ce que *expression* correspond à zéro.
+Exécute l' *instruction* à plusieurs reprises jusqu’à ce que la valeur de l' *expression* soit égale à zéro.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -27,11 +27,11 @@ while ( expression )
 
 ## <a name="remarks"></a>Notes
 
-Le test de *expression* a lieu avant chaque exécution de la boucle ; par conséquent, un **tandis que** boucle s’exécute à zéro ou plusieurs fois. *expression* doit être d’un type intégral, un type pointeur, ou un type de classe possédant une conversion non ambiguë un type intégral ou le type de pointeur.
+Le test d' *expression* a lieu avant chaque exécution de la boucle. par conséquent, une boucle **while** s’exécute zéro, une ou plusieurs fois. l' *expression* doit être d’un type intégral, d’un type pointeur ou d’un type de classe avec une conversion non ambiguë en type intégral ou pointeur.
 
-Un **tandis que** boucle peut également se terminer lorsqu’une [saut](../cpp/break-statement-cpp.md), [goto](../cpp/goto-statement-cpp.md), ou [retourner](../cpp/return-statement-cpp.md) corps est exécuté dans l’instruction. Utilisez [continuer](../cpp/continue-statement-cpp.md) pour terminer l’itération actuelle sans quitter le **tandis que** boucle. **continuer** passe le contrôle à l’itération suivante de la **tandis que** boucle.
+Une boucle **while** peut également se terminer lorsqu’une instruction [break](../cpp/break-statement-cpp.md), [goto](../cpp/goto-statement-cpp.md)ou [Return](../cpp/return-statement-cpp.md) est exécutée dans le corps de l’instruction. Utilisez [continue](../cpp/continue-statement-cpp.md) pour terminer l’itération actuelle sans quitter la boucle **while** . **continue** passe le contrôle à l’itération suivante de la boucle **while** .
 
-Le code suivant utilise un **tandis que** boucle pour ajuster à la fin des traits de soulignement à partir d’une chaîne :
+Le code suivant utilise une boucle **while** pour supprimer les traits de soulignement à droite d’une chaîne :
 
 ```cpp
 // while_statement.cpp
@@ -60,7 +60,7 @@ int main()
 }
 ```
 
-La condition d’arrêt est évaluée en haut de la boucle. S’il n’y a aucun caractère de soulignement de fin, la boucle s’exécute jamais.
+La condition d’arrêt est évaluée en haut de la boucle. S’il n’existe aucun trait de soulignement de fin, la boucle ne s’exécute jamais.
 
 ## <a name="see-also"></a>Voir aussi
 

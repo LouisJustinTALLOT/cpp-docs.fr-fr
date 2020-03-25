@@ -6,17 +6,17 @@ f1_keywords:
 helpviewer_keywords:
 - U4011
 ms.assetid: e8244514-eba6-4285-8853-7baeefdcd8a4
-ms.openlocfilehash: 3b73e92c929b3dd5924584ab732f731d565d0430
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 6b1701ffc83f849d2482bd14b25d65c04c496899
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62359772"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80193145"
 ---
 # <a name="nmake-warning-u4011"></a>Avertissement NMAKE U4011
 
-'target' : les dépendants pas tous disponibles ; cible non générée
+'target' : tous les dépendants ne sont pas disponibles ; cible non générée
 
-Un dépendant de la cible spécifiée n’existe pas ou a été obsolète, et une commande de mise à jour du dépendant a renvoyé un code de sortie différent de zéro. L’option /K a indiqué NMAKE pour continuer le traitement des parties non liées de la génération et d’émettre un code de sortie 1 quand la session NMAKE est terminée.
+Un dépendant de la cible donnée n’existe pas ou est obsolète, et une commande de mise à jour du dépendant a retourné un code de sortie différent de zéro. L’option/K a indiqué à NMAKE de poursuivre le traitement des parties non liées de la build et d’émettre un code de sortie 1 lorsque la session NMAKE est terminée.
 
-Cet avertissement est précédé par l’avertissement [U4010](../../error-messages/tool-errors/nmake-warning-u4010.md) pour chaque dépendant qui n’a pas pu être créé ou mis à jour.
+Cet avertissement est précédé d’un avertissement [U4010](../../error-messages/tool-errors/nmake-warning-u4010.md) pour chaque dépendant qui n’a pas pu être créé ou mis à jour.

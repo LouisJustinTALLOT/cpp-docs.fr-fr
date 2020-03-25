@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - OLE DB templates
 ms.assetid: 73918f6f-1fd7-4fa2-a0ff-7f9d792fce7e
-ms.openlocfilehash: 6e98cef9317e92651d86ef9fec5ac451d6f2d428
-ms.sourcegitcommit: 00e26915924869cd7eb3c971a7d0604388abd316
-ms.translationtype: HT
+ms.openlocfilehash: 00a54a65b6f23df358d1e140eeb1c3f9174a6ace
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/10/2019
-ms.locfileid: "65525341"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80209870"
 ---
 # <a name="ole-db-templates"></a>modèles OLE DB
 
@@ -25,7 +25,7 @@ Fournit les liens vers les classes du Modèle du consommateur OLE DB classées p
 [Modèles du fournisseur OLE DB](../../data/oledb/ole-db-provider-templates-reference.md)<br/>
 Fournit les liens vers les classes du Modèle du fournisseur OLE DB classées par utilisation.
 
-## <a name="related-sections"></a>Rubriques connexes
+## <a name="related-sections"></a>Sections connexes
 
 [Vue d’ensemble de la programmation OLE DB](../../data/oledb/ole-db-programming-overview.md)<br/>
 Décrit ce qu’est OLE DB et présente Universal Data Access dans OLE DB.
@@ -36,10 +36,10 @@ Fournit des liens vers la documentation sur le kit de développement logiciel (S
 [Exemples de modèles OLE DB](../../overview/visual-cpp-samples.md)<br/>
 Fournit des liens vers des exemples de modèles OLE DB qui montrent comment utiliser OLE DB dans vos projets.
 
-[Modèles du consommateur OLE DB](../../data/oledb/ole-db-consumer-templates-cpp.md)<br/>
+[OLE DB (modèles du consommateur)](../../data/oledb/ole-db-consumer-templates-cpp.md)<br/>
 Présente des informations conceptuelles sur les modèles du consommateur OLE DB.
 
-[Modèles du fournisseur OLE DB](../../data/oledb/ole-db-provider-templates-cpp.md)<br/>
+[Modèles du fournisseur OLE DB](../../data/oledb/ole-db-provider-templates-cpp.md)<br/>
 Présente des informations conceptuelles sur les modèles du fournisseur OLE DB.
 
 [Création d’un consommateur OLE DB](../../data/oledb/creating-an-ole-db-consumer.md)<br/>

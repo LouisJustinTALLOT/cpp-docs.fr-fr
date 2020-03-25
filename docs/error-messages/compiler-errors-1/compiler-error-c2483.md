@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C2483
 ms.assetid: 5762b325-914b-442d-a604-e4617ba04038
-ms.openlocfilehash: 7a627ce28e60f42dabcf0a257464a8bfbd58b9a4
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 20b08c0d2cd89224ed3d3b8b34915deb947b0b4b
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62361358"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80205112"
 ---
 # <a name="compiler-error-c2483"></a>Erreur du compilateur C2483
 
->«*identificateur*' : objet avec un constructeur ou un destructeur ne peut pas être déclaré 'thread'
+>'*identificateur*' : un objet avec un constructeur ou un destructeur ne peut pas être déclaré’thread'
 
-Ce message d’erreur est obsolète dans Visual Studio 2015 et versions ultérieures. Dans les versions précédentes, les variables déclarées avec le `thread` attribut ne peut pas être initialisé avec un constructeur ou une autre expression qui requiert une évaluation de l’exécution. Une expression statique est requise pour initialiser `thread` données.
+Ce message d’erreur est obsolète dans Visual Studio 2015 et versions ultérieures. Dans les versions précédentes, les variables déclarées avec l’attribut `thread` ne peuvent pas être initialisées avec un constructeur ou une autre expression qui requiert une évaluation au moment de l’exécution. Une expression statique est requise pour initialiser `thread` données.
 
 ## <a name="example"></a>Exemple
 
-L’exemple suivant génère C2483 dans Visual Studio 2013 et versions antérieures.
+L’exemple suivant génère C2483 dans Visual Studio 2013 et les versions antérieures.
 
 ```cpp
 // C2483.cpp
