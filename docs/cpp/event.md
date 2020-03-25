@@ -8,14 +8,14 @@ helpviewer_keywords:
 - __event keyword [C++]
 - events [C++], __event
 ms.assetid: d3019b3e-722e-48df-8536-c05878461f9e
-ms.openlocfilehash: 3a837e30d3cd66f7caa9b44971f432e00b0917ae
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: d0d6d3570662cba36a606002263559246e22da57
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62154423"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80180054"
 ---
-# <a name="event"></a>__event
+# <a name="__event"></a>__event
 
 Déclare un événement.
 
@@ -29,19 +29,19 @@ __event member-declarator;
 
 ## <a name="remarks"></a>Notes
 
-Le mot clé **__event** peut être appliqué à une déclaration de méthode, une déclaration d’interface ou une déclaration de membre de données. Toutefois, vous ne pouvez pas utiliser le **__event** mot clé pour qualifier un membre d’une classe imbriquée.
+Le mot clé **__event** peut être appliqué à une déclaration de méthode, à une déclaration d’interface ou à une déclaration de membre de données. Toutefois, vous ne pouvez pas utiliser le mot clé **__event** pour qualifier un membre d’une classe imbriquée.
 
 Selon que votre source et votre récepteur d'événements sont C++ natif, COM ou managé (.NET Framework), vous pouvez utiliser les constructions suivantes en tant qu'événements :
 
 |C++ natif|COM|Managé (.NET Framework)|
 |------------------|---------|--------------------------------|
-|Méthode|—|méthode|
+|Méthode|—|method|
 |—|interface|—|
 |—|—|membre de données|
 
-Utilisez [__hook](../cpp/hook.md) dans un récepteur d’événements pour associer une méthode de gestionnaire à une méthode d’événement. Notez que, après avoir créé un événement avec le **__event** mot clé, tous les gestionnaires d’événements accrochés ultérieurement à cet événement seront appelées lorsque l’événement est appelé.
+Utilisez [__hook](../cpp/hook.md) dans un récepteur d’événements pour associer une méthode de gestionnaire à une méthode d’événement. Notez qu’après avoir créé un événement avec le mot clé **__event** , tous les gestionnaires d’événements raccordés à cet événement sont appelés lorsque l’événement est appelé.
 
-Un **__event** déclaration de méthode ne peut pas avoir une définition ; une définition étant générée implicitement, la méthode d’événement peut donc être appelée comme s’il s’agissait d’une méthode ordinaire.
+Une déclaration de méthode **__event** ne peut pas avoir de définition ; une définition étant générée implicitement, la méthode d’événement peut être appelée comme s’il s’agissait d’une méthode ordinaire.
 
 > [!NOTE]
 >  Une classe ou structure modélisée ne peut pas contenir d'événements.
@@ -56,28 +56,28 @@ __event void OnDblClick();
 __event HRESULT OnClick(int* b, char* s);
 ```
 
-Consultez [gestion des événements en C++ natif](../cpp/event-handling-in-native-cpp.md) pour l’exemple de code.
+Consultez [gestion des événements en C++ mode natif](../cpp/event-handling-in-native-cpp.md) pour obtenir un exemple de code.
 
 ## <a name="com-events"></a>Événements COM
 
-Les événements COM sont des interfaces. Les paramètres d’une méthode dans une interface de source d’événement doivent être *dans* paramètres (mais cela n’est pas rigoureusement appliqué), car un *out* paramètre n’est pas utile lors du multicasting. Un avertissement de niveau 1 est émis si vous utilisez un *out* paramètre.
+Les événements COM sont des interfaces. Les paramètres d’une méthode dans une interface de source d’événement doivent être dans des paramètres (mais cela n’est pas rigoureusement appliqué), car un paramètre *de* *sortie* n’est pas utile lors de la multidiffusion. Un avertissement de niveau 1 sera émis si vous utilisez un paramètre *out* .
 
-Le type de retour est généralement HRESULT ou **void**, mais peut être n’importe quel type intégral, y compris **enum**. Lorsqu'un événement utilise un type de retour intégral et qu'un gestionnaire d'événements retourne une valeur différente de zéro, il s'agit d'une condition d'erreur. L'événement déclenché annule alors les appels aux autres délégués. Notez que le compilateur marque automatiquement une interface de source d’événement comme un [source](../windows/attributes/source-cpp.md) dans le fichier IDL généré.
+Le type de retour est généralement HRESULT ou **void**, mais peut être n’importe quel type intégral, y compris **enum**. Lorsqu'un événement utilise un type de retour intégral et qu'un gestionnaire d'événements retourne une valeur différente de zéro, il s'agit d'une condition d'erreur. L'événement déclenché annule alors les appels aux autres délégués. Notez que le compilateur marque automatiquement une interface source d’événement en tant que [source](../windows/attributes/source-cpp.md) dans l’IDL généré.
 
-Le [__interface](../cpp/interface.md) mot clé est toujours requis après **__event** pour une source d’événements COM.
+Le mot clé [__interface](../cpp/interface.md) est toujours requis après **__event** pour une source d’événement com.
 
 ```cpp
 // Example of a COM event:
 __event __interface IEvent1;
 ```
 
-Consultez [gestion des événements COM](../cpp/event-handling-in-com.md) pour l’exemple de code.
+Pour obtenir un exemple de code [, consultez Gestion des événements dans com](../cpp/event-handling-in-com.md) .
 
 ## <a name="managed-events"></a>Événements managés
 
-Pour plus d’informations sur le codage des événements dans la nouvelle syntaxe, consultez [événement](../extensions/event-cpp-component-extensions.md).
+Pour plus d’informations sur le codage des événements dans la nouvelle syntaxe, consultez [Event](../extensions/event-cpp-component-extensions.md).
 
-Les événements managés sont des méthodes ou des données membres. Lorsqu’il est utilisé avec un événement, le type de retour d’un délégué doit être conforme à la [Common Language Specification](/dotnet/standard/language-independence-and-language-independent-components). Le type de retour du gestionnaire d'événements doit correspondre à celui du délégué. Pour plus d’informations sur les délégués, consultez [délégués et événements](../dotnet/delegates-and-events.md). Si un événement managé est un membre de données, son type doit être un pointeur vers un délégué.
+Les événements managés sont des méthodes ou des données membres. En cas d’utilisation avec un événement, le type de retour d’un délégué doit être conforme à la [Common Language Specification](/dotnet/standard/language-independence-and-language-independent-components). Le type de retour du gestionnaire d'événements doit correspondre à celui du délégué. Pour plus d’informations sur les délégués, consultez [délégués et événements](../dotnet/delegates-and-events.md). Si un événement managé est un membre de données, son type doit être un pointeur vers un délégué.
 
 Dans .NET Framework, vous pouvez traiter un membre de données comme s'il s'agissait d'une méthode (autrement dit, la méthode `Invoke` de son délégué correspondant). Vous devez prédéfinir le type délégué pour déclarer un membre de données d'événement managé. En revanche, une méthode d'événement managé définit implicitement le délégué managé correspondant, s'il n'est pas déjà défini. Par exemple, vous pouvez déclarer une valeur d'événement telle que `OnClick` comme événement de la manière suivante :
 
@@ -89,7 +89,7 @@ __event void OnClick(String* s);  // method as event
 
 Lors de la déclaration implicite d’un événement managé, vous pouvez spécifier des accesseurs add et remove qui seront appelés lorsque les gestionnaires d’événements sont ajoutés ou supprimés. Vous pouvez également définir la méthode qui appelle (déclenche) l'événement en dehors de la classe.
 
-## <a name="example-native-events"></a>Exemple : Événements natifs
+## <a name="example-native-events"></a>Exemple : événements natifs
 
 ```cpp
 // EventHandling_Native_Event.cpp
@@ -101,7 +101,7 @@ public:
 };
 ```
 
-## <a name="example-com-events"></a>Exemple : Événements COM
+## <a name="example-com-events"></a>Exemple : événements COM
 
 ```cpp
 // EventHandling_COM_Event.cpp

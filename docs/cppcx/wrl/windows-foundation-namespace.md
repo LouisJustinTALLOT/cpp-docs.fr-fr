@@ -8,16 +8,16 @@ f1_keywords:
 helpviewer_keywords:
 - Foundation namespace
 ms.assetid: 96a6b5e0-ddee-4b21-ae4e-da5feeb945c3
-ms.openlocfilehash: cd16a888594e928214ef45cbdddb1e0fdac7c82a
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 4c8bc578fd9657fb964bc6148e3acc24b0cb5328
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62396048"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80213523"
 ---
 # <a name="windowsfoundation-namespace"></a>Windows::Foundation, espace de noms
 
-Permet des fonctionnalités fondamentales de Windows Runtime, telles que la création d’objet et de la fabrique.
+Active les fonctionnalités fondamentales de Windows Runtime, telles que la création d’objets et de fabriques.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -29,12 +29,12 @@ namespace Windows::Foundation;
 
 ### <a name="functions"></a>Fonctions
 
-|Nom|Description|
+|Name|Description|
 |----------|-----------------|
-|[ActivateInstance, fonction](activateinstance-function.md)|Enregistre et récupère une instance d’un type spécifié défini dans un ID de classe spécifié.|
+|[ActivateInstance, fonction](activateinstance-function.md)|Inscrit et récupère une instance d’un type spécifié défini dans un ID de classe spécifié.|
 |[GetActivationFactory, fonction](getactivationfactory-function.md)|Récupère une fabrique d’activation pour le type spécifié par le paramètre de modèle.|
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
 **En-tête :** client.h
 
@@ -42,4 +42,4 @@ namespace Windows::Foundation;
 
 ## <a name="see-also"></a>Voir aussi
 
-[Espaces de noms Windows UWP](/uwp/api/)
+[Espaces de noms UWP Windows](/uwp/api/)

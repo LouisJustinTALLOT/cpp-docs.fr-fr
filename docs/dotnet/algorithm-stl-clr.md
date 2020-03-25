@@ -141,12 +141,12 @@ helpviewer_keywords:
 - unique_copy function [STL/CLR]
 - upper_bound function [STL/CLR]
 ms.assetid: ee2718dc-a98d-40b8-8341-593fe7d2ac15
-ms.openlocfilehash: 6011aad0ef86bc0e633687a6d8e017e9b12771c8
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 4abd7eaa640bb89fd97c1787bf2fd692610212fb
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62350830"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80208949"
 ---
 # <a name="algorithm-stlclr"></a>algorithm (STL/CLR)
 
@@ -158,11 +158,11 @@ Définit les fonctions de modèle de conteneur STL/CLR qui exécutent des algori
 #include <cliext/algorithm>
 ```
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
-**En-tête :** \<cliext/algorithm >
+**En-tête :** \<cliext/Algorithm >
 
-**Namespace :** cliext
+**Espace de noms :** cliext
 
 ## <a name="declarations"></a>Déclarations
 
@@ -170,52 +170,52 @@ Définit les fonctions de modèle de conteneur STL/CLR qui exécutent des algori
 |--------------|-----------------|
 |[adjacent_find (STL/CLR)](#adjacent_find)|Recherche deux éléments adjacents qui sont égaux.|
 |[binary_search (STL/CLR)](#binary_search)|Teste si une séquence triée contient une valeur donnée.|
-|[copy (STL/CLR)](#copy)|Copie les valeurs d’une plage source à une plage de destination, en effectuant une itération dans la direction vers l’avant.|
-|[copy_backward (STL/CLR)](#copy_backward)|Copie les valeurs d’une plage source à une plage de destination, en effectuant une itération dans la direction descendante.|
+|[copy (STL/CLR)](#copy)|Copie les valeurs d’une plage source vers une plage de destination, en effectuant une itération vers l’avant.|
+|[copy_backward (STL/CLR)](#copy_backward)|Copie les valeurs d’une plage source vers une plage de destination, en effectuant une itération dans le sens inverse.|
 |[count (STL/CLR)](#count)|Retourne le nombre d'éléments d'une plage dont les valeurs correspondent à une valeur spécifiée.|
 |[count_if (STL/CLR)](#count_if)|Retourne le nombre d'éléments d'une plage dont les valeurs correspondent à une condition spécifiée.|
 |[equal (STL/CLR)](#equal)|Compare deux plages, élément par élément.|
-|[equal_range (STL/CLR)](#equal_range)|Recherche une séquence ordonnée de valeurs et retourne des deux positions qui délimitent une sous-séquence de valeurs qui sont toujours égaux à un élément donné.|
+|[equal_range (STL/CLR)](#equal_range)|Recherche une séquence ordonnée de valeurs et retourne deux positions qui délimitent une sous-séquence de valeurs qui sont toutes égales à un élément donné.|
 |[fill (STL/CLR)](#fill)|Affecte la même nouvelle valeur à chaque élément d'une plage spécifiée.|
 |[fill_n (STL/CLR)](#fill_n)|Attribue une nouvelle valeur à un nombre spécifié d’éléments d’une plage commençant par un élément particulier.|
 |[find (STL/CLR)](#find)|Retourne la position de la première occurrence d’une valeur spécifiée.|
 |[find_end (STL/CLR)](#find_end)|Retourne la dernière sous-séquence d’une plage qui est identique à une séquence spécifiée.|
-|[find_first_of (STL/CLR)](#find_first_of)|Recherche dans une plage pour la première occurrence de l’un d’une plage d’éléments de donnée.|
-|[find_if (STL/CLR)](#find_if)|Retourne la position du premier élément dans une séquence de valeurs, où l’élément satisfait à une condition spécifiée.|
-|[for_each (STL/CLR)](#for_each)|Applique un objet de fonction spécifié à chaque élément dans une séquence de valeurs et retourne l’objet de fonction.|
-|[generate (STL/CLR)](#generate)|Assigne les valeurs générées par un objet de fonction à chaque élément dans une séquence de valeurs.|
-|[generate_n (STL/CLR)](#generate_n)|Assigne les valeurs générées par un objet de fonction à un nombre spécifié d’éléments.|
-|[includes (STL/CLR)](#includes)|Teste si une plage triée contient tous les éléments dans une autre plage triée.|
+|[find_first_of (STL/CLR)](#find_first_of)|Recherche une plage de la première occurrence de l’une des plages d’éléments donnée.|
+|[find_if (STL/CLR)](#find_if)|Retourne la position du premier élément d’une séquence de valeurs où l’élément satisfait à une condition spécifiée.|
+|[for_each (STL/CLR)](#for_each)|Applique un objet de fonction spécifié à chaque élément d’une séquence de valeurs et retourne l’objet de fonction.|
+|[generate (STL/CLR)](#generate)|Assigne les valeurs générées par un objet de fonction à chaque élément d’une séquence de valeurs.|
+|[generate_n (STL/CLR)](#generate_n)|Assigne les valeurs générées par un objet de fonction à un nombre d’éléments spécifié.|
+|[includes (STL/CLR)](#includes)|Teste si une plage triée contient tous les éléments d’une deuxième plage triée.|
 |[inplace_merge (STL/CLR)](#inplace_merge)|Combine les éléments de deux plages triées consécutives dans une même plage triée.|
 |[iter_swap (STL/CLR)](#iter_swap)|Échange deux valeurs référencées par une paire d'itérateurs spécifiés.|
-|[lexicographical_compare (STL/CLR)](#lexicographical_compare)|Compare deux séquences, élément par élément, identifiant la séquence qui est le plus petit des deux.|
+|[lexicographical_compare (STL/CLR)](#lexicographical_compare)|Compare deux séquences, élément par élément, identifiant la séquence qui est la plus petite des deux.|
 |[lower_bound (STL/CLR)](#lower_bound)|Recherche la position du premier élément dans une séquence ordonnée de valeurs qui a une valeur supérieure ou égale à une valeur spécifiée.|
-|[make_heap (STL/CLR)](#make_heap)|Convertit les éléments d’une plage spécifiée dans un segment de mémoire où le premier élément sur le tas est le plus grand.|
-|[max (STL/CLR)](#max))|Compare deux objets et retourne la plus grande des deux.|
-|[max_element (STL/CLR)](#max_element)|Recherche l’élément le plus grand dans une séquence spécifique de valeurs.|
-|[merge (STL/CLR)](#merge))|Combine tous les éléments de deux plages sources triées dans une plage de destination unique, triées.|
+|[make_heap (STL/CLR)](#make_heap)|Convertit les éléments d’une plage spécifiée en un segment de mémoire où le premier élément sur le tas est le plus grand.|
+|[Max (STL/CLR)](#max))|Compare deux objets et retourne le plus grand des deux.|
+|[max_element (STL/CLR)](#max_element)|Recherche l’élément le plus grand dans une séquence de valeurs spécifiée.|
+|[Merge (STL/CLR)](#merge))|Combine tous les éléments de deux plages sources triées au sein d’une même plage de destination triée.|
 |[min (STL/CLR)](#min)|Compare deux objets et retourne le plus petit des deux.|
-|[min_element (STL/CLR)](#min_element)|Recherche le plus petit élément dans une séquence spécifique de valeurs.|
-|[mismatch (STL/CLR)](#mismatch)|Compare deux plages, élément par élément et retourne la première position où se trouve une différence.|
-|[next_permutation (STL/CLR)](#next_permutation)|Réorganise les éléments dans une plage afin que l’ordre d’origine est remplacée par la permutation lexicographique suivante supérieure si elle existe.|
-|[nth_element (STL/CLR)](#nth_element)|Partitionne une séquence d’éléments, en recherchant le `n`-ième élément de la séquence afin que tous les éléments le précédant lui soient inférieur ou égal à celui-ci et tous les éléments qui le suivent sont supérieurs ou égaux.|
-|[partial_sort (STL/CLR)](#partial_sort)|Réorganise un nombre spécifié d’éléments plus petits dans une plage dans un ordre non décroissant.|
-|[partial_sort_copy (STL/CLR)](#partial_sort_copy)|Copie les éléments d’une plage source dans une plage de destination telles que les éléments à partir de la plage source sont classés.|
-|[partition (STL/CLR)](#partition)|Réorganise les éléments dans une plage de telle sorte que les éléments qui satisfont un prédicat unaire qui précèdent ceux qui n’y répondent pas.|
-|[pop_heap (STL/CLR)](#pop_heap)|Déplace l’élément le plus grand du début d’un segment à la fin et crée ensuite un nouveau segment de mémoire à partir des éléments restants.|
-|[prev_permutation (STL/CLR)](#prev_permutation)|Réorganise une séquence d’éléments afin que l’ordre d’origine est remplacée par la permutation lexicographique précédente supérieure si elle existe.|
+|[min_element (STL/CLR)](#min_element)|Recherche le plus petit élément dans une séquence de valeurs spécifiée.|
+|[mismatch (STL/CLR)](#mismatch)|Compare deux plages élément par élément et retourne la première position où se produit une différence.|
+|[next_permutation (STL/CLR)](#next_permutation)|Réorganise les éléments d’une plage afin que le classement d’origine soit remplacé par la permutation vue lexicographique suivante, le cas échéant.|
+|[nth_element (STL/CLR)](#nth_element)|Partitionne une séquence d’éléments, en localisant correctement le `n`ième élément de la séquence afin que tous les éléments qui le précèdent soient inférieurs ou égaux et que tous les éléments qui le suivent sont supérieurs ou égaux à celui-ci.|
+|[partial_sort (STL/CLR)](#partial_sort)|Réorganise un nombre spécifié d’éléments plus petits dans une plage, dans un ordre non décroissant.|
+|[partial_sort_copy (STL/CLR)](#partial_sort_copy)|Copie les éléments d’une plage source dans une plage de destination, de sorte que les éléments de la plage source sont triés.|
+|[partition (STL/CLR)](#partition)|Organise les éléments d’une plage de sorte que les éléments qui satisfont à un prédicat unaire précèdent ceux qui ne le satisfont pas.|
+|[pop_heap (STL/CLR)](#pop_heap)|Déplace le plus grand élément du début d’un segment de mémoire à la fin, puis forme un nouveau tas à partir des éléments restants.|
+|[prev_permutation (STL/CLR)](#prev_permutation)|Réorganise une séquence d’éléments afin que le tri d’origine soit remplacé par le vue lexicographique de permutation supérieure précédent s’il existe.|
 |[push_heap (STL/CLR)](#push_heap)|Ajoute un élément qui se trouve à la fin d'une plage à un tas existant, constitué des éléments précédents de la plage.|
-|[random_shuffle (STL/CLR)](#random_shuffle)|Réorganise une séquence de `N` éléments dans une plage en `N`! dispositions possibles, sélectionnées de manière aléatoire.|
-|[remove (STL/CLR)](#remove)|Supprime une valeur spécifiée à partir d’une plage donnée sans porter atteinte à l’ordre des éléments restants et retourne la fin d’une nouvelle plage exempte de la valeur spécifiée.|
-|[remove_copy (STL/CLR)](#remove_copy)|Copie les éléments d’une plage source dans une plage de destination, à ceci près que les éléments d’une valeur spécifiée ne sont pas copiés, sans porter atteinte à l’ordre des éléments restants.|
-|[remove_copy_if (STL/CLR)](#remove_copy_if)|Copie les éléments d’une plage source à une plage de destination, à l’exception de ceux qui satisfont un prédicat, sans porter atteinte à l’ordre des éléments restants.|
-|[remove_if (STL/CLR)](#remove_if)|Supprime les éléments qui satisfont un prédicat dans une plage donnée sans porter atteinte à l’ordre des éléments restants. .|
-|[replace (STL/CLR)](#replace)|Remplace les éléments d’une plage qui correspond à une valeur spécifiée avec une nouvelle valeur.|
-|[replace_copy (STL/CLR)](#replace_copy)|Copie les éléments d’une plage source à une plage de destination, en remplaçant les éléments qui correspondent à une valeur spécifiée avec une nouvelle valeur.|
+|[random_shuffle (STL/CLR)](#random_shuffle)|Réorganise une séquence d’éléments `N` d’une plage en l’un des `N`! dispositions possibles, sélectionnées de manière aléatoire.|
+|[remove (STL/CLR)](#remove)|Supprime une valeur spécifiée d’une plage donnée sans perturber l’ordre des éléments restants et retourne la fin d’une nouvelle plage exempte de la valeur spécifiée.|
+|[remove_copy (STL/CLR)](#remove_copy)|Copie les éléments d’une plage source vers une plage de destination, sauf que les éléments d’une valeur spécifiée ne sont pas copiés, sans affecter l’ordre des éléments restants.|
+|[remove_copy_if (STL/CLR)](#remove_copy_if)|Copie les éléments d’une plage source vers une plage de destination, à l’exception de ceux qui répondent à un prédicat, sans perturber l’ordre des éléments restants.|
+|[remove_if (STL/CLR)](#remove_if)|Supprime les éléments qui répondent à un prédicat d’une plage donnée sans perturber l’ordre des éléments restants. .|
+|[replace (STL/CLR)](#replace)|Remplace les éléments d’une plage qui correspondent à une valeur spécifiée par une nouvelle valeur.|
+|[replace_copy (STL/CLR)](#replace_copy)|Copie les éléments d’une plage source vers une plage de destination, en remplaçant les éléments qui correspondent à une valeur spécifiée par une nouvelle valeur.|
 |[replace_copy_if (STL/CLR)](#replace_copy_if)|Examine tous les éléments d'une plage source et les remplace s'ils répondent à un prédicat, tout en copiant le résultat dans une nouvelle plage de destination.|
 |[replace_if (STL/CLR)](#replace_if)|Examine tous les éléments d’une plage et les remplace s’ils répondent à un prédicat spécifié.|
 |[reverse (STL/CLR)](#reverse)|Inverse l'ordre des éléments d'une plage.|
-|[reverse_copy (STL/CLR)](#reverse_copy)|Inverse l’ordre des éléments dans une plage source tout en les copiant dans une plage de destination.|
+|[reverse_copy (STL/CLR)](#reverse_copy)|Inverse l’ordre des éléments au sein d’une plage source lors de leur copie dans une plage de destination.|
 |[rotate (STL/CLR)](#rotate)|Échange les éléments de deux plages adjacentes.|
 |[rotate_copy (STL/CLR)](#rotate_copy)|Échange les éléments de deux plages adjacentes au sein d'une plage source et copie le résultat dans une plage de destination.|
 |[search (STL/CLR)](#search_)|Recherche la première occurrence d’une séquence au sein d’une plage cible dont les éléments sont égaux à ceux d’une séquence d’éléments donnée ou dont les éléments sont équivalents à ceux d’une séquence donnée, selon un prédicat binaire spécifié.|
@@ -237,7 +237,7 @@ Définit les fonctions de modèle de conteneur STL/CLR qui exécutent des algori
 
 ## <a name="members"></a>Membres
 
-## <a name="adjacent_find"></a> adjacent_find (STL/CLR)
+## <a name="adjacent_find-stlclr"></a><a name="adjacent_find"></a>adjacent_find (STL/CLR)
 
 Recherche deux éléments adjacents qui ont la même valeur ou qui répondent à une condition spécifiée.
 
@@ -252,9 +252,9 @@ template<class _FwdIt, class _Pr> inline
 
 ### <a name="remarks"></a>Notes
 
-Cette fonction comporte comme la fonction de bibliothèque Standard C++ `adjacent_find`. Pour plus d’informations, consultez [adjacent_find](../standard-library/algorithm-functions.md#adjacent_find).
+Cette fonction se comporte de la même façon que C++ la fonction de bibliothèque standard `adjacent_find`. Pour plus d’informations, consultez [adjacent_find](../standard-library/algorithm-functions.md#adjacent_find).
 
-## <a name="binary_search"></a> binary_search (STL/CLR)
+## <a name="binary_search-stlclr"></a><a name="binary_search"></a>binary_search (STL/CLR)
 
 Teste si un élément d’une plage triée est égal à une valeur spécifiée ou équivalent, selon une condition spécifiée par un prédicat binaire.
 
@@ -270,9 +270,9 @@ template<class _FwdIt, class _Ty, class _Pr> inline
 
 ### <a name="remarks"></a>Notes
 
-Cette fonction comporte comme la fonction de bibliothèque Standard C++ `binary_search`. Pour plus d’informations, consultez [binary_search](../standard-library/algorithm-functions.md#binary_search).
+Cette fonction se comporte de la même façon que C++ la fonction de bibliothèque standard `binary_search`. Pour plus d’informations, consultez [binary_search](../standard-library/algorithm-functions.md#binary_search).
 
-## <a name="copy"></a> copie (STL/CLR)
+## <a name="copy-stlclr"></a><a name="copy"></a>copier (STL/CLR)
 
 Assigne les valeurs des éléments d'une plage source à une plage de destination, en procédant à une itération via la séquence source d'éléments et en leur assignant de nouvelles positions, du haut vers le bas.
 
@@ -285,9 +285,9 @@ template<class _InIt, class _OutIt> inline
 
 ### <a name="remarks"></a>Notes
 
-Cette fonction comporte comme la fonction de bibliothèque Standard C++ `copy`. Pour plus d’informations, consultez [copie](../standard-library/algorithm-functions.md#copy).
+Cette fonction se comporte de la même façon que C++ la fonction de bibliothèque standard `copy`. Pour plus d’informations, consultez [Copy](../standard-library/algorithm-functions.md#copy).
 
-## <a name="copy_backward"></a> copy_backward (STL/CLR)
+## <a name="copy_backward-stlclr"></a><a name="copy_backward"></a>copy_backward (STL/CLR)
 
 Assigne les valeurs des éléments d'une plage source à une plage de destination, en procédant à une itération via la séquence source d'éléments et en leur assignant de nouvelles positions vers le haut.
 
@@ -301,9 +301,9 @@ template<class _BidIt1, class _BidIt2> inline
 
 ### <a name="remarks"></a>Notes
 
-Cette fonction comporte comme la fonction de bibliothèque Standard C++ `copy_backward`. Pour plus d’informations, consultez [copy_backward](../standard-library/algorithm-functions.md#copy_backward).
+Cette fonction se comporte de la même façon que C++ la fonction de bibliothèque standard `copy_backward`. Pour plus d’informations, consultez [copy_backward](../standard-library/algorithm-functions.md#copy_backward).
 
-## <a name="count"></a> nombre (STL/CLR)
+## <a name="count-stlclr"></a><a name="count"></a>nombre (STL/CLR)
 
 Retourne le nombre d'éléments d'une plage dont les valeurs correspondent à une valeur spécifiée.
 
@@ -317,9 +317,9 @@ template<class _InIt, class _Ty> inline
 
 ### <a name="remarks"></a>Notes
 
-Cette fonction comporte comme la fonction de bibliothèque Standard C++ `count`. Pour plus d’informations, consultez [nombre](../standard-library/algorithm-functions.md#count).
+Cette fonction se comporte de la même façon que C++ la fonction de bibliothèque standard `count`. Pour plus d’informations, consultez [Count](../standard-library/algorithm-functions.md#count).
 
-## <a name="count_if"></a> count_if (STL/CLR)
+## <a name="count_if-stlclr"></a><a name="count_if"></a>count_if (STL/CLR)
 
 Retourne le nombre d'éléments d'une plage dont les valeurs correspondent à une condition spécifiée.
 
@@ -333,9 +333,9 @@ template<class _InIt, class _Pr> inline
 
 ### <a name="remarks"></a>Notes
 
-Cette fonction comporte comme la fonction de bibliothèque Standard C++ `count_if`. Pour plus d’informations, consultez [count_if](../standard-library/algorithm-functions.md#count_if).
+Cette fonction se comporte de la même façon que C++ la fonction de bibliothèque standard `count_if`. Pour plus d’informations, consultez [count_if](../standard-library/algorithm-functions.md#count_if).
 
-## <a name="equal"></a> égal (STL/CLR)
+## <a name="equal-stlclr"></a><a name="equal"></a>égal (STL/CLR)
 
 Compare deux plages, élément par élément, à la recherche d’une égalité ou d’une équivalence, selon une condition spécifiée par un prédicat binaire.
 
@@ -351,9 +351,9 @@ template<class _InIt1, class _InIt2, class _Pr> inline
 
 ### <a name="remarks"></a>Notes
 
-Cette fonction comporte comme la fonction de bibliothèque Standard C++ `equal`. Pour plus d’informations, consultez [égal](../standard-library/algorithm-functions.md#equal).
+Cette fonction se comporte de la même façon que C++ la fonction de bibliothèque standard `equal`. Pour plus d’informations, consultez [EQUAL](../standard-library/algorithm-functions.md#equal).
 
-## <a name="equal_range"></a> equal_range (STL/CLR)
+## <a name="equal_range-stlclr"></a><a name="equal_range"></a>equal_range (STL/CLR)
 
 Recherche une paire de positions dans une plage triée. La première inférieure ou équivalente à la position d’un élément spécifié, et la deuxième supérieure à la position de cet élément. L’équivalence ou le tri utilisés pour établir des positions dans la séquence peuvent être spécifiés par un prédicat binaire.
 
@@ -370,9 +370,9 @@ template<class _FwdIt, class _Ty, class _Pr> inline
 
 ### <a name="remarks"></a>Notes
 
-Cette fonction comporte comme la fonction de bibliothèque Standard C++ `equal_range`. Pour plus d’informations, consultez [equal_range](../standard-library/algorithm-functions.md#equal_range).
+Cette fonction se comporte de la même façon que C++ la fonction de bibliothèque standard `equal_range`. Pour plus d’informations, consultez [equal_range](../standard-library/algorithm-functions.md#equal_range).
 
-## <a name="fill"></a> remplissage (STL/CLR)
+## <a name="fill-stlclr"></a><a name="fill"></a>Fill (STL/CLR)
 
 Affecte la même nouvelle valeur à chaque élément d'une plage spécifiée.
 
@@ -385,9 +385,9 @@ template<class _FwdIt, class _Ty> inline
 
 ### <a name="remarks"></a>Notes
 
-Cette fonction comporte comme la fonction de bibliothèque Standard C++ `fill`. Pour plus d’informations, consultez [remplissage](../standard-library/algorithm-functions.md#fill).
+Cette fonction se comporte de la même façon que C++ la fonction de bibliothèque standard `fill`. Pour plus d’informations, consultez [Fill](../standard-library/algorithm-functions.md#fill).
 
-## <a name="fill_n"></a> fill_n (STL/CLR)
+## <a name="fill_n-stlclr"></a><a name="fill_n"></a>fill_n (STL/CLR)
 
 Attribue une nouvelle valeur à un nombre spécifié d’éléments d’une plage commençant par un élément particulier.
 
@@ -400,9 +400,9 @@ template<class _OutIt, class _Diff, class _Ty> inline
 
 ### <a name="remarks"></a>Notes
 
-Cette fonction comporte comme la fonction de bibliothèque Standard C++ `fill_n`. Pour plus d’informations, consultez [fill_n](../standard-library/algorithm-functions.md#fill_n).
+Cette fonction se comporte de la même façon que C++ la fonction de bibliothèque standard `fill_n`. Pour plus d’informations, consultez [fill_n](../standard-library/algorithm-functions.md#fill_n).
 
-## <a name="find"></a> Find (STL/CLR)
+## <a name="find-stlclr"></a><a name="find"></a>Rechercher (STL/CLR)
 
 Recherche la position de la première occurrence d'un élément d'une plage ayant une valeur spécifiée.
 
@@ -415,9 +415,9 @@ template<class _InIt, class _Ty> inline
 
 ### <a name="remarks"></a>Notes
 
-Cette fonction comporte comme la fonction de bibliothèque Standard C++ `find`. Pour plus d’informations, consultez [trouver](../standard-library/algorithm-functions.md#find).
+Cette fonction se comporte de la même façon que C++ la fonction de bibliothèque standard `find`. Pour plus d’informations, consultez [Find](../standard-library/algorithm-functions.md#find).
 
-## <a name="find_end"></a> find_end (STL/CLR)
+## <a name="find_end-stlclr"></a><a name="find_end"></a>find_end (STL/CLR)
 
 Recherche dans une plage la dernière sous-séquence qui est identique à une séquence spécifiée ou qui est équivalente, selon une condition spécifiée par un prédicat binaire.
 
@@ -434,9 +434,9 @@ template<class _FwdIt1, class _FwdIt2, class _Pr> inline
 
 ### <a name="remarks"></a>Notes
 
-Cette fonction comporte comme la fonction de bibliothèque Standard C++ `find_end`. Pour plus d’informations, consultez [find_end](../standard-library/algorithm-functions.md#find_end).
+Cette fonction se comporte de la même façon que C++ la fonction de bibliothèque standard `find_end`. Pour plus d’informations, consultez [find_end](../standard-library/algorithm-functions.md#find_end).
 
-## <a name="find_first_of"></a> find_first_of (STL/CLR)
+## <a name="find_first_of-stlclr"></a><a name="find_first_of"></a>find_first_of (STL/CLR)
 
 Recherche la première occurrence parmi plusieurs valeurs d’une plage cible, ou la première occurrence parmi plusieurs éléments qui sont équivalents, selon une condition spécifiée par un prédicat binaire, à un ensemble d’éléments spécifiés.
 
@@ -453,9 +453,9 @@ template<class _FwdIt1, class _FwdIt2, class _Pr> inline
 
 ### <a name="remarks"></a>Notes
 
-Cette fonction comporte comme la fonction de bibliothèque Standard C++ `find_first_of`. Pour plus d’informations, consultez [find_first_of](../standard-library/algorithm-functions.md#find_first_of).
+Cette fonction se comporte de la même façon que C++ la fonction de bibliothèque standard `find_first_of`. Pour plus d’informations, consultez [find_first_of](../standard-library/algorithm-functions.md#find_first_of).
 
-## <a name="find_if"></a> find_if (STL/CLR)
+## <a name="find_if-stlclr"></a><a name="find_if"></a>find_if (STL/CLR)
 
 Recherche la position de la première occurrence d'un élément d'une plage qui répond à une condition spécifiée.
 
@@ -468,9 +468,9 @@ template<class _InIt, class _Pr> inline
 
 ### <a name="remarks"></a>Notes
 
-Cette fonction comporte comme la fonction de bibliothèque Standard C++ `find_if`. Pour plus d’informations, consultez [find_if](../standard-library/algorithm-functions.md#find_if).
+Cette fonction se comporte de la même façon que C++ la fonction de bibliothèque standard `find_if`. Pour plus d’informations, consultez [find_if](../standard-library/algorithm-functions.md#find_if).
 
-## <a name="for_each"></a> for_each (STL/CLR)
+## <a name="for_each-stlclr"></a><a name="for_each"></a>for_each (STL/CLR)
 
 Applique un objet de fonction spécifié à chaque élément d'une plage, du haut vers le bas, et retourne l'objet de la fonction.
 
@@ -483,9 +483,9 @@ template<class _InIt, class _Fn1> inline
 
 ### <a name="remarks"></a>Notes
 
-Cette fonction comporte comme la fonction de bibliothèque Standard C++ `for_each`. Pour plus d’informations, consultez [for_each](../standard-library/algorithm-functions.md#for_each).
+Cette fonction se comporte de la même façon que C++ la fonction de bibliothèque standard `for_each`. Pour plus d’informations, consultez [for_each](../standard-library/algorithm-functions.md#for_each).
 
-## <a name="generate"></a> Générer (STL/CLR)
+## <a name="generate-stlclr"></a><a name="generate"></a>générer (STL/CLR)
 
 Assigne les valeurs générées par un objet de fonction à chaque élément d'une plage.
 
@@ -498,9 +498,9 @@ template<class _FwdIt, class _Fn0> inline
 
 ### <a name="remarks"></a>Notes
 
-Cette fonction comporte comme la fonction de bibliothèque Standard C++ `generate`. Pour plus d’informations, consultez [générer](../standard-library/algorithm-functions.md#generate).
+Cette fonction se comporte de la même façon que C++ la fonction de bibliothèque standard `generate`. Pour plus d’informations, consultez [generate](../standard-library/algorithm-functions.md#generate).
 
-## <a name="generate_n"></a> generate_n (STL/CLR)
+## <a name="generate_n-stlclr"></a><a name="generate_n"></a>generate_n (STL/CLR)
 
 Assigne les valeurs générées par un objet de fonction à un nombre spécifié d'éléments d'une plage, et retourne à la position située juste après la dernière valeur assignée.
 
@@ -513,9 +513,9 @@ template<class _OutIt, class _Diff, class _Fn0> inline
 
 ### <a name="remarks"></a>Notes
 
-Cette fonction comporte comme la fonction de bibliothèque Standard C++ `generate_n`. Pour plus d’informations, consultez [generate_n](../standard-library/algorithm-functions.md#generate_n).
+Cette fonction se comporte de la même façon que C++ la fonction de bibliothèque standard `generate_n`. Pour plus d’informations, consultez [generate_n](../standard-library/algorithm-functions.md#generate_n).
 
-## <a name="includes"></a> inclut (STL/CLR)
+## <a name="includes-stlclr"></a><a name="includes"></a>includes (STL/CLR)
 
 Teste si une plage triée contient tous les éléments d’une autre plage triée. Le critère de tri ou d’équivalence entre les éléments peut être spécifié par un prédicat binaire.
 
@@ -532,9 +532,9 @@ template<class _InIt1, class _InIt2, class _Pr> inline
 
 ### <a name="remarks"></a>Notes
 
-Cette fonction comporte comme la fonction de bibliothèque Standard C++ `includes`. Pour plus d’informations, consultez [inclut](../standard-library/algorithm-functions.md#includes).
+Cette fonction se comporte de la même façon que C++ la fonction de bibliothèque standard `includes`. Pour plus d’informations, consultez [includes](../standard-library/algorithm-functions.md#includes).
 
-## <a name="inplace_merge"></a> inplace_merge (STL/CLR)
+## <a name="inplace_merge-stlclr"></a><a name="inplace_merge"></a>inplace_merge (STL/CLR)
 
 Regroupe les éléments de deux plages triées consécutives au sein d’une même plage triée. Le critère de tri peut être spécifié par un prédicat binaire.
 
@@ -550,9 +550,9 @@ template<class _BidIt, class _Pr> inline
 
 ### <a name="remarks"></a>Notes
 
-Cette fonction comporte comme le C++ fonction de bibliothèque Standard `inplace_merge` pour plus d’informations, consultez [inplace_merge](../standard-library/algorithm-functions.md#inplace_merge).
+Cette fonction se comporte comme la C++ fonction de bibliothèque standard `inplace_merge` pour plus d’informations, consultez [inplace_merge](../standard-library/algorithm-functions.md#inplace_merge).
 
-## <a name="iter_swap"></a> iter_swap (STL/CLR)
+## <a name="iter_swap-stlclr"></a><a name="iter_swap"></a>iter_swap (STL/CLR)
 
 Échange deux valeurs référencées par une paire d'itérateurs spécifiés.
 
@@ -565,9 +565,9 @@ template<class _FwdIt1, class _FwdIt2> inline
 
 ### <a name="remarks"></a>Notes
 
-Cette fonction comporte comme la fonction de bibliothèque Standard C++ `iter_swap`. Pour plus d’informations, consultez [iter_swap](../standard-library/algorithm-functions.md#iter_swap).
+Cette fonction se comporte de la même façon que C++ la fonction de bibliothèque standard `iter_swap`. Pour plus d’informations, consultez [iter_swap](../standard-library/algorithm-functions.md#iter_swap).
 
-## <a name="lexicographical_compare"></a> lexicographical_compare (STL/CLR)
+## <a name="lexicographical_compare-stlclr"></a><a name="lexicographical_compare"></a>lexicographical_compare (STL/CLR)
 
 Compare deux séquences, élément par élément, pour déterminer lequel est inférieur à l'autre.
 
@@ -584,11 +584,11 @@ template<class _InIt1, class _InIt2, class _Pr> inline
 
 ### <a name="remarks"></a>Notes
 
-Cette fonction comporte comme la fonction de bibliothèque Standard C++ `lexicographical_compare`. Pour plus d’informations, consultez [lexicographical_compare](../standard-library/algorithm-functions.md#lexicographical_compare).
+Cette fonction se comporte de la même façon que C++ la fonction de bibliothèque standard `lexicographical_compare`. Pour plus d’informations, consultez [lexicographical_compare](../standard-library/algorithm-functions.md#lexicographical_compare).
 
-## <a name="lower_bound"></a> lower_bound (STL/CLR)
+## <a name="lower_bound-stlclr"></a><a name="lower_bound"></a>lower_bound (STL/CLR)
 
-Recherche la position du premier élément dans une plage ordonnée qui a une valeur inférieure ou équivalente à une valeur spécifiée, où le critère de tri peut être spécifié par un prédicat binaire.
+Recherche la position du premier élément d’une plage triée dont la valeur est inférieure ou égale à une valeur spécifiée, où le critère de tri peut être spécifié par un prédicat binaire.
 
 ### <a name="syntax"></a>Syntaxe
 
@@ -602,9 +602,9 @@ template<class _FwdIt, class _Ty, class _Pr> inline
 
 ### <a name="remarks"></a>Notes
 
-Cette fonction comporte comme la fonction de bibliothèque Standard C++ `lower_bound`. Pour plus d’informations, consultez [lower_bound](../standard-library/algorithm-functions.md#lower_bound).
+Cette fonction se comporte de la même façon que C++ la fonction de bibliothèque standard `lower_bound`. Pour plus d’informations, consultez [lower_bound](../standard-library/algorithm-functions.md#lower_bound).
 
-## <a name="make_heap"></a> make_heap (STL/CLR)
+## <a name="make_heap-stlclr"></a><a name="make_heap"></a>make_heap (STL/CLR)
 
 Convertit les éléments d’une plage spécifiée en un tas, dans lequel le premier élément est le plus grand, et pour lequel un critère de tri peut être spécifié à l’aide d’un prédicat binaire.
 
@@ -619,9 +619,9 @@ template<class _RanIt, class _Pr> inline
 
 ### <a name="remarks"></a>Notes
 
-Cette fonction comporte comme la fonction de bibliothèque Standard C++ `make_heap`. Pour plus d’informations, consultez [make_heap](../standard-library/algorithm-functions.md#make_heap).
+Cette fonction se comporte de la même façon que C++ la fonction de bibliothèque standard `make_heap`. Pour plus d’informations, consultez [make_heap](../standard-library/algorithm-functions.md#make_heap).
 
-## <a name="max"></a> max (STL/CLR)
+## <a name="max-stlclr"></a><a name="max"></a>Max (STL/CLR)
 
 Compare deux objets et retourne le plus grand des deux. Un critère de tri peut être spécifié à l’aide d’un prédicat binaire.
 
@@ -636,9 +636,9 @@ template<class _Ty, class _Pr> inline
 
 ### <a name="remarks"></a>Notes
 
-Cette fonction comporte comme la fonction de bibliothèque Standard C++ `max`. Pour plus d’informations, consultez [max](../standard-library/algorithm-functions.md#max).
+Cette fonction se comporte de la même façon que C++ la fonction de bibliothèque standard `max`. Pour plus d’informations, consultez [Max](../standard-library/algorithm-functions.md#max).
 
-## <a name="max_element"></a> max_element (STL/CLR)
+## <a name="max_element-stlclr"></a><a name="max_element"></a>max_element (STL/CLR)
 
 Recherche la première occurrence du plus grand élément dans une plage spécifiée. Un critère de tri peut être spécifié par un prédicat binaire.
 
@@ -653,9 +653,9 @@ template<class _FwdIt, class _Pr> inline
 
 ### <a name="remarks"></a>Notes
 
-Cette fonction comporte comme la fonction de bibliothèque Standard C++ `max_element`. Pour plus d’informations, consultez [max_element](../standard-library/algorithm-functions.md#max_element).
+Cette fonction se comporte de la même façon que C++ la fonction de bibliothèque standard `max_element`. Pour plus d’informations, consultez [max_element](../standard-library/algorithm-functions.md#max_element).
 
-## <a name="merge"></a> fusion (STL/CLR)
+## <a name="merge-stlclr"></a><a name="merge"></a>fusion (STL/CLR)
 
 Regroupe tous les éléments de deux plages sources triées au sein d’une même plage de destination triée. Le critère de tri peut être spécifié par un prédicat binaire.
 
@@ -672,9 +672,9 @@ template<class _InIt1, class _InIt2, class _OutIt, class _Pr> inline
 
 ### <a name="remarks"></a>Notes
 
-Cette fonction comporte comme la fonction de bibliothèque Standard C++ `merge`. Pour plus d’informations, consultez [fusion](../standard-library/algorithm-functions.md#merge).
+Cette fonction se comporte de la même façon que C++ la fonction de bibliothèque standard `merge`. Pour plus d’informations, consultez [Merge](../standard-library/algorithm-functions.md#merge).
 
-## <a name="min"></a> min (STL/CLR)
+## <a name="min-stlclr"></a><a name="min"></a>min (STL/CLR)
 
 Compare deux objets et retourne le plus petit des deux. Un critère de tri peut être spécifié à l’aide d’un prédicat binaire.
 
@@ -689,9 +689,9 @@ template<class _Ty, class _Pr> inline
 
 ### <a name="remarks"></a>Notes
 
-Cette fonction comporte comme la fonction de bibliothèque Standard C++ `min`. Pour plus d’informations, consultez [min](../standard-library/algorithm-functions.md#min).
+Cette fonction se comporte de la même façon que C++ la fonction de bibliothèque standard `min`. Pour plus d’informations, consultez [min](../standard-library/algorithm-functions.md#min).
 
-## <a name="min_element"></a> min_element (STL/CLR)
+## <a name="min_element-stlclr"></a><a name="min_element"></a>min_element (STL/CLR)
 
 Recherche la première occurrence du plus petit élément dans une plage spécifiée. Un critère de tri peut être spécifié par un prédicat binaire.
 
@@ -706,9 +706,9 @@ template<class _FwdIt, class _Pr> inline
 
 ### <a name="remarks"></a>Notes
 
-Cette fonction comporte comme la fonction de bibliothèque Standard C++ `min_element`. Pour plus d’informations, consultez [min_element](../standard-library/algorithm-functions.md#min_element).
+Cette fonction se comporte de la même façon que C++ la fonction de bibliothèque standard `min_element`. Pour plus d’informations, consultez [min_element](../standard-library/algorithm-functions.md#min_element).
 
-## <a name="mismatch"></a> incompatibilité (STL/CLR)
+## <a name="mismatch-stlclr"></a><a name="mismatch"></a>incompatibilité (STL/CLR)
 
 Compare deux plages, élément par élément, à la recherche d’une égalité ou d’une équivalence, selon une condition spécifiée par un prédicat binaire, et recherche la première position où se trouve une différence.
 
@@ -726,9 +726,9 @@ template<class _InIt1, class _InIt2, class _Pr> inline
 
 ### <a name="remarks"></a>Notes
 
-Cette fonction comporte comme la fonction de bibliothèque Standard C++ `mismatch`. Pour plus d’informations, consultez [incompatibilité](../standard-library/algorithm-functions.md#mismatch).
+Cette fonction se comporte de la même façon que C++ la fonction de bibliothèque standard `mismatch`. Pour plus d’informations, consultez [incompatibilité](../standard-library/algorithm-functions.md#mismatch).
 
-## <a name="next_permutation"></a> next_permutation (STL/CLR)
+## <a name="next_permutation-stlclr"></a><a name="next_permutation"></a>next_permutation (STL/CLR)
 
 Réorganise les éléments d’une plage, de sorte que le tri d’origine soit remplacé par la prochaine permutation plus élevée d’un point de vue lexicographique (s’il en existe une). La notion de "prochaine" peut être définie à l’aide d’un prédicat binaire.
 
@@ -743,11 +743,11 @@ template<class _BidIt, class _Pr> inline
 
 ### <a name="remarks"></a>Notes
 
-Cette fonction comporte comme la fonction de bibliothèque Standard C++ `next_permutation`. Pour plus d’informations, consultez [next_permutation](../standard-library/algorithm-functions.md#next_permutation).
+Cette fonction se comporte de la même façon que C++ la fonction de bibliothèque standard `next_permutation`. Pour plus d’informations, consultez [next_permutation](../standard-library/algorithm-functions.md#next_permutation).
 
-## <a name="nth_element"></a> nth_element (STL/CLR)
+## <a name="nth_element-stlclr"></a><a name="nth_element"></a>nth_element (STL/CLR)
 
-Partitionne une plage d’éléments, en recherchant le `n`-ième élément de la séquence dans la plage afin que tous les éléments le précédant lui soient inférieur ou égal à celui-ci et tous les éléments qui suivent dans la séquence sont supérieur ou égal à celui-ci.
+Partitionne une plage d’éléments, en localisant correctement le `n`ième élément de la séquence dans la plage, de sorte que tous les éléments qui le précèdent sont inférieurs ou égaux et que tous les éléments qui le suivent dans la séquence soient supérieurs ou égaux.
 
 ### <a name="syntax"></a>Syntaxe
 
@@ -761,9 +761,9 @@ template<class _RanIt, class _Pr> inline
 
 ### <a name="remarks"></a>Notes
 
-Cette fonction comporte comme la fonction de bibliothèque Standard C++ `nth_element`. Pour plus d’informations, consultez [nth_element](../standard-library/algorithm-functions.md#nth_element).
+Cette fonction se comporte de la même façon que C++ la fonction de bibliothèque standard `nth_element`. Pour plus d’informations, consultez [nth_element](../standard-library/algorithm-functions.md#nth_element).
 
-## <a name="partial_sort"></a> partial_sort (STL/CLR)
+## <a name="partial_sort-stlclr"></a><a name="partial_sort"></a>partial_sort (STL/CLR)
 
 Réorganise un nombre spécifié d’éléments plus petits au sein d’une plage, dans un ordre non décroissant, ou selon un critère de tri spécifié par un prédicat binaire.
 
@@ -779,9 +779,9 @@ template<class _RanIt, class _Pr> inline
 
 ### <a name="remarks"></a>Notes
 
-Cette fonction comporte comme la fonction de bibliothèque Standard C++ `partial_sort`. Pour plus d’informations, consultez [partial_sort](../standard-library/algorithm-functions.md#partial_sort).
+Cette fonction se comporte de la même façon que C++ la fonction de bibliothèque standard `partial_sort`. Pour plus d’informations, consultez [partial_sort](../standard-library/algorithm-functions.md#partial_sort).
 
-## <a name="partial_sort_copy"></a> partial_sort_copy (STL/CLR)
+## <a name="partial_sort_copy-stlclr"></a><a name="partial_sort_copy"></a>partial_sort_copy (STL/CLR)
 
 Copie les éléments d’une plage source dans une plage de destination. Les éléments sources sont triés par ordre croissant ou selon un autre prédicat binaire spécifié.
 
@@ -798,9 +798,9 @@ template<class _InIt, class _RanIt, class _Pr> inline
 
 ### <a name="remarks"></a>Notes
 
-Cette fonction comporte comme la fonction de bibliothèque Standard C++ `partial_sort_copy`. Pour plus d’informations, consultez [partial_sort_copy](../standard-library/algorithm-functions.md#partial_sort_copy).
+Cette fonction se comporte de la même façon que C++ la fonction de bibliothèque standard `partial_sort_copy`. Pour plus d’informations, consultez [partial_sort_copy](../standard-library/algorithm-functions.md#partial_sort_copy).
 
-## <a name="partition"></a> partition (STL/CLR)
+## <a name="partition-stlclr"></a><a name="partition"></a>partition (STL/CLR)
 
 Répartit les éléments d’une plage en deux ensembles disjoints. Les éléments qui répondent à un prédicat unaire doivent précéder ceux qui n’y répondent pas.
 
@@ -813,9 +813,9 @@ template<class _BidIt, class _Pr> inline
 
 ### <a name="remarks"></a>Notes
 
-Cette fonction comporte comme la fonction de bibliothèque Standard C++ `partition`. Pour plus d’informations, consultez [partition](../standard-library/algorithm-functions.md#partition).
+Cette fonction se comporte de la même façon que C++ la fonction de bibliothèque standard `partition`. Pour plus d’informations, consultez [partition](../standard-library/algorithm-functions.md#partition).
 
-## <a name="pop_heap"></a> pop_heap (STL/CLR)
+## <a name="pop_heap-stlclr"></a><a name="pop_heap"></a>pop_heap (STL/CLR)
 
 Retire le plus grand élément du début du tas et le place à l'avant-dernière position de la plage, puis forme un nouveau tas à partir des éléments restants.
 
@@ -830,9 +830,9 @@ template<class _RanIt, class _Pr> inline
 
 ### <a name="remarks"></a>Notes
 
-Cette fonction comporte comme la fonction de bibliothèque Standard C++ `pop_heap`. Pour plus d’informations, consultez [pop_heap](../standard-library/algorithm-functions.md#pop_heap).
+Cette fonction se comporte de la même façon que C++ la fonction de bibliothèque standard `pop_heap`. Pour plus d’informations, consultez [pop_heap](../standard-library/algorithm-functions.md#pop_heap).
 
-## <a name="prev_permutation"></a> prev_permutation (STL/CLR)
+## <a name="prev_permutation-stlclr"></a><a name="prev_permutation"></a>prev_permutation (STL/CLR)
 
 Réorganise les éléments d’une plage, de sorte que le tri d’origine soit remplacé par la prochaine permutation plus élevée d’un point de vue lexicographique (s’il en existe une). La notion de "prochaine" peut être définie à l’aide d’un prédicat binaire.
 
@@ -847,9 +847,9 @@ template<class _BidIt, class _Pr> inline
 
 ### <a name="remarks"></a>Notes
 
-Cette fonction comporte comme la fonction de bibliothèque Standard C++ `prev_permutation`. Pour plus d’informations, consultez [prev_permutation](../standard-library/algorithm-functions.md#prev_permutation).
+Cette fonction se comporte de la même façon que C++ la fonction de bibliothèque standard `prev_permutation`. Pour plus d’informations, consultez [prev_permutation](../standard-library/algorithm-functions.md#prev_permutation).
 
-## <a name="push_heap"></a> push_heap (STL/CLR)
+## <a name="push_heap-stlclr"></a><a name="push_heap"></a>push_heap (STL/CLR)
 
 Ajoute un élément qui se trouve à la fin d'une plage à un tas existant, constitué des éléments précédents de la plage.
 
@@ -864,11 +864,11 @@ template<class _RanIt, class _Pr> inline
 
 ### <a name="remarks"></a>Notes
 
-Cette fonction comporte comme la fonction de bibliothèque Standard C++ `push_heap`. Pour plus d’informations, consultez [push_heap](../standard-library/algorithm-functions.md#push_heap).
+Cette fonction se comporte de la même façon que C++ la fonction de bibliothèque standard `push_heap`. Pour plus d’informations, consultez [push_heap](../standard-library/algorithm-functions.md#push_heap).
 
-## <a name="random_shuffle"></a> random_shuffle (STL/CLR)
+## <a name="random_shuffle-stlclr"></a><a name="random_shuffle"></a>random_shuffle (STL/CLR)
 
-Réorganise une séquence de `N` éléments dans une plage en `N`! dispositions possibles, sélectionnées de manière aléatoire.
+Réorganise une séquence d’éléments `N` d’une plage en l’un des `N`! dispositions possibles, sélectionnées de manière aléatoire.
 
 ### <a name="syntax"></a>Syntaxe
 
@@ -881,9 +881,9 @@ template<class _RanIt, class _Fn1> inline
 
 ### <a name="remarks"></a>Notes
 
-Cette fonction comporte comme la fonction de bibliothèque Standard C++ `random_shuffle`. Pour plus d’informations, consultez [random_shuffle](../standard-library/algorithm-functions.md#random_shuffle).
+Cette fonction se comporte de la même façon que C++ la fonction de bibliothèque standard `random_shuffle`. Pour plus d’informations, consultez [random_shuffle](../standard-library/algorithm-functions.md#random_shuffle).
 
-## <a name="remove"></a> Supprimer (STL/CLR)
+## <a name="remove-stlclr"></a><a name="remove"></a>supprimer (STL/CLR)
 
 Élimine une valeur spécifiée d'une plage donnée sans modifier l'ordre des éléments restants, et retourne la fin d'une nouvelle plage exempte de la valeur spécifiée.
 
@@ -896,9 +896,9 @@ template<class _FwdIt, class _Ty> inline
 
 ### <a name="remarks"></a>Notes
 
-Cette fonction comporte comme la fonction de bibliothèque Standard C++ `remove`. Pour plus d’informations, consultez [supprimer](../standard-library/algorithm-functions.md#remove).
+Cette fonction se comporte de la même façon que C++ la fonction de bibliothèque standard `remove`. Pour plus d’informations, consultez [Remove](../standard-library/algorithm-functions.md#remove).
 
-## <a name="remove_copy"></a> remove_copy (STL/CLR)
+## <a name="remove_copy-stlclr"></a><a name="remove_copy"></a>remove_copy (STL/CLR)
 
 Copie les éléments d'une plage source vers une plage de destination. Les éléments ayant une valeur spécifiée ne sont pas copiés. L'ordre des éléments restants n'est pas modifié et la fin d'une nouvelle plage de destination est retournée.
 
@@ -912,9 +912,9 @@ template<class _InIt, class _OutIt, class _Ty> inline
 
 ### <a name="remarks"></a>Notes
 
-Cette fonction comporte comme la fonction de bibliothèque Standard C++ `remove_copy`. Pour plus d’informations, consultez [remove_copy](../standard-library/algorithm-functions.md#remove_copy).
+Cette fonction se comporte de la même façon que C++ la fonction de bibliothèque standard `remove_copy`. Pour plus d’informations, consultez [remove_copy](../standard-library/algorithm-functions.md#remove_copy).
 
-## <a name="remove_copy_if"></a> remove_copy_if (STL/CLR)
+## <a name="remove_copy_if-stlclr"></a><a name="remove_copy_if"></a>remove_copy_if (STL/CLR)
 
 Copie les éléments d'une plage source vers une plage de destination. Les éléments répondant à un prédicat ne sont pas copiés. L'ordre des éléments restants n'est pas modifié et la fin d'une nouvelle plage de destination est retournée.
 
@@ -928,9 +928,9 @@ template<class _InIt, class _OutIt, class _Pr> inline
 
 ### <a name="remarks"></a>Notes
 
-Cette fonction comporte comme la fonction de bibliothèque Standard C++ `remove_copy_if`. Pour plus d’informations, consultez [remove_copy_if](../standard-library/algorithm-functions.md#remove_copy_if).
+Cette fonction se comporte de la même façon que C++ la fonction de bibliothèque standard `remove_copy_if`. Pour plus d’informations, consultez [remove_copy_if](../standard-library/algorithm-functions.md#remove_copy_if).
 
-## <a name="remove_if"></a> remove_if (STL/CLR)
+## <a name="remove_if-stlclr"></a><a name="remove_if"></a>remove_if (STL/CLR)
 
 Élimine d’une plage donnée les éléments qui répondent à un prédicat, sans modifier l’ordre des éléments restants et en retournant la fin d’une nouvelle plage exempte de la valeur spécifiée.
 
@@ -943,9 +943,9 @@ template<class _FwdIt, class _Pr> inline
 
 ### <a name="remarks"></a>Notes
 
-Cette fonction comporte comme la fonction de bibliothèque Standard C++ `remove_if`. Pour plus d’informations, consultez [remove_if](../standard-library/algorithm-functions.md#remove_if).
+Cette fonction se comporte de la même façon que C++ la fonction de bibliothèque standard `remove_if`. Pour plus d’informations, consultez [remove_if](../standard-library/algorithm-functions.md#remove_if).
 
-## <a name="replace"></a> Replace (STL/CLR)
+## <a name="replace-stlclr"></a><a name="replace"></a>remplacer (STL/CLR)
 
 Examine tous les éléments d'une plage et les remplace s'ils correspondent à une valeur spécifiée.
 
@@ -959,9 +959,9 @@ template<class _FwdIt, class _Ty> inline
 
 ### <a name="remarks"></a>Notes
 
-Cette fonction comporte comme la fonction de bibliothèque Standard C++ `replace`. Pour plus d’informations, consultez [remplacer](../standard-library/algorithm-functions.md#replace).
+Cette fonction se comporte de la même façon que C++ la fonction de bibliothèque standard `replace`. Pour plus d’informations, consultez [Replace](../standard-library/algorithm-functions.md#replace).
 
-## <a name="replace_copy"></a> replace_copy (STL/CLR)
+## <a name="replace_copy-stlclr"></a><a name="replace_copy"></a>replace_copy (STL/CLR)
 
 Examine tous les éléments d'une plage source et les remplace s'ils correspondent à une valeur spécifiée, tout en copiant le résultat dans une nouvelle plage de destination.
 
@@ -975,9 +975,9 @@ template<class _InIt, class _OutIt, class _Ty> inline
 
 ### <a name="remarks"></a>Notes
 
-Cette fonction comporte comme la fonction de bibliothèque Standard C++ `replace_copy`. Pour plus d’informations, consultez [replace_copy](../standard-library/algorithm-functions.md#replace_copy).
+Cette fonction se comporte de la même façon que C++ la fonction de bibliothèque standard `replace_copy`. Pour plus d’informations, consultez [replace_copy](../standard-library/algorithm-functions.md#replace_copy).
 
-## <a name="replace_copy_if"></a> replace_copy_if (STL/CLR)
+## <a name="replace_copy_if-stlclr"></a><a name="replace_copy_if"></a>replace_copy_if (STL/CLR)
 
 Examine tous les éléments d'une plage source et les remplace s'ils répondent à un prédicat, tout en copiant le résultat dans une nouvelle plage de destination.
 
@@ -991,9 +991,9 @@ template<class _InIt, class _OutIt, class _Pr, class _Ty> inline
 
 ### <a name="remarks"></a>Notes
 
-Cette fonction comporte comme la fonction de bibliothèque Standard C++ `replace_copy_if`. Pour plus d’informations, consultez [replace_copy_if](../standard-library/algorithm-functions.md#replace_copy_if).
+Cette fonction se comporte de la même façon que C++ la fonction de bibliothèque standard `replace_copy_if`. Pour plus d’informations, consultez [replace_copy_if](../standard-library/algorithm-functions.md#replace_copy_if).
 
-## <a name="replace_if"></a> replace_if (STL/CLR)
+## <a name="replace_if-stlclr"></a><a name="replace_if"></a>replace_if (STL/CLR)
 
 Examine tous les éléments d’une plage et les remplace s’ils répondent à un prédicat spécifié.
 
@@ -1007,9 +1007,9 @@ template<class _FwdIt, class _Pr, class _Ty> inline
 
 ### <a name="remarks"></a>Notes
 
-Cette fonction comporte comme la fonction de bibliothèque Standard C++ `replace_if`. Pour plus d’informations, consultez [replace_if](../standard-library/algorithm-functions.md#replace_if).
+Cette fonction se comporte de la même façon que C++ la fonction de bibliothèque standard `replace_if`. Pour plus d’informations, consultez [replace_if](../standard-library/algorithm-functions.md#replace_if).
 
-## <a name="reverse"></a> Reverse (STL/CLR)
+## <a name="reverse-stlclr"></a><a name="reverse"></a>inverse (STL/CLR)
 
 Inverse l'ordre des éléments d'une plage.
 
@@ -1022,11 +1022,11 @@ template<class _BidIt> inline
 
 ### <a name="remarks"></a>Notes
 
-Cette fonction comporte comme la fonction de bibliothèque Standard C++ `reverse`. Pour plus d’informations, consultez [inverse](../standard-library/algorithm-functions.md#reverse).
+Cette fonction se comporte de la même façon que C++ la fonction de bibliothèque standard `reverse`. Pour plus d’informations, consultez [inverser](../standard-library/algorithm-functions.md#reverse).
 
-## <a name="reverse_copy"></a> reverse_copy (STL/CLR)
+## <a name="reverse_copy-stlclr"></a><a name="reverse_copy"></a>reverse_copy (STL/CLR)
 
-Inverse l’ordre des éléments dans une plage source tout en les copiant dans une plage de destination.
+Inverse l’ordre des éléments au sein d’une plage source lors de leur copie dans une plage de destination.
 
 ### <a name="syntax"></a>Syntaxe
 
@@ -1037,9 +1037,9 @@ template<class _BidIt, class _OutIt> inline
 
 ### <a name="remarks"></a>Notes
 
-Cette fonction comporte comme la fonction de bibliothèque Standard C++ `reverse_copy`. Pour plus d’informations, consultez [reverse_copy](../standard-library/algorithm-functions.md#reverse_copy).
+Cette fonction se comporte de la même façon que C++ la fonction de bibliothèque standard `reverse_copy`. Pour plus d’informations, consultez [reverse_copy](../standard-library/algorithm-functions.md#reverse_copy).
 
-## <a name="rotate"></a> faire pivoter (STL/CLR)
+## <a name="rotate-stlclr"></a><a name="rotate"></a>Rotate (STL/CLR)
 
 Échange les éléments de deux plages adjacentes.
 
@@ -1052,9 +1052,9 @@ template<class _FwdIt> inline
 
 ### <a name="remarks"></a>Notes
 
-Cette fonction comporte comme la fonction de bibliothèque Standard C++ `rotate`. Pour plus d’informations, consultez [pivoter](../standard-library/algorithm-functions.md#rotate).
+Cette fonction se comporte de la même façon que C++ la fonction de bibliothèque standard `rotate`. Pour plus d’informations, consultez [faire pivoter](../standard-library/algorithm-functions.md#rotate).
 
-## <a name="rotate_copy"></a> rotate_copy (STL/CLR)
+## <a name="rotate_copy-stlclr"></a><a name="rotate_copy"></a>rotate_copy (STL/CLR)
 
 Échange les éléments de deux plages adjacentes au sein d'une plage source et copie le résultat dans une plage de destination.
 
@@ -1068,9 +1068,9 @@ template<class _FwdIt, class _OutIt> inline
 
 ### <a name="remarks"></a>Notes
 
-Cette fonction comporte comme la fonction de bibliothèque Standard C++ `rotate_copy`. Pour plus d’informations, consultez [rotate_copy](../standard-library/algorithm-functions.md#rotate_copy).
+Cette fonction se comporte de la même façon que C++ la fonction de bibliothèque standard `rotate_copy`. Pour plus d’informations, consultez [rotate_copy](../standard-library/algorithm-functions.md#rotate_copy).
 
-## <a name="search_"></a> recherche (STL/CLR)
+## <a name="search-stlclr"></a><a name="search_"></a>recherche (STL/CLR)
 
 Recherche la première occurrence d’une séquence au sein d’une plage cible dont les éléments sont égaux à ceux d’une séquence d’éléments donnée ou dont les éléments sont équivalents à ceux d’une séquence donnée, selon un prédicat binaire spécifié.
 
@@ -1087,9 +1087,9 @@ template<class _FwdIt1, class _FwdIt2, class _Pr> inline
 
 ### <a name="remarks"></a>Notes
 
-Cette fonction comporte comme la fonction de bibliothèque Standard C++ `search`. Pour plus d’informations, consultez [recherche](../standard-library/algorithm-functions.md#search).
+Cette fonction se comporte de la même façon que C++ la fonction de bibliothèque standard `search`. Pour plus d’informations, consultez [recherche](../standard-library/algorithm-functions.md#search).
 
-## <a name="search_n"></a> search_n (STL/CLR)
+## <a name="search_n-stlclr"></a><a name="search_n"></a>search_n (STL/CLR)
 
 Recherche la première sous-séquence d’une plage dont un nombre spécifié d’éléments ont une valeur particulière ou une relation à cette valeur, selon un prédicat binaire spécifié.
 
@@ -1106,9 +1106,9 @@ template<class _FwdIt1, class _Diff2, class _Ty, class _Pr> inline
 
 ### <a name="remarks"></a>Notes
 
-Cette fonction comporte comme la fonction de bibliothèque Standard C++ `search_n`. Pour plus d’informations, consultez [search_n](../standard-library/algorithm-functions.md#search_n).
+Cette fonction se comporte de la même façon que C++ la fonction de bibliothèque standard `search_n`. Pour plus d’informations, consultez [search_n](../standard-library/algorithm-functions.md#search_n).
 
-## <a name="set_difference"></a> set_difference (STL/CLR)
+## <a name="set_difference-stlclr"></a><a name="set_difference"></a>set_difference (STL/CLR)
 
 Regroupe tous les éléments qui appartiennent à une plage source triée, mais pas à une autre plage source triée, en une même plage de destination triée. Un critère de tri peut être spécifié par un prédicat binaire.
 
@@ -1125,9 +1125,9 @@ template<class _InIt1, class _InIt2, class _OutIt, class _Pr> inline
 
 ### <a name="remarks"></a>Notes
 
-Cette fonction comporte comme la fonction de bibliothèque Standard C++ `set_difference`. Pour plus d’informations, consultez [set_difference](../standard-library/algorithm-functions.md#set_difference).
+Cette fonction se comporte de la même façon que C++ la fonction de bibliothèque standard `set_difference`. Pour plus d’informations, consultez [set_difference](../standard-library/algorithm-functions.md#set_difference).
 
-## <a name="set_intersection"></a> set_intersection (STL/CLR)
+## <a name="set_intersection-stlclr"></a><a name="set_intersection"></a>set_intersection (STL/CLR)
 
 Regroupe tous les éléments de deux plages sources triées au sein d'une même plage de destination triée. Le critère de tri peut être spécifié par un prédicat binaire.
 
@@ -1144,9 +1144,9 @@ template<class _InIt1, class _InIt2, class _OutIt, class _Pr> inline
 
 ### <a name="remarks"></a>Notes
 
-Cette fonction comporte comme la fonction de bibliothèque Standard C++ `set_intersection`. Pour plus d’informations, consultez [set_intersection](../standard-library/algorithm-functions.md#set_intersection).
+Cette fonction se comporte de la même façon que C++ la fonction de bibliothèque standard `set_intersection`. Pour plus d’informations, consultez [set_intersection](../standard-library/algorithm-functions.md#set_intersection).
 
-## <a name="set_symmetric_difference"></a> set_symmetric_difference (STL/CLR)
+## <a name="set_symmetric_difference-stlclr"></a><a name="set_symmetric_difference"></a>set_symmetric_difference (STL/CLR)
 
 Regroupe tous les éléments qui appartiennent à l'une de deux plages sources triées (mais pas aux deux) au sein d'une même plage de destination triée. Le critère de tri peut être spécifié par un prédicat binaire.
 
@@ -1163,9 +1163,9 @@ template<class _InIt1, class _InIt2, class _OutIt, class _Pr> inline
 
 ### <a name="remarks"></a>Notes
 
-Cette fonction comporte comme la fonction de bibliothèque Standard C++ `set_symmetric_difference`. Pour plus d’informations, consultez [set_symmetric_difference](../standard-library/algorithm-functions.md#set_symmetric_difference).
+Cette fonction se comporte de la même façon que C++ la fonction de bibliothèque standard `set_symmetric_difference`. Pour plus d’informations, consultez [set_symmetric_difference](../standard-library/algorithm-functions.md#set_symmetric_difference).
 
-## <a name="set_union"></a> set_union (STL/CLR)
+## <a name="set_union-stlclr"></a><a name="set_union"></a>set_union (STL/CLR)
 
 Regroupe tous les éléments qui appartiennent au moins à l'une de deux plages sources triées au sein d'une même plage de destination triée. Le critère de tri peut être spécifié par un prédicat binaire.
 
@@ -1182,9 +1182,9 @@ template<class _InIt1, class _InIt2, class _OutIt, class _Pr> inline
 
 ### <a name="remarks"></a>Notes
 
-Cette fonction comporte comme la fonction de bibliothèque Standard C++ `set_union`. Pour plus d’informations, consultez [set_union](../standard-library/algorithm-functions.md#set_union).
+Cette fonction se comporte de la même façon que C++ la fonction de bibliothèque standard `set_union`. Pour plus d’informations, consultez [set_union](../standard-library/algorithm-functions.md#set_union).
 
-## <a name="sort"></a> tri (STL/CLR)
+## <a name="sort-stlclr"></a><a name="sort"></a>tri (STL/CLR)
 
 Réorganise les éléments d’une plage spécifiée, dans un ordre non décroissant, ou selon un critère de tri spécifié par un prédicat binaire.
 
@@ -1199,9 +1199,9 @@ template<class _RanIt, class _Pr> inline
 
 ### <a name="remarks"></a>Notes
 
-Cette fonction comporte comme la fonction de bibliothèque Standard C++ `sort`. Pour plus d’informations, consultez [tri](../mfc/reference/cmfclistctrl-class.md#sort).
+Cette fonction se comporte de la même façon que C++ la fonction de bibliothèque standard `sort`. Pour plus d’informations, consultez [sort](../mfc/reference/cmfclistctrl-class.md#sort).
 
-## <a name="sort_heap"></a> sort_heap (STL/CLR)
+## <a name="sort_heap-stlclr"></a><a name="sort_heap"></a>sort_heap (STL/CLR)
 
 Convertit un tas en une plage triée.
 
@@ -1216,9 +1216,9 @@ template<class _RanIt, class _Pr> inline
 
 ### <a name="remarks"></a>Notes
 
-Cette fonction comporte comme la fonction de bibliothèque Standard C++ `sort_heap`. Pour plus d’informations, consultez [sort_heap](../standard-library/algorithm-functions.md#sort_heap).
+Cette fonction se comporte de la même façon que C++ la fonction de bibliothèque standard `sort_heap`. Pour plus d’informations, consultez [sort_heap](../standard-library/algorithm-functions.md#sort_heap).
 
-## <a name="stable_partition"></a> stable_partition (STL/CLR)
+## <a name="stable_partition-stlclr"></a><a name="stable_partition"></a>stable_partition (STL/CLR)
 
 Classe les éléments d’une plage en deux ensembles disjoints. Les éléments qui répondent à un prédicat unaire doivent précéder ceux qui n’y répondent pas, et l’ordre relatif des éléments équivalents doit être conservé.
 
@@ -1231,9 +1231,9 @@ template<class _BidIt, class _Pr> inline
 
 ### <a name="remarks"></a>Notes
 
-Cette fonction comporte comme la fonction de bibliothèque Standard C++ `stable_partition`. Pour plus d’informations, consultez [stable_partition](../standard-library/algorithm-functions.md#stable_partition).
+Cette fonction se comporte de la même façon que C++ la fonction de bibliothèque standard `stable_partition`. Pour plus d’informations, consultez [stable_partition](../standard-library/algorithm-functions.md#stable_partition).
 
-## <a name="stable_sort"></a> stable_sort (STL/CLR)
+## <a name="stable_sort-stlclr"></a><a name="stable_sort"></a>stable_sort (STL/CLR)
 
 Classe les éléments d’une plage spécifiée dans un ordre non décroissant, ou selon un critère de tri spécifié par un prédicat binaire, et conserve l’ordre relatif des éléments équivalents.
 
@@ -1248,9 +1248,9 @@ template<class _BidIt, class _Pr> inline
 
 ### <a name="remarks"></a>Notes
 
-Cette fonction comporte comme la fonction de bibliothèque Standard C++ `stable_sort`. Pour plus d’informations, consultez [stable_sort](../standard-library/algorithm-functions.md#stable_sort).
+Cette fonction se comporte de la même façon que C++ la fonction de bibliothèque standard `stable_sort`. Pour plus d’informations, consultez [stable_sort](../standard-library/algorithm-functions.md#stable_sort).
 
-## <a name="swap"></a> swap (STL/CLR)
+## <a name="swap-stlclr"></a><a name="swap"></a>swap (STL/CLR)
 
 Échange les valeurs des éléments de deux types d'objets, en assignant le contenu du premier objet au deuxième objet, et le contenu du deuxième au premier.
 
@@ -1263,9 +1263,9 @@ Cette fonction comporte comme la fonction de bibliothèque Standard C++ `stable_
 
 ### <a name="remarks"></a>Notes
 
-Cette fonction comporte comme la fonction de bibliothèque Standard C++ `swap`. Pour plus d’informations, consultez [échange](../standard-library/algorithm-functions.md#swap).
+Cette fonction se comporte de la même façon que C++ la fonction de bibliothèque standard `swap`. Pour plus d’informations, consultez [swap](../standard-library/algorithm-functions.md#swap).
 
-## <a name="swap_ranges"></a> swap_ranges (STL/CLR)
+## <a name="swap_ranges-stlclr"></a><a name="swap_ranges"></a>swap_ranges (STL/CLR)
 
 Échange les éléments d'une plage avec ceux d'une autre plage de taille égale.
 
@@ -1279,9 +1279,9 @@ template<class _FwdIt1, class _FwdIt2> inline
 
 ### <a name="remarks"></a>Notes
 
-Cette fonction comporte comme la fonction de bibliothèque Standard C++ `swap_ranges`. Pour plus d’informations, consultez [swap_ranges](../standard-library/algorithm-functions.md#swap_ranges).
+Cette fonction se comporte de la même façon que C++ la fonction de bibliothèque standard `swap_ranges`. Pour plus d’informations, consultez [swap_ranges](../standard-library/algorithm-functions.md#swap_ranges).
 
-## <a name="transform"></a> transformation (STL/CLR)
+## <a name="transform-stlclr"></a><a name="transform"></a>transformation (STL/CLR)
 
 Applique un objet de fonction spécifié à chaque élément d'une plage source ou à une paire d'éléments de deux plages sources, et copie les valeurs de retour de l'objet de fonction dans une plage de destination.
 
@@ -1298,9 +1298,9 @@ template<class _InIt1, class _InIt2, class _OutIt, class _Fn2> inline
 
 ### <a name="remarks"></a>Notes
 
-Cette fonction comporte comme la fonction de bibliothèque Standard C++ `transform`. Pour plus d’informations, consultez [transformer](../standard-library/algorithm-functions.md#transform).
+Cette fonction se comporte de la même façon que C++ la fonction de bibliothèque standard `transform`. Pour plus d’informations, consultez [transformation](../standard-library/algorithm-functions.md#transform).
 
-## <a name="unique"></a> unique (STL/CLR)
+## <a name="unique-stlclr"></a><a name="unique"></a>unique (STL/CLR)
 
 Supprime les éléments en double adjacents dans une plage spécifiée.
 
@@ -1315,9 +1315,9 @@ template<class _FwdIt, class _Pr> inline
 
 ### <a name="remarks"></a>Notes
 
-Cette fonction comporte comme la fonction de bibliothèque Standard C++ `unique`. Pour plus d’informations, consultez [unique](../standard-library/algorithm-functions.md#unique).
+Cette fonction se comporte de la même façon que C++ la fonction de bibliothèque standard `unique`. Pour plus d’informations, consultez [unique](../standard-library/algorithm-functions.md#unique).
 
-## <a name="unique_copy"></a> unique_copy (STL/CLR)
+## <a name="unique_copy-stlclr"></a><a name="unique_copy"></a>unique_copy (STL/CLR)
 
 Copie les éléments d'une plage source dans une plage de destination, à l'exception des éléments en double adjacents.
 
@@ -1333,9 +1333,9 @@ template<class _InIt, class _OutIt, class _Pr> inline
 
 ### <a name="remarks"></a>Notes
 
-Cette fonction comporte comme la fonction de bibliothèque Standard C++ `unique_copy`. Pour plus d’informations, consultez [unique_copy](../standard-library/algorithm-functions.md#unique_copy).
+Cette fonction se comporte de la même façon que C++ la fonction de bibliothèque standard `unique_copy`. Pour plus d’informations, consultez [unique_copy](../standard-library/algorithm-functions.md#unique_copy).
 
-## <a name="upper_bound"></a> upper_bound (STL/CLR)
+## <a name="upper_bound-stlclr"></a><a name="upper_bound"></a>upper_bound (STL/CLR)
 
 Recherche la position du premier élément d’une plage triée dont la valeur est supérieure à une valeur spécifiée. Le critère de tri peut être spécifié par un prédicat binaire.
 
@@ -1351,4 +1351,4 @@ template<class _FwdIt, class _Ty, class _Pr> inline
 
 ### <a name="remarks"></a>Notes
 
-Cette fonction comporte comme la fonction de bibliothèque Standard C++ `upper_bound`. Pour plus d’informations, consultez [upper_bound](../standard-library/algorithm-functions.md#upper_bound).
+Cette fonction se comporte de la même façon que C++ la fonction de bibliothèque standard `upper_bound`. Pour plus d’informations, consultez [upper_bound](../standard-library/algorithm-functions.md#upper_bound).

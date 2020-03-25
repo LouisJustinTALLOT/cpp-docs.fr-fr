@@ -5,12 +5,12 @@ helpviewer_keywords:
 - cast operators [C++]
 - () cast operator
 ms.assetid: 4c99eb92-1b19-4a5d-9840-5d8c29b8453e
-ms.openlocfilehash: 54345637665736085d812b88f5822a94014eaa74
-ms.sourcegitcommit: c6f8e6c2daec40ff4effd8ca99a7014a3b41ef33
+ms.openlocfilehash: 491e8ea3bc3ff81e88825700de6a549324a0d5af
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "64345084"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80190155"
 ---
 # <a name="cast-operator-"></a>Opérateur de cast : ()
 

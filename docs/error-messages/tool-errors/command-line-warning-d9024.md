@@ -6,31 +6,31 @@ f1_keywords:
 helpviewer_keywords:
 - D9024
 ms.assetid: daf4896d-223d-4af0-9b6d-89109cf3d1bb
-ms.openlocfilehash: c577aceacef748045f867a6bc253a1dd6c84aafe
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 5de051b9ca5c09af74b94be4b75616bce6fadf2c
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62214153"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80196758"
 ---
 # <a name="command-line-warning-d9024"></a>Avertissement de ligne de commande D9024
 
-source non reconnu 'nom_fichier' de type de fichier, de l’objet fichier supposé
+type de fichier source non reconnu’nom_fichier', fichier objet pris par défaut
 
-L’extension du fichier spécifié n’a pas été reconnue. Le fichier était supposé pour être un fichier objet et a été passé à l’éditeur de liens.
+L’extension du fichier spécifié n’a pas été reconnue. Le fichier était supposé être un fichier objet et a été passé à l’éditeur de liens.
 
 Les extensions suivantes sont reconnues :
 
-- .c (fichier de code source C)
+- . c (fichier source C)
 
-- .cxx (fichier de code source C++)
+- . CXX (C++ fichier source)
 
-- .cpp (fichier de code source C++)
+- . cpp (C++ fichier source)
 
-- .obj (fichier objet)
+- . obj (fichier objet)
 
-- .lib (fichier de bibliothèque)
+- . lib (fichier bibliothèque)
 
-- .def (fichier de définition de module)
+- . def (fichier de définition de module)
 
-- .exp (éditeur de liens exporte le fichier, créé par LINK /LIB)
+- . exp (fichier d’exportation de l’éditeur de liens, créé par LINK/LIB)

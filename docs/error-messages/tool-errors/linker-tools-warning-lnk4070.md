@@ -6,19 +6,19 @@ f1_keywords:
 helpviewer_keywords:
 - LNK4070
 ms.assetid: f95f179a-fff9-427e-bd51-466b3934517f
-ms.openlocfilehash: e7139b21f053ea8633356c7194cd719a6a4aef35
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 391a477625b51fd37eacc5d455801ce90d2abbc2
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62410263"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80194003"
 ---
 # <a name="linker-tools-warning-lnk4070"></a>Avertissement des outils Éditeur de liens LNK4070
 
-Directive/out : filename dans. EXP diffère de nom de fichier de sortie 'nom_fichier' ; directive ignorée
+Directive/OUT : filename dans. EXP diffère du nom de fichier de sortie’nom_fichier'; directive ignorée
 
-Le `filename` spécifié dans le [nom](../../build/reference/name-c-cpp.md) ou [bibliothèque](../../build/reference/library.md) instruction lors de la création du fichier .exp est différente de la sortie `filename` qui était supposé par défaut ou spécifié avec le [/OUT](../../build/reference/out-output-file-name.md) option.
+La `filename` spécifiée dans l’instruction [Name](../../build/reference/name-c-cpp.md) ou [Library](../../build/reference/library.md) lors de la création du fichier. exp est différente de la `filename` de sortie supposée par défaut ou spécifiée avec l’option [/out](../../build/reference/out-output-file-name.md) .
 
-Vous verrez cet avertissement si vous modifiez le nom d’un fichier de sortie dans l’environnement de développement et où le fichier du projet .def n’a pas mis à jour. Mettre à jour manuellement le fichier .def pour résoudre cet avertissement.
+Cet avertissement s’affiche si vous modifiez le nom d’un fichier de sortie dans l’environnement de développement et si le fichier. def du projet n’a pas été mis à jour. Mettez à jour manuellement le fichier. def pour résoudre cet avertissement.
 
-Un programme client qui utilise la DLL résultante peut engendrer des problèmes.
+Un programme client qui utilise la DLL résultante peut rencontrer des problèmes.

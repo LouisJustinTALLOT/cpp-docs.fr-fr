@@ -6,20 +6,20 @@ f1_keywords:
 helpviewer_keywords:
 - D9036
 ms.assetid: 68276e84-8d4e-4d4a-a9db-2874c81dfe66
-ms.openlocfilehash: 2dd6cd528f6a3799176c77435ebd62d103303806
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 16e97819c7e3752285b8f8caa69517d5a06a4701
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62213794"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80196623"
 ---
 # <a name="command-line-warning-d9036"></a>Avertissement de ligne de commande D9036
 
-> «*option\_2*« au lieu de »*option\_1*»
+> '*option\_2*'au lieu de'*option\_1*'
 
 ## <a name="remarks"></a>Notes
 
-Avertissement D9036 est la suite de [avertissement de ligne de commande D9035](../../error-messages/tool-errors/command-line-warning-d9035.md). Si vous préférez utiliser au lieu de l’option déconseillée une option du compilateur, il est répertorié ici. Pour obtenir des liens pour plus d’informations, consultez [déconseillées et des options du compilateur supprimé](../../build/reference/compiler-options-listed-by-category.md#deprecated-and-removed-compiler-options).
+Warning D9036 est la continuation de l' [avertissement de ligne de commande D9035](../../error-messages/tool-errors/command-line-warning-d9035.md). Si une option du compilateur est préférable à la place de l’option déconseillé, elle est répertoriée ici. Pour obtenir des liens vers des informations supplémentaires, consultez [Options du compilateur déconseillées et supprimées](../../build/reference/compiler-options-listed-by-category.md#deprecated-and-removed-compiler-options).
 
 ## <a name="see-also"></a>Voir aussi
 

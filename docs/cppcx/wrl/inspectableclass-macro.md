@@ -5,12 +5,12 @@ ms.topic: reference
 f1_keywords:
 - implements/Microsoft::WRL::InspectableClass
 ms.assetid: ff390b26-58cc-424f-87ac-1fe3cc692b59
-ms.openlocfilehash: ee2a76edb967923a03ce6720b4163baf1cc48c32
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: 755a8f58ffc290d73d6060b0b0924905ecbf6028
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69500478"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80213874"
 ---
 # <a name="inspectableclass-macro"></a>InspectableClass, macro
 
@@ -36,11 +36,11 @@ Une des valeurs énumérées de [trustLevel](/windows/win32/api/inspectable/ne-i
 
 La macro **inspectableclass,** peut être utilisée uniquement avec des types de Windows Runtime.
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
-**En-tête:** Implements. h
+**En-tête :** Implements. h
 
-**Espace de noms :** Microsoft:: WRL
+**Espace de noms :** Microsoft::WRL
 
 ## <a name="see-also"></a>Voir aussi
 

@@ -31,12 +31,12 @@ helpviewer_keywords:
 - SetData method
 - FlushData method
 ms.assetid: 1e9fee15-ed9e-4387-af8f-215569beca6c
-ms.openlocfilehash: 1e07289a2d0fb283a20657797db5f915c06a39ad
-ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
+ms.openlocfilehash: b069cd08814855a0528806ac6d19ed8f5beb6f37
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/17/2020
-ms.locfileid: "79446319"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80210455"
 ---
 # <a name="irowsetchangeimpl-class"></a>IRowsetChangeImpl Class
 
@@ -108,7 +108,7 @@ L’implémentation des modèles OLE DB prend en charge toutes les méthodes de 
 
 - Voyez également comment la classe `RUpdateRowset` est utilisée dans l’exemple [UpdatePV](https://github.com/Microsoft/VCSamples/tree/master/VC2010Samples/ATL/OLEDB/Provider/UPDATEPV) .
 
-## <a name="deleterows"></a>IRowsetChangeImpl ::D eleteRows
+## <a name="irowsetchangeimpldeleterows"></a><a name="deleterows"></a>IRowsetChangeImpl ::D eleteRows
 
 Supprime des lignes de l’ensemble de lignes.
 
@@ -125,7 +125,7 @@ STDMETHOD (DeleteRows )(HCHAPTER /* hReserved */,
 
 Consultez [IRowsetChange ::D eleterows](/previous-versions/windows/desktop/ms724362(v=vs.85)) dans le *Guide de référence du programmeur OLE DB*.
 
-## <a name="insertrow"></a>IRowsetChangeImpl :: InsertRow
+## <a name="irowsetchangeimplinsertrow"></a><a name="insertrow"></a>IRowsetChangeImpl :: InsertRow
 
 Crée et Initialise une nouvelle ligne dans l’ensemble de lignes.
 
@@ -142,7 +142,7 @@ STDMETHOD (InsertRow )(HCHAPTER /* hReserved */,
 
 Consultez [IRowsetChange :: InsertRow](/previous-versions/windows/desktop/ms716921(v=vs.85)) dans le *Guide de référence du programmeur OLE DB*.
 
-## <a name="setdata"></a>IRowsetChangeImpl :: SetData
+## <a name="irowsetchangeimplsetdata"></a><a name="setdata"></a>IRowsetChangeImpl :: SetData
 
 Définit des valeurs de données dans une ou plusieurs colonnes.
 
@@ -158,7 +158,7 @@ STDMETHOD (SetData )(HROW hRow,
 
 Consultez [IRowsetChange :: SetData](/previous-versions/windows/desktop/ms721232(v=vs.85)) dans le *Guide de référence du programmeur OLE DB*.
 
-## <a name="flushdata"></a>IRowsetChangeImpl :: FlushData
+## <a name="irowsetchangeimplflushdata"></a><a name="flushdata"></a>IRowsetChangeImpl :: FlushData
 
 Remplacé par le fournisseur pour valider les données dans son magasin.
 

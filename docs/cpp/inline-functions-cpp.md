@@ -12,12 +12,12 @@ f1_keywords:
 helpviewer_keywords:
 - inline functions [C++], class members
 ms.assetid: 355f120c-2847-4608-ac04-8dda18ffe10c
-ms.openlocfilehash: efaaacc46f63ac1a702ab2110d35fe80727ead1d
-ms.sourcegitcommit: a6d63c07ab9ec251c48bc003ab2933cf01263f19
+ms.openlocfilehash: b13007211857d84e4f3b33c80ed6b5beaf6f0bcf
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "74857513"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80178235"
 ---
 # <a name="inline-functions-c"></a>Fonctions inline (C++)
 
@@ -94,7 +94,7 @@ L’option d’optimisation du compilateur [/ob](../build/reference/ob-inline-fu
 
 [/LTCG](../build/reference/ltcg-link-time-code-generation.md) effectue une incorporation entre modules, qu’elle ait été demandée ou non dans le code source.
 
-### <a name="example-1"></a>Exemple 1
+### <a name="example-1"></a>Exemple 1
 
 ```cpp
 // inline_keyword1.cpp
@@ -108,7 +108,7 @@ inline int max( int a , int b ) {
 
 Les fonctions membres d’une classe peuvent être déclarées Inline à l’aide du mot clé **inline** ou en plaçant la définition de fonction dans la définition de classe.
 
-### <a name="example-2"></a>Exemple 2
+### <a name="example-2"></a>Exemple 2
 
 ```cpp
 // inline_keyword2.cpp
@@ -207,7 +207,7 @@ En supposant que la manipulation de coordonnées est une opération relativement
 
 - Restauration de l'ancien frame de pile
 
-- Return
+- Renvoie
 
 ## <a name="inline-functions-vs-macros"></a>Fonctions inline et macros
 

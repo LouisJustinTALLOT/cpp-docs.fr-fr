@@ -6,18 +6,18 @@ f1_keywords:
 helpviewer_keywords:
 - LNK4037
 ms.assetid: 9ba02fd3-b04f-4679-bab9-26fa82cf09bb
-ms.openlocfilehash: 9a8121617e622fc12efe5bd26aac23faf2530f24
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 43fae7d0f19f96998d2e1a1739bc3e596bbd9ea9
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62410302"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80194198"
 ---
 # <a name="linker-tools-warning-lnk4037"></a>Avertissement des outils Éditeur de liens LNK4037
 
->«*symbole*' n’existe pas ; ignoré
+>'*symbol*'n’existe pas ; pas
 
-Le nom décoré *symbole* n’a pas pu être trié à l’aide de la [/Order](../../build/reference/order-put-functions-in-order.md) option, car il est introuvable dans le programme. Vérifiez la spécification de *symbole* dans le fichier de réponse de commande. Pour plus d’informations, consultez le [/ORDER (mettre les fonctions dans l’ordre)](../../build/reference/order-put-functions-in-order.md) option de l’éditeur de liens.
+Le *symbole* de nom décoré n’a pas pu être trié à l’aide de l’option [/Order](../../build/reference/order-put-functions-in-order.md) , car il est introuvable dans le programme. Vérifiez la spécification du *symbole* dans le fichier de réponse de commande. Pour plus d’informations, consultez l’option de l’éditeur de liens [/Order (mettre les fonctions dans l’ordre)](../../build/reference/order-put-functions-in-order.md) .
 
 > [!NOTE]
-> LIEN ne peut pas classer les fonctions statiques, car les noms de fonctions statiques ne sont pas des noms de symboles publics. Lorsque **/Order** est spécifié, l’éditeur de liens en cet avertissement est généré pour chaque symbole dans le fichier de réponse de commande qui est soit statique ou introuvable.
+> LINK ne peut pas trier les fonctions statiques, car les noms de fonctions statiques ne sont pas des noms de symboles publics. Quand **/Order** est spécifié, cet avertissement de l’éditeur de liens est généré pour chaque symbole dans le fichier de réponse de l’ordre qui est soit static, soit introuvable.

@@ -6,17 +6,17 @@ f1_keywords:
 helpviewer_keywords:
 - LNK4022
 ms.assetid: 890f487e-db98-45dd-a226-c7ccead82b1e
-ms.openlocfilehash: 1c9ccfe6ca201ae4deed69c7d01429c67cce4bda
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 9b9ce09a7133c0bdc18957f6ade213583e9540eb
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62298463"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80194185"
 ---
 # <a name="linker-tools-warning-lnk4022"></a>Avertissement des outils Éditeur de liens LNK4022
 
-Impossible de trouver une correspondance unique pour le symbole 'symbole'
+Impossible de trouver une correspondance unique pour le symbole’Symbol'
 
-LIEN ou LIB a trouvé plusieurs correspondances pour le symbole non décoré donné et ne peut pas résoudre l’ambiguïté. Aucun fichier de sortie (.exe, .dll, .exp ou .lib) n’est généré. Cet avertissement est suivi par un avertissement [LNK4002](../../error-messages/tool-errors/linker-tools-warning-lnk4002.md) pour chaque dupliquer le symbole et finalement suivi de l’erreur irrécupérable [LNK1152](../../error-messages/tool-errors/linker-tools-error-lnk1152.md).
+LINK ou LIB a trouvé plusieurs correspondances pour le symbole non décoré donné et il n’a pas pu résoudre l’ambiguïté. Aucun fichier de sortie (. exe,. dll,. exp ou. lib) n’est produit. Cet avertissement est suivi d’un avertissement [LNK4002](../../error-messages/tool-errors/linker-tools-warning-lnk4002.md) pour chaque symbole dupliqué et est enfin suivi de l’erreur irrécupérable [LNK1152](../../error-messages/tool-errors/linker-tools-error-lnk1152.md).
 
-Pour éviter cet avertissement, spécifiez le symbole dans sa forme décorée. Exécutez [DUMPBIN](../../build/reference/dumpbin-options.md) sur l’objet pour voir les noms décorés.
+Pour éviter cet avertissement, spécifiez le symbole sous sa forme décorée. Exécutez [DUMPBIN](../../build/reference/dumpbin-options.md) sur l’objet pour afficher les noms décorés.

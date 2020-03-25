@@ -7,16 +7,16 @@ f1_keywords:
 helpviewer_keywords:
 - RemoveReference structure
 ms.assetid: 43ff91bb-815a-440e-b9fb-7dcbb7c863af
-ms.openlocfilehash: 342980ac9a7cae8a98ffd0f367c666487e34e5de
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 7753c1ad41f12fa8c14d2f10c9e2f91e043a5846
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62231308"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80213601"
 ---
 # <a name="removereference-structure"></a>RemoveReference (structure)
 
-Prend en charge l’infrastructure WRL et n’est pas destinée à être utilisée directement depuis votre code.
+Prend en charge l’infrastructure WRL et n’est pas destiné à être utilisé directement à partir de votre code.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -38,25 +38,25 @@ Une classe.
 
 ## <a name="remarks"></a>Notes
 
-Supprime la caractéristique de référence ou référence rvalue à partir du paramètre de modèle de classe spécifiée.
+Supprime la référence ou la caractéristique de référence rvalue du paramètre de modèle de classe spécifié.
 
 ## <a name="members"></a>Membres
 
 ### <a name="public-typedefs"></a>Typedefs publics
 
-|Nom|Description|
+|Name|Description|
 |----------|-----------------|
 |`Type`|Synonyme du paramètre de modèle de classe.|
 
-## <a name="inheritance-hierarchy"></a>Hiérarchie d'héritage
+## <a name="inheritance-hierarchy"></a>Hiérarchie d’héritage
 
 `RemoveReference`
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
-**En-tête :** internal.h
+**En-tête :** Internal. h
 
-**Espace de noms :** Microsoft::WRL::Details
+**Espace de noms :** Microsoft :: WRL ::D étails
 
 ## <a name="see-also"></a>Voir aussi
 

@@ -51,12 +51,12 @@ helpviewer_keywords:
 - m_bCancelWhenExecuting
 - m_bIsExecuting
 ms.assetid: ef285fef-0d66-45e6-a762-b03357098e3b
-ms.openlocfilehash: 6e095e01d3131f98b44935705b2564291fb13844
-ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
+ms.openlocfilehash: f04885ef61841ac20f87ab07ce73d3c9342fe39c
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/17/2020
-ms.locfileid: "79447052"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80212160"
 ---
 # <a name="icommandimpl-class"></a>ICommandImpl, classe
 
@@ -106,7 +106,7 @@ Interface de commande. Par défaut, il s’agit de `ICommand`.
 
 Interface obligatoire sur l’objet de commande.
 
-## <a name="cancel"></a>ICommandImpl :: Cancel
+## <a name="icommandimplcancel"></a><a name="cancel"></a>ICommandImpl :: Cancel
 
 Annule l’exécution de la commande actuelle.
 
@@ -120,7 +120,7 @@ STDMETHOD(Cancel)();
 
 Consultez [ICommand :: Cancel](/previous-versions/windows/desktop/ms714402(v=vs.85)) dans le *Guide de référence du programmeur OLE DB*.
 
-## <a name="cancelexecution"></a>ICommandImpl :: CancelExecution
+## <a name="icommandimplcancelexecution"></a><a name="cancelexecution"></a>ICommandImpl :: CancelExecution
 
 Annule l’exécution de la commande actuelle.
 
@@ -130,7 +130,7 @@ Annule l’exécution de la commande actuelle.
 HRESULT CancelExecution();
 ```
 
-## <a name="createrowset"></a>ICommandImpl :: CreateRowset
+## <a name="icommandimplcreaterowset"></a><a name="createrowset"></a>ICommandImpl :: CreateRowset
 
 Appelée par [Execute](../../data/oledb/icommandimpl-execute.md) pour créer un ensemble de lignes unique.
 
@@ -179,7 +179,7 @@ Pour créer plusieurs ensembles de lignes, ou pour fournir vos propres condition
 
 Consultez [ICommand :: Execute](/previous-versions/windows/desktop/ms718095(v=vs.85)) dans le *Guide de référence du programmeur OLE DB.*
 
-## <a name="execute"></a>ICommandImpl :: Execute
+## <a name="icommandimplexecute"></a><a name="execute"></a>ICommandImpl :: Execute
 
 Exécute la commande.
 
@@ -203,7 +203,7 @@ L’interface sortante demandée sera une interface acquise à partir de l’obj
 
 `Execute` appelle [CreateRowset](../../data/oledb/icommandimpl-createrowset.md). Remplacez l’implémentation par défaut pour créer plusieurs ensembles de lignes ou pour fournir vos propres conditions pour la création de différents ensembles de lignes.
 
-## <a name="getdbsession"></a>ICommandImpl :: GetDBSession
+## <a name="icommandimplgetdbsession"></a><a name="getdbsession"></a>ICommandImpl :: GetDBSession
 
 Retourne un pointeur d’interface vers la session qui a créé la commande.
 
@@ -222,7 +222,7 @@ Consultez [ICommand :: GetDBSession](/previous-versions/windows/desktop/ms71962
 
 Utile pour la récupération des propriétés de la session.
 
-## <a name="icommandimpl"></a>ICommandImpl :: ICommandImpl
+## <a name="icommandimplicommandimpl"></a><a name="icommandimpl"></a>ICommandImpl :: ICommandImpl
 
 Constructeur.
 
@@ -232,7 +232,7 @@ Constructeur.
 ICommandImpl();
 ```
 
-## <a name="bcancel"></a>ICommandImpl :: m_bCancel
+## <a name="icommandimplm_bcancel"></a><a name="bcancel"></a>ICommandImpl :: m_bCancel
 
 Indique si la commande est annulée.
 
@@ -246,7 +246,7 @@ unsigned m_bCancel:1;
 
 Vous pouvez récupérer cette variable dans la méthode `Execute` de votre classe Command et l’annuler, le cas échéant.
 
-## <a name="bcancelwhenexecuting"></a>ICommandImpl :: m_bCancelWhenExecuting
+## <a name="icommandimplm_bcancelwhenexecuting"></a><a name="bcancelwhenexecuting"></a>ICommandImpl :: m_bCancelWhenExecuting
 
 Indique si la commande peut être annulée lors de l’exécution de.
 
@@ -260,7 +260,7 @@ unsigned m_bCancelWhenExecuting:1;
 
 La valeur par défaut est **true** (peut être annulé).
 
-## <a name="bisexecuting"></a>ICommandImpl :: m_bIsExecuting
+## <a name="icommandimplm_bisexecuting"></a><a name="bisexecuting"></a>ICommandImpl :: m_bIsExecuting
 
 Indique si la commande est en cours d’exécution.
 

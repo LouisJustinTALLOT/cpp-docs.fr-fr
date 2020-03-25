@@ -1,19 +1,19 @@
 ---
-title: db_source (C++ attribut COM)
+title: db_source (C++ attribut com)
 ms.date: 10/02/2018
 f1_keywords:
 - vc-attr.db_source
 helpviewer_keywords:
 - db_source attribute
 ms.assetid: 0ec8bbf7-ade2-4899-bf4c-8608b92779bc
-ms.openlocfilehash: 884cab78d64c20bef00958f0cc0319281fd69921
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 6346a8d6f60313dc17bbcbad062aa888857f0b67
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62148105"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80167275"
 ---
-# <a name="dbsource"></a>db_source
+# <a name="db_source"></a>db_source
 
 Crée une connexion à une source de données.
 
@@ -26,31 +26,31 @@ Crée une connexion à une source de données.
 ### <a name="parameters"></a>Paramètres
 
 *db_source*<br/>
-Chaîne de connexion utilisée pour se connecter à la source de données. Pour le format de la chaîne de connexion, consultez [chaînes de connexion et des liaisons de données](/previous-versions/windows/desktop/ms718376(v=vs.85)) dans le Kit de développement logiciel Microsoft Data Access Components (MDAC).
+Chaîne de connexion utilisée pour se connecter à la source de données. Pour plus d’informations sur le format de la chaîne de connexion, consultez [chaînes de connexion et liaisons de données](/previous-versions/windows/desktop/ms718376(v=vs.85)) dans le kit de développement logiciel (SDK) Microsoft Data Access Components (MDAC).
 
 *name*<br/>
-(Facultatif) Lorsque vous utilisez **db_source** sur une classe, *nom* est une instance d’un objet de source de données qui a le **db_source** attribut appliqué à ce dernier (voir exemple 1). Lorsque vous utilisez **db_source** inline dans une implémentation de méthode, *nom* est une variable (local à la méthode) qui peut être utilisée pour accéder aux données source (voir l’exemple 2). Vous la transmettre *nom* à la *source_name* paramètre de `db_command` pour associer la source de données avec une commande.
+Facultatif Quand vous utilisez **db_source** sur une classe, *Name* est une instance d’un objet source de données auquel l’attribut **db_source** est appliqué (Voir l’exemple 1). Quand vous utilisez **db_source** inline dans une implémentation de méthode, le *nom* est une variable (locale à la méthode) qui peut être utilisée pour accéder à la source de données (Voir l’exemple 2). Vous transmettez ce *nom* au paramètre *source_name* de `db_command` pour associer la source de données à une commande.
 
-*hresult*<br/>
-(Facultatif) Identifie la variable qui recevra la valeur HRESULT de cette commande de base de données. Si la variable n’existe pas, elle est injectée automatiquement par l’attribut.
+*signé*<br/>
+Facultatif Identifie la variable qui recevra le HRESULT de cette commande de base de données. Si la variable n’existe pas, elle est injectée automatiquement par l’attribut.
 
 ## <a name="remarks"></a>Notes
 
-**db_source** crée un [CDataSource](../../data/oledb/cdatasource-class.md) et un [CSession](../../data/oledb/csession-class.md) objet, qui représentent une connexion à une source de données du consommateur OLE DB.
+**db_source** crée un [CDataSource](../../data/oledb/cdatasource-class.md) et un objet [CSession](../../data/oledb/csession-class.md) , qui représentent ensemble une connexion avec une source de données de consommateur OLE DB.
 
-Lorsque vous utilisez **db_source** sur une classe, le `CSession` objet devient un membre de la classe.
+Quand vous utilisez **db_source** sur une classe, l’objet `CSession` devient membre de la classe.
 
-Lorsque vous utilisez **db_source** dans une méthode, le code injecté sera exécuté dans la portée de la méthode et le `CSession` objet est créé comme une variable locale.
+Quand vous utilisez **db_source** dans une méthode, le code injecté est exécuté dans la portée de la méthode, et l’objet `CSession` est créé en tant que variable locale.
 
-**db_source** ajoute des propriétés de source de données à une classe ou d’une méthode. Il est utilisé conjointement avec `db_command` (qui prend le *db_source* *nom* paramètre en tant que son *source_name* paramètre).
+**db_source** ajoute des propriétés de source de données à une classe ou dans une méthode. Elle est utilisée conjointement avec `db_command` (qui prend le paramètre de *nom* *db_source* comme paramètre *source_name* ).
 
-Lorsque le fournisseur d’attributs consommateur applique cet attribut à une classe, le compilateur renomme la classe à \_ *Nom_de_votre_classe*accesseur, où *Nom_de_votre_classe* est le nom que vous avez donné à la classe et le compilateur crée également une classe appelée *Nom_de_votre_classe*, qui dérive à son \_ *Nom_de_votre_classe*accesseur.  Dans l’affichage de classes, vous verrez les deux classes.
+Lorsque le fournisseur d’attributs du consommateur applique cet attribut à une classe, le compilateur renomme la classe en \_accesseur *YourClassName*, où *YourClassName* est le nom que vous avez donné à la classe, et le compilateur crée également une classe appelée *YourClassName*, qui dérive de \_accesseur *YourClassName*.  Dans l’affichage de classes, vous verrez les deux classes.
 
-Pour obtenir un exemple de cet attribut utilisé dans une application, consultez les exemples [AtlAgent](https://github.com/Microsoft/VCSamples) et [MultiRead](https://github.com/Microsoft/VCSamples).
+Pour obtenir un exemple de cet attribut utilisé dans une application, consultez [MultiRead](https://github.com/Microsoft/VCSamples/tree/master/VC2010Samples/ATL/OLEDB/Consumer).
 
 ## <a name="example"></a>Exemple
 
-Cet exemple appelle **db_source** sur une classe pour créer une connexion à la source de données `ds` à l’aide de la base de données Northwind. `ds` est un handle pour la source de données, ce qui peut être utilisé en interne sur le `CMyCommand` classe.
+Cet exemple appelle **db_source** sur une classe pour créer une connexion à la source de données `ds` à l’aide de la base de données Northwind. `ds` est un handle pour la source de données, qui peut être utilisé en interne à la classe `CMyCommand`.
 
 ```cpp
 // db_source_1.cpp
@@ -66,16 +66,16 @@ Cet exemple appelle **db_source** sur une classe pour créer une connexion à la
 class CMyCommand {};
 ```
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
 ### <a name="attribute-context"></a>Contexte d'attribut
 
 |||
 |-|-|
-|**S'applique à**|**classe**, **struct**, membre, méthode, locale|
+|**S'applique à**|**classe**, **struct**, membre, méthode, local|
 |**Renouvelable**|Non|
-|**Attributs requis**|Aucun.|
-|**Attributs non valides**|Aucun.|
+|**Attributs requis**|None|
+|**Attributs non valides**|None|
 
 Pour plus d'informations sur les contextes d'attribut, consultez [Contextes d'attribut](cpp-attributes-com-net.md#contexts).
 

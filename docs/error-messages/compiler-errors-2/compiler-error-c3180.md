@@ -6,17 +6,17 @@ f1_keywords:
 helpviewer_keywords:
 - C3180
 ms.assetid: 5281f583-7df7-418a-8507-d4da67ed6572
-ms.openlocfilehash: bfe2699ce448aa879f0c93aa431a17dbc1334274
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: c94019bf7a58492fcbb27c4f092a6e5f7e36ca25
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62382388"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80176453"
 ---
 # <a name="compiler-error-c3180"></a>Erreur du compilateur C3180
 
-'type name' : nom dépasse la limite métadonnées de 'limite' caractères
+'nom de type' : le nom dépasse la limite de métadonnées de’Limit’caractères
 
-Le compilateur a tronqué le nom d’un type managé dans les métadonnées. La troncation rendra le type inutilisable avec la `#using` directive (ou son équivalent dans une autre langue).
+Le compilateur a tronqué le nom d’un type managé dans les métadonnées. La troncation rend le type inutilisable avec la directive `#using` (ou l’équivalent dans un autre langage).
 
-La limite de nom de type inclut des qualifications d’espace de noms.
+La limite de nom de type comprend des qualifications d’espace de noms.

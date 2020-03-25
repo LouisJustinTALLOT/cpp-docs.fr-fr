@@ -6,17 +6,17 @@ f1_keywords:
 helpviewer_keywords:
 - LNK4206
 ms.assetid: 6c108e33-00cf-4c5a-830d-d65d470930a7
-ms.openlocfilehash: dc81df89609f59834c8a3271dd64f3b99b281f90
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 1758fffb72e183e8a186d115b2b3f3b30c32e047
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62395077"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80193874"
 ---
 # <a name="linker-tools-warning-lnk4206"></a>Avertissement des outils Éditeur de liens LNK4206
 
-> informations de type précompilé introuvable ; «*filename*' non lié ou remplacé ; objet sera lié sans informations de débogage
+> informations de type précompilé introuvables ; '*nom_fichier*'n’est pas lié ou remplacé ; liaison de l’objet comme si aucune information de débogage
 
-Le *filename* fichier objet compilé à l’aide de [/Yc](../../build/reference/yc-create-precompiled-header-file.md), n’était pas spécifié dans la commande de lien ou a été remplacé.
+Le fichier objet *filename* , compilé à l’aide de [/Yc](../../build/reference/yc-create-precompiled-header-file.md), n’a pas été spécifié dans la commande LINK ou a été remplacé.
 
-Un scénario courant pour cet avertissement est lorsque le fichier .obj qui a été compilé avec /Yc se trouve dans une bibliothèque, et où il n’existe aucune référence de symbole à ce fichier .obj à partir de votre code.  Dans ce cas, l’éditeur de liens ne sera pas utiliser (ou même voir) le fichier .obj.  Dans ce cas, vous devez recompiler votre code et utiliser [/Yl](../../build/reference/yl-inject-pch-reference-for-debug-library.md) pour les objets compilés à l’aide de [/Yu](../../build/reference/yu-use-precompiled-header-file.md).
+Un scénario courant pour cet avertissement est lorsque le. obj qui a été compilé avec/Yc se trouve dans une bibliothèque et lorsqu’il n’existe aucune référence de symbole à ce. obj à partir de votre code.  Dans ce cas, l’éditeur de liens n’utilise pas (ou ne peut même pas voir) le fichier. obj.  Dans ce cas, vous devez recompiler votre code et utiliser [/yl](../../build/reference/yl-inject-pch-reference-for-debug-library.md) pour les objets compilés à l’aide de [/Yu](../../build/reference/yu-use-precompiled-header-file.md).

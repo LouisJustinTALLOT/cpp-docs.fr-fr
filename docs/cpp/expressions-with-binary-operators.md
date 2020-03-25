@@ -6,12 +6,12 @@ helpviewer_keywords:
 - binary operators [C++]
 - expressions [C++], binary operators
 ms.assetid: 6dea3df4-a4bd-42c3-9807-4a27c120ac9a
-ms.openlocfilehash: d3a966a7922c1888defbebf970ac409872fe18ec
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 2dbda1759dcb37a1f2a8cbe87f24adbb979ca085
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62154306"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80188985"
 ---
 # <a name="expressions-with-binary-operators"></a>Expressions avec opérateurs binaires
 
@@ -33,9 +33,9 @@ Les opérateurs binaires agissent sur deux opérandes dans une expression. Les o
 
 - [Opérateurs de décalage](../cpp/left-shift-and-right-shift-operators-input-and-output.md)
 
-   - Décalage vers la droite (>>)
+   - Décalage vers la droite (> >)
 
-   - Décalage vers la gauche (<<)
+   - Décalage vers la gauche (< <)
 
 - [Opérateurs relationnels et d’égalité](../cpp/relational-operators-equal-and-equal.md)
 
@@ -45,7 +45,7 @@ Les opérateurs binaires agissent sur deux opérandes dans une expression. Les o
 
    - Inférieur ou égal à (\<=)
 
-   - Supérieur ou égal à (> =)
+   - Supérieur ou égal à (>=)
 
    - Égal à (==)
 
@@ -53,11 +53,11 @@ Les opérateurs binaires agissent sur deux opérandes dans une expression. Les o
 
 - Opérateurs de bits
 
-   - [Opération de bits AND (&)](../cpp/bitwise-and-operator-amp.md)
+   - [AND au niveau du bit (&)](../cpp/bitwise-and-operator-amp.md)
 
-   - [Au niveau du bit OR exclusif (^)](../cpp/bitwise-exclusive-or-operator-hat.md)
+   - [Or exclusif au niveau du bit (^)](../cpp/bitwise-exclusive-or-operator-hat.md)
 
-   - [Au niveau du bit OR inclusif (&#124;)](../cpp/bitwise-inclusive-or-operator-pipe.md)
+   - [Or inclusive au niveau&#124;du bit ()](../cpp/bitwise-inclusive-or-operator-pipe.md)
 
 - Opérateurs logiques
 
@@ -71,7 +71,7 @@ Les opérateurs binaires agissent sur deux opérandes dans une expression. Les o
 
    - Assignation d'addition (+=)
 
-   - Assignation de soustraction (-)
+   - Assignation de soustraction (-=)
 
    - Assignation de multiplication (*=)
 
@@ -81,13 +81,13 @@ Les opérateurs binaires agissent sur deux opérandes dans une expression. Les o
 
    - Assignation de décalage vers la gauche (<\<=)
 
-   - Assignation de décalage vers la droite (>> =)
+   - Assignation de décalage vers la droite (> > =)
 
-   - Affectation d’après AND au niveau du bit (& =)
+   - Assignation and au niveau du bit (& =)
 
    - Assignation d'opération OR exclusive au niveau du bit (^=)
 
-   - Or inclusive assignation OR (&#124;=)
+   - Assignation or inclusive au niveau&#124;du bit (=)
 
 - [Opérateur virgule](../cpp/comma-operator.md) (,)
 

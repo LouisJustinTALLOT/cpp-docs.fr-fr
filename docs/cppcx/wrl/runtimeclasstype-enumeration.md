@@ -7,16 +7,16 @@ f1_keywords:
 helpviewer_keywords:
 - RuntimeClassType enumeration
 ms.assetid: d380712d-672e-4ea9-b7c5-cf9fa7dbb770
-ms.openlocfilehash: 80e8a120f7e3666721ff839a2a696388a64d734e
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 53f0172968c28762bb1305e274bbd47494cdaf4c
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62403128"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80213575"
 ---
 # <a name="runtimeclasstype-enumeration"></a>RuntimeClassType (énumération)
 
-Spécifie le type de [RuntimeClass](runtimeclass-class.md) instance qui est pris en charge.
+Spécifie le type d’instance [RuntimeClass](runtimeclass-class.md) qui est pris en charge.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -28,20 +28,20 @@ enum RuntimeClassType;
 
 ### <a name="values"></a>Valeurs
 
-|Nom|Description|
+|Name|Description|
 |----------|-----------------|
-|`ClassicCom`|Une classe d’exécution COM classique.|
-|`Delegate`|Équivalent à `ClassicCom`.|
-|`InhibitFtmBase`|Désactive `FtmBase` prise en charge de `__WRL_CONFIGURATION_LEGACY__` n’est pas défini.|
+|`ClassicCom`|Classe Runtime COM classique.|
+|`Delegate`|Équivaut à `ClassicCom`.|
+|`InhibitFtmBase`|Désactive la prise en charge de `FtmBase` lorsque `__WRL_CONFIGURATION_LEGACY__` n’est pas défini.|
 |`InhibitWeakReference`|Désactive la prise en charge de la référence faible.|
-|`WinRt`|Une classe Windows Runtime.|
+|`WinRt`|Classe Windows Runtime.|
 |`WinRtClassicComMix`|Combinaison de `WinRt` et `ClassicCom`.|
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
-**En-tête :** implements.h
+**En-tête :** Implements. h
 
-**Espace de noms :** Microsoft::wrl
+**Espace de noms :** Microsoft::WRL
 
 ## <a name="see-also"></a>Voir aussi
 

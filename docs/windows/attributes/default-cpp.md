@@ -8,12 +8,12 @@ helpviewer_keywords:
 - attributes [C#], default attribute
 - defaults, default attribute
 ms.assetid: 0cdca716-1ba8-46d7-9399-167e55492870
-ms.openlocfilehash: 291e16ad0967acd1869874fcc9fa6eb5529e4b44
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: b789f82f4b5a09b86d72dfde5d783665cf2e918a
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69501683"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80167184"
 ---
 # <a name="default-c"></a>default (C++)
 
@@ -43,7 +43,7 @@ L’attribut C++ **default** a les mêmes fonctionnalités que l’attribut MIDL
 
 ## <a name="example"></a>Exemple
 
-Le code suivant montre comment la **valeur par défaut** est utilisée sur la définition d’une coclasse pour spécifier `ICustomDispatch` comme interface de programmabilité par défaut:
+Le code suivant montre comment la **valeur par défaut** est utilisée sur la définition d’une coclasse pour spécifier `ICustomDispatch` comme interface de programmabilité par défaut :
 
 ```cpp
 // cpp_attr_ref_default.cpp
@@ -93,7 +93,7 @@ int main() {
 
 Il existe aussi un exemple pour l’attribut [source](source-cpp.md) qui montre comment utiliser **default**.
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
 ### <a name="attribute-context"></a>Contexte d'attribut
 
@@ -101,8 +101,8 @@ Il existe aussi un exemple pour l’attribut [source](source-cpp.md) qui montre 
 |-|-|
 |**S'applique à**|**classe**, **struct**, données membres|
 |**Renouvelable**|Non|
-|**Attributs requis**|**coclasse** (en cas d’application à une **classe** ou à un **struct**)|
-|**Attributs non valides**|Aucun|
+|**Attributs requis**|**coclasse** (en cas d’application à une **classe** ou un **struct**)|
+|**Attributs non valides**|None|
 
 Pour plus d'informations, consultez [Contextes d'attribut](cpp-attributes-com-net.md#contexts).
 

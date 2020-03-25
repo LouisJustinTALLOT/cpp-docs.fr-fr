@@ -7,17 +7,17 @@ helpviewer_keywords:
 - CAN0011
 - CXX0011
 ms.assetid: c2252e89-ad66-43fc-93e4-b886dcbd3f19
-ms.openlocfilehash: b22b7e39fc2d7436d83bc4fa7cfec49a42ddf06a
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 68b6087d28b9b3ac5dbaf833cbd544ca4ea22132
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62397196"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80196155"
 ---
 # <a name="expression-evaluator-error-cxx0011"></a>Évaluateur d'expression, erreur CXX0011
 
-crochet fermant manquant
+crochet droit manquant
 
-L’expression contient des crochets non appariés. Tapez à nouveau l’expression avec des crochets à charge équilibrée.
+L’expression contient des crochets non équilibrés. Retapez l’expression avec des crochets équilibrés.
 
 Cette erreur est identique à CAN0011.

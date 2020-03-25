@@ -6,18 +6,18 @@ f1_keywords:
 helpviewer_keywords:
 - _com_error method [C++]
 ms.assetid: 0a69e46c-caab-49ef-b091-eee401253ce6
-ms.openlocfilehash: 8856289605cce430fdab36d6e3e8b743190e02ea
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 4ac902f0fda90f77526ef53139ef0d523d8c22e7
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62155122"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80180782"
 ---
-# <a name="comerrorcomerror"></a>_com_error::_com_error
+# <a name="_com_error_com_error"></a>_com_error::_com_error
 
-**Section spécifique à Microsoft**
+**Section spécifique de Microsoft**
 
-Construit un **_com_error** objet.
+Construit un objet **_com_error** .
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -32,33 +32,33 @@ _com_error( const _com_error& that ) throw( );
 
 #### <a name="parameters"></a>Paramètres
 
-*hr*<br/>
+*h*<br/>
 Informations HRESULT.
 
 *perrinfo*<br/>
 Objet `IErrorInfo`.
 
 *fAddRef*<br/>
-La valeur par défaut, le constructeur à appeler AddRef sur une valeur non null `IErrorInfo` interface. Ainsi, pour le décompte correct dans le cas courant où la propriété de l’interface est passée dans le **_com_error** l’objet, tel que :
+Par défaut, le constructeur appelle AddRef sur une interface de `IErrorInfo` non null. Cela fournit un décompte de références correct dans le cas courant où la propriété de l’interface est passée dans l’objet **_com_error** , par exemple :
 
 ```cpp
 throw _com_error(hr, perrinfo);
 ```
 
-Si vous ne souhaitez pas que votre code pour transférer la propriété à la **_com_error** objet et le `AddRef` est requis pour décaler la `Release` dans le **_com_error** destructeur, construire l’objet en tant que suit :
+Si vous ne souhaitez pas que votre code transfère la propriété à l’objet **_com_error** , et que le `AddRef` est requis pour décaler le `Release` dans le destructeur **_com_error** , construisez l’objet comme suit :
 
 ```cpp
 _com_error err(hr, perrinfo, true);
 ```
 
-*that*<br/>
-Un existant **_com_error** objet.
+*comprenant*<br/>
+Objet **_com_error** existant.
 
 ## <a name="remarks"></a>Notes
 
-Le premier constructeur crée un nouvel objet étant donné un HRESULT et facultatifs `IErrorInfo` objet. Le deuxième constructeur crée une copie d’un existant **_com_error** objet.
+Le premier constructeur crée un objet à partir d’un HRESULT et d’un objet `IErrorInfo` facultatif. Le deuxième crée une copie d’un objet **_com_error** existant.
 
-**FIN de la section spécifique à Microsoft**
+**Fin de la section spécifique de Microsoft**
 
 ## <a name="see-also"></a>Voir aussi
 

@@ -6,19 +6,19 @@ f1_keywords:
 helpviewer_keywords:
 - PRJ0021
 ms.assetid: bcab794d-4a6d-4b4d-aaca-73676c0cec75
-ms.openlocfilehash: c815e821b4049a0fc35a04cab284bf9b6e80864b
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 2f838bc2fdf03b2e1056e76caa7a06155f5535e2
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62359330"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80192391"
 ---
 # <a name="project-build-error-prj0021"></a>Erreur de génération de projet PRJ0021
 
-> Outil '*outil*', propriété '*propriété*' contient le nom de fichier non valide.
+> Outil'*outil*', la propriété'*propriété*'contient un nom de fichier non valide.
 
-Le nom de fichier spécifié dans la propriété *propriété* pour l’outil *outil* n’était pas valide.
+Le nom de fichier spécifié dans la *propriété* Property de l' *outil Tool n’est* pas valide.
 
-Vous avez peut-être utilisé une macro non valide ou inconnue.
+Vous avez peut-être utilisé une macro inconnue ou non valide.
 
-Consultez [définition des propriétés de projet Visual C++](../../build/working-with-project-properties.md) pour plus d’informations sur l’accès aux propriétés de votre projet.
+Pour plus d’informations sur la façon d’accéder aux propriétés de votre projet, consultez [définition des propriétés de projet visuel C++ ](../../build/working-with-project-properties.md) .

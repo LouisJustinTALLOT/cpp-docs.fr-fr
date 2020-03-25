@@ -7,16 +7,16 @@ helpviewer_keywords:
 - COM interfaces, attach pointer
 - Attach method [C++]
 ms.assetid: 94c18e0a-06be-4ca7-bdaf-cd54ec0a645e
-ms.openlocfilehash: 4b4b7a21d12cc645c486dd93d555510c1e716563
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 870e3580ed23ce994d832f7c59b951680d725e41
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62154888"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80180496"
 ---
-# <a name="comptrtattach"></a>_com_ptr_t::Attach
+# <a name="_com_ptr_tattach"></a>_com_ptr_t::Attach
 
-**Section spécifique à Microsoft**
+**Section spécifique de Microsoft**
 
 Encapsule un pointeur d'interface brut du type de ce pointeur intelligent.
 
@@ -33,15 +33,15 @@ void Attach( Interface* pInterface, bool fAddRef ) throw( );
 Pointeur d'interface brut.
 
 *fAddRef*<br/>
-Si elle est TRUE, puis `AddRef` est appelée. Si le résultat est FALSE, le `_com_ptr_t` objet prend possession du pointeur d’interface brut sans appeler `AddRef`.
+Si la valeur est TRUE, `AddRef` est appelée. Si la valeur est FALSe, l’objet `_com_ptr_t` prend possession du pointeur d’interface brut sans appeler `AddRef`.
 
 ## <a name="remarks"></a>Notes
 
-- **Attacher (** *pInterface* **)** `AddRef` n’est pas appelée. La propriété de l'interface est passée à cet objet `_com_ptr_t`. `Release` est appelé pour décrémenter le décompte de références pour le pointeur précédemment encapsulé.
+- L' **attachement (** *pInterface* **)** `AddRef` n’est pas appelé. La propriété de l'interface est passée à cet objet `_com_ptr_t`. `Release` est appelé pour décrémenter le décompte de références pour le pointeur précédemment encapsulé.
 
-- **Attacher (** *pInterface* **,** *fAddRef* **)** si *fAddRef* a la valeur TRUE, `AddRef`est appelé pour incrémenter le décompte de références pour le pointeur d’interface encapsulé. Si *fAddRef* est FALSE, cela `_com_ptr_t` objet prend possession du pointeur d’interface brut sans appeler `AddRef`. `Release` est appelé pour décrémenter le décompte de références pour le pointeur précédemment encapsulé.
+- **Attach (**  *pInterface* **,**  *fAddRef*  **)** Si *fAddRef* a la valeur TRUE, `AddRef` est appelé pour incrémenter le décompte de références pour le pointeur d’interface encapsulé. Si *fAddRef* a la valeur false, cet objet `_com_ptr_t` prend possession du pointeur d’interface brut sans appeler `AddRef`. `Release` est appelé pour décrémenter le décompte de références pour le pointeur précédemment encapsulé.
 
-**FIN de la section spécifique à Microsoft**
+**Fin de la section spécifique de Microsoft**
 
 ## <a name="see-also"></a>Voir aussi
 

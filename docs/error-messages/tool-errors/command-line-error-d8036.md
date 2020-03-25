@@ -6,23 +6,23 @@ f1_keywords:
 helpviewer_keywords:
 - D8036
 ms.assetid: 420a8daf-1873-49cd-95ea-a603d77b9410
-ms.openlocfilehash: b5c8fce07b9149189ee875e2b0bcfed42ab3d1a2
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 209d0ea3f9fa3fd2e311506d3e03162c639f4a6e
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62395155"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80196870"
 ---
 # <a name="command-line-error-d8036"></a>Erreur de ligne de commande D8036
 
-'/ option' non autorisé avec plusieurs fichiers sources
+'/option’non autorisé avec plusieurs fichiers sources
 
-Ces options du compilateur ne peut pas être utilisées avec plusieurs fichiers sources :
+Ces options du compilateur ne peuvent pas être utilisées avec plusieurs fichiers sources :
 
-- Liste des noms de fichier assembly (/ Fa)
+- Nom de la liste des fichiers d’assembly (/FA)
 
-- Renommer le fichier objet (/ Fo)
+- Renommer le fichier objet (/FO)
 
-- Créer des informations du navigateur source sans variables locales (/ Fr)
+- Créer des informations de navigateur source sans variables locales (/fr)
 
-- Créer des informations du navigateur source qui inclut des variables locales (/ FR)
+- Créer des informations de navigateur source qui incluent des variables locales (/FR)

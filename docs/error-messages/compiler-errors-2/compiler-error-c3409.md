@@ -6,38 +6,38 @@ f1_keywords:
 helpviewer_keywords:
 - C3409
 ms.assetid: e372d9fa-230c-4b28-b6d3-6ad81ccf9dbb
-ms.openlocfilehash: 24f107e0c1f74f95afc521c8a4c888a26a35c13a
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 8ab2e0d152e4c123fa23512bc0111cebd070b3ee
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62173390"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80200861"
 ---
 # <a name="compiler-error-c3409"></a>Erreur du compilateur C3409
 
-> bloc d’attributs vide n’est pas autorisée.
+> bloc d’attributs vide non autorisé
 
 ## <a name="remarks"></a>Notes
 
-Les crochets étaient interprétés par le compilateur comme un [attribut](../../windows/attributes-alphabetical-reference.md) bloc, mais aucun attribut n’a été trouvé.
+Les crochets ont été interprétés par le compilateur comme un bloc d' [attributs](../../windows/attributes-alphabetical-reference.md) , mais aucun attribut n’a été trouvé.
 
-Le compilateur peut générer cette erreur lorsque vous utilisez des crochets dans le cadre de la définition d’une expression lambda. Cette erreur se produit lorsque le compilateur ne peut pas déterminer si les crochets font partie de la définition d’une expression lambda ou d’un bloc d’attributs. Pour plus d’informations sur les expressions lambda, consultez [Expressions Lambda](../../cpp/lambda-expressions-in-cpp.md).
+Le compilateur peut générer cette erreur quand vous utilisez des crochets dans le cadre de la définition d’une expression lambda. Cette erreur se produit lorsque le compilateur ne peut pas déterminer si les crochets font partie de la définition d’une expression lambda ou d’un bloc d’attributs. Pour plus d’informations sur les expressions lambda, consultez [Expressions Lambda](../../cpp/lambda-expressions-in-cpp.md).
 
 ### <a name="to-correct-this-error"></a>Pour corriger cette erreur
 
 1. Si les crochets font partie d’un bloc d’attributs :
 
-   1. Fournir un ou plusieurs attributs dans le bloc d’attributs.
+   1. Fournissez un ou plusieurs attributs dans le bloc d’attributs.
 
    1. Supprimez le bloc d’attributs.
 
-1. Si les crochets font partie d’une expression lambda, assurez-vous que l’expression lambda suit les règles de syntaxe valide.
+1. Si les crochets font partie d’une expression lambda, assurez-vous que l’expression lambda respecte les règles syntaxiques valides.
 
-   Pour plus d’informations sur la syntaxe d’expression lambda, consultez [syntaxe d’Expression Lambda](../../cpp/lambda-expression-syntax.md).
+   Pour plus d’informations sur la syntaxe d’expression lambda, consultez [syntaxe d’expression lambda](../../cpp/lambda-expression-syntax.md).
 
 ## <a name="example"></a>Exemple
 
-L’exemple suivant génère C3409.
+L’exemple suivant génère l’C3409.
 
 ```cpp
 // C3409.cpp
@@ -56,7 +56,7 @@ class b : public x {};
 
 ## <a name="example"></a>Exemple
 
-L’exemple suivant génère C3409, car une expression lambda utilise le `mutable` spécification, mais ne fournit ne pas une liste de paramètres. Le compilateur ne peut pas déterminer si les crochets font partie de la définition d’une expression lambda ou d’un bloc d’attributs.
+L’exemple suivant génère C3409, car une expression lambda utilise la spécification `mutable`, mais ne fournit pas de liste de paramètres. Le compilateur ne peut pas déterminer si les crochets font partie de la définition d’une expression lambda ou d’un bloc d’attributs.
 
 ```cpp
 // C3409b.cpp
