@@ -1,19 +1,19 @@
 ---
-title: Avertissement du compilateur (niveau 2) C4308
+title: Avertissement du compilateur (niveau 2) C4308
 ms.date: 11/04/2016
 f1_keywords:
 - C4308
 helpviewer_keywords:
 - C4308
 ms.assetid: d4e5c53c-71b2-4bbc-8a7c-3a2a3180d9d9
-ms.openlocfilehash: 43bdfa1181ff45d80236ef1f07279eea67ebce0a
-ms.sourcegitcommit: 458dcc794e3841919c01a3a5ff6b9a3767f8861b
+ms.openlocfilehash: 138344be8d70866583214a9c5a26f10c972a7889
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/13/2019
-ms.locfileid: "74052073"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80161840"
 ---
-# <a name="compiler-warning-level-2-c4308"></a>Avertissement du compilateur (niveau 2) C4308
+# <a name="compiler-warning-level-2-c4308"></a>Avertissement du compilateur (niveau 2) C4308
 
 constante intégrale négative convertie en type non signé
 

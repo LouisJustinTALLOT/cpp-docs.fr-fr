@@ -9,12 +9,12 @@ f1_keywords:
 helpviewer_keywords:
 - storage classes [C++], basic concepts
 ms.assetid: f10e1c56-6249-4eb6-b08f-09ab1eef1992
-ms.openlocfilehash: 5b30fe7bc6665da9172f093f8ea6a2130cb900b2
-ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
+ms.openlocfilehash: d4fe1e7f14ef2a11e5e7ac32b4ffb0247aab3c84
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/17/2020
-ms.locfileid: "79447319"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80178540"
 ---
 # <a name="storage-classes"></a>Classes de stockage
 
@@ -30,7 +30,7 @@ Une *classe de stockage* dans le contexte C++ de déclarations de variables est 
    register int val; // warning C5033: 'register' is no longer a supported storage class
 ```
 
-## <a name="static"></a>statique
+## <a name="static"></a><a name="static"></a>statique
 
 Le mot clé **static** peut être utilisé pour déclarer des variables et des fonctions au niveau de la portée globale, de la portée de l’espace de noms et de la portée de la classe. Les variables statiques peuvent également être déclarées dans la portée locale.
 
@@ -155,11 +155,11 @@ var == value
 
 À partir de C++11, une initialisation de variable locale statique est garantie comme étant thread-safe. Cette fonctionnalité est parfois appelée « *statiques magiques*». Toutefois, dans une application multithread, toutes les assignations suivantes doivent être synchronisées. La fonctionnalité d’initialisation statique thread-safe peut être désactivée à l’aide de l’indicateur [/Zc : threadSafeInit](../build/reference/zc-threadsafeinit-thread-safe-local-static-initialization.md) pour éviter de prendre une dépendance sur le CRT.
 
-## <a name="extern"></a>externes
+## <a name="extern"></a><a name="extern"></a>externes
 
 Les objets et les variables déclarés comme **extern** déclarent un objet défini dans une autre unité de traduction ou dans une portée englobante comme ayant une liaison externe. Pour plus d’informations, consultez [externes](extern-cpp.md) et [unités de traduction et liaison](program-and-linkage-cpp.md).
 
-## <a name="thread_local"></a>thread_local (C++ 11)
+## <a name="thread_local-c11"></a><a name="thread_local"></a>thread_local (C++ 11)
 
 Une variable déclarée avec le spécificateur **thread_local** est accessible uniquement sur le thread sur lequel elle est créée. La variable est créée quand le thread est créé et détruite quand le thread est détruit. Chaque thread possède sa propre copie de la variable. Sous Windows, **thread_local** est fonctionnellement équivalent à l’attribut de [__declspec (thread)](../cpp/thread.md) spécifique à Microsoft.
 
@@ -194,7 +194,7 @@ Points à noter concernant le spécificateur de **thread_local** :
 
 Sur Windows, **thread_local** est fonctionnellement équivalent à [__declspec (thread)](../cpp/thread.md) , sauf que **__declspec (thread)** peut être appliqué à une définition de type et qu’elle est valide dans le code C. Dans la mesure du possible, utilisez **thread_local** , car il C++ fait partie de la norme et est donc plus portable.
 
-##  <a name="register"></a>annuler
+##  <a name="register"></a><a name="register"></a>annuler
 
 **Visual Studio 2017 version 15,3 et versions ultérieures** (disponibles avec [/std : c++ 17](../build/reference/std-specify-language-standard-version.md)) : le mot clé **Register** n’est plus une classe de stockage prise en charge. Le mot clé est toujours réservé dans le standard pour une utilisation ultérieure.
 

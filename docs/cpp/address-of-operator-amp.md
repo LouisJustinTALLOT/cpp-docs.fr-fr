@@ -1,5 +1,5 @@
 ---
-title: 'Opérateur address-of : &amp;'
+title: 'Opérateur d’adresse : &amp;'
 ms.date: 11/04/2016
 f1_keywords:
 - '&'
@@ -8,14 +8,14 @@ helpviewer_keywords:
 - '& operator'
 - '& operator [C++], address-of operator'
 ms.assetid: 2828221a-15f6-4acc-87fe-25e34feebb88
-ms.openlocfilehash: a03a6100c372e059bd9ef2ddde0558da307923dc
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 4c9ae9aedaec202c8798ab454ee5df1a68278a6d
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62385022"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80181601"
 ---
-# <a name="address-of-operator-amp"></a>Opérateur address-of : &amp;
+# <a name="address-of-operator-amp"></a>Opérateur d’adresse : &amp;
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -25,13 +25,13 @@ ms.locfileid: "62385022"
 
 ## <a name="remarks"></a>Notes
 
-L’opérateur unaire address-of (**&**) prend l’adresse de son opérande. L’opérande de l’opérateur address-of peut être un désignateur de fonction ou une l-value qui désigne un objet qui n’est pas un champ de bits.
+L’opérateur d’adresse unaire ( **&** ) prend l’adresse de son opérande. L’opérande de l’opérateur d’adresse peut être un désignateur de fonction ou une l-value qui désigne un objet qui n’est pas un champ de bits.
 
 L'opérateur d'adresse peut être appliqué uniquement aux variables dotées de types fondamentaux, de structure, de classe ou d'union qui sont déclarées au niveau de la portée du fichier, ou aux références indicées de tableau. Dans ces expressions, une expression constante qui n'inclut pas l'opérateur d'adresse peut être ajoutée ou soustraite dans l'expression d'adresse.
 
-Lorsqu’il est appliqué à des fonctions ou des l-values, le résultat de l’expression est un type pointeur (une r-value) dérivé du type de l’opérande. Par exemple, si l’opérande est de type **char**, le résultat de l’expression est de type pointeur vers **char**. L’opérateur d’adresse, appliqué à **const** ou **volatile** objets, la valeur de `const type *` ou `volatile type *`, où **type** est le type de l’original objet.
+Lorsqu’il est appliqué à des fonctions ou des l-values, le résultat de l’expression est un type pointeur (une r-value) dérivé du type de l’opérande. Par exemple, si l’opérande est de type **char**, le résultat de l’expression est de type pointeur vers **char**. L’opérateur d’adresse, appliqué aux objets **const** ou **volatile** , prend la valeur `const type *` ou `volatile type *`, où **type** est le type de l’objet d’origine.
 
-Lorsque l’opérateur address-of est appliqué à un nom qualifié, le résultat varie selon que le *nom qualifié* spécifie un membre statique. Si oui, le résultat est un pointeur vers le type spécifié dans la déclaration du membre. Si le membre n’est pas statique, le résultat est un pointeur vers le membre *nom* de la classe indiquée par *qualified-class-name*. (Consultez [Expressions primaires](../cpp/primary-expressions.md) pour plus d’informations *qualified-class-name*.) Le fragment de code ci-dessous montre comment le résultat diffère si le membre est statique ou non :
+Lorsque l’opérateur address-of est appliqué à un nom qualifié, le résultat varie selon que le *nom qualifié* spécifie ou non un membre statique. Si oui, le résultat est un pointeur vers le type spécifié dans la déclaration du membre. Si le membre n’est pas statique, le résultat est un pointeur vers le *nom* de membre de la classe indiqué par *Qualified-Class-Name*. (Pour plus d’informations sur *Qualified-Class-Name*, consultez [expressions primaires](../cpp/primary-expressions.md) .) Le fragment de code suivant montre comment le résultat est différent, selon que le membre est statique ou non :
 
 ```cpp
 // expre_Address_Of_Operator.cpp
@@ -51,9 +51,9 @@ int main() {
 
 Dans cet exemple, l'expression `&PTM::fValue` permet d'obtenir le type `float *` à la place du type `float PTM::*`, car `fValue` est un membre statique.
 
-L'adresse d'une fonction surchargée peut être prise uniquement lorsque vous savez clairement quelle version de la fonction est référencée. Consultez [surcharge de fonction](function-overloading.md) pour plus d’informations sur la façon d’obtenir l’adresse d’un particulier fonction surchargée.
+L'adresse d'une fonction surchargée peut être prise uniquement lorsque vous savez clairement quelle version de la fonction est référencée. Consultez [surcharge de fonction](function-overloading.md) pour plus d’informations sur l’obtention de l’adresse d’une fonction surchargée particulière.
 
-L'application de l'opérateur d'adresse à un type référence fournit le même résultat que l'application de l'opérateur à l'objet auquel la référence est liée. Exemple :
+L'application de l'opérateur d'adresse à un type référence fournit le même résultat que l'application de l'opérateur à l'objet auquel la référence est liée. Par exemple :
 
 ## <a name="example"></a>Exemple
 
@@ -72,7 +72,7 @@ int main() {
 }
 ```
 
-## <a name="output"></a>Sortie
+## <a name="output"></a>Output
 
 ```Output
 &d equals &rd
@@ -99,7 +99,7 @@ int main() {
 }
 ```
 
-## <a name="output"></a>Sortie
+## <a name="output"></a>Output
 
 ```Output
 25

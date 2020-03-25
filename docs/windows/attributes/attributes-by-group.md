@@ -6,25 +6,25 @@ ms.topic: conceptual
 helpviewer_keywords:
 - attributes [C++/CLI]
 ms.assetid: 9f4dd43f-9909-43d6-91d2-05734643876e
-ms.openlocfilehash: bab7013f2c5fd48ef1a22b990499d79c9c217ca9
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 21dcbabcd5317896cf55cfba79f551db521f5137
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62217311"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80167470"
 ---
 # <a name="attributes-by-group"></a>Attributs par groupe
 
-Les attributs C++ sont organisés dans les groupes fonctionnels suivants.
+Les C++ attributs sont organisés dans les groupes fonctionnels suivants.
 
 |Attribut|Description|
 |---------------|-----------------|
-|[Attributs COM](com-attributes.md)|Injecter du code pour prendre en charge de nombreux domaines du développement COM et le développement du common language runtime du .NET Framework.|
-|[Attributs IDL](idl-attributes.md)|Activer la modification du fichier .idl à partir d’un fichier de code source sans l’utilisation d’un Assistant et sans connaissance de la structure et syntaxe de ce fichier.|
-|[Attributs du consommateur OLE DB](ole-db-consumer-attributes.md)|Injecter du code, selon la [les modèles du consommateur OLE DB](../../data/oledb/ole-db-consumer-templates-reference.md), pour créer un travail consommateur OLE DB qui effectue des tâches telles que les tables de l’ouverture, l’exécution de commandes et l’accès aux données.|
-|[Attributs de compilateur](compiler-attributes.md)|Fourni par le compilateur Microsoft C++.|
+|[Attributs COM](com-attributes.md)|Injectez du code pour prendre en charge de nombreuses zones de développement COM et de .NET Framework common language runtime le développement.|
+|[Attributs IDL](idl-attributes.md)|Activez la modification du fichier. idl à partir d’un fichier de code source sans utiliser d’Assistant et sans connaître la structure et la syntaxe de ce fichier.|
+|[Attributs du consommateur OLE DB](ole-db-consumer-attributes.md)|Injecter du code, basé sur les [modèles de consommateurs OLE DB](../../data/oledb/ole-db-consumer-templates-reference.md), pour créer un consommateur de OLE DB fonctionnel qui effectue des tâches telles que l’ouverture de tables, l’exécution de commandes et l’accès aux données.|
+|[Attributs de compilateur](compiler-attributes.md)|Fourni par le compilateur C++ Microsoft.|
 
-Pour plus d’informations sur la façon de définir des attributs personnalisés pour votre application .NET Framework, consultez [User-Defined Attributes](../../extensions/user-defined-attributes-cpp-component-extensions.md).
+Pour plus d’informations sur la façon de définir des attributs personnalisés pour votre application .NET Framework, consultez [attributs définis](../../extensions/user-defined-attributes-cpp-component-extensions.md)par l’utilisateur.
 
 ## <a name="see-also"></a>Voir aussi
 

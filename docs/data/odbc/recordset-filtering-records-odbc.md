@@ -1,5 +1,5 @@
 ---
-title: 'Recordset : Filtrage d’enregistrements (ODBC)'
+title: "Recordset : filtrage d'enregistrements (ODBC)"
 ms.date: 11/04/2016
 helpviewer_keywords:
 - data [MFC], filtering
@@ -8,28 +8,28 @@ helpviewer_keywords:
 - ODBC recordsets [C++], filtering records
 - filters [C++], recordset object
 ms.assetid: 5c075f37-c837-464d-90c1-d028a9d1c175
-ms.openlocfilehash: 050524df840be28d661da89d04b685a44238f88c
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 2e742ee02e142fd87df3f149379d9971c4acd166
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62397859"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80212904"
 ---
-# <a name="recordset-filtering-records-odbc"></a>Recordset : Filtrage d’enregistrements (ODBC)
+# <a name="recordset-filtering-records-odbc"></a>Recordset : filtrage d'enregistrements (ODBC)
 
 Cette rubrique s’applique aux classes ODBC MFC.
 
-Cette rubrique explique comment filtrer un jeu d’enregistrements afin qu’elle sélectionne uniquement un sous-ensemble particulier d’enregistrements disponibles. Par exemple, vous pouvez souhaiter sélectionner uniquement les sections de classe pour un cours particulier, tel que MATH101. Un filtre est une condition de recherche définie par le contenu d’un SQL **où** clause. Quand le framework ajoute à l’instruction SQL du recordset le **où** clause limite la sélection.
+Cette rubrique explique comment filtrer un jeu d’enregistrements afin qu’il ne sélectionne qu’un sous-ensemble particulier des enregistrements disponibles. Par exemple, vous souhaiterez peut-être sélectionner uniquement les sections de classe pour un cours particulier, par exemple MATH101. Un filtre est une condition de recherche définie par le contenu d’une clause SQL **Where** . Lorsque le Framework l’ajoute à l’instruction SQL de l’ensemble d’enregistrements, la clause **Where** limite la sélection.
 
-Vous devez établir le filtre d’un objet recordset après avoir construit l’objet mais avant d’appeler ses `Open` fonction membre (ou avant d’appeler le `Requery` fonction membre pour un jeu d’enregistrements existant de l’objet dont la propriété `Open` a de la fonction membre été appelé précédemment).
+Vous devez établir un filtre d’objet Recordset après avoir construit l’objet, mais avant d’appeler sa fonction membre `Open` (ou avant d’appeler la fonction membre `Requery` pour un objet Recordset existant dont la fonction membre `Open` a été appelée précédemment).
 
-#### <a name="to-specify-a-filter-for-a-recordset-object"></a>Pour spécifier un filtre pour un objet recordset
+#### <a name="to-specify-a-filter-for-a-recordset-object"></a>Pour spécifier un filtre pour un objet Recordset
 
-1. Construisez un nouvel objet recordset (ou préparez l’appel `Requery` pour un objet existant).
+1. Construisez un nouvel objet Recordset (ou préparez l’appel de `Requery` pour un objet existant).
 
-1. Définissez la valeur de l’objet [m_strFilter](../../mfc/reference/crecordset-class.md#m_strfilter) membre de données.
+1. Définissez la valeur du membre de données [m_strFilter](../../mfc/reference/crecordset-class.md#m_strfilter) de l’objet.
 
-   Le filtre est une chaîne se terminant par null qui contient le contenu de l’instruction SQL **où** clause, mais pas le mot clé **où**. Par exemple, utilisez :
+   Le filtre est une chaîne se terminant par un caractère null qui contient le contenu de la clause SQL **Where** , mais pas le mot clé **Where**. Par exemple, utilisez :
 
     ```
     m_pSet->m_strFilter = "CourseID = 'MATH101'";
@@ -42,19 +42,19 @@ Vous devez établir le filtre d’un objet recordset après avoir construit l’
     ```
 
     > [!NOTE]
-    >  La chaîne littérale « MATH101 » est indiquée par des apostrophes ci-dessus. Dans la spécification SQL ODBC, les guillemets simples sont utilisés pour désigner un littéral de chaîne de caractères. Vérifiez la documentation du pilote ODBC pour les exigences d’indentation de SGBD dans cette situation. Cette syntaxe est également traité plus loin dans la fin de cette rubrique.
+    >  La chaîne littérale « MATH101 » est indiquée par des guillemets simples ci-dessus. Dans la spécification ODBC SQL, les guillemets simples sont utilisés pour désigner un littéral de chaîne de caractères. Dans ce cas, consultez la documentation de votre pilote ODBC pour obtenir les spécifications relatives aux devis de votre SGBD. Cette syntaxe est également abordée plus loin à la fin de cette rubrique.
 
-1. Définissez les autres options que vous avez besoin, telles que l’ordre de tri, le mode de verrouillage ou des paramètres. Spécification d’un paramètre est particulièrement utile. Pour plus d’informations sur le paramétrage de votre filtre, consultez [jeu d’enregistrements : Paramétrage d’un Recordset (ODBC)](../../data/odbc/recordset-parameterizing-a-recordset-odbc.md).
+1. Définissez les autres options dont vous avez besoin, telles que l’ordre de tri, le mode de verrouillage ou les paramètres. La spécification d’un paramètre est particulièrement utile. Pour plus d’informations sur le paramétrage de votre filtre, consultez [Recordset : paramétrage d’un Recordset (ODBC)](../../data/odbc/recordset-parameterizing-a-recordset-odbc.md).
 
 1. Appelez `Open` pour le nouvel objet (ou `Requery` pour un objet précédemment ouvert).
 
 > [!TIP]
->  Utilisation de paramètres dans votre filtre est potentiellement la méthode la plus efficace pour récupérer les enregistrements.
+>  L’utilisation de paramètres dans votre filtre est potentiellement la méthode la plus efficace pour récupérer des enregistrements.
 
 > [!TIP]
->  Les filtres de jeu d’enregistrements sont utiles pour [rejoindre](../../data/odbc/recordset-performing-a-join-odbc.md) tables et d’utilisation de [paramètres](../../data/odbc/recordset-parameterizing-a-recordset-odbc.md) selon les informations fournies ou calculées au moment de l’exécution.
+>  Les filtres d’ensemble d’enregistrements sont utiles pour [joindre](../../data/odbc/recordset-performing-a-join-odbc.md) des tables et pour utiliser des [paramètres](../../data/odbc/recordset-parameterizing-a-recordset-odbc.md) basés sur des informations obtenues ou calculées au moment de l’exécution.
 
-Le jeu d’enregistrements sélectionne uniquement les enregistrements qui répondent à la condition de recherche que vous avez spécifié. Par exemple, pour spécifier le filtre sur les cours ci-dessus (en supposant que la variable `strCourseID` actuellement la valeur est, par exemple, « MATH101 »), procédez comme suit :
+Le jeu d’enregistrements sélectionne uniquement les enregistrements qui répondent aux critères de recherche que vous avez spécifiés. Par exemple, pour spécifier le filtre de cours décrit ci-dessus (en supposant qu’une variable `strCourseID` actuellement définie, par exemple, sur « MATH101 »), procédez comme suit :
 
 ```
 // Using the recordset pointed to by m_pSet
@@ -68,29 +68,29 @@ if ( m_pSet->Open( CRecordset::snapshot, NULL, CRecordset::readOnly ) )
 // Use the recordset
 ```
 
-Le jeu d’enregistrements contient les enregistrements pour toutes les sections de la classe de MATH101.
+Le jeu d’enregistrements contient les enregistrements de toutes les sections de classe pour MATH101.
 
-Notez comment la chaîne de filtre a été définie dans l’exemple ci-dessus, à l’aide d’une variable de chaîne. Il s’agit de l’utilisation classique. Mais supposons que vous souhaitiez attribuer la valeur littérale 100 pour l’ID de cours. Le code suivant montre comment définir la chaîne de filtre correctement avec une valeur littérale :
+Notez que la chaîne de filtrage a été définie dans l’exemple ci-dessus, à l’aide d’une variable de chaîne. Il s’agit de l’utilisation courante. Mais supposons que vous souhaitiez spécifier la valeur littérale 100 pour l’ID de cours. Le code suivant montre comment définir correctement la chaîne de filtrage avec une valeur littérale :
 
 ```
 m_strFilter = "StudentID = '100'";   // correct
 ```
 
-Notez l’utilisation de guillemets simples ; Si vous définissez directement la chaîne de filtrage, la chaîne de filtrage est **pas**:
+Notez l’utilisation de guillemets simples ; Si vous définissez la chaîne de filtre directement, la chaîne de filtrage n’est **pas**:
 
 ```
 m_strFilter = "StudentID = 100";   // incorrect for some drivers
 ```
 
-L’utilisation des guillemets ci-dessus est conforme à la spécification ODBC, mais certains SGBD requièrent d’autres types de guillemets. Pour plus d’informations, consultez [SQL : Personnalisation de l’instruction SQL du Recordset (ODBC)](../../data/odbc/sql-customizing-your-recordsets-sql-statement-odbc.md).
+Le devis indiqué ci-dessus est conforme à la spécification ODBC, mais certains SGBD peuvent nécessiter d’autres guillemets. Pour plus d’informations, consultez [SQL : personnalisation de l’instruction SQL du recordset (ODBC)](../../data/odbc/sql-customizing-your-recordsets-sql-statement-odbc.md).
 
 > [!NOTE]
->  Si vous choisissez de remplacer la chaîne SQL par défaut du jeu d’enregistrements en passant votre propre chaîne SQL à `Open`, vous ne devez pas définir un filtre si votre chaîne personnalisée contient une **où** clause. Pour plus d’informations sur la substitution de la valeur par défaut SQL, consultez [SQL : Personnalisation de l’instruction SQL du Recordset (ODBC)](../../data/odbc/sql-customizing-your-recordsets-sql-statement-odbc.md).
+>  Si vous choisissez de remplacer la chaîne SQL par défaut du Recordset en passant votre propre chaîne SQL à `Open`, vous ne devez pas définir de filtre si votre chaîne personnalisée contient une clause **Where** . Pour plus d’informations sur le remplacement de l’instruction SQL par défaut, consultez [SQL : personnalisation de l’instruction SQL du recordset (ODBC)](../../data/odbc/sql-customizing-your-recordsets-sql-statement-odbc.md).
 
 ## <a name="see-also"></a>Voir aussi
 
 [Recordset (ODBC)](../../data/odbc/recordset-odbc.md)<br/>
-[Recordset : Tri d’enregistrements (ODBC)](../../data/odbc/recordset-sorting-records-odbc.md)<br/>
-[Recordset : Sélection d’enregistrements par les recordsets (ODBC)](../../data/odbc/recordset-how-recordsets-select-records-odbc.md)<br/>
-[Recordset : Modification des enregistrements par les recordsets (ODBC)](../../data/odbc/recordset-how-recordsets-update-records-odbc.md)<br/>
-[Recordset : Verrouillage d’enregistrements (ODBC)](../../data/odbc/recordset-locking-records-odbc.md)
+[Recordset : tri d’enregistrements (ODBC)](../../data/odbc/recordset-sorting-records-odbc.md)<br/>
+[Recordset : sélection d’enregistrements par les recordsets (ODBC)](../../data/odbc/recordset-how-recordsets-select-records-odbc.md)<br/>
+[Recordset : modification des enregistrements par les recordsets (ODBC)](../../data/odbc/recordset-how-recordsets-update-records-odbc.md)<br/>
+[Recordset : verrouillage d’enregistrements (ODBC)](../../data/odbc/recordset-locking-records-odbc.md)

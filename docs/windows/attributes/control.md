@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - Control attribute
 ms.assetid: 3d046bb2-4afe-4cb8-a762-233b296e1975
-ms.openlocfilehash: 12cf98b49b43b7a67834ea5401994ecdc749aa3b
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: 9cdcca6fac2a92bf28f0f655489e61dcb08213e4
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69501774"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80214940"
 ---
 # <a name="control"></a>contrôle
 
@@ -44,16 +44,16 @@ __interface ICustom {
 class CTest : public ICustom {};
 ```
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
 ### <a name="attribute-context"></a>Contexte d'attribut
 
 |||
 |-|-|
-|**S'applique à**|**class**, **struct**|
+|**S'applique à**|**classe**, **struct**|
 |**Renouvelable**|Non|
-|**Attributs requis**|Aucun|
-|**Attributs non valides**|Aucun|
+|**Attributs requis**|None|
+|**Attributs non valides**|None|
 
 Pour plus d'informations sur les contextes d'attribut, consultez [Contextes d'attribut](cpp-attributes-com-net.md#contexts).
 

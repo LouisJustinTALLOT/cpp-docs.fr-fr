@@ -5,12 +5,12 @@ helpviewer_keywords:
 - labeled statement
 - statements, labeled
 ms.assetid: 456a26d5-0fcc-4d1a-b71f-fa9ff3d73b91
-ms.openlocfilehash: 030f1d74cf8a6c6686fcebd10559b5bd7b5d964c
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: d971a0e9864aeada1db5f004ef70577512e78c76
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62368745"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80179690"
 ---
 # <a name="labeled-statements"></a>Instructions étiquetées
 
@@ -54,9 +54,9 @@ int main() {
 }
 ```
 
-**L’instruction goto**
+**Instruction goto**
 
-L’apparence d’un *identificateur* étiquette dans le programme source déclare une étiquette. Uniquement une [goto](../cpp/goto-statement-cpp.md) instruction peut transférer le contrôle à un *identificateur* étiquette. Le fragment de code suivant illustre l’utilisation de la **goto** instruction et un *identificateur* étiquette :
+L’apparence d’une étiquette d' *identificateur* dans le programme source déclare une étiquette. Seule une instruction [goto](../cpp/goto-statement-cpp.md) peut transférer le contrôle à une étiquette d' *identificateur* . Le fragment de code suivant illustre l’utilisation de l’instruction **goto** et d’une étiquette d' *identificateur* :
 
 Une étiquette ne peut pas apparaître seule, mais doit toujours être attachée à une instruction. Si une étiquette doit apparaître seule, placez une instruction null après l'étiquette.
 
@@ -79,9 +79,9 @@ int main() {
 //Output: At Test2 label.
 ```
 
-**L’instruction case**
+**Instruction case**
 
-Les étiquettes qui apparaissent après le **cas** mot clé ne peut pas apparaître à l’extérieur un **basculer** instruction. (Cette restriction s’applique également à la **par défaut** mot clé.) Le fragment de code suivant illustre l’utilisation correcte des **cas** étiquettes :
+Les étiquettes qui s’affichent après le mot clé **case** ne peuvent pas également apparaître en dehors d’une instruction **switch** . (Cette restriction s’applique également au mot clé **default** .) Le fragment de code suivant illustre l’utilisation correcte des étiquettes **case** :
 
 ```cpp
 // Sample Microsoft Windows message processing loop.
@@ -111,7 +111,7 @@ switch( msg )
 
 ## <a name="labels-in-the-case-statement"></a>Étiquettes dans l'instruction case
 
-Les étiquettes qui apparaissent après le **cas** mot clé ne peut pas apparaître à l’extérieur un **basculer** instruction. (Cette restriction s’applique également à la **par défaut** mot clé.) Le fragment de code suivant illustre l’utilisation correcte des **cas** étiquettes :
+Les étiquettes qui s’affichent après le mot clé **case** ne peuvent pas également apparaître en dehors d’une instruction **switch** . (Cette restriction s’applique également au mot clé **default** .) Le fragment de code suivant illustre l’utilisation correcte des étiquettes **case** :
 
 ```cpp
 // Sample Microsoft Windows message processing loop.
@@ -156,7 +156,7 @@ switch( msg )
 
 ## <a name="labels-in-the-goto-statement"></a>Étiquettes dans l'instruction goto
 
-L’apparence d’un *identificateur* étiquette dans le programme source déclare une étiquette. Uniquement une [goto](../cpp/goto-statement-cpp.md) instruction peut transférer le contrôle à un *identificateur* étiquette. Le fragment de code suivant illustre l’utilisation de la **goto** instruction et un *identificateur* étiquette :
+L’apparence d’une étiquette d' *identificateur* dans le programme source déclare une étiquette. Seule une instruction [goto](../cpp/goto-statement-cpp.md) peut transférer le contrôle à une étiquette d' *identificateur* . Le fragment de code suivant illustre l’utilisation de l’instruction **goto** et d’une étiquette d' *identificateur* :
 
 Une étiquette ne peut pas apparaître seule, mais doit toujours être attachée à une instruction. Si une étiquette doit apparaître seule, placez une instruction null après l'étiquette.
 

@@ -1,5 +1,5 @@
 ---
-title: event_source (C++ attribut COM)
+title: event_source (C++ attribut com)
 ms.date: 10/02/2018
 f1_keywords:
 - vc-attr.event_source
@@ -11,14 +11,14 @@ helpviewer_keywords:
 - event sources
 - event handling, creating event source
 ms.assetid: 0983e36a-6127-4fbb-8a22-8dfec6564c16
-ms.openlocfilehash: 81eba3c032a3556d1c69ad02652455ebc07ab6be
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: e187e57f21e9c94068c0b3396b93deed617fef2a
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62409632"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80167067"
 ---
-# <a name="eventsource"></a>event_source
+# <a name="event_source"></a>event_source
 
 Crée une source d'événement.
 
@@ -44,10 +44,10 @@ Une énumération de l’une des valeurs suivantes :
     ```
 
 *optimize*<br/>
-Lorsque *type* est `native`, vous pouvez spécifier `optimize=size`, pour indiquer qu’il y a 4 octets de stockage (minimum) pour tous les événements dans une classe ou `optimize=speed` (la valeur par défaut) pour indiquer qu’il y a 4 * (nombre d’événements) octets de stockage.
+Quand le *type* est `native`, vous pouvez spécifier `optimize=size`, pour indiquer qu’il y a 4 octets de stockage (minimum) pour tous les événements dans une classe ou `optimize=speed` (valeur par défaut) pour indiquer qu’il y a 4 * (nombre d’événements) octets de stockage.
 
 *decorate*<br/>
-Lorsque *type* est `native`, vous pouvez spécifier `decorate=false`, pour indiquer que le nom développé dans le fichier fusionné (.mrg) ne doit pas inclure le nom de la classe englobante. [/Fx](../../build/reference/fx-merge-injected-code.md) vous permet de générer des fichiers .mrg. `decorate=false`, qui est la valeur par défaut, génère dans les noms de types qualifiés complets dans le fichier fusionné.
+Quand le *type* est `native`, vous pouvez spécifier `decorate=false`, pour indiquer que le nom développé dans le fichier fusionné (. MRG) ne doit pas inclure le nom de la classe englobante. [/Fx](../../build/reference/fx-merge-injected-code.md) vous permet de générer des fichiers .mrg. `decorate=false`, qui est la valeur par défaut, génère des noms de types qualifiés complets dans le fichier fusionné.
 
 ## <a name="remarks"></a>Notes
 
@@ -58,16 +58,16 @@ L’attribut C++ **event_source** indique que la classe ou structure à laquelle
 > [!NOTE]
 > Une classe ou structure modélisée ne peut pas contenir d'événements.
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
 ### <a name="attribute-context"></a>Contexte d'attribut
 
 |||
 |-|-|
-|**S'applique à**|**class**, **struct**|
+|**S'applique à**|**classe**, **struct**|
 |**Renouvelable**|Non|
 |**Attributs requis**|**coclasse** lorsque `type`=`com`|
-|**Attributs non valides**|Aucun.|
+|**Attributs non valides**|None|
 
 Pour plus d'informations, consultez [Contextes d'attribut](cpp-attributes-com-net.md#contexts).
 

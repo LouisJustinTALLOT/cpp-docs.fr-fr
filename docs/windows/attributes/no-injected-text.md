@@ -1,21 +1,21 @@
 ---
-title: no_injected_text (C++ attribut COM)
+title: no_injected_text (C++ attribut com)
 ms.date: 10/02/2018
 f1_keywords:
 - vc-attr.no_injected_text
 helpviewer_keywords:
 - no_injected_text attribute
 ms.assetid: 5256f808-e41e-4f4a-9ea5-e447919f5696
-ms.openlocfilehash: 354643020e704a87daa2e56e923b6a0a704bf0b5
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 5f98be3478b2e1eeb4b464f1784f3f4ece22d8a4
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62409289"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80166612"
 ---
-# <a name="noinjectedtext"></a>no_injected_text
+# <a name="no_injected_text"></a>no_injected_text
 
-Empêche le compilateur d’injecter du code à la suite d’utilisation de l’attribut.
+Empêche le compilateur d’injecter du code en raison de l’utilisation d’un attribut.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -26,13 +26,13 @@ Empêche le compilateur d’injecter du code à la suite d’utilisation de l’
 ### <a name="parameters"></a>Paramètres
 
 *boolean*<br/>
-(Facultatif) **true** si vous ne souhaitez aucun code injecté, **false** pour permettre au code à injecter. **true** est la valeur par défaut.
+Facultatif **true** si vous ne souhaitez pas que le code soit injecté, **false** pour autoriser l’injection du code. la valeur par défaut est **true** .
 
 ## <a name="remarks"></a>Notes
 
-L’utilisation la plus courante de la **no_injected_text** C++ attribut est par la [/Fx](../../build/reference/fx-merge-injected-code.md) option du compilateur, qui insère les **no_injected_text** attribut dans le fichier .mrg.
+L’utilisation la plus courante de l’attribut **no_injected_text** C++ est l’option du compilateur [/FX](../../build/reference/fx-merge-injected-code.md) , qui insère l’attribut **no_injected_text** dans le fichier. mrg.
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
 ### <a name="attribute-context"></a>Contexte d'attribut
 
@@ -40,8 +40,8 @@ L’utilisation la plus courante de la **no_injected_text** C++ attribut est par
 |-|-|
 |**S'applique à**|N'importe où|
 |**Renouvelable**|Non|
-|**Attributs requis**|Aucun.|
-|**Attributs non valides**|Aucun.|
+|**Attributs requis**|None|
+|**Attributs non valides**|None|
 
 Pour plus d'informations sur les contextes d'attribut, consultez [Contextes d'attribut](cpp-attributes-com-net.md#contexts).
 

@@ -7,20 +7,20 @@ helpviewer_keywords:
 - expression evaluation
 - expression evaluation, about expression evaluation
 ms.assetid: 4a792154-533b-48b9-8709-31bfc170f0a7
-ms.openlocfilehash: 6770d3fb314222c7c58b6b97fa42d74cbc1e9b33
-ms.sourcegitcommit: a6d63c07ab9ec251c48bc003ab2933cf01263f19
+ms.openlocfilehash: 5213fc7972f3a2590ceac5038a7b5e07495df594
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "74857318"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80178847"
 ---
 # <a name="semantics-of-expressions"></a>Sémantique des expressions
 
 Les expressions sont évaluées selon la priorité et le regroupement de leurs opérateurs. ([Priorité et associativité](../cpp/cpp-built-in-operators-precedence-and-associativity.md) des opérateurs dans les [conventions lexicales](../cpp/lexical-conventions.md), affiche C++ les relations que les opérateurs imposent sur les expressions.)
 
-## <a name="order-of-evaluation"></a>Ordre d'évaluation
+## <a name="order-of-evaluation"></a>Ordre d’évaluation
 
-Considérez cet exemple :
+Examinez cet exemple :
 
 ```cpp
 // Order_of_Evaluation.cpp
@@ -69,16 +69,16 @@ Le langage C++ spécifie certaines compatibilités lors de la spécification des
 
 |Type attendu|Types autorisés|
 |-------------------|-------------------|
-|*type*|`const` *type*<br /> `volatile` *type*<br /> *type*&<br /> `const` *type*&<br /> `volatile` *type*&<br /> `volatile const` *type*<br /> `volatile const` *type*&|
-|*type* \*|*type* \*<br /> `const` *type* \*<br /> `volatile` *type* \*<br /> `volatile const` *type* \*|
-|`const` *type*|*type*<br /> `const` *type*<br />`const` *type*&|
-|`volatile` *type*|*type*<br /> `volatile` *type*<br /> `volatile` *type*&|
+|*type*|*type* de `const`<br /> *type* de `volatile`<br /> & de *type*<br /> *type* de `const`&<br /> *type* de `volatile`&<br /> *type* de `volatile const`<br /> *type* de `volatile const`&|
+|\* de *type*|\* de *type*<br /> *type* de `const` \*<br /> *type* de `volatile` \*<br /> *type* de `volatile const` \*|
+|*type* de `const`|*type*<br /> *type* de `const`<br />*type* de `const`&|
+|*type* de `volatile`|*type*<br /> *type* de `volatile`<br /> *type* de `volatile`&|
 
 Comme les règles précédentes peuvent toujours être utilisées de manière combinée, un pointeur const vers un objet volatile peut être fourni là où un pointeur est attendu.
 
 ## <a name="ambiguous-expressions"></a>Expressions ambiguës
 
-La signification de certaines expressions est ambiguë. Ces expressions se rencontrent généralement lorsque la valeur d'un objet change plusieurs fois dans la même expression. Elles reposent sur un ordre particulier d'évaluation lorsque le langage n'en définit aucun. Prenons l'exemple suivant :
+La signification de certaines expressions est ambiguë. Ces expressions se rencontrent généralement lorsque la valeur d'un objet change plusieurs fois dans la même expression. Elles reposent sur un ordre particulier d'évaluation lorsque le langage n'en définit aucun. Prenons l’exemple suivant :
 
 ```
 int i = 7;

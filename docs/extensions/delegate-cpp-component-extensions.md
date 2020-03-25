@@ -8,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - delegate keyword [C++]
 ms.assetid: 03caf23d-7873-4a23-9b34-becf42aaf429
-ms.openlocfilehash: 29bf305ed5e4845437b90ed672d1ab0c0de9ced6
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
-ms.translationtype: HT
+ms.openlocfilehash: 388ccb28c9311b4727199e6b7324771c24c2906d
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "65516484"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80172436"
 ---
 # <a name="delegate--ccli-and-ccx"></a>délégué (C++/CLI et C++/CX)
 
@@ -23,11 +23,11 @@ Déclare un type qui représente un pointeur de fonction.
 
 Le Windows Runtime et le Common Language Runtime prennent en charge les délégués.
 
-### <a name="remarks"></a>Remarques
+### <a name="remarks"></a>Notes
 
 **delegate** est un mot clé contextuel. Pour plus d’informations, consultez [Mots clés contextuels](context-sensitive-keywords-cpp-component-extensions.md).
 
-Vous pouvez détecter, au moment de la compilation, si un type est délégué, avec le trait de type `__is_delegate()`. Pour plus d’informations, consultez [Prise en charge du compilateur pour les caractéristiques de type](compiler-support-for-type-traits-cpp-component-extensions.md).
+Vous pouvez détecter, au moment de la compilation, si un type est délégué, avec le trait de type `__is_delegate()`. Pour plus d’informations, consultez [Compiler Support for Type Traits](compiler-support-for-type-traits-cpp-component-extensions.md) (Prise en charge du compilateur pour les caractéristiques de type).
 
 ## <a name="windows-runtime"></a>Windows Runtime
 
@@ -59,7 +59,7 @@ Le nom du type de délégué déclaré.
 *parameters*<br/>
 (Facultatif) Les types et identificateurs du prototype de fonction.
 
-### <a name="remarks"></a>Remarques
+### <a name="remarks"></a>Notes
 
 Utilisez *delegate-type-identifier* pour déclarer un événement avec le même prototype que le délégué. Pour plus d’informations, consultez [Délégués (C++/CX)](../cppcx/delegates-c-cx.md).
 
@@ -89,7 +89,7 @@ La signature de la fonction pouvant être liée au délégué. Le type de retour
 
 Pour définir un délégué indépendant, le premier paramètre dans *function_declaration* doit être du type du pointeur **this** pour l’objet.
 
-### <a name="remarks"></a>Remarques
+### <a name="remarks"></a>Notes
 
 Les délégués sont multidiffusion : le « pointeur de fonction » peut être lié à une ou plusieurs méthodes dans une classe managée. Le mot clé **delegate** définit un type de délégué multidiffusion avec une signature de méthode spécifique.
 
@@ -119,7 +119,7 @@ Lorsque vous créez un délégué pour une fonction static ou global, un seul pa
 
 Pour plus d’informations sur les délégués, consultez
 
-- [Guide pratique pour définir et utiliser des délégués (C++/CLI)](../dotnet/how-to-define-and-use-delegates-cpp-cli.md)
+- [Guide pratique pour définir et utiliser des délégués (C++-CLI)](../dotnet/how-to-define-and-use-delegates-cpp-cli.md)
 
 - [Délégués génériques (C++/CLI)](generic-delegates-visual-cpp.md)
 

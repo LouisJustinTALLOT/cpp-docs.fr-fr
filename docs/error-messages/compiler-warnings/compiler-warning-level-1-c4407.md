@@ -1,19 +1,19 @@
 ---
-title: Avertissement du compilateur (niveau 1) C4407
+title: Avertissement du compilateur (niveau 1) C4407
 ms.date: 11/04/2016
 f1_keywords:
 - C4407
 helpviewer_keywords:
 - C4407
 ms.assetid: 32bc2c21-363a-4bb8-b486-725faeaededc
-ms.openlocfilehash: cdc25155aced50331851e9581c346155c6f8e45c
-ms.sourcegitcommit: e5192a25c084eda9eabfa37626f3274507e026b3
+ms.openlocfilehash: 8dd78872d4edf82fb61c8ab93639dbcd93085754
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/12/2019
-ms.locfileid: "73966342"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80162541"
 ---
-# <a name="compiler-warning-level-1-c4407"></a>Avertissement du compilateur (niveau 1) C4407
+# <a name="compiler-warning-level-1-c4407"></a>Avertissement du compilateur (niveau 1) C4407
 
 Cast entre différentes représentations de pointeur vers membre, le compilateur peut générer du code incorrect
 

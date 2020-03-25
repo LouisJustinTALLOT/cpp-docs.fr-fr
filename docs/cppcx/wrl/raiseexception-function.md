@@ -7,16 +7,16 @@ f1_keywords:
 helpviewer_keywords:
 - RaiseException function
 ms.assetid: f9c74f6d-112a-4d2e-900f-622f795d5dbf
-ms.openlocfilehash: 08305c5d59d7e272aac87ad9aa183c8e82588632
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 3270057bf5b1b27a98bef1ab236291eab15d27ab
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62231351"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80213627"
 ---
 # <a name="raiseexception-function"></a>RaiseException (fonction)
 
-Prend en charge l’infrastructure WRL et n’est pas destinée à être utilisée directement depuis votre code.
+Prend en charge l’infrastructure WRL et n’est pas destiné à être utilisé directement à partir de votre code.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -28,23 +28,23 @@ inline void __declspec(noreturn)   RaiseException(
 
 ### <a name="parameters"></a>Paramètres
 
-*hr*<br/>
-Le code d’exception de l’exception est levée ; Autrement dit, la valeur HRESULT d’échec d’une opération.
+*h*<br/>
+Code d’exception de l’exception levée ; autrement dit, HRESULT d’une opération ayant échoué.
 
 *dwExceptionFlags*<br/>
-Un indicateur qui indique une exception non bloquantes (la valeur de l’indicateur est égal à zéro), ou une exception noncontinuable (la valeur de l’indicateur est différent de zéro). Par défaut, l’exception est qui empêchait celle-ci.
+Indicateur qui signale une exception continue (la valeur de l’indicateur est zéro) ou une exception non continuable (la valeur de l’indicateur est différente de zéro). Par défaut, l’exception n’est pas continue.
 
 ## <a name="remarks"></a>Notes
 
 Lève une exception dans le thread appelant.
 
-Pour plus d’informations, consultez le Windows `RaiseException` (fonction).
+Pour plus d’informations, consultez la fonction Windows `RaiseException`.
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
-**En-tête :** internal.h
+**En-tête :** Internal. h
 
-**Espace de noms :** Microsoft::WRL::Details
+**Espace de noms :** Microsoft :: WRL ::D étails
 
 ## <a name="see-also"></a>Voir aussi
 

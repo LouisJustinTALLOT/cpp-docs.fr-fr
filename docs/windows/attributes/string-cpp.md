@@ -6,16 +6,16 @@ f1_keywords:
 helpviewer_keywords:
 - string attribute
 ms.assetid: ddde900a-2e99-4fcd-86e8-57e1bdba7c93
-ms.openlocfilehash: 978f1f546c0df8de4ff167ddf5ddf724feb31b6e
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: 96d5e609130b34a4a5f35109ce691c2de470e537
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69514006"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80166158"
 ---
 # <a name="string-c"></a>string (C++)
 
-Indique que le tableau **char**, **wchar_t**, `byte` (ou équivalent) unidimensionnel ou le pointeur vers ce tableau doit être traité comme une chaîne.
+Indique que le tableau **char**, **wchar_t**, `byte` (ou équivalent) ou le pointeur vers un tel tableau doit être traité comme une chaîne.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -29,7 +29,7 @@ L’attribut de **chaîne** C++ a les mêmes fonctionnalités que l’attribut M
 
 ## <a name="example"></a>Exemple
 
-Le code suivant montre comment utiliser **String** sur une interface et sur un typedef:
+Le code suivant montre comment utiliser **String** sur une interface et sur un typedef :
 
 ```cpp
 // cpp_attr_ref_string.cpp
@@ -44,7 +44,7 @@ __interface IFireTabCtrl
 };
 ```
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
 ### <a name="attribute-context"></a>Contexte d'attribut
 
@@ -52,8 +52,8 @@ __interface IFireTabCtrl
 |-|-|
 |**S'applique à**|Tableau ou pointeur vers un tableau, un paramètre d’interface, une méthode d’interface|
 |**Renouvelable**|Non|
-|**Attributs requis**|Aucun|
-|**Attributs non valides**|Aucun|
+|**Attributs requis**|None|
+|**Attributs non valides**|None|
 
 Pour plus d'informations sur les contextes d'attribut, consultez [Contextes d'attribut](cpp-attributes-com-net.md#contexts).
 

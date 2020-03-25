@@ -14,12 +14,12 @@ helpviewer_keywords:
 - < operator
 - operator <, valarrays
 ms.assetid: 31027dd6-53be-428b-b950-1dcb25393597
-ms.openlocfilehash: fc2a14d882b5ccfbfdaae543c76ca673f9018a59
-ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
+ms.openlocfilehash: 6ef43fb762c4da71062fc846048f21c0112bfafc
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/21/2019
-ms.locfileid: "72687337"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80215265"
 ---
 # <a name="operatorlt-ltsample-containergt"></a>operator&lt; (&lt;sample container&gt;)
 
@@ -44,5 +44,5 @@ Retourne `lexicographical_compare(left.begin, left.end, right.begin, right.end)`
 ## <a name="see-also"></a>Voir aussi
 
 [\<sample container>](../standard-library/sample-container.md)\
-[début](../standard-library/container-class-begin.md) \
+[début](../standard-library/container-class-begin.md)\
 [end](../standard-library/container-class-end.md)

@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - displaybind attribute
 ms.assetid: b3d70396-78e4-43d9-9583-16ddb8c9bb1f
-ms.openlocfilehash: 168db224e7b15656308259f9507e1079744f1a73
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: 9ca5c84e859d395d71b7f37a34b1158800bceed7
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69490885"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80168250"
 ---
 # <a name="displaybind"></a>displaybind
 
@@ -27,11 +27,11 @@ Indique une propriété qui doit être affichée à l’utilisateur comme pouvan
 
 L’attribut **displaybind** C++ a les mêmes fonctionnalités que l’attribut MIDL [displaybind](/windows/win32/Midl/displaybind) .
 
-## <a name="example"></a>Exemples
+## <a name="example"></a>Exemple
 
 Pour obtenir un exemple d’utilisation de **displaybind**, consultez l’exemple de [Bindable](bindable.md) .
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
 ### <a name="attribute-context"></a>Contexte d'attribut
 
@@ -39,8 +39,8 @@ Pour obtenir un exemple d’utilisation de **displaybind**, consultez l’exempl
 |-|-|
 |**S'applique à**|Méthode d’interface|
 |**Renouvelable**|Non|
-|**Attributs requis**|Aucun|
-|**Attributs non valides**|Aucun|
+|**Attributs requis**|None|
+|**Attributs non valides**|None|
 
 Pour plus d'informations, consultez [Contextes d'attribut](cpp-attributes-com-net.md#contexts).
 

@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - helpcontext attribute
 ms.assetid: 6fbb022d-a4b7-4989-a02f-7f18a9b0ad96
-ms.openlocfilehash: 8ec13d785ae491a4082d0bbdc908448cb1b8a49c
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: 292db21e8092284a92b09ef3f889bb0475d0d886
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69490911"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80167002"
 ---
 # <a name="helpcontext"></a>helpcontext
 
@@ -26,7 +26,7 @@ Spécifie un ID de contexte qui permet à l’utilisateur d’afficher des infor
 ### <a name="parameters"></a>Paramètres
 
 *id*<br/>
-ID de contexte de la rubrique d’aide. Consultez [HTML Help: Aide contextuelle pour vos programmes](../../mfc/html-help-context-sensitive-help-for-your-programs.md) pour plus d’informations sur les ID de contexte.
+ID de contexte de la rubrique d’aide. Pour plus d’informations sur les ID de contexte, consultez [aide HTML : aide contextuelle pour vos programmes](../../mfc/html-help-context-sensitive-help-for-your-programs.md) .
 
 ## <a name="remarks"></a>Notes
 
@@ -36,7 +36,7 @@ L’attribut **HelpContext** C++ a les mêmes fonctionnalités que l’attribut 
 
 Consultez l’exemple pour [DefaultValue](defaultvalue.md) pour obtenir un exemple d’utilisation de **HelpContext**.
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
 ### <a name="attribute-context"></a>Contexte d'attribut
 
@@ -44,8 +44,8 @@ Consultez l’exemple pour [DefaultValue](defaultvalue.md) pour obtenir un exemp
 |-|-|
 |**S'applique à**|**interface**, **typedef**, **classe**, méthode, propriété|
 |**Renouvelable**|Non|
-|**Attributs requis**|Aucun|
-|**Attributs non valides**|Aucun|
+|**Attributs requis**|None|
+|**Attributs non valides**|None|
 
 Pour plus d'informations, consultez [Contextes d'attribut](cpp-attributes-com-net.md#contexts).
 

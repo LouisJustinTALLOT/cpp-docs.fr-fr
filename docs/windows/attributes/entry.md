@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - entry attribute
 ms.assetid: ba4843e3-d7ad-4b86-9a15-0b4192f0f698
-ms.openlocfilehash: 71abf4f183255fa137b43ac9cabd88d15c3fc85d
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: 9bdfc64506f26ee4e9876920821883a0fa12bc7e
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69490900"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80167093"
 ---
 # <a name="entry"></a>entry
 
@@ -30,22 +30,22 @@ ID du point d’entrée.
 
 ## <a name="remarks"></a>Notes
 
-L' C++ attribut Entry a les mêmes fonctionnalités que l’attribut MIDL [entry](/windows/win32/Midl/entry) .
+L’attribut **entry** C++ a les mêmes fonctionnalités que l’attribut MIDL [entry](/windows/win32/Midl/entry) .
 
-## <a name="example"></a>Exemples
+## <a name="example"></a>Exemple
 
-Consultez l’exemple pour [idl_module](idl-module.md) pour obtenir un exemple d’utilisation de l' **entrée**.
+Pour obtenir un exemple d’utilisation de l' **entrée**, consultez l’exemple de [idl_module](idl-module.md) .
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
 ### <a name="attribute-context"></a>Contexte d'attribut
 
 |||
 |-|-|
-|**S'applique à**|`idl_module`attribut|
+|**S'applique à**|Attribut `idl_module`|
 |**Renouvelable**|Non|
-|**Attributs requis**|Aucun|
-|**Attributs non valides**|Aucun|
+|**Attributs requis**|None|
+|**Attributs non valides**|None|
 
 Pour plus d'informations, consultez [Contextes d'attribut](cpp-attributes-com-net.md#contexts).
 

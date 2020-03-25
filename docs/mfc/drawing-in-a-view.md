@@ -11,38 +11,38 @@ helpviewer_keywords:
 - paint messages in view class [MFC]
 - device contexts, screen drawings
 ms.assetid: e3761db6-0f19-4482-a4cd-ac38ef7c4d3a
-ms.openlocfilehash: bc461347b56379976cdf62014507e3a15529f081
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 227c4614bad42706893301c69882c3f40af12e2f
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62408019"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80214342"
 ---
 # <a name="drawing-in-a-view"></a>Dessin dans une vue
 
-La quasi-totalité de dessin dans votre application se produit dans la vue `OnDraw` fonction membre, que vous devez remplacer dans votre classe d’affichage. (L’exception est la souris de dessin, présentés dans [interprétation entrée via une vue utilisateur](../mfc/interpreting-user-input-through-a-view.md).) Votre `OnDraw` remplacer :
+Presque tous les dessins de votre application se produisent dans la fonction membre `OnDraw` de la vue, que vous devez substituer dans votre classe d’affichage. (L’exception est le dessin de la souris, décrite dans interprétation de l' [entrée utilisateur via une vue](../mfc/interpreting-user-input-through-a-view.md).) Votre `OnDraw` remplacement :
 
-1. Obtient les données en appelant des fonctions membres que vous fournissez le document.
+1. Obtient les données en appelant les fonctions membres du document que vous fournissez.
 
-1. Affiche les données en appelant les fonctions membres d’un objet de contexte de périphérique que l’infrastructure transmet à `OnDraw`.
+1. Affiche les données en appelant les fonctions membres d’un objet de contexte d’appareil que le Framework passe à `OnDraw`.
 
-Lorsque les données d’un document est modifié d’une certaine façon, la vue doit être redessinée pour refléter les modifications. En règle générale, cela se produit lorsque l’utilisateur apporte une modification via une vue sur le document. Dans ce cas, il appelle le document [UpdateAllViews](../mfc/reference/cdocument-class.md#updateallviews) fonction membre pour avertir toutes les vues du même document se mettre à jour. `UpdateAllViews` appelle de chaque vue [OnUpdate](../mfc/reference/cview-class.md#onupdate) fonction membre. L’implémentation par défaut de `OnUpdate` invalide la zone cliente de la vue. Vous pouvez la remplacer pour invalider les régions de la zone cliente correspondant aux parties modifiées du document.
+Lorsque les données d’un document changent d’une certaine façon, la vue doit être redessinée pour refléter les modifications. En général, cela se produit lorsque l’utilisateur apporte une modification à l’aide d’une vue sur le document. Dans ce cas, la vue appelle la fonction membre [UpdateAllViews](../mfc/reference/cdocument-class.md#updateallviews) du document pour notifier toutes les vues du même document à se mettre à jour eux-mêmes. `UpdateAllViews` appelle la fonction membre [OnUpdate](../mfc/reference/cview-class.md#onupdate) de chaque vue. L’implémentation par défaut de `OnUpdate` invalide la zone cliente entière de la vue. Vous pouvez la remplacer pour invalider uniquement les régions de la zone cliente qui mappent aux parties modifiées du document.
 
-Le `UpdateAllViews` fonction membre de classe `CDocument` et `OnUpdate` fonction membre de classe `CView` vous permettent de passer des informations décrivant les parties du document ont été modifiés. Ce mécanisme « indicateur » vous permet de limiter la zone de la vue doit redessiner. `OnUpdate` accepte deux arguments « indicateur ». La première, *lHint*, de type **LPARAM**, vous permet de transmettre les données de votre choix, tandis que le second, *pHint*, de type `CObject`*, vous permet de transmettre un pointeur à tous les objets dérivés à partir de `CObject`.
+La fonction membre `UpdateAllViews` de la classe `CDocument` et la fonction membre `OnUpdate` de la classe `CView` vous permettent de transmettre des informations décrivant les parties du document qui ont été modifiées. Ce mécanisme de « Conseil » vous permet de limiter la zone que la vue doit redessiner. `OnUpdate` prend deux arguments « hint ». Le premier, *lHint*, de type **lParam**, vous permet de passer toutes les données de votre choix, tandis que le second, *pHint*, de type `CObject`*, vous permet de passer un pointeur à n’importe quel objet dérivé de `CObject`.
 
-Lorsqu’une vue devient non valide, Windows envoie un **WM_PAINT** message. La vue [OnPaint](../mfc/reference/cwnd-class.md#onpaint) fonction gestionnaire répond au message en créant un objet de contexte de périphérique de classe [CPaintDC](../mfc/reference/cpaintdc-class.md) et appels de votre vue `OnDraw` fonction membre. Il est généralement inutile d’écrire une substitution de `OnPaint` fonction gestionnaire.
+Lorsqu’une vue n’est plus valide, Windows l’envoie un message de **WM_PAINT** . La fonction de gestionnaire [OnPaint](../mfc/reference/cwnd-class.md#onpaint) de la vue répond au message en créant un objet de contexte d’appareil de la classe [CPaintDC](../mfc/reference/cpaintdc-class.md) et appelle la fonction membre `OnDraw` de votre vue. Vous n’avez normalement pas besoin d’écrire une fonction de gestionnaire de `OnPaint` substituée.
 
-Un [contexte de périphérique](../mfc/device-contexts.md) est une structure de données de Windows qui contient des informations sur les attributs de dessin d’un appareil tel qu’un écran ou une imprimante. Tous les appels de dessins sont effectués via un objet de contexte de périphérique. Pour dessiner sur l’écran, `OnDraw` est passé un `CPaintDC` objet. Pour dessiner sur une imprimante, il est passé un [CDC](../mfc/reference/cdc-class.md) objet configurés pour l’imprimante actuelle.
+Un [contexte de périphérique](../mfc/device-contexts.md) est une structure de données Windows qui contient des informations sur les attributs de dessin d’un appareil tel qu’un écran ou une imprimante. Tous les appels de dessin sont effectués à l’aide d’un objet de contexte d’appareil. Pour dessiner à l’écran, `OnDraw` reçoit un objet `CPaintDC`. Pour dessiner sur une imprimante, un objet [CDC](../mfc/reference/cdc-class.md) configuré pour l’imprimante actuelle lui est transmis.
 
-Tout d’abord votre code pour dessiner dans la vue récupère un pointeur vers le document, puis effectue des appels de dessins via le contexte de périphérique. Le simple suivant `OnDraw` exemple illustre le processus :
+Votre code pour dessiner dans la vue récupère d’abord un pointeur vers le document, puis effectue des appels de dessin via le contexte de périphérique. L’exemple de `OnDraw` simple suivant illustre le processus :
 
 [!code-cpp[NVC_MFCDocView#1](../mfc/codesnippet/cpp/drawing-in-a-view_1.cpp)]
 
-Dans cet exemple, vous définissez le `GetData` fonctionner en tant que membre de votre classe de document dérivée.
+Dans cet exemple, vous devez définir la fonction `GetData` en tant que membre de votre classe de document dérivée.
 
-L’exemple imprime toute chaîne à partir du document, centré dans la vue. Si le `OnDraw` appel est pour le dessin de l’écran, le `CDC` objet passé dans *pDC* est un `CPaintDC` dont le constructeur a déjà appelé `BeginPaint`. Les appels aux fonctions de dessin sont effectués via le pointeur de contexte de périphérique. Pour plus d’informations sur les contextes de périphérique et les appels de dessin, consultez la classe [CDC](../mfc/reference/cdc-class.md) dans le *référence MFC* et [utilisation d’objets de fenêtre](../mfc/working-with-window-objects.md).
+L’exemple imprime toute chaîne qu’il obtient à partir du document, centrée dans la vue. Si le `OnDraw` appel est destiné au dessin à l’écran, l’objet `CDC` passé dans le *contrôleur de domaine principal* est un `CPaintDC` dont le constructeur a déjà appelé `BeginPaint`. Les appels aux fonctions de dessin sont effectués par le biais du pointeur de contexte de périphérique. Pour plus d’informations sur les contextes de périphérique et les appels de dessin, consultez la classe [CDC](../mfc/reference/cdc-class.md) dans la *référence MFC* et [utilisation d’objets de fenêtre](../mfc/working-with-window-objects.md).
 
-Pour plus d’exemples montrant comment écrire `OnDraw`, consultez le [exemples MFC](../overview/visual-cpp-samples.md).
+Pour obtenir plus d’exemples d’écriture de `OnDraw`, consultez les [exemples MFC](../overview/visual-cpp-samples.md#mfc-samples).
 
 ## <a name="see-also"></a>Voir aussi
 

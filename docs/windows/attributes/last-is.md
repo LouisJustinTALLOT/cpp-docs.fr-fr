@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - last_is attribute
 ms.assetid: 9e045ac0-fa38-4249-af55-67bde5d0a58c
-ms.openlocfilehash: 4745d4eb59fd2adb79937b34184081dbbd0814fb
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: 62377415dc0809033fcdcb8bd4e7997f667c1691
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69514520"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80214810"
 ---
 # <a name="last_is"></a>last_is
 
@@ -34,9 +34,9 @@ L’attribut **last_is** C++ a les mêmes fonctionnalités que l’attribut MIDL
 
 ## <a name="example"></a>Exemple
 
-Pour obtenir un exemple de spécification d’une section d’un tableau, consultez [first_is](first-is.md) .
+Consultez [first_is](first-is.md) pour obtenir un exemple de spécification d’une section d’un tableau.
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
 ### <a name="attribute-context"></a>Contexte d'attribut
 
@@ -44,8 +44,8 @@ Pour obtenir un exemple de spécification d’une section d’un tableau, consul
 |-|-|
 |**S'applique à**|Champ dans un **struct** ou une **Union**, un paramètre d’interface, une méthode d’interface|
 |**Renouvelable**|Non|
-|**Attributs requis**|Aucun|
-|**Attributs non valides**|Aucun|
+|**Attributs requis**|None|
+|**Attributs non valides**|None|
 
 Pour plus d'informations, consultez [Contextes d'attribut](cpp-attributes-com-net.md#contexts).
 

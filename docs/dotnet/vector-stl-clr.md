@@ -91,12 +91,12 @@ helpviewer_keywords:
 - value_type member [STL/CLR]
 - vector member [STL/CLR]
 ms.assetid: f90060d5-097a-4e9d-9a26-a634b5b9c6c2
-ms.openlocfilehash: 5b16319c17b5f5681f6417d8732931da1974b66b
-ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
+ms.openlocfilehash: bbd4d7b6e7e7668100b2694fdcf3b785d7681ca3
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/17/2020
-ms.locfileid: "79445547"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80208271"
 ---
 # <a name="vector-stlclr"></a>vector (STL/CLR)
 
@@ -215,7 +215,7 @@ L’effacement ou la suppression d’un élément appelle le destructeur pour sa
 
 ## <a name="members"></a>Membres
 
-## <a name="assign"></a>vector :: assign (STL/CLR)
+## <a name="vectorassign-stlclr"></a><a name="assign"></a>vector :: assign (STL/CLR)
 
 Remplace tous les éléments.
 
@@ -296,7 +296,7 @@ a b
 a b c
 ```
 
-## <a name="at"></a>vector :: at (STL/CLR)
+## <a name="vectorat-stlclr"></a><a name="at"></a>vector :: at (STL/CLR)
 
 Accède à un élément à une position spécifiée.
 
@@ -348,7 +348,7 @@ a b c
 a x c
 ```
 
-## <a name="back"></a>vector :: Back (STL/CLR)
+## <a name="vectorback-stlclr"></a><a name="back"></a>vector :: Back (STL/CLR)
 
 Accède au dernier élément.
 
@@ -399,7 +399,7 @@ back() = c
 a b x
 ```
 
-## <a name="back_item"></a>vector :: back_item (STL/CLR)
+## <a name="vectorback_item-stlclr"></a><a name="back_item"></a>vector :: back_item (STL/CLR)
 
 Accède au dernier élément.
 
@@ -450,7 +450,7 @@ back_item = c
 a b x
 ```
 
-## <a name="begin"></a>vector :: Begin (STL/CLR)
+## <a name="vectorbegin-stlclr"></a><a name="begin"></a>vector :: Begin (STL/CLR)
 
 Désigne le début de la séquence contrôlée.
 
@@ -505,7 +505,7 @@ a b c
 x y c
 ```
 
-## <a name="capacity"></a>vector :: Capacity (STL/CLR)
+## <a name="vectorcapacity-stlclr"></a><a name="capacity"></a>vector :: Capacity (STL/CLR)
 
 Signale la taille de l'espace de stockage alloué pour le conteneur.
 
@@ -555,7 +555,7 @@ capacity() = 4, ok = True
 capacity() = 9, ok = True
 ```
 
-## <a name="clear"></a>vector :: Clear (STL/CLR)
+## <a name="vectorclear-stlclr"></a><a name="clear"></a>vector :: Clear (STL/CLR)
 
 Supprime tous les éléments.
 
@@ -612,7 +612,7 @@ a b
 size() = 0
 ```
 
-## <a name="const_iterator"></a>vector :: const_iterator (STL/CLR)
+## <a name="vectorconst_iterator-stlclr"></a><a name="const_iterator"></a>vector :: const_iterator (STL/CLR)
 
 Type d'un itérateur constant pour la séquence contrôlée.
 
@@ -653,7 +653,7 @@ int main()
 a b c
 ```
 
-## <a name="const_reference"></a>vector :: const_reference (STL/CLR)
+## <a name="vectorconst_reference-stlclr"></a><a name="const_reference"></a>vector :: const_reference (STL/CLR)
 
 Type d'une référence constante à un élément.
 
@@ -697,7 +697,7 @@ int main()
 a b c
 ```
 
-## <a name="const_reverse_iterator"></a>vector :: const_reverse_iterator (STL/CLR)
+## <a name="vectorconst_reverse_iterator-stlclr"></a><a name="const_reverse_iterator"></a>vector :: const_reverse_iterator (STL/CLR)
 
 Type d’un itérateur inverse constant pour la séquence contrôlée.
 
@@ -739,7 +739,7 @@ int main()
 c b a
 ```
 
-## <a name="difference_type"></a>vector ::d ifference_type (STL/CLR)
+## <a name="vectordifference_type-stlclr"></a><a name="difference_type"></a>vector ::d ifference_type (STL/CLR)
 
 Types d’une distance signée entre deux éléments.
 
@@ -793,7 +793,7 @@ end()-begin() = 3
 begin()-end() = -3
 ```
 
-## <a name="empty"></a>vector :: Empty (STL/CLR)
+## <a name="vectorempty-stlclr"></a><a name="empty"></a>vector :: Empty (STL/CLR)
 
 Vérifie l'absence d'éléments.
 
@@ -844,7 +844,7 @@ size() = 0
 empty() = True
 ```
 
-## <a name="end"></a>vector :: end (STL/CLR)
+## <a name="vectorend-stlclr"></a><a name="end"></a>vector :: end (STL/CLR)
 
 Désigne la fin de la séquence contrôlée.
 
@@ -900,7 +900,7 @@ a b c
 a x y
 ```
 
-## <a name="erase"></a>vector :: Erase (STL/CLR)
+## <a name="vectorerase-stlclr"></a><a name="erase"></a>vector :: Erase (STL/CLR)
 
 Supprime les éléments placés aux positions spécifiées.
 
@@ -979,7 +979,7 @@ erase(begin(), end()-1) = e
 size() = 1
 ```
 
-## <a name="front"></a>vector :: Front (STL/CLR)
+## <a name="vectorfront-stlclr"></a><a name="front"></a>vector :: Front (STL/CLR)
 
 Accède au premier élément.
 
@@ -1030,7 +1030,7 @@ front() = a
 x b c
 ```
 
-## <a name="front_item"></a>vector :: front_item (STL/CLR)
+## <a name="vectorfront_item-stlclr"></a><a name="front_item"></a>vector :: front_item (STL/CLR)
 Accède au premier élément.
 
 ### <a name="syntax"></a>Syntaxe
@@ -1080,7 +1080,7 @@ front_item = a
 x b c
 ```
 
-## <a name="generic_container"></a>vector :: generic_container (STL/CLR)
+## <a name="vectorgeneric_container-stlclr"></a><a name="generic_container"></a>vector :: generic_container (STL/CLR)
 Type de l’interface générique pour le conteneur.
 
 ### <a name="syntax"></a>Syntaxe
@@ -1145,7 +1145,7 @@ a b c d
 a b c d e
 ```
 
-## <a name="generic_iterator"></a>vector :: generic_iterator (STL/CLR)
+## <a name="vectorgeneric_iterator-stlclr"></a><a name="generic_iterator"></a>vector :: generic_iterator (STL/CLR)
 
 Type d’un itérateur à utiliser avec l’interface générique pour le conteneur.
 
@@ -1203,7 +1203,7 @@ a b c
 a a c
 ```
 
-## <a name="generic_reverse_iterator"></a>vector :: generic_reverse_iterator (STL/CLR)
+## <a name="vectorgeneric_reverse_iterator-stlclr"></a><a name="generic_reverse_iterator"></a>vector :: generic_reverse_iterator (STL/CLR)
 Type d’un itérateur inverse à utiliser avec l’interface générique pour le conteneur.
 
 ### <a name="syntax"></a>Syntaxe
@@ -1259,7 +1259,7 @@ a b c
 a c c
 ```
 
-## <a name="generic_value"></a>vector :: generic_value (STL/CLR)
+## <a name="vectorgeneric_value-stlclr"></a><a name="generic_value"></a>vector :: generic_value (STL/CLR)
 
 Type d’un élément à utiliser avec l’interface générique pour le conteneur.
 
@@ -1315,7 +1315,7 @@ a b c
 a a c
 ```
 
-## <a name="insert"></a>vector :: Insert (STL/CLR)
+## <a name="vectorinsert-stlclr"></a><a name="insert"></a>vector :: Insert (STL/CLR)
 
 Ajoute des éléments à une position spécifiée.
 
@@ -1424,7 +1424,7 @@ y y a x b
 a x b c y y a x b
 ```
 
-## <a name="iterator"></a>vector :: iterator (STL/CLR)
+## <a name="vectoriterator-stlclr"></a><a name="iterator"></a>vector :: iterator (STL/CLR)
 
 Type d'un itérateur pour la séquence contrôlée.
 
@@ -1473,7 +1473,7 @@ a b c
 x b c
 ```
 
-## <a name="op_as"></a>vector :: Operator = (STL/CLR)
+## <a name="vectoroperator-stlclr"></a><a name="op_as"></a>vector :: Operator = (STL/CLR)
 
 Remplace la séquence contrôlée.
 
@@ -1526,7 +1526,7 @@ a b c
 a b c
 ```
 
-## <a name="op"></a>vector :: Operator (STL/CLR)
+## <a name="vectoroperatorstlclr"></a><a name="op"></a>vector :: Operator (STL/CLR)
 
 Accède à un élément à une position spécifiée.
 
@@ -1578,7 +1578,7 @@ a b c
 a x c
 ```
 
-## <a name="pop_back"></a>vector ::p op_back (STL/CLR)
+## <a name="vectorpop_back-stlclr"></a><a name="pop_back"></a>vector ::p op_back (STL/CLR)
 
 Supprime le dernier élément.
 
@@ -1625,7 +1625,7 @@ a b c
 a b
 ```
 
-## <a name="push_back"></a>vector ::p ush_back (STL/CLR)
+## <a name="vectorpush_back-stlclr"></a><a name="push_back"></a>vector ::p ush_back (STL/CLR)
 
 Ajoute un nouveau dernier élément.
 
@@ -1665,7 +1665,7 @@ int main()
 a b c
 ```
 
-## <a name="rbegin"></a>vector :: rbegin (STL/CLR)
+## <a name="vectorrbegin-stlclr"></a><a name="rbegin"></a>vector :: rbegin (STL/CLR)
 
 Désigne le début de la séquence contrôlée inverse.
 
@@ -1720,7 +1720,7 @@ a b c
 a y x
 ```
 
-## <a name="reference"></a>vector :: Reference (STL/CLR)
+## <a name="vectorreference-stlclr"></a><a name="reference"></a>vector :: Reference (STL/CLR)
 
 Type d'une référence à un élément.
 
@@ -1775,7 +1775,7 @@ a b c
 A B C
 ```
 
-## <a name="rend"></a>vector :: rend (STL/CLR)
+## <a name="vectorrend-stlclr"></a><a name="rend"></a>vector :: rend (STL/CLR)
 
 Désigne la fin de la séquence contrôlée inverse.
 
@@ -1831,7 +1831,7 @@ a b c
 y x c
 ```
 
-## <a name="reserve"></a>vector :: Reserve (STL/CLR)
+## <a name="vectorreserve-stlclr"></a><a name="reserve"></a>vector :: Reserve (STL/CLR)
 
 Garantit une capacité de croissance minimale pour le conteneur.
 
@@ -1886,7 +1886,7 @@ capacity() = 4, ok = True
 capacity() = 9, ok = True
 ```
 
-## <a name="resize"></a>vector :: Resize (STL/CLR)
+## <a name="vectorresize-stlclr"></a><a name="resize"></a>vector :: Resize (STL/CLR)
 
 Change le nombre d'éléments.
 
@@ -1946,7 +1946,7 @@ size() = 0
 x x x x x
 ```
 
-## <a name="reverse_iterator"></a>vector :: reverse_iterator (STL/CLR)
+## <a name="vectorreverse_iterator-stlclr"></a><a name="reverse_iterator"></a>vector :: reverse_iterator (STL/CLR)
 
 Type d'un itérateur inverse pour la séquence contrôlée.
 
@@ -1995,7 +1995,7 @@ c b a
 x b a
 ```
 
-## <a name="size"></a>vector :: Size (STL/CLR)
+## <a name="vectorsize-stlclr"></a><a name="size"></a>vector :: Size (STL/CLR)
 
 Compte le nombre d'éléments.
 
@@ -2048,7 +2048,7 @@ size() = 0 after clearing
 size() = 2 after adding 2
 ```
 
-## <a name="size_type"></a>vector :: size_type (STL/CLR)
+## <a name="vectorsize_type-stlclr"></a><a name="size_type"></a>vector :: size_type (STL/CLR)
 
 Type d'une distance signée entre deux éléments.
 
@@ -2093,7 +2093,7 @@ a b c
 end()-begin() = 3
 ```
 
-## <a name="swap"></a>vector :: swap (STL/CLR)
+## <a name="vectorswap-stlclr"></a><a name="swap"></a>vector :: swap (STL/CLR)
 
 Échange le contenu de deux conteneurs.
 
@@ -2157,7 +2157,7 @@ x x x x x
 a b c
 ```
 
-## <a name="to_array"></a>vector :: to_array (STL/CLR)
+## <a name="vectorto_array-stlclr"></a><a name="to_array"></a>vector :: to_array (STL/CLR)
 
 Copie la séquence contrôlée dans un nouveau tableau.
 
@@ -2206,7 +2206,7 @@ a b c d
 a b c
 ```
 
-## <a name="value_type"></a>vector :: value_type (STL/CLR)
+## <a name="vectorvalue_type-stlclr"></a><a name="value_type"></a>vector :: value_type (STL/CLR)
 
 Type d'un élément.
 
@@ -2251,7 +2251,7 @@ int main()
 a b c
 ```
 
-## <a name="vector"></a>vector :: vector (STL/CLR)
+## <a name="vectorvector-stlclr"></a><a name="vector"></a>vector :: vector (STL/CLR)
 
 Construit un objet conteneur.
 
@@ -2396,7 +2396,7 @@ x x x x x x
 x x x x x x
 ```
 
-## <a name="op_neq"></a>Operator ! = (Vector) (STL/CLR)
+## <a name="operator-vector-stlclr"></a><a name="op_neq"></a>Operator ! = (Vector) (STL/CLR)
 
 Comparaison non égale à Vector.
 
@@ -2465,7 +2465,7 @@ a b d
 [a b c] != [a b d] is True
 ```
 
-## <a name="op_lt"></a>&lt; d’opérateur (Vector) (STL/CLR)
+## <a name="operatorlt-vector-stlclr"></a><a name="op_lt"></a>&lt; d’opérateur (Vector) (STL/CLR)
 
 Vecteur inférieur à la comparaison.
 
@@ -2534,7 +2534,7 @@ a b d
 [a b c] < [a b d] is True
 ```
 
-## <a name="op_lteq"></a>Operator&lt;= (Vector) (STL/CLR)
+## <a name="operatorlt-vector-stlclr"></a><a name="op_lteq"></a>Operator&lt;= (Vector) (STL/CLR)
 
 Comparaison de vecteurs inférieure ou égale à.
 
@@ -2603,7 +2603,7 @@ a b d
 [a b d] <= [a b c] is False
 ```
 
-## <a name="op_eq"></a>Operator = = (Vector) (STL/CLR)
+## <a name="operator-vector-stlclr"></a><a name="op_eq"></a>Operator = = (Vector) (STL/CLR)
 
 Comparaison d’égalité de vecteurs.
 
@@ -2672,7 +2672,7 @@ a b d
 [a b c] == [a b d] is False
 ```
 
-## <a name="op_gt"></a>&gt; d’opérateur (Vector) (STL/CLR)
+## <a name="operatorgt-vector-stlclr"></a><a name="op_gt"></a>&gt; d’opérateur (Vector) (STL/CLR)
 
 Vecteur supérieur à la comparaison.
 
@@ -2741,7 +2741,7 @@ a b d
 [a b d] > [a b c] is True
 ```
 
-## <a name="op_gteq"></a>Operator&gt;= (Vector) (STL/CLR)
+## <a name="operatorgt-vector-stlclr"></a><a name="op_gteq"></a>Operator&gt;= (Vector) (STL/CLR)
 
 Comparaison de vecteurs supérieure ou égale à.
 

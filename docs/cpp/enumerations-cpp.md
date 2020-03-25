@@ -10,12 +10,12 @@ helpviewer_keywords:
 - named constants, enumeration declarations
 - declaring enumerations
 ms.assetid: 081829db-5dca-411e-a53c-bffef315bcb3
-ms.openlocfilehash: caec9ea7ac5482ff23b73676a3fd7b3d25ad293f
-ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
+ms.openlocfilehash: 67b03256390d5447ae5accc28dd450a7f60f485c
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/16/2020
-ms.locfileid: "79418453"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80180184"
 ---
 # <a name="enumerations-c"></a>Énumérations (C++)
 
@@ -143,7 +143,7 @@ namespace ScopedEnumConversions
 
 Notez que la ligne `hand = account_num;` provoque toujours l'erreur avec les enums non délimités, comme indiqué précédemment. Elle est autorisée avec un transtypage explicite. Toutefois, avec les enums délimités, la tentative de conversion dans l'instruction suivante, `account_num = Suit::Hearts;`, n'est plus autorisée sans transtypage explicite.
 
-## <a name="no_enumerators"></a>Enums sans énumérateurs
+## <a name="enums-with-no-enumerators"></a><a name="no_enumerators"></a>Enums sans énumérateurs
 
 **Visual Studio 2017 version 15,3 et versions ultérieures** (disponibles avec [/std : c++ 17](../build/reference/std-specify-language-standard-version.md)) : en définissant un enum (normal ou étendu) avec un type sous-jacent explicite et sans énumérateurs, vous pouvez en effet introduire un nouveau type intégral qui n’a pas de conversion implicite vers un autre type. En utilisant ce type au lieu de son type sous-jacent intégré, vous pouvez éliminer le risque d’erreurs subtiles causées par des conversions implicites involontaires.
 

@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - pointer_default attribute
 ms.assetid: 2d0c7bbc-a1e8-4337-9e54-e304523e2735
-ms.openlocfilehash: c70c372e5f1c3a9c2f620a1fa3505fb9d0436e79
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: d0c5832623c1e418f4c6e8bdb606d1d363503483
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69514259"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80166534"
 ---
 # <a name="pointer_default"></a>pointer_default
 
@@ -26,7 +26,7 @@ Spécifie l’attribut de pointeur par défaut pour tous les pointeurs, à l’e
 ### <a name="parameters"></a>Paramètres
 
 *value*<br/>
-Valeur qui décrit le type de pointeur: **ptr**, **ref**ou **unique**.
+Valeur qui décrit le type de pointeur : **ptr**, **ref**ou **unique**.
 
 ## <a name="remarks"></a>Notes
 
@@ -34,9 +34,9 @@ L’attribut **pointer_default** C++ a les mêmes fonctionnalités que l’attri
 
 ## <a name="example"></a>Exemple
 
-Pour obtenir un exemple d’utilisation de **pointer_default**, consultez l’exemple correspondant à [DefaultValue](defaultvalue.md) .
+Consultez l’exemple pour [DefaultValue](defaultvalue.md) pour obtenir un exemple d’utilisation de **pointer_default**.
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
 ### <a name="attribute-context"></a>Contexte d'attribut
 
@@ -44,8 +44,8 @@ Pour obtenir un exemple d’utilisation de **pointer_default**, consultez l’ex
 |-|-|
 |**S'applique à**|**interface**|
 |**Renouvelable**|Non|
-|**Attributs requis**|Aucun|
-|**Attributs non valides**|Aucun|
+|**Attributs requis**|None|
+|**Attributs non valides**|None|
 
 Pour plus d'informations sur les contextes d'attribut, consultez [Contextes d'attribut](cpp-attributes-com-net.md#contexts).
 

@@ -1,21 +1,21 @@
 ---
-title: cas (attribut de COM C++)
+title: case (C++ attribut com)
 ms.date: 10/02/2018
 f1_keywords:
 - vc-attr.case
 helpviewer_keywords:
 - case attribute
 ms.assetid: 6fb883c3-0526-4932-a901-b4564dcaeb7d
-ms.openlocfilehash: b3058f2fe6f35e1b11d4790780cb0fcdcaada706
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: da72fff3bb600b5db2fba0ecdfe9c6a768836f3c
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62148434"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80167333"
 ---
 # <a name="case-c"></a>cas (C++)
 
-Utilisé avec le [switch_type](switch-type.md) d’attribut dans un **union**.
+Utilisé avec l’attribut [switch_type](switch-type.md) dans une **Union**.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -26,7 +26,7 @@ Utilisé avec le [switch_type](switch-type.md) d’attribut dans un **union**.
 #### <a name="parameters"></a>Paramètres
 
 *value*<br/>
-Une valeur d’entrée possible pour lequel vous souhaitez fournir un traitement. Le type de **valeur** peut être un des types suivants :
+Une valeur d’entrée possible pour laquelle vous souhaitez fournir le traitement. Le type de **valeur** peut être l’un des types suivants :
 
 - `int`
 
@@ -36,15 +36,15 @@ Une valeur d’entrée possible pour lequel vous souhaitez fournir un traitement
 
 - `enum`
 
-un identificateur ou d’un tel type.
+ou un identificateur de ce type.
 
 ## <a name="remarks"></a>Notes
 
-Le **cas** attribut C++ a les mêmes fonctionnalités que le **cas** attribut MIDL. Cet attribut est utilisé uniquement avec le [switch_type](switch-type.md) attribut.
+L’attribut **case** C++ a les mêmes fonctionnalités que l’attribut MIDL de **cas** . Cet attribut est utilisé uniquement avec l’attribut [switch_type](switch-type.md) .
 
 ## <a name="example"></a>Exemple
 
-Le code suivant illustre une utilisation de la **cas** attribut :
+Le code suivant illustre une utilisation de l’attribut **case** :
 
 ```cpp
 // cpp_attr_ref_case.cpp
@@ -63,16 +63,16 @@ struct SizedValue2 {
 [module(name="ATLFIRELib")];
 ```
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
 ### <a name="attribute-context"></a>Contexte d'attribut
 
 |||
 |-|-|
-|**S'applique à**|Membre d’un **classe** ou **struct**|
+|**S'applique à**|Membre d’une **classe** ou d’un **struct**|
 |**Renouvelable**|Non|
-|**Attributs requis**|Aucun.|
-|**Attributs non valides**|Aucun.|
+|**Attributs requis**|None|
+|**Attributs non valides**|None|
 
 Pour plus d'informations sur les contextes d'attribut, consultez [Contextes d'attribut](cpp-attributes-com-net.md#contexts).
 

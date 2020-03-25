@@ -6,26 +6,26 @@ f1_keywords:
 helpviewer_keywords:
 - LNK2028
 ms.assetid: e2b03293-6066-464d-a050-ce747bcf7f0e
-ms.openlocfilehash: ed2dc1a95d4dd7c447b360da21b5046e20f79083
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: ef9e3eae655a4fbee1c3da74f6036e5fb22434b1
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62298982"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80194614"
 ---
 # <a name="linker-tools-error-lnk2028"></a>Erreur des outils Éditeur de liens LNK2028
 
-«*fonction_exportée*» (*nom_décoré*) référencé dans la fonction «*function_containing_function_call*» (*nom_décoré*)
+«*exported_function*» (*Decorated_Name*) référencé dans la fonction «*function_containing_function_call*» (*Decorated_Name*)
 
 ## <a name="remarks"></a>Notes
 
-Lorsque vous tentez d’importer une fonction native dans une image pure, n’oubliez pas que les conventions d’appel implicites diffèrent entre les compilations natives et pures.
+Lorsque vous tentez d’importer une fonction native dans une image pure, n’oubliez pas que les conventions d’appel implicites diffèrent entre les compilations native et pure.
 
-Le **/CLR : pure** option du compilateur est déconseillée dans Visual Studio 2015 et non pris en charge dans Visual Studio 2017.
+L’option de compilateur **/clr : pure** est déconseillée dans visual studio 2015 et n’est pas prise en charge dans visual studio 2017.
 
 ## <a name="example"></a>Exemple
 
-Cet exemple de code génère un composant avec une fonction exportée native, dont la convention d’appel est implicitement [__cdecl](../../cpp/cdecl.md).
+Cet exemple de code génère un composant avec une fonction exportée, native, dont la Convention d’appel est implicitement [__cdecl](../../cpp/cdecl.md).
 
 ```cpp
 // LNK2028.cpp
@@ -37,7 +37,7 @@ __declspec(dllexport) int func() {
 
 ## <a name="example"></a>Exemple
 
-L’exemple suivant crée un client pur qui utilise la fonction native. Toutefois, la convention d’appel sous **/CLR : pure** est [__clrcall](../../cpp/clrcall.md). L’exemple suivant génère l’erreur LNK2028.
+L’exemple suivant crée un client pur qui utilise la fonction native. Toutefois, la Convention d’appel sous **/clr : pure** est [__clrcall](../../cpp/clrcall.md). L’exemple suivant génère l’LNK2028.
 
 ```cpp
 // LNK2028_b.cpp

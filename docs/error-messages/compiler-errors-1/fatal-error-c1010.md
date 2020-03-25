@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C1010
 ms.assetid: dfd035f1-a7a2-40bc-bc92-dc4d7f456767
-ms.openlocfilehash: 0315af63e9fdbbb0b136a85a23cb28936dee6836
-ms.sourcegitcommit: fd0f8839da5c6a3663798a47c6b0bb6e63b518bd
+ms.openlocfilehash: 40a2828ce6b21384ec49c371f23e506d816f1284
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70273563"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80204787"
 ---
 # <a name="fatal-error-c1010"></a>Erreur irrécupérable C1010
 
@@ -37,16 +37,16 @@ Pour désactiver l’utilisation d’en-têtes précompilés dans un projet, pro
 
 1. Dans la liste déroulante **configuration** , sélectionnez **toutes les configurations**.
 
-1. Sélectionnez la page de propriétés **Propriétés** > de > configuration**C/C++** **en-têtes précompilés** .
+1. Sélectionnez la page de propriétés **Propriétés de configuration** > **en-têtes précompilés** **C/C++**  > .
 
 1. Dans la liste propriété, sélectionnez la liste déroulante pour la propriété **en-tête précompilé** , puis choisissez **ne pas utiliser les en-têtes précompilés**. Choisissez **OK** pour enregistrer vos modifications.
 
 1. Dans la fenêtre **Explorateur de solutions** , cliquez avec le bouton droit sur le fichier source *pch. cpp* dans votre projet. (Dans les projets plus anciens, le fichier peut être nommé *stdafx. cpp*.) Choisissez **exclure du projet** pour le supprimer de la Build.
 
-1. Utilisez la commande de menu **générer** > une**solution propre** pour chaque configuration que vous générez pour supprimer tous les fichiers *PROJECT_NAME. pch* dans vos répertoires de build intermédiaires.
+1. Utilisez la commande de menu **générer** > **nettoyer la solution** pour chaque configuration que vous générez pour supprimer tous les fichiers *PROJECT_NAME. pch* dans vos répertoires de build intermédiaires.
 
 ## <a name="see-also"></a>Voir aussi
 
-[Fichiers d’en-tête précompilés](../../build/creating-precompiled-header-files.md)\
-[/YC (créer un fichier d’en-tête précompilé)](../../build/reference/yc-create-precompiled-header-file.md)\
+[Fichiers d’en-tête précompilé](../../build/creating-precompiled-header-files.md)\
+[/Yc (créer un fichier d’en-tête précompilé)](../../build/reference/yc-create-precompiled-header-file.md)\
 [/Yu (utiliser un fichier d’en-tête précompilé)](../../build/reference/yu-use-precompiled-header-file.md)

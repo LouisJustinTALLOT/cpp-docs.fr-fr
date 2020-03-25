@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - cpp_quote attribute
 ms.assetid: f75327ff-42bd-498b-9177-7ffa25427e1f
-ms.openlocfilehash: 905c9fc41b1b42dffe9c7b39fae0b096cdc24950
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: 451313b5bd1eb5011f1175de5c3bcfe6fb054299
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69501765"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80214914"
 ---
 # <a name="cpp_quote"></a>cpp_quote
 
@@ -25,7 +25,7 @@ ms.locfileid: "69501765"
 
 ### <a name="parameters"></a>Paramètres
 
-*statement*<br/>
+*instruction*<br/>
 Instruction C.
 
 ## <a name="remarks"></a>Notes
@@ -36,11 +36,11 @@ Vous pouvez également utiliser **cpp_quote** et générer un fichier. h dans le
 
 L’attribut **cpp_quote** a les mêmes fonctionnalités que l’attribut MIDL [cpp_quote](/windows/win32/Midl/cpp-quote) .
 
-## <a name="example"></a>Exemples
+## <a name="example"></a>Exemple
 
 Consultez l’exemple de [double](dual.md) pour obtenir un exemple d’utilisation de **cpp_quote**.
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
 ### <a name="attribute-context"></a>Contexte d'attribut
 
@@ -48,8 +48,8 @@ Consultez l’exemple de [double](dual.md) pour obtenir un exemple d’utilisati
 |-|-|
 |**S'applique à**|N'importe où|
 |**Renouvelable**|Non|
-|**Attributs requis**|Aucun|
-|**Attributs non valides**|Aucun|
+|**Attributs requis**|None|
+|**Attributs non valides**|None|
 
 Pour plus d'informations sur les contextes d'attribut, consultez [Contextes d'attribut](cpp-attributes-com-net.md#contexts).
 

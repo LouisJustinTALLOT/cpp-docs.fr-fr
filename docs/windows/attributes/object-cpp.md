@@ -1,17 +1,17 @@
 ---
-title: objet (attribut de COM C++)
+title: Object (C++ attribut com)
 ms.date: 10/02/2018
 f1_keywords:
 - vc-attr.object
 helpviewer_keywords:
 - object attribute
 ms.assetid: f2d3c231-630d-4b4c-bd15-b1c30df362dd
-ms.openlocfilehash: c0f544e84e5110761dfd01e25abef4352f055ff5
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 4545d899c13a1eabf8ea5fb6fe3918fb5f05b626
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62407534"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80214663"
 ---
 # <a name="object-c"></a>object (C++)
 
@@ -25,15 +25,15 @@ Identifie une interface personnalisée.
 
 ## <a name="remarks"></a>Notes
 
-Lorsqu’il précède une définition d’interface, le **objet** attribut C++ provoque l’interface à placer dans le fichier .idl comme une interface personnalisée.
+Lors de la préversion d’une définition d’interface, l’attribut de l' **objet** C++ provoque le placement de l’interface dans le fichier. idl en tant qu’interface personnalisée.
 
-N’importe quelle interface marquée avec l’objet doit hériter `IUnknown`. Cette condition est remplie si une des interfaces de base héritent `IUnknown`. Si aucune interface de base ne hérite `IUnknown`, le compilateur entraîne l’interface marquée avec **objet** de dériver de `IUnknown`.
+Toute interface marquée avec l’objet doit hériter de `IUnknown`. Cette condition est satisfaite si l’une des interfaces de base hérite de `IUnknown`. Si aucune interface de base n’hérite de `IUnknown`, le compilateur fait en sorte que l’interface marquée avec l' **objet** soit dérivée de `IUnknown`.
 
 ## <a name="example"></a>Exemple
 
-Consultez [nonbrowsable](nonbrowsable.md) pour obtenir un exemple montrant comment utiliser **objet**.
+Pour obtenir un exemple d’utilisation de l' **objet**, consultez non [consultable](nonbrowsable.md) .
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
 ### <a name="attribute-context"></a>Contexte d'attribut
 
@@ -41,8 +41,8 @@ Consultez [nonbrowsable](nonbrowsable.md) pour obtenir un exemple montrant comme
 |-|-|
 |**S'applique à**|**interface**|
 |**Renouvelable**|Non|
-|**Attributs requis**|Aucun.|
-|**Attributs non valides**|Aucun.|
+|**Attributs requis**|None|
+|**Attributs non valides**|None|
 
 Pour plus d'informations sur les contextes d'attribut, consultez [Contextes d'attribut](cpp-attributes-com-net.md#contexts).
 

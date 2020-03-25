@@ -6,24 +6,24 @@ f1_keywords:
 helpviewer_keywords:
 - C4958
 ms.assetid: e79b9e9c-d572-4a3a-a3b6-60962b70864a
-ms.openlocfilehash: 96b73975f391493340dd01d85ad30a8c888b44c0
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 63371d91367902c1eab539cb370e55440fcbf917
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62208068"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80164883"
 ---
 # <a name="compiler-warning-c4958"></a>Avertissement du compilateur C4958
 
-> «*opération*' : opération arithmétique de pointeur n’est pas vérifiable
+> '*opération*' : l’opération arithmétique de pointeur n’est pas vérifiable
 
 ## <a name="remarks"></a>Notes
 
 L’utilisation d’une opération arithmétique de pointeur produira une image non vérifiable.
 
-Pour plus d’informations, consultez [Code pur et vérifiable (C++ / c++ / CLI)](../../dotnet/pure-and-verifiable-code-cpp-cli.md).
+Pour plus d’informations, consultez [Code pur et vérifiable (C++/CLI)](../../dotnet/pure-and-verifiable-code-cpp-cli.md).
 
-Le **/CLR : safe** option du compilateur est déconseillée dans Visual Studio 2015 et non pris en charge dans Visual Studio 2017.
+L’option de compilateur **/clr : safe** est déconseillée dans visual studio 2015 et n’est pas prise en charge dans visual studio 2017.
 
 Cet avertissement, qui s’affiche comme une erreur, peut être désactivé avec le pragma [warning](../../preprocessor/warning.md) ou l’option du compilateur [/wd](../../build/reference/compiler-option-warning-level.md) .
 

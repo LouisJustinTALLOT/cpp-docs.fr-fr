@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - ModuleType enumeration
 ms.assetid: 61a763af-a5a4-451d-8b40-815af507fcde
-ms.openlocfilehash: 3c7486cbc761975dd133f229f23dcf0b70e7e3ac
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 8425a15d594f7b8b30027d3576ee86015b656130
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62403228"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80213718"
 ---
 # <a name="moduletype-enumeration"></a>ModuleType (énumération)
 
@@ -28,19 +28,19 @@ enum ModuleType;
 
 ### <a name="values"></a>Valeurs
 
-|Nom|Description|
+|Name|Description|
 |----------|-----------------|
 |`InProc`|Un serveur in-process.|
-|`OutOfProc`|Un serveur out-of-process.|
-|`DisableCaching`|Désactiver le mécanisme de mise en cache sur le Module.|
+|`OutOfProc`|Un serveur hors processus.|
+|`DisableCaching`|Désactivez le mécanisme de mise en cache sur le module.|
 |`InProcDisableCaching`|Combinaison de `InProc` et `DisableCaching`.|
 |`OutOfProcDisableCaching`|Combinaison de `OutOfProc` et `DisableCaching`.|
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
-**En-tête :** module.h
+**En-tête :** module. h
 
-**Espace de noms :** Microsoft::wrl
+**Espace de noms :** Microsoft::WRL
 
 ## <a name="see-also"></a>Voir aussi
 

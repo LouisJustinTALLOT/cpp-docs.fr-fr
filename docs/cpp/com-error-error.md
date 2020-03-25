@@ -7,18 +7,18 @@ f1_keywords:
 helpviewer_keywords:
 - Error method [C++]
 ms.assetid: b53a15fd-198e-4276-afcd-13439c4807f7
-ms.openlocfilehash: 606f553060e71ece18b3d48159ec40133be28965
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 8e2c52d10b15822703329dcea18944773f5784ea
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62155096"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80180756"
 ---
-# <a name="comerrorerror"></a>_com_error::Error
+# <a name="_com_errorerror"></a>_com_error::Error
 
-**Section spécifique à Microsoft**
+**Section spécifique de Microsoft**
 
-Récupère la valeur HRESULT passé au constructeur.
+Récupère le HRESULT passé au constructeur.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -28,13 +28,13 @@ HRESULT Error( ) const throw( );
 
 ## <a name="return-value"></a>Valeur de retour
 
-Élément HRESULT brut passé au constructeur.
+Élément HRESULT brut passé dans le constructeur.
 
 ## <a name="remarks"></a>Notes
 
-Récupère l’élément HRESULT encapsulé dans un `_com_error` objet.
+Récupère l’élément HRESULT encapsulé dans un objet `_com_error`.
 
-**FIN de la section spécifique à Microsoft**
+**Fin de la section spécifique de Microsoft**
 
 ## <a name="see-also"></a>Voir aussi
 

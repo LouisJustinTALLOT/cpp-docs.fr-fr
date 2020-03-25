@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - iid_is attribute
 ms.assetid: 2f9b42a9-7130-4b08-9b1e-0d5d360e10ff
-ms.openlocfilehash: 8bfa20f55afd85019795fdd40548158c2f49e126
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: 627ecff4835386dc70a9f3dfac0500404a84eefe
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69514661"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80167990"
 ---
 # <a name="iid_is"></a>iid_is
 
@@ -51,7 +51,7 @@ __interface IFireTabCtrl : IDispatch
 [module(name="ATLFIRELib")];
 ```
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
 ### <a name="attribute-context"></a>Contexte d'attribut
 
@@ -59,8 +59,8 @@ __interface IFireTabCtrl : IDispatch
 |-|-|
 |**S'applique à**|Paramètre d’interface, membre de données|
 |**Renouvelable**|Non|
-|**Attributs requis**|Aucun|
-|**Attributs non valides**|Aucun|
+|**Attributs requis**|None|
+|**Attributs non valides**|None|
 
 Pour plus d'informations, consultez [Contextes d'attribut](cpp-attributes-com-net.md#contexts).
 

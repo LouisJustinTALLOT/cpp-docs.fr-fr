@@ -6,29 +6,29 @@ f1_keywords:
 helpviewer_keywords:
 - PRJ0009
 ms.assetid: 89291778-cda4-495d-983f-ddcc06dfc98b
-ms.openlocfilehash: 963b7c861f9e8ee7105ebdc23afff08c4be46465
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: d02325504b04a13cd15dee0bd70891bf5a63b62e
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62359499"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80192959"
 ---
 # <a name="project-build-error-prj0009"></a>Erreur de génération de projet PRJ0009
 
-Build journal n’a pas pu être ouvert en écriture.
+Le journal de génération n’a pas pu être ouvert en écriture.
 
 **Assurez-vous que le fichier n’est pas ouvert par un autre processus et qu’il n’est pas protégé en écriture.**
 
-Après avoir défini le **journal de génération** propriété **Oui** et effectuer une génération ou une régénération, Visual C++ n’a pas pu ouvrir le journal de génération en mode exclusif.
+Après avoir défini la propriété de **journalisation** de la génération sur **Oui** et effectué une C++ génération ou une régénération, Visual n’a pas pu ouvrir le journal de génération en mode exclusif.
 
-Inspecter le **journal de génération** définition en ouvrant le **Options** boîte de dialogue (sur le **outils** menu, cliquez sur **Options** commande), puis en sélectionnant **VC ++ Build** dans le **projets** dossier. Le fichier de build est appelé BuildLog.htm et est écrit dans le répertoire intermédiaire $(IntDir).
+Inspectez le paramètre de **journalisation de génération** en ouvrant la boîte de dialogue **options** (dans le menu **Outils** , cliquez sur commande **options** ), puis sélectionnez **Build VC + +** dans le dossier **projets** . Le fichier de build est appelé BuildLog. htm et est écrit dans le répertoire intermédiaire $ (IntDir).
 
-Raisons possibles de cette erreur :
+Raisons possibles pour cette erreur :
 
-- Vous exécutez deux processus de Visual C++ et essaie de générer la même configuration du même projet dans les deux simultanément.
+- Vous exécutez deux processus de Visual C++ et essayez de générer la même configuration du même projet dans simultanément.
 
 - Le fichier journal de génération est ouvert dans un processus qui verrouille le fichier.
 
-- L’utilisateur ne dispose pas d’autorisation pour créer un fichier.
+- L’utilisateur n’a pas l’autorisation de créer un fichier.
 
-- L’utilisateur actuel n’a pas d’accès en écriture au fichier BuildLog.htm.
+- L’utilisateur actuel ne dispose pas d’un accès en écriture au fichier BuildLog. htm.

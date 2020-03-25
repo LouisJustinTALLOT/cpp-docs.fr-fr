@@ -6,16 +6,16 @@ f1_keywords:
 helpviewer_keywords:
 - licensed attribute
 ms.assetid: 09cf3b4a-d3f2-43e3-9180-d420333b23bf
-ms.openlocfilehash: 0c637f9e3f6d99b9f197474f49a1a9843744f38b
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: 49585a697c7880da27357ebcafce9c5cefd89fd2
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69514456"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80214758"
 ---
 # <a name="licensed"></a>licensed
 
-Indique que l’objet COM auquel il s’applique est concédé sous licence et doit être instancié à `IClassFactory2`l’aide de.
+Indique que l’objet COM auquel il s’applique est concédé sous licence et doit être instancié à l’aide de `IClassFactory2`.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -48,16 +48,16 @@ public:
 [module(name="MyLibrary", version="1.0", helpstring="My Library Block")];
 ```
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
 ### <a name="attribute-context"></a>Contexte d'attribut
 
 |||
 |-|-|
-|**S'applique à**|**class**, **struct**|
+|**S'applique à**|**classe**, **struct**|
 |**Renouvelable**|Non|
 |**Attributs requis**|`coclass`|
-|**Attributs non valides**|Aucun|
+|**Attributs non valides**|None|
 
 Pour plus d'informations, consultez [Contextes d'attribut](cpp-attributes-com-net.md#contexts).
 

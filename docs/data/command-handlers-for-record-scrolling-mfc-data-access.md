@@ -6,16 +6,16 @@ helpviewer_keywords:
 - record scrolling [C++]
 - scrolling records
 ms.assetid: f8b13477-2a37-459e-a30c-806fb78165ac
-ms.openlocfilehash: 66944221910dbd23d78a78fc951030efbee86bd0
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 8bbacd6625e846381d2bafc8133e8b36efe51b1a
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62398035"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80213445"
 ---
 # <a name="command-handlers-for-record-scrolling--mfc-data-access"></a>Gestionnaires de commandes pour le défilement des enregistrements (Accès aux données MFC)
 
-Le [CRecordView](../mfc/reference/crecordview-class.md) classe fournit par défaut gestion des commandes pour les commandes standards suivantes :
+La classe [CRecordView](../mfc/reference/crecordview-class.md) fournit la gestion des commandes par défaut pour les commandes standard suivantes :
 
 - ID_RECORD_MOVE_FIRST
 
@@ -25,11 +25,11 @@ Le [CRecordView](../mfc/reference/crecordview-class.md) classe fournit par défa
 
 - ID_RECORD_MOVE_PREV
 
-Le `OnMove` fonction membre fournit par défaut gestion des commandes pour les quatre commandes, qui permettent de passer d’un enregistrement à l’autre. À mesure que ces commandes sont exécutées, RFX (ou DFX) charge le nouvel enregistrement dans les champs du recordset et DDX déplace les valeurs dans les contrôles du formulaire d'enregistrement. Pour plus d’informations sur RFX, consultez [Record Field Exchange (RFX)](../data/odbc/record-field-exchange-rfx.md).
+La fonction membre `OnMove` fournit la gestion des commandes par défaut pour les quatre commandes, qui se déplacent d’un enregistrement à l’autre. À mesure que ces commandes sont exécutées, RFX (ou DFX) charge le nouvel enregistrement dans les champs du recordset et DDX déplace les valeurs dans les contrôles du formulaire d'enregistrement. Pour plus d’informations sur RFX, consultez [Record Field Exchange (RFX)](../data/odbc/record-field-exchange-rfx.md).
 
 > [!NOTE]
 >  Veillez à utiliser ces ID de commandes standard pour tous les objets d'interface utilisateur associés aux commandes de navigation d'enregistrements standard.
 
 ## <a name="see-also"></a>Voir aussi
 
-[Prise en charge de la Navigation dans une vue d’enregistrement](../data/supporting-navigation-in-a-record-view-mfc-data-access.md)
+[Prise en charge de la navigation dans une vue d’enregistrement](../data/supporting-navigation-in-a-record-view-mfc-data-access.md)

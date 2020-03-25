@@ -2,12 +2,12 @@
 title: Vue d’ensemble des problèmes de mise à niveau potentiels (Visual C++)
 ms.date: 05/03/2019
 ms.assetid: 2c99a8cb-098f-4a9d-bf2c-b80fd06ace43
-ms.openlocfilehash: 2b310760b1a6623a18a00e36e3bd5378d2ebb76e
-ms.sourcegitcommit: 0cfc43f90a6cc8b97b24c42efcf5fb9c18762a42
+ms.openlocfilehash: ef088f4881dfbd9967f90a009e4a8e397a70b134
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/05/2019
-ms.locfileid: "73627241"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80214979"
 ---
 # <a name="overview-of-potential-upgrade-issues-visual-c"></a>Vue d’ensemble des problèmes de mise à niveau potentiels (Visual C++)
 
@@ -80,7 +80,7 @@ Pour les symboles non résolus, vous devez peut-être corriger les paramètres d
 
 - Est-ce que les types des arguments du site d’appel correspondent réellement à une surcharge existante de la fonction ? Vérifiez que les types sous-jacents de tous les typedefs dans la signature de la fonction et dans le code qui appelle la fonction répondent à vos attentes.
 
-Pour résoudre les erreurs de symboles non résolus, vous pouvez essayer d’utiliser dumpbin.exe pour examiner les symboles définis dans un fichier binaire. Essayez d’utiliser la ligne de commande ci-dessous pour afficher les symboles définis dans une bibliothèque :
+Pour résoudre les erreurs de symbole non résolues, vous pouvez essayer d'utiliser dumpbin.exe pour examiner les symboles définis dans un fichier binaire. Essayez d’utiliser la ligne de commande ci-dessous pour afficher les symboles définis dans une bibliothèque :
 
 ```cmd
 dumpbin.exe /LINKERMEMBER somelibrary.lib
@@ -101,7 +101,7 @@ Le tableau suivant présente les bibliothèques dont le contenu a changé à com
 |||
 |-|-|
 |Si vous utilisiez :|Vous devez utiliser ces bibliothèques :|
-|LIBCMT.lib|libucrt.lib, libvcruntime.lib|
+|libcmt.lib|libucrt.lib, libvcruntime.lib|
 |libcmtd.lib|libucrtd.lib, libvcruntimed.lib|
 |msvcrt.lib|msvcrt.lib, ucrt.lib, vcruntime.lib|
 |msvcrtd.lib|msvcrtd.lib, ucrtd.lib, vcruntimed.lib|
@@ -158,7 +158,7 @@ Au fil des années, des API Windows et des types de données ont été ajoutés,
 
 Pour plus d’informations sur l’ensemble API actuel et les versions de systèmes d’exploitation minimales prises en charge pour une API Windows spécifique, consultez [Catalogue de références et API Microsoft](https://msdn.microsoft.com/library) et accédez à l’API en question.
 
-### <a name="windows-version"></a>Version Windows
+### <a name="windows-version"></a>Version de Windows
 
 Lors de la mise à niveau d’un programme qui utilise l’API Windows directement ou indirectement, vous devez décider de la version minimale de Windows à prendre en charge. Dans la plupart des cas, Windows 7 représente un choix judicieux. Pour plus d’informations, consultez [Problèmes liés aux fichiers d’en-tête](porting-guide-spy-increment.md#header_file_problems). La macro `WINVER` définit la plus ancienne version de Windows sur laquelle votre programme est conçu pour s’exécuter. Si votre programme MFC affecte à WINVER la valeur 0x0501 (Windows XP), un avertissement est émis, car MFC ne prend plus en charge XP, même si le compilateur lui-même a un mode XP.
 

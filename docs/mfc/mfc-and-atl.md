@@ -3,12 +3,12 @@ title: MFC et ATL
 ms.date: 01/24/2018
 ms.assetid: 31b1a3a8-4154-4c4a-af10-fafc23ecdc5c
 ms.topic: overview
-ms.openlocfilehash: 87f4a9deb40d7c35498f5cbd66efb6bd976547c2
-ms.sourcegitcommit: 7750e4c291d56221c8893120c56a1fe6c9af60d6
+ms.openlocfilehash: 3a58e68925fd77d002400bfe9d1f2bd28c60f78c
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/25/2019
-ms.locfileid: "71274653"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80214329"
 ---
 # <a name="mfc-and-atl"></a>MFC et ATL
 
@@ -22,7 +22,7 @@ Dans Visual Studio 2017 et versions ultérieures, MFC et ATL sont des sous-compo
 
 ## <a name="related-articles"></a>Articles connexes
 
-|Titre|Description|
+|Intitulé|Description|
 |-----------|-----------------|
 |[MFC, applications de bureau](../mfc/mfc-desktop-applications.md)|MFC (Microsoft Foundation Classes) propose un wrapper léger orienté objet via Win32 qui permet de développer rapidement des applications GUI en C++.|
 |[Composants de bureau COM ATL](../atl/atl-com-desktop-components.md)|ATL fournit des modèles de classe et d’autres constructions d’utilisation pour simplifier la création d’objets COM en C++.|

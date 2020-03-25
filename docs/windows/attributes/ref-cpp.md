@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - ref attribute
 ms.assetid: 67e82d3e-07d9-4ef8-bf2b-0a4491d12557
-ms.openlocfilehash: e7dd927f385b039f1909a4bdf1998ea5a0b39264
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: bfb5cc8c785c7f62f29488a9379c2c7ed229cad8
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69514112"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80214589"
 ---
 # <a name="ref-c"></a>ref (C++)
 
@@ -27,7 +27,7 @@ Identifie un pointeur de référence.
 
 L’attribut **ref** C++ a les mêmes fonctionnalités que l’attribut MIDL [ref](/windows/win32/Midl/ref) .
 
-## <a name="example"></a>Exemples
+## <a name="example"></a>Exemple
 
 Le code suivant illustre l’utilisation de l’attribut **ref** :
 
@@ -43,7 +43,7 @@ __interface IFireTabCtrl
 };
 ```
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
 ### <a name="attribute-context"></a>Contexte d'attribut
 
@@ -51,8 +51,8 @@ __interface IFireTabCtrl
 |-|-|
 |**S'applique à**|**typedef**, paramètre d’interface, méthode d’interface|
 |**Renouvelable**|Non|
-|**Attributs requis**|Aucun|
-|**Attributs non valides**|Aucun|
+|**Attributs requis**|None|
+|**Attributs non valides**|None|
 
 Pour plus d'informations sur les contextes d'attribut, consultez [Contextes d'attribut](cpp-attributes-com-net.md#contexts).
 

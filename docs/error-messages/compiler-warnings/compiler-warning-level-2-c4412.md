@@ -6,34 +6,34 @@ f1_keywords:
 helpviewer_keywords:
 - C4412
 ms.assetid: f28dc531-1a98-497b-a366-0a13e1bc81c7
-ms.openlocfilehash: 2c9d50fc3433321c0ca92366a512892212545754
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 601b99eec4625e9b598ece4cbb74d0039ad04bf0
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62402435"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80161787"
 ---
 # <a name="compiler-warning-level-2-c4412"></a>Avertissement du compilateur (niveau 2) C4412
 
-> «*fonction*' : signature de fonction contient le type '*type*' ; Objets C++ n’est unsafe pour passer entre le code pure et mixte ou natif.
+> '*fonction*' : la signature de fonction contient le type'*type*'; C++ les objets ne sont pas sûrs à passer entre le code pur et le code mixte ou natif.
 
 ## <a name="remarks"></a>Notes
 
-Le **/CLR : pure** option du compilateur est déconseillée dans Visual Studio 2015 et non pris en charge dans Visual Studio 2017. Si vous avez le code qui doit être pure, nous vous recommandons de porter à C#.
+L’option de compilateur **/clr : pure** est déconseillée dans visual studio 2015 et n’est pas prise en charge dans visual studio 2017. Si vous avez du code qui doit être pur, nous vous recommandons de le porter à C#.
 
-Le compilateur a détecté une situation potentiellement dangereuse susceptibles d’entraîner une erreur d’exécution : un appel est effectué à partir d’un **/CLR : pure** compiland à une fonction qui a été importée via dllimport et la signature de fonction contient un type non sécurisé . Un type est unsafe s’il contient une fonction membre ou un membre de données est un type non sécurisé ou une indirection à un type non sécurisé.
+Le compilateur a détecté une situation potentiellement dangereuse qui pourrait entraîner une erreur d’exécution : un appel est effectué à partir d’un module de sécurité de l’exécution **/clr : pure** vers une fonction qui a été importée via dllimport et la signature de la fonction contient un type non sécurisé. Un type n’est pas sécurisé s’il contient une fonction membre ou a un membre de données qui est un type non sécurisé ou une indirection vers un type unsafe.
 
-Cela n’est pas sûre en raison de la différence entre la valeur par défaut conventions entre code pur et native d’appel (ou mixte natif et managé). Lors de l’importation (via `dllimport`) une fonction dans un **/CLR : pure** compiland, assurez-vous que les déclarations de chaque type dans la signature sont identiques à celles du module qui exporte la fonction (qui est particulièrement vigilant différences dans les conventions d’appel implicites).
+Cela est risqué en raison de la différence entre les conventions d’appel par défaut entre le code pur et le code natif (ou natif et managé mixte). Quand vous importez (via `dllimport`) une fonction dans un module de la fonctionnalité **/clr : pure** , assurez-vous que les déclarations de chaque type dans la signature sont identiques à celles du compiland qui exporte la fonction (ce qui est particulièrement attentif aux différences dans les conventions d’appel implicites).
 
-Une fonction membre virtuelle est particulièrement susceptibles d’engendrer des résultats inattendus.  Toutefois, même une fonction non virtuelle doit être testée pour vous assurer d’obtenir les résultats corrects. Si vous êtes sûr que vous obtenez les résultats corrects, vous pouvez ignorer cet avertissement.
+Une fonction membre virtuelle est particulièrement sujette à des résultats inattendus.  Toutefois, même une fonction non virtuelle doit être testée pour s’assurer que vous disposez des résultats corrects. Si vous êtes sûr que vous obtenez les résultats corrects, vous pouvez ignorer cet avertissement.
 
-C4412 est désactivée par défaut. Consultez [avertissements du compilateur désactivés par défaut](../../preprocessor/compiler-warnings-that-are-off-by-default.md) et [dllexport, dllimport](../../cpp/dllexport-dllimport.md) pour plus d’informations.
+C4412 est désactivé par défaut. Pour plus d’informations, consultez [avertissements du compilateur désactivés par défaut](../../preprocessor/compiler-warnings-that-are-off-by-default.md) et [dllexport](../../cpp/dllexport-dllimport.md) .
 
 Pour résoudre cet avertissement, supprimez toutes les fonctions du type.
 
 ## <a name="example"></a>Exemple
 
-L’exemple suivant génère l’erreur C4412.
+L’exemple suivant génère l’C4412.
 
 ```cpp
 // C4412.cpp
@@ -61,7 +61,7 @@ int main() {
 
 ## <a name="example"></a>Exemple
 
-L’exemple suivant est un fichier d’en-tête qui déclare deux types. Le `Unsafe` type est dangereux, car il possède une fonction membre.
+L’exemple suivant est un fichier d’en-tête qui déclare deux types. Le type de `Unsafe` n’est pas sécurisé, car il a une fonction membre.
 
 ```cpp
 // C4412.h
@@ -98,9 +98,9 @@ __declspec(dllexport) Safe * __cdecl func2() { return new Safe; }
 
 ## <a name="example"></a>Exemple
 
-La valeur par défaut de convention d’appel un **/CLR : pure** diffère de la compilation d’une compilation native.  Lorsque C4412.h est inclus, `Test` par défaut est `__clrcall`. Si vous compilez et exécutez ce programme (n’utilisez pas **/c**), le programme lève une exception.
+La Convention d’appel par défaut dans une compilation **/clr : pure** est différente d’une compilation native.  Quand C4412. h est inclus, `Test` prend par défaut la valeur `__clrcall`. Si vous compilez et exécutez ce programme (n’utilisez pas **/c**), le programme lèvera une exception.
 
-L’exemple suivant génère l’erreur C4412.
+L’exemple suivant génère l’C4412.
 
 ```cpp
 // C4412_3.cpp

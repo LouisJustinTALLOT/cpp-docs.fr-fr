@@ -1,23 +1,23 @@
 ---
-title: '#importer des attributsC++()'
+title: '#import, attributs (C++)'
 ms.date: 08/29/2019
 helpviewer_keywords:
 - '#import directive, attributes'
 ms.assetid: 2a5085e3-82ee-4f83-892b-0aa6cc13863b
-ms.openlocfilehash: 7e0de241bd27269d7d758c49bc54c4bf435cf383
-ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
+ms.openlocfilehash: fc2af69025d47a9ea6cea0e2c9e1423151b01606
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/03/2019
-ms.locfileid: "70220097"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80215291"
 ---
 # <a name="import-attributes-c"></a>attributs #import (C++)
 
-Fournit des liens vers des attributs utilisés `#import` avec la directive.
+Fournit des liens vers des attributs utilisés avec la directive `#import`.
 
-**Section spécifique à Microsoft**
+**Section spécifique de Microsoft**
 
-Les attributs suivants sont disponibles pour la `#import` directive.
+Les attributs suivants sont disponibles pour la directive `#import`.
 
 |Attribut|Description|
 |---------------|-----------------|
@@ -30,7 +30,7 @@ Les attributs suivants sont disponibles pour la `#import` directive.
 |[implementation_only](../preprocessor/implementation-only.md)|Supprime la génération du fichier d'en-tête .tlh (fichier d'en-tête principal).|
 |[include()](../preprocessor/include-parens.md)|Désactive l'exclusion automatique.|
 |[inject_statement](../preprocessor/inject-statement.md)|Insère son argument en tant que texte source dans l’en-tête de bibliothèque de types.|
-|[named_guids](../preprocessor/named-guids.md)|Indique au compilateur de définir et d’initialiser les variables GUID dans l’ancien style, `LIBID_MyLib`sous `CLSID_MyCoClass`la `IID_MyInterface`forme, `DIID_MyDispInterface`, et.|
+|[named_guids](../preprocessor/named-guids.md)|Indique au compilateur de définir et d’initialiser les variables GUID dans l’ancien style, sous la forme `LIBID_MyLib`, `CLSID_MyCoClass`, `IID_MyInterface`et `DIID_MyDispInterface`.|
 |[no_auto_exclude](../preprocessor/no-auto-exclude.md)|Désactive l'exclusion automatique.|
 |[no_dual_interfaces](../preprocessor/no-dual-interfaces.md)|Modifie la façon dont le compilateur génère des fonctions wrapper pour les méthodes d'interface double.|
 |[no_implementation](../preprocessor/no-implementation.md)|Supprime la génération de l'en-tête .tli, qui contient les implémentations des fonctions membres de wrapper.|
@@ -38,7 +38,7 @@ Les attributs suivants sont disponibles pour la `#import` directive.
 |[no_registry](../preprocessor/no-registry.md)|Indique au compilateur de ne pas rechercher de bibliothèques de types dans le Registre.|
 |[no_search_namespace](../preprocessor/no-search-namespace.md)|A les mêmes fonctionnalités que l’attribut [no_namespace](../preprocessor/no-namespace.md) , mais est utilisé sur les bibliothèques de types que vous utilisez la directive #import avec l’attribut [auto_search](../preprocessor/auto-search.md) .|
 |[no_smart_pointers](../preprocessor/no-smart-pointers.md)|Supprime la création des pointeurs intelligents pour toutes les interfaces dans la bibliothèque de types.|
-|[raw_dispinterfaces](../preprocessor/raw-dispinterfaces.md)|Indique au compilateur de générer des fonctions wrapper de bas niveau pour les méthodes et les propriétés `IDispatch::Invoke` dispinterface qui appellent et retournent le code d’erreur HRESULT.|
+|[raw_dispinterfaces](../preprocessor/raw-dispinterfaces.md)|Indique au compilateur de générer des fonctions wrapper de bas niveau pour les méthodes et propriétés dispinterface qui appellent `IDispatch::Invoke` et retournent le code d’erreur HRESULT.|
 |[raw_interfaces_only](../preprocessor/raw-interfaces-only.md)|Supprime la génération des fonctions wrapper de gestion des erreurs et des déclarations de [propriété](../cpp/property-cpp.md) qui utilisent ces fonctions wrapper.|
 |[raw_method_prefix](../preprocessor/raw-method-prefix.md)|Spécifie un préfixe différent pour éviter les collisions de noms.|
 |[raw_native_types](../preprocessor/raw-native-types.md)|Désactive l'utilisation des classes de prise en charge COM dans les fonctions wrapper de haut niveau et force l'utilisation de types de données de bas niveau à la place.|
@@ -48,7 +48,7 @@ Les attributs suivants sont disponibles pour la `#import` directive.
 |[rename_search_namespace](../preprocessor/rename-search-namespace.md)|A les mêmes fonctionnalités que l’attribut [rename_namespace](../preprocessor/rename-namespace.md) , mais est utilisé sur les bibliothèques de types que vous utilisez la directive #import avec l’attribut [auto_search](../preprocessor/auto-search.md) .|
 |[tlbid](../preprocessor/tlbid.md)|Permet de charger des bibliothèques autres que la bibliothèque de types principale.|
 
-**FIN de la section spécifique à Microsoft**
+**Fin de la section spécifique de Microsoft**
 
 ## <a name="see-also"></a>Voir aussi
 

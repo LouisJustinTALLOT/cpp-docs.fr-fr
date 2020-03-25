@@ -5,12 +5,12 @@ ms.topic: reference
 helpviewer_keywords:
 - typeid keyword [C++]
 ms.assetid: e9706cae-e7c4-4d6d-b474-646d73df3e70
-ms.openlocfilehash: ec64388d5f71cff01207129e337cf20bb151db1a
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
-ms.translationtype: HT
+ms.openlocfilehash: 8b22481fecb4b7de5106921fec1c3a43fab81a48
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "65515984"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80181744"
 ---
 # <a name="typeid--ccli-and-ccx"></a>typeid (C++/CLI et C++/CX)
 
@@ -45,7 +45,7 @@ Platform::Type^ type = T::typeid;
 *T*<br/>
 Un nom de type.
 
-### <a name="remarks"></a>Remarques
+### <a name="remarks"></a>Notes
 
 Dans C++/CX, typeid retourne une classe [Platform::Type](../cppcx/platform-type-class.md) qui est construite à partir des informations sur le type de runtime.
 
@@ -66,7 +66,7 @@ type::typeid
 *type*<br/>
 Le nom d’un type (déclarateur abstrait) dont vous souhaitez l’objet `System::Type`.
 
-### <a name="remarks"></a>Remarques
+### <a name="remarks"></a>Notes
 
 `typeid` est utilisé pour obtenir le <xref:System.Type> d’un type au moment de la compilation.
 

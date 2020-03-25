@@ -1,19 +1,19 @@
 ---
-title: Avertissement du compilateur (niveau 2) C4756
+title: Avertissement du compilateur (niveau 2) C4756
 ms.date: 11/04/2016
 f1_keywords:
 - C4756
 helpviewer_keywords:
 - C4756
 ms.assetid: 5a16df83-6b82-4619-83bd-319af4ef1d1d
-ms.openlocfilehash: 640eb77273fdbda0b12bbf2c2a326e970951cbda
-ms.sourcegitcommit: 458dcc794e3841919c01a3a5ff6b9a3767f8861b
+ms.openlocfilehash: 5a48620a2cbc80379ea7a6787783e98dac1ffa9b
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/13/2019
-ms.locfileid: "74051990"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80161722"
 ---
-# <a name="compiler-warning-level-2-c4756"></a>Avertissement du compilateur (niveau 2) C4756
+# <a name="compiler-warning-level-2-c4756"></a>Avertissement du compilateur (niveau 2) C4756
 
 dépassement de capacité arithmétique constante
 

@@ -6,15 +6,15 @@ f1_keywords:
 helpviewer_keywords:
 - C3752
 ms.assetid: 1ac81d85-0f5a-4f39-95b6-42fd43cb18d5
-ms.openlocfilehash: cc5317c2a246493cb2231eda4ca4189a2b2128e4
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 7180f587081c98f16ab4327b5632fecf1fd689bb
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62384320"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80165858"
 ---
 # <a name="compiler-error-c3752"></a>Erreur du compilateur C3752
 
-'attribute class': cannot classify attribute; 'keyword' should not be used in this context
+'classe d’attributs' : impossible de classer l’attribut ; 'keyword’ne doit pas être utilisé dans ce contexte
 
-Un attribut défini par l’utilisateur a été appliqué correctement.
+Un attribut défini par l’utilisateur a été appliqué de façon incorrecte.

@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - Platform::CallbackContext Enumeration
 ms.assetid: 60e0c7cb-5d8f-482a-bdca-ca9335ae4899
-ms.openlocfilehash: 7f4e020ab0b1e377456c27d3b4666e15b5a4f7a1
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 1daa3988fcb985dab9d3083233a3703a20cc2fdb
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62161664"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80214260"
 ---
 # <a name="platformcallbackcontext-enumeration"></a>Platform::CallbackContext (énumération)
 
@@ -28,15 +28,15 @@ enum class CallbackContext {};
 
 |Code de type|Description|
 |---------------|-----------------|
-|Any|La fonction de rappel peut s’exécuter sur n’importe quel contexte de thread.|
+|Quelconque|La fonction de rappel peut s’exécuter sur n’importe quel contexte de thread.|
 |Identique|La fonction de rappel peut s’exécuter uniquement sur le contexte de thread qui a démarré l’opération asynchrone.|
 
-### <a name="requirements"></a>Configuration requise
+### <a name="requirements"></a>Spécifications
 
-**Prise en charge minimale du client :** Windows 8
+**Client minimal pris en charge :** Windows 8
 
-**Serveur pris en charge minimale :** Windows Server 2012
+**Serveur minimal pris en charge :** Windows Server 2012
 
-**Espace de noms :** Plateforme
+**Espace de noms :** Platform
 
 **Métadonnées :** platform.winmd

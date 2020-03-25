@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - call_as attribute
 ms.assetid: a09d7f1f-353b-4870-9b45-f0284161695d
-ms.openlocfilehash: f36cf8d1be589cc614a6def583b00af00aabdb61
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: 755741faec6c0ba702d372ca8dee486edcb72ef3
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69501808"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80167330"
 ---
 # <a name="call_as"></a>call_as
 
@@ -34,7 +34,7 @@ L’attribut **call_as** C++ a les mêmes fonctionnalités que l’attribut MIDL
 
 ## <a name="example"></a>Exemple
 
-Le code suivant montre comment vous pouvez utiliser **call_as** pour mapper une fonction qui n’est pas`f1`accessible à distance () à une`Remf1`fonction accessible à distance ():
+Le code suivant montre comment utiliser **call_as** pour mapper une fonction qui n’est pas accessible à distance (`f1`) à une fonction accessible à distance (`Remf1`) :
 
 ```cpp
 // cpp_attr_ref_call_as.cpp
@@ -48,7 +48,7 @@ __interface IMInterface {
 };
 ```
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
 ### <a name="attribute-context"></a>Contexte d'attribut
 
@@ -56,8 +56,8 @@ __interface IMInterface {
 |-|-|
 |**S'applique à**|Méthode d’interface|
 |**Renouvelable**|Non|
-|**Attributs requis**|Aucun|
-|**Attributs non valides**|Aucun|
+|**Attributs requis**|None|
+|**Attributs non valides**|None|
 
 Pour plus d'informations sur les contextes d'attribut, consultez [Contextes d'attribut](cpp-attributes-com-net.md#contexts).
 

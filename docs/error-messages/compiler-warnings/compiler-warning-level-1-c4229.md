@@ -1,19 +1,19 @@
 ---
-title: Avertissement du compilateur (niveau 1) C4229
+title: Avertissement du compilateur (niveau 1) C4229
 ms.date: 11/04/2016
 f1_keywords:
 - C4229
 helpviewer_keywords:
 - C4229
 ms.assetid: aadfc83b-1e5f-4229-bd0a-9c10a5d13182
-ms.openlocfilehash: 3d2372275da02a7c3bbde6c8bf044c621c5d3d09
-ms.sourcegitcommit: 0cfc43f90a6cc8b97b24c42efcf5fb9c18762a42
+ms.openlocfilehash: b1cb97c51dca7cf3fdbca024ead969c4d4e1f3eb
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/05/2019
-ms.locfileid: "73624930"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80163282"
 ---
-# <a name="compiler-warning-level-1-c4229"></a>Avertissement du compilateur (niveau 1) C4229
+# <a name="compiler-warning-level-1-c4229"></a>Avertissement du compilateur (niveau 1) C4229
 
 anachronisme utilisé : les modificateurs sur les données sont ignorés
 

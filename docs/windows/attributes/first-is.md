@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - first_is attribute
 ms.assetid: 89acbf56-3b38-4d44-83e8-1ce2f6f74ffd
-ms.openlocfilehash: 9d06435caaeb53beb76bd145c92c470446cae3a7
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: 4ac7142ed4f81d6011894681311e1aa5f129380b
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69501557"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80167015"
 ---
 # <a name="first_is"></a>first_is
 
@@ -32,9 +32,9 @@ Une ou plusieurs expressions en langage C. Les emplacements d’arguments vides 
 
 L’attribut **first_is** C++ a les mêmes fonctionnalités que l’attribut MIDL [first_is](/windows/win32/Midl/first-is) .
 
-## <a name="example"></a>Exemples
+## <a name="example"></a>Exemple
 
-Le code suivant montre différentes façons de spécifier une section dans un tableau:
+Le code suivant montre différentes façons de spécifier une section dans un tableau :
 
 ```cpp
 // cpp_attr_ref_first_is.cpp
@@ -56,7 +56,7 @@ requestedit] HRESULT get_I([out, retval]long *i);
 };
 ```
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
 ### <a name="attribute-context"></a>Contexte d'attribut
 
@@ -64,8 +64,8 @@ requestedit] HRESULT get_I([out, retval]long *i);
 |-|-|
 |**S'applique à**|Champ dans un **struct** ou une **Union**, un paramètre d’interface, une méthode d’interface|
 |**Renouvelable**|Non|
-|**Attributs requis**|Aucun|
-|**Attributs non valides**|Aucun|
+|**Attributs requis**|None|
+|**Attributs non valides**|None|
 
 Pour plus d'informations, consultez [Contextes d'attribut](cpp-attributes-com-net.md#contexts).
 

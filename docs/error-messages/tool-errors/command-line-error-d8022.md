@@ -6,17 +6,17 @@ f1_keywords:
 helpviewer_keywords:
 - D8022
 ms.assetid: eb18ec34-d32d-4636-a852-abf2063e886b
-ms.openlocfilehash: 2ad64e726a247da0291c98ada5398371a13c37d4
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 59e917f008e528debca3d5237a520cab92a2574a
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62395129"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80196896"
 ---
 # <a name="command-line-error-d8022"></a>Erreur de ligne de commande D8022
 
-Impossible d’ouvrir 'FichierMessages'
+Impossible d’ouvrir’messageFile'
 
-Le fichier donné était pas dans le répertoire actif ou dans un répertoire spécifié dans la variable d’environnement PATH. Le fichier de message contient un bref résumé de syntaxe de ligne de commande du compilateur et les options.
+Le fichier donné ne figure pas dans le répertoire actif ou dans un répertoire spécifié dans la variable d’environnement PATH. Le fichier de message contient un bref résumé de la syntaxe et des options de la ligne de commande du compilateur.
 
-Déplacer ce fichier vers le répertoire actif ou un répertoire dans le chemin d’accès actuel. Si ce fichier est introuvable, exécutez le programme d’installation pour le copier à partir des disques de distribution.
+Déplacez ce fichier vers le répertoire actif ou un répertoire dans le chemin d’accès actuel. Si ce fichier est introuvable, exécutez le programme d’installation pour le copier à partir des disques de distribution.

@@ -1,19 +1,19 @@
 ---
-title: Avertissement du compilateur (niveau 1) C4288
+title: Avertissement du compilateur (niveau 1) C4288
 ms.date: 11/04/2016
 f1_keywords:
 - C4288
 helpviewer_keywords:
 - C4288
 ms.assetid: 6aaeb139-90cd-457a-9d37-65687042736f
-ms.openlocfilehash: 81094bf019060b56337347f7d364ead7c78c8128
-ms.sourcegitcommit: 0cfc43f90a6cc8b97b24c42efcf5fb9c18762a42
+ms.openlocfilehash: e706a448f4264eceedbb4fa8932c0fc30e88d532
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/05/2019
-ms.locfileid: "73626659"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80175738"
 ---
-# <a name="compiler-warning-level-1-c4288"></a>Avertissement du compilateur (niveau 1) C4288
+# <a name="compiler-warning-level-1-c4288"></a>Avertissement du compilateur (niveau 1) C4288
 
 extension non standard utilisée : 'var' : la variable de contrôle de boucle déclarée dans la boucle for est utilisée à l’extérieur de la portée de la boucle. Il est en conflit avec la déclaration dans la portée externe
 

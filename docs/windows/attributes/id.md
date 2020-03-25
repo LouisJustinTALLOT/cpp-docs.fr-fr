@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - id attribute
 ms.assetid: a48d2c99-c5d2-4f46-bf96-5ac88dcb5d0c
-ms.openlocfilehash: 6f1d1d2b9d147e8b33b3b5fae629e0805971bb71
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: 79e49b2c074cd82323c74489e33812c10c442c61
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69501406"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80168055"
 ---
 # <a name="id"></a>id
 
@@ -25,7 +25,7 @@ Spécifie un paramètre *DISPID* pour une fonction membre (une propriété ou un
 
 ### <a name="parameters"></a>Paramètres
 
-*dispid*<br/>
+*égal*<br/>
 ID de dispatch de la méthode d’interface.
 
 ## <a name="remarks"></a>Notes
@@ -36,7 +36,7 @@ L’attribut **ID** C++ a les mêmes fonctionnalités que l’attribut MIDL [ID]
 
 Pour obtenir un exemple d’utilisation de l' **ID**, consultez l’exemple de [Bindable](bindable.md) .
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
 ### <a name="attribute-context"></a>Contexte d'attribut
 
@@ -44,8 +44,8 @@ Pour obtenir un exemple d’utilisation de l' **ID**, consultez l’exemple de [
 |-|-|
 |**S'applique à**|Méthode d’interface|
 |**Renouvelable**|Non|
-|**Attributs requis**|Aucun|
-|**Attributs non valides**|Aucun|
+|**Attributs requis**|None|
+|**Attributs non valides**|None|
 
 Pour plus d'informations, consultez [Contextes d'attribut](cpp-attributes-com-net.md#contexts).
 

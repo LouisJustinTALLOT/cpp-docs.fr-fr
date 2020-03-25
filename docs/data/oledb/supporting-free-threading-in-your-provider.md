@@ -5,20 +5,20 @@ helpviewer_keywords:
 - OLE DB providers, multithreaded
 - threading [C++], providers
 ms.assetid: a91270dc-cdf9-4855-88e7-88a54be7cbe8
-ms.openlocfilehash: a2afb7354dd0447375ee6205b7c5d9a4755aa4b8
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 50e05b70a782dd343031443540790697e980c994
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62404492"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80209539"
 ---
 # <a name="supporting-free-threading-in-your-provider"></a>Prise en charge du Free Threading dans votre fournisseur
 
-Toutes les classes du fournisseur OLE DB sont thread-safe, et les entrées de Registre sont définies en conséquence. Il est judicieux pour prendre en charge le modèle de thread libre afin de fournir un haut niveau de performances dans les situations multi-utilisateur. Pour maintenir votre fournisseur de thread-safe, vous devez vérifier que votre code est bloqué correctement. Chaque fois que vous écrivez ou stockez des données, vous devez bloquer l’accès à des sections critiques.
+Toutes les classes de fournisseur OLE DB sont thread-safe, et les entrées de Registre sont définies en conséquence. Il est judicieux de prendre en charge le Threading gratuit pour fournir un niveau élevé de performances dans les situations multi-utilisateur. Pour garantir la sécurité des threads de votre fournisseur, vous devez vérifier que votre code est bloqué correctement. Chaque fois que vous écrivez ou stockez des données, vous devez bloquer l’accès avec les sections critiques.
 
-Chaque objet de modèle de fournisseur OLE DB possède sa propre section critique. Pour faciliter le blocage, chaque nouvelle classe que vous créez doit être une classe de modèle en prenant la classe parente nom en tant qu’argument.
+Chaque objet de modèle de fournisseur OLE DB possède sa propre section critique. Pour faciliter le blocage, chaque nouvelle classe que vous créez doit être une classe de modèle acceptant le nom de la classe parente comme argument.
 
-L’exemple suivant montre comment bloquer le code :
+L’exemple suivant montre comment bloquer votre code :
 
 ```cpp
 template <class T>
@@ -37,9 +37,9 @@ HRESULT MyObject::MyMethod(void)
 }
 ```
 
-Pour plus d’informations sur la façon de protéger des sections critiques avec `Lock` et `Unlock`, consultez [Multithreading : Comment utiliser les Classes de synchronisation](../../parallel/multithreading-how-to-use-the-synchronization-classes.md).
+Pour plus d’informations sur la façon de protéger des sections critiques avec des `Lock` et des `Unlock`, consultez [Multithreading : comment utiliser les classes de synchronisation](../../parallel/multithreading-how-to-use-the-synchronization-classes.md).
 
-Vérifiez que toutes les méthodes que vous substituez (tel que `Execute`) sont thread-safe.
+Vérifiez que toutes les méthodes que vous substituez (par exemple `Execute`) sont thread-safe.
 
 ## <a name="see-also"></a>Voir aussi
 

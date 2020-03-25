@@ -30,12 +30,12 @@ helpviewer_keywords:
 - CreateAccessor method
 - CreateParameterAccessor method
 ms.assetid: a0088074-7135-465c-b228-69097a50b8cc
-ms.openlocfilehash: 80c8f94a417c700f86159de53bd53e4011f78d71
-ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
+ms.openlocfilehash: 4d9fb79bbf5203fa959672faec8c3b076c17f1ca
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/17/2020
-ms.locfileid: "79447378"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80211846"
 ---
 # <a name="cmanualaccessor-class"></a>CManualAccessor, classe
 
@@ -66,7 +66,7 @@ class CManualAccessor : public CAccessorBase
 
 À l’aide de `CManualAccessor`, vous pouvez spécifier la liaison de paramètre et de colonne de sortie par des appels de fonction au moment de l’exécution.
 
-## <a name="addbindentry"></a>CManualAccessor :: AddBindEntry
+## <a name="cmanualaccessoraddbindentry"></a><a name="addbindentry"></a>CManualAccessor :: AddBindEntry
 
 Ajoute une entrée de liaison aux colonnes de sortie.
 
@@ -106,7 +106,7 @@ dans Pointeur vers la variable à lier à l’état de colonne, si nécessaire.
 
 Pour utiliser cette fonction, vous devez d’abord appeler [CreateAccessor](../../data/oledb/cmanualaccessor-createaccessor.md). Vous ne pouvez pas ajouter plus d’entrées que le nombre de colonnes spécifié dans `CreateAccessor`.
 
-## <a name="addparameterentry"></a>CManualAccessor :: AddParameterEntry
+## <a name="cmanualaccessoraddparameterentry"></a><a name="addparameterentry"></a>CManualAccessor :: AddParameterEntry
 
 Ajoute une entrée de paramètre aux structures d’entrée de paramètre.
 
@@ -150,7 +150,7 @@ dans Spécifie si le paramètre auquel la liaison est associée est un paramètr
 
 Pour utiliser cette fonction, vous devez d’abord appeler [CreateParameterAccessor](../../data/oledb/cmanualaccessor-createparameteraccessor.md).
 
-## <a name="createaccessor"></a>CManualAccessor :: CreateAccessor
+## <a name="cmanualaccessorcreateaccessor"></a><a name="createaccessor"></a>CManualAccessor :: CreateAccessor
 
 Alloue de la mémoire pour les structures de liaison de colonne et initialise les membres de données de colonne.
 
@@ -181,7 +181,7 @@ L’une des valeurs HRESULT standard.
 
 Appelez cette fonction avant d’appeler la fonction `CManualAccessor::AddBindEntry`.
 
-## <a name="createparameteraccessor"></a>CManualAccessor :: CreateParameterAccessor
+## <a name="cmanualaccessorcreateparameteraccessor"></a><a name="createparameteraccessor"></a>CManualAccessor :: CreateParameterAccessor
 
 Alloue de la mémoire pour les structures de liaison de paramètre et initialise les membres de données de paramètre.
 

@@ -20,12 +20,12 @@ helpviewer_keywords:
 - GetPropertyInfo method
 - SetProperties method
 ms.assetid: a7f15a8b-95b2-4316-b944-d5d03f8d74ab
-ms.openlocfilehash: 77f70c8b0bc602da6840bec38565c4441644c6d0
-ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
+ms.openlocfilehash: f873ec4f4eca434d0eb76df86c0891f1a99c2e2c
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/17/2020
-ms.locfileid: "79443712"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80210702"
 ---
 # <a name="idbpropertiesimpl-class"></a>IDBPropertiesImpl, classe
 
@@ -62,7 +62,7 @@ Votre classe, dérivée de `IDBPropertiesImpl`.
 
 [IDBProperties](/previous-versions/windows/desktop/ms719607(v=vs.85)) est une interface obligatoire pour les objets de source de données et une interface facultative pour les énumérateurs. Toutefois, si un énumérateur expose [IDBInitialize](/previous-versions/windows/desktop/ms713706(v=vs.85)), il doit exposer `IDBProperties`. `IDBPropertiesImpl` implémente `IDBProperties` à l’aide d’une fonction statique définie par [BEGIN_PROPSET_MAP](../../data/oledb/begin-propset-map.md).
 
-## <a name="getproperties"></a>IDBPropertiesImpl :: GetProperties
+## <a name="idbpropertiesimplgetproperties"></a><a name="getproperties"></a>IDBPropertiesImpl :: GetProperties
 
 Retourne les valeurs des propriétés de la source de données, des informations sur la source de données et des groupes de propriétés d’initialisation qui sont actuellement définis sur l’objet source de données ou les valeurs des propriétés du groupe de propriétés d’initialisation actuellement définies sur le énumérateur.
 
@@ -92,7 +92,7 @@ Certains paramètres correspondent à *OLE DB paramètres de référence du prog
 
 Si le fournisseur est initialisé, cette méthode retourne les valeurs des propriétés dans le DBPROPSET_DATASOURCE, DBPROPSET_DATASOURCEINFO DBPROPSET_DBINIT groupes de propriétés qui sont actuellement définis sur l’objet source de données. Si le fournisseur n’est pas initialisé, il retourne uniquement les propriétés de groupe DBPROPSET_DBINIT.
 
-## <a name="getpropertyinfo"></a>IDBPropertiesImpl :: GetPropertyInfo
+## <a name="idbpropertiesimplgetpropertyinfo"></a><a name="getpropertyinfo"></a>IDBPropertiesImpl :: GetPropertyInfo
 
 Retourne les informations sur les propriétés prises en charge par la source de données.
 
@@ -121,7 +121,7 @@ Certains paramètres correspondent à *OLE DB paramètres de référence du prog
 
 Utilise [IDBInitializeImpl :: m_pCUtlPropInfo](../../data/oledb/idbinitializeimpl-m-pcutlpropinfo.md) pour implémenter cette fonctionnalité.
 
-## <a name="setproperties"></a>IDBPropertiesImpl :: SetProperties
+## <a name="idbpropertiesimplsetproperties"></a><a name="setproperties"></a>IDBPropertiesImpl :: SetProperties
 
 Définit les propriétés de la source de données et des groupes de propriétés d’initialisation, pour les objets de source de données ou le groupe de propriétés d’initialisation, pour les énumérateurs.
 

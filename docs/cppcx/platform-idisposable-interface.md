@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - Platform::IDisposable Interface
 ms.assetid: f4344056-7030-42ed-bc98-b140edffddcd
-ms.openlocfilehash: f114959321c0ed3879a089b944a5ff1b19843118
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 0024edbad0bb3311a0497be67fc8bcfc954602e1
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62257827"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80214238"
 ---
 # <a name="platformidisposable-interface"></a>Interface Platform::IDisposable
 
@@ -26,7 +26,7 @@ public interface class IDisposable
 
 ## <a name="attributes"></a>Attributs
 
-**GuidAttribute**("de0cbaea-8065-4a45-b196-c9d443f9bab3")
+**GuidAttribute**("de0cbaea-8065-4a45-B196-c9d443f9bab3")
 
 **VersionAttribute**(NTDDI_WIN8)
 
@@ -40,12 +40,12 @@ L’interface IDisposable possède les méthodes suivantes.
 
 |Méthode|Description|
 |------------|-----------------|
-|Suppression|Utilisée pour libérer des ressources non managées.|
+|Dispose|Utilisée pour libérer des ressources non managées.|
 
-### <a name="requirements"></a>Configuration requise
+### <a name="requirements"></a>Spécifications
 
-**Prise en charge minimale du client :** Windows 8
+**Client minimal pris en charge :** Windows 8
 
-**Serveur pris en charge minimale :** Windows Server 2012
+**Serveur minimal pris en charge :** Windows Server 2012
 
-**Espace de noms :** Plateforme
+**Espace de noms :** Platform

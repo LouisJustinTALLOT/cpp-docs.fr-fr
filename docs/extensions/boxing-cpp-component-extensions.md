@@ -5,12 +5,12 @@ ms.topic: reference
 helpviewer_keywords:
 - boxing, C++
 ms.assetid: b5fd2c98-c578-4f83-8257-6dd663478665
-ms.openlocfilehash: 6221087b60e76e3a2648366c4efebc4105f0ab58
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: 709754e8609406f635444937af93488060167ba9
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "70311761"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80172605"
 ---
 # <a name="boxing--ccli-and-ccx"></a>Boxing (C++/ CLI et C++/CX)
 
@@ -30,7 +30,7 @@ C++/CX prend en charge une syntaxe sténographique pour les types valeur boxing 
 value_variable = (value_type) object_variable;
 ```
 
-### <a name="requirements"></a>Configuration requise
+### <a name="requirements"></a>Spécifications
 
 Option du compilateur : `/ZW`
 
@@ -80,7 +80,7 @@ Le compilateur convertit des types valeur en <xref:System.Object>. Cette opérat
 
 Les opérations boxing et unboxing permettent de traiter les types valeur en tant qu'objets. Les types valeur, y compris les types struct et les types intégrés comme int, peuvent être convertis en et à partir du type <xref:System.Object>.
 
-Pour plus d'informations, voir :
+Pour plus d'informations, consultez les pages suivantes :
 
 - [Guide pratique pour demander explicitement le boxing](../dotnet/how-to-explicitly-request-boxing.md)
 
@@ -90,7 +90,7 @@ Pour plus d'informations, voir :
 
 - [Conversions standard et boxing implicite](../dotnet/standard-conversions-and-implicit-boxing.md)
 
-### <a name="requirements"></a>Configuration requise
+### <a name="requirements"></a>Spécifications
 
 Option du compilateur : `/clr`
 

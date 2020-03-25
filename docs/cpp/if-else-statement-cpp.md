@@ -9,12 +9,12 @@ helpviewer_keywords:
 - if keyword [C++]
 - else keyword [C++]
 ms.assetid: f8c45cde-6bce-42ae-81db-426b3dbd4caa
-ms.openlocfilehash: 0e9de2d39e09e148c7e4f3ea82c3dadb173c2d0c
-ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
+ms.openlocfilehash: fd2736d80d68249773c9aa6cf7cb9edffdaadac4
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/16/2020
-ms.locfileid: "79418467"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80178429"
 ---
 # <a name="if-else-statement-c"></a>if-else, instruction (C++)
 
@@ -111,7 +111,7 @@ int main()
 }
 ```
 
-## <a name="if_with_init"></a>instruction if avec un initialiseur
+## <a name="if-statement-with-an-initializer"></a><a name="if_with_init"></a>instruction if avec un initialiseur
 
 **Visual Studio 2017 version 15,3 et versions ultérieures** (disponibles avec [/std : c++ 17](../build/reference/std-specify-language-standard-version.md)) : une instruction **If** peut également contenir une expression qui déclare et Initialise une variable nommée. Utilisez cette forme de l’instruction if si la variable est uniquement requise dans la portée du bloc If.
 

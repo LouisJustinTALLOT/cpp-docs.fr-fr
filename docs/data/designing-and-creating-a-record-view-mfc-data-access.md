@@ -9,24 +9,24 @@ helpviewer_keywords:
 - application wizards [C++], creating record view classes
 - designing record views
 ms.assetid: 1d6f5439-754f-4b8b-a19d-841a4657827b
-ms.openlocfilehash: 15a8afde8c86d3dae8198e8f42b2b7c3b49f0dfa
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: dfd486c397dffa87295839f5ef62de0bd1ba812a
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62397963"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80213419"
 ---
 # <a name="designing-and-creating-a-record-view--mfc-data-access"></a>Conception et création d'une vue de l'enregistrement (Accès aux données MFC)
 
-Vous pouvez créer votre classe de vue d’enregistrement avec le [Assistant Application MFC](../mfc/reference/database-support-mfc-application-wizard.md). Si vous utilisez un Assistant Application, il crée la classe de vue d'enregistrement et une ressource de modèle de boîte de dialogue pour elle (sans contrôles). Vous devez utiliser l'éditeur de boîtes de dialogue Visual C++ pour ajouter des contrôles à la ressource de modèle de boîte de dialogue. En revanche, si vous utilisez **ajouter une classe**, vous devez d’abord créer la ressource de modèle de boîte de dialogue dans la boîte de dialogue Éditeur et ensuite créer la classe de vue d’enregistrement.
+Vous pouvez créer votre classe de vue d’enregistrement avec l' [Assistant Application MFC](../mfc/reference/database-support-mfc-application-wizard.md). Si vous utilisez un Assistant Application, il crée la classe de vue d'enregistrement et une ressource de modèle de boîte de dialogue pour elle (sans contrôles). Vous devez utiliser l'éditeur de boîtes de dialogue Visual C++ pour ajouter des contrôles à la ressource de modèle de boîte de dialogue. En revanche, si vous utilisez ajouter une **classe**, vous devez d’abord créer la ressource de modèle de boîte de dialogue dans l’éditeur de boîtes de dialogue, puis créer la classe d’affichage d’enregistrement.
 
 #### <a name="to-create-your-record-view-with-the-mfc-application-wizard"></a>Pour créer votre vue d'enregistrement avec l'Assistant Application MFC
 
-1. Consultez [prise en charge, Assistant Application MFC de base de données](../mfc/reference/database-support-mfc-application-wizard.md).
+1. Consultez [prise en charge des bases de données, Assistant Application MFC](../mfc/reference/database-support-mfc-application-wizard.md).
 
 #### <a name="to-design-your-form"></a>Pour concevoir votre formulaire
 
-1. Consultez [boîte de dialogue Éditeur](../windows/dialog-editor.md).
+1. Consultez [éditeur de boîtes de dialogue](../windows/dialog-editor.md).
 
 #### <a name="to-create-your-record-view-class"></a>Pour créer votre classe de vue d'enregistrement
 
@@ -34,11 +34,11 @@ Vous pouvez créer votre classe de vue d’enregistrement avec le [Assistant App
 
 Les rubriques suivantes décrivent d'autres aspects de l'utilisation des vues d'enregistrements :
 
-- [Vues des enregistrements : Prise en charge de la Navigation dans une vue d’enregistrement](../data/supporting-navigation-in-a-record-view-mfc-data-access.md)
+- [Vues des enregistrements : prise en charge de la navigation dans une vue d’enregistrement](../data/supporting-navigation-in-a-record-view-mfc-data-access.md)
 
-- [Vues des enregistrements : À l’aide d’une vue d’enregistrement](../data/using-a-record-view-mfc-data-access.md)
+- [Vues des enregistrements : utilisation d’une vue de l’enregistrement](../data/using-a-record-view-mfc-data-access.md)
 
-- [Vues des enregistrements : Remplissage d’une zone de liste à partir d’un Second Recordset](../data/filling-a-list-box-from-a-second-recordset-mfc-data-access.md)
+- [Vues des enregistrements : remplissage d’une zone de liste à partir d’un second Recordset](../data/filling-a-list-box-from-a-second-recordset-mfc-data-access.md)
 
 ## <a name="see-also"></a>Voir aussi
 
