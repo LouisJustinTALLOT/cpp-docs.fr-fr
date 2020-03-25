@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - context-sensitive keywords
 ms.assetid: e33da089-f434-44e9-8cce-4668d05a8939
-ms.openlocfilehash: ca289a7ebd4578d5c67bb5d3e403d2a9a2756520
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
-ms.translationtype: HT
+ms.openlocfilehash: 53fcaf13eb56ae14841861bffd1a29376304b8d6
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "65516124"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80182173"
 ---
 # <a name="context-sensitive-keywords--ccli-and-ccx"></a>Mots clés contextuels (C++/CLI et C++/CX)
 
@@ -20,7 +20,7 @@ Les *mots clés contextuels* sont des éléments de langage reconnus uniquement 
 
 ## <a name="all-runtimes"></a>Tous les runtimes
 
-### <a name="remarks"></a>Remarques
+### <a name="remarks"></a>Notes
 
 Voici une liste de mots clés contextuels :
 
@@ -42,7 +42,7 @@ Voici une liste de mots clés contextuels :
 
 - [override](override-cpp-component-extensions.md)
 
-- [propriété](property-cpp-component-extensions.md)
+- [property](property-cpp-component-extensions.md)
 
 - [sealed](sealed-cpp-component-extensions.md)
 
@@ -52,7 +52,7 @@ Pour des raisons de lisibilité, vous pouvez limiter votre utilisation des mots 
 
 ## <a name="windows-runtime"></a>Windows Runtime
 
-### <a name="remarks"></a>Remarques
+### <a name="remarks"></a>Notes
 
 (Il n’existe aucune note spécifique à la plateforme pour cette fonctionnalité.)
 
@@ -62,7 +62,7 @@ Option du compilateur : `/ZW`
 
 ## <a name="common-language-runtime"></a>Common Language Runtime
 
-### <a name="remarks"></a>Remarques
+### <a name="remarks"></a>Notes
 
 (Il n’existe aucune note spécifique à la plateforme pour cette fonctionnalité.)
 

@@ -5,16 +5,16 @@ helpviewer_keywords:
 - sample applications [C++], OLE DB Templates
 - OLE DB consumer templates, about consumer templates
 ms.assetid: 526aa897-5961-4396-85cb-c84f77113551
-ms.openlocfilehash: 81bb80446ef3df09eaed7a8728e789de67c27122
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: f1cc18d2192a42d22e31ee346f1e233cd7615ac0
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62395545"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80209259"
 ---
 # <a name="working-with-ole-db-consumer-templates"></a>Utilisation des modèles du consommateur OLE DB
 
-Les rubriques suivantes fournissent des exemples montrant comment utiliser les modèles du consommateur OLE DB dans des scénarios courants :
+Les rubriques suivantes fournissent des exemples d’utilisation des modèles de consommateur OLE DB dans des scénarios courants :
 
 - [Simplification de l’accès aux données à l’aide d’attributs de base de données](../../data/oledb/simplifying-data-access-with-database-attributes.md)
 
@@ -24,7 +24,7 @@ Les rubriques suivantes fournissent des exemples montrant comment utiliser les m
 
 - [Émission d’une requête paramétrée](../../data/oledb/issuing-a-parameterized-query.md)
 
-- [Récupération de données](../../data/oledb/fetching-data.md)
+- [Extraction de données](../../data/oledb/fetching-data.md)
 
 - [Mise à jour des jeux de lignes](../../data/oledb/updating-rowsets.md)
 
@@ -42,22 +42,22 @@ Les rubriques suivantes fournissent des exemples montrant comment utiliser les m
 
 - [Mise à jour d’une colonne quand une autre table contient une référence à la ligne](../../data/oledb/updating-a-column-when-another-table-contains-a-reference-to-the-row.md)
 
-- [Utilisation des signets](../../data/oledb/using-bookmarks.md)
+- [Utilisation de signets](../../data/oledb/using-bookmarks.md)
 
 - [Récupération d’un BLOB](../../data/oledb/retrieving-a-blob.md)
 
 - [Réception des notifications](../../data/oledb/receiving-notifications.md)
 
-Pour obtenir un exemple de création et implémentation d’un consommateur OLE DB, consultez [création d’un consommateur Simple](../../data/oledb/creating-an-ole-db-consumer.md).
+Pour obtenir un exemple de création et d’implémentation d’un consommateur de OLE DB, consultez [création d’un consommateur simple](../../data/oledb/creating-an-ole-db-consumer.md).
 
-Vous pouvez également rechercher des exemples montrant comment utiliser les modèles du consommateur OLE DB dans les exemples suivants :
+Vous trouverez également des exemples d’utilisation des modèles de consommateur OLE DB dans les exemples suivants :
 
-- [CatDB](https://github.com/Microsoft/VCSamples)
+- [CatDB](https://github.com/Microsoft/VCSamples/tree/master/VC2010Samples/ATL/OLEDB/Consumer)
 
-- [DBViewer](https://github.com/Microsoft/VCSamples)
+- [DBViewer](https://github.com/Microsoft/VCSamples/tree/master/VC2010Samples/ATL/OLEDB/Consumer)
 
-- [MultiRead](https://github.com/Microsoft/VCSamples)
+- [Lecture multilecture](https://github.com/Microsoft/VCSamples/tree/master/VC2010Samples/ATL/OLEDB/Consumer)
 
 ## <a name="see-also"></a>Voir aussi
 
-[Modèles du consommateur OLE DB](../../data/oledb/ole-db-consumer-templates-cpp.md)
+[OLE DB (modèles du consommateur)](../../data/oledb/ole-db-consumer-templates-cpp.md)

@@ -7,26 +7,26 @@ helpviewer_keywords:
 - __declspec keyword [C++], deprecated
 - deprecated __declspec keyword
 ms.assetid: beef1129-9434-4cb3-8392-f1eb29e04805
-ms.openlocfilehash: 34f9c10cd898b0359463d5933141822576fa4a11
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: e4689d3cb1a1757e2ac3bf4ca9eef7670ad5c655
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62398951"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80189479"
 ---
 # <a name="deprecated-c"></a>deprecated (C++)
 
-Cette rubrique concerne le spécifiques à Microsoft déconseillé declspec déclaration. Pour plus d’informations sur C ++ 14 `[[deprecated]]` attribut et des conseils sur l’utilisation de cet attribut et le declspec de spécifique à Microsoft ou le pragma, consultez [attributs Standard C++](attributes.md).
+Cette rubrique concerne la déclaration declspec déconseillée spécifique à Microsoft. Pour plus d’informations sur l’attribut `[[deprecated]]` de c++ 14, ainsi que des conseils sur l’utilisation de cet attribut ou du pragma declspec ou Microsoft spécifique, consultez [ C++ attributs standard](attributes.md).
 
-Avec les exceptions indiquées ci-dessous, le **déconseillée** déclaration offre les mêmes fonctionnalités que le [déconseillée](../preprocessor/deprecated-c-cpp.md) pragma :
+Avec les exceptions indiquées ci-dessous, la Déclaration **déconseillée** offre les mêmes fonctionnalités que le pragma [déconseillé](../preprocessor/deprecated-c-cpp.md) :
 
-- Le **déconseillée** déclaration vous permet de spécifier des formes particulières de surcharges de fonction comme étant déconseillés, alors que la forme pragma s’applique à toutes les formes surchargées d’un nom de fonction.
+- La Déclaration **déconseillée** vous permet de spécifier des formes particulières de surcharges de fonction comme dépréciées, tandis que la forme de pragma s’applique à toutes les formes surchargées d’un nom de fonction.
 
-- Le **déconseillée** déclaration vous permet de spécifier un message qui s’affiche au moment de la compilation. Le texte du message peut être issu d'une macro.
+- La Déclaration **déconseillée** vous permet de spécifier un message qui s’affichera au moment de la compilation. Le texte du message peut être issu d'une macro.
 
-- Les macros ne peuvent être marquées comme déconseillées que via le **déconseillée** pragma.
+- Les macros ne peuvent être marquées comme dépréciées qu’avec le pragma **déconseillé** .
 
-Si le compilateur détecte l’utilisation d’un identificateur déconseillé ou la norme [ `[[deprecated]]` ](attributes.md) attribut, un [C4996](../error-messages/compiler-warnings/compiler-warning-level-3-c4996.md) avertissement est levé.
+Si le compilateur rencontre l’utilisation d’un identificateur déconseillé ou de l’attribut [`[[deprecated]]`](attributes.md) standard, un avertissement [C4996](../error-messages/compiler-warnings/compiler-warning-level-3-c4996.md) est levé.
 
 ## <a name="example"></a>Exemple
 

@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - include attribute
 ms.assetid: d23f8b91-fe5b-48fa-9371-8bd73af7b8e3
-ms.openlocfilehash: ece88ebd7b5d9d81beb871427b58a72b2cf02022
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: 39f991bb036dce1c50a9d2ee800d3fec65af7c55
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69514557"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80166781"
 ---
 # <a name="include-c"></a>include (C++)
 
@@ -30,13 +30,13 @@ Nom d’un fichier que vous souhaitez inclure dans le fichier. idl généré.
 
 ## <a name="remarks"></a>Notes
 
-L' C++ attribut include entraîne `#include` le placement d’une instruction sous `import "docobj.idl"` l’instruction dans le fichier. idl généré.
+Avec l’attribut **include** C++ , une instruction `#include` est placée sous l’instruction `import "docobj.idl"` dans le fichier. idl généré.
 
-L' C++ attribut include a les mêmes fonctionnalités que l’attribut MIDL [include](/windows/win32/Midl/include) .
+L’attribut **include** C++ a les mêmes fonctionnalités que l’attribut MIDL [include](/windows/win32/Midl/include) .
 
-## <a name="example"></a>Exemples
+## <a name="example"></a>Exemple
 
-Le code suivant montre un exemple d’utilisation de laméthode Include. Pour cet exemple, le fichier include. h contient uniquement `#include` une instruction.
+Le code suivant montre un exemple d’utilisation de la méthode **include**. Pour cet exemple, le fichier include. h contient uniquement une instruction `#include`.
 
 ```cpp
 // cpp_attr_ref_include.cpp
@@ -45,7 +45,7 @@ Le code suivant montre un exemple d’utilisation de laméthode Include. Pour ce
 [include(cpp_attr_ref_include.h)];
 ```
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
 ### <a name="attribute-context"></a>Contexte d'attribut
 
@@ -53,8 +53,8 @@ Le code suivant montre un exemple d’utilisation de laméthode Include. Pour ce
 |-|-|
 |**S'applique à**|N'importe où|
 |**Renouvelable**|Non|
-|**Attributs requis**|Aucun|
-|**Attributs non valides**|Aucun|
+|**Attributs requis**|None|
+|**Attributs non valides**|None|
 
 Pour plus d'informations, consultez [Contextes d'attribut](cpp-attributes-com-net.md#contexts).
 

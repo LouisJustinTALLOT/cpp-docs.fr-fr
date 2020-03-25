@@ -12,12 +12,12 @@ helpviewer_keywords:
 - server/container applications [MFC]
 - containers [MFC], container applications
 ms.assetid: 221fd99c-b138-40fa-ad6a-974e3b3ad1f8
-ms.openlocfilehash: 88acba8d6e2541b3c9f7707b4dd9c03b13067dda
-ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
+ms.openlocfilehash: a68cc85062f9ca711c453ef98f69a7c5ea114d94
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/17/2020
-ms.locfileid: "79445350"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80214355"
 ---
 # <a name="containers-advanced-features"></a>Conteneurs : fonctionnalités avancées
 
@@ -27,7 +27,7 @@ Cet article décrit les étapes nécessaires pour intégrer des fonctionnalités
 
 - [Lien OLE vers un objet incorporé](#_core_links_to_embedded_objects)
 
-##  <a name="_core_creating_a_container_server_application"></a>Création d’une application conteneur/serveur
+##  <a name="creating-a-containerserver-application"></a><a name="_core_creating_a_container_server_application"></a>Création d’une application conteneur/serveur
 
 Une application conteneur/serveur est une application qui joue à la fois le rôle de conteneur et de serveur. Microsoft Word pour Windows en est un exemple. Vous pouvez inclure Word dans d'autres applications, vous pouvez également inclure des éléments dans Word pour les documents Windows. Le processus pour modifier votre application conteneur pour qu'elle soit à la fois un conteneur et un serveur complet (vous ne pouvez pas créer d'application combinaison conteneur/mini-serveur) est semblable au processus de création d'un serveur complet.
 
@@ -41,11 +41,11 @@ L’article [serveurs : implémentation d’un serveur](../mfc/servers-implemen
 
    Par exemple, l’exemple MFC OLE [OCLIENT](../overview/visual-cpp-samples.md) a incorporé un élément créé par votre application conteneur/serveur. Ouvrez l'application OCLIENT et modifiez sur place l'élément créé par votre application conteneur/serveur. Lors de la modification de l’élément de votre application, vous décidez d’incorporer un élément créé par l’exemple MFC OLE [HIERSVR](../overview/visual-cpp-samples.md). Pour cela, vous ne pouvez pas utiliser l'activation en place. Vous devez entièrement ouvrir HIERSVR pour activer cet élément. Comme la bibliothèque MFC ne prend pas en charge cette fonctionnalité OLE, remplacer `COleClientItem::CanActivate` vous permet de contrôler cette situation et d’empêcher une erreur d’exécution possible dans votre application.
 
-Si vous créez une application et souhaitez qu'elle s'exécute en tant qu'application conteneur/serveur, choisissez l'option dans la boîte de dialogue Options OLE dans l'Assistant Application et la prise en charge est créée automatiquement. Pour plus d’informations, consultez l’article [vue d’ensemble : création d’un conteneur de contrôles ActiveX](../mfc/reference/creating-an-mfc-activex-control-container.md). Pour plus d'informations sur les exemples de MFC, consultez les exemples MFC.
+Si vous créez une application et souhaitez qu'elle s'exécute en tant qu'application conteneur/serveur, choisissez l'option dans la boîte de dialogue Options OLE dans l'Assistant Application et la prise en charge est créée automatiquement. Pour plus d’informations, consultez l’article [vue d’ensemble : création d’un conteneur de contrôles ActiveX](../mfc/reference/creating-an-mfc-activex-control-container.md). Pour plus d’informations sur les exemples MFC, consultez [MFC Samples](../overview/visual-cpp-samples.md#mfc-samples).
 
 Notez que vous ne pouvez pas insérer une application MDI en elle-même. Une application qui est conteneur/serveur ne peut pas être insérée dans elle-même à moins d'être une application SDI.
 
-##  <a name="_core_links_to_embedded_objects"></a>Liens vers des objets incorporés
+##  <a name="links-to-embedded-objects"></a><a name="_core_links_to_embedded_objects"></a>Liens vers des objets incorporés
 
 Les liens vers la fonction d'objets incorporés permet à un utilisateur de créer un document avec un lien OLE vers un objet incorporé dans votre application conteneur. Par exemple, créez un document dans un traitement de texte contenant une feuille de calcul incorporée. Si votre application prend en charge les liens vers des objets incorporés, elle pourrait également coller un lien vers la feuille de calcul contenue dans le document de traitement de texte. Cette fonctionnalité permet à votre application d'utiliser les informations contenues dans la feuille de calcul sans savoir où le traitement de texte l'a initialement obtenue.
 

@@ -6,15 +6,15 @@ f1_keywords:
 helpviewer_keywords:
 - C4276
 ms.assetid: 9d738c2d-29e5-408a-b9ff-be1a850b2238
-ms.openlocfilehash: 87f13f7da12a3f7e40aaad180e2a3bc83e121771
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: c1de07cd65bbc9f02a979ceebe31be4143af70ad
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62207137"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80175816"
 ---
 # <a name="compiler-warning-level-1-c4276"></a>Avertissement du compilateur (niveau 1) C4276
 
-'fonction' : aucun prototype fourni ; supposé sans paramètres
+'fonction' : aucun prototype fourni ; aucun paramètre pris par défaut
 
-Lorsque vous prenez l’adresse d’une fonction avec la [__stdcall](../../cpp/stdcall.md) convention d’appel, vous devez donner un prototype afin que le compilateur peut créer le nom décoré de la fonction. Dans la mesure où *fonction* a pas de prototype, le compilateur, lors de la création du nom décoré, suppose que la fonction n’a aucun paramètre.
+Lorsque vous prenez l’adresse d’une fonction avec la Convention d’appel [__stdcall](../../cpp/stdcall.md) , vous devez attribuer un prototype afin que le compilateur puisse créer le nom décoré de la fonction. Étant donné que la *fonction* n’a pas de prototype, le compilateur, lors de la création du nom décoré, suppose que la fonction n’a aucun paramètre.

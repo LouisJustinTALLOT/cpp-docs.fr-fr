@@ -1,20 +1,20 @@
 ---
-title: B. Stubs pour les fonctions de bibliothèque du run-time
+title: B. Stubs pour les fonctions de la bibliothèque du runtime
 ms.date: 01/22/2019
 ms.assetid: fdfdabe0-f678-4551-80d5-827b62354427
-ms.openlocfilehash: 1e8d439eefad005c673cfb6c4ea12399b8236fb5
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 9089bd6ef1f0a8f2f2ed94a7c496943c9bdd5e64
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62362983"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80215057"
 ---
-# <a name="b-stubs-for-run-time-library-functions"></a>B. Stubs pour les fonctions de bibliothèque du run-time
+# <a name="b-stubs-for-run-time-library-functions"></a>B. Stubs pour les fonctions de la bibliothèque du runtime
 
-Cette section fournit des stubs pour les fonctions de bibliothèque du run-time définies dans OpenMP C et C++ API. Les stubs sont fournies pour permettre la portabilité vers les plates-formes qui ne prennent en charge OpenMP C et l’API C++. Sur ces plateformes, les programmes d’OpenMP doivent être liés avec une bibliothèque contenant ces fonctions stub. Les fonctions de stub partent du principe que les directives dans le programme OpenMP sont ignorés. Par conséquent, elles émulent la sémantique de la série.
+Cette section fournit des stubs pour les fonctions de la bibliothèque Runtime définies dans le C C++ et l’API OpenMP. Les stubs sont fournis pour permettre la portabilité vers les plateformes qui ne prennent C++ pas en charge le C et l’API OpenMP. Sur ces plateformes, les programmes OpenMP doivent être liés à une bibliothèque contenant ces fonctions stub. Les fonctions stub partent du principe que les directives du programme OpenMP sont ignorées. Par conséquent, ils émulent la sémantique série.
 
 > [!NOTE]
-> La variable de verrou qui s’affiche dans les fonctions de verrouillage doit être accessible exclusivement par le biais de ces fonctions. Il ne doit pas être initialisé ou sinon modifié dans le programme de l’utilisateur. Les utilisateurs ne doivent pas s’hypothèses sur les mécanismes utilisés par les implémentations OpenMP C et C++ pour implémenter des verrous basés sur le schéma utilisé par les fonctions stub.
+> La variable Lock qui apparaît dans les fonctions de verrouillage doit être accessible exclusivement par le biais de ces fonctions. Il ne doit pas être initialisé ou modifié dans le programme utilisateur. Les utilisateurs ne doivent pas faire d’hypothèses sur les mécanismes utilisés C++ par OpenMP C et les implémentations pour implémenter des verrous en fonction du schéma utilisé par les fonctions stub.
 
 ## <a name="code"></a>Code
 

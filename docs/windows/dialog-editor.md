@@ -23,18 +23,18 @@ helpviewer_keywords:
 - Dialog Editor [C++], switching between controls and code
 - Dialog Editor [C++], shortcut keys
 ms.assetid: d94884ef-2cca-49d8-9b58-775f34848134
-ms.openlocfilehash: 40b5d8c8390c638b70bc2c0860ccf3c17872719c
-ms.sourcegitcommit: 9aab425662a66825772f091112986952f341f7c8
+ms.openlocfilehash: 9d0f9993d81c499f67a08e5401c5e56dba7b281c
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/16/2019
-ms.locfileid: "72445024"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80215252"
 ---
 # <a name="dialog-editor-c"></a>Éditeur de boîtesC++de dialogue ()
 
 L' **éditeur de boîtes de dialogue** vous permet de créer ou de modifier des ressources de boîte de dialogue.
 
-- Pour ouvrir l’éditeur, double-cliquez sur le fichier. RC d’une boîte de dialogue dans la fenêtre **affichage des ressources** ou accédez à la **vue**de menu  >  autres**affichage des ressources** **Windows** > .
+- Pour ouvrir l’éditeur, double-cliquez sur le fichier. RC d’une boîte de dialogue dans la fenêtre **affichage des ressources** ou accédez à la **vue** de menu > autres **affichage des ressources**de > **Windows** .
 
 L’une des premières étapes de création d’un nouveau modèle de boîte de dialogue ou de boîte de dialogue consiste à ajouter des contrôles. Dans l' **éditeur de boîtes de dialogue**, vous pouvez organiser les contrôles en fonction d’une taille, d’une forme ou d’un alignement spécifique, ou vous pouvez les déplacer pour travailler dans la boîte de dialogue. Vous pouvez aussi facilement supprimer un contrôle.
 
@@ -58,16 +58,16 @@ La barre d’outils de l' **éditeur de boîtes de dialogue** contient des bouto
 |Icône|Signification|Icône|Signification|
 |----------|-------------|----------|-------------|
 |![Bouton tester la boîte de dialogue](../mfc/media/vcdialogeditortestdialog.png "vcDialogEditorTestDialog")|Boîte de dialogue Test|![Bouton espacer sur](../mfc/media/vcdialogeditoracross.png "vcDialogEditorAcross")|Horizontalement|
-|![Bouton aligner les gauches](../mfc/media/vcdialogeditoralignlefts.png "vcDialogEditorAlignLefts")|Aligner les côtés gauches|![Bouton espacer vers le dessous](../mfc/media/vcdialogeditordown.png "vcDialogEditorDown")|Bas|
+|![Bouton aligner les gauches](../mfc/media/vcdialogeditoralignlefts.png "vcDialogEditorAlignLefts")|Aligner les côtés gauches|![Bouton espacer vers le dessous](../mfc/media/vcdialogeditordown.png "vcDialogEditorDown")|Descendre|
 |![Bouton aligner les droits](../mfc/media/vcdialogeditoralignrights.png "vcDialogEditorAlignRights")|Aligner les côtés droits|![Bouton créer une largeur identique](../mfc/media/vcdialogeditorsamewidth.png "vcDialogEditorSameWidth")|Uniformiser la largeur|
 |![Bouton aligner les sommets](../mfc/media/vcdialogeditoraligntops.png "vcDialogEditorAlignTops")|Aligner les sommets|![Bouton de hauteur identique](../mfc/media/vcdialogeditormakesameheight.png "vcDialogEditorMakeSameHeight")|Uniformiser la hauteur|
 |![Bouton aligner les bases](../mfc/media/vcdialogeditoralignbottoms.png "vcDialogEditorAlignBottoms")|Aligner les bases|![Bouton ajuster la taille](../mfc/media/vcdialogeditorsamesize.png "vcDialogEditorSameSize")|Uniformiser la taille|
 |![Bouton centrer verticalement](../mfc/media/vcdialogeditorvertical.png "vcDialogEditorVertical")|Vertical|![Bouton Activer/désactiver la grille](../mfc/media/vcdialogeditortogglegrid.png "vcDialogEditorToggleGrid")|Activer/Désactiver la grille|
 |![Bouton Centrer horizontalement](../mfc/media/vcdialogeditorhorizontal.png "vcDialogEditorHorizontal")|Horizontal|![Bouton Activer/désactiver les repères](../mfc/media/vcdialogeditortoggleguides.png "vcDialogEditorToggleGuides")|Activer/Désactiver les repères|
 
-- Pour afficher ou masquer la barre d’outils de l' **éditeur de boîtes de dialogue** , accédez à la **vue**de menu  > **barres d’outils** > **éditeur de boîtes de dialogue**.
+- Pour afficher ou masquer la barre d’outils de l' **éditeur de boîtes de dialogue** , accédez à la **vue** menu > **barres d’outils** > **éditeur de boîtes de dialogue**.
 
-Quand vous ouvrez l' **éditeur de boîtes** de C++ dialogue dans un projet, la barre d’outils de l' **éditeur de boîtes de dialogue** apparaît automatiquement en haut de votre solution. Toutefois, si vous fermez explicitement la barre d’outils, vous devez l’appeler la prochaine fois que vous ouvrez l’éditeur de boîtes de **dialogue.** . Vous pouvez basculer son affichage en le sélectionnant dans la liste des barres d’outils et des fenêtres disponibles.
+Quand vous ouvrez l' **éditeur de boîtes** de C++ dialogue dans un projet, la barre d’outils de l' **éditeur de boîtes de dialogue** apparaît automatiquement en haut de votre solution. Toutefois, si vous fermez explicitement la barre d’outils, vous devez l’appeler la prochaine fois que vous ouvrez l’éditeur de boîtes de **dialogue**. Vous pouvez basculer son affichage en le sélectionnant dans la liste des barres d’outils et des fenêtres disponibles.
 
 ## <a name="switch-between-dialog-box-controls-and-code"></a>Basculer entre les contrôles de boîte de dialogue et le code
 
@@ -92,7 +92,7 @@ Lorsqu’un contrôle est sélectionné, sélectionnez le bouton **ControlEvents
 
 Vous trouverez ci-dessous les touches d’accès rapide par défaut pour les commandes de l' **éditeur de boîtes de dialogue** .  
 
-|Commande|Touches|Description|
+|Commande|Keys|Description|
 |-------------|----------|-----------------|
 |Format.AlignBottoms|**Ctrl** + **MAJ** + **flèche bas**|Aligne les bords inférieurs des contrôles sélectionnés avec le contrôle dominant.|
 |Format.AlignCenters|**Maj** + **F9**|Aligne les centres verticaux des contrôles sélectionnés avec le contrôle dominant.|
@@ -102,25 +102,25 @@ Vous trouverez ci-dessous les touches d’accès rapide par défaut pour les com
 |Format.AlignTops|**Ctrl** + **MAJ** + **flèche haut**|Aligne les bords supérieurs des contrôles sélectionnés avec le contrôle dominant.|
 |Format.ButtonBottom|**Ctrl** + **B**|Place les boutons sélectionnés en bas au centre de la boîte de dialogue.|
 |Format.ButtonRight|**Ctrl** + **R**|Place les boutons sélectionnés dans l’angle supérieur droit de la boîte de dialogue.|
-|Format.CenterHorizontal|**Ctrl** + **Shift** + **F9**|Centre les contrôles horizontalement dans la boîte de dialogue.|
+|Format.CenterHorizontal|**Ctrl** + **MAJ** + **F9**|Centre les contrôles horizontalement dans la boîte de dialogue.|
 |Format.CenterVertical|**Ctrl** + **F9**|Centre les contrôles verticalement dans la boîte de dialogue.|
 |Format.CheckMnemonics|**Ctrl** + **M**|Vérifie l’unicité des mnémoniques.|
-|Format. SizeToContent|**Shift** + **F7**|Redimensionne le ou les contrôles sélectionnés pour qu’ils correspondent au texte de la légende.|
+|Format.SizeToContent|**Shift** + **F7**|Redimensionne le ou les contrôles sélectionnés pour qu’ils correspondent au texte de la légende.|
 |Format.SpaceAcross|**Alt** + **Flèche gauche**|Espace uniformément les contrôles sélectionnés horizontalement.|
 |Format.SpaceDown|**Alt** + **flèche bas**|Espace uniformément les contrôles sélectionnés verticalement.|
 |Format.TabOrder|**Ctrl** + **D**|Définit l’ordre des contrôles dans la boîte de dialogue.|
 |Format.TestDialog|**Ctrl** + **T**|Exécute la boîte de dialogue pour tester l’apparence et le comportement.|
 |Format.ToggleGuides|**Ctrl** + **G**|Effectue un cycle entre aucune grille, instruction et grille pour la modification de la boîte de dialogue.|
 
-- Pour modifier les touches de raccourci, accédez à **Outils**de menu  > **options**, puis choisissez **clavier** dans le dossier **environnement** .
+- Pour modifier les touches de raccourci, accédez à **Outils** de menu > **options**, puis choisissez **clavier** dans le dossier **environnement** .
 
    Pour plus d’informations, consultez [Identification et personnalisation des raccourcis clavier](/visualstudio/ide/identifying-and-customizing-keyboard-shortcuts-in-visual-studio).
 
-- Pour modifier vos paramètres, accédez à **Outils**de menu  > **paramètres d’importation et d’exportation**.
+- Pour modifier vos paramètres, accédez à **Outils** de menu > **paramètres d’importation et d’exportation**.
 
    Les options disponibles dans les boîtes de dialogue, ainsi que les noms et emplacements des commandes de menu que vous voyez, peuvent différer de ce qui est décrit dans **l’aide** en fonction de vos paramètres actifs ou de l’édition.  Pour plus d’informations, consultez [Personnaliser l’IDE Visual Studio](/visualstudio/ide/personalizing-the-visual-studio-ide).
 
-## <a name="requirements"></a>spécifications
+## <a name="requirements"></a>Spécifications
 
 Win32
 

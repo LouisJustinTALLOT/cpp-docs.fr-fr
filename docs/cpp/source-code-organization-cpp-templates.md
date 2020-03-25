@@ -2,18 +2,18 @@
 title: Organisation du code source (modèles C++)
 ms.date: 04/22/2019
 ms.assetid: 50569c5d-0219-4966-9bcf-a8689074ad1d
-ms.openlocfilehash: 1933758e47f2fcc0b63f0d16809591b932501854
-ms.sourcegitcommit: 934cb53fa4cb59fea611bfeb9db110d8d6f7d165
-ms.translationtype: HT
+ms.openlocfilehash: 76898d04e5f9f0576898eb40945b7718c650d71a
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65611391"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80178728"
 ---
 # <a name="source-code-organization-c-templates"></a>Organisation du code source (modèles C++)
 
 Lorsque vous définissez un modèle de classe, vous devez organiser le code source de sorte que les définitions de membres soient visibles par le compilateur en cas de besoin.   Vous avez le choix d’utiliser le *modèle d’inclusion* ou le modèle d’*instanciation explicite*. Dans le modèle d’inclusion, vous incluez les définitions de membres dans chaque fichier qui utilise un modèle. Cette approche est la plus simple et offre une flexibilité maximale en termes de types concrets compatibles avec votre modèle. Son inconvénient est qu’il peut augmenter le délai de compilation. L’impact peut être significatif si un projet et/ou les fichiers inclus sont eux-mêmes volumineux. Avec l’instanciation explicite, le modèle lui-même instancie les classes ou les membres de classe concrets pour des types spécifiques.  Cette approche peut accélérer le délai de compilation, mais elle limite l’utilisation aux seules classes que l’implémenteur de modèle a activées à l’avance. En règle générale, nous vous recommandons d’utiliser le modèle d’inclusion, sauf si le délai de compilation pose problème.
 
-## <a name="background"></a>Présentation
+## <a name="background"></a>Arrière-plan
 
 Les modèles ne constituent pas des classes ordinaires, en ce sens que le compilateur ne génère pas le code de l’objet pour un modèle ou l’un de ses membres. Il n’y a rien à générer tant que le modèle n’est pas instancié avec des types concrets. Lorsque le compilateur rencontre une instanciation de modèle comme `MyClass<int> mc;` et qu’il n’existe encore aucune classe avec cette signature, il génère une nouvelle classe. Il tente également de générer le code des fonctions d’un membre qui sont utilisées. Si ces définitions figurent dans un fichier qui n’est pas inclus, directement ou indirectement, dans le fichier .cpp en cours de compilation, le compilateur ne peut pas les détecter.  Du point de vue du compilateur, il ne s’agit pas nécessairement d’une erreur car les fonctions peuvent être définies dans une autre unité de traduction et, dans ce cas, l’éditeur de liens les identifie.  Si l’éditeur de liens ne trouve pas ce code, il déclenche une erreur **externe non résolue**.
 

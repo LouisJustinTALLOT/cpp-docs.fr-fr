@@ -5,12 +5,12 @@ ms.topic: reference
 f1_keywords:
 - module/Microsoft::WRL::FactoryCacheFlags
 ms.assetid: 6f54258f-0144-4264-9608-414e5905f6fb
-ms.openlocfilehash: 8cf4af2ac0b4557fc6b175b84c47f83dd8a6e4ba
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 250c8c8e7ade72bd1a9cd63f0b515774058f0723
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62398457"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80214004"
 ---
 # <a name="factorycacheflags-enumeration"></a>FactoryCacheFlags, énumération
 
@@ -24,19 +24,19 @@ enum FactoryCacheFlags;
 
 ## <a name="remarks"></a>Notes
 
-Par défaut, la fabrique de stratégie de mise en cache est spécifiée comme le [ModuleType](moduletype-enumeration.md) paramètre de modèle lorsque vous créez un [Module](module-class.md) objet. Pour remplacer cette stratégie, spécifiez un **FactoryCacheFlags** valeur lorsque vous créez un objet de fabrique.
+Par défaut, la stratégie de mise en cache des fabriques est spécifiée en tant que paramètre de modèle [ModuleType](moduletype-enumeration.md) quand vous créez un objet de [module](module-class.md) . Pour remplacer cette stratégie, spécifiez une valeur **factorycacheflags,** quand vous créez un objet de fabrique.
 
 |||
 |-|-|
-|`FactoryCacheDefault`|La stratégie de mise en cache de la `Module` objet est utilisé.|
-|`FactoryCacheEnabled`|Permet la mise en cache de fabrique, quel que soit le `ModuleType` paramètre de modèle qui est utilisé pour créer un `Module` objet.|
-|`FactoryCacheDisabled`|Désactive la mise en cache de fabrique, quel que soit le `ModuleType` paramètre de modèle qui est utilisé pour créer un `Module` objet.|
+|`FactoryCacheDefault`|La stratégie de mise en cache de l’objet `Module` est utilisée.|
+|`FactoryCacheEnabled`|Active la mise en cache d’usine quel que soit le paramètre de modèle `ModuleType` utilisé pour créer un objet `Module`.|
+|`FactoryCacheDisabled`|Désactive la mise en cache de l’usine quel que soit le paramètre de modèle `ModuleType` utilisé pour créer un objet `Module`.|
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
-**En-tête :** implements.h
+**En-tête :** Implements. h
 
-**Espace de noms :** Microsoft::wrl
+**Espace de noms :** Microsoft::WRL
 
 ## <a name="see-also"></a>Voir aussi
 

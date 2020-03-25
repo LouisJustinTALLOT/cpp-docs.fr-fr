@@ -6,15 +6,15 @@ f1_keywords:
 helpviewer_keywords:
 - C2003
 ms.assetid: 3161bc08-593d-4448-9fd3-4e3810be9e82
-ms.openlocfilehash: 5bc1250ce5c98e89be768141e3d71c16c5e6b356
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: b8a0dac2f6886ffbef20d9303b2637bfebc240fa
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62208956"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80208232"
 ---
 # <a name="compiler-error-c2003"></a>Erreur du compilateur C2003
 
-attendu 'defined id'
+'defined ID’attendu
 
-Un identificateur doit suivre le mot clé de préprocesseur.
+Un identificateur doit suivre le mot clé du préprocesseur.

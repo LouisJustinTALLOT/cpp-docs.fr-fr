@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - helpstring attribute [C++]
 ms.assetid: 0401e905-a63e-4fad-98d0-d1efea111966
-ms.openlocfilehash: 47a07ee94ad774bde46dce00ea46612fae3a4eca
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: d22ecf5a7131a1368abf2b1fbd8261ec6195b51e
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69490876"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80166963"
 ---
 # <a name="helpstring"></a>helpstring
 
@@ -32,11 +32,11 @@ Texte de la chaîne d’aide.
 
 L’attribut **helpString** C++ a les mêmes fonctionnalités que l’attribut MIDL de [helpString](/windows/win32/Midl/helpstring) .
 
-## <a name="example"></a>Exemples
+## <a name="example"></a>Exemple
 
 Consultez l’exemple pour [DefaultValue](defaultvalue.md) pour obtenir un exemple d’utilisation de **helpString**.
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
 ### <a name="attribute-context"></a>Contexte d'attribut
 
@@ -44,8 +44,8 @@ Consultez l’exemple pour [DefaultValue](defaultvalue.md) pour obtenir un exemp
 |-|-|
 |**S'applique à**|**interface**, **typedef**, **classe**, méthode, propriété|
 |**Renouvelable**|Non|
-|**Attributs requis**|Aucun|
-|**Attributs non valides**|Aucun|
+|**Attributs requis**|None|
+|**Attributs non valides**|None|
 
 Pour plus d'informations, consultez [Contextes d'attribut](cpp-attributes-com-net.md#contexts).
 

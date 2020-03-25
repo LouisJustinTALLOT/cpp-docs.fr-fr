@@ -7,17 +7,17 @@ helpviewer_keywords:
 - CXX0002
 - CAN0002
 ms.assetid: 5f136470-505f-4224-a29a-2d34e896d78b
-ms.openlocfilehash: 802d6478e0b0242acd50010b98ff3a8b1dc265b3
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: aeae67f0425bb45d3d15a8690b582063af1eb3d2
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62406097"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80196376"
 ---
 # <a name="expression-evaluator-error-cxx0002"></a>Évaluateur d'expression, erreur CXX0002
 
-Erreur de mémoire utilisateur l’accès à
+erreur lors de l’accès à la mémoire utilisateur
 
-L’expression tente de référencer la mémoire qui n’est pas allouée au programme en cours de débogage.
+L’expression tente de faire référence à la mémoire qui n’est pas allouée au programme en cours de débogage.
 
 Cette erreur est identique à CAN0002.

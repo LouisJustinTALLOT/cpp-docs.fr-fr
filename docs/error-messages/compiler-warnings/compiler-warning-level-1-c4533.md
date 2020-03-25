@@ -1,19 +1,19 @@
 ---
-title: Avertissement du compilateur (niveau 1) C4533
+title: Avertissement du compilateur (niveau 1) C4533
 ms.date: 11/04/2016
 f1_keywords:
 - C4533
 helpviewer_keywords:
 - C4533
 ms.assetid: 359fecda-d540-46e5-b214-dbabe9ef50d2
-ms.openlocfilehash: 6ee88af66238497216d7e5dab497394a58a55805
-ms.sourcegitcommit: e5192a25c084eda9eabfa37626f3274507e026b3
+ms.openlocfilehash: 20637dc23e13031b4199298a3374825062ce40da
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/12/2019
-ms.locfileid: "73965753"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80186424"
 ---
-# <a name="compiler-warning-level-1-c4533"></a>Avertissement du compilateur (niveau 1) C4533
+# <a name="compiler-warning-level-1-c4533"></a>Avertissement du compilateur (niveau 1) C4533
 
 l’initialisation de’variable’est ignorée par’instruction'
 

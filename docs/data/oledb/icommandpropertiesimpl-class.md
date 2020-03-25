@@ -14,12 +14,12 @@ helpviewer_keywords:
 - GetProperties method
 - SetProperties method
 ms.assetid: b3cf6aea-527e-4f0d-96e0-669178b021a2
-ms.openlocfilehash: 165f7124657cbaf0c0f94171eaf9394011796aea
-ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
+ms.openlocfilehash: cbf2e6d7241d019a00132c10638993d60d78beac
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/17/2020
-ms.locfileid: "79447048"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80210806"
 ---
 # <a name="icommandpropertiesimpl-class"></a>ICommandPropertiesImpl, classe
 
@@ -58,7 +58,7 @@ Votre classe de propriétés.
 
 Cela est obligatoire sur les commandes. L’implémentation est fournie par une fonction statique définie par la macro [BEGIN_PROPSET_MAP](../../data/oledb/begin-propset-map.md) .
 
-## <a name="getproperties"></a>Icommandpropertiesimpl, :: GetProperties
+## <a name="icommandpropertiesimplgetproperties"></a><a name="getproperties"></a>Icommandpropertiesimpl, :: GetProperties
 
 Retourne tous les jeux de propriétés demandés à l’aide du mappage des propriétés de la commande.
 
@@ -79,7 +79,7 @@ Consultez [ICommandProperties :: GetProperties](/previous-versions/windows/desk
 
 Consultez [BEGIN_PROPSET_MAP](../../data/oledb/begin-propset-map.md).
 
-## <a name="setproperties"></a>Icommandpropertiesimpl, :: SetProperties
+## <a name="icommandpropertiesimplsetproperties"></a><a name="setproperties"></a>Icommandpropertiesimpl, :: SetProperties
 
 Définit les propriétés de l’objet de commande.
 

@@ -6,15 +6,15 @@ f1_keywords:
 helpviewer_keywords:
 - C4410
 ms.assetid: 7dcdb720-118a-4823-ba73-575f6ad79a71
-ms.openlocfilehash: dfe15dc125a1ca9ca3faec74a5cdb40e27d80c0d
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 8fe813bfd19f6f7fa3020910d8f2913afd032aaa
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62408301"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80162437"
 ---
 # <a name="compiler-warning-level-1-c4410"></a>Avertissement du compilateur (niveau 1) C4410
 
-taille non conforme d’opérande
+taille non conforme pour l’opérande
 
-Un des opérandes de l’instruction avait une taille incorrecte. La plus petite taille conforme pour l’opérande a été utilisée.
+L’un des opérandes de l’instruction a une taille incorrecte. La plus petite taille autorisée pour l’opérande a été utilisée.

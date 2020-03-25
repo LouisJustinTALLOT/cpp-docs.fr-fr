@@ -4,28 +4,28 @@ ms.date: 05/07/2019
 helpviewer_keywords:
 - lambda expressions [C++], syntax
 ms.assetid: 5d6154a4-f34d-4a15-970d-7e7de45f54e9
-ms.openlocfilehash: 37e4a512678bf276b5244fd54945f49a37ff8d01
-ms.sourcegitcommit: da32511dd5baebe27451c0458a95f345144bd439
-ms.translationtype: HT
+ms.openlocfilehash: 9ac2fdea1a8fc8dcf2b03059455c3141daf86aa8
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/07/2019
-ms.locfileid: "65222389"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80179651"
 ---
 # <a name="lambda-expression-syntax"></a>Syntaxe d’expression lambda
 
-Cet article décrit la syntaxe et les éléments structuraux des expressions lambda. Pour obtenir une description des expressions lambda, consultez [Expressions Lambda](../cpp/lambda-expressions-in-cpp.md).
+Cet article décrit la syntaxe et les éléments structuraux des expressions lambda. Pour obtenir une description des expressions lambda, consultez [expressions lambda](../cpp/lambda-expressions-in-cpp.md).
 
-## <a name="function-objects-vs-lambdas"></a>Objets de fonction comparés aux expressions Lambdas
+## <a name="function-objects-vs-lambdas"></a>Comparaison des objets de fonction et des expressions lambda
 
-Lorsque vous écrivez du code, vous probablement utiliser les objets de fonction et les pointeurs de fonction pour résoudre les problèmes et effectuer des calculs, notamment lorsque vous utilisez [algorithmes de la bibliothèque Standard C++](../cpp/algorithms-modern-cpp.md). Les pointeurs de fonction et les objets de fonction présentent chacun des avantages et des inconvénients. Par exemple, les pointeurs de fonction possèdent une charge mémoire syntaxique minimale, mais leur état n'est pas conservé au sein d'une portée. Les objets de fonction, quant à eux, peuvent conserver leur état, mais ils nécessitent la charge mémoire syntaxique d'une définition de classe.
+Lorsque vous écrivez du code, vous utilisez probablement des pointeurs de fonction et des objets de fonction pour résoudre les problèmes et effectuer des calculs, en particulier quand vous utilisez [ C++ des algorithmes de bibliothèque standard](../cpp/algorithms-modern-cpp.md). Les pointeurs de fonction et les objets de fonction présentent chacun des avantages et des inconvénients. Par exemple, les pointeurs de fonction possèdent une charge mémoire syntaxique minimale, mais leur état n'est pas conservé au sein d'une portée. Les objets de fonction, quant à eux, peuvent conserver leur état, mais ils nécessitent la charge mémoire syntaxique d'une définition de classe.
 
 Une expression lambda combine les avantages des pointeurs et des objets de fonction, tout en évitant leurs inconvénients. Tout comme les objets de fonction, les expressions lambda sont flexibles et peuvent conserver leur état. Toutefois, contrairement aux objets de fonction, leur syntaxe compacte ne requiert pas de définition de classe explicite. Grâce aux expressions lambda, votre code est moins encombré et moins sujet aux erreurs que le code nécessaire pour un objet de fonction équivalent.
 
 Les exemples suivants comparent l'utilisation d'une expression lambda et d'un objet de fonction. Le premier exemple utilise une expression lambda pour afficher sur la console si chaque élément d'un objet `vector` est pair ou impair. Le deuxième exemple utilise un objet de fonction pour accomplir la même tâche.
 
-## <a name="example-1-using-a-lambda"></a>Exemple 1 : À l’aide d’une expression Lambda
+## <a name="example-1-using-a-lambda"></a>Exemple 1 : Utilisation d'une expression lambda
 
-Cet exemple passe une expression lambda pour le **for_each** (fonction). L'expression lambda imprime un résultat qui indique si chaque élément dans un objet `vector` est pair ou impair.
+Cet exemple passe une expression lambda à la fonction **for_each** . L'expression lambda imprime un résultat qui indique si chaque élément dans un objet `vector` est pair ou impair.
 
 ### <a name="code"></a>Code
 
@@ -79,13 +79,13 @@ There are 4 even numbers in the vector.
 
 ### <a name="comments"></a>Commentaires
 
-Dans l’exemple, le troisième argument de la **for_each** (fonction) est une expression lambda. La partie `[&evenCount]` spécifie la clause de capture de l'expression, `(int n)` spécifie la liste des paramètres, et la partie restante spécifie le corps de l'expression.
+Dans l’exemple, le troisième argument de la fonction **for_each** est une expression lambda. La partie `[&evenCount]` spécifie la clause de capture de l'expression, `(int n)` spécifie la liste des paramètres, et la partie restante spécifie le corps de l'expression.
 
-## <a name="example-2-using-a-function-object"></a>Exemple 2 : À l’aide d’un objet de fonction
+## <a name="example-2-using-a-function-object"></a>Exemple 2 : Utilisation d'un objet de fonction
 
-Il arrive qu'une expression lambda soit trop complexe pour être utilisée autrement que dans l'exemple précédent. L’exemple suivant utilise un objet de fonction au lieu d’une expression lambda, conjointement avec le **for_each** fonction, pour produire les mêmes résultats que l’exemple 1. Les deux exemples indiquent le nombre de chiffres pairs dans un objet `vector`. Pour conserver l'état de l'opération, la classe `FunctorClass` enregistre la variable `m_evenCount` par référence comme variable membre. Pour effectuer l’opération, `FunctorClass` implémente l’opérateur d’appel de fonction, **operator()**. Microsoft C++ compilateur génère du code qui est comparable en taille et les performances pour le code de l’expression lambda dans l’exemple 1. Pour un problème simple comme celui de cet article, la plus simple des expressions lambda convient probablement mieux qu'un objet de fonction. Toutefois, si vous pensez que les fonctionnalités peuvent nécessiter une expansion significative à l'avenir, il serait plus judicieux d'utiliser un objet de fonction afin que la maintenance du code soit facilitée.
+Il arrive qu'une expression lambda soit trop complexe pour être utilisée autrement que dans l'exemple précédent. L’exemple suivant utilise un objet de fonction au lieu d’une expression lambda, ainsi que la fonction **for_each** , pour produire les mêmes résultats que l’exemple 1. Les deux exemples indiquent le nombre de chiffres pairs dans un objet `vector`. Pour conserver l'état de l'opération, la classe `FunctorClass` enregistre la variable `m_evenCount` par référence comme variable membre. Pour effectuer cette opération, `FunctorClass` implémente l’opérateur d’appel de fonction, **Operator ()** . Le compilateur C++ Microsoft génère du code dont la taille et les performances sont comparables à celles du code lambda de l’exemple 1. Pour un problème simple comme celui de cet article, la plus simple des expressions lambda convient probablement mieux qu'un objet de fonction. Toutefois, si vous pensez que les fonctionnalités peuvent nécessiter une expansion significative à l'avenir, il serait plus judicieux d'utiliser un objet de fonction afin que la maintenance du code soit facilitée.
 
-Pour plus d’informations sur la **operator()**, consultez [appel de fonction](../cpp/function-call-cpp.md). Pour plus d’informations sur la **for_each** de fonction, consultez [for_each](../standard-library/algorithm-functions.md#for_each).
+Pour plus d’informations sur l' **opérateur ()** , consultez [appel de fonction](../cpp/function-call-cpp.md). Pour plus d’informations sur la fonction **for_each** , consultez [for_each](../standard-library/algorithm-functions.md#for_each).
 
 ### <a name="code"></a>Code
 

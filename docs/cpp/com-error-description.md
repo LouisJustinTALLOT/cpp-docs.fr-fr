@@ -6,18 +6,18 @@ f1_keywords:
 helpviewer_keywords:
 - Description method [C++]
 ms.assetid: 88191e24-4ee8-44a6-8c4c-3758e22e0548
-ms.openlocfilehash: a517c40e9adfbda2d790ce41a48ccf8658bcd3e0
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: de2275f096fe2fde96e64cbc3034602a1fde5e88
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62155109"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80180769"
 ---
-# <a name="comerrordescription"></a>_com_error::Description
+# <a name="_com_errordescription"></a>_com_error::Description
 
-**Section spécifique à Microsoft**
+**Section spécifique de Microsoft**
 
-Appels `IErrorInfo::GetDescription` (fonction).
+Appelle `IErrorInfo::GetDescription` fonction.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -27,13 +27,13 @@ _bstr_t Description( ) const;
 
 ## <a name="return-value"></a>Valeur de retour
 
-Retourne le résultat de `IErrorInfo::GetDescription` pour le `IErrorInfo` objet enregistré dans le `_com_error` objet. Le `BSTR` résultant est encapsulé dans un objet `_bstr_t`. Si aucun `IErrorInfo` est enregistrée, elle retourne un vide `_bstr_t`.
+Retourne le résultat de `IErrorInfo::GetDescription` pour l’objet `IErrorInfo` enregistré dans l’objet `_com_error`. Le `BSTR` résultant est encapsulé dans un objet `_bstr_t`. Si aucune `IErrorInfo` n’est enregistrée, elle retourne un `_bstr_t`vide.
 
 ## <a name="remarks"></a>Notes
 
-Appelle le `IErrorInfo::GetDescription` fonction et récupère `IErrorInfo` stocké dans le `_com_error` objet. Tout échec lors de l’appel la `IErrorInfo::GetDescription` méthode est ignorée.
+Appelle la fonction `IErrorInfo::GetDescription` et récupère les `IErrorInfo` enregistrées dans l’objet `_com_error`. Tout échec lors de l’appel de la méthode `IErrorInfo::GetDescription` est ignoré.
 
-**FIN de la section spécifique à Microsoft**
+**Fin de la section spécifique de Microsoft**
 
 ## <a name="see-also"></a>Voir aussi
 

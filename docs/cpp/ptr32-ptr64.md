@@ -16,16 +16,16 @@ helpviewer_keywords:
 - _ptr64 keyword [C++]
 - __ptr32 keyword [C++]
 ms.assetid: afb563d8-7458-4fe7-9c30-bd4b5385a59f
-ms.openlocfilehash: 957e0deba31552777ef5e738afef13d74a640a18
-ms.sourcegitcommit: a5fa9c6f4f0c239ac23be7de116066a978511de7
+ms.openlocfilehash: c3ebe642284c6ee269dbfc39985630b7d949435f
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/20/2019
-ms.locfileid: "75301325"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80179209"
 ---
 # <a name="__ptr32-__ptr64"></a>__ptr32, __ptr64
 
-**Section spécifique à Microsoft**
+**Section spécifique de Microsoft**
 
 **__ptr32** représente un pointeur natif sur un système 32 bits, tandis que **__ptr64** représente un pointeur natif sur un système 64 bits.
 
@@ -73,7 +73,7 @@ int main()
 64
 ```
 
-**Fin de la section spécifique à Microsoft**
+**Fin de la section spécifique de Microsoft**
 
 ## <a name="see-also"></a>Voir aussi
 

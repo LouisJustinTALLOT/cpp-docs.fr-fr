@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - ptr attribute
 ms.assetid: 95eaea57-a5be-45f6-a612-ba2c9bc4645a
-ms.openlocfilehash: e5f2d694f3525f27e4a8371f04efa28940f21bba
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: e56d4e56135c0f32a1796ac98565a990c7225705
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69514155"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80166417"
 ---
 # <a name="ptr"></a>ptr
 
@@ -27,11 +27,11 @@ Désigne un pointeur comme un pointeur complet.
 
 L’attribut **ptr** C++ a les mêmes fonctionnalités que l’attribut MIDL [ptr](/windows/win32/Midl/ptr) .
 
-## <a name="example"></a>Exemples
+## <a name="example"></a>Exemple
 
 Consultez l’exemple pour [DefaultValue](defaultvalue.md) pour obtenir un exemple d’utilisation de **ptr**.
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
 ### <a name="attribute-context"></a>Contexte d'attribut
 
@@ -39,8 +39,8 @@ Consultez l’exemple pour [DefaultValue](defaultvalue.md) pour obtenir un exemp
 |-|-|
 |**S'applique à**|Paramètre d’interface, méthode d’interface, **typedef**|
 |**Renouvelable**|Non|
-|**Attributs requis**|Aucun|
-|**Attributs non valides**|Aucun|
+|**Attributs requis**|None|
+|**Attributs non valides**|None|
 
 Pour plus d'informations sur les contextes d'attribut, consultez [Contextes d'attribut](cpp-attributes-com-net.md#contexts).
 

@@ -1,5 +1,5 @@
 ---
-title: Applications de bureau MFC
+title: MFC, applications de bureau
 ms.date: 07/28/2019
 f1_keywords:
 - MFC
@@ -8,14 +8,14 @@ helpviewer_keywords:
 - class libraries, MFC
 - MFC, about MFC
 ms.assetid: 7101cb18-a681-495c-8f2b-069ad20c72f7
-ms.openlocfilehash: e9921d18e9ec060f61959278b68906338f02b5b7
-ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
+ms.openlocfilehash: d26cf1e92717d2925edf3730e1ae4ec935365321
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/17/2020
-ms.locfileid: "79447712"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80178455"
 ---
-# <a name="mfc-desktop-applications"></a>Applications de bureau MFC
+# <a name="mfc-desktop-applications"></a>MFC, applications de bureau
 
 La bibliothèque MFC (Microsoft Foundation Class) fournit un wrapper orienté objet pour une grande partie des API Win32 et COM. Bien qu'elle puisse servir à créer des applications bureautiques très simples, elle est très utile pour développer des interfaces utilisateur plus complexes avec plusieurs contrôles. Vous pouvez utiliser MFC pour créer des applications avec des interfaces utilisateur de style Office. Pour obtenir de la documentation sur la plateforme Windows elle-même, consultez la [documentation Windows](/windows/index). Pour plus d’informations sur la création C++ d’applications Windows dans sans MFC, consultez créer des applications [Windows pour ordinateur de bureau à l’aide de l’API Win32](/windows/win32/index).
 
@@ -78,7 +78,7 @@ Décrit le graphique de la hiérarchie MFC par catégorie.
 [Classes partagées ATL/MFC](../atl-mfc-shared/atl-mfc-shared-classes.md)<br/>
 Fournit des liens vers les classes qui sont partagées entre MFC et ATL.
 
-[Exemples MFC](../overview/visual-cpp-samples.md)<br/>
+[Exemples MFC](../overview/visual-cpp-samples.md#mfc-samples)<br/>
 Fournit des liens vers des exemples qui montrent comment utiliser MFC.
 
 [Informations de référence sur les bibliothèques Visual C++](../standard-library/cpp-standard-library-reference.md)<br/>

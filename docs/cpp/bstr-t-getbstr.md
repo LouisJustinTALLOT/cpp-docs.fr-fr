@@ -6,16 +6,16 @@ f1_keywords:
 helpviewer_keywords:
 - GetBSTR method [C++]
 ms.assetid: 0c62ff16-4433-4183-a03c-d5a0a9b731ef
-ms.openlocfilehash: cea3404e0732cb0e16b3fa9199ce95e3dfcc23f5
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: da438c65256d9a7e5bf5b02e108fee1385171d2d
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62386146"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80181211"
 ---
-# <a name="bstrtgetbstr"></a>_bstr_t::GetBSTR
+# <a name="_bstr_tgetbstr"></a>_bstr_t::GetBSTR
 
-**Section spécifique à Microsoft**
+**Section spécifique de Microsoft**
 
 Pointe sur le début du `BSTR` encapsulé par l'objet `_bstr_t`.
 
@@ -31,13 +31,13 @@ Début du `BSTR` encapsulé par l'objet `_bstr_t`.
 
 ## <a name="remarks"></a>Notes
 
-**GetBSTR** affecte tous les `_bstr_t` objets qui partagent un `BSTR`. Plusieurs `_bstr_t` peuvent partager un `BSTR` en utilisant le constructeur de copie et **opérateur =**.
+**GetBSTR** affecte tous les objets `_bstr_t` qui partagent un `BSTR`. Plusieurs `_bstr_t` peuvent partager un `BSTR` par le biais de l’utilisation du constructeur de copie et de **Operator =** .
 
 ## <a name="example"></a>Exemple
 
-Consultez [_bstr_t::Assign](../cpp/bstr-t-assign.md) pour obtenir un exemple utilisant **GetBSTR**.
+Pour obtenir un exemple à l’aide de **GetBSTR**, consultez [_Bstr_t :: assign](../cpp/bstr-t-assign.md) .
 
-**FIN de la section spécifique à Microsoft**
+**Fin de la section spécifique de Microsoft**
 
 ## <a name="see-also"></a>Voir aussi
 

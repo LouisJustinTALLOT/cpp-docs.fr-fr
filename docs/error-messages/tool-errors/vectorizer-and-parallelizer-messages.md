@@ -8,18 +8,18 @@ f1_keywords:
 - C5001
 - C5012
 ms.assetid: d8f4844a-f414-42ab-b9a5-925a5da9d365
-ms.openlocfilehash: c38bfca4c1b93d373c86bbc710ccb30c43dafd4f
-ms.sourcegitcommit: 283cb64fd7958a6b7fbf0cd8534de99ac8d408eb
+ms.openlocfilehash: 4f105558d7795210e1edb2470af4e50326f49de6
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64857450"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80182199"
 ---
 # <a name="vectorizer-and-parallelizer-messages"></a>Messages du vectoriseur et du paralléliseur
 
-Vous pouvez utiliser Microsoft C++ options du compilateur [/qpar-report](../../build/reference/qpar-report-auto-parallelizer-reporting-level.md) et [/Qvec-report](../../build/reference/qvec-report-auto-vectorizer-reporting-level.md) pour définir le [parallélisation et vectorisation automatiques](../../parallel/auto-parallelization-and-auto-vectorization.md) raison : sortie codes et messages d’information concernant son activité. Cet article explique les code motifs et les messages.
+Vous pouvez utiliser les options C++ du compilateur Microsoft [/QPAR-Report](../../build/reference/qpar-report-auto-parallelizer-reporting-level.md) et [/qvec-Report](../../build/reference/qvec-report-auto-vectorizer-reporting-level.md) pour définir la [parallélisation automatique et la vectorisation automatique](../../parallel/auto-parallelization-and-auto-vectorization.md) afin de générer des codes de raison et des messages d’information concernant son activité. Cet article explique les code motifs et les messages.
 
-## <a name="BKMK_InformationalMessages"></a> Messages d’information
+## <a name="informational-messages"></a><a name="BKMK_InformationalMessages"></a>Messages d’information
 
 Selon le niveau de rapport que vous spécifiez, l'un des messages d'information suivants apparait pour chaque boucle.
 
@@ -33,15 +33,15 @@ Pour plus d'informations sur les codes motifs, consultez la partie suivante de c
 |5012|`Loop not parallelized due to reason '*description*'.`|
 |5021|`Unable to associate loop with pragma.`|
 
-Les sections suivantes répertorient les codes motifs possibles pour le PARALLÉLISEUR et vectoriseur.
+Les sections suivantes répertorient les codes de raison possibles pour paralléliseur et vectoriseur.
 
-## <a name="BKMK_ReasonCode50x"></a> codes de raison 5xx
+## <a name="5xx-reason-codes"></a><a name="BKMK_ReasonCode50x"></a>codes de raison 5xx
 
-Les 5*xx* codes motifs s’appliquent à la fois le PARALLÉLISEUR et le vectoriseur.
+Les codes de raison 5*XX* s’appliquent à la fois à paralléliseur et à vectoriseur.
 
 |Code de raison|Explication|
 |-----------------|-----------------|
-|500|Un message générique qui couvre plusieurs cas, par exemple, la boucle inclut plusieurs sorties, ou l’en-tête de la boucle ne se termine pas par incrémentation de la variable d’induction.|
+|500|Message générique qui couvre plusieurs cas, par exemple, la boucle inclut plusieurs sorties, ou l’en-tête de la boucle ne se termine pas par l’incrémentation de la variable d’induction.|
 |501|`Induction variable is not local; or upper bound is not loop-invariant.`|
 |502|`Induction variable is stepped in some manner other than a simple +1.`|
 |503|`Loop includes exception-handling or switch statements.`|
@@ -198,13 +198,13 @@ void code_504(int *A) {
 }
 ```
 
-## <a name="BKMK_ReasonCode100x"></a> codes de raison 10xx
+## <a name="10xx-reason-codes"></a><a name="BKMK_ReasonCode100x"></a>codes de raison 10xx
 
-Les 10*xx* codes motifs s’appliquent au PARALLÉLISEUR.
+Les codes de raison 10*XX* s’appliquent au paralléliseur.
 
 |Code de raison|Explication|
 |-----------------|-----------------|
-|1000|`The compiler detected a data dependency in the loop body.`|
+|1 000|`The compiler detected a data dependency in the loop body.`|
 |1001|`The compiler detected a store to a scalar variable in the loop body, and that scalar has a use beyond the loop.`|
 |1002|`The compiler tried to parallelize a loop that has an inner loop that was already parallelized.`|
 |1003|`The loop body contains an intrinsic call that may read or write to memory.`|
@@ -407,9 +407,9 @@ void code_1010()
 }
 ```
 
-## <a name="BKMK_ReasonCode110x"></a> codes de raison 11xx
+## <a name="11xx-reason-codes"></a><a name="BKMK_ReasonCode110x"></a>codes de raison 11xx
 
-Le 11*xx* codes motifs s’appliquent au vectoriseur.
+Les codes de raison 11*XX* s’appliquent au vectoriseur.
 
 |Code de raison|Explication|
 |-----------------|-----------------|
@@ -555,9 +555,9 @@ void code_1106(int *A)
 }
 ```
 
-## <a name="BKMK_ReasonCode120x"></a> codes de raison 12xx
+## <a name="12xx-reason-codes"></a><a name="BKMK_ReasonCode120x"></a>codes de raison 12xx
 
-Le 12*xx* codes motifs s’appliquent au vectoriseur.
+Les codes de raison 12*XX* s’appliquent au vectoriseur.
 
 |Code de raison|Explication|
 |-----------------|-----------------|
@@ -630,13 +630,13 @@ void code_1203(int *A)
 }
 ```
 
-## <a name="BKMK_ReasonCode130x"></a> codes de raison 13xx
+## <a name="13xx-reason-codes"></a><a name="BKMK_ReasonCode130x"></a>codes de raison 13xx
 
-Le 13*xx* codes motifs s’appliquent au vectoriseur.
+Les codes de raison 13*XX* s’appliquent au vectoriseur.
 
 |Code de raison|Explication|
 |-----------------|-----------------|
-|1300|`Loop body contains no—or very little—computation.`|
+|1 300|`Loop body contains no—or very little—computation.`|
 |1301|`Loop stride is not +1.`|
 |1302|`Loop is a "do-while".`|
 |1303|`Too few loop iterations for vectorization to provide value.`|
@@ -762,9 +762,9 @@ void code_1305( S_1305 *s, S_1305 x)
 }
 ```
 
-## <a name="BKMK_ReasonCode140x"></a> codes de raison 14xx
+## <a name="14xx-reason-codes"></a><a name="BKMK_ReasonCode140x"></a>codes de raison 14xx
 
-Le 14*xx* raison codes se produisent lorsqu’une option qui n’est pas compatible avec la vectorisation est spécifiée.
+Les codes de raison 14*XX* se produisent quand une option incompatible avec la vectorisation est spécifiée.
 
 |Code de raison|Explication|
 |-----------------|-----------------|
@@ -834,9 +834,9 @@ void code_1404(int *A)
 }
 ```
 
-## <a name="BKMK_ReasonCode150x"></a> codes de raison 15xx
+## <a name="15xx-reason-codes"></a><a name="BKMK_ReasonCode150x"></a>codes de raison 15xx
 
-Le 15*xx* codes motifs s’appliquent aux alias. L'attribution d'alias se produit lorsqu'un emplacement mémoire est accessible par deux noms différents.
+Les codes de raison 15*XX* s’appliquent aux alias. L'attribution d'alias se produit lorsqu'un emplacement mémoire est accessible par deux noms différents.
 
 |Code de raison|Explication|
 |-----------------|-----------------|
@@ -964,10 +964,10 @@ void code_1505(int *A, int *B)
 
 ## <a name="see-also"></a>Voir aussi
 
-[C /C++ compilateur et build erreurs et avertissements des outils](../compiler-errors-1/c-cpp-build-errors.md)
-[parallélisation et vectorisation automatiques](../../parallel/auto-parallelization-and-auto-vectorization.md) \
-[Vectoriseur automatique dans Visual Studio 2012 – vue d’ensemble](https://blogs.msdn.microsoft.com/nativeconcurrency/2012/04/12/auto-vectorizer-in-visual-studio-2012-overview/) \
-[#pragma loop()](../../preprocessor/loop.md) \
-[/Q (opérations de bas niveau), options](../../build/reference/q-options-low-level-operations.md) \
-[/ Qpar-report (rapport du PARALLÉLISEUR automatique niveau)](../../build/reference/qpar-report-auto-parallelizer-reporting-level.md) \
+[Erreurs etC++ avertissements du C/compilateur et des outils de génération](../compiler-errors-1/c-cpp-build-errors.md)
+la [parallélisation automatique et la vectorisation automatique](../../parallel/auto-parallelization-and-auto-vectorization.md) \
+[Auto-vectoriseur dans Visual Studio 2012 – vue d’ensemble](https://blogs.msdn.microsoft.com/nativeconcurrency/2012/04/12/auto-vectorizer-in-visual-studio-2012-overview/) \
+[#pragma Loop ()](../../preprocessor/loop.md) \
+[/Q options (opérations de bas niveau)](../../build/reference/q-options-low-level-operations.md) \
+[/QPAR-Report (niveau de rapport paralléliseur automatique)](../../build/reference/qpar-report-auto-parallelizer-reporting-level.md) \
 [/Qvec-report (Niveau de rapport du vectoriseur automatique)](../../build/reference/qvec-report-auto-vectorizer-reporting-level.md)

@@ -66,12 +66,12 @@ helpviewer_keywords:
 - operator =, bookmarks
 - operator=, bookmarks
 ms.assetid: bc942f95-6f93-41d9-bb6e-bcdae4ae0b7a
-ms.openlocfilehash: 89c7e62e51adbe96bee870b4baa8a35784b61ac0
-ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
+ms.openlocfilehash: e15be3342b32b432c438b65ec57765cb135f5316
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/17/2020
-ms.locfileid: "79447251"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80212236"
 ---
 # <a name="cbookmark-class"></a>CBookmark, classe
 
@@ -117,7 +117,7 @@ Taille de la mémoire tampon du signet, en octets. Lorsque *nSize* est égal à 
 
 `CBookmark<0>` est une spécialisation de modèle de `CBookmark`; sa mémoire tampon est créée dynamiquement au moment de l’exécution.
 
-## <a name="cbookmark"></a>CBookmark :: CBookmark
+## <a name="cbookmarkcbookmark"></a><a name="cbookmark"></a>CBookmark :: CBookmark
 
 Constructeur.
 
@@ -140,7 +140,7 @@ La première fonction affecte la valeur NULL à la mémoire tampon et la taille 
 > [!NOTE]
 >  Cette fonction est uniquement disponible dans `CBookmark<0>`.
 
-## <a name="getbuffer"></a>CBookmark :: GetBuffer
+## <a name="cbookmarkgetbuffer"></a><a name="getbuffer"></a>CBookmark :: GetBuffer
 
 Récupère le pointeur vers la mémoire tampon de signet.
 
@@ -154,7 +154,7 @@ virtual BYTE* GetBuffer() const throw();
 
 Pointeur vers la mémoire tampon de signet.
 
-## <a name="getsize"></a>CBookmark :: dela
+## <a name="cbookmarkgetsize"></a><a name="getsize"></a>CBookmark :: dela
 
 Récupère la taille de la mémoire tampon du signet.
 
@@ -168,7 +168,7 @@ virtual DBLENGTH GetSize() const throw();
 
 Taille de la mémoire tampon en octets.
 
-## <a name="setbookmark"></a>CBookmark :: SetBookmark
+## <a name="cbookmarksetbookmark"></a><a name="setbookmark"></a>CBookmark :: SetBookmark
 
 Copie la valeur de signet référencée par *pbuffer* dans la mémoire tampon de `CBookmark` et définit la taille de la mémoire tampon sur *nSize*.
 
@@ -194,7 +194,7 @@ HRESULT standard.
 
 Cette fonction est uniquement disponible dans `CBookmark<0>`.
 
-## <a name="operator"></a>CBookmark :: Operator =
+## <a name="cbookmarkoperator-"></a><a name="operator"></a>CBookmark :: Operator =
 
 Assigne un objet `CBookmark` à un autre.
 

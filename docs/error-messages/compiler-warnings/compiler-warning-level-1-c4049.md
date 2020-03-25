@@ -1,28 +1,28 @@
 ---
-title: Compilateur avertissement (niveau 1) C4049
+title: Avertissement du compilateur (niveau 1) C4049
 ms.date: 11/04/2016
 f1_keywords:
 - C4049
 helpviewer_keywords:
 - C4049
 ms.assetid: d11c1870-bcfc-4d71-8945-b87ec6ec3514
-ms.openlocfilehash: a4958bb446b5f7e80ef2eef92b52a0f86cf6a134
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 214ccae5d9835bc4a3b66bbbe1cd5ded4bc651cb
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62388760"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80164142"
 ---
-# <a name="compiler-warning-level-1-c4049"></a>Compilateur avertissement (niveau 1) C4049
+# <a name="compiler-warning-level-1-c4049"></a>Avertissement du compilateur (niveau 1) C4049
 
 limite du compilateur : arrêt de l’émission de numéros de ligne
 
 Le fichier contient plus de 16 777 215 (2<sup>24</sup>-1) lignes sources. Le compilateur arrête la numérotation à 16 777 215.
 
-Pour le code après la ligne 16 777 215 :
+Pour code après la ligne 16 777 215 :
 
 - L’image ne contient aucune information de débogage pour les numéros de ligne.
 
-- Certains diagnostics peuvent être signalés avec des numéros de ligne.
+- Certains Diagnostics peuvent être signalés avec des numéros de ligne incorrects.
 
-- listes .asm (/ FA) peut avoir des numéros de ligne.
+- les listes. asm (/FAs) peuvent avoir des numéros de ligne incorrects.

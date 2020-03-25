@@ -1,28 +1,28 @@
 ---
-title: 'Erreur RC2001 du compilateur de ressources '
+title: Erreur RC2001 du compilateur de ressources
 ms.date: 11/04/2016
 f1_keywords:
 - RC2001
 helpviewer_keywords:
 - RC2001
 ms.assetid: 92bfb4c0-1879-4606-bb9f-ef7368707b4a
-ms.openlocfilehash: f4755e04a744d94636b4b37aaf727e0d733008ef
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 35042687b798b53857becdedba57861bd4f41a05
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62346689"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80191719"
 ---
-# <a name="resource-compiler-error-rc2001"></a>Erreur RC2001 du compilateur de ressources 
+# <a name="resource-compiler-error-rc2001"></a>Erreur RC2001 du compilateur de ressources
 
 saut de ligne dans la constante
 
-Constante de chaîne se poursuivie sur une seconde ligne, sans utilisation d’une barre oblique inverse (**\\**) ou ouverture et fermeture des guillemets doubles (**»**).
+Une constante de chaîne a été poursuivie sur une deuxième ligne sans une barre oblique inverse ( **\\** ) ou en fermant et en ouvrant des guillemets doubles ( **"** ).
 
-Pour interrompre une constante de chaîne qui se trouve sur deux lignes dans le fichier source, effectuez l’une des opérations suivantes :
+Pour rompre une constante de chaîne qui se trouve sur deux lignes dans le fichier source, effectuez l’une des opérations suivantes :
 
-- La première ligne par le caractère de continuation de ligne, une barre oblique inverse de fin.
+- Terminez la première ligne par le caractère de continuation de ligne, une barre oblique inverse.
 
 - Fermez la chaîne sur la première ligne avec un guillemet double et ouvrez la chaîne sur la ligne suivante avec un autre guillemet.
 
-Il n’est pas suffisante pour terminer la première ligne par \n, la séquence d’échappement pour incorporer un caractère de saut de ligne dans une constante de chaîne.
+Il n’est pas suffisant de terminer la première ligne avec \n, la séquence d’échappement pour incorporer un caractère de saut de ligne dans une constante de chaîne.

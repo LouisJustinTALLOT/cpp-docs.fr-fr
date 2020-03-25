@@ -6,16 +6,16 @@ f1_keywords:
 helpviewer_keywords:
 - usesgetlasterror attribute
 ms.assetid: d149e33d-35a7-46cb-9137-ae6883d86122
-ms.openlocfilehash: b14316bd929f4b41b13a76c41e94b31b7534e9d8
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: f58929db01a1710e811a973c0559ad29b242b4eb
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69513893"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80166131"
 ---
 # <a name="usesgetlasterror"></a>usesgetlasterror
 
-Indique à l’appelant qu’en cas d’erreur lors de l’appel de cette fonction, l’appelant peut `GetLastError` alors appeler pour récupérer le code d’erreur.
+Indique à l’appelant qu’en cas d’erreur lors de l’appel de cette fonction, l’appelant peut alors appeler `GetLastError` pour récupérer le code d’erreur.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -27,11 +27,11 @@ Indique à l’appelant qu’en cas d’erreur lors de l’appel de cette foncti
 
 L’attribut **usesgetlasterror** C++ a les mêmes fonctionnalités que l’attribut MIDL [usesgetlasterror](/windows/win32/Midl/usesgetlasterror) .
 
-## <a name="example"></a>Exemples
+## <a name="example"></a>Exemple
 
-Pour obtenir un exemple d’utilisation de **usesgetlasterror**, consultez l’exemple [idl_module](idl-module.md) .
+Pour obtenir un exemple d’utilisation de **usesgetlasterror**, consultez l’exemple de [idl_module](idl-module.md) .
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
 ### <a name="attribute-context"></a>Contexte d'attribut
 
@@ -39,8 +39,8 @@ Pour obtenir un exemple d’utilisation de **usesgetlasterror**, consultez l’e
 |-|-|
 |**S'applique à**|attribut de **module**|
 |**Renouvelable**|Non|
-|**Attributs requis**|Aucun|
-|**Attributs non valides**|Aucun|
+|**Attributs requis**|None|
+|**Attributs non valides**|None|
 
 Pour plus d'informations sur les contextes d'attribut, consultez [Contextes d'attribut](cpp-attributes-com-net.md#contexts).
 

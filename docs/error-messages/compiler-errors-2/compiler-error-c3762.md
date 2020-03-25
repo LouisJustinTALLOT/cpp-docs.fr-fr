@@ -6,15 +6,15 @@ f1_keywords:
 helpviewer_keywords:
 - C3762
 ms.assetid: b79b6506-2cea-44a0-855a-5fdcb9fd7ad9
-ms.openlocfilehash: 108d0ae2e864ee569d8a1138d057bbc7d310229f
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: af6894b72fe66bff9dca1a8dd6b67f4e3751705f
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62391944"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80165845"
 ---
 # <a name="compiler-error-c3762"></a>Erreur du compilateur C3762
 
-Impossible de traiter l’attribut 'attribute'
+Impossible de traiter l’attribut’attribut'
 
-Un attribut défini par l’utilisateur qui hérite de `System.Security.Permissions.SecurityAttribute` est utilisé pour définir un attribut de sécurité. Ce type d’attribut ne peut pas être utilisé dans le même assembly dans lequel elle est définie.
+Un attribut défini par l’utilisateur qui hérite de `System.Security.Permissions.SecurityAttribute` est utilisé pour définir un attribut de sécurité. Ce type d’attribut ne peut pas être utilisé dans le même assembly que celui dans lequel il est défini.

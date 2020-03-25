@@ -7,12 +7,12 @@ helpviewer_keywords:
 - reference operator
 - '& operator [C++], reference operator'
 ms.assetid: edf0513d-3dcc-4663-b276-1269795dda51
-ms.openlocfilehash: 7710b6f1efc2de770b26ad50923bde2ee5200f61
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 595f2b683d2abb4cdc8a328dc6e86338ab90f214
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62209552"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80178065"
 ---
 # <a name="lvalue-reference-declarator-amp"></a>Déclarateur de référence lvalue : &amp;
 
@@ -30,7 +30,7 @@ Vous pouvez considérer une référence lvalue comme un autre nom d'un objet. Un
 
 Tout objet dont l'adresse peut être convertie en un type pointeur donné peut également être converti en type référence similaire. Par exemple, tout objet dont l'adresse peut être convertie en type `char *` peut également être converti en type `char &`.
 
-Ne confondez pas les déclarations de référence avec l’utilisation de la [opérateur address-of](../cpp/address-of-operator-amp.md). Lorsque le `&` *identificateur* est précédé d’un type, tel que **int** ou **char**, *identificateur* est déclaré comme une référence à le type. Lorsque `&` *identificateur* n’est pas précédé par un type, l’utilisation est celle de l’opérateur address-of.
+Ne confondez pas les déclarations de référence avec l' [opérateur address-of](../cpp/address-of-operator-amp.md). Lorsque l' *identificateur* de `&`est précédé d’un type, tel que **int** ou **char**, l' *identificateur* est déclaré comme une référence au type. Lorsque `&`*identificateur* n’est pas précédé d’un type, l’utilisation est celle de l’opérateur d’adresse.
 
 ## <a name="example"></a>Exemple
 
@@ -73,7 +73,7 @@ Bill is 40
 
 ## <a name="see-also"></a>Voir aussi
 
-[Références](../cpp/references-cpp.md)<br/>
+[Informations de référence](../cpp/references-cpp.md)<br/>
 [Arguments de fonction de type référence](../cpp/reference-type-function-arguments.md)<br/>
 [Retours de fonction de type référence](../cpp/reference-type-function-returns.md)<br/>
 [Références aux pointeurs](../cpp/references-to-pointers.md)

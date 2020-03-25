@@ -6,16 +6,16 @@ f1_keywords:
 helpviewer_keywords:
 - C2919
 ms.assetid: 140a6db9-eb48-4c5e-84a7-a09d2653605b
-ms.openlocfilehash: ab11226c8cc4629a265dd182d5f882f6b3be7e5d
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 624b3ab47ccb1c934b612ec8648b5eee0d233690
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62160849"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80176973"
 ---
 # <a name="compiler-error-c2919"></a>Erreur du compilateur C2919
 
-'type': Opérateurs ne peuvent pas être utilisés sur la surface publiée d’un type WinRT
+'type' : les opérateurs ne peuvent pas être utilisés sur la surface publiée d'un type WinRT
 
 Le système de type Windows Runtime ne prend pas en charge les fonctions membres d'opérateur dans la surface publiée d'un type. Cela est dû au fait que tous les langages ne peuvent pas consommer les fonctions membres d'opérateur. Vous pouvez créer des fonctions membres d'opérateur privé ou interne qui peuvent être appelées à partir du code C++ dans la même unité de compilation ou de classe.
 

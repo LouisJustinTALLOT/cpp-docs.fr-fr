@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - source attribute
 ms.assetid: 1878d05d-7709-4e97-b114-c62f38f5140e
-ms.openlocfilehash: 79614a345e6c07b03df351da93a847fe12e4b110
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: 5f961513b948c3195aea864d97313ac09e97344e
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69514024"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80166222"
 ---
 # <a name="source-c"></a>source (C++)
 
@@ -25,7 +25,7 @@ Sur une classe, spécifie les interfaces sources de l’objet COM pour les point
 
 ### <a name="parameters"></a>Paramètres
 
-*interfaces*<br/>
+*interface*<br/>
 Une ou plusieurs interfaces que vous spécifiez lorsque vous appliquez l’attribut source à une classe. Ce paramètre n’est pas utilisé lorsque la source est appliquée à une propriété ou à une méthode.
 
 ## <a name="remarks"></a>Notes
@@ -68,16 +68,16 @@ class NN : public b
 };
 ```
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
 ### <a name="attribute-context"></a>Contexte d'attribut
 
 |||
 |-|-|
-|**S'applique à**|**class**, **struct**, **interface**|
+|**S'applique à**|**classe**, **struct**, **interface**|
 |**Renouvelable**|Non|
-|**Attributs requis**|`coclass`(en cas d’application à une classe ou à un struct)|
-|**Attributs non valides**|Aucun|
+|**Attributs requis**|`coclass` (en cas d’application à une classe ou à un struct)|
+|**Attributs non valides**|None|
 
 Pour plus d'informations sur les contextes d'attribut, consultez [Contextes d'attribut](cpp-attributes-com-net.md#contexts).
 

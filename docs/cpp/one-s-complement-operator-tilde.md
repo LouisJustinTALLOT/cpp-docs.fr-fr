@@ -1,5 +1,5 @@
 ---
-title: 'Un&#39;opérateur de complément s : ~'
+title: 'Opérateur&#39;de complément un s : ~'
 ms.date: 11/04/2016
 f1_keywords:
 - "~"
@@ -10,14 +10,14 @@ helpviewer_keywords:
 - compl operator
 - ~ operator [C++], syntax
 ms.assetid: 4bf81967-34f7-4b4b-aade-fd03d5da0174
-ms.openlocfilehash: d8fb8ca56932669ff85646f2aa0c10691122013b
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 777f253925caf38647863bdaa93fde8d5a03e3f9
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62245019"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80177714"
 ---
-# <a name="one39s-complement-operator-"></a>Un&#39;opérateur de complément s : ~
+# <a name="one39s-complement-operator-"></a>Opérateur&#39;de complément un s : ~
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -31,7 +31,7 @@ L’opérateur de complément à un (`~`), parfois appelé l’opérateur de com
 
 ## <a name="operator-keyword-for-"></a>Mot clé Operator pour ~
 
-Le **compl** opérateur est l’équivalent textuel de `~`. Il existe deux façons d’accéder à la **compl** opérateur dans vos programmes : inclure le fichier d’en-tête `iso646.h`, ou compilez avec [/Za](../build/reference/za-ze-disable-language-extensions.md).
+L’opérateur **compl (** est l’équivalent textuel de `~`. Il existe deux façons d’accéder à l’opérateur **compl (** dans vos programmes : incluez le fichier d’en-tête `iso646.h`ou compilez avec [/za](../build/reference/za-ze-disable-language-extensions.md).
 
 ## <a name="example"></a>Exemple
 
@@ -52,7 +52,7 @@ int main () {
 
 Dans cet exemple, la nouvelle valeur assignée à `y` est le complément à 1 de la valeur non signée 0xFFFF ou 0x0000.
 
-La promotion intégrale est exécutée sur les opérandes intégraux et le type résultant est le type vers lequel l'opérande est promu. Consultez [Conversions Standard](standard-conversions.md) pour plus d’informations sur la façon dont la promotion est effectuée.
+La promotion intégrale est exécutée sur les opérandes intégraux et le type résultant est le type vers lequel l'opérande est promu. Pour plus d’informations sur la façon dont la promotion est effectuée, consultez [conversions standard](standard-conversions.md) .
 
 ## <a name="see-also"></a>Voir aussi
 

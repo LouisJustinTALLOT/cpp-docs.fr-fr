@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - MixIn structure
 ms.assetid: 47e2df9b-3a2e-4ae8-8ba3-b1fd3aa73566
-ms.openlocfilehash: 16fd6b46d616df7163a304afa7f32ac3c095d398
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: b302d6e08e401a24b465508d5ddabcae8b16bd8f
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62325351"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80213692"
 ---
 # <a name="mixin-structure"></a>MixIn (structure)
 
@@ -31,28 +31,28 @@ struct MixIn;
 
 ### <a name="parameters"></a>Paramètres
 
-*DÉRIVÉS*<br/>
-Un type dérivé le [implémente](implements-structure.md) structure.
+*Issue*<br/>
+Un type dérivé de la structure [Implements](implements-structure.md) .
 
 *MixInType*<br/>
 Type de base.
 
 *hasImplements*<br/>
-**true** si *MixInType* est dérivée de l’implémentation actuelle du type de base ; **false** dans le cas contraire.
+**true** si *MixInType* est dérivé de l’implémentation actuelle du type de base ; **false** dans le cas contraire.
 
 ## <a name="remarks"></a>Notes
 
-Si une classe est dérivée de Windows Runtime et des interfaces de classes COM, puis un COM classique interfaces et la liste de déclaration de classe doit tout d’abord répertoriez toutes les interfaces Windows Runtime. **MixIn** garantit que les interfaces sont spécifiées dans l’ordre approprié.
+Si une classe est dérivée de Windows Runtime et d’interfaces COM de classe, la liste des déclarations de classe doit d’abord répertorier toutes les interfaces Windows Runtime, puis toutes les interfaces COM classiques. **MixIn** garantit que les interfaces sont spécifiées dans le bon ordre.
 
-## <a name="inheritance-hierarchy"></a>Hiérarchie d'héritage
+## <a name="inheritance-hierarchy"></a>Hiérarchie d’héritage
 
 `MixIn`
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
-**En-tête :** implements.h
+**En-tête :** Implements. h
 
-**Espace de noms :** Microsoft::wrl
+**Espace de noms :** Microsoft::WRL
 
 ## <a name="see-also"></a>Voir aussi
 

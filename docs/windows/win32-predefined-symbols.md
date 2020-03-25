@@ -6,35 +6,35 @@ helpviewer_keywords:
 - symbols [C++], Win32 predefined
 - Windows API [C++], predefined symbols
 ms.assetid: 45c8e193-ee2a-4024-bfc2-34d1ec9c9239
-ms.openlocfilehash: 8a238021f255da30a132755a297a471dd1f51246
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: ae79b4c1a4021b32f631c694b376d2202b345415
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62387680"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80165923"
 ---
 # <a name="win32-predefined-symbols"></a>Symboles Win32 prédéfinis
 
-Ces symboles sont définis dans les fichiers d’en-tête Win32 et ils prennent en charge les actions et fonctions d’application Windows standard. Ces symboles sont principalement utilisés avec les éléments d’interface utilisateur courants. Lorsque vous travaillez avec des contrôles dans les éditeurs de ressources, ces symboles s’affichent dans le [fenêtre Propriétés](/visualstudio/ide/reference/properties-window) associées aux contrôles courants. Par exemple, si votre barre d’outils doit afficher l’icône d’application, l’icône sera associée au symbole IDI_SMALL dans le **propriété** fenêtre.
+Ces symboles sont définis dans les fichiers d’en-tête Win32 et prennent en charge les fonctions et actions de l’application Windows standard. Ces symboles sont utilisés principalement avec les éléments d’interface utilisateur communs. Lorsque vous utilisez des contrôles dans les éditeurs de ressources, ces symboles s’affichent dans le [fenêtre Propriétés](/visualstudio/ide/reference/properties-window) associé aux contrôles communs. Par exemple, si votre barre d’outils doit afficher l’icône de l’application, l’icône sera associée au IDI_SMALL de symboles dans la fenêtre des **Propriétés** .
 
 |||
 |-|-|
-|IDABORT|(contrôle) Boîte de dialogue, bouton Abandonner|
-|IDC_STATIC|(contrôle) Texte statique dans une boîte de dialogue|
-|IDCANCEL|(contrôle) Boîte de dialogue, bouton Annuler|
-|IDD_ABOUTBOX|(boîte de dialogue) Produit sur la boîte de dialogue|
-|IDI_PROJECTNAME|(icône) Icône du projet actuel|
-|IDI_SMALL|(icône) Icône du petit projet actuel|
-|IDIGNORE|(contrôle) Utilisé avec le bouton Ignorer dans les boîtes de dialogue|
-|IDM_ABOUT|(élément de menu) Utilisé avec l’aide... Sur...|
-|IDM_EXIT|(élément de menu) Utilisé avec un fichier... Sortie...|
-|IDNO|(contrôle) Boîte de dialogue, aucun bouton|
-|IDOK|(contrôle) Boîte de dialogue, bouton OK|
-|IDRETRY|(contrôle) Boîte de dialogue, bouton de nouvelle tentative|
-|IDS_APP_TITLE|(string) Nom de l’application en cours|
-|IDYES|(contrôle) Boîte de dialogue, bouton Oui|
+|IDABORT|régulation Boîte de dialogue, bouton abandonner|
+|IDC_STATIC|régulation Texte statique dans une boîte de dialogue|
+|IDCANCEL|régulation Boîte de dialogue, bouton Annuler|
+|IDD_ABOUTBOX|dialogue Boîte de dialogue à propos du produit|
+|IDI_PROJECTNAME|située Icône de projet actuel|
+|IDI_SMALL|située Petite icône du projet actif|
+|IDIGNORE|régulation Utilisé avec le bouton ignorer dans les boîtes de dialogue|
+|IDM_ABOUT|(élément de menu) Utilisé avec l’aide... À propos de...|
+|IDM_EXIT|(élément de menu) Utilisé avec le fichier... Quitter...|
+|IDNO|régulation Boîte de dialogue, sans bouton|
+|IDOK|régulation Boîte de dialogue, bouton OK|
+|IDRETRY|régulation Boîte de dialogue, bouton Réessayer|
+|IDS_APP_TITLE|chaîne Nom de l’application actuelle|
+|IDYES|régulation Boîte de dialogue, bouton Oui|
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
 Win32
 

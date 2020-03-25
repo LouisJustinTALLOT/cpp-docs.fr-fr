@@ -35,12 +35,12 @@ helpviewer_keywords:
 - tanf function
 - trigonometric functions
 ms.assetid: 36cc0ce8-9c80-4653-b354-ddb3b378b6bd
-ms.openlocfilehash: c79c56555e04c865b70d52a6b1a6e3da1ce94c87
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 9fc1a75bdc6fddb5134b9db17961ba3c4550bc79
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70946898"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80168705"
 ---
 # <a name="tan-tanf-tanl"></a>tan, tanf, tanl
 
@@ -64,26 +64,26 @@ long double tan( long double x );  // C++ only
 *x*<br/>
 Angle en radians.
 
-## <a name="return-value"></a>Valeur de retour
+## <a name="return-value"></a>Valeur retournée
 
 Les fonctions **Tan** retournent la tangente de *x*. Si *x* est supérieur ou égal à 263, ou inférieur ou égal à-263, une perte de précision dans le résultat se produit.
 
 |Entrée|Exception SEH|**Supertherr** Titre|
 |-----------|-------------------|-------------------------|
-|± QNAN,IND|none|_DOMAIN|
-|FICHIER INF ±|**NON VALIDE**|_DOMAIN|
+|± QNAN,IND|Aucun|_DOMAIN|
+|FICHIER INF ±|**Non valide**|_DOMAIN|
 
 ## <a name="remarks"></a>Notes
 
 Étant C++ donné que autorise la surcharge, vous pouvez appeler des surcharges de **Tan** qui acceptent et retournent des valeurs **float** ou **long** **double** . Dans un programme C, **Tan** prend toujours et retourne **double**.
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
 |Routine|En-tête requis (C)|En-tête requis (C++)|
 |-------------|---------------------|-|
-|**tan**, **tanf**, **tanl**|\<math.h>|\<cmath> ou \<math.h>|
+|**Tan**, **Tanf,** , **tanl**|\<math.h>|\<cmath> ou \<math.h>|
 
-Pour plus d'informations sur la compatibilité, voir [Compatibilité](../../c-runtime-library/compatibility.md).
+Pour plus d’informations sur la compatibilité, voir [Compatibilité](../../c-runtime-library/compatibility.md).
 
 ## <a name="example"></a>Exemple
 

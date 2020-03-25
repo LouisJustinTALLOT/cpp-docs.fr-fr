@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C4694
 ms.assetid: 5ca122bb-34f3-43ee-a21f-95802cd515f7
-ms.openlocfilehash: 6164fd2e19e35233ba67feb84d117f1e4e01f20d
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: daf5423588d08260239c3cff5a68532a358d07b2
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62311045"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80165117"
 ---
 # <a name="compiler-warning-c4694"></a>Avertissement du compilateur C4694
 
-> «*classe*' : une classe abstraite sealed ne peut pas avoir une classe de base*base_class*»
+> '*classe*' : une classe abstraite sealed ne peut pas avoir de classe de base'*BASE_CLASS*'
 
 Une classe abstraite et sealed ne peut pas hériter d’un type référence ; elle ne peut pas non plus implémenter de fonctions de classe de base ou se laisser utiliser comme classe de base.
 
-Pour plus d’informations, consultez [abstraite](../../extensions/abstract-cpp-component-extensions.md), [sealed](../../extensions/sealed-cpp-component-extensions.md), et [les Classes et Structs](../../extensions/classes-and-structs-cpp-component-extensions.md).
+Pour plus d’informations, consultez [abstract](../../extensions/abstract-cpp-component-extensions.md), [sealed](../../extensions/sealed-cpp-component-extensions.md), [classes et structs](../../extensions/classes-and-structs-cpp-component-extensions.md).
 
-Cet avertissement est automatiquement promu en une erreur. Si vous souhaitez modifier ce comportement, utilisez [#pragma warning](../../preprocessor/warning.md).
+Cet avertissement est automatiquement promu en erreur. Si vous souhaitez modifier ce comportement, utilisez [#pragma AVERTISSEMENT](../../preprocessor/warning.md).
 
 ## <a name="example"></a>Exemple
 

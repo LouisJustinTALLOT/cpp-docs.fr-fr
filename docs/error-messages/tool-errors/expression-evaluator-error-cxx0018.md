@@ -7,12 +7,12 @@ helpviewer_keywords:
 - CAN0018
 - CXX0018
 ms.assetid: d3d115d6-8981-4651-b615-566de867a263
-ms.openlocfilehash: 1c235e27199d79711c784e460824bf1cbb845f24
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: a894de22b0296a6a7ce9c52d2cbebfed057df92a
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62397118"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80195914"
 ---
 # <a name="expression-evaluator-error-cxx0018"></a>Évaluateur d'expression, erreur CXX0018
 
@@ -20,13 +20,13 @@ nom de Registre incorrect
 
 Un registre spécifié n’existe pas ou ne peut pas être affiché.
 
-La fenêtre Espion peut afficher les registres suivants :
+Les Fenêtre Espion peuvent afficher les registres suivants :
 
-AX SP DS IP
+ADRESSE IP DU SERVICE D’ANNUAIRE AX SP
 
 BX BP ES FL
 
-CX SI SS GS
+CX OU SS GS
 
 DX DI CS SS
 
@@ -34,8 +34,8 @@ EAX ESP DS EIP
 
 EBX EBP ES EFL
 
-ECX    ESI    FS
+ECX ESI FS
 
-EDX EDI CS
+EDX CS EDI
 
 Cette erreur est identique à CAN0018.

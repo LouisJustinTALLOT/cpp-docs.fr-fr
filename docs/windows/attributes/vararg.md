@@ -6,16 +6,16 @@ f1_keywords:
 helpviewer_keywords:
 - vararg attribute
 ms.assetid: 20fc3244-18e9-411c-990e-d5b4fa29a570
-ms.openlocfilehash: d1c6b1a4e049bccfcf3e16bae4b5f9b285d11192
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: 4761f65e0862a8de07330305b292b5b3501cac68
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69514885"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80166014"
 ---
 # <a name="vararg"></a>vararg
 
-Spécifie que la fonction accepte un nombre variable d’arguments.
+Spécifie que la fonction accepte un nombre variable d'arguments.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -45,7 +45,7 @@ __interface X : public IUnknown
 };
 ```
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
 ### <a name="attribute-context"></a>Contexte d'attribut
 
@@ -53,8 +53,8 @@ __interface X : public IUnknown
 |-|-|
 |**S'applique à**|Méthode d’interface|
 |**Renouvelable**|Non|
-|**Attributs requis**|Aucun|
-|**Attributs non valides**|Aucun|
+|**Attributs requis**|None|
+|**Attributs non valides**|None|
 
 Pour plus d'informations sur les contextes d'attribut, consultez [Contextes d'attribut](cpp-attributes-com-net.md#contexts).
 

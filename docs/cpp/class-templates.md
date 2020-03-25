@@ -6,16 +6,16 @@ helpviewer_keywords:
 - class templates
 - templates, class templates
 ms.assetid: 633a53c8-24ee-4c23-8c88-e7c3cb0b7ac3
-ms.openlocfilehash: 1bf384967af9d6d639e11df882751bbdaf1b0aa6
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 36c5263213b5ef348bb341a83da097db7dbb1d9d
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62188393"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80180912"
 ---
 # <a name="class-templates"></a>Modèles de classe
 
-Cette rubrique décrit les règles qui sont spécifiques aux modèles de classe C++.
+Cette rubrique décrit les règles spécifiques aux modèles C++ de classe.
 
 ## <a name="member-functions-of-class-templates"></a>Fonctions membres des modèles de classe
 
@@ -75,9 +75,9 @@ int main()
 }
 ```
 
-## <a name="nested-class-templates"></a>Modèles de classe imbriqués
+## <a name="nested-class-templates"></a>Modèles de classes imbriqués
 
-Les modèles peuvent être définis dans des classes ou des modèles de classe, auquel cas ils sont appelés modèles membres. Les modèles membres qui sont des classes sont appelés modèles de classe imbriqués. Les modèles membres qui sont des fonctions sont abordées dans [modèles de fonction membre](../cpp/member-function-templates.md).
+Les modèles peuvent être définis dans des classes ou des modèles de classe, auquel cas ils sont appelés modèles membres. Les modèles membres qui sont des classes sont appelés modèles de classe imbriqués. Les modèles membres qui sont des fonctions sont abordés dans les [modèles de fonction membre](../cpp/member-function-templates.md).
 
 Les modèles de classe imbriqués sont déclarés en tant que modèles de classe dans la portée de la classe externe. Ils peuvent être définis à l'intérieur ou à l'extérieur de la classe englobante.
 
@@ -193,9 +193,9 @@ X<T>::Y<U>::~Y()
 
 Les classes locales ne doivent pas avoir de modèles membres.
 
-## <a name="template-friends"></a>Friends de modèle
+## <a name="template-friends"></a>Amis de modèle
 
-Modèles de classe peuvent avoir [amis](friend-cpp.md). Une classe ou un modèle de classe, une fonction ou un modèle de fonction peuvent être des éléments friend d'une classe de modèle. Les éléments friend peuvent également être des spécialisations d'un modèle de classe ou de fonction, mais des spécialisations non partielles.
+Les modèles de classe peuvent avoir des [amis](friend-cpp.md). Une classe ou un modèle de classe, une fonction ou un modèle de fonction peuvent être des éléments friend d'une classe de modèle. Les éléments friend peuvent également être des spécialisations d'un modèle de classe ou de fonction, mais des spécialisations non partielles.
 
 Dans l'exemple suivant, une fonction friend est définie en tant que modèle de fonction dans le modèle de classe. Ce code génère une version de la fonction friend pour chaque instanciation du modèle. Cette construction est utile si votre fonction friend dépend des mêmes paramètres de modèle que la classe.
 
@@ -413,7 +413,7 @@ a
 
 ## <a name="reuse-of-template-parameters"></a>Réutilisation des paramètres de modèle
 
-Paramètres de modèle peuvent être réutilisées dans la liste de paramètres de modèle. Par exemple, le code suivant est autorisé :
+Les paramètres de modèle peuvent être réutilisés dans la liste de paramètres de modèle. Par exemple, le code suivant est autorisé :
 
 ```cpp
 // template_specifications2.cpp

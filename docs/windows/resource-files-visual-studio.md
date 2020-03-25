@@ -24,12 +24,12 @@ helpviewer_keywords:
 - files [C++], editable types
 - resource editing
 ms.assetid: 4d2b6fcc-07cf-4289-be87-83a60f69533c
-ms.openlocfilehash: b66a207766962856cc4d7181607868c2a48ebe84
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: 087cd613fa0dfd9cb6e07ac47a6a38d63bba004e
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69513661"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80167873"
 ---
 # <a name="resource-files-c"></a>Fichiers de ressources (C++)
 
@@ -38,7 +38,7 @@ ms.locfileid: "69513661"
 >
 > Toutes les ressources managées que vous souhaitez modifier doivent être liées. Les éditeurs de ressources Visual Studio ne prennent pas en charge la modification des ressources incorporées.
 
-Le terme *fichier de ressources* peut faire référence à plusieurs types de fichiers, par exemple:
+Le terme *fichier de ressources* peut faire référence à plusieurs types de fichiers, par exemple :
 
 - Le fichier de script de ressources (.rc) d’un programme
 
@@ -46,11 +46,11 @@ Le terme *fichier de ressources* peut faire référence à plusieurs types de fi
 
 - Ressource individuelle existante sous forme de fichier autonome. Ce type comprend une bitmap, une icône ou un fichier curseur référencé à partir d’un fichier. rc.
 
-- Fichier d’en-tête généré par l’environnement de développement. Ce type comprend `Resource.h`, appelé à partir d’un fichier. rc.
+- Fichier d’en-tête généré par l’environnement de développement. Ce type comprend des `Resource.h`, qui sont référencés à partir d’un fichier. rc.
 
 Les ressources qui se trouvent dans d’autres types de fichiers, comme les fichiers. exe,. dll et. res, sont appelées *ressources*.
 
-Vous pouvez utiliser des *fichiers de ressources* et des *ressources* à partir de votre projet. Vous pouvez également travailler avec ceux qui ne font pas partie du projet actuel ou qui n’ont pas été créés en dehors de l’environnement de développement de Visual Studio. Par exemple, vous pouvez :
+Vous pouvez utiliser des *fichiers de ressources* et des *ressources* à partir de votre projet. Vous pouvez également travailler avec ceux qui ne font pas partie du projet actuel ou qui n’ont pas été créés en dehors de l’environnement de développement de Visual Studio. Vous pouvez par exemple :
 
 - Travailler avec des fichiers de ressources imbriqués et inclus de manière conditionnelle
 
@@ -68,7 +68,7 @@ Pour plus d’informations sur les ressources, consultez Comment [créer des res
 
 ## <a name="editable-resources"></a>Ressources modifiables
 
-Les types de fichiers suivants peuvent être ouverts pour modifier les ressources qu’ils contiennent:
+Les types de fichiers suivants peuvent être ouverts pour modifier les ressources qu’ils contiennent :
 
 | Nom de fichier | Description |
 |---|---|
@@ -80,7 +80,7 @@ Les types de fichiers suivants peuvent être ouverts pour modifier les ressource
 | .dll | Fichiers de bibliothèque de liens dynamiques |
 | .bmp, .ico, .dib, .cur | Fichiers bitmap, icône, barre d’outils et curseur |
 
-Lors de la modification de ressources, l’environnement Visual Studio fonctionne avec et affecte les fichiers suivants:
+Lors de la modification de ressources, l’environnement Visual Studio fonctionne avec et affecte les fichiers suivants :
 
 | Nom de fichier | Description |
 |---|---|
@@ -90,7 +90,7 @@ Lors de la modification de ressources, l’environnement Visual Studio fonctionn
 
 ## <a name="manifest-resources"></a>Ressources de manifeste
 
-Dans C++ les projets de bureau, les ressources de manifeste sont des fichiers XML qui décrivent les dépendances qu’une application utilise. Par exemple, dans Visual Studio, ce fichier manifeste généré par l’Assistant MFC définit la version des dll de contrôle commun Windows que l’application doit utiliser:
+Dans C++ les projets de bureau, les ressources de manifeste sont des fichiers XML qui décrivent les dépendances qu’une application utilise. Par exemple, dans Visual Studio, ce fichier manifeste généré par l’Assistant MFC définit la version des dll de contrôle commun Windows que l’application doit utiliser :
 
 ```xml
 <description>Your app description here</description>
@@ -108,7 +108,7 @@ Dans C++ les projets de bureau, les ressources de manifeste sont des fichiers XM
 </dependency>
 ```
 
-Pour une application Windows XP ou Windows Vista, la ressource de manifeste doit spécifier la version la plus récente des contrôles communs Windows que l’application doit utiliser. L’exemple ci-dessus `6.0.0.0`utilise la version, qui prend en charge le [contrôle Syslink](/windows/win32/Controls/syslink-overview).
+Pour une application Windows XP ou Windows Vista, la ressource de manifeste doit spécifier la version la plus récente des contrôles communs Windows que l’application doit utiliser. L’exemple ci-dessus utilise la version `6.0.0.0`, qui prend en charge le [contrôle Syslink](/windows/win32/Controls/syslink-overview).
 
 > [!NOTE]
 > Vous ne pouvez avoir qu'une seule ressource de manifeste par module.
@@ -119,13 +119,13 @@ Pour afficher les informations de version et de type contenues dans une ressourc
 
 1. Ouvrez votre projet dans Visual Studio et accédez à **Explorateur de solutions**.
 
-1. Développez le dossier **fichiers de ressources** , puis:
+1. Développez le dossier **fichiers de ressources** , puis :
 
    - Pour ouvrir dans l’éditeur de texte, double-cliquez sur le fichier *. manifest* .
 
    - Pour ouvrir dans un autre éditeur, cliquez avec le bouton droit sur le fichier *. manifest* , puis sélectionnez **Ouvrir avec**. Spécifiez l’éditeur à utiliser, puis sélectionnez **ouvrir**.
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
 Win32
 

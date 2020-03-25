@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - module attributes
 ms.assetid: 02223b2a-62b5-4262-832f-564b1e11e58e
-ms.openlocfilehash: daa0ae4aea5ff2a1a3312efcf3c39f43b541abf6
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: e93073a1728063038ddd4e28dbb313854ee3c8c5
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69514911"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80166690"
 ---
 # <a name="module-c"></a>module (C++)
 
@@ -26,15 +26,15 @@ Définit le bloc de bibliothèque dans le fichier .idl.
 ### <a name="parameters"></a>Paramètres
 
 *type*<br/>
-Facultatif Il peut s’agir de l’un des éléments suivants:
+Facultatif Il peut s’agir de l’un des éléments suivants :
 
-- `dll`Ajoute des fonctions et des classes qui permettent à la DLL résultante de fonctionner en tant que serveur COM in-process. Valeur par défaut.
+- `dll` ajoute des fonctions et des classes qui permettent à la DLL résultante de fonctionner en tant que serveur COM in-process. Il s’agit de la valeur par défaut.
 
-- `exe`Ajoute des fonctions et des classes qui permettent à l’exécutable résultant de fonctionner comme un serveur COM hors processus.
+- `exe` ajoute des fonctions et des classes qui permettent à l’exécutable résultant de fonctionner comme un serveur COM hors processus.
 
-- `service`Ajoute des fonctions et des classes qui permettent à l’exécutable résultant de fonctionner en tant que service NT.
+- `service` ajoute des fonctions et des classes qui permettent à l’exécutable résultant de fonctionner en tant que service NT.
 
-- `unspecified`Désactive l’injection de code ATL associé à l’attribut de module: l’injection de classe de module ATL, _AtlModule d’instance globale et fonctions de point d’entrée. Ne désactive pas l’injection de code ATL due à d’autres attributs dans le projet.
+- `unspecified` désactive l’injection de code ATL associé à l’attribut de module : l’injection de classe de module ATL, les _AtlModule d’instances globales et les fonctions de point d’entrée. Ne désactive pas l’injection de code ATL due à d’autres attributs dans le projet.
 
 *name*<br/>
 Facultatif Nom du bloc de bibliothèque.
@@ -43,7 +43,7 @@ Facultatif Nom du bloc de bibliothèque.
 Facultatif Numéro de version que vous souhaitez affecter au bloc de bibliothèque. La valeur par défaut est 1,0.
 
 *uuid*<br/>
-ID unique de la bibliothèque. Si vous omettez ce paramètre, un ID est généré automatiquement pour la bibliothèque. Vous devrez peut-être récupérer l' *UUID* de votre bloc de bibliothèque, ce que vous pouvez faire à l’aide de l’identificateur _ _ **uuidof (** *NomBibliothèque* **)** .
+ID unique de la bibliothèque. Si vous omettez ce paramètre, un ID est généré automatiquement pour la bibliothèque. Vous devrez peut-être récupérer l' *UUID* de votre bloc de bibliothèque, ce que vous pouvez faire à l’aide de l’identificateur **__uuidof (** *NomBibliothèque* **)** .
 
 *lcid*<br/>
 Paramètre de localisation. Pour plus d’informations, consultez [lcid](/windows/win32/Midl/lcid) .
@@ -73,7 +73,7 @@ Facultatif Empêche l’affichage de la bibliothèque entière. Cette utilisatio
 Facultatif Les membres de la bibliothèque ne peuvent pas être appelés de façon arbitraire. Pour plus d’informations, consultez l’attribut MIDL [restricted](/windows/win32/Midl/restricted) .
 
 *custom*<br/>
-Facultatif Un ou plusieurs attributs; Cela est similaire à l’attribut [personnalisé](custom-cpp.md) . Le premier paramètre de *Custom* est le GUID de l’attribut. Par exemple :
+Facultatif Un ou plusieurs attributs ; Cela est similaire à l’attribut [personnalisé](custom-cpp.md) . Le premier paramètre de *Custom* est le GUID de l’attribut. Par exemple :
 
 ```
 [module(custom={guid,1}, custom={guid1,2})]
@@ -146,7 +146,7 @@ BOOL WINAPI DllMain(DWORD dwReason, LPVOID lpReserved) {
 };
 ```
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
 ### <a name="attribute-context"></a>Contexte d'attribut
 
@@ -154,8 +154,8 @@ BOOL WINAPI DllMain(DWORD dwReason, LPVOID lpReserved) {
 |-|-|
 |**S'applique à**|N'importe où|
 |**Renouvelable**|Non|
-|**Attributs requis**|Aucun|
-|**Attributs non valides**|Aucun|
+|**Attributs requis**|None|
+|**Attributs non valides**|None|
 
 Pour plus d'informations, consultez [Contextes d'attribut](cpp-attributes-com-net.md#contexts).
 
@@ -166,7 +166,7 @@ Pour plus d'informations, consultez [Contextes d'attribut](cpp-attributes-com-ne
 [Attributs autonomes](stand-alone-attributes.md)<br/>
 [Attributs Typedef, Enum, Union et Struct](typedef-enum-union-and-struct-attributes.md)<br/>
 [usesgetlasterror](usesgetlasterror.md)<br/>
-[library](/windows/win32/Midl/library)<br/>
+[Bibliothèque](/windows/win32/Midl/library)<br/>
 [helpcontext](helpcontext.md)<br/>
 [helpstring](helpstring.md)<br/>
 [helpfile](helpfile.md)<br/>

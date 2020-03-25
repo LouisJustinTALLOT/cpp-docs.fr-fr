@@ -7,12 +7,12 @@ helpviewer_keywords:
 - protected keyword [C++], member access
 - protected keyword [C++]
 ms.assetid: 863d299f-fc0d-45d5-a1a7-bd24b7778a93
-ms.openlocfilehash: 1cbe88a80b83caa78972d1e2799c1e0d87d1cb0a
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 29f57eac7201ac0647275c70c539f9b2f28eb81b
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62244526"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80179248"
 ---
 # <a name="protected-c"></a>protected (C++)
 
@@ -26,7 +26,7 @@ protected base-class
 
 ## <a name="remarks"></a>Notes
 
-Le **protégé** mot clé spécifie l’accès aux membres de classe dans le *-liste des membres* jusqu’au spécificateur d’accès suivant (**public** ou **privé**) ou à la fin de la définition de classe. Membres de classe déclarés comme **protégé** peut être utilisé uniquement par ce qui suit :
+Le mot clé **protected** spécifie l’accès aux membres de classe dans la *liste de membres* jusqu’au spécificateur d’accès suivant (**public** ou **privé**) ou la fin de la définition de classe. Les membres de classe déclarés comme **protégés** peuvent être utilisés uniquement par les éléments suivants :
 
 - Les fonctions membres de la classe qui a initialement déclaré ces membres.
 
@@ -36,20 +36,20 @@ Le **protégé** mot clé spécifie l’accès aux membres de classe dans le *-l
 
 - Les classes directes dérivées de manière privée qui ont également un accès privé aux membres protégés.
 
-Lorsqu’il précède le nom de classe de base, le **protégé** mot clé spécifie que les membres publics et protégés de la classe de base sont des membres protégés de ses classes dérivées.
+Quand il précède le nom d’une classe de base, le mot clé **protected** spécifie que les membres publics et protégés de la classe de base sont des membres protégés de ses classes dérivées.
 
-Membres protégés ne sont pas aussi privés que **privé** membres, qui sont uniquement accessibles aux membres de la classe dans laquelle ils sont déclarés, mais ils ne sont pas aussi publics que **public** membres, qui sont accessibles dans n’importe quelle fonction.
+Les membres protégés ne sont pas aussi privés que les membres **privés** , qui sont accessibles uniquement aux membres de la classe dans laquelle ils sont déclarés, mais ils ne sont pas aussi publics que les membres **publics** , qui sont accessibles dans toutes les fonctions.
 
-Membres protégés qui sont également déclarés comme **statique** sont accessibles à n’importe quelle fonction ami ou un membre d’une classe dérivée. Membres protégés qui ne sont pas déclarés en tant que **statique** sont accessibles à leurs amis et des fonctions membres dans une classe dérivée uniquement par le biais d’un pointeur vers la référence à, ou un objet de la classe dérivée.
+Les membres protégés qui sont également déclarés comme **statiques** sont accessibles à tout ami ou fonction membre d’une classe dérivée. Les membres protégés qui ne sont pas déclarés comme **statiques** sont accessibles aux amis et aux fonctions membres dans une classe dérivée uniquement par le biais d’un pointeur vers, d’une référence ou d’un objet de la classe dérivée.
 
-Pour plus d’informations, consultez [friend](../cpp/friend-cpp.md), [public](../cpp/public-cpp.md), [privé](../cpp/private-cpp.md)et accès aux membres de la [contrôle de l’accès aux membres de classe](member-access-control-cpp.md) .
+Pour obtenir des informations connexes, consultez [Friend](../cpp/friend-cpp.md), [public](../cpp/public-cpp.md), [Private](../cpp/private-cpp.md)et la table d’accès aux membres dans [contrôle de l’accès aux membres de classe](member-access-control-cpp.md).
 
 ## <a name="clr-specific"></a>Spécifique /clr
 
-Dans les types CLR, mots clés de spécificateur d’accès le C++ (**public**, **privé**, et **protégé**) peuvent affecter la visibilité des types et méthodes quant aux assemblys. Pour plus d’informations, consultez [contrôle d’accès de membre](member-access-control-cpp.md).
+Dans les types CLR, C++ les mots clés de spécificateur d’accès (**public**, **privé**et **protégé**) peuvent affecter la visibilité des types et des méthodes en ce qui concerne les assemblys. Pour plus d’informations, consultez [Member Access Control](member-access-control-cpp.md).
 
 > [!NOTE]
->  Fichiers compilés avec [/LN](../build/reference/ln-create-msil-module.md) ne sont pas affectés par ce comportement. Dans ce cas, toutes les classes managées (public ou privées) seront visibles.
+>  Les fichiers compilés avec [/LN](../build/reference/ln-create-msil-module.md) ne sont pas affectés par ce comportement. Dans ce cas, toutes les classes managées (public ou privées) seront visibles.
 
 ## <a name="end-clr-specific"></a>Spécifique END /clr
 

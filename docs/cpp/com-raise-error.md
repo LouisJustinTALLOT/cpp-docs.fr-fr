@@ -6,18 +6,18 @@ f1_keywords:
 helpviewer_keywords:
 - _com_raise_error function
 ms.assetid: a98226c2-c3fe-44f1-8ff5-85863de11cd6
-ms.openlocfilehash: 5790fceef26d6de4edff604270cc7108f764aced
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 2012ec98d8d40d60a7f12feb68bdc371e1616223
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62399250"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80189791"
 ---
-# <a name="comraiseerror"></a>_com_raise_error
+# <a name="_com_raise_error"></a>_com_raise_error
 
-**Section spécifique à Microsoft**
+**Section spécifique de Microsoft**
 
-Lève une [_com_error](../cpp/com-error-class.md) en réponse à une défaillance.
+Lève une [_com_error](../cpp/com-error-class.md) en réponse à un échec.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -30,7 +30,7 @@ void __stdcall _com_raise_error(
 
 #### <a name="parameters"></a>Paramètres
 
-*hr*<br/>
+*h*<br/>
 Informations HRESULT.
 
 *perrinfo*<br/>
@@ -38,7 +38,7 @@ Objet `IErrorInfo`.
 
 ## <a name="remarks"></a>Notes
 
-**_com_raise_error**, qui est défini dans \<comdef.h >, peut être remplacé par une version écrit par l’utilisateur du même nom et prototype. Cette opération peut être effectuée si vous souhaitez utiliser `#import` mais pas la gestion des exceptions C++. Dans ce cas, une version utilisateur de **_com_raise_error** pouvez décider d’effectuer une `longjmp` ou afficher une boîte de message et s’arrêter. Toutefois, cette version utilisateur ne devrait pas être retournée, car le code de prise en charge COM du compilateur n'attend aucun retour de celle-ci.
+**_com_raise_error**, qui est défini dans \<ComDef. h >, peut être remplacé par une version écrite par l’utilisateur du même nom et du même prototype. Cette opération peut être effectuée si vous souhaitez utiliser `#import` mais pas la gestion des exceptions C++. Dans ce cas, une version utilisateur de **_com_raise_error** peut décider d’effectuer une `longjmp` ou d’afficher une boîte de message et de l’arrêter. Toutefois, cette version utilisateur ne devrait pas être retournée, car le code de prise en charge COM du compilateur n'attend aucun retour de celle-ci.
 
 Vous pouvez également utiliser [_set_com_error_handler](../cpp/set-com-error-handler.md) pour remplacer la fonction de gestion des erreurs par défaut.
 
@@ -50,13 +50,13 @@ void __stdcall _com_raise_error(HRESULT hr, IErrorInfo* perrinfo) {
 }
 ```
 
-**FIN de la section spécifique à Microsoft**
+**Fin de la section spécifique de Microsoft**
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
-**En-tête :** \<comdef.h >
+**En-tête :** \<ComDef. h >
 
-**Lib :** Si le **wchar_t est un Type natif** option du compilateur est activé, utilisez comsuppw.lib ou comsuppwd.lib. Si **wchar_t est un Type natif** est désactivée, utilisez comsupp.lib. Pour plus d’informations, consultez [/Zc:wchar_t (wchar_t est un type natif)](../build/reference/zc-wchar-t-wchar-t-is-native-type.md).
+**Lib :** Si l' **wchar_t est** l’option du compilateur de type natif est on, utilisez comsuppw. lib ou comsuppwd. lib. Si **wchar_t est de type natif** , utilisez COMSUP. lib. Pour plus d’informations, consultez [/Zc:wchar_t (wchar_t est un type natif)](../build/reference/zc-wchar-t-wchar-t-is-native-type.md).
 
 ## <a name="see-also"></a>Voir aussi
 

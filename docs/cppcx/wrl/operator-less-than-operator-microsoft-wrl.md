@@ -1,20 +1,20 @@
 ---
-title: opérateur&lt; ==, opérateur (Microsoft::WRL)
+title: 'opérateur&lt; Operator (Microsoft :: WRL)'
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
 - client/Microsoft::WRL::operator<
 ms.assetid: bfae0e1c-1648-482b-99c2-3217d62aba46
-ms.openlocfilehash: 4887a7ebf3906edbc4a5a2a723caff0ad7732c46
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 04f5598667f7e0e036f0a55cd3f9cc52b5356299
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62182923"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80213640"
 ---
-# <a name="operatorlt-operator-microsoftwrl"></a>opérateur&lt; ==, opérateur (Microsoft::WRL)
+# <a name="operatorlt-operator-microsoftwrl"></a>opérateur&lt; Operator (Microsoft :: WRL)
 
-Détermine si l’adresse d’un objet est inférieur à un autre.
+Détermine si l’adresse d’un objet est inférieure à une autre.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -35,13 +35,13 @@ Objet droit.
 
 ## <a name="return-value"></a>Valeur de retour
 
-**true** si l’adresse de *un* est inférieure à l’adresse de *b*; sinon, **false**.
+**true** si l’adresse d' *un* est inférieure à l’adresse de *b*; Sinon, **false**.
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
 **En-tête :** client.h
 
-**Espace de noms :** Microsoft::wrl
+**Espace de noms :** Microsoft::WRL
 
 ## <a name="see-also"></a>Voir aussi
 

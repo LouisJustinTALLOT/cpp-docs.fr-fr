@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - switch_is attribute
 ms.assetid: f1fffe5d-12d2-4e0f-8803-ccb715177d2d
-ms.openlocfilehash: b72052f4cbd7f94b170ea58b8f7b284b85d7ab00
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: 05759250ac6c2f382e569feefda9575fddbecac2
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69513981"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80214537"
 ---
 # <a name="switch_is"></a>switch_is
 
@@ -27,11 +27,11 @@ Spécifie l’expression ou l’identificateur agissant comme le discriminante d
 
 L’attribut **switch_is** C++ a les mêmes fonctionnalités que l’attribut MIDL [switch_is](/windows/win32/Midl/switch-is) .
 
-## <a name="example"></a>Exemples
+## <a name="example"></a>Exemple
 
 Pour obtenir un exemple d’utilisation de **switch_is**, consultez l’exemple de [cas](case-cpp.md) .
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
 ### <a name="attribute-context"></a>Contexte d'attribut
 
@@ -39,8 +39,8 @@ Pour obtenir un exemple d’utilisation de **switch_is**, consultez l’exemple 
 |-|-|
 |**S'applique à**|**typedef**|
 |**Renouvelable**|Non|
-|**Attributs requis**|Aucun|
-|**Attributs non valides**|Aucun|
+|**Attributs requis**|None|
+|**Attributs non valides**|None|
 
 Pour plus d'informations sur les contextes d'attribut, consultez [Contextes d'attribut](cpp-attributes-com-net.md#contexts).
 

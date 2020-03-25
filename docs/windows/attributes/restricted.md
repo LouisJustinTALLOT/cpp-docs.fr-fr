@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - restricted attribute
 ms.assetid: 504a96be-b904-4269-8be1-920feba201b4
-ms.openlocfilehash: 01dabcd15eb1a14734c16b9e54c0ab2e030d0479
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: a47c56673e19f891b24ff433b9c614804f0bd51c
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69514064"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80166365"
 ---
 # <a name="restricted"></a>restricted
 
@@ -27,14 +27,14 @@ Spécifie qu’un membre d’un module, d’une interface ou d’une dispinterfa
 
 ### <a name="parameters"></a>Paramètres
 
-*interfaces*<br/>
+*interface*<br/>
 Une ou plusieurs interfaces qui ne peuvent pas être appelées arbitrairement sur un objet COM. Ce paramètre est valide uniquement lorsqu’il est appliqué à une classe.
 
 ## <a name="remarks"></a>Notes
 
 L’attribut **Restricted** C++ a les mêmes fonctionnalités que l’attribut MIDL [restreint](/windows/win32/Midl/restricted) .
 
-## <a name="example"></a>Exemples
+## <a name="example"></a>Exemple
 
 Le code suivant illustre l’utilisation de l’attribut **Restricted** :
 
@@ -61,7 +61,7 @@ class c : public a, public b
 };
 ```
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
 ### <a name="attribute-context"></a>Contexte d'attribut
 
@@ -69,8 +69,8 @@ class c : public a, public b
 |-|-|
 |**S'applique à**|Méthode d’interface, **interface**, **classe**, **struct**|
 |**Renouvelable**|Non|
-|**Attributs requis**|**coclasse** (en cas d’application à une **classe** ou à un **struct**)|
-|**Attributs non valides**|Aucun|
+|**Attributs requis**|**coclasse** (en cas d’application à une **classe** ou un **struct**)|
+|**Attributs non valides**|None|
 
 Pour plus d'informations sur les contextes d'attribut, consultez [Contextes d'attribut](cpp-attributes-com-net.md#contexts).
 

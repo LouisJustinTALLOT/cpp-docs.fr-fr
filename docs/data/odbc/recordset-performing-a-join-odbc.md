@@ -1,5 +1,5 @@
 ---
-title: 'Recordset : Création d’une jointure (ODBC)'
+title: "Recordset : création d'une jointure (ODBC)"
 ms.date: 11/04/2016
 helpviewer_keywords:
 - joins [C++], in recordsets
@@ -10,34 +10,34 @@ helpviewer_keywords:
 - ODBC recordsets [C++], joins
 - recordsets [C++], joining tables
 ms.assetid: ca720900-a156-4780-bf01-4293633bea64
-ms.openlocfilehash: 9e589f00ec0512794d14accc6bb33c0e7adbd378
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 7e8d42f2b96911cd57aca7c132b53ed7c10162be
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62397725"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80212795"
 ---
-# <a name="recordset-performing-a-join-odbc"></a>Recordset : Création d’une jointure (ODBC)
+# <a name="recordset-performing-a-join-odbc"></a>Recordset : création d'une jointure (ODBC)
 
 Cette rubrique s’applique aux classes ODBC MFC.
 
-## <a name="what-a-join-is"></a>Ce qui est une jointure
+## <a name="what-a-join-is"></a>Qu’est-ce qu’une jointure ?
 
-L’opération de jointure, une tâche très courante de l’accès aux données, vous permet de travailler avec des données à partir de plusieurs tables à l’aide d’un seul objet recordset. La jointure de deux ou plusieurs tables génère un jeu d’enregistrements qui peut contenir des colonnes de chaque table, mais apparaît sous la forme d’une table unique à votre application. Parfois, la jointure utilise toutes les colonnes de toutes les tables, mais parfois, le code SQL **sélectionnez** clause dans une jointure utilise uniquement certaines colonnes de chaque table. Les classes de base de données prend en charge les jointures en lecture seule mais non les jointures modifiables.
+L’opération de jointure, une tâche d’accès aux données commune, vous permet d’utiliser des données provenant de plusieurs tables à l’aide d’un seul objet Recordset. La jointure de deux tables ou plus génère un jeu d’enregistrements qui peut contenir des colonnes de chaque table, mais apparaît sous la forme d’une table unique pour votre application. Parfois, la jointure utilise toutes les colonnes de toutes les tables, mais parfois la clause SQL **Select** dans une jointure utilise uniquement certaines des colonnes de chaque table. Les classes de base de données prennent en charge les jointures en lecture seule, mais pas les jointures modifiables.
 
-Pour sélectionner les enregistrements contenant des colonnes de tables jointes, vous avez besoin des éléments suivants :
+Pour sélectionner des enregistrements contenant des colonnes de tables jointes, vous avez besoin des éléments suivants :
 
-- Une liste de tables contenant les noms de toutes les tables jointes.
+- Liste de tables contenant les noms de toutes les tables jointes.
 
-- Une liste de colonnes contenant les noms de toutes les colonnes participantes. Les colonnes portant le même nom mais provenant de tables différentes sont qualifiés par le nom de table.
+- Liste de colonnes contenant les noms de toutes les colonnes participantes. Les colonnes portant le même nom mais provenant de tables différentes sont qualifiées par le nom de la table.
 
-- Un filtre (SQL **où** clause) qui spécifie les colonnes sur lesquelles les tables sont jointes. Ce filtre prend la forme « Table1.KeyCol = Table2.KeyCol » et effectue réellement la jointure.
+- Filtre (clause SQL **Where** ) qui spécifie les colonnes sur lesquelles les tables sont jointes. Ce filtre prend la forme « table1. KeyCol = table2. KeyCol » et accomplit la jointure.
 
-Vous pouvez joindre des plus de deux tables de la même façon en associant plusieurs paires de colonnes, chaque paire étant jointe par le mot clé SQL **AND**.
+Vous pouvez joindre plus de deux tables de la même façon en assimilant plusieurs paires de colonnes, chaque paire jointe par le mot clé SQL **et**.
 
 ## <a name="see-also"></a>Voir aussi
 
 [Recordset (ODBC)](../../data/odbc/recordset-odbc.md)<br/>
-[Recordset : Déclaration de la classe d’une requête prédéfinie (ODBC)](../../data/odbc/recordset-declaring-a-class-for-a-predefined-query-odbc.md)<br/>
-[Recordset : Déclaration de la classe d’une table (ODBC)](../../data/odbc/recordset-declaring-a-class-for-a-table-odbc.md)<br/>
-[Recordset : Lancement d’une nouvelle requête sur un recordset (ODBC)](../../data/odbc/recordset-requerying-a-recordset-odbc.md)
+[Recordset : déclaration de la classe d’une requête prédéfinie (ODBC)](../../data/odbc/recordset-declaring-a-class-for-a-predefined-query-odbc.md)<br/>
+[Recordset : déclaration de la classe d’une table (ODBC)](../../data/odbc/recordset-declaring-a-class-for-a-table-odbc.md)<br/>
+[Recordset : lancement d’une nouvelle requête sur un recordset (ODBC)](../../data/odbc/recordset-requerying-a-recordset-odbc.md)

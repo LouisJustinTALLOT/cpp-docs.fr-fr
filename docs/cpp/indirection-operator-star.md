@@ -7,12 +7,12 @@ helpviewer_keywords:
 - operators [C++], indirection
 - indirection operator [C++], syntax
 ms.assetid: c50309e1-6c02-4184-9fcb-2e13c1f4ac03
-ms.openlocfilehash: a35d8cb28baaee37ad64a61cbcb9d4c76a5aad06
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 8f27cfd943455d52b04c41ef2d2d83e6e03a84c0
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62183581"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80178275"
 ---
 # <a name="indirection-operator-"></a>Opérateur d'indirection : *
 
@@ -24,11 +24,11 @@ ms.locfileid: "62183581"
 
 ## <a name="remarks"></a>Notes
 
-L’opérateur d’indirection unaire (<strong>\*</strong>) déréférence un pointeur ; autrement dit, elle convertit une valeur de pointeur à une l-value. L’opérande de l’opérateur d’indirection doit être un pointeur vers un type. Le résultat de l'expression d'indirection est le type à partir duquel le type pointeur est dérivé. L’utilisation de la <strong>\*</strong> opérateur dans ce contexte est différente de sa signification comme opérateur binaire, qui est la multiplication.
+L’opérateur d’indirection unaire (<strong>\*</strong>) déréférence un pointeur ; autrement dit, il convertit une valeur de pointeur en l-value. L’opérande de l’opérateur d’indirection doit être un pointeur vers un type. Le résultat de l'expression d'indirection est le type à partir duquel le type pointeur est dérivé. L’utilisation de l’opérateur <strong>\*</strong> dans ce contexte diffère de sa signification en tant qu’opérateur binaire, qui est une multiplication.
 
 Si l'opérande pointe vers une fonction, le résultat est un désignateur de fonction. S'il pointe vers un emplacement de stockage, le résultat est une l-value désignant l'emplacement de stockage.
 
-L'opérateur d'indirection peut être utilisé cumulativement pour déréférencer les pointeurs vers des pointeurs. Exemple :
+L'opérateur d'indirection peut être utilisé cumulativement pour déréférencer les pointeurs vers des pointeurs. Par exemple :
 
 ```cpp
 // expre_Indirection_Operator.cpp

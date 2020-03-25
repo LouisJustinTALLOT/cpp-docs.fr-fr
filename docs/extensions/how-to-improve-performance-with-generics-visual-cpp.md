@@ -1,5 +1,5 @@
 ---
-title: 'Procédure : améliorer les performances avec des génériques (C++/CLI)'
+title: 'Comment : améliorer les performances avec des génériques (C++/CLI)'
 ms.date: 10/12/2018
 ms.topic: reference
 helpviewer_keywords:
@@ -8,14 +8,14 @@ helpviewer_keywords:
 - C++, generics
 - generics [C++], performance
 ms.assetid: f14a175b-301f-46cc-86e4-c82d35f9aa3e
-ms.openlocfilehash: 958da08716022bedaa8d0fe217814fa2bd86c065
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
-ms.translationtype: HT
+ms.openlocfilehash: a460456a383fcb3eb81e17c1ad5817f790f3c399
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "65515714"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80181939"
 ---
-# <a name="how-to-improve-performance-with-generics-ccli"></a>Procédure : améliorer les performances avec des génériques (C++/CLI)
+# <a name="how-to-improve-performance-with-generics-ccli"></a>Comment : améliorer les performances avec des génériques (C++/CLI)
 
 Avec les génériques, vous pouvez créer du code réutilisable basé sur un paramètre de type. Le type réel du paramètre de type est différé jusqu’à ce qu’il soit appelé par le code client. Pour plus d’informations sur les types génériques, consultez [Generics](generics-cpp-component-extensions.md).
 

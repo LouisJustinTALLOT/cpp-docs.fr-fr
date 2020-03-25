@@ -4,16 +4,16 @@ ms.date: 11/04/2016
 helpviewer_keywords:
 - override Identifier
 ms.assetid: b286fb46-9374-4ad8-b2e7-4607119b6133
-ms.openlocfilehash: 71505f8b9b4dc2800e80a78a64f0ca6984af1349
-ms.sourcegitcommit: c6f8e6c2daec40ff4effd8ca99a7014a3b41ef33
+ms.openlocfilehash: 82837ae34ab786e607df54038493b14350574a15
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "64345869"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80188478"
 ---
 # <a name="override-specifier"></a>Spécificateur de substitution
 
-Vous pouvez utiliser la **remplacer** mot clé pour désigner les fonctions qui remplacent une fonction virtuelle dans une classe de base de membre.
+Vous pouvez utiliser le mot clé **override** pour désigner des fonctions membres qui remplacent une fonction virtuelle dans une classe de base.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -23,11 +23,11 @@ function-declaration override;
 
 ## <a name="remarks"></a>Notes
 
-**substituer** est contextuel et a spéciales, ce qui signifie que lorsqu’il est utilisé après une déclaration de fonction membre ; sinon, il n’est pas un mot clé réservé.
+**override** est sensible au contexte et a une signification spéciale uniquement lorsqu’il est utilisé après une déclaration de fonction membre ; dans le cas contraire, il ne s’agit pas d’un mot clé réservé.
 
 ## <a name="example"></a>Exemple
 
-Utilisez **remplacer** permettant d’empêcher le comportement d’héritage inopportun dans votre code. L’exemple suivant indique où, sans utiliser **remplacer**, le comportement de la fonction membre de la classe dérivée ne peut-être pas avoir été conçu. Le compilateur n'émet pas d'erreurs pour ce code.
+Utilisez **override** pour empêcher un comportement d’héritage inopportun dans votre code. L’exemple suivant indique où, sans utiliser **override**, le comportement de la fonction membre de la classe dérivée n’a peut-être pas été prévu. Le compilateur n'émet pas d'erreurs pour ce code.
 
 ```cpp
 class BaseClass
@@ -51,7 +51,7 @@ class DerivedClass: public BaseClass
 };
 ```
 
-Lorsque vous utilisez **remplacer**, le compilateur génère des erreurs au lieu de créer en mode silencieux à nouveau membre de fonctions.
+Quand vous utilisez **override**, le compilateur génère des erreurs au lieu de créer silencieusement de nouvelles fonctions membres.
 
 ```cpp
 class BaseClass
@@ -78,7 +78,7 @@ class DerivedClass: public BaseClass
 };
 ```
 
-Pour spécifier que les fonctions ne peut pas être substituées et que les classes ne peut pas être héritées, utilisez le [finale](../cpp/final-specifier.md) mot clé.
+Pour spécifier que les fonctions ne peuvent pas être substituées et que les classes ne peuvent pas être héritées, utilisez le mot clé [final](../cpp/final-specifier.md) .
 
 ## <a name="see-also"></a>Voir aussi
 

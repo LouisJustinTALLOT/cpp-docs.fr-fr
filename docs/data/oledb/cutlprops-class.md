@@ -29,12 +29,12 @@ helpviewer_keywords:
 - OnPropertyChanged method
 - SetPropValue method
 ms.assetid: bb525178-765c-4e23-a110-c0fd70c05437
-ms.openlocfilehash: bbeae4faad4d650d8dc44a61a22b1fcc63a0bc15
-ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
+ms.openlocfilehash: 3498ec1250d9443007acb3b12ec25983a71587d0
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/17/2020
-ms.locfileid: "79441035"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80211105"
 ---
 # <a name="cutlprops-class"></a>CUtlProps, classe
 
@@ -76,7 +76,7 @@ La plupart de cette classe est un détail d’implémentation.
 
 Pour plus d’informations sur les macros utilisées dans un mappage de jeu de propriétés, consultez [BEGIN_PROPSET_MAP](../../data/oledb/begin-propset-map.md) et [END_PROPSET_MAP](../../data/oledb/end-propset-map.md).
 
-## <a name="getpropvalue"></a>CUtlProps :: GetPropValue
+## <a name="cutlpropsgetpropvalue"></a><a name="getpropvalue"></a>CUtlProps :: GetPropValue
 
 Obtient une propriété à partir d’un jeu de propriétés.
 
@@ -103,7 +103,7 @@ dans Index de la propriété.
 
 `Failure` en cas d’échec et S_OK en cas de réussite.
 
-## <a name="isvalidvalue"></a>CUtlProps :: IsValidValue
+## <a name="cutlpropsisvalidvalue"></a><a name="isvalidvalue"></a>CUtlProps :: IsValidValue
 
 Utilisé pour valider une valeur avant de définir une propriété.
 
@@ -130,7 +130,7 @@ HRESULT standard. La valeur de retour par défaut est S_OK.
 
 Si vous souhaitez exécuter des routines de validation sur une valeur que vous allez utiliser pour définir une propriété, vous devez remplacer cette fonction. Par exemple, vous pouvez valider DBPROP_AUTH_PASSWORD par rapport à une table de mots de passe pour déterminer une valeur valide.
 
-## <a name="oninterfacerequested"></a>CUtlProps :: OnInterfaceRequested
+## <a name="cutlpropsoninterfacerequested"></a><a name="oninterfacerequested"></a>CUtlProps :: OnInterfaceRequested
 
 Gère les demandes pour une interface facultative lorsqu’un consommateur appelle une méthode sur l’une des interfaces de création d’objet.
 
@@ -165,7 +165,7 @@ Si un consommateur ouvre un objet et demande une interface facultative, le fourn
 
 Si vous souhaitez gérer d’autres interfaces, remplacez cette fonction dans la source de données, la session, la commande ou la classe rowset pour traiter les fonctions. Votre remplacement doit passer par les interfaces de propriétés set/obten normales pour s’assurer que les propriétés de définition définissent également toutes les propriétés chaînées (consultez [OnPropertyChanged](../../data/oledb/cutlprops-onpropertychanged.md)).
 
-## <a name="onpropertychanged"></a>CUtlProps :: OnPropertyChanged
+## <a name="cutlpropsonpropertychanged"></a><a name="onpropertychanged"></a>CUtlProps :: OnPropertyChanged
 
 Appelée après la définition d’une propriété pour gérer les propriétés chaînées.
 
@@ -198,7 +198,7 @@ Dans cette fonction, l’utilisateur obtient l’ID de propriété à partir du 
 
 [!code-cpp[NVC_OLEDB_Provider#2](../../data/oledb/codesnippet/cpp/cutlprops-onpropertychanged_1.h)]
 
-## <a name="setpropvalue"></a>CUtlProps :: SetPropValue
+## <a name="cutlpropssetpropvalue"></a><a name="setpropvalue"></a>CUtlProps :: SetPropValue
 
 Définit une propriété dans un jeu de propriétés.
 

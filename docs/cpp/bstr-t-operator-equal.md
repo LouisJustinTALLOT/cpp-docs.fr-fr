@@ -7,16 +7,16 @@ helpviewer_keywords:
 - operator = [C++], bstr
 - operator= [C++], bstr
 ms.assetid: fb31bb1b-ce29-4388-b5fd-8dac830cf18a
-ms.openlocfilehash: 97f0100d8a34253f3a1375d34b887d3d31a77f43
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 5b7f499dd84a67020232aab84966647378daadad
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62350869"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80181068"
 ---
-# <a name="bstrtoperator-"></a>_bstr_t::operator =
+# <a name="_bstr_toperator-"></a>_bstr_t::operator =
 
-**Section spécifique à Microsoft**
+**Section spécifique de Microsoft**
 
 Assigne une nouvelle valeur à un objet `_bstr_t` existant.
 
@@ -37,17 +37,17 @@ Objet `_bstr_t` à assigner à un objet `_bstr_t` existant.
 *s2*<br/>
 Chaîne multioctets à assigner à un objet `_bstr_t` existant.
 
-*s3*<br/>
+*processeur*<br/>
 Chaîne Unicode à assigner à un objet `_bstr_t` existant.
 
 *var*<br/>
 Objet `_variant_t` à assigner à un objet `_bstr_t` existant.
 
-**FIN de la section spécifique à Microsoft**
+**Fin de la section spécifique de Microsoft**
 
 ## <a name="example"></a>Exemple
 
-Consultez [_bstr_t::Assign](../cpp/bstr-t-assign.md) pour obtenir un exemple d’utilisation de **opérateur =**.
+Consultez [_bstr_t :: assign](../cpp/bstr-t-assign.md) pour obtenir un exemple d’utilisation de **Operator =** .
 
 ## <a name="see-also"></a>Voir aussi
 

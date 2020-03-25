@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - importlib attribute
 ms.assetid: f129e459-b8d3-4aca-a0bc-ee53e18b62ed
-ms.openlocfilehash: 92cf335e5c4754595f2c7af2e1aef30d309d2f5f
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: 451204aae52d884b9cbc81d7e589028f5cfefae5
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69514612"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80166807"
 ---
 # <a name="importlib"></a>importlib
 
@@ -30,9 +30,9 @@ Nom d'un fichier .tlb, entre guillemets, que vous souhaitez importer dans la bi
 
 ## <a name="remarks"></a>Notes
 
-L’attribut **importlib** C++ provoque le `importlib` placement d’une instruction dans le bloc de bibliothèque du fichier. idl généré. L’attribut **importlib** a les mêmes fonctionnalités que l’attribut MIDL [importlib](/windows/win32/Midl/importlib) .
+L’attribut **importlib** C++ provoque le placement d’une instruction `importlib` dans le bloc de bibliothèque du fichier. idl généré. L’attribut **importlib** a les mêmes fonctionnalités que l’attribut MIDL [importlib](/windows/win32/Midl/importlib) .
 
-## <a name="example"></a>Exemples
+## <a name="example"></a>Exemple
 
 Le code suivant montre un exemple d’utilisation de **importlib**:
 
@@ -43,7 +43,7 @@ Le code suivant montre un exemple d’utilisation de **importlib**:
 [importlib("importlib.tlb")];
 ```
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
 ### <a name="attribute-context"></a>Contexte d'attribut
 
@@ -51,8 +51,8 @@ Le code suivant montre un exemple d’utilisation de **importlib**:
 |-|-|
 |**S'applique à**|N'importe où|
 |**Renouvelable**|Non|
-|**Attributs requis**|Aucun|
-|**Attributs non valides**|Aucun|
+|**Attributs requis**|None|
+|**Attributs non valides**|None|
 
 Pour plus d'informations, consultez [Contextes d'attribut](cpp-attributes-com-net.md#contexts).
 

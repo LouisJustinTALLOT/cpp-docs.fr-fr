@@ -23,12 +23,12 @@ helpviewer_keywords:
 - GetFileVersionInfo
 - version information
 ms.assetid: 772e6f19-f765-4cec-9521-0ad3eeb99f9b
-ms.openlocfilehash: e68e1480d2cd9a8d8a4d862252e6eb4384a5cd68
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: b083ed27b6b1f471dbec9b96e7be7a6165f8d125
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69513642"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80214368"
 ---
 # <a name="version-information-editor-c"></a>Éditeur d’informations surC++la version ()
 
@@ -42,19 +42,19 @@ Une ressource d’informations sur la version a un bloc supérieur et un ou plus
 > [!NOTE]
 > Lorsque vous utilisez l' **éditeur d’informations**sur la version, dans de nombreux cas, vous pouvez cliquer avec le bouton droit pour afficher un menu contextuel de commandes spécifiques à la ressource. Par exemple, si vous sélectionnez en pointant sur une entrée d’en-tête de bloc, le menu contextuel affiche les commandes **nouveau bloc d’informations sur la version** et **Supprimer les informations sur le bloc de version** .
 
-## <a name="how-to"></a>Comment
+## <a name="how-to"></a>Procédure
 
-L' **éditeur d’informations sur la version** vous permet d’activer les éléments suivants:
+L' **éditeur d’informations sur la version** vous permet d’activer les éléments suivants :
 
 ### <a name="to-edit-a-string-in-a-version-information-resource"></a>Pour modifier une chaîne dans une ressource d’informations sur la version
 
 Sélectionnez l’élément une fois pour le choisir, puis à nouveau pour le modifier. Apportez les modifications directement dans la table d' **informations sur la version** ou dans la [fenêtre Propriétés](/visualstudio/ide/reference/properties-window). Les modifications que vous apportez apparaîtront aux deux emplacements.
 
-Lorsque vous modifiez `FILEFLAGS` la clé dans l' **éditeur d’informations sur la version**, Notez que vous ne pouvez pas définir les propriétés **Debug**, **Private Build**ou **Special Build** dans la fenêtre **Propriétés** des fichiers. RC:
+Lorsque vous modifiez la clé de `FILEFLAGS` dans l' **éditeur d’informations sur la version**, Notez que vous ne pouvez pas définir les propriétés **Debug**, **Private Build**ou **Special Build** dans la fenêtre **Propriétés** des fichiers. RC :
 
-   - L' **éditeur d’informations sur la version** définit la propriété `#ifdef` **Debug** avec un dans le script de ressources `_DEBUG` , en fonction de l’indicateur de Build.
+- L' **éditeur d’informations sur la version** définit la propriété **Debug** avec un `#ifdef` dans le script de ressources, en fonction de l’indicateur de build `_DEBUG`.
 
-  - `FILEFLAGS` Si la cléaunevaleurdéfiniedanslatabled’informationssurlaversion,lapropriétéPrivateBuildcorrespondantedanslafenêtrePropriétésdelacléesttrue.`Private Build` Si la **valeur** est vide, la propriété est **false**. De même, la clé de **Build spéciale** dans la table d' **informations sur la version** est liée à la `FILEFLAGS` propriété **Special Build** de la clé.
+- Si la clé de `Private Build` a une **valeur** définie dans la table d' **informations sur la version** , la propriété **Private Build** correspondante dans la fenêtre **Propriétés** de la clé `FILEFLAGS` a la valeur **true**. Si la **valeur** est vide, la propriété est **false**. De même, la clé de **Build spéciale** dans la table d' **informations sur la version** est liée à la propriété **special Build** de la clé `FILEFLAGS`.
 
 Vous pouvez trier la séquence d’informations du bloc de chaîne en sélectionnant les en-têtes de colonne **clé** ou **valeur** . Ces en-têtes réorganisent automatiquement les informations dans la séquence sélectionnée.
 
@@ -80,7 +80,7 @@ Vous pouvez trier la séquence d’informations du bloc de chaîne en sélection
 
 Si vous souhaitez accéder aux informations de version à partir de votre programme, utilisez les fonctions [GetFileVersionInfo](/windows/win32/api/winver/nf-winver-getfileversioninfow) et [VerQueryValue](/windows/win32/api/winver/nf-winver-verqueryvaluew) .
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
 Win32
 

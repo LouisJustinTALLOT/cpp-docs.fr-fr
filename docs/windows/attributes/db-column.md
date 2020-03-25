@@ -1,19 +1,19 @@
 ---
-title: db_column (C++ attribut COM)
+title: db_column (C++ attribut com)
 ms.date: 10/02/2018
 f1_keywords:
 - vc-attr.db_column
 helpviewer_keywords:
 - db_column attribute
 ms.assetid: 58da4afc-f69c-4ae6-af9a-3f9515f56081
-ms.openlocfilehash: e0e2c873452884275e97663ae2d9d6df2f790ffd
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 4ce57443480e35e7a4c7b9e872e41777662ddc20
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62148176"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80167288"
 ---
-# <a name="dbcolumn"></a>db_column
+# <a name="db_column"></a>db_column
 
 Lie une colonne spécifiée à une variable dans l’ensemble de lignes.
 
@@ -23,44 +23,44 @@ Lie une colonne spécifiée à une variable dans l’ensemble de lignes.
 [ db_column(ordinal, dbtype, precision, scale, status, length) ]
 ```
 
-#### <a name="parameters"></a>Paramètres
+### <a name="parameters"></a>Paramètres
 
 *ordinal*<br/>
-Numéro de colonne ordinal (`DBCOLUMNINFO` ordinale) ou nom de colonne (chaîne ANSI ou Unicode) correspondant à un champ dans l’ensemble de lignes à laquelle lier des données. Si vous utilisez des nombres, vous pouvez ignorer les ordinaux consécutifs (par exemple : 1, 2, 3, 5). Le nom peut contenir des espaces si le fournisseur OLE DB que vous utilisez le prend en charge. Par exemple, vous pouvez utiliser un des formats suivants :
+Numéro de colonne ordinale (`DBCOLUMNINFO` ordinal) ou nom de colonne (chaîne ANSI ou Unicode) correspondant à un champ de l’ensemble de lignes auquel lier des données. Si vous utilisez des nombres, vous pouvez ignorer les ordinaux consécutifs (par exemple : 1, 2, 3, 5). Le nom peut contenir des espaces si le fournisseur OLE DB que vous utilisez le prend en charge. Par exemple, vous pouvez utiliser l’un des formats suivants :
 
 ```cpp
 [db_column("2")] TCHAR szCity[30];
 [db_column(L"city_name")] TCHAR szCity[30];
 ```
 
-*dbtype*<br/>
-(Facultatif) OLE DB [indicateur de Type](/previous-versions/windows/desktop/ms711251(v=vs.85)) pour l’entrée de la colonne.
+*DbType*<br/>
+Facultatif Indicateur de [Type](/previous-versions/windows/desktop/ms711251(v=vs.85)) OLE DB pour l’entrée de colonne.
 
 *precision*<br/>
-(Facultatif) La précision à utiliser pour l’entrée de colonne. Pour plus d’informations, consultez la description de la `bPrecision` élément de la [structure DBBINDING](/previous-versions/windows/desktop/ms716845(v=vs.85))
+Facultatif Précision à utiliser pour l’entrée de colonne. Pour plus d’informations, consultez la description de l’élément `bPrecision` de la [Structure DBBINDING](/previous-versions/windows/desktop/ms716845(v=vs.85)) .
 
 *scale*<br/>
-(Facultatif) La mise à l’échelle à utiliser pour l’entrée de colonne. Pour plus d’informations, consultez la description de `bScale` élément de la [structure DBBINDING](/previous-versions/windows/desktop/ms716845(v=vs.85))
+Facultatif Échelle à utiliser pour l’entrée de colonne. Pour plus d’informations, consultez la description de `bScale` élément de la [Structure DBBINDING](/previous-versions/windows/desktop/ms716845(v=vs.85)) .
 
-*status*<br/>
-(Facultatif) Une variable de membre permet de conserver l’état de cette colonne. L’état indique si la valeur de colonne est une valeur de données ou une autre valeur, comme NULL. Pour connaître les valeurs possibles, consultez [état](/previous-versions/windows/desktop/ms722617(v=vs.85)) dans le *de référence du programmeur OLE DB*.
+*statut*<br/>
+Facultatif Variable membre utilisée pour contenir l’état de cette colonne. L’état indique si la valeur de la colonne est une valeur de données ou une autre valeur, telle que NULL. Pour connaître les valeurs possibles, consultez la section [Status](/previous-versions/windows/desktop/ms722617(v=vs.85)) dans le *Guide de référence du programmeur OLE DB*.
 
 *length*<br/>
-(Facultatif) Une variable de membre utilisée pour conserver la taille de la colonne en octets.
+Facultatif Variable membre utilisée pour contenir la taille de la colonne en octets.
 
 ## <a name="remarks"></a>Notes
 
-**db_column** lie la colonne de table spécifié à une variable dans l’ensemble de lignes. Délimite les données membres qui peuvent participer à OLE DB `IAccessor`-en fonction de liaison. Cet attribut définit le mappage de colonnes normalement défini par l’utilisation des macros de consommateur OLE DB [BEGIN_COLUMN_MAP](../../data/oledb/begin-column-map.md), [END_COLUMN_MAP](../../data/oledb/end-column-map.md), et [COLUMN_ENTRY](../../data/oledb/column-entry.md). Ces manipulent OLE DB [structure DBBINDING](/previous-versions/windows/desktop/ms716845(v=vs.85)) pour lier la colonne spécifiée. Chaque membre que vous marquez avec le **db_column** attribut occupe une seule entrée dans le mappage de colonne sous la forme d’une entrée de colonne. Par conséquent, vous appelez cet attribut où vous placeriez le mappage de colonnes, autrement dit, dans la classe de commande ou de table.
+**db_column** lie la colonne de table spécifiée à une variable dans l’ensemble de lignes. Elle délimite les données membres qui peuvent participer à OLE DB liaison basée sur `IAccessor`. Cet attribut configure le mappage de colonnes normalement défini à l’aide des macros de consommateur OLE DB [BEGIN_COLUMN_MAP](../../data/oledb/begin-column-map.md), [END_COLUMN_MAP](../../data/oledb/end-column-map.md)et [COLUMN_ENTRY](../../data/oledb/column-entry.md). Ils manipulent la [Structure DBBINDING](/previous-versions/windows/desktop/ms716845(v=vs.85)) OLE DB pour lier la colonne spécifiée. Chaque membre que vous marquez avec l’attribut **db_column** occupe une entrée dans le mappage de colonne sous la forme d’une entrée de colonne. Par conséquent, vous appelez cet attribut à l’emplacement où vous placez le mappage de colonnes, autrement dit, dans la classe de commande ou de table.
 
-Utilisez **db_column** conjointement avec soit le [db_table](db-table.md) ou [db_command](db-command.md) attributs.
+Utilisez **db_column** conjointement avec les attributs [db_table](db-table.md) ou [db_command](db-command.md) .
 
-Lorsque le fournisseur d’attributs consommateur applique cet attribut à une classe, le compilateur renomme la classe à \_ *Nom_de_votre_classe*accesseur, où *Nom_de_votre_classe* est le nom que vous avez donné à la classe et le compilateur crée également une classe appelée *Nom_de_votre_classe*, qui dérive à son \_ *Nom_de_votre_classe*accesseur.  Dans l’affichage de classes, vous verrez les deux classes.
+Lorsque le fournisseur d’attributs du consommateur applique cet attribut à une classe, le compilateur renomme la classe en \_accesseur *YourClassName*, où *YourClassName* est le nom que vous avez donné à la classe, et le compilateur crée également une classe appelée *YourClassName*, qui dérive de \_accesseur *YourClassName*.  Dans l’affichage de classes, vous verrez les deux classes.
 
-Pour obtenir des exemples de cet attribut utilisé dans une application, consultez les exemples [AtlAgent](https://github.com/Microsoft/VCSamples), et [MultiRead](https://github.com/Microsoft/VCSamples).
+Pour obtenir un exemple de cet attribut utilisé dans une application, consultez [MultiRead](https://github.com/Microsoft/VCSamples/tree/master/VC2010Samples/ATL/OLEDB/Consumer).
 
 ## <a name="example"></a>Exemple
 
-Cet exemple lie une colonne dans une table à une **long** membre de données et spécifie les champs état et de longueur.
+Cet exemple lie une colonne d’une table à un membre de données **long** et spécifie des champs d’État et de longueur.
 
 ```cpp
 // db_column_1.cpp
@@ -80,7 +80,7 @@ class CProducts {
 
 ## <a name="example"></a>Exemple
 
-Cet exemple lie les quatre colonnes pour un **long**, une chaîne de caractères, un horodatage et un `DB_NUMERIC` entier, dans cet ordre.
+Cet exemple lie quatre colonnes à une **longue**, une chaîne de caractères, un horodatage et un entier `DB_NUMERIC`, dans cet ordre.
 
 ```cpp
 // db_column_2.cpp
@@ -98,7 +98,7 @@ class CProducts {
 };
 ```
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
 ### <a name="attribute-context"></a>Contexte d'attribut
 
@@ -106,8 +106,8 @@ class CProducts {
 |-|-|
 |**S'applique à**|**classe**, **struct**, membre, méthode|
 |**Renouvelable**|Non|
-|**Attributs requis**|Aucun.|
-|**Attributs non valides**|Aucun.|
+|**Attributs requis**|None|
+|**Attributs non valides**|None|
 
 Pour plus d'informations sur les contextes d'attribut, consultez [Contextes d'attribut](cpp-attributes-com-net.md#contexts).
 

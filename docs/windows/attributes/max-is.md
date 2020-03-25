@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - max_is attribute
 ms.assetid: 7c851f5c-6649-4d77-a792-247c37d8f560
-ms.openlocfilehash: f2e6db997891817620c1b2c1f70cb310818dd346
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: b4931962febb1e68701aa3fe271e08f3aa8d9238
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69514425"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80166755"
 ---
 # <a name="max_is"></a>max_is
 
@@ -32,7 +32,7 @@ Une ou plusieurs expressions en langage C. Les emplacements d’arguments vides 
 
 L’attribut **max_is** C++ a les mêmes fonctionnalités que l’attribut MIDL [max_is](/windows/win32/Midl/max-is) .
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
 ### <a name="attribute-context"></a>Contexte d'attribut
 
@@ -40,14 +40,14 @@ L’attribut **max_is** C++ a les mêmes fonctionnalités que l’attribut MIDL 
 |-|-|
 |**S'applique à**|Champ dans un **struct** ou une **Union**, un paramètre d’interface, une méthode d’interface|
 |**Renouvelable**|Non|
-|**Attributs requis**|Aucun|
+|**Attributs requis**|None|
 |**Attributs non valides**|**size_is**|
 
 Pour plus d'informations, consultez [Contextes d'attribut](cpp-attributes-com-net.md#contexts).
 
-## <a name="example"></a>Exemples
+## <a name="example"></a>Exemple
 
-Pour obtenir un exemple de spécification d’une section d’un tableau, consultez [first_is](first-is.md) .
+Consultez [first_is](first-is.md) pour obtenir un exemple de spécification d’une section d’un tableau.
 
 ## <a name="see-also"></a>Voir aussi
 

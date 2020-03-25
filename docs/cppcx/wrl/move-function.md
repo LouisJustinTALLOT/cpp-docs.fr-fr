@@ -7,16 +7,16 @@ f1_keywords:
 helpviewer_keywords:
 - Move function
 ms.assetid: c9525426-97e8-4d8c-9877-b689d8a0dc67
-ms.openlocfilehash: 8d7c959ecb2d3c06872871ba062d2be603489141
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 65fe85e95453165430c7ef3cfd4c4bb2babd9868
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62398171"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80213705"
 ---
 # <a name="move-function"></a>Move (fonction)
 
-Prend en charge l’infrastructure WRL et n’est pas destinée à être utilisée directement depuis votre code.
+Prend en charge l’infrastructure WRL et n’est pas destiné à être utilisé directement à partir de votre code.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -33,23 +33,23 @@ inline typename RemoveReference<T>::Type&& Move(
 Type de l’argument.
 
 *arg*<br/>
-Un argument à déplacer.
+Argument à déplacer.
 
 ## <a name="return-value"></a>Valeur de retour
 
-Paramètre *arg* après les caractéristiques de référence ou référence rvalue, le cas échéant, ont été supprimés.
+Le paramètre *arg* après la référence ou les traits de référence rvalue, le cas échéant, ont été supprimés.
 
 ## <a name="remarks"></a>Notes
 
-Déplace l’argument spécifié à partir d’un emplacement vers un autre.
+Déplace l’argument spécifié d’un emplacement à un autre.
 
-Pour plus d’informations, consultez le **sémantique déplacer** section de [déclarateur de référence Rvalue : & &](../../cpp/rvalue-reference-declarator-amp-amp.md).
+Pour plus d’informations, consultez la section relative à la **sémantique de déplacement** du [déclarateur de référence Rvalue : & &](../../cpp/rvalue-reference-declarator-amp-amp.md).
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
-**En-tête :** internal.h
+**En-tête :** Internal. h
 
-**Espace de noms :** Microsoft::WRL::Details
+**Espace de noms :** Microsoft :: WRL ::D étails
 
 ## <a name="see-also"></a>Voir aussi
 

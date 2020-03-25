@@ -1,19 +1,19 @@
 ---
-title: library_block (C++ attribut COM)
+title: library_block (C++ attribut com)
 ms.date: 10/02/2018
 f1_keywords:
 - vc-attr.library_block
 helpviewer_keywords:
 - library_block attribute
 ms.assetid: ae7a7ebe-5e1a-4eda-a058-11bbd058ece8
-ms.openlocfilehash: 219f6a89dd7f80246e0337c2ef3bcad43540b165
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 405cc1cd5af7dcd689e833764f3da2fdc6d5f703
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62409250"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80214771"
 ---
-# <a name="libraryblock"></a>library_block
+# <a name="library_block"></a>library_block
 
 Place une construction dans le bloc de bibliothèque IDL.
 
@@ -25,11 +25,11 @@ Place une construction dans le bloc de bibliothèque IDL.
 
 ## <a name="remarks"></a>Notes
 
-Lorsque vous placez une construction dans le bloc de bibliothèque, vous assurez qu’il sera passé dans la bibliothèque de types, indépendamment de si elle est référencée. Par défaut, les seules constructions modifiés par le [coclasse](coclass.md), [dispinterface](dispinterface.md), et [idl_module](idl-module.md) attributs sont placés dans le bloc de bibliothèque.
+Lorsque vous placez une construction dans le bloc de bibliothèque, vous vous assurez qu’elle sera passée dans la bibliothèque de types, qu’elle soit référencée ou non. Par défaut, seules les constructions modifiées par les attributs [coclass](coclass.md), [dispinterface](dispinterface.md)et [idl_module](idl-module.md) sont placées dans le bloc de bibliothèque.
 
 ## <a name="example"></a>Exemple
 
-Dans le code suivant, une interface personnalisée est placée dans le bloc de bibliothèque.
+Dans le code suivant, une interface personnalisée est placée à l’intérieur du bloc de bibliothèque.
 
 ```cpp
 // cpp_attr_ref_library_block.cpp
@@ -42,7 +42,7 @@ __interface IMyInterface {
 };
 ```
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
 ### <a name="attribute-context"></a>Contexte d'attribut
 
@@ -50,8 +50,8 @@ __interface IMyInterface {
 |-|-|
 |**S'applique à**|N'importe où|
 |**Renouvelable**|Non|
-|**Attributs requis**|Aucun.|
-|**Attributs non valides**|Aucun.|
+|**Attributs requis**|None|
+|**Attributs non valides**|None|
 
 Pour plus d'informations, consultez [Contextes d'attribut](cpp-attributes-com-net.md#contexts).
 

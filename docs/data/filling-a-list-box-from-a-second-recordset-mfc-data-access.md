@@ -10,12 +10,12 @@ helpviewer_keywords:
 - combo boxes [C++], filling from second recordset
 - CListCtrl class, filling from second recordset
 ms.assetid: 360c0834-da6b-4dc0-bcea-80e9acd611f0
-ms.openlocfilehash: 9428f8a59dca021a1bd0e00a7970f4d19bab46be
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 8eb2525ef8b749f58303cae13b87b21d7df73d1b
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62397924"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80213406"
 ---
 # <a name="filling-a-list-box-from-a-second-recordset--mfc-data-access"></a>Remplissage d'une zone de liste à partir d'un second recordset (Accès aux données MFC)
 
@@ -28,13 +28,13 @@ Le modèle pour cette rubrique se compose d'un recordset principal qui remplit l
 
 #### <a name="to-fill-a-combo-box-or-list-box-from-a-second-recordset"></a>Pour remplir une zone de liste déroulante ou une zone de liste à partir d'un second recordset
 
-1. Créer l’objet recordset ([CRecordset](../mfc/reference/crecordset-class.md).
+1. Créez l’objet Recordset ([CRecordset](../mfc/reference/crecordset-class.md).
 
-1. Obtenir un pointeur vers le [CComboBox](../mfc/reference/ccombobox-class.md) objet pour le contrôle de zone de liste déroulante.
+1. Obtenez un pointeur vers l’objet [CComboBox](../mfc/reference/ccombobox-class.md) pour le contrôle de zone de liste déroulante.
 
 1. Videz la zone de liste déroulante de son contenu précédent.
 
-1. Parcourez tous les enregistrements dans le jeu d’enregistrements, appelant [CComboBox::AddString](../mfc/reference/ccombobox-class.md#addstring) pour chaque chaîne à partir de l’enregistrement actif que vous souhaitez ajouter à la zone de liste déroulante.
+1. Parcourez tous les enregistrements de l’ensemble d’enregistrements, en appelant [CComboBox :: AddString](../mfc/reference/ccombobox-class.md#addstring) pour chaque chaîne à partir de l’enregistrement actif que vous souhaitez ajouter à la zone de liste déroulante.
 
 1. Initialisez la sélection dans la zone de liste déroulante.
 

@@ -10,28 +10,28 @@ helpviewer_keywords:
 - ODBC data sources [C++], connections
 - database connections [C++], MFC ODBC classes
 ms.assetid: ef6c8c98-5979-43a8-9fb5-5bb06fc59f36
-ms.openlocfilehash: 1740a34036798dac69ffc8b486e03bf6439845a5
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 712910aca2622f2678b8b9d06b18a2fdbf9157e4
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62395987"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80213341"
 ---
 # <a name="connecting-to-a-data-source"></a>Connexion à une source de données
 
-Une source de données ODBC est un ensemble spécifique de données, les informations requises pour accéder à ces données et l’emplacement de la source de données, qui peut être décrits à l’aide d’un nom de source de données. Du point de vue de votre programme, la source de données inclut les données, le SGBD, le réseau (le cas échéant) et ODBC.
+Une source de données ODBC est un ensemble spécifique de données, les informations requises pour accéder à ces données et l’emplacement de la source de données, qui peut être décrit à l’aide d’un nom de source de données. Du point de vue de votre programme, la source de données comprend les données, le SGBD, le réseau (le cas échéant) et ODBC.
 
-Pour accéder aux données fournies par une source de données, votre programme devez d’abord établir une connexion à la source de données. Tous les accès de données est géré via cette connexion.
+Pour accéder aux données fournies par une source de données, votre programme doit d’abord établir une connexion à la source de données. Tout l’accès aux données est géré par le biais de cette connexion.
 
-Connexions de source de données sont encapsulées par la classe [CDatabase](../../mfc/reference/cdatabase-class.md). Quand un `CDatabase` objet est connecté à une source de données, vous pouvez :
+Les connexions à la source de données sont encapsulées par la classe [CDatabase](../../mfc/reference/cdatabase-class.md). Quand un objet `CDatabase` est connecté à une source de données, vous pouvez :
 
-- Construire [recordsets](../../mfc/reference/crecordset-class.md), qui sélectionnent des enregistrements à partir des tables ou des requêtes.
+- Construire des [jeux d’enregistrements](../../mfc/reference/crecordset-class.md), qui sélectionnent des enregistrements à partir de tables ou de requêtes.
 
-- Gérer [transactions](../../data/odbc/transaction-odbc.md), traitement par lot mises à jour afin que tous les validée dans la source de données à la fois (ou toute la transaction est restaurée pour que la source de données demeure inchangée) : si la source de données prend en charge le niveau requis de transactions.
+- Gérez les [transactions](../../data/odbc/transaction-odbc.md), en regroupant les mises à jour afin que toutes soient validées à la source de données à la fois (ou que la transaction entière soit restaurée afin que la source de données soit inchangée), si la source de données prend en charge le niveau requis de transactions.
 
-- Exécuter directement des [SQL](../../data/odbc/sql.md) instructions.
+- Exécuter directement des instructions [SQL](../../data/odbc/sql.md) .
 
-Lorsque vous avez terminé le travail avec une connexion de source de données, vous fermez le `CDatabase` objet et détruire ou réutiliser pour une nouvelle connexion. Pour plus d’informations sur les connexions de source de données, consultez [Source de données (ODBC)](../../data/odbc/data-source-odbc.md).
+Lorsque vous avez terminé d’utiliser une connexion à la source de données, vous fermez l’objet `CDatabase` et vous le détruisez ou vous le réutilisez pour une nouvelle connexion. Pour plus d’informations sur les connexions à la source de données, consultez [source de données (ODBC)](../../data/odbc/data-source-odbc.md).
 
 ## <a name="see-also"></a>Voir aussi
 

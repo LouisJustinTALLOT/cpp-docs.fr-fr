@@ -8,12 +8,12 @@ helpviewer_keywords:
 - __declspec keyword [C++], jitintrinsic
 - jitintrinsic __declspec modifier
 ms.assetid: 23dbe416-7ef6-442b-b16d-9a81aab04fa6
-ms.openlocfilehash: 9e726413f0bbfbd9d6affa348777c995c51283a5
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 4626ba82d1d24582951bbffd8e6be687007d390f
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62245512"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80178177"
 ---
 # <a name="jitintrinsic"></a>jitintrinsic
 
@@ -29,7 +29,7 @@ __declspec(jitintrinsic)
 
 **jitintrinsic** ajoute un MODOPT (<xref:System.Runtime.CompilerServices.IsJitIntrinsic>) à une signature de fonction.
 
-Les utilisateurs sont déconseillés à partir de l’utilisation de cette **__declspec** modificateur, car des résultats inattendus peut se produire.
+Les utilisateurs sont déconseillés d’utiliser ce modificateur de **__declspec** , car des résultats inattendus peuvent se produire.
 
 ## <a name="see-also"></a>Voir aussi
 

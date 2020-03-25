@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - out attribute
 ms.assetid: 5051b1bf-4949-4bf1-b82f-35e14f0f244b
-ms.openlocfilehash: 11c8e4473f0b849fab7846a825b90da3ed9f036f
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: 6ab8fdf691e2220087f5c5d64bb70c5deb27675c
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69514287"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80214661"
 ---
 # <a name="out-c"></a>out (C++)
 
@@ -31,7 +31,7 @@ L’attribut C++ **out** a les mêmes fonctionnalités que l’attribut MIDL [ou
 
 Consultez l’exemple pour [bindable](bindable.md) pour obtenir un exemple d’utilisation de **out**.
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
 ### <a name="attribute-context"></a>Contexte d'attribut
 
@@ -39,8 +39,8 @@ Consultez l’exemple pour [bindable](bindable.md) pour obtenir un exemple d’u
 |-|-|
 |**S'applique à**|Paramètre d’interface|
 |**Renouvelable**|Non|
-|**Attributs requis**|Aucun|
-|**Attributs non valides**|Aucun|
+|**Attributs requis**|None|
+|**Attributs non valides**|None|
 
 Pour plus d'informations sur les contextes d'attribut, consultez [Contextes d'attribut](cpp-attributes-com-net.md#contexts).
 

@@ -6,15 +6,15 @@ f1_keywords:
 helpviewer_keywords:
 - U1097
 ms.assetid: dc6868b3-8425-4920-858a-774ad0c4c5f1
-ms.openlocfilehash: 52339a00511c8d41270fff8c9ca532ac193d8df9
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 0f42d63ada85c2f27fc9681e6168c9f80e7f96cb
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62298324"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80193405"
 ---
 # <a name="nmake-fatal-error-u1097"></a>Erreur irrécupérable NMAKE U1097
 
-syntaxe de parties de nom de fichier nécessite dependent
+la syntaxe des parties de noms de fichiers nécessite une dépendance
 
-La dépendance actuelle n’a pas dépendant explicite ni dépendant implicite. Syntaxe de parties de nom de fichier, qui utilise le pourcentage (`%`) spécificateur, représente les composants du premier dépendant de la cible actuelle.
+La dépendance actuelle n’a pas de dépendant explicite ou de dépendant implicite. La syntaxe des parties de noms de fichier, qui utilise le spécificateur de pourcentage (`%`), représente les composants du premier dépendant de la cible actuelle.

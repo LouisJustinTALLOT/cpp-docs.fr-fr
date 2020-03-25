@@ -12,16 +12,16 @@ helpviewer_keywords:
 - GetString method
 - SetString method
 ms.assetid: 138dc4de-c7c3-478c-863e-431e48249027
-ms.openlocfilehash: 6ba56143beb3411734899839a46ab42992dfa4d8
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: a0590bc015c5487315b8cbd38f0baf91eb3082cc
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62230993"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80211862"
 ---
 # <a name="cdynamicstringaccessor-class"></a>CDynamicStringAccessor, classe
 
-Vous permet d’accéder à une source de données lorsque vous n’avez aucune connaissance du schéma de base de données (structure sous-jacente de la base de données).
+Vous permet d’accéder à une source de données lorsque vous n’avez aucune connaissance du schéma de base de données (la structure sous-jacente de la base de données).
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -30,7 +30,7 @@ template< typename BaseType, DBTYPEENUM OleDbType >
 class CDynamicStringAccessorT : public CDynamicAccessor
 ```
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
 **En-tête**: atldbcli.h
 
@@ -40,24 +40,24 @@ class CDynamicStringAccessorT : public CDynamicAccessor
 
 |||
 |-|-|
-|[GetString](#getstring)|Récupère les données de la colonne spécifiée sous forme de chaîne.|
-|[SetString](#setstring)|Définit les données de la colonne spécifiée sous forme de chaîne.|
+|[GetString](#getstring)|Récupère les données de colonne spécifiées sous la forme d’une chaîne.|
+|[SetString](#setstring)|Définit les données de colonne spécifiées sous la forme d’une chaîne.|
 
 ## <a name="remarks"></a>Notes
 
-Bien que [CDynamicAccessor](../../data/oledb/cdynamicaccessor-class.md) demande des données dans le format natif indiqué par le fournisseur, `CDynamicStringAccessor` demande que le fournisseur récupère toutes les données accessibles à partir du magasin de données en tant que données de chaîne. Cela est particulièrement utile pour des tâches simples qui ne nécessitent pas de calcul de valeurs dans le magasin de données, telles que l’affichage ou l’impression du contenu du magasin de données.
+Si [CDynamicAccessor](../../data/oledb/cdynamicaccessor-class.md) demande des données au format natif signalé par le fournisseur, `CDynamicStringAccessor` demande au fournisseur d’extraire toutes les données accessibles à partir du magasin de données en tant que données de chaîne. Cela s’avère particulièrement utile pour les tâches simples qui ne nécessitent pas de calcul de valeurs dans le magasin de données, telles que l’affichage ou l’impression du contenu du magasin de données.
 
-Le type natif des données de colonne dans le magasin de données n’a pas d’importance ; tant que le fournisseur peut prendre en charge la conversion de données, il fournit les données au format de chaîne. Si le fournisseur ne prend pas en charge la conversion du type de données natif en une chaîne (qui n’est pas courant), l’appel de demande renvoie la valeur de réussite DB_S_ERRORSOCCURED, et l’état de la colonne correspondante indique un problème de conversion DBSTATUS_E_CANTCONVERTVALUE.
+Le type natif des données de colonne dans le magasin de données n’a pas d’importance ; tant que le fournisseur peut prendre en charge la conversion de données, il fournit les données au format de chaîne. Si le fournisseur ne prend pas en charge la conversion du type de données natif en une chaîne (ce qui n’est pas courant), l’appel demandeur retourne la valeur de réussite DB_S_ERRORSOCCURED, et l’état de la colonne correspondante indique un problème de conversion avec DBSTATUS_E_CANTCONVERTVALUE.
 
-Utilisez `CDynamicStringAccessor` méthodes pour obtenir des informations de colonne. Ces informations de colonne vous permet de créer un accesseur dynamiquement au moment de l’exécution.
+Utilisez `CDynamicStringAccessor` méthodes pour obtenir des informations sur les colonnes. Vous utilisez ces informations de colonne pour créer un accesseur de manière dynamique au moment de l’exécution.
 
-Les informations de colonne sont stockées dans une mémoire tampon créée et gérée par cette classe. Obtenir des données à partir de la mémoire tampon à l’aide [GetString](../../data/oledb/cdynamicstringaccessor-getstring.md), ou les stocker dans la mémoire tampon à l’aide [SetString](../../data/oledb/cdynamicstringaccessor-setstring.md).
+Les informations de colonne sont stockées dans une mémoire tampon créée et gérée par cette classe. Obtenez des données à partir de la mémoire tampon à l’aide de [GetString](../../data/oledb/cdynamicstringaccessor-getstring.md)ou stockez-les dans la mémoire tampon à l’aide de [SetString](../../data/oledb/cdynamicstringaccessor-setstring.md).
 
-Pour une discussion et des exemples d’utilisation des classes d’accesseurs dynamiques, consultez [à l’aide d’accesseurs dynamiques](../../data/oledb/using-dynamic-accessors.md).
+Pour obtenir une discussion et des exemples d’utilisation des classes d’accesseur dynamiques, consultez [utilisation d’accesseurs dynamiques](../../data/oledb/using-dynamic-accessors.md).
 
-## <a name="getstring"></a> CDynamicStringAccessor::GetString
+## <a name="cdynamicstringaccessorgetstring"></a><a name="getstring"></a>CDynamicStringAccessor :: GetString
 
-Récupère les données de la colonne spécifiée sous forme de chaîne.
+Récupère les données de colonne spécifiées sous la forme d’une chaîne.
 
 ### <a name="syntax"></a>Syntaxe
 
@@ -72,22 +72,22 @@ BaseType* GetString(const WCHAR* pColumnName) const throw();
 #### <a name="parameters"></a>Paramètres
 
 *nColumn*<br/>
-[in] Le numéro de colonne. Les numéros de colonne commencent à 1. La valeur 0 fait référence à la colonne de signet, le cas échéant.
+dans Numéro de la colonne. Les numéros de colonne commencent par 1. La valeur 0 fait référence à la colonne de signets, le cas échéant.
 
 *pColumnName*<br/>
-[in] Pointeur vers une chaîne de caractères qui contient le nom de colonne.
+dans Pointeur vers une chaîne de caractères qui contient le nom de la colonne.
 
 ### <a name="return-value"></a>Valeur de retour
 
-Un pointeur vers la valeur de chaîne sont extraites de la colonne spécifiée. La valeur est de type `BaseType`, qui sera **CHAR** ou **WCHAR** selon que _UNICODE est défini ou non. Retourne NULL si la colonne spécifiée est introuvable.
+Pointeur vers la valeur de chaîne Récupérée à partir de la colonne spécifiée. La valeur est de type `BaseType`, qui sera **char** ou **WCHAR** selon que _UNICODE est défini ou non. Retourne la valeur NULL si la colonne spécifiée est introuvable.
 
 ### <a name="remarks"></a>Notes
 
-Le deuxième remplacement formulaire prend le nom de colonne sous forme de chaîne ANSI. La troisième remplacer formulaire prend le nom de colonne sous forme de chaîne Unicode.
+Le deuxième formulaire de remplacement prend le nom de colonne comme une chaîne ANSI. Le troisième formulaire de remplacement prend le nom de colonne en tant que chaîne Unicode.
 
-## <a name="setstring"></a> CDynamicStringAccessor::SetString
+## <a name="cdynamicstringaccessorsetstring"></a><a name="setstring"></a>CDynamicStringAccessor :: SetString
 
-Définit les données de la colonne spécifiée sous forme de chaîne.
+Définit les données de colonne spécifiées sous la forme d’une chaîne.
 
 ### <a name="syntax"></a>Syntaxe
 
@@ -105,27 +105,27 @@ HRESULT SetString(const WCHAR* pColumnName,
 #### <a name="parameters"></a>Paramètres
 
 *nColumn*<br/>
-[in] Le numéro de colonne. Les numéros de colonne commencent à 1. La valeur spéciale 0 fait référence à la colonne de signet, le cas échéant.
+dans Numéro de la colonne. Les numéros de colonne commencent par 1. La valeur spéciale 0 fait référence à la colonne de signets, le cas échéant.
 
 *pColumnName*<br/>
-[in] Pointeur vers une chaîne de caractères qui contient le nom de colonne.
+dans Pointeur vers une chaîne de caractères qui contient le nom de la colonne.
 
 *data*<br/>
-[in] Pointeur vers les données de chaîne à écrire dans la colonne spécifiée.
+dans Pointeur vers les données de chaîne à écrire dans la colonne spécifiée.
 
 ### <a name="return-value"></a>Valeur de retour
 
-Pointeur vers la valeur de chaîne à laquelle définir la colonne spécifiée. La valeur est de type `BaseType`, qui sera **CHAR** ou **WCHAR** selon que _UNICODE est défini ou non.
+Pointeur vers la valeur de chaîne dans laquelle définir la colonne spécifiée. La valeur est de type `BaseType`, qui sera **char** ou **WCHAR** selon que _UNICODE est défini ou non.
 
 ### <a name="remarks"></a>Notes
 
-La seconde substituer formulaire prend le nom de colonne sous forme de chaîne ANSI ainsi le troisième formulaire prend le nom de colonne sous forme de chaîne Unicode.
+Le deuxième formulaire de remplacement prend le nom de colonne comme une chaîne ANSI et le troisième formulaire de remplacement prend le nom de colonne en tant que chaîne Unicode.
 
-Si _SECURE_ATL est défini comme ayant une valeur différente de zéro, un échec d’assertion runtime sera généré si l’entrée *données* chaîne est plus longue que la longueur maximale autorisée de la colonne de données référencé. Sinon, la chaîne d’entrée sera être tronquée si elle est supérieure à la longueur maximale autorisée.
+Si _SECURE_ATL est défini pour avoir une valeur différente de zéro, un échec d’assertion de Runtime est généré si la chaîne de *données* d’entrée dépasse la longueur maximale autorisée de la colonne de données référencée. Dans le cas contraire, la chaîne d’entrée sera tronquée si elle dépasse la longueur maximale autorisée.
 
 ## <a name="see-also"></a>Voir aussi
 
-[Modèles du consommateur OLE DB](../../data/oledb/ole-db-consumer-templates-cpp.md)<br/>
+[OLE DB (modèles du consommateur)](../../data/oledb/ole-db-consumer-templates-cpp.md)<br/>
 [Référence des modèles du consommateur OLE DB](../../data/oledb/ole-db-consumer-templates-reference.md)<br/>
 [CAccessor, classe](../../data/oledb/caccessor-class.md)<br/>
 [CDynamicParameterAccessor, classe](../../data/oledb/cdynamicparameteraccessor-class.md)<br/>

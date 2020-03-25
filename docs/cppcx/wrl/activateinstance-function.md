@@ -8,16 +8,16 @@ f1_keywords:
 helpviewer_keywords:
 - ActivateInstance function
 ms.assetid: 8cfd1dd9-5fda-4cc2-acf8-d40e783b3875
-ms.openlocfilehash: 43aa34153f0e71dd665090243ff2288bff704404
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: d1109e769352d412df8348822e05b66063159ee8
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62303968"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80214225"
 ---
 # <a name="activateinstance-function"></a>ActivateInstance (fonction)
 
-Enregistre et récupère une instance d’un type spécifié défini dans un ID de classe spécifié.
+Inscrit et récupère une instance d’un type spécifié défini dans un ID de classe spécifié.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -32,23 +32,23 @@ inline HRESULT ActivateInstance(
 ### <a name="parameters"></a>Paramètres
 
 *T*<br/>
-Un type à activer.
+Type à activer.
 
 *activatableClassId*<br/>
-Le nom de l’ID de classe qui définit le paramètre *T*.
+Nom de l’ID de classe qui définit le paramètre *T*.
 
 *instance*<br/>
-Lorsque cette opération se termine, une référence à une instance de *T*.
+Lorsque cette opération est terminée, une référence à une instance de *T*.
 
 ## <a name="return-value"></a>Valeur de retour
 
 S_OK en cas de réussite ; Sinon, une erreur HRESULT qui indique la cause de l’erreur.
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
 **En-tête :** client.h
 
-**Espace de noms :** Windows::Foundation
+**Espace de noms :** Windows :: Foundation
 
 ## <a name="see-also"></a>Voir aussi
 

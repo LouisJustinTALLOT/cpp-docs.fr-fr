@@ -6,23 +6,23 @@ f1_keywords:
 helpviewer_keywords:
 - PRJ0042
 ms.assetid: 682c9999-6f85-409f-b102-00c93243f74f
-ms.openlocfilehash: c91e40b6ad56d6201fc7d0ba7c9fbf23e620e8b0
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 45de1de889dedbc03c556e4c88dc76f21e1c8c63
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62297745"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80191910"
 ---
 # <a name="project-build-warning-prj0042"></a>Avertissement de génération de projet PRJ0042
 
-> La propriété' sorties' de l’étape de build personnalisée pour le fichier '*fichier*' n’est pas définie. L’étape de génération personnalisée va être ignorée.
+> La propriété’Outputs’de l’étape de génération personnalisée du fichier'*file*'n’est pas définie. L’étape de génération personnalisée sera ignorée.
 
-Une étape de génération personnalisée n’a pas été exécutée car aucune sortie n’a été spécifié.
+Une étape de génération personnalisée n’a pas été exécutée, car aucune sortie n’a été spécifiée.
 
-Pour résoudre cette erreur, procédez comme suit :
+Pour résoudre cette erreur, effectuez l’une des opérations suivantes :
 
-- Exclure l’étape de génération personnalisée de la génération.
+- Excluez l’étape de génération personnalisée de la Build.
 
-- Ajouter une sortie.
+- Ajoutez une sortie.
 
-- Supprimez le contenu de la commande de l’étape de génération personnalisée.
+- Supprimer le contenu de la commande de l’étape de génération personnalisée.

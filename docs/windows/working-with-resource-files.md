@@ -1,26 +1,26 @@
 ---
-title: Utilisation des fichiers de ressourcesC++()
+title: Utilisation des fichiers de ressources (C++)
 ms.date: 02/14/2019
 helpviewer_keywords:
 - resources [C++], about resources
 - resources [C++], about resource files
 - resource files [C++], about resource files
 ms.assetid: 2699a539-b369-4b78-80f0-df03eb7b6780
-ms.openlocfilehash: d9f6c6b9798bc708bb5334eafc0585471f25c059
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: 142a9120e0b6b95e659fcb47c275653fbefd8cbe
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69513588"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80165884"
 ---
 # <a name="working-with-resource-files"></a>Utilisation des fichiers de ressources
 
 > [!WARNING]
 > Cette section concerne les applications de bureau Windows écrites en C++.
 >
-> Pour plus d’informations sur les ressources dans plateforme Windows universelle C++les applications écrites dans, consultez [définition des ressources](/windows/uwp/app-resources/)d’application C++, ou ajout de ressources aux projets/CLI (managés), consultez [ressources dans les applications de bureau](/dotnet/framework/resources/index) dans le .NET Framework du développeur Père.
+> Pour plus d’informations sur les ressources des applications C++plateforme Windows universelle écrites dans, consultez [définition des ressources d’application](/windows/uwp/app-resources/), C++ou ajout de ressources aux projets/CLI (managés), consultez [ressources dans les applications de bureau](/dotnet/framework/resources/index) dans le Guide du développeur .NET Framework.
 
-Les ressources peuvent être composées d’un large éventail d’éléments, par exemple:
+Les ressources peuvent être composées d’un large éventail d’éléments, par exemple :
 
 - Éléments d’interface qui fournissent des informations à l’utilisateur, telles qu’une bitmap, une icône ou un curseur.
 - Ressources personnalisées qui contiennent des besoins en matière de données et d’applications.
@@ -47,7 +47,7 @@ Décrit les symboles et fournit des informations sur l'utilisation de la boîte 
 [Éditeurs de ressources](../windows/resource-editors.md)<br/>
 Décrit les éditeurs de ressources fournis dans Visual Studio et les types de ressources que vous pouvez modifier avec chaque éditeur. Fournit également des liens vers des informations détaillées sur l’utilisation de chaque éditeur.
 
-## <a name="related-sections"></a>Rubriques connexes
+## <a name="related-sections"></a>Sections connexes
 
 [C++ dans Visual Studio](../overview/visual-cpp-in-visual-studio.md)<br/>
 Fournit des liens vers la documentation Visual C++.

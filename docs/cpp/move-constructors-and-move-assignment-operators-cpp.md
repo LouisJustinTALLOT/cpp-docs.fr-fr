@@ -1,19 +1,19 @@
 ---
-title: 'Procédure : Définir des constructeurs de déplacement et opérateurs d’assignation de déplacement (C++)'
+title: 'Comment : définir des constructeurs de déplacement et des opérateurs d’assignationC++de déplacement ()'
 ms.date: 03/05/2018
 helpviewer_keywords:
 - move constructor [C++]
 ms.assetid: e75efe0e-4b74-47a9-96ed-4e83cfc4378d
-ms.openlocfilehash: b601c53c01940fe110036d569e0be9d43a123a91
-ms.sourcegitcommit: c6f8e6c2daec40ff4effd8ca99a7014a3b41ef33
+ms.openlocfilehash: 81f717162e2c7bebc62a9deeb208700380f62cb8
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "64345013"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80179365"
 ---
 # <a name="move-constructors-and-move-assignment-operators-c"></a>Constructeurs de déplacement et opérateurs d'assignation de déplacement (C++)
 
-Cette rubrique explique comment écrire un *constructeur de déplacement* et un opérateur d’assignation de déplacement pour une classe C++. Un constructeur de déplacement permet les ressources détenues par un objet rvalue à déplacer vers une lvalue sans copier. Pour plus d’informations sur la sémantique de déplacement, consultez [déclarateur de référence Rvalue : & &](../cpp/rvalue-reference-declarator-amp-amp.md).
+Cette rubrique explique comment écrire un *constructeur de déplacement* et un opérateur d’assignation de déplacement C++ pour une classe. Un constructeur de déplacement permet de déplacer les ressources détenues par un objet rvalue dans une lvalue sans la copier. Pour plus d’informations sur la sémantique de déplacement, consultez [déclarateur de référence rvalue : & &](../cpp/rvalue-reference-declarator-amp-amp.md).
 
 Cette rubrique repose sur la classe C++ suivante, `MemoryBlock`, qui gère une mémoire tampon.
 
@@ -219,7 +219,7 @@ MemoryBlock& operator=(MemoryBlock&& other)
 
 ## <a name="example"></a>Exemple
 
-L'exemple suivant montre comment la sémantique de déplacement peut améliorer les performances de vos applications. L'exemple ajoute deux éléments à un objet vectoriel, puis insère un nouvel élément entre les deux éléments existants. Le `vector` classe utilise sémantique de déplacement pour effectuer l’opération d’insertion efficacement en déplaçant les éléments du vecteur au lieu de les copier.
+L'exemple suivant montre comment la sémantique de déplacement peut améliorer les performances de vos applications. L'exemple ajoute deux éléments à un objet vectoriel, puis insère un nouvel élément entre les deux éléments existants. La classe `vector` utilise la sémantique de déplacement pour exécuter efficacement l’opération d’insertion en déplaçant les éléments du vecteur au lieu de les copier.
 
 ```cpp
 // rvalue-references-move-semantics.cpp
@@ -241,7 +241,7 @@ int main()
 }
 ```
 
-Cet exemple génère la sortie suivante :
+Cet exemple produit la sortie suivante :
 
 ```Output
 In MemoryBlock(size_t). length = 25.
@@ -264,7 +264,7 @@ In ~MemoryBlock(). length = 50. Deleting resource.
 In ~MemoryBlock(). length = 75. Deleting resource.
 ```
 
-Avant Visual Studio 2010, cet exemple produit le résultat suivant :
+Avant Visual Studio 2010, cet exemple produisait la sortie suivante :
 
 ```Output
 In MemoryBlock(size_t). length = 25.
@@ -307,9 +307,9 @@ MemoryBlock(MemoryBlock&& other)
 }
 ```
 
-Le [std::move](../standard-library/utility-functions.md#move) fonction préserve la propriété rvalue de la *autres* paramètre.
+La fonction [std :: Move](../standard-library/utility-functions.md#move) conserve la propriété rvalue de l' *autre* paramètre.
 
 ## <a name="see-also"></a>Voir aussi
 
 [Déclarateur de référence Rvalue : &&](../cpp/rvalue-reference-declarator-amp-amp.md)<br/>
-[std::move](../standard-library/utility-functions.md#move)
+[std :: Move](../standard-library/utility-functions.md#move)

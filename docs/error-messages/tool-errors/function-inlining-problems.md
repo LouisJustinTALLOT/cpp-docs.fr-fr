@@ -9,20 +9,20 @@ helpviewer_keywords:
 - -Ob2 C++ compiler option
 - function inlining problems
 ms.assetid: 65d59943-4b3c-4a43-aeb6-dccbf7686740
-ms.openlocfilehash: f088b0f3ec94ad59c9c5576e6090a895bb88c3ad
-ms.sourcegitcommit: 283cb64fd7958a6b7fbf0cd8534de99ac8d408eb
+ms.openlocfilehash: cb4653bd2f03683b9abad1eea0e9ffa88222090e
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64856888"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80184240"
 ---
 # <a name="function-inlining-problems"></a>Problèmes de fonctions inline
 
-Si vous utilisez des fonctions inline, vous devez :
+Si vous utilisez l’incorporation de fonction, vous devez :
 
-- Avoir les fonctions inline implémentées dans le fichier d’en-tête inclus.
+- Les fonctions inline sont implémentées dans le fichier d’en-tête que vous incluez.
 
-- Avez incorporation (inlining) dans le fichier d’en-tête.
+- Activez l’incorporation dans le fichier d’en-tête.
 
 ```cpp
 // LNK2019_function_inline.cpp
@@ -54,11 +54,11 @@ int main() {
 }
 ```
 
-Si vous utilisez le `#pragma inline_depth` veillez directive du compilateur vous définition disposez une valeur de 2 ou supérieur. Une valeur égale à zéro s’éteint incorporation (inlining). Vérifiez également que vous utilisez le **/Ob1** ou **/Ob2** options du compilateur.
+Si vous utilisez la directive de compilateur `#pragma inline_depth`, assurez-vous que la valeur est supérieure ou égale à 2. La valeur zéro désactive l’incorporation. Vérifiez également que vous utilisez les options du compilateur **/Ob1** ou **/OB2** .
 
-Panachage d’options de compilation en ligne et non en ligne sur les différents modules peut parfois entraîner des problèmes. Si une bibliothèque C++ est créée avec la fonctionnalité inline activée ([/Ob1](../../build/reference/ob-inline-function-expansion.md) ou [/Ob2](../../build/reference/ob-inline-function-expansion.md)), mais le fichier d’en-tête correspondant décrivant les fonctions a désactivé cette fonctionnalité (sans option), vous obtiendrez l’erreur LNK2001. Les fonctions n’obtiennent pas inline dans le code à partir du fichier d’en-tête, mais dans la mesure où ils ne sont pas dans le fichier de bibliothèque aucune adresse n’est pour résoudre la référence.
+La combinaison d’options de compilation inline et non inline sur des modules différents peut parfois provoquer des problèmes. Si une C++ bibliothèque est créée avec la fonction inline activée ([/Ob1](../../build/reference/ob-inline-function-expansion.md) ou [/OB2](../../build/reference/ob-inline-function-expansion.md)), mais que le fichier d’en-tête correspondant décrivant les fonctions a désactivé l’incorporation (aucune option), vous obtiendrez l’erreur LNK2001. Les fonctions ne sont pas inline dans le code du fichier d’en-tête, mais comme elles ne se trouvent pas dans le fichier de bibliothèque, il n’existe aucune adresse pour résoudre la référence.
 
-De même, un projet qui utilise la fonction inline mais définit les fonctions dans un fichier .cpp au plutôt que dans l’en-tête de fichier recevront également l’erreur LNK2019. Le fichier d’en-tête est inclus partout semble approprié, mais les fonctions sont uniquement inline lorsque le fichier .cpp passe par le compilateur ; Par conséquent, l’éditeur de liens considère les fonctions comme externes non résolus lorsqu’il est utilisé dans d’autres modules.
+De même, un projet qui utilise la fonction inline, mais définit les fonctions dans un fichier. cpp plutôt que dans le fichier d’en-tête obtiendra également l’erreur LNK2019. Le fichier d’en-tête est inclus partout jugé approprié, mais les fonctions ne sont Inline que lorsque le fichier. cpp passe par le compilateur. par conséquent, l’éditeur de liens voit les fonctions comme externes non résolus lorsqu’ils sont utilisés dans d’autres modules.
 
 ```cpp
 // LNK2019_FIP.h

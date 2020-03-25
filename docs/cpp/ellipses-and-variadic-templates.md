@@ -2,44 +2,44 @@
 title: Ellipses et modèles variadiques
 ms.date: 11/04/2016
 ms.assetid: f20967d9-c967-4fd2-b902-2bb1d5ed87e3
-ms.openlocfilehash: 387cf4478192cb9470804c219eee8046f8e47abe
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 9c9294089b9f0a144946b7f6b81da2a71ca710bc
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62392217"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80189258"
 ---
 # <a name="ellipses-and-variadic-templates"></a>Ellipses et modèles variadiques
 
-Cet article explique comment utiliser les points de suspension (`...`) avec les modèles variadic C++. L’ellipse a de nombreux usages dans C et C++. Ceux-ci incluent des listes d’arguments variables pour les fonctions. Le `printf()` fonction à partir de la bibliothèque Runtime C est un des exemples plus connus.
+Cet article explique comment utiliser les points de suspension (`...`) C++ avec des modèles variadiques. Les points de suspension ont eu de nombreuses utilisations C++dans C et. Celles-ci incluent les listes d’arguments de variable pour les fonctions. La fonction `printf()` de la bibliothèque Runtime C est l’un des exemples les plus connus.
 
-Un *modèle variadique* est un modèle de classe ou une fonction qui prend en charge un nombre arbitraire d’arguments. Ce mécanisme est particulièrement utile pour les développeurs de bibliothèques C++ car vous pouvez appliquer à des modèles de classe et des modèles de fonction et donc fournir un large éventail de fonctionnalités de type sécurisé et non triviales et de flexibilité.
+Un *modèle variadiques* est une classe ou un modèle de fonction qui prend en charge un nombre arbitraire d’arguments. Ce mécanisme est particulièrement utile pour C++ les développeurs de bibliothèque, car vous pouvez l’appliquer aux modèles de classe et aux modèles de fonction, et fournir ainsi une large gamme de fonctionnalités et de flexibilité de type sécurisé et non triviale.
 
 ## <a name="syntax"></a>Syntaxe
 
-Points de suspension est utilisé de deux façons par les modèles variadiques. À gauche du nom de paramètre, cela signifie un *pack de paramètre*, et à droite du nom de paramètre, il développe les paquets de paramètre dans des noms différents.
+Les points de suspension sont utilisés de deux façons par les modèles variadiques. À gauche du nom du paramètre, il s’agit d’un *Pack de paramètres*, et à droite du nom du paramètre, il étend les paquets de paramètres dans des noms distincts.
 
-Voici un exemple de base *classe de modèle variadique* syntaxe de définition :
+Voici un exemple de base de la syntaxe de définition de *classe de modèle variadiques* :
 
 ```cpp
 template<typename... Arguments> class classname;
 ```
 
-Pour les packs de paramètres et les expansions, vous pouvez ajouter un espace blanc autour des points de suspension, selon votre préférence, comme indiqué dans ces exemples :
+Pour les packs de paramètres et les expansions, vous pouvez ajouter des espaces autour des points de suspension, en fonction de vos préférences, comme indiqué dans les exemples suivants :
 
 ```cpp
 template<typename ...Arguments> class classname;
 ```
 
-Ou cela :
+Ou cela :
 
 ```cpp
 template<typename ... Arguments> class classname;
 ```
 
-Notez que cet article utilise la convention est indiquée dans le premier exemple (les points de suspension est attaché à `typename`).
+Notez que cet article utilise la Convention présentée dans le premier exemple (les points de suspension sont attachés à `typename`).
 
-Dans les exemples précédents, *Arguments* est un package de paramètres. La classe `classname` peut accepter un nombre variable d’arguments, comme dans les exemples :
+Dans les exemples précédents, *arguments* est un package de paramètres. La classe `classname` peut accepter un nombre variable d’arguments, comme dans les exemples suivants :
 
 ```cpp
 template<typename... Arguments> class vtclass;
@@ -50,21 +50,21 @@ vtclass<float, bool> vtinstance3;
 vtclass<long, std::vector<int>, std::string> vtinstance4;
 ```
 
-En utilisant une définition de classe de modèle variadique, vous pouvez également exiger au moins un paramètre :
+En utilisant une définition de classe de modèle variadiques, vous pouvez également avoir besoin d’au moins un paramètre :
 
 ```cpp
 template <typename First, typename... Rest> class classname;
 ```
 
-Voici un exemple de base *fonction de modèle variadique* syntaxe :
+Voici un exemple de base de la syntaxe de la *fonction de modèle variadiques* :
 
 ```cpp
 template <typename... Arguments> returntype functionname(Arguments... args);
 ```
 
-Le *Arguments* pack de paramètre est ensuite étendue pour une utilisation, comme indiqué dans la section suivante, **présentation des modèles variadiques**.
+Le Pack de paramètres d' *arguments* est ensuite développé pour être utilisé, comme indiqué dans la section suivante, **Understanding variadiques templates**.
 
-Autres formes de syntaxe de fonction de modèle variadique sont possibles, y compris, mais sans limitation, ces exemples :
+D’autres formes de syntaxe de la fonction de modèle variadiques sont possibles, y compris, mais sans s’y limiter, les exemples suivants :
 
 ```cpp
 template <typename... Arguments> returntype functionname(Arguments&... args);
@@ -72,19 +72,19 @@ template <typename... Arguments> returntype functionname(Arguments&&... args);
 template <typename... Arguments> returntype functionname(Arguments*... args);
 ```
 
-Spécificateurs tels que **const** sont également autorisées :
+Les spécificateurs comme **const** sont également autorisés :
 
 ```cpp
 template <typename... Arguments> returntype functionname(const Arguments&... args);
 ```
 
-Comme avec les définitions de classe de modèle variadique, vous pouvez apporter des fonctions qui requièrent au moins un paramètre :
+Comme avec les définitions de classe de modèle variadiques, vous pouvez créer des fonctions qui nécessitent au moins un paramètre :
 
 ```cpp
 template <typename First, typename... Rest> returntype functionname(const First& first, const Rest&... args);
 ```
 
-Les modèles Variadiques utilisent la `sizeof...()` opérateur (non liés à l’ancien `sizeof()` opérateur) :
+Les modèles variadiques utilisent l’opérateur `sizeof...()` (non lié à l’ancien opérateur `sizeof()`) :
 
 ```cpp
 template<typename... Arguments>
@@ -98,13 +98,13 @@ void tfunc(const Arguments&... args)
 }
 ```
 
-## <a name="more-about-ellipsis-placement"></a>Plus d’informations sur le positionnement des points de suspension
+## <a name="more-about-ellipsis-placement"></a>En savoir plus sur l’emplacement des points de suspension
 
-Auparavant, cet article décrit le placement de points de suspension qui définit des packs de paramètres et des extensions en tant que « à gauche du nom de paramètre, il désigne un package de paramètres, et à droite du nom de paramètre, il développe les paquets de paramètre dans des noms ». Cela est techniquement true mais peut prêter à confusion dans la traduction au code. Prenez en compte ce qui suit :
+Précédemment, cet article a décrit les points de suspension qui définissent les jeux de paramètres et les expansions comme suit : « à gauche du nom du paramètre, il s’agit d’un pack de paramètres, et à droite du nom du paramètre, il étend les packs de paramètres dans des noms distincts ». Cela est techniquement vrai, mais peut prêter à confusion dans le code. Vous devez :
 
-- Dans une liste de paramètres de modèle (`template <parameter-list>`), `typename...` introduit un package de paramètres de modèle.
+- Dans un modèle-parameter-list (`template <parameter-list>`), `typename...` introduit un package de paramètres de modèle.
 
-- Dans une clause de déclaration de paramètre (`func(parameter-list)`), un bouton de sélection de « niveau supérieur » présente un package de paramètres de fonction, et le positionnement des points de suspension est important :
+- Dans une clause Parameter-declaration (`func(parameter-list)`), les points de suspension « de niveau supérieur » introduisent un pack de paramètres de fonction et la position des points de suspension est importante :
 
     ```cpp
     // v1 is NOT a function parameter pack:
@@ -114,11 +114,11 @@ Auparavant, cet article décrit le placement de points de suspension qui défini
     template <typename... Types> void func2(std::vector<Types>... v2);
     ```
 
-- Où les points de suspension s’affiche immédiatement après un nom de paramètre, vous avez une expansion de paramètre.
+- Lorsque les points de suspension apparaissent immédiatement après un nom de paramètre, vous avez une expansion de package de paramètres.
 
 ## <a name="example"></a>Exemple
 
-Un bon moyen pour illustrer le mécanisme de fonction de modèle variadique consiste à utiliser dans une réécriture de certaines des fonctionnalités de `printf`:
+Un bon moyen d’illustrer le mécanisme de la fonction de modèle variadiques consiste à l’utiliser dans une nouvelle écriture de certaines fonctionnalités de `printf`:
 
 ```cpp
 #include <iostream>
@@ -151,7 +151,7 @@ int main()
 }
 ```
 
-## <a name="output"></a>Sortie
+## <a name="output"></a>Output
 
 ```Output
 1
@@ -161,4 +161,4 @@ first, 2, third, 3.14159
 ```
 
 > [!NOTE]
->  La plupart des implémentations qui intègrent des fonctions de modèle variadique utilisent la récurrence sous une forme quelconque, mais il est légèrement différente de la récurrence classique.  La récurrence classique implique une fonction s’appelle lui-même à l’aide de la même signature. (Il peut être surchargée ou modélisée, mais la même signature est choisie à chaque fois.) La récursivité Variadique implique l’appel d’un modèle de fonction variadique en utilisant des nombres (presque toujours décroissants) d’arguments et ainsi en horodatant une signature différente chaque fois. Un « cas de base » est toujours requis, mais la nature de la récursivité est différente.
+>  La plupart des implémentations qui intègrent des fonctions de modèle variadiques utilisent la récursivité d’une certaine forme, mais elle est légèrement différente de la récursivité traditionnelle.  La récursivité traditionnelle implique une fonction qui s’appelle elle-même à l’aide de la même signature. (Elle peut être surchargée ou basée sur un modèle, mais la même signature est choisie à chaque fois.) La récursivité variadiques implique l’appel d’un modèle de fonction variadiques à l’aide de nombres d’arguments différents (presque toujours décroissants) et, par conséquent, le marquage d’une signature différente à chaque fois. Un « cas de base » est toujours requis, mais la nature de la récursivité est différente.

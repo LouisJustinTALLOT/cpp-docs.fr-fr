@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - hidden attribute
 ms.assetid: 199c96dd-fc07-46c7-af93-92020aebebe7
-ms.openlocfilehash: 75b03877b1204d6e1c4770f5ba9c8c88338b3394
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: 6b420e8f50bd217de460a81f5faaf9583c701376
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69501446"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80168094"
 ---
 # <a name="hidden"></a>hidden
 
@@ -31,7 +31,7 @@ L’attribut **Hidden** C++ a les mêmes fonctionnalités que l’attribut MIDL 
 
 Pour obtenir un exemple d’utilisation de **Hidden**, consultez l’exemple de [Bindable](bindable.md) .
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
 ### <a name="attribute-context"></a>Contexte d'attribut
 
@@ -39,8 +39,8 @@ Pour obtenir un exemple d’utilisation de **Hidden**, consultez l’exemple de 
 |-|-|
 |**S'applique à**|**interface**, **classe**, **struct**, méthode, propriété|
 |**Renouvelable**|Non|
-|**Attributs requis**|**coclasse** (en cas d’application à une **classe** ou à un **struct**)|
-|**Attributs non valides**|Aucun|
+|**Attributs requis**|**coclasse** (en cas d’application à une **classe** ou un **struct**)|
+|**Attributs non valides**|None|
 
 Pour plus d'informations, consultez [Contextes d'attribut](cpp-attributes-com-net.md#contexts).
 
