@@ -6,18 +6,18 @@ helpviewer_keywords:
 - rules, inference
 - NMAKE program, inference rules
 ms.assetid: caff320f-fb07-4eea-80c3-a6a2133a8492
-ms.openlocfilehash: 0c1db9150c3b2c36c35e6802bfcd639af45bdc82
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: d3d7ca41d96d3845237b445edefff05044dacdc2
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62291273"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80170512"
 ---
 # <a name="inference-rules"></a>Règles d'inférence
 
-Règles d’inférence fournissent des commandes pour mettre à jour les cibles et de déduire des dépendants pour les cibles. Les extensions dans une règle d’inférence correspondent à une seule cible et dépendants qui ont le même nom de base. Règles d’inférence sont définies par l’utilisateur ou prédéfinies ; règles prédéfinies peuvent être redéfinies.
+Les règles d’inférence fournissent des commandes pour mettre à jour les cibles et déduire les dépendants pour les cibles. Les extensions d’une règle d’inférence correspondent à une cible unique et à un dépendant qui ont le même nom de base. Les règles d’inférence sont définies par l’utilisateur ou prédéfinies ; les règles prédéfinies peuvent être redéfinies.
 
-Si une dépendance obsolète n’a pas de commandes et si [. SUFFIXES](dot-directives.md) contient l’extension du dépendant, utilise NMAKE une règle dont les extensions correspondent à la cible et fichier dans le répertoire actuel ou spécifié. Si plusieurs règles correspondent à des fichiers existants, le **. SUFFIXES** liste détermine lequel utiliser ; priorité de la liste va de gauche à droite. Si un fichier dépendant n’existe pas et n’est pas répertorié en tant que cible dans un autre bloc de description, une règle d’inférence peut créer le dépendant manquant à partir d’un autre fichier portant le même nom de base. Si la cible d’un bloc description n’a aucun dépendants ou des commandes, une règle d’inférence peut mettre à jour la cible. Règles d’inférence peuvent générer une cible de ligne de commande même si aucun bloc de description. NMAKE peut appeler une règle pour un dépendant déduit même si un dépendant explicite est spécifié.
+Si une dépendance obsolète n’a pas de commande et si [. Les SUFFIXes](dot-directives.md) contiennent l’extension de dépendante, NMAKE utilise une règle dont les extensions correspondent à la cible et à un fichier existant dans le répertoire actuel ou spécifié. Si plusieurs règles correspondent à des fichiers existants, le **.** La liste des suffixes détermine laquelle utiliser ; Liste des priorités décroissantes de gauche à droite. Si un fichier dépendant n’existe pas et n’est pas listé comme cible dans un autre bloc de description, une règle d’inférence peut créer le dépendant manquant d’un autre fichier portant le même nom de base. Si la cible d’un bloc de description n’a pas de dépendants ou de commandes, une règle d’inférence peut mettre à jour la cible. Les règles d’inférence peuvent générer une cible de ligne de commande même si aucun bloc de description n’existe. NMAKE peut appeler une règle pour un dépendant déduit, même si un dépendant explicite est spécifié.
 
 ## <a name="what-do-you-want-to-know-more-about"></a>Sur quels éléments souhaitez-vous obtenir des informations supplémentaires ?
 

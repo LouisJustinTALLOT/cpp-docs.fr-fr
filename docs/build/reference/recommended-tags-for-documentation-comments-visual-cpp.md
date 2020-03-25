@@ -1,17 +1,17 @@
 ---
-title: Balises recommandées pour commentaires de Documentation (commentaires de documentation C++)
+title: Balises recommandées pour lesC++ commentaires de documentation (commentaires de documentation)
 ms.date: 11/04/2016
 ms.assetid: 6548e798-5235-4a38-9482-bdc7b88f40a9
-ms.openlocfilehash: 2a6a2c3983c10579a6cd96b69be81aa7df8b8ee7
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 4e0937b79012f65ba136e18ac81f014be23688f8
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62319146"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80168861"
 ---
-# <a name="recommended-tags-for-documentation-comments"></a>Étiquettes recommandées pour les commentaires de documentation
+# <a name="recommended-tags-for-documentation-comments"></a>Balises recommandées pour les commentaires de documentation
 
-Le compilateur MSVC traitera les commentaires de documentation dans votre code et crée un fichier .xdc pour chaque compiland et xdcmake.exe traitera les fichiers .xdc dans un fichier .xml. Le traitement du fichier .xml pour créer une documentation est un détail qui doit être implémenté sur votre site.
+Le compilateur MSVC traitera les commentaires de documentation dans votre code et créera un fichier. XDC pour chaque compiland, et xdcmake. exe traitera les fichiers. XDC dans un fichier. Xml. Le traitement du fichier .xml pour créer une documentation est un détail qui doit être implémenté sur votre site.
 
 Les balises sont traitées sur des constructions telles que les types et les membres de type.
 
@@ -33,7 +33,7 @@ Le compilateur traite toute balise représentant du code XML correct. Les balise
 
 1. Le compilateur vérifie la syntaxe.
 
-Dans la version actuelle, le compilateur MSVC ne prend pas en charge `<paramref>`, une balise qui est pris en charge par d’autres compilateurs Visual Studio. Visual C++ peut prendre en charge `<paramref>` dans une version ultérieure.
+Dans la version actuelle, le compilateur MSVC ne prend pas en charge `<paramref>`, une balise prise en charge par d’autres compilateurs Visual Studio. Visual C++ peut prendre en charge `<paramref>` dans une version ultérieure.
 
 ## <a name="see-also"></a>Voir aussi
 

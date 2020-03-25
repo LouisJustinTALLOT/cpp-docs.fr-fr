@@ -2,12 +2,12 @@
 title: Fonctions intrinsèques du compilateur et langage assembleur
 ms.date: 09/02/2019
 ms.assetid: ddd51620-d01b-44cf-853b-e11420d13137
-ms.openlocfilehash: 1beeb0dedb153e4cd2b0a26bfc94ef7d0f9201c2
-ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
+ms.openlocfilehash: 36feb6971a8f5e4affd4f71b6afc1d508b2802f1
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/03/2019
-ms.locfileid: "70217945"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80171682"
 ---
 # <a name="compiler-intrinsics-and-assembly-language"></a>Fonctions intrinsèques du compilateur et langage assembleur
 
@@ -15,7 +15,7 @@ Cette section de la documentation contient des informations sur les intrinsèque
 
 ## <a name="related-articles"></a>Articles connexes
 
-|Titre|Description|
+|Intitulé|Description|
 |-----------|-----------------|
 |[Intrinsèques du compilateur](../intrinsics/compiler-intrinsics.md)|Décrit les fonctions intrinsèques disponibles dans Microsoft C et C++ pour les architectures x86, ARM et x64.|
 |[Assembleur inline](../assembler/inline/inline-assembler.md)|Explique comment utiliser l'assembleur inline de Visual C/C++ avec des processeurs x86 :|

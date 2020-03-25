@@ -6,23 +6,23 @@ f1_keywords:
 helpviewer_keywords:
 - C3505
 ms.assetid: ed73c99e-93a1-4f3a-bac7-ba7ed5d836e4
-ms.openlocfilehash: 5730102371d00ebaf3ae05fdefb70184b58d7c18
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 0c67eb46208c35c1b11a74898107ad3c0e6e570d
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62400329"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80200848"
 ---
 # <a name="compiler-error-c3505"></a>Erreur du compilateur C3505
 
-> Impossible de charger la bibliothèque de type «*guid*'
+> Impossible de charger la bibliothèque de types'*GUID*'
 
-C3505 peut être provoquée si vous exécutez le compilateur d’entre 32 bits, x86 hébergés 64 bits, x64 cibles sur une version 64 bits de l’ordinateur, car le compilateur s’exécute sous WOW64 et peuvent uniquement lire à partir de la ruche du Registre 32 bits.
+C3505 peut être provoquée si vous exécutez le compilateur croisé entre les versions 32 bits, x86-Host pour 64 bits et x64 sur un ordinateur 64 bits, car le compilateur s’exécute sous WOW64 et peut uniquement lire à partir de la ruche de Registre 32 bits.
 
-Vous pouvez résoudre cette erreur en créant des versions 32 bits et 64 bits de la bibliothèque de types que vous voulez importer, puis inscrivez-les les deux.  Vous pouvez également utiliser le compilateur 64 bits natif, ce qui vous oblige à modifier votre **répertoires VC ++** propriété dans l’IDE pour pointer vers le compilateur 64 bits.
+Vous pouvez résoudre cette erreur en générant à la fois les versions 32 bits et 64 bits de la bibliothèque de types que vous essayez d’importer, puis les inscrire toutes les deux.  Vous pouvez utiliser le compilateur 64 bits natif, qui vous oblige à modifier votre propriété de **Répertoires VC + +** dans l’IDE pour pointer vers le compilateur 64 bits.
 
 Pour plus d'informations, consultez
 
-- [Guide pratique pour activer un ensemble d’outils Visual C++ 64 bits sur la ligne de commande](../../build/how-to-enable-a-64-bit-visual-cpp-toolset-on-the-command-line.md)
+- [Guide pratique pour activer un ensemble d’outils du compilateur Visual C++ 64 bits sur la ligne de commande](../../build/how-to-enable-a-64-bit-visual-cpp-toolset-on-the-command-line.md)
 
 - [Guide pratique pour configurer des projets Visual C++ pour cibler des plateformes x64 64 bits](../../build/how-to-configure-visual-cpp-projects-to-target-64-bit-platforms.md)

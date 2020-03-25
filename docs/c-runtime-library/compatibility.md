@@ -7,12 +7,12 @@ helpviewer_keywords:
 - compatibility, C run-time libraries
 - compatibility
 ms.assetid: 346709cb-edda-4909-9a19-3d253eddb6b7
-ms.openlocfilehash: fba85462218d0cc2ba1d52caa4e59b2cfb9f4fd6
-ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
+ms.openlocfilehash: 39b936acc43243973c2f66ef6fc7306026cc3259
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/17/2020
-ms.locfileid: "79443487"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80171045"
 ---
 # <a name="compatibility"></a>Compatibilité
 
@@ -22,7 +22,7 @@ Les fonctions spécifiques à l’implémentation Microsoft de Visual C++ se tro
 
 La norme C++ réserve à l’implémentation des noms qui commencent par un trait de soulignement dans l’espace de noms global. Les fonctions POSIX et les fonctions de bibliothèque Runtime spécifiques à Microsoft se trouvent dans l’espace de noms global, mais ne font pas partie de la bibliothèque Runtime C standard. C’est la raison pour laquelle les implémentations Microsoft préférées de ces fonctions ont un trait de soulignement de début. Pour des raisons de portabilité, la bibliothèque UCRT prend également en charge les noms par défaut. Toutefois, le compilateur Microsoft C++ émet un avertissement de dépréciation quand du code qui les utilise est compilé. Seuls les noms par défaut sont déconseillés, pas les fonctions elles-mêmes. Pour supprimer l’avertissement, définissez `_CRT_NONSTDC_NO_WARNINGS` avant d’inclure des en-têtes dans le code qui utilise les noms POSIX d’origine.
 
-Certaines fonctions de la bibliothèque C standard ont un historique d’utilisation non sécurisée, en raison de paramètres mal utilisés et de mémoires tampons non vérifiées. Ces fonctions sont souvent à l’origine de problèmes de sécurité dans le code. Microsoft a créé un ensemble de versions plus sécurisées de ces fonctions qui vérifient l’utilisation des paramètres. Ils appellent le gestionnaire de paramètres non valides lorsqu’un problème est détecté au moment de l’exécution.  Par défaut, le compilateur Microsoft C++ émet un avertissement de dépréciation quand une variante plus sécurisée d’une fonction est disponible. Quand vous compilez votre C++code en tant que, vous pouvez définir `_CRT_SECURE_CPP_OVERLOAD_STANDARD_NAMES` comme 1 pour éliminer la plupart des avertissements. Cette macro permet aux surcharges de modèle d’appeler les variantes plus sûres tout en conservant le code source portable. Pour supprimer l’avertissement, définissez `_CRT_SECURE_NO_WARNINGS` avant d’inclure des en-têtes dans le code qui utilise ces fonctions. Pour plus d’informations, consultez [Fonctionnalités de sécurité dans le CRT](../c-runtime-library/security-features-in-the-crt.md).
+Certaines fonctions de la bibliothèque C standard ont un historique d’utilisation non sécurisée, en raison de paramètres mal utilisés et de mémoires tampons non vérifiées. Ces fonctions sont souvent à l’origine de problèmes de sécurité dans le code. Microsoft a créé un ensemble de versions plus sécurisées de ces fonctions qui vérifient l’utilisation des paramètres. Ils appellent le gestionnaire de paramètres non valides lorsqu’un problème est détecté au moment de l’exécution.  Par défaut, le compilateur Microsoft C++ émet un avertissement de dépréciation quand une variante plus sécurisée d’une fonction est disponible. Quand vous compilez votre C++code en tant que, vous pouvez définir `_CRT_SECURE_CPP_OVERLOAD_STANDARD_NAMES` comme 1 pour éliminer la plupart des avertissements. Cette macro permet aux surcharges de modèle d’appeler les variantes plus sûres tout en conservant le code source portable. Pour supprimer l’avertissement, définissez `_CRT_SECURE_NO_WARNINGS` avant d’inclure des en-têtes dans le code qui utilise ces fonctions. Pour plus d'informations, consultez [Security Features in the CRT](../c-runtime-library/security-features-in-the-crt.md).
 
 À l’exception de ce qui est indiqué dans la documentation pour des fonctions spécifiques, la bibliothèque UCRT est compatible avec l’API Windows.  Certaines fonctions ne sont pas prises en charge dans les applications Windows Store ou plateforme Windows universelle ([UWP](/uwp)). Ces fonctions sont répertoriées dans [fonctions CRT non prises en charge dans les applications plateforme Windows universelle](../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
 

@@ -6,17 +6,17 @@ f1_keywords:
 helpviewer_keywords:
 - C2865
 ms.assetid: 973eb6a0-c99a-4d25-b3e5-fe0539794d77
-ms.openlocfilehash: 38b7dd86a57c3cd89811c6489e51fb4271fd7b79
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: dd4374c1a577c4c39c5dec107ed5025d7cdc79c2
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62165143"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80201694"
 ---
 # <a name="compiler-error-c2865"></a>Erreur du compilateur C2865
 
-'fonction' : comparaison non conforme pour handle_ou_pointeur
+'fonction' : comparaison non conforme pour handle_or_pointer
 
-Vous pouvez comparer les références aux [les Classes et Structs](../../extensions/classes-and-structs-cpp-component-extensions.md) ou des types de référence uniquement pour l’égalité pour voir s’ils font référence au même objet (==) ou à différents objets gérés ( ! =).
+Vous pouvez comparer des références à des [classes et des structs](../../extensions/classes-and-structs-cpp-component-extensions.md) ou des types de référence managés uniquement pour déterminer s’ils font référence au même objet (= =) ou à des objets différents ( ! =).
 
-Impossible de comparer les pour le classement car le runtime .NET peut déplacer des objets managés à tout moment, modifie le résultat du test.
+Vous ne pouvez pas les comparer pour le classement, car le Runtime .NET peut déplacer des objets managés à tout moment, en modifiant le résultat du test.

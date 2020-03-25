@@ -6,16 +6,16 @@ f1_keywords:
 helpviewer_keywords:
 - Detach method [C++]
 ms.assetid: 0652053e-af37-44e9-a278-2522212ebfed
-ms.openlocfilehash: affaefd8af4802836733587af62977171ba01410
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 8ba42f19e3474cc4a3199771f761b021221f430e
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62154959"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80190012"
 ---
-# <a name="comptrtdetach"></a>_com_ptr_t::Detach
+# <a name="_com_ptr_tdetach"></a>_com_ptr_t::Detach
 
-**Section spécifique à Microsoft**
+**Section spécifique de Microsoft**
 
 Extrait et retourne le pointeur d'interface encapsulé.
 
@@ -27,9 +27,9 @@ Interface* Detach( ) throw( );
 
 ## <a name="remarks"></a>Notes
 
-Extrait et retourne le pointeur d’interface encapsulé, puis efface le stockage du pointeur encapsulé avec la valeur NULL. Cela supprime le pointeur d'interface de l'encapsulation. Il vous incombe d’appeler `Release` sur le pointeur d’interface retourné.
+Extrait et retourne le pointeur d'interface encapsulé, puis efface le stockage du pointeur encapsulé en lui affectant la valeur NULL. Cela supprime le pointeur d'interface de l'encapsulation. Il vous revient d’appeler `Release` sur le pointeur d’interface retourné.
 
-**FIN de la section spécifique à Microsoft**
+**Fin de la section spécifique de Microsoft**
 
 ## <a name="see-also"></a>Voir aussi
 

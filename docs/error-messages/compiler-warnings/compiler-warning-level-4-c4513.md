@@ -6,15 +6,15 @@ f1_keywords:
 helpviewer_keywords:
 - C4513
 ms.assetid: 6877334a-f30a-4184-9483-dac3348737a4
-ms.openlocfilehash: cbde035a988e5f6ac64303b2ed159b885ece8684
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: f5f25465beb04c6f91d290d4c119d07d75dd8f54
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62221061"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80185215"
 ---
 # <a name="compiler-warning-level-4-c4513"></a>Avertissement du compilateur (niveau 4) C4513
 
-'class' : destructeur n’a pas pu être généré.
+'classe' : impossible de générer le destructeur
 
-Le compilateur ne peut pas générer un destructeur par défaut pour la classe donnée ; aucun destructeur a été créé. Le destructeur est dans une classe de base qui n’est pas accessible à la classe dérivée. Si la classe de base a un destructeur privé, rendre publique ou protégée.
+Le compilateur ne peut pas générer de destructeur par défaut pour la classe donnée ; aucun destructeur n’a été créé. Le destructeur est dans une classe de base qui n’est pas accessible à la classe dérivée. Si la classe de base a un destructeur privé, rendez-le public ou protégé.

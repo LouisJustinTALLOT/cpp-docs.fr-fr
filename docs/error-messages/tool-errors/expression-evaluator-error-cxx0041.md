@@ -7,19 +7,19 @@ helpviewer_keywords:
 - CAN0041
 - CXX0041
 ms.assetid: ce8a2366-758f-481b-8c03-ed7d779091b2
-ms.openlocfilehash: 0b2d2a17bbc7f1084e25fe53157eb5c17e4d71bd
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: b297f7ed928bc2ea248773014293ebae4e8f1d23
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62396962"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80185085"
 ---
 # <a name="expression-evaluator-error-cxx0041"></a>Évaluateur d'expression, erreur CXX0041
 
-élément de la classe doit être membre statique ou une fonction membre
+l’élément Class doit être un membre static ou une fonction membre
 
-Un membre non statique d’une classe (ou structure ou union) a été utilisé sans spécification de l’instanciation de la classe à utiliser.
+Un membre non statique d’une classe (ou d’une structure ou d’une Union) a été utilisé sans spécifier l’instanciation de la classe à utiliser.
 
-Uniquement des membres de données statiques ou des fonctions de membre peuvent être utilisées sans spécifier l’instanciation.
+Seules des données membres statiques ou des fonctions membres peuvent être utilisées sans spécifier d’instanciation.
 
 Cette erreur est identique à CAN0041.

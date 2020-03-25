@@ -10,18 +10,18 @@ helpviewer_keywords:
 - __uuidof keyword [C++]
 - __LIBID_ keyword [C++]
 ms.assetid: badfe709-809b-4b66-ad48-ee35039d25c6
-ms.openlocfilehash: a14ef9043ec2196ff930a37d0eff95e90024d3d5
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 09348d061fde4cb09eb6eb351f146404f355e184
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62244154"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80187789"
 ---
-# <a name="uuidof-operator"></a>__uuidof, opérateur
+# <a name="__uuidof-operator"></a>__uuidof, opérateur
 
-**Section spécifique à Microsoft**
+**Section spécifique de Microsoft**
 
-Récupère le GUID associé à l’expression.
+Récupère le GUID attaché à l’expression.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -31,24 +31,24 @@ __uuidof (expression)
 
 ## <a name="remarks"></a>Notes
 
-Le *expression* peut être un nom de type, un pointeur, une référence ou un tableau de ce type, un modèle spécialisé sur ces types, ou une variable de ces types. L’argument est valide tant que le compilateur peut l’utiliser pour rechercher le GUID attaché.
+L' *expression* peut être un nom de type, un pointeur, une référence ou un tableau de ce type, un modèle spécialisé sur ces types ou une variable de ces types. L’argument est valide tant que le compilateur peut l’utiliser pour rechercher le GUID attaché.
 
-Un cas spécial de cette intrinsèque est lorsque deux **0** ou valeur NULL est fournie comme argument. Dans ce cas, **__uuidof** renverra un GUID composé de zéros non significatifs.
+Un cas particulier de cet intrinsèque est lorsque **0** ou null est fourni en tant qu’argument. Dans ce cas, **__uuidof** retourne un GUID composé de zéros.
 
 Utilisez ce mot clé pour extraire le GUID attaché à :
 
-- Un objet par le [uuid](../cpp/uuid-cpp.md) attributs étendus.
+- Objet par l’attribut étendu [UUID](../cpp/uuid-cpp.md) .
 
-- Un bloc de bibliothèque est créé avec le [module](../windows/attributes/module-cpp.md) attribut.
+- Bloc de bibliothèque créé avec l’attribut de [module](../windows/attributes/module-cpp.md) .
 
 > [!NOTE]
-> Dans une version debug, **__uuidof** toujours Initialise un objet dynamiquement (lors de l’exécution). Dans une version Release, **__uuidof** peut initialiser statiquement (au moment de la compilation) un objet.
+> Dans une version Debug, **__uuidof** Initialise toujours un objet de manière dynamique (au moment de l’exécution). Dans une version Release, **__uuidof** pouvez initialiser un objet de manière statique (au moment de la compilation).
 
-Pour assurer la compatibilité avec les versions précédentes, **_uuidof** est un synonyme de **__uuidof** , sauf si option du compilateur [/Za \(désactiver les extensions de langage)](../build/reference/za-ze-disable-language-extensions.md) est spécifié.
+Pour la compatibilité avec les versions précédentes, **_uuidof** est un synonyme de **__uuidof** sauf si l’option de compilateur [/za \(désactiver les extensions de langage)](../build/reference/za-ze-disable-language-extensions.md) est spécifiée.
 
 ## <a name="example"></a>Exemple
 
-Le code suivant (compilé avec ole32.lib) affiche l’uuid d’un bloc de bibliothèque créé avec l’attribut de module :
+Le code suivant (compilé avec ole32. lib) affiche l’UUID d’un bloc de bibliothèque créé avec l’attribut de module :
 
 ```cpp
 // expre_uuidof.cpp
@@ -73,13 +73,13 @@ int main() {
 
 ## <a name="comments"></a>Commentaires
 
-Dans les cas où le nom de la bibliothèque n’est plus dans la portée, vous pouvez utiliser `__LIBID_` au lieu de **__uuidof**. Exemple :
+Dans les cas où le nom de la bibliothèque n’est plus dans la portée, vous pouvez utiliser `__LIBID_` au lieu de **__uuidof**. Par exemple :
 
 ```cpp
 StringFromCLSID(__LIBID_, &lpolestr);
 ```
 
-**FIN de la section spécifique à Microsoft**
+**Fin de la section spécifique de Microsoft**
 
 ## <a name="see-also"></a>Voir aussi
 

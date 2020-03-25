@@ -6,15 +6,15 @@ f1_keywords:
 helpviewer_keywords:
 - C2839
 ms.assetid: e4914def-2ee1-4e2e-8951-d35f9515c2b2
-ms.openlocfilehash: 3d4426fdc055cb6b99296f6e2872cbaa47b9aa1a
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: c676a466844708dca78926c98d1a927c41b4b9fc
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62406806"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80201884"
 ---
 # <a name="compiler-error-c2839"></a>Erreur du compilateur C2839
 
-type de retour non valide 'type' pour surchargé 'operator ->'
+type de retour’type’non valide pour’operator-> 'surchargé
 
-Le `->` opérateur doit retourner une classe, struct, union ou la référence à un.
+L’opérateur `->` doit retourner une classe, un struct ou une Union, ou une référence à un.

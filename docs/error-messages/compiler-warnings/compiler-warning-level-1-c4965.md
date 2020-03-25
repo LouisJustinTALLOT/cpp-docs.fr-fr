@@ -1,19 +1,19 @@
 ---
-title: Avertissement du compilateur (niveau 1) C4965
+title: Avertissement du compilateur (niveau 1) C4965
 ms.date: 11/04/2016
 f1_keywords:
 - C4965
 helpviewer_keywords:
 - C4965
 ms.assetid: 47f3f6dc-459b-4a25-9947-f394c8966cb5
-ms.openlocfilehash: ac1ffc1626a8b72fd7c9026afb6c6a54bace3750
-ms.sourcegitcommit: 458dcc794e3841919c01a3a5ff6b9a3767f8861b
+ms.openlocfilehash: e882cabdf38fd9bc926fbaa04352ba9d0ace90ce
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/13/2019
-ms.locfileid: "74052234"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80174412"
 ---
-# <a name="compiler-warning-level-1-c4965"></a>Avertissement du compilateur (niveau 1) C4965
+# <a name="compiler-warning-level-1-c4965"></a>Avertissement du compilateur (niveau 1) C4965
 
 zone implicite de l’entier 0 ; utiliser nullptr ou cast explicite
 

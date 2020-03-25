@@ -61,12 +61,12 @@ helpviewer_keywords:
 - __is_simple_value_class keyword [C++]
 - __has_trivial_constructor keyword [C++]
 ms.assetid: cd440630-0394-48c0-a16b-1580b6ef5844
-ms.openlocfilehash: d068917a02fef0f1d4b7fd46fd6978da2d358872
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
-ms.translationtype: HT
+ms.openlocfilehash: 1bfb4308dc76e3393eceddf8dedd6d11e73adc17
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "65516214"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80172528"
 ---
 # <a name="compiler-support-for-type-traits-ccli-and-ccx"></a>Prise en charge du compilateur pour les traits de type (C++/CLI et C++/CX)
 
@@ -74,7 +74,7 @@ Le compilateur Microsoft C++ prend en charge les *traits de type* pour C++/CLI e
 
 ## <a name="all-runtimes"></a>Tous les runtimes
 
-### <a name="remarks"></a>Remarques
+### <a name="remarks"></a>Notes
 
 Les traits de type s'avèrent particulièrement utiles pour les programmeurs qui écrivent des bibliothèques.
 
@@ -82,7 +82,7 @@ La liste suivante répertorie les traits de type pris en charge par le compilate
 
 (Dans la liste suivante, les exemples de code sont écrits uniquement en C++/CLI. Mais le trait de type correspondant est également pris en charge dans C++/CX sauf indication contraire. Le terme « type de plateforme » fait référence aux types Windows Runtime ou aux types du Common Language Runtime.)
 
-- `__has_assign(` *type* `)`
+- *type* de `__has_assign(` `)`
 
    Retourne la valeur **true** si le type de plateforme ou le type natif possède un opérateur d’assignation de copie.
 
@@ -96,7 +96,7 @@ La liste suivante répertorie les traits de type pris en charge par le compilate
     }
     ```
 
-- `__has_copy(` *type* `)`
+- *type* de `__has_copy(` `)`
 
    Retourne la valeur **true** si le type de plateforme ou natif possède un constructeur de copie.
 
@@ -110,9 +110,9 @@ La liste suivante répertorie les traits de type pris en charge par le compilate
     }
     ```
 
-- `__has_finalizer(` *type* `)`
+- *type* de `__has_finalizer(` `)`
 
-   (Non pris en charge dans C++/CX.) Retourne la valeur **true** si le type CLR a un finaliseur. Consultez [Destructeurs et finaliseurs dans Procédure : définir et consommer des classes et structs (C++/CLI)](../dotnet/how-to-define-and-consume-classes-and-structs-cpp-cli.md#BKMK_Destructors_and_finalizers) pour plus d’informations.
+   (Non pris en C++charge dans/CX.) Retourne la **valeur true** si le type CLR a un finaliseur. Pour plus d’informations, consultez [destructeurs et finaliseurs dans Guide pratique pour définir et consommerC++des classes et des structs (/CLI)](../dotnet/how-to-define-and-consume-classes-and-structs-cpp-cli.md#BKMK_Destructors_and_finalizers) .
 
     ```cpp
     using namespace System;
@@ -127,7 +127,7 @@ La liste suivante répertorie les traits de type pris en charge par le compilate
     }
     ```
 
-- `__has_nothrow_assign(` *type* `)`
+- *type* de `__has_nothrow_assign(` `)`
 
    Retourne la valeur **true** si un opérateur d’assignation de copie a une spécification d’exception vide.
 
@@ -143,7 +143,7 @@ La liste suivante répertorie les traits de type pris en charge par le compilate
     }
     ```
 
-- `__has_nothrow_constructor(` *type* `)`
+- *type* de `__has_nothrow_constructor(` `)`
 
    Retourne la valeur **true** si le constructeur par défaut a une spécification d’exception vide.
 
@@ -159,7 +159,7 @@ La liste suivante répertorie les traits de type pris en charge par le compilate
     }
     ```
 
-- `__has_nothrow_copy(` *type* `)`
+- *type* de `__has_nothrow_copy(` `)`
 
    Retourne la valeur **true** si le constructeur de copie a une spécification d’exception vide.
 
@@ -175,7 +175,7 @@ La liste suivante répertorie les traits de type pris en charge par le compilate
     }
     ```
 
-- `__has_trivial_assign(` *type* `)`
+- *type* de `__has_trivial_assign(` `)`
 
    Retourne la valeur **true** si le type a un opérateur d’assignation trivial généré par le compilateur.
 
@@ -189,7 +189,7 @@ La liste suivante répertorie les traits de type pris en charge par le compilate
     }
     ```
 
-- `__has_trivial_constructor(` *type* `)`
+- *type* de `__has_trivial_constructor(` `)`
 
    Retourne la valeur **true** si le type a un constructeur trivial généré par le compilateur.
 
@@ -203,7 +203,7 @@ La liste suivante répertorie les traits de type pris en charge par le compilate
     }
     ```
 
-- `__has_trivial_copy(` *type* `)`
+- *type* de `__has_trivial_copy(` `)`
 
    Retourne la valeur **true** si le type a un constructeur de copie trivial généré par le compilateur.
 
@@ -217,7 +217,7 @@ La liste suivante répertorie les traits de type pris en charge par le compilate
     }
     ```
 
-- `__has_trivial_destructor(` *type* `)`
+- *type* de `__has_trivial_destructor(` `)`
 
    Retourne la valeur **true** si le type a un destructeur trivial généré par le compilateur.
 
@@ -232,7 +232,7 @@ La liste suivante répertorie les traits de type pris en charge par le compilate
     }
     ```
 
-- `__has_user_destructor(` *type* `)`
+- *type* de `__has_user_destructor(` `)`
 
    Retourne la valeur **true** si le type de plateforme ou natif a un destructeur déclaré par l’utilisateur.
 
@@ -249,7 +249,7 @@ La liste suivante répertorie les traits de type pris en charge par le compilate
     }
     ```
 
-- `__has_virtual_destructor(` *type* `)`
+- *type* de `__has_virtual_destructor(` `)`
 
    Retourne la valeur **true** si le type a un destructeur virtuel.
 
@@ -268,7 +268,7 @@ La liste suivante répertorie les traits de type pris en charge par le compilate
     }
     ```
 
-- `__is_abstract(` *type* `)`
+- *type* de `__is_abstract(` `)`
 
    Retourne la valeur **true** si le type est un type abstract. Pour plus d’informations sur les types abstract natifs, consultez [Classes abstract](../cpp/abstract-classes-cpp.md).
 
@@ -308,7 +308,7 @@ La liste suivante répertorie les traits de type pris en charge par le compilate
     }
     ```
 
-- `__is_class(` *type* `)`
+- *type* de `__is_class(` `)`
 
    Retourne la valeur **true** si le type est une classe native ou un struct natif.
 
@@ -322,7 +322,7 @@ La liste suivante répertorie les traits de type pris en charge par le compilate
     }
     ```
 
-- `__is_convertible_to(` `from` `,`  `to` `)`
+- `__is_convertible_to(` `from` `,``to` `)`
 
    Retourne la valeur **true** si le premier type peut être converti en second type.
 
@@ -340,7 +340,7 @@ La liste suivante répertorie les traits de type pris en charge par le compilate
     }
     ```
 
-- `__is_delegate(` *type* `)`
+- *type* de `__is_delegate(` `)`
 
    Retourne la valeur **true** si `type` est un délégué. Pour plus d’informations, consultez [délégué (C++/CLI et C++/CX)](delegate-cpp-component-extensions.md).
 
@@ -351,7 +351,7 @@ La liste suivante répertorie les traits de type pris en charge par le compilate
     }
     ```
 
-- `__is_empty(` *type* `)`
+- *type* de `__is_empty(` `)`
 
    Retourne la valeur **true** si le type ne possède aucun membre de données d’instance.
 
@@ -367,7 +367,7 @@ La liste suivante répertorie les traits de type pris en charge par le compilate
     }
     ```
 
-- `__is_enum(` *type* `)`
+- *type* de `__is_enum(` `)`
 
    Retourne la valeur **true** si le type est un enum natif.
 
@@ -389,7 +389,7 @@ La liste suivante répertorie les traits de type pris en charge par le compilate
     }
     ```
 
-- `__is_interface_class(` *type* `)`
+- *type* de `__is_interface_class(` `)`
 
    Retourne la valeur **true** si une interface de plateforme est passée. Pour plus d’informations, consultez [classe d’interface](interface-class-cpp-component-extensions.md).
 
@@ -403,7 +403,7 @@ La liste suivante répertorie les traits de type pris en charge par le compilate
     }
     ```
 
-- `__is_pod(` *type* `)`
+- *type* de `__is_pod(` `)`
 
    Retourne la valeur **true** si le type est une classe ou une union sans aucun constructeur ni aucun membre non static privé ou protégé, ni aucune classe de base ni aucune fonction virtuelle. Consultez la norme C++, sections 8.5.1/1, 9/4 et 3.9/10 pour plus d'informations sur les POD.
 
@@ -419,7 +419,7 @@ La liste suivante répertorie les traits de type pris en charge par le compilate
     }
     ```
 
-- `__is_polymorphic(` *type* `)`
+- *type* de `__is_polymorphic(` `)`
 
    Retourne la valeur **true** si un type natif possède des fonctions virtuelles.
 
@@ -435,7 +435,7 @@ La liste suivante répertorie les traits de type pris en charge par le compilate
     }
     ```
 
-- `__is_ref_array(` *type* `)`
+- *type* de `__is_ref_array(` `)`
 
    Retourne la valeur **true** si un tableau de plateforme est passé. Pour plus d’informations, consultez [Tableaux](arrays-cpp-component-extensions.md).
 
@@ -447,7 +447,7 @@ La liste suivante répertorie les traits de type pris en charge par le compilate
     }
     ```
 
-- `__is_ref_class(` *type* `)`
+- *type* de `__is_ref_class(` `)`
 
    Retourne la valeur **true** si une classe de référence est passée. Pour plus d’informations sur les types référence définis par l’utilisateur, consultez [Classes et structs](classes-and-structs-cpp-component-extensions.md).
 
@@ -460,7 +460,7 @@ La liste suivante répertorie les traits de type pris en charge par le compilate
     }
     ```
 
-- `__is_sealed(` *type* `)`
+- *type* de `__is_sealed(` `)`
 
    Retourne la valeur **true** si un type de plateforme ou un type natif marqué comme sealed est passé. Pour plus d’informations, consultez [sealed](sealed-cpp-component-extensions.md).
 
@@ -471,7 +471,7 @@ La liste suivante répertorie les traits de type pris en charge par le compilate
     }
     ```
 
-- `__is_simple_value_class(` *type* `)`
+- *type* de `__is_simple_value_class(` `)`
 
    Retourne la valeur **true** si un type valeur qui ne contient aucune référence au tas récupéré par le garbage collector est passé. Pour plus d’informations sur les types valeur définis par l’utilisateur, consultez [Classes et structs](classes-and-structs-cpp-component-extensions.md).
 
@@ -489,7 +489,7 @@ La liste suivante répertorie les traits de type pris en charge par le compilate
     }
     ```
 
-- `__is_union(` *type* `)`
+- *type* de `__is_union(` `)`
 
    Retourne la valeur **true** si un type est une union.
 
@@ -506,7 +506,7 @@ La liste suivante répertorie les traits de type pris en charge par le compilate
     }
     ```
 
-- `__is_value_class(` *type* `)`
+- *type* de `__is_value_class(` `)`
 
    Retourne la valeur **true** si un type valeur est passé. Pour plus d’informations sur les types valeur définis par l’utilisateur, consultez [Classes et structs](classes-and-structs-cpp-component-extensions.md).
 
@@ -520,7 +520,7 @@ La liste suivante répertorie les traits de type pris en charge par le compilate
 
 ## <a name="windows-runtime"></a>Windows Runtime
 
-### <a name="remarks"></a>Remarques
+### <a name="remarks"></a>Notes
 
 Le trait de type `__has_finalizer(`*type*`)` n’est pas pris en charge car cette plateforme ne prend pas en charge les finaliseurs.
 
@@ -530,7 +530,7 @@ Option du compilateur : `/ZW`
 
 ## <a name="common-language-runtime"></a>Common Language Runtime
 
-### <a name="remarks"></a>Remarques
+### <a name="remarks"></a>Notes
 
 (Il n’existe aucune note spécifique à la plateforme pour cette fonctionnalité.)
 

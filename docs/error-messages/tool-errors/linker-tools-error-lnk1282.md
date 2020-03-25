@@ -6,15 +6,15 @@ f1_keywords:
 helpviewer_keywords:
 - LNK1282
 ms.assetid: 99c13f52-eb80-46ce-a5b9-4537583e32a9
-ms.openlocfilehash: 79bfdd9920cbd17af85705530e819316017b0db1
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: bfe4edc95eb08e23d8acd0cab5acee4b4dde5683
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62160534"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80183629"
 ---
 # <a name="linker-tools-error-lnk1282"></a>Erreur des outils Éditeur de liens LNK1282
 
-/REBASE fichier ; Impossible Il a été signé
+Impossible de/REBASE le fichier ; Il a été signé
 
-Vous avez tenté de modifier l’adresse de base d’un assembly signé avec l’option /REBASE pour [editbin](../../build/reference/editbin-reference.md). Pour ce faire, modifiez tout d’abord l’adresse de base, et signe ensuite l’assembly.
+Vous avez tenté de modifier l’adresse de base d’un assembly signé avec l’option/REBASE pour [EDITBIN](../../build/reference/editbin-reference.md). Pour ce faire, commencez par modifier l’adresse de base, puis signez l’assembly.

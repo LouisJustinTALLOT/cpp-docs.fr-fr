@@ -1,19 +1,19 @@
 ---
-title: Avertissement du compilateur (niveau 1) C4490
+title: Avertissement du compilateur (niveau 1) C4490
 ms.date: 11/04/2016
 f1_keywords:
 - C4490
 helpviewer_keywords:
 - C4490
 ms.assetid: f9b03ecf-41a1-4f4d-a74c-2c1e88234ccc
-ms.openlocfilehash: 41fa124eed365b87b419a4019262c0c673399295
-ms.sourcegitcommit: e5192a25c084eda9eabfa37626f3274507e026b3
+ms.openlocfilehash: 0a14b99a7c4c222bbb8020a27c630a42b1cf0329
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/12/2019
-ms.locfileid: "73966181"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80186593"
 ---
-# <a name="compiler-warning-level-1-c4490"></a>Avertissement du compilateur (niveau 1) C4490
+# <a name="compiler-warning-level-1-c4490"></a>Avertissement du compilateur (niveau 1) C4490
 
 'override' : utilisation incorrecte du spécificateur de substitution ; 'Function’ne correspond pas à une méthode de classe ref de base
 

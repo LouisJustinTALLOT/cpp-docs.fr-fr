@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C1209
 ms.assetid: aa9ee10f-abe3-4683-9792-adca4cbbabb5
-ms.openlocfilehash: 8b23ae3459178937c6af7ccb5c8ee882dd508c93
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 0948debc2573ace269419641ca8facd495792341
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62375065"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80203435"
 ---
 # <a name="fatal-error-c1209"></a>Erreur irrécupérable C1209
 
@@ -23,4 +23,4 @@ Certaines fonctionnalités du compilateur risquent de ne pas fonctionner sur une
 
 Pour résoudre l’erreur C1209, installez le common language runtime fourni avec le compilateur que vous utilisez.
 
-Pour plus d’informations, consultez [assemblys Friend (C++)](../../dotnet/friend-assemblies-cpp.md).
+Pour plus d’informations, consultez [assemblys friendC++()](../../dotnet/friend-assemblies-cpp.md).

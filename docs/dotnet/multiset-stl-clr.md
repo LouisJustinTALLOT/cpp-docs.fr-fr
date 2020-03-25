@@ -97,18 +97,18 @@ helpviewer_keywords:
 - operator> member [STL/CLR]
 - operator>= member [STL/CLR]
 ms.assetid: 7c46e2b4-cd88-49b7-a9e6-63ad5ae7feb5
-ms.openlocfilehash: e7a0551c1d75993d588f5dbb369989c42a71d903
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 811b96cca1fbf661def181d16dcb6a02c6c398d8
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62384775"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80208492"
 ---
 # <a name="multiset-stlclr"></a>multiset (STL/CLR)
 
-La classe de modèle décrit un objet qui contrôle une séquence de longueur variable constituée d’éléments qui dispose d’un accès bidirectionnel. Vous utilisez le conteneur `multiset` pour gérer une séquence d’éléments comme une arborescence ordonnée (presque) à charge équilibrée de nœuds, chacun stocker un élément.
+La classe de modèle décrit un objet qui contrôle une séquence de longueur variable d’éléments disposant d’un accès bidirectionnel. Vous utilisez le conteneur `multiset` pour gérer une séquence d’éléments sous la forme d’une arborescence ordonnée équilibrée (presque), chacune stockant un élément.
 
-Dans la description ci-dessous, `GValue` est identique à `GKey`, qui à son tour est le même que *clé* , sauf si ce dernier est un type ref, auquel cas il est `Key^`.
+Dans la description ci-dessous, `GValue` est identique à `GKey`, qui est, à son tour, identique à la *clé* , sauf si ce dernier est un type REF, auquel cas il est `Key^`.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -128,14 +128,14 @@ template<typename Key>
 
 ### <a name="parameters"></a>Paramètres
 
-*Key*<br/>
-Le type du composant clé d’un élément dans la séquence contrôlée.
+*Clé*<br/>
+Type du composant clé d'un élément dans la séquence contrôlée.
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
 **En-tête :** \<cliext/set >
 
-**Namespace :** cliext
+**Espace de noms :** cliext
 
 ## <a name="declarations"></a>Déclarations
 
@@ -144,95 +144,95 @@ Le type du composant clé d’un élément dans la séquence contrôlée.
 |[multiset::const_iterator (STL/CLR)](#const_iterator)|Type d'un itérateur constant pour la séquence contrôlée.|
 |[multiset::const_reference (STL/CLR)](#const_reference)|Type d'une référence constante à un élément.|
 |[multiset::const_reverse_iterator (STL/CLR)](#const_reverse_iterator)|Type d'un itérateur inserve constant pour la séquence contrôlée.|
-|[multiset::difference_type (STL/CLR)](#difference_type)|Le type d’une distance (éventuellement signée) entre deux éléments.|
-|[multiset::generic_container (STL/CLR)](#generic_container)|Le type de l’interface générique pour le conteneur.|
-|[multiset::generic_iterator (STL/CLR)](#generic_iterator)|Le type d’un itérateur pour l’interface générique pour le conteneur.|
-|[multiset::generic_reverse_iterator (STL/CLR)](#generic_reverse_iterator)|Le type d’un itérateur inverse pour l’interface générique pour le conteneur.|
-|[multiset::generic_value (STL/CLR)](#generic_value)|Le type d’un élément pour l’interface générique pour le conteneur.|
+|[multiset::difference_type (STL/CLR)](#difference_type)|Type d’une distance (éventuellement signée) entre deux éléments.|
+|[multiset::generic_container (STL/CLR)](#generic_container)|Type de l’interface générique pour le conteneur.|
+|[multiset::generic_iterator (STL/CLR)](#generic_iterator)|Type d’un itérateur pour l’interface générique pour le conteneur.|
+|[multiset::generic_reverse_iterator (STL/CLR)](#generic_reverse_iterator)|Type d’un itérateur inverse pour l’interface générique pour le conteneur.|
+|[multiset::generic_value (STL/CLR)](#generic_value)|Type d’un élément pour l’interface générique pour le conteneur.|
 |[multiset::iterator (STL/CLR)](#iterator)|Type d'un itérateur pour la séquence contrôlée.|
-|[multiset::key_compare (STL/CLR)](#key_compare)|Délégué de classement pour les deux clés.|
+|[multiset::key_compare (STL/CLR)](#key_compare)|Délégué de classement de deux clés.|
 |[multiset::key_type (STL/CLR)](#key_type)|Type d'une clé de tri.|
 |[multiset::reference (STL/CLR)](#reference)|Type d'une référence à un élément.|
 |[multiset::reverse_iterator (STL/CLR)](#reverse_iterator)|Type d'un itérateur inverse pour la séquence contrôlée.|
-|[multiset::size_type (STL/CLR)](#size_type)|Le type d’une distance (négative) entre deux éléments.|
-|[multiset::value_compare (STL/CLR)](#value_compare)|Délégué de classement pour les deux valeurs d’éléments.|
-|[multiset::value_type (STL/CLR)](#value_type)|Type d’un élément.|
+|[multiset::size_type (STL/CLR)](#size_type)|Type d’une distance (non négative) entre deux éléments.|
+|[multiset::value_compare (STL/CLR)](#value_compare)|Délégué de classement pour deux valeurs d’élément.|
+|[multiset::value_type (STL/CLR)](#value_type)|Type d'un élément.|
 
 |Fonction membre|Description|
 |---------------------|-----------------|
 |[multiset::begin (STL/CLR)](#begin)|Désigne le début de la séquence contrôlée.|
 |[multiset::clear (STL/CLR)](#clear)|Supprime tous les éléments.|
-|[multiset::count (STL/CLR)](#count)|Compte des éléments qui correspondent à une clé spécifiée.|
+|[multiset::count (STL/CLR)](#count)|Compte les éléments qui correspondent à une clé spécifiée.|
 |[multiset::empty (STL/CLR)](#empty)|Vérifie l'absence d'éléments.|
 |[multiset::end (STL/CLR)](#end)|Désigne la fin de la séquence contrôlée.|
 |[multiset::equal_range (STL/CLR)](#equal_range)|Recherche une plage qui correspond à une clé spécifiée.|
 |[multiset::erase (STL/CLR)](#erase)|Supprime les éléments placés aux positions spécifiées.|
 |[multiset::find (STL/CLR)](#find)|Recherche un élément qui correspond à une clé spécifiée.|
 |[multiset::insert (STL/CLR)](#insert)|Ajoute des éléments.|
-|[multiset::key_comp (STL/CLR)](#key_comp)|Copie le délégué de classement pour les deux clés.|
-|[multiset::lower_bound (STL/CLR)](#lower_bound)|Début de la recherche de plage qui correspond à une clé spécifiée.|
+|[multiset::key_comp (STL/CLR)](#key_comp)|Copie le délégué de classement pour deux clés.|
+|[multiset::lower_bound (STL/CLR)](#lower_bound)|Recherche le début de la plage qui correspond à une clé spécifiée.|
 |[multiset::make_value (STL/CLR)](#make_value)|Construit un objet de valeur.|
 |[multiset::multiset (STL/CLR)](#multiset)|Construit un objet conteneur.|
 |[multiset::rbegin (STL/CLR)](#rbegin)|Désigne le début de la séquence contrôlée inverse.|
 |[multiset::rend (STL/CLR)](#rend)|Désigne la fin de la séquence contrôlée inverse.|
 |[multiset::size (STL/CLR)](#size)|Compte le nombre d'éléments.|
 |[multiset::swap (STL/CLR)](#swap)|Échange le contenu de deux conteneurs.|
-|[multiset::to_array (STL/CLR)](#to_array)|Copie la séquence contrôlée vers un nouveau tableau.|
-|[multiset::upper_bound (STL/CLR)](#upper_bound)|Fin de la recherche de plage qui correspond à une clé spécifiée.|
-|[multiset::value_comp (STL/CLR)](#value_comp)|Copie le délégué de classement pour les deux valeurs d’éléments.|
+|[multiset::to_array (STL/CLR)](#to_array)|Copie la séquence contrôlée dans un nouveau tableau.|
+|[multiset::upper_bound (STL/CLR)](#upper_bound)|Recherche la fin de la plage qui correspond à une clé spécifiée.|
+|[multiset::value_comp (STL/CLR)](#value_comp)|Copie le délégué de classement pour deux valeurs d’élément.|
 
 |Opérateur|Description|
 |--------------|-----------------|
 |[multiset::operator= (STL/CLR)](#op_as)|Remplace la séquence contrôlée.|
-|[operator!= (multiset) (STL/CLR)](#op_neq)|Détermine si un `multiset` objet n’est pas égal à un autre `multiset` objet.|
-|[operator< (multiset) (STL/CLR)](#op_lt)|Détermine si un `multiset` objet est inférieur à un autre `multiset` objet.|
-|[operator<= (multiset) (STL/CLR)](#op_lteq)|Détermine si un `multiset` objet est inférieur ou égal à un autre `multiset` objet.|
-|[operator== (multiset) (STL/CLR)](#op_eq)|Détermine si un `multiset` objet est égal à un autre `multiset` objet.|
-|[operator> (multiset) (STL/CLR)](#op_gt)|Détermine si un `multiset` objet est supérieur à un autre `multiset` objet.|
-|[operator>= (multiset) (STL/CLR)](#op_gteq)|Détermine si un `multiset` objet est supérieur ou égal à un autre `multiset` objet.|
+|[operator!= (multiset) (STL/CLR)](#op_neq)|Détermine si un objet `multiset` n’est pas égal à un autre objet `multiset`.|
+|[operator< (multiset) (STL/CLR)](#op_lt)|Détermine si un objet `multiset` est inférieur à un autre objet `multiset`.|
+|[operator<= (multiset) (STL/CLR)](#op_lteq)|Détermine si un objet `multiset` est inférieur ou égal à un autre objet `multiset`.|
+|[operator== (multiset) (STL/CLR)](#op_eq)|Détermine si un objet `multiset` est égal à un autre objet `multiset`.|
+|[operator> (multiset) (STL/CLR)](#op_gt)|Détermine si un objet `multiset` est supérieur à un autre objet `multiset`.|
+|[operator>= (multiset) (STL/CLR)](#op_gteq)|Détermine si un objet `multiset` est supérieur ou égal à un autre objet `multiset`.|
 
 ## <a name="interfaces"></a>Interfaces
 
 |Interface|Description|
 |---------------|-----------------|
 |<xref:System.ICloneable>|Dupliquer un objet.|
-|<xref:System.Collections.IEnumerable>|Dans les éléments de séquence.|
+|<xref:System.Collections.IEnumerable>|Séquencez les éléments.|
 |<xref:System.Collections.ICollection>|Conserver le groupe d’éléments.|
-|<xref:System.Collections.Generic.IEnumerable%601>|Séquence via les éléments typés.|
+|<xref:System.Collections.Generic.IEnumerable%601>|Séquencez les éléments typés.|
 |<xref:System.Collections.Generic.ICollection%601>|Conserver le groupe d’éléments typés.|
-|ITree\<de clé, valeur >|Mettre à jour de conteneur générique.|
+|ITree\<clé, valeur >|Conserver le conteneur générique.|
 
 ## <a name="remarks"></a>Notes
 
-L’objet alloue et libère du stockage pour la séquence qu’il contrôle en tant que nœuds individuels. Elle insère des éléments dans une arborescence à charge équilibrée (presque) il conserve ordonnée en modifiant les liens entre les nœuds, jamais par copie le contenu d’un nœud à un autre. Cela signifie que vous pouvez insérer et supprimer des éléments librement sans perturber leurs éléments restants.
+L’objet alloue et libère du stockage pour la séquence qu’il contrôle en tant que nœuds individuels. Elle insère des éléments dans une arborescence (quasi) équilibrée qu’elle continue de trier en modifiant les liens entre les nœuds, jamais en copiant le contenu d’un nœud vers un autre. Cela signifie que vous pouvez insérer et supprimer des éléments librement sans perturber les éléments restants.
 
-L’objet trie la séquence qu’il contrôle en appelant un objet délégué stockée de type [multiset::key_compare (STL/CLR)](../dotnet/multiset-key-compare-stl-clr.md). Vous pouvez spécifier l’objet délégué stockées lorsque vous construisez le multiset ; Si vous ne spécifiez aucun objet de délégué, la valeur par défaut est la comparaison `operator<(key_type, key_type)`. Vous accéder à cet objet stocké en appelant la fonction membre [multiset::key_comp (STL/CLR)](../dotnet/multiset-key-comp-stl-clr.md)`()`.
+L’objet trie la séquence qu’il contrôle en appelant un objet délégué stocké de type [multijeu :: key_compare (STL/CLR)](../dotnet/multiset-key-compare-stl-clr.md). Vous pouvez spécifier l’objet délégué stocké quand vous construisez le multiensemble ; Si vous ne spécifiez aucun objet délégué, la valeur par défaut est la comparaison `operator<(key_type, key_type)`. Vous accédez à cet objet stocké en appelant la fonction membre multiensemble [:: key_comp (STL/CLR)](../dotnet/multiset-key-comp-stl-clr.md)`()`.
 
-Cet objet de délégué doit imposer un ordre faible strict sur les clés de type [multiset::key_type (STL/CLR)](../dotnet/multiset-key-type-stl-clr.md). Cela signifie que, pour toutes les deux clés `X` et `Y`:
+Un tel objet délégué doit imposer un classement faible strict sur les clés de type multiensemble [:: KEY_TYPE (STL/CLR)](../dotnet/multiset-key-type-stl-clr.md). Autrement dit, pour deux clés `X` et `Y`:
 
-`key_comp()(X, Y)` Retourne la valeur booléenne même résultat à chaque appel.
+`key_comp()(X, Y)` retourne le même résultat booléen pour chaque appel.
 
-Si `key_comp()(X, Y)` est true, puis `key_comp()(Y, X)` doit avoir la valeur false.
+Si `key_comp()(X, Y)` a la valeur true, `key_comp()(Y, X)` doit avoir la valeur false.
 
-Si `key_comp()(X, Y)` est true, puis `X` est dit être ordonnées avant `Y`.
+Si `key_comp()(X, Y)` a la valeur true, `X` est dit trié avant `Y`.
 
-Si `!key_comp()(X, Y) && !key_comp()(Y, X)` est true, puis `X` et `Y` sont réputées pour avoir un classement équivalent.
+Si `!key_comp()(X, Y) && !key_comp()(Y, X)` a la valeur true, `X` et `Y` sont considérés comme ayant un ordre équivalent.
 
-Pour tout élément `X` qui précède `Y` dans la séquence contrôlée, `key_comp()(Y, X)` a la valeur false. (Pour l’objet de délégué par défaut, les clés va jamais en diminuant valeur.) Contrairement à la classe de modèle [définie (STL/CLR)](../dotnet/set-stl-clr.md), un objet de classe de modèle `multiset` ne nécessite pas que les clés pour tous les éléments sont uniques. (Deux ou plusieurs clés peuvent avoir un classement équivalent.)
+Pour tout élément `X` qui précède `Y` dans la séquence contrôlée, `key_comp()(Y, X)` a la valeur false. (Pour l’objet délégué par défaut, les clés ne diminuent jamais la valeur.) Contrairement à la classe de modèle [Set (STL/CLR)](../dotnet/set-stl-clr.md), un objet de classe de modèle `multiset` ne requiert pas que les clés pour tous les éléments soient uniques. (Au moins deux clés peuvent avoir un classement équivalent.)
 
-Chaque élément est utilisé comme une clé et une valeur. La séquence est représentée d’une façon qui autorise la recherche, d’insertion et suppression d’un élément arbitraire avec un nombre d’opérations proportionnels au logarithme du nombre d’éléments dans la séquence (temps logarithmique). De plus, l'insertion d'un élément n'entraîne pas la non validité des itérateurs, et la suppression d'un élément ne rend non valides que les itérateurs qui pointent vers l'élément supprimé.
+Chaque élément sert à la fois de EY et de valeur. La séquence est représentée de façon à permettre la recherche, l’insertion et la suppression d’un élément arbitraire avec un nombre d’opérations proportionnel au logarithme du nombre d’éléments dans la séquence (temps logarithmique). De plus, l'insertion d'un élément n'entraîne pas la non validité des itérateurs, et la suppression d'un élément ne rend non valides que les itérateurs qui pointent vers l'élément supprimé.
 
-Un multiensemble prend en charge les itérateurs bidirectionnels, ce qui signifie que vous pouvez exécuter pour les éléments adjacents, étant données un itérateur qui désigne un élément dans la séquence contrôlée. Un nœud principal spécial correspond à l’itérateur retourné par [multiset::end (STL/CLR)](../dotnet/multiset-end-stl-clr.md)`()`. Vous pouvez décrémenter cet itérateur afin d’atteindre le dernier élément dans la séquence contrôlée, le cas échéant. Vous pouvez incrémenter un itérateur multiset pour atteindre le nœud principal, et il compare ensuite égal à `end()`. Mais vous ne pouvez pas déréférencer l’itérateur retourné par `end()`.
+Un multiensemble prend en charge les itérateurs bidirectionnels, ce qui signifie que vous pouvez effectuer un pas à pas vers des éléments adjacents en fonction d’un itérateur qui désigne un élément dans la séquence contrôlée. Un nœud principal spécial correspond à l’itérateur retourné par [multijeu :: end (STL/CLR)](../dotnet/multiset-end-stl-clr.md)`()`. Vous pouvez décrémenter cet itérateur pour atteindre le dernier élément de la séquence contrôlée, le cas échéant. Vous pouvez incrémenter un itérateur de multiensemble pour atteindre le nœud principal, et il est alors considéré comme égal à `end()`. Toutefois, vous ne pouvez pas déréférencer l’itérateur retourné par `end()`.
 
-Notez que vous ne pouvez pas faire référence à un élément de multiensemble directement étant donné sa position numérique--nécessitant un itérateur à accès aléatoire.
+Notez que vous ne pouvez pas faire référence à un élément de multiensemble directement en fonction de sa position numérique, qui requiert un itérateur à accès aléatoire.
 
-Un itérateur multiset stocke un handle vers son nœud multiset associé, qui à son tour stocke un handle à son conteneur associé. Vous pouvez utiliser des itérateurs uniquement avec leurs objets conteneur associé. Un itérateur multiset reste valide tant que son nœud multiset associé est associé avec un multiset. En outre, un itérateur valide est déréférençable : vous pouvez l’utiliser pour accéder ou de modifier la valeur de l’élément qu’il désigne--tant qu’il n’est pas égal à `end()`.
+Un itérateur de multiensemble stocke un handle vers son nœud multiensemble associé, qui à son tour stocke un handle vers son conteneur associé. Vous pouvez utiliser des itérateurs uniquement avec leurs objets conteneur associés. Un itérateur de multiensemble reste valide tant que son nœud multiensemble associé est associé à un multiensemble. En outre, un itérateur valide est déréférençable. vous pouvez l’utiliser pour accéder ou modifier la valeur d’élément qu’il désigne, tant qu’il n’est pas égal à `end()`.
 
-Effacer ou de suppression d’un élément appelle le destructeur pour sa valeur stockée. Détruire le conteneur efface tous les éléments. Par conséquent, un conteneur dont le type élément est une classe ref garantit qu’aucun élément ne survivre le conteneur. Notez, toutefois, qu’un conteneur de handles ne *pas* détruire ses éléments.
+L’effacement ou la suppression d’un élément appelle le destructeur pour sa valeur stockée. La destruction du conteneur efface tous les éléments. Ainsi, un conteneur dont le type d’élément est une classe ref garantit qu’aucun élément ne se trouve dans le conteneur. Notez, toutefois, qu’un conteneur de handles ne détruit *pas* ses éléments.
 
 ## <a name="members"></a>Membres
 
-## <a name="begin"></a> multiset::Begin (STL/CLR)
+## <a name="multisetbegin-stlclr"></a><a name="begin"></a>multijeu :: Begin (STL/CLR)
 
 Désigne le début de la séquence contrôlée.
 
@@ -244,7 +244,7 @@ iterator begin();
 
 ### <a name="remarks"></a>Notes
 
-La fonction membre retourne un itérateur bidirectionnel qui désigne le premier élément de la séquence contrôlée, ou juste après la fin d’une séquence vide. Vous l’utilisez pour obtenir un itérateur qui désigne le `current` début de la séquence contrôlée, mais son état peut changer si la longueur de la séquence contrôlée change.
+La fonction membre retourne un itérateur bidirectionnel qui désigne le premier élément de la séquence contrôlée, ou juste après la fin d’une séquence vide. Vous l'utilisez pour obtenir un itérateur qui désigne le début `current` de la séquence contrôlée, mais son état peut changer si la longueur de la séquence contrôlée change.
 
 ### <a name="example"></a>Exemple
 
@@ -280,7 +280,7 @@ a b c
 *++begin() = b
 ```
 
-## <a name="clear"></a> multiset::Clear (STL/CLR)
+## <a name="multisetclear-stlclr"></a><a name="clear"></a>multijeu :: Clear (STL/CLR)
 
 Supprime tous les éléments.
 
@@ -292,7 +292,7 @@ void clear();
 
 ### <a name="remarks"></a>Notes
 
-La fonction membre appelle [multiset::erase (STL/CLR)](../dotnet/multiset-erase-stl-clr.md) `(` [multiset::begin (STL/CLR)](../dotnet/multiset-begin-stl-clr.md) `(),` [multiset::end (STL/CLR)](../dotnet/multiset-end-stl-clr.md) `())`. Vous l’utilisez pour vous assurer que la séquence contrôlée est vide.
+La fonction membre appelle efficacement multiensemble [:: Erase (STL/CLR)](../dotnet/multiset-erase-stl-clr.md)`(` [multijeu :: Begin (STL/CLR)](../dotnet/multiset-begin-stl-clr.md)`(),` [multijeu :: end (STL/CLR)](../dotnet/multiset-end-stl-clr.md)`())`. Vous pouvez l’utiliser pour vous assurer que la séquence contrôlée est vide.
 
 ### <a name="example"></a>Exemple
 
@@ -338,7 +338,7 @@ a b
 size() = 0
 ```
 
-## <a name="const_iterator"></a> multiset::const_iterator (STL/CLR)
+## <a name="multisetconst_iterator-stlclr"></a><a name="const_iterator"></a>multijeu :: const_iterator (STL/CLR)
 
 Type d'un itérateur constant pour la séquence contrôlée.
 
@@ -350,7 +350,7 @@ typedef T2 const_iterator;
 
 ### <a name="remarks"></a>Notes
 
-Le type décrit un objet de type non spécifié `T2` qui peut servir d’itérateur de constante bidirectionnel pour la séquence contrôlée.
+Le type décrit un objet de type non spécifié `T2` qui peut servir d’itérateur bidirectionnel constant pour la séquence contrôlée.
 
 ### <a name="example"></a>Exemple
 
@@ -380,7 +380,7 @@ int main()
 a b c
 ```
 
-## <a name="const_reference"></a> multiset::const_reference (STL/CLR)
+## <a name="multisetconst_reference-stlclr"></a><a name="const_reference"></a>multijeu :: const_reference (STL/CLR)
 
 Type d'une référence constante à un élément.
 
@@ -425,9 +425,9 @@ int main()
 a b c
 ```
 
-## <a name="const_reverse_iterator"></a> multiset::const_reverse_iterator (STL/CLR)
+## <a name="multisetconst_reverse_iterator-stlclr"></a><a name="const_reverse_iterator"></a>multijeu :: const_reverse_iterator (STL/CLR)
 
-Le type d’un itérateur inverse constant pour la séquence contrôlée...
+Type d’un itérateur inverse constant pour la séquence contrôlée.
 
 ### <a name="syntax"></a>Syntaxe
 
@@ -467,7 +467,7 @@ int main()
 c b a
 ```
 
-## <a name="count"></a> multiset::count (STL/CLR)
+## <a name="multisetcount-stlclr"></a><a name="count"></a>multijeu :: Count (STL/CLR)
 
 Recherche le nombre d’éléments qui correspondent à une clé spécifiée.
 
@@ -484,7 +484,7 @@ Valeur de clé à rechercher.
 
 ### <a name="remarks"></a>Notes
 
-La fonction membre retourne le nombre d’éléments dans la séquence contrôlée qui ont un classement équivalent à *clé*. Vous l’utilisez pour déterminer le nombre d’éléments actuellement dans la séquence contrôlée qui correspondent à une clé spécifiée.
+La fonction membre retourne le nombre d’éléments dans la séquence contrôlée qui ont un classement équivalent avec la *clé*. Vous l'utilisez pour déterminer le nombre d'éléments actuellement dans la séquence contrôlée qui correspondent à une clé spécifiée.
 
 ### <a name="example"></a>Exemple
 
@@ -520,9 +520,9 @@ count(L'b') = 1
 count(L'C') = 0
 ```
 
-## <a name="difference_type"></a> multiset::difference_type (STL/CLR)
+## <a name="multisetdifference_type-stlclr"></a><a name="difference_type"></a>multiensemble ::d ifference_type (STL/CLR)
 
-Les types d’une distance signée entre deux éléments.
+Types d’une distance signée entre deux éléments.
 
 ### <a name="syntax"></a>Syntaxe
 
@@ -532,7 +532,7 @@ typedef int difference_type;
 
 ### <a name="remarks"></a>Notes
 
-Le type décrit un nombre d’éléments éventuellement négatif.
+Le type décrit un nombre d’éléments éventuellement négatifs.
 
 ### <a name="example"></a>Exemple
 
@@ -575,7 +575,7 @@ end()-begin() = 3
 begin()-end() = -3
 ```
 
-## <a name="empty"></a> multiset::Empty (STL/CLR)
+## <a name="multisetempty-stlclr"></a><a name="empty"></a>multijeu :: Empty (STL/CLR)
 
 Vérifie l'absence d'éléments.
 
@@ -587,7 +587,7 @@ bool empty();
 
 ### <a name="remarks"></a>Notes
 
-La fonction membre retourne la valeur true pour une séquence contrôlée vide. Il est équivalent à [multiset::size (STL/CLR)](../dotnet/multiset-size-stl-clr.md)`() == 0`. Vous l’utilisez pour tester si l’objet multiset est vide.
+La fonction membre retourne la valeur true pour une séquence contrôlée vide. Elle est équivalente à multiensemble [:: Size (STL/CLR)](../dotnet/multiset-size-stl-clr.md)`() == 0`. Vous l’utilisez pour tester si le multiensemble est vide.
 
 ### <a name="example"></a>Exemple
 
@@ -627,7 +627,7 @@ size() = 0
 empty() = True
 ```
 
-## <a name="end"></a> multiset::end (STL/CLR)
+## <a name="multisetend-stlclr"></a><a name="end"></a>multijeu :: end (STL/CLR)
 
 Désigne la fin de la séquence contrôlée.
 
@@ -676,7 +676,7 @@ a b c
 *--end() = c
 ```
 
-## <a name="equal_range"></a> multiset::equal_range (STL/CLR)
+## <a name="multisetequal_range-stlclr"></a><a name="equal_range"></a>multijeu :: equal_range (STL/CLR)
 
 Recherche une plage qui correspond à une clé spécifiée.
 
@@ -693,7 +693,7 @@ Valeur de clé à rechercher.
 
 ### <a name="remarks"></a>Notes
 
-La fonction membre retourne une paire d’itérateurs `cliext::pair<iterator, iterator>(` [multiset::lower_bound (STL/CLR)](../dotnet/multiset-lower-bound-stl-clr.md) `(key),` [multiset::upper_bound (STL/CLR)](../dotnet/multiset-upper-bound-stl-clr.md)`(key))`. Vous l’utilisez pour déterminer la plage d’éléments actuellement dans la séquence contrôlée qui correspondent à une clé spécifiée.
+La fonction membre retourne une paire d’itérateurs `cliext::pair<iterator, iterator>(` [multijeu :: lower_bound (STL/CLR)](../dotnet/multiset-lower-bound-stl-clr.md)`(key),` [multijeu :: upper_bound (STL/CLR)](../dotnet/multiset-upper-bound-stl-clr.md)`(key))`. Vous l’utilisez pour déterminer la plage d’éléments actuellement dans la séquence contrôlée qui correspond à une clé spécifiée.
 
 ### <a name="example"></a>Exemple
 
@@ -736,7 +736,7 @@ equal_range(L'x') empty = True
 b
 ```
 
-## <a name="erase"></a> multiset::Erase (STL/CLR)
+## <a name="multiseterase-stlclr"></a><a name="erase"></a>multijeu :: Erase (STL/CLR)
 
 Supprime les éléments placés aux positions spécifiées.
 
@@ -764,13 +764,13 @@ Fin de la plage à effacer.
 
 ### <a name="remarks"></a>Notes
 
-La première fonction membre supprime l’élément de la séquence contrôlée vers lequel pointé *où*et retourne un itérateur qui désigne le premier élément restant après l’élément supprimé, ou [multiset::end (STL / CLR)](../dotnet/multiset-end-stl-clr.md) `()` si cet élément n’existe. Il permet de supprimer un élément unique.
+La première fonction membre supprime l’élément de la séquence contrôlée vers *laquelle*pointe, et retourne un itérateur qui désigne le premier élément restant après l’élément supprimé, ou [multijeu :: end (STL/CLR)](../dotnet/multiset-end-stl-clr.md)`()` si aucun élément de ce type n’existe. Vous l’utilisez pour supprimer un seul élément.
 
-La deuxième fonction membre supprime les éléments de la séquence contrôlée dans la plage [`first`, `last`) et retourne un itérateur qui désigne le premier élément restant après tous les éléments supprimés, ou `end()` si aucun élément existe... Il permet de supprimer de zéro ou plusieurs éléments contigus.
+La deuxième fonction membre supprime les éléments de la séquence contrôlée dans la plage [`first`, `last`) et retourne un itérateur qui désigne le premier élément restant après tous les éléments supprimés, ou `end()` si aucun élément de ce type n’existe. Vous l’utilisez pour supprimer zéro, un ou plusieurs éléments contigus.
 
-La troisième fonction membre supprime tout élément de la séquence contrôlée, dont la clé a un classement équivalent à *clé*et retourne le nombre d’éléments supprimés. Utilisez-le pour supprimer et compter tous les éléments qui correspondent à une clé spécifiée.
+La troisième fonction membre supprime tout élément de la séquence contrôlée dont la clé a un classement équivalent à la *clé*, et retourne le nombre d’éléments supprimés. Vous l’utilisez pour supprimer et compter tous les éléments qui correspondent à une clé spécifiée.
 
-Effacement de chaque élément prend du temps proportionnel au logarithme du nombre d’éléments dans la séquence contrôlée.
+Chaque effacement d’élément prend du temps proportionnel au logarithme du nombre d’éléments dans la séquence contrôlée.
 
 ### <a name="example"></a>Exemple
 
@@ -820,7 +820,7 @@ erase(begin(), end()-1) = e
 size() = 1
 ```
 
-## <a name="find"></a> multiset::Find (STL/CLR)
+## <a name="multisetfind-stlclr"></a><a name="find"></a>multijeu :: Find (STL/CLR)
 
 Recherche un élément qui correspond à une clé spécifiée.
 
@@ -837,7 +837,7 @@ Valeur de clé à rechercher.
 
 ### <a name="remarks"></a>Notes
 
-Si au moins un élément dans la séquence contrôlée a un classement équivalent à *clé*, la fonction membre retourne un itérateur qui désigne un de ces éléments ; sinon, elle retourne [multiset::end (STL/CLR)](../dotnet/multiset-end-stl-clr.md) `()`. Il permet de rechercher un élément actuellement dans la séquence contrôlée qui correspond à une clé spécifiée.
+Si au moins un élément de la séquence contrôlée a un classement équivalent avec la *clé*, la fonction membre retourne un itérateur désignant l’un de ces éléments ; Sinon, elle retourne [multijeu :: end (STL/CLR)](../dotnet/multiset-end-stl-clr.md)`()`. Vous l’utilisez pour rechercher un élément actuellement dans la séquence contrôlée qui correspond à une clé spécifiée.
 
 ### <a name="example"></a>Exemple
 
@@ -876,9 +876,9 @@ find b = b
 find C = False
 ```
 
-## <a name="generic_container"></a> multiset::generic_container (STL/CLR)
+## <a name="multisetgeneric_container-stlclr"></a><a name="generic_container"></a>multijeu :: generic_container (STL/CLR)
 
-Le type de l’interface générique pour le conteneur.
+Type de l’interface générique pour le conteneur.
 
 ### <a name="syntax"></a>Syntaxe
 
@@ -940,9 +940,9 @@ a b c d
 a b c d e
 ```
 
-## <a name="generic_iterator"></a> multiset::generic_iterator (STL/CLR)
+## <a name="multisetgeneric_iterator-stlclr"></a><a name="generic_iterator"></a>multijeu :: generic_iterator (STL/CLR)
 
-Le type d’un itérateur pour une utilisation avec l’interface générique pour le conteneur.
+Type d’un itérateur à utiliser avec l’interface générique pour le conteneur.
 
 ### <a name="syntax"></a>Syntaxe
 
@@ -996,9 +996,9 @@ a b c
 a
 ```
 
-## <a name="generic_reverse_iterator"></a> multiset::generic_reverse_iterator (STL/CLR)
+## <a name="multisetgeneric_reverse_iterator-stlclr"></a><a name="generic_reverse_iterator"></a>multijeu :: generic_reverse_iterator (STL/CLR)
 
-Le type d’un itérateur inverse pour une utilisation avec l’interface générique pour le conteneur.
+Type d’un itérateur inverse à utiliser avec l’interface générique pour le conteneur.
 
 ### <a name="syntax"></a>Syntaxe
 
@@ -1052,9 +1052,9 @@ a b c
 c
 ```
 
-## <a name="generic_value"></a> multiset::generic_value (STL/CLR)
+## <a name="multisetgeneric_value-stlclr"></a><a name="generic_value"></a>multijeu :: generic_value (STL/CLR)
 
-Le type d’un élément pour une utilisation avec l’interface générique pour le conteneur.
+Type d’un élément à utiliser avec l’interface générique pour le conteneur.
 
 ### <a name="syntax"></a>Syntaxe
 
@@ -1064,7 +1064,7 @@ typedef GValue generic_value;
 
 ### <a name="remarks"></a>Notes
 
-Le type décrit un objet de type `GValue` qui décrit la valeur de l’élément stockée pour une utilisation avec l’interface générique pour cette classe de conteneur de modèle.
+Le type décrit un objet de type `GValue` qui décrit la valeur de l’élément stocké à utiliser avec l’interface générique pour cette classe de conteneur de modèle.
 
 ### <a name="example"></a>Exemple
 
@@ -1106,7 +1106,7 @@ a b c
 a
 ```
 
-## <a name="insert"></a> multiset::Insert (STL/CLR)
+## <a name="multisetinsert-stlclr"></a><a name="insert"></a>multijeu :: Insert (STL/CLR)
 
 Ajoute des éléments.
 
@@ -1135,21 +1135,21 @@ Fin de la plage à insérer.
 Valeur de clé à insérer.
 
 *where*<br/>
-Emplacement dans le conteneur à insérer (hint uniquement).
+Où dans le conteneur à insérer (hint uniquement).
 
 ### <a name="remarks"></a>Notes
 
 Chacune des fonctions membres insère une séquence spécifiée par les opérandes restants.
 
-La première fonction membre insère un élément avec la valeur *val*et retourne un itérateur qui désigne l’élément nouvellement inséré. Vous l’utilisez pour insérer un élément unique.
+La première fonction membre insère un élément avec la valeur *Val*et retourne un itérateur qui désigne l’élément nouvellement inséré. Vous l’utilisez pour insérer un élément unique.
 
-La deuxième fonction membre insère un élément avec la valeur *val*, à l’aide *où* en tant qu’indicateur (pour améliorer les performances) et retourne un itérateur qui désigne l’élément nouvellement inséré. Vous l’utilisez pour insérer un élément unique qui peut être adjacent à un élément que vous connaissez.
+La deuxième fonction membre insère un élément avec la valeur *Val*, en utilisant *Where* comme indicateur (pour améliorer les performances) et retourne un itérateur qui désigne l’élément nouvellement inséré. Vous l’utilisez pour insérer un élément unique qui peut être adjacent à un élément que vous connaissez.
 
-La troisième fonction membre insère la séquence [`first`, `last`). Il permet d’insérer de zéro ou plusieurs des éléments copiés à partir d’une autre séquence.
+La troisième fonction membre insère la séquence [`first`, `last`). Vous l’utilisez pour insérer zéro, un ou plusieurs éléments copiés à partir d’une autre séquence.
 
-La quatrième fonction membre insère la séquence désignée par le *droit*. Il permet d’insérer une séquence décrite par un énumérateur.
+La quatrième fonction membre insère la séquence désignée par la *droite*. Vous l’utilisez pour insérer une séquence décrite par un énumérateur.
 
-Chaque insertion des éléments prend du temps proportionnel au logarithme du nombre d’éléments dans la séquence contrôlée. Insertion peut se produire dans le temps fixe amorti, toutefois, étant donné un indicateur qui désigne un élément adjacent au point d’insertion.
+Chaque insertion d’élément prend un temps proportionnel au logarithme du nombre d’éléments dans la séquence contrôlée. L’insertion peut se produire dans le temps constant amorti, en fonction d’une indication qui désigne un élément adjacent au point d’insertion.
 
 ### <a name="example"></a>Exemple
 
@@ -1219,7 +1219,7 @@ a b b c x
 a b b c x y
 ```
 
-## <a name="iterator"></a> multiset::iterator (STL/CLR)
+## <a name="multisetiterator-stlclr"></a><a name="iterator"></a>multijeu :: iterator (STL/CLR)
 
 Type d'un itérateur pour la séquence contrôlée.
 
@@ -1261,9 +1261,9 @@ int main()
 a b c
 ```
 
-## <a name="key_comp"></a> multiset::key_comp (STL/CLR)
+## <a name="multisetkey_comp-stlclr"></a><a name="key_comp"></a>multijeu :: key_comp (STL/CLR)
 
-Copie le délégué de classement pour les deux clés.
+Copie le délégué de classement pour deux clés.
 
 ### <a name="syntax"></a>Syntaxe
 
@@ -1273,7 +1273,7 @@ key_compare^key_comp();
 
 ### <a name="remarks"></a>Notes
 
-La fonction membre retourne le délégué de classement utilisé pour ordonner la séquence contrôlée. Vous l’utilisez pour comparer deux clés.
+La fonction membre retourne le délégué de classement utilisé pour ordonner la séquence contrôlée. Vous l'utilisez pour comparer deux clés.
 
 ### <a name="example"></a>Exemple
 
@@ -1320,9 +1320,9 @@ compare(L'a', L'b') = False
 compare(L'b', L'a') = True
 ```
 
-## <a name="key_compare"></a> multiset::key_compare (STL/CLR)
+## <a name="multisetkey_compare-stlclr"></a><a name="key_compare"></a>multijeu :: key_compare (STL/CLR)
 
-Délégué de classement pour les deux clés.
+Délégué de classement de deux clés.
 
 ### <a name="syntax"></a>Syntaxe
 
@@ -1333,7 +1333,7 @@ Microsoft::VisualC::StlClr::BinaryDelegate<GKey, GKey, bool>
 
 ### <a name="remarks"></a>Notes
 
-Le type est un synonyme pour le délégué qui détermine l’ordre de ses arguments clés.
+Le type est un synonyme du délégué qui détermine l’ordre de ses arguments de clé.
 
 ### <a name="example"></a>Exemple
 
@@ -1380,7 +1380,7 @@ compare(L'a', L'b') = False
 compare(L'b', L'a') = True
 ```
 
-## <a name="key_type"></a> multiset::KEY_TYPE (STL/CLR)
+## <a name="multisetkey_type-stlclr"></a><a name="key_type"></a>multijeu :: key_type (STL/CLR)
 
 Type d'une clé de tri.
 
@@ -1392,7 +1392,7 @@ typedef Key key_type;
 
 ### <a name="remarks"></a>Notes
 
-Le type est un synonyme du paramètre de modèle *clé*.
+Le type est un synonyme de la *clé*de paramètre de modèle.
 
 ### <a name="example"></a>Exemple
 
@@ -1425,9 +1425,9 @@ int main()
 a b c
 ```
 
-## <a name="lower_bound"></a> multiset::lower_bound (STL/CLR)
+## <a name="multisetlower_bound-stlclr"></a><a name="lower_bound"></a>multijeu :: lower_bound (STL/CLR)
 
-Début de la recherche de plage qui correspond à une clé spécifiée.
+Recherche le début de la plage qui correspond à une clé spécifiée.
 
 ### <a name="syntax"></a>Syntaxe
 
@@ -1442,7 +1442,7 @@ Valeur de clé à rechercher.
 
 ### <a name="remarks"></a>Notes
 
-La fonction membre détermine le premier élément `X` dans la séquence contrôlée qui a un classement équivalent à *clé*. Si cet élément n’existe pas, elle retourne [multiset::end (STL/CLR)](../dotnet/multiset-end-stl-clr.md)`()`; sinon, elle retourne un itérateur qui désigne `X`. Il permet de localiser le début d’une séquence d’éléments actuellement dans la séquence contrôlée qui correspondent à une clé spécifiée.
+La fonction membre détermine le premier élément `X` dans la séquence contrôlée qui a un classement équivalent à la *clé*. Si aucun élément de ce type n’existe, il retourne [multijeu :: end (STL/CLR)](../dotnet/multiset-end-stl-clr.md)`()`; Sinon, elle retourne un itérateur qui désigne `X`. Vous l’utilisez pour localiser le début d’une séquence d’éléments actuellement dans la séquence contrôlée qui correspondent à une clé spécifiée.
 
 ### <a name="example"></a>Exemple
 
@@ -1482,7 +1482,7 @@ lower_bound(L'x')==end() = True
 *lower_bound(L'b') = b
 ```
 
-## <a name="make_value"></a> multiset::make_value (STL/CLR)
+## <a name="multisetmake_value-stlclr"></a><a name="make_value"></a>multijeu :: make_value (STL/CLR)
 
 Construit un objet de valeur.
 
@@ -1499,7 +1499,7 @@ Valeur de clé à utiliser.
 
 ### <a name="remarks"></a>Notes
 
-La fonction membre retourne un `value_type` objet dont la clé est *clé*. Vous l’utilisez pour composer un objet pouvant être utilisé avec plusieurs autres fonctions membres.
+La fonction membre retourne un objet `value_type` dont la clé est *clé*. Vous l’utilisez pour composer un objet pouvant être utilisé avec plusieurs autres fonctions membres.
 
 ### <a name="example"></a>Exemple
 
@@ -1528,7 +1528,7 @@ int main()
 a b c
 ```
 
-## <a name="multiset"></a> multiset::multiset (STL/CLR)
+## <a name="multisetmultiset-stlclr"></a><a name="multiset"></a>multijeu :: multimultijeu (STL/CLR)
 
 Construit un objet conteneur.
 
@@ -1557,8 +1557,8 @@ Début de la plage à insérer.
 *last*<br/>
 Fin de la plage à insérer.
 
-*pred*<br/>
-Classement de prédicat pour la séquence contrôlée.
+*prédit*<br/>
+Prédicat de classement pour la séquence contrôlée.
 
 *right*<br/>
 Objet ou plage à insérer.
@@ -1569,49 +1569,49 @@ Le constructeur :
 
 `multiset();`
 
-Initialise la séquence contrôlée sans éléments, avec la valeur par défaut classement prédicat `key_compare()`. Il permet de spécifier une séquence contrôlée initiale vide, avec la valeur par défaut de classement de prédicat.
+Initialise la séquence contrôlée sans éléments, avec le prédicat de tri par défaut `key_compare()`. Vous l’utilisez pour spécifier une séquence contrôlée initiale vide, avec le prédicat de classement par défaut.
 
 Le constructeur :
 
 `explicit multiset(key_compare^ pred);`
 
-Initialise la séquence contrôlée sans éléments, avec le prédicat de tri *pred*. Vous l’utilisez pour spécifier une séquence contrôlée initiale vide avec le prédicat de tri spécifié.
+Initialise la séquence contrôlée sans éléments, avec le prédicat de classement *prédit*. Vous l’utilisez pour spécifier une séquence contrôlée initiale vide, avec le prédicat de tri spécifié.
 
 Le constructeur :
 
 `multiset(multiset<Key>% right);`
 
-Initialise la séquence contrôlée par la séquence [`right.begin()`, `right.end()`), avec la valeur par défaut de classement de prédicat. Vous l’utilisez pour spécifier une séquence contrôlée initiale qui est une copie de la séquence contrôlée par l’objet multiset *droit*, avec la valeur par défaut de classement de prédicat.
+Initialise la séquence contrôlée avec la séquence [`right.begin()`, `right.end()`), avec le prédicat de classement par défaut. Vous l’utilisez pour spécifier une séquence contrôlée initiale qui est une copie de la séquence contrôlée par l’objet de multiensemble *droit*, avec le prédicat de classement par défaut.
 
 Le constructeur :
 
 `multiset(multiset<Key>^ right);`
 
-Initialise la séquence contrôlée par la séquence [`right->begin()`, `right->end()`), avec la valeur par défaut de classement de prédicat. Vous l’utilisez pour spécifier une séquence contrôlée initiale qui est une copie de la séquence contrôlée par l’objet multiset *droit*, avec la valeur par défaut de classement de prédicat.
+Initialise la séquence contrôlée avec la séquence [`right->begin()`, `right->end()`), avec le prédicat de classement par défaut. Vous l’utilisez pour spécifier une séquence contrôlée initiale qui est une copie de la séquence contrôlée par l’objet de multiensemble *droit*, avec le prédicat de classement par défaut.
 
 Le constructeur :
 
 `template<typename InIter> multiset(InIter first, InIter last);`
 
-Initialise la séquence contrôlée par la séquence [`first`, `last`), avec la valeur par défaut de classement de prédicat. Il permet de rendre la séquence contrôlée d’une copie d’une autre séquence, avec la valeur par défaut de classement de prédicat.
+Initialise la séquence contrôlée avec la séquence [`first`, `last`), avec le prédicat de classement par défaut. Vous l’utilisez pour faire de la séquence contrôlée une copie d’une autre séquence, avec le prédicat de classement par défaut.
 
 Le constructeur :
 
 `template<typename InIter> multiset(InIter first, InIter last, key_compare^ pred);`
 
-Initialise la séquence contrôlée par la séquence [`first`, `last`), avec le prédicat de tri *pred*. Il permet d’effectuer la séquence contrôlée une copie d’une autre séquence, avec le prédicat de tri spécifié.
+Initialise la séquence contrôlée avec la séquence [`first`, `last`), avec le prédicat de classement *prédit*. Vous l’utilisez pour faire de la séquence contrôlée une copie d’une autre séquence, avec le prédicat de tri spécifié.
 
 Le constructeur :
 
 `multiset(System::Collections::Generic::IEnumerable<Key>^ right);`
 
-Initialise la séquence contrôlée par la séquence désignée par l’énumérateur *droit*, avec la valeur par défaut de classement de prédicat. Il permet d’effectuer la séquence contrôlée une copie d’une autre séquence décrite par un énumérateur, avec la valeur par défaut de classement de prédicat.
+Initialise la séquence contrôlée avec la séquence désignée par l’énumérateur à *droite*, avec le prédicat de classement par défaut. Vous l’utilisez pour faire de la séquence contrôlée une copie d’une autre séquence décrite par un énumérateur, avec le prédicat de tri par défaut.
 
 Le constructeur :
 
 `multiset(System::Collections::Generic::IEnumerable<Key>^ right, key_compare^ pred);`
 
-Initialise la séquence contrôlée par la séquence désignée par l’énumérateur *droit*, avec le prédicat de tri *pred*. Il permet d’effectuer la séquence contrôlée une copie d’une autre séquence décrite par un énumérateur, avec le prédicat de tri spécifié.
+Initialise la séquence contrôlée avec la séquence désignée par le *droit*d’énumérateur, avec le prédicat de classement *prédit*. Vous l’utilisez pour faire de la séquence contrôlée une copie d’une autre séquence décrite par un énumérateur, avec le prédicat de tri spécifié.
 
 ### <a name="example"></a>Exemple
 
@@ -1699,7 +1699,7 @@ c b a
 a b c
 ```
 
-## <a name="op_as"></a> multiset::operator= (STL/CLR)
+## <a name="multisetoperator-stlclr"></a><a name="op_as"></a>multijeu :: Operator = (STL/CLR)
 
 Remplace la séquence contrôlée.
 
@@ -1716,7 +1716,7 @@ Conteneur à copier.
 
 ### <a name="remarks"></a>Notes
 
-Les copies d’opérateur membre *droit* à l’objet, puis retourne `*this`. Utilisez-le pour remplacer la séquence contrôlée par une copie de la séquence contrôlée dans *droit*.
+L’opérateur membre copie *directement* vers l’objet, puis retourne `*this`. Vous l’utilisez pour remplacer la séquence contrôlée par une copie de la séquence contrôlée dans *Right*.
 
 ### <a name="example"></a>Exemple
 
@@ -1754,7 +1754,7 @@ a b c
 a b c
 ```
 
-## <a name="rbegin"></a> multiset::rbegin (STL/CLR)
+## <a name="multisetrbegin-stlclr"></a><a name="rbegin"></a>multijeu :: rbegin (STL/CLR)
 
 Désigne le début de la séquence contrôlée inverse.
 
@@ -1766,7 +1766,7 @@ reverse_iterator rbegin();
 
 ### <a name="remarks"></a>Notes
 
-La fonction membre retourne un itérateur inverse qui désigne le dernier élément de la séquence contrôlée, ou juste après le début d’une séquence vide. Par conséquent, il désigne le `beginning` de la séquence inverse. Vous l’utilisez pour obtenir un itérateur qui désigne le `current` début de la séquence contrôlée vue dans l’ordre inverse, mais son état peut changer si la longueur de la séquence contrôlée change.
+La fonction membre retourne un itérateur inverse qui désigne le dernier élément de la séquence contrôlée, ou juste après le début d’une séquence vide. Par conséquent, il désigne le `beginning` de la séquence inverse. Vous l'utilisez pour obtenir un itérateur qui désigne le début `current` de la séquence contrôlée vue dans l'ordre inverse, mais son état peut changer si la longueur de la séquence contrôlée change.
 
 ### <a name="example"></a>Exemple
 
@@ -1802,7 +1802,7 @@ a b c
 *++rbegin() = b
 ```
 
-## <a name="reference"></a> multiset::Reference (STL/CLR)
+## <a name="multisetreference-stlclr"></a><a name="reference"></a>multijeu :: Reference (STL/CLR)
 
 Type d'une référence à un élément.
 
@@ -1847,7 +1847,7 @@ int main()
 a b c
 ```
 
-## <a name="rend"></a> multiset::rend (STL/CLR)
+## <a name="multisetrend-stlclr"></a><a name="rend"></a>multijeu :: rend (STL/CLR)
 
 Désigne la fin de la séquence contrôlée inverse.
 
@@ -1859,7 +1859,7 @@ reverse_iterator rend();
 
 ### <a name="remarks"></a>Notes
 
-La fonction membre retourne un itérateur inverse qui pointe juste après le début de la séquence contrôlée. Par conséquent, il désigne le `end` de la séquence inverse. Vous l’utilisez pour obtenir un itérateur qui désigne le `current` fin de la séquence contrôlée vue dans l’ordre inverse, mais son état peut changer si la longueur de la séquence contrôlée change.
+La fonction membre retourne un itérateur inverse qui pointe juste après le début de la séquence contrôlée. Par conséquent, il désigne le `end` de la séquence inverse. Vous l'utilisez pour obtenir un itérateur qui désigne la fin `current` de la séquence contrôlée vue dans l'ordre inverse, mais son état peut changer si la longueur de la séquence contrôlée change.
 
 ### <a name="example"></a>Exemple
 
@@ -1896,7 +1896,7 @@ a b c
 *--rend() = a
 ```
 
-## <a name="reverse_iterator"></a> multiset::reverse_iterator (STL/CLR)
+## <a name="multisetreverse_iterator-stlclr"></a><a name="reverse_iterator"></a>multijeu :: reverse_iterator (STL/CLR)
 
 Type d'un itérateur inverse pour la séquence contrôlée.
 
@@ -1938,7 +1938,7 @@ int main()
 c b a
 ```
 
-## <a name="size"></a> multiset::Size (STL/CLR)
+## <a name="multisetsize-stlclr"></a><a name="size"></a>multijeu :: Size (STL/CLR)
 
 Compte le nombre d'éléments.
 
@@ -1950,7 +1950,7 @@ size_type size();
 
 ### <a name="remarks"></a>Notes
 
-La fonction membre retourne la longueur de la séquence contrôlée. Vous l’utilisez pour déterminer le nombre d’éléments actuellement dans la séquence contrôlée. Si vous intéresse est si la séquence a une taille différente de zéro, consultez [multiset::empty (STL/CLR)](../dotnet/multiset-empty-stl-clr.md)`()`.
+La fonction membre retourne la longueur de la séquence contrôlée. Vous l’utilisez pour déterminer le nombre d’éléments actuellement dans la séquence contrôlée. Si vous vous intéressez uniquement si la séquence a une taille différente de zéro, consultez multiensemble [:: Empty (STL/CLR)](../dotnet/multiset-empty-stl-clr.md)`()`.
 
 ### <a name="example"></a>Exemple
 
@@ -1992,9 +1992,9 @@ size() = 0 after clearing
 size() = 2 after adding 2
 ```
 
-## <a name="size_type"></a> multiset::size_type (STL/CLR)
+## <a name="multisetsize_type-stlclr"></a><a name="size_type"></a>multijeu :: size_type (STL/CLR)
 
-Le type d’une distance signée entre deux éléments.
+Type d’une distance signée entre deux éléments.
 
 ### <a name="syntax"></a>Syntaxe
 
@@ -2004,7 +2004,7 @@ typedef int size_type;
 
 ### <a name="remarks"></a>Notes
 
-Le type décrit un nombre d’éléments de non négatif.
+Le type décrit un nombre d’éléments non négatifs.
 
 ### <a name="example"></a>Exemple
 
@@ -2040,7 +2040,7 @@ a b c
 end()-begin() = 3
 ```
 
-## <a name="swap"></a> multiset::swap (STL/CLR)
+## <a name="multisetswap-stlclr"></a><a name="swap"></a>multijeu :: swap (STL/CLR)
 
 Échange le contenu de deux conteneurs.
 
@@ -2057,7 +2057,7 @@ Conteneur avec lequel échanger le contenu.
 
 ### <a name="remarks"></a>Notes
 
-La fonction membre échange les séquences contrôlées entre `this` et *droit*. Elle le fait en temps constant et ne lève aucune exception. Vous l’utilisez comme un moyen rapide pour échanger le contenu de deux conteneurs.
+La fonction membre échange les séquences contrôlées entre `this` et *Right*. Elle le fait en temps constant et ne lève aucune exception. Vous l’utilisez comme un moyen rapide d’échanger le contenu de deux conteneurs.
 
 ### <a name="example"></a>Exemple
 
@@ -2108,9 +2108,9 @@ d e f
 a b c
 ```
 
-## <a name="to_array"></a> multiset::to_array (STL/CLR)
+## <a name="multisetto_array-stlclr"></a><a name="to_array"></a>multijeu :: to_array (STL/CLR)
 
-Copie la séquence contrôlée vers un nouveau tableau.
+Copie la séquence contrôlée dans un nouveau tableau.
 
 ### <a name="syntax"></a>Syntaxe
 
@@ -2158,9 +2158,9 @@ a b c d
 a b c
 ```
 
-## <a name="upper_bound"></a> multiset::upper_bound (STL/CLR)
+## <a name="multisetupper_bound-stlclr"></a><a name="upper_bound"></a>multijeu :: upper_bound (STL/CLR)
 
-Fin de la recherche de plage qui correspond à une clé spécifiée.
+Recherche la fin de la plage qui correspond à une clé spécifiée.
 
 ### <a name="syntax"></a>Syntaxe
 
@@ -2175,7 +2175,7 @@ Valeur de clé à rechercher.
 
 ### <a name="remarks"></a>Notes
 
-La fonction membre détermine le dernier élément `X` dans la séquence contrôlée qui a un classement équivalent à *clé*. Si cet élément n’existe, ou si `X` est le dernier élément dans la séquence contrôlée, elle retourne [multiset::end (STL/CLR)](../dotnet/multiset-end-stl-clr.md)`()`; sinon, elle retourne un itérateur qui désigne le premier élément au-delà de `X`. Il permet de localiser la fin d’une séquence d’éléments actuellement dans la séquence contrôlée qui correspondent à une clé spécifiée.
+La fonction membre détermine le dernier élément `X` dans la séquence contrôlée qui a un classement équivalent à la *clé*. Si aucun élément de ce type n’existe, ou si `X` est le dernier élément de la séquence contrôlée, elle retourne [multijeu :: end (STL/CLR)](../dotnet/multiset-end-stl-clr.md)`()`; Sinon, elle retourne un itérateur qui désigne le premier élément au-delà de `X`. Vous l’utilisez pour localiser la fin d’une séquence d’éléments actuellement dans la séquence contrôlée qui correspondent à une clé spécifiée.
 
 ### <a name="example"></a>Exemple
 
@@ -2215,9 +2215,9 @@ upper_bound(L'x')==end() = True
 *upper_bound(L'b') = c
 ```
 
-## <a name="value_comp"></a> multiset::value_comp (STL/CLR)
+## <a name="multisetvalue_comp-stlclr"></a><a name="value_comp"></a>multijeu :: value_comp (STL/CLR)
 
-Copie le délégué de classement pour les deux valeurs d’éléments.
+Copie le délégué de classement pour deux valeurs d’élément.
 
 ### <a name="syntax"></a>Syntaxe
 
@@ -2259,9 +2259,9 @@ compare(L'a', L'b') = True
 compare(L'b', L'a') = False
 ```
 
-## <a name="value_compare"></a> multiset::value_compare (STL/CLR)
+## <a name="multisetvalue_compare-stlclr"></a><a name="value_compare"></a>multijeu :: value_compare (STL/CLR)
 
-Délégué de classement pour les deux valeurs d’éléments.
+Délégué de classement pour deux valeurs d’élément.
 
 ### <a name="syntax"></a>Syntaxe
 
@@ -2272,7 +2272,7 @@ Microsoft::VisualC::StlClr::BinaryDelegate<generic_value, generic_value, bool>
 
 ### <a name="remarks"></a>Notes
 
-Le type est un synonyme pour le délégué qui détermine l’ordre de ses arguments de valeur.
+Le type est un synonyme du délégué qui détermine l’ordre de ses arguments de valeur.
 
 ### <a name="example"></a>Exemple
 
@@ -2304,9 +2304,9 @@ compare(L'a', L'b') = True
 compare(L'b', L'a') = False
 ```
 
-## <a name="value_type"></a> multiset::value_type (STL/CLR)
+## <a name="multisetvalue_type-stlclr"></a><a name="value_type"></a>multijeu :: value_type (STL/CLR)
 
-Type d’un élément.
+Type d'un élément.
 
 ### <a name="syntax"></a>Syntaxe
 
@@ -2349,9 +2349,9 @@ int main()
 a b c
 ```
 
-## <a name="op_neq"></a> operator!= (multiset) (STL/CLR)
+## <a name="operator-multiset-stlclr"></a><a name="op_neq"></a>Operator ! = (multiensemble) (STL/CLR)
 
-Liste différent de comparaison.
+Comparaison de liste non équivalente.
 
 ### <a name="syntax"></a>Syntaxe
 
@@ -2371,7 +2371,7 @@ Conteneur de droite à comparer.
 
 ### <a name="remarks"></a>Notes
 
-La fonction d’opérateur retourne `!(left == right)`. Il permet de tester si *gauche* n’est pas ordonné identique *droit* lorsque les deux multisets sont comparé élément par élément.
+La fonction operator retourne `!(left == right)`. Vous l’utilisez pour tester si *Left* n’est pas *ordonné de la même façon que* lorsque les deux multijeux sont comparés élément par élément.
 
 ### <a name="example"></a>Exemple
 
@@ -2419,9 +2419,9 @@ a b d
 [a b c] != [a b d] is True
 ```
 
-## <a name="op_lt"></a> opérateur&lt; (multiset) (STL/CLR)
+## <a name="operatorlt-multiset-stlclr"></a><a name="op_lt"></a>&lt; d’opérateur (multiensemble) (STL/CLR)
 
-Liste inférieur comparaison.
+Liste inférieure à la comparaison.
 
 ### <a name="syntax"></a>Syntaxe
 
@@ -2441,7 +2441,7 @@ Conteneur de droite à comparer.
 
 ### <a name="remarks"></a>Notes
 
-L’opérateur fonction retourne true si, pour la position la plus basse `i` pour lequel `!(right[i] < left[i])` il est également vrai que `left[i] < right[i]`. Sinon, elle retourne `left->size() < right->size()` vous l’utiliser pour tester si *gauche* est classé avant *droit* lorsque les deux multisets sont comparé élément par élément.
+La fonction operator retourne true si, pour la position la plus basse `i` pour laquelle `!(right[i] < left[i])` il est également vrai que `left[i] < right[i]`. Dans le cas contraire, elle retourne `left->size() < right->size()` vous l’utilisez pour déterminer si la *gauche* est triée avant *le* moment où les deux multijeux sont comparés élément par élément.
 
 ### <a name="example"></a>Exemple
 
@@ -2489,9 +2489,9 @@ a b d
 [a b c] < [a b d] is True
 ```
 
-## <a name="op_lteq"></a> operator&lt;= (multiset) (STL/CLR)
+## <a name="operatorlt-multiset-stlclr"></a><a name="op_lteq"></a>opérateur&lt;= (multiensemble) (STL/CLR)
 
-Liste inférieure ou égale comparaison.
+Liste des comparaisons inférieures ou égales.
 
 ### <a name="syntax"></a>Syntaxe
 
@@ -2511,7 +2511,7 @@ Conteneur de droite à comparer.
 
 ### <a name="remarks"></a>Notes
 
-La fonction d’opérateur retourne `!(right < left)`. Il permet de tester si *gauche* n’est pas ordonné après *droit* lorsque les deux multisets sont comparé élément par élément.
+La fonction operator retourne `!(right < left)`. Vous l’utilisez pour tester si *Left* n’est pas ordonné après *le* moment où les deux multijeux sont comparés élément par élément.
 
 ### <a name="example"></a>Exemple
 
@@ -2559,9 +2559,9 @@ a b d
 [a b d] <= [a b c] is False
 ```
 
-## <a name="op_eq"></a> operator== (multiset) (STL/CLR)
+## <a name="operator-multiset-stlclr"></a><a name="op_eq"></a>opérateur = = (multiensemble) (STL/CLR)
 
-Liste de comparaison égale.
+Comparaison d’égalité de liste.
 
 ### <a name="syntax"></a>Syntaxe
 
@@ -2581,7 +2581,7 @@ Conteneur de droite à comparer.
 
 ### <a name="remarks"></a>Notes
 
-La fonction d’opérateur retourne true uniquement si les séquences contrôlées par *gauche* et *droit* ont la même longueur et, pour chaque position `i`, `left[i] ==` `right[i]`. Il permet de tester si *gauche* est ordonné identique *droit* lorsque les deux multisets sont comparé élément par élément.
+La fonction operator retourne true uniquement si les séquences contrôlées par *Left* et *Right* ont la même longueur et, pour chaque position `i`, `left[i] ==` `right[i]`. Vous l’utilisez pour tester si *Left* est *ordonné de la même façon que* lorsque les deux multijeux sont comparés élément par élément.
 
 ### <a name="example"></a>Exemple
 
@@ -2629,9 +2629,9 @@ a b d
 [a b c] == [a b d] is False
 ```
 
-## <a name="op_gt"></a> opérateur&gt; (multiset) (STL/CLR)
+## <a name="operatorgt-multiset-stlclr"></a><a name="op_gt"></a>&gt; d’opérateur (multiensemble) (STL/CLR)
 
-Comparaison de supériorité de la liste.
+Liste supérieure à la comparaison.
 
 ### <a name="syntax"></a>Syntaxe
 
@@ -2651,7 +2651,7 @@ Conteneur de droite à comparer.
 
 ### <a name="remarks"></a>Notes
 
-La fonction d’opérateur retourne `right` `<` `left`. Il permet de tester si *gauche* est trié après *droit* lorsque les deux multisets sont comparé élément par élément.
+La fonction operator retourne `right` `<` `left`. Vous l’utilisez pour tester si la *gauche* est triée après *le* moment où les deux multijeux sont comparés élément par élément.
 
 ### <a name="example"></a>Exemple
 
@@ -2699,9 +2699,9 @@ a b d
 [a b d] > [a b c] is True
 ```
 
-## <a name="op_gteq"></a> operator&gt;= (multiset) (STL/CLR)
+## <a name="operatorgt-multiset-stlclr"></a><a name="op_gteq"></a>opérateur&gt;= (multiensemble) (STL/CLR)
 
-Liste supérieur ou égal à comparaison.
+Liste de comparaison supérieure ou égale à.
 
 ### <a name="syntax"></a>Syntaxe
 
@@ -2721,7 +2721,7 @@ Conteneur de droite à comparer.
 
 ### <a name="remarks"></a>Notes
 
-La fonction d’opérateur retourne `!(left < right)`. Il permet de tester si *gauche* n’est pas classé avant *droit* lorsque les deux multisets sont comparé élément par élément.
+La fonction operator retourne `!(left < right)`. Vous l’utilisez pour tester si *Left* n’est pas ordonné *avant le moment où* les deux multijeux sont comparés élément par élément.
 
 ### <a name="example"></a>Exemple
 

@@ -6,25 +6,25 @@ f1_keywords:
 helpviewer_keywords:
 - C4639
 ms.assetid: f94f7392-cdbb-4bf4-8a00-20dc90d3efe9
-ms.openlocfilehash: 4419493c673cb5916be751cc95af19a779086a5b
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: d379b159cd7fd67629ea74c47a9e55f1167dc74a
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62408080"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80198248"
 ---
 # <a name="compiler-warning-level-4-c4639"></a>Avertissement du compilateur (niveau 4) C4639
 
-Erreur MSXML, document XML commentaires ne seront pas traités. raison
+Erreur MSXML, les commentaires de document XML ne seront pas traités. reason
 
-Cet avertissement peut se produire pour différentes raisons.
+Cet avertissement peut se produire pour plusieurs raisons.
 
 Pour résoudre cet avertissement :
 
-- Recompilez.
+- Recompiler.
 
-- Réinstallation de MSXML en réinstallant le common language runtime.
+- Réinstallez MSXML en réinstallant le common language runtime.
 
-- Modifier ou supprimer le commentaire de documentation qui provoque l’avertissement et recompilez.
+- Modifiez ou supprimez le commentaire de documentation qui est à l’origine de l’avertissement et recompilez.
 
-Lorsque C4639 est émise, tout traitement supplémentaire du commentaire XML est désactivé, et le fichier .xdc n’est pas généré.
+Quand C4639 est émis, tous les autres traitements de commentaires XML sont désactivés, et le fichier. XDC n’est pas généré.

@@ -13,12 +13,12 @@ helpviewer_keywords:
 - value struct keyword [C++]
 - ref struct keyword [C++]
 ms.assetid: 5c360764-b229-49c6-9357-66213afbc372
-ms.openlocfilehash: dd58f32d031068785cd6020549f9eea4b2182786
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: 78cf7cf16c4ccf29f72038fd79c5d7a1689c05ac
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "70311748"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80172566"
 ---
 # <a name="ref-class-and-ref-struct--ccli-and-ccx"></a>classe ref et struct ref (C++/CLI et C++/CX)
 
@@ -63,7 +63,7 @@ L’accessibilité des membres par défaut d’un objet déclaré avec une **cla
 
 Quand un type référence hérite d’un autre type référence, les fonctions virtuelles dans la classe de base doivent être explicitement remplacées (avec [override](override-cpp-component-extensions.md)) ou masquées (avec [new (nouvel emplacement dans vtable)](new-new-slot-in-vtable-cpp-component-extensions.md)). Les fonctions de classes dérivées doivent également être marquées explicitement comme **virtual**.
 
-Pour détecter au moment de la compilation si un type est une **classe ref** ou un **struct ref**, ou une **classe value** ou un **struct value**, utilisez `__is_ref_class (type)`, `__is_value_class (type)`, ou `__is_simple_value_class (type)`. Pour plus d’informations, consultez [Prise en charge du compilateur pour les caractéristiques de type](compiler-support-for-type-traits-cpp-component-extensions.md).
+Pour détecter au moment de la compilation si un type est une **classe ref** ou un **struct ref**, ou une **classe value** ou un **struct value**, utilisez `__is_ref_class (type)`, `__is_value_class (type)`, ou `__is_simple_value_class (type)`. Pour plus d’informations, consultez [Compiler Support for Type Traits](compiler-support-for-type-traits-cpp-component-extensions.md) (Prise en charge du compilateur pour les caractéristiques de type).
 
 Pour plus d'informations sur les classes et structs, consultez
 
@@ -73,7 +73,7 @@ Pour plus d'informations sur les classes et structs, consultez
 
 - [Classes, structures et unions](../cpp/classes-and-structs-cpp.md)
 
-- [Destructeurs et finaliseurs dans Comment : définir et consommer des classes et des structs (C++/CLI)](../dotnet/how-to-define-and-consume-classes-and-structs-cpp-cli.md#BKMK_Destructors_and_finalizers)
+- [Destructeurs et finaliseurs dans Comment : définir et consommer des classes et des structsC++(/CLI)](../dotnet/how-to-define-and-consume-classes-and-structs-cpp-cli.md#BKMK_Destructors_and_finalizers)
 
 - [Opérateurs définis par l’utilisateur (C++-CLI)](../dotnet/user-defined-operators-cpp-cli.md)
 
@@ -98,7 +98,7 @@ Quand vous déclarez un objet à l’aide des mots clés **ref class** ou **ref 
 
 Quand vous déclarez un objet à l’aide des mots clés **value class** ou **value struct**, la durée de vie de l’objet déclaré n’est pas contrôlée. L'objet est comme toute autre classe ou tout autre struct C++ standard.
 
-### <a name="requirements"></a>Configuration requise
+### <a name="requirements"></a>Spécifications
 
 Option du compilateur : `/ZW`
 
@@ -117,7 +117,7 @@ Les mots clés **ref class** et **ref struct** indiquent au compilateur que la c
 
 Les mots clés **value class** et **value struct** indiquent au compilateur que la valeur de la classe allouée ou du struct alloué est transmise aux fonctions ou stockée dans les membres.
 
-### <a name="requirements"></a>Configuration requise
+### <a name="requirements"></a>Spécifications
 
 Option du compilateur : `/clr`
 

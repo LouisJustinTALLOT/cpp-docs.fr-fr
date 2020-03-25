@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - comma operator
 ms.assetid: 38e0238e-19da-42ba-ae62-277bfdab6090
-ms.openlocfilehash: 8c6757f402cc7422824f1b701d3d1e4ae2566074
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 6ea2bd5c0e7653ba7f81531a5c39df2da41662a9
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62399211"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80189765"
 ---
 # <a name="comma-operator-"></a>Opérateur virgule : ,
 
@@ -29,9 +29,9 @@ L'opérateur virgule présente une associativité de gauche à droite. Deux expr
 
 Les virgules peuvent être utilisées comme séparateurs dans certains contextes, par exemple les listes d’arguments de fonction. Ne confondez pas l'utilisation de la virgule comme séparateur avec son utilisation comme opérateur. Ces deux utilisations sont entièrement différentes.
 
-Prenons l'exemple de l'expression `e1, e2`. Le type et la valeur de l’expression sont le type et la valeur de *e2*; le résultat de l’évaluation *e1* est ignorée. Le résultat est une l-value si l’opérande droite est une l-value.
+Prenons l'exemple de l'expression `e1, e2`. Le type et la valeur de l’expression sont le type et la valeur de *E2*; le résultat de l’évaluation de *E1* est ignoré. Le résultat est une l-value si l’opérande droite est une l-value.
 
-Alors que la virgule est normalement utilisée comme séparateur (par exemple dans les arguments réels des fonctions ou les initialiseurs d’agrégat), l’opérateur virgule et ses opérandes doivent être placés entre parenthèses. Exemple :
+Alors que la virgule est normalement utilisée comme séparateur (par exemple dans les arguments réels des fonctions ou les initialiseurs d’agrégat), l’opérateur virgule et ses opérandes doivent être placés entre parenthèses. Par exemple :
 
 ```cpp
 func_one( x, y + 2, z );

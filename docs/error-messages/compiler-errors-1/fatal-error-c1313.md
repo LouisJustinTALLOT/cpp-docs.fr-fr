@@ -6,15 +6,15 @@ f1_keywords:
 helpviewer_keywords:
 - C1313
 ms.assetid: 6c7631c8-6fd7-476a-9303-564717fda0f9
-ms.openlocfilehash: 825edb8487b045e39335e4eaea5cc9c725e70896
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 64921221a146221319ec80202353f95d950b15b4
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62228846"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80203188"
 ---
 # <a name="fatal-error-c1313"></a>Erreur irrécupérable C1313
 
-limite du compilateur : blocs de type ne peuvent pas être imbriqués plus poussé que le nombre de niveaux
+limite du compilateur : les blocs de type ne peuvent pas être imbriqués plus près que les niveaux de nombre
 
-Exception gestion (ou gestion structurée des exceptions) blocs ont été imbriqués trop profondément.  Simplifiez votre code.
+Les blocs de gestion des exceptions (ou gestion structurée des exceptions) étaient trop profondément imbriqués.  Simplifiez votre code.

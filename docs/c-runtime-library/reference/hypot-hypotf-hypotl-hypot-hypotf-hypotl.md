@@ -40,12 +40,12 @@ helpviewer_keywords:
 - calculating hypotenuses
 - _hypot function
 ms.assetid: 6a13887f-bd53-43fc-9d77-5b42d6e49925
-ms.openlocfilehash: 8cee9e217b23c43a9ce5a1521b52215301b932fe
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: ac481366199023e4b45467599d2c66802ff65c23
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70954794"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80168744"
 ---
 # <a name="hypot-hypotf-hypotl-_hypot-_hypotf-_hypotl"></a>hypot, hypotf, hypotl, _hypot, _hypotf, _hypotl
 
@@ -87,7 +87,7 @@ Valeurs à virgule flottante.
 
 ## <a name="return-value"></a>Valeur de retour
 
-En cas de réussite, **hypot** retourne la longueur de l’hypoténuse ; en cas de dépassement de capacité, **hypot** retourne INF (infini) et la variable **errno** est définie sur **ERANGE**. Vous pouvez utiliser _ **matherr** pour modifier la gestion des erreurs.
+En cas de réussite, **hypot** retourne la longueur de l’hypoténuse ; en cas de dépassement de capacité, **hypot** retourne INF (infini) et la variable **errno** est définie sur **ERANGE**. Vous pouvez utiliser **_matherr** pour modifier la gestion des erreurs.
 
 Pour plus d’informations sur les codes de retour, consultez [errno, _doserrno, _sys_errlist et _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
 
@@ -97,13 +97,13 @@ Les fonctions **hypot** calculent la longueur de l’hypoténuse d’un triangle
 
 Les versions des fonctions qui comportent des traits de soulignement de début sont fournies à des fins de compatibilité avec les normes précédentes. Elles ont le même comportement que les versions qui n’en ont pas. Nous vous recommandons d’utiliser les versions sans traits de soulignement de début pour le nouveau code.
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
 |Routine|En-tête requis|
 |-------------|---------------------|
 |**hypot**, **hypotf**, **hypotl**, **_hypot**, **_hypotf**, **_hypotl**|\<math.h>|
 
-Pour plus d'informations sur la compatibilité, voir [Compatibilité](../../c-runtime-library/compatibility.md).
+Pour plus d’informations sur la compatibilité, voir [Compatibilité](../../c-runtime-library/compatibility.md).
 
 ## <a name="example"></a>Exemple
 

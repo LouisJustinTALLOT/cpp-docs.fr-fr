@@ -9,16 +9,16 @@ helpviewer_keywords:
 - labels, in __asm blocks
 - jumping to labels in inline assembly
 ms.assetid: 36c18b97-8981-4631-9dfd-af6c14a04297
-ms.openlocfilehash: 7653dc990e2f4b490bcbe333ed6f7586ac966d2e
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 199156a08af13f4a70793609b37c70b0c95bf9ba
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62166904"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80169329"
 ---
 # <a name="jumping-to-labels-in-inline-assembly"></a>Accès aux étiquettes dans l'assembly inline
 
-**Section spécifique à Microsoft**
+**Section spécifique de Microsoft**
 
 Tout comme une étiquette ordinaire C ou C++, une étiquette de bloc `__asm` a une portée qui s'étend à l'ensemble de la fonction dans laquelle il est défini (non seulement dans le bloc). Les instructions assembleur et les instructions `goto` peuvent accéder aux étiquettes à l'intérieur ou à l'extérieur du bloc `__asm`.
 
@@ -66,7 +66,7 @@ exit:
    ; More __asm code follows
 ```
 
-Étant donné que **quitter** est le nom d’une fonction de bibliothèque C, ce code peut provoquer un saut vers le **quitter** fonction au lieu d’à l’emplacement souhaité.
+Comme **Exit** est le nom d’une fonction de bibliothèque C, ce code peut provoquer un saut vers la fonction **Exit** au lieu de l’emplacement souhaité.
 
 Comme dans les programmes MASM, le symbole dollar (`$`) sert de compteur de position actuelle. C'est une étiquette pour l'instruction en cours d'assemblage. Dans les blocs `__asm`, son utilisation principale consiste à créer de longs sauts conditionnels :
 
@@ -79,7 +79,7 @@ Comme dans les programmes MASM, le symbole dollar (`$`) sert de compteur de posi
 farlabel:
 ```
 
-**FIN de la section spécifique à Microsoft**
+**Fin de la section spécifique de Microsoft**
 
 ## <a name="see-also"></a>Voir aussi
 

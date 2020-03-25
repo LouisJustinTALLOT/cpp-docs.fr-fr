@@ -8,12 +8,12 @@ helpviewer_keywords:
 - exception handling, catching and deleting exceptions
 - types [C++], exception handling
 ms.assetid: 202dbf07-8ace-4b3b-b3ae-4b45c275e0b4
-ms.openlocfilehash: 027dc87923a588ea891dbf6dd835e2baba75a1cb
-ms.sourcegitcommit: 654aecaeb5d3e3fe6bc926bafd6d5ace0d20a80e
+ms.openlocfilehash: 11804c48631659b84006abb824837efea3902416
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/20/2019
-ms.locfileid: "74245853"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80188635"
 ---
 # <a name="how-catch-blocks-are-evaluated-c"></a>Mode d'évaluation des blocs Catch (C++)
 
@@ -39,7 +39,7 @@ Lorsqu’une exception est levée, elle peut être interceptée par les types de
 
 - Gestionnaire qui accepte un pointeur vers lequel un objet pointeur levé peut être converti via des règles de conversion de pointeur standard.
 
-L’ordre dans lequel les gestionnaires **catch** apparaissent est significatif, car les gestionnaires d’un bloc **try** donné sont examinés dans l’ordre de leur apparence. Par exemple, il est incorrect de placer le gestionnaire d'une classe de base avant le gestionnaire d'une classe dérivée. Une fois qu’un gestionnaire **catch** correspondant a été trouvé, les gestionnaires suivants ne sont pas examinés. Par conséquent, un gestionnaire **catch** de points de suspension doit être le dernier gestionnaire de son bloc **try** . Exemple :
+L’ordre dans lequel les gestionnaires **catch** apparaissent est significatif, car les gestionnaires d’un bloc **try** donné sont examinés dans l’ordre de leur apparence. Par exemple, il est incorrect de placer le gestionnaire d'une classe de base avant le gestionnaire d'une classe dérivée. Une fois qu’un gestionnaire **catch** correspondant a été trouvé, les gestionnaires suivants ne sont pas examinés. Par conséquent, un gestionnaire **catch** de points de suspension doit être le dernier gestionnaire de son bloc **try** . Par exemple :
 
 ```cpp
 // ...

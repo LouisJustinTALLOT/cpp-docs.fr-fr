@@ -1,19 +1,19 @@
 ---
-title: Avertissement du compilateur (niveau 1) C4717
+title: Avertissement du compilateur (niveau 1) C4717
 ms.date: 11/04/2016
 f1_keywords:
 - C4717
 helpviewer_keywords:
 - C4717
 ms.assetid: 5ef3c6c7-8599-4714-a973-0f5b69cdab3c
-ms.openlocfilehash: 0bc95cc770914a1c02a7a40f9754415c2f013d63
-ms.sourcegitcommit: 458dcc794e3841919c01a3a5ff6b9a3767f8861b
+ms.openlocfilehash: 40897e54601793431671bc14f855db43e905c656
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/13/2019
-ms.locfileid: "74051347"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80175286"
 ---
-# <a name="compiler-warning-level-1-c4717"></a>Avertissement du compilateur (niveau 1) C4717
+# <a name="compiler-warning-level-1-c4717"></a>Avertissement du compilateur (niveau 1) C4717
 
 'fonction' : récurrent sur tous les chemins d’accès de contrôle, la fonction provoque un dépassement de capacité de la pile Runtime
 

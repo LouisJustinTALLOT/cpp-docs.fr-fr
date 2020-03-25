@@ -6,15 +6,15 @@ f1_keywords:
 helpviewer_keywords:
 - LNK4205
 ms.assetid: d63b9d18-ef3c-4081-9d8d-93077dad13c2
-ms.openlocfilehash: 7c90ec737e6d52fee81bb2a1c5a21a58a49af272
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 8b0cef76bf8b351bdf2bb73860906509c9574c46
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62395116"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80183161"
 ---
 # <a name="linker-tools-warning-lnk4205"></a>Avertissement des outils Éditeur de liens LNK4205
 
-Il manque des informations de débogage en cours pour référencer le module ; 'nom_fichier' objet sera lié sans informations de débogage
+'NomFichier’ne contient pas d’informations de débogage actuelles pour le module de référencement ; liaison de l’objet comme si aucune information de débogage
 
-Le fichier .pdb a des informations obsolètes. L’éditeur de liens poursuit la liaison d’objet sans informations de débogage. Vous souhaiterez peut-être recompiler le fichier objet en utilisant le [/Zi](../../build/reference/z7-zi-zi-debug-information-format.md) option.
+Le fichier. PDB contient des informations obsolètes. L’éditeur de liens continue à lier l’objet sans les informations de débogage. Vous souhaiterez peut-être recompiler le fichier objet à l’aide de l’option [/Zi](../../build/reference/z7-zi-zi-debug-information-format.md) .

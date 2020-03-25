@@ -25,12 +25,12 @@ helpviewer_keywords:
 - aborting current process
 - abort function
 - processes, aborting
-ms.openlocfilehash: 3f183d6fbf9d7bce7f638e44cdc3f3b450def57b
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 46c8e25483799df3211a5022be6c4338f2c4732a
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70943991"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80170395"
 ---
 # <a name="abort"></a>abort
 
@@ -51,9 +51,9 @@ void abort( void );
 
 ## <a name="remarks"></a>Notes
 
-**Section spécifique à Microsoft**
+**Section spécifique de Microsoft**
 
-Par défaut, lorsqu’une application est générée avec la bibliothèque de Runtime de débogage, la routine d' **annulation** affiche `SIGABRT` un message d’erreur avant que ne soit déclenché. Pour les applications de console en cours d’exécution en mode console, le message est envoyé à `STDERR`. Les applications de bureau Windows et les applications de console qui s’exécutent en mode fenêtré affichent le message dans une boîte de message. Pour supprimer le message, utilisez [_set_abort_behavior](set-abort-behavior.md) pour effacer l’indicateur `_WRITE_ABORT_MSG`. Le message affiché dépend de la version de l’environnement d’exécution utilisé. Pour les applications générées à l’aide des versions les C++plus récentes de Visual, le message ressemble à ceci :
+Par défaut, lorsqu’une application est générée avec la bibliothèque Runtime de débogage, la routine **Abort** affiche un message d’erreur avant que `SIGABRT` soit déclenchée. Pour les applications de console en cours d’exécution en mode console, le message est envoyé à `STDERR`. Les applications de bureau Windows et les applications de console qui s’exécutent en mode fenêtré affichent le message dans une boîte de message. Pour supprimer le message, utilisez [_set_abort_behavior](set-abort-behavior.md) pour effacer l’indicateur `_WRITE_ABORT_MSG`. Le message affiché dépend de la version de l’environnement d’exécution utilisé. Pour les applications générées à l’aide des versions les C++plus récentes de Visual, le message ressemble à ceci :
 
 > R6010-Abort () a été appelé
 
@@ -63,17 +63,17 @@ Dans les versions précédentes de la bibliothèque runtime C, le message suivan
 
 Quand le programme est compilé en mode débogage, la boîte de message affiche les options **Abandonner**, **Réessayer** ou **Ignorer**. Si l’utilisateur choisit **Abandonner**, le programme se termine immédiatement et retourne le code de sortie 3. Si l’utilisateur choisit **Réessayer**, un débogueur est appelé pour le débogage juste-à-temps, si disponible. Si l’utilisateur choisit **Ignorer**, l' **abandon** continue le traitement normal.
 
-Dans les versions commerciales et de débogage, **Abort** vérifie ensuite si un gestionnaire de signal d’abandon est défini. Si un gestionnaire de signal autre que celui par défaut est défini `raise(SIGABRT)`, **abandonne** les appels. Utilisez la fonction [signal](signal.md) pour associer une fonction de gestionnaire de signal d’abandon au signal `SIGABRT`. Vous pouvez effectuer des actions personnalisées, telles que nettoyer les ressources ou enregistrer des informations, et arrêter l’application avec votre propre code d’erreur dans la fonction de gestionnaire. Si aucun gestionnaire de signal personnalisé n’est défini, **Abort** ne déclenche `SIGABRT` pas le signal.
+Dans les versions commerciales et de débogage, **Abort** vérifie ensuite si un gestionnaire de signal d’abandon est défini. Si un gestionnaire de signal autre que celui par défaut est défini, **Abort** appelle `raise(SIGABRT)`. Utilisez la fonction [signal](signal.md) pour associer une fonction de gestionnaire de signal d’abandon au signal `SIGABRT`. Vous pouvez effectuer des actions personnalisées, telles que nettoyer les ressources ou enregistrer des informations, et arrêter l’application avec votre propre code d’erreur dans la fonction de gestionnaire. Si aucun gestionnaire de signal personnalisé n’est défini, **Abort** ne déclenche pas le signal `SIGABRT`.
 
-Par défaut, dans les versions sans débogage des applications de bureau ou de console, **Abort** appelle ensuite le mécanisme de service rapport d’erreurs Windows (anciennement appelé Dr. Watson) pour signaler les échecs à Microsoft. Vous pouvez activer ou désactiver ce comportement en appelant `_set_abort_behavior` et en définissant ou masquant l’indicateur `_CALL_REPORTFAULT`. Quand l’indicateur est défini, Windows affiche une boîte de message dont le texte ressemble à ceci : « Le programme a cessé de fonctionner correctement à cause d’un problème. » L’utilisateur peut choisir d’appeler un débogueur avec un bouton **Déboguer**, ou choisir le bouton **Fermer le programme** pour mettre fin à l’application avec un code d’erreur défini par le système d’exploitation.
+Par défaut, dans les versions sans débogage des applications de bureau ou de console, **Abort** appelle ensuite le mécanisme de service rapport d’erreurs Windows (anciennement appelé Dr. Watson) pour signaler les défaillances à Microsoft. Vous pouvez activer ou désactiver ce comportement en appelant `_set_abort_behavior` et en définissant ou masquant l’indicateur `_CALL_REPORTFAULT`. Quand l’indicateur est défini, Windows affiche une boîte de message dont le texte ressemble à ceci : « Le programme a cessé de fonctionner correctement à cause d’un problème. » L’utilisateur peut choisir d’appeler un débogueur avec un bouton **Déboguer**, ou choisir le bouton **Fermer le programme** pour mettre fin à l’application avec un code d’erreur défini par le système d’exploitation.
 
 Si le gestionnaire de rapport d’erreurs Windows n’est pas appelé, **Abort** appelle [_exit](exit-exit-exit.md) pour terminer le processus avec le code de sortie 3 et retourne le contrôle au processus parent ou au système d’exploitation. `_exit` ne vide pas les mémoires tampons de flux ou n’effectue pas de traitement `atexit`/`_onexit`.
 
-Pour plus d’informations sur le débogage CRT, consultez [Techniques de débogage CRT](/visualstudio/debugger/crt-debugging-techniques).
+Pour plus d'informations sur le débogage CRT, consultez [Techniques de débogage CRT](/visualstudio/debugger/crt-debugging-techniques).
 
-**Fin de la section spécifique à Microsoft**
+**End Microsoft Specific**
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
 |Routine|En-tête requis|
 |-------------|---------------------|

@@ -6,30 +6,30 @@ f1_keywords:
 helpviewer_keywords:
 - C4503
 ms.assetid: 7c5a98ae-5b6d-41d8-b881-12d3ffd5e392
-ms.openlocfilehash: 94c88511d87c3adf3cf5687a94948c83ebc5b3d5
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 9077c448f3b5f1d70d18047b91dcf300e606c91f
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62160976"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80186543"
 ---
 # <a name="compiler-warning-level-1-c4503"></a>Avertissement du compilateur (niveau 1) C4503
 
-> «*identificateur*' : nom longueur décoré dépassée, nom a été tronqué.
+> '*identificateur*' : longueur du nom décoré dépassée, le nom a été tronqué
 
 ## <a name="remarks"></a>Notes
 
-Cet avertissement du compilateur est obsolète et n’est pas généré dans Visual Studio 2017 et les compilateurs plus loin.
+Cet avertissement du compilateur est obsolète et n’est pas généré dans Visual Studio 2017 et les compilateurs ultérieurs.
 
-Le nom décoré était plus long que la limite du compilateur (4096) et a été tronqué. Pour éviter cet avertissement et la troncature, réduisez le nombre d’arguments ou les longueurs de nom des identificateurs utilisés. Les noms décorés sont plus longtemps que la limite du compilateur un hachage appliqué et ne sont pas risque de conflit de nom.
+Le nom décoré était plus long que la limite du compilateur (4096) et a été tronqué. Pour éviter cet avertissement et la troncation, réduisez le nombre d’arguments ou les longueurs de nom des identificateurs utilisés. Un hachage est appliqué aux noms décorés qui sont plus longs que la limite du compilateur et ne sont pas menacés par une collision de noms.
 
-Lorsque vous utilisez une version antérieure de Visual Studio, cet avertissement peut être émis lorsque votre code contient des modèles spécialisé sur des modèles à plusieurs reprises. Par exemple, une table de tables (à partir de la bibliothèque C++ Standard). Dans ce cas, vous pouvez créer un type à votre typedefs (un **struct**, par exemple) qui contient le mappage.
+Lors de l’utilisation d’une version antérieure de Visual Studio, cet avertissement peut être émis lorsque votre code contient des modèles spécialisés sur les modèles de façon répétée. Par exemple, une carte de cartes (à partir C++ de la bibliothèque standard). Dans ce cas, vous pouvez faire de vos typedefs un type (un **struct**, par exemple) qui contient le mappage.
 
-Vous pouvez, cependant, décider de ne pas restructurer votre code.  Il est possible de livrer une application qui génère l’erreur C4503, mais si vous obtenez des erreurs au moment du lien sur un symbole tronqué, il peut être plus difficile de déterminer le type du symbole dans l’erreur. Débogage mai également être plus difficile ; le débogueur peut avoir le nom du symbole de mappage éprouvant des difficultés au nom de type. Toutefois, l’exactitude du programme, n’est pas affecté par le nom tronqué.
+Toutefois, vous pouvez décider de ne pas restructurer votre code.  Il est possible d’expédier une application qui génère des C4503, mais si vous recevez des erreurs de temps de liaison sur un symbole tronqué, il peut être plus difficile de déterminer le type du symbole dans l’erreur. Le débogage peut également être plus difficile ; le débogueur peut avoir difficilement mapper le nom de symbole au nom de type. Toutefois, l’exactitude du programme n’est pas affectée par le nom tronqué.
 
 ## <a name="example"></a>Exemple
 
-L’exemple suivant génère l’erreur C4503 dans les compilateurs avant Visual Studio 2017 :
+L’exemple suivant génère des C4503 dans les compilateurs avant Visual Studio 2017 :
 
 ```cpp
 // C4503.cpp
@@ -47,7 +47,7 @@ typedef std::map<std::string, WebAppTest> Hello;
 Hello MyWAT;
 ```
 
-Cet exemple illustre une manière de réécrire votre code pour résoudre l’erreur C4503 :
+Cet exemple montre une façon de réécrire votre code pour résoudre C4503 :
 
 ```cpp
 // C4503b.cpp

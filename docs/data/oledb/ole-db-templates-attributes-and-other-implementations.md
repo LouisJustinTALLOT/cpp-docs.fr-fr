@@ -6,50 +6,50 @@ helpviewer_keywords:
 - OLE DB templates, about OLE DB templates
 - OLE DB templates
 ms.assetid: 0c780c1b-9bba-4788-8c33-8552d9f120ac
-ms.openlocfilehash: 0e6b5dbc97f6a7bea1df342d6a792ea43907ca33
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 722bfdf02dc89e061351fd2a87b5d019db10da6e
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62283858"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80209883"
 ---
 # <a name="ole-db-templates-attributes-and-other-implementations"></a>Modèles, attributs et autres implémentations OLE DB
 
-## <a name="atl-ole-db-templates"></a>Modèles OLE DB ATL
+## <a name="atl-ole-db-templates"></a>Modèles de OLE DB ATL
 
-Les modèles OLE DB, qui font partie d’ATL (Active Template Library), assurez-vous que la technologie de base de données OLE DB hautes performances plus facile à utiliser en fournissant des classes qui implémentent de nombreuses interfaces OLE DB couramment utilisées. Avec ce modèle de bibliothèque est prise en charge de l’Assistant pour la création d’applications de départ OLE DB.
+Les modèles de OLE DB, qui font partie d’ATL (Active Template Library), facilitent l’utilisation de la technologie de base de données OLE DB de performances en fournissant des classes qui implémentent de nombreuses interfaces OLE DB couramment utilisées. En plus de cette bibliothèque de modèles, la prise en charge de l’Assistant pour la création d’applications OLE DB démarre.
 
 Cette bibliothèque de modèles contient deux parties :
 
-- **Les modèles du consommateur OLE DB** permettent d’implémenter une application de client (consommateur) OLE DB.
+- **Modèles de consommateur OLE DB** Utilisé pour implémenter une application cliente OLE DB (consommateur).
 
-- **Les modèles du fournisseur OLE DB** permettent d’implémenter une application de serveur (fournisseur) OLE DB.
+- **Modèles du fournisseur OLE DB** Utilisé pour implémenter une application de serveur OLE DB (fournisseur).
 
-Pour utiliser les modèles OLE DB, vous devez bien connaître les modèles C++, COM et les interfaces OLE DB. Si vous n’êtes pas familiarisé avec OLE DB, consultez [de référence du programmeur OLE DB](/sql/connect/oledb/ole-db/oledb-driver-for-sql-server-programming).
+Pour utiliser les modèles OLE DB, vous devez bien connaître les modèles C++, COM et les interfaces OLE DB. Si vous n’êtes pas familiarisé avec OLE DB, consultez [Guide de référence du programmeur OLE DB](/sql/connect/oledb/ole-db/oledb-driver-for-sql-server-programming).
 
 Pour plus d’informations, vous pouvez :
 
-- Lisez les rubriques sur la [les modèles du consommateur OLE DB](../../data/oledb/ole-db-consumer-templates-cpp.md) ou [les modèles du fournisseur OLE DB](../../data/oledb/ole-db-provider-templates-cpp.md).
+- Lisez les rubriques relatives aux modèles de [consommateur OLE DB](../../data/oledb/ole-db-consumer-templates-cpp.md) ou aux [modèles de fournisseur d’OLE DB](../../data/oledb/ole-db-provider-templates-cpp.md).
 
-- Créer un [consommateur OLE DB](../../data/oledb/creating-an-ole-db-consumer.md) ou [fournisseur OLE DB](../../data/oledb/creating-an-ole-db-provider.md).
+- Créez un [OLE DB consommateur](../../data/oledb/creating-an-ole-db-consumer.md) ou un [fournisseur de OLE DB](../../data/oledb/creating-an-ole-db-provider.md).
 
-- Afficher la liste des [classes de consommateur OLE DB](../../data/oledb/ole-db-consumer-templates-reference.md) ou [classes du fournisseur OLE DB](../../data/oledb/ole-db-provider-templates-reference.md).
+- Consultez la liste des classes de [consommateur OLE DB](../../data/oledb/ole-db-consumer-templates-reference.md) ou des [classes de fournisseur OLE DB](../../data/oledb/ole-db-provider-templates-reference.md).
 
-- Afficher la liste des [exemples de modèles OLE DB](https://github.com/Microsoft/VCSamples).
+- Consultez la liste des [exemples de modèles de OLE DB](https://github.com/Microsoft/VCSamples/tree/master/VC2010Samples/ATL/OLEDB).
 
-- Consultez [de référence du programmeur OLE DB](/sql/connect/oledb/ole-db/oledb-driver-for-sql-server-programming) (dans le Kit de développement logiciel Windows).
+- Consultez [OLE DB Guide de référence du programmeur](/sql/connect/oledb/ole-db/oledb-driver-for-sql-server-programming) (dans le SDK Windows).
 
-## <a name="ole-db-attributes"></a>Attributs du Kit de développement OLE DB
+## <a name="ole-db-attributes"></a>Attributs OLE DB
 
-Le [attributs du consommateur OLE DB](../../windows/ole-db-consumer-attributes.md) offrent un moyen pratique pour créer des consommateurs OLE DB. Les attributs OLE DB injectent du code basé sur le [modèles du consommateur OLE DB](../../data/oledb/ole-db-consumer-templates-reference.md) pour la création de fournisseurs et consommateurs OLE DB de travail. Si vous avez besoin spécifier les fonctionnalités non prises en charge par les attributs, vous pouvez utiliser les modèles OLE DB conjointement avec des attributs dans votre code.
+Les [attributs du consommateur OLE DB](../../windows/ole-db-consumer-attributes.md) offrent un moyen pratique de créer des OLE DB consommateurs. Les attributs OLE DB injectent du code basé sur les [modèles de consommateurs OLE DB](../../data/oledb/ole-db-consumer-templates-reference.md) pour créer des consommateurs et des fournisseurs OLE DB. Si vous devez spécifier une fonctionnalité qui n’est pas prise en charge par les attributs, vous pouvez utiliser les modèles de OLE DB conjointement aux attributs dans votre code.
 
-## <a name="mfc-ole-db-classes"></a>Classes MFC OLE DB
+## <a name="mfc-ole-db-classes"></a>Classes de OLE DB MFC
 
-La bibliothèque MFC possède une classe, [COleDBRecordView](../../mfc/reference/coledbrecordview-class.md), qui affiche les enregistrements de base de données dans les contrôles. La vue est une vue de formulaire directement connectée à un `CRowset` de l’objet et affiche les champs de la `CRowset` objet dans les contrôles du modèle de boîte de dialogue. Il fournit également une implémentation par défaut pour le déplacement vers le premier, suivant, précédent ou le dernier enregistrement et une interface pour la mise à jour de l’enregistrement actuellement dans la vue. Pour plus d'informations, consultez `COleDBRecordView`.
+La bibliothèque MFC a une classe, [COleDBRecordView](../../mfc/reference/coledbrecordview-class.md), qui affiche des enregistrements de base de données dans des contrôles. La vue est une vue de formulaire directement connectée à un objet `CRowset` et affiche les champs de l’objet `CRowset` dans les contrôles du modèle de boîte de dialogue. Il fournit également une implémentation par défaut pour passer au premier enregistrement, suivant, précédent ou dernier, ainsi qu’une interface pour la mise à jour de l’enregistrement actuellement affiché. Pour plus d’informations, consultez `COleDBRecordView`.
 
-## <a name="ole-db-sdk-interfaces"></a>Interfaces OLE DB SDK
+## <a name="ole-db-sdk-interfaces"></a>Interfaces du kit de développement logiciel OLE DB
 
-Dans les cas où les modèles OLE DB ne prennent en charge des fonctionnalités OLE DB, vous devez utiliser les interfaces OLE DB elles-mêmes. Pour plus d’informations, consultez [de référence du programmeur OLE DB](/sql/connect/oledb/ole-db/oledb-driver-for-sql-server-programming) dans le SDK Windows.
+Dans les cas où les modèles de OLE DB ne prennent pas en charge OLE DB fonctionnalité, vous devez utiliser les interfaces OLE DB elles-mêmes. Pour plus d’informations, consultez [OLE DB Guide de référence du programmeur](/sql/connect/oledb/ole-db/oledb-driver-for-sql-server-programming) dans le SDK Windows.
 
 ## <a name="see-also"></a>Voir aussi
 

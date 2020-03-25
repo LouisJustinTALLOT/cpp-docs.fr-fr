@@ -6,12 +6,12 @@ helpviewer_keywords:
 - L-values [C++]
 - conversions, standard
 ms.assetid: ce7ac8d3-5c99-4674-8229-0672de05528d
-ms.openlocfilehash: c51a5ea5aaabb27babb9e4cd355721742088d31e
-ms.sourcegitcommit: c51b2c665849479fa995bc3323a22ebe79d9d7ce
+ms.openlocfilehash: 41ad348b7109451f519c44f685cea0a271f71925
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/07/2019
-ms.locfileid: "71998899"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80161008"
 ---
 # <a name="standard-conversions"></a>Conversions standard
 
@@ -127,7 +127,7 @@ Dans l’exemple précédent, `u` est un objet entier **short non signé** qui d
 
 Un objet de type flottant peut être converti sans risque en type flottant plus précis. Cela permet de ne pas perdre de signification lors de la conversion. Par exemple, les conversions de **float** en **double** ou de **double** en **long double** sont sûres et la valeur est inchangée.
 
-Un objet de type flottant peut également être converti en un type moins précis, s’il se trouve dans une plage qui peut être représentée par ce type. (Consultez [limites flottantes](../cpp/floating-limits.md) pour les plages de types flottants.) Si la valeur d’origine n’est pas représentable précisément, elle peut être convertie en la valeur représentable supérieure ou inférieure suivante. Le résultat n’est pas défini si aucune valeur de ce type n’existe. Prenons l'exemple suivant :
+Un objet de type flottant peut également être converti en un type moins précis, s’il se trouve dans une plage qui peut être représentée par ce type. (Consultez [limites flottantes](../cpp/floating-limits.md) pour les plages de types flottants.) Si la valeur d’origine n’est pas représentable précisément, elle peut être convertie en la valeur représentable supérieure ou inférieure suivante. Le résultat n’est pas défini si aucune valeur de ce type n’existe. Prenons l’exemple suivant :
 
 ```cpp
 cout << (float)1E300 << endl;
@@ -189,21 +189,21 @@ Dans le premier cas, la classe de base spécifiée est accessible et la conversi
 
 L'accessibilité d'une classe de base dépend du type d'héritage utilisé dans la dérivation. Prenons l'héritage illustré dans l'illustration suivante.
 
-![Graphique d’héritage représentant&#45;la classe de base](../cpp/media/vc38xa1.gif "graphique d'&#45;héritage de l’accessibilité avec l’accessibilité") de la classe de base <br/>
+![Graphique d’héritage représentant&#45;l’accessibilité de la classe de base](../cpp/media/vc38xa1.gif "Graphique d’héritage représentant&#45;l’accessibilité de la classe de base") <br/>
 Graphique d'héritage pour l'illustration de l'accessibilité de la classe de base
 
 Le tableau suivant indique l'accessibilité de la classe de base d'après la situation illustrée.
 
 |Type de fonction|Dérivation|Conversion de<br /><br /> B * à un\* légal ?|
 |----------------------|----------------|-------------------------------------------|
-|Fonction externe (hors portée de classe)|Private|Non|
-||Protégé|Non|
+|Fonction externe (hors portée de classe)|Privé|Non|
+||Protected|Non|
 ||Public|Oui|
-|Fonction membre B (dans la portée B)|Private|Oui|
-||Protégé|Oui|
+|Fonction membre B (dans la portée B)|Privé|Oui|
+||Protected|Oui|
 ||Public|Oui|
-|Fonction membre C (dans la portée C)|Private|Non|
-||Protégé|Oui|
+|Fonction membre C (dans la portée C)|Privé|Non|
+||Protected|Oui|
 ||Public|Oui|
 
 Dans le second cas, un pointeur vers une classe peut être converti en pointeur vers une classe de base lorsque vous utilisez une conversion de type explicite. Pour plus d’informations sur les conversions de types explicites, consultez [opérateur de conversion de type explicite](explicit-type-conversion-operator-parens.md).

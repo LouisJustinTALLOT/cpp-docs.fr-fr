@@ -9,12 +9,12 @@ helpviewer_keywords:
 - side-by-side applications [C++]
 - builds [C++], side-by-side assemblies
 ms.assetid: 9465904e-76f7-48bd-bb3f-c55d8f1699b6
-ms.openlocfilehash: b7deb68a441d392464dad8763f80bd4d9cdfcb17
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: db2978c054362b6c329fb786d0f7da322d4c9201
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69493360"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80169875"
 ---
 # <a name="building-cc-isolated-applications-and-side-by-side-assemblies"></a>Génération d'applications isolées C/C++ et d'assemblys côte à côte
 
@@ -32,16 +32,16 @@ Cette section explique comment générer une application C/C++ en tant qu'applic
 
 [Génération d’assemblys côte à côte C/C++](building-c-cpp-side-by-side-assemblies.md)
 
-[Guide pratique : générer des composants COM sans inscription](how-to-build-registration-free-com-components.md)
+[Guide pratique pour générer des composants COM sans inscription](how-to-build-registration-free-com-components.md)
 
-[Guide pratique pour générer des applications isolées afin de consommer des composants COM](how-to-build-isolated-applications-to-consume-com-components.md)
+[Guide pratique pour générer des applications isolées pour consommer des composants COM](how-to-build-isolated-applications-to-consume-com-components.md)
 
 [Présentation de la génération de manifeste pour les programmes C/C++](understanding-manifest-generation-for-c-cpp-programs.md)
 
 [Dépannage d’applications isolées et d’assemblys côte à côte C/C++](troubleshooting-c-cpp-isolated-applications-and-side-by-side-assemblies.md)
 
-## <a name="related-sections"></a>Rubriques connexes
+## <a name="related-sections"></a>Sections connexes
 
 [Applications isolées et assemblys côte à côte](/windows/win32/SbsCs/isolated-applications-and-side-by-side-assemblies-portal)
 
-[Déploiement des applications de bureau](../windows/deploying-native-desktop-applications-visual-cpp.md)
+[Déploiement d’applications de bureau](../windows/deploying-native-desktop-applications-visual-cpp.md)

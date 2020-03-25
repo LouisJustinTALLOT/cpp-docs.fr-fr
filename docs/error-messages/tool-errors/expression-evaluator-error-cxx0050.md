@@ -7,17 +7,17 @@ helpviewer_keywords:
 - CAN0050
 - CXX0050
 ms.assetid: 214cd193-c6dc-41b9-9ebe-5a4b1689d3ab
-ms.openlocfilehash: 59cdb3311f7fc3ac1ea5d98bfe1d2b9bd45e929c
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: c79ed3efe783e24a30005416173e7de7e7952aa1
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62375949"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80184838"
 ---
 # <a name="expression-evaluator-error-cxx0050"></a>Évaluateur d'expression, erreur CXX0050
 
-à gauche de :: doit être de classe/struct/union
+la partie gauche de :: doit être de type class/struct/union
 
-Le symbole situé à gauche de l’opérateur de résolution de portée (`::`) n’était pas une classe, une structure ou une union.
+Le symbole situé à gauche de l’opérateur de résolution de portée (`::`) n’était pas une classe, une structure ou une Union.
 
 Cette erreur est identique à CAN0050.

@@ -9,20 +9,20 @@ helpviewer_keywords:
 - inline assembly, registers
 - registers, inline assembly
 ms.assetid: c63e6bb4-49d9-4fa1-bb22-eea21b5cbc0f
-ms.openlocfilehash: 5c07fa897da23a55f376a20e7588c8c8c269d1a6
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 865fc5fac5f46cdc8c55966e9989227d1d671d6f
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62167372"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80169251"
 ---
 # <a name="segment-references-in-inline-assembly"></a>Références de segment dans l'assembly inline
 
-**Section spécifique à Microsoft**
+**Section spécifique de Microsoft**
 
 Vous devez faire référence aux segments par registre plutôt que par nom (le nom de segment `_TEXT` n'est pas valide, par exemple). Les substitutions de segments doivent utiliser le registre explicitement, comme dans ES:[BX].
 
-**FIN de la section spécifique à Microsoft**
+**Fin de la section spécifique de Microsoft**
 
 ## <a name="see-also"></a>Voir aussi
 

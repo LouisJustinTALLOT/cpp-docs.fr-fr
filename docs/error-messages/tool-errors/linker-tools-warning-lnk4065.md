@@ -6,15 +6,15 @@ f1_keywords:
 helpviewer_keywords:
 - LNK4065
 ms.assetid: aa5c9e2c-9ad3-4460-8605-4c12bbc6d423
-ms.openlocfilehash: 458685482e7cd5c61710c0080e99763c65e852e6
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: ed45eba3964533f6764cc775507a5054a21b700e
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62410211"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80194055"
 ---
 # <a name="linker-tools-warning-lnk4065"></a>Avertissement des outils Éditeur de liens LNK4065
 
-'fonction' ne peut pas être ordonnée ; ignoré
+'Function’ne peut pas être ordonné ; pas
 
-La fonction donnée n’a pas été compilée comme fonction packagée. Recompilez à l’aide de [/Gy](../../build/reference/gy-enable-function-level-linking.md).
+La fonction donnée n’a pas été compilée en tant que fonction empaquetée. Recompilez à l’aide de [/Gy](../../build/reference/gy-enable-function-level-linking.md).

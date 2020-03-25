@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C2362
 ms.assetid: 7aafecbc-b3cf-45a6-9ec3-a17e3f222511
-ms.openlocfilehash: d48806982bbb6cdda4d29e47f6692e7e3601d6de
-ms.sourcegitcommit: ecf274bcfe3a977c48745aaa243e5e731f1fdc5f
+ms.openlocfilehash: 330932f53627f8ba09e9e089cec7809eeeb6ab1c
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/04/2019
-ms.locfileid: "66503211"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80206074"
 ---
 # <a name="compiler-error-c2362"></a>Erreur du compilateur C2362
 
-> l’initialisation de '*identificateur*' est ignorée par ' goto *étiquette*'
+> l’initialisation de'*identifier*'est ignorée par’GoTo *label*'
 
-Lors de la compilation à l’aide de [/Za](../../build/reference/za-ze-disable-language-extensions.md), un saut vers l’étiquette empêche l’identificateur de l’initialisation.
+Lorsqu’il est compilé à l’aide de [/za](../../build/reference/za-ze-disable-language-extensions.md), un saut à l’étiquette empêche l’initialisation de l’identificateur.
 
-Vous pouvez uniquement passer au-delà d’une déclaration avec un initialiseur si la déclaration est englobée dans un bloc qui n’est pas inscrit, ou si la variable a déjà été initialisée.
+Vous pouvez sauter uniquement une déclaration avec un initialiseur si la déclaration est placée dans un bloc qui n’est pas entré, ou si la variable a déjà été initialisée.
 
-L’exemple suivant génère C2362 :
+L’exemple suivant génère l’C2362 :
 
 ```cpp
 // C2362.cpp
@@ -33,7 +33,7 @@ label1:;
 }
 ```
 
-Solution possible :
+Résolution possible :
 
 ```cpp
 // C2362b.cpp

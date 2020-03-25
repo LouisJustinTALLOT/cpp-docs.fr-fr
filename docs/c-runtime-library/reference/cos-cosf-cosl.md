@@ -34,12 +34,12 @@ helpviewer_keywords:
 - trigonometric functions
 - cosines, calculating
 ms.assetid: ae90435e-6b68-4a47-a81f-be87d5c08f16
-ms.openlocfilehash: 4d07a8636aabc4973c7beb9725a39e98c229a098
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 9ec612aa9f8c6eaf1731d62b654d45841cdfa159
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70942834"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80170253"
 ---
 # <a name="cos-cosf-cosl"></a>cos, cosf, cosl
 
@@ -67,24 +67,24 @@ Angle en radians.
 
 Cosinus de *x*. Si *x* est supérieur ou égal à 263, ou inférieur ou égal à-263, une perte de précision dans le résultat se produit.
 
-|Entrée|Exception SEH|Exception{b> <b}Matherr|
+|Entrée|Exception SEH|Exception\{b\> \<b\}Matherr|
 |-----------|-------------------|-----------------------|
-|± QNAN, IND|none|**_DOMAIN**|
-|FICHIER INF ±|**NON VALIDE**|**_DOMAIN**|
+|± QNAN, IND|Aucun|**_DOMAIN**|
+|FICHIER INF ±|**Non valide**|**_DOMAIN**|
 
 ## <a name="remarks"></a>Notes
 
 Étant C++ donné que autorise la surcharge, vous pouvez appeler des surcharges de **COS** qui acceptent et retournent des valeurs **float** ou **long** **double** . Dans un programme C, **COS** prend toujours et retourne une valeur **double**.
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
 |Routine|En-tête C requis|En-tête C++ requis|
 |-------------|---------------------|-|
-|**cos**, **cosh**, **cosf**|\<math.h>|\<cmath> ou \<math.h>|
+|**COS**, **cosh**, **cosf,**|\<math.h>|\<cmath> ou \<math.h>|
 
-Pour plus d'informations sur la compatibilité, voir [Compatibilité](../../c-runtime-library/compatibility.md).
+Pour plus d’informations sur la compatibilité, voir [Compatibilité](../../c-runtime-library/compatibility.md).
 
-## <a name="example"></a>Exemples
+## <a name="example"></a>Exemple
 
 Consultez l’exemple dans [Sin, sinf, sinl](sin-sinf-sinl.md).
 

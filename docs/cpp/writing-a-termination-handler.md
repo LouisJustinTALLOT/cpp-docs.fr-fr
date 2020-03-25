@@ -11,12 +11,12 @@ helpviewer_keywords:
 - exception handling [C++], termination handlers
 - try-catch keyword [C++], termination handlers
 ms.assetid: 52aa1f8f-f8dd-44b8-be94-5e2fc88d44fb
-ms.openlocfilehash: f0b994075a8d59ce5d0955f10bf8c61d357d2db9
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 8a243281e0d984a42cd4b4d9f249d867812d8bca
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62209466"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80187308"
 ---
 # <a name="writing-a-termination-handler"></a>Écriture d'un gestionnaire des terminaisons
 
@@ -26,7 +26,7 @@ Les gestionnaires de terminaisons utilisent l'instruction try-finally.
 
 ## <a name="what-do-you-want-to-know-more-about"></a>Sur quels éléments souhaitez-vous obtenir des informations supplémentaires ?
 
-- [L’instruction try-finally](../cpp/try-finally-statement.md)
+- [Instruction try-finally](../cpp/try-finally-statement.md)
 
 - [Nettoyage des ressources](../cpp/cleaning-up-resources.md)
 

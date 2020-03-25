@@ -6,15 +6,15 @@ f1_keywords:
 helpviewer_keywords:
 - LNK4200
 ms.assetid: 0d335e69-8766-455b-beb5-a3ba6247274e
-ms.openlocfilehash: e5811f22b5659e22491a00360ce1dafa70c1ba80
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: ec7664d66c8a382244b982da7c573accff8fc4a6
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62395090"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80183213"
 ---
 # <a name="linker-tools-warning-lnk4200"></a>Avertissement des outils Éditeur de liens LNK4200
 
-informations de numéro de ligne endommagées dans le fichier objet ; ignoré
+informations sur le numéro de ligne endommagées dans le fichier objet ; pas
 
-Les informations de numéro de ligne dans le fichier objet sont endommagées. Régénérez.
+Les informations de numéro de ligne dans le fichier objet sont endommagées. Rebuild (Regénération).

@@ -10,21 +10,21 @@ helpviewer_keywords:
 - copying objects
 - assigning values to copy objects
 ms.assetid: a94fe1f9-0289-4fb9-8633-77c654002c0d
-ms.openlocfilehash: 59f463d103e233a1d9b25da3243a16f67263c815
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: beabe4c6219975d33c7af98a94498188c9abfa55
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62392295"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80189527"
 ---
 # <a name="copy-constructors-and-copy-assignment-operators-c"></a>Constructeurs de copie et opérateurs d'assignation de copie (C++)
 
 > [!NOTE]
-> À compter de C ++ 11, deux types d’assignations sont prises en charge : *copier devoir* et *assignation de déplacement*. Dans cet article « assignation » signifie assignation de copie, sauf spécification contraire. Pour plus d’informations sur l’assignation de déplacement, consultez [constructeurs de déplacement et opérateurs d’assignation déplacer (C++)](move-constructors-and-move-assignment-operators-cpp.md).
+> À partir de C++ 11, deux types d’attributions sont pris en charge dans le langage : *assignation de copie* et *assignation de déplacement*. Dans cet article « assignation » signifie assignation de copie, sauf spécification contraire. Pour plus d’informations sur l’assignation de déplacement, consultez [constructeurs de déplacement etC++opérateurs d’assignation de déplacement ()](move-constructors-and-move-assignment-operators-cpp.md).
 >
 > Les opérations d'assignation et d'initialisation génèrent une copie des objets.
 
-- **Affectation**: Lorsque la valeur d’un objet est affectée à un autre objet, le premier objet est copié vers le deuxième objet. Par conséquent,
+- **Assignation**: quand la valeur d’un objet est assignée à un autre objet, le premier objet est copié dans le deuxième objet. Par conséquent :
 
     ```cpp
     Point a, b;
@@ -34,9 +34,9 @@ ms.locfileid: "62392295"
 
    entraîne la copie de la valeur de `b` dans `a`.
 
-- **L’initialisation**: L’initialisation se produit lorsqu’un nouvel objet est déclaré, lorsque les arguments sont passés aux fonctions par valeur, ou lorsque les valeurs sont retournées à partir de fonctions par valeur.
+- **Initialisation**: l’initialisation se produit lorsqu’un nouvel objet est déclaré, lorsque des arguments sont passés à des fonctions par valeur, ou lorsque des valeurs sont retournées à partir de fonctions par valeur.
 
-Vous pouvez définir la sémantique de « copie » pour les objets de type classe. Par exemple, prenons le code suivant :
+Vous pouvez définir la sémantique de « copie » pour les objets de type classe. Considérez par exemple le code suivant :
 
 ```cpp
 TextFile a, b;
@@ -47,13 +47,13 @@ b = a;
 
 Ce code pourrait signifier « copier le contenu de FILE1.DAT vers FILE2.DAT » ou « ignorer FILE2.DAT et faire de `b` un deuxième handle vers FILE1.DAT ». Vous devez lier à chaque classe la sémantique de copie appropriée, comme suit.
 
-- À l’aide de l’opérateur d’assignation **opérateur =** avec une référence au type de classe en tant que le type de retour et le paramètre est passé par **const** référence — par exemple `ClassName& operator=(const ClassName& x);`.
+- En utilisant l’opérateur d’assignation **Operator =** avec une référence au type de classe comme type de retour et le paramètre passé par référence **const** , par exemple `ClassName& operator=(const ClassName& x);`.
 
 - En utilisant le constructeur de copie.
 
 Si vous ne déclarez pas de constructeur de copie, le compilateur génère un constructeur de copie de membre à membre à votre place.  Si vous ne déclarez pas d'opérateur d'assignation de copie, le compilateur génère un opérateur d'assignation de copie de membre à membre à votre place. La déclaration d'un constructeur de copie n'entraîne pas la suppression de l'opérateur d'assignation de copie généré par le compilateur, et vice versa. Si vous implémentez l'un des deux, nous vous recommandons d'implémenter également l'autre afin que la signification du code soit claire.
 
-Le constructeur de copie accepte un argument de type <em>nom de la classe</em><strong>&</strong>, où *nom de la classe* est le nom de la classe pour laquelle le constructeur est défini. Exemple :
+Le constructeur de copie accepte un argument de type <em>class-name</em> <strong>&</strong>, où *Class-Name* est le nom de la classe pour laquelle le constructeur est défini. Par exemple :
 
 ```cpp
 // spec1_copying_class_objects.cpp
@@ -70,19 +70,19 @@ int main()
 ```
 
 > [!NOTE]
-> Vérifiez le type d’argument du constructeur de copie **const** <em>nom de la classe</em> <strong>&</strong> autant que possible. Cela empêche le constructeur de copie de modifier accidentellement l'objet à partir duquel il effectue la copie. Il permet également de copie à partir de **const** objets.
+> Définissez le type de l’argument **const** <em>Class-Name</em> du constructeur de copie<strong>&</strong> chaque fois que cela est possible. Cela empêche le constructeur de copie de modifier accidentellement l'objet à partir duquel il effectue la copie. Il permet également la copie à partir d’objets **const** .
 
 ## <a name="compiler-generated-copy-constructors"></a>Constructeurs de copie générés par le compilateur
 
-Les constructeurs de copie généré par le compilateur, telles que les constructeurs de copie défini par l’utilisateur, ont un seul argument de type « référence à *nom de la classe*. » Une exception est lorsque toutes les classes de base et les classes de membre possèdent des constructeurs de copie déclarés comme prenant un argument unique de type **const** <em>nom de la classe</em><strong>&</strong>. Dans ce cas, les arguments du constructeur de copie généré par le compilateur est également **const**.
+Les constructeurs de copie générés par le compilateur, comme les constructeurs de copie définis par l’utilisateur, ont un seul argument de type « référence à *Class-Name*». Une exception est quand toutes les classes de base et les classes de membre ont des constructeurs de copie déclarés comme acceptant un argument unique de type **const** <em>class-name</em> <strong>&</strong>. Dans ce cas, l’argument du constructeur de copie généré par le compilateur est également **const**.
 
-Lorsque le type d’argument au constructeur de copie n’est pas **const**, l’initialisation en copiant un **const** objet génère une erreur. L’inverse n’est pas vrai : Si l’argument est **const**, vous pouvez initialiser en copiant un objet qui n’est pas **const**.
+Lorsque le type d’argument du constructeur de copie n’est pas **const**, l’initialisation par copie d’un objet **const** génère une erreur. L’inverse n’est pas vrai : si l’argument est **const**, vous pouvez initialiser en copiant un objet qui n’est pas **const**.
 
-Opérateurs d’assignation généré par le compilateur suivent le même modèle aux **const.** Ils acceptent un argument unique de type <em>nom de la classe</em> <strong>&</strong> à moins que les opérateurs d’assignation dans toutes les classes de base et membres acceptent des arguments de type **const** <em>nom de la classe</em><strong>&</strong>. Dans ce cas, la classe générée du affectation opérateur prend un **const** argument.
+Les opérateurs d’assignation générés par le compilateur suivent le même modèle en ce qui concerne **const.** Ils acceptent un argument unique de type <em>class-name</em> <strong>&</strong> , sauf si les opérateurs d’assignation dans toutes les classes de base et les classes de membre acceptent des arguments de type **const** <em>Class-Name</em> <strong>&</strong>. Dans ce cas, l’opérateur d’assignation généré de la classe prend un argument **const** .
 
 > [!NOTE]
 > Lorsque des classes de base virtuelles sont initialisées par des constructeurs de copie, générés par le compilateur ou définis par l'utilisateur, elles ne sont initialisées qu'une seule fois : au moment où elles sont construites.
 
-Les conséquences sont semblables à celles du constructeur de copie. Lorsque le type d’argument n’est pas **const**, affectation à partir d’un **const** objet génère une erreur. L’inverse n’est pas vrai : Si un **const** valeur est assignée à une valeur qui n’est pas **const**, l’assignation réussit.
+Les conséquences sont semblables à celles du constructeur de copie. Lorsque le type d’argument n’est pas **const**, l’assignation d’un objet **const** génère une erreur. L’inverse n’est pas vrai : si une valeur **const** est assignée à une valeur qui n’est pas **const**, l’assignation est réussie.
 
-Pour plus d’informations sur les opérateurs d’assignation surchargés, consultez [attribution](../cpp/assignment.md).
+Pour plus d’informations sur les opérateurs d’assignation surchargés, consultez [affectation](../cpp/assignment.md).

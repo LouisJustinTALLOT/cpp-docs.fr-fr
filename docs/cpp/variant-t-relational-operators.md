@@ -15,16 +15,16 @@ helpviewer_keywords:
 - operator != [C++], relational operators
 - == operator [C++], with specific Visual C++ objects
 ms.assetid: 141bacb8-41a2-44dd-b3c0-4ad1f884f4ea
-ms.openlocfilehash: e0d26247868440f47c73422510ac0e998f8e8dee
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: e0d7ea1a0bcaf8329cff0cdfb0c01154f3c5a73b
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62403293"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80187568"
 ---
-# <a name="variantt-relational-operators"></a>_variant_t, opérateurs relationnels
+# <a name="_variant_t-relational-operators"></a>_variant_t, opérateurs relationnels
 
-**Section spécifique à Microsoft**
+**Section spécifique de Microsoft**
 
 Comparez deux objets `_variant_t` pour déterminer leur égalité ou inégalité.
 
@@ -44,20 +44,20 @@ bool operator!=(
 #### <a name="parameters"></a>Paramètres
 
 *varSrc*<br/>
-Un `VARIANT` à comparer avec la `_variant_t` objet.
+`VARIANT` à comparer à l’objet `_variant_t`.
 
 *pSrc*<br/>
-Pointeur vers le `VARIANT` à comparer avec la `_variant_t` objet.
+Pointeur vers le `VARIANT` à comparer avec l’objet `_variant_t`.
 
 ## <a name="return-value"></a>Valeur de retour
 
-Retourne **true** si la comparaison est vérifiée, **false** si ce n’est pas le cas.
+Retourne la **valeur true** si la comparaison contient, **false** dans le cas contraire.
 
 ## <a name="remarks"></a>Notes
 
-Compare un `_variant_t` de l’objet avec un `VARIANT`, afin de tester l’égalité ou d’inégalité.
+Compare un objet `_variant_t` à un `VARIANT`, en testant l’égalité ou l’inégalité.
 
-**FIN de la section spécifique à Microsoft**
+**Fin de la section spécifique de Microsoft**
 
 ## <a name="see-also"></a>Voir aussi
 

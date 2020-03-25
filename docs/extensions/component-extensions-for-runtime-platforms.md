@@ -9,12 +9,12 @@ helpviewer_keywords:
 - keywords [C++]
 - Managed Extensions for C++, replacement syntax
 ms.assetid: 1e400ee6-3ac9-4910-a608-9d3d5993e423
-ms.openlocfilehash: 1e47a138fece021cf015884222d8cf5c766655fd
-ms.sourcegitcommit: 7750e4c291d56221c8893120c56a1fe6c9af60d6
+ms.openlocfilehash: 6b3add1c0de8aa1f8ec66e8d220443c4a0efd704
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/25/2019
-ms.locfileid: "71274679"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80172463"
 ---
 # <a name="component-extensions-for-net-and-uwp"></a>Extensions de composants pour .NET et UWP
 
@@ -37,24 +37,24 @@ Les extensions incluent également des mots clés *contextuels*. Un mot clé est
 
 Le tableau suivant répertorie les mots clés de l'extension du langage C++.
 
-|Mot clé|Contextuel|Objectif|Référence|
+|Mot clé|Contextuel|Objectif|Informations de référence|
 |-------------|-----------------------|-------------|---------------|
 |**ref class**<br /><br /> **ref struct**|Non|Déclare une classe.|[Classes et structs](classes-and-structs-cpp-component-extensions.md)|
 |**value class**<br /><br /> **value struct**|Non|Déclare une classe de valeur.|[Classes et structs](classes-and-structs-cpp-component-extensions.md)|
 |**interface, classe**<br /><br /> **interface struct**|Non|Déclare une interface.|[interface, classe](interface-class-cpp-component-extensions.md)|
 |**enum, classe**<br /><br /> **enum struct**|Non|Déclare une énumération.|[enum, classe](enum-class-cpp-component-extensions.md)|
-|**propriété**|Oui|Déclare une propriété.|[propriété](property-cpp-component-extensions.md)|
+|**property**|Oui|Déclare une propriété.|[property](property-cpp-component-extensions.md)|
 |**delegate**|Oui|Déclare un délégué.|[délégué (C++/CLI et C++/CX)](delegate-cpp-component-extensions.md)|
 |**event**|Oui|Déclare un événement.|[event](event-cpp-component-extensions.md)|
 
 ## <a name="override-specifiers"></a>Spécificateurs de substitution
 
-Vous pouvez utiliser les mots clés suivants pour qualifier le comportement de substitution pour la dérivation. Bien que le mot clé **new** ne soit pas une extension de C++, il est répertorié ici car il peut être utilisé dans un autre contexte. Certains spécificateurs sont également valides pour la programmation native. Pour plus d'informations, voir [Procédure : déclarer des spécificateurs de substitution dans les compilations natives (C++/CLI)](../dotnet/how-to-declare-override-specifiers-in-native-compilations-cpp-cli.md).
+Vous pouvez utiliser les mots clés suivants pour qualifier le comportement de substitution pour la dérivation. Bien que le mot clé **new** ne soit pas une extension de C++, il est répertorié ici car il peut être utilisé dans un autre contexte. Certains spécificateurs sont également valides pour la programmation native. Pour plus d’informations, consultez [Comment : déclarer des spécificateurs de substitution dans les compilationsC++natives (/CLI)](../dotnet/how-to-declare-override-specifiers-in-native-compilations-cpp-cli.md).
 
-|Mot clé|Contextuel|Objectif|Référence|
+|Mot clé|Contextuel|Objectif|Informations de référence|
 |-------------|-----------------------|-------------|---------------|
 |**abstract**|Oui|Indique que les fonctions ou classes sont abstraites.|[abstract](abstract-cpp-component-extensions.md)|
-|**new**|Non|Indique qu'une fonction n'est pas une substitution d'une version de la classe de base.|[new (nouvel emplacement dans vtable)](new-new-slot-in-vtable-cpp-component-extensions.md)|
+|**nouveau**|Non|Indique qu'une fonction n'est pas une substitution d'une version de la classe de base.|[new (nouvel emplacement dans vtable)](new-new-slot-in-vtable-cpp-component-extensions.md)|
 |**override**|Oui|Indique qu'une méthode doit être une substitution d'une version de la classe de base.|[override](override-cpp-component-extensions.md)|
 |**sealed**|Oui|Empêche les classes d'être utilisées comme classes de base.|[sealed](sealed-cpp-component-extensions.md)|
 
@@ -71,7 +71,7 @@ Les mots clés suivants ont été ajoutés pour prendre en charge des types gén
 
 Les mots clés suivants ont été ajoutés aux extensions C++.
 
-|Mot clé|Contextuel|Objectif|Référence|
+|Mot clé|Contextuel|Objectif|Informations de référence|
 |-------------|-----------------------|-------------|---------------|
 |**finally**|Oui|Indique le comportement de gestion des exceptions par défaut.|[Gestion des exceptions](exception-handling-cpp-component-extensions.md)|
 |**for each, in**|Non|Énumère les éléments d’une collection.|[for each, in](../dotnet/for-each-in.md)|
@@ -85,7 +85,7 @@ Les mots clés suivants ont été ajoutés aux extensions C++.
 
 Les constructions de langage suivantes sont implémentées comme modèles, plutôt que comme mots clés. Si vous spécifiez l'option de compilateur `/ZW`, elles sont définies dans l'espace de noms `lang`. Si vous spécifiez l'option de compilateur `/clr`, elles sont définies dans l'espace de noms `cli`.
 
-|Mot clé|Objectif|Référence|
+|Mot clé|Objectif|Informations de référence|
 |-------------|-------------|---------------|
 |**array**|Déclare un tableau.|[Tableaux](arrays-cpp-component-extensions.md)|
 |**interior_ptr**|(CLR uniquement) Pointe vers des données dans un type de référence.|[interior_ptr (C++-CLI)](interior-ptr-cpp-cli.md)|
@@ -97,7 +97,7 @@ Les constructions de langage suivantes sont implémentées comme modèles, plut�
 
 Les déclarateurs de type suivants demandent au runtime de gérer automatiquement la durée de vie et la suppression des objets alloués.
 
-|Opérateur|Objectif|Référence|
+|Opérateur|Objectif|Informations de référence|
 |--------------|-------------|---------------|
 |`^`|Déclare un handle à un objet ; autrement dit, un pointeur vers un objet Windows Runtime ou CLR qui est automatiquement supprimé quand il n’est plus utilisable.|[Handle sur l'opérateur Object (^)](handle-to-object-operator-hat-cpp-component-extensions.md)|
 |`%`|Déclare une référence de suivi ; autrement dit, une référence vers un objet Windows Runtime ou CLR qui est automatiquement supprimé quand il n’est plus utilisable.|[Opérateur de référence de suivi](tracking-reference-operator-cpp-component-extensions.md)|
@@ -111,7 +111,7 @@ Cette section répertorie les constructions de programmation supplémentaires, a
 |[__identifier (C++-CLI)](identifier-cpp-cli.md)|(Windows Runtime et CLR) Permet d’utiliser des mots clés en tant qu’identificateurs.|
 |[Listes d’arguments de variable (...) (C++-CLI)](variable-argument-lists-dot-dot-dot-cpp-cli.md)|(Windows Runtime et CLR) Permet à une fonction de prendre un nombre variable d’arguments.|
 |[Équivalents .NET Framework des types natifs C++ (C++-CLI)](../dotnet/dotnet-framework-equivalents-to-cpp-native-types-cpp-cli.md)|Répertorie les types CLR qui sont utilisés à la place des types intégraux C++.|
-|modificateur [appdomain](../cpp/appdomain.md) **__declspec** modifier|Modificateur **__declspec** qui impose que des variables statiques et globales existent par appdomain.|
+|modificateur d' **__declspec** [AppDomain](../cpp/appdomain.md)|Modificateur **__declspec** qui impose que des variables statiques et globales existent par appdomain.|
 |[Casts de style C avec /clr (C++/CLI)](c-style-casts-with-clr-cpp-cli.md)|Décrit comment les casts de style C sont interprétées.|
 |Convention d’appel [__clrcall](../cpp/clrcall.md)|Indique la convention d’appel conforme au CLR.|
 |`__cplusplus_cli`|[Macros prédéfinies](../preprocessor/predefined-macros.md)|
@@ -122,9 +122,9 @@ Cette section répertorie les constructions de programmation supplémentaires, a
 |[Boxing](boxing-cpp-component-extensions.md)|Montre les conditions dans lesquelles les types de valeur sont boxed.|
 |[Prise en charge du compilateur pour les Type Traits](compiler-support-for-type-traits-cpp-component-extensions.md)|Explique comment détecter les caractéristiques des types au moment de la compilation.|
 |Pragmas [managés, non managés](../preprocessor/managed-unmanaged.md)|Montre comment les fonctions managées et non managées peuvent coexister dans le même module.|
-|Modificateur [process](../cpp/process.md) **__declspec**|Modificateur **__declspec** qui impose que des variables statiques et globales existent par process.|
+|modificateur de **__declspec** de [processus](../cpp/process.md)|Modificateur **__declspec** qui impose que des variables statiques et globales existent par process.|
 |[Réflexion (C++-CLI)](../dotnet/reflection-cpp-cli.md)|Montre la version CLR des informations de type au moment de l'exécution.|
-|[String](string-cpp-component-extensions.md)|Décrit la conversion du compilateur des littéraux de chaîne en <xref:System.String>.|
+|[Chaîne](string-cpp-component-extensions.md)|Décrit la conversion du compilateur des littéraux de chaîne en <xref:System.String>.|
 |[Transfert de type (C++-CLI)](type-forwarding-cpp-cli.md)|Permet le déplacement d'un type dans un assembly d'expédition vers un autre assembly afin que le code client n'ait pas besoin d'être recompilé.|
 |[Attributs définis par l'utilisateur](user-defined-attributes-cpp-component-extensions.md)|Montre les attributs définis par l'utilisateur.|
 |[Directive #using](../preprocessor/hash-using-directive-cpp.md)|Importe des assemblys externes.|

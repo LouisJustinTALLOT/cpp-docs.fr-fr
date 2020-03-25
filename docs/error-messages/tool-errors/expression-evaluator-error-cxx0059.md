@@ -7,17 +7,17 @@ helpviewer_keywords:
 - CXX0059
 - CAN0059
 ms.assetid: e8bdcb74-1315-4083-b24d-e47eac7d1ec0
-ms.openlocfilehash: 9d031044ffc89df40bb4196c8c5f19749b76898d
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: f3473d4ae3380b5896005bc2801ef334f3a5ec4e
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62299528"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80184578"
 ---
 # <a name="expression-evaluator-error-cxx0059"></a>Évaluateur d'expression, erreur CXX0059
 
-opérande gauche est une classe pas un nom de fonction
+l’opérande gauche n’est pas un nom de fonction
 
-L’opérande gauche d’un appel de fonction a un nom de classe et n’a pas pu être résolu en un appel de fonction. En omettant le nom d’une fonction membre dans une expression pouvant provoquer cette erreur.
+L’opérande gauche d’un appel de fonction était un nom de classe et n’a pas pu être résolu en appel de fonction. L’omission du nom d’une fonction membre dans une expression peut provoquer cette erreur.
 
 Cette erreur est identique à CAN0059.

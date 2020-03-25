@@ -6,15 +6,15 @@ f1_keywords:
 helpviewer_keywords:
 - C999
 ms.assetid: a3a49a96-a352-4ff2-aa84-84eb6a9a81f1
-ms.openlocfilehash: 767973e3e69734c7d1f813d27e1e402ac2751cd3
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: e5f02578891664853bf8c2b5f445e69c5d36e0f6
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62165708"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80202618"
 ---
 # <a name="fatal-error-c999"></a>Erreur irrécupérable C999
 
-MESSAGE inconnu, choisissez la commande Support technique dans le menu aide de Visual C++ ou ouvrez le fichier d’aide de Support technique pour plus d’informations
+MESSAGE inconnu choisissez la commande support technique du menu aide visuel C++ , ou ouvrez le fichier d’aide du support technique pour plus d’informations
 
-Cette erreur signifie généralement que vous avez mélangé différentes versions de fichiers du compilateur ou que l'installation de votre compilateur est endommagée. Utilisez le **programmes et fonctionnalités** applet du Panneau de contrôle pour réparer ou réinstaller le produit.
+Cette erreur signifie généralement que vous avez mélangé différentes versions de fichiers du compilateur ou que l'installation de votre compilateur est endommagée. Utilisez l’applet **programmes et fonctionnalités** du panneau de configuration pour réparer ou réinstaller le produit.

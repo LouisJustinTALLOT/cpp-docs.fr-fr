@@ -6,12 +6,12 @@ helpviewer_keywords:
 - metadata, extending
 - custom attributes, extending metadata
 ms.assetid: 98b29048-a3ea-4698-8441-f149cdaec9fb
-ms.openlocfilehash: 6d200c36946e7bc7d441c2c4db1bdfe96d4aeef9
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
-ms.translationtype: HT
+ms.openlocfilehash: aed36ac7fed7eb1f16f8648f7bcd7efb37f43a75
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "65515994"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80171890"
 ---
 # <a name="user-defined-attributes--ccli-and-ccx"></a>Attributs définis par l’utilisateur (C++/CLI et C++/CX)
 
@@ -31,7 +31,7 @@ Les informations et la syntaxe présentées dans cette rubrique doivent remplace
 
 Vous pouvez définir un attribut personnalisé en définissant un type, en faisant de <xref:System.Attribute> une classe de base pour le type, et en appliquant éventuellement l’attribut <xref:System.AttributeUsageAttribute>.
 
-Pour plus d'informations, voir :
+Pour plus d'informations, consultez les pages suivantes :
 
 - [Cibles d’attribut](attribute-targets-cpp-component-extensions.md)
 

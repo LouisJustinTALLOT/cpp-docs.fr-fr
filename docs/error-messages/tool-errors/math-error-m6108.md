@@ -6,20 +6,20 @@ f1_keywords:
 helpviewer_keywords:
 - M6108
 ms.assetid: 054893b4-49bc-45d9-882f-7cb50ba387c0
-ms.openlocfilehash: d60e9b6284c79828fda1f7af542fcf197f189ad0
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 68e6ae823613d87eb01c443b564b46746259cd7b
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62393270"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80173723"
 ---
 # <a name="math-error-m6108"></a>Erreur mathématique M6108
 
 racine carrée
 
-L’opérande dans une opération de la racine carrée était négatif.
+L’opérande dans une opération de racine carrée était négatif.
 
-Programme se termine par le code de sortie 136.
+Le programme se termine avec le code de sortie 136.
 
 > [!NOTE]
->  Le `sqrt` fonction dans la bibliothèque Runtime C et la fonction intrinsèque FORTRAN **SQRT** ne génèrent pas cette erreur. Le C `sqrt` fonction vérifie l’argument avant d’effectuer l’opération et retourne une valeur d’erreur si l’opérande est négatif. Le FORTRAN **SQRT** fonction génère l’erreur de domaine [M6201](../../error-messages/tool-errors/math-error-m6201.md) au lieu de cette erreur.
+>  La fonction `sqrt` dans la bibliothèque Runtime C et la fonction intrinsèque FORTRAN **sqrt** ne génèrent pas cette erreur. La fonction C `sqrt` vérifie l’argument avant d’effectuer l’opération et retourne une valeur d’erreur si l’opérande est négatif. La fonction de FORTRAN **sqrt** génère l’erreur de domaine [mathématique M6201](../../error-messages/tool-errors/math-error-m6201.md) au lieu de cette erreur.

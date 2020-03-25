@@ -6,16 +6,16 @@ f1_keywords:
 helpviewer_keywords:
 - typename template specifier
 ms.assetid: 52e1d901-220d-4f0d-ab43-dae7e05fb491
-ms.openlocfilehash: 7dbe4381465036bdd102b3be753a18451886a3d8
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 789bb879922bbd96a04085159205d02fb7f495c8
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62166254"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80160682"
 ---
 # <a name="typename"></a>typename
 
-Dans les définitions de modèle, indique au compilateur qu’un identificateur inconnu est un type. Dans les listes de paramètres de modèle, permet de spécifier un paramètre de type.
+Dans les définitions de modèle, fournit une indication au compilateur qu’un identificateur inconnu est un type. Dans les listes de paramètres de modèle, est utilisé pour spécifier un paramètre de type.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -25,9 +25,9 @@ typename identifier;
 
 ## <a name="remarks"></a>Notes
 
-Ce mot clé doit être utilisé si un nom dans une définition de modèle est un nom qualifié qui dépend d’un argument de modèle ; Il est facultatif si le nom qualifié n’est pas dépendant. Pour plus d’informations, consultez [modèles et résolution de noms](../cpp/templates-and-name-resolution.md).
+Ce mot clé doit être utilisé si un nom dans une définition de modèle est un nom qualifié qui est dépendant d’un argument de modèle. elle est facultative si le nom qualifié n’est pas dépendant. Pour plus d’informations, consultez [modèles et résolution de noms](../cpp/templates-and-name-resolution.md).
 
-**TypeName** peut être utilisée par n’importe quel type de n’importe où dans une définition ou déclaration de modèle. Il n’est pas autorisé dans la liste des classes de base sauf sous forme d’argument template pour une classe de base de modèle.
+**TypeName** peut être utilisé par n’importe quel type n’importe où dans une déclaration ou une définition de modèle. Il n’est pas autorisé dans la liste des classes de base sauf sous forme d’argument template pour une classe de base de modèle.
 
 ```cpp
 template <class T>
@@ -38,7 +38,7 @@ class C2 : A<typename T::InnerType>  // typename OK.
 {};
 ```
 
-Le **typename** mot clé peut également être utilisé à la place de **classe** dans le paramètre de modèle des listes. Par exemple, les instructions suivantes sont sémantiquement équivalentes :
+Le mot clé **TypeName** peut également être utilisé à la place de la **classe** dans les listes de paramètres de modèle. Par exemple, les instructions suivantes sont sémantiquement équivalentes :
 
 ```cpp
 template<class T1, class T2>...

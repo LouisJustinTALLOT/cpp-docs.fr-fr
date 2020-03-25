@@ -10,14 +10,14 @@ helpviewer_keywords:
 - pinning pointers
 - pin_ptr keyword [C++]
 ms.assetid: 6c2e6c73-4ec2-4dce-8e1f-ccf3a9f9d0aa
-ms.openlocfilehash: a8c6733a9f6e5c9650333f96a92ff18eedb9c356
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
-ms.translationtype: HT
+ms.openlocfilehash: 920135943c9dfb46b00ee6ceb2535fde128dffb0
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "65516494"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80172033"
 ---
-# <a name="pinptr-ccli"></a>pin_ptr (C++/CLI)
+# <a name="pin_ptr-ccli"></a>pin_ptr (C++/CLI)
 
 Déclare un *pointeur épingle*, utilisé uniquement avec le common language runtime.
 
@@ -42,7 +42,7 @@ Un *pointeur épingle* est un pointeur intérieur qui empêche l’objet pointé
 ### <a name="parameters"></a>Paramètres
 
 *cv_qualifier*<br/>
-Qualificateur **const** ou **volatile**. Par défaut, un pointeur épingle est **volatile**. Bien que n’étant pas une erreur, il est toutefois redondant de déclarer un pointeur épingle comme étant **volatile**.
+Qualificateurs **const** ou **volatile**. Par défaut, un pointeur épingle est **volatile**. Bien que n’étant pas une erreur, il est toutefois redondant de déclarer un pointeur épingle comme étant **volatile**.
 
 *type*<br/>
 Type d’*initialiseur*.
@@ -53,7 +53,7 @@ Nom de la variable **pin_ptr**.
 *initializer*<br/>
 Membre d’un type référence, d’un élément ou d’un groupe managé, ou de tout autre type d’objet qu’il est possible d’assigner à un pointeur natif.
 
-### <a name="remarks"></a>Remarques
+### <a name="remarks"></a>Notes
 
 Un **pin_ptr** représente un surensemble de la fonctionnalité d’un pointeur natif. Par conséquent, tout ce qui peut être assigné à un pointeur natif peut aussi être assigné à un **pin_ptr**. Un pointeur intérieur est autorisé à effectuer le même ensemble d’opérations que des pointeurs natifs, y compris la comparaison et l’arithmétique de pointeur.
 
@@ -89,7 +89,7 @@ Ils ne peuvent être utilisés en tant que :
 
 Consultez [interior_ptr (C++/CLI)](interior-ptr-cpp-cli.md) pour plus d’informations sur les pointeurs intérieurs.
 
-Pour plus d’informations sur les pointeurs épingles, consultez [Guide pratique pour épingler des pointeurs et des tableaux](how-to-pin-pointers-and-arrays.md) et [Guide pratique pour déclarer des pointeurs épingles et des types de valeur](how-to-declare-pinning-pointers-and-value-types.md).
+Pour plus d’informations sur les pointeurs épinglés, consultez Guide pratique [pour épingler des pointeurs et des tableaux](how-to-pin-pointers-and-arrays.md) et [Comment : déclarer des pointeurs épinglés et des types valeur](how-to-declare-pinning-pointers-and-value-types.md).
 
 ### <a name="requirements"></a>Spécifications
 

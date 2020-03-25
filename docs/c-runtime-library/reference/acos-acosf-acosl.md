@@ -34,12 +34,12 @@ helpviewer_keywords:
 - trigonometric functions
 - arccosine function
 ms.assetid: 00b89c48-8faf-4824-aa95-fa4349a4975d
-ms.openlocfilehash: 9e8aba1104af5855db9cb4f3cbb989d182b2c78e
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 4933e4b3757161621676133ea8b9725ce140e80c
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70939993"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80171292"
 ---
 # <a name="acos-acosf-acosl"></a>acos, acosf, acosl
 
@@ -69,21 +69,21 @@ La fonction **ACOS** retourne l’arc cosinus de *x* dans la plage de 0 à π ra
 
 Par défaut, si *x* est inférieur à-1 ou supérieur à 1, **ACOS** retourne un indéfini.
 
-|Entrée|Exception SEH|Exception{b> <b}Matherr|
+|Entrée|Exception SEH|Exception\{b\> \<b\}Matherr|
 |-----------|-------------------|-----------------------|
 |± ∞|INVALID|_DOMAIN|
-|± QNAN,IND|none|_DOMAIN|
+|± QNAN,IND|Aucun|_DOMAIN|
 |&#124;x&#124;>1|INVALID|_DOMAIN|
 
 ## <a name="remarks"></a>Notes
 
 Étant C++ donné que autorise la surcharge, vous pouvez appeler des surcharges de **ACOS** qui acceptent et retournent des types **float** et **long** **double** . Dans un programme C, **ACOS** prend toujours et retourne un **double**.
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
 |Routine|En-tête requis|En-têtes facultatifs|
 |-------------|---------------------|----------------------|
-|**acos**, **acosf**, **acosl**|\<math.h>|\<errno.h>|
+|**ACOS**, **acosf**, **acosl**|\<math.h>|\<errno.h>|
 
 ## <a name="example"></a>Exemple
 

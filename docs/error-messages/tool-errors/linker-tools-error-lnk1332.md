@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - LNK1332
 ms.assetid: b31d5ca0-c27f-4177-896b-2637dccbde24
-ms.openlocfilehash: 3c071ae8ac8c212b5bf3cd3eba8b082d790f7d58
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 681a1d723d7a50e04fa2bf57706d61fa995f9789
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62161067"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80183564"
 ---
 # <a name="linker-tools-error-lnk1332"></a>Erreur des outils Éditeur de liens LNK1332
 
-détecté\<nombre > Windows Runtime importés dans un module et les types définis dans un autre module
+nombre de\<détectés > types de Windows Runtime importés dans un module et définis dans un autre module
 
-Quand il produit la cible actuelle, l’éditeur de liens détecté <`count`> types Windows Runtime, chacun d’eux est importé dans un module et également défini dans un autre module.
+Lorsqu’il a produit la cible actuelle, l’éditeur de liens a détecté <`count`> types de Windows Runtime, chacun d’entre eux étant importé dans un module et également défini dans un autre module.
 
 ### <a name="to-correct-this-error"></a>Pour corriger cette erreur
 
-- Corrigez toutes les erreurs des LNK2039 dans la build en fonction de la suggestion dans le message d’erreur.
+- Corrigez chacune des erreurs LNK2039 dans la build en fonction de la suggestion indiquée dans le message d’erreur.
 
 ## <a name="see-also"></a>Voir aussi
 

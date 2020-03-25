@@ -6,30 +6,30 @@ f1_keywords:
 helpviewer_keywords:
 - PRJ0003
 ms.assetid: fc5a84bb-c6d3-41d6-8dd6-475455820778
-ms.openlocfilehash: e30a63ba48434196478b52283880864d3e4ae6ea
-ms.sourcegitcommit: 28eae422049ac3381c6b1206664455dbb56cbfb6
+ms.openlocfilehash: 59028c6d886630ef7db115a2ea93327669b2fcfd
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/31/2019
-ms.locfileid: "66450759"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80192924"
 ---
 # <a name="project-build-error-prj0003"></a>Erreur de génération de projet PRJ0003
 
-> Erreur lors de la génération '*ligne de commande*».
+> Erreur lors de la génération de la*ligne de commande*.
 
-Le *ligne de commande* commande formée à partir de l’entrée dans le **Pages de propriétés** boîte de dialogue retourné un code d’erreur, mais aucune information n’apparaît dans le **sortie** fenêtre.
+La commande de *ligne de commande* formée à partir d’une entrée dans la boîte de dialogue **pages de propriétés** a retourné un code d’erreur, mais aucune information n’apparaît dans la fenêtre **sortie** .
 
 Les raisons possibles de cette erreur sont les suivantes :
 
-- Votre projet dépend d’ATL Server. À compter de Visual Studio 2008, ATL Server n’est plus inclus dans le cadre de Visual Studio, mais a été publié comme projet source partagé sur CodePlex. Pour télécharger les outils et le code source ATL Server, accédez à [outils et la bibliothèque ATL Server](https://go.microsoft.com/fwlink/p/?linkid=81979).
+- Votre projet dépend de ATL Server. À compter de Visual Studio 2008, ATL Server n’est plus inclus dans Visual Studio, mais il a été publié en tant que projet de source partagée sur CodePlex. Pour télécharger le code source et les outils ATL Server, accédez à [bibliothèque et outils ATL Server](https://go.microsoft.com/fwlink/p/?linkid=81979).
 
-- Ressources système faibles. Fermez certaines applications pour résoudre ce problème.
+- Ressources système insuffisantes. Fermez certaines applications pour résoudre ce qui se passe.
 
-- Privilèges de sécurité insuffisantes. Vérifiez que vous disposez des privilèges de sécurité suffisants.
+- Privilèges de sécurité insuffisants. Vérifiez que vous disposez des privilèges de sécurité suffisants.
 
-- Les chemins d’accès à l’exécutables spécifiés dans **répertoires VC ++** n’incluent pas le chemin d’accès de l’outil que vous essayez d’exécuter. Pour plus d’informations, consultez [définir du compilateur et les propriétés de build](../../build/working-with-project-properties.md)
+- Les chemins d’accès aux fichiers exécutables spécifiés dans les **Répertoires VC + +** n’incluent pas le chemin d’accès de l’outil que vous tentez d’exécuter. Pour plus d’informations, consultez [définir les propriétés de compilation et de génération](../../build/working-with-project-properties.md)
 
-- Pour les projets makefile, il manque une commande à exécuter sur **générer la ligne de commande** ou **ligne de commande Rebuild**.
+- Pour les projets Makefile, vous ne disposez pas d’une commande à exécuter sur une ligne de **commande Build** ou une **ligne de commande**Rebuild.
 
 ## <a name="see-also"></a>Voir aussi
 

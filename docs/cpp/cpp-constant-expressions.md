@@ -6,16 +6,16 @@ helpviewer_keywords:
 - constant expressions
 - expressions [C++], constant
 ms.assetid: b07245a5-4c21-4589-b503-e6ffd631996f
-ms.openlocfilehash: 97059066adadc3a7897cbd2c4c747e2a673e7201
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: d4d9803c7f80caba3c33d011e4df433491b9b591
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62154670"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80170577"
 ---
 # <a name="c-constant-expressions"></a>Expressions constantes C++
 
-Un *constante* valeur fait partie qui ne change pas. C++ fournit deux mots clés qui vous permettent d'exprimer l'intention qu'un objet n'est pas destiné à être modifié, et d'appliquer cette intention.
+Une valeur *constante* est une valeur qui ne change pas. C++ fournit deux mots clés qui vous permettent d'exprimer l'intention qu'un objet n'est pas destiné à être modifié, et d'appliquer cette intention.
 
 C++ requiert des expressions constantes (expressions qui ont pour valeur une constante) pour les déclarations des éléments suivants :
 
@@ -35,7 +35,7 @@ Les seuls opérandes autorisés dans les expressions constantes sont :
 
 - Valeurs déclarées comme const qui sont initialisées avec des expressions constantes
 
-- **sizeof** expressions
+- expressions **sizeof**
 
 Les constantes non intégrales doivent être converties (explicitement ou implicitement) en types intégraux pour être autorisées dans une expression constante. Par conséquent, le code suivant est conforme :
 
@@ -44,7 +44,7 @@ const double Size = 11.0;
 char chArray[(int)Size];
 ```
 
-Les conversions explicites en types intégraux sont autorisées dans les expressions constantes ; tous les autres types et les types dérivés ne sont pas conformes, sauf lorsque utilisé en tant qu’opérandes pour le **sizeof** opérateur.
+Les conversions explicites en types intégraux sont autorisées dans les expressions constantes ; tous les autres types et types dérivés sont illégaux, sauf lorsqu’ils sont utilisés comme opérandes de l’opérateur **sizeof** .
 
 L'opérateur virgule et les opérateurs d'assignation de virgule ne peuvent pas être utilisés dans les expressions constantes.
 

@@ -1,22 +1,22 @@
 ---
-title: 'Erreur irrécupérable RC1022 du compilateur de ressources '
+title: Erreur irrécupérable RC1022 du compilateur de ressources
 ms.date: 11/04/2016
 f1_keywords:
 - RC1022
 helpviewer_keywords:
 - RC1022
 ms.assetid: 30a0f3c7-08a8-4c40-b0de-46ee5feb789d
-ms.openlocfilehash: 6ee09105822ea7dd4243741ed00ce36978f09583
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: db3e8522f132f9a65e39934ad95d2f9a9cb1b48f
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62297279"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80182615"
 ---
-# <a name="resource-compiler-fatal-error-rc1022"></a>Erreur irrécupérable RC1022 du compilateur de ressources 
+# <a name="resource-compiler-fatal-error-rc1022"></a>Erreur irrécupérable RC1022 du compilateur de ressources
 
-« #endif » attendu
+' #endif’attendu
 
-Un `#if`, **#ifdef**, ou **#ifndef** directive n’a pas été terminée avec un `#endif` directive.
+Une directive `#if`, **#ifdef**ou **#ifndef** n’a pas été arrêtée avec une directive de `#endif`.
 
-Assurez-vous qu’il existe un `#if`, **#ifdef**, ou **#ifndef** instruction en vigueur avant cette instruction.
+Assurez-vous qu’il existe une instruction `#if`, **#ifdef**ou **#ifndef** en vigueur avant cette instruction.

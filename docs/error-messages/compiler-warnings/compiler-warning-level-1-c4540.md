@@ -1,19 +1,19 @@
 ---
-title: Avertissement du compilateur (niveau 1) C4540
+title: Avertissement du compilateur (niveau 1) C4540
 ms.date: 11/04/2016
 f1_keywords:
 - C4540
 helpviewer_keywords:
 - C4540
 ms.assetid: 8085e748-5f4d-43c2-b06d-eaf794edbf72
-ms.openlocfilehash: 8e514f4f3cf0cc3ee95ff709eda307b143ab3b1c
-ms.sourcegitcommit: e5192a25c084eda9eabfa37626f3274507e026b3
+ms.openlocfilehash: 859ff75bbd4b3fe248d9658495e64c0c039fbb40
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/12/2019
-ms.locfileid: "73965685"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80186411"
 ---
-# <a name="compiler-warning-level-1-c4540"></a>Avertissement du compilateur (niveau 1) C4540
+# <a name="compiler-warning-level-1-c4540"></a>Avertissement du compilateur (niveau 1) C4540
 
 dynamic_cast utilisé pour la conversion en base inaccessible ou ambiguë ; le test au moment de l’exécution échoue ('type1 'en’type2 ')
 

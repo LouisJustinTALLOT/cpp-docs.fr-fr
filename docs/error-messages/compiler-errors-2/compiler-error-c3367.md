@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C3367
 ms.assetid: e675d42b-f5b0-4d43-aab1-1f5024233102
-ms.openlocfilehash: f53312fa9225270ef79d50d2ad351adce790d6fa
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: bedc94039f8621a93672c0dfa0cad5a54aad796e
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62300531"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80201160"
 ---
 # <a name="compiler-error-c3367"></a>Erreur du compilateur C3367
 
@@ -19,7 +19,7 @@ ms.locfileid: "62300531"
 
 Quand vous appelez un délégué indépendant, vous devez passer une instance d’un objet. Dans la mesure où une fonction membre statique est appelée par le nom de classe, vous ne pouvez instancier un délégué indépendant qu’avec une fonction membre d’instance.
 
-Pour plus d’informations sur les délégués indépendants, consultez [Comment : Définir et utiliser des délégués (C++/CLI)](../../dotnet/how-to-define-and-use-delegates-cpp-cli.md).
+Pour plus d’informations sur les délégués indépendants, consultez [Comment : définir et utiliser des déléguésC++(/CLI)](../../dotnet/how-to-define-and-use-delegates-cpp-cli.md).
 
 ## <a name="example"></a>Exemple
 

@@ -6,12 +6,12 @@ helpviewer_keywords:
 - fields [C++], bit
 - bit fields
 ms.assetid: 6f4b62e3-cc1d-4e5d-bf34-05904104f71a
-ms.openlocfilehash: bba57d495553e9622fcece9d036fc4f6eff3fa04
-ms.sourcegitcommit: a5fa9c6f4f0c239ac23be7de116066a978511de7
+ms.openlocfilehash: b952ca0aab5c4417f22fd958514894c53a39f800
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/20/2019
-ms.locfileid: "75301598"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80170603"
 ---
 # <a name="c-bit-fields"></a>Champs de bits C++
 
@@ -48,11 +48,11 @@ Disposition de la mémoire d'un objet Date
 
 Notez que `nYear` a une longueur de 8 bits et dépasserait la limite de mot du type déclaré, **unsigned** **short**. Par conséquent, il est commencé au début d’un nouveau **unsigned** **short**. Il n'est pas nécessaire que tous les champs de bits tiennent dans un objet du type sous-jacent ; de nouvelles unités de stockage sont allouées en fonction du nombre de bits demandé dans la déclaration.
 
-**Section spécifique à Microsoft**
+**Section spécifique de Microsoft**
 
 Le classement des données déclarées comme champs de bits s'étend du bit faible au bit de poids fort, comme illustré dans la figure ci-dessus.
 
-**Fin de la section spécifique à Microsoft**
+**Fin de la section spécifique de Microsoft**
 
 Si la déclaration d'une structure inclut un champ sans nom de longueur 0, comme indiqué dans l'exemple suivant,
 

@@ -6,24 +6,24 @@ f1_keywords:
 helpviewer_keywords:
 - C4917
 ms.assetid: c05e2610-4a5d-4f4b-a99b-c15fd7f1d5f1
-ms.openlocfilehash: 97f6f0a08c8ef292d81471cb5d0d94e359466933
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: c7a2d72b429f762e476286093c7f273a9a546cb6
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62393491"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80174672"
 ---
 # <a name="compiler-warning-level-1-c4917"></a>Avertissement du compilateur (niveau 1) C4917
 
-'déclarateur' : un GUID ne peut être associé à une classe, d’interface ou espace de noms
+'déclarateur' : un GUID ne peut être associé qu’à une classe, une interface ou un espace de noms
 
-Une structure définie par l’utilisateur autre que [classe](../../cpp/class-cpp.md), [interface](../../cpp/interface.md), ou [espace de noms](../../cpp/namespaces-cpp.md) ne peut pas avoir un GUID.
+Une structure définie par l’utilisateur autre que la [classe](../../cpp/class-cpp.md), l' [interface](../../cpp/interface.md)ou l' [espace de noms](../../cpp/namespaces-cpp.md) ne peut pas avoir de GUID.
 
 Cet avertissement est désactivé par défaut. Consultez [Avertissements du compilateur désactivés par défaut](../../preprocessor/compiler-warnings-that-are-off-by-default.md) pour plus d'informations.
 
 ## <a name="example"></a>Exemple
 
-L’exemple de code suivant génère C4917 :
+L’exemple de code suivant génère l’erreur C4917 :
 
 ```cpp
 // C4917.cpp

@@ -6,15 +6,15 @@ f1_keywords:
 helpviewer_keywords:
 - C3276
 ms.assetid: dd6b4fd2-094d-4d34-a467-a9afd59789f7
-ms.openlocfilehash: 671fda26958d50340ccc628a8d50d19ea74f7939
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 4037c5191c0b7316218100123f1cf1823f9d135b
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62382097"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80201446"
 ---
 # <a name="compiler-error-c3276"></a>Erreur du compilateur C3276
 
-'keyword' : saut hors du bloc __finally/finally a un comportement indéfini lors de la gestion de l’arrêt
+'keyword' : le saut hors de __finally bloc/finally a un comportement indéfini lors de la gestion des arrêts
 
-Cette erreur est le même que le [C4532](../../error-messages/compiler-warnings/compiler-warning-level-1-c4532.md) avertissement. Toutefois, lorsque vous utilisez/CLR, cette condition ne peut pas être désactivée avec le [avertissement](../../preprocessor/warning.md) pragma.
+Cette erreur est identique à l’avertissement [C4532](../../error-messages/compiler-warnings/compiler-warning-level-1-c4532.md) . Toutefois, lorsque vous utilisez/CLR, cette condition ne peut pas être désactivée avec le pragma [Warning](../../preprocessor/warning.md) .

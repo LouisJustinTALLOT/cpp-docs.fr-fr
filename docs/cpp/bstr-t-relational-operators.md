@@ -12,16 +12,16 @@ f1_keywords:
 helpviewer_keywords:
 - _bstr_t [C++]
 ms.assetid: e153da72-37c3-4d8a-b8eb-730d65da64dd
-ms.openlocfilehash: 57a9379be6d90cfb574ea0dcc033692762c47990
-ms.sourcegitcommit: da32511dd5baebe27451c0458a95f345144bd439
-ms.translationtype: HT
+ms.openlocfilehash: a4126eb7771e17db5fb813898d6fa4917f6983bb
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/07/2019
-ms.locfileid: "65222231"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80190311"
 ---
-# <a name="bstrt-relational-operators"></a>Opérateurs relationnels _bstr_t
+# <a name="_bstr_t-relational-operators"></a>Opérateurs relationnels _bstr_t
 
-**Section spécifique à Microsoft**
+**Section spécifique de Microsoft**
 
 Compare deux objets `_bstr_t`.
 
@@ -39,9 +39,9 @@ bool operator>=(const _bstr_t& str) const throw( );
 
 ## <a name="remarks"></a>Notes
 
-Ces opérateurs comparent deux objets `_bstr_t` du point de vue lexicographique. Les opérateurs retournent la valeur TRUE si les comparaisons valable, sinon retourne FALSE.
+Ces opérateurs comparent deux objets `_bstr_t` du point de vue lexicographique. Les opérateurs retournent la valeur TRUE si les comparaisons sont conservées. sinon, retourne FALSe.
 
-**FIN de la section spécifique à Microsoft**
+**Fin de la section spécifique de Microsoft**
 
 ## <a name="see-also"></a>Voir aussi
 

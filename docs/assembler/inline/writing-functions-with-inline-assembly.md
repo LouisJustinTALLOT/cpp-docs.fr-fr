@@ -7,16 +7,16 @@ helpviewer_keywords:
 - assembler [C++], writing functions
 - __asm keyword [C++], in functions
 ms.assetid: b5df8a04-fdc7-4622-8c9e-e4b618927497
-ms.openlocfilehash: 7848a8f071f50f8d809a999a96a9c0f8193c480e
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 5416a29477651c496d83e6ee215a2cb88ba26e3b
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62166852"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80169056"
 ---
 # <a name="writing-functions-with-inline-assembly"></a>Écriture de fonctions avec un assembly inline
 
-**Section spécifique à Microsoft**
+**Section spécifique de Microsoft**
 
 Si vous écrivez une fonction avec du code assembleur inline, il est facile de transmettre des arguments à cette fonction et de retourner une valeur de celle-ci. Les exemples suivants comparent une fonction d'abord écrite pour un assembleur distinct puis réécrite pour l'assembleur inline. La fonction, appelée `power2`, reçoit deux paramètres, multipliant le premier paramètre par 2 à la puissance du second paramètre. Écrite pour un assembleur distinct, la fonction peut ressembler à ceci :
 
@@ -42,7 +42,7 @@ _TEXT   ENDS
         END
 ```
 
-Étant donné qu'elle est écrite pour un assembleur distinct, la fonction nécessite un fichier source distinct ainsi qu'un code assembleur et des étapes de liaison. Les arguments de fonction C et C++ sont généralement transmis sur la pile, par conséquent cette version de la fonction `power2` accède à ses arguments par leur position sur la pile. (Notez que le **modèle** directive, disponible dans MASM et certains autres assembleurs, vous permet également d’accéder aux arguments de la pile et des variables de pile locales par nom.)
+Étant donné qu'elle est écrite pour un assembleur distinct, la fonction nécessite un fichier source distinct ainsi qu'un code assembleur et des étapes de liaison. Les arguments de fonction C et C++ sont généralement transmis sur la pile, par conséquent cette version de la fonction `power2` accède à ses arguments par leur position sur la pile. (Notez que la directive **Model** , disponible dans MASM et certains autres assembleurs, vous permet également d’accéder aux arguments de pile et aux variables de pile locales par nom.)
 
 ## <a name="example"></a>Exemple
 
@@ -76,9 +76,9 @@ int power2( int num, int power )
 
 La version inline de la fonction `power2` fait référence à ses arguments par nom et apparaît dans le même fichier source que le reste du programme. Cette version requiert également moins d'instructions assembleur.
 
-Étant donné que la version inline de `power2` n'exécute pas d'instruction `return` C, un avertissement sans incidence est généré si vous effectuez la compilation au niveau d'avertissement 2 ou ultérieur. La fonction ne retourne aucune valeur, mais le compilateur ne peut pas l'indiquer sans instruction `return`. Vous pouvez utiliser [#pragma warning](../../preprocessor/warning.md) pour désactiver la génération de cet avertissement.
+Étant donné que la version inline de `power2` n'exécute pas d'instruction `return` C, un avertissement sans incidence est généré si vous effectuez la compilation au niveau d'avertissement 2 ou ultérieur. La fonction ne retourne aucune valeur, mais le compilateur ne peut pas l'indiquer sans instruction `return`. Vous pouvez utiliser [#pragma AVERTISSEMENT](../../preprocessor/warning.md) pour désactiver la génération de cet avertissement.
 
-**FIN de la section spécifique à Microsoft**
+**Fin de la section spécifique de Microsoft**
 
 ## <a name="see-also"></a>Voir aussi
 

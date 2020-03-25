@@ -6,17 +6,17 @@ f1_keywords:
 helpviewer_keywords:
 - M6203
 ms.assetid: bd7fdd1c-83e4-4d6a-901e-10a0308bf5be
-ms.openlocfilehash: 4433a024d461ee1bc43aa5fa82344190377243b4
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 371a6c673826c6ce71d7a0eb3b9e08d9488f53f5
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62400771"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80193691"
 ---
 # <a name="math-error-m6203"></a>Erreur mathématique M6203
 
 'fonction' : erreur _OVERFLOW
 
-Le résultat de la fonction donnée était trop grand pour être représenté.
+Le résultat de fonction donné était trop grand pour être représenté.
 
-Cette erreur appelle le `_matherr` fonction avec le nom de fonction, ses arguments et le type d’erreur. Vous pouvez réécrire la `_matherr` fonction permettant de personnaliser la gestion de certaines erreurs mathématiques à virgule flottante d’exécution.
+Cette erreur appelle la fonction `_matherr` avec le nom de la fonction, ses arguments et le type d’erreur. Vous pouvez réécrire la fonction `_matherr` pour personnaliser la gestion de certaines erreurs mathématiques à virgule flottante au moment de l’exécution.

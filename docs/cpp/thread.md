@@ -9,16 +9,16 @@ helpviewer_keywords:
 - TLS (thread local storage), compiler implementation
 - __declspec keyword [C++], thread
 ms.assetid: 667f2a77-6d1f-4b41-bee8-05e67324fab8
-ms.openlocfilehash: cc21602764a9a3c2584bdd7da62c75974ffdd5fb
-ms.sourcegitcommit: a5fa9c6f4f0c239ac23be7de116066a978511de7
+ms.openlocfilehash: 30972b5668d3eab9ec2118f3d90d7ced1e087275
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/20/2019
-ms.locfileid: "75301286"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80160695"
 ---
 # <a name="thread"></a>thread
 
-**Section spécifique à Microsoft**
+**Section spécifique de Microsoft**
 
 Le modificateur de classe de stockage étendu de **thread** est utilisé pour déclarer une variable locale de thread. Pour l’équivalent portable en C++ 11 et versions ultérieures, utilisez le spécificateur de classe de stockage [thread_local](../cpp/storage-classes-cpp.md#thread_local) pour le code portable. Sur Windows **thread_local** est implémenté avec **__declspec (thread)** .
 
@@ -83,7 +83,7 @@ En outre, vous devez respecter ces instructions lors de la déclaration des vari
 
    Une expression **sizeof** qui comprend l’objet initialisé ne constitue pas une référence à elle-même et est autorisée en C et C++.
 
-**Fin de la section spécifique à Microsoft**
+**Fin de la section spécifique de Microsoft**
 
 ## <a name="see-also"></a>Voir aussi
 

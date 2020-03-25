@@ -6,15 +6,15 @@ f1_keywords:
 helpviewer_keywords:
 - U1071
 ms.assetid: 328a0c1f-a867-410e-943d-7b6b75a975ab
-ms.openlocfilehash: d9bf335e05993df774bac0684a68197650973bee
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: f696915aafec25d49ba0aea555e447ab899e8988
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62367133"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80182706"
 ---
 # <a name="nmake-fatal-error-u1071"></a>Erreur irrécupérable NMAKE U1071
 
-cycle dans l’arborescence des dépendances pour la cible 'targetname'
+cycle dans l’arborescence des dépendances pour la cible’TargetName'
 
-Il existe une dépendance circulaire dans l’arborescence des dépendances pour la cible spécifiée. La cible donnée est dépendante d’un des objets dépendants de la cible donnée. Les dépendances circulaires ne sont pas valides.
+Une dépendance circulaire existe dans l’arborescence des dépendances pour la cible donnée. La cible donnée est un dépendant de l’un des dépendants de la cible donnée. Les dépendances circulaires ne sont pas valides.

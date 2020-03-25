@@ -5,12 +5,12 @@ ms.date: 11/04/2016
 helpviewer_keywords:
 - expressions [C++], types
 ms.assetid: 1e7540b0-8fdb-49ab-b3e1-6ec439ff473a
-ms.openlocfilehash: f67f7c2ce8872f3a88549259a82d9869f32b6f56
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 587715cd1fd38bf6481ba833b1532f5e492d4803
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62364504"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80160656"
 ---
 # <a name="types-of-expressions"></a>Types d'expressions
 
@@ -28,13 +28,13 @@ Les expressions C++ sont classées en plusieurs catégories :
 
 - [Expressions constantes](../cpp/cpp-constant-expressions.md). Les expressions constantes sont constituées entièrement de données constantes.
 
-- [Expressions avec conversions de type explicite](explicit-type-conversion-operator-parens.md). Des conversions de type explicite, ou « casts », peuvent être utilisées dans les expressions.
+- [Expressions avec conversions de types explicites](explicit-type-conversion-operator-parens.md). Des conversions de type explicite, ou « casts », peuvent être utilisées dans les expressions.
 
 - [Expressions avec opérateurs pointeur vers membre](../cpp/pointer-to-member-operators-dot-star-and-star.md).
 
-- [Conversion](../cpp/casting.md). Des « casts » de type sécurisé peuvent être utilisés dans les expressions.
+- [Cast](../cpp/casting.md). Des « casts » de type sécurisé peuvent être utilisés dans les expressions.
 
-- [Informations de Type au moment de l’exécution](../cpp/run-time-type-information.md). Déterminez le type d'un objet pendant l'exécution du programme.
+- [Informations de type au moment de l’exécution](../cpp/run-time-type-information.md). Déterminez le type d'un objet pendant l'exécution du programme.
 
 ## <a name="see-also"></a>Voir aussi
 

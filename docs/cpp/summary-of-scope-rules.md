@@ -8,20 +8,20 @@ helpviewer_keywords:
 - names [C++], class
 - scope [C++], class names
 ms.assetid: 47e26482-0111-466f-b857-598c15d05105
-ms.openlocfilehash: af708fd72904fb775ff1088948972bec159816c6
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 1f8b79c637662d79051b72e6aabefc99c450bdc5
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62266905"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80160877"
 ---
 # <a name="summary-of-scope-rules"></a>Résumé des règles de portée
 
-L'utilisation d'un nom doit être non équivoque dans sa portée (jusqu'au point où la surcharge est déterminée). Si le nom indique une fonction, celle-ci doit être non équivoque en ce qui concerne le nombre et le type de paramètres. Si le nom n’est pas ambigu, [accès au membre](../cpp/member-access-control-cpp.md) les règles sont appliquées.
+L'utilisation d'un nom doit être non équivoque dans sa portée (jusqu'au point où la surcharge est déterminée). Si le nom indique une fonction, celle-ci doit être non équivoque en ce qui concerne le nombre et le type de paramètres. Si le nom n’est pas ambigu, les règles d' [accès aux membres](../cpp/member-access-control-cpp.md) sont appliquées.
 
 ## <a name="constructor-initializers"></a>Initialiseurs de constructeur
 
-[Initialiseurs de constructeur](constructors-cpp.md#member_init_list) sont évalués dans la portée du bloc extérieur du constructeur pour lequel elles sont spécifiées. Par conséquent, ils peuvent utiliser les noms de paramètres du constructeur.
+Les [initialiseurs de constructeur](constructors-cpp.md#member_init_list) sont évalués dans la portée du bloc le plus à l’extérieur du constructeur pour lequel ils sont spécifiés. Par conséquent, ils peuvent utiliser les noms de paramètres du constructeur.
 
 ## <a name="global-names"></a>Noms globaux
 
@@ -29,15 +29,15 @@ Un nom d'objet, de fonction ou d'énumérateur est global s'il est placé en deh
 
 - Résolution de portée (`::`)
 
-- Sélection de membres pour les objets et les références (**.**)
+- Sélection de membres pour les objets et les références ( **.** )
 
-- Sélection de membres pour les pointeurs (**->**)
+- Sélection de membres pour les pointeurs ( **->** )
 
 ## <a name="qualified-names"></a>Noms qualifiés
 
 Les noms utilisés avec l'opérateur binaire de résolution de portée (`::`) sont appelés des noms qualifiés. Le nom spécifié après l'opérateur binaire de résolution de portée doit être membre de la classe spécifiée à gauche de l'opérateur ou membre d'une ou plusieurs de ses classes de base.
 
-Les noms spécifiés après l’opérateur de sélection de membre (**.** ou **->**) doivent être membres du type de classe de l’objet spécifié à gauche de l’opérateur ou membres de ses classes de base. Les noms spécifiés sur la droite de l’opérateur de sélection de membre (**->**) peut également être des objets d’un autre type de classe, à condition que le côté gauche de **->** est un objet de classe et que la classe définit un opérateur de sélection de membre surchargé (**->**) qui prend la valeur en un pointeur vers un autre type de classe. (Cette disposition est décrite plus en détail dans [accès aux membres de classe](../cpp/member-access.md).)
+Noms spécifiés après l’opérateur de sélection de membres ( **.** ou **->** ) doit être membre du type de classe de l’objet spécifié à gauche de l’opérateur ou des membres de ses classes de base. Les noms spécifiés à droite de l’opérateur de sélection de membres ( **->** ) peuvent également être des objets d’un autre type de classe, à condition que la partie gauche de **->** soit un objet de classe et que la classe définisse un opérateur de sélection de membres surchargé ( **->** ) qui prend la valeur d’un pointeur vers un autre type de classe. (Cette configuration est décrite plus en détail dans [accès aux membres de classe](../cpp/member-access.md).)
 
 Le compilateur recherche les noms dans l'ordre suivant et s'arrête après avoir trouvé le nom :
 
@@ -57,11 +57,11 @@ Toutefois, vous pouvez apporter des modifications à cet ordre de recherche comm
 
 1. Les noms précédés de `::` forcent la recherche à commencer au niveau de la portée globale.
 
-1. Les noms précédés du **classe**, **struct**, et **union** mots clés forcent le compilateur pour rechercher uniquement les **classe**,  **struct**, ou **union** noms.
+1. Les noms précédés par les mots clés **Class**, **struct**et **Union** forcent le compilateur à rechercher uniquement les noms de **classes**, de **structures**ou d' **unions** .
 
-1. Les noms sur le côté gauche de l’opérateur de résolution de portée (`::`) peut uniquement être **classe**, **struct**, **espace de noms**, ou **union**noms.
+1. Les noms sur le côté gauche de l’opérateur de résolution de portée (`::`) peuvent être uniquement des noms de **classe**, de **struct**, d' **espace de noms**ou d' **Union** .
 
-Si le nom fait référence à un membre non statique mais est utilisé dans une fonction membre statique, un message d'erreur est généré. De même, si le nom fait référence à un membre non statique d’une classe englobante, un message d’erreur est généré, car les classes englobées n’ont pas de classe englobante **cela** pointeurs.
+Si le nom fait référence à un membre non statique mais est utilisé dans une fonction membre statique, un message d'erreur est généré. De même, si le nom fait référence à un membre non statique dans une classe englobante, un message d’erreur est généré, car les classes incluses n’ont pas **de classe** englobante.
 
 ## <a name="function-parameter-names"></a>Noms de paramètres de fonction
 

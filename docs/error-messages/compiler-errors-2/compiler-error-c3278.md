@@ -6,16 +6,16 @@ f1_keywords:
 helpviewer_keywords:
 - C3278
 ms.assetid: 56f818f5-85a6-4792-843b-54fe16327658
-ms.openlocfilehash: 7618336c08dd111e495d7e4102b8e61c6e927c39
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: ec51064853afa37f75022042c8c6121b6c5248a4
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62382085"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80201433"
 ---
 # <a name="compiler-error-c3278"></a>Erreur du compilateur C3278
 
-> appel de l’interface ou la méthode pure directe '*méthode*' échouera lors de l’exécution
+> l’appel direct de l’interface ou de la méthode pure'*méthode*'échoue au moment de l’exécution
 
 ## <a name="remarks"></a>Notes
 

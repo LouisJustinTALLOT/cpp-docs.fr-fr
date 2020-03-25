@@ -42,12 +42,12 @@ helpviewer_keywords:
 - operator[], arrays
 - m_nRowsRead
 ms.assetid: 511427e1-73ca-4fd8-9ba1-ae9463557cb6
-ms.openlocfilehash: 66b7607eb28392196f6b7d3790aee976a861f2b6
-ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
+ms.openlocfilehash: 0c5159ac5b834c7c31d980a412f28f8129e15b45
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/17/2020
-ms.locfileid: "79441722"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80212262"
 ---
 # <a name="carrayrowset-class"></a>CArrayRowset, classe
 
@@ -92,7 +92,7 @@ Type de classe d’accesseur que vous souhaitez que l’ensemble de lignes utili
 |-|-|
 |[CArrayRowset::m_nRowsRead](#nrowsread)|Nombre de lignes déjà lues.|
 
-## <a name="carrayrowset"></a>CArrayRowset :: CArrayRowset
+## <a name="carrayrowsetcarrayrowset"></a><a name="carrayrowset"></a>CArrayRowset :: CArrayRowset
 
 Crée un objet `CArrayRowset`.
 
@@ -107,7 +107,7 @@ CArrayRowset(int nMax = 100000);
 *nMax*<br/>
 dans Nombre maximal de lignes dans l’ensemble de lignes.
 
-## <a name="snapshot"></a>CArrayRowset :: Snapshot
+## <a name="carrayrowsetsnapshot"></a><a name="snapshot"></a>CArrayRowset :: Snapshot
 
 Lit la totalité de l’ensemble de lignes en mémoire, en créant une image ou un instantané de celui-ci.
 
@@ -117,7 +117,7 @@ Lit la totalité de l’ensemble de lignes en mémoire, en créant une image ou 
 HRESULT Snapshot() throw();
 ```
 
-## <a name="operator"></a>CArrayRowset :: Operator
+## <a name="carrayrowsetoperator"></a><a name="operator"></a>CArrayRowset :: Operator
 
 Fournit une syntaxe de type tableau pour accéder à une ligne de l’ensemble de lignes.
 
@@ -143,7 +143,7 @@ Contenu de la ligne demandée.
 
 Si *nRow* dépasse le nombre de lignes dans l’ensemble de lignes, une exception est levée.
 
-## <a name="nrowsread"></a>CArrayRowset :: m_nRowsRead
+## <a name="carrayrowsetm_nrowsread"></a><a name="nrowsread"></a>CArrayRowset :: m_nRowsRead
 
 Contient le nombre de lignes de l’ensemble de lignes qui ont déjà été lues.
 

@@ -5,12 +5,12 @@ ms.topic: reference
 helpviewer_keywords:
 - custom attributes, targets
 ms.assetid: b4e6e224-da77-4520-b6e6-b96846e0ebc1
-ms.openlocfilehash: 502f5ba2e5bbb5bd5a5fcceca16acaa3987db4bc
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
-ms.translationtype: HT
+ms.openlocfilehash: fe2c1d27042b51300d01ba70b951b7601d87701e
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "65516144"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80172618"
 ---
 # <a name="attribute-targets-ccli-and-ccx"></a>Cibles d’attribut (C++/CLI et C++/CX)
 
@@ -193,7 +193,7 @@ Voici une liste des cibles d’attribut valide :
     };
     ```
 
-En règle générale, un attribut précède directement l’élément de langage auquel il s’applique. Toutefois, dans certains cas, la position d’un attribut n’est pas suffisante pour déterminer la cible prévue de l’attribut. Considérez cet exemple :
+En règle générale, un attribut précède directement l’élément de langage auquel il s’applique. Toutefois, dans certains cas, la position d’un attribut n’est pas suffisante pour déterminer la cible prévue de l’attribut. Examinez cet exemple :
 
 ```cpp
 [Attr] int MyFn(double x)...

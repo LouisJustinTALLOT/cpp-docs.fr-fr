@@ -5,20 +5,20 @@ helpviewer_keywords:
 - function body
 - variables, missing
 ms.assetid: 1a88d809-b14f-46a4-97c4-3e48beb418f2
-ms.openlocfilehash: 5e3436054d69da7fb67c240c1d684585734635c3
-ms.sourcegitcommit: 283cb64fd7958a6b7fbf0cd8534de99ac8d408eb
+ms.openlocfilehash: 6d2ef22b90009d320485fb6fe3f7e308ae05c442
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64857158"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80173619"
 ---
 # <a name="missing-function-body-or-variable"></a>Corps de fonction ou variable manquant
 
-Avec seulement un prototype de fonction, le compilateur peut poursuivre sans erreur, mais l’éditeur de liens ne peut pas résoudre un appel à une adresse, car il n’existe pas de code de fonction ou variable espace réservé. Vous ne verrez pas cette erreur jusqu'à ce que vous créiez un appel à la fonction de l’éditeur de liens doit être résolue.
+Avec juste un prototype de fonction, le compilateur peut continuer sans erreur, mais l’éditeur de liens ne peut pas résoudre un appel à une adresse, car aucun code de fonction ou espace de variable n’est réservé. Vous ne verrez pas cette erreur tant que vous n’avez pas créé un appel à la fonction que l’éditeur de liens doit résoudre.
 
 ## <a name="example"></a>Exemple
 
-L’appel de fonction dans main provoquera l’erreur LNK2019, car le prototype permet au compilateur de considérer que la fonction existe.  L’éditeur de liens recherche que ce n’est pas.
+L’appel de fonction dans main entraînera l’erreur LNK2019, car le prototype permet au compilateur de croire que la fonction existe.  L’éditeur de liens détecte qu’il ne l’a pas.
 
 ```cpp
 // LNK2019_MFBV.cpp
@@ -31,7 +31,7 @@ int main() {
 
 ## <a name="example"></a>Exemple
 
-En C++, assurez-vous que vous incluez l’implémentation d’une fonction spécifique pour une classe et pas seulement un prototype dans la définition de classe. Si vous définissez la classe en dehors du fichier d’en-tête, veillez à inclure le nom de classe avant la fonction (`Classname::memberfunction`).
+Dans C++, assurez-vous que vous incluez l’implémentation d’une fonction spécifique pour une classe et pas simplement un prototype dans la définition de classe. Si vous définissez la classe en dehors du fichier d’en-tête, veillez à inclure le nom de la classe avant la fonction (`Classname::memberfunction`).
 
 ```cpp
 // LNK2019_MFBV_2.cpp

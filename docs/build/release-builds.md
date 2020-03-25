@@ -1,23 +1,23 @@
 ---
-title: Versions de C++ - Visual Studio
+title: C++versions release-Visual Studio
 ms.date: 12/10/2018
 helpviewer_keywords:
 - debugging [C++], release builds
 - release builds
 - debug builds, converting to release build
 ms.assetid: fa9a78fa-f4b5-4722-baf4-aec655c4ff0f
-ms.openlocfilehash: b1db396136af4a6ce8cc005753dded9eea2bfbeb
-ms.sourcegitcommit: 8bb2bea1384b290b7570b01608a86c7488ae7a02
+ms.openlocfilehash: 46ae5e0f3d545f0e3e004f612314ab416b270fd8
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/26/2019
-ms.locfileid: "67400482"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80168822"
 ---
 # <a name="release-builds"></a>Versions release
 
-Une version Release utilise des optimisations. Lorsque vous utilisez des optimisations pour créer une version Release, le compilateur ne génère pas les informations de débogage symboliques. L’absence d’informations de débogage symboliques, ainsi que le fait que le code n’est pas généré pour la TRACE et ASSERT appelle, signifie que la taille de votre fichier exécutable est réduite et n’est donc plus rapidement.
+Une version Release utilise des optimisations. Lorsque vous utilisez des optimisations pour créer une version Release, le compilateur ne génère pas d’informations de débogage symboliques. L’absence d’informations de débogage symboliques, ainsi que le fait que le code n’est pas généré pour les appels TRACE et Assert, signifie que la taille de votre fichier exécutable est réduite et sera donc plus rapide.
 
-## <a name="in-this-section"></a>Dans cette section
+## <a name="in-this-section"></a>Contenu de cette section
 
 [Problèmes courants lors de la création d’une version Release](common-problems-when-creating-a-release-build.md)<br/>
 [Résolution de problèmes liés à la version Release](fixing-release-build-problems.md)<br/>

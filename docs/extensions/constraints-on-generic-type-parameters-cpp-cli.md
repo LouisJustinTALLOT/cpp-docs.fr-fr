@@ -8,12 +8,12 @@ helpviewer_keywords:
 - where keyword [C++]
 - constraints, C++
 ms.assetid: eb828cc9-684f-48a3-a898-b327700c0a63
-ms.openlocfilehash: 6eefb6a7d888a031f6ff7f88d08da4d67a4dc8c3
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
-ms.translationtype: HT
+ms.openlocfilehash: be5af8f6b2edaa8f93fef7ae06b2175b54b25396
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "65516204"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80172476"
 ---
 # <a name="constraints-on-generic-type-parameters-ccli"></a>Contraintes sur les paramètres de type générique (C++/CLI)
 
@@ -41,9 +41,9 @@ Vous pouvez également spécifier **gcnew()** pour indiquer que l’argument de 
 
 Vous pouvez également spécifier un paramètre générique en tant que contrainte. L’argument de type disponible pour le type que vous contraignez doit être, ou dériver du, type de la contrainte. Il s'agit d'une contrainte de type naked.
 
-## <a name="remarks"></a>Remarques
+## <a name="remarks"></a>Notes
 
-La clause de contrainte se compose de **where** suivi d’un paramètre de type, de deux points (**:**) et de la contrainte, qui spécifie la nature de la restriction sur le paramètre de type. **where** est un mot clé contextuel ; consultez [Mots clés contextuels](context-sensitive-keywords-cpp-component-extensions.md) pour plus d’informations. Séparez par un espace plusieurs clauses de **where**.
+La clause de contrainte se compose de **where** suivi d’un paramètre de type, de deux points ( **:** ) et de la contrainte, qui spécifie la nature de la restriction sur le paramètre de type. **where** est un mot clé contextuel ; consultez [Mots clés contextuels](context-sensitive-keywords-cpp-component-extensions.md) pour plus d’informations. Séparez par un espace plusieurs clauses de **where**.
 
 Les contraintes sont appliquées aux paramètres de type pour placer des restrictions sur les types qui peuvent être utilisés comme arguments pour un type générique ou une méthode générique.
 
@@ -80,7 +80,7 @@ where T : List<T>, IComparable<T>
 ref class List {};
 ```
 
-Avec plusieurs paramètres de type, utilisez une clause **where** pour chaque paramètre de type. Par exemple :
+Avec plusieurs paramètres de type, utilisez une clause **where** pour chaque paramètre de type. Par exemple :
 
 ```cpp
 // generics_constraints_3.cpp
@@ -100,7 +100,7 @@ Pour résumer, utilisez les contraintes dans votre code en fonction des règles 
 
 - Les contraintes peuvent être également des types de classe, tels que les classes de base abstraites. Toutefois, les contraintes ne peuvent pas être des types de valeur, ni des classes sealed.
 
-- Les contraintes ne peuvent pas être elles-mêmes des paramètres de type, mais elles peuvent impliquer des paramètres de type dans un type construit ouvert. Par exemple :
+- Les contraintes ne peuvent pas être elles-mêmes des paramètres de type, mais elles peuvent impliquer des paramètres de type dans un type construit ouvert. Par exemple :
 
     ```cpp
     // generics_constraints_4.cpp

@@ -6,20 +6,20 @@ f1_keywords:
 helpviewer_keywords:
 - LNK2004
 ms.assetid: 07645371-e67b-4a2c-b0e0-dde24c94ef7e
-ms.openlocfilehash: 8088494106aa702fda0497fa431e48267167a185
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 0d26ab12c5b82d52b7dcbb176d9bfa033d7ddfee
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62160417"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80194835"
 ---
 # <a name="linker-tools-error-lnk2004"></a>Erreur des outils Éditeur de liens LNK2004
 
-dépassement de la correction relative GP à 'target' ; la section short 'section' est trop grande ou hors limites.
+dépassement de la correction GP relative à’target'; la section Short’section’est trop grande ou hors limites.
 
 La section était trop grande.
 
-Pour résoudre cette erreur, réduisez la taille de la section short, soit en insérant explicitement des données dans les sections long via #pragma section (« .sectionname », lecture, écriture, long) à l’aide de `__declspec(allocate(".sectionname"))` sur les déclarations et définitions de données.  Par exemple :
+Pour résoudre cette erreur, réduisez la taille de la section, en plaçant les données de manière explicite dans les sections longues via #pragma section («..., lire, écrire, long) et en utilisant des `__declspec(allocate(".sectionname"))` sur les définitions et les déclarations de données.  Par exemple,
 
 ```
 #pragma section(".data$mylong", read, write, long)
@@ -32,7 +32,7 @@ char    rg4[16] = { 1 };
 char    rg5[32] = { 1 };
 ```
 
-Vous pouvez également déplacer les données regroupées logiquement dans leur propre structure qui sera une collection de données supérieures à 8 octets, allouée dans une section de données de type long le compilateur.  Par exemple :
+Vous pouvez également déplacer des données groupées logiquement dans sa propre structure qui sera une collection de données supérieure à 8 octets, que le compilateur allouera dans une section de données de type long.  Par exemple,
 
 ```
 // from this...
@@ -50,4 +50,4 @@ struct X {
 } x  = { 23, 23*2, 23*3, 23*4 };
 ```
 
-Cette erreur est suivie d’une erreur irrécupérable `LNK1165`.
+Cette erreur est suivie d’un `LNK1165`d’erreur irrécupérable.

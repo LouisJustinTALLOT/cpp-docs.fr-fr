@@ -23,12 +23,12 @@ f1_keywords:
 helpviewer_keywords:
 - _amsg_exit
 ms.assetid: 146d4faf-d763-43a4-b264-12711196456b
-ms.openlocfilehash: 2d577bfcf0584ef982ab43ff98674d0cfadd14ba
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 31979a3181dc57644f1e6877277884e55cebf733
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70939696"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80170932"
 ---
 # <a name="_amsg_exit"></a>_amsg_exit
 
@@ -49,7 +49,7 @@ Numéro d’identification d’un message d’erreur d’exécution défini par 
 
 Cette fonction émet le message d’erreur d’exécution vers **stderr** (pour les applications de console) ou affiche le message dans une boîte de message (pour les applications Windows). En mode débogage, vous pouvez choisir d’appeler le débogueur avant de quitter.
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
 |Routine|En-tête requis|
 |-------------|---------------------|
