@@ -5,12 +5,12 @@ helpviewer_keywords:
 - rowsets [C++], data types
 - accessors [C++], types
 ms.assetid: 22483dd2-f4e0-4dcb-8e4d-cd43a9c1a3db
-ms.openlocfilehash: d729e2cf5b08ae227d0cc2e4d5ab7f8ac865cdc4
-ms.sourcegitcommit: 8e285a766523e653aeeb34d412dc6f615ef7b17b
+ms.openlocfilehash: 31efa36bcd61caa154cd3e4c147ad5ed8728b04c
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/21/2020
-ms.locfileid: "80079657"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80210988"
 ---
 # <a name="determining-which-type-of-accessor-to-use"></a>Détermination du type d’accesseur à utiliser
 
@@ -28,7 +28,7 @@ Le tableau suivant répertorie les types d’accesseurs fournis dans les modèle
 |`CDynamicAccessor`|Automatique.|Non.|Utile si vous ne connaissez pas le type de données dans un ensemble de lignes.|
 |`CDynamicParameterAccessor`|Automatique, mais peut être [remplacé](../../data/oledb/overriding-a-dynamic-accessor.md).|Oui, si le fournisseur prend en charge `ICommandWithParameters`. Paramètres liés automatiquement.|Plus lent que `CDynamicAccessor` mais utile pour l’appel des procédures stockées génériques.|
 |`CDynamicStringAccessor[A,W]`|Automatique.|Non.|Récupère les données accessibles depuis la banque de données en tant que données de chaîne.|
-|`CManualAccessor`|Utilisation manuelle de `AddBindEntry`.|Utilisation manuelle de `AddParameterEntry`.|Fast : les paramètres et les colonnes liées une seule fois. Vous déterminez le type de données à utiliser. (Pour obtenir un exemple, consultez l’exemple [DBViewer](https://github.com/Microsoft/VCSamples) .) Nécessite plus de code que `CDynamicAccessor` ou `CAccessor`. Cela ressemble davantage à appeler directement OLE DB.|
+|`CManualAccessor`|Utilisation manuelle de `AddBindEntry`.|Utilisation manuelle de `AddParameterEntry`.|Fast : les paramètres et les colonnes liées une seule fois. Vous déterminez le type de données à utiliser. (Pour obtenir un exemple, consultez l’exemple [DBViewer](https://github.com/Microsoft/VCSamples/tree/master/VC2010Samples/ATL/OLEDB/Consumer) .) Nécessite plus de code que `CDynamicAccessor` ou `CAccessor`. Cela ressemble davantage à appeler directement OLE DB.|
 |`CXMLAccessor`|Automatique.|Non.|Récupère les données accessibles depuis la banque de données en tant que données de chaîne et les formate en tant que données avec balise XML.|
 
 ## <a name="see-also"></a>Voir aussi

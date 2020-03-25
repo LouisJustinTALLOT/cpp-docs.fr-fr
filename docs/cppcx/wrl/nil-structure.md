@@ -5,16 +5,16 @@ ms.topic: reference
 f1_keywords:
 - implements/Microsoft::WRL::Details::Nil
 ms.assetid: ea6dddc1-2bd0-44eb-804e-477572215712
-ms.openlocfilehash: 143b5133589198341cb68378778631e6a78af006
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: a6f71c120e62a11881cf071879ed8a151a9b46b2
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62379075"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80213667"
 ---
 # <a name="nil-structure"></a>Nil, structure
 
-Prend en charge l’infrastructure WRL et n’est pas destinée à être utilisée directement depuis votre code.
+Prend en charge l’infrastructure WRL et n’est pas destiné à être utilisé directement à partir de votre code.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -24,19 +24,19 @@ struct Nil;
 
 ## <a name="remarks"></a>Notes
 
-Utilisé pour indiquer un paramètre de modèle non spécifié, facultatif.
+Utilisé pour indiquer un paramètre de modèle facultatif non spécifié.
 
 **Nil** est une structure vide.
 
-## <a name="inheritance-hierarchy"></a>Hiérarchie d'héritage
+## <a name="inheritance-hierarchy"></a>Hiérarchie d’héritage
 
 `Nil`
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
-**En-tête :** implements.h
+**En-tête :** Implements. h
 
-**Espace de noms :** Microsoft::WRL::Details
+**Espace de noms :** Microsoft :: WRL ::D étails
 
 ## <a name="see-also"></a>Voir aussi
 

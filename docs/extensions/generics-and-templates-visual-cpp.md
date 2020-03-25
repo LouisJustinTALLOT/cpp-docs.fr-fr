@@ -6,12 +6,12 @@ helpviewer_keywords:
 - generics [C++], vs. templates
 - templates, C++
 ms.assetid: 63adec79-b1dc-4a1a-a21d-b8a72a8fce31
-ms.openlocfilehash: 74cfd791e8400b788d38f272eed3d421ca4230e3
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
-ms.translationtype: HT
+ms.openlocfilehash: 567286ee24e9df968b2d352489fe12f2735854eb
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "65516354"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80172345"
 ---
 # <a name="generics-and-templates-ccli"></a>Génériques et modèles (C++/CLI)
 

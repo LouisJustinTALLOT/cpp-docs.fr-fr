@@ -7,16 +7,16 @@ f1_keywords:
 helpviewer_keywords:
 - TerminateMap function
 ms.assetid: 1c314a61-da5d-49bb-ac44-c34ee3c23b66
-ms.openlocfilehash: 2a451bf68bfb543ee5e82a9a48097cac7e8a9821
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 560f563e43fc8b818b04cd0bda6b01fbc916cb84
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62398119"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80213549"
 ---
 # <a name="terminatemap-function"></a>TerminateMap, fonction
 
-Prend en charge l’infrastructure WRL et n’est pas destinée à être utilisée directement depuis votre code.
+Prend en charge l’infrastructure WRL et n’est pas destiné à être utilisé directement à partir de votre code.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -30,27 +30,27 @@ inline bool TerminateMap(
 ### <a name="parameters"></a>Paramètres
 
 *module*<br/>
-Un [module](module-class.md).
+[Module](module-class.md).
 
 *serverName*<br/>
-Le nom d’un sous-ensemble des fabriques de classes dans le module spécifié par le paramètre *module*.
+Nom d’un sous-ensemble de fabriques de classes dans le module spécifié par le *module*de paramètre.
 
 *forceTerminate*<br/>
-**true** pour mettre fin à la classe fabriques, quel que soit ils sont actifs ; **false** à se termine ne pas les fabriques de classe si n’importe quel factory est active.
+**true** pour terminer les fabriques de classes, indépendamment de leur activité. **false** pour ne pas terminer les fabriques de classe si une fabrique est active.
 
 ## <a name="return-value"></a>Valeur de retour
 
-**true** si toutes les fabriques de classe ont été terminées ; sinon, **false**.
+**true** si toutes les fabriques de classes ont été arrêtées ; Sinon, **false**.
 
 ## <a name="remarks"></a>Notes
 
-Arrête les fabriques de classe dans le module spécifié.
+Arrête les fabriques de classes dans le module spécifié.
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
-**En-tête :** module.h
+**En-tête :** module. h
 
-**Espace de noms :** Microsoft::WRL::Details
+**Espace de noms :** Microsoft :: WRL ::D étails
 
 ## <a name="see-also"></a>Voir aussi
 

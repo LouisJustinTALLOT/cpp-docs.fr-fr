@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C4612
 ms.assetid: 21ac02b2-51cd-4aff-9b70-d543511d5962
-ms.openlocfilehash: ed5458fc52c1c9c9f12187095e4658204613d1a1
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: f9478caef9eaba9c72dc282179100daf2d94c6d5
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62406364"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80185982"
 ---
 # <a name="compiler-warning-level-1-c4612"></a>Avertissement du compilateur (niveau 1) C4612
 
@@ -21,7 +21,7 @@ ms.locfileid: "62406364"
 
 Cet avertissement se produit avec **#pragma include_alias** quand un nom de fichier est incorrect ou manquant.
 
-Les arguments de la **#pragma include_alias** instruction peut utiliser le formulaire de devis («*filename*») ou les crochets pointus (\<*filename*>), mais les deux doivent utiliser la même forme.
+Les arguments de l’instruction **#pragma include_alias** peuvent utiliser le format de guillemet ("*nom_fichier*") ou le format de crochet angulaire (\<*nom de fichier*>), mais les deux doivent utiliser le même formulaire.
 
 ## <a name="example"></a>Exemple
 

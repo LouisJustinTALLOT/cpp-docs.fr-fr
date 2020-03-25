@@ -1,5 +1,5 @@
 ---
-title: Définition des procédures stockées
+title: Définition de procédures stockées
 ms.date: 10/24/2018
 helpviewer_keywords:
 - stored procedures, syntax
@@ -7,24 +7,24 @@ helpviewer_keywords:
 - stored procedures, defining
 - stored procedures, OLE DB
 ms.assetid: 54949b81-3275-4dd9-96e4-3eda1ed755f2
-ms.openlocfilehash: 0f4c4ad84abf2a5de2cdf09e7064396ea01eeebe
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 9bab086bf6982eae5779d3199cfd2ac2c8efe77f
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62176393"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80211002"
 ---
-# <a name="defining-stored-procedures"></a>Définition des procédures stockées
+# <a name="defining-stored-procedures"></a>Définition de procédures stockées
 
-Avant d’appeler une procédure stockée, vous devez tout d’abord définir, en utilisant le [DEFINE_COMMAND](../../data/oledb/define-command.md) macro. Lorsque vous définissez la commande, désigner des paramètres avec un point d’interrogation ( ?) comme marqueur de paramètre :
+Avant d’appeler une procédure stockée, vous devez d’abord la définir à l’aide de la macro [DEFINE_COMMAND](../../data/oledb/define-command.md) . Lorsque vous définissez la commande, indiquez les paramètres avec un point d’interrogation ( ?) comme marqueur de paramètre :
 
 ```cpp
 DEFINE_COMMAND_EX(CMySProcAccessor, _T("{INSERT {name, phone} INTO shippers (?,?)}"))
 ```
 
-La syntaxe (l’utilisation d’accolades, etc.) utilisée dans les exemples de code dans cette rubrique est spécifique à SQL Server. La syntaxe que vous utilisez dans vos procédures stockées peut-être varier selon le fournisseur que vous utilisez.
+La syntaxe (l’utilisation d’accolades, etc.) utilisée dans les exemples de code de cette rubrique est spécifique à SQL Server. La syntaxe que vous utilisez dans vos procédures stockées peut varier selon le fournisseur que vous utilisez.
 
-Ensuite, dans le mappage de paramètre, spécifiez les paramètres que vous avez utilisé dans la commande, en listant les paramètres dans l’ordre où ils apparaissent dans la commande :
+Ensuite, dans le mappage de paramètres, spécifiez les paramètres que vous avez utilisés dans la commande, en répertoriant les paramètres dans l’ordre dans lequel ils se produisent dans la commande :
 
 ```cpp
 BEGIN_PARAM_MAP(CMySProcAccessor)
@@ -35,7 +35,7 @@ BEGIN_PARAM_MAP(CMySProcAccessor)
 END_PARAM_MAP()
 ```
 
-L’exemple précédent définit une procédure stockée, tandis qu’elle passe. En règle générale, pour une réutilisation efficace du code, une base de données contient un ensemble de procédures stockées prédéfinies avec des noms tels que `Sales by Year` ou `dt_adduserobject`. Vous pouvez afficher ces définitions à l’aide de SQL Server Enterprise Manager. Vous les appelez comme suit (le placement de la *?* paramètres dépendent interface de la procédure stockée) :
+L’exemple précédent définit une procédure stockée au fur et à mesure. En général, pour une réutilisation efficace du code, une base de données contient un ensemble de procédures stockées prédéfinies avec des noms tels que `Sales by Year` ou `dt_adduserobject`. Vous pouvez afficher leurs définitions à l’aide du gestionnaire de SQL Server Entreprise. Vous les appelez comme suit (le positionnement de l’opérateur *?* les paramètres dépendent de l’interface de la procédure stockée) :
 
 ```cpp
 DEFINE_COMMAND_EX(CMySProcAccessor, _T("{CALL \"Sales by Year\" (?,?) }"))
@@ -48,7 +48,7 @@ Ensuite, déclarez la classe de commande :
 class CMySProc : public CCommand<CAccessor<CMySProcAccessor>>
 ```
 
-Enfin, appelez la procédure stockée `OpenRowset` comme suit :
+Enfin, appelez la procédure stockée dans `OpenRowset` comme suit :
 
 ```cpp
 CSession m_session;

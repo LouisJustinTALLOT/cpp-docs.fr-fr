@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C2097
 ms.assetid: 7e5b2fd4-f61c-4b8a-b265-93e987a04bd3
-ms.openlocfilehash: 8b50221997dcf2fb60ee2b82ed630dd325a38145
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: cdb14aeef61d136a6992a05a72f382e589e88770
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62377005"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80207492"
 ---
 # <a name="compiler-error-c2097"></a>Erreur du compilateur C2097
 
@@ -21,9 +21,9 @@ initialisation non conforme
 
 1. Initialisation d’une variable à l’aide d’une valeur non constante.
 
-1. Initialisation d’une adresse courte avec une adresse longue.
+1. Initialisation d’une adresse de petite taille avec une adresse longue.
 
-1. Initialisation d’une structure locale, une union ou un tableau avec une expression non constante lors de la compilation avec **/Za**.
+1. Initialisation d’une structure, d’une Union ou d’un tableau local avec une expression non constante lors de la compilation avec **/za**.
 
 1. Initialisation avec une expression contenant un opérateur virgule.
 

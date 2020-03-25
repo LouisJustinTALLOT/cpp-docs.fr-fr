@@ -6,15 +6,15 @@ f1_keywords:
 helpviewer_keywords:
 - C2212
 ms.assetid: 3fdab304-272c-4d07-bfd4-fad75170e536
-ms.openlocfilehash: a632aaf9809cd306354320a21cb03b993d60a95f
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: bf478c96e76a4fe139caee79f497a0abe7f70824
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62400420"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80206676"
 ---
 # <a name="compiler-error-c2212"></a>Erreur du compilateur C2212
 
-'identificateur' : __based non disponible pour les pointeurs vers des fonctions
+'identificateur' : __based pas disponible pour les pointeurs vers des fonctions
 
-Impossible de déclarer les pointeurs vers des fonctions `__based`. Si vous avez besoin des données basées sur le code, utilisez le `__declspec` mot clé ou le `data_seg` pragma.
+Les pointeurs vers des fonctions ne peuvent pas être déclarés `__based`. Si vous avez besoin de données basées sur du code, utilisez le mot clé `__declspec` ou le pragma `data_seg`.

@@ -7,16 +7,16 @@ f1_keywords:
 helpviewer_keywords:
 - HandleTraits namespace
 ms.assetid: 2fb5c6d1-bfc2-4e09-91eb-31705064ffb3
-ms.openlocfilehash: 6ed8156b6a0e71d40d1579fc9a33912f698e1773
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: b19cc426fc7c1b4fc6ec0638730d59998f8c108a
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62391970"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80213731"
 ---
 # <a name="microsoftwrlwrappershandletraits-namespace"></a>Microsoft::WRL::Wrappers::HandleTraits, espace de noms
 
-Décrit les caractéristiques des types courants de ressources basées sur le handle.
+Décrit les caractéristiques des types de ressources basés sur les descripteurs courants.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -28,23 +28,23 @@ namespace Microsoft::WRL::Wrappers::HandleTraits;
 
 ### <a name="structures"></a>Structures
 
-|Nom|Description|
+|Name|Description|
 |----------|-----------------|
-|[CriticalSectionTraits, structure](criticalsectiontraits-structure.md)|Spécialise une `CriticalSection` objet pour prendre en charge une section critique non valide ou une fonction d’annulation d’une section critique.|
-|[EventTraits, structure](eventtraits-structure.md)|Définit les caractéristiques d’un `Event` handle de classe.|
+|[CriticalSectionTraits, structure](criticalsectiontraits-structure.md)|Spécialise un objet `CriticalSection` pour prendre en charge une section critique non valide ou une fonction pour libérer une section critique.|
+|[EventTraits, structure](eventtraits-structure.md)|Définit les caractéristiques d’un handle de classe `Event`.|
 |[FileHandleTraits, structure](filehandletraits-structure.md)|Définit les caractéristiques d’un descripteur de fichier.|
 |[HANDLENullTraits, structure](handlenulltraits-structure.md)|Définit les caractéristiques communes d’un handle non initialisé.|
-|[HANDLETraits, structure](handletraits-structure.md)|Définit les caractéristiques communes d’une poignée.|
-|[MutexTraits, structure](mutextraits-structure.md)|Définit les caractéristiques communes de la [Mutex](mutex-class.md) classe.|
-|[SemaphoreTraits, structure](semaphoretraits-structure.md)|Définit les caractéristiques communes d’un objet sémaphore.|
-|[SRWLockExclusiveTraits, structure](srwlockexclusivetraits-structure.md)|Décrit les caractéristiques communes de la `SRWLock` classe en mode de verrou exclusif.|
-|[SRWLockSharedTraits, structure](srwlocksharedtraits-structure.md)|Décrit les caractéristiques communes de la `SRWLock` classe en mode de verrou partagé.|
+|[HANDLETraits, structure](handletraits-structure.md)|Définit les caractéristiques communes d’un handle.|
+|[MutexTraits, structure](mutextraits-structure.md)|Définit les caractéristiques communes de la classe [mutex](mutex-class.md) .|
+|[SemaphoreTraits, structure](semaphoretraits-structure.md)|Définit les caractéristiques communes d’un objet Semaphore.|
+|[SRWLockExclusiveTraits, structure](srwlockexclusivetraits-structure.md)|Décrit les caractéristiques communes de la classe `SRWLock` en mode de verrouillage exclusif.|
+|[SRWLockSharedTraits, structure](srwlocksharedtraits-structure.md)|Décrit les caractéristiques communes de la classe `SRWLock` en mode de verrouillage partagé.|
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
-**En-tête :** corewrappers.h
+**En-tête :** corewrappers. h
 
-**Espace de noms :** Microsoft::wrl::wrappers
+**Espace de noms :** Microsoft :: WRL :: wrappers
 
 ## <a name="see-also"></a>Voir aussi
 

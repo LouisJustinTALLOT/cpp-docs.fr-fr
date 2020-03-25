@@ -6,28 +6,28 @@ f1_keywords:
 helpviewer_keywords:
 - C2144
 ms.assetid: 49f3959b-324f-4c06-9588-c0ecef5dc5b3
-ms.openlocfilehash: a75330d26b0924e60f7e46d10d617341709d7e23
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: b917c0a2c15aeb70222c948bce9a6fb275c91068
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62353493"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80207244"
 ---
 # <a name="compiler-error-c2144"></a>Erreur du compilateur C2144
 
-> Erreur de syntaxe : '*type*'doit être précédé par'*jeton*'
+> erreur de syntaxe : '*type*'doit être précédé de'*Token*'
 
-Le compilateur attendu *jeton* et trouvé *type* à la place.
+Le compilateur attendait un *jeton* et un *type* trouvé à la place.
 
-Cette erreur peut résulter d’une accolade fermante manquante, une parenthèse droite ou un point-virgule.
+Cette erreur peut être due à l’absence d’une accolade fermante, d’une parenthèse droite ou d’un point-virgule.
 
-C2144 peut également se produire lorsque vous tentez de créer une macro à partir d’un mot clé CLR qui contient un caractère espace blanc.
+C2144 peut également se produire lors d’une tentative de création d’une macro à partir d’un mot clé CLR qui contient un espace blanc.
 
-Vous pouvez également voir C2144 si vous essayez d’effectuer le transfert de type. Consultez [transfert de Type (C++ / c++ / CLI)](../../extensions/type-forwarding-cpp-cli.md) pour plus d’informations.
+Vous pouvez également voir C2144 si vous essayez d’effectuer le transfert de type. Pour plus d’informations, consultez [transfert de typeC++(/CLI)](../../extensions/type-forwarding-cpp-cli.md) .
 
 ## <a name="examples"></a>Exemples
 
-L’exemple suivant génère C2144 et illustre une méthode permettant de résoudre le problème :
+L’exemple suivant génère l’C2144 et montre un moyen de le corriger :
 
 ```cpp
 // C2144.cpp
@@ -40,7 +40,7 @@ REF struct MyStruct0;   // C2144
 REF1 MyStruct1;
 ```
 
-L’exemple suivant génère C2144 et illustre une méthode permettant de résoudre le problème :
+L’exemple suivant génère l’C2144 et montre un moyen de le corriger :
 
 ```cpp
 // C2144_2.cpp

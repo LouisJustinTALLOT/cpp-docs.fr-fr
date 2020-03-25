@@ -1,19 +1,19 @@
 ---
-title: Avertissement du compilateur (niveau 1) C4550
+title: Avertissement du compilateur (niveau 1) C4550
 ms.date: 11/04/2016
 f1_keywords:
 - C4550
 helpviewer_keywords:
 - C4550
 ms.assetid: f902b4ed-5f17-48ea-b693-92f4fb8c8054
-ms.openlocfilehash: 1c310855ee3925374de8b736cde9013d48df6482
-ms.sourcegitcommit: e5192a25c084eda9eabfa37626f3274507e026b3
+ms.openlocfilehash: 454b0154f555ef1ba1ac13ea7a87d454d59c6f05
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/12/2019
-ms.locfileid: "73966377"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80186164"
 ---
-# <a name="compiler-warning-level-1-c4550"></a>Avertissement du compilateur (niveau 1) C4550
+# <a name="compiler-warning-level-1-c4550"></a>Avertissement du compilateur (niveau 1) C4550
 
 l’expression prend la valeur d’une fonction qui n’a pas de liste d’arguments
 

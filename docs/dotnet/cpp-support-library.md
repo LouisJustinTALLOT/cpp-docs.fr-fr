@@ -7,16 +7,16 @@ helpviewer_keywords:
 - C++ Support Library
 - Visual C++ Support Library
 ms.assetid: fe6246eb-9ac7-478d-a272-dc9b09b14788
-ms.openlocfilehash: 88b7112962e003d825bac85112224130b5827b9c
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: e6fb61eb871df91dd7fe308c7f9ab103f8a7a915
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62209133"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80208855"
 ---
 # <a name="c-support-library"></a>bibliothèque de prise en charge C++
 
-La bibliothèque de prise en charge C++ fournit des classes qui prennent en charge la programmation managée en C++.
+La C++ bibliothèque de prise en charge fournit des classes qui C++prennent en charge la programmation managée dans.
 
 ## <a name="in-this-section"></a>Dans cette section
 

@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - threading attribute
 ms.assetid: 9b558cd6-fbf0-4602-aed5-31c068550ce3
-ms.openlocfilehash: db2940ec3536ae8ea29ba40db84ea869ecb3d0ac
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: b249eaf61266ed9964e44f6f0ad1c2f12a1b1067
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69513931"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80214498"
 ---
 # <a name="threading-c"></a>thread (C++)
 
@@ -28,40 +28,40 @@ Spécifie le modèle de thread pour un objet COM.
 *model*<br/>
 Facultatif L’un des modèles de thread suivants :
 
-- `apartment`(thread cloisonné)
+- `apartment` (threads cloisonnés)
 
-- `neutral`(Composants .NET Framework sans interface utilisateur)
+- `neutral` (composants .NET Framework sans interface utilisateur)
 
-- `single`(thread simple)
+- `single` (Threading simple)
 
-- `free`(Threading libre)
+- `free` (Threading libre)
 
-- `both`(cloisonnement et threads libres)
+- `both` (cloisonnement et thread libre)
 
 La valeur par défaut est `apartment`.
 
 ## <a name="remarks"></a>Notes
 
-L' C++ attribut de thread n’apparaît pas dans le fichier. idl généré, mais il sera utilisé dans l’implémentation de votre objet com.
+L' **threading** C++ attribut de thread n’apparaît pas dans le fichier. idl généré, mais il sera utilisé dans l’implémentation de votre objet com.
 
-Dans les projets ATL, si l’attribut [coclass](coclass.md) est également présent, le modèle de thread spécifié par le *modèle* est passé en tant que paramètre de modèle à la classe [CComObjectRootEx](../../atl/reference/ccomobjectrootex-class.md) , insérée par l' `coclass` attribut.
+Dans les projets ATL, si l’attribut [coclass](coclass.md) est également présent, le modèle de thread spécifié par le *modèle* est passé en tant que paramètre de modèle à la classe [CComObjectRootEx](../../atl/reference/ccomobjectrootex-class.md) , insérée par l’attribut `coclass`.
 
-L’attribut de **thread** protège également l’accès à un [event_source](event-source.md).
+L’attribut de **thread** protège également l’accès à une [event_source](event-source.md).
 
 ## <a name="example"></a>Exemple
 
 Pour obtenir un exemple d’utilisation de **Threading**, consultez l’exemple [sous licence](licensed.md) .
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
 ### <a name="attribute-context"></a>Contexte d'attribut
 
 |||
 |-|-|
-|**S'applique à**|**class**, **struct**|
+|**S'applique à**|**classe**, **struct**|
 |**Renouvelable**|Non|
 |**Attributs requis**|**coclasse**|
-|**Attributs non valides**|Aucun|
+|**Attributs non valides**|None|
 
 Pour plus d'informations sur les contextes d'attribut, consultez [Contextes d'attribut](cpp-attributes-com-net.md#contexts).
 

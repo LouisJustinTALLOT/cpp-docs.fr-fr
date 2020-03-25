@@ -6,24 +6,24 @@ f1_keywords:
 helpviewer_keywords:
 - C2461
 ms.assetid: e64ba651-f441-4fdb-b5cb-4209bbbe4db4
-ms.openlocfilehash: e8f82ed4ce8ad77a22961a42c8e9a256e6f647db
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 3d290bd2288f76d0ddefa2057e3e01c9edc3cbc7
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62368030"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80205320"
 ---
 # <a name="compiler-error-c2461"></a>Erreur du compilateur C2461
 
-> «*classe*' : syntaxe du constructeur absence de paramètres formels
+> '*classe*' : paramètres formels manquants dans la syntaxe du constructeur
 
-Le constructeur de la classe ne spécifie pas de tous les paramètres formels. La déclaration d’un constructeur doit spécifier une liste de paramètres formels. La liste peut être vide.
+Le constructeur de la classe ne spécifie pas de paramètres formels. La déclaration d’un constructeur doit spécifier une liste de paramètres formels. La liste peut être vide.
 
-Pour résoudre ce problème, ajoutez une paire de parenthèses après la déclaration de *classe*:: **classe*.
+Pour résoudre ce problème, ajoutez une paire de parenthèses après la *déclaration de classe*::**classe*.
 
 ## <a name="example"></a>Exemple
 
-L’exemple suivant montre comment la corriger C2461 :
+L’exemple suivant montre comment corriger C2461 :
 
 ```cpp
 // C2461.cpp

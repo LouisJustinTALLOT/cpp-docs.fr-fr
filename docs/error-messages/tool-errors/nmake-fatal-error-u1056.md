@@ -6,17 +6,17 @@ f1_keywords:
 helpviewer_keywords:
 - U1056
 ms.assetid: da855728-b69e-413c-83ed-df912126215e
-ms.openlocfilehash: b15b14c04dd91ae648ea4311612c122f04f90477
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 10131e518fa608292fff58672ede36390bcd665b
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62367263"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80182901"
 ---
 # <a name="nmake-fatal-error-u1056"></a>Erreur irrécupérable NMAKE U1056
 
 Impossible de trouver le processeur de commandes
 
-Le processeur de commandes n’était pas dans le chemin d’accès spécifié dans le **COMSPEC** ou **chemin d’accès** variables d’environnement.
+Le processeur de commandes n’était pas dans le chemin spécifié dans les variables d’environnement **COMSPEC** ou **path** .
 
-NMAKE utilise COMMAND.COM ou CMD. EXE en tant qu’interpréteur de commandes lors de l’exécution de commandes. Il recherche l’interpréteur de commandes dans le chemin d’accès défini **COMSPEC**. Si **COMSPEC** n’existe pas, les répertoires spécifiés dans des recherches NMAKE **chemin d’accès**.
+NMAKE utilise COMMAND.COM ou CMD. EXE en tant que processeur de commande lors de l’exécution de commandes. Il recherche le processeur de commandes en premier dans le chemin d’accès défini dans **COMSPEC**. Si **COMSPEC** n’existe pas, NMAKE recherche les répertoires spécifiés dans **path**.

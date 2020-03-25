@@ -7,19 +7,19 @@ helpviewer_keywords:
 - CXX0038
 - CAN0038
 ms.assetid: 3327dc4e-1726-4924-a519-6ffd766a389c
-ms.openlocfilehash: aa471ef538846e48e40032f976754eda93137981
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 06105064db9f696784aaaef2d41d978935eac896
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62397001"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80185111"
 ---
 # <a name="expression-evaluator-error-cxx0038"></a>Évaluateur d'expression, erreur CXX0038
 
-incompatibilité de nombre et/ou le type d’argument (fonction)
+nombre d’arguments de fonction et/ou incompatibilité de type
 
-L’appel de fonction comme spécifié ne correspond pas au prototype de la fonction.
+L’appel de fonction spécifié ne correspond pas au prototype de la fonction.
 
-Tapez à nouveau l’appel avec le nombre correct d’arguments. Cast de type chaque argument correspondant au prototype, en fonction des besoins.
+Retapez l’appel avec le nombre correct d’arguments. Effectuez un cast de type de chaque argument pour qu’il corresponde au prototype, si nécessaire.
 
 Cette erreur est identique à CAN0038.

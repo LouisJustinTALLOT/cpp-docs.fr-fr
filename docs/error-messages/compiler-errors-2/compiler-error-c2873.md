@@ -6,15 +6,15 @@ f1_keywords:
 helpviewer_keywords:
 - C2873
 ms.assetid: 7a10036b-400e-4364-bd2f-dcd7370c5e28
-ms.openlocfilehash: 69be18e5f3e06392d4f2fa11c6343a07298b84bb
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: a77c4294d697d915a77b5aa244579860f860cf21
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62164929"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80201654"
 ---
 # <a name="compiler-error-c2873"></a>Erreur du compilateur C2873
 
-'symbole' : symbole ne peut pas être utilisé dans une déclaration using
+'Symbol' : le symbole ne peut pas être utilisé dans une déclaration using
 
-Un `using` la directive il manque un [espace de noms](../../cpp/namespaces-cpp.md) mot clé. Ainsi, le compilateur interprète le code comme un [à l’aide de la déclaration](../../cpp/using-declaration.md) au lieu d’un [à l’aide de la directive](../../cpp/namespaces-cpp.md#using_directives).
+Un mot clé d’espace de [noms](../../cpp/namespaces-cpp.md) est manquant dans une directive `using`. Le compilateur interprète alors le code comme une [déclaration using](../../cpp/using-declaration.md) plutôt que comme une [directive using](../../cpp/namespaces-cpp.md#using_directives).

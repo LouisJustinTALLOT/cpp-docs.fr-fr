@@ -8,27 +8,27 @@ helpviewer_keywords:
 - conformance testing [OLE DB]
 - OLE DB providers, testing
 ms.assetid: d1a4f147-2edd-476c-b452-0e6a0ac09891
-ms.openlocfilehash: 9f78b16bc30651560137a39286460a8e5ceccd40
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: eda4dccda147ddd4776bb56e649f539a7550abd1
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62282814"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80209767"
 ---
 # <a name="passing-ole-db-conformance-tests"></a>Tests de compatibilité OLE DB
 
-Pour rendre les fournisseurs plus cohérente, le Data Access SDK fournit un ensemble de tests de compatibilité OLE DB. Les tests vérifient tous les aspects de votre fournisseur et vous donnent l’assurance raisonnable que votre fournisseur fonctionnera normalement. Vous pouvez trouver les tests de compatibilité OLE DB sur le Microsoft Data Access SDK. Cette section se concentre sur ce que vous devez faire pour passer les tests de compatibilité. Pour plus d’informations sur l’exécution de tests de compatibilité OLE DB, consultez le Kit de développement.
+Pour rendre les fournisseurs plus cohérents, le kit de développement logiciel (SDK) d’accès aux données fournit un ensemble de tests de conformité OLE DB. Les tests vérifient tous les aspects de votre fournisseur et vous garantissent que votre fournisseur fonctionne comme prévu. Vous pouvez trouver les tests de conformité OLE DB sur le kit de développement logiciel (SDK) Microsoft Data Access. Cette section se concentre sur les tâches à effectuer pour réussir les tests de conformité. Pour plus d’informations sur l’exécution des tests de conformité OLE DB, consultez le kit de développement logiciel (SDK).
 
-## <a name="running-the-conformance-tests"></a>Les Tests de compatibilité en cours d’exécution
+## <a name="running-the-conformance-tests"></a>Exécution des tests de conformité
 
-Dans Visual C++ 6.0, les modèles du fournisseur OLE DB ajouté un nombre de fonctions de raccordement pour vous permettent de vérifier les valeurs et propriétés. La plupart de ces fonctions ont été ajoutée en réponse aux tests de compatibilité.
+Dans Visual C++ 6,0, les modèles de fournisseur OLE DB ajoutaient un certain nombre de fonctions de raccordement pour vous permettre de vérifier les valeurs et les propriétés. La plupart de ces fonctions ont été ajoutées en réponse aux tests de conformité.
 
 > [!NOTE]
-> Vous devez ajouter plusieurs fonctions de validation de votre fournisseur pour passer les tests de compatibilité OLE DB.
+> Vous devez ajouter plusieurs fonctions de validation pour que votre fournisseur passe les tests de conformité OLE DB.
 
-Ce fournisseur requiert deux routines de validation. La première routine, `CRowsetImpl::ValidateCommandID`, fait partie de votre classe rowset. Elle est appelée lors de la création de l’ensemble de lignes par les modèles du fournisseur. L’exemple utilise cette routine pour indiquer aux consommateurs qu’il ne prend en charge les index. Le premier appel consiste à `CRowsetImpl::ValidateCommandID` (Notez que le fournisseur utilise le `_RowsetBaseClass` typedef ajouté dans la table d’interface pour `CCustomRowset` dans [prise en charge de fournisseur de signets](../../data/oledb/provider-support-for-bookmarks.md), de sorte que vous n’êtes pas obligé de taper une longue ligne du modèle arguments). Ensuite, retournez DB_E_NOINDEX si le paramètre d’index n’est pas NULL (cela indique que le consommateur souhaite utiliser un index). Pour plus d’informations sur les ID de commande, consultez la spécification OLE DB et recherchez `IOpenRowset::OpenRowset`.
+Ce fournisseur requiert deux routines de validation. La première routine, `CRowsetImpl::ValidateCommandID`, fait partie de votre classe rowset. Elle est appelée pendant la création de l’ensemble de lignes par les modèles du fournisseur. L’exemple utilise cette routine pour indiquer aux consommateurs qu’il ne prend pas en charge les index. Le premier appel consiste à `CRowsetImpl::ValidateCommandID` (Notez que le fournisseur utilise la `_RowsetBaseClass` typedef ajoutée dans le mappage d’interface pour `CCustomRowset` dans la [prise en charge des signets par le fournisseur](../../data/oledb/provider-support-for-bookmarks.md). vous n’avez donc pas besoin de taper cette longue ligne d’arguments template). Ensuite, retournez DB_E_NOINDEX si le paramètre d’index n’est pas NULL (cela indique que le consommateur souhaite utiliser un index sur nous). Pour plus d’informations sur les ID de commande, consultez la spécification OLE DB et recherchez `IOpenRowset::OpenRowset`.
 
-Le code suivant est le `ValidateCommandID` routine de validation :
+Le code suivant est la routine de validation `ValidateCommandID` :
 
 ```cpp
 /////////////////////////////////////////////////////////////////////
@@ -48,11 +48,11 @@ HRESULT ValidateCommandID(DBID* pTableID, DBID* pIndexID)
 }
 ```
 
-Le modèles du fournisseur appellent la `OnPropertyChanged` méthode chaque fois qu’un utilisateur modifie une propriété dans le groupe DBPROPSET_ROWSET. Si vous souhaitez gérer des propriétés pour d’autres groupes, ajoutez-les à l’objet approprié (autrement dit, les vérifications DBPROPSET_SESSION aller dans le `CCustomSession` classe).
+Les modèles de fournisseur appellent la méthode `OnPropertyChanged` chaque fois qu’un utilisateur modifie une propriété sur le groupe DBPROPSET_ROWSET. Si vous souhaitez gérer les propriétés d’autres groupes, vous devez les ajouter à l’objet approprié (autrement dit, DBPROPSET_SESSION les contrôles sont placés dans la classe `CCustomSession`).
 
-Le code vérifie tout d’abord si la propriété est liée à un autre. Si la propriété est chaînée, il définit la propriété DBPROP_BOOKMARKS sur `True`. Annexe C de la spécification OLE DB contient des informations sur les propriétés. Ces informations vous indique également si la propriété est chaînée à un autre.
+Le code commence par vérifier si la propriété est liée à une autre. Si la propriété est chaînée, elle définit la propriété DBPROP_BOOKMARKS sur `True`. L’annexe C de la spécification OLE DB contient des informations sur les propriétés. Ces informations vous indiquent également si la propriété est chaînée à une autre.
 
-Vous pourriez également ajouter le `IsValidValue` routine à votre code. L’appel de modèles `IsValidValue` lorsque vous tentez de définir une propriété. Vous devez remplacer cette méthode si vous avez besoin d’un traitement supplémentaire lors de la définition d’une valeur de propriété. Vous pouvez avoir une des méthodes suivantes pour chaque jeu de propriétés.
+Vous pouvez également ajouter la routine `IsValidValue` à votre code. Les modèles appellent `IsValidValue` lors de la tentative de définition d’une propriété. Vous substituez cette méthode si vous avez besoin d’un traitement supplémentaire lors de la définition d’une valeur de propriété. Vous pouvez avoir l’une de ces méthodes pour chaque jeu de propriétés.
 
 ## <a name="see-also"></a>Voir aussi
 

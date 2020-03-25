@@ -10,16 +10,16 @@ f1_keywords:
 helpviewer_keywords:
 - CNoRowset class
 ms.assetid: 55c6c7a4-9e3a-4775-a2dd-c8b333012fa6
-ms.openlocfilehash: 6193e2d461761c53fb05e5c16b3914c56d545173
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 19a1e01fd29c74cf1c44081c24bf384704cf2acd
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62230475"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80211469"
 ---
 # <a name="cnorowset-class"></a>CNoRowset, classe
 
-Peut être utilisé comme argument template (`TRowset`) pour [CCommand](../../data/oledb/ccommand-class.md) ou [CTable](../../data/oledb/ctable-class.md).
+Peut être utilisé comme argument de modèle (`TRowset`) pour [CCommand](../../data/oledb/ccommand-class.md) ou [CTable](../../data/oledb/ctable-class.md).
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -31,33 +31,33 @@ class CNoRowset
 ### <a name="parameters"></a>Paramètres
 
 *TAccessor*<br/>
-Classe d’accesseur. La valeur par défaut est `CAccessorBase`.
+Classe d’accesseur. Par défaut, il s’agit de `CAccessorBase`.
 
 ## <a name="remarks"></a>Notes
 
-Utilisez `CNoRowset` comme argument de modèle si la commande ne renvoie pas un ensemble de lignes.
+Utilisez `CNoRowset` comme argument de modèle si la commande ne retourne pas d’ensemble de lignes.
 
-`CNoRowset` implémente les méthodes stub suivantes, chacune d’elles correspondent à d’autres méthodes de classe d’accesseur :
+`CNoRowset` implémente les méthodes stub suivantes, chacune d’elles correspondant à d’autres méthodes de la classe d’accesseur :
 
-- `BindFinished` : Indique quand la liaison est terminée (retourne `S_OK`).
+- `BindFinished` : indique à quel moment la liaison est terminée (retourne `S_OK`).
 
-- `Close` -Libère des lignes et l’interface IRowset actuelle.
+- `Close`-libère les lignes et l’interface IRowset actuelle.
 
-- `GetIID` -Récupère l’ID d’interface d’un point de connexion.
+- `GetIID` : récupère l’ID d’interface d’un point de connexion.
 
-- `GetInterface` -Récupère une interface.
+- `GetInterface` : récupère une interface.
 
-- `GetInterfacePtr` -Récupère un pointeur d’interface encapsulé.
+- `GetInterfacePtr` : récupère un pointeur d’interface encapsulé.
 
-- `SetAccessor` -Définit un pointeur vers l’accesseur.
+- `SetAccessor`-définit un pointeur vers l’accesseur.
 
-- `SetupOptionalRowsetInterfaces` -Définit les interfaces facultatives pour l’ensemble de lignes.
+- `SetupOptionalRowsetInterfaces`-définit des interfaces facultatives pour l’ensemble de lignes.
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
 **En-tête :** atldbcli.h
 
 ## <a name="see-also"></a>Voir aussi
 
-[Modèles du consommateur OLE DB](../../data/oledb/ole-db-consumer-templates-cpp.md)<br/>
+[OLE DB (modèles du consommateur)](../../data/oledb/ole-db-consumer-templates-cpp.md)<br/>
 [Référence des modèles du consommateur OLE DB](../../data/oledb/ole-db-consumer-templates-reference.md)

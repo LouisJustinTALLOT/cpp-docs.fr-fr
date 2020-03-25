@@ -53,12 +53,12 @@ helpviewer_keywords:
 - top_item member [STL/CLR]
 - value_type member [STL/CLR]
 ms.assetid: 6ee96b9f-8a33-4cf7-b7e0-6535c24bdefb
-ms.openlocfilehash: 9f1ae182573ca70a6983b9cd23e253ecf30731e4
-ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
+ms.openlocfilehash: 18c94df643371f7b645ac9658a51d133d53f3403
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/17/2020
-ms.locfileid: "79441991"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80208323"
 ---
 # <a name="stack-stlclr"></a>stack (STL/CLR)
 
@@ -144,7 +144,7 @@ L’objet alloue et libère du stockage pour la séquence qu’il contrôle via 
 
 ## <a name="members"></a>Membres
 
-## <a name="assign"></a>Stack :: assign (STL/CLR)
+## <a name="stackassign-stlclr"></a><a name="assign"></a>Stack :: assign (STL/CLR)
 
 Remplace tous les éléments.
 
@@ -198,7 +198,7 @@ a b c
 a b c
 ```
 
-## <a name="const_reference"></a>Stack :: const_reference (STL/CLR)
+## <a name="stackconst_reference-stlclr"></a><a name="const_reference"></a>Stack :: const_reference (STL/CLR)
 
 Type d'une référence constante à un élément.
 
@@ -242,7 +242,7 @@ int main()
 c b a
 ```
 
-## <a name="container_type"></a>Stack :: container_type (STL/CLR)
+## <a name="stackcontainer_type-stlclr"></a><a name="container_type"></a>Stack :: container_type (STL/CLR)
 
 Type du conteneur sous-jacent.
 
@@ -284,7 +284,7 @@ int main()
 a b c
 ```
 
-## <a name="difference_type"></a>pile ::d ifference_type (STL/CLR)
+## <a name="stackdifference_type-stlclr"></a><a name="difference_type"></a>pile ::d ifference_type (STL/CLR)
 
 Types d’une distance signée entre deux éléments.
 
@@ -342,7 +342,7 @@ pushing 2 = -2
 popping 3 = 3
 ```
 
-## <a name="empty"></a>Stack :: Empty (STL/CLR)
+## <a name="stackempty-stlclr"></a><a name="empty"></a>Stack :: Empty (STL/CLR)
 
 Vérifie l'absence d'éléments.
 
@@ -396,7 +396,7 @@ size() = 0
 empty() = True
 ```
 
-## <a name="generic_container"></a>Stack :: generic_container (STL/CLR)
+## <a name="stackgeneric_container-stlclr"></a><a name="generic_container"></a>Stack :: generic_container (STL/CLR)
 
 Type de l’interface générique pour l’adaptateur de conteneur.
 
@@ -459,7 +459,7 @@ a b c d
 a b c d e
 ```
 
-## <a name="generic_value"></a>Stack :: generic_value (STL/CLR)
+## <a name="stackgeneric_value-stlclr"></a><a name="generic_value"></a>Stack :: generic_value (STL/CLR)
 
 Type d’un élément à utiliser avec l’interface générique pour le conteneur.
 
@@ -517,7 +517,7 @@ a b c
 c b a
 ```
 
-## <a name="get_container"></a>Stack :: get_container (STL/CLR)
+## <a name="stackget_container-stlclr"></a><a name="get_container"></a>Stack :: get_container (STL/CLR)
 
 Accède au conteneur sous-jacent.
 
@@ -559,7 +559,7 @@ int main()
 a b c
 ```
 
-## <a name="op_as"></a>Stack :: Operator = (STL/CLR)
+## <a name="stackoperator-stlclr"></a><a name="op_as"></a>Stack :: Operator = (STL/CLR)
 
 Remplace la séquence contrôlée.
 
@@ -613,7 +613,7 @@ a b c
 a b c
 ```
 
-## <a name="pop"></a>pile ::p op (STL/CLR)
+## <a name="stackpop-stlclr"></a><a name="pop"></a>pile ::p op (STL/CLR)
 
 Supprime le dernier élément.
 
@@ -661,7 +661,7 @@ a b c
 a b
 ```
 
-## <a name="push"></a>pile ::p par émission (STL/CLR)
+## <a name="stackpush-stlclr"></a><a name="push"></a>pile ::p par émission (STL/CLR)
 
 Ajoute un nouveau dernier élément.
 
@@ -702,7 +702,7 @@ int main()
 a b c
 ```
 
-## <a name="reference"></a>Stack :: Reference (STL/CLR)
+## <a name="stackreference-stlclr"></a><a name="reference"></a>Stack :: Reference (STL/CLR)
 
 Type d'une référence à un élément.
 
@@ -751,7 +751,7 @@ a b c
 a b x
 ```
 
-## <a name="size"></a>Stack :: Size (STL/CLR)
+## <a name="stacksize-stlclr"></a><a name="size"></a>Stack :: Size (STL/CLR)
 
 Compte le nombre d'éléments.
 
@@ -805,7 +805,7 @@ size() = 2 after popping
 size() = 4 after adding 2
 ```
 
-## <a name="size_type"></a>Stack :: size_type (STL/CLR)
+## <a name="stacksize_type-stlclr"></a><a name="size_type"></a>Stack :: size_type (STL/CLR)
 
 Type d’une distance signée entre deux éléments.
 
@@ -854,7 +854,7 @@ a b c
 size difference = 2
 ```
 
-## <a name="stack"></a>Stack :: Stack (STL/CLR)
+## <a name="stackstack-stlclr"></a><a name="stack"></a>Stack :: Stack (STL/CLR)
 
 Construit un objet adaptateur de conteneur.
 
@@ -947,7 +947,7 @@ x x x x x
 x x x x x
 ```
 
-## <a name="to_array"></a>Stack :: to_array (STL/CLR)
+## <a name="stackto_array-stlclr"></a><a name="to_array"></a>Stack :: to_array (STL/CLR)
 
 Copie la séquence contrôlée dans un nouveau tableau.
 
@@ -997,7 +997,7 @@ a b c d
 a b c
 ```
 
-## <a name="top"></a>pile :: Top (STL/CLR)
+## <a name="stacktop-stlclr"></a><a name="top"></a>pile :: Top (STL/CLR)
 
 Accède au dernier élément.
 
@@ -1049,7 +1049,7 @@ top() = c
 a b x
 ```
 
-## <a name="top_item"></a>Stack :: top_item (STL/CLR)
+## <a name="stacktop_item-stlclr"></a><a name="top_item"></a>Stack :: top_item (STL/CLR)
 
 Accède au dernier élément.
 
@@ -1101,7 +1101,7 @@ top_item = c
 a b x
 ```
 
-## <a name="value_type"></a>Stack :: value_type (STL/CLR)
+## <a name="stackvalue_type-stlclr"></a><a name="value_type"></a>Stack :: value_type (STL/CLR)
 
 Type d'un élément.
 
@@ -1146,7 +1146,7 @@ int main()
 c b a
 ```
 
-## <a name="op_neq"></a>opérateur ! = (Stack) (STL/CLR)
+## <a name="operator-stack-stlclr"></a><a name="op_neq"></a>opérateur ! = (Stack) (STL/CLR)
 
 Comparaison non égale à la pile.
 
@@ -1217,7 +1217,7 @@ a b d
 [a b c] != [a b d] is True
 ```
 
-## <a name="op_lt"></a>&lt; d’opérateur (Stack) (STL/CLR)
+## <a name="operatorlt-stack-stlclr"></a><a name="op_lt"></a>&lt; d’opérateur (Stack) (STL/CLR)
 
 La pile est inférieure à la comparaison.
 
@@ -1288,7 +1288,7 @@ a b d
 [a b c] < [a b d] is True
 ```
 
-## <a name="op_lteq"></a>opérateur&lt;= (Stack) (STL/CLR)
+## <a name="operatorlt-stack-stlclr"></a><a name="op_lteq"></a>opérateur&lt;= (Stack) (STL/CLR)
 
 Comparaison de la pile inférieure ou égale à.
 
@@ -1359,7 +1359,7 @@ a b d
 [a b d] <= [a b c] is False
 ```
 
-## <a name="op_eq"></a>opérateur = = (Stack) (STL/CLR)
+## <a name="operator-stack-stlclr"></a><a name="op_eq"></a>opérateur = = (Stack) (STL/CLR)
 
 Comparaison égale à la pile.
 
@@ -1430,7 +1430,7 @@ a b d
 [a b c] == [a b d] is False
 ```
 
-## <a name="op_gt"></a>&gt; d’opérateur (Stack) (STL/CLR)
+## <a name="operatorgt-stack-stlclr"></a><a name="op_gt"></a>&gt; d’opérateur (Stack) (STL/CLR)
 
 La pile est supérieure à la comparaison.
 
@@ -1501,7 +1501,7 @@ a b d
 [a b d] > [a b c] is True
 ```
 
-## <a name="op_gteq"></a>opérateur&gt;= (Stack) (STL/CLR)
+## <a name="operatorgt-stack-stlclr"></a><a name="op_gteq"></a>opérateur&gt;= (Stack) (STL/CLR)
 
 Comparaison de la pile supérieure ou égale à.
 

@@ -6,28 +6,28 @@ f1_keywords:
 helpviewer_keywords:
 - R6024
 ms.assetid: 0fb11c0f-9b81-4cab-81bd-4785742946a5
-ms.openlocfilehash: 89b99a93512603eaf2273a6ff3f434f1ad3b3bb8
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: de89d2e9e2b34f40b906a5dacca4179eade23f7e
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62214120"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80197195"
 ---
 # <a name="c-runtime-error-r6024"></a>Erreur Runtime C R6024
 
-pas assez d’espace pour la table de _onexit/atexit
+espace insuffisant pour _onexit table/atexit
 
 > [!NOTE]
-> Si vous rencontrez ce message d’erreur lors de l’exécution d’une application, l’application a été arrêtée, car il a un problème de mémoire interne. Cette erreur est généralement dû à une condition de mémoire très faibles, rarement, par un bogue dans le programme ou par une altération des bibliothèques Visual C++ qu’il utilise.
+> Si vous rencontrez ce message d’erreur lors de l’exécution d’une application, l’application a été arrêtée, car elle présente un problème de mémoire interne. Cette erreur est généralement causée par une condition de mémoire extrêmement faible, ou rarement, par un bogue dans le programme ou par l’altération C++ des bibliothèques visuelles qu’elle utilise.
 >
 > Vous pouvez essayer de suivre les étapes ci-après pour corriger cette erreur :
 >
-> - Fermez les autres applications en cours d’exécution ou redémarrer votre ordinateur pour libérer la mémoire.
-> - Utilisez le **applications et fonctionnalités** ou **programmes et fonctionnalités** page dans le **le panneau de configuration** pour réparer ou réinstaller le programme.
-> - Utilisez le **applications et fonctionnalités** ou **programmes et fonctionnalités** page dans le **le panneau de configuration** pour réparer ou réinstaller toutes les copies de Microsoft Visual C++ Redistributable.
-> - Vérifiez **mise à jour Windows** dans le **le panneau de configuration** mises à jour logicielles.
-> - Recherchez une version mise à jour de l’application. Contactez le fournisseur de l’application si le problème persiste.
+> - Fermez les autres applications en cours d’exécution ou redémarrez votre ordinateur pour libérer de la mémoire.
+> - Utilisez la page **applications et fonctionnalités** ou **programmes et fonctionnalités** du **panneau de configuration** pour réparer ou réinstaller le programme.
+> - Utilisez la page **applications et fonctionnalités** ou **programmes et fonctionnalités** du **panneau de configuration** pour réparer ou réinstaller toutes les copies de Microsoft Visual C++ Redistributable.
+> - Cochez **Windows Update** dans le **panneau de configuration** pour les mises à jour logicielles.
+> - Recherchez une version mise à jour de l’application. Si le problème persiste, contactez le fournisseur de l’application.
 
 **Informations pour les programmeurs**
 
-Cette erreur se produit, car il n’était pas de mémoire disponible pour le `_onexit` ou `atexit` (fonction). Cette erreur est due à une condition de mémoire insuffisante. Vous pouvez envisager de tampons allocation préalable au démarrage de l’application afin de faciliter l’enregistrement des données de l’utilisateur et pour effectuer une nouvelle application de sortie dans des conditions de mémoire insuffisante.
+Cette erreur se produit parce qu’il n’y avait pas de mémoire disponible pour la fonction `_onexit` ou `atexit`. Cette erreur est due à une condition de mémoire insuffisante. Vous pouvez envisager de préallouer des tampons au démarrage de l’application pour faciliter l’enregistrement des données utilisateur et effectuer une sortie d’application propre dans des conditions de mémoire insuffisante.

@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C4754
 ms.assetid: e0e4606a-754a-4f42-a274-21a34978d21d
-ms.openlocfilehash: 203f2b97547c7ff8b1d68e3640e62d531b2600e9
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: f55d40044fef58275ad0e1fbd281b5f1af43c243
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62388577"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80198131"
 ---
 # <a name="compiler-warning-level-4-c4754"></a>Avertissement du compilateur (niveau 4) C4754
 
@@ -19,7 +19,7 @@ Les règles de conversion pour les opérations arithmétiques dans une comparais
 
 L'avertissement C4754 est généré, car le résultat de la comparaison est toujours identique. Cela indique qu’une des branches de la condition n’est jamais exécutée, très probablement parce que l’expression d’entier associée est incorrecte. Cette erreur de code se produit souvent dans les contrôles incorrects de dépassement sur les entiers sur les architectures 64 bits.
 
-Les règles de conversion d'entier sont complexes, et il existe de nombreuses pièges subtils. Comme alternative à résoudre chaque avertissement C4754, vous pouvez mettre à jour le code pour utiliser le [Bibliothèque SafeInt](../../safeint/safeint-library.md).
+Les règles de conversion d'entier sont complexes, et il existe de nombreuses pièges subtils. Comme alternative à la résolution de chaque AVERTISSEMENT C4754, vous pouvez mettre à jour le code pour utiliser la [bibliothèque SafeInt](../../safeint/safeint-library.md).
 
 ## <a name="example"></a>Exemple
 
@@ -96,7 +96,7 @@ Dans ce cas, le code résolu se présente comme suit :
 if (a + (unsigned long)sizeof(unsigned long) < a)
 ```
 
-**Remarque** le numéro de ligne fait référence dans les avertissements du compilateur est la dernière ligne d’une instruction. Dans un message d'avertissement concernant une instruction conditionnelle complexe répartie sur plusieurs lignes, la ligne contenant l'erreur de code peut être plusieurs lignes avant la ligne indiquée. Exemple :
+**Remarque** Le numéro de ligne référencé dans les avertissements du compilateur est la dernière ligne d’une instruction. Dans un message d'avertissement concernant une instruction conditionnelle complexe répartie sur plusieurs lignes, la ligne contenant l'erreur de code peut être plusieurs lignes avant la ligne indiquée. Par exemple :
 
 ```cpp
 unsigned long a;

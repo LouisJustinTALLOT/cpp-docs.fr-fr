@@ -8,16 +8,16 @@ f1_keywords:
 helpviewer_keywords:
 - CNoMultipleResults class
 ms.assetid: 343e77c4-b319-476e-b592-901ab9b2f34e
-ms.openlocfilehash: 59b7b35c350a37f13e1f253bc1430d69521e4fa8
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 793b820264d001fbfbf7920fd322a55b98e90f0d
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62230384"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80211716"
 ---
 # <a name="cnomultipleresults-class"></a>CNoMultipleResults, classe
 
-Utilisé comme argument template (*TMultiple*) à [CCommand](../../data/oledb/ccommand-class.md) pour créer une commande optimisée qui gère un résultat unique.
+Utilisé comme argument de modèle (*TMultiple*) sur [CCommand](../../data/oledb/ccommand-class.md) pour créer une commande optimisée qui gère un seul jeu de résultats.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -27,13 +27,13 @@ class CNoMultipleResults
 
 ## <a name="remarks"></a>Notes
 
-Si vous souhaitez une commande pour gérer plusieurs jeux de résultats, utilisez [CMultipleResults](../../data/oledb/cmultipleresults-class.md) à la place.
+Si vous souhaitez qu’une commande gère plusieurs jeux de résultats, utilisez [CMultipleResults](../../data/oledb/cmultipleresults-class.md) à la place.
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
 **En-tête :** atldbcli.h
 
 ## <a name="see-also"></a>Voir aussi
 
-[Modèles du consommateur OLE DB](../../data/oledb/ole-db-consumer-templates-cpp.md)<br/>
+[OLE DB (modèles du consommateur)](../../data/oledb/ole-db-consumer-templates-cpp.md)<br/>
 [Référence des modèles du consommateur OLE DB](../../data/oledb/ole-db-consumer-templates-reference.md)

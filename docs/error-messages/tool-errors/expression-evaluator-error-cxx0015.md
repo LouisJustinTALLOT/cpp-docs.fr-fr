@@ -7,22 +7,22 @@ helpviewer_keywords:
 - CXX0015
 - CAN0015
 ms.assetid: 35efaf77-d578-48d8-bfc5-fdeb2a46a8b5
-ms.openlocfilehash: f73aef18563426d28a81b92b3c37d1b7e345d0d3
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 19cf47d6b7b718eb19b987bcc16854af3266069b
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62397144"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80196064"
 ---
 # <a name="expression-evaluator-error-cxx0015"></a>Évaluateur d'expression, erreur CXX0015
 
-expression trop complexe (débordement de pile)
+expression trop complexe (dépassement de capacité de la pile)
 
-L’expression est trop complexe ou imbriquées trop profondément pour la quantité de stockage disponible pour l’évaluateur d’expression de C.
+L’expression entrée était trop complexe ou imbriquée trop profondément pour la quantité de stockage disponible pour l’évaluateur d’expression C.
 
-Dépassement de capacité se produit généralement en raison du trop grand nombre de calculs en attente.
+Le dépassement de capacité se produit généralement en raison d’un trop grand nombre de calculs en attente.
 
-Réorganiser l’expression afin que chaque composant de l’expression peut être évaluée tel qu’il est trouvé, au lieu de devoir attendre d’autres parties de l’expression doit être calculée.
+Réorganisez l’expression afin que chaque composant de l’expression puisse être évalué à mesure qu’elle est rencontrée, au lieu d’attendre que d’autres parties de l’expression soient calculées.
 
 Fractionnez l’expression en plusieurs commandes.
 

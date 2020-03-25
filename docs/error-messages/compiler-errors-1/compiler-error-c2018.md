@@ -6,15 +6,15 @@ f1_keywords:
 helpviewer_keywords:
 - C2018
 ms.assetid: 86b54573-dca0-4446-be1a-e3ac489c073b
-ms.openlocfilehash: eaa8b0495eb10a7547587c47bede0e4659dafada
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: cfea7a960ec149161c2a3252957f2676227f5d0c
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62303730"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80208207"
 ---
 # <a name="compiler-error-c2018"></a>Erreur du compilateur C2018
 
 caractère inconnu 'nombre_hexadécimal'
 
-Le fichier source contient un caractère ASCII inattendu, qui est identifié par son numéro hexadécimal. Pour résoudre cette erreur, supprimez le caractère.
+Le fichier source contient un caractère ASCII inattendu, identifié par son nombre hexadécimal. Pour résoudre l’erreur, supprimez le caractère.

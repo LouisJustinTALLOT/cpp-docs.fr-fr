@@ -8,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - literal keyword [C++]
 ms.assetid: 6b1a1f36-2e1d-4a23-8eb6-172f4f3c477f
-ms.openlocfilehash: d567f8270dcb8965ed2f882c9a0c005f295fc619
-ms.sourcegitcommit: c4528a7424d35039454f17778baf1b5f98fbbee7
+ms.openlocfilehash: 8c40adaed32bae23ec43cd553c3f755ac2b54cfb
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/01/2020
-ms.locfileid: "76912829"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80172137"
 ---
 # <a name="literal-ccli-and-ccx"></a>literal (C++/CLI et C++/CX)
 
@@ -31,7 +31,7 @@ Une variable (membre de données) marquée comme **literal** dans une compilatio
 
 (Aucune note de cette fonctionnalité de langage ne s’applique qu’au Windows Runtime.)
 
-### <a name="requirements"></a>Configuration requise pour
+### <a name="requirements"></a>Spécifications
 
 Option du compilateur : `/ZW`
 
@@ -121,7 +121,7 @@ class B {
 }
 ```
 
-## <a name="requirements"></a>Configuration requise pour
+## <a name="requirements"></a>Spécifications
 
 Option du compilateur : `/clr`
 
