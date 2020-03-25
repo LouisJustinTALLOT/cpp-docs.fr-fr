@@ -6,15 +6,15 @@ f1_keywords:
 helpviewer_keywords:
 - C1121
 ms.assetid: d16e51c5-4c50-4303-a028-ca60f7a3273c
-ms.openlocfilehash: 9022879124517f231bf7f88cfabe813c4eb3e58d
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 785c2219b4357ad422b598c2ed8a71cd07204dd1
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62182656"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80203594"
 ---
 # <a name="fatal-error-c1121"></a>Erreur irrécupérable C1121
 
 échec de l'appel à CryptoAPI
 
-Le compilateur a effectué un appel à CryptoAPI et l’appel a échoué. Réinstallez Visual Studio et éventuellement réinstaller le système d’exploitation.
+Le compilateur a effectué un appel à CryptoAPI et l’appel a échoué. Réinstallez Visual Studio et, éventuellement, réinstallez le système d’exploitation.

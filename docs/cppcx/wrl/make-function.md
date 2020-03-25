@@ -7,16 +7,16 @@ f1_keywords:
 helpviewer_keywords:
 - Make function
 ms.assetid: 66704143-df99-4a95-904d-ed99607e1034
-ms.openlocfilehash: b45337ef773f93968570f62ab73c02d11fae88ff
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: ffd0967b741475b260eef80ec24d56874a6bcb1f
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62398189"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80213809"
 ---
 # <a name="make-function"></a>Make, fonction
 
-Initialise la classe Windows Runtime spécifiée. Utilisez cette fonction pour instancier un composant qui est défini dans le même module.
+Initialise la classe de Windows Runtime spécifiée. Utilisez cette fonction pour instancier un composant qui est défini dans le même module.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -165,75 +165,75 @@ ComPtr<T> Make();
 ### <a name="parameters"></a>Paramètres
 
 *T*<br/>
-Une classe spécifiée par l’utilisateur qui hérite de `WRL::RuntimeClass`.
+Classe spécifiée par l’utilisateur qui hérite de `WRL::RuntimeClass`.
 
 *TArg1*<br/>
-Type d’argument 1 qui est passé à la classe runtime spécifié.
+Type d’argument 1 passé à la classe d’exécution spécifiée.
 
 *TArg2*<br/>
-Type d’argument 2 qui est passé à la classe runtime spécifié.
+Type d’argument 2 passé à la classe d’exécution spécifiée.
 
 *TArg3*<br/>
-Type d’argument 3 est passée à la classe runtime spécifié.
+Type d’argument 3 passé à la classe d’exécution spécifiée.
 
 *TArg4*<br/>
-Type d’argument 4 qui est passé à la classe runtime spécifié.
+Type d’argument 4 passé à la classe d’exécution spécifiée.
 
 *TArg5*<br/>
-Type d’argument 5 est passé à la classe runtime spécifié.
+Type d’argument 5 passé à la classe d’exécution spécifiée.
 
 *TArg6*<br/>
-Type d’argument 6 est passée à la classe runtime spécifié.
+Type d’argument 6 qui est passé à la classe d’exécution spécifiée.
 
 *TArg7*<br/>
-Type d’argument 7 est passé à la classe runtime spécifié.
+Type d’argument 7 passé à la classe d’exécution spécifiée.
 
 *TArg8*<br/>
-Type d’argument 8 est passé à la classe runtime spécifié.
+Type d’argument 8 passé à la classe d’exécution spécifiée.
 
 *TArg9*<br/>
-Type d’argument 9 est passé à la classe runtime spécifié.
+Type d’argument 9 passé à la classe d’exécution spécifiée.
 
-*arg1*<br/>
-Argument 1 qui est passé à la classe runtime spécifié.
+*Arg1*<br/>
+Argument 1 passé à la classe d’exécution spécifiée.
 
-*arg2*<br/>
-Argument 2 qui est passé à la classe runtime spécifié.
+*Arg2*<br/>
+Argument 2 passé à la classe d’exécution spécifiée.
 
-*arg3*<br/>
-Argument 3 qui est passé à la classe runtime spécifié.
+*Arg3*<br/>
+Argument 3 passé à la classe d’exécution spécifiée.
 
-*arg4*<br/>
-Argument 4 qui est passé à la classe runtime spécifié.
+*Arg4*<br/>
+Argument 4 passé à la classe d’exécution spécifiée.
 
-*arg5*<br/>
-Argument 5 qui est passé à la classe runtime spécifié.
+*Arg5*<br/>
+Argument 5 qui est passé à la classe d’exécution spécifiée.
 
 *arg6*<br/>
-Argument 6 est passée à la classe runtime spécifié.
+Argument 6 qui est passé à la classe d’exécution spécifiée.
 
 *arg7*<br/>
-Argument 7 qui est passé à la classe runtime spécifié.
+Argument 7 passé à la classe d’exécution spécifiée.
 
 *arg8*<br/>
-Argument 8 qui est passé à la classe runtime spécifié.
+Argument 8 qui est passé à la classe d’exécution spécifiée.
 
 *arg9*<br/>
-Argument 9 qui est passé à la classe runtime spécifié.
+Argument 9 passé à la classe d’exécution spécifiée.
 
 ## <a name="return-value"></a>Valeur de retour
 
-Un `ComPtr<T>` objet en cas de réussite ; sinon, `nullptr`.
+Objet `ComPtr<T>` en cas de réussite ; Sinon, `nullptr`.
 
 ## <a name="remarks"></a>Notes
 
-Voir [Guide pratique pour Instancier les composants WRL directement](how-to-instantiate-wrl-components-directly.md) pour découvrir les différences entre cette fonction et [Microsoft::WRL::Details::MakeAndInitialize](makeandinitialize-function.md)et pour obtenir un exemple.
+Consultez [Comment : instancier des composants WRL directement](how-to-instantiate-wrl-components-directly.md) pour connaître les différences entre cette fonction et [Microsoft :: WRL ::D étails :: MakeAndInitialize](makeandinitialize-function.md), et pour obtenir un exemple.
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
-**En-tête :** implements.h
+**En-tête :** Implements. h
 
-**Espace de noms :** Microsoft::wrl
+**Espace de noms :** Microsoft::WRL
 
 ## <a name="see-also"></a>Voir aussi
 

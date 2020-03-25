@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - ms_union attribute
 ms.assetid: bb548689-6962-457e-af56-8ffdf68987eb
-ms.openlocfilehash: 26207c3c2c20fb039eb39e26f4d24e141c4dff07
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: 3e89facf48bd4f0f9d6200657b0e0a66fe95455a
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69514371"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80166638"
 ---
 # <a name="ms_union"></a>ms_union
 
@@ -29,7 +29,7 @@ L’attribut **ms_union** C++ a les mêmes fonctionnalités que l’attribut MID
 
 ## <a name="example"></a>Exemple
 
-Le code suivant illustre l’emplacement de **ms_union**:
+Le code suivant illustre l’emplacement des **ms_union**:
 
 ```cpp
 // cpp_attr_ref_ms_union.cpp
@@ -54,7 +54,7 @@ __interface IFireTabCtrl {
 [module(name="ATLFIRELib")];
 ```
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
 ### <a name="attribute-context"></a>Contexte d'attribut
 
@@ -62,7 +62,7 @@ __interface IFireTabCtrl {
 |-|-|
 |**S'applique à**|Unions qui ne sont pas encapsulées|
 |**Renouvelable**|Non|
-|**Attributs requis**|Aucun|
+|**Attributs requis**|None|
 |**Attributs non valides**|`dispinterface`|
 
 Pour plus d'informations, consultez [Contextes d'attribut](cpp-attributes-com-net.md#contexts).

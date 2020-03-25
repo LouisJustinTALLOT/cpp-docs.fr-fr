@@ -6,18 +6,18 @@ f1_keywords:
 helpviewer_keywords:
 - C2558
 ms.assetid: 822b701e-dcae-423a-b21f-47f36aff9c90
-ms.openlocfilehash: b0dca0b19d427cf83238c824739d288a1cfd54d4
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 93b6e414f26c56702a1c7ac12863cbcd5063b570
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62353005"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80177493"
 ---
 # <a name="compiler-error-c2558"></a>Erreur du compilateur C2558
 
 'identificateur' : pas de constructeur de copie disponible ou le constructeur de copie est déclaré 'explicit'
 
-Un constructeur de copie initialise un objet d'un autre objet de même type. (Il fait une copie de l'objet.) Le compilateur génère un constructeur de copie par défaut si vous ne définissez pas de constructeur.
+Un constructeur de copie initialise un objet d'un autre objet de même type. (Il effectue une copie de l’objet.) Le compilateur génère un constructeur de copie par défaut si vous ne définissez pas de constructeurs.
 
 ### <a name="to-fix-this-error"></a>Pour corriger cette erreur
 
@@ -25,6 +25,6 @@ Un constructeur de copie initialise un objet d'un autre objet de même type. (Il
 
    Si vous pensez que l'utilisation d'une classe qui a un constructeur de copie `private` ne présente aucun risque, dérivez une nouvelle classe à partir de la classe ayant le constructeur `private` et mettez un constructeur de copie `public` ou `protected` à la disposition de la nouvelle classe. Utilisez la classe dérivée à la place de l'original.
 
-1. Le problème peut se produire lors d'une tentative de copie d'une classe dont le constructeur de copie est explicite. La déclaration d'un constructeur de copie comme `explicit` évite le passage ou le retour d'objets d'une classe depuis ou vers les fonctions. Pour plus d’informations sur les constructeurs explicites, consultez [les Conversions de types définis par l’utilisateur](../../cpp/user-defined-type-conversions-cpp.md).
+1. Le problème peut se produire lors d'une tentative de copie d'une classe dont le constructeur de copie est explicite. La déclaration d'un constructeur de copie comme `explicit` évite le passage ou le retour d'objets d'une classe depuis ou vers les fonctions. Pour plus d’informations sur les constructeurs explicites, consultez [conversions de types définis par l’utilisateur](../../cpp/user-defined-type-conversions-cpp.md).
 
 1. Le problème peut se produire lors d'une tentative de copie d'une instance de classe déclarée `const` à l'aide d'un constructeur de copie qui n'accepte pas de paramètre de référence `const`. Déclarez votre constructeur de copie avec une référence de type `const` au lieu d'une référence de type non const.

@@ -32,12 +32,12 @@ helpviewer_keywords:
 - strings [C++], formatting
 - strings [C++], special characters
 ms.assetid: f71ab8de-3068-4e29-8e28-5a33d18dd416
-ms.openlocfilehash: 996e5f132e5cfa33c39c4cc3ddbeb692f41925bc
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: 1f9b21893bd361d02b3446360b24a97f4d1d1365
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69514717"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80214407"
 ---
 # <a name="string-editor-c"></a>Éditeur de chaînesC++()
 
@@ -50,7 +50,7 @@ Les tables de chaînes simplifient la localisation de votre application dans dif
 > [!NOTE]
 > Windows n’autorise pas la création de tables de chaînes vides. Si vous créez une table de chaînes sans entrée, elle est supprimée automatiquement lorsque vous enregistrez le fichier de ressources.
 
-## <a name="how-to"></a>Comment
+## <a name="how-to"></a>Procédure
 
 L' **éditeur de chaînes** vous permet d’activer les éléments suivants :
 
@@ -58,7 +58,7 @@ L' **éditeur de chaînes** vous permet d’activer les éléments suivants :
 
 1. Ouvrez la table de chaînes en double-cliquant sur son icône dans [affichage des ressources](how-to-create-a-resource-script-file.md#create-resources).
 
-1. Accédez au menu **modifier** > **Rechercher et remplacer** , puis cliquez sur **Rechercher**.
+1. Accédez au menu **edition** > **Rechercher et remplacer** , puis cliquez sur **Rechercher**.
 
 1. Dans la zone **Rechercher** , sélectionnez une chaîne de recherche précédente dans la liste déroulante ou tapez le texte de légende ou l’identificateur de ressource de la chaîne que vous souhaitez rechercher.
 
@@ -69,13 +69,13 @@ L' **éditeur de chaînes** vous permet d’activer les éléments suivants :
 >
 > Tapez une expression régulière correspondant à un modèle ou sélectionnez le bouton à droite de la zone **Rechercher** pour afficher une liste d’expressions de recherche standard. Lorsque vous sélectionnez une expression dans cette liste, elle est remplacée par le texte recherché dans la zone **Rechercher** .
 >
-> Si vous utilisez des expressions régulières, veillez **à utiliser : La case** à cocher expressions régulières est activée.
+> Si vous utilisez des expressions régulières, assurez-vous que la case à cocher **utiliser : expressions régulières** est activée.
 
 ### <a name="to-add-or-delete-a-string-resource"></a>Pour ajouter ou supprimer une ressource de type chaîne
 
 Vous pouvez insérer ou supprimer rapidement des entrées dans la table de chaînes à l’aide de l' **éditeur de chaînes**. Les nouvelles chaînes sont placées à la fin de la table et reçoivent le prochain identificateur disponible. Vous pouvez modifier les propriétés **ID**, **value**ou **Caption** dans le [fenêtre Propriétés](/visualstudio/ide/reference/properties-window) en fonction des besoins.
 
-L' **éditeur de chaînes** vérifie que vous n’utilisez pas un ID qui est déjà en cours d’utilisation. Si vous sélectionnez un ID qui est déjà utilisé, l' **éditeur de chaînes** vous en informe, puis affecte un ID unique générique, `IDS_STRING58113`par exemple.
+L' **éditeur de chaînes** vérifie que vous n’utilisez pas un ID qui est déjà en cours d’utilisation. Si vous sélectionnez un ID qui est déjà utilisé, l' **éditeur de chaînes** vous en informe, puis affecte un ID unique générique, par exemple `IDS_STRING58113`.
 
 #### <a name="to-add-a-string-table-entry"></a>Pour ajouter une entrée de table de chaînes
 
@@ -164,13 +164,13 @@ Vous pouvez utiliser la modification sur place pour modifier les propriétés **
    > [!NOTE]
    > L' **éditeur de chaînes** ne prend pas en charge l’ensemble complet des caractères ASCI échappés. Vous ne pouvez utiliser que ceux listés ci-dessus.
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
 Win32
 
 ## <a name="see-also"></a>Voir aussi
 
-[Chaînes](/windows/win32/menurc/strings) des [éditeurs de ressources](../windows/resource-editors.md)
-<br/>
+[Éditeurs de ressources](../windows/resource-editors.md)
+[chaînes](/windows/win32/menurc/strings)<br/>
 [À propos des chaînes](/windows/win32/menurc/about-strings)<br/>
 [Personnalisation des dispositions de fenêtres](/visualstudio/ide/customizing-window-layouts-in-visual-studio)

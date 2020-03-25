@@ -6,16 +6,16 @@ helpviewer_keywords:
 - exiting applications
 - programs [C++], terminating
 ms.assetid: acbe2332-9d8a-4a58-a471-dd652a837384
-ms.openlocfilehash: 2d1fd0ff222f1a3071b70687106db19a6f3070da
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 04041ab84cf2533fcb6f18c1a8c00fcc6dfc9a16
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62385035"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80181679"
 ---
 # <a name="additional-termination-considerations"></a>Considérations supplémentaires sur la terminaison
 
-Vous pouvez mettre fin à un programme C++ à l’aide de `exit`, **retourner**, ou `abort`. Vous pouvez ajouter la sortie de traitement à l'aide de la fonction `atexit`. Ces points sont abordés dans les sections suivantes.
+Vous pouvez arrêter un C++ programme à l’aide de `exit`, **retourner**ou `abort`. Vous pouvez ajouter la sortie de traitement à l'aide de la fonction `atexit`. Ces points sont abordés dans les sections suivantes.
 
 ## <a name="see-also"></a>Voir aussi
 

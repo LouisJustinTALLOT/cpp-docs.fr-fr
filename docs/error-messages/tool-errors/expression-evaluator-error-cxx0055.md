@@ -7,18 +7,18 @@ helpviewer_keywords:
 - CAN0055
 - CXX0055
 ms.assetid: bb2a81f9-35ea-4b02-a49e-6b2c7023aebd
-ms.openlocfilehash: 7584516f55af51107f2765b57986cf6ea4700fc5
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 62197741ada96240e628b95b520bf94396bba5f7
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62299515"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80184708"
 ---
 # <a name="expression-evaluator-error-cxx0055"></a>Évaluateur d'expression, erreur CXX0055
 
 symbole ambigu dans l’opérateur de contexte
 
-Un symbole dans l’opérateur de contexte (**{}**) fait référence à plusieurs symboles dans le programme.
+Un symbole dans l’opérateur de contexte ( **{}** ) faisait appel à plusieurs symboles dans le programme.
 
 L’opérateur de résolution de portée (`::`) peut être en mesure de résoudre l’ambiguïté.
 

@@ -13,12 +13,12 @@ helpviewer_keywords:
 - decrement operators [C++], syntax
 - decrement operators [C++]
 ms.assetid: 45ea7fc7-f279-4be9-a216-1d9a0ef9eb7b
-ms.openlocfilehash: deb8acc6c6a68c9a97f2f0efbdc4084b4937df46
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 32c210961c4966bb7b2cbcc597bd3c99f0d6ed24
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62392100"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80177662"
 ---
 # <a name="prefix-increment-and-decrement-operators--and---"></a>Opérateurs préfixés d'incrémentation et de décrémentation : ++ et --
 
@@ -31,13 +31,13 @@ ms.locfileid: "62392100"
 
 ## <a name="remarks"></a>Notes
 
-L’opérateur de pré-incrémentation (**++**) ajoute un à son opérande ; cette valeur incrémentée est le résultat de l’expression. L’opérande doit être une l-value pas de type **const**. Le résultat est une l-value du même type que l’opérande.
+L’opérateur de préfixe d’incrémentation ( **++** ) en ajoute un à son opérande ; Cette valeur incrémentée est le résultat de l’expression. L’opérande doit être une l-value qui n’est pas de type **const**. Le résultat est une l-value du même type que l’opérande.
 
-L’opérateur de pré-décrémentation (**--**) est analogue à l’opérateur de pré-incrémentation, à ceci près que l’opérande est décrémenté d’une unité et le résultat est cette valeur décrémentée.
+L’opérateur de décrémentation de préfixe ( **--** ) est analogue à l’opérateur d’incrément de préfixe, sauf que l’opérande est décrémenté par un et que le résultat est cette valeur décrémentée.
 
-**Visual Studio 2017 15.3 et versions ultérieures** (disponible avec [/std : c ++ 17](../build/reference/std-specify-language-standard-version.md)) : L’opérande d’un opérateur d’incrémentation ou de décrémentation ne peut pas être de type **bool**.
+**Visual Studio 2017 version 15,3 et versions ultérieures** (disponibles avec [/std : c++ 17](../build/reference/std-specify-language-standard-version.md)) : l’opérande d’un opérateur d’incrémentation ou de décrémentation ne peut pas être de type **bool**.
 
-Les opérateurs préfixés et suffixés d'incrémentation et de décrémentation affectent leurs opérandes. La différence principale qui les distingue est lorsque l'incrémentation ou la décrémentation se produit dans l'évaluation d'une expression. (Pour plus d’informations, consultez [Postfix opérateurs d’incrémentation et décrémentation](../cpp/postfix-increment-and-decrement-operators-increment-and-decrement.md).) Dans leur forme suffixée, l’incrémentation ou la décrémentation ont lieu avant que la valeur ne soit utilisée dans l’évaluation de l’expression. Par conséquent, la valeur de l’expression est différente de la valeur de l’opérande. Dans leur forme suffixée, l’incrémentation ou la décrémentation ont lieu après que la valeur ne soit utilisée dans l’évaluation de l’expression. Par conséquent, la valeur de l’expression est identique à la valeur de l’opérande. Par exemple, le programme suivant affiche `++i = 6` :
+Les opérateurs préfixés et suffixés d'incrémentation et de décrémentation affectent leurs opérandes. La différence principale qui les distingue est lorsque l'incrémentation ou la décrémentation se produit dans l'évaluation d'une expression. (Pour plus d’informations, consultez [opérateurs suffixés d’incrémentation et de décrémentation](../cpp/postfix-increment-and-decrement-operators-increment-and-decrement.md).) Dans le formulaire de préfixe, l’incrémentation ou la décrémentation ont lieu avant que la valeur ne soit utilisée dans l’évaluation de l’expression, donc la valeur de l’expression est différente de la valeur de l’opérande. Dans leur forme suffixée, l’incrémentation ou la décrémentation ont lieu après que la valeur ne soit utilisée dans l’évaluation de l’expression. Par conséquent, la valeur de l’expression est identique à la valeur de l’opérande. Par exemple, le programme suivant affiche `++i = 6` :
 
 ```cpp
 // expre_Increment_and_Decrement_Operators.cpp
@@ -54,7 +54,7 @@ int main() {
 
 Un opérande de type intégral ou virgule flottante est incrémenté ou décrémenté par la valeur 1 entière. Le type du résultat est identique au type d'opérande. Un opérande de type pointeur est incrémenté ou décrémenté par la taille de l'objet qu'il adresse. Un pointeur incrémenté pointe vers l'objet suivant. Un pointeur décrémenté pointe vers l'objet précédent.
 
-Étant donné qu’opérateurs d’incrémentation et décrémentation ont des effets secondaires, à l’aide d’expressions avec des opérateurs d’incrémentation ou de décrémentation dans une [macro de préprocesseur](../preprocessor/macros-c-cpp.md) peut avoir des résultats indésirables. Considérez cet exemple :
+Étant donné que les opérateurs d’incrémentation et de décrémentation ont des effets secondaires, l’utilisation d’expressions avec des opérateurs d’incrémentation ou de décrémentation dans une [macro de préprocesseur](../preprocessor/macros-c-cpp.md) peut avoir des résultats indésirables. Examinez cet exemple :
 
 ```cpp
 // expre_Increment_and_Decrement_Operators2.cpp

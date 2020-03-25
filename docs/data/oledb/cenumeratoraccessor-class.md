@@ -35,12 +35,12 @@ helpviewer_keywords:
 - m_szName
 - m_szParseName
 ms.assetid: 21e8e7ea-3511-4afe-b33f-d520f4ff82bb
-ms.openlocfilehash: d85f630a01ab7e2a07035a8a304a56be91eca8a9
-ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
+ms.openlocfilehash: f238c0b5b2a3988f08d910f605415bbe6403ea3d
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/17/2020
-ms.locfileid: "79442003"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80211822"
 ---
 # <a name="cenumeratoraccessor-class"></a>CEnumeratorAccessor, classe
 
@@ -72,7 +72,7 @@ class CEnumeratorAccessor
 
 Cet ensemble de lignes se compose des sources de données et des énumérateurs visibles à partir de l’énumérateur actuel.
 
-## <a name="bisparent"></a>CEnumeratorAccessor :: m_bIsParent
+## <a name="cenumeratoraccessorm_bisparent"></a><a name="bisparent"></a>CEnumeratorAccessor :: m_bIsParent
 
 Variable qui indique si l’énumérateur est un énumérateur parent, si la ligne est un énumérateur.
 
@@ -86,7 +86,7 @@ VARIANT_BOOL m_bIsParent;
 
 Pour plus d’informations, consultez [ISourcesRowset :: GetSourcesRowset](/previous-versions/windows/desktop/ms711200(v=vs.85)) dans le *Guide de référence du programmeur de OLE DB* .
 
-## <a name="ntype"></a>CEnumeratorAccessor :: m_nType
+## <a name="cenumeratoraccessorm_ntype"></a><a name="ntype"></a>CEnumeratorAccessor :: m_nType
 
 Variable qui indique si la ligne décrit une source de données ou un énumérateur.
 
@@ -100,7 +100,7 @@ USHORT m_nType;
 
 Pour plus d’informations, consultez [ISourcesRowset :: GetSourcesRowset](/previous-versions/windows/desktop/ms711200(v=vs.85)) dans le *Guide de référence du programmeur de OLE DB* .
 
-## <a name="szdescription"></a>CEnumeratorAccessor :: m_szDescription
+## <a name="cenumeratoraccessorm_szdescription"></a><a name="szdescription"></a>CEnumeratorAccessor :: m_szDescription
 
 Description de la source de données ou de l’énumérateur.
 
@@ -114,7 +114,7 @@ WCHAR m_szDescription[129];
 
 Pour plus d’informations, consultez [ISourcesRowset :: GetSourcesRowset](/previous-versions/windows/desktop/ms711200(v=vs.85)) dans le *Guide de référence du programmeur de OLE DB* .
 
-## <a name="szname"></a>CEnumeratorAccessor :: m_szName
+## <a name="cenumeratoraccessorm_szname"></a><a name="szname"></a>CEnumeratorAccessor :: m_szName
 
 Nom de la source de données ou de l’énumérateur.
 
@@ -128,7 +128,7 @@ WCHAR m_szName[129];
 
 Pour plus d’informations, consultez [ISourcesRowset :: GetSourcesRowset](/previous-versions/windows/desktop/ms711200(v=vs.85)) dans le *Guide de référence du programmeur de OLE DB* .
 
-## <a name="szparsename"></a>CEnumeratorAccessor :: m_szParseName
+## <a name="cenumeratoraccessorm_szparsename"></a><a name="szparsename"></a>CEnumeratorAccessor :: m_szParseName
 
 Chaîne à passer à [IParseDisplayName](/windows/win32/api/oleidl/nn-oleidl-iparsedisplayname) pour obtenir un moniker de la source de données ou de l’énumérateur.
 

@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - implements_category attribute
 ms.assetid: fb162df3-1ebe-43dc-a084-668d7ef8c03f
-ms.openlocfilehash: 6e0036b7008b67a1e21bcbe64977f4703bbdf3be
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: dd55c7474a0a8a273ddfab212b3ebcaa6e3b4a65
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69514632"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80166860"
 ---
 # <a name="implements_category"></a>implements_category
 
@@ -34,9 +34,9 @@ L’attribut **implements_category** C++ spécifie les catégories de composants
 
 Cet attribut exige que l’attribut [coclass](coclass.md), [progid](progid.md)ou [vi_progid](vi-progid.md) (ou un autre attribut qui implique l’un de ceux-ci) soit également appliqué au même élément. Si un attribut unique est utilisé, les deux autres sont appliqués automatiquement. Par exemple, si `progid` est appliqué, `vi_progid` et `coclass` sont également appliqués.
 
-## <a name="example"></a>Exemples
+## <a name="example"></a>Exemple
 
-Le code suivant spécifie que l’objet suivant implémente `Control` la catégorie.
+Le code suivant spécifie que l’objet suivant implémente la catégorie `Control`.
 
 ```cpp
 // cpp_attr_ref_implements_category.cpp
@@ -51,16 +51,16 @@ Le code suivant spécifie que l’objet suivant implémente `Control` la catégo
 class CMyClass {};
 ```
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
 ### <a name="attribute-context"></a>Contexte d'attribut
 
 |||
 |-|-|
-|**S'applique à**|**class**, **struct**|
+|**S'applique à**|**classe**, **struct**|
 |**Renouvelable**|Oui|
-|**Attributs requis**|L’une des valeurs suivantes `coclass`: `progid`, ou`vi_progid`|
-|**Attributs non valides**|Aucun|
+|**Attributs requis**|L’une des valeurs suivantes : `coclass`, `progid`ou `vi_progid`|
+|**Attributs non valides**|None|
 
 Pour plus d'informations, consultez [Contextes d'attribut](cpp-attributes-com-net.md#contexts).
 

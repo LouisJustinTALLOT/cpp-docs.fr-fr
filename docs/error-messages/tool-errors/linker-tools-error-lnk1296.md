@@ -6,17 +6,17 @@ f1_keywords:
 helpviewer_keywords:
 - LNK1296
 ms.assetid: f94a3d18-5411-456b-966f-89810fdcfe60
-ms.openlocfilehash: 072ebee25f112ac0bcc6f795e86f4eb5099fdc2f
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 7fada5a0372703d12f4f53617533ccaa047b7ff7
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62160599"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80194952"
 ---
 # <a name="linker-tools-error-lnk1296"></a>Erreur des outils Éditeur de liens LNK1296
 
 Impossible de charger le nom de fichier
 
-La DLL donnée n’était pas disponible.
+La DLL spécifiée n’était pas disponible.
 
 Les emplacements possibles pour la DLL sont le répertoire actif, le répertoire système, le répertoire Windows et les répertoires spécifiés dans la variable d’environnement PATH.

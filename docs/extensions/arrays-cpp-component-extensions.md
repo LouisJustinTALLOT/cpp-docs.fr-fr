@@ -12,12 +12,12 @@ helpviewer_keywords:
 - multidimensional arrays
 - arrays [C++]
 ms.assetid: 49445812-d775-4db1-a231-869598dbb955
-ms.openlocfilehash: e4173c16e13c08a54b36e42183e6e18b6ed4fdc2
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
-ms.translationtype: HT
+ms.openlocfilehash: ecd8425bf7bcc9772d7b1327add79b89aea629a7
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "65516194"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80182238"
 ---
 # <a name="arrays-ccli-and-ccx"></a>Tableaux (C++/CLI et C++/CX)
 
@@ -32,7 +32,7 @@ Contrairement au C++ standard, l’indice n’est pas synonyme de pointeur arith
 
 Pour plus d’informations sur les tableaux, consultez :
 
-- [Guide pratique pour utiliser des tableaux dans C++/CLI](../dotnet/how-to-use-arrays-in-cpp-cli.md)
+- [Guide pratique pour utiliser des tableaux dans C++-CLI](../dotnet/how-to-use-arrays-in-cpp-cli.md)
 
 - [Listes d’arguments de variable (...) (C++-CLI)](variable-argument-lists-dot-dot-dot-cpp-cli.md)
 
@@ -53,7 +53,7 @@ Le premier exemple de syntaxe utilise le mot clé d’agrégation **ref new** po
 ```
 
 *qualifiers*<br/>
-(Facultatif) Un ou plusieurs des spécificateurs de classe de stockage suivants : [mutable](../cpp/mutable-data-members-cpp.md), [volatile](../cpp/volatile-cpp.md), [const](../cpp/const-cpp.md), [extern](../cpp/using-extern-to-specify-linkage.md), [static](../cpp/static-members-cpp.md).
+(Facultatif) Un ou plusieurs des spécificateurs de classe de stockage suivants : [mutable](../cpp/mutable-data-members-cpp.md), [volatile](../cpp/volatile-cpp.md), [const](../cpp/const-cpp.md), [extern](../cpp/using-extern-to-specify-linkage.md), [static](../cpp/static-members-cpp.md).
 
 *array-type*<br/>
 Le type de la variable de tableau. Les types valides sont les classes Windows Runtime et les types fondamentaux, les classes et les structs de référence, les classes et les structs de valeur, ainsi que les pointeurs natifs (`type*`).
@@ -70,7 +70,7 @@ Le type des valeurs qui initialisent le tableau. En règle générale, *array-ty
 *initialization-list*<br/>
 (Facultatif) Une liste délimitée par des virgules de valeurs entre accolades qui initialisent les éléments du tableau. Par exemple, si *rank-size-list* est de `(3)`, ce qui déclare un tableau unidimensionnel de 3 éléments, *initialization-list* peut valoir `{1,2,3}`.
 
-### <a name="remarks"></a>Remarques
+### <a name="remarks"></a>Notes
 
 Vous pouvez détecter au moment de la compilation si un type est un tableau de références comptées à l’aide de `__is_ref_array(type)`. Pour plus d’informations, consultez [Compiler Support for Type Traits](compiler-support-for-type-traits-cpp-component-extensions.md) (Prise en charge du compilateur pour les caractéristiques de type).
 
@@ -131,7 +131,7 @@ Une liste délimitée par des virgules de la taille de chaque dimension du table
 
 Par exemple, si *rank-size-list* est de `(3)`, ce qui déclare un tableau unidimensionnel de 3 éléments, *initialization-list* peut valoir `{1,2,3}`. Si *rank-size-list* a la valeur `(3,2,4)`, ce qui déclare un tableau tridimensionnel de 3 éléments dans la première dimension, 2 éléments dans la seconde et 4 éléments dans la troisième, *initialization-list* peut valoir `{{1,2,3},{0,0},{-5,10,-21,99}}`.)
 
-### <a name="remarks"></a>Remarques
+### <a name="remarks"></a>Notes
 
 **array** appartient à l’espace de noms [Plateforme, valeurs par défaut et espaces de noms CLI](platform-default-and-cli-namespaces-cpp-component-extensions.md).
 

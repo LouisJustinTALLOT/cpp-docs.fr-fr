@@ -6,24 +6,24 @@ f1_keywords:
 helpviewer_keywords:
 - C2668
 ms.assetid: 041e9627-1c76-420e-a653-cfc83f933bd3
-ms.openlocfilehash: 1920af8873578c63ab768dae4bcdf4d91fe7cd57
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: f59cb33bed15847ed1a7a2dbe99ea030babf3337
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62164811"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80177155"
 ---
 # <a name="compiler-error-c2668"></a>Erreur du compilateur C2668
 
 'fonction' : appel ambigu à une fonction surchargée
 
-L’appel de fonction surchargée spécifié n’a pas pu être résolu. Voulez-vous convertir explicitement un ou plusieurs des paramètres réels.
+L’appel de fonction surchargé spécifié n’a pas pu être résolu. Vous pouvez effectuer un cast explicite d’un ou plusieurs des paramètres réels.
 
-Vous pouvez également obtenir cette erreur à l’aide du modèle. Si, dans la même classe, vous avez une fonction membre régulière et une fonction membre basé sur un modèle avec la même signature, celui qui est basé sur un modèle doit figurer en premier. Il s’agit d’une limitation de l’implémentation actuelle de Visual C++.
+Vous pouvez également recevoir cette erreur par le biais de l’utilisation d’un modèle. Si, dans la même classe, vous avez une fonction membre standard et une fonction membre basée sur un modèle avec la même signature, le modèle doit être en premier. Il s’agit d’une limitation de l’implémentation actuelle C++de Visual.
 
 ## <a name="example"></a>Exemple
 
-L’exemple suivant génère l’erreur C2668 :
+L’exemple suivant génère l’C2668 :
 
 ```cpp
 // C2668.cpp
@@ -43,7 +43,7 @@ int main() {
 
 ## <a name="example"></a>Exemple
 
-Une autre façon de résoudre cette erreur est avec un [à l’aide de la déclaration](../../cpp/using-declaration.md):
+Une autre façon de résoudre cette erreur consiste à [utiliser une déclaration using](../../cpp/using-declaration.md):
 
 ```cpp
 // C2668b.cpp
@@ -86,9 +86,9 @@ class MyTestCase : public AppTestCase {
 
 ## <a name="example"></a>Exemple
 
-Cette erreur peut également être due à la mise en conformité du compilateur pour Visual Studio .NET 2003 : conversion ambiguë sur un cast de la constante 0.
+Cette erreur peut également être générée en raison du travail de conformité du compilateur pour Visual Studio .NET 2003 : conversion ambiguë sur un cast de constante 0.
 
-Conversion sur un cast à l’aide de la constante 0 est ambiguë puisqu’elle nécessite une conversion en type long et au void *. Pour résoudre cette erreur, effectuez un cast de 0 au type de paramètre de la fonction, qu'il est utilisé afin qu’aucune conversion se déroulent (ce code sera valide dans les versions de Visual Studio .NET 2003 et Visual Studio .NET de Visual C++).
+La conversion sur un cast à l’aide de la constante 0 est ambiguë puisque int requiert une conversion de long et de void *. Pour résoudre cette erreur, effectuez un cast de 0 vers le type exact du paramètre de fonction pour lequel il est utilisé afin qu’aucune conversion ne doive avoir lieu (ce code sera valide dans les versions Visual Studio .NET 2003 et Visual Studio .NET de Visual C++).
 
 ```cpp
 // C2668c.cpp
@@ -110,7 +110,7 @@ int main() {
 
 ## <a name="example"></a>Exemple
 
-Cette erreur peut se produire parce que la bibliothèque CRT a maintenant des formes flottante et double de toutes les fonctions mathématiques.
+Cette erreur peut se produire parce que la bibliothèque CRT a désormais des formes float et double de toutes les fonctions mathématiques.
 
 ```cpp
 // C2668d.cpp
@@ -125,7 +125,7 @@ int main() {
 
 ## <a name="example"></a>Exemple
 
-Cette erreur peut se produire, car le pow (int, int) a été supprimé de math.h dans le CRT.
+Cette erreur peut se produire car Pow (int, int) a été supprimé de Math. h dans le CRT.
 
 ```cpp
 // C2668e.cpp
@@ -138,7 +138,7 @@ int main() {
 
 ## <a name="example"></a>Exemple
 
-Ce code réussit dans Visual Studio 2015, mais échoue dans Visual Studio 2017 et versions ultérieures avec l’erreur C2668. Dans Visual Studio 2015, le compilateur traitait à tort copy-list-initialization de la même façon que l’instruction copy-initialization ordinaire ; il envisageait uniquement de convertir les constructeurs pour résoudre la surcharge.
+Ce code réussit dans Visual Studio 2015 mais échoue dans Visual Studio 2017 et versions ultérieures avec C2668. Dans Visual Studio 2015, le compilateur traitait à tort copy-list-initialization de la même façon que l’instruction copy-initialization ordinaire ; il envisageait uniquement de convertir les constructeurs pour résoudre la surcharge.
 
 ```cpp
 struct A {

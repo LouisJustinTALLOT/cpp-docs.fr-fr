@@ -6,18 +6,18 @@ f1_keywords:
 helpviewer_keywords:
 - CreateInstance method [C++]
 ms.assetid: ab89b0e1-9da3-4784-a079-58b17340f111
-ms.openlocfilehash: 82b180b3f40683495ed2cfa284bdae8e1afaef9e
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: 2ec4e90c8f0c1009cc47e9022a09b3b8f7dbb284
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69498664"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80189999"
 ---
 # <a name="_com_ptr_tcreateinstance"></a>_com_ptr_t::CreateInstance
 
-**Section spécifique à Microsoft**
+**Section spécifique de Microsoft**
 
-Crée une nouvelle instance d’un objet en fonction `CLSID` d' `ProgID`un ou d’un.
+Crée une nouvelle instance d’un objet en fonction d’un `CLSID` ou d’un `ProgID`.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -42,13 +42,13 @@ HRESULT CreateInstance(
 #### <a name="parameters"></a>Paramètres
 
 *rclsid*<br/>
-`CLSID` D’un objet.
+`CLSID` d’un objet.
 
 *clsidString*<br/>
-Chaîne Unicode qui contient un `CLSID` (commençant par « **{** ») ou un. `ProgID`
+Chaîne Unicode qui contient un `CLSID` (commençant par « **{** ») ou un `ProgID`.
 
 *clsidStringA*<br/>
-Chaîne multioctet, utilisant la page de codes ANSI, qui contient un `CLSID` (commençant par « **{** ») ou un. `ProgID`
+Chaîne multioctet, utilisant la page de codes ANSI, qui contient un `CLSID` (commençant par « **{** ») ou un `ProgID`.
 
 *dwClsContext*<br/>
 Contexte d'exécution du code exécutable.
@@ -58,15 +58,15 @@ Externe inconnu pour l' [agrégation](../atl/aggregation.md).
 
 ## <a name="remarks"></a>Notes
 
-Ces fonctions membres appellent `CoCreateInstance` pour créer un objet COM puis des requêtes pour le type d'interface de ce pointeur intelligent. Le pointeur résultant est alors encapsulé dans cet objet `_com_ptr_t`. `Release`est appelé pour décrémenter le décompte de références pour le pointeur précédemment encapsulé. Cette routine retourne le HRESULT pour indiquer la réussite ou l’échec.
+Ces fonctions membres appellent `CoCreateInstance` pour créer un objet COM puis des requêtes pour le type d'interface de ce pointeur intelligent. Le pointeur résultant est alors encapsulé dans cet objet `_com_ptr_t`. `Release` est appelé pour décrémenter le décompte de références pour le pointeur précédemment encapsulé. Cette routine retourne le HRESULT pour indiquer la réussite ou l’échec.
 
-- **CreateInstance (** *rclsid* **,** *dwClsContext* **)** Crée une nouvelle instance en cours d’exécution d’un `CLSID`objet en fonction d’un.
+- **CreateInstance (**  *rclsid* **,**  *dwClsContext*  **)** Crée une nouvelle instance en cours d’exécution d’un objet en fonction d’un `CLSID`.
 
-- **CreateInstance (** *clsidString* **,** *dwClsContext* **)** Crée une nouvelle instance en cours d’exécution d’un objet en fonction d’une chaîne `CLSID` Unicode qui contient un (commençant par « **{** ») ou un `ProgID`.
+- **CreateInstance (**  *clsidString* **,**  *dwClsContext*  **)** Crée une nouvelle instance en cours d’exécution d’un objet en fonction d’une chaîne Unicode qui contient un `CLSID` (commençant par « **{** ») ou un `ProgID`.
 
-- **CreateInstance (** *clsidStringA* **,** *dwClsContext* **)** Crée une nouvelle instance en cours d’exécution d’un objet en fonction d’une chaîne de caractères `CLSID` multioctets qui contient un (commençant par « `ProgID` **{** ») ou un. Appelle [MultiByteToWideChar](/windows/win32/api/stringapiset/nf-stringapiset-multibytetowidechar), qui suppose que la chaîne se trouve dans la page de codes ANSI et non dans une page de codes OEM.
+- **CreateInstance (**  *clsidStringA* **,**  *dwClsContext*  **)** Crée une nouvelle instance en cours d’exécution d’un objet en fonction d’une chaîne de caractères multioctets qui contient un `CLSID` (commençant par « **{** ») ou un `ProgID`. Appelle [MultiByteToWideChar](/windows/win32/api/stringapiset/nf-stringapiset-multibytetowidechar), qui suppose que la chaîne se trouve dans la page de codes ANSI et non dans une page de codes OEM.
 
-**FIN de la section spécifique à Microsoft**
+**Fin de la section spécifique de Microsoft**
 
 ## <a name="see-also"></a>Voir aussi
 

@@ -6,34 +6,34 @@ f1_keywords:
 helpviewer_keywords:
 - R6002
 ms.assetid: 8fbbe65a-9c43-459e-8342-e1f6d1cef7d0
-ms.openlocfilehash: f8b5fe69c9fd688f4d0a181176cda247cde9ac11
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: b2e617b6f7841f1aa7e6fd2f6962c0e117fab6c8
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62380537"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80197416"
 ---
 # <a name="c-runtime-error-r6002"></a>Erreur Runtime C R6002
 
-prise en charge à virgule flottante n’a ne pas chargé
+prise en charge de la virgule flottante non chargée
 
-La bibliothèque à virgule flottante nécessaire n’était pas liée.
+La bibliothèque à virgule flottante nécessaire n’a pas été liée.
 
 > [!NOTE]
-> Si vous rencontrez ce message d’erreur lors de l’exécution d’une application, l’application a été arrêtée, car il a un problème interne. Il existe plusieurs raisons possibles à cette erreur, mais souvent, elle est provoquée par un défaut dans le code de l’application, ou en essayant d’exécuter une application qui n’a pas été générée pour le processeur de votre ordinateur particulier.
+> Si vous rencontrez ce message d’erreur lors de l’exécution d’une application, l’application a été arrêtée, car elle présente un problème interne. Il existe plusieurs raisons possibles pour cette erreur, mais elle est souvent due à un défaut dans le code de l’application ou à une tentative d’exécution d’une application qui n’a pas été créée pour votre processeur d’ordinateur particulier.
 >
 > Vous pouvez essayer de suivre les étapes ci-après pour corriger cette erreur :
 >
-> - Utilisez le **applications et fonctionnalités** ou **programmes et fonctionnalités** page dans le **le panneau de configuration** pour réparer ou réinstaller le programme.
-> - Vérifiez **mise à jour Windows** dans le **le panneau de configuration** mises à jour logicielles.
-> - Recherchez une version mise à jour de l’application. Contactez le fournisseur de l’application si le problème persiste.
+> - Utilisez la page **applications et fonctionnalités** ou **programmes et fonctionnalités** du **panneau de configuration** pour réparer ou réinstaller le programme.
+> - Cochez **Windows Update** dans le **panneau de configuration** pour les mises à jour logicielles.
+> - Recherchez une version mise à jour de l’application. Si le problème persiste, contactez le fournisseur de l’application.
 
 **Informations pour les programmeurs**
 
-Cette erreur peut se produire dans votre application lors de la bibliothèque à virgule flottante n’était pas liée. Recherchez une de ces causes :
+Cette erreur peut se produire dans votre application lorsque la bibliothèque à virgule flottante n’a pas été liée. Recherchez l’une des causes suivantes :
 
-- Une chaîne de format pour un `printf_s` ou `scanf_s` fonction contenait une spécification de format à virgule flottante et le programme ne contenait pas les valeurs à virgule flottante ou les variables. Pour résoudre ce problème, utilisez un argument à virgule flottante pour qu’elles correspondent à la spécification de format à virgule flottante, ou procédez à une assignation à virgule flottante ailleurs dans le programme. Cela entraîne une prise en charge à virgule flottante à charger.
+- Une chaîne de format pour une fonction `printf_s` ou `scanf_s` contenait une spécification de format à virgule flottante et le programme ne contenait pas de variables ou de valeurs à virgule flottante. Pour résoudre ce problème, utilisez un argument à virgule flottante pour correspondre à la spécification de format à virgule flottante, ou effectuez une assignation à virgule flottante ailleurs dans le programme. Cela entraîne le chargement de la prise en charge de la virgule flottante.
 
-- Le compilateur réduit la taille d’un programme en chargeant une prise en charge à virgule flottante uniquement lorsque cela est nécessaire. Le compilateur ne peut pas détecter les opérations à virgule flottante ou spécifications de format à virgule flottante dans les chaînes de format, donc il ne charge pas les routines à virgule flottante nécessaires. Pour résoudre ce problème, utilisez une spécification de format à virgule flottante et fournissez un argument à virgule flottante ou effectuer une assignation à virgule flottante ailleurs dans le programme. Cela entraîne une prise en charge à virgule flottante à charger.
+- Le compilateur réduit la taille d’un programme en chargeant la prise en charge de virgule flottante uniquement lorsque cela est nécessaire. Le compilateur ne peut pas détecter les opérations à virgule flottante ou les spécifications de format à virgule flottante dans les chaînes de format, donc il ne charge pas les routines à virgule flottante nécessaires. Pour résoudre ce problème, utilisez une spécification de format à virgule flottante et fournissez un argument à virgule flottante, ou effectuez une assignation à virgule flottante ailleurs dans le programme. Cela entraîne le chargement de la prise en charge de la virgule flottante.
 
-- Dans un programme de plusieurs langages, une bibliothèque C a été spécifiée avant une bibliothèque FORTRAN lorsque le programme a été lié. Reliez et spécifiez la bibliothèque C de dernière.
+- Dans un programme en plusieurs langages, une bibliothèque C a été spécifiée avant une bibliothèque FORTRAN quand le programme a été lié. Reliez et spécifiez la bibliothèque C en dernier.

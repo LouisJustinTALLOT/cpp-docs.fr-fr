@@ -1,22 +1,22 @@
 ---
-title: Compilateur Warning (level 1) C4048
+title: Avertissement du compilateur (niveau 1) C4048
 ms.date: 11/04/2016
 f1_keywords:
 - C4048
 helpviewer_keywords:
 - C4048
 ms.assetid: 8429f513-4732-40f1-8e56-4c224e723bcb
-ms.openlocfilehash: 6ea9968c8dd116fada08b44c5f9274de63aa08bb
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 1b144658ede245c347ecd62f3b2411b592011ef4
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62388616"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80164155"
 ---
-# <a name="compiler-warning-level-1-c4048"></a>Compilateur Warning (level 1) C4048
+# <a name="compiler-warning-level-1-c4048"></a>Avertissement du compilateur (niveau 1) C4048
 
-différents déclaré des indices de tableau : 'identificateur1' et 'identificateur2'
+indices de tableau déclarés différents : 'identificateur1 'et’identificateur2 '
 
-Une expression comprend des pointeurs vers les tableaux de taille différente. Les pointeurs sont utilisées sans conversion.
+Une expression implique des pointeurs vers des tableaux de taille différente. Les pointeurs sont utilisés sans conversion.
 
-Cet avertissement peut être résolu si vous transformez explicitement ces groupes de type identique ou équivalent.
+Cet avertissement peut être résolu si vous effectuez un cast explicite des tableaux vers le même type ou un type équivalent.

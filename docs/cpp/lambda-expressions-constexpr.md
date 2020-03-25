@@ -1,19 +1,19 @@
 ---
-title: expressions lambda de constexpr en C++
+title: constexpr expressions lambda dansC++
 ms.date: 04/08/2019
 helpviewer_keywords:
 - lambda expressions [C++], constexpr
 ms.assetid: b56346cd-fbff-475f-aeaa-ed2010c6d6f7
-ms.openlocfilehash: d1bc60a6da813e54c857da38b0164f544216be00
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 9467d9e404204012df6461adacd5dc4cdbdfe71d
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62368693"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80179573"
 ---
-# <a name="constexpr-lambda-expressions-in-c"></a>expressions lambda de constexpr en C++
+# <a name="constexpr-lambda-expressions-in-c"></a>constexpr expressions lambda dansC++
 
-**Visual Studio 2017 15.3 et versions ultérieures** (disponible avec [/std : c ++ 17](../build/reference/std-specify-language-standard-version.md)) : Une expression lambda peut être déclarée comme **constexpr** ou utilisées dans une expression constante lors de l’initialisation de chaque membre de données qu’elle capture ou introduit est autorisée dans une expression constante.
+**Visual Studio 2017 version 15,3 et versions ultérieures** (disponibles avec [/std : c++ 17](../build/reference/std-specify-language-standard-version.md)) : une expression lambda peut être déclarée comme **constexpr** ou utilisée dans une expression constante lorsque l’initialisation de chaque membre de données qu’elle capture ou introduit est autorisée dans une expression constante.
 
 ```cpp
     int y = 32;
@@ -29,7 +29,7 @@ ms.locfileid: "62368693"
     }
 ```
 
-Une expression lambda est implicitement **constexpr** si son résultat satisfait aux exigences d’un **constexpr** (fonction) :
+Une expression lambda est implicitement **constexpr** si son résultat satisfait aux exigences d’une fonction **constexpr** :
 
 ```cpp
     auto answer = [](int n)
@@ -40,7 +40,7 @@ Une expression lambda est implicitement **constexpr** si son résultat satisfait
     constexpr int response = answer(10);
 ```
 
-Si une expression lambda est implicitement ou explicitement **constexpr**et vous la convertir en un pointeur de fonction, la fonction qui en résulte est également **constexpr**:
+Si une expression lambda est implicitement ou explicitement **constexpr**, et que vous la Convertissez en pointeur de fonction, la fonction résultante est également **constexpr**:
 
 ```cpp
     auto Increment = [](int n)

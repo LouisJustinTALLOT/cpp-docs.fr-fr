@@ -6,21 +6,21 @@ f1_keywords:
 helpviewer_keywords:
 - BK1508
 ms.assetid: 03ea22b8-c7b4-4e73-8553-35b41112e066
-ms.openlocfilehash: 8a7acf943bd4c8180e60748b89a96fdf44a19576
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 0195973e7d23baf2f2853bdb00bedcbc841c3549
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62279578"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80197691"
 ---
 # <a name="bscmake-error-bk1508"></a>Erreur BSCMAKE BK1508
 
-Impossible de supprimer le fichier temporaire 'nom_fichier' [ : raison]
+Impossible de supprimer le fichier temporaire’nom_fichier' [ : raison]
 
-BSCMAKE ne peut pas supprimer un de ses fichiers temporaires.
+BSCMAKE ne peut pas supprimer l’un de ses fichiers temporaires.
 
 ### <a name="to-fix-by-checking-the-following-possible-causes"></a>Pour corriger en vérifiant les causes possibles suivantes
 
-1. Un autre processus a ouvert le fichier.
+1. Le fichier est ouvert par un autre processus.
 
 1. Une erreur matérielle.

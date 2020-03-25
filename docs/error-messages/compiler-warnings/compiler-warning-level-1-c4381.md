@@ -6,15 +6,15 @@ f1_keywords:
 helpviewer_keywords:
 - C4381
 ms.assetid: f67a6db3-b334-4b2e-8182-b30c7a3c7c32
-ms.openlocfilehash: 31c7e4519e0eb1e0b6c66b6082edc7407522554a
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 0a736a164527d53e69daf25686043922145a7e01
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62380903"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80162801"
 ---
 # <a name="compiler-warning-level-1-c4381"></a>Avertissement du compilateur (niveau 1) C4381
 
-'fonction1' : méthode d’interface ne sera pas implémentée par une méthode non publique 'fonction2'
+'fonction1 ' : la méthode d’interface ne sera pas implémentée par la méthode non publique’fonction2 '
 
-Une classe doit implémenter la fonction all dans une interface. Une classe peut satisfaire à cette condition si une de ses classes de base implémente la fonction. Toutefois, la fonction doit être implémentée comme une fonction publique.
+Une classe doit implémenter toutes les fonctions dans une interface. Une classe peut satisfaire cette condition si l’une de ses classes de base implémente la fonction. Toutefois, la fonction doit être implémentée en tant que fonction publique.

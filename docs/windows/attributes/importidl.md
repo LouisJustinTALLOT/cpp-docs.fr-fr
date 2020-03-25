@@ -1,21 +1,21 @@
 ---
-title: importidl (attribut de COM C++)
+title: importidl (C++ attribut com)
 ms.date: 10/02/2018
 f1_keywords:
 - vc-attr.importidl
 helpviewer_keywords:
 - importidl attribute
 ms.assetid: 4b0a4b55-6c57-4e6e-bc7b-a12cc8063941
-ms.openlocfilehash: 9db62d4f2a36b8cc0592c924b113077a758915c0
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 6e41a98bef079c92b6df6e7eff203301aa9ceae4
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62409432"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80166820"
 ---
 # <a name="importidl"></a>importidl
 
-Insère le fichier .idl spécifié dans le fichier .idl généré.
+Insère le fichier. idl spécifié dans le fichier. idl généré.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -26,13 +26,13 @@ Insère le fichier .idl spécifié dans le fichier .idl généré.
 ### <a name="parameters"></a>Paramètres
 
 *idl_file*<br/>
-Identifie le nom du fichier .idl que vous souhaitez fusionner avec le fichier .idl qui doit être généré pour votre application.
+Identifie le nom du fichier. idl que vous souhaitez fusionner avec le fichier. idl qui sera généré pour votre application.
 
 ## <a name="remarks"></a>Notes
 
-Le **importidl** C++ attribut place la section en dehors du bloc de bibliothèque (dans *idl_file*) dans le fichier .idl généré de votre programme et de la section de la bibliothèque (dans *idl_file*) dans la section de la bibliothèque de votre fichier de programme .idl généré.
+L’attribut **importidl** C++ place la section en dehors du bloc de bibliothèque (dans *idl_file*) dans le fichier. idl généré par votre programme et la section de la bibliothèque (dans *idl_file*) dans la section Bibliothèque du fichier. idl généré de votre programme.
 
-Vous pouvez souhaiter utiliser **importidl**, par exemple, si vous souhaitez utiliser un fichier .idl codé manuellement avec votre fichier .idl généré.
+Vous souhaiterez peut-être utiliser **importidl**, par exemple, si vous souhaitez utiliser un fichier. idl codé manuellement avec votre fichier. idl généré.
 
 ## <a name="example"></a>Exemple
 
@@ -43,7 +43,7 @@ Vous pouvez souhaiter utiliser **importidl**, par exemple, si vous souhaitez uti
 [importidl("import.idl")];
 ```
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
 ### <a name="attribute-context"></a>Contexte d'attribut
 
@@ -51,8 +51,8 @@ Vous pouvez souhaiter utiliser **importidl**, par exemple, si vous souhaitez uti
 |-|-|
 |**S'applique à**|N'importe où|
 |**Renouvelable**|Non|
-|**Attributs requis**|Aucun.|
-|**Attributs non valides**|Aucun.|
+|**Attributs requis**|None|
+|**Attributs non valides**|None|
 
 Pour plus d'informations, consultez [Contextes d'attribut](cpp-attributes-com-net.md#contexts).
 

@@ -7,12 +7,12 @@ helpviewer_keywords:
 - return keyword [C++], syntax
 - return keyword [C++]
 ms.assetid: a498903a-056a-4df0-a6cf-72f633a62210
-ms.openlocfilehash: 47bf9c50a2da039b0ffa074796a768290b732bb3
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: c8ea796ab40a2090ed9853377f7c9415914bc0e8
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62268536"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80178980"
 ---
 # <a name="return-statement-c"></a>return, instruction (C++)
 
@@ -26,15 +26,15 @@ return [expression];
 
 ## <a name="remarks"></a>Notes
 
-La clause `expression`, si elle est présente, est convertie dans le type spécifié dans la déclaration de fonction, comme si une initialisation était exécutée. Conversion du type de l’expression à la **retourner** type de la fonction peut créer des objets temporaires. Pour plus d’informations sur quand et comment les objets temporaires sont créés, consultez [objets temporaires](../cpp/temporary-objects.md).
+La clause `expression`, si elle est présente, est convertie dans le type spécifié dans la déclaration de fonction, comme si une initialisation était exécutée. La conversion du type de l’expression en type de **retour** de la fonction peut créer des objets temporaires. Pour plus d’informations sur la façon de créer des objets temporaires, consultez la page [objets temporaires](../cpp/temporary-objects.md).
 
-La valeur de la clause `expression` est retournée à la fonction d'appel. Si l'expression est omise, la valeur de retour de la fonction n'est pas définie. Constructeurs et destructeurs et fonctions de type **void**, ne peut pas spécifier une expression dans le **retourner** instruction. Fonctions de tous les autres types doivent spécifier une expression dans le **retourner** instruction.
+La valeur de la clause `expression` est retournée à la fonction d'appel. Si l'expression est omise, la valeur de retour de la fonction n'est pas définie. Les constructeurs et les destructeurs, ainsi que les fonctions de type **void**, ne peuvent pas spécifier une expression dans l’instruction **Return** . Les fonctions de tous les autres types doivent spécifier une expression dans l’instruction **Return** .
 
-Lorsque le flux de contrôle quitte le bloc englobant la définition de fonction, le résultat est le même comme il le serait si un **retourner** instruction sans expression avait été exécutée. Ceci n'est pas valable pour les fonctions déclarées comme retournant une valeur.
+Lorsque le déroulement du contrôle quitte le bloc englobant la définition de fonction, le résultat est le même que si une instruction **Return** sans expression avait été exécutée. Ceci n'est pas valable pour les fonctions déclarées comme retournant une valeur.
 
-Une fonction peut avoir un nombre quelconque de **retourner** instructions.
+Une fonction peut avoir n’importe quel nombre d’instructions **Return** .
 
-L’exemple suivant utilise une expression avec un **retourner** instruction pour obtenir le plus grand de deux entiers.
+L’exemple suivant utilise une expression avec une instruction **Return** pour obtenir le plus grand de deux entiers.
 
 ## <a name="example"></a>Exemple
 

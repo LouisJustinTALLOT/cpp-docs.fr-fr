@@ -10,16 +10,16 @@ helpviewer_keywords:
 - arguments [C++], default
 - defaults [C++], arguments
 ms.assetid: d32cf516-05cb-4d4d-b169-92f5649fdfa2
-ms.openlocfilehash: 5ffc0301e7a89a379a2ea1eda9a113276df7a88e
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 0202aaca47964f8923aa57d84515dc70ae8c8a2d
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62154514"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80189544"
 ---
 # <a name="default-arguments"></a>Arguments par défaut
 
-Dans de nombreux cas, les fonctions ont des arguments utilisés si rarement qu'une valeur par défaut suffirait. La fonctionnalité d’argument par défaut permet de spécifier uniquement les arguments d’une fonction qui sont significatifs dans un appel donné. Pour illustrer ce concept, prenons l’exemple présenté dans [surcharge de fonction](../cpp/function-overloading.md).
+Dans de nombreux cas, les fonctions ont des arguments utilisés si rarement qu'une valeur par défaut suffirait. La fonctionnalité d’argument par défaut permet de spécifier uniquement les arguments d’une fonction qui sont significatifs dans un appel donné. Pour illustrer ce concept, examinez l’exemple présenté dans [surcharge de fonction](../cpp/function-overloading.md).
 
 ```cpp
 // Prototype three print functions.
@@ -38,7 +38,7 @@ int print( double dvalue, int prec=2 );  // Print a double with a
 //  given precision.
 ```
 
-L’implémentation de la `print` fonction est légèrement modifiée pour refléter le fait que qu’une telle fonction existe pour le type **double**:
+L’implémentation de la fonction `print` est légèrement modifiée pour refléter le fait qu’une seule fonction de ce type existe pour le type **double**:
 
 ```cpp
 // default_arguments.cpp
@@ -106,7 +106,7 @@ Tenez compte des points suivants lors de l'utilisation des arguments par défaut
 
 - Des arguments par défaut supplémentaires peuvent être ajoutés par des déclarations ultérieures.
 
-- Des arguments par défaut peuvent être fournis pour des pointeurs vers des fonctions. Exemple :
+- Des arguments par défaut peuvent être fournis pour des pointeurs vers des fonctions. Par exemple :
 
     ```cpp
     int (*pShowIntVal)( int i = 0 );

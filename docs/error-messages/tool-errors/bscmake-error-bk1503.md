@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - BK1503
 ms.assetid: e6582344-b91e-486f-baf3-4f9028d83c3b
-ms.openlocfilehash: c81e955b912e03b322c0429097410fae74713b9d
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: e0f05b3979024cb053394c51fa9337197b5de7bf
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62280137"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80197858"
 ---
 # <a name="bscmake-error-bk1503"></a>Erreur BSCMAKE BK1503
 
-ne peut pas écrire dans le fichier 'nom_fichier' [ : raison]
+Impossible d’écrire dans le fichier’nom_fichier' [ : raison]
 
-BSCMAKE combine les fichiers .sbr générés pendant la compilation dans une base de données de navigateur. Si la base de données de navigateur qui en résulte dépasse 64 Mo, ou si le nombre de fichiers d’entrée (.sbr) dépasse 4092, cette erreur est émise.
+BSCMAKE combine les fichiers. SBR générés pendant la compilation dans une seule base de données de navigateur. Si la base de données du navigateur qui en résulte dépasse 64 Mo ou si le nombre de fichiers d’entrée (. SBR) dépasse 4092, cette erreur est émise.
 
-Si le problème est causé par des fichiers .sbr supérieur à 4092, vous devez réduire le nombre de fichiers d’entrée. À partir de Visual Studio, cela est possible en [/FR](../../build/reference/fr-fr-create-dot-sbr-file.md) votre projet entier, puis effectuez une revérification sur une base de fichier par fichier.
+Si le problème est causé par plus de 4092 fichiers. SBR, vous devez réduire le nombre de fichiers d’entrée. Dans Visual Studio, cela peut être accompli en parsuit l’intégralité de votre projet, [puis la vérification](../../build/reference/fr-fr-create-dot-sbr-file.md) d’un fichier par fichier.
 
-Si le problème est causé par un fichier .bsc supérieur à 64 Mo, ce qui réduit le nombre de fichiers .sbr en tant qu’entrée diminue la taille du fichier .bsc obtenu. En outre, la quantité d’informations de consultation peut être réduite en utilisant les /Em (exclure les symboles de développé de Macro), /El (exclure les Variables locales) et/es (exclure des fichiers système).
+Si le problème est causé par un fichier. bsc supérieur à 64 Mo, le fait de réduire le nombre de fichiers. SBR en entrée réduit la taille du fichier. bsc résultant. En outre, la quantité d’informations de navigation peut être réduite par le biais de l’utilisation des/EM (exclure les symboles développés de macros),/El (exclure les variables locales) et/es (exclure les fichiers système).
 
 ## <a name="see-also"></a>Voir aussi
 

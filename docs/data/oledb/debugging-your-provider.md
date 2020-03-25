@@ -7,32 +7,32 @@ helpviewer_keywords:
 - Visual C++ debugger, debugging providers
 - Visual C++ debugger
 ms.assetid: 90d4e7db-06ea-4de0-a7f4-4f3751d50d93
-ms.openlocfilehash: 21d4cb455413c3f7cbcbed02cdd4c364a469426d
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: f80ce5dc82dd2baeefe3410a488a5fefda0e9bf0
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62176146"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80211092"
 ---
 # <a name="debugging-your-provider"></a>Débogage de votre fournisseur
 
 Il existe deux façons de déboguer votre fournisseur :
 
-- Étant donné que les fournisseurs sont créés dans le processus, vous pouvez créer un code de consommateur à l’aide des modèles du consommateur OLE DB et l’étape dans le fournisseur normalement.
+- Étant donné que les fournisseurs sont créés en cours de traitement, vous pouvez créer un code de consommateur à l’aide des modèles de consommateur OLE DB et effectuer un pas à pas détaillé dans le fournisseur.
 
-- Vous pouvez utiliser les divers utilitaires fournis avec Visual C++.
+- Vous pouvez utiliser différents utilitaires fournis avec Visual C++.
 
-## <a name="to-use-debugging"></a>Utiliser le débogage
+## <a name="to-use-debugging"></a>Pour utiliser le débogage
 
-1. Ouvrez le projet de fournisseur.
+1. Ouvrez le projet du fournisseur.
 
-1. Sur le **projets** menu, cliquez sur **propriétés**.
+1. Dans le menu **projets** , cliquez sur **Propriétés**.
 
-1. Dans le **Pages de propriétés** boîte de dialogue, cliquez sur le **débogage** onglet.
+1. Dans la boîte de dialogue **pages de propriétés** , cliquez sur l’onglet **débogage** .
 
-1. Sélectionnez les options comme requis, cliquez sur **OK**.
+1. Sélectionnez les options requises, puis cliquez sur **OK**.
 
-1. Définir des points d’arrêt et procédez au débogage comme d’habitude.
+1. Définissez des points d’arrêt, puis déboguez comme d’habitude.
 
 ## <a name="see-also"></a>Voir aussi
 

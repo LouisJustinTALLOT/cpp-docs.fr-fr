@@ -9,16 +9,16 @@ helpviewer_keywords:
 - do keyword [C++]
 - while keyword [C++], do-while
 ms.assetid: e01e6f7c-7da1-4591-87f9-c26ff848e7b0
-ms.openlocfilehash: d930c1884975288ff11f4d4e5cf2728e717e17d5
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: f52c065210a8861dc065508248a506770b039b1d
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62392256"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80189271"
 ---
 # <a name="do-while-statement-c"></a>do-while, instruction (C++)
 
-Exécute un *instruction* à plusieurs reprises jusqu'à ce que la condition d’arrêt spécifié (la *expression*) correspond à zéro.
+Exécute une *instruction* à plusieurs reprises jusqu’à ce que la condition d’arrêt spécifiée (l' *expression*) soit égale à zéro.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -30,7 +30,7 @@ while ( expression ) ;
 
 ## <a name="remarks"></a>Notes
 
-Le test de la condition d’arrêt est effectué après chaque exécution de la boucle ; Par conséquent, un **faire-tandis que** boucle exécute une ou plusieurs fois, selon la valeur de l’expression d’arrêt. L'instruction **do-while** peut également se terminer lorsqu'une instruction [break](../cpp/break-statement-cpp.md), [goto](../cpp/goto-statement-cpp.md) ou [return](../cpp/return-statement-cpp.md) est exécutée dans le corps de l'instruction.
+Le test de la condition d’arrêt est effectué après chaque exécution de la boucle. par conséquent, une boucle **do-while** s’exécute une ou plusieurs fois, selon la valeur de l’expression d’arrêt. L'instruction **do-while** peut également se terminer lorsqu'une instruction [break](../cpp/break-statement-cpp.md), [goto](../cpp/goto-statement-cpp.md) ou [return](../cpp/return-statement-cpp.md) est exécutée dans le corps de l'instruction.
 
 L'élément *expression* doit être de type arithmétique ou pointeur. L'exécution se déroule comme suit :
 
@@ -40,7 +40,7 @@ L'élément *expression* doit être de type arithmétique ou pointeur. L'exécut
 
 ## <a name="example"></a>Exemple
 
-L’exemple suivant montre comment la **faire-tandis que** instruction :
+L’exemple suivant illustre l’instruction **do-while** :
 
 ```cpp
 // do_while_statement.cpp

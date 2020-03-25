@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - LNK1141
 ms.assetid: 83b78606-6dd3-43a7-88e2-152f5359cbd8
-ms.openlocfilehash: e2e3ae2462919a8261e450460370a46f0022bb1c
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 2564cbb557f818aa3ef06e0032335b534daf7188
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62255025"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80184201"
 ---
 # <a name="linker-tools-error-lnk1141"></a>Erreur des outils Éditeur de liens LNK1141
 
-Échec lors de la génération du fichier des exportations
+Échec lors de la génération du fichier d’exportation
 
-[LIEN](../../build/reference/linking.md) Impossible de générer le fichier d’exportation (.exp).
+Le [lien](../../build/reference/linking.md) n’a pas pu générer le fichier d’exportation (. exp).
 
-Causes de cette erreur incluent des problèmes système telles que les erreurs de syntaxe et de mémoire insuffisantes dans les options ou les instructions de définition de module.
+Les causes de cette erreur incluent des problèmes système tels qu’une insuffisance de mémoire et des erreurs de syntaxe dans les options ou les instructions de définition de module.
 
-Cette erreur est précédée par une autre erreur qui donne des informations supplémentaires.
+Cette erreur est précédée d’une autre erreur qui donne des informations supplémentaires.
 
 ## <a name="see-also"></a>Voir aussi
 

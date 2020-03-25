@@ -8,24 +8,24 @@ helpviewer_keywords:
 - procedure calls
 - procedure calls, stored procedures
 ms.assetid: 4f7c2700-1c2d-42f3-8c9f-7e83962b2442
-ms.openlocfilehash: 196c50ea62c3e3188b61a3b35a9e2752740c4ad5
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: ece626eb7fbecae9b90321ccc2569607897cf520
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62283938"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80209857"
 ---
 # <a name="output-parameters"></a>Paramètres de sortie
 
-Appel d’une procédure stockée est similaire à l’exécution d’une commande SQL. La principale différence est que les procédures stockées utilisent des paramètres de sortie (ou « paramètres de sortie ») et valeurs de retour.
+L’appel d’une procédure stockée est similaire à l’exécution d’une commande SQL. La principale différence réside dans le fait que les procédures stockées utilisent des paramètres de sortie (ou des « paramètres de sortie ») et des valeurs de retour.
 
-Dans le code suivant procédure stockée, le premier ' ? 'est la valeur de retour (phone) et le second' ?' est le paramètre d’entrée (nom) :
+Dans la procédure stockée suivante, le premier «  ? » est la valeur de retour (Phone) et le deuxième «  ? » est le paramètre d’entrée (Name) :
 
 ```cpp
 DEFINE_COMMAND_EX(CMySProcAccessor, _T("{ ? = SELECT phone FROM shippers WHERE name = ? }"))
 ```
 
-Vous spécifiez dans les paramètres de sortie dans le mappage de paramètre :
+Vous spécifiez les paramètres in et out dans le mappage de paramètres :
 
 ```cpp
 BEGIN_PARAM_MAP(CMySProcAccessor)
@@ -36,13 +36,13 @@ BEGIN_PARAM_MAP(CMySProcAccessor)
 END_PARAM_MAP()
 ```
 
-Votre application doit gérer la sortie retournée à partir de procédures stockées. Différents fournisseurs OLE DB retournent des paramètres de sortie et retournent des valeurs à différents moments pendant le traitement des résultats. Par exemple, le fournisseur Microsoft OLE DB pour SQL Server (SQLOLEDB) ne fournit les paramètres de sortie et codes de retour qu’une fois que le consommateur a récupéré ou annulé les jeux de résultats retournés par la procédure stockée. La sortie est retournée dans le dernier paquet TDS à partir du serveur.
+Votre application doit gérer la sortie retournée par les procédures stockées. Des fournisseurs OLE DB différents retournent des paramètres de sortie et des valeurs de retour à des moments différents pendant le traitement des résultats. Par exemple, le fournisseur Microsoft OLE DB pour SQL Server (SQLOLEDB) ne fournit pas de paramètres de sortie et de codes de retour tant que le consommateur n’a pas récupéré ou annulé les jeux de résultats retournés par la procédure stockée. La sortie est retournée dans le dernier paquet TDS à partir du serveur.
 
 ## <a name="row-count"></a>Nombre de lignes
 
-Si vous utilisez les modèles du consommateur OLE DB pour exécuter une procédure stockée qui a des paramètres de sortie, le nombre de lignes n’est pas défini jusqu'à la fermeture de l’ensemble de lignes.
+Si vous utilisez les modèles de consommateur OLE DB pour exécuter une procédure stockée qui a des paramètres de paramètre, le nombre de lignes n’est pas défini tant que vous n’avez pas fermé l’ensemble de lignes.
 
-Par exemple, considérez une procédure stockée avec un ensemble de lignes et un paramètre de sortie :
+Par exemple, considérez une procédure stockée avec un ensemble de lignes et un paramètre d’inversion :
 
 ```sql
 create procedure sp_test
@@ -53,7 +53,7 @@ as
 return 0
 ```
 
-Le `@_rowcount` paramètre de sortie indique le nombre de lignes ont été retourné à partir de la table de test. Toutefois, cette procédure stockée limite le nombre de lignes à 50. Par exemple, si elle existait 100 lignes dans le test, le nombre de lignes serait 50 (car ce code récupère uniquement les 50 premières lignes). S’il y avait uniquement 30 lignes dans la table, le nombre de lignes serait 30. Veillez à appeler `Close` ou `CloseAll` pour renseigner le paramètre de sortie avant d’extraire sa valeur.
+Le `@_rowcount` paramètre de paramètres indique le nombre de lignes retournées à partir de la table de test. Toutefois, cette procédure stockée limite le nombre de lignes à 50. Par exemple, s’il y a 100 lignes dans le test, le ROWCOUNT est 50 (car ce code récupère uniquement les 50 lignes supérieures). S’il n’y avait que 30 lignes dans la table, le ROWCOUNT est de 30. Veillez à appeler `Close` ou `CloseAll` pour renseigner le paramètre out avant d’extraire sa valeur.
 
 ## <a name="see-also"></a>Voir aussi
 

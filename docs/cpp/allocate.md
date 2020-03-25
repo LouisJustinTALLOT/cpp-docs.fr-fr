@@ -7,18 +7,18 @@ helpviewer_keywords:
 - __declspec keyword [C++], allocate
 - allocate __declspec keyword
 ms.assetid: 67828b31-de60-4c0e-b0a6-ef3aab22641d
-ms.openlocfilehash: a2284395b09c34b0d22c4499bf804cfcc3a74c4d
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 6d9429aa7c079f0f99a936019e5945092dc1f006
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62155275"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80181523"
 ---
 # <a name="allocate"></a>allocate
 
-**Section spécifique à Microsoft**
+**Section spécifique de Microsoft**
 
-Le **allouer** spécificateur de déclaration nomme un segment de données dans laquelle l’élément de données sera alloué.
+Le spécificateur de Déclaration **allocate** désigne un segment de données dans lequel l’élément de données sera alloué.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -28,7 +28,7 @@ Le **allouer** spécificateur de déclaration nomme un segment de données dans 
 
 ## <a name="remarks"></a>Notes
 
-Le nom *segname* doit être déclaré à l’aide d’un des pragmas suivants :
+Le nom *segname* doit être déclaré à l’aide de l’un des pragmas suivants :
 
 - [code_seg](../preprocessor/code-seg.md)
 
@@ -51,7 +51,7 @@ int main() {
 }
 ```
 
-**FIN de la section spécifique à Microsoft**
+**Fin de la section spécifique de Microsoft**
 
 ## <a name="see-also"></a>Voir aussi
 

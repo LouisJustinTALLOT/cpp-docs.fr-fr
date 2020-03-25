@@ -7,16 +7,16 @@ f1_keywords:
 helpviewer_keywords:
 - DerefHelper structure
 ms.assetid: 86ded58b-c3ee-4a4f-bb86-4f67b895d427
-ms.openlocfilehash: 96b7e83a854765fb872b87d062928311731cfd26
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 43453d3162de697fa1cfcf0581953c91bbe3934f
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62398561"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80214043"
 ---
 # <a name="derefhelper-structure"></a>DerefHelper (structure)
 
-Prend en charge l’infrastructure WRL et n’est pas destinée à être utilisée directement depuis votre code.
+Prend en charge l’infrastructure WRL et n’est pas destiné à être utilisé directement à partir de votre code.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -31,31 +31,31 @@ struct DerefHelper<T*>;
 ### <a name="parameters"></a>Paramètres
 
 *T*<br/>
-Un paramètre de modèle.
+Paramètre de modèle.
 
 ## <a name="remarks"></a>Notes
 
-Représenter un pointeur déréférencé au `T*` paramètre de modèle.
+Représente un pointeur déréférencé vers le paramètre de modèle `T*`.
 
-**DerefHelper** est utilisé dans une expression comme : `ComPtr<Details::DerefHelper<ProgressTraits::Arg1Type>::DerefType> operationInterface;`.
+**Derefhelper (** est utilisé dans une expression telle que : `ComPtr<Details::DerefHelper<ProgressTraits::Arg1Type>::DerefType> operationInterface;`.
 
 ## <a name="members"></a>Membres
 
 ### <a name="public-typedefs"></a>Typedefs publics
 
-|Nom|Description|
+|Name|Description|
 |----------|-----------------|
-|`DerefType`|Identificateur pour le paramètre de modèle déréférencé `T*`.|
+|`DerefType`|Identificateur du paramètre de modèle déréférencé `T*`.|
 
 ## <a name="inheritance-hierarchy"></a>Hiérarchie d'héritage
 
 `DerefHelper`
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
-**En-tête :** async.h
+**En-tête :** Async. h
 
-**Espace de noms :** Microsoft::WRL::Details
+**Espace de noms :** Microsoft :: WRL ::D étails
 
 ## <a name="see-also"></a>Voir aussi
 

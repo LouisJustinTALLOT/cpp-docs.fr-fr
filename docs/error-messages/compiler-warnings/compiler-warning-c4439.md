@@ -6,18 +6,18 @@ f1_keywords:
 helpviewer_keywords:
 - C4439
 ms.assetid: 9449958f-f407-4824-829b-9e092f2af97d
-ms.openlocfilehash: 7cab2e55fca640438051fbb79ac933e83d5f3cbb
-ms.sourcegitcommit: 0cfc43f90a6cc8b97b24c42efcf5fb9c18762a42
+ms.openlocfilehash: c125fa84119c62e3090611c9a841f46eee759711
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/05/2019
-ms.locfileid: "73623652"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80165208"
 ---
 # <a name="compiler-warning-c4439"></a>Avertissement du compilateur C4439
 
-'fonction' : la définition de fonction avec un type managé dans la signature doit avoir une convention d’appel _ _ clrcall
+'fonction' : la définition de fonction avec un type managé dans la signature doit avoir une convention d’appel __clrcall
 
-Le compilateur a remplacé implicitement une convention d’appel avec [_ _ clrcall](../../cpp/clrcall.md). Pour résoudre cet avertissement, supprimez la Convention d’appel `__cdecl` ou `__stdcall`.
+Le compilateur a remplacé implicitement une convention d’appel avec [__clrcall](../../cpp/clrcall.md). Pour résoudre cet avertissement, supprimez la Convention d’appel `__cdecl` ou `__stdcall`.
 
 C4439 est toujours émis en tant qu’erreur. Vous pouvez désactiver cet avertissement avec le `#pragma warning` ou **/WD**; Pour plus d’informations, consultez [Warning](../../preprocessor/warning.md) ou [/w,/W0,/W1,/W2,/W3,/W4,/W1,/W2,/W3,/W4,/Wall,/WD,/we,/WO,/WV,/WX (niveau d’avertissement)](../../build/reference/compiler-option-warning-level.md) .
 

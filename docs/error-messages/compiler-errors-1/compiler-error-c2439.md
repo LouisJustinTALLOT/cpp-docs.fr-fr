@@ -6,21 +6,21 @@ f1_keywords:
 helpviewer_keywords:
 - C2439
 ms.assetid: 3c5dbe5c-b7d3-4bb0-8619-92f6e280461e
-ms.openlocfilehash: f71112d3f37f3e4d1a4f41bade95726d7aa0a0bc
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 99f3644869f6c5395684643f0e7802f3a01baa62
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62311730"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80205359"
 ---
 # <a name="compiler-error-c2439"></a>Erreur du compilateur C2439
 
-'identificateur' : membre n’a pas pu être initialisé.
+'identificateur' : le membre n’a pas pu être initialisé
 
-Une classe, une structure ou un membre d’union ne peut pas être initialisé.
+Un membre de classe, de structure ou d’Union ne peut pas être initialisé.
 
 ### <a name="to-fix-by-checking-the-following-possible-causes"></a>Pour corriger en vérifiant les causes possibles suivantes
 
-1. Tente d’initialiser une classe de base indirecte ou une structure.
+1. Tentative d’initialisation d’une classe ou d’une structure de base indirecte.
 
-1. Tentative d’initialiser un membre hérité d’une classe ou structure. Un membre hérité doit être initialisé par le constructeur de la classe ou structure.
+1. Tentative d’initialisation d’un membre hérité d’une classe ou d’une structure. Un membre hérité doit être initialisé par le constructeur de la classe ou de la structure.

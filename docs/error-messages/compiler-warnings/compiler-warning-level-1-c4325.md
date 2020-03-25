@@ -6,36 +6,36 @@ f1_keywords:
 helpviewer_keywords:
 - C4325
 ms.assetid: 8127a08c-d626-481b-aa7b-04a3fdc9a9ec
-ms.openlocfilehash: 293cbbcfe134f6cb4f5e1bf924be7c03fa278833
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: e0a13761b0657d054065358994638779817dad6a
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62408535"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80163022"
 ---
 # <a name="compiler-warning-level-1-c4325"></a>Avertissement du compilateur (niveau 1) C4325
 
-> attributs pour la section «*section*' ignoré
+> attributs pour la section standard'*section*'ignorés
 
 ## <a name="remarks"></a>Notes
 
-Impossible de modifier les attributs d’une section standard. Exemple :
+Vous ne pouvez pas modifier les attributs d’une section standard. Par exemple :
 
 ```cpp
 #pragma section(".sdata", long)
 ```
 
-Cela remplacerait la `.sdata` section standard qui utilise le **court** type de données avec le **long** type de données.
+Cela remplacerait la section `.sdata` standard qui utilise le type de données **short** avec le type de données **long** .
 
-Sections standards dont vous ne pouvez pas modifier les attributs incluent,
+Les sections standard dont vous ne pouvez pas modifier les attributs sont les suivantes :
 
 - .data
 
 - .sdata
 
-- .bss
+- . BSS
 
-- .sbss
+- . sbss
 
 - .text
 
@@ -47,7 +47,7 @@ Sections standards dont vous ne pouvez pas modifier les attributs incluent,
 
 - .srdata
 
-Les sections supplémentaires peuvent être ajoutées plus tard.
+Des sections supplémentaires peuvent être ajoutées ultérieurement.
 
 ## <a name="see-also"></a>Voir aussi
 

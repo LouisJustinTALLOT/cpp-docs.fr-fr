@@ -6,21 +6,21 @@ f1_keywords:
 helpviewer_keywords:
 - BK1512
 ms.assetid: 0a626ff3-63db-4797-abe4-31545ce2c2c1
-ms.openlocfilehash: 46a6a144e5820e243cf4bdeecf13f2b851b4bf75
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: d3fed3d0de6a96f49df8bd8fdeed1c0148b1fe24
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62279371"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80197650"
 ---
 # <a name="bscmake-error-bk1512"></a>Erreur BSCMAKE BK1512
 
 nom de fichier : capacité dépassée
 
-BSCMAKE ne peut pas générer un fichier d’informations, car le nombre de définitions, des références, des modules ou d’autres informations dépasse la limite.
+BSCMAKE ne peut pas créer un fichier d’informations de consultation, car le nombre de définitions, de références, de modules ou d’autres informations dépasse la limite.
 
 ### <a name="to-fix-by-using-the-following-possible-solutions"></a>Pour résoudre ce problème, appliquez les solutions possibles suivantes.
 
-1. Exclure des informations à l’aide de /Em, / es ou /Ei.
+1. Exclure des informations à l’aide de/em,/es ou/EI.
 
-1. Omettez l’option /Iu.
+1. Omettez l’option/IU.

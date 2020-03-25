@@ -6,12 +6,12 @@ helpviewer_keywords:
 - templates, function
 - function templates, about function templates
 ms.assetid: 59b56a4b-0689-4161-9c07-25021562e2a7
-ms.openlocfilehash: d430ad7650ffa47f0d6334a827b416cfb05ae6c2
-ms.sourcegitcommit: fd466f2e14ad001f52f3dbe54f46d77be10f2d7b
+ms.openlocfilehash: f2caf70dd90e76c7bc4f20ea4bf34845b343efc2
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67894359"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80179742"
 ---
 # <a name="function-templates"></a>Modèles de fonctions
 
@@ -28,9 +28,9 @@ int main() {
 }
 ```
 
-Ce code définit une famille de fonctions qui permutent les valeurs des arguments. À partir de ce modèle, vous pouvez générer des fonctions qui permuteront **int** et **long** types et les types définis par l’utilisateur. `MySwap` permutera même une classe si le constructeur de copie et l'opérateur d'assignation de cette classe sont correctement définis.
+Ce code définit une famille de fonctions qui permutent les valeurs des arguments. À partir de ce modèle, vous pouvez générer des fonctions qui échangent les types **int** et **long** , ainsi que les types définis par l’utilisateur. `MySwap` permutera même une classe si le constructeur de copie et l'opérateur d'assignation de cette classe sont correctement définis.
 
-En outre, le modèle de fonction vous empêche de permuter des objets de types différents, car le compilateur connaît les types de la *un* et *b* paramètres au moment de la compilation.
+En outre, le modèle de fonction vous empêchera de permuter les objets de types différents, car le compilateur connaît les types des paramètres a et *b* au moment de *la* compilation.
 
 Bien que cette fonction puisse être effectuée par une fonction non basée sur un modèle à l'aide de pointeurs void, la version de modèle est de type sécurisé. Prenons les appels suivants :
 
@@ -55,7 +55,7 @@ int main(int j) {
 }
 ```
 
-Lorsque l’argument template est spécifié explicitement, les conversions implicites normales sont effectuées pour convertir l’argument de fonction vers le type des paramètres de modèle de fonction correspondants. Dans l’exemple ci-dessus, le compilateur convertit `j` à taper **char**.
+Lorsque l’argument template est spécifié explicitement, les conversions implicites normales sont effectuées pour convertir l’argument de fonction vers le type des paramètres de modèle de fonction correspondants. Dans l’exemple ci-dessus, le compilateur convertit `j` en type **char**.
 
 ## <a name="see-also"></a>Voir aussi
 

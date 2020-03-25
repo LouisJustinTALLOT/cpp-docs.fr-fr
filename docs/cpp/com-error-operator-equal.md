@@ -6,16 +6,16 @@ f1_keywords:
 helpviewer_keywords:
 - _com_error [C++]
 ms.assetid: b9cc4094-d055-450c-b45a-0a95317488f8
-ms.openlocfilehash: 1c68d10c8f82f5d5ed7f6286ba15437941c0ac6b
-ms.sourcegitcommit: da32511dd5baebe27451c0458a95f345144bd439
-ms.translationtype: HT
+ms.openlocfilehash: 7f24076a0286da910378d6633f483e6f050858b2
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/07/2019
-ms.locfileid: "65222499"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80180548"
 ---
-# <a name="comerroroperator-"></a>_com_error::operator =
+# <a name="_com_erroroperator-"></a>_com_error::operator =
 
-**Section spécifique à Microsoft**
+**Section spécifique de Microsoft**
 
 Assigne un objet `_com_error` existant à un autre.
 
@@ -29,10 +29,10 @@ _com_error& operator = (
 
 #### <a name="parameters"></a>Paramètres
 
-*that*<br/>
-Objet `_com_error`.
+*comprenant*<br/>
+Objet `_com_error` .
 
-**FIN de la section spécifique à Microsoft**
+**Fin de la section spécifique de Microsoft**
 
 ## <a name="see-also"></a>Voir aussi
 

@@ -8,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - __stdcall keyword [C++]
 ms.assetid: e212594b-1827-4d07-9527-7d412b300df8
-ms.openlocfilehash: df753241c093db75202a10b106631ce36cf73379
-ms.sourcegitcommit: a6d63c07ab9ec251c48bc003ab2933cf01263f19
+ms.openlocfilehash: 3abd1d020e4181a42a7bc38319e5e17e69ef0507
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/05/2019
-ms.locfileid: "74857279"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80178536"
 ---
 # <a name="__stdcall"></a>__stdcall
 
@@ -33,7 +33,7 @@ La liste suivante illustre l'implémentation de cette convention d'appel.
 |Convention de passage d'argument|Par valeur, à moins qu'un type pointeur ou référence soit passé.|
 |Responsabilité de la maintenance de la pile|La fonction appelée enlève ses propres arguments de la pile.|
 |Convention de décoration de nom|Un trait de soulignement (_) est ajouté en préfixe au nom. Le nom est suivi de l'arobase (@), suivi du nombre d'octets (au format décimal) dans la liste d'arguments. Par conséquent, la fonction déclarée comme `int func( int a, double b )` est décorée comme suit : `_func@12`|
-|Convention de conversion de casse|Aucun|
+|Convention de conversion de casse|None|
 
 L’option du compilateur [/gz](../build/reference/gd-gr-gv-gz-calling-convention.md) spécifie **__stdcall** pour toutes les fonctions qui ne sont pas déclarées explicitement avec une convention d’appel différente.
 
@@ -51,7 +51,7 @@ struct CMyClass {
 };
 ```
 
-this
+ceci
 
 ```cpp
 void CMyClass::mymethod() { return; }

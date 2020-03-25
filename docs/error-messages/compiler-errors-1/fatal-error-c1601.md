@@ -6,15 +6,15 @@ f1_keywords:
 helpviewer_keywords:
 - C1601
 ms.assetid: 25797c39-f085-4d75-9eab-159ecd36ef49
-ms.openlocfilehash: cade1c216053e61b14bd9ccdd0b50e0325bb5cc7
-ms.sourcegitcommit: c6f8e6c2daec40ff4effd8ca99a7014a3b41ef33
+ms.openlocfilehash: 22dfdd47fca596282762873ea86b9382c4d8f997
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "64344769"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80202915"
 ---
 # <a name="fatal-error-c1601"></a>Erreur irrécupérable C1601
 
 opcode d'assembly inline non pris en charge
 
-Cette erreur indique une incompatibilité dans vos fichiers .exe du compilateur, qui pourrait avoir lieu en raison d’une installation incomplète. Par exemple, vous avez peut-être installé un service pack mais pas le Pack de processeur. Installez tous les produits requis.
+Cette erreur indique une incompatibilité dans vos fichiers. exe du compilateur, ce qui s’est peut-être produit en raison d’une installation incomplète. Par exemple, vous avez peut-être installé un Service Pack mais pas le Pack de processeur. Installez tous les produits requis.

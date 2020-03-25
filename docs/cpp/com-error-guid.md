@@ -6,18 +6,18 @@ f1_keywords:
 helpviewer_keywords:
 - GUID method [C++]
 ms.assetid: e84c2c23-d02e-48f8-b776-9bd6937296d2
-ms.openlocfilehash: 905b67577a65b81be0b4d18c7513652dd8c5f055
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: d5b05cd4e26f89d42ea23b605f5e6560795a0cfa
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62155057"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80180639"
 ---
-# <a name="comerrorguid"></a>_com_error::GUID
+# <a name="_com_errorguid"></a>_com_error::GUID
 
-**Section spécifique à Microsoft**
+**Section spécifique de Microsoft**
 
-Appels `IErrorInfo::GetGUID` (fonction).
+Appelle `IErrorInfo::GetGUID` fonction.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -27,13 +27,13 @@ GUID GUID( ) const throw( );
 
 ## <a name="return-value"></a>Valeur de retour
 
-Retourne le résultat de `IErrorInfo::GetGUID` pour le `IErrorInfo` objet enregistré dans le `_com_error` objet. Si aucun `IErrorInfo` objet est enregistré, elle retourne `GUID_NULL`.
+Retourne le résultat de `IErrorInfo::GetGUID` pour l’objet `IErrorInfo` enregistré dans l’objet `_com_error`. Si aucun objet `IErrorInfo` n’est enregistré, il retourne `GUID_NULL`.
 
 ## <a name="remarks"></a>Notes
 
-Tout échec lors de l’appel la `IErrorInfo::GetGUID` méthode est ignorée.
+Tout échec lors de l’appel de la méthode `IErrorInfo::GetGUID` est ignoré.
 
-**FIN de la section spécifique à Microsoft**
+**Fin de la section spécifique de Microsoft**
 
 ## <a name="see-also"></a>Voir aussi
 

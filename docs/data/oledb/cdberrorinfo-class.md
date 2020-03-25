@@ -38,12 +38,12 @@ helpviewer_keywords:
 - GetErrorParameters method
 - GetErrorRecords method
 ms.assetid: 9a5c18a2-ee3e-40f5-ab4c-581288d7f737
-ms.openlocfilehash: 2d2b21652fd5ee3604c3c72c2168c3d9a495caf1
-ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
+ms.openlocfilehash: 8c91beb2a305604f663d5e81b4a534a1699705cf
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/17/2020
-ms.locfileid: "79447467"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80212018"
 ---
 # <a name="cdberrorinfo-class"></a>CDBErrorInfo, classe
 
@@ -76,7 +76,7 @@ class CDBErrorInfo
 
 Cette interface retourne un ou plusieurs enregistrements d’erreur à l’utilisateur. Appelez [CDBErrorInfo :: GetErrorRecords](../../data/oledb/cdberrorinfo-geterrorrecords.md) en premier, pour obtenir le nombre d’enregistrements d’erreur. Appelez ensuite l’une des fonctions d’accès, telles que [CDBErrorInfo :: GetAllErrorInfo](../../data/oledb/cdberrorinfo-getallerrorinfo.md), pour récupérer les informations d’erreur pour chaque enregistrement.
 
-## <a name="getallerrorinfo"></a>CDBErrorInfo :: GetAllErrorInfo
+## <a name="cdberrorinfogetallerrorinfo"></a><a name="getallerrorinfo"></a>CDBErrorInfo :: GetAllErrorInfo
 
 Retourne tous les types d’informations d’erreur contenus dans un enregistrement d’erreur.
 
@@ -126,7 +126,7 @@ La valeur de sortie de *pbstrDescription* est obtenue en interne en appelant `IE
 
 1. la valeur de *LCID* n’est pas égale à la valeur retournée par GetUserDefaultLCID.
 
-## <a name="getbasicerrorinfo"></a>CDBErrorInfo :: GetBasicErrorInfo
+## <a name="cdberrorinfogetbasicerrorinfo"></a><a name="getbasicerrorinfo"></a>CDBErrorInfo :: GetBasicErrorInfo
 
 Appelle [IErrorRecords :: GetBasicErrorInfo](/previous-versions/windows/desktop/ms723907(v=vs.85)) pour retourner des informations de base sur l’erreur, telles que le code de retour et le numéro d’erreur spécifique au fournisseur.
 
@@ -145,7 +145,7 @@ Consultez [IErrorRecords :: GetBasicErrorInfo](/previous-versions/windows/deskt
 
 HRESULT standard.
 
-## <a name="getcustomerrorobject"></a>CDBErrorInfo :: GetCustomErrorObject
+## <a name="cdberrorinfogetcustomerrorobject"></a><a name="getcustomerrorobject"></a>CDBErrorInfo :: GetCustomErrorObject
 
 Appelle [IErrorRecords :: GetCustomErrorObject](/previous-versions/windows/desktop/ms725417(v=vs.85)) pour retourner un pointeur vers une interface sur un objet d’erreur personnalisé.
 
@@ -164,7 +164,7 @@ Consultez [IErrorRecords :: GetCustomErrorObject](/previous-versions/windows/de
 
 HRESULT standard.
 
-## <a name="geterrorinfo"></a>CDBErrorInfo :: GetErrorInfo
+## <a name="cdberrorinfogeterrorinfo"></a><a name="geterrorinfo"></a>CDBErrorInfo :: GetErrorInfo
 
 Appelle [IErrorRecords :: GetErrorInfo](/previous-versions/windows/desktop/ms711230(v=vs.85)) pour retourner un pointeur d’interface [IErrorInfo](/previous-versions/windows/desktop/ms718112(v=vs.85)) à l’enregistrement spécifié.
 
@@ -183,7 +183,7 @@ Consultez [IErrorRecords :: GetErrorInfo](/previous-versions/windows/desktop/ms
 
 HRESULT standard.
 
-## <a name="geterrorparameters"></a>CDBErrorInfo :: GetErrorParameters
+## <a name="cdberrorinfogeterrorparameters"></a><a name="geterrorparameters"></a>CDBErrorInfo :: GetErrorParameters
 
 Appelle [IErrorRecords :: GetErrorParameters](/previous-versions/windows/desktop/ms715793(v=vs.85)) pour retourner les paramètres d’erreur.
 
@@ -202,7 +202,7 @@ Consultez [IErrorRecords :: GetErrorParameters](/previous-versions/windows/desk
 
 HRESULT standard.
 
-## <a name="geterrorrecords"></a>CDBErrorInfo :: GetErrorRecords
+## <a name="cdberrorinfogeterrorrecords"></a><a name="geterrorrecords"></a>CDBErrorInfo :: GetErrorRecords
 
 Obtient les enregistrements d’erreur pour l’objet spécifié.
 

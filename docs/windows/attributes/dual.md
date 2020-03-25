@@ -1,21 +1,21 @@
 ---
-title: Double (attribut de COM C++)
+title: double (C++ attribut com)
 ms.date: 10/02/2018
 f1_keywords:
 - vc-attr.dual
 helpviewer_keywords:
 - dual attribute
 ms.assetid: 5d4a9069-d819-42cd-ba56-bbcda17157d9
-ms.openlocfilehash: 8f02f6b69b31f10b41d5c920cfc2ad62dfa1cef2
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 66cd6eb9141244397609cc6421ead74d1eb8547e
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62409679"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80168211"
 ---
 # <a name="dual"></a>dual
 
-Place une interface dans le fichier .idl comme une interface double.
+Place une interface dans le fichier. idl en tant qu’interface double.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -25,7 +25,7 @@ Place une interface dans le fichier .idl comme une interface double.
 
 ## <a name="remarks"></a>Notes
 
-Lorsque le **double** attribut C++ précède une interface, il fait en sorte d’être placées dans le bloc de bibliothèque dans le fichier .idl généré.
+Lorsque l’attribut **double** C++ précède une interface, il fait en sorte que l’interface soit placée dans le bloc de bibliothèque dans le fichier. idl généré.
 
 ## <a name="example"></a>Exemple
 
@@ -53,7 +53,7 @@ __interface IStatic : IDispatch
 [cpp_quote("#include file.h")];
 ```
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
 ### <a name="attribute-context"></a>Contexte d'attribut
 
@@ -61,7 +61,7 @@ __interface IStatic : IDispatch
 |-|-|
 |**S'applique à**|**interface**|
 |**Renouvelable**|Non|
-|**Attributs requis**|Aucun.|
+|**Attributs requis**|None|
 |**Attributs non valides**|`dispinterface`|
 
 Pour plus d'informations, consultez [Contextes d'attribut](cpp-attributes-com-net.md#contexts).

@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C2150
 ms.assetid: 21e82a10-c1d4-4c0d-9dc6-c5d92ea42a31
-ms.openlocfilehash: a9c6465ef87c12135ad4e6709741f0027d8ea3c7
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 57c21f7ee9435220a9ca0b50bb85567506b6ad3e
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62175145"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80207218"
 ---
 # <a name="compiler-error-c2150"></a>Erreur du compilateur C2150
 
-> «*identificateur*' : champ de bits doit être de type 'int', 'signed int' ou 'unsigned int'
+> '*identificateur*' : le champ de bits doit être de type’int', 'signed int’ou’unsigned int'
 
-Le type de base pour un champ de bits doit être `int`, `signed int`, ou `unsigned int`.
+Le type de base pour un champ de bits doit être `int`, `signed int`ou `unsigned int`.
 
 ## <a name="example"></a>Exemple
 
-Cet exemple montre comment vous pouvez rencontrer C2150, et comment vous pouvez y remédier :
+Cet exemple montre comment vous pouvez rencontrer C2150 et comment le résoudre :
 
 ```cpp
 // C2150.cpp

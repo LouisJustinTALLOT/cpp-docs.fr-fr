@@ -1,21 +1,21 @@
 ---
-title: RDX (attribut de COM C++)
+title: RDX (C++ attribut com)
 ms.date: 10/02/2018
 f1_keywords:
 - vc-attr.rdx
 helpviewer_keywords:
 - rdx attribute
 ms.assetid: ff8e4312-c1ad-4934-bdaa-86f54409651e
-ms.openlocfilehash: 2790c3de01d21242daee73fc442ad22d88739355
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: f0140b759b1d78eb1284213a0dc47d9600b2a83b
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62407495"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80214628"
 ---
 # <a name="rdx"></a>rdx
 
-Crée une clé de Registre ou modifie une clé de Registre existante.
+Crée une clé de registre ou modifie une clé de Registre existante.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -26,36 +26,36 @@ Crée une clé de Registre ou modifie une clé de Registre existante.
 ### <a name="parameters"></a>Paramètres
 
 *key*<br/>
-Le nom de la clé à être créé ou ouvert.
+Nom de la clé à créer ou ouvrir.
 
-*valuename*<br/>
-(Facultatif) Spécifie le champ de valeur à définir. Si un champ de valeur portant ce nom n’existe pas déjà dans la clé, il est ajouté.
+*valueName*<br/>
+Facultatif Spécifie le champ de valeur à définir. Si un champ de valeur portant ce nom n’existe pas déjà dans la clé, il est ajouté.
 
 *regtype*<br/>
-Le type de clé de Registre en cours d’ajout. Peut prendre l’une des opérations suivantes : `text`, `dword`, `binary`, ou `CString`.
+Type de clé de Registre ajoutée. Il peut s’agir de l’une des valeurs suivantes : `text`, `dword`, `binary`ou `CString`.
 
 ## <a name="remarks"></a>Notes
 
-Le **rdx** attribut C++ crée ou modifie une clé de Registre existante pour un composant COM. L’attribut ajoute une macro BEGIN_RDX_MAP à l’objet qui implémente le membre cible. `RegistryDataExchange`, une fonction injectée à la suite de la macro BEGIN_RDX_MAP, peut être utilisée pour transférer des données entre le Registre et les membres de données
+L’attribut **RDX** C++ crée ou modifie une clé de Registre existante pour un composant com. L’attribut ajoute une macro BEGIN_RDX_MAP à l’objet qui implémente le membre cible. `RegistryDataExchange`, une fonction injectée à la suite de la macro BEGIN_RDX_MAP, peut être utilisée pour transférer des données entre le registre et les membres de données.
 
-Cet attribut peut être utilisé conjointement avec le [coclasse](coclass.md), [progid](progid.md), ou [vi_progid](vi-progid.md) ou les autres attributs qui implique l’un d'entre eux.
+Cet attribut peut être utilisé conjointement avec les attributs [coclass](coclass.md), [ProgID](progid.md)ou [vi_progid](vi-progid.md) ou d’autres attributs qui impliquent l’un de ces attributs.
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
 ### <a name="attribute-context"></a>Contexte d'attribut
 
 |||
 |-|-|
-|**S'applique à**|**classe** ou **struct** membre|
+|**S'applique à**|membre de **classe** ou de **struct**|
 |**Renouvelable**|Non|
-|**Attributs requis**|Aucun.|
-|**Attributs non valides**|Aucun.|
+|**Attributs requis**|None|
+|**Attributs non valides**|None|
 
 Pour plus d'informations sur les contextes d'attribut, consultez [Contextes d'attribut](cpp-attributes-com-net.md#contexts).
 
 ## <a name="example"></a>Exemple
 
-Le code suivant ajoute une clé de Registre appelée MyValue pour le système qui décrit le composant COM de CMyClass.
+Le code suivant ajoute une clé de Registre nommée MyValue au système décrivant le composant de modèle d’élément de configuration (CMyClass).
 
 ```cpp
 // cpp_attr_ref_rdx.cpp

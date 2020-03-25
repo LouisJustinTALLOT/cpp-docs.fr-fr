@@ -9,12 +9,12 @@ helpviewer_keywords:
 - declaring classes [C++]
 - declarations, nested classes
 ms.assetid: c02e471d-b7f9-41b8-8ef6-2323f006dbd5
-ms.openlocfilehash: 0ffe1077da76d7524ce99d825e97f68a031ca315
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: a1464ce9ca8349550160c768265c1c4eada93209
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62301550"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80161162"
 ---
 # <a name="nested-class-declarations"></a>Déclarations de classes imbriquées
 
@@ -54,7 +54,7 @@ int main()
 }
 ```
 
-`BufferedIO::BufferedInput` et `BufferedIO::BufferedOutput` sont déclarés dans `BufferedIO`. Ces noms de classe ne sont pas visibles en dehors de la portée de la classe `BufferedIO`. Toutefois, un objet de type `BufferedIO` ne contient aucun objet de type `BufferedInput` ou `BufferedOutput`.
+les `BufferedIO::BufferedInput` et les `BufferedIO::BufferedOutput` sont déclarés dans `BufferedIO`. Ces noms de classe ne sont pas visibles en dehors de la portée de la classe `BufferedIO`. Toutefois, un objet de type `BufferedIO` ne contient aucun objet de type `BufferedInput` ou `BufferedOutput`.
 
 Les classes imbriquées ne peuvent utiliser directement les noms, les noms de types, les noms des membres statiques et les énumérateurs qu'à partir de la classe englobante. Pour utiliser des noms d'autres membres de classe, vous devez utiliser des pointeurs, les références ou des noms d'objet.
 
@@ -63,7 +63,7 @@ Dans l'exemple `BufferedIO` précédent, l'énumération `IOError` est accessibl
 > [!NOTE]
 >  Les classes imbriquées déclarent uniquement des types dans la portée de classe. Elles n'entraînent pas la création d'objets contenus de la classe imbriquée. L'exemple précédent déclare deux classes imbriquées mais ne déclare aucun objet de ces types de classe.
 
-Il existe une exception à la visibilité de portée d'une déclaration de classe imbriquée : lorsqu'un nom de type est déclaré avec une déclaration anticipée.  Dans ce cas, le nom de classe déclaré par la déclaration anticipée est visible en dehors de la classe englobante, sa portée étant définie de telle sorte qu'elle est la plus petite portée englobante sans classe.  Exemple :
+Il existe une exception à la visibilité de portée d'une déclaration de classe imbriquée : lorsqu'un nom de type est déclaré avec une déclaration anticipée.  Dans ce cas, le nom de classe déclaré par la déclaration anticipée est visible en dehors de la classe englobante, sa portée étant définie de telle sorte qu'elle est la plus petite portée englobante sans classe.  Par exemple :
 
 ```cpp
 // nested_class_declarations_2.cpp
@@ -134,13 +134,13 @@ int main()
 }
 ```
 
-Dans l’exemple précédent, le *qualified-type-name* syntaxe est utilisée pour déclarer le nom de fonction. La déclaration :
+Dans l’exemple précédent, la syntaxe *Qualified-type-name* est utilisée pour déclarer le nom de la fonction. La déclaration :
 
 ```cpp
 BufferedIO::BufferedInput::read()
 ```
 
-signifie « la fonction `read` qui est membre de la classe `BufferedInput` qui est dans la portée de la classe `BufferedIO`  ». Étant donné que cette déclaration utilise le *qualified-type-name* syntaxe, les constructions de la forme suivante sont possibles :
+signifie « la fonction `read` qui est membre de la classe `BufferedInput` qui est dans la portée de la classe `BufferedIO`  ». Étant donné que cette déclaration utilise la syntaxe *Qualified-type-name* , les constructions de la forme suivante sont possibles :
 
 ```cpp
 typedef BufferedIO::BufferedInput BIO_INPUT;
@@ -148,7 +148,7 @@ typedef BufferedIO::BufferedInput BIO_INPUT;
 int BIO_INPUT::read()
 ```
 
-La déclaration précédente équivaut au précédent, mais il utilise un **typedef** nom à la place des noms de classes.
+La déclaration précédente est équivalente à la précédente, mais elle utilise un nom **typedef** à la place des noms de classe.
 
 ## <a name="friend-functions-in-nested-classes"></a>Fonctions friend dans les classes imbriquées
 

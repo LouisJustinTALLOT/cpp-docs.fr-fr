@@ -6,16 +6,16 @@ f1_keywords:
 helpviewer_keywords:
 - final Identifier
 ms.assetid: 649866d0-79d4-449f-ab74-f84b911b79a3
-ms.openlocfilehash: c6400c8060664713fdd004a5aa9536e0617bc0c8
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 93e8d9b0b445d1120ec15911eb763ae1d7d2d359
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62154774"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80188654"
 ---
 # <a name="final-specifier"></a>Spécificateur final
 
-Vous pouvez utiliser la **finale** mot clé pour désigner les fonctions virtuelles qui ne peut pas être substituées dans une classe dérivée. Vous pouvez également l'utiliser pour désigner les classes qui ne peuvent pas être héritées.
+Vous pouvez utiliser le mot clé **final** pour désigner des fonctions virtuelles qui ne peuvent pas être substituées dans une classe dérivée. Vous pouvez également l'utiliser pour désigner les classes qui ne peuvent pas être héritées.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -26,13 +26,13 @@ class class-name final base-classes
 
 ## <a name="remarks"></a>Notes
 
-**finale** est contextuel et a une signification spéciale uniquement lorsqu’il est utilisé après une déclaration de fonction ou le nom de classe ; sinon, il n’est pas un mot clé réservé.
+**final** est contextuel et a une signification spéciale uniquement lorsqu’il est utilisé après une déclaration de fonction ou un nom de classe ; dans le cas contraire, il ne s’agit pas d’un mot clé réservé.
 
-Lorsque **finale** est utilisé dans les déclarations de classe, `base-classes` est une partie facultative de la déclaration.
+Lorsque **final** est utilisé dans les déclarations de classe, `base-classes` est une partie facultative de la déclaration.
 
 ## <a name="example"></a>Exemple
 
-L’exemple suivant utilise le **finale** mot clé pour spécifier qu’une fonction virtuelle ne peut pas être substituée.
+L’exemple suivant utilise le mot clé **final** pour spécifier qu’une fonction virtuelle ne peut pas être substituée.
 
 ```cpp
 class BaseClass
@@ -47,9 +47,9 @@ class DerivedClass: public BaseClass
 };
 ```
 
-Pour plus d’informations sur la façon de spécifier que les fonctions membres peuvent être remplacées, consultez [spécificateur de substitution](../cpp/override-specifier.md).
+Pour plus d’informations sur la façon de spécifier que les fonctions membres peuvent être substituées, consultez [spécificateur de substitution](../cpp/override-specifier.md).
 
-L’exemple suivant utilise le **finale** mot clé pour spécifier qu’une classe ne peut pas être héritée.
+L’exemple suivant utilise le mot clé **final** pour spécifier qu’une classe ne peut pas être héritée.
 
 ```cpp
 class BaseClass final

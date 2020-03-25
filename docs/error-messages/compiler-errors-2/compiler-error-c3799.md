@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C3799
 ms.assetid: 336a2811-9370-4e6e-b03b-325bda470805
-ms.openlocfilehash: 19ff414bde9bb24fca62fd10cfef6d18109199e8
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 980683ebc2e086e4c16180f04466af9dbdd49d02
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62400121"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80165650"
 ---
 # <a name="compiler-error-c3799"></a>Erreur du compilateur C3799
 
-propriété indexée ne peut pas avoir une liste de paramètres vide
+la propriété indexée ne peut pas avoir une liste de paramètres vide
 
-Une propriété indexée a été correctement déclarée. Pour plus d'informations, voir [Procédure : Utilisez les propriétés de C++/CLI](../../dotnet/how-to-use-properties-in-cpp-cli.md).
+Une propriété indexée a été déclarée de manière incorrecte. Pour plus d’informations, consultez [Comment : utiliser des propriétés C++dans/CLI](../../dotnet/how-to-use-properties-in-cpp-cli.md).
 
 ## <a name="example"></a>Exemple
 
-L’exemple suivant génère C3799 et montre comment la corriger.
+L’exemple suivant génère l’C3799 et montre comment la corriger.
 
 ```cpp
 // C3799.cpp

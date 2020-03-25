@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - C3850
 ms.assetid: 028f3a37-f3ad-4ebc-9168-3cdea47524d4
-ms.openlocfilehash: 9cd0428726f92c7347b162f74b46035f99cc2d3c
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 5de7994e8bf46105e94271ab29bf9e27f1da3e76
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62380953"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80165560"
 ---
 # <a name="compiler-error-c3850"></a>Erreur du compilateur C3850
 
-> «*char*' : un nom de caractère universel spécifie un caractère non valide
+> '*char*' : un nom de caractère universel spécifie un caractère non valide
 
 ## <a name="remarks"></a>Notes
 
 Les caractères représentés en tant que noms de caractères universels doivent représenter des points de code Unicode valides dans la plage 0-10FFFF. Un nom de caractère universel ne peut pas contenir une valeur dans la plage de substitution Unicode, D800-DFFF, ou une paire de substitution encodée. Le compilateur génère automatiquement la paire de substitution à partir d’un point de code valide.
 
-Dans le code compilé en C, un nom de caractère universel ne peut pas représenter un caractère dans la plage 0000-009F, inclus, à l’exception de 0024 (« $»), 0040 («\@») et 0060 ('' ').
+Dans le code compilé en tant que C, un nom de caractère universel ne peut pas représenter un caractère dans la plage 0000-009F, incluse, avec les exceptions de 0024 (' $ '), 0040 ('\@') et 0060 (' ' ').
 
 Dans du code compilé en C++, un nom de caractère universel peut utiliser n’importe quel point de code Unicode valide dans un littéral de chaîne ou de caractère. En dehors d’un littéral, un nom de caractère universel ne peut pas représenter un caractère de contrôle dans les plages 0000-001F ou 007F-009F (plages inclusives), ou un membre du jeu de caractères sources de base.  Pour plus d’informations, consultez [Character Sets](../../cpp/character-sets.md).
 

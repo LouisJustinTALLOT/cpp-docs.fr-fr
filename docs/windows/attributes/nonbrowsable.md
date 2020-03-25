@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - nonbrowsable attribute
 ms.assetid: e71a98e7-4b65-454a-9829-342b9f2a84be
-ms.openlocfilehash: 8b1849aa75e61ea5e369a277cab0b1327f48a28a
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: f0aae070c1c97695180797b228178b210493b7bb
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69514383"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80166560"
 ---
 # <a name="nonbrowsable"></a>nonbrowsable
 
@@ -25,7 +25,7 @@ Indique qu’un membre d’interface ne doit pas être affiché dans un Explorat
 
 ## <a name="remarks"></a>Notes
 
-L' C++ attribut ne pouvant être exploré a les mêmes fonctionnalités que l’attribut MIDL ne pouvant être [exploré](/windows/win32/Midl/nonbrowsable) .
+L' **nonbrowsable** C++ attribut ne pouvant être exploré a les mêmes fonctionnalités que l’attribut MIDL ne pouvant être [exploré](/windows/win32/Midl/nonbrowsable) .
 
 ## <a name="example"></a>Exemple
 
@@ -43,7 +43,7 @@ __interface IMyI
 };
 ```
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
 ### <a name="attribute-context"></a>Contexte d'attribut
 
@@ -51,8 +51,8 @@ __interface IMyI
 |-|-|
 |**S'applique à**|Méthode d’interface|
 |**Renouvelable**|Non|
-|**Attributs requis**|Aucun|
-|**Attributs non valides**|Aucun|
+|**Attributs requis**|None|
+|**Attributs non valides**|None|
 
 Pour plus d'informations sur les contextes d'attribut, consultez [Contextes d'attribut](cpp-attributes-com-net.md#contexts).
 

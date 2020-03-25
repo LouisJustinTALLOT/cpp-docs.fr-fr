@@ -7,15 +7,15 @@ helpviewer_keywords:
 - CXX0001
 - CAN0001
 ms.assetid: 39cdf175-e4b8-49c1-bf84-ed41e0fd8600
-ms.openlocfilehash: 42ad31e6ebecb7b6755d773dff0fc8e0d1fc4c06
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 8dc1968e0733760c7d72c247985003a77afe90e4
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62406195"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80196389"
 ---
 # <a name="expression-evaluator-error-cxx0001"></a>Évaluateur d'expression, erreur CXX0001
 
-fonction de l’utilisateur en cours d’exécution exception
+exception lors de l’exécution de la fonction utilisateur
 
 Le code en cours d’exécution a provoqué une erreur de protection générale. Cette erreur est identique à CAN0001.

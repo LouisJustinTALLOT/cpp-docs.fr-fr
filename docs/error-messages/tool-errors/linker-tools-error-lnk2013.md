@@ -6,25 +6,25 @@ f1_keywords:
 helpviewer_keywords:
 - LNK2013
 ms.assetid: 21408e2d-3f56-4d1f-a031-00df70785ed4
-ms.openlocfilehash: 4d932a89f1b0bde27f6de2f84b2ed103dab1b1b0
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 6ad3f40f06e64422b393edb457a0dcf419828b6f
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62299066"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80194744"
 ---
 # <a name="linker-tools-error-lnk2013"></a>Erreur des outils Éditeur de liens LNK2013
 
-type correction débordement. Cible 'symbol name' est hors limites
+dépassement de la correction du type de correction. La cible’Symbol Name’est hors limites
 
-L’éditeur de liens ne rentrent pas l’offset ou une adresse nécessaire sur l’instruction donnée parce que le symbole cible est trop loin à partir de l’emplacement de l’instruction.
+L’éditeur de liens ne peut pas contenir l’adresse ou le décalage nécessaire dans l’instruction donnée, car le symbole cible est trop éloigné de l’emplacement de l’instruction.
 
-Vous pouvez résoudre ce problème en créant plusieurs images ou en utilisant le [/Order](../../build/reference/order-put-functions-in-order.md) option pour l’instruction et la cible rapprocher.
+Vous pouvez résoudre ce problème en créant plusieurs images ou à l’aide de l’option [/Order](../../build/reference/order-put-functions-in-order.md) afin que l’instruction et la cible soient plus proches.
 
-Lorsque le nom du symbole est un symbole défini par l’utilisateur (et non généré par le compilateur), vous pouvez également essayer les actions suivantes pour résoudre l’erreur :
+Lorsque le nom du symbole est un symbole défini par l’utilisateur (et non un symbole généré par le compilateur), vous pouvez également essayer les actions suivantes pour résoudre l’erreur :
 
-- Modifier la fonction statique pour être non statique.
+- Modifiez la fonction statique pour qu’elle soit non statique.
 
-- Renommer la section de code contenant la fonction statique pour être le même que l’appelant.
+- Renommez la section de code contenant la fonction statique pour qu’elle soit identique à celle de l’appelant.
 
-Utilisez `DUMPBIN /SYMBOLS`, pour voir si une fonction est statique.
+Utilisez `DUMPBIN /SYMBOLS`pour voir si une fonction est statique.

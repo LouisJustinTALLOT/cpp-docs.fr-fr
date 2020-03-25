@@ -1,5 +1,5 @@
 ---
-title: 'Recordset : Actualisation d’un jeu d’enregistrements (ODBC)'
+title: "Recordset : lancement d'une nouvelle requête sur un recordset (ODBC)"
 ms.date: 11/04/2016
 helpviewer_keywords:
 - recordsets, requerying
@@ -8,55 +8,55 @@ helpviewer_keywords:
 - ODBC recordsets, requerying
 - refreshing recordsets
 ms.assetid: 4ebc3b5b-5b91-4f51-a967-245223c6b8e1
-ms.openlocfilehash: 7edc1c04da617f96165b25a47ce169b266ae0003
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: b7cf40ca3b0c8e415368772063aee61008a52764
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62397703"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80212782"
 ---
-# <a name="recordset-requerying-a-recordset-odbc"></a>Recordset : Actualisation d’un jeu d’enregistrements (ODBC)
+# <a name="recordset-requerying-a-recordset-odbc"></a>Recordset : lancement d'une nouvelle requête sur un recordset (ODBC)
 
 Cette rubrique s’applique aux classes ODBC MFC.
 
-Cette rubrique explique comment vous pouvez utiliser un objet recordset à requery (Actualiser) à partir de la base de données et lorsque vous souhaiterez peut-être le faire avec le [Requery](../../mfc/reference/crecordset-class.md#requery) fonction membre.
+Cette rubrique explique comment vous pouvez utiliser un objet Recordset pour rerequête (c’est-à-dire actualiser) lui-même à partir de la base de données et lorsque vous souhaitez le faire avec la fonction membre [Requery](../../mfc/reference/crecordset-class.md#requery) .
 
-Les principales raisons pour l’actualisation d’un jeu d’enregistrements sont :
+Les principales raisons justifiant une interrogation d’un jeu d’enregistrements sont les suivantes :
 
-- Mettre le recordset à jour en ce qui concerne les enregistrements ajoutés par vous ou par d’autres utilisateurs et les enregistrements supprimés par d’autres utilisateurs (ceux que vous supprimez sont déjà reflétées dans le jeu d’enregistrements).
+- Mettez le jeu d’enregistrements à jour en ce qui concerne les enregistrements ajoutés par vous ou par d’autres utilisateurs et les enregistrements supprimés par d’autres utilisateurs (ceux que vous supprimez sont déjà reflétés dans le jeu d’enregistrements).
 
-- Actualiser le jeu d’enregistrements basé sur la modification des valeurs de paramètre.
+- Actualisez le jeu d’enregistrements en fonction des valeurs de paramètre modifiées.
 
-##  <a name="_core_bringing_the_recordset_up_to_date"></a> Mise à jour le jeu d’enregistrements
+##  <a name="bringing-the-recordset-up-to-date"></a><a name="_core_bringing_the_recordset_up_to_date"></a>Mise à jour du Recordset
 
-Souvent, vous devez actualiser votre objet de jeu d’enregistrements pour le mettre à jour. Dans un environnement de base de données multi-utilisateur, d’autres utilisateurs peuvent apporter des modifications aux données pendant la durée de vie de votre jeu d’enregistrements. Pour plus d’informations sur quand votre recordset reflète les modifications apportées par d’autres utilisateurs et quand les recordsets des autres utilisateurs reflètent vos modifications, consultez [jeu d’enregistrements : Modification des enregistrements par mise à jour des jeux d’enregistrements (ODBC)](../../data/odbc/recordset-how-recordsets-update-records-odbc.md) et [Dynaset](../../data/odbc/dynaset.md).
+Souvent, vous souhaiterez peut-être interroger votre objet Recordset pour le mettre à jour. Dans un environnement de base de données multi-utilisateur, d’autres utilisateurs peuvent apporter des modifications aux données pendant la durée de vie de votre Recordset. Pour plus d’informations sur le moment où votre recordset reflète les modifications apportées par d’autres utilisateurs et quand les recordsets des autres utilisateurs reflètent vos modifications, consultez [Recordset : comment les recordsets mettent à jour les enregistrements (ODBC)](../../data/odbc/recordset-how-recordsets-update-records-odbc.md) et [Dynaset](../../data/odbc/dynaset.md).
 
-##  <a name="_core_requerying_based_on_new_parameters"></a> Réexécutez la requête basée sur les nouveaux paramètres
+##  <a name="requerying-based-on-new-parameters"></a><a name="_core_requerying_based_on_new_parameters"></a>Rerequête basée sur de nouveaux paramètres
 
-Une autre utilisation fréquente et il est tout aussi important, utilisez de [Requery](../../mfc/reference/crecordset-class.md#requery) consiste à sélectionner un nouveau jeu d’enregistrements basé sur la modification des valeurs de paramètre.
-
-> [!TIP]
->  Vitesse de la requête est sans doute beaucoup plus rapide si vous appelez `Requery` avec modification des valeurs de paramètre que si vous appelez `Open` à nouveau.
-
-##  <a name="_core_requerying_dynasets_vs.._snapshots"></a> Actualisant les Dynasets vs. Snapshots
-
-Étant donné que les feuilles de réponse dynamiques sont censées présenter un ensemble d’enregistrements avec des données à jour dynamiques, vous souhaitez vous lanciez souvent si vous souhaitez refléter les ajouts d’autres utilisateurs. Captures instantanées, quant à eux, sont utiles, car vous pouvez en toute sécurité s’appuient sur leur contenu statique lors de la préparation des États, calculer des totaux et ainsi de suite. Cependant, il est parfois utile actualiser un instantané. Dans un environnement multi-utilisateur, données de capture instantanée peuvent perdre la synchronisation avec la source de données comme les autres utilisateurs modifier la base de données.
-
-#### <a name="to-requery-a-recordset-object"></a>Pour actualiser un objet recordset
-
-1. Appelez le [Requery](../../mfc/reference/crecordset-class.md#requery) fonction membre de l’objet.
-
-Vous pouvez également fermer et rouvrir le jeu d’enregistrements d’origine. Dans les deux cas, le nouveau jeu d’enregistrements représente l’état actuel de la source de données.
-
-Pour obtenir un exemple, consultez [vues d’enregistrements : Remplissage d’une zone de liste à partir d’un Second Recordset](../../data/filling-a-list-box-from-a-second-recordset-mfc-data-access.md).
+Une autre utilisation fréquente, et tout aussi importante, de la [rerequête](../../mfc/reference/crecordset-class.md#requery) consiste à sélectionner un nouvel ensemble d’enregistrements en fonction des valeurs de paramètre modifiées.
 
 > [!TIP]
->  Pour optimiser les `Requery` performances, évitez de modifier le jeu d’enregistrements [filtre](../../data/odbc/recordset-filtering-records-odbc.md) ou [tri](../../data/odbc/recordset-sorting-records-odbc.md). Modifier uniquement la valeur du paramètre avant d’appeler `Requery`.
+>  La vitesse de la requête est probablement beaucoup plus rapide si vous appelez `Requery` avec des valeurs de paramètres variables que si vous rappelez `Open`.
 
-Si le `Requery` appeler échoue, vous pouvez réessayer l’appel ; sinon, votre application se termine normalement. Un appel à `Requery` ou `Open` peut échouer pour plusieurs raisons. Par exemple, une erreur réseau se produit ; ou, lors de l’appel, une fois que les données existantes sont libérées, mais avant que les nouvelles données sont obtenues, un autre utilisateur peut obtenir l’accès exclusif ; ou la table dont dépend votre jeu d’enregistrements peut être supprimée.
+##  <a name="requerying-dynasets-vs-snapshots"></a><a name="_core_requerying_dynasets_vs.._snapshots"></a>Réinterrogeant les feuilles de réponse dynamiques et les instantanés
+
+Étant donné que les feuilles de réponse dynamiques sont conçues pour présenter un ensemble d’enregistrements avec des données dynamiques à jour, vous souhaitez redemander les feuilles de réponse dynamiques si vous souhaitez refléter les ajouts d’autres utilisateurs. Les instantanés, quant à eux, sont utiles, car vous pouvez vous appuyer sur leur contenu statique tout en préparant les rapports, en calculant des totaux, etc. Toutefois, vous souhaiterez peut-être également interroger un instantané. Dans un environnement multi-utilisateur, les données de capture instantanée peuvent perdre la synchronisation avec la source de données à mesure que d’autres utilisateurs modifient la base de données.
+
+#### <a name="to-requery-a-recordset-object"></a>Pour refaire une requête sur un objet Recordset
+
+1. Appelez la fonction membre [Requery](../../mfc/reference/crecordset-class.md#requery) de l’objet.
+
+Vous pouvez également fermer et rouvrir le Recordset d’origine. Dans les deux cas, le nouvel ensemble d’enregistrements représente l’état actuel de la source de données.
+
+Pour obtenir un exemple, consultez [vues des enregistrements : remplissage d’une zone de liste à partir d’un second Recordset](../../data/filling-a-list-box-from-a-second-recordset-mfc-data-access.md).
+
+> [!TIP]
+>  Pour optimiser les performances de `Requery`, évitez de modifier le [filtre](../../data/odbc/recordset-filtering-records-odbc.md) ou le [Tri](../../data/odbc/recordset-sorting-records-odbc.md)du Recordset. Modifiez uniquement la valeur du paramètre avant d’appeler `Requery`.
+
+Si le `Requery` appel échoue, vous pouvez retenter l’appel ; dans le cas contraire, votre application doit se terminer normalement. Un appel à `Requery` ou `Open` peut échouer pour plusieurs raisons. Peut-être qu’une erreur réseau se produit ; ou, pendant l’appel, une fois les données existantes libérées, mais avant l’obtention des nouvelles données, un autre utilisateur peut obtenir un accès exclusif. ou la table dont dépend votre Recordset peut être supprimée.
 
 ## <a name="see-also"></a>Voir aussi
 
 [Recordset (ODBC)](../../data/odbc/recordset-odbc.md)<br/>
-[Recordset : Liaison dynamique de colonnes de données (ODBC)](../../data/odbc/recordset-dynamically-binding-data-columns-odbc.md)<br/>
-[Recordset : Création et fermeture de recordsets (ODBC)](../../data/odbc/recordset-creating-and-closing-recordsets-odbc.md)
+[Recordset : liaison dynamique de colonnes de données (ODBC)](../../data/odbc/recordset-dynamically-binding-data-columns-odbc.md)<br/>
+[Recordset : création et fermeture de recordsets (ODBC)](../../data/odbc/recordset-creating-and-closing-recordsets-odbc.md)

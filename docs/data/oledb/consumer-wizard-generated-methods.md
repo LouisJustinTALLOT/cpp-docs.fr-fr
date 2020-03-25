@@ -4,12 +4,12 @@ ms.date: 05/09/2019
 helpviewer_keywords:
 - OLE DB consumers, wizard-generated classes and methods
 ms.assetid: d80ee51c-8bb3-4dca-8760-5808e0fb47b4
-ms.openlocfilehash: 5d5c7aa680ca6b764e2ee9710e46cf6fa3af1c89
-ms.sourcegitcommit: fc1de63a39f7fcbfe2234e3f372b5e1c6a286087
-ms.translationtype: HT
+ms.openlocfilehash: ce2442909fd318187a1508300a75ff4f634b3410
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65707726"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80211508"
 ---
 # <a name="consumer-wizard-generated-methods"></a>Méthodes de consommateur générées par l'Assistant
 
@@ -76,7 +76,7 @@ int main(int argc, char* argv[])
 }
 ```
 
-### <a name="remarks"></a>Remarques
+### <a name="remarks"></a>Notes
 
 Si vous définissez une méthode `HasBookmark`, le code `OpenAll` définit la propriété `DBPROP_IRowsetLocate`. Faites-le seulement si votre fournisseur prend en charge cette propriété.
 
@@ -141,7 +141,7 @@ void GetRowsetProperties(CDBPropSet* pPropSet)
 }
 ```
 
-### <a name="remarks"></a>Remarques
+### <a name="remarks"></a>Notes
 
 Vous ne devez pas définir une méthode `GetRowsetProperties` globale, car elle pourrait créer un conflit avec celle définie par l’Assistant. Il s’agit d’une méthode générée par l’Assistant que vous obtenez avec les projets basés sur des modèles et avec attributs. Les attributs n’injectent pas ce code.
 
@@ -153,7 +153,7 @@ HRESULT OpenDataSource();
 void CloseDataSource();
 ```
 
-### <a name="remarks"></a>Remarques
+### <a name="remarks"></a>Notes
 
 L’Assistant définit les méthodes `OpenDataSource` et `CloseDataSource`. `OpenDataSource` appelle [CDataSource::OpenFromInitializationString](../../data/oledb/cdatasource-openfrominitializationstring.md).
 

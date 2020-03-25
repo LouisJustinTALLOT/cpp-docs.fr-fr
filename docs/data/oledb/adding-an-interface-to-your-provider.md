@@ -4,12 +4,12 @@ ms.date: 05/09/2019
 helpviewer_keywords:
 - OLE DB provider templates, object interfaces
 ms.assetid: b0fc7cf8-428a-4584-9d64-ce9074d0eb66
-ms.openlocfilehash: a1d219568c1787558674c47edd55436b8690a61c
-ms.sourcegitcommit: 00e26915924869cd7eb3c971a7d0604388abd316
-ms.translationtype: HT
+ms.openlocfilehash: b13d1224388dc7d3218dea1c70b5aa8a595fcbdb
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/10/2019
-ms.locfileid: "65524808"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80212329"
 ---
 # <a name="adding-an-interface-to-your-provider"></a>Ajout d'une interface à votre fournisseur
 
@@ -27,7 +27,7 @@ class CCustomRowset :
     public IRowsetIndexImpl< ... >
 ```
 
-Ajoutez l’interface à COM_MAP dans l’objet en utilisant la macro COM_INTERFACE_ENTRY. S’il n’existe aucun mappage, créez-le. Par exemple :
+Ajoutez l’interface à COM_MAP dans l’objet en utilisant la macro COM_INTERFACE_ENTRY. S’il n’existe aucun mappage, créez-le. Par exemple :
 
 ```cpp
 BEGIN_COM_MAP(CCustomRowset)

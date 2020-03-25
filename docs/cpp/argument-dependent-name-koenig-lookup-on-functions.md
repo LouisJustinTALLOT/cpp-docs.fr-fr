@@ -5,16 +5,16 @@ helpviewer_keywords:
 - Koenig lookup
 - argument-dependent lookup [C++]
 ms.assetid: c0928401-da2c-4658-942d-9ba4df149c35
-ms.openlocfilehash: d979b79c0f712ed35a42a44047dd1091010c72bf
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 88811e8070fdfe398bc12734221dee772515d8bc
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62184467"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80190534"
 ---
 # <a name="argument-dependent-name-koenig-lookup-on-functions"></a>Recherche de nom qui dépend de l’argument (Koenig) sur les fonctions
 
-Le compilateur peut utiliser la recherche de nom dépendante d’un argument pour rechercher la définition d’un appel de fonction non qualifié. La recherche de nom dépendante d'un argument est également appelée recherche Koenig. Le type de chaque argument dans un appel de fonction est défini dans une hiérarchie d’espaces de noms, de classes, de structures, d’unions ou de modèles. Lorsque vous spécifiez un [suffixés](../cpp/postfix-expressions.md) appel de fonction, le compilateur recherche la définition de fonction dans la hiérarchie associée à chaque type d’argument.
+Le compilateur peut utiliser la recherche de nom dépendante d’un argument pour rechercher la définition d’un appel de fonction non qualifié. La recherche de nom dépendante d'un argument est également appelée recherche Koenig. Le type de chaque argument dans un appel de fonction est défini dans une hiérarchie d’espaces de noms, de classes, de structures, d’unions ou de modèles. Lorsque vous spécifiez un appel de fonction [postfix](../cpp/postfix-expressions.md) non qualifié, le compilateur recherche la définition de fonction dans la hiérarchie associée à chaque type d’argument.
 
 ## <a name="example"></a>Exemple
 

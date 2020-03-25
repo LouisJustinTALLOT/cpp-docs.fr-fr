@@ -1,25 +1,25 @@
 ---
-title: 'Erreur RC2101 du compilateur de ressources '
+title: Erreur RC2101 du compilateur de ressources
 ms.date: 11/04/2016
 f1_keywords:
 - RC2101
 helpviewer_keywords:
 - RC2101
 ms.assetid: 580f9d74-162f-41e9-9438-ddbe3457c359
-ms.openlocfilehash: 595e87b73d79a01993e0e9b3aaa814332b21413f
-ms.sourcegitcommit: c6f8e6c2daec40ff4effd8ca99a7014a3b41ef33
+ms.openlocfilehash: 3fb576758e447c54e4ddfe7ddb024a1fd35a65f2
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "64345285"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80191650"
 ---
-# <a name="resource-compiler-error-rc2101"></a>Erreur RC2101 du compilateur de ressources 
+# <a name="resource-compiler-error-rc2101"></a>Erreur RC2101 du compilateur de ressources
 
 Directive non valide dans le fichier RC prétraité
 
-Le fichier du compilateur de ressources contient un **#pragma** directive.
+Le fichier du compilateur de ressources contient une directive **#pragma** .
 
-Utilisez le **#ifndef** directive de préprocesseur avec la constante RC_INVOKED définie par le compilateur de ressources lorsqu’il traite un fichier include. Place le **#pragma** directive à l’intérieur d’un bloc de code qui n’est pas traité lorsque la constante RC_INVOKED est définie. Code dans le bloc est traité exclusivement par le compilateur C/C++ et non par le compilateur de ressources. L’exemple de code suivant illustre cette technique :
+Utilisez la directive de préprocesseur **#ifndef** avec la constante RC_INVOKED que le compilateur de ressources définit lors du traitement d’un fichier include. Placez la directive **#pragma** à l’intérieur d’un bloc de code qui n’est pas traité lorsque la constante RC_INVOKED est définie. Le code dans le bloc est traité uniquement par le compilateurC++ C/et non par le compilateur de ressources. L’exemple de code suivant illustre cette technique :
 
 ```
 #ifndef RC_INVOKED
@@ -27,6 +27,6 @@ Utilisez le **#ifndef** directive de préprocesseur avec la constante RC_INVOKED
 #endif
 ```
 
-Le **#pragma** directive de préprocesseur n’a aucune signification un. Fichier RC. Le **#include** directive de préprocesseur est fréquemment utilisée dans un. Fichier RC pour inclure un fichier d’en-tête (un fichier de projet-en-tête personnalisé ou un fichier d’en-tête standard fourni par Microsoft avec l’un de ses produits). Certains de ces fichiers include contiennent la **#pragma** directive. Un fichier d’en-tête peut contenir un ou plusieurs autres fichiers d’en-tête, le fichier qui contient l’incriminé **#pragma** directive n’est pas forcément immédiatement évidente.
+La directive de préprocesseur **#pragma** n’a aucune signification dans un. Fichier RC. La directive de préprocesseur **#include** est fréquemment utilisée dans un. Fichier RC pour inclure un fichier d’en-tête (fichier d’en-tête personnalisé basé sur un projet ou un fichier d’en-tête standard fourni par Microsoft avec l’un de ses produits). Certains de ces fichiers include contiennent la directive **#pragma** . Comme un fichier d’en-tête peut inclure un ou plusieurs autres fichiers d’en-tête, le fichier qui contient la directive de **#pragma** incriminée peut ne pas être immédiatement évident.
 
-Le **#ifndef** RC_INVOKED peut contrôler, y compris les fichiers d’en-tête dans les fichiers d’en-tête de projet.
+La technique de RC_INVOKED **#ifndef** peut contrôler l’inclusion de fichiers d’en-tête dans des fichiers d’en-tête basés sur le projet.

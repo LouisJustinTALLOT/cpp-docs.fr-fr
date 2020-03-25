@@ -6,12 +6,12 @@ helpviewer_keywords:
 - Windows applications [C++], games
 - DirectX [C++]
 ms.assetid: 863090ed-6091-45db-aabb-7fd02f76c1df
-ms.openlocfilehash: c3d2f43764feb20919a282ac21e062a721ce5f84
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: a965320281f9435307f32f5d1b0c581073c7cebe
+ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69514731"
+ms.lasthandoff: 03/24/2020
+ms.locfileid: "80167821"
 ---
 # <a name="resources-for-creating-a-c-game-using-directx"></a>Ressources pour la création C++ d’un jeu à l’aide de DirectX
 
@@ -21,7 +21,7 @@ Pour créer les meilleurs jeux, utilisez ensemble Visual C++ et DirectX.
 
 Le C++ visuel est inclus dans toutes les éditions de Visual Studio, mais il n’est pas installé par défaut. Pour plus d’informations sur l’installation de Visual Studio C++ et des outils de développement, consultez [installer C++ la prise en charge dans Visual Studio](../build/vscpp-step-0-installation.md).
 
-Pour Windows 8.1 et versions ultérieures, le kit de développement logiciel (SDK) DirectX est inclus dans le SDK Windows. Vous n'avez rien d'autre à télécharger en plus. Pour plus d’informations, consultez [où est le kit de développement logiciel (SDK) DirectX?](/windows/win32/directx-sdk--august-2009-).
+Pour Windows 8.1 et versions ultérieures, le kit de développement logiciel (SDK) DirectX est inclus dans le SDK Windows. Vous n'avez rien d'autre à télécharger en plus. Pour plus d’informations, consultez [où est le kit de développement logiciel (SDK) DirectX ?](/windows/win32/directx-sdk--august-2009-).
 
 Pour créer des applications DirectX pour Windows 7, Windows Vista ou Windows XP, vous pouvez télécharger le [Kit de développement logiciel (SDK) DirectX](https://www.microsoft.com/download/details.aspx?displaylang=en&id=6812)autonome.
 
