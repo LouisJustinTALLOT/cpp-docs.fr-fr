@@ -34,12 +34,12 @@ helpviewer_keywords:
 - std::tolower [C++]
 - std::toupper [C++]
 - std::use_facet [C++]
-ms.openlocfilehash: 3c5d81aecb5e78a8fd3c3f32da82f6048ae4fac8
-ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
+ms.openlocfilehash: 6ebb1b1c80d5c2da19610a15e628fcbab5220719
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/16/2020
-ms.locfileid: "79420021"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81351726"
 ---
 # <a name="ltlocalegt-functions"></a>&lt;locale&gt;, fonctions
 
@@ -49,9 +49,9 @@ ms.locfileid: "79420021"
 |[iscntrl](#iscntrl)|[isdigit](#isdigit)|[isgraph](#isgraph)|
 |[islower](#islower)|[isprint](#isprint)|[ispunct](#ispunct)|
 |[isspace](#isspace)|[isupper](#isupper)|[isxdigit](#isxdigit)|
-|[tolower](#tolower)|[toupper](#toupper)|[use_facet](#use_facet)|
+|[tolower](#tolower)|[Toupper](#toupper)|[use_facet](#use_facet)|
 
-## <a name="has_facet"></a>  has_facet
+## <a name="has_facet"></a><a name="has_facet"></a>has_facet
 
 Teste si une facette particulière est stockée dans des paramètres régionaux spécifiés.
 
@@ -62,7 +62,7 @@ bool has_facet(const locale& Loc);
 
 ### <a name="parameters"></a>Paramètres
 
-\ *loc*
+*Loc*\
 Paramètres régionaux pour lesquels tester la présence d’une facette.
 
 ### <a name="return-value"></a>Valeur de retour
@@ -94,7 +94,7 @@ int main( )
 1
 ```
 
-## <a name="isalnum"></a>  isalnum
+## <a name="isalnum"></a><a name="isalnum"></a>isalnum
 
 Teste si un élément figurant dans des paramètres régionaux est un caractère alphabétique ou numérique.
 
@@ -108,7 +108,7 @@ bool isalnum(CharType Ch, const locale& Loc)
 *Ch*\
 Élément alphanumérique à tester.
 
-\ *loc*
+*Loc*\
 Paramètres régionaux contenant l’élément alphanumérique à tester.
 
 ### <a name="return-value"></a>Valeur de retour
@@ -161,7 +161,7 @@ The character '@' in the locale is  not alphanumeric.
 The character '3' in the locale is alphanumeric.
 ```
 
-## <a name="isalpha"></a>  isalpha
+## <a name="isalpha"></a><a name="isalpha"></a>isalpha
 
 Teste si un élément figurant dans des paramètres régionaux est un caractère alphabétique.
 
@@ -175,7 +175,7 @@ bool isalpha(CharType Ch, const locale& Loc)
 *Ch*\
 Élément à tester.
 
-\ *loc*
+*Loc*\
 Paramètres régionaux contenant l’élément alphabétique à tester.
 
 ### <a name="return-value"></a>Valeur de retour
@@ -184,7 +184,7 @@ Paramètres régionaux contenant l’élément alphabétique à tester.
 
 ### <a name="remarks"></a>Notes
 
-La fonction de modèle retourne [use_facet](../standard-library/locale-functions.md#use_facet)< [ctype](../standard-library/ctype-class.md)\< **CharType**> > (`Loc`). [est](../standard-library/ctype-class.md#is)( **ctype**\< **CharType**>:: **alpha**, `Ch`).
+La fonction de modèle renvoie [use_facet](../standard-library/locale-functions.md#use_facet)< [ctype](../standard-library/ctype-class.md) \< **CharType**> > ( `Loc`). [is](../standard-library/ctype-class.md#is)( **ctype**\< **CharType**>:: **alpha**, `Ch`).
 
 ### <a name="example"></a>Exemple
 
@@ -226,7 +226,7 @@ int main( )
 }
 ```
 
-## <a name="iscntrl"></a>  iscntrl
+## <a name="iscntrl"></a><a name="iscntrl"></a>iscntrl
 
 Teste si un élément figurant dans des paramètres régionaux est un caractère de contrôle.
 
@@ -240,7 +240,7 @@ bool iscntrl(CharType Ch, const locale& Loc)
 *Ch*\
 Élément à tester.
 
-\ *loc*
+*Loc*\
 Paramètres régionaux contenant l’élément à tester.
 
 ### <a name="return-value"></a>Valeur de retour
@@ -249,7 +249,7 @@ Paramètres régionaux contenant l’élément à tester.
 
 ### <a name="remarks"></a>Notes
 
-La fonction de modèle retourne [use_facet](../standard-library/locale-functions.md#use_facet)< [ctype](../standard-library/ctype-class.md)\< **CharType**> > (`Loc`). [est](../standard-library/ctype-class.md#is)( **ctype**\< **CharType**>:: **CTRL**, `Ch`).
+La fonction de modèle renvoie [use_facet](../standard-library/locale-functions.md#use_facet)< [ctype](../standard-library/ctype-class.md) \< **CharType**> > ( `Loc`). [is](../standard-library/ctype-class.md#is)( **ctype**\< **CharType**>:: **cntrl**, `Ch`).
 
 ### <a name="example"></a>Exemple
 
@@ -291,7 +291,7 @@ int main( )
 }
 ```
 
-## <a name="isdigit"></a>  isdigit
+## <a name="isdigit"></a><a name="isdigit"></a>isdigit isdigit
 
 Teste si un élément figurant dans des paramètres régionaux est un caractère numérique.
 
@@ -305,7 +305,7 @@ bool isdigit(CharType Ch, const locale& Loc)
 *Ch*\
 Élément à tester.
 
-\ *loc*
+*Loc*\
 Paramètres régionaux contenant l’élément à tester.
 
 ### <a name="return-value"></a>Valeur de retour
@@ -314,7 +314,7 @@ Paramètres régionaux contenant l’élément à tester.
 
 ### <a name="remarks"></a>Notes
 
-La fonction de modèle retourne [use_facet](../standard-library/locale-functions.md#use_facet)< [ctype](../standard-library/ctype-class.md)\< **CharType**> > (`Loc`). [est](../standard-library/ctype-class.md#is)( **ctype**\< **CharType**>:: **digit**, `Ch`).
+La fonction de modèle renvoie [use_facet](../standard-library/locale-functions.md#use_facet)< [ctype](../standard-library/ctype-class.md) \< **CharType**> > ( `Loc`). [is](../standard-library/ctype-class.md#is)( **ctype**\< **CharType**>:: **digit**, `Ch`).
 
 ### <a name="example"></a>Exemple
 
@@ -356,7 +356,7 @@ int main( )
 }
 ```
 
-## <a name="isgraph"></a>  isgraph
+## <a name="isgraph"></a><a name="isgraph"></a>isgraph
 
 Teste si un élément figurant dans des paramètres régionaux est un caractère alphanumérique ou de ponctuation.
 
@@ -370,7 +370,7 @@ bool isgraph(CharType Ch, const locale& Loc)
 *Ch*\
 Élément à tester.
 
-\ *loc*
+*Loc*\
 Paramètres régionaux contenant l’élément à tester.
 
 ### <a name="return-value"></a>Valeur de retour
@@ -379,7 +379,7 @@ Paramètres régionaux contenant l’élément à tester.
 
 ### <a name="remarks"></a>Notes
 
-La fonction de modèle retourne [use_facet](../standard-library/locale-functions.md#use_facet)< [ctype](../standard-library/ctype-class.md)\< **CharType**> > (`Loc`). [est](../standard-library/ctype-class.md#is)( **ctype**\< **CharType**>:: **Graph**, `Ch`).
+La fonction de modèle renvoie [use_facet](../standard-library/locale-functions.md#use_facet)< [ctype](../standard-library/ctype-class.md) \< **CharType**> > ( `Loc`). [is](../standard-library/ctype-class.md#is)( **ctype**\< **CharType**>:: **graph**, `Ch`).
 
 ### <a name="example"></a>Exemple
 
@@ -421,7 +421,7 @@ int main( )
 }
 ```
 
-## <a name="islower"></a>  islower
+## <a name="islower"></a><a name="islower"></a>islower
 
 Teste si un élément figurant dans des paramètres régionaux est en minuscules.
 
@@ -435,7 +435,7 @@ bool islower(CharType Ch, const locale& Loc)
 *Ch*\
 Élément à tester.
 
-\ *loc*
+*Loc*\
 Paramètres régionaux contenant l’élément à tester.
 
 ### <a name="return-value"></a>Valeur de retour
@@ -444,7 +444,7 @@ Paramètres régionaux contenant l’élément à tester.
 
 ### <a name="remarks"></a>Notes
 
-La fonction de modèle retourne [use_facet](../standard-library/locale-functions.md#use_facet)< [ctype](../standard-library/ctype-class.md)\< **CharType**> > (`Loc`). [est](../standard-library/ctype-class.md#is)( **ctype**\< **CharType**>:: **Lower**, `Ch`).
+La fonction de modèle renvoie [use_facet](../standard-library/locale-functions.md#use_facet)< [ctype](../standard-library/ctype-class.md) \< **CharType**> > ( `Loc`). [is](../standard-library/ctype-class.md#is)( **ctype**\< **CharType**>:: **lower**, `Ch`).
 
 ### <a name="example"></a>Exemple
 
@@ -486,7 +486,7 @@ int main( )
 }
 ```
 
-## <a name="isprint"></a>  isprint
+## <a name="isprint"></a><a name="isprint"></a>isprint
 
 Teste si un élément figurant dans des paramètres régionaux est un caractère imprimable.
 
@@ -500,7 +500,7 @@ bool isprint(CharType Ch, const locale& Loc)
 *Ch*\
 Élément à tester.
 
-\ *loc*
+*Loc*\
 Paramètres régionaux contenant l’élément à tester.
 
 ### <a name="return-value"></a>Valeur de retour
@@ -509,7 +509,7 @@ Paramètres régionaux contenant l’élément à tester.
 
 ### <a name="remarks"></a>Notes
 
-La fonction de modèle retourne [use_facet](../standard-library/locale-functions.md#use_facet)< [ctype](../standard-library/ctype-class.md)\< **CharType**> > (`Loc`). [est](../standard-library/ctype-class.md#is)( **ctype**\< **CharType**>:: **Print**, `Ch`).
+La fonction de modèle renvoie [use_facet](../standard-library/locale-functions.md#use_facet)< [ctype](../standard-library/ctype-class.md) \< **CharType**> > ( `Loc`). [is](../standard-library/ctype-class.md#is)( **ctype**\< **CharType**>:: **print**, `Ch`).
 
 ### <a name="example"></a>Exemple
 
@@ -550,7 +550,7 @@ int main( )
 }
 ```
 
-## <a name="ispunct"></a>  ispunct
+## <a name="ispunct"></a><a name="ispunct"></a>ispunct
 
 Teste si un élément figurant dans des paramètres régionaux est un caractère de ponctuation.
 
@@ -564,7 +564,7 @@ bool ispunct(CharType Ch, const locale& Loc)
 *Ch*\
 Élément à tester.
 
-\ *loc*
+*Loc*\
 Paramètres régionaux contenant l’élément à tester.
 
 ### <a name="return-value"></a>Valeur de retour
@@ -573,7 +573,7 @@ Paramètres régionaux contenant l’élément à tester.
 
 ### <a name="remarks"></a>Notes
 
-La fonction de modèle retourne [use_facet](../standard-library/locale-functions.md#use_facet)`<`[ctype](../standard-library/ctype-class.md)\< **CharType**> > (`Loc`). [est](../standard-library/ctype-class.md#is)( **ctype**\< **CharType**>:: **punct**, `Ch`).
+La fonction de modèle renvoie [use_facet](../standard-library/locale-functions.md#use_facet)`<`[ctype](../standard-library/ctype-class.md) \< **CharType**> > ( `Loc`). [is](../standard-library/ctype-class.md#is)( **ctype**\< **CharType**>:: **punct**, `Ch`).
 
 ### <a name="example"></a>Exemple
 
@@ -615,7 +615,7 @@ int main( )
 }
 ```
 
-## <a name="isspace"></a>  isspace
+## <a name="isspace"></a><a name="isspace"></a>isspace
 
 Teste si un élément figurant dans des paramètres régionaux est un espace blanc.
 
@@ -629,7 +629,7 @@ bool isspace(CharType Ch, const locale& Loc)
 *Ch*\
 Élément à tester.
 
-\ *loc*
+*Loc*\
 Paramètres régionaux contenant l’élément à tester.
 
 ### <a name="return-value"></a>Valeur de retour
@@ -638,7 +638,7 @@ Paramètres régionaux contenant l’élément à tester.
 
 ### <a name="remarks"></a>Notes
 
-La fonction de modèle retourne [use_facet](../standard-library/locale-functions.md#use_facet)< [ctype](../standard-library/ctype-class.md)\< **CharType**> > (`Loc`). [est](../standard-library/ctype-class.md#is)( **ctype**\< **CharType**>:: **Space**, `Ch`).
+La fonction de modèle renvoie [use_facet](../standard-library/locale-functions.md#use_facet)< [ctype](../standard-library/ctype-class.md) \< **CharType**> > ( `Loc`). [is](../standard-library/ctype-class.md#is)( **ctype**\< **CharType**>:: **space**, `Ch`).
 
 ### <a name="example"></a>Exemple
 
@@ -680,7 +680,7 @@ int main( )
 }
 ```
 
-## <a name="isupper"></a>  isupper
+## <a name="isupper"></a><a name="isupper"></a>isupper
 
 Teste si un élément figurant dans des paramètres régionaux est en majuscules.
 
@@ -694,7 +694,7 @@ bool isupper(CharType Ch, const locale& Loc)
 *Ch*\
 Élément à tester.
 
-\ *loc*
+*Loc*\
 Paramètres régionaux contenant l’élément à tester.
 
 ### <a name="return-value"></a>Valeur de retour
@@ -703,7 +703,7 @@ Paramètres régionaux contenant l’élément à tester.
 
 ### <a name="remarks"></a>Notes
 
-La fonction de modèle retourne [use_facet](../standard-library/locale-functions.md#use_facet)< [ctype](../standard-library/ctype-class.md)\< **CharType**> > (`Loc`). [est](../standard-library/ctype-class.md#is)( **ctype**\< **CharType**>:: **Upper**, `Ch`).
+La fonction de modèle renvoie [use_facet](../standard-library/locale-functions.md#use_facet)< [ctype](../standard-library/ctype-class.md) \< **CharType**> > ( `Loc`). [is](../standard-library/ctype-class.md#is)( **ctype**\< **CharType**>:: **upper**, `Ch`).
 
 ### <a name="example"></a>Exemple
 
@@ -745,7 +745,7 @@ int main( )
 }
 ```
 
-## <a name="isxdigit"></a>  isxdigit
+## <a name="isxdigit"></a><a name="isxdigit"></a>isxdigit
 
 Teste si un élément figurant dans des paramètres régionaux est un caractère utilisé pour représenter un nombre hexadécimal.
 
@@ -759,7 +759,7 @@ bool isxdigit(CharType Ch, const locale& Loc)
 *Ch*\
 Élément à tester.
 
-\ *loc*
+*Loc*\
 Paramètres régionaux contenant l’élément à tester.
 
 ### <a name="return-value"></a>Valeur de retour
@@ -768,7 +768,7 @@ Paramètres régionaux contenant l’élément à tester.
 
 ### <a name="remarks"></a>Notes
 
-La fonction de modèle retourne [use_facet](../standard-library/locale-functions.md#use_facet)< [ctype](../standard-library/ctype-class.md)\< **CharType**> > (`Loc`). [est](../standard-library/ctype-class.md#is)( **ctype**\< **CharType**>:: **xdigit**, `Ch`).
+La fonction de modèle renvoie [use_facet](../standard-library/locale-functions.md#use_facet)< [ctype](../standard-library/ctype-class.md) \< **CharType**> > ( `Loc`). [is](../standard-library/ctype-class.md#is)( **ctype**\< **CharType**>:: **xdigit**, `Ch`).
 
 Les chiffres hexadécimaux utilisent la base 16 pour représenter les nombres, en utilisant les nombres de 0 à 9 et les lettres de A à F (sans respect de la casse) pour représenter les nombres décimaux de 0 à 15.
 
@@ -812,7 +812,7 @@ int main( )
 }
 ```
 
-## <a name="tolower"></a>  tolower
+## <a name="tolower"></a><a name="tolower"></a>Tolower
 
 Convertit un caractère en minuscule.
 
@@ -824,9 +824,9 @@ CharType tolower(CharType Ch, const locale& Loc)
 ### <a name="parameters"></a>Paramètres
 
 *Ch*\
-Caractère à convertir en minuscules.
+Caractère à convertir en minuscule.
 
-\ *loc*
+*Loc*\
 Paramètres régionaux contenant le caractère à convertir.
 
 ### <a name="return-value"></a>Valeur de retour
@@ -835,7 +835,7 @@ Caractère converti en minuscules.
 
 ### <a name="remarks"></a>Notes
 
-La fonction de modèle retourne [use_facet](../standard-library/locale-functions.md#use_facet)< [ctype](../standard-library/ctype-class.md)\< **CharType**> > (`Loc`). [tolower](../standard-library/ctype-class.md#tolower)( `Ch`).
+La fonction de modèle renvoie [use_facet](../standard-library/locale-functions.md#use_facet)< [ctype](../standard-library/ctype-class.md) \< **CharType**> > ( `Loc`). [tolower](../standard-library/ctype-class.md#tolower) `Ch`( ).
 
 ### <a name="example"></a>Exemple
 
@@ -861,7 +861,7 @@ int main( )
 }
 ```
 
-## <a name="toupper"></a>  toupper
+## <a name="toupper"></a><a name="toupper"></a>Toupper
 
 Convertit un caractère en majuscule.
 
@@ -873,9 +873,9 @@ CharType toupper(CharType Ch, const locale& Loc)
 ### <a name="parameters"></a>Paramètres
 
 *Ch*\
-Caractère à convertir en majuscules.
+Caractère à convertir en majuscule.
 
-\ *loc*
+*Loc*\
 Paramètres régionaux contenant le caractère à convertir.
 
 ### <a name="return-value"></a>Valeur de retour
@@ -884,7 +884,7 @@ Caractère converti en majuscules.
 
 ### <a name="remarks"></a>Notes
 
-La fonction de modèle retourne [use_facet](../standard-library/locale-functions.md#use_facet)< [ctype](../standard-library/ctype-class.md)\< **CharType**> > (`Loc`). [toupper](../standard-library/ctype-class.md#toupper)( `Ch`).
+La fonction de modèle renvoie [use_facet](../standard-library/locale-functions.md#use_facet)< [ctype](../standard-library/ctype-class.md) \< **CharType**> > ( `Loc`). [toupper](../standard-library/ctype-class.md#toupper) `Ch`( ).
 
 ### <a name="example"></a>Exemple
 
@@ -910,7 +910,7 @@ int main( )
 }
 ```
 
-## <a name="use_facet"></a>  use_facet
+## <a name="use_facet"></a><a name="use_facet"></a>use_facet
 
 Retourne une référence à une facette d'un type spécifié stocké dans des paramètres régionaux.
 
@@ -921,7 +921,7 @@ const Facet& use_facet(const locale& Loc);
 
 ### <a name="parameters"></a>Paramètres
 
-\ *loc*
+*Loc*\
 Paramètres régionaux const contenant le type de facette référencé.
 
 ### <a name="return-value"></a>Valeur de retour
@@ -973,4 +973,4 @@ The character '!' in locale loc2 is not alphabetic.
 
 ## <a name="see-also"></a>Voir aussi
 
-[\<locale>](../standard-library/locale.md)
+[\<local>](../standard-library/locale.md)

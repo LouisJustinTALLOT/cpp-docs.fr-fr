@@ -1,5 +1,5 @@
 ---
-title: logical_and (struct)
+title: logical_and, struct
 ms.date: 11/04/2016
 f1_keywords:
 - functional/std::logical_and
@@ -7,20 +7,20 @@ helpviewer_keywords:
 - logical_and class
 - logical_and struct
 ms.assetid: 1a375cc2-0592-4d57-a553-78009c7ad610
-ms.openlocfilehash: cc75c93d5173ceb7fa12b9722a797499b4225a53
-ms.sourcegitcommit: b8c22e6d555cf833510753cba7a368d57e5886db
+ms.openlocfilehash: 7036ebf9fed3877a395e44d8383776002b9afcae
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/29/2020
-ms.locfileid: "76821614"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81351691"
 ---
-# <a name="logical_and-struct"></a>logical_and (struct)
+# <a name="logical_and-struct"></a>logical_and, struct
 
-Objet de fonction prédéfini qui effectue l’opération de conjonction logique (`operator&&`) sur ses arguments.
+Objet de fonction prédéfini qui effectue`operator&&`l’opération de conjonction logique () sur ses arguments.
 
 ## <a name="syntax"></a>Syntaxe
 
-```
+```cpp
 template <class Type = void>
 struct logical_and : public binary_function<Type, Type, bool>
 {
@@ -37,16 +37,16 @@ struct logical_and<void>
 };
 ```
 
-### <a name="parameters"></a>Parameters
+### <a name="parameters"></a>Paramètres
 
 *Type*, *T*, *U*\
 Tout type qui prend en charge un `operator&&` qui accepte des opérandes des types spécifiés ou inférés.
 
-\ *gauche*
-Opérande gauche de l’opération de conjonction logique. Le modèle non spécialisé prend un argument de référence lvalue *de type type.* Le modèle spécialisé effectue un transfert parfait des arguments de la lvalue et de la référence rvalue du type déduit *T*.
+*Gauche*\
+Opérande gauche de l’opération de conjonction logique. Le modèle non précisé prend un argument de référence lvalue de *type*type . Le modèle spécialisé fait l’avance parfaite des arguments de référence lvalue et rvalue de type *T*déduit .
 
-\ *droit*
-Opérande droit de l’opération de conjonction logique. Le modèle non spécialisé prend un argument de référence lvalue *de type type.* Le modèle spécialisé effectue un transfert parfait des arguments de la lvalue et de la référence rvalue du type inféré *U*.
+*Oui*\
+Opérande droit de l’opération de conjonction logique. Le modèle non précisé prend un argument de référence lvalue de *type*type . Le modèle spécialisé fait l’avance parfaite des arguments de référence lvalue et rvalue de type *inféré U*.
 
 ## <a name="return-value"></a>Valeur de retour
 

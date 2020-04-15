@@ -1,5 +1,5 @@
 ---
-title: 'Contrôles ActiveX MFC : À l’aide de la liaison de données dans un contrôle ActiveX'
+title: 'Contrôles ActiveX MFC : utilisation de la liaison de données dans un contrôle ActiveX'
 ms.date: 11/19/2018
 f1_keywords:
 - bindable
@@ -14,124 +14,124 @@ helpviewer_keywords:
 - controls [MFC], data binding
 - bound controls [MFC], MFC ActiveX
 ms.assetid: 476b590a-bf2a-498a-81b7-dd476bd346f1
-ms.openlocfilehash: e21a31b71e681cdffed555c10079c2598967543f
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 41ac0180242aea3143a1df2c32dc81fb18cd7dca
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62239530"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81370778"
 ---
-# <a name="mfc-activex-controls-using-data-binding-in-an-activex-control"></a>Contrôles ActiveX MFC : À l’aide de la liaison de données dans un contrôle ActiveX
+# <a name="mfc-activex-controls-using-data-binding-in-an-activex-control"></a>Contrôles ActiveX MFC : utilisation de la liaison de données dans un contrôle ActiveX
 
-Une des utilisations plus puissantes de contrôles ActiveX est la liaison de données, ce qui permet à une propriété du contrôle à lier à un champ spécifique dans une base de données. Lorsqu’un utilisateur modifie les données de cette propriété liée, le contrôle notifie la base de données et les demandes que les champs d’enregistrements être mis à jour. La base de données puis vous avertit que le contrôle de la réussite ou l’échec de la demande.
+L’une des utilisations les plus puissantes des contrôles ActiveX est la liaison de données, qui permet à une propriété du contrôle de se lier à un champ spécifique dans une base de données. Lorsqu’un utilisateur modifie les données de cette propriété liée, le contrôle avise la base de données et demande que le champ d’enregistrement soit mis à jour. La base de données informe ensuite le contrôle du succès ou de l’échec de la demande.
 
 >[!IMPORTANT]
-> ActiveX est une technologie héritée qui ne doit pas être utilisée pour tout nouveau développement. Pour plus d’informations sur les technologies modernes qui remplacent ActiveX, consultez [contrôles ActiveX](activex-controls.md).
+> ActiveX est une technologie héritée qui ne devrait pas être utilisée pour de nouveaux développements. Pour plus d’informations sur les technologies modernes qui remplacent ActiveX, voir [ActiveX Controls](activex-controls.md).
 
-Cet article traite du côté du contrôle de votre tâche. Mise en œuvre les interactions de liaison de données avec la base de données est la responsabilité du conteneur de contrôle. Comment gérer les interactions de la base de données dans votre conteneur est dépasse le cadre de cette documentation. Comment vous préparez le contrôle pour la liaison de données est expliquée dans le reste de cet article.
+Cet article couvre le côté de contrôle de votre tâche. La mise en œuvre des interactions de liaison de données avec la base de données est la responsabilité du conteneur de contrôle. La façon dont vous gérez les interactions de base de données dans votre conteneur dépasse la portée de cette documentation. La façon dont vous préparez le contrôle de la liaison de données est expliquée dans le reste de cet article.
 
-![Diagramme conceptuel d’un data&#45;contrôle lié aux](../mfc/media/vc374v1.gif "diagramme conceptuel de données&#45;contrôle dépendant") <br/>
-Diagramme conceptuel d’un contrôle lié aux données
+![Diagramme conceptuel d’un contrôle lié&#45;de données](../mfc/media/vc374v1.gif "Diagramme conceptuel d’un contrôle lié&#45;de données") <br/>
+Diagramme conceptuel d’un contrôle lié des données
 
-Le `COleControl` classe fournit deux fonctions membres qui rendent un implémentation du processus de liaison de données. La première fonction [BoundPropertyRequestEdit](../mfc/reference/colecontrol-class.md#boundpropertyrequestedit), est utilisé pour demander l’autorisation de modifier la valeur de propriété. [BoundPropertyChanged](../mfc/reference/colecontrol-class.md#boundpropertychanged), la deuxième fonction est appelée une fois que la valeur de propriété a été modifiée.
+La `COleControl` classe fournit deux fonctions de membre qui rendent la liaison de données un processus facile à mettre en œuvre. La première fonction, [BoundPropertyRequestEdit](../mfc/reference/colecontrol-class.md#boundpropertyrequestedit), est utilisée pour demander la permission de modifier la valeur de la propriété. [BoundPropertyChanged](../mfc/reference/colecontrol-class.md#boundpropertychanged), la deuxième fonction, est appelée après que la valeur de la propriété a été changée avec succès.
 
-Cet article aborde les rubriques suivantes :
+Cet article aborde les thèmes suivants :
 
-- [Création d’une propriété Stock peut être liée](#vchowcreatingbindablestockproperty)
+- [Création d’une propriété d’actions liants](#vchowcreatingbindablestockproperty)
 
-- [Création d’une méthode Get/Set peut être liée](#vchowcreatingbindablegetsetmethod)
+- [Création d’une méthode Get/Set lisible](#vchowcreatingbindablegetsetmethod)
 
-##  <a name="vchowcreatingbindablestockproperty"></a> Création d’une propriété Stock peut être liée
+## <a name="creating-a-bindable-stock-property"></a><a name="vchowcreatingbindablestockproperty"></a>Création d’une propriété d’actions liants
 
-Il est possible de créer une propriété stock lié aux données, bien qu’il est plus probable que vous souhaitez un [méthode get/set peut être liée](#vchowcreatingbindablegetsetmethod).
+Il est possible de créer une propriété de stock liée à des données, bien qu’il soit plus probable que vous voudrez une [méthode li bindable obtenir / ensemble](#vchowcreatingbindablegetsetmethod).
 
 > [!NOTE]
-> Propriétés stock ont le `bindable` et `requestedit` attributs par défaut.
+> Les propriétés `bindable` `requestedit` boursières ont les attributs et les attributs par défaut.
 
-#### <a name="to-add-a-bindable-stock-property-using-the-add-property-wizard"></a>Pour ajouter une propriété stock peut être liée à l’aide de l’Assistant Ajout de propriété
+#### <a name="to-add-a-bindable-stock-property-using-the-add-property-wizard"></a>Pour ajouter une propriété de stock liant utilisant le Magicien de propriété d’ajouter
 
-1. Commencer un projet à l’aide de la [Assistant contrôle ActiveX MFC](../mfc/reference/mfc-activex-control-wizard.md).
+1. Commencez un projet à l’aide du [MFC ActiveX Control Wizard](../mfc/reference/mfc-activex-control-wizard.md).
 
-1. Cliquez sur le nœud de l’interface de votre contrôle.
+1. Cliquez à droite sur le nœud d’interface pour votre contrôle.
 
-   Cette opération ouvre le menu contextuel.
+   Cela ouvre le menu raccourci.
 
-1. Dans le menu contextuel, cliquez sur **ajouter** puis cliquez sur **ajouter une propriété**.
+1. À partir du menu raccourci, cliquez sur **Ajouter** et cliquez ensuite **ajouter la propriété**.
 
-1. Sélectionnez une des entrées à partir de la **nom de la propriété** liste déroulante. Par exemple, vous pouvez sélectionner **texte**.
+1. Sélectionnez l’une des entrées de la liste d’abandon **du nom de propriété.** Par exemple, vous pouvez sélectionner **le texte**.
 
-   Étant donné que **texte** est une propriété stock, les **peut être liée** et **requestedit** attributs sont déjà activés.
+   Parce que **le texte** est une propriété de stock, les attributs **liants** et **demandés** sont déjà vérifiés.
 
-1. Sélectionnez les cases à cocher suivantes à partir de la **attributs IDL** onglet : **displaybind** et **defaultbind** pour ajouter les attributs à la définition de propriété dans le projet. Fichier IDL. Ces attributs Assurez-vous le contrôle visible par l’utilisateur et la propriété stock la propriété peut être liée par défaut.
+1. Sélectionnez les cases de cocher suivantes de l’onglet **Attributs IDL** : **displaybind** et **defaultbind** pour ajouter les attributs à la définition de propriété dans le projet . Fichier IDL. Ces attributs rendent le contrôle visible à l’utilisateur et font de la propriété stock la propriété liant par défaut.
 
-À ce stade, votre contrôle peut afficher des données à partir d’une source de données, mais l’utilisateur ne sera pas en mesure de mettre à jour les champs de données. Si vous souhaitez que votre contrôle également être en mesure de mettre à jour des données, de modifier le `OnOcmCommand` [OnOcmCommand](../mfc/mfc-activex-controls-subclassing-a-windows-control.md) fonction permettant de se présenter comme suit :
+À ce stade, votre contrôle peut afficher des données à partir d’une source de données, mais l’utilisateur ne sera pas en mesure de mettre à jour les champs de données. Si vous souhaitez que votre contrôle soit également `OnOcmCommand` en mesure de mettre à jour les données, modifiez la fonction [OnOcmCommand](../mfc/mfc-activex-controls-subclassing-a-windows-control.md) pour voir ce qui suit :
 
 [!code-cpp[NVC_MFC_AxData#1](../mfc/codesnippet/cpp/mfc-activex-controls-using-data-binding-in-an-activex-control_1.cpp)]
 
-Vous pouvez maintenant générer le projet, qui enregistrera le contrôle. Lorsque vous insérez le contrôle dans une boîte de dialogue, le **champ de données** et **Source de données** propriétés a été ajoutées et vous pouvez maintenant sélectionner une source de données et le champ à afficher dans le contrôle.
+Vous pouvez maintenant construire le projet, qui enregistrera le contrôle. Lorsque vous insérez le contrôle dans une boîte de dialogue, les propriétés **Data Field** et **Data Source** auront été ajoutées et vous pouvez maintenant sélectionner une source de données et un champ pour afficher dans le contrôle.
 
-##  <a name="vchowcreatingbindablegetsetmethod"></a> Création d’une méthode Get/Set peut être liée
+## <a name="creating-a-bindable-getset-method"></a><a name="vchowcreatingbindablegetsetmethod"></a>Création d’une méthode Get/Set lisible
 
-En plus d’une propriété get/set (méthode), vous pouvez également créer un [propriétés stock peut être liée](#vchowcreatingbindablestockproperty).
+En plus d’une méthode d’achat/ensemble de données, vous pouvez également créer une [propriété de stock liant.](#vchowcreatingbindablestockproperty)
 
 > [!NOTE]
-> Cette procédure suppose que vous avez un contrôle ActiveX qui sous-classe un contrôle Windows du projet.
+> Cette procédure suppose que vous avez un projet de contrôle ActiveX qui sous-classe un contrôle Windows.
 
-#### <a name="to-add-a-bindable-getset-method-using-the-add-property-wizard"></a>Pour ajouter une méthode get/set peut être liée à l’aide de l’Assistant Ajout de propriété
-
-1. Chargez votre projet de contrôle.
-
-1. Sur le **paramètres de contrôle** , sélectionnez une classe de fenêtre pour le contrôle à la sous-classe. Par exemple, vous souhaiterez sous-classe un contrôle d’édition.
+#### <a name="to-add-a-bindable-getset-method-using-the-add-property-wizard"></a>Pour ajouter une méthode d’obtenir/ensemble liant à l’aide de l’Assistant De la Propriété Add
 
 1. Chargez votre projet de contrôle.
 
-1. Cliquez sur le nœud de l’interface de votre contrôle.
+1. Sur la page **Paramètres de contrôle,** sélectionnez une classe de fenêtre pour que le contrôle sous-classe. Par exemple, vous pouvez sous-classer un contrôle EDIT.
 
-   Cette opération ouvre le menu contextuel.
+1. Chargez votre projet de contrôle.
 
-1. Dans le menu contextuel, cliquez sur **ajouter** puis cliquez sur **ajouter une propriété**.
+1. Cliquez à droite sur le nœud d’interface pour votre contrôle.
 
-1. Tapez le nom de propriété dans le **nom de la propriété** boîte. Utilisez `MyProp` pour cet exemple.
+   Cela ouvre le menu raccourci.
 
-1. Sélectionnez un type de données à partir de la **Type de propriété** zone de liste déroulante. Utilisez **court** pour cet exemple.
+1. À partir du menu raccourci, cliquez sur **Ajouter** et cliquez ensuite **ajouter la propriété**.
+
+1. Tapez le nom de propriété dans la boîte **de nom de propriété.** Utilisez `MyProp` pour cet exemple.
+
+1. Sélectionnez un type de données dans la case de liste d’abandon **du type de propriété.** Utilisez **court** pour cet exemple.
 
 1. Pour **Type d’implémentation**, cliquez sur **Méthodes Get/Set**.
 
-1. Sélectionnez les cases à cocher suivantes à partir de l’onglet Attributs IDL : **peut être liée**, **requestedit**, **displaybind**, et **defaultbind** à ajouter les attributs à la définition de propriété dans le projet. Fichier IDL. Ces attributs Assurez-vous le contrôle visible par l’utilisateur et la propriété stock la propriété peut être liée par défaut.
+1. Sélectionnez les cases de cocher suivantes de l’onglet Attributs IDL: **liant**, **demandé**, **displaybind**, et **defaultbind** pour ajouter les attributs à la définition de propriété dans le projet . Fichier IDL. Ces attributs rendent le contrôle visible à l’utilisateur et font de la propriété stock la propriété liant par défaut.
 
 1. Cliquez sur **Terminer**.
 
-1. Modifier le corps de la `SetMyProp` de fonction pour qu’il contienne le code suivant :
+1. Modifier le corps `SetMyProp` de la fonction afin qu’il contienne le code suivant :
 
    [!code-cpp[NVC_MFC_AxData#2](../mfc/codesnippet/cpp/mfc-activex-controls-using-data-binding-in-an-activex-control_2.cpp)]
 
-1. Le paramètre passé à la `BoundPropertyChanged` et `BoundPropertyRequestEdit` fonctions est le dispid de la propriété, qui est le paramètre passé à l’attribut id() pour la propriété dans le. Fichier IDL.
+1. Le paramètre `BoundPropertyChanged` transmis `BoundPropertyRequestEdit` à la et les fonctions est l’insipide de la propriété, qui est le paramètre transmis à l’id () attribut pour la propriété dans le . Fichier IDL.
 
-1. Modifier le [OnOcmCommand](../mfc/mfc-activex-controls-subclassing-a-windows-control.md) fonction afin qu’il contient le code suivant :
+1. Modifier la fonction [OnOcmCommand](../mfc/mfc-activex-controls-subclassing-a-windows-control.md) afin qu’il contienne le code suivant :
 
    [!code-cpp[NVC_MFC_AxData#1](../mfc/codesnippet/cpp/mfc-activex-controls-using-data-binding-in-an-activex-control_1.cpp)]
 
-1. Modifier le `OnDraw` fonction pour qu’il contienne le code suivant :
+1. Modifier `OnDraw` la fonction afin qu’elle contienne le code suivant :
 
    [!code-cpp[NVC_MFC_AxData#3](../mfc/codesnippet/cpp/mfc-activex-controls-using-data-binding-in-an-activex-control_3.cpp)]
 
-1. À la section publique du fichier d’en-tête du fichier d’en-tête pour votre classe de contrôle, ajoutez les définitions suivantes (constructeurs) pour les variables membres :
+1. À la section publique du fichier d’en-tête du fichier d’en-tête pour votre classe de contrôle, ajoutez les définitions suivantes (constructeurs) pour les variables des membres :
 
    [!code-cpp[NVC_MFC_AxData#4](../mfc/codesnippet/cpp/mfc-activex-controls-using-data-binding-in-an-activex-control_4.h)]
 
-1. Vérifiez la ligne suivante à la dernière ligne dans le `DoPropExchange` (fonction) :
+1. Faites la ligne suivante la `DoPropExchange` dernière ligne de la fonction :
 
    [!code-cpp[NVC_MFC_AxData#5](../mfc/codesnippet/cpp/mfc-activex-controls-using-data-binding-in-an-activex-control_5.cpp)]
 
-1. Modifier le `OnResetState` fonction pour qu’il contienne le code suivant :
+1. Modifier `OnResetState` la fonction afin qu’elle contienne le code suivant :
 
    [!code-cpp[NVC_MFC_AxData#6](../mfc/codesnippet/cpp/mfc-activex-controls-using-data-binding-in-an-activex-control_6.cpp)]
 
-1. Modifier le `GetMyProp` fonction pour qu’il contienne le code suivant :
+1. Modifier `GetMyProp` la fonction afin qu’elle contienne le code suivant :
 
    [!code-cpp[NVC_MFC_AxData#7](../mfc/codesnippet/cpp/mfc-activex-controls-using-data-binding-in-an-activex-control_7.cpp)]
 
-Vous pouvez maintenant générer le projet, qui enregistrera le contrôle. Lorsque vous insérez le contrôle dans une boîte de dialogue, le **champ de données** et **Source de données** propriétés a été ajoutées et vous pouvez maintenant sélectionner une source de données et le champ à afficher dans le contrôle.
+Vous pouvez maintenant construire le projet, qui enregistrera le contrôle. Lorsque vous insérez le contrôle dans une boîte de dialogue, les propriétés **Data Field** et **Data Source** auront été ajoutées et vous pouvez maintenant sélectionner une source de données et un champ pour afficher dans le contrôle.
 
 ## <a name="see-also"></a>Voir aussi
 

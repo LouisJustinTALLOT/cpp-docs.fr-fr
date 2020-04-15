@@ -6,12 +6,12 @@ helpviewer_keywords:
 - NMAKE program, inference rules
 - batch-mode inference rules in NMAKE
 ms.assetid: 0650b547-ef19-4455-9bba-fa567dcf88f2
-ms.openlocfilehash: f01866e347b2734b5adfd111e3ae9de4f9edcf9f
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 38402e7b8a937cebb823ce13fa1ac01fc1099878
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62295017"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81328412"
 ---
 # <a name="batch-mode-rules"></a>Règles en mode batch
 
@@ -20,18 +20,18 @@ ms.locfileid: "62295017"
    commands
 ```
 
-Règles d’inférence en mode batch ne fournissent qu’un seul appel de la règle d’inférence quand N commandes passent par cette règle d’inférence. Sans règles d’inférence en mode batch, il faudrait commandes N à appeler. N est le nombre d’éléments dépendants qui déclenchent la règle d’inférence.
+Les règles d’inférence en mode par lots ne fournissent qu’une seule invocation de la règle d’inférence lorsque les commandes N passent par cette règle d’inférence. Sans règles d’inférence en mode par lots, il faudrait invoquer les commandes N. N est le nombre de personnes à charge qui déclenchent la règle de l’inférence.
 
-Les makefiles contenant des règles d’inférence en mode batch doivent utiliser NMAKE version 1.62 ou ultérieure. Pour vérifier la version NMAKE, exécutez la macro _NMAKE_VER fournie avec NMAKE version 1.62 ou ultérieure. Cette macro retourne une chaîne représentant la version du produit Visual C++.
+Lesfils qui contiennent des règles d’inférence en mode par lots doivent utiliser la version NMAKE 1.62 ou plus. Pour vérifier la version NMAKE, exécutez la macro _NMAKE_VER disponible avec la version NMAKE 1.62 ou plus. Cette macro renvoie une chaîne représentant la version produit Visual C.
 
-La différence syntaxique uniquement à partir de la règle d’inférence standard est que la règle d’inférence en mode batch se termine par un double deux-points ( :)).
+La seule différence syntaxique par rapport à la règle d’inférence standard est que la règle d’inférence en mode par lots est terminée avec un double côlon (::).
 
 > [!NOTE]
->  L’outil appelé doit être en mesure de gérer plusieurs fichiers. La règle d’inférence en mode batch doit utiliser `$<` en tant que la macro pour accéder aux fichiers dépendants.
+> L’outil invoqué doit être en mesure de traiter plusieurs fichiers. La règle d’inférence `$<` en mode par lots doit être utilisée comme macro pour accéder aux fichiers dépendants.
 
-Les règles d’inférence en mode batch peuvent accélérer le processus de génération. Il est plus rapide pour fournir des fichiers au compilateur dans le lot, car le pilote du compilateur est appelé une seule fois. Par exemple, le compilateur C et C++ plus performant lors du traitement d’un ensemble de fichiers, car il peut rester résident au cours du processus en mémoire.
+Les règles d’inférence en mode par lots peuvent accélérer le processus de construction. Il est plus rapide de fournir des fichiers au compilateur en lots, parce que le pilote compilateur n’est invoqué qu’une seule fois. Par exemple, le compilateur C et CMD fonctionne mieux lors du traitement d’un ensemble de fichiers parce qu’il peut rester résident de la mémoire pendant le processus.
 
-L’exemple suivant montre comment utiliser des règles d’inférence en mode batch :
+L’exemple suivant montre comment utiliser les règles d’inférence en mode par lots :
 
 ```
 #
@@ -56,7 +56,7 @@ $(Objs) :
 #end of makefile
 ```
 
-NMAKE génère la sortie suivante sans règles d’inférence en mode batch :
+NMAKE produit la sortie suivante sans règles d’inférence en mode par lots :
 
 ```
 E:\tmp> nmake -f test.mak -a NOBatch=1
@@ -73,7 +73,7 @@ foo3.cpp
 foo4.cpp
 ```
 
-NMAKE produit le résultat suivant avec les règles d’inférence en mode batch :
+NMAKE produit le résultat suivant avec les règles d’inférence en mode par lots :
 
 ```
 E:\tmp> nmake -f test.mak -a
@@ -91,4 +91,4 @@ Generating Code...
 
 ## <a name="see-also"></a>Voir aussi
 
-[Règles d’inférence](inference-rules.md)
+[Règles d'inférence](inference-rules.md)

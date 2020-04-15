@@ -15,16 +15,16 @@ helpviewer_keywords:
 - Microsoft::WRL::Details::ModuleBase::ModuleBase, constructor
 - Microsoft::WRL::Details::ModuleBase::~ModuleBase, destructor
 ms.assetid: edce7591-6893-46f7-94a7-382827775548
-ms.openlocfilehash: 254796c03d25a77da22c48881c086a41ffbfeb82
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 13a8ceef3133e9946524e1fcd02e96535eccd7fc
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62403215"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81371270"
 ---
 # <a name="modulebase-class"></a>ModuleBase, classe
 
-Prend en charge l’infrastructure WRL et n’est pas destinée à être utilisée directement depuis votre code.
+Prend en charge l’infrastructure WRL et n’est pas destiné à être utilisé directement à partir de votre code.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -34,7 +34,7 @@ class ModuleBase;
 
 ## <a name="remarks"></a>Notes
 
-Représente la classe de base de la [Module](module-class.md) classes.
+Représente la classe de base des classes [module.](module-class.md)
 
 ## <a name="members"></a>Membres
 
@@ -43,28 +43,28 @@ Représente la classe de base de la [Module](module-class.md) classes.
 Nom                                         | Description
 -------------------------------------------- | ---------------------------------------------------------
 [ModuleBase::ModuleBase](#modulebase)        | Initialise une instance de la classe `Module`.
-[ModuleBase :: ~ ModuleBase](#tilde-modulebase) | Annule l’initialisation de l’instance actuelle de la `Module` classe.
+[ModuleBase::ModuleBase](#tilde-modulebase) | Désinitialise l’instance actuelle `Module` de la classe.
 
 ### <a name="public-methods"></a>M&#233;thodes publiques
 
 Nom                                                      | Description
 --------------------------------------------------------- | -------------------------------------------------------------------------
-[ModuleBase::DecrementObjectCount](#decrementobjectcount) | En cas d’implémentation, décrémente le nombre d’objets suivis par le module.
-[ModuleBase::IncrementObjectCount](#incrementobjectcount) | En cas d’implémentation, incrémente le nombre d’objets suivis par le module.
+[ModuleBase::DecrementObjectCount](#decrementobjectcount) | Une fois mis en œuvre, décrète le nombre d’objets suivis par le module.
+[ModuleBase::IncrementObjectCount](#incrementobjectcount) | Une fois mis en œuvre, incréments le nombre d’objets suivis par le module.
 
 ## <a name="inheritance-hierarchy"></a>Hiérarchie d'héritage
 
 `ModuleBase`
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
-**En-tête :** implements.h
+**En-tête:** implements.h
 
-**Espace de noms :** Microsoft::WRL::Details
+**Espace nom:** Microsoft::WRL::Details
 
-## <a name="tilde-modulebase"></a>ModuleBase::~ModuleBase
+## <a name="modulebasemodulebase"></a><a name="tilde-modulebase"></a>ModuleBase::ModuleBase
 
-Prend en charge l’infrastructure WRL et n’est pas destinée à être utilisée directement depuis votre code.
+Prend en charge l’infrastructure WRL et n’est pas destiné à être utilisé directement à partir de votre code.
 
 ```cpp
 virtual ~ModuleBase();
@@ -72,11 +72,11 @@ virtual ~ModuleBase();
 
 ### <a name="remarks"></a>Notes
 
-Annule l’initialisation de l’instance actuelle de la `ModuleBase` classe.
+Désinitialise l’instance actuelle `ModuleBase` de la classe.
 
-## <a name="decrementobjectcount"></a>ModuleBase::DecrementObjectCount
+## <a name="modulebasedecrementobjectcount"></a><a name="decrementobjectcount"></a>ModuleBase::DecrementObjectCount
 
-Prend en charge l’infrastructure WRL et n’est pas destinée à être utilisée directement depuis votre code.
+Prend en charge l’infrastructure WRL et n’est pas destiné à être utilisé directement à partir de votre code.
 
 ```cpp
 virtual long DecrementObjectCount() = 0;
@@ -84,15 +84,15 @@ virtual long DecrementObjectCount() = 0;
 
 ### <a name="return-value"></a>Valeur de retour
 
-Le nombre avant l’opération de décrémentation.
+Le compte avant l’opération de décroissement.
 
 ### <a name="remarks"></a>Notes
 
-En cas d’implémentation, décrémente le nombre d’objets suivis par le module.
+Une fois mis en œuvre, décrète le nombre d’objets suivis par le module.
 
-## <a name="incrementobjectcount"></a>ModuleBase::IncrementObjectCount
+## <a name="modulebaseincrementobjectcount"></a><a name="incrementobjectcount"></a>ModuleBase::IncrementObjectCount
 
-Prend en charge l’infrastructure WRL et n’est pas destinée à être utilisée directement depuis votre code.
+Prend en charge l’infrastructure WRL et n’est pas destiné à être utilisé directement à partir de votre code.
 
 ```cpp
 virtual long IncrementObjectCount() = 0;
@@ -100,15 +100,15 @@ virtual long IncrementObjectCount() = 0;
 
 ### <a name="return-value"></a>Valeur de retour
 
-Le nombre avant l’opération d’incrémentation.
+Le compte avant l’opération d’incrément.
 
 ### <a name="remarks"></a>Notes
 
-En cas d’implémentation, incrémente le nombre d’objets suivis par le module.
+Une fois mis en œuvre, incréments le nombre d’objets suivis par le module.
 
-## <a name="modulebase"></a>ModuleBase::ModuleBase
+## <a name="modulebasemodulebase"></a><a name="modulebase"></a>ModuleBase::ModuleBase
 
-Prend en charge l’infrastructure WRL et n’est pas destinée à être utilisée directement depuis votre code.
+Prend en charge l’infrastructure WRL et n’est pas destiné à être utilisé directement à partir de votre code.
 
 ```cpp
 ModuleBase();

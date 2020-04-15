@@ -4,29 +4,29 @@ ms.date: 11/04/2016
 helpviewer_keywords:
 - transactions, updating recordsets
 ms.assetid: cf1d6b48-7fb8-4903-84f7-a1822054534d
-ms.openlocfilehash: 94177a27a1f99a8c9c37b7fce3f697fd0088b7c6
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 45ae414c318376b2c4d787498e9a288a0037af83
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80212587"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81358094"
 ---
 # <a name="transaction-performing-a-transaction-in-a-recordset-odbc"></a>Transaction : exécution d'une transaction dans un recordset (ODBC)
 
-Cette rubrique explique comment effectuer une transaction dans un Recordset.
+Ce sujet explique comment effectuer une transaction dans un ensemble d’enregistrements.
 
 > [!NOTE]
->  Un seul niveau de transactions est pris en charge ; vous ne pouvez pas imbriquer des transactions.
+> Un seul niveau de transactions est pris en charge; vous ne pouvez pas nicher les transactions.
 
-#### <a name="to-perform-a-transaction-in-a-recordset"></a>Pour exécuter une transaction dans un Recordset
+#### <a name="to-perform-a-transaction-in-a-recordset"></a>Effectuer une transaction dans un ensemble d’enregistrements
 
-1. Appelez la fonction membre `BeginTrans` de l’objet `CDatabase`.
+1. Appelez `CDatabase` la fonction `BeginTrans` de membre de l’objet.
 
-1. Si vous n’avez pas implémenté l’extraction de lignes en bloc, appelez les fonctions membres `AddNew/Update`, `Edit/Update`et `Delete` d’un ou plusieurs objets Recordset de la même base de données autant de fois que nécessaire. Pour plus d’informations, consultez [Recordset : ajout, mise à jour et suppression d’enregistrements (ODBC)](../../data/odbc/recordset-adding-updating-and-deleting-records-odbc.md). Si vous avez implémenté l’extraction de lignes en bloc, vous devez écrire vos propres fonctions pour mettre à jour la source de données.
+1. Si vous n’avez pas implémenté la ligne en vrac, appelez les `AddNew/Update`fonctions , `Edit/Update`et `Delete` les membres d’un ou plusieurs objets de l’enregistrement de la même base de données autant de fois que nécessaire. Pour plus d’informations, voir [Recordset: Adding, Updating, and Deleting Records (ODBC)](../../data/odbc/recordset-adding-updating-and-deleting-records-odbc.md). Si vous avez implémenté la ligne en vrac, vous devez écrire vos propres fonctions pour mettre à jour la source de données.
 
-1. Enfin, appelez la fonction membre `CommitTrans` de l’objet `CDatabase`. Si une erreur se produit dans l’une des mises à jour ou si vous décidez d’annuler les modifications, appelez sa fonction membre `Rollback`.
+1. Enfin, appelez `CDatabase` la `CommitTrans` fonction de membre de l’objet. Si une erreur se produit dans l’une des mises `Rollback` à jour ou si vous décidez d’annuler les modifications, appelez sa fonction de membre.
 
-L’exemple suivant utilise deux recordsets pour supprimer l’inscription d’un étudiant d’une base de données d’inscription scolaire, en supprimant l’étudiant de toutes les classes dans lesquelles l’étudiant est inscrit. Étant donné que le `Delete` appelle dans les deux jeux d’enregistrements doit être exécuté, une transaction est requise. L’exemple suppose l’existence d' `m_dbStudentReg`, une variable membre de type `CDatabase` déjà connectée à la source de données, et les classes du Recordset `CEnrollmentSet` et `CStudentSet`. La variable `strStudentID` contient une valeur obtenue de l’utilisateur.
+L’exemple suivant utilise deux ensembles d’enregistrements pour supprimer l’inscription d’un élève dans une base de données d’inscription scolaire, en retirant l’élève de toutes les classes dans lesquelles l’élève est inscrit. Étant `Delete` donné que les appels dans les deux ensembles d’enregistrements doivent réussir, une transaction est nécessaire. L’exemple suppose l’existence `m_dbStudentReg`de , `CDatabase` une variable de membre de type `CEnrollmentSet` `CStudentSet`déjà connecté à la source de données, et les classes de documents et . La `strStudentID` variable contient une valeur obtenue de l’utilisateur.
 
 ```
 BOOL CEnrollDoc::RemoveStudent( CString strStudentID )
@@ -79,11 +79,11 @@ BOOL CEnrollDoc::RemoveStudent( CString strStudentID )
 ```
 
 > [!NOTE]
->  L’appel de `BeginTrans` à nouveau sans appeler `CommitTrans` ou `Rollback` est une erreur.
+> Appeler `BeginTrans` à `CommitTrans` nouveau `Rollback` sans appeler ou est une erreur.
 
 ## <a name="see-also"></a>Voir aussi
 
 [Transaction (ODBC)](../../data/odbc/transaction-odbc.md)<br/>
 [Transaction : répercussions des transactions sur les mises à jour (ODBC)](../../data/odbc/transaction-how-transactions-affect-updates-odbc.md)<br/>
-[CDatabase, classe](../../mfc/reference/cdatabase-class.md)<br/>
-[CRecordset, classe](../../mfc/reference/crecordset-class.md)
+[Classe CDatabase](../../mfc/reference/cdatabase-class.md)<br/>
+[Classe CRecordset](../../mfc/reference/crecordset-class.md)
