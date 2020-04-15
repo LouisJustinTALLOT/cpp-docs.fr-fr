@@ -1,9 +1,11 @@
 ---
 title: _chdir, _wchdir
-ms.date: 11/04/2016
+ms.date: 4/2/2020
 api_name:
 - _wchdir
 - _chdir
+- _o__chdir
+- _o__wchdir
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -16,6 +18,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-filesystem-l1-1-0.dll
+- api-ms-win-crt-private-l1-1-0
 api_type:
 - DLLExport
 topic_type:
@@ -35,12 +38,12 @@ helpviewer_keywords:
 - chdir function
 - directories [C++], changing
 ms.assetid: 85e9393b-62ac-45d5-ab2a-fa2217f6152e
-ms.openlocfilehash: 2b54e0978626779be21900e543a546bfae05efe2
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: a3f224e68e4b5a43274616892012ceba737d6d17
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70939371"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81333391"
 ---
 # <a name="_chdir-_wchdir"></a>_chdir, _wchdir
 
@@ -59,24 +62,26 @@ int _wchdir(
 
 ### <a name="parameters"></a>Paramètres
 
-*dirname*<br/>
+*Dirname*<br/>
 Chemin du nouveau répertoire de travail.
 
 ## <a name="return-value"></a>Valeur de retour
 
-Ces fonctions retournent la valeur 0 en cas de réussite. Une valeur de retour de-1 indique un échec. Si le chemin d’accès spécifié est introuvable, **errno** a la valeur **ENOENT**. Si *dirname* a la **valeur null**, le gestionnaire de paramètres non valides est appelé, comme décrit dans [validation de paramètre](../../c-runtime-library/parameter-validation.md). Si l’exécution est autorisée à se poursuivre, **errno** a la valeur **EINVAL** et la fonction retourne-1.
+Ces fonctions retournent la valeur 0 en cas de réussite. Une valeur de rendement de -1 indique une défaillance. Si le chemin spécifié n’a pas pu être trouvé, **errno** est réglé sur **ENOENT**. Si *le dirname* est **NULL**, le gestionnaire de paramètre invalide est invoqué, tel que décrit dans La validation [de paramètres](../../c-runtime-library/parameter-validation.md). Si l’exécution est autorisée à se poursuivre, **errno** est réglé sur **EINVAL** et la fonction renvoie -1.
 
 ## <a name="remarks"></a>Notes
 
-La fonction **_chdir** remplace le répertoire de travail actuel par le répertoire spécifié par *dirname*. Le paramètre *dirname* doit faire référence à un répertoire existant. Cette fonction peut changer le répertoire de travail actuel sur n’importe quel lecteur. Si une nouvelle lettre de lecteur est spécifiée dans *dirname*, la lettre de lecteur par défaut est également modifiée. Par exemple, si A est la lettre de lecteur par défaut et \BIN le répertoire de travail actuel, l’appel suivant change le répertoire de travail actuel pour le lecteur C et établit C comme nouveau lecteur par défaut :
+La fonction **_chdir** modifie l’annuaire de travail actuel à l’annuaire spécifié par *dirname*. Le *paramètre dirname* doit se référer à un répertoire existant. Cette fonction peut changer le répertoire de travail actuel sur n’importe quel lecteur. Si une nouvelle lettre d’entraînement est spécifiée dans *dirname*, la lettre d’entraînement par défaut est également modifiée. Par exemple, si A est la lettre de lecteur par défaut et \BIN le répertoire de travail actuel, l’appel suivant change le répertoire de travail actuel pour le lecteur C et établit C comme nouveau lecteur par défaut :
 
 ```C
 _chdir("c:\temp");
 ```
 
-Lorsque vous utilisez la barre oblique inverse ( **&#92;** ) facultative dans les chemins d’accès, vous devez placer deux **&#92;** barres obliques inverses () dans un littéral de **&#92;** chaîne C pour représenter une seule barre oblique inverse ().
+Lorsque vous utilisez le caractère backslash en option (**&#92;**) dans les chemins, vous devez placer deux barre obliques inverses (**&#92;&#92;**) dans un littéral de chaîne C pour représenter un seul backslash (**&#92;**).
 
-**_wchdir** est une version à caractères larges de **_chdir**; l’argument *dirname* de **_wchdir** est une chaîne de caractères larges. dans le cas contraire, **_wchdir** et **_chdir** se comportent de la même façon.
+**_wchdir** est une version à caractère large de **_chdir**; *l’argument dirname* pour **_wchdir** est une chaîne de caractère large. **_wchdir** et **_chdir** se comportent de façon identique autrement.
+
+Par défaut, l’état global de cette fonction est étendue à l’application. Pour changer cela, voir [Global State dans le CRT](../global-state.md).
 
 ### <a name="generic-text-routine-mapping"></a>Mappage de routines de texte générique :
 
@@ -84,14 +89,14 @@ Lorsque vous utilisez la barre oblique inverse ( **&#92;** ) facultative dans le
 |---------------------|--------------------------------------|--------------------|-----------------------|
 |**_tchdir**|**_chdir**|**_chdir**|**_wchdir**|
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
 |Routine|En-tête requis|En-tête facultatif|
 |-------------|---------------------|---------------------|
 |**_chdir**|\<direct.h>|\<errno.h>|
 |**_wchdir**|\<direct.h> ou \<wchar.h>|\<errno.h>|
 
-Pour plus d'informations sur la compatibilité, voir [Compatibilité](../../c-runtime-library/compatibility.md).
+Pour plus d’informations sur la compatibilité, consultez [Compatibility](../../c-runtime-library/compatibility.md).
 
 ## <a name="example"></a>Exemple
 

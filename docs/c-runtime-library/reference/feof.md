@@ -1,8 +1,9 @@
 ---
 title: feof
-ms.date: 11/04/2016
+ms.date: 4/2/2020
 api_name:
 - feof
+- _o_feof
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -15,6 +16,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-stdio-l1-1-0.dll
+- api-ms-win-crt-private-l1-1-0
 api_type:
 - DLLExport
 topic_type:
@@ -25,12 +27,12 @@ helpviewer_keywords:
 - end of file, testing for
 - feof function
 ms.assetid: 09081eee-7c4b-4189-861f-2fad95d3ec6d
-ms.openlocfilehash: cf6cfdb63689f5d69cc45dd407ecc6b08a7a7a73
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 9ee085624be3c5613ac4b5e87965d47324727778
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70941137"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81347373"
 ---
 # <a name="feof"></a>feof
 
@@ -46,30 +48,32 @@ int feof(
 
 ### <a name="parameters"></a>Paramètres
 
-*stream*<br/>
+*Flux*<br/>
 Pointeur désignant la structure **FILE**.
 
 ## <a name="return-value"></a>Valeur de retour
 
-La fonction **feof** retourne une valeur différente de zéro si une opération de lecture a tenté de lire au-delà de la fin du fichier ; Sinon, retourne 0. Si le pointeur de flux a la **valeur null**, la fonction appelle le gestionnaire de paramètre non valide, comme décrit dans [validation de paramètre](../../c-runtime-library/parameter-validation.md). Si l’exécution est autorisée à se poursuivre, **errno** a la valeur **EINVAL** et **feof** retourne 0.
+La fonction **feof** retourne une valeur non zéro si une opération de lecture a tenté de lire au-delà de la fin du fichier; il retourne 0 autrement. Si le pointeur de flux est **NULL**, la fonction invoque le gestionnaire de paramètres invalide, tel que décrit dans [la validation de paramètres](../../c-runtime-library/parameter-validation.md). Si l’exécution est autorisée à se poursuivre, **errno** est réglé à **EINVAL** et le **feof** retourne 0.
 
-Pour plus d’informations sur ces codes d’erreur et les autres, consultez [_doserrno, errno, _sys_errlist et _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
+Consultez [_doserrno, errno, _sys_errlist et _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md) pour plus d’informations sur ces éléments et autres codes d’erreur.
 
 ## <a name="remarks"></a>Notes
 
-La routine **feof** (implémentée à la fois en tant que fonction et en tant que macro) détermine si la fin du *flux* a été passée. Lorsque la fin du fichier est passée, les opérations de lecture retournent un indicateur de fin de fichier jusqu’à ce que le flux soit fermé ou jusqu’à ce que [rembobine](rewind.md), **fsetpos**, [fseek](fseek-fseeki64.md)ou **clearerr** soit appelé.
+La **routine feof** (mise en œuvre à la fois en fonction et en macro) détermine si la fin du *flux* a été adoptée. Lorsque la fin du fichier est passée, les opérations de lecture retournent un indicateur de fin de fichier jusqu’à ce que le flux soit fermé ou jusqu’à ce que le [rembobinage,](rewind.md) **fsetpos**, [fseek](fseek-fseeki64.md), ou **plus clair** est appelé contre elle.
 
-Par exemple, si un fichier contient 10 octets et que vous lisez 10 octets à partir du fichier, **feof** retourne 0, car même si le pointeur de fichier se trouve à la fin du fichier, vous n’avez pas tenté de lire au-delà de la fin. Une fois que vous avez essayé de lire un onzième octet, **feof** retourne une valeur différente de zéro.
+Par exemple, si un fichier contient 10 octets et que vous lisez 10 octets du fichier, **feof** en retournera 0 parce que, même si le pointeur de fichier est à la fin du fichier, vous n’avez pas tenté de lire au-delà de la fin. Ce n’est qu’après avoir essayé de lire un 11ème byte **sera feof** retourner une valeur nonzero.
 
-## <a name="requirements"></a>Configuration requise
+Par défaut, l’état global de cette fonction est étendue à l’application. Pour changer cela, voir [Global State dans le CRT](../global-state.md).
+
+## <a name="requirements"></a>Spécifications
 
 |Fonction|En-tête requis|
 |--------------|---------------------|
 |**feof**|\<stdio.h>|
 
-Pour plus d’informations sur la compatibilité, voir consultez [Compatibilité](../../c-runtime-library/compatibility.md).
+Pour plus d'informations sur la compatibilité, voir [Compatibilité](../../c-runtime-library/compatibility.md).
 
-## <a name="example"></a>Exemples
+## <a name="example"></a>Exemple
 
 ```C
 // crt_feof.c
@@ -116,7 +120,7 @@ Line one.
 Line two.
 ```
 
-### <a name="output"></a>Sortie
+### <a name="output"></a>Output
 
 ```Output
 Number of bytes read = 19

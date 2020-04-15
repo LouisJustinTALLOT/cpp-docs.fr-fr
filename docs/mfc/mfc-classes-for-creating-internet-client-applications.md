@@ -8,16 +8,16 @@ helpviewer_keywords:
 - Internet client applications [MFC], MFC
 - Internet applications [MFC], MFC
 ms.assetid: 67d34117-9839-4f4b-8bb8-0e4a9471c606
-ms.openlocfilehash: 9201859c6a5d9fe2b31c3fc4348a42ff9566fc8c
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 578fd5b72e6c04610aa862f1a6631895a32a9bfe
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62239221"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81358221"
 ---
 # <a name="mfc-classes-for-creating-internet-client-applications"></a>Classes MFC pour la création d'applications clientes Internet
 
-MFC fournit les classes suivantes et les fonctions globales pour l’écriture d’applications clientes Internet. Mise en retrait indique une classe est dérivée de la classe non mis en retrait au-dessus de lui. `CGopherFile` et `CHttpFile` dérivent `CInternetFile`, par exemple. Ces classes et fonctions globales sont déclarées dans AFXINET. H, sauf `CFileFind`, qui est déclaré dans AFX. H.
+MFC fournit les classes suivantes et les fonctions globales pour la rédaction d’applications client Internet. L’indentation indique qu’une classe est dérivée de la classe non-nented au-dessus. `CGopherFile`et `CHttpFile` dérivent de `CInternetFile`, par exemple. Ces classes et fonctions mondiales sont déclarées dans AFXINET. H, `CFileFind`sauf , qui est déclaré dans AFX. H.
 
 ## <a name="classes"></a>Classes
 
@@ -25,23 +25,23 @@ MFC fournit les classes suivantes et les fonctions globales pour l’écriture d
 
 - [CInternetConnection](../mfc/reference/cinternetconnection-class.md)
 
-   - [CFtpConnection](../mfc/reference/cftpconnection-class.md)
+  - [CFtpConnection](../mfc/reference/cftpconnection-class.md)
 
-   - [CGopherConnection](../mfc/reference/cgopherconnection-class.md)
+  - [CGopherConnection](../mfc/reference/cgopherconnection-class.md)
 
-   - [CHttpConnection](../mfc/reference/chttpconnection-class.md)
+  - [CHttpConnection](../mfc/reference/chttpconnection-class.md)
 
 - [CInternetFile](../mfc/reference/cinternetfile-class.md)
 
-   - [CGopherFile](../mfc/reference/cgopherfile-class.md)
+  - [CGopherFile](../mfc/reference/cgopherfile-class.md)
 
-   - [CHttpFile](../mfc/reference/chttpfile-class.md)
+  - [CHttpFile](../mfc/reference/chttpfile-class.md)
 
 - [CFileFind](../mfc/reference/cfilefind-class.md)
 
-   - [CFtpFileFind](../mfc/reference/cftpfilefind-class.md)
+  - [CFtpFileFind](../mfc/reference/cftpfilefind-class.md)
 
-   - [CGopherFileFind](../mfc/reference/cgopherfilefind-class.md)
+  - [CGopherFileFind](../mfc/reference/cgopherfilefind-class.md)
 
 - [CGopherLocator](../mfc/reference/cgopherlocator-class.md)
 

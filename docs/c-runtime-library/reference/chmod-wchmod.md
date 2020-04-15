@@ -1,9 +1,11 @@
 ---
 title: _chmod, _wchmod
-ms.date: 11/04/2016
+ms.date: 4/2/2020
 api_name:
 - _chmod
 - _wchmod
+- _o__chmod
+- _o__wchmod
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -16,6 +18,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-filesystem-l1-1-0.dll
+- api-ms-win-crt-private-l1-1-0
 api_type:
 - DLLExport
 topic_type:
@@ -32,12 +35,12 @@ helpviewer_keywords:
 - files [C++], changing permissions
 - _wchmod function
 ms.assetid: 92f7cb86-b3b0-4232-a599-b8c04a2f2c19
-ms.openlocfilehash: b224133212f19627a8f975dbbe8c80176e29f112
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: faceb49c921162da042f863abbebbe2ef0a52153
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70939203"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81350088"
 ---
 # <a name="_chmod-_wchmod"></a>_chmod, _wchmod
 
@@ -52,7 +55,7 @@ int _wchmod( const wchar_t *filename, int pmode );
 
 ### <a name="parameters"></a>Paramètres
 
-*filename*<br/>
+*Fichier*<br/>
 Nom du fichier existant.
 
 *pmode*<br/>
@@ -60,23 +63,25 @@ Paramètre d’autorisation pour le fichier.
 
 ## <a name="return-value"></a>Valeur de retour
 
-Ces fonctions retournent 0 si le paramètre d’autorisation a été correctement modifié. Une valeur de retour de-1 indique un échec. Si le fichier spécifié est introuvable, **errno** a la valeur **ENOENT**; Si un paramètre n’est pas valide, **errno** a la valeur **EINVAL**.
+Ces fonctions retournent 0 si le paramètre d’autorisation a été correctement modifié. Une valeur de rendement de -1 indique une défaillance. Si le fichier spécifié n’a pas pu être trouvé, **errno** est réglé sur **ENOENT;** si un paramètre est invalide, **errno** est réglé sur **EINVAL**.
 
 ## <a name="remarks"></a>Notes
 
-La fonction **_CHMOD** modifie le paramètre d’autorisation du fichier spécifié par *filename*. Le paramètre d’autorisation contrôle l’accès en lecture et écriture au fichier. L’expression entière *PMODE* contient l’une des constantes manifestes suivantes (ou les deux), définie dans SYS\Stat.h.
+La fonction **_chmod** modifie le paramètre d’autorisation du fichier spécifié par *nom de fichier*. Le paramètre d’autorisation contrôle l’accès en lecture et écriture au fichier. L’expression *integer pmode* contient une ou les deux des constantes manifestes suivantes, définies dans SYS-Stat.h.
 
 | *pmode* | Signification |
 |-|-|
-| **\_\_IREAD** | Lecture autorisée uniquement. |
-| **\_\_IWRITE** | Écriture autorisée. (En fait, autorise la lecture et l'écriture.) |
-| **\_S\_IREAD** &#124; **SIWRITE\_ \_** | Lecture et écriture autorisées. |
+| **\_S\_IREAD** | Lecture autorisée uniquement. |
+| **\_S\_IWRITE** | Écriture autorisée. (En fait, autorise la lecture et l'écriture.) |
+| **\_S\_IREAD** &#124; ** \_S\_IWRITE** | Lecture et écriture autorisées. |
 
-Quand les deux constantes sont données, elles sont jointes avec l’opérateur or **\|** au niveau du bit (). Si l'autorisation d'écriture n'est pas accordée, le fichier est en lecture seule. Notez que tous les fichiers sont toujours accessibles en lecture ; il est impossible d’accorder l’autorisation en écriture seule. Ainsi, les modes **_S_IWRITE** et **_S_IREAD** \| **_S_IWRITE** sont équivalents.
+Lorsque les deux constantes sont données, elles sont**\|** jointes avec le bitwise ou l’opérateur ( ). Si l'autorisation d'écriture n'est pas accordée, le fichier est en lecture seule. Notez que tous les fichiers sont toujours accessibles en lecture ; il est impossible d’accorder l’autorisation en écriture seule. Ainsi, les modes **_S_IWRITE** et **_S_IREAD** \| **_S_IWRITE** sont équivalents.
 
-**_wchmod** est une version à caractères larges de **_CHMOD**; l’argument *filename* de **_wchmod** est une chaîne de caractères larges. dans le cas contraire, **_wchmod** et **_CHMOD** se comportent de la même façon.
+**_wchmod** est une version à caractère large de **_chmod**; l’argument *du nom de fichier* pour **_wchmod** est une chaîne de caractère large. **_wchmod** et **_chmod** se comportent de façon identique autrement.
 
-Cette fonction valide ses paramètres. Si *PMODE* n’est pas une combinaison de l’une des constantes manifestes ou incorpore un autre ensemble de constantes, la fonction ignore simplement celles-ci. Si *filename* a la **valeur null**, le gestionnaire de paramètres non valides est appelé, comme décrit dans [validation de paramètre](../../c-runtime-library/parameter-validation.md). Si l’exécution est autorisée à se poursuivre, **errno** a la valeur **EINVAL** et la fonction retourne-1.
+Cette fonction valide ses paramètres. Si *le pmode* n’est pas une combinaison de l’une des constantes manifestes ou intègre un autre ensemble de constantes, la fonction ignore simplement ceux-ci. Si *le nom de fichier* est **NULL**, le gestionnaire de paramètres invalides est invoqué, tel que décrit dans La validation [de paramètres](../../c-runtime-library/parameter-validation.md). Si l’exécution est autorisée à se poursuivre, **errno** est réglé sur **EINVAL** et la fonction renvoie -1.
+
+Par défaut, l’état global de cette fonction est étendue à l’application. Pour changer cela, voir [Global State dans le CRT](../global-state.md).
 
 ### <a name="generic-text-routine-mappings"></a>Mappages de routines de texte générique
 
@@ -84,14 +89,14 @@ Cette fonction valide ses paramètres. Si *PMODE* n’est pas une combinaison de
 |---------------------|--------------------------------------|--------------------|-----------------------|
 |**_tchmod**|**_chmod**|**_chmod**|**_wchmod**|
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
 |Routine|En-tête requis|En-tête facultatif|
 |-------------|---------------------|---------------------|
 |**_chmod**|\<io.h>|\<sys/types.h>, \<sys/stat.h>, \<errno.h>|
 |**_wchmod**|\<io.h> ou \<wchar.h>|\<sys/types.h>, \<sys/stat.h>, \<errno.h>|
 
-Pour plus d'informations sur la compatibilité, voir [Compatibilité](../../c-runtime-library/compatibility.md).
+Pour plus d’informations sur la compatibilité, consultez [Compatibility](../../c-runtime-library/compatibility.md).
 
 ## <a name="example"></a>Exemple
 

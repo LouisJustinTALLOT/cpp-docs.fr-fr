@@ -1,9 +1,11 @@
 ---
 title: _ismbbalnum, _ismbbalnum_l
-ms.date: 11/04/2016
+ms.date: 4/2/2020
 api_name:
 - _ismbbalnum
 - _ismbbalnum_l
+- _o__ismbbalnum
+- _o__ismbbalnum_l
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -16,6 +18,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-multibyte-l1-1-0.dll
+- api-ms-win-crt-private-l1-1-0
 api_type:
 - DLLExport
 topic_type:
@@ -31,12 +34,12 @@ helpviewer_keywords:
 - ismbbalnum_l function
 - _ismbbalnum function
 ms.assetid: 8025de50-a871-49fd-9ae6-f437b47aa987
-ms.openlocfilehash: d817ea6875149f9342854b0c22b27b0c93d29636
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 3a200415571498c25ce5aacc6271004125ef16d2
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70954297"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81343699"
 ---
 # <a name="_ismbbalnum-_ismbbalnum_l"></a>_ismbbalnum, _ismbbalnum_l
 
@@ -55,7 +58,7 @@ int _ismbbalnum_l(
 
 ### <a name="parameters"></a>Paramètres
 
-*c*<br/>
+*C*<br/>
 Entier à tester.
 
 *locale*<br/>
@@ -63,22 +66,26 @@ Paramètres régionaux à utiliser.
 
 ## <a name="return-value"></a>Valeur de retour
 
-**_ismbbalnum** retourne une valeur différente de zéro si l’expression :
+**_ismbbalnum** retourne une valeur non zéro si l’expression :
 
 `isalnum(c) || _ismbbkalnum(c)`
 
-est différent de zéro pour *c*, ou 0 si ce n’est pas le cas.
+est nonzero pour *c*, ou 0 si elle n’est pas.
 
-La version de cette fonction avec le suffixe **_L** est identique, à ceci près qu’elle utilise les paramètres régionaux passés au lieu des paramètres régionaux actuels pour son comportement dépendant des paramètres régionaux.
+La version de cette fonction avec le **suffixe _l** est identique sauf qu’elle utilise le lieu passé au lieu de la localisation actuelle pour son comportement local-dépendant.
 
-## <a name="requirements"></a>Configuration requise
+## <a name="remarks"></a>Notes
+
+Par défaut, l’état global de cette fonction est étendue à l’application. Pour changer cela, voir [Global State dans le CRT](../global-state.md).
+
+## <a name="requirements"></a>Spécifications
 
 |Routine|En-tête requis|
 |-------------|---------------------|
 |**_ismbbalnum**|\<mbctype.h>|
 |**_ismbbalnum_l**|\<mbctype.h>|
 
-Pour plus d'informations sur la compatibilité, voir [Compatibilité](../../c-runtime-library/compatibility.md).
+Pour plus d’informations sur la compatibilité, consultez [Compatibility](../../c-runtime-library/compatibility.md).
 
 ## <a name="libraries"></a>Bibliothèques
 
@@ -87,4 +94,4 @@ Toutes les versions des [bibliothèques Runtime C](../../c-runtime-library/crt-l
 ## <a name="see-also"></a>Voir aussi
 
 [Classification d’octets](../../c-runtime-library/byte-classification.md)<br/>
-[_ismbb, routines](../../c-runtime-library/ismbb-routines.md)<br/>
+[routines _ismbb](../../c-runtime-library/ismbb-routines.md)<br/>

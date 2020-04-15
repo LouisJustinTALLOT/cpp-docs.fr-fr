@@ -1,8 +1,9 @@
 ---
 title: _pipe
-ms.date: 11/04/2016
+ms.date: 4/2/2020
 api_name:
 - _pipe
+- _o__pipe
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -15,6 +16,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-stdio-l1-1-0.dll
+- api-ms-win-crt-private-l1-1-0
 api_type:
 - DLLExport
 topic_type:
@@ -28,19 +30,19 @@ helpviewer_keywords:
 - pipes
 - pipe function
 ms.assetid: 8d3e9800-4041-44b5-9e93-2df0b0354a75
-ms.openlocfilehash: bd0107fac28deef94716ff0ce65dd5423a1ececa
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 5bac435bed26decee0069f5814d1f3d25a54470a
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70951003"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81338496"
 ---
 # <a name="_pipe"></a>_pipe
 
 Crée un canal pour la lecture et l’écriture.
 
 > [!IMPORTANT]
-> Cette API ne peut pas être utilisée dans les applications qui s’exécutent dans le Windows Runtime. Pour plus d’informations, consultez [Fonctions CRT non prises en charge dans les applications de la plateforme Windows universelle](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
+> Cette API ne peut pas être utilisée dans les applications qui s'exécutent dans le Windows Runtime. Pour plus d’informations, consultez [Fonctions CRT non prises en charge dans les applications de la plateforme Windows universelle](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -54,10 +56,10 @@ int _pipe(
 
 ### <a name="parameters"></a>Paramètres
 
-*pfds*<br/>
-Pointeur vers un tableau de deux **int** pour stocker les descripteurs de fichiers en lecture et en écriture.
+*Vfi*<br/>
+Pointeur vers un tableau de deux **int** pour tenir lire et écrire des descripteurs de fichier.
 
-*psize*<br/>
+*Psize*<br/>
 Quantité de mémoire à réserver.
 
 *textmode*<br/>
@@ -65,45 +67,47 @@ Mode de Fichier.
 
 ## <a name="return-value"></a>Valeur de retour
 
-Retourne 0 en cas de réussite. Retourne-1 pour indiquer une erreur. En cas d’erreur, **errno** est défini sur l’une des valeurs suivantes :
+Retourne 0 en cas de réussite. Retourne -1 pour indiquer une erreur. Sur l’erreur, **errno** est fixé à l’une de ces valeurs:
 
-- **EMFILE**, qui indique qu’aucun autre descripteur de fichier n’est disponible.
+- **EMFILE**, qui indique qu’il n’y a plus de descripteurs de fichiers.
 
-- **Enfichier**, qui indique un dépassement de capacité de la table de fichiers système.
+- **ENFILE**, qui indique un débordement de table système-fichier.
 
-- **EINVAL**, qui indique que le tableau de *CF* est un pointeur null ou qu’une valeur non valide pour *TextMode* a été transmise.
+- **EINVAL**, qui indique que soit les *ppj* de tableau est un pointeur nul ou qu’une valeur invalide pour *textmode* a été adoptée.
 
 Pour plus d’informations sur ces codes de retour et les autres, consultez [errno, _doserrno, _sys_errlist et _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
 
 ## <a name="remarks"></a>Notes
 
-La fonction **_pipe** crée un *canal, qui est un canal d'* e/s artificiel utilisé par un programme pour transmettre des informations à d’autres programmes. Un canal s’apparente à un fichier en ce sens qu’il dispose d’un pointeur de fichier, d’un descripteur de fichier ou les deux, et peut être lu ou écrit à l’aide des fonctions d’entrée et de sortie de la bibliothèque standard. Cependant, un canal ne représente pas un fichier ou un appareil déterminé. En effet, il représente un stockage temporaire en mémoire qui est indépendant de la mémoire propre au programme et qui est contrôlé entièrement par le système d’exploitation.
+La fonction **_pipe** crée un *tuyau*, qui est un canal artificiel I / O qu’un programme utilise pour transmettre des informations à d’autres programmes. Un canal s’apparente à un fichier en ce sens qu’il dispose d’un pointeur de fichier, d’un descripteur de fichier ou les deux, et peut être lu ou écrit à l’aide des fonctions d’entrée et de sortie de la bibliothèque standard. Cependant, un canal ne représente pas un fichier ou un appareil déterminé. En effet, il représente un stockage temporaire en mémoire qui est indépendant de la mémoire propre au programme et qui est contrôlé entièrement par le système d’exploitation.
 
-**_pipe** ressemble à **_open** , mais ouvre le canal pour la lecture et l’écriture et retourne deux descripteurs de fichier au lieu d’un. Le programme peut utiliser les deux côtés du canal ou fermer celui dont il n’a pas besoin. Par exemple, le processeur de commande dans Windows crée un canal lorsqu’il exécute une commande telle que **Program1** | **Program2**.
+**_pipe** ressemble à **_open** mais ouvre le tuyau pour la lecture et l’écriture et renvoie deux descripteurs de fichier au lieu d’un. Le programme peut utiliser les deux côtés du canal ou fermer celui dont il n’a pas besoin. Par exemple, le processeur de commande de Windows crée un tuyau lorsqu’il exécute une commande telle que **PROGRAM1** | **PROGRAM2**.
 
-Le descripteur de sortie standard de **Program1** est attaché au descripteur d’écriture du canal. Le descripteur d’entrée standard de **Program2** est attaché au descripteur de lecture du canal. De ce fait, il n’est plus nécessaire de créer des fichiers temporaires pour transmettre des informations à d’autres programmes.
+Le descripteur de sortie standard de **PROGRAM1** est attaché au descripteur d’écriture du tuyau. Le descripteur d’entrée standard de **PROGRAM2** est fixé au descripteur de lecture du tuyau. De ce fait, il n’est plus nécessaire de créer des fichiers temporaires pour transmettre des informations à d’autres programmes.
 
-La fonction **_pipe** retourne deux descripteurs de fichier au canal dans l’argument de *CF* . L’élément *CF*[0] contient le descripteur de lecture, tandis que l’élément de la façon la plus à *l’élément est*le descripteur d’écriture. Les descripteurs de fichier de canal sont utilisés de la même façon que les autres descripteurs de fichier. (Les fonctions d’entrée et de sortie de bas niveau _ **Read** et _ **Write** peuvent lire et écrire dans un canal.) Pour détecter la condition de fin de canal, recherchez une demande _ **Read** qui retourne 0 comme nombre d’octets lus.
+La fonction **_pipe** renvoie deux descripteurs de fichier à la pipe dans *l’argument des pfds.* *L’élément pfds*[0] contient le descripteur de lecture, et *l’élément pfds*[1] contient le descripteur d’écriture. Les descripteurs de fichier de canal sont utilisés de la même façon que les autres descripteurs de fichier. (L’entrée et la sortie de bas niveau **fonctionnent _read** et **_write** peuvent lire et écrire sur un tuyau.) Pour détecter l’état de fin de tuyau, vérifiez une **demande de _read** qui renvoie 0 au fur et à mesure que le nombre d’octets lisait.
 
-L’argument *psize* spécifie la quantité de mémoire, en octets, à réserver pour le canal. L’argument *TextMode* spécifie le mode de traduction pour le canal. La constante de manifeste **_O_TEXT** spécifie une traduction de texte, et la constante **_O_BINARY** spécifie la traduction binaire. (Pour obtenir une description des modes texte et binaire, consultez [fopen, _wfopen](fopen-wfopen.md).) Si l’argument *TextMode* est 0, **_pipe** utilise le mode de traduction par défaut spécifié par la variable de mode par défaut [_fmode](../../c-runtime-library/fmode.md).
+*L’argument de psize* spécifie la quantité de mémoire, dans les octets, à réserver pour le tuyau. *L’argument textmode* spécifie le mode de traduction pour le tuyau. La constante manifeste **_O_TEXT** spécifie une traduction de texte, et la **_O_BINARY** constante spécifie la traduction binaire. (Voir [fopen, _wfopen](fopen-wfopen.md) pour une description du texte et des modes binaires.) Si l’argument du *textmode* est 0, **_pipe** utilise le mode de traduction par défaut spécifié par la variable de mode par défaut [_fmode](../../c-runtime-library/fmode.md).
 
-Dans les programmes multithread, aucun verrouillage n’est effectué. Les descripteurs de fichiers retournés sont récemment ouverts et ne doivent être référencés par aucun thread tant que l’appel de **_pipe** n’est pas terminé.
+Dans les programmes multithread, aucun verrouillage n’est effectué. Les descripteurs de fichiers qui sont retournés sont nouvellement ouverts et ne doivent pas être référencés par n’importe quel thread jusqu’à ce que le **_pipe’appel** soit terminé.
 
-Pour utiliser la fonction **_pipe** pour communiquer entre un processus parent et un processus enfant, chaque processus ne doit avoir qu’un seul descripteur ouvert sur le canal. Les descripteurs doivent être contraires : si le parent a un descripteur de lecture ouvert, l’enfant doit avoir un descripteur d’écriture ouvert. Le moyen le plus simple consiste à effectuer une opération de **|** bits or () sur l’indicateur **_O_NOINHERIT** avec *TextMode*. Ensuite, utilisez **_dup** ou **_dup2** pour créer une copie héritable du descripteur de canal que vous souhaitez passer à l’enfant. Fermez le descripteur d’origine, puis générez le processus enfant. Une fois le retour de l’appel de génération obtenu, fermez le descripteur en double dans le processus parent. Pour plus d’informations, consultez l’exemple 2 plus loin dans ce même article.
+Pour utiliser la fonction **_pipe** pour communiquer entre un processus parent et un processus enfantin, chaque processus doit avoir un seul descripteur ouvert sur le tuyau. Les descripteurs doivent être contraires : si le parent a un descripteur de lecture ouvert, l’enfant doit avoir un descripteur d’écriture ouvert. La façon la plus simple de**|** le faire est de bitwise ou ( ) le **drapeau _O_NOINHERIT** avec *textmode*. Ensuite, utilisez **_dup** ou **_dup2** pour créer une copie héréditaire du descripteur de pipe que vous voulez transmettre à l’enfant. Fermez le descripteur d’origine, puis générez le processus enfant. Une fois le retour de l’appel de génération obtenu, fermez le descripteur en double dans le processus parent. Pour plus d’informations, consultez l’exemple 2 plus loin dans ce même article.
 
-Dans le système d’exploitation Windows, un canal est détruit dès lors que tous ses descripteurs sont fermés. (Si tous les descripteurs de lecture du canal ont été fermés, toute opération d’écriture dans le canal entraîne une erreur.) Toutes les opérations de lecture et d’écriture au niveau du canal restent en attente tant qu’il n’y a pas suffisamment de données ou d’espace de mémoire tampon pour faire aboutir la demande d’E/S.
+Dans le système d’exploitation Windows, un canal est détruit dès lors que tous ses descripteurs sont fermés. (Si tous les descripteurs de lecture sur le tuyau ont été fermés, alors écrire au tuyau provoque une erreur.) Tous les opérations de lecture et d’écriture sur le tuyau attendre jusqu’à ce qu’il y ait suffisamment de données ou assez d’espace tampon pour remplir la demande I / O.
 
-## <a name="requirements"></a>Configuration requise
+Par défaut, l’état global de cette fonction est étendue à l’application. Pour changer cela, voir [Global State dans le CRT](../global-state.md).
+
+## <a name="requirements"></a>Spécifications
 
 |Routine|En-tête requis|En-tête facultatif|
 |-------------|---------------------|---------------------|
 |**_pipe**|\<io.h>|\<fcntl.h>,1 \<errno.h>2|
 
-1 pour les définitions **_O_BINARY** et **_O_TEXT** .
+1 Pour **_O_BINARY** et **_O_TEXT** définitions.
 
-2 définitions **errno** .
+2 définitions **d’errno.**
 
-Pour plus d'informations sur la compatibilité, voir [Compatibilité](../../c-runtime-library/compatibility.md).
+Pour plus d’informations sur la compatibilité, consultez [Compatibility](../../c-runtime-library/compatibility.md).
 
 ## <a name="libraries"></a>Bibliothèques
 
@@ -345,5 +349,5 @@ This is speaker beep number 10...
 
 ## <a name="see-also"></a>Voir aussi
 
-[Contrôle de processus et d’environnement](../../c-runtime-library/process-and-environment-control.md)<br/>
+[Contrôle des processus et de l’environnement](../../c-runtime-library/process-and-environment-control.md)<br/>
 [_open, _wopen](open-wopen.md)<br/>

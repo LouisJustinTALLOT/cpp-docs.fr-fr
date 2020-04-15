@@ -1,6 +1,6 @@
 ---
 title: StartTracingSession
-description: Référence C++ de la fonction StartTracingSession du kit de développement logiciel (SDK) Build Insights.
+description: La référence de la fonction SDK StartTracingSession.
 ms.date: 02/12/2020
 helpviewer_keywords:
 - C++ Build Insights
@@ -9,23 +9,23 @@ helpviewer_keywords:
 - throughput analysis
 - build time analysis
 - vcperf.exe
-ms.openlocfilehash: de9d46b4a684d66bf01f76e7ea753694cf40d2cd
-ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
+ms.openlocfilehash: 6da81ce54948e5ddbacfc9af50f1be12736fdba7
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/05/2020
-ms.locfileid: "78332620"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81323736"
 ---
 # <a name="starttracingsession"></a>StartTracingSession
 
 ::: moniker range="<=vs-2015"
 
-Le C++ Kit de développement logiciel (SDK) Build Insights est compatible avec Visual Studio 2017 et versions ultérieures. Pour consulter la documentation de ces versions, définissez le contrôle sélecteur de version de Visual Studio pour cet article sur Visual Studio 2017 ou Visual Studio 2019.
+Le SDK Build Insights est compatible avec Visual Studio 2017 et plus. Pour voir la documentation de ces versions, définissez le contrôle du sélecteur Visual Studio **Version** pour cet article à Visual Studio 2017 ou Visual Studio 2019. On le trouve en haut de la table des contenus sur cette page.
 
 ::: moniker-end
 ::: moniker range=">=vs-2017"
 
-La fonction `StartTracingSession` démarre une session de suivi. Les exécutables qui appellent cette fonction doivent avoir des privilèges d’administrateur.
+La `StartTracingSession` fonction commence une session de traçage. Les exécutables qui appellent cette fonction doivent avoir des privilèges d’administrateur.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -41,14 +41,14 @@ RESULT_CODE StartTracingSession(
 
 ### <a name="parameters"></a>Paramètres
 
-*session*\
-Nom de la session de suivi à démarrer. Utilisez le même nom lors de l’appel de [StopTracingSession](stop-tracing-session.md) ou de toute autre fonction STOP trace.
+*sessionName*\
+Le nom de la session de traçage pour commencer. Utilisez le même nom lorsque vous appelez [StopTracingSession](stop-tracing-session.md) ou toute autre fonction de trace d’arrêt.
 
-*options*\
-Pointeur vers un objet [TRACING_SESSION_OPTIONS](../other-types/tracing-session-options-struct.md) . Utilisez cet objet pour sélectionner les événements qui doivent être collectés par la session de suivi.
+*Options*\
+Pointeur vers un [objet TRACING_SESSION_OPTIONS.](../other-types/tracing-session-options-struct.md) Utilisez cet objet pour sélectionner les événements qui doivent être collectés par la session de traçage.
 
 ### <a name="return-value"></a>Valeur de retour
 
-Code de résultat de l’énumération [RESULT_CODE](../other-types/result-code-enum.md) .
+Un code de résultat de [l’enum RESULT_CODE.](../other-types/result-code-enum.md)
 
 ::: moniker-end

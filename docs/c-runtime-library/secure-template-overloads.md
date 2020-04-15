@@ -11,12 +11,12 @@ helpviewer_keywords:
 - _CRT_SECURE_CPP_OVERLOAD_STANDARD_NAMES_COUNT
 - secure template overloads
 ms.assetid: 562741d0-39c0-485e-8529-73d740f29f8f
-ms.openlocfilehash: dfb13d5a48376efb72a845e2f5e2380407937f5b
-ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
-ms.translationtype: HT
+ms.openlocfilehash: 6dba60b57616a1656b2791958e460f0268eaa7fe
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/11/2019
-ms.locfileid: "57744565"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81361125"
 ---
 # <a name="secure-template-overloads"></a>Sécuriser les surcharges de modèle
 
@@ -50,7 +50,7 @@ strcpy(szBuf, "test"); // ==> strcpy_s(szBuf, 10, "test")
 La macro `_CRT_SECURE_CPP_OVERLOAD_STANDARD_NAMES` n’affecte pas les fonctions qui acceptent un nombre, par exemple `strncpy`. Pour activer les surcharges de modèle pour les fonctions de nombre, affectez à `_CRT_SECURE_CPP_OVERLOAD_STANDARD_NAMES_COUNT` la valeur 1. Avant cela, toutefois, vérifiez que votre code obtient le nombre de caractères, et non la taille de la mémoire tampon (une erreur courante). En outre, du code qui écrit explicitement une marque de fin null à la fin de la mémoire tampon après l’appel de fonction n’est pas nécessaire si la variante sécurisée est appelée. Si vous avez besoin du comportement de la troncation, consultez [_TRUNCATE](../c-runtime-library/truncate.md).
 
 > [!NOTE]
->  La macro `_CRT_SECURE_CPP_OVERLOAD_STANDARD_NAMES_COUNT` nécessite que la valeur 1 soit également définie pour `_CRT_SECURE_CPP_OVERLOAD_STANDARD_NAMES`. Si `_CRT_SECURE_CPP_OVERLOAD_STANDARD_NAMES_COUNT` a la valeur 1 et `_CRT_SECURE_CPP_OVERLOAD_STANDARD_NAMES` a la valeur 0, l’application n’effectue aucune surcharge de modèle.
+> La macro `_CRT_SECURE_CPP_OVERLOAD_STANDARD_NAMES_COUNT` nécessite que la valeur 1 soit également définie pour `_CRT_SECURE_CPP_OVERLOAD_STANDARD_NAMES`. Si `_CRT_SECURE_CPP_OVERLOAD_STANDARD_NAMES_COUNT` a la valeur 1 et `_CRT_SECURE_CPP_OVERLOAD_STANDARD_NAMES` a la valeur 0, l’application n’effectue aucune surcharge de modèle.
 
 Quand vous affectez à `_CRT_SECURE_CPP_OVERLOAD_SECURE_NAMES` la valeur 1, elle permet des surcharges de modèle des variantes sécurisées (noms se terminant par « _s »). Dans ce cas, si `_CRT_SECURE_CPP_OVERLOAD_SECURE_NAMES` a la valeur 1, une petite modification doit être apportée au code d’origine :
 
@@ -93,5 +93,5 @@ strcpy_s(szBuf, "test"); // doesn't compile; you have to change it to
 
 ## <a name="see-also"></a>Voir aussi
 
-[Fonctionnalités de sécurité dans la bibliothèque CRT](../c-runtime-library/security-features-in-the-crt.md)<br/>
-[Fonctionnalités de bibliothèque CRT](../c-runtime-library/crt-library-features.md)
+[Caractéristiques de sécurité dans le CRT](../c-runtime-library/security-features-in-the-crt.md)<br/>
+[Caractéristiques de la bibliothèque CRT](../c-runtime-library/crt-library-features.md)

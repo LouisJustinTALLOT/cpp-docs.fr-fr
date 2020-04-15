@@ -8,16 +8,16 @@ helpviewer_keywords:
 - -QIfist compiler option [C++]
 - /QIfist compiler option [C++]
 ms.assetid: 1afd32a5-f658-4b66-85f4-e0ce4cb955bd
-ms.openlocfilehash: 7af88c91793688d23cf35177ae7a5250b04832a8
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 5d6e12a1003ea125b0da4bfef580d8096e97553a
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62319276"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81336101"
 ---
-# <a name="qifist-suppress-ftol"></a>/QIfist (Supprimer _ftol)
+# <a name="qifist-suppress-_ftol"></a>/QIfist (Supprimer _ftol)
 
-Obsolète. Supprime l'appel de la fonction d'assistance `_ftol` quand la conversion d'un type à virgule flottante vers un type intégral est requise.
+Action déconseillée. Supprime l'appel de la fonction d'assistance `_ftol` quand la conversion d'un type à virgule flottante vers un type intégral est requise.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -28,30 +28,30 @@ Obsolète. Supprime l'appel de la fonction d'assistance `_ftol` quand la convers
 ## <a name="remarks"></a>Notes
 
 > [!NOTE]
->  **/QIfist** est uniquement disponible dans le compilateur ciblant x86 ; cette option du compilateur n’est pas disponible dans les compilateurs qui ciblent x64 orARM.
+> **/QIfist n’est** disponible que dans le compilateur ciblant x86; cette option de compilateur n’est pas disponible dans les compilateurs ciblant x64 ouARM.
 
-Outre la conversion d’un type à virgule flottante en type intégral, la `_ftol` fonction assure le mode d’arrondi de l’unité de virgule flottante (FPU) à zéro (troncature), en définissant les bits 10 et 11 du mot de commande. Cela garantit la conversion d’un type à virgule flottante vers un type intégral se produit comme décrit par la norme C ANSI (la partie fractionnaire du nombre est supprimée). Lorsque vous utilisez **/QIfist**, cette garantie ne s’applique plus. Le mode d’arrondi est un de quatre comme décrit dans les manuels de référence Intel :
+En plus de la conversion d’un type `_ftol` de point flottant à type intégral, la fonction assure le mode d’arrondi de l’unité à point flottant (FPU) est vers zéro (tronqué), en définissant les bits 10 et 11 du mot de commande. Cela garantit que la conversion d’un type de point flottant à un type intégral se produit comme décrit par la norme ANSI C (la partie fractionnaire du nombre est jetée). Lors de l’utilisation **/QIfist**, cette garantie ne s’applique plus. Le mode d’arrondissement sera l’un des quatre tels que documentés dans les manuels de référence Intel:
 
-- Arrondi vers le plus proche (nombre pair si équidistant)
+- Ronde vers le plus proche (même nombre si équidistant)
 
-- Arrondi vers l’infini négatif
+- Rond vers l’infini négatif
 
-- Arrondi vers l’infini positif
+- Tour vers l’infini positif
 
-- Arrondi à zéro
+- Ronde vers zéro
 
-Vous pouvez utiliser la [_control87, _controlfp, \__control87_2](../../c-runtime-library/reference/control87-controlfp-control87-2.md) fonction C Run-Time pour modifier le comportement d’arrondi du FPU. Mode du FPU d’arrondi par défaut est « Arrondi vers le plus proche ». À l’aide de **/QIfist** peut améliorer les performances de votre application, mais pas sans risque. Vous devez tester rigoureusement les parties de votre code qui sont sensibles aux modes d’arrondi avant de vous fier au code généré avec **/QIfist** dans les environnements de production.
+Vous pouvez utiliser la fonction [_control87, \__controlfp, _control87_2](../../c-runtime-library/reference/control87-controlfp-control87-2.md) C Run-Time pour modifier le comportement d’arrondissement du FPU. Le mode d’arrondissement par défaut de la FPU est "Round vers le plus proche." L’utilisation **de /QIfist** peut améliorer les performances de votre application, mais pas sans risque. Vous devez tester en profondeur les parties de votre code qui sont sensibles aux modes d’arrondissement avant de vous fier au code construit avec **/QIfist** dans les environnements de production.
 
-[/ arch (x86)](arch-x86.md) et **/QIfist** ne peut pas être utilisé sur le même compiland.
+[/arch (x86)](arch-x86.md) et **/QIfist** ne peut pas être utilisé sur le même compiland.
 
 > [!NOTE]
->  **/QIfist** est pas en vigueur par défaut, car les bits d’arrondi affectent à virgule flottante flottante également point arrondi (ce qui se produit après chaque calcul), donc lorsque vous définissez les indicateurs pour l’arrondi de style C (à zéro), votre à virgule flottante calculs peuvent être différents. **/QIfist** ne doit pas être utilisé si votre code dépend du comportement attendu de tronquer la partie fractionnaire du nombre à virgule flottante. Si vous ne savez pas, n’utilisez pas **/QIfist**.
+> **/QIfist n’est** pas en vigueur par défaut parce que les bits d’arrondissement affectent également le point flottant à l’arrondissement de points flottants (qui se produit après chaque calcul), ainsi quand vous définissez les drapeaux pour L’arrondi de C-modèle (vers zéro), vos calculs de point flottant pourraient être différents. **/QIfist** ne doit pas être utilisé si votre code dépend du comportement prévu de tronquer la partie fractionnelle du nombre de points flottants. Si vous n’êtes pas sûr, ne pas utiliser **/QIfist**.
 
-Le **/QIfist** option est déconseillée à compter de Visual Studio 2005. Le compilateur a apporté des améliorations significatives dans float à vitesse de conversion de type int. Pour obtenir la liste des options du compilateur déconseillées, consultez **Options déconseillées et supprimées du compilateur** dans [Options du compilateur classées par catégorie](compiler-options-listed-by-category.md).
+**L’option /QIfist** est dépréciée à partir de Visual Studio 2005. Le compilateur a apporté des améliorations significatives dans la vitesse de conversion de flotteur à l’int. Pour une liste d’options de compilateur dépréciés, voir **Les options de compilateur déprécié et supprimé** dans les options [compilateur énumérées par catégorie](compiler-options-listed-by-category.md).
 
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Pour définir cette option du compilateur dans l'environnement de développement Visual Studio
 
-1. Ouvrez la boîte de dialogue **Pages de propriété** du projet. Pour plus d’informations, consultez [propriétés de compilateur et de build C++ définie dans Visual Studio](../working-with-project-properties.md).
+1. Ouvrez la boîte de dialogue **Pages de propriété** du projet. Pour plus d’informations, consultez [Définir le compilateur C++ et les propriétés de build dans Visual Studio](../working-with-project-properties.md).
 
 1. Cliquez sur le dossier **C/C++** .
 

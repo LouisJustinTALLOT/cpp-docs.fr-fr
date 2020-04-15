@@ -22,12 +22,12 @@ helpviewer_keywords:
 - CBaseKeyFrame [MFC], m_bIsKeyframeAtOffset
 - CBaseKeyFrame [MFC], m_keyframe
 ms.assetid: 285a2eff-e7c4-43be-b5aa-737727e6866d
-ms.openlocfilehash: d36c924d30bd728fcd54b6cdf6805ade25e20b5c
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 3fcd55f6a157f4b837090a3608fb509b870aae5d
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62218400"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81352987"
 ---
 # <a name="cbasekeyframe-class"></a>CBaseKeyFrame, classe
 
@@ -51,22 +51,22 @@ class CBaseKeyFrame : public CObject;
 
 |Nom|Description|
 |----------|-----------------|
-|[CBaseKeyFrame::AddToStoryboard](#addtostoryboard)|Ajoute une image clé au storyboard.|
-|[CBaseKeyFrame::GetAnimationKeyframe](#getanimationkeyframe)|Retourne la valeur d’image clé sous-jacente.|
-|[CBaseKeyFrame::IsAdded](#isadded)|Indique si une image clé a été ajoutée au storyboard.|
-|[CBaseKeyFrame::IsKeyframeAtOffset](#iskeyframeatoffset)|Spécifie si l’image clé doit être ajoutée au storyboard à l’offset, ou après la transition.|
+|[CBaseKeyFrame::AddToStoryboard](#addtostoryboard)|Ajoute un cadre clé au storyboard.|
+|[CBaseKeyFrame::GetAnimationKeyframe](#getanimationkeyframe)|Retourne la valeur keyframe sous-jacente.|
+|[CBaseKeyFrame::IsAdded](#isadded)|Indique si un cadre clé a été ajouté au storyboard.|
+|[CBaseKeyFrame::IsKeyframeAtOffset](#iskeyframeatoffset)|Précise si le cadre clé doit être ajouté au storyboard à compensation, ou après la transition.|
 
 ### <a name="protected-data-members"></a>Membres de données protégés
 
 |Nom|Description|
 |----------|-----------------|
-|[CBaseKeyFrame::m_bAdded](#m_badded)|Spécifie si cette image clé a été ajoutée à une table de montage séquentiel.|
-|[CBaseKeyFrame::m_bIsKeyframeAtOffset](#m_biskeyframeatoffset)|Spécifie si cette image clé doit être ajoutée au storyboard à un offset à partir d’une autre image clé existante, ou à la fin d’une transition.|
-|[CBaseKeyFrame::m_keyframe](#m_keyframe)|Représente une image clé API d’Animation de Windows. Lorsqu’une image clé n’est pas initialisée, il est défini à la valeur prédéfinie UI_ANIMATION_KEYFRAME_STORYBOARD_START.|
+|[CBaseKeyFrame::m_bAdded](#m_badded)|Précise si ce cadre clé a été ajouté à un storyboard.|
+|[CBaseKeyFrame::m_bIsKeyframeAtOffset](#m_biskeyframeatoffset)|Précise si ce cadre clé devrait être ajouté au storyboard à un décalage d’un autre cadre clé existant, ou à la fin d’une certaine transition.|
+|[CBaseKeyFrame::m_keyframe](#m_keyframe)|Représente un cadre d’API d’animation Windows. Lorsqu’un cadre clé n’est pas paralé, il est réglé sur la valeur prédéfinie UI_ANIMATION_KEYFRAME_STORYBOARD_START.|
 
 ## <a name="remarks"></a>Notes
 
-Encapsule la variable UI_ANIMATION_KEYFRAME. Sert de classe de base pour n’importe quelle implémentation de l’image clé. Une image clé représente un moment donné dans une table de montage séquentiel et peut être utilisée pour spécifier les heures de début et de fin des transitions. Il existe deux types d’images clés : images clés ajoutées au storyboard à l’offset spécifié (dans le temps) ou images clés ajoutées après la transition spécifiée. Étant donné que les durées de certaines transitions ne peut pas être connues avant le démarrage de l’animation, les valeurs réelles de certaines images clés sont déterminées lors de l’exécution uniquement. Étant donné que les images clés peuvent dépendre des transitions, qui à leur tour dépendent des images clés, il est important éviter les récurrences infinies lors de la création de chaînes d’images clés.
+Encapsule UI_ANIMATION_KEYFRAME variable. Sert de classe de base pour toute mise en œuvre de keyframe. Un cadre clé représente un moment dans le temps dans un storyboard et peut être utilisé pour spécifier les heures de début et de fin des transitions. Il existe deux types de cadres clés - les cadres clés ajoutés au storyboard à la compensation spécifiée (dans le temps), ou les cadres clés ajoutés après la transition spécifiée. Étant donné que les durées de certaines transitions ne peuvent pas être connues avant le début de l’animation, les valeurs réelles de certains cadres clés sont déterminées au moment de la course seulement. Étant donné que les cadres clés peuvent dépendre des transitions, qui dépendent à leur tour des cadres clés, il est important d’éviter des récursions infinies lors de la construction de chaînes de porte-clés.
 
 ## <a name="inheritance-hierarchy"></a>Hiérarchie d'héritage
 
@@ -74,13 +74,13 @@ Encapsule la variable UI_ANIMATION_KEYFRAME. Sert de classe de base pour n’imp
 
 `CBaseKeyFrame`
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
 **En-tête :** afxanimationcontroller.h
 
-##  <a name="addtostoryboard"></a>  CBaseKeyFrame::AddToStoryboard
+## <a name="cbasekeyframeaddtostoryboard"></a><a name="addtostoryboard"></a>CBaseKeyFrame::AddToStoryboard
 
-Ajoute une image clé au storyboard.
+Ajoute un cadre clé au storyboard.
 
 ```
 virtual BOOL AddToStoryboard(
@@ -90,21 +90,21 @@ virtual BOOL AddToStoryboard(
 
 ### <a name="parameters"></a>Paramètres
 
-*pStoryboard*<br/>
-Pointeur vers une table de montage séquentiel.
+*pStoryboard (en)*<br/>
+Un pointeur à un storyboard.
 
-*bDeepAdd*<br/>
-Si ce paramètre a la valeur TRUE et que l’image clé en cours d’ajout dépend d’une autre image clé ou transition, cette méthode essaie d’ajouter cette image clé ou une transition au storyboard tout d’abord.
+*bDeepAdd (en)*<br/>
+Si ce paramètre est VRAI et que le cadre clé ajouté dépend d’un autre cadre clé ou transition, cette méthode tente d’ajouter ce cadre clé ou de passer au storyboard en premier.
 
 ### <a name="return-value"></a>Valeur de retour
 
-TRUE si l’image clé a été ajouté à la table de montage séquentiel avec succès ; Sinon, FALSE.
+VRAI si keyframe a été ajouté à storyboard avec succès; autrement FALSE.
 
 ### <a name="remarks"></a>Notes
 
-Cette méthode est appelée pour ajouter une image clé au storyboard.
+Cette méthode est appelée à ajouter un cadre clé au storyboard.
 
-##  <a name="cbasekeyframe"></a>  CBaseKeyFrame::CBaseKeyFrame
+## <a name="cbasekeyframecbasekeyframe"></a><a name="cbasekeyframe"></a>CBaseKeyFrame::CBaseKeyFrame
 
 Construit un objet keyframe.
 
@@ -112,9 +112,9 @@ Construit un objet keyframe.
 CBaseKeyFrame();
 ```
 
-##  <a name="getanimationkeyframe"></a>  CBaseKeyFrame::GetAnimationKeyframe
+## <a name="cbasekeyframegetanimationkeyframe"></a><a name="getanimationkeyframe"></a>CBaseKeyFrame::GetAnimationKeyframe
 
-Retourne la valeur d’image clé sous-jacente.
+Retourne la valeur keyframe sous-jacente.
 
 ```
 UI_ANIMATION_KEYFRAME GetAnimationKeyframe() const;
@@ -122,15 +122,15 @@ UI_ANIMATION_KEYFRAME GetAnimationKeyframe() const;
 
 ### <a name="return-value"></a>Valeur de retour
 
-Une image clé actuelle. La valeur par défaut est UI_ANIMATION_KEYFRAME_STORYBOARD_START.
+Un cadre clé actuel. La valeur par défaut est UI_ANIMATION_KEYFRAME_STORYBOARD_START.
 
 ### <a name="remarks"></a>Notes
 
-Il s’agit d’un accesseur à la valeur d’image clé sous-jacente.
+Il s’agit d’un accessoireur de la valeur sous-jacente de la clé.
 
-##  <a name="isadded"></a>  CBaseKeyFrame::IsAdded
+## <a name="cbasekeyframeisadded"></a><a name="isadded"></a>CBaseKeyFrame::IsAdded
 
-Indique si une image clé a été ajoutée au storyboard.
+Indique si un cadre clé a été ajouté au storyboard.
 
 ```
 BOOL IsAdded() const;
@@ -138,15 +138,15 @@ BOOL IsAdded() const;
 
 ### <a name="return-value"></a>Valeur de retour
 
-TRUE si une image clé est ajoutée à une table de montage séquentiel ; Sinon, FALSE.
+VRAI si un cadre clé est ajouté à un storyboard; FALSE otehrwise.
 
 ### <a name="remarks"></a>Notes
 
-Dans la classe de base IsAdded retourne toujours TRUE, mais elle est substituée dans les classes dérivées.
+Dans la classe de base IsAdded retourne toujours VRAI, mais il est remplacé dans les classes dérivées.
 
-##  <a name="iskeyframeatoffset"></a>  CBaseKeyFrame::IsKeyframeAtOffset
+## <a name="cbasekeyframeiskeyframeatoffset"></a><a name="iskeyframeatoffset"></a>CBaseKeyFrame::IsKeyframeAtOffset
 
-Spécifie si l’image clé doit être ajoutée au storyboard à l’offset, ou après la transition.
+Précise si le cadre clé doit être ajouté au storyboard à compensation, ou après la transition.
 
 ```
 BOOL IsKeyframeAtOffset() const;
@@ -154,31 +154,31 @@ BOOL IsKeyframeAtOffset() const;
 
 ### <a name="return-value"></a>Valeur de retour
 
-TRUE si l’image clé doit être ajoutée au storyboard à un offset spécifié. FALSE si l’image clé doit être ajoutée au storyboard après une transition.
+VRAI si le cadre clé doit être ajouté au storyboard à une compensation spécifiée. FALSE si le cadre clé doit être ajouté au storyboard après une certaine transition.
 
 ### <a name="remarks"></a>Notes
 
-Spécifie si l’image clé doit être ajoutée au storyboard à l’offset. Le décalage ou transition doit être spécifiée dans une classe dérivée.
+Précise si le cadre clé doit être ajouté au storyboard à compensation. Le décalage ou la transition doit être spécifié dans une classe dérivée.
 
-##  <a name="m_badded"></a>  CBaseKeyFrame::m_bAdded
+## <a name="cbasekeyframem_badded"></a><a name="m_badded"></a>CBaseKeyFrame::m_bAdded
 
-Spécifie si cette image clé a été ajoutée à une table de montage séquentiel.
+Précise si ce cadre clé a été ajouté à un storyboard.
 
 ```
 BOOL m_bAdded;
 ```
 
-##  <a name="m_biskeyframeatoffset"></a>  CBaseKeyFrame::m_bIsKeyframeAtOffset
+## <a name="cbasekeyframem_biskeyframeatoffset"></a><a name="m_biskeyframeatoffset"></a>CBaseKeyFrame::m_bIsKeyframeAtOffset
 
-Spécifie si cette image clé doit être ajoutée au storyboard à un offset à partir d’une autre image clé existante, ou à la fin d’une transition.
+Précise si ce cadre clé devrait être ajouté au storyboard à un décalage d’un autre cadre clé existant, ou à la fin d’une certaine transition.
 
 ```
 BOOL m_bIsKeyframeAtOffset;
 ```
 
-##  <a name="m_keyframe"></a>  CBaseKeyFrame::m_keyframe
+## <a name="cbasekeyframem_keyframe"></a><a name="m_keyframe"></a>CBaseKeyFrame::m_keyframe
 
-Représente une image clé API d’Animation de Windows. Lorsqu’une image clé n’est pas initialisée, il est défini à la valeur prédéfinie UI_ANIMATION_KEYFRAME_STORYBOARD_START.
+Représente un cadre d’API d’animation Windows. Lorsqu’un cadre clé n’est pas paralé, il est réglé sur la valeur prédéfinie UI_ANIMATION_KEYFRAME_STORYBOARD_START.
 
 ```
 UI_ANIMATION_KEYFRAME m_keyframe;

@@ -1,6 +1,6 @@
 ---
-title: Structure SYMBOL_NAME_DATA
-description: Référence C++ de la structure du kit de développement logiciel (SDK) de Build Insights SYMBOL_NAME_DATA.
+title: structure SYMBOL_NAME_DATA
+description: La référence de structure de construction SDK SYMBOL_NAME_DATA de CMD Build Insights.
 ms.date: 02/12/2020
 helpviewer_keywords:
 - C++ Build Insights
@@ -9,23 +9,23 @@ helpviewer_keywords:
 - throughput analysis
 - build time analysis
 - vcperf.exe
-ms.openlocfilehash: 618e84f198c20aa089dc7e06e1e6c09b96b6d273
-ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
+ms.openlocfilehash: 1217572f20a772fde629533d6ab170c14dc5b5e0
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/05/2020
-ms.locfileid: "78333635"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81325338"
 ---
-# <a name="symbol_name_data-structure"></a>Structure SYMBOL_NAME_DATA
+# <a name="symbol_name_data-structure"></a>structure SYMBOL_NAME_DATA
 
 ::: moniker range="<=vs-2015"
 
-Le C++ Kit de développement logiciel (SDK) Build Insights est compatible avec Visual Studio 2017 et versions ultérieures. Pour consulter la documentation de ces versions, définissez le contrôle sélecteur de version de Visual Studio pour cet article sur Visual Studio 2017 ou Visual Studio 2019.
+Le SDK Build Insights est compatible avec Visual Studio 2017 et plus. Pour voir la documentation de ces versions, définissez le contrôle du sélecteur Visual Studio **Version** pour cet article à Visual Studio 2017 ou Visual Studio 2019. On le trouve en haut de la table des contenus sur cette page.
 
 ::: moniker-end
 ::: moniker range=">=vs-2017"
 
-La structure `SYMBOL_NAME_DATA` décrit un symbole frontal du compilateur.
+La `SYMBOL_NAME_DATA` structure décrit un symbole frontal compilateur.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -42,11 +42,11 @@ typedef struct SYMBOL_NAME_DATA_TAG
 
 |  |  |
 |--|--|
-| `Key` | Clé du symbole. Cette valeur est unique au sein de la trace en cours d’analyse. |
-| `Name` | Nom du symbole. |
+| `Key` | La clé du symbole. Cette valeur est unique dans la trace analysée. |
+| `Name` | Le nom du symbole. |
 
 ## <a name="remarks"></a>Notes
 
-Les symboles provenant de deux passes front-end de compilateur différents peuvent avoir le même nom mais une clé différente. Dans ce cas, utilisez des noms de symboles pour déterminer si deux types sont identiques.
+Les symboles provenant de deux différents cols avant compilateur peuvent avoir le même nom, mais une touche différente. Dans ce cas, utilisez des noms de symboles pour déterminer si deux types sont les mêmes.
 
 ::: moniker-end
