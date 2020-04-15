@@ -7,16 +7,16 @@ f1_keywords:
 - AMP_SHORT_VECTORS/Concurrency::graphics::short_vector_traits::short_vector_traits
 - AMP_SHORT_VECTORS/Concurrency::graphics::short_vector_traits::size Constant
 ms.assetid: cd9492da-9e02-4a6e-9d50-b61252cdb460
-ms.openlocfilehash: 7531a57dddcc85392380029afc6edd577bbc5cf3
-ms.sourcegitcommit: a8ef52ff4a4944a1a257bdaba1a3331607fb8d0f
+ms.openlocfilehash: d743f74deaea5cb31cd609ece90891c8cfe2258f
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/11/2020
-ms.locfileid: "77126371"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81374734"
 ---
 # <a name="short_vector_traits-structure"></a>short_vector_traits Structure
 
-short_vector_traits permet la récupération de la longueur du vecteur sous-jacent et du type scalaire d’un type de vecteur short ou d’un type scalaire
+short_vector_traits permet la récupération de la longueur du vecteur sous-jacent et du type scalaire d’un type de vecteur court ou d’un type scalaire
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -83,21 +83,21 @@ struct short_vector_traits<double_4>;
 
 ### <a name="public-typedefs"></a>Typedefs publics
 
-|Name|Description|
+|Nom|Description|
 |----------|-----------------|
 |`value_type`||
 
 ### <a name="public-constructors"></a>Constructeurs publics
 
-|Name|Description|
+|Nom|Description|
 |----------|-----------------|
-|[short_vector_traits :: short_vector_traits, constructeur](#ctor)||
+|[short_vector_traits::short_vector_traits, constructeur](#ctor)||
 
 ### <a name="public-constants"></a>Constantes publiques
 
-|Name|Description|
+|Nom|Description|
 |----------|-----------------|
-|[short_vector_traits :: Size, constante](#size)||
+|[short_vector_traits::size, constante](#size)||
 
 ## <a name="inheritance-hierarchy"></a>Hiérarchie d'héritage
 
@@ -105,17 +105,17 @@ struct short_vector_traits<double_4>;
 
 ## <a name="requirements"></a>Spécifications
 
-**En-tête :** amp_short_vectors. h
+**En-tête:** amp_short_vectors.h
 
-**Espace de noms :** Concurrency :: Graphics
+**Espace nom:** Concordrency::graphiques
 
-## <a name="ctor"></a>short_vector_traits :: short_vector_traits, constructeur
+## <a name="short_vector_traitsshort_vector_traits-constructor"></a><a name="ctor"></a>short_vector_traits::short_vector_traits Constructeur
 
 ```cpp
 short_vector_traits();
 ```
 
-## <a name="size"></a>short_vector_traits :: Size, constante
+## <a name="short_vector_traitssize-constant"></a><a name="size"></a>short_vector_traits::taille Constante
 
 ```cpp
 static int const size = 1;
