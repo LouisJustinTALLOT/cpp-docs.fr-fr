@@ -1,5 +1,5 @@
 ---
-title: CMFCPropertyGridToolTipCtrl, classe
+title: Classe CMFCPropertyGridToolTipCtrl
 ms.date: 11/04/2016
 f1_keywords:
 - CMFCPropertyGridToolTipCtrl
@@ -20,16 +20,16 @@ helpviewer_keywords:
 - CMFCPropertyGridToolTipCtrl [MFC], SetTextMargin
 - CMFCPropertyGridToolTipCtrl [MFC], Track
 ms.assetid: 84b436e5-6695-4da0-9569-1a875e087711
-ms.openlocfilehash: f1b6f626b5f9844c73cd2225a7d6311f5b2f7d4f
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: 94d75f914e5f7928d08dd2a87997ab02c4f16832
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69505091"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81361789"
 ---
-# <a name="cmfcpropertygridtooltipctrl-class"></a>CMFCPropertyGridToolTipCtrl, classe
+# <a name="cmfcpropertygridtooltipctrl-class"></a>Classe CMFCPropertyGridToolTipCtrl
 
-Implémente un contrôle ToolTip que la [classe CMFCPropertyGridCtrl](../../mfc/reference/cmfcpropertygridctrl-class.md) utilise pour afficher des info-bulles.
+Implémente un contrôle de pointe d’outil que la [classe CMFCPropertyGridCtrl](../../mfc/reference/cmfcpropertygridctrl-class.md) utilise pour afficher les outils.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -52,23 +52,23 @@ class CMFCPropertyGridToolTipCtrl : public CWnd
 |||
 |-|-|
 |Nom|Description|
-|[CMFCPropertyGridToolTipCtrl::Create](#create)|Crée une fenêtre pour le contrôle ToolTip.|
-|[CMFCPropertyGridToolTipCtrl::Deactivate](#deactivate)|Désactive et masque le contrôle ToolTip.|
-|[CMFCPropertyGridToolTipCtrl::GetLastRect](#getlastrect)|Retourne les coordonnées de la dernière position du contrôle ToolTip.|
-|[CMFCPropertyGridToolTipCtrl::Hide](#hide)|Masque le contrôle ToolTip.|
-|`CMFCPropertyGridToolTipCtrl::PreTranslateMessage`|Utilisé par la classe [CWinApp](../../mfc/reference/cwinapp-class.md) pour traduire les messages de fenêtre avant qu’ils ne soient distribués aux fonctions Windows [TranslateMessage](/windows/win32/api/winuser/nf-winuser-translatemessage) et [DispatchMessage](/windows/win32/api/winuser/nf-winuser-dispatchmessage) . (Substitue [CWnd::PreTranslateMessage](../../mfc/reference/cwnd-class.md#pretranslatemessage).)|
-|[CMFCPropertyGridToolTipCtrl::SetTextMargin](#settextmargin)|Définit l’espacement entre le texte de l’info-bulle et la bordure de la fenêtre d’info-bulle.|
-|[CMFCPropertyGridToolTipCtrl::Track](#track)|Affiche le contrôle ToolTip.|
+|[CMFCPropertyGridToolTipCtrl::Créer](#create)|Crée une fenêtre pour le contrôle de l’outiltip.|
+|[CMFCPropertyGridToolTipCtrl::Deactivate](#deactivate)|Désactive et cache le contrôle de l’outil.|
+|[CMFCPropertyGridToolTipCtrl::GetLastRect](#getlastrect)|Retourne les coordonnées de la dernière position du contrôle de l’outil.|
+|[CMFCPropertyGridToolTipCtrl::Hide](#hide)|Cache le contrôle de l’outil.|
+|`CMFCPropertyGridToolTipCtrl::PreTranslateMessage`|Utilisé par la classe [CWinApp](../../mfc/reference/cwinapp-class.md) pour traduire les messages de fenêtre avant qu’ils ne soient envoyés aux [fonctions De Windows TranslateMessage](/windows/win32/api/winuser/nf-winuser-translatemessage) et [DispatchMessage.](/windows/win32/api/winuser/nf-winuser-dispatchmessage) (Substitue [CWnd::PreTranslateMessage](../../mfc/reference/cwnd-class.md#pretranslatemessage).)|
+|[CMFCPropertyGridToolTipCtrl::SetTextMargin](#settextmargin)|Définit l’espacement entre le texte de l’outil et la bordure de la fenêtre de pointe d’outil.|
+|[CMFCPropertyGridToolTipCtrl::Track](#track)|Affiche le contrôle de l’outil.|
 
 ## <a name="remarks"></a>Notes
 
-Les info-bulles s’affichent lorsque le pointeur se trouve sur un nom de propriété. La classe [CMFCPropertyGridToolTipCtrl](../../mfc/reference/cmfcpropertygridtooltipctrl-class.md) affiche une info-bulle pour qu’elle soit facilement lisible par l’utilisateur. En règle générale, la position d’une info-bulle est déterminée par la position du pointeur. En utilisant cette classe, l’info-bulle apparaît sur le nom de la propriété et ressemble à l’extension de propriété naturelle, afin que le nom de propriété soit entièrement visible.
+Les outils sont affichés lorsque le pointeur repose sur un nom de propriété. La classe [CMFCPropertyGridToolTipCtrl](../../mfc/reference/cmfcpropertygridtooltipctrl-class.md) affiche une boîte à outils afin qu’elle soit facilement lisible par l’utilisateur. Habituellement, la position d’un tooltip est déterminée par la position du pointeur. En utilisant cette classe, l’outil apparaît sur le nom de propriété et ressemble à l’extension de propriété naturelle, de sorte que le nom de la propriété est entièrement visible.
 
 MFC crée automatiquement ce contrôle et l’utilise dans la [classe CMFCPropertyGridCtrl](../../mfc/reference/cmfcpropertygridctrl-class.md).
 
-## <a name="example"></a>Exemples
+## <a name="example"></a>Exemple
 
-L’exemple suivant montre comment construire un objet de la `CMFCPropertyGridToolTipCtrl` classe et comment afficher le contrôle ToolTip.
+L’exemple suivant montre comment construire `CMFCPropertyGridToolTipCtrl` un objet de la classe, et comment afficher le contrôle de l’outiltip.
 
 [!code-cpp[NVC_MFC_RibbonApp#23](../../mfc/reference/codesnippet/cpp/cmfcpropertygridtooltipctrl-class_1.cpp)]
 
@@ -82,11 +82,11 @@ L’exemple suivant montre comment construire un objet de la `CMFCPropertyGridTo
 
 [CMFCPropertyGridToolTipCtrl](../../mfc/reference/cmfcpropertygridtooltipctrl-class.md)
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
-**En-tête:** afxpropertygridtooltipctrl. h
+**En-tête:** afxpropertygridtooltipctrl.h
 
-##  <a name="cmfcpropertygridtooltipctrl"></a>  CMFCPropertyGridToolTipCtrl::CMFCPropertyGridToolTipCtrl
+## <a name="cmfcpropertygridtooltipctrlcmfcpropertygridtooltipctrl"></a><a name="cmfcpropertygridtooltipctrl"></a>CMFCPropertyGridToolTipCtrl::CMFCPropertyGridToolTipCtrl
 
 Construit un objet `CMFCPropertyGridToolTipCtrl`.
 
@@ -94,9 +94,9 @@ Construit un objet `CMFCPropertyGridToolTipCtrl`.
 CMFCPropertyGridToolTipCtrl::CMFCPropertyGridToolTipCtrl();
 ```
 
-##  <a name="create"></a>  CMFCPropertyGridToolTipCtrl::Create
+## <a name="cmfcpropertygridtooltipctrlcreate"></a><a name="create"></a>CMFCPropertyGridToolTipCtrl::Créer
 
-Crée une fenêtre pour le contrôle ToolTip.
+Crée une fenêtre pour le contrôle de l’outiltip.
 
 ```
 BOOL Create(CWnd* pWndParent);
@@ -105,15 +105,15 @@ BOOL Create(CWnd* pWndParent);
 ### <a name="parameters"></a>Paramètres
 
 *pWndParent*<br/>
-dans Pointeur vers la fenêtre parente.
+[dans] Un pointeur à la fenêtre parente.
 
 ### <a name="return-value"></a>Valeur de retour
 
-TRUE si la fenêtre a été créée avec succès; Sinon, FALSe.
+VRAI si la fenêtre a été créée avec succès; autrement, FALSE.
 
-##  <a name="deactivate"></a>  CMFCPropertyGridToolTipCtrl::Deactivate
+## <a name="cmfcpropertygridtooltipctrldeactivate"></a><a name="deactivate"></a>CMFCPropertyGridToolTipCtrl::Deactivate
 
-Désactive et masque le contrôle ToolTip.
+Désactive et cache le contrôle de l’outil.
 
 ```
 void Deactivate();
@@ -121,11 +121,11 @@ void Deactivate();
 
 ### <a name="remarks"></a>Notes
 
-Cette méthode définit la dernière position et le texte sur des valeurs vides, afin que les appels ultérieurs à [CMFCPropertyGridToolTipCtrl:: Track](#track) affichent l’info-bulle.
+Cette méthode définit la dernière position et le texte aux valeurs vides, de sorte que les appels futurs vers [CMFCPropertyGridToolTipCtrl: :Track](#track) afficher l’outiltip.
 
-##  <a name="getlastrect"></a>  CMFCPropertyGridToolTipCtrl::GetLastRect
+## <a name="cmfcpropertygridtooltipctrlgetlastrect"></a><a name="getlastrect"></a>CMFCPropertyGridToolTipCtrl::GetLastRect
 
-Retourne les coordonnées de la dernière position du contrôle ToolTip.
+Retourne les coordonnées de la dernière position du contrôle de l’outil.
 
 ```
 void GetLastRect(CRect& rect) const;
@@ -133,20 +133,20 @@ void GetLastRect(CRect& rect) const;
 
 ### <a name="parameters"></a>Paramètres
 
-*rect*<br/>
-à Contient la dernière position du contrôle ToolTip.
+*Rect*<br/>
+[out] Contient la dernière position du contrôle de l’outiltip.
 
-##  <a name="hide"></a>  CMFCPropertyGridToolTipCtrl::Hide
+## <a name="cmfcpropertygridtooltipctrlhide"></a><a name="hide"></a>CMFCPropertyGridToolTipCtrl::Hide
 
-Masque le contrôle ToolTip.
+Cache le contrôle de l’outil.
 
 ```
 void Hide();
 ```
 
-##  <a name="settextmargin"></a>  CMFCPropertyGridToolTipCtrl::SetTextMargin
+## <a name="cmfcpropertygridtooltipctrlsettextmargin"></a><a name="settextmargin"></a>CMFCPropertyGridToolTipCtrl::SetTextMargin
 
-Définit l’espacement entre le texte de l’info-bulle et la bordure de la fenêtre d’info-bulle.
+Définit l’espacement entre le texte de l’outil et la bordure de la fenêtre de pointe d’outil.
 
 ```
 void SetTextMargin(int nTextMargin);
@@ -154,12 +154,12 @@ void SetTextMargin(int nTextMargin);
 
 ### <a name="parameters"></a>Paramètres
 
-*nTextMargin*<br/>
-dans Spécifie l’espacement entre le texte du contrôle ToolTip et la bordure de la fenêtre d’info-bulle. La valeur par défaut est 10 pixels.
+*nTextMargin (en)*<br/>
+[dans] Spécifie l’espacement entre le texte de contrôle de l’outil et la bordure de la fenêtre de pointe. La valeur par défaut est de 10 pixels.
 
-##  <a name="track"></a>  CMFCPropertyGridToolTipCtrl::Track
+## <a name="cmfcpropertygridtooltipctrltrack"></a><a name="track"></a>CMFCPropertyGridToolTipCtrl::Track
 
-Affiche le contrôle ToolTip.
+Affiche le contrôle de l’outil.
 
 ```
 void Track(
@@ -169,15 +169,15 @@ void Track(
 
 ### <a name="parameters"></a>Paramètres
 
-*rect*<br/>
-dans Spécifie la position et la taille du contrôle ToolTip.
+*Rect*<br/>
+[dans] Spécifie la position et la taille du contrôle de l’outil.
 
-*strText*<br/>
-dans Spécifie le texte à afficher dans l’info-bulle.
+*strText (en)*<br/>
+[dans] Spécifie le texte à montrer dans la pointe d’outils.
 
 ### <a name="remarks"></a>Notes
 
-Cette méthode affiche le contrôle ToolTip à la position et à la taille spécifiées par *Rect*. Si la position, la taille et le texte n’ont pas changé depuis la dernière fois que cette méthode a été appelée, cette méthode n’a aucun effet.
+Cette méthode affiche le contrôle de la pointe d’outil à la position et la taille spécifiées par *rect*. Si la position, la taille et le texte n’ont pas changé depuis la dernière fois que cette méthode a été appelée, cette méthode n’a aucun effet.
 
 ## <a name="see-also"></a>Voir aussi
 

@@ -26,12 +26,12 @@ helpviewer_keywords:
 - std::weibull_distribution [C++], param_type
 - std::weibull_distribution [C++], param_type
 ms.assetid: f20b49d3-1b9a-41af-8db4-baf800eaa02b
-ms.openlocfilehash: 8524ec61f1d785c8ab4a7b3dbef76bba69ddb6d6
-ms.sourcegitcommit: 8e285a766523e653aeeb34d412dc6f615ef7b17b
+ms.openlocfilehash: 01640cd700f54facba06f65f63e172abc668a5be
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/21/2020
-ms.locfileid: "80075531"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81366376"
 ---
 # <a name="weibull_distribution-class"></a>weibull_distribution, classe
 
@@ -70,12 +70,12 @@ class weibull_distribution
 
 ### <a name="parameters"></a>Paramètres
 
-*RealType*\
-Le type de résultat à virgule flottante, par défaut, est **double**. Pour connaître les types possibles, consultez [\<random>](../standard-library/random.md).
+*RealType RealType*\
+Le type de résultat de point flottant, par défaut pour **doubler**. Pour les types [ \< ](../standard-library/random.md)possibles, voir>aléatoire .
 
 ## <a name="remarks"></a>Notes
 
-Le modèle de classe décrit une distribution qui produit des valeurs d’un type à virgule flottante spécifié par l’utilisateur ou de type **double** si aucun n’est fourni, distribuées selon la Loi de Weibull. Le tableau suivant contient des liens vers des articles sur différents membres.
+Le modèle de classe décrit une distribution qui produit des valeurs d’un type de point flottant spécifié par l’utilisateur, ou le **type double** si aucune n’est fournie, distribuée selon la distribution Weibull. Le tableau suivant contient des liens vers des articles sur différents membres.
 
 ||||
 |-|-|-|
@@ -84,7 +84,7 @@ Le modèle de classe décrit une distribution qui produit des valeurs d’un typ
 
 Les fonctions de propriété `a()` et `b()` retournent leurs valeurs respectives pour les paramètres de distribution stockés *a* et *b*.
 
-Le membre de propriété `param()` définit ou retourne le package de paramètres de distribution stocké `param_type`.
+Le membre de propriété `param()` définit ou retourne le package de paramètres de distribution stockés `param_type`.
 
 Les fonctions membres `min()` et `max()` retournent respectivement le plus petit et le plus grand résultat possible.
 
@@ -92,7 +92,7 @@ La fonction membre `reset()` ignore toutes les valeurs mises en cache. Ainsi, le
 
 Les fonctions membres `operator()` retournent la valeur générée suivante d’après le moteur URNG, à partir du package de paramètres actuel ou spécifié.
 
-Pour plus d’informations sur les classes de distribution et leurs membres, consultez [\<random>](../standard-library/random.md).
+Pour plus d’informations sur les [ \< ](../standard-library/random.md)classes de distribution et leurs membres, voir>aléatoire .
 
 Pour plus d’informations sur la distribution de Weibull, consultez l’article de Wolfram MathWorld [Distribution de Weibull](https://mathworld.wolfram.com/WeibullDistribution.html).
 
@@ -209,11 +209,11 @@ Distribution for 10 samples:
 
 ## <a name="requirements"></a>Spécifications
 
-**En-tête :** \<> aléatoire
+**En-tête :** \<random>
 
 **Espace de noms :** std
 
-## <a name="weibull_distributionweibull_distribution"></a><a name="weibull_distribution"></a>  weibull_distribution::weibull_distribution
+## <a name="weibull_distributionweibull_distribution"></a><a name="weibull_distribution"></a>weibull_distribution::weibull_distribution
 
 ```cpp
 explicit weibull_distribution(result_type a = 1.0, result_type b = 1.0);
@@ -222,13 +222,13 @@ explicit weibull_distribution(const param_type& parm);
 
 ### <a name="parameters"></a>Paramètres
 
-*\*
+*Un*\
 Paramètre de distribution `a`.
 
-*b*\
+*B*\
 Paramètre de distribution `b`.
 
-*param*\
+*Parm*\
 Structure `param_type` utilisée pour construire la distribution.
 
 ### <a name="remarks"></a>Notes
@@ -237,9 +237,9 @@ Structure `param_type` utilisée pour construire la distribution.
 
 Le premier constructeur construit un objet dont la valeur `a` stockée contient la valeur *a* et dont la valeur `b` stockée contient la valeur *b*.
 
-Le second constructeur construit un objet dont les paramètres stockés sont initialisés à partir de *parm*. Vous pouvez obtenir et définir les paramètres actuels d'une distribution existante en appelant la fonction membre `param()`.
+Le deuxième constructeur construit un objet dont les paramètres stockés sont initialisés à partir de *parm*. Vous pouvez obtenir et définir les paramètres actuels d'une distribution existante en appelant la fonction membre `param()`.
 
-## <a name="weibull_distributionparam_type"></a><a name="param_type"></a>  weibull_distribution::param_type
+## <a name="weibull_distributionparam_type"></a><a name="param_type"></a>weibull_distribution::param-type
 
 Stocke les paramètres de la distribution.
 
@@ -257,13 +257,13 @@ struct param_type {
 
 ### <a name="parameters"></a>Paramètres
 
-*\*
+*Un*\
 Paramètre de distribution `a`.
 
-*b*\
+*B*\
 Paramètre de distribution `b`.
 
-\ *droit*
+*Oui*\
 Objet `param_type` à comparer à this.
 
 ### <a name="remarks"></a>Notes
@@ -274,4 +274,4 @@ Cette structure peut être passée au constructeur de classe de la distribution 
 
 ## <a name="see-also"></a>Voir aussi
 
-[\<random>](../standard-library/random.md)
+[\<>aléatoires](../standard-library/random.md)

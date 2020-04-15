@@ -1,5 +1,5 @@
 ---
-title: Ctabbedpane, classe
+title: CTabbedPane, classe
 ms.date: 11/04/2016
 f1_keywords:
 - CTabbedPane
@@ -28,18 +28,18 @@ helpviewer_keywords:
 - CTabbedPane [MFC], m_bTabsAlwaysTop
 - CTabbedPane [MFC], m_pTabWndRTC
 ms.assetid: f4dc5215-b789-4f2d-8c62-477aceda3578
-ms.openlocfilehash: af9c65e51f7230b0fc6a59d0eed42eca08d24837
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 17351eaed585ec34117a2ef825964fd51bd0d86b
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62324283"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81365953"
 ---
-# <a name="ctabbedpane-class"></a>Ctabbedpane, classe
+# <a name="ctabbedpane-class"></a>CTabbedPane, classe
 
 Implémente les fonctionnalités d'un volet à onglets détachables.
 
-ou plus de détails, consultez le code source situé dans le **VC\\atlmfc\\src\\mfc** dossier de votre installation de Visual Studio.
+ou plus de détails voir le code source situé dans le dossier **VC\\\\atlmfc src\\mfc** de votre installation Visual Studio.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -59,17 +59,17 @@ class CTabbedPane : public CBaseTabbedPane
 
 |Nom|Description|
 |----------|-----------------|
-|[CTabbedPane::DetachPane](#detachpane)|(Substitue [CBaseTabbedPane::DetachPane](../../mfc/reference/cbasetabbedpane-class.md#detachpane).)|
+|[CTabbedPane::DetachPane](#detachpane)|(Overrides [CBaseTabbedPane::DetachPane](../../mfc/reference/cbasetabbedpane-class.md#detachpane).)|
 |[CTabbedPane::EnableTabAutoColor](#enabletabautocolor)|Active ou désactive la coloration automatique des onglets.|
-|[CTabbedPane::FloatTab](#floattab)|Fait flotter un volet, mais seulement si le volet réside actuellement dans un onglet détachable. (Substitue [CBaseTabbedPane::FloatTab](../../mfc/reference/cbasetabbedpane-class.md#floattab).)|
+|[CTabbedPane::FloatTab](#floattab)|Flotte une vitre, mais seulement si le volet réside actuellement dans un onglet amovible. (Overrides [CBaseTabbedPane::FloatTab](../../mfc/reference/cbasetabbedpane-class.md#floattab).)|
 |[CTabbedPane::GetTabArea](#gettabarea)|Retourne la taille et la position de la zone d'onglet dans la fenêtre à onglets.|
 |[CTabbedPane::GetTabWnd](#gettabwnd)||
-|[CTabbedPane::HasAutoHideMode](#hasautohidemode)|Détermine si le volet à onglets peut passer en mode masquage automatique. (Substitue [CBaseTabbedPane::HasAutoHideMode](../../mfc/reference/cbasetabbedpane-class.md#hasautohidemode).)|
+|[CTabbedPane::HasAutoHideMode](#hasautohidemode)|Détermine si le volet à onglets peut passer en mode masquage automatique. (Overrides [CBaseTabbedPane::HasAutoHideMode](../../mfc/reference/cbasetabbedpane-class.md#hasautohidemode).)|
 |[CTabbedPane::IsTabLocationBottom](#istablocationbottom)|Détermine si les onglets sont situés au bas de la fenêtre.|
 |[CTabbedPane::ResetTabs](#resettabs)|Rétablit l'état par défaut de tous les volets à onglets.|
 |[CTabbedPane::SetTabAutoColors](#settabautocolors)|Définit une liste de couleurs personnalisées qui peuvent être utilisées quand la fonctionnalité de couleur automatique est activée.|
 
-### <a name="data-members"></a>Membres de données
+### <a name="data-members"></a>Données membres
 
 |Nom|Description|
 |----------|-----------------|
@@ -80,13 +80,13 @@ class CTabbedPane : public CBaseTabbedPane
 
 L'infrastructure crée automatiquement une instance de cette classe quand un utilisateur attache un volet à un autre en pointant vers la légende du deuxième volet. Tous les volets à onglets créés par l'infrastructure ont un ID égal à -1.
 
-Pour spécifier des onglets normaux au lieu des onglets de style Outlook, passez le style AFX_CBRS_REGULAR_TABS à la [CDockablePane::CreateEx](../../mfc/reference/cdockablepane-class.md#createex) (méthode).
+Pour spécifier des onglets réguliers au lieu d’onglets de style Outlook, passez le style AFX_CBRS_REGULAR_TABS à la méthode [CDockablePane::CreateEx](../../mfc/reference/cdockablepane-class.md#createex) méthode.
 
 Si vous créez un volet à onglets avec des onglets détachables, le volet risque d’être détruit automatiquement par l’infrastructure. Il est donc déconseillé de stocker le pointeur. Pour obtenir un pointeur vers le volet à onglets, appelez la méthode `CBasePane::GetParentTabbedPane`.
 
 ## <a name="example"></a>Exemple
 
-Dans cet exemple, nous créons un objet `CTabbedPane`. Ensuite, nous utilisons [CBaseTabbedPane::AddTab](../../mfc/reference/cbasetabbedpane-class.md#addtab) à attacher des onglets supplémentaires.
+Dans cet exemple, nous créons un objet `CTabbedPane`. Ensuite, nous utilisons [CBaseTabbedPane::AddTab](../../mfc/reference/cbasetabbedpane-class.md#addtab) pour attacher des onglets supplémentaires.
 
 ```cpp
 CTabbedPane* pTabbededBar = new CTabbedPane (TRUE);
@@ -119,7 +119,7 @@ DockPane(pTabbededBar);
 
 ## <a name="example"></a>Exemple
 
-Une autre façon de créer un objet de barre de contrôle à onglets consiste à utiliser [CDockablePane::AttachToTabWnd](../../mfc/reference/cdockablepane-class.md#attachtotabwnd). Le `AttachToTabWnd` méthode crée dynamiquement un objet de volet à onglets à l’aide des informations de classe runtime définies par [CDockablePane::SetTabbedPaneRTC](../../mfc/reference/cdockablepane-class.md#settabbedpanertc).
+Une autre façon de créer un objet de barre de commande tabbed est d’utiliser [CDockablePane::AttachToTabWnd](../../mfc/reference/cdockablepane-class.md#attachtotabwnd). La `AttachToTabWnd` méthode crée dynamiquement un objet de vitres onglets à l’aide d’informations de classe runtime définies par [CDockablePane::SetTabbedPaneRTC](../../mfc/reference/cdockablepane-class.md#settabbedpanertc).
 
 Dans cet exemple, nous créons un volet à onglets de façon dynamique, joignons les deux onglets et rendons le deuxième onglet non détachable.
 
@@ -159,11 +159,11 @@ pTabbedBar->GetUnderlyingWindow ()->EnableTabDetach (1,
 
 [CTabbedPane](../../mfc/reference/ctabbedpane-class.md)
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
-**En-tête :** afxTabbedPane.h
+**En-tête:** afxTabbedPane.h
 
-##  <a name="detachpane"></a>  CTabbedPane::DetachPane
+## <a name="ctabbedpanedetachpane"></a><a name="detachpane"></a>CTabbedPane::DetachPane
 
 ```
 virtual BOOL DetachPane(
@@ -173,15 +173,15 @@ virtual BOOL DetachPane(
 
 ### <a name="parameters"></a>Paramètres
 
-[in] *pBar*<br/>
+[dans] *pBar (pBar)*<br/>
 
-[in] *bHide*<br/>
+[dans] *bHide (en)*<br/>
 
 ### <a name="return-value"></a>Valeur de retour
 
 ### <a name="remarks"></a>Notes
 
-##  <a name="enabletabautocolor"></a>  CTabbedPane::EnableTabAutoColor
+## <a name="ctabbedpaneenabletabautocolor"></a><a name="enabletabautocolor"></a>CTabbedPane::EnableTabAutoColor
 
 Active ou désactive la coloration automatique des onglets.
 
@@ -192,17 +192,17 @@ static void EnableTabAutoColor(BOOL bEnable = TRUE);
 ### <a name="parameters"></a>Paramètres
 
 *bEnable*<br/>
-[in] TRUE pour activer la coloration automatique des onglets ; Sinon, FALSE.
+[dans] VRAI pour permettre la coloration automatique des onglets; autrement, FALSE.
 
 ### <a name="remarks"></a>Notes
 
-Utilisez cette méthode statique pour activer ou désactiver la coloration automatique des onglets dans tous les volets à onglets dans l’application. Lorsque cette fonctionnalité est activée, chaque onglet est rempli par sa propre couleur. Vous trouverez la liste de couleurs qui sont utilisés pour colorer les onglets en appelant le [CMFCBaseTabCtrl::GetAutoColors](../../mfc/reference/cmfcbasetabctrl-class.md#getautocolors) (méthode).
+Utilisez cette méthode statique pour activer ou désactiver la coloration automatique des onglets dans toutes les vitres onglets de l’application. Lorsque cette fonctionnalité est activée, chaque onglet est rempli par sa propre couleur. Vous pouvez trouver la liste des couleurs qui sont utilisées pour colorer les onglets en appelant la [méthode CMFCBaseTabCtrl::GetAutoColors](../../mfc/reference/cmfcbasetabctrl-class.md#getautocolors) méthode.
 
-Vous pouvez spécifier la liste des couleurs qui sera utilisé pour les onglets en appelant [CTabbedPane::SetTabAutoColors](#settabautocolors).
+Vous pouvez spécifier la liste des couleurs qui seront utilisées pour les onglets en appelant [CTabbedPane::SetTabAutoColors](#settabautocolors).
 
 Par défaut, cette option est désactivée.
 
-##  <a name="floattab"></a>  CTabbedPane::FloatTab
+## <a name="ctabbedpanefloattab"></a><a name="floattab"></a>CTabbedPane::FloatTab
 
 ```
 virtual BOOL FloatTab(
@@ -214,18 +214,18 @@ virtual BOOL FloatTab(
 
 ### <a name="parameters"></a>Paramètres
 
-[in] *pBar*<br/>
-[in] *nTabID*<br/>
-[in] *dockMethod*<br/>
-[in] *bHide*<br/>
+[dans] *pBar (pBar)*<br/>
+[dans] *nTabID (en)*<br/>
+[dans] *dockMethod*<br/>
+[dans] *bHide (en)*<br/>
 
 ### <a name="return-value"></a>Valeur de retour
 
 ### <a name="remarks"></a>Notes
 
-##  <a name="gettabarea"></a>  CTabbedPane::GetTabArea
+## <a name="ctabbedpanegettabarea"></a><a name="gettabarea"></a>CTabbedPane::GetTabArea
 
-Retourne la taille et la position de la zone d’onglet dans la fenêtre à onglets.
+Retourne la taille et la position de la zone de l’onglet dans la fenêtre tabbed.
 
 ```
 virtual void GetTabArea(
@@ -236,18 +236,18 @@ virtual void GetTabArea(
 ### <a name="parameters"></a>Paramètres
 
 *rectTabAreaTop*<br/>
-[out] Contient la taille et position, en coordonnées d’écran, de la zone d’onglet supérieur.
+[out] Contient la taille et la position, dans les coordonnées de l’écran, de la zone de l’onglet supérieur.
 
 *rectTabAreaBottom*<br/>
-[out] Contient la taille et position, en coordonnées d’écran, de la zone d’onglet en bas.
+[out] Contient la taille et la position, dans les coordonnées de l’écran, de la zone de l’onglet inférieur.
 
 ### <a name="remarks"></a>Notes
 
-L’infrastructure appelle cette méthode pour déterminer comment un utilisateur fait glisser un volet d’ancrage. Lorsque l’utilisateur fait glisser un volet sur la zone d’onglet du volet cible, le framework tente d’ajouter comme un nouvel onglet du volet cible. Sinon, il essaie d’ancrer le volet vers le côté du volet cible, ce qui implique la création d’un conteneur de volet par un diviseur de volet qui sépare les deux volets.
+Le cadre appelle cette méthode pour déterminer comment amarrer une vitre qu’un utilisateur traîne. Lorsque l’utilisateur traîne une vitre sur la zone de l’onglet de la vitre cible, le cadre tente de l’ajouter comme un nouvel onglet de la vitre cible. Sinon, il tente d’amarrer la vitre sur le côté de la vitre cible, ce qui implique la création d’un nouveau récipient de vitre avec un diviseur de vitre qui sépare les deux vitres.
 
-Substituez cette méthode dans un `CTabbedPane`-classe pour modifier ce comportement dérivée.
+Remplacer cette méthode `CTabbedPane`dans une classe dérivée pour changer ce comportement.
 
-##  <a name="gettabwnd"></a>  CTabbedPane::GetTabWnd
+## <a name="ctabbedpanegettabwnd"></a><a name="gettabwnd"></a>CTabbedPane::GetTabWnd
 
 ```
 CMFCTabCtrl* GetTabWnd() const;
@@ -257,7 +257,7 @@ CMFCTabCtrl* GetTabWnd() const;
 
 ### <a name="remarks"></a>Notes
 
-##  <a name="hasautohidemode"></a>  CTabbedPane::HasAutoHideMode
+## <a name="ctabbedpanehasautohidemode"></a><a name="hasautohidemode"></a>CTabbedPane::HasAutoHideMode
 
 ```
 virtual BOOL HasAutoHideMode() const;
@@ -267,7 +267,7 @@ virtual BOOL HasAutoHideMode() const;
 
 ### <a name="remarks"></a>Notes
 
-##  <a name="istablocationbottom"></a>  CTabbedPane::IsTabLocationBottom
+## <a name="ctabbedpaneistablocationbottom"></a><a name="istablocationbottom"></a>CTabbedPane::IsTabLocationBottom
 
 Détermine si les onglets sont situés au bas de la fenêtre.
 
@@ -277,11 +277,11 @@ virtual BOOL IsTabLocationBottom() const;
 
 ### <a name="return-value"></a>Valeur de retour
 
-TRUE si la zone d’onglet se trouve en bas de la fenêtre à onglets. Sinon, FALSE.
+VRAI si la zone de l’onglet est située au bas de la fenêtre tabbed; autrement, FALSE.
 
 ### <a name="remarks"></a>Notes
 
-##  <a name="m_btabsalwaystop"></a>  CTabbedPane::m_bTabsAlwaysTop
+## <a name="ctabbedpanem_btabsalwaystop"></a><a name="m_btabsalwaystop"></a>CTabbedPane::m_bTabsAlwaysTop
 
 Emplacement par défaut des onglets dans l'application.
 
@@ -291,13 +291,13 @@ AFX_IMPORT_DATA static BOOL m_bTabsAlwaysTop;
 
 ### <a name="remarks"></a>Notes
 
-Définissez ce membre statique à True pour forcer tous les onglets dans l’application à afficher en haut du volet à onglets.
+Définissez ce membre statique à TRUE pour forcer tous les onglets de l’application à être affichés en haut de la vitre tabbed.
 
-Vous devez définir cette valeur avant la création d’un volet à onglets.
+Vous devez définir cette valeur avant qu’une vitre tabbed a été créée.
 
 La valeur par défaut est FALSE.
 
-##  <a name="m_ptabwndrtc"></a>  CTabbedPane::m_pTabWndRTC
+## <a name="ctabbedpanem_ptabwndrtc"></a><a name="m_ptabwndrtc"></a>CTabbedPane::m_pTabWndRTC
 
 Informations de classe runtime pour un objet dérivé de `CMFCTabCtrl` personnalisé.
 
@@ -307,9 +307,9 @@ AFX_IMPORT_DATA static CRuntimeClass* m_pTabWndRTC;
 
 ### <a name="remarks"></a>Notes
 
-Définissez cette variable de membre statique à un pointeur vers les informations de classe runtime un `CMFCTabCtrl`-objet dérivé si vous utilisez une fenêtre à onglets personnalisée à l’intérieur d’un volet à onglets.
+Définissez cette variable de membre statique à un `CMFCTabCtrl`pointeur aux informations de classe de temps d’exécution d’un objet dérivé si vous utilisez une fenêtre tabbed personnalisée à l’intérieur d’une vitre tabbed.
 
-##  <a name="resettabs"></a>  CTabbedPane::ResetTabs
+## <a name="ctabbedpaneresettabs"></a><a name="resettabs"></a>CTabbedPane::ResetTabs
 
 Rétablit l'état par défaut de tous les volets à onglets.
 
@@ -319,11 +319,11 @@ static void ResetTabs();
 
 ### <a name="remarks"></a>Notes
 
-Appelez cette méthode pour annuler tous les volets à onglets à leur état par défaut. Lorsqu’elle est appelée, cette méthode réinitialise les tailles de bordure et l’état de couleur automatique de tous les volets à onglets.
+Appelez cette méthode pour retourner toutes les vitres onglets à leur état par défaut. Lorsqu’elle est appelée, cette méthode réinitialise la taille de la bordure et l’état de couleur automatique de toutes les vitres tablées.
 
-##  <a name="settabautocolors"></a>  CTabbedPane::SetTabAutoColors
+## <a name="ctabbedpanesettabautocolors"></a><a name="settabautocolors"></a>CTabbedPane::SetTabAutoColors
 
-Définit une liste de couleurs personnalisées qui sont utilisées lors de la fonctionnalité de couleur automatique est activée.
+Définit une liste de couleurs personnalisées qui sont utilisées lorsque la fonction de couleur automatique est activée.
 
 ```
 static void SetTabAutoColors(const CArray<COLORREF, COLORREF>& arColors);
@@ -331,14 +331,14 @@ static void SetTabAutoColors(const CArray<COLORREF, COLORREF>& arColors);
 
 ### <a name="parameters"></a>Paramètres
 
-*arColors*<br/>
-[in] Contient le tableau de couleurs à définir.
+*arColors (arColors)*<br/>
+[dans] Contient la gamme de couleurs à définir.
 
 ### <a name="remarks"></a>Notes
 
-Utilisez cette méthode pour personnaliser la liste des couleurs qui sont utilisées lorsque la fonctionnalité de couleur automatique est activée. Ceci est une fonction statique et affecte à tous les onglets des volets dans votre application.
+Utilisez cette méthode pour personnaliser la liste des couleurs qui sont utilisées lorsque la fonction de couleur automatique est activée. Il s’agit d’une fonction statique et affecte toutes les vitres tabbed dans votre application.
 
-Utilisez [CTabbedPane::EnableTabAutoColor](#enabletabautocolor) pour activer ou désactiver la fonctionnalité de couleur automatique.
+Utilisez [CTabbedPane::EnableTabAutoColor](#enabletabautocolor) pour activer ou désactiver la fonction couleur automatique.
 
 ## <a name="see-also"></a>Voir aussi
 
@@ -346,4 +346,4 @@ Utilisez [CTabbedPane::EnableTabAutoColor](#enabletabautocolor) pour activer ou 
 [Classes](../../mfc/reference/mfc-classes.md)<br/>
 [CDockablePane, classe](../../mfc/reference/cdockablepane-class.md)<br/>
 [CBaseTabbedPane, classe](../../mfc/reference/cbasetabbedpane-class.md)<br/>
-[CMFCOutlookBar, classe](../../mfc/reference/cmfcoutlookbar-class.md)
+[Classe CMFCOutlookBar](../../mfc/reference/cmfcoutlookbar-class.md)

@@ -26,12 +26,12 @@ helpviewer_keywords:
 - std::extreme_value_distribution [C++], param_type
 - std::extreme_value_distribution [C++], param_type
 ms.assetid: a0cd8370-0a54-4e26-9388-8b9678fb57da
-ms.openlocfilehash: a9d83bee5a9186ba35a7cce81600947dd1cf4141
-ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
+ms.openlocfilehash: f72401d7bdc4a61a8e986c10cdbd4fad732e41ce
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/21/2019
-ms.locfileid: "72688081"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81368445"
 ---
 # <a name="extreme_value_distribution-class"></a>extreme_value_distribution, classe
 
@@ -71,15 +71,15 @@ public:
 
 ### <a name="parameters"></a>Paramètres
 
-*RealType* \
-Le type de résultat à virgule flottante, par défaut, est **double**. Pour découvrir les types possibles, consultez [\<random>](../standard-library/random.md).
+*RealType RealType*\
+Le type de résultat de point flottant, par défaut pour **doubler**. Pour les types [ \< ](../standard-library/random.md)possibles, voir>aléatoire .
 
-*Générateur urng* \
-Moteur du générateur de nombres aléatoires. Pour découvrir les types possibles, consultez [\<random>](../standard-library/random.md).
+*Urng*\
+Le moteur de générateur de nombre aléatoire. Pour les types [ \< ](../standard-library/random.md)possibles, voir>aléatoire .
 
 ## <a name="remarks"></a>Notes
 
-Le modèle de classe décrit une distribution qui produit des valeurs d’un type à virgule flottante spécifié par l’utilisateur, ou de type **double** si aucun n’est fourni, distribuées selon la distribution de valeurs extrêmes. Le tableau suivant contient des liens vers des articles sur différents membres.
+Le modèle de classe décrit une distribution qui produit des valeurs d’un type de point flottant spécifié par l’utilisateur, ou le **type double** si aucune n’est fournie, distribuée selon la distribution de valeur extrême. Le tableau suivant contient des liens vers des articles sur différents membres.
 
 ||||
 |-|-|-|
@@ -88,7 +88,7 @@ Le modèle de classe décrit une distribution qui produit des valeurs d’un typ
 
 Les fonctions de propriété `a()` et `b()` retournent leurs valeurs respectives pour les paramètres de distribution stockés `a` et `b`.
 
-Pour plus d’informations sur les classes de distribution et leurs membres, consultez [\<random>](../standard-library/random.md).
+Pour plus d’informations sur les [ \< ](../standard-library/random.md)classes de distribution et leurs membres, voir>aléatoire .
 
 Pour plus d’informations sur la distribution suivant la loi d’extremum, consultez l’article de Wolfram MathWorld [Extreme Value Distribution](https://go.microsoft.com/fwlink/p/?linkid=401110).
 
@@ -175,13 +175,13 @@ Distribution for 10 samples:
     10: 2.0568757061
 ```
 
-## <a name="requirements"></a>spécifications
+## <a name="requirements"></a>Spécifications
 
 **En-tête :** \<random>
 
 **Espace de noms :** std
 
-## <a name="extreme_value_distribution"></a>  extreme_value_distribution::extreme_value_distribution
+## <a name="extreme_value_distributionextreme_value_distribution"></a><a name="extreme_value_distribution"></a>extreme_value_distribution::extreme_value_distribution
 
 Construit la distribution.
 
@@ -192,24 +192,24 @@ explicit extreme_value_distribution(const param_type& parm);
 
 ### <a name="parameters"></a>Paramètres
 
-*a_value* \
+*a_value*\
 Paramètre de distribution `a`.
 
-*b_value* \
+*b_value*\
 Paramètre de distribution `b`.
 
-*param* \
+*Parm*\
 Structure `param_type` utilisée pour construire la distribution.
 
 ### <a name="remarks"></a>Notes
 
-**Condition préalable :** `0.0 < b`
+**Condition préalable :**`0.0 < b`
 
 Le premier constructeur construit un objet dont la valeur `a` stockée contient la valeur *a_value* et dont la valeur `b` stockée contient la valeur *b_value*.
 
 Le deuxième constructeur construit un objet dont les paramètres stockés sont initialisés à partir de *parm*. Vous pouvez obtenir et définir les paramètres actuels d'une distribution existante en appelant la fonction membre `param()`.
 
-## <a name="param_type"></a>  extreme_value_distribution::param_type
+## <a name="extreme_value_distributionparam_type"></a><a name="param_type"></a>extreme_value_distribution::param-type
 
 Stocke les paramètres de la distribution.
 
@@ -227,21 +227,21 @@ struct param_type {
 
 ### <a name="parameters"></a>Paramètres
 
-*a_value* \
+*a_value*\
 Paramètre de distribution `a`.
 
-*b_value* \
+*b_value*\
 Paramètre de distribution `b`.
 
-\ *droit*
+*Oui*\
 Objet `param_type` à comparer à this.
 
 ### <a name="remarks"></a>Notes
 
-**Condition préalable :** `0.0 < b`
+**Condition préalable :**`0.0 < b`
 
 Cette structure peut être passée au constructeur de classe de la distribution au moment de l'instanciation, à la fonction membre `param()` pour définir les paramètres stockés d'une distribution existante et à `operator()` pour une utilisation à la place des paramètres stockés.
 
 ## <a name="see-also"></a>Voir aussi
 
-[\<random>](../standard-library/random.md)
+[\<>aléatoires](../standard-library/random.md)

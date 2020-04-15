@@ -6,23 +6,23 @@ helpviewer_keywords:
 - application deployment [C++], ClickOnce
 - ClickOnce deployment [C++], C++ applications
 ms.assetid: 9988c546-0936-452c-932f-9c76daa42157
-ms.openlocfilehash: 4408db9d129c03ee5df9b006b03c6586df02afb1
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: 4726fda8c5eca70ce7acde19f141a7c096395e95
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69513769"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81316610"
 ---
 # <a name="clickonce-deployment-for-visual-c-applications"></a>Déploiement de ClickOnce pour les applications Visual C++
 
-Visual Studio fournit différentes technologies pour déployer des applications Windows : Déploiement ClickOnce ou déploiement de [Windows Installer](/windows/win32/Msi/windows-installer-portal).
+Visual Studio propose deux technologies différentes pour déployer les applications Windows : le déploiement ClickOnce ou le déploiement [Windows Installer](/windows/win32/Msi/windows-installer-portal).
 
 ## <a name="clickonce-deployment-in-c"></a>Déploiement ClickOnce en C++
 
-L’environnement C++ de développement visuel ne prend pas directement en charge le C++ déploiement de projets Visual Studio avec ClickOnce, mais les outils sont disponibles pour l’utiliser.
+L’environnement de développement Visual CMD ne prend pas directement en charge le déploiement de projets Visual Studio CMD avec ClickOnce, mais des outils sont disponibles pour l’utiliser.
 
 > [!NOTE]
->  Visual Studio prend en charge ClickOnce dans les environnements de développement Visual C# et Visual Basic. Si votre projet Visual C++ Studio est une dépendance d’un projet C# visuel, vous pouvez publier l’application (y compris ses dépendances) à l’aide du C# déploiement ClickOnce à partir de l’environnement de développement visuel.
+> Visual Studio prend en charge ClickOnce dans les environnements de développement Visual C# et Visual Basic. Si votre projet Visual Studio CMD est une dépendance d’un projet Visual CMD, vous pouvez publier l’application (y compris ses dépendances) en utilisant le déploiement ClickOnce à partir de l’environnement de développement Visual C.
 
 Pour déployer une application Visual C++ à l’aide de ClickOnce, vous devez tout d’abord générer un [manifeste d’application ClickOnce](/visualstudio/deployment/clickonce-application-manifest) et un [manifeste de déploiement ClickOnce](/visualstudio/deployment/clickonce-deployment-manifest) à l’aide de [Mage.exe (outil Manifest Generation and Editing)](/dotnet/framework/tools/mage-exe-manifest-generation-and-editing-tool) ou de sa version avec interface utilisateur graphique. Pour plus d’informations, consultez [MageUI.exe (outil Manifest Generation and Editing, client graphique)](/dotnet/framework/tools/mageui-exe-manifest-generation-and-editing-tool-graphical-client).
 
@@ -36,16 +36,16 @@ Votre déploiement devra installer les bibliothèques Visual C++ dont votre appl
 
 Vous devrez peut-être également générer un programme d’amorçage (programme d’installation de composants prérequis) de votre application pour déployer des composants prérequis ; pour plus d’informations sur le programme d’amorçage, consultez [Création de packages de programme d’amorçage](/visualstudio/deployment/creating-bootstrapper-packages).
 
-Pour une description plus détaillée de la technologie, consultez [Sécurité et déploiement ClickOnce](/visualstudio/deployment/clickonce-security-and-deployment). Pour obtenir un exemple détaillé de déploiement ClickOnce, consultez [Procédure pas à pas : déploiement manuel d’une application ClickOnce](/visualstudio/deployment/walkthrough-manually-deploying-a-clickonce-application).
+Pour une description plus détaillée de la technologie, consultez [Sécurité et déploiement ClickOnce](/visualstudio/deployment/clickonce-security-and-deployment). Pour obtenir un exemple détaillé de déploiement ClickOnce, consultez [Procédure pas à pas : déploiement manuel d’une application ClickOnce](/visualstudio/deployment/walkthrough-manually-deploying-a-clickonce-application).
 
 ## <a name="see-also"></a>Voir aussi
 
-[Mage.exe (outil Manifest Generation and Editing)](/dotnet/framework/tools/mage-exe-manifest-generation-and-editing-tool)<br>
-[MageUI.exe (outil Manifest Generation and Editing, client graphique)](/dotnet/framework/tools/mageui-exe-manifest-generation-and-editing-tool-graphical-client)<br>
-[Makecert.exe (outil de création du certificat)](/windows/win32/SecCrypto/makecert)<br>
+[Mage.exe (Manifeste Génération et outil d’édition)](/dotnet/framework/tools/mage-exe-manifest-generation-and-editing-tool)<br>
+[MageUI.exe (Manifeste Generation and Editing Tool, Graphical Client)](/dotnet/framework/tools/mageui-exe-manifest-generation-and-editing-tool-graphical-client)<br>
+[Makecert.exe (outil de la création du certificat)](/windows/win32/SecCrypto/makecert)<br>
 [Déploiement des applications de bureau](deploying-native-desktop-applications-visual-cpp.md)<br>
 [Déploiement d’applications, de services et de composants](/visualstudio/deployment/deploying-applications-services-and-components)<br>
-[Sécurité et déploiement ClickOnce](/visualstudio/deployment/clickonce-security-and-deployment)<br>
+[ClickOnce Sécurité et déploiement](/visualstudio/deployment/clickonce-security-and-deployment)<br>
 [Création de packages de programme d’amorçage](/visualstudio/deployment/creating-bootstrapper-packages)<br>
-[Programmation .NET avec C++/CLI (Visual C++)](../dotnet/dotnet-programming-with-cpp-cli-visual-cpp.md)<br>
-[Interopérabilité native et .NET](../dotnet/native-and-dotnet-interoperability.md)
+[.NET Programmation avec CMD/CLI (Visual CMD)](../dotnet/dotnet-programming-with-cpp-cli-visual-cpp.md)<br>
+[Interopérabilité native et .NET](../dotnet/native-and-dotnet-interoperability.md)

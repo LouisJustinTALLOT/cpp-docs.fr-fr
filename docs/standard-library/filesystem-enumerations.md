@@ -11,12 +11,12 @@ f1_keywords:
 - filesystem/std::filesystem::perms
 - filesystem/std::experimental::filesystem::perms
 ms.assetid: 0096c046-d101-464c-8259-b878a48280b0
-ms.openlocfilehash: f148347cd132a604622415c65bb3e0352f5308eb
-ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
+ms.openlocfilehash: 0d5b31b31f9f435c52db89521b4b753c16d86501
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/16/2020
-ms.locfileid: "79421834"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81368414"
 ---
 # <a name="ltfilesystemgt-enumerations"></a>&lt;filesystem&gt;, énumérations
 
@@ -24,11 +24,11 @@ Cette rubrique décrit les énumérations de l’en-tête filesystem.
 
 ## <a name="requirements"></a>Spécifications
 
-**En-tête :** \<> expérimentale/système de fichiers
+**En-tête :** \<experimental/filesystem>
 
 **Espace de noms :** std::experimental::filesystem
 
-## <a name="copy_options"></a>  copy_options
+## <a name="copy_options"></a><a name="copy_options"></a>copy_options
 
 Énumération de valeurs de masque de bits utilisée avec les fonctions [copy](filesystem-functions.md#copy) et [copy_file](filesystem-functions.md#copy_file) pour spécifier le comportement.
 
@@ -64,7 +64,7 @@ enum class copy_options {
 |`create_symlinks`|Créer des liens symboliques au lieu de copier les fichiers. Un chemin absolu doit servir de chemin source, sauf si la destination est le répertoire actuel.|
 |`create_hard_links`|Créer des liens physiques au lieu de copier les fichiers.|
 
-## <a name="directory_options"></a> directory_options
+## <a name="directory_options"></a><a name="directory_options"></a> directory_options
 
 Spécifie s'il faut suivre les liens symboliques vers des répertoires ou les ignorer.
 
@@ -79,14 +79,14 @@ enum class directory_options {
 
 ### <a name="values"></a>Valeurs
 
-|Name|Description|
+|Nom|Description|
 |----------|-----------------|
 |`none`|Comportement par défaut : ignorer les liens symboliques vers les répertoires. Autorisation refusée est une erreur.|
 |`follow_directory_symlink`|Traiter les liens symboliques vers des répertoires comme des répertoires réels.|
 
-## <a name="file_type"></a>  file_type
+## <a name="file_type"></a><a name="file_type"></a>file_type
 
-Énumération pour les types de fichiers. Les valeurs prises en charge sont Regular, Directory, not_found et Unknown.
+Énumération pour les types de fichiers. Les valeurs soutenues sont régulières, répertoire, not_found et inconnues.
 
 ### <a name="syntax"></a>Syntaxe
 
@@ -107,7 +107,7 @@ enum class file_type {
 
 ### <a name="values"></a>Valeurs
 
-|Name|Valeur|Description|
+|Nom|Valeur|Description|
 |----------|-----------|-----------------|
 |`not_found`|-1|Représente un fichier qui n'existe pas.|
 |`none`|0|Représente un fichier qui n'a aucun attribut de type. (Non pris en charge.)|
@@ -120,17 +120,17 @@ enum class file_type {
 |`socket`|7|Représente un socket sur les systèmes UNIX. (Non pris en charge.)|
 |`unknown`|8|Représente un fichier dont l'état ne peut pas être déterminé.|
 
-## <a name="perm_options"></a>perm_options
+## <a name="perm_options"></a><a name="perm_options"></a>perm_options
 
-Comprend les valeurs `replace`, `add`, `remove`et `nofollow`.
+Inclut `replace`les `add` `remove`valeurs `nofollow`, , , et .
 
 ```cpp
 enum class perm_options;
 ```
 
-## <a name="perms"></a>  perms
+## <a name="perms"></a><a name="perms"></a>Permanentes
 
-Indicateurs pour les autorisations de fichiers. Les valeurs prises en charge sont essentiellement « ReadOnly » et All. Pour un fichier en lecture seule, aucun des bits *_write n'est défini. Sinon, le bit `all` (0x0777) est défini.
+Indicateurs pour les autorisations de fichiers. Les valeurs soutenues sont essentiellement « lisibles » et toutes. Pour un fichier en lecture seule, aucun des bits *_write n'est défini. Sinon, le bit `all` (0x0777) est défini.
 
 ### <a name="syntax"></a>Syntaxe
 
@@ -164,4 +164,4 @@ enum class perms {// names for permissions
 ## <a name="see-also"></a>Voir aussi
 
 [Référence de fichiers d’en-tête](../standard-library/cpp-standard-library-header-files.md)\
-[\<filesystem>](../standard-library/filesystem.md)
+[\<>de système de fichiers](../standard-library/filesystem.md)

@@ -15,22 +15,22 @@ helpviewer_keywords:
 - overriding, DoFieldExchange
 - m_nFields data member, initializing
 ms.assetid: f00d882a-ff1b-4a75-9717-98d8762bb237
-ms.openlocfilehash: 08d58561e0fb9305ff3a8d6aa6a62eb24d9b9d25
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 8e42fc9da672ca4ef97e775776935650ab7f545a
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80213042"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81367115"
 ---
 # <a name="record-field-exchange-working-with-the-wizard-code"></a>Record Field Exchange : utilisation du code écrit par l'Assistant
 
 > [!NOTE]
-> L’Assistant Consommateur ODBC MFC n’est pas disponible dans Visual Studio 2019 et ultérieur. Vous pouvez quand même créer un consommateur manuellement.
+> L’Assistant Consommateur ODBC MFC n’est pas disponible dans Visual Studio 2019 et ultérieur. Vous pouvez toujours créer un consommateur manuellement.
 
 Cette rubrique explique le code que les Assistants Application MFC et **Ajout de classe** (comme décrit dans [Ajout d’un consommateur ODBC MFC](../../mfc/reference/adding-an-mfc-odbc-consumer.md)) écrivent pour prendre en charge RFX et comment vous pouvez modifier ce code.
 
 > [!NOTE]
->  Cette rubrique s’applique aux classes dérivées de `CRecordset` où l’extraction de lignes en bloc n’a pas été implémentée. Si vous utilisez l’extraction de lignes en bloc, l’échange de champs d’enregistrements en bloc (Bulk RFX) est implémenté. Bulk RFX est similaire à RFX. Pour comprendre les différences, consultez [Recordset : extraction globale d’enregistrements (ODBC)](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md).
+> Cette rubrique s’applique aux classes dérivées de `CRecordset` où l’extraction de lignes en bloc n’a pas été implémentée. Si vous utilisez l’extraction de lignes en bloc, l’échange de champs d’enregistrements en bloc (Bulk RFX) est implémenté. Bulk RFX est similaire à RFX. Pour comprendre les différences, voir [Recordset: Fetching Records in Bulk (ODBC)](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md).
 
 Quand vous créez une classe recordset avec l’Assistant Application MFC ou **Ajout de classe**, l’Assistant écrit les éléments associés à RFX suivants pour vous, en fonction de la source de données, des tables et des colonnes que vous choisissez dans l’Assistant :
 
@@ -40,7 +40,7 @@ Quand vous créez une classe recordset avec l’Assistant Application MFC ou **A
 
 - Initialisation des membres de données de champ de recordset dans le constructeur de la classe recordset
 
-##  <a name="field-data-member-declarations"></a><a name="_core_the_field_data_member_declarations"></a> Déclarations des membres de données de champ
+## <a name="field-data-member-declarations"></a><a name="_core_the_field_data_member_declarations"></a> Déclarations des membres de données de champ
 
 Les Assistants écrivent une déclaration de classe recordset dans un fichier .h qui ressemble à ce qui suit pour la classe `CSections` :
 
@@ -78,7 +78,7 @@ Si vous ajoutez des membres de données de paramètre ou de nouveaux membres de 
 
 Remarquez également que l’Assistant substitue la fonction membre `DoFieldExchange` de la classe `CRecordset`.
 
-##  <a name="dofieldexchange-override"></a><a name="_core_the_dofieldexchange_override"></a> Remplacement de DoFieldExchange
+## <a name="dofieldexchange-override"></a><a name="_core_the_dofieldexchange_override"></a> Remplacement de DoFieldExchange
 
 [DoFieldExchange](../../mfc/reference/crecordset-class.md#dofieldexchange) est au cœur de RFX. Le framework appelle `DoFieldExchange` quand il a besoin de déplacer des données depuis la source de données vers le recordset ou inversement. De plus, `DoFieldExchange` prend en charge l’obtention d’informations sur les membres de données de champ par le biais des fonctions membres [IsFieldDirty](../../mfc/reference/crecordset-class.md#isfielddirty) et [IsFieldNull](../../mfc/reference/crecordset-class.md#isfieldnull).
 
@@ -102,14 +102,14 @@ Notez les fonctionnalités clés suivantes de la fonction :
 
 - Un appel à `CFieldExchange::SetFieldType`, jusqu’au pointeur `pFX`. Cet appel indique que tous les appels de fonction RFX jusqu’à la fin de `DoFieldExchange` ou l’appel suivant à `SetFieldType` sont des colonnes de sortie. Pour plus d’informations, consultez [CFieldExchange::SetFieldType](../../mfc/reference/cfieldexchange-class.md#setfieldtype).
 
-- Plusieurs appels à la fonction globale `RFX_Text`, à raison d’un par membre de données de champ (qui sont tous des variables `CString` dans l’exemple). Ces appels spécifient la relation entre un nom de colonne sur la source de données et un membre de données de champ. Les fonctions RFX effectuent le transfert de données proprement dit. La bibliothèque de classes fournit des fonctions RFX pour tous les types de données courants. Pour plus d’informations sur les fonctions RFX, consultez [Record Field Exchange : utilisation des fonctions RFX](../../data/odbc/record-field-exchange-using-the-rfx-functions.md).
+- Plusieurs appels à la fonction globale `RFX_Text`, à raison d’un par membre de données de champ (qui sont tous des variables `CString` dans l’exemple). Ces appels spécifient la relation entre un nom de colonne sur la source de données et un membre de données de champ. Les fonctions RFX effectuent le transfert de données proprement dit. La bibliothèque de classes fournit des fonctions RFX pour tous les types de données courants. Pour plus d’informations sur les fonctions RFX, voir [Record Field Exchange: Using the RFX Functions](../../data/odbc/record-field-exchange-using-the-rfx-functions.md).
 
     > [!NOTE]
     >  L’ordre des colonnes dans votre jeu de résultats doit correspondre à l’ordre des appels de fonction RFX dans `DoFieldExchange`.
 
 - Le pointeur `pFX` vers un objet [CFieldExchange](../../mfc/reference/cfieldexchange-class.md) que le framework passe quand il appelle `DoFieldExchange`. L’objet `CFieldExchange` spécifie l’opération que doit effectuer `DoFieldExchange`, la direction de transfert et d’autres informations de contexte.
 
-##  <a name="recordset-constructor"></a><a name="_core_the_recordset_constructor"></a> Constructeur de recordset
+## <a name="recordset-constructor"></a><a name="_core_the_recordset_constructor"></a> Constructeur de recordset
 
 Le constructeur de recordset écrit par l’Assistant contient deux éléments associés à RFX :
 
@@ -133,7 +133,7 @@ CSections::CSections(CDatabase* pdb)
 ```
 
 > [!NOTE]
->  Si vous ajoutez des membres de données de champ manuellement, comme vous le feriez pour lier de nouvelles colonnes dynamiquement, vous devez incrémenter `m_nFields`. Pour ce faire, ajoutez une autre ligne de code, par exemple :
+> Si vous ajoutez des membres de données de champ manuellement, comme vous le feriez pour lier de nouvelles colonnes dynamiquement, vous devez incrémenter `m_nFields`. Pour ce faire, ajoutez une autre ligne de code, par exemple :
 
 ```cpp
 m_nFields += 3;
@@ -143,4 +143,4 @@ Ce code permet d’ajouter trois nouveaux champs. Si vous ajoutez des membres de
 
 ## <a name="see-also"></a>Voir aussi
 
-[Record Field Exchange (RFX)](../../data/odbc/record-field-exchange-rfx.md)
+[Échange de terrain record (RFX)](../../data/odbc/record-field-exchange-rfx.md)

@@ -1,20 +1,20 @@
 ---
-title: boyer_moore_horspool_searcher, classe
+title: boyer_moore_horspool_searcher classe
 ms.date: 08/03/2019
 f1_keywords:
 - functional/std::boyer_moore_horspool_searcher
 helpviewer_keywords:
 - std::boyer_moore_horspool_searcher [C++]
-ms.openlocfilehash: c7d24fee4a47fc588b00e527594682f1c4aadf76
-ms.sourcegitcommit: 16c0392fc8d96e814c3a40b0c5346d7389aeb525
+ms.openlocfilehash: 4d404b414ad632e02be5f4e9fad0e22cefb86ce2
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/12/2019
-ms.locfileid: "68957161"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81366778"
 ---
-# <a name="boyer_moore_horspool_searcher-class"></a>boyer_moore_horspool_searcher, classe
+# <a name="boyer_moore_horspool_searcher-class"></a>boyer_moore_horspool_searcher classe
 
-La `boyer_moore_horspool_searcher` classe est un type d’objet de fonction qui utilise l’algorithme Boyer-Moore-Horspool pour rechercher une séquence spécifiée dans le constructeur de l’objet. La recherche est effectuée dans une autre séquence fournie à l’opérateur d’appel de fonction de l’objet. Cette classe est passée en tant que paramètre à l’une des surcharges de [std:: Search](algorithm-functions.md#search).
+La `boyer_moore_horspool_searcher` classe est un type d’objet de fonction qui utilise l’algorithme Boyer-Moore-Horspool pour rechercher une séquence spécifiée dans le constructeur de l’objet. La recherche se fait dans une autre séquence fournie à l’opérateur d’appel de fonction de l’objet. Cette classe est transmise comme un paramètre à l’une des surcharges de [std::search](algorithm-functions.md#search).
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -45,11 +45,11 @@ class boyer_moore_horspool_searcher
 | **Constructeur** | |
 | [boyer_moore_horspool_searcher](#boyer-moore-horspool-searcher-constructor) | |
 | **Opérateurs** | |
-| [operator()](#operator-call) | |
+| [opérateur()](#operator-call) | |
 
-## <a name="boyer-moore-horspool-searcher-constructor"></a>constructeur boyer_moore_horspool_searcher
+## <a name="boyer_moore_horspool_searcher-constructor"></a><a name="boyer-moore-horspool-searcher-constructor"></a>boyer_moore_horspool_searcher constructeur
 
-Construit un `boyer_moore_horspool_searcher` objet de fonction à l’aide de la séquence à rechercher, d’un objet de fonction de hachage et d’un prédicat d’égalité.
+Construit un `boyer_moore_horspool_searcher` objet de fonction en utilisant la séquence à rechercher, un objet de fonction de hachage, et une égalité prédicate.
 
 ```cpp
 boyer_moore_horspool_searcher(
@@ -62,26 +62,26 @@ boyer_moore_horspool_searcher(
 ### <a name="parameters"></a>Paramètres
 
 *pat_first*\
-Élément initial de la séquence à rechercher.
+L’élément initial de la séquence à rechercher.
 
 *pat_last*\
-Fin de la séquence à rechercher.
+La fin de la séquence à rechercher.
 
-*haute*\
-Objet pouvant être appelé, utilisé pour hacher les éléments de séquence.
+*Hf*\
+Un objet callable, utilisé pour hachage des éléments de séquence.
 
-*prédit*\
-Prédicat de comparaison d’égalité facultatif pour les éléments de séquence. Si un type de comparaison d’égalité n’est pas spécifié `std::equal_to`, la valeur par défaut est.
+*Pred*\
+La comparaison facultative de l’égalité est prévue pour les éléments de séquence. Si un type de comparaison d’égalité `std::equal_to`n’est pas spécifié, la valeur par défaut est .
 
 ### <a name="remarks"></a>Notes
 
-Lève toute exception levée par le constructeur de copie des types *BinaryPredicate*, *hash*ou *RandomAccessIterator* , ou l’opérateur d’appel de *BinaryPredicate* ou *hash*.
+Jette toute exception jetée par le constructeur de copie de la *BinaryPredicate*, *Hash*, ou *RandomAccessIterator* types, ou l’opérateur d’appel de *BinaryPredicate* ou *Hash*.
 
-Cette classe est nouvelle dans C++ 17.
+Cette classe est nouvelle en C 17.
 
-## <a name="operator-call"></a>, opérateur ()
+## <a name="operator"></a><a name="operator-call"></a>opérateur()
 
-Opérateur d’appel de l’objet de fonction. Recherche dans la séquence `[first, last)` d’arguments la séquence spécifiée pour le constructeur.
+L’opérateur d’appel de l’objet de fonction. Recherches dans la `[first, last)` séquence d’argument pour la séquence spécifiée au constructeur.
 
 ```cpp
 template <class ForwardIterator2>   // C++17
@@ -92,21 +92,21 @@ pair<RandomAccessIterator2, RandomAccessIterator2> operator()(
 
 ### <a name="parameters"></a>Paramètres
 
-*premier*\
-Élément initial de la séquence dans laquelle effectuer la recherche.
+*Première*\
+L’élément initial de la séquence à rechercher à l’intérieur.
 
-*famille*\
-Fin de la séquence dans laquelle effectuer la recherche.
+*Dernière*\
+La fin de la séquence à rechercher à l’intérieur.
 
 ### <a name="remarks"></a>Notes
 
-Si le modèle `[pat_first, pat_last)` de recherche est vide, `make_pair(first, first)`retourne. Si le modèle de recherche est introuvable, retourne `make_pair(last, last)`. Sinon, retourne une paire d’itérateurs au début et à la fin d’une séquence `[first, last)` dans qui est `[pat_first, pat_last)` égal à conformément au prédicat *prédit*.
+Si le `[pat_first, pat_last)` modèle de `make_pair(first, first)`recherche est vide, retourne . Si le modèle de recherche `make_pair(last, last)`n’est pas trouvé, retourne . Sinon, renvoie une paire d’itérateurs au `[first, last)` début et à `[pat_first, pat_last)` la fin d’une séquence dans ce qui est égal à selon le *prédicat préd*.
 
-Cette classe est nouvelle dans C++ 17.
+Cette classe est nouvelle en C 17.
 
 ## <a name="see-also"></a>Voir aussi
 
-[\<functional>](functional.md)\
+[\<>fonctionnelles](functional.md)\
 [fonctions d’algorithme](algorithm-functions.md)\
-[boyer_moore_searcher, classe](boyer-moore-searcher-class.md)\
-[std:: Search](algorithm-functions.md#search)
+[boyer_moore_searcher classe](boyer-moore-searcher-class.md)\
+[std::recherche](algorithm-functions.md#search)

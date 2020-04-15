@@ -1,9 +1,11 @@
 ---
 title: wctomb_s, _wctomb_s_l
-ms.date: 11/04/2016
+ms.date: 4/2/2020
 api_name:
 - _wctomb_s_l
 - wctomb_s
+- _o__wctomb_s_l
+- _o_wctomb_s
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -16,6 +18,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-convert-l1-1-0.dll
+- api-ms-win-crt-private-l1-1-0
 api_type:
 - DLLExport
 topic_type:
@@ -32,12 +35,12 @@ helpviewer_keywords:
 - characters, converting
 - string conversion, multibyte character strings
 ms.assetid: 7e94a888-deed-4dbd-b5e9-d4a0455538b8
-ms.openlocfilehash: 329724ca0196e07397d4f0337a2bf0aa2db05c84
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 1ddc9a991f28c4a2ea491f3ddd04d78f6345e255
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70957890"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81367248"
 ---
 # <a name="wctomb_s-_wctomb_s_l"></a>wctomb_s, _wctomb_s_l
 
@@ -66,13 +69,13 @@ errno_t _wctomb_s_l(
 *pRetValue*<br/>
 Nombre d’octets ou code indiquant le résultat.
 
-*mbchar*<br/>
+*mbchar (en)*<br/>
 Adresse d’un caractère multioctet.
 
 *sizeInBytes*<br/>
-Taille de la mémoire tampon *mbchar*.
+Taille du *mbchar*tampon .
 
-*wchar*<br/>
+*wchar (wchar)*<br/>
 Caractère large.
 
 *locale*<br/>
@@ -82,25 +85,27 @@ Paramètres régionaux à utiliser.
 
 Zéro si l'opération a réussi, un code d'erreur en cas d'échec.
 
-Conditions d’erreur
+Conditions d'erreur
 
-|*mbchar*|*sizeInBytes*|Valeur de retour|*pRetValue*|
+|*mbchar (en)*|*sizeInBytes*|Valeur retournée|*pRetValue*|
 |--------------|-------------------|------------------|-----------------|
-|**NULL**|>0|**EINVAL**|non modifié|
-|any|>**INT_MAX**|**EINVAL**|non modifié|
-|any|trop petit|**EINVAL**|non modifié|
+|**Null**|>0|**EINVAL (EN)**|non modifié|
+|n'importe laquelle|>**INT_MAX**|**EINVAL (EN)**|non modifié|
+|n'importe laquelle|trop petit|**EINVAL (EN)**|non modifié|
 
-Si l’une des conditions d’erreur ci-dessus se présente, le gestionnaire de paramètre non valide est appelé, comme décrit dans [Validation de paramètre](../../c-runtime-library/parameter-validation.md). Si l’exécution est autorisée à se poursuivre, **wctomb** retourne **EINVAL** et définit **errno** sur **EINVAL**.
+Si l’une des conditions d’erreur ci-dessus se présente, le gestionnaire de paramètre non valide est appelé, comme décrit dans [Validation de paramètre](../../c-runtime-library/parameter-validation.md). Si l’exécution est autorisée à se poursuivre, **wctomb** retourne **EINVAL** et met **errno** à **EINVAL**.
 
 ## <a name="remarks"></a>Notes
 
-La fonction **wctomb_s** convertit son argument *WCHAR* en caractère multioctet correspondant et stocke le résultat sur *mbchar*. Vous pouvez appeler la fonction de n’importe quel endroit dans n’importe quel programme.
+La fonction **wctomb_s** convertit son argument *wchar* au caractère multioctet correspondant et stocke le résultat à *mbchar*. Vous pouvez appeler la fonction de n’importe quel endroit dans n’importe quel programme.
 
-Si **wctomb_s** convertit le caractère élargi en caractère multioctet, il place le nombre d’octets (qui n’est jamais supérieur à **MB_CUR_MAX**) dans le caractère élargi dans l’entier désigné par *pretvalue*. Si *WCHAR* est le caractère null à caractères larges (L' \ 0 '), **Wctomb_s** remplit *pretvalue* avec 1. Si le pointeur cible *mbchar* est **null**, **Wctomb_s** place 0 dans *pretvalue*. Si la conversion n’est pas possible dans les paramètres régionaux actuels, **wctomb_s** place-1 dans *pretvalue*.
+Si **wctomb_s** convertit le caractère large en un caractère multioctet, il met le nombre d’octets (qui n’est jamais plus grand que **MB_CUR_MAX)** dans le caractère large dans l’intégreur pointée vers *le pRetValue*. Si *wchar* est le caractère nul à caractère large (L'0'), **wctomb_s** remplit *pRetValue* avec 1. Si le pointeur cible *mbchar* est **NULL**, **wctomb_s** met 0 en *pRetValue*. Si la conversion n’est pas possible dans le lieu actuel, **wctomb_s** met -1 en *pRetValue*.
 
-**wctomb_s** utilise les paramètres régionaux actuels pour les informations dépendantes des paramètres régionaux ; **_wctomb_s_l** est identique, à ceci près qu’il utilise à la place les paramètres régionaux transmis. Pour plus d’informations, consultez [Locale](../../c-runtime-library/locale.md).
+**wctomb_s** utilise le lieu actuel pour obtenir des renseignements dépendants des lieux; **_wctomb_s_l** est identique, sauf qu’il utilise le lieu passé à la place. Pour plus d’informations, consultez [Locale](../../c-runtime-library/locale.md).
 
-## <a name="requirements"></a>Configuration requise
+Par défaut, l’état global de cette fonction est étendue à l’application. Pour changer cela, voir [Global State dans le CRT](../global-state.md).
+
+## <a name="requirements"></a>Spécifications
 
 |Routine|En-tête requis|
 |-------------|---------------------|
@@ -111,7 +116,7 @@ Pour plus d'informations sur la compatibilité, voir [Compatibilité](../../c-ru
 
 ## <a name="example"></a>Exemple
 
-Ce programme illustre le comportement de la fonction **wctomb** .
+Ce programme illustre le comportement de la fonction **wctomb.**
 
 ```cpp
 // crt_wctomb_s.cpp
@@ -140,7 +145,7 @@ Convert a wide character:
 ## <a name="see-also"></a>Voir aussi
 
 [Conversion de données](../../c-runtime-library/data-conversion.md)<br/>
-[Paramètres régionaux](../../c-runtime-library/locale.md)<br/>
+[Local](../../c-runtime-library/locale.md)<br/>
 [_mbclen, mblen, _mblen_l](mbclen-mblen-mblen-l.md)<br/>
 [mbstowcs, _mbstowcs_l](mbstowcs-mbstowcs-l.md)<br/>
 [mbtowc, _mbtowc_l](mbtowc-mbtowc-l.md)<br/>

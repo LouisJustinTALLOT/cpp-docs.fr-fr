@@ -10,18 +10,18 @@ helpviewer_keywords:
 - derived classes [C++], single base class
 - inheritance, single
 ms.assetid: 1cb946ed-8b1b-4cf1-bde0-d9cecbfdc622
-ms.openlocfilehash: 5f8f08bcea1a44199d15da82b3ddbd37b676b347
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 8fe141886fd5087b71484368c0f79d62238f7f22
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80178793"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81365613"
 ---
 # <a name="single-inheritance"></a>Héritage simple
 
 Dans « l'héritage unique », une forme courante d'héritage, les classes possèdent une seule classe de base. Considérons la relation illustrée à la figure ci-dessous.
 
-![Graphique d'&#45;héritage simple](../cpp/media/vc38xj1.gif "Graphique d'&#45;héritage simple") <br/>
+![Graphique de base de l’héritage unique&#45;](../cpp/media/vc38xj1.gif "Graphique de base de l’héritage unique&#45;") <br/>
 Graphique simple illustrant un héritage unique
 
 Notez la progression d'un niveau général à un niveau spécifique dans la figure. Un autre attribut courant figurant dans la conception de la plupart des hiérarchies de classes est que la classe dérivée possède une « sorte » de relation avec la classe de base. Dans la figure ci-dessus, un objet `Book` est une sorte d'objet `PrintedDocument` et un objet `PaperbackBook` est une sorte d'objet `book`.
@@ -44,11 +44,11 @@ class PaperbackBook : public Book {};
 
 La classe de base dont chaque classe est dérivée est déclarée avant la déclaration de la classe dérivée. Il ne suffit pas de fournir une déclaration de référence avant pour une classe de base ; il faut fournir une déclaration complète.
 
-Dans l’exemple précédent, le spécificateur d’accès **public** est utilisé. La signification de l’héritage public, protégé et privé est décrite dans [Access Control membres.](../cpp/member-access-control-cpp.md)
+Dans l’exemple précédent, le **public** de spécificateur d’accès est utilisé. Le sens de l’héritage public, protégé et privé est décrit dans [le contrôle de l’accès des membres.](../cpp/member-access-control-cpp.md)
 
 Une classe peut servir de classe de base pour de nombreuses classes spécifiques, comme illustré à la figure suivante.
 
-![Graphique acycliques dirigé](../cpp/media/vc38xj2.gif "Graphe acyclique orienté") <br/>
+![Graphe acyclique orienté](../cpp/media/vc38xj2.gif "Graphe acyclique orienté") <br/>
 Exemple de graphique acyclique dirigé
 
 Dans le diagramme ci-dessus, appelé « graphique acyclique dirigé », certaines classes sont des classes de base pour plusieurs classes dérivées. Toutefois, l'inverse n'est pas vrai : il existe une seule classe de base directe pour chaque classe dérivée. Le graphique de la figure représente une structure « d'héritage unique ».
@@ -154,4 +154,4 @@ Dans l'exemple précédent, des types différents sont créés. Toutefois, comme
 Comme la classe `Document` possède une fonction `PrintNameOf`, elle peut imprimer le nom de chaque ouvrage de la bibliothèque, mais elle peut omettre certaines informations spécifiques au type de document (nombre de pages pour `Book`, nombre d'octets pour `HelpFile`, etc.).
 
 > [!NOTE]
->  Obliger la classe de base à implémenter une fonction telle que `PrintNameOf` est rarement le meilleur choix de conception. Les [fonctions virtuelles](../cpp/virtual-functions.md) offrent d’autres alternatives de conception.
+> Obliger la classe de base à implémenter une fonction telle que `PrintNameOf` est rarement le meilleur choix de conception. [Virtual Functions](../cpp/virtual-functions.md) offre d’autres alternatives de conception.

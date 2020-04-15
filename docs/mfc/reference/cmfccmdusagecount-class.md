@@ -1,5 +1,5 @@
 ---
-title: Cmfccmdusagecount, classe
+title: Classe CMFCCmdUsageCount
 ms.date: 11/04/2016
 f1_keywords:
 - CMFCCmdUsageCount
@@ -20,16 +20,16 @@ helpviewer_keywords:
 - CMFCCmdUsageCount [MFC], Serialize
 - CMFCCmdUsageCount [MFC], SetOptions
 ms.assetid: 9c33b783-37c0-43ea-9f31-3c75e246c841
-ms.openlocfilehash: b4ad9a60831feb6fa1147ea3f8bcfd5c6badd06c
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 1c03f0c62e508f9d00a352b71c8f3a18604e36c0
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62403800"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81367736"
 ---
-# <a name="cmfccmdusagecount-class"></a>Cmfccmdusagecount, classe
+# <a name="cmfccmdusagecount-class"></a>Classe CMFCCmdUsageCount
 
-Suit le décompte d’utilisation de messages Windows, tels que lorsque l’utilisateur sélectionne un élément dans un menu.
+Suit le nombre d’utilisations des messages Windows, par exemple lorsque l’utilisateur sélectionne un élément à partir d’un menu.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -52,43 +52,43 @@ class CMFCCmdUsageCount : public CObject
 |||
 |-|-|
 |Nom|Description|
-|[CMFCCmdUsageCount::AddCmd](#addcmd)|Incrémente d’une unité le compteur est associé à la commande donnée.|
-|[CMFCCmdUsageCount::GetCount](#getcount)|Récupère le décompte d’utilisation qui est associé à l’ID de commande donné.|
-|[CMFCCmdUsageCount::HasEnoughInformation](#hasenoughinformation)|Détermine si cet objet a collectées à la quantité minimale de données de suivi.|
+|[CMFCCmdUsageCount::AddCmd](#addcmd)|Incréments par un le compteur qui est associé à la commande donnée.|
+|[CMFCCmdUsageCount::GetCount](#getcount)|Récupère le nombre d’utilisations qui est associé à l’ID de commande donné.|
+|[CMFCCmdUsageCount::HasEnoughInformation](#hasenoughinformation)|Détermine si cet objet a recueilli la quantité minimale de données de suivi.|
 |[CMFCCmdUsageCount::IsFreqeuntlyUsedCmd](#isfreqeuntlyusedcmd)|Détermine si la commande donnée est fréquemment utilisée.|
-|[CMFCCmdUsageCount::Reset](#reset)|Efface le décompte d’utilisation de toutes les commandes.|
-|[CMFCCmdUsageCount::Serialize](#serialize)|Lit de cet objet à partir d’une archive ou écrit dans une archive. (Substitue [CObject::Serialize](../../mfc/reference/cobject-class.md#serialize).)|
-|[CMFCCmdUsageCount::SetOptions](#setoptions)|Définit les valeurs de partagées `CMFCCmdUsageCount` données membres de classe.|
+|[CMFCCmdUsageCount::Reset](#reset)|Efface le nombre d’utilisation de toutes les commandes.|
+|[CMFCCmdUsageCount::Serialize](#serialize)|Lit cet objet à partir d’une archive ou l’écrit à une archive. (Substitue [CObject::Serialize](../../mfc/reference/cobject-class.md#serialize).)|
+|[CMFCCmdUsageCount::SetOptions](#setoptions)|Définit les valeurs `CMFCCmdUsageCount` des membres de données de classe partagées.|
 
-### <a name="data-members"></a>Membres de données
+### <a name="data-members"></a>Données membres
 
 |||
 |-|-|
 |Nom|Description|
-|`m_CmdUsage`|Un `CMap` objet qui mappe des commandes à leurs compteurs d’utilisation.|
-|`m_nMinUsagePercentage`|Le pourcentage d’utilisation minimale pour une commande à utiliser fréquemment.|
-|`m_nStartCount`|Le compteur de démarrage qui est utilisé pour déterminer si cet objet a collectées à la quantité minimale de données de suivi.|
-|`m_nTotalUsage`|Le nombre de commandes de tous les suivis.|
+|`m_CmdUsage`|Un `CMap` objet qui cartographie les commandes à leur utilisation compte.|
+|`m_nMinUsagePercentage`|Le pourcentage d’utilisation minimum pour une commande à utiliser fréquemment.|
+|`m_nStartCount`|Le compteur de démarrage qui est utilisé pour déterminer si cet objet a recueilli la quantité minimale de données de suivi.|
+|`m_nTotalUsage`|Le décompte de toutes les commandes suivies.|
 
 ### <a name="remarks"></a>Notes
 
-Le `CMFCCmdUsageCount` classe mappe chaque identificateur de message Windows numérique à un compteur de l’entier non signé 32 bits. `CMFCToolBar` utilise cette classe pour afficher les éléments fréquemment utilisés. Pour plus d’informations sur `CMFCToolBar`, consultez [cmfctoolbar, classe](../../mfc/reference/cmfctoolbar-class.md).
+La `CMFCCmdUsageCount` classe cartographie chaque identifiant numérique de message Windows à un compteur integer non signé 32 bits. `CMFCToolBar`utilise cette classe pour afficher des éléments de barre d’outils fréquemment utilisés. Pour plus `CMFCToolBar`d’informations sur , voir [CMFCToolBar Class](../../mfc/reference/cmfctoolbar-class.md).
 
-Vous pouvez conserver `CMFCCmdUsageCount` classe les données entre les exécutions de votre programme. Utilisez le [CMFCCmdUsageCount::Serialize](#serialize) méthode pour sérialiser les données de membre de classe et le [CMFCCmdUsageCount::SetOptions](#setoptions) méthode pour définir les données de membre partagé.
+Vous pouvez `CMFCCmdUsageCount` persévérer les données de classe entre les exécutions de votre programme. Utilisez la méthode [CMFCCmdUsageCount::Serialize](#serialize) pour sérialiser les données des membres de la classe et la méthode [CMFCCmdUsageCount::SetOptions](#setoptions) pour définir les données partagées des membres.
 
 ## <a name="inheritance-hierarchy"></a>Hiérarchie d'héritage
 
 [CObject](../../mfc/reference/cobject-class.md)
 
-[CMFCCmdUsageCount](../../mfc/reference/cmfccmdusagecount-class.md)
+[CMFCCmdUsageCompte](../../mfc/reference/cmfccmdusagecount-class.md)
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
-**En-tête :** afxcmdusagecount.h
+**En-tête:** afxcmdusagecount.h
 
-##  <a name="addcmd"></a>  CMFCCmdUsageCount::AddCmd
+## <a name="cmfccmdusagecountaddcmd"></a><a name="addcmd"></a>CMFCCmdUsageCount::AddCmd
 
-Incrémente d’une unité le compteur est associé à la commande donnée.
+Incréments par un le compteur qui est associé à la commande donnée.
 
 ```
 void AddCmd(UINT uiCmd);
@@ -99,23 +99,23 @@ void AddCmd(UINT uiCmd);
 |||
 |-|-|
 |Paramètre|Description|
-|*uiCmd*|[in] Spécifie le compteur de commande à incrémenter.|
+|*uiCmd uiCmd*|[dans] Spécifie le compteur de commande à l’incrément.|
 
 ### <a name="remarks"></a>Notes
 
-Cette méthode ajoute une nouvelle entrée à la structure du plan du nombre de commandes, de `m_CmdUsage`, si l’entrée n’existe pas déjà.
+Cette méthode ajoute une nouvelle entrée à `m_CmdUsage`la structure de la carte des comptes de commande, si l’entrée n’existe pas déjà.
 
-Cette méthode ne fait rien dans les cas suivants :
+Cette méthode ne fait rien dans les cas suivants :
 
-- L’infrastructure de la barre d’outils est en mode de personnalisation (les [CMFCToolBar::IsCustomizeMode](../../mfc/reference/cmfctoolbar-class.md#iscustomizemode) méthode retourne une valeur différente de zéro).
+- Le cadre de la barre d’outils est en mode personnalisation (le [CMFCToolBar::IsCustomizeMode](../../mfc/reference/cmfctoolbar-class.md#iscustomizemode) méthode retourne une valeur non zéro).
 
-- La commande fait référence à un séparateur de menu ou sous-menu ( *uiCmd* est égal à 0 ou -1).
+- La commande se réfère à un sous-mois ou un séparateur de menu *(uiCmd* égal à 0 ou -1).
 
-- *uiCmd* fait référence à une commande standard (global `IsStandardCommand` fonction retourne une valeur différente de zéro).
+- *uiCmd* se réfère à une `IsStandardCommand` commande standard (la fonction globale retourne une valeur non zéro).
 
-##  <a name="getcount"></a>  CMFCCmdUsageCount::GetCount
+## <a name="cmfccmdusagecountgetcount"></a><a name="getcount"></a>CMFCCmdUsageCount::GetCount
 
-Récupère le décompte d’utilisation qui est associé à l’ID de commande donné.
+Récupère le nombre d’utilisations qui est associé à l’ID de commande donné.
 
 ```
 UINT GetCount(UINT uiCmd) const;
@@ -126,13 +126,13 @@ UINT GetCount(UINT uiCmd) const;
 |||
 |-|-|
 |Paramètre|Description|
-|*uiCmd*|[in] L’ID du compteur de commande à récupérer.|
+|*uiCmd uiCmd*|[dans] L’ID du compteur de commande à récupérer.|
 
 ### <a name="return-value"></a>Valeur de retour
 
-Le décompte d’utilisation qui est associé à l’ID de commande donné.
+Le nombre d’utilisation qui est associé à l’ID de commande donné.
 
-##  <a name="hasenoughinformation"></a>  CMFCCmdUsageCount::HasEnoughInformation
+## <a name="cmfccmdusagecounthasenoughinformation"></a><a name="hasenoughinformation"></a>CMFCCmdUsageCount::HasEnoughInformation
 
 Détermine si cet objet a reçu la quantité minimale de données de suivi.
 
@@ -142,15 +142,15 @@ BOOL HasEnoughInformation() const;
 
 ### <a name="return-value"></a>Valeur de retour
 
-Différent de zéro si cet objet a reçu la quantité minimale de suivi des données ; sinon 0.
+Nonzero si cet objet a reçu la quantité minimale de données de suivi; sinon 0.
 
 ### <a name="remarks"></a>Notes
 
-Cette méthode retourne une valeur différente de zéro si le nombre total, `m_nTotalUsage`, des commandes de tous les suivis est égal ou supérieur au nombre initial, `m_nStartCount`. Par défaut, le framework définit le nombre initial de 0. Vous pouvez remplacer cette valeur en utilisant le [CMFCCmdUsageCount::SetOptions](#setoptions) (méthode).
+Cette méthode renvoie une valeur non `m_nTotalUsage`zéro si le nombre total, , de toutes `m_nStartCount`les commandes suivies est égale ou supérieure au nombre initial, . Par défaut, le cadre définit le décompte initial 0. Vous pouvez remplacer cette valeur en utilisant la méthode [CMFCCmdUsageCount::SetOptions.](#setoptions)
 
-Cette méthode est utilisée par [CMFCMenuBar::IsShowAllCommands](../../mfc/reference/cmfcmenubar-class.md#isshowallcommands) pour déterminer s’il faut afficher toutes les commandes de menu disponibles.
+Cette méthode est utilisée par [CMFCMenuBar::IsShowAllCommands](../../mfc/reference/cmfcmenubar-class.md#isshowallcommands) pour déterminer s’il convient d’afficher toutes les commandes de menu disponibles.
 
-##  <a name="isfreqeuntlyusedcmd"></a>  CMFCCmdUsageCount::IsFreqeuntlyUsedCmd
+## <a name="cmfccmdusagecountisfreqeuntlyusedcmd"></a><a name="isfreqeuntlyusedcmd"></a>CMFCCmdUsageCount::IsFreqeuntlyUsedCmd
 
 Détermine si la commande donnée est fréquemment utilisée.
 
@@ -163,21 +163,21 @@ BOOL IsFreqeuntlyUsedCmd(UINT uiCmd) const;
 |||
 |-|-|
 |Paramètre|Description|
-|*uiCmd*|[in] Spécifie la commande à vérifier.|
+|*uiCmd uiCmd*|[dans] Spécifie l’ordre de vérifier.|
 
 ### <a name="return-value"></a>Valeur de retour
 
-Différent de zéro si la commande est fréquemment utilisée ; sinon 0.
+Nonzero si la commande est fréquemment utilisée; sinon 0.
 
 ### <a name="remarks"></a>Notes
 
-Cette méthode retourne 0 si l’utilisation de la commande total, `m_nTotalUsage`, est égal à 0. Sinon, cette méthode retourne zéro si le pourcentage de laquelle la commande spécifiée est utilisée est supérieur au pourcentage minimal, `m_nMinUsagePercentage`. Par défaut, le framework définit le pourcentage minimal à 5. Vous pouvez remplacer cette valeur en utilisant le [CMFCCmdUsageCount::SetOptions](#setoptions) (méthode). Si le pourcentage minimal est 0, cette méthode retourne zéro si le nombre de la commande spécifiée est supérieur à 0.
+Cette méthode renvoie 0 si `m_nTotalUsage`l’utilisation totale de commande, , est de 0. Dans le cas contraire, cette méthode renvoie nonzero si le pourcentage `m_nMinUsagePercentage`de laquelle la commande spécifiée est utilisée est plus grand que le pourcentage minimum, . Par défaut, le cadre fixe le pourcentage minimum à 5. Vous pouvez remplacer cette valeur en utilisant la méthode [CMFCCmdUsageCount::SetOptions.](#setoptions) Si le pourcentage minimum est de 0, cette méthode renvoie nonzero si le nombre de commandes spécifié est supérieur à 0.
 
 [CMFCToolBar::IsCommandRarelyUsed](../../mfc/reference/cmfctoolbar-class.md#iscommandrarelyused) utilise cette méthode pour déterminer si une commande est rarement utilisée.
 
-##  <a name="reset"></a>  CMFCCmdUsageCount::Reset
+## <a name="cmfccmdusagecountreset"></a><a name="reset"></a>CMFCCmdUsageCount::Reset
 
-Efface le décompte d’utilisation de toutes les commandes.
+Efface le nombre d’utilisation de toutes les commandes.
 
 ```
 void Reset();
@@ -185,11 +185,11 @@ void Reset();
 
 ### <a name="remarks"></a>Notes
 
-Appelez cette méthode pour effacer toutes les entrées à partir de la structure du plan du nombre de commandes, de `m_CmdUsage`et de réinitialiser l’utilisation de la commande total, `m_nTotalUsage`, compteur sur 0.
+Appelez cette méthode pour effacer toutes les entrées `m_CmdUsage`de la structure de `m_nTotalUsage`la carte des comptes de commande, et pour réinitialiser l’utilisation totale de commande, , contre 0.
 
-##  <a name="serialize"></a>  CMFCCmdUsageCount::Serialize
+## <a name="cmfccmdusagecountserialize"></a><a name="serialize"></a>CMFCCmdUsageCount::Serialize
 
-Lit de cet objet à partir d’une archive, ou écrit dans une archive.
+Lit cet objet à partir d’une archive, ou l’écrit à une archive.
 
 ```
 virtual void Serialize(CArchive& ar);
@@ -200,17 +200,17 @@ virtual void Serialize(CArchive& ar);
 |||
 |-|-|
 |Paramètre|Description|
-|*ar*|[in] Un `CArchive` objet à sérialiser depuis ou vers.|
+|*Ar*|[dans] Un `CArchive` objet à sérialiser de ou vers.|
 
 ### <a name="remarks"></a>Notes
 
-Cette méthode sérialise la structure du plan du nombre de commandes, de `m_CmdUsage`et l’utilisation de la commande total, `m_nTotalUsage`, compteur depuis ou vers l’archive spécifiée.
+Cette méthode sérialise la structure `m_CmdUsage`cartographique des comptes `m_nTotalUsage`de commande, et l’utilisation totale de commande, , contre ou à l’archive spécifiée.
 
-Pour des exemples de sérialisation, consultez [sérialisation : Sérialisation d’un objet](../../mfc/serialization-serializing-an-object.md).
+Pour des exemples de sérialisation, voir [Serialization: Serializing an Object](../../mfc/serialization-serializing-an-object.md).
 
-##  <a name="setoptions"></a>  CMFCCmdUsageCount::SetOptions
+## <a name="cmfccmdusagecountsetoptions"></a><a name="setoptions"></a>CMFCCmdUsageCount::SetOptions
 
-Définit les valeurs de partagées `CMFCCmdUsageCount` données membres de classe.
+Définit les valeurs `CMFCCmdUsageCount` des membres de données de classe partagées.
 
 ```
 static BOOL __stdcall SetOptions(
@@ -223,21 +223,21 @@ static BOOL __stdcall SetOptions(
 |||
 |-|-|
 |Paramètre|Description|
-|*nStartCount*|[in] Nouveau nombre initial de commandes de tous les suivis.|
-|*nMinUsagePercentage*|[in] Le nouveau pourcentage d’utilisation minimale.|
+|*nStartCount (en)*|[dans] Le nouveau décompte initial de toutes les commandes suivies.|
+|*nMinUsagePercentage (en)*|[dans] Le nouveau pourcentage d’utilisation minimum.|
 
 ### <a name="return-value"></a>Valeur de retour
 
-TRUE si la méthode réussit, FALSE si le *nMinUsagePercentage* paramètre est supérieur ou égal à 100.
+VRAI si la méthode réussit, FALSE si le *paramètre nMinUsagePercentage* est plus grand ou égal à 100.
 
 ### <a name="remarks"></a>Notes
 
-Cette méthode définit le partagé `CMFCCmdUsageCount` données membres de classe `m_nStartCount` et `m_nMinUsagePercentage` à *nStartCount* et *nMinUsagePercentage*, respectivement. `m_nStartCount` est utilisé par le [CMFCCmdUsageCount::HasEnoughInformation](#hasenoughinformation) méthode pour déterminer si cet objet a collectées à la quantité minimale de données de suivi. `m_nMinUsagePercentage` est utilisé par le [CMFCCmdUsageCount::IsFreqeuntlyUsedCmd](#isfreqeuntlyusedcmd) méthode pour déterminer si une commande donnée est fréquemment utilisée.
+Cette méthode définit `CMFCCmdUsageCount` les `m_nStartCount` membres `m_nMinUsagePercentage` des données de classe partagées et à *nStartCount* et *nMinUsagePercentage*, respectivement. `m_nStartCount`est utilisé par le [CMFCCmdUsageCount::HasEnoughInformation](#hasenoughinformation) méthode pour déterminer si cet objet a recueilli la quantité minimale de données de suivi. `m_nMinUsagePercentage`est utilisé par le [CMFCCmdUsageCount::IsFreqeuntlyUsedCmd](#isfreqeuntlyusedcmd) méthode pour déterminer si une commande donnée est fréquemment utilisé.
 
-Dans les versions Debug cette méthode génère un échec d’assertion si le *nMinUsagePercentage* paramètre est supérieur ou égal à 100.
+Dans Debug construit cette méthode génère une défaillance d’affirmation si le paramètre *nMinUsagePercentage* est plus grand ou égal à 100.
 
 ## <a name="see-also"></a>Voir aussi
 
 [Graphique hiérarchique](../../mfc/hierarchy-chart.md)<br/>
 [Classes](../../mfc/reference/mfc-classes.md)<br/>
-[CMFCToolBar, classe](../../mfc/reference/cmfctoolbar-class.md)
+[Classe CMFCToolBar](../../mfc/reference/cmfctoolbar-class.md)

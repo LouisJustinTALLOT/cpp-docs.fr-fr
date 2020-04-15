@@ -2,84 +2,84 @@
 title: 'Procédure pas à pas : Multiplication des matrices'
 ms.date: 04/23/2019
 ms.assetid: 61172e8b-da71-4200-a462-ff3a908ab0cf
-ms.openlocfilehash: a84383aa02b3f8300774e18ba2b27655d07b72ae
-ms.sourcegitcommit: 8e285a766523e653aeeb34d412dc6f615ef7b17b
+ms.openlocfilehash: f30f8dc235bf0e76c342bea26a35bcbb36cfa237
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/21/2020
-ms.locfileid: "80075708"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81366812"
 ---
 # <a name="walkthrough-matrix-multiplication"></a>Procédure pas à pas : Multiplication des matrices
 
-Cette procédure pas à pas montre comment utiliser C++ amp pour accélérer l’exécution de la multiplication de matrice. Deux algorithmes sont présentés : un sans mosaïque et un avec une mosaïque.
+Cette procédure pas à pas étape étape par étape montre comment utiliser l’AMP de CMD pour accélérer l’exécution de la multiplication de la matrice. Deux algorithmes sont présentés, l’un sans carrelage et l’autre avec carrelage.
 
-## <a name="prerequisites"></a>Conditions préalables requises
+## <a name="prerequisites"></a>Prérequis
 
 Avant de commencer :
 
-- Consultez [ C++ vue d’ensemble du amp](../../parallel/amp/cpp-amp-overview.md).
+- Lire [l’aperçu de l’AMP](../../parallel/amp/cpp-amp-overview.md).
 
-- Lire [à l’aide de vignettes](../../parallel/amp/using-tiles.md).
+- Lire [Utilisation des tuiles](../../parallel/amp/using-tiles.md).
 
-- Assurez-vous que vous exécutez au moins Windows 7 ou Windows Server 2008 R2.
+- Assurez-vous que vous exécutez au moins Windows 7, ou Windows Server 2008 R2.
 
 ### <a name="to-create-the-project"></a>Pour créer le projet
 
-Les instructions de création d’un nouveau projet varient en fonction de la version de Visual Studio que vous avez installée. Assurez-vous que le sélecteur de version dans le coin supérieur gauche est défini sur la version correcte.
+Les instructions pour créer un nouveau projet varient selon la version de Visual Studio que vous avez installée. Pour voir la documentation de votre version préférée de Visual Studio, utilisez le contrôle du sélecteur **Version.** On le trouve en haut de la table des contenus sur cette page.
 
 ::: moniker range="vs-2019"
 
 ### <a name="to-create-the-project-in-visual-studio-2019"></a>Pour créer le projet dans Visual Studio 2019
 
-1. Dans la barre de menus, choisissez **fichier** > **nouveau** **projet** > pour ouvrir la boîte de dialogue **créer un nouveau projet** .
+1. Dans la barre de menus, choisissez **Fichier** > **Nouveau** > **Projet** pour ouvrir la boîte de dialogue **Créer un projet**.
 
-1. En haut de la boîte de dialogue, définissez **Langage** sur **C++** , **Plateforme** sur **Windows** et **Type de projet** sur **Console**.
+1. En haut de la boîte de dialogue, définissez **Langage** sur ** C++ **, **Plateforme** sur **Windows** et **Type de projet** sur **Console**.
 
-1. Dans la liste filtrée des types de projets, choisissez **projet vide** , puis **suivant**. Dans la page suivante, entrez *MatrixMultiply* dans la zone **nom** pour spécifier un nom pour le projet, puis spécifiez l’emplacement du projet si vous le souhaitez.
+1. De la liste filtrée des types de projets, choisissez **Empty Project** puis choisissez **Next**. Dans la page suivante, entrez *MatrixMultiply* dans la boîte **nom** pour spécifier un nom pour le projet, et spécifiez l’emplacement du projet si désiré.
 
    ![Nouvelle application console](../../build/media/mathclient-project-name-2019.png "Nouvelle application console")
 
 1. Choisissez le bouton **Créer** pour créer le projet client.
 
-1. Dans **Explorateur de solutions**, ouvrez le menu contextuel des **fichiers sources**, puis choisissez **Ajouter** > **nouvel élément**.
+1. Dans **Solution Explorer**, ouvrez le menu raccourci pour les fichiers **Source,** puis choisissez **Ajouter** > **un nouvel article**.
 
-1. Dans la boîte de dialogue **Ajouter un nouvel élément** , sélectionnez  **C++ fichier (. cpp)** , entrez *MatrixMultiply. cpp* dans la zone **nom** , puis choisissez le bouton **Ajouter** .
+1. Dans la boîte de dialogue **Add New Item,** sélectionnez **le fichier CMD (.cpp),** entrez *MatrixMultiply.cpp* dans la boîte **nom,** puis choisissez le bouton **Ajouter.**
 
 ::: moniker-end
 
 ::: moniker range="<=vs-2017"
 
-### <a name="to-create-a-project-in-visual-studio-2017-or-2015"></a>Pour créer un projet dans Visual Studio 2017 ou 2015
+### <a name="to-create-a-project-in-visual-studio-2017-or-2015"></a>Créer un projet en Visual Studio 2017 ou 2015
 
-1. Dans la barre de menus de Visual Studio, choisissez **fichier** > **nouveau** **projet**>.
+1. Sur la barre de menu de Visual Studio, choisissez **File** > **New** > **Project**.
 
-1. Sous **installé** dans le volet modèles, sélectionnez **visuel C++** .
+1. Sous **Installé** dans la vitre des modèles, sélectionnez **Visual CM .**
 
-1. Sélectionnez **projet vide**, entrez *MatrixMultiply* dans la zone **nom** , puis choisissez le bouton **OK** .
+1. Sélectionnez **Projet vide**, entrez *MatrixMultiply* dans la boîte **nom,** puis choisissez le bouton **OK.**
 
 1. Choisissez le bouton **Suivant**.
 
-1. Dans **Explorateur de solutions**, ouvrez le menu contextuel des **fichiers sources**, puis choisissez **Ajouter** > **nouvel élément**.
+1. Dans **Solution Explorer**, ouvrez le menu raccourci pour les fichiers **Source,** puis choisissez **Ajouter** > **un nouvel article**.
 
-1. Dans la boîte de dialogue **Ajouter un nouvel élément** , sélectionnez  **C++ fichier (. cpp)** , entrez *MatrixMultiply. cpp* dans la zone **nom** , puis choisissez le bouton **Ajouter** .
+1. Dans la boîte de dialogue **Add New Item,** sélectionnez **le fichier CMD (.cpp),** entrez *MatrixMultiply.cpp* dans la boîte **nom,** puis choisissez le bouton **Ajouter.**
 
 ::: moniker-end
 
-## <a name="multiplication-without-tiling"></a>Multiplication sans mosaïque
+## <a name="multiplication-without-tiling"></a>Multiplication sans carrelage
 
-Dans cette section, prenez en compte la multiplication de deux matrices, A et B, qui sont définies comme suit :
+Dans cette section, considérez la multiplication de deux matrices, A et B, qui sont définies comme suit :
 
 ![3&#45;par&#45;2 matrice A](../../parallel/amp/media/campmatrixanontiled.png "3&#45;par&#45;2 matrice A")
 
 ![2&#45;par&#45;3 matrice B](../../parallel/amp/media/campmatrixbnontiled.png "2&#45;par&#45;3 matrice B")
 
-Un est une matrice 3 par 2 et B est une matrice 2 par 3. Le produit de la multiplication d’un par B est la matrice 3 par 3 suivante. Le produit est calculé en multipliant les lignes d’un par les colonnes de l’élément B par élément.
+A est une matrice de 3 par 2 et B est une matrice de 2 par 3. Le produit de la multiplication A par B est la matrice suivante 3-par-3. Le produit est calculé en multipliant les lignes de A par les colonnes de L’élément B par élément.
 
-![matrice&#45;produit&#45;3 sur 3](../../parallel/amp/media/campmatrixproductnontiled.png "matrice&#45;produit&#45;3 sur 3")
+![3&#45;par&#45;3 matrice de produits](../../parallel/amp/media/campmatrixproductnontiled.png "3&#45;par&#45;3 matrice de produits")
 
-### <a name="to-multiply-without-using-c-amp"></a>À multiplier sans utiliser C++ amp
+### <a name="to-multiply-without-using-c-amp"></a>Pour multiplier sans utiliser l’AMP de C
 
-1. Ouvrez MatrixMultiply. cpp et utilisez le code suivant pour remplacer le code existant.
+1. Ouvrez MatrixMultiply.cpp et utilisez le code suivant pour remplacer le code existant.
 
    ```cpp
    #include <iostream>
@@ -107,17 +107,17 @@ Un est une matrice 3 par 2 et B est une matrice 2 par 3. Le produit de la multip
    }
    ```
 
-   L’algorithme est une implémentation simple de la définition de la multiplication de matrice. Elle n’utilise pas d’algorithmes parallèles ou de threads pour réduire le temps de calcul.
+   L’algorithme est une mise en œuvre simple de la définition de la multiplication de la matrice. Il n’utilise pas d’algorithmes parallèles ou filetés pour réduire le temps de calcul.
 
-1. Dans la barre de menus, sélectionnez **Fichier** > **Enregistrer tout**.
+1. Sur la barre de menu, choisissez **File** > **Save All**.
 
-1. Appuyez sur le raccourci clavier **F5** pour démarrer le débogage et vérifier que la sortie est correcte.
+1. Choisissez le raccourci **clavier F5** pour commencer à débogage et vérifier que la sortie est correcte.
 
-1. Appuyez sur **entrée** pour quitter l’application.
+1. Choisissez **Entrez** pour sortir de l’application.
 
-### <a name="to-multiply-by-using-c-amp"></a>À multiplier à l' C++ aide de amp
+### <a name="to-multiply-by-using-c-amp"></a>Pour multiplier en utilisant l’AMP de C
 
-1. Dans MatrixMultiply. cpp, ajoutez le code suivant avant la méthode `main`.
+1. Dans MatrixMultiply.cpp, ajoutez le `main` code suivant avant la méthode.
 
    ```cpp
    void MultiplyWithAMP() {
@@ -152,16 +152,16 @@ Un est une matrice 3 par 2 et B est une matrice 2 par 3. Le produit de la multip
    }
    ```
 
-   Le code AMP ressemble au code non AMP. L’appel à `parallel_for_each` démarre un thread pour chaque élément dans `product.extent`et remplace les boucles `for` pour la ligne et la colonne. La valeur de la cellule au niveau de la ligne et de la colonne est disponible dans `idx`. Vous pouvez accéder aux éléments d’un objet `array_view` à l’aide de l’opérateur `[]` et d’une variable d’index, ou de l’opérateur `()` et des variables de ligne et de colonne. L’exemple illustre les deux méthodes. La méthode `array_view::synchronize` copie à nouveau les valeurs de la variable `product` dans la variable `productMatrix`.
+   Le code AMP ressemble au code non-AMP. L’appel `parallel_for_each` pour commencer un `product.extent`thread pour chaque `for` élément dans , et remplace les boucles pour la ligne et la colonne. La valeur de la cellule à la `idx`rangée et la colonne est disponible en . Vous pouvez accéder aux `array_view` éléments d’un objet en utilisant soit l’opérateur `[]` et une variable d’index, soit l’opérateur `()` et les variables de la ligne et de la colonne. L’exemple montre les deux méthodes. La `array_view::synchronize` méthode copie les `product` valeurs de `productMatrix` la variable à la variable.
 
-1. Ajoutez les instructions `include` et `using` suivantes en haut de MatrixMultiply. cpp.
+1. Ajoutez ce `include` `using` qui suit et les déclarations en haut de MatrixMultiply.cpp.
 
    ```cpp
    #include <amp.h>
    using namespace concurrency;
    ```
 
-1. Modifiez la méthode `main` pour appeler la méthode `MultiplyWithAMP`.
+1. Modifier `main` la méthode `MultiplyWithAMP` pour appeler la méthode.
 
    ```cpp
    int main() {
@@ -171,53 +171,53 @@ Un est une matrice 3 par 2 et B est une matrice 2 par 3. Le produit de la multip
    }
    ```
 
-1. Appuyez sur le raccourci clavier **Ctrl**+**F5** pour démarrer le débogage et vérifier que la sortie est correcte.
+1. Appuyez sur le raccourci **clavier Ctrl**+**F5** pour commencer à débogage et vérifier que la sortie est correcte.
 
-1. Appuyez sur la **barre d’espace** pour quitter l’application.
+1. Appuyez sur le **Spacebar** pour sortir de l’application.
 
-## <a name="multiplication-with-tiling"></a>Multiplication avec mosaïque
+## <a name="multiplication-with-tiling"></a>Multiplication avec carrelage
 
-La mosaïque est une technique dans laquelle vous partitionnez des données dans des sous-ensembles de taille égale, appelés vignettes. Trois choses changent lorsque vous utilisez la mosaïque.
+Le carrelage est une technique dans laquelle vous divisez les données en sous-ensembles de taille égale, qui sont connus sous le nom de tuiles. Trois choses changent lorsque vous utilisez le carrelage.
 
-- Vous pouvez créer des variables de `tile_static`. L’accès aux données dans `tile_static` espace peut être beaucoup plus rapide que l’accès aux données dans l’espace global. Une instance d’une `tile_static` variable est créée pour chaque vignette, et tous les threads de la mosaïque ont accès à la variable. Le principal avantage de la mosaïque est le gain de performance en raison de l’accès `tile_static`.
+- Vous pouvez `tile_static` créer des variables. L’accès `tile_static` aux données dans l’espace peut être beaucoup plus rapide que l’accès aux données dans l’espace mondial. Une instance `tile_static` d’une variable est créée pour chaque tuile, et tous les fils de la tuile ont accès à la variable. Le principal avantage du carrelage `tile_static` est le gain de performance dû à l’accès.
 
-- Vous pouvez appeler la méthode [tile_barrier :: wait](reference/tile-barrier-class.md#wait) pour arrêter tous les threads d’une vignette à la ligne de code spécifiée. Vous ne pouvez pas garantir l’ordre dans lequel les threads s’exécuteront, seulement que tous les threads d’une vignette s’arrêteront au moment de l’appel à `tile_barrier::wait` avant de poursuivre l’exécution.
+- Vous pouvez appeler le [tile_barrier::méthode d’attente](reference/tile-barrier-class.md#wait) pour arrêter tous les fils dans une tuile à une ligne de code spécifiée. Vous ne pouvez pas garantir l’ordre que les fils s’exécuteront, seulement que `tile_barrier::wait` tous les fils dans une tuile s’arrêtera à l’appel avant qu’ils continuent l’exécution.
 
-- Vous avez accès à l’index du thread relatif à la totalité de l’objet `array_view` et à l’index relatif à la vignette. En utilisant l’index local, vous pouvez rendre votre code plus facile à lire et à déboguer.
+- Vous avez accès à l’index du `array_view` thread par rapport à l’objet entier et à l’index par rapport à la tuile. En utilisant l’index local, vous pouvez rendre votre code plus facile à lire et à déboiffer.
 
-Pour tirer parti de la mosaïque dans la multiplication de matrices, l’algorithme doit partitionner la matrice en mosaïques, puis copier les données de la vignette dans `tile_static` variables pour un accès plus rapide. Dans cet exemple, la matrice est partitionnée en sous-matrices de taille égale. Le produit est trouvé en multipliant les sous-matrices. Les deux matrices et leur produit dans cet exemple sont les suivants :
+Pour tirer parti du carrelage dans la multiplication de la matrice, l’algorithme doit diviser la matrice en tuiles, puis copier les données de tuiles en `tile_static` variables pour un accès plus rapide. Dans cet exemple, la matrice est divisée en sous-millions de taille égale. Le produit se trouve en multipliant les sous-millions. Les deux matrices et leur produit dans cet exemple sont :
 
-![4&#45;sur&#45;4 matrice A](../../parallel/amp/media/campmatrixatiled.png "4&#45;sur&#45;4 matrice A")
+![4&#45;par&#45;4 matrice A](../../parallel/amp/media/campmatrixatiled.png "4&#45;par&#45;4 matrice A")
 
-![4&#45;sur&#45;4 matrice B](../../parallel/amp/media/campmatrixbtiled.png "4&#45;sur&#45;4 matrice B")
+![4&#45;par&#45;4 matrice B](../../parallel/amp/media/campmatrixbtiled.png "4&#45;par&#45;4 matrice B")
 
-![matrice&#45;de&#45;4 sur 4 produits](../../parallel/amp/media/campmatrixproducttiled.png "matrice&#45;de&#45;4 sur 4 produits")
+![4&#45;par&#45;4 matrice de produits](../../parallel/amp/media/campmatrixproducttiled.png "4&#45;par&#45;4 matrice de produits")
 
-Les matrices sont partitionnées en quatre matrices 2x2, qui sont définies comme suit :
+Les matrices sont divisées en quatre matrices 2x2, qui sont définies comme suit :
 
-![matrice&#45;4&#45;sur 4 partitionnée en 2&#45;sous&#45;&#45;-matrices de 2 par 2](../../parallel/amp/media/campmatrixapartitioned.png "matrice&#45;4&#45;sur 4 partitionnée en 2&#45;sous&#45;&#45;-matrices de 2 par 2")
+![4&#45;par&#45;4 matrice A cloisonnée en 2&#45;par&#45;2 matrices sous&#45;](../../parallel/amp/media/campmatrixapartitioned.png "4&#45;par&#45;4 matrice A cloisonnée en 2&#45;par&#45;2 matrices sous&#45;")
 
-![4&#45;par&#45;4 matrice B partitionnées en 2&#45;sous&#45;&#45;-matrices de 2 par 2](../../parallel/amp/media/campmatrixbpartitioned.png "4&#45;par&#45;4 matrice B partitionnées en 2&#45;sous&#45;&#45;-matrices de 2 par 2")
+![4&#45;par&#45;4 matrice B divisée en 2&#45;par&#45;2 matrices sous&#45;](../../parallel/amp/media/campmatrixbpartitioned.png "4&#45;par&#45;4 matrice B divisée en 2&#45;par&#45;2 matrices sous&#45;")
 
-Le produit de A et B peut désormais être écrit et calculé comme suit :
+Le produit de A et B peut maintenant être écrit et calculé comme suit :
 
-![4&#45;sur&#45;4 matrice A B partitionnées en 2&#45;sur&#45;2 sous&#45;-matrices](../../parallel/amp/media/campmatrixproductpartitioned.png "4&#45;sur&#45;4 matrice A B partitionnées en 2&#45;sur&#45;2 sous&#45;-matrices")
+![4&#45;par&#45;4 matrice A B divisée en 2&#45;par&#45;2 matrices sous&#45;](../../parallel/amp/media/campmatrixproductpartitioned.png "4&#45;par&#45;4 matrice A B divisée en 2&#45;par&#45;2 matrices sous&#45;")
 
-Étant donné que les matrices `a` à `h` sont des matrices 2x2, tous les produits et sommes de ceux-ci sont également des matrices 2x2. Elle suit également que le produit de A et B est une matrice 4x4, comme prévu. Pour vérifier rapidement l’algorithme, calculez la valeur de l’élément dans la première ligne, première colonne du produit. Dans l’exemple, il s’agit de la valeur de l’élément dans la première ligne et la première colonne de `ae + bg`. Vous devez uniquement calculer la première colonne, la première ligne de `ae` et `bg` pour chaque terme. Cette valeur pour `ae` est `(1 * 1) + (2 * 5) = 11`. La valeur de `bg` est `(3 * 1) + (4 * 5) = 23`. La valeur finale est `11 + 23 = 34`, ce qui est correct.
+Parce que `a` les `h` matrices à travers sont 2x2 matrices, tous les produits et les sommes d’entre eux sont également 2x2 matrices. Il s’ensuit également que le produit de A et B est une matrice 4x4, comme prévu. Pour vérifier rapidement l’algorithme, calculer la valeur de l’élément dans la première rangée, première colonne dans le produit. Dans l’exemple, ce serait la valeur de l’élément `ae + bg`dans la première rangée et la première colonne de . Vous n’avez qu’à calculer `ae` la `bg` première colonne, la première rangée de et pour chaque terme. Cette valeur `ae` `(1 * 1) + (2 * 5) = 11`pour est . La valeur de `bg` est `(3 * 1) + (4 * 5) = 23`. La valeur `11 + 23 = 34`finale est , ce qui est correct.
 
-Pour implémenter cet algorithme, le code :
+Pour implémenter cet algorithme, le code :
 
-- Utilise un objet `tiled_extent` au lieu d’un objet `extent` dans l’appel de `parallel_for_each`.
+- Utilise `tiled_extent` un objet `extent` au lieu `parallel_for_each` d’un objet dans l’appel.
 
-- Utilise un objet `tiled_index` au lieu d’un objet `index` dans l’appel de `parallel_for_each`.
+- Utilise `tiled_index` un objet `index` au lieu `parallel_for_each` d’un objet dans l’appel.
 
-- Crée `tile_static` variables pour contenir les sous-matrices.
+- Crée `tile_static` des variables pour tenir les sous-millions.
 
-- Utilise la méthode `tile_barrier::wait` pour arrêter les threads pour le calcul des produits des sous-matrices.
+- Utilise `tile_barrier::wait` la méthode pour arrêter les fils pour le calcul des produits des sous-millions.
 
-### <a name="to-multiply-by-using-amp-and-tiling"></a>Pour multiplier en utilisant AMP et une mosaïque
+### <a name="to-multiply-by-using-amp-and-tiling"></a>Pour multiplier en utilisant l’AMP et le carrelage
 
-1. Dans MatrixMultiply. cpp, ajoutez le code suivant avant la méthode `main`.
+1. Dans MatrixMultiply.cpp, ajoutez le `main` code suivant avant la méthode.
 
    ```cpp
    void MultiplyWithTiling() {
@@ -288,24 +288,24 @@ Pour implémenter cet algorithme, le code :
    }
    ```
 
-   Cet exemple est très différent de l’exemple sans mosaïque. Le code utilise les étapes conceptuelles suivantes :
-   1. Copiez les éléments de la vignette [0, 0] de `a` dans `locA`. Copiez les éléments de la vignette [0, 0] de `b` dans `locB`. Notez que `product` est affiché en mosaïque, et non `a` et `b`. Par conséquent, vous utilisez des index globaux pour accéder à `a, b`et `product`. L’appel à `tile_barrier::wait` est essentiel. Elle arrête tous les threads dans la vignette jusqu’à ce que les `locA` et les `locB` soient remplis.
+   Cet exemple est sensiblement différent de l’exemple sans carrelage. Le code utilise ces étapes conceptuelles :
+   1. Copiez les éléments de la tuile[0,0] de `a` dans `locA`. Copiez les éléments de la tuile[0,0] de `b` dans `locB`. Avis `product` qui est carrelé, pas `a` et `b`. Par conséquent, vous utilisez `a, b`des `product`indices globaux pour accéder , et . L’appel `tile_barrier::wait` est essentiel. Il arrête tous les fils dans la `locA` `locB` tuile jusqu’à ce que les deux et sont remplis.
 
-   1. Multipliez `locA` et `locB` et placez les résultats dans `product`.
+   1. `locA` Multipliez `locB` et mettez `product`les résultats en .
 
-   1. Copiez les éléments de la vignette [0, 1] de `a` dans `locA`. Copiez les éléments de la vignette [1, 0] de `b` dans `locB`.
+   1. Copiez les éléments de la tuile[0,1] de `a` dans `locA`. Copiez les éléments de tuile [1,0] de `b` dans `locB`.
 
-   1. Multipliez `locA` et `locB` et ajoutez-les aux résultats qui se trouvent déjà dans `product`.
+   1. `locA` Multipliez `locB` et ajoutez-les aux résultats `product`qui sont déjà en .
 
-   1. La multiplication de la vignette [0, 0] est terminée.
+   1. La multiplication de la tuile[0,0] est complète.
 
-   1. Répétez cette opération pour les quatre autres vignettes. Il n’y a pas d’indexation spécifique pour les vignettes et les threads peuvent s’exécuter dans n’importe quel ordre. À mesure que chaque thread s’exécute, les variables `tile_static` sont créées pour chaque vignette de manière appropriée et l’appel à `tile_barrier::wait` contrôle le déroulement du programme.
+   1. Répétez l’opération pour les quatre autres tuiles. Il n’y a pas d’indexation spécifiquement pour les tuiles et les threads peuvent exécuter dans n’importe quel ordre. Au fur et à `tile_static` mesure que chaque thread s’exécute, `tile_barrier::wait` les variables sont créées pour chaque tuile de manière appropriée et l’appel pour contrôler le flux du programme.
 
-   1. Lorsque vous examinez attentivement l’algorithme, Notez que chaque sous-matrice est chargée dans une mémoire `tile_static` deux fois. Ce transfert de données prend du temps. Toutefois, une fois que les données sont en mémoire `tile_static`, l’accès aux données est beaucoup plus rapide. Étant donné que le calcul des produits requiert un accès répété aux valeurs des sous-matrices, il existe un gain de performances global. Pour chaque algorithme, une expérimentation est nécessaire pour trouver la taille optimale de l’algorithme et de la vignette.
+   1. Lorsque vous examinez l’algorithme de près, notez que chaque sousmatrix est chargé dans une `tile_static` mémoire deux fois. Ce transfert de données prend du temps. Cependant, une fois `tile_static` que les données sont en mémoire, l’accès aux données est beaucoup plus rapide. Parce que le calcul des produits nécessite un accès répété aux valeurs dans les sous-millions, il y a un gain de performance global. Pour chaque algorithme, l’expérimentation est nécessaire pour trouver l’algorithme optimal et la taille de la tuile.
 
-   Dans les exemples non-AMP et non-vignette, chaque élément de A et B est accessible quatre fois à partir de la mémoire globale pour calculer le produit. Dans l’exemple de vignette, vous accédez à deux fois chaque élément à partir de la mémoire globale et quatre fois à partir de la mémoire `tile_static`. Ce n’est pas un gain de performances significatif. Toutefois, si les matrices A et B étaient des matrices 1024x1024 et que la taille des vignettes était de 16, il y aurait un gain de performances significatif. Dans ce cas, chaque élément est copié dans `tile_static` mémoire uniquement 16 fois et accessible à partir de `tile_static` mémoire 1024 fois.
+   Dans les exemples non-AMP et non-tuile, chaque élément de A et B est accessible quatre fois de la mémoire globale pour calculer le produit. Dans l’exemple de la tuile, chaque élément est accessible `tile_static` deux fois à partir de la mémoire globale et quatre fois de la mémoire. Ce n’est pas un gain de rendement important. Toutefois, si les A et B étaient 1024x1024 matrices et la taille de la tuile étaient 16, il y aurait un gain de performance important. Dans ce cas, chaque élément `tile_static` ne serait copié en mémoire `tile_static` que 16 fois et accessible à partir de la mémoire 1024 fois.
 
-1. Modifiez la méthode main pour appeler la méthode `MultiplyWithTiling`, comme indiqué.
+1. Modifier la méthode principale `MultiplyWithTiling` pour appeler la méthode, comme indiqué.
 
    ```cpp
    int main() {
@@ -316,9 +316,9 @@ Pour implémenter cet algorithme, le code :
    }
    ```
 
-1. Appuyez sur le raccourci clavier **Ctrl**+**F5** pour démarrer le débogage et vérifier que la sortie est correcte.
+1. Appuyez sur le raccourci **clavier Ctrl**+**F5** pour commencer à débogage et vérifier que la sortie est correcte.
 
-1. Appuyez sur la barre d' **espace** pour quitter l’application.
+1. Appuyez sur la barre **Space** pour sortir de l’application.
 
 ## <a name="see-also"></a>Voir aussi
 

@@ -8,31 +8,31 @@ helpviewer_keywords:
 - recordsets, predefined queries
 - recordsets, stored procedures
 ms.assetid: d27c4df9-dad2-4484-ba72-92ab0c8ff928
-ms.openlocfilehash: 9d19328fb82503519fd8eca083e0dd11e10883ea
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: f9618f25d738c092ab1818ef7c4ea52928e2ea60
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80212951"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81367038"
 ---
 # <a name="recordset-declaring-a-class-for-a-predefined-query-odbc"></a>Recordset : déclaration de la classe d'une requête prédéfinie (ODBC)
 
 > [!NOTE]
-> L’Assistant Consommateur ODBC MFC n’est pas disponible dans Visual Studio 2019 et ultérieur. Vous pouvez quand même créer un consommateur manuellement.
+> L’Assistant Consommateur ODBC MFC n’est pas disponible dans Visual Studio 2019 et ultérieur. Vous pouvez toujours créer un consommateur manuellement.
 
 Cette rubrique s’applique aux classes ODBC MFC.
 
 Cette rubrique explique comment créer une classe de recordset pour une requête prédéfinie (parfois appelée procédure stockée, comme dans Microsoft SQL Server).
 
 > [!NOTE]
->  Cette rubrique s’applique aux objets dérivés de `CRecordset` où l’extraction de lignes en bloc n’a pas été implémentée. Si la récupération de lignes en bloc est implémentée, le processus est très similaire. Pour comprendre les différences entre les recordsets qui implémentent l’extraction de lignes en bloc et ceux qui ne le sont pas, consultez [Recordset : extraction globale d’enregistrements (ODBC)](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md).
+> Cette rubrique s’applique aux objets dérivés de `CRecordset` où l’extraction de lignes en bloc n’a pas été implémentée. Si la récupération de lignes en bloc est implémentée, le processus est très similaire. Pour comprendre les différences entre les enregistrements qui implémentent la ligne en vrac et ceux qui ne le font pas, voir [Recordset: Fetching Records in Bulk (ODBC)](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md).
 
 Certains systèmes de gestion de base de données (SGBD) vous permettent de créer une requête prédéfinie et de l’appeler de votre programme comme une fonction. La requête a toujours un nom, et elle peut éventuellement prendre des paramètres et retourner des enregistrements. La procédure dans cette rubrique décrit comment appeler une requête prédéfinie qui retourne des enregistrements (et prend éventuellement des paramètres).
 
 Les classes de base de données ne prennent pas en charge la mise à jour des requêtes prédéfinies. La différence entre une requête prédéfinie instantanée et une requête prédéfinie dynamique n’est pas la possibilité de mise à jour, mais plutôt la possibilité de voir dans le recordset les modifications apportées par d’autres utilisateurs (ou d’autres recordsets dans votre programme).
 
 > [!TIP]
->  L’utilisation d’un recordset n’est pas nécessaire pour appeler une requête prédéfinie qui ne retourne pas d’enregistrements. Préparez l’instruction SQL comme cela est décrit ci-dessous, mais exécutez-la en appelant la fonction membre `CDatabase`[ExecuteSQL](../../mfc/reference/cdatabase-class.md#executesql).
+> L’utilisation d’un recordset n’est pas nécessaire pour appeler une requête prédéfinie qui ne retourne pas d’enregistrements. Préparez l’instruction SQL comme cela est décrit ci-dessous, mais exécutez-la en appelant la fonction membre `CDatabase`[ExecuteSQL](../../mfc/reference/cdatabase-class.md#executesql).
 
 Vous pouvez créer une seule classe de recordset pour gérer l’appel d’une requête prédéfinie, mais vous devez alors faire une partie du travail manuellement. Les Assistants ne prennent pas en charge la création d’une classe spécialement conçue à cet effet.
 
@@ -66,7 +66,7 @@ Vous pouvez créer une seule classe de recordset pour gérer l’appel d’une r
 
 1. Si la requête prend des paramètres, ajoutez un membre de données de paramètre pour chaque paramètre, ainsi qu’un appel de fonction RFX et une initialisation pour chacun.
 
-1. Vous devez incrémenter `m_nParams` pour chaque paramètre ajouté, comme vous avez incrémenté `m_nFields` pour les champs ajoutés à l’étape 4 de cette procédure. Pour plus d’informations, consultez [Recordset : paramétrage d’un Recordset (ODBC)](../../data/odbc/recordset-parameterizing-a-recordset-odbc.md).
+1. Vous devez incrémenter `m_nParams` pour chaque paramètre ajouté, comme vous avez incrémenté `m_nFields` pour les champs ajoutés à l’étape 4 de cette procédure. Pour plus d’informations, voir [Recordset: Parameterizing a Recordset (ODBC)](../../data/odbc/recordset-parameterizing-a-recordset-odbc.md).
 
 1. Ajoutez manuellement une chaîne d’instruction SQL au format suivant :
 
@@ -151,11 +151,11 @@ if( rsDel.Open( CRecordset::snapshot, strSQL ) )
 Ce code construit un instantané, passe à cet instantané un paramètre obtenu précédemment de l’utilisateur et appelle la requête prédéfinie. À l’exécution de la requête, il retourne les enregistrements correspondant au secteur de vente spécifié. Chaque enregistrement contient les colonnes pour le numéro de compte, le nom du client et le numéro de téléphone du client.
 
 > [!TIP]
->  Vous pouvez avoir besoin de gérer une valeur (paramètre de sortie) retournée par une procédure stockée. Pour plus d’informations et obtenir un exemple, consultez [CFieldExchange::SetFieldType](../../mfc/reference/cfieldexchange-class.md#setfieldtype).
+> Vous pouvez avoir besoin de gérer une valeur (paramètre de sortie) retournée par une procédure stockée. Pour plus d’informations et obtenir un exemple, consultez [CFieldExchange::SetFieldType](../../mfc/reference/cfieldexchange-class.md#setfieldtype).
 
 ## <a name="see-also"></a>Voir aussi
 
 [Recordset (ODBC)](../../data/odbc/recordset-odbc.md)<br/>
-[Recordset : lancement d’une nouvelle requête sur un recordset (ODBC)](../../data/odbc/recordset-requerying-a-recordset-odbc.md)<br/>
-[Recordset : déclaration de la classe d’une table (ODBC)](../../data/odbc/recordset-declaring-a-class-for-a-table-odbc.md)<br/>
-[Recordset : création d’une jointure (ODBC)](../../data/odbc/recordset-performing-a-join-odbc.md)
+[Recordset : lancement d'une nouvelle requête sur un recordset (ODBC)](../../data/odbc/recordset-requerying-a-recordset-odbc.md)<br/>
+[Recordset : déclaration de la classe d'une table (ODBC)](../../data/odbc/recordset-declaring-a-class-for-a-table-odbc.md)<br/>
+[Recordset : création d'une jointure (ODBC)](../../data/odbc/recordset-performing-a-join-odbc.md)

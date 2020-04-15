@@ -1,6 +1,6 @@
 ---
 title: _strupr, _strupr_l, _mbsupr, _mbsupr_l, _wcsupr_l, _wcsupr
-ms.date: 11/04/2016
+ms.date: 4/2/2020
 api_name:
 - _mbsupr_l
 - _mbsupr
@@ -8,6 +8,12 @@ api_name:
 - _wcsupr
 - _wcsupr_l
 - _strupr
+- _o__mbsupr
+- _o__mbsupr_l
+- _o__strupr
+- _o__strupr_l
+- _o__wcsupr
+- _o__wcsupr_l
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -22,6 +28,7 @@ api_location:
 - ucrtbase.dll
 - api-ms-win-crt-multibyte-l1-1-0.dll
 - api-ms-win-crt-string-l1-1-0.dll
+- api-ms-win-crt-private-l1-1-0
 api_type:
 - DLLExport
 topic_type:
@@ -63,12 +70,12 @@ helpviewer_keywords:
 - _tcsupr function
 - strings [C++], converting case
 ms.assetid: caac8f16-c233-41b6-91ce-575ec7061b77
-ms.openlocfilehash: 8078bddd022032196c0e10cd54b0ad68d9c71419
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 5127c6f0be6375585be3b321788ba04a91364e57
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70957566"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81362897"
 ---
 # <a name="_strupr-_strupr_l-_mbsupr-_mbsupr_l-_wcsupr_l-_wcsupr"></a>_strupr, _strupr_l, _mbsupr, _mbsupr_l, _wcsupr_l, _wcsupr
 
@@ -132,7 +139,7 @@ unsigned char *_mbsupr_l(
 
 ### <a name="parameters"></a>Paramètres
 
-*str*<br/>
+*Str*<br/>
 Chaîne à mettre en majuscules.
 
 *locale*<br/>
@@ -144,13 +151,15 @@ Retourne un pointeur vers la chaîne modifiée. Sachant que la modification est 
 
 ## <a name="remarks"></a>Notes
 
-La fonction **_strupr** convertit, sur place, chaque lettre minuscule dans *Str* en majuscules. La conversion est déterminée par le paramètre de catégorie **LC_CTYPE** des paramètres régionaux. Les autres caractères ne sont pas concernés. Pour plus d’informations sur **LC_CTYPE**, consultez [setlocale](setlocale-wsetlocale.md). Les versions de ces fonctions sans le suffixe **_L** utilisent les paramètres régionaux actuels. les versions avec le suffixe **_L** sont identiques, sauf qu’elles utilisent à la place les paramètres régionaux transmis. Pour plus d’informations, consultez [Locale](../../c-runtime-library/locale.md).
+La fonction **_strupr** convertit, en place, chaque lettre minuscule en *str* à uppercase. La conversion est déterminée par le **LC_CTYPE** cadre de catégorie du lieu. Les autres caractères ne sont pas concernés. Pour plus d’informations sur **LC_CTYPE**, voir [setlocale](setlocale-wsetlocale.md). Les versions de ces fonctions sans le **suffixe _l** utilisent le lieu actuel; les versions avec le **suffixe _l** sont identiques, sauf qu’ils utilisent le lieu passé à la place. Pour plus d’informations, consultez [Locale](../../c-runtime-library/locale.md).
 
-**_wcsupr** et **_mbsupr** sont des versions à caractères larges et à caractères multioctets de **_strupr**. L’argument et la valeur de retour de **_wcsupr** sont des chaînes à caractères larges ; ceux de **_mbsupr** sont des chaînes de caractères multioctets. Ces trois fonctions se comportent sinon de façon identique.
+**_wcsupr** et **_mbsupr** sont des versions à caractère large et multioctets de **_strupr**. L’argument et la valeur de retour de **_wcsupr** sont des chaînes de caractère large; ceux de **_mbsupr** sont des cordes multioctets-caractères. Ces trois fonctions se comportent sinon de façon identique.
 
-Si *Str* est un pointeur null, le gestionnaire de paramètres non valides est appelé, comme décrit dans [validation de paramètre](../../c-runtime-library/parameter-validation.md) . Si l’exécution est autorisée à se poursuivre, ces fonctions retournent la chaîne d’origine et attribuent à **errno** la valeur **EINVAL**.
+Si *str* est un pointeur nul, le gestionnaire de paramètre invalide est invoqué, tel que décrit dans [La validation de paramètres](../../c-runtime-library/parameter-validation.md) . Si l’exécution est autorisée à se poursuivre, ces fonctions retournent la chaîne d’origine et mettent **errno** à **EINVAL**.
 
-En C++, ces fonctions ont des surcharges de modèle qui appellent les équivalents plus récents et sécurisés de ces fonctions. Pour plus d'informations, consultez [Secure Template Overloads](../../c-runtime-library/secure-template-overloads.md).
+En C++, ces fonctions ont des surcharges de modèle qui appellent les équivalents plus récents et sécurisés de ces fonctions. Pour plus d’informations, consultez [Sécuriser les surcharges de modèle](../../c-runtime-library/secure-template-overloads.md).
+
+Par défaut, l’état global de cette fonction est étendue à l’application. Pour changer cela, voir [Global State dans le CRT](../global-state.md).
 
 ### <a name="generic-text-routine-mappings"></a>Mappages de routines de texte générique
 
@@ -159,7 +168,7 @@ En C++, ces fonctions ont des surcharges de modèle qui appellent les équivalen
 |**_tcsupr**|**_strupr**|**_mbsupr**|**_wcsupr**|
 |**_tcsupr_l**|**_strupr_l**|**_mbsupr_l**|**_wcsupr_l**|
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
 |Routine|En-tête requis|
 |-------------|---------------------|
@@ -175,6 +184,6 @@ Consultez l’exemple relatif à [_strlwr](strlwr-wcslwr-mbslwr-strlwr-l-wcslwr-
 
 ## <a name="see-also"></a>Voir aussi
 
-[Paramètres régionaux](../../c-runtime-library/locale.md)<br/>
-[Manipulation de chaînes](../../c-runtime-library/string-manipulation-crt.md)<br/>
+[Local](../../c-runtime-library/locale.md)<br/>
+[Manipulation des cordes](../../c-runtime-library/string-manipulation-crt.md)<br/>
 [_strlwr, _wcslwr, _mbslwr, _strlwr_l, _wcslwr_l, _mbslwr_l](strlwr-wcslwr-mbslwr-strlwr-l-wcslwr-l-mbslwr-l.md)<br/>

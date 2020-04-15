@@ -1,8 +1,9 @@
 ---
 title: _umask
-ms.date: 11/04/2016
+ms.date: 4/2/2020
 api_name:
 - _umask
+- _o__umask
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -15,6 +16,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-filesystem-l1-1-0.dll
+- api-ms-win-crt-private-l1-1-0
 api_type:
 - DLLExport
 topic_type:
@@ -29,12 +31,12 @@ helpviewer_keywords:
 - file permissions [C++]
 - files [C++], permission settings for
 ms.assetid: 5e9a13ba-5321-4536-8721-6afb6f4c8483
-ms.openlocfilehash: 44614384427b9b70102da03972969c9aa8ef4b83
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: b451f979f2925a31f5baaac52351c5d2c0a76da0
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70957493"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81362024"
 ---
 # <a name="_umask"></a>_umask
 
@@ -53,25 +55,27 @@ Paramètre d’autorisation par défaut.
 
 ## <a name="return-value"></a>Valeur de retour
 
-**_umask** retourne la valeur précédente de *PMODE*. Aucun retour d'erreur.
+**_umask** retourne la valeur précédente de *pmode*. Aucun retour d'erreur.
 
 ## <a name="remarks"></a>Notes
 
-La fonction **_umask** définit le masque d’autorisation de fichier du processus actuel sur le mode spécifié par *PMODE*. Le masque d’autorisation de fichier modifie le paramètre d’autorisation des nouveaux fichiers créés par **_creat**, **_open**ou **_sopen**. Si un bit a la valeur 1 dans le masque, le bit correspondant dans la valeur d’autorisation demandée du fichier prend la valeur 0 (non autorisé). Si un bit a la valeur 0 dans le masque, le bit correspondant est inchangé. Le paramètre d’autorisation d’un nouveau fichier n’est pas défini tant qu’il n’est pas fermé pour la première fois.
+La fonction **_umask** définit le masque de fichier-autorisation du processus actuel au mode spécifié par *pmode*. Le masque d’autorisation de fichier modifie le paramètre d’autorisation de nouveaux fichiers créés par **_creat**, **_open**, ou **_sopen**. Si un bit a la valeur 1 dans le masque, le bit correspondant dans la valeur d’autorisation demandée du fichier prend la valeur 0 (non autorisé). Si un bit a la valeur 0 dans le masque, le bit correspondant est inchangé. Le paramètre d’autorisation d’un nouveau fichier n’est pas défini tant qu’il n’est pas fermé pour la première fois.
 
-L’expression entière *PMODE* contient l’une des constantes manifestes suivantes (ou les deux), définie dans SYS\STAT. Manutention
+L’expression *integer pmode* contient une ou les deux des constantes manifestes suivantes, définies dans SYS-STAT. H:
 
 |*pmode*| |
 |-|-|
 | **_S_IWRITE** | Écriture autorisée. |
 | **_S_IREAD** | Lecture autorisée. |
-| **_S_IREAD** &#124; **_S_IWRITE** | Lecture et écriture autorisées. |
+| **_S_IREAD** **_S_IWRITE** &#124; | Lecture et écriture autorisées. |
 
-Quand les deux constantes sont données, elles sont jointes avec l’opérateur or au **&#124;** niveau du bit (). Si l’argument *PMODE* est **_S_IREAD**, la lecture n’est pas autorisée (le fichier est en écriture seule). Si l’argument *PMODE* est **_S_IWRITE**, l’écriture n’est pas autorisée (le fichier est en lecture seule). Par exemple, si le bit d’écriture est défini dans le masque, les nouveaux fichiers sont en lecture seule. Notez qu’avec les systèmes d’exploitation MS-DOS et Windows, tous les fichiers sont lisibles ; il est impossible d’accorder une autorisation en écriture seule. Par conséquent, la définition du bit de lecture avec **_umask** n’a aucun effet sur les modes du fichier.
+Lorsque les deux constantes sont données, elles sont jointes à l’opérateur bitwise-OR **(&#124;).** Si l’argument *du pmode* est **_S_IREAD,** la lecture n’est pas autorisée (le fichier est écrit uniquement). Si l’argument *du pmode* est **_S_IWRITE,** l’écriture n’est pas autorisée (le fichier est lu uniquement). Par exemple, si le bit d’écriture est défini dans le masque, les nouveaux fichiers sont en lecture seule. Notez qu’avec les systèmes d’exploitation MS-DOS et Windows, tous les fichiers sont lisibles ; il est impossible d’accorder une autorisation en écriture seule. Par conséquent, la définition du bit de lecture avec **_umask** n’a aucun effet sur les modes du fichier.
 
-Si *PMODE* n’est pas une combinaison de l’une des constantes manifestes ou incorpore un autre ensemble de constantes, la fonction ignore simplement celles-ci.
+Si *le pmode* n’est pas une combinaison de l’une des constantes manifestes ou intègre un autre ensemble de constantes, la fonction sera tout simplement ignorer ceux-ci.
 
-## <a name="requirements"></a>Configuration requise
+Par défaut, l’état global de cette fonction est étendue à l’application. Pour changer cela, voir [Global State dans le CRT](../global-state.md).
+
+## <a name="requirements"></a>Spécifications
 
 |Routine|En-tête requis|
 |-------------|---------------------|
@@ -115,7 +119,7 @@ Oldmask = 0x0000
 ## <a name="see-also"></a>Voir aussi
 
 [Gestion de fichiers](../../c-runtime-library/file-handling.md)<br/>
-[E/S de bas niveau](../../c-runtime-library/low-level-i-o.md)<br/>
+[E/S niveau bas](../../c-runtime-library/low-level-i-o.md)<br/>
 [_chmod, _wchmod](chmod-wchmod.md)<br/>
 [_creat, _wcreat](creat-wcreat.md)<br/>
 [_mkdir, _wmkdir](mkdir-wmkdir.md)<br/>

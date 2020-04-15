@@ -30,16 +30,16 @@ helpviewer_keywords:
 - CMFCHeaderCtrl [MFC], OnDrawSortArrow
 - CMFCHeaderCtrl [MFC], OnFillBackground
 ms.assetid: 2f5fbf7b-5c75-42db-9216-640b1628f777
-ms.openlocfilehash: 86674e086da482e59b2711f5ba9154848ff05a6f
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 0a6b0cf39861ba995acff71fc40cf44ae5114642
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62218383"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81367462"
 ---
 # <a name="cmfcheaderctrl-class"></a>CMFCHeaderCtrl Class
 
-Le `CMFCHeaderCtrl` classe prend en charge le tri de plusieurs colonnes dans un contrôle header.
+La `CMFCHeaderCtrl` classe prend en charge le tri de plusieurs colonnes dans un contrôle d’en-tête.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -60,33 +60,33 @@ class CMFCHeaderCtrl : public CHeaderCtrl
 
 |Nom|Description|
 |----------|-----------------|
-|[CMFCHeaderCtrl::EnableMultipleSort](#enablemultiplesort)|Active ou désactive *tri sur plusieurs colonnes* mode pour le contrôle d’en-tête actuel.|
-|[CMFCHeaderCtrl::GetColumnState](#getcolumnstate)|Indique si une colonne n’est pas triée, ou qu’il est triée dans l’ordre croissant ou décroissant.|
-|[CMFCHeaderCtrl::GetSortColumn](#getsortcolumn)|Récupère l’index de base zéro de la première colonne triée dans le contrôle header.|
-|`CMFCHeaderCtrl::GetThisClass`|Utilisé par l’infrastructure pour obtenir un pointeur vers le [CRuntimeClass](../../mfc/reference/cruntimeclass-structure.md) objet qui est associé à ce type de classe.|
-|[CMFCHeaderCtrl::IsAscending](#isascending)|Indique si une colonne dans le contrôle header est triée dans l’ordre croissant.|
-|[CMFCHeaderCtrl::IsDialogControl](#isdialogcontrol)|Indique si la fenêtre parente du contrôle header actuelle est une boîte de dialogue.|
-|[CMFCHeaderCtrl::IsMultipleSort](#ismultiplesort)|Indique si le contrôle header actuel est dans *tri sur plusieurs colonnes* mode.|
-|[CMFCHeaderCtrl::RemoveSortColumn](#removesortcolumn)|Supprime la colonne spécifiée dans la liste des colonnes de tri.|
-|[CMFCHeaderCtrl::SetSortColumn](#setsortcolumn)|Définit l’ordre de tri d’une colonne spécifiée dans un contrôle header.|
+|[CMFCHeaderCtrl::EnableMultipleSort](#enablemultiplesort)|Permet ou désactive le mode *de tri de colonne multiple* pour le contrôle actuel de l’en-tête.|
+|[CMFCHeaderCtrl::GetColumnState](#getcolumnstate)|Indique si une colonne n’est pas triée ou si elle est triée dans l’ordre ascendant ou descendant.|
+|[CMFCHeaderCtrl::GetSortColumn](#getsortcolumn)|Récupère l’index zéro de la première colonne triée dans le contrôle de l’en-tête.|
+|`CMFCHeaderCtrl::GetThisClass`|Utilisé par le cadre pour obtenir un pointeur à l’objet [CRuntimeClass](../../mfc/reference/cruntimeclass-structure.md) qui est associé à ce type de classe.|
+|[CMFCHeaderCtrl::IsAscending](#isascending)|Indique si une colonne dans le contrôle de l’en-tête est triée dans l’ordre ascendant.|
+|[CMFCHeaderCtrl::IsDialogControl](#isdialogcontrol)|Indique si la fenêtre parente du contrôle actuel de l’en-tête est une boîte de dialogue.|
+|[CMFCHeaderCtrl::IsMultipleSort](#ismultiplesort)|Indique si le contrôle d’en-tête actuel est en mode *tri de colonne multiple.*|
+|[CMFCHeaderCtrl::RemoveSortColumn](#removesortcolumn)|Supprime la colonne spécifiée de la liste des colonnes de tri.|
+|[CMFCHeaderCtrl::SetSortColumn](#setsortcolumn)|Définit le tri d’ordre d’une colonne spécifiée dans un contrôle d’en-tête.|
 
 ### <a name="protected-methods"></a>Méthodes protégées
 
 |Nom|Description|
 |----------|-----------------|
-|[CMFCHeaderCtrl::OnDrawItem](#ondrawitem)|Appelé par l’infrastructure pour dessiner une colonne de contrôle d’en-tête.|
-|[CMFCHeaderCtrl::OnDrawSortArrow](#ondrawsortarrow)|Appelé par l’infrastructure pour dessiner la flèche de tri.|
-|[CMFCHeaderCtrl::OnFillBackground](#onfillbackground)|Appelé par l’infrastructure pour remplir l’arrière-plan d’une colonne de contrôle d’en-tête.|
+|[CMFCHeaderCtrl::OnDrawItem](#ondrawitem)|Appelé par le cadre pour dessiner une colonne de contrôle d’en-tête.|
+|[CMFCHeaderCtrl::OnDrawSortArrow](#ondrawsortarrow)|Appelé par le cadre pour dessiner la flèche de tri.|
+|[CMFCHeaderCtrl::OnFillBackground](#onfillbackground)|Appelé par le cadre pour remplir l’arrière-plan d’une colonne de contrôle d’en-tête.|
 
 ## <a name="example"></a>Exemple
 
-L’exemple suivant montre comment construire un objet de la `CMFCHeaderCtrl` classe et comment activer *tri sur plusieurs colonnes* mode pour le contrôle d’en-tête actuel.
+L’exemple suivant montre comment construire `CMFCHeaderCtrl` un objet de la classe, et comment activer le mode *de tri de colonnes multiples* pour le contrôle actuel de l’en-tête.
 
 [!code-cpp[NVC_MFC_RibbonApp#24](../../mfc/reference/codesnippet/cpp/cmfcheaderctrl-class_1.cpp)]
 
 ## <a name="remarks"></a>Notes
 
-Le `CMFCHeaderCtrl` classe dessine une flèche de tri sur une colonne de contrôle d’en-tête pour indiquer que la colonne est triée. Utilisez *tri sur plusieurs colonnes* mode si un ensemble de colonnes dans le contrôle de liste parent ( [cmfclistctrl, classe](../../mfc/reference/cmfclistctrl-class.md)) peuvent être triées en même temps.
+La `CMFCHeaderCtrl` classe tire une sorte de flèche sur une colonne de contrôle d’en-tête pour indiquer que la colonne est triée. Utilisez plusieurs modes de tri de *colonnes* si un ensemble de colonnes dans le contrôle de liste parent ( [CMFCListCtrl Class](../../mfc/reference/cmfclistctrl-class.md)) peut être trié en même temps.
 
 ## <a name="inheritance-hierarchy"></a>Hiérarchie d'héritage
 
@@ -100,11 +100,11 @@ Le `CMFCHeaderCtrl` classe dessine une flèche de tri sur une colonne de contrô
 
 [CMFCHeaderCtrl](../../mfc/reference/cmfcheaderctrl-class.md)
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
-**En-tête :** afxheaderctrl.h
+**En-tête:** afxheaderctrl.h
 
-##  <a name="cmfcheaderctrl"></a>  CMFCHeaderCtrl::CMFCHeaderCtrl
+## <a name="cmfcheaderctrlcmfcheaderctrl"></a><a name="cmfcheaderctrl"></a>CMFCHeaderCtrl::CMFCHeaderCtrl
 
 Construit un objet `CMFCHeaderCtrl`.
 
@@ -114,9 +114,9 @@ CMFCHeaderCtrl::CMFCHeaderCtrl()
 
 ### <a name="remarks"></a>Notes
 
-Ce constructeur initialise les variables de membre suivantes pour les valeurs spécifiées :
+Ce constructeur initialise les variables membres suivantes aux valeurs spécifiées :
 
-|Variable de membre|Value|
+|Variable membre|Value|
 |---------------------|-----------|
 |`m_bIsMousePressed`|FALSE|
 |`m_bMultipleSort`|FALSE|
@@ -126,9 +126,9 @@ Ce constructeur initialise les variables de membre suivantes pour les valeurs sp
 |`m_bIsDlgControl`|FALSE|
 |`m_hFont`|NULL|
 
-##  <a name="enablemultiplesort"></a>  CMFCHeaderCtrl::EnableMultipleSort
+## <a name="cmfcheaderctrlenablemultiplesort"></a><a name="enablemultiplesort"></a>CMFCHeaderCtrl::EnableMultipleSort
 
-Active ou désactive *tri sur plusieurs colonnes* mode pour le contrôle d’en-tête actuel.
+Permet ou désactive le mode *de tri de colonne multiple* pour le contrôle actuel de l’en-tête.
 
 ```
 void EnableMultipleSort(BOOL bEnable=TRUE);
@@ -137,15 +137,15 @@ void EnableMultipleSort(BOOL bEnable=TRUE);
 ### <a name="parameters"></a>Paramètres
 
 *bEnable*<br/>
-[in] TRUE pour activer le mode de tri de colonne plusieurs ; FALSE pour désactiver le mode de trier plusieurs colonnes et pour supprimer des colonnes dans la liste des colonnes triées. La valeur par défaut est TRUE.
+[dans] VRAI pour activer le mode de tri de colonne multiple ; FALSE pour désactiver le mode de tri de colonnes multiples et pour supprimer toutes les colonnes de la liste des colonnes triées. La valeur par défaut est TRUE.
 
 ### <a name="remarks"></a>Notes
 
-Utilisez cette méthode pour activer ou désactiver le mode de trier plusieurs colonnes. Deux ou plusieurs colonnes peuvent participer à un tri si le contrôle header est en mode de tri de colonne multiple.
+Utilisez cette méthode pour activer ou désactiver le mode de tri de colonnes multiples. Deux colonnes ou plus peuvent participer à une sorte si le contrôle de l’en-tête est en mode tri de colonne multiple.
 
-##  <a name="getcolumnstate"></a>  CMFCHeaderCtrl::GetColumnState
+## <a name="cmfcheaderctrlgetcolumnstate"></a><a name="getcolumnstate"></a>CMFCHeaderCtrl::GetColumnState
 
-Indique si une colonne n’est pas triée, ou qu’il est triée dans l’ordre croissant ou décroissant.
+Indique si une colonne n’est pas triée ou est triée dans l’ordre ascendant ou descendant.
 
 ```
 int GetColumnState(int iColumn) const;
@@ -153,24 +153,24 @@ int GetColumnState(int iColumn) const;
 
 ### <a name="parameters"></a>Paramètres
 
-*iColumn*<br/>
-[in] Index de base zéro d’une colonne.
+*iColumn iColumn*<br/>
+[dans] L’indice zéro d’une colonne.
 
 ### <a name="return-value"></a>Valeur de retour
 
-Une valeur qui indique l’état de tri de la colonne spécifiée. Le tableau suivant répertorie les valeurs possibles :
+Une valeur qui indique le type d’état de la colonne spécifiée. Le tableau suivant répertorie les valeurs de sortie possibles :
 
-|Value|Description|
+|Valeur|Description|
 |-----------|-----------------|
-|-1|Trié par ordre décroissant.|
+|-1|Trié dans l’ordre décroissant.|
 |0|Pas trié.|
-|1|Trié par ordre croissant.|
+|1|Trié dans l’ordre ascendant.|
 
 ### <a name="remarks"></a>Notes
 
-##  <a name="getsortcolumn"></a>  CMFCHeaderCtrl::GetSortColumn
+## <a name="cmfcheaderctrlgetsortcolumn"></a><a name="getsortcolumn"></a>CMFCHeaderCtrl::GetSortColumn
 
-Récupère l’index de base zéro de la première colonne triée dans le contrôle header.
+Récupère l’index zéro de la première colonne triée dans le contrôle de l’en-tête.
 
 ```
 int GetSortColumn() const;
@@ -182,11 +182,11 @@ L’index d’une colonne triée, ou -1 si aucune colonne triée n’est trouvé
 
 ### <a name="remarks"></a>Notes
 
-Si le contrôle header est dans *tri sur plusieurs colonnes* mode et compilé l’application en mode débogage, cette méthode déclare et vous conseille d’utiliser le [CMFCHeaderCtrl::GetColumnState](#getcolumnstate) méthode à la place. Si le contrôle header est en mode de tri de colonne multiple et compilé de l’application en mode de vente au détail, cette méthode retourne -1.
+Si le contrôle de l’en-tête est en mode *tri de colonne multiple* et que vous avez compilé l’application en mode débogé, cette méthode vous affirme et vous conseille d’utiliser la méthode [CMFCHeaderCtrl:GetColumnState](#getcolumnstate) à la place. Si le contrôle de l’en-tête est en mode tri de colonne multiple et que vous avez compilé l’application en mode vente au détail, cette méthode renvoie -1.
 
-##  <a name="isascending"></a>  CMFCHeaderCtrl::IsAscending
+## <a name="cmfcheaderctrlisascending"></a><a name="isascending"></a>CMFCHeaderCtrl::IsAscending
 
-Indique si une colonne dans le contrôle header est triée dans l’ordre croissant.
+Indique si une colonne dans le contrôle de l’en-tête est triée dans l’ordre ascendant.
 
 ```
 BOOL IsAscending() const;
@@ -194,15 +194,15 @@ BOOL IsAscending() const;
 
 ### <a name="return-value"></a>Valeur de retour
 
-TRUE si n’importe quelle colonne dans le contrôle header est triée dans l’ordre croissant ; Sinon, FALSE.
+VRAI si une colonne dans le contrôle de l’en-tête est triée dans l’ordre ascendant; autrement, FALSE.
 
 ### <a name="remarks"></a>Notes
 
-La valeur retournée par cette méthode est utilisée pour afficher la flèche de tri approprié sur l’élément de contrôle d’en-tête. Utilisez le [CMFCHeaderCtrl::SetSortColumn](#setsortcolumn) méthode pour définir l’ordre de tri.
+La valeur que cette méthode renvoie est utilisée pour afficher la flèche de tri appropriée sur l’élément de commande d’en-tête. Utilisez la méthode [CMFCHeaderCtrl::SetSortColumn](#setsortcolumn) pour définir l’ordre de tri.
 
-##  <a name="isdialogcontrol"></a>  CMFCHeaderCtrl::IsDialogControl
+## <a name="cmfcheaderctrlisdialogcontrol"></a><a name="isdialogcontrol"></a>CMFCHeaderCtrl::IsDialogControl
 
-Indique si la fenêtre parente du contrôle header actuelle est une boîte de dialogue.
+Indique si la fenêtre parente du contrôle actuel de l’en-tête est une boîte de dialogue.
 
 ```
 BOOL IsDialogControl() const;
@@ -210,11 +210,11 @@ BOOL IsDialogControl() const;
 
 ### <a name="return-value"></a>Valeur de retour
 
-TRUE si la fenêtre parente du contrôle header actuelle est une boîte de dialogue ; Sinon, FALSE.
+VRAI si la fenêtre parente du contrôle actuel de l’en-tête est une boîte de dialogue; autrement, FALSE.
 
-##  <a name="ismultiplesort"></a>  CMFCHeaderCtrl::IsMultipleSort
+## <a name="cmfcheaderctrlismultiplesort"></a><a name="ismultiplesort"></a>CMFCHeaderCtrl::IsMultipleSort
 
-Indique si le contrôle header actuel est dans *tri sur plusieurs colonnes* mode.
+Indique si le contrôle d’en-tête actuel est en mode *tri de colonne multiple.*
 
 ```
 BOOL IsMultipleSort() const;
@@ -222,15 +222,15 @@ BOOL IsMultipleSort() const;
 
 ### <a name="return-value"></a>Valeur de retour
 
-TRUE si le mode de trier plusieurs colonnes est activé ; Sinon, FALSE.
+VRAI si le mode de tri de colonne multiple est activé ; autrement, FALSE.
 
 ### <a name="remarks"></a>Notes
 
-Utilisez le [CMFCHeaderCtrl::EnableMultipleSort](#enablemultiplesort) méthode pour activer ou désactiver le mode de trier plusieurs colonnes. Deux ou plusieurs colonnes peuvent participer à un tri si le contrôle header est en mode de tri de colonne multiple.
+Utilisez la méthode [CMFCHeaderCtrl::EnableMultipleSort](#enablemultiplesort) pour activer ou désactiver le mode de tri de colonnes multiples. Deux colonnes ou plus peuvent participer à une sorte si le contrôle de l’en-tête est en mode tri de colonne multiple.
 
-##  <a name="ondrawitem"></a>  CMFCHeaderCtrl::OnDrawItem
+## <a name="cmfcheaderctrlondrawitem"></a><a name="ondrawitem"></a>CMFCHeaderCtrl::OnDrawItem
 
-Appelé par l’infrastructure pour dessiner une colonne de contrôle d’en-tête.
+Appelé par le cadre pour dessiner une colonne de contrôle d’en-tête.
 
 ```
 virtual void OnDrawItem(
@@ -244,23 +244,23 @@ virtual void OnDrawItem(
 ### <a name="parameters"></a>Paramètres
 
 *pDC*<br/>
-[in] Pointeur vers un contexte de périphérique.
+[dans] Un pointeur vers un contexte d’appareil.
 
 *iItem*<br/>
-[in] Index de base zéro de l’élément à dessiner.
+[dans] L’indice zéro de l’élément à dessiner.
 
-*rect*<br/>
-[in] Le rectangle englobant de l’élément à dessiner.
+*Rect*<br/>
+[dans] Le rectangle de délimitation de l’élément à dessiner.
 
 *bIsPressed*<br/>
-[in] TRUE pour dessiner l’élément dans l’état enfoncé ; Sinon, FALSE.
+[dans] VRAI pour dessiner l’article à l’état pressé; autrement, FALSE.
 
 *bIsHighlighted*<br/>
-[in] TRUE pour dessiner l’élément dans l’état mis en surbrillance ; Sinon, FALSE.
+[dans] VRAI pour dessiner l’élément en état de mise en évidence; autrement, FALSE.
 
-##  <a name="ondrawsortarrow"></a>  CMFCHeaderCtrl::OnDrawSortArrow
+## <a name="cmfcheaderctrlondrawsortarrow"></a><a name="ondrawsortarrow"></a>CMFCHeaderCtrl::OnDrawSortArrow
 
-Appelé par l’infrastructure pour dessiner la flèche de tri.
+Appelé par le cadre pour dessiner la flèche de tri.
 
 ```
 virtual void OnDrawSortArrow(
@@ -271,14 +271,14 @@ virtual void OnDrawSortArrow(
 ### <a name="parameters"></a>Paramètres
 
 *pDC*<br/>
-[in] Pointeur vers un contexte de périphérique.
+[dans] Un pointeur vers un contexte d’appareil.
 
 *rectArrow*<br/>
-[in] Le rectangle englobant de la flèche de tri.
+[dans] Le rectangle de délimitation de la sorte de flèche.
 
-##  <a name="onfillbackground"></a>  CMFCHeaderCtrl::OnFillBackground
+## <a name="cmfcheaderctrlonfillbackground"></a><a name="onfillbackground"></a>CMFCHeaderCtrl::OnFillBackground
 
-Appelé par l’infrastructure pour remplir l’arrière-plan d’une colonne de contrôle d’en-tête.
+Appelé par le cadre pour remplir l’arrière-plan d’une colonne de contrôle d’en-tête.
 
 ```
 virtual void OnFillBackground(CDC* pDC);
@@ -287,13 +287,13 @@ virtual void OnFillBackground(CDC* pDC);
 ### <a name="parameters"></a>Paramètres
 
 *pDC*<br/>
-[in] Pointeur vers un contexte de périphérique.
+[dans] Un pointeur vers un contexte d’appareil.
 
 ### <a name="remarks"></a>Notes
 
-##  <a name="removesortcolumn"></a>  CMFCHeaderCtrl::RemoveSortColumn
+## <a name="cmfcheaderctrlremovesortcolumn"></a><a name="removesortcolumn"></a>CMFCHeaderCtrl::RemoveSortColumn
 
-Supprime la colonne spécifiée dans la liste des colonnes de tri.
+Supprime la colonne spécifiée de la liste des colonnes de tri.
 
 ```
 void RemoveSortColumn(int iColumn);
@@ -301,12 +301,12 @@ void RemoveSortColumn(int iColumn);
 
 ### <a name="parameters"></a>Paramètres
 
-*iColumn*<br/>
-[in] Index de base zéro de la colonne à supprimer.
+*iColumn iColumn*<br/>
+[dans] L’index zéro de la colonne à supprimer.
 
-##  <a name="setsortcolumn"></a>  CMFCHeaderCtrl::SetSortColumn
+## <a name="cmfcheaderctrlsetsortcolumn"></a><a name="setsortcolumn"></a>CMFCHeaderCtrl::SetSortColumn
 
-Définit l’ordre de tri d’une colonne spécifiée dans un contrôle header.
+Définit le tri d’ordre d’une colonne spécifiée dans un contrôle d’en-tête.
 
 ```
 void SetSortColumn(
@@ -317,27 +317,27 @@ void SetSortColumn(
 
 ### <a name="parameters"></a>Paramètres
 
-*iColumn*<br/>
-[in] Index de base zéro d’une colonne de contrôle d’en-tête. Si ce paramètre est inférieur à zéro, cette méthode supprime toutes les colonnes de la liste des colonnes de tri.
+*iColumn iColumn*<br/>
+[dans] L’index à base zéro d’une colonne de contrôle d’en-tête. Si ce paramètre est inférieur à zéro, cette méthode supprime toutes les colonnes de la liste des colonnes de tri.
 
 *bAscending*<br/>
-[in] Spécifie l’ordre de tri de la colonne qui le *iColumn* spécifie de paramètre. TRUE pour définir l’ordre croissant ; FALSE pour définir l’ordre décroissant. La valeur par défaut est TRUE.
+[dans] Spécifie le tri d’ordre de la colonne que le paramètre *iColumn* spécifie. VRAI pour fixer l’ordre ascendant; FALSE pour définir l’ordre décroissant. La valeur par défaut est TRUE.
 
-*bAdd*<br/>
-[in] True pour définir l’ordre de tri de la colonne qui le *iColumn* spécifie de paramètre.
+*Badd*<br/>
+[dans] VRAI pour définir le tri d’ordre de la colonne que le paramètre *iColumn* spécifie.
 
-Si le contrôle header actuel se trouve dans *tri sur plusieurs colonnes* mode, cette méthode ajoute la colonne spécifiée à la liste des colonnes de tri. Utilisez [CMFCHeaderCtrl::EnableMultipleSort](#enablemultiplesort) pour définir le mode de trier plusieurs colonnes.
+Si le contrôle d’en-tête actuel est en mode *de tri de colonne multiple,* cette méthode ajoute la colonne spécifiée à la liste des colonnes de tri. Utilisez [CMFCHeaderCtrl::EnableMultipleSort](#enablemultiplesort) pour définir plusieurs mode de tri de colonne.
 
-Si plusieurs mode de tri de colonne n’est pas défini, et cette méthode est compilée en mode débogage, cette méthode déclare. Si plusieurs mode de tri de colonne n’est pas défini et que cette méthode est compilée en mode de vente au détail, cette méthode supprime tout d’abord toutes les colonnes dans la liste des colonnes de tri, puis ajoute la colonne spécifiée à la liste.
+Si le mode de tri de colonne multiple n’est pas défini et que cette méthode est compilée en mode débogé, cette méthode l’affirme. Si le mode de tri de colonnes multiples n’est pas défini et que cette méthode est compilée en mode vente au détail, cette méthode supprime d’abord toutes les colonnes de la liste des colonnes de tri, puis ajoute la colonne spécifiée à la liste.
 
-FALSE pour tout d’abord supprimer toutes les colonnes de la liste des colonnes de tri, puis ajoutez la colonne spécifiée à la liste. La valeur par défaut est FALSE.
+FALSE pour d’abord supprimer toutes les colonnes de la liste des colonnes de tri, puis ajouter la colonne spécifiée à la liste. La valeur par défaut est FALSE.
 
 ### <a name="remarks"></a>Notes
 
-Utilisez cette méthode pour définir l’ordre de tri d’une colonne. Si nécessaire, cette méthode ajoute la colonne à la liste des colonnes de tri. Le contrôle header utilise l’ordre de tri pour dessiner une flèche de tri qui pointe vers le haut ou vers le bas.
+Utilisez cette méthode pour définir le tri d’ordre d’une colonne. Si nécessaire, cette méthode ajoute la colonne à la liste des colonnes de tri. Le contrôle de l’en-tête utilise l’ordre de tri pour dessiner une sorte de flèche qui pointe vers le haut ou vers le bas.
 
 ## <a name="see-also"></a>Voir aussi
 
 [Graphique hiérarchique](../../mfc/hierarchy-chart.md)<br/>
 [Classes](../../mfc/reference/mfc-classes.md)<br/>
-[CMFCListCtrl, classe](../../mfc/reference/cmfclistctrl-class.md)
+[Classe CMFCListCtrl](../../mfc/reference/cmfclistctrl-class.md)

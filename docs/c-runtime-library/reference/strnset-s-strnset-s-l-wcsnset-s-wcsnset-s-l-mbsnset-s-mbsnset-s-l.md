@@ -1,6 +1,6 @@
 ---
 title: _strnset_s, _strnset_s_l, _wcsnset_s, _wcsnset_s_l, _mbsnset_s, _mbsnset_s_l
-ms.date: 11/04/2016
+ms.date: 4/2/2020
 api_name:
 - _mbsnset_s_l
 - _strnset_s
@@ -8,6 +8,10 @@ api_name:
 - _strnset_s_l
 - _wcsnset_s_l
 - _wcsnset_s
+- _o__mbsnset_s
+- _o__mbsnset_s_l
+- _o__strnset_s
+- _o__wcsnset_s
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -22,6 +26,7 @@ api_location:
 - api-ms-win-crt-multibyte-l1-1-0.dll
 - api-ms-win-crt-string-l1-1-0.dll
 - ntoskrnl.exe
+- api-ms-win-crt-private-l1-1-0
 api_type:
 - DLLExport
 topic_type:
@@ -58,12 +63,12 @@ helpviewer_keywords:
 - strnset_s function
 - _wcsnset_s function
 ms.assetid: 9cf1b321-b5cb-4469-b285-4c07cfbd8813
-ms.openlocfilehash: acf84e6f09436f3bd97f9556ab8db9604243b8a8
-ms.sourcegitcommit: 0cfc43f90a6cc8b97b24c42efcf5fb9c18762a42
+ms.openlocfilehash: 62b0ecdc7d9e1afb93c4b15c37016ac687dc80d6
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/05/2019
-ms.locfileid: "73626132"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81364455"
 ---
 # <a name="_strnset_s-_strnset_s_l-_wcsnset_s-_wcsnset_s_l-_mbsnset_s-_mbsnset_s_l"></a>_strnset_s, _strnset_s_l, _wcsnset_s, _wcsnset_s_l, _mbsnset_s, _mbsnset_s_l
 
@@ -118,13 +123,13 @@ errno_t _mbsnset_s_l(
 
 ### <a name="parameters"></a>Paramètres
 
-*str*<br/>
+*Str*<br/>
 Chaîne à modifier.
 
-*numberOfElements*<br/>
-Taille de la mémoire tampon *Str* .
+*nombreOfElements*<br/>
+La taille du tampon *str.*
 
-*c*<br/>
+*C*<br/>
 Paramètre de caractère.
 
 *count*<br/>
@@ -137,17 +142,19 @@ Paramètres régionaux à utiliser.
 
 Zéro en cas de réussite ; code d’erreur dans un autre cas.
 
-Ces fonctions valident leurs arguments. Si *Str* n’est pas une chaîne terminée par le caractère null valide ou si l’argument Size est inférieur ou égal à 0, le gestionnaire de paramètres non valides est appelé, comme décrit dans [validation de paramètre](../../c-runtime-library/parameter-validation.md). Si l’exécution est autorisée à se poursuivre, ces fonctions retournent un code d’erreur et attribuent à **errno** la valeur de ce code d’erreur. Le code d’erreur par défaut est **EINVAL** si une valeur plus spécifique ne s’applique pas.
+Ces fonctions valident leurs arguments. Si *str* n’est pas une chaîne valide non résiliée ou si l’argument de taille est inférieur ou égal à 0, le gestionnaire de paramètres invalide est invoqué, tel que décrit dans [la validation de paramètres](../../c-runtime-library/parameter-validation.md). Si l’exécution est autorisée à se poursuivre, ces fonctions renvoient un code d’erreur et **définissent l’erreur** à ce code d’erreur. Le code d’erreur par défaut est **EINVAL** si une valeur plus spécifique ne s’applique pas.
 
 ## <a name="remarks"></a>Notes
 
-Ces fonctions définissent, au plus, les *premiers caractères de* *Str* en *c*. Si *Count* est supérieur à la taille de *Str*, la taille de *Str* est utilisée à la place de *Count*. Une erreur se produit si le *nombre* est supérieur à *NumberOfElements* et si ces deux paramètres sont supérieurs à la taille de *Str*.
+Ces fonctions définissent, tout au plus, les premiers *caractères* de comptage de *str* to *c*. Si *le nombre* est plus grand que la taille de *str*, la taille de *str* est utilisé au lieu de *compter*. Une erreur se produit si *le nombre* est supérieur à *nombreOfElements* et ces deux paramètres sont plus grands que la taille de *str*.
 
-**_wcsnset_s** et **_mbsnset_s** sont des versions à caractères larges et à caractères multioctets de **_strnset_s**. L’argument de chaîne de **_wcsnset_s** est une chaîne de caractères larges ; la chaîne de caractères de **_mbsnset_s** est multioctets. Ces trois fonctions se comportent sinon de façon identique.
+**_wcsnset_s** et **_mbsnset_s** sont des versions à caractère large et multioctets de **_strnset_s**. L’argument de la chaîne de **_wcsnset_s** est une chaîne de caractère large; celle de **_mbsnset_s** est une chaîne de caractère amultioctet. Ces trois fonctions se comportent sinon de façon identique.
 
-La valeur de sortie est affectée par la valeur du paramètre de catégorie **LC_CTYPE** des paramètres régionaux. Pour plus d’informations, consultez [setlocale](setlocale-wsetlocale.md). Les versions de ces fonctions sans le suffixe **_l** utilisent les paramètres régionaux pour ce comportement dépendant des paramètres régionaux ; les versions avec le suffixe **_l** sont identiques, sauf qu’elles utilisent à la place les paramètres régionaux transmis. Pour plus d'informations, consultez [Locale](../../c-runtime-library/locale.md).
+La valeur de sortie est affectée par la valeur du paramètre de catégorie **LC_CTYPE** des paramètres régionaux. Pour plus d’informations, consultez [setlocale](setlocale-wsetlocale.md). Les versions de ces fonctions sans le suffixe **_l** utilisent les paramètres régionaux pour ce comportement dépendant des paramètres régionaux ; les versions avec le suffixe **_l** sont identiques, sauf qu’elles utilisent à la place les paramètres régionaux transmis. Pour plus d’informations, consultez [Locale](../../c-runtime-library/locale.md).
 
-Les versions de la bibliothèque de débogage de ces fonctions remplissent d’abord la mémoire tampon avec 0xFE. Pour désactiver ce comportement, utilisez [_CrtSetDebugFillThreshold](crtsetdebugfillthreshold.md).
+Les versions de bibliothèque de débogé de ces fonctions remplissent d’abord le tampon avec 0xFE. Pour désactiver ce comportement, utilisez [_CrtSetDebugFillThreshold](crtsetdebugfillthreshold.md).
+
+Par défaut, l’état global de cette fonction est étendue à l’application. Pour changer cela, voir [Global State dans le CRT](../global-state.md).
 
 ### <a name="generic-text-routine-mappings"></a>Mappages de routines de texte générique
 
@@ -156,7 +163,7 @@ Les versions de la bibliothèque de débogage de ces fonctions remplissent d’a
 |**_tcsnset_s**|**_strnset_s**|**_mbsnbset_s**|**_wcsnset_s**|
 |**_tcsnset_s_l**|**_strnset_s_l**|**_mbsnbset_s_l**|**_wcsnset_s_l**|
 
-## <a name="requirements"></a>spécifications
+## <a name="requirements"></a>Spécifications
 
 |Routine|En-tête requis|
 |-------------|---------------------|
@@ -166,7 +173,7 @@ Les versions de la bibliothèque de débogage de ces fonctions remplissent d’a
 |**_wcsnset_s_l**|\<tchar.h>|
 |**_mbsnset_s**, **_mbsnset_s_l**|\<mbstring.h>|
 
-Pour plus d’informations sur la compatibilité, voir consultez [Compatibilité](../../c-runtime-library/compatibility.md).
+Pour plus d'informations sur la compatibilité, voir [Compatibilité](../../c-runtime-library/compatibility.md).
 
 ## <a name="example"></a>Exemple
 
@@ -192,9 +199,9 @@ After:  **** is a test
 
 ## <a name="see-also"></a>Voir aussi
 
-[Manipulation de chaînes](../../c-runtime-library/string-manipulation-crt.md)<br/>
-[Paramètres régionaux](../../c-runtime-library/locale.md)<br/>
-[Interprétation des séquences de caractères multi-octets](../../c-runtime-library/interpretation-of-multibyte-character-sequences.md)<br/>
+[Manipulation des cordes](../../c-runtime-library/string-manipulation-crt.md)<br/>
+[Local](../../c-runtime-library/locale.md)<br/>
+[Interprétation des séquences multioctets-caractères](../../c-runtime-library/interpretation-of-multibyte-character-sequences.md)<br/>
 [strcat, wcscat, _mbscat](strcat-wcscat-mbscat.md)<br/>
 [strcmp, wcscmp, _mbscmp](strcmp-wcscmp-mbscmp.md)<br/>
 [strcpy, wcscpy, _mbscpy](strcpy-wcscpy-mbscpy.md)<br/>

@@ -2,12 +2,12 @@
 title: Configurer des projets Linux pour utiliser Address Sanitizer
 description: Décrit comment configurer des projets Linux C++ dans Visual Studio pour utiliser Address Sanitizer.
 ms.date: 06/07/2019
-ms.openlocfilehash: da7197981a431becfc1231dae96f7542062de675
-ms.sourcegitcommit: b3d19b5f59f3a5d90c24f9f16c73bad4c5eb6944
+ms.openlocfilehash: 80e9ab46c948f2062391ae723c3425c435bd4507
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/23/2019
-ms.locfileid: "71195860"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81364310"
 ---
 # <a name="configure-linux-projects-to-use-address-sanitizer"></a>Configurer des projets Linux pour utiliser Address Sanitizer
 
@@ -33,13 +33,13 @@ Vous pouvez également voir la sortie ASan complète (y compris l’endroit où 
 ## <a name="enable-asan-for-msbuild-based-linux-projects"></a>Activer ASan pour les projets Linux basés sur MSBuild
 
 > [!NOTE]
-> À compter de Visual Studio 2019 version 16,4, AddressSanitizer pour les projets Linux est activé via les **Propriétés** > de > configuration**C/C++** **Enable Address assainir**.
+> À partir de Visual Studio 2019 version 16.4, AddressSanitizer pour les projets Linux est activé via **Configuration Properties** > **C/C'** > **Enable Address Sanitizer**.
 
-Pour activer ASan pour les projets Linux basés sur MSBuild, cliquez avec le bouton droit sur le projet dans l’**Explorateur de solutions**, puis sélectionnez **propriétés**. Ensuite, accédez à **Propriétés de configuration** > **C/C++**  > **Détecteurs d’erreurs**. Activé par le biais d’indicateurs de compilateur et d’éditeur de liens, ASan requiert que votre projet soit recompilé pour fonctionner.
+Pour activer ASan pour les projets Linux basés sur MSBuild, cliquez avec le bouton droit sur le projet dans l’**Explorateur de solutions**, puis sélectionnez **propriétés**. Ensuite, naviguez vers **Configuration Properties** > **C/C.** > **Sanitizers**. Activé par le biais d’indicateurs de compilateur et d’éditeur de liens, ASan requiert que votre projet soit recompilé pour fonctionner.
 
 ![Activer ASan pour un projet MSBuild](media/msbuild-asan-prop-page.png)
 
-Vous pouvez passer des indicateurs de runtime ASan facultatifs en accédant à **Propriétés de configuration** > **Débogage** > **Indicateurs d’exécution AddressSanitizer**. Cliquez sur la flèche vers le bas pour ajouter ou supprimer des indicateurs.
+Vous pouvez passer des drapeaux de runtime ASan en option en naviguant vers **Configuration Properties** > **Debugging** > **AddressSanitizer Runtime Flags**. Cliquez sur la flèche vers le bas pour ajouter ou supprimer des indicateurs.
 
 ![Configurer les indicateurs d’exécution ASan](media/msbuild-asan-runtime-flags.png)
 

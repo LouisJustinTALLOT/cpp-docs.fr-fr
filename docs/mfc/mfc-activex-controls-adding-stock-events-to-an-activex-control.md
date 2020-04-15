@@ -1,5 +1,5 @@
 ---
-title: 'Contrôles ActiveX MFC : Ajout d’événements Stock à un contrôle ActiveX'
+title: "Contrôles ActiveX MFC : ajout d'événements stock à un contrôle ActiveX"
 ms.date: 11/04/2016
 f1_keywords:
 - EVENT__STOCK_ERROR
@@ -42,70 +42,70 @@ helpviewer_keywords:
 - EVENT_STOCK_READYSTATECHANGE event
 - EVENT_STOCK_KEYPRESS event
 ms.assetid: 3eeadc67-4b3d-4444-8caa-53054073988a
-ms.openlocfilehash: 9f6f3c63f0436296791df428c704bce96eca3ec0
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 79cd4fc572e55c67cc5a2cfe3a00e04f2a4a7850
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62392724"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81364688"
 ---
-# <a name="mfc-activex-controls-adding-stock-events-to-an-activex-control"></a>Contrôles ActiveX MFC : Ajout d’événements Stock à un contrôle ActiveX
+# <a name="mfc-activex-controls-adding-stock-events-to-an-activex-control"></a>Contrôles ActiveX MFC : ajout d'événements stock à un contrôle ActiveX
 
-Événements stock diffèrent des événements personnalisés dans la mesure où ils sont déclenchés automatiquement par la classe [COleControl](../mfc/reference/colecontrol-class.md). `COleControl` contient des fonctions membres prédéfinies qui déclenchent des événements résultant d’actions courantes. Certaines actions courantes implémentées par `COleControl` inclure unique - et double - clicks sur le contrôle, les événements de clavier et les modifications dans l’état des boutons de souris. Événement mapper les entrées de stock sont toujours précédés par le préfixe EVENT_STOCK.
+Les événements boursiers diffèrent des événements personnalisés en ce qu’ils sont automatiquement tirés par la classe [COleControl](../mfc/reference/colecontrol-class.md). `COleControl`contient des fonctions prédéfinises des membres que les événements d’incendie résultant d’actions communes. Certaines actions courantes `COleControl` mises en œuvre en incluant des clics simples et doubles sur le contrôle, les événements clavier, et les changements dans l’état des boutons de la souris. Les entrées de carte d’événement pour les événements de stock sont toujours précédées par le préfixe EVENT_STOCK.
 
-##  <a name="_core_stock_events_supported_by_classwizard"></a> Boursiers événements pris en charge par l’Assistant Ajout d’événement
+## <a name="stock-events-supported-by-the-add-event-wizard"></a><a name="_core_stock_events_supported_by_classwizard"></a>Événements boursiers soutenus par l’Assistant d’Événement Add
 
-Le `COleControl` classe fournit dix événements stock, répertoriés dans le tableau suivant. Vous pouvez spécifier les événements que vous souhaitez dans votre contrôle à l’aide de la [Assistant Ajout d’événement](../ide/add-event-wizard.md).
+La `COleControl` classe fournit dix événements boursiers, répertoriés dans le tableau suivant. Vous pouvez spécifier les événements que vous souhaitez sous votre contrôle à l’aide de [l’Assistant d’Événement Add](../ide/add-event-wizard.md).
 
-### <a name="stock-events"></a>Événements stock
+### <a name="stock-events"></a>Événements boursiers
 
-|Événement|Fonction de déclenchement|Commentaires|
+|Événement|Fonction de tir|Commentaires|
 |-----------|---------------------|--------------|
-|Clic|**void FireClick( )**|Déclenché lorsque le contrôle capture la souris, toute **BUTTONUP** (gauche, du milieu ou de droit) de message est reçu et le bouton est relâché sur le contrôle. Le stock MouseDown et les événements MouseUp se produisent avant cet événement.<br /><br /> Entrée de mappage d’événement : **EVENT_STOCK_CLICK( )**|
-|DblClick|**void FireDblClick( )**|Similaire à Click mais déclenché quand un **BUTTONDBLCLK** message est reçu.<br /><br /> Entrée de mappage d’événement : **EVENT_STOCK_DBLCLICK( )**|
-|Error|**void FireError( SCODE**  *scode* **, LPCSTR**  `lpszDescription` **, UINT**  `nHelpID`  **= 0 )**|Déclenché lorsqu’une erreur se produit au sein de votre contrôle ActiveX en dehors de l’étendue d’un accès d’appel ou de la propriété de méthode.<br /><br /> Entrée de mappage d’événement : **EVENT_STOCK_ERROREVENT( )**|
-|KeyDown|**void FireKeyDown (court** `nChar` **, short**`nShiftState` **)**|Déclenché quand un `WM_SYSKEYDOWN` ou `WM_KEYDOWN` message est reçu.<br /><br /> Entrée de mappage d’événement : **EVENT_STOCK_KEYDOWN( )**|
-|KeyPress|**void FireKeyPress (court** <strong>\*</strong> `pnChar` **)**|Déclenché quand un `WM_CHAR` message est reçu.<br /><br /> Entrée de mappage d’événement : **EVENT_STOCK_KEYPRESS( )**|
-|KeyUp|**void FireKeyUp (court** `nChar` **, short**`nShiftState` **)**|Déclenché quand un `WM_SYSKEYUP` ou `WM_KEYUP` message est reçu.<br /><br /> Entrée de mappage d’événement : **EVENT_STOCK_KEYUP( )**|
-|MouseDown|**void FireMouseDown (court** `nButton` **, short** `nShiftState` **, float** *x* **, float** *y* **)**|Déclenché si n’importe quel **BUTTONDOWN** (à gauche, au milieu ou à droite) est reçu. La souris est capturée immédiatement avant le déclenchement de cet événement.<br /><br /> Entrée de mappage d’événement : **EVENT_STOCK_MOUSEDOWN( )**|
-|MouseMove|**void FireMouseMove (court** `nButton` **, short** `nShiftState` **, float** *x* **, float** *y* **)**|Déclenché lorsqu’un message WM_MOUSEMOVE est reçu.<br /><br /> Entrée de mappage d’événement : **EVENT_STOCK_MOUSEMOVE( )**|
-|MouseUp|**void FireMouseUp( short**  `nButton` **, short**  `nShiftState` **, float**  *x* **, float**  *y*  **)**|Déclenché si n’importe quel **BUTTONUP** (à gauche, au milieu ou à droite) est reçu. La capture de la souris est libérée avant que cet événement est déclenché.<br /><br /> Entrée de mappage d’événement : **EVENT_STOCK_MOUSEUP( )**|
-|ReadyStateChange|**void FireReadyStateChange( )**|Déclenché lorsqu’un contrôle passe à l’état prêt suivant en raison de la quantité de données reçues.<br /><br /> Entrée de mappage d’événement : **EVENT_STOCK_READYSTATECHANGE( )**|
+|Cliquez sur |**void FireClick( )**|Tiré lorsque le contrôle capture la souris, tout message **BUTTONUP** (gauche, milieu ou droite) est reçu, et le bouton est libéré sur le contrôle. Les événements MouseDown et MouseUp se produisent avant cet événement.<br /><br /> Entrée de la carte de l’événement: **EVENT_STOCK_CLICK)**|
+|DblClick DblClick|**vide FireDblClick( )**|Semblable à Click, mais tiré quand un message **BUTTONDBLCLK** est reçu.<br /><br /> Entrée de la carte de l’événement: **EVENT_STOCK_DBLCLICK)**|
+|Error|**void FireError ( SCODE SCODE***scode* **, LPCSTR** `lpszDescription` **, UINT**`nHelpID`**0 )**        |Tiré lorsqu’une erreur se produit dans votre contrôle ActiveX en dehors de la portée d’un appel de méthode ou d’un accès à la propriété.<br /><br /> Entrée de la carte de l’événement: **EVENT_STOCK_ERROREVENT)**|
+|KeyDown|**void FireKeyDown ( court** `nChar` **, court**`nShiftState`**)**      |Tiré lorsqu’un ou `WM_SYSKEYDOWN` `WM_KEYDOWN` un message est reçu.<br /><br /> Entrée de la carte de l’événement: **EVENT_STOCK_KEYDOWN)**|
+|Keypress|**void FireKeyPress ( court** <strong>\*</strong> `pnChar` **)**    |Tiré lorsqu’un `WM_CHAR` message est reçu.<br /><br /> Entrée de la carte de l’événement: **EVENT_STOCK_KEYPRESS)**|
+|KeyUp|**void FireKeyUp ( court** `nChar` **, court**`nShiftState`**)**      |Tiré lorsqu’un ou `WM_SYSKEYUP` `WM_KEYUP` un message est reçu.<br /><br /> Entrée de la carte de l’événement: **EVENT_STOCK_KEYUP)**|
+|Mousedown|**void FireMouseDown ( court** `nButton` **, court** `nShiftState` **, flotteur***x* **, flottez***y***)**          |Tiré si n’importe quel **BUTTONDOWN** (gauche, milieu ou droite) est reçu. La souris est capturée immédiatement avant que cet événement ne soit tiré.<br /><br /> Entrée de la carte de l’événement: **EVENT_STOCK_MOUSEDOWN)**|
+|Mousemove|**vide FireMouseMove ( court** `nButton` **, court** `nShiftState` **, flotteur***x* **, flottez***y***)**          |Tiré lorsqu’un message WM_MOUSEMOVE est reçu.<br /><br /> Entrée de la carte de l’événement: **EVENT_STOCK_MOUSEMOVE)**|
+|Mouseup|**void FireMouseUp ( court** `nButton` **, court** `nShiftState` **, flotteur***x* **, flottez***y***)**          |Tiré si n’importe quel **BUTTONUP** (à gauche, au milieu ou à droite) est reçu. La capture de la souris est libérée avant que cet événement ne soit déclenché.<br /><br /> Entrée de la carte de l’événement: **EVENT_STOCK_MOUSEUP)**|
+|ReadyStateChange (en)|**void FireReadyStateChange( )**|Tiré quand un contrôle passe à l’état suivant prêt en raison de la quantité de données reçues.<br /><br /> Entrée de la carte de l’événement: **EVENT_STOCK_READYSTATECHANGE)**|
 
-##  <a name="_core_adding_a_stock_event_using_classwizard"></a> Ajout d’un événement Stock à l’aide de l’Assistant Ajout d’événement
+## <a name="adding-a-stock-event-using-the-add-event-wizard"></a><a name="_core_adding_a_stock_event_using_classwizard"></a>Ajout d’un événement stock à l’aide de l’assistant d’événement Ajouter
 
-Ajout d’événements stock nécessite moins de travail que l’ajout d’événements personnalisés, car le déclenchement de l’événement réel est géré automatiquement par la classe de base `COleControl`. La procédure suivante ajoute un événement stock à un contrôle qui a été développé à l’aide de [Assistant contrôle ActiveX MFC](../mfc/reference/mfc-activex-control-wizard.md). L’événement, appelé KeyPress, se déclenche lorsqu’une touche est enfoncée et le contrôle est actif. Cette procédure peut également être utilisée pour ajouter d’autres événements stock. Remplacez le nom de l’événement stock sélectionné pour KeyPress.
+L’ajout d’événements d’actions nécessite moins de travail que d’ajouter des `COleControl`événements personnalisés parce que le tir de l’événement réel est géré automatiquement par la classe de base, . La procédure suivante ajoute un événement de stock à un contrôle qui a été développé en utilisant [MFC ActiveX Control Wizard](../mfc/reference/mfc-activex-control-wizard.md). L’événement, appelé KeyPress, s’allume lorsqu’une clé est pressée et que le contrôle est actif. Cette procédure peut également être utilisée pour ajouter d’autres événements boursiers. Remplacez le nom d’événement d’actions sélectionné par KeyPress.
 
-#### <a name="to-add-the-keypress-stock-event-using-the-add-event-wizard"></a>Pour ajouter l’événement stock KeyPress à l’aide de l’Assistant Ajout d’événement
+#### <a name="to-add-the-keypress-stock-event-using-the-add-event-wizard"></a>Pour ajouter l’événement stock KeyPress à l’aide de l’Add Event Wizard
 
 1. Chargez votre projet de contrôle.
 
-1. Dans l’affichage de classes, cliquez sur votre classe de contrôle ActiveX pour ouvrir le menu contextuel.
+1. Dans Class View, cliquez à droite sur votre classe de contrôle ActiveX pour ouvrir le menu raccourci.
 
-1. Dans le menu contextuel, cliquez sur **ajouter** puis cliquez sur **ajouter un événement**.
+1. À partir du menu raccourci, cliquez sur **Ajouter** et cliquez sur **Ajouter l’événement**.
 
-   Cette opération ouvre l’Assistant Ajout d’événement.
+   Cela ouvre le Assistant Événement Add.
 
-1. Dans le **nom de l’événement** liste déroulante, sélectionnez `KeyPress`.
+1. Dans la liste d’abandon `KeyPress`du nom de l’événement, sélectionnez . **Event Name**
 
 1. Cliquez sur **Terminer**.
 
-##  <a name="_core_classwizard_changes_for_stock_events"></a> Ajouter des modifications Assistant d’événement pour les événements Stock
+## <a name="add-event-wizard-changes-for-stock-events"></a><a name="_core_classwizard_changes_for_stock_events"></a>Ajouter des changements d’assistant d’événement pour les événements boursiers
 
-Étant donné que les événements stock sont gérées par la classe de base du contrôle, l’Assistant Ajout d’événement ne modifie pas votre déclaration de classe en aucune façon. Il ajoute l’événement à la table d’événements du contrôle et crée une entrée dans son. Fichier IDL. La ligne suivante est ajoutée à la table d’événements du contrôle, située dans l’implémentation de classe de contrôle (. Fichier CPP) :
+Étant donné que les événements boursiers sont gérés par la classe de base du contrôle, l’Assistant d’Événement Add ne change en aucune façon votre déclaration de classe. Il ajoute l’événement à la carte de l’événement du contrôle et fait une entrée dans son . Fichier IDL. La ligne suivante est ajoutée à la carte d’événements du contrôle, située dans la mise en œuvre de la classe de contrôle (. Dossier du RPC :
 
 [!code-cpp[NVC_MFC_AxUI#5](../mfc/codesnippet/cpp/mfc-activex-controls-adding-stock-events-to-an-activex-control_1.cpp)]
 
-Ajout de ce code déclenche un événement KeyPress lors de la réception d’un message WM_CHAR et le contrôle est actif. L’événement KeyPress peut être déclenché à d’autres moments en appelant sa fonction de déclenchement (par exemple, `FireKeyPress`) à partir du code de contrôle.
+L’ajout de ce code déclenche un événement KeyPress lorsqu’un message WM_CHAR est reçu et que le contrôle est actif. L’événement KeyPress peut être tiré à d’autres `FireKeyPress`moments en appelant sa fonction de tir (par exemple, ) à partir du code de contrôle.
 
-L’Assistant Ajout d’événement ajoute la ligne de code suivante pour le contrôle. Fichier IDL :
+Le Assistant d’Événement Add ajoute la ligne de code suivante à la commande . Fichier IDL:
 
 [!code-cpp[NVC_MFC_AxUI#6](../mfc/codesnippet/cpp/mfc-activex-controls-adding-stock-events-to-an-activex-control_2.idl)]
 
-Cette ligne associe l’événement KeyPress à son ID de dispatch et permet au conteneur d’anticiper l’événement KeyPress.
+Cette ligne associe l’événement KeyPress à son ID de répartition standard et permet au conteneur d’anticiper l’événement KeyPress.
 
 ## <a name="see-also"></a>Voir aussi
 
 [Contrôles ActiveX MFC](../mfc/mfc-activex-controls.md)<br/>
-[Contrôles ActiveX MFC : Méthodes](../mfc/mfc-activex-controls-methods.md)<br/>
+[Contrôles ActiveX MFC : méthodes](../mfc/mfc-activex-controls-methods.md)<br/>
 [COleControl, classe](../mfc/reference/colecontrol-class.md)

@@ -1,5 +1,5 @@
 ---
-title: CPropertySheet (classe)
+title: CPropertySheet, classe
 ms.date: 11/04/2016
 f1_keywords:
 - CPropertySheet
@@ -52,14 +52,14 @@ helpviewer_keywords:
 - CPropertySheet [MFC], SetWizardMode
 - CPropertySheet [MFC], m_psh
 ms.assetid: 8461ccff-d14f-46e0-a746-42ad642ef94e
-ms.openlocfilehash: 23d17aee2aacbc1484c0f3e181bc824546ab49a2
-ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
+ms.openlocfilehash: 167c99f734e4538ff2704e032a6ca98fb1d82004
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/16/2020
-ms.locfileid: "79421008"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81363946"
 ---
-# <a name="cpropertysheet-class"></a>CPropertySheet (classe)
+# <a name="cpropertysheet-class"></a>CPropertySheet, classe
 
 Représente des feuilles de propriétés, également appelées boîtes de dialogue à onglets.
 
@@ -73,53 +73,53 @@ class CPropertySheet : public CWnd
 
 ### <a name="public-constructors"></a>Constructeurs publics
 
-|Name|Description|
+|Nom|Description|
 |----------|-----------------|
-|[CPropertySheet :: CPropertySheet](#cpropertysheet)|Construit un objet `CPropertySheet`.|
+|[Feuille CProperty::CPropertySheet](#cpropertysheet)|Construit un objet `CPropertySheet`.|
 
 ### <a name="public-methods"></a>M&#233;thodes publiques
 
-|Name|Description|
+|Nom|Description|
 |----------|-----------------|
-|[CPropertySheet :: AddPage](#addpage)|Ajoute une page à la feuille de propriétés.|
-|[CPropertySheet :: Construct](#construct)|Construit un objet `CPropertySheet`.|
-|[CPropertySheet :: Create](#create)|Affiche une feuille de propriétés non modale.|
-|[CPropertySheet ::D oModal](#domodal)|Affiche une feuille de propriétés modale.|
-|[CPropertySheet :: EnableStackedTabs](#enablestackedtabs)|Indique si la feuille de propriétés utilise des onglets empilés ou de défilement.|
-|[CPropertySheet :: EndDialog](#enddialog)|Met fin à la feuille de propriétés.|
-|[CPropertySheet :: GetActiveIndex](#getactiveindex)|Récupère l’index de la page active de la feuille de propriétés.|
-|[CPropertySheet :: GetActivePage](#getactivepage)|Retourne l’objet de la page active.|
-|[CPropertySheet :: GetPage](#getpage)|Récupère un pointeur vers la page spécifiée.|
-|[CPropertySheet :: GetPageCount](#getpagecount)|Récupère le nombre de pages dans la feuille de propriétés.|
-|[CPropertySheet :: GetPageIndex](#getpageindex)|Récupère l’index de la page spécifiée de la feuille de propriétés.|
-|[CPropertySheet :: GetTabControl](#gettabcontrol)|Récupère un pointeur vers un contrôle onglet.|
-|[CPropertySheet :: MapDialogRect](#mapdialogrect)|Convertit les unités de boîte de dialogue d’un rectangle en unités d’écran.|
-|[CPropertySheet :: OnInitDialog](#oninitdialog)|Substituez pour augmenter l’initialisation de la feuille de propriétés.|
-|[CPropertySheet ::P ressButton](#pressbutton)|Simule le choix du bouton spécifié dans une feuille de propriétés.|
-|[CPropertySheet :: RemovePage](#removepage)|Supprime une page de la feuille de propriétés.|
-|[CPropertySheet :: SetActivePage](#setactivepage)|Définit par programmation l’objet de la page active.|
-|[CPropertySheet :: SetFinishText](#setfinishtext)|Définit le texte pour le bouton Terminer.|
-|[CPropertySheet :: SetTitle](#settitle)|Définit la légende de la feuille de propriétés.|
-|[CPropertySheet :: SetWizardButtons](#setwizardbuttons)|Active les boutons de l’Assistant.|
-|[CPropertySheet :: SetWizardMode](#setwizardmode)|Active le mode Assistant.|
+|[Feuille CProperty::AddPage](#addpage)|Ajoute une page à la feuille de propriétés.|
+|[Feuille CProperty::Construire](#construct)|Construit un objet `CPropertySheet`.|
+|[Feuille CProperty::Créer](#create)|Affiche une feuille de propriété sans mode.|
+|[Feuille CProperty::DoModal](#domodal)|Affiche une feuille de propriété modale.|
+|[CPropertySheet::EnableStackedTabs](#enablestackedtabs)|Indique si la feuille de propriété utilise des onglets empilés ou défilants.|
+|[Feuille CProperty::EndDialog](#enddialog)|Termine la feuille de propriété.|
+|[Feuille CProperty::GetActiveIndex](#getactiveindex)|Récupère l’index de la page active de la feuille de propriété.|
+|[Feuille CProperty::GetActivePage](#getactivepage)|Retourne l’objet de page actif.|
+|[Feuille CProperty::GetPage](#getpage)|Récupère un pointeur sur la page spécifiée.|
+|[Feuille CProperty::GetPageCount](#getpagecount)|Récupère le nombre de pages dans la feuille de propriété.|
+|[Feuille CProperty::GetPageIndex](#getpageindex)|Récupère l’index de la page spécifiée de la feuille de propriété.|
+|[Feuille CProperty::GetTabControl](#gettabcontrol)|Récupère un pointeur à un contrôle d’onglet.|
+|[Feuille CProperty::MapDialogRect](#mapdialogrect)|Convertit les unités de boîte de dialogue d’un rectangle en unités d’écran.|
+|[Feuille CProperty::OnInitDialog](#oninitdialog)|Remplacement pour augmenter l’initialisation de la feuille de propriété.|
+|[Feuille CProperty::PressButton](#pressbutton)|Simule le choix du bouton spécifié dans une feuille de propriété.|
+|[Feuille CProperty::RemovePage](#removepage)|Supprime une page de la feuille de propriété.|
+|[Feuille CProperty::SetActivePage](#setactivepage)|Définit programmatiquement l’objet de page actif.|
+|[Feuille CProperty::SetFinishText](#setfinishtext)|Définit le texte pour le bouton Finition.|
+|[Feuille CProperty::SetTitle](#settitle)|Définit la légende de la feuille de propriété.|
+|[Feuille CProperty::SetWizardButtons](#setwizardbuttons)|Permet les boutons de l’assistant.|
+|[Feuille CProperty::SetWizardMode](#setwizardmode)|Permet le mode assistant.|
 
 ### <a name="public-data-members"></a>Membres de données publics
 
-|Name|Description|
+|Nom|Description|
 |----------|-----------------|
-|[CPropertySheet :: m_psh](#m_psh)|Structure [PROPSHEETHEADER](/windows/win32/api/prsht/ns-prsht-propsheetheadera_v2) de Windows. Fournit l’accès aux paramètres de la feuille de propriétés de base.|
+|[Feuille CProperty::m_psh](#m_psh)|La structure Windows [PROPSHEETHEADER.](/windows/win32/api/prsht/ns-prsht-propsheetheadera_v2) Donne accès aux paramètres de base de la feuille de propriété.|
 
 ## <a name="remarks"></a>Notes
 
-Une feuille de propriétés se compose d’un objet `CPropertySheet` et d’un ou plusieurs objets [CPropertyPage](../../mfc/reference/cpropertypage-class.md) . L’infrastructure affiche une feuille de propriétés sous la forme d’une fenêtre avec un ensemble d’index de tabulation et une zone qui contient la page actuellement sélectionnée. L’utilisateur accède à une page spécifique à l’aide de l’onglet approprié.
+Une feuille de `CPropertySheet` propriété se compose d’un objet et d’un ou plusieurs objets [CPropertyPage.](../../mfc/reference/cpropertypage-class.md) Le cadre affiche une feuille de propriété comme une fenêtre avec un ensemble d’indices d’onglets et une zone qui contient la page actuellement sélectionnée. L’utilisateur navigue vers une page spécifique en utilisant l’onglet approprié.
 
-`CPropertySheet` assure la prise en charge de la structure [PROPSHEETHEADER](/windows/win32/api/prsht/ns-prsht-propsheetheadera_v2) développée dans Windows 98 et windows NT 2000. La structure contient des indicateurs et des membres supplémentaires qui prennent en charge l’utilisation d’une image bitmap d’arrière-plan « Watermark ».
+`CPropertySheet`fournit une prise en charge de la structure [PROPSHEETHEADER](/windows/win32/api/prsht/ns-prsht-propsheetheadera_v2) élargie introduite dans Windows 98 et Windows NT 2000. La structure contient des drapeaux supplémentaires et des membres qui prennent en charge à l’aide d’une bitmap de fond « filigrane ».
 
-Pour afficher automatiquement ces nouvelles images dans votre objet de feuille de propriétés, transmettez des valeurs valides pour les images bitmap et de palette dans l’appel à [CPropertySheet :: Construct](#construct) ou [CPropertySheet :: CPropertySheet](#cpropertysheet).
+Pour afficher ces nouvelles images automatiquement dans votre objet de feuille de propriété, passez des valeurs valides pour les images de bitmap et de palette dans l’appel à [CPropertySheet::Construction](#construct) ou [CPropertySheet::CPropertySheet](#cpropertysheet).
 
-Même si `CPropertySheet` n’est pas dérivé de [CDialog](../../mfc/reference/cdialog-class.md), la gestion d’un objet `CPropertySheet` revient à gérer un objet `CDialog`. Par exemple, la création d’une feuille de propriétés requiert une construction en deux parties : appeler le constructeur, puis appeler [DoModal pour une feuille de propriétés](#domodal) modale ou [créer](#create) pour une feuille de propriétés non modale. `CPropertySheet` a deux types de constructeurs : [CPropertySheet :: Construct](#construct) et [CPropertySheet :: CPropertySheet](#cpropertysheet).
+Même `CPropertySheet` si n’est pas dérivé de [CDialog](../../mfc/reference/cdialog-class.md), la gestion d’un `CPropertySheet` objet est comme la gestion d’un `CDialog` objet. Par exemple, la création d’une feuille de propriété nécessite une construction en deux parties : appelez le constructeur, puis appelez [DoModal](#domodal) pour une feuille de propriété modale ou [créez](#create) pour une feuille de propriété sans mode. `CPropertySheet`a deux types de constructeurs: [CPropertySheet::Construct](#construct) et [CPropertySheet::CPropertySheet](#cpropertysheet).
 
-Lorsque vous construisez un objet `CPropertySheet`, certains [styles de fenêtre](../../mfc/reference/styles-used-by-mfc.md#window-styles) peuvent provoquer une exception de première chance. Cela résulte du système tentant de modifier le style de la feuille de propriétés avant la création de la feuille. Pour éviter cette exception, veillez à définir les styles suivants lors de la création de votre `CPropertySheet`:
+Lorsque vous `CPropertySheet` construisez un objet, certains [styles de fenêtre](../../mfc/reference/styles-used-by-mfc.md#window-styles) peuvent provoquer une exception de première chance. Cela résulte du système en essayant de changer le style de la feuille de propriété avant la création de la feuille. Pour éviter cette exception, assurez-vous de définir `CPropertySheet`les styles suivants lorsque vous créez votre :
 
 - DS_3DLOOK
 
@@ -127,9 +127,9 @@ Lorsque vous construisez un objet `CPropertySheet`, certains [styles de fenêtre
 
 - WS_CHILD
 
-- WS_TABSTOP
+- Ws_tabstop
 
-Les styles suivants sont facultatifs et ne provoquent pas l’exception de première chance :
+Les styles suivants sont facultatifs et ne causeront pas l’exception de la première chance :
 
 - DS_SHELLFONT
 
@@ -137,17 +137,17 @@ Les styles suivants sont facultatifs et ne provoquent pas l’exception de premi
 
 - WS_CLIPCHILDREN
 
-Toutes les autres `Window Styles` sont interdites et vous ne devez pas les activer.
+Tout `Window Styles` autre est interdit et vous ne devriez pas les activer.
 
-L’échange de données entre un objet `CPropertySheet` et un objet externe est semblable à l’échange de données avec un objet `CDialog`. La différence importante réside dans le fait que les paramètres d’une feuille de propriétés sont généralement des variables membres des objets `CPropertyPage` plutôt que de l’objet `CPropertySheet` lui-même.
+L’échange de `CPropertySheet` données entre un objet et un objet `CDialog` externe est similaire à l’échange de données avec un objet. La différence importante est que les paramètres d’une `CPropertyPage` feuille de `CPropertySheet` propriété sont généralement des variables membres des objets plutôt que de l’objet lui-même.
 
-Vous pouvez créer un type de boîte de dialogue d’onglet appelé Assistant, qui se compose d’une feuille de propriétés avec une séquence de pages de propriétés qui guident l’utilisateur tout au long des étapes d’une opération, telles que la configuration d’un appareil ou la création d’un bulletin d’informations. Dans une boîte de dialogue d’onglets de type assistant, les pages de propriétés n’ont pas d’onglets et une seule page de propriétés est visible à la fois. En outre, au lieu d’avoir les boutons **OK** et **appliquer maintenant** , une boîte de dialogue d’onglet de type assistant comporte un bouton **précédent** , un bouton **suivant** ou **Terminer** , un bouton **Annuler** et un bouton **aide** .
+Vous pouvez créer un type de boîte de dialogue d’onglet appelé un assistant, qui se compose d’une feuille de propriété avec une séquence de pages de propriété qui guident l’utilisateur à travers les étapes d’une opération, comme la mise en place d’un appareil ou la création d’un bulletin. Dans une boîte de dialogue d’onglet de type sorcier, les pages de propriété n’ont pas d’onglets, et une seule page de propriété est visible à la fois. En outre, au lieu d’avoir **OK** et **Appliquer maintenant** boutons, une boîte de dialogue onglet de type assistant a un bouton **arrière,** un bouton **Suivant** ou **Finition,** un bouton **Annuler,** et un bouton **d’aide.**
 
-Pour créer une boîte de dialogue de type assistant, suivez les mêmes étapes que celles que vous devez suivre pour créer une feuille de propriétés standard, mais appelez [SetWizardMode](#setwizardmode) avant d’appeler [DoModal](#domodal). Pour activer les boutons de l’Assistant, appelez [SetWizardButtons](#setwizardbuttons), en utilisant des indicateurs pour personnaliser leur fonction et leur apparence. Pour activer le bouton **Terminer** , appelez [SetFinishText](#setfinishtext) après que l’utilisateur a effectué une action sur la dernière page de l’Assistant.
+Pour créer une boîte de dialogue de type assistant, suivez les mêmes étapes que vous suivrez pour créer une feuille de propriété standard, mais appelez [SetWizardMode](#setwizardmode) avant d’appeler [DoModal](#domodal). Pour activer les boutons de l’assistant, appelez [SetWizardButtons](#setwizardbuttons), en utilisant des drapeaux pour personnaliser leur fonction et leur apparence. Pour activer le bouton **Finition,** appelez [SetFinishText](#setfinishtext) après que l’utilisateur a pris des mesures sur la dernière page de l’assistant.
 
-Pour plus d’informations sur l’utilisation des objets `CPropertySheet`, consultez l’article [feuilles de propriétés et pages de propriétés](../../mfc/property-sheets-and-property-pages-in-mfc.md).
+Pour plus d’informations `CPropertySheet` sur la façon d’utiliser des objets, voir l’article [Feuilles de propriété et pages de propriété](../../mfc/property-sheets-and-property-pages-in-mfc.md).
 
-## <a name="inheritance-hierarchy"></a>Hiérarchie d’héritage
+## <a name="inheritance-hierarchy"></a>Hiérarchie d'héritage
 
 [CObject](../../mfc/reference/cobject-class.md)
 
@@ -159,11 +159,11 @@ Pour plus d’informations sur l’utilisation des objets `CPropertySheet`, cons
 
 ## <a name="requirements"></a>Spécifications
 
-**En-tête :** afxdlgs. h
+**En-tête:** afxdlgs.h
 
-##  <a name="addpage"></a>CPropertySheet :: AddPage
+## <a name="cpropertysheetaddpage"></a><a name="addpage"></a>Feuille CProperty::AddPage
 
-Ajoute la page fournie avec l’onglet le plus à droite dans la feuille de propriétés.
+Ajoute la page fournie avec l’onglet le plus droit dans la feuille de propriété.
 
 ```
 void AddPage(CPropertyPage* pPage);
@@ -172,25 +172,25 @@ void AddPage(CPropertyPage* pPage);
 ### <a name="parameters"></a>Paramètres
 
 *pPage*<br/>
-Pointe vers la page à ajouter à la feuille de propriétés. Ne peut pas avoir la valeur NULL.
+Points à la page à ajouter à la feuille de propriété. Ne peut pas avoir la valeur NULL.
 
 ### <a name="remarks"></a>Notes
 
-Ajoutez des pages à la feuille de propriétés dans l’ordre de gauche à droite dans lequel vous souhaitez qu’elles apparaissent.
+Ajoutez des pages à la feuille de propriété dans l’ordre de gauche à droite que vous souhaitez qu’elles apparaissent.
 
-`AddPage` ajoute l’objet [CPropertyPage](../../mfc/reference/cpropertypage-class.md#cpropertypage) à la liste des pages de l’objet `CPropertySheet`, mais ne crée pas réellement la fenêtre pour la page. L’infrastructure diffère la création de la fenêtre pour la page jusqu’à ce que l’utilisateur sélectionne cette page.
+`AddPage`ajoute l’objet [CPropertyPage](../../mfc/reference/cpropertypage-class.md#cpropertypage) à la liste des pages de l’objet, `CPropertySheet` mais ne crée pas réellement la fenêtre pour la page. Le cadre reporte la création de la fenêtre pour la page jusqu’à ce que l’utilisateur sélectionne cette page.
 
-Lorsque vous ajoutez une page de propriétés à l’aide de `AddPage`, le `CPropertySheet` est le parent de l' `CPropertyPage`. Pour accéder à la feuille de propriétés à partir de la page de propriétés, appelez [CWnd :: GetParent](../../mfc/reference/cwnd-class.md#getparent).
+Lorsque vous ajoutez une `AddPage`page `CPropertySheet` de propriété `CPropertyPage`en utilisant , le est le parent de la . Pour accéder à la feuille de propriété de la page de propriété, appelez [CWnd::GetParent](../../mfc/reference/cwnd-class.md#getparent).
 
-Il n’est pas nécessaire d’attendre jusqu’à la création de la fenêtre de la feuille de propriétés pour appeler `AddPage`. En général, vous appelez `AddPage` avant d’appeler [DoModal](#domodal) ou [Create](#create).
+Il n’est pas nécessaire d’attendre la `AddPage`création de la fenêtre de feuille de propriété pour appeler . Typiquement, vous `AddPage` appelez avant d’appeler [DoModal](#domodal) ou [Créer](#create).
 
-Si vous appelez `AddPage` après avoir affiché la page de propriétés, la ligne d’onglet reflète la page qui vient d’être ajoutée.
+Si vous `AddPage` appelez après avoir affiché la page de propriété, la ligne d’onglet reflétera la page nouvellement ajoutée.
 
 ### <a name="example"></a>Exemple
 
 [!code-cpp[NVC_MFCDocView#129](../../mfc/codesnippet/cpp/cpropertysheet-class_1.cpp)]
 
-##  <a name="construct"></a>CPropertySheet :: Construct
+## <a name="cpropertysheetconstruct"></a><a name="construct"></a>Feuille CProperty::Construire
 
 Construit un objet `CPropertySheet`.
 
@@ -224,42 +224,42 @@ void Construct(
 
 ### <a name="parameters"></a>Paramètres
 
-*nIDCaption*<br/>
-ID de la légende à utiliser pour la feuille de propriétés.
+*nIDCaption (en)*<br/>
+ID de la légende à utiliser pour la feuille de propriété.
 
 *pParentWnd*<br/>
-Pointeur vers la fenêtre parente de la feuille de propriétés. Si la valeur est NULL, la fenêtre parente est la fenêtre principale de l’application.
+Pointeur vers la fenêtre parente de la feuille de propriété. Si NULL, la fenêtre parente sera la fenêtre principale de la demande.
 
 *iSelectPage*<br/>
-Index de la page qui sera initialement en haut. La valeur par défaut est la première page ajoutée à la feuille.
+L’index de la page qui sera initialement en tête. Par défaut est la première page ajoutée à la feuille.
 
 *pszCaption*<br/>
-Pointeur vers une chaîne contenant la légende à utiliser pour la feuille de propriétés. Ne peut pas avoir la valeur NULL.
+Pointeur à une chaîne contenant la légende à utiliser pour la feuille de propriété. Ne peut pas avoir la valeur NULL.
 
 *hbmWatermark*<br/>
-Handle de la bitmap de filigrane de la page de propriétés.
+Manipuler à la bitmap filigrane de la page de propriété.
 
-*hpalWatermark*<br/>
-Handle vers la palette de la bitmap de filigrane et/ou de l’image bitmap d’en-tête.
+*hpalWatermark (en)*<br/>
+Poignée à la palette de la bitmap de filigrane et / ou bitmap en-tête.
 
 *hbmHeader*<br/>
-Handle vers l’image bitmap d’en-tête de la page de propriétés.
+Poignée à la bitmap d’en-tête de la page de propriété.
 
 ### <a name="remarks"></a>Notes
 
-Appelez cette fonction membre si l’un des constructeurs de classe n’a pas déjà été appelé. Par exemple, appelez `Construct` lorsque vous déclarez ou allouez des tableaux d’objets `CPropertySheet`. Dans le cas de tableaux, vous devez appeler `Construct` pour chaque membre du tableau.
+Appelez cette fonction de membre si l’un des constructeurs de classe n’a pas déjà été appelé. Par exemple, `Construct` appelez lorsque vous déclarez `CPropertySheet` ou allouez des tableaux d’objets. Dans le cas des tableaux, `Construct` vous devez appeler pour chaque membre dans le tableau.
 
-Pour afficher la feuille de propriétés, appelez [DoModal](#domodal) ou [Create](#create). La chaîne contenue dans le premier paramètre sera placée dans la barre de légende de la feuille de propriétés.
+Pour afficher la feuille de propriété, appelez [DoModal](#domodal) ou [Créez](#create). La chaîne contenue dans le premier paramètre sera placée dans la barre de légende de la feuille de propriété.
 
-Vous pouvez afficher automatiquement les images de filigrane et/ou d’en-tête si vous utilisez le troisième ou le quatrième prototypes de `Construct`, répertoriées ci-dessus, et que vous transmettez des valeurs valides pour les paramètres *hbmWatermark*, *hpalWatermark*et/ou *hbmHeader* .
+Vous pouvez afficher automatiquement des images de filigrane et/ou d’en-tête si vous utilisez les troisième ou `Construct`quatrième prototypes de , énumérés ci-dessus, et que vous passez des valeurs valides pour les paramètres *hbmWatermark*, *hpalWatermark*et/ou *hbmHeader.*
 
 ### <a name="example"></a>Exemple
 
-L’exemple suivant illustre les circonstances dans lesquelles vous appelez `Construct`.
+L’exemple suivant montre dans quelles `Construct`circonstances vous appelleriez .
 
 [!code-cpp[NVC_MFCDocView#130](../../mfc/codesnippet/cpp/cpropertysheet-class_2.cpp)]
 
-##  <a name="cpropertysheet"></a>CPropertySheet :: CPropertySheet
+## <a name="cpropertysheetcpropertysheet"></a><a name="cpropertysheet"></a>Feuille CProperty::CPropertySheet
 
 Construit un objet `CPropertySheet`.
 
@@ -295,42 +295,42 @@ CPropertySheet(
 
 ### <a name="parameters"></a>Paramètres
 
-*nIDCaption*<br/>
-ID de la légende à utiliser pour la feuille de propriétés.
+*nIDCaption (en)*<br/>
+ID de la légende à utiliser pour la feuille de propriété.
 
 *pParentWnd*<br/>
-Pointe vers la fenêtre parente de la feuille de propriétés. Si la valeur est NULL, la fenêtre parente est la fenêtre principale de l’application.
+Indique la fenêtre parente de la feuille de propriété. Si NULL, la fenêtre parente sera la fenêtre principale de la demande.
 
 *iSelectPage*<br/>
-Index de la page qui sera initialement en haut. La valeur par défaut est la première page ajoutée à la feuille.
+L’index de la page qui sera initialement en tête. Par défaut est la première page ajoutée à la feuille.
 
 *pszCaption*<br/>
-Pointe vers une chaîne contenant la légende à utiliser pour la feuille de propriétés. Ne peut pas avoir la valeur NULL.
+Indique une chaîne contenant la légende à utiliser pour la feuille de propriété. Ne peut pas avoir la valeur NULL.
 
 *hbmWatermark*<br/>
-Handle vers l’image bitmap d’arrière-plan de la feuille de propriétés.
+Une poignée à la bitmap de fond de la feuille de propriété.
 
-*hpalWatermark*<br/>
-Handle vers la palette de la bitmap de filigrane et/ou de l’image bitmap d’en-tête.
+*hpalWatermark (en)*<br/>
+Une poignée à la palette de la bitmap de filigrane et/ou de bitmap d’en-tête.
 
 *hbmHeader*<br/>
-Handle de la bitmap d’en-tête de la page de propriétés.
+Une poignée à la bitmap d’en-tête de la page de propriété.
 
 ### <a name="remarks"></a>Notes
 
-Pour afficher la feuille de propriétés, appelez [DoModal](#domodal) ou [Create](#create). La chaîne contenue dans le premier paramètre sera placée dans la barre de légende de la feuille de propriétés.
+Pour afficher la feuille de propriété, appelez [DoModal](#domodal) ou [Créez](#create). La chaîne contenue dans le premier paramètre sera placée dans la barre de légende de la feuille de propriété.
 
-Si vous avez plusieurs paramètres (par exemple, si vous utilisez un tableau), utilisez [Construct](#construct) au lieu de `CPropertySheet`.
+Si vous avez plusieurs paramètres (par exemple, si [Construct](#construct) vous utilisez `CPropertySheet`un tableau), utilisez Construct au lieu de .
 
-Vous pouvez afficher automatiquement les images de filigrane et/ou d’en-tête si vous utilisez le troisième ou le quatrième prototypes de `CPropertySheet`, ci-dessus, et que vous transmettez des valeurs valides pour les paramètres *hbmWatermark*, *hpalWatermark*et/ou *hbmHeader* .
+Vous pouvez afficher des images de filigrane et/ou `CPropertySheet`d’en-tête automatiquement si vous utilisez les troisième ou quatrième prototypes de , ci-dessus, et que vous passez des valeurs valides pour les paramètres *hbmWatermark*, *hpalWatermark*et/ou *hbmHeader.*
 
 ### <a name="example"></a>Exemple
 
 [!code-cpp[NVC_MFCDocView#131](../../mfc/codesnippet/cpp/cpropertysheet-class_3.cpp)]
 
-##  <a name="create"></a>CPropertySheet :: Create
+## <a name="cpropertysheetcreate"></a><a name="create"></a>Feuille CProperty::Créer
 
-Affiche une feuille de propriétés non modale.
+Affiche une feuille de propriété sans mode.
 
 ```
 virtual BOOL Create(CWnd* pParentWnd = NULL,
@@ -341,29 +341,29 @@ virtual BOOL Create(CWnd* pParentWnd = NULL,
 ### <a name="parameters"></a>Paramètres
 
 *pParentWnd*<br/>
-Pointe vers la fenêtre parente. Si la valeur est NULL, le parent est le bureau.
+Points à la fenêtre des parents. Si NULL, le parent est le bureau.
 
-*dwStyle*<br/>
-Styles de fenêtre pour la feuille de propriétés. Pour obtenir la liste complète des styles disponibles, consultez [styles de fenêtre](../../mfc/reference/styles-used-by-mfc.md#window-styles).
+*dwStyle (en)*<br/>
+Styles de fenêtre pour la feuille de propriété. Pour une liste complète des styles disponibles, voir [Windows Styles](../../mfc/reference/styles-used-by-mfc.md#window-styles).
 
-*dwExStyle*<br/>
-Styles de fenêtre étendus pour la feuille de propriétés. Pour obtenir la liste complète des styles disponibles, consultez [styles de fenêtre étendus](../../mfc/reference/styles-used-by-mfc.md#extended-window-styles) .
+*dwExStyle (en anglais)*<br/>
+Styles de fenêtre étendus pour la feuille de propriété. Pour une liste complète des styles disponibles, voir [Extended Window Styles](../../mfc/reference/styles-used-by-mfc.md#extended-window-styles)
 
 ### <a name="return-value"></a>Valeur de retour
 
-Différent de zéro si la feuille de propriétés est créée avec succès ; Sinon, 0.
+Nonzero si la feuille de propriété est créée avec succès; sinon 0.
 
 ### <a name="remarks"></a>Notes
 
-L’appel à `Create` peut être à l’intérieur du constructeur, ou vous pouvez l’appeler une fois que le constructeur est appelé.
+L’appel `Create` à peut être à l’intérieur du constructeur, ou vous pouvez l’appeler après que le constructeur est invoqué.
 
-Le style par défaut, exprimé en passant-1 comme *dwStyle*, est en&#124;fait&#124;WS_SYSMENU&#124;WS_POPUP&#124;WS_CAPTION&#124;DS_MODALFRAME DS_CONTEXTHELP WS_VISIBLE. Le style de fenêtre étendue par défaut, exprimé en passant 0 comme *dwExStyle*, est en fait WS_EX_DLGMODALFRAME.
+Le style par défaut, exprimé par le passage de -1 comme *dwStyle*, est en fait WS_SYSMENU&#124;WS_POPUP&#124;WS_CAPTION&#124;DS_MODALFRAME&#124;DS_CONTEXTHELP&#124;WS_VISIBLE. Le style de fenêtre étendue par défaut, exprimé en passant 0 comme *dwExStyle*, est en fait WS_EX_DLGMODALFRAME.
 
-La fonction membre `Create` est retournée immédiatement après la création de la feuille de propriétés. Pour supprimer la feuille de propriétés, appelez [CWnd ::D estroywindow](../../mfc/reference/cwnd-class.md#destroywindow).
+La `Create` fonction membre revient immédiatement après la création de la feuille de propriété. Pour détruire la feuille de propriété, appelez [CWnd::DestroyWindow](../../mfc/reference/cwnd-class.md#destroywindow).
 
-Les feuilles de propriétés non modales affichées avec un appel à `Create` n’ont pas les boutons OK, annuler, appliquer maintenant et aide comme les feuilles de propriétés modales. Les boutons souhaités doivent être créés par l’utilisateur.
+Feuilles de propriété sans mode `Create` affichées avec un appel pour ne pas avoir OK, Annuler, appliquer maintenant, et boutons d’aide que les feuilles de propriété modale ne. Les boutons souhaités doivent être créés par l’utilisateur.
 
-Pour afficher une feuille de propriétés modale, appelez plutôt [DoModal](#domodal) .
+Pour afficher une feuille de propriété modale, appelez [DoModal](#domodal) à la place.
 
 ### <a name="example"></a>Exemple
 
@@ -371,9 +371,9 @@ Pour afficher une feuille de propriétés modale, appelez plutôt [DoModal](#dom
 
 [!code-cpp[NVC_MFCDocView#133](../../mfc/codesnippet/cpp/cpropertysheet-class_5.cpp)]
 
-##  <a name="domodal"></a>CPropertySheet ::D oModal
+## <a name="cpropertysheetdomodal"></a><a name="domodal"></a>Feuille CProperty::DoModal
 
-Affiche une feuille de propriétés modale.
+Affiche une feuille de propriété modale.
 
 ```
 virtual INT_PTR DoModal();
@@ -381,20 +381,20 @@ virtual INT_PTR DoModal();
 
 ### <a name="return-value"></a>Valeur de retour
 
-IDOK ou IDCANCEL si la fonction a réussi ; Sinon, 0 ou-1. Si la feuille de propriétés a été établie en tant qu’assistant (voir [SetWizardMode](#setwizardmode)), `DoModal` retourne ID_WIZFINISH ou IDCANCEL.
+IDOK ou IDCANCEL si la fonction a été couronnée de succès; autrement 0 ou -1. Si la feuille de propriété a été établie comme `DoModal` un assistant (voir [SetWizardMode](#setwizardmode)), retourne soit ID_WIZFINISH ou IDCANCEL.
 
 ### <a name="remarks"></a>Notes
 
-La valeur de retour correspond à l’ID du contrôle qui a fermé la feuille de propriétés. Une fois cette fonction retournée, les fenêtres correspondant à la feuille de propriétés et à toutes les pages ont été détruites. Les objets eux-mêmes existent toujours. En règle générale, vous récupérez des données à partir des objets [CPropertyPage](../../mfc/reference/cpropertypage-class.md) une fois `DoModal` retourne IDOK.
+La valeur de retour correspond à l’ID du contrôle qui a fermé la feuille de propriété. Après le retour de cette fonction, les fenêtres correspondant à la feuille de propriété et toutes les pages auront été détruites. Les objets eux-mêmes existeront toujours. En règle générale, vous récupérerez des données `DoModal` des objets [CPropertyPage](../../mfc/reference/cpropertypage-class.md) après les retours DE l’IDOK.
 
-Pour afficher une feuille de propriétés non modale, appelez [Create](#create) à la place.
+Pour afficher une feuille de propriété sans mode, appelez [Créer à](#create) la place.
 
-Quand une page de propriétés est créée à partir de sa ressource de boîte de dialogue correspondante, elle peut provoquer une exception de première chance. Cela se produit à partir de la page de propriétés, en remplaçant le style de la ressource de boîte de dialogue par le style requis avant la création de la page. Étant donné que les ressources sont généralement en lecture seule, cela provoque une exception. Le système gère l’exception et effectue une copie de la ressource modifiée. L’exception de première chance peut donc être ignorée.
+Lorsqu’une page de propriété est créée à partir de sa ressource de dialogue correspondante, elle peut provoquer une exception de première chance. Cela résulte de la page de propriété changeant le style de la ressource de dialogue au style requis avant que la page soit créée. Étant donné que les ressources sont généralement lues uniquement, cela provoque une exception. Le système gère l’exception et fait une copie de la ressource modifiée. L’exception de la première chance peut donc être ignorée.
 
 > [!NOTE]
->  Cette exception doit être gérée par le système d’exploitation si vous compilez avec le modèle de gestion des exceptions asynchrone. Pour plus d’informations sur les modèles de gestion des exceptions, consultez [/Eh (modèle de gestion des exceptions)](../../build/reference/eh-exception-handling-model.md). Dans ce cas, n’encapsulez pas les appels à C++ `CPropertySheet::DoModal` avec un bloc try-catch dans lequel catch gère toutes les exceptions, par exemple, `catch (...)`. Ce bloc gère l’exception destinée au système d’exploitation et provoque un comportement imprévisible. Toutefois, vous pouvez utiliser C++ en toute sécurité la gestion des exceptions avec des types d’exceptions spécifiques ou une gestion structurée des exceptions où l’exception de violation d’accès est transmise au système d’exploitation.
+> Cette exception doit être traitée par le système d’exploitation si vous compilez avec le modèle asynchrone de manutention d’exception. Pour plus d’informations sur les modèles de traitement des exceptions, voir [/EH (Modèle de manutention d’exception)](../../build/reference/eh-exception-handling-model.md). Dans ce cas, n’enveloppez pas les appels avec `CPropertySheet::DoModal` un bloc d’essai-catch `catch (...)`CMD dans lequel la capture gère toutes les exceptions, par exemple, . Ce bloc gérerait l’exception destinée au système d’exploitation et provoquerait un comportement imprévisible. Toutefois, vous pouvez utiliser en toute sécurité le traitement d’exception de CMD avec des types d’exception spécifiques ou un traitement d’exception structuré lorsque l’exception de violation d’accès est transmise au système d’exploitation.
 
-Pour éviter de générer cette exception de première chance, vous pouvez vous assurer manuellement que la feuille de propriétés possède les [styles de fenêtre](../../mfc/reference/styles-used-by-mfc.md#window-styles)corrects. Vous devez définir les styles suivants pour une feuille de propriétés :
+Pour éviter de générer cette exception de première chance, vous pouvez garantir manuellement que la feuille de propriété a les [styles de fenêtre](../../mfc/reference/styles-used-by-mfc.md#window-styles)corrects . Vous devez définir les styles suivants pour une feuille de propriété :
 
 - DS_3DLOOK
 
@@ -402,9 +402,9 @@ Pour éviter de générer cette exception de première chance, vous pouvez vous 
 
 - WS_CHILD
 
-- WS_TABSTOP
+- Ws_tabstop
 
-Vous pouvez utiliser les styles facultatifs suivants sans provoquer une exception de première chance :
+Vous pouvez utiliser les styles optionnels suivants sans provoquer une exception de première chance :
 
 - DS_SHELLFONT
 
@@ -412,15 +412,15 @@ Vous pouvez utiliser les styles facultatifs suivants sans provoquer une exceptio
 
 - WS_CLIPCHILDREN
 
-Désactivez tous les autres styles Windows, car ils ne sont pas compatibles avec les feuilles de propriétés. Ce Conseil ne s’applique pas aux styles étendus. La définition appropriée de ces styles standard garantit que la feuille de propriétés ne doit pas être modifiée et évitera la génération de l’exception de première chance.
+Désactiver tous les autres styles Windows parce qu’ils ne sont pas compatibles avec les feuilles de propriété. Ce conseil ne s’applique pas aux styles étendus. L’établissement de ces styles standard de manière appropriée garantira que la feuille de propriété n’a pas à être modifiée et évitera de générer l’exception de la première chance.
 
 ### <a name="example"></a>Exemple
 
-Consultez l’exemple de [CPropertySheet :: AddPage](#addpage).
+Voir l’exemple pour [CPropertySheet:AddPage](#addpage).
 
-##  <a name="enablestackedtabs"></a>CPropertySheet :: EnableStackedTabs
+## <a name="cpropertysheetenablestackedtabs"></a><a name="enablestackedtabs"></a>CPropertySheet::EnableStackedTabs
 
-Indique s’il faut empiler des lignes d’onglets dans une feuille de propriétés.
+Indique s’il faut empiler des rangées d’onglets dans une feuille de propriété.
 
 ```
 void EnableStackedTabs(BOOL bStacked);
@@ -428,22 +428,22 @@ void EnableStackedTabs(BOOL bStacked);
 
 ### <a name="parameters"></a>Paramètres
 
-*bStacked*<br/>
-Indique si les onglets empilés sont activés dans la feuille de propriétés. Désactivez les lignes empilées de balises en affectant à *bStacked* la valeur false.
+*bStacked (en)*<br/>
+Indique si les onglets empilés sont activés dans la feuille de propriété. Désactiver les rangées empilées d’étiquettes en définissant *bStacked* à FALSE.
 
 ### <a name="remarks"></a>Notes
 
-Par défaut, si une feuille de propriétés possède plus d’onglets que dans une seule ligne de la largeur de la feuille de propriétés, les onglets sont empilés en plusieurs lignes. Pour utiliser les onglets de défilement au lieu des onglets d’empilement, appelez `EnableStackedTabs` avec *bStacked* défini sur false avant d’appeler [DoModal](#domodal) ou [Create](#create).
+Par défaut, si une feuille de propriété a plus d’onglets que s’insérera dans une seule rangée dans la largeur de la feuille de propriété, les onglets s’empileront en plusieurs rangées. Pour utiliser des onglets défilants au `EnableStackedTabs` lieu d’empiler les onglets, appelez avec *bStacked* set à FALSE avant d’appeler [DoModal](#domodal) ou [Créer](#create).
 
-Vous devez appeler `EnableStackedTabs` lorsque vous créez une feuille de propriétés modale ou non modale. Pour incorporer ce style dans une classe dérivée de `CPropertySheet`, écrivez un gestionnaire de messages pour WM_CREATE. Dans la version substituée de [CWnd :: OnCreate](../../mfc/reference/cwnd-class.md#oncreate), appelez `EnableStackedTabs( FALSE )` avant d’appeler l’implémentation de la classe de base.
+Vous devez `EnableStackedTabs` appeler lorsque vous créez une feuille de propriété modale ou sans mode. Pour intégrer ce `CPropertySheet`style dans une classe dérivée, écrivez un gestionnaire de message pour WM_CREATE. Dans la version prépondérer de [CWnd::OnCreate](../../mfc/reference/cwnd-class.md#oncreate), appelez `EnableStackedTabs( FALSE )` avant d’appeler la mise en œuvre de la classe de base.
 
 ### <a name="example"></a>Exemple
 
 [!code-cpp[NVC_MFCDocView#134](../../mfc/codesnippet/cpp/cpropertysheet-class_6.cpp)]
 
-##  <a name="enddialog"></a>CPropertySheet :: EndDialog
+## <a name="cpropertysheetenddialog"></a><a name="enddialog"></a>Feuille CProperty::EndDialog
 
-Met fin à la feuille de propriétés.
+Termine la feuille de propriété.
 
 ```
 void EndDialog(int nEndID);
@@ -451,22 +451,22 @@ void EndDialog(int nEndID);
 
 ### <a name="parameters"></a>Paramètres
 
-*nEndID*<br/>
-Identificateur à utiliser comme valeur de retour de la feuille de propriétés.
+*nEndID (nEndID)*<br/>
+Identifiant à utiliser comme valeur de retour de la feuille de propriété.
 
 ### <a name="remarks"></a>Notes
 
-Cette fonction membre est appelée par l’infrastructure quand l’utilisateur appuie sur le bouton OK, annuler ou fermer. Appelez cette fonction membre si un événement qui doit fermer la feuille de propriétés se produit.
+Cette fonction de membre est appelée par le cadre lorsque le bouton OK, Annuler ou Fermer est appuyé. Appelez cette fonction de membre si un événement se produit qui devrait fermer la feuille de propriété.
 
-Cette fonction membre est utilisée uniquement avec une boîte de dialogue modale.
+Cette fonction de membre n’est utilisée qu’avec une boîte de dialogue modal.
 
 ### <a name="example"></a>Exemple
 
-Consultez l’exemple de [CPropertySheet ::P ressbutton](#pressbutton).
+Voir l’exemple pour [CPropertySheet::PressButton](#pressbutton).
 
-##  <a name="getactiveindex"></a>CPropertySheet :: GetActiveIndex
+## <a name="cpropertysheetgetactiveindex"></a><a name="getactiveindex"></a>Feuille CProperty::GetActiveIndex
 
-Obtient le numéro d’index de la page active de la fenêtre de la feuille de propriétés, puis utilise le numéro d’index retourné comme paramètre pour `GetPage`.
+Obtient le numéro d’index de la page active de la fenêtre `GetPage`de la feuille de propriété, puis utilise le numéro d’index retourné comme paramètre pour .
 
 ```
 int GetActiveIndex() const;
@@ -474,15 +474,15 @@ int GetActiveIndex() const;
 
 ### <a name="return-value"></a>Valeur de retour
 
-Numéro d’index de la page active.
+Le numéro d’index de la page active.
 
 ### <a name="example"></a>Exemple
 
-Consultez l’exemple de [CPropertySheet :: GetActivePage](#getactivepage).
+Voir l’exemple pour [CPropertySheet:GetActivePage](#getactivepage).
 
-##  <a name="getactivepage"></a>CPropertySheet :: GetActivePage
+## <a name="cpropertysheetgetactivepage"></a><a name="getactivepage"></a>Feuille CProperty::GetActivePage
 
-Récupère la page active de la fenêtre de la feuille de propriétés.
+Récupère la page active de la fenêtre de la feuille de propriété.
 
 ```
 CPropertyPage* GetActivePage() const;
@@ -490,19 +490,19 @@ CPropertyPage* GetActivePage() const;
 
 ### <a name="return-value"></a>Valeur de retour
 
-Pointeur vers la page active.
+Le pointeur de la page active.
 
 ### <a name="remarks"></a>Notes
 
-Utilisez cette fonction membre pour effectuer une action sur la page active.
+Utilisez cette fonction de membre pour effectuer une certaine action sur la page active.
 
 ### <a name="example"></a>Exemple
 
 [!code-cpp[NVC_MFCDocView#135](../../mfc/codesnippet/cpp/cpropertysheet-class_7.cpp)]
 
-##  <a name="getpage"></a>CPropertySheet :: GetPage
+## <a name="cpropertysheetgetpage"></a><a name="getpage"></a>Feuille CProperty::GetPage
 
-Retourne un pointeur vers la page spécifiée dans cette feuille de propriétés.
+Retourne un pointeur à la page spécifiée dans cette feuille de propriété.
 
 ```
 CPropertyPage* GetPage(int nPage) const;
@@ -511,19 +511,19 @@ CPropertyPage* GetPage(int nPage) const;
 ### <a name="parameters"></a>Paramètres
 
 *nPage*<br/>
-Index de la page souhaitée, à partir de 0. Doit être compris entre 0 et un nombre inférieur de pages dans la feuille de propriétés, inclus.
+Index de la page désirée, à partir de 0. Doit être entre 0 et un de moins que le nombre de pages dans la feuille de propriété, inclusivement.
 
 ### <a name="return-value"></a>Valeur de retour
 
-Pointeur vers la page correspondant au paramètre *nPage* .
+Le pointeur de la page correspondant au *paramètre nPage.*
 
 ### <a name="example"></a>Exemple
 
-Consultez l’exemple de [CPropertyPage :: OnWizardFinish](../../mfc/reference/cpropertypage-class.md#onwizardfinish).
+Voir l’exemple pour [CPropertyPage::OnWizardFinish](../../mfc/reference/cpropertypage-class.md#onwizardfinish).
 
-##  <a name="getpagecount"></a>CPropertySheet :: GetPageCount
+## <a name="cpropertysheetgetpagecount"></a><a name="getpagecount"></a>Feuille CProperty::GetPageCount
 
-Détermine le nombre de pages actuellement dans la feuille de propriétés.
+Détermine le nombre de pages actuellement dans la feuille de propriété.
 
 ```
 int GetPageCount() const;
@@ -531,15 +531,15 @@ int GetPageCount() const;
 
 ### <a name="return-value"></a>Valeur de retour
 
-Nombre de pages dans la feuille de propriétés.
+Le nombre de pages dans la feuille de propriété.
 
 ### <a name="example"></a>Exemple
 
-Consultez l’exemple de [CPropertyPage :: OnWizardFinish](../../mfc/reference/cpropertypage-class.md#onwizardfinish).
+Voir l’exemple pour [CPropertyPage::OnWizardFinish](../../mfc/reference/cpropertypage-class.md#onwizardfinish).
 
-##  <a name="getpageindex"></a>CPropertySheet :: GetPageIndex
+## <a name="cpropertysheetgetpageindex"></a><a name="getpageindex"></a>Feuille CProperty::GetPageIndex
 
-Récupère le numéro d’index de la page spécifiée dans la feuille de propriétés.
+Récupère le numéro d’index de la page spécifiée dans la feuille de propriété.
 
 ```
 int GetPageIndex(CPropertyPage* pPage);
@@ -548,23 +548,23 @@ int GetPageIndex(CPropertyPage* pPage);
 ### <a name="parameters"></a>Paramètres
 
 *pPage*<br/>
-Pointe vers la page avec l’index à rechercher. Ne peut pas avoir la valeur NULL.
+Points à la page avec l’index à trouver. Ne peut pas avoir la valeur NULL.
 
 ### <a name="return-value"></a>Valeur de retour
 
-Numéro d’index d’une page.
+Le numéro d’index d’une page.
 
 ### <a name="remarks"></a>Notes
 
-Par exemple, vous pouvez utiliser `GetPageIndex` pour obtenir l’index de page afin d’utiliser [SetActivePage](#setactivepage) ou [GetPage](#getpage).
+Par exemple, vous `GetPageIndex` utiliseriez pour obtenir l’index de la page afin d’utiliser [SetActivePage](#setactivepage) ou [GetPage](#getpage).
 
 ### <a name="example"></a>Exemple
 
-Consultez l’exemple de [CPropertySheet :: GetActivePage](#getactivepage).
+Voir l’exemple pour [CPropertySheet:GetActivePage](#getactivepage).
 
-##  <a name="gettabcontrol"></a>CPropertySheet :: GetTabControl
+## <a name="cpropertysheetgettabcontrol"></a><a name="gettabcontrol"></a>Feuille CProperty::GetTabControl
 
-Récupère un pointeur désignant un contrôle onglet pour effectuer une opération spécifique au contrôle onglet (autrement dit, utiliser l’une des API dans [CTabCtrl](../../mfc/reference/ctabctrl-class.md)).
+Récupère un pointeur à un contrôle d’onglet pour faire quelque chose de spécifique au contrôle de l’onglet (c’est-à-dire, pour utiliser l’une des API dans [CTabCtrl](../../mfc/reference/ctabctrl-class.md)).
 
 ```
 CTabCtrl* GetTabControl() const;
@@ -572,31 +572,31 @@ CTabCtrl* GetTabControl() const;
 
 ### <a name="return-value"></a>Valeur de retour
 
-Pointeur vers un contrôle onglet.
+Un pointeur à un contrôle d’onglet.
 
 ### <a name="remarks"></a>Notes
 
-Par exemple, appelez cette fonction membre si vous souhaitez ajouter des bitmaps à chacun des onglets lors de l’initialisation.
+Par exemple, appelez cette fonction de membre si vous voulez ajouter des bitmaps à chacun des onglets pendant l’initialisation.
 
 ### <a name="example"></a>Exemple
 
 [!code-cpp[NVC_MFCDocView#136](../../mfc/codesnippet/cpp/cpropertysheet-class_8.cpp)]
 
-##  <a name="m_psh"></a>CPropertySheet :: m_psh
+## <a name="cpropertysheetm_psh"></a><a name="m_psh"></a>Feuille CProperty::m_psh
 
-Structure dont les membres stockent les caractéristiques de [PROPSHEETHEADER](/windows/win32/api/prsht/ns-prsht-propsheetheadera_v2).
+Une structure dont les membres stockent les caractéristiques de [PROPSHEETHEADER](/windows/win32/api/prsht/ns-prsht-propsheetheadera_v2).
 
 ### <a name="remarks"></a>Notes
 
-Utilisez cette structure pour initialiser l’apparence de la feuille de propriétés une fois qu’elle a été construite mais avant qu’elle ne soit affichée avec la fonction membre [DoModal](#domodal) . Par exemple, définissez le membre *dwSize nul* de `m_psh` sur la taille que vous souhaitez attribuer à la feuille de propriétés.
+Utilisez cette structure pour initialiser l’apparence de la feuille de propriété après sa construction, mais avant qu’elle ne soit affichée avec la fonction membre [DoModal.](#domodal) Par exemple, définissez le membre `m_psh` *dwSize* de la taille que vous voulez que la feuille de propriété ait.
 
-Pour plus d’informations sur cette structure, y compris la liste de ses membres, consultez PROPSHEETHEADER dans le SDK Windows.
+Pour plus d’informations sur cette structure, y compris une liste de ses membres, voir PROPSHEETHEADER dans le SDK Windows.
 
 ### <a name="example"></a>Exemple
 
 [!code-cpp[NVC_MFCDocView#143](../../mfc/codesnippet/cpp/cpropertysheet-class_9.cpp)]
 
-##  <a name="mapdialogrect"></a>CPropertySheet :: MapDialogRect
+## <a name="cpropertysheetmapdialogrect"></a><a name="mapdialogrect"></a>Feuille CProperty::MapDialogRect
 
 Convertit les unités de boîte de dialogue d’un rectangle en unités d’écran.
 
@@ -607,19 +607,19 @@ void MapDialogRect(LPRECT lpRect) const;
 ### <a name="parameters"></a>Paramètres
 
 *lpRect*<br/>
-Pointe vers une structure [Rect](/previous-versions/dd162897\(v=vs.85\)) ou un objet [CRect](../../atl-mfc-shared/reference/crect-class.md) qui contient les coordonnées de la boîte de dialogue à convertir.
+Indique une structure [RECT](/previous-versions/dd162897\(v=vs.85\)) ou un objet [CRect](../../atl-mfc-shared/reference/crect-class.md) qui contient les coordonnées de la boîte de dialogue à convertir.
 
 ### <a name="remarks"></a>Notes
 
-Les unités de boîte de dialogue sont exprimées en termes de l’unité de base de boîte de dialogue actuelle dérivée de la largeur et de la hauteur moyennes des caractères de la police utilisée pour le texte de la boîte de dialogue. Une unité horizontale est un quart de l’unité de largeur de base de la boîte de dialogue, et une unité verticale est un huitième de l’unité de hauteur de base de la boîte de dialogue.
+Les unités de la boîte de dialogue sont indiquées en termes d’unité de base actuelle de boîte de dialogue dérivée de la largeur moyenne et de la hauteur des caractères dans la police utilisée pour le texte de la boîte de dialogue. Une unité horizontale est un quart de l’unité de largeur de base de boîte de dialogue, et une unité verticale est un huitième de l’unité de hauteur de base de boîte de dialogue.
 
-La fonction Windows [GetDialogBaseUnits](/windows/win32/api/winuser/nf-winuser-getdialogbaseunits) retourne des informations sur la taille de la police système, mais vous pouvez spécifier une police différente pour chaque feuille de propriétés si vous utilisez le style DS_SETFONT dans le fichier de définition de ressource. La fonction Windows [MapDialogRect](/windows/win32/api/winuser/nf-winuser-mapdialogrect) , décrite dans la SDK Windows, utilise la police appropriée pour cette boîte de dialogue.
+La fonction [GetDialogBaseUnits](/windows/win32/api/winuser/nf-winuser-getdialogbaseunits) Windows renvoie des informations de taille pour la police système, mais vous pouvez spécifier une police différente pour chaque feuille de propriété si vous utilisez le style DS_SETFONT dans le fichier de définition des ressources. La fonction [MapDialogRect](/windows/win32/api/winuser/nf-winuser-mapdialogrect) Windows, décrite dans le Windows SDK, utilise la police appropriée pour cette boîte de dialogue.
 
-La fonction membre `MapDialogRect` remplace les unités de boîte de dialogue dans *lpRect* par des unités d’écran (pixels) afin que le rectangle puisse être utilisé pour créer une boîte de dialogue ou positionner un contrôle dans une zone.
+La `MapDialogRect` fonction membre remplace les unités de boîte de dialogue en *lpRect* par des unités d’écran (pixels) de sorte que le rectangle peut être utilisé pour créer une boîte de dialogue ou positionner un contrôle dans une boîte.
 
-##  <a name="oninitdialog"></a>CPropertySheet :: OnInitDialog
+## <a name="cpropertysheetoninitdialog"></a><a name="oninitdialog"></a>Feuille CProperty::OnInitDialog
 
-Substitue pour augmenter l’initialisation de la feuille de propriétés.
+Remplacements pour augmenter l’initialisation des feuilles de propriété.
 
 ```
 virtual BOOL OnInitDialog();
@@ -627,19 +627,19 @@ virtual BOOL OnInitDialog();
 
 ### <a name="return-value"></a>Valeur de retour
 
-Spécifie si l’application a défini le focus d’entrée sur l’un des contrôles de la feuille de propriétés. Si `OnInitDialog` retourne une valeur différente de zéro, Windows définit le focus d’entrée sur le premier contrôle de la feuille de propriétés. L’application peut retourner 0 uniquement si elle a explicitement défini le focus d’entrée sur l’un des contrôles de la feuille de propriétés.
+Précise si l’application a défini l’accent sur l’entrée à l’un des contrôles de la feuille de propriété. Si `OnInitDialog` les retours nonzero, Windows définit la mise au point des entrées au premier contrôle de la feuille de propriété. L’application ne peut retourner 0 que si elle a explicitement défini l’accent sur l’entrée à l’un des contrôles de la feuille de propriété.
 
 ### <a name="remarks"></a>Notes
 
-Cette fonction membre est appelée en réponse à la WM_INITDIALOG message. Ce message est envoyé à la feuille de propriétés lors des appels [Create](#create) ou [DoModal](#domodal) , qui se produisent immédiatement avant l’affichage de la feuille de propriétés.
+Cette fonction de membre est appelée en réponse au message WM_INITDIALOG. Ce message est envoyé à la feuille de propriété pendant les appels [Créer](#create) ou [DoModal,](#domodal) qui se produisent immédiatement avant que la feuille de propriété est affichée.
 
-Substituez cette fonction membre si vous devez effectuer un traitement spécial lorsque la feuille de propriétés est initialisée. Dans la version substituée, appelez d’abord la classe de base `OnInitDialog` mais ignorez sa valeur de retour. Normalement, vous retournerez la valeur TRUE à partir de votre fonction membre remplacée.
+Remplacer cette fonction de membre si vous avez besoin d’effectuer un traitement spécial lorsque la feuille de propriété est paralysée. Dans la version prépondérer, `OnInitDialog` appelez d’abord la classe de base, mais ignorez sa valeur de retour. Vous retournerez normalement VRAI de votre fonction de membre prépondérer.
 
-Vous n’avez pas besoin d’une entrée de table des messages pour cette fonction membre.
+Vous n’avez pas besoin d’une entrée de carte de message pour cette fonction de membre.
 
-##  <a name="pressbutton"></a>CPropertySheet ::P ressButton
+## <a name="cpropertysheetpressbutton"></a><a name="pressbutton"></a>Feuille CProperty::PressButton
 
-Simule le choix du bouton spécifié dans une feuille de propriétés.
+Simule le choix du bouton spécifié dans une feuille de propriété.
 
 ```
 void PressButton(int nButton);
@@ -647,36 +647,36 @@ void PressButton(int nButton);
 
 ### <a name="parameters"></a>Paramètres
 
-*Nbouton*<br/>
-Nbouton : identifie le bouton à enfoncer. Ce paramètre peut prendre l’une des valeurs suivantes :
+*nButton (en)*<br/>
+nButton : Identifie le bouton à appuyer. Ce paramètre peut être l’une des valeurs suivantes :
 
-- PSBTN_BACK choisit le bouton précédent.
+- PSBTN_BACK choisit le bouton Back.
 
-- PSBTN_NEXT choisit le bouton suivant.
+- PSBTN_NEXT choisit le bouton Suivant.
 
-- PSBTN_FINISH choisit le bouton Terminer.
+- PSBTN_FINISH choisit le bouton Finition.
 
 - PSBTN_OK choisit le bouton OK.
 
-- PSBTN_APPLYNOW choisit le bouton Appliquer maintenant.
+- PSBTN_APPLYNOW choisit le bouton Apply Now.
 
 - PSBTN_CANCEL choisit le bouton Annuler.
 
-- PSBTN_HELP choisit le bouton aide.
+- PSBTN_HELP choisit le bouton Aide.
 
 ### <a name="remarks"></a>Notes
 
-Pour plus d’informations sur le message Pressbutton SDK Windows, consultez [PSM_PRESSBUTTON](/windows/win32/Controls/psm-pressbutton) .
+Consultez [PSM_PRESSBUTTON](/windows/win32/Controls/psm-pressbutton) pour plus d’informations sur le message Windows SDK Pressbutton.
 
-Un appel à `PressButton` n’enverra pas la notification [PSN_APPLY](/windows/win32/Controls/psn-apply) à partir d’une page de propriétés au Framework. Pour envoyer cette notification, appelez [CPropertyPage :: OnOK](../../mfc/reference/cpropertypage-class.md#onok).
+Un appel `PressButton` à ne pas envoyer la notification [PSN_APPLY](/windows/win32/Controls/psn-apply) à partir d’une page de propriété au cadre. Pour envoyer cette notification, appelez [CPropertyPage::OnOK](../../mfc/reference/cpropertypage-class.md#onok).
 
 ### <a name="example"></a>Exemple
 
 [!code-cpp[NVC_MFCDocView#137](../../mfc/codesnippet/cpp/cpropertysheet-class_10.cpp)]
 
-##  <a name="removepage"></a>CPropertySheet :: RemovePage
+## <a name="cpropertysheetremovepage"></a><a name="removepage"></a>Feuille CProperty::RemovePage
 
-Supprime une page de la feuille de propriétés et détruit la fenêtre associée.
+Supprime une page de la feuille de propriété et détruit la fenêtre associée.
 
 ```
 void RemovePage(CPropertyPage* pPage);
@@ -686,16 +686,16 @@ void RemovePage(int nPage);
 ### <a name="parameters"></a>Paramètres
 
 *pPage*<br/>
-Pointe vers la page à supprimer de la feuille de propriétés. Ne peut pas avoir la valeur NULL.
+Points à la page à supprimer de la feuille de propriété. Ne peut pas avoir la valeur NULL.
 
 *nPage*<br/>
-Index de la page à supprimer. Doit être compris entre 0 et un nombre inférieur de pages dans la feuille de propriétés, inclus.
+Index de la page à supprimer. Doit être entre 0 et un de moins que le nombre de pages dans la feuille de propriété, inclusivement.
 
 ### <a name="remarks"></a>Notes
 
-L’objet [CPropertyPage](../../mfc/reference/cpropertypage-class.md) proprement dit n’est pas détruit tant que le propriétaire de la fenêtre de `CPropertySheet` n’est pas fermé.
+[L’objet CPropertyPage](../../mfc/reference/cpropertypage-class.md) lui-même n’est pas détruit tant que le propriétaire de la `CPropertySheet` fenêtre n’est pas fermé.
 
-##  <a name="setactivepage"></a>CPropertySheet :: SetActivePage
+## <a name="cpropertysheetsetactivepage"></a><a name="setactivepage"></a>Feuille CProperty::SetActivePage
 
 Modifie la page active.
 
@@ -707,26 +707,26 @@ BOOL SetActivePage(CPropertyPage* pPage);
 ### <a name="parameters"></a>Paramètres
 
 *nPage*<br/>
-Index de la page à définir. Elle doit être comprise entre 0 et un de moins que le nombre de pages de la feuille de propriétés, inclus.
+Index de la page à définir. Il doit être entre 0 et un de moins que le nombre de pages dans la feuille de propriété, inclusivement.
 
 *pPage*<br/>
-Pointe vers la page à définir dans la feuille de propriétés. Elle ne peut pas avoir la valeur NULL.
+Points à la page à définir dans la feuille de propriété. Elle ne peut pas avoir la valeur NULL.
 
 ### <a name="return-value"></a>Valeur de retour
 
-Différent de zéro si la feuille de propriétés est correctement activée ; Sinon, 0.
+Nonzero si la feuille de propriété est activée avec succès; sinon 0.
 
 ### <a name="remarks"></a>Notes
 
-Par exemple, utilisez `SetActivePage` si l’action d’un utilisateur sur une page doit faire en sorte qu’une autre page devienne la page active.
+Par exemple, `SetActivePage` utilisez si l’action d’un utilisateur sur une page doit faire en sorte qu’une autre page devienne la page active.
 
 ### <a name="example"></a>Exemple
 
-Consultez l’exemple de [CPropertySheet :: GetActivePage](#getactivepage).
+Voir l’exemple pour [CPropertySheet:GetActivePage](#getactivepage).
 
-##  <a name="setfinishtext"></a>CPropertySheet :: SetFinishText
+## <a name="cpropertysheetsetfinishtext"></a><a name="setfinishtext"></a>Feuille CProperty::SetFinishText
 
-Définit le texte dans le bouton de commande terminer.
+Définit le texte dans le bouton de commande De finition.
 
 ```
 void SetFinishText(LPCTSTR lpszText);
@@ -735,19 +735,19 @@ void SetFinishText(LPCTSTR lpszText);
 ### <a name="parameters"></a>Paramètres
 
 *lpszText*<br/>
-Pointe vers le texte à afficher sur le bouton de commande terminer.
+Points au texte à afficher sur le bouton de commande Finition.
 
 ### <a name="remarks"></a>Notes
 
-Appelez `SetFinishText` pour afficher le texte sur le bouton de commande terminer et masquer les boutons suivant et précédent une fois que l’utilisateur a terminé l’action sur la dernière page de l’Assistant.
+Appelez `SetFinishText` pour afficher le texte sur le bouton de commande De finition et masquer les boutons Suivant et Arrière après que l’utilisateur a terminé l’action sur la dernière page de l’assistant.
 
 ### <a name="example"></a>Exemple
 
 [!code-cpp[NVC_MFCDocView#138](../../mfc/codesnippet/cpp/cpropertysheet-class_11.cpp)]
 
-##  <a name="settitle"></a>CPropertySheet :: SetTitle
+## <a name="cpropertysheetsettitle"></a><a name="settitle"></a>Feuille CProperty::SetTitle
 
-Spécifie la légende de la feuille de propriétés (le texte affiché dans la barre de titre d’une fenêtre frame).
+Spécifie la légende de la feuille de propriété (le texte affiché dans la barre de titre d’une fenêtre de cadre).
 
 ```
 void SetTitle(
@@ -758,22 +758,22 @@ void SetTitle(
 ### <a name="parameters"></a>Paramètres
 
 *nStyle*<br/>
-Spécifie le style du titre de la feuille de propriétés. Le style doit être spécifié à 0 ou en tant que PSH_PROPTITLE. Si le style est défini sur PSH_PROPTITLE, le mot « propriétés » apparaît après le texte spécifié comme légende. Par exemple, l’appel de `SetTitle`(« simple », PSH_PROPTITLE) génère une légende de feuille de propriétés « propriétés simples ».
+Spécifie le style du titre de la feuille de propriété. Le style doit être spécifié à 0 ou comme PSH_PROPTITLE. Si le style est défini comme PSH_PROPTITLE, le mot "Propriétés" apparaît après le texte spécifié comme la légende. Par exemple, `SetTitle`l’appel (« Simple », PSH_PROPTITLE) donnera lieu à une légende de feuille de propriété de « Propriétés simples ».
 
 *lpszText*<br/>
-Pointe vers le texte à utiliser comme légende dans la barre de titre de la feuille de propriétés.
+Points au texte à utiliser comme légende dans la barre de titre de la feuille de propriété.
 
 ### <a name="remarks"></a>Notes
 
-Par défaut, une feuille de propriétés utilise le paramètre Caption dans le constructeur de la feuille de propriétés.
+Par défaut, une feuille de propriété utilise le paramètre de légende dans le constructeur de la feuille de propriété.
 
 ### <a name="example"></a>Exemple
 
 [!code-cpp[NVC_MFCDocView#139](../../mfc/codesnippet/cpp/cpropertysheet-class_12.cpp)]
 
-##  <a name="setwizardbuttons"></a>CPropertySheet :: SetWizardButtons
+## <a name="cpropertysheetsetwizardbuttons"></a><a name="setwizardbuttons"></a>Feuille CProperty::SetWizardButtons
 
-Active ou désactive le bouton précédent, suivant ou terminer dans une feuille de propriétés de l’Assistant.
+Permet ou désactive le bouton Dos, Suivant ou Finition dans une feuille de propriété de sorcier.
 
 ```
 void SetWizardButtons(DWORD dwFlags);
@@ -782,25 +782,25 @@ void SetWizardButtons(DWORD dwFlags);
 ### <a name="parameters"></a>Paramètres
 
 *dwFlags*<br/>
-Ensemble d’indicateurs qui personnalisent la fonction et l’apparence des boutons de l’Assistant. Ce paramètre peut être une combinaison des valeurs suivantes :
+Un ensemble de drapeaux qui personnalisent la fonction et l’apparence des boutons de l’assistant. Ce paramètre peut être une combinaison des valeurs suivantes :
 
-- PSWIZB_BACK bouton précédent
+- bouton PSWIZB_BACK Dos
 
-- PSWIZB_NEXT bouton suivant
+- PSWIZB_NEXT prochain bouton
 
-- PSWIZB_FINISH bouton Terminer
+- bouton finition PSWIZB_FINISH
 
-- PSWIZB_DISABLEDFINISH bouton Terminer désactivé
+- bouton PSWIZB_DISABLEDFINISH finition désactivée
 
 ### <a name="remarks"></a>Notes
 
-Appelez `SetWizardButtons` uniquement après l’ouverture de la boîte de dialogue ; vous ne pouvez pas appeler `SetWizardButtons` avant d’appeler [DoModal](#domodal). En général, vous devez appeler `SetWizardButtons` à partir de [CPropertyPage :: OnSetActive](../../mfc/reference/cpropertypage-class.md#onsetactive).
+Appelez `SetWizardButtons` seulement après que le dialogue soit ouvert ; vous ne pouvez `SetWizardButtons` pas appeler avant d’appeler [DoModal](#domodal). Typiquement, vous `SetWizardButtons` devriez appeler à partir de [CPropertyPage::OnSetActive](../../mfc/reference/cpropertypage-class.md#onsetactive).
 
-Si vous souhaitez modifier le texte du bouton terminer ou masquer les boutons suivant et précédent une fois que l’utilisateur a terminé l’Assistant, appelez [SetFinishText](#setfinishtext). Notez que le même bouton est partagé pour terminer et suivant. Vous pouvez afficher un bouton terminer ou suivant à un moment donné, mais pas les deux.
+Si vous souhaitez modifier le texte sur le bouton Finition ou masquer les boutons Suivant et Retour une fois que l’utilisateur a terminé l’assistant, appelez [SetFinishText](#setfinishtext). Notez que le même bouton est partagé pour Finish and Next. Vous pouvez afficher un bouton Finition ou un bouton Suivant en même temps, mais pas les deux.
 
 ### <a name="example"></a>Exemple
 
-Une `CPropertySheet` comporte trois pages de propriétés de l’Assistant : `CStylePage`, `CColorPage`et `CShapePage`.  Le fragment de code ci-dessous montre comment activer et désactiver les boutons **précédent** et **suivant** sur la page de propriétés de l’Assistant.
+A `CPropertySheet` a trois pages `CStylePage` `CColorPage`de `CShapePage`propriété wizard: , , et .  Le fragment de code ci-dessous montre comment activer et désactiver les boutons **Back** and **Next** sur la page de propriété de l’assistant.
 
 [!code-cpp[NVC_MFCDocView#140](../../mfc/codesnippet/cpp/cpropertysheet-class_13.cpp)]
 
@@ -808,9 +808,9 @@ Une `CPropertySheet` comporte trois pages de propriétés de l’Assistant : `C
 
 [!code-cpp[NVC_MFCDocView#138](../../mfc/codesnippet/cpp/cpropertysheet-class_11.cpp)]
 
-##  <a name="setwizardmode"></a>CPropertySheet :: SetWizardMode
+## <a name="cpropertysheetsetwizardmode"></a><a name="setwizardmode"></a>Feuille CProperty::SetWizardMode
 
-Établit une page de propriétés en tant qu’assistant.
+Établit une page de propriété en tant que magicien.
 
 ```
 void SetWizardMode();
@@ -818,11 +818,11 @@ void SetWizardMode();
 
 ### <a name="remarks"></a>Notes
 
-Une caractéristique clé d’une page de propriétés de l’Assistant est que l’utilisateur navigue à l’aide des boutons suivant ou terminer, précédent et annuler au lieu de tabulations.
+Une caractéristique clé d’une page de propriété de sorcier est que l’utilisateur navigue en utilisant Next ou Finish, Back, et Annuler les boutons au lieu d’onglets.
 
-Appelez `SetWizardMode` avant d’appeler [DoModal](#domodal). Une fois que vous avez appelé `SetWizardMode`, `DoModal` retourne l’un ID_WIZFINISH (si l’utilisateur se ferme avec le bouton Terminer) ou IDCANCEL.
+Appelez `SetWizardMode` avant d’appeler [DoModal](#domodal). Après votre `SetWizardMode` `DoModal` appel, vous retournerez soit ID_WIZFINISH (si l’utilisateur se ferme avec le bouton Finition) ou IDCANCEL.
 
-`SetWizardMode` définit l’indicateur de PSH_WIZARD.
+`SetWizardMode`pose le drapeau PSH_WIZARD.
 
 ### <a name="example"></a>Exemple
 
@@ -830,9 +830,9 @@ Appelez `SetWizardMode` avant d’appeler [DoModal](#domodal). Une fois que vous
 
 ## <a name="see-also"></a>Voir aussi
 
-[Exemple MFC CMNCTRL1](../../overview/visual-cpp-samples.md)<br/>
-[Exemple MFC CMNCTRL2](../../overview/visual-cpp-samples.md)<br/>
-[Exemple MFC PROPDLG](../../overview/visual-cpp-samples.md)<br/>
-[Exemple MFC SNAPVW](../../overview/visual-cpp-samples.md)<br/>
+[Échantillon MFC CMNCTRL1](../../overview/visual-cpp-samples.md)<br/>
+[Échantillon MFC CMNCTRL2](../../overview/visual-cpp-samples.md)<br/>
+[MFC Échantillon PROPDLG](../../overview/visual-cpp-samples.md)<br/>
+[Échantillon MFC SNAPVW](../../overview/visual-cpp-samples.md)<br/>
 [CWnd, classe](../../mfc/reference/cwnd-class.md)<br/>
 [Graphique hiérarchique](../../mfc/hierarchy-chart.md)

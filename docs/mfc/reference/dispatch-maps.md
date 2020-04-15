@@ -6,32 +6,32 @@ helpviewer_keywords:
 - dispatch maps [MFC]
 - dispatch map macros [MFC]
 ms.assetid: bef9d08b-ad35-4c3a-99d8-04150c7c04e2
-ms.openlocfilehash: f1afa95d7c20d54f2015255a7e4e0d7ad9ae9c2b
-ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
+ms.openlocfilehash: 59dd8c7a7b0b930ffdb68fd96410fd73aeb02e81
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/16/2020
-ms.locfileid: "79421351"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81365754"
 ---
 # <a name="dispatch-maps"></a>Tables de dispatch
 
-OLE Automation permet d’appeler des méthodes et d’accéder aux propriétés d’une application à l’autre. Le mécanisme fourni par le bibliothèque MFC (Microsoft Foundation Class) pour distribuer ces requêtes est la « table de dispatch », qui désigne les noms internes et externes des fonctions et des propriétés d’objet, ainsi que les types de données des propriétés elles-mêmes et de arguments de fonction.
+OLE Automation fournit des moyens d’appeler les méthodes et d’accéder aux propriétés entre les applications. Le mécanisme fourni par la Microsoft Foundation Class Library pour l’envoi de ces demandes est la « carte d’expédition », qui désigne les noms internes et externes des fonctions et des propriétés des objets, ainsi que les types de données des propriétés elles-mêmes et des arguments de fonction.
 
-|Macro de table de dispatch|Description|
+|Carte d’expédition macro|Description|
 |-|-|
-|[DECLARE_DISPATCH_MAP](#declare_dispatch_map)|Déclare qu’une table de dispatch sera utilisée pour exposer les méthodes et les propriétés d’une classe (doit être utilisé dans la déclaration de classe).|
-|[BEGIN_DISPATCH_MAP](#begin_dispatch_map)|Démarre la définition d’une table de dispatch.|
-|[END_DISPATCH_MAP](#end_dispatch_map)|Termine la définition d’une table de dispatch.|
-|[DISP_FUNCTION](#disp_function)|Utilisé dans une table de dispatch pour définir une fonction OLE Automation.|
-|[DISP_PROPERTY](#disp_property)|Définit une propriété OLE Automation.|
-|[DISP_PROPERTY_EX](#disp_property_ex)|Définit une propriété OLE Automation et nomme les fonctions d’extraction et de définition.|
-|[DISP_PROPERTY_NOTIFY](#disp_property_notify)|Définit une propriété OLE Automation avec notification.|
-|[DISP_PROPERTY_PARAM](#disp_property_param)|Définit une propriété OLE Automation qui accepte des paramètres et nomme les fonctions d’extraction et de définition.|
+|[DECLARE_DISPATCH_MAP](#declare_dispatch_map)|Déclare qu’une carte de répartition sera utilisée pour exposer les méthodes et les propriétés d’une classe (doit être utilisée dans la déclaration de classe).|
+|[BEGIN_DISPATCH_MAP](#begin_dispatch_map)|Commence la définition d’une carte de répartition.|
+|[END_DISPATCH_MAP](#end_dispatch_map)|Termine la définition d’une carte de répartition.|
+|[DISP_FUNCTION](#disp_function)|Utilisé dans une carte d’expédition pour définir une fonction d’automatisation OLE.|
+|[DISP_PROPERTY](#disp_property)|Définit une propriété d’automatisation OLE.|
+|[DISP_PROPERTY_EX](#disp_property_ex)|Définit une propriété d’automatisation OLE et nomme les fonctions Get and Set.|
+|[DISP_PROPERTY_NOTIFY](#disp_property_notify)|Définit une propriété d’automatisation OLE avec notification.|
+|[DISP_PROPERTY_PARAM](#disp_property_param)|Définit une propriété d’automatisation OLE qui prend des paramètres et nomme les fonctions Get and Set.|
 |[DISP_DEFVALUE](#disp_defvalue)|Fait d’une propriété existante la valeur par défaut d’un objet.|
 
-## <a name="declare_dispatch_map"></a>DECLARE_DISPATCH_MAP
+## <a name="declare_dispatch_map"></a><a name="declare_dispatch_map"></a>DECLARE_DISPATCH_MAP
 
-Si une classe dérivée d' `CCmdTarget`dans votre programme prend en charge OLE Automation, cette classe doit fournir un mappage de dispatch pour exposer ses méthodes et ses propriétés.
+Si `CCmdTarget`une classe dérivée de votre programme prend en charge OLE Automation, cette classe doit fournir une carte de répartition pour exposer ses méthodes et propriétés.
 
 ```cpp
 DECLARE_DISPATCH_MAP()
@@ -39,12 +39,12 @@ DECLARE_DISPATCH_MAP()
 
 ### <a name="remarks"></a>Notes
 
-Utilisez la macro DECLARE_DISPATCH_MAP à la fin de votre déclaration de classe. Puis, dans la. CPP qui définit les fonctions membres de la classe, utilisez la macro BEGIN_DISPATCH_MAP. Incluez ensuite des entrées de macro pour chaque méthode et propriété exposées de votre classe (DISP_FUNCTION, DISP_PROPERTY, etc.). Enfin, utilisez la macro END_DISPATCH_MAP.
+Utilisez la DECLARE_DISPATCH_MAP macro à la fin de votre déclaration de classe. Puis, dans le . Fichier du RPC qui définit les fonctions des membres pour la classe, utilisez le BEGIN_DISPATCH_MAP macro. Ensuite, incluez des entrées macro pour chacune des méthodes et propriétés exposées de votre classe (DISP_FUNCTION, DISP_PROPERTY, et ainsi de suite). Enfin, utilisez la macro END_DISPATCH_MAP.
 
 > [!NOTE]
-> Si vous déclarez des membres après DECLARE_DISPATCH_MAP, vous devez spécifier un nouveau type d’accès ( **public**, **privé**ou **protégé**).
+> Si vous déclarez des membres après DECLARE_DISPATCH_MAP, vous devez spécifier un nouveau type d’accès **(public,** **privé**ou **protégé)** pour eux.
 
-L’Assistant Application et les assistants code aident à créer des classes Automation et à gérer les tables de dispatch. Pour plus d’informations sur les tables de dispatch, consultez [Serveurs Automation](../../mfc/automation-servers.md).
+L’Assistant d’Application et les assistants de code aident à créer des classes d’automatisation et à maintenir des cartes d’expédition. Pour plus d’informations sur les cartes de répartition, voir [Serveurs d’automatisation](../../mfc/automation-servers.md).
 
 ### <a name="example"></a>Exemple
 
@@ -54,9 +54,9 @@ L’Assistant Application et les assistants code aident à créer des classes Au
 
 **En-tête :** afxwin.h
 
-## <a name="begin_dispatch_map"></a>BEGIN_DISPATCH_MAP
+## <a name="begin_dispatch_map"></a><a name="begin_dispatch_map"></a>BEGIN_DISPATCH_MAP
 
-Déclare la définition de votre table de dispatch.
+Déclare la définition de votre carte de répartition.
 
 ```cpp
 BEGIN_DISPATCH_MAP(theClass, baseClass)
@@ -64,23 +64,23 @@ BEGIN_DISPATCH_MAP(theClass, baseClass)
 
 ### <a name="parameters"></a>Paramètres
 
-*Les*<br/>
-Spécifie le nom de la classe qui possède ce mappage de dispatch.
+*la Classe*<br/>
+Précise le nom de la classe qui possède cette carte de répartition.
 
-*baseClass*<br/>
-Spécifie le nom de la classe de base de *les*.
+*Baseclass*<br/>
+Spécifie le nom de classe de base de *la Classe*.
 
 ### <a name="remarks"></a>Notes
 
-Dans le fichier d’implémentation (. cpp) qui définit les fonctions membres pour votre classe, démarrez la table de dispatch avec la macro BEGIN_DISPATCH_MAP, ajoutez des entrées de macro pour chacune de vos fonctions et propriétés de répartition, puis complétez la table de dispatch avec le END_DISPATCH_ Macro de mappage.
+Dans le fichier de mise en œuvre (.cpp) qui définit les fonctions des membres pour votre classe, démarrez la carte de répartition avec la BEGIN_DISPATCH_MAP macro, ajoutez des entrées macro pour chacune de vos fonctions et propriétés de répartition, et complétez la carte de répartition avec la END_DISPATCH_MAP macro.
 
 ### <a name="requirements"></a>Spécifications
 
 **En-tête :** afxdisp.h
 
-## <a name="end_dispatch_map"></a>END_DISPATCH_MAP
+## <a name="end_dispatch_map"></a><a name="end_dispatch_map"></a>END_DISPATCH_MAP
 
-Termine la définition de votre table de dispatch.
+Termine la définition de votre carte de répartition.
 
 ```cpp
 END_DISPATCH_MAP()
@@ -88,15 +88,15 @@ END_DISPATCH_MAP()
 
 ### <a name="remarks"></a>Notes
 
-Elle doit être utilisée conjointement avec BEGIN_DISPATCH_MAP.
+Il doit être utilisé en conjonction avec BEGIN_DISPATCH_MAP.
 
 ### <a name="requirements"></a>Spécifications
 
 **En-tête :** afxdisp.h
 
-## <a name="disp_function"></a>DISP_FUNCTION
+## <a name="disp_function"></a><a name="disp_function"></a>DISP_FUNCTION
 
-Définit une fonction OLE Automation dans une table de dispatch.
+Définit une fonction d’automatisation OLE dans une carte de répartition.
 
 ```cpp
 DISP_FUNCTION(
@@ -109,31 +109,31 @@ DISP_FUNCTION(
 
 ### <a name="parameters"></a>Paramètres
 
-*Les*<br/>
+*la Classe*<br/>
 Nom de la classe.
 
-*pszName*<br/>
+*pszName (en)*<br/>
 Nom externe de la fonction.
 
 *pfnMember*<br/>
 Nom de la fonction membre.
 
 *vtRetVal*<br/>
-Valeur qui spécifie le type de retour de la fonction.
+Une valeur spécifiant le type de retour de la fonction.
 
 *vtsParams*<br/>
-Liste séparée par des espaces d’une ou de plusieurs constantes spécifiant la liste de paramètres de la fonction.
+Une liste séparée par l’espace d’une ou plusieurs constantes spécifiant la liste des paramètres de la fonction.
 
 ### <a name="remarks"></a>Notes
 
-L’argument *vtRetVal* est de type VarType. Les valeurs possibles suivantes pour cet argument sont extraites de l’énumération `VARENUM` :
+*L’argument vtRetVal* est de type VARTYPE. Les valeurs suivantes pour cet argument `VARENUM` sont tirées de l’énumération :
 
 |Symbole|Type de retour|
 |------------|-----------------|
 |VT_EMPTY|**void**|
 |VT_I2|**short**|
-|VT_I4|**long**|
-|VT_R4|**float**|
+|VT_I4|**Long**|
+|VT_R4|**Flotteur**|
 |VT_R8|**double**|
 |VT_CY|CY|
 |VT_DATE|DATE|
@@ -144,19 +144,19 @@ L’argument *vtRetVal* est de type VarType. Les valeurs possibles suivantes pou
 |VT_VARIANT|VARIANT|
 |VT_UNKNOWN|LPUNKNOWN|
 
-L’argument *vtsParams* est une liste de valeurs séparées par des espaces des constantes `VTS_*`. Une ou plusieurs de ces valeurs, séparées par des espaces (et non par des virgules), spécifient la liste de paramètres de la fonction. Par exemple,
+*L’argument vtsParams* est une liste de `VTS_*` valeurs séparées par l’espace des constantes. Une ou plusieurs de ces valeurs séparées par des espaces (et non des virgules) spécifient la liste des paramètres de la fonction. Par exemple,
 
 [!code-cpp[NVC_MFCAutomation#14](../../mfc/codesnippet/cpp/dispatch-maps_2.cpp)]
 
-spécifie une liste contenant un entier Short suivi d’un pointeur vers un entier bref.
+spécifie une liste contenant un integer court suivi d’un pointeur à un integer court.
 
-Les constantes de `VTS_` et leurs significations sont les suivantes :
+Les `VTS_` constantes et leurs significations sont les suivantes :
 
 |Symbole|Type de paramètre|
 |------------|--------------------|
 |VTS_I2|**short**|
-|VTS_I4|**long**|
-|VTS_R4|**float**|
+|VTS_I4|**Long**|
+|VTS_R4|**Flotteur**|
 |VTS_R8|**double**|
 |VTS_CY|`const CY` ou `CY*`|
 |VTS_DATE|DATE|
@@ -166,10 +166,10 @@ Les constantes de `VTS_` et leurs significations sont les suivantes :
 |VTS_BOOL|BOOL|
 |VTS_VARIANT|`const VARIANT*` ou `VARIANT&`|
 |VTS_UNKNOWN|LPUNKNOWN|
-|VTS_PI2|__\* Short__|
-|VTS_PI4|__\* long__|
-|VTS_PR4|__\* float__|
-|VTS_PR8|__double\*__|
+|VTS_PI2|__Court\*__|
+|VTS_PI4|__Long\*__|
+|VTS_PR4|__Flotteur\*__|
+|VTS_PR8|__Double\*__|
 |VTS_PCY|`CY*`|
 |VTS_PDATE|`DATE*`|
 |VTS_PBSTR|`BSTR*`|
@@ -184,9 +184,9 @@ Les constantes de `VTS_` et leurs significations sont les suivantes :
 
 **En-tête :** afxdisp.h
 
-## <a name="disp_property"></a>DISP_PROPERTY
+## <a name="disp_property"></a><a name="disp_property"></a>DISP_PROPERTY
 
-Définit une propriété OLE Automation dans une table de dispatch.
+Définit une propriété d’automatisation OLE dans une carte de répartition.
 
 ```cpp
 DISP_PROPERTY(
@@ -198,27 +198,27 @@ DISP_PROPERTY(
 
 ### <a name="parameters"></a>Paramètres
 
-*Les*<br/>
+*la Classe*<br/>
 Nom de la classe.
 
-*pszName*<br/>
+*pszName (en)*<br/>
 Nom externe de la propriété.
 
-*memberName*<br/>
-Nom de la variable membre dans laquelle la propriété est stockée.
+*Membername*<br/>
+Nom de la variable du membre dans laquelle la propriété est stockée.
 
-*vtPropType*<br/>
-Valeur qui spécifie le type de la propriété.
+*vtPropType (en)*<br/>
+Une valeur spécifiant le type de propriété.
 
 ### <a name="remarks"></a>Notes
 
-L’argument *vtPropType* est de type **VarType**. Les valeurs possibles pour cet argument sont extraites de l’énumération VARENUM :
+*L’argument vtPropType* est de type **VARTYPE**. Les valeurs possibles pour cet argument sont tirées de l’énumération VARENUM :
 
 |Symbole|Type de propriété|
 |------------|-----------------------|
 |VT_I2|**short**|
-|VT_I4|**long**|
-|VT_R4|**float**|
+|VT_I4|**Long**|
+|VT_R4|**Flotteur**|
 |VT_R8|**double**|
 |VT_CY|CY|
 |VT_DATE|DATE|
@@ -229,15 +229,15 @@ L’argument *vtPropType* est de type **VarType**. Les valeurs possibles pour ce
 |VT_VARIANT|VARIANT|
 |VT_UNKNOWN|LPUNKNOWN|
 
-Lorsqu’un client externe modifie la propriété, la valeur de la variable membre spécifiée par *MemberName* change ; Il n’y a aucune notification de la modification.
+Lorsqu’un client externe modifie la propriété, la valeur de la variable du membre spécifiée par *le membreName* change; il n’y a pas de notification de la modification.
 
 ### <a name="requirements"></a>Spécifications
 
 **En-tête :** afxdisp.h
 
-## <a name="disp_property_ex"></a>DISP_PROPERTY_EX
+## <a name="disp_property_ex"></a><a name="disp_property_ex"></a>DISP_PROPERTY_EX
 
-Définit une propriété OLE Automation et nomme les fonctions utilisées pour obtenir et définir la valeur de la propriété dans une table de dispatch.
+Définit une propriété d’automatisation OLE et nomme les fonctions utilisées pour obtenir et définir la valeur de la propriété dans une carte de répartition.
 
 ```cpp
 DISP_PROPERTY_EX(
@@ -250,34 +250,34 @@ DISP_PROPERTY_EX(
 
 ### <a name="parameters"></a>Paramètres
 
-*Les*<br/>
+*la Classe*<br/>
 Nom de la classe.
 
-*pszName*<br/>
+*pszName (en)*<br/>
 Nom externe de la propriété.
 
-*memberGet*<br/>
-Nom de la fonction membre utilisée pour accéder à la propriété.
+*membreGet*<br/>
+Nom de la fonction membre utilisé pour obtenir la propriété.
 
-*PEL*<br/>
-Nom de la fonction membre utilisée pour définir la propriété.
+*memberSet*<br/>
+Nom de la fonction membre utilisé pour définir la propriété.
 
-*vtPropType*<br/>
-Valeur qui spécifie le type de la propriété.
+*vtPropType (en)*<br/>
+Une valeur spécifiant le type de propriété.
 
 ### <a name="remarks"></a>Notes
 
-Les fonctions *memberGet* et *memberSet* ont des signatures déterminées par l’argument *vtPropType* . La fonction *memberGet* n’accepte aucun argument et retourne une valeur du type spécifié par *vtPropType*. La fonction *memberSet* accepte un argument du type spécifié par *vtPropType* et ne retourne rien.
+Les fonctions *memberGet* et *memberSet* ont des signatures déterminées par l’argument *vtPropType.* La fonction *memberGet* ne prend aucun argument et renvoie une valeur du type spécifiée par *vtPropType*. La fonction *MemberSet* prend un argument du type spécifié par *vtPropType* et ne renvoie rien.
 
-L’argument *vtPropType* est de type VarType. Les valeurs possibles pour cet argument sont extraites de l’énumération VARENUM. Pour obtenir la liste de ces valeurs, consultez les notes relatives au paramètre *vtRetVal* dans [DISP_FUNCTION](#disp_function). Notez que VT_EMPTY, listé dans les notes de DISP_FUNCTION, n’est pas autorisé en tant que type de données de propriété.
+*L’argument vtPropType* est de type VARTYPE. Les valeurs possibles pour cet argument sont tirées de l’énumération VARENUM. Pour une liste de ces valeurs, voir les remarques pour le paramètre *vtRetVal* dans [DISP_FUNCTION](#disp_function). Notez que VT_EMPTY, énumérés dans les remarques DISP_FUNCTION, n’est pas permis comme type de données de propriété.
 
 ### <a name="requirements"></a>Spécifications
 
 **En-tête :** afxdisp.h
 
-## <a name="disp_property_notify"></a>DISP_PROPERTY_NOTIFY
+## <a name="disp_property_notify"></a><a name="disp_property_notify"></a>DISP_PROPERTY_NOTIFY
 
-Définit une propriété OLE Automation avec notification dans une table de dispatch.
+Définit une propriété d’automatisation OLE avec notification dans une carte de répartition.
 
 ```cpp
 DISP_PROPERTY_NOTIFY(
@@ -290,32 +290,32 @@ DISP_PROPERTY_NOTIFY(
 
 ### <a name="parameters"></a>Paramètres
 
-*Les*<br/>
+*la Classe*<br/>
 Nom de la classe.
 
-*szExternalName*<br/>
+*szExternalName (en anglais)*<br/>
 Nom externe de la propriété.
 
-*memberName*<br/>
-Nom de la variable membre dans laquelle la propriété est stockée.
+*Membername*<br/>
+Nom de la variable du membre dans laquelle la propriété est stockée.
 
 *pfnAfterSet*<br/>
 Nom de la fonction de notification pour *szExternalName*.
 
-*vtPropType*<br/>
-Valeur qui spécifie le type de la propriété.
+*vtPropType (en)*<br/>
+Une valeur spécifiant le type de propriété.
 
 ### <a name="remarks"></a>Notes
 
 Contrairement aux propriétés définies avec DISP_PROPERTY, une propriété définie avec DISP_PROPERTY_NOTIFY appellera automatiquement la fonction spécifiée par *pfnAfterSet* lorsque la propriété est modifiée.
 
-L’argument *vtPropType* est de type VarType. Les valeurs possibles pour cet argument sont extraites de l’énumération VARENUM :
+*L’argument vtPropType* est de type VARTYPE. Les valeurs possibles pour cet argument sont tirées de l’énumération VARENUM :
 
 |Symbole|Type de propriété|
 |------------|-----------------------|
 |VT_I2|**short**|
-|VT_I4|**long**|
-|VT_R4|**float**|
+|VT_I4|**Long**|
+|VT_R4|**Flotteur**|
 |VT_R8|**double**|
 |VT_CY|CY|
 |VT_DATE|DATE|
@@ -330,9 +330,9 @@ L’argument *vtPropType* est de type VarType. Les valeurs possibles pour cet ar
 
 **En-tête :** afxdisp.h
 
-## <a name="disp_property_param"></a>DISP_PROPERTY_PARAM
+## <a name="disp_property_param"></a><a name="disp_property_param"></a>DISP_PROPERTY_PARAM
 
-Définit une propriété accessible avec des fonctions membres `Get` et `Set` distinctes.
+Définit une propriété accessible `Get` avec `Set` des fonctions séparées et membres.
 
 ```cpp
 DISP_PROPERTY_PARAM(
@@ -346,43 +346,43 @@ DISP_PROPERTY_PARAM(
 
 ### <a name="parameters"></a>Paramètres
 
-*Les*<br/>
+*la Classe*<br/>
 Nom de la classe.
 
-*pszExternalName*<br/>
+*pszExternalName (en anglais)*<br/>
 Nom externe de la propriété.
 
 *pfnGet*<br/>
-Nom de la fonction membre utilisée pour accéder à la propriété.
+Nom de la fonction membre utilisé pour obtenir la propriété.
 
-*pfnSet*<br/>
-Nom de la fonction membre utilisée pour définir la propriété.
+*pfnSet (en anglais)*<br/>
+Nom de la fonction membre utilisé pour définir la propriété.
 
-*vtPropType*<br/>
-Valeur qui spécifie le type de la propriété.
+*vtPropType (en)*<br/>
+Une valeur spécifiant le type de propriété.
 
 *vtsParams*<br/>
-Chaîne de types de paramètres variant séparés par des espaces `VTS_*`, un pour chaque paramètre.
+Une chaîne de `VTS_*` types de paramètres de variante séparés par l’espace, un pour chaque paramètre.
 
 ### <a name="remarks"></a>Notes
 
-Contrairement à la macro DISP_PROPERTY_EX, cette macro vous permet de spécifier une liste de paramètres pour la propriété. Cela est utile pour implémenter des propriétés indexées ou paramétrées.
+Contrairement à la DISP_PROPERTY_EX macro, cette macro vous permet de spécifier une liste de paramètres pour la propriété. Ceci est utile pour la mise en œuvre de propriétés indexées ou paramétrées.
 
 ### <a name="example"></a>Exemple
 
-Considérez la déclaration suivante des fonctions membres obtenir et définir qui permettent à l’utilisateur de demander une ligne et une colonne spécifiques lors de l’accès à la propriété :
+Considérez la déclaration suivante d’obtenir et de définir les fonctions des membres qui permettent à l’utilisateur de demander une ligne et une colonne spécifiques lors de l’accès à la propriété :
 
 [!code-cpp[NVC_MFCActiveXControl#9](../../mfc/codesnippet/cpp/dispatch-maps_3.h)]
 
-Celles-ci correspondent à la macro DISP_PROPERTY_PARAM suivante dans le mappage de dispatch de contrôle :
+Ceux-ci correspondent à la macro DISP_PROPERTY_PARAM suivante dans la carte de répartition de contrôle :
 
 [!code-cpp[NVC_MFCActiveXControl#10](../../mfc/codesnippet/cpp/dispatch-maps_4.cpp)]
 
-En guise d’autre exemple, considérez les fonctions membres suivantes :
+À titre d’exemple, considérez les fonctions suivantes pour obtenir et définir les membres :
 
 [!code-cpp[NVC_MFCActiveXControl#11](../../mfc/codesnippet/cpp/dispatch-maps_5.h)]
 
-Celles-ci correspondent à la macro DISP_PROPERTY_PARAM suivante dans le mappage de dispatch de contrôle :
+Ceux-ci correspondent à la macro DISP_PROPERTY_PARAM suivante dans la carte de répartition de contrôle :
 
 [!code-cpp[NVC_MFCActiveXControl#12](../../mfc/codesnippet/cpp/dispatch-maps_6.cpp)]
 
@@ -390,7 +390,7 @@ Celles-ci correspondent à la macro DISP_PROPERTY_PARAM suivante dans le mappage
 
 **En-tête :** afxdisp.h
 
-## <a name="disp_defvalue"></a>DISP_DEFVALUE
+## <a name="disp_defvalue"></a><a name="disp_defvalue"></a>DISP_DEFVALUE
 
 Fait d’une propriété existante la valeur par défaut d’un objet.
 
@@ -400,17 +400,17 @@ DISP_DEFVALUE(theClass, pszName)
 
 ### <a name="parameters"></a>Paramètres
 
-*Les*<br/>
+*la Classe*<br/>
 Nom de la classe.
 
-*pszName*<br/>
-Nom externe de la propriété qui représente la « valeur » de l’objet.
+*pszName (en)*<br/>
+Nom externe de la propriété qui représente la "valeur" de l’objet.
 
 ### <a name="remarks"></a>Notes
 
-L’utilisation d’une valeur par défaut permet de simplifier la programmation de votre objet Automation pour les applications Visual Basic.
+L’utilisation d’une valeur par défaut peut simplifier la programmation de votre objet d’automatisation pour les applications Visual Basic.
 
-La « valeur par défaut » de votre objet est la propriété qui est extraite ou définie quand une référence à un objet ne spécifie pas une propriété ou une fonction membre.
+La « valeur par défaut » de votre objet est la propriété qui est récupérée ou définie lorsqu’une référence à un objet ne spécifie pas une propriété ou une fonction de membre.
 
 ### <a name="requirements"></a>Spécifications
 
@@ -418,4 +418,4 @@ La « valeur par défaut » de votre objet est la propriété qui est extraite
 
 ## <a name="see-also"></a>Voir aussi
 
-[Macros et globales](../../mfc/reference/mfc-macros-and-globals.md)
+[Macros et objet Globals](../../mfc/reference/mfc-macros-and-globals.md)

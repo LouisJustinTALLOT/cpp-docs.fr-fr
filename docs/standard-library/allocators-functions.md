@@ -14,12 +14,12 @@ helpviewer_keywords:
 - std::CACHE_FREELIST [C++]
 - std::CACHE_SUBALLOC [C++]
 - std::SYNC_DEFAULT [C++]
-ms.openlocfilehash: 5355661e370daf8826541c036f7301e5c25788d7
-ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
+ms.openlocfilehash: a8b988511d0cdd46ae7f41bce29eb26f593a57c4
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/16/2020
-ms.locfileid: "79416927"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81364971"
 ---
 # <a name="ltallocatorsgt-macros"></a>&lt;allocators&gt;, macros
 
@@ -28,9 +28,9 @@ ms.locfileid: "79416927"
 |[ALLOCATOR_DECL](#allocator_decl)|[CACHE_CHUNKLIST](#cache_chunklist)|[CACHE_FREELIST](#cache_freelist)|
 |[CACHE_SUBALLOC](#cache_suballoc)|[SYNC_DEFAULT](#sync_default)|
 
-## <a name="allocator_decl"></a>  ALLOCATOR_DECL
+## <a name="allocator_decl"></a><a name="allocator_decl"></a>ALLOCATOR_DECL
 
-Produit un modèle de classe Allocator.
+Donne un modèle de classe d’allocateur.
 
 ```cpp
 #define ALLOCATOR_DECL(cache, sync, name) <alloc_template>
@@ -38,7 +38,7 @@ Produit un modèle de classe Allocator.
 
 ### <a name="remarks"></a>Notes
 
-La macro génère une définition de modèle `template <class Type> class name {.....}` et une spécialisation `template <> class name<void> {.....}` qui définissent ensemble un modèle de classe Allocator qui utilise le filtre de synchronisation `sync` et un cache de type `cache`.
+La macro donne `template <class Type> class name {.....}` une définition `template <> class name<void> {.....}` de modèle et une spécialisation qui définissent `sync` ensemble un modèle `cache`de classe d’allocateur qui utilise le filtre de synchronisation et un cache de type .
 
 Pour les compilateurs qui peuvent compiler rebind, la définition de modèle obtenue ressemble à ceci :
 
@@ -68,7 +68,7 @@ public:
 };
 ```
 
-## <a name="cache_chunklist"></a>  CACHE_CHUNKLIST
+## <a name="cache_chunklist"></a><a name="cache_chunklist"></a>CACHE_CHUNKLIST
 
 Génère `stdext::allocators::cache_chunklist<sizeof(Type)>`.
 
@@ -78,7 +78,7 @@ Génère `stdext::allocators::cache_chunklist<sizeof(Type)>`.
 
 ### <a name="remarks"></a>Notes
 
-## <a name="cache_freelist"></a>  CACHE_FREELIST
+## <a name="cache_freelist"></a><a name="cache_freelist"></a>CACHE_FREELIST
 
 Génère `stdext::allocators::cache_freelist<sizeof(Type), max>`.
 
@@ -88,7 +88,7 @@ Génère `stdext::allocators::cache_freelist<sizeof(Type), max>`.
 
 ### <a name="remarks"></a>Notes
 
-## <a name="cache_suballoc"></a>  CACHE_SUBALLOC
+## <a name="cache_suballoc"></a><a name="cache_suballoc"></a>CACHE_SUBALLOC
 
 Génère `stdext::allocators::cache_suballoc<sizeof(Type)>`.
 
@@ -98,7 +98,7 @@ Génère `stdext::allocators::cache_suballoc<sizeof(Type)>`.
 
 ### <a name="remarks"></a>Notes
 
-## <a name="sync_default"></a>  SYNC_DEFAULT
+## <a name="sync_default"></a><a name="sync_default"></a>SYNC_DEFAULT
 
 Génère un filtre de synchronisation.
 
@@ -112,4 +112,4 @@ Si un compilateur prend en charge la compilation d’applications monothread et 
 
 ## <a name="see-also"></a>Voir aussi
 
-[\<allocators>](../standard-library/allocators-header.md)
+[\<les allocataires>](../standard-library/allocators-header.md)

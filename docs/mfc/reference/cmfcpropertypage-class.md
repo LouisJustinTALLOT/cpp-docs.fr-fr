@@ -8,16 +8,16 @@ f1_keywords:
 helpviewer_keywords:
 - CMFCPropertyPage [MFC], CMFCPropertyPage
 ms.assetid: d279d7f2-2d81-418d-9f23-6147d6e8df09
-ms.openlocfilehash: 4be584135ef789d7fbe3b1743ac0ad6ce66ac5b1
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: e493f016b6384a768935186c31e3fc71ade6382f
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69505040"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81361765"
 ---
 # <a name="cmfcpropertypage-class"></a>CMFCPropertyPage, classe
 
-La `CMFCPropertyPage` classe prend en charge l’affichage des menus contextuels dans une page de propriétés.
+La `CMFCPropertyPage` classe prend en charge l’affichage de menus pop-up sur une page de propriété.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -31,7 +31,7 @@ class CMFCPropertyPage : public CPropertyPage
 
 |Nom|Description|
 |----------|-----------------|
-|[CMFCPropertyPage:: CMFCPropertyPage](#cmfcpropertypage)|Construit un objet `CMFCPropertyPage`.|
+|[CMFCPropertyPage::CMFCPropertyPage](#cmfcpropertypage)|Construit un objet `CMFCPropertyPage`.|
 |`CMFCPropertyPage::~CMFCPropertyPage`|Destructeur.|
 
 ### <a name="public-methods"></a>M&#233;thodes publiques
@@ -39,15 +39,15 @@ class CMFCPropertyPage : public CPropertyPage
 |Nom|Description|
 |----------|-----------------|
 |`CMFCPropertyPage::CreateObject`|Utilisé par l'infrastructure pour créer une instance dynamique de ce type de classe.|
-|`CMFCPropertyPage::GetThisClass`|Utilisé par l’infrastructure pour obtenir un pointeur vers l’objet [CRuntimeClass](../../mfc/reference/cruntimeclass-structure.md) associé à ce type de classe.|
-|`CMFCPropertyPage::OnSetActive`|Cette fonction membre est appelée par l’infrastructure lorsque la page est choisie par l’utilisateur et devient la page active. (Substitue [CPropertyPage:: OnSetActive](../../mfc/reference/cpropertypage-class.md#onsetactive).)|
-|`CMFCPropertyPage::PreTranslateMessage`|Traduit les messages de fenêtre avant qu’ils ne soient distribués aux fonctions Windows [TranslateMessage](/windows/win32/api/winuser/nf-winuser-translatemessage) et [DispatchMessage](/windows/win32/api/winuser/nf-winuser-dispatchmessage) . Pour plus d’informations et la syntaxe de méthode, consultez [CWnd::P retranslatemessage](../../mfc/reference/cwnd-class.md#pretranslatemessage). (Substitue `CPropertyPage::PreTranslateMessage`.)|
+|`CMFCPropertyPage::GetThisClass`|Utilisé par le cadre pour obtenir un pointeur à l’objet [CRuntimeClass](../../mfc/reference/cruntimeclass-structure.md) qui est associé à ce type de classe.|
+|`CMFCPropertyPage::OnSetActive`|Cette fonction de membre est appelée par le cadre lorsque la page est choisie par l’utilisateur et devient la page active. (Overrides [CPropertyPage::OnSetActive](../../mfc/reference/cpropertypage-class.md#onsetactive).)|
+|`CMFCPropertyPage::PreTranslateMessage`|Traduit les messages de fenêtre avant qu’ils ne soient envoyés aux [fonctions De Windows De TranslateMessage](/windows/win32/api/winuser/nf-winuser-translatemessage) et [DispatchMessage.](/windows/win32/api/winuser/nf-winuser-dispatchmessage) Pour plus d’informations et de syntaxe méthode, voir [CWnd::PreTranslateMessage](../../mfc/reference/cwnd-class.md#pretranslatemessage). (Substitue `CPropertyPage::PreTranslateMessage`.)|
 
 ## <a name="remarks"></a>Notes
 
-La `CMFCPropertyPage` classe représente des pages individuelles d’une feuille de propriétés, également appelée boîte de dialogue à onglets.
+La `CMFCPropertyPage` classe représente les pages individuelles d’une feuille de propriété, autrement connue sous le nom de boîte de dialogue d’onglet.
 
-Utilisez la `CMFCPropertyPage` classe avec la classe [CMFCPropertySheet](../../mfc/reference/cmfcpropertysheet-class.md) . Pour utiliser des menus sur une page de propriétés, remplacez toutes les occurrences de `CPropertyPage` la `CMFCPropertyPage` classe par la classe.
+Utilisez `CMFCPropertyPage` la classe avec la classe [CMFCPropertySheet.](../../mfc/reference/cmfcpropertysheet-class.md) Pour utiliser les menus sur une page `CPropertyPage` de propriété, remplacez tous les événements de la classe par la `CMFCPropertyPage` classe.
 
 ## <a name="inheritance-hierarchy"></a>Hiérarchie d'héritage
 
@@ -63,11 +63,11 @@ Utilisez la `CMFCPropertyPage` classe avec la classe [CMFCPropertySheet](../../m
 
 [CMFCPropertyPage](../../mfc/reference/cmfcpropertypage-class.md)
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
-**En-tête:** afxpropertypage. h
+**En-tête:** afxpropertypage.h
 
-##  <a name="cmfcpropertypage"></a>  CMFCPropertyPage::CMFCPropertyPage
+## <a name="cmfcpropertypagecmfcpropertypage"></a><a name="cmfcpropertypage"></a>CMFCPropertyPage::CMFCPropertyPage
 
 Construit un objet `CMFCPropertyPage`.
 
@@ -83,20 +83,20 @@ CMFCPropertyPage(
 
 ### <a name="parameters"></a>Paramètres
 
-*nIDTemplate*<br/>
-ID de ressource du modèle pour cette page.
+*nIDTemplate (en)*<br/>
+Id de ressources du modèle pour cette page.
 
-*nIDCaption*<br/>
-ID de ressource de l’étiquette à placer dans l’onglet pour cette page. Si la valeur est 0, le nom est obtenu à partir du modèle de boîte de dialogue pour cette page. La valeur par défaut est 0.
+*nIDCaption (en)*<br/>
+Id de ressources de l’étiquette à mettre dans l’onglet pour cette page. Si 0, le nom est obtenu à partir du modèle de boîte de dialogue pour cette page. La valeur par défaut est 0.
 
 *lpszTemplateName*<br/>
-Pointe vers le nom du modèle pour cette page. Ne peut pas être Null.
+Indique le nom du modèle pour cette page. Ne peut pas avoir la valeur NULL.
 
 ### <a name="return-value"></a>Valeur de retour
 
 ### <a name="remarks"></a>Notes
 
-Pour plus d’informations sur les paramètres du constructeur, consultez [CPropertyPage:: CPropertyPage](../../mfc/reference/cpropertypage-class.md#cpropertypage).
+Pour plus d’informations sur les paramètres du constructeur, voir [CPropertyPage::CPropertyPage](../../mfc/reference/cpropertypage-class.md#cpropertypage).
 
 ## <a name="see-also"></a>Voir aussi
 

@@ -1,6 +1,6 @@
 ---
 title: _strnset, _strnset_l, _wcsnset, _wcsnset_l, _mbsnset, _mbsnset_l
-ms.date: 11/04/2016
+ms.date: 4/2/2020
 api_name:
 - _mbsnset
 - _strnset
@@ -8,6 +8,9 @@ api_name:
 - _wcsnset_l
 - _wcsnset
 - _strnset_l
+- _o__mbsnset
+- _o__mbsnset_l
+- _o__wcsnset
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -22,6 +25,7 @@ api_location:
 - api-ms-win-crt-multibyte-l1-1-0.dll
 - api-ms-win-crt-string-l1-1-0.dll
 - ntoskrnl.exe
+- api-ms-win-crt-private-l1-1-0
 api_type:
 - DLLExport
 topic_type:
@@ -69,12 +73,12 @@ helpviewer_keywords:
 - strings [C++], initializing
 - tcsnset_l function
 ms.assetid: 3f306489-5763-48e5-b939-aefee7c94ef5
-ms.openlocfilehash: bb2365684f9c35e1523b34aaad30c9ae6875b5c1
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 50b1a5157bd2a60d9819c92103a380ca1005be56
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70946970"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81364422"
 ---
 # <a name="_strnset-_strnset_l-_wcsnset-_wcsnset_l-_mbsnset-_mbsnset_l"></a>_strnset, _strnset_l, _wcsnset, _wcsnset_l, _mbsnset, _mbsnset_l
 
@@ -123,10 +127,10 @@ unsigned char *_mbsnset_l(
 
 ### <a name="parameters"></a>Paramètres
 
-*str*<br/>
+*Str*<br/>
 Chaîne à modifier.
 
-*c*<br/>
+*C*<br/>
 Paramètre de caractère.
 
 *count*<br/>
@@ -141,13 +145,15 @@ Retourne un pointeur vers la chaîne modifiée.
 
 ## <a name="remarks"></a>Notes
 
-La fonction **_strnset** définit, au plus, les premiers *caractères de* *Str* en *c* (convertis en **char**). Si *Count* est supérieur à la longueur de *Str*, la longueur de *Str* est utilisée à la place de *Count*.
+La **fonction _strnset** définit, tout au plus, les premiers *caractères* de comptage de *str* à *c* (converti en **char**). Si *le nombre* est plus grand que la longueur de *str,* la longueur de *str* est utilisé au lieu de *compter*.
 
-**_wcsnset** et **_mbsnset** sont des versions à caractères larges et à caractères multioctets de **_strnset**. Les arguments de chaîne et la valeur de retour de **_wcsnset** sont des chaînes à caractères larges ; ceux de **_mbsnset** sont des chaînes de caractères multioctets. Ces trois fonctions se comportent sinon de façon identique.
+**_wcsnset** et **_mbsnset** sont des versions à caractère large et multioctets de **_strnset**. Les arguments de chaîne et la valeur de retour de **_wcsnset** sont des cordes de caractère large; ceux de **_mbsnset** sont des cordes multioctets-caractères. Ces trois fonctions se comportent sinon de façon identique.
 
-**_mbsnset** valide ses paramètres ; Si *Str* est un pointeur null, le gestionnaire de paramètres non valides est appelé, comme décrit dans [validation de paramètre](../../c-runtime-library/parameter-validation.md) . Si l’exécution est autorisée à se poursuivre, **_mbsnset** retourne la **valeur null** et définit **errno** sur **EINVAL**. **_strnset** et **_wcsnset** ne valident pas leurs paramètres.
+**_mbsnset** valide ses paramètres; si *str* est un pointeur nul, le gestionnaire de paramètre invalide est invoqué, tel que décrit dans [La validation de paramètres](../../c-runtime-library/parameter-validation.md) . Si l’exécution est autorisée à se poursuivre, **_mbsnset** renvoie **NULL** et fixe **errno** à **EINVAL**. **_strnset** et **_wcsnset** ne valident pas leurs paramètres.
 
 La valeur de sortie est affectée par la valeur du paramètre de catégorie **LC_CTYPE** des paramètres régionaux. Pour plus d’informations, consultez [setlocale](setlocale-wsetlocale.md). Les versions de ces fonctions sans le suffixe **_l** utilisent les paramètres régionaux pour ce comportement dépendant des paramètres régionaux ; les versions avec le suffixe **_l** sont identiques, sauf qu’elles utilisent à la place les paramètres régionaux transmis. Pour plus d’informations, consultez [Locale](../../c-runtime-library/locale.md).
+
+Par défaut, l’état global de cette fonction est étendue à l’application. Pour changer cela, voir [Global State dans le CRT](../global-state.md).
 
 ### <a name="generic-text-routine-mappings"></a>Mappages de routines de texte générique
 
@@ -156,7 +162,7 @@ La valeur de sortie est affectée par la valeur du paramètre de catégorie **LC
 |**_tcsnset**|**_strnset**|**_mbsnbset**|**_wcsnset**|
 |**_tcsnset_l**|**_strnset_l**|**_mbsnbset_l**|**_wcsnset_l**|
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
 |Routine|En-tête requis|
 |-------------|---------------------|
@@ -194,9 +200,9 @@ After:  **** is a test
 
 ## <a name="see-also"></a>Voir aussi
 
-[Manipulation de chaînes](../../c-runtime-library/string-manipulation-crt.md)<br/>
-[Paramètres régionaux](../../c-runtime-library/locale.md)<br/>
-[Interprétation des séquences de caractères multi-octets](../../c-runtime-library/interpretation-of-multibyte-character-sequences.md)<br/>
+[Manipulation des cordes](../../c-runtime-library/string-manipulation-crt.md)<br/>
+[Local](../../c-runtime-library/locale.md)<br/>
+[Interprétation des séquences multioctets-caractères](../../c-runtime-library/interpretation-of-multibyte-character-sequences.md)<br/>
 [strcat, wcscat, _mbscat](strcat-wcscat-mbscat.md)<br/>
 [strcmp, wcscmp, _mbscmp](strcmp-wcscmp-mbscmp.md)<br/>
 [strcpy, wcscpy, _mbscpy](strcpy-wcscpy-mbscpy.md)<br/>

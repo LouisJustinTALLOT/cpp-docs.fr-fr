@@ -1,5 +1,5 @@
 ---
-title: Ctabview, classe
+title: CTabView, classe
 ms.date: 11/04/2016
 f1_keywords:
 - CTabView
@@ -22,16 +22,16 @@ helpviewer_keywords:
 - CTabView [MFC], IsScrollBar
 - CTabView [MFC], OnActivateView
 ms.assetid: 8e6ecd9d-d28d-432b-8ec8-0446f0204d52
-ms.openlocfilehash: 56640edbd0d2e74a1cc00dad5441350ad3d35725
-ms.sourcegitcommit: c6f8e6c2daec40ff4effd8ca99a7014a3b41ef33
+ms.openlocfilehash: ad30cbbf5de195708d2d357a76c38b661d095c2f
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "64346253"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81365919"
 ---
-# <a name="ctabview-class"></a>Ctabview, classe
+# <a name="ctabview-class"></a>CTabView, classe
 
-Le `CTabView` classe simplifie l’utilisation de la classe de contrôle d’onglet ( [CMFCTabCtrl](../../mfc/reference/ctabview-class.md)) dans les applications qui utilisent l’architecture document/vue de MFC.
+La `CTabView` classe simplifie l’utilisation de la classe de contrôle de l’onglet ( [CMFCTabCtrl](../../mfc/reference/ctabview-class.md)) dans les applications qui utilisent l’architecture de document/vue de MFC.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -45,41 +45,41 @@ class CTabbedView : public CView
 
 |Nom|Description|
 |----------|-----------------|
-|[CTabView::AddView](#addview)|Ajoute un nouvel affichage au contrôle onglet.|
-|[CTabView::FindTab](#findtab)|Retourne l’index de la vue spécifiée dans le contrôle onglet.|
-|[CTabView::GetActiveView](#getactiveview)|Retourne un pointeur vers la vue actuellement active.|
-|[CTabView::GetTabControl](#gettabcontrol)|Retourne une référence au contrôle onglet associé à la vue.|
-|[CTabView::RemoveView](#removeview)|Supprime l’affichage du contrôle onglet.|
+|[CTabView::AddView](#addview)|Ajoute une nouvelle vue au contrôle de l’onglet.|
+|[CTabView::FindTab](#findtab)|Retourne l’index de la vue spécifiée dans le contrôle de l’onglet.|
+|[CTabView::GetActiveView](#getactiveview)|Retourne un pointeur à la vue actuellement active|
+|[CTabView::GetTabControl](#gettabcontrol)|Renvoie une référence au contrôle de l’onglet associé à la vue.|
+|[CTabView::RemoveView](#removeview)|Retire la vue du contrôle de l’onglet.|
 |[CTabView::SetActiveView](#setactiveview)|Rend une vue active.|
 
 ### <a name="protected-methods"></a>Méthodes protégées
 
 |Nom|Description|
 |----------|-----------------|
-|[CTabView::IsScrollBar](#isscrollbar)|Appelé par l’infrastructure lors de la création d’une vue d’onglet pour déterminer si la vue de l’onglet a une barre de défilement horizontale partagé.|
-|[CTabView::OnActivateView](#onactivateview)|Appelé par l’infrastructure lors de la vue de l’onglet est actif ou inactif.|
+|[CTabView::IsScrollBar](#isscrollbar)|Appelé par le cadre lors de la création d’une vue d’onglet pour déterminer si la vue de l’onglet a une barre de défilement horizontal partagé.|
+|[CTabView::OnActivateView](#onactivateview)|Appelé par le cadre lorsque la vue de l’onglet est rendue active ou inactive.|
 
 ## <a name="remarks"></a>Notes
 
-Cette classe rend plus facile de mettre une vue à onglets dans une application de document/vue. `CTabView` est un `CView`-classe dérivée qui contient un élément incorporé `CMFCTabCtrl` objet. `CTabView` gère tous les messages requis pour prendre en charge la `CMFCTabCtrl` objet. Il suffit de dériver une classe à partir de `CTabView` et connectez-le à votre application, puis ajoutez `CView`-classes dérivées à l’aide de la `AddView` (méthode). Le contrôle onglet affiche ces vues sous forme d’onglets.
+Cette classe facilite la mise d’une vue onglet dans une application document/vue. `CTabView`est `CView`une classe dérivée `CMFCTabCtrl` qui contient un objet intégré. `CTabView`gère tous les messages `CMFCTabCtrl` requis pour prendre en charge l’objet. Il suffit de `CTabView` tirer une classe et `CView`le brancher dans `AddView` votre application, puis ajouter des classes dérivées en utilisant la méthode. Le contrôle de l’onglet affichera ces vues sous forme d’onglets.
 
-Par exemple, vous pouvez avoir un document qui peut être représenté de différentes façons : en tant qu’une feuille de calcul, un graphique, d’un formulaire modifiable et ainsi de suite. Vous pouvez créer des vues individuelles tracer les données en fonction des besoins, les insérer dans votre `CTabView`-objet dérivé et les onglets sans aucun codage supplémentaire.
+Par exemple, vous pouvez avoir un document qui peut être représenté de différentes manières : comme feuille de calcul, graphique, formulaire modifiable, etc. Vous pouvez créer des vues individuelles dessinant `CTabView`les données au besoin, les insérer dans votre objet dérivé et les faire ongletr sans aucun codage supplémentaire.
 
-[TabbedView, exemple : Application avec affichage MFC avec onglet](../../overview/visual-cpp-samples.md) illustre l’utilisation de `CTabView`.
+[Échantillon De TabbedView : L’application de vue tabbed de MFC](../../overview/visual-cpp-samples.md) illustre l’utilisation de `CTabView`.
 
 ## <a name="example"></a>Exemple
 
-L’exemple suivant montre comment `CTabView` est utilisé dans l’exemple TabbedView.
+L’exemple suivant `CTabView` montre comment est utilisé dans l’échantillon TabbedView.
 
 [!code-cpp[NVC_MFC_TabbedView#1](../../mfc/reference/codesnippet/cpp/ctabview-class_1.h)]
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
-**En-tête :** afxTabView.h
+**En-tête:** afxTabView.h
 
-##  <a name="addview"></a>  CTabView::AddView
+## <a name="ctabviewaddview"></a><a name="addview"></a>CTabView::AddView
 
-Ajoute une vue pour le contrôle onglet.
+Ajoute une vue au contrôle de l’onglet.
 
 ```
 int AddView(
@@ -91,29 +91,29 @@ int AddView(
 
 ### <a name="parameters"></a>Paramètres
 
-*pViewClass*<br/>
-[in] Pointeur vers une classe d’exécution de la vue insérée.
+*pViewClass (en)*<br/>
+[dans] Un pointeur à une classe de runtime de la vue insérée.
 
-*strViewLabel*<br/>
-[in] Spécifie le texte de l’onglet.
+*strViewLabel (en)*<br/>
+[dans] Spécifie le texte de l’onglet.
 
-*iIndex*<br/>
-[in] Spécifie la position de base zéro au niveau duquel insérer la vue. Si la position est -1, le nouvel onglet est inséré à la fin.
+*iIndex (en)*<br/>
+[dans] Spécifie la position zéro à laquelle insérer la vue. Si la position est de -1, le nouvel onglet est inséré à la fin.
 
 *pContext*<br/>
-[in] Un pointeur vers le `CCreateContext` de la vue.
+[dans] Un pointeur `CCreateContext` à la vue.
 
 ### <a name="return-value"></a>Valeur de retour
 
-Un index de la vue si cette méthode réussit. Sinon, -1.
+Un indice de vue si cette méthode réussit. Sinon, -1.
 
 ### <a name="remarks"></a>Notes
 
-Appelez cette fonction pour ajouter une vue au contrôle onglet qui est incorporé dans un frame.
+Appelez cette fonction pour ajouter une vue au contrôle de l’onglet qui est intégré dans un cadre.
 
-##  <a name="findtab"></a>  CTabView::FindTab
+## <a name="ctabviewfindtab"></a><a name="findtab"></a>CTabView::FindTab
 
-Retourne l’index de la vue spécifiée dans le contrôle onglet.
+Retourne l’index de la vue spécifiée dans le contrôle de l’onglet.
 
 ```
 int FindTab(HWND hWndView) const;
@@ -121,20 +121,20 @@ int FindTab(HWND hWndView) const;
 
 ### <a name="parameters"></a>Paramètres
 
-*hWndView*<br/>
-[in] Le handle de la vue.
+*hWndView (en)*<br/>
+[dans] Le manche de la vue.
 
 ### <a name="return-value"></a>Valeur de retour
 
-L’index de la vue s’il est trouvé ; Sinon, -1.
+L’index de la vue s’il est trouvé; sinon, -1.
 
 ### <a name="remarks"></a>Notes
 
-Appelez cette fonction pour récupérer l’index d’une vue qui a un handle spécifié.
+Appelez cette fonction pour récupérer l’index d’une vue qui a une poignée spécifiée.
 
-##  <a name="getactiveview"></a>  CTabView::GetActiveView
+## <a name="ctabviewgetactiveview"></a><a name="getactiveview"></a>CTabView::GetActiveView
 
-Retourne un pointeur vers la vue actuellement active.
+Retourne un pointeur à la vue actuellement active.
 
 ```
 CView* GetActiveView() const;
@@ -142,13 +142,13 @@ CView* GetActiveView() const;
 
 ### <a name="return-value"></a>Valeur de retour
 
-Un pointeur valide vers la vue active, ou NULL s’il n’existe aucune vue active.
+Un pointeur valide à la vue active, ou NULL s’il n’y a pas de vue active.
 
 ### <a name="remarks"></a>Notes
 
-##  <a name="gettabcontrol"></a>  CTabView::GetTabControl
+## <a name="ctabviewgettabcontrol"></a><a name="gettabcontrol"></a>CTabView::GetTabControl
 
-Retourne une référence au contrôle onglet associé à la vue.
+Renvoie une référence au contrôle de l’onglet associé à la vue.
 
 ```
 DECLARE_DYNCREATE CMFCTabCtrl& GetTabControl();
@@ -156,11 +156,11 @@ DECLARE_DYNCREATE CMFCTabCtrl& GetTabControl();
 
 ### <a name="return-value"></a>Valeur de retour
 
-Une référence au contrôle onglet associé à la vue.
+Une référence au contrôle de l’onglet associé à la vue.
 
-##  <a name="isscrollbar"></a>  CTabView::IsScrollBar
+## <a name="ctabviewisscrollbar"></a><a name="isscrollbar"></a>CTabView::IsScrollBar
 
-Appelé par l’infrastructure lors de la création d’une vue d’onglet pour déterminer si la vue de l’onglet a une barre de défilement horizontale partagé.
+Appelé par le cadre lors de la création d’une vue d’onglet pour déterminer si la vue de l’onglet a une barre de défilement horizontal partagé.
 
 ```
 virtual BOOL IsScrollBar() const;
@@ -168,17 +168,17 @@ virtual BOOL IsScrollBar() const;
 
 ### <a name="return-value"></a>Valeur de retour
 
-TRUE si la vue d’onglet doit être créée avec une barre de défilement partagé. Sinon, FALSE.
+VRAI si la vue de l’onglet doit être créée avec une barre de défilement partagée. Dans le cas contraire, la valeur est FALSE.
 
 ### <a name="remarks"></a>Notes
 
-L’infrastructure appelle cette méthode lorsqu’un *CTabView* objet est en cours de création.
+Le cadre appelle cette méthode lorsqu’un objet *CTabView* est créé.
 
-Remplacer le *IsScrollBar* méthode dans un *CTabView*-classe dérivée et renvoie la valeur TRUE si vous souhaitez créer une vue qui a une barre de défilement horizontale partagé.
+Remplacez la méthode *IsScrollBar* dans une classe dérivée de *CTabView*et retournez TRUE si vous souhaitez créer une vue qui dispose d’une barre de défilement horizontale partagée.
 
-##  <a name="onactivateview"></a>  CTabView::OnActivateView
+## <a name="ctabviewonactivateview"></a><a name="onactivateview"></a>CTabView::OnActivateView
 
-Appelé par l’infrastructure lors de la vue de l’onglet est actif ou inactif.
+Appelé par le cadre lorsque la vue de l’onglet est rendue active ou inactive.
 
 ```
 virtual void OnActivateView(CView* view);
@@ -187,15 +187,15 @@ virtual void OnActivateView(CView* view);
 ### <a name="parameters"></a>Paramètres
 
 *Vue*<br/>
-[in] Un pointeur vers la vue.
+[dans] Un pointeur à la vue.
 
 ### <a name="remarks"></a>Notes
 
-L'implémentation par défaut n'exécute aucune opération. Substituez cette méthode dans un `CTabView`-classe pour traiter cette notification dérivée.
+L'implémentation par défaut n'exécute aucune opération. Remplacer cette méthode `CTabView`dans une classe dérivée pour traiter cette notification.
 
-##  <a name="removeview"></a>  CTabView::RemoveView
+## <a name="ctabviewremoveview"></a><a name="removeview"></a>CTabView::RemoveView
 
-Supprime l’affichage du contrôle onglet.
+Retire la vue du contrôle de l’onglet.
 
 ```
 BOOL RemoveView(int iTabNum);
@@ -203,8 +203,8 @@ BOOL RemoveView(int iTabNum);
 
 ### <a name="parameters"></a>Paramètres
 
-*iTabNum*<br/>
-[in] Index de la vue à supprimer.
+*iTabNum (en)*<br/>
+[dans] L’index de la vue à supprimer.
 
 ### <a name="return-value"></a>Valeur de retour
 
@@ -212,7 +212,7 @@ L’index de la vue supprimée si cette méthode réussit. Sinon -1.
 
 ### <a name="remarks"></a>Notes
 
-##  <a name="setactiveview"></a>  CTabView::SetActiveView
+## <a name="ctabviewsetactiveview"></a><a name="setactiveview"></a>CTabView::SetActiveView
 
 Rend une vue active.
 
@@ -222,20 +222,20 @@ BOOL SetActiveView(int iTabNum);
 
 ### <a name="parameters"></a>Paramètres
 
-*iTabNum*<br/>
-[in] Index de base zéro de la vue onglet.
+*iTabNum (en)*<br/>
+[dans] L’indice zéro de la vue de l’onglet.
 
 ### <a name="return-value"></a>Valeur de retour
 
-TRUE si la vue spécifiée a été rendue active, FALSE si l’index de vue n’est pas valide.
+VRAI si la vue spécifiée a été rendue active, FALSE si l’indice de la vue est invalide.
 
 ### <a name="remarks"></a>Notes
 
-Pour plus d’informations, consultez [CMFCTabCtrl::SetActiveTab](../../mfc/reference/cmfctabctrl-class.md#setactivetab).
+Pour plus d’informations voir [CMFCTabCtrl::SetActiveTab](../../mfc/reference/cmfctabctrl-class.md#setactivetab).
 
 ## <a name="see-also"></a>Voir aussi
 
 [Graphique hiérarchique](../../mfc/hierarchy-chart.md)<br/>
 [Classes](../../mfc/reference/mfc-classes.md)<br/>
 [CMFCTabCtrl](../../mfc/reference/ctabview-class.md)<br/>
-[CView, classe](../../mfc/reference/cview-class.md)
+[Classe CView](../../mfc/reference/cview-class.md)

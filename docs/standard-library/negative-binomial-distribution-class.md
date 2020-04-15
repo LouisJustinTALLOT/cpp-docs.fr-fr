@@ -26,12 +26,12 @@ helpviewer_keywords:
 - std::negative_binomial_distribution [C++], param_type
 - std::negative_binomial_distribution [C++], param_type
 ms.assetid: 7f5f0967-7fdd-4578-99d4-88f292b4fe9c
-ms.openlocfilehash: d8e71b351d88a1c4dee61f88c18aec513d776cd3
-ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
+ms.openlocfilehash: 940ea790e724ffacdefe2cefb256a3314ba244e3
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/21/2019
-ms.locfileid: "72689253"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81367968"
 ---
 # <a name="negative_binomial_distribution-class"></a>negative_binomial_distribution, classe
 
@@ -71,21 +71,21 @@ public:
 
 ### <a name="parameters"></a>Paramètres
 
-*IntType* \
-Le type de résultat entier, par défaut, est **int**. Pour connaître les types possibles, consultez [\<random >](../standard-library/random.md).
+*IntType (IntType)*\
+Le type de résultat integer, par défaut à **int**. Pour les types [ \< ](../standard-library/random.md)possibles, voir>aléatoire .
 
 ## <a name="remarks"></a>Notes
 
-Le modèle de classe décrit une distribution qui produit des valeurs d’un type intégral spécifié par l’utilisateur, ou un type **int** si aucun n’est fourni, distribuées selon la fonction de probabilité discrète de distribution négative binomiale. Le tableau suivant contient des liens vers des articles sur différents membres.
+Le modèle de classe décrit une distribution qui produit des valeurs d’un type intégral spécifié par l’utilisateur, ou tape **int** si aucune n’est fournie, distribuée selon la fonction de probabilité discrète de distribution binomiale négative. Le tableau suivant contient des liens vers des articles sur différents membres.
 
 ||||
 |-|-|-|
 |[negative_binomial_distribution](#negative_binomial_distribution)|`negative_binomial_distribution::k`|`negative_binomial_distribution::param`|
 |`negative_binomial_distribution::operator()`|`negative_binomial_distribution::p`|[param_type](#param_type)|
 
-Les membres de propriété `k()` et `p()` retournent les valeurs de paramètres de distribution actuellement stockées, *k* et *p* , respectivement.
+Les membres `k()` `p()` de la propriété et retournent les valeurs de paramètres de distribution actuellement stockées *k* et *p* respectivement.
 
-Le membre de propriété `param()` définit ou retourne le package de paramètres de distribution stocké `param_type`.
+Le membre de propriété `param()` définit ou retourne le package de paramètres de distribution stockés `param_type`.
 
 Les fonctions membres `min()` et `max()` retournent respectivement le plus petit et le plus grand résultat possible.
 
@@ -93,9 +93,9 @@ La fonction membre `reset()` ignore toutes les valeurs mises en cache. Ainsi, le
 
 Les fonctions membres `operator()` retournent la valeur générée suivante d’après le moteur URNG, à partir du package de paramètres actuel ou spécifié.
 
-Pour plus d’informations sur les classes de distribution et leurs membres, consultez [\<random>](../standard-library/random.md).
+Pour plus d’informations sur les [ \< ](../standard-library/random.md)classes de distribution et leurs membres, voir>aléatoire .
 
-Pour plus d’informations sur la fonction de probabilité discrète de distribution négative binomiale, consultez l’article Wolfram MathWorld [distribution négative binomiale](https://go.microsoft.com/fwlink/p/?linkid=400516).
+Pour obtenir des informations détaillées sur la fonction de probabilité discrète de distribution binomiale négative, voir l’article de Wolfram MathWorld [Negative Binomial Distribution](https://go.microsoft.com/fwlink/p/?linkid=400516).
 
 ## <a name="example"></a>Exemple
 
@@ -215,13 +215,13 @@ Histogram for 100 samples:
     69 ::::
 ```
 
-## <a name="requirements"></a>spécifications
+## <a name="requirements"></a>Spécifications
 
 **En-tête :** \<random>
 
 **Espace de noms :** std
 
-## <a name="negative_binomial_distribution"></a>  negative_binomial_distribution::negative_binomial_distribution
+## <a name="negative_binomial_distributionnegative_binomial_distribution"></a><a name="negative_binomial_distribution"></a>negative_binomial_distribution::negative_binomial_distribution
 
 Construit la distribution.
 
@@ -232,13 +232,13 @@ explicit negative_binomial_distribution(const param_type& parm);
 
 ### <a name="parameters"></a>Paramètres
 
-*k* \
+*K*\
 Paramètre de distribution `k`.
 
-\ *p*
+*P*\
 Paramètre de distribution `p`.
 
-*param* \
+*Parm*\
 Structure de paramètre utilisée pour construire la distribution.
 
 ### <a name="remarks"></a>Notes
@@ -249,23 +249,23 @@ Le premier constructeur construit un objet dont la valeur `p` stockée contient 
 
 Le deuxième constructeur construit un objet dont les paramètres stockés sont initialisés à partir de *parm*. Vous pouvez obtenir et définir les paramètres actuels d'une distribution existante en appelant la fonction membre `param()`.
 
-## <a name="param_type"></a>  negative_binomial_distribution::param_type
+## <a name="negative_binomial_distributionparam_type"></a><a name="param_type"></a>negative_binomial_distribution::param-type
 
 Stocke les paramètres de la distribution.
 
-struct param_type {typedef negative_binomial_distribution `<`result_type > distribution_type ; param_type (result_type k = 1, double p = 0,5); result_type k () const ; double p () const ;
+struct param_type - dactylographie`<`negative_binomial_distribution result_type> distribution_type; param_type (result_type k 1, double p 0,5); result_type k() const; double p() const;
 
    bool operator==(const param_type& right) const; bool operator!=(const param_type& right) const; };
 
 ### <a name="parameters"></a>Paramètres
 
-*k* \
+*K*\
 Paramètre de distribution `k`.
 
-\ *p*
+*P*\
 Paramètre de distribution `p`.
 
-\ *droit*
+*Oui*\
 Structure `param_type` utilisée pour comparer.
 
 ### <a name="remarks"></a>Notes
@@ -276,4 +276,4 @@ Cette structure peut être passée au constructeur de classe de la distribution 
 
 ## <a name="see-also"></a>Voir aussi
 
-[\<random>](../standard-library/random.md)
+[\<>aléatoires](../standard-library/random.md)

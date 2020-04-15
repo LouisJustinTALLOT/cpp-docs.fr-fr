@@ -1,5 +1,5 @@
 ---
-title: Classe de CSplitterWndEx
+title: Classe CSplitterWndEx
 ms.date: 11/04/2016
 f1_keywords:
 - CSplitterWndEx
@@ -8,14 +8,14 @@ f1_keywords:
 helpviewer_keywords:
 - CSplitterWndEx [MFC], OnDrawSplitter
 ms.assetid: 33e5eef3-05e1-4a07-a968-bf9207ce8598
-ms.openlocfilehash: 8dedad4e99a37b13dc618859c8e6d8a83a65ea76
-ms.sourcegitcommit: c6f8e6c2daec40ff4effd8ca99a7014a3b41ef33
+ms.openlocfilehash: d7952e3082bf68cff7ad9ba218073081ee522320
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "64339605"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81363923"
 ---
-# <a name="csplitterwndex-class"></a>Classe de CSplitterWndEx
+# <a name="csplitterwndex-class"></a>Classe CSplitterWndEx
 
 Représente une fenêtre fractionnée personnalisée.
 
@@ -38,13 +38,13 @@ class CSplitterWndEx : public CSplitterWnd
 
 |Nom|Description|
 |----------|-----------------|
-|[CSplitterWndEx::OnDrawSplitter](#ondrawsplitter)|Appelé par l’infrastructure pour dessiner une fenêtre fractionnée. (Substitue [CSplitterWnd::OnDrawSplitter](csplitterwnd-class.md#ondrawsplitter).)|
+|[CSplitterWndEx::OnDrawSplitter](#ondrawsplitter)|Appelé par le cadre pour dessiner une fenêtre de splitter. (Overrides [CSplitterWnd::OnDrawSplitter](csplitterwnd-class.md#ondrawsplitter).)|
 
 ## <a name="remarks"></a>Notes
 
-Remplacer le `OnDrawSplitter` méthode pour personnaliser l’apparence des composants graphiques d’une fenêtre fractionnée.
+Remplacer la `OnDrawSplitter` méthode pour personnaliser l’apparence des composants graphiques d’une fenêtre de splitter.
 
-Le `CSplitterWndEx` classe est utilisée conjointement avec la [OnDrawSplitterBorder](cmfcvisualmanager-class.md#ondrawsplitterborder), [OnDrawSplitterBox](cmfcvisualmanager-class.md#ondrawsplitterbox), et [OnFillSplitterBackground](cmfcvisualmanager-class.md#onfillsplitterbackground) méthodes qui sont implémenté par un gestionnaire visuel. Pour déclencher un gestionnaire visuel dessiner une fenêtre fractionnée dans votre application, remplacez les déclarations de la `CSplitterWnd` classe avec la `CSplitterWndEx` classe. Pour les applications de fenêtre frame, la classe de fenêtre de séparateur est déclarée dans la classe CMainFrame qui se trouve dans mainfrm.h. Pour obtenir un exemple, consultez le `OutlookDemo` exemple dans le répertoire d’exemples.
+La `CSplitterWndEx` classe est utilisée avec les méthodes [OnDrawSplitterBorder](cmfcvisualmanager-class.md#ondrawsplitterborder), [OnDrawSplitterBox](cmfcvisualmanager-class.md#ondrawsplitterbox), et [OnFillSplitterBackground](cmfcvisualmanager-class.md#onfillsplitterbackground) méthodes, qui sont mis en œuvre par un gestionnaire visuel. Pour amener un gestionnaire visuel à dessiner une fenêtre de `CSplitterWnd` splitter `CSplitterWndEx` dans votre application, remplacez les déclarations de la classe par la classe. Pour les applications de fenêtre de cadre, la classe de fenêtre de splitter est déclarée dans la classe CMainFrame qui est située dans mainfrm.h. Par exemple, voir `OutlookDemo` l’échantillon dans le répertoire Échantillons.
 
 ## <a name="inheritance-hierarchy"></a>Hiérarchie d'héritage
 
@@ -56,13 +56,13 @@ Le `CSplitterWndEx` classe est utilisée conjointement avec la [OnDrawSplitterBo
 
 [CSplitterWnd](csplitterwnd-class.md)
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
-**En-tête :** afxsplitterwndex.h
+**En-tête:** afxsplitterwndex.h
 
-##  <a name="ondrawsplitter"></a>  CSplitterWndEx::OnDrawSplitter
+## <a name="csplitterwndexondrawsplitter"></a><a name="ondrawsplitter"></a>CSplitterWndEx::OnDrawSplitter
 
-Appelé par l’infrastructure pour dessiner une fenêtre fractionnée.
+Appelé par le cadre pour dessiner une fenêtre de splitter.
 
 ```
 virtual void OnDrawSplitter(
@@ -75,13 +75,13 @@ virtual void OnDrawSplitter(
 ### <a name="parameters"></a>Paramètres
 
 *pDC*<br/>
-[in] Pointeur vers le contexte de périphérique. Si ce paramètre est NULL, le framework redessine la fenêtre active.
+[dans] Pointeur sur le contexte de l’appareil. Si ce paramètre est NULL, le cadre redessiner la fenêtre active.
 
 *nType*<br/>
-[in] Parmi les `CSplitterWnd::ESplitType` des valeurs d’énumération qui spécifie l’élément de fenêtre de séparateur à dessiner. Les valeurs valides sont `splitBox`, `splitBar`, `splitIntersection` et `splitBorder`.
+[dans] Une des `CSplitterWnd::ESplitType` valeurs de recensement qui spécifie l’élément de fenêtre de splitter à dessiner. Les valeurs valides sont `splitBox`, `splitBar`, `splitIntersection` et `splitBorder`.
 
-*rect*<br/>
-[in] Un rectangle englobant qui spécifie les dimensions et l’emplacement où dessiner l’élément de fenêtre de séparateur spécifié.
+*Rect*<br/>
+[dans] Un rectangle de délimitation qui spécifie les dimensions et l’emplacement pour dessiner l’élément de fenêtre de splitter spécifié.
 
 ### <a name="remarks"></a>Notes
 
@@ -89,5 +89,5 @@ virtual void OnDrawSplitter(
 
 [Graphique hiérarchique](../hierarchy-chart.md)<br/>
 [Classes](mfc-classes.md)<br/>
-[CSplitterWnd, classe](csplitterwnd-class.md)<br/>
-[CMFCVisualManager, classe](cmfcvisualmanager-class.md)
+[Classe CSplitterWnd](csplitterwnd-class.md)<br/>
+[Classe CMFCVisualManager](cmfcvisualmanager-class.md)
