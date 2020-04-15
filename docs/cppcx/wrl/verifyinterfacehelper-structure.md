@@ -9,16 +9,16 @@ helpviewer_keywords:
 - Microsoft::WRL::Details::VerifyInterfaceHelper structure
 - Microsoft::WRL::Details::VerifyInterfaceHelper::Verify method
 ms.assetid: ea95b641-199a-4fdf-964b-186b40cb3ba7
-ms.openlocfilehash: cdd0272953b2399cd71efe207eb1c56e5de154e6
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 09c2cc7e08e2dc0e8df42c64d285c37627c5925a
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62398093"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81374244"
 ---
 # <a name="verifyinterfacehelper-structure"></a>VerifyInterfaceHelper (structure)
 
-Prend en charge l’infrastructure de la bibliothèque de modèles Windows Runtime C++ et n’est pas destinée à être utilisée directement depuis votre code.
+Prend en charge l’infrastructure windows Runtime CMD Template Library et n’est pas destiné à être utilisé directement à partir de votre code.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -32,14 +32,14 @@ struct VerifyInterfaceHelper<false, I>;
 
 ### <a name="parameters"></a>Paramètres
 
-*I*<br/>
+*Ⅰ*<br/>
 Une interface à vérifier.
 
 *isWinRTInterface*
 
 ## <a name="remarks"></a>Notes
 
-Vérifie que l’interface spécifiée par le paramètre de modèle répond à certaines exigences.
+Vérifie que l’interface spécifiée par le paramètre du modèle répond à certaines exigences.
 
 ## <a name="members"></a>Membres
 
@@ -47,21 +47,21 @@ Vérifie que l’interface spécifiée par le paramètre de modèle répond à c
 
 Nom                                            | Description
 ----------------------------------------------- | ---------------------------------------------------------------------------------------------------
-[VerifyInterfaceHelper::Verify, méthode](#verify) | Vérifie que l’interface spécifiée par le paramètre de modèle actuel répond à certaines exigences.
+[VerifyInterfaceHelper::Verify, méthode](#verify) | Vérifie que l’interface spécifiée par le paramètre du modèle actuel répond à certaines exigences.
 
 ## <a name="inheritance-hierarchy"></a>Hiérarchie d'héritage
 
 `VerifyInterfaceHelper`
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
-**En-tête :** implements.h
+**En-tête:** implements.h
 
-**Espace de noms :** Microsoft::WRL::Details
+**Espace nom:** Microsoft::WRL::Details
 
-## <a name="verify"></a>VerifyInterfaceHelper::Verify
+## <a name="verifyinterfacehelperverify"></a><a name="verify"></a>VerifyInterfaceHelper::Vérifier
 
-Prend en charge l’infrastructure WRL et n’est pas destinée à être utilisée directement depuis votre code.
+Prend en charge l’infrastructure WRL et n’est pas destiné à être utilisé directement à partir de votre code.
 
 ```cpp
 static void Verify();
@@ -69,4 +69,4 @@ static void Verify();
 
 ### <a name="remarks"></a>Notes
 
-Vérifie que l’interface spécifiée par le paramètre de modèle actuel répond à certaines exigences.
+Vérifie que l’interface spécifiée par le paramètre du modèle actuel répond à certaines exigences.

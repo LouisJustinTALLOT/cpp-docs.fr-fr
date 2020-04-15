@@ -9,12 +9,12 @@ f1_keywords:
 - VCCORLIB/Platform::StringReference::GetHSTRING
 - VCCORLIB/Platform::StringReference::GetString
 ms.assetid: 2d09c7ec-0f16-458e-83ed-7225a1b9221e
-ms.openlocfilehash: 7b6ab42dc630ce7e0014534064e8f1ce6da00857
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 4748eecdf67ae5a60ddf97783a934a05e80b406c
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62182988"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81374663"
 ---
 # <a name="platformstringreference-class"></a>Platform::StringReference, classe
 
@@ -41,7 +41,7 @@ class StringReference
 |Nom|Description|
 |----------|-----------------|
 |[StringReference::Data](#data)|Retourne des données de type chaîne en tant que tableau de valeurs char16.|
-|[StringReference::Length](#length)|Retourne le nombre de caractères de la chaîne.|
+|[StringReference::Longueur](#length)|Retourne le nombre de caractères de la chaîne.|
 |[StringReference::GetHSTRING](#gethstring)|Retourne des données de type chaîne en tant que HSTRING.|
 |[StringReference::GetString](#getstring)|Retourne des données de type chaîne en tant que `Platform::String^`.|
 
@@ -49,20 +49,20 @@ class StringReference
 
 |Nom|Description|
 |----------|-----------------|
-|[StringReference::operator=](#operator-assign)|Assigne une `StringReference` à une nouvelle instance de `StringReference` .|
-|[StringReference::operator()](#operator-call)|Convertit une `StringReference` en une `Platform::String^`.|
+|[StringReference::opérateur](#operator-assign)|Assigne une `StringReference` à une nouvelle instance de `StringReference` .|
+|[StringReference::opérateur()](#operator-call)|Convertit une `StringReference` en une `Platform::String^`.|
 
-### <a name="requirements"></a>Configuration requise
+### <a name="requirements"></a>Spécifications
 
-**Prise en charge minimale du client :** Windows 8
+**Client pris en charge au minimum :** Windows 8
 
-**Serveur pris en charge minimale :** Windows Server 2012
+**Serveur pris en charge minimum :** Serveur Windows 2012
 
-**Espace de noms :** Plateforme
+**Espace de noms :** Platform
 
-**En-tête :** vccorlib.h
+**En-tête** : vccorlib.h
 
-## <a name="data"></a>  StringReference::Data Method
+## <a name="stringreferencedata-method"></a><a name="data"></a>StringReference::Data Méthode
 
 Retourne le contenu de ce `StringReference` sous forme de tableau de valeurs char16.
 
@@ -76,7 +76,7 @@ const ::default::char16 * Data() const;
 
 Tableau de caractères de texte UNICODE char16.
 
-## <a name="gethstring"></a>  Stringreference::gethstring, méthode
+## <a name="stringreferencegethstring-method"></a><a name="gethstring"></a>StringReference::GetHSTRING Méthode
 
 Retourne le contenu de la chaîne en tant que `__abi_HSTRING`.
 
@@ -92,7 +92,7 @@ __abi_HSTRING GetHSTRING() const;
 
 ### <a name="remarks"></a>Notes
 
-## <a name="getstring"></a>  Stringreference::GetString, méthode
+## <a name="stringreferencegetstring-method"></a><a name="getstring"></a>StringReference::GetString Méthode
 
 Retourne le contenu de la chaîne en tant que `Platform::String^`.
 
@@ -107,7 +107,7 @@ __declspec(no_release_return) __declspec(no_refcount)
 
 `Platform::String^` contenant les données de type chaîne.
 
-## <a name="length"></a>  Stringreference::Length, méthode
+## <a name="stringreferencelength-method"></a><a name="length"></a>StringReference::Méthode de longueur
 
 Retourne le nombre de caractères de la chaîne.
 
@@ -123,7 +123,7 @@ Entier non signé qui Spécifie le nombre de caractères de la chaîne.
 
 ### <a name="remarks"></a>Notes
 
-## <a name="operator-assign"></a>  StringReference::operator =, opérateur
+## <a name="stringreferenceoperator-operator"></a><a name="operator-assign"></a>StringReference::opérateur OPÉRATEUR
 
 Assigne l'objet spécifié à l'objet `StringReference` actif.
 
@@ -148,9 +148,9 @@ Référence à un objet de type `StringReference`.
 
 ### <a name="remarks"></a>Notes
 
-Étant donné que `StringReference` est une classe C++ standard et non une classe ref, elle n’apparaît pas dans le **Explorateur d’objets**.
+Parce `StringReference` qu’il s’agit d’une classe standard de C et non d’une classe d’arbitres, elle n’apparaît pas dans le **navigateur d’objets.**
 
-## <a name="operator-call"></a>  StringReference::operator()  Operator
+## <a name="stringreferenceoperator--operator"></a><a name="operator-call"></a>StringReference::opérateur() Opérateur
 
 Convertit un objet `StringReference` en un objet `Platform::String^`.
 
@@ -165,7 +165,7 @@ __declspec(no_release_return) __declspec(no_refcount)
 
 Handle d'un objet de type `Platform::String`.
 
-## <a name="ctor"></a>  StringReference::StringReference, constructeur
+## <a name="stringreferencestringreference-constructor"></a><a name="ctor"></a>StringReference::StringReference Constructor
 
 Initialise une nouvelle instance de la classe `StringReference`.
 

@@ -14,16 +14,16 @@ helpviewer_keywords:
 - COleDropSource [MFC], OnBeginDrag
 - COleDropSource [MFC], QueryContinueDrag
 ms.assetid: d3eecc5f-a70b-4a01-b705-7d2c098ebe17
-ms.openlocfilehash: d93eb3de87b50f337f0d3edad65f5dc3013e8327
-ms.sourcegitcommit: a8ef52ff4a4944a1a257bdaba1a3331607fb8d0f
+ms.openlocfilehash: 324c4b7273f021b43c319fb0a494ac843856c78a
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/11/2020
-ms.locfileid: "77127455"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81375021"
 ---
 # <a name="coledropsource-class"></a>COleDropSource, classe
 
-Permet de faire glisser des données vers une cible de déplacement.
+Permet de traînéer les données vers une cible de drop.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -35,27 +35,27 @@ class COleDropSource : public CCmdTarget
 
 ### <a name="public-constructors"></a>Constructeurs publics
 
-|Name|Description|
+|Nom|Description|
 |----------|-----------------|
 |[COleDropSource::COleDropSource](#coledropsource)|Construit un objet `COleDropSource`.|
 
 ### <a name="public-methods"></a>M&#233;thodes publiques
 
-|Name|Description|
+|Nom|Description|
 |----------|-----------------|
-|[COleDropSource :: GiveFeedback](#givefeedback)|Modifie le curseur pendant une opération de glisser-déplacer.|
-|[COleDropSource::OnBeginDrag](#onbegindrag)|Gère la capture de la souris pendant une opération de glisser-déplacer.|
-|[COleDropSource :: QueryContinueDrag](#querycontinuedrag)|Vérifie si le glisser-déplacer doit continuer.|
+|[COleDropSource::GiveFeedback](#givefeedback)|Change le curseur lors d’une opération de drag-and-drop.|
+|[COleDropSource::OnBeginDrag](#onbegindrag)|Gère la capture de la souris lors d’une opération de drag-and-drop.|
+|[COleDropSource::QueryContinueDrag](#querycontinuedrag)|Vérifications pour voir si le dragage doit se poursuivre.|
 
 ## <a name="remarks"></a>Notes
 
-La classe [COleDropTarget](../../mfc/reference/coledroptarget-class.md) gère la partie réceptrice de l’opération de glisser-déplacer. L’objet `COleDropSource` est chargé de déterminer à quel moment une opération glisser commence, en fournissant des commentaires pendant l’opération glisser et en déterminant quand l’opération glisser se termine.
+La classe [COleDropTarget](../../mfc/reference/coledroptarget-class.md) gère la partie réceptrice de l’opération de drag-and-drop. L’objet `COleDropSource` est responsable de déterminer quand une opération de traînée commence, de fournir des commentaires pendant l’opération de traînée, et de déterminer quand l’opération de traînée se termine.
 
-Pour utiliser un objet `COleDropSource`, il vous suffit d’appeler le constructeur. Cela simplifie le processus de détermination des événements, tels qu’un clic de souris, à commencer une opération glisser à l’aide de [COleDataSource ::D odragdrop](../../mfc/reference/coledatasource-class.md#dodragdrop), [COleClientItem ::D odragdrop](../../mfc/reference/coleclientitem-class.md#dodragdrop)ou [COleServerItem ::D fonction odragdrop](../../mfc/reference/coleserveritem-class.md#dodragdrop) . Ces fonctions vont créer un objet `COleDropSource` pour vous. Vous souhaiterez peut-être modifier le comportement par défaut des fonctions substituables `COleDropSource`. Ces fonctions membres seront appelées aux moments appropriés par l’infrastructure.
+Pour utiliser `COleDropSource` un objet, il suffit d’appeler le constructeur. Cela simplifie le processus de détermination des événements, tels qu’un clic de souris, commencer une opération de dragage en utilisant [COleDataSource::DoDragDrop](../../mfc/reference/coledatasource-class.md#dodragdrop), [COleClientItem::DoDragDrop](../../mfc/reference/coleclientitem-class.md#dodragdrop), ou [COleServerItem::DoDragDrop](../../mfc/reference/coleserveritem-class.md#dodragdrop) fonction. Ces fonctions créeront un `COleDropSource` objet pour vous. Vous voudrez peut-être modifier `COleDropSource` le comportement par défaut des fonctions primordiales. Ces fonctions de membre seront appelées aux heures appropriées par le cadre.
 
-Pour plus d’informations sur les opérations de glisser-déplacer à l’aide d’OLE, consultez l’article [glisser-déplacer OLE](../../mfc/drag-and-drop-ole.md).
+Pour plus d’informations sur les opérations de drag-and-drop à l’aide d’OLE, voir l’article [OLE glisser et baisser](../../mfc/drag-and-drop-ole.md).
 
-Pour plus d’informations, consultez [IDropSource](/windows/win32/api/oleidl/nn-oleidl-idropsource) dans le SDK Windows.
+Pour plus d’informations, voir [IDropSource](/windows/win32/api/oleidl/nn-oleidl-idropsource) dans windows SDK.
 
 ## <a name="inheritance-hierarchy"></a>Hiérarchie d'héritage
 
@@ -67,9 +67,9 @@ Pour plus d’informations, consultez [IDropSource](/windows/win32/api/oleidl/nn
 
 ## <a name="requirements"></a>Spécifications
 
-**En-tête :** AFXOLE. h
+**En-tête:** afxole.h
 
-##  <a name="coledropsource"></a>COleDropSource::COleDropSource
+## <a name="coledropsourcecoledropsource"></a><a name="coledropsource"></a>COleDropSource::COleDropSource
 
 Construit un objet `COleDropSource`.
 
@@ -77,9 +77,9 @@ Construit un objet `COleDropSource`.
 COleDropSource();
 ```
 
-##  <a name="givefeedback"></a>COleDropSource :: GiveFeedback
+## <a name="coledropsourcegivefeedback"></a><a name="givefeedback"></a>COleDropSource::GiveFeedback
 
-Appelée par l’infrastructure après l’appel de [COleDropTarget :: OnDragOver](../../mfc/reference/coledroptarget-class.md#ondragover) ou [COleDropTarget ::D ragenter](../../mfc/reference/coledroptarget-class.md#ondragenter).
+Appelé par le cadre après avoir appelé [COleDropTarget::OnDragOver](../../mfc/reference/coledroptarget-class.md#ondragover) ou [COleDropTarget::DragEnter](../../mfc/reference/coledroptarget-class.md#ondragenter).
 
 ```
 virtual SCODE GiveFeedback(DROPEFFECT dropEffect);
@@ -88,31 +88,31 @@ virtual SCODE GiveFeedback(DROPEFFECT dropEffect);
 ### <a name="parameters"></a>Paramètres
 
 *dropEffect*<br/>
-L’effet que vous souhaitez afficher à l’utilisateur, en général qui indique ce qui se passe si une chute a eu lieu à ce stade avec les données sélectionnées. En règle générale, il s’agit de la valeur retournée par l’appel le plus récent à [CView :: OnDragEnter](../../mfc/reference/cview-class.md#ondragenter) ou [CView :: OnDragOver](../../mfc/reference/cview-class.md#ondragover). Il peut s’agir d’un ou plusieurs des éléments suivants :
+L’effet que vous souhaitez afficher à l’utilisateur, indiquant généralement ce qui se passerait si une baisse s’est produite à ce stade avec les données sélectionnées. Typiquement, c’est la valeur retournée par l’appel le plus récent à [CView::OnDragEnter](../../mfc/reference/cview-class.md#ondragenter) ou [CView::OnDragOver](../../mfc/reference/cview-class.md#ondragover). Il peut s’agir d’un ou de plusieurs des éléments suivants :
 
-- DROPEFFECT_NONE une suppression n’est pas autorisée.
+- DROPEFFECT_NONE Une baisse ne serait pas autorisée.
 
-- DROPEFFECT_COPY une opération de copie est effectuée.
+- DROPEFFECT_COPY une opération de copie serait effectuée.
 
-- DROPEFFECT_MOVE une opération de déplacement est effectuée.
+- DROPEFFECT_MOVE Une opération de déménagement serait effectuée.
 
-- DROPEFFECT_LINK un lien des données déplacées vers les données d’origine serait établi.
+- DROPEFFECT_LINK Un lien entre les données abandonnées et les données originales serait établi.
 
-- DROPEFFECT_SCROLL une opération de défilement de glissement est sur le lieu de se produire ou se produit dans la cible.
+- DROPEFFECT_SCROLL Une opération de drag scroll est sur le point de se produire ou se produit dans la cible.
 
 ### <a name="return-value"></a>Valeur de retour
 
-Retourne DRAGDROP_S_USEDEFAULTCURSORS si le glissement est en cours, NOERROR si ce n’est pas le cas.
+Les retours DRAGDROP_S_USEDEFAULTCURSORS si le dragage est en cours, NOERROR si ce n’est pas le cas.
 
 ### <a name="remarks"></a>Notes
 
-Remplacez cette fonction pour fournir des commentaires à l’utilisateur sur ce qui se passerait si une suppression se produisait à ce stade. L’implémentation par défaut utilise les curseurs OLE par défaut. Pour plus d’informations sur les opérations de glisser-déplacer à l’aide d’OLE, consultez l’article [glisser-déplacer OLE](../../mfc/drag-and-drop-ole.md).
+Remplacer cette fonction pour fournir des commentaires à l’utilisateur sur ce qui se passerait si une baisse s’est produite à ce stade. L’implémentation par défaut utilise les curseurs par défaut OLE. Pour plus d’informations sur les opérations de drag-and-drop à l’aide d’OLE, voir l’article [OLE glisser et baisser](../../mfc/drag-and-drop-ole.md).
 
-Pour plus d’informations, consultez [IDropSource :: GiveFeedback](/windows/win32/api/oleidl/nf-oleidl-idropsource-givefeedback), [IDropTarget ::D ragover](/windows/win32/api/oleidl/nf-oleidl-idroptarget-dragover)et [IDropTarget ::D ragenter](/windows/win32/api/oleidl/nf-oleidl-idroptarget-dragenter) dans le SDK Windows.
+Pour plus d’informations, voir [IDropSource::GiveFeedback](/windows/win32/api/oleidl/nf-oleidl-idropsource-givefeedback), [IDropTarget::DragOver](/windows/win32/api/oleidl/nf-oleidl-idroptarget-dragover), et [IDropTarget::DragEnter](/windows/win32/api/oleidl/nf-oleidl-idroptarget-dragenter) in the Windows SDK.
 
-##  <a name="onbegindrag"></a>COleDropSource::OnBeginDrag
+## <a name="coledropsourceonbegindrag"></a><a name="onbegindrag"></a>COleDropSource::OnBeginDrag
 
-Appelée par l’infrastructure quand un événement qui peut commencer une opération glisser, par exemple en appuyant sur le bouton gauche de la souris.
+Appelé par le cadre quand un événement se produit qui pourrait commencer une opération de traînée, comme appuyer sur le bouton de la souris gauche.
 
 ```
 virtual BOOL OnBeginDrag(CWnd* pWnd);
@@ -120,20 +120,20 @@ virtual BOOL OnBeginDrag(CWnd* pWnd);
 
 ### <a name="parameters"></a>Paramètres
 
-*pWnd*<br/>
-Pointe vers la fenêtre qui contient les données sélectionnées.
+*Pwnd*<br/>
+Points à la fenêtre qui contient les données sélectionnées.
 
 ### <a name="return-value"></a>Valeur de retour
 
-Valeur différente de zéro si le glissement est autorisé ; sinon, 0.
+Nonzero si le dragage est autorisé, sinon 0.
 
 ### <a name="remarks"></a>Notes
 
-Remplacez cette fonction si vous souhaitez modifier le mode de démarrage du processus de glissement. L’implémentation par défaut capture la souris et reste en mode glisser jusqu’à ce que l’utilisateur clique sur le bouton gauche ou droit de la souris ou appuie sur ÉCHAP, moment où il relâche la souris.
+Remplacez cette fonction si vous souhaitez modifier la façon dont le processus de dragage est lancé. L’implémentation par défaut capture la souris et reste en mode traîné jusqu’à ce que l’utilisateur clique sur le bouton de la souris gauche ou droite ou frappe ESC, date à laquelle il libère la souris.
 
-##  <a name="querycontinuedrag"></a>COleDropSource :: QueryContinueDrag
+## <a name="coledropsourcequerycontinuedrag"></a><a name="querycontinuedrag"></a>COleDropSource::QueryContinueDrag
 
-Une fois que le glissement a commencé, cette fonction est appelée à plusieurs reprises par l’infrastructure jusqu’à ce que l’opération glisser soit annulée ou terminée.
+Après le dragage a commencé, cette fonction est appelée à plusieurs reprises par le cadre jusqu’à ce que l’opération de traînée est soit annulée ou terminée.
 
 ```
 virtual SCODE QueryContinueDrag(
@@ -143,27 +143,27 @@ virtual SCODE QueryContinueDrag(
 
 ### <a name="parameters"></a>Paramètres
 
-*bEscapePressed*<br/>
-Indique si la touche ÉCHAP a été enfoncée depuis le dernier appel à `COleDropSource::QueryContinueDrag`.
+*bEscapePressed (en anglais)*<br/>
+Indique si la clé escAS a `COleDropSource::QueryContinueDrag`été pressée depuis le dernier appel à .
 
-*dwKeyState*<br/>
-Contient l’état des touches de modification du clavier. Il s’agit d’une combinaison de n’importe quel nombre de ce qui suit : MK_CONTROL, MK_SHIFT, MK_ALT, MK_LBUTTON, MK_MBUTTON et MK_RBUTTON.
+*dwKeyState (en)*<br/>
+Contient l’état des touches modificateur sur le clavier. Il s’agit d’une combinaison de n’importe quel nombre de ce qui suit: MK_CONTROL, MK_SHIFT, MK_ALT, MK_LBUTTON, MK_MBUTTON, et MK_RBUTTON.
 
 ### <a name="return-value"></a>Valeur de retour
 
-DRAGDROP_S_CANCEL si l’utilisateur appuie sur la touche Échap ou sur le bouton droit, ou si le bouton gauche est déclenché avant le début du glissement. DRAGDROP_S_DROP si une opération de déplacement doit se produire. Sinon S_OK.
+DRAGDROP_S_CANCEL si la clé ESC ou le bouton droit est appuyé, ou le bouton gauche est soulevé avant de faire glisser. DRAGDROP_S_DROP si une opération de chute doit se produire. Sinon, S_OK.
 
 ### <a name="remarks"></a>Notes
 
-Substituez cette fonction si vous souhaitez modifier le point à partir duquel le glissement est annulé ou une opération de déplacement.
+Remplacez cette fonction si vous souhaitez modifier le point où le dragage est annulé ou une goutte se produit.
 
-L’implémentation par défaut initie la suppression ou annule le glissement comme suit. Elle annule une opération glisser quand l’utilisateur appuie sur la touche Échap ou sur le bouton droit de la souris. Elle lance une opération de déplacement lorsque le bouton gauche de la souris est déclenché après le début du glissement. Dans le cas contraire, elle retourne S_OK et n’effectue aucune opération supplémentaire.
+L’implémentation par défaut initie la baisse ou annule la traînée comme suit. Il annule une opération de traînée lorsque la clé ESC ou le bouton de la souris droite est pressé. Il initie une opération de chute lorsque le bouton de la souris gauche est soulevé après le dragage a commencé. Dans le cas contraire, il retourne S_OK et n’effectue aucune autre opération.
 
-Étant donné que cette fonction est souvent appelée, elle doit être optimisée autant que possible.
+Parce que cette fonction est appelée fréquemment, elle doit être optimisée autant que possible.
 
 ## <a name="see-also"></a>Voir aussi
 
-[Exemple MFC HIERSVR](../../overview/visual-cpp-samples.md)<br/>
-[Exemple MFC OCLIENT](../../overview/visual-cpp-samples.md)<br/>
+[MFC Échantillon HIERSVR](../../overview/visual-cpp-samples.md)<br/>
+[Échantillon MFC OCLIENT](../../overview/visual-cpp-samples.md)<br/>
 [CCmdTarget, classe](../../mfc/reference/ccmdtarget-class.md)<br/>
 [Graphique hiérarchique](../../mfc/hierarchy-chart.md)

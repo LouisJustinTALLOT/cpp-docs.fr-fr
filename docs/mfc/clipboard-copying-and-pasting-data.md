@@ -1,72 +1,72 @@
 ---
-title: 'Presse-papiers : Copier et coller des données'
+title: 'Presse-papiers : copier-coller des données'
 ms.date: 11/04/2016
 helpviewer_keywords:
 - Clipboard, copying data to
 - Clipboard, pasting
 ms.assetid: 580e10be-241f-4f9f-94cf-8302edc5beef
-ms.openlocfilehash: cff9094315dc97e2040eb4dbad25d044c7c51a81
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 74348dd3e790cceada9aafd718464694997316ed
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62327143"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81374568"
 ---
-# <a name="clipboard-copying-and-pasting-data"></a>Presse-papiers : Copier et coller des données
+# <a name="clipboard-copying-and-pasting-data"></a>Presse-papiers : copier-coller des données
 
-Cette rubrique décrit les étapes nécessaires pour implémenter la copie et de collage à partir du Presse-papiers dans votre application OLE. Il est recommandé de lire le [objets de données et Sources de données (OLE)](../mfc/data-objects-and-data-sources-ole.md) rubriques avant de continuer.
+Ce sujet décrit le travail minimum nécessaire pour implémenter la copie et le coller à partir du Clipboard dans votre application OLE. Il est recommandé de lire les sujets [des objets et des sources de données (OLE)](../mfc/data-objects-and-data-sources-ole.md) avant de procéder.
 
-Avant de pouvoir implémenter copie ou de collage, vous devez tout d’abord fournir des fonctions pour gérer les options de copier, couper et coller dans le menu Edition.
+Avant de pouvoir implémenter la copie ou le coller, vous devez d’abord fournir des fonctions pour gérer les options Copier, Couper et Coller sur le menu Modifier.
 
-##  <a name="_core_copying_or_cutting_data"></a> Copie ou collage de données
+## <a name="copying-or-cutting-data"></a><a name="_core_copying_or_cutting_data"></a>Copier ou couper des données
 
-#### <a name="to-copy-data-to-the-clipboard"></a>Pour copier des données dans le Presse-papiers
+#### <a name="to-copy-data-to-the-clipboard"></a>Pour copier les données du Clipboard
 
-1. Déterminez si les données à copier sont des données natives ou est un élément incorporé ou lié.
+1. Déterminez si les données à copier sont des données natives ou s’il s’agit d’un élément intégré ou lié.
 
-   - Si les données sont incorporées ou liées, obtenir un pointeur vers le `COleClientItem` objet qui a été sélectionné.
+   - Si les données sont intégrées ou `COleClientItem` liées, obtenez un pointeur sur l’objet qui a été sélectionné.
 
-   - Si les données sont natives et l’application est un serveur, créez un nouvel objet dérivé `COleServerItem` contenant les données sélectionnées. Sinon, créez un `COleDataSource` objet pour les données.
+   - Si les données sont natives et que l’application `COleServerItem` est un serveur, créez un nouvel objet dérivé de la contenant des données sélectionnées. Sinon, créez `COleDataSource` un objet pour les données.
 
-1. Appeler l’élément sélectionné `CopyToClipboard` fonction membre.
+1. Appelez la fonction `CopyToClipboard` de membre de l’élément sélectionné.
 
-1. Si l’utilisateur a choisi une opération couper au lieu d’une opération de copie, supprimer les données sélectionnées à partir de votre application.
+1. Si l’utilisateur a choisi une opération Cut au lieu d’une opération Copy, supprimez les données sélectionnées de votre application.
 
-Pour voir un exemple de cette séquence, consultez le `OnEditCut` et `OnEditCopy` des exemples de fonctions dans les MFC OLE programmes [OCLIENT](../overview/visual-cpp-samples.md) et [HIERSVR](../overview/visual-cpp-samples.md). Notez que ces exemples gèrent un pointeur vers les données sélectionnées, afin de l’étape 1 est déjà terminée.
+Pour voir un exemple de `OnEditCut` cette `OnEditCopy` séquence, voir les et les fonctions dans les programmes d’échantillons MFC OLE [OCLIENT](../overview/visual-cpp-samples.md) et [HIERSVR](../overview/visual-cpp-samples.md). Notez que ces échantillons conservent un pointeur sur les données actuellement sélectionnées, de sorte que l’étape 1 est déjà terminée.
 
-##  <a name="_core_pasting_data"></a> Collage de données
+## <a name="pasting-data"></a><a name="_core_pasting_data"></a>Données de coller
 
-Collage de données est plus complexe que la copie, car vous devez choisir le format à utiliser pour coller les données dans votre application.
+Coller des données est plus compliqué que de les copier parce que vous devez choisir le format à utiliser pour coller les données dans votre application.
 
-#### <a name="to-paste-data-from-the-clipboard"></a>Pour coller des données à partir du Presse-papiers
+#### <a name="to-paste-data-from-the-clipboard"></a>Pour coller les données du Clipboard
 
-1. Dans votre classe d’affichage, implémentez `OnEditPaste` pour gérer les utilisateurs en choisissant l’option Coller dans le menu Edition.
+1. Dans votre classe `OnEditPaste` de vue, implémentez pour gérer les utilisateurs choisissant l’option Pâte du menu Edit.
 
-1. Dans le `OnEditPaste` de fonction, créez un `COleDataObject` objet et appelez ses `AttachClipboard` fonction membre à lier cet objet pour les données dans le Presse-papiers.
+1. Dans `OnEditPaste` la fonction, `COleDataObject` créez un `AttachClipboard` objet et appelez sa fonction de membre pour lier cet objet aux données du Clipboard.
 
 1. Appelez `COleDataObject::IsDataAvailable` pour vérifier si un format particulier est disponible.
 
-   Vous pouvez également utiliser `COleDataObject::BeginEnumFormats` pour rechercher d’autres formats jusqu'à ce que vous trouviez un adapté à votre application.
+   Alternativement, vous `COleDataObject::BeginEnumFormats` pouvez utiliser pour rechercher d’autres formats jusqu’à ce que vous trouviez un plus adapté à votre application.
 
-1. Effectuer le collage du format.
+1. Effectuez la pâte du format.
 
-Pour obtenir un exemple de comment cela fonctionne, consultez l’implémentation de la `OnEditPaste` fonctions membres dans les classes d’affichage définies dans les programmes exemples MFC OLE [OCLIENT](../overview/visual-cpp-samples.md) et [HIERSVR](../overview/visual-cpp-samples.md).
+Par exemple, voir la mise en `OnEditPaste` œuvre des fonctions des membres dans les classes de vue définies dans les programmes d’échantillons [OCLIENT](../overview/visual-cpp-samples.md) et [HIERSVR](../overview/visual-cpp-samples.md)de MFC .
 
 > [!TIP]
->  Le principal avantage de la séparation de l’opération de collage dans sa propre fonction est que le même code de collage peut être utilisé lorsque les données sont déplacées dans votre application pendant une opération de glisser-déplacer. Comme dans OCLIENT et HIERSVR, votre `OnDrop` fonction peut également appeler `DoPasteItem`, réutilisant le code écrit pour l’implémentation des opérations de collage.
+> Le principal avantage de séparer l’opération de pâte dans sa propre fonction est que le même code de pâte peut être utilisé lorsque les données sont supprimées dans votre application lors d’une opération de drag-and-drop. Comme dans OCLIENT et HIERSVR, `OnDrop` `DoPasteItem`votre fonction peut également appeler , réutiliser le code écrit pour implémenter les opérations de pâte.
 
-Pour gérer l’option Collage spécial dans le menu Edition, consultez la rubrique [boîtes de dialogue dans OLE](../mfc/dialog-boxes-in-ole.md).
+Pour gérer l’option Pâte Spéciale sur le menu Edit, voir le sujet [Dialog Boxes in OLE](../mfc/dialog-boxes-in-ole.md).
 
-### <a name="what-do-you-want-to-know-more-about"></a>Ce que vous souhaitez en savoir plus sur
+### <a name="what-do-you-want-to-know-more-about"></a>Qu’est-ce que vous voulez savoir plus sur
 
 - [Ajout d’autres formats](../mfc/clipboard-adding-other-formats.md)
 
-- [Transferts de données uniformes et sources de données et les objets de données OLE](../mfc/data-objects-and-data-sources-ole.md)
+- [Objets de données et sources de données OLE et transfert de données uniforme](../mfc/data-objects-and-data-sources-ole.md)
 
-- [Glisser-déplacer OLE](../mfc/drag-and-drop-ole.md)
+- [Glisser-déposer OLE](../mfc/drag-and-drop-ole.md)
 
 - [OLE](../mfc/ole-background.md)
 
 ## <a name="see-also"></a>Voir aussi
 
-[Presse-papiers : Utilisation du mécanisme de Presse-papiers OLE](../mfc/clipboard-using-the-ole-clipboard-mechanism.md)
+[Presse-papiers : utilisation du mécanisme de Presse-papiers OLE](../mfc/clipboard-using-the-ole-clipboard-mechanism.md)

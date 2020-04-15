@@ -26,23 +26,23 @@ helpviewer_keywords:
 - std::setiosflags [C++]
 - std::setprecision [C++]
 - std::setw [C++]
-ms.openlocfilehash: 7fd523dc9184ae613cf8a52969a497b6b4761cf6
-ms.sourcegitcommit: eff68e4e82be292a5664616b16a526df3e9d1cda
+ms.openlocfilehash: 0ed59a94c6b1c7d962b566e2a6b186ffb617a26a
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80150820"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81375422"
 ---
 # <a name="ltiomanipgt-functions"></a>&lt;iomanip&gt;, fonctions
 
 ||||
 |-|-|-|
 |[get_money](#iomanip_get_money)|[get_time](#iomanip_get_time)|[put_money](#iomanip_put_money)|
-|[put_time](#iomanip_put_time)|[quoted](#quoted)|[resetiosflags](#resetiosflags)|
-|[setbase](#setbase)|[setfill](#setfill)|[setiosflags](#setiosflags)|
+|[put_time](#iomanip_put_time)|[Cité](#quoted)|[resetiosflags](#resetiosflags)|
+|[setbase setbase](#setbase)|[setfill setfill](#setfill)|[setiosflags](#setiosflags)|
 |[setprecision](#setprecision)|[setw](#setw)|
 
-## <a name="get_money"></a><a name="iomanip_get_money"></a>  get_money
+## <a name="get_money"></a><a name="iomanip_get_money"></a>get_money
 
 Extrait une valeur monétaire à partir d’un flux en utilisant le format souhaité, et retourne la valeur dans un paramètre.
 
@@ -53,19 +53,19 @@ T7 get_money(Money& amount, bool use_intl);
 
 ### <a name="parameters"></a>Paramètres
 
-*quantité*\
+*Montant*\
 Valeur monétaire extraite.
 
 *use_intl*\
-Si la **valeur est true**, utilisez le format international. La valeur par défaut est **false**.
+Si **c’est vrai,** utilisez le format international. La valeur par défaut est **false**.
 
 ### <a name="remarks"></a>Notes
 
-Le manipulateur retourne un objet qui, lorsqu’il est extrait du `str`de flux, se comporte comme un `formatted input function` qui appelle la fonction membre `get` pour la facette de paramètres régionaux `money_get` associée à `str`, à l’aide de *use_intl* pour indiquer le format international. En cas de réussite, l’appel stocke dans *amount* la valeur monétaire extraite. Le manipulateur retourne ensuite `str`.
+Le manipulateur renvoie un objet qui, `str`lorsqu’il `formatted input function` est extrait du `get` flux , `money_get` se `str`comporte comme un qui appelle la fonction du membre pour la facette locale associée à , en utilisant *use_intl* pour indiquer le format international. En cas de succès, l’appel stocke en *quantité* la valeur monétaire extraite. Le manipulateur retourne ensuite `str`.
 
 `Money` doit être de type `long double` ou une instanciation de `basic_string` avec le même élément et les mêmes paramètres de caractéristiques que `str`.
 
-## <a name="get_time"></a><a name="iomanip_get_time"></a>  get_time
+## <a name="get_time"></a><a name="iomanip_get_time"></a>get_time
 
 Extrait une valeur de temps à partir d’un flux à l’aide du format souhaité. Retourne la valeur dans un paramètre en tant que structure de temps.
 
@@ -86,7 +86,7 @@ Format à utiliser pour obtenir la valeur de temps.
 
 Le manipulateur retourne un objet qui, quand il est extrait à partir du flux `str`, se comporte comme un `formatted input function` qui appelle la fonction membre `get` pour la facette de paramètres régionaux `time_get` associée à `str`, en utilisant `tptr` pour indiquer la structure de temps et `fmt` pour indiquer le début d’une chaîne de format terminée par un caractère Null. En cas de réussite, l’appel stocke dans la structure de temps les valeurs associées à tous les champs de temps extraits. Le manipulateur retourne ensuite `str`.
 
-## <a name="put_money"></a><a name="iomanip_put_money"></a>  put_money
+## <a name="put_money"></a><a name="iomanip_put_money"></a>put_money
 
 Insère une valeur monétaire dans un flux en utilisant le format souhaité.
 
@@ -97,11 +97,11 @@ T8 put_money(const Money& amount, bool use_intl);
 
 ### <a name="parameters"></a>Paramètres
 
-*quantité*\
+*Montant*\
 Valeur monétaire à insérer dans le flux.
 
 *use_intl*\
-A la valeur **true** si le manipulateur doit utiliser le format international, **false** dans le cas contraire.
+Défini à **vrai** si le manipulateur doit utiliser le format international, **faux** si elle ne devrait pas.
 
 ### <a name="return-value"></a>Valeur de retour
 
@@ -109,11 +109,11 @@ Retourne `str`.
 
 ### <a name="remarks"></a>Notes
 
-Le manipulateur retourne un objet qui, quand il est inséré dans le flux `str`, se comporte comme une fonction de sortie mise en forme qui appelle la fonction membre `put` pour la facette de paramètres régionaux `money_put` associée à `str`. En cas de réussite, l’appel insère `amount` mis en forme de manière appropriée, en utilisant *use_intl* pour indiquer le format international et `str.fill()`, en tant qu’élément de remplissage. Le manipulateur retourne ensuite `str`.
+Le manipulateur retourne un objet qui, quand il est inséré dans le flux `str`, se comporte comme une fonction de sortie mise en forme qui appelle la fonction membre `put` pour la facette de paramètres régionaux `money_put` associée à `str`. En cas de succès, l’appel s’insère `amount` convenablement formaté, en utilisant *use_intl* pour indiquer le format international et, `str.fill()`comme élément de remplissage. Le manipulateur retourne ensuite `str`.
 
 `Money` doit être de type `long double` ou une instanciation de `basic_string` avec le même élément et les mêmes paramètres de caractéristiques que `str`.
 
-## <a name="put_time"></a><a name="iomanip_put_time"></a>  put_time
+## <a name="put_time"></a><a name="iomanip_put_time"></a>put_time
 
 Écrit une valeur de temps à partir d’une structure de temps dans un flux à l’aide d’un format spécifié.
 
@@ -132,9 +132,9 @@ Format à utiliser pour écrire la valeur de temps.
 
 ### <a name="remarks"></a>Notes
 
-Le manipulateur retourne un objet qui, quand il est inséré dans le flux `str`, se comporte comme un `formatted output function`. La fonction de sortie appelle la fonction membre `put` pour la facette de paramètres régionaux `time_put` associée à `str`. La fonction de sortie utilise *time_ptr* pour indiquer la structure de temps et *time_format* pour indiquer le début d’une chaîne de format terminée par le caractère null. En cas de réussite, l’appel insère le texte littéral à partir de la chaîne de format et les valeurs converties à partir de la structure de temps. Le manipulateur retourne ensuite `str`.
+Le manipulateur retourne un objet qui, quand il est inséré dans le flux `str`, se comporte comme un `formatted output function`. La fonction de sortie appelle la fonction membre `put` pour la facette de paramètres régionaux `time_put` associée à `str`. La fonction de sortie utilise *time_ptr* pour indiquer la structure temporelle et *time_format* pour indiquer le début d’une chaîne de format à durée nulle. En cas de réussite, l’appel insère le texte littéral à partir de la chaîne de format et les valeurs converties à partir de la structure de temps. Le manipulateur retourne ensuite `str`.
 
-## <a name="quoted"></a><a name="quoted"></a>  quoted
+## <a name="quoted"></a><a name="quoted"></a>Cité
 
 **(Nouveauté dans C++14)** Manipulateur iostream qui permet d’effectuer facilement un aller-retour de chaînes dans et hors de flux à l’aide des opérateurs >> et <<.
 
@@ -147,13 +147,13 @@ quoted(const char* str, char delimiter, char escape) // or wide versions
 
 ### <a name="parameters"></a>Paramètres
 
-*str*\
-Std :: String, char\*, littéral de chaîne ou littéral de chaîne brute, ou une version étendue de l’une d’entre elles (par exemple, std :: wstring, wchar_t\*).
+*Str*\
+Un std::corde,\*char, string littéral ou brut string littérale, ou une version large de l’un de\*ces (par exemple std::wstring, wchar_t ).
 
-*délimiteur*\
+*Délimiteur*\
 Caractère spécifié par l'utilisateur ou caractère large à utiliser comme délimiteur de début et de fin de chaîne.
 
-\ d' *échappement*
+*Échapper*\
 Caractère spécifié par l'utilisateur ou caractère large à utiliser comme caractère d'échappement pour les séquences d'échappement dans la chaîne.
 
 ### <a name="remarks"></a>Notes
@@ -301,7 +301,7 @@ Press Enter to exit
 */
 ```
 
-## <a name="resetiosflags"></a><a name="resetiosflags"></a>  resetiosflags
+## <a name="resetiosflags"></a><a name="resetiosflags"></a>resetiosflags
 
 Efface les indicateurs spécifiés.
 
@@ -311,18 +311,18 @@ T1 resetiosflags(ios_base::fmtflags mask);
 
 ### <a name="parameters"></a>Paramètres
 
-*masque*\
+*Masque*\
 Indicateurs à effacer.
 
 ### <a name="return-value"></a>Valeur de retour
 
-Le manipulateur retourne un objet qui, lorsqu’il est extrait ou inséré dans le `str`de flux, appelle `str.`[setf](../standard-library/ios-base-class.md#setf)`(ios_base::`[fmtflags](../standard-library/ios-base-class.md#fmtflags)`, mask)`, puis retourne `str`.
+Le manipulateur renvoie un objet qui, lorsqu’il `str`est `str.`extrait ou inséré dans le `str`flux , appelle [setf](../standard-library/ios-base-class.md#setf)`(ios_base::`[fmtflags](../standard-library/ios-base-class.md#fmtflags)`, mask)`, puis revient .
 
 ### <a name="example"></a>Exemple
 
-Pour obtenir un exemple d’utilisation de [, consultez ](../standard-library/iomanip-functions.md#setw)setw`resetiosflags`.
+Pour obtenir un exemple d’utilisation de `resetiosflags`, consultez [setw](../standard-library/iomanip-functions.md#setw).
 
-## <a name="setbase"></a><a name="setbase"></a>  setbase
+## <a name="setbase"></a><a name="setbase"></a>setbase setbase
 
 Définir la base pour les entiers.
 
@@ -332,26 +332,26 @@ T3 setbase(int base);
 
 ### <a name="parameters"></a>Paramètres
 
-*base*\
+*Base*\
 Base numérique.
 
 ### <a name="return-value"></a>Valeur de retour
 
-Le manipulateur retourne un objet qui, lorsqu’il est extrait ou inséré dans le `str`de flux, appelle `str.setf(mask,` [ios_base :: basefield](../standard-library/ios-base-class.md#fmtflags)`)`, puis retourne `str`. Ici, `mask` est déterminé comme suit :
+Le manipulateur renvoie un objet qui, lorsqu’il `str`est `str.setf(mask,` extrait ou inséré dans le flux `str`, appelle [ios_base::basefield](../standard-library/ios-base-class.md#fmtflags)`)`, puis revient . Ici, `mask` est déterminé comme suit:
 
-- Si *base* est 8, `mask` est `ios_base::`[Oct](../standard-library/ios-functions.md#oct).
+- Si *la base* est `mask` `ios_base::`de 8, alors est [oct](../standard-library/ios-functions.md#oct).
 
-- Si *base* est 10, mask est `ios_base::`[Dec](../standard-library/ios-functions.md#dec).
+- Si *la base* est de `ios_base::`10, puis masque est [déc](../standard-library/ios-functions.md#dec).
 
-- Si *base* est 16, `mask` est `ios_base::`[Hex](../standard-library/ios-functions.md#hex).
+- Si *la base* est `mask` de `ios_base::`16, alors est [hex](../standard-library/ios-functions.md#hex).
 
-- Si *base* est une autre valeur, mask est `ios_base::`[fmtflags](../standard-library/ios-base-class.md#fmtflags)`(0)`.
+- Si *la base* est une `ios_base::`autre valeur, alors le masque est [fmtflags](../standard-library/ios-base-class.md#fmtflags)`(0)`.
 
 ### <a name="example"></a>Exemple
 
-Pour obtenir un exemple d’utilisation de [, consultez ](../standard-library/iomanip-functions.md#setw)setw`setbase`.
+Pour obtenir un exemple d’utilisation de `setbase`, consultez [setw](../standard-library/iomanip-functions.md#setw).
 
-## <a name="setfill"></a><a name="setfill"></a>  setfill
+## <a name="setfill"></a><a name="setfill"></a>setfill setfill
 
 Définit le caractère qui sera utilisé pour remplir les espaces dans un affichage aligné à droite.
 
@@ -367,13 +367,13 @@ Caractère qui sera utilisé pour remplir les espaces dans un affichage aligné 
 
 ### <a name="return-value"></a>Valeur de retour
 
-Le manipulateur de modèle retourne un objet qui, lorsqu’il est extrait ou inséré dans le `str`de flux, appelle `str.``(Ch)`de [remplissage](../standard-library/basic-ios-class.md#fill) , puis retourne `str`. Le type `Elem` doit être le même que le type d’élément pour le `str`de flux.
+Le manipulateur de modèle renvoie un objet qui, `str`une `str.`fois extrait ou `str`inséré dans le flux, appelle [remplir,](../standard-library/basic-ios-class.md#fill)`(Ch)`puis retourne . Le `Elem` type doit être le même que `str`le type d’élément pour le flux .
 
 ### <a name="example"></a>Exemple
 
-Pour obtenir un exemple d’utilisation de [, consultez ](../standard-library/iomanip-functions.md#setw)setw`setfill`.
+Pour obtenir un exemple d’utilisation de `setfill`, consultez [setw](../standard-library/iomanip-functions.md#setw).
 
-## <a name="setiosflags"></a><a name="setiosflags"></a>  setiosflags
+## <a name="setiosflags"></a><a name="setiosflags"></a>setiosflags setiosflags setiosflags setio
 
 Définit les indicateurs spécifiés.
 
@@ -383,18 +383,18 @@ T2 setiosflags(ios_base::fmtflags mask);
 
 ### <a name="parameters"></a>Paramètres
 
-*masque*\
+*Masque*\
 Indicateurs à définir.
 
 ### <a name="return-value"></a>Valeur de retour
 
-Le manipulateur retourne un objet qui, lorsqu’il est extrait ou inséré dans le `str`de flux, appelle `str.`[setf](../standard-library/ios-base-class.md#setf)`(mask)`, puis retourne `str`.
+Le manipulateur renvoie un objet qui, lorsqu’il `str`est `str.`extrait ou inséré dans le flux , appelle [setf](../standard-library/ios-base-class.md#setf)`(mask)`, puis retourne `str`.
 
 ### <a name="example"></a>Exemple
 
-Pour obtenir un exemple d’utilisation de [, consultez ](../standard-library/iomanip-functions.md#setw)setw`setiosflags`.
+Pour obtenir un exemple d’utilisation de `setiosflags`, consultez [setw](../standard-library/iomanip-functions.md#setw).
 
-## <a name="setprecision"></a><a name="setprecision"></a>  setprecision
+## <a name="setprecision"></a><a name="setprecision"></a>setprecision
 
 Définit la précision des valeurs à virgule flottante.
 
@@ -409,13 +409,13 @@ Précision des valeurs à virgule flottante.
 
 ### <a name="return-value"></a>Valeur de retour
 
-Le manipulateur retourne un objet qui, lorsqu’il est extrait ou inséré dans le `str`de flux, appelle `str.`[précision](../standard-library/ios-base-class.md#precision)`(Prec)`, puis retourne `str`.
+Le manipulateur renvoie un objet qui, lorsqu’il `str`est `str.`extrait ou `str`inséré dans le flux , appelle [la précision,](../standard-library/ios-base-class.md#precision)`(Prec)`puis revient .
 
 ### <a name="example"></a>Exemple
 
-Pour obtenir un exemple d’utilisation de [, consultez ](../standard-library/iomanip-functions.md#setw)setw`setprecision`.
+Pour obtenir un exemple d’utilisation de `setprecision`, consultez [setw](../standard-library/iomanip-functions.md#setw).
 
-## <a name="setw"></a><a name="setw"></a>  setw
+## <a name="setw"></a><a name="setw"></a>setw setw
 
 Spécifie la largeur du champ affichage pour l’élément suivant dans le flux.
 
@@ -430,7 +430,7 @@ Largeur de la zone d’affichage.
 
 ### <a name="return-value"></a>Valeur de retour
 
-Le manipulateur retourne un objet qui, lorsqu’il est extrait ou inséré dans le `str`de flux, appelle `str.`[width](../standard-library/ios-base-class.md#width)`(Wide)`, puis retourne `str`.
+Le manipulateur renvoie un objet qui, lorsqu’il `str`est `str.`extrait ou `str`inséré dans le flux , appelle la [largeur,](../standard-library/ios-base-class.md#width)`(Wide)`puis retourne .
 
 ### <a name="remarks"></a>Notes
 
@@ -653,4 +653,4 @@ l5 = 65536
 
 ## <a name="see-also"></a>Voir aussi
 
-[\<iomanip>](../standard-library/iomanip.md)
+[\<>iomanip](../standard-library/iomanip.md)

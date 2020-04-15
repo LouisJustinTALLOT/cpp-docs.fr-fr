@@ -14,12 +14,12 @@ helpviewer_keywords:
 - std::sleep_until [C++]
 - std::swap [C++]
 - std::yield [C++]
-ms.openlocfilehash: 8064cec7e94a909d7dc2e1b22142d362bb7b9488
-ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
+ms.openlocfilehash: bb0a0a12ec2882701447804f9c88d1776a196cb7
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/16/2020
-ms.locfileid: "79420735"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81375839"
 ---
 # <a name="ltthreadgt-functions"></a>&lt;thread&gt;, fonctions
 
@@ -28,7 +28,7 @@ ms.locfileid: "79420735"
 |[get_id](#get_id)|[sleep_for](#sleep_for)|[sleep_until](#sleep_until)|
 |[swap](#swap)|[yield](#yield)|
 
-## <a name="get_id"></a>  get_id
+## <a name="get_id"></a><a name="get_id"></a>get_id
 
 Identifie de façon unique le thread d’exécution en cours.
 
@@ -40,7 +40,7 @@ thread::id this_thread::get_id() noexcept;
 
 Un objet de type [thread::id](../standard-library/thread-class.md) qui identifie de façon unique le thread d’exécution en cours.
 
-## <a name="sleep_for"></a>  sleep_for
+## <a name="sleep_for"></a><a name="sleep_for"></a>sleep_for
 
 Bloque le thread appelant.
 
@@ -57,9 +57,9 @@ Objet [duration](../standard-library/duration-class.md) qui spécifie un interva
 
 ### <a name="remarks"></a>Notes
 
-La fonction bloque le thread appelant pendant au moins le temps spécifié par *Rel_time*. Cette fonction ne lève aucune exception.
+La fonction bloque le fil d’appel pour au moins le temps spécifié par *Rel_time*. Cette fonction ne lève aucune exception.
 
-## <a name="sleep_until"></a>  sleep_until
+## <a name="sleep_until"></a><a name="sleep_until"></a>sleep_until
 
 Bloque le thread appelant au moins jusqu’à l’heure spécifiée.
 
@@ -79,9 +79,9 @@ Représente un point dans le temps.
 
 Cette fonction ne lève aucune exception.
 
-## <a name="swap"></a>  swap
+## <a name="swap"></a><a name="swap"></a>Swap
 
-Permute les États de deux objets **thread** .
+Échange les états de deux objets **de fil.**
 
 ```cpp
 void swap(thread& Left, thread& Right) noexcept;
@@ -89,17 +89,17 @@ void swap(thread& Left, thread& Right) noexcept;
 
 ### <a name="parameters"></a>Paramètres
 
-\ *gauche*
-Objet **thread** gauche.
+*Gauche*\
+L’objet **de fil** gauche.
 
-\ *droit*
-Objet **thread** approprié.
+*Oui*\
+L’objet **de fil** droit.
 
 ### <a name="remarks"></a>Notes
 
 La fonction appelle `Left.swap(Right)`.
 
-## <a name="yield"></a>  yield
+## <a name="yield"></a><a name="yield"></a>Rendement
 
 Indique au système d’exploitation d’exécuter d’autres threads, même si le thread actuel continuerait normalement à s’exécuter.
 
@@ -109,4 +109,4 @@ inline void yield() noexcept;
 
 ## <a name="see-also"></a>Voir aussi
 
-[\<thread>](../standard-library/thread.md)
+[\<>de fil](../standard-library/thread.md)
