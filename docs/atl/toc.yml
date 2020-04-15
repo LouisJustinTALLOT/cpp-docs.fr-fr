@@ -111,7 +111,7 @@
           items:
             - name: Implémentation de pages de propriétés
               href: implementing-property-pages.md
-            - name: "Exemple\_: Implémentation d’une page de propriétés"
+            - name: 'Exemple : Implémentation d’une page de propriétés'
               href: example-implementing-a-property-page.md
     - name: Prise en charge ATL pour les contrôles DHTML
       expanded: false
@@ -162,7 +162,7 @@
       href: specifying-the-threading-model-for-a-project-atl.md
     - name: Classes de module ATL
       href: atl-module-classes.md
-    - name: Services ATL
+    - name: ATL (services)
       expanded: false
       items:
         - name: Services ATL
@@ -234,7 +234,7 @@
       items:
         - name: Composant de registre ATL (inscription)
           href: atl-registry-component-registrar.md
-        - name: Création de scripts d’inscription
+        - name: Création de scripts d’enregistreur
           expanded: false
           items:
             - name: Création de scripts d’inscription

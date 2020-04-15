@@ -2,7 +2,7 @@
   tocHref: /
   topicHref: /
   items:
-    - name: "Visual\_C++"
+    - name: Visual C++
       tocHref: /cpp/
       topicHref: /cpp
       items:
@@ -36,7 +36,7 @@
               tocHref: /cpp/c-runtime-library/
               topicHref: /cpp/c-runtime-library/c-run-time-library-reference
               items:
-                - name: Référence
+                - name: Informations de référence
                   tocHref: /cpp/c-runtime-library/reference/
                   topicHref: /cpp/c-runtime-library/reference/crt-alphabetical-function-reference
             - name: Bibliothèque standard C++
@@ -53,14 +53,14 @@
                   tocHref: /cpp/mfc/
                   topicHref: /cpp/mfc/mfc-desktop-applications
                   items:
-                    - name: Référence
+                    - name: Informations de référence
                       tocHref: /cpp/mfc/reference/
                       topicHref: /cpp/mfc/reference/mfc-classes
                 - name: Classes partagées ATL/MFC
                   tocHref: /cpp/atl-mfc-shared/
                   topicHref: /cpp/atl-mfc-shared/atl-mfc-shared-classes
                   items:
-                    - name: Référence
+                    - name: Informations de référence
                       tocHref: /cpp/atl-mfc-shared/reference/
                       topicHref: /cpp/atl-mfc-shared/reference/classes-shared-by-mfc-and-atl
                 - name: C++/CX
@@ -87,7 +87,7 @@
                   topicHref: /cpp/data/odbc/open-database-connectivity-odbc
             - name: 'Modifier, parcourir et refactoriser du code'
               tocHref: /cpp/ide
-              topicHref: /cpp/overview-of-cpp-development
+              topicHref: /cpp/ide/read-and-understand-code-cpp
               items:
                 - name: IDE
                   tocHref: /cpp/ide/
