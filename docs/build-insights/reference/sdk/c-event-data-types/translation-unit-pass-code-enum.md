@@ -1,6 +1,6 @@
 ---
-title: Énumération TRANSLATION_UNIT_PASS_CODE
-description: Le C++ Kit de développement logiciel (SDK) de Build Insights TRANSLATION_UNIT_PASS_CODE référence Enum.
+title: TRANSLATION_UNIT_PASS_CODE enum
+description: La référence enum de L’ouvrage de construction de la CMD Build Insights TRANSLATION_UNIT_PASS_CODE.
 ms.date: 02/12/2020
 helpviewer_keywords:
 - C++ Build Insights
@@ -9,33 +9,33 @@ helpviewer_keywords:
 - throughput analysis
 - build time analysis
 - vcperf.exe
-ms.openlocfilehash: 1219eed98fd01e8c91d8750977e2d8ca4498d649
-ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
+ms.openlocfilehash: b0162d7e53bb7ee7035b94a6b640f6db87cd8b8d
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/05/2020
-ms.locfileid: "78333579"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81325292"
 ---
-# <a name="translation_unit_pass_code-enum"></a>Énumération TRANSLATION_UNIT_PASS_CODE
+# <a name="translation_unit_pass_code-enum"></a>TRANSLATION_UNIT_PASS_CODE enum
 
 ::: moniker range="<=vs-2015"
 
-Le C++ Kit de développement logiciel (SDK) Build Insights est compatible avec Visual Studio 2017 et versions ultérieures. Pour consulter la documentation de ces versions, définissez le contrôle sélecteur de version de Visual Studio pour cet article sur Visual Studio 2017 ou Visual Studio 2019.
+Le SDK Build Insights est compatible avec Visual Studio 2017 et plus. Pour voir la documentation de ces versions, définissez le contrôle du sélecteur Visual Studio **Version** pour cet article à Visual Studio 2017 ou Visual Studio 2019. On le trouve en haut de la table des contenus sur cette page.
 
 ::: moniker-end
 ::: moniker range=">=vs-2017"
 
-Énumération `TRANSLATION_UNIT_PASS_CODE`.
+L’enum. `TRANSLATION_UNIT_PASS_CODE`
 
 ## <a name="members"></a>Membres
 
-| Name | Valeur | Description |
+| Nom | Valeur | Description |
 |--|--|--|
-| `TRANSLATION_UNIT_PASS_CODE_FRONT_END` | 0 (0x00000000) | L’étape frontale, responsable de l’analyse du code source et de sa conversion en langage intermédiaire. |
-| `TRANSLATION_UNIT_PASS_CODE_BACK_END` | 1 (0x00000001) | L’étape principale, responsable de l’optimisation du langage intermédiaire et de sa conversion en code machine. |
+| `TRANSLATION_UNIT_PASS_CODE_FRONT_END` | 0 (0x000000000) | Le pass front-end, chargé d’analyser le code source et de le convertir en langage intermédiaire. |
+| `TRANSLATION_UNIT_PASS_CODE_BACK_END` | 1 (0x00000001) | Le passage back-end, chargé d’optimiser le langage intermédiaire et de le convertir en code machine. |
 
 ## <a name="remarks"></a>Notes
 
-Utilisé par les fonctions du kit de développement logiciel (SDK) C.
+Utilisé par les fonctions C SDK.
 
 ::: moniker-end

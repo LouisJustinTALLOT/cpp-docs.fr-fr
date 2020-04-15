@@ -1,6 +1,6 @@
 ---
-title: Structure NAME_VALUE_PAIR_DATA
-description: Référence C++ de la structure du kit de développement logiciel (SDK) de Build Insights NAME_VALUE_PAIR_DATA.
+title: structure NAME_VALUE_PAIR_DATA
+description: La référence de structure de construction SDK NAME_VALUE_PAIR_DATA de CMD Build Insights.
 ms.date: 02/12/2020
 helpviewer_keywords:
 - C++ Build Insights
@@ -9,23 +9,23 @@ helpviewer_keywords:
 - throughput analysis
 - build time analysis
 - vcperf.exe
-ms.openlocfilehash: f6c4f6fef11e6365bdc930d5df1f48f72186ebdb
-ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
+ms.openlocfilehash: 4a0bf8e8ba32d94d30a56d0ef26ca4ed0c9b0711
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/05/2020
-ms.locfileid: "78333642"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81325354"
 ---
-# <a name="name_value_pair_data-structure"></a>Structure NAME_VALUE_PAIR_DATA
+# <a name="name_value_pair_data-structure"></a>structure NAME_VALUE_PAIR_DATA
 
 ::: moniker range="<=vs-2015"
 
-Le C++ Kit de développement logiciel (SDK) Build Insights est compatible avec Visual Studio 2017 et versions ultérieures. Pour consulter la documentation de ces versions, définissez le contrôle sélecteur de version de Visual Studio pour cet article sur Visual Studio 2017 ou Visual Studio 2019.
+Le SDK Build Insights est compatible avec Visual Studio 2017 et plus. Pour voir la documentation de ces versions, définissez le contrôle du sélecteur Visual Studio **Version** pour cet article à Visual Studio 2017 ou Visual Studio 2019. On le trouve en haut de la table des contenus sur cette page.
 
 ::: moniker-end
 ::: moniker range=">=vs-2017"
 
-La structure `NAME_VALUE_PAIR_DATA` décrit une paire nom/valeur.
+La `NAME_VALUE_PAIR_DATA` structure décrit un nom et une paire de valeur.
 
 ## <a name="syntax"></a>Syntaxe
 

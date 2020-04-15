@@ -1,96 +1,96 @@
 ---
-title: informations de référence sur le schéma Launch.C++vs. JSON ()
+title: launch.vs.json schema reference (C)
 ms.date: 08/20/2019
 helpviewer_keywords:
 - launch.vs.json file [C++]
-ms.openlocfilehash: 4ef83787856135faa430227d5c123c0b73a505d3
-ms.sourcegitcommit: 8e285a766523e653aeeb34d412dc6f615ef7b17b
+ms.openlocfilehash: ff4713642ab95a9bbc31f1a06236de459e53f9c3
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/21/2020
-ms.locfileid: "80078508"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81323051"
 ---
-# <a name="launchvsjson-schema-reference-c"></a>informations de référence sur le schéma Launch.C++vs. JSON ()
+# <a name="launchvsjson-schema-reference-c"></a>launch.vs.json schema reference (C)
 
-Utilisez le fichier *Launch. vs. JSON* pour configurer les paramètres de débogage. Pour créer le fichier. Cliquez avec le bouton droit sur un fichier exécutable dans **Explorateur de solutions** et choisissez **paramètres de débogage et de lancement**. Choisissez l’option qui correspond le mieux à votre projet, puis utilisez les propriétés suivantes pour modifier la configuration en fonction des besoins. Pour plus d’informations sur le débogage des projets CMake, consultez [configurer des sessions de débogage cmake](/cpp/build/configure-cmake-debugging-sessions).
+Utilisez le fichier *launch.vs.json* pour configurer les paramètres de débogage. Pour créer le fichier. cliquez à droite sur un fichier exécutable dans **Solution Explorer** et choisissez **Debug et Paramètres de lancement**. Choisissez l’option qui correspond le plus étroitement à votre projet, puis utilisez les propriétés suivantes pour modifier la configuration au besoin. Pour plus d’informations sur le débogage des projets CMake, voir [Configure CMake séances de débogage](/cpp/build/configure-cmake-debugging-sessions).
 
 ## <a name="default-properties"></a>Propriétés par défaut
 
 ||||
 |-|-|-|
 |**Propriété**|**Type**|**Description**|
-|`name`|string|Spécifie le nom de l’entrée dans la liste déroulante cible de débogage.|
-|`type`|string|Spécifie si le projet est une dll ou. exe (par défaut,. exe)|
-|`project`|string|Spécifie le chemin d’accès relatif au fichier projet.|
-|`projectTarget`|string|Spécifie la cible facultative appelée lors de la génération de `project`. Ce `projectTarget` doit déjà exister et correspondre au nom figurant dans la liste déroulante **cible de débogage** .|
-|`debugType`|string|Spécifie le mode de débogage en fonction du type de code (natif, managé ou mixte). Cela sera détecté automatiquement, sauf si ce paramètre est défini. Valeurs autorisées : « Native », « Managed », « mixed ».|
-|`inheritEnvironments`|tableau|Spécifie un ensemble de variables d’environnement héritées de plusieurs sources. Vous pouvez définir des variables dans des fichiers comme *CMakeSettings. JSON* ou *CppProperties. JSON* et les mettre à disposition du contexte de débogage.  **Visual Studio 16,4 :** : spécifiez les variables d’environnement en fonction de la cible à l’aide de la syntaxe `env.VARIABLE_NAME`. Pour annuler la définition d’une variable, affectez-lui la valeur « null ».|
-|`args`|tableau|Spécifie les arguments de ligne de commande passés au programme lancé.|
-|`currentDir`|string|Spécifie le chemin d’accès complet au répertoire de la cible de génération. Cela sera détecté automatiquement, sauf si ce paramètre est défini.|
-|`noDebug`|boolean|Spécifie s’il faut déboguer le programme lancé. La valeur par défaut de ce paramètre est `false` si elle n’est pas spécifiée.|
-|`stopOnEntry`|boolean|Spécifie s’il faut arrêter une prochaine fois que le processus est lancé et que le débogueur est attaché. La valeur par défaut de ce paramètre est `false`.|
-|`remoteMachine`|string|Spécifie le nom de l’ordinateur distant sur lequel le programme est lancé.|
-|`env`|tableau| Spécifie une liste de valeurs clés de variables d’environnement personnalisées. env : {"myEnv" : "myVal"}.|
-|`portName`|string|Spécifie le nom du port lors de l’attachement à un processus en cours d’exécution.|
-|`buildConfigurations`|tableau| Paire clé-valeur qui spécifie le nom du mode de génération à appliquer aux configurations. Par exemple, `Debug` ou `Release` et les configurations à utiliser en fonction du mode de génération sélectionné.
+|`name`|string|Précise le nom de l’entrée dans le dropdown cible Debug.|
+|`type`|string|Précise si le projet est un dll ou .exe (Défauts à .exe)|
+|`project`|string|Spécifie le chemin relatif vers le dossier du projet.|
+|`projectTarget`|string|Spécifie la cible `project`facultative invoquée lors de la construction . Cela `projectTarget` doit exister déjà et correspondre au nom dans le **Dropdown Debug Target.**|
+|`debugType`|string|Spécifie le mode de débogage selon le type de code (natif, géré ou mixte). Cela sera automatiquement détecté à moins que ce paramètre ne soit défini. Valeurs autorisées : « indigènes », « gérés », « mixtes ».|
+|`inheritEnvironments`|tableau|Spécifie un ensemble de variables de l’environnement héritées de sources multiples. Vous pouvez définir certaines variables dans des fichiers comme *CMakeSettings.json* ou *CppProperties.json* et les rendre disponibles pour débug contexte.  **Visual Studio 16.4:**: Spécifier les `env.VARIABLE_NAME` variables de l’environnement sur une base par cible à l’aide de la syntaxe. Pour décastré une variable, mettez-la à "null".|
+|`args`|tableau|Précise les arguments de la ligne de commandement transmis au programme lancé.|
+|`currentDir`|string|Spécifie le chemin complet de l’annuaire vers la cible build. Cela sera automatiquement détecté à moins que ce paramètre ne soit défini.|
+|`noDebug`|boolean|Précise s’il faut déboiffer le programme lancé. La valeur par défaut `false` de ce paramètre est si elle n’est pas spécifiée.|
+|`stopOnEntry`|boolean|Précise s’il faut rompre dès le lancement du processus et que le débbuggeur s’attache. La valeur par défaut `false`pour ce paramètre est .|
+|`remoteMachine`|string|Spécifie le nom de la machine à distance où le programme est lancé.|
+|`env`|tableau| Spécifie une liste de valeur clé des variables de l’environnement personnalisée. env: "myEnv":"myVal".|
+|`portName`|string|Spécifie le nom du port lors de l’attachement à un processus de fonctionnement.|
+|`buildConfigurations`|tableau| Une paire de valeur clé qui spécifie le nom du mode de construction pour appliquer les configurations. Par `Debug` exemple, `Release` ou et les configurations à utiliser en fonction du mode de construction sélectionné.
 
-## <a name="c-linux-properties"></a>C++Propriétés Linux
+## <a name="c-linux-properties"></a>Propriétés Linux
 
 ||||
 |-|-|-|
 |**Propriété**|**Type**|**Description**|
-|`program`|string|Chemin d’accès complet à l’exécutable du programme sur l’ordinateur distant. Lorsque vous utilisez CMake, la macro `${debugInfo.fullTargetPath}` peut être utilisée comme valeur de ce champ.|
-|`processId`|entier|ID de processus facultatif auquel le débogueur doit être attaché.|
-|`sourceFileMap`|object|Mappages de fichiers sources facultatifs passés au moteur de débogage. Format : `{ "\<Compiler source location>": "\<Editor source location>" }` ou `{ "\<Compiler source location>": { "editorPath": "\<Editor source location>", "useForBreakpoints": true } }`. Exemple : `{ "/home/user/foo": "C:\\foo" }` ou `{ "/home/user/foo": { "editorPath": "c:\\foo", "useForBreakpoints": true } }`. Consultez [options de mappage de fichier source](#source_file_map_options).|
-|`additionalProperties`|string|L’un des sourceFileMapOptions. (Voir ci-dessous.)|
-|`MIMode`|string|Indique le type de débogueur de console compatible MI auquel le MIDebugEngine se connectera. Les valeurs autorisées sont « gdb », « lldb ».|
-|`args`|tableau|Arguments de ligne de commande passés au programme.|
-|`environment`|tableau|Variables d’environnement à ajouter à l’environnement pour le programme. Exemple : [{"Name" : "squid", "value" : "clamation"}].|
-|`targetArchitecture`|string|Architecture du programme débogué. Cela sera détecté automatiquement, sauf si ce paramètre est défini. Les valeurs autorisées sont x86, ARM, arm64, mips, x64, amd64, x86_64.|
-|`visualizerFile`|string|fichier. natvis à utiliser lors du débogage de ce processus. Cette option n’est pas compatible avec GDB Pretty Printing. Consultez « showDisplayString » si vous utilisez ce paramètre.|
-|`showDisplayString`|boolean|Quand un visualizerFile est spécifié, showDisplayString active la chaîne d’affichage. L’activation de cette option peut entraîner une baisse des performances lors du débogage.|
-|`remoteMachineName`|string|L’ordinateur Linux distant qui héberge gdb et le programme à déboguer. Utilisez le gestionnaire de connexions pour l’ajout de nouvelles machines Linux. Lorsque vous utilisez CMake, la macro `${debugInfo.remoteMachineName}` peut être utilisée comme valeur de ce champ.|
-|`cwd`|string|Répertoire de travail de la cible sur la machine distante. Lorsque vous utilisez CMake, la macro `${debugInfo.defaultWorkingDirectory}` peut être utilisée comme valeur de ce champ. La valeur par défaut est la racine de l’espace de travail distant, sauf si elle a été remplacée dans le fichier *fichier CMakeLists. txt* .|
-|`miDebuggerPath`|string|Chemin d’accès au débogueur MI (par exemple, gdb). Quand il n’est pas spécifié, il recherche d’abord le débogueur dans PATH.|
-|`miDebuggerServerAddress`|string|Adresse réseau du serveur du débogueur compatible MI auquel se connecter. Exemple : localhost : 1234.|
-|`setupCommands`|tableau|Une ou plusieurs commandes GDB/LLDB à exécuter afin de configurer le débogueur sous-jacent. Exemple : `"setupCommands": [ { "text": "-enable-pretty-printing", "description": "Enable GDB pretty printing", "ignoreFailures": true }]`. Consultez [lancer les commandes de configuration](#launch_setup_commands).|
-|`customLaunchSetupCommands`|tableau|S’il est fourni, cela remplace les commandes par défaut utilisées pour lancer une cible avec d’autres commandes. Par exemple, il peut s’agir de « -Target-Attach » afin d’effectuer un attachement à un processus cible. Une liste de commandes vide remplace les commandes Launch sans rien, ce qui peut être utile si le débogueur est fourni à des options de démarrage en tant qu’options de ligne de commande. Exemple : `"customLaunchSetupCommands": [ { "text": "target-run", "description": "run target", "ignoreFailures": false }]`.|
-|`launchCompleteCommand`|string|Commande à exécuter après la configuration complète du débogueur, pour provoquer l’exécution du processus cible. Les valeurs autorisées sont "exec-Run", "exec-continue", "none". La valeur par défaut est « exec-Run ».|
-|`debugServerPath`|string|Chemin complet facultatif pour déboguer le serveur à lancer. La valeur par défaut est null.|
-|`debugServerArgs`|string|Arguments de serveur de débogage facultatifs. La valeur par défaut est null.|
-|`filterStderr`|boolean|Recherchez dans le flux STDERR le modèle Démarré par le serveur et log stderr pour déboguer la sortie. La valeur par défaut est `false`.|
-|`coreDumpPath`|string|Chemin complet facultatif d’un fichier d’image mémoire de base pour le programme spécifié. La valeur par défaut est null.|
-externalConsole|boolean|Si la valeur est true, une console est lancée pour l’élément débogué. Si `false`, aucune console n’est lancée. La valeur par défaut est `false`. Remarque : cette option est ignorée dans certains cas pour des raisons techniques.|
-|`pipeTransport`|string|Le cas échéant, cela indique au débogueur qu’il doit se connecter à un ordinateur distant à l’aide d’un autre exécutable en tant que canal qui relaie les entrées/sorties standard entre Visual Studio et le débogueur MI (par exemple, gdb). Valeurs autorisées : une ou plusieurs [options de transport de canal](#pipe_transport_options).|
+|`program`|string|Chemin complet pour programmer exécutable sur la machine à distance. Lors de l’utilisation `${debugInfo.fullTargetPath}` de CMake, la macro peut être utilisée comme valeur de ce champ.|
+|`processId`|entier|ID de processus facultatif pour attacher le débagé.|
+|`sourceFileMap`|object|Les cartes de fichiers sources facultatives sont passées au moteur de débogé. Format: `{ "\<Compiler source location>": "\<Editor source location>" }` `{ "\<Compiler source location>": { "editorPath": "\<Editor source location>", "useForBreakpoints": true } }`ou . Exemple : `{ "/home/user/foo": "C:\\foo" }` ou `{ "/home/user/foo": { "editorPath": "c:\\foo", "useForBreakpoints": true } }`. Voir [Les options de carte de fichier Source](#source_file_map_options).|
+|`additionalProperties`|string|L’une des sourcesFileMapOptions. (Voir ci-dessous.)|
+|`MIMode`|string|Indique le type de débbugger de console IM-activé que le MIDebugEngine se connectera à. Les valeurs autorisées sont "gdb", "lldb".|
+|`args`|tableau|Les arguments de la ligne de commandement ont été transmis au programme.|
+|`environment`|tableau|Variables de l’environnement à ajouter à l’environnement pour le programme. Exemple : [nom » : « calmar », « valeur » : « palourde » [ ]|
+|`targetArchitecture`|string|L’architecture du débbuggee. Cela sera automatiquement détecté à moins que ce paramètre ne soit défini. Les valeurs autorisées sont x86, bras, bras64, mips, x64, amd64, x86_64.|
+|`visualizerFile`|string|.natvis fichier à utiliser lors de débogage de ce processus. Cette option n’est pas compatible avec GDB assez d’impression. Voir "showDisplayString" si vous utilisez ce paramètre.|
+|`showDisplayString`|boolean|Lorsqu’un visualiseurfile est spécifié, showDisplayString active la chaîne d’affichage. L’allumage de cette option peut entraîner des performances plus lentes pendant le débogage.|
+|`remoteMachineName`|string|La machine Linux à distance qui héberge gdb et le programme de déboiffer. Utilisez le gestionnaire de connexions pour l’ajout de nouvelles machines Linux. Lors de l’utilisation `${debugInfo.remoteMachineName}` de CMake, la macro peut être utilisée comme valeur de ce champ.|
+|`cwd`|string|Le répertoire de travail de la cible sur la machine à distance. Lors de l’utilisation `${debugInfo.defaultWorkingDirectory}` de CMake, la macro peut être utilisée comme valeur de ce champ. La valeur par défaut est la racine d’espace de travail à distance, sauf si elle est remplacée dans le fichier *CMakeLists.txt.*|
+|`miDebuggerPath`|string|Le chemin vers le débâche IM(comme le gdb). Lorsqu’il n’est pas spécifié, il cherchera d’abord PATH pour le débbuggeur.|
+|`miDebuggerServerAddress`|string|Adresse réseau du serveur de débâche IM à connecter. Exemple : localhost:1234.|
+|`setupCommands`|tableau|Un ou plusieurs ordres GDB/LLDB doivent être exécutés afin de configurer le débâche sous-jacent. Exemple : `"setupCommands": [ { "text": "-enable-pretty-printing", "description": "Enable GDB pretty printing", "ignoreFailures": true }]`. Voir [les commandes de configuration de lancement](#launch_setup_commands).|
+|`customLaunchSetupCommands`|tableau|Si vous êtes fourni, cela remplace les commandes par défaut utilisées pour lancer une cible par d’autres commandes. Par exemple, il peut s’agir d’une « fixation de cible » afin de s’attacher à un processus cible. Une liste de commande vide remplace les commandes de lancement par rien, ce qui peut être utile si le débbuggeur est fourni des options de lancement comme options de ligne de commande. Exemple : `"customLaunchSetupCommands": [ { "text": "target-run", "description": "run target", "ignoreFailures": false }]`.|
+|`launchCompleteCommand`|string|La commande d’exécuter après le débbugger est entièrement configurée, pour faire fonctionner le processus cible. Les valeurs autorisées sont "exec-run", "exec-continue", "None". La valeur par défaut est "exec-run".|
+|`debugServerPath`|string|Voie complète facultative pour déboiffer le serveur pour lancer. Par défaut à annuler.|
+|`debugServerArgs`|string|Args serveur de débogé en option. Par défaut à annuler.|
+|`filterStderr`|boolean|Rechercher le flux stderr pour le modèle serveur-commencé et le stderr de journal pour débocher la sortie. La valeur par défaut est `false`.|
+|`coreDumpPath`|string|Voie complète facultative vers un fichier de décharge de base pour le programme spécifié. Par défaut à annuler.|
+externalConsole|boolean|Si c’est vrai, une console est lancée pour le débbuggee. Si `false`, aucune console n’est lancée. La valeur par défaut est `false`. REMARQUE : Cette option est ignorée dans certains cas pour des raisons techniques.|
+|`pipeTransport`|string|Lorsque vous êtes présent, cela permet au débâmeur de se connecter à un ordinateur distant en utilisant un autre exécutable comme un tuyau qui relaiera l’entrée/sortie standard entre Visual Studio et le débâche IM (comme le gdb). Valeurs autorisées : une ou plusieurs [options de transport de tuyaux.](#pipe_transport_options)|
 
-## <a name="launch-setup-commands"></a><a name="launch_setup_commands"></a>Lancer les commandes d’installation
+## <a name="launch-setup-commands"></a><a name="launch_setup_commands"></a>Commandes d’installation de lancement
 
-Utilisé avec la propriété `setupCommands` :
-
-||||
-|-|-|-|
-|`text`|string|Commande du débogueur à exécuter.|
-|`description`|string|Description facultative de la commande.|
-|`ignoreFailures`|boolean|Si la valeur est true, les échecs de la commande doivent être ignorés. La valeur par défaut est `false`.|
-
-## <a name="pipe-transport-options"></a><a name = "pipe_transport_options"></a>Options de transport de canal
-
-Utilisé avec la propriété `pipeTransport` :
+Utilisé avec `setupCommands` la propriété:
 
 ||||
 |-|-|-|
-|`pipeCwd`|string|Chemin d’accès complet au répertoire de travail du programme de canal.|
-|`pipeProgram`|string|Commande de canal qualifié complet à exécuter.|
-|`pipeArgs`|tableau|Arguments de ligne de commande passés au programme canal pour configurer la connexion.|
-|`debuggerPath`|string|Le chemin d’accès complet au débogueur sur l’ordinateur cible, par exemple/usr/bin/gdb.|
-|`pipeEnv`|object|Variables d’environnement passées au programme pipe.|
-|`quoteArgs`|boolean|Si des arguments individuels contiennent des caractères (tels que des espaces ou des tabulations), doivent-ils être placés entre guillemets ? Si `false`, la commande du débogueur n’est plus automatiquement placée entre guillemets. La valeur par défaut est `true`.|
+|`text`|string|Le débagé debugger commande d’exécuter.|
+|`description`|string|Description facultative pour la commande.|
+|`ignoreFailures`|boolean|Si c’est vrai, les échecs de la commande doivent être ignorés. La valeur par défaut est `false`.|
 
-## <a name="source-file-map-options"></a><a name="source_file_map_options"></a>Options de mappage de fichier source
+## <a name="pipe-transport-options"></a><a name = "pipe_transport_options"></a>Options de transport de tuyaux
 
-Utilisez avec la propriété `sourceFileMap` :
+Utilisé avec `pipeTransport` la propriété:
 
 ||||
 |-|-|-|
-|`editorPath`|string|Emplacement du code source de l’éditeur à localiser.|
-|`useForBreakpoints`|boolean|Lors de la définition de points d’arrêt, ce mappage de source doit être utilisé. Si `false`, seuls le nom de fichier et le numéro de ligne sont utilisés pour définir des points d’arrêt. Si `true`, les points d’arrêt sont définis avec le chemin d’accès complet au fichier et le numéro de ligne uniquement lorsque ce mappage source est utilisé. Sinon, seul le nom de fichier et le numéro de ligne seront utilisés lors de la définition de points d’arrêt. La valeur par défaut est `true`.|
+|`pipeCwd`|string|Le chemin entièrement qualifié vers l’annuaire de travail pour le programme de pipe.|
+|`pipeProgram`|string|La commande de tuyau entièrement qualifiée pour exécuter.|
+|`pipeArgs`|tableau|Les arguments de la ligne de commande sont passés au programme de tuyauterie pour configurer la connexion.|
+|`debuggerPath`|string|Le chemin complet vers le débbugger sur la machine cible, par exemple /usr/bin/gdb.|
+|`pipeEnv`|object|Les variables de l’environnement sont passées au programme de canalisations.|
+|`quoteArgs`|boolean|Si les arguments individuels contiennent des caractères (tels que des espaces ou des onglets), devrait-il être cité? Si `false`, la commande de débogénaire ne sera plus automatiquement citée. La valeur par défaut est `true`.|
+
+## <a name="source-file-map-options"></a><a name="source_file_map_options"></a>Options de carte de fichier source
+
+Utilisation avec `sourceFileMap` la propriété:
+
+||||
+|-|-|-|
+|`editorPath`|string|L’emplacement du code source pour l’éditeur à localiser.|
+|`useForBreakpoints`|boolean|Lors du réglage des points d’arrêt, cette cartographie source doit être utilisée. Si `false`, seul le nom de fichier et le numéro de ligne est utilisé pour définir les points de rupture. Si `true`, les points de rupture seront définis avec le chemin complet vers le fichier et le numéro de ligne seulement lorsque cette cartographie source est utilisée. Dans le cas contraire, il suffit de nom de fichier et de numéro de ligne sera utilisé lors de la configuration des points de rupture. La valeur par défaut est `true`.|

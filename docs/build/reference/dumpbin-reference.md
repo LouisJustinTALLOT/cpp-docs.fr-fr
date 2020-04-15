@@ -10,26 +10,26 @@ helpviewer_keywords:
 - COFF files, displaying information about
 - binary file dumper
 ms.assetid: 4bc06822-5330-44b4-8a3f-6180dfd41dfb
-ms.openlocfilehash: 45f6b9c71eaea93597e90de93c704d2ea260235e
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 6ad421b0c90ad55126f69a899503d6a73184979f
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62273272"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81320535"
 ---
 # <a name="dumpbin-reference"></a>Référence DUMPBIN
 
-L’outil Microsoft COFF Binary File Dumper (DUMPBIN. (EXE) affiche des informations sur les fichiers binaires du fichier Format COFF (Common Object). Vous pouvez utiliser DUMPBIN pour examiner des fichiers objets COFF, des bibliothèques standard d’objets COFF, des fichiers exécutables et des bibliothèques de liens dynamiques (DLL).
+Le Microsoft COFF Fichier binaire Dumper (DUMPBIN. EXE) affiche des informations sur les fichiers binaires Format de fichiers d’objet communs (COFF). Vous pouvez utiliser DUMPBIN pour examiner les fichiers d’objets COFF, les bibliothèques standard d’objets COFF, les fichiers exécutables et les bibliothèques à liens dynamiques (DLL).
 
 > [!NOTE]
->  Vous pouvez démarrer cet outil uniquement à partir de l’invite de commandes de Visual Studio. Vous ne pouvez pas le démarrer à partir d'une invite de commandes système ni de l'Explorateur de fichiers.
+> Vous pouvez démarrer cet outil uniquement à partir de l’invite de commande Visual Studio. Vous ne pouvez pas le démarrer à partir d'une invite de commandes système ni de l'Explorateur de fichiers.
 
-Uniquement les [/HEADERS](headers.md) (option DUMPBIN) est disponible pour les fichiers générés avec le [/GL](gl-whole-program-optimization.md) option du compilateur.
+Seule l’option [/HEADERS](headers.md) DUMPBIN peut être utilisée sur les fichiers générés avec l’option du compilateur [/GL](gl-whole-program-optimization.md).
 
 - [Ligne de commande DUMPBIN](dumpbin-command-line.md)
 
-- [DUMPBIN, options](dumpbin-options.md)
+- [Options DUMPBIN](dumpbin-options.md)
 
 ## <a name="see-also"></a>Voir aussi
 
-[Outils de génération MSVC supplémentaires](c-cpp-build-tools.md)
+[Outils de construction MSVC supplémentaires](c-cpp-build-tools.md)

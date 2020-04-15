@@ -6,18 +6,18 @@ f1_keywords:
 helpviewer_keywords:
 - MFC ActiveX Control Wizard, application settings
 ms.assetid: 48475194-cc63-467f-8499-f142269a4c1c
-ms.openlocfilehash: 3201b5882a1de4064d924fbb28ee1c575ab8ccbe
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 55f202ffabe945e55589ab1fc771a1757e23ca2f
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62151303"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81372477"
 ---
 # <a name="application-settings-mfc-activex-control-wizard"></a>Paramètres de l’application, Assistant Contrôle ActiveX MFC
 
 Utilisez cette page de l’Assistant Contrôle ActiveX MFC pour concevoir et ajouter des fonctionnalités de base à un nouveau projet ActiveX MFC. Ces paramètres s’appliquent à l’application elle-même, et non pas à une fonctionnalité ou un élément spécifique du contrôle.
 
-- **Licence d’exécution**
+- **Licence utilisateur**
 
    Sélectionnez cette option pour générer un fichier de licence utilisateur à distribuer avec le contrôle. La licence est un fichier texte, *nom_projet*.lic. Ce fichier doit être dans le même répertoire que la DLL du contrôle, pour permettre la création d’une instance du contrôle dans un environnement au moment de la conception. Vous distribuez généralement ce fichier avec votre contrôle, mais vos clients ne le distribuent pas.
 
@@ -30,16 +30,16 @@ Utilisez cette page de l’Assistant Contrôle ActiveX MFC pour concevoir et ajo
 
    Quand vous générez des fichiers d’aide à l’aide de l’Assistant, votre projet inclut les éléments suivants :
 
-   - Le fichier .vcxproj contient le code pour générer et configurer le fichier d’aide quand le projet est généré.
+  - Le fichier .vcxproj contient le code pour générer et configurer le fichier d’aide quand le projet est généré.
 
-   - Le fichier *page_propriétés_nom_projet*.cpp inclut une fonction [SetHelpInfo](../../mfc/reference/colepropertypage-class.md#sethelpinfo) dans le constructeur.
+  - Le fichier *page_propriétés_nom_projet*.cpp inclut une fonction [SetHelpInfo](../../mfc/reference/colepropertypage-class.md#sethelpinfo) dans le constructeur.
 
-   - Le fichier nom_projet.hpj est le fichier d’aide du projet utilisé par le compilateur d’aide pour créer le fichier d’aide du contrôle ActiveX. Le fichier .hpj est un fichier texte contenant les informations sur la création de votre fichier d’aide et les chemins des fichiers supplémentaires (par exemple les bitmaps) inclus dans le fichier d’aide.
+  - Le fichier nom_projet.hpj est le fichier d’aide du projet utilisé par le compilateur d’aide pour créer le fichier d’aide du contrôle ActiveX. Le fichier .hpj est un fichier texte contenant les informations sur la création de votre fichier d’aide et les chemins des fichiers supplémentaires (par exemple les bitmaps) inclus dans le fichier d’aide.
 
-   - Le projet inclut le répertoire HLP destiné à contenir les fichiers bitmap d’aide du projet et le fichier de rubriques d’aide (*nom_projet*.rtf). Ce fichier de rubriques d’aide contient les rubriques d’aide standard pour les propriétés, événements et méthodes courants pris en charge par de nombreux contrôles ActiveX. Vous pouvez modifier ce fichier .rtf pour ajouter ou supprimer des rubriques d’aide spécifiques.
+  - Le projet inclut le répertoire HLP destiné à contenir les fichiers bitmap d’aide du projet et le fichier de rubriques d’aide (*nom_projet*.rtf). Ce fichier de rubriques d’aide contient les rubriques d’aide standard pour les propriétés, événements et méthodes courants pris en charge par de nombreux contrôles ActiveX. Vous pouvez modifier ce fichier .rtf pour ajouter ou supprimer des rubriques d’aide spécifiques.
 
 ## <a name="see-also"></a>Voir aussi
 
-[Contrôle ActiveX MFC, Assistant](../../mfc/reference/mfc-activex-control-wizard.md)<br/>
-[Noms du contrôle, Assistant Contrôle ActiveX MFC](../../mfc/reference/control-names-mfc-activex-control-wizard.md)<br/>
-[Paramètres du contrôle, Assistant Contrôle ActiveX MFC](../../mfc/reference/control-settings-mfc-activex-control-wizard.md)
+[MFC ActiveX Control Wizard](../../mfc/reference/mfc-activex-control-wizard.md)<br/>
+[Noms de contrôle, MFC ActiveX Control Wizard](../../mfc/reference/control-names-mfc-activex-control-wizard.md)<br/>
+[Paramètres de contrôle, MFC ActiveX Control Wizard](../../mfc/reference/control-settings-mfc-activex-control-wizard.md)

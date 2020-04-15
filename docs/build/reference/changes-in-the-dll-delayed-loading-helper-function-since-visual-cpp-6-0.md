@@ -7,51 +7,51 @@ helpviewer_keywords:
 - __delayLoadHelper2 function
 - helper functions, what's changed
 ms.assetid: 99f0be69-105d-49ba-8dd5-3be7939c0c72
-ms.openlocfilehash: cd6e842fd6d35e05f2d5a9f906713f0d85d3b80d
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 536729e27c89d068957ea451355957e4a35348ee
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62294627"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81320608"
 ---
 # <a name="changes-in-the-dll-delayed-loading-helper-function-since-visual-c-60"></a>Modifications apportées à la fonction d'assistance du chargement différé des DLL depuis Visual C++ 6.0
 
-Si vous disposez de plusieurs versions de Visual C++ sur votre ordinateur ou si vous avez défini votre propre fonction d’assistance, vous pouvez être affecté par les modifications apportées à la DLL de fonction d’assistance de chargement différé. Exemple :
+Si vous avez plusieurs versions de Visual CMD sur votre ordinateur ou si vous avez défini votre propre fonction d’aide, vous pouvez être affecté par les modifications apportées à la fonction d’aide de chargement retardée DLL. Par exemple :
 
-- **__delayLoadHelper** est désormais **__delayLoadHelper2**
+- **__delayLoadHelper** est maintenant **__delayLoadHelper2**
 
-- **__pfnDliNotifyHook** is now **__pfnDliNotifyHook2**
+- **__pfnDliNotifyHook** est maintenant **__pfnDliNotifyHook2**
 
-- **__pfnDliFailureHook** is now **__pfnDliFailureHook2**
+- **__pfnDliFailureHook** est maintenant **__pfnDliFailureHook2**
 
-- **__FUnloadDelayLoadedDLL** est désormais **__FUnloadDelayLoadedDLL2**
+- **__FUnloadDelayLoadedDLL** est maintenant **__FUnloadDelayLoadedDLL2**
 
 > [!NOTE]
->  Si vous utilisez la fonction d’assistance par défaut, ces modifications ne vous concernent pas. Il n’y a aucune modification concernant la façon dont vous appelez l’éditeur de liens.
+> Si vous utilisez la fonction d’aide par défaut, ces modifications ne vous affecteront pas. Il n’y a aucun changement concernant la façon dont vous invoquez le lien.
 
-## <a name="multiple-versions-of-visual-c"></a>Plusieurs Versions de Visual C++
+## <a name="multiple-versions-of-visual-c"></a>Versions multiples de Visual CM
 
-Si vous avez plusieurs versions de Visual C++ sur votre ordinateur, assurez-vous que l’éditeur de liens correspond à delayimp.lib. S’il existe une incompatibilité, vous obtiendrez une erreur de l’éditeur de liens reporting soit `___delayLoadHelper2@8` ou `___delayLoadHelper@8` comme un symbole externe non résolu. La première implique un nouvel éditeur de liens avec une ancienne bibliothèque delayimp.lib, et cette dernière implique un éditeur de liens ancien avec une nouvelle bibliothèque delayimp.lib.
+Si vous avez plusieurs versions de Visual CM SUR votre ordinateur, assurez-vous que le linker correspond à delayimp.lib. S’il y a un décalage, vous obtiendrez `___delayLoadHelper2@8` une `___delayLoadHelper@8` erreur de liaison signalant soit ou comme un symbole externe non résolu. Le premier implique un nouveau lien avec un vieux delayimp.lib, et le second implique un vieux lien avec un nouveau delayimp.lib.
 
-Si vous obtenez une erreur de l’éditeur de liens non résolue, exécutez [dumpbin /linkermember](linkermember.md): 1 sur la bibliothèque delayimp.lib susceptible de contenir la fonction d’assistance pour voir quelle fonction d’assistance est définie à la place. La fonction d’assistance peut également être définie dans un fichier objet ; Exécutez [dumpbin /symbols](symbols.md) et recherchez `delayLoadHelper(2)`.
+Si vous obtenez une erreur de liaison non résolue, exécutez [dumpbin /linkermember](linkermember.md):1 sur le delayimp.lib que vous vous attendez à contenir la fonction d’aide pour voir quelle fonction d’aide est définie à la place. La fonction d’aide peut également être définie dans un fichier d’objets; exécuter [dumpbin / symboles](symbols.md) et chercher `delayLoadHelper(2)`.
 
-Si vous savez que l’éditeur de liens Visual C++ 6.0, puis :
+Si vous savez que vous avez le lien visuel C 6.0, alors:
 
-- Exécutez dumpbin dans le fichier .lib ou .obj de l’assistance chargement différé pour déterminer si elle définit **__delayLoadHelper2**. Si ce n’est pas le cas, la liaison échoue.
+- Exécuter dumpbin sur le fichier .lib ou .obj de charge de retard pour déterminer s’il définit **__delayLoadHelper2**. Si ce n’est pas le cas, le lien échouera.
 
-- Définir **__delayLoadHelper** dans le délai de charger le fichier .lib ou .obj de l’Assistant.
+- Définir **__delayLoadHelper** dans le fichier .lib ou .obj de l’aide de charge de retard.
 
-## <a name="user-defined-helper-function"></a>Fonction d’assistance de défini par l’utilisateur
+## <a name="user-defined-helper-function"></a>Fonction d’aide définie par l’utilisateur
 
-Si vous défini votre propre fonction d’assistance et que vous utilisez la version actuelle de Visual C++, procédez comme suit :
+Si vous définissez votre propre fonction d’aide et utilisez la version actuelle de Visual CMD, faites ce qui suit :
 
-- Renommer la fonction d’assistance **__delayLoadHelper2**.
+- Renommer la fonction d’aide pour **__delayLoadHelper2**.
 
-- Étant donné que les pointeurs du descripteur de différé (ImgDelayDescr dans delayimp.h) ont été modifiés à partir d’adresses absolues (VAs) pour les adresses relatives (RVA) de fonctionner comme prévu dans les deux programmes 32 et 64 bits, vous devez les reconvertir en pointeurs. Une nouvelle fonction a été introduite : PFromRva, située dans delayhlp.cpp. Vous pouvez utiliser cette fonction sur chacun des champs du descripteur pour les convertir en pointeurs 32 ou 64 bits. La fonction de d’assistance de chargement différé par défaut continue à être un bon modèle à utiliser comme exemple.
+- Depuis les pointeurs dans le descripteur de retard (ImgDelayDescr dans delayimp.h) ont été changés d’adresses absolues (VAs) à des adresses relatives (RVAs) pour travailler comme prévu dans les deux programmes 32 et 64 bits, vous devez convertir ces retour à des pointeurs. Une nouvelle fonction a été introduite: PFromRva, trouvé dans delayhlp.cpp. Vous pouvez utiliser cette fonction sur chacun des champs du descripteur pour les convertir en pointeurs 32 ou 64 bits. La fonction d’aide à la charge de retard par défaut continue d’être un bon modèle à utiliser à titre d’exemple.
 
-## <a name="load-all-imports-for-a-delay-loaded-dll"></a>Charger toutes les importations pour une DLL à chargement différé
+## <a name="load-all-imports-for-a-delay-loaded-dll"></a>Chargez toutes les importations pour un DLL chargé de retard
 
-L’éditeur de liens peut charger toutes les importations à partir d’une DLL que vous avez spécifié pour le chargement différé. Consultez [le chargement de toutes les importations pour une DLL à chargement différé](loading-all-imports-for-a-delay-loaded-dll.md) pour plus d’informations.
+Le lien peut charger toutes les importations à partir d’un DLL que vous avez spécifié pour être chargé de retard. Voir [Chargement de toutes les importations pour un DLL chargé de retard](loading-all-imports-for-a-delay-loaded-dll.md) pour plus d’informations.
 
 ## <a name="see-also"></a>Voir aussi
 

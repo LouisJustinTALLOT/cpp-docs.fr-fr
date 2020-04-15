@@ -1,8 +1,9 @@
 ---
 title: wcrtomb_s
-ms.date: 11/04/2016
+ms.date: 4/2/2020
 api_name:
 - wcrtomb_s
+- _o_wcrtomb_s
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -15,6 +16,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-convert-l1-1-0.dll
+- api-ms-win-crt-private-l1-1-0
 api_type:
 - DLLExport
 topic_type:
@@ -27,12 +29,12 @@ helpviewer_keywords:
 - multibyte characters
 - characters, converting
 ms.assetid: 9a8a1bd0-1d60-463d-a3a2-d83525eaf656
-ms.openlocfilehash: c1612e7fc4e40e05c46f06d8a29b69534c359421
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: ee25b18bfbb86b34e46c8c6776e8ab83157613e8
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70945843"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81328181"
 ---
 # <a name="wcrtomb_s"></a>wcrtomb_s
 
@@ -62,35 +64,37 @@ errno_t wcrtomb_s(
 *pReturnValue*<br/>
 Retourne le nombre de caractères écrits ou -1 si une erreur s’est produite.
 
-*mbchar*<br/>
+*mbchar (en)*<br/>
 Résultat de la conversion du caractère multioctet.
 
-*sizeOfmbchar*<br/>
-Taille de la variable *mbchar* en octets.
+*tailleOfmbchar*<br/>
+La taille de la variable *mbchar* dans les octets.
 
-*wchar*<br/>
+*wchar (wchar)*<br/>
 Caractère large à convertir.
 
-*mbstate*<br/>
-Pointeur vers un objet **mbstate_t** .
+*mbstate (en)*<br/>
+Un pointeur à un objet **mbstate_t.**
 
 ## <a name="return-value"></a>Valeur de retour
 
-Retourne zéro ou une valeur **errno** si une erreur se produit.
+Retourne zéro ou une valeur **d’errno** si une erreur se produit.
 
 ## <a name="remarks"></a>Notes
 
-La fonction **wcrtomb_s** convertit un caractère élargi, en commençant dans l’état de conversion spécifié dans *mbstate*, à partir de la valeur contenue dans *WCHAR*, dans l’adresse représentée par *mbchar*. La valeur *pReturnValue* est le nombre d’octets convertis, mais pas plus de **MB_CUR_MAX** octets, ou-1 si une erreur s’est produite.
+La fonction **wcrtomb_s** convertit un caractère large, à partir de l’état de conversion spécifié contenu dans *mbstate*, de la valeur contenue dans *wchar*, dans l’adresse représentée par *mbchar*. La valeur *pReturnValue* sera le nombre d’octets convertis, mais pas plus de **MB_CUR_MAX** octets, ou un -1 en cas d’erreur.
 
-Si *mbstate* a la valeur null, l’état de conversion **mbstate_t** interne est utilisé. Si le caractère contenu dans *WCHAR* n’a pas de caractère multioctet correspondant, la valeur de *pReturnValue* est-1 et la fonction retourne la valeur **errno** de **EILSEQ**.
+Si *le mbstate* est nul, l’état de conversion interne **mbstate_t** est utilisé. Si le personnage contenu dans *wchar* n’a pas de caractère multioctet correspondant, la valeur de *pReturnValue* sera de -1 et la fonction retournera la valeur **errno** de **EILSEQ**.
 
-La fonction **wcrtomb_s** diffère de [wctomb_s, _wctomb_s_l](wctomb-s-wctomb-s-l.md) par son redémarrage. L’état de conversion est stocké dans *mbstate* pour les appels suivants à la même ou à d’autres fonctions redémarrables. Les résultats ne sont pas définis quand l'utilisation de fonctions redémarrables est combinée avec l'utilisation de fonctions non redémarrables. Par exemple, une application utilise **wcsrlen** plutôt que **wcslen**, si un appel ultérieur à **wcsrtombs_s** était utilisé à la place de **wcstombs_s**.
+La fonction **wcrtomb_s** diffère de [wctomb_s, _wctomb_s_l](wctomb-s-wctomb-s-l.md) par sa redémarrabilité. L’état de conversion est stocké dans *mbstate* pour les appels ultérieurs vers les mêmes fonctions ou d’autres fonctions redémarrées. Les résultats ne sont pas définis quand l'utilisation de fonctions redémarrables est combinée avec l'utilisation de fonctions non redémarrables. Par exemple, une application utiliserait **wcsrlen** plutôt que **wcslen**, si un appel ultérieur à **wcsrtombs_s** ont été utilisés au lieu de **wcstombs_s**.
 
-En C++, l’utilisation de cette fonction est simplifiée par les surcharges de modèle ; les surcharges peuvent déduire la longueur de la mémoire tampon automatiquement (ce qui évite d’avoir à spécifier un argument de taille) et peuvent remplacer automatiquement les fonctions plus anciennes et non sécurisées par leurs équivalents plus récents et sécurisés. Pour plus d'informations, consultez [Secure Template Overloads](../../c-runtime-library/secure-template-overloads.md).
+En C++, l’utilisation de cette fonction est simplifiée par les surcharges de modèle ; les surcharges peuvent déduire la longueur de la mémoire tampon automatiquement (ce qui évite d’avoir à spécifier un argument de taille) et peuvent remplacer automatiquement les fonctions plus anciennes et non sécurisées par leurs équivalents plus récents et sécurisés. Pour plus d’informations, consultez [Sécuriser les surcharges de modèle](../../c-runtime-library/secure-template-overloads.md).
+
+Par défaut, l’état global de cette fonction est étendue à l’application. Pour changer cela, voir [Global State dans le CRT](../global-state.md).
 
 ## <a name="exceptions"></a>Exceptions
 
-La fonction **wcrtomb_s** est multithread Safe tant qu’aucune fonction dans le thread actuel n’appelle **setlocale** pendant que cette fonction s’exécute et que *mbstate* a la valeur null.
+La fonction **wcrtomb_s** est multimarque aussi longtemps qu’aucune fonction dans le thread actuel appelle **setlocale** pendant que cette fonction est l’exécution et le *mbstate* est nul.
 
 ## <a name="example"></a>Exemple
 
@@ -136,7 +140,7 @@ int main( void )
 The corresponding wide character "Q" was converted to a the "Q" multibyte character.
 ```
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
 |Routine|En-tête requis|
 |-------------|---------------------|
@@ -145,6 +149,6 @@ The corresponding wide character "Q" was converted to a the "Q" multibyte charac
 ## <a name="see-also"></a>Voir aussi
 
 [Conversion de données](../../c-runtime-library/data-conversion.md)<br/>
-[Paramètres régionaux](../../c-runtime-library/locale.md)<br/>
-[Interprétation des séquences de caractères multi-octets](../../c-runtime-library/interpretation-of-multibyte-character-sequences.md)<br/>
+[Local](../../c-runtime-library/locale.md)<br/>
+[Interprétation des séquences multioctets-caractères](../../c-runtime-library/interpretation-of-multibyte-character-sequences.md)<br/>
 [mbsinit](mbsinit.md)<br/>

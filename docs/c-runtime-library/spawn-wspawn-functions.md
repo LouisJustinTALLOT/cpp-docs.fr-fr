@@ -48,12 +48,12 @@ helpviewer_keywords:
 - tspawnlpe function
 - _tspawnle function
 ms.assetid: bb47c703-5216-4e09-8023-8cf25bbf2cf9
-ms.openlocfilehash: 81f4bf6c60a0c0e4011536e8d3bc104bbc33e04f
-ms.sourcegitcommit: a5fa9c6f4f0c239ac23be7de116066a978511de7
+ms.openlocfilehash: a22f5b0c401dd888bbda451504e644557294544d
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/20/2019
-ms.locfileid: "75301702"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81322957"
 ---
 # <a name="_spawn-_wspawn-functions"></a>_spawn, _wspawn, fonctions
 
@@ -68,7 +68,7 @@ Chacune des fonctions `_spawn` crée et exécute un nouveau processus :
 
 Les lettres à la fin du nom de la fonction déterminent la variation.
 
-|Lettre|Variante|
+|Lettre|Variant|
 |-|-|
 | `e`  | `envp`, un tableau de pointeurs vers les paramètres d'environnement, est passé au nouveau processus.  |
 | `l`  | Les arguments de ligne de commande sont passés individuellement à la fonction `_spawn`. Ce suffixe est généralement utilisé lorsque plusieurs paramètres d'un nouveau processus sont connus à l'avance.  |
@@ -110,27 +110,27 @@ Si `cmdname` contient un spécificateur de lecteur ou des barres obliques (autre
 Dans le passé, certaines de ces fonctions affectaient à `errno` la valeur zéro en cas de réussite ; le comportement actuel est de laisser `errno` intact en cas de réussite, comme spécifié dans la norme C. Si vous devez émuler l'ancien comportement, affectez à `errno` la valeur zéro juste avant d'appeler ces fonctions.
 
 > [!NOTE]
->  Pour garantir l'initialisation et l'arrêt de la superposition, n'utilisez pas la fonction `setjmp` ou la fonction `longjmp` pour entrer ou quitter une routine de superposition.
+> Pour garantir l'initialisation et l'arrêt de la superposition, n'utilisez pas la fonction `setjmp` ou la fonction `longjmp` pour entrer ou quitter une routine de superposition.
 
 ## <a name="arguments-for-the-spawned-process"></a>Arguments du processus engendré
 
 Pour passer des arguments au nouveau processus, fournissez un ou plusieurs pointeurs aux chaînes de caractères en tant qu'arguments dans l'appel `_spawn`. Ces chaînes de caractères forment la liste d'arguments du processus engendré. La longueur combinée des chaînes qui forment la liste d'arguments du nouveau processus ne doit pas dépasser 1024 octets. Le caractère null de fin ('\0') pour chaque chaîne n'est pas inclus dans le décompte, mais les espaces (insérés automatiquement pour séparer les arguments) sont inclus.
 
 > [!NOTE]
->  Les espaces incorporés dans les chaînes peuvent provoquer un comportement inattendu ; par exemple, le passage à `_spawn` de la chaîne `"hi there"` a comme conséquence que le nouveau processus obtient deux arguments, `"hi"` et `"there"`. Si l'objectif était que le nouveau processus ouvre un fichier nommé « hi there », le processus échoue. Vous pouvez éviter cela en plaçant la chaîne `"\"hi there\""` entre guillemets.
+> Les espaces incorporés dans les chaînes peuvent provoquer un comportement inattendu ; par exemple, le passage à `_spawn` de la chaîne `"hi there"` a comme conséquence que le nouveau processus obtient deux arguments, `"hi"` et `"there"`. Si l'objectif était que le nouveau processus ouvre un fichier nommé « hi there », le processus échoue. Vous pouvez éviter cela en plaçant la chaîne `"\"hi there\""` entre guillemets.
 
 > [!IMPORTANT]
->  Ne passez pas d'entrée utilisateur à `_spawn` sans vérifier explicitement son contenu. `_spawn` entraîne un appel à [CreateProcess](/windows/win32/api/processthreadsapi/nf-processthreadsapi-createprocessw), alors gardez à l’esprit que les noms de chemin incomplets peut créer des failles de sécurité potentielles.
+> Ne passez pas d'entrée utilisateur à `_spawn` sans vérifier explicitement son contenu. `_spawn` entraîne un appel à [CreateProcess](/windows/win32/api/processthreadsapi/nf-processthreadsapi-createprocessw), alors gardez à l’esprit que les noms de chemin incomplets peut créer des failles de sécurité potentielles.
 
 Vous pouvez passer des pointeurs d'arguments en tant qu'arguments distincts (dans `_spawnl`, `_spawnle`, `_spawnlp` et `_spawnlpe`) ou en tant que tableau de pointeurs (dans `_spawnv`, `_spawnve`, `_spawnvp` et `_spawnvpe`). Vous devez passer au moins un argument, `arg0` ou `argv`[0], au processus engendré. Par convention, cet argument correspond au nom du programme tel que vous le taperiez sur la ligne de commande. Une valeur différente ne produit pas d'erreur.
 
 Les appels `_spawnl`, `_spawnle`, `_spawnlp` et `_spawnlpe` sont généralement utilisés dans les cas où le nombre d'arguments est connu à l'avance. L’argument `arg0` est généralement un pointeur vers `cmdname`. Les arguments `arg1` à `argn` sont des pointeurs vers les chaînes de caractères formant la nouvelle liste d’arguments. Après `argn`, il doit exister un pointeur **NULL** pour marquer la fin de la liste des arguments.
 
-Les appels `_spawnv`, `_spawnve`, `_spawnvp` et `_spawnvpe` sont utiles lorsque le nouveau processus contient un nombre variable d'arguments. Les pointeurs vers les arguments sont passés en tant que tableau, `argv` *.* L’argument `argv`[0] est généralement un pointeur qui désigne un chemin en mode réel ou le nom de programme en mode protégé, tandis que `argv`[1] à `argv`[`n`] sont des pointeurs qui pointent vers les chaînes de caractères formant la nouvelle liste d’arguments. L’argument `argv`[`n` +1] doit être un pointeur **NULL** pour marquer la fin de la liste d’arguments.
+Les appels `_spawnv`, `_spawnve`, `_spawnvp` et `_spawnvpe` sont utiles lorsque le nouveau processus contient un nombre variable d'arguments. Les pointeurs vers les arguments sont passés en tant que tableau, `argv`*.* L’argument `argv`[0] est généralement un pointeur qui désigne un chemin en mode réel ou le nom de programme en mode protégé, tandis que `argv`[1] à `argv`[`n`] sont des pointeurs qui pointent vers les chaînes de caractères formant la nouvelle liste d’arguments. L’argument `argv`[`n` +1] doit être un pointeur **NULL** pour marquer la fin de la liste d’arguments.
 
 ## <a name="environment-of-the-spawned-process"></a>Environnement du processus engendré
 
-Les fichiers ouverts pendant un appel `_spawn` restent ouverts dans le nouveau processus. Dans les appels `_spawnl`, `_spawnlp`, `_spawnv` et `_spawnvp`, le nouveau processus hérite de l'environnement du processus appelant. Vous pouvez utiliser les appels `_spawnle`, `_spawnlpe`, `_spawnve` et `_spawnvpe` pour modifier l'environnement du nouveau processus en passant une liste de paramètres d'environnement via l'argument `envp`. L'argument `envp` est un tableau de pointeurs de caractère, dont chaque élément (excepté le dernier) pointe vers une chaîne terminée par le caractère null qui définit une variable d'environnement. Une telle chaîne a généralement la forme `NAME`=`value` où `NAME` est le nom d’une variable d’environnement et `value` est la valeur de chaîne selon laquelle cette variable est définie. (Notez que `value` n’est pas placé entre guillemets doubles.) L’élément final du tableau `envp` doit avoir la **valeur null**. Quand `envp` lui-même a la valeur **NULL**, le processus engendré hérite des paramètres d’environnement du processus parent.
+Les fichiers ouverts pendant un appel `_spawn` restent ouverts dans le nouveau processus. Dans les appels `_spawnl`, `_spawnlp`, `_spawnv` et `_spawnvp`, le nouveau processus hérite de l'environnement du processus appelant. Vous pouvez utiliser les appels `_spawnle`, `_spawnlpe`, `_spawnve` et `_spawnvpe` pour modifier l'environnement du nouveau processus en passant une liste de paramètres d'environnement via l'argument `envp`. L'argument `envp` est un tableau de pointeurs de caractère, dont chaque élément (excepté le dernier) pointe vers une chaîne terminée par le caractère null qui définit une variable d'environnement. Une telle chaîne a généralement la forme `NAME`=`value` où `NAME` est le nom d’une variable d’environnement et `value` est la valeur de chaîne selon laquelle cette variable est définie. (Remarquez `value` que n’est pas enfermé dans des marques de citation double.) Le dernier élément `envp` du tableau doit être **NULL**. Quand `envp` lui-même a la valeur **NULL**, le processus engendré hérite des paramètres d’environnement du processus parent.
 
 Les fonctions `_spawn` peuvent passer toutes les informations sur les fichiers ouverts, y compris le mode de traduction, au nouveau processus. Ces informations sont passées en mode réel via l'entrée `C_FILE_INFO` de l'environnement. Le code de démarrage traite normalement cette entrée et la supprime ensuite de l'environnement. Toutefois, si une fonction `_spawn` génère un processus autre que C, cette entrée reste dans l'environnement. L'impression de l'environnement montre les caractères graphiques de la chaîne de définition pour cette entrée, car les informations d'environnement sont passées au format binaire en mode réel. Il ne devrait y avoir aucun autre effet sur les opérations normales. En mode protégé, les informations d'environnement sont passées au format texte et donc ne contiennent pas de caractères graphiques.
 
@@ -231,10 +231,10 @@ from SPAWN!
 
 ## <a name="see-also"></a>Voir aussi
 
-[Contrôle de processus et d’environnement](../c-runtime-library/process-and-environment-control.md)<br/>
+[Contrôle des processus et de l’environnement](../c-runtime-library/process-and-environment-control.md)<br/>
 [abort](../c-runtime-library/reference/abort.md)<br/>
 [atexit](../c-runtime-library/reference/atexit.md)<br/>
-[_exec, _wexec, fonctions](../c-runtime-library/exec-wexec-functions.md)<br/>
+[_exec, fonctions _wexec](../c-runtime-library/exec-wexec-functions.md)<br/>
 [exit, _Exit, _exit](../c-runtime-library/reference/exit-exit-exit.md)<br/>
 [_flushall](../c-runtime-library/reference/flushall.md)<br/>
 [_getmbcp](../c-runtime-library/reference/getmbcp.md)<br/>

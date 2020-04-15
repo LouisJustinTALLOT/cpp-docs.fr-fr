@@ -22,16 +22,16 @@ helpviewer_keywords:
 - std::collate [C++], hash
 - std::collate [C++], transform
 ms.assetid: 92168798-9628-4a2e-be6e-fa62dcd4d6a6
-ms.openlocfilehash: 88b04ad4f14faf4d152c0ce2b9c3477928263c52
-ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
+ms.openlocfilehash: f05c2e9482f8a0bada3868fdc946d4d26a0e0e1d
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/16/2020
-ms.locfileid: "79421897"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81371922"
 ---
 # <a name="collate-class"></a>collate, classe
 
-Modèle de classe qui décrit un objet pouvant servir de facette de paramètres régionaux pour contrôler l’ordre et le regroupement des caractères dans une chaîne, les comparaisons entre eux et le hachage de chaînes.
+Un modèle de classe qui décrit un objet qui peut servir de facette locale pour contrôler la commande et le regroupement des caractères dans une chaîne, les comparaisons entre eux et le hachage des cordes.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -42,7 +42,7 @@ class collate : public locale::facet;
 
 ### <a name="parameters"></a>Paramètres
 
-*CharType*\
+*CharType CharType*\
 Type utilisé dans le cadre d'un programme pour encoder des caractères.
 
 ## <a name="remarks"></a>Notes
@@ -53,7 +53,7 @@ Comme avec n'importe quelle facette de paramètres régionaux, l'ID d'objet stat
 
 |Constructeur|Description|
 |-|-|
-|[collate](#collate)|Constructeur des objets de la classe `collate` qui sert de facette de paramètres régionaux pour la gestion des conventions de tri de chaînes.|
+|[Rassembler](#collate)|Constructeur des objets de la classe `collate` qui sert de facette de paramètres régionaux pour la gestion des conventions de tri de chaînes.|
 
 ### <a name="typedefs"></a>Typedefs
 
@@ -66,20 +66,20 @@ Comme avec n'importe quelle facette de paramètres régionaux, l'ID d'objet stat
 
 |Fonction membre|Description|
 |-|-|
-|[compare](#compare)|Compare deux séquences de caractères selon leurs règles de facette afin de vérifier leur égalité ou leur inégalité.|
+|[Comparer](#compare)|Compare deux séquences de caractères selon leurs règles de facette afin de vérifier leur égalité ou leur inégalité.|
 |[do_compare](#do_compare)|Fonction virtuelle appelée pour comparer deux séquences de caractères selon leurs règles de facette afin de vérifier leur égalité ou leur inégalité.|
 |[do_hash](#do_hash)|Fonction virtuelle appelée pour déterminer la valeur de hachage des séquences en fonction de leurs règles de facette.|
 |[do_transform](#do_transform)|Fonction virtuelle appelée pour convertir une séquence de caractères de paramètres régionaux en une chaîne pouvant être utilisée dans des comparaisons lexicographiques avec d'autres séquences de caractères également converties depuis les mêmes paramètres régionaux.|
-|[hash](#hash)|Détermine la valeur de hachage d'une séquence en fonction de ses règles de facette.|
+|[Hachage](#hash)|Détermine la valeur de hachage d'une séquence en fonction de ses règles de facette.|
 |[transform](#transform)|Convertit une séquence de caractères de paramètres régionaux en une chaîne qui peut être utilisée dans des comparaisons lexicographiques avec d'autres séquences de caractères, elles aussi converties depuis les mêmes paramètres régionaux.|
 
 ## <a name="requirements"></a>Spécifications
 
-**En-tête :** \<paramètres régionaux >
+**En-tête :** \<locale>
 
 **Espace de noms :** std
 
-## <a name="char_type"></a>  collate::char_type
+## <a name="collatechar_type"></a><a name="char_type"></a>collate::char_type
 
 Type qui décrit un caractère de type `CharType`.
 
@@ -91,7 +91,7 @@ typedef CharType char_type;
 
 Le type est un synonyme du paramètre de modèle `CharType`.
 
-## <a name="collate"></a>  collate::collate
+## <a name="collatecollate"></a><a name="collate"></a>collate::collate
 
 Constructeur des objets de la classe collate qui sert de facette de paramètres régionaux pour la gestion des conventions de tri de chaînes.
 
@@ -109,24 +109,24 @@ const char* _Locname,
 ### <a name="parameters"></a>Paramètres
 
 *_Refs*\
-Valeur entière qui sert à spécifier le type de gestion de la mémoire pour l’objet.
+Valeur entière utilisée pour spécifier le type de gestion de mémoire pour l’objet.
 
 *_Locname*\
 Nom des paramètres régionaux.
 
 ### <a name="remarks"></a>Notes
 
-Les valeurs possibles pour le paramètre *_Refs* et leur signification sont les suivantes :
+Les valeurs possibles pour le *_Refs* paramètre et leur signification sont les suivante :
 
 - 0 : la durée de vie de l’objet est gérée par les paramètres régionaux qui le contiennent.
 
 - 1 : la durée de vie de l’objet doit être gérée manuellement.
 
-- \> 1 : ces valeurs ne sont pas définies.
+- \>1: Ces valeurs ne sont pas définies.
 
-Le constructeur initialise son objet de base avec **locale ::** [facette](../standard-library/locale-class.md#facet_class)(`_Refs`).
+Le constructeur initialise son objet de base avec`_Refs` **local::**[facette](../standard-library/locale-class.md#facet_class)( ).
 
-## <a name="compare"></a>  collate::compare
+## <a name="collatecompare"></a><a name="compare"></a>collate::compare
 
 Compare deux séquences de caractères selon leurs règles de facette afin de vérifier leur égalité ou leur inégalité.
 
@@ -139,13 +139,13 @@ int compare(const CharType* first1,
 
 ### <a name="parameters"></a>Paramètres
 
-*first1*\
+*première1*\
 Pointeur vers le premier élément de la première séquence à comparer.
 
 *last1*\
 Pointeur vers le dernier élément de la première séquence à comparer.
 
-*first2*\
+*premier2*\
 Pointeur vers le premier élément de la deuxième séquence à comparer.
 
 *last2*\
@@ -165,7 +165,7 @@ La fonction membre retourne :
 
 La première séquence est inférieure si elle a le plus petit élément dans la première paire inégale des séquences ou si aucune paire inégale n’existe, mais que la première séquence est plus courte.
 
-La fonction membre retourne [do_compare](#do_compare)( `first1`, `last1`, `first2`, `last2`).
+La fonction [do_compare](#do_compare)membre retourne `first1`do_compare `last1` `first2`( `last2`, , , ).
 
 ### <a name="example"></a>Exemple
 
@@ -192,7 +192,7 @@ int main() {
 }
 ```
 
-## <a name="do_compare"></a>  collate::do_compare
+## <a name="collatedo_compare"></a><a name="do_compare"></a>collate::do-comparer
 
 Fonction virtuelle appelée pour comparer deux séquences de caractères selon leurs règles de facette afin de vérifier leur égalité ou leur inégalité.
 
@@ -205,13 +205,13 @@ virtual int do_compare(const CharType* first1,
 
 ### <a name="parameters"></a>Paramètres
 
-*first1*\
+*première1*\
 Pointeur vers le premier élément de la première séquence à comparer.
 
 *last1*\
 Pointeur vers le dernier élément de la première séquence à comparer.
 
-*first2*\
+*premier2*\
 Pointeur vers le premier élément de la deuxième séquence à comparer.
 
 *last2*\
@@ -229,13 +229,13 @@ La fonction membre retourne :
 
 ### <a name="remarks"></a>Notes
 
-La fonction membre virtuelle protégée compare la séquence à [* First1, Last1) * à la séquence à *[First2, last2*). Elle compare les valeurs en appliquant des `operator<` entre les paires d’éléments correspondants de type `CharType`. La première séquence est inférieure si elle a le plus petit élément dans la première paire inégale des séquences ou si aucune paire inégale n’existe, mais que la première séquence est plus courte.
+La fonction de membre virtuel protégée compare la séquence à [first1, Last1) avec la séquence à *[ first2, last2*). Il compare les `operator<` valeurs en appliquant `CharType`entre les paires d’éléments correspondants de type . La première séquence est inférieure si elle a le plus petit élément dans la première paire inégale des séquences ou si aucune paire inégale n’existe, mais que la première séquence est plus courte.
 
 ### <a name="example"></a>Exemple
 
 Consultez l’exemple relatif à [collate::compare](#compare), qui appelle `do_compare`.
 
-## <a name="do_hash"></a>  collate::do_hash
+## <a name="collatedo_hash"></a><a name="do_hash"></a>collate::do-hash
 
 Fonction virtuelle appelée pour déterminer la valeur de hachage des séquences en fonction de leurs règles de facette.
 
@@ -245,10 +245,10 @@ virtual long do_hash(const CharType* first, const CharType* last) const;
 
 ### <a name="parameters"></a>Paramètres
 
-*premier*\
+*Première*\
 Pointeur vers le premier caractère de la séquence dont la valeur doit être déterminée.
 
-*dernier*\
+*Dernière*\
 Pointeur vers le dernier caractère de la séquence dont la valeur doit être déterminée.
 
 ### <a name="return-value"></a>Valeur de retour
@@ -263,7 +263,7 @@ Une valeur de hachage peut être utile, par exemple, dans la répartition des s�
 
 Consultez l’exemple relatif à [hash](#hash), qui appelle `do_hash`.
 
-## <a name="do_transform"></a>  collate::do_transform
+## <a name="collatedo_transform"></a><a name="do_transform"></a>collate::do-transform
 
 Fonction virtuelle appelée pour convertir une séquence de caractères de paramètres régionaux en une chaîne pouvant être utilisée dans des comparaisons lexicographiques avec d'autres séquences de caractères également converties depuis les mêmes paramètres régionaux.
 
@@ -273,10 +273,10 @@ virtual string_type do_transform(const CharType* first, const CharType* last) co
 
 ### <a name="parameters"></a>Paramètres
 
-*premier*\
+*Première*\
 Pointeur vers le premier caractère de la séquence à convertir.
 
-*dernier*\
+*Dernière*\
 Pointeur vers le dernier caractère de la séquence à convertir.
 
 ### <a name="return-value"></a>Valeur de retour
@@ -285,13 +285,13 @@ Chaîne qui est la séquence de caractères transformée.
 
 ### <a name="remarks"></a>Notes
 
-La fonction membre virtuelle protégée retourne un objet de la classe [string_type](#string_type) dont la séquence contrôlée est une copie de la séquence [ `first`, `last`). Si une classe dérivée de COLLATE\< **CharType**> substitue [do_compare](#do_compare), elle doit également remplacer `do_transform` pour qu’elle corresponde. Quand elles sont passées à `collate::compare`, deux chaînes transformées doivent générer le même résultat que si vous passez les chaînes non transformées à comparer dans la classe dérivée.
+La fonction de membre virtuel [string_type](#string_type) protégée renvoie un objet de classe string_type `first` `last`dont la séquence contrôlée est une copie de la séquence [, ). Si une classe dérivée de collate\< **CharType**> remplace [do_compare](#do_compare), elle doit également remplacer `do_transform` pour établir la correspondance. Quand elles sont passées à `collate::compare`, deux chaînes transformées doivent générer le même résultat que si vous passez les chaînes non transformées à comparer dans la classe dérivée.
 
 ### <a name="example"></a>Exemple
 
 Consultez l’exemple relatif à [transform](#transform), qui appelle `do_transform`.
 
-## <a name="hash"></a>  collate::hash
+## <a name="collatehash"></a><a name="hash"></a>collate::hash
 
 Détermine la valeur de hachage d'une séquence en fonction de ses règles de facette.
 
@@ -301,10 +301,10 @@ long hash(const CharType* first, const CharType* last) const;
 
 ### <a name="parameters"></a>Paramètres
 
-*premier*\
+*Première*\
 Pointeur vers le premier caractère de la séquence dont la valeur doit être déterminée.
 
-*dernier*\
+*Dernière*\
 Pointeur vers le dernier caractère de la séquence dont la valeur doit être déterminée.
 
 ### <a name="return-value"></a>Valeur de retour
@@ -313,7 +313,7 @@ Valeur de hachage de type **long** pour la séquence.
 
 ### <a name="remarks"></a>Notes
 
-La fonction membre retourne [do_hash](#do_hash)( `first`, `last`).
+La fonction [do_hash](#do_hash)membre retourne do_hash `first` `last`( , ).
 
 Une valeur de hachage peut être utile, par exemple, dans la répartition des séquences de manière pseudo-aléatoire sur un tableau de listes.
 
@@ -345,7 +345,7 @@ int main( )
 541187293 551279837
 ```
 
-## <a name="string_type"></a>  collate::string_type
+## <a name="collatestring_type"></a><a name="string_type"></a>collate::string_type
 
 Type qui décrit une chaîne de type `basic_string` qui contient des caractères de type `CharType`.
 
@@ -361,7 +361,7 @@ Le type décrit une spécialisation du modèle de classe [basic_string](../stand
 
 Pour savoir comment déclarer et utiliser `string_type`, consultez [transform](#transform).
 
-## <a name="transform"></a>  collate::transform
+## <a name="collatetransform"></a><a name="transform"></a>collate::transformer
 
 Convertit une séquence de caractères de paramètres régionaux en une chaîne qui peut être utilisée dans des comparaisons lexicographiques avec d'autres séquences de caractères, elles aussi converties depuis les mêmes paramètres régionaux.
 
@@ -371,10 +371,10 @@ string_type transform(const CharType* first, const CharType* last) const;
 
 ### <a name="parameters"></a>Paramètres
 
-*premier*\
+*Première*\
 Pointeur vers le premier caractère de la séquence à convertir.
 
-*dernier*\
+*Dernière*\
 Pointeur vers le dernier caractère de la séquence à convertir.
 
 ### <a name="return-value"></a>Valeur de retour
@@ -383,7 +383,7 @@ Chaîne qui contient la séquence de caractères transformée.
 
 ### <a name="remarks"></a>Notes
 
-La fonction membre retourne [do_transform](#do_transform)(`first`, `last`).
+La fonction [do_transform](#do_transform)membre retourne do_transform`first` `last`( , ).
 
 ### <a name="example"></a>Exemple
 
@@ -429,5 +429,5 @@ int main( )
 
 ## <a name="see-also"></a>Voir aussi
 
-[\<locale>](../standard-library/locale.md)\
-[Sécurité des threads dans la bibliothèque C++ Standard](../standard-library/thread-safety-in-the-cpp-standard-library.md)
+[\<local>](../standard-library/locale.md)\
+[Sécurité des fils dans la bibliothèque standard de CMD](../standard-library/thread-safety-in-the-cpp-standard-library.md)

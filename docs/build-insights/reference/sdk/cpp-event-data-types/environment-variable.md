@@ -1,6 +1,6 @@
 ---
-title: EnvironmentVariable, classe
-description: Référence C++ de la classe EnvironmentVariable du kit de développement logiciel (SDK) Build Insights.
+title: Classe EnvironnementVariable
+description: La référence de classe 1000 Build Insights SDK EnvironmentVariable.
 ms.date: 02/12/2020
 helpviewer_keywords:
 - C++ Build Insights
@@ -9,23 +9,23 @@ helpviewer_keywords:
 - throughput analysis
 - build time analysis
 - vcperf.exe
-ms.openlocfilehash: 19e9278e76fb2116dac30a0e790fba86c6c56484
-ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
+ms.openlocfilehash: 963c52e0ea9e048448c6f2b3ac62d9938817467e
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/05/2020
-ms.locfileid: "78333439"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81325019"
 ---
-# <a name="environmentvariable-class"></a>EnvironmentVariable, classe
+# <a name="environmentvariable-class"></a>Classe EnvironnementVariable
 
 ::: moniker range="<=vs-2015"
 
-Le C++ Kit de développement logiciel (SDK) Build Insights est compatible avec Visual Studio 2017 et versions ultérieures. Pour consulter la documentation de ces versions, définissez le contrôle sélecteur de version de Visual Studio pour cet article sur Visual Studio 2017 ou Visual Studio 2019.
+Le SDK Build Insights est compatible avec Visual Studio 2017 et plus. Pour voir la documentation de ces versions, définissez le contrôle du sélecteur Visual Studio **Version** pour cet article à Visual Studio 2017 ou Visual Studio 2019. On le trouve en haut de la table des contenus sur cette page.
 
 ::: moniker-end
 ::: moniker range=">=vs-2017"
 
-La classe `EnvironmentVariable` est utilisée avec les fonctions [MatchEvent](../functions/match-event.md), [MatchEventInMemberFunction](../functions/match-event-in-member-function.md), [MatchEventStack](../functions/match-event-stack.md)et [MatchEventStackInMemberFunction](../functions/match-event-stack-in-member-function.md) . Utilisez-le pour faire correspondre un événement [ENVIRONMENT_VARIABLE](../event-table.md#environment-variable) .
+La `EnvironmentVariable` classe est utilisée avec les fonctions [MatchEvent](../functions/match-event.md), [MatchEventInMemberFunction](../functions/match-event-in-member-function.md), [MatchEventStack](../functions/match-event-stack.md)et [MatchEventStackInMemberFunction.](../functions/match-event-stack-in-member-function.md) Utilisez-le pour correspondre à un [événement ENVIRONMENT_VARIABLE.](../event-table.md#environment-variable)
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -42,7 +42,7 @@ public:
 
 ## <a name="members"></a>Membres
 
-Avec les membres hérités de sa classe de base [SimpleEvent](simple-event.md) , la classe `EnvironmentVariable` contient les membres suivants :
+Avec les membres hérités de sa classe `EnvironmentVariable` de base [SimpleEvent,](simple-event.md) la classe contient les membres suivants :
 
 ### <a name="constructors"></a>Constructeurs
 
@@ -50,10 +50,10 @@ Avec les membres hérités de sa classe de base [SimpleEvent](simple-event.md) ,
 
 ### <a name="functions"></a>Fonctions
 
-[Nom](#name)
-[Valeur](#value)
+[Name](#name)
+[Valeur](#value) du nom
 
-## <a name="environment-variable"></a>EnvironmentVariable
+## <a name="environmentvariable"></a><a name="environment-variable"></a>EnvironnementVariable
 
 ```cpp
 EnvironmentVariable(const RawEvent& event);
@@ -61,10 +61,10 @@ EnvironmentVariable(const RawEvent& event);
 
 ### <a name="parameters"></a>Paramètres
 
-*event*\
-Événement [ENVIRONMENT_VARIABLE](../event-table.md#environment-variable) .
+*Événement*\
+Un [événement ENVIRONMENT_VARIABLE.](../event-table.md#environment-variable)
 
-## <a name="name"></a> Name
+## <a name="name"></a><a name="name"></a>Nom
 
 ```cpp
 const wchar_t Name() const;
@@ -72,9 +72,9 @@ const wchar_t Name() const;
 
 ### <a name="return-value"></a>Valeur de retour
 
-Nom de la variable d’environnement.
+Nom de la variable de l’environnement.
 
-## <a name="value"></a>Ajoutée
+## <a name="value"></a><a name="value"></a> Valeur
 
 ```cpp
 const wchar_t Value() const;
@@ -82,6 +82,6 @@ const wchar_t Value() const;
 
 ### <a name="return-value"></a>Valeur de retour
 
-Valeur de la variable d’environnement.
+La valeur de la variable de l’environnement.
 
 ::: moniker-end

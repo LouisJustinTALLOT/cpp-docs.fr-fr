@@ -1,41 +1,41 @@
 ---
-title: Syntaxe de ligne de commande du compilateur MSVC
+title: Syntaxe de la ligne de commande du compilateur MSVC
 ms.date: 11/04/2016
 helpviewer_keywords:
 - syntax, CL compiler command line
 - cl.exe compiler, command-line syntax
 ms.assetid: acba2c1c-0803-4a3a-af25-63e849b930a2
-ms.openlocfilehash: 5cee76d5c053dbcfef33a191dc38a958338e4a82
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 6a56474b537d78a3d0bea8a74d9082007cd2e295
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62294341"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81320543"
 ---
 # <a name="compiler-command-line-syntax"></a>Syntaxe de la ligne de commande du compilateur
 
-La ligne de commande CL utilise la syntaxe suivante :
+La ligne de commande CL utilise la syntaxe suivante :
 
 ```
 CL [option...] file... [option | file]... [lib...] [@command-file] [/link link-opt...]
 ```
 
-Le tableau suivant décrit les entrées de la commande CL.
+Le tableau suivant décrit l’entrée à la commande CL.
 
 |Entrée|Signification|
 |-----------|-------------|
-|*option*|Un ou plusieurs [options CL](compiler-options.md). Notez que toutes les options s’appliquent à tous les fichiers source spécifié. Options sont spécifiées par une barre oblique (/) ou un tiret (-). Si une option accepte un argument, les documents de description de cette option si un espace est autorisé entre l’option et les arguments. Les noms des options (à l’exception de l’option /HELP) respectent la casse. Consultez [ordre des Options CL](order-of-cl-options.md) pour plus d’informations.|
-|`file`|Le nom d’un ou plusieurs fichiers sources, les fichiers .obj ou des bibliothèques. CL compile des fichiers source et passe les noms des fichiers .obj et des bibliothèques à l’éditeur de liens. Consultez [syntaxe de nom de fichier CL](cl-filename-syntax.md) pour plus d’informations.|
-|*lib*|Un ou plusieurs noms de bibliothèque. CL passe ces noms à l’éditeur de liens.|
-|*command-file*|Un fichier qui contient plusieurs options et les noms de fichiers. Consultez [fichiers de commandes CL](cl-command-files.md) pour plus d’informations.|
-|*link-opt*|Un ou plusieurs [Options de l’éditeur de liens MSVC](linker-options.md). CL passe ces options à l’éditeur de liens.|
+|*Option*|Une ou plusieurs [options CL](compiler-options.md). Notez que toutes les options s’appliquent à tous les fichiers sources spécifiés. Les options sont spécifiées soit par une barre oblique avant (/) soit par un tableau de bord (-). Si une option prend un argument, la description de l’option documente si un espace est autorisé entre l’option et les arguments. Les noms d’options (à l’exception de l’option /HELP) sont sensibles aux cas. Voir [Order of CL Options](order-of-cl-options.md) pour plus d’informations.|
+|`file`|Le nom d’un ou plusieurs fichiers sources, fichiers .obj, ou bibliothèques. CL compile les fichiers source et transmet les noms des fichiers et bibliothèques .obj au lien. Voir [CL Filename Syntax](cl-filename-syntax.md) pour plus d’informations.|
+|*Lib*|Un ou plusieurs noms de bibliothèque. CL transmet ces noms au lien.|
+|*fichier de commande*|Un fichier qui contient plusieurs options et noms de fichiers. Consultez [les fichiers de commandement cl](cl-command-files.md) pour plus d’informations.|
+|*lien-opt*|Une ou plusieurs [options MSVC Linker](linker-options.md). CL transmet ces options au lien.|
 
-Vous pouvez spécifier n’importe quel nombre d’options, les noms de fichiers et les noms de bibliothèques, tant que le nombre de caractères sur la ligne de commande ne dépasse pas 1 024, la limite imposée par le système d’exploitation.
+Vous pouvez spécifier n’importe quel nombre d’options, noms de fichiers et noms de bibliothèque, tant que le nombre de caractères sur la ligne de commande ne dépasse pas 1024, la limite dictée par le système d’exploitation.
 
-Pour plus d’informations sur la valeur de retour de cl.exe, consultez [valeur de retour de cl.exe](return-value-of-cl-exe.md) .
+Pour plus d’informations sur la valeur de retour de cl.exe, voir [Valeur de retour de cl.exe](return-value-of-cl-exe.md) .
 
 > [!NOTE]
->  Limite de 1 024 caractères d’entrée de ligne de commande n’est pas garantie reste la même dans les versions futures de Windows.
+> La limite d’entrée de la ligne de commande de 1024 caractères n’est pas garantie de rester la même dans les versions futures de Windows.
 
 ## <a name="see-also"></a>Voir aussi
 

@@ -11,12 +11,12 @@ helpviewer_keywords:
 - cpp.stop
 - Class View, hint file
 ms.assetid: 17194f66-cf62-4523-abec-77db0675ab65
-ms.openlocfilehash: de299f17686d68956e9847d47743d8931734d4ad
-ms.sourcegitcommit: 8e285a766523e653aeeb34d412dc6f615ef7b17b
+ms.openlocfilehash: 8037cb8025cc85a8479528490e1512531cbcc035
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/21/2020
-ms.locfileid: "80075206"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81322312"
 ---
 # <a name="hint-files"></a>Fichiers hint
 
@@ -36,8 +36,9 @@ Un fichier hint contient des indicateurs personnalisables par l’utilisateur, q
 
 > [!IMPORTANT]
 > Si vous modifiez ou ajoutez un fichier hint, vous devez effectuer des étapes supplémentaires pour que les modifications prennent effet :
-> - Dans les versions antérieures à Visual Studio 2017 version 15,6 : supprimez le fichier. sdf et/ou le fichier VC. db dans la solution pour toutes les modifications.
-> - Dans Visual Studio 2017 version 15,6 et versions ultérieures : fermez et rouvrez la solution après avoir ajouté de nouveaux fichiers hint.
+>
+> - En versions avant Visual Studio 2017 version 15.6: Supprimer le fichier .sdf et /ou VC.db fichier dans la solution pour toutes les modifications.
+> - Dans Visual Studio 2017 version 15.6 et plus tard: Fermer et rouvrir la solution après l’ajout de nouveaux fichiers d’indice.
 
 ## <a name="scenario"></a>Scénario
 
@@ -92,17 +93,17 @@ Il existe deux catégories de macros qui perturbent l’analyseur :
 
 - Il existe une Action rapide pour créer un fichier hint qui inclut la macro en surbrillance ou il en existe déjà un pour y ajouter la macro.
 
-![Macro en surbrillance.](media/hint-squiggle-and-actions.png "Indice tilde et actions rapides")
+![Macro mis en évidence.](media/hint-squiggle-and-actions.png "Astuce squiggle et Actions rapides")
 
 Après l’exécution de l’une des Actions rapides, l’analyseur effectue une nouvelle analyse des fichiers affectés par le fichier hint.
 
-Par défaut, la macro à problème est mise en surbrillance comme suggestion. La mise en surbrillance peut être remplacée par quelque chose de plus notable, par exemple une ligne ondulée (tilde) rouge ou verte. Utilisez l’option **Macros dans les régions ignorées par la navigation** dans la section **Tildes du code** sous **Outils** > **Options** > **Éditeur de texte** > **C/C++**  > **Vue**.
+Par défaut, la macro à problème est mise en surbrillance comme suggestion. La mise en surbrillance peut être remplacée par quelque chose de plus notable, par exemple une ligne ondulée (tilde) rouge ou verte. Utilisez l’option **Macros dans les régions ignorées par la navigation** dans la section **Tildes du code** sous **Outils** > **Options** > **Éditeur de texte** > **C/C++** > **Vue**.
 
-![Macros dans l’option zones de navigation ignorées.](media/skipped-regions-squiggle-option.png "Option de tilde de régions ignorée.")
+![Macros dans l’option Régions de navigation ignorée.](media/skipped-regions-squiggle-option.png "Les régions ignorées squiggle option.")
 
 ## <a name="display-browsing-database-errors"></a>Afficher les erreurs de la base de données de navigation
 
-La commande de menu **Projet** > **Afficher les erreurs de la base de données de navigation** affiche toutes les régions qui n’ont pas pu être analysées dans la **Liste d’erreurs**. La commande est destinée à simplifier la génération du fichier hint initial. Toutefois, l’analyseur ne peut pas déterminer si la cause de l’erreur était une macro à problème, c’est pourquoi vous devez évaluer chaque erreur. Exécutez la commande **Afficher les erreurs de la base de données de navigation** et parcourez chaque erreur pour charger le fichier affecté dans l’éditeur. Une fois que le fichier est chargé, si des macros sont dans la région, elles sont mises en surbrillance. Vous pouvez appeler les Actions rapides pour les ajouter dans un fichier hint. Après une mise à jour du fichier hint, la liste d’erreurs est actualisée automatiquement. Sinon, si vous modifiez manuellement le fichier hint, vous pouvez utiliser la commande **Relancer l’analyse de la solution** pour déclencher une mise à jour.
+La base de données de navigation de base**de données de l’affichage** du **projet** > affiche toutes les régions qui n’ont pas analysé la **liste d’erreurs**. La commande est destinée à simplifier la génération du fichier hint initial. Toutefois, l’analyseur ne peut pas déterminer si la cause de l’erreur était une macro à problème, c’est pourquoi vous devez évaluer chaque erreur. Exécutez la commande **Afficher les erreurs de la base de données de navigation** et parcourez chaque erreur pour charger le fichier affecté dans l’éditeur. Une fois que le fichier est chargé, si des macros sont dans la région, elles sont mises en surbrillance. Vous pouvez appeler les Actions rapides pour les ajouter dans un fichier hint. Après une mise à jour du fichier hint, la liste d’erreurs est actualisée automatiquement. Sinon, si vous modifiez manuellement le fichier hint, vous pouvez utiliser la commande **Relancer l’analyse de la solution** pour déclencher une mise à jour.
 
 ## <a name="architecture"></a>Architecture
 
@@ -150,13 +151,13 @@ Les indicateurs utilisent cette syntaxe :
 
 |Syntaxe|Signification|
 |------------|-------------|
-|*indicateur de `#define`-chaîne de remplacement de nom* *replacement-string*<br /><br /> `#define` *Hint-name* `(` *Parameter*,...`)`*remplacement-String*|Une directive de préprocesseur qui définit un nouvel indicateur ou redéfinit un indicateur existant. Après la directive, le préprocesseur remplace chaque occurrence de *nom de l’indicateur* dans le code source par *chaîne de remplacement*.<br /><br /> La deuxième forme de la syntaxe définit un indicateur de type fonction. Si un indicateur de type fonction apparaît dans le code source, le préprocesseur remplace d’abord chaque occurrence de *paramètre* dans *chaîne de remplacement* par l’argument correspondant dans le code source, puis remplace *nom de l’indicateur* par *chaîne de remplacement*.|
+|`#define` *nom de l’indicateur* *chaîne de remplacement*<br /><br /> `#define` *nom de l’indicateur* `(` *paramètre*, ...`)`*chaîne de remplacement*|Une directive de préprocesseur qui définit un nouvel indicateur ou redéfinit un indicateur existant. Après la directive, le préprocesseur remplace chaque occurrence de *nom de l’indicateur* dans le code source par *chaîne de remplacement*.<br /><br /> La deuxième forme de la syntaxe définit un indicateur de type fonction. Si un indicateur de type fonction apparaît dans le code source, le préprocesseur remplace d’abord chaque occurrence de *paramètre* dans *chaîne de remplacement* par l’argument correspondant dans le code source, puis remplace *nom de l’indicateur* par *chaîne de remplacement*.|
 |`@<`|*Chaîne de remplacement* spécifique à un fichier hint qui indique le début d’un ensemble d’éléments de mappage.|
 |`@=`|*Chaîne de remplacement* spécifique à un fichier hint qui indique un élément de table intermédiaire. Une table peut avoir plusieurs éléments de table.|
 |`@>`|*Chaîne de remplacement* spécifique à un fichier hint qui indique la fin d’un ensemble d’éléments de mappage.|
-|*nom de l’indicateur de* `#undef`|Directive de préprocesseur qui supprime un indicateur existant. Le nom de l’indicateur est fourni par l’identificateur de *nom de l’indicateur*.|
-|`//` un *Commentaire*|Commentaire sur une seule ligne.|
-|`/*` le *commentaire* `*/`|Commentaire multiligne.|
+|`#undef` *nom de l’indicateur*|Directive de préprocesseur qui supprime un indicateur existant. Le nom de l’indicateur est fourni par l’identificateur de *nom de l’indicateur*.|
+|`//`*commentaire*|Commentaire sur une seule ligne.|
+|`/*`*commentaire*`*/`|Commentaire multiligne.|
 
 ## <a name="example"></a>Exemple
 
@@ -166,7 +167,7 @@ L’illustration montre certains des répertoires physiques d’un projet Visual
 
 ### <a name="hint-file-directories"></a>Répertoires des fichiers hint
 
-![Répertoires de&#45;fichiers Hint communs et spécifiques au projet.](media/hintfile.png "HintFile")
+![Les répertoires de fichiers d’indices communs et de projet&#45;spécifiques.](media/hintfile.png "HintFile (En)")
 
 ### <a name="directories-and-hint-file-contents"></a>Répertoires et contenu des fichiers hint
 
@@ -245,6 +246,6 @@ Ces remarques s’appliquent à la liste précédente :
 ## <a name="see-also"></a>Voir aussi
 
 [Types de fichiers créés pour les projets Visual Studio C++](file-types-created-for-visual-cpp-projects.md)<br>
-[#define, directive (C/C++)](../../preprocessor/hash-define-directive-c-cpp.md)<br>
+[directive #define (C/C)](../../preprocessor/hash-define-directive-c-cpp.md)<br>
 [#undef, directive (C/C++)](../../preprocessor/hash-undef-directive-c-cpp.md)<br>
-[Annotations SAL](../../c-runtime-library/sal-annotations.md)<br>
+[SAL Annotations](../../c-runtime-library/sal-annotations.md)<br>

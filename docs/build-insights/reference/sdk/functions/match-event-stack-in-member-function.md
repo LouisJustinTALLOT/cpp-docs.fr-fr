@@ -1,6 +1,6 @@
 ---
 title: MatchEventStackInMemberFunction
-description: Référence C++ de la fonction MatchEventStackInMemberFunction du kit de développement logiciel (SDK) Build Insights.
+description: La référence de fonction de construction SDK MatchEventStackInMemberFunction.
 ms.date: 02/12/2020
 helpviewer_keywords:
 - C++ Build Insights
@@ -9,23 +9,23 @@ helpviewer_keywords:
 - throughput analysis
 - build time analysis
 - vcperf.exe
-ms.openlocfilehash: 2a966ea5209a25a62c08cb0873d0565299a15d27
-ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
+ms.openlocfilehash: 28842a02e7edc2e00266d8c7941798f4ce714ded
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/05/2020
-ms.locfileid: "78332788"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81323888"
 ---
 # <a name="matcheventstackinmemberfunction"></a>MatchEventStackInMemberFunction
 
 ::: moniker range="<=vs-2015"
 
-Le C++ Kit de développement logiciel (SDK) Build Insights est compatible avec Visual Studio 2017 et versions ultérieures. Pour consulter la documentation de ces versions, définissez le contrôle sélecteur de version de Visual Studio pour cet article sur Visual Studio 2017 ou Visual Studio 2019.
+Le SDK Build Insights est compatible avec Visual Studio 2017 et plus. Pour voir la documentation de ces versions, définissez le contrôle du sélecteur Visual Studio **Version** pour cet article à Visual Studio 2017 ou Visual Studio 2019. On le trouve en haut de la table des contenus sur cette page.
 
 ::: moniker-end
 ::: moniker range=">=vs-2017"
 
-La fonction `MatchEventStackInMemberFunction` est utilisée pour faire correspondre une pile d’événements à une hiérarchie d’événements spécifique, décrite par la liste des paramètres d’une fonction membre. Les hiérarchies correspondantes sont transférées à la fonction membre pour un traitement ultérieur. Pour en savoir plus sur les événements, les piles d’événements et les hiérarchies, consultez [table des événements](../event-table.md).
+La `MatchEventStackInMemberFunction` fonction est utilisée pour correspondre à une pile d’événements par rapport à une hiérarchie d’événements spécifique, décrite par la liste des paramètres d’une fonction membre. Les hiérarchies assorties sont transmises à la fonction de membre pour un traitement ultérieur. Pour en savoir plus sur les événements, les piles d’événements et les hiérarchies, consultez [la table d’événements](../event-table.md).
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -81,42 +81,42 @@ bool MatchEventStackInMemberFunction(
 
 ### <a name="parameters"></a>Paramètres
 
-*TInterface*\
-Type qui contient la fonction membre.
+*TInterface (en)*\
+Le type qui contient la fonction de membre.
 
-*TReturn*\
-Type de retour de la fonction membre.
+*TReturn TReturn*\
+Le type de retour de la fonction membre.
 
-*T1*,..., *T10*\
-Types décrivant la hiérarchie d’événements à faire correspondre.
+*T1*, ..., *T10*\
+Les types décrivant la hiérarchie de l’événement à correspondre.
 
 *TExtraParams*\
-Types des paramètres supplémentaires acceptés par la fonction membre et les types de hiérarchies d’événements.
+Les types de paramètres supplémentaires acceptés par la fonction membre, et les types de hiérarchie d’événements.
 
 *TExtraArgs*\
-Types des arguments supplémentaires passés à `MatchEventStackInMemberFunction`.
+Les types d’arguments supplémentaires `MatchEventStackInMemberFunction`qui ont été transmis à .
 
-*eventStack*\
-Pile d’événements à faire correspondre à la hiérarchie des types d’événements décrite par *T1* à *T10*.
+*événementStack*\
+La pile d’événements pour correspondre à la hiérarchie de type événement décrit par *T1* à travers *T10*.
 
-*objectPtr*\
-Pointeur vers un objet sur lequel *memberFunc* est appelé.
+*objetPtr*\
+Un pointeur à un objet sur lequel *le membreFunc* est appelé.
 
-*memberFunc*\
-Fonction membre qui décrit la hiérarchie des types d’événements à faire correspondre.
+*membreFunc*\
+La fonction membre qui décrit la hiérarchie de type d’événement pour correspondre.
 
 *extraArgs*\
-Les arguments qui sont parfaits sont transmis à *memberFunc* avec les paramètres de hiérarchie de type d’événement.
+Les arguments qui obtiennent parfait-transmis à *membreFunc* avec les paramètres de hiérarchie de type d’événement.
 
 ### <a name="return-value"></a>Valeur de retour
 
-Valeur **booléenne** qui est **true** si la correspondance a réussi, ou **false** dans le cas contraire.
+Une valeur **bool** qui est **vrai** si l’appariement a été réussie, ou **faux** autrement.
 
 ## <a name="remarks"></a>Notes
 
-Le dernier événement dans *eventStack* est toujours mis en correspondance avec la dernière entrée de la hiérarchie des types d’événements à faire correspondre. Tous les autres types dans la hiérarchie des types d’événements peuvent correspondre à n’importe quelle position dans *eventStack* , à l’exception de la dernière, à condition qu’ils soient dans le même ordre.
+Le dernier événement dans *le casStack* est toujours égalé contre la dernière entrée dans la hiérarchie de type événement à correspondre. Tous les autres types dans la hiérarchie de type événement peuvent correspondre à n’importe quelle position dans *le casStack* sauf le dernier, à condition qu’ils soient dans le même ordre.
 
-Les types d’événements à utiliser pour les paramètres *T1* à *T10* sont sélectionnés dans une liste de *classes de capture*. Pour obtenir la liste des événements et les classes de capture que vous pouvez utiliser pour les mettre en correspondance, consultez [table des événements](../event-table.md).
+Les types d’événements à utiliser pour les paramètres *T1* à *T10* sont sélectionnés parmi une liste de classes de *capture*. Pour une liste d’événements et les classes de capture que vous pouvez utiliser pour les assortir, voir [tableau d’événements](../event-table.md).
 
 ## <a name="example"></a>Exemple
 

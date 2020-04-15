@@ -4,18 +4,18 @@ ms.date: 05/08/2019
 helpviewer_keywords:
 - ATL projects, adding components
 ms.assetid: 11670681-8671-4122-96a4-2e52f8dadce0
-ms.openlocfilehash: eaecd0d4e6e2b024ce3312719e7104298d3f9a66
-ms.sourcegitcommit: 8e285a766523e653aeeb34d412dc6f615ef7b17b
+ms.openlocfilehash: d5c0c0c8edb6b698d3d8f50736121d987af98492
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/21/2020
-ms.locfileid: "80075282"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81321691"
 ---
 # <a name="atl-com-10-component-wizard"></a>Assistant Composant COM+ 1.0 ATL
 
 ::: moniker range="vs-2019"
 
-Cet Assistant n’est pas disponible dans Visual Studio 2019 et versions ultérieures.
+Cet Assistant n’est pas disponible dans Visual Studio 2019 et ultérieur.
 
 ::: moniker-end
 
@@ -59,7 +59,7 @@ Spécifiez les noms de l’objet, de l’interface et des classes à ajouter à 
 
    Si vous sélectionnez cette option pour un projet ATL qui ne prend pas en charge les attributs, l’Assistant vous invite à spécifier si vous souhaitez ajouter la prise en charge d’attributs au projet.
 
-   Tous les objets que vous ajoutez après avoir défini cette option sont désignés comme ayant des attributs par défaut (la case est cochée). Vous pouvez décocher cette case pour y ajouter un objet qui n’utilise pas d’attributs.
+   Tous les objets que vous ajoutez après avoir défini cette option sont désignés comme ayant des attributs par défaut (la case est cochée). Vous pouvez effacer ce champ pour y ajouter un objet qui n’utilise pas d’attributs.
 
    Consultez [Paramètre d’application, Assistant Projet ATL](../../atl/reference/application-settings-atl-project-wizard.md) et [Mécanismes de base des attributs](../../windows/basic-mechanics-of-attributes.md) pour plus d’informations.
 
@@ -72,17 +72,17 @@ Fournit des informations sur la fonctionnalité COM de l’objet.
    Définit le nom de la classe du composant qui contient une liste d’interfaces prises en charge par l’objet.
 
 > [!NOTE]
->  Si vous créez votre projet à l’aide d’attributs, ou si vous indiquez sur cette page de l’Assistant que le composant COM+ 1.0 utilise des attributs, vous ne pouvez pas modifier cette option, car ATL n’inclut pas l’attribut `coclass`.
+> Si vous créez votre projet à l’aide d’attributs, ou si vous indiquez sur cette page de l’Assistant que le composant COM+ 1.0 utilise des attributs, vous ne pouvez pas modifier cette option, car ATL n’inclut pas l’attribut `coclass`.
 
 - **Type**
 
-   Définit la description de l’objet qui apparaîtra dans le registre
+   Définit la description de l’objet qui s’affiche dans le registre
 
 - **Interface**
 
    Définit l’interface que vous créez pour votre objet. Cette interface contient vos méthodes personnalisées.
 
-- **ProgID**
+- **Progid**
 
    Définit le nom que les conteneurs peuvent utiliser au lieu du CLSID de l’objet.
 
@@ -90,4 +90,4 @@ Fournit des informations sur la fonctionnalité COM de l’objet.
 
 ## <a name="see-also"></a>Voir aussi
 
-[Composant ATL COM+ 1.0](../../atl/reference/adding-an-atl-com-plus-1-0-component.md)
+[Ajout d’un composant ATL COM+ 1.0](../../atl/reference/adding-an-atl-com-plus-1-0-component.md)

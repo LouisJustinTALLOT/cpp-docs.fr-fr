@@ -1,6 +1,6 @@
 ---
-title: SymbolName, classe
-description: Référence C++ de la classe SymbolName du kit de développement logiciel (SDK) Build Insights.
+title: Classe SymbolName
+description: La référence de classe SDK SymbolName build Insights.
 ms.date: 02/12/2020
 helpviewer_keywords:
 - C++ Build Insights
@@ -9,23 +9,23 @@ helpviewer_keywords:
 - throughput analysis
 - build time analysis
 - vcperf.exe
-ms.openlocfilehash: b5e9a9b22db99c099b9f7dc1813fb335358a83e8
-ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
+ms.openlocfilehash: 1306fb43d6c2140a75b36c5f142532916cf26ae4
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/05/2020
-ms.locfileid: "78332998"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81324354"
 ---
-# <a name="symbolname-class"></a>SymbolName, classe
+# <a name="symbolname-class"></a>Classe SymbolName
 
 ::: moniker range="<=vs-2015"
 
-Le C++ Kit de développement logiciel (SDK) Build Insights est compatible avec Visual Studio 2017 et versions ultérieures. Pour consulter la documentation de ces versions, définissez le contrôle sélecteur de version de Visual Studio pour cet article sur Visual Studio 2017 ou Visual Studio 2019.
+Le SDK Build Insights est compatible avec Visual Studio 2017 et plus. Pour voir la documentation de ces versions, définissez le contrôle du sélecteur Visual Studio **Version** pour cet article à Visual Studio 2017 ou Visual Studio 2019. On le trouve en haut de la table des contenus sur cette page.
 
 ::: moniker-end
 ::: moniker range=">=vs-2017"
 
-La classe `SymbolName` est utilisée avec les fonctions [MatchEvent](../functions/match-event.md), [MatchEventInMemberFunction](../functions/match-event-in-member-function.md), [MatchEventStack](../functions/match-event-stack.md)et [MatchEventStackInMemberFunction](../functions/match-event-stack-in-member-function.md) . Utilisez-le pour faire correspondre un événement [SYMBOL_NAME](../event-table.md#symbol-name) .
+La `SymbolName` classe est utilisée avec les fonctions [MatchEvent](../functions/match-event.md), [MatchEventInMemberFunction](../functions/match-event-in-member-function.md), [MatchEventStack](../functions/match-event-stack.md)et [MatchEventStackInMemberFunction.](../functions/match-event-stack-in-member-function.md) Utilisez-le pour correspondre à un [événement SYMBOL_NAME.](../event-table.md#symbol-name)
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -42,18 +42,18 @@ public:
 
 ## <a name="members"></a>Membres
 
-Avec les membres hérités de sa classe de base [SimpleEvent](simple-event.md) , la classe `SymbolName` contient les membres suivants :
+Avec les membres hérités de sa classe `SymbolName` de base [SimpleEvent,](simple-event.md) la classe contient les membres suivants :
 
 ### <a name="constructors"></a>Constructeurs
 
-[SymbolName](#symbol-name)
+[SymbolName (symbolname)](#symbol-name)
 
 ### <a name="functions"></a>Fonctions
 
-[Nom](#name) de la
-de [clé](#key)
+[Key](#key)
+[Nom](#name) clé
 
-## <a name="key"></a>Essentiel
+## <a name="key"></a><a name="key"></a>Clé
 
 ```cpp
 const unsigned long long& Key() const;
@@ -61,9 +61,9 @@ const unsigned long long& Key() const;
 
 ### <a name="return-value"></a>Valeur de retour
 
-Identificateur numérique pour le type représenté par ce symbole. Cet identificateur est unique au sein d’un test frontal du compilateur.
+Un identifiant numérique pour le type représenté par ce symbole. Cet identifiant est unique dans un pass frontale compilateur.
 
-## <a name="name"></a> Name
+## <a name="name"></a><a name="name"></a>Nom
 
 ```cpp
 const char* Name() const;
@@ -71,9 +71,9 @@ const char* Name() const;
 
 ### <a name="return-value"></a>Valeur de retour
 
-Nom du type représenté par le symbole, encodé au format UTF-8.
+Le nom du type représenté par le symbole, codé dans UTF-8.
 
-## <a name="symbol-name"></a>SymbolName
+## <a name="symbolname"></a><a name="symbol-name"></a>SymbolName (symbolname)
 
 ```cpp
 SymbolName(const RawEvent& event);
@@ -81,7 +81,7 @@ SymbolName(const RawEvent& event);
 
 ### <a name="parameters"></a>Paramètres
 
-*event*\
-Événement [SYMBOL_NAME](../event-table.md#symbol-name) .
+*Événement*\
+Un [événement SYMBOL_NAME.](../event-table.md#symbol-name)
 
 ::: moniker-end

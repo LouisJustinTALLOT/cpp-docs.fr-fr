@@ -7,18 +7,18 @@ helpviewer_keywords:
 - ATL projects, adding property pages
 - ATL Property Page Wizard
 ms.assetid: 6113e325-facd-4f68-b491-144d75209922
-ms.openlocfilehash: 5808a99d376ab3640c955156688d64bc0285e67e
-ms.sourcegitcommit: fc1de63a39f7fcbfe2234e3f372b5e1c6a286087
-ms.translationtype: HT
+ms.openlocfilehash: eaf070d5a98a05dbe3102afac8317ffd59298ad2
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65706976"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81321679"
 ---
 # <a name="atl-property-page-wizard"></a>Assistant Page de propriétés ATL
 
 ::: moniker range="vs-2019"
 
-Cet Assistant n’est pas disponible dans Visual Studio 2019 et versions ultérieures.
+Cet Assistant n’est pas disponible dans Visual Studio 2019 et ultérieur.
 
 ::: moniker-end
 
@@ -26,16 +26,16 @@ Cet Assistant n’est pas disponible dans Visual Studio 2019 et versions ultéri
 
 Cet Assistant [ajoute une page de propriétés dans un projet ATL](../../atl/reference/adding-an-atl-property-page.md) ou dans un projet MFC avec prise en charge d’ATL. Une page de propriétés ATL fournit une interface utilisateur pour définir les propriétés (ou pour appeler les méthodes) d’un ou plusieurs objets COM.
 
-## <a name="remarks"></a>Remarques
+## <a name="remarks"></a>Notes
 
 À partir de Visual Studio 2008, le script d’inscription produit par cet Assistant inscrit ses composants COM sous **HKEY_CURRENT_USER** et non plus **HKEY_LOCAL_MACHINE**. Pour modifier ce comportement, définissez l’option **Inscrire le composant pour tous les utilisateurs** de l’Assistant ATL.
 
-## <a name="names"></a>Noms
+## <a name="names"></a>noms
 
 Spécifiez les noms de l’objet, de l’interface et des classes à ajouter à votre projet. À l’exception du champ **Nom court**, tous les autres peuvent être modifiés de manière indépendante. Si vous modifiez le contenu du champ **Nom court**, la modification se reflète dans les noms de tous les autres champs de cette page. Si vous modifiez le nom **Coclasse** dans la section COM, la modification se reflète dans les champs **Type** et **ProgID**. Ce comportement de nommage est conçu pour rendre tous les noms faciles à identifier lors du développement de votre page de propriétés.
 
 > [!NOTE]
->  **Coclasse** est modifiable uniquement pour les projets non attribués. Si votre projet est attribué, vous ne pouvez pas modifier **Coclasse**.
+> **Coclasse** est modifiable uniquement pour les projets non attribués. Si votre projet est attribué, vous ne pouvez pas modifier **Coclasse**.
 
 ### <a name="c"></a>C++
 
@@ -63,9 +63,9 @@ Fournit des informations sur la fonctionnalité COM de l’objet.
 
 - **Type**
 
-   Définit la description de l’objet qui apparaîtra dans le registre
+   Définit la description de l’objet qui s’affiche dans le registre
 
-- **ProgID**
+- **Progid**
 
    Définit le nom que les conteneurs peuvent utiliser au lieu du CLSID de l’objet.
 
@@ -75,4 +75,4 @@ Fournit des informations sur la fonctionnalité COM de l’objet.
 
 [Options, Assistant Page de propriétés ATL](../../atl/reference/options-atl-property-page-wizard.md)<br/>
 [Chaînes, Assistant Page de propriétés ATL](../../atl/reference/strings-atl-property-page-wizard.md)<br/>
-[Exemple : Implémentation d’une page de propriétés](../../atl/example-implementing-a-property-page.md)
+[Exemple : implémentation d’une page de propriétés](../../atl/example-implementing-a-property-page.md)

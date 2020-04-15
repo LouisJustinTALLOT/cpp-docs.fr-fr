@@ -1,6 +1,6 @@
 ---
-title: Énumération FILE_TYPE_CODE
-description: Le C++ Kit de développement logiciel (SDK) de Build Insights FILE_TYPE_CODE référence Enum.
+title: FILE_TYPE_CODE enum
+description: La référence enum de build Insights CMD Build Insights FILE_TYPE_CODE.
 ms.date: 02/12/2020
 helpviewer_keywords:
 - C++ Build Insights
@@ -9,34 +9,34 @@ helpviewer_keywords:
 - throughput analysis
 - build time analysis
 - vcperf.exe
-ms.openlocfilehash: e64f9315c62ce40c436032d6c96fdfa725847a7f
-ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
+ms.openlocfilehash: dea603a072d7b2f472112a75b2e9ccded78399a9
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/05/2020
-ms.locfileid: "78333719"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81325561"
 ---
-# <a name="file_type_code-enum"></a>Énumération FILE_TYPE_CODE
+# <a name="file_type_code-enum"></a>FILE_TYPE_CODE enum
 
 ::: moniker range="<=vs-2015"
 
-Le C++ Kit de développement logiciel (SDK) Build Insights est compatible avec Visual Studio 2017 et versions ultérieures. Pour consulter la documentation de ces versions, définissez le contrôle sélecteur de version de Visual Studio pour cet article sur Visual Studio 2017 ou Visual Studio 2019.
+Le SDK Build Insights est compatible avec Visual Studio 2017 et plus. Pour voir la documentation de ces versions, définissez le contrôle du sélecteur Visual Studio **Version** pour cet article à Visual Studio 2017 ou Visual Studio 2019. On le trouve en haut de la table des contenus sur cette page.
 
 ::: moniker-end
 ::: moniker range=">=vs-2017"
 
-L’énumération `FILE_TYPE_CODE` décrit le type d’un fichier.
+L’enum `FILE_TYPE_CODE` décrit le type de fichier.
 
 ## <a name="members"></a>Membres
 
-| Name | Valeur | Description |
+| Nom | Valeur | Description |
 |--|--|--|
-| `FILE_TYPE_CODE_OTHER` | 0 (0x00000000) | Type de fichier non listé dans cet Enum. |
-| `FILE_TYPE_CODE_OBJ` | 1 (0x00000001) | Fichier objet (\*. obj). |
-| `FILE_TYPE_CODE_EXECUTABLE_IMAGE` | 2 (0x00000002) | Fichier exécutable (\*. exe) ou DLL (\*. dll). |
-| `FILE_TYPE_CODE_LIB` | 3 (0x00000003) | Fichier de bibliothèque statique (*. lib). |
-| `FILE_TYPE_CODE_IMP_LIB` | 4 (0x00000004) | Une bibliothèque d’importation (*. lib) |
-| `FILE_TYPE_CODE_EXP` | 5 (0x00000005) | Fichier d’exportation (*. exp). |
+| `FILE_TYPE_CODE_OTHER` | 0 (0x000000000) | Un type de fichier non répertorié dans cet enum. |
+| `FILE_TYPE_CODE_OBJ` | 1 (0x00000001) | Un fichier\*objet (.obj). |
+| `FILE_TYPE_CODE_EXECUTABLE_IMAGE` | 2 (0x0000002) | Un fichier\*exécutable (.exe) ou DLL (.dll).\* |
+| `FILE_TYPE_CODE_LIB` | 3 (0x00000003) | Un fichier de bibliothèque statique (.lib). |
+| `FILE_TYPE_CODE_IMP_LIB` | 4 (0x00000004) | Une bibliothèque d’importation (.lib) |
+| `FILE_TYPE_CODE_EXP` | 5 (0x0000005) | Un fichier d’exportation ( exp). |
 
 ## <a name="remarks"></a>Notes
 
