@@ -1,6 +1,6 @@
 ---
 title: MakeDynamicAnalyzerGroup
-description: Référence C++ de la fonction MakeDynamicAnalyzerGroup du kit de développement logiciel (SDK) Build Insights.
+description: La référence de fonction CMD Build Insights SDK MakeDynamicAnalyzerGroup.
 ms.date: 02/12/2020
 helpviewer_keywords:
 - C++ Build Insights
@@ -9,23 +9,23 @@ helpviewer_keywords:
 - throughput analysis
 - build time analysis
 - vcperf.exe
-ms.openlocfilehash: f409d685c6af6514b73cd837d668a962c1a0d01a
-ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
+ms.openlocfilehash: 148eeea41f29ac6dd75653feed7f3f3f8c301911
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/05/2020
-ms.locfileid: "78332830"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81323959"
 ---
 # <a name="makedynamicanalyzergroup"></a>MakeDynamicAnalyzerGroup
 
 ::: moniker range="<=vs-2015"
 
-Le C++ Kit de développement logiciel (SDK) Build Insights est compatible avec Visual Studio 2017 et versions ultérieures. Pour consulter la documentation de ces versions, définissez le contrôle sélecteur de version de Visual Studio pour cet article sur Visual Studio 2017 ou Visual Studio 2019.
+Le SDK Build Insights est compatible avec Visual Studio 2017 et plus. Pour voir la documentation de ces versions, définissez le contrôle du sélecteur Visual Studio **Version** pour cet article à Visual Studio 2017 ou Visual Studio 2019. On le trouve en haut de la table des contenus sur cette page.
 
 ::: moniker-end
 ::: moniker range=">=vs-2017"
 
-La fonction `MakeDynamicAnalyzerGroup` est utilisée pour créer un groupe d’analyseur dynamique. Les membres d’un groupe d’analyseur reçoivent les événements un par un de gauche à droite, jusqu’à ce que tous les événements d’une trace soient analysés.
+La `MakeDynamicAnalyzerGroup` fonction est utilisée pour créer un groupe d’analyseur dynamique. Les membres d’un groupe d’analyseurs reçoivent des événements un par un de gauche à droite, jusqu’à ce que tous les événements d’une trace soient analysés.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -39,17 +39,17 @@ auto MakeDynamicAnalyzerGroup(std::vector<std::unique_ptr<IAnalyzer>> analyzers)
 
 ### <a name="parameters"></a>Paramètres
 
-*analyseurs*\
-Vecteur de pointeurs [IAnalyzer](../other-types/ianalyzer-class.md) inclus dans le groupe de l’analyseur dynamique. Ces pointeurs peuvent être RAW, `std::unique_ptr`ou `std::shared_ptr`.
+*Analyseurs*\
+Un vecteur de pointeurs [IAnalyzer](../other-types/ianalyzer-class.md) inclus dans le groupe d’analyseur dynamique. Ces pointeurs peuvent `std::unique_ptr`être `std::shared_ptr`bruts, , ou .
 
 ### <a name="return-value"></a>Valeur de retour
 
-Un groupe d’analyseur dynamique. Utilisez le mot clé **auto** pour capturer la valeur de retour.
+Un groupe d’analyseur dynamique. Utilisez le mot clé **automatique** pour capturer la valeur de retour.
 
 ## <a name="remarks"></a>Notes
 
-Contrairement aux groupes d’analyseurs statiques, les membres d’un groupe analyseur dynamique n’ont pas besoin d’être connus au moment de la compilation. Vous pouvez choisir des membres de groupe d’analyseur au moment de l’exécution en fonction de l’entrée de programme, ou en fonction d’autres valeurs qui sont inconnues au moment de la compilation. Contrairement aux groupes d’analyseurs statiques, les pointeurs [IAnalyzer](../other-types/ianalyzer-class.md) dans un groupe d’analyseur dynamique ont un comportement polymorphe et les appels de fonction virtuelle sont distribués correctement. Cette flexibilité se situe au détriment d’un temps de traitement des événements potentiellement plus lent. Lorsque tous les membres du groupe analyseur sont connus au moment de la compilation et, si vous n’avez pas besoin d’un comportement polymorphe, envisagez d’utiliser un groupe d’analyseurs statiques. Pour utiliser un groupe d’analyseurs statiques, appelez [MakeStaticAnalyzerGroup](make-static-analyzer-group.md) à la place.
+Contrairement aux groupes d’analyseurs statiques, les membres d’un groupe d’analyseur dynamique n’ont pas besoin d’être connus au moment de la compilation. Vous pouvez choisir les membres du groupe d’analyseur au moment de l’exécution en fonction de l’entrée du programme, ou en fonction d’autres valeurs qui sont inconnues au moment de la compilation. Contrairement aux groupes d’analyseurs statiques, les pointeurs [IAnalyzer](../other-types/ianalyzer-class.md) au sein d’un groupe d’analyseur dynamique ont un comportement polymorphe, et les appels de fonction virtuelle sont expédiés correctement. Cette flexibilité se fait au prix d’un temps de traitement des événements peut-être plus lent. Lorsque tous les membres du groupe d’analyseurs sont connus au moment de la compilation, et si vous n’avez pas besoin d’un comportement polymorphe, envisagez d’utiliser un groupe d’analyseur statique. Pour utiliser un groupe d’analyseur statique, appelez [MakeStaticAnalyzerGroup](make-static-analyzer-group.md) à la place.
 
-Un groupe d’analyseur dynamique peut être encapsulé dans un groupe d’analyseurs statiques. Pour ce faire, vous pouvez passer son adresse à [MakeStaticAnalyzerGroup](make-static-analyzer-group.md). Utilisez cette technique pour passer des groupes d’analyseurs dynamiques à des fonctions telles que l' [analyse](analyze.md), qui acceptent uniquement des groupes d’analyseurs statiques.
+Un groupe d’analyseur dynamique peut être encapsulé à l’intérieur d’un groupe d’analyseur statique. Il est fait en passant son adresse à [MakeStaticAnalyzerGroup](make-static-analyzer-group.md). Utilisez cette technique pour passer des groupes d’analyseur dynamiques à des fonctions telles que [Analyze](analyze.md), qui n’acceptent que les groupes d’analyseurs statiques.
 
 ::: moniker-end

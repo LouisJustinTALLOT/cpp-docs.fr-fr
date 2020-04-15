@@ -1,5 +1,5 @@
 ---
-title: CComMultiThreadModel, classe
+title: Classe CComMultiThreadModel
 ms.date: 11/04/2016
 f1_keywords:
 - CComMultiThreadModel
@@ -14,16 +14,16 @@ helpviewer_keywords:
 - CComMultiThreadModel class
 - threading [ATL]
 ms.assetid: db8f1662-2f7a-44b3-b341-ffbfb6e422a3
-ms.openlocfilehash: 74fb68eead498685ef252968124368863e27be75
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: 7ef803439d2d683633e8f9c00810542dd787541e
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69497104"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81327669"
 ---
-# <a name="ccommultithreadmodel-class"></a>CComMultiThreadModel, classe
+# <a name="ccommultithreadmodel-class"></a>Classe CComMultiThreadModel
 
-`CComMultiThreadModel`fournit des méthodes thread-safe pour l’incrémentation et la décrémentation de la valeur d’une variable.
+`CComMultiThreadModel`fournit des méthodes sans fil pour incrémenter et décroisser la valeur d’une variable.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -35,39 +35,39 @@ class CComMultiThreadModel
 
 ### <a name="public-typedefs"></a>Typedefs publics
 
-|Name|Description|
+|Nom|Description|
 |----------|-----------------|
-|[CComMultiThreadModel::AutoCriticalSection](#autocriticalsection)|Référence la classe [CComAutoCriticalSection](../../atl/reference/ccomautocriticalsection-class.md).|
-|[CComMultiThreadModel::CriticalSection](#criticalsection)|Référence la classe [CComCriticalSection](../../atl/reference/ccomcriticalsection-class.md).|
-|[CComMultiThreadModel::ThreadModelNoCS](#threadmodelnocs)|Référence la classe [CComMultiThreadModelNoCS](../../atl/reference/ccommultithreadmodelnocs-class.md).|
+|[CComMultiThreadModel::AutoCriticalSection](#autocriticalsection)|Références classe [CComAutoCriticalSection](../../atl/reference/ccomautocriticalsection-class.md).|
+|[CComMultiThreadModel::CriticalSection](#criticalsection)|Références classe [CComCriticalSection](../../atl/reference/ccomcriticalsection-class.md).|
+|[CComMultiThreadModel::ThreadModelNoCS](#threadmodelnocs)|Références classe [CComMultiThreadModelNoCS](../../atl/reference/ccommultithreadmodelnocs-class.md).|
 
 ### <a name="public-methods"></a>M&#233;thodes publiques
 
 |Nom|Description|
 |----------|-----------------|
-|[CComMultiThreadModel::Decrement](#decrement)|Statique Décrémente la valeur de la variable spécifiée de manière thread-safe.|
-|[CComMultiThreadModel::Increment](#increment)|Statique Incrémente la valeur de la variable spécifiée de manière thread-safe.|
+|[CComMultiThreadModel::Decrement](#decrement)|(Statique) Décrète la valeur de la variable spécifiée d’une manière sans fil.|
+|[CComMultiThreadModel::Increment](#increment)|(Statique) Incréments la valeur de la variable spécifiée d’une manière sans fil.|
 
 ## <a name="remarks"></a>Notes
 
-En général, vous `CComMultiThreadModel` utilisez l’un des deux noms **typedef** , soit [CComObjectThreadModel] (ATL-typedefs. MD # CComObjectThreadModel, soit [CComGlobalsThreadModel] (ATL-typedefs. MD # CComGlobalsThreadModel. La classe référencée par chaque **typedef** dépend du modèle de thread utilisé, comme indiqué dans le tableau suivant:
+Typiquement, vous `CComMultiThreadModel` utilisez par l’un des deux noms **dactylographiés,** soit [CComObjectThreadModel] (atl-typedefs.md-ccomobjectthreadmodel ou [CComGlobalsThreadModel] (atl-typedefs.md-ccomglobalsthreadmodel. La classe référencée par chaque **type** dépend du modèle de threading utilisé, comme indiqué dans le tableau suivant :
 
-|typedef|Thread unique|Thread cloisonné|Thread libre|
+|typedef|Filet unique|Threading appartement|Threading gratuit|
 |-------------|----------------------|-------------------------|--------------------|
 |`CComObjectThreadModel`|S|S|M|
 |`CComGlobalsThreadModel`|S|M|M|
 
-S = `CComSingleThreadModel`; M =`CComMultiThreadModel`
+S `CComSingleThreadModel`' ; M`CComMultiThreadModel`
 
-`CComMultiThreadModel`définit lui-même trois noms **typedef** . `AutoCriticalSection`et `CriticalSection` les classes de référence qui fournissent des méthodes pour obtenir et libérer la propriété d’une section critique. `ThreadModelNoCS`References, classe [CComMultiThreadModelNoCS (CComMultiThreadModelNoCS-class.md).
+`CComMultiThreadModel`définit lui-même trois noms **dactylographes.** `AutoCriticalSection`et `CriticalSection` des cours de référence qui fournissent des méthodes pour obtenir et libérer la propriété d’une section critique. `ThreadModelNoCS`classe de références [CComMultiThreadModelNoCS (ccommultithreadmodelnocs-class.md).
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
-**En-tête:** atlbase. h
+**En-tête:** atlbase.h
 
-##  <a name="autocriticalsection"></a>  CComMultiThreadModel::AutoCriticalSection
+## <a name="ccommultithreadmodelautocriticalsection"></a><a name="autocriticalsection"></a>CComMultiThreadModel::AutoCriticalSection
 
-Lorsque vous `CComMultiThreadModel`utilisez, le nom `AutoCriticalSection` **typedef** fait référence à la classe [CComAutoCriticalSection](ccomautocriticalsection-class.md), qui fournit des méthodes pour obtenir et libérer la propriété d’un objet de section critique.
+Lors `CComMultiThreadModel`de l’utilisation `AutoCriticalSection` , le nom **dactylographié** référence classe [CComAutoCriticalSection](ccomautocriticalsection-class.md), qui fournit des méthodes pour obtenir et libérer la propriété d’un objet de section critique.
 
 ```
 typedef CComAutoCriticalSection AutoCriticalSection;
@@ -75,19 +75,19 @@ typedef CComAutoCriticalSection AutoCriticalSection;
 
 ### <a name="remarks"></a>Notes
 
-[CComSingleThreadModel](ccomsinglethreadmodel-class.md) et [CComMultiThreadModelNoCS](ccommultithreadmodelnocs-class.md) contiennent également des définitions `AutoCriticalSection`pour. Le tableau suivant montre la relation entre la classe de modèle de thread et la classe de section critique référencée par `AutoCriticalSection`:
+[CComSingleThreadModel](ccomsinglethreadmodel-class.md) et [CComMultiThreadModelNoCS](ccommultithreadmodelnocs-class.md) contiennent `AutoCriticalSection`également des définitions pour . Le tableau suivant montre la relation entre la classe de `AutoCriticalSection`modèle de threading et la classe de section critique référencée par :
 
-|Classe définie dans|Classe référencée|
+|Catégorie définie en|Classe référencée|
 |----------------------|----------------------|
 |`CComMultiThreadModel`|`CComCriticalSection`|
 |`CComSingleThreadModel`|`CComFakeCriticalSection`|
 |`CComMultiThreadModelNoCS`|`CComFakeCriticalSection`|
 
-En plus de `AutoCriticalSection`, vous pouvez utiliser le nom typedef [CriticalSection](#criticalsection). Vous ne devez pas `AutoCriticalSection` spécifier dans des objets globaux ou des membres de classe statique si vous souhaitez éliminer le code de démarrage du CRT.
+En plus `AutoCriticalSection`de , vous pouvez utiliser le nom **de tapdef** [CriticalSection](#criticalsection). Vous ne `AutoCriticalSection` devez pas spécifier dans des objets globaux ou des membres de classe statique si vous souhaitez éliminer le code de démarrage CRT.
 
-### <a name="example"></a>Exemples
+### <a name="example"></a>Exemple
 
-Le code suivant est modélisé après [CComObjectRootEx](ccomobjectrootex-class.md)et illustre `AutoCriticalSection` son utilisation dans un environnement de thread.
+Le code suivant est calqué sur [CComObjectRootEx](ccomobjectrootex-class.md), et démontre `AutoCriticalSection` être utilisé dans un environnement de filetage.
 
 ```cpp
 template<class ThreadModel>
@@ -115,25 +115,25 @@ private:
    LONG m_dwRef;
 ```
 
-Les tableaux suivants présentent les résultats des `InternalAddRef` méthodes et `Lock` , en fonction du `ThreadModel` paramètre de modèle et du modèle de thread utilisé par l’application:
+Les tableaux suivants montrent `InternalAddRef` les `Lock` résultats de `ThreadModel` la et des méthodes, en fonction du paramètre du modèle et du modèle de threading utilisé par l’application :
 
-### <a name="threadmodel--ccomobjectthreadmodel"></a>ThreadModel = CComObjectThreadModel
+### <a name="threadmodel--ccomobjectthreadmodel"></a>ThreadModel - CComObjectThreadModel
 
-|Méthode|Thread unique ou cloisonné|Thread libre|
+|Méthode|Threading simple ou appartement|Threading gratuit|
 |------------|-----------------------------------|--------------------|
-|`InternalAddRef`|L’incrément n’est pas thread-safe.|L’incrément est thread-safe.|
-|`Lock`|Ne fait rien. Il n’existe pas de section critique à verrouiller.|La section critique est verrouillée.|
+|`InternalAddRef`|L’incrément n’est pas sans fil.|L’incrément est sans fil.|
+|`Lock`|Ne fait rien; il n’y a pas de section critique à verrouiller.|La section critique est verrouillée.|
 
-### <a name="threadmodel--ccomobjectthreadmodelthreadmodelnocs"></a>ThreadModel = CComObjectThreadModel::ThreadModelNoCS
+### <a name="threadmodel--ccomobjectthreadmodelthreadmodelnocs"></a>ThreadModel - CComObjectThreadModel::ThreadModelNoCS
 
-|Méthode|Thread unique ou cloisonné|Thread libre|
+|Méthode|Threading simple ou appartement|Threading gratuit|
 |------------|-----------------------------------|--------------------|
-|`InternalAddRef`|L’incrément n’est pas thread-safe.|L’incrément est thread-safe.|
-|`Lock`|Ne fait rien. Il n’existe pas de section critique à verrouiller.|Ne fait rien. Il n’existe pas de section critique à verrouiller.|
+|`InternalAddRef`|L’incrément n’est pas sans fil.|L’incrément est sans fil.|
+|`Lock`|Ne fait rien; il n’y a pas de section critique à verrouiller.|Ne fait rien; il n’y a pas de section critique à verrouiller.|
 
-##  <a name="criticalsection"></a>  CComMultiThreadModel::CriticalSection
+## <a name="ccommultithreadmodelcriticalsection"></a><a name="criticalsection"></a>CComMultiThreadModel::CriticalSection
 
-Lorsque vous `CComMultiThreadModel`utilisez, le nom `CriticalSection` **typedef** fait référence à la classe [CComCriticalSection](ccomcriticalsection-class.md), qui fournit des méthodes pour obtenir et libérer la propriété d’un objet de section critique.
+Lors `CComMultiThreadModel`de l’utilisation `CriticalSection` , le nom **dactylographié** fait référence à la classe [CComCriticalSection](ccomcriticalsection-class.md), qui fournit des méthodes pour obtenir et libérer la propriété d’un objet de section critique.
 
 ```
 typedef CComCriticalSection CriticalSection;
@@ -141,23 +141,23 @@ typedef CComCriticalSection CriticalSection;
 
 ### <a name="remarks"></a>Notes
 
-[CComSingleThreadModel](ccomsinglethreadmodel-class.md) et [CComMultiThreadModelNoCS](ccommultithreadmodelnocs-class.md) contiennent également des définitions `CriticalSection`pour. Le tableau suivant montre la relation entre la classe de modèle de thread et la classe de section critique référencée par `CriticalSection`:
+[CComSingleThreadModel](ccomsinglethreadmodel-class.md) et [CComMultiThreadModelNoCS](ccommultithreadmodelnocs-class.md) contiennent `CriticalSection`également des définitions pour . Le tableau suivant montre la relation entre la classe de `CriticalSection`modèle de threading et la classe de section critique référencée par :
 
-|Classe définie dans|Classe référencée|
+|Catégorie définie en|Classe référencée|
 |----------------------|----------------------|
 |`CComMultiThreadModel`|`CComCriticalSection`|
 |`CComSingleThreadModel`|`CComFakeCriticalSection`|
 |`CComMultiThreadModelNoCS`|`CComFakeCriticalSection`|
 
-En plus de `CriticalSection`, vous pouvez utiliser le nom typedef [AutoCriticalSection](#autocriticalsection). Vous ne devez pas `AutoCriticalSection` spécifier dans des objets globaux ou des membres de classe statique si vous souhaitez éliminer le code de démarrage du CRT.
+En plus `CriticalSection`de , vous pouvez utiliser le nom **de tapdef** [AutoCriticalSection](#autocriticalsection). Vous ne `AutoCriticalSection` devez pas spécifier dans des objets globaux ou des membres de classe statique si vous souhaitez éliminer le code de démarrage CRT.
 
-### <a name="example"></a>Exemples
+### <a name="example"></a>Exemple
 
-Consultez [CComMultiThreadModel:: AutoCriticalSection](#autocriticalsection).
+Voir [CComMultiThreadModel:AutoCriticalSection](#autocriticalsection).
 
-##  <a name="decrement"></a>  CComMultiThreadModel::Decrement
+## <a name="ccommultithreadmodeldecrement"></a><a name="decrement"></a>CComMultiThreadModel::Decrement
 
-Cette fonction statique appelle la fonction Win32 [InterlockedDecrement](/windows/win32/api/winnt/nf-winnt-interlockeddecrement), qui décrémente la valeur de la variable vers laquelle pointe *p*.
+Cette fonction statique appelle la fonction Win32 [InterlockedDecrement](/windows/win32/api/winnt/nf-winnt-interlockeddecrement), qui décrément la valeur de la variable pointée par *p*.
 
 ```
 static ULONG WINAPI Decrement(LPLONG p) throw ();
@@ -165,20 +165,20 @@ static ULONG WINAPI Decrement(LPLONG p) throw ();
 
 ### <a name="parameters"></a>Paramètres
 
-*p*<br/>
-dans Pointeur vers la variable à décrémenter.
+*P*<br/>
+[dans] Pointeur sur la variable à décrémenter.
 
 ### <a name="return-value"></a>Valeur de retour
 
-Si le résultat de la décrémentation est 0, `Decrement` retourne 0. Si le résultat de la décrémentation est différent de zéro, la valeur de retour est également différente de zéro, mais peut ne pas être égale au résultat de la décrémentation.
+Si le résultat de la décroissement est de 0, puis `Decrement` retourne 0. Si le résultat de la décroissement n’est paszero, la valeur de rendement est également nonzero mais peut ne pas égaler le résultat de la décroissation.
 
 ### <a name="remarks"></a>Notes
 
-`InterlockedDecrement`empêche plusieurs threads d’utiliser simultanément cette variable.
+`InterlockedDecrement`empêche plus d’un thread d’utiliser simultanément cette variable.
 
-##  <a name="increment"></a>  CComMultiThreadModel::Increment
+## <a name="ccommultithreadmodelincrement"></a><a name="increment"></a>CComMultiThreadModel::Increment
 
-Cette fonction statique appelle la fonction Win32 [InterlockedIncrement](/windows/win32/api/winnt/nf-winnt-interlockedincrement), qui incrémente la valeur de la variable vers laquelle pointe *p*.
+Cette fonction statique appelle la fonction Win32 [InterlockedIncrement](/windows/win32/api/winnt/nf-winnt-interlockedincrement), qui incrémente la valeur de la variable pointée par *p*.
 
 ```
 static ULONG WINAPI Increment(LPLONG p) throw ();
@@ -186,20 +186,20 @@ static ULONG WINAPI Increment(LPLONG p) throw ();
 
 ### <a name="parameters"></a>Paramètres
 
-*p*<br/>
-dans Pointeur vers la variable à incrémenter.
+*P*<br/>
+[dans] Pointeur sur la variable à incrémenter.
 
 ### <a name="return-value"></a>Valeur de retour
 
-Si le résultat de l’incrément est 0, `Increment` retourne 0. Si le résultat de l’incrément est différent de zéro, la valeur de retour est également différente de zéro, mais peut ne pas être égale au résultat de l’incrémentation.
+Si le résultat de l’incrément `Increment` est de 0, puis retourne 0. Si le résultat de l’augmentation n’est paszero, la valeur de retour est également nonzero mais peut ne pas égaler le résultat de l’augmentation.
 
 ### <a name="remarks"></a>Notes
 
-`InterlockedIncrement`empêche plusieurs threads d’utiliser simultanément cette variable.
+`InterlockedIncrement`empêche plus d’un thread d’utiliser simultanément cette variable.
 
-##  <a name="threadmodelnocs"></a>  CComMultiThreadModel::ThreadModelNoCS
+## <a name="ccommultithreadmodelthreadmodelnocs"></a><a name="threadmodelnocs"></a>CComMultiThreadModel::ThreadModelNoCS
 
-Lorsque vous `CComMultiThreadModel`utilisez, le nom `ThreadModelNoCS` typedef fait référence à la classe [CComMultiThreadModelNoCS](ccommultithreadmodelnocs-class.md).
+Lors `CComMultiThreadModel`de l’utilisation `ThreadModelNoCS` , le nom **dactylographier** référence classe [CComMultiThreadModelNoCS](ccommultithreadmodelnocs-class.md).
 
 ```
 typedef CComMultiThreadModelNoCS ThreadModelNoCS;
@@ -207,11 +207,11 @@ typedef CComMultiThreadModelNoCS ThreadModelNoCS;
 
 ### <a name="remarks"></a>Notes
 
-`CComMultiThreadModelNoCS`fournit des méthodes thread-safe pour l’incrémentation et la décrémentation d’une variable; Toutefois, il ne fournit pas de section critique.
+`CComMultiThreadModelNoCS`fournit des méthodes sans fil pour l’incrémentation et la décroissation d’une variable; toutefois, il ne fournit pas de section critique.
 
-[CComSingleThreadModel](ccomsinglethreadmodel-class.md) et `CComMultiThreadModelNoCS` contiennent également des définitions `ThreadModelNoCS`pour. Le tableau suivant montre la relation entre la classe de modèle de thread et la classe référencée `ThreadModelNoCS`par:
+[CComSingleThreadModel](ccomsinglethreadmodel-class.md) `CComMultiThreadModelNoCS` et contiennent également `ThreadModelNoCS`des définitions pour . Le tableau suivant montre la relation entre la classe `ThreadModelNoCS`de modèle de threading et la classe référencée par :
 
-|Classe définie dans|Classe référencée|
+|Catégorie définie en|Classe référencée|
 |----------------------|----------------------|
 |`CComMultiThreadModel`|`CComMultiThreadModelNoCS`|
 |`CComSingleThreadModel`|`CComSingleThreadModel`|
@@ -219,11 +219,11 @@ typedef CComMultiThreadModelNoCS ThreadModelNoCS;
 
 ### <a name="example"></a>Exemple
 
-Consultez [CComMultiThreadModel:: AutoCriticalSection](#autocriticalsection).
+Voir [CComMultiThreadModel:AutoCriticalSection](#autocriticalsection).
 
 ## <a name="see-also"></a>Voir aussi
 
-[CComSingleThreadModel, classe](ccomsinglethreadmodel-class.md)<br/>
-[CComAutoCriticalSection, classe](ccomautocriticalsection-class.md)<br/>
-[CComCriticalSection, classe](ccomcriticalsection-class.md)<br/>
-[Vue d’ensemble de la classe](../atl-class-overview.md)
+[Classe CComSingleThreadModel](ccomsinglethreadmodel-class.md)<br/>
+[Classe CComAutoCriticalSection](ccomautocriticalsection-class.md)<br/>
+[Classe CComCriticalSection](ccomcriticalsection-class.md)<br/>
+[Vue d'ensemble des classes](../atl-class-overview.md)

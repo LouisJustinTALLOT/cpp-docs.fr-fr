@@ -1,10 +1,11 @@
 ---
 title: ceil, ceilf, ceill
-ms.date: 04/05/2018
+ms.date: 4/2/2020
 api_name:
 - ceilf
 - ceil
 - ceill
+- _o_ceil
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -18,6 +19,7 @@ api_location:
 - ucrtbase.dll
 - ntdll.dll
 - api-ms-win-crt-math-l1-1-0.dll
+- api-ms-win-crt-private-l1-1-0
 api_type:
 - DLLExport
 topic_type:
@@ -32,12 +34,12 @@ helpviewer_keywords:
 - ceil function
 - ceilf function
 ms.assetid: f4e5acab-5c8f-4b10-9ae2-9561e6453718
-ms.openlocfilehash: 0be81354c19da646fa96f6eb58fbc7c76eeddb33
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 7567e5758e405235bca13bbae8a18c2d42ccbd3b
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70943187"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81333558"
 ---
 # <a name="ceil-ceilf-ceill"></a>ceil, ceilf, ceill
 
@@ -65,24 +67,26 @@ long double ceill(
 
 ### <a name="parameters"></a>Paramètres
 
-*x*<br/>
+*X*<br/>
 Valeur à virgule flottante.
 
 ## <a name="return-value"></a>Valeur de retour
 
-Les fonctions **ceil** retournent une valeur à virgule flottante qui représente le plus petit entier supérieur ou égal à *x*. Aucun retour d'erreur.
+Les fonctions **de ceil** retournent une valeur flottante-point qui représente le plus petit intégrant qui est plus ou égal à *x.* Aucun retour d'erreur.
 
-|Entrée|Exception SEH|Exception{b> <b}Matherr|
+|Entrée|Exception SEH|Exception\{b\> \<b\}Matherr|
 |-----------|-------------------|-----------------------|
-|± **QNAN**, **IND**|none|**_DOMAIN**|
+|**QNAN**, **IND**|Aucun|**_DOMAIN**|
 
-**ceil** a une implémentation qui utilise SSE2 (streaming SIMD Extensions 2). Pour obtenir des informations sur l’utilisation de l’implémentation SSE2 et sur les restrictions qui s’y rattachent, consultez [_set_SSE2_enable](set-sse2-enable.md).
+**ceil** a une implémentation qui utilise Streaming SIMD Extensions 2 (SSE2). Pour plus d’informations sur l’utilisation de l’implémentation SSE2 et sur les restrictions qui s’y rattachent, consultez [_set_SSE2_enable](set-sse2-enable.md).
 
 ## <a name="remarks"></a>Notes
 
-Étant C++ donné que autorise la surcharge, vous pouvez appeler des surcharges de **ceil** qui acceptent des types **float** ou **long** **double** . Dans un programme C, **ceil** accepte et retourne toujours un **double**.
+Étant donné que le CMD permet la surcharge, vous pouvez appeler des surcharges de **ceil** qui prennent **flotteur** ou **de longs** **types doubles.** Dans un programme C, **ceil** prend toujours et renvoie un **double.**
 
-## <a name="requirements"></a>Configuration requise
+Par défaut, l’état global de cette fonction est étendue à l’application. Pour changer cela, voir [Global State dans le CRT](../global-state.md).
+
+## <a name="requirements"></a>Spécifications
 
 |Routine|En-tête requis|
 |-------------|---------------------|
@@ -90,13 +94,13 @@ Les fonctions **ceil** retournent une valeur à virgule flottante qui représent
 
 Pour plus d'informations sur la compatibilité, voir [Compatibilité](../../c-runtime-library/compatibility.md).
 
-## <a name="example"></a>Exemples
+## <a name="example"></a>Exemple
 
 Consultez l’exemple relatif à [floor](floor-floorf-floorl.md).
 
 ## <a name="see-also"></a>Voir aussi
 
-[Prise en charge de la virgule flottante](../../c-runtime-library/floating-point-support.md)<br/>
+[Soutien à la pointe flottante](../../c-runtime-library/floating-point-support.md)<br/>
 [floor, floorf, floorl](floor-floorf-floorl.md)<br/>
 [fmod, fmodf](fmod-fmodf.md)<br/>
 [round, roundf, roundl](round-roundf-roundl.md)<br/>

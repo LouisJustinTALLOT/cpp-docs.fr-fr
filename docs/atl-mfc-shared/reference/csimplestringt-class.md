@@ -1,5 +1,5 @@
 ---
-title: CSimpleStringT, classe
+title: Classe CSimpleStringT
 ms.date: 10/18/2018
 f1_keywords:
 - CSimpleStringT
@@ -36,16 +36,16 @@ helpviewer_keywords:
 - strings [C++], ATL class
 - CSimpleStringT class
 ms.assetid: 15814fcb-5b8f-4425-a97e-3b61fc9b48d8
-ms.openlocfilehash: c033346b7a687a1c6778ad23e30ee0e73c787ad8
-ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
+ms.openlocfilehash: dce33289699b9e7b7484d1feb6335476f93dee9b
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/16/2020
-ms.locfileid: "79418194"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81317688"
 ---
-# <a name="csimplestringt-class"></a>CSimpleStringT, classe
+# <a name="csimplestringt-class"></a>Classe CSimpleStringT
 
-Cette classe représente un objet `CSimpleStringT`.
+Cette classe `CSimpleStringT` représente un objet.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -57,9 +57,9 @@ class CSimpleStringT
 ### <a name="parameters"></a>Paramètres
 
 *BaseType*<br/>
-Type de caractère de la classe String. Il peut s'agir d'une des méthodes suivantes :
+Le type de personnage de la classe de cordes. Il peut s'agir d'une des méthodes suivantes :
 
-- **char** (pour les chaînes de caractères ANSI).
+- **char** (pour les cordes de caractère ANSI).
 
 - **wchar_t** (pour les chaînes de caractères Unicode).
 
@@ -69,67 +69,67 @@ Type de caractère de la classe String. Il peut s'agir d'une des méthodes suiva
 
 ### <a name="public-typedefs"></a>Typedefs publics
 
-|Name|Description|
+|Nom|Description|
 |----------|-----------------|
-|[CSimpleStringT ::P CXSTR](#pcxstr)|Pointeur vers une chaîne constante.|
-|[CSimpleStringT ::P XSTR](#pxstr)|Pointeur vers une chaîne.|
+|[CSimpleStringT::PCXSTR](#pcxstr)|Un pointeur à une chaîne constante.|
+|[CSimpleStringT::PXSTR](#pxstr)|Un pointeur à une chaîne.|
 
 ### <a name="public-constructors"></a>Constructeurs publics
 
-|Name|Description|
+|Nom|Description|
 |----------|-----------------|
-|[CSimpleStringT::CSimpleStringT](#ctor)|Construit `CSimpleStringT` objets de différentes façons.|
-|[CSimpleStringT :: ~ CSimpleStringT](#dtor)|Destructeur.|
+|[CSimpleStringT::CSimpleStringT](#ctor)|Construit `CSimpleStringT` des objets de différentes manières.|
+|[CSimpleStringT: :CSimpleStringT](#dtor)|Destructeur.|
 
 ### <a name="public-methods"></a>M&#233;thodes publiques
 
-|Name|Description|
+|Nom|Description|
 |----------|-----------------|
-|[CSimpleStringT :: Append](#append)|Ajoute un objet `CSimpleStringT` à un objet `CSimpleStringT` existant.|
-|[CSimpleStringT::AppendChar](#appendchar)|Ajoute un caractère à un objet `CSimpleStringT` existant.|
-|[CSimpleStringT::CopyChars](#copychars)|Copie un ou des caractères dans une autre chaîne.|
-|[CSimpleStringT::CopyCharsOverlapped](#copycharsoverlapped)|Copie un ou des caractères dans une autre chaîne dans laquelle les mémoires tampons se chevauchent.|
-|[CSimpleStringT :: Empty](#empty)|Force une chaîne à avoir une longueur de zéro.|
-|[CSimpleStringT::FreeExtra](#freeextra)|Libère toute mémoire supplémentaire précédemment allouée par l’objet String.|
-|[CSimpleStringT::GetAllocLength](#getalloclength)|Récupère la longueur allouée d’un objet `CSimpleStringT`.|
-|[CSimpleStringT :: GetAt](#getat)|Retourne le caractère à une position donnée.|
-|[CSimpleStringT :: GetBuffer](#getbuffer)|Retourne un pointeur vers les caractères d’un `CSimpleStringT`.|
-|[CSimpleStringT::GetBufferSetLength](#getbuffersetlength)|Retourne un pointeur vers les caractères d’un `CSimpleStringT`, ce qui tronque la longueur spécifiée.|
-|[CSimpleStringT :: GetLength](#getlength)|Retourne le nombre de caractères dans un objet `CSimpleStringT`.|
-|[CSimpleStringT::GetManager](#getmanager)|Récupère le gestionnaire de mémoire de l’objet `CSimpleStringT`.|
-|[CSimpleStringT :: GetString](#getstring)|Récupère la chaîne de caractères|
-|[CSimpleStringT :: IsEmpty](#isempty)|Teste si un objet `CSimpleStringT` ne contient pas de caractères.|
-|[CSimpleStringT::LockBuffer](#lockbuffer)|Désactive le décompte de références et protège la chaîne dans la mémoire tampon.|
-|[CSimpleStringT ::P réalloué](#preallocate)|Alloue une quantité de mémoire spécifique pour la mémoire tampon de caractères.|
-|[CSimpleStringT::ReleaseBuffer](#releasebuffer)|Libère le contrôle de la mémoire tampon retournée par `GetBuffer`.|
-|[CSimpleStringT::ReleaseBufferSetLength](#releasebuffersetlength)|Libère le contrôle de la mémoire tampon retournée par `GetBuffer`.|
-|[CSimpleStringT :: SetAt](#setat)|Définit un caractère à une position donnée.|
-|[CSimpleStringT::SetManager](#setmanager)|Définit le gestionnaire de mémoire d’un objet `CSimpleStringT`.|
-|[CSimpleStringT :: SetString](#setstring)|Définit la chaîne d’un objet `CSimpleStringT`.|
-|[CSimpleStringT :: StringLength](#stringlength)|Retourne le nombre de caractères de la chaîne spécifiée.|
-|[CSimpleStringT :: TRUNCATE](#truncate)|Tronque la chaîne à une longueur spécifiée.|
-|[CSimpleStringT::UnlockBuffer](#unlockbuffer)|Active le décompte de références et libère la chaîne dans la mémoire tampon.|
+|[CSimpleStringT::Append](#append)|Annexe un `CSimpleStringT` objet à `CSimpleStringT` un objet existant.|
+|[CSimpleStringT::AppendChar](#appendchar)|Annexe d’un personnage `CSimpleStringT` à un objet existant.|
+|[CSimpleStringT::CopyChars](#copychars)|Copie d’un personnage ou d’un personnage à une autre chaîne.|
+|[CSimpleStringT::CopyCharsOverlapped](#copycharsoverlapped)|Copie d’un personnage ou d’un personnage à une autre chaîne dans laquelle les tampons se chevauchent.|
+|[CSimpleStringT::Vide](#empty)|Force une corde à avoir une longueur de zéro.|
+|[CSimpleStringT::FreeExtra](#freeextra)|Libère toute mémoire supplémentaire précédemment allouée par l’objet à cordes.|
+|[CSimpleStringT::GetAllocLength](#getalloclength)|Récupère la longueur allouée `CSimpleStringT` d’un objet.|
+|[CSimpleStringT::GetAt](#getat)|Retourne le personnage à une position donnée.|
+|[CSimpleStringT::GetBuffer](#getbuffer)|Retourne un pointeur aux `CSimpleStringT`personnages dans un .|
+|[CSimpleStringT::GetBufferSetLength](#getbuffersetlength)|Retourne un pointeur aux `CSimpleStringT`caractères dans un , tronquant à la longueur spécifiée.|
+|[CSimpleStringT::GetLength](#getlength)|Retourne le nombre de `CSimpleStringT` caractères dans un objet.|
+|[CSimpleStringT::GetManager](#getmanager)|Récupère le responsable de `CSimpleStringT` la mémoire de l’objet.|
+|[CSimpleStringT::GetString](#getstring)|Récupère la chaîne de caractères|
+|[CSimpleStringT::IsEmpty](#isempty)|Teste `CSimpleStringT` si un objet ne contient pas de caractères.|
+|[CSimpleStringT::LockBuffer](#lockbuffer)|Désactive le comptage des références et protège la chaîne dans le tampon.|
+|[CSimpleStringT::Preallocate](#preallocate)|Alloue une quantité spécifique de mémoire pour le tampon de caractère.|
+|[CSimpleStringT::ReleaseBuffer](#releasebuffer)|Communiqués de contrôle `GetBuffer`de la mémoire tampon retournée par .|
+|[CSimpleStringT::ReleaseBufferSetLength](#releasebuffersetlength)|Communiqués de contrôle `GetBuffer`de la mémoire tampon retournée par .|
+|[CSimpleStringT::SetAt](#setat)|Définit un personnage à une position donnée.|
+|[CSimpleStringT::SetManager](#setmanager)|Définit le gestionnaire `CSimpleStringT` de mémoire d’un objet.|
+|[CSimpleStringT::SetString](#setstring)|Définit la chaîne `CSimpleStringT` d’un objet.|
+|[CSimpleStringT::StringLength](#stringlength)|Retourne le nombre de caractères dans la chaîne spécifiée.|
+|[CSimpleStringT::Truncate](#truncate)|Tronque la corde à une longueur spécifiée.|
+|[CSimpleStringT::UnlockBuffer](#unlockbuffer)|Permet le comptage des références et libère la chaîne dans le tampon.|
 
-### <a name="public-operators"></a>Opérateurs publics
+### <a name="public-operators"></a>Op&#233;rateurs publics
 
-|Name|Description|
+|Nom|Description|
 |----------|-----------------|
-|[CSimpleStringT :: Operator PCXSTR](#operator_pcxstr)|Accède directement aux caractères stockés dans un objet `CSimpleStringT` sous la forme d’une chaîne de style C.|
-|[CSimpleStringT :: Operator\[\]](#operator_at)|Retourne le caractère à une position donnée : la substitution d’opérateur pour `GetAt`.|
-|[CSimpleStringT :: Operator + =](#operator_add_eq)|Concatène une nouvelle chaîne à la fin d’une chaîne existante.|
-|[CSimpleStringT :: Operator =](#operator_eq)|Assigne une nouvelle valeur à un objet `CSimpleStringT`.|
+|[CSimpleStringT::opérateur PCXSTR](#operator_pcxstr)|Accéde directement aux `CSimpleStringT` caractères stockés dans un objet sous forme de chaîne de style C.|
+|[CSimpleStringT::operator\[\]](#operator_at)|Retourne le personnage à une position `GetAt`donnée — remplacement de l’opérateur pour .|
+|[CSimpleStringT::opérateur](#operator_add_eq)|Concatenates une nouvelle chaîne à la fin d’une chaîne existante.|
+|[CSimpleStringT::opérateur](#operator_eq)|Attribue une nouvelle valeur `CSimpleStringT` à un objet.|
 
 ### <a name="remarks"></a>Notes
 
-`CSimpleStringT` est la classe de base pour les différentes classes de chaîne prises C++en charge par Visual. Il offre une prise en charge minimale de la gestion de la mémoire de l’objet String et de la manipulation de mémoire tampon de base. Pour obtenir des objets String plus avancés, consultez la [classe CStringT](../../atl-mfc-shared/reference/cstringt-class.md).
+`CSimpleStringT`est la classe de base pour les différentes classes de cordes soutenues par Visual C. Il fournit un soutien minimal pour la gestion de la mémoire de l’objet de chaîne et la manipulation de base de mémoire. Pour des objets à cordes plus avancés, voir [classe CStringT](../../atl-mfc-shared/reference/cstringt-class.md).
 
 ### <a name="requirements"></a>Spécifications
 
-**En-tête :** atlsimpstr. h
+**En-tête:** atlsimpstr.h
 
-## <a name="append"></a>CSimpleStringT :: Append
+## <a name="csimplestringtappend"></a><a name="append"></a>CSimpleStringT::Append
 
-Ajoute un objet `CSimpleStringT` à un objet `CSimpleStringT` existant.
+Annexe un `CSimpleStringT` objet à `CSimpleStringT` un objet existant.
 
 ### <a name="syntax"></a>Syntaxe
 
@@ -141,18 +141,18 @@ void Append(PCXSTR pszSrc);
 
 #### <a name="parameters"></a>Paramètres
 
-*strSrc*<br/>
-Objet `CSimpleStringT` à ajouter.
+*strSrc (strSrc)*<br/>
+L’objet `CSimpleStringT` à annexer.
 
 *pszSrc*<br/>
-Pointeur vers une chaîne contenant les caractères à ajouter.
+Un pointeur à une chaîne contenant les caractères à annexer.
 
-*nLength*<br/>
+*nLength (en)*<br/>
 Nombre de caractères à ajouter.
 
 ### <a name="remarks"></a>Notes
 
-Appelez cette méthode pour ajouter un objet `CSimpleStringT` existant à un autre objet `CSimpleStringT`.
+Appelez cette méthode pour `CSimpleStringT` ajouter un `CSimpleStringT` objet existant à un autre objet.
 
 ### <a name="example"></a>Exemple
 
@@ -166,9 +166,9 @@ str1.Append(str2);
 ASSERT(_tcscmp(str1, _T("Soccer is an elegant game")) == 0);
 ```
 
-##  <a name="appendchar"></a>CSimpleStringT::AppendChar
+## <a name="csimplestringtappendchar"></a><a name="appendchar"></a>CSimpleStringT::AppendChar
 
-Ajoute un caractère à un objet `CSimpleStringT` existant.
+Annexe d’un personnage `CSimpleStringT` à un objet existant.
 
 ### <a name="syntax"></a>Syntaxe
 
@@ -178,16 +178,16 @@ void AppendChar(XCHAR ch);
 
 #### <a name="parameters"></a>Paramètres
 
-*cascade*<br/>
-Caractère à ajouter
+*Ch*<br/>
+Le personnage à annexer
 
 ### <a name="remarks"></a>Notes
 
-Appelez cette fonction pour ajouter le caractère spécifié à la fin d’un objet `CSimpleStringT` existant.
+Appelez cette fonction pour ajouter le caractère spécifié `CSimpleStringT` à la fin d’un objet existant.
 
-##  <a name="copychars"></a>CSimpleStringT::CopyChars
+## <a name="csimplestringtcopychars"></a><a name="copychars"></a>CSimpleStringT::CopyChars
 
-Copie un ou des caractères dans un objet `CSimpleStringT`.
+Copie d’un personnage `CSimpleStringT` ou d’un personnage à un objet.
 
 ### <a name="syntax"></a>Syntaxe
 
@@ -201,17 +201,17 @@ static void CopyChars(
 #### <a name="parameters"></a>Paramètres
 
 *pchDest*<br/>
-Pointeur vers une chaîne de caractères.
+Un pointeur à une chaîne de caractère.
 
-*pchSrc*<br/>
-Pointeur vers une chaîne contenant les caractères à copier.
+*pchSrc (en)*<br/>
+Un pointeur à une chaîne contenant les caractères à copier.
 
-*nChars*<br/>
-Nombre de caractères *pchSrc* à copier.
+*nChars (nChars)*<br/>
+Le nombre de *caractères pchSrc* à copier.
 
 ### <a name="remarks"></a>Notes
 
-Appelez cette méthode pour copier les caractères de *pchSrc* dans la chaîne *pchDest* .
+Appelez cette méthode pour copier les caractères de *pchSrc* à la corde la *plus pchD.*
 
 ### <a name="example"></a>Exemple
 
@@ -225,9 +225,9 @@ str.CopyChars(str.GetBuffer(), pszSrc, 12);
 _tprintf_s(_T("%s\n"), str);
 ```
 
-##  <a name="copycharsoverlapped"></a>CSimpleStringT::CopyCharsOverlapped
+## <a name="csimplestringtcopycharsoverlapped"></a><a name="copycharsoverlapped"></a>CSimpleStringT::CopyCharsOverlapped
 
-Copie un ou des caractères dans un objet `CSimpleStringT`.
+Copie d’un personnage `CSimpleStringT` ou d’un personnage à un objet.
 
 ### <a name="syntax"></a>Syntaxe
 
@@ -241,23 +241,23 @@ static void CopyCharsOverlapped(
 #### <a name="parameters"></a>Paramètres
 
 *pchDest*<br/>
-Pointeur vers une chaîne de caractères.
+Un pointeur à une chaîne de caractère.
 
-*pchSrc*<br/>
-Pointeur vers une chaîne contenant les caractères à copier.
+*pchSrc (en)*<br/>
+Un pointeur à une chaîne contenant les caractères à copier.
 
-*nChars*<br/>
-Nombre de caractères *pchSrc* à copier.
+*nChars (nChars)*<br/>
+Le nombre de *caractères pchSrc* à copier.
 
 ### <a name="remarks"></a>Notes
 
-Appelez cette méthode pour copier les caractères de *pchSrc* dans la chaîne *pchDest* . Contrairement à `CopyChars`, `CopyCharsOverlapped` fournit une méthode sécurisée pour copier à partir de mémoires tampons de caractères qui peuvent être superposées.
+Appelez cette méthode pour copier les caractères de *pchSrc* à la corde la *plus pchD.* Contrairement `CopyChars` `CopyCharsOverlapped` à , fournit une méthode sûre pour copier à partir de tampons de caractère qui pourraient être superposés.
 
 ### <a name="example"></a>Exemple
 
-Consultez l’exemple pour [CSimpleStringT :: CopyChars](#copychars)ou le code source pour `CSimpleStringT::SetString` (situé dans atlsimpstr. h).
+Voir l’exemple pour [CSimpleStringT::CopyChars](#copychars), `CSimpleStringT::SetString` ou le code source pour (situé dans atlsimpstr.h).
 
-##  <a name="ctor"></a>CSimpleStringT::CSimpleStringT
+## <a name="csimplestringtcsimplestringt"></a><a name="ctor"></a>CSimpleStringT::CSimpleStringT
 
 Construit un objet `CSimpleStringT`.
 
@@ -272,28 +272,28 @@ explicit CSimpleStringT(IAtlStringMgr* pStringMgr) throw();
 
 #### <a name="parameters"></a>Paramètres
 
-*strSrc*<br/>
-Objet `CSimpleStringT` existant à copier dans cet objet `CSimpleStringT`.
+*strSrc (strSrc)*<br/>
+Un `CSimpleStringT` objet existant à copier `CSimpleStringT` dans cet objet.
 
-*pchSrc*<br/>
-Pointeur vers un tableau de caractères de longueur *nLength*, non null terminé.
+*pchSrc (en)*<br/>
+Un pointeur à un tableau de caractères de longueur *nLength*, pas non annulé terminé.
 
 *pszSrc*<br/>
-Chaîne terminée par le caractère null à copier dans cet objet `CSimpleStringT`.
+Une corde à résilier `CSimpleStringT` nulle à copier dans cet objet.
 
-*nLength*<br/>
-Nombre de caractères dans `pch`.
+*nLength (en)*<br/>
+Un décompte du nombre `pch`de caractères dans .
 
 *pStringMgr*<br/>
-Pointeur vers le gestionnaire de mémoire de l’objet `CSimpleStringT`. Pour plus d’informations sur la `IAtlStringMgr` et la gestion de la mémoire pour `CSimpleStringT`, consultez Gestion de la [mémoire et CStringT](../memory-management-with-cstringt.md).
+Un pointeur pour le `CSimpleStringT` gestionnaire de mémoire de l’objet. Pour plus `IAtlStringMgr` d’informations `CSimpleStringT`sur et la gestion de la mémoire pour , voir [Memory Management et CStringT](../memory-management-with-cstringt.md).
 
 ### <a name="remarks"></a>Notes
 
-Construisez un nouvel objet `CSimpleStringT`. Étant donné que les constructeurs copient les données d’entrée dans le nouveau stockage alloué, des exceptions de mémoire peuvent se produire.
+Construire un `CSimpleStringT` nouvel objet. Étant donné que les constructeurs copient les données d’entrée dans le nouveau stockage alloué, des exceptions de mémoire peuvent en résulter.
 
 ### <a name="example"></a>Exemple
 
-L’exemple suivant illustre l’utilisation de `CSimpleStringT::CSimpleStringT` à l’aide de la `CSimpleString`**typedef** ATL. `CSimpleString` est une spécialisation couramment utilisée du modèle de classe `CSimpleStringT`.
+L’exemple suivant montre `CSimpleStringT::CSimpleStringT` l’utilisation de l’utilisation de l’ATL **typéef** `CSimpleString`. `CSimpleString`est une spécialisation couramment utilisée `CSimpleStringT`du modèle de classe .
 
 ```cpp
 CSimpleString s1(pMgr);
@@ -310,9 +310,9 @@ CSimpleString s5(_T("xxxxxx"), 6, pMgr);
 // s5 = "xxxxxx"
 ```
 
-##  <a name="empty"></a>CSimpleStringT :: Empty
+## <a name="csimplestringtempty"></a><a name="empty"></a>CSimpleStringT::Vide
 
-Convertit cet objet `CSimpleStringT` une chaîne vide et libère la mémoire selon les besoins.
+Fait `CSimpleStringT` de cet objet une ficelle vide et libère la mémoire au besoin.
 
 ### <a name="syntax"></a>Syntaxe
 
@@ -322,7 +322,7 @@ void Empty() throw();
 
 ### <a name="remarks"></a>Notes
 
-Pour plus d’informations, consultez [Strings : nettoyage des exceptions CString](../cstring-exception-cleanup.md).
+Pour plus d’informations, voir [Strings: CString Exception Cleanup](../cstring-exception-cleanup.md).
 
 ### <a name="example"></a>Exemple
 
@@ -333,9 +333,9 @@ CSimpleString s(pMgr);
 ASSERT(s.IsEmpty());
 ```
 
-##  <a name="freeextra"></a>CSimpleStringT::FreeExtra
+## <a name="csimplestringtfreeextra"></a><a name="freeextra"></a>CSimpleStringT::FreeExtra
 
-Libère toute mémoire supplémentaire précédemment allouée par la chaîne, mais qui n’est plus nécessaire.
+Libère toute mémoire supplémentaire précédemment allouée par la chaîne mais n’est plus nécessaire.
 
 ### <a name="syntax"></a>Syntaxe
 
@@ -345,7 +345,7 @@ void FreeExtra();
 
 ### <a name="remarks"></a>Notes
 
-Cela doit réduire la surcharge de mémoire consommée par l’objet String. La méthode réaffecte la mémoire tampon à la longueur exacte retournée par [GetLength](#getlength).
+Cela devrait réduire la mémoire au-dessus consommée par l’objet de chaîne. La méthode réaffecte le tampon à la longueur exacte retournée par [GetLength](#getlength).
 
 ### <a name="example"></a>Exemple
 
@@ -376,7 +376,7 @@ _tprintf_s(_T("Alloc length is %d, String length is %d\n"),
 
 ### <a name="remarks"></a>Notes
 
-La sortie de cet exemple est la suivante :
+La sortie de cet exemple est la suivante :
 
 ```Output
 Alloc length is 1031, String length is 1024
@@ -384,9 +384,9 @@ Alloc length is 1031, String length is 15
 Alloc length is 15, String length is 15
 ```
 
-##  <a name="getalloclength"></a>CSimpleStringT::GetAllocLength
+## <a name="csimplestringtgetalloclength"></a><a name="getalloclength"></a>CSimpleStringT::GetAllocLength
 
-Récupère la longueur allouée d’un objet `CSimpleStringT`.
+Récupère la longueur allouée `CSimpleStringT` d’un objet.
 
 ### <a name="syntax"></a>Syntaxe
 
@@ -396,15 +396,15 @@ int GetAllocLength() const throw();
 
 ### <a name="return-value"></a>Valeur de retour
 
-Nombre de caractères alloués pour cet objet.
+Le nombre de caractères alloués à cet objet.
 
 ### <a name="remarks"></a>Notes
 
-Appelez cette méthode pour déterminer le nombre de caractères alloués pour cet objet `CSimpleStringT`. Pour obtenir un exemple d’appel de cette fonction, consultez [FreeExtra](#freeextra) .
+Appelez cette méthode pour déterminer le nombre `CSimpleStringT` de caractères alloués à cet objet. Voir [FreeExtra](#freeextra) par exemple d’appeler cette fonction.
 
-##  <a name="getat"></a>CSimpleStringT :: GetAt
+## <a name="csimplestringtgetat"></a><a name="getat"></a>CSimpleStringT::GetAt
 
-Retourne un caractère à partir d’un objet `CSimpleStringT`.
+Renvoie un `CSimpleStringT` personnage d’un objet.
 
 ### <a name="syntax"></a>Syntaxe
 
@@ -414,29 +414,29 @@ XCHAR GetAt(int iChar) const;
 
 #### <a name="parameters"></a>Paramètres
 
-*iChar*<br/>
-Index de base zéro du caractère dans l’objet `CSimpleStringT`. Le paramètre *iChar* doit être supérieur ou égal à 0 et inférieur à la valeur retournée par [GetLength](#getlength). Dans le cas contraire, `GetAt` générera une exception.
+*iChar (en)*<br/>
+Index zéro du personnage de `CSimpleStringT` l’objet. Le paramètre *iChar* doit être supérieur ou égal à 0 et inférieur à la valeur retournée par [GetLength](#getlength). Sinon, `GetAt` générera une exception.
 
 ### <a name="return-value"></a>Valeur de retour
 
-`XCHAR` qui contient le caractère à la position spécifiée dans la chaîne.
+Un `XCHAR` qui contient le caractère à la position spécifiée dans la chaîne.
 
 ### <a name="remarks"></a>Notes
 
-Appelez cette méthode pour retourner le caractère unique spécifié par *iChar*. L’opérateur d’indice surchargé ( **[]** ) est un alias commode pour `GetAt`. La marque de fin null est adressable sans générer d’exception à l’aide de `GetAt`. Toutefois, il n’est pas compté par `GetLength`, et la valeur retournée est 0.
+Appelez cette méthode pour retourner le seul personnage spécifié par *iChar*. Le sous-scriptum surchargé (**[]**) `GetAt`opérateur est un alias pratique pour . Le terminateur nul est adressable `GetAt`sans générer une exception en utilisant . Cependant, il n’est pas compté par `GetLength`, et la valeur retournée est de 0.
 
 ### <a name="example"></a>Exemple
 
-L’exemple suivant montre comment utiliser `CSimpleStringT::GetAt`.
+L’exemple suivant montre `CSimpleStringT::GetAt`comment utiliser .
 
 ```cpp
 CSimpleString s(_T("abcdef"), pMgr);
 ASSERT(s.GetAt(2) == _T('c'));
 ```
 
-##  <a name="getbuffer"></a>CSimpleStringT :: GetBuffer
+## <a name="csimplestringtgetbuffer"></a><a name="getbuffer"></a>CSimpleStringT::GetBuffer
 
-Retourne un pointeur vers la mémoire tampon de caractères interne pour l’objet `CSimpleStringT`.
+Retourne un pointeur au tampon `CSimpleStringT` de caractère interne pour l’objet.
 
 ### <a name="syntax"></a>Syntaxe
 
@@ -448,27 +448,27 @@ PXSTR GetBuffer();
 #### <a name="parameters"></a>Paramètres
 
 *nMinBufferLength*<br/>
-Nombre minimal de caractères que la mémoire tampon de caractères peut contenir. Cette valeur n’inclut pas d’espace pour une marque de fin null.
+Le nombre minimum de caractères que le tampon de caractère peut contenir. Cette valeur n’inclut pas l’espace pour un terminateur nul.
 
-Si la valeur de *nMinBufferLength* est supérieure à la longueur de la mémoire tampon actuelle, `GetBuffer` détruit la mémoire tampon actuelle, la remplace par une mémoire tampon de la taille demandée et réinitialise le nombre de références de l’objet à zéro. Si vous avez précédemment appelé [LockBuffer](#lockbuffer) sur cette mémoire tampon, vous perdez le verrouillage de la mémoire tampon.
+Si *nMinBufferLength* est plus grand que `GetBuffer` la longueur du tampon actuel, détruit le tampon actuel, le remplace par un tampon de la taille demandée, et réinitialise le nombre de références d’objet à zéro. Si vous avez déjà appelé [LockBuffer](#lockbuffer) sur ce tampon, vous perdez le verrou tampon.
 
 ### <a name="return-value"></a>Valeur de retour
 
-Pointeur de `PXSTR` vers la mémoire tampon de caractères (se terminant par null) de l’objet.
+Un `PXSTR` pointeur sur le tampon de caractère de l’objet (non terminé).
 
 ### <a name="remarks"></a>Notes
 
-Appelez cette méthode pour retourner le contenu de la mémoire tampon de l’objet `CSimpleStringT`. La `PXSTR` retournée n’est pas une constante et autorise donc la modification directe du contenu `CSimpleStringT`.
+Appelez cette méthode pour retourner `CSimpleStringT` le contenu tampon de l’objet. Le `PXSTR` retour n’est pas une `CSimpleStringT` constante et permet donc une modification directe du contenu.
 
-Si vous utilisez le pointeur retourné par `GetBuffer` pour modifier le contenu de la chaîne, vous devez appeler [ReleaseBuffer](#releasebuffer) avant d’utiliser d’autres méthodes membres `CSimpleStringT`.
+Si vous utilisez le `GetBuffer` pointeur retourné pour modifier le contenu de la `CSimpleStringT` chaîne, vous devez appeler [ReleaseBuffer](#releasebuffer) avant d’utiliser d’autres méthodes de membre.
 
-L’adresse renvoyée par `GetBuffer` peut ne pas être valide après l’appel à `ReleaseBuffer`, car des opérations de `CSimpleStringT` supplémentaires peuvent entraîner la réallocation de la mémoire tampon de `CSimpleStringT`. La mémoire tampon n’est pas réallouée si vous ne modifiez pas la longueur de la `CSimpleStringT`.
+L’adresse `GetBuffer` retournée par peut ne `ReleaseBuffer` pas `CSimpleStringT` être valide `CSimpleStringT` après l’appel à parce que les opérations supplémentaires peuvent causer le tampon d’être réaffecté. Le tampon n’est pas réaffecté si `CSimpleStringT`vous ne modifiez pas la longueur de la .
 
-La mémoire tampon est automatiquement libérée lorsque l’objet `CSimpleStringT` est détruit.
+La mémoire tampon est `CSimpleStringT` automatiquement libérée lorsque l’objet est détruit.
 
-Si vous assurez le suivi de la longueur de chaîne vous-même, vous ne devez pas ajouter le caractère null de fin. Toutefois, vous devez spécifier la longueur de chaîne finale lorsque vous libérez la mémoire tampon avec `ReleaseBuffer`. Si vous ajoutez un caractère null de fin, vous devez passer-1 (valeur par défaut) pour la longueur. `ReleaseBuffer` détermine ensuite la longueur de la mémoire tampon.
+Si vous gardez une trace de la longueur de la chaîne vous-même, vous ne devriez pas ajouter le caractère nul de fin. Toutefois, vous devez spécifier la longueur `ReleaseBuffer`finale de la chaîne lorsque vous relâchez le tampon avec . Si vous n’appendez pas un caractère nul de résiliation, vous devez passer -1 (la valeur par défaut) pour la longueur. `ReleaseBuffer`détermine ensuite la longueur du tampon.
 
-Si la mémoire est insuffisante pour satisfaire la demande `GetBuffer`, cette méthode lève une CMemoryException *.
+S’il n’y `GetBuffer` a pas suffisamment de mémoire pour satisfaire la demande, cette méthode jette un CMemoryExceptionMD.
 
 ### <a name="example"></a>Exemple
 
@@ -483,9 +483,9 @@ ASSERT(_tcscmp(s, _T("Hello")) == 0);
 s.ReleaseBuffer();
 ```
 
-##  <a name="getbuffersetlength"></a>CSimpleStringT::GetBufferSetLength
+## <a name="csimplestringtgetbuffersetlength"></a><a name="getbuffersetlength"></a>CSimpleStringT::GetBufferSetLength
 
-Retourne un pointeur vers la mémoire tampon de caractères interne pour l’objet `CSimpleStringT`, en tronquant ou en augmentant sa longueur si nécessaire pour correspondre exactement à la longueur spécifiée dans *nLength*.
+Retourne un pointeur au tampon `CSimpleStringT` de caractère interne pour l’objet, tronquant ou augmentant sa longueur si nécessaire pour correspondre exactement à la longueur spécifiée dans *nLength*.
 
 ### <a name="syntax"></a>Syntaxe
 
@@ -495,32 +495,32 @@ PXSTR GetBufferSetLength(int nLength);
 
 #### <a name="parameters"></a>Paramètres
 
-*nLength*<br/>
-Taille exacte de la mémoire tampon de caractères `CSimpleStringT` en caractères.
+*nLength (en)*<br/>
+La taille exacte `CSimpleStringT` du tampon de caractère dans les caractères.
 
 ### <a name="return-value"></a>Valeur de retour
 
-Pointeur de `PXSTR` vers la mémoire tampon de caractères (se terminant par null) de l’objet.
+Un `PXSTR` pointeur sur le tampon de caractère de l’objet (non terminé).
 
 ### <a name="remarks"></a>Notes
 
-Appelez cette méthode pour récupérer une longueur spécifiée de la mémoire tampon interne de l’objet `CSimpleStringT`. Le pointeur de `PXSTR` retourné n’est pas **const** et permet donc la modification directe du contenu `CSimpleStringT`.
+Appelez cette méthode pour récupérer une longueur `CSimpleStringT` spécifiée du tampon interne de l’objet. Le `PXSTR` pointeur retourné **n’est** pas `CSimpleStringT` const et permet ainsi la modification directe du contenu.
 
-Si vous utilisez le pointeur retourné par [GetBufferSetLength](#getbuffersetlength) pour modifier le contenu de la chaîne, appelez `ReleaseBuffer` pour mettre à jour l’état interne de `CsimpleStringT` avant d’utiliser d’autres méthodes de `CSimpleStringT`.
+Si vous utilisez le pointeur retourné par [GetBufferSetLength](#getbuffersetlength) pour modifier le contenu de la chaîne, appelez `ReleaseBuffer` pour mettre à jour l’état interne avant d’utiliser `CsimpleStringT` d’autres `CSimpleStringT` méthodes.
 
-L’adresse renvoyée par `GetBufferSetLength` peut ne pas être valide après l’appel à `ReleaseBuffer`, car des opérations de `CSimpleStringT` supplémentaires peuvent entraîner la réallocation de la mémoire tampon de `CSimpleStringT`. La mémoire tampon n’est pas réassignée si vous ne modifiez pas la longueur de la `CSimpleStringT`.
+L’adresse `GetBufferSetLength` retournée par peut ne `ReleaseBuffer` pas `CSimpleStringT` être valide `CSimpleStringT` après l’appel à parce que les opérations supplémentaires peuvent causer le tampon d’être réaffecté. Le tampon n’est pas réaffecté si `CSimpleStringT`vous ne modifiez pas la longueur de la .
 
-La mémoire tampon est automatiquement libérée lorsque l’objet `CSimpleStringT` est détruit.
+La mémoire tampon est `CSimpleStringT` automatiquement libérée lorsque l’objet est détruit.
 
-Si vous assurez le suivi de la longueur de chaîne vous-même, n’ajoutez pas le caractère null de fin. Vous devez spécifier la longueur de chaîne finale lorsque vous libérez la mémoire tampon à l’aide de `ReleaseBuffer`. Si vous ajoutez un caractère null de fin lorsque vous appelez `ReleaseBuffer`, pass-1 (valeur par défaut) pour la longueur à `ReleaseBuffer`, et `ReleaseBuffer` exécutera une `strlen` sur la mémoire tampon pour déterminer sa longueur.
+Si vous gardez une trace de la longueur de la corde vous-même, n’appendicez pas le caractère nul de fin. Vous devez spécifier la longueur finale `ReleaseBuffer`de la chaîne lorsque vous relâchez le tampon en utilisant . Si vous n’appendez un caractère `ReleaseBuffer`nul de résiliation lorsque vous appelez, passez -1 (la valeur par défaut) pour la longueur à `ReleaseBuffer`, et `ReleaseBuffer` effectuera un `strlen` sur le tampon pour déterminer sa longueur.
 
-Pour plus d’informations sur le décompte de références, consultez les articles suivants :
+Pour plus d’informations sur le comptage des références, voir les articles suivants :
 
-- [Gestion des durées de vie des objets par le biais du décompte de références](/windows/win32/com/managing-object-lifetimes-through-reference-counting) dans la SDK Windows.
+- [Gérer les durées de vie des objets par](/windows/win32/com/managing-object-lifetimes-through-reference-counting) le comptage de référence dans le SDK Windows.
 
-- [Implémentation du décompte de références](/windows/win32/com/implementing-reference-counting) dans la SDK Windows.
+- [Mise en œuvre du comptage des références](/windows/win32/com/implementing-reference-counting) dans le SDK Windows.
 
-- [Règles de gestion des décomptes de références](/windows/win32/com/rules-for-managing-reference-counts) dans le SDK Windows.
+- [Règles de gestion des comptes de référence](/windows/win32/com/rules-for-managing-reference-counts) dans le SDK Windows.
 
 ### <a name="example"></a>Exemple
 
@@ -540,9 +540,9 @@ str += _T(" soccer is best!");
 ASSERT(_tcscmp(str, _T("Cup soccer is best!")) == 0);
 ```
 
-##  <a name="getlength"></a>CSimpleStringT :: GetLength
+## <a name="csimplestringtgetlength"></a><a name="getlength"></a>CSimpleStringT::GetLength
 
-Retourne le nombre de caractères dans l’objet `CSimpleStringT`.
+Retourne le nombre de `CSimpleStringT` caractères dans l’objet.
 
 ### <a name="syntax"></a>Syntaxe
 
@@ -552,17 +552,17 @@ int GetLength() const throw();
 
 ### <a name="return-value"></a>Valeur de retour
 
-Nombre de caractères dans la chaîne.
+Un compte des personnages de la chaîne.
 
 ### <a name="remarks"></a>Notes
 
-Appelez cette méthode pour retourner le nombre de caractères dans l’objet. Le nombre n’inclut pas de marque de fin null.
+Appelez cette méthode pour retourner le nombre de caractères dans l’objet. Le décompte n’inclut pas un terminateur nul.
 
-Pour les jeux de caractères multioctets (MBCS), `GetLength` compte chaque caractère 8 bits ; autrement dit, un octet de tête et de fin dans un caractère multioctet est compté comme deux octets. Pour obtenir un exemple d’appel de cette fonction, consultez [FreeExtra](#freeextra) .
+Pour les ensembles de caractères `GetLength` multioctets (MBCS), compte chaque caractère 8 bits; c’est-à-dire qu’un octet de plomb et de sentier dans un caractère multioctets est compté comme deux octets. Voir [FreeExtra](#freeextra) par exemple d’appeler cette fonction.
 
-##  <a name="getmanager"></a>CSimpleStringT::GetManager
+## <a name="csimplestringtgetmanager"></a><a name="getmanager"></a>CSimpleStringT::GetManager
 
-Récupère le gestionnaire de mémoire de l’objet `CSimpleStringT`.
+Récupère le responsable de `CSimpleStringT` la mémoire de l’objet.
 
 ### <a name="syntax"></a>Syntaxe
 
@@ -572,13 +572,13 @@ IAtlStringMgr* GetManager() const throw();
 
 ### <a name="return-value"></a>Valeur de retour
 
-Pointeur vers le gestionnaire de mémoire pour l’objet `CSimpleStringT`.
+Un pointeur pour le `CSimpleStringT` gestionnaire de mémoire pour l’objet.
 
 ### <a name="remarks"></a>Notes
 
-Appelez cette méthode pour récupérer le gestionnaire de mémoire utilisé par l’objet `CSimpleStringT`. Pour plus d’informations sur les gestionnaires de mémoire et les objets String, consultez Gestion de la [mémoire et CStringT](../memory-management-with-cstringt.md).
+Appelez cette méthode pour récupérer le `CSimpleStringT` gestionnaire de mémoire utilisé par l’objet. Pour plus d’informations sur les gestionnaires de mémoire et les objets à chaîne, voir [Memory Management et CStringT](../memory-management-with-cstringt.md).
 
-##  <a name="getstring"></a>CSimpleStringT :: GetString
+## <a name="csimplestringtgetstring"></a><a name="getstring"></a>CSimpleStringT::GetString
 
 Récupère la chaîne de caractères.
 
@@ -590,14 +590,14 @@ PCXSTR GetString() const throw();
 
 ### <a name="return-value"></a>Valeur de retour
 
-Pointeur vers une chaîne de caractères se terminant par null.
+Un pointeur à une chaîne de caractères non terminée.
 
 ### <a name="remarks"></a>Notes
 
-Appelez cette méthode pour récupérer la chaîne de caractères associée à l’objet `CSimpleStringT`.
+Appelez cette méthode pour récupérer la `CSimpleStringT` chaîne de caractères associée à l’objet.
 
 > [!NOTE]
->  Le pointeur `PCXSTR` retourné est **const** et n’autorise pas la modification directe du contenu `CSimpleStringT`.
+> Le `PCXSTR` pointeur retourné est **const** et `CSimpleStringT` ne permet pas la modification directe du contenu.
 
 ### <a name="example"></a>Exemple
 
@@ -609,9 +609,9 @@ str += _T("Cup soccer is best!");
 _tprintf_s(_T("%s"), str.GetString());
 ```
 
-##  <a name="isempty"></a>CSimpleStringT :: IsEmpty
+## <a name="csimplestringtisempty"></a><a name="isempty"></a>CSimpleStringT::IsEmpty
 
-Teste un objet `CSimpleStringT` pour la condition vide.
+Teste `CSimpleStringT` un objet pour l’état vide.
 
 ### <a name="syntax"></a>Syntaxe
 
@@ -621,7 +621,7 @@ bool IsEmpty() const throw();
 
 ### <a name="return-value"></a>Valeur de retour
 
-Retourne la valeur TRUE si l’objet `CSimpleStringT` a une longueur de 0 ; Sinon, FALSe.
+Retourne VRAI `CSimpleStringT` si l’objet a 0 longueur; autrement FALSE.
 
 ### <a name="remarks"></a>Notes
 
@@ -636,9 +636,9 @@ CSimpleString s(pMgr);
 ASSERT(s.IsEmpty());
 ```
 
-##  <a name="lockbuffer"></a>CSimpleStringT::LockBuffer
+## <a name="csimplestringtlockbuffer"></a><a name="lockbuffer"></a>CSimpleStringT::LockBuffer
 
-Désactive le décompte de références et protège la chaîne dans la mémoire tampon.
+Désactive le comptage des références et protège la chaîne dans le tampon.
 
 ### <a name="syntax"></a>Syntaxe
 
@@ -648,30 +648,30 @@ PXSTR LockBuffer();
 
 ### <a name="return-value"></a>Valeur de retour
 
-Pointeur vers un objet `CSimpleStringT` ou une chaîne terminée par le caractère null.
+Un pointeur `CSimpleStringT` à un objet ou une corde non terminée.
 
 ### <a name="remarks"></a>Notes
 
-Appelez cette méthode pour verrouiller la mémoire tampon de l’objet `CSimpleStringT`. En appelant `LockBuffer`, vous créez une copie de la chaîne, avec la valeur-1 pour le décompte de références. Lorsque la valeur du nombre de références est-1, la chaîne dans la mémoire tampon est considérée comme étant à l’état « verrouillé ». Bien qu’en état verrouillé, la chaîne est protégée de deux manières :
+Appelez cette méthode pour verrouiller `CSimpleStringT` le tampon de l’objet. En `LockBuffer`appelant, vous créez une copie de la chaîne, avec un -1 pour le nombre de références. Lorsque la valeur de compte de référence est de -1, la chaîne dans le tampon est considérée comme étant dans un état « verrouillé ». Alors qu’elle est en état de verrouillée, la chaîne est protégée de deux façons :
 
-- Aucune autre chaîne ne peut obtenir une référence aux données dans la chaîne verrouillée, même si cette chaîne est assignée à la chaîne verrouillée.
+- Aucune autre chaîne ne peut obtenir une référence aux données dans la chaîne verrouillée, même si cette chaîne est attribuée à la chaîne verrouillée.
 
-- La chaîne verrouillée ne fait jamais référence à une autre chaîne, même si cette autre chaîne est copiée dans la chaîne verrouillée.
+- La corde verrouillée ne fera jamais référence à une autre corde, même si cette autre corde est copiée sur la corde verrouillée.
 
-En verrouillant la chaîne dans la mémoire tampon, vous vous assurez que la conservation exclusive de la chaîne dans la mémoire tampon reste intacte.
+En verrouillant la chaîne dans le tampon, vous vous assurez que l’emprise exclusive de la chaîne sur le tampon restera intacte.
 
-Une fois que vous avez terminé avec `LockBuffer`, appelez [UnlockBuffer](#unlockbuffer) pour réinitialiser le nombre de références à 1.
+Une fois que `LockBuffer`vous avez terminé avec , appelez [UnlockBuffer](#unlockbuffer) pour réinitialiser le nombre de références à 1.
 
 > [!NOTE]
->  Si vous appelez [GetBuffer](#getbuffer) sur une mémoire tampon verrouillée et que vous définissez le paramètre `GetBuffer` `nMinBufferLength` sur une valeur supérieure à la longueur de la mémoire tampon actuelle, vous perdez le verrouillage de la mémoire tampon. Un tel appel à `GetBuffer` détruit la mémoire tampon actuelle, la remplace par une mémoire tampon de la taille demandée et réinitialise le décompte de références à zéro.
+> Si vous appelez [GetBuffer](#getbuffer) sur un `GetBuffer` tampon `nMinBufferLength` verrouillé et que vous définissez le paramètre à plus de la longueur du tampon actuel, vous perdrez le verrou tampon. Un tel `GetBuffer` appel pour détruire le tampon actuel, le remplace par un tampon de la taille demandée, et réinitialise le nombre de références à zéro.
 
-Pour plus d’informations sur le décompte de références, consultez les articles suivants :
+Pour plus d’informations sur le comptage des références, voir les articles suivants :
 
-- [Gestion des durées de vie des objets par le biais du décompte de références](/windows/win32/com/managing-object-lifetimes-through-reference-counting) dans le SDK Windows
+- [Gérer les durées de vie des objets grâce au comptage de référence](/windows/win32/com/managing-object-lifetimes-through-reference-counting) dans le SDK Windows
 
-- [Implémentation du décompte de références](/windows/win32/com/implementing-reference-counting) dans le SDK Windows
+- [Mise en œuvre du comptage des références](/windows/win32/com/implementing-reference-counting) dans le SDK Windows
 
-- [Règles de gestion des décomptes de références](/windows/win32/com/rules-for-managing-reference-counts) dans le SDK Windows
+- [Règles de gestion des comptes de référence](/windows/win32/com/rules-for-managing-reference-counts) dans le SDK Windows
 
 ### <a name="example"></a>Exemple
 
@@ -687,9 +687,9 @@ _tprintf_s(_T("%c"), ch);
 str.UnlockBuffer();
 ```
 
-##  <a name="operator_at"></a>CSimpleStringT :: Operator\[\]
+## <a name="csimplestringtoperator"></a><a name="operator_at"></a>CSimpleStringT::opérateur\[\]
 
-Appelez cette fonction pour accéder à un caractère unique du tableau de caractères.
+Appelez cette fonction pour accéder à un seul caractère du tableau de caractères.
 
 ### <a name="syntax"></a>Syntaxe
 
@@ -699,15 +699,15 @@ XCHAR operator[](int iChar) const;
 
 #### <a name="parameters"></a>Paramètres
 
-*iChar*<br/>
-Index de base zéro d’un caractère dans la chaîne.
+*iChar (en)*<br/>
+Index zéro d’un personnage dans la chaîne.
 
 ### <a name="remarks"></a>Notes
 
-L’opérateur d’indice surchargé ( **[]** ) retourne un caractère unique spécifié par l’index de base zéro dans *iChar*. Cet opérateur est un substitut pratique de la fonction membre [GetAt](#getat) .
+L’opérateur surchargé de sous-scripte **([]**) renvoie un seul caractère spécifié par l’indice zéro dans *iChar*. Cet opérateur remplace la fonction [membre GetAt.](#getat)
 
 > [!NOTE]
->  Vous pouvez utiliser l’opérateur d’indice ( **[]** ) pour obtenir la valeur d’un caractère dans un `CSimpleStringT`, mais vous ne pouvez pas l’utiliser pour modifier la valeur d’un caractère dans un `CSimpleStringT`.
+> Vous pouvez utiliser le sous-scriptum (**[]**) `CSimpleStringT`opérateur pour obtenir la valeur d’un personnage `CSimpleStringT`dans un , mais vous ne pouvez pas l’utiliser pour changer la valeur d’un personnage dans un .
 
 ### <a name="example"></a>Exemple
 
@@ -718,9 +718,9 @@ CSimpleString s(_T("abc"), pMgr);
 ASSERT(s[1] == _T('b'));
 ```
 
-## <a name="operator_at"></a>CSimpleStringT :: Operator \[\]
+## <a name="csimplestringtoperator-"></a><a name="operator_at"></a>CSimpleStringT::opérateur\[\]
 
-Appelez cette fonction pour accéder à un caractère unique du tableau de caractères.
+Appelez cette fonction pour accéder à un seul caractère du tableau de caractères.
 
 ### <a name="syntax"></a>Syntaxe
 
@@ -730,19 +730,19 @@ XCHAR operator[](int iChar) const;
 
 ### <a name="parameters"></a>Paramètres
 
-*iChar*<br/>
-Index de base zéro d’un caractère dans la chaîne.
+*iChar (en)*<br/>
+Index zéro d’un personnage dans la chaîne.
 
 ### <a name="remarks"></a>Notes
 
-L’opérateur d’indice surchargé ( **[]** ) retourne un caractère unique spécifié par l’index de base zéro dans *iChar*. Cet opérateur est un substitut pratique de la fonction membre [GetAt](#getat) .
+L’opérateur surchargé de sous-scripte **([]**) renvoie un seul caractère spécifié par l’indice zéro dans *iChar*. Cet opérateur remplace la fonction [membre GetAt.](#getat)
 
 > [!NOTE]
->  Vous pouvez utiliser l’opérateur d’indice ( **[]** ) pour obtenir la valeur d’un caractère dans un `CSimpleStringT`, mais vous ne pouvez pas l’utiliser pour modifier la valeur d’un caractère dans un `CSimpleStringT`.
+> Vous pouvez utiliser le sous-scriptum (**[]**) `CSimpleStringT`opérateur pour obtenir la valeur d’un personnage `CSimpleStringT`dans un , mais vous ne pouvez pas l’utiliser pour changer la valeur d’un personnage dans un .
 
-##  <a name="operator_add_eq"></a>CSimpleStringT :: Operator + =
+## <a name="csimplestringtoperator-"></a><a name="operator_add_eq"></a>CSimpleStringT::opérateur
 
-Joint une nouvelle chaîne ou un caractère à la fin d’une chaîne existante.
+Rejoint une nouvelle chaîne ou un nouveau personnage jusqu’à la fin d’une chaîne existante.
 
 ### <a name="syntax"></a>Syntaxe
 
@@ -759,17 +759,17 @@ CSimpleStringT& operator +=(wchar_t ch);
 #### <a name="parameters"></a>Paramètres
 
 *pszSrc*<br/>
-Pointeur vers une chaîne se terminant par null.
+Un pointeur à une corde non terminée.
 
-*strSrc*<br/>
-Pointeur vers un objet `CSimpleStringT` existant.
+*strSrc (strSrc)*<br/>
+Un pointeur `CSimpleStringT` vers un objet existant.
 
-*cascade*<br/>
+*Ch*<br/>
 Caractère à ajouter.
 
 ### <a name="remarks"></a>Notes
 
-L’opérateur accepte un autre objet `CSimpleStringT` ou un caractère. Notez que des exceptions de mémoire peuvent se produire chaque fois que vous utilisez cet opérateur de concaténation, car un nouveau stockage peut être alloué pour les caractères ajoutés à cet objet `CSimpleStringT`.
+L’opérateur accepte `CSimpleStringT` un autre objet ou un personnage. Notez que des exceptions de mémoire peuvent se produire chaque fois que vous `CSimpleStringT` utilisez cet opérateur de concatenation parce que le nouveau stockage peut être alloué pour les caractères ajoutés à cet objet.
 
 ### <a name="example"></a>Exemple
 
@@ -780,9 +780,9 @@ CSimpleString str(_T("abc"), pMgr);
 ASSERT(_tcscmp((str += _T("def")), _T("abcdef")) == 0);
 ```
 
-##  <a name="operator_eq"></a>CSimpleStringT :: Operator =
+## <a name="csimplestringtoperator-"></a><a name="operator_eq"></a>CSimpleStringT::opérateur
 
-Assigne une nouvelle valeur à un objet `CSimpleStringT`.
+Attribue une nouvelle valeur `CSimpleStringT` à un objet.
 
 ### <a name="syntax"></a>Syntaxe
 
@@ -794,14 +794,14 @@ CSimpleStringT& operator =(const CSimpleStringT& strSrc);
 #### <a name="parameters"></a>Paramètres
 
 *pszSrc*<br/>
-Pointeur vers une chaîne se terminant par null.
+Un pointeur à une corde non terminée.
 
-*strSrc*<br/>
-Pointeur vers un objet `CSimpleStringT` existant.
+*strSrc (strSrc)*<br/>
+Un pointeur `CSimpleStringT` vers un objet existant.
 
 ### <a name="remarks"></a>Notes
 
-Si la chaîne de destination (côté gauche) est déjà suffisamment grande pour stocker les nouvelles données, aucune nouvelle allocation de mémoire n’est effectuée. Notez que des exceptions de mémoire peuvent se produire chaque fois que vous utilisez l’opérateur d’assignation, car un nouveau stockage est souvent alloué pour contenir l’objet de `CSimpleStringT` résultant.
+Si la chaîne de destination (le côté gauche) est déjà assez grande pour stocker les nouvelles données, aucune nouvelle allocation de mémoire n’est effectuée. Notez que des exceptions de mémoire peuvent se produire chaque fois `CSimpleStringT` que vous utilisez l’opérateur d’affectation parce que le nouveau stockage est souvent alloué pour contenir l’objet résultant.
 
 ### <a name="example"></a>Exemple
 
@@ -827,9 +827,9 @@ s1 = _T("x");
 ASSERT(_tcscmp(s1, _T("x")) == 0);
 ```
 
-##  <a name="operator_pcxstr"></a>CSimpleStringT :: Operator PCXSTR
+## <a name="csimplestringtoperator-pcxstr"></a><a name="operator_pcxstr"></a>CSimpleStringT::opérateur PCXSTR
 
-Accède directement aux caractères stockés dans un objet `CSimpleStringT` sous la forme d’une chaîne de style C.
+Accéde directement aux `CSimpleStringT` caractères stockés dans un objet sous forme de chaîne de style C.
 
 ### <a name="syntax"></a>Syntaxe
 
@@ -839,11 +839,11 @@ operator PCXSTR() const throw();
 
 ### <a name="return-value"></a>Valeur de retour
 
-Pointeur de caractère vers les données de la chaîne.
+Un pointeur de caractère aux données de la chaîne.
 
 ### <a name="remarks"></a>Notes
 
-Aucun caractère n’est copié ; seul un pointeur est retourné. Soyez vigilant avec cet opérateur. Si vous modifiez un objet `CString` une fois que vous avez obtenu le pointeur de caractère, vous risquez de provoquer une réallocation de mémoire qui invalide le pointeur.
+Aucun personnage n’est copié; seul un pointeur est retourné. Soyez prudent avec cet opérateur. Si vous `CString` changez d’objet après avoir obtenu le pointeur de caractère, vous pouvez provoquer une réaffectation de la mémoire qui invalide le pointeur.
 
 ### <a name="example"></a>Exemple
 
@@ -879,9 +879,9 @@ wcout << strSports;
 wcout << (PCWSTR)strSports;
 ```
 
-##  <a name="pcxstr"></a>CSimpleStringT ::P CXSTR
+## <a name="csimplestringtpcxstr"></a><a name="pcxstr"></a>CSimpleStringT::PCXSTR
 
-Pointeur vers une chaîne constante.
+Un pointeur à une chaîne constante.
 
 ### <a name="syntax"></a>Syntaxe
 
@@ -889,9 +889,9 @@ Pointeur vers une chaîne constante.
 typedef ChTraitsBase< BaseType >::PCXSTR PCXSTR;
 ```
 
-##  <a name="preallocate"></a>CSimpleStringT ::P réalloué
+## <a name="csimplestringtpreallocate"></a><a name="preallocate"></a>CSimpleStringT::Preallocate
 
-Alloue une quantité spécifique d’octets pour l’objet `CSimpleStringT`.
+Alloue une quantité spécifique `CSimpleStringT` d’octets pour l’objet.
 
 ### <a name="syntax"></a>Syntaxe
 
@@ -901,14 +901,14 @@ void Preallocate( int nLength);
 
 #### <a name="parameters"></a>Paramètres
 
-*nLength*<br/>
-Taille exacte de la mémoire tampon de caractères `CSimpleStringT` en caractères.
+*nLength (en)*<br/>
+La taille exacte `CSimpleStringT` du tampon de caractère dans les caractères.
 
 ### <a name="remarks"></a>Notes
 
-Appelez cette méthode pour allouer une taille de mémoire tampon spécifique pour l’objet `CSimpleStringT`.
+Appelez cette méthode pour allouer `CSimpleStringT` une taille tampon spécifique pour l’objet.
 
-`CSimpleStringT` génère une exception STATUS_NO_MEMORY s’il ne parvient pas à allouer de l’espace pour la mémoire tampon de caractères. Par défaut, l’allocation de mémoire est effectuée par les fonctions d’API WIN32 `HeapAlloc` ou `HeapReAlloc`.
+`CSimpleStringT`génère une STATUS_NO_MEMORY exception si elle n’est pas en mesure d’allouer de l’espace pour le tampon de caractère. Par défaut, l’allocation de mémoire est `HeapAlloc` effectuée `HeapReAlloc`par win32 fonctions API ou .
 
 ### <a name="example"></a>Exemple
 
@@ -921,9 +921,9 @@ str.Preallocate(100);
 _tprintf_s(_T("Allocated length: %d\n"), str.GetAllocLength());
 ```
 
-##  <a name="pxstr"></a>CSimpleStringT ::P XSTR
+## <a name="csimplestringtpxstr"></a><a name="pxstr"></a>CSimpleStringT::PXSTR
 
-Pointeur vers une chaîne.
+Un pointeur à une chaîne.
 
 ### <a name="syntax"></a>Syntaxe
 
@@ -931,9 +931,9 @@ Pointeur vers une chaîne.
 typedef ChTraitsBase< BaseType >::PXSTR PXSTR;
 ```
 
-##  <a name="releasebuffer"></a>CSimpleStringT::ReleaseBuffer
+## <a name="csimplestringtreleasebuffer"></a><a name="releasebuffer"></a>CSimpleStringT::ReleaseBuffer
 
-Libère le contrôle de la mémoire tampon allouée par [GetBuffer](#getbuffer).
+Communiqués de contrôle de la mémoire tampon allouée par [GetBuffer](#getbuffer).
 
 ### <a name="syntax"></a>Syntaxe
 
@@ -943,12 +943,12 @@ void ReleaseBuffer(int nNewLength = -1);
 
 #### <a name="parameters"></a>Paramètres
 
-*nNewLength*<br/>
-Nouvelle longueur de la chaîne en caractères, sans compter une marque de fin null. Si la chaîne se termine par une valeur null, la valeur par défaut-1 affecte à la taille de `CSimpleStringT` la longueur actuelle de la chaîne.
+*nNewLength (en)*<br/>
+La nouvelle longueur de la chaîne en caractères, sans compter un terminateur nul. Si la chaîne est non terminée, la `CSimpleStringT` valeur par défaut de -1 définit la taille jusqu’à la longueur actuelle de la chaîne.
 
 ### <a name="remarks"></a>Notes
 
-Appelez cette méthode pour réallouer ou libérer la mémoire tampon de l’objet String. Si vous savez que la chaîne de la mémoire tampon se termine par une valeur null, vous pouvez omettre l’argument *nNewLength* . Si votre chaîne ne se termine pas par une valeur null, utilisez *nNewLength* pour spécifier sa longueur. L’adresse renvoyée par [GetBuffer](#getbuffer) n’est pas valide après l’appel à `ReleaseBuffer` ou à toute autre opération `CSimpleStringT`.
+Appelez cette méthode pour réaffecter ou libérer le tampon de l’objet de chaîne. Si vous savez que la chaîne dans le tampon est non terminée, vous pouvez omettre *l’argument nNewLength.* Si votre chaîne n’est pas non annulée, utilisez *nNewLength* pour spécifier sa longueur. L’adresse retournée par [GetBuffer](#getbuffer) est `ReleaseBuffer` invalide `CSimpleStringT` après l’appel à ou toute autre opération.
 
 ### <a name="example"></a>Exemple
 
@@ -972,9 +972,9 @@ ASSERT(s.GetLength() == 3);
 // Length still 3
 ```
 
-##  <a name="releasebuffersetlength"></a>CSimpleStringT::ReleaseBufferSetLength
+## <a name="csimplestringtreleasebuffersetlength"></a><a name="releasebuffersetlength"></a>CSimpleStringT::ReleaseBufferSetLength
 
-Libère le contrôle de la mémoire tampon allouée par [GetBuffer](#getbuffer).
+Communiqués de contrôle de la mémoire tampon allouée par [GetBuffer](#getbuffer).
 
 ### <a name="syntax"></a>Syntaxe
 
@@ -984,16 +984,16 @@ void ReleaseBufferSetLength(int nNewLength);
 
 #### <a name="parameters"></a>Paramètres
 
-*nNewLength*<br/>
-Longueur de la chaîne en cours de libération
+*nNewLength (en)*<br/>
+La longueur de la corde libérée
 
 ### <a name="remarks"></a>Notes
 
-Cette fonction est fonctionnellement similaire à [ReleaseBuffer](#releasebuffer) , à ceci près qu’une longueur valide pour l’objet String doit être passée.
+Cette fonction est fonctionnellement similaire à [ReleaseBuffer,](#releasebuffer) sauf qu’une longueur valide pour l’objet de chaîne doit être passée.
 
-##  <a name="setat"></a>CSimpleStringT :: SetAt
+## <a name="csimplestringtsetat"></a><a name="setat"></a>CSimpleStringT::SetAt
 
-Définit un caractère unique à partir d’un objet `CSimpleStringT`.
+Définit un personnage `CSimpleStringT` unique à partir d’un objet.
 
 ### <a name="syntax"></a>Syntaxe
 
@@ -1003,15 +1003,15 @@ void SetAt(int iChar, XCHAR ch);
 
 #### <a name="parameters"></a>Paramètres
 
-*iChar*<br/>
-Index de base zéro du caractère dans l’objet `CSimpleStringT`. Le paramètre *iChar* doit être supérieur ou égal à 0 et inférieur à la valeur retournée par [GetLength](#getlength).
+*iChar (en)*<br/>
+Index zéro du personnage de `CSimpleStringT` l’objet. Le paramètre *iChar* doit être supérieur ou égal à 0 et inférieur à la valeur retournée par [GetLength](#getlength).
 
-*cascade*<br/>
-Nouveau caractère.
+*Ch*<br/>
+Le nouveau personnage.
 
 ### <a name="remarks"></a>Notes
 
-Appelez cette méthode pour remplacer le caractère situé dans *iChar*. Cette méthode n’agrandit pas la chaîne si *iChar* dépasse les limites de la chaîne existante.
+Appelez cette méthode pour remplacer le personnage situé à *iChar*. Cette méthode n’agrandira pas la chaîne si *iChar* dépasse les limites de la chaîne existante.
 
 ### <a name="example"></a>Exemple
 
@@ -1023,9 +1023,9 @@ s.SetAt(1, _T('a'));
 ASSERT(_tcscmp(s, _T("aacdef")) == 0);
 ```
 
-##  <a name="setmanager"></a>CSimpleStringT::SetManager
+## <a name="csimplestringtsetmanager"></a><a name="setmanager"></a>CSimpleStringT::SetManager
 
-Spécifie le gestionnaire de mémoire de l’objet `CSimpleStringT`.
+Spécifie le `CSimpleStringT` responsable de la mémoire de l’objet.
 
 ### <a name="syntax"></a>Syntaxe
 
@@ -1036,11 +1036,11 @@ void SetManager(IAtlStringMgr* pStringMgr);
 #### <a name="parameters"></a>Paramètres
 
 *pStringMgr*<br/>
-Pointeur vers le nouveau gestionnaire de mémoire.
+Un pointeur pour le nouveau gestionnaire de mémoire.
 
 ### <a name="remarks"></a>Notes
 
-Appelez cette méthode pour spécifier un nouveau gestionnaire de mémoire utilisé par l’objet `CSimpleStringT`. Pour plus d’informations sur les gestionnaires de mémoire et les objets String, consultez Gestion de la [mémoire et CStringT](../memory-management-with-cstringt.md).
+Appelez cette méthode pour spécifier `CSimpleStringT` un nouveau gestionnaire de mémoire utilisé par l’objet. Pour plus d’informations sur les gestionnaires de mémoire et les objets à chaîne, voir [Memory Management et CStringT](../memory-management-with-cstringt.md).
 
 ### <a name="example"></a>Exemple
 
@@ -1051,9 +1051,9 @@ CSimpleString s(pMgr);
 s.SetManager(pCustomMgr);
 ```
 
-##  <a name="setstring"></a>CSimpleStringT :: SetString
+## <a name="csimplestringtsetstring"></a><a name="setstring"></a>CSimpleStringT::SetString
 
-Définit la chaîne d’un objet `CSimpleStringT`.
+Définit la chaîne `CSimpleStringT` d’un objet.
 
 ### <a name="syntax"></a>Syntaxe
 
@@ -1065,22 +1065,22 @@ void SetString(PCXSTR pszSrc);
 #### <a name="parameters"></a>Paramètres
 
 *pszSrc*<br/>
-Pointeur vers une chaîne se terminant par null.
+Un pointeur à une corde non terminée.
 
-*nLength*<br/>
-Nombre de caractères dans *pszSrc*.
+*nLength (en)*<br/>
+Un décompte du nombre de personnages dans *pszSrc*.
 
 ### <a name="remarks"></a>Notes
 
-Copiez une chaîne dans l’objet `CSimpleStringT`. `SetString` remplace les anciennes données de chaîne dans la mémoire tampon.
+Copiez une `CSimpleStringT` ficelle dans l’objet. `SetString`surmene les données de chaîne plus anciennes dans le tampon.
 
-Les deux versions de `SetString` vérifient si *pszSrc* est un pointeur null, et si c’est le cas, levez une erreur E_INVALIDARG.
+Les deux `SetString` versions de vérifier si *pszSrc* est un pointeur nul, et si elle est, jeter une erreur de E_INVALIDARG.
 
-La version à un paramètre de `SetString` s’attend à ce que *pszSrc* pointe vers une chaîne terminée par le caractère null.
+La version à `SetString` un paramètre de s’attend *pszSrc* à pointer vers une chaîne non terminée.
 
-La version à deux paramètres de `SetString` s’attend également à ce que *pszSrc* soit une chaîne se terminant par un caractère null. Elle utilise *nLength* comme longueur de chaîne, sauf si elle rencontre d’abord un terminateur null.
+La version à `SetString` deux paramètres de s’attend également *pszSrc* à être une chaîne à durée nulle. Il utilise *nLength* comme longueur de chaîne à moins qu’il rencontre un terminateur nul d’abord.
 
-La version à deux paramètres de `SetString` vérifie également si *pszSrc* pointe vers un emplacement dans la mémoire tampon actuelle dans `CSimpleStringT`. Dans ce cas particulier, `SetString` utilise une fonction de copie de mémoire qui ne remplace pas les données de chaîne, car elle copie les données de chaîne dans sa mémoire tampon.
+La version à `SetString` deux paramètres de vérifie également si *pszSrc* indique un emplacement dans le tampon actuel dans `CSimpleStringT`. Dans ce cas `SetString` particulier, utilise une fonction de copie mémoire qui ne surcorite pas les données de chaîne car elle copie les données de chaîne à son tampon.
 
 ### <a name="example"></a>Exemple
 
@@ -1093,9 +1093,9 @@ s.SetString(_T("Soccer"), 6);
 ASSERT(_tcscmp(s, _T("Soccer")) == 0);
 ```
 
-##  <a name="stringlength"></a>CSimpleStringT :: StringLength
+## <a name="csimplestringtstringlength"></a><a name="stringlength"></a>CSimpleStringT::StringLength
 
-Retourne le nombre de caractères de la chaîne spécifiée.
+Retourne le nombre de caractères dans la chaîne spécifiée.
 
 ### <a name="syntax"></a>Syntaxe
 
@@ -1105,16 +1105,16 @@ ATL_NOINLINE static int StringLength(PCXSTR psz) throw();
 
 #### <a name="parameters"></a>Paramètres
 
-*psz*<br/>
-Pointeur vers une chaîne se terminant par null.
+*Zsp*<br/>
+Un pointeur à une corde non terminée.
 
 ### <a name="return-value"></a>Valeur de retour
 
-Nombre de caractères dans *PSZ*; ne compte pas d’indicateur de fin null.
+Le nombre de caractères dans *psz*; sans compter un terminateur nul.
 
 ### <a name="remarks"></a>Notes
 
-Appelez cette méthode pour récupérer le nombre de caractères de la chaîne pointée par *PSZ*.
+Appelez cette méthode pour récupérer le nombre de caractères dans la chaîne pointée par *psz*.
 
 ### <a name="example"></a>Exemple
 
@@ -1124,9 +1124,9 @@ L'exemple suivant montre l'utilisation de `CSimpleStringT::StringLength`.
 ASSERT(CSimpleString::StringLength(_T("soccer")) == 6);
 ```
 
-##  <a name="truncate"></a>CSimpleStringT :: TRUNCATE
+## <a name="csimplestringttruncate"></a><a name="truncate"></a>CSimpleStringT::Truncate
 
-Tronque la chaîne à la nouvelle longueur.
+Tronque la corde à la nouvelle longueur.
 
 ### <a name="syntax"></a>Syntaxe
 
@@ -1136,15 +1136,15 @@ void Truncate(int nNewLength);
 
 #### <a name="parameters"></a>Paramètres
 
-*nNewLength*<br/>
-Nouvelle longueur de la chaîne.
+*nNewLength (en)*<br/>
+La nouvelle longueur de la corde.
 
 ### <a name="remarks"></a>Notes
 
 Appelez cette méthode pour tronquer le contenu de la chaîne à la nouvelle longueur.
 
 > [!NOTE]
->  Cela n’affecte pas la longueur allouée de la mémoire tampon. Pour réduire ou augmenter la mémoire tampon actuelle, consultez [FreeExtra](#freeextra) et [allocate](#preallocate).
+> Cela n’affecte pas la longueur allouée du tampon. Pour diminuer ou augmenter le tampon actuel, voir [FreeExtra](#freeextra) et [Preallocate](#preallocate).
 
 ### <a name="example"></a>Exemple
 
@@ -1159,9 +1159,9 @@ _tprintf_s(_T("Allocated length: %d\n"), str.GetLength());
 _tprintf_s(_T("Contents: %s\n"), str);
 ```
 
-##  <a name="unlockbuffer"></a>CSimpleStringT::UnlockBuffer
+## <a name="csimplestringtunlockbuffer"></a><a name="unlockbuffer"></a>CSimpleStringT::UnlockBuffer
 
-Déverrouille la mémoire tampon de l’objet `CSimpleStringT`.
+Déverrouiller le `CSimpleStringT` tampon de l’objet.
 
 ### <a name="syntax"></a>Syntaxe
 
@@ -1171,13 +1171,13 @@ void UnlockBuffer() throw();
 
 ### <a name="remarks"></a>Notes
 
-Appelez cette méthode pour réinitialiser le décompte de références de la chaîne à 1.
+Appelez cette méthode pour réinitialiser le nombre de références de la chaîne à 1.
 
-Le destructeur `CSimpleStringT` appelle automatiquement `UnlockBuffer` pour s’assurer que la mémoire tampon n’est pas verrouillée lorsque le destructeur est appelé. Pour obtenir un exemple de cette méthode, consultez [LockBuffer](#lockbuffer).
+Le `CSimpleStringT` destructeur appelle `UnlockBuffer` automatiquement pour s’assurer que le tampon n’est pas verrouillé lorsque le destructeur est appelé. Pour un exemple de cette méthode, voir [LockBuffer](#lockbuffer).
 
-##  <a name="dtor"></a>CSimpleStringT :: ~ CSimpleStringT
+## <a name="csimplestringtcsimplestringt"></a><a name="dtor"></a>CSimpleStringT: :CSimpleStringT
 
-Détruit un objet `CSimpleStringT`.
+Détruit un objet `CSimpleStringT` .
 
 ### <a name="syntax"></a>Syntaxe
 
@@ -1187,7 +1187,7 @@ Détruit un objet `CSimpleStringT`.
 
 ### <a name="remarks"></a>Notes
 
-Appelez cette méthode pour détruire l’objet `CSimpleStringT`.
+Appelez cette méthode `CSimpleStringT` pour détruire l’objet.
 
 ## <a name="see-also"></a>Voir aussi
 

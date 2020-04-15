@@ -11,32 +11,32 @@ helpviewer_keywords:
 - CString objects, passing arguments
 - string arguments
 ms.assetid: a67bebff-edf1-4cf4-bbff-d1cc6a901099
-ms.openlocfilehash: 1729167786d71c107fe6a4369d5a0c7e7c8594f1
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 53977eb47520a20571a2d5ba8aa105c567ff40d1
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62236383"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81317933"
 ---
 # <a name="cstring-argument-passing"></a>Passage d’arguments CString
 
-Cet article explique comment passer [CString](../atl-mfc-shared/reference/cstringt-class.md) objets à des fonctions et comment retourner `CString` objets à partir de fonctions.
+Cet article explique comment transmettre les objets [CString](../atl-mfc-shared/reference/cstringt-class.md) `CString` aux fonctions et comment retourner les objets des fonctions.
 
-##  <a name="_core_cstring_argument.2d.passing_conventions"></a> Conventions de transmission d’arguments CString
+## <a name="cstring-argument-passing-conventions"></a><a name="_core_cstring_argument.2d.passing_conventions"></a>CString Argument-Passing Conventions
 
-Lorsque vous définissez une interface de classe, vous devez déterminer la convention de passage d’argument pour les fonctions membres. Il existe des règles standards pour passer et retourner `CString` objets. Si vous suivez les règles décrites dans [chaînes en tant qu’entrées de fonction](#_core_strings_as_function_inputs) et [chaînes en tant que sortie de fonction](#_core_strings_as_function_outputs), vous aurez un code efficace et correct.
+Lorsque vous définissez une interface de classe, vous devez déterminer la convention argument-passage pour vos fonctions de membre. Il existe des règles standard `CString` pour le passage et le retour des objets. Si vous suivez les règles [décrites](#_core_strings_as_function_inputs) dans les chaînes comme les entrées de fonction et [les chaînes comme sorties de fonction,](#_core_strings_as_function_outputs)vous aurez un code efficace et correct.
 
-##  <a name="_core_strings_as_function_inputs"></a> Chaînes en tant qu’entrées de fonction
+## <a name="strings-as-function-inputs"></a><a name="_core_strings_as_function_inputs"></a>Cordes comme entrées de fonction
 
-La façon la plus efficace et sécurisée à utiliser un `CString` objet dans les fonctions appelées consiste à passer un `CString` objet à la fonction. Malgré son nom, un `CString` objet ne pas stocke une chaîne en interne comme une chaîne de style C qui possède un terminateur null. Au lieu de cela, un `CString` objet suivi attention au nombre de caractères qu’il a. Avoir `CString` fournir un pointeur LPCTSTR vers une chaîne se terminant par null est une petite quantité de travail peut devenir importante si votre code doit faire en permanence. Le résultat est temporaire, car toute modification apportée à la `CString` contenu invalide les anciennes copies du pointeur LPCTSTR.
+La façon la plus efficace `CString` et la plus sûre d’utiliser un objet dans les fonctions appelées est de passer un `CString` objet à la fonction. Malgré le nom, un `CString` objet ne stocke pas une chaîne interne comme une chaîne de style C qui a un terminateur nul. Au lieu `CString` de cela, un objet garde une trace attentive du nombre de caractères qu’il a. Avoir `CString` fourni un pointeur LPCTSTR à une chaîne annulée est une petite quantité de travail qui peut devenir important si votre code doit le faire constamment. Le résultat est temporaire parce `CString` que toute modification du contenu invalide les anciennes copies du pointeur LPCTSTR.
 
-Il n’est pertinent dans certains cas, de fournir une chaîne de style C. Par exemple, il peut être une situation où une fonction appelée est écrite en C et ne prend pas en charge les objets. Dans ce cas, forcer le `CString` paramètre aux fonctions LPCTSTR et obtenez une chaîne se terminant par null de style C. Vous pouvez également l’autre sens et créer un `CString` objet à l’aide de la `CString` constructeur qui accepte un paramètre de chaîne de style C.
+Il est logique dans certains cas de fournir une chaîne de style C. Par exemple, il peut y avoir une situation où une fonction appelée est écrite en C et ne prend pas en charge les objets. Dans ce cas, `CString` contraindre le paramètre à LPCTSTR, et la fonction obtiendra une corde de type C non terminée. Vous pouvez également aller dans `CString` l’autre `CString` sens et créer un objet en utilisant le constructeur qui accepte un paramètre de chaîne de style C.
 
-Si le contenu de chaîne doivent être modifiées par une fonction, déclarez le paramètre en tant que non constantes `CString` référence (`CString&`).
+Si le contenu de la chaîne doit être modifié par une `CString` fonction, déclarez le paramètre comme une référence nonconstante ().`CString&`
 
-##  <a name="_core_strings_as_function_outputs"></a> Chaînes en tant que sortie de fonction
+## <a name="strings-as-function-outputs"></a><a name="_core_strings_as_function_outputs"></a>Cordes comme sorties de fonction
 
-En général, vous pouvez retourner `CString` , car des objets à partir de fonctions `CString` objets suivent la sémantique de valeur comme des types primitifs. Pour retourner une chaîne en lecture seule, utilisez une constante `CString` référence (`const CString&`). L’exemple suivant illustre l’utilisation de `CString` paramètres et types de retour :
+Typiquement, vous `CString` pouvez retourner `CString` des objets à partir de fonctions parce que les objets suivent la sémantique de valeur comme les types primitifs. Pour retourner une chaîne de lecture `CString` seulement, utilisez une référence constante (`const CString&`). L’exemple suivant illustre `CString` l’utilisation de paramètres et de types de retour :
 
 [!code-cpp[NVC_ATLMFC_Utilities#197](../atl-mfc-shared/codesnippet/cpp/cstring-argument-passing_1.cpp)]
 
@@ -44,4 +44,4 @@ En général, vous pouvez retourner `CString` , car des objets à partir de fonc
 
 ## <a name="see-also"></a>Voir aussi
 
-[Strings (ATL/MFC)](../atl-mfc-shared/strings-atl-mfc.md)
+[Cordes (ATL/MFC)](../atl-mfc-shared/strings-atl-mfc.md)

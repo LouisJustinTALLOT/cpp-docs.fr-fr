@@ -1,39 +1,39 @@
 ---
 title: Pointeurs (C++)
 ms.date: 11/19/2019
-description: À propos des pointeurs bruts et des pointeurs intelligents dans Microsoft C++.
+description: À propos des pointeurs bruts et des pointeurs intelligents dans Microsoft C.
 helpviewer_keywords:
 - pointers (C++)
 ms.assetid: 595387c5-8e58-4670-848f-344c7caf985e
-ms.openlocfilehash: 21dcc55048e9e378f370f25254e1910b05e49d69
-ms.sourcegitcommit: 654aecaeb5d3e3fe6bc926bafd6d5ace0d20a80e
+ms.openlocfilehash: 485cee667fa288bff76fdeac7c9f229355c276d1
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/20/2019
-ms.locfileid: "74246422"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81371917"
 ---
 # <a name="pointers-c"></a>Pointeurs (C++)
 
-Un pointeur est une variable qui stocke l’adresse mémoire d’un objet. Les pointeurs sont largement utilisés à la fois en C++ C et à trois fins principales :
+Un pointeur est une variable qui stocke l’adresse mémoire d’un objet. Les pointeurs sont largement utilisés en C et en CMD à trois fins principales :
 
-- pour allouer de nouveaux objets sur le tas,
-- pour passer des fonctions à d’autres fonctions
-- pour itérer au sein des éléments dans des tableaux ou d’autres structures de données.
+- d’allouer de nouveaux objets sur le tas,
+- de transmettre des fonctions à d’autres fonctions
+- d’itérer sur des éléments dans des tableaux ou d’autres structures de données.
 
-Dans la programmation de style C, les *pointeurs bruts* sont utilisés pour tous ces scénarios. Toutefois, les pointeurs bruts sont la source de nombreuses erreurs de programmation graves. Par conséquent, leur utilisation est fortement déconseillée, sauf dans les cas où ils offrent un gain de performances significatif et il n’y a aucune ambiguïté quant au pointeur *propriétaire* qui est responsable de la suppression de l’objet. Moderne C++ fournit des *pointeurs intelligents* pour l’allocation d’objets, des *itérateurs* pour parcourir les structures de données et des *expressions lambda* pour passer des fonctions. En utilisant ces fonctionnalités de langage et de bibliothèque plutôt que des pointeurs bruts, vous rendez votre programme plus sûr, plus facile à déboguer et plus simple à comprendre et à gérer. Pour plus d’informations, consultez [pointeurs intelligents](smart-pointers-modern-cpp.md), [itérateurs](../standard-library/iterators.md)et [expressions lambda](lambda-expressions-in-cpp.md) .
+Dans la programmation de style C, *les pointeurs bruts* sont utilisés pour tous ces scénarios. Cependant, les pointeurs bruts sont la source de nombreuses erreurs de programmation graves. Par conséquent, leur utilisation est fortement déconseillée, sauf lorsqu’ils offrent un avantage de performance important et il n’y a aucune ambiguïté quant à quel pointeur est le *pointeur propriétaire* qui est responsable de la suppression de l’objet. Le CMD moderne fournit des *pointeurs intelligents* pour l’attribution d’objets, *d’itérateurs* pour la traversée des structures de données et des *expressions lambda* pour les fonctions de passage. En utilisant ces installations de langue et de bibliothèque au lieu de pointeurs bruts, vous rendrez votre programme plus sûr, plus facile à débobli, et plus simple à comprendre et à entretenir. Voir [les pointeurs intelligents](smart-pointers-modern-cpp.md), les [itérateurs](../standard-library/iterators.md)et les expressions [Lambda](lambda-expressions-in-cpp.md) pour plus d’informations.
 
-## <a name="in-this-section"></a>Dans cette section
+## <a name="in-this-section"></a>Contenu de cette section
 
 - [Pointeurs bruts](raw-pointers.md)
-- [Pointeurs const et volatile](const-and-volatile-pointers.md)
-- [opérateurs New et Delete](new-and-delete-operators.md)
+- [Const et pointeurs volatils](const-and-volatile-pointers.md)
+- [nouveaux opérateurs et supprimer](new-and-delete-operators.md)
 - [Pointeurs intelligents](smart-pointers-modern-cpp.md)
-- [Comment : créer et utiliser des instances unique_ptr](how-to-create-and-use-unique-ptr-instances.md)
-- [Comment : créer et utiliser des instances shared_ptr](how-to-create-and-use-shared-ptr-instances.md)
-- [Comment : créer et utiliser des instances weak_ptr](how-to-create-and-use-weak-ptr-instances.md)
-- [Comment : créer et utiliser des instances CComPtr et CComQIPtr](how-to-create-and-use-ccomptr-and-ccomqiptr-instances.md)
+- [Comment : Créer et utiliser unique_ptr instances](how-to-create-and-use-unique-ptr-instances.md)
+- [Comment : Créer et utiliser shared_ptr instances](how-to-create-and-use-shared-ptr-instances.md)
+- [Comment : Créer et utiliser weak_ptr instances](how-to-create-and-use-weak-ptr-instances.md)
+- [Comment : Créer et utiliser les instances CComPtr et CComQIPtr](how-to-create-and-use-ccomptr-and-ccomqiptr-instances.md)
 
 ## <a name="see-also"></a>Voir aussi
 
-[Itérateurs](../standard-library/iterators.md)</br>
+[Iterators](../standard-library/iterators.md)</br>
 [Expressions lambda](lambda-expressions-in-cpp.md)

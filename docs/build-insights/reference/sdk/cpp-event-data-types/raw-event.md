@@ -1,6 +1,6 @@
 ---
-title: RawEvent, classe
-description: Référence C++ de la classe RawEvent du kit de développement logiciel (SDK) Build Insights.
+title: Classe RawEvent
+description: La référence de classe CMD Build Insights SDK RawEvent.
 ms.date: 02/12/2020
 helpviewer_keywords:
 - C++ Build Insights
@@ -9,23 +9,23 @@ helpviewer_keywords:
 - throughput analysis
 - build time analysis
 - vcperf.exe
-ms.openlocfilehash: 4088920d6070e14d64ccd046238c1c49b2556ea1
-ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
+ms.openlocfilehash: 83629457ac3a0d1f991f6b084af2f3400612b2ac
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/05/2020
-ms.locfileid: "78333061"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81324381"
 ---
-# <a name="rawevent-class"></a>RawEvent, classe
+# <a name="rawevent-class"></a>Classe RawEvent
 
 ::: moniker range="<=vs-2015"
 
-Le C++ Kit de développement logiciel (SDK) Build Insights est compatible avec Visual Studio 2017 et versions ultérieures. Pour consulter la documentation de ces versions, définissez le contrôle sélecteur de version de Visual Studio pour cet article sur Visual Studio 2017 ou Visual Studio 2019.
+Le SDK Build Insights est compatible avec Visual Studio 2017 et plus. Pour voir la documentation de ces versions, définissez le contrôle du sélecteur Visual Studio **Version** pour cet article à Visual Studio 2017 ou Visual Studio 2019. On le trouve en haut de la table des contenus sur cette page.
 
 ::: moniker-end
 ::: moniker range=">=vs-2017"
 
-La classe `RawEvent` est utilisée pour représenter un événement général dans un [EventStack](event-stack.md).
+La `RawEvent` classe est utilisée pour représenter un événement général dans un [EventStack](event-stack.md).
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -63,42 +63,42 @@ public:
 
 ## <a name="remarks"></a>Notes
 
-Plusieurs fonctions membres de la classe `RawEvent` retournent un nombre de cycles. C++Build Insights utilise le compteur de performances Windows comme source de battements. Un nombre de cycles doit être utilisé avec une fréquence de cycle pour le convertir en unité de temps, comme les secondes. La fonction membre `TickFrequency` peut être appelée pour obtenir la fréquence de cycle. Consultez la page [EVENT_DATA](../c-event-data-types/event-data-struct.md#tick-conversion-example) pour obtenir un exemple sur la façon de convertir des graduations en unités de temps.
+Plusieurs fonctions de `RawEvent` membre dans la classe renvoient un nombre de tiques. Build Insights utilise le compteur de performances de Windows comme source de tiques. Un nombre de tiques doit être utilisé avec une fréquence de tiques pour la convertir en une unité de temps comme secondes. La `TickFrequency` fonction de membre peut être appelée pour obtenir la fréquence des tiques. Voir la [page EVENT_DATA](../c-event-data-types/event-data-struct.md#tick-conversion-example) par exemple sur la façon de convertir les tiques en une unité de temps.
 
-Si vous ne souhaitez pas convertir vous-même les graduations, la classe `RawEvent` fournit des fonctions membres qui retournent des valeurs de temps en nanosecondes. Utilisez la bibliothèque C++ de `chrono` standard pour convertir les nanosecondes en d’autres unités de temps.
+Si vous ne voulez pas convertir vous-même les tiques, la `RawEvent` classe fournit des fonctions de membre qui retournent les valeurs de temps en nanosecondes. Utilisez la bibliothèque `chrono` standard de CM pour convertir les nanosecondes en d’autres unités temporelles.
 
 ## <a name="members"></a>Membres
 
 ### <a name="constructor"></a>Constructeur
 
-[RawEvent](#raw-event)
+[RawEvent RawEvent](#raw-event)
 
 ### <a name="functions"></a>Fonctions
 
 [CPUTicks](#cpu-ticks)\
-[CPUTime](#cpu-time)\
+[CPUTime (en)](#cpu-time)\
 [Données](#data)\
 [Durée](#duration)\
 [EventId](#event-id)
 [EventInstanceId](#event-instance-id)
 [EventName](#event-name)\
 [EventWideName](#event-wide-name)\
-[ExclusiveCPUTicks](#exclusive-cpu-ticks)\
-[ExclusiveCPUTime](#exclusive-cpu-time)\
+[ExclusifCPUTicks](#exclusive-cpu-ticks)\
+[ExclusifCPUTime](#exclusive-cpu-time)\
 [ExclusiveDuration](#exclusive-duration)\
 [ExclusiveDurationTicks](#exclusive-duration-ticks)\
-[ExclusiveWallClockTimeResponsibility](#exclusive-wall-clock-time-responsibility)\
-[ExclusiveWallClockTimeResponsibilityTicks](#exclusive-wall-clock-time-responsibility-ticks)\
-[ID](#process-id) de l'\
-[ProcessorIndex](#processor-index)\
+[ExclusifWallClockTimeResponsibility](#exclusive-wall-clock-time-responsibility)\
+[ExclusifWallClockTimeResponsibilityTicks](#exclusive-wall-clock-time-responsibility-ticks)\
+[Processid](#process-id)\
+[ProcesseurIndex](#processor-index)\
 [StartTimestamp](#start-timestamp)\
-[StopTimestamp](#stop-timestamp)\
-\ [ThreadID](#thread-id)
-[TickFrequency](#tick-frequency)\
+[StopTimestamp (StopTimestamp)](#stop-timestamp)\
+[ThreadId (en)](#thread-id)\
+[TickFrequency (tickFrequency)](#tick-frequency)\
 [WallClockTimeResponsibility](#wall-clock-time-responsibility)\
 [WallClockTimeResponsibilityTicks](#wall-clock-time-responsibility-ticks)
 
-## <a name="raw-event"></a>RawEvent
+## <a name="rawevent"></a><a name="raw-event"></a>RawEvent RawEvent
 
 ```cpp
 RawEvent(const EVENT_DATA& data);
@@ -106,10 +106,10 @@ RawEvent(const EVENT_DATA& data);
 
 ### <a name="parameters"></a>Paramètres
 
-*event*\
+*Événement*\
 Données d'événement.
 
-## <a name="cpu-ticks"></a>CPUTicks
+## <a name="cputicks"></a><a name="cpu-ticks"></a>CPUTicks
 
 ```cpp
 const long long& CPUTicks() const;
@@ -117,9 +117,9 @@ const long long& CPUTicks() const;
 
 ### <a name="return-value"></a>Valeur de retour
 
-Nombre de cycles de processeur qui se sont produits pendant cette activité. Un battement de l’UC est différent d’un battement normal. Les cycles de l’UC sont comptabilisés uniquement lorsque le processeur exécute du code dans une activité. Les cycles de l’UC ne sont pas comptabilisés lorsque le thread associé à l’activité est en veille.
+Le nombre de coches CPU qui s’est produite au cours de cette activité. Une tique CPU est différente d’une tique régulière. Les tiques CPU ne sont comptées que lorsque le processeur exécute du code dans une activité. Les tiques CPU ne sont pas comptées lorsque le fil associé à l’activité dort.
 
-## <a name="cpu-time"></a>CPUTime
+## <a name="cputime"></a><a name="cpu-time"></a>CPUTime (en)
 
 ```cpp
 std::chrono::nanoseconds CPUTime()() const;
@@ -127,9 +127,9 @@ std::chrono::nanoseconds CPUTime()() const;
 
 ### <a name="return-value"></a>Valeur de retour
 
-Durée d’exécution du code à l’intérieur de cette activité par l’UC. Cette valeur peut être supérieure à la durée de l’activité si les activités enfants sont exécutées sur des threads distincts. La valeur est retournée en nanosecondes.
+Le temps pendant que le processeur exécutait le code à l’intérieur de cette activité. Cette valeur peut être supérieure à la durée de l’activité si les activités de l’enfant sont exécutées sur des fils distincts. La valeur est retournée en nanosecondes.
 
-## <a name="data"></a>Métadonnée
+## <a name="data"></a><a name="data"></a>Données
 
 ```cpp
 const void* Data() const;
@@ -137,9 +137,9 @@ const void* Data() const;
 
 ### <a name="return-value"></a>Valeur de retour
 
-Pointeur vers des données supplémentaires contenues dans cet événement. Pour plus d’informations sur la façon d’interpréter ce champ, consultez [EVENT_DATA](../c-event-data-types/event-data-struct.md).
+Un pointeur aux données supplémentaires contenues dans cet événement. Pour plus d’informations sur la façon d’interpréter ce domaine, voir [EVENT_DATA](../c-event-data-types/event-data-struct.md).
 
-## <a name="duration"></a>Macauley
+## <a name="duration"></a><a name="duration"></a>Durée
 
 ```cpp
 std::chrono::nanoseconds Duration() const;
@@ -147,9 +147,9 @@ std::chrono::nanoseconds Duration() const;
 
 ### <a name="return-value"></a>Valeur de retour
 
-Durée de l’activité en nanosecondes.
+La durée de l’activité en nanosecondes.
 
-## <a name="event-id"></a>1001
+## <a name="eventid"></a><a name="event-id"></a>Eventid
 
 ```cpp
 const unsigned short& EventId() const;
@@ -157,9 +157,9 @@ const unsigned short& EventId() const;
 
 ### <a name="return-value"></a>Valeur de retour
 
-Numéro qui identifie le type d’événement. Pour obtenir la liste des identificateurs d’événements, consultez [event_id](../c-event-data-types/event-id-enum.md).
+Un numéro qui identifie le type d’événement. Pour une liste d’identifiants d’événements, voir [EVENT_ID](../c-event-data-types/event-id-enum.md).
 
-## <a name="event-instance-id"></a>EventInstanceId
+## <a name="eventinstanceid"></a><a name="event-instance-id"></a>EventInstanceId
 
 ```cpp
 const unsigned long long& EventInstanceId() const;
@@ -167,9 +167,9 @@ const unsigned long long& EventInstanceId() const;
 
 ### <a name="return-value"></a>Valeur de retour
 
-Numéro qui identifie de façon unique l’événement à l’intérieur d’une trace. Cette valeur ne change pas lors de l’analyse ou de la rejournalisation de la même trace plusieurs fois. Utilisez cette valeur pour identifier le même événement dans plusieurs analyses ou dans la journalisation à travers la même trace.
+Un nombre qui identifie uniquement l’événement à l’intérieur d’une trace. Cette valeur ne change pas lors de l’analyse ou de la réinstruisation de la même trace plusieurs fois. Utilisez cette valeur pour identifier le même événement dans plusieurs analyses ou relogging passes sur la même trace.
 
-## <a name="event-name"></a>Protégée
+## <a name="eventname"></a><a name="event-name"></a>Eventname
 
 ```cpp
 const char* EventName() const;
@@ -177,9 +177,9 @@ const char* EventName() const;
 
 ### <a name="return-value"></a>Valeur de retour
 
-Chaîne ANSI contenant le nom du type d’événement identifié par [eventID](#event-id).
+Une chaîne ANSI contenant le nom du type d’événement identifié par [EventId](#event-id).
 
-## <a name="event-wide-name"></a>EventWideName
+## <a name="eventwidename"></a><a name="event-wide-name"></a>EventWideName
 
 ```cpp
 const wchar_t* EventWideName() const;
@@ -187,9 +187,9 @@ const wchar_t* EventWideName() const;
 
 ### <a name="return-value"></a>Valeur de retour
 
-Chaîne étendue contenant le nom du type d’événement identifié par [eventID](#event-id).
+Une large chaîne contenant le nom du type d’événement identifié par [EventId](#event-id).
 
-## <a name="exclusive-cpu-ticks"></a>ExclusiveCPUTicks
+## <a name="exclusivecputicks"></a><a name="exclusive-cpu-ticks"></a>ExclusifCPUTicks
 
 ```cpp
 const long long& ExclusiveCPUTicks() const;
@@ -197,9 +197,9 @@ const long long& ExclusiveCPUTicks() const;
 
 ### <a name="return-value"></a>Valeur de retour
 
-Identique à [CPUTicks](#cpu-ticks), mais n’inclut pas les cycles de processeur qui se sont produits dans les activités enfants.
+Tout comme [CPUTicks](#cpu-ticks), mais sans compter les tiques CPU qui se sont produites dans les activités de l’enfant.
 
-## <a name="exclusive-cpu-time"></a>ExclusiveCPUTime
+## <a name="exclusivecputime"></a><a name="exclusive-cpu-time"></a>ExclusifCPUTime
 
 ```cpp
 std::chrono::nanoseconds ExclusiveCPUTime() const;
@@ -207,9 +207,9 @@ std::chrono::nanoseconds ExclusiveCPUTime() const;
 
 ### <a name="return-value"></a>Valeur de retour
 
-Identique à [CPUTime](#cpu-time), à ceci près que le temps processeur des activités enfants n’est pas inclus.
+Idem pour [CPUTime](#cpu-time), sauf que le temps CPU des activités de l’enfant n’est pas inclus.
 
-## <a name="exclusive-duration"></a>ExclusiveDuration
+## <a name="exclusiveduration"></a><a name="exclusive-duration"></a>ExclusiveDuration
 
 ```cpp
 std::chrono::nanoseconds ExclusiveDuration() const;
@@ -217,9 +217,9 @@ std::chrono::nanoseconds ExclusiveDuration() const;
 
 ### <a name="return-value"></a>Valeur de retour
 
-Durée de l’activité en nanosecondes, sans inclure la durée passée dans les activités enfants.
+La durée de l’activité en nanosecondes, sans compter le temps passé dans les activités des enfants.
 
-## <a name="exclusive-duration-ticks"></a>ExclusiveDurationTicks
+## <a name="exclusivedurationticks"></a><a name="exclusive-duration-ticks"></a>ExclusiveDurationTicks
 
 ```cpp
 const long long& ExclusiveDurationTicks() const;
@@ -227,9 +227,9 @@ const long long& ExclusiveDurationTicks() const;
 
 ### <a name="return-value"></a>Valeur de retour
 
-Nombre de graduations qui se sont produites dans cette activité, à l’exclusion du nombre de graduations qui se sont produites dans les activités enfants.
+Nombre de tiques qui se sont produites dans cette activité, à l’exclusion du nombre de tiques qui se sont produites dans les activités des enfants.
 
-## <a name="exclusive-wall-clock-time-responsibility"></a>ExclusiveWallClockTimeResponsibility
+## <a name="exclusivewallclocktimeresponsibility"></a><a name="exclusive-wall-clock-time-responsibility"></a>ExclusifWallClockTimeResponsibility
 
 ```cpp
 std::chrono::nanoseconds ExclusiveWallClockTimeResponsibility() const;
@@ -237,9 +237,9 @@ std::chrono::nanoseconds ExclusiveWallClockTimeResponsibility() const;
 
 ### <a name="return-value"></a>Valeur de retour
 
-Identique à [WallClockTimeResponsibility](#wall-clock-time-responsibility), mais n’inclut pas la responsabilité du temps horloge des activités enfants.
+Tout comme [WallClockTimeResponsibility](#wall-clock-time-responsibility), mais sans compter la responsabilité temporelle des activités de l’enfant.
 
-## <a name="exclusive-wall-clock-time-responsibility-ticks"></a>ExclusiveWallClockTimeResponsibilityTicks
+## <a name="exclusivewallclocktimeresponsibilityticks"></a><a name="exclusive-wall-clock-time-responsibility-ticks"></a>ExclusifWallClockTimeResponsibilityTicks
 
 ```cpp
 const long long& ExclusiveWallClockTimeResponsibilityTicks() const;
@@ -247,9 +247,9 @@ const long long& ExclusiveWallClockTimeResponsibilityTicks() const;
 
 ### <a name="return-value"></a>Valeur de retour
 
-Identique à [WallClockTimeResponsibilityTicks](#wall-clock-time-responsibility-ticks), mais n’inclut pas les graduations de la responsabilité du temps horloge des activités enfants.
+Comme [WallClockTimeResponsibilityTicks](#wall-clock-time-responsibility-ticks), mais sans compter les tiques de responsabilité de temps de l’horloge murale des activités de l’enfant.
 
-## <a name="process-id"></a>ProcessId
+## <a name="processid"></a><a name="process-id"></a>Processid
 
 ```cpp
 const unsigned long& ProcessId() const;
@@ -257,9 +257,9 @@ const unsigned long& ProcessId() const;
 
 ### <a name="return-value"></a>Valeur de retour
 
-Identificateur du processus dans lequel l’événement s’est produit.
+L’identifiant pour le processus dans lequel l’événement s’est produit.
 
-## <a name="processor-index"></a>ProcessorIndex
+## <a name="processorindex"></a><a name="processor-index"></a>ProcesseurIndex
 
 ```cpp
 const unsigned short& ProcessorIndex() const;
@@ -267,9 +267,9 @@ const unsigned short& ProcessorIndex() const;
 
 ### <a name="return-value"></a>Valeur de retour
 
-Index de base zéro pour le processeur logique sur lequel l’événement s’est produit.
+L’indice zéro pour le processeur logique sur lequel l’événement s’est produit.
 
-## <a name="start-timestamp"></a>StartTimestamp
+## <a name="starttimestamp"></a><a name="start-timestamp"></a>StartTimestamp
 
 ```cpp
 const long long& StartTimestamp() const;
@@ -277,9 +277,9 @@ const long long& StartTimestamp() const;
 
 ### <a name="return-value"></a>Valeur de retour
 
-Valeur de graduation capturée au moment du démarrage de l’activité.
+Une valeur de tique capturée au moment où l’activité a commencé.
 
-## <a name="stop-timestamp"></a>StopTimestamp
+## <a name="stoptimestamp"></a><a name="stop-timestamp"></a>StopTimestamp (StopTimestamp)
 
 ```cpp
 const long long& StopTimestamp() const;
@@ -287,9 +287,9 @@ const long long& StopTimestamp() const;
 
 ### <a name="return-value"></a>Valeur de retour
 
-Valeur de graduation capturée au moment de l’arrêt de l’activité.
+Une valeur de tique capturée au moment où l’activité s’est arrêtée.
 
-## <a name="thread-id"></a>ThreadId
+## <a name="threadid"></a><a name="thread-id"></a>ThreadId (en)
 
 ```cpp
 const unsigned long& ThreadId() const;
@@ -297,9 +297,9 @@ const unsigned long& ThreadId() const;
 
 ### <a name="return-value"></a>Valeur de retour
 
-Identificateur du thread dans lequel l’événement s’est produit.
+L’identifiant pour le fil dans lequel l’événement s’est produit.
 
-## <a name="tick-frequency"></a>TickFrequency
+## <a name="tickfrequency"></a><a name="tick-frequency"></a>TickFrequency (tickFrequency)
 
 ```cpp
 const long long& TickFrequency() const;
@@ -307,9 +307,9 @@ const long long& TickFrequency() const;
 
 ### <a name="return-value"></a>Valeur de retour
 
-Nombre de graduations par seconde à utiliser lors de l’évaluation d’une durée mesurée en graduations pour cet événement.
+Le nombre de tiques par seconde à utiliser lors de l’évaluation d’une durée mesurée en tiques pour cet événement.
 
-## <a name="wall-clock-time-responsibility"></a>WallClockTimeResponsibility
+## <a name="wallclocktimeresponsibility"></a><a name="wall-clock-time-responsibility"></a>WallClockTimeResponsibility
 
 ```cpp
 std::chrono::nanoseconds WallClockTimeResponsibility() const;
@@ -317,9 +317,9 @@ std::chrono::nanoseconds WallClockTimeResponsibility() const;
 
 ### <a name="return-value"></a>Valeur de retour
 
-Responsabilité du temps horloge de cette activité, en nanosecondes. Pour plus d’informations sur la responsabilité du temps à l’heure du mur, consultez [WallClockTimeResponsibilityTicks](#wall-clock-time-responsibility-ticks).
+La responsabilité temporelle de cette activité, en nanosecondes. Pour plus d’informations sur ce que signifie la responsabilité temporelle de l’horloge murale, voir [WallClockTimeResponsibilityTicks](#wall-clock-time-responsibility-ticks).
 
-## <a name="wall-clock-time-responsibility-ticks"></a>WallClockTimeResponsibilityTicks
+## <a name="wallclocktimeresponsibilityticks"></a><a name="wall-clock-time-responsibility-ticks"></a>WallClockTimeResponsibilityTicks
 
 ```cpp
 const long long& WallClockTimeResponsibilityTicks() const;
@@ -327,6 +327,6 @@ const long long& WallClockTimeResponsibilityTicks() const;
 
 ### <a name="return-value"></a>Valeur de retour
 
-Nombre de cycles qui représente la contribution de cette activité à l’heure d’horloge globale. Un cycle de responsabilité de l’heure du mur est différent d’un battement normal. La responsabilité de l’horloge du mur prend en compte le parallélisme entre les activités. Deux activités parallèles peuvent avoir une durée de 50 cycles et la même heure de début et de fin. Dans ce cas, tous deux reçoivent une responsabilité de temps horloge de 25 battements.
+Un nombre de tiques qui représente la contribution de cette activité à l’heure globale de l’horloge murale. Une tique de responsabilité temporelle de l’horloge murale est différente d’une tique régulière. Les tiques de temps de l’horloge de mur tiennent compte du parallélisme entre les activités. Deux activités parallèles peuvent avoir une durée de 50 tiques et le même temps de départ et d’arrêt. Dans ce cas, les deux se voient attribuer une responsabilité de temps d’horloge murale de 25 tiques.
 
 ::: moniker-end

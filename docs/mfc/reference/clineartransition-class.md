@@ -14,12 +14,12 @@ helpviewer_keywords:
 - CLinearTransition [MFC], m_dblFinalValue
 - CLinearTransition [MFC], m_duration
 ms.assetid: 7fcb2dba-beb8-4933-9f5d-3b7fb1585ef0
-ms.openlocfilehash: 1a6348d1afd0117683bd31af61324b14e16f710c
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: 1d3bc50255dae93bfa80e8212c2349db66db4eb6
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69505740"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81372279"
 ---
 # <a name="clineartransition-class"></a>CLinearTransition, classe
 
@@ -43,18 +43,18 @@ class CLinearTransition : public CBaseTransition;
 
 |Nom|Description|
 |----------|-----------------|
-|[CLinearTransition::Create](#create)|Appelle la bibliothèque de transition pour créer l’objet COM de transition encapsulé. (Substitue [CBaseTransition:: Create](../../mfc/reference/cbasetransition-class.md#create).)|
+|[CLinearTransition::Créer](#create)|Appelle la bibliothèque de transition pour créer un objet COM de transition encapsulé. (Overrides [CBaseTransition::Créer](../../mfc/reference/cbasetransition-class.md#create).)|
 
 ### <a name="public-data-members"></a>Membres de données publics
 
 |Nom|Description|
 |----------|-----------------|
-|[CLinearTransition::m_dblFinalValue](#m_dblfinalvalue)|Valeur de la variable d’animation à la fin de la transition.|
-|[CLinearTransition::m_duration](#m_duration)|Durée de la transition.|
+|[CLinearTransition::m_dblFinalValue](#m_dblfinalvalue)|La valeur de la variable d’animation à la fin de la transition.|
+|[CLinearTransition::m_duration](#m_duration)|La durée de la transition.|
 
 ## <a name="remarks"></a>Notes
 
-Pendant une transition linéaire, la valeur de la variable d’animation passe de manière linéaire de sa valeur initiale à une valeur finale spécifiée. Étant donné que toutes les transitions sont automatiquement désactivées, il est recommandé de les allouer à l’aide de operator new. L’objet COM IUIAnimationTransition encapsulé est créé par CAnimationController:: AnimateGroup, jusqu’à ce qu’il soit NULL. La modification des variables membres après la création de cet objet COM n’a aucun effet.
+Au cours d’une transition linéaire, la valeur de la variable d’animation passe linéairement de sa valeur initiale à une valeur finale spécifiée. Étant donné que toutes les transitions sont effacées automatiquement, il est recommandé de les répartir à l’aide de l’opérateur nouveau. L’objet IUIAnimationTransition COM encapsulé est créé par CAnimationController::AnimateGroup, jusque-là c’est NULL. Changer les variables des membres après la création de cet objet COM n’a aucun effet.
 
 ## <a name="inheritance-hierarchy"></a>Hiérarchie d'héritage
 
@@ -62,13 +62,13 @@ Pendant une transition linéaire, la valeur de la variable d’animation passe d
 
 [CBaseTransition](../../mfc/reference/cbasetransition-class.md)
 
-[CLinearTransition](../../mfc/reference/clineartransition-class.md)
+[CLinearTransition (en)](../../mfc/reference/clineartransition-class.md)
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
 **En-tête :** afxanimationcontroller.h
 
-##  <a name="clineartransition"></a>  CLinearTransition::CLinearTransition
+## <a name="clineartransitionclineartransition"></a><a name="clineartransition"></a>CLinearTransition::CLinearTransition
 
 Construit un objet de transition linéaire et l’initialise avec la durée et la valeur finale.
 
@@ -80,15 +80,15 @@ CLinearTransition(
 
 ### <a name="parameters"></a>Paramètres
 
-*duration*<br/>
-Durée de la transition.
+*Durée*<br/>
+La durée de la transition.
 
-*dblFinalValue*<br/>
-Valeur de la variable d’animation à la fin de la transition.
+*dblFinalValue (en)*<br/>
+La valeur de la variable d’animation à la fin de la transition.
 
-##  <a name="create"></a>  CLinearTransition::Create
+## <a name="clineartransitioncreate"></a><a name="create"></a>CLinearTransition::Créer
 
-Appelle la bibliothèque de transition pour créer l’objet COM de transition encapsulé.
+Appelle la bibliothèque de transition pour créer un objet COM de transition encapsulé.
 
 ```
 virtual BOOL Create(
@@ -98,24 +98,24 @@ virtual BOOL Create(
 
 ### <a name="parameters"></a>Paramètres
 
-*pLibrary*<br/>
-Pointeur vers une [interface IUIAnimationTransitionLibrary](/windows/win32/api/uianimation/nn-uianimation-iuianimationtransitionlibrary), qui définit une bibliothèque de transitions standard.
+*pLibraire*<br/>
+Un pointeur à une [interface IUIAnimationTransitionLibrary](/windows/win32/api/uianimation/nn-uianimation-iuianimationtransitionlibrary), qui définit une bibliothèque de transitions standard.
 
 ### <a name="return-value"></a>Valeur de retour
 
-TRUE si la transition est créée avec succès; Sinon, FALSe.
+VRAI si la transition est créée avec succès; autrement FALSE.
 
-##  <a name="m_dblfinalvalue"></a>  CLinearTransition::m_dblFinalValue
+## <a name="clineartransitionm_dblfinalvalue"></a><a name="m_dblfinalvalue"></a>CLinearTransition::m_dblFinalValue
 
-Valeur de la variable d’animation à la fin de la transition.
+La valeur de la variable d’animation à la fin de la transition.
 
 ```
 DOUBLE m_dblFinalValue;
 ```
 
-##  <a name="m_duration"></a>  CLinearTransition::m_duration
+## <a name="clineartransitionm_duration"></a><a name="m_duration"></a>CLinearTransition::m_duration
 
-Durée de la transition.
+La durée de la transition.
 
 ```
 UI_ANIMATION_SECONDS m_duration;

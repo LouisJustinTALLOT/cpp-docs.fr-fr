@@ -8,29 +8,29 @@ helpviewer_keywords:
 - casting types [MFC]
 - macros [MFC], casting pointers
 ms.assetid: e138465e-c35f-4e84-b788-bd200ccf2f0e
-ms.openlocfilehash: c7586f3c3f3aefd78fa868cc847df27e8aac58ab
-ms.sourcegitcommit: 934cb53fa4cb59fea611bfeb9db110d8d6f7d165
+ms.openlocfilehash: 953acc32c3510b31c265f2d64d0a013f6dee06cc
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65611646"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81372893"
 ---
 # <a name="type-casting-of-mfc-class-objects"></a>Cast de type des objets de classe MFC
 
-Macros de conversion de type permettent d’effectuer un cast de pointeur donné vers un pointeur qui pointe vers un objet de classe spécifique, avec ou sans vérifier que le cast est autorisé.
+Les macros de coulée de type fournissent un moyen de jeter un pointeur donné à un pointeur qui pointe vers un objet de classe spécifique, avec ou sans vérifier que le casting est légal.
 
-Le tableau suivant répertorie les macros de conversion de type MFC.
+Le tableau suivant répertorie les macros de coulée de type MFC.
 
-### <a name="macros-that-cast-pointers-to-mfc-class-objects"></a>Macros casté pointeurs vers des objets de classe MFC
+### <a name="macros-that-cast-pointers-to-mfc-class-objects"></a>Macros qui jettent des pointeurs aux objets de classe MFC
 
 |||
 |-|-|
-|[DYNAMIC_DOWNCAST](#dynamic_downcast)|Convertit un pointeur vers un pointeur vers un objet de classe lors de la vérification pour voir si le cast est valide.|
-|[STATIC_DOWNCAST](#static_downcast)|Convertit un pointeur vers un objet d’une classe à un pointeur d’un type connexe. Dans une version debug, provoque une assertion si l’objet n’est pas un « type de » le type de cible.|
+|[DYNAMIC_DOWNCAST](#dynamic_downcast)|Lance un pointeur à un pointeur à un objet de classe tout en vérifiant si le casting est légal.|
+|[STATIC_DOWNCAST](#static_downcast)|Lance un pointeur à un objet d’une classe à un pointeur d’un type connexe. Dans une construction de débaillement, provoque un ASSERT si l’objet n’est pas un "type" du type cible.|
 
-##  <a name="dynamic_downcast"></a>  DYNAMIC_DOWNCAST
+## <a name="dynamic_downcast"></a><a name="dynamic_downcast"></a>DYNAMIC_DOWNCAST
 
-Vous permet d’effectuer un cast d’un pointeur vers un pointeur vers un objet de classe lors de la vérification pour voir si le cast est valide.
+Fournit un moyen pratique de jeter un pointeur à un pointeur à un objet de classe tout en vérifiant si le casting est légal.
 
 ```
 DYNAMIC_DOWNCAST(class, pointer)
@@ -39,20 +39,20 @@ DYNAMIC_DOWNCAST(class, pointer)
 ### <a name="parameters"></a>Paramètres
 
 *class*<br/>
-Le nom d’une classe.
+Nom d'une classe.
 
-*pointer*<br/>
-Un pointeur à être casté en un pointeur vers un objet de type *classe*.
+*pointeur*<br/>
+Un pointeur à jeter à un pointeur à un objet de *classe*de type .
 
 ### <a name="remarks"></a>Notes
 
-La macro chargé de convertir le *pointeur* paramètre à un pointeur vers un objet de la *classe* type du paramètre.
+La macro jettera le *paramètre de pointeur* à un pointeur à un objet du type de paramètre de *classe.*
 
-Si l’objet référencé par le pointeur est un « type de » la classe identifiée, la macro retourne le pointeur approprié. Si elle n’est pas un cast légal, la macro retourne la valeur NULL.
+Si l’objet référencé par le pointeur est une «sorte de» la classe identifiée, la macro renvoie le pointeur approprié. S’il ne s’agit pas d’un casting juridique, la macro retourne NULL.
 
-##  <a name="static_downcast"></a>  STATIC_DOWNCAST
+## <a name="static_downcast"></a><a name="static_downcast"></a>STATIC_DOWNCAST
 
-Les casts *pobject* vers un autre pointeur vers un *class_name* objet.
+Lance *pobject* à un pointeur à un *objet class_name.*
 
 ```
 STATIC_DOWNCAST(class_name, pobject)
@@ -61,22 +61,22 @@ STATIC_DOWNCAST(class_name, pobject)
 ### <a name="parameters"></a>Paramètres
 
 *class_name*<br/>
-Le nom de la classe en cours de conversion.
+Le nom de la classe étant jeté à.
 
 *pobject*<br/>
-Le pointeur à être casté en un pointeur vers un *class_name* objet.
+Le pointeur à jeter à un pointeur à un *objet class_name.*
 
 ### <a name="remarks"></a>Notes
 
-*pObject* doit avoir la valeur NULL, soit pointer vers un objet d’une classe dérivée directement ou indirectement, à partir de *class_name*. Dans les versions de votre application avec le symbole de préprocesseur _DEBUG défini, la macro DÉCLARERA si *pobject* n’est pas NULL, ou s’il pointe vers un objet qui n’est pas un « type de » la classe spécifiée dans le *class_name*paramètre (voir [CObject::IsKindOf](../../mfc/reference/cobject-class.md#iskindof)). Non- **_DEBUG** builds, la macro effectue le cast sans vérification de type.
+*pobject* doit soit être NULL, soit pointer vers un objet d’une classe qui est dérivé directement, ou indirectement, de *class_name*. Dans les builds de votre application avec le symbole _DEBUG préprocesseur défini, la macro assert si *pobject* n’est pas NULL, ou si elle pointe vers un objet qui n’est pas un "type de" la classe spécifiée dans le *paramètre class_name* (voir [CObject::IsKindOf](../../mfc/reference/cobject-class.md#iskindof)). Dans les constructions non **_DEBUG,** la macro effectue le casting sans aucune vérification de type.
 
-La classe spécifiée dans le *class_name* paramètre doit être dérivé `CObject` et doit utiliser le DECLARE_DYNAMIC et IMPLEMENT_DYNAMIC, macros DECLARE_DYNCREATE et IMPLEMENT_DYNCREATE, ou DECLARE_SERIAL et IMPLEMENT_ Macros de série comme expliqué dans l’article [classe CObject : Dérivation d’une classe de CObject](../../mfc/deriving-a-class-from-cobject.md).
+La classe spécifiée dans *le* class_name paramètre doit être dérivée `CObject` et doit utiliser le DECLARE_DYNAMIC et IMPLEMENT_DYNAMIC, le DECLARE_DYNCREATE et le IMPLEMENT_DYNCREATE, ou les macros DECLARE_SERIAL et IMPLEMENT_SERIAL comme expliqué dans l’article [CObject Class: Deriving a Class from CObject](../../mfc/deriving-a-class-from-cobject.md).
 
-Par exemple, vous pouvez caster un pointeur vers `CMyDoc`, appelé `pMyDoc`, vers un autre pointeur vers `CDocument` à l’aide de cette expression :
+Par exemple, vous pouvez `CMyDoc`lancer `pMyDoc`un pointeur `CDocument` à , appelé , à un pointeur à l’aide de cette expression:
 
 [!code-cpp[NVC_MFCDocView#197](../../mfc/codesnippet/cpp/type-casting-of-mfc-class-objects_1.cpp)]
 
-Si `pMyDoc` ne pointe pas vers un objet dérivé directement ou indirectement de `CDocument`, la macro DÉCLARERA.
+Si `pMyDoc` ne pointe pas un objet dérivé `CDocument`directement ou indirectement de , la macro assert.
 
 ## <a name="see-also"></a>Voir aussi
 

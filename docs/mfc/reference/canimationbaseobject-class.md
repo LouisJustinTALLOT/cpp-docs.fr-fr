@@ -50,12 +50,12 @@ helpviewer_keywords:
 - CAnimationBaseObject [MFC], m_nObjectID
 - CAnimationBaseObject [MFC], m_pParentController
 ms.assetid: 76b25917-940e-4eba-940f-31d270702603
-ms.openlocfilehash: e9c5ed98d654eb37be7ab8523d44c9da6eecd9c7
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 9581ea142c6f87ae12665374a483abc00763ad97
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62152629"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81371124"
 ---
 # <a name="canimationbaseobject-class"></a>CAnimationBaseObject, classe
 
@@ -74,47 +74,47 @@ class CAnimationBaseObject : public CObject;
 |Nom|Description|
 |----------|-----------------|
 |[CAnimationBaseObject::CAnimationBaseObject](#canimationbaseobject)|Surchargé. Construit un objet d’animation.|
-|[CAnimationBaseObject::~CAnimationBaseObject](#_dtorcanimationbaseobject)|Destructeur. Appelé lorsqu’un objet d’animation est détruit.|
+|[CAnimationBaseObject::CAnimationBaseObject](#_dtorcanimationbaseobject)|Destructeur. Appelé quand un objet d’animation est détruit.|
 
 ### <a name="public-methods"></a>M&#233;thodes publiques
 
 |Nom|Description|
 |----------|-----------------|
-|[CAnimationBaseObject::ApplyTransitions](#applytransitions)|Ajoute des transitions storyboard avec une variable d’animation encapsulée.|
+|[CAnimationBaseObject::ApplyTransitions](#applytransitions)|Ajoute des transitions au storyboard avec variable d’animation encapsulée.|
 |[CAnimationBaseObject::ClearTransitions](#cleartransitions)|Supprime toutes les transitions connexes.|
-|[CAnimationBaseObject::ContainsVariable](#containsvariable)|Détermine si un objet d’animation contient une variable de l’animation particulier.|
+|[CAnimationBaseObject::ContainsVariable](#containsvariable)|Détermine si un objet d’animation contient une variable d’animation particulière.|
 |[CAnimationBaseObject::CreateTransitions](#createtransitions)|Crée des transitions associées à un objet d’animation.|
-|[CAnimationBaseObject::DetachFromController](#detachfromcontroller)|Détache un objet d’animation à partir du contrôleur de l’animation parent.|
-|[CAnimationBaseObject::EnableIntegerValueChangedEvent](#enableintegervaluechangedevent)|Définit la valeur de type entier modifié Gestionnaire d’événements.|
-|[CAnimationBaseObject::EnableValueChangedEvent](#enablevaluechangedevent)|Définit la valeur modifiée Gestionnaire d’événements.|
-|[CAnimationBaseObject::GetAutodestroyTransitions](#getautodestroytransitions)|Indique si une transition connexe sont automatiquement détruits.|
-|[CAnimationBaseObject::GetGroupID](#getgroupid)|Retourne l’ID du groupe actuel.|
-|[CAnimationBaseObject::GetObjectID](#getobjectid)|Retourne l’ID d’objet en cours.|
-|[CAnimationBaseObject::GetUserData](#getuserdata)|Renvoie des données définies par l’utilisateur.|
-|[CAnimationBaseObject::SetAutodestroyTransitions](#setautodestroytransitions)|Définit un indicateur pour détruire automatiquement les transitions.|
-|[CAnimationBaseObject::SetID](#setid)|Définit les nouveaux ID.|
-|[CAnimationBaseObject::SetUserData](#setuserdata)|Données définies par l’utilisateur de jeux.|
+|[CAnimationBaseObject::Dentrétroir](#detachfromcontroller)|Détache un objet d’animation du contrôleur d’animation parent.|
+|[CAnimationBaseObject::EnableIntegerValueChangedEvent](#enableintegervaluechangedevent)|Met en place integer Value Changed gestionnaire d’événements.|
+|[CAnimationBaseObject::EnableValueChangedEvent](#enablevaluechangedevent)|Définit le gestionnaire d’événements Value Changed.|
+|[CAnimationBaseObject::GetAutodestroyTransitions](#getautodestroytransitions)|Indique si la transition connexe est détruite automatiquement.|
+|[CAnimationBaseObject::GetGroupID](#getgroupid)|Retourne l’ID de groupe actuel.|
+|[CAnimationBaseObject::GetObjectID](#getobjectid)|Retourne l’ID d’objet actuel.|
+|[CAnimationBaseObject::GetUserData](#getuserdata)|Retourne les données définies par l’utilisateur.|
+|[CAnimationBaseObject::SetAutodestroyTransitions](#setautodestroytransitions)|Définit un drapeau pour détruire automatiquement les transitions.|
+|[CAnimationBaseObject::SetID](#setid)|Définit de nouvelles adresses d’adresses d’ensemble.|
+|[CAnimationBaseObject::SetUserData](#setuserdata)|Définit les données définies par l’utilisateur.|
 
 ### <a name="protected-methods"></a>Méthodes protégées
 
 |Nom|Description|
 |----------|-----------------|
-|[CAnimationBaseObject::GetAnimationVariableList](#getanimationvariablelist)|Collecte des pointeurs aux variables d’animation de relation contenant-contenu.|
-|[CAnimationBaseObject::SetParentAnimationObjects](#setparentanimationobjects)|Établit la relation entre les variables d’animation, contenues dans un objet d’animation et leur conteneur.|
+|[CAnimationBaseObject::GetAnimationVariableList](#getanimationvariablelist)|Collecte des indications pour contenir les variables d’animation.|
+|[CAnimationBaseObject::SetParentAnimationObjects](#setparentanimationobjects)|Établit la relation entre les variables d’animation, contenues dans un objet d’animation, et leur conteneur.|
 
 ### <a name="protected-data-members"></a>Membres de données protégés
 
 |Nom|Description|
 |----------|-----------------|
-|[CAnimationBaseObject::m_bAutodestroyTransitions](#m_bautodestroytransitions)|Spécifie si les transitions connexes doivent être automatiquement détruites.|
-|[CAnimationBaseObject::m_dwUserData](#m_dwuserdata)|Stocke les données définies par l’utilisateur.|
+|[CAnimationBaseObject::m_bAutodestroyTransitions](#m_bautodestroytransitions)|Précise si les transitions connexes doivent être automatiquement détruites.|
+|[CAnimationBaseObject::m_dwUserData](#m_dwuserdata)|Stocke les données définies par les utilisateurs.|
 |[CAnimationBaseObject::m_nGroupID](#m_ngroupid)|Spécifie l’ID de groupe de l’objet d’animation.|
-|[CAnimationBaseObject::m_nObjectID](#m_nobjectid)|Spécifie l’ID d’objet de l’objet d’animation.|
-|[CAnimationBaseObject::m_pParentController](#m_pparentcontroller)|Pointeur vers le contrôleur de l’animation parent.|
+|[CAnimationBaseObject::m_nObjectID](#m_nobjectid)|Spécifie l’id d’objet de l’objet d’animation.|
+|[CAnimationBaseObject::m_pParentController](#m_pparentcontroller)|Un pointeur pour le contrôleur d’animation parent.|
 
 ## <a name="remarks"></a>Notes
 
-Cette classe implémente les méthodes de base pour tous les objets d’animation. Un objet d’animation peut représenter une valeur, le point, la taille, la rectangle ou la couleur dans une application, ainsi que toute entité personnalisée. Objets d’animation sont stockés dans des groupes d’animation (voir CAnimationGroup). Chaque groupe peut être animé séparément et peut être traité comme une analogie de la table de montage séquentiel. Un objet d’animation encapsule une ou plusieurs variables d’animation (voir CAnimationVariable), en fonction de sa représentation sous forme logique. Par exemple, CAnimationRect contient quatre variables d’animation - une variable pour chaque côté du rectangle. Chaque classe d’objet animation expose la méthode AddTransition surchargée, qui doit être utilisé pour appliquer des transitions à des variables de l’animation encapsulée. Un objet d’animation peut être identifié par l’ID d’objet (éventuellement) et par ID de groupe. Un ID de groupe est nécessaire pour placer un objet d’animation à un groupe approprié, mais si un ID de groupe n’est pas spécifié, un objet est placé dans le groupe par défaut avec l’ID 0. Si vous appelez SetID avec un GroupID différent, un objet d’animation doit être déplacé vers un autre groupe (un nouveau groupe est créé si nécessaire).
+Cette classe met en œuvre des méthodes de base pour tous les objets d’animation. Un objet d’animation peut représenter une valeur, un point, une taille, un rectangle ou une couleur dans une application, ainsi que n’importe quelle entité personnalisée. Les objets d’animation sont stockés dans des groupes d’animation (voir CAnimationGroup). Chaque groupe peut être animé séparément et peut être traité comme un analogue de storyboard. Un objet d’animation résume une ou plusieurs variables d’animation (voir CAnimationVariable), en fonction de sa représentation logique. Par exemple, CAnimationRect contient quatre variables d’animation - une variable pour chaque côté du rectangle. Chaque classe d’objets d’animation expose la méthode AddTransition surchargée, qui doit être utilisée pour appliquer des transitions vers des variables d’animation encapsulées. Un objet d’animation peut être identifié par Object ID (optionnellement) et par ID de groupe. Une pièce d’identité de groupe est nécessaire pour placer un objet d’animation pour corriger le groupe, mais si un ID de groupe n’est pas spécifié, un objet est placé dans le groupe par défaut avec ID 0. Si vous appelez SetID avec différents GroupID, un objet d’animation sera déplacé vers un autre groupe (un nouveau groupe est créé si nécessaire).
 
 ## <a name="inheritance-hierarchy"></a>Hiérarchie d'héritage
 
@@ -122,21 +122,21 @@ Cette classe implémente les méthodes de base pour tous les objets d’animatio
 
 `CAnimationBaseObject`
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
 **En-tête :** afxanimationcontroller.h
 
-##  <a name="_dtorcanimationbaseobject"></a>  CAnimationBaseObject::~CAnimationBaseObject
+## <a name="canimationbaseobjectcanimationbaseobject"></a><a name="_dtorcanimationbaseobject"></a>CAnimationBaseObject::CAnimationBaseObject
 
-Destructeur. Appelé lorsqu’un objet d’animation est détruit.
+Destructeur. Appelé quand un objet d’animation est détruit.
 
 ```
 virtual ~CAnimationBaseObject();
 ```
 
-##  <a name="applytransitions"></a>  CAnimationBaseObject::ApplyTransitions
+## <a name="canimationbaseobjectapplytransitions"></a><a name="applytransitions"></a>CAnimationBaseObject::ApplyTransitions
 
-Ajoute des transitions storyboard avec une variable d’animation encapsulée.
+Ajoute des transitions au storyboard avec variable d’animation encapsulée.
 
 ```
 virtual BOOL ApplyTransitions(
@@ -146,21 +146,21 @@ virtual BOOL ApplyTransitions(
 
 ### <a name="parameters"></a>Paramètres
 
-*pStoryboard*<br/>
-Pointeur vers une table de montage séquentiel.
+*pStoryboard (en)*<br/>
+Un pointeur à un storyboard.
 
 *bDependOnKeyframes*<br/>
-Si la valeur est FALSE, cette méthode ajoute uniquement les transitions qui ne dépendent pas des images clés.
+Lorsque FALSE, cette méthode ajoute seulement les transitions qui ne dépendent pas des cadres clés.
 
 ### <a name="return-value"></a>Valeur de retour
 
-TRUE si les transitions ont été ajoutées avec succès.
+VRAI si les transitions ont été ajoutées avec succès.
 
 ### <a name="remarks"></a>Notes
 
-Ajoute des transitions connexes qui ont été ajoutées avec AddTransition (méthodes surchargées dans les classes dérivées), au storyboard.
+Ajoute des transitions connexes, qui ont été ajoutées avec AddTransition (méthodes surchargées dans les classes dérivées), au storyboard.
 
-##  <a name="canimationbaseobject"></a>  CAnimationBaseObject::CAnimationBaseObject
+## <a name="canimationbaseobjectcanimationbaseobject"></a><a name="canimationbaseobject"></a>CAnimationBaseObject::CAnimationBaseObject
 
 Construit un objet d’animation.
 
@@ -175,20 +175,20 @@ CAnimationBaseObject(
 
 ### <a name="parameters"></a>Paramètres
 
-*nGroupID*<br/>
-Spécifie l’ID de groupe.
+*nGroupID (en anglais)*<br/>
+Spécifie l’ID du groupe.
 
-*nObjectID*<br/>
-Spécifie l’ID d’objet.
+*nObjectID (nObjectID)*<br/>
+Spécifie l’id d’objet.
 
 *dwUserData*<br/>
-Données utilisateur, qui peuvent être associées à l’objet d’animation et récupérées ultérieurement lors de l’exécution.
+Données définies par l’utilisateur, qui peuvent être associées à l’objet d’animation et récupérées plus tard au moment de l’exécution.
 
 ### <a name="remarks"></a>Notes
 
-Construit un objet d’animation et assigne des ID d’objet par défaut (0) et l’ID de groupe (0).
+Construit un objet d’animation et assigne l’id d’objet par défaut (0) et l’ID de groupe (0).
 
-##  <a name="cleartransitions"></a>  CAnimationBaseObject::ClearTransitions
+## <a name="canimationbaseobjectcleartransitions"></a><a name="cleartransitions"></a>CAnimationBaseObject::ClearTransitions
 
 Supprime toutes les transitions connexes.
 
@@ -199,15 +199,15 @@ virtual void ClearTransitions(BOOL bAutodestroy);
 ### <a name="parameters"></a>Paramètres
 
 *bAutodestroy*<br/>
-Spécifie s’il faut détruire automatiquement les objets de transition ou juste les supprimer de la liste associée.
+Précise s’il faut détruire automatiquement des objets de transition, ou simplement les supprimer de la liste connexe.
 
 ### <a name="remarks"></a>Notes
 
-Supprime toutes les transitions et les détruit si l’indicateur bAutodestroy ou m_bAutodestroyTransitions a la valeur TRUE. Transitions doivent être détruites automatiquement uniquement si elles ne sont pas alloués sur la pile. Si les indicateurs ci-dessus ont la valeur FALSE, transitions sont simplement supprimées dans la liste interne des transitions connexes.
+Supprime toutes les transitions connexes et les détruit si bAutodestroy ou m_bAutodestroyTransitions drapeau est VRAI. Les transitions ne doivent être détruites automatiquement que si elles ne sont pas réparties sur la pile. Si les drapeaux ci-dessus sont FALSE, les transitions sont simplement supprimées de la liste interne des transitions connexes.
 
-##  <a name="containsvariable"></a>  CAnimationBaseObject::ContainsVariable
+## <a name="canimationbaseobjectcontainsvariable"></a><a name="containsvariable"></a>CAnimationBaseObject::ContainsVariable
 
-Détermine si un objet d’animation contient une variable de l’animation particulier.
+Détermine si un objet d’animation contient une variable d’animation particulière.
 
 ```
 virtual BOOL ContainsVariable(IUIAnimationVariable* pVariable);
@@ -216,17 +216,17 @@ virtual BOOL ContainsVariable(IUIAnimationVariable* pVariable);
 ### <a name="parameters"></a>Paramètres
 
 *pVariable*<br/>
-Pointeur vers la variable de l’animation.
+Un pointeur à la variable d’animation.
 
 ### <a name="return-value"></a>Valeur de retour
 
-TRUE si la variable de l’animation est contenue dans l’objet d’animation. Sinon, FALSE.
+VRAI si la variable d’animation est contenue dans l’objet d’animation; autrement FALSE.
 
 ### <a name="remarks"></a>Notes
 
-Cette méthode peut être utilisée pour déterminer si une variable d’animation spécifiée par pVariable est contenue dans un objet d’animation. Un objet d’animation, selon son type, peut contenir plusieurs variables d’animation. Par exemple, CAnimationColor contient trois variables, une pour chaque composant de couleur (rouge, vert et bleu). Lorsqu’une valeur de variable de l’animation a changé, l’API Windows Animation envoie des événements ValueChanged ou IntegerValueChanged (si activé) et le paramètre de cet événement est un pointeur vers l’interface IUIAnimationVariable de variable de l’animation. Cette méthode permet d’obtenir un pointeur à l’animation d’un pointeur vers l’objet COM contenu.
+Cette méthode peut être utilisée pour déterminer si une variable d’animation spécifiée par pVariable est contenue dans un objet d’animation. Un objet d’animation, selon son type, peut contenir plusieurs variables d’animation. Par exemple, CAnimationColor contient trois variables, une pour chaque composant de couleur (rouge, vert et bleu). Lorsqu’une variable d’animation a changé, Windows Animation API envoie des événements ValueChanged ou IntegerValueChanged (si activé), et le paramètre de cet événement est un pointeur pour interfacer IUIAnimationVariable de variable d’animation. Cette méthode permet d’obtenir un pointeur à l’animation à partir d’un pointeur à contenu objet COM.
 
-##  <a name="createtransitions"></a>  CAnimationBaseObject::CreateTransitions
+## <a name="canimationbaseobjectcreatetransitions"></a><a name="createtransitions"></a>CAnimationBaseObject::CreateTransitions
 
 Crée des transitions associées à un objet d’animation.
 
@@ -236,15 +236,15 @@ BOOL CreateTransitions();
 
 ### <a name="return-value"></a>Valeur de retour
 
-TRUE si les transitions ont été créées avec succès ; Sinon, FALSE.
+VRAI si les transitions ont été créées avec succès; autrement FALSE.
 
 ### <a name="remarks"></a>Notes
 
-Effectue une itération sur la liste des variables d’animation encapsulées dans un objet d’animation dérivé et crée des transitions associées à chaque variable de l’animation.
+Boucles sur la liste des variables d’animation encapsulées dans un objet d’animation dérivé et crée des transitions associées à chaque variable d’animation.
 
-##  <a name="detachfromcontroller"></a>  CAnimationBaseObject::DetachFromController
+## <a name="canimationbaseobjectdetachfromcontroller"></a><a name="detachfromcontroller"></a>CAnimationBaseObject::Dentrétroir
 
-Détache un objet d’animation à partir du contrôleur de l’animation parent.
+Détache un objet d’animation du contrôleur d’animation parent.
 
 ```
 void DetachFromController();
@@ -254,9 +254,9 @@ void DetachFromController();
 
 Cette méthode est utilisée en interne.
 
-##  <a name="enableintegervaluechangedevent"></a>  CAnimationBaseObject::EnableIntegerValueChangedEvent
+## <a name="canimationbaseobjectenableintegervaluechangedevent"></a><a name="enableintegervaluechangedevent"></a>CAnimationBaseObject::EnableIntegerValueChangedEvent
 
-Définit la valeur de type entier modifié Gestionnaire d’événements.
+Met en place integer Value Changed gestionnaire d’événements.
 
 ```
 virtual void EnableIntegerValueChangedEvent(
@@ -267,18 +267,18 @@ virtual void EnableIntegerValueChangedEvent(
 ### <a name="parameters"></a>Paramètres
 
 *pController*<br/>
-Pointeur vers un contrôleur parent.
+Un pointeur pour un contrôleur parent.
 
 *bEnable*<br/>
-Spécifie s’il faut activer ou désactiver l’événement de modification de valeur d’entier.
+Précise s’il faut activer ou désactiver l’événement Integer Value Changed.
 
 ### <a name="remarks"></a>Notes
 
-Si le Gestionnaire d’événements valeur de type entier modifié est activé, vous pouvez gérer cet événement dans la méthode CAnimationController::OnAnimationIntegerValueChanged, qui doit être substituée dans une classe dérivée de CAnimationController. Cette méthode est appelée chaque fois que la valeur d’entier de l’animation a changé.
+Si le gestionnaire d’événements Integer Value Changed est activé, vous pouvez gérer cet événement dans CAnimationController::OnAnimationIntegerValueLa méthode, qui devrait être remplacée dans une classe dérivée de CAnimationController. Cette méthode est appelée chaque fois que la valeur de l’intégration d’animation a changé.
 
-##  <a name="enablevaluechangedevent"></a>  CAnimationBaseObject::EnableValueChangedEvent
+## <a name="canimationbaseobjectenablevaluechangedevent"></a><a name="enablevaluechangedevent"></a>CAnimationBaseObject::EnableValueChangedEvent
 
-Définit la valeur modifiée Gestionnaire d’événements.
+Définit le gestionnaire d’événements Value Changed.
 
 ```
 virtual void EnableValueChangedEvent(
@@ -289,18 +289,18 @@ virtual void EnableValueChangedEvent(
 ### <a name="parameters"></a>Paramètres
 
 *pController*<br/>
-Pointeur vers un contrôleur parent.
+Un pointeur pour un contrôleur parent.
 
 *bEnable*<br/>
-Spécifie s’il faut activer ou désactiver l’événement de modification de valeur.
+Précise s’il faut activer ou désactiver l’événement Value Changed.
 
 ### <a name="remarks"></a>Notes
 
-Si le Gestionnaire d’événements valeur modifiée est activé, vous pouvez gérer cet événement dans la méthode CAnimationController::OnAnimationValueChanged, qui doit être substituée dans une classe dérivée de CAnimationController. Cette méthode est appelée chaque fois que la valeur de l’animation a changé.
+Si le gestionnaire d’événements Value Changed est activé, vous pouvez gérer cet événement dans CAnimationController::OnAnimationValueLa méthode, qui doit être remplacée dans une classe dérivée de CAnimationController. Cette méthode est appelée chaque fois que la valeur d’animation a changé.
 
-##  <a name="getanimationvariablelist"></a>  CAnimationBaseObject::GetAnimationVariableList
+## <a name="canimationbaseobjectgetanimationvariablelist"></a><a name="getanimationvariablelist"></a>CAnimationBaseObject::GetAnimationVariableList
 
-Collecte des pointeurs aux variables d’animation de relation contenant-contenu.
+Collecte des indications pour contenir les variables d’animation.
 
 ```
 virtual void GetAnimationVariableList(
@@ -310,16 +310,16 @@ virtual void GetAnimationVariableList(
 
 ### <a name="parameters"></a>Paramètres
 
-*liste*<br/>
-Une liste qui doit être remplie avec les variables d’animation contenues dans un objet d’animation.
+*list*<br/>
+Une liste qui doit être remplie de variables d’animation contenues dans un objet d’animation.
 
 ### <a name="remarks"></a>Notes
 
-Cette méthode virtuelle pure doit être substituée dans une classe dérivée. Un objet d’animation, selon son type, contient une ou plusieurs variables d’animation. Par exemple, CAnimationPoint contient deux variables, pour les coordonnées X et Y respectivement. La classe de base CAnimationBaseObject implémente certaines méthodes génériques qui agissent sur une liste de variables d’animation : ApplyTransitions, ClearTransitions, EnableValueChangedEvent, EnableIntegerValueChangedEvent. Ces méthodes appellent GetAnimationVariableList, qui est remplie avec des variables d’animation réelle contenues dans un objet d’animation particulier dans une classe dérivée, puis une boucle sur la liste et effectuer les actions nécessaires. Si vous créez un objet d’animation personnalisée, vous devez ajouter à *liste* toutes les variables d’animation contenues dans cet objet.
+Cette méthode virtuelle pure doit être remplacée dans une classe dérivée. Un objet d’animation, selon son type, contient une ou plusieurs variables d’animation. Par exemple, CAnimationPoint contient deux variables, pour les coordonnées X et Y respectivement. La classe de base CAnimationBaseObject met en œuvre certaines méthodes génériques, qui agissent sur une liste de variables d’animation: ApplyTransitions, ClearTransitions, EnableValueChangedEvent, EnableIntegerValueChangedEvent. Ces méthodes appellent GetAnimationVariableList, qui est rempli dans une classe dérivée avec des variables d’animation réelles contenues dans un objet d’animation particulier, puis boucle sur la liste et effectuer les actions nécessaires. Si vous créez un objet d’animation personnalisé, vous devez ajouter à *la liste* toutes les variables d’animation contenues dans cet objet.
 
-##  <a name="getautodestroytransitions"></a>  CAnimationBaseObject::GetAutodestroyTransitions
+## <a name="canimationbaseobjectgetautodestroytransitions"></a><a name="getautodestroytransitions"></a>CAnimationBaseObject::GetAutodestroyTransitions
 
-Indique si une transition connexe sont automatiquement détruits.
+Indique si la transition connexe est détruite automatiquement.
 
 ```
 BOOL GetAutodestroyTransitions() const;
@@ -327,15 +327,15 @@ BOOL GetAutodestroyTransitions() const;
 
 ### <a name="return-value"></a>Valeur de retour
 
-Si la valeur est TRUE, les transitions connexes sont détruites automatiquement ; Si la valeur est FALSE, les objets de transition doivent être libérées en appelant l’application.
+Si VRAI, les transitions connexes sont automatiquement détruites; si FALSE, les objets de transition doivent être deallocated par application d’appel.
 
 ### <a name="remarks"></a>Notes
 
-Par défaut, cet indicateur est TRUE. Définissez cet indicateur uniquement si vous avez alloué la transition sur la pile et/ou transitions doivent être libérées par l’application appelante.
+Par défaut, ce drapeau est VRAI. Définissez ce drapeau uniquement si vous avez attribué la transition sur la pile et/ou que les transitions doivent être réglées par l’application d’appel.
 
-##  <a name="getgroupid"></a>  CAnimationBaseObject::GetGroupID
+## <a name="canimationbaseobjectgetgroupid"></a><a name="getgroupid"></a>CAnimationBaseObject::GetGroupID
 
-Retourne l’ID du groupe actuel.
+Retourne l’ID de groupe actuel.
 
 ```
 UINT32 GetGroupID() const;
@@ -347,11 +347,11 @@ ID de groupe actuel.
 
 ### <a name="remarks"></a>Notes
 
-Utilisez cette méthode pour récupérer l’ID de groupe. Il s’agit de 0 si l’ID de groupe n'a pas été défini explicitement dans le constructeur ou avec SetID.
+Utilisez cette méthode pour récupérer l’ID du groupe. C’est 0 si l’ID de groupe n’a pas été défini explicitement en constructeur ou avec SetID.
 
-##  <a name="getobjectid"></a>  CAnimationBaseObject::GetObjectID
+## <a name="canimationbaseobjectgetobjectid"></a><a name="getobjectid"></a>CAnimationBaseObject::GetObjectID
 
-Retourne l’ID d’objet en cours.
+Retourne l’ID d’objet actuel.
 
 ```
 UINT32 GetObjectID() const;
@@ -359,15 +359,15 @@ UINT32 GetObjectID() const;
 
 ### <a name="return-value"></a>Valeur de retour
 
-ID d’objet en cours.
+ID d’objet actuel.
 
 ### <a name="remarks"></a>Notes
 
-Utilisez cette méthode pour récupérer l’ID d’objet. Il s’agit de 0 si l’ID d’objet n'a pas été défini explicitement dans le constructeur ou avec SetID.
+Utilisez cette méthode pour récupérer l’identifiant d’objet. C’est 0 si l’ID d’objet n’a pas été défini explicitement dans le constructeur ou avec SetID.
 
-##  <a name="getuserdata"></a>  CAnimationBaseObject::GetUserData
+## <a name="canimationbaseobjectgetuserdata"></a><a name="getuserdata"></a>CAnimationBaseObject::GetUserData
 
-Renvoie des données définies par l’utilisateur.
+Retourne les données définies par l’utilisateur.
 
 ```
 DWORD GetUserData() const;
@@ -379,25 +379,25 @@ Une valeur de données personnalisées.
 
 ### <a name="remarks"></a>Notes
 
-Appelez cette méthode pour récupérer les données personnalisées lors de l’exécution. La valeur retournée sera 0 s’il n’était pas explicitement initialisé dans le constructeur ou avec SetUserData.
+Appelez cette méthode pour récupérer les données personnalisées au moment de l’exécution. La valeur retournée sera de 0 si elle n’a pas été explicitement paraphé dans le constructeur ou avec SetUserData.
 
-##  <a name="m_bautodestroytransitions"></a>  CAnimationBaseObject::m_bAutodestroyTransitions
+## <a name="canimationbaseobjectm_bautodestroytransitions"></a><a name="m_bautodestroytransitions"></a>CAnimationBaseObject::m_bAutodestroyTransitions
 
-Spécifie si les transitions connexes doivent être automatiquement détruites.
+Précise si les transitions connexes doivent être automatiquement détruites.
 
 ```
 BOOL m_bAutodestroyTransitions;
 ```
 
-##  <a name="m_dwuserdata"></a>  CAnimationBaseObject::m_dwUserData
+## <a name="canimationbaseobjectm_dwuserdata"></a><a name="m_dwuserdata"></a>CAnimationBaseObject::m_dwUserData
 
-Stocke les données définies par l’utilisateur.
+Stocke les données définies par les utilisateurs.
 
 ```
 DWORD m_dwUserData;
 ```
 
-##  <a name="m_ngroupid"></a>  CAnimationBaseObject::m_nGroupID
+## <a name="canimationbaseobjectm_ngroupid"></a><a name="m_ngroupid"></a>CAnimationBaseObject::m_nGroupID
 
 Spécifie l’ID de groupe de l’objet d’animation.
 
@@ -405,25 +405,25 @@ Spécifie l’ID de groupe de l’objet d’animation.
 UINT32 m_nGroupID;
 ```
 
-##  <a name="m_nobjectid"></a>  CAnimationBaseObject::m_nObjectID
+## <a name="canimationbaseobjectm_nobjectid"></a><a name="m_nobjectid"></a>CAnimationBaseObject::m_nObjectID
 
-Spécifie l’ID d’objet de l’objet d’animation.
+Spécifie l’id d’objet de l’objet d’animation.
 
 ```
 UINT32 m_nObjectID;
 ```
 
-##  <a name="m_pparentcontroller"></a>  CAnimationBaseObject::m_pParentController
+## <a name="canimationbaseobjectm_pparentcontroller"></a><a name="m_pparentcontroller"></a>CAnimationBaseObject::m_pParentController
 
-Pointeur vers le contrôleur de l’animation parent.
+Un pointeur pour le contrôleur d’animation parent.
 
 ```
 CAnimationController* m_pParentController;
 ```
 
-##  <a name="setautodestroytransitions"></a>  CAnimationBaseObject::SetAutodestroyTransitions
+## <a name="canimationbaseobjectsetautodestroytransitions"></a><a name="setautodestroytransitions"></a>CAnimationBaseObject::SetAutodestroyTransitions
 
-Définit un indicateur pour détruire automatiquement les transitions.
+Définit un drapeau pour détruire automatiquement les transitions.
 
 ```
 void SetAutodestroyTransitions(BOOL bValue);
@@ -431,16 +431,16 @@ void SetAutodestroyTransitions(BOOL bValue);
 
 ### <a name="parameters"></a>Paramètres
 
-*bValue*<br/>
-Spécifie l’indicateur de destruction automatique.
+*bValue (en)*<br/>
+Spécifie le drapeau de destruction automatique.
 
 ### <a name="remarks"></a>Notes
 
-Définissez cet indicateur uniquement si vous avez alloué des objets de transition à l’aide de nouvel opérateur. Si pour une raison quelconque, les objets de transition sont alloués sur la pile, détruire automatique indicateur doit être FALSE. Par défaut, cet indicateur est TRUE.
+Réglez ce drapeau uniquement si vous avez attribué des objets de transition à l’aide de l’opérateur nouveau. Si, pour une raison quelconque, des objets de transition sont attribués sur la pile, le drapeau de destruction automatique doit être FALSE. Par défaut, ce drapeau est VRAI.
 
-##  <a name="setid"></a>  CAnimationBaseObject::SetID
+## <a name="canimationbaseobjectsetid"></a><a name="setid"></a>CAnimationBaseObject::SetID
 
-Définit les nouveaux ID.
+Définit de nouvelles adresses d’adresses d’ensemble.
 
 ```
 void SetID(
@@ -450,19 +450,19 @@ void SetID(
 
 ### <a name="parameters"></a>Paramètres
 
-*nObjectID*<br/>
-Spécifie le nouvel ID d’objet.
+*nObjectID (nObjectID)*<br/>
+Spécifie la nouvelle pièce d’identité d’objet.
 
-*nGroupID*<br/>
-Spécifie le nouvel ID de groupe.
+*nGroupID (en anglais)*<br/>
+Spécifie la nouvelle pièce d’identité du groupe.
 
 ### <a name="remarks"></a>Notes
 
-Vous pouvez modifier l’ID d’objet et ID de groupe. Si le nouvel ID de groupe diffère de l’ID actuel, un objet d’animation est déplacé vers un autre groupe (un nouveau groupe sera créé, si nécessaire).
+Vous permet de modifier l’identifiant d’objet et l’ID de groupe. Si le nouvel ID de groupe diffère de l’ID actuel, un objet d’animation est déplacé vers un autre groupe (un nouveau groupe sera créé, si nécessaire).
 
-##  <a name="setparentanimationobjects"></a>  CAnimationBaseObject::SetParentAnimationObjects
+## <a name="canimationbaseobjectsetparentanimationobjects"></a><a name="setparentanimationobjects"></a>CAnimationBaseObject::SetParentAnimationObjects
 
-Établit la relation entre les variables d’animation, contenues dans un objet d’animation et leur conteneur.
+Établit la relation entre les variables d’animation, contenues dans un objet d’animation, et leur conteneur.
 
 ```
 virtual void SetParentAnimationObjects();
@@ -470,11 +470,11 @@ virtual void SetParentAnimationObjects();
 
 ### <a name="remarks"></a>Notes
 
-Ce programme d’assistance peut être utilisé pour établir une relation entre les variables d’animation contenues dans un objet d’animation et leur conteneur. Il effectue une itération sur les variables de l’animation et définit un pointeur arrière vers un objet d’animation parent pour chaque variable de l’animation. Dans l’implémentation actuelle, la relation réelle est établie dans CAnimationBaseObject::ApplyTransitions, par conséquent, les pointeurs arrière ne sont pas définies tant que vous n’appelez pas CAnimationGroup::Animate. Connaître la relation peut être utile lorsque vous traitez des événements et avez besoin d’une animation parent de l’objet à partir de CAnimationVariable. Utilisez CAnimationVariable::GetParentAnimationObject.
+Cette aide peut être utilisée pour établir une relation entre les variables d’animation contenues dans un objet d’animation, et leur conteneur. Il boucle sur les variables d’animation et définit un point arrière à un objet d’animation parent à chaque variable d’animation. Dans la mise en œuvre actuelle, la relation réelle est établie dans CAnimationBaseObject::ApplyTransitions, donc les pointeurs arrière ne sont pas fixés jusqu’à ce que vous appelez CAnimationGroup::Animate. Connaître la relation peut être utile lorsque vous traitez des événements et ont besoin d’obtenir un objet d’animation parent de CAnimationVariable. Utilisez CAnimationVariable::GetParentAnimationObject.
 
-##  <a name="setuserdata"></a>  CAnimationBaseObject::SetUserData
+## <a name="canimationbaseobjectsetuserdata"></a><a name="setuserdata"></a>CAnimationBaseObject::SetUserData
 
-Données définies par l’utilisateur de jeux.
+Définit les données définies par l’utilisateur.
 
 ```
 void SetUserData (DWORD dwUserData);
@@ -487,7 +487,7 @@ Spécifie les données personnalisées.
 
 ### <a name="remarks"></a>Notes
 
-Cette méthode permet d’associer des données personnalisées avec un objet d’animation. Ces données peuvent être récupérées ultérieurement lors de l’exécution par GetUserData.
+Utilisez cette méthode pour associer une donnée personnalisée à un objet d’animation. Ces données peuvent être récupérées plus tard à l’heure d’exécution par GetUserData.
 
 ## <a name="see-also"></a>Voir aussi
 

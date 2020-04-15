@@ -1,8 +1,9 @@
 ---
 title: wctob
-ms.date: 11/04/2016
+ms.date: 4/2/2020
 api_name:
 - wctob
+- _o_wctob
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -15,6 +16,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-convert-l1-1-0.dll
+- api-ms-win-crt-private-l1-1-0
 api_type:
 - DLLExport
 topic_type:
@@ -26,12 +28,12 @@ helpviewer_keywords:
 - wctob function
 - characters, converting
 ms.assetid: 46aec98b-c2f2-4e9d-9d89-7db99ba8a9a6
-ms.openlocfilehash: 151325b0d66e6d57156cdf94828ca1d4b151d437
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 420071680c3dc273f6df637cf44273f2c24bd64c
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70944932"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81320441"
 ---
 # <a name="wctob"></a>wctob
 
@@ -47,20 +49,22 @@ int wctob(
 
 ### <a name="parameters"></a>Paramètres
 
-*wchar*<br/>
+*wchar (wchar)*<br/>
 Valeur à traduire.
 
 ## <a name="return-value"></a>Valeur de retour
 
-Si **wctob** convertit correctement un caractère élargi, il retourne sa représentation de caractère multioctet, uniquement si la longueur du caractère multioctet est d’un octet exactement. Si **wctob** rencontre un caractère étendu qu’il ne peut pas convertir en caractère multioctet ou si le caractère multioctet n’est pas exactement d’un octet, il retourne-1.
+Si **wctob** convertit avec succès un personnage large, il retourne sa représentation de caractère multioctet, seulement si le caractère multioctet est exactement un byte long. Si **wctob** rencontre un personnage large qu’il ne peut pas convertir en un personnage multioctet ou le caractère multioctet n’est pas exactement un byte long, il retourne un -1.
 
 ## <a name="remarks"></a>Notes
 
-La fonction **wctob** convertit un caractère élargi contenu dans *WCHAR* en caractère multioctet correspondant passé par la valeur **int** de retour, si le caractère multioctet est exactement d’un octet.
+La fonction **wctob** convertit un caractère large contenu dans *wchar* au caractère multioctet correspondant passé par la valeur **int** retour, si le caractère multioctet est exactement un byte long.
 
-Si **wctob** a échoué et qu’aucun caractère multioctet correspondant n’a été trouvé, la fonction affecte à **errno** la valeur **EILSEQ** et retourne-1.
+Si **wctob** a échoué et aucun caractère multioctet correspondant n’a été trouvé, la fonction définit **errno** à **EILSEQ** et retourne -1.
 
-## <a name="requirements"></a>Configuration requise
+Par défaut, l’état global de cette fonction est étendue à l’application. Pour changer cela, voir [Global State dans le CRT](../global-state.md).
+
+## <a name="requirements"></a>Spécifications
 
 |Routine|En-tête requis|
 |-------------|---------------------|
@@ -70,7 +74,7 @@ Pour plus d'informations sur la compatibilité, voir [Compatibilité](../../c-ru
 
 ## <a name="example"></a>Exemple
 
-Ce programme illustre le comportement de la fonction **wcstombs** .
+Ce programme illustre le comportement de la fonction **wcstombs.**
 
 ```C
 // crt_wctob.c
@@ -105,7 +109,7 @@ Determined the corresponding multibyte character to be "A".
 ## <a name="see-also"></a>Voir aussi
 
 [Conversion de données](../../c-runtime-library/data-conversion.md)<br/>
-[Paramètres régionaux](../../c-runtime-library/locale.md)<br/>
+[Local](../../c-runtime-library/locale.md)<br/>
 [_mbclen, mblen, _mblen_l](mbclen-mblen-mblen-l.md)<br/>
 [mbstowcs, _mbstowcs_l](mbstowcs-mbstowcs-l.md)<br/>
 [mbtowc, _mbtowc_l](mbtowc-mbtowc-l.md)<br/>

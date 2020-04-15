@@ -1,6 +1,6 @@
 ---
 title: _strset, _strset_l, _wcsset, _wcsset_l, _mbsset, _mbsset_l
-ms.date: 11/04/2016
+ms.date: 4/2/2020
 api_name:
 - _wcsset
 - _mbsset
@@ -8,6 +8,9 @@ api_name:
 - _strset
 - _wcsset_l
 - _mbsset_l
+- _o__mbsset
+- _o__mbsset_l
+- _o__wcsset
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -22,6 +25,7 @@ api_location:
 - api-ms-win-crt-multibyte-l1-1-0.dll
 - api-ms-win-crt-string-l1-1-0.dll
 - ntoskrnl.exe
+- api-ms-win-crt-private-l1-1-0
 api_type:
 - DLLExport
 topic_type:
@@ -63,12 +67,12 @@ helpviewer_keywords:
 - fstrset function
 - _tcsset_l function
 ms.assetid: c42ded42-2ed9-4f06-a0a9-247ba305473a
-ms.openlocfilehash: 7f8674467c0d02143e6edf1e4e95c6ee3e20c4b5
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 53a4fa3fecd021b42ec2b69b804cde35570b1a6d
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70946766"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81316890"
 ---
 # <a name="_strset-_strset_l-_wcsset-_wcsset_l-_mbsset-_mbsset_l"></a>_strset, _strset_l, _wcsset, _wcsset_l, _mbsset, _mbsset_l
 
@@ -111,10 +115,10 @@ unsigned char *_mbsset_l(
 
 ### <a name="parameters"></a>Paramètres
 
-*str*<br/>
+*Str*<br/>
 Chaîne se terminant par un caractère Null à définir.
 
-*c*<br/>
+*C*<br/>
 Paramètre de caractère.
 
 *locale*<br/>
@@ -126,14 +130,16 @@ Retourne un pointeur vers la chaîne modifiée.
 
 ## <a name="remarks"></a>Notes
 
-La fonction **_strset** définit tous les caractères (à l’exception du caractère null de fin) de *Str* sur *c*, convertis en **char**. **_wcsset** et **_mbsset_l** sont des versions à caractères larges et à caractères multioctets de **_strset**, et les types de données des arguments et des valeurs de retour varient en conséquence. Ces fonctions se comportent sinon de façon identique.
+La fonction **_strset** définit tous les personnages (sauf le caractère nul de fin) de *str* à *c*, converti en **char**. **_wcsset** et **_mbsset_l** sont des versions à caractère large et multioctets de **_strset,** et les types de données des arguments et des valeurs de retour varient en conséquence. Ces fonctions se comportent sinon de façon identique.
 
-**_mbsset** valide ses paramètres. Si *Str* est un pointeur null, le gestionnaire de paramètres non valides est appelé, comme décrit dans [validation de paramètre](../../c-runtime-library/parameter-validation.md). Si l’exécution est autorisée à se poursuivre, **_mbsset** retourne la **valeur null** et définit **errno** sur **EINVAL**. **_strset** et **_wcsset** ne valident pas leurs paramètres.
+**_mbsset** valide ses paramètres. Si *str* est un pointeur nul, le gestionnaire de paramètre invalide est invoqué, tel que décrit dans [La validation de paramètres](../../c-runtime-library/parameter-validation.md). Si l’exécution est autorisée à se poursuivre, **_mbsset** renvoie **NULL** et fixe **errno** à **EINVAL**. **_strset** et **_wcsset** ne valident pas leurs paramètres.
 
-La valeur de sortie est affectée par la valeur du paramètre de catégorie **LC_CTYPE** des paramètres régionaux. Pour plus d’informations [, consultez setlocale, _wsetlocale](setlocale-wsetlocale.md) . Les versions de ces fonctions sont identiques, sauf que celles qui n’ont pas le suffixe **_L** utilisent les paramètres régionaux actuels et celles qui ont le suffixe **_L** utilisent à la place les paramètres régionaux qui sont passés. Pour plus d’informations, consultez [Locale](../../c-runtime-library/locale.md).
+La valeur de sortie est affectée par l’établissement de la **LC_CTYPE’établissement** de la catégorie du lieu; voir [setlocale, _wsetlocale](setlocale-wsetlocale.md) pour plus d’informations. Les versions de ces fonctions sont identiques, sauf que celles qui n’ont pas le **_l** suffixe utilisent le lieu actuel et ceux qui ont le **suffixe _l** utilisent plutôt le paramètre local qui est passé. Pour plus d’informations, consultez [Locale](../../c-runtime-library/locale.md).
 
 > [!IMPORTANT]
 > Ces fonctions peuvent être vulnérables aux menaces de dépassement de mémoire tampon. Les dépassements de mémoire tampon peuvent être utilisés pour les attaques du système, car ils peuvent provoquer une élévation des privilèges injustifiée. Pour plus d’informations, consultez [Solutions contre les dépassements de mémoire tampon](/windows/win32/SecBP/avoiding-buffer-overruns).
+
+Par défaut, l’état global de cette fonction est étendue à l’application. Pour changer cela, voir [Global State dans le CRT](../global-state.md).
 
 ### <a name="generic-text-routine-mappings"></a>Mappages de routines de texte générique
 
@@ -142,7 +148,7 @@ La valeur de sortie est affectée par la valeur du paramètre de catégorie **LC
 |**_tcsset**|**_strset**|**_mbsset**|**_wcsset**|
 |**_tcsset_l**|**_strset_l**|**_mbsset_l**|**_wcsset_l**|
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
 |Routine|En-tête requis|
 |-------------|---------------------|
@@ -180,9 +186,9 @@ After:  *******************************
 
 ## <a name="see-also"></a>Voir aussi
 
-[Manipulation de chaînes](../../c-runtime-library/string-manipulation-crt.md)<br/>
-[Paramètres régionaux](../../c-runtime-library/locale.md)<br/>
-[Interprétation des séquences de caractères multi-octets](../../c-runtime-library/interpretation-of-multibyte-character-sequences.md)<br/>
+[Manipulation des cordes](../../c-runtime-library/string-manipulation-crt.md)<br/>
+[Local](../../c-runtime-library/locale.md)<br/>
+[Interprétation des séquences multioctets-caractères](../../c-runtime-library/interpretation-of-multibyte-character-sequences.md)<br/>
 [_mbsnbset, _mbsnbset_l](mbsnbset-mbsnbset-l.md)<br/>
 [memset, wmemset](memset-wmemset.md)<br/>
 [strcat, wcscat, _mbscat](strcat-wcscat-mbscat.md)<br/>

@@ -19,16 +19,16 @@ helpviewer_keywords:
 - Microsoft::WRL::Details::EventTargetArray::Length method
 - Microsoft::WRL::Details::EventTargetArray::~EventTargetArray, destructor
 ms.assetid: e3cadb7c-2160-4cbb-a2f8-c28733d1e96d
-ms.openlocfilehash: 1f3f8e299dba1f4b6ae5a5767f11989dc2fe8370
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 9ea8800aa22a6b5cae0b3342cf337786fb53fc76
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62398483"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81371504"
 ---
 # <a name="eventtargetarray-class"></a>EventTargetArray, classe
 
-Prend en charge l’infrastructure WRL et n’est pas destinée à être utilisée directement depuis votre code.
+Prend en charge l’infrastructure WRL et n’est pas destiné à être utilisé directement à partir de votre code.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -42,9 +42,9 @@ class EventTargetArray :
 
 ## <a name="remarks"></a>Notes
 
-Représente un tableau des gestionnaires d’événements.
+Représente un éventail de gestionnaires d’événements.
 
-Les gestionnaires d’événements qui sont associés un [EventSource](eventsource-class.md) objet sont stockées dans un document protégé `EventTargetArray` membre de données.
+Les gestionnaires d’événements associés à un objet [EventSource](eventsource-class.md) sont stockés dans un membre protégé `EventTargetArray` des données.
 
 ## <a name="members"></a>Membres
 
@@ -52,31 +52,31 @@ Les gestionnaires d’événements qui sont associés un [EventSource](eventsour
 
 Nom                                                           | Description
 -------------------------------------------------------------- | -----------------------------------------------------------
-[EventTargetArray::EventTargetArray](#eventtargetarray)        | Initialise une nouvelle instance de la classe `EventTargetArray`.
-[EventTargetArray :: ~ EventTargetArray](#tilde-eventtargetarray) | Annule l’initialisation en cours `EventTargetArray` classe.
+[ÉvénementTargetArray::EventTargetArray](#eventtargetarray)        | Initialise une nouvelle instance de la classe `EventTargetArray`.
+[ÉvénementTargetArray: :-EventTargetArray](#tilde-eventtargetarray) | Désinitialise la `EventTargetArray` classe actuelle.
 
 ### <a name="public-methods"></a>M&#233;thodes publiques
 
 Nom                                  | Description
 ------------------------------------- | ---------------------------------------------------------------------------------------
-[EventTargetArray::AddTail](#addtail) | Ajoute le Gestionnaire d’événements spécifié à la fin du tableau interne de gestionnaires d’événements.
-[EventTargetArray::Begin](#begin)     | Obtient l’adresse du premier élément dans le tableau interne de gestionnaires d’événements.
-[EventTargetArray::End](#end)         | Obtient l’adresse du dernier élément dans le tableau interne de gestionnaires d’événements.
-[EventTargetArray::Length](#length)   | Obtient le nombre actuel d’éléments dans le tableau interne des gestionnaires d’événements.
+[ÉvénementTargetArray::AddTail](#addtail) | Annexe le gestionnaire d’événements spécifié à la fin de la gamme interne de gestionnaires d’événements.
+[ÉvénementTargetArray::Début](#begin)     | Obtient l’adresse du premier élément dans le tableau interne des gestionnaires d’événements.
+[ÉvénementTargetArray::Fin](#end)         | Obtient l’adresse du dernier élément dans le tableau interne des gestionnaires d’événements.
+[ÉvénementTargetArray::Longueur](#length)   | Obtient le nombre actuel d’éléments dans le tableau interne des gestionnaires d’événements.
 
 ## <a name="inheritance-hierarchy"></a>Hiérarchie d'héritage
 
 `EventTargetArray`
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
-**En-tête :** event.h
+**En-tête:** event.h
 
-**Espace de noms :** Microsoft::WRL::Details
+**Espace nom:** Microsoft::WRL::Details
 
-## <a name="tilde-eventtargetarray"></a>EventTargetArray :: ~ EventTargetArray
+## <a name="eventtargetarrayeventtargetarray"></a><a name="tilde-eventtargetarray"></a>ÉvénementTargetArray: :-EventTargetArray
 
-Prend en charge l’infrastructure WRL et n’est pas destinée à être utilisée directement depuis votre code.
+Prend en charge l’infrastructure WRL et n’est pas destiné à être utilisé directement à partir de votre code.
 
 ```cpp
 ~EventTargetArray();
@@ -84,11 +84,11 @@ Prend en charge l’infrastructure WRL et n’est pas destinée à être utilis�
 
 ### <a name="remarks"></a>Notes
 
-Annule l’initialisation en cours `EventTargetArray` classe.
+Désinitialise la `EventTargetArray` classe actuelle.
 
-## <a name="addtail"></a>EventTargetArray::AddTail
+## <a name="eventtargetarrayaddtail"></a><a name="addtail"></a>ÉvénementTargetArray::AddTail
 
-Prend en charge l’infrastructure WRL et n’est pas destinée à être utilisée directement depuis votre code.
+Prend en charge l’infrastructure WRL et n’est pas destiné à être utilisé directement à partir de votre code.
 
 ```cpp
 void AddTail(
@@ -98,18 +98,18 @@ void AddTail(
 
 ### <a name="parameters"></a>Paramètres
 
-*element*<br/>
-Pointeur vers le Gestionnaire d’événements à ajouter.
+*Élément*<br/>
+Pointeur vers le gestionnaire d’événements à l’annexe.
 
 ### <a name="remarks"></a>Notes
 
-Ajoute le Gestionnaire d’événements spécifié à la fin du tableau interne de gestionnaires d’événements.
+Annexe le gestionnaire d’événements spécifié à la fin de la gamme interne de gestionnaires d’événements.
 
-`AddTail()` est destiné à être utilisé en interne par uniquement la `EventSource` classe.
+`AddTail()`est destiné à être utilisé `EventSource` en interne par seulement la classe.
 
-## <a name="begin"></a>EventTargetArray::Begin
+## <a name="eventtargetarraybegin"></a><a name="begin"></a>ÉvénementTargetArray::Début
 
-Prend en charge l’infrastructure WRL et n’est pas destinée à être utilisée directement depuis votre code.
+Prend en charge l’infrastructure WRL et n’est pas destiné à être utilisé directement à partir de votre code.
 
 ```cpp
 ComPtr<IUnknown>* Begin();
@@ -117,15 +117,15 @@ ComPtr<IUnknown>* Begin();
 
 ### <a name="return-value"></a>Valeur de retour
 
-L’adresse du premier élément dans le tableau interne de gestionnaires d’événements.
+L’adresse du premier élément dans le tableau interne des gestionnaires d’événements.
 
 ### <a name="remarks"></a>Notes
 
-Obtient l’adresse du premier élément dans le tableau interne de gestionnaires d’événements.
+Obtient l’adresse du premier élément dans le tableau interne des gestionnaires d’événements.
 
-## <a name="end"></a>EventTargetArray::End
+## <a name="eventtargetarrayend"></a><a name="end"></a>ÉvénementTargetArray::Fin
 
-Prend en charge l’infrastructure WRL et n’est pas destinée à être utilisée directement depuis votre code.
+Prend en charge l’infrastructure WRL et n’est pas destiné à être utilisé directement à partir de votre code.
 
 ```cpp
 ComPtr<IUnknown>* End();
@@ -133,15 +133,15 @@ ComPtr<IUnknown>* End();
 
 ### <a name="return-value"></a>Valeur de retour
 
-L’adresse du dernier élément dans le tableau interne de gestionnaires d’événements.
+L’adresse du dernier élément dans le tableau interne des gestionnaires d’événements.
 
 ### <a name="remarks"></a>Notes
 
-Obtient l’adresse du dernier élément dans le tableau interne de gestionnaires d’événements.
+Obtient l’adresse du dernier élément dans le tableau interne des gestionnaires d’événements.
 
-## <a name="eventtargetarray"></a>EventTargetArray::EventTargetArray
+## <a name="eventtargetarrayeventtargetarray"></a><a name="eventtargetarray"></a>ÉvénementTargetArray::EventTargetArray
 
-Prend en charge l’infrastructure WRL et n’est pas destinée à être utilisée directement depuis votre code.
+Prend en charge l’infrastructure WRL et n’est pas destiné à être utilisé directement à partir de votre code.
 
 ```cpp
 EventTargetArray(
@@ -152,30 +152,30 @@ EventTargetArray(
 
 ### <a name="parameters"></a>Paramètres
 
-*hr*<br/>
-Après les opérations de ce constructeur, paramètre *hr* indique si l’allocation du tableau a réussi ou échoué. La liste suivante montre les valeurs possibles pour *hr*.
+*Hr*<br/>
+Après ces opérations de constructeur, *le paramètre hr* indique si l’attribution du tableau a réussi ou échoué. La liste suivante montre les valeurs possibles pour *hr*.
 
-+   S_OK<br/>
-    L’opération a réussi.
+- S_OK<br/>
+  L’opération a réussi.
 
-+   E_OUTOFMEMORY<br/>
-    N’a pas pu allouer la mémoire pour le tableau.
+- E_OUTOFMEMORY<br/>
+  La mémoire ne pouvait pas être allouée pour le tableau.
 
-+   S_FALSE<br/>
-    Paramètre *éléments* est inférieure ou égale à zéro.
+- S_FALSE<br/>
+  Les *éléments paramètres* sont inférieurs ou égaux à zéro.
 
-*items*<br/>
+*Articles*<br/>
 Le nombre d’éléments de tableau à allouer.
 
 ### <a name="remarks"></a>Notes
 
 Initialise une nouvelle instance de la classe `EventTargetArray`.
 
-`EventTargetArray` permet de garder un tableau des gestionnaires d’événements dans un `EventSource` objet.
+`EventTargetArray`est utilisé pour garder un tableau `EventSource` de gestionnaires d’événements dans un objet.
 
-## <a name="length"></a>EventTargetArray::Length
+## <a name="eventtargetarraylength"></a><a name="length"></a>ÉvénementTargetArray::Longueur
 
-Prend en charge l’infrastructure WRL et n’est pas destinée à être utilisée directement depuis votre code.
+Prend en charge l’infrastructure WRL et n’est pas destiné à être utilisé directement à partir de votre code.
 
 ```cpp
 size_t Length();
@@ -183,7 +183,7 @@ size_t Length();
 
 ### <a name="return-value"></a>Valeur de retour
 
-Le nombre actuel d’éléments dans le tableau interne de gestionnaires d’événements.
+Le nombre actuel d’éléments dans la gamme interne de gestionnaires d’événements.
 
 ### <a name="remarks"></a>Notes
 

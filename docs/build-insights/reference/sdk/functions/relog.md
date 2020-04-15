@@ -1,6 +1,6 @@
 ---
-title: Rejournaliser
-description: Référence C++ de la fonction relog du kit de développement logiciel (SDK) de build Insights.
+title: Relog
+description: La référence de fonction CMD Build Insights SDK Relog.
 ms.date: 02/12/2020
 helpviewer_keywords:
 - C++ Build Insights
@@ -9,23 +9,23 @@ helpviewer_keywords:
 - throughput analysis
 - build time analysis
 - vcperf.exe
-ms.openlocfilehash: 1ce09101deebd957de4b9305762dc37f38b53f4e
-ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
+ms.openlocfilehash: 28b290d2bf2880ce2f534fa1cd91750890e2fead
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/05/2020
-ms.locfileid: "78332690"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81323775"
 ---
-# <a name="relog"></a>Rejournaliser
+# <a name="relog"></a>Relog
 
 ::: moniker range="<=vs-2015"
 
-Le C++ Kit de développement logiciel (SDK) Build Insights est compatible avec Visual Studio 2017 et versions ultérieures. Pour consulter la documentation de ces versions, définissez le contrôle sélecteur de version de Visual Studio pour cet article sur Visual Studio 2017 ou Visual Studio 2019.
+Le SDK Build Insights est compatible avec Visual Studio 2017 et plus. Pour voir la documentation de ces versions, définissez le contrôle du sélecteur Visual Studio **Version** pour cet article à Visual Studio 2017 ou Visual Studio 2019. On le trouve en haut de la table des contenus sur cette page.
 
 ::: moniker-end
 ::: moniker range=">=vs-2017"
 
-La fonction `Relog` est utilisée pour lire des événements MSVC à partir d’une trace Suivi d’v nements pour Windows (ETW) et les écrire dans une nouvelle trace ETW modifiée.
+La `Relog` fonction est utilisée pour lire les événements MSVC à partir d’une trace event Tracing for Windows (ETW) et les écrire dans une nouvelle trace ETW modifiée.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -61,32 +61,32 @@ Ce paramètre est toujours déduit.
 *TReloggerGroupMembers*\
 Ce paramètre est toujours déduit.
 
-*inputLogFile*\
-Trace ETW d’entrée à partir de laquelle vous souhaitez lire les événements.
+*inputLogFile (en)*\
+L’entrée ETW trace que vous souhaitez lire les événements à partir.
 
-*outputLogFile*\
-Fichier dans lequel écrire les nouveaux événements.
+*sortieLogFile*\
+Le fichier dans lequel écrire les nouveaux événements.
 
 *numberOfAnalysisPasses*\
-Nombre de passes d’analyse à exécuter sur la trace d’entrée. La trace est passée par le groupe d’analyseur fourni une fois par passe d’analyse.
+Le nombre d’analyses passe pour exécuter sur la trace d’entrée. La trace passe par le groupe d’analyseur fourni une fois par passage d’analyse.
 
 *systemEventsRetentionFlags*\
-Masque de masque qui spécifie les événements ETW du système à conserver dans le suivi reconnecté. Pour plus d’informations, consultez [RELOG_RETENTION_SYSTEM_EVENT_FLAGS](../other-types/relog-retention-system-event-flags-constants.md).
+Un petit-train qui spécifie les événements DU système ETW à conserver dans la trace relogged. Pour plus d’informations, voir [RELOG_RETENTION_SYSTEM_EVENT_FLAGS](../other-types/relog-retention-system-event-flags-constants.md).
 
-*analyzerGroup*\
-Groupe de l’analyseur utilisé pour la phase d’analyse de la session de rejournalisation. Appelez [MakeStaticAnalyzerGroup](make-static-analyzer-group.md) pour créer un groupe d’analyseur. Pour utiliser un groupe d’analyseur dynamique obtenu à partir de [MakeDynamicAnalyzerGroup](make-dynamic-analyzer-group.md), encapsulez-le d’abord à l’intérieur d’un groupe d’analyseur statique en passant son adresse à `MakeStaticAnalyzerGroup`.
+*analyseurGroup*\
+Le groupe d’analyseur utilisé pour la phase d’analyse de la session de réinstruation. Appelez [MakeStaticAnalyzerGroup](make-static-analyzer-group.md) pour créer un groupe d’analyseurs. Pour utiliser un groupe d’analyseur dynamique obtenu de [MakeDynamicAnalyzerGroup](make-dynamic-analyzer-group.md), d’abord l’encapsuler à l’intérieur d’un groupe d’analyseur statique en passant son adresse à `MakeStaticAnalyzerGroup`.
 
-*reloggerGroup*\
-Groupe de rejournalisation qui reconnecte les événements dans le fichier de trace spécifié dans *outputLogFile*. Appelez [MakeStaticReloggerGroup](make-static-relogger-group.md) pour créer un groupe de rejournalisation. Pour utiliser un groupe de rejournalisation dynamique obtenu à partir de [MakeDynamicReloggerGroup](make-dynamic-relogger-group.md), encapsulez-le d’abord à l’intérieur d’un groupe de rejournalisation statique en passant son adresse à `MakeStaticReloggerGroup`.
+*reloggerGroup (en anglais)*\
+Le groupe relogger qui relogs événements dans le fichier de trace spécifié dans *la sortieLogFile*. Appelez [MakeStaticReloggerGroup](make-static-relogger-group.md) pour créer un groupe de relogger. Pour utiliser un groupe dynamique de relogger obtenu de [MakeDynamicReloggerGroup](make-dynamic-relogger-group.md), d’abord l’encapsuler à l’intérieur d’un groupe de rélogger statique en passant son adresse à `MakeStaticReloggerGroup`.
 
 ### <a name="return-value"></a>Valeur de retour
 
-Code de résultat de l’énumération [RESULT_CODE](../other-types/result-code-enum.md) .
+Un code de résultat de [l’enum RESULT_CODE.](../other-types/result-code-enum.md)
 
 ### <a name="remark"></a>Remarque
 
-La trace d’entrée est transmise par le biais du groupe de l’analyseur *numberOfAnalysisPasses* fois. Il n’existe aucune option similaire pour la reconnexion des passes. La trace passe le groupe de rejournalisation une seule fois, une fois que toutes les étapes d’analyse sont terminées.
+La trace d’entrée est passée à travers le nombre de groupe *d’analyseOfAnalysisPasses* fois. Il n’y a pas d’option similaire pour la réinstruisation des laissez-passer. La trace est passée à travers le groupe relogger qu’une seule fois, après que toutes les passes d’analyse sont terminées.
 
-La reconnexion des événements système comme les exemples de PROCESSEURs à partir d’une classe de rejournalisation n’est pas prise en charge. Utilisez le paramètre *systemEventsRetentionFlags* pour décider des événements système à conserver dans la trace de sortie.
+La réengorisation d’événements système comme des échantillons de processeurs dans une classe de relogger n’est pas prise en charge. Utilisez le *paramètre SystemEventsRetentionFlags* pour décider quels événements système conserver dans la trace de sortie.
 
 ::: moniker-end

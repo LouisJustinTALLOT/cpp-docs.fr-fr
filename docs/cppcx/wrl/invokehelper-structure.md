@@ -13,16 +13,16 @@ helpviewer_keywords:
 - Microsoft::WRL::Details::Invoke method
 - Microsoft::WRL::Details::InvokeHelper, constructor
 ms.assetid: 555ad2bc-4dd6-4e65-a2e2-1242c395f0e5
-ms.openlocfilehash: 3fcba210d4018d22487d234b437acfee3634cec6
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 9cb4e166628a6b5e7671494446d467e73c9f8cc3
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62386133"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81371383"
 ---
 # <a name="invokehelper-structure"></a>InvokeHelper (structure)
 
-Prend en charge l’infrastructure WRL et n’est pas destinée à être utilisée directement depuis votre code.
+Prend en charge l’infrastructure WRL et n’est pas destiné à être utilisé directement à partir de votre code.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -104,17 +104,17 @@ struct InvokeHelper<TDelegateInterface, TCallback, 9> :
 ### <a name="parameters"></a>Paramètres
 
 *TDelegateInterface*<br/>
-Le type d’interface de délégué.
+Le type d’interface délégué.
 
-*TCallback*<br/>
-Le type de la fonction de gestionnaire d’événements.
+*TCallback (en)*<br/>
+Le type de fonction de gestionnaire d’événements.
 
-*argCount*<br/>
-Le nombre d’arguments dans un `InvokeHelper` spécialisation.
+*argCount (en)*<br/>
+Le nombre d’arguments dans une `InvokeHelper` spécialisation.
 
 ## <a name="remarks"></a>Notes
 
-Fournit une implémentation de la `Invoke()` méthode basée sur le nombre spécifié et le type d’arguments.
+Fournit une mise `Invoke()` en œuvre de la méthode basée sur le nombre spécifié et le type d’arguments.
 
 ## <a name="members"></a>Membres
 
@@ -122,7 +122,7 @@ Fournit une implémentation de la `Invoke()` méthode basée sur le nombre spéc
 
 Nom     | Description
 -------- | -----------------------------------------------------------------------------
-`Traits` | Synonyme de la classe qui définit le type de chaque argument de gestionnaire d’événements.
+`Traits` | Un synonyme pour la classe qui définit le type de chaque argument de gestionnaire d’événement.
 
 ### <a name="public-constructors"></a>Constructeurs publics
 
@@ -134,27 +134,27 @@ Nom                                        | Description
 
 Nom                            | Description
 ------------------------------- | -----------------------------------------------------------------------------------
-[InvokeHelper::Invoke](#invoke) | Appelle le Gestionnaire d’événements dont la signature contient le nombre spécifié d’arguments.
+[InvokeHelper::Invoquer](#invoke) | Appelle le gestionnaire d’événements dont la signature contient le nombre spécifié d’arguments.
 
 ### <a name="public-data-members"></a>Membres de données publics
 
 Nom                                 | Description
 ------------------------------------ | ----------------------------------------------------------
-[InvokeHelper::callback_](#callback) | Représente le Gestionnaire d’événements à appeler lorsqu’un événement se produit.
+[InvokeHelper:callback_](#callback) | Représente le gestionnaire d’événements à appeler lorsqu’un événement se produit.
 
 ## <a name="inheritance-hierarchy"></a>Hiérarchie d'héritage
 
 `InvokeHelper`
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
-**En-tête :** event.h
+**En-tête:** event.h
 
-**Espace de noms :** Microsoft::WRL::Details
+**Espace nom:** Microsoft::WRL::Details
 
-## <a name="callback"></a>InvokeHelper::callback_
+## <a name="invokehelpercallback_"></a><a name="callback"></a>InvokeHelper:callback_
 
-Prend en charge l’infrastructure WRL et n’est pas destinée à être utilisée directement depuis votre code.
+Prend en charge l’infrastructure WRL et n’est pas destiné à être utilisé directement à partir de votre code.
 
 ```cpp
 TCallback callback_;
@@ -162,13 +162,13 @@ TCallback callback_;
 
 ### <a name="remarks"></a>Notes
 
-Représente le Gestionnaire d’événements à appeler lorsqu’un événement se produit.
+Représente le gestionnaire d’événements à appeler lorsqu’un événement se produit.
 
-Le `TCallback` paramètre de modèle spécifie le type du Gestionnaire d’événements.
+Le `TCallback` paramètre du modèle spécifie le type de gestionnaire d’événements.
 
-## <a name="invoke"></a>InvokeHelper::Invoke
+## <a name="invokehelperinvoke"></a><a name="invoke"></a>InvokeHelper::Invoquer
 
-Prend en charge l’infrastructure WRL et n’est pas destinée à être utilisée directement depuis votre code.
+Prend en charge l’infrastructure WRL et n’est pas destiné à être utilisé directement à partir de votre code.
 
 ```cpp
 STDMETHOD(
@@ -234,15 +234,15 @@ Argument 9.
 
 ### <a name="return-value"></a>Valeur de retour
 
-S_OK en cas de réussite ; Sinon, une valeur HRESULT qui décrit l’erreur.
+S_OK en cas de succès; autrement, un HRESULT qui décrit l’erreur.
 
 ### <a name="remarks"></a>Notes
 
-Appelle le Gestionnaire d’événements dont la signature contient le nombre spécifié d’arguments.
+Appelle le gestionnaire d’événements dont la signature contient le nombre spécifié d’arguments.
 
-## <a name="invokehelper"></a>InvokeHelper::InvokeHelper
+## <a name="invokehelperinvokehelper"></a><a name="invokehelper"></a>InvokeHelper::InvokeHelper
 
-Prend en charge l’infrastructure WRL et n’est pas destinée à être utilisée directement depuis votre code.
+Prend en charge l’infrastructure WRL et n’est pas destiné à être utilisé directement à partir de votre code.
 
 ```cpp
 explicit InvokeHelper(
@@ -252,11 +252,11 @@ explicit InvokeHelper(
 
 ### <a name="parameters"></a>Paramètres
 
-*callback*<br/>
-Un gestionnaire d’événements.
+*rappel*<br/>
+Gestionnaire d'événements.
 
 ### <a name="remarks"></a>Notes
 
 Initialise une nouvelle instance de la classe `InvokeHelper`.
 
-Le `TCallback` paramètre de modèle spécifie le type du Gestionnaire d’événements.
+Le `TCallback` paramètre du modèle spécifie le type de gestionnaire d’événements.

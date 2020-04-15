@@ -2,18 +2,18 @@
 title: Vue d'ensemble des conventions ABI ARM
 ms.date: 07/11/2018
 ms.assetid: 23f4ae8c-3148-4657-8c47-e933a9f387de
-ms.openlocfilehash: 176aaaa17af1ce358255ca94eaccc7d5217f2a87
-ms.sourcegitcommit: 069e3833bd821e7d64f5c98d0ea41fc0c5d22e53
+ms.openlocfilehash: 8737f7b1cbe0651b43eb3b9990a4035b60bd01b9
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/21/2019
-ms.locfileid: "74303185"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81320727"
 ---
-# <a name="overview-of-arm32-abi-conventions"></a>Vue d’ensemble des conventions ABI ARM32
+# <a name="overview-of-arm32-abi-conventions"></a>Aperçu des conventions ARM32 ABI
 
-L'interface binaire d'application (ABI) pour le code compilé pour Windows sur processeurs ARM est basée sur l'interface EABI ARM standard. Cet article souligne les principales différences entre Windows on ARM et l'interface standard. Ce document traite de l’ABI ARM32. Pour plus d’informations sur le ABI ARM64, consultez [vue d’ensemble des conventions Abi ARM64](arm64-windows-abi-conventions.md). Pour plus d’informations sur le interface EABI ARM standard, consultez [interface binaire d’application (ABI) pour l’architecture ARM](http://infocenter.arm.com/help/index.jsp?topic=/com.arm.doc.subset.swdev.abi/index.html) (lien externe).
+L'interface binaire d'application (ABI) pour le code compilé pour Windows sur processeurs ARM est basée sur l'interface EABI ARM standard. Cet article souligne les principales différences entre Windows on ARM et l'interface standard. Ce document couvre l’ARM32 ABI. Pour plus d’informations sur l’ARM64 ABI, voir [Aperçu des conventions ARM64 ABI](arm64-windows-abi-conventions.md). Pour plus d’informations sur l’ARM EABI standard, voir [Application Binary Interface (ABI) pour l’architecture ARM](http://infocenter.arm.com/help/index.jsp?topic=/com.arm.doc.subset.swdev.abi/index.html) (lien externe).
 
-## <a name="base-requirements"></a>Exigences de base
+## <a name="base-requirements"></a>Configuration de base requise
 
 Windows on ARM est censé toujours s'exécuter sur une architecture ARMv7. Une prise en charge de la virgule flottante sous la forme de VFPv3-D32 ou version ultérieure doit être présente dans le matériel. L'architecture VFP doit prendre en charge la virgule flottante à simple et double précision sur le matériel. Le runtime Windows ne prend pas en charge l'émulation de la virgule flottante pour permettre une exécution sur du matériel non VFP.
 
@@ -23,9 +23,9 @@ Une prise en charge de la division d'entier (UDIV/SDIV) est vivement recommandé
 
 ## <a name="endianness"></a>Endianness
 
-Windows on ARM s'exécute en mode Little-Endian. Le compilateur MSVC et le Windows Runtime attendent tous les deux des données de Little-endian à tout moment. Bien que l'instruction SETEND de l'architecture de jeu d'instructions (ISA) ARM autorise même le code en mode utilisateur à modifier l'endianness actif, cette opération est déconseillée car dangereuse pour une application. Si une exception est générée en mode Big-Endian, le comportement est imprévisible et peut provoquer une erreur d'application en mode utilisateur ou une vérification d'erreur en mode noyau.
+Windows on ARM s'exécute en mode Little-Endian. Le compilateur MSVC et le temps d’exécution Windows s’attendent à des données peu-endiennes en tout temps. Bien que l'instruction SETEND de l'architecture de jeu d'instructions (ISA) ARM autorise même le code en mode utilisateur à modifier l'endianness actif, cette opération est déconseillée car dangereuse pour une application. Si une exception est générée en mode Big-Endian, le comportement est imprévisible et peut provoquer une erreur d'application en mode utilisateur ou une vérification d'erreur en mode noyau.
 
-## <a name="alignment"></a>Alignement
+## <a name="alignment"></a>Alignment
 
 Bien que Windows permette au matériel ARM de gérer les accès d'entiers non alignés de manière transparente, des erreurs d'alignement peuvent toujours être générées dans certaines situations. Suivez les règles d'alignement suivantes :
 
@@ -59,8 +59,8 @@ L'utilisation d'instructions IT dans le code Thumb-2 n'est pas autorisée, sauf 
    |LDR, LDR[S]B, LDR[S]H|Chargement à partir de la mémoire|Mais pas les formes littérales LDR|
    |STR, STRB, STRH|Stockage en mémoire||
    |ADD, ADC, RSB, SBC, SUB|Ajout ou soustraction|Mais pas les formes ADD/SUB SP, SP, imm7<br /><br /> Rm != PC, Rdn != PC, Rdm != PC|
-   |CMP, CMN|Comparaison|Rm != PC, Rn != PC|
-   |MUL|Multiplication||
+   |CMP, CMN|Comparer|Rm != PC, Rn != PC|
+   |MUL|Multiplier||
    |ASR, LSL, LSR, ROR|Décalage de bits||
    |AND, BIC, EOR, ORR, TST|Arithmétique au niveau du bit||
    |BX|Création de branche vers le registre|Rm != PC|
@@ -71,16 +71,16 @@ Bien que les UC ARMv7 actuelles ne puissent pas signaler l'utilisation de formes
 
 L'utilisation des instructions de division d'entier SDIV et UDIV est entièrement prise en charge, même sur les plateformes sans matériel natif pour les traiter. La surcharge par division SDIV ou UDIV sur un processeur Cortex-A9 est d'environ 80 cycles, qui s'ajoutent au temps de division global de 20 à 250 cycles, selon les entrées.
 
-## <a name="integer-registers"></a>Registres d’entiers
+## <a name="integer-registers"></a>Registres Integer
 
 Le processeur ARM prend en charge 16 registres d'entiers :
 
-|Registre|Volatil ?|Role|
+|Inscrire|Volatil ?|Role|
 |--------------|---------------|----------|
-|r0|Volatile|Paramètres, résultat, registre de travail 1|
-|r1|Volatile|Paramètres, résultat, registre de travail 2|
-|r2|Volatile|Paramètre, registre de travail 3|
-|r3|Volatile|Paramètre, registre de travail 4|
+|r0|Volatil|Paramètres, résultat, registre de travail 1|
+|r1|Volatil|Paramètres, résultat, registre de travail 2|
+|r2|Volatil|Paramètre, registre de travail 3|
+|r3|Volatil|Paramètre, registre de travail 4|
 |r4|Non volatil||
 |r5|Non volatil||
 |r6|Non volatil||
@@ -89,7 +89,7 @@ Le processeur ARM prend en charge 16 registres d'entiers :
 |r9|Non volatil||
 |r10|Non volatil||
 |r11|Non volatil|Pointeur de frame|
-|r12|Volatile|Registre de travail d'appels intra-procédure|
+|r12|Volatil|Registre de travail d'appels intra-procédure|
 |r13 (SP)|Non volatil|Pointeur de pile|
 |r14 (LR)|Non volatil|Registre de liaison|
 |r15 (PC)|Non volatil|Compteur de programme|
@@ -104,32 +104,32 @@ Windows prend en charge uniquement les variantes ARM qui intègrent une prise en
 
 |Simples|Doubles|Quadruples|Volatil ?|Role|
 |-------------|-------------|-----------|---------------|----------|
-|s0-s3|d0-d1|q0|Volatile|Paramètres, résultat, registre de travail|
-|s4-s7|d2-d3|q1|Volatile|Paramètres, registre de travail|
-|s8-s11|d4-d5|q2|Volatile|Paramètres, registre de travail|
-|s12-s15|d6-d7|q3|Volatile|Paramètres, registre de travail|
+|s0-s3|d0-d1|q0|Volatil|Paramètres, résultat, registre de travail|
+|s4-s7|d2-d3|q1|Volatil|Paramètres, registre de travail|
+|s8-s11|d4-d5|q2|Volatil|Paramètres, registre de travail|
+|s12-s15|d6-d7|q3|Volatil|Paramètres, registre de travail|
 |s16-s19|d8-d9|q4|Non volatil||
 |s20-s23|d10-d11|q5|Non volatil||
 |s24-s27|d12-d13|q6|Non volatil||
 |s28-s31|d14-d15|q7|Non volatil||
-||d16-d31|q8-q15|Volatile||
+||d16-d31|q8-q15|Volatil||
 
 Le tableau suivant illustre les champs de bits du registre d'état et de contrôle des nombres à virgule flottante (ou FPSCR, Floating-Point Status and Control Register) :
 
 |Bits|Signification|Volatil ?|Role|
 |----------|-------------|---------------|----------|
-|31-28|NZCV|Volatile|Indicateurs d'état|
-|27|QC|Volatile|Saturation cumulative|
+|31-28|NZCV|Volatil|Indicateurs d'état|
+|27|QC|Volatil|Saturation cumulative|
 |26|AHP|Non volatil|Contrôle demi-précision alternatif|
 |25|DN|Non volatil|Contrôle du mode NaN par défaut|
 |24|FZ|Non volatil|Contrôle du mode de remplacement par zéro (Flush-to-zero)|
 |23-22|RMode|Non volatil|Contrôle du mode d'arrondi|
 |21-20|Stride|Non volatil|Pas (« stride ») vectoriel, doit toujours être égal à 0|
-|18-16|Len|Non volatil|Longueur de vecteur, doit toujours être égale à 0|
+|18-16|NbCar|Non volatil|Longueur de vecteur, doit toujours être égale à 0|
 |15, 12-8|IDE, IXE, etc.|Non volatil|Bits d'activation de l'interception d'exceptions, doit toujours être égal à 0|
-|7, 4-0|IDC, IXC, etc.|Volatile|Indicateurs d'exception cumulatifs|
+|7, 4-0|IDC, IXC, etc.|Volatil|Indicateurs d'exception cumulatifs|
 
-## <a name="floating-point-exceptions"></a>Exceptions à virgule flottante
+## <a name="floating-point-exceptions"></a>Exceptions au point flottant
 
 La plupart des matériels ARM ne prennent pas en charge les exceptions de virgule flottante IEEE. Sur les variantes de processeur qui comportent des exceptions de virgule flottante matérielles, le noyau Windows intercepte discrètement les exceptions et les désactive implicitement dans le registre FPSCR. Ceci est le gage d'un comportement normalisé entre les variantes de processeur. Sinon, le code développé sur une plateforme qui ne prend pas en charge les exceptions pourrait recevoir des exceptions inattendues quand il s'exécute sur une plateforme qui prend en charge les exceptions.
 
@@ -137,7 +137,7 @@ La plupart des matériels ARM ne prennent pas en charge les exceptions de virgul
 
 Pour les fonctions non variadiques, l’interface ABI de Windows on ARM suit les règles d’ARM en matière de passage de paramètres (extensions VFP et SIMD avancées comprises). Ces règles suivent la [norme d’appel de procédure pour l’architecture ARM](http://infocenter.arm.com/help/topic/com.arm.doc.ihi0042c/IHI0042C_aapcs.pdf), consolidée avec les extensions VFP. Par défaut, les quatre premiers arguments entiers et jusqu'à huit arguments à virgule flottante ou vectoriels sont passés aux registres, et des arguments supplémentaires sont passés à la pile. Les arguments sont assignés aux registres ou à la pile à l’aide de cette procédure :
 
-### <a name="stage-a-initialization"></a>Étape A : initialisation
+### <a name="stage-a-initialization"></a>Étape A : Initialisation
 
 L’initialisation est exécutée une seule fois exactement, avant le début du traitement des arguments :
 
@@ -149,7 +149,7 @@ L’initialisation est exécutée une seule fois exactement, avant le début du 
 
 1. Si une fonction qui retourne un résultat en mémoire est appelé, l'adresse du résultat est placée dans r0 et le numéro NCRN est défini sur r1.
 
-### <a name="stage-b-pre-padding-and-extension-of-arguments"></a>Étape B : pré-remplissage et extension des arguments
+### <a name="stage-b-pre-padding-and-extension-of-arguments"></a>Étape B : Pré-rembourrage et extension des arguments
 
 Pour chaque argument de la liste, la première règle correspondante de la liste suivante est appliquée :
 
@@ -159,7 +159,7 @@ Pour chaque argument de la liste, la première règle correspondante de la liste
 
 1. Si l'argument est un type composite, sa taille est arrondie au multiple de 4 supérieur le plus proche.
 
-### <a name="stage-c-assignment-of-arguments-to-registers-and-stack"></a>Étape C : assignation d’arguments aux registres et à la pile
+### <a name="stage-c-assignment-of-arguments-to-registers-and-stack"></a>Étape C : Attribution d’arguments aux registres et à la pile
 
 Pour chaque argument de la liste, les règles suivantes sont appliquées tour à tour jusqu’à ce que l’argument ait été alloué :
 
@@ -187,35 +187,35 @@ La pile doit toujours rester alignée sur 4 octets et être alignée sur 8 oct
 
 Les fonctions qui doivent utiliser un pointeur de frame (par exemple, les fonctions qui appellent `alloca` ou qui modifient le pointeur de pile dynamiquement) doivent configurer le pointeur de frame dans le registre r11 du prologue des fonctions et le laisser inchangé jusqu'à l'épilogue. Les fonctions qui n'ont pas besoin d'un pointeur de frame doivent effectuer toutes les mises à jour de pile dans le prologue et laisser le pointeur de pile inchangé jusqu'à l'épilogue.
 
-Les fonctions qui allouent 4 Ko ou plus dans la pile doivent s'assurer que chaque page précédant la dernière page fait l'objet d'une interaction tactile dans l'ordre. Cela garantit qu’aucun code ne peut « effectuer une «Bond » sur» les pages de garde utilisées par Windows pour développer la pile. En règle générale, cette tâche est assurée par l'assistance `__chkstk`, à laquelle est passé le total de l'allocation de pile en octets divisé par 4 dans r4, et qui retourne le montant d'allocation de pile final en octets à r4.
+Les fonctions qui allouent 4 Ko ou plus dans la pile doivent s'assurer que chaque page précédant la dernière page fait l'objet d'une interaction tactile dans l'ordre. Cela garantit qu’aucun code ne peut "sauter sur" les pages de garde que Windows utilise pour étendre la pile. En règle générale, cette tâche est assurée par l'assistance `__chkstk`, à laquelle est passé le total de l'allocation de pile en octets divisé par 4 dans r4, et qui retourne le montant d'allocation de pile final en octets à r4.
 
 ### <a name="red-zone"></a>Zone rouge
 
 La zone de 8 octets située juste en dessous du pointeur de pile actif est réservée à l'analyse et à la mise à jour corrective dynamique. Cela permet l'insertion de code généré avec soins, lequel stocke 2 registres au niveau de [sp, #-8] et les utilise provisoirement à des fins arbitraires. Le noyau Windows garantit que ces 8 octets ne seront pas remplacés si une exception ou une interruption se produit à la fois en mode utilisateur et en mode noyau.
 
-### <a name="kernel-stack"></a>Pile du noyau
+### <a name="kernel-stack"></a>Pile de noyau
 
 La pile par défaut du mode noyau de Windows représente trois pages (12 Ko). Veillez à ne pas créer de fonctions dotées de mémoires tampons de pile volumineuses en mode noyau. Une interruption pourrait se produire avec une hauteur de pile très basse et entraîner une vérification d'erreur de pile précipitée.
 
-## <a name="cc-specifics"></a>C/C++ spécificités
+## <a name="cc-specifics"></a>Spécificités de C/C
 
 Les énumérations sont des types d'entier de 32 bits sauf si au moins une valeur de l'énumération nécessite un stockage de double mot de 64 bits. Dans ce cas, l'énumération est promue en un type d'entier de 64 bits.
 
-`wchar_t` est défini comme équivalent à `unsigned short`, afin de préserver la compatibilité avec d’autres plateformes.
+`wchar_t` est défini comme étant l'équivalent de `unsigned short` pour préserver la compatibilité avec les autres plateformes.
 
-## <a name="stack-walking"></a>Parcours de la pile
+## <a name="stack-walking"></a>Pile de marche
 
-Le code Windows est compilé avec les pointeurs de frame activés ([/Oy (omission du pointeur de frame)](reference/oy-frame-pointer-omission.md)) pour permettre un parcours de pile rapide. En général, le registre r11 pointe vers le lien suivant dans la chaîne, qui correspond à une paire {r11, lr} qui spécifie le pointeur vers le frame précédent de la pile et l'adresse de retour. Nous recommandons aussi l'activation des pointeurs de frame dans votre code pour un profilage et un traçage améliorés.
+Le code Windows est compilé avec des pointeurs de trame activés ([/Oy (Frame-Pointer Omission)](reference/oy-frame-pointer-omission.md)) pour permettre la marche rapide pile. En général, le registre r11 pointe vers le lien suivant dans la chaîne, qui correspond à une paire {r11, lr} qui spécifie le pointeur vers le frame précédent de la pile et l'adresse de retour. Nous recommandons aussi l'activation des pointeurs de frame dans votre code pour un profilage et un traçage améliorés.
 
-## <a name="exception-unwinding"></a>Déroulement d’exception
+## <a name="exception-unwinding"></a>Dénouement d’exception
 
-Le déroulement de la pile pendant le traitement des exceptions est assuré par l'utilisation de codes de déroulement. Les codes de déroulement correspondent à une séquence d'octets stockés dans la section .xdata de l'image exécutable. Ils décrivent l'opération du code de prologue et d'épilogue de la fonction de manière abstraite, ce qui permet d'annuler les effets du prologue d'une fonction en préparation du déroulement dans le frame de pile de l'appelant.
+Le déroulement de la pile pendant le traitement des exceptions est assuré par l'utilisation de codes de déroulement. Les codes de déroulement correspondent à une séquence d'octets stockés dans la section .xdata de l'image exécutable. Ils décrivent le fonctionnement du prologue de fonction et du code d’épilogue d’une manière abstraite, de sorte que les effets du prologue d’une fonction puissent être annulés en vue de se détendre dans le cadre de la pile de l’appelant.
 
-L'interface EABI ARM spécifie un modèle de déroulement d'exception qui utilise des codes de déroulement. Cependant, cette spécification ne suffit pas pour un déroulement dans Windows, qui doit gérer des cas où le processeur se situe au milieu du prologue ou de l'épilogue d'une fonction. Pour plus d’informations sur les données d’exception Windows sur ARM et le déroulement, consultez [gestion des exceptions ARM](arm-exception-handling.md).
+L'interface EABI ARM spécifie un modèle de déroulement d'exception qui utilise des codes de déroulement. Cependant, cette spécification ne suffit pas pour un déroulement dans Windows, qui doit gérer des cas où le processeur se situe au milieu du prologue ou de l'épilogue d'une fonction. Pour plus d’informations sur Windows sur les données d’exception ARM et le dénouement, voir [ARM Exception Handling](arm-exception-handling.md).
 
 Nous vous recommandons de décrire le code généré dynamiquement à l'aide des tables de fonctions dynamiques spécifiées dans les appels à `RtlAddFunctionTable` et les fonctions associées pour permettre au code généré de participer à la gestion des exceptions.
 
-## <a name="cycle-counter"></a>Compteur de cycles
+## <a name="cycle-counter"></a>Compteur de cycle
 
 Si les processeurs ARM exécutant Windows sont tenus de prendre en charge un compteur de cycles, l'utilisation directe du compteur peut causer des problèmes. Pour éviter ces problèmes, Windows on ARM utilise un opcode non défini pour demander une valeur de compteur de cycles 64 bits normalisée. Dans du code C ou C++, utilisez l'intrinsèque `__rdpmccntr64` pour émettre l'opcode approprié ; dans un assembly, utilisez l'instruction `__rdpmccntr64`. La lecture du compteur de cycles prend environ 60 cycles sur un Cortex-A9.
 
@@ -224,4 +224,4 @@ Le compteur est un vrai compteur de cycles, pas une horloge ; ainsi, la fréque
 ## <a name="see-also"></a>Voir aussi
 
 [Problèmes courants de migration ARM Visual C++](common-visual-cpp-arm-migration-issues.md)<br/>
-[Gestion des exceptions ARM](arm-exception-handling.md)
+[Manipulation d’exception ARM](arm-exception-handling.md)

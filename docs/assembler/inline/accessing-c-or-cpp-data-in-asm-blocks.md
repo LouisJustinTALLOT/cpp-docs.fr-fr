@@ -7,16 +7,16 @@ helpviewer_keywords:
 - __asm keyword [C++], data members
 - structure types in __asm blocks
 ms.assetid: e99f5a28-0381-4090-8ece-6af8f2436a49
-ms.openlocfilehash: 1f56cc5c049c1501ea09c76f31be3ab9dea5ed10
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: b4341f87226118906749dcdb18b9227e68be6a23
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62167606"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81318092"
 ---
-# <a name="accessing-c-or-c-data-in-asm-blocks"></a>Accès aux données C ou C++ dans les blocs __asm
+# <a name="accessing-c-or-c-data-in-__asm-blocks"></a>Accès aux données C ou C++ dans les blocs __asm
 
-**Section spécifique à Microsoft**
+**Microsoft Spécifique**
 
 L'un des principaux avantages offerts par l'assembleur inline est la capacité à faire référence à des variables C ou C++ par nom. Un bloc `__asm` peut faire référence à n'importe quel symbole, y compris des noms de variables, qui figure dans la portée où le bloc apparaît. Par exemple, si la variable C `var` est dans la portée, l'instruction
 
@@ -26,7 +26,7 @@ __asm mov eax, var
 
 stocke la valeur de `var` dans EAX.
 
-Si une classe, une structure ou un membre d’union a un nom unique, un `__asm` bloc peut faire référence à l’aide de seulement le nom de membre, sans spécifier la variable ou `typedef` nom avant la période (**.**) opérateur. En revanche, si le nom du membre n'est pas unique, vous devez placer une variable ou un nom `typedef` juste avant l'opérateur point. Par exemple, les types structure de l'exemple suivant partagent `same_name` comme nom de membre :
+Si un membre d’une catégorie, d’une structure ou d’un membre du syndicat a un nom unique, un `__asm` bloc peut s’y référer en utilisant uniquement le nom du membre, sans préciser la variable ou `typedef` le nom avant la période **(.**) opérateur. En revanche, si le nom du membre n'est pas unique, vous devez placer une variable ou un nom `typedef` juste avant l'opérateur point. Par exemple, les types structure de l'exemple suivant partagent `same_name` comme nom de membre :
 
 Si vous déclarez des variables avec les types
 
@@ -72,7 +72,7 @@ Notez que l'omission du nom de la variable est simplement une pratique de codage
 
 Vous pouvez accéder aux données membres en C++ sans tenir compte des restrictions d'accès. En revanche, vous ne pouvez pas appeler de fonctions membres.
 
-**FIN de la section spécifique à Microsoft**
+**END Microsoft Spécifique**
 
 ## <a name="see-also"></a>Voir aussi
 
