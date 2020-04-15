@@ -1,5 +1,5 @@
 ---
-title: Pointeurs vers des membres
+title: Pointeurs vers membres
 ms.date: 11/04/2016
 helpviewer_keywords:
 - declarations, pointers
@@ -8,56 +8,56 @@ helpviewer_keywords:
 - members [C++], pointers to
 - pointers, declarations
 ms.assetid: f42ddb79-9721-4e39-95b1-c56b55591f68
-ms.openlocfilehash: 3238cd801763c72e96ccd93eee9640e672a5fbf5
-ms.sourcegitcommit: eff68e4e82be292a5664616b16a526df3e9d1cda
+ms.openlocfilehash: adffacc3ddc08679d7db4e17e027d8a7dbe8a92b
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80150778"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81320319"
 ---
-# <a name="pointers-to-members"></a>Pointeurs vers des membres
+# <a name="pointers-to-members"></a>Pointeurs vers membres
 
-Les déclarations de pointeurs vers des membres sont des cas spéciaux de déclarations de pointeur.  Elles sont déclarées à l’aide de la séquence suivante :
+Les déclarations de pointeurs vers des membres sont des cas spéciaux de déclarations de pointeur.  Ils sont déclarés à l’aide de la séquence suivante :
 
-> *Storage-Class-Specifiers*<sub>OPT</sub> *CV-qualificateurs*<sub>OPT</sub> *type-specifier* *MS-modificater*<sub>OPT</sub> *-Name* **`::*`** *CV-Qualifiers*<sub>opt</sub> *identifiant* - *PM-initializer*<sub>OPT</sub> **`;`**
+> *storage-class-specifiers*<sub>opt</sub> *cv-qualifiers*<sub>opt</sub> *type-specifier* *ms-modificateur*<sub>opt</sub> *qualified-name* **`::*`** *cv-qualifiers*<sub>opt</sub> *identifier* *pm-initializer*<sub>opt</sub>**`;`**
 
 1. Spécificateur de déclaration :
 
    - Spécificateur de classe de stockage facultatif.
 
-   - Spécificateurs **const** et **volatile** facultatifs.
+   - Cône **const** facultatif et spécificateurs **volatils.**
 
-   - Spécificateur de type : nom d'un type. Il s’agit du type du membre vers lequel pointer, et non de la classe.
+   - Spécificateur de type : nom d'un type. C’est le genre de membre à souligner, pas la classe.
 
 1. Déclarateur :
 
-   - Modificateur spécifique à Microsoft facultatif. Pour plus d’informations, consultez [modificateurs spécifiques à Microsoft](../cpp/microsoft-specific-modifiers.md).
+   - Modificateur spécifique à Microsoft facultatif. Pour plus d’informations, voir [Microsoft-Specific Modificateurs](../cpp/microsoft-specific-modifiers.md).
 
    - Nom qualifié de la classe contenant les membres vers lesquels pointer.
 
-   - Opérateur __`::`__ .
+   - L’opérateur. __`::`__
 
-   - Opérateur __`*`__ .
+   - L’opérateur. __`*`__
 
-   - Spécificateurs **const** et **volatile** facultatifs.
+   - Cône **const** facultatif et spécificateurs **volatils.**
 
    - Identificateur nommant le pointeur vers le membre.
 
-1. Initialiseur de pointeur vers membre facultatif :
+1. Un initialisateur optionnel point-à-membre :
 
-   - Opérateur **`=`** .
+   - L’opérateur. **`=`**
 
-   - Opérateur **`&`** .
+   - L’opérateur. **`&`**
 
    - Nom qualifié de la classe.
 
-   - Opérateur __`::`__ .
+   - L’opérateur. __`::`__
 
-   - Nom d’un membre non statique de la classe du type approprié.
+   - Le nom d’un membre non statique de la classe du type approprié.
 
-Comme toujours, les déclarateurs multiples (et tout initialiseur associé) sont autorisés dans une même déclaration. Un pointeur vers un membre peut ne pas pointer vers un membre statique de la classe, un membre de type référence ou **`void`** .
+Comme toujours, les déclarateurs multiples (et tout initialiseur associé) sont autorisés dans une même déclaration. Un pointeur au membre ne peut pas indiquer un membre statique **`void`** de la classe, un membre de type de référence, ou .
 
-Un pointeur vers un membre d’une classe diffère d’un pointeur normal : il possède des informations de type pour le type du membre et pour la classe à laquelle le membre appartient. Un pointeur normal identifie (a l'adresse de) un seul objet en mémoire. Un pointeur vers un membre d'une classe identifie ce membre dans toute instance de la classe. L'exemple suivant déclare une classe, `Window`, et certains pointeurs vers des données membres.
+Un pointeur pour un membre d’une classe diffère d’un pointeur normal: il a à la fois des informations de type pour le type du membre et pour la classe à laquelle le membre appartient. Un pointeur normal identifie (a l'adresse de) un seul objet en mémoire. Un pointeur vers un membre d'une classe identifie ce membre dans toute instance de la classe. L'exemple suivant déclare une classe, `Window`, et certains pointeurs vers des données membres.
 
 ```cpp
 // pointers_to_members1.cpp
@@ -79,7 +79,7 @@ int main()
 }
 ```
 
-Dans l’exemple précédent, `pwCaption` est un pointeur vers n’importe quel membre de la classe `Window` qui est de type `char*`. Le type de `pwCaption` est `char * Window::* `. Le fragment de code suivant déclare des pointeurs vers les fonctions membres `SetCaption` et `GetCaption`.
+Dans l’exemple `pwCaption` précédent, est un `Window` pointeur à `char*`tout membre de la classe qui est de type . Le type de `pwCaption` est `char * Window::*`. Le fragment de code suivant déclare des pointeurs vers les fonctions membres `SetCaption` et `GetCaption`.
 
 ```cpp
 const char * (Window::*pfnwGC)() = &Window::GetCaption;
@@ -101,9 +101,9 @@ strcpy_s( pwChildWindow->*pwCaption, cUntitledLen, szUntitled );
 (pwChildWindow->*pwCaption)[cUntitledLen - 1] = '2'; //same as //pwChildWindow->szWinCaption[cUntitledLen - 1] = '2';
 ```
 
-La différence entre les opérateurs **`.*`** et **`->*`** (les opérateurs de pointeur vers membre) est que l’opérateur **`.*`** sélectionne des membres en fonction d’un objet ou d’une référence d’objet, tandis que l’opérateur **`->*`** sélectionne des membres via un pointeur. Pour plus d’informations sur ces opérateurs, consultez [expressions avec des opérateurs de pointeur vers membre](../cpp/pointer-to-member-operators-dot-star-and-star.md).
+La différence **`.*`** entre **`->*`** les opérateurs et les opérateurs (les **`.*`** opérateurs pointeurs à membres) est **`->*`** que l’opérateur sélectionne les membres qui reçoivent une référence d’objet ou d’objet, tandis que l’opérateur sélectionne les membres par l’intermédiaire d’un pointeur. Pour plus d’informations sur ces opérateurs, voir [Expressions avec des opérateurs pointeurs à membres](../cpp/pointer-to-member-operators-dot-star-and-star.md).
 
-Le résultat des opérateurs de pointeur vers membre est le type du membre. Dans ce cas, il s’agit de `char *`.
+Le résultat des opérateurs pointeurs à membres est le type de membre. Dans ce cas, il s’agit de `char *`.
 
 Le fragment de code suivant appelle les fonctions membres `GetCaption` et `SetCaption` à l'aide de pointeurs vers des membres :
 
@@ -124,13 +124,13 @@ strcat_s( szCaptionBase, sizeOfBuffer, " [View 1]" );
 
 ## <a name="restrictions-on-pointers-to-members"></a>Restrictions sur les pointeurs vers des membres
 
-L’adresse d’un membre statique n’est pas un pointeur vers un membre. Il s’agit d’un pointeur normal vers une instance du membre statique. Une seule instance d’un membre statique existe pour tous les objets d’une classe donnée. Cela signifie que vous pouvez utiliser les opérateurs d’adresse ( **&** ) et de déréférencement (<strong>\*</strong>) ordinaires.
+L’adresse d’un membre statique n’est pas un pointeur pour un membre. C’est un pointeur régulier à l’un des cas du membre statique. Une seule instance d’un membre statique existe pour tous les objets d’une classe donnée. Cela signifie que vous pouvez utiliser**&** l’adresse ordinaire<strong>\*</strong>( ) et la déreférence ( ) les opérateurs.
 
 ## <a name="pointers-to-members-and-virtual-functions"></a>Pointeurs vers des membres et des fonctions virtuelles
 
-L’appel d’une fonction virtuelle par le biais d’une fonction pointeur vers membre fonctionne comme si la fonction avait été appelée directement. La fonction correcte est recherchée dans la v-table et appelée.
+Invoquer une fonction virtuelle par le biais d’une fonction pointeur-à-membre fonctionne comme si la fonction avait été appelée directement. La fonction correcte est regardée dans la table en v et invoquée.
 
-La clé du bon fonctionnement des fonctions virtuelles est, comme toujours, de les appeler via un pointeur vers une classe de base. (Pour plus d’informations sur les fonctions virtuelles, consultez [fonctions virtuelles](../cpp/virtual-functions.md).)
+La clé du bon fonctionnement des fonctions virtuelles est, comme toujours, de les appeler via un pointeur vers une classe de base. (Pour plus d’informations sur les fonctions virtuelles, voir [fonctions virtuelles](../cpp/virtual-functions.md).)
 
 Le code suivant montre comment appeler une fonction virtuelle via un pointeur de fonction membre :
 

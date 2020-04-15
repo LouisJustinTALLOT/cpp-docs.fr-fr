@@ -1,6 +1,6 @@
 ---
-title: Analyse
-description: Référence C++ de la fonction du kit de développement logiciel (SDK) de build Insights.
+title: AnalyseA
+description: La référence de fonction CMD Build Insights SDK AnalyzeA.
 ms.date: 02/12/2020
 helpviewer_keywords:
 - C++ Build Insights
@@ -9,23 +9,23 @@ helpviewer_keywords:
 - throughput analysis
 - build time analysis
 - vcperf.exe
-ms.openlocfilehash: 9f5a7b91bf0cd6fd45f97880a99e1f56a85d74ed
-ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
+ms.openlocfilehash: 7c7602c49ab5f3ce67693424019e253727563293
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/05/2020
-ms.locfileid: "78332914"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81324149"
 ---
-# <a name="analyzea"></a>Analyse
+# <a name="analyzea"></a>AnalyseA
 
 ::: moniker range="<=vs-2015"
 
-Le C++ Kit de développement logiciel (SDK) Build Insights est compatible avec Visual Studio 2017 et versions ultérieures. Pour consulter la documentation de ces versions, définissez le contrôle sélecteur de version de Visual Studio pour cet article sur Visual Studio 2017 ou Visual Studio 2019.
+Le SDK Build Insights est compatible avec Visual Studio 2017 et plus. Pour voir la documentation de ces versions, définissez le contrôle du sélecteur Visual Studio **Version** pour cet article à Visual Studio 2017 ou Visual Studio 2019. On le trouve en haut de la table des contenus sur cette page.
 
 ::: moniker-end
 ::: moniker range=">=vs-2017"
 
-La fonction `AnalyzeA` est utilisée pour analyser les événements MSVC lus à partir d’une trace de Suivi d’v nements pour Windows d’entrée (ETW).
+La `AnalyzeA` fonction est utilisée pour analyser les événements MSVC lus à partir d’une trace de traçage d’événements d’entrée pour Windows (ETW).
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -37,14 +37,14 @@ enum RESULT_CODE AnalyzeA(
 
 ### <a name="parameters"></a>Paramètres
 
-*inputLogFile*\
-Trace ETW d’entrée à partir de laquelle vous souhaitez lire les événements.
+*inputLogFile (en)*\
+L’entrée ETW trace que vous souhaitez lire les événements à partir.
 
-*analysisDescriptor*\
-Pointeur vers un objet [ANALYSIS_DESCRIPTOR](../other-types/analysis-descriptor-struct.md) . Utilisez cet objet pour configurer l’analyse.
+*analyseDescripteur*\
+Pointeur vers un objet [ANALYSIS_DESCRIPTOR.](../other-types/analysis-descriptor-struct.md) Utilisez cet objet pour configurer l’analyse.
 
 ### <a name="return-value"></a>Valeur de retour
 
-Code de résultat de l’énumération [RESULT_CODE](../other-types/result-code-enum.md) .
+Un code de résultat de [l’enum RESULT_CODE.](../other-types/result-code-enum.md)
 
 ::: moniker-end

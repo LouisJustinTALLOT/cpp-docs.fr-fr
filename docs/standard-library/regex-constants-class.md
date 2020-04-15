@@ -82,12 +82,12 @@ helpviewer_keywords:
 - std::regex_constants [C++], optimize
 - std::regex_constants [C++], collate
 ms.assetid: 4a69c0ba-c46d-46e4-bd29-6f4efb805f26
-ms.openlocfilehash: c8abca8109db9c781d63721b795feb01161fdb40
-ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
+ms.openlocfilehash: ee016e5cee1bde94a49a1b339d6910d60db4cea1
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/16/2020
-ms.locfileid: "79419629"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81331963"
 ---
 # <a name="regex_constants-namespace"></a>regex_constants, espace de noms
 
@@ -115,11 +115,11 @@ L'espace de noms `regex_constants` inclut plusieurs types d'indicateurs et les v
 
 ## <a name="requirements"></a>Spécifications
 
-**En-tête :** \<Regex >
+**En-tête :** \<regex>
 
 **Espace de noms :** std
 
-## <a name="error_type"></a>  regex_constants::error_type
+## <a name="regex_constantserror_type"></a><a name="error_type"></a>regex_constants::error_type
 
 Indicateurs pour signaler les erreurs de syntaxe des expressions régulières.
 
@@ -180,7 +180,7 @@ Le type est un type énuméré qui décrit un objet pouvant stocker des indicate
 
 `error_backref` : l’expression contient une référence arrière non valide
 
-## <a name="match_flag_type"></a>  regex_constants::match_flag_type
+## <a name="regex_constantsmatch_flag_type"></a><a name="match_flag_type"></a>regex_constants::match_flag_type
 
 Indicateurs des options de correspondance d’expression régulière.
 
@@ -208,7 +208,7 @@ enum match_flag_type
 
 Le type est un type de masque de bits qui décrit les options à utiliser durant la mise en correspondance d’une séquence de texte par rapport à une expression régulière, ainsi que les indicateurs de format à utiliser durant le remplacement de texte. Vous pouvez combiner des options avec `|`.
 
-Options de correspondance :
+Options de correspondance :
 
 `match_default`
 
@@ -238,7 +238,7 @@ Indicateurs de format :
 
 `format_first_only` : ne pas rechercher de correspondances après la première
 
-## <a name="syntax_option_type"></a>  regex_constants::syntax_option_type
+## <a name="regex_constantssyntax_option_type"></a><a name="syntax_option_type"></a>regex_constants::syntax_option_type
 
 Indicateurs pour la sélection des options de syntaxe.
 
@@ -278,7 +278,7 @@ Spécificateurs de langage :
 
 `egrep` : compiler en egrep
 
-Modificateurs de syntaxe :
+Modificateurs de syntaxe :
 
 `icase` : les correspondances ne respectent pas la casse
 
@@ -291,10 +291,10 @@ Modificateurs de syntaxe :
 ## <a name="see-also"></a>Voir aussi
 
 [\<regex>](../standard-library/regex.md)\
-[regex_error](../standard-library/regex-error-class.md) de la classe\
-[\<les fonctions de > regex](../standard-library/regex-functions.md)\
-[regex_iterator](../standard-library/regex-iterator-class.md) de la classe\
-[\<les opérateurs de > regex](../standard-library/regex-operators.md)\
-[regex_token_iterator](../standard-library/regex-token-iterator-class.md) de la classe\
-[regex_traits](../standard-library/regex-traits-class.md) de la classe\
-[\<regex>, typedefs](../standard-library/regex-typedefs.md)
+[Classe regex_error](../standard-library/regex-error-class.md)\
+[\<regex> fonctions](../standard-library/regex-functions.md)\
+[Classe regex_iterator](../standard-library/regex-iterator-class.md)\
+[\<regex> opérateurs](../standard-library/regex-operators.md)\
+[Classe regex_token_iterator](../standard-library/regex-token-iterator-class.md)\
+[Classe regex_traits](../standard-library/regex-traits-class.md)\
+[\<regex> dactylographes](../standard-library/regex-typedefs.md)

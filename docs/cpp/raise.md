@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - __raise keyword [C++]
 ms.assetid: 6f1ae418-5f0f-48b6-9f6e-8ea7e66b239a
-ms.openlocfilehash: 9238e8e3e2fcd2c2f8b6431cfb0a79d452c5adf3
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: eb3ab24378071663b2a6a1abab700b81c3172419
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80179170"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81317235"
 ---
 # <a name="__raise"></a>__raise
 
@@ -26,12 +26,12 @@ __raise method-declarator;
 
 ## <a name="remarks"></a>Notes
 
-À partir du code managé, un événement ne peut être déclenché que par la classe dans laquelle il est défini. Pour plus d’informations, consultez [Event](../extensions/event-cpp-component-extensions.md) .
+À partir du code managé, un événement ne peut être déclenché que par la classe dans laquelle il est défini. Voir [l’événement](../extensions/event-cpp-component-extensions.md) pour plus d’informations.
 
-Le mot clé **__raise** provoque l’émission d’une erreur si vous appelez un non-événement.
+Le mot clé **__raise** provoque l’impression d’une erreur si vous appelez un non-événement.
 
 > [!NOTE]
->  Une classe ou structure modélisée ne peut pas contenir d'événements.
+> Une classe ou structure modélisée ne peut pas contenir d'événements.
 
 ## <a name="example"></a>Exemple
 
@@ -62,5 +62,5 @@ int main() {
 ## <a name="see-also"></a>Voir aussi
 
 [Mots clés](../cpp/keywords-cpp.md)<br/>
-[Gestion des événements](../cpp/event-handling.md)<br/>
+[Manipulation de l’événement](../cpp/event-handling.md)<br/>
 [Extensions de composant pour les plateformes Runtime](../extensions/component-extensions-for-runtime-platforms.md)

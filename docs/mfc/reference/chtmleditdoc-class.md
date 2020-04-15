@@ -14,16 +14,16 @@ helpviewer_keywords:
 - CHtmlEditDoc [MFC], IsModified
 - CHtmlEditDoc [MFC], OpenURL
 ms.assetid: b2cca61f-e5d6-4099-b0d1-46bf85f0bd64
-ms.openlocfilehash: c2a00b2501647f6101fed8ed1d4cd23dad7ab209
-ms.sourcegitcommit: c6f8e6c2daec40ff4effd8ca99a7014a3b41ef33
+ms.openlocfilehash: 8b500f651da1a73040fdb0469f2f023babe25e85
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "64346185"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81352171"
 ---
 # <a name="chtmleditdoc-class"></a>CHtmlEditDoc, classe
 
-Avec [CHtmlEditView](../../mfc/reference/chtmleditview-class.md), fournit les fonctionnalités de la plateforme d’édition WebBrowser dans le contexte de l’architecture document / vue MFC.
+Avec [CHtmlEditView](../../mfc/reference/chtmleditview-class.md), fournit la fonctionnalité de la plate-forme d’édition WebBrowser dans le cadre de l’architecture de vision des documents MFC.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -43,7 +43,7 @@ class AFX_NOVTABLE CHtmlEditDoc : public CDocument
 
 |Nom|Description|
 |----------|-----------------|
-|[CHtmlEditDoc::GetView](#getview)|Récupère le `CHtmlEditView` objet attaché à ce document.|
+|[CHtmlEditDoc::GetView](#getview)|Récupère l’objet `CHtmlEditView` attaché à ce document.|
 |[CHtmlEditDoc::IsModified](#ismodified)|Indique si le contrôle WebBrowser de la vue associée contient un document qui a été modifié par l’utilisateur.|
 |[CHtmlEditDoc::OpenURL](#openurl)|Ouvre une URL.|
 
@@ -57,11 +57,11 @@ class AFX_NOVTABLE CHtmlEditDoc : public CDocument
 
 `CHtmlEditDoc`
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
 **En-tête :** afxhtml.h
 
-##  <a name="chtmleditdoc"></a>  CHtmlEditDoc::CHtmlEditDoc
+## <a name="chtmleditdocchtmleditdoc"></a><a name="chtmleditdoc"></a>CHtmlEditDoc::CHtmlEditDoc
 
 Construit un objet `CHtmlEditDoc`.
 
@@ -69,9 +69,9 @@ Construit un objet `CHtmlEditDoc`.
 CHtmlEditDoc();
 ```
 
-##  <a name="getview"></a>  CHtmlEditDoc::GetView
+## <a name="chtmleditdocgetview"></a><a name="getview"></a>CHtmlEditDoc::GetView
 
-Récupère le [CHtmlEditView](../../mfc/reference/chtmleditview-class.md) objet attaché à ce document.
+Récupère l’objet [CHtmlEditView](../../mfc/reference/chtmleditview-class.md) joint à ce document.
 
 ```
 virtual CHtmlEditView* GetView() const;
@@ -79,9 +79,9 @@ virtual CHtmlEditView* GetView() const;
 
 ### <a name="return-value"></a>Valeur de retour
 
-Retourne un pointeur vers le document `CHtmlEditView` objet.
+Renvoie un pointeur `CHtmlEditView` à l’objet du document.
 
-##  <a name="ismodified"></a>  CHtmlEditDoc::IsModified
+## <a name="chtmleditdocismodified"></a><a name="ismodified"></a>CHtmlEditDoc::IsModified
 
 Indique si le contrôle WebBrowser de la vue associée contient un document qui a été modifié par l’utilisateur.
 
@@ -89,7 +89,7 @@ Indique si le contrôle WebBrowser de la vue associée contient un document qui 
 virtual BOOL IsModified();
 ```
 
-##  <a name="openurl"></a>  CHtmlEditDoc::OpenURL
+## <a name="chtmleditdocopenurl"></a><a name="openurl"></a>CHtmlEditDoc::OpenURL
 
 Ouvre une URL.
 
@@ -100,13 +100,13 @@ virtual BOOL OpenURL(LPCTSTR lpszURL);
 ### <a name="parameters"></a>Paramètres
 
 *lpszURL*<br/>
-L’URL à ouvrir.
+URL à ouvrir.
 
 ### <a name="return-value"></a>Valeur de retour
 
-Retourne la valeur TRUE en cas de réussite, FALSE en cas d’échec.
+Retourne TRUE sur le succès, FALSE sur l’échec.
 
 ## <a name="see-also"></a>Voir aussi
 
-[Exemple HTMLEdit](../../overview/visual-cpp-samples.md)<br/>
+[Échantillon HTMLEdit](../../overview/visual-cpp-samples.md)<br/>
 [Graphique hiérarchique](../../mfc/hierarchy-chart.md)

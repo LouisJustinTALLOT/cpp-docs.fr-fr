@@ -1,11 +1,15 @@
 ---
 title: _ungetch, _ungetwch, _ungetch_nolock, _ungetwch_nolock
-ms.date: 11/04/2016
+ms.date: 4/2/2020
 api_name:
 - _ungetch_nolock
 - _ungetwch_nolock
 - _ungetwch
 - _ungetch
+- _o__ungetch
+- _o__ungetch_nolock
+- _o__ungetwch
+- _o__ungetwch_nolock
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -18,6 +22,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-conio-l1-1-0.dll
+- api-ms-win-crt-private-l1-1-0
 api_type:
 - DLLExport
 topic_type:
@@ -46,19 +51,19 @@ helpviewer_keywords:
 - ungetwch_nolock function
 - _ungetwch function
 ms.assetid: 70ae71c6-228c-4883-a57d-de6d5f873825
-ms.openlocfilehash: 5fd34d0c975ee49bce688cd902a6df856b5d6963
-ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
+ms.openlocfilehash: 8a6c03c0a17f5c7a4f7fb7088696ba97073af6c9
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/17/2020
-ms.locfileid: "79443751"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81361322"
 ---
 # <a name="_ungetch-_ungetwch-_ungetch_nolock-_ungetwch_nolock"></a>_ungetch, _ungetwch, _ungetch_nolock, _ungetwch_nolock
 
 Renvoie le dernier caractère lu à partir de la console via une transmission push.
 
 > [!IMPORTANT]
-> Cette API ne peut pas être utilisée dans les applications qui s’exécutent dans le Windows Runtime. Pour plus d’informations, consultez [Fonctions CRT non prises en charge dans les applications de la plateforme Windows universelle](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
+> Cette API ne peut pas être utilisée dans les applications qui s'exécutent dans le Windows Runtime. Pour plus d’informations, consultez [Fonctions CRT non prises en charge dans les applications de la plateforme Windows universelle](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -79,18 +84,20 @@ wint_t _ungetwch_nolock(
 
 ### <a name="parameters"></a>Paramètres
 
-*c*<br/>
+*C*<br/>
 Caractère à renvoyer (transmission push).
 
 ## <a name="return-value"></a>Valeur de retour
 
-Les deux fonctions retournent le caractère *c* en cas de réussite. En cas d’erreur, **_ungetch** retourne la valeur **EOF** et **_ungetwch** retourne **WEOF**.
+Les deux fonctions retournent le caractère *c* en cas de succès. En cas d’erreur, **_ungetch** retourne une valeur de **l’EOF** et **_ungetwch** retourne **WEOF**.
 
 ## <a name="remarks"></a>Notes
 
-Ces fonctions renvoient le caractère *c* vers la console, ce qui fait que *c* est le caractère suivant lu par **_getch** ou **_getche** (ou **_getwch** ou **_getwche**). **_ungetch** et **_ungetwch** échouent s’ils sont appelés plusieurs fois avant la lecture suivante. L’argument *c* ne peut pas être **EOF** (ou **WEOF**).
+Ces fonctions repoussent le personnage *c* vers la console, ce qui fait *que c* soit le personnage suivant lu par **_getch** ou **_getche** (ou **_getwch** ou **_getwche).** **_ungetch** et **_ungetwch** échouent s’ils sont appelés plus d’une fois avant la lecture suivante. *L’argument c* peut ne pas être **EOF** (ou **WEOF**).
 
 Les versions avec suffixe **_nolock** sont identiques, à ceci près qu’elles ne sont pas protégées contre les interférences avec d’autres threads. Elles peuvent être plus rapides, car elles n’entraînent pas la surcharge liée au verrouillage des autres threads. Utilisez ces fonctions uniquement dans les contextes thread-safe, tels que les applications à un seul thread ou lorsque la portée appelante gère déjà l'isolation des threads.
+
+Par défaut, l’état global de cette fonction est étendue à l’application. Pour changer cela, voir [Global State dans le CRT](../global-state.md).
 
 ### <a name="generic-text-routine-mappings"></a>Mappages de routines de texte générique
 
@@ -106,7 +113,7 @@ Les versions avec suffixe **_nolock** sont identiques, à ceci près qu’elles 
 |**_ungetch**, **_ungetch_nolock**|\<conio.h>|
 |**_ungetwch**, **_ungetwch_nolock**|\<conio.h> ou \<wchar.h>|
 
-Pour plus d’informations sur la compatibilité, voir [Compatibilité](../../c-runtime-library/compatibility.md).
+Pour plus d'informations sur la compatibilité, voir [Compatibilité](../../c-runtime-library/compatibility.md).
 
 ## <a name="example"></a>Exemple
 
@@ -152,6 +159,6 @@ Whitetoken = White
 
 ## <a name="see-also"></a>Voir aussi
 
-[E/S de console et de port](../../c-runtime-library/console-and-port-i-o.md)<br/>
+[Console et Port I/O](../../c-runtime-library/console-and-port-i-o.md)<br/>
 [_cscanf, _cscanf_l, _cwscanf, _cwscanf_l](cscanf-cscanf-l-cwscanf-cwscanf-l.md)<br/>
 [_getch, _getwch](getch-getwch.md)<br/>

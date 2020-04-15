@@ -1,5 +1,5 @@
 ---
-title: Csimplemapequalhelper, classe
+title: Classe CSimpleMapEqualHelper
 ms.date: 11/04/2016
 f1_keywords:
 - CSimpleMapEqualHelper
@@ -9,16 +9,16 @@ f1_keywords:
 helpviewer_keywords:
 - CSimpleMapEqualHelper class
 ms.assetid: 9bb2968a-d609-405c-8272-ff3b42df6164
-ms.openlocfilehash: c614cbb11376c5ae338762c0feaa54c8f1bb3e27
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: d137a35a517ea93139f036f6e9a7a8de06d518a7
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62277928"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81330747"
 ---
-# <a name="csimplemapequalhelper-class"></a>Csimplemapequalhelper, classe
+# <a name="csimplemapequalhelper-class"></a>Classe CSimpleMapEqualHelper
 
-Cette classe est une application d’assistance pour la [CSimpleMap](../../atl/reference/csimplemap-class.md) classe.
+Cette classe est une aide pour la classe [CSimpleMap.](../../atl/reference/csimplemap-class.md)
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -32,7 +32,7 @@ class CSimpleMapEqualHelper
 *TKey*<br/>
 L’élément clé.
 
-*TVal*<br/>
+*TVal (en)*<br/>
 L’élément de valeur.
 
 ## <a name="members"></a>Membres
@@ -41,20 +41,20 @@ L’élément de valeur.
 
 |Nom|Description|
 |----------|-----------------|
-|[CSimpleMapEqualHelper::IsEqualKey](#isequalkey)|(Statique) Teste l’égalité de deux clés.|
-|[CSimpleMapEqualHelper::IsEqualValue](#isequalvalue)|(Statique) Teste l’égalité de deux valeurs.|
+|[CSimpleMapEqualHelper::IsEqualKey](#isequalkey)|(Statique) Teste deux clés pour l’égalité.|
+|[CSimpleMapEqualHelper::IsEqualValue](#isequalvalue)|(Statique) Teste deux valeurs pour l’égalité.|
 
 ## <a name="remarks"></a>Notes
 
-Cette classe de traits constitue un supplément pour le `CSimpleMap` classe. Il fournit des méthodes pour la comparaison de deux `CSimpleMap` éléments (plus précisément, les composants clé et valeur) pour l’égalité de l’objet. Par défaut, les clés et valeurs sont comparées à l’aide de **Operator == ()**, mais si le mappage contient des types de données complexes qui ne disposent pas de leur propre opérateur d’égalité, cette classe peut être substituée pour fournir la fonctionnalité supplémentaire requise.
+Cette classe de traits `CSimpleMap` est un supplément à la classe. Il fournit des `CSimpleMap` méthodes pour comparer deux éléments d’objet (en particulier, les composants clés et de valeur) pour l’égalité. Par défaut, les clés et les valeurs sont comparées à l’aide de **l’opérateur,** mais si la carte contient des types de données complexes qui n’ont pas leur propre opérateur d’égalité, cette classe peut être remplacée pour fournir les fonctionnalités supplémentaires requises.
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
-**En-tête :** atlsimpcoll.h
+**En-tête:** atlsimpcoll.h
 
-##  <a name="isequalkey"></a>  CSimpleMapEqualHelper::IsEqualKey
+## <a name="csimplemapequalhelperisequalkey"></a><a name="isequalkey"></a>CSimpleMapEqualHelper::IsEqualKey
 
-Teste l’égalité de deux clés.
+Teste deux clés pour l’égalité.
 
 ```
 static bool IsEqualKey(const TKey& k1, const TKey& k2);
@@ -70,11 +70,11 @@ La deuxième clé.
 
 ### <a name="return-value"></a>Valeur de retour
 
-Retourne la valeur true si les clés sont égales, sinon false.
+Retourne vrai si les touches sont égales, fausses autrement.
 
-##  <a name="isequalvalue"></a>  CSimpleMapEqualHelper::IsEqualValue
+## <a name="csimplemapequalhelperisequalvalue"></a><a name="isequalvalue"></a>CSimpleMapEqualHelper::IsEqualValue
 
-Teste l’égalité de deux valeurs.
+Teste deux valeurs pour l’égalité.
 
 ```
 static bool IsEqualValue(const TVal& v1, const TVal& v2);
@@ -90,9 +90,9 @@ Seconde valeur.
 
 ### <a name="return-value"></a>Valeur de retour
 
-Retourne la valeur true si les valeurs sont égales, sinon false.
+Rendements vrais si les valeurs sont égales, fausses autrement.
 
 ## <a name="see-also"></a>Voir aussi
 
-[CSimpleMapEqualHelperFalse, classe](../../atl/reference/csimplemapequalhelperfalse-class.md)<br/>
-[Vue d’ensemble de la classe](../../atl/atl-class-overview.md)
+[Classe CSimpleMapEqualHelperFalse](../../atl/reference/csimplemapequalhelperfalse-class.md)<br/>
+[Vue d'ensemble des classes](../../atl/atl-class-overview.md)

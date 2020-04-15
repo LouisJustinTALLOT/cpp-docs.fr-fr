@@ -1,5 +1,5 @@
 ---
-title: Ccomobjectstack, classe
+title: Classe CComObjectStack
 ms.date: 11/04/2016
 f1_keywords:
 - CComObjectStack
@@ -12,16 +12,16 @@ f1_keywords:
 helpviewer_keywords:
 - CComObjectStack class
 ms.assetid: 3da72c40-c834-45f6-bb76-6ac204028d80
-ms.openlocfilehash: 19fd226e617e4cdb1bba8a113b8984c36bf28d59
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 8c3fd56635da8b80c84f6151009586b7bd2b4341
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62259584"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81327574"
 ---
-# <a name="ccomobjectstack-class"></a>Ccomobjectstack, classe
+# <a name="ccomobjectstack-class"></a>Classe CComObjectStack
 
-Cette classe crée un objet COM temporaire et il fournit une implémentation squelette de `IUnknown`.
+Cette classe crée un objet COM temporaire et lui `IUnknown`fournit une mise en œuvre squelettique de .
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -33,7 +33,7 @@ class CComObjectStack : public Base
 #### <a name="parameters"></a>Paramètres
 
 *Base*<br/>
-Votre classe, dérivée de [CComObjectRoot](../../atl/reference/ccomobjectroot-class.md) ou [CComObjectRootEx](../../atl/reference/ccomobjectrootex-class.md), ainsi que toute autre interface souhaitées prendre en charge sur l’objet.
+Votre classe, dérivée de [CComObjectRoot](../../atl/reference/ccomobjectroot-class.md) ou [CComObjectRootEx](../../atl/reference/ccomobjectrootex-class.md), ainsi que de toute autre interface que vous souhaitez prendre en charge sur l’objet.
 
 ## <a name="members"></a>Membres
 
@@ -42,31 +42,31 @@ Votre classe, dérivée de [CComObjectRoot](../../atl/reference/ccomobjectroot-c
 |Nom|Description|
 |----------|-----------------|
 |[CComObjectStack::CComObjectStack](#ccomobjectstack)|Constructeur.|
-|[CComObjectStack::~CComObjectStack](#dtor)|Destructeur.|
+|[CComObjectStack: CComObjectStack](#dtor)|Destructeur.|
 
 ### <a name="public-methods"></a>M&#233;thodes publiques
 
 |Nom|Description|
 |----------|-----------------|
-|[CComObjectStack::AddRef](#addref)|Retourne zéro. En mode débogage, appelle `_ASSERTE`.|
-|[CComObjectStack::QueryInterface](#queryinterface)|Retourne E_NOINTERFACE. En mode débogage, appelle `_ASSERTE`.|
-|[CComObjectStack::Release](#release)|Retourne zéro. En mode débogage, appelle `_ASSERTE`. ~|
+|[CComObjectStack::AddRef](#addref)|Retourne zéro. En mode débogé, appels `_ASSERTE`.|
+|[CComObjectStack::QueryInterface](#queryinterface)|Retourne E_NOINTERFACE. En mode débogé, appels `_ASSERTE`.|
+|[CComObjectStack::Libération](#release)|Retourne zéro. En mode débogé, appels `_ASSERTE`. ~|
 
 ### <a name="public-data-members"></a>Membres de données publics
 
 |Nom|Description|
 |----------|-----------------|
-|[CComObjectStack::m_hResFinalConstruct](#m_hresfinalconstruct)|Contient le HRESULT retourné pendant la construction de la `CComObjectStack` objet.|
+|[CComObjectStack::m_hResFinalConstruct](#m_hresfinalconstruct)|Contient le HRESULT retourné `CComObjectStack` pendant la construction de l’objet.|
 
 ## <a name="remarks"></a>Notes
 
-`CComObjectStack` est utilisé pour créer un objet COM temporaire et fournir l’objet une implémentation squelette de `IUnknown`. En règle générale, l’objet est utilisé comme une variable locale dans une fonction (qui est, placée sur la pile). Étant donné que l’objet est détruit lorsque la fonction se termine, le décompte de références n’est pas effectuée pour accroître l’efficacité.
+`CComObjectStack`est utilisé pour créer un objet COM temporaire et fournir `IUnknown`à l’objet une mise en œuvre squelettique de . Typiquement, l’objet est utilisé comme une variable locale dans une fonction (c’est-à-dire, poussé sur la pile). Puisque l’objet est détruit lorsque la fonction se termine, le comptage de référence n’est pas effectué pour augmenter l’efficacité.
 
-L’exemple suivant montre comment créer un objet COM utilisé dans une fonction :
+L’exemple suivant montre comment créer un objet COM utilisé à l’intérieur d’une fonction :
 
 [!code-cpp[NVC_ATL_COM#42](../../atl/codesnippet/cpp/ccomobjectstack-class_1.cpp)]
 
-L’objet temporaire `Tempobj` est placé sur la pile et disparaît automatiquement lorsque la fonction se termine.
+L’objet `Tempobj` temporaire est poussé sur la pile et disparaît automatiquement lorsque la fonction se termine.
 
 ## <a name="inheritance-hierarchy"></a>Hiérarchie d'héritage
 
@@ -74,11 +74,11 @@ L’objet temporaire `Tempobj` est placé sur la pile et disparaît automatiquem
 
 `CComObjectStack`
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
-**En-tête :** atlcom.h
+**En-tête:** atlcom.h
 
-##  <a name="addref"></a>  CComObjectStack::AddRef
+## <a name="ccomobjectstackaddref"></a><a name="addref"></a>CComObjectStack::AddRef
 
 Retourne zéro.
 
@@ -92,9 +92,9 @@ Retourne zéro.
 
 ### <a name="remarks"></a>Notes
 
-En mode débogage, appelle `_ASSERTE`.
+En mode débogé, appels `_ASSERTE`.
 
-##  <a name="ccomobjectstack"></a>  CComObjectStack::CComObjectStack
+## <a name="ccomobjectstackccomobjectstack"></a><a name="ccomobjectstack"></a>CComObjectStack::CComObjectStack
 
 Constructeur.
 
@@ -104,9 +104,9 @@ CComObjectStack(void* = NULL);
 
 ### <a name="remarks"></a>Notes
 
-Appels `FinalConstruct` et définit ensuite [m_hResFinalConstruct](#m_hresfinalconstruct) au HRESULT retourné par `FinalConstruct`. Si vous n’avez pas dérivé votre classe de base à partir de [CComObjectRoot](../../atl/reference/ccomobjectroot-class.md), vous devez fournir votre propre `FinalConstruct` (méthode). Le destructeur appelle `FinalRelease`.
+Appels, `FinalConstruct` puis met [m_hResFinalConstruct](#m_hresfinalconstruct) à la HRESULT retourné par `FinalConstruct`. Si vous n’avez pas dérivé votre classe de base de `FinalConstruct` [CComObjectRoot](../../atl/reference/ccomobjectroot-class.md), vous devez fournir votre propre méthode. Le destructeur appelle `FinalRelease`.
 
-##  <a name="dtor"></a>  CComObjectStack::~CComObjectStack
+## <a name="ccomobjectstackccomobjectstack"></a><a name="dtor"></a>CComObjectStack: CComObjectStack
 
 Destructeur.
 
@@ -116,17 +116,17 @@ CComObjectStack();
 
 ### <a name="remarks"></a>Notes
 
-Libère toutes les ressources allouées et appels [FinalRelease](ccomobjectrootex-class.md#finalrelease).
+Libère toutes les ressources allouées et appelle [FinalRelease](ccomobjectrootex-class.md#finalrelease).
 
-##  <a name="m_hresfinalconstruct"></a>  CComObjectStack::m_hResFinalConstruct
+## <a name="ccomobjectstackm_hresfinalconstruct"></a><a name="m_hresfinalconstruct"></a>CComObjectStack::m_hResFinalConstruct
 
-Contient le HRESULT retourné en appelant `FinalConstruct` pendant la construction de la `CComObjectStack` objet.
+Contient le HRESULT `FinalConstruct` retourné de `CComObjectStack` l’appel pendant la construction de l’objet.
 
 ```
 HRESULT    m_hResFinalConstruct;
 ```
 
-##  <a name="queryinterface"></a>  CComObjectStack::QueryInterface
+## <a name="ccomobjectstackqueryinterface"></a><a name="queryinterface"></a>CComObjectStack::QueryInterface
 
 Retourne E_NOINTERFACE.
 
@@ -140,9 +140,9 @@ Retourne E_NOINTERFACE.
 
 ### <a name="remarks"></a>Notes
 
-En mode débogage, appelle `_ASSERTE`.
+En mode débogé, appels `_ASSERTE`.
 
-##  <a name="release"></a>  CComObjectStack::Release
+## <a name="ccomobjectstackrelease"></a><a name="release"></a>CComObjectStack::Libération
 
 Retourne zéro.
 
@@ -156,11 +156,11 @@ Retourne zéro.
 
 ### <a name="remarks"></a>Notes
 
-En mode débogage, appelle `_ASSERTE`.
+En mode débogé, appels `_ASSERTE`.
 
 ## <a name="see-also"></a>Voir aussi
 
-[CComAggObject, classe](../../atl/reference/ccomaggobject-class.md)<br/>
-[CComObject, classe](../../atl/reference/ccomobject-class.md)<br/>
-[CComObjectGlobal, classe](../../atl/reference/ccomobjectglobal-class.md)<br/>
-[Vue d’ensemble de la classe](../../atl/atl-class-overview.md)
+[Classe CComAggObject](../../atl/reference/ccomaggobject-class.md)<br/>
+[Classe CComObject](../../atl/reference/ccomobject-class.md)<br/>
+[Classe CComObjectGlobal](../../atl/reference/ccomobjectglobal-class.md)<br/>
+[Vue d'ensemble des classes](../../atl/atl-class-overview.md)

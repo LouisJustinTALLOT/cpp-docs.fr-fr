@@ -1,32 +1,32 @@
 ---
-title: Fichiers vcxproj. filters
+title: Vcxproj.filtre les fichiers
 ms.date: 09/25/2019
-description: Utilisez des fichiers de filtres dans C++ les projets Visual Studio pour définir des dossiers logiques personnalisés pour les fichiers dans Explorateur de solutions
+description: Utilisez des fichiers de filtres dans les projets Visual Studio CMD pour définir des dossiers logiques personnalisés pour les fichiers dans Solution Explorer
 helpviewer_keywords:
 - vcxproj.filters
 - filters file [C++]
-ms.openlocfilehash: bdf40708a70d841cb3d3144fa8fa73a71e9e9ef2
-ms.sourcegitcommit: 8e285a766523e653aeeb34d412dc6f615ef7b17b
+ms.openlocfilehash: 57735246b543680243994b99b8c05c9ad1211f38
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/21/2020
-ms.locfileid: "80078280"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81335930"
 ---
-# <a name="vcxprojfilters-files"></a>Fichiers vcxproj. filters
+# <a name="vcxprojfilters-files"></a>vcxproj.filtre les fichiers
 
-Le fichier de *filtres* (\*. vcxproj. filters) est un fichier XML au format MSBuild qui se trouve dans le dossier racine du projet. Il spécifie les types de fichiers qui entrent dans le dossier logique dans **Explorateur de solutions**. Dans l’illustration suivante, les fichiers *. cpp* se trouvent sous le nœud **fichiers sources** . les fichiers *. h* se trouvent sous le nœud **fichiers d’en-tête** , et les fichiers *. ico* et *. RC* se trouvent sous **fichiers de ressources**. Ce placement est contrôlé par le fichier de filtres.
+Le fichier de\* *filtres* (.vcxproj.filters) est un fichier XML dans le format MSBuild qui est situé dans le dossier de projet racine. Il précise quels types de fichiers entrent dans quel dossier logique dans **Solution Explorer**. Dans l’illustration suivante, les fichiers *.cpp* sont sous le nœud **Source Files.** les fichiers *.h* sont sous le nœud **Header Files,** et *.ico* et *.rc* fichiers sont sous **fichiers de ressources**. Ce placement est contrôlé par le fichier des filtres.
 
-![Dossiers logiques dans Explorateur de solutions](media/solution-explorer-filters.png)
+![Dossiers logiques dans Solution Explorer](media/solution-explorer-filters.png)
 
 ## <a name="creating-a-custom-filters-file"></a>Création d’un fichier de filtres personnalisés
 
-Visual Studio crée automatiquement ce fichier. Pour les applications de bureau, les dossiers logiques prédéfinis (filtres) sont : les **fichiers sources**, les fichiers d' **en-tête** et les **fichiers de ressources**. D’autres types de projets tels que UWP peuvent avoir un ensemble différent de dossiers par défaut. Visual Studio attribue automatiquement des types de fichiers connus à chaque dossier. Si vous souhaitez créer un filtre avec un nom personnalisé ou un filtre qui contient des types de fichiers personnalisés, vous pouvez créer votre propre fichier de filtres dans le dossier racine du projet ou sous un filtre existant. (Les**références** et les **dépendances externes** sont des dossiers spéciaux qui ne participent pas au filtrage.)
+Visual Studio crée ce fichier automatiquement. Pour les applications de bureau, les dossiers logiques prédéfinis (filtres) sont : **Fichiers Source**, **Fichiers d’en-tête** et **fichiers de ressources**. D’autres types de projets tels que UWP peuvent avoir un ensemble différent de dossiers par défaut. Visual Studio attribue automatiquement des types de fichiers connus à chaque dossier. Si vous souhaitez créer un filtre avec un nom personnalisé ou un filtre qui contient des types de fichiers personnalisés, vous pouvez créer votre propre fichier de filtres dans le dossier racine du projet, ou sous un filtre existant. (**Les références** et les **dépendances externes** sont des dossiers spéciaux qui ne participent pas au filtrage.)
 
 ## <a name="example"></a>Exemple
 
-L’exemple suivant montre le fichier de filtres pour l’exemple d’affichage précédent. Il a une hiérarchie plate ; en d’autres termes, il n’y a pas de dossiers logiques imbriqués. Le nœud `UniqueIdentifier` est facultatif. Il permet aux interfaces d’automatisation de Visual Studio de trouver le filtre. `Extensions` est également facultatif. Lorsqu’un nouveau fichier est ajouté à un projet, il est ajouté au filtre de niveau supérieur avec une extension de fichier correspondante. Pour ajouter un fichier à un filtre spécifique, cliquez avec le bouton droit sur le filtre et choisissez **Ajouter un nouvel élément**.
+L’exemple suivant montre le fichier de filtres pour l’exemple s’afficher précédemment. Il a une hiérarchie plate; en d’autres termes, il n’y a pas de dossiers logiques imbriqués. Le nœud `UniqueIdentifier` est facultatif. Il permet aux interfaces d’automatisation Visual Studio de trouver le filtre. `Extensions`est également facultatif. Lorsqu’un nouveau fichier est ajouté à un projet, il est ajouté au filtre le plus haut avec une extension de fichier correspondante. Pour ajouter un fichier à un filtre spécifique, cliquez à droite sur le filtre et choisissez **Ajouter un nouvel élément**.
 
-La `ItemGroup` qui contient les nœuds de `ClInclude` est créée lorsque le projet est lancé pour la première fois. Si vous générez vos propres fichiers vcxproj, assurez-vous que tous les éléments de projet comportent également une entrée dans le fichier de filtres. Les valeurs d’un nœud `ClInclude` remplacent le filtrage par défaut en fonction des extensions de fichier. Quand vous utilisez Visual Studio pour ajouter un nouvel élément au projet, l’IDE ajoute une entrée de fichier individuelle dans le fichier de filtres. Le filtre n’est pas automatiquement réaffecté si vous modifiez l’extension du fichier.
+Le `ItemGroup` qui `ClInclude` contient les nœuds est créé lorsque le projet est lancé. Si vous génévez vos propres fichiers vcxproj, assurez-vous que tous les éléments du projet ont également une entrée dans le fichier des filtres. Les valeurs `ClInclude` d’un nœud remplacent le filtrage par défaut en fonction des extensions de fichiers. Lorsque vous utilisez Visual Studio pour ajouter un nouvel élément au projet, l’IDE ajoutera une entrée de fichier individuelle dans le fichier des filtres. Le filtre n’est pas automatiquement réaffecté si vous modifiez l’extension du fichier.
 
 ```xml
 <?xml version="1.0" encoding="utf-8"?>
@@ -91,7 +91,7 @@ La `ItemGroup` qui contient les nœuds de `ClInclude` est créée lorsque le pro
 </Project>
 ```
 
-Pour créer des dossiers logiques imbriqués, déclarez tous les nœuds dans filtres `ItemGroup` comme indiqué ci-dessous. Chaque nœud enfant doit déclarer le chemin logique complet vers le parent le plus haut. Dans l’exemple suivant, une `ParentFilter` vide doit être déclarée, car elle est référencée dans des nœuds ultérieurs.
+Pour créer des dossiers logiques imbriqués, déclarez tous les nœuds dans les filtres `ItemGroup` comme indiqué ci-dessous. Chaque nœud d’enfant doit déclarer le chemin logique complet vers le parent le plus haut. Dans l’exemple suivant, un vide `ParentFilter` doit être déclaré parce qu’il est référencé dans les nœuds ultérieurs.
 
 ```xml
   <ItemGroup>

@@ -1,8 +1,9 @@
 ---
 title: _callnewh
-ms.date: 11/04/2016
+ms.date: 4/2/2020
 api_name:
 - _callnewh
+- _o__callnewh
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -15,6 +16,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-heap-l1-1-0.dll
+- api-ms-win-crt-private-l1-1-0
 api_type:
 - DLLExport
 topic_type:
@@ -24,12 +26,12 @@ f1_keywords:
 helpviewer_keywords:
 - _callnewh
 ms.assetid: 4dcb73e9-6384-4d12-a973-a8807d4de7a8
-ms.openlocfilehash: 3e14450538807b164897c335f7e37d82d8562314
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: d93de7f963a370810ed3b30af04d6d602abf6313
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70939378"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81333662"
 ---
 # <a name="_callnewh"></a>_callnewh
 
@@ -45,15 +47,15 @@ int _callnewh(
 
 ### <a name="parameters"></a>Paramètres
 
-*size*<br/>
+*Taille*<br/>
 Quantité de mémoire que l’[opérateur new](../../cpp/new-operator-cpp.md) a essayé d’allouer.
 
 ## <a name="return-value"></a>Valeur de retour
 
 |Valeur|Description|
 |-----------|-----------------|
-|0|Toute Aucun nouveau gestionnaire n’est installé ou aucun nouveau gestionnaire n’est actif.|
-|1|Fructueux Le nouveau gestionnaire est installé et actif. L’allocation de mémoire peut être retentée.|
+|0|Échec : aucun nouveau gestionnaire n’est installé ou actif.|
+|1|Réussite : le nouveau gestionnaire est installé et activé. L’allocation de mémoire peut être retentée.|
 
 ## <a name="exceptions"></a>Exceptions
 
@@ -63,7 +65,9 @@ Cette fonction génère [bad_alloc](../../standard-library/bad-alloc-class.md) s
 
 Le *nouveau gestionnaire* est appelé si l’[opérateur new](../../cpp/new-operator-cpp.md) ne parvient pas à allouer de la mémoire. Le nouveau gestionnaire peut alors lancer une action appropriée, par exemple la libération de mémoire pour que les allocations suivantes aboutissent.
 
-## <a name="requirements"></a>Configuration requise
+Par défaut, l’état global de cette fonction est étendue à l’application. Pour changer cela, voir [Global State dans le CRT](../global-state.md).
+
+## <a name="requirements"></a>Spécifications
 
 |Routine|En-tête requis|
 |-------------|---------------------|

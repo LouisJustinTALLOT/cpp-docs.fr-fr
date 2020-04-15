@@ -8,36 +8,36 @@ f1_keywords:
 helpviewer_keywords:
 - connection points [C++], global functions
 ms.assetid: bcb4bf50-2155-4e20-b8bb-f2908b03a6e7
-ms.openlocfilehash: 0313e93ee82bb96f3bfe08e45f70ccfee30dbee6
-ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
+ms.openlocfilehash: 6474297f8b9adf04541f7d232fb88d5e52d4e88c
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/16/2020
-ms.locfileid: "79417760"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81331529"
 ---
 # <a name="connection-point-global-functions"></a>Fonctions globales de point de connexion
 
-Ces fonctions assurent la prise en charge des points de connexion et des mappages de récepteur.
+Ces fonctions fournissent un support pour les points de connexion et les cartes d’évier.
 
 > [!IMPORTANT]
->  Les fonctions listées dans le tableau suivant ne peuvent pas être utilisées dans les applications qui s’exécutent dans le Windows Runtime.
+> Les fonctions énumérées dans le tableau suivant ne peuvent pas être utilisées dans les applications qui s’exécutent dans le Windows Runtime.
 
 |||
 |-|-|
 |[AtlAdvise](#atladvise)|Crée une connexion entre le point de connexion d'un objet et le récepteur d'un client.|
-|[AtlUnadvise](#atlunadvise)|Met fin à la connexion établie par le biais de `AtlAdvise`.|
-|[AtlAdviseSinkMap](#atladvisesinkmap)|Conseille ou déconseilne des entrées dans une table de récepteurs d’événements.|
+|[AtlUnadvise](#atlunadvise)|Termine la connexion `AtlAdvise`établie par .|
+|[AtlAdviseSinkMap](#atladvisesinkmap)|Conseille ou déconseille les entrées dans une carte d’évier d’événements.|
 
 ## <a name="requirements"></a>Spécifications
 
-**En-tête :** atlbase. h
+**En-tête:** atlbase.h
 
-##  <a name="atladvise"></a>AtlAdvise
+## <a name="atladvise"></a><a name="atladvise"></a>AtlAdvise
 
 Crée une connexion entre le point de connexion d'un objet et le récepteur d'un client.
 
 > [!IMPORTANT]
->  Cette fonction ne peut pas être utilisée dans les applications qui s’exécutent dans le Windows Runtime.
+> Cette fonction ne peut pas être utilisée dans les applications qui s’exécutent dans le Windows Runtime.
 
 ```
 HRESULT    AtlAdvise(
@@ -49,36 +49,36 @@ HRESULT    AtlAdvise(
 
 ### <a name="parameters"></a>Paramètres
 
-*pUnkCP*<br/>
-dans Pointeur vers l' `IUnknown` de l’objet avec lequel le client souhaite se connecter.
+*pUnkCP (en)*<br/>
+[dans] Un pointeur `IUnknown` à l’objet avec qui le client veut se connecter.
 
-*pUnk*<br/>
-dans Pointeur vers le `IUnknown`du client.
+*Punk*<br/>
+[dans] Un pointeur pour `IUnknown`le client .
 
-*vaut*<br/>
-dans GUID du point de connexion. En règle générale, il s’agit de l’interface sortante gérée par le point de connexion.
+*Iid*<br/>
+[dans] Le GUID du point de connexion. Typiquement, c’est la même chose que l’interface sortante gérée par le point de connexion.
 
-*PDW*<br/>
-à Pointeur vers le cookie qui identifie de façon unique la connexion.
+*Pdw*<br/>
+[out] Un pointeur vers le cookie qui identifie uniquement la connexion.
 
 ### <a name="return-value"></a>Valeur de retour
 
-Valeur HRESULT standard.
+Une valeur HRESULT standard.
 
 ### <a name="remarks"></a>Notes
 
-Le récepteur implémente l’interface sortante prise en charge par le point de connexion. Le client utilise le cookie *PDW* pour supprimer la connexion en le passant à [AtlUnadvise](#atlunadvise).
+L’évier implémente l’interface sortante supportée par le point de connexion. Le client utilise le cookie *pdw* pour supprimer la connexion en le passant à [AtlUnadvise](#atlunadvise).
 
 ### <a name="example"></a>Exemple
 
 [!code-cpp[NVC_ATL_Windowing#91](../../atl/codesnippet/cpp/connection-point-global-functions_1.cpp)]
 
-##  <a name="atlunadvise"></a>AtlUnadvise
+## <a name="atlunadvise"></a><a name="atlunadvise"></a>AtlUnadvise (AtlUnadvise)
 
-Met fin à la connexion établie par le biais de [AtlAdvise](#atladvise).
+Termine la connexion établie par [AtlAdvise](#atladvise).
 
 > [!IMPORTANT]
->  Cette fonction ne peut pas être utilisée dans les applications qui s’exécutent dans le Windows Runtime.
+> Cette fonction ne peut pas être utilisée dans les applications qui s’exécutent dans le Windows Runtime.
 
 ```
 HRESULT    AtlUnadvise(
@@ -89,29 +89,29 @@ HRESULT    AtlUnadvise(
 
 ### <a name="parameters"></a>Paramètres
 
-*pUnkCP*<br/>
-dans Pointeur vers l' `IUnknown` de l’objet avec lequel le client est connecté.
+*pUnkCP (en)*<br/>
+[dans] Un pointeur `IUnknown` sur l’objet avec lequel le client est connecté.
 
-*vaut*<br/>
-dans GUID du point de connexion. En règle générale, il s’agit de l’interface sortante gérée par le point de connexion.
+*Iid*<br/>
+[dans] Le GUID du point de connexion. Typiquement, c’est la même chose que l’interface sortante gérée par le point de connexion.
 
 *dw*<br/>
-dans Cookie qui identifie de façon unique la connexion.
+[dans] Le cookie qui identifie de façon unique la connexion.
 
 ### <a name="return-value"></a>Valeur de retour
 
-Valeur HRESULT standard.
+Une valeur HRESULT standard.
 
 ### <a name="example"></a>Exemple
 
 [!code-cpp[NVC_ATL_Windowing#96](../../atl/codesnippet/cpp/connection-point-global-functions_2.cpp)]
 
-##  <a name="atladvisesinkmap"></a>AtlAdviseSinkMap
+## <a name="atladvisesinkmap"></a><a name="atladvisesinkmap"></a>AtlAdviseSinkMap
 
 Appelez cette fonction pour conseiller ou déconseiller toutes les entrées de la table d'événements du récepteur de l'objet.
 
 > [!IMPORTANT]
->  Cette fonction ne peut pas être utilisée dans les applications qui s’exécutent dans le Windows Runtime.
+> Cette fonction ne peut pas être utilisée dans les applications qui s’exécutent dans le Windows Runtime.
 
 ```
 HRESULT AtlAdviseSinkMap(T* pT, bool bAdvise);
@@ -119,15 +119,15 @@ HRESULT AtlAdviseSinkMap(T* pT, bool bAdvise);
 
 ### <a name="parameters"></a>Paramètres
 
-*Unis*<br/>
-dans Pointeur vers l’objet contenant la table réceptrice.
+*Pt*<br/>
+[dans] Un pointeur de l’objet contenant la carte de l’évier.
 
-*bAdvise*<br/>
-dans TRUE si toutes les entrées de récepteur doivent être notifiées ; FALSe si toutes les entrées de récepteur ne doivent pas être avisées.
+*bAdvise (en)*<br/>
+[dans] VRAI si toutes les entrées d’évier doivent être conseillées ; FALSE si toutes les entrées d’évier doivent être déconseillées.
 
 ### <a name="return-value"></a>Valeur de retour
 
-Valeur HRESULT standard.
+Une valeur HRESULT standard.
 
 ### <a name="example"></a>Exemple
 
@@ -136,4 +136,4 @@ Valeur HRESULT standard.
 ## <a name="see-also"></a>Voir aussi
 
 [Fonctions](../../atl/reference/atl-functions.md)<br/>
-[Macros de point de connexion](../../atl/reference/connection-point-macros.md)
+[Macros point de connexion](../../atl/reference/connection-point-macros.md)

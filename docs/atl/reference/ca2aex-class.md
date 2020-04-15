@@ -1,5 +1,5 @@
 ---
-title: Classe de CA2AEX
+title: Classe CA2AEX
 ms.date: 11/04/2016
 f1_keywords:
 - CA2AEX
@@ -10,19 +10,19 @@ f1_keywords:
 helpviewer_keywords:
 - CA2AEX class
 ms.assetid: 57dc65df-d9cf-4a84-99d3-6e031dde3664
-ms.openlocfilehash: 712e663ab58e2c9de4e2f25090b84b35d0bced71
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 4f8b9f91e9bc499523fe3484bc76325e2efb8140
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62247636"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81319179"
 ---
-# <a name="ca2aex-class"></a>Classe de CA2AEX
+# <a name="ca2aex-class"></a>Classe CA2AEX
 
-Cette classe est utilisée par les macros de conversion de chaîne CA2TEX CT2AEX et CA2A typedef.
+Cette classe est utilisée par les macros de conversion des cordes CA2TEX et CT2AEX, et le typedef CA2A.
 
 > [!IMPORTANT]
->  Cette classe et ses membres ne peut pas être utilisés dans les applications qui s’exécutent dans le Windows Runtime.
+> Cette classe et ses membres ne peuvent pas être utilisés dans les applications qui s’exécutent dans le Windows Runtime.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -34,7 +34,7 @@ class CA2AEX
 #### <a name="parameters"></a>Paramètres
 
 *t_nBufferLength*<br/>
-La taille de la mémoire tampon utilisée dans le processus de traduction. La longueur par défaut est 128 octets.
+La taille du tampon utilisé dans le processus de traduction. La longueur par défaut est de 128 octets.
 
 ## <a name="members"></a>Membres
 
@@ -43,52 +43,52 @@ La taille de la mémoire tampon utilisée dans le processus de traduction. La lo
 |Nom|Description|
 |----------|-----------------|
 |[CA2AEX::CA2AEX](#ca2aex)|Constructeur.|
-|[CA2AEX::~CA2AEX](#dtor)|Destructeur.|
+|[CA2AEX::CA2AEX](#dtor)|Destructeur.|
 
 ### <a name="public-operators"></a>Op&#233;rateurs publics
 
 |Nom|Description|
 |----------|-----------------|
-|[CA2AEX::operator LPSTR](#operator_lpstr)|Opérateur de conversion.|
+|[CA2AEX::opérateur LPSTR](#operator_lpstr)|Opérateur de conversion.|
 
 ### <a name="public-data-members"></a>Membres de données publics
 
 |Nom|Description|
 |----------|-----------------|
-|[CA2AEX::m_psz](#m_psz)|Le membre de données qui stocke la chaîne source.|
-|[CA2AEX::m_szBuffer](#m_szbuffer)|La mémoire tampon statique, utilisé pour stocker la chaîne convertie.|
+|[CA2AEX:m_psz](#m_psz)|Le membre des données qui stocke la chaîne source.|
+|[CA2AEX::m_szBuffer](#m_szbuffer)|Le tampon statique, utilisé pour stocker la chaîne convertie.|
 
 ## <a name="remarks"></a>Notes
 
-À moins que des fonctionnalités supplémentaires sont requises, utilisez CA2TEX, CT2AEX ou CA2A dans votre propre code.
+À moins que des fonctionnalités supplémentaires ne soient requises, utilisez CA2TEX, CT2AEX ou CA2A dans votre propre code.
 
-Cette classe contient une mémoire tampon de taille fixe statique qui est utilisé pour stocker le résultat de la conversion. Si le résultat est trop grand pour tenir dans la mémoire tampon statique, la classe alloue la mémoire à l’aide **malloc**, libère la mémoire quand l’objet est hors de portée. Cela garantit que, contrairement au texte des macros de conversion disponibles dans les versions précédentes d’ATL, cette classe est sûr à utiliser dans des boucles et qu’il ne dépassement de la pile.
+Cette classe contient un tampon statique de taille fixe qui est utilisé pour stocker le résultat de la conversion. Si le résultat est trop grand pour s’adapter dans le tampon statique, la classe alloue la mémoire à l’aide **de malloc,** libérant la mémoire lorsque l’objet sort de portée. Cela garantit que, contrairement aux macros de conversion de texte disponibles dans les versions précédentes d’ATL, cette classe est sûre à utiliser en boucles et qu’elle ne débordera pas la pile.
 
-Si la classe tente d’allouer de la mémoire sur le tas et échoue, il appellera `AtlThrow` avec l’argument E_OUTOFMEMORY.
+Si la classe essaie d’allouer la mémoire `AtlThrow` sur le tas et échoue, il appellera avec un argument de E_OUTOFMEMORY.
 
-Par défaut, les macros et les classes de conversion ATL utilisent page de codes ANSI du thread actuel pour la conversion.
+Par défaut, les classes de conversion ET les macros ATL utilisent la page de code ANSI du thread actuel pour la conversion.
 
-Les macros suivantes sont basées sur cette classe :
+Les macros suivantes sont basées sur cette classe :
 
 - CA2TEX
 
 - CT2AEX
 
-Le typedef suivant est basé sur cette classe :
+Le tapdef suivant est basé sur cette classe :
 
 - CA2A
 
-Pour une description de ces macros de conversion de texte, consultez [Macros de Conversion de chaîne de MFC et ATL](string-conversion-macros.md).
+Pour une discussion de ces macros de conversion de texte, voir [ATL et MFC String Conversion Macros](string-conversion-macros.md).
 
 ## <a name="example"></a>Exemple
 
-Consultez [ATL et MFC Macros de Conversion de chaînes](string-conversion-macros.md) pour obtenir un exemple d’utilisation de ces macros de conversion de chaînes.
+Voir [les macros de conversion des cordes ATL et MFC](string-conversion-macros.md) par exemple en utilisant ces macros de conversion de cordes.
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
-**En-tête :** atlconv.h
+**En-tête:** atlconv.h
 
-##  <a name="ca2aex"></a>  CA2AEX::CA2AEX
+## <a name="ca2aexca2aex"></a><a name="ca2aex"></a>CA2AEX::CA2AEX
 
 Constructeur.
 
@@ -99,7 +99,7 @@ CA2AEX(LPCSTR psz) throw(...);
 
 ### <a name="parameters"></a>Paramètres
 
-*psz*<br/>
+*Zsp*<br/>
 La chaîne de texte à convertir.
 
 *nCodePage*<br/>
@@ -107,9 +107,9 @@ Inutilisé dans cette classe.
 
 ### <a name="remarks"></a>Notes
 
-Crée la mémoire tampon requise pour la traduction.
+Crée le tampon requis pour la traduction.
 
-##  <a name="dtor"></a>  CA2AEX::~CA2AEX
+## <a name="ca2aexca2aex"></a><a name="dtor"></a>CA2AEX::CA2AEX
 
 Destructeur.
 
@@ -119,25 +119,25 @@ Destructeur.
 
 ### <a name="remarks"></a>Notes
 
-Libère la mémoire tampon allouée.
+Libère le tampon alloué.
 
-##  <a name="m_psz"></a>  CA2AEX::m_psz
+## <a name="ca2aexm_psz"></a><a name="m_psz"></a>CA2AEX:m_psz
 
-Le membre de données qui stocke la chaîne source.
+Le membre des données qui stocke la chaîne source.
 
 ```
 LPSTR m_psz;
 ```
 
-##  <a name="m_szbuffer"></a>  CA2AEX::m_szBuffer
+## <a name="ca2aexm_szbuffer"></a><a name="m_szbuffer"></a>CA2AEX::m_szBuffer
 
-La mémoire tampon statique, utilisé pour stocker la chaîne convertie.
+Le tampon statique, utilisé pour stocker la chaîne convertie.
 
 ```
 char m_szBuffer[ t_nBufferLength];
 ```
 
-##  <a name="operator_lpstr"></a>  CA2AEX::operator LPSTR
+## <a name="ca2aexoperator-lpstr"></a><a name="operator_lpstr"></a>CA2AEX::opérateur LPSTR
 
 Opérateur de conversion.
 
@@ -151,9 +151,9 @@ Retourne la chaîne de texte comme type LPSTR.
 
 ## <a name="see-also"></a>Voir aussi
 
-[CA2CAEX, classe](../../atl/reference/ca2caex-class.md)<br/>
-[CA2WEX, classe](../../atl/reference/ca2wex-class.md)<br/>
-[CW2AEX, classe](../../atl/reference/cw2aex-class.md)<br/>
-[CW2CWEX, classe](../../atl/reference/cw2cwex-class.md)<br/>
-[CW2WEX, classe](../../atl/reference/cw2wex-class.md)<br/>
-[Vue d’ensemble de la classe](../../atl/atl-class-overview.md)
+[Classe CA2CAEX](../../atl/reference/ca2caex-class.md)<br/>
+[Classe CA2WEX](../../atl/reference/ca2wex-class.md)<br/>
+[Classe CW2AEX](../../atl/reference/cw2aex-class.md)<br/>
+[Classe CW2CWEX](../../atl/reference/cw2cwex-class.md)<br/>
+[Classe CW2WEX](../../atl/reference/cw2wex-class.md)<br/>
+[Vue d'ensemble des classes](../../atl/atl-class-overview.md)

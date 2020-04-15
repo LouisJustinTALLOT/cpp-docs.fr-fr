@@ -1,5 +1,5 @@
 ---
-title: CAtlFileMappingBase, classe
+title: Classe CAtlFileMappingBase
 ms.date: 11/04/2016
 f1_keywords:
 - CAtlFileMappingBase
@@ -16,19 +16,19 @@ f1_keywords:
 helpviewer_keywords:
 - CAtlFileMappingBase class
 ms.assetid: be555723-2790-4f57-a8fb-be4d68460775
-ms.openlocfilehash: a20a8f6c00f9404aa819b87a6a69ad2c08fb4561
-ms.sourcegitcommit: 180f63704f6ddd07a4172a93b179cf0733fd952d
+ms.openlocfilehash: ae790cf1248c78ff9aa70c0e586f86af6c8f3b9a
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70739545"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81318941"
 ---
-# <a name="catlfilemappingbase-class"></a>CAtlFileMappingBase, classe
+# <a name="catlfilemappingbase-class"></a>Classe CAtlFileMappingBase
 
-Cette classe représente un fichier mappé en mémoire.
+Cette classe représente un fichier cartographié par la mémoire.
 
 > [!IMPORTANT]
->  Cette classe et ses membres ne peuvent pas être utilisés dans les applications qui s’exécutent dans le Windows Runtime.
+> Cette classe et ses membres ne peuvent pas être utilisés dans les applications qui s’exécutent dans le Windows Runtime.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -43,38 +43,38 @@ class CAtlFileMappingBase
 |Nom|Description|
 |----------|-----------------|
 |[CAtlFileMappingBase::CAtlFileMappingBase](#catlfilemappingbase)|Constructeur.|
-|[CAtlFileMappingBase::~CAtlFileMappingBase](#dtor)|Destructeur.|
+|[CAtlFileMappingBase::CAtlFileMappingBase](#dtor)|Destructeur.|
 
 ### <a name="public-methods"></a>M&#233;thodes publiques
 
 |Nom|Description|
 |----------|-----------------|
-|[CAtlFileMappingBase::CopyFrom](#copyfrom)|Appelez cette méthode pour effectuer une copie à partir d’un objet de mappage de fichiers.|
-|[CAtlFileMappingBase::GetData](#getdata)|Appelez cette méthode pour obtenir les données d’un objet de mappage de fichier.|
-|[CAtlFileMappingBase::GetHandle](#gethandle)|Appelez cette méthode pour retourner le descripteur de fichier.|
-|[CAtlFileMappingBase::GetMappingSize](#getmappingsize)|Appelez cette méthode pour obtenir la taille de mappage à partir d’un objet de mappage de fichier.|
-|[CAtlFileMappingBase::MapFile](#mapfile)|Appelez cette méthode pour créer un objet de mappage de fichier.|
-|[CAtlFileMappingBase::MapSharedMem](#mapsharedmem)|Appelez cette méthode pour créer un objet de mappage de fichiers qui autorise un accès complet à tous les processus.|
-|[CAtlFileMappingBase::OpenMapping](#openmapping)|Appelez cette méthode pour retourner un handle à l’objet de mappage de fichier.|
-|[CAtlFileMappingBase::Unmap](#unmap)|Appelez cette méthode pour annuler le mappage d’un objet de mappage de fichier.|
+|[CAtlFileMappingBase::CopyDe](#copyfrom)|Appelez cette méthode pour copier à partir d’un objet de cartographie de fichiers.|
+|[CAtlFileMappingBase::GetData](#getdata)|Appelez cette méthode pour obtenir les données à partir d’un objet de cartographie de fichiers.|
+|[CAtlFileMappingBase::GetHandle](#gethandle)|Appelez cette méthode pour retourner la poignée de fichier.|
+|[CAtlFileMappingBase::GetMappingSize](#getmappingsize)|Appelez cette méthode pour obtenir la taille de la cartographie à partir d’un objet de cartographie de fichiers.|
+|[CAtlFileMappingBase::MapFile](#mapfile)|Appelez cette méthode pour créer un objet de cartographie de fichiers.|
+|[CAtlFileMappingBase::MapSharedMem](#mapsharedmem)|Appelez cette méthode pour créer un objet de cartographie de fichiers qui permet un accès complet à tous les processus.|
+|[CAtlFileMappingBase::OpenMapping](#openmapping)|Appelez cette méthode pour retourner une poignée à l’objet de cartographie de fichiers.|
+|[CAtlFileMappingBase::Unmap](#unmap)|Appelez cette méthode pour débrancher un objet de cartographie de fichiers.|
 
 ### <a name="public-operators"></a>Op&#233;rateurs publics
 
 |Nom|Description|
 |----------|-----------------|
-|[CAtlFileMappingBase::operator =](#operator_eq)|Définit l’objet de mappage de fichiers en cours sur un autre objet de mappage de fichier.|
+|[CAtlFileMappingBase::opérateur](#operator_eq)|Définit l’objet de cartographie de fichiers actuel à un autre objet de cartographie de fichiers.|
 
 ## <a name="remarks"></a>Notes
 
-Le mappage de fichier est l’Association du contenu d’un fichier avec une partie de l’espace d’adressage virtuel d’un processus. Cette classe fournit des méthodes pour créer des objets de mappage de fichiers qui permettent aux programmes d’accéder facilement aux données et de les partager.
+La cartographie des fichiers est l’association du contenu d’un fichier avec une partie de l’espace d’adresse virtuelle d’un processus. Cette classe fournit des méthodes pour créer des objets de cartographie de fichiers qui permettent aux programmes d’accéder et de partager facilement des données.
 
-Pour plus d’informations, consultez [mappage de fichiers](/windows/win32/Memory/file-mapping) dans le SDK Windows.
+Pour plus d’informations, voir [La cartographie des fichiers](/windows/win32/Memory/file-mapping) dans windows SDK.
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
-**En-tête :** atlfile. h
+**En-tête:** atlfile.h
 
-##  <a name="catlfilemappingbase"></a>  CAtlFileMappingBase::CAtlFileMappingBase
+## <a name="catlfilemappingbasecatlfilemappingbase"></a><a name="catlfilemappingbase"></a>CAtlFileMappingBase::CAtlFileMappingBase
 
 Constructeur.
 
@@ -85,18 +85,18 @@ CAtlFileMappingBase() throw();
 
 ### <a name="parameters"></a>Paramètres
 
-*orig*<br/>
-Objet de mappage de fichier d’origine à copier pour créer le nouvel objet.
+*Bail*<br/>
+L’objet original de cartographie de fichiers à copier pour créer le nouvel objet.
 
 ### <a name="remarks"></a>Notes
 
-Crée un objet de mappage de fichiers, éventuellement à l’aide d’un objet existant. Il est toujours nécessaire d’appeler [CAtlFileMappingBase ::](#mapfile) fichier de mappage pour ouvrir ou créer l’objet de mappage de fichiers pour un fichier particulier.
+Crée un nouvel objet de cartographie de fichiers, en option à l’aide d’un objet existant. Il est encore nécessaire d’appeler [CAtlFileMappingBase::MapFile](#mapfile) pour ouvrir ou créer l’objet de cartographie de fichiers pour un fichier particulier.
 
 ### <a name="example"></a>Exemple
 
 [!code-cpp[NVC_ATL_Utilities#71](../../atl/codesnippet/cpp/catlfilemappingbase-class_1.cpp)]
 
-##  <a name="dtor"></a>  CAtlFileMappingBase::~CAtlFileMappingBase
+## <a name="catlfilemappingbasecatlfilemappingbase"></a><a name="dtor"></a>CAtlFileMappingBase::CAtlFileMappingBase
 
 Destructeur.
 
@@ -106,11 +106,11 @@ Destructeur.
 
 ### <a name="remarks"></a>Notes
 
-Libère toutes les ressources allouées par la classe et appelle la méthode [CAtlFileMappingBase ::](#unmap) unout.
+Libère toutes les ressources allouées par la classe et appelle la [CAtlFileMappingBase::Unmap](#unmap) méthode.
 
-##  <a name="copyfrom"></a>  CAtlFileMappingBase::CopyFrom
+## <a name="catlfilemappingbasecopyfrom"></a><a name="copyfrom"></a>CAtlFileMappingBase::CopyDe
 
-Appelez cette méthode pour effectuer une copie à partir d’un objet de mappage de fichiers.
+Appelez cette méthode pour copier à partir d’un objet de cartographie de fichiers.
 
 ```
 HRESULT CopyFrom(CAtlFileMappingBase& orig) throw();
@@ -118,16 +118,16 @@ HRESULT CopyFrom(CAtlFileMappingBase& orig) throw();
 
 ### <a name="parameters"></a>Paramètres
 
-*orig*<br/>
-Objet de mappage de fichier d’origine à partir duquel effectuer la copie.
+*Bail*<br/>
+L’objet original de cartographie de fichier à copier à partir.
 
 ### <a name="return-value"></a>Valeur de retour
 
-Retourne S_OK en cas de réussite, ou une erreur HRESULT en cas d’échec.
+Retourne S_OK sur le succès, ou une erreur HRESULT sur l’échec.
 
-##  <a name="getdata"></a>  CAtlFileMappingBase::GetData
+## <a name="catlfilemappingbasegetdata"></a><a name="getdata"></a>CAtlFileMappingBase::GetData
 
-Appelez cette méthode pour obtenir les données d’un objet de mappage de fichier.
+Appelez cette méthode pour obtenir les données à partir d’un objet de cartographie de fichiers.
 
 ```
 void* GetData() const throw();
@@ -135,11 +135,11 @@ void* GetData() const throw();
 
 ### <a name="return-value"></a>Valeur de retour
 
-Retourne un pointeur vers les données.
+Retourne un pointeur aux données.
 
-##  <a name="gethandle"></a>  CAtlFileMappingBase::GetHandle
+## <a name="catlfilemappingbasegethandle"></a><a name="gethandle"></a>CAtlFileMappingBase::GetHandle
 
-Appelez cette méthode pour retourner un handle à l’objet de mappage de fichier.
+Appelez cette méthode pour retourner une poignée à l’objet de cartographie de fichiers.
 
 ```
 HANDLE GetHandle() throw ();
@@ -147,11 +147,11 @@ HANDLE GetHandle() throw ();
 
 ### <a name="return-value"></a>Valeur de retour
 
-Retourne un handle vers l’objet de mappage de fichier.
+Retourne une poignée à l’objet de cartographie des fichiers.
 
-##  <a name="getmappingsize"></a>  CAtlFileMappingBase::GetMappingSize
+## <a name="catlfilemappingbasegetmappingsize"></a><a name="getmappingsize"></a>CAtlFileMappingBase::GetMappingSize
 
-Appelez cette méthode pour obtenir la taille de mappage à partir d’un objet de mappage de fichier.
+Appelez cette méthode pour obtenir la taille de la cartographie à partir d’un objet de cartographie de fichiers.
 
 ```
 SIZE_T GetMappingSize() throw();
@@ -159,15 +159,15 @@ SIZE_T GetMappingSize() throw();
 
 ### <a name="return-value"></a>Valeur de retour
 
-Retourne la taille du mappage.
+Retourne la taille de la cartographie.
 
 ### <a name="example"></a>Exemple
 
-Consultez l’exemple de [CAtlFileMappingBase :: CAtlFileMappingBase](#catlfilemappingbase).
+Voir l’exemple pour [CAtlFileMappingBase::CAtlFileMappingBase](#catlfilemappingbase).
 
-##  <a name="mapfile"></a>  CAtlFileMappingBase::MapFile
+## <a name="catlfilemappingbasemapfile"></a><a name="mapfile"></a>CAtlFileMappingBase::MapFile
 
-Appelez cette méthode pour ouvrir ou créer un objet de mappage de fichier pour le fichier spécifié.
+Appelez cette méthode pour ouvrir ou créer un objet de cartographie de fichiers pour le fichier spécifié.
 
 ```
 HRESULT MapFile(
@@ -180,36 +180,36 @@ HRESULT MapFile(
 
 ### <a name="parameters"></a>Paramètres
 
-*hFile*<br/>
-Handle du fichier à partir duquel créer un objet de mappage. *hFile* doit être valide et ne peut pas être défini sur INVALID_HANDLE_VALUE.
+*hFile (en)*<br/>
+Gérer le fichier à partir duquel créer un objet de cartographie. *hFile* doit être valide et ne peut pas être mis à INVALID_HANDLE_VALUE.
 
-*nMappingSize*<br/>
-Taille du mappage. Si la valeur est 0, la taille maximale de l’objet de mappage de fichiers est égale à la taille actuelle du fichier identifié par *hFile.*
+*nMappingSize (en)*<br/>
+La taille de la cartographie. Si 0, la taille maximale de l’objet de cartographie de fichier est égale à la taille actuelle du fichier identifié par *hFile.*
 
-*nOffset*<br/>
-Offset de fichier où le mappage doit commencer. La valeur de décalage doit être un multiple de la granularité d’allocation de mémoire du système.
+*nOffset (en anglais)*<br/>
+Le fichier compense l’endroit où la cartographie doit commencer. La valeur offset doit être un multiple de la granularité d’allocation de mémoire du système.
 
 *dwMappingProtection*<br/>
-Protection souhaitée pour la vue de fichier lorsque le fichier est mappé. Consultez *flProtect* dans [CreateFileMapping](/windows/win32/api/winbase/nf-winbase-createfilemappinga) dans le SDK Windows.
+La protection souhaitée pour la vue du fichier lorsque le fichier est cartographié. Voir *flProtect* dans [CreateFileMapping](/windows/win32/api/winbase/nf-winbase-createfilemappinga) dans le SDK Windows.
 
 *dwViewDesiredAccess*<br/>
-Spécifie le type d’accès à la vue de fichier et, par conséquent, la protection des pages mappées par le fichier. Consultez *dwDesiredAccess* dans [MapViewOfFileEx](/windows/win32/api/memoryapi/nf-memoryapi-mapviewoffileex) dans le SDK Windows.
+Spécifie le type d’accès à la vue du fichier et, par conséquent, la protection des pages cartographiées par le fichier. Voir *dwDesiredAccess* dans [MapViewOfFileEx](/windows/win32/api/memoryapi/nf-memoryapi-mapviewoffileex) dans le Windows SDK.
 
 ### <a name="return-value"></a>Valeur de retour
 
-Retourne S_OK en cas de réussite, ou une erreur HRESULT en cas d’échec.
+Retourne S_OK sur le succès, ou une erreur HRESULT sur l’échec.
 
 ### <a name="remarks"></a>Notes
 
-Après la création d’un objet de mappage de fichiers, la taille du fichier ne doit pas dépasser la taille de l’objet de mappage de fichiers ; Si c’est le cas, tout le contenu du fichier ne sera pas disponible pour le partage. Pour plus d’informations, consultez [CreateFileMapping](/windows/win32/api/winbase/nf-winbase-createfilemappinga) et [MapViewOfFileEx](/windows/win32/api/memoryapi/nf-memoryapi-mapviewoffileex) dans le SDK Windows.
+Une fois qu’un objet de cartographie de fichiers a été créé, la taille du fichier ne doit pas dépasser la taille de l’objet de cartographie des fichiers ; si c’est le cas, tout le contenu du fichier ne sera pas disponible pour le partage. Pour plus de détails, voir [CreateFileMapping](/windows/win32/api/winbase/nf-winbase-createfilemappinga) et [MapViewOfFileEx](/windows/win32/api/memoryapi/nf-memoryapi-mapviewoffileex) dans le SDK Windows.
 
 ### <a name="example"></a>Exemple
 
-Consultez l’exemple de [CAtlFileMappingBase :: CAtlFileMappingBase](#catlfilemappingbase).
+Voir l’exemple pour [CAtlFileMappingBase::CAtlFileMappingBase](#catlfilemappingbase).
 
-##  <a name="mapsharedmem"></a>  CAtlFileMappingBase::MapSharedMem
+## <a name="catlfilemappingbasemapsharedmem"></a><a name="mapsharedmem"></a>CAtlFileMappingBase::MapSharedMem
 
-Appelez cette méthode pour créer un objet de mappage de fichiers qui autorise un accès complet à tous les processus.
+Appelez cette méthode pour créer un objet de cartographie de fichiers qui permet un accès complet à tous les processus.
 
 ```
 HRESULT MapSharedMem(
@@ -223,35 +223,35 @@ HRESULT MapSharedMem(
 
 ### <a name="parameters"></a>Paramètres
 
-*nMappingSize*<br/>
-Taille du mappage. Si la valeur est 0, la taille maximale de l’objet de mappage de fichiers est égale à la taille actuelle de l’objet de mappage de fichiers identifié par *szName*.
+*nMappingSize (en)*<br/>
+La taille de la cartographie. Si 0, la taille maximale de l’objet de cartographie de fichier est égale à la taille actuelle de l’objet de cartographie de fichier identifié par *szName*.
 
-*szName*<br/>
-Nom de l’objet de mappage.
+*szName (szName)*<br/>
+Le nom de l’objet de cartographie.
 
-*pbAlreadyExisted*<br/>
-Pointe vers une valeur BOOL qui a la valeur TRUE si l’objet de mappage existait déjà.
+*pbAlreadyExisted pbAlreadyExisted pbAlreadyExisted pb*<br/>
+Points à une valeur BOOL qui est réglé à VRAI si l’objet de cartographie existait déjà.
 
-*lpsa*<br/>
-Pointeur vers une `SECURITY_ATTRIBUTES` structure qui détermine si le handle retourné peut être hérité par les processus enfants. Consultez *lpAttributes* dans [CreateFileMapping](/windows/win32/api/winbase/nf-winbase-createfilemappinga) dans le SDK Windows.
+*lpsa lpsa*<br/>
+Le pointeur `SECURITY_ATTRIBUTES` d’une structure qui détermine si la poignée retournée peut être héritée par les processus de l’enfant. Voir *lpAttributes* dans [CreateFileMapping](/windows/win32/api/winbase/nf-winbase-createfilemappinga) dans le SDK Windows.
 
 *dwMappingProtection*<br/>
-Protection souhaitée pour la vue de fichier, lorsque le fichier est mappé. Consultez *flProtect* dans `CreateFileMapping` dans le SDK Windows.
+La protection souhaitée pour la vue du fichier, lorsque le fichier est cartographié. Voir *flProtect* dans `CreateFileMapping` le Windows SDK.
 
 *dwViewDesiredAccess*<br/>
-Spécifie le type d’accès à la vue de fichier et, par conséquent, la protection des pages mappées par le fichier. Consultez *dwDesiredAccess* dans [MapViewOfFileEx](/windows/win32/api/memoryapi/nf-memoryapi-mapviewoffileex) dans le SDK Windows.
+Spécifie le type d’accès à la vue du fichier et, par conséquent, la protection des pages cartographiées par le fichier. Voir *dwDesiredAccess* dans [MapViewOfFileEx](/windows/win32/api/memoryapi/nf-memoryapi-mapviewoffileex) dans le Windows SDK.
 
 ### <a name="return-value"></a>Valeur de retour
 
-Retourne S_OK en cas de réussite, ou une erreur HRESULT en cas d’échec.
+Retourne S_OK sur le succès, ou une erreur HRESULT sur l’échec.
 
 ### <a name="remarks"></a>Notes
 
-`MapShareMem`permet à un objet de mappage de fichiers existant, créé par [CreateFileMapping](/windows/win32/api/winbase/nf-winbase-createfilemappinga), d’être partagé entre des processus.
+`MapShareMem`permet de partager un objet de cartographie de fichiers existant, créé par [CreateFileMapping.](/windows/win32/api/winbase/nf-winbase-createfilemappinga)
 
-##  <a name="openmapping"></a>  CAtlFileMappingBase::OpenMapping
+## <a name="catlfilemappingbaseopenmapping"></a><a name="openmapping"></a>CAtlFileMappingBase::OpenMapping
 
-Appelez cette méthode pour ouvrir un objet de mappage de fichier nommé pour le fichier spécifié.
+Appelez cette méthode pour ouvrir un objet de cartographie de fichiers nommé pour le fichier spécifié.
 
 ```
 HRESULT OpenMapping(
@@ -263,29 +263,29 @@ HRESULT OpenMapping(
 
 ### <a name="parameters"></a>Paramètres
 
-*szName*<br/>
-Nom de l’objet de mappage. S’il existe un handle ouvert à un objet de mappage de fichiers portant ce nom et que le descripteur de sécurité sur l’objet de mappage n’est pas en conflit avec le paramètre *dwViewDesiredAccess* , l’opération d’ouverture est réussie.
+*szName (szName)*<br/>
+Le nom de l’objet de cartographie. S’il y a une poignée ouverte à un objet de cartographie de fichiers par ce nom et que le descripteur de sécurité sur l’objet cartographique n’entre pas en conflit avec le paramètre *dwViewDesiredAccess,* l’opération ouverte réussit.
 
-*nMappingSize*<br/>
-Taille du mappage. Si la valeur est 0, la taille maximale de l’objet de mappage de fichiers est égale à la taille actuelle de l’objet de mappage de fichiers identifié par *szName*.
+*nMappingSize (en)*<br/>
+La taille de la cartographie. Si 0, la taille maximale de l’objet de cartographie de fichier est égale à la taille actuelle de l’objet de cartographie de fichier identifié par *szName*.
 
-*nOffset*<br/>
-Offset de fichier où le mappage doit commencer. La valeur de décalage doit être un multiple de la granularité d’allocation de mémoire du système.
+*nOffset (en anglais)*<br/>
+Le fichier compense l’endroit où la cartographie doit commencer. La valeur offset doit être un multiple de la granularité d’allocation de mémoire du système.
 
 *dwViewDesiredAccess*<br/>
-Spécifie le type d’accès à la vue de fichier et, par conséquent, la protection des pages mappées par le fichier. Consultez *dwDesiredAccess* dans [MapViewOfFileEx](/windows/win32/api/memoryapi/nf-memoryapi-mapviewoffileex) dans le SDK Windows.
+Spécifie le type d’accès à la vue du fichier et, par conséquent, la protection des pages cartographiées par le fichier. Voir *dwDesiredAccess* dans [MapViewOfFileEx](/windows/win32/api/memoryapi/nf-memoryapi-mapviewoffileex) dans le Windows SDK.
 
 ### <a name="return-value"></a>Valeur de retour
 
-Retourne S_OK en cas de réussite, ou une erreur HRESULT en cas d’échec.
+Retourne S_OK sur le succès, ou une erreur HRESULT sur l’échec.
 
 ### <a name="remarks"></a>Notes
 
-Dans les versions Debug, une erreur d’assertion se produit si les paramètres d’entrée ne sont pas valides.
+Dans les constructions de débog, une erreur d’affirmation se produira si les paramètres d’entrée sont invalides.
 
-##  <a name="operator_eq"></a>  CAtlFileMappingBase::operator =
+## <a name="catlfilemappingbaseoperator-"></a><a name="operator_eq"></a>CAtlFileMappingBase::opérateur
 
-Définit l’objet de mappage de fichiers en cours sur un autre objet de mappage de fichier.
+Définit l’objet de cartographie de fichiers actuel à un autre objet de cartographie de fichiers.
 
 ```
 CAtlFileMappingBase& operator=(CAtlFileMappingBase& orig);
@@ -293,16 +293,16 @@ CAtlFileMappingBase& operator=(CAtlFileMappingBase& orig);
 
 ### <a name="parameters"></a>Paramètres
 
-*orig*<br/>
-Objet de mappage de fichier actuel.
+*Bail*<br/>
+L’objet de cartographie de fichiers actuel.
 
 ### <a name="return-value"></a>Valeur de retour
 
-Retourne une référence à l’objet actuel.
+Renvoie une référence à l’objet actuel.
 
-##  <a name="unmap"></a>  CAtlFileMappingBase::Unmap
+## <a name="catlfilemappingbaseunmap"></a><a name="unmap"></a>CAtlFileMappingBase::Unmap
 
-Appelez cette méthode pour annuler le mappage d’un objet de mappage de fichier.
+Appelez cette méthode pour débrancher un objet de cartographie de fichiers.
 
 ```
 HRESULT Unmap() throw();
@@ -310,13 +310,13 @@ HRESULT Unmap() throw();
 
 ### <a name="return-value"></a>Valeur de retour
 
-Retourne S_OK en cas de réussite, ou une erreur HRESULT en cas d’échec.
+Retourne S_OK sur le succès, ou une erreur HRESULT sur l’échec.
 
 ### <a name="remarks"></a>Notes
 
-Pour plus d’informations, consultez [UnmapViewOfFile](/windows/win32/api/memoryapi/nf-memoryapi-unmapviewoffile) dans le SDK Windows.
+Voir [UnmapViewOfFile](/windows/win32/api/memoryapi/nf-memoryapi-unmapviewoffile) dans le Windows SDK pour plus de détails.
 
 ## <a name="see-also"></a>Voir aussi
 
-[CAtlFileMapping, classe](../../atl/reference/catlfilemapping-class.md)<br/>
-[Vue d’ensemble de la classe](../../atl/atl-class-overview.md)
+[Classe CAtlFileMapping](../../atl/reference/catlfilemapping-class.md)<br/>
+[Vue d'ensemble des classes](../../atl/atl-class-overview.md)

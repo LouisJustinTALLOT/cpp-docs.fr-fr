@@ -13,16 +13,16 @@ helpviewer_keywords:
 - J compiler option [C++]
 - default char type is unsigned
 ms.assetid: 50973667-6638-491e-9c41-bff73acae19f
-ms.openlocfilehash: ed296d339949814dbd796bb5d8e23a406be71c69
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 7bcf0f2eb2bef08757250999d0a6696b256fb15c
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62269399"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81322198"
 ---
 # <a name="j-default-char-type-is-unsigned"></a>/J (Type de caractère par défaut non signé)
 
-Modifie la valeur par défaut `char` type à partir de `signed char` à `unsigned char`et le `char` type est étendu par zéro lorsqu’il est élargi à un `int` type.
+Modifie le `char` type `signed char` `unsigned char`par défaut `char` à partir de , et le `int` type est de zéro-étendu quand il est élargi à un type.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -32,22 +32,22 @@ Modifie la valeur par défaut `char` type à partir de `signed char` à `unsigne
 
 ## <a name="remarks"></a>Notes
 
-Si un `char` valeur est déclarée explicitement comme `signed`, le **/J** option ne l’affecte pas, et la valeur est étendue avec un signe lorsqu’elle est élargie à un `int` type.
+Si `char` une valeur est `signed`explicitement déclarée comme , l’option **/J** ne l’affecte pas, et la valeur est prolongée lorsque le signe est élargi à un `int` type.
 
-Le **/J** option définit `_CHAR_UNSIGNED`, qui est utilisé avec `#ifndef` dans le fichier LIMITS.h pour définir la plage de la valeur par défaut `char` type.
+**L’option /J** définit `_CHAR_UNSIGNED`, `#ifndef` qui est utilisé avec dans le fichier `char` LIMITS.h pour définir la plage du type par défaut.
 
-ANSI C et C++ ne nécessitent pas une implémentation spécifique de la `char` type. Cette option est utile lorsque vous travaillez avec des données de caractères qui seront finalement être converties en une langue autre que l’anglais.
+L’ANSI C et le CMD n’exigent pas une mise en œuvre spécifique du `char` type. Cette option est utile lorsque vous travaillez avec des données de caractère qui seront éventuellement traduites dans une langue autre que l’anglais.
 
 > [!NOTE]
->  Si vous utilisez cette option du compilateur avec ATL/MFC, une erreur peut être générée. Bien que vous pouvez désactiver cette erreur en définissant `_ATL_ALLOW_CHAR_UNSIGNED`, cette solution de contournement n’est pas pris en charge et ne marchent pas toujours.
+> Si vous utilisez cette option de compilateur avec ATL/MFC, une erreur peut être générée. Bien que vous puissiez désactiver `_ATL_ALLOW_CHAR_UNSIGNED`cette erreur en définissant, cette solution de contournement n’est pas prise en charge et ne fonctionne pas toujours.
 
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Pour définir cette option du compilateur dans l'environnement de développement Visual Studio
 
-1. Dans l' **Explorateur de solutions**, ouvrez le menu contextuel du projet et choisissez **Propriétés**.
+1. Dans **Solution Explorer**, ouvrez le menu raccourci pour le projet, puis choisissez **Propriétés**.
 
-1. Dans le projet **Pages de propriétés** boîte de dialogue, dans le volet gauche sous **propriétés de Configuration**, développez **C/C++** , puis **la ligne de commande**.
+1. Dans le projet **Property Pages** boîte de dialogue, dans le volet gauche sous **Configuration Properties**, étendre C / **C et** ensuite sélectionner la ligne **de commandement**.
 
-1. Dans le **des Options supplémentaires** volet, spécifiez la **/J** option du compilateur.
+1. Dans le volet **Options Supplémentaires,** spécifiez l’option de compilateur **/J.**
 
 ### <a name="to-set-this-compiler-option-programmatically"></a>Pour définir cette option du compilateur par programmation
 

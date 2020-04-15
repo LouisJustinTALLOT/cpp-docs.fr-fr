@@ -1,38 +1,38 @@
 ---
-title: Analyse des URL Internet globales et des assistances
+title: Internet URL Parsing Globals and Helpers
 ms.date: 04/03/2017
 helpviewer_keywords:
 - parsing, URLs
 - URLs, parsing
 ms.assetid: 46c6384f-e4a6-4dbd-9196-219c19040ec5
-ms.openlocfilehash: 310e4ffb3fc207d874e97ba1fac65f6f8cb41a31
-ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
+ms.openlocfilehash: 742b381ecb55c433d0f384174b7612fcc21e9716
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/16/2020
-ms.locfileid: "79421302"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81356620"
 ---
-# <a name="internet-url-parsing-globals-and-helpers"></a>Analyse des URL Internet globales et des assistances
+# <a name="internet-url-parsing-globals-and-helpers"></a>Internet URL Parsing Globals and Helpers
 
-Lorsqu’un client envoie une requête au serveur Internet, vous pouvez utiliser l’une des variables globales d’analyse d’URL pour extraire des informations sur le client. Les fonctions d’assistance fournissent d’autres fonctionnalités Internet.
+Lorsqu’un client envoie une requête au serveur Internet, vous pouvez utiliser l’un des globaux d’analyse d’URL pour extraire des informations sur le client. Les fonctions d’aide fournissent d’autres fonctionnalités Internet.
 
 ## <a name="internet-url-parsing-globals"></a>Objet Globals d'analyse des URL Internet
 
 |||
 |-|-|
-|[AfxParseURL](#afxparseurl)|Analyse une chaîne d’URL et retourne le type de service et ses composants.|
-|[AfxParseURLEx](#afxparseurlex)|Analyse une chaîne d’URL et retourne le type de service et ses composants, ainsi que la fourniture du nom d’utilisateur et du mot de passe.|
+|[AfxParseURL](#afxparseurl)|Parse une chaîne d’URL et renvoie le type de service et ses composants.|
+|[AfxParseURLEx](#afxparseurlex)|Parse une chaîne d’URL et renvoie le type de service et ses composants, ainsi que la fourniture du nom d’utilisateur et du mot de passe.|
 
-## <a name="other-internet-helpers"></a>Autres assistances Internet
+## <a name="other-internet-helpers"></a>Autres aides Internet
 
 |||
 |-|-|
-|[AfxThrowInternetException](#afxthrowinternetexception)|Lève une exception liée à la connexion Internet.|
-|[AfxGetInternetHandleType](#afxgetinternethandletype)|Détermine le type d’un handle Internet.|
+|[AfxThrowInternetException](#afxthrowinternetexception)|Jette une exception liée à la connexion Internet.|
+|[AfxGetInternetHandleType](#afxgetinternethandletype)|Détermine le type de poignée Internet.|
 
-##  <a name="afxparseurl"></a>AfxParseURL
+## <a name="afxparseurl"></a><a name="afxparseurl"></a>AfxParseURL
 
-Ce global est utilisé dans [CInternetSession :: OpenURL](../../mfc/reference/cinternetsession-class.md#openurl).
+Ce global est utilisé dans [CInternetSession::OpenURL](../../mfc/reference/cinternetsession-class.md#openurl).
 
 ```
 BOOL AFXAPI AfxParseURL(
@@ -45,10 +45,10 @@ BOOL AFXAPI AfxParseURL(
 
 ### <a name="parameters"></a>Paramètres
 
-*pstrURL*<br/>
-Pointeur vers une chaîne contenant l’URL à analyser.
+*pstrURL (pstrURL)*<br/>
+Un pointeur à une chaîne contenant l’URL à analyser.
 
-*dwServiceType*<br/>
+*dwServiceType dwServiceType*<br/>
 Indique le type de service Internet. Les valeurs possibles sont les suivantes :
 
 - AFX_INET_SERVICE_FTP
@@ -81,43 +81,43 @@ Indique le type de service Internet. Les valeurs possibles sont les suivantes :
 
 - AFX_INET_SERVICE_UNK
 
-*strServer*<br/>
-Premier segment de l’URL qui suit le type de service.
+*strServer (en)*<br/>
+Le premier segment de l’URL suivant le type de service.
 
 *strObject*<br/>
-Objet auquel l’URL fait référence (peut être vide).
+Un objet auquel l’URL fait référence (peut être vide).
 
-*nPort*<br/>
-Déterminé à partir des parties serveur ou objet de l’URL, s’il en existe une.
+*nPort (en)*<br/>
+Déterminé à partir des parties serveur ou objet de l’URL, si l’un ou l’autre existe.
 
 ### <a name="return-value"></a>Valeur de retour
 
-Différent de zéro si l’URL a été analysée avec succès ; Sinon, 0 s’il est vide ou ne contient pas de type de service Internet connu.
+Nonzero si l’URL a été analysée avec succès; autrement, 0 s’il est vide ou ne contient pas un type de service Internet connu.
 
 ### <a name="remarks"></a>Notes
 
-Il analyse une chaîne d’URL et retourne le type de service et ses composants.
+Il analyse une chaîne d’URL et renvoie le type de service et ses composants.
 
-Par exemple, `AfxParseURL` analyse les URL de la forme *service://Server/dir/DIR/Object.ext :port* et retourne ses composants stockés comme suit :
+Par exemple, `AfxParseURL` analyse les URL du formulaire *service://server/dir/dir/object.ext:port* et renvoie ses composants stockés comme suit :
 
-*strServer* = = "serveur"
+*strServer* "serveur"
 
-*strObject* = = "/dir/DIR/Object/Object.ext"
+*strObject* "/dir/dir/object/object.ext"
 
-*NPort* = = #port
+*nPort* #port
 
-*dwServiceType* = = #service
+*dwServiceType* #service
 
 > [!NOTE]
->  Pour appeler cette fonction, votre projet doit inclure AFXINET. Manutention.
+> Pour appeler cette fonction, votre projet doit inclure AFXINET. H.
 
 ### <a name="requirements"></a>Spécifications
 
-  **En-tête** AFXINET. h
+  **En-tête** afxinet.h
 
-##  <a name="afxparseurlex"></a>AfxParseURLEx
+## <a name="afxparseurlex"></a><a name="afxparseurlex"></a>AfxParseURLEx AfxParseURLEx
 
-Cette fonction globale est la version étendue de [AfxParseURL](#afxparseurl) et est utilisée dans [CInternetSession :: OpenURL](../../mfc/reference/cinternetsession-class.md#openurl).
+Cette fonction globale est la version étendue [d’AfxParseURL](#afxparseurl) et est utilisée dans [CInternetSession::OpenURL](../../mfc/reference/cinternetsession-class.md#openurl).
 
 ```
 BOOL AFXAPI AfxParseURLEx(
@@ -133,10 +133,10 @@ BOOL AFXAPI AfxParseURLEx(
 
 ### <a name="parameters"></a>Paramètres
 
-*pstrURL*<br/>
-Pointeur vers une chaîne contenant l’URL à analyser.
+*pstrURL (pstrURL)*<br/>
+Un pointeur à une chaîne contenant l’URL à analyser.
 
-*dwServiceType*<br/>
+*dwServiceType dwServiceType*<br/>
 Indique le type de service Internet. Les valeurs possibles sont les suivantes :
 
 - AFX_INET_SERVICE_FTP
@@ -169,52 +169,52 @@ Indique le type de service Internet. Les valeurs possibles sont les suivantes :
 
 - AFX_INET_SERVICE_UNK
 
-*strServer*<br/>
-Premier segment de l’URL qui suit le type de service.
+*strServer (en)*<br/>
+Le premier segment de l’URL suivant le type de service.
 
 *strObject*<br/>
-Objet auquel l’URL fait référence (peut être vide).
+Un objet auquel l’URL fait référence (peut être vide).
 
-*nPort*<br/>
-Déterminé à partir des parties serveur ou objet de l’URL, s’il en existe une.
+*nPort (en)*<br/>
+Déterminé à partir des parties serveur ou objet de l’URL, si l’un ou l’autre existe.
 
 *strUsername*<br/>
-Référence à un objet `CString` contenant le nom de l’utilisateur.
+Une référence `CString` à un objet contenant le nom de l’utilisateur.
 
-*strPassword*<br/>
-Référence à un objet `CString` contenant le mot de passe de l’utilisateur.
+*strPassword (strPassword)*<br/>
+Une référence `CString` à un objet contenant le mot de passe de l’utilisateur.
 
 *dwFlags*<br/>
-Indicateurs qui contrôlent la façon dont l’URL doit être analysée. Peut être une combinaison des valeurs suivantes :
+Les drapeaux qui contrôlent la façon d’analyser l’URL. Peut être une combinaison des valeurs suivantes :
 
-|Valeur|Signification|
+|Value|Signification|
 |-----------|-------------|
-|ICU_DECODE|Convertit% XX séquences d’échappement en caractères.|
-|ICU_NO_ENCODE|Ne convertissez pas les caractères non sécurisés en séquence d’échappement.|
-|ICU_NO_META|Ne supprimez pas les séquences de métadonnées (par exemple, « \. » et "\..") à partir de l’URL.|
-|ICU_ENCODE_SPACES_ONLY|Encoder les espaces uniquement.|
-|ICU_BROWSER_MODE|Ne pas encoder ou décoder les caractères après « # » ou « » et ne pas supprimer les espaces blancs de fin après « ». Si cette valeur n’est pas spécifiée, l’URL entière est encodée et l’espace blanc de fin est supprimé.|
+|ICU_DECODE|Convertir %XX séquences d’évasion en caractères.|
+|ICU_NO_ENCODE|Ne convertissez pas les caractères dangereux pour échapper à la séquence.|
+|ICU_NO_META|N’enlevez pas les séquences de méta (telles que « ' ' ' ' ' ' ' ' ' ' ' ' ' ' ' ' ' ' ' ' ' ' ' et "..") de l’URL.|
+|ICU_ENCODE_SPACES_ONLY|Encodez uniquement les espaces.|
+|ICU_BROWSER_MODE|Ne pas encoder ou décoder les caractères après ''ou '', et ne supprimez pas l’espace blanc de fuite après ''. Si cette valeur n’est pas spécifiée, l’URL entière est codée et l’espace blanc de fuite est supprimé.|
 
-Si vous utilisez la valeur par défaut MFC, qui n’est pas un indicateur, la fonction convertit tous les caractères et séquences de métadonnées non sécurisés (tels que \\., \... et \\...) en séquences d’échappement.
+Si vous utilisez la valeur par défaut de MFC, qui n’est pas \\un signal, la \\fonction convertit tous les personnages dangereux et les méta séquences (tels que .,., et ...) pour échapper aux séquences.
 
 ### <a name="return-value"></a>Valeur de retour
 
-Différent de zéro si l’URL a été analysée avec succès ; Sinon, 0 s’il est vide ou ne contient pas de type de service Internet connu.
+Nonzero si l’URL a été analysée avec succès; autrement, 0 s’il est vide ou ne contient pas un type de service Internet connu.
 
 ### <a name="remarks"></a>Notes
 
-Il analyse une chaîne d’URL et retourne le type de service et ses composants, ainsi que le nom et le mot de passe de l’utilisateur. Les indicateurs indiquent la manière dont les caractères non sécurisés sont gérés.
+Il analyse une chaîne d’URL et renvoie le type de service et ses composants, ainsi que la fourniture du nom et du mot de passe de l’utilisateur. Les drapeaux indiquent comment les caractères dangereux sont manipulés.
 
 > [!NOTE]
->  Pour appeler cette fonction, votre projet doit inclure AFXINET. Manutention.
+> Pour appeler cette fonction, votre projet doit inclure AFXINET. H.
 
 ### <a name="requirements"></a>Spécifications
 
-  **En-tête** AFXINET. h
+  **En-tête** afxinet.h
 
-## <a name="afxgetinternethandletype"></a>AfxGetInternetHandleType
+## <a name="afxgetinternethandletype"></a><a name="afxgetinternethandletype"></a>AfxGetInternetHandleType AfxGetInternetHandleType AfxGetInternetHandleType Afx
 
-Utilisez cette fonction globale pour déterminer le type d’un descripteur Internet.
+Utilisez cette fonction globale pour déterminer le type de poignée Internet.
 
 ### <a name="syntax"></a>Syntaxe
 
@@ -224,16 +224,16 @@ DWORD AFXAPI AfxGetInternetHandleType(  HINTERNET hQuery );
 
 ### <a name="parameters"></a>Paramètres
 
-*hQuery*<br/>
-Handle d’une requête Internet.
+*hQuery (en)*<br/>
+Une poignée à une requête Internet.
 
 ### <a name="return-value"></a>Valeur de retour
 
-N’importe quel type de service Internet défini par WININET. Manutention. Consultez la section Notes pour obtenir la liste de ces services Internet. Si le handle est NULL ou n’est pas reconnu, la fonction retourne AFX_INET_SERVICE_UNK.
+N’importe lequel des types de services Internet définis par WININET. H. Consultez la section Remarques pour une liste de ces services Internet. Si la poignée est NULL ou non reconnue, la fonction renvoie AFX_INET_SERVICE_UNK.
 
 ### <a name="remarks"></a>Notes
 
-La liste suivante répertorie les types Internet possibles retournés par `AfxGetInternetHandleType`.
+La liste suivante comprend les `AfxGetInternetHandleType`types Internet possibles retournés par .
 
 - INTERNET_HANDLE_TYPE_INTERNET
 
@@ -262,15 +262,15 @@ La liste suivante répertorie les types Internet possibles retournés par `AfxGe
 - INTERNET_HANDLE_TYPE_HTTP_REQUEST
 
 > [!NOTE]
->  Pour appeler cette fonction, votre projet doit inclure AFXINET. Manutention.
+> Afin d’appeler cette fonction, votre projet doit inclure AFXINET. H.
 
 ### <a name="requirements"></a>Spécifications
 
-**En-tête :** AFXINET. h
+**En-tête:** afxinet.h
 
-## <a name="afxthrowinternetexception"></a>AfxThrowInternetException
+## <a name="afxthrowinternetexception"></a><a name="afxthrowinternetexception"></a>AfxThrowInternetException
 
-Lève une exception Internet.
+Jette une exception Internet.
 
 ### <a name="syntax"></a>Syntaxe
 
@@ -280,25 +280,25 @@ Lève une exception Internet.
 
 ### <a name="parameters"></a>Paramètres
 
-*dwContext*<br/>
-Identificateur de contexte de l’opération à l’origine de l’erreur. La valeur par défaut de *dwContext* est spécifiée à l’origine dans [CInternetSession](cinternetsession-class.md) et est passée aux classes dérivées de [CInternetConnection,](cinternetconnection-class.md)et [CInternetFile](cinternetfile-class.md). Pour les opérations spécifiques effectuées sur une connexion ou un fichier, vous remplacez généralement la valeur par défaut par un *dwContext* . Cette valeur est ensuite retournée à [CInternetSession :: OnStatusCallback](cinternetsession-class.md#onstatuscallback) pour identifier l’état de l’opération spécifique.
+*dwContexte*<br/>
+L’identifiant de contexte pour l’opération qui a causé l’erreur. La valeur par défaut de *dwContext* est spécifiée à l’origine dans [CInternetSession](cinternetsession-class.md) et est transmise à [CInternetConnection](cinternetconnection-class.md)- et [CInternetFile](cinternetfile-class.md)-classes dérivées. Pour des opérations spécifiques effectuées sur une connexion ou un fichier, vous remplacez généralement la valeur par défaut avec un *dwContext* de votre propre. Cette valeur est ensuite retournée à [CInternetSession::OnStatusCallback](cinternetsession-class.md#onstatuscallback) pour identifier l’état de l’opération spécifique.
 
 *dwError*<br/>
-L'erreur ayant provoqué l'exception.
+Erreur ayant provoqué l'exception.
 
 ### <a name="remarks"></a>Notes
 
-Vous êtes responsable de la détermination de la cause en fonction du code d’erreur du système d’exploitation.
+Vous êtes responsable de déterminer la cause en fonction du code d’erreur du système d’exploitation.
 
 > [!NOTE]
->  Pour appeler cette fonction, votre projet doit inclure AFXINET. Manutention.
+> Pour appeler cette fonction, votre projet doit inclure AFXINET. H.
 
 ### <a name="requirements"></a>Spécifications
 
-**En-tête :** AFXINET. h
+**En-tête:** afxinet.h
 
 ## <a name="see-also"></a>Voir aussi
 
-[Macros et globales](mfc-macros-and-globals.md)<br/>
+[Macros et objet Globals](mfc-macros-and-globals.md)<br/>
 [CInternetException, classe](cinternetexception-class.md)<br/>
 [AfxParseURL](internet-url-parsing-globals.md#afxparseurl)

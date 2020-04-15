@@ -1,9 +1,11 @@
 ---
 title: _mktemp_s, _wmktemp_s
-ms.date: 11/04/2016
+ms.date: 4/2/2020
 api_name:
 - _mktemp_s
 - _wmktemp_s
+- _o__mktemp_s
+- _o__wmktemp_s
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -16,6 +18,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-stdio-l1-1-0.dll
+- api-ms-win-crt-private-l1-1-0
 api_type:
 - DLLExport
 topic_type:
@@ -35,12 +38,12 @@ helpviewer_keywords:
 - wmktemp_s function
 - temporary files [C++]
 ms.assetid: 92a7e269-7f3d-4c71-bad6-14bc827a451d
-ms.openlocfilehash: 464f0dfbdb0b84e1fd29ec650e53f5c2543c4403
-ms.sourcegitcommit: 0cfc43f90a6cc8b97b24c42efcf5fb9c18762a42
+ms.openlocfilehash: 061c5647b2c5a5e79b017cf93989f62ad19cfc0a
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/05/2019
-ms.locfileid: "73624208"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81338752"
 ---
 # <a name="_mktemp_s-_wmktemp_s"></a>_mktemp_s, _wmktemp_s
 
@@ -73,27 +76,29 @@ errno_t _wmktemp_s(
 Modèle de nom de fichier.
 
 *sizeInChars*<br/>
-Taille de la mémoire tampon en caractères codés sur un octet dans **_mktemp_s**; caractères larges dans **_wmktemp_s**, y compris la marque de fin null.
+Taille du tampon en caractères uni-byte en **_mktemp_s**; personnages larges dans **_wmktemp_s**, y compris le terminateur nul.
 
 ## <a name="return-value"></a>Valeur de retour
 
 Ces deux fonctions retournent zéro en cas de réussite, sinon un code d’erreur.
 
-### <a name="error-conditions"></a>Conditions d’erreur
+### <a name="error-conditions"></a>Conditions d'erreur
 
-|*nameTemplate*|*sizeInChars*|Valeur de retour|Nouvelle valeur dans *nameTemplate*|
+|*nameTemplate*|*sizeInChars*|Valeur retournée|Nouvelle valeur dans *le nomTemplate*|
 |----------------|-------------------|----------------------|-------------------------------|
-|**NULL**|indifférent|**EINVAL**|**NULL**|
-|Format incorrect (consultez la section Notes pour obtenir le format approprié)|indifférent|**EINVAL**|Chaîne vide|
-|indifférent|<= nombre de X|**EINVAL**|Chaîne vide|
+|**Null**|n'importe laquelle|**EINVAL (EN)**|**Null**|
+|Format incorrect (voir Section Remarques pour le format correct)|n'importe laquelle|**EINVAL (EN)**|Chaîne vide|
+|n'importe laquelle|<= nombre de X|**EINVAL (EN)**|Chaîne vide|
 
-Si l’une des conditions d’erreur ci-dessus se produit, le gestionnaire de paramètres non valides est appelé, comme décrit dans [Validation de paramètre](../../c-runtime-library/parameter-validation.md). Si l’exécution est autorisée à se poursuivre, **errno** a la valeur **EINVAL** et les fonctions retournent **EINVAL**.
+Si l’une des conditions d’erreur ci-dessus se présente, le gestionnaire de paramètre non valide est appelé, comme décrit dans [Validation de paramètre](../../c-runtime-library/parameter-validation.md). Si l’exécution est autorisée à se poursuivre, **errno** est réglé sur **EINVAL** et les fonctions **retourneNT EINVAL**.
 
 ## <a name="remarks"></a>Notes
 
-La fonction **_mktemp_s** crée un nom de fichier unique en modifiant l’argument *nameTemplate* , de sorte qu’après l’appel, le pointeur *nameTemplate* pointe vers une chaîne contenant le nouveau nom de fichier. **_mktemp_s** gère automatiquement les arguments de chaîne de caractères multioctets si nécessaire, en identifiant les séquences de caractères multioctets en fonction de la page de codes multioctets en cours d’utilisation par le système d’exécution. **_wmktemp_s** est une version à caractères larges de **_mktemp_s**; l’argument de **_wmktemp_s** est une chaîne de caractères larges. les **_wmktemp_s** et **_mktemp_s** se comportent de la même manière, sauf que **_wmktemp_s** ne gère pas les chaînes de caractères multioctets.
+La fonction **_mktemp_s** crée un nom de fichier unique en modifiant *l’argument du nomTemplate,* de sorte qu’après l’appel, le pointeur *de nomTemplate* pointe vers une chaîne contenant le nouveau nom de fichier. **_mktemp_s** gère automatiquement les arguments de chaîne multioctets, le cas échéant, en reconnaissant les séquences multioctets-caractères selon la page de code multioctet actuellement utilisée par le système de temps d’exécution. **_wmktemp_s** est une version à caractère large de **_mktemp_s**; l’argument de **_wmktemp_s** est une chaîne de caractère large. **_wmktemp_s** et **_mktemp_s** se comportent de la même façon autrement, sauf que **_wmktemp_s** ne gère pas les cordes multioctets.
 
-Les versions de la bibliothèque de débogage de ces fonctions remplissent d’abord la mémoire tampon avec 0xFE. Pour désactiver ce comportement, utilisez [_CrtSetDebugFillThreshold](crtsetdebugfillthreshold.md).
+Les versions de bibliothèque de débogé de ces fonctions remplissent d’abord le tampon avec 0xFE. Pour désactiver ce comportement, utilisez [_CrtSetDebugFillThreshold](crtsetdebugfillthreshold.md).
+
+Par défaut, l’état global de cette fonction est étendue à l’application. Pour changer cela, voir [Global State dans le CRT](../global-state.md).
 
 ### <a name="generic-text-routine-mappings"></a>Mappages de routines de texte générique
 
@@ -101,17 +106,17 @@ Les versions de la bibliothèque de débogage de ces fonctions remplissent d’a
 |---------------------|--------------------------------------|--------------------|-----------------------|
 |**_tmktemp_s**|**_mktemp_s**|**_mktemp_s**|**_wmktemp_s**|
 
-L’argument *nameTemplate* se présente sous la forme **baseXXXXXX**, où *base* est la partie du nouveau nom de fichier que vous fournissez et chaque X est un espace réservé pour un caractère fourni par **_mktemp_s**. Chaque caractère d’espace réservé dans *nameTemplate* doit être un x majuscule. **_mktemp_s** conserve la *base* et remplace le premier X de fin par un caractère alphabétique. **_mktemp_s** remplace le X de fin suivant par une valeur à cinq chiffres ; Cette valeur est un nombre unique qui identifie le processus appelant, ou dans les programmes multithread, le thread appelant.
+*L’argument de nomTemplate* a le **formulaire baseXXXXXXX**, où la *base* est la partie du nouveau nom de fichier que vous fournissez et chaque X est un espace réservé pour un personnage fourni par **_mktemp_s**. Chaque personnage de placeholder dans *le nomTemplate* doit être une majuscule X. **_mktemp_s** conserve la *base* et remplace le premier X de fuite par un caractère alphabétique. **_mktemp_s** remplace les X suivants avec une valeur à cinq chiffres; cette valeur est un nombre unique identifiant le processus d’appel, ou dans les programmes multithreaded, le fil d’appel.
 
-Chaque appel réussi à **_mktemp_s** modifie *nameTemplate*. Dans chaque appel suivant du même processus ou thread avec le même argument *nameTemplate* , **_mktemp_s** recherche les noms de fichiers qui correspondent aux noms retournés par **_mktemp_s** dans les appels précédents. Si aucun fichier n’existe pour un nom donné, **_mktemp_s** retourne ce nom. Si des fichiers existent pour tous les noms précédemment retournés, **_mktemp_s** crée un nouveau nom en remplaçant le caractère alphabétique qu’il a utilisé dans le nom précédemment retourné par la lettre minuscule suivante disponible, dans l’ordre, de « a » à « z ». Par exemple, si *base* est :
+Chaque appel réussi à **_mktemp_s** modifie *le nomTemplate*. Dans chaque appel ultérieur du même processus ou du même thread avec le même *argument de nomTemplate,* **_mktemp_s** vérifie les noms de fichiers qui correspondent aux noms retournés par **_mktemp_s** dans les appels précédents. S’il n’existe pas de fichier pour un nom donné, **_mktemp_s** renvoie ce nom. Si des fichiers existent pour tous les noms précédemment retournés, **_mktemp_s** crée un nouveau nom en remplaçant le caractère alphabétique qu’il a utilisé dans le nom précédemment retourné avec la prochaine lettre de lowercase disponible, dans l’ordre, de «a» à «z». Par exemple, si la *base* est :
 
-> **FN**
+> **Fn**
 
-et la valeur à cinq chiffres fournie par **_mktemp_s** est 12345, le premier nom retourné est :
+et la valeur à cinq chiffres fournie par **_mktemp_s** est de 12345, le prénom retourné est :
 
 > **fna12345**
 
-Si ce nom est utilisé pour créer le fichier FNA12345 et que ce fichier existe toujours, le nom suivant retourné sur un appel du même processus ou thread avec la même *base* pour *nameTemplate* est :
+Si ce nom est utilisé pour créer le fichier FNA12345 et que ce fichier existe toujours, le nom suivant retourné sur un appel du même processus ou thread avec la même *base* pour *le nomTemplate* est:
 
 > **fnb12345**
 
@@ -119,18 +124,18 @@ Si le fichier FNA12345 n'existe pas, le nom suivant retourné est de nouveau :
 
 > **fna12345**
 
-**_mktemp_s** peut créer un maximum de 26 noms de fichiers uniques pour une combinaison donnée de valeurs de *base* et *nameTemplate* . Par conséquent, FNZ12345 est le dernier nom de fichier unique que **_mktemp_s** peut créer pour les valeurs de *base* et *nameTemplate* utilisées dans cet exemple.
+**_mktemp_s** peut créer un maximum de 26 noms de fichiers uniques pour toute combinaison donnée de valeurs *de base* et *de nameTemplate.* Par conséquent, FNZ12345 est le dernier nom de fichier unique **_mktemp_s** pouvez créer pour les valeurs *de base* et *de nameTemplate* utilisées dans cet exemple.
 
 En C++, l’utilisation de ces fonctions est simplifiée par les surcharges de modèle ; les surcharges peuvent déduire la longueur de la mémoire tampon automatiquement (ce qui évite d’avoir à spécifier un argument taille) et peuvent remplacer automatiquement les fonctions plus anciennes et non sécurisées par leurs équivalentes plus récentes et sécurisées. Pour plus d’informations, consultez [Sécuriser les surcharges de modèle](../../c-runtime-library/secure-template-overloads.md).
 
-## <a name="requirements"></a>spécifications
+## <a name="requirements"></a>Spécifications
 
 |Routine|En-tête requis|
 |-------------|---------------------|
 |**_mktemp_s**|\<io.h>|
 |**_wmktemp_s**|\<io.h> ou \<wchar.h>|
 
-Pour plus d’informations sur la compatibilité, voir [Compatibilité](../../c-runtime-library/compatibility.md).
+Pour plus d’informations sur la compatibilité, consultez [Compatibility](../../c-runtime-library/compatibility.md).
 
 ## <a name="example"></a>Exemple
 
@@ -176,7 +181,7 @@ int main()
 }
 ```
 
-### <a name="sample-output"></a>Résultat de l'exemple
+### <a name="sample-output"></a>Exemple de sortie
 
 ```Output
 Unique filename is fna03188

@@ -1,9 +1,11 @@
 ---
 title: gets, _getws
-ms.date: 11/04/2016
+ms.date: 4/2/2020
 api_name:
 - _getws
 - gets
+- _o__getws
+- _o_gets
 api_location:
 - msvcr80.dll
 - msvcr90.dll
@@ -13,6 +15,7 @@ api_location:
 - msvcrt.dll
 - msvcr100.dll
 - api-ms-win-crt-stdio-l1-1-0.dll
+- api-ms-win-crt-private-l1-1-0
 api_type:
 - DLLExport
 topic_type:
@@ -31,22 +34,22 @@ helpviewer_keywords:
 - gets function
 - standard input, reading from
 ms.assetid: 1ec2dd4b-f801-48ea-97c2-892590f16024
-ms.openlocfilehash: f4e052f91dd2b4adfd5fd7e1ad7c81e0e5b07a11
-ms.sourcegitcommit: a5fa9c6f4f0c239ac23be7de116066a978511de7
+ms.openlocfilehash: a1fd3218f75079554d049d4ef4c3691a2fbdd542
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/20/2019
-ms.locfileid: "75300272"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81349320"
 ---
 # <a name="gets-_getws"></a>gets, _getws
 
 Obtient une ligne du flux `stdin` Des versions plus sécurisées de ces fonctions sont disponibles. Consultez [gets_s, _getws_s](../c-runtime-library/reference/gets-s-getws-s.md).
 
 > [!IMPORTANT]
->  Ces fonctions sont obsolètes. Depuis Visual Studio 2015, elles ne sont pas disponibles dans la bibliothèque CRT. Les versions sécurisées de ces fonctions, gets_s et getws_s, sont toujours disponibles. Pour plus d’informations sur ces fonctions alternatives, consultez [gets_s, _getws_s](../c-runtime-library/reference/gets-s-getws-s.md).
+> Ces fonctions sont obsolètes. Depuis Visual Studio 2015, elles ne sont pas disponibles dans la bibliothèque CRT. Les versions sécurisées de ces fonctions, gets_s et getws_s, sont toujours disponibles. Pour plus d’informations sur ces fonctions alternatives, consultez [gets_s, _getws_s](../c-runtime-library/reference/gets-s-getws-s.md).
 
 > [!IMPORTANT]
->  Cette API ne peut pas être utilisée dans les applications qui s'exécutent dans le Windows Runtime. Pour plus d’informations, consultez [Fonctions CRT non prises en charge dans les applications de la plateforme Windows universelle](../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
+> Cette API ne peut pas être utilisée dans les applications qui s'exécutent dans le Windows Runtime. Pour plus d’informations, consultez [Fonctions CRT non prises en charge dans les applications de la plateforme Windows universelle](../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -67,7 +70,7 @@ wchar_t *_getws(
 ); // C++ only
 ```
 
-#### <a name="parameters"></a>Parameters
+#### <a name="parameters"></a>Paramètres
 
 *buffer*<br/>
 Emplacement de stockage pour une chaîne entrée.
@@ -81,9 +84,11 @@ Retourne son argument en cas de réussite. Un pointeur **NULL** indique une cond
 La fonction `gets` lit une ligne dans le flux d’entrée standard `stdin` et la stocke dans `buffer`. La ligne se compose de tous les caractères jusqu’à et y compris le premier caractère de saut de ligne (« \n »). `gets` remplace ensuite le caractère de saut de ligne par un caractère null (« \0 ») avant de retourner la ligne. En revanche, la fonction `fgets` conserve le caractère de saut de ligne. `_getws` est une version à caractères larges de `gets`; son argument et sa valeur de retour sont des chaînes à caractères larges.
 
 > [!IMPORTANT]
->  Comme il n’existe aucun moyen de limiter le nombre de caractères lus par gets, une entrée non approuvée peut facilement provoquer des dépassements de la mémoire tampon. Utilisez plutôt `fgets` .
+> Comme il n’existe aucun moyen de limiter le nombre de caractères lus par gets, une entrée non approuvée peut facilement provoquer des dépassements de la mémoire tampon. Utilisez `fgets` à la place.
 
 En C++, ces fonctions ont des surcharges de modèle qui appellent les équivalents plus récents et sécurisés de ces fonctions. Pour plus d’informations, consultez [Sécuriser les surcharges de modèle](../c-runtime-library/secure-template-overloads.md).
+
+Par défaut, l’état global de cette fonction est étendue à l’application. Pour changer cela, voir [Global State dans le CRT](global-state.md).
 
 ### <a name="generic-text-routine-mappings"></a>Mappages de routines de texte générique
 
@@ -91,7 +96,7 @@ En C++, ces fonctions ont des surcharges de modèle qui appellent les équivalen
 |---------------------|------------------------------------|--------------------|-----------------------|
 |`_getts`|`gets`|`gets`|`_getws`|
 
-## <a name="requirements"></a>Configuration requise pour
+## <a name="requirements"></a>Spécifications
 
 |Routine|En-tête requis|
 |-------------|---------------------|

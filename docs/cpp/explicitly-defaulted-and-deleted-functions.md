@@ -2,12 +2,12 @@
 title: Fonctions utilisées par défaut et supprimées explicitement
 ms.date: 11/04/2016
 ms.assetid: 5a588478-fda2-4b3f-a279-db3967f5e07e
-ms.openlocfilehash: b43588aac1d246c83f5281456625eeb0ff36b94d
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: bd13b5fef3a9dfc13d72f1ee34d7ced902735e15
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80179976"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81360905"
 ---
 # <a name="explicitly-defaulted-and-deleted-functions"></a>Fonctions utilisées par défaut et supprimées explicitement
 
@@ -15,7 +15,7 @@ En C++11, les fonctions utilisées par défaut et supprimées vous permettent de
 
 ## <a name="benefits-of-explicitly-defaulted-and-deleted-functions"></a>Avantages des fonctions utilisées par défaut et supprimées explicitement
 
-En C++, le compilateur génère automatiquement le constructeur par défaut, le constructeur de copie, l'opérateur d'assignation de copie et le destructeur pour un type s'il ne déclare pas le sien. Ces fonctions sont connues sous le nom de *fonctions membres spéciales*, et c’est ce qui rend les types simples C++ définis par l’utilisateur dans se comporter comme les structures en C. Autrement dit, vous pouvez les créer, les copier et les détruire sans effort de codage supplémentaire. C++11 fournit la sémantique de déplacement au langage et ajoute le constructeur de déplacement et l'opérateur d'assignation de mouvement à la liste des fonctions membres spéciales que le compilateur peut générer automatiquement.
+En C++, le compilateur génère automatiquement le constructeur par défaut, le constructeur de copie, l'opérateur d'assignation de copie et le destructeur pour un type s'il ne déclare pas le sien. Ces fonctions sont connues comme les *fonctions spéciales des membres,* et elles sont ce qui font que les types simples définis par l’utilisateur dans le Cmd se comportent comme les structures le font en C. Autrement dit, vous pouvez les créer, copier et les détruire sans aucun effort de codage supplémentaire. C++11 fournit la sémantique de déplacement au langage et ajoute le constructeur de déplacement et l'opérateur d'assignation de mouvement à la liste des fonctions membres spéciales que le compilateur peut générer automatiquement.
 
 Cela est pratique pour les types simples, mais les types complexes définissent eux-mêmes souvent une ou plusieurs des fonctions membres spéciales, et cela peut empêcher d'autres fonctions membres spéciales d'être générées automatiquement. Dans la pratique :
 
@@ -25,15 +25,15 @@ Cela est pratique pour les types simples, mais les types complexes définissent 
 
 - Si un constructeur de déplacement ou un opérateur d'assignation de déplacement est déclaré explicitement :
 
-   - Aucun constructeur de copie n'est généré automatiquement.
+  - Aucun constructeur de copie n'est généré automatiquement.
 
-   - Aucun opérateur d'assignation de copie n'est généré automatiquement.
+  - Aucun opérateur d'assignation de copie n'est généré automatiquement.
 
 - Si un constructeur de copie, un opérateur d'assignation de copie, un constructeur de déplacement, un opérateur d'assignation de mouvement ou un destructeur est déclaré explicitement :
 
-   - Aucun constructeur de déplacement n'est généré automatiquement.
+  - Aucun constructeur de déplacement n'est généré automatiquement.
 
-   - Aucun opérateur d'assignation de déplacement n'est généré automatiquement.
+  - Aucun opérateur d'assignation de déplacement n'est généré automatiquement.
 
 > [!NOTE]
 > En outre, la norme C++11 spécifie les règles supplémentaires suivantes :
@@ -43,7 +43,7 @@ Cela est pratique pour les types simples, mais les types complexes définissent 
 >
 > Dans les deux cas, Visual Studio continue à générer automatiquement les fonctions nécessaires implicitement, sans émettre d'avertissement.
 
-Les conséquences de ces règles peuvent également se répercuter dans la hiérarchie des objets. Par exemple, si, pour une raison quelconque, une classe de base ne peut pas avoir un constructeur par défaut qui peut être appelé à partir d’une classe dérivée (autrement dit, un constructeur **public** ou **protégé** qui ne prend aucun paramètre), une classe qui en dérive ne peut pas générer automatiquement son propre constructeur par défaut.
+Les conséquences de ces règles peuvent également se répercuter dans la hiérarchie des objets. Par exemple, si, pour une raison quelconque, une classe de base n’a pas un constructeur par défaut qui est callable à partir d’une classe de dérive, c’est-à-dire un constructeur **public** ou **protégé** qui ne prend pas de paramètres, alors une classe qui en dérive ne peut pas générer automatiquement son propre constructeur par défaut.
 
 Ces règles peuvent compliquer l'implémentation d'idiomes C++ qui devraient pourtant être simples, courants et de types définis par l'utilisateur (par exemple, rendre un type défini par l'utilisateur impossible à copier en déclarant le constructeur de copie et l'opérateur d'assignation de copie en privé et en ne les définissant pas).
 
@@ -60,7 +60,7 @@ private:
 
 Avant C++11, cet extrait de code était la forme idiomatique des types qu'il était impossible de copier. Toutefois, il présente plusieurs problèmes :
 
-- Le constructeur de copie doit être déclaré de manière privée pour le masquer, mais comme il n'est pas déclaré du tout, la génération automatique du constructeur par défaut est bloquée. Vous devez définir explicitement le constructeur par défaut si vous en souhaitez un, même s'il ne fait rien.
+- Le constructeur de copie doit être déclaré en privé pour le cacher, mais parce qu’il est déclaré du tout, la génération automatique du constructeur par défaut est empêchée. Vous devez définir explicitement le constructeur par défaut si vous en souhaitez un, même s'il ne fait rien.
 
 - Même si le constructeur par défaut défini explicitement ne fait rien, il est considéré comme étant non trivial par le compilateur. Il est moins efficace qu'un constructeur par défaut généré automatiquement et empêche un type `noncopyable` d'être un type POD réel.
 
@@ -95,7 +95,7 @@ Des idiomes similaires existent pour créer des types définis par l'utilisateur
 
 Vous pouvez définir par défaut n'importe laquelle des fonctions membres spéciales : pour établir explicitement que la fonction membre spéciale utilise l'implémentation par défaut, pour définir la fonction membre spéciale avec un qualificateur d'accès non public ou pour rétablir une fonction membre spéciale dont la génération automatique a été empêchée par d'autres circonstances.
 
-Vous définissez par défaut une fonction membre spéciale en la déclarant comme dans cet exemple :
+Vous définissez par défaut une fonction membre spéciale en la déclarant comme dans cet exemple : 
 
 ```cpp
 struct widget
@@ -108,13 +108,13 @@ struct widget
 inline widget& widget::operator=(const widget&) =default;
 ```
 
-Notez que vous pouvez utiliser par défaut une fonction membre spéciale en dehors du corps d'une classe tant qu'elle peut être inline.
+Notez que vous pouvez par défaut une fonction de membre spécial en dehors du corps d’une classe tant qu’il est inlinable.
 
 Étant donné les avantages des fonctions membres spéciales ordinaires en termes de performance, nous vous recommandons de préférer les fonctions membres spéciales générées automatiquement aux corps de fonction vides lorsque vous souhaitez rétablir le comportement par défaut. Vous pouvez effectuer cette opération en définissant explicitement par défaut la fonction membre spéciale, ou en ne la déclarant pas (et en ne déclarant pas non plus d'autres fonctions membres spéciales qui l'empêcheraient d'être générée automatiquement.)
 
 ## <a name="deleted-functions"></a>Fonctions supprimées
 
-Vous pouvez supprimer des fonctions membres spéciales ainsi que des fonctions membres normales et des fonctions non-membres pour empêcher qu'elles ne soient définies ou appelées. La suppression des fonctions membres spéciales offre un moyen plus net d'empêcher le compilateur de générer des fonctions membres spéciales que vous ne souhaitez pas. La fonction doit être supprimée lorsqu'elle est déclarée ; elle ne peut pas être supprimée après de la façon dont une fonction peut-être déclarée et utilisée ensuite par défaut.
+Vous pouvez supprimer des fonctions membres spéciales ainsi que des fonctions membres normales et des fonctions non-membres pour empêcher qu'elles ne soient définies ou appelées. La suppression des fonctions spéciales des membres fournit un moyen plus propre d’empêcher le compilateur de générer des fonctions spéciales de membre que vous ne voulez pas. La fonction doit être supprimée lorsqu'elle est déclarée ; elle ne peut pas être supprimée après de la façon dont une fonction peut-être déclarée et utilisée ensuite par défaut.
 
 ```cpp
 struct widget
@@ -132,7 +132,7 @@ void call_with_true_double_only(float) =delete;
 void call_with_true_double_only(double param) { return; }
 ```
 
-Notez que dans l’exemple précédent, l’appel de `call_with_true_double_only` à l’aide d’un argument **float** provoque une erreur du compilateur, mais l’appel de `call_with_true_double_only` à l’aide d’un argument **int** ne le ferait pas ; dans le cas **int** , l’argument sera promu de **int** en **double** et appellera correctement la version **double** de la fonction, même si ce n’est peut-être pas ce qui est prévu. Pour garantir qu’un appel à cette fonction à l’aide d’un argument non double provoque une erreur du compilateur, vous pouvez déclarer une version de modèle de la fonction supprimée.
+Notez dans l’échantillon précédent que `call_with_true_double_only` l’appel en utilisant un argument de **flotteur** causerait une erreur de compilateur, mais appeler `call_with_true_double_only` en utilisant un argument **int** ne serait pas ; dans le cas **int,** l’argument sera promu de **l’int** à **doubler** et appeler avec succès **la** double version de la fonction, même si ce n’est peut-être pas ce qui est prévu. Pour vous assurer que tout appel à cette fonction en utilisant un argument non-double provoque une erreur de compilateur, vous pouvez déclarer une version modèle de la fonction qui est supprimée.
 
 ```cpp
 template < typename T >

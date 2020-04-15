@@ -1,8 +1,9 @@
 ---
 title: clearerr_s
-ms.date: 11/04/2016
+ms.date: 4/2/2020
 api_name:
 - clearerr_s
+- _o_clearerr_s
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -15,6 +16,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-stdio-l1-1-0.dll
+- api-ms-win-crt-private-l1-1-0
 api_type:
 - DLLExport
 topic_type:
@@ -26,12 +28,12 @@ helpviewer_keywords:
 - resetting stream error indicator
 - clearerr_s function
 ms.assetid: b74d014d-b7a8-494a-a330-e5ffd5614772
-ms.openlocfilehash: 12e76ba5133d99ed2d45d7cf15bada2ad1c5c38b
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: a8f8978b9d46d8d903f8256424d47c84bec649ec
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70939153"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81350049"
 ---
 # <a name="clearerr_s"></a>clearerr_s
 
@@ -47,28 +49,30 @@ errno_t clearerr_s(
 
 ### <a name="parameters"></a>Paramètres
 
-*stream*<br/>
-Pointeur vers la structure de **fichier**
+*Flux*<br/>
+Pointeur à la structure **FILE**
 
 ## <a name="return-value"></a>Valeur de retour
 
-Zéro en cas de réussite ; **EINVAL** si *Stream* a la **valeur null**.
+Zéro en cas de succès; **EINVAL** si *le flux* est **NULL**.
 
 ## <a name="remarks"></a>Notes
 
-La fonction **clearerr_s** réinitialise l’indicateur d’erreur et l’indicateur de fin de fichier pour *Stream*. Les indicateurs d’erreur ne sont pas automatiquement effacés. une fois que l’indicateur d’erreur pour un flux spécifié est défini, les opérations sur ce flux continuent de retourner une valeur d’erreur jusqu’à ce que **clearerr_s**, **clearerr**, [fseek](fseek-fseeki64.md), **fsetpos**ou [Rewind](rewind.md) soit appelé.
+La fonction **clearerr_s** réinitialise l’indicateur d’erreur et l’indicateur de fin de fichier pour *le flux*. Les indicateurs d’erreur ne sont pas automatiquement effacés; une fois que l’indicateur d’erreur d’un flux spécifié est défini, les opérations sur ce flux continuent de retourner une valeur d’erreur jusqu’à ce que **clearerr_s**, **plus clair**, [fseek](fseek-fseeki64.md), **fsetpos**, ou [rembobinage](rewind.md) est appelé.
 
-Si *Stream* a la **valeur null**, le gestionnaire de paramètres non valides est appelé, comme décrit dans [validation de paramètre](../../c-runtime-library/parameter-validation.md). Si l’exécution est autorisée à se poursuivre, cette fonction affecte à **errno** la valeur **EINVAL** et retourne **EINVAL**.
+Si *le flux* est **NULL**, le gestionnaire de paramètres invalides est invoqué, tel que décrit dans La validation [de paramètres](../../c-runtime-library/parameter-validation.md). Si l’exécution est autorisée à se poursuivre, cette fonction définit **errno** à **EINVAL** et retourne **EINVAL**.
 
-## <a name="requirements"></a>Configuration requise
+Par défaut, l’état global de cette fonction est étendue à l’application. Pour changer cela, voir [Global State dans le CRT](../global-state.md).
+
+## <a name="requirements"></a>Spécifications
 
 |Routine|En-tête requis|
 |-------------|---------------------|
 |**clearerr_s**|\<stdio.h>|
 
-Pour plus d’informations sur la compatibilité, voir consultez [Compatibilité](../../c-runtime-library/compatibility.md).
+Pour plus d'informations sur la compatibilité, voir [Compatibilité](../../c-runtime-library/compatibility.md).
 
-## <a name="example"></a>Exemples
+## <a name="example"></a>Exemple
 
 ```C
 // crt_clearerr_s.c
@@ -116,7 +120,7 @@ int main( void )
 n
 ```
 
-### <a name="output"></a>Sortie
+### <a name="output"></a>Output
 
 ```Output
 Write error: Bad file descriptor

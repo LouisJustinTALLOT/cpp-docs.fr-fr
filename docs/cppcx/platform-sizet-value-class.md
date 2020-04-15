@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - Platform::SizeT Struct
 ms.assetid: 0803612c-8ba1-430c-9b7b-1bebae88608d
-ms.openlocfilehash: 7f81cb9e1fc2ef7a74cb3878c369e4d7d14e3d90
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 5add9212dc2655bc37cd357741073f855b009bde
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62330133"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81322161"
 ---
 # <a name="platformsizet-value-class"></a>Classe de valeur Platform::SizeT
 
@@ -30,17 +30,17 @@ public ref class SizeT sealed : ValueType
 |------------|-----------------|
 |[SizeT::SizeT, constructeur](#ctor)|Initialise une nouvelle instance de la classe avec la valeur spécifiée.|
 
-### <a name="requirements"></a>Configuration requise
+### <a name="requirements"></a>Spécifications
 
-**Prise en charge minimale du client :** Windows 8
+**Client pris en charge au minimum :** Windows 8
 
-**Serveur pris en charge minimale :** Windows Server 2012
+**Serveur pris en charge minimum :** Serveur Windows 2012
 
-**Espace de noms :** Plateforme
+**Espace de noms :** Platform
 
-**Métadonnées :** platform.winmd
+**Métadonnées:** platform.winmd
 
-## <a name="ctor"></a>  SizeT::SizeT (constructeur)
+## <a name="sizetsizet-constructor"></a><a name="ctor"></a>SizeT::SizeT constructeur
 
 Initialise une nouvelle instance de SizeT avec la valeur spécifiée.
 

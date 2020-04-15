@@ -1,5 +1,5 @@
 ---
-title: CSimpleDialog, classe
+title: Classe CSimpleDialog
 ms.date: 11/04/2016
 f1_keywords:
 - CSimpleDialog
@@ -11,16 +11,16 @@ helpviewer_keywords:
 - dialog boxes, modal
 - modal dialog boxes, ATL
 ms.assetid: 2ae65cc9-4f32-4168-aecd-200b4a480fdf
-ms.openlocfilehash: b0790d9c29b50b1ac454815cd2189e0efb31b9ef
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 345372d71ad96a74bb0ae6dd7e89bdf0724cd822
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62278050"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81330825"
 ---
-# <a name="csimpledialog-class"></a>CSimpleDialog, classe
+# <a name="csimpledialog-class"></a>Classe CSimpleDialog
 
-Cette classe implémente une boîte de dialogue modale base.
+Cette classe met en œuvre une boîte de dialogue modal de base.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -33,10 +33,10 @@ class CSimpleDialog : public CDialogImplBase
 
 *t_wDlgTemplateID*
 
-L’ID de ressource de la ressource de modèle de boîte de dialogue.
+L’ID de ressource de la ressource de modèle de dialogue.
 
 *t_bCenter*<br/>
-TRUE si l’objet de la boîte de dialogue doit être centrée sur la fenêtre propriétaire ; Sinon, FALSE.
+VRAI si l’objet de dialogue doit être centré sur la fenêtre du propriétaire; autrement FALSE.
 
 ## <a name="members"></a>Membres
 
@@ -44,15 +44,15 @@ TRUE si l’objet de la boîte de dialogue doit être centrée sur la fenêtre p
 
 |Nom|Description|
 |----------|-----------------|
-|[CSimpleDialog::DoModal](#domodal)|Crée une boîte de dialogue modale.|
+|[CSimpleDialog::DoModal](#domodal)|Crée une boîte de dialogue modal.|
 
 ## <a name="remarks"></a>Notes
 
-Implémente une boîte de dialogue modale avec les fonctionnalités de base. `CSimpleDialog` prend en charge uniquement les contrôles communs Windows. Pour créer et afficher une boîte de dialogue modale, créez une instance de cette classe, en fournissant le nom d’un modèle de ressource existant pour la boîte de dialogue. L’objet de boîte de dialogue se ferme lorsque l’utilisateur clique sur n’importe quel contrôle avec une valeur prédéfinie (par exemple, IDOK ou IDCANCEL).
+Implémente une boîte de dialogue modal avec fonctionnalité de base. `CSimpleDialog`fournit une prise en charge pour les contrôles communs Windows seulement. Pour créer et afficher une boîte de dialogue modal, créez un exemple de cette classe, en fournissant le nom d’un modèle de ressources existant pour la boîte de dialogue. L’objet de la boîte de dialogue se ferme lorsque l’utilisateur clique sur n’importe quel contrôle avec une valeur prédéfini (comme IDOK ou IDCANCEL).
 
-`CSimpleDialog` vous permet de créer uniquement des boîtes de dialogue modales. `CSimpleDialog` Fournit la procédure de boîte de dialogue, qui utilise la table des messages par défaut pour diriger les messages vers les gestionnaires appropriés.
+`CSimpleDialog`vous permet de créer uniquement des boîtes de dialogue modal. `CSimpleDialog`fournit la procédure de boîte de dialogue, qui utilise la carte de message par défaut pour diriger les messages vers les gestionnaires appropriés.
 
-Consultez [mise en œuvre d’une boîte de dialogue](../../atl/implementing-a-dialog-box.md) pour plus d’informations.
+Voir [la mise en œuvre d’une boîte de dialogue](../../atl/implementing-a-dialog-box.md) pour plus d’informations.
 
 ## <a name="inheritance-hierarchy"></a>Hiérarchie d'héritage
 
@@ -60,13 +60,13 @@ Consultez [mise en œuvre d’une boîte de dialogue](../../atl/implementing-a-d
 
 `CSimpleDialog`
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
-**En-tête :** atlwin.h
+**En-tête:** atlwin.h
 
-##  <a name="domodal"></a>  CSimpleDialog::DoModal
+## <a name="csimpledialogdomodal"></a><a name="domodal"></a>CSimpleDialog::DoModal
 
-Appelle une boîte de dialogue modale et retourne le résultat de la boîte de dialogue lorsque vous avez terminé.
+Invoque une boîte de dialogue modal et renvoie le résultat de la boîte de dialogue une fois terminé.
 
 ```
 INT_PTR DoModal(HWND hWndParent = ::GetActiveWindow());
@@ -75,18 +75,18 @@ INT_PTR DoModal(HWND hWndParent = ::GetActiveWindow());
 ### <a name="parameters"></a>Paramètres
 
 *hWndParent*<br/>
-Handle vers le parent de la boîte de dialogue. Si aucune valeur n’est fournie, le parent est défini à la fenêtre actuellement active.
+Une poignée pour le parent de la boîte de dialogue. Si aucune valeur n’est fournie, le parent est réglé à la fenêtre active actuelle.
 
 ### <a name="return-value"></a>Valeur de retour
 
-En cas de réussite, la valeur de retour est l’ID de ressource du contrôle qui a fermé la boîte de dialogue.
+En cas de succès, la valeur de retour est l’ID de ressource du contrôle qui a rejeté la boîte de dialogue.
 
-Si la fonction échoue, la valeur de retour est -1. Pour obtenir des informations plus complètes sur les erreurs, appelez `GetLastError`.
+Si la fonction échoue, la valeur de rendement est de -1. Pour obtenir des informations plus complètes sur les erreurs, appelez `GetLastError`.
 
 ### <a name="remarks"></a>Notes
 
-Cette méthode gère toutes les interactions avec l’utilisateur pendant que la boîte de dialogue est active. C’est ce qui rend la boîte de dialogue modale ; Autrement dit, l’utilisateur ne peut pas interagir avec d’autres fenêtres jusqu'à ce que la boîte de dialogue est fermée.
+Cette méthode gère toute interaction avec l’utilisateur pendant que la boîte de dialogue est active. C’est ce qui rend la boîte de dialogue modale; c’est-à-dire que l’utilisateur ne peut pas interagir avec d’autres fenêtres jusqu’à ce que la boîte de dialogue soit fermée.
 
 ## <a name="see-also"></a>Voir aussi
 
-[Vue d’ensemble de la classe](../../atl/atl-class-overview.md)
+[Vue d'ensemble des classes](../../atl/atl-class-overview.md)

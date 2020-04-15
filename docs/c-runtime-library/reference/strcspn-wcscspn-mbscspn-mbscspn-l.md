@@ -1,11 +1,13 @@
 ---
 title: strcspn, wcscspn, _mbscspn, _mbscspn_l
-ms.date: 11/04/2016
+ms.date: 4/2/2020
 api_name:
 - _mbscspn_l
 - wcscspn
 - _mbscspn
 - strcspn
+- _o__mbscspn
+- _o__mbscspn_l
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -19,6 +21,7 @@ api_location:
 - ucrtbase.dll
 - api-ms-win-crt-multibyte-l1-1-0.dll
 - api-ms-win-crt-string-l1-1-0.dll
+- api-ms-win-crt-private-l1-1-0
 api_type:
 - DLLExport
 topic_type:
@@ -42,12 +45,12 @@ helpviewer_keywords:
 - mbscspn function
 - _tcscspn function
 ms.assetid: f73f51dd-b533-4e46-ba29-d05c553708a6
-ms.openlocfilehash: 501732cd4758d14a32aba3bdf503c5d314eee7f9
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 2ba3c2941736d185ad93c7c6e44cb83c82ebb478
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70940764"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81358876"
 ---
 # <a name="strcspn-wcscspn-_mbscspn-_mbscspn_l"></a>strcspn, wcscspn, _mbscspn, _mbscspn_l
 
@@ -80,10 +83,10 @@ size_t _mbscspn_l(
 
 ### <a name="parameters"></a>Paramètres
 
-*str*<br/>
+*Str*<br/>
 Chaîne se terminant par un caractère Null faisant l’objet de la recherche.
 
-*strCharSet*<br/>
+*strCharSet (en anglais)*<br/>
 Jeu de caractères se terminant par null.
 
 *locale*<br/>
@@ -91,26 +94,28 @@ Paramètres régionaux à utiliser.
 
 ## <a name="return-value"></a>Valeur de retour
 
-Ces fonctions retournent l’index du premier caractère dans *Str* qui se trouve dans *strCharSet*. Si aucun des caractères de *Str* n’est dans *strCharSet*, la valeur de retour est la longueur de *Str*.
+Ces fonctions retournent l’index du premier personnage dans *str* qui est dans *strCharSet*. Si aucun des personnages dans *str* est en *strCharSet*, alors la valeur de retour est la longueur de *str*.
 
 Aucune valeur de retour n'est réservée pour indiquer une erreur.
 
 ## <a name="remarks"></a>Notes
 
-**wcscspn** et **_mbscspn** sont des versions à caractères larges et à caractères multioctets de **strcspn**. Les arguments de **wcscspn** sont des chaînes à caractères larges ; ceux de **_mbscspn** sont des chaînes de caractères multioctets.
+**wcscspn** et **_mbscspn** sont des versions à caractère large et multioctets de **strcspn**. Les arguments du **wcscspn** sont des cordes de caractère large; ceux de **_mbscspn** sont des cordes multioctets-caractères.
 
-**_mbscspn** valide ses paramètres. Si *Str* ou *strCharSet* est un pointeur null, le gestionnaire de paramètres non valides est appelé, comme décrit dans [validation de paramètre](../../c-runtime-library/parameter-validation.md). Si l’exécution est autorisée à se poursuivre, la fonction retourne 0 et définit **errno** sur **EINVAL**. **strcspn** et **wcscspn** ne valident pas leurs paramètres. Ces trois fonctions se comportent sinon de façon identique.
+**_mbscspn** valide ses paramètres. Si *str* ou *strCharSet* est un pointeur nul, le gestionnaire de paramètres invalide est invoqué, tel que décrit dans [La validation de paramètres](../../c-runtime-library/parameter-validation.md). Si l’exécution est autorisée à se poursuivre, la fonction renvoie 0 et définit **errno** à **EINVAL**. **strcspn** et **wcscspn** ne valident pas leurs paramètres. Ces trois fonctions se comportent sinon de façon identique.
 
 La valeur de sortie est affectée par la valeur du paramètre de catégorie **LC_CTYPE** des paramètres régionaux. Pour plus d’informations, consultez [setlocale](setlocale-wsetlocale.md). Les versions de ces fonctions sans le suffixe **_l** utilisent les paramètres régionaux pour ce comportement dépendant des paramètres régionaux ; les versions avec le suffixe **_l** sont identiques, sauf qu’elles utilisent à la place les paramètres régionaux transmis. Pour plus d’informations, consultez [Locale](../../c-runtime-library/locale.md).
+
+Par défaut, l’état global de cette fonction est étendue à l’application. Pour changer cela, voir [Global State dans le CRT](../global-state.md).
 
 ### <a name="generic-text-routine-mappings"></a>Mappages de routines de texte générique
 
 |Routine TCHAR.H|_UNICODE et _MBCS non définis|_MBCS défini|_UNICODE défini|
 |---------------------|------------------------------------|--------------------|-----------------------|
 |**_tcscspn**|**strcspn**|**_mbscspn**|**wcscspn**|
-|N/A|N/A|**_mbscspn_l**|N/A|
+|n/a|n/a|**_mbscspn_l**|n/a|
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
 |Routine|En-tête requis|
 |-------------|---------------------|
@@ -156,9 +161,9 @@ strcspn( "", "" ) = 0
 
 ## <a name="see-also"></a>Voir aussi
 
-[Manipulation de chaînes](../../c-runtime-library/string-manipulation-crt.md)<br/>
-[Paramètres régionaux](../../c-runtime-library/locale.md)<br/>
-[Interprétation des séquences de caractères multi-octets](../../c-runtime-library/interpretation-of-multibyte-character-sequences.md)<br/>
+[Manipulation des cordes](../../c-runtime-library/string-manipulation-crt.md)<br/>
+[Local](../../c-runtime-library/locale.md)<br/>
+[Interprétation des séquences multioctets-caractères](../../c-runtime-library/interpretation-of-multibyte-character-sequences.md)<br/>
 [strncat, _strncat_l, wcsncat, _wcsncat_l, _mbsncat, _mbsncat_l](strncat-strncat-l-wcsncat-wcsncat-l-mbsncat-mbsncat-l.md)<br/>
 [strncmp, wcsncmp, _mbsncmp, _mbsncmp_l](strncmp-wcsncmp-mbsncmp-mbsncmp-l.md)<br/>
 [strncpy, _strncpy_l, wcsncpy, _wcsncpy_l, _mbsncpy, _mbsncpy_l](strncpy-strncpy-l-wcsncpy-wcsncpy-l-mbsncpy-mbsncpy-l.md)<br/>

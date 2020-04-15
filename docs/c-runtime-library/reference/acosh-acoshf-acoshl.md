@@ -1,10 +1,13 @@
 ---
 title: acosh, acoshf, acoshl
-ms.date: 04/05/2018
+ms.date: 4/2/2020
 api_name:
 - acoshf
 - acosh
 - acoshl
+- _o_acosh
+- _o_acoshf
+- _o_acoshl
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -17,6 +20,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-math-l1-1-0.dll
+- api-ms-win-crt-private-l1-1-0
 api_type:
 - DLLExport
 topic_type:
@@ -33,12 +37,12 @@ helpviewer_keywords:
 - acosh function
 - acoshl function
 ms.assetid: 6985c4d7-9e2a-44ce-9a9b-5a43015f15f7
-ms.openlocfilehash: da1d6024cc9f00ebfc7696ddedf92ea9f25728a1
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: b719f67651643885351843fb8e995964e03de105
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80170356"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81350845"
 ---
 # <a name="acosh-acoshf-acoshl"></a>acosh, acoshf, acoshl
 
@@ -59,21 +63,23 @@ long double acosh( long double x );  // C++ only
 
 ### <a name="parameters"></a>Paramètres
 
-*x*<br/>
+*X*<br/>
 Valeur à virgule flottante.
 
 ## <a name="return-value"></a>Valeur de retour
 
-Les fonctions **acosh** retournent le cosinus hyperbolique inverse (arc cosinus hyperbolique) de *x*. Ces fonctions sont valides sur le domaine *x* ≥ 1. Si *x* est inférieur à 1, `errno` a la valeur `EDOM` et le résultat est une valeur NaN silencieuse. Si *x* est une valeur NaN, indéfinie ou infinie silencieuse, la même valeur est retournée.
+Les fonctions **acosh** retourner la cosine hyberbolique inverse (cosine hyperbolique arc) de *x*. Ces fonctions sont valables sur le domaine *x* 1. Si *x* est inférieur à `errno` 1, est réglé à `EDOM` et le résultat est un NaN calme. Si *x* est un NaN tranquille, indéfini, ou à l’infini, la même valeur est retournée.
 
-|Entrée|Exception SEH|Exception `_matherr`|
+|Entrée|Exception SEH|`_matherr`|
 |-----------|-------------------|--------------------------|
 |± QNAN, IND, INF|Aucun|Aucun|
 |*x* < 1|Aucun|Aucun|
 
 ## <a name="remarks"></a>Notes
 
-Lorsque vous utilisez C++, vous pouvez appeler des surcharges de **acosh** qui acceptent et retournent des valeurs **float** ou **long** **double** . Dans un programme C, **acosh** accepte et retourne toujours la valeur **double**.
+Lorsque vous utilisez C, vous pouvez appeler des surcharges **d’acosh** qui prennent et retournent **flotteur** ou **de longues** valeurs **doubles.** Dans un programme C, **acosh** prend et retourne toujours **double**.
+
+Par défaut, l’état global de cette fonction est étendue à l’application. Pour changer cela, voir [Global State dans le CRT](../global-state.md).
 
 ## <a name="requirements"></a>Spécifications
 
@@ -81,7 +87,7 @@ Lorsque vous utilisez C++, vous pouvez appeler des surcharges de **acosh** qui a
 |--------------|--------------|------------------|
 |**acosh**, **acoshf**, **acoshl**|\<math.h>|\<cmath>|
 
-Pour plus d’informations sur la compatibilité, voir [Compatibilité](../../c-runtime-library/compatibility.md).
+Pour plus d'informations sur la compatibilité, voir [Compatibilité](../../c-runtime-library/compatibility.md).
 
 ## <a name="example"></a>Exemple
 
@@ -113,9 +119,9 @@ acosh( 1.324609 ) = 0.785398
 
 ## <a name="see-also"></a>Voir aussi
 
-[Prise en charge de la virgule flottante](../../c-runtime-library/floating-point-support.md)<br/>
+[Soutien à la pointe flottante](../../c-runtime-library/floating-point-support.md)<br/>
 [asinh, asinhf, asinhl](asinh-asinhf-asinhl.md)<br/>
 [atanh, atanhf, atanhl](atanh-atanhf-atanhl.md)<br/>
-[cos, cosf, cosl](cosh-coshf-coshl.md)<br/>
+[cosh, coshf, coshl](cosh-coshf-coshl.md)<br/>
 [sinh, sinhf, sinhl](sinh-sinhf-sinhl.md)<br/>
 [tanh, tanhf, tanhl](tanh-tanhf-tanhl.md)

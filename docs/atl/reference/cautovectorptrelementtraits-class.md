@@ -1,5 +1,5 @@
 ---
-title: Cautovectorptrelementtraits, classe
+title: Classe CAutoVectorPtrElraits
 ms.date: 11/04/2016
 f1_keywords:
 - CAutoVectorPtrElementTraits
@@ -9,19 +9,19 @@ f1_keywords:
 helpviewer_keywords:
 - CAutoVectorPtrElementTraits class
 ms.assetid: 16b81a56-55fb-46ca-b376-66a1884231a6
-ms.openlocfilehash: 168670709470d7b7fdd77edb3c29d5a9f4049ca3
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 956fe39c4d3ba89bb9def2f996dca59905753edb
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62260082"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81318753"
 ---
-# <a name="cautovectorptrelementtraits-class"></a>Cautovectorptrelementtraits, classe
+# <a name="cautovectorptrelementtraits-class"></a>Classe CAutoVectorPtrElraits
 
-Cette classe fournit des méthodes, les fonctions statiques et les typedefs utiles lors de la création de collections de pointeurs intelligents à l’aide de vecteur nouveaux et supprimer des opérateurs.
+Cette classe fournit des méthodes, des fonctions statiques et des types utiles lors de la création de collections de pointeurs intelligents à l’aide de vecteurs nouveaux et supprimer les opérateurs.
 
 > [!IMPORTANT]
->  Cette classe et ses membres ne peut pas être utilisés dans les applications qui s’exécutent dans le Windows Runtime.
+> Cette classe et ses membres ne peuvent pas être utilisés dans les applications qui s’exécutent dans le Windows Runtime.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -42,12 +42,12 @@ Le type de pointeur.
 
 |Nom|Description|
 |----------|-----------------|
-|[CAutoVectorPtrElementTraits::INARGTYPE](#inargtype)|Le type de données à utiliser pour l’ajout d’éléments à l’objet de classe de collection.|
-|[CAutoVectorPtrElementTraits::OUTARGTYPE](#outargtype)|Le type de données à utiliser pour récupérer des éléments de l’objet de classe de collection.|
+|[CAutoVectorPtrElementTraits::INARGTYPE](#inargtype)|Le type de données à utiliser pour ajouter des éléments à l’objet de classe de collecte.|
+|[CAutoVectorPtrElementTraits::OUTARGTYPE](#outargtype)|Le type de données à utiliser pour récupérer des éléments de l’objet de classe de collecte.|
 
 ## <a name="remarks"></a>Notes
 
-Cette classe fournit des méthodes, les fonctions statiques et les typedefs pour contribuer à la création d’objets de classe de collection qui contient des pointeurs intelligents. Contrairement aux [CAutoPtrElementTraits](../../atl/reference/cautoptrelementtraits-class.md), cette classe utilise vector, nouveaux et supprimer des opérateurs.
+Cette classe fournit des méthodes, des fonctions statiques et des types pour aider à la création d’objets de classe de collection contenant des pointeurs intelligents. Contrairement à [CAutoPtrElementTraits](../../atl/reference/cautoptrelementtraits-class.md), cette classe utilise des opérateurs vectoriels nouveaux et supprimer.
 
 ## <a name="inheritance-hierarchy"></a>Hiérarchie d'héritage
 
@@ -61,21 +61,21 @@ Cette classe fournit des méthodes, les fonctions statiques et les typedefs pour
 
 `CAutoVectorPtrElementTraits`
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
-**En-tête :** atlcoll.h
+**En-tête:** atlcoll.h
 
-##  <a name="inargtype"></a>  CAutoVectorPtrElementTraits::INARGTYPE
+## <a name="cautovectorptrelementtraitsinargtype"></a><a name="inargtype"></a>CAutoVectorPtrElementTraits::INARGTYPE
 
-Le type de données à utiliser pour l’ajout d’éléments à l’objet de classe de collection.
+Le type de données à utiliser pour ajouter des éléments à l’objet de classe de collecte.
 
 ```
 typedef CAutoVectorPtr<T>& INARGTYPE;
 ```
 
-##  <a name="outargtype"></a>  CAutoVectorPtrElementTraits::OUTARGTYPE
+## <a name="cautovectorptrelementtraitsoutargtype"></a><a name="outargtype"></a>CAutoVectorPtrElementTraits::OUTARGTYPE
 
-Le type de données à utiliser pour récupérer des éléments de l’objet de classe de collection.
+Le type de données à utiliser pour récupérer des éléments de l’objet de classe de collecte.
 
 ```
 typedef T*& OUTARGTYPE;
@@ -83,6 +83,6 @@ typedef T*& OUTARGTYPE;
 
 ## <a name="see-also"></a>Voir aussi
 
-[CDefaultElementTraits, classe](../../atl/reference/cdefaultelementtraits-class.md)<br/>
-[CAutoVectorPtr, classe](../../atl/reference/cautovectorptr-class.md)<br/>
-[Vue d’ensemble de la classe](../../atl/atl-class-overview.md)
+[Classe CDefaultElementTraits](../../atl/reference/cdefaultelementtraits-class.md)<br/>
+[Classe CAutoVectorPtr](../../atl/reference/cautovectorptr-class.md)<br/>
+[Vue d'ensemble des classes](../../atl/atl-class-overview.md)
