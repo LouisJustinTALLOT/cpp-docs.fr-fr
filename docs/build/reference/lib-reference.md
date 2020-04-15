@@ -10,19 +10,19 @@ helpviewer_keywords:
 - LIB [C++]
 - 32-Bit Library Manager
 ms.assetid: ecc7f643-bbd4-47a3-8dc6-b360f880db91
-ms.openlocfilehash: 8e0c2815fdc3ab9ab171d3ebb94480393c8815ed
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: d4ce4e4723faa943a8de1431a604fc7acca2d528
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62291494"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81328215"
 ---
 # <a name="lib-reference"></a>Référence LIB
 
-Le Gestionnaire de bibliothèque de Microsoft (LIB.exe) crée et gère une bibliothèque de fichiers d’objets fichier Format COFF (Common Object). LIB peut également servir à créer des fichiers d’exportation et de bibliothèques d’importation pour référencer des définitions exportées.
+Le Microsoft Library Manager (LIB.exe) crée et gère une bibliothèque de fichiers d’objets communs format de fichier d’objets (COFF). LIB peut également être utilisé pour créer des fichiers d’exportation et importer des bibliothèques pour référencer les définitions exportées.
 
 > [!NOTE]
->  Vous pouvez démarrer cet outil uniquement à partir de l’invite de commandes de Visual Studio. Vous ne pouvez pas le démarrer à partir d'une invite de commandes système ni de l'Explorateur de fichiers.
+> Vous pouvez démarrer cet outil uniquement à partir de l’invite de commande Visual Studio. Vous ne pouvez pas le démarrer à partir d'une invite de commandes système ni de l'Explorateur de fichiers.
 
 - [Vue d’ensemble de LIB](overview-of-lib.md)
 
@@ -38,4 +38,4 @@ Le Gestionnaire de bibliothèque de Microsoft (LIB.exe) crée et gère une bibli
 
 ## <a name="see-also"></a>Voir aussi
 
-[Outils de génération MSVC supplémentaires](c-cpp-build-tools.md)
+[Outils de construction MSVC supplémentaires](c-cpp-build-tools.md)

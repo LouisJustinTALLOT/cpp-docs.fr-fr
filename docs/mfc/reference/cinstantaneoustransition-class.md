@@ -12,12 +12,12 @@ helpviewer_keywords:
 - CInstantaneousTransition [MFC], Create
 - CInstantaneousTransition [MFC], m_dblFinalValue
 ms.assetid: c3d5121f-2c6b-4221-9e57-10e082a31120
-ms.openlocfilehash: f3861bbbc0fc138dcb0f2a8b969ed9bde41335bd
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: 15c471d64309cc1358c9c5b0b33577261dd877f6
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69505933"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81372441"
 ---
 # <a name="cinstantaneoustransition-class"></a>CInstantaneousTransition, classe
 
@@ -41,17 +41,17 @@ class CInstantaneousTransition : public CBaseTransition;
 
 |Nom|Description|
 |----------|-----------------|
-|[CInstantaneousTransition::Create](#create)|Appelle la bibliothèque de transition pour créer l’objet COM de transition encapsulé. (Substitue [CBaseTransition:: Create](../../mfc/reference/cbasetransition-class.md#create).)|
+|[CInstantaneousTransition::Créer](#create)|Appelle la bibliothèque de transition pour créer un objet COM de transition encapsulé. (Overrides [CBaseTransition::Créer](../../mfc/reference/cbasetransition-class.md#create).)|
 
 ### <a name="public-data-members"></a>Membres de données publics
 
 |Nom|Description|
 |----------|-----------------|
-|[CInstantaneousTransition::m_dblFinalValue](#m_dblfinalvalue)|Valeur de la variable d’animation à la fin de la transition.|
+|[CInstantaneousTransition::m_dblFinalValue](#m_dblfinalvalue)|La valeur de la variable d’animation à la fin de la transition.|
 
 ## <a name="remarks"></a>Notes
 
-Pendant une transition instantanée, la valeur de la variable d’animation change instantanément de sa valeur actuelle à une valeur finale spécifiée. La durée de cette transition est toujours égale à zéro. Étant donné que toutes les transitions sont automatiquement désactivées, il est recommandé de les allouer à l’aide de operator new. L’objet COM IUIAnimationTransition encapsulé est créé par CAnimationController:: AnimateGroup, jusqu’à ce qu’il soit NULL. La modification des variables membres après la création de cet objet COM n’a aucun effet.
+Au cours d’une transition instantanée, la valeur de la variable d’animation change instantanément de sa valeur actuelle à une valeur finale spécifiée. La durée de cette transition est toujours nulle. Étant donné que toutes les transitions sont effacées automatiquement, il est recommandé de les répartir à l’aide de l’opérateur nouveau. L’objet IUIAnimationTransition COM encapsulé est créé par CAnimationController::AnimateGroup, jusque-là c’est NULL. Changer les variables des membres après la création de cet objet COM n’a aucun effet.
 
 ## <a name="inheritance-hierarchy"></a>Hiérarchie d'héritage
 
@@ -61,11 +61,11 @@ Pendant une transition instantanée, la valeur de la variable d’animation chan
 
 [CInstantaneousTransition](../../mfc/reference/cinstantaneoustransition-class.md)
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
 **En-tête :** afxanimationcontroller.h
 
-##  <a name="cinstantaneoustransition"></a>  CInstantaneousTransition::CInstantaneousTransition
+## <a name="cinstantaneoustransitioncinstantaneoustransition"></a><a name="cinstantaneoustransition"></a>CInstantaneousTransition::CInstantaneousTransition
 
 Construit un objet de transition et initialise sa valeur finale.
 
@@ -75,12 +75,12 @@ CInstantaneousTransition(DOUBLE dblFinalValue);
 
 ### <a name="parameters"></a>Paramètres
 
-*dblFinalValue*<br/>
-Valeur de la variable d’animation à la fin de la transition.
+*dblFinalValue (en)*<br/>
+La valeur de la variable d’animation à la fin de la transition.
 
-##  <a name="create"></a>  CInstantaneousTransition::Create
+## <a name="cinstantaneoustransitioncreate"></a><a name="create"></a>CInstantaneousTransition::Créer
 
-Appelle la bibliothèque de transition pour créer l’objet COM de transition encapsulé.
+Appelle la bibliothèque de transition pour créer un objet COM de transition encapsulé.
 
 ```
 virtual BOOL Create(
@@ -90,16 +90,16 @@ virtual BOOL Create(
 
 ### <a name="parameters"></a>Paramètres
 
-*pLibrary*<br/>
-Pointeur vers une [interface IUIAnimationTransitionLibrary](/windows/win32/api/uianimation/nn-uianimation-iuianimationtransitionlibrary), qui définit une bibliothèque de transitions standard.
+*pLibraire*<br/>
+Un pointeur à une [interface IUIAnimationTransitionLibrary](/windows/win32/api/uianimation/nn-uianimation-iuianimationtransitionlibrary), qui définit une bibliothèque de transitions standard.
 
 ### <a name="return-value"></a>Valeur de retour
 
-TRUE si la transition est créée avec succès; Sinon, FALSe.
+VRAI si la transition est créée avec succès; autrement FALSE.
 
-##  <a name="m_dblfinalvalue"></a>  CInstantaneousTransition::m_dblFinalValue
+## <a name="cinstantaneoustransitionm_dblfinalvalue"></a><a name="m_dblfinalvalue"></a>CInstantaneousTransition::m_dblFinalValue
 
-Valeur de la variable d’animation à la fin de la transition.
+La valeur de la variable d’animation à la fin de la transition.
 
 ```
 DOUBLE m_dblFinalValue;

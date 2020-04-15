@@ -14,12 +14,12 @@ helpviewer_keywords:
 - std::make_error_code [C++]
 - std::make_error_condition [C++]
 - std::swap [C++]
-ms.openlocfilehash: 5435c3b9e10f151fc77c72b58c93510b6a867ce1
-ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
+ms.openlocfilehash: 16c26212cac13602e981f42d8333518da90615fc
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/16/2020
-ms.locfileid: "79421750"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81370666"
 ---
 # <a name="ltfuturegt-functions"></a>&lt;future&gt;, fonctions
 
@@ -28,7 +28,7 @@ ms.locfileid: "79421750"
 |[async](#async)|[future_category](#future_category)|[make_error_code](#make_error_code)|
 |[make_error_condition](#make_error_condition)|[swap](#swap)|
 
-## <a name="async"></a>  async
+## <a name="async"></a><a name="async"></a>Async
 
 Représente un *fournisseur asynchrone*.
 
@@ -44,7 +44,7 @@ future<typename result_of<Fn(ArgTypes...)>::type>
 
 ### <a name="parameters"></a>Paramètres
 
-\ de *stratégie*
+*Politique*\
 Valeur [launch](../standard-library/future-enums.md#launch).
 
 ### <a name="remarks"></a>Notes
@@ -63,18 +63,18 @@ La deuxième fonction retourne un objet `future<Ty>` dont l’*état asynchrone 
 
 À moins que `decay<Fn>::type` ne soit un type autre que launch, la deuxième fonction ne participe pas à la résolution de surcharge.
 
-La C++ norme indique que si la stratégie est Launch :: Async, la fonction crée un nouveau thread. Toutefois, l’implémentation Microsoft est actuellement non conforme. Il obtient ses threads à partir du pool de threads Windows, qui peut, dans certains cas, fournir un thread recyclé plutôt qu’un nouveau. Cela signifie que la stratégie de `launch::async` est implémentée en tant que `launch::async|launch::deferred`.  Une autre implication de l’implémentation basée sur le pool de threads est qu’il n’y a aucune garantie que les variables locales de thread seront détruites lorsque le thread se terminera. Si le thread est recyclé et fourni à un nouvel appel à `async`, les anciennes variables existent toujours. Nous vous recommandons donc de ne pas utiliser de variables de thread local avec `async`.
+La norme CMD indique que si la stratégie est lancée : : async, la fonction crée un nouveau thread. Toutefois, la mise en œuvre de Microsoft est actuellement non conforme. Il obtient ses fils à partir de windows ThreadPool, qui dans certains cas peut fournir un thread recyclé plutôt que d’un nouveau. Cela signifie `launch::async` que la politique `launch::async|launch::deferred`est effectivement mise en œuvre comme .  Une autre implication de la mise en œuvre basée sur ThreadPool est qu’il n’y a aucune garantie que les variables thread-local seront détruites lorsque le thread se termine. Si le thread est recyclé et fourni `async`à un nouvel appel à , les anciennes variables existeront toujours. Nous vous recommandons donc de ne pas `async`utiliser de variables thread-local avec .
 
-Si la *stratégie* est `launch::deferred`, la fonction marque son état asynchrone associé comme contenant une *fonction différée* et retourne. Le premier appel à toute fonction non chronométrée qui attend que l’état asynchrone associé soit prêt appelle la fonction différée en évaluant `INVOKE(dfn, dargs..., Ty)`.
+Si la `launch::deferred` *politique* est, la fonction marque son état asynchrone associé comme détenant une fonction *différée* et des retours. Le premier appel à toute fonction non chronométrée qui attend que l’état asynchrone associé soit prêt appelle la fonction différée en évaluant `INVOKE(dfn, dargs..., Ty)`.
 
 Dans tous les cas, l’état asynchrone associé de l’objet `future` n’est pas défini sur *prêt* avant la fin de l’évaluation de `INVOKE(dfn, dargs..., Ty)`, en levant une exception ou en retournant normalement une valeur. Le résultat de l’état asynchrone associé est une exception, s’il en a été levée une, ou toute valeur retournée par l’évaluation.
 
 > [!NOTE]
 > Pour un `future` (ou le dernier [shared_future](../standard-library/shared-future-class.md)) attaché à une tâche démarrée avec `std::async`, le destructeur se bloque si la tâche n’est pas terminée ; autrement dit, il se bloque si ce thread n’a pas encore appelé `.get()` ou `.wait()` et que la tâche est encore en cours d’exécution. Si un `future` obtenu à partir de `std::async` est déplacé en dehors de la portée locale, un autre code qui l’utilise doit être conscient que son destructeur peut empêcher l’état partagé d’être prêt.
 
-La pseudo-fonction `INVOKE` est définie dans [\<functional>](../standard-library/functional.md).
+La pseudo-fonction `INVOKE` est définie dans [ \<le>fonctionnel ](../standard-library/functional.md).
 
-## <a name="future_category"></a>  future_category
+## <a name="future_category"></a><a name="future_category"></a>future_category
 
 Retourne une référence à l’objet [error_category](../standard-library/error-category-class.md) qui caractérise les erreurs associées aux objets `future`.
 
@@ -82,7 +82,7 @@ Retourne une référence à l’objet [error_category](../standard-library/error
 const error_category& future_category() noexcept;
 ```
 
-## <a name="make_error_code"></a>  make_error_code
+## <a name="make_error_code"></a><a name="make_error_code"></a>make_error_code
 
 Crée un [error_code](../standard-library/error-code-class.md) avec l’objet [error_category](../standard-library/error-category-class.md) qui caractérise les erreurs de [future](../standard-library/future-class.md).
 
@@ -92,14 +92,14 @@ inline error_code make_error_code(future_errc Errno) noexcept;
 
 ### <a name="parameters"></a>Paramètres
 
-\ *errno*
+*Errno*\
 Valeur [future_errc](../standard-library/future-enums.md#future_errc) qui identifie l’erreur signalée.
 
 ### <a name="return-value"></a>Valeur de retour
 
 `error_code(static_cast<int>(Errno), future_category());`
 
-## <a name="make_error_condition"></a>  make_error_condition
+## <a name="make_error_condition"></a><a name="make_error_condition"></a>make_error_condition
 
 Crée un [error_condition](../standard-library/error-condition-class.md) avec l’objet [error_category](../standard-library/error-category-class.md) qui caractérise les erreurs de [future](../standard-library/future-class.md).
 
@@ -109,16 +109,16 @@ inline error_condition make_error_condition(future_errc Errno) noexcept;
 
 ### <a name="parameters"></a>Paramètres
 
-\ *errno*
+*Errno*\
 Valeur [future_errc](../standard-library/future-enums.md#future_errc) qui identifie l’erreur signalée.
 
 ### <a name="return-value"></a>Valeur de retour
 
 `error_condition(static_cast<int>(Errno), future_category());`
 
-## <a name="swap"></a>  swap
+## <a name="swap"></a><a name="swap"></a>Swap
 
-Échange l’*état asynchrone associé* d’un objet `promise` avec celui d’un autre.
+Échange *l’état asynchrone* `promise` associé d’un objet à celui d’un autre.
 
 ```cpp
 template <class Ty>
@@ -130,12 +130,12 @@ void swap(packaged_task<Ty(ArgTypes...)>& Left, packaged_task<Ty(ArgTypes...)>& 
 
 ### <a name="parameters"></a>Paramètres
 
-\ *gauche*
+*Gauche*\
 Objet gauche `promise`.
 
-\ *droit*
+*Oui*\
 Objet droit `promise`.
 
 ## <a name="see-also"></a>Voir aussi
 
-[\<future>](../standard-library/future.md)
+[\<>avenir](../standard-library/future.md)

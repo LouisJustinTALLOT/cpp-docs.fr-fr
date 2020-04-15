@@ -12,31 +12,31 @@ helpviewer_keywords:
 - reading files
 - writing to files [MFC]
 ms.assetid: cac0c826-ba56-495f-99b3-ce6336f65763
-ms.openlocfilehash: ab1ddc58ec6cc2b67e5843f46afbead3ead54eba
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 6c4b2b21bbfa19fb73997f8475cfa9a4047dc0ca
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62324257"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81371798"
 ---
 # <a name="reading-and-writing-files"></a>Lecture et écriture de fichiers
 
-Si vous avez utilisé les fonctions de gestion de fichiers de bibliothèque Runtime C, MFC lire et écrire des opérations apparaîtra familier. Cet article décrit la lecture et l’écrire directement dans un `CFile` objet. Vous pouvez également mis en mémoire tampon d’e/s de fichier avec le [CArchive](../mfc/reference/carchive-class.md) classe.
+Si vous avez utilisé les fonctions de traitement des fichiers de la bibliothèque en temps d’exécution C, les opérations de lecture et d’écriture de MFC vous paraîtront familières. Cet article décrit la lecture directe `CFile` et l’écriture directement à un objet. Vous pouvez également faire le fichier tampon I/O avec la classe [CArchive.](../mfc/reference/carchive-class.md)
 
-#### <a name="to-read-from-and-write-to-the-file"></a>Pour lire et écrire dans le fichier
+#### <a name="to-read-from-and-write-to-the-file"></a>Pour lire et écrire au fichier
 
-1. Utilisez le `Read` et `Write` des fonctions membres pour lire et écrire des données dans le fichier.
+1. Utilisez `Read` les `Write` fonctions et les fonctions des membres pour lire et écrire des données dans le fichier.
 
-     - ou -
+     -ou-
 
-1. Le `Seek` fonction membre est également disponible pour passer à un décalage spécifique dans le fichier.
+1. La `Seek` fonction membre est également disponible pour passer à une compensation spécifique dans le fichier.
 
-`Read` prend un pointeur vers une mémoire tampon et le nombre d’octets à lire et retourne le nombre réel d’octets qui ont été lus. Si le nombre d’octets requis ne parvient pas, car fin de fichier (EOF) est atteinte, le nombre réel d’octets lus est retourné. Si une erreur de lecture se produit, une exception est levée. `Write` est similaire à `Read`, mais le nombre d’octets écrits n’est pas retourné. Si une erreur d’écriture se produit, y compris n’écrit ne pas tous les octets spécifiés, une exception est levée. Si vous avez valide `CFile` de l’objet, vous pouvez lire ou écrire comme indiqué dans l’exemple suivant :
+`Read`prend un pointeur à un tampon et le nombre d’octets à lire et retourne le nombre réel d’octets qui ont été lus. Si le nombre requis d’octets n’a pas pu être lu parce que la fin du fichier (EOF) est atteinte, le nombre réel d’octets lus est retourné. Si une erreur de lecture se produit, une exception est lancée. `Write`est similaire `Read`à , mais le nombre d’octets écrits n’est pas retourné. Si une erreur d’écriture se produit, y compris ne pas écrire tous les octets spécifiés, une exception est lancée. Si vous avez `CFile` un objet valide, vous pouvez le lire ou l’écrire comme indiqué dans l’exemple suivant :
 
 [!code-cpp[NVC_MFCFiles#2](../atl-mfc-shared/reference/codesnippet/cpp/reading-and-writing-files_1.cpp)]
 
 > [!NOTE]
->  Vous devez normalement effectuer les opérations d’entrée/sortie dans un **essayez**/**catch** bloc gestion des exceptions. Pour plus d’informations, consultez [gestion des exceptions (MFC)](../mfc/exception-handling-in-mfc.md).
+> Vous devez normalement effectuer des opérations d’entrée/sortie dans un bloc de manipulation/**d’exception de capture** **d’essai.** Pour plus d’informations, voir [Exception Handling (MFC)](../mfc/exception-handling-in-mfc.md).
 
 ## <a name="see-also"></a>Voir aussi
 

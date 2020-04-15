@@ -1,5 +1,5 @@
 ---
-title: CListView (classe)
+title: Classe CListView
 ms.date: 11/04/2016
 f1_keywords:
 - CListView
@@ -12,16 +12,16 @@ helpviewer_keywords:
 - CListView [MFC], GetListCtrl
 - CListView [MFC], RemoveImageList
 ms.assetid: 7626bdb2-a1b8-4eab-b631-6743710a8432
-ms.openlocfilehash: 698e37b2853a2ca3698ee0a426c8ded688c99c58
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: ae1a76e4cdd052ff44dcbd69d467c51741bcc2ff
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62296655"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81370152"
 ---
-# <a name="clistview-class"></a>CListView (classe)
+# <a name="clistview-class"></a>Classe CListView
 
-Simplifie l’utilisation du contrôle de liste et de [CListCtrl](../../mfc/reference/clistctrl-class.md), la classe qui encapsule la fonctionnalité de contrôle de liste, avec l’architecture document / vue de MFC.
+Simplifie l’utilisation du contrôle de liste et de [CListCtrl](../../mfc/reference/clistctrl-class.md), la classe qui encapsule la fonctionnalité de contrôle de liste, avec l’architecture de vision des documents de MFC.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -47,11 +47,11 @@ class CListView : public CCtrlView
 
 |Nom|Description|
 |----------|-----------------|
-|[CListView::RemoveImageList](#removeimagelist)|Supprime la liste de l’image spécifiée dans la liste.|
+|[CListView::RemoveImageList](#removeimagelist)|Supprime la liste d’images spécifiée de la vue de liste.|
 
 ## <a name="remarks"></a>Notes
 
-Pour plus d’informations sur cette architecture, consultez la vue d’ensemble pour le [CView](../../mfc/reference/cview-class.md) classe et les références croisées citées il.
+Pour plus d’informations sur cette architecture, consultez la classe [CView](../../mfc/reference/cview-class.md) et les références croisées citées là-bas.
 
 ## <a name="inheritance-hierarchy"></a>Hiérarchie d'héritage
 
@@ -67,11 +67,11 @@ Pour plus d’informations sur cette architecture, consultez la vue d’ensemble
 
 `CListView`
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
-**En-tête :** afxcview.h
+**En-tête:** afxcview.h
 
-##  <a name="clistview"></a>  CListView::CListView
+## <a name="clistviewclistview"></a><a name="clistview"></a>CListView::CListView
 
 Construit un objet `CListView`.
 
@@ -79,9 +79,9 @@ Construit un objet `CListView`.
 CListView();
 ```
 
-##  <a name="getlistctrl"></a>  CListView::GetListCtrl
+## <a name="clistviewgetlistctrl"></a><a name="getlistctrl"></a>CListView::GetListCtrl
 
-Appelez cette fonction membre pour obtenir une référence au contrôle de liste associée à la vue.
+Appelez cette fonction de membre pour obtenir une référence au contrôle de liste associé à la vue.
 
 ```
 CListCtrl& GetListCtrl() const;
@@ -89,15 +89,15 @@ CListCtrl& GetListCtrl() const;
 
 ### <a name="return-value"></a>Valeur de retour
 
-Une référence au contrôle de liste associée à la vue.
+Une référence au contrôle de liste associé à la vue.
 
 ### <a name="example"></a>Exemple
 
 [!code-cpp[NVC_MFCListView#7](../../atl/reference/codesnippet/cpp/clistview-class_1.cpp)]
 
-##  <a name="removeimagelist"></a>  CListView::RemoveImageList
+## <a name="clistviewremoveimagelist"></a><a name="removeimagelist"></a>CListView::RemoveImageList
 
-Supprime la liste de l’image spécifiée dans la liste.
+Supprime la liste d’images spécifiée de la vue de liste.
 
 ```
 void RemoveImageList(int nImageList);
@@ -106,11 +106,11 @@ void RemoveImageList(int nImageList);
 ### <a name="parameters"></a>Paramètres
 
 *nImageList*<br/>
-Index de base zéro de l’image à supprimer.
+L’index zéro de l’image à supprimer.
 
 ## <a name="see-also"></a>Voir aussi
 
-[Exemple MFC ROWLIST](../../overview/visual-cpp-samples.md)<br/>
-[CCtrlView, classe](../../mfc/reference/cctrlview-class.md)<br/>
+[MFC Échantillon ROWLIST](../../overview/visual-cpp-samples.md)<br/>
+[Classe CCtrlView](../../mfc/reference/cctrlview-class.md)<br/>
 [Graphique hiérarchique](../../mfc/hierarchy-chart.md)<br/>
-[CCtrlView, classe](../../mfc/reference/cctrlview-class.md)
+[Classe CCtrlView](../../mfc/reference/cctrlview-class.md)

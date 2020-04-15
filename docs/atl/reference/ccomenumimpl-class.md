@@ -1,5 +1,5 @@
 ---
-title: CComEnumImpl, classe
+title: Classe CComEnumImpl
 ms.date: 11/04/2016
 f1_keywords:
 - CComEnumImpl
@@ -18,16 +18,16 @@ f1_keywords:
 helpviewer_keywords:
 - CComEnumImpl class
 ms.assetid: cc0d8e76-e608-46db-87cd-4c7161fe32d2
-ms.openlocfilehash: 7d26c59a38bfe43e49215fbb6108453e10ca6dea
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: 965e0a8bf6c890882754b60e2785832933d1c52c
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69497170"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81327864"
 ---
-# <a name="ccomenumimpl-class"></a>CComEnumImpl, classe
+# <a name="ccomenumimpl-class"></a>Classe CComEnumImpl
 
-Cette classe fournit l’implémentation pour une interface d’énumérateur COM où les éléments qui sont énumérés sont stockés dans un tableau.
+Cette classe fournit la mise en œuvre d’une interface d’enumérateur COM où les éléments énumérés sont stockés dans un tableau.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -40,16 +40,16 @@ class ATL_NO_VTABLE CComEnumImpl : public Base
 #### <a name="parameters"></a>Paramètres
 
 *Base*<br/>
-Interface d’énumérateur COM. Pour obtenir un exemple, consultez [IEnumString](/windows/win32/api/objidl/nn-objidl-ienumstring) .
+Une interface d’enumérateur COM. Voir [IEnumString](/windows/win32/api/objidl/nn-objidl-ienumstring) pour un exemple.
 
 *piid*<br/>
-Pointeur vers l’ID d’interface de l’interface de l’énumérateur.
+Un pointeur à l’interface ID de l’interface d’enumérateur.
 
 *T*<br/>
-Type d’élément exposé par l’interface de l’énumérateur.
+Le type d’élément exposé par l’interface de l’énumérateur.
 
-*Copy*<br/>
-Classe de [stratégie de copie](../../atl/atl-copy-policy-classes.md)homogène.
+*Copier*<br/>
+Une classe de politique de [copie](../../atl/atl-copy-policy-classes.md)homogène .
 
 ## <a name="members"></a>Membres
 
@@ -58,40 +58,40 @@ Classe de [stratégie de copie](../../atl/atl-copy-policy-classes.md)homogène.
 |Nom|Description|
 |----------|-----------------|
 |[CComEnumImpl::CComEnumImpl](#ccomenumimpl)|Constructeur.|
-|[CComEnumImpl::~CComEnumImpl](#dtor)|Destructeur.|
+|[CComEnumImpl::CComEnumImpl](#dtor)|Destructeur.|
 
 ### <a name="public-methods"></a>M&#233;thodes publiques
 
 |Nom|Description|
 |----------|-----------------|
-|[CComEnumImpl::Clone](#clone)|Implémentation de la méthode d’interface d’énumération clone.|
+|[CComEnumImpl::Clone](#clone)|La mise en œuvre de la méthode d’interface d’énumération **Clone.**|
 |[CComEnumImpl::Init](#init)|Initialise l'énumérateur.|
-|[CComEnumImpl::Next](#next)|Implémentation de **Next**.|
-|[CComEnumImpl::Reset](#reset)|Implémentation de **Reset**.|
-|[CComEnumImpl::Skip](#skip)|L’implémentation de **Skip**.|
+|[CComEnumImpl::Suivant](#next)|La mise en œuvre de **Next**.|
+|[CComEnumImpl::Reset](#reset)|La mise en œuvre de **Reset**.|
+|[CComEnumImpl::Skip](#skip)|La mise en œuvre de **Skip**.|
 
 ### <a name="public-data-members"></a>Membres de données publics
 
 |Nom|Description|
 |----------|-----------------|
-|[CComEnumImpl::m_begin](#m_begin)|Pointeur vers le premier élément du tableau.|
-|[CComEnumImpl::m_dwFlags](#m_dwflags)|Indicateurs de copie transmis `Init`.|
-|[CComEnumImpl::m_end](#m_end)|Pointeur vers l’emplacement situé juste après le dernier élément du tableau.|
-|[CComEnumImpl::m_iter](#m_iter)|Pointeur vers l’élément actuel dans le tableau.|
-|[CComEnumImpl::m_spUnk](#m_spunk)|`IUnknown` Pointeur de l’objet qui fournit la collection qui est énumérée.|
+|[CComEnumImpl::m_begin](#m_begin)|Un pointeur au premier élément du tableau.|
+|[CComEnumImpl::m_dwFlags](#m_dwflags)|Copier les `Init`drapeaux passés par .|
+|[CComEnumImpl::m_end](#m_end)|Un pointeur à l’emplacement juste au-delà du dernier élément dans le tableau.|
+|[CComEnumImpl::m_iter](#m_iter)|Un pointeur à l’élément actuel dans le tableau.|
+|[CComEnumImpl::m_spUnk](#m_spunk)|Le `IUnknown` pointeur de l’objet fournissant la collection en cours d’énumération.|
 
 ## <a name="remarks"></a>Notes
 
-Pour obtenir un exemple d’implémentations de méthode, consultez [IEnumString](/windows/win32/api/objidl/nn-objidl-ienumstring) . `CComEnumImpl`fournit l’implémentation pour une interface d’énumérateur COM où les éléments qui sont énumérés sont stockés dans un tableau. Cette classe est analogue à la `IEnumOnSTLImpl` classe, qui fournit une implémentation d’une interface d’énumérateur basée sur C++ un conteneur de bibliothèque standard.
+Voir [IEnumString](/windows/win32/api/objidl/nn-objidl-ienumstring) pour un exemple de mise en œuvre de la méthode. `CComEnumImpl`fournit la mise en œuvre d’une interface d’enumérateur COM où les éléments énumérés sont stockés dans un tableau. Cette classe est analogue `IEnumOnSTLImpl` à la classe, qui fournit une mise en œuvre d’une interface d’enumérateur basée sur un conteneur de bibliothèque standard C.
 
 > [!NOTE]
->  Pour plus d’informations sur les `CComEnumImpl` autres `IEnumOnSTLImpl`différences entre et, consultez [CComEnumImpl:: init](#init).
+> Pour plus de détails `CComEnumImpl` `IEnumOnSTLImpl`sur d’autres différences entre et , voir [CComEnumImpl::Init](#init).
 
-En règle générale, vous n’aurez *pas* besoin de créer votre propre classe d’énumérateur en dérivant de cette implémentation d’interface. Si vous souhaitez utiliser un énumérateur fourni par ATL basé sur un tableau, il est plus courant de créer une instance de [CComEnum](../../atl/reference/ccomenum-class.md).
+Typiquement, vous *n’aurez pas* besoin de créer votre propre classe d’énumérateur en tirant de cette implémentation d’interface. Si vous souhaitez utiliser un enumérateur fourni par ATL basé sur un tableau, il est plus fréquent de créer une instance de [CComEnum](../../atl/reference/ccomenum-class.md).
 
-Toutefois, si vous avez besoin de fournir un énumérateur personnalisé (par exemple, un énumérateur qui expose des interfaces en plus de l’interface d’énumérateur), vous pouvez dériver de cette classe. Dans ce cas, il est probable que vous devez substituer la méthode [CComEnumImpl:: Clone](#clone) pour fournir votre propre implémentation.
+Toutefois, si vous avez besoin de fournir un enumérateur personnalisé (par exemple, celui qui expose les interfaces en plus de l’interface d’enumérateur), vous pouvez tirer de cette classe. Dans cette situation, il est probable que vous aurez besoin de remplacer le [CComEnumImpl::Clone](#clone) méthode pour fournir votre propre implémentation.
 
-Pour plus d’informations, consultez [collections et énumérateurs ATL](../../atl/atl-collections-and-enumerators.md).
+Pour plus d’informations, voir [ATL Collections et Enumerators](../../atl/atl-collections-and-enumerators.md).
 
 ## <a name="inheritance-hierarchy"></a>Hiérarchie d'héritage
 
@@ -99,11 +99,11 @@ Pour plus d’informations, consultez [collections et énumérateurs ATL](../../
 
 `CComEnumImpl`
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
-**En-tête:** atlcom. h
+**En-tête:** atlcom.h
 
-##  <a name="ccomenumimpl"></a>  CComEnumImpl::CComEnumImpl
+## <a name="ccomenumimplccomenumimpl"></a><a name="ccomenumimpl"></a>CComEnumImpl::CComEnumImpl
 
 Constructeur.
 
@@ -111,7 +111,7 @@ Constructeur.
 CComEnumImpl();
 ```
 
-##  <a name="dtor"></a>  CComEnumImpl::~CComEnumImpl
+## <a name="ccomenumimplccomenumimpl"></a><a name="dtor"></a>CComEnumImpl::CComEnumImpl
 
 Destructeur.
 
@@ -119,9 +119,9 @@ Destructeur.
 ~CComEnumImpl();
 ```
 
-##  <a name="init"></a>  CComEnumImpl::Init
+## <a name="ccomenumimplinit"></a><a name="init"></a>CComEnumImpl::Init
 
-Vous devez appeler cette méthode avant de passer un pointeur vers l’interface de l’énumérateur à n’importe quel client.
+Vous devez appeler cette méthode avant de passer un pointeur à l’interface d’enumérateur de retour à tous les clients.
 
 ```
 HRESULT Init(
@@ -133,29 +133,29 @@ HRESULT Init(
 
 ### <a name="parameters"></a>Paramètres
 
-*begin*<br/>
-Pointeur vers le premier élément du tableau contenant les éléments à énumérer.
+*Commencer*<br/>
+Un pointeur sur le premier élément de la gamme contenant les éléments à énumérer.
 
-*end*<br/>
-Pointeur vers l’emplacement situé juste après le dernier élément du tableau contenant les éléments à énumérer.
+*Fin*<br/>
+Un pointeur à l’emplacement juste au-delà du dernier élément de la gamme contenant les éléments à énumérer.
 
-*pUnk*<br/>
-dans `IUnknown` Pointeur d’un objet qui doit être gardé actif pendant la durée de vie de l’énumérateur. Transmettez la valeur NULL si aucun objet de ce type n’existe.
+*Punk*<br/>
+[dans] Le `IUnknown` pointeur d’un objet qui doit être maintenu en vie pendant toute la durée de vie de l’énumérateur. Passer NULL si aucun objet de ce genre n’existe.
 
-*flags*<br/>
-Indicateurs spécifiant si l’énumérateur doit prendre possession du tableau ou en faire une copie. Les valeurs possibles sont décrites ci-dessous.
+*Drapeaux*<br/>
+Drapeaux précisant si l’enumérateur doit ou non prendre possession du tableau ou en faire une copie. Les valeurs possibles sont décrites ci-dessous.
 
 ### <a name="return-value"></a>Valeur de retour
 
-Valeur HRESULT standard.
+Une valeur HRESULT standard.
 
 ### <a name="remarks"></a>Notes
 
-N’appelez cette méthode qu’une seule fois: initialisez l’énumérateur, utilisez-le, puis levez-le.
+N’appelez cette méthode qu’une seule fois — initialiser l’énumérateur, l’utiliser, puis la jeter.
 
-Si vous transmettez des pointeurs vers des éléments d’un tableau stocké dans un autre objet (et que vous ne demandez pas à l’énumérateur de copier les données), vous pouvez utiliser le paramètre *punk* pour vous assurer que l’objet et le tableau qu’il contient sont disponibles aussi longtemps que l’énumérateur en a besoin. L’énumérateur contient simplement une référence COM sur l’objet pour rester actif. La référence COM est automatiquement libérée lorsque l’énumérateur est détruit.
+Si vous passez des indications sur des éléments d’un tableau tenu dans un autre objet (et vous ne demandez pas à l’enumérateur de copier les données), vous pouvez utiliser le *paramètre pUnk* pour vous assurer que l’objet et le tableau qu’il détient sont disponibles aussi longtemps que l’enumérateur en a besoin. L’enumérateur détient simplement une référence COM sur l’objet pour le maintenir en vie. La référence COM est automatiquement libérée lorsque l’enumérateur est détruit.
 
-Le paramètre flags vous permet de spécifier comment l’énumérateur doit traiter les éléments de tableau qui lui sont passés. les *indicateurs* peuvent prendre l’une des valeurs de `CComEnumFlags` l’énumération illustrée ci-dessous:
+Le paramètre *des drapeaux* vous permet de spécifier comment l’énumérateur doit traiter les éléments du tableau qui lui sont transmis. *les drapeaux* peuvent prendre l’une des valeurs de l’énumération `CComEnumFlags` indiquée ci-dessous :
 
 ```
 enum CComEnumFlags
@@ -166,18 +166,18 @@ enum CComEnumFlags
    };
 ```
 
-`AtlFlagNoCopy`signifie que la durée de vie du tableau n’est pas contrôlée par l’énumérateur. Dans ce cas, soit le tableau est statique, soit l’objet identifié par *punk* est chargé de libérer le tableau lorsqu’il n’est plus nécessaire.
+`AtlFlagNoCopy`signifie que la durée de vie du tableau n’est pas contrôlée par l’enumérateur. Dans ce cas, soit le tableau sera statique, soit l’objet identifié par *pUnk* sera responsable de la libération du tableau lorsqu’il n’est plus nécessaire.
 
-`AtlFlagTakeOwnership`signifie que la destruction du tableau doit être contrôlée par l’énumérateur. Dans ce cas, le tableau doit avoir été alloué de manière dynamique à l’aide **de New**. L’énumérateur supprime le tableau dans son destructeur. En général, vous pouvez passer NULL pour *punk*, bien que vous puissiez toujours passer un pointeur valide si vous devez être notifié de la destruction de l’énumérateur pour une raison quelconque.
+`AtlFlagTakeOwnership`signifie que la destruction du tableau doit être contrôlée par l’énumérateur. Dans ce cas, le tableau doit avoir été alloué dynamiquement à l’aide **de nouveaux**. L’enumérateur supprimera le tableau dans son destructor. Typiquement, vous passeriez NULL pour *pUnk*, bien que vous puissiez toujours passer un pointeur valide si vous avez besoin d’être informé de la destruction de l’énumérateur pour une raison quelconque.
 
-`AtlFlagCopy`signifie qu’un nouveau tableau doit être créé en copiant le tableau passé à `Init`. La durée de vie du nouveau tableau doit être contrôlée par l’énumérateur. L’énumérateur supprime le tableau dans son destructeur. En général, vous pouvez passer NULL pour *punk*, bien que vous puissiez toujours passer un pointeur valide si vous devez être notifié de la destruction de l’énumérateur pour une raison quelconque.
+`AtlFlagCopy`signifie qu’un nouveau tableau doit être créé `Init`en copiant le tableau passé à . La durée de vie du nouveau tableau doit être contrôlée par l’enumérateur. L’enumérateur supprimera le tableau dans son destructor. Typiquement, vous passeriez NULL pour *pUnk*, bien que vous puissiez toujours passer un pointeur valide si vous avez besoin d’être informé de la destruction de l’énumérateur pour une raison quelconque.
 
 > [!NOTE]
->  Le prototype de cette méthode spécifie que les éléments du tableau sont `T`de type `T` , où a été défini comme paramètre de modèle pour la classe. Il s’agit du même type exposé à l’aide de la méthode d’interface COM [CComEnumImpl:: Next](#next). En revanche, contrairement à [IEnumOnSTLImpl](../../atl/reference/ienumonstlimpl-class.md), cette classe ne prend pas en charge les types de données de stockage et exposés différents. Le type de données des éléments du tableau doit être le même que le type de données exposé par le biais de l’interface COM.
+> Le prototype de cette méthode spécifie `T`les `T` éléments de tableau comme étant de type , où a été défini comme un paramètre de modèle à la classe. C’est le même type qui est exposé au moyen de la méthode d’interface COM [CComEnumImpl::Next](#next). L’implication de ceci est que, contrairement à [IEnumOnSTLImpl](../../atl/reference/ienumonstlimpl-class.md), cette classe ne prend pas en charge différents types de stockage et de données exposées. Le type de données des éléments du tableau doit être le même que le type de données exposé au moyen de l’interface COM.
 
-##  <a name="clone"></a>  CComEnumImpl::Clone
+## <a name="ccomenumimplclone"></a><a name="clone"></a>CComEnumImpl::Clone
 
-Cette méthode fournit l’implémentation de la méthode Clone en créant un objet de `CComEnum`type, en l’initialisant avec le même tableau et itérateur utilisé par l’objet actuel, et en retournant l’interface sur l’objet nouvellement créé.
+Cette méthode fournit la **Clone** mise en œuvre `CComEnum`de la méthode Clone en créant un objet de type, en l’initialisant avec le même tableau et l’itérateur utilisé par l’objet actuel, et en retournant l’interface sur l’objet nouvellement créé.
 
 ```
 STDMETHOD(Clone)(Base** ppEnum);
@@ -186,59 +186,59 @@ STDMETHOD(Clone)(Base** ppEnum);
 ### <a name="parameters"></a>Paramètres
 
 *ppEnum*<br/>
-à Interface d’énumérateur sur un objet nouvellement créé cloné à partir de l’énumérateur actuel.
+[out] L’interface d’enumérateur sur un objet nouvellement créé cloné à partir de l’enumérateur actuel.
 
 ### <a name="return-value"></a>Valeur de retour
 
-Valeur HRESULT standard.
+Une valeur HRESULT standard.
 
 ### <a name="remarks"></a>Notes
 
-Notez que les énumérateurs clonés ne font jamais leur propre copie (ou appropriation) des données utilisées par l’énumérateur d’origine. Si nécessaire, les énumérateurs clonés conservent l’énumérateur d’origine actif (à l’aide d’une référence COM) pour garantir que les données sont disponibles aussi longtemps qu’elles en ont besoin.
+Notez que lesumérateurs clonés ne font jamais leur propre copie (ou prennent possession) des données utilisées par l’enumérateur d’origine. Si nécessaire, les enumérateurs clonés garderont l’enumérateur d’origine en vie (à l’aide d’une référence COM) pour s’assurer que les données sont disponibles aussi longtemps qu’ils en ont besoin.
 
-##  <a name="m_spunk"></a>  CComEnumImpl::m_spUnk
+## <a name="ccomenumimplm_spunk"></a><a name="m_spunk"></a>CComEnumImpl::m_spUnk
 
-Ce pointeur intelligent gère une référence sur l’objet passé à [CComEnumImpl:: init](#init), en veillant à ce qu’il reste actif pendant la durée de vie de l’énumérateur.
+Ce pointeur intelligent maintient une référence sur l’objet passé à [CComEnumImpl::Init](#init), s’assurant qu’il reste en vie pendant la durée de vie de l’énumérateur.
 
 ```
 CComPtr<IUnknown> m_spUnk;
 ```
 
-##  <a name="m_begin"></a>  CComEnumImpl::m_begin
+## <a name="ccomenumimplm_begin"></a><a name="m_begin"></a>CComEnumImpl::m_begin
 
-Pointeur vers l’emplacement situé juste après le dernier élément du tableau contenant les éléments à énumérer.
+Un pointeur à l’emplacement juste au-delà du dernier élément de la gamme contenant les éléments à énumérer.
 
 ```
 T* m_begin;
 ```
 
-##  <a name="m_end"></a>  CComEnumImpl::m_end
+## <a name="ccomenumimplm_end"></a><a name="m_end"></a>CComEnumImpl::m_end
 
-Pointeur vers le premier élément du tableau contenant les éléments à énumérer.
+Un pointeur sur le premier élément de la gamme contenant les éléments à énumérer.
 
 ```
 T* m_end;
 ```
 
-##  <a name="m_iter"></a>  CComEnumImpl::m_iter
+## <a name="ccomenumimplm_iter"></a><a name="m_iter"></a>CComEnumImpl::m_iter
 
-Pointeur vers l’élément actuel du tableau contenant les éléments à énumérer.
+Un pointeur à l’élément actuel de la gamme contenant les éléments à énumérer.
 
 ```
 T* m_iter;
 ```
 
-##  <a name="m_dwflags"></a>  CComEnumImpl::m_dwFlags
+## <a name="ccomenumimplm_dwflags"></a><a name="m_dwflags"></a>CComEnumImpl::m_dwFlags
 
-Indicateurs passés à [CComEnumImpl:: init](#init).
+Les drapeaux sont passés à [CComEnumImpl::Init](#init).
 
 ```
 DWORD m_dwFlags;
 ```
 
-##  <a name="next"></a>  CComEnumImpl::Next
+## <a name="ccomenumimplnext"></a><a name="next"></a>CComEnumImpl::Suivant
 
-Cette méthode fournit l’implémentation de la méthode **suivante** .
+Cette méthode fournit la mise en œuvre de la méthode **Suivant.**
 
 ```
 STDMETHOD(Next)(ULONG celt, T* rgelt, ULONG* pceltFetched);
@@ -247,21 +247,21 @@ STDMETHOD(Next)(ULONG celt, T* rgelt, ULONG* pceltFetched);
 ### <a name="parameters"></a>Paramètres
 
 *celt*<br/>
-dans Nombre d’éléments demandés.
+[dans] Le nombre d’éléments demandés.
 
 *rgelt*<br/>
-à Tableau à remplir avec les éléments.
+[out] Le tableau à remplir avec les éléments.
 
 *pceltFetched*<br/>
-à Nombre d’éléments réellement retournés dans *rgelt*. Cela peut être inférieur à *celt* si moins de *celt* Elements sont restés dans la liste.
+[out] Le nombre d’éléments effectivement retournés dans *rgelt*. Cela peut être inférieur *au celt si* moins *d’éléments de celt* sont restés dans la liste.
 
 ### <a name="return-value"></a>Valeur de retour
 
-Valeur HRESULT standard.
+Une valeur HRESULT standard.
 
-##  <a name="reset"></a>  CComEnumImpl::Reset
+## <a name="ccomenumimplreset"></a><a name="reset"></a>CComEnumImpl::Reset
 
-Cette méthode fournit l’implémentation de la méthode de réinitialisation.
+Cette méthode fournit la mise en œuvre de la méthode **Reset.**
 
 ```
 STDMETHOD(Reset)(void);
@@ -269,11 +269,11 @@ STDMETHOD(Reset)(void);
 
 ### <a name="return-value"></a>Valeur de retour
 
-Valeur HRESULT standard.
+Une valeur HRESULT standard.
 
-##  <a name="skip"></a>  CComEnumImpl::Skip
+## <a name="ccomenumimplskip"></a><a name="skip"></a>CComEnumImpl::Skip
 
-Cette méthode fournit l’implémentation de la méthode **Skip** .
+Cette méthode fournit la mise en œuvre de la méthode **Skip.**
 
 ```
 STDMETHOD(Skip)(ULONG celt);
@@ -282,18 +282,18 @@ STDMETHOD(Skip)(ULONG celt);
 ### <a name="parameters"></a>Paramètres
 
 *celt*<br/>
-dans Nombre d’éléments à ignorer.
+[dans] Le nombre d’éléments à sauter.
 
 ### <a name="return-value"></a>Valeur de retour
 
-Valeur HRESULT standard.
+Une valeur HRESULT standard.
 
 ### <a name="remarks"></a>Notes
 
-Retourne E_INVALIDARG si *celt* est égal à zéro, retourne S_FALSE si moins de *celt* Elements sont retournés; sinon, retourne S_OK.
+Les retours E_INVALIDARG si *le celt* est nul, les retours S_FALSE si moins *d’éléments de celt* sont retournés, les retours S_OK autrement.
 
 ## <a name="see-also"></a>Voir aussi
 
-[IEnumOnSTLImpl, classe](../../atl/reference/ienumonstlimpl-class.md)<br/>
-[CComEnum, classe](../../atl/reference/ccomenum-class.md)<br/>
-[Vue d’ensemble de la classe](../../atl/atl-class-overview.md)
+[Classe IEnumOnSTLImpl](../../atl/reference/ienumonstlimpl-class.md)<br/>
+[Classe CComEnum](../../atl/reference/ccomenum-class.md)<br/>
+[Vue d'ensemble des classes](../../atl/atl-class-overview.md)

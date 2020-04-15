@@ -1,5 +1,5 @@
 ---
-title: 'Procédure : Créer une Application partiellement approuvée (C++ / c++ / CLI)'
+title: 'Comment : Créer une application partiellement fiable (C/CLI)'
 ms.custom: get-started-article
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -10,33 +10,33 @@ helpviewer_keywords:
 - interop [C++], partially trusted applications
 - /clr compiler option [C++], partially trusted applications
 ms.assetid: 4760cd0c-4227-4f23-a7fb-d25b51bf246e
-ms.openlocfilehash: afdfb8ca11753d7def9d7da6f431082b1a90c345
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 9df3a751f4073472b9495425599aaf43878db99a
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62209120"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81364400"
 ---
-# <a name="how-to-create-a-partially-trusted-application-by-removing-dependency-on-the-crt-library-dll"></a>Procédure : Créer une Application partiellement approuvée en supprimant la dépendance de la DLL de la bibliothèque CRT
+# <a name="how-to-create-a-partially-trusted-application-by-removing-dependency-on-the-crt-library-dll"></a>Comment : créer une application partiellement approuvée en supprimant la dépendance de la DLL de la bibliothèque CRT
 
-Cette rubrique explique comment créer une application partiellement approuvée de Common Language Runtime à l’aide de Visual C++ en supprimant la dépendance vis-à-vis de msvcm90.dll.
+Ce sujet traite de la façon de créer une application common Language Runtime partiellement fiable à l’aide de Visual CM en supprimant la dépendance à l’égard de msvcm90.dll.
 
-Une application Visual C++ générée avec **/CLR** ont une dépendance vis-à-vis de msvcm90.dll, qui fait partie de la bibliothèque Runtime C. Lorsque vous souhaitez que votre application à utiliser dans un environnement de confiance partielle, le CLR appliquera certaines règles de sécurité des accès de code sur votre DLL. Par conséquent, il sera nécessaire de supprimer cette dépendance puisque msvcm90.dll contient du code natif et que la stratégie de sécurité d’accès au code ne peut pas être appliquée.
+Une application Visual CMMD construite avec **/clr** aura une dépendance à l’égard de msvcm90.dll, qui fait partie de la bibliothèque C-Runtime. Lorsque vous souhaitez que votre application soit utilisée dans un environnement de confiance partiel, le CLR appliquera certaines règles de sécurité d’accès au code sur votre DLL. Par conséquent, il sera nécessaire de supprimer cette dépendance parce que msvcm90.dll contient du code indigène et la politique de sécurité d’accès au code ne peut pas être appliquée sur elle.
 
-Si votre application n’utilise pas toutes les fonctionnalités de la bibliothèque Runtime C et que vous souhaitez supprimer la dépendance sur cette bibliothèque à partir de votre code, vous devez utiliser le **/NODEFAULTLIB:msvcmrt.lib** option de l’éditeur de liens et créez un lien avec ptrustm.lib ou ptrustmd.lib. Ces bibliothèques contiennent des fichiers objets pour l’initialisation et désinitialisation d’une application, les classes d’exception utilisé par le code d’initialisation et le code de gestion des exceptions managées. Liaison dans une de ces bibliothèques supprimera toute dépendance vis-à-vis de msvcm90.dll.
+Si votre application n’utilise aucune fonctionnalité de la bibliothèque C-Runtime et que vous souhaitez supprimer la dépendance à cette bibliothèque de votre code, vous devrez utiliser l’option **/NODEFAULTLIB:msvcmrt.lib** linker et un lien avec ptrustm.lib ou ptrustmd.lib. Ces bibliothèques contiennent des fichiers d’objets pour l’initialisation et l’uninitialisation d’une application, des classes d’exception utilisées par le code d’initialisation et un code de traitement des exceptions géré. Lier dans l’une de ces bibliothèques éliminera toute dépendance à l’égard de msvcm90.dll.
 
 > [!NOTE]
->  L’ordre de désinitialisation de l’assembly peut-être différer pour les applications qui utilisent les bibliothèques ptrust. Pour les applications normales, les assemblys sont habituellement déchargés dans l’ordre inverse qui ils sont chargés, mais cela n’est pas garanti. Pour les applications de confiance partielle, les assemblys sont habituellement déchargés dans le même ordre qu’ils sont chargés. Cela, en outre, n’est pas garanti.
+> L’ordre d’assemblage de l’uninitialisation peut différer pour les applications qui utilisent les bibliothèques de ptrust. Pour les applications normales, les assemblages sont généralement déchargés dans l’ordre inverse qu’ils sont chargés, mais ce n’est pas garanti. Pour les applications partielles en fiducie, les assemblages sont généralement déchargés dans le même ordre qu’ils sont chargés. Cela, aussi, n’est pas garanti.
 
-### <a name="to-create-a-partially-trusted-mixed-clr-application"></a>Pour créer un niveau de confiance partiel mixte (/ clr) application
+### <a name="to-create-a-partially-trusted-mixed-clr-application"></a>Pour créer une application mixte (/clr) partiellement fiable
 
-1. Pour supprimer la dépendance vis-à-vis de msvcm90.dll, vous devez spécifier à l’éditeur de liens ne pas inclure cette bibliothèque à l’aide de la **/NODEFAULTLIB:msvcmrt.lib** option de l’éditeur de liens. Pour plus d’informations sur la façon de procéder à l’aide de l’environnement de développement Visual Studio ou par programme, consultez [/NODEFAULTLIB (Ignore Libraries)](../build/reference/nodefaultlib-ignore-libraries.md).
+1. Pour supprimer la dépendance à l’égard de msvcm90.dll, vous devez spécifier au linker de ne pas inclure cette bibliothèque en utilisant l’option **/NODEFAULTLIB:msvcmrt.lib** linker. Pour plus d’informations sur la façon de le faire en utilisant l’environnement de développement Visual Studio ou programmatiquement, voir [/NODEFAULTLIB (Ignore Libraries)](../build/reference/nodefaultlib-ignore-libraries.md).
 
-1. Ajoutez une des bibliothèques ptrustm aux dépendances d’entrée de l’éditeur de liens. Utilisez ptrustm.lib si vous générez votre application en mode release. Pour le mode de débogage, utilisez ptrustmd.lib. Pour plus d’informations sur la façon de procéder à l’aide de l’environnement de développement Visual Studio ou par programme, consultez [. Fichiers lib en tant qu’entrée de l’éditeur de liens](../build/reference/dot-lib-files-as-linker-input.md).
+1. Ajoutez l’une des bibliothèques ptrustm aux dépendances d’entrée de liaison. Utilisez ptrustm.lib si vous construisez votre application en mode version. Pour le mode débogé, utilisez ptrustmd.lib. Pour plus d’informations sur la façon de le faire en utilisant l’environnement de développement Visual Studio ou programmatique, voir [. Fichiers Lib comme Linker Input](../build/reference/dot-lib-files-as-linker-input.md).
 
 ## <a name="see-also"></a>Voir aussi
 
 [Assemblys mixtes (natif et managé)](../dotnet/mixed-native-and-managed-assemblies.md)<br/>
-[Initialisation d’assemblys mixtes](../dotnet/initialization-of-mixed-assemblies.md)<br/>
+[Initialisation des assemblées mixtes](../dotnet/initialization-of-mixed-assemblies.md)<br/>
 [Prise en charge de bibliothèque pour les assemblys mixtes](../dotnet/library-support-for-mixed-assemblies.md)<br/>
-[/link (Passer des options à l’Éditeur de liens)](../build/reference/link-pass-options-to-linker.md)
+[/link (Passer des options à l'Éditeur de liens)](../build/reference/link-pass-options-to-linker.md)

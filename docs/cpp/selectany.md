@@ -7,16 +7,16 @@ helpviewer_keywords:
 - __declspec keyword [C++], selectany
 - selectany __declspec keyword
 ms.assetid: 9c353017-5a42-4f50-b741-bd13da1ce84d
-ms.openlocfilehash: 38346e41c1e943e9bfda70668a163c630a0b9599
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: e8ca82900ffd16264aca494950d4793029e55d9c
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80178871"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81365597"
 ---
 # <a name="selectany"></a>selectany
 
-**Section spécifique de Microsoft**
+**Microsoft Spécifique**
 
 Indique au compilateur que l'élément de données global déclaré (variable ou objet) est un COMDAT pick-any (une fonction packagée).
 
@@ -28,16 +28,16 @@ __declspec( selectany ) declarator
 
 ## <a name="remarks"></a>Notes
 
-Au moment d'effectuer le lien, si plusieurs définitions d'un COMDAT s'affichent, l'éditeur de liens en choisit un et ignore le reste. Si l’option de l’éditeur de liens [/OPT : Ref](../build/reference/opt-optimizations.md) (Optimizations) est sélectionnée, l’élimination COMDAT aura lieu pour supprimer tous les éléments de données non référencés dans la sortie de l’éditeur de liens.
+Au moment d'effectuer le lien, si plusieurs définitions d'un COMDAT s'affichent, l'éditeur de liens en choisit un et ignore le reste. Si l’option de liaison [/OPT:REF](../build/reference/opt-optimizations.md) (Optimizations) est sélectionnée, l’élimination COMDAT se produira pour supprimer tous les éléments de données non réfrés dans la sortie du linker.
 
 Les constructeurs et l'assignation par fonction globale ou méthodes statiques dans la déclaration ne créent pas de référence et n'empêchent pas la suppression /OPT:REF. Les effets secondaires d'un tel code ne doivent pas créer de dépendances quand il n'existe aucune autre référence à des données.
 
-Pour les objets globaux initialisés dynamiquement, **selectany** supprimera également le code d’initialisation d’un objet non référencé.
+Pour les objets globals dynamiquement parasés, **selectany** jettera également le code d’initialisation d’un objet non référé.
 
-Un élément de données global ne peut généralement être initialisé qu'une seule fois dans un projet EXE ou DLL. l' **selectany** peut être utilisé pour initialiser des données globales définies par des en-têtes, lorsque le même en-tête apparaît dans plusieurs fichiers sources. **selectany** est disponible dans les compilateurs C C++ et.
+Un élément de données global ne peut généralement être initialisé qu'une seule fois dans un projet EXE ou DLL. **selectany** peut être utilisé pour initialiser les données globales définies par des en-têtes, lorsque le même en-tête apparaît dans plus d’un fichier source. **selectany** est disponible dans les compilateurs C et CMD.
 
 > [!NOTE]
->  **selectany** ne peut être appliqué qu’à l’initialisation réelle des éléments de données globales qui sont visibles de l’extérieur.
+> **selectany** ne peut être appliqué qu’à la initialisation réelle des éléments de données globaux qui sont visibles à l’extérieur.
 
 ## <a name="example"></a>Exemple
 
@@ -75,7 +75,7 @@ __declspec(selectany) X x(1);
 
 ## <a name="example"></a>Exemple
 
-Ce code montre comment utiliser l’attribut **selectany** pour garantir le repli des données COMDAT lorsque vous utilisez également l’option de l’éditeur de liens [/OPT : ICF](../build/reference/opt-optimizations.md) . Notez que les données doivent être marquées avec **selectany** et placées dans une section **const** (ReadOnly). Vous devez spécifier explicitement la section en lecture seule.
+Ce code montre comment utiliser **l’attribut selectany** pour assurer le pliage des données COMDAT lorsque vous utilisez également l’option de liaison [/OPT:ICF.](../build/reference/opt-optimizations.md) Notez que les données doivent être marquées avec **selectany** et placées dans une section **const** (lire). Vous devez spécifier explicitement la section en lecture seule.
 
 ```cpp
 // selectany2.cpp
@@ -88,7 +88,7 @@ int main() {
 }
 ```
 
-**Fin de la section spécifique de Microsoft**
+**END Microsoft Spécifique**
 
 ## <a name="see-also"></a>Voir aussi
 

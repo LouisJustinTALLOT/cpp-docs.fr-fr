@@ -1,5 +1,5 @@
 ---
-title: CHandle, classe
+title: Classe CHandle
 ms.date: 07/09/2019
 f1_keywords:
 - CHandle
@@ -12,16 +12,16 @@ f1_keywords:
 helpviewer_keywords:
 - CHandle class
 ms.assetid: 883e9db5-40ec-4e29-9c74-4dd2ddd2e35d
-ms.openlocfilehash: 86d2cba6c3ee2e914d96ae2a09b642d556d46027
-ms.sourcegitcommit: 07b34ca1c1fecced9fadc95de15dc5fee4f31e5a
+ms.openlocfilehash: 7c72ded75298ed69efe73c1a81abf404545ea9b9
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/09/2019
-ms.locfileid: "67693408"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81326922"
 ---
-# <a name="chandle-class"></a>CHandle, classe
+# <a name="chandle-class"></a>Classe CHandle
 
-Cette classe fournit des méthodes pour la création et utilisation d’un objet de handle.
+Cette classe fournit des méthodes pour créer et utiliser un objet de poignée.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -36,43 +36,43 @@ class CHandle
 |Nom|Description|
 |----------|-----------------|
 |[CHandle::CHandle](#chandle)|Constructeur.|
-|[CHandle::~CHandle](#dtor)|Destructeur.|
+|[CHandle: : CHandle](#dtor)|Destructeur.|
 
 ### <a name="public-methods"></a>M&#233;thodes publiques
 
 |Nom|Description|
 |----------|-----------------|
-|[CHandle::Attach](#attach)|Appelez cette méthode pour attacher le `CHandle` objet vers un handle existant.|
-|[CHandle::Close](#close)|Appelez cette méthode pour fermer un `CHandle` objet.|
-|[CHandle::Detach](#detach)|Appelez cette méthode pour détacher un handle à partir d’un `CHandle` objet.|
+|[CHandle::Attach](#attach)|Appelez cette méthode `CHandle` pour attacher l’objet à une poignée existante.|
+|[CHandle::Fermer](#close)|Appelez cette méthode `CHandle` pour fermer un objet.|
+|[CHandle::Detach](#detach)|Appelez cette méthode pour détacher `CHandle` une poignée d’un objet.|
 
 ### <a name="public-operators"></a>Op&#233;rateurs publics
 
 |Nom|Description|
 |----------|-----------------|
-|[CHandle::operator HANDLE](#operator_handle)|Retourne la valeur du handle stockée.|
-|[CHandle::operator =](#operator_eq)|Opérateur d'assignation.|
+|[CHandle::opérateur HANDLE](#operator_handle)|Retourne la valeur de la poignée stockée.|
+|[CHandle::opérateur](#operator_eq)|Opérateur d'assignation.|
 
 ### <a name="public-data-members"></a>Membres de données publics
 
 |Nom|Description|
 |----------|-----------------|
-|[CHandle::m_h](#m_h)|La variable de membre qui stocke le handle.|
+|[CHandle::m_h](#m_h)|La variable de membre qui stocke la poignée.|
 
 ## <a name="remarks"></a>Notes
 
-Un `CHandle` objet peut être utilisé chaque fois qu’un handle est nécessaire : la principale différence est que le `CHandle` objet sera automatiquement supprimé.
+Un `CHandle` objet peut être utilisé chaque fois qu’une `CHandle` poignée est nécessaire : la principale différence est que l’objet sera automatiquement supprimé.
 
 > [!NOTE]
->  Certaines fonctions d’API utilise NULL comme un handle non valide ou vide, tandis que d’autres utilisent INVALID_HANDLE_VALUE. `CHandle` utilise uniquement NULL et va traite INVALID_HANDLE_VALUE comme un handle réel. Si vous appelez une API qui peut retourner INVALID_HANDLE_VALUE, vous devez rechercher cette valeur avant d’appeler [CHandle::Attach](#attach) ou en le passant à la `CHandle` constructeur et passer à la place la valeur NULL.
+> Certaines fonctions API utiliseront NULL comme poignée vide ou invalide, tandis que d’autres utiliseront INVALID_HANDLE_VALUE. `CHandle`utilise uniquement NULL et traitera INVALID_HANDLE_VALUE comme une vraie poignée. Si vous appelez un API qui peut retourner INVALID_HANDLE_VALUE, vous devriez vérifier cette valeur avant `CHandle` d’appeler [CHandle::Attach](#attach) ou le transmettre au constructeur, et plutôt passer NULL.
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
-**En-tête :** atlbase.h
+**En-tête:** atlbase.h
 
-##  <a name="attach"></a>  CHandle::Attach
+## <a name="chandleattach"></a><a name="attach"></a>CHandle::Attach
 
-Appelez cette méthode pour attacher le `CHandle` objet vers un handle existant.
+Appelez cette méthode `CHandle` pour attacher l’objet à une poignée existante.
 
 ```
 void Attach(HANDLE h) throw();
@@ -81,13 +81,13 @@ void Attach(HANDLE h) throw();
 ### <a name="parameters"></a>Paramètres
 
 *h*<br/>
-`CHandle` prend possession du handle *h*.
+`CHandle`prendra possession de la poignée *h*.
 
 ### <a name="remarks"></a>Notes
 
-Assigne le `CHandle` de l’objet à la *h* handle, puis appelle **h.Detach()** . Dans les versions débogue une ATLASSERT ; sera déclenchée si *h* a la valeur NULL. Aucune autre vérification quant à la validité de la poignée est effectuée.
+Assigne `CHandle` l’objet à la poignée *h,* puis appelle **h.Detach()**. Dans les constructions de débogaches, un ATLASSERT sera soulevé si *h* est NULL. Aucune autre vérification quant à la validité de la poignée n’est faite.
 
-##  <a name="chandle"></a>  CHandle::CHandle
+## <a name="chandlechandle"></a><a name="chandle"></a>CHandle::CHandle
 
 Constructeur.
 
@@ -100,13 +100,13 @@ explicit CHandle(HANDLE h) throw();
 ### <a name="parameters"></a>Paramètres
 
 *h*<br/>
-Un handle existant ou `CHandle`.
+Une poignée `CHandle`existante ou .
 
 ### <a name="remarks"></a>Notes
 
-Crée un `CHandle` de l’objet, si vous le souhaitez à l’aide d’un handle existant ou `CHandle` objet.
+Crée un `CHandle` nouvel objet, en option `CHandle` à l’aide d’une poignée ou d’un objet existant.
 
-##  <a name="dtor"></a>  CHandle::~CHandle
+## <a name="chandlechandle"></a><a name="dtor"></a>CHandle: : CHandle
 
 Destructeur.
 
@@ -116,11 +116,11 @@ Destructeur.
 
 ### <a name="remarks"></a>Notes
 
-Libère le `CHandle` objet en appelant [CHandle::Close](#close).
+Libère l’objet `CHandle` en appelant [CHandle::Close](#close).
 
-##  <a name="close"></a>  CHandle::Close
+## <a name="chandleclose"></a><a name="close"></a>CHandle::Fermer
 
-Appelez cette méthode pour fermer un `CHandle` objet.
+Appelez cette méthode `CHandle` pour fermer un objet.
 
 ```
 void Close() throw();
@@ -128,11 +128,11 @@ void Close() throw();
 
 ### <a name="remarks"></a>Notes
 
-Ferme le handle d’objet ouvert. Si le handle est NULL, ce qui sera le cas si `Close` a déjà été appelée, un ATLASSERT ; sera déclenché dans les versions debug.
+Ferme une poignée d’objet ouvert. Si la poignée est NULL, ce `Close` qui sera le cas si elle a déjà été appelée, un ATLASSERT sera soulevé dans les constructions de débogé.
 
-##  <a name="detach"></a>  CHandle::Detach
+## <a name="chandledetach"></a><a name="detach"></a>CHandle::Detach
 
-Appelez cette méthode pour détacher un handle à partir d’un `CHandle` objet.
+Appelez cette méthode pour détacher `CHandle` une poignée d’un objet.
 
 ```
 HANDLE Detach() throw();
@@ -140,23 +140,23 @@ HANDLE Detach() throw();
 
 ### <a name="return-value"></a>Valeur de retour
 
-Retourne le handle en cours de détachement.
+Retourne la poignée étant détachée.
 
 ### <a name="remarks"></a>Notes
 
 Libère la propriété de la poignée.
 
-##  <a name="m_h"></a>  CHandle::m_h
+## <a name="chandlem_h"></a><a name="m_h"></a>CHandle::m_h
 
-La variable de membre qui stocke le handle.
+La variable de membre qui stocke la poignée.
 
 ```
 HANDLE m_h;
 ```
 
-##  <a name="operator_eq"></a>  CHandle::operator =
+## <a name="chandleoperator-"></a><a name="operator_eq"></a>CHandle::opérateur
 
-L’opérateur d’assignation.
+L’opérateur de l’affectation.
 
 ```
 CHandle& operator=(CHandle& h) throw();
@@ -165,19 +165,19 @@ CHandle& operator=(CHandle& h) throw();
 ### <a name="parameters"></a>Paramètres
 
 *h*<br/>
-`CHandle` prend possession du handle *h*.
+`CHandle`prendra possession de la poignée *h*.
 
 ### <a name="return-value"></a>Valeur de retour
 
-Retourne une référence à la nouvelle `CHandle` objet.
+Renvoie une référence `CHandle` au nouvel objet.
 
 ### <a name="remarks"></a>Notes
 
-Si le `CHandle` objet contient actuellement un handle, il va être fermée. Le `CHandle` de l’objet passé dans aura sa référence de la poignée de la valeur NULL. Cela garantit que deux `CHandle` objets ne contiendra jamais le même handle actif.
+Si `CHandle` l’objet contient actuellement une poignée, il sera fermé. L’objet `CHandle` en cours d’adoption aura son ensemble de référence de poignée à NULL. Cela garantit que `CHandle` deux objets ne contiendra jamais la même poignée active.
 
-##  <a name="operator_handle"></a>  CHandle::operator HANDLE
+## <a name="chandleoperator-handle"></a><a name="operator_handle"></a>CHandle::opérateur HANDLE
 
-Retourne la valeur du handle stockée.
+Retourne la valeur de la poignée stockée.
 
 ```
 operator HANDLE() const throw();
@@ -189,4 +189,4 @@ Retourne la valeur stockée dans [CHandle::m_h](#m_h).
 
 ## <a name="see-also"></a>Voir aussi
 
-[Vue d’ensemble de la classe](../../atl/atl-class-overview.md)
+[Vue d'ensemble des classes](../../atl/atl-class-overview.md)

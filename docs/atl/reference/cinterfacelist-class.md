@@ -1,5 +1,5 @@
 ---
-title: Cinterfacelist, classe
+title: Classe CInterfaceList
 ms.date: 11/04/2016
 f1_keywords:
 - CInterfaceList
@@ -8,14 +8,14 @@ f1_keywords:
 helpviewer_keywords:
 - CInterfaceList class
 ms.assetid: 2077764d-25e5-4b3d-96c8-08a287bbcd25
-ms.openlocfilehash: e740d891e279bb29eeef898de52698dc3f04fc67
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 0a7fd781c63e4ea084cf078e49fc9efb9cfa2d85
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62258635"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81326789"
 ---
-# <a name="cinterfacelist-class"></a>Cinterfacelist, classe
+# <a name="cinterfacelist-class"></a>Classe CInterfaceList
 
 Cette classe fournit des méthodes utiles lors de la construction d’une liste de pointeurs d’interface COM.
 
@@ -30,11 +30,11 @@ class CInterfaceList
 
 #### <a name="parameters"></a>Paramètres
 
-*I*<br/>
-Une interface COM qui spécifie le type de pointeur à stocker.
+*Ⅰ*<br/>
+Une interface COM spécifiant le type de pointeur à stocker.
 
 *piid*<br/>
-Un pointeur vers l’IID de *je*.
+Un pointeur à l’IID de *I*.
 
 ## <a name="members"></a>Membres
 
@@ -46,9 +46,9 @@ Un pointeur vers l’IID de *je*.
 
 ## <a name="remarks"></a>Notes
 
-Cette classe fournit un constructeur et les méthodes dérivées pour la création d’une liste de pointeurs d’interface COM. Utilisez [CInterfaceArray](../../atl/reference/cinterfacearray-class.md) lorsqu’un tableau est requis.
+Cette classe fournit un constructeur et des méthodes dérivées pour créer une liste de pointeurs d’interface COM. Utilisez [CInterfaceArray](../../atl/reference/cinterfacearray-class.md) lorsqu’un tableau est nécessaire.
 
-Pour plus d’informations, consultez [ATL, Classes de Collection](../../atl/atl-collection-classes.md).
+Pour plus d’informations, voir [cours de collecte ATL](../../atl/atl-collection-classes.md).
 
 ## <a name="inheritance-hierarchy"></a>Hiérarchie d'héritage
 
@@ -56,11 +56,11 @@ Pour plus d’informations, consultez [ATL, Classes de Collection](../../atl/atl
 
 `CInterfaceList`
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
-**En-tête :** atlcoll.h
+**En-tête:** atlcoll.h
 
-##  <a name="cinterfacelist"></a>  CInterfaceList::CInterfaceList
+## <a name="cinterfacelistcinterfacelist"></a><a name="cinterfacelist"></a>CInterfaceList::CInterfaceList
 
 Le constructeur de la liste d’interfaces.
 
@@ -70,16 +70,16 @@ CInterfaceList(UINT nBlockSize = 10) throw();
 
 ### <a name="parameters"></a>Paramètres
 
-*nBlockSize*<br/>
-La taille de bloc, avec une valeur par défaut de 10.
+*nBlockSize (en)*<br/>
+La taille du bloc, avec un défaut de 10.
 
 ### <a name="remarks"></a>Notes
 
-La taille de bloc est une mesure de la quantité de mémoire allouée lorsqu’un nouvel élément est requis. Tailles de bloc supérieures réduisent les appels aux routines d’allocation de mémoire, mais utilisent davantage de ressources.
+La taille du bloc est une mesure de la quantité de mémoire allouée lorsqu’un nouvel élément est nécessaire. De plus grandes tailles de blocs réduisent les appels aux routines d’allocation de mémoire, mais utilisent plus de ressources.
 
 ## <a name="see-also"></a>Voir aussi
 
-[CAtlList, classe](../../atl/reference/catllist-class.md)<br/>
-[CComQIPtr, classe](../../atl/reference/ccomqiptr-class.md)<br/>
-[CComQIPtrElementTraits, classe](../../atl/reference/ccomqiptrelementtraits-class.md)<br/>
-[Vue d’ensemble de la classe](../../atl/atl-class-overview.md)
+[Classe CAtlList](../../atl/reference/catllist-class.md)<br/>
+[Classe CComQIPtr](../../atl/reference/ccomqiptr-class.md)<br/>
+[Classe CComQIPtrElraits](../../atl/reference/ccomqiptrelementtraits-class.md)<br/>
+[Vue d'ensemble des classes](../../atl/atl-class-overview.md)

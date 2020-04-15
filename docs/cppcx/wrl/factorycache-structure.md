@@ -11,16 +11,16 @@ helpviewer_keywords:
 - Microsoft::WRL::Details::FactoryCache::cookie data member
 - Microsoft::WRL::Details::FactoryCache::factory data member
 ms.assetid: 624544e6-0989-47f6-a3e9-edb60e1ee6d4
-ms.openlocfilehash: 7196363567dffa43844bbbd1de76934a317302d1
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 507d35179b9fa86399e56b18171800f41eaf1f10
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62398496"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81371483"
 ---
 # <a name="factorycache-structure"></a>FactoryCache (structure)
 
-Prend en charge l’infrastructure de la bibliothèque de modèles Windows Runtime C++ et n’est pas destinée à être utilisée directement depuis votre code.
+Prend en charge l’infrastructure windows Runtime CMD Template Library et n’est pas destiné à être utilisé directement à partir de votre code.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -30,7 +30,7 @@ struct FactoryCache;
 
 ## <a name="remarks"></a>Notes
 
-Contient l’emplacement d’une fabrique de classe et une valeur qui identifie un inscrits wrt ou l’objet de classe COM.
+Contient l’emplacement d’une usine de classe et une valeur qui identifie un wrt enregistré ou un objet de classe COM.
 
 ## <a name="members"></a>Membres
 
@@ -38,22 +38,22 @@ Contient l’emplacement d’une fabrique de classe et une valeur qui identifie 
 
 Nom                              | Description
 --------------------------------- | ------------------------------------------------------------------------------------------------------------------------------
-[FactoryCache::cookie](#cookie)   | Contient une valeur qui identifie un objet de classe Windows Runtime ou COM inscrit et est utilisée ultérieurement pour annuler l’inscription de l’objet.
-[FactoryCache::factory](#factory) | Pointe vers une fabrique de classe Windows Runtime ou COM.
+[FactoryCache::cookie](#cookie)   | Contient une valeur qui identifie un objet enregistré de classe Windows Runtime ou COM, et est plus tard utilisé pour déenregistrer l’objet.
+[FactoryCache::usine](#factory) | Points vers une usine windows Runtime ou com.
 
 ## <a name="inheritance-hierarchy"></a>Hiérarchie d'héritage
 
 `FactoryCache`
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
-**En-tête :** module.h
+**En-tête:** module.h
 
-**Espace de noms :** Microsoft::WRL::Details
+**Espace nom:** Microsoft::WRL::Details
 
-## <a name="cookie"></a>FactoryCache::cookie
+## <a name="factorycachecookie"></a><a name="cookie"></a>FactoryCache::cookie
 
-Prend en charge l’infrastructure de la bibliothèque de modèles Windows Runtime C++ et n’est pas destinée à être utilisée directement depuis votre code.
+Prend en charge l’infrastructure windows Runtime CMD Template Library et n’est pas destiné à être utilisé directement à partir de votre code.
 
 ```cpp
 union {
@@ -64,11 +64,11 @@ union {
 
 ### <a name="remarks"></a>Notes
 
-Contient une valeur qui identifie un objet de classe Windows Runtime ou COM inscrit et est utilisée ultérieurement pour annuler l’inscription de l’objet.
+Contient une valeur qui identifie un objet enregistré de classe Windows Runtime ou COM, et est plus tard utilisé pour déenregistrer l’objet.
 
-## <a name="factory"></a>FactoryCache::factory
+## <a name="factorycachefactory"></a><a name="factory"></a>FactoryCache::usine
 
-Prend en charge l’infrastructure de la bibliothèque de modèles Windows Runtime C++ et n’est pas destinée à être utilisée directement depuis votre code.
+Prend en charge l’infrastructure windows Runtime CMD Template Library et n’est pas destiné à être utilisé directement à partir de votre code.
 
 ```cpp
 IUnknown* factory;
@@ -76,4 +76,4 @@ IUnknown* factory;
 
 ### <a name="remarks"></a>Notes
 
-Pointe vers une fabrique de classe Windows Runtime ou COM.
+Points vers une usine windows Runtime ou com.

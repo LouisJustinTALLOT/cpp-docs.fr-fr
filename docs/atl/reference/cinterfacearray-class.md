@@ -1,5 +1,5 @@
 ---
-title: Cinterfacearray, classe
+title: Classe CInterfaceArray
 ms.date: 11/04/2016
 f1_keywords:
 - CInterfaceArray
@@ -8,14 +8,14 @@ f1_keywords:
 helpviewer_keywords:
 - CInterfaceArray class
 ms.assetid: 1f29cf66-a086-4a7b-b6a8-64f73da39f79
-ms.openlocfilehash: 2e8714bf40e99a1014d7cd6de82cddb13cbbb9cf
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: e6efe31989b06f0977ecff156a8f64053dc64ad1
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62258869"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81326797"
 ---
-# <a name="cinterfacearray-class"></a>Cinterfacearray, classe
+# <a name="cinterfacearray-class"></a>Classe CInterfaceArray
 
 Cette classe fournit des méthodes utiles lors de la construction d’un tableau de pointeurs d’interface COM.
 
@@ -30,11 +30,11 @@ class CInterfaceArray :
 
 #### <a name="parameters"></a>Paramètres
 
-*I*<br/>
-Une interface COM qui spécifie le type de pointeur à stocker.
+*Ⅰ*<br/>
+Une interface COM spécifiant le type de pointeur à stocker.
 
 *piid*<br/>
-Un pointeur vers l’IID de *je*.
+Un pointeur à l’IID de *I*.
 
 ## <a name="members"></a>Membres
 
@@ -42,13 +42,13 @@ Un pointeur vers l’IID de *je*.
 
 |Nom|Description|
 |----------|-----------------|
-|[CInterfaceArray::CInterfaceArray](#cinterfacearray)|Le constructeur pour le tableau d’interfaces.|
+|[CInterfaceArray::CInterfaceArray](#cinterfacearray)|Le constructeur pour le tableau d’interface.|
 
 ## <a name="remarks"></a>Notes
 
-Cette classe fournit un constructeur et les méthodes dérivées pour la création d’un tableau de pointeurs d’interface COM. Utilisez [CInterfaceList](../../atl/reference/cinterfacelist-class.md) quand une liste est requise.
+Cette classe fournit un constructeur et des méthodes dérivées pour créer un tableau de pointeurs d’interface COM. Utilisez [CInterfaceList](../../atl/reference/cinterfacelist-class.md) lorsqu’une liste est requise.
 
-Pour plus d’informations, consultez [ATL, Classes de Collection](../../atl/atl-collection-classes.md).
+Pour plus d’informations, voir [cours de collecte ATL](../../atl/atl-collection-classes.md).
 
 ## <a name="inheritance-hierarchy"></a>Hiérarchie d'héritage
 
@@ -56,11 +56,11 @@ Pour plus d’informations, consultez [ATL, Classes de Collection](../../atl/atl
 
 `CInterfaceArray`
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
-**En-tête :** atlcoll.h
+**En-tête:** atlcoll.h
 
-##  <a name="cinterfacearray"></a>  CInterfaceArray::CInterfaceArray
+## <a name="cinterfacearraycinterfacearray"></a><a name="cinterfacearray"></a>CInterfaceArray::CInterfaceArray
 
 Constructeur.
 
@@ -74,7 +74,7 @@ Initialise le tableau de pointeurs intelligents.
 
 ## <a name="see-also"></a>Voir aussi
 
-[CAtlArray, classe](../../atl/reference/catlarray-class.md)<br/>
-[CComQIPtr, classe](../../atl/reference/ccomqiptr-class.md)<br/>
-[CComQIPtrElementTraits, classe](../../atl/reference/ccomqiptrelementtraits-class.md)<br/>
-[Vue d’ensemble de la classe](../../atl/atl-class-overview.md)
+[Classe CAtlArray](../../atl/reference/catlarray-class.md)<br/>
+[Classe CComQIPtr](../../atl/reference/ccomqiptr-class.md)<br/>
+[Classe CComQIPtrElraits](../../atl/reference/ccomqiptrelementtraits-class.md)<br/>
+[Vue d'ensemble des classes](../../atl/atl-class-overview.md)

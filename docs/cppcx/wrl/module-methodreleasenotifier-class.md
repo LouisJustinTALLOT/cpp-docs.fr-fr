@@ -15,16 +15,16 @@ helpviewer_keywords:
 - Microsoft::WRL::Module::MethodReleaseNotifier::MethodReleaseNotifier, constructor
 - Microsoft::WRL::Module::MethodReleaseNotifier::object_ data member
 ms.assetid: 5c2902be-964b-488f-9f1c-adf504995cbc
-ms.openlocfilehash: 41b7cfb2601cd2023e895dbcf1a56e85fe65b35d
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: c641f150b6f029facffa62f7b47c7da32138735e
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62325063"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81371289"
 ---
 # <a name="modulemethodreleasenotifier-class"></a>Module::MethodReleaseNotifier, classe
 
-Appelle un gestionnaire d’événements lorsque le dernier objet du module en cours est relâché. Le Gestionnaire d’événements est spécifié par un objet et son membre pointeur-à la méthode.
+Invoque un gestionnaire d’événements lorsque le dernier objet du module actuel est libéré. Le gestionnaire d’événements est spécifié par un objet et son membre pointeur à une méthode.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -36,7 +36,7 @@ class MethodReleaseNotifier : public ReleaseNotifier;
 ### <a name="parameters"></a>Paramètres
 
 *T*<br/>
-Le type de l’objet dont la fonction membre est le Gestionnaire d’événements.
+Le type d’objet dont la fonction de membre est le gestionnaire d’événements.
 
 ## <a name="members"></a>Membres
 
@@ -50,14 +50,14 @@ Nom                                                                             
 
 Nom                                                                   | Description
 ---------------------------------------------------------------------- | -------------------------------------------------------------------------------------------
-[Module::MethodReleaseNotifier :: Invoke](#methodreleasenotifier-invoke) | Appelle le Gestionnaire d’événements associé actuel `Module::MethodReleaseNotifier` objet.
+[Module::MethodReleaseNotifier::Invoke](#methodreleasenotifier-invoke) | Appelle le gestionnaire d’événements associé à l’objet actuel. `Module::MethodReleaseNotifier`
 
 ### <a name="protected-data-members"></a>Membres de données protégés
 
 Nom                                                                    | Description
 ----------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------
-[Module::MethodReleaseNotifier::method_](#methodreleasenotifier-method) | Contient un pointeur vers le Gestionnaire d’événements actuel `Module::MethodReleaseNotifier` objet.
-[Module::MethodReleaseNotifier::object_](#methodreleasenotifier-object) | Contient un pointeur vers l’objet dont la fonction membre est le Gestionnaire d’événements actuel `Module::MethodReleaseNotifier` objet.
+[Module::MethodReleaseNotifier::method_](#methodreleasenotifier-method) | Tient un pointeur au gestionnaire `Module::MethodReleaseNotifier` d’événements pour l’objet actuel.
+[Module::MethodReleaseNotifier::object_](#methodreleasenotifier-object) | Tient un pointeur à l’objet dont la `Module::MethodReleaseNotifier` fonction de membre est le gestionnaire d’événement pour l’objet actuel.
 
 ## <a name="inheritance-hierarchy"></a>Hiérarchie d'héritage
 
@@ -65,29 +65,29 @@ Nom                                                                    | Descrip
 
 `MethodReleaseNotifier`
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
-**En-tête :** module.h
+**En-tête:** module.h
 
-**Espace de noms :** Microsoft::wrl
+**Espace de noms :** Microsoft::WRL
 
-## <a name="methodreleasenotifier-invoke"></a>Module::MethodReleaseNotifier :: Invoke
+## <a name="modulemethodreleasenotifierinvoke"></a><a name="methodreleasenotifier-invoke"></a>Module::MethodReleaseNotifier::Invoke
 
-Appelle le Gestionnaire d’événements associé actuel `Module::MethodReleaseNotifier` objet.
+Appelle le gestionnaire d’événements associé à l’objet actuel. `Module::MethodReleaseNotifier`
 
 ```cpp
 void Invoke();
 ```
 
-## <a name="methodreleasenotifier-method"></a>Module::MethodReleaseNotifier::method_
+## <a name="modulemethodreleasenotifiermethod_"></a><a name="methodreleasenotifier-method"></a>Module::MethodReleaseNotifier::method_
 
-Contient un pointeur vers le Gestionnaire d’événements actuel `Module::MethodReleaseNotifier` objet.
+Tient un pointeur au gestionnaire `Module::MethodReleaseNotifier` d’événements pour l’objet actuel.
 
 ```cpp
 void (T::* method_)();
 ```
 
-## <a name="methodreleasenotifier-methodreleasenotifier"></a>Module::MethodReleaseNotifier::MethodReleaseNotifier
+## <a name="modulemethodreleasenotifiermethodreleasenotifier"></a><a name="methodreleasenotifier-methodreleasenotifier"></a>Module::MethodReleaseNotifier::MethodReleaseNotifier
 
 Initialise une nouvelle instance de la classe `Module::MethodReleaseNotifier`.
 
@@ -102,18 +102,18 @@ MethodReleaseNotifier(
 
 ### <a name="parameters"></a>Paramètres
 
-*object*<br/>
-Objet dont la fonction membre est un gestionnaire d’événements.
+*Objet*<br/>
+Un objet dont la fonction de membre est un gestionnaire d’événements.
 
-*method*<br/>
-La fonction membre de paramètre *objet* qui est le Gestionnaire d’événements.
+*Méthode*<br/>
+Fonction membre de *l’objet* de paramètre qui est le gestionnaire d’événement.
 
-*release*<br/>
-Spécifiez `true` pour activer l’appel sous-jacent [Module :: ReleaseNotifier::Release()](module-releasenotifier-class.md#releasenotifier-release) méthode ; sinon, spécifiez `false`.
+*Libération*<br/>
+Spécifier pour activer l’appel du [module sous-jacent:ReleaseNotifier::Release()](module-releasenotifier-class.md#releasenotifier-release) `true` méthode; autrement, `false`spécifier .
 
-## <a name="methodreleasenotifier-object"></a>Module::MethodReleaseNotifier::object_
+## <a name="modulemethodreleasenotifierobject_"></a><a name="methodreleasenotifier-object"></a>Module::MethodReleaseNotifier::object_
 
-Contient un pointeur vers l’objet dont la fonction membre est le Gestionnaire d’événements actuel `Module::MethodReleaseNotifier` objet.
+Tient un pointeur à l’objet dont la `Module::MethodReleaseNotifier` fonction de membre est le gestionnaire d’événement pour l’objet actuel.
 
 ```cpp
 T* object_;

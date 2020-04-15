@@ -1,5 +1,5 @@
 ---
-title: 'TN025 : CRÉATION Document, vue et la création de Frame'
+title: 'TN025 : création de document, vue et frame'
 ms.date: 11/04/2016
 f1_keywords:
 - vc.creation
@@ -7,17 +7,17 @@ helpviewer_keywords:
 - documents [MFC], view and frame creation
 - TN025
 ms.assetid: 09254d72-6e1d-43db-80e9-693887dbeda2
-ms.openlocfilehash: 4958e7c4ca2c3cf9eed6420d72d0399fa112098d
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 2fdabdcb1a87d4a5661348588d49303290c966ce
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62305994"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81370369"
 ---
-# <a name="tn025-document-view-and-frame-creation"></a>TN025 : CRÉATION Document, vue et la création de Frame
+# <a name="tn025-document-view-and-frame-creation"></a>TN025 : création de document, vue et frame
 
 > [!NOTE]
->  La note technique suivante n'a pas été mise à jour depuis son inclusion initiale dans la documentation en ligne. Par conséquent, certaines procédures et rubriques peuvent être obsolètes ou incorrectes. Pour obtenir les informations les plus récentes, il est recommandé de rechercher l'objet qui vous intéresse dans l'index de la documentation en ligne.
+> La note technique suivante n'a pas été mise à jour depuis son inclusion initiale dans la documentation en ligne. Par conséquent, certaines procédures et rubriques peuvent être obsolètes ou incorrectes. Pour obtenir les informations les plus récentes, il est recommandé de rechercher l'objet qui vous intéresse dans l'index de la documentation en ligne.
 
 Cette note décrit les problèmes de conception et de propriété liés aux objets WinApp, objets DocTemplate, documents, frames et vues.
 
@@ -25,7 +25,7 @@ Cette note décrit les problèmes de conception et de propriété liés aux obje
 
 Le système contient un objet `CWinApp`.
 
-Il est statiquement construit et initialisé par l'implémentation interne de le framework de `WinMain`. Vous devez dériver de `CWinApp` faire quelque chose d’utile (exception : DLL d’extension MFC ne doivent pas avoir un `CWinApp` instance — s’effectue dans `DllMain` à la place).
+Il est statiquement construit et initialisé par l'implémentation interne de le framework de `WinMain`. Vous devez `CWinApp` dériver de faire quelque chose d’utile (exception: MFC extension DLLs ne devrait pas avoir un `CWinApp` cas - la initialisation est faite à `DllMain` la place).
 
 L'objet `CWinApp` possède une liste de modèles de document (`CPtrList`). Il existe un ou plusieurs modèles de document par application. Les modèles de documents (DocTemplates) sont généralement chargés à partir du fichier de ressources (autrement dit, un tableau de chaînes) dans `CWinApp::InitInstance`.
 
@@ -35,13 +35,13 @@ pTemplate = new CDocTemplate(IDR_MYDOCUMENT, ...);
 AddDocTemplate(pTemplate);
 ```
 
-L'objet `CWinApp` possède toutes les fenêtres frame dans l'application. La fenêtre frame principale de l’application doit être stockée dans `CWinApp::m_pMainWnd`; vous définissez généralement *m_pMainWnd* dans le `InitInstance` implémentation si vous n’avez pas laissez AppWizard faire pour vous. Pour l'interface monodocument (SDI), il s'agit d'un `CFrameWnd` qui fait office de fenêtre frame d'application principale et de fenêtre frame de document unique. Pour l'interface multidocument (MDI), il s'agit d'un frame MDI (classe `CMDIFrameWnd`) qui fait office de fenêtre frame d'application principale contenant tous les enfant `CFrameWnd`s. Chaque fenêtre enfant est de la classe `CMDIChildWnd` (dérivée de `CFrameWnd`) et est considérée comme l'une des multiples fenêtres frame de document.
+L'objet `CWinApp` possède toutes les fenêtres frame dans l'application. La fenêtre de cadre principale pour `CWinApp::m_pMainWnd`l’application doit être stockée dans ; habituellement, vous *définissez* `InitInstance` m_pMainWnd dans l’implémentation si vous n’avez pas laissé AppWizard le faire pour vous. Pour l'interface monodocument (SDI), il s'agit d'un `CFrameWnd` qui fait office de fenêtre frame d'application principale et de fenêtre frame de document unique. Pour l'interface multidocument (MDI), il s'agit d'un frame MDI (classe `CMDIFrameWnd`) qui fait office de fenêtre frame d'application principale contenant tous les enfant `CFrameWnd`s. Chaque fenêtre enfant est de la classe `CMDIChildWnd` (dérivée de `CFrameWnd`) et est considérée comme l'une des multiples fenêtres frame de document.
 
 ## <a name="doctemplates"></a>DocTemplates
 
 `CDocTemplate` est le créateur et le gestionnaire de documents. Il est propriétaire des documents qu'il crée. Si votre application utilise une approche basée sur les ressources décrite ci-dessous, il ne sera pas nécessaire d'effectuer une dérivation à partir de `CDocTemplate`.
 
-Pour une application SDI, la classe `CSingleDocTemplate` fait le suivi d'un document ouvert. Pour une application MDI, la classe `CMultiDocTemplate` conserve une liste (`CPtrList`) de tous les documents actuellement ouverts créés à partir de ce modèle. `CDocTemplate::AddDocument` et `CDocTemplate::RemoveDocument` fournissent des fonctions membres virtuelles pour ajouter ou supprimer un document du modèle. `CDocTemplate` est une fonction friend de `CDocument` donc nous pouvons définir l’élément protégé `CDocument::m_pDocTemplate` pointeur arrière pour la diriger vers le modèle de document qui a créé le document.
+Pour une application SDI, la classe `CSingleDocTemplate` fait le suivi d'un document ouvert. Pour une application MDI, la classe `CMultiDocTemplate` conserve une liste (`CPtrList`) de tous les documents actuellement ouverts créés à partir de ce modèle. `CDocTemplate::AddDocument` et `CDocTemplate::RemoveDocument` fournissent des fonctions membres virtuelles pour ajouter ou supprimer un document du modèle. `CDocTemplate`est un `CDocument` ami de sorte `CDocument::m_pDocTemplate` que nous pouvons définir le pointeur arrière protégé pour pointer vers le modèle doc qui a créé le document.
 
 `CWinApp` gère l'implémentation par défaut de `OnFileOpen`, qui à son tour interrogera tous les modèles du document. L'implémentation inclut la recherche des documents déjà ouverts et la définition du format permettant d'ouvrir de nouveaux documents.
 
@@ -51,13 +51,13 @@ Pour une application SDI, la classe `CSingleDocTemplate` fait le suivi d'un docu
 
 ## <a name="cdocument"></a>CDocument
 
-Un `CDocument` est détenu par un `CDocTemplate`.
+A `CDocument` appartient à `CDocTemplate`un .
 
 Les documents ont une liste de vues actuellement ouvertes (dérivées de `CView`) qui affichent le document ( `CPtrList`).
 
 Les documents ne créent pas/ne détruisent pas les vues, mais ils sont joints entre eux lorsqu’ils sont créés. Lorsqu'un document est fermé (autrement dit, via Fichier/Fermer), toutes les vues jointes sont fermées. Lorsque la dernière vue sur un document est fermée (autrement dit, Fenêtre/Fermer) le document est fermé.
 
-Les interfaces `CDocument::AddView`, `RemoveView` sont utilisées pour contenir la liste des vues. `CDocument` est une fonction friend de `CView` afin que nous pouvons définir le `CView::m_pDocument` pointeur arrière.
+Les interfaces `CDocument::AddView`, `RemoveView` sont utilisées pour contenir la liste des vues. `CDocument`est un `CView` ami de afin `CView::m_pDocument` que nous puissions mettre le pointeur arrière.
 
 ## <a name="cframewnd"></a>CFrameWnd
 

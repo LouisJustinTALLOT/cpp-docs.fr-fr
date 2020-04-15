@@ -16,12 +16,12 @@ helpviewer_keywords:
 - collection classes [MFC], duplicates allowed
 - collection classes [MFC], shapes
 ms.assetid: a82188cd-443f-40d8-a244-edf292a53db4
-ms.openlocfilehash: c72a57385b0036d98629d1ee24111500b9d2f8ad
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 53a4eb3e30048d9dc82722d912a026d63a87586d
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62218610"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81371746"
 ---
 # <a name="recommendations-for-choosing-a-collection-class"></a>Recommandations relatives au choix d'une classe de collection
 
@@ -47,19 +47,19 @@ Le tableau suivant, [Fonctionnalités des formes de collection](#_core_collectio
 
 - La colonne 6 indique si chaque forme autorise des éléments en double.
 
-### <a name="_core_collection_shape_features"></a>  Fonctionnalités des formes de collection
+### <a name="collection-shape-features"></a><a name="_core_collection_shape_features"></a>Caractéristiques de la forme de la collection
 
-|Forme|Ordered|Indexés|Insérer un élément|Rechercher un élément spécifié|Éléments en double|
+|Graphique à base de formes|Ordered (Validée)|Indexé|Insérer un élément|Rechercher un élément spécifié|Éléments en double|
 |-----------|--------------|--------------|-----------------------|----------------------------------|-------------------------|
-|Liste|Oui|Non|Rapide|Lente|Oui|
-|Tableau|Oui|Par entier|Lente|Lente|Oui|
-|Carte|Non|Par clé|Rapide|Rapide|Non (clés) Oui (valeurs)|
+|List|Oui|Non|Rapide|Lente|Oui|
+|Array|Oui|Par entier|Lente|Lente|Oui|
+|Mappage|Non|Par clé|Rapide|Rapide|Non (clés) Oui (valeurs)|
 
 Le tableau suivant, [Caractéristiques des classes de collection MFC](#_core_characteristics_of_mfc_collection_classes), résume d’autres caractéristiques importantes de classes de collection MFC spécifiques afin de faciliter la sélection. Votre choix peut différer selon que la classe est basée sur des modèles C++, que ses éléments peuvent être sérialisés par le biais du mécanisme de [sérialisation](../mfc/serialization-in-mfc.md) du document MFC, que ses éléments peuvent être vidés par le biais du mécanisme de vidage de diagnostic du document MFC, ou que la classe est de type sécurisé (autrement dit, si vous pouvez garantir le type des éléments stockés dans une collection et récupérés à partir d’une collection d’après la classe).
 
-### <a name="_core_characteristics_of_mfc_collection_classes"></a>  Caractéristiques des classes de collection MFC
+### <a name="characteristics-of-mfc-collection-classes"></a><a name="_core_characteristics_of_mfc_collection_classes"></a>Caractéristiques des classes de collection MFC
 
-|Classe|Utilise des modèles<br /><br /> C++|Peut être<br /><br /> sérialisée|Peut être<br /><br /> vidée|Est<br /><br /> de type sécurisé|
+|Classe|Utilise des modèles<br /><br /> modèles|Peut être<br /><br /> sérialisée|Peut être<br /><br /> vidée|Is<br /><br /> de type sécurisé|
 |-----------|------------------------------|---------------------------|-----------------------|-----------------------|
 |`CArray`|Oui|Oui 1|Oui 1|Non|
 |`CByteArray`|Non|Oui|Oui|Oui 3|
@@ -85,7 +85,7 @@ Le tableau suivant, [Caractéristiques des classes de collection MFC](#_core_cha
 |`CUIntArray`|Non|Non|Oui|Oui 3|
 |`CWordArray`|Non|Oui|Oui|Oui 3|
 
-1. Pour sérialiser, vous devez appeler explicitement la fonction `Serialize` de l’objet de collection. Pour vider, vous devez appeler explicitement sa fonction `Dump`. Vous ne pouvez pas utiliser la forme `ar << collObj` pour sérialiser ou la forme `dmp` `<< collObj` pour faire un dump.
+1. Pour sérialiser, vous devez appeler explicitement la fonction `Serialize` de l’objet de collection. Pour vider, vous devez appeler explicitement sa fonction `Dump`. Vous ne pouvez `ar << collObj` pas utiliser le `dmp` `<< collObj` formulaire pour sérialiser ou le formulaire à vider.
 
 2. La capacité à sérialiser varie en fonction du type de collection sous-jacent. Par exemple, si un tableau de pointeurs typés est basé sur `CObArray`, il est sérialisable. S’il est basé sur `CPtrArray`, il n’est pas sérialisable. En général, les classes « Ptr » ne peuvent pas être sérialisées.
 
@@ -94,6 +94,6 @@ Le tableau suivant, [Caractéristiques des classes de collection MFC](#_core_cha
 ## <a name="see-also"></a>Voir aussi
 
 [Collections](../mfc/collections.md)<br/>
-[Classes basées sur un modèle](../mfc/template-based-classes.md)<br/>
-[Guide pratique pour Définir une collection de type sécurisé](../mfc/how-to-make-a-type-safe-collection.md)<br/>
+[Catégories basées sur des modèles](../mfc/template-based-classes.md)<br/>
+[Guide pratique pour définir une collection de type sécurisé](../mfc/how-to-make-a-type-safe-collection.md)<br/>
 [Accès à tous les membres d’une collection](../mfc/accessing-all-members-of-a-collection.md)

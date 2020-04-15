@@ -12,82 +12,82 @@ helpviewer_keywords:
 - delayed rendering [MFC]
 - OLE [MFC], data sources
 ms.assetid: f7f27e77-bb5d-4131-b819-d71bf929ebaf
-ms.openlocfilehash: adbe2a77fb0069e9874ab20a51b3ab08aabbe1f6
-ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
+ms.openlocfilehash: a08b6ff274c73d301c156d65aa56fbecca49128c
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/17/2020
-ms.locfileid: "79447001"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81370551"
 ---
 # <a name="data-objects-and-data-sources-manipulation"></a>Objets de données et sources de données : manipulation
 
-Après avoir créé un objet de données ou une source de données, vous pouvez effectuer un certain nombre d’opérations courantes sur les données, telles que l’insertion et la suppression de données, l’énumération des formats des données et bien plus encore. Cet article décrit les techniques nécessaires pour effectuer les opérations les plus courantes. Les sujets abordés sont les suivants :
+Une fois qu’un objet de données ou une source de données a été créé, vous pouvez effectuer un certain nombre d’opérations communes sur les données, telles que l’insertion et la suppression des données, énumérant les formats dans lequel se trouvent les données, et plus encore. Cet article décrit les techniques nécessaires pour terminer les opérations les plus courantes. Les sujets abordés sont les suivants :
 
-- [Insertion de données dans une source de données](#_core_inserting_data_into_a_data_source)
+- [Insérer des données dans une source de données](#_core_inserting_data_into_a_data_source)
 
-- [Détermination des formats disponibles dans un objet de données](#_core_determining_the_formats_available_in_a_data_object)
+- [Déterminer les formats disponibles dans un objet de données](#_core_determining_the_formats_available_in_a_data_object)
 
-- [Récupération de données à partir d’un objet de données](#_core_retrieving_data_from_a_data_object)
+- [Récupération des données à partir d’un objet de données](#_core_retrieving_data_from_a_data_object)
 
-##  <a name="_core_inserting_data_into_a_data_source"></a>Insertion de données dans une source de données
+## <a name="inserting-data-into-a-data-source"></a><a name="_core_inserting_data_into_a_data_source"></a>Insérer des données dans une source de données
 
-La façon dont les données sont insérées dans une source de données varie selon que les données sont fournies immédiatement ou à la demande, et dans quelle moyenne elles sont fournies. Les possibilités sont les suivantes.
+La façon dont les données sont insérées dans une source de données dépend de la suite de la 1900 fois ou de la demande, et du support dans lequel elles sont fournies. Les possibilités sont les suivantes.
 
 ### <a name="supplying-data-immediately-immediate-rendering"></a>Fournir des données immédiatement (rendu immédiat)
 
-- Appelez `COleDataSource::CacheGlobalData` à plusieurs reprises pour chaque format de presse-papiers dans lequel vous fournissez des données. Transmettez le format du presse-papiers à utiliser, un handle vers la mémoire qui contient les données et, éventuellement, une structure **FORMATETC** décrivant les données.
+- Appelez `COleDataSource::CacheGlobalData` à plusieurs reprises pour chaque format Clipboard dans lequel vous fournissez des données. Passez le format Clipboard à utiliser, une poignée à la mémoire contenant les données et, en option, une structure **FORMATETC** décrivant les données.
 
      -ou-
 
-- Si vous souhaitez travailler directement avec les structures **STGMEDIUM** , vous appelez `COleDataSource::CacheData` au lieu de `COleDataSource::CacheGlobalData` dans l’option ci-dessus.
+- Si vous souhaitez travailler directement avec les structures `COleDataSource::CacheData` **STGMEDIUM,** vous appelez plutôt que dans l’option `COleDataSource::CacheGlobalData` ci-dessus.
 
-### <a name="supplying-data-on-demand-delayed-rendering"></a>Fourniture de données à la demande (rendu retardé)
+### <a name="supplying-data-on-demand-delayed-rendering"></a>Fournir des données à la demande (rendu retardé)
 
-Il s’agit d’une rubrique avancée.
+C’est un sujet avancé.
 
-- Appelez `COleDataSource::DelayRenderData` à plusieurs reprises pour chaque format de presse-papiers dans lequel vous fournissez des données. Transmettez le format du presse-papiers à utiliser et, éventuellement, à une structure **FORMATETC** décrivant les données. Lorsque les données sont demandées, le Framework appelle `COleDataSource::OnRenderData`, que vous devez substituer.
+- Appelez `COleDataSource::DelayRenderData` à plusieurs reprises pour chaque format Clipboard dans lequel vous fournissez des données. Passez le format Clipboard à utiliser et, en option, une structure **FORMATETC** décrivant les données. Lorsque les données sont demandées, le cadre appelle, `COleDataSource::OnRenderData`que vous devez remplacer.
 
      -ou-
 
-- Si vous utilisez un objet `CFile` pour fournir les données, appelez `COleDataSource::DelayRenderFileData` au lieu de `COleDataSource::DelayRenderData` dans l’option précédente. Lorsque les données sont demandées, le Framework appelle `COleDataSource::OnRenderFileData`, que vous devez substituer.
+- Si vous `CFile` utilisez un objet pour `COleDataSource::DelayRenderFileData` fournir `COleDataSource::DelayRenderData` les données, appelez plutôt que dans l’option précédente. Lorsque les données sont demandées, le cadre appelle, `COleDataSource::OnRenderFileData`que vous devez remplacer.
 
-##  <a name="_core_determining_the_formats_available_in_a_data_object"></a>Détermination des formats disponibles dans un objet de données
+## <a name="determining-the-formats-available-in-a-data-object"></a><a name="_core_determining_the_formats_available_in_a_data_object"></a>Déterminer les formats disponibles dans un objet de données
 
-Avant qu’une application autorise l’utilisateur à coller des données dans celle-ci, elle doit savoir s’il existe des formats dans le presse-papiers qu’elle peut gérer. Pour ce faire, votre application doit effectuer les opérations suivantes :
+Avant qu’une application permette à l’utilisateur de coller des données en elle, il doit savoir s’il existe des formats sur le Clipboard qu’il peut gérer. Pour ce faire, votre demande doit faire ce qui suit :
 
-1. Créez un objet `COleDataObject` et une structure **FORMATETC** .
+1. Créez `COleDataObject` un objet et une structure **FORMATETC.**
 
-1. Appelez la fonction membre `AttachClipboard` de l’objet de données pour associer l’objet de données aux données du presse-papiers.
+1. Appelez la fonction `AttachClipboard` membre de l’objet de données pour associer l’objet de données avec les données du Clipboard.
 
 1. Effectuez l’une des actions suivantes :
 
-   - Appelez la fonction membre `IsDataAvailable` de l’objet de données s’il n’existe qu’un ou deux formats dont vous avez besoin. Cela vous permettra de gagner du temps dans les cas où les données du presse-papiers prennent en charge beaucoup plus de formats que votre application.
+   - Appelez la fonction `IsDataAvailable` de membre de l’objet de données s’il n’y a qu’un ou deux formats dont vous avez besoin. Cela vous fera gagner du temps dans les cas où les données sur le Clipboard prend en charge beaucoup plus de formats que votre application.
 
      \- ou -
 
-   - Appelez la fonction membre `BeginEnumFormats` de l’objet de données pour commencer à énumérer les formats disponibles dans le presse-papiers. Appelez ensuite `GetNextFormat` jusqu’à ce que le presse-papiers retourne un format pris en charge par votre application ou qu’il n’y ait plus de formats.
+   - Appelez la fonction `BeginEnumFormats` de membre de l’objet de données pour commencer à énumérer les formats disponibles sur le Clipboard. Appelez `GetNextFormat` ensuite jusqu’à ce que le Clipboard retourne un format que votre application prend en charge ou qu’il n’y ait plus de formats.
 
-Si vous utilisez **ON_UPDATE_COMMAND_UI**, vous pouvez maintenant activer les éléments spéciaux coller et, éventuellement, coller dans le menu Edition. Pour ce faire, appelez `CMenu::EnableMenuItem` ou `CCmdUI::Enable`. Pour plus d’informations sur ce que les applications conteneur doivent faire avec les éléments de menu et le moment, consultez [menus et ressources : ajouts de conteneurs](../mfc/menus-and-resources-container-additions.md).
+Si vous utilisez **ON_UPDATE_COMMAND_UI,** vous pouvez maintenant activer la pâte et, éventuellement, coller des éléments spéciaux sur le menu Edit. Pour ce faire, `CMenu::EnableMenuItem` `CCmdUI::Enable`appelez l’un ou l’autre ou . Pour plus d’informations sur les applications de conteneurs qui devraient faire avec les éléments du menu et quand, voir [Menus et ressources: Ajouts de conteneurs](../mfc/menus-and-resources-container-additions.md).
 
-##  <a name="_core_retrieving_data_from_a_data_object"></a>Récupération de données à partir d’un objet de données
+## <a name="retrieving-data-from-a-data-object"></a><a name="_core_retrieving_data_from_a_data_object"></a>Récupération des données à partir d’un objet de données
 
-Une fois que vous avez choisi un format de données, il ne reste plus qu’à récupérer les données de l’objet de données. Pour ce faire, l’utilisateur décide où placer les données, et l’application appelle la fonction appropriée. Les données seront disponibles dans l’un des supports suivants :
+Une fois que vous avez décidé d’un format de données, il ne reste plus qu’à récupérer les données de l’objet de données. Pour ce faire, l’utilisateur décide où mettre les données, et l’application appelle la fonction appropriée. Les données seront disponibles dans l’un des supports suivants :
 
 |Moyenne|Fonction à appeler|
 |------------|----------------------|
-|Mémoire globale (`HGLOBAL`)|`COleDataObject::GetGlobalData`|
-|Fichier (`CFile`)|`COleDataObject::GetFileData`|
-|**STGMEDIUM** , structure (`IStorage`)|`COleDataObject::GetData`|
+|Mémoire globale`HGLOBAL`( )|`COleDataObject::GetGlobalData`|
+|Fichier`CFile`( )|`COleDataObject::GetFileData`|
+|**STRUCTURE STGMEDIUM** (`IStorage`)|`COleDataObject::GetData`|
 
-En règle générale, le support est spécifié en même temps que son format de presse-papiers. Par exemple, un objet **CF_EMBEDDEDSTRUCT** est toujours dans un support `IStorage` qui requiert une structure **STGMEDIUM** . Par conséquent, vous devez utiliser `GetData`, car il s’agit de l’une des seules fonctions qui peuvent accepter une structure **STGMEDIUM** .
+Généralement, le support sera spécifié avec son format Clipboard. Par exemple, un **objet CF_EMBEDDEDSTRUCT** est `IStorage` toujours dans un milieu qui nécessite une structure **STGMEDIUM.** Par conséquent, `GetData` vous utiliseriez parce que c’est la seule de ces fonctions qui peut accepter une structure **STGMEDIUM.**
 
-Dans les cas où le format du presse-papiers se trouve dans un `IStream` ou `HGLOBAL` moyen, le Framework peut fournir un pointeur `CFile` qui référence les données. L’application peut ensuite utiliser la lecture de fichiers pour obtenir les données à peu près de la même façon qu’elles peuvent importer des données à partir d’un fichier. Pour l’essentiel, il s’agit de l’interface côté client pour les routines `OnRenderData` et `OnRenderFileData` dans la source de données.
+Pour les cas où le `IStream` `HGLOBAL` format Clipboard est `CFile` dans un ou moyen, le cadre peut fournir un pointeur qui fait référence aux données. L’application peut ensuite utiliser la lecture de fichiers pour obtenir les données de la même manière qu’elle pourrait importer des données d’un fichier. Essentiellement, il s’agit de `OnRenderData` l’interface côté client de la et `OnRenderFileData` les routines dans la source de données.
 
-L’utilisateur peut maintenant insérer des données dans le document comme pour toutes les autres données dans le même format.
+L’utilisateur peut désormais insérer des données dans le document comme pour toutes les autres données du même format.
 
-### <a name="what-do-you-want-to-know-more-about"></a>Que voulez-vous en savoir plus sur
+### <a name="what-do-you-want-to-know-more-about"></a>Qu’est-ce que vous voulez savoir plus sur
 
-- [Glisser-déplacer](../mfc/drag-and-drop-ole.md)
+- [Faites glisser et baisser](../mfc/drag-and-drop-ole.md)
 
 - [Presse-papiers](../mfc/clipboard.md)
 

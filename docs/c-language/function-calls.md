@@ -7,25 +7,25 @@ helpviewer_keywords:
 - function calls, about function calls
 - function calls
 ms.assetid: 2cfa897d-3874-4820-933c-e624f75d1712
-ms.openlocfilehash: 2402f3fef77b19c0420f0c4a52407a730b53b1d5
-ms.sourcegitcommit: f4be868c0d1d78e550fba105d4d3c993743a1f4b
-ms.translationtype: HT
+ms.openlocfilehash: cce1a888f3e1224822ab4e97c67bf59da4c46fc9
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56148203"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81334571"
 ---
 # <a name="function-calls"></a>Appels de fonction
 
 Un *appel de fonction* est une expression qui passe le contrôle et des arguments (le cas échéant) à une fonction et qui se présente sous la forme :
 
-*expression* (*expression-list*<sub>opt</sub>)
+*expression* *(expression-liste*<sub>opt</sub>)
 
 où *expression* est un nom de fonction ou correspond à une adresse de fonction et où *expression-list* est une liste d'expressions (séparées par des virgules). Les valeurs de ces dernières expressions sont les arguments passés à la fonction. Si la fonction ne retourne pas de valeur, vous la déclarez comme une fonction qui retourne `void`.
 
 Si une déclaration existe avant l'appel de fonction, mais qu'aucune information n'est donnée concernant les paramètres, tous les arguments non déclarés subissent simplement les conversions arithmétiques habituelles.
 
 > [!NOTE]
->  Les expressions figurant dans la liste d'arguments de la fonction peuvent être évaluées dans un ordre quelconque, de sorte que les arguments dont les valeurs peuvent être modifiées par les effets secondaires d'un autre argument ont des valeurs non définies. Le point de séquence défini par l'opérateur d'appel de fonction garantit uniquement que tous les effets secondaires dans la liste d'arguments sont évalués avant que le contrôle passe à la fonction appelée. (Notez que l’ordre dans lequel les arguments font l’objet d’un push dans la pile est une question distincte.) Pour plus d'informations, consultez [Points de séquence](../c-language/c-sequence-points.md).
+> Les expressions figurant dans la liste d'arguments de la fonction peuvent être évaluées dans un ordre quelconque, de sorte que les arguments dont les valeurs peuvent être modifiées par les effets secondaires d'un autre argument ont des valeurs non définies. Le point de séquence défini par l'opérateur d'appel de fonction garantit uniquement que tous les effets secondaires dans la liste d'arguments sont évalués avant que le contrôle passe à la fonction appelée. (Notez que l’ordre dans lequel les arguments sont poussés sur la pile est une question distincte.) Voir [les points de séquence](../c-language/c-sequence-points.md) pour plus d’informations.
 
 La seule exigence à respecter dans un appel de fonction est que l’expression avant les parenthèses doit correspondre à une adresse de fonction. Cela signifie qu'une fonction peut être appelée via toute expression de pointeur fonction.
 

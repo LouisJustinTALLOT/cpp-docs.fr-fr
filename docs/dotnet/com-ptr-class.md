@@ -16,16 +16,16 @@ f1_keywords:
 helpviewer_keywords:
 - msclr::ptr class
 ms.assetid: 0144d0e4-919c-45f9-a3f8-fbc9edba32bf
-ms.openlocfilehash: 8a3223543dfa6c1b5b45fef2780cd11b558eab84
-ms.sourcegitcommit: 8e285a766523e653aeeb34d412dc6f615ef7b17b
+ms.openlocfilehash: e494285f33cf282d7b7515aac374ec86ef3036b7
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/21/2020
-ms.locfileid: "80078963"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81372492"
 ---
 # <a name="comptr-class"></a>com::ptr, classe
 
-Wrapper pour un objet COM qui peut être utilisé en tant que membre d’une classe CLR.  Le wrapper automatise également la gestion de la durée de vie de l’objet COM, en libérant toutes les références appartenant à l’objet lorsque son destructeur est appelé. Analogue à la [classe CComPtr](../atl/reference/ccomptr-class.md).
+Un emballage pour un objet COM qui peut être utilisé comme membre d’une classe CLR.  L’emballage automatise également la gestion à vie de l’objet COM, libérant toutes les références possédées sur l’objet lorsque son destructeur est appelé. Analogue à la [classe CComPtr](../atl/reference/ccomptr-class.md).
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -41,15 +41,15 @@ Interface COM.
 
 ## <a name="remarks"></a>Notes
 
-Une `com::ptr` peut également être utilisée en tant que variable de fonction locale pour simplifier diverses tâches COM et automatiser la gestion de la durée de vie.
+A `com::ptr` peut également être utilisé comme variable de fonction locale pour simplifier diverses tâches COM et automatiser la gestion à vie.
 
-Un `com::ptr` ne peut pas être utilisé directement comme paramètre de fonction ; Utilisez à la place un [opérateur de référence de suivi](../extensions/tracking-reference-operator-cpp-component-extensions.md) ou un [handle vers l’opérateur d’objet (^)](../extensions/handle-to-object-operator-hat-cpp-component-extensions.md) .
+A `com::ptr` ne peut pas être utilisé directement comme paramètre de fonction; utiliser un [opérateur de référence Tracking](../extensions/tracking-reference-operator-cpp-component-extensions.md) ou une poignée pour [l’opérateur d’objets (MD) à](../extensions/handle-to-object-operator-hat-cpp-component-extensions.md) la place.
 
-Une `com::ptr` ne peut pas être directement retournée à partir d’une fonction ; Utilisez un handle à la place.
+A `com::ptr` ne peut pas être directement renvoyé d’une fonction; utiliser une poignée à la place.
 
 ## <a name="example"></a>Exemple
 
-Cet exemple implémente une classe CLR qui utilise un `com::ptr` pour encapsuler son membre privé `IXMLDOMDocument` objet.  L’appel des méthodes publiques de la classe entraîne des appels à l’objet `IXMLDOMDocument` contenu.  L’exemple crée une instance d’un document XML, le remplit avec un code XML simple et effectue une procédure simplifiée des nœuds dans l’arborescence de documents analysés pour imprimer le XML sur la console.
+Cet exemple implémente une `com::ptr` classe CLR `IXMLDOMDocument` qui utilise un pour envelopper son objet membre privé.  Appeler les méthodes publiques de la classe `IXMLDOMDocument` entraîne des appels vers l’objet contenu.  L’échantillon crée une instance d’un document XML, le remplit avec un XML simple, et fait une promenade simplifiée des nœuds dans l’arbre de document analysé pour imprimer le XML à la console.
 
 ```cpp
 // comptr.cpp
@@ -167,40 +167,40 @@ int main() {
 
 ### <a name="public-constructors"></a>Constructeurs publics
 
-|Name|Description|
+|Nom|Description|
 |---------|-----------|
-|[ptr::ptr](#ptr)|Construit un `com::ptr` pour encapsuler un objet COM.|
-|[ptr::~ptr](#tilde-ptr)|Détruit un `com::ptr`.|
+|[ptr::ptr](#ptr)|Construit un `com::ptr` pour envelopper un objet COM.|
+|[ptr::~ptr](#tilde-ptr)|Destructs `com::ptr`a .|
 
 ### <a name="public-methods"></a>Méthodes publiques
 
-|Name|Description|
+|Nom|Description|
 |---------|-----------|
-|[ptr::Attach](#attach)|Joint un objet COM à un `com::ptr`.|
-|[ptr::CreateInstance](#createInstance)|Crée une instance d’un objet COM dans un `com::ptr`.|
-|[ptr::Detach](#detach)|Donne la propriété de l’objet COM, en retournant un pointeur vers l’objet.|
-|[ptr::GetInterface](#getInterface)|Crée une instance d’un objet COM dans un `com::ptr`.|
-|[ptr::QueryInterface](#queryInterface)|Interroge l’objet COM détenu pour une interface et joint le résultat à un autre `com::ptr`.|
-|[ptr::Release](#release)|Libère toutes les références appartenant à l’objet COM.|
+|[ptr::Attach](#attach)|Attache un objet COM `com::ptr`à un .|
+|[ptr::CreateInstance](#createInstance)|Crée une instance d’un `com::ptr`objet COM dans un .|
+|[ptr::Detach](#detach)|Renonce à la propriété de l’objet COM, en retournant un pointeur à l’objet.|
+|[ptr::GetInterface](#getInterface)|Crée une instance d’un `com::ptr`objet COM dans un .|
+|[ptr::QueryInterface](#queryInterface)|Interroge l’objet COM possédé pour une interface `com::ptr`et attache le résultat à un autre .|
+|[ptr::Release](#release)|Communiqués toutes les références possédées sur l’objet COM.|
 
 ### <a name="public-operators"></a>Opérateurs publics
 
-|Name|Description|
+|Nom|Description|
 |---------|-----------|
-|[ptr :: Operator-&gt;](#operator-arrow)|Opérateur d’accès aux membres, utilisé pour appeler des méthodes sur l’objet COM détenu.|
-|[ptr::operator=](#operator-assign)|Joint un objet COM à un `com::ptr`.|
-|[ptr :: Operator&nbsp;bool](#operator-bool)|Opérateur permettant d’utiliser `com::ptr` dans une expression conditionnelle.|
-|[ptr::operator!](#operator-logical-not)|Pour déterminer si l’objet COM détenu n’est pas valide.|
+|[ptr::opérateur-&gt;](#operator-arrow)|Opérateur d’accès membre, utilisé pour appeler les méthodes sur l’objet COM appartenant.|
+|[ptr::opérateur](#operator-assign)|Attache un objet COM `com::ptr`à un .|
+|[ptr::opérateur&nbsp;bool](#operator-bool)|Opérateur pour `com::ptr` l’utilisation dans une expression conditionnelle.|
+|[ptr::operator!](#operator-logical-not)|opérateur pour déterminer si l’objet COM possédé est invalide.|
 
 ## <a name="requirements"></a>Spécifications
 
-**Fichier d’en-tête** \<msclr\com\ptr.h >
+**Fichier d’en-tête** \<msclr-com-ptr.h>
 
-**Espace de noms** msclr, :: com
+**Namespace** msclr::com
 
-## <a name="ptrptr"></a><a name="ptr"></a>ptr ::p tr
+## <a name="ptrptr"></a><a name="ptr"></a>ptr::ptr
 
-Retourne un pointeur vers l’objet COM détenu.
+Retourne un pointeur sur l’objet COM possédé.
 
 ```cpp
 ptr();
@@ -216,15 +216,15 @@ Pointeur d'interface COM.
 
 ### <a name="remarks"></a>Notes
 
-Le constructeur sans argument assigne `nullptr` au handle d’objet sous-jacent. Les appels futurs à la `com::ptr` valident l’objet interne et échouent silencieusement jusqu’à ce qu’un objet soit créé ou attaché.
+Le constructeur sans argumentation `nullptr` attribue à la poignée d’objet sous-jacente. Les appels `com::ptr` futurs vers l’objet valideront l’objet interne et échouent silencieusement jusqu’à ce qu’un objet soit créé ou joint.
 
-Le constructeur à un argument ajoute une référence à l’objet COM, mais ne libère pas la référence de l’appelant. par conséquent, l’appelant doit appeler `Release` sur l’objet COM pour abandonner véritablement le contrôle. Lorsque le destructeur de `com::ptr`est appelé, il libère automatiquement ses références sur l’objet COM.
+Le constructeur d’un seul argument ajoute une référence à l’objet COM, mais ne `Release` libère pas la référence de l’appelant, de sorte que l’appelant doit faire appel à l’objet COM pour vraiment renoncer au contrôle. Lorsque `com::ptr`le déstructeur est appelé, il publiera automatiquement ses références sur l’objet COM.
 
-Le passage de `NULL` à ce constructeur revient à appeler la version sans argument.
+Passer `NULL` à ce constructeur est la même chose que d’appeler la version sans argument.
 
 ### <a name="example"></a>Exemple
 
-Cet exemple implémente une classe CLR qui utilise un `com::ptr` pour encapsuler son membre privé `IXMLDOMDocument` objet. Il illustre l’utilisation des deux versions du constructeur.
+Cet exemple implémente une `com::ptr` classe CLR `IXMLDOMDocument` qui utilise un pour envelopper son objet membre privé. Il démontre l’utilisation des deux versions du constructeur.
 
 ```cpp
 // comptr_ptr.cpp
@@ -285,9 +285,9 @@ int main() {
 }
 ```
 
-## <a name="ptrptr"></a><a name="tilde-ptr"></a>ptr :: ~ PTR
+## <a name="ptrptr"></a><a name="tilde-ptr"></a>ptr: :ptr
 
-Détruit un `com::ptr`.
+Destructs `com::ptr`a .
 
 ```cpp
 ~ptr();
@@ -295,11 +295,11 @@ Détruit un `com::ptr`.
 
 ### <a name="remarks"></a>Notes
 
-En cas de destruction, le `com::ptr` libère toutes les références qu’il détient à son objet COM. En supposant qu’il n’existe aucune autre référence dans l’objet COM, l’objet COM sera supprimé et sa mémoire libérée.
+Sur la `com::ptr` destruction, les communiqués toutes les références qu’il possède à son objet COM. En supposant qu’il n’y ait pas d’autres références détenues à l’objet COM, l’objet COM sera supprimé et sa mémoire libérée.
 
 ### <a name="example"></a>Exemple
 
-Cet exemple implémente une classe CLR qui utilise un `com::ptr` pour encapsuler son membre privé `IXMLDOMDocument` objet.  Dans la fonction `main`, les deux destructeurs d’objets `XmlDocument`s sont appelés lorsqu’ils se déplacent dans la portée du bloc `try`, ce qui entraîne l’appel du destructeur de `com::ptr` sous-jacent, en libérant toutes les références appartenant à l’objet COM.
+Cet exemple implémente une `com::ptr` classe CLR `IXMLDOMDocument` qui utilise un pour envelopper son objet membre privé.  Dans `main` la fonction, `XmlDocument` les destructeurs des deux objets seront appelés lorsqu’ils sortiront de la portée du `try` bloc, ce qui entraînera l’appel du destructeur sous-jacent, `com::ptr` libérant toutes les références possédées à l’objet COM.
 
 ```cpp
 // comptr_dtor.cpp
@@ -360,9 +360,9 @@ int main() {
 }
 ```
 
-## <a name="ptrattach"></a><a name="attach"></a>ptr :: Attach
+## <a name="ptrattach"></a><a name="attach"></a>ptr::Attach
 
-Joint un objet COM à un `com::ptr`.
+Attache un objet COM `com::ptr`à un .
 
 ```cpp
 void Attach(
@@ -373,21 +373,21 @@ void Attach(
 ### <a name="parameters"></a>Paramètres
 
 *_right*<br/>
-Pointeur d’interface COM à attacher.
+Le pointeur d’interface COM à attacher.
 
 ### <a name="exceptions"></a>Exceptions
 
-Si le `com::ptr` possède déjà une référence à un objet COM, `Attach` lève <xref:System.InvalidOperationException>.
+Si `com::ptr` le possède déjà une référence `Attach` à <xref:System.InvalidOperationException>un objet COM, jette .
 
 ### <a name="remarks"></a>Notes
 
-Un appel à `Attach` fait référence à l’objet COM, mais ne libère pas la référence de l’appelant.
+Un appel `Attach` à des références à l’objet COM mais ne libère pas la référence de l’appelant à celui-ci.
 
-Le passage de `NULL` à `Attach` entraîne l’absence d’action.
+Passer `NULL` `Attach` aux résultats n’a pas été pris.
 
 ### <a name="example"></a>Exemple
 
-Cet exemple implémente une classe CLR qui utilise un `com::ptr` pour encapsuler son membre privé `IXMLDOMDocument` objet. La fonction membre `ReplaceDocument` appelle d’abord `Release` sur tout objet détenu précédemment, puis appelle `Attach` pour joindre un nouvel objet document.
+Cet exemple implémente une `com::ptr` classe CLR `IXMLDOMDocument` qui utilise un pour envelopper son objet membre privé. La `ReplaceDocument` fonction membre `Release` fait d’abord appel `Attach` à tout objet précédemment possédé, puis appelle à joindre un nouvel objet de document.
 
 ```cpp
 // comptr_attach.cpp
@@ -461,9 +461,9 @@ int main() {
 }
 ```
 
-## <a name="ptrcreateinstance"></a><a name="createInstance"></a>ptr :: CreateInstance
+## <a name="ptrcreateinstance"></a><a name="createInstance"></a>ptr::CréerInstance
 
-Crée une instance d’un objet COM dans un `com::ptr`.
+Crée une instance d’un `com::ptr`objet COM dans un .
 
 ```cpp
 void CreateInstance(
@@ -506,31 +506,31 @@ void CreateInstance(
 
 ### <a name="parameters"></a>Paramètres
 
-*progid*<br/>
+*Progid*<br/>
 Chaîne `ProgID`.
 
 *pouter*<br/>
-Pointeur vers l’interface IUnknown de l’objet d’agrégation (contrôle IUnknown). Si `pouter` n’est pas spécifié, `NULL` est utilisé.
+Pointeur sur l’interface IUnknown de l’objet agrégé (le contrôle IUnknown). Si `pouter` n’est `NULL` pas spécifié, est utilisé.
 
 *cls_context*<br/>
-Contexte dans lequel le code qui gère l’objet nouvellement créé s’exécutera. Les valeurs sont extraites de l’énumération `CLSCTX`. Si `cls_context` n’est pas spécifié, la valeur CLSCTX_ALL est utilisée.
+Contexte dans lequel le code qui gère l’objet nouvellement créé s’exécutera. Les valeurs sont `CLSCTX` tirées de l’énumération. Si `cls_context` elle n’est pas spécifiée, la valeur CLSCTX_ALL est utilisée.
 
 *rclsid*<br/>
-`CLSID` associé aux données et au code qui seront utilisés pour créer l’objet.
+`CLSID`associés aux données et au code qui seront utilisés pour créer l’objet.
 
 ### <a name="exceptions"></a>Exceptions
 
-Si le `com::ptr` possède déjà une référence à un objet COM, `CreateInstance` lève <xref:System.InvalidOperationException>.
+Si `com::ptr` le possède déjà une référence `CreateInstance` à <xref:System.InvalidOperationException>un objet COM, jette .
 
-Cette fonction appelle `CoCreateInstance` et utilise <xref:System.Runtime.InteropServices.Marshal.ThrowExceptionForHR%2A> pour convertir les `HRESULT` d’erreur en une exception appropriée.
+Cette fonction `CoCreateInstance` appelle <xref:System.Runtime.InteropServices.Marshal.ThrowExceptionForHR%2A> et utilise `HRESULT` pour convertir toute erreur en une exception appropriée.
 
 ### <a name="remarks"></a>Notes
 
-`CreateInstance` utilise `CoCreateInstance` pour créer une nouvelle instance de l’objet spécifié, identifiée à partir d’un ProgID ou d’un CLSID. Le `com::ptr` fait référence à l’objet qui vient d’être créé et libère automatiquement toutes les références détenues lors de la destruction.
+`CreateInstance`utilise `CoCreateInstance` pour créer une nouvelle instance de l’objet spécifié, identifié soit à partir d’un ProgID ou d’un CLSID. Les `com::ptr` références de l’objet nouvellement créé et libérera automatiquement toutes les références possédées lors de la destruction.
 
 ### <a name="example"></a>Exemple
 
-Cet exemple implémente une classe CLR qui utilise un `com::ptr` pour encapsuler son membre privé `IXMLDOMDocument` objet. Les constructeurs de classe utilisent deux formes différentes de `CreateInstance` pour créer l’objet de document à partir d’un ProgID ou d’un CLSID, ainsi que d’un CLSCTX.
+Cet exemple implémente une `com::ptr` classe CLR `IXMLDOMDocument` qui utilise un pour envelopper son objet membre privé. Les constructeurs de classe `CreateInstance` utilisent deux formes différentes de créer l’objet de document soit à partir d’un ProgID ou d’un CLSID plus un CLSCTX.
 
 ```cpp
 // comptr_createinstance.cpp
@@ -579,9 +579,9 @@ int main() {
 }
 ```
 
-## <a name="ptrdetach"></a><a name="detach"></a>ptr ::D Etach
+## <a name="ptrdetach"></a><a name="detach"></a>ptr::Detach
 
-Donne la propriété de l’objet COM, en retournant un pointeur vers l’objet.
+Renonce à la propriété de l’objet COM, en retournant un pointeur à l’objet.
 
 ```cpp
 _interface_type * Detach();
@@ -589,21 +589,21 @@ _interface_type * Detach();
 
 ### <a name="return-value"></a>Valeur retournée
 
-Pointeur vers l’objet COM.
+Le pointeur de l’objet COM.
 
-Si aucun objet n’est détenu, la valeur NULL est retournée.
+Si aucun objet n’est possédé, NULL est retourné.
 
 ### <a name="exceptions"></a>Exceptions
 
-En interne, `QueryInterface` est appelé sur l’objet COM détenu et toute erreur `HRESULT` est convertie en exception par <xref:System.Runtime.InteropServices.Marshal.ThrowExceptionForHR%2A>.
+En `QueryInterface` interne, est appelé sur l’objet COM possédé et toute erreur `HRESULT` est convertie en une exception par <xref:System.Runtime.InteropServices.Marshal.ThrowExceptionForHR%2A>.
 
 ### <a name="remarks"></a>Notes
 
-`Detach` ajoute d’abord une référence à l’objet COM pour le compte de l’appelant, puis libère toutes les références détenues par le `com::ptr`.  L’appelant doit finalement libérer l’objet retourné pour le détruire.
+`Detach`ajoute d’abord une référence à l’objet COM au nom `com::ptr`de l’appelant, puis libère toutes les références appartenant à la .  L’appelant doit finalement libérer l’objet retourné pour le détruire.
 
 ### <a name="example"></a>Exemple
 
-Cet exemple implémente une classe CLR qui utilise un `com::ptr` pour encapsuler son membre privé `IXMLDOMDocument` objet.  La fonction membre `DetachDocument` appelle `Detach` pour donner la propriété de l’objet COM et retourner un pointeur vers l’appelant.
+Cet exemple implémente une `com::ptr` classe CLR `IXMLDOMDocument` qui utilise un pour envelopper son objet membre privé.  La `DetachDocument` fonction `Detach` membre appelle à renoncer à la propriété de l’objet COM et à retourner un pointeur à l’appelant.
 
 ```cpp
 // comptr_detach.cpp
@@ -684,9 +684,9 @@ int main() {
 }
 ```
 
-## <a name="ptrgetinterface"></a><a name="getInterface"></a>ptr :: GetInterface
+## <a name="ptrgetinterface"></a><a name="getInterface"></a>ptr::GetInterface
 
-Retourne un pointeur vers l’objet COM détenu.
+Retourne un pointeur sur l’objet COM possédé.
 
 ```cpp
 _interface_type * GetInterface();
@@ -694,19 +694,19 @@ _interface_type * GetInterface();
 
 ### <a name="return-value"></a>Valeur retournée
 
-Pointeur vers l’objet COM détenu.
+Un pointeur sur l’objet COM possédé.
 
 ### <a name="exceptions"></a>Exceptions
 
-En interne, `QueryInterface` est appelé sur l’objet COM détenu et toute erreur `HRESULT` est convertie en exception par <xref:System.Runtime.InteropServices.Marshal.ThrowExceptionForHR%2A>.
+En `QueryInterface` interne, est appelé sur l’objet COM possédé et toute erreur `HRESULT` est convertie en une exception par <xref:System.Runtime.InteropServices.Marshal.ThrowExceptionForHR%2A>.
 
 ### <a name="remarks"></a>Notes
 
-Le `com::ptr` ajoute une référence à l’objet COM au nom de l’appelant et conserve également sa propre référence sur l’objet COM. L’appelant doit finalement libérer la référence sur l’objet retourné ou il ne sera jamais détruit.
+L’ajout `com::ptr` d’une référence à l’objet COM au nom de l’appelant et conserve également sa propre référence sur l’objet COM. L’appelant doit finalement publier la référence sur l’objet retourné ou il ne sera jamais détruit.
 
 ### <a name="example"></a>Exemple
 
-Cet exemple implémente une classe CLR qui utilise un `com::ptr` pour encapsuler son membre privé `IXMLDOMDocument` objet. La fonction membre `GetDocument` utilise `GetInterface` pour retourner un pointeur vers l’objet COM.
+Cet exemple implémente une `com::ptr` classe CLR `IXMLDOMDocument` qui utilise un pour envelopper son objet membre privé. La `GetDocument` fonction `GetInterface` membre utilise pour retourner un pointeur à l’objet COM.
 
 ```cpp
 // comptr_getinterface.cpp
@@ -826,9 +826,9 @@ int main() {
 <word>persnickety</word>
 ```
 
-## <a name="ptrqueryinterface"></a><a name="queryInterface"></a>ptr :: QueryInterface
+## <a name="ptrqueryinterface"></a><a name="queryInterface"></a>ptr::QueryInterface
 
-Interroge l’objet COM détenu pour une interface et joint le résultat à un autre `com::ptr`.
+Interroge l’objet COM possédé pour une interface `com::ptr`et attache le résultat à un autre .
 
 ```cpp
 template<class _other_type>
@@ -839,20 +839,20 @@ void QueryInterface(
 
 ### <a name="parameters"></a>Paramètres
 
-*other*<br/>
-`com::ptr` qui obtiendra l’interface.
+*Autres*<br/>
+Le `com::ptr` qui obtiendra l’interface.
 
 ### <a name="exceptions"></a>Exceptions
 
-En interne, `QueryInterface` est appelé sur l’objet COM détenu et toute erreur `HRESULT` est convertie en exception par <xref:System.Runtime.InteropServices.Marshal.ThrowExceptionForHR%2A>.
+En `QueryInterface` interne, est appelé sur l’objet COM possédé et toute erreur `HRESULT` est convertie en une exception par <xref:System.Runtime.InteropServices.Marshal.ThrowExceptionForHR%2A>.
 
 ### <a name="remarks"></a>Notes
 
-Utilisez cette méthode pour créer un wrapper COM pour une interface différente de l’objet COM possédé par le wrapper actuel. Cette méthode appelle `QueryInterface` via l’objet COM détenu pour demander un pointeur vers une interface spécifique de l’objet COM et attache le pointeur d’interface retourné au `com::ptr`passé.
+Utilisez cette méthode pour créer un emballage COM pour une interface différente de l’objet COM appartenant à l’emballage actuel. Cette méthode `QueryInterface` passe par l’objet COM possédé pour demander un pointeur à une interface spécifique `com::ptr`de l’objet COM et attache le pointeur d’interface retourné au passage.
 
 ### <a name="example"></a>Exemple
 
-Cet exemple implémente une classe CLR qui utilise un `com::ptr` pour encapsuler son membre privé `IXMLDOMDocument` objet. La fonction membre `WriteTopLevelNode` utilise `QueryInterface` pour remplir un `com::ptr` local avec un `IXMLDOMNode` puis passe le `com::ptr` (par référence de suivi) à une fonction membre privée qui écrit les propriétés Name et Text du nœud dans la console.
+Cet exemple implémente une `com::ptr` classe CLR `IXMLDOMDocument` qui utilise un pour envelopper son objet membre privé. La `WriteTopLevelNode` fonction `QueryInterface` membre utilise `com::ptr` pour `IXMLDOMNode` remplir un `com::ptr` local avec un, puis passe le (en suivant la référence) à une fonction membre privé qui écrit le nom du nœud et les propriétés de texte à la console.
 
 ```cpp
 // comptr_queryinterface.cpp
@@ -957,9 +957,9 @@ int main() {
 <#document>persnickety</#document>
 ```
 
-## <a name="ptrrelease"></a><a name="release"></a>ptr :: Release
+## <a name="ptrrelease"></a><a name="release"></a>ptr::Libération
 
-Libère toutes les références appartenant à l’objet COM.
+Communiqués toutes les références possédées sur l’objet COM.
 
 ```cpp
 void Release();
@@ -967,11 +967,11 @@ void Release();
 
 ### <a name="remarks"></a>Notes
 
-L’appel de cette fonction libère toutes les références appartenant à l’objet COM et définit le handle interne de l’objet COM sur `nullptr`.  S’il n’existe aucune autre référence sur l’objet COM, il sera détruit.
+L’appel de cette fonction libère toutes les références possédées `nullptr`sur l’objet COM et définit la poignée interne de l’objet COM à .  Si aucune autre référence sur l’objet COM n’existe, elle sera détruite.
 
 ### <a name="example"></a>Exemple
 
-Cet exemple implémente une classe CLR qui utilise un `com::ptr` pour encapsuler son membre privé `IXMLDOMDocument` objet.  La fonction membre `ReplaceDocument` utilise `Release` pour libérer tout objet document précédent avant d’attacher le nouveau document.
+Cet exemple implémente une `com::ptr` classe CLR `IXMLDOMDocument` qui utilise un pour envelopper son objet membre privé.  La `ReplaceDocument` fonction `Release` membre utilise pour libérer tout objet de document antérieur avant d’attacher le nouveau document.
 
 ```cpp
 // comptr_release.cpp
@@ -1045,9 +1045,9 @@ int main() {
 }
 ```
 
-## <a name="ptroperator-gt"></a><a name="operator-arrow"></a>ptr :: Operator-&gt;
+## <a name="ptroperator-gt"></a><a name="operator-arrow"></a>ptr::opérateur-&gt;
 
-Opérateur d’accès aux membres, utilisé pour appeler des méthodes sur l’objet COM détenu.
+Opérateur d’accès membre, utilisé pour appeler les méthodes sur l’objet COM appartenant.
 
 ```cpp
 _detail::smart_com_ptr<_interface_type> operator->();
@@ -1055,19 +1055,19 @@ _detail::smart_com_ptr<_interface_type> operator->();
 
 ### <a name="return-value"></a>Valeur retournée
 
-`smart_com_ptr` à l’objet COM.
+A `smart_com_ptr` à l’objet COM.
 
 ### <a name="exceptions"></a>Exceptions
 
-En interne, `QueryInterface` est appelé sur l’objet COM détenu et toute erreur `HRESULT` est convertie en exception par <xref:System.Runtime.InteropServices.Marshal.ThrowExceptionForHR%2A>.
+En `QueryInterface` interne, est appelé sur l’objet COM possédé et toute erreur `HRESULT` est convertie en une exception par <xref:System.Runtime.InteropServices.Marshal.ThrowExceptionForHR%2A>.
 
 ### <a name="remarks"></a>Notes
 
-Cet opérateur vous permet d’appeler des méthodes de l’objet COM détenu. Elle retourne un `smart_com_ptr` temporaire qui gère automatiquement ses propres `AddRef` et `Release`.
+Cet opérateur vous permet d’appeler les méthodes de l’objet COM possédé. Il renvoie `smart_com_ptr` un temporaire qui `AddRef` `Release`gère automatiquement son propre et .
 
 ### <a name="example"></a>Exemple
 
-Cet exemple implémente une classe CLR qui utilise un `com::ptr` pour encapsuler son membre privé `IXMLDOMDocument` objet. La fonction `WriteDocument` utilise `operator->` pour appeler le membre `get_firstChild` de l’objet document.
+Cet exemple implémente une `com::ptr` classe CLR `IXMLDOMDocument` qui utilise un pour envelopper son objet membre privé. La `WriteDocument` fonction `operator->` sert `get_firstChild` à appeler le membre de l’objet document.
 
 ```cpp
 // comptr_op_member.cpp
@@ -1187,9 +1187,9 @@ int main() {
 <word>persnickety</word>
 ```
 
-## <a name="ptroperator"></a><a name="operator-assign"></a>ptr :: Operator =
+## <a name="ptroperator"></a><a name="operator-assign"></a>ptr::opérateur
 
-Joint un objet COM à un `com::ptr`.
+Attache un objet COM `com::ptr`à un .
 
 ```cpp
 ptr<_interface_type> % operator=(
@@ -1200,25 +1200,25 @@ ptr<_interface_type> % operator=(
 ### <a name="parameters"></a>Paramètres
 
 *_right*<br/>
-Pointeur d’interface COM à attacher.
+Le pointeur d’interface COM à attacher.
 
 ### <a name="return-value"></a>Valeur retournée
 
-Référence de suivi sur le `com::ptr`.
+Une référence de `com::ptr`suivi sur le .
 
 ### <a name="exceptions"></a>Exceptions
 
-Si le `com::ptr` possède déjà une référence à un objet COM, `operator=` lève <xref:System.InvalidOperationException>.
+Si `com::ptr` le possède déjà une référence `operator=` à <xref:System.InvalidOperationException>un objet COM, jette .
 
 ### <a name="remarks"></a>Notes
 
-L’assignation d’un objet COM à un `com::ptr` fait référence à l’objet COM, mais ne libère pas la référence de l’appelant.
+Attribuer un objet COM `com::ptr` à une référence de l’objet COM mais ne libère pas la référence de l’appelant.
 
-Cet opérateur a le même effet que `Attach`.
+Cet opérateur a le `Attach`même effet que .
 
 ### <a name="example"></a>Exemple
 
-Cet exemple implémente une classe CLR qui utilise un `com::ptr` pour encapsuler son membre privé `IXMLDOMDocument` objet.  La fonction membre `ReplaceDocument` appelle d’abord `Release` sur tout objet détenu précédemment, puis utilise `operator=` pour joindre un nouvel objet document.
+Cet exemple implémente une `com::ptr` classe CLR `IXMLDOMDocument` qui utilise un pour envelopper son objet membre privé.  La `ReplaceDocument` fonction membre `Release` fait d’abord appel `operator=` à tout objet précédemment possédé, puis utilise pour joindre un nouvel objet de document.
 
 ```cpp
 // comptr_op_assign.cpp
@@ -1292,9 +1292,9 @@ int main() {
 }
 ```
 
-## <a name="ptroperator-bool"></a><a name="operator-bool"></a>ptr :: operator bool
+## <a name="ptroperator-bool"></a><a name="operator-bool"></a>ptr::opérateur bool
 
-Opérateur permettant d’utiliser `com::ptr` dans une expression conditionnelle.
+Opérateur pour `com::ptr` l’utilisation dans une expression conditionnelle.
 
 ```cpp
 operator bool();
@@ -1302,17 +1302,17 @@ operator bool();
 
 ### <a name="return-value"></a>Valeur retournée
 
-`true` si l’objet COM détenu est valide ; Sinon, `false`.
+`true`si l’objet COM possédé est valide; `false` autrement.
 
 ### <a name="remarks"></a>Notes
 
-L’objet COM détenu est valide s’il n’est pas `nullptr`.
+L’objet COM possédé est valide `nullptr`s’il ne l’est pas .
 
-Cet opérateur convertit en `_detail_class::_safe_bool` qui est plus sûr que `bool`, car il ne peut pas être converti en type intégral.
+Cet opérateur se `_detail_class::_safe_bool` convertit `bool` à ce qui est plus sûr que parce qu’il ne peut pas être converti en un type intégral.
 
 ### <a name="example"></a>Exemple
 
-Cet exemple implémente une classe CLR qui utilise un `com::ptr` pour encapsuler son membre privé `IXMLDOMDocument` objet. La fonction membre `CreateInstance` utilise `operator bool` après avoir créé le nouvel objet document pour déterminer s’il est valide et écrit dans la console, si tel est le cas.
+Cet exemple implémente une `com::ptr` classe CLR `IXMLDOMDocument` qui utilise un pour envelopper son objet membre privé. La `CreateInstance` fonction `operator bool` membre utilise après la création du nouvel objet de document pour déterminer s’il est valide et écrit à la console si elle est.
 
 ```cpp
 // comptr_op_bool.cpp
@@ -1363,9 +1363,9 @@ int main() {
 DOM Document created.
 ```
 
-## <a name="ptroperator"></a><a name="operator-logical-not"></a>ptr :: Operator !
+## <a name="ptroperator"></a><a name="operator-logical-not"></a>ptr::opérateur!
 
-Pour déterminer si l’objet COM détenu n’est pas valide.
+opérateur pour déterminer si l’objet COM possédé est invalide.
 
 ```cpp
 bool operator!();
@@ -1373,15 +1373,15 @@ bool operator!();
 
 ### <a name="return-value"></a>Valeur retournée
 
-`true` si l’objet COM détenu n’est pas valide ; Sinon, `false`.
+`true`si l’objet COM possédé est invalide; `false` autrement.
 
 ### <a name="remarks"></a>Notes
 
-L’objet COM détenu est valide s’il n’est pas `nullptr`.
+L’objet COM possédé est valide `nullptr`s’il ne l’est pas .
 
 ### <a name="example"></a>Exemple
 
-Cet exemple implémente une classe CLR qui utilise un `com::ptr` pour encapsuler son membre privé `IXMLDOMDocument` objet.  La fonction membre `CreateInstance` utilise `operator!` pour déterminer si un objet document est déjà détenu et crée uniquement une nouvelle instance si l’objet n’est pas valide.
+Cet exemple implémente une `com::ptr` classe CLR `IXMLDOMDocument` qui utilise un pour envelopper son objet membre privé.  La `CreateInstance` fonction `operator!` membre utilise pour déterminer si un objet document est déjà possédé, et ne crée une nouvelle instance que si l’objet est invalide.
 
 ```cpp
 // comptr_op_not.cpp

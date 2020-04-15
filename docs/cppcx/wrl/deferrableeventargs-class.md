@@ -11,12 +11,12 @@ helpviewer_keywords:
 - Microsoft::WRL::DeferrableEventArgs::GetDeferral method
 - Microsoft::WRL::DeferrableEventArgs::InvokeAllFinished method
 ms.assetid: ece89267-7b72-40e1-8185-550c865b070a
-ms.openlocfilehash: 4a3786e65873d6837389ad4fa5e7d06a14d66460
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: bae2472a75ab77f138fcee0951a6b869cc7c8e82
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62398574"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81372562"
 ---
 # <a name="deferrableeventargs-class"></a>DeferrableEventArgs, classe
 
@@ -35,7 +35,7 @@ class DeferrableEventArgs : public TEventArgsInterface;
 Type d’interface qui déclare les arguments d’un événement différé.
 
 *TEventArgsClass*<br/>
-La classe qui implémente *TEventArgsInterface*.
+La classe qui met en œuvre *TEventArgsInterface*.
 
 ## <a name="members"></a>Membres
 
@@ -43,24 +43,24 @@ La classe qui implémente *TEventArgsInterface*.
 
 Nom                                                         | Description
 ------------------------------------------------------------ | -----------------------------------------------------------------------------------------------------------------------------
-[DeferrableEventArgs::GetDeferral](#getdeferral)             | Obtient une référence à la [report](/uwp/api/windows.foundation.deferral) objet qui représente un événement différé.
+[DeferrableEventArgs::GetDeferral](#getdeferral)             | Obtient une référence à [l’objet de report](/uwp/api/windows.foundation.deferral) qui représente un événement différé.
 [DeferrableEventArgs::InvokeAllFinished](#invokeallfinished) | Appelée pour indiquer que toutes les opérations de traitement d'un événement différé sont terminées.
 
 ## <a name="remarks"></a>Notes
 
 Les instances de cette classe sont passées aux gestionnaires des événements différés. Les paramètres du modèle représentent une interface qui définit les détails des arguments d’événement pour un type spécifique d’événement différé, et une classe qui implémente cette interface.
 
-La classe est présentée comme premier argument au gestionnaire d'événements qui traite l'événement différé. Vous pouvez appeler la [GetDeferral](#getdeferral) méthode pour obtenir le [report](/uwp/api/windows.foundation.deferral) objet à partir de laquelle vous pouvez obtenir toutes les informations relatives à l’événement différé. Une fois la gestion des événements terminée, vous devez appeler Complete sur l'objet Deferral. Vous devez appeler [InvokeAllFinished](#invokeallfinished) à la fin de la méthode de gestionnaire d’événements, ce qui garantit que l’achèvement de tous les événements différés est communiqué correctement.
+La classe est présentée comme premier argument au gestionnaire d'événements qui traite l'événement différé. Vous pouvez appeler la méthode [GetDeferral](#getdeferral) pour obtenir [l’objet de report](/uwp/api/windows.foundation.deferral) à partir duquel vous pouvez obtenir toutes les informations sur l’événement différé. Une fois la gestion des événements terminée, vous devez appeler Complete sur l'objet Deferral. Vous devriez alors appeler [InvokeAllFinished](#invokeallfinished) à la fin de la méthode de gestionnaire d’événement, qui garantit que l’achèvement de tous les événements différés est communiqué correctement.
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
-**En-tête :** event.h
+**En-tête:** event.h
 
-**Espace de noms :** Microsoft::wrl
+**Espace de noms :** Microsoft::WRL
 
-## <a name="getdeferral"></a>DeferrableEventArgs::GetDeferral
+## <a name="deferrableeventargsgetdeferral"></a><a name="getdeferral"></a>DeferrableEventArgs::GetDeferral
 
-Obtient une référence à la [report](/uwp/api/windows.foundation.deferral) objet qui représente un événement différé.
+Obtient une référence à [l’objet de report](/uwp/api/windows.foundation.deferral) qui représente un événement différé.
 
 ```cpp
 HRESULT GetDeferral([out, retval] Windows::Foundation::IDeferral** result)
@@ -68,14 +68,14 @@ HRESULT GetDeferral([out, retval] Windows::Foundation::IDeferral** result)
 
 ### <a name="parameters"></a>Paramètres
 
-*result*<br/>
-Un pointeur qui référence le [report](/uwp/api/windows.foundation.deferral) lors de la fin de l’appel de l’objet.
+*Résultat*<br/>
+Un pointeur qui fera référence à [l’objet de report](/uwp/api/windows.foundation.deferral) lorsque l’appel sera terminé.
 
 ### <a name="return-value"></a>Valeur de retour
 
 S_OK si l'opération réussit. Sinon, une valeur HRESULT indique l'erreur.
 
-## <a name="invokeallfinished"></a>DeferrableEventArgs::InvokeAllFinished
+## <a name="deferrableeventargsinvokeallfinished"></a><a name="invokeallfinished"></a>DeferrableEventArgs::InvokeAllFinished
 
 Appelée pour indiquer que toutes les opérations de traitement d'un événement différé sont terminées.
 
@@ -85,4 +85,4 @@ void InvokeAllFinished()
 
 ### <a name="remarks"></a>Notes
 
-Vous devez appeler cette méthode après les appels de source d’événement [InvokeAll](eventsource-class.md#invokeall). L'appel à cette méthode empêche tout autre report et force l'exécution du gestionnaire d'achèvement en l'absence de report.
+Vous devez appeler cette méthode après que la source de l’événement appelle [InvokeAll](eventsource-class.md#invokeall). L'appel à cette méthode empêche tout autre report et force l'exécution du gestionnaire d'achèvement en l'absence de report.

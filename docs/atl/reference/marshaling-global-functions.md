@@ -1,36 +1,36 @@
 ---
-title: Fonctions globales de marshaling
+title: Marshaling Global Functions
 ms.date: 11/04/2016
 f1_keywords:
 - atlbase/ATL::AtlFreeMarshalStream
 - atlbase/ATL::AtlMarshalPtrInProc
 - atlbase/ATL::AtlUnmarshalPtr
 ms.assetid: 877100b5-6ad9-44c5-a2e0-09414f1720d0
-ms.openlocfilehash: cac6e316ad6b5d3f49c171c940d9129060744aee
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: b839e93b6251a09ce79df60a49b4054d1af76cc9
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62274692"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81326262"
 ---
-# <a name="marshaling-global-functions"></a>Fonctions globales de marshaling
+# <a name="marshaling-global-functions"></a>Marshaling Global Functions
 
-Ces fonctions fournissent la prise en charge de marshaling et de conversion de données de marshaling des pointeurs d’interface.
+Ces fonctions fournissent un soutien pour le marshaling et la conversion des données de marshaling en pointeurs d’interface.
 
 > [!IMPORTANT]
->  Les fonctions répertoriées dans le tableau suivant ne peut pas être utilisées dans les applications qui s’exécutent dans le Windows Runtime.
+> Les fonctions énumérées dans le tableau suivant ne peuvent pas être utilisées dans les applications qui s’exécutent dans le Windows Runtime.
 
 |||
 |-|-|
-|[AtlFreeMarshalStream](#atlfreemarshalstream)|Libère les données de marshaling et les `IStream` pointeur.|
-|[AtlMarshalPtrInProc](#atlmarshalptrinproc)|Crée un objet de flux et marshale le pointeur d’interface spécifié.|
-|[AtlUnmarshalPtr](#atlunmarshalptr)|Convertit les données de marshaling d’un flux en un pointeur d’interface.|
+|[AtlFreeMarshalStream](#atlfreemarshalstream)|Communiqués les données `IStream` du maréchal et le pointeur.|
+|[AtlMarshalPtrInProc](#atlmarshalptrinproc)|Crée un nouvel objet de flux et marshals le pointeur d’interface spécifié.|
+|[AtlUnmarshalPtr](#atlunmarshalptr)|Convertit les données de marshaling d’un flux en pointeur d’interface.|
 
-## <a name="requirements"></a>Configuration requise :
+## <a name="requirements"></a>Conditions requises :
 
-**En-tête :** atlbase.h
+**En-tête:** atlbase.h
 
-##  <a name="atlfreemarshalstream"></a>  AtlFreeMarshalStream
+## <a name="atlfreemarshalstream"></a><a name="atlfreemarshalstream"></a>AtlFreeMarshalStream
 
 Libère les données de marshaling dans le flux, puis libère le pointeur de flux.
 
@@ -41,13 +41,13 @@ HRESULT AtlFreeMarshalStream(IStream* pStream);
 ### <a name="parameters"></a>Paramètres
 
 *pStream*<br/>
-[in] Un pointeur vers le `IStream` interface sur le flux utilisé pour le marshaling.
+[dans] Un pointeur `IStream` à l’interface sur le flux utilisé pour le marshaling.
 
 ### <a name="example"></a>Exemple
 
-Consultez l’exemple de [AtlMarshalPtrInProc](#atlmarshalptrinproc).
+Voir l’exemple pour [AtlMarshalPtrInProc](#atlmarshalptrinproc).
 
-##  <a name="atlmarshalptrinproc"></a>  AtlMarshalPtrInProc
+## <a name="atlmarshalptrinproc"></a><a name="atlmarshalptrinproc"></a>AtlMarshalPtrInProc
 
 Crée un objet de flux, écrit le CLSID du proxy dans le flux, puis marshale le pointeur d'interface spécifié en écrivant les données nécessaires pour initialiser le proxy dans le flux.
 
@@ -60,14 +60,14 @@ HRESULT AtlMarshalPtrInProc(
 
 ### <a name="parameters"></a>Paramètres
 
-*pUnk*<br/>
-[in] Pointeur vers l’interface doivent être marshalées.
+*Punk*<br/>
+[dans] Un pointeur à l’interface à mobiliser.
 
-*iid*<br/>
-[in] Le GUID de l’interface qui est marshalé.
+*Iid*<br/>
+[dans] Le GUID de l’interface étant mobilisé.
 
 *ppStream*<br/>
-[out] Un pointeur vers le `IStream` interface sur le nouvel objet de flux de données utilisé pour le regroupement.
+[out] Un pointeur `IStream` à l’interface sur le nouvel objet de flux utilisé pour le marshaling.
 
 ### <a name="return-value"></a>Valeur de retour
 
@@ -75,17 +75,17 @@ Une valeur HRESULT standard.
 
 ### <a name="remarks"></a>Notes
 
-L’indicateur MSHLFLAGS_TABLESTRONG est défini pour le pointeur peut être marshalé en plusieurs flux de données. Le pointeur peut également être marshalé plusieurs fois.
+Le drapeau MSHLFLAGS_TABLESTRONG est fixé de sorte que le pointeur peut être monté sur plusieurs ruisseaux. Le pointeur peut également être non-ramshaled plusieurs fois.
 
-Si le marshaling échoue, le pointeur de flux est publié.
+En cas d’échec du marshaling, le pointeur du flux est libéré.
 
-`AtlMarshalPtrInProc` peut uniquement être utilisé sur un pointeur vers un objet dans le processus.
+`AtlMarshalPtrInProc`ne peut être utilisé que sur un pointeur à un objet en cours.
 
 ### <a name="example"></a>Exemple
 
 [!code-cpp[NVC_ATL_COM#50](../../atl/codesnippet/cpp/marshaling-global-functions_1.cpp)]
 
-##  <a name="atlunmarshalptr"></a>  AtlUnmarshalPtr
+## <a name="atlunmarshalptr"></a><a name="atlunmarshalptr"></a>AtlUnmarshalPtr
 
 Convertit les données de marshaling du flux en un pointeur d'interface qui peut être utilisé par le client.
 
@@ -99,13 +99,13 @@ HRESULT AtlUnmarshalPtr(
 ### <a name="parameters"></a>Paramètres
 
 *pStream*<br/>
-[in] Un pointeur vers le flux en cours démarshalée.
+[dans] Un pointeur pour le ruisseau étant non-ramshaled.
 
-*iid*<br/>
-[in] Le GUID de l’interface en cours démarshalée.
+*Iid*<br/>
+[dans] Le GUID de l’interface étant non-notée.
 
 *ppUnk*<br/>
-[out] Pointeur vers l’interface démarshalé.
+[out] Un pointeur à l’interface non ramshalée.
 
 ### <a name="return-value"></a>Valeur de retour
 
@@ -113,7 +113,7 @@ Une valeur HRESULT standard.
 
 ### <a name="example"></a>Exemple
 
-Consultez l’exemple de [AtlMarshalPtrInProc](#atlmarshalptrinproc).
+Voir l’exemple pour [AtlMarshalPtrInProc](#atlmarshalptrinproc).
 
 ## <a name="see-also"></a>Voir aussi
 

@@ -8,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - CD2DRoundedRect [MFC], CD2DRoundedRect
 ms.assetid: 06207fb5-e92b-41c0-bceb-b45d8f466531
-ms.openlocfilehash: 51913a0d261a0bc91aef8f8504547a10c3e1cf36
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 5189f3d824c008845570eac6eead4a35be1e483d
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62396260"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81369087"
 ---
 # <a name="cd2droundedrect-class"></a>CD2DRoundedRect, classe
 
@@ -31,7 +31,7 @@ class CD2DRoundedRect : public D2D1_ROUNDED_RECT;
 
 |Nom|Description|
 |----------|-----------------|
-|[CD2DRoundedRect::CD2DRoundedRect](#cd2droundedrect)|Surchargé. Construit un `CD2DRoundedRect` à partir de l’objet `D2D1_ROUNDED_RECT` objet.|
+|[CD2DRoundedRect::CD2DRoundedRect](#cd2droundedrect)|Surchargé. Construit un `CD2DRoundedRect` objet `D2D1_ROUNDED_RECT` à partir de l’objet.|
 
 ## <a name="inheritance-hierarchy"></a>Hiérarchie d'héritage
 
@@ -39,13 +39,13 @@ class CD2DRoundedRect : public D2D1_ROUNDED_RECT;
 
 [CD2DRoundedRect](../../mfc/reference/cd2droundedrect-class.md)
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
-**En-tête :** afxrendertarget.h
+**En-tête:** afxrendertarget.h
 
-##  <a name="cd2droundedrect"></a>  CD2DRoundedRect::CD2DRoundedRect
+## <a name="cd2droundedrectcd2droundedrect"></a><a name="cd2droundedrect"></a>CD2DRoundedRect::CD2DRoundedRect
 
-Construit un objet CD2DRoundedRect à partir de l’objet de CD2DRectF.
+Construit un objet CD2DRoundedRect à partir de l’objet CD2DRectF.
 
 ```
 CD2DRoundedRect(
@@ -61,7 +61,7 @@ CD2DRoundedRect(const D2D1_ROUNDED_RECT* rectIn);
 *rectIn*<br/>
 rectangle source
 
-*sizeRadius*<br/>
+*tailleRadius*<br/>
 taille de rayon
 
 ## <a name="see-also"></a>Voir aussi

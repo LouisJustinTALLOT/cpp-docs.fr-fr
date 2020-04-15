@@ -6,19 +6,19 @@ f1_keywords:
 helpviewer_keywords:
 - is_execution_policy class
 - is_execution_policy struct
-ms.openlocfilehash: b1be749d731f15b465f74e68d9cfa922017bf629
-ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
+ms.openlocfilehash: 899e14dcbae4f734867260af934ce0c8724ecaa6
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68268971"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81371630"
 ---
-# <a name="isexecutionpolicy-struct"></a>is_execution_policy Struct
+# <a name="is_execution_policy-struct"></a>is_execution_policy Struct
 
-Détecte les stratégies d’exécution pour les besoins à l’exclusion des signatures de fonction de la participation de résolution de surcharge ambiguë dans le cas contraire.
+Détecte les politiques d’exécution dans le but d’exclure les signatures de fonctions de la participation par ailleurs ambigue à la résolution de la surcharge.
 
 ## <a name="syntax"></a>Syntaxe
 
-```
+```cpp
 template<class T> struct is_execution_policy { see below };
 ```
