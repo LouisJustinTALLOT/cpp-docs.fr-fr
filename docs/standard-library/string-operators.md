@@ -20,22 +20,22 @@ helpviewer_keywords:
 - std::operator&lt; (string)
 - std::operator&lt;&lt; (string)
 - std::operator&lt;= (string), std::operator== (string)
-ms.openlocfilehash: f9aa07f7ca30ded5f61e77a327efafe91aa5c269
-ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
+ms.openlocfilehash: fef2eb784eca9c9eabbdcd727b051d5c2a4ccfd2
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/16/2020
-ms.locfileid: "79419412"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81376646"
 ---
 # <a name="ltstringgt-operators"></a>&lt;string&gt;, opérateurs
 
 ||||
 |-|-|-|
-|[operator!=](#op_neq)|[operator&gt;](#op_gt)|[operator&gt;&gt;](#op_gt_gt)|
-|[operator&gt;=](#op_gt_eq)|[operator&lt;](#op_lt)|[operator&lt;&lt;](#op_lt_lt)|
-|[operator&lt;=](#op_lt_eq)|[operator+](#op_add)|[operator==](#op_eq_eq)|
+|[opérateur!](#op_neq)|[Opérateur&gt;](#op_gt)|[Opérateur&gt;&gt;](#op_gt_gt)|
+|[Opérateur&gt;=](#op_gt_eq)|[Opérateur&lt;](#op_lt)|[Opérateur&lt;&lt;](#op_lt_lt)|
+|[Opérateur&lt;=](#op_lt_eq)|[opérateur](#op_add)|[opérateur](#op_eq_eq)|
 
-## <a name="op_add"></a>  operator+
+## <a name="operator"></a><a name="op_add"></a>opérateur
 
 Concatène deux objets string.
 
@@ -103,10 +103,10 @@ basic_string<CharType, Traits, Allocator>&& operator+(
 
 ### <a name="parameters"></a>Paramètres
 
-\ *gauche*
+*Gauche*\
 Chaîne de style C ou objet de type `basic_string` à concaténer.
 
-\ *droit*
+*Oui*\
 Chaîne de style C ou objet de type `basic_string` à concaténer.
 
 ### <a name="return-value"></a>Valeur de retour
@@ -115,7 +115,7 @@ Chaîne qui est la concaténation des chaînes d'entrée.
 
 ### <a name="remarks"></a>Notes
 
-La fonction chaque surcharge `operator+` pour concaténer deux objets de classe de modèle [basic_string](../standard-library/basic-string-class.md). Toutes les `basic_string< CharType, Traits, Allocator>(Left).append(right)`retournent efficacement. Pour plus d’informations, consultez [Append](../standard-library/basic-string-class.md#append).
+Les fonctions chaque `operator+` surcharge pour concatenate deux objets de modèle de classe [basic_string Classe](../standard-library/basic-string-class.md). Tous effectivement `basic_string< CharType, Traits, Allocator>(Left).append(right)`revenir . Pour plus d’informations, voir [l’annexe](../standard-library/basic-string-class.md#append).
 
 ### <a name="example"></a>Exemple
 
@@ -169,7 +169,7 @@ The string concatenating s1 & s3 is: antiheroine
 The string concatenating s1 & s3 is: antiheroine!
 ```
 
-## <a name="op_neq"></a>  operator!=
+## <a name="operator"></a><a name="op_neq"></a>opérateur!
 
 Teste si l'objet string situé à gauche de l'opérateur n'est pas égal à l'objet string situé à droite.
 
@@ -192,10 +192,10 @@ bool operator!=(
 
 ### <a name="parameters"></a>Paramètres
 
-\ *gauche*
+*Gauche*\
 Chaîne de style C ou objet de type `basic_string` à comparer.
 
-\ *droit*
+*Oui*\
 Chaîne de style C ou objet de type `basic_string` à comparer.
 
 ### <a name="return-value"></a>Valeur de retour
@@ -260,7 +260,7 @@ The strings s1 & s3 are equal.
 The strings s3 & s2 are not equal.
 ```
 
-## <a name="op_eq_eq"></a>  operator==
+## <a name="operator"></a><a name="op_eq_eq"></a>opérateur
 
 Teste si l'objet string situé à gauche de l'opérateur est égal à l'objet string situé à droite.
 
@@ -283,10 +283,10 @@ bool operator==(
 
 ### <a name="parameters"></a>Paramètres
 
-\ *gauche*
+*Gauche*\
 Chaîne de style C ou objet de type `basic_string` à comparer.
 
-\ *droit*
+*Oui*\
 Chaîne de style C ou objet de type `basic_string` à comparer.
 
 ### <a name="return-value"></a>Valeur de retour
@@ -351,7 +351,7 @@ The strings s1 & s3 are equal.
 The strings s3 & s2 are not equal.
 ```
 
-## <a name="op_lt"></a>  operator&lt;
+## <a name="operatorlt"></a><a name="op_lt"></a>Opérateur&lt;
 
 Teste si l'objet string situé à gauche de l'opérateur est inférieur à l'objet string situé à droite.
 
@@ -374,10 +374,10 @@ bool operator<(
 
 ### <a name="parameters"></a>Paramètres
 
-\ *gauche*
+*Gauche*\
 Chaîne de style C ou objet de type `basic_string` à comparer.
 
-\ *droit*
+*Oui*\
 Chaîne de style C ou objet de type `basic_string` à comparer.
 
 ### <a name="return-value"></a>Valeur de retour
@@ -447,7 +447,7 @@ The string s1 is not less than the string s3.
 The string s3 is less than the string s2.
 ```
 
-## <a name="op_lt_eq"></a>  operator&lt;=
+## <a name="operatorlt"></a><a name="op_lt_eq"></a>Opérateur&lt;=
 
 Teste si l'objet string situé à gauche de l'opérateur est inférieur ou égal à l'objet string situé à droite.
 
@@ -470,10 +470,10 @@ bool operator<=(
 
 ### <a name="parameters"></a>Paramètres
 
-\ *gauche*
+*Gauche*\
 Chaîne de style C ou objet de type `basic_string` à comparer.
 
-\ *droit*
+*Oui*\
 Chaîne de style C ou objet de type `basic_string` à comparer.
 
 ### <a name="return-value"></a>Valeur de retour
@@ -550,7 +550,7 @@ The string s1 is less than or equal to the string s3.
 The string s2 is greater than the string s3.
 ```
 
-## <a name="op_lt_lt"></a>  operator&lt;&lt;
+## <a name="operatorltlt"></a><a name="op_lt_lt"></a>Opérateur&lt;&lt;
 
 Fonction de modèle qui écrit une chaîne dans le flux de sortie.
 
@@ -566,18 +566,18 @@ basic_ostream<CharType, Traits>& operator<<(
 *_Ostr*\
 Flux de sortie dans lequel s’effectue l’écriture.
 
-*str*\
+*Str*\
 Chaîne à entrer dans le flux de sortie.
 
 ### <a name="return-value"></a>Valeur de retour
 
-Écrit la valeur de la chaîne spécifiée dans le flux de sortie *_Ostr*.
+Écrit la valeur de la chaîne spécifiée au flux de sortie *_Ostr*.
 
 ### <a name="remarks"></a>Notes
 
-L’opérateur de fonction de modèle Overloads **< <** pour insérer un objet *Str* de classe template [Basic_string](../standard-library/basic-string-class.md) dans le flux *\_OSTR*. La fonction retourne effectivement `_Ostr.write( str.c_str, str.size )`.
+La fonction de modèle surcharge **l’opérateur<<** pour insérer un *str* d’objet de modèle de classe [basic_string](../standard-library/basic-string-class.md) dans le flux * \_Ostr*. La fonction `_Ostr.write( str.c_str, str.size )`revient effectivement .
 
-## <a name="op_gt"></a>  operator&gt;
+## <a name="operatorgt"></a><a name="op_gt"></a>Opérateur&gt;
 
 Teste si l'objet string situé à gauche de l'opérateur est supérieur à l'objet string situé à droite.
 
@@ -600,10 +600,10 @@ bool operator>(
 
 ### <a name="parameters"></a>Paramètres
 
-\ *gauche*
+*Gauche*\
 Chaîne de style C ou objet de type `basic_string` à comparer.
 
-\ *droit*
+*Oui*\
 Chaîne de style C ou objet de type `basic_string` à comparer.
 
 ### <a name="return-value"></a>Valeur de retour
@@ -680,7 +680,7 @@ The string s3 is greater than the string s1.
 The string s2 is greater than the string s3.
 ```
 
-## <a name="op_gt_eq"></a>  operator&gt;=
+## <a name="operatorgt"></a><a name="op_gt_eq"></a>Opérateur&gt;=
 
 Teste si l'objet string situé à gauche de l'opérateur est supérieur ou égal à l'objet string situé à droite.
 
@@ -703,10 +703,10 @@ bool operator>=(
 
 ### <a name="parameters"></a>Paramètres
 
-\ *gauche*
+*Gauche*\
 Chaîne de style C ou objet de type `basic_string` à comparer.
 
-\ *droit*
+*Oui*\
 Chaîne de style C ou objet de type `basic_string` à comparer.
 
 ### <a name="return-value"></a>Valeur de retour
@@ -783,7 +783,7 @@ The string s3 is greater than or equal to the string s1.
 The string s2 is greater than or equal to the string s3.
 ```
 
-## <a name="op_gt_gt"></a>  operator&gt;&gt;
+## <a name="operatorgtgt"></a><a name="op_gt_gt"></a>Opérateur&gt;&gt;
 
 Fonction de modèle qui lit une chaîne à partir d’un flux d’entrée.
 
@@ -799,18 +799,18 @@ basic_istream<CharType, Traits>& operator>>(
 *_Istr*\
 Le flux d’entrée utilisé pour extraire la séquence.
 
-\ *droit*
+*Oui*\
 La chaîne qui est extraite du flux d’entrée.
 
 ### <a name="return-value"></a>Valeur de retour
 
-Lit la valeur de la chaîne spécifiée à partir de *_Istr* et la retourne à *droite*.
+Lit la valeur de la chaîne spécifiée à partir de *_Istr* et la renvoie à *droite.*
 
 ### <a name="remarks"></a>Notes
 
 L’opérateur ignore les espaces blancs de début à moins que l’indicateur `skipws` soit défini. Il lit tous les caractères suivants jusqu’à ce que le caractère suivant soit un espace blanc ou que la fin du fichier soit atteinte.
 
-L’opérateur de surcharge de fonction de modèle **> >** pour remplacer la séquence contrôlée par *Right* par une séquence d’éléments extraits du flux *_Istr*. L’extraction s’arrête :
+La fonction de modèle surcharge **l’opérateur>>** pour remplacer la séquence contrôlée par *la droite* par une séquence d’éléments extraits du flux *_Istr*. L’extraction s’arrête :
 
 - À la fin du fichier.
 
@@ -818,9 +818,9 @@ L’opérateur de surcharge de fonction de modèle **> >** pour remplacer la sé
 
 Une fois que la fonction a extrait `_Istr`. [max_size](../standard-library/basic-string-class.md#max_size) éléments.
 
-- Une fois que la fonction a extrait un élément *ch* pour lequel [use_facet](../standard-library/basic-filebuf-class.md#open)< **CType**\< **CharType**> > (`getloc`). **is**( **ctype**\< **CharType**>:: **Space**, *ch*) a la valeur true, auquel cas le caractère est remis.
+- Une fois que la fonction a extrait un élément *ch* pour lequel [use_facet](../standard-library/basic-filebuf-class.md#open)< **ctype**\< **CharType**> >( `getloc`). **is**( **ctype**\< **CharType**>:: **space**, *ch*) a la valeur true, auquel cas le caractère est replacé.
 
-Si la fonction n’extrait aucun élément, elle appelle [SetState](../standard-library/basic-ios-class.md#setstate)(`ios_base::failbit`). Dans tous les cas, elle appelle **istr**. **Width**(0) et **retourne \*.**
+Si la fonction n’extrait aucun élément, elle appelle [setstate](../standard-library/basic-ios-class.md#setstate)(`ios_base::failbit`). Dans tous les cas, elle appelle **istr**. **width**(0) et retourne \* **this**.
 
 ### <a name="example"></a>Exemple
 
@@ -843,4 +843,4 @@ int main( )
 
 ## <a name="see-also"></a>Voir aussi
 
-[\<string>](../standard-library/string.md)
+[\<>de cordes](../standard-library/string.md)

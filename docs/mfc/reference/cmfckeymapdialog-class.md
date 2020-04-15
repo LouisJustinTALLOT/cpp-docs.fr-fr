@@ -1,5 +1,5 @@
 ---
-title: Cmfckeymapdialog, classe
+title: CMFCKeyMapDialog, classe
 ms.date: 11/04/2016
 f1_keywords:
 - CMFCKeyMapDialog
@@ -26,16 +26,16 @@ helpviewer_keywords:
 - CMFCKeyMapDialog [MFC], PrintKeyMap
 - CMFCKeyMapDialog [MFC], SetColumnsWidth
 ms.assetid: 5feb4942-d636-462d-a162-0104dd320f4e
-ms.openlocfilehash: 65aa5ab0f24999ee23a97f383577b69584825502
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 22aa006ce214ca720192bb761e2ff2b35a64fce3
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62388499"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81374417"
 ---
-# <a name="cmfckeymapdialog-class"></a>Cmfckeymapdialog, classe
+# <a name="cmfckeymapdialog-class"></a>CMFCKeyMapDialog, classe
 
-Le `CMFCKeyMapDialog` classe prend en charge un contrôle qui mappe des commandes à des touches du clavier.
+La `CMFCKeyMapDialog` classe prend en charge un contrôle qui cartographie les commandes aux touches du clavier.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -55,26 +55,26 @@ class CMFCKeyMapDialog : public CDialogEx
 
 |Nom|Description|
 |----------|-----------------|
-|[CMFCKeyMapDialog::DoModal](#domodal)|Affiche une boîte de dialogue de mappage de clavier.|
+|[CMFCKeyMapDialog::DoModal](#domodal)|Affiche une boîte de dialogue de cartographie du clavier.|
 
 ### <a name="protected-methods"></a>Méthodes protégées
 
 |Nom|Description|
 |----------|-----------------|
-|[CMFCKeyMapDialog::FormatItem](#formatitem)|Appelé par l’infrastructure pour générer une chaîne qui décrit un mappage de clé. Par défaut, la chaîne contient le nom de commande, les touches de raccourci utilisées et la description de la clé contextuel.|
-|[CMFCKeyMapDialog::GetCommandKeys](#getcommandkeys)|Récupère une chaîne qui contient une liste des touches de raccourci associées à la commande spécifiée.|
-|[CMFCKeyMapDialog::OnInsertItem](#oninsertitem)|Appelé par l’infrastructure avant un nouvel élément est inséré dans le contrôle de liste interne qui prend en charge le contrôle de mappage du clavier.|
-|[CMFCKeyMapDialog::OnPrintHeader](#onprintheader)|Appelé par l’infrastructure pour imprimer l’en-tête pour le mappage du clavier sur une nouvelle page.|
-|[CMFCKeyMapDialog::OnPrintItem](#onprintitem)|Appelé par l’infrastructure pour imprimer un élément de mappage du clavier.|
-|[CMFCKeyMapDialog::OnSetColumns](#onsetcolumns)|Appelé par l’infrastructure pour définir des légendes pour les colonnes dans le contrôle de liste interne qui prend en charge le contrôle de mappage du clavier.|
-|[CMFCKeyMapDialog::PrintKeyMap](#printkeymap)|Appelé par l’infrastructure quand un utilisateur clique sur le **impression** bouton.|
-|[CMFCKeyMapDialog::SetColumnsWidth](#setcolumnswidth)|Appelé par l’infrastructure pour définir la largeur des colonnes dans le contrôle de liste interne qui prend en charge le contrôle de mappage du clavier.|
+|[CMFCKeyMapDialog::FormatItem](#formatitem)|Appelé par le cadre pour construire une chaîne qui décrit une cartographie clé. Par défaut, la chaîne contient le nom de commande, les touches de raccourci utilisées et la description des clés de raccourci.|
+|[CMFCKeyMapDialog::GetCommandKeys](#getcommandkeys)|Récupère une chaîne qui contient une liste de touches de raccourci associée à la commande spécifiée.|
+|[CMFCKeyMapDialog::OnInsertItem](#oninsertitem)|Appelé par le cadre avant qu’un nouvel élément soit inséré dans le contrôle de liste interne qui prend en charge le contrôle de cartographie du clavier.|
+|[CMFCKeyMapDialog::OnPrintHeader](#onprintheader)|Appelé par le cadre pour imprimer l’en-tête pour la carte du clavier sur une nouvelle page.|
+|[CMFCKeyMapDialog::OnPrintItem](#onprintitem)|Appelé par le cadre pour imprimer un élément de cartographie du clavier.|
+|[CMFCKeyMapDialog::OnSetColumns](#onsetcolumns)|Appelé par le cadre pour définir les légendes pour les colonnes dans le contrôle de liste interne qui prend en charge le contrôle de cartographie du clavier.|
+|[CMFCKeyMapDialog::PrintKeyMap](#printkeymap)|Appelé par le cadre lorsqu’un utilisateur clique sur le bouton **Imprimer.**|
+|[CMFCKeyMapDialog::SetColumnsWidth](#setcolumnswidth)|Appelé par le cadre pour définir la largeur des colonnes dans le contrôle de liste interne qui prend en charge le contrôle de cartographie du clavier.|
 
 ## <a name="remarks"></a>Notes
 
-Utilisez la `CMFCKeyMapDialog` classe pour implémenter une boîte de dialogue de mappage de clavier redimensionnable. La boîte de dialogue utilise un contrôle list view pour afficher les raccourcis clavier et leurs commandes associées.
+Utilisez `CMFCKeyMapDialog` la classe pour implémenter une boîte de dialogue de cartographie du clavier resizable. La boîte de dialogue utilise un contrôle de vue de liste pour afficher les raccourcis du clavier et leurs commandes associées.
 
-Pour utiliser le `CMFCKeyMapDialog` de classe dans une application, passez un pointeur vers la fenêtre frame principale en tant que paramètre à la `CMFCKeyMapDialog` constructeur. Appelez ensuite la `DoModal` méthode de démarrage d’une boîte de dialogue modale.
+Pour utiliser `CMFCKeyMapDialog` la classe dans une application, passez dans un pointeur `CMFCKeyMapDialog` à la fenêtre de cadre principale comme paramètre pour le constructeur. Ensuite, `DoModal` appelez la méthode pour démarrer une boîte de dialogue modal.
 
 ## <a name="inheritance-hierarchy"></a>Hiérarchie d'héritage
 
@@ -90,11 +90,11 @@ Pour utiliser le `CMFCKeyMapDialog` de classe dans une application, passez un po
 
 [CMFCKeyMapDialog](../../mfc/reference/cmfckeymapdialog-class.md)
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
-**En-tête :** afxkeymapdialog.h
+**En-tête:** afxkeymapdialog.h
 
-##  <a name="cmfckeymapdialog"></a>  CMFCKeyMapDialog::CMFCKeyMapDialog
+## <a name="cmfckeymapdialogcmfckeymapdialog"></a><a name="cmfckeymapdialog"></a>CMFCKeyMapDialog::CMFCKeyMapDialog
 
 Construit un objet `CMFCKeyMapDialog`.
 
@@ -107,22 +107,22 @@ CMFCKeyMapDialog(
 ### <a name="parameters"></a>Paramètres
 
 *pWndParentFrame*<br/>
-[in] Un pointeur vers la fenêtre parente de la `CMFCKeyMapDialog` objet.
+[dans] Un pointeur à la `CMFCKeyMapDialog` fenêtre parente de l’objet.
 
 *bEnablePrint*<br/>
-[in] TRUE si la liste des touches d’accès rapide peut être imprimée ; Sinon, FALSE. La valeur par défaut est FALSE.
+[dans] VRAI si la liste des touches d’accélérateur peut être imprimée; autrement, FALSE. La valeur par défaut est FALSE.
 
 ### <a name="remarks"></a>Notes
 
 ### <a name="example"></a>Exemple
 
-L’exemple suivant montre comment construire un objet de la `CMFCKeyMapDialog` classe. Cet exemple fait partie de la [exemple de démonstration Visual Studio](../../overview/visual-cpp-samples.md).
+L’exemple suivant montre comment construire `CMFCKeyMapDialog` un objet de la classe. Cet exemple fait partie de [l’échantillon Visual Studio Demo](../../overview/visual-cpp-samples.md).
 
 [!code-cpp[NVC_MFC_VisualStudioDemo#21](../../mfc/codesnippet/cpp/cmfckeymapdialog-class_1.cpp)]
 
-##  <a name="domodal"></a>  CMFCKeyMapDialog::DoModal
+## <a name="cmfckeymapdialogdomodal"></a><a name="domodal"></a>CMFCKeyMapDialog::DoModal
 
-Affiche une boîte de dialogue de mappage de clavier.
+Affiche une boîte de dialogue de cartographie du clavier.
 
 ```
 virtual INT_PTR DoModal();
@@ -130,15 +130,15 @@ virtual INT_PTR DoModal();
 
 ### <a name="return-value"></a>Valeur de retour
 
-Un entier signé, tel que IDOK ou IDCANCEL, qui est passé à la [CDialog::EndDialog](../../mfc/reference/cdialog-class.md#enddialog) (méthode). La méthode, ferme à son tour, la boîte de dialogue. Pour plus d’informations, consultez [CDialog::DoModal](../../mfc/reference/cdialog-class.md#domodal).
+Un intégriste signé, comme IDOK ou IDCANCEL, qui est transmis à la méthode [CDialog::EndDialog.](../../mfc/reference/cdialog-class.md#enddialog) La méthode, à son tour, ferme la boîte de dialogue. Pour plus d’informations, voir [CDialog::DoModal](../../mfc/reference/cdialog-class.md#domodal).
 
 ### <a name="remarks"></a>Notes
 
-La boîte de dialogue de mappage de clavier vous permet de sélectionner et affecter les touches accélérateur à différentes catégories de commandes. En outre, vous pouvez copier les touches accélérateur sélectionné et leur description dans le Presse-papiers.
+La boîte de dialogue de cartographie du clavier vous permet de sélectionner et d’attribuer des touches d’accélérateur à différentes catégories de commandes. En outre, vous pouvez copier les clés d’accélérateur sélectionnées et leur description au presse-papiers.
 
-##  <a name="formatitem"></a>  CMFCKeyMapDialog::FormatItem
+## <a name="cmfckeymapdialogformatitem"></a><a name="formatitem"></a>CMFCKeyMapDialog::FormatItem
 
-Appelé par l’infrastructure pour générer une chaîne qui décrit un mappage de clé. Par défaut, la chaîne contient le nom de commande, les touches de raccourci utilisées et la description de la clé contextuel.
+Appelé par le cadre pour construire une chaîne qui décrit une cartographie clé. Par défaut, la chaîne contient le nom de commande, les touches de raccourci utilisées et la description des clés de raccourci.
 
 ```
 virtual CString FormatItem(int nItem) const;
@@ -146,18 +146,18 @@ virtual CString FormatItem(int nItem) const;
 
 ### <a name="parameters"></a>Paramètres
 
-*nItem*<br/>
-[in] Index de base zéro d’un élément dans la liste interne de mappages de la clé.
+*nItem (en)*<br/>
+[dans] L’indice zéro d’un élément dans la liste interne des cartes clés.
 
 ### <a name="return-value"></a>Valeur de retour
 
-Un `CString` objet qui contient le texte de l’élément mis en forme.
+Un `CString` objet qui contient le texte de l’élément formaté.
 
 ### <a name="remarks"></a>Notes
 
-##  <a name="getcommandkeys"></a>  CMFCKeyMapDialog::GetCommandKeys
+## <a name="cmfckeymapdialoggetcommandkeys"></a><a name="getcommandkeys"></a>CMFCKeyMapDialog::GetCommandKeys
 
-Récupère une valeur de chaîne. La chaîne contient une liste des touches de raccourci qui sont associés à une commande spécifiée.
+Récupère une valeur de chaîne. La chaîne contient une liste de touches de raccourci qui sont associées à une commande spécifiée.
 
 ```
 virtual CString GetCommandKeys(UINT uiCmdID) const;
@@ -166,17 +166,17 @@ virtual CString GetCommandKeys(UINT uiCmdID) const;
 ### <a name="parameters"></a>Paramètres
 
 *uiCmdID*<br/>
-[in] Un ID de commande.
+[dans] Une pièce d’identité de commande.
 
 ### <a name="return-value"></a>Valeur de retour
 
-Un point-virgule (« ; ») liste des touches de raccourci associée à la commande spécifiée.
+Une liste de clés de raccourcis délimitées par le point de-œque (;) associée à la commande spécifiée.
 
 ### <a name="remarks"></a>Notes
 
-##  <a name="oninsertitem"></a>  CMFCKeyMapDialog::OnInsertItem
+## <a name="cmfckeymapdialogoninsertitem"></a><a name="oninsertitem"></a>CMFCKeyMapDialog::OnInsertItem
 
-Appelé par l’infrastructure avant un nouvel élément est inséré dans un contrôle de liste interne qui prend en charge le contrôle de mappage du clavier.
+Appelé par le cadre avant qu’un nouvel élément soit inséré dans un contrôle de liste interne qui prend en charge le contrôle de cartographie du clavier.
 
 ```
 virtual void OnInsertItem(
@@ -187,16 +187,16 @@ virtual void OnInsertItem(
 ### <a name="parameters"></a>Paramètres
 
 *pButton*<br/>
-[in] Pointeur vers un bouton de barre d’outils qui est utilisé pour mapper une combinaison de touches du clavier pour un nom de la commande et une description. L’élément de mappage de clés est stockée dans un contrôle de liste interne.
+[dans] Un pointeur vers un bouton de barre d’outils qui est utilisé pour cartographier une combinaison de touches de clavier à un nom de commande et une description. L’élément de la carte clé est stocké dans un contrôle de liste interne.
 
-*nItem*<br/>
-[in] Index de base zéro qui spécifie où insérer le nouvel élément de mappage de clés dans le contrôle de liste interne.
+*nItem (en)*<br/>
+[dans] Un index à base nulle qui précise où insérer le nouvel élément de la carte clé dans le contrôle de liste interne.
 
 ### <a name="remarks"></a>Notes
 
-##  <a name="onprintheader"></a>  CMFCKeyMapDialog::OnPrintHeader
+## <a name="cmfckeymapdialogonprintheader"></a><a name="onprintheader"></a>CMFCKeyMapDialog::OnPrintHeader
 
-Appelé par l’infrastructure pour imprimer l’en-tête pour le mappage du clavier sur une nouvelle page.
+Appelé par le cadre pour imprimer l’en-tête pour la carte du clavier sur une nouvelle page.
 
 ```
 virtual int OnPrintHeader(
@@ -207,26 +207,26 @@ virtual int OnPrintHeader(
 
 ### <a name="parameters"></a>Paramètres
 
-*dc*<br/>
-[in] Le contexte de périphérique pour l’imprimante.
+*Dc*<br/>
+[dans] Le contexte de l’appareil pour l’imprimante.
 
 *nPage*<br/>
-[in] Le numéro de page à imprimer.
+[dans] Le numéro de page à imprimer.
 
-*cx*<br/>
-[in] Le décalage horizontal de l’en-tête, en pixels.
+*Cx*<br/>
+[dans] Le décalage horizontal de l’en-tête, en pixels.
 
 ### <a name="return-value"></a>Valeur de retour
 
-En cas de réussite, la hauteur du texte imprimé. Pour plus d’informations, consultez la section de la valeur de retour de [CDC::DrawText](../../mfc/reference/cdc-class.md#drawtext).
+En cas de succès, la hauteur du texte imprimé. Pour plus d’informations, consultez la section Valeur de retour de [CDC::DrawText](../../mfc/reference/cdc-class.md#drawtext).
 
 ### <a name="remarks"></a>Notes
 
-L’infrastructure utilise cette méthode pour imprimer le mappage du clavier. Par défaut, cette méthode imprime le numéro de page, le nom de l’application et le titre de la boîte de dialogue.
+Le cadre utilise cette méthode pour imprimer la carte du clavier. Par défaut, cette méthode imprime le numéro de page, le nom de l’application et le titre de boîte de dialogue.
 
-##  <a name="onprintitem"></a>  CMFCKeyMapDialog::OnPrintItem
+## <a name="cmfckeymapdialogonprintitem"></a><a name="onprintitem"></a>CMFCKeyMapDialog::OnPrintItem
 
-Appelé par l’infrastructure pour imprimer un élément de mappage du clavier.
+Appelé par le cadre pour imprimer un élément de cartographie du clavier.
 
 ```
 virtual int OnPrintItem(
@@ -239,32 +239,32 @@ virtual int OnPrintItem(
 
 ### <a name="parameters"></a>Paramètres
 
-*dc*<br/>
-[in] Le contexte de périphérique de l’imprimante.
+*Dc*<br/>
+[dans] Le contexte de l’appareil de l’imprimante.
 
-*nItem*<br/>
-[in] Index de base zéro de l’élément à imprimer.
+*nItem (en)*<br/>
+[dans] L’index zéro de l’article à imprimer.
 
 *y*<br/>
-[in] Le décalage vertical entre le haut de la page et la position de l’élément.
+[dans] Le décalage vertical entre le haut de la page et la position de l’élément.
 
-*cx*<br/>
-[in] Le décalage horizontal entre la gauche de la page et la position de l’élément.
+*Cx*<br/>
+[dans] Le décalage horizontal entre la gauche de la page et la position de l’élément.
 
-*bCalcHeight*<br/>
-[in] TRUE pour calculer la hauteur de meilleures pour l’élément d’impression ; FALSE pour tronquer l’élément impression afin qu’elle s’adapte l’espace par défaut.
+*bCalcHeight (en)*<br/>
+[dans] VRAI pour calculer la meilleure hauteur pour l’article d’impression; FALSE pour tronquer l’élément d’impression afin qu’il s’adapte à l’espace par défaut.
 
 ### <a name="return-value"></a>Valeur de retour
 
-La hauteur de l’élément imprimé.
+La hauteur de l’article imprimé.
 
 ### <a name="remarks"></a>Notes
 
-L’infrastructure appelle cette méthode pour imprimer un élément de boîte de dialogue mappage de clés. Par défaut, cette méthode imprime le nom de la commande de l’élément, les touches de raccourci et description de la commande.
+Le cadre appelle cette méthode pour imprimer un élément clé de boîte de dialogue de carte. Par défaut, cette méthode imprime le nom de commande de l’élément, les clés de raccourci et la description de commande.
 
-##  <a name="onsetcolumns"></a>  CMFCKeyMapDialog::OnSetColumns
+## <a name="cmfckeymapdialogonsetcolumns"></a><a name="onsetcolumns"></a>CMFCKeyMapDialog::OnSetColumns
 
-Appelé par l’infrastructure pour définir des légendes pour les colonnes dans le contrôle de liste interne qui prend en charge le contrôle de mappage du clavier.
+Appelé par le cadre pour définir les légendes pour les colonnes dans le contrôle de liste interne qui prend en charge le contrôle de cartographie du clavier.
 
 ```
 virtual void OnSetColumns();
@@ -272,11 +272,11 @@ virtual void OnSetColumns();
 
 ### <a name="remarks"></a>Notes
 
-Par défaut, cette méthode obtient les légendes pour les colonnes à partir de trois ressources. La légende de colonne de commande est de IDS_AFXBARRES_COMMAND, la légende de la colonne clé est de IDS_AFXBARRES_KEYS, et la légende de la colonne description provient de IDS_AFXBARRES_DESCRIPTION.
+Par défaut, cette méthode obtient les légendes pour les colonnes à partir de trois ressources. La légende de colonne de commande provient de IDS_AFXBARRES_COMMAND, la légende de colonne clé provient de IDS_AFXBARRES_KEYS, et la légende de la colonne de description provient de IDS_AFXBARRES_DESCRIPTION.
 
-##  <a name="printkeymap"></a>  CMFCKeyMapDialog::PrintKeyMap
+## <a name="cmfckeymapdialogprintkeymap"></a><a name="printkeymap"></a>CMFCKeyMapDialog::PrintKeyMap
 
-Appelé par l’infrastructure quand un utilisateur clique sur le **impression** bouton.
+Appelé par le cadre lorsqu’un utilisateur clique sur le bouton **Imprimer.**
 
 ```
 virtual void PrintKeyMap();
@@ -284,11 +284,11 @@ virtual void PrintKeyMap();
 
 ### <a name="remarks"></a>Notes
 
-Le `PrintKeyMap` méthode imprime le mappage de clés. Il lance un nouveau travail d’impression et appelle à plusieurs reprises la [CMFCKeyMapDialog::OnPrintHeader](#onprintheader) et [CMFCKeyMapDialog::OnPrintItem](#onprintitem) méthodes jusqu'à ce que tous les mappages de clés sont imprimés.
+La `PrintKeyMap` méthode imprime la carte clé. Il initie un nouveau travail d’impression, puis appelle à plusieurs reprises le [CMFCKeyMapDialog::OnPrintHeader](#onprintheader) et [CMFCKeyMapDialog::OnPrintItem](#onprintitem) méthodes jusqu’à ce que toutes les cartes clés sont imprimées.
 
-##  <a name="setcolumnswidth"></a>  CMFCKeyMapDialog::SetColumnsWidth
+## <a name="cmfckeymapdialogsetcolumnswidth"></a><a name="setcolumnswidth"></a>CMFCKeyMapDialog::SetColumnsWidth
 
-Appelé par l’infrastructure pour définir la largeur des colonnes dans le contrôle de liste interne qui prend en charge le contrôle de mappage du clavier.
+Appelé par le cadre pour définir la largeur des colonnes dans le contrôle de liste interne qui prend en charge le contrôle de cartographie du clavier.
 
 ```
 virtual void SetColumnsWidth();
@@ -296,10 +296,10 @@ virtual void SetColumnsWidth();
 
 ### <a name="remarks"></a>Notes
 
-Cette méthode définit les colonnes du contrôle de la liste interne de largeurs de valeur par défaut. Tout d’abord, la largeur de la colonne de touches de raccourci est calculée. Ensuite, un tiers de la largeur restante est alloué à la colonne de la commande et deux tiers restants est allouée à la colonne description.
+Cette méthode définit les colonnes du contrôle de liste interne aux largeurs par défaut. Tout d’abord, la largeur de la colonne des touches de raccourci est calculée. Ensuite, un tiers de la largeur restante est alloué à la colonne de commande et les deux tiers restants sont alloués à la colonne de description.
 
 ## <a name="see-also"></a>Voir aussi
 
 [Graphique hiérarchique](../../mfc/hierarchy-chart.md)<br/>
 [Classes](../../mfc/reference/mfc-classes.md)<br/>
-[CKeyboardManager, classe](../../mfc/reference/ckeyboardmanager-class.md)
+[Classe CKeyboardManager](../../mfc/reference/ckeyboardmanager-class.md)

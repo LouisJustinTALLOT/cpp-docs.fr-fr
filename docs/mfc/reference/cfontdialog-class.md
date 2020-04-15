@@ -1,5 +1,5 @@
 ---
-title: CFontDialog, classe
+title: Classe CFontDialog
 ms.date: 11/04/2016
 f1_keywords:
 - CFontDialog
@@ -34,16 +34,16 @@ helpviewer_keywords:
 - CFontDialog [MFC], IsUnderline
 - CFontDialog [MFC], m_cf
 ms.assetid: 6228d500-ed0f-4156-81e5-ab0d57d1dcf4
-ms.openlocfilehash: c0d0c37d055d9b337f7b709b4ee3d299daae7658
-ms.sourcegitcommit: 180f63704f6ddd07a4172a93b179cf0733fd952d
+ms.openlocfilehash: 6ece239496def9fd65a95a622ac3c475fe5becea
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70741554"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81373820"
 ---
-# <a name="cfontdialog-class"></a>CFontDialog, classe
+# <a name="cfontdialog-class"></a>Classe CFontDialog
 
-Vous permet d’incorporer une boîte de dialogue de sélection de polices à votre application.
+Vous permet d’incorporer une boîte de dialogue de sélection de polices dans votre application.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -63,46 +63,46 @@ class CFontDialog : public CCommonDialog
 
 |Nom|Description|
 |----------|-----------------|
-|[CFontDialog ::D oModal](#domodal)|Affiche la boîte de dialogue et permet à l’utilisateur d’effectuer une sélection.|
-|[CFontDialog::GetCharFormat](#getcharformat)|Récupère la mise en forme des caractères de la police sélectionnée.|
-|[CFontDialog :: GetColor](#getcolor)|Retourne la couleur de la police sélectionnée.|
-|[CFontDialog::GetCurrentFont](#getcurrentfont)|Assigne les caractéristiques de la police actuellement sélectionnée à une `LOGFONT` structure.|
-|[CFontDialog::GetFaceName](#getfacename)|Retourne le nom de police de la police sélectionnée.|
-|[CFontDialog :: est à obtenir](#getsize)|Retourne la taille en points de la police sélectionnée.|
-|[CFontDialog::GetStyleName](#getstylename)|Retourne le nom du style de la police sélectionnée.|
-|[CFontDialog::GetWeight](#getweight)|Retourne l’épaisseur de la police sélectionnée.|
-|[CFontDialog::IsBold](#isbold)|Détermine si la police est en gras.|
-|[CFontDialog::IsItalic](#isitalic)|Détermine si la police est en italique.|
-|[CFontDialog::IsStrikeOut](#isstrikeout)|Détermine si la police est affichée avec un barré.|
+|[CFontDialog::DoModal](#domodal)|Affiche le dialogue et permet à l’utilisateur de faire une sélection.|
+|[CFontDialog::GetCharFormat](#getcharformat)|Récupère le formatage des personnages de la police sélectionnée.|
+|[CFontDialog::GetColor](#getcolor)|Retourne la couleur de la police sélectionnée.|
+|[CFontDialog::GetCurrentFont](#getcurrentfont)|Attribue les caractéristiques de la `LOGFONT` police actuellement sélectionnée à une structure.|
+|[CFontDialog::GetFaceName](#getfacename)|Retourne le nom du visage de la police sélectionnée.|
+|[CFontDialog::GetSize](#getsize)|Retourne la taille du point de la police sélectionnée.|
+|[CFontDialog::GetStyleName](#getstylename)|Retourne le nom de style de la police sélectionnée.|
+|[CFontDialog::GetWeight](#getweight)|Retourne le poids de la police sélectionnée.|
+|[CFontDialog::IsBold](#isbold)|Détermine si la police est audacieuse.|
+|[CFontDialog::IsItalic](#isitalic)|Détermine si la police est italique.|
+|[CFontDialog::IsStrikeOut](#isstrikeout)|Détermine si la police est affichée avec strikeout.|
 |[CFontDialog::IsUnderline](#isunderline)|Détermine si la police est soulignée.|
 
 ### <a name="public-data-members"></a>Membres de données publics
 
 |Nom|Description|
 |----------|-----------------|
-|[CFontDialog::m_cf](#m_cf)|Structure utilisée pour personnaliser un `CFontDialog` objet.|
+|[CFontDialog::m_cf](#m_cf)|Une structure utilisée pour `CFontDialog` personnaliser un objet.|
 
 ## <a name="remarks"></a>Notes
 
-Un `CFontDialog` objet est une boîte de dialogue avec une liste des polices qui sont actuellement installées dans le système. L’utilisateur peut sélectionner une police particulière dans la liste, et cette sélection est ensuite renvoyée à l’application.
+Un `CFontDialog` objet est une boîte de dialogue avec une liste de polices qui sont actuellement installées dans le système. L’utilisateur peut sélectionner une police particulière de la liste, et cette sélection est ensuite signalée à l’application.
 
-Pour construire un `CFontDialog` objet, utilisez le constructeur fourni ou dérivez une nouvelle sous-classe et utilisez votre propre constructeur personnalisé.
+Pour construire `CFontDialog` un objet, utilisez le constructeur fourni ou dérivez une nouvelle sous-classe et utilisez votre propre constructeur personnalisé.
 
-Une fois `CFontDialog` qu’un objet a été construit, vous pouvez `m_cf` utiliser la structure pour initialiser les valeurs ou les États des contrôles dans la boîte de dialogue. La structure [m_cf](#m_cf) est de type [CHOOSEFONT](/windows/win32/api/commdlg/ns-commdlg-choosefontw). Pour plus d’informations sur cette structure, consultez la SDK Windows.
+Une `CFontDialog` fois qu’un objet a `m_cf` été construit, vous pouvez utiliser la structure pour initialiser les valeurs ou les états de contrôles dans la boîte de dialogue. La structure [m_cf](#m_cf) est de type [CHOOSEFONT](/windows/win32/api/commdlg/ns-commdlg-choosefontw). Pour plus d’informations sur cette structure, voir le SDK Windows.
 
-Après l’initialisation des contrôles de l’objet Dialog, appelez `DoModal` la fonction membre pour afficher la boîte de dialogue et permettre à l’utilisateur de sélectionner une police. `DoModal`retourne une valeur indiquant si l’utilisateur a sélectionné le bouton OK (IDOK) ou CANCEL (IDCANCEL).
+Après avoir paralysé les commandes `DoModal` de l’objet de dialogue, appelez la fonction du membre pour afficher la boîte de dialogue et permettre à l’utilisateur de sélectionner une police. `DoModal`l’utilisateur a choisi le bouton OK (IDOK) ou Annuler (IDCANCEL).
 
-Si `DoModal` retourne IDOK, vous pouvez utiliser l’une `CFontDialog`des fonctions membres de pour récupérer les informations entrées par l’utilisateur.
+Si `DoModal` vous retournez IDOK, `CFontDialog`vous pouvez utiliser l’une des fonctions des membres pour récupérer l’entrée d’informations par l’utilisateur.
 
-Vous pouvez utiliser la fonction [CommDlgExtendedError](/windows/win32/api/commdlg/nf-commdlg-commdlgextendederror) de Windows pour déterminer si une erreur s’est produite lors de l’initialisation de la boîte de dialogue et pour en savoir plus sur l’erreur. Pour plus d’informations sur cette fonction, consultez la SDK Windows.
+Vous pouvez utiliser la fonction Windows [CommDlgExtendedError](/windows/win32/api/commdlg/nf-commdlg-commdlgextendederror) pour déterminer si une erreur s’est produite lors de l’initialisation de la boîte de dialogue et pour en savoir plus sur l’erreur. Pour plus d’informations sur cette fonction, voir le SDK Windows.
 
-`CFontDialog`s’appuie sur le COMMDLG. Fichier DLL fourni avec Windows versions 3,1 et ultérieures.
+`CFontDialog`s’appuie sur le COMMDLG. Fichier DLL qui expédie avec les versions Windows 3.1 et plus tard.
 
-Pour personnaliser la boîte de dialogue, dérivez `CFontDialog`une classe de, fournissez un modèle de boîte de dialogue personnalisé et ajoutez une table des messages pour traiter les messages de notification des contrôles étendus. Tous les messages non traités doivent être passés à la classe de base.
+Pour personnaliser la boîte de dialogue, `CFontDialog`dérivez une classe, fournissez un modèle de dialogue personnalisé et ajoutez une carte de message pour traiter les messages de notification à partir des contrôles étendus. Tous les messages non traités doivent être transmis à la classe de base.
 
-La personnalisation de la fonction de raccordement n’est pas obligatoire.
+Personnaliser la fonction de crochet n’est pas nécessaire.
 
-Pour plus d’informations sur `CFontDialog`l’utilisation de, consultez [classes de boîtes de dialogue communes](../../mfc/common-dialog-classes.md).
+Pour plus d’informations sur l’utilisation `CFontDialog`, voir Classes de dialogue [commun](../../mfc/common-dialog-classes.md).
 
 ## <a name="inheritance-hierarchy"></a>Hiérarchie d'héritage
 
@@ -118,11 +118,11 @@ Pour plus d’informations sur `CFontDialog`l’utilisation de, consultez [class
 
 `CFontDialog`
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
-**En-tête :** afxdlgs. h
+**En-tête:** afxdlgs.h
 
-##  <a name="cfontdialog"></a>CFontDialog::CFontDialog
+## <a name="cfontdialogcfontdialog"></a><a name="cfontdialog"></a>CFontDialog::CFontDialog
 
 Construit un objet `CFontDialog`.
 
@@ -143,15 +143,15 @@ CFontDialog(
 ### <a name="parameters"></a>Paramètres
 
 *plfInitial*<br/>
-Pointeur vers une structure de données [LOGFONT](/windows/win32/api/wingdi/ns-wingdi-logfontw) qui vous permet de définir certaines caractéristiques de la police.
+Un pointeur vers une structure de données [LOGFONT](/windows/win32/api/wingdi/ns-wingdi-logfontw) qui vous permet de définir certaines caractéristiques de la police.
 
 *charFormat*<br/>
-Pointeur vers une structure de données [Charformat](/windows/win32/api/richedit/ns-richedit-charformata) qui vous permet de définir certaines caractéristiques de la police dans un contrôle RichEdit.
+Un pointeur vers une structure de données [CHARFORMAT](/windows/win32/api/richedit/ns-richedit-charformata) qui vous permet de définir certaines des caractéristiques de la police dans un contrôle d’édition riche.
 
 *dwFlags*<br/>
-Spécifie un ou plusieurs indicateurs de choix de police. Une ou plusieurs valeurs prédéfinies peuvent être combinées à l'aide de l'opérateur de bits OR. Si vous changez le membre de structure de `m_cf.Flag`, veillez à utiliser un opérateur de bits OR dans les changements pour préserver le comportement par défaut. Pour plus d’informations sur chacun de ces indicateurs, consultez la description de la structure [CHOOSEFONT](/windows/win32/api/commdlg/ns-commdlg-choosefontw) dans le SDK Windows.
+Spécifie un ou plusieurs indicateurs de choix de police. Une ou plusieurs valeurs prédéfinies peuvent être combinées à l'aide de l'opérateur de bits OR. Si vous changez le membre de structure de `m_cf.Flag`, veillez à utiliser un opérateur de bits OR dans les changements pour préserver le comportement par défaut. Pour plus de détails sur chacun de ces drapeaux, consultez la description de la structure [CHOOSEFONT](/windows/win32/api/commdlg/ns-commdlg-choosefontw) dans le SDK Windows.
 
-*pdcPrinter*<br/>
+*pdcPrinter (en)*<br/>
 Pointeur vers un contexte de périphérique d'impression. Si ce paramètre est fourni, il pointe vers un contexte de périphérique d'impression pour l'imprimante sur laquelle les polices doivent être sélectionnées.
 
 *pParentWnd*<br/>
@@ -162,15 +162,15 @@ Pointeur vers la fenêtre parente ou la fenêtre propriétaire de la boîte de d
 Notez que le constructeur remplit automatiquement les membres de la structure `CHOOSEFONT`. Ne les modifiez que si vous souhaitez une autre boîte de dialogue de police que celle par défaut.
 
 > [!NOTE]
->  La première version de cette fonction n'existe que s'il n'y a aucune prise en charge du contrôle RichEdit.
+> La première version de cette fonction n'existe que s'il n'y a aucune prise en charge du contrôle RichEdit.
 
-### <a name="example"></a>Exemples
+### <a name="example"></a>Exemple
 
 [!code-cpp[NVC_MFCDocView#78](../../mfc/codesnippet/cpp/cfontdialog-class_1.cpp)]
 
-##  <a name="domodal"></a>  CFontDialog::DoModal
+## <a name="cfontdialogdomodal"></a><a name="domodal"></a>CFontDialog::DoModal
 
-Appelez cette fonction pour afficher la boîte de dialogue police commune Windows et autoriser l’utilisateur à choisir une police.
+Appelez cette fonction pour afficher la boîte de dialogue de police commune de Windows et permettre à l’utilisateur de choisir une police.
 
 ```
 virtual INT_PTR DoModal();
@@ -178,23 +178,23 @@ virtual INT_PTR DoModal();
 
 ### <a name="return-value"></a>Valeur de retour
 
-IDOK ou IDCANCEL. Si IDCANCEL est retourné, appelez la fonction [CommDlgExtendedError](/windows/win32/api/commdlg/nf-commdlg-commdlgextendederror) de Windows pour déterminer si une erreur s’est produite.
+IDOK ou IDCANCEL. Si IDCANCEL est retourné, appelez la fonction Windows [CommDlgExtendedError](/windows/win32/api/commdlg/nf-commdlg-commdlgextendederror) pour déterminer si une erreur s’est produite.
 
-IDOK et IDCANCEL sont des constantes qui indiquent si l’utilisateur a sélectionné le bouton OK ou annuler.
+IDOK et IDCANCEL sont des constantes qui indiquent si l’utilisateur a choisi le bouton OK ou Annuler.
 
 ### <a name="remarks"></a>Notes
 
-Si vous souhaitez initialiser les différents contrôles de boîte de dialogue de police en définissant les membres de la structure [m_cf](#m_cf) , vous `DoModal`devez effectuer cette opération avant d’appeler, mais après la construction de l’objet de boîte de dialogue.
+Si vous souhaitez paralyser les différents contrôles de dialogue de police en fixant `DoModal`les membres de la structure [m_cf,](#m_cf) vous devriez le faire avant d’appeler, mais après la construction de l’objet de dialogue.
 
-Si `DoModal` retourne IDOK, vous pouvez appeler d’autres fonctions membres pour récupérer les paramètres ou les informations entrées par l’utilisateur dans la boîte de dialogue.
+Si `DoModal` vous retournez IDOK, vous pouvez appeler d’autres fonctions de membre pour récupérer les paramètres ou l’entrée d’informations par l’utilisateur dans la boîte de dialogue.
 
-### <a name="example"></a>Exemples
+### <a name="example"></a>Exemple
 
-  Consultez les exemples pour [CFontDialog :: CFontDialog](#cfontdialog) et [CFontDialog :: GetColor](#getcolor).
+  Voir les exemples de [CFontDialog::CFontDialog](#cfontdialog) et [CFontDialog::GetColor](#getcolor).
 
-##  <a name="getcharformat"></a>  CFontDialog::GetCharFormat
+## <a name="cfontdialoggetcharformat"></a><a name="getcharformat"></a>CFontDialog::GetCharFormat
 
-Récupère la mise en forme des caractères de la police sélectionnée.
+Récupère le formatage des personnages de la police sélectionnée.
 
 ```
 void GetCharFormat(CHARFORMAT& cf) const;
@@ -202,10 +202,10 @@ void GetCharFormat(CHARFORMAT& cf) const;
 
 ### <a name="parameters"></a>Paramètres
 
-*cf*<br/>
-Structure [Charformat](/windows/win32/api/richedit/ns-richedit-charformata) contenant des informations sur la mise en forme des caractères de la police sélectionnée.
+*Cf*<br/>
+Une structure [CHARFORMAT](/windows/win32/api/richedit/ns-richedit-charformata) contenant des informations sur le formatage des personnages de la police sélectionnée.
 
-##  <a name="getcolor"></a>CFontDialog :: GetColor
+## <a name="cfontdialoggetcolor"></a><a name="getcolor"></a>CFontDialog::GetColor
 
 Appelez cette fonction pour récupérer la couleur de police sélectionnée.
 
@@ -221,9 +221,9 @@ Couleur de la police sélectionnée.
 
 [!code-cpp[NVC_MFCDocView#79](../../mfc/codesnippet/cpp/cfontdialog-class_2.cpp)]
 
-##  <a name="getcurrentfont"></a>  CFontDialog::GetCurrentFont
+## <a name="cfontdialoggetcurrentfont"></a><a name="getcurrentfont"></a>CFontDialog::GetCurrentFont
 
-Appelez cette fonction pour assigner les caractéristiques de la police actuellement sélectionnée aux membres d’une structure [LOGFONT](/windows/win32/api/wingdi/ns-wingdi-logfontw) .
+Appelez cette fonction pour attribuer les caractéristiques de la police actuellement sélectionnée aux membres d’une structure [LOGFONT.](/windows/win32/api/wingdi/ns-wingdi-logfontw)
 
 ```
 void GetCurrentFont(LPLOGFONT lplf);
@@ -231,22 +231,22 @@ void GetCurrentFont(LPLOGFONT lplf);
 
 ### <a name="parameters"></a>Paramètres
 
-*lplf*<br/>
-Pointeur vers une `LOGFONT` structure.
+*lplf (lplf)*<br/>
+Un pointeur `LOGFONT` vers une structure.
 
 ### <a name="remarks"></a>Notes
 
-D' `CFontDialog` autres fonctions membres sont fournies pour accéder aux caractéristiques individuelles de la police actuelle.
+D’autres `CFontDialog` fonctions de membre sont fournies pour accéder aux caractéristiques individuelles de la police actuelle.
 
-Si cette fonction est appelée pendant un appel à [DoModal](#domodal), elle retourne la sélection actuelle à l’heure (ce que l’utilisateur voit ou a modifié dans la boîte de dialogue). Si cette fonction est appelée après un appel à `DoModal` (uniquement si `DoModal` retourne IDOK), elle retourne ce que l’utilisateur a réellement sélectionné.
+Si cette fonction est appelée lors d’un appel à [DoModal](#domodal), il renvoie la sélection actuelle à l’époque (ce que l’utilisateur voit ou a changé dans le dialogue). Si cette fonction est appelée `DoModal` après `DoModal` un appel à (seulement si retourne IDOK), il renvoie ce que l’utilisateur effectivement sélectionné.
 
 ### <a name="example"></a>Exemple
 
 [!code-cpp[NVC_MFCDocView#80](../../mfc/codesnippet/cpp/cfontdialog-class_3.cpp)]
 
-##  <a name="getfacename"></a>  CFontDialog::GetFaceName
+## <a name="cfontdialoggetfacename"></a><a name="getfacename"></a>CFontDialog::GetFaceName
 
-Appelez cette fonction pour récupérer le nom de police de la police sélectionnée.
+Appelez cette fonction pour récupérer le nom du visage de la police sélectionnée.
 
 ```
 CString GetFaceName() const;
@@ -254,13 +254,13 @@ CString GetFaceName() const;
 
 ### <a name="return-value"></a>Valeur de retour
 
-Nom de police de la police sélectionnée dans la `CFontDialog` boîte de dialogue.
+Le nom du visage de `CFontDialog` la police sélectionnée dans la boîte de dialogue.
 
 ### <a name="example"></a>Exemple
 
 [!code-cpp[NVC_MFCDocView#81](../../mfc/codesnippet/cpp/cfontdialog-class_4.cpp)]
 
-##  <a name="getsize"></a>CFontDialog :: est à obtenir
+## <a name="cfontdialoggetsize"></a><a name="getsize"></a>CFontDialog::GetSize
 
 Appelez cette fonction pour récupérer la taille de la police sélectionnée.
 
@@ -270,13 +270,13 @@ int GetSize() const;
 
 ### <a name="return-value"></a>Valeur de retour
 
-Taille de la police, en dixièmes de point.
+La taille de la police, en dixièmes de point.
 
 ### <a name="example"></a>Exemple
 
 [!code-cpp[NVC_MFCDocView#82](../../mfc/codesnippet/cpp/cfontdialog-class_5.cpp)]
 
-##  <a name="getstylename"></a>  CFontDialog::GetStyleName
+## <a name="cfontdialoggetstylename"></a><a name="getstylename"></a>CFontDialog::GetStyleName
 
 Appelez cette fonction pour récupérer le nom de style de la police sélectionnée.
 
@@ -286,13 +286,13 @@ CString GetStyleName() const;
 
 ### <a name="return-value"></a>Valeur de retour
 
-Nom de style de la police.
+Le nom de style de la police.
 
 ### <a name="example"></a>Exemple
 
 [!code-cpp[NVC_MFCDocView#83](../../mfc/codesnippet/cpp/cfontdialog-class_6.cpp)]
 
-##  <a name="getweight"></a>CFontDialog::GetWeight
+## <a name="cfontdialoggetweight"></a><a name="getweight"></a>CFontDialog::GetWeight
 
 Appelez cette fonction pour récupérer le poids de la police sélectionnée.
 
@@ -302,19 +302,19 @@ int GetWeight() const;
 
 ### <a name="return-value"></a>Valeur de retour
 
-Poids de la police sélectionnée.
+Le poids de la police sélectionnée.
 
 ### <a name="remarks"></a>Notes
 
-Pour plus d’informations sur le poids d’une police, consultez [CFont :: CreateFont](../../mfc/reference/cfont-class.md#createfont).
+Pour plus d’informations sur le poids d’une police, voir [CFont::CreateFont](../../mfc/reference/cfont-class.md#createfont).
 
-### <a name="example"></a>Exemples
+### <a name="example"></a>Exemple
 
 [!code-cpp[NVC_MFCDocView#84](../../mfc/codesnippet/cpp/cfontdialog-class_7.cpp)]
 
-##  <a name="isbold"></a>  CFontDialog::IsBold
+## <a name="cfontdialogisbold"></a><a name="isbold"></a>CFontDialog::IsBold
 
-Appelez cette fonction pour déterminer si la police sélectionnée est en gras.
+Appelez cette fonction pour déterminer si la police sélectionnée est audacieuse.
 
 ```
 BOOL IsBold() const;
@@ -322,15 +322,15 @@ BOOL IsBold() const;
 
 ### <a name="return-value"></a>Valeur de retour
 
-Différent de zéro si la police sélectionnée a la caractéristique gras activée ; Sinon, 0.
+Nonzero si la police sélectionnée a la caractéristique audacieuse activée; sinon 0.
 
 ### <a name="example"></a>Exemple
 
 [!code-cpp[NVC_MFCDocView#85](../../mfc/codesnippet/cpp/cfontdialog-class_8.cpp)]
 
-##  <a name="isitalic"></a>CFontDialog::IsItalic
+## <a name="cfontdialogisitalic"></a><a name="isitalic"></a>CFontDialog::IsItalic
 
-Appelez cette fonction pour déterminer si la police sélectionnée est en italique.
+Appelez cette fonction pour déterminer si la police sélectionnée est italique.
 
 ```
 BOOL IsItalic() const;
@@ -338,15 +338,15 @@ BOOL IsItalic() const;
 
 ### <a name="return-value"></a>Valeur de retour
 
-Différent de zéro si la police sélectionnée a la caractéristique italique activée ; Sinon, 0.
+Nonzero si la police sélectionnée a la caractéristique italique activée; sinon 0.
 
-### <a name="example"></a>Exemples
+### <a name="example"></a>Exemple
 
 [!code-cpp[NVC_MFCDocView#86](../../mfc/codesnippet/cpp/cfontdialog-class_9.cpp)]
 
-##  <a name="isstrikeout"></a>  CFontDialog::IsStrikeOut
+## <a name="cfontdialogisstrikeout"></a><a name="isstrikeout"></a>CFontDialog::IsStrikeOut
 
-Appelez cette fonction pour déterminer si la police sélectionnée est affichée avec un barré.
+Appelez cette fonction pour déterminer si la police sélectionnée est affichée avec strikeout.
 
 ```
 BOOL IsStrikeOut() const;
@@ -354,13 +354,13 @@ BOOL IsStrikeOut() const;
 
 ### <a name="return-value"></a>Valeur de retour
 
-Différent de zéro si la police sélectionnée a la caractéristique de barré activée ; Sinon, 0.
+Nonzero si la police sélectionnée a la caractéristique Strikeout activé; sinon 0.
 
 ### <a name="example"></a>Exemple
 
 [!code-cpp[NVC_MFCDocView#87](../../mfc/codesnippet/cpp/cfontdialog-class_10.cpp)]
 
-##  <a name="isunderline"></a>CFontDialog::IsUnderline
+## <a name="cfontdialogisunderline"></a><a name="isunderline"></a>CFontDialog::IsUnderline
 
 Appelez cette fonction pour déterminer si la police sélectionnée est soulignée.
 
@@ -370,15 +370,15 @@ BOOL IsUnderline() const;
 
 ### <a name="return-value"></a>Valeur de retour
 
-Différent de zéro si la police sélectionnée a la caractéristique souligné activée ; Sinon, 0.
+Nonzero si la police sélectionnée a la caractéristique De souligné activé; sinon 0.
 
 ### <a name="example"></a>Exemple
 
 [!code-cpp[NVC_MFCDocView#88](../../mfc/codesnippet/cpp/cfontdialog-class_11.cpp)]
 
-##  <a name="m_cf"></a>  CFontDialog::m_cf
+## <a name="cfontdialogm_cf"></a><a name="m_cf"></a>CFontDialog::m_cf
 
-Structure dont les membres stockent les caractéristiques de l’objet Dialog.
+Une structure dont les membres stockent les caractéristiques de l’objet de dialogue.
 
 ```
 CHOOSEFONT m_cf;
@@ -386,7 +386,7 @@ CHOOSEFONT m_cf;
 
 ### <a name="remarks"></a>Notes
 
-Après avoir construit un `CFontDialog` objet, vous pouvez utiliser `m_cf` pour modifier différents aspects de la boîte de dialogue avant d' `DoModal` appeler la fonction membre. Pour plus d’informations sur cette structure, consultez [CHOOSEFONT](/windows/win32/api/commdlg/ns-commdlg-choosefontw) dans le SDK Windows.
+Après la `CFontDialog` construction d’un `m_cf` objet, vous pouvez utiliser pour `DoModal` modifier divers aspects de la boîte de dialogue avant d’appeler la fonction membre. Pour plus d’informations sur cette structure, voir [CHOOSEFONT](/windows/win32/api/commdlg/ns-commdlg-choosefontw) dans le SDK Windows.
 
 ### <a name="example"></a>Exemple
 
@@ -394,6 +394,6 @@ Après avoir construit un `CFontDialog` objet, vous pouvez utiliser `m_cf` pour 
 
 ## <a name="see-also"></a>Voir aussi
 
-[Exemple MFC HIERSVR](../../overview/visual-cpp-samples.md)<br/>
-[CCommonDialog, classe](../../mfc/reference/ccommondialog-class.md)<br/>
+[MFC Échantillon HIERSVR](../../overview/visual-cpp-samples.md)<br/>
+[Classe CCommonDialog](../../mfc/reference/ccommondialog-class.md)<br/>
 [Graphique hiérarchique](../../mfc/hierarchy-chart.md)

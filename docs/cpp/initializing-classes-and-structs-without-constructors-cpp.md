@@ -1,14 +1,14 @@
 ---
-title: Initialisation des accolades pour les classes, les structs et les unions
-description: Utiliser l’initialisation des accolades avec C++ n’importe quelle classe, struct ou Union
+title: Initialisation de brace pour les classes, les structs et les syndicats
+description: Utilisez l’initialisation d’accolade avec n’importe quelle classe, struct ou syndicat de CMD
 ms.date: 11/19/2019
 ms.assetid: 3e55c3d6-1c6b-4084-b9e5-221b151402f4
-ms.openlocfilehash: 2f04401c7fca417baec09fa3023e14b9b85ea63c
-ms.sourcegitcommit: 8e285a766523e653aeeb34d412dc6f615ef7b17b
+ms.openlocfilehash: 4628ffe8935fc32e86468c631d5d9e9622d63d2e
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/21/2020
-ms.locfileid: "80075882"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81374073"
 ---
 # <a name="brace-initialization"></a>Initialisation de l’accolade
 
@@ -61,7 +61,7 @@ int main()
 }
 ```
 
-Notez que lorsqu’une classe ou un struct n’a pas de constructeur, vous fournissez les éléments de la liste dans l’ordre dans lequel les membres sont déclarés dans la classe. Si la classe a un constructeur, fournissez les éléments dans l’ordre des paramètres. Si un type a un constructeur par défaut, implicitement ou explicitement déclaré, vous pouvez utiliser l’initialisation par défaut des accolades (avec des accolades vides). Par exemple, la classe suivante peut être initialisée à l’aide de l’initialisation par défaut et de l’accolade non par défaut :
+Notez que lorsqu’une classe ou une struct n’a pas de constructeur, vous fournissez les éléments de liste dans l’ordre que les membres sont déclarés dans la classe. Si la classe a un constructeur, fournir les éléments dans l’ordre des paramètres. Si un type a un constructeur par défaut, implicitement ou explicitement déclaré, vous pouvez utiliser l’initialisation d’attelle par défaut (avec des accolades vides). Par exemple, la classe suivante peut être parascée en utilisant à la fois l’initialisation par défaut et l’initialisation d’accolade non par défaut :
 
 ```cpp
 #include <string>
@@ -90,7 +90,7 @@ int main()
 }
 ```
 
-Si une classe a des constructeurs non définis par défaut, l’ordre dans lequel les membres de la classe s’affichent dans l’initialiseur de l’accolade est l’ordre dans lequel les paramètres correspondants apparaissent dans le constructeur, et non l’ordre dans lequel les membres sont déclarés (comme avec `class_a` dans l’exemple précédent). Sinon, si le type n’a pas de constructeur déclaré, l’ordre dans lequel les membres apparaissent dans l’initialiseur d’accolades est le même que l’ordre dans lequel ils sont déclarés ; dans ce cas, vous pouvez initialiser autant de membres publics que vous le souhaitez, mais vous ne pouvez pas ignorer un membre. L’exemple suivant montre l’ordre utilisé dans l’initialisation des accolades lorsqu’il n’existe aucun constructeur déclaré :
+Si une classe a des constructeurs non par défaut, l’ordre dans lequel les membres de la classe apparaissent dans l’initialisateur d’accolade est l’ordre dans lequel les paramètres correspondants apparaissent dans le constructeur, et non l’ordre dans lequel les membres sont déclarés (comme dans l’exemple `class_a` précédent). Dans le cas contraire, si le type n’a pas de constructeur déclaré, l’ordre dans lequel les membres apparaissent dans l’initialisateur d’accolade est le même que l’ordre dans lequel ils sont déclarés; dans ce cas, vous pouvez initialiser autant de membres du public que vous le souhaitez, mais vous ne pouvez pas sauter n’importe quel membre. L’exemple suivant montre l’ordre utilisé dans l’initialisation de l’attelle lorsqu’il n’y a pas de constructeur déclaré :
 
 ```cpp
 class class_d {
@@ -112,7 +112,7 @@ int main()
 }
 ```
 
-Si le constructeur par défaut est déclaré explicitement mais marqué comme supprimé, l’initialisation par défaut des accolades ne peut pas être utilisée :
+Si le constructeur par défaut est explicitement déclaré mais marqué comme supprimé, l’initialisation par défaut d’accolade ne peut pas être utilisée :
 
 ```cpp
 class class_f {
@@ -128,7 +128,7 @@ int main()
 }
 ```
 
-Vous pouvez utiliser l’initialisation des accolades partout où vous effectuez généralement l’initialisation, par exemple en tant que paramètre de fonction ou valeur de retour, ou avec le mot clé **New** :
+Vous pouvez utiliser l’initialisation d’accolade où vous feriez généralement l’initialisation, par exemple, comme paramètre de fonction ou valeur de retour, ou avec le **nouveau** mot clé :
 
 ```cpp
 class_d* cf = new class_d{4.5};
@@ -136,20 +136,20 @@ kr->add_d({ 4.5 });
 return { 4.5 };
 ```
 
-En mode **/std : c++ 17** , les règles relatives à l’initialisation des accolades vides sont légèrement plus restrictives. Consultez [constructeurs dérivés et initialisation d’agrégats étendus](constructors-cpp.md#extended_aggregate).
+En **mode /std:c -17,** les règles d’initialisation des accolades vides sont légèrement plus restrictives. Voir [les constructeurs dérivés et l’initialisation globale étendue](constructors-cpp.md#extended_aggregate).
 
-## <a name="initializer_list-constructors"></a>constructeurs initializer_list
+## <a name="initializer_list-constructors"></a>initializer_list constructeurs
 
-La [classe initializer_list](../standard-library/initializer-list-class.md) représente une liste d’objets d’un type spécifié qui peuvent être utilisés dans un constructeur et dans d’autres contextes. Vous pouvez construire une initializer_list à l’aide de l’initialisation des accolades :
+La [classe initializer_list](../standard-library/initializer-list-class.md) représente une liste d’objets d’un type spécifié qui peuvent être utilisés dans un constructeur, et dans d’autres contextes. Vous pouvez construire un initializer_list en utilisant l’initialisation d’accolade :
 
 ```cpp
 initializer_list<int> int_list{5, 6, 7};
 ```
 
 > [!IMPORTANT]
->  Pour utiliser cette classe, vous devez inclure l’en-tête [>\<initializer_list](../standard-library/initializer-list.md) .
+> Pour utiliser cette classe, [ \<](../standard-library/initializer-list.md) vous devez inclure le initializer_list>en-tête.
 
-Une `initializer_list` peut être copiée. Dans ce cas, les membres de la nouvelle liste sont des références aux membres de la liste d’origine :
+On `initializer_list` peut copier un. Dans ce cas, les membres de la nouvelle liste sont des références aux membres de la liste originale :
 
 ```cpp
 initializer_list<int> ilist1{ 5, 6, 7 };
@@ -158,7 +158,7 @@ if (ilist1.begin() == ilist2.begin())
     cout << "yes" << endl; // expect "yes"
 ```
 
-Les classes de conteneur de la bibliothèque standard, ainsi que `string`, `wstring`et `regex`, ont des constructeurs de `initializer_list`. Les exemples suivants montrent comment effectuer une initialisation d’accolade avec ces constructeurs :
+Les classes standard de `string`récipient `wstring`de `regex`bibliothèque, et aussi , et , ont `initializer_list` des constructeurs. Les exemples suivants montrent comment faire l’initialisation de l’accolade avec ces constructeurs :
 
 ```cpp
 vector<int> v1{ 9, 10, 11 };

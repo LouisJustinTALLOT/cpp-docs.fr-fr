@@ -5,22 +5,22 @@ f1_keywords:
 - concrt/concurrency::operator!=
 - concrt/concurrency:[operator&amp;&amp
 ms.assetid: 8e373f23-fc8e-49f7-82e6-ba0c57b822f8
-ms.openlocfilehash: 676e1936af317a6ab19959f8fd09b1de06dfaf69
-ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
+ms.openlocfilehash: aac43a15b09bd792118fbfe7ea51493b73b8ac9d
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/16/2020
-ms.locfileid: "79422142"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81374381"
 ---
 # <a name="concurrency-namespace-operators"></a>concurrency, opérateur de l’espace de noms
 
 ||||
 |-|-|-|
-|[operator!=](#operator_neq)|[operator&amp;&amp;](#operator_amp_amp)|[operator&gt;](#operator_gt)|
-|[operator&gt;=](#operator_gt_eq)|[operator&lt;](#operator_lt)|[operator&lt;=](#operator_lt_eq)|
-|[operator==](#operator_eq_eq)|[operator&#124;&#124;](#operator_lor)| |
+|[opérateur!](#operator_neq)|[Opérateur&amp;&amp;](#operator_amp_amp)|[Opérateur&gt;](#operator_gt)|
+|[Opérateur&gt;=](#operator_gt_eq)|[Opérateur&lt;](#operator_lt)|[Opérateur&lt;=](#operator_lt_eq)|
+|[opérateur](#operator_eq_eq)|[&#124;&#124;de l’opérateur](#operator_lor)| |
 
-## <a name="operator_lor"></a>opérateur&#124; &#124; Operator
+## <a name="operator124124-operator"></a><a name="operator_lor"></a>opérateur&#124;&#124; Opérateur
 
 Crée une tâche qui s’effectue correctement quand l’une des tâches fournies en tant qu’arguments s’effectue correctement.
 
@@ -47,10 +47,10 @@ inline task<void> operator||(
 
 ### <a name="parameters"></a>Paramètres
 
-*ReturnType*<br/>
+*ReturnType (en)*<br/>
 Type de la tâche retournée.
 
-*LHS*<br/>
+*Lhs*<br/>
 Première tâche à associer à la tâche obtenue.
 
 *rhs*<br/>
@@ -58,15 +58,15 @@ Seconde tâche à associer à la tâche obtenue.
 
 ### <a name="return-value"></a>Valeur de retour
 
-Tâche qui se termine correctement lorsque l’une des tâches d’entrée s’est terminée avec succès. Si les tâches d’entrée sont de type `T`, le résultat de cette fonction sera `task<std::vector<T>`. Si les tâches d’entrée sont de type `void`, la tâche de sortie sera également `task<void>`.
+Une tâche qui se termine avec succès lorsque l’une ou l’autre des tâches d’entrée a été accomplie avec succès. Si les tâches d’entrée sont de type `T`, le résultat de cette fonction sera `task<std::vector<T>`. Si les tâches d’entrée sont de type `void`, la tâche de sortie sera également `task<void>`.
 
 ### <a name="remarks"></a>Notes
 
-Si les deux tâches sont annulées ou lèvent des exceptions, la tâche retournée se termine à l’état annulé, et l’une des exceptions, le cas échéant, est levée lorsque vous appelez `get()` ou `wait()` sur cette tâche.
+Si les deux tâches sont annulées ou jettent des exceptions, la tâche retournée sera terminée dans l’état annulé, et l’une des exceptions, le cas échéant, sera lancée lorsque vous appelez `get()` ou `wait()` sur cette tâche.
 
-## <a name="operator_amp_amp"></a>Operator&amp;&amp;, opérateur
+## <a name="operatorampamp-operator"></a><a name="operator_amp_amp"></a>&amp; opérateur&amp;
 
-Crée une tâche qui s’effectue correctement lorsque les deux tâches fournies comme arguments se terminent correctement.
+Crée une tâche qui se terminera avec succès lorsque les deux tâches fournies que les arguments complètent avec succès.
 
 ```cpp
 template<typename ReturnType>
@@ -96,10 +96,10 @@ inline task<void>  operator&&(
 
 ### <a name="parameters"></a>Paramètres
 
-*ReturnType*<br/>
+*ReturnType (en)*<br/>
 Type de la tâche retournée.
 
-*LHS*<br/>
+*Lhs*<br/>
 Première tâche à associer à la tâche obtenue.
 
 *rhs*<br/>
@@ -111,9 +111,9 @@ Tâche qui s'effectue correctement lorsque les deux tâches d'entrée se sont co
 
 ### <a name="remarks"></a>Notes
 
-Si l’une des tâches est annulée ou lève une exception, la tâche retournée se termine plus tôt, à l’état annulé, et l’exception, le cas échéant, est levée si vous appelez `get()` ou `wait()` de cette tâche.
+Si l’une des tâches est annulée ou jette une exception, la tâche retournée se terminera tôt, dans l’état `get()` `wait()` annulé, et l’exception, si l’on se produit, sera jetée si vous appelez ou sur cette tâche.
 
-## <a name="operator_eq_eq"></a>Operator = =, opérateur
+## <a name="operator-operator"></a><a name="operator_eq_eq"></a>opérateurMD
 
 Teste si l'objet `concurrent_vector` situé à gauche de l'opérateur est égal à l'objet `concurrent_vector` situé à droite.
 
@@ -127,15 +127,15 @@ inline bool operator== (
 ### <a name="parameters"></a>Paramètres
 
 *T*<br/>
-Type de données des éléments stockés dans les vecteurs simultanés.
+Le type de données des éléments stockés dans les vecteurs concomitants.
 
 *A1*<br/>
-Type d’allocateur du premier objet `concurrent_vector`.
+Le type d’alloueur du premier `concurrent_vector` objet.
 
 *A2*<br/>
-Type d’allocateur du deuxième objet `concurrent_vector`.
+Le type d’alloueur du deuxième `concurrent_vector` objet.
 
-*_A*<br/>
+*_a*<br/>
 Objet de type `concurrent_vector`.
 
 *_B*<br/>
@@ -143,15 +143,15 @@ Objet de type `concurrent_vector`.
 
 ### <a name="return-value"></a>Valeur de retour
 
-**true** si le vecteur simultané à gauche de l’opérateur est égal au vecteur simultané sur le côté droit de l’opérateur ; Sinon, **false**.
+**vrai** si le vecteur concomitant sur le côté gauche de l’opérateur est égal au vecteur concurrent sur le côté droit de l’opérateur; autrement **faux**.
 
 ### <a name="remarks"></a>Notes
 
-Deux vecteurs simultanés sont égaux s’ils ont le même nombre d’éléments et si leurs éléments respectifs ont les mêmes valeurs. Sinon, elles sont inégales.
+Deux vecteurs simultanés sont égaux s’ils ont le même nombre d’éléments et leurs éléments respectifs ont les mêmes valeurs. Sinon, elles sont inégales.
 
-Cette méthode n’est pas sécurisée pour l’accès concurrentiel par rapport à d’autres méthodes qui peuvent modifier l’un ou l’autre des vecteurs simultanés `_A` ou `_B`.
+Cette méthode n’est pas conforme à la sécurité en ce qui `_A` concerne `_B`d’autres méthodes qui pourraient modifier l’un ou l’autre des vecteurs concomitants ou .
 
-## <a name="operator_neq"></a>Operator ! =, opérateur
+## <a name="operator-operator"></a><a name="operator_neq"></a>opérateur!MD Opérateur
 
 Teste si l'objet `concurrent_vector` situé à gauche de l'opérateur n'est pas égal à l'objet `concurrent_vector` situé à droite.
 
@@ -165,15 +165,15 @@ inline bool operator!= (
 ### <a name="parameters"></a>Paramètres
 
 *T*<br/>
-Type de données des éléments stockés dans les vecteurs simultanés.
+Le type de données des éléments stockés dans les vecteurs concomitants.
 
 *A1*<br/>
-Type d’allocateur du premier objet `concurrent_vector`.
+Le type d’alloueur du premier `concurrent_vector` objet.
 
 *A2*<br/>
-Type d’allocateur du deuxième objet `concurrent_vector`.
+Le type d’alloueur du deuxième `concurrent_vector` objet.
 
-*_A*<br/>
+*_a*<br/>
 Objet de type `concurrent_vector`.
 
 *_B*<br/>
@@ -181,15 +181,15 @@ Objet de type `concurrent_vector`.
 
 ### <a name="return-value"></a>Valeur de retour
 
-**true** si les vecteurs simultanés ne sont pas égaux ; **false** si les vecteurs simultanés sont égaux.
+**vrai** si les vecteurs simultanés ne sont pas égaux; **faux** si les vecteurs simultanés sont égaux.
 
 ### <a name="remarks"></a>Notes
 
-Deux vecteurs simultanés sont égaux s’ils ont le même nombre d’éléments et si leurs éléments respectifs ont les mêmes valeurs. Sinon, elles sont inégales.
+Deux vecteurs simultanés sont égaux s’ils ont le même nombre d’éléments et leurs éléments respectifs ont les mêmes valeurs. Sinon, elles sont inégales.
 
-Cette méthode n’est pas sécurisée pour l’accès concurrentiel par rapport à d’autres méthodes qui peuvent modifier l’un ou l’autre des vecteurs simultanés `_A` ou `_B`.
+Cette méthode n’est pas conforme à la sécurité en ce qui `_A` concerne `_B`d’autres méthodes qui pourraient modifier l’un ou l’autre des vecteurs concomitants ou .
 
-## <a name="operator_lt"></a>Operator&lt;, opérateur
+## <a name="operatorlt-operator"></a><a name="operator_lt"></a>&lt; opérateur
 
 Teste si l'objet `concurrent_vector` situé à gauche de l'opérateur est inférieur à l'objet `concurrent_vector` situé à droite.
 
@@ -203,15 +203,15 @@ inline bool operator<(
 ### <a name="parameters"></a>Paramètres
 
 *T*<br/>
-Type de données des éléments stockés dans les vecteurs simultanés.
+Le type de données des éléments stockés dans les vecteurs concomitants.
 
 *A1*<br/>
-Type d’allocateur du premier objet `concurrent_vector`.
+Le type d’alloueur du premier `concurrent_vector` objet.
 
 *A2*<br/>
-Type d’allocateur du deuxième objet `concurrent_vector`.
+Le type d’alloueur du deuxième `concurrent_vector` objet.
 
-*_A*<br/>
+*_a*<br/>
 Objet de type `concurrent_vector`.
 
 *_B*<br/>
@@ -219,15 +219,15 @@ Objet de type `concurrent_vector`.
 
 ### <a name="return-value"></a>Valeur de retour
 
-**true** si le vecteur simultané à gauche de l’opérateur est inférieur au vecteur simultané sur le côté droit de l’opérateur ; Sinon, **false**.
+**vrai** si le vecteur concomitant sur le côté gauche de l’opérateur est inférieur au vecteur concurrent sur le côté droit de l’opérateur; autrement **faux**.
 
 ### <a name="remarks"></a>Notes
 
-Le comportement de cet opérateur est identique à l’opérateur équivalent pour la classe `vector` dans l’espace de noms `std`.
+Le comportement de cet opérateur est identique `vector` à `std` l’opérateur équivalent pour la classe dans l’espace de nom.
 
-Cette méthode n’est pas sécurisée pour l’accès concurrentiel par rapport à d’autres méthodes qui peuvent modifier l’un ou l’autre des vecteurs simultanés `_A` ou `_B`.
+Cette méthode n’est pas conforme à la sécurité en ce qui `_A` concerne `_B`d’autres méthodes qui pourraient modifier l’un ou l’autre des vecteurs concomitants ou .
 
-## <a name="operator_lt_eq"></a>Operator&lt;=, opérateur
+## <a name="operatorlt-operator"></a><a name="operator_lt_eq"></a>opérateur&lt;et opérateur
 
 Teste si l'objet `concurrent_vector` situé à gauche de l'opérateur est inférieur ou égal à l'objet `concurrent_vector` situé à droite.
 
@@ -241,15 +241,15 @@ inline bool operator<= (
 ### <a name="parameters"></a>Paramètres
 
 *T*<br/>
-Type de données des éléments stockés dans les vecteurs simultanés.
+Le type de données des éléments stockés dans les vecteurs concomitants.
 
 *A1*<br/>
-Type d’allocateur du premier objet `concurrent_vector`.
+Le type d’alloueur du premier `concurrent_vector` objet.
 
 *A2*<br/>
-Type d’allocateur du deuxième objet `concurrent_vector`.
+Le type d’alloueur du deuxième `concurrent_vector` objet.
 
-*_A*<br/>
+*_a*<br/>
 Objet de type `concurrent_vector`.
 
 *_B*<br/>
@@ -257,15 +257,15 @@ Objet de type `concurrent_vector`.
 
 ### <a name="return-value"></a>Valeur de retour
 
-**true** si le vecteur simultané à gauche de l’opérateur est inférieur ou égal au vecteur simultané sur le côté droit de l’opérateur ; Sinon, **false**.
+**vrai** si le vecteur concomitant sur le côté gauche de l’opérateur est inférieur ou égal au vecteur con concurrent sur le côté droit de l’opérateur; autrement **faux**.
 
 ### <a name="remarks"></a>Notes
 
-Le comportement de cet opérateur est identique à l’opérateur équivalent pour la classe `vector` dans l’espace de noms `std`.
+Le comportement de cet opérateur est identique `vector` à `std` l’opérateur équivalent pour la classe dans l’espace de nom.
 
-Cette méthode n’est pas sécurisée pour l’accès concurrentiel par rapport à d’autres méthodes qui peuvent modifier l’un ou l’autre des vecteurs simultanés `_A` ou `_B`.
+Cette méthode n’est pas conforme à la sécurité en ce qui `_A` concerne `_B`d’autres méthodes qui pourraient modifier l’un ou l’autre des vecteurs concomitants ou .
 
-## <a name="operator_gt"></a>Operator&gt;, opérateur
+## <a name="operatorgt-operator"></a><a name="operator_gt"></a>&gt; opérateur
 
 Teste si l'objet `concurrent_vector` situé à gauche de l'opérateur est supérieur à l'objet `concurrent_vector` situé à droite.
 
@@ -279,15 +279,15 @@ inline bool operator>(
 ### <a name="parameters"></a>Paramètres
 
 *T*<br/>
-Type de données des éléments stockés dans les vecteurs simultanés.
+Le type de données des éléments stockés dans les vecteurs concomitants.
 
 *A1*<br/>
-Type d’allocateur du premier objet `concurrent_vector`.
+Le type d’alloueur du premier `concurrent_vector` objet.
 
 *A2*<br/>
-Type d’allocateur du deuxième objet `concurrent_vector`.
+Le type d’alloueur du deuxième `concurrent_vector` objet.
 
-*_A*<br/>
+*_a*<br/>
 Objet de type `concurrent_vector`.
 
 *_B*<br/>
@@ -295,15 +295,15 @@ Objet de type `concurrent_vector`.
 
 ### <a name="return-value"></a>Valeur de retour
 
-**true** si le vecteur simultané sur le côté gauche de l’opérateur est supérieur au vecteur simultané situé à droite de l’opérateur. Sinon, **false**.
+**vrai** si le vecteur concomitant sur le côté gauche de l’opérateur est supérieur au vecteur concurrent sur le côté droit de l’opérateur; autrement **faux**.
 
 ### <a name="remarks"></a>Notes
 
-Le comportement de cet opérateur est identique à l’opérateur équivalent pour la classe `vector` dans l’espace de noms `std`.
+Le comportement de cet opérateur est identique `vector` à `std` l’opérateur équivalent pour la classe dans l’espace de nom.
 
-Cette méthode n’est pas sécurisée pour l’accès concurrentiel par rapport à d’autres méthodes qui peuvent modifier l’un ou l’autre des vecteurs simultanés `_A` ou `_B`.
+Cette méthode n’est pas conforme à la sécurité en ce qui `_A` concerne `_B`d’autres méthodes qui pourraient modifier l’un ou l’autre des vecteurs concomitants ou .
 
-## <a name="operator_gt_eq"></a>Operator&gt;=, opérateur
+## <a name="operatorgt-operator"></a><a name="operator_gt_eq"></a>opérateur&gt;et opérateur
 
 Teste si l'objet `concurrent_vector` situé à gauche de l'opérateur est supérieur ou égal à l'objet `concurrent_vector` situé à droite.
 
@@ -317,15 +317,15 @@ inline bool operator>= (
 ### <a name="parameters"></a>Paramètres
 
 *T*<br/>
-Type de données des éléments stockés dans les vecteurs simultanés.
+Le type de données des éléments stockés dans les vecteurs concomitants.
 
 *A1*<br/>
-Type d’allocateur du premier objet `concurrent_vector`.
+Le type d’alloueur du premier `concurrent_vector` objet.
 
 *A2*<br/>
-Type d’allocateur du deuxième objet `concurrent_vector`.
+Le type d’alloueur du deuxième `concurrent_vector` objet.
 
-*_A*<br/>
+*_a*<br/>
 Objet de type `concurrent_vector`.
 
 *_B*<br/>
@@ -333,13 +333,13 @@ Objet de type `concurrent_vector`.
 
 ### <a name="return-value"></a>Valeur de retour
 
-**true** si le vecteur simultané à gauche de l’opérateur est supérieur ou égal au vecteur simultané sur le côté droit de l’opérateur ; Sinon, **false**.
+**vrai** si le vecteur concomitant sur le côté gauche de l’opérateur est supérieur ou égal au vecteur con concurrent sur le côté droit de l’opérateur; autrement **faux**.
 
 ### <a name="remarks"></a>Notes
 
-Le comportement de cet opérateur est identique à l’opérateur équivalent pour la classe `vector` dans l’espace de noms `std`.
+Le comportement de cet opérateur est identique `vector` à `std` l’opérateur équivalent pour la classe dans l’espace de nom.
 
-Cette méthode n’est pas sécurisée pour l’accès concurrentiel par rapport à d’autres méthodes qui peuvent modifier l’un ou l’autre des vecteurs simultanés `_A` ou `_B`.
+Cette méthode n’est pas conforme à la sécurité en ce qui `_A` concerne `_B`d’autres méthodes qui pourraient modifier l’un ou l’autre des vecteurs concomitants ou .
 
 ## <a name="see-also"></a>Voir aussi
 

@@ -18,12 +18,12 @@ helpviewer_keywords:
 - CDumpContext [MFC], HexDump
 - CDumpContext [MFC], SetDepth
 ms.assetid: 98c52b2d-14b5-48ed-b423-479a4d1c60fa
-ms.openlocfilehash: a5b53ced4e20c920aab8e7ebcda3e3f6f8798ba5
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: aa549e5347bf2bd357fa3c28e81a0309ea4f4aff
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62164096"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81374007"
 ---
 # <a name="cdumpcontext-class"></a>CDumpContext, classe
 
@@ -47,39 +47,39 @@ class CDumpContext
 
 |Nom|Description|
 |----------|-----------------|
-|[CDumpContext::DumpAsHex](#dumpashex)|Exporte l’élément indiqué au format hexadécimal.|
-|[CDumpContext::Flush](#flush)|Vide toutes les données dans la mémoire tampon de contexte de dump.|
-|[CDumpContext::GetDepth](#getdepth)|Obtient un entier correspondant à la profondeur de l’image mémoire.|
-|[CDumpContext::HexDump](#hexdump)|Vide les octets contenus dans un tableau au format hexadécimal.|
-|[CDumpContext::SetDepth](#setdepth)|Définit la profondeur de l’image mémoire.|
+|[CDumpContext::DumpAsHex](#dumpashex)|Décharge l’élément indiqué dans le format hexadecimal.|
+|[CDumpContext::Flush](#flush)|Rincer toutes les données dans le mémoire des décharges tampon.|
+|[CDumpContext::GetDepth](#getdepth)|Obtient un intégrant correspondant à la profondeur de la décharge.|
+|[CDumpContext::HexDump](#hexdump)|Octets de décharges contenus dans un tableau en format hexadecimal.|
+|[CDumpContext::SetDepth](#setdepth)|Définit la profondeur de la décharge.|
 
 ### <a name="public-operators"></a>Op&#233;rateurs publics
 
 |Nom|Description|
 |----------|-----------------|
-|[CDumpContext::operator &lt;&lt;](#operator_lt_lt)|Insère des variables et des objets dans le contexte de dump.|
+|[CDumpContext::opérateur&lt;&lt;](#operator_lt_lt)|Insère les variables et les objets dans le contexte du dépotoir.|
 
 ## <a name="remarks"></a>Notes
 
-`CDumpContext` n’a pas d’une classe de base.
+`CDumpContext`n’a pas de classe de base.
 
-Vous pouvez utiliser [afxDump](diagnostic-services.md#afxdump), un prédéclarés `CDumpContext` objet, pour la plupart de votre sauvegarde. Le `afxDump` objet est uniquement disponible dans la version Debug de la bibliothèque Microsoft Foundation Class.
+Vous pouvez utiliser [afxDump](diagnostic-services.md#afxdump), `CDumpContext` un objet prédéclaré, pour la plupart de votre dumping. L’objet `afxDump` n’est disponible que dans la version Debug de la Microsoft Foundation Class Library.
 
-Plusieurs de la mémoire [services Diagnostics](../../mfc/reference/diagnostic-services.md) utiliser `afxDump` pour leur sortie.
+Plusieurs des [services](../../mfc/reference/diagnostic-services.md) de `afxDump` diagnostic de mémoire utilisent pour leur sortie.
 
-Sous l’environnement Windows, la sortie de prédéfinis `afxDump` objet, conceptuellement semblable à la `cerr` stream, est acheminé vers le débogueur via la fonction Windows `OutputDebugString`.
+Sous l’environnement Windows, la sortie `afxDump` de l’objet prédéfini, conceptuellement similaire au `cerr` flux, `OutputDebugString`est acheminée vers le débbuggeur via la fonction Windows .
 
-Le `CDumpContext` classe a une insertion surchargée ( **<<**) opérateur pour `CObject` pointeurs qui exporte les données de l’objet. Si vous avez besoin d’un format dump personnalisé pour un objet dérivé, substituez [CObject::Dump](../../mfc/reference/cobject-class.md#dump). La plupart des classes Microsoft Foundation implémentent substitué `Dump` fonction membre.
+La `CDumpContext` classe dispose d’une **<<** insertion `CObject` surchargée ( ) opérateur pour les pointeurs qui décharge les données de l’objet. Si vous avez besoin d’un format de décharge personnalisé pour un objet dérivé, [remplacez CObject::Dump](../../mfc/reference/cobject-class.md#dump). La plupart des classes de `Dump` la Fondation Microsoft implémentent une fonction de membre surchargée.
 
-Les classes qui ne sont pas dérivés de `CObject`, tel que `CString`, `CTime`, et `CTimeSpan`, ont leurs propres surchargées `CDumpContext` opérateurs d’insertion, en tant que structures souvent utilisé comme `CFileStatus`, `CPoint`, et `CRect`.
+Les classes qui `CObject`ne sont `CString` `CTime`pas `CTimeSpan`dérivées de , `CDumpContext` tels que , , et , `CFileStatus` `CPoint`ont `CRect`leurs propres opérateurs d’insertion surchargés, comme le font les structures souvent utilisées telles que , , et .
 
-Si vous utilisez le [IMPLEMENT_DYNAMIC](../../mfc/reference/run-time-object-model-services.md#implement_dynamic) ou [IMPLEMENT_SERIAL](../../mfc/reference/run-time-object-model-services.md#implement_serial) macro dans l’implémentation de votre classe, puis `CObject::Dump` imprime le nom de votre `CObject`-classe dérivée. Sinon, il imprimera `CObject`.
+Si vous utilisez la [IMPLEMENT_DYNAMIC](../../mfc/reference/run-time-object-model-services.md#implement_dynamic) ou [IMPLEMENT_SERIAL](../../mfc/reference/run-time-object-model-services.md#implement_serial) macro dans la mise `CObject::Dump` en œuvre `CObject`de votre classe, alors imprimera le nom de votre classe dérivée. Sinon, il `CObject`imprimera .
 
-Le `CDumpContext` classe est disponible avec les versions Debug et Release de la bibliothèque, mais la `Dump` fonction membre est définie uniquement dans la version de débogage. Utilisez **#ifdef _DEBUG**  /  `#endif` instructions pour mettre entre parenthèses de votre code de diagnostic, y compris votre personnalisé `Dump` fonctions membres.
+La `CDumpContext` classe est disponible avec les versions Debug et `Dump` Release de la bibliothèque, mais la fonction membre n’est définie que dans la version Debug. Utilisez **#ifdef**  /  `#endif` _DEBUG des instructions pour saisir votre code diagnostique, y compris vos fonctions de membre personnalisé. `Dump`
 
-Avant de créer votre propre `CDumpContext` de l’objet, vous devez créer un `CFile` objet qui sert à la destination de vidage.
+Avant de créer `CDumpContext` votre propre objet, vous devez créer un `CFile` objet qui sert de destination de décharge.
 
-Pour plus d’informations sur `CDumpContext`, consultez [débogage des Applications MFC](/visualstudio/debugger/mfc-debugging-techniques).
+Pour plus `CDumpContext`d’informations sur , voir [Debugging MFC Applications](/visualstudio/debugger/mfc-debugging-techniques).
 
 **#define _DEBUG**
 
@@ -87,13 +87,13 @@ Pour plus d’informations sur `CDumpContext`, consultez [débogage des Applicat
 
 `CDumpContext`
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
-**En-tête :** afx.h
+**En-tête:** afx.h
 
-##  <a name="cdumpcontext"></a>  CDumpContext::CDumpContext
+## <a name="cdumpcontextcdumpcontext"></a><a name="cdumpcontext"></a>CDumpContext::CDumpContext
 
-Construit un objet de classe `CDumpContext`.
+Construit un objet `CDumpContext`de classe .
 
 ```
 CDumpContext(CFile* pFile = NULL);
@@ -101,22 +101,22 @@ CDumpContext(CFile* pFile = NULL);
 
 ### <a name="parameters"></a>Paramètres
 
-*pFile*<br/>
-Un pointeur vers le `CFile` objet qui constitue la destination de vidage.
+*pFile (en)*<br/>
+Un pointeur `CFile` à l’objet qui est la destination de décharge.
 
 ### <a name="remarks"></a>Notes
 
-Le `afxDump` objet est généré automatiquement.
+L’objet `afxDump` est construit automatiquement.
 
-N’écrivez pas sous-jacentes `CFile` alors que le contexte de dump est active ; sinon, vous interféreriez avec le vidage. Sous l’environnement Windows, la sortie est acheminée vers le débogueur via la fonction Windows `OutputDebugString`.
+N’écrivez pas `CFile` au sous-jacent pendant que le contexte du dépotoir est actif; sinon, vous interférerez avec la décharge. Sous l’environnement Windows, la sortie est acheminée vers `OutputDebugString`le débbuggeur via la fonction Windows .
 
 ### <a name="example"></a>Exemple
 
 [!code-cpp[NVC_MFC_Utilities#12](../../mfc/codesnippet/cpp/cdumpcontext-class_1.cpp)]
 
-##  <a name="dumpashex"></a>  CDumpContext::DumpAsHex
+## <a name="cdumpcontextdumpashex"></a><a name="dumpashex"></a>CDumpContext::DumpAsHex
 
-Exporte le type spécifié sous formaté de nombres hexadécimaux.
+Décharge le type spécifié formaté sous forme de nombres hexadecimal.
 
 ```
 CDumpContext& DumpAsHex(BYTE b);
@@ -135,15 +135,15 @@ Référence à un objet `CDumpContext`.
 
 ### <a name="remarks"></a>Notes
 
-Appelez cette fonction membre pour vider l’élément du type spécifié comme un nombre hexadécimal. Pour vider un tableau, appelez [CDumpContext::HexDump](#hexdump).
+Appelez cette fonction de membre pour vider l’article du type spécifié comme un numéro hexadecimal. Pour vider un tableau, appelez [CDumpContext::HexDump](#hexdump).
 
 ### <a name="example"></a>Exemple
 
 [!code-cpp[NVC_MFC_Utilities#13](../../mfc/codesnippet/cpp/cdumpcontext-class_2.cpp)]
 
-##  <a name="flush"></a>  CDumpContext::Flush
+## <a name="cdumpcontextflush"></a><a name="flush"></a>CDumpContext::Flush
 
-Force les données restantes dans les mémoires tampon dans le fichier attaché dans le contexte de dump.
+Force toute donnée restante dans les tampons à être écrite au fichier attaché au contexte de décharge.
 
 ```
 void Flush();
@@ -153,9 +153,9 @@ void Flush();
 
 [!code-cpp[NVC_MFC_Utilities#14](../../mfc/codesnippet/cpp/cdumpcontext-class_3.cpp)]
 
-##  <a name="getdepth"></a>  CDumpContext::GetDepth
+## <a name="cdumpcontextgetdepth"></a><a name="getdepth"></a>CDumpContext::GetDepth
 
-Détermine si une image mémoire complète ou partielle est en cours.
+Détermine si un dépotoir profond ou peu profond est en cours.
 
 ```
 int GetDepth() const;
@@ -163,15 +163,15 @@ int GetDepth() const;
 
 ### <a name="return-value"></a>Valeur de retour
 
-La profondeur de l’image mémoire telle que définie par `SetDepth`.
+La profondeur de la `SetDepth`décharge telle qu’elle est définie par .
 
 ### <a name="example"></a>Exemple
 
-  Consultez l’exemple de [SetDepth](#setdepth).
+  Voir l’exemple pour [SetDepth](#setdepth).
 
-##  <a name="hexdump"></a>  CDumpContext::HexDump
+## <a name="cdumpcontexthexdump"></a><a name="hexdump"></a>CDumpContext::HexDump
 
-Exporte un tableau d’octets sous formaté de nombres hexadécimaux.
+Décharge une gamme d’octets formatés en nombres hexadecimal.
 
 ```
 void HexDump(
@@ -183,29 +183,29 @@ void HexDump(
 
 ### <a name="parameters"></a>Paramètres
 
-*lpszLine*<br/>
-Une chaîne de sortie au début d’une nouvelle ligne.
+*lpszLine (lpszLine)*<br/>
+Une chaîne à la sortie au début d’une nouvelle ligne.
 
-*pby*<br/>
-Pointeur vers une mémoire tampon contenant les octets pour faire un dump.
+*Hydravion*<br/>
+Un pointeur à un tampon contenant les octets à décharger.
 
-*nBytes*<br/>
+*nBytes (en)*<br/>
 Le nombre d’octets à vider.
 
-*nWidth*<br/>
-Nombre maximal d’octets vidés par ligne (pas la largeur de la ligne de sortie).
+*nWidth (en)*<br/>
+Nombre maximum d’octets déversés par ligne (pas la largeur de la ligne de sortie).
 
 ### <a name="remarks"></a>Notes
 
-Pour vider un type d’élément unique et spécifique comme un nombre hexadécimal, appelez [CDumpContext::DumpAsHex](#dumpashex).
+Pour vider un seul type d’article spécifique comme un numéro hexadecimal, appelez [CDumpContext::DumpAsHex](#dumpashex).
 
 ### <a name="example"></a>Exemple
 
 [!code-cpp[NVC_MFC_Utilities#15](../../mfc/codesnippet/cpp/cdumpcontext-class_4.cpp)]
 
-##  <a name="operator_lt_lt"></a>  CDumpContext::operator &lt;&lt;
+## <a name="cdumpcontextoperator-ltlt"></a><a name="operator_lt_lt"></a>CDumpContext::opérateur&lt;&lt;
 
-Génère les données spécifiées dans le contexte de dump.
+Extrade les données spécifiées dans le contexte du dépotoir.
 
 ```
 CDumpContext& operator<<(const CObject* pOb);
@@ -233,21 +233,21 @@ CDumpContext& operator<<(HFONT h);
 
 ### <a name="return-value"></a>Valeur de retour
 
-Un `CDumpContext` référence. À l’aide de la valeur de retour, vous pouvez écrire plusieurs insertions sur une seule ligne de code source.
+Une référence `CDumpContext`. En utilisant la valeur de retour, vous pouvez écrire plusieurs insertions sur une seule ligne de code source.
 
 ### <a name="remarks"></a>Notes
 
-L’opérateur d’insertion est surchargée pour `CObject` pointeurs ainsi que pour les types les plus primitifs. Un pointeur vers caractère entraîne un vidage de contenu de chaîne ; un pointeur vers **void** entraîne un vidage hexadécimal de l’adresse uniquement. Un LONGLONG entraîne un vidage d’un entier signé 64 bits ; Un ULONGLONG entraîne un vidage d’un entier non signé 64 bits.
+L’opérateur d’insertion `CObject` est surchargé pour les pointeurs ainsi que pour la plupart des types primitifs. Un pointeur au caractère entraîne un dépotoir de contenu de chaîne; un pointeur pour **annuler** les résultats dans un dépotoir hexadecimal de l’adresse seulement. Un LONGLONG donne lieu à un dépotoir d’un intégrant signé 64 bits; Un ULONGLONG se traduit par un dépotoir d’un integer non signé 64 bits.
 
-Si vous utilisez la macro IMPLEMENT_DYNAMIC ou IMPLEMENT_SERIAL dans l’implémentation de votre classe, puis l’opérateur d’insertion, via `CObject::Dump`, imprime le nom de votre `CObject`-classe dérivée. Sinon, il imprimera `CObject`. Si vous remplacez le `Dump` fonction de la classe, vous pouvez fournir une sortie plus significative de contenu de l’objet au lieu d’un vidage hexadécimal.
+Si vous utilisez le IMPLEMENT_DYNAMIC ou IMPLEMENT_SERIAL macro dans la mise en œuvre de votre classe, alors l’opérateur d’insertion, par le biais, `CObject::Dump`imprimera le nom de votre `CObject`classe dérivée. Sinon, il `CObject`imprimera . Si vous remplacez la `Dump` fonction de la classe, alors vous pouvez fournir une sortie plus significative du contenu de l’objet au lieu d’un dépotoir hexadecimal.
 
 ### <a name="example"></a>Exemple
 
 [!code-cpp[NVC_MFC_Utilities#17](../../mfc/codesnippet/cpp/cdumpcontext-class_5.cpp)]
 
-##  <a name="setdepth"></a>  CDumpContext::SetDepth
+## <a name="cdumpcontextsetdepth"></a><a name="setdepth"></a>CDumpContext::SetDepth
 
-Définit la profondeur de l’image mémoire.
+Définit la profondeur pour le dépotoir.
 
 ```
 void SetDepth(int nNewDepth);
@@ -260,10 +260,10 @@ La nouvelle valeur de profondeur.
 
 ### <a name="remarks"></a>Notes
 
-Si le dump d’un type primitif ou un simple `CObject` ne contenant aucun pointeur à d’autres objets, puis la valeur 0 est suffisante. Une valeur supérieure à 0 spécifie un vidage approfondi où tous les objets sont vidées de manière récursive. Par exemple, un vidage approfondi d’une collection vide tous les éléments de la collection. Vous pouvez utiliser les autres valeurs de profondeur spécifiques dans vos classes dérivées.
+Si vous jettent un `CObject` type primitif ou simple qui ne contient pas de pointeurs à d’autres objets, alors une valeur de 0 est suffisante. Une valeur supérieure à 0 spécifie un dépotoir profond où tous les objets sont déversés de façon récursive. Par exemple, un dépotoir profond d’une collection videra tous les éléments de la collection. Vous pouvez utiliser d’autres valeurs de profondeur spécifiques dans vos classes dérivées.
 
 > [!NOTE]
->  Les références circulaires ne sont pas détectés dans les dumps approfondies et peuvent entraîner des boucles infinies.
+> Les références circulaires ne sont pas détectées dans des décharges profondes et peuvent entraîner des boucles infinies.
 
 ### <a name="example"></a>Exemple
 
@@ -273,4 +273,4 @@ Si le dump d’un type primitif ou un simple `CObject` ne contenant aucun pointe
 
 [Graphique hiérarchique](../../mfc/hierarchy-chart.md)<br/>
 [CFile, classe](../../mfc/reference/cfile-class.md)<br/>
-[CObject, classe](../../mfc/reference/cobject-class.md)
+[Classe CObject](../../mfc/reference/cobject-class.md)

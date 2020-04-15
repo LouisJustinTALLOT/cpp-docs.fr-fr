@@ -26,12 +26,12 @@ helpviewer_keywords:
 - CFontHolder [MFC], SetFont
 - CFontHolder [MFC], m_pFont
 ms.assetid: 728ab472-0c97-440d-889f-1324c6e1b6b8
-ms.openlocfilehash: 04de8141469f82bdd1fbb6adc1bae94d6026324c
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: 6a053f127123a9ca21853189b9458738b217ee2b
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69506443"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81373812"
 ---
 # <a name="cfontholder-class"></a>CFontHolder, classe
 
@@ -55,36 +55,36 @@ class CFontHolder
 
 |Nom|Description|
 |----------|-----------------|
-|[CFontHolder::GetDisplayString](#getdisplaystring)|Récupère la chaîne affichée dans l’Explorateur de propriétés d’un conteneur.|
-|[CFontHolder::GetFontDispatch](#getfontdispatch)|Retourne l’interface de `IDispatch` la police.|
-|[CFontHolder::GetFontHandle](#getfonthandle)|Retourne un handle vers une police Windows.|
-|[CFontHolder::InitializeFont](#initializefont)|Initialise un `CFontHolder` objet.|
-|[CFontHolder::QueryTextMetrics](#querytextmetrics)|Récupère des informations pour la police associée.|
-|[CFontHolder::ReleaseFont](#releasefont)|Déconnecte l' `CFontHolder` objet `IFont` des interfaces et `IFontNotification` .|
-|[CFontHolder:: SELECT](#select)|Sélectionne une ressource de police dans un contexte de périphérique.|
-|[CFontHolder::SetFont](#setfont)|Connecte `CFontHolder` l’objet à `IFont` une interface.|
+|[CFontHolder::GetDisplayString](#getdisplaystring)|Récupère la chaîne affichée dans le navigateur de propriété d’un conteneur.|
+|[CFontHolder::GetFontDispatch](#getfontdispatch)|Retourne l’interface `IDispatch` de la police.|
+|[CFontHolder::GetFontHandle](#getfonthandle)|Retourne une poignée à une police Windows.|
+|[CFontHolder::InitializeFont](#initializefont)|Initialise un objet `CFontHolder`.|
+|[CFontHolder::QueryTextMetrics](#querytextmetrics)|Récupère des informations pour la police connexe.|
+|[CFontHolder::ReleaseFont](#releasefont)|Déconnecte `CFontHolder` l’objet `IFontNotification` de la et des `IFont` interfaces.|
+|[CFontHolder::Sélectionner](#select)|Sélectionne une ressource de police dans un contexte d’appareil.|
+|[CFontHolder::SetFont](#setfont)|Connecte `CFontHolder` l’objet `IFont` à une interface.|
 
 ### <a name="public-data-members"></a>Membres de données publics
 
 |Nom|Description|
 |----------|-----------------|
-|[CFontHolder::m_pFont](#m_pfont)|Pointeur vers l’interface `CFontHolder` de `IFont` l’objet.|
+|[CFontHolder::m_pFont](#m_pfont)|Un pointeur `CFontHolder` sur `IFont` l’interface de l’objet.|
 
 ## <a name="remarks"></a>Notes
 
 `CFontHolder`n’a pas de classe de base.
 
-Utilisez cette classe pour implémenter des propriétés de police personnalisées pour votre contrôle. Pour plus d’informations sur la création de ces propriétés [, consultez l’article contrôles ActiveX: Utilisation des](../../mfc/mfc-activex-controls-using-fonts.md)polices.
+Utilisez cette classe pour implémenter des propriétés de police personnalisées pour votre contrôle. Pour plus d’informations sur la création de telles propriétés, consultez l’article [ActiveX Controls: Using Fonts](../../mfc/mfc-activex-controls-using-fonts.md).
 
 ## <a name="inheritance-hierarchy"></a>Hiérarchie d'héritage
 
 `CFontHolder`
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
-**En-tête:** afxctl. h
+**En-tête:** afxctl.h
 
-##  <a name="cfontholder"></a>  CFontHolder::CFontHolder
+## <a name="cfontholdercfontholder"></a><a name="cfontholder"></a>CFontHolder::CFontHolder
 
 Construit un objet `CFontHolder`.
 
@@ -94,16 +94,16 @@ explicit CFontHolder(LPPROPERTYNOTIFYSINK pNotify);
 
 ### <a name="parameters"></a>Paramètres
 
-*pNotify*<br/>
-Pointeur vers l’interface de `IPropertyNotifySink` la police.
+*pNotifier*<br/>
+Pointeur sur l’interface de `IPropertyNotifySink` la police.
 
 ### <a name="remarks"></a>Notes
 
-Vous devez appeler `InitializeFont` pour initialiser l’objet obtenu avant de l’utiliser.
+Vous devez `InitializeFont` appeler pour initialiser l’objet résultant avant de l’utiliser.
 
-##  <a name="getdisplaystring"></a>  CFontHolder::GetDisplayString
+## <a name="cfontholdergetdisplaystring"></a><a name="getdisplaystring"></a>CFontHolder::GetDisplayString
 
-Récupère une chaîne qui peut être affichée dans l’Explorateur de propriétés d’un conteneur.
+Récupère une chaîne qui peut être affichée dans le navigateur de propriété d’un conteneur.
 
 ```
 BOOL GetDisplayString(CString& strValue);
@@ -112,15 +112,15 @@ BOOL GetDisplayString(CString& strValue);
 ### <a name="parameters"></a>Paramètres
 
 *strValue*<br/>
-Référence à la [CString](../../atl-mfc-shared/reference/cstringt-class.md) qui doit contenir la chaîne d’affichage.
+Référence au [CString](../../atl-mfc-shared/reference/cstringt-class.md) qui est de tenir la chaîne d’affichage.
 
 ### <a name="return-value"></a>Valeur de retour
 
-Différent de zéro si la chaîne est récupérée avec succès; Sinon, 0.
+Nonzero si la chaîne est récupérée avec succès; sinon 0.
 
-##  <a name="getfontdispatch"></a>  CFontHolder::GetFontDispatch
+## <a name="cfontholdergetfontdispatch"></a><a name="getfontdispatch"></a>CFontHolder::GetFontDispatch
 
-Appelez cette fonction pour récupérer un pointeur vers l’interface de dispatch de la police.
+Appelez cette fonction pour récupérer un pointeur sur l’interface de répartition de la police.
 
 ```
 LPFONTDISP GetFontDispatch();
@@ -128,15 +128,15 @@ LPFONTDISP GetFontDispatch();
 
 ### <a name="return-value"></a>Valeur de retour
 
-Pointeur vers l’interface `CFontHolder` de `IFontDisp` l’objet. Notez que la fonction qui appelle `GetFontDispatch` doit appeler `IUnknown::Release` sur ce pointeur d’interface lorsqu’elle est terminée.
+Un pointeur `CFontHolder` sur `IFontDisp` l’interface de l’objet. Notez que la `GetFontDispatch` fonction `IUnknown::Release` que les appels doivent faire appel à ce pointeur d’interface lorsqu’il est fait avec elle.
 
 ### <a name="remarks"></a>Notes
 
-Appelez `InitializeFont` avant d' `GetFontDispatch`appeler.
+Appelez `InitializeFont` avant `GetFontDispatch`d’appeler .
 
-##  <a name="getfonthandle"></a>  CFontHolder::GetFontHandle
+## <a name="cfontholdergetfonthandle"></a><a name="getfonthandle"></a>CFontHolder::GetFontHandle
 
-Appelez cette fonction pour obtenir un handle vers une police Windows.
+Appelez cette fonction pour obtenir une poignée à une police Windows.
 
 ```
 HFONT GetFontHandle();
@@ -148,27 +148,27 @@ HFONT GetFontHandle(
 
 ### <a name="parameters"></a>Paramètres
 
-*cyLogical*<br/>
-Hauteur, en unités logiques, du rectangle dans lequel le contrôle est dessiné.
+*cyLogisme*<br/>
+Hauteur, dans les unités logiques, du rectangle dans lequel le contrôle est dessiné.
 
-*cyHimetric*<br/>
-Hauteur, en unités MM_HIMETRIC, du contrôle.
+*cyHimétrique*<br/>
+Hauteur, dans MM_HIMETRIC unités, du contrôle.
 
 ### <a name="return-value"></a>Valeur de retour
 
-Handle de l’objet font; Sinon, NULL.
+Une poignée à l’objet Font; autrement NULL.
 
 ### <a name="remarks"></a>Notes
 
-Le ratio *cyLogical* et *cyHimetric* est utilisé pour calculer la taille d’affichage appropriée, en unités logiques, pour la taille de point de la police exprimée en unités MM_HIMETRIC:
+Le rapport de *cyLogical* et *cyHimetric* est utilisé pour calculer la taille d’affichage appropriée, dans les unités logiques, pour la taille du point de la police exprimée dans MM_HIMETRIC unités:
 
-Taille d’affichage = ( *cyLogical* / *cyHimetric*) X taille de police
+Taille de l’écran ( *cyLogical* / *cyHimetric*) X taille de police
 
-La version sans paramètres retourne un handle à une police correctement dimensionnée pour l’écran.
+La version sans paramètres renvoie une poignée à une police de taille correcte pour l’écran.
 
-##  <a name="initializefont"></a>  CFontHolder::InitializeFont
+## <a name="cfontholderinitializefont"></a><a name="initializefont"></a>CFontHolder::InitializeFont
 
-Initialise un `CFontHolder` objet.
+Initialise un objet `CFontHolder`.
 
 ```
 void InitializeFont(
@@ -178,31 +178,31 @@ void InitializeFont(
 
 ### <a name="parameters"></a>Paramètres
 
-*pFontDesc*<br/>
-Pointeur vers une structure de description de police ( [fontdesc](/windows/win32/api/olectl/ns-olectl-fontdesc)) qui spécifie les caractéristiques de la police.
+*pFontDesc (en)*<br/>
+Pointeur vers une structure de description de police ( [FONTDESC](/windows/win32/api/olectl/ns-olectl-fontdesc)) qui spécifie les caractéristiques de la police.
 
 *pFontDispAmbient*<br/>
-Pointeur vers la propriété de police ambiante du conteneur.
+Pointeur vers la propriété Font ambiante du conteneur.
 
 ### <a name="remarks"></a>Notes
 
-Si *pFontDispAmbient* n’a pas la valeur `CFontHolder` null, l’objet est connecté à un `IFont` clone de l’interface utilisée par la propriété de police ambiante du conteneur.
+Si *pFontDispAmbient* n’est `CFontHolder` pas NULL, l’objet est connecté à un clone de l’interface `IFont` utilisée par la propriété Font ambiante du conteneur.
 
-Si *pFontDispAmbient* a la valeur null, un nouvel objet font est créé à partir de la description de la police désignée par *pFontDesc* ou, si *pFontDesc* est null, à partir d’une description par défaut.
+Si *pFontDispAmbient* est NULL, un nouvel objet Font est créé soit à partir de la description de police indiquée par *pFontDesc* ou, si *pFontDesc* est NULL, à partir d’une description par défaut.
 
-Appelez cette fonction après avoir construit un `CFontHolder` objet.
+Appelez cette fonction après `CFontHolder` la construction d’un objet.
 
-##  <a name="m_pfont"></a>  CFontHolder::m_pFont
+## <a name="cfontholderm_pfont"></a><a name="m_pfont"></a>CFontHolder::m_pFont
 
-Pointeur vers l’interface `CFontHolder` de `IFont` l’objet.
+Un pointeur `CFontHolder` sur `IFont` l’interface de l’objet.
 
 ```
 LPFONT m_pFont;
 ```
 
-##  <a name="querytextmetrics"></a>  CFontHolder::QueryTextMetrics
+## <a name="cfontholderquerytextmetrics"></a><a name="querytextmetrics"></a>CFontHolder::QueryTextMetrics
 
-Récupère des informations sur la police physique représentée par l' `CFontHolder` objet.
+Récupère des informations sur la police `CFontHolder` physique représentée par l’objet.
 
 ```
 void QueryTextMetrics(LPTEXTMETRIC lptm);
@@ -210,20 +210,20 @@ void QueryTextMetrics(LPTEXTMETRIC lptm);
 
 ### <a name="parameters"></a>Paramètres
 
-*lptm*<br/>
-Pointeur vers une structure [TEXTMETRIC](/windows/win32/api/wingdi/ns-wingdi-textmetricw) qui recevra les informations.
+*lptm lptm*<br/>
+Un pointeur vers une structure [TEXTMETRIC](/windows/win32/api/wingdi/ns-wingdi-textmetricw) qui recevra l’information.
 
-##  <a name="releasefont"></a>  CFontHolder::ReleaseFont
+## <a name="cfontholderreleasefont"></a><a name="releasefont"></a>CFontHolder::ReleaseFont
 
-Cette fonction déconnecte l' `CFontHolder` objet de son `IFont` interface.
+Cette fonction déconnecte `CFontHolder` `IFont` l’objet de son interface.
 
 ```
 void ReleaseFont();
 ```
 
-##  <a name="select"></a>  CFontHolder::Select
+## <a name="cfontholderselect"></a><a name="select"></a>CFontHolder::Sélectionner
 
-Appelez cette fonction pour sélectionner la police de votre contrôle dans le contexte de périphérique spécifié.
+Appelez cette fonction pour sélectionner la police de votre contrôle dans le contexte de l’appareil spécifié.
 
 ```
 CFont* Select(
@@ -235,25 +235,25 @@ CFont* Select(
 ### <a name="parameters"></a>Paramètres
 
 *pDC*<br/>
-Contexte de périphérique dans lequel la police est sélectionnée.
+Contexte de l’appareil dans lequel la police est sélectionnée.
 
-*cyLogical*<br/>
-Hauteur, en unités logiques, du rectangle dans lequel le contrôle est dessiné.
+*cyLogisme*<br/>
+Hauteur, dans les unités logiques, du rectangle dans lequel le contrôle est dessiné.
 
-*cyHimetric*<br/>
-Hauteur, en unités MM_HIMETRIC, du contrôle.
+*cyHimétrique*<br/>
+Hauteur, dans MM_HIMETRIC unités, du contrôle.
 
 ### <a name="return-value"></a>Valeur de retour
 
-Pointeur vers la police qui est remplacée.
+Un pointeur à la police qui est remplacé.
 
 ### <a name="remarks"></a>Notes
 
-Consultez [GetFontHandle](#getfonthandle) pour en savoir plus sur les paramètres *cyLogical* et *cyHimetric* .
+Voir [GetFontHandle](#getfonthandle) pour une discussion sur les paramètres *cyLogical* et *cyHimetric.*
 
-##  <a name="setfont"></a>  CFontHolder::SetFont
+## <a name="cfontholdersetfont"></a><a name="setfont"></a>CFontHolder::SetFont
 
-Libère toutes les polices existantes et connecte l' `CFontHolder` objet à une `IFont` interface.
+Communiqués toute police existante `CFontHolder` et `IFont` connecte l’objet à une interface.
 
 ```
 void SetFont(LPFONT pNewFont);
@@ -262,9 +262,9 @@ void SetFont(LPFONT pNewFont);
 ### <a name="parameters"></a>Paramètres
 
 *pNewFont*<br/>
-Pointeur vers la nouvelle `IFont` interface.
+Pointeur vers `IFont` la nouvelle interface.
 
 ## <a name="see-also"></a>Voir aussi
 
 [Graphique hiérarchique](../../mfc/hierarchy-chart.md)<br/>
-[CPropExchange, classe](../../mfc/reference/cpropexchange-class.md)
+[Classe CPropExchange](../../mfc/reference/cpropexchange-class.md)

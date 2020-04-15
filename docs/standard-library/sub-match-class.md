@@ -20,12 +20,12 @@ helpviewer_keywords:
 - std::sub_match [C++], iterator
 - std::sub_match [C++], value_type
 ms.assetid: 804e2b9e-d16a-4c4c-ac60-024e0b2dd0e8
-ms.openlocfilehash: 776dfe67367b932435f76af94880111cad61341d
-ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
+ms.openlocfilehash: 460f79fe0f23643fafcebb64aecf2988bdb0debe
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/21/2019
-ms.locfileid: "72685842"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81376582"
 ---
 # <a name="sub_match-class"></a>sub_match, classe
 
@@ -41,43 +41,43 @@ class sub_match
 
 ## <a name="parameters"></a>Paramètres
 
-@No__t_1 *bidit*
+*BidIt*\
 Type d'itérateur pour les sous-correspondances.
 
 ## <a name="remarks"></a>Notes
 
-Le modèle de classe décrit un objet qui désigne une séquence de caractères correspondant à un groupe de capture dans un appel à [regex_match](../standard-library/regex-functions.md#regex_match) ou à [regex_search](../standard-library/regex-functions.md#regex_search). Les objets de type de [classe match_results](../standard-library/match-results-class.md) contiennent un tableau de ces objets, un pour chaque groupe de capture de l’expression régulière utilisée dans la recherche.
+Le modèle de classe décrit un objet qui désigne une séquence de caractères qui correspondait à un groupe de capture dans un appel à [regex_match](../standard-library/regex-functions.md#regex_match) ou à [regex_search](../standard-library/regex-functions.md#regex_search). Les objets de type de [classe match_results](../standard-library/match-results-class.md) contiennent un tableau de ces objets, un pour chaque groupe de capture de l’expression régulière utilisée dans la recherche.
 
 Si le groupe de capture n’a aucune correspondance, le membre de données `matched` de l’objet a la valeur false, et les deux itérateurs `first` et `second` (hérités du `std::pair`de base) sont égaux. Si le groupe de capture a une correspondance, `matched` a la valeur true et l’itérateur `first` pointe vers le premier caractère de la séquence cible correspondant au groupe de capture. En outre, l’itérateur `second` pointe vers la position située après le dernier caractère de la séquence cible correspondant au groupe de capture. Notez que pour une correspondance de longueur nulle, le membre `matched` a la valeur true. Par ailleurs, les deux itérateurs sont égaux et pointent vers la position de la correspondance.
 
-Une correspondance de longueur nulle peut se produire quand un groupe de capture se compose uniquement d’une assertion, ou d’une répétition n’autorisant aucune répétition. Exemple :
+Une correspondance de longueur nulle peut se produire quand un groupe de capture se compose uniquement d’une assertion, ou d’une répétition n’autorisant aucune répétition. Par exemple :
 
 « ^ » correspond à la séquence cible « a ». L’objet `sub_match` correspondant au groupe de capture 0 contient les itérateurs qui pointent vers le premier caractère de la séquence.
 
 « b(a*)b » correspond à la séquence cible « bb ». L’objet `sub_match` correspondant au groupe de capture 1 contient les itérateurs qui pointent vers le second caractère de la séquence.
 
-### <a name="typedefs"></a>Typedef
+### <a name="typedefs"></a>Typedefs
 
 |Nom de type|Description|
 |-|-|
 |[difference_type](#difference_type)|Type d’une différence d’itérateur.|
-|[iterator](#iterator)|Type d'un itérateur.|
-|[value_type](#value_type)|Type d'un élément.|
+|[Itérateur](#iterator)|Type d'un itérateur.|
+|[value_type](#value_type)|Type d’un élément.|
 
-### <a name="member-functions"></a>Fonctions membres
+### <a name="member-functions"></a>Fonctions Membre
 
 |Fonction membre|Description|
 |-|-|
-|[compare](#compare)|Comparer une sous-correspondance à une séquence.|
+|[Comparer](#compare)|Comparer une sous-correspondance à une séquence.|
 |[length](#length)|Retourne la longueur d'une sous-correspondance.|
-|[mis en correspondance](#matched)|Indique si la correspondance a réussi.|
-|[str](#str)|Convertit la sous-correspondance en chaîne.|
+|[Correspondait](#matched)|Indique si la correspondance a réussi.|
+|[Str](#str)|Convertit la sous-correspondance en chaîne.|
 
 ### <a name="operators"></a>Opérateurs
 
-|opérateur|Description|
+|Opérateur|Description|
 |-|-|
-|[opérateur basic_string < Value_type >](#op_basic_string_lt_value_type_gt)|Effectue un cast de la sous-correspondance en chaîne.|
+|[>basic_string<de value_type l’opérateur](#op_basic_string_lt_value_type_gt)|Effectue un cast de la sous-correspondance en chaîne.|
 
 ## <a name="example"></a>Exemple
 
@@ -131,13 +131,13 @@ compare(string) == 1
 compare(sub) == 0
 ```
 
-## <a name="requirements"></a>spécifications
+## <a name="requirements"></a>Spécifications
 
 **En-tête :** \<regex>
 
 **Espace de noms :** std
 
-## <a name="compare"></a>  sub_match::compare
+## <a name="sub_matchcompare"></a><a name="compare"></a>sub_match::comparer
 
 Comparer une sous-correspondance à une séquence.
 
@@ -149,13 +149,13 @@ int compare(const value_type *ptr) const;
 
 ### <a name="parameters"></a>Paramètres
 
-\ *droit*
+*Oui*\
 Sous-correspondance avec laquelle effectuer la comparaison.
 
-*str* \
+*Str*\
 Chaîne de comparaison.
 
-\ *ptr*
+*Ptr*\
 Séquence terminée par un caractère null avec laquelle effectuer la comparaison.
 
 ### <a name="remarks"></a>Notes
@@ -170,7 +170,7 @@ zéro si les valeurs comparées sont égales élément par élément et qu'elles
 
 une valeur positive dans les autres cas.
 
-## <a name="difference_type"></a>  sub_match::difference_type
+## <a name="sub_matchdifference_type"></a><a name="difference_type"></a>sub_match::difference-type
 
 Type d’une différence d’itérateur.
 
@@ -182,7 +182,7 @@ typedef typename iterator_traits<BidIt>::difference_type difference_type;
 
 Le typedef est un synonyme de `iterator_traits<BidIt>::difference_type`.
 
-## <a name="iterator"></a>  sub_match::iterator
+## <a name="sub_matchiterator"></a><a name="iterator"></a>sub_match::iterator
 
 Type d'un itérateur.
 
@@ -194,7 +194,7 @@ typedef BidIt iterator;
 
 Le typedef est un synonyme de l'argument de type de modèle `Bidit`.
 
-## <a name="length"></a>  sub_match::length
+## <a name="sub_matchlength"></a><a name="length"></a>sub_match::longueur
 
 Retourne la longueur d'une sous-correspondance.
 
@@ -206,7 +206,7 @@ difference_type length() const;
 
 La fonction membre retourne la longueur de la séquence mise en correspondance, ou zéro en l'absence de séquence mise en correspondance.
 
-## <a name="matched"></a>  sub_match::matched
+## <a name="sub_matchmatched"></a><a name="matched"></a>sub_match::matched
 
 Indique si la correspondance a réussi.
 
@@ -216,9 +216,9 @@ bool matched;
 
 ### <a name="remarks"></a>Notes
 
-Le membre a la **valeur true** uniquement si le groupe de capture associé à `*this` faisait partie de la correspondance d’expression régulière.
+Le membre **n’est vrai** que `*this` si le groupe de capture associé faisait partie du match d’expression régulière.
 
-## <a name="op_basic_string_lt_value_type_gt"></a>  sub_match::operator basic_string&lt;value_type&gt;
+## <a name="sub_matchoperator-basic_stringltvalue_typegt"></a><a name="op_basic_string_lt_value_type_gt"></a>sub_match::opérateur basic_string&lt;value_type&gt;
 
 Effectue un cast de la sous-correspondance en chaîne.
 
@@ -230,7 +230,7 @@ operator basic_string<value_type>() const;
 
 L’opérateur membre retourne `str()`.
 
-## <a name="str"></a>  sub_match::str
+## <a name="sub_matchstr"></a><a name="str"></a>sub_match::str
 
 Convertit la sous-correspondance en chaîne.
 
@@ -242,9 +242,9 @@ basic_string<value_type> str() const;
 
 La fonction membre retourne `basic_string<value_type>(first, second)`.
 
-## <a name="value_type"></a>  sub_match::value_type
+## <a name="sub_matchvalue_type"></a><a name="value_type"></a>sub_match::value_type
 
-Type d'un élément.
+Type d’un élément.
 
 ```cpp
 typedef typename iterator_traits<BidIt>::value_type value_type;

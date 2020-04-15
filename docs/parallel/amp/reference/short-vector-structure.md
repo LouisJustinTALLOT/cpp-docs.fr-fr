@@ -6,16 +6,16 @@ f1_keywords:
 - AMP_SHORT_VECTORS/short_vector
 - AMP_SHORT_VECTORS/Concurrency::graphics::short_vector::short_vector Constructor
 ms.assetid: e4f50b8f-1150-437d-b58c-79c5fb883708
-ms.openlocfilehash: 531b8d53eac8d997b7e8ca4d29aad7d34ef90e22
-ms.sourcegitcommit: a8ef52ff4a4944a1a257bdaba1a3331607fb8d0f
+ms.openlocfilehash: fc2864477da80885b18dabb08b9ccbee30f31387
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/11/2020
-ms.locfileid: "77126433"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81374751"
 ---
 # <a name="short_vector-structure"></a>short_vector Structure
 
-short_vector fournit des définitions de la surprogrammation qui sont utiles pour la programmation de vecteurs courts de façon générique.
+short_vector fournit des définitions de métaprogrammation qui sont utiles pour la programmation de courts vecteurs génériquement.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -85,15 +85,15 @@ struct short_vector<double, 4>;
 
 ### <a name="public-typedefs"></a>Typedefs publics
 
-|Name|Description|
+|Nom|Description|
 |----------|-----------------|
 |`type`||
 
 ### <a name="public-constructors"></a>Constructeurs publics
 
-|Name|Description|
+|Nom|Description|
 |----------|-----------------|
-|[short_vector :: short_vector, constructeur](#ctor)||
+|[short_vector::short_vector, constructeur](#ctor)||
 
 ## <a name="inheritance-hierarchy"></a>Hiérarchie d'héritage
 
@@ -101,11 +101,11 @@ struct short_vector<double, 4>;
 
 ## <a name="requirements"></a>Spécifications
 
-**En-tête :** amp_short_vectors. h
+**En-tête:** amp_short_vectors.h
 
-**Espace de noms :** Concurrency :: Graphics
+**Espace nom:** Concordrency::graphiques
 
-## <a name="ctor"></a>short_vector :: short_vector, constructeur
+## <a name="short_vectorshort_vector-constructor"></a><a name="ctor"></a>short_vector::short_vector Constructeur
 
 ```cpp
 short_vector();

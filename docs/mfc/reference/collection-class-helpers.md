@@ -8,32 +8,32 @@ helpviewer_keywords:
 - collection classes [MFC], helper functions
 - helper functions collection class [MFC]
 ms.assetid: bc3a2368-9edd-4748-9e6a-13cba79517ca
-ms.openlocfilehash: 6839427d916068deaf2041dd21a282e0b470f404
-ms.sourcegitcommit: 934cb53fa4cb59fea611bfeb9db110d8d6f7d165
+ms.openlocfilehash: 05fe49a4d8e6de92c584d40f3871f3efb906c7c8
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65612262"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81374817"
 ---
 # <a name="collection-class-helpers"></a>Programmes d’assistance pour les classes de collection
 
-Les classes de collection `CMap`, `CList`, et `CArray` utiliser des fonctions d’assistance globales basé sur un modèle fins telles que la comparaison, la copie et la sérialisation des éléments. Dans le cadre de votre implémentation de classes basées sur `CMap`, `CList`, et `CArray`, vous devez substituer ces fonctions en fonction des besoins avec des versions adaptées au type de données stockées dans votre carte, une liste ou un tableau. Pour plus d’informations sur les fonctions d’assistance de substitution comme `SerializeElements`, consultez l’article [Collections : Comment définir une Collection de Type sécurisé](../../mfc/how-to-make-a-type-safe-collection.md). Notez que `ConstructElements` et `DestructElements` ont été déconseillées.
+Les classes `CMap` `CList`de `CArray` collecte , , et l’utilisation des fonctions d’aide globale modélisées à des fins telles que la comparaison, la copie et la sérialisation des éléments. Dans le cadre de votre `CMap` `CList`mise `CArray`en œuvre de classes basées sur , , et , vous devez remplacer ces fonctions au besoin avec des versions adaptées au type de données stockées dans votre carte, liste, ou tableau. Pour plus d’informations sur les `SerializeElements`fonctions d’aide primordiale telles que , voir l’article [Collections: How to Make a Type-Safe Collection](../../mfc/how-to-make-a-type-safe-collection.md). Notez `ConstructElements` `DestructElements` cela et ont été dépréciés.
 
-La bibliothèque Microsoft Foundation Class fournit les fonctions globales suivantes dans afxtempl.h pour vous aider à personnaliser vos classes de collection :
+La Microsoft Foundation Class Library fournit les fonctions globales suivantes dans afxtempl.h pour vous aider à personnaliser vos classes de collection :
 
 ### <a name="collection-class-helpers"></a>Programmes d’assistance pour les classes de collection
 
 |||
 |-|-|
 |[CompareElements](#compareelements)|Indique si les éléments sont les mêmes.|
-|[CopyElements](#copyelements)|Copie les éléments d’un tableau à un autre.|
-|[DumpElements](#dumpelements)|Fournit une sortie de diagnostique orienté flux.|
-|[HashKey](#hashkey)|Calcule une clé de hachage.|
-|[SerializeElements](#serializeelements)|Stocke ou extrait des éléments vers ou à partir d’une archive.|
+|[CopyElements](#copyelements)|Copie des éléments d’un tableau à l’autre.|
+|[DumpElements](#dumpelements)|Fournit des résultats diagnostiques axés sur le flux.|
+|[HashKey (en)](#hashkey)|Calcule une clé de hachage.|
+|[SerializeElements](#serializeelements)|Stocke ou récupère des éléments à partir ou à partir d’une archive.|
 
-##  <a name="compareelements"></a>  CompareElements
+## <a name="compareelements"></a><a name="compareelements"></a>CompareElements
 
-Appelé directement par [CList::Find] (clist-class.md #not_found.md #clist__find et indirectement par [cmap__lookup](cmap-class.md#lookup) et [cmap__operator &#91; &#93; ](cmap-class.md#operator_at).
+Appelé directement par [CList::Find] (clist-class.md-not_found.md-clist__find et indirectement par [cmap__lookup](cmap-class.md#lookup) et [cmap__operator &#91;&#93;](cmap-class.md#operator_at).
 
 ```
 template<class TYPE, class ARG_TYPE>
@@ -49,31 +49,31 @@ CompareElements(
 Le type du premier élément à comparer.
 
 *pElement1*<br/>
-Pointeur vers le premier élément à comparer.
+Pointeur sur le premier élément à comparer.
 
 *ARG_TYPE*<br/>
 Le type du deuxième élément à comparer.
 
 *pElement2*<br/>
-Pointeur vers le deuxième élément à comparer.
+Pointeur sur le deuxième élément à comparer.
 
 ### <a name="return-value"></a>Valeur de retour
 
-Différent de zéro si l’objet vers lequel pointe *pElement1* est égal à l’objet vers lequel pointé *pElement2*; sinon, 0.
+Nonzero si l’objet pointé par *pElement1* est égal à l’objet pointé par *pElement2*; sinon 0.
 
 ### <a name="remarks"></a>Notes
 
-Le `CMap` appelle utiliser le `CMap` paramètres de modèle *clé* et *ARG_KEY*.
+Les `CMap` appels `CMap` utilisent les paramètres du modèle *KEY* et *ARG_KEY*.
 
-L’implémentation par défaut retourne le résultat de la comparaison de  *\*pElement1* et  *\*pElement2*. Remplacez cette fonction pour qu’elle compare les éléments d’une manière qui convient à votre application.
+La mise en œuvre par défaut renvoie le résultat de la comparaison de * \*pElement1* et * \*pElement2*. Remplacer cette fonction afin qu’elle compare les éléments d’une manière appropriée pour votre application.
 
-Le langage C++ définit l’opérateur de comparaison ( `==`) pour les types simples (**char**, **int**, **float**, et ainsi de suite) mais ne définit ne pas un opérateur de comparaison pour les classes et structures. Si vous souhaitez utiliser `CompareElements` ou pour instancier une des classes de collection qui l’utilise, vous devez définir l’opérateur de comparaison ou de surcharge `CompareElements` avec une version qui renvoie les valeurs appropriées.
+La langue Cmd définit l’opérateur de `==`comparaison ( ) pour les types simples **(char**, **int**, **flotteur,** etc.) mais ne définit pas un opérateur de comparaison pour les classes et les structures. Si vous souhaitez `CompareElements` utiliser ou instantané l’une des classes de collecte qui l’utilise, vous devez soit définir l’opérateur de comparaison ou la surcharge `CompareElements` avec une version qui renvoie des valeurs appropriées.
 
-### <a name="requirements"></a>Configuration requise
+### <a name="requirements"></a>Spécifications
 
    **En-tête :** afxtempl.h
 
-##  <a name="copyelements"></a>  CopyElements
+## <a name="copyelements"></a><a name="copyelements"></a>CopyElements
 
 Cette fonction est appelée directement par [CArray::Append](carray-class.md#append) et [CArray::Copy](carray-class.md#copy).
 
@@ -88,30 +88,30 @@ void AFXAPI CopyElements(
 ### <a name="parameters"></a>Paramètres
 
 *TYPE*<br/>
-Paramètre de modèle qui spécifie le type d’éléments à copier.
+Paramètre de modèle spécifiant le type d’éléments à copier.
 
 *pDest*<br/>
-Pointeur vers la destination où les éléments sont copiés.
+Pointeur vers la destination où les éléments seront copiés.
 
-*pSrc*<br/>
+*pSrc (en)*<br/>
 Pointeur vers la source des éléments à copier.
 
-*nCount*<br/>
+*nCompte*<br/>
 Nombre d’éléments à copier.
 
 ### <a name="remarks"></a>Notes
 
-L’implémentation par défaut utilise l’opérateur d’assignation simple ( **=** ) pour effectuer l’opération de copie. Si le type en cours de copie n’a pas un opérateur surchargé =, l’implémentation par défaut effectue une copie au niveau du bit.
+La mise en œuvre **=** par défaut utilise l’opérateur d’affectation simple ( ) pour effectuer l’opération de copie. Si le type copié n’a pas d’opérateur surchargé, la mise en œuvre par défaut effectue une copie un peu plus sage.
 
-Pour plus d’informations sur l’implémentation de cela et autres fonctions d’assistance, consultez l’article [Collections : Comment définir une Collection de Type sécurisé](../how-to-make-a-type-safe-collection.md).
+Pour plus d’informations sur la mise en œuvre de cette fonction et d’autres fonctions d’aide, consultez l’article [Collections: How to Make a Type-Safe Collection](../how-to-make-a-type-safe-collection.md).
 
-### <a name="requirements"></a>Configuration requise
+### <a name="requirements"></a>Spécifications
 
   **En-tête** afxtempl.h
 
-##  <a name="dumpelements"></a>  DumpElements
+## <a name="dumpelements"></a><a name="dumpelements"></a>DumpElements DumpElements
 
-Fournit une sortie de diagnostic orienté flux sous forme de texte pour les éléments de votre collection en cas de substitution.
+Fournit la sortie diagnostique axée sur le flux sous forme de texte pour les éléments de votre collection lorsqu’il est remplacé.
 
 ```
 template<class TYPE>
@@ -123,29 +123,29 @@ void  AFXAPI DumpElements(
 
 ### <a name="parameters"></a>Paramètres
 
-*dc*<br/>
-Contexte pour vider des éléments de vidage.
+*Dc*<br/>
+Contexte de vidange pour les éléments de dumping.
 
 *TYPE*<br/>
-Paramètre de modèle qui spécifie le type des éléments.
+Paramètre de modèle spécifiant le type d’éléments.
 
 *pElements*<br/>
-Pointeur vers les éléments à être vidées.
+Pointeur sur les éléments à jeter.
 
-*nCount*<br/>
-Nombre d’éléments à être vidées.
+*nCompte*<br/>
+Nombre d’éléments à sous-erguer.
 
 ### <a name="remarks"></a>Notes
 
-Le `CArray::Dump`, `CList::Dump`, et `CMap::Dump` fonctions appelez cette méthode si la profondeur de l’image mémoire est supérieure à 0.
+Le `CArray::Dump` `CList::Dump`, `CMap::Dump` , et les fonctions appellent ceci si la profondeur de la décharge est supérieure à 0.
 
-L'implémentation par défaut n'exécute aucune opération. Si les éléments de votre collection sont dérivés de `CObject`, votre remplacement sera généralement itérer au sein des éléments de la collection, appelant `Dump` pour chaque élément à son tour.
+L'implémentation par défaut n'exécute aucune opération. Si les éléments de votre `CObject`collection sont dérivés, votre remplacement s’ytira généralement à travers les éléments de la collection, appelant `Dump` à chaque élément à son tour.
 
-### <a name="requirements"></a>Configuration requise
+### <a name="requirements"></a>Spécifications
 
   **En-tête** afxtempl.h
 
-##  <a name="hashkey"></a>  HashKey
+## <a name="hashkey"></a><a name="hashkey"></a>HashKey (en)
 
 Calcule une valeur de hachage pour la clé donnée.
 
@@ -157,20 +157,20 @@ AFX_INLINE UINT AFXAPI HashKey(ARG_KEY  key);
 ### <a name="parameters"></a>Paramètres
 
 *ARG_KEY*<br/>
-Paramètre de modèle qui spécifie le type de données permettant d’accéder aux clés de carte.
+Paramètre de modèle spécifiant le type de données utilisé pour accéder aux clés de la carte.
 
 *key*<br/>
-Clé dont la valeur hachage doit être calculé.
+La clé dont la valeur de hachage doit être calculée.
 
 ### <a name="return-value"></a>Valeur de retour
 
-Valeur de hachage de la clé.
+La valeur de hachage de la clé.
 
 ### <a name="remarks"></a>Notes
 
-Cette fonction est appelée directement par [CMap::RemoveKey](cmap-class.md#removekey) et indirectement par [CMap::Lookup](cmap-class.md#lookup) et [CMap::Operator &#91; &#93; ](cmap-class.md#operator_at).
+Cette fonction est appelée directement par [CMap::RemoveKey](cmap-class.md#removekey) et indirectement par [CMap::Lookup](cmap-class.md#lookup) et [CMap::Operator &#91;&#93;](cmap-class.md#operator_at).
 
-L’implémentation par défaut crée une valeur de hachage en décalant *clé* droite par quatre positions. Remplacez cette fonction afin qu’elle retourne des valeurs de hachage appropriée pour votre application.
+La mise en œuvre par défaut crée une valeur de hachage en déplaçant le droit *de clé* par quatre positions. Remplacez cette fonction afin qu’elle renvoie des valeurs de hachage appropriées à votre application.
 
 ### <a name="example"></a>Exemple
 
@@ -183,13 +183,13 @@ template <> UINT AFXAPI HashKey(unsigned __int64 key)
 }
 ```
 
-### <a name="requirements"></a>Configuration requise
+### <a name="requirements"></a>Spécifications
 
   **En-tête** afxtempl.h
 
-##  <a name="serializeelements"></a>  SerializeElements
+## <a name="serializeelements"></a><a name="serializeelements"></a>SérialisationElements
 
-[CArray](carray-class.md), [CList](clist-class.md), et [CMap](cmap-class.md) appelez cette fonction pour sérialiser des éléments.
+[CArray](carray-class.md), [CList](clist-class.md), et [CMap](cmap-class.md) appellent cette fonction pour sérialiser les éléments.
 
 ```
 template<class TYPE>
@@ -199,28 +199,28 @@ void AFXAPI SerializeElements(CArchive& ar, TYPE* pElements, INT_PTR nCount);
 ### <a name="parameters"></a>Paramètres
 
 *TYPE*<br/>
-Paramètre de modèle qui spécifie le type des éléments.
+Paramètre de modèle spécifiant le type d’éléments.
 
-*ar*<br/>
-Objet archive à archiver à partir d’ou.
+*Ar*<br/>
+Un objet d’archives à archiver vers ou depuis.
 
 *pElements*<br/>
-Pointeur vers les éléments à archiver.
+Pointeur vers les éléments archivés.
 
-*nCount*<br/>
+*nCompte*<br/>
 Nombre d’éléments archivés
 
 ### <a name="remarks"></a>Notes
 
-L’implémentation par défaut est une opération de bits lire ou écrire.
+L’implémentation par défaut fait un peu lire ou écrire.
 
-Pour plus d’informations sur l’implémentation de cela et autres fonctions d’assistance, consultez l’article [Collections : Comment définir une Collection de Type sécurisé](../how-to-make-a-type-safe-collection.md).
+Pour plus d’informations sur la mise en œuvre de cette fonction et d’autres fonctions d’aide, consultez l’article [Collections: How to Make a Type-Safe Collection](../how-to-make-a-type-safe-collection.md).
 
 ### <a name="example"></a>Exemple
 
-Consultez l’exemple dans l’article [Collections : Comment définir une Collection de Type sécurisé](../how-to-make-a-type-safe-collection.md).
+Voir l’exemple dans l’article [Collections: How to Make a Type-Safe Collection](../how-to-make-a-type-safe-collection.md).
 
-### <a name="requirements"></a>Configuration requise
+### <a name="requirements"></a>Spécifications
 
   **En-tête** afxtempl.h
 
@@ -229,4 +229,4 @@ Consultez l’exemple dans l’article [Collections : Comment définir une Coll
 [Macros et objet Globals](mfc-macros-and-globals.md)<br/>
 [CMap, classe](cmap-class.md)<br/>
 [CList, classe](clist-class.md)<br/>
-[CArray, classe](carray-class.md)
+[Classe CArray](carray-class.md)

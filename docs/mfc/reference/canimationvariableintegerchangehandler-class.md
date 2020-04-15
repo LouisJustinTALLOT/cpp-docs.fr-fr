@@ -14,12 +14,12 @@ helpviewer_keywords:
 - CAnimationVariableIntegerChangeHandler [MFC], OnIntegerValueChanged
 - CAnimationVariableIntegerChangeHandler [MFC], SetAnimationController
 ms.assetid: 6ac8e91b-e514-4ff6-babd-33f77c4b2b61
-ms.openlocfilehash: e1c3dc080c23ba4ac05539674047a66059ce52d0
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 261f8eb17953c047fcc8ec05ae48dc369de4614c
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62338179"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81377040"
 ---
 # <a name="canimationvariableintegerchangehandler-class"></a>CAnimationVariableIntegerChangeHandler, classe
 
@@ -43,13 +43,13 @@ class CAnimationVariableIntegerChangeHandler : public CUIAnimationVariableIntege
 
 |Nom|Description|
 |----------|-----------------|
-|[CAnimationVariableIntegerChangeHandler::CreateInstance](#createinstance)|Crée une instance de `CAnimationVariableIntegerChangeHandler` rappel.|
-|[CAnimationVariableIntegerChangeHandler::OnIntegerValueChanged](#onintegervaluechanged)|Appelé lorsqu’une valeur d’une variable d’animation a changé. (Substitue `CUIAnimationVariableIntegerChangeHandlerBase::OnIntegerValueChanged`.)|
-|[CAnimationVariableIntegerChangeHandler::SetAnimationController](#setanimationcontroller)|Stocke un pointeur vers le contrôleur de l’animation pour acheminer les événements.|
+|[CAnimationVariableIntegerChangeHandler::CreateInstance](#createinstance)|Crée un `CAnimationVariableIntegerChangeHandler` exemple de rappel.|
+|[CAnimationVariableIntegerChangeHandler::OnIntegerValueChanged](#onintegervaluechanged)|Appelé quand une valeur d’une variable d’animation a changé. (Substitue `CUIAnimationVariableIntegerChangeHandlerBase::OnIntegerValueChanged`.)|
+|[CAnimationVariableIntegerChangeHandler::SetAnimationController](#setanimationcontroller)|Stocke un pointeur au contrôleur d’animation pour acheminer les événements.|
 
 ## <a name="remarks"></a>Notes
 
-Ce gestionnaire d’événements est créé et transmis à la méthode IUIAnimationVariable::SetVariableIntegerChangeHandler, lorsque vous appelez CAnimationVariable::EnableIntegerValueChangedEvent ou CAnimationBaseObject::EnableIntegerValueChangedEvent (ce qui permet Cet événement pour toutes les variables d’animation encapsulées dans un objet d’animation).
+Ce gestionnaire d’événement est créé et transmis à IUIAnimationVariable::SetVariableIntegerChangeHandler méthode, lorsque vous appelez CAnimationVariable::EnableIntegerValueChangedEvent ou CAnimationBaseObject::EnableIntegerValueChangedEvent (qui permet cet événement pour toutes les variables d’animation encapsulées dans un objet d’animation).
 
 ## <a name="inheritance-hierarchy"></a>Hiérarchie d'héritage
 
@@ -61,11 +61,11 @@ Ce gestionnaire d’événements est créé et transmis à la méthode IUIAnimat
 
 `CAnimationVariableIntegerChangeHandler`
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
 **En-tête :** afxanimationcontroller.h
 
-##  <a name="canimationvariableintegerchangehandler"></a>  CAnimationVariableIntegerChangeHandler::CAnimationVariableIntegerChangeHandler
+## <a name="canimationvariableintegerchangehandlercanimationvariableintegerchangehandler"></a><a name="canimationvariableintegerchangehandler"></a>CAnimationVariableIntegerChangeHandler::CAnimationVariableIntegerChangeHandler
 
 Construit un objet CAnimationVariableIntegerChangeHandler.
 
@@ -73,9 +73,9 @@ Construit un objet CAnimationVariableIntegerChangeHandler.
 CAnimationVariableIntegerChangeHandler ();
 ```
 
-##  <a name="createinstance"></a>  CAnimationVariableIntegerChangeHandler::CreateInstance
+## <a name="canimationvariableintegerchangehandlercreateinstance"></a><a name="createinstance"></a>CAnimationVariableIntegerChangeHandler::CreateInstance
 
-Crée une instance de rappel CAnimationVariableIntegerChangeHandler.
+Crée un exemple de rappel CAnimationVariableIntegerChangeHandler.
 
 ```
 static COM_DECLSPEC_NOTHROW HRESULT CreateInstance(
@@ -86,17 +86,17 @@ static COM_DECLSPEC_NOTHROW HRESULT CreateInstance(
 ### <a name="parameters"></a>Paramètres
 
 *pAnimationController*<br/>
-Pointeur vers le contrôleur de l’animation, qui recevra les événements.
+Un pointeur au contrôleur d’animation, qui recevra des événements.
 
-*ppHandler*
+*ppHandler (en)*
 
 ### <a name="return-value"></a>Valeur de retour
 
-Si la méthode réussit, elle retourne S_OK. Sinon, elle retourne un code d’erreur HRESULT.
+Si la méthode réussit, retourne S_OK. Sinon, il renvoie un code d’erreur HRESULT.
 
-##  <a name="onintegervaluechanged"></a>  CAnimationVariableIntegerChangeHandler::OnIntegerValueChanged
+## <a name="canimationvariableintegerchangehandleronintegervaluechanged"></a><a name="onintegervaluechanged"></a>CAnimationVariableIntegerChangeHandler::OnIntegerValueChanged
 
-Appelé lorsqu’une valeur d’une variable d’animation a changé.
+Appelé quand une valeur d’une variable d’animation a changé.
 
 ```
 IFACEMETHOD(OnIntegerValueChanged) (
@@ -108,25 +108,25 @@ IFACEMETHOD(OnIntegerValueChanged) (
 
 ### <a name="parameters"></a>Paramètres
 
-*storyboard*<br/>
-La table de montage séquentiel qui anime la variable.
+*Storyboard*<br/>
+Le storyboard qui anime la variable.
 
 *variable*<br/>
-La variable de l’animation qui a été mis à jour.
+La variable d’animation qui a été mise à jour.
 
 *newValue*<br/>
 La nouvelle valeur arrondie.
 
-*previousValue*<br/>
-La précédente valeur arrondie.
+*previousValue (en)*<br/>
+La valeur arrondie précédente.
 
 ### <a name="return-value"></a>Valeur de retour
 
-S_OK si la méthode réussit ; Sinon, E_FAIL.
+S_OK si la méthode réussit; autrement E_FAIL.
 
-##  <a name="setanimationcontroller"></a>  CAnimationVariableIntegerChangeHandler::SetAnimationController
+## <a name="canimationvariableintegerchangehandlersetanimationcontroller"></a><a name="setanimationcontroller"></a>CAnimationVariableIntegerChangeHandler::SetAnimationController
 
-Stocke un pointeur vers le contrôleur de l’animation pour acheminer les événements.
+Stocke un pointeur au contrôleur d’animation pour acheminer les événements.
 
 ```
 void SetAnimationController(CAnimationController* pAnimationController);
@@ -135,7 +135,7 @@ void SetAnimationController(CAnimationController* pAnimationController);
 ### <a name="parameters"></a>Paramètres
 
 *pAnimationController*<br/>
-Pointeur vers le contrôleur de l’animation, qui recevra les événements.
+Un pointeur au contrôleur d’animation, qui recevra des événements.
 
 ## <a name="see-also"></a>Voir aussi
 

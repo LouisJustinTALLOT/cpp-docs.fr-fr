@@ -1,5 +1,5 @@
 ---
-title: Cmfclinkctrl, classe
+title: CMFCLinkCtrl, classe
 ms.date: 11/04/2016
 f1_keywords:
 - CMFCLinkCtrl
@@ -14,16 +14,16 @@ helpviewer_keywords:
 - CMFCLinkCtrl [MFC], SizeToContent
 - CMFCLinkCtrl [MFC], OnDrawFocusRect
 ms.assetid: 80f3874d-7cc8-410e-9ff1-62a225f5034b
-ms.openlocfilehash: 839448694cee17f5bc1a1e47f7c113026a1a4006
-ms.sourcegitcommit: c6f8e6c2daec40ff4effd8ca99a7014a3b41ef33
+ms.openlocfilehash: 1ef4e390d88f81d738d2ee18be6ba02843633011
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "64346206"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81374404"
 ---
-# <a name="cmfclinkctrl-class"></a>Cmfclinkctrl, classe
+# <a name="cmfclinkctrl-class"></a>CMFCLinkCtrl, classe
 
-Le `CMFCLinkCtrl` classe affiche un bouton sous la forme d’un lien hypertexte et appelle la cible du lien lorsque l’utilisateur clique sur le bouton.
+La `CMFCLinkCtrl` classe affiche un bouton sous forme d’hyperlien et invoque la cible du lien lorsque le bouton est cliqué.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -37,23 +37,23 @@ class CMFCLinkCtrl : public CMFCButton
 
 |Nom|Description|
 |----------|-----------------|
-|[CMFCLinkCtrl::SetURL](#seturl)|Affiche une URL spécifiée en tant que le texte du bouton.|
-|[CMFCLinkCtrl::SetURLPrefix](#seturlprefix)|Définit le protocole implicit (par exemple, « http : ») de l’URL.|
-|[CMFCLinkCtrl::SizeToContent](#sizetocontent)|Redimensionne le bouton pour qu’il contienne le texte du bouton ou une bitmap.|
+|[CMFCLinkCtrl::SetURL](#seturl)|Affiche une URL spécifiée sous forme de texte boutonné.|
+|[CMFCLinkCtrl::SetURLPrefix](#seturlprefix)|Définit le protocole implicite (par exemple, "http:") de l’URL.|
+|[CMFCLinkCtrl::SizeToContent](#sizetocontent)|Resizes le bouton pour contenir le texte du bouton ou bitmap.|
 
 ### <a name="protected-methods"></a>Méthodes protégées
 
 |Nom|Description|
 |----------|-----------------|
-|[CMFCLinkCtrl::OnDrawFocusRect](#ondrawfocusrect)|Appelé par l’infrastructure avant que le rectangle de focus du bouton est dessiné.|
+|[CMFCLinkCtrl::OnDrawFocusRect](#ondrawfocusrect)|Appelé par le cadre avant que le rectangle de mise au point du bouton est dessiné.|
 
 ## <a name="remarks"></a>Notes
 
-Lorsque vous cliquez sur un bouton qui est dérivé de la `CMFCLinkCtrl` (classe), l’infrastructure transmet l’URL du bouton en tant que paramètre à la `ShellExecute` (méthode). Le `ShellExecute` méthode ouvre la cible de l’URL.
+Lorsque vous cliquez sur un `CMFCLinkCtrl` bouton dérivé de la classe, le cadre `ShellExecute` passe l’URL du bouton comme paramètre de la méthode. Ensuite, `ShellExecute` la méthode ouvre la cible de l’URL.
 
 ## <a name="example"></a>Exemple
 
-L’exemple suivant montre comment définir la taille d’un `CMFCLinkCtrl` objet et comment définir une url et une info-bulle dans un `CMFCLinkCtrl` objet. Cet exemple fait partie de la [exemple nouveaux contrôles](../../overview/visual-cpp-samples.md).
+L’exemple suivant montre comment définir `CMFCLinkCtrl` la taille d’un objet, et comment `CMFCLinkCtrl` définir une url et une boîte à outils dans un objet. Cet exemple fait partie de [l’échantillon De nouveaux contrôles](../../overview/visual-cpp-samples.md).
 
 [!code-cpp[NVC_MFC_NewControls#9](../../mfc/reference/codesnippet/cpp/cmfclinkctrl-class_1.h)]
 [!code-cpp[NVC_MFC_NewControls#10](../../mfc/reference/codesnippet/cpp/cmfclinkctrl-class_2.cpp)]
@@ -72,13 +72,13 @@ L’exemple suivant montre comment définir la taille d’un `CMFCLinkCtrl` obje
 
 [CMFCLinkCtrl](../../mfc/reference/cmfclinkctrl-class.md)
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
-**En-tête :** afxlinkctrl.h
+**En-tête:** afxlinkctrl.h
 
-##  <a name="ondrawfocusrect"></a>  CMFCLinkCtrl::OnDrawFocusRect
+## <a name="cmfclinkctrlondrawfocusrect"></a><a name="ondrawfocusrect"></a>CMFCLinkCtrl::OnDrawFocusRect
 
-Appelé par l’infrastructure avant que le rectangle de focus du bouton est dessiné.
+Appelé par le cadre avant que le rectangle de mise au point du bouton est dessiné.
 
 ```
 virtual void OnDrawFocusRect(
@@ -89,18 +89,18 @@ virtual void OnDrawFocusRect(
 ### <a name="parameters"></a>Paramètres
 
 *pDC*<br/>
-[in] Pointeur vers un contexte de périphérique.
+[dans] Un pointeur vers un contexte d’appareil.
 
 *rectClient*<br/>
-[in] Un rectangle qui délimite le contrôle de lien.
+[dans] Un rectangle qui limite le contrôle du lien.
 
 ### <a name="remarks"></a>Notes
 
-Substituez cette méthode lorsque vous souhaitez utiliser votre propre code pour dessiner le rectangle de focus du bouton.
+Remplacez cette méthode lorsque vous souhaitez utiliser votre propre code pour dessiner le rectangle de mise au point du bouton.
 
-##  <a name="seturl"></a>  CMFCLinkCtrl::SetURL
+## <a name="cmfclinkctrlseturl"></a><a name="seturl"></a>CMFCLinkCtrl::SetURL
 
-Affiche une URL spécifiée en tant que le texte du bouton.
+Affiche une URL spécifiée sous forme de texte boutonné.
 
 ```
 void SetURL(LPCTSTR lpszURL);
@@ -109,13 +109,13 @@ void SetURL(LPCTSTR lpszURL);
 ### <a name="parameters"></a>Paramètres
 
 *lpszURL*<br/>
-[in] Le texte de bouton à afficher.
+[dans] Le bouton texte à afficher.
 
 ### <a name="remarks"></a>Notes
 
-##  <a name="seturlprefix"></a>  CMFCLinkCtrl::SetURLPrefix
+## <a name="cmfclinkctrlseturlprefix"></a><a name="seturlprefix"></a>CMFCLinkCtrl::SetURLPrefix
 
-Définit le protocole implicit (par exemple, « http : ») de l’URL.
+Définit le protocole implicite (par exemple, "http:") de l’URL.
 
 ```
 void SetURLPrefix(LPCTSTR lpszPrefix);
@@ -124,15 +124,15 @@ void SetURLPrefix(LPCTSTR lpszPrefix);
 ### <a name="parameters"></a>Paramètres
 
 *lpszPrefix*<br/>
-[in] Le préfixe du protocole d’URL.
+[dans] Le préfixe du protocole URL.
 
 ### <a name="remarks"></a>Notes
 
-Utilisez cette méthode pour définir le préfixe d’URL. Le préfixe n’est pas affiché dans les face du bouton, mais vous pouvez l’utiliser pour aider à accéder à la cible de l’URL.
+Utilisez cette méthode pour définir le préfixe URL. Le préfixe n’est pas affiché sur le visage du bouton, mais vous pouvez l’utiliser pour aider à naviguer vers la cible de l’URL.
 
-##  <a name="sizetocontent"></a>  CMFCLinkCtrl::SizeToContent
+## <a name="cmfclinkctrlsizetocontent"></a><a name="sizetocontent"></a>CMFCLinkCtrl::SizeToContent
 
-Redimensionne le bouton pour qu’il contienne le texte du bouton ou une bitmap.
+Resizes le bouton pour contenir le texte du bouton ou bitmap.
 
 ```
 virtual CSize SizeToContent(
@@ -142,15 +142,15 @@ virtual CSize SizeToContent(
 
 ### <a name="parameters"></a>Paramètres
 
-*bVCenter*<br/>
-[in] TRUE pour centrer le texte et bouton bitmap verticalement entre le haut et bas du contrôle de lien ; Sinon, FALSE. La valeur par défaut est FALSE.
+*bVCenter (en)*<br/>
+[dans] VRAI pour centrer le texte du bouton et la bitmap verticalement entre le haut et le bas du contrôle de lien ; autrement, FALSE. La valeur par défaut est FALSE.
 
-*bHCenter*<br/>
-[in] TRUE pour centrer le texte et bouton bitmap horizontalement entre les côtés gauche et droit du contrôle de lien ; Sinon, FALSE. La valeur par défaut est FALSE.
+*bHCenter (en)*<br/>
+[dans] VRAI pour centrer le texte du bouton et bitmap horizontalement entre les côtés gauche et droit du contrôle du lien; autrement, FALSE. La valeur par défaut est FALSE.
 
 ### <a name="return-value"></a>Valeur de retour
 
-Un [CSize](../../atl-mfc-shared/reference/csize-class.md) objet qui contient la nouvelle taille du contrôle de lien.
+Un objet [CSize](../../atl-mfc-shared/reference/csize-class.md) qui contient la nouvelle taille du contrôle du lien.
 
 ### <a name="remarks"></a>Notes
 
@@ -159,4 +159,4 @@ Un [CSize](../../atl-mfc-shared/reference/csize-class.md) objet qui contient la 
 [Graphique hiérarchique](../../mfc/hierarchy-chart.md)<br/>
 [Classes](../../mfc/reference/mfc-classes.md)<br/>
 [CLinkCtrl, classe](../../mfc/reference/clinkctrl-class.md)<br/>
-[CMFCButton, classe](../../mfc/reference/cmfcbutton-class.md)
+[Classe CMFCButton](../../mfc/reference/cmfcbutton-class.md)

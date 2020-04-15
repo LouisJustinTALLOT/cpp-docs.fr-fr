@@ -1,5 +1,5 @@
 ---
-title: CTypedPtrMap (classe)
+title: CTypedPtrMap, classe
 ms.date: 11/04/2016
 f1_keywords:
 - CTypedPtrMap
@@ -14,14 +14,14 @@ helpviewer_keywords:
 - CTypedPtrMap [MFC], RemoveKey
 - CTypedPtrMap [MFC], SetAt
 ms.assetid: 9f377385-c6e9-4471-8b40-8fe220c50164
-ms.openlocfilehash: bc164125f867cf3e2f27b74e69b826cbed31ff1d
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 41416c8223ac94364e8f83028ea93189e9f3f60c
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62323568"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81373256"
 ---
-# <a name="ctypedptrmap-class"></a>CTypedPtrMap (classe)
+# <a name="ctypedptrmap-class"></a>CTypedPtrMap, classe
 
 Fournit un « wrapper » de type sécurisé pour les objets des classes de mappage de pointeur `CMapPtrToPtr`, `CMapPtrToWord`, `CMapWordToPtr`et `CMapStringToPtr`.
 
@@ -35,13 +35,13 @@ class CTypedPtrMap : public BASE_CLASS
 #### <a name="parameters"></a>Paramètres
 
 *BASE_CLASS*<br/>
-Classe de base de la classe map de pointeurs typés ; doit être une classe de carte de pointeur ( `CMapPtrToPtr`, `CMapPtrToWord`, `CMapWordToPtr`, ou `CMapStringToPtr`).
+Classe de base de la classe de carte de pointeur dactylographie; doit être une classe `CMapPtrToPtr` `CMapPtrToWord`de `CMapWordToPtr`carte `CMapStringToPtr`pointeur ( , , , , ou ).
 
-*KEY*<br/>
-Classe de l’objet utilisé comme clé pour la carte.
+*Clé*<br/>
+Classe de l’objet utilisé comme la clé de la carte.
 
-*VALEUR*<br/>
-Classe de l’objet stocké dans la classe map.
+*Valeur*<br/>
+Classe de l’objet stocké dans la carte.
 
 ## <a name="members"></a>Membres
 
@@ -49,24 +49,24 @@ Classe de l’objet stocké dans la classe map.
 
 |Nom|Description|
 |----------|-----------------|
-|[CTypedPtrMap::GetNextAssoc](#getnextassoc)|Obtient l’élément suivant pour une itération.|
-|[CTypedPtrMap::Lookup](#lookup)|Retourne un `KEY` selon un `VALUE`.|
+|[CTypedPtrMap::GetNextAssoc](#getnextassoc)|Obtient le prochain élément pour itérer.|
+|[CTypedPtrMap::Lookup](#lookup)|Retourne `KEY` un basé `VALUE`sur un .|
 |[CTypedPtrMap::RemoveKey](#removekey)|Supprime un élément spécifié par une clé.|
-|[CTypedPtrMap::SetAt](#setat)|Insère un élément dans l’objet map. remplace un élément existant si une clé correspondante est trouvée.|
+|[CTypedPtrMap::SetAt](#setat)|Insère un élément dans la carte; remplace un élément existant si une clé correspondante est trouvée.|
 
 ### <a name="public-operators"></a>Op&#233;rateurs publics
 
 |Nom|Description|
 |----------|-----------------|
-|[CTypedPtrMap::operator \[ \]](#operator_at)|Insère un élément dans la classe map.|
+|[CTypedPtrMap::opérateur \[\]](#operator_at)|Insère un élément dans la carte.|
 
 ## <a name="remarks"></a>Notes
 
-Lorsque vous utilisez `CTypedPtrMap`, la fonctionnalité de vérification de type C++ permet d’éliminer les erreurs provoquées par les types de pointeur qui ne correspondent pas.
+Lorsque vous `CTypedPtrMap`utilisez, l’installation de vérification de type CMD permet d’éliminer les erreurs causées par des types de pointeurs dépareillés.
 
-Étant donné que tous les `CTypedPtrMap` fonctions inline, utilisation de ce modèle ne pas affecte de manière significative la taille ou la vitesse de votre code.
+Étant `CTypedPtrMap` donné que toutes les fonctions sont inlines, l’utilisation de ce modèle n’affecte pas de manière significative la taille ou la vitesse de votre code.
 
-Pour plus d’informations sur l’utilisation de `CTypedPtrMap`, consultez les articles [Collections](../../mfc/collections.md) et [Classes basées sur le modèle](../../mfc/template-based-classes.md).
+Pour plus d’informations sur l’utilisation `CTypedPtrMap`, voir les articles [Collections](../../mfc/collections.md) et [Template-Based Classes](../../mfc/template-based-classes.md).
 
 ## <a name="inheritance-hierarchy"></a>Hiérarchie d'héritage
 
@@ -74,13 +74,13 @@ Pour plus d’informations sur l’utilisation de `CTypedPtrMap`, consultez les 
 
 `CTypedPtrMap`
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
 **En-tête :** afxtempl.h
 
-##  <a name="getnextassoc"></a>  CTypedPtrMap::GetNextAssoc
+## <a name="ctypedptrmapgetnextassoc"></a><a name="getnextassoc"></a>CTypedPtrMap::GetNextAssoc
 
-Récupère l’élément de carte à `rNextPosition`, puis met à jour `rNextPosition` pour faire référence à l’élément suivant dans la carte.
+Récupère l’élément `rNextPosition`de la `rNextPosition` carte à , puis mises à jour pour se référer à l’élément suivant dans la carte.
 
 ```
 void GetNextAssoc(
@@ -92,31 +92,31 @@ void GetNextAssoc(
 ### <a name="parameters"></a>Paramètres
 
 *rPosition*<br/>
-Spécifie une référence à une valeur POSITION retournée par une précédente `GetNextAssoc` ou `BASE_CLASS` **:: GetStartPosition** appeler.
+Spécifie une référence à une `GetNextAssoc` `BASE_CLASS`valeur POSITION retournée par un précédent ou **::GetStartPosition** appel.
 
-*KEY*<br/>
-Paramètre de modèle qui spécifie le type des clés de la carte.
+*Clé*<br/>
+Paramètre de modèle spécifiant le type de clés de la carte.
 
-*rKey*<br/>
+*rKey (en)*<br/>
 Spécifie la clé retournée de l’élément récupéré.
 
-*VALEUR*<br/>
-Paramètre de modèle qui spécifie le type des valeurs de la carte.
+*Valeur*<br/>
+Paramètre de modèle spécifiant le type de valeurs de la carte.
 
-*rValue*<br/>
+*rValue (en)*<br/>
 Spécifie la valeur retournée de l’élément récupéré.
 
 ### <a name="remarks"></a>Notes
 
-Cette fonction est particulièrement utile pour itérer tous les éléments dans le mappage. Notez que la séquence de position n’est pas nécessairement identique à la séquence de la valeur de clé.
+Cette fonction est plus utile pour itérer à travers tous les éléments de la carte. Notez que la séquence de position n’est pas nécessairement la même que la séquence de valeur clé.
 
-Si l’élément récupéré est le dernier dans le mappage, puis la nouvelle valeur de `rNextPosition` est définie sur NULL.
+Si l’élément récupéré est le dernier de la `rNextPosition` carte, alors la nouvelle valeur est réglée à NULL.
 
-Cette fonction inline s’appelle `BASE_CLASS` **:: GetNextAssoc**.
+Cette fonction en `BASE_CLASS`ligne appelle **::GetNextAssoc**.
 
-##  <a name="lookup"></a>  CTypedPtrMap::Lookup
+## <a name="ctypedptrmaplookup"></a><a name="lookup"></a>CTypedPtrMap::Lookup
 
-`Lookup` utilise un algorithme de hachage pour trouver rapidement l’élément de carte avec une clé qui correspond exactement.
+`Lookup`utilise un algorithme de hachage pour trouver rapidement l’élément de carte avec une clé qui correspond exactement.
 
 ```
 BOOL Lookup(BASE_CLASS ::BASE_ARG_KEY key, VALUE& rValue) const;
@@ -125,28 +125,28 @@ BOOL Lookup(BASE_CLASS ::BASE_ARG_KEY key, VALUE& rValue) const;
 ### <a name="parameters"></a>Paramètres
 
 *BASE_CLASS*<br/>
-Paramètre de modèle en spécifiant la classe de base de la classe de cette carte.
+Paramètre de modèle spécifiant la classe de base de la classe de cette carte.
 
 *key*<br/>
-La clé de l’élément à rechercher.
+La clé de l’élément à lever.
 
-*VALEUR*<br/>
-Paramètre de modèle qui spécifie le type des valeurs stockées dans ce mappage.
+*Valeur*<br/>
+Paramètre de modèle spécifiant le type de valeurs stockées dans cette carte.
 
-*rValue*<br/>
+*rValue (en)*<br/>
 Spécifie la valeur retournée de l’élément récupéré.
 
 ### <a name="return-value"></a>Valeur de retour
 
-Différent de zéro si l’élément a été trouvé ; sinon 0.
+Nonzero si l’élément a été trouvé; sinon 0.
 
 ### <a name="remarks"></a>Notes
 
-Cette fonction inline s’appelle `BASE_CLASS` **:: recherche**.
+Cette fonction en `BASE_CLASS`ligne appelle **::Lookup**.
 
-##  <a name="operator_at"></a>  CTypedPtrMap::operator [ ]
+## <a name="ctypedptrmapoperator--"></a><a name="operator_at"></a>CTypedPtrMap::opérateur [ ]
 
-Cet opérateur peut être utilisé uniquement sur le côté gauche d’une instruction d’assignation (une l-value).
+Cet opérateur ne peut être utilisé que sur le côté gauche d’une déclaration d’affectation (une valeur l).
 
 ```
 VALUE& operator[ ](base_class ::base_arg_key key);
@@ -154,22 +154,22 @@ VALUE& operator[ ](base_class ::base_arg_key key);
 
 ### <a name="parameters"></a>Paramètres
 
-*VALEUR*<br/>
-Paramètre de modèle qui spécifie le type des valeurs stockées dans ce mappage.
+*Valeur*<br/>
+Paramètre de modèle spécifiant le type de valeurs stockées dans cette carte.
 
 *BASE_CLASS*<br/>
-Paramètre de modèle en spécifiant la classe de base de la classe de cette carte.
+Paramètre de modèle spécifiant la classe de base de la classe de cette carte.
 
 *key*<br/>
-La clé de l’élément recherché ou la création de la carte.
+La clé de l’élément à lever ou à créer dans la carte.
 
 ### <a name="remarks"></a>Notes
 
-S’il n’existe aucun élément de mappage avec la clé spécifiée, un nouvel élément est créé. Aucun (r-value) « droite » n’est équivalent à cet opérateur, car il est possible qu’une clé peut être introuvable dans le mappage. Utilisez le `Lookup` fonction membre pour l’extraction d’un élément.
+S’il n’y a pas d’élément de carte avec la clé spécifiée, un nouvel élément est créé. Il n’y a pas d’équivalent « côté droit » (r-valeur) à cet opérateur parce qu’il est possible qu’une clé ne soit pas trouvée dans la carte. Utilisez `Lookup` la fonction membre pour la récupération d’éléments.
 
-##  <a name="removekey"></a>  CTypedPtrMap::RemoveKey
+## <a name="ctypedptrmapremovekey"></a><a name="removekey"></a>CTypedPtrMap::RemoveKey
 
-Cette fonction membre appelle `BASE_CLASS` **:: RemoveKey**.
+Cette fonction `BASE_CLASS`de membre appelle **::RemoveKey**.
 
 ```
 BOOL RemoveKey(KEY key);
@@ -177,23 +177,23 @@ BOOL RemoveKey(KEY key);
 
 ### <a name="parameters"></a>Paramètres
 
-*KEY*<br/>
-Paramètre de modèle qui spécifie le type des clés de la carte.
+*Clé*<br/>
+Paramètre de modèle spécifiant le type de clés de la carte.
 
 *key*<br/>
-Clé de l’élément à supprimer.
+Clé pour que l’élément soit enlevé.
 
 ### <a name="return-value"></a>Valeur de retour
 
-Différent de zéro si l’entrée a été trouvée et supprimée avec succès ; sinon 0.
+Nonzero si l’entrée a été trouvée et enlevée avec succès; sinon 0.
 
 ### <a name="remarks"></a>Notes
 
-Pour plus de remarques, consultez [CMapStringToOb::RemoveKey](../../mfc/reference/cmapstringtoob-class.md#removekey).
+Pour des remarques plus détaillées, voir [CMapStringToOb::RemoveKey](../../mfc/reference/cmapstringtoob-class.md#removekey).
 
-##  <a name="setat"></a>  CTypedPtrMap::SetAt
+## <a name="ctypedptrmapsetat"></a><a name="setat"></a>CTypedPtrMap::SetAt
 
-Cette fonction membre appelle `BASE_CLASS` **:: SetAt**.
+Cette fonction `BASE_CLASS`de membre appelle **::SetAt**.
 
 ```
 void SetAt(KEY key, VALUE newValue);
@@ -201,24 +201,24 @@ void SetAt(KEY key, VALUE newValue);
 
 ### <a name="parameters"></a>Paramètres
 
-*KEY*<br/>
-Paramètre de modèle qui spécifie le type des clés de la carte.
+*Clé*<br/>
+Paramètre de modèle spécifiant le type de clés de la carte.
 
 *key*<br/>
-Spécifie la valeur de clé de la newValue.
+Spécifie la valeur clé de la nouvelleValue.
 
 *newValue*<br/>
 Spécifie le pointeur d’objet qui est la valeur du nouvel élément.
 
 ### <a name="remarks"></a>Notes
 
-Pour plus de remarques, consultez [CMapStringToOb::SetAt](../../mfc/reference/cmapstringtoob-class.md#setat).
+Pour des remarques plus détaillées, voir [CMapStringToOb::SetAt](../../mfc/reference/cmapstringtoob-class.md#setat).
 
 ## <a name="see-also"></a>Voir aussi
 
-[Exemple MFC COLLECT](../../overview/visual-cpp-samples.md)<br/>
+[MFC Échantillon COLLECT](../../overview/visual-cpp-samples.md)<br/>
 [Graphique hiérarchique](../../mfc/hierarchy-chart.md)<br/>
 [CMapPtrToPtr, classe](../../mfc/reference/cmapptrtoptr-class.md)<br/>
 [CMapPtrToWord, classe](../../mfc/reference/cmapptrtoword-class.md)<br/>
-[CMapWordToPtr, classe](../../mfc/reference/cmapwordtoptr-class.md)<br/>
-[CMapStringToPtr, classe](../../mfc/reference/cmapstringtoptr-class.md)
+[Classe CMapWordToPtr](../../mfc/reference/cmapwordtoptr-class.md)<br/>
+[Classe CMapStringToPtr](../../mfc/reference/cmapstringtoptr-class.md)

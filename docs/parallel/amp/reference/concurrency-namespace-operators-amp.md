@@ -2,22 +2,22 @@
 title: Concurrency, opérateurs de l’espace de noms (AMP)
 ms.date: 11/04/2016
 ms.assetid: 77f1ae17-1eb2-480d-8fe5-66d4c24bb91e
-ms.openlocfilehash: 3b536f75e4ef6405b60d45e89290a7d97a01707d
-ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
+ms.openlocfilehash: c4086029b71d71091a12b9b6023cc6098faf2f85
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/16/2020
-ms.locfileid: "79419237"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81376295"
 ---
 # <a name="concurrency-namespace-operators-amp"></a>Concurrency, opérateurs de l’espace de noms (AMP)
 
 ||||
 |-|-|-|
-|[operator!=](#operator_neq)|[operator%](#operator_mod)|[operator*](#operator_star)|
-|[operator+](#operator_add)|[operator-](#operator-)|[operator/](#operator_div)|
-|[operator==](#operator_eq_eq)|
+|[opérateur!](#operator_neq)|[opérateur %](#operator_mod)|[opérateur](#operator_star)|
+|[opérateur](#operator_add)|[opérateur-](#operator-)|[opérateur/](#operator_div)|
+|[opérateur](#operator_eq_eq)|
 
-## <a name="operator_eq_eq"></a>  operator==
+## <a name="operator"></a><a name="operator_eq_eq"></a>opérateur
 
 Détermine si les arguments spécifiés sont égaux.
 
@@ -34,7 +34,7 @@ bool operator== (
 ### <a name="parameters"></a>Paramètres
 
 *_Rank*<br/>
-Rang des arguments de Tuple.
+Le rang des arguments de tuple.
 
 *_Lhs*<br/>
 Un des tuples à comparer.
@@ -44,9 +44,9 @@ Un des tuples à comparer.
 
 ### <a name="return-value"></a>Valeur de retour
 
-**true** si les tuples sont égaux ; Sinon, **false**.
+**vrai** si les tuples sont égaux; autrement, **faux**.
 
-## <a name="operator_neq"></a>  operator!=
+## <a name="operator"></a><a name="operator_neq"></a>opérateur!
 
 Détermine si les arguments spécifiés ne sont pas égaux.
 
@@ -63,7 +63,7 @@ bool operator!= (
 ### <a name="parameters"></a>Paramètres
 
 *_Rank*<br/>
-Rang des arguments de Tuple.
+Le rang des arguments de tuple.
 
 *_Lhs*<br/>
 Un des tuples à comparer.
@@ -73,11 +73,11 @@ Un des tuples à comparer.
 
 ### <a name="return-value"></a>Valeur de retour
 
-**true** si les tuples ne sont pas égaux ; Sinon, **false**.
+**vrai** si les tuples ne sont pas égaux; autrement, **faux**.
 
-## <a name="operator_add"></a>  operator+
+## <a name="operator"></a><a name="operator_add"></a>opérateur
 
-Calcule la somme au niveau du composant des arguments spécifiés.
+Calcule la somme composante-sage des arguments spécifiés.
 
 ```cpp
 template <
@@ -108,7 +108,7 @@ class _Tuple_type> _Tuple_type<_Rank>   operator+(
 ### <a name="parameters"></a>Paramètres
 
 *_Rank*<br/>
-Rang des arguments de Tuple.
+Le rang des arguments de tuple.
 
 *_Lhs*<br/>
 Un des arguments à ajouter.
@@ -118,11 +118,11 @@ Un des arguments à ajouter.
 
 ### <a name="return-value"></a>Valeur de retour
 
-Somme au niveau du composant des arguments spécifiés.
+La somme de la composante-sage des arguments spécifiés.
 
-## <a name="operator-"></a>  operator-
+## <a name="operator-"></a><a name="operator-"></a>opérateur-
 
-Calcule la différence au niveau du composant entre les arguments spécifiés.
+Calcule la différence de composante-sage entre les arguments spécifiés.
 
 ```cpp
 template <
@@ -153,21 +153,21 @@ _Tuple_type<_Rank>   operator-(
 ### <a name="parameters"></a>Paramètres
 
 *_Rank*<br/>
-Rang des arguments de Tuple.
+Le rang des arguments de tuple.
 
 *_Lhs*<br/>
-Argument à soustraire de.
+L’argument à soustraire.
 
 *_Rhs*<br/>
-Argument à soustraire.
+L’argument à soustraire.
 
 ### <a name="return-value"></a>Valeur de retour
 
-Différence au niveau du composant entre les arguments spécifiés.
+La différence de composante-sage entre les arguments spécifiés.
 
-## <a name="operator_star"></a>  operator*
+## <a name="operator"></a><a name="operator_star"></a>opérateur
 
-Calcule le produit au niveau du composant des arguments spécifiés.
+Calcule le produit de composants-sage des arguments spécifiés.
 
 ```cpp
 template <
@@ -190,21 +190,21 @@ _Tuple_type<_Rank>   operator*(
 ### <a name="parameters"></a>Paramètres
 
 *_Rank*<br/>
-Rang des arguments de Tuple.
+Le rang des arguments de tuple.
 
 *_Lhs*<br/>
-Un des tuples à multiplier.
+L’un des tuples à multiplier.
 
 *_Rhs*<br/>
-Un des tuples à multiplier.
+L’un des tuples à multiplier.
 
 ### <a name="return-value"></a>Valeur de retour
 
-Produit au niveau du composant des arguments spécifiés.
+Le produit de la composante des arguments spécifiés.
 
-## <a name="operator_div"></a>  operator/
+## <a name="operator"></a><a name="operator_div"></a>opérateur/
 
-Calcule le quotient au niveau du composant des arguments spécifiés.
+Calcule le quotient composante-sage des arguments spécifiés.
 
 ```cpp
 template <
@@ -227,21 +227,21 @@ _Tuple_type<_Rank>   operator/(
 ### <a name="parameters"></a>Paramètres
 
 *_Rank*<br/>
-Rang des arguments de Tuple.
+Le rang des arguments de tuple.
 
 *_Lhs*<br/>
-Tuple à diviser.
+Le tuple à diviser.
 
 *_Rhs*<br/>
-Tuple par lequel diviser.
+Le tuple à diviser par.
 
 ### <a name="return-value"></a>Valeur de retour
 
-Quotient au niveau du composant des arguments spécifiés.
+Le quotient de composante-sage des arguments spécifiés.
 
-## <a name="operator_mod"></a>  operator%
+## <a name="operator"></a><a name="operator_mod"></a>opérateur %
 
-Calcule le modulo du premier argument spécifié par le deuxième argument spécifié.
+Calcule le modulus du premier argument spécifié par le deuxième argument spécifié.
 
 ```cpp
 template <
@@ -264,18 +264,18 @@ _Tuple_type<_Rank>   operator%(
 ### <a name="parameters"></a>Paramètres
 
 *_Rank*<br/>
-Rang des arguments de Tuple.
+Le rang des arguments de tuple.
 
 *_Lhs*<br/>
-Tuple à partir duquel le modulo est calculé.
+Le tuple à partir duquel le modulo est calculé.
 
 *_Rhs*<br/>
-Tuple par lequel modulo.
+Le tuple à modulo par.
 
 ### <a name="return-value"></a>Valeur de retour
 
-Le résultat du premier argument spécifié modulo le deuxième argument spécifié.
+Le résultat du premier argument spécifié modulus l’argument spécifié second.
 
 ## <a name="see-also"></a>Voir aussi
 
-[Espace de noms d’accès concurrentiel](concurrency-namespace-cpp-amp.md)
+[Accordurrency Namespace](concurrency-namespace-cpp-amp.md)

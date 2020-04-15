@@ -14,16 +14,16 @@ helpviewer_keywords:
 - std::num_get [C++], do_get
 - std::num_get [C++], get
 ms.assetid: 9933735d-3918-4b17-abad-5fca2adc62d7
-ms.openlocfilehash: 58ff645a381fd55c591a2566b2e698f0e9821935
-ms.sourcegitcommit: eff68e4e82be292a5664616b16a526df3e9d1cda
+ms.openlocfilehash: 76d2832141c65ca67c42f1994a3c8f5b532f0092
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80150614"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81373658"
 ---
 # <a name="num_get-class"></a>num_get, classe
 
-Modèle de classe qui décrit un objet pouvant servir de facette de paramètres régionaux pour contrôler les conversions de séquences de type `CharType` en valeurs numériques.
+Un modèle de classe qui décrit un objet qui peut servir de facette locale pour contrôler les conversions de séquences de type `CharType` à des valeurs numériques.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -34,10 +34,10 @@ class num_get : public locale::facet;
 
 ### <a name="parameters"></a>Paramètres
 
-*CharType*\
+*CharType CharType*\
 Type utilisé dans un programme pour encoder des caractères dans des paramètres régionaux spécifiques.
 
-*InputIterator*\
+*InputIterator (en)*\
 Type d'itérateur depuis lequel les fonctions get numériques lisent leur entrée.
 
 ## <a name="remarks"></a>Notes
@@ -66,11 +66,11 @@ Comme avec n'importe quelle facette de paramètres régionaux, l'ID d'objet stat
 
 ## <a name="requirements"></a>Spécifications
 
-**En-tête :** \<paramètres régionaux >
+**En-tête :** \<locale>
 
 **Espace de noms :** std
 
-## <a name="num_getchar_type"></a><a name="char_type"></a>  num_get::char_type
+## <a name="num_getchar_type"></a><a name="char_type"></a>num_get::char_type
 
 Type utilisé pour décrire un caractère utilisé par des paramètres régionaux.
 
@@ -82,7 +82,7 @@ typedef CharType char_type;
 
 Le type est un synonyme du paramètre de modèle **CharType**.
 
-## <a name="num_getdo_get"></a><a name="do_get"></a>  num_get::do_get
+## <a name="num_getdo_get"></a><a name="do_get"></a>num_get: :do-get
 
 Fonction virtuelle appelée pour extraire une valeur numérique ou booléenne depuis une séquence de caractères.
 
@@ -167,19 +167,19 @@ virtual iter_type do_get(
 
 ### <a name="parameters"></a>Paramètres
 
-*premier*\
+*Première*\
 Début de la plage de caractères à partir de laquelle lire le nombre.
 
-*dernier*\
+*Dernière*\
 Fin de la plage de caractères à partir de laquelle lire le nombre.
 
 *iosbase*\
 [ios_base](../standard-library/ios-base-class.md) dont les indicateurs sont utilisés par la conversion.
 
-\ d' *État*
+*État*\
 État auquel failbit (voir [ios_base::iostate](../standard-library/ios-base-class.md#iostate)) est ajouté en cas d’échec.
 
-\ *Val*
+*Val*\
 Valeur qui a été lue.
 
 ### <a name="return-value"></a>Valeur de retour
@@ -199,11 +199,11 @@ virtual iter_type do_get(
     long& val) const;
 ```
 
-met en correspondance les éléments séquentiels en commençant au *premier* dans la séquence `[first, last)` jusqu’à ce qu’il ait reconnu un champ d’entrée d’entier non vide complet. En cas de réussite, elle convertit ce champ en sa valeur équivalente en tant que type **long**et stocke le résultat dans *Val*. Elle retourne un itérateur désignant le premier élément au-delà du champ d’entrée numérique. Sinon, la fonction ne stocke rien dans *Val* et définit `ios_base::failbit` dans `state`. Elle retourne un itérateur désignant le premier élément au-delà de tout préfixe d’un champ d’entrée d’entier valide. Dans les deux cas, si la valeur de retour est égale à `last`, la fonction définit `ios_base::eofbit` dans `state`.
+correspond à des éléments séquentiels à partir du *début* de la séquence `[first, last)` jusqu’à ce qu’il ait reconnu un champ d’entrée complet et non rédempteur. En cas de succès, il convertit ce champ à sa valeur équivalente comme type **long,** et stocke le résultat en *val*. Elle retourne un itérateur désignant le premier élément au-delà du champ d’entrée numérique. Sinon, la fonction ne stocke `state`rien dans *val* et s’installe `ios_base::failbit` . Elle retourne un itérateur désignant le premier élément au-delà de tout préfixe d’un champ d’entrée d’entier valide. Dans les deux cas, si la valeur de retour est égale à `last`, la fonction définit `ios_base::eofbit` dans `state`.
 
-Le champ d’entrée d’entier est converti par les mêmes règles que celles utilisées par les fonctions d’analyse pour la correspondance et la conversion d’une série d’éléments **char** à partir d’un fichier. (Chaque élément **char** est supposé être mappé à un élément équivalent de type `Elem` par un mappage simple, un-à-un.) La spécification de conversion d’analyse équivalente est déterminée comme suit :
+Le champ d’entrée integer est converti par les mêmes règles utilisées par les fonctions d’analyse pour l’appariement et la conversion d’une série d’éléments **d’omble d’un** fichier. (Chaque élément **de char** de ce genre `Elem` est supposé cartographier un élément équivalent de type par une cartographie simple et simple.) La spécification de conversion d’analyse équivalente est déterminée comme suit :
 
-Si `iosbase.`[ios_base::flags](../standard-library/ios-base-class.md#flags)`() & ios_base::basefield == ios_base::`[oct](../standard-library/ios-functions.md#oct), la spécification de conversion est `lo`.
+Si `iosbase.` [ios_base::flags](../standard-library/ios-base-class.md#flags)`() & ios_base::basefield == ios_base::`[oct](../standard-library/ios-functions.md#oct), la spécification `lo`de conversion est .
 
 Si `iosbase.flags() & ios_base::basefield == ios_base::`[hex](../standard-library/ios-functions.md#hex), la spécification de conversion est `lx`.
 
@@ -211,11 +211,11 @@ Si `iosbase.flags() & ios_base::basefield == 0`, la spécification de conversion
 
 Autrement, la spécification de conversion est `ld`.
 
-Le format d’un champ d’entrée d’entier est également déterminé par la [facette de paramètres régionaux](../standard-library/locale-class.md#facet_class)`fac` retournée par l’appel [use_facet](../standard-library/locale-functions.md#use_facet) `<`[numpunct](../standard-library/numpunct-class.md)`<Elem>(iosbase.`[ios_base :: getloc](../standard-library/ios-base-class.md#getloc)`())`. Plus précisément :
+Le format d’un champ d’entrée integer est encore déterminé par la [facette](../standard-library/locale-class.md#facet_class) `fac` locale retournée par l’appel [use_facet](../standard-library/locale-functions.md#use_facet) `<` [numpunct](../standard-library/numpunct-class.md)`<Elem>(iosbase.`[ios_base::getloc](../standard-library/ios-base-class.md#getloc)`())`. Plus précisément :
 
-`fac.`[numpunct::grouping](../standard-library/numpunct-class.md#grouping)`()` détermine comment les chiffres sont regroupés à gauche de la virgule décimale.
+`fac.`[numpunct::groupement](../standard-library/numpunct-class.md#grouping) `()` détermine comment les chiffres sont regroupés à gauche de tout point décimal
 
-`fac.`[numpunct::thousands_sep](../standard-library/numpunct-class.md#thousands_sep)`()` détermine la séquence qui sépare les groupes de chiffres à gauche de la virgule décimale.
+`fac.`[numpunct::thousands_sep](../standard-library/numpunct-class.md#thousands_sep) `()` détermine la séquence qui sépare les groupes de chiffres à gauche de tout point décimal.
 
 Si aucune instance de `fac.thousands_sep()` ne se produit dans le champ d’entrée numérique, aucune contrainte de regroupement n’est imposée. Autrement, toute contrainte de regroupement imposée par `fac.grouping()` est appliquée, et les séparateurs sont supprimés avant que la conversion d’analyse ait lieu.
 
@@ -230,7 +230,7 @@ virtual iter_type do_get(
     unsigned long& val) const;
 ```
 
-Se comporte comme la première, sauf qu’elle remplace une spécification de conversion de `ld` par `lu`. En cas de réussite, elle convertit le champ d’entrée numérique en une valeur de type **unsigned long** et stocke cette valeur dans *Val*.
+Se comporte comme la première, sauf qu’elle remplace une spécification de conversion de `ld` par `lu`. En cas de succès, il convertit le champ d’entrée numérique en une valeur de type **non signé long** et stocke cette valeur en *val*.
 
 La cinquième fonction membre protégée virtuelle :
 
@@ -243,7 +243,7 @@ virtual iter_type do_get(
     long long& val) const;
 ```
 
-Se comporte comme la première, sauf qu’elle remplace une spécification de conversion de `ld` par `lld`. En cas de réussite, elle convertit le champ d’entrée numérique en une valeur de type **long long** et stocke cette valeur dans *Val*.
+Se comporte comme la première, sauf qu’elle remplace une spécification de conversion de `ld` par `lld`. En cas de succès, il convertit le champ d’entrée numérique à une valeur de type **long** et stocke cette valeur en *val*.
 
 La sixième fonction membre protégée virtuelle :
 
@@ -256,7 +256,7 @@ virtual iter_type do_get(
     unsigned long long& val) const;
 ```
 
-Se comporte comme la première, sauf qu’elle remplace une spécification de conversion de `ld` par `llu`. En cas de réussite, elle convertit le champ d’entrée numérique en une valeur de type **unsigned long long** et stocke cette valeur dans *Val*.
+Se comporte comme la première, sauf qu’elle remplace une spécification de conversion de `ld` par `llu`. En cas de succès, il convertit le champ d’entrée numérique à une valeur de type **non signé longtemps** et stocke cette valeur en *val*.
 
 La septième fonction membre protégée virtuelle :
 
@@ -269,7 +269,7 @@ virtual iter_type do_get(
     float& val) const;
 ```
 
-Se comporte comme la première, sauf qu’elle essaie de mettre en correspondance un champ d’entrée à virgule flottante complet et non vide. `fac.`[numpunct::decimal_point](../standard-library/numpunct-class.md#decimal_point)`()` détermine la séquence qui sépare les chiffres entiers des chiffres de fraction. Le spécificateur de conversion d’analyse équivalent est `lf`.
+Se comporte comme la première, sauf qu’elle essaie de mettre en correspondance un champ d’entrée à virgule flottante complet et non vide. `fac.`[numpunct::decimal-point](../standard-library/numpunct-class.md#decimal_point) `()` détermine la séquence qui sépare les chiffres integer des chiffres fraction. Le spécificateur de conversion d’analyse équivalent est `lf`.
 
 La huitième fonction membre protégée virtuelle :
 
@@ -282,7 +282,7 @@ virtual iter_type do_get(
     double& val) const;
 ```
 
-Se comporte comme la première, sauf qu’elle essaie de mettre en correspondance un champ d’entrée à virgule flottante complet et non vide. `fac.`[numpunct::decimal_point](../standard-library/numpunct-class.md#decimal_point)`()` détermine la séquence qui sépare les chiffres entiers des chiffres de fraction. Le spécificateur de conversion d’analyse équivalent est `lf`.
+Se comporte comme la première, sauf qu’elle essaie de mettre en correspondance un champ d’entrée à virgule flottante complet et non vide. `fac.`[numpunct::decimal-point](../standard-library/numpunct-class.md#decimal_point) `()` détermine la séquence qui sépare les chiffres integer des chiffres fraction. Le spécificateur de conversion d’analyse équivalent est `lf`.
 
 La neuvième fonction membre protégée virtuelle :
 
@@ -297,7 +297,7 @@ virtual iter_type do_get(
 
 Se comporte comme la huitième, sauf que le spécificateur de conversion d’analyse équivalent est `Lf`.
 
-Dixième fonction membre protégée virtuelle :
+La dixième fonction virtuelle protégée des membres :
 
 ```cpp
 virtual iter_type do_get(
@@ -321,15 +321,15 @@ virtual iter_type do_get(
     bool& val) const;
 ```
 
-Se comporte comme la première, sauf qu’elle essaie de mettre en correspondance un champ d’entrée booléen complet et non vide. En cas de réussite, elle convertit le champ d’entrée booléen en valeur de type **bool** et stocke cette valeur dans *Val*.
+Se comporte comme la première, sauf qu’elle essaie de mettre en correspondance un champ d’entrée booléen complet et non vide. En cas de succès, il convertit le champ d’entrée Boolean en une valeur de type **bool** et stocke cette valeur en *val*.
 
-Un champ d’entrée booléen peut avoir deux formes. Si `iosbase.flags() & ios_base::`[boolalpha](../standard-library/ios-functions.md#boolalpha) est false, il est identique à un champ d’entrée d’entier, sauf que la valeur convertie doit être 0 (pour false) ou 1 (pour true). Dans le cas contraire, la séquence doit correspondre à `fac.`[numpunct::falsename](../standard-library/numpunct-class.md#falsename)`()` (pour false) ou à `fac.`[numpunct::truename](../standard-library/numpunct-class.md#truename)`()` (pour true).
+Un champ d’entrée booléen peut avoir deux formes. Si `iosbase.flags() & ios_base::`[boolalpha](../standard-library/ios-functions.md#boolalpha) est false, il est identique à un champ d’entrée d’entier, sauf que la valeur convertie doit être 0 (pour false) ou 1 (pour true). Sinon, la séquence `fac.`doit correspondre soit [numpunct::falsename](../standard-library/numpunct-class.md#falsename) `()` (pour faux), ou `fac.` [numpunct::truename](../standard-library/numpunct-class.md#truename) `()` (pour vrai).
 
 ### <a name="example"></a>Exemple
 
 Consultez l’exemple relatif à [get](#get), où la fonction membre virtuelle est appelée par `do_get`.
 
-## <a name="num_getget"></a><a name="get"></a>  num_get::get
+## <a name="num_getget"></a><a name="get"></a>num_get::get
 
 Extrait une valeur numérique ou booléenne d'une séquence de caractères.
 
@@ -414,19 +414,19 @@ iter_type get(
 
 ### <a name="parameters"></a>Paramètres
 
-*premier*\
+*Première*\
 Début de la plage de caractères à partir de laquelle lire le nombre.
 
-*dernier*\
+*Dernière*\
 Fin de la plage de caractères à partir de laquelle lire le nombre.
 
 *iosbase*\
 [ios_base](../standard-library/ios-base-class.md) dont les indicateurs sont utilisés par la conversion.
 
-\ d' *État*
+*État*\
 État auquel failbit (voir [ios_base::iostate](../standard-library/ios-base-class.md#iostate)) est ajouté en cas d’échec.
 
-\ *Val*
+*Val*\
 Valeur qui a été lue.
 
 ### <a name="return-value"></a>Valeur de retour
@@ -435,13 +435,13 @@ Itérateur une fois que la valeur a été lue.
 
 ### <a name="remarks"></a>Notes
 
-Toutes les fonctions membres retournent [do_get](#do_get)`( first, last, iosbase, state, val)`.
+Toutes les fonctions des membres reviennent [do_get](#do_get)`( first, last, iosbase, state, val)`.
 
-La première fonction membre protégée virtuelle tente de faire correspondre des éléments séquentiels en commençant au premier dans la séquence [ `first`, `last`) jusqu’à ce qu’elle ait reconnu un champ d’entrée d’entier complet et non vide. En cas de réussite, elle convertit ce champ en sa valeur équivalente en tant que type **long** et stocke le résultat dans *Val*. Elle retourne un itérateur désignant le premier élément au-delà du champ d’entrée numérique. Sinon, la fonction ne stocke rien dans *Val* et définit `ios_base::failbit` dans l' *État*. Elle retourne un itérateur désignant le premier élément au-delà de tout préfixe d’un champ d’entrée d’entier valide. Dans les deux cas, si la valeur de retour est égale à *Last*, la fonction définit `ios_base::eofbit` dans l' *État*.
+La première fonction membre protégée virtuelle tente de faire correspondre des éléments séquentiels en commençant au premier dans la séquence [ `first`, `last`) jusqu’à ce qu’elle ait reconnu un champ d’entrée d’entier complet et non vide. En cas de succès, il convertit ce champ à sa valeur équivalente en tant que type **long** et stocke le résultat en *val*. Elle retourne un itérateur désignant le premier élément au-delà du champ d’entrée numérique. Sinon, la fonction ne stocke rien dans *val* et s’installe `ios_base::failbit` en *état*. Elle retourne un itérateur désignant le premier élément au-delà de tout préfixe d’un champ d’entrée d’entier valide. Dans les deux cas, si la valeur `ios_base::eofbit` de rendement est égale en *dernier*, la fonction *s’établit*en état .
 
-Le champ d’entrée d’entier est converti par les mêmes règles que celles utilisées par les fonctions d’analyse pour la correspondance et la conversion d’une série d’éléments **char** à partir d’un fichier. Chacun de ces éléments **char** est supposé être mappé à un élément équivalent de type `CharType` par un simple mappage un-à-un. La spécification de conversion d’analyse équivalente est déterminée comme suit :
+Le champ d’entrée integer est converti par les mêmes règles utilisées par les fonctions d’analyse pour l’appariement et la conversion d’une série d’éléments **d’omble d’un** fichier. Chaque élément **de char** de ce genre `CharType` est supposé cartographier un élément équivalent de type par une cartographie simple et simple. La spécification de conversion d’analyse équivalente est déterminée comme suit :
 
-- Si `iosbase.`[indicateurs](../standard-library/ios-base-class.md#flags)`& ios_base::basefield == ios_base::`[Oct](../standard-library/ios-functions.md#oct), la spécification de conversion est `lo`.
+- Si `iosbase.` [les drapeaux](../standard-library/ios-base-class.md#flags)`& ios_base::basefield == ios_base::`[oct](../standard-library/ios-functions.md#oct), `lo`la spécification de conversion est .
 
 - Si `iosbase.flags & ios_base::basefield == ios_base::`[hex](../standard-library/ios-functions.md#hex), la spécification de conversion est `lx`.
 
@@ -449,13 +449,13 @@ Le champ d’entrée d’entier est converti par les mêmes règles que celles u
 
 - Autrement, la spécification de conversion est `ld`.
 
-Le format d’un champ d’entrée d’entier est également déterminé par la [facette de paramètres régionaux](../standard-library/locale-class.md#facet_class) `fac` retournée par l’appel [use_facet](../standard-library/locale-functions.md#use_facet)`<`[`numpunct`](../standard-library/numpunct-class.md)`<Elem>(iosbase.`[getloc](../standard-library/ios-base-class.md#getloc)`())`. Plus précisément :
+Le format d’un champ d’entrée integer est encore déterminé par la [facette](../standard-library/locale-class.md#facet_class) `fac` locale retournée par l’appel [use_facet](../standard-library/locale-functions.md#use_facet)`<`[`numpunct`](../standard-library/numpunct-class.md)`<Elem>(iosbase.`[getloc](../standard-library/ios-base-class.md#getloc)`())`. Plus précisément :
 
-- `fac.`[regroupement](../standard-library/numpunct-class.md#grouping) détermine la façon dont les chiffres sont regroupés à gauche de la virgule décimale.
+- `fac.`[le regroupement](../standard-library/numpunct-class.md#grouping) détermine comment les chiffres sont regroupés à gauche de n’importe quel point décimal.
 
-- `fac.`[thousands_sep](../standard-library/numpunct-class.md#thousands_sep) détermine la séquence qui sépare les groupes de chiffres à gauche de la virgule décimale.
+- `fac.`[thousands_sep](../standard-library/numpunct-class.md#thousands_sep) détermine la séquence qui sépare les groupes de chiffres à gauche de tout point décimal.
 
-Si aucune instance de `fac.thousands_sep` ne se produit dans le champ d’entrée numérique, aucune contrainte de regroupement n’est imposée. Dans le cas contraire, toute contrainte de regroupement imposée par `fac.grouping` est appliquée et les séparateurs sont supprimés avant que la conversion d’analyse ne se produise.
+Si aucune instance de `fac.thousands_sep` ne se produit dans le champ d’entrée numérique, aucune contrainte de regroupement n’est imposée. Dans le cas contraire, `fac.grouping` toutes les contraintes de regroupement imposées par est appliquée et les séparateurs sont supprimés avant la conversion de balayage se produit.
 
 La deuxième fonction membre protégée virtuelle :
 
@@ -467,7 +467,7 @@ virtual iter_type do_get(iter_type first,
     unsigned long& val) const;
 ```
 
-Se comporte comme la première, sauf qu’elle remplace une spécification de conversion de `ld` par `lu`. En cas de réussite, elle convertit le champ d’entrée numérique en une valeur de type **unsigned long** et stocke cette valeur dans *Val*.
+Se comporte comme la première, sauf qu’elle remplace une spécification de conversion de `ld` par `lu`. En cas de succès, il convertit le champ d’entrée numérique en une valeur de type **non signé long** et stocke cette valeur en *val*.
 
 La troisième fonction membre protégée virtuelle :
 
@@ -479,7 +479,7 @@ virtual iter_type do_get(iter_type first,
     double& val) const;
 ```
 
-Se comporte comme la première, sauf qu’elle essaie de mettre en correspondance un champ d’entrée à virgule flottante complet et non vide. `fac.`[decimal_point](../standard-library/numpunct-class.md#decimal_point) détermine la séquence qui sépare les chiffres entiers des chiffres de fraction. Le spécificateur de conversion d’analyse équivalent est `lf`.
+Se comporte comme la première, sauf qu’elle essaie de mettre en correspondance un champ d’entrée à virgule flottante complet et non vide. `fac.`[decimal_point](../standard-library/numpunct-class.md#decimal_point) détermine la séquence qui sépare les chiffres de l’intégrant des chiffres fractionnés. Le spécificateur de conversion d’analyse équivalent est `lf`.
 
 La quatrième fonction membre protégée virtuelle :
 
@@ -491,7 +491,7 @@ virtual iter_type do_get(iter_type first,
     long double& val) const;
 ```
 
-se comporte de la même façon que le troisième, sauf que le spécificateur de conversion d’analyse équivalent est `Lf`.
+se comporte de la même façon le troisième, `Lf`sauf que le spécificateur de conversion d’analyse équivalent est .
 
 La cinquième fonction membre protégée virtuelle :
 
@@ -515,9 +515,9 @@ virtual iter_type do_get(iter_type first,
     bool& val) const;
 ```
 
-Se comporte comme la première, sauf qu’elle essaie de mettre en correspondance un champ d’entrée booléen complet et non vide. En cas de réussite, elle convertit le champ d’entrée booléen en valeur de type **bool** et stocke cette valeur dans *Val*.
+Se comporte comme la première, sauf qu’elle essaie de mettre en correspondance un champ d’entrée booléen complet et non vide. En cas de succès, il convertit le champ d’entrée Boolean en une valeur de type **bool** et stocke cette valeur en *val*.
 
-Un champ d’entrée booléen peut avoir deux formes. Si `iosbase.flags & ios_base::`[boolalpha](../standard-library/ios-functions.md#boolalpha) a la valeur **false**, il est identique à un champ d’entrée d’entier, sauf que la valeur convertie doit être 0 (pour **false**) ou 1 (pour **true**). Dans le cas contraire, la séquence doit correspondre à `fac.`[falsename](../standard-library/numpunct-class.md#falsename) (pour **false**) ou `fac.`[TrueName](../standard-library/numpunct-class.md#truename) (pour **true**).
+Un champ d’entrée booléen peut avoir deux formes. Si `iosbase.flags & ios_base::` [boolalpha](../standard-library/ios-functions.md#boolalpha) est **faux,** il est le même qu’un champ d’entrée integer, sauf que la valeur convertie doit être soit 0 (pour **faux**) ou 1 (pour **vrai**). Sinon, la séquence `fac.`doit correspondre soit faux `fac.` [nom](../standard-library/numpunct-class.md#falsename) (pour **faux**), ou [truename](../standard-library/numpunct-class.md#truename) (pour **vrai**).
 
 ### <a name="example"></a>Exemple
 
@@ -551,7 +551,7 @@ int main( )
 }
 ```
 
-## <a name="num_getiter_type"></a><a name="iter_type"></a>  num_get::iter_type
+## <a name="num_getiter_type"></a><a name="iter_type"></a>num_get::iter_type
 
 Type qui décrit un itérateur d'entrée.
 
@@ -563,7 +563,7 @@ typedef InputIterator iter_type;
 
 Le type est un synonyme du paramètre de modèle `InputIterator`.
 
-## <a name="num_getnum_get"></a><a name="num_get"></a>  num_get::num_get
+## <a name="num_getnum_get"></a><a name="num_get"></a>num_get::num_get
 
 Constructeur des objets de type `num_get` utilisés pour extraire des valeurs numériques depuis des séquences.
 
@@ -573,25 +573,25 @@ explicit num_get(size_t refs = 0);
 
 ### <a name="parameters"></a>Paramètres
 
-\ *REFS*
+*Refs*\
 Valeur entière utilisée pour spécifier le type de gestion de mémoire pour l’objet.
 
 ### <a name="remarks"></a>Notes
 
-Les valeurs possibles pour le paramètre *REFS* et leur signification sont les suivantes :
+Les valeurs possibles pour le *paramètre des arbitres* et leur signification sont les suivante :
 
 - 0 : la durée de vie de l’objet est gérée par les paramètres régionaux qui le contiennent.
 
 - 1 : la durée de vie de l’objet doit être gérée manuellement.
 
-- \> 1 : ces valeurs ne sont pas définies.
+- \>1: Ces valeurs ne sont pas définies.
 
 Aucun exemple direct n’est possible, car le destructeur est protégé.
 
-Le constructeur initialise son objet de base avec `locale::``(refs)`de [facette](../standard-library/locale-class.md#facet_class) .
+Le constructeur initialise son objet `locale::`de base avec [la facette.](../standard-library/locale-class.md#facet_class)`(refs)`
 
 ## <a name="see-also"></a>Voir aussi
 
-[\<locale>](../standard-library/locale.md)\
-[facet, classe](../standard-library/locale-class.md#facet_class)\
-[Sécurité des threads dans la bibliothèque C++ Standard](../standard-library/thread-safety-in-the-cpp-standard-library.md)
+[\<local>](../standard-library/locale.md)\
+[Classe de facettes](../standard-library/locale-class.md#facet_class)\
+[Sécurité des fils dans la bibliothèque standard de CMD](../standard-library/thread-safety-in-the-cpp-standard-library.md)
