@@ -10,12 +10,12 @@ helpviewer_keywords:
 - CD2DRectU [MFC], CD2DRectU
 - CD2DRectU [MFC], IsNull
 ms.assetid: a62f17d1-011d-4867-8f51-fd7e7c00561d
-ms.openlocfilehash: 4bbf7014fc1b612804289dcb647f85b5e7905aeb
-ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
+ms.openlocfilehash: 26e647ae01a498a6ad8ca2d7c866f33b01910881
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68244389"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81369108"
 ---
 # <a name="cd2drectu-class"></a>CD2DRectU, classe
 
@@ -33,19 +33,19 @@ class CD2DRectU : public D2D1_RECT_U;
 
 |Nom|Description|
 |----------|-----------------|
-|[CD2DRectU::CD2DRectU](#cd2drectu)|Surchargé. Construit un `CD2DRectU` à partir de l’objet `D2D1_RECT_U` objet.|
+|[CD2DRectU::CD2DRectU](#cd2drectu)|Surchargé. Construit un `CD2DRectU` objet `D2D1_RECT_U` à partir de l’objet.|
 
 ### <a name="public-methods"></a>M&#233;thodes publiques
 
 |Nom|Description|
 |----------|-----------------|
-|[CD2DRectU::IsNull](#isnull)|Retourne un **booléenne** valeur qui indique si une expression ne contient aucune donnée valide (NULL).|
+|[CD2DRectU::Isnull](#isnull)|Renvoie une valeur **boolean** qui indique si une expression ne contient pas de données valides (NULL).|
 
 ### <a name="public-operators"></a>Op&#233;rateurs publics
 
 |Nom|Description|
 |----------|-----------------|
-|[CD2DRectU::operator CRect](#operator_crect)|Convertit `CD2DRectU` à `CRect` objet.|
+|[CD2DRectU::opérateur CRect](#operator_crect)|Convertit `CD2DRectU` `CRect` en objet.|
 
 ## <a name="inheritance-hierarchy"></a>Hiérarchie d'héritage
 
@@ -53,11 +53,11 @@ class CD2DRectU : public D2D1_RECT_U;
 
 `CD2DRectU`
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
-**En-tête :** afxrendertarget.h
+**En-tête:** afxrendertarget.h
 
-##  <a name="cd2drectu"></a>  CD2DRectU::CD2DRectU
+## <a name="cd2drectucd2drectu"></a><a name="cd2drectu"></a>CD2DRectU::CD2DRectU
 
 Construit un objet CD2DRectU à partir de l’objet CRect.
 
@@ -75,24 +75,24 @@ CD2DRectU(
 
 ### <a name="parameters"></a>Paramètres
 
-*rect*<br/>
+*Rect*<br/>
 rectangle source
 
 *uLeft*<br/>
-Coordonnée gauche source
+source gauche de coordonnées
 
 *uTop*<br/>
-coordonnée supérieure source
+coordonnées de la source supérieure
 
 *uRight*<br/>
-coordonnée droite source
+source de coordination à droite
 
 *uBottom*<br/>
-Coordonnée inférieure source
+coordonnées inférieures de source
 
-##  <a name="isnull"></a>  CD2DRectU::IsNull
+## <a name="cd2drectuisnull"></a><a name="isnull"></a>CD2DRectU::Isnull
 
-Retourne une valeur booléenne qui indique si une expression ne contient aucune donnée valide (Null).
+Renvoie une valeur Boolean qui indique si une expression ne contient pas de données valides (Null).
 
 ```
 BOOL IsNull() const;
@@ -100,9 +100,9 @@ BOOL IsNull() const;
 
 ### <a name="return-value"></a>Valeur de retour
 
-TRUE si le du rectangle haut, gauche, bas et valeurs appropriées sont toujours égaux à 0 ; Sinon, FALSE.
+VRAI si les valeurs supérieures, gauche, inférieures et droites du rectangle sont toutes égales à 0; autrement FALSE.
 
-##  <a name="operator_crect"></a>  CD2DRectU::operator CRect
+## <a name="cd2drectuoperator-crect"></a><a name="operator_crect"></a>CD2DRectU::opérateur CRect
 
 Convertit CD2DRectU en objet CRect.
 
@@ -112,7 +112,7 @@ operator CRect();
 
 ### <a name="return-value"></a>Valeur de retour
 
-Valeur actuelle du rectangle de D2D.
+Valeur actuelle du rectangle D2D.
 
 ## <a name="see-also"></a>Voir aussi
 

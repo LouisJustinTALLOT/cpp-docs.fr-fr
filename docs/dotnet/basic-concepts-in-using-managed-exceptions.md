@@ -10,34 +10,34 @@ helpviewer_keywords:
 - throwing exceptions, managed exceptions
 - Visual C++, handling managed exceptions
 ms.assetid: 40ce8931-1ecc-491a-815f-733b23fcba35
-ms.openlocfilehash: cf241d4e599ad58c2e39680d8ed4e4e250b42b18
-ms.sourcegitcommit: 573b36b52b0de7be5cae309d45b68ac7ecf9a6d8
+ms.openlocfilehash: 6bc1e9c6d40599ae9a821179dcf56dbb7e21bf10
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/10/2019
-ms.locfileid: "74988548"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81372526"
 ---
 # <a name="basic-concepts-in-using-managed-exceptions"></a>Concepts de base dans l'utilisation des exceptions managées
 
-Cette rubrique traite de la gestion des exceptions dans les applications managées. Autrement dit, une application compilée avec l’option de compilateur **/CLR** .
+Ce sujet traite le traitement des exceptions dans les applications gérées. Autrement dit, une application qui est compilée avec l’option **compilateur /clr.**
 
 ## <a name="in-this-topic"></a>Dans cette rubrique
 
-- [Levée d’exceptions sous/CLR](#vcconbasicconceptsinusingmanagedexceptionsanchor1)
+- [Exceptions de lancement sous /clr](#vcconbasicconceptsinusingmanagedexceptionsanchor1)
 
-- [Blocs try/catch pour les extensions CLR](#vcconbasicconceptsinusingmanagedexceptionsanchor2)
+- [Essayez/Catch Blocks pour les extensions CLR](#vcconbasicconceptsinusingmanagedexceptionsanchor2)
 
 ## <a name="remarks"></a>Notes
 
-Si vous compilez avec l’option **/CLR** , vous pouvez gérer les exceptions CLR ainsi que la classe <xref:System.Exception> standard fournit de nombreuses méthodes utiles pour traiter les exceptions CLR et est recommandée comme classe de base pour les classes d’exception définies par l’utilisateur.
+Si vous compilez avec **l’option /clr,** vous pouvez <xref:System.Exception> gérer les exceptions CLR ainsi que la classe standard fournit de nombreuses méthodes utiles pour le traitement des exceptions CLR et est recommandé comme une classe de base pour les classes d’exception définies par l’utilisateur.
 
-L’interception des types d’exception dérivés d’une interface n’est pas prise en charge sous **/CLR**. En outre, la common language runtime ne vous permet pas d’intercepter les exceptions de dépassement de capacité de la pile. une exception de dépassement de capacité de la pile met fin au processus.
+Attraper les types d’exception dérivés d’une interface n’est pas pris en charge sous **/clr**. En outre, l’heure courante de course de langue ne vous permet pas d’attraper des exceptions de débordement de pile ; une exception de débordement de pile mettra fin au processus.
 
-Pour plus d’informations sur les différences de gestion des exceptions dans les applications managées et non managées, consultez [différences dans le comportement C++de gestion des exceptions sous extensions managées pour ](../dotnet/differences-in-exception-handling-behavior-under-clr.md).
+Pour plus d’informations sur les différences dans le traitement des exceptions dans les applications gérées et non [gérées, voir Différences dans le comportement de traitement d’exception sous extensions gérées pour C .](../dotnet/differences-in-exception-handling-behavior-under-clr.md)
 
-##  <a name="vcconbasicconceptsinusingmanagedexceptionsanchor1"></a>Levée d’exceptions sous/CLR
+## <a name="throwing-exceptions-under-clr"></a><a name="vcconbasicconceptsinusingmanagedexceptionsanchor1"></a>Exceptions de lancement sous /clr
 
-L' C++ expression Throw est étendue pour lever un handle vers un type CLR. L’exemple suivant crée un type d’exception personnalisé, puis lève une instance de ce type :
+L’expression de lancer de C est étendue pour jeter une poignée à un type CLR. L’exemple suivant crée un type d’exception personnalisé, puis jette une instance de ce type :
 
 ```cpp
 // clr_exception_handling.cpp
@@ -53,7 +53,7 @@ void GlobalFunction() {
 }
 ```
 
-Un type valeur doit être boxed avant d’être levé :
+Un type de valeur doit être mis en boîte avant d’être jeté :
 
 ```cpp
 // clr_exception_handling_2.cpp
@@ -68,9 +68,9 @@ void GlobalFunction() {
 }
 ```
 
-##  <a name="vcconbasicconceptsinusingmanagedexceptionsanchor2"></a>Blocs try/catch pour les extensions CLR
+## <a name="trycatch-blocks-for-clr-extensions"></a><a name="vcconbasicconceptsinusingmanagedexceptionsanchor2"></a>Essayez/Catch Blocks pour les extensions CLR
 
-La même structure de bloc **try**/**catch** peut être utilisée pour intercepter les exceptions CLR et natives :
+La même structure de bloc de capture **d’essai**/**catch** peut être employée pour attraper des exceptions de CLR et indigènes :
 
 ```cpp
 // clr_exception_handling_3.cpp
@@ -126,43 +126,43 @@ In 'catch(MyStruct^ catchException)'
 11
 ```
 
-### <a name="order-of-unwinding-for-c-objects"></a>Ordre de déroulement des C++ objets
+### <a name="order-of-unwinding-for-c-objects"></a>Ordre de dénouement pour les objets C
 
-Le déroulement se produit pour tous C++ les objets avec des destructeurs qui peuvent se trouver sur la pile Runtime entre la fonction de levée et la fonction de gestion. Étant donné que les types CLR sont alloués sur le tas, le déroulement ne s’applique pas à eux.
+Le dénouement se produit pour tous les objets C avec destructors qui peuvent être sur la pile de temps de fonctionnement entre la fonction de lancer et la fonction de manipulation. Étant donné que les types de CLR sont attribués sur le tas, le dénouement ne s’applique pas à eux.
 
-L’ordre des événements pour une exception levée est le suivant :
+L’ordre des événements pour une exception jetée est le suivant :
 
-1. Le runtime parcourt la pile à la recherche de la clause catch appropriée, ou, dans le cas de SEH, un filtre Except pour SEH, afin d’intercepter l’exception. Les clauses catch sont recherchées en premier dans l’ordre lexical, puis diminuent dynamiquement la pile des appels.
+1. Le temps d’exécution marche la pile à la recherche de la clause de capture appropriée, ou dans le cas de SEH, un filtre à l’exception de SEH, pour attraper l’exception. Les clauses de capture sont recherchées d’abord dans l’ordre lexical, puis dynamiquement vers le bas de la pile d’appel.
 
-1. Une fois que le gestionnaire approprié est trouvé, la pile est déroulée jusqu’à ce point. Pour chaque appel de fonction sur la pile, ses objets locaux sont détruits et __finally blocs sont exécutés, de la plus imbriquée à l’extérieur.
+1. Une fois que le gestionnaire correct est trouvé, la pile est dénouée à ce point. Pour chaque appel de fonction sur la pile, ses objets locaux sont détruits et __finally blocs sont exécutés, de la plupart imbriqués vers l’extérieur.
 
-1. Une fois que la pile est déroulée, la clause catch est exécutée.
+1. Une fois que la pile est dénouée, la clause de capture est exécutée.
 
-### <a name="catching-unmanaged-types"></a>Interception de types non managés
+### <a name="catching-unmanaged-types"></a>Attraper les types non-manés
 
-Lorsqu’un type d’objet non managé est levé, il est encapsulé avec une exception de type <xref:System.Runtime.InteropServices.SEHException>. Lors de la recherche de la clause **catch** appropriée, il existe deux possibilités.
+Lorsqu’un type d’objet non traité est lancé, <xref:System.Runtime.InteropServices.SEHException>il est enveloppé à l’exception du type. Lors de la recherche de la clause **de capture** appropriée, il ya deux possibilités.
 
-- Si un type C++ natif est rencontré, l’exception est désencapsulée et comparée au type rencontré. Cette comparaison permet d’intercepter un type natif C++ de manière normale.
+- Si un type natif de CMD est rencontré, l’exception est déballée et comparée au type rencontré. Cette comparaison permet de prendre un type CMD natif de la manière normale.
 
-- Toutefois, si une clause **catch** de type **SEHException** ou l’une de ses classes de base est examinée en premier, la clause intercepte l’exception. Par conséquent, vous devez placer toutes les clauses catch qui C++ interceptent les types natifs avant toute clause catch de types CLR.
+- Toutefois, si une clause de **capture** de type **SEHException** ou l’une de ses classes de base est examinée en premier, la clause interceptera l’exception. Par conséquent, vous devez placer toutes les clauses de capture qui attrapent les types natifs de CMD d’abord avant toute clause de capture des types de CLR.
 
-Notez les points suivants :
+Notez les points suivants :
 
 ```
 catch(Object^)
 ```
 
-et
+and
 
 ```
 catch(...)
 ```
 
-interceptent tous deux le type levé, y compris les exceptions SEH.
+attrapera tous les deux n’importe quel type jeté comprenant des exceptions SEH.
 
-Si un type non managé est intercepté par catch (Object ^), il ne détruit pas l’objet levé.
+Si un type non menté est pris par la capture (Objet), il ne détruira pas l’objet lancé.
 
-Lors de la génération ou de l’interception des exceptions non managées, nous vous recommandons d’utiliser l’option de compilateur [/EHsc](../build/reference/eh-exception-handling-model.md) au lieu de **/EHS** ou **/EHa**.
+Lorsque vous lancez ou attrapez des exceptions non mentées, nous vous recommandons d’utiliser l’option [compilateur /EHsc](../build/reference/eh-exception-handling-model.md) au lieu de **/EHs** ou **/EHa**.
 
 ## <a name="see-also"></a>Voir aussi
 

@@ -14,12 +14,12 @@ helpviewer_keywords:
 - CInternetConnection [MFC], GetServerName
 - CInternetConnection [MFC], GetSession
 ms.assetid: 62a5d1c3-8471-4e36-a064-48831829b2a7
-ms.openlocfilehash: 9f17c3ade53ec45ddde654e83c77fe1d817d8495
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 6649986f279e010a833b31157922cb4fd1ea8613
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62345693"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81372425"
 ---
 # <a name="cinternetconnection-class"></a>CInternetConnection, classe
 
@@ -45,21 +45,21 @@ class CInternetConnection : public CObject
 |----------|-----------------|
 |[CInternetConnection::GetContext](#getcontext)|Obtient l’ID de contexte pour cet objet de connexion.|
 |[CInternetConnection::GetServerName](#getservername)|Obtient le nom du serveur associé à la connexion.|
-|[CInternetConnection::GetSession](#getsession)|Obtient un pointeur vers le [CInternetSession](../../mfc/reference/cinternetsession-class.md) objet associé à la connexion.|
+|[CInternetConnection::GetSession](#getsession)|Obtient un pointeur à l’objet [CInternetSession](../../mfc/reference/cinternetsession-class.md) associé à la connexion.|
 
 ### <a name="public-operators"></a>Op&#233;rateurs publics
 
 |Nom|Description|
 |----------|-----------------|
-|[CInternetConnection::operator HINTERNET](#operator_hinternet)|Handle vers une session Internet.|
+|[CInternetConnection::opérateur HINTERNET](#operator_hinternet)|Une poignée à une session Internet.|
 
 ## <a name="remarks"></a>Notes
 
-C’est la classe de base pour les classes MFC [CFtpConnection](../../mfc/reference/cftpconnection-class.md), [objet CHttpConnection](../../mfc/reference/chttpconnection-class.md), et [objet CGopherConnection](../../mfc/reference/cgopherconnection-class.md). Chacune de ces classes fournit des fonctionnalités supplémentaires permettant de communiquer avec le serveur FTP, HTTP ou gopher respectif.
+C’est la classe de base pour les classes MFC [CFtpConnection](../../mfc/reference/cftpconnection-class.md), [CHttpConnection](../../mfc/reference/chttpconnection-class.md), et [CGopherConnection](../../mfc/reference/cgopherconnection-class.md). Chacune de ces classes fournit des fonctionnalités supplémentaires pour communiquer avec le serveur FTP, HTTP ou gopher respectif.
 
-Pour communiquer directement avec un serveur Internet, vous devez avoir un [CInternetSession](../../mfc/reference/cinternetsession-class.md) objet et un `CInternetConnection` objet.
+Pour communiquer directement avec un serveur Internet, vous devez disposer d’un objet [CInternetSession](../../mfc/reference/cinternetsession-class.md) et d’un `CInternetConnection` objet.
 
-Pour en savoir plus sur la façon dont des classes de WinInet, consultez l’article [Internet programmation avec WinInet](../../mfc/win32-internet-extensions-wininet.md).
+Pour en savoir plus sur le fonctionnement des classes WinInet, consultez l’article [Internet Programming with WinInet](../../mfc/win32-internet-extensions-wininet.md).
 
 ## <a name="inheritance-hierarchy"></a>Hiérarchie d'héritage
 
@@ -67,13 +67,13 @@ Pour en savoir plus sur la façon dont des classes de WinInet, consultez l’art
 
 `CInternetConnection`
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
-**En-tête :** afxinet.h
+**En-tête:** afxinet.h
 
-##  <a name="cinternetconnection"></a>  CInternetConnection::CInternetConnection
+## <a name="cinternetconnectioncinternetconnection"></a><a name="cinternetconnection"></a>CInternetConnection::CInternetConnection
 
-Cette fonction membre est appelée quand un `CInternetConnection` objet est créé.
+Cette fonction de membre `CInternetConnection` est appelée lorsqu’un objet est créé.
 
 ```
 CInternetConnection(
@@ -86,20 +86,20 @@ CInternetConnection(
 ### <a name="parameters"></a>Paramètres
 
 *pSession*<br/>
-Un pointeur vers un [CInternetSession](../../mfc/reference/cinternetsession-class.md) objet.
+Un pointeur à un objet [CInternetSession.](../../mfc/reference/cinternetsession-class.md)
 
-*pstrServer*<br/>
-Un pointeur vers une chaîne contenant le nom du serveur.
+*pstrServer (en)*<br/>
+Un pointeur à une chaîne contenant le nom du serveur.
 
-*nPort*<br/>
-Nombre qui identifie le port Internet pour cette connexion.
+*nPort (en)*<br/>
+Le numéro qui identifie le port Internet pour cette connexion.
 
-*dwContext*<br/>
-L’identificateur de contexte pour le `CInternetConnection` objet. Consultez **remarques** pour plus d’informations sur *dwContext*.
+*dwContexte*<br/>
+L’identifiant de `CInternetConnection` contexte pour l’objet. Voir **Remarques** pour plus d’informations sur *dwContext*.
 
 ### <a name="remarks"></a>Notes
 
-Ne jamais appeler `CInternetConnection` vous-même ; au lieu de cela, appelez le [CInternetSession](../../mfc/reference/cinternetsession-class.md) fonction membre pour le type de connexion que vous souhaitez établir :
+On ne `CInternetConnection` s’appelle jamais toi-même; au lieu de cela, appelez la fonction membre [CInternetSession](../../mfc/reference/cinternetsession-class.md) pour le type de connexion que vous souhaitez établir :
 
 - [CInternetSession::GetFtpConnection](../../mfc/reference/cinternetsession-class.md#getftpconnection)
 
@@ -107,11 +107,11 @@ Ne jamais appeler `CInternetConnection` vous-même ; au lieu de cela, appelez l
 
 - [CInternetSession::GetGopherConnection](../../mfc/reference/cinternetsession-class.md#getgopherconnection)
 
-La valeur par défaut *dwContext* est envoyé par MFC pour le `CInternetConnection`-objet dérivé le [CInternetSession](../../mfc/reference/cinternetsession-class.md) de l’objet qui a créé le **InternetConnection**- objet dérivé. La valeur par défaut est défini sur 1 ; Toutefois, vous pouvez affecter explicitement un identificateur de contexte spécifique dans le [CInternetSession](../../mfc/reference/cinternetsession-class.md#cinternetsession) constructeur pour la connexion. L’objet et n’importe quel travail qu’elle effectue sera associés à cet ID de contexte. L’identificateur de contexte est renvoyé à [CInternetSession::OnStatusCallback](../../mfc/reference/cinternetsession-class.md#onstatuscallback) pour fournir l’état de l’objet avec lequel il est identifié. Consultez l’article [Internet premières étapes : WinInet](../../mfc/wininet-basics.md) pour plus d’informations sur l’identificateur de contexte.
+La valeur par défaut pour *dwContext* `CInternetConnection`est envoyée par MFC à l’objet dérivé de [l’objet CInternetSession](../../mfc/reference/cinternetsession-class.md) qui a créé l’objet dérivé **d’InternetConnection.** La valeur par défaut est réglée à 1; toutefois, vous pouvez affecter explicitement un identifiant de contexte spécifique dans le constructeur [CInternetSession](../../mfc/reference/cinternetsession-class.md#cinternetsession) pour la connexion. L’objet et tout travail qu’il fait sera associé à cette pièce d’identité contextuelle. L’identifiant de contexte est retourné à [CInternetSession::OnStatusCallback](../../mfc/reference/cinternetsession-class.md#onstatuscallback) pour fournir l’état sur l’objet avec lequel il est identifié. Voir l’article [Internet First Steps: WinInet](../../mfc/wininet-basics.md) pour plus d’informations sur l’identifiant de contexte.
 
-##  <a name="getcontext"></a>  CInternetConnection::GetContext
+## <a name="cinternetconnectiongetcontext"></a><a name="getcontext"></a>CInternetConnection::GetContext
 
-Appelez cette fonction membre pour obtenir l’ID de contexte pour cette session.
+Appelez cette fonction de membre pour obtenir l’ID de contexte pour cette session.
 
 ```
 DWORD_PTR GetContext() const;
@@ -123,13 +123,13 @@ L’ID de contexte assigné par l’application.
 
 ### <a name="remarks"></a>Notes
 
-L’ID de contexte est spécifiée à l’origine dans [CInternetSession](../../mfc/reference/cinternetsession-class.md) et se propage à `CInternetConnection`- et [CInternetFile](../../mfc/reference/cinternetfile-class.md)-les classes dérivées, sauf si spécifié différemment dans l’appel à une fonction qui s’ouvre la connexion. L’ID de contexte est associé à une opération de l’objet donné et identifie les informations d’état de l’opération retournées par [CInternetSession::OnStatusCallback](../../mfc/reference/cinternetsession-class.md#onstatuscallback).
+L’ID de contexte est à l’origine spécifié dans `CInternetConnection` [CInternetSession](../../mfc/reference/cinternetsession-class.md) et se propage à - et [CInternetFile](../../mfc/reference/cinternetfile-class.md)- classes dérivées, sauf spécifié différemment dans l’appel à une fonction qui ouvre la connexion. L’ID contextuelle est associé à toute opération de l’objet donné et identifie les informations d’état de l’opération retournées par [CInternetSession:OnStatusCallback](../../mfc/reference/cinternetsession-class.md#onstatuscallback).
 
-Pour plus d’informations sur la façon `GetContext` fonctionne avec d’autres classes WinInet pour donner les informations d’état utilisateur, consultez l’article [Internet premières étapes : WinInet](../../mfc/wininet-basics.md) pour plus d’informations sur l’identificateur de contexte.
+Pour plus d’informations sur la façon dont `GetContext` fonctionne avec d’autres classes WinInet pour donner des informations sur l’état de l’utilisateur, consultez l’article Internet First [Steps: WinInet](../../mfc/wininet-basics.md) pour plus d’informations sur l’identifiant de contexte.
 
-##  <a name="getservername"></a>  CInternetConnection::GetServerName
+## <a name="cinternetconnectiongetservername"></a><a name="getservername"></a>CInternetConnection::GetServerName
 
-Appelez cette fonction membre pour obtenir le nom du serveur associé à cette connexion Internet.
+Appelez cette fonction de membre pour obtenir le nom du serveur associé à cette connexion Internet.
 
 ```
 CString GetServerName() const;
@@ -137,11 +137,11 @@ CString GetServerName() const;
 
 ### <a name="return-value"></a>Valeur de retour
 
-Le nom du serveur que cet objet de connexion fonctionne.
+Le nom du serveur avec lequel cet objet de connexion travaille.
 
-##  <a name="getsession"></a>  CInternetConnection::GetSession
+## <a name="cinternetconnectiongetsession"></a><a name="getsession"></a>CInternetConnection::GetSession
 
-Appelez cette fonction membre pour obtenir un pointeur vers le `CInternetSession` objet qui est associé à cette connexion.
+Appelez cette fonction de membre `CInternetSession` pour obtenir un pointeur à l’objet qui est associé à cette connexion.
 
 ```
 CInternetSession* GetSession() const;
@@ -149,11 +149,11 @@ CInternetSession* GetSession() const;
 
 ### <a name="return-value"></a>Valeur de retour
 
-Un pointeur vers un [CInternetSession](../../mfc/reference/cinternetsession-class.md) objet associé à cet objet de connexion Internet.
+Un pointeur vers un objet [CInternetSession](../../mfc/reference/cinternetsession-class.md) associé à cet objet de connexion Internet.
 
-##  <a name="operator_hinternet"></a>  CInternetConnection::operator HINTERNET
+## <a name="cinternetconnectionoperator-hinternet"></a><a name="operator_hinternet"></a>CInternetConnection::opérateur HINTERNET
 
-Utilisez cet opérateur pour obtenir le handle de niveau d’API pour la session Internet actuelle.
+Utilisez cet opérateur pour obtenir la poignée au niveau API pour la session Internet en cours.
 
 ```
 operator HINTERNET() const;
@@ -161,5 +161,5 @@ operator HINTERNET() const;
 
 ## <a name="see-also"></a>Voir aussi
 
-[CObject, classe](../../mfc/reference/cobject-class.md)<br/>
+[Classe CObject](../../mfc/reference/cobject-class.md)<br/>
 [Graphique hiérarchique](../../mfc/hierarchy-chart.md)

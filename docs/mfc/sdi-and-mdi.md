@@ -8,23 +8,23 @@ helpviewer_keywords:
 - single document interface (SDI) [MFC], applications
 - MDI [MFC], vs. SDI
 ms.assetid: bb7239d9-4759-4f63-bfff-44a04b48c067
-ms.openlocfilehash: 725249e5a71e8ee097c641e5972e3cc8bb0e3e33
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 9730e7baf9589c4b05a60703c619aae2e941bdec
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62308528"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81372756"
 ---
 # <a name="sdi-and-mdi"></a>SDI et MDI
 
-MFC rend plus facile travailler avec l’interface monodocument (SDI) et applications d’interface multidocument (MDI).
+MFC facilite le travail avec les applications interfaces mono documents (SDI) et interface multi-documents (MDI).
 
-Les applications SDI ne permettent qu’une seule fenêtre frame de document ouvert à la fois. Les applications MDI permettent document plusieurs fenêtres frame être ouvert dans la même instance d’une application. Une application MDI possède une fenêtre dans quel MDI plusieurs fenêtres enfants, qui sont elles-mêmes des fenêtres frame, peuvent être ouvertes, chacune contenant un document distinct. Dans certaines applications, les fenêtres enfants peuvent être de différents types, tels que les fenêtres de graphique et feuille de calcul. Dans ce cas, la barre de menus peut modifier comme fenêtres enfants MDI de types différents sont activés.
+Les applications SDI ne permettent qu’une seule fenêtre de cadre de document ouverte à la fois. Les applications MDI permettent d’ouvrir plusieurs fenêtres d’images de documents dans le même cas d’application. Une application MDI dispose d’une fenêtre dans laquelle plusieurs fenêtres d’enfants MDI, qui sont des fenêtres de cadre elles-mêmes, peuvent être ouvertes, chacune contenant un document séparé. Dans certaines applications, les fenêtres de l’enfant peuvent être de différents types, tels que les fenêtres de carte et les fenêtres de feuille de calcul. Dans ce cas, la barre de menu peut changer que les fenêtres d’enfant MDI de différents types sont activés.
 
 > [!NOTE]
->  Sous Windows 95 et versions ultérieures, les applications sont généralement SDI, car le système d’exploitation a adopté une vue « centré sur le document ».
+> Sous Windows 95 et plus tard, les applications sont généralement SDI parce que le système d’exploitation a adopté une vue "centrée sur le document".
 
-Pour plus d’informations, consultez [Documents, vues et l’infrastructure](../mfc/documents-views-and-the-framework.md).
+Pour plus d’informations, voir [Documents, Vues et Cadre](../mfc/documents-views-and-the-framework.md).
 
 ## <a name="see-also"></a>Voir aussi
 

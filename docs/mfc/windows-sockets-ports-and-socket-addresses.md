@@ -1,5 +1,5 @@
 ---
-title: 'Windows Sockets : Ports et adresses de Socket'
+title: 'Windows Sockets : ports et adresses de socket'
 ms.date: 11/04/2016
 helpviewer_keywords:
 - ports [MFC], definition
@@ -10,45 +10,45 @@ helpviewer_keywords:
 - sockets [MFC], addresses
 - sockets [MFC], ports
 ms.assetid: e050261a-9285-4f31-a1c5-6c8033af5b4a
-ms.openlocfilehash: c33ec1376c1898272cf80e8d77c5cc273e16f9de
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 791bf07c927e80e65e0fda79fae8a50235bc2def
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62389370"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81371043"
 ---
-# <a name="windows-sockets-ports-and-socket-addresses"></a>Windows Sockets : Ports et adresses de Socket
+# <a name="windows-sockets-ports-and-socket-addresses"></a>Windows Sockets : ports et adresses de socket
 
-Cet article explique les termes « port » et « address » en tant qu’utilisé avec Windows Sockets.
+Cet article explique les termes "port" et "adresse" tel qu’utilisé avec Windows Sockets.
 
-##  <a name="_core_port"></a> Port
+## <a name="port"></a><a name="_core_port"></a>Port
 
-Un port identifie un processus unique pour lequel un service peut être fourni. Dans ce contexte, un port est associé à une application qui prend en charge de Windows Sockets. L’idée consiste à identifier de manière unique chaque application Windows Sockets afin d’avoir plus d’une application Windows Sockets en cours d’exécution sur un ordinateur en même temps.
+Un port identifie un processus unique pour lequel un service peut être fourni. Dans le contexte actuel, un port est associé à une application qui prend en charge Windows Sockets. L’idée est d’identifier chaque application Windows Sockets de manière unique afin que vous puissiez avoir plus d’une application Windows Sockets fonctionnant sur une machine en même temps.
 
-Certains ports sont réservés pour les services communs, tels que FTP. Évitez d’utiliser ces ports, sauf si vous fournissez ce type de service. La spécification Windows Sockets détaille ces ports réservés. Le fichier WINSOCK. H les répertorie également.
+Certains ports sont réservés aux services communs, tels que le FTP. Vous devriez éviter d’utiliser ces ports à moins que vous ne fournissiez ce genre de service. Les spécifications Windows Sockets détaillent ces ports réservés. Le fichier WINSOCK. H les énumère également.
 
-Pour permettre à la DLL de Sockets Windows de sélectionner un port à utiliser pour vous, passez 0 comme valeur du port. MFC sélectionne une valeur de port supérieure à 1 024 décimal. Vous pouvez récupérer la valeur de port sélectionné de MFC en appelant le [fonction membre CAsyncSocket::GetSockName](../mfc/reference/casyncsocket-class.md#getsockname) fonction membre.
+Pour laisser les prises Windows DLL sélectionner un port utilisable pour vous, passez 0 comme valeur portuaire. MFC choisit une valeur portuaire supérieure à 1 024 décimales. Vous pouvez récupérer la valeur portuaire que MFC a sélectionnée en appelant le [CAsyncSocket::GetSockName](../mfc/reference/casyncsocket-class.md#getsockname) fonction membre.
 
-##  <a name="_core_socket_address"></a> Adresse de socket
+## <a name="socket-address"></a><a name="_core_socket_address"></a>Adresse de prise
 
-Chaque objet socket est associé à une adresse IP (Internet Protocol) sur le réseau. En règle générale, l’adresse est un nom d’ordinateur, telles que « FTP.Microsoft.com », ou un nombre en pointillés, tels que « 128.56.22.8 ».
+Chaque objet de prise est associé à une adresse de protocole Internet (IP) sur le réseau. Typiquement, l’adresse est un nom de machine, tel que "ftp.microsoft.com", ou un numéro pointillé, comme "128.56.22.8".
 
-Lorsque vous cherchez à créer un socket, généralement inutile de spécifier votre propre adresse.
+Lorsque vous cherchez à créer une prise, vous n’avez généralement pas besoin de spécifier votre propre adresse.
 
 > [!NOTE]
->  Il est possible que votre ordinateur possède plusieurs cartes réseau (ou votre application s’exécute un jour sur un ordinateur de ce type), chacune représentant un autre réseau. Dans ce cas, vous devrez peut-être donner une adresse pour spécifier la carte réseau que le socket doit utiliser. Voici certaine soit une utilisation avancée et un problème de portabilité possible.
+> Il est possible que votre machine dispose de plusieurs cartes réseau (ou votre application pourrait un jour fonctionner sur une telle machine), chacune représentant un réseau différent. Si c’est le cas, vous devrez peut-être donner une adresse pour spécifier la carte réseau que la prise utilisera. Il s’agit certainement d’une utilisation avancée et d’un problème de portabilité possible.
 
-Pour plus d'informations, voir :
+Pour plus d'informations, consultez les pages suivantes :
 
-- [Windows Sockets : Utilisation de la classe CAsyncSocket](../mfc/windows-sockets-using-class-casyncsocket.md)
+- [Windows Sockets : utilisation de la classe CAsyncSocket](../mfc/windows-sockets-using-class-casyncsocket.md)
 
-- [Windows Sockets : Utilisation de sockets avec des archives](../mfc/windows-sockets-using-sockets-with-archives.md)
+- [Windows Sockets : utilisation de sockets avec des archives](../mfc/windows-sockets-using-sockets-with-archives.md)
 
-- [Windows Sockets : Fonctionnement des sockets avec des archives](../mfc/windows-sockets-how-sockets-with-archives-work.md)
+- [Windows Sockets : fonctionnement des sockets avec des archives](../mfc/windows-sockets-how-sockets-with-archives-work.md)
 
-- [Windows Sockets : Sockets flux](../mfc/windows-sockets-stream-sockets.md)
+- [Windows Sockets : sockets flux](../mfc/windows-sockets-stream-sockets.md)
 
-- [Windows Sockets : Sockets datagramme](../mfc/windows-sockets-datagram-sockets.md)
+- [Windows Sockets : sockets datagramme](../mfc/windows-sockets-datagram-sockets.md)
 
 ## <a name="see-also"></a>Voir aussi
 

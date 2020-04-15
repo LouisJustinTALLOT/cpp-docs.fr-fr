@@ -9,16 +9,16 @@ helpviewer_keywords:
 - Microsoft::WRL::Details::DontUseNewUseMake class
 - Microsoft::WRL::Details::DontUseNewUseMake::operator new operator
 ms.assetid: 8b38d07b-fc14-4cea-afb9-4c1a7dde0093
-ms.openlocfilehash: 02420f2657c7d7d6a7a0294f0321717a3bb2b5d7
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: ae67373b4f2f2d4a199b939b06e6f526f1365446
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62398535"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81371552"
 ---
 # <a name="dontusenewusemake-class"></a>DontUseNewUseMake (classe)
 
-Prend en charge l’infrastructure WRL et n’est pas destinée à être utilisée directement depuis votre code.
+Prend en charge l’infrastructure WRL et n’est pas destiné à être utilisé directement à partir de votre code.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -28,7 +28,7 @@ class DontUseNewUseMake;
 
 ## <a name="remarks"></a>Notes
 
-Empêche l’utilisation d’opérateur `new` dans `RuntimeClass`. Par conséquent, vous devez utiliser le [Make, fonction](make-function.md) à la place.
+Empêche l’utilisation de l’opérateur `new` dans `RuntimeClass`. Par conséquent, vous devez utiliser la [fonction Make](make-function.md) à la place.
 
 ## <a name="members"></a>Membres
 
@@ -36,21 +36,21 @@ Empêche l’utilisation d’opérateur `new` dans `RuntimeClass`. Par conséque
 
 Nom                                             | Description
 ------------------------------------------------ | ---------------------------------------------------------------------------
-[DontUseNewUseMake::operator new](#operator-new) | Surcharge d’opérateur `new` et empêche l’utilisation dans `RuntimeClass`.
+[DontUseNewUseMake::opérateur nouveau](#operator-new) | Surcharge l’opérateur `new` et l’empêche `RuntimeClass`d’être utilisé dans .
 
 ## <a name="inheritance-hierarchy"></a>Hiérarchie d'héritage
 
 `DontUseNewUseMake`
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
-**En-tête :** implements.h
+**En-tête:** implements.h
 
-**Espace de noms :** Microsoft::WRL::Details
+**Espace nom:** Microsoft::WRL::Details
 
-## <a name="operator-new"></a>DontUseNewUseMake::operator new
+## <a name="dontusenewusemakeoperator-new"></a><a name="operator-new"></a>DontUseNewUseMake::opérateur nouveau
 
-Prend en charge l’infrastructure WRL et n’est pas destinée à être utilisée directement depuis votre code.
+Prend en charge l’infrastructure WRL et n’est pas destiné à être utilisé directement à partir de votre code.
 
 ```cpp
 void* operator new(
@@ -62,15 +62,15 @@ void* operator new(
 ### <a name="parameters"></a>Paramètres
 
 *__unnamed0*<br/>
-Un paramètre sans nom qui spécifie le nombre d’octets de mémoire à allouer.
+Un paramètre anonyme qui spécifie le nombre d’octets de mémoire à allouer.
 
-*placement*<br/>
-Le type doit être allouée.
+*Placement*<br/>
+Le type à attribuer.
 
 ### <a name="return-value"></a>Valeur de retour
 
-Fournit un moyen de passer des arguments supplémentaires si vous surchargez l’opérateur `new`.
+Fournit un moyen de passer des arguments `new`supplémentaires si vous surchargez l’opérateur .
 
 ### <a name="remarks"></a>Notes
 
-Surcharge d’opérateur `new` et empêche l’utilisation dans `RuntimeClass`.
+Surcharge l’opérateur `new` et l’empêche `RuntimeClass`d’être utilisé dans .

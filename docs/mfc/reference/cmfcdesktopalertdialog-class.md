@@ -1,5 +1,5 @@
 ---
-title: Cmfcdesktopalertdialog, classe
+title: CMFCDesktopAlertDialog, classe
 ms.date: 10/18/2018
 f1_keywords:
 - CMFCDesktopAlertDialog
@@ -14,18 +14,18 @@ helpviewer_keywords:
 - CMFCDesktopAlertDialog [MFC], HasFocus
 - CMFCDesktopAlertDialog [MFC], PreTranslateMessage
 ms.assetid: a53c60aa-9607-485b-b826-ec64962075f6
-ms.openlocfilehash: 02086e09ca3229fae28359b1ea81e4708c5d1865
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 479959e9b021255e309caf6fee02588a8cd8f1d1
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62403709"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81367654"
 ---
-# <a name="cmfcdesktopalertdialog-class"></a>Cmfcdesktopalertdialog, classe
+# <a name="cmfcdesktopalertdialog-class"></a>CMFCDesktopAlertDialog, classe
 
-Le `CMFCDesktopAlertDialog` classe est utilisée conjointement avec la [cmfcdesktopalertwnd, classe](../../mfc/reference/cmfcdesktopalertwnd-class.md) pour afficher une boîte de dialogue personnalisée dans une fenêtre contextuelle.
+La `CMFCDesktopAlertDialog` classe est utilisée avec la [classe CMFCDesktopAlertWnd](../../mfc/reference/cmfcdesktopalertwnd-class.md) pour afficher un dialogue personnalisé dans une fenêtre popup.
 
-Pour plus d’informations, consultez le code source situé dans le **VC\\atlmfc\\src\\mfc** dossier de votre installation de Visual Studio.
+Pour plus de détails, consultez le code source situé dans le dossier **VC\\\\atlmfc src\\mfc** de votre installation Visual Studio.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -52,7 +52,7 @@ Pour afficher une boîte de dialogue personnalisé dans une fenêtre contextuell
 
 1. Créez un modèle de boîte de dialogue enfant dans les ressources du projet.
 
-1. Appelez [CMFCDesktopAlertWnd::Create](../../mfc/reference/cmfcdesktopalertwnd-class.md#create) avec l’ID de ressource du modèle de boîte de dialogue et un pointeur vers les informations de classe runtime de la classe dérivée en tant que paramètres.
+1. Appelez [CMFCDesktopAlertWnd::Créer](../../mfc/reference/cmfcdesktopalertwnd-class.md#create) avec l’ID de ressource du modèle de dialogue et un pointeur pour les informations de classe de temps d’exécution de la classe dérivée comme paramètres.
 
 1. Programmez la boîte de dialogue personnalisée de sorte qu'elle traite toutes les notifications en provenance des contrôles hébergés ou programmez les contrôles hébergés de sorte qu'ils traitent directement ces notifications.
 
@@ -70,11 +70,11 @@ Pour afficher une boîte de dialogue personnalisé dans une fenêtre contextuell
 
 [CMFCDesktopAlertDialog](../../mfc/reference/cmfcdesktopalertdialog-class.md)
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
-**En-tête :** afxDesktopAlertDialog.h
+**En-tête:** afxDesktopAlertDialog.h
 
-##  <a name="createfromparams"></a>  CMFCDesktopAlertDialog::CreateFromParams
+## <a name="cmfcdesktopalertdialogcreatefromparams"></a><a name="createfromparams"></a>CMFCDesktopAlertDialog::CreateDeParams
 
 ```
 BOOL CreateFromParams(
@@ -84,15 +84,15 @@ BOOL CreateFromParams(
 
 ### <a name="parameters"></a>Paramètres
 
-[in] *params*<br/>
+[dans] *params*<br/>
 
-[in] *pParent*<br/>
+[dans] *pParent*<br/>
 
 ### <a name="return-value"></a>Valeur de retour
 
 ### <a name="remarks"></a>Notes
 
-##  <a name="getdlgsize"></a>  CMFCDesktopAlertDialog::GetDlgSize
+## <a name="cmfcdesktopalertdialoggetdlgsize"></a><a name="getdlgsize"></a>CMFCDesktopAlertDialog::GetDlgSize
 
 ```
 CSize GetDlgSize();
@@ -102,7 +102,7 @@ CSize GetDlgSize();
 
 ### <a name="remarks"></a>Notes
 
-##  <a name="hasfocus"></a>  CMFCDesktopAlertDialog::HasFocus
+## <a name="cmfcdesktopalertdialoghasfocus"></a><a name="hasfocus"></a>CMFCDesktopAlertDialog::HasFocus
 
 ```
 BOOL HasFocus() const;
@@ -112,7 +112,7 @@ BOOL HasFocus() const;
 
 ### <a name="remarks"></a>Notes
 
-##  <a name="pretranslatemessage"></a>  CMFCDesktopAlertDialog::PreTranslateMessage
+## <a name="cmfcdesktopalertdialogpretranslatemessage"></a><a name="pretranslatemessage"></a>CMFCDesktopAlertDialog::PreTranslateMessage
 
 ```
 virtual BOOL PreTranslateMessage(MSG* pMsg);
@@ -120,7 +120,7 @@ virtual BOOL PreTranslateMessage(MSG* pMsg);
 
 ### <a name="parameters"></a>Paramètres
 
-[in] *pMsg*<br/>
+[dans] *pMsg*<br/>
 
 ### <a name="return-value"></a>Valeur de retour
 
@@ -130,6 +130,6 @@ virtual BOOL PreTranslateMessage(MSG* pMsg);
 
 [Graphique hiérarchique](../../mfc/hierarchy-chart.md)<br/>
 [Classes](../../mfc/reference/mfc-classes.md)<br/>
-[CMFCDesktopAlertWnd, classe](../../mfc/reference/cmfcdesktopalertwnd-class.md)<br/>
-[CMFCDesktopAlertWndInfo, classe](../../mfc/reference/cmfcdesktopalertwndinfo-class.md)<br/>
+[CMFCDesktopAlertWnd Class](../../mfc/reference/cmfcdesktopalertwnd-class.md)<br/>
+[Classe CMFCDesktopAlertWndInfo](../../mfc/reference/cmfcdesktopalertwndinfo-class.md)<br/>
 [CDialogEx, classe](../../mfc/reference/cdialogex-class.md)

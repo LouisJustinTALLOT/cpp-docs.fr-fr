@@ -44,16 +44,16 @@ helpviewer_keywords:
 - CControlBar [MFC], m_bAutoDelete
 - CControlBar [MFC], m_pInPlaceOwner
 ms.assetid: 4d668c55-9b42-4838-97ac-cf2b3000b82c
-ms.openlocfilehash: 41e40b3da7b4a294fe396a9d93f7c6a93593ff95
-ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
+ms.openlocfilehash: deb95d76e6d68ba5b9fad82bca1d88fd71c5a547
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/16/2020
-ms.locfileid: "79420532"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81369392"
 ---
 # <a name="ccontrolbar-class"></a>CControlBar Class
 
-Classe de base pour les classes de barre de contrôle [CStatusBar](../../mfc/reference/cstatusbar-class.md), [CToolBar](../../mfc/reference/ctoolbar-class.md), [CDialogBar](../../mfc/reference/cdialogbar-class.md), [CReBar](../../mfc/reference/crebar-class.md)et [COleResizeBar](../../mfc/reference/coleresizebar-class.md).
+La classe de base pour les classes de barres de contrôle [CStatusBar](../../mfc/reference/cstatusbar-class.md), [CToolBar](../../mfc/reference/ctoolbar-class.md), [CDialogBar](../../mfc/reference/cdialogbar-class.md), [CReBar](../../mfc/reference/crebar-class.md), et [COleResizeBar](../../mfc/reference/coleresizebar-class.md).
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -65,51 +65,51 @@ class CControlBar : public CWnd
 
 ### <a name="protected-constructors"></a>Constructeurs protégés
 
-|Name|Description|
+|Nom|Description|
 |----------|-----------------|
-|[CControlBar :: CControlBar](#ccontrolbar)|Construit un objet `CControlBar`.|
+|[CControlBar::CControlBar](#ccontrolbar)|Construit un objet `CControlBar`.|
 
 ### <a name="public-methods"></a>M&#233;thodes publiques
 
-|Name|Description|
+|Nom|Description|
 |----------|-----------------|
-|[CControlBar :: CalcDynamicLayout](#calcdynamiclayout)|Retourne la taille d’une barre de contrôle dynamique sous la forme d’un objet [CSize](../../atl-mfc-shared/reference/csize-class.md) .|
-|[CControlBar :: CalcFixedLayout](#calcfixedlayout)|Retourne la taille de la barre de contrôle sous la forme d’un objet [CSize](../../atl-mfc-shared/reference/csize-class.md) .|
-|[CControlBar :: CalcInsideRect](#calcinsiderect)|Retourne les dimensions actuelles de la zone de la barre de contrôle ; y compris les bordures.|
-|[CControlBar ::D oPaint](#dopaint)|Restitue les bordures et la pince de la barre de contrôle.|
-|[CControlBar ::D rawBorders](#drawborders)|Restitue les bordures de la barre de contrôle.|
-|[CControlBar ::D rawGripper](#drawgripper)|Restitue la pince de la barre de contrôle.|
-|[CControlBar :: EnableDocking](#enabledocking)|Permet à une barre de contrôle d’être ancrée ou flottante.|
-|[CControlBar :: GetBarStyle](#getbarstyle)|Récupère les paramètres de style de barre de contrôle.|
-|[CControlBar :: GetBorders](#getborders)|Récupère les valeurs de bordure de la barre de contrôle.|
-|[CControlBar :: GetCount](#getcount)|Retourne le nombre d’éléments non HWND dans la barre de contrôle.|
-|[CControlBar :: GetDockingFrame](#getdockingframe)|Retourne un pointeur vers le frame auquel une barre de contrôle est ancrée.|
-|[CControlBar :: IsFloating](#isfloating)|Retourne une valeur différente de zéro si la barre de contrôle en question est une barre de contrôle flottante.|
-|[CControlBar :: OnUpdateCmdUI](#onupdatecmdui)|Appelle les gestionnaires de l’interface utilisateur de la commande.|
-|[CControlBar :: SetBarStyle](#setbarstyle)|Modifie les paramètres de style de barre de contrôle.|
-|[CControlBar :: SetBorders](#setborders)|Définit les valeurs de bordure de la barre de contrôle.|
-|[CControlBar :: SetInPlaceOwner](#setinplaceowner)|Modifie le propriétaire sur place d’une barre de contrôle.|
+|[CControlBar::CalcDynamicLayout](#calcdynamiclayout)|Retourne la taille d’une barre de contrôle dynamique comme objet [CSize.](../../atl-mfc-shared/reference/csize-class.md)|
+|[CControlBar::CalcFixedLayout](#calcfixedlayout)|Retourne la taille de la barre de contrôle comme un objet [CSize.](../../atl-mfc-shared/reference/csize-class.md)|
+|[CControlBar::CalcInsideRect](#calcinsiderect)|Retourne les dimensions actuelles de la zone de la barre de commande; y compris les frontières.|
+|[CControlBar::DoPaint](#dopaint)|Rend les bordures et la pince de la barre de contrôle.|
+|[CControlBar::DrawBorders](#drawborders)|Rend les bordures de la barre de contrôle.|
+|[CControlBar::DrawGripper](#drawgripper)|Rend la pince de la barre de contrôle.|
+|[CControlBar::EnableDocking](#enabledocking)|Permet d’amarrer ou de flotter une barre de commande.|
+|[CControlBar::GetBarStyle](#getbarstyle)|Récupère les paramètres de style barre de contrôle.|
+|[CControlBar::GetBorders](#getborders)|Récupère les valeurs frontalières de la barre de contrôle.|
+|[CControlBar::GetCount](#getcount)|Retourne le nombre d’éléments non HWND dans la barre de contrôle.|
+|[CControlBar::GetDockingFrame](#getdockingframe)|Retourne un pointeur sur le cadre auquel une barre de commande est amarré.|
+|[CControlBar::IsFloating](#isfloating)|Retourne une valeur non zéro si la barre de contrôle en question est une barre de contrôle flottante.|
+|[CControlBar::OnUpdateCmdUI](#onupdatecmdui)|Appelle les gestionnaires d’interface utilisateur de commande.|
+|[CControlBar::SetBarStyle](#setbarstyle)|Modifie les paramètres de style barre de contrôle.|
+|[CControlBar::SetBorders](#setborders)|Définit les valeurs frontalières de la barre de contrôle.|
+|[CControlBar::SetInPlaceOwner](#setinplaceowner)|Change le propriétaire sur place d’une barre de contrôle.|
 
 ### <a name="public-data-members"></a>Membres de données publics
 
-|Name|Description|
+|Nom|Description|
 |----------|-----------------|
-|[CControlBar :: m_bAutoDelete](#m_bautodelete)|Si la valeur est différente de zéro, l’objet `CControlBar` est supprimé lorsque la barre de contrôle Windows est détruite.|
-|[CControlBar :: m_pInPlaceOwner](#m_pinplaceowner)|Propriétaire sur place de la barre de contrôle.|
+|[CControlBar:m_bAutoDelete](#m_bautodelete)|Si non zéro, `CControlBar` l’objet est supprimé lorsque la barre de contrôle Windows est détruite.|
+|[CControlBar:m_pInPlaceOwner](#m_pinplaceowner)|Le propriétaire sur place de la barre de contrôle.|
 
 ## <a name="remarks"></a>Notes
 
-Une barre de contrôle est une fenêtre qui est généralement alignée à gauche ou à droite d’une fenêtre frame. Il peut contenir des éléments enfants qui sont soit des contrôles basés sur HWND, qui sont des fenêtres qui génèrent et répondent à des messages Windows, ou des éléments non basés sur HWND, qui ne sont pas Windows et sont gérés par le code d’application ou le code d’infrastructure. Les zones de liste et les contrôles d’édition sont des exemples de contrôles basés sur HWND. les volets de barre d’État et les boutons bitmap sont des exemples de contrôles non basés sur HWND.
+Une barre de contrôle est une fenêtre qui est généralement alignée à gauche ou à droite d’une fenêtre de cadre. Il peut contenir des articles pour enfants qui sont soit des contrôles basés sur HWND, qui sont des fenêtres qui génèrent et répondent aux messages Windows, ou des éléments non basés sur HWND, qui ne sont pas des fenêtres et sont gérés par le code d’application ou le code-cadre. Les boîtes de liste et les contrôles de modification sont des exemples de contrôles basés sur le HWND; les vitres de barre d’état et les boutons de bitmap sont des exemples de contrôles non basés sur le HWND.
 
-Les fenêtres de la barre de contrôle sont généralement des fenêtres enfants d’une fenêtre frame parente et sont généralement des frères de la vue cliente ou du client MDI de la fenêtre frame. Un objet `CControlBar` utilise des informations sur le rectangle client de la fenêtre parente pour se positionner lui-même. Il informe ensuite la fenêtre parente de la quantité d’espace restant non allouée dans la zone cliente de la fenêtre parente.
+Les fenêtres de contrôle-bar sont habituellement des fenêtres d’enfant d’une fenêtre de cadre parent et sont habituellement des frères et sœurs à la vue du client ou client MDI de la fenêtre de cadre. Un `CControlBar` objet utilise des informations sur le rectangle du client de la fenêtre parente pour se positionner. Il informe ensuite la fenêtre parente de la quantité d’espace qui n’est pas allouée dans la zone cliente de la fenêtre mère.
 
-Pour plus d’informations sur `CControlBar`, consultez :
+Pour plus `CControlBar`d’informations sur , voir:
 
 - [Barres de contrôles](../../mfc/control-bars.md)
 
-- [Note technique 31 : barres de contrôles](../../mfc/tn031-control-bars.md).
+- [Note technique 31: Barres de contrôle](../../mfc/tn031-control-bars.md).
 
-## <a name="inheritance-hierarchy"></a>Hiérarchie d’héritage
+## <a name="inheritance-hierarchy"></a>Hiérarchie d'héritage
 
 [CObject](../../mfc/reference/cobject-class.md)
 
@@ -121,11 +121,11 @@ Pour plus d’informations sur `CControlBar`, consultez :
 
 ## <a name="requirements"></a>Spécifications
 
-**En-tête :** afxext. h
+**En-tête:** afxext.h
 
-##  <a name="calcdynamiclayout"></a>CControlBar :: CalcDynamicLayout
+## <a name="ccontrolbarcalcdynamiclayout"></a><a name="calcdynamiclayout"></a>CControlBar::CalcDynamicLayout
 
-L’infrastructure appelle cette fonction membre pour calculer les dimensions d’une barre d’outils dynamique.
+Le cadre appelle cette fonction membre à calculer les dimensions d’une barre d’outils dynamique.
 
 ```
 virtual CSize CalcDynamicLayout(
@@ -135,33 +135,33 @@ virtual CSize CalcDynamicLayout(
 
 ### <a name="parameters"></a>Paramètres
 
-*nLength*<br/>
-Dimension demandée de la barre de contrôle, horizontale ou verticale, en fonction de *dwMode*.
+*nLength (en)*<br/>
+La dimension demandée de la barre de contrôle, horizontale ou verticale, selon *dwMode*.
 
 *nMode*<br/>
-Les indicateurs prédéfinis suivants sont utilisés pour déterminer la hauteur et la largeur de la barre de contrôle dynamique. Utilisez l’opérateur de bits or&#124;() pour combiner les indicateurs.
+Les drapeaux prédéfinis suivants sont utilisés pour déterminer la hauteur et la largeur de la barre de commande dynamique. Utilisez l’opérateur bitwise-OR (&#124;) pour combiner les drapeaux.
 
-|Indicateurs du mode de disposition|Signification|
+|Drapeaux de mode de mise en page|Signification|
 |-----------------------|-------------------|
-|LM_STRETCH|Indique si la barre de contrôle doit être étirée à la taille du frame. Définit si la barre n’est pas une barre d’ancrage (non disponible pour l’ancrage). Non défini lorsque la barre est ancrée ou flottante (disponible pour l’ancrage). Si cette option est définie, LM_STRETCH ignore *nLength* et retourne les dimensions en fonction de l’état de LM_HORZ. LM_STRETCH fonctionne de la même façon que le paramètre *bStretch* utilisé dans [CalcFixedLayout](#calcfixedlayout); Pour plus d’informations sur la relation entre l’étirement et l’orientation, consultez la fonction membre.|
-|LM_HORZ|Indique que la barre est orientée horizontalement ou verticalement. Défini si la barre est orientée horizontalement et si elle est orientée verticalement, elle n’est pas définie. LM_HORZ fonctionne de la même façon que le paramètre *bHorz* utilisé dans [CalcFixedLayout](#calcfixedlayout); Pour plus d’informations sur la relation entre l’étirement et l’orientation, consultez la fonction membre.|
-|LM_MRUWIDTH|Dernière largeur dynamique utilisée. Ignore le paramètre *nLength* et utilise la largeur utilisée la plus récemment mémorisée.|
-|LM_HORZDOCK|Dimensions ancrées horizontales. Ignore le paramètre *nLength* et retourne la taille dynamique avec la largeur la plus grande.|
-|LM_VERTDOCK|Dimensions ancrées verticales. Ignore le paramètre *nLength* et retourne la taille dynamique avec la plus grande hauteur.|
-|LM_LENGTHY|Définit si *nLength* indique Height (direction Y) au lieu de Width.|
-|LM_COMMIT|Réinitialise LM_MRUWIDTH à la largeur actuelle de la barre de contrôle flottante.|
+|LM_STRETCH|Indique si la barre de commande doit être étirée jusqu’à la taille du cadre. Définissez si la barre n’est pas une barre d’amarrage (non disponible pour l’amarrage). Non réglé lorsque la barre est amarré ou flottante (disponible pour l’amarrage). Si elle est définie, LM_STRETCH ignore *nLength* et renvoie les dimensions en fonction de l’état LM_HORZ. LM_STRETCH fonctionne de la même manière que le paramètre *bStretch* utilisé dans [CalcFixedLayout;](#calcfixedlayout) voir que le membre fonctionne pour plus d’informations sur la relation entre l’étirement et l’orientation.|
+|LM_HORZ|Indique que la barre est orientée horizontalement ou verticalement. Définissez si la barre est orientée horizontalement, et si elle est orientée verticalement, elle n’est pas définie. LM_HORZ fonctionne de la même manière que le *paramètre bHorz* utilisé dans [CalcFixedLayout](#calcfixedlayout); voir que le membre fonctionne pour plus d’informations sur la relation entre l’étirement et l’orientation.|
+|LM_MRUWIDTH|Plus récemment utilisé largeur dynamique. Ignore *le paramètre nLength* et utilise la largeur la plus récemment utilisée.|
+|LM_HORZDOCK|Dimensions horizontales à quai. Ignore *le paramètre nLength* et retourne la taille dynamique avec la plus grande largeur.|
+|LM_VERTDOCK|Dimensions verticales à quai. Ignore *le paramètre nLength* et retourne la taille dynamique avec la plus grande hauteur.|
+|LM_LENGTHY|Définir si *nLength* indique la hauteur (direction Y) au lieu de la largeur.|
+|LM_COMMIT|Réinitialisations LM_MRUWIDTH à la largeur actuelle de la barre de commande flottante.|
 
 ### <a name="return-value"></a>Valeur de retour
 
-Taille de la barre de contrôle, en pixels, d’un objet [CSize](../../atl-mfc-shared/reference/csize-class.md) .
+La taille de la barre de contrôle, en pixels, d’un objet [CSize.](../../atl-mfc-shared/reference/csize-class.md)
 
 ### <a name="remarks"></a>Notes
 
-Substituez cette fonction membre pour fournir votre propre disposition dynamique dans les classes que vous dérivez de `CControlBar`. Les classes MFC dérivées de `CControlBar`, telles que [CToolBar](../../mfc/reference/ctoolbar-class.md), remplacent cette fonction membre et fournissent leur propre implémentation.
+Remplacez cette fonction de membre pour fournir votre `CControlBar`propre mise en page dynamique dans les classes que vous dérivez de . Les classes MFC dérivées de `CControlBar`, telles que [CToolbar](../../mfc/reference/ctoolbar-class.md), remplacent cette fonction de membre et fournissent leur propre mise en œuvre.
 
-##  <a name="calcfixedlayout"></a>CControlBar :: CalcFixedLayout
+## <a name="ccontrolbarcalcfixedlayout"></a><a name="calcfixedlayout"></a>CControlBar::CalcFixedLayout
 
-Appelez cette fonction membre pour calculer la taille horizontale d’une barre de contrôle.
+Appelez cette fonction de membre pour calculer la taille horizontale d’une barre de commande.
 
 ```
 virtual CSize CalcFixedLayout(
@@ -172,31 +172,31 @@ virtual CSize CalcFixedLayout(
 ### <a name="parameters"></a>Paramètres
 
 *bStretch*<br/>
-Indique si la barre doit être étirée à la taille du frame. Le paramètre *bStretch* est différent de zéro lorsque la barre n’est pas une barre d’ancrage (non disponible pour l’ancrage) et est égal à 0 lorsqu’il est ancré ou flottant (disponible pour l’ancrage).
+Indique si la barre doit être étirée jusqu’à la taille du cadre. Le paramètre *bStretch* est nonzero lorsque la barre n’est pas une barre d’amarrage (non disponible pour l’amarrage) et est de 0 quand il est amarré ou flottant (disponible pour l’amarrage).
 
-*bHorz*<br/>
-Indique que la barre est orientée horizontalement ou verticalement. Le paramètre *bHorz* est différent de zéro si la barre est orientée horizontalement et est égal à 0 s’il est orienté verticalement.
+*bHorz (en)*<br/>
+Indique que la barre est orientée horizontalement ou verticalement. Le *paramètre bHorz* est nonzero si la barre est orientée horizontalement et est 0 si elle est orientée verticalement.
 
 ### <a name="return-value"></a>Valeur de retour
 
-Taille de la barre de contrôle, en pixels, d’un objet `CSize`.
+La taille de la barre de `CSize` contrôle, en pixels, d’un objet.
 
 ### <a name="remarks"></a>Notes
 
-Les barres de contrôle telles que les barres d’outils peuvent être étirées horizontalement ou verticalement pour s’adapter aux boutons contenus dans la barre de contrôle.
+Les barres de commande telles que les barres à outils peuvent s’étirer horizontalement ou verticalement pour accueillir les boutons contenus dans la barre de contrôle.
 
-Si *bStretch* a la valeur true, étire la dimension le long de l’orientation fournie par *bHorz*. En d’autres termes, si *bHorz* a la valeur false, la barre de contrôle est étirée verticalement. Si *bStretch* a la valeur false, aucun étirement ne se produit. Le tableau suivant indique les permutations possibles et les styles de barre de contrôle résultants de *bStretch* et *bHorz*.
+Si *bStretch* est VRAI, étirer la dimension le long de l’orientation fournie par *bHorz*. En d’autres termes, si *bHorz* est FALSE, la barre de commande est étirée verticalement. Si *bStretch* est FALSE, aucun étirement ne se produit. Le tableau suivant montre les permutations possibles, et les styles de barres de contrôle résultant, de *bStretch* et *bHorz*.
 
-|bStretch|bHorz|Étirement|Orientation|Ancrage/non-ancrage|
+|bStretch|bHorz (en)|Étirement|Orientation|Docking/Pas amarrage|
 |--------------|-----------|----------------|-----------------|--------------------------|
-|TRUE|TRUE|Étirement horizontal|Orienté horizontalement|Pas d’ancrage|
-|TRUE|FALSE|Étirement vertical|Orienté verticalement|Pas d’ancrage|
+|TRUE|TRUE|Étirement horizontal|Orienté horizontalement|Ne pas accoster|
+|TRUE|FALSE|Étirement vertical|Orienté verticalement|Ne pas accoster|
 |FALSE|TRUE|Aucun étirement disponible|Orienté horizontalement|Ancrage|
 |FALSE|FALSE|Aucun étirement disponible|Orienté verticalement|Ancrage|
 
-##  <a name="calcinsiderect"></a>CControlBar :: CalcInsideRect
+## <a name="ccontrolbarcalcinsiderect"></a><a name="calcinsiderect"></a>CControlBar::CalcInsideRect
 
-L’infrastructure appelle cette fonction pour calculer la zone cliente de la barre de contrôle.
+Le cadre appelle cette fonction pour calculer la zone client de la barre de contrôle.
 
 ```
 virtual void CalcInsideRect(
@@ -206,19 +206,19 @@ virtual void CalcInsideRect(
 
 ### <a name="parameters"></a>Paramètres
 
-*rectangulaire*<br/>
-Contient les dimensions actuelles de la barre de contrôle ; y compris les bordures.
+*Rect*<br/>
+Contient les dimensions actuelles de la barre de contrôle; y compris les frontières.
 
-*bHorz*<br/>
-Indique que la barre est orientée horizontalement ou verticalement. Le paramètre *bHorz* est différent de zéro si la barre est orientée horizontalement et est égal à 0 s’il est orienté verticalement.
+*bHorz (en)*<br/>
+Indique que la barre est orientée horizontalement ou verticalement. Le *paramètre bHorz* est nonzero si la barre est orientée horizontalement et est 0 si elle est orientée verticalement.
 
 ### <a name="remarks"></a>Notes
 
 Cette fonction est appelée avant que la barre de contrôle ne soit peinte.
 
-Substituez cette fonction pour personnaliser le rendu des bordures et de la barre de redimensionnement de la barre de contrôle.
+Remplacer cette fonction pour personnaliser le rendu des bordures et la barre de saisie de la barre de contrôle.
 
-##  <a name="ccontrolbar"></a>CControlBar :: CControlBar
+## <a name="ccontrolbarccontrolbar"></a><a name="ccontrolbar"></a>CControlBar::CControlBar
 
 Construit un objet `CControlBar`.
 
@@ -226,9 +226,9 @@ Construit un objet `CControlBar`.
 CControlBar();
 ```
 
-##  <a name="dopaint"></a>CControlBar ::D oPaint
+## <a name="ccontrolbardopaint"></a><a name="dopaint"></a>CControlBar::DoPaint
 
-Appelé par l’infrastructure pour restituer les bordures et la barre de redimensionnement de la barre de contrôle.
+Appelé par le cadre pour rendre les frontières et la barre de saisie de la barre de contrôle.
 
 ```
 virtual void DoPaint(CDC* pDC);
@@ -237,17 +237,17 @@ virtual void DoPaint(CDC* pDC);
 ### <a name="parameters"></a>Paramètres
 
 *pDC*<br/>
-Pointe vers le contexte de périphérique à utiliser pour restituer les bordures et la pince de la barre de contrôle.
+Indique le contexte de l’appareil à utiliser pour rendre les bordures et la saisie de la barre de contrôle.
 
 ### <a name="remarks"></a>Notes
 
-Substituez cette fonction pour personnaliser le comportement de dessin de la barre de contrôle.
+Remplacer cette fonction pour personnaliser le comportement de dessin de la barre de contrôle.
 
-Une autre méthode de personnalisation consiste à substituer les fonctions `DrawBorders` et `DrawGripper` et à ajouter du code de dessin personnalisé pour les bordures et les pinceaux. Étant donné que ces méthodes sont appelées par la méthode `DoPaint` par défaut, une substitution de `DoPaint` n’est pas nécessaire.
+Une autre méthode de personnalisation consiste à remplacer les `DrawBorders` fonctions et à `DrawGripper` les ajouter et à ajouter du code de dessin personnalisé pour les frontières et la pince. Étant donné que ces `DoPaint` méthodes sont appelées `DoPaint` par la méthode par défaut, un remplacement n’est pas nécessaire.
 
-##  <a name="drawborders"></a>CControlBar ::D rawBorders
+## <a name="ccontrolbardrawborders"></a><a name="drawborders"></a>CControlBar::DrawBorders
 
-Appelé par l’infrastructure pour restituer les bordures de la barre de contrôle.
+Appelé par le cadre pour rendre les frontières de la barre de contrôle.
 
 ```
 virtual void DrawBorders(
@@ -258,18 +258,18 @@ virtual void DrawBorders(
 ### <a name="parameters"></a>Paramètres
 
 *pDC*<br/>
-Pointe vers le contexte de périphérique à utiliser pour restituer les bordures de la barre de contrôle.
+Indique le contexte de l’appareil à utiliser pour rendre les bordures de la barre de contrôle.
 
-*rectangulaire*<br/>
-Objet `CRect` contenant les dimensions de la barre de contrôle.
+*Rect*<br/>
+Un `CRect` objet contenant les dimensions de la barre de contrôle.
 
 ### <a name="remarks"></a>Notes
 
-Substituez cette fonction pour personnaliser l’apparence des bordures de la barre de contrôle.
+Remplacer cette fonction pour personnaliser l’apparence des bordures de la barre de contrôle.
 
-##  <a name="drawgripper"></a>CControlBar ::D rawGripper
+## <a name="ccontrolbardrawgripper"></a><a name="drawgripper"></a>CControlBar::DrawGripper
 
-Appelé par l’infrastructure pour restituer la pince de la barre de contrôle.
+Appelé par le cadre pour rendre la pince de la barre de contrôle.
 
 ```
 virtual void DrawGripper(
@@ -280,18 +280,18 @@ virtual void DrawGripper(
 ### <a name="parameters"></a>Paramètres
 
 *pDC*<br/>
-Pointe vers le contexte de périphérique à utiliser pour restituer le pince de barre de contrôle.
+Indique le contexte de l’appareil à utiliser pour rendre la pince de barre de commande.
 
-*rectangulaire*<br/>
-Objet `CRect` contenant les dimensions du pince-barre de contrôle.
+*Rect*<br/>
+Un `CRect` objet contenant les dimensions de la pince de barre de commande.
 
 ### <a name="remarks"></a>Notes
 
-Substituez cette fonction pour personnaliser l’apparence du pince-barre de contrôle.
+Remplacer cette fonction pour personnaliser l’apparence de la pince de barre de commande.
 
-##  <a name="enabledocking"></a>CControlBar :: EnableDocking
+## <a name="ccontrolbarenabledocking"></a><a name="enabledocking"></a>CControlBar::EnableDocking
 
-Appelez cette fonction pour permettre à une barre de contrôle d’être ancrée.
+Appelez cette fonction pour permettre l’amarrage d’une barre de contrôle.
 
 ```
 void EnableDocking(DWORD dwDockStyle);
@@ -299,30 +299,30 @@ void EnableDocking(DWORD dwDockStyle);
 
 ### <a name="parameters"></a>Paramètres
 
-*dwDockStyle*<br/>
-Spécifie si la barre de contrôles prend en charge l’ancrage et les côtés de sa fenêtre parente dans laquelle la barre de contrôle peut être ancrée, si elle est prise en charge. Il peut s’agir d’un ou plusieurs des éléments suivants :
+*dwDockStyle (en)*<br/>
+Précise si la barre de contrôle prend en charge l’amarrage et les côtés de sa fenêtre parente auxquels la barre de commande peut être amarrée, si elle est appuyée. Peut être un ou plusieurs des éléments suivants :
 
-- CBRS_ALIGN_TOP permet l’ancrage en haut de la zone cliente.
+- CBRS_ALIGN_TOP permet l’amarrage au sommet de la zone client.
 
-- CBRS_ALIGN_BOTTOM permet l’ancrage en bas de la zone cliente.
+- CBRS_ALIGN_BOTTOM permet l’amarrage au bas de la zone client.
 
-- CBRS_ALIGN_LEFT autorise l’ancrage sur le côté gauche de la zone cliente.
+- CBRS_ALIGN_LEFT permet l’amarrage sur le côté gauche de la zone client.
 
-- CBRS_ALIGN_RIGHT autorise l’ancrage sur le côté droit de la zone cliente.
+- CBRS_ALIGN_RIGHT permet l’amarrage sur le côté droit de la zone client.
 
-- CBRS_ALIGN_ANY autorise l’ancrage de n’importe quel côté de la zone cliente.
+- CBRS_ALIGN_ANY permet l’amarrage de n’importe quel côté de la zone client.
 
-- CBRS_FLOAT_MULTI permet de flotter plusieurs barres de contrôle dans une seule fenêtre mini-frame.
+- CBRS_FLOAT_MULTI permet de flotter plusieurs barres de commande dans une seule fenêtre à mini-cadre.
 
-Si la valeur est 0 (c’est-à-dire qu’il n’indique aucun indicateur), la barre de contrôle n’est pas ancrée.
+Si 0 (c’est-à-dire, indiquant aucun drapeau), la barre de commande ne s’amarrera pas.
 
 ### <a name="remarks"></a>Notes
 
-Les côtés spécifiés doivent correspondre à l’un des côtés activés pour l’ancrage dans la fenêtre frame de destination, ou la barre de contrôle ne peut pas être ancrée à cette fenêtre frame.
+Les côtés spécifiés doivent correspondre à l’un des côtés activés pour l’amarrage dans la fenêtre du cadre de destination, ou la barre de commande ne peut pas être amarrée à cette fenêtre de cadre.
 
-##  <a name="getbarstyle"></a>CControlBar :: GetBarStyle
+## <a name="ccontrolbargetbarstyle"></a><a name="getbarstyle"></a>CControlBar::GetBarStyle
 
-Appelez cette fonction pour déterminer les paramètres de **CBRS_** (styles de barre de contrôle) actuellement définis pour la barre de contrôle.
+Appelez cette fonction pour déterminer quels **CBRS_** (styles de barres de contrôle) sont actuellement définis pour la barre de contrôle.
 
 ```
 DWORD GetBarStyle();
@@ -330,15 +330,15 @@ DWORD GetBarStyle();
 
 ### <a name="return-value"></a>Valeur de retour
 
-Les paramètres de **CBRS_** (styles de barre de contrôle) actuels pour la barre de contrôle. Pour obtenir la liste complète des styles disponibles, consultez [CControlBar :: SetBarStyle](#setbarstyle) .
+Les **réglages** actuels CBRS_ (style de barre de contrôle) pour la barre de contrôle. Voir [CControlBar:SetBarStyle](#setbarstyle) pour la liste complète des styles disponibles.
 
 ### <a name="remarks"></a>Notes
 
-Ne gère pas les styles **WS_** (style de fenêtre).
+Ne gère pas **WS_** styles (style fenêtre).
 
-##  <a name="getborders"></a>CControlBar :: GetBorders
+## <a name="ccontrolbargetborders"></a><a name="getborders"></a>CControlBar::GetBorders
 
-Retourne les valeurs de bordure actuelles pour la barre de contrôle.
+Retourne les valeurs frontalières actuelles de la barre de contrôle.
 
 ```
 CRect GetBorders() const;
@@ -346,11 +346,11 @@ CRect GetBorders() const;
 
 ### <a name="return-value"></a>Valeur de retour
 
-Objet `CRect` qui contient la largeur actuelle (en pixels) de chaque côté de l’objet de barre de contrôle. Par exemple, la valeur du membre de *gauche* , de l’objet [CRect](../../atl-mfc-shared/reference/crect-class.md) , est la largeur de la bordure gauche.
+Un `CRect` objet qui contient la largeur actuelle (en pixels) de chaque côté de l’objet de barre de commande. Par exemple, la valeur du membre *gauche,* de l’objet [CRect,](../../atl-mfc-shared/reference/crect-class.md) est la largeur de la bordure de la main gauche.
 
-##  <a name="getcount"></a>CControlBar :: GetCount
+## <a name="ccontrolbargetcount"></a><a name="getcount"></a>CControlBar::GetCount
 
-Retourne le nombre d’éléments non HWND sur l’objet `CControlBar`.
+Retourne le nombre d’éléments non `CControlBar` HWND sur l’objet.
 
 ```
 int GetCount() const;
@@ -358,15 +358,15 @@ int GetCount() const;
 
 ### <a name="return-value"></a>Valeur de retour
 
-Nombre d’éléments non HWND sur l’objet `CControlBar`. Cette fonction retourne 0 pour un objet [CDialogBar](../../mfc/reference/cdialogbar-class.md) .
+Nombre d’éléments non HWND `CControlBar` sur l’objet. Cette fonction renvoie 0 pour un objet [CDialogBar.](../../mfc/reference/cdialogbar-class.md)
 
 ### <a name="remarks"></a>Notes
 
-Le type de l’élément dépend de l’objet dérivé : les volets pour les objets [CStatusBar](../../mfc/reference/cstatusbar-class.md) , les boutons et les séparateurs pour les objets [CToolBar](../../mfc/reference/ctoolbar-class.md) .
+Le type de l’élément dépend de l’objet dérivé : des vitres pour les objets [CStatusBar,](../../mfc/reference/cstatusbar-class.md) des boutons et des séparateurs pour les objets [CToolBar.](../../mfc/reference/ctoolbar-class.md)
 
-##  <a name="getdockingframe"></a>CControlBar :: GetDockingFrame
+## <a name="ccontrolbargetdockingframe"></a><a name="getdockingframe"></a>CControlBar::GetDockingFrame
 
-Appelez cette fonction membre pour obtenir un pointeur vers la fenêtre frame active à laquelle votre barre de contrôle est ancrée.
+Appelez cette fonction de membre pour obtenir un pointeur à la fenêtre de cadre actuelle à laquelle votre barre de commande est amarrée.
 
 ```
 CFrameWnd* GetDockingFrame() const;
@@ -374,17 +374,17 @@ CFrameWnd* GetDockingFrame() const;
 
 ### <a name="return-value"></a>Valeur de retour
 
-Pointeur vers une fenêtre frame en cas de réussite ; Sinon, NULL.
+Un pointeur vers une fenêtre de cadre en cas de succès; autrement NULL.
 
-Si la barre de contrôle n’est pas ancrée à une fenêtre frame (autrement dit, si la barre de contrôle est flottante), cette fonction retourne un pointeur vers son [CMiniFrameWnd](../../mfc/reference/cminiframewnd-class.md)parent.
+Si la barre de contrôle n’est pas amarrée à une fenêtre de cadre (c’est-à-dire si la barre de contrôle flotte), cette fonction retournera un pointeur à son parent [CMiniFrameWnd](../../mfc/reference/cminiframewnd-class.md).
 
 ### <a name="remarks"></a>Notes
 
-Pour plus d’informations sur les barres de contrôles ancrables, consultez [CControlBar :: EnableDocking](#enabledocking) et [CFrameWnd ::D ockcontrolbar](../../mfc/reference/cframewnd-class.md#dockcontrolbar).
+Pour plus d’informations sur les barres de contrôle amarrées, voir [CControlBar::EnableDocking](#enabledocking) et [CFrameWnd::DockControlBar](../../mfc/reference/cframewnd-class.md#dockcontrolbar).
 
-##  <a name="isfloating"></a>CControlBar :: IsFloating
+## <a name="ccontrolbarisfloating"></a><a name="isfloating"></a>CControlBar::IsFloating
 
-Appelez cette fonction membre pour déterminer si la barre de contrôle est flottante ou ancrée.
+Appelez cette fonction de membre pour déterminer si la barre de commande flotte ou amarré.
 
 ```
 BOOL IsFloating() const;
@@ -392,15 +392,15 @@ BOOL IsFloating() const;
 
 ### <a name="return-value"></a>Valeur de retour
 
-Différent de zéro si la barre de contrôle est flottante ; Sinon, 0.
+Nonzero si la barre de contrôle flotte; sinon 0.
 
 ### <a name="remarks"></a>Notes
 
-Pour modifier l’état d’une barre de contrôle ancrée à flottante, appelez [CFrameWnd :: FloatControlBar](../../mfc/reference/cframewnd-class.md#floatcontrolbar).
+Pour changer l’état d’une barre de contrôle de amarré à flottant, appelez [CFrameWnd::FloatControlBar](../../mfc/reference/cframewnd-class.md#floatcontrolbar).
 
-##  <a name="m_bautodelete"></a>CControlBar :: m_bAutoDelete
+## <a name="ccontrolbarm_bautodelete"></a><a name="m_bautodelete"></a>CControlBar:m_bAutoDelete
 
-Si la valeur est différente de zéro, l’objet `CControlBar` est supprimé lorsque la barre de contrôle Windows est détruite.
+Si non zéro, `CControlBar` l’objet est supprimé lorsque la barre de contrôle Windows est détruite.
 
 ```
 BOOL m_bAutoDelete;
@@ -408,23 +408,23 @@ BOOL m_bAutoDelete;
 
 ### <a name="remarks"></a>Notes
 
-*m_bAutoDelete* est une variable publique de type bool.
+*m_bAutoDelete* est une variable publique de type BOOL.
 
-Un objet de barre de contrôle est généralement incorporé dans un objet de fenêtre frame. Dans ce cas, *m_bAutoDelete* est égal à 0, car l’objet de barre de contrôle incorporé est détruit lorsque la fenêtre frame est détruite.
+Un objet de barre de contrôle est généralement intégré dans un objet de fenêtre de cadre. Dans ce cas, *m_bAutoDelete* est de 0 parce que l’objet intégré de barre de contrôle est détruit lorsque la fenêtre de cadre est détruite.
 
-Affectez à cette variable une valeur différente de zéro si vous allouez un objet `CControlBar` sur le segment de mémoire et que vous n’envisagez pas d’appeler **Delete**.
+Définissez cette variable à une valeur non `CControlBar` zéro si vous allouez un objet sur le tas et que vous n’avez pas l’intention d’appeler **supprimer**.
 
-##  <a name="m_pinplaceowner"></a>CControlBar :: m_pInPlaceOwner
+## <a name="ccontrolbarm_pinplaceowner"></a><a name="m_pinplaceowner"></a>CControlBar:m_pInPlaceOwner
 
-Propriétaire sur place de la barre de contrôle.
+Le propriétaire sur place de la barre de contrôle.
 
 ```
 CWnd* m_pInPlaceOwner;
 ```
 
-##  <a name="onupdatecmdui"></a>CControlBar :: OnUpdateCmdUI
+## <a name="ccontrolbaronupdatecmdui"></a><a name="onupdatecmdui"></a>CControlBar::OnUpdateCmdUI
 
-Cette fonction membre est appelée par l’infrastructure pour mettre à jour l’état de la barre d’outils ou de la barre d’État.
+Cette fonction de membre est appelée par le cadre pour mettre à jour l’état de la barre d’outils ou de la barre d’état.
 
 ```
 virtual void OnUpdateCmdUI(
@@ -435,20 +435,20 @@ virtual void OnUpdateCmdUI(
 ### <a name="parameters"></a>Paramètres
 
 *pTarget*<br/>
-Pointe vers la fenêtre frame principale de l’application. Ce pointeur est utilisé pour router les messages de mise à jour.
+Points à la fenêtre de cadre principale de l’application. Ce pointeur est utilisé pour l’acheminement des messages de mise à jour.
 
 *bDisableIfNoHndler*<br/>
-Indicateur qui signale si un contrôle qui n’a pas de gestionnaire de mise à jour doit être automatiquement affiché comme étant désactivé.
+Indicateur indiquant si un contrôle qui n’a pas de gestionnaire de mise à jour doit être automatiquement affiché comme désactivé.
 
 ### <a name="remarks"></a>Notes
 
-Pour mettre à jour un bouton ou un volet individuel, utilisez la macro ON_UPDATE_COMMAND_UI dans votre table des messages pour définir un gestionnaire de mise à jour de manière appropriée. Pour plus d’informations sur l’utilisation de cette macro, consultez [ON_UPDATE_COMMAND_UI](message-map-macros-mfc.md#on_update_command_ui) .
+Pour mettre à jour un bouton ou une vitre individuel, utilisez la ON_UPDATE_COMMAND_UI macro dans votre carte de message pour définir un gestionnaire de mise à jour de manière appropriée. Voir [ON_UPDATE_COMMAND_UI](message-map-macros-mfc.md#on_update_command_ui) pour plus d’informations sur l’utilisation de cette macro.
 
-`OnUpdateCmdUI` est appelée par le Framework lorsque l’application est inactive. La fenêtre frame à mettre à jour doit être une fenêtre enfant, au moins indirectement, d’une fenêtre frame visible. `OnUpdateCmdUI` est un substituable avancé.
+`OnUpdateCmdUI`est appelé par le cadre lorsque l’application est inactive. La fenêtre de cadre à mettre à jour doit être une fenêtre d’enfant, au moins indirectement, d’une fenêtre de cadre visible. `OnUpdateCmdUI`est un avancé primordial.
 
-##  <a name="setbarstyle"></a>CControlBar :: SetBarStyle
+## <a name="ccontrolbarsetbarstyle"></a><a name="setbarstyle"></a>CControlBar::SetBarStyle
 
-Appelez cette fonction pour définir les styles de **CBRS_** souhaités pour la barre de contrôle.
+Appelez cette fonction pour définir les styles **CBRS_** souhaités pour la barre de contrôle.
 
 ```
 void SetBarStyle(DWORD dwStyle);
@@ -456,40 +456,40 @@ void SetBarStyle(DWORD dwStyle);
 
 ### <a name="parameters"></a>Paramètres
 
-*dwStyle*<br/>
-Styles souhaités pour la barre de contrôle. Il peut s’agir d’un ou plusieurs des éléments suivants :
+*dwStyle (en)*<br/>
+Les styles souhaités pour la barre de contrôle. Peut être un ou plusieurs des éléments suivants :
 
-- CBRS_ALIGN_TOP permet à la barre de contrôle d’être ancrée en haut de la zone cliente d’une fenêtre frame.
+- CBRS_ALIGN_TOP permet d’amarrer la barre de contrôle au sommet de la zone cliente d’une fenêtre de cadre.
 
-- CBRS_ALIGN_BOTTOM permet à la barre de contrôle d’être ancrée au bas de la zone cliente d’une fenêtre frame.
+- CBRS_ALIGN_BOTTOM permet d’amarrer la barre de contrôle au bas de la zone cliente d’une fenêtre de cadre.
 
-- CBRS_ALIGN_LEFT permet à la barre de contrôle d’être ancrée sur le côté gauche de la zone cliente d’une fenêtre frame.
+- CBRS_ALIGN_LEFT permet d’amarrer la barre de contrôle sur le côté gauche de la zone cliente d’une fenêtre de cadre.
 
-- CBRS_ALIGN_RIGHT permet à la barre de contrôle d’être ancrée sur le côté droit de la zone cliente d’une fenêtre frame.
+- CBRS_ALIGN_RIGHT permet d’amarrer la barre de contrôle sur le côté droit de la zone cliente d’une fenêtre de cadre.
 
-- CBRS_ALIGN_ANY permet à la barre de contrôle d’être ancrée à n’importe quel côté de la zone cliente d’une fenêtre frame.
+- CBRS_ALIGN_ANY permet d’amarrer la barre de contrôle de n’importe quel côté de la zone client d’une fenêtre de cadre.
 
-- CBRS_BORDER_TOP provoque le dessin d’une bordure sur le bord supérieur de la barre de contrôle lorsqu’elle est visible.
+- CBRS_BORDER_TOP provoque un dessin d’une bordure sur le bord supérieur de la barre de contrôle lorsqu’elle serait visible.
 
-- CBRS_BORDER_BOTTOM provoque le dessin d’une bordure sur le bord inférieur de la barre de contrôle lorsqu’elle est visible.
+- CBRS_BORDER_BOTTOM provoque le dessin d’une bordure sur le bord inférieur de la barre de contrôle lorsqu’elle serait visible.
 
-- CBRS_BORDER_LEFT provoque le dessin d’une bordure sur le bord gauche de la barre de contrôle lorsqu’elle est visible.
+- CBRS_BORDER_LEFT provoque un dessin de frontière sur le bord gauche de la barre de contrôle lorsqu’elle serait visible.
 
-- CBRS_BORDER_RIGHT provoque le dessin d’une bordure sur le bord droit de la barre de contrôle lorsqu’elle est visible.
+- CBRS_BORDER_RIGHT provoque le dessin d’une bordure sur le bord droit de la barre de contrôle lorsqu’elle serait visible.
 
-- CBRS_FLOAT_MULTI permet de flotter plusieurs barres de contrôle dans une seule fenêtre mini-frame.
+- CBRS_FLOAT_MULTI permet de flotter plusieurs barres de commande dans une seule fenêtre à mini-cadre.
 
-- CBRS_TOOLTIPS provoque l’affichage des info-bulles pour la barre de contrôle.
+- CBRS_TOOLTIPS provoque des conseils d’outils à afficher pour la barre de contrôle.
 
-- CBRS_FLYBY fait en sorte que le texte du message soit mis à jour en même temps que les info-bulles.
+- CBRS_FLYBY provoque la mise à jour du texte du message en même temps que les conseils d’outils.
 
-- CBRS_GRIPPER provoque un redimensionnement, semblable à celui utilisé sur les bandes dans un objet `CReBar`, à dessiner pour toute classe dérivée de `CControlBar`.
+- CBRS_GRIPPER provoque une pince, semblable à celle utilisée `CReBar` sur les bandes d’un objet, à tirer pour toute `CControlBar`classe dérivée.
 
 ### <a name="remarks"></a>Notes
 
-N’affecte pas les paramètres **WS_** (style de fenêtre).
+N’affecte pas les **paramètres WS_** (style fenêtre).
 
-##  <a name="setborders"></a>CControlBar :: SetBorders
+## <a name="ccontrolbarsetborders"></a><a name="setborders"></a>CControlBar::SetBorders
 
 Appelez cette fonction pour définir la taille des bordures de la barre de contrôle.
 
@@ -506,29 +506,29 @@ void SetBorders(LPCRECT lpRect);
 ### <a name="parameters"></a>Paramètres
 
 *cxLeft*<br/>
-Largeur (en pixels) de la bordure gauche de la barre de contrôle.
+La largeur (en pixels) de la bordure gauche de la barre de contrôle.
 
-*cyTop*<br/>
-Hauteur (en pixels) de la bordure supérieure de la barre de contrôle.
+*cyTop (en)*<br/>
+La hauteur (en pixels) de la bordure supérieure de la barre de contrôle.
 
 *cxRight*<br/>
-Largeur (en pixels) de la bordure droite de la barre de contrôle.
+La largeur (en pixels) de la bordure droite de la barre de contrôle.
 
-*cyBottom*<br/>
-Hauteur (en pixels) de la bordure inférieure de la barre de contrôle.
+*cyBottom (en)*<br/>
+La hauteur (en pixels) de la bordure inférieure de la barre de contrôle.
 
 *lpRect*<br/>
-Pointeur vers un objet [CRect](../../atl-mfc-shared/reference/crect-class.md) qui contient la largeur actuelle (en pixels) de chaque bordure de l’objet de barre de contrôle.
+Pointeur d’un objet [CRect](../../atl-mfc-shared/reference/crect-class.md) qui contient la largeur actuelle (en pixels) de chaque bordure de l’objet de barre de commande.
 
 ### <a name="example"></a>Exemple
 
-L’exemple de code suivant définit les bordures supérieure et inférieure de la barre de contrôle à 5 pixels, et les bordures gauche et droite sur 2 pixels :
+L’exemple de code suivant définit les bordures supérieures et inférieures de la barre de contrôle à 5 pixels, et les bordures gauche et droite à 2 pixels :
 
 [!code-cpp[NVC_MFCControlLadenDialog#61](../../mfc/codesnippet/cpp/ccontrolbar-class_1.cpp)]
 
-##  <a name="setinplaceowner"></a>CControlBar :: SetInPlaceOwner
+## <a name="ccontrolbarsetinplaceowner"></a><a name="setinplaceowner"></a>CControlBar::SetInPlaceOwner
 
-Modifie le propriétaire sur place d’une barre de contrôle.
+Change le propriétaire sur place d’une barre de contrôle.
 
 ```
 void SetInPlaceOwner(CWnd* pWnd);
@@ -536,17 +536,17 @@ void SetInPlaceOwner(CWnd* pWnd);
 
 ### <a name="parameters"></a>Paramètres
 
-*pWnd*<br/>
+*Pwnd*<br/>
 Pointeur vers un objet `CWnd`.
 
 ### <a name="remarks"></a>Notes
 
 ## <a name="see-also"></a>Voir aussi
 
-[Exemple MFC CTRLBARS](../../overview/visual-cpp-samples.md)<br/>
+[Échantillon MFC CTRLBARS](../../overview/visual-cpp-samples.md)<br/>
 [CWnd, classe](../../mfc/reference/cwnd-class.md)<br/>
 [Graphique hiérarchique](../../mfc/hierarchy-chart.md)<br/>
 [CToolBar, classe](../../mfc/reference/ctoolbar-class.md)<br/>
 [CDialogBar, classe](../../mfc/reference/cdialogbar-class.md)<br/>
-[CStatusBar, classe](../../mfc/reference/cstatusbar-class.md)<br/>
-[CReBar, classe](../../mfc/reference/crebar-class.md)
+[Classe CStatusBar](../../mfc/reference/cstatusbar-class.md)<br/>
+[Classe CReBar](../../mfc/reference/crebar-class.md)

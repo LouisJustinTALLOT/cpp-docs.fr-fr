@@ -1,15 +1,15 @@
 ---
-title: 'Guide du portage : COM Spy'
+title: 'Guide du portage : COMSpy'
 ms.date: 11/04/2016
 ms.assetid: 24aa0d52-4014-4acb-8052-f4e2e4bbc3bb
-ms.openlocfilehash: 791b2e88166caae39c3b8e645ca1cc053f0b9379
-ms.sourcegitcommit: 28eae422049ac3381c6b1206664455dbb56cbfb6
-ms.translationtype: HT
+ms.openlocfilehash: f4fece07b9ea4541d8bf21dd81fd659b44f39718
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/31/2019
-ms.locfileid: "66451174"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81368457"
 ---
-# <a name="porting-guide-com-spy"></a>Guide du portage : COM Spy
+# <a name="porting-guide-com-spy"></a>Guide du portage : COMSpy
 
 Cette rubrique est la deuxième d’une série d’articles qui décrit le processus de mise à niveau d’anciens projets Visual Studio C++ vers la dernière version de Visual Studio. L'exemple de code utilisé dans cette rubrique a été compilé avec Visual Studio 2005.
 
@@ -17,16 +17,18 @@ Cette rubrique est la deuxième d’une série d’articles qui décrit le proce
 
 COMSpy est un programme qui surveille et enregistre l'activité des composants de service sur un ordinateur. Les composants de service sont des composants COM+ qui s'exécutent sur un système et peuvent être utilisés par des ordinateurs du même réseau. Ils sont gérés par la fonctionnalité Services de composants disponible dans le Panneau de configuration Windows.
 
-### <a name="step-1-converting-the-project-file"></a>Étape 1. Conversion du fichier projet
+### <a name="step-1-converting-the-project-file"></a>Étape 1. Conversion du dossier de projet
+
 Le fichier projet a été rapidement converti, et le processus a généré un rapport de migration. Certaines entrées du rapport signalent d'éventuels problèmes à résoudre. Voici un problème qui a été signalé (notez que, dans cette rubrique, nous avons parfois abrégé les messages d’erreur pour une meilleure lisibilité, par exemple, en supprimant les chemins d’accès complets) :
 
 ```Output
 ComSpyAudit\ComSpyAudit.vcproj: MSB8012: $(TargetPath) ('C:\Users\UserName\Desktop\spy\spy\ComSpyAudit\.\XP32_DEBUG\ComSpyAudit.dll') does not match the Librarian's OutputFile property value '.\XP32_DEBUG\ComSpyAudit.dll' ('C:\Users\UserName\Desktop\spy\spy\XP32_DEBUG\ComSpyAudit.dll') in project configuration 'Unicode Debug|Win32'. This may cause your project to build incorrectly. To correct this, please make sure that $(TargetPath) property value matches the value specified in %(Lib.OutputFile).
 ```
 
-Le problème suivant se pose fréquemment durant la mise à niveau de projets : vous devez passer en revue le paramètre **OutputFile de l’éditeur de liens** dans la boîte de dialogue Propriétés du projet. Pour les projets créés dans une version antérieure à Visual Studio 2010, le paramètre OutputFile, quand il n'a pas une valeur standard, n'est pas toujours reconnu par l'Assistant Conversion automatique. Dans ce cas, les chemins des fichiers de sortie ont été définis en fonction d’un dossier non standard, XP32_DEBUG. Pour en savoir plus sur cette erreur, nous avons consulté un [billet de blog](https://devblogs.microsoft.com/cppblog/visual-studio-2010-c-project-upgrade-guide/) traitant de la mise à niveau des projets Visual Studio 2010. Cette mise à niveau a introduit un changement majeur, à savoir le remplacement de vcbuild par msbuild. D’après ces informations, la valeur par défaut du paramètre **Fichier de sortie** au moment de la création d’un projet est `$(OutDir)$(TargetName)$(TargetExt)`. Toutefois, cette valeur n’est pas définie durant la conversion, car les projets convertis ne peuvent pas vérifier que tout est correct. Essayons toutefois d'utiliser cette valeur pour le paramètre OutputFile et voyons si elle est acceptée.  Cela ne pose pas de problème. Nous pouvons donc continuer. S'il n'y a pas de raison particulière justifiant l'utilisation d'un dossier de sortie non standard, nous vous recommandons d'utiliser l'emplacement standard. Dans le cas présent, nous avons choisi de conserver l’emplacement de sortie non standard durant le processus de portage et de mise à niveau. `$(OutDir)` est résolu en dossier XP32_DEBUG dans la configuration **Debug** et en dossier ReleaseU dans la configuration **Release**.
+L’un des problèmes fréquents dans la mise à niveau des projets est que le paramètre **Linker OutputFile** dans la boîte de dialogue des propriétés du projet pourrait devoir être revu. Pour les projets créés dans une version antérieure à Visual Studio 2010, le paramètre OutputFile, quand il n'a pas une valeur standard, n'est pas toujours reconnu par l'Assistant Conversion automatique. Dans ce cas, les chemins des fichiers de sortie ont été définis en fonction d’un dossier non standard, XP32_DEBUG. Pour en savoir plus sur cette erreur, nous avons consulté un [billet de blog](https://devblogs.microsoft.com/cppblog/visual-studio-2010-c-project-upgrade-guide/) traitant de la mise à niveau des projets Visual Studio 2010. Cette mise à niveau a introduit un changement majeur, à savoir le remplacement de vcbuild par msbuild. D’après ces informations, la valeur par défaut du paramètre **Fichier de sortie** au moment de la création d’un projet est `$(OutDir)$(TargetName)$(TargetExt)`. Toutefois, cette valeur n’est pas définie durant la conversion, car les projets convertis ne peuvent pas vérifier que tout est correct. Essayons toutefois d'utiliser cette valeur pour le paramètre OutputFile et voyons si elle est acceptée.  Cela ne pose pas de problème. Nous pouvons donc continuer. S'il n'y a pas de raison particulière justifiant l'utilisation d'un dossier de sortie non standard, nous vous recommandons d'utiliser l'emplacement standard. Dans le cas présent, nous avons choisi de conserver l’emplacement de sortie non standard durant le processus de portage et de mise à niveau. `$(OutDir)` est résolu en dossier XP32_DEBUG dans la configuration **Debug** et en dossier ReleaseU dans la configuration **Release**.
 
 ### <a name="step-2-getting-it-to-build"></a>Étape 2. Préparation de la build
+
 Le processus de build du projet porté a généré un certain nombre d'erreurs et d'avertissements.
 
 `ComSpyCtl` ne peut pas être compilé en raison de cette erreur du compilateur :
@@ -64,9 +66,10 @@ L'erreur suivante concerne l'inscription.
 error MSB3073: The command "regsvr32 /s /c "C:\Users\username\Desktop\spy\spy\ComSpyCtl\.\XP32_DEBUG\ComSpyCtl.lib"error MSB3073: echo regsvr32 exec. time > ".\XP32_DEBUG\regsvr32.trg"error MSB3073:error MSB3073: :VCEnd" exited with code 3.
 ```
 
-Nous n'avons plus besoin de cette commande d'inscription post-build. À la place, nous supprimons simplement la commande de build personnalisée, et nous définissons les paramètres de l’**éditeur de liens** pour inscrire la sortie.
+Nous n'avons plus besoin de cette commande d'inscription post-build. Au lieu de cela, nous supprimons simplement la commande de construction personnalisée, et spécifions dans les paramètres **Linker** pour enregistrer la sortie.
 
 ### <a name="dealing-with-warnings"></a>Traitement des avertissements
+
 Le projet génère l'avertissement d'éditeur de liens suivant.
 
 ```Output
@@ -112,7 +115,7 @@ for (i=0;i<lCount;i++)
     CoTaskMemFree(pKeys[i]);
 ```
 
-Le problème est que `i` est déclaré en tant que `UINT` et `lCount` est déclaré en tant que **long**, ce qui entraîne l’incompatibilité signed/unsigned. Il n’est pas pratique de changer le type de `lCount` en `UINT`, car il obtient sa valeur à partir de `IMtsEventInfo::get_Count`, qui utilise le type **long** et ne figure pas dans le code utilisateur. Nous préférons ajouter un cast dans le code. Un cast de style C suffit pour un cast numérique comme celui-ci, mais **static_cast** est le style recommandé.
+Le problème est que `i` est déclaré en tant que `UINT` et `lCount` est déclaré en tant que **long**, ce qui entraîne l’incompatibilité signed/unsigned. Il n’est pas pratique de changer le type de `lCount` en `UINT`, car il obtient sa valeur à partir de `IMtsEventInfo::get_Count`, qui utilise le type **long** et ne figure pas dans le code utilisateur. Nous préférons ajouter un cast dans le code. Un casting de style C ferait pour une distribution numérique comme celle-ci, mais **static_cast** est le style recommandé.
 
 ```cpp
 for (i=0;i<static_cast<UINT>(lCount);i++)
@@ -122,6 +125,7 @@ for (i=0;i<static_cast<UINT>(lCount);i++)
 Ces avertissements ont été générés parce qu'une variable a été déclarée dans une fonction contenant un paramètre avec le même nom, ce qui peut potentiellement induire une confusion dans le code. Nous avons résolu ce problème en modifiant les noms des variables locales.
 
 ### <a name="step-3-testing-and-debugging"></a>Étape 3. Test et débogage
+
 Nous avons testé l'application d'abord en exécutant les différents menus et commandes, puis en fermant l'application. Le seul problème signalé était une assertion de débogage à la fermeture de l'application. Le problème est apparu dans le destructeur de `CWindowImpl`, une classe de base de l’objet `CSpyCon`, composant COM principal de l’application. L'échec d'assertion s'est produit dans le code suivant dans atlwin.h.
 
 ```cpp
@@ -139,7 +143,7 @@ virtual ~CWindowImplRoot()
 
 `hWnd` a normalement la valeur zéro dans la fonction `WindowProc`, mais cela n’est pas le cas. Au lieu du `WindowProc` par défaut, un gestionnaire personnalisé est appelé pour le message Windows (WM_SYSCOMMAND) qui ferme la fenêtre. Dans le gestionnaire personnalisé, `hWnd` n’a pas la valeur zéro. En examinant du code similaire dans la classe `CWnd` de MFC, nous voyons que la destruction d’une fenêtre entraîne un appel à `OnNcDestroy`. Dans MFC, la documentation recommande d’appeler le `NcDestroy` de base au moment de la substitution de `CWnd::OnNcDestroy`. Vous avez ainsi la garantie que les opérations de nettoyage nécessaires sont effectuées, notamment la séparation du handle de fenêtre de la fenêtre ou, en d’autres termes, l’affectation à `hWnd` de la valeur zéro. Cette assertion aurait pu aussi être déclenchée dans la version initiale de l'exemple, car le même code d'assertion était présent dans l'ancienne version de atlwin.h.
 
-Pour tester la fonctionnalité de l’application, nous avons créé un **composant de service** à l’aide du modèle de projet ATL, et nous avons choisi d’ajouter la prise en charge de COM+ dans l’Assistant Projet ATL. Si vous n'avez pas encore utilisé de composants de service, vous pouvez facilement en créer un, l'inscrire et le rendre disponible sur le système ou le réseau pour d'autres applications. L'application COMSpy est conçue pour surveiller l'activité des composants de service et servir ainsi d'aide au diagnostic.
+Pour tester la fonctionnalité de l’application, nous avons créé un **composant servicené** à l’aide du modèle de projet ATL, a choisi d’ajouter le support COMMD dans l’assistant du projet ATL. Si vous n’avez pas travaillé avec des composants de service avant, il n’est pas difficile d’en créer un et d’en obtenir un enregistré et disponible sur le système ou le réseau pour d’autres applications à utiliser. L'application COMSpy est conçue pour surveiller l'activité des composants de service et servir ainsi d'aide au diagnostic.
 
 Nous avons ensuite ajouté une classe, choisi un objet ATL et spécifié le nom d’objet `Dog`. Puis, dans dog.h et dog.cpp, nous avons ajouté l'implémentation.
 
@@ -152,7 +156,7 @@ STDMETHODIMP CDog::Wag(LONG* lDuration)
 }
 ```
 
-Nous l’avons ensuite généré et inscrit (vous devez exécuter Visual Studio en tant qu’administrateur), et nous l’avons activé à l’aide de l’application **Composants de service** dans le Panneau de configuration Windows. Nous avons créé un projet Windows Forms C#, fait glisser un bouton sur le formulaire à partir de la boîte à outils et double-cliqué sur un gestionnaire d'événements Click. Nous avons ajouté le code suivant pour instancier le composant `Dog`.
+Ensuite, nous l’avons construit et enregistré (vous aurez besoin d’exécuter Visual Studio en tant qu’administrateur), et l’avons activé à l’aide de l’application **De composants desservis** dans le panneau de contrôle Windows. Nous avons créé un projet Windows Forms C#, fait glisser un bouton sur le formulaire à partir de la boîte à outils et double-cliqué sur un gestionnaire d'événements Click. Nous avons ajouté le code suivant pour instancier le composant `Dog`.
 
 ```cpp
 private void button1_Click(object sender, EventArgs e)
@@ -166,6 +170,6 @@ Cela a fonctionné sans problème. Avec COMSpy, opérationnel et configuré pour
 
 ## <a name="see-also"></a>Voir aussi
 
-[Portage et mise à niveau : Exemples et études de cas](../porting/porting-and-upgrading-examples-and-case-studies.md)<br/>
+[Portage et mise à niveau : exemples et études de cas](../porting/porting-and-upgrading-examples-and-case-studies.md)<br/>
 [Exemple suivant : Spy++](../porting/porting-guide-spy-increment.md)<br/>
-[Exemple précédent : MFC Scribble](../porting/porting-guide-mfc-scribble.md)
+[Exemple précédent : Scribble MFC](../porting/porting-guide-mfc-scribble.md)

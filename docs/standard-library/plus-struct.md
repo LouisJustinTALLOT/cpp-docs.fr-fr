@@ -1,5 +1,5 @@
 ---
-title: plus (struct)
+title: plus, struct
 ms.date: 11/04/2016
 f1_keywords:
 - functional/std::plus
@@ -7,20 +7,20 @@ helpviewer_keywords:
 - plus class
 - plus struct
 ms.assetid: 4594abd5-b2f2-4fac-9b6b-fc9a2723f8cf
-ms.openlocfilehash: 7071b7709f106fc974e401f89bb98c2525bd6558
-ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
+ms.openlocfilehash: 628823a7fc3c176f83bbb1dca59ec194b5d3db97
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68240509"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81372065"
 ---
-# <a name="plus-struct"></a>plus (struct)
+# <a name="plus-struct"></a>plus, struct
 
 Objet de fonction prédéfini qui effectue l’opération d’addition (`operator+` binaire) sur ses arguments.
 
 ## <a name="syntax"></a>Syntaxe
 
-```
+```cpp
 template <class Type = void>
 struct plus : public binary_function <Type, Type, Type>
 {
@@ -40,13 +40,13 @@ struct plus<void>
 ### <a name="parameters"></a>Paramètres
 
 *Type*, *T*, *U*\
-Tout type prenant en charge un `operator+` binaire qui accepte des opérandes des types spécifiés ou déduits.
+Tout type qui prend en charge un `operator+` binaire qui accepte des opérandes des types spécifiés ou déduits.
 
 *Gauche*\
-Opérande gauche de l’opération d’addition. Le modèle non spécialisé prend un argument de référence lvalue de type *Type*. Le modèle spécialisé effectue un transfert de lvalue parfait et type de déduire les arguments de référence rvalue de *T*.
+Opérande gauche de l’opération d’addition. Le modèle non précisé prend un argument de référence lvalue de *type*type . Le modèle spécialisé fait l’avance parfaite des arguments de référence lvalue et rvalue de type *T*déduit .
 
 *Oui*\
-Opérande droit de l’opération d’addition. Le modèle non spécialisé prend un argument de référence lvalue de type *Type*. Le modèle spécialisé effectue un transfert de lvalue parfait et type de déduire les arguments de référence rvalue de *U*.
+Opérande droit de l’opération d’addition. Le modèle non précisé prend un argument de référence lvalue de *type*type . Le modèle spécialisé fait l’avance parfaite des arguments de référence lvalue et rvalue de type *inféré U*.
 
 ## <a name="return-value"></a>Valeur de retour
 

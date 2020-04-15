@@ -13,16 +13,16 @@ helpviewer_keywords:
 - Microsoft::WRL::Wrappers::RoInitializeWrapper::RoInitializeWrapper, constructor
 - Microsoft::WRL::Wrappers::RoInitializeWrapper::~RoInitializeWrapper, destructor
 ms.assetid: 4055fbe0-63a7-4c06-b5a0-414fda5640e5
-ms.openlocfilehash: b43d5bb2f553d298584ab2ae497c22637d3beb0d
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: eba9162f17b98d13a9caf956b4f110b89dd81c37
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62403202"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81371230"
 ---
 # <a name="roinitializewrapper-class"></a>RoInitializeWrapper, classe
 
-Initialise le Runtime de Windows.
+Initialise le Windows Runtime.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -32,7 +32,7 @@ class RoInitializeWrapper;
 
 ## <a name="remarks"></a>Notes
 
-`RoInitializeWrapper` est un pratique qui initialise le Runtime Windows et retourne un HRESULT qui indique si l’opération a réussi. Étant donné que le destructeur de classe appelle `::Windows::Foundation::Uninitialize`, instances de `RoInitializeWrapper` doit être déclarée au niveau de portée globale ou de niveau supérieur.
+`RoInitializeWrapper`est une commodité qui initialise le Windows Runtime et renvoie un HRESULT qui indique si l’opération a été réussie. Parce que les appels `::Windows::Foundation::Uninitialize`des `RoInitializeWrapper` destructeurs de classe, les instances de doivent être déclarées à la portée globale ou de haut niveau.
 
 ## <a name="members"></a>Membres
 
@@ -40,34 +40,34 @@ class RoInitializeWrapper;
 
 Nom                                                                    | Description
 ----------------------------------------------------------------------- | -----------------------------------------------------------------
-[RoInitializeWrapper::RoInitializeWrapper](#roinitializewrapper)        | Initialise une nouvelle instance de la classe `RoInitializeWrapper`.
-[RoInitializeWrapper::~RoInitializeWrapper](#tilde-roinitializewrapper) | Détruit l’instance actuelle de la `RoInitializeWrapper` classe.
+[RoInitializeWrapper:RoInitializeWrapper](#roinitializewrapper)        | Initialise une nouvelle instance de la classe `RoInitializeWrapper`.
+[RoInitializeWrapper::RoInitializeWrapper](#tilde-roinitializewrapper) | Détruit l’instance actuelle `RoInitializeWrapper` de la classe.
 
 ### <a name="public-operators"></a>Op&#233;rateurs publics
 
 Nom                                       | Description
 ------------------------------------------ | ------------------------------------------------------------------------
-[RoInitializeWrapper::HRESULT()](#hresult) | Récupère la valeur HRESULT produit par le `RoInitializeWrapper` constructeur.
+[RoInitializeWrapper::HRESULT()](#hresult) | Récupère le HRESULT produit `RoInitializeWrapper` par le constructeur.
 
 ## <a name="inheritance-hierarchy"></a>Hiérarchie d'héritage
 
 `RoInitializeWrapper`
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
-**En-tête :** corewrappers.h
+**En-tête:** corewrappers.h
 
-**Espace de noms :** Microsoft::wrl::wrappers
+**Espace nom:** Microsoft::WRL::Wrappers
 
-## <a name="hresult"></a>RoInitializeWrapper::HRESULT()
+## <a name="roinitializewrapperhresult"></a><a name="hresult"></a>RoInitializeWrapper::HRESULT()
 
-Récupère la valeur HRESULT produite par la dernière `RoInitializeWrapper` constructeur.
+Récupère la valeur HRESULT produite `RoInitializeWrapper` par le dernier constructeur.
 
 ```cpp
 operator HRESULT()
 ```
 
-## <a name="roinitializewrapper"></a>RoInitializeWrapper::RoInitializeWrapper
+## <a name="roinitializewrapperroinitializewrapper"></a><a name="roinitializewrapper"></a>RoInitializeWrapper:RoInitializeWrapper
 
 Initialise une nouvelle instance de la classe `RoInitializeWrapper`.
 
@@ -77,16 +77,16 @@ RoInitializeWrapper(RO_INIT_TYPE flags)
 
 ### <a name="parameters"></a>Paramètres
 
-*flags*<br/>
-Une des énumérations RO_INIT_TYPE, qui spécifie la prise en charge fournie par le Runtime de Windows.
+*Drapeaux*<br/>
+L’un des recensements RO_INIT_TYPE, qui spécifie le support fourni par le Windows Runtime.
 
 ### <a name="remarks"></a>Notes
 
-Le `RoInitializeWrapper` classe appelle `Windows::Foundation::Initialize(flags)`.
+La `RoInitializeWrapper` classe `Windows::Foundation::Initialize(flags)`invoque .
 
-## <a name="tilde-roinitializewrapper"></a>RoInitializeWrapper::~RoInitializeWrapper
+## <a name="roinitializewrapperroinitializewrapper"></a><a name="tilde-roinitializewrapper"></a>RoInitializeWrapper::RoInitializeWrapper
 
-Annule l’exécution de Windows.
+Uninitialise le Windows Runtime.
 
 ```cpp
 ~RoInitializeWrapper()
@@ -94,4 +94,4 @@ Annule l’exécution de Windows.
 
 ### <a name="remarks"></a>Notes
 
-Le `RoInitializeWrapper` classe appelle `Windows::Foundation::Uninitialize()`.
+La `RoInitializeWrapper` classe `Windows::Foundation::Uninitialize()`invoque .

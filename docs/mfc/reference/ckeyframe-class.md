@@ -26,12 +26,12 @@ helpviewer_keywords:
 - CKeyFrame [MFC], m_pExistingKeyFrame
 - CKeyFrame [MFC], m_pTransition
 ms.assetid: d050a562-20f6-4c65-8ce5-ccb3aef1a20e
-ms.openlocfilehash: c2c6add30757e1d83b70001679b37a7a22b9d7d6
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: f535503338a82c7cc70455ae6a08cdab0f13c624
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62392607"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81372294"
 ---
 # <a name="ckeyframe-class"></a>CKeyFrame, classe
 
@@ -49,30 +49,30 @@ class CKeyFrame : public CBaseKeyFrame;
 
 |Nom|Description|
 |----------|-----------------|
-|[CKeyFrame::CKeyFrame](#ckeyframe)|Surchargé. Construit une image clé qui dépend d’autres images clés.|
+|[CKeyFrame::CKeyFrame](#ckeyframe)|Surchargé. Construit un cadre clé qui dépend d’autres cadres clés.|
 
 ### <a name="public-methods"></a>M&#233;thodes publiques
 
 |Nom|Description|
 |----------|-----------------|
-|[CKeyFrame::AddToStoryboard](#addtostoryboard)|Ajoute une image clé à une table de montage séquentiel. (Substitue [CBaseKeyFrame::AddToStoryboard](../../mfc/reference/cbasekeyframe-class.md#addtostoryboard).)|
-|[CKeyFrame::AddToStoryboardAfterTransition](#addtostoryboardaftertransition)|Ajoute une image clé au storyboard après la transition.|
-|[CKeyFrame::AddToStoryboardAtOffset](#addtostoryboardatoffset)|Ajoute une image clé au storyboard à l’offset.|
-|[CKeyFrame::GetExistingKeyframe](#getexistingkeyframe)|Retourne un pointeur vers une image clé que dépend cette image clé.|
-|[CKeyFrame::GetOffset](#getoffset)|Retourne un offset à partir d’autres images clés.|
-|[CKeyFrame::GetTransition](#gettransition)|Retourne un pointeur à une transition dont dépend cette image clé.|
+|[CKeyFrame::AddToStoryboard](#addtostoryboard)|Ajoute un cadre clé à un storyboard. (Overrides [CBaseKeyFrame::AddToStoryboard](../../mfc/reference/cbasekeyframe-class.md#addtostoryboard).)|
+|[CKeyFrame::AddToStoryboardAfterTransition](#addtostoryboardaftertransition)|Ajoute un cadre clé au storyboard après la transition.|
+|[CKeyFrame::AddToStoryboardAtOffset](#addtostoryboardatoffset)|Ajoute un cadre clé au storyboard à la compensation.|
+|[CKeyFrame::GetExistingKeyframe](#getexistingkeyframe)|Retourne un pointeur à un cadre clé dont dépend ce cadre clé.|
+|[CKeyFrame::GetOffset](#getoffset)|Retourne un décalage d’autres cadres clés.|
+|[CKeyFrame::GetTransition](#gettransition)|Retourne un pointeur à une transition dont dépend ce cadre clé.|
 
 ### <a name="protected-data-members"></a>Membres de données protégés
 
 |Nom|Description|
 |----------|-----------------|
-|[CKeyFrame::m_offset](#m_offset)|Spécifie le décalage de cette image clé à partir d’une image clé stockée dans m_pExistingKeyFrame.|
-|[CKeyFrame::m_pExistingKeyFrame](#m_pexistingkeyframe)|Stocke un pointeur vers une image clé existante. Cette image clé est ajoutée au storyboard avec m_offset à l’image clé existante.|
-|[CKeyFrame::m_pTransition](#m_ptransition)|Stocke un pointeur vers la transition qui commence à cette image clé.|
+|[CKeyFrame::m_offset](#m_offset)|Spécifie le décalage de ce cadre clé à partir d’un cadre clé stocké dans m_pExistingKeyFrame.|
+|[CKeyFrame::m_pExistingKeyFrame](#m_pexistingkeyframe)|Stocke un pointeur sur un keframe existant. Ce cadre clé est ajouté au storyboard avec m_offset à la clé existante.|
+|[CKeyFrame::m_pTransition](#m_ptransition)|Stocke un pointeur de transtion qui commence à ce cadre clé.|
 
 ## <a name="remarks"></a>Notes
 
-Cette classe implémente une image clé de l’animation. Une image clé représente un moment donné dans une table de montage séquentiel et peut être utilisée pour spécifier les heures de début et de fin des transitions. Une image clé peut être basée sur les autres images clés et avoir un décalage (en secondes) à partir de celui-ci, ou peut être basée sur une transition et représente un moment dans l’heure de fin de cette transition.
+Cette classe met en œuvre un cadre d’animation. Un cadre clé représente un moment dans le temps dans un storyboard et peut être utilisé pour spécifier les heures de début et de fin des transitions. Un cadre clé peut être basé sur d’autres cadres clés et avoir un décalage (en quelques secondes) de celui-ci, ou peut être basé sur une transition et représenter un moment dans le temps où cette transition se termine.
 
 ## <a name="inheritance-hierarchy"></a>Hiérarchie d'héritage
 
@@ -82,13 +82,13 @@ Cette classe implémente une image clé de l’animation. Une image clé représ
 
 [CKeyFrame](../../mfc/reference/ckeyframe-class.md)
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
 **En-tête :** afxanimationcontroller.h
 
-##  <a name="addtostoryboard"></a>  CKeyFrame::AddToStoryboard
+## <a name="ckeyframeaddtostoryboard"></a><a name="addtostoryboard"></a>CKeyFrame::AddToStoryboard
 
-Ajoute une image clé à une table de montage séquentiel.
+Ajoute un cadre clé à un storyboard.
 
 ```
 virtual BOOL AddToStoryboard(
@@ -98,23 +98,23 @@ virtual BOOL AddToStoryboard(
 
 ### <a name="parameters"></a>Paramètres
 
-*pStoryboard*<br/>
-Pointeur vers une table de montage séquentiel.
+*pStoryboard (en)*<br/>
+Un pointeur à un storyboard.
 
-*bDeepAdd*<br/>
-Spécifie s’il faut ajouter une image clé ou de la transition de manière récursive.
+*bDeepAdd (en)*<br/>
+Précise s’il faut ajouter du cadre clé ou la transition de façon récursive.
 
 ### <a name="return-value"></a>Valeur de retour
 
-TRUE si l’image clé a été ajouté avec succès.
+VRAI, si keyframe a été ajouté avec succès.
 
 ### <a name="remarks"></a>Notes
 
-Cette méthode ajoute une image clé au storyboard. Si elle dépend d’autres images clés ou de transition et que bDeepAdd a la valeur TRUE, cette méthode tente d’ajouter de manière récursive.
+Cette méthode ajoute un cadre clé au storyboard. Si cela dépend d’un autre cadre clé ou de transition et bDeepAdd est VRAI, cette méthode tente de les ajouter de façon récursive.
 
-##  <a name="addtostoryboardaftertransition"></a>  CKeyFrame::AddToStoryboardAfterTransition
+## <a name="ckeyframeaddtostoryboardaftertransition"></a><a name="addtostoryboardaftertransition"></a>CKeyFrame::AddToStoryboardAfterTransition
 
-Ajoute une image clé au storyboard après la transition.
+Ajoute un cadre clé au storyboard après la transition.
 
 ```
 BOOL AddToStoryboardAfterTransition(
@@ -124,23 +124,23 @@ BOOL AddToStoryboardAfterTransition(
 
 ### <a name="parameters"></a>Paramètres
 
-*pStoryboard*<br/>
-Pointeur vers une table de montage séquentiel.
+*pStoryboard (en)*<br/>
+Un pointeur à un storyboard.
 
-*bDeepAdd*<br/>
-Spécifie s’il faut ajouter un transition de manière récursive.
+*bDeepAdd (en)*<br/>
+Précise s’il faut ajouter une transition de façon récursive.
 
 ### <a name="return-value"></a>Valeur de retour
 
-TRUE si l’image clé a été ajouté avec succès.
+VRAI, si keyframe a été ajouté avec succès.
 
 ### <a name="remarks"></a>Notes
 
-Cette fonction est appelée par l’infrastructure pour ajouter une image clé au storyboard après la transition.
+Cette fonction est appelée par le cadre pour ajouter un cadre clé à storyboard après la transition.
 
-##  <a name="addtostoryboardatoffset"></a>  CKeyFrame::AddToStoryboardAtOffset
+## <a name="ckeyframeaddtostoryboardatoffset"></a><a name="addtostoryboardatoffset"></a>CKeyFrame::AddToStoryboardAtOffset
 
-Ajoute une image clé au storyboard à l’offset.
+Ajoute un cadre clé au storyboard à la compensation.
 
 ```
 virtual BOOL AddToStoryboardAtOffset(
@@ -150,23 +150,23 @@ virtual BOOL AddToStoryboardAtOffset(
 
 ### <a name="parameters"></a>Paramètres
 
-*pStoryboard*<br/>
-Pointeur vers une table de montage séquentiel.
+*pStoryboard (en)*<br/>
+Un pointeur à un storyboard.
 
-*bDeepAdd*<br/>
-Spécifie si cette image clé dépendante de façon récursive pour ajouter une image clé.
+*bDeepAdd (en)*<br/>
+Précise s’il faut ajouter un cadre clé dont ce cadre clé dépend de la récursivité.
 
 ### <a name="return-value"></a>Valeur de retour
 
-TRUE si l’image clé a été ajouté avec succès.
+VRAI, si keyframe a été ajouté avec succès.
 
 ### <a name="remarks"></a>Notes
 
-Cette fonction est appelée par l’infrastructure pour ajouter une image clé au storyboard à l’offset.
+Cette fonction est appelée par le cadre pour ajouter un cadre clé à storyboard à compensation.
 
-##  <a name="ckeyframe"></a>  CKeyFrame::CKeyFrame
+## <a name="ckeyframeckeyframe"></a><a name="ckeyframe"></a>CKeyFrame::CKeyFrame
 
-Construit une image clé qui dépend d’une transition.
+Construit un cadre clé qui dépend d’une transition.
 
 ```
 CKeyFrame(CBaseTransition* pTransition);
@@ -179,21 +179,21 @@ CKeyFrame(
 ### <a name="parameters"></a>Paramètres
 
 *pTransition*<br/>
-Pointeur vers une transition.
+Un pointeur vers une transition.
 
-*pKeyframe*<br/>
-Un pointeur vers l’image clé.
+*pKeyframe (en)*<br/>
+Un pointeur à keyframe.
 
 *offset*<br/>
-Offset, en secondes, à partir de l’image clé spécifiée par pKeyframe.
+Décalage, en quelques secondes, à partir de keyframe spécifié par pKeyframe.
 
 ### <a name="remarks"></a>Notes
 
-Les images clés construites représentent un moment dans le temps au sein d’une table de montage séquentiel lorsque la transition spécifiée se termine.
+Le cadre de clé construit représentera un moment dans le temps dans un storyboard lorsque la transition spécifiée se termine.
 
-##  <a name="getexistingkeyframe"></a>  CKeyFrame::GetExistingKeyframe
+## <a name="ckeyframegetexistingkeyframe"></a><a name="getexistingkeyframe"></a>CKeyFrame::GetExistingKeyframe
 
-Retourne un pointeur vers une image clé que dépend cette image clé.
+Retourne un pointeur à un cadre clé dont dépend ce cadre clé.
 
 ```
 CBaseKeyFrame* GetExistingKeyframe();
@@ -201,15 +201,15 @@ CBaseKeyFrame* GetExistingKeyframe();
 
 ### <a name="return-value"></a>Valeur de retour
 
-Un pointeur valide vers image clé, ou NULL si cette image clé ne dépend pas d’autres images clés.
+Un pointeur valide pour le cadre de clé, ou NULL si ce cadre clé ne dépend pas d’autres cadres clés.
 
 ### <a name="remarks"></a>Notes
 
-Il s’agit d’un accesseur à une image clé que dépend cette image clé.
+Il s’agit d’un accessoir-clé d’un cadre clé dont dépend ce cadre clé.
 
-##  <a name="getoffset"></a>  CKeyFrame::GetOffset
+## <a name="ckeyframegetoffset"></a><a name="getoffset"></a>CKeyFrame::GetOffset
 
-Retourne un offset à partir d’autres images clés.
+Retourne un décalage d’autres cadres clés.
 
 ```
 UI_ANIMATION_SECONDS GetOffset();
@@ -217,15 +217,15 @@ UI_ANIMATION_SECONDS GetOffset();
 
 ### <a name="return-value"></a>Valeur de retour
 
-Un décalage en secondes à partir d’autres images clés.
+Un décalage en quelques secondes à partir d’autres cadres clés.
 
 ### <a name="remarks"></a>Notes
 
-Cette méthode doit être appelée pour déterminer un décalage exprimé en secondes à partir d’autres images clés.
+Cette méthode devrait être appelée pour déterminer un décalage en quelques secondes à partir d’autres cadres clés.
 
-##  <a name="gettransition"></a>  CKeyFrame::GetTransition
+## <a name="ckeyframegettransition"></a><a name="gettransition"></a>CKeyFrame::GetTransition
 
-Retourne un pointeur à une transition dont dépend cette image clé.
+Retourne un pointeur à une transition dont dépend ce cadre clé.
 
 ```
 CBaseTransition* GetTransition();
@@ -233,31 +233,31 @@ CBaseTransition* GetTransition();
 
 ### <a name="return-value"></a>Valeur de retour
 
-Un pointeur valide vers transition, ou NULL si cette image clé ne dépend pas de transition.
+Un pointeur valide à la transition, ou NULL si ce cadre clé ne dépend pas de la transition.
 
 ### <a name="remarks"></a>Notes
 
-Il s’agit d’un accesseur à une transition dont dépend cette image clé.
+Il s’agit d’un accessoirier à une transition dont dépend ce cadre clé.
 
-##  <a name="m_offset"></a>  CKeyFrame::m_offset
+## <a name="ckeyframem_offset"></a><a name="m_offset"></a>CKeyFrame::m_offset
 
-Spécifie le décalage de cette image clé à partir d’une image clé stockée dans m_pExistingKeyFrame.
+Spécifie le décalage de ce cadre clé à partir d’un cadre clé stocké dans m_pExistingKeyFrame.
 
 ```
 UI_ANIMATION_SECONDS m_offset;
 ```
 
-##  <a name="m_pexistingkeyframe"></a>  CKeyFrame::m_pExistingKeyFrame
+## <a name="ckeyframem_pexistingkeyframe"></a><a name="m_pexistingkeyframe"></a>CKeyFrame::m_pExistingKeyFrame
 
-Stocke un pointeur vers une image clé existante. Cette image clé est ajoutée au storyboard avec m_offset à l’image clé existante.
+Stocke un pointeur sur un keframe existant. Ce cadre clé est ajouté au storyboard avec m_offset à la clé existante.
 
 ```
 CBaseKeyFrame* m_pExistingKeyFrame;
 ```
 
-##  <a name="m_ptransition"></a>  CKeyFrame::m_pTransition
+## <a name="ckeyframem_ptransition"></a><a name="m_ptransition"></a>CKeyFrame::m_pTransition
 
-Stocke un pointeur vers la transition qui commence à cette image clé.
+Stocke un pointeur de transtion qui commence à ce cadre clé.
 
 ```
 CBaseTransition* m_pTransition;

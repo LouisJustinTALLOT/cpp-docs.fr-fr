@@ -103,12 +103,12 @@ helpviewer_keywords:
 - CAnimationController [MFC], m_pTransitionFactory
 - CAnimationController [MFC], m_pTransitionLibrary
 ms.assetid: ed294c98-695e-40a6-b940-33ef1d40aa6b
-ms.openlocfilehash: 9039d44d9ef36a47c11b3ecaddf232ad427727c4
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: 34a02567bfeb76666cc38ccf05dcc285a1f658f5
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69507650"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81369751"
 ---
 # <a name="canimationcontroller-class"></a>CAnimationController, classe
 
@@ -126,75 +126,75 @@ class CAnimationController : public CObject;
 
 |Nom|Description|
 |----------|-----------------|
-|[CAnimationController:: CAnimationController](#canimationcontroller)|Construit un contrôleur d’animation.|
-|[CAnimationController:: ~ CAnimationController](#_dtorcanimationcontroller)|Destructeur. Appelé lorsque l’objet contrôleur de l’animation est détruit.|
+|[CAnimationController::CAnimationController](#canimationcontroller)|Construit un contrôleur d’animation.|
+|[CAnimationController::CAnimationController](#_dtorcanimationcontroller)|Destructeur. Appelé lorsque l’objet du contrôleur d’animation est détruit.|
 
 ### <a name="public-methods"></a>M&#233;thodes publiques
 
 |Nom|Description|
 |----------|-----------------|
-|[CAnimationController:: AddAnimationObject](#addanimationobject)|Ajoute un objet d’animation à un groupe qui appartient au contrôleur d’animation.|
-|[CAnimationController::AddKeyframeToGroup](#addkeyframetogroup)|Ajoute une image clé au groupe.|
-|[CAnimationController::AnimateGroup](#animategroup)|Prépare un groupe pour exécuter l’animation et le planifie éventuellement.|
-|[CAnimationController::CleanUpGroup](#cleanupgroup)|Surchargé. Appelé par l’infrastructure pour nettoyer le groupe lorsque l’animation a été planifiée.|
+|[CAnimationController::AddAnimationObject](#addanimationobject)|Ajoute un objet d’animation à un groupe qui appartient au contrôleur d’animation.|
+|[CAnimationController::AddKeyframeToGroup](#addkeyframetogroup)|Ajoute un cadre clé au groupe.|
+|[CAnimationController::AnimateGroup](#animategroup)|Prépare un groupe pour exécuter l’animation et l’horaire optionnellement.|
+|[CAnimationController::CleanUpGroup](#cleanupgroup)|Surchargé. Appelé par le cadre pour nettoyer le groupe lorsque l’animation a été programmée.|
 |[CAnimationController::CreateKeyframe](#createkeyframe)|Surchargé. Crée une image clé qui dépend de la transition et l’ajoute au groupe spécifié.|
-|[CAnimationController::EnableAnimationManagerEvent](#enableanimationmanagerevent)|Définit ou libère un gestionnaire à appeler lorsque l’état du gestionnaire d’animations change.|
-|[CAnimationController::EnableAnimationTimerEventHandler](#enableanimationtimereventhandler)|Définit ou libère un gestionnaire pour les événements de minutage et le gestionnaire pour les mises à jour de minutage.|
-|[CAnimationController::EnablePriorityComparisonHandler](#enableprioritycomparisonhandler)|Définit ou libère le gestionnaire de comparaison de priorité à appeler pour déterminer si une table de montage séquentiel planifiée peut être annulée, terminée, tronquée ou compressée.|
-|[CAnimationController::EnableStoryboardEventHandler](#enablestoryboardeventhandler)|Définit ou libère un gestionnaire pour l’état de la table de montage séquentiel et les événements de mise à jour.|
-|[CAnimationController::FindAnimationGroup](#findanimationgroup)|Surchargé. Recherche un groupe d’animations par son Storyboard.|
-|[CAnimationController:: FindAnimationObject](#findanimationobject)|Recherche un objet d’animation contenant une variable d’animation spécifiée.|
-|[CAnimationController::GetKeyframeStoryboardStart](#getkeyframestoryboardstart)|Retourne une image clé qui identifie le début du Storyboard.|
-|[CAnimationController::GetUIAnimationManager](#getuianimationmanager)|Fournit l’accès à l’objet IUIAnimationManager encapsulé.|
-|[CAnimationController::GetUIAnimationTimer](#getuianimationtimer)|Fournit l’accès à l’objet IUIAnimationTimer encapsulé.|
-|[CAnimationController::GetUITransitionFactory](#getuitransitionfactory)|Pointeur vers l’interface IUIAnimationTransitionFactory ou NULL, en cas d’échec de la création de la bibliothèque de transition.|
-|[CAnimationController::GetUITransitionLibrary](#getuitransitionlibrary)|Fournit l’accès à l’objet IUIAnimationTransitionLibrary encapsulé.|
-|[CAnimationController:: IsAnimationInProgress](#isanimationinprogress)|Indique si au moins un groupe lit l’animation.|
-|[CAnimationController:: IsValid](#isvalid)|Indique si le contrôleur d’animation est valide.|
-|[CAnimationController:: OnAnimationIntegerValueChanged](#onanimationintegervaluechanged)|Appelé par l’infrastructure lorsque la valeur entière de la variable d’animation a changé.|
-|[CAnimationController:: OnAnimationManagerStatusChanged](#onanimationmanagerstatuschanged)|Appelée par l’infrastructure en réponse à l’événement StatusChanged à partir du gestionnaire d’animations.|
-|[CAnimationController::OnAnimationTimerPostUpdate](#onanimationtimerpostupdate)|Appelé par l’infrastructure une fois la mise à jour d’une animation terminée.|
-|[CAnimationController::OnAnimationTimerPreUpdate](#onanimationtimerpreupdate)|Appelé par le Framework avant le début d’une mise à jour d’animation.|
-|[CAnimationController::OnAnimationTimerRenderingTooSlow](#onanimationtimerrenderingtooslow)|Appelée par l’infrastructure lorsque la fréquence d’images de rendu d’une animation passe sous une fréquence d’images minimale désirable.|
-|[CAnimationController:: OnAnimationValueChanged](#onanimationvaluechanged)|Appelé par le Framework lorsque la valeur de la variable d’animation a changé.|
-|[CAnimationController::OnBeforeAnimationStart](#onbeforeanimationstart)|Appelée par le Framework juste avant que l’animation soit planifiée.|
-|[CAnimationController:: OnHasPriorityCancel](#onhasprioritycancel)|Appelé par l'infrastructure pour résoudre les conflits de planification.|
+|[CAnimationController::EnableAnimationManagerEvent](#enableanimationmanagerevent)|Définit ou libère un gestionnaire pour appeler lorsque le statut du gestionnaire d’animation change.|
+|[CAnimationController::EnableAnimationTimerEventHandler](#enableanimationtimereventhandler)|Définit ou libère un gestionnaire pour les événements de chronométrage et gestionnaire pour les mises à jour de synchronisation.|
+|[CAnimationController::EnablePriorityComparisonHandler](#enableprioritycomparisonhandler)|Définit ou libère le gestionnaire de comparaison prioritaire à appeler pour déterminer si un storyboard prévu peut être annulé, conclu, coupé ou comprimé.|
+|[CAnimationController::EnableStoryboardEventHandler](#enablestoryboardeventhandler)|Définit ou libère un gestionnaire pour l’état du storyboard et mettre à jour les événements.|
+|[CAnimationController::FindAnimationGroup](#findanimationgroup)|Surchargé. Trouve un groupe d’animation par son storyboard.|
+|[CAnimationController::FindAnimationObject](#findanimationobject)|Trouve un objet d’animation contenant une variable d’animation spécifiée.|
+|[CAnimationController::GetKeyframeStoryboardStart](#getkeyframestoryboardstart)|Retourne un cadre clé qui identifie le début du storyboard.|
+|[CAnimationController::GetUIAnimationManager](#getuianimationmanager)|Donne accès à l’objet IUIAnimationManager encapsulé.|
+|[CAnimationController::GetUIAnimationTimer](#getuianimationtimer)|Donne accès à l’objet IUIAnimationTimer encapsulé.|
+|[CAnimationController::GetUITransitionFactory](#getuitransitionfactory)|Un pointeur à l’interface IUIAnimationTransitionFactory ou NULL, si la création de la bibliothèque de transition a échoué.|
+|[CAnimationController::GetUITransitionLibrary](#getuitransitionlibrary)|Donne accès à l’objet IUIAnimationTransitionTransition encapsulé.|
+|[CAnimationController::IsAnimationInProgress](#isanimationinprogress)|Indique si au moins un groupe joue de l’animation.|
+|[CAnimationController::IsValid](#isvalid)|Indique si le contrôleur d’animation est valide.|
+|[CAnimationController::OnAnimationIntegerValueChanged](#onanimationintegervaluechanged)|Appelé par le cadre lorsque la valeur integer de la variable d’animation a changé.|
+|[CAnimationController::OnAnimationManagerStatusChanged](#onanimationmanagerstatuschanged)|Appelé par le cadre en réponse à l’événement StatusChanged du directeur de l’animation.|
+|[CAnimationController::OnAnimationTimerPostUpdate](#onanimationtimerpostupdate)|Appelé par le cadre après une mise à jour d’animation est terminée.|
+|[CAnimationController::OnAnimationTimerPreUpdate](#onanimationtimerpreupdate)|Appelé par le cadre avant une mise à jour d’animation commence.|
+|[CAnimationController::OnAnimationTimerenderingTooSlow](#onanimationtimerrenderingtooslow)|Appelé par le cadre lorsque le taux d’image de rendu pour une animation tombe en dessous d’un taux d’image minimum souhaitable.|
+|[CAnimationController::OnAnimationValueChanged](#onanimationvaluechanged)|Appelé par le cadre lorsque la valeur de la variable d’animation a changé.|
+|[CAnimationController::OnBeforeAnimationStart](#onbeforeanimationstart)|Appelé par le cadre juste avant l’animation est prévue.|
+|[CAnimationController::OnHasPriorityCancel](#onhasprioritycancel)|Appelé par l'infrastructure pour résoudre les conflits de planification.|
 |[CAnimationController::OnHasPriorityCompress](#onhasprioritycompress)|Appelé par l'infrastructure pour résoudre les conflits de planification.|
 |[CAnimationController::OnHasPriorityConclude](#onhaspriorityconclude)|Appelé par l'infrastructure pour résoudre les conflits de planification.|
 |[CAnimationController::OnHasPriorityTrim](#onhasprioritytrim)|Appelé par l'infrastructure pour résoudre les conflits de planification.|
-|[CAnimationController::OnStoryboardStatusChanged](#onstoryboardstatuschanged)|Appelé par le Framework lorsque l’état de la table de montage séquentiel a changé.|
-|[CAnimationController::OnStoryboardUpdated](#onstoryboardupdated)|Appelé par le Framework lorsque le Storyboard a été mis à jour.|
-|[CAnimationController::RemoveAllAnimationGroups](#removeallanimationgroups)|Supprime tous les groupes d’animations du contrôleur d’animation.|
-|[CAnimationController::RemoveAnimationGroup](#removeanimationgroup)|Supprime un groupe d’animation avec l’ID spécifié du contrôleur d’animation.|
-|[CAnimationController::RemoveAnimationObject](#removeanimationobject)|Supprimer un objet d’animation du contrôleur d’animation.|
+|[CAnimationController::OnStoryboardStatusChanged](#onstoryboardstatuschanged)|Appelé par le cadre lorsque le statut storyboard a changé.|
+|[CAnimationController::OnStoryboardUpdated](#onstoryboardupdated)|Appelé par le cadre lorsque storyboard a été mis à jour.|
+|[CAnimationController::RemoveAllAnimationGroups](#removeallanimationgroups)|Supprime tous les groupes d’animation du contrôleur d’animation.|
+|[CAnimationController::RemoveAnimationGroup](#removeanimationgroup)|Supprime un groupe d’animation avec un ID spécifié du contrôleur d’animation.|
+|[CAnimationController::Supprimer l’élégationObject](#removeanimationobject)|Retirez un objet d’animation du contrôleur d’animation.|
 |[CAnimationController::RemoveTransitions](#removetransitions)|Supprime les transitions des objets d’animation qui appartiennent au groupe spécifié.|
-|[CAnimationController::ScheduleGroup](#schedulegroup)|Planifie une animation.|
+|[CAnimationController::Groupe d’horaires](#schedulegroup)|Planifie une animation.|
 |[CAnimationController::SetRelatedWnd](#setrelatedwnd)|Établit une relation entre le contrôleur d’animation et une fenêtre.|
-|[CAnimationController::UpdateAnimationManager](#updateanimationmanager)|Indique au gestionnaire d’animations de mettre à jour les valeurs de toutes les variables d’animation.|
+|[CAnimationController::Mise à jourAnimationManager](#updateanimationmanager)|Dirige le responsable de l’animation pour mettre à jour les valeurs de toutes les variables d’animation.|
 
 ### <a name="protected-methods"></a>Méthodes protégées
 
 |Nom|Description|
 |----------|-----------------|
-|[CAnimationController::CleanUpGroup](#cleanupgroup)|Surchargé. Un programme d’assistance qui nettoie le groupe.|
-|[CAnimationController::OnAfterSchedule](#onafterschedule)|Appelé par le Framework lorsqu’une animation pour le groupe spécifié vient d’être planifiée.|
+|[CAnimationController::CleanUpGroup](#cleanupgroup)|Surchargé. Une aide qui nettoie le groupe.|
+|[CAnimationController::OnAfterSchedule](#onafterschedule)|Appelé par le cadre quand une animation pour le groupe spécifié vient d’être programmée.|
 
 ### <a name="protected-data-members"></a>Membres de données protégés
 
 |Nom|Description|
 |----------|-----------------|
-|[CAnimationController::gkeyframeStoryboardStart](#g_keyframestoryboardstart)|Image clé qui représente le début du Storyboard.|
-|[CAnimationController::m_bIsValid](#m_bisvalid)|Spécifie si un contrôleur d’animation est valide ou non. Ce membre a la valeur FALSe si le système d’exploitation actuel ne prend pas en charge l’API d’animation Windows.|
-|[CAnimationController::m_lstAnimationGroups](#m_lstanimationgroups)|Liste des groupes d’animations qui appartiennent à ce contrôleur d’animation.|
-|[CAnimationController::m_pAnimationManager](#m_panimationmanager)|Stocke un pointeur vers l’objet COM du gestionnaire d’animations.|
-|[CAnimationController::m_pAnimationTimer](#m_panimationtimer)|Stocke un pointeur vers l’objet COM du minuteur d’animation.|
-|[CAnimationController::m_pRelatedWnd](#m_prelatedwnd)|Pointeur vers un objet CWnd connexe, qui peut être redessiné automatiquement lorsque l’état du gestionnaire d’animations a changé ou lorsque l’événement de publication de mise à jour s’est produit. Peut avoir la valeur NULL.|
-|[CAnimationController::m_pTransitionFactory](#m_ptransitionfactory)|Stocke un pointeur vers l’objet COM de la fabrique de transition.|
-|[CAnimationController::m_pTransitionLibrary](#m_ptransitionlibrary)|Stocke un pointeur vers l’objet COM de la bibliothèque de transitions.|
+|[CAnimationController::gkeyframeStoryboardStart](#g_keyframestoryboardstart)|Un cadre clé qui représente le début du storyboard.|
+|[CAnimationController::m_bIsValid](#m_bisvalid)|Précise si un contrôleur d’animation est valide ou non. Ce membre est configuré à FALSE si le système d’exploitation actuel ne prend pas en charge l’API d’animation Windows.|
+|[CAnimationController::m_lstAnimationGroups](#m_lstanimationgroups)|Une liste de groupes d’animation qui appartiennent à ce contrôleur d’animation.|
+|[CAnimationController::m_pAnimationManager](#m_panimationmanager)|Stocke un pointeur vers l’objet Animation Manager COM.|
+|[CAnimationController::m_pAnimationTimer](#m_panimationtimer)|Stocke un pointeur vers l’objet Animation Timer COM.|
+|[CAnimationController::m_pRelatedWnd](#m_prelatedwnd)|Un pointeur vers un objet CWnd connexe, qui peut être automatiquement redessiné lorsque l’état du gestionnaire d’animation a changé, ou l’événement de mise à jour post s’est produit. Sa valeur peut être NULL.|
+|[CAnimationController::m_pTransitionFactory](#m_ptransitionfactory)|Stocke un pointeur vers l’objet Transition Factory COM.|
+|[CAnimationController::m_pTransitionLibrary](#m_ptransitionlibrary)|Stocke un pointeur vers l’objet TRANSITION Library COM.|
 
 ## <a name="remarks"></a>Notes
 
-La classe CAnimationController est la classe de clé qui gère les animations. Vous pouvez créer une ou plusieurs instances du contrôleur d’animation dans une application et, si vous le souhaitez, connecter une instance du contrôleur d’animation à un objet CWnd à l’aide de CAnimationController:: SetRelatedWnd. Cette connexion est requise pour envoyer automatiquement les messages WM_PAINT à la fenêtre associée lorsque l’état du gestionnaire d’animations a changé ou que le minuteur d’animation a été mis à jour. Si vous n’activez pas cette relation, vous devez redessiner une fenêtre qui affiche une animation manuellement. À cet effet, vous pouvez dériver une classe de CAnimationController et remplacer OnAnimationManagerStatusChanged et/ou OnAnimationTimerPostUpdate et invalider une ou plusieurs fenêtres si nécessaire.
+La classe CAnimationController est la classe clé qui gère les animations. Vous pouvez créer un ou plusieurs cas de contrôleur d’animation dans une application et, en option, connecter une instance de contrôleur d’animation à un objet CWnd à l’aide de CAnimationController:SetRelatedWnd. Cette connexion est nécessaire pour envoyer WM_PAINT messages à la fenêtre connexe automatiquement lorsque le statut du gestionnaire d’animation a changé ou que la minuterie d’animation a été mise à jour. Si vous n’activez pas cette relation, vous devez redessiner une fenêtre qui affiche une animation manuellement. À cette fin, vous pouvez tirer une classe de CAnimationController et remplacer OnAnimationManagerStatusChanged et/ou OnAnimationTimerPostUpdate et invalider une ou plusieurs fenêtres si nécessaire.
 
 ## <a name="inheritance-hierarchy"></a>Hiérarchie d'héritage
 
@@ -202,19 +202,19 @@ La classe CAnimationController est la classe de clé qui gère les animations. V
 
 `CAnimationController`
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
 **En-tête :** afxanimationcontroller.h
 
-##  <a name="_dtorcanimationcontroller"></a>CAnimationController:: ~ CAnimationController
+## <a name="canimationcontrollercanimationcontroller"></a><a name="_dtorcanimationcontroller"></a>CAnimationController::CAnimationController
 
-Destructeur. Appelé lorsque l’objet contrôleur de l’animation est détruit.
+Destructeur. Appelé lorsque l’objet du contrôleur d’animation est détruit.
 
 ```
 virtual ~CAnimationController(void);
 ```
 
-##  <a name="addanimationobject"></a>  CAnimationController::AddAnimationObject
+## <a name="canimationcontrolleraddanimationobject"></a><a name="addanimationobject"></a>CAnimationController::AddAnimationObject
 
 Ajoute un objet d’animation à un groupe qui appartient au contrôleur d’animation.
 
@@ -225,19 +225,19 @@ CAnimationGroup* AddAnimationObject(CAnimationBaseObject* pObject);
 ### <a name="parameters"></a>Paramètres
 
 *pObject*<br/>
-Pointeur vers un objet d’animation.
+Un pointeur à un objet d’animation.
 
 ### <a name="return-value"></a>Valeur de retour
 
-Pointeur vers un groupe d’animation existant ou nouveau où pObject a été ajouté si la fonction réussit; NULL si pObject a déjà été ajouté à un groupe qui appartient à un autre contrôleur d’animation.
+Un pointeur vers le groupe d’animation existant ou nouveau où le pObject a été ajouté si la fonction réussit; NULL si pObject a déjà été ajouté à un groupe qui appartient à un autre contrôleur d’animation.
 
 ### <a name="remarks"></a>Notes
 
-Appelez cette méthode pour ajouter un objet d’animation au contrôleur d’animation. Un objet est ajouté à un groupe en fonction du GroupID de l’objet (consultez CAnimationBaseObject,:: SetID). Le contrôleur d’animation crée un nouveau groupe s’il s’agit du premier objet ajouté avec le GroupID spécifié. Un objet d’animation ne peut être ajouté qu’à un seul contrôleur d’animation. Si vous devez ajouter un objet à un autre contrôleur, appelez d’abord RemoveAnimationObject. Si vous appelez SetID avec New GroupID pour un objet qui a déjà été ajouté à un groupe, l’objet est supprimé de l’ancien groupe et ajouté à un autre groupe avec l’ID spécifié.
+Appelez cette méthode pour ajouter un objet d’animation au contrôleur d’animation. Un objet sera ajouté à un groupe selon le GroupID de l’objet (voir CAnimationBaseObject:SetID). Le contrôleur d’animation créera un nouveau groupe s’il s’agit du premier objet ajouté avec le GroupID spécifié. Un objet d’animation peut être ajouté à un seul contrôleur d’animation. Si vous avez besoin d’ajouter un objet à un autre contrôleur, appelez d’abord SupprimerAnimationObject. Si vous appelez SetID avec un nouveau GroupID pour un objet qui a déjà été ajouté à un groupe, l’objet sera retiré de l’ancien groupe et ajouté à un autre groupe avec UNE pièce d’identité spécifiée.
 
-##  <a name="addkeyframetogroup"></a>  CAnimationController::AddKeyframeToGroup
+## <a name="canimationcontrolleraddkeyframetogroup"></a><a name="addkeyframetogroup"></a>CAnimationController::AddKeyframeToGroup
 
-Ajoute une image clé au groupe.
+Ajoute un cadre clé au groupe.
 
 ```
 BOOL AddKeyframeToGroup(
@@ -247,23 +247,23 @@ BOOL AddKeyframeToGroup(
 
 ### <a name="parameters"></a>Paramètres
 
-*nGroupID*<br/>
-Spécifie l’ID de groupe.
+*nGroupID (en anglais)*<br/>
+Spécifie l’ID du groupe.
 
-*pKeyframe*<br/>
-Pointeur vers une image clé.
+*pKeyframe (en)*<br/>
+Un pointeur à un cadre clé.
 
 ### <a name="return-value"></a>Valeur de retour
 
-TRUE si la fonction est réussie; Sinon, FALSe.
+VRAI si la fonction réussit; autrement FALSE.
 
 ### <a name="remarks"></a>Notes
 
-En règle générale, vous n’avez pas besoin d’appeler cette méthode, utilisez CAnimationController:: CreateKeyframe à la place, qui crée et ajoute automatiquement l’image clé créée à un groupe.
+Habituellement, vous n’avez pas besoin d’appeler cette méthode, utilisez CAnimationController::CreateKeyframe à la place, qui crée et ajoute le cadre de clé créé à un groupe automatiquement.
 
-##  <a name="animategroup"></a>  CAnimationController::AnimateGroup
+## <a name="canimationcontrolleranimategroup"></a><a name="animategroup"></a>CAnimationController::AnimateGroup
 
-Prépare un groupe pour exécuter l’animation et le planifie éventuellement.
+Prépare un groupe pour exécuter l’animation et l’horaire optionnellement.
 
 ```
 BOOL AnimateGroup(
@@ -273,21 +273,21 @@ BOOL AnimateGroup(
 
 ### <a name="parameters"></a>Paramètres
 
-*nGroupID*<br/>
+*nGroupID (en anglais)*<br/>
 Spécifie GroupID.
 
 *bScheduleNow*<br/>
-Spécifie si l’animation doit être exécutée immédiatement.
+Précise s’il faut exécuter l’animation tout de suite.
 
 ### <a name="return-value"></a>Valeur de retour
 
-TRUE si l’animation a été correctement planifiée et exécutée.
+VRAI si l’animation a été planifiée avec succès et exécutée.
 
 ### <a name="remarks"></a>Notes
 
-Cette méthode effectue le travail réel qui crée le Storyboard, ajoute des variables d’animation, applique des transitions et définit des images clés. Il est possible de retarder la planification si vous affectez à bScheduleNow la valeur FALSe. Dans ce cas, le groupe spécifié contiendra une table de montage séquentiel qui a été configurée pour l’animation. À ce stade, vous pouvez configurer des événements pour les variables de Storyboard et d’animation. Lorsque vous devez réellement exécuter l’appel d’animation CAnimationController:: ScheduleGroup.
+Cette méthode fait le travail réel de création storyboard, l’ajout de variables d’animation, l’application de transitions et la définition des clés. Il est possible de retarder la planification si vous définissez bScheduleNow à FALSE. Dans ce cas, le groupe spécifié tiendra un storyboard qui a été mis en place pour l’animation. À ce stade, vous pouvez configurer des événements pour le storyboard et les variables d’animation. Lorsque vous avez réellement besoin d’exécuter l’appel d’animation CAnimationController:ScheduleGroup.
 
-##  <a name="canimationcontroller"></a>  CAnimationController::CAnimationController
+## <a name="canimationcontrollercanimationcontroller"></a><a name="canimationcontroller"></a>CAnimationController::CAnimationController
 
 Construit un contrôleur d’animation.
 
@@ -295,9 +295,9 @@ Construit un contrôleur d’animation.
 CAnimationController(void);
 ```
 
-##  <a name="cleanupgroup"></a>  CAnimationController::CleanUpGroup
+## <a name="canimationcontrollercleanupgroup"></a><a name="cleanupgroup"></a>CAnimationController::CleanUpGroup
 
-Appelé par l’infrastructure pour nettoyer le groupe lorsque l’animation a été planifiée.
+Appelé par le cadre pour nettoyer le groupe lorsque l’animation a été programmée.
 
 ```
 void CleanUpGroup(UINT32 nGroupID);
@@ -306,17 +306,17 @@ void CleanUpGroup(CAnimationGroup* pGroup);
 
 ### <a name="parameters"></a>Paramètres
 
-*nGroupID*<br/>
+*nGroupID (en anglais)*<br/>
 Spécifie GroupID.
 
-*pGroup*<br/>
-Pointeur vers le groupe d’animation à nettoyer.
+*pGroup (en anglais)*<br/>
+Un pointeur pour le groupe d’animation à nettoyer.
 
 ### <a name="remarks"></a>Notes
 
-Cette méthode supprime toutes les transitions et toutes les images clés du groupe spécifié, car elles ne sont pas pertinentes après la planification d’une animation.
+Cette méthode supprime toutes les transitions et les cadres clés du groupe spécifié, car elles ne sont pas pertinentes après qu’une animation a été programmée.
 
-##  <a name="createkeyframe"></a>  CAnimationController::CreateKeyframe
+## <a name="canimationcontrollercreatekeyframe"></a><a name="createkeyframe"></a>CAnimationController::CreateKeyframe
 
 Crée une image clé qui dépend de la transition et l’ajoute au groupe spécifié.
 
@@ -333,13 +333,13 @@ CKeyFrame* CreateKeyframe(
 
 ### <a name="parameters"></a>Paramètres
 
-*nGroupID*<br/>
+*nGroupID (en anglais)*<br/>
 Spécifie l’ID de groupe pour lequel l’image clé est créée.
 
 *pTransition*<br/>
 Pointeur vers la transition. L’image clé sera insérée dans le plan conceptuel après cette transition.
 
-*pKeyframe*<br/>
+*pKeyframe (en)*<br/>
 Pointeur vers l’image clé de base pour cette image clé.
 
 *offset*<br/>
@@ -353,9 +353,9 @@ Pointeur vers l’image clé nouvellement créée si la fonction réussit.
 
 Vous pouvez stocker le pointeur retourné et baser les autres images clés sur l’image clé nouvellement créée (voir la deuxième surcharge). Il est possible de commencer des transitions au niveau des images clés : voir CBaseTransition::SetKeyframes. Vous n’avez pas besoin de supprimer les images clés créées de cette façon, car elles sont automatiquement supprimées par les groupes d’animation. Soyez prudent lors de la création d’images clés basées sur d’autres images clés et d’autres transitions, et évitez les références circulaires.
 
-##  <a name="enableanimationmanagerevent"></a>  CAnimationController::EnableAnimationManagerEvent
+## <a name="canimationcontrollerenableanimationmanagerevent"></a><a name="enableanimationmanagerevent"></a>CAnimationController::EnableAnimationManagerEvent
 
-Définit ou libère un gestionnaire à appeler lorsque l’état du gestionnaire d’animations change.
+Définit ou libère un gestionnaire pour appeler lorsque le statut du gestionnaire d’animation change.
 
 ```
 virtual BOOL EnableAnimationManagerEvent(BOOL bEnable = TRUE);
@@ -364,19 +364,19 @@ virtual BOOL EnableAnimationManagerEvent(BOOL bEnable = TRUE);
 ### <a name="parameters"></a>Paramètres
 
 *bEnable*<br/>
-Spécifie s’il faut définir ou libérer un gestionnaire.
+Précise s’il faut régler ou libérer un gestionnaire.
 
 ### <a name="return-value"></a>Valeur de retour
 
-TRUE si le gestionnaire a été correctement défini ou libéré.
+VRAI si le gestionnaire a été réglé avec succès ou libéré.
 
 ### <a name="remarks"></a>Notes
 
-Lorsqu’un gestionnaire est défini (activé), l’animation Windows appelle OnAnimationManagerStatusChanged quand l’état du gestionnaire d’animations change.
+Lorsqu’un gestionnaire est défini (activé) Windows Animation appelle OnAnimationManagerStatusM lorsque l’état du gestionnaire d’animation change.
 
-##  <a name="enableanimationtimereventhandler"></a>  CAnimationController::EnableAnimationTimerEventHandler
+## <a name="canimationcontrollerenableanimationtimereventhandler"></a><a name="enableanimationtimereventhandler"></a>CAnimationController::EnableAnimationTimerEventHandler
 
-Définit ou libère un gestionnaire pour les événements de minutage et le gestionnaire pour les mises à jour de minutage.
+Définit ou libère un gestionnaire pour les événements de chronométrage et gestionnaire pour les mises à jour de synchronisation.
 
 ```
 virtual BOOL EnableAnimationTimerEventHandler(
@@ -387,22 +387,22 @@ virtual BOOL EnableAnimationTimerEventHandler(
 ### <a name="parameters"></a>Paramètres
 
 *bEnable*<br/>
-Spécifie s’il faut définir ou libérer les gestionnaires.
+Précise s’il faut régler ou libérer les gestionnaires.
 
 *idleBehavior*<br/>
-Spécifie le comportement inactif du gestionnaire de mise à jour du minuteur.
+Spécifie le comportement inactif pour le gestionnaire de mise à jour de minuterie.
 
 ### <a name="return-value"></a>Valeur de retour
 
-TRUE si les gestionnaires ont été correctement définis ou libérés; FALSe si cette méthode est appelée pour une deuxième fois sans libérer d’abord les gestionnaires, ou si une autre erreur se produit.
+VRAI si les gestionnaires ont été réglés ou libérés avec succès; FALSE si cette méthode est appelée pour une deuxième fois sans relâcher les gestionnaires en premier, ou si une autre erreur se produit.
 
 ### <a name="remarks"></a>Notes
 
-Lorsque les gestionnaires sont définis (activés), l’API d’animation Windows appelle les méthodes OnAnimationTimerPreUpdate, OnAnimationTimerPostUpdate et OnRenderingTooSlow. Vous devez activer les minuteurs d’animation pour autoriser les storyboards de mise à jour de l’API d’animation Windows. Dans le cas contraire, vous devrez appeler CAnimationController:: UpdateAnimationManager pour indiquer au gestionnaire d’animations de mettre à jour les valeurs de toutes les variables d’animation.
+Lorsque les gestionnaires sont définis (activé) Windows Animation API appelle OnAnimationTimerPreUpdate, OnAnimationTimerPostUpdate, OnRenderingTooSlow méthodes. Vous devez activer les minuteries d’animation pour permettre à Windows Animation API mettre à jour les storyboards. Sinon, vous devrez appeler CAnimationController::UpdateAnimationManager afin de diriger le gestionnaire d’animation pour mettre à jour les valeurs de toutes les variables d’animation.
 
-##  <a name="enableprioritycomparisonhandler"></a>  CAnimationController::EnablePriorityComparisonHandler
+## <a name="canimationcontrollerenableprioritycomparisonhandler"></a><a name="enableprioritycomparisonhandler"></a>CAnimationController::EnablePriorityComparisonHandler
 
-Définit ou libère le gestionnaire de comparaison de priorité à appeler pour déterminer si une table de montage séquentiel planifiée peut être annulée, terminée, tronquée ou compressée.
+Définit ou libère le gestionnaire de comparaison prioritaire à appeler pour déterminer si un storyboard prévu peut être annulé, conclu, coupé ou comprimé.
 
 ```
 virtual BOOL EnablePriorityComparisonHandler(DWORD dwHandlerType);
@@ -410,20 +410,20 @@ virtual BOOL EnablePriorityComparisonHandler(DWORD dwHandlerType);
 
 ### <a name="parameters"></a>Paramètres
 
-*dwHandlerType*<br/>
-Combinaison d’indicateurs UI_ANIMATION_PHT_ (consultez la section Notes), qui spécifie les gestionnaires à définir ou à libérer.
+*dwHandlerType dwHandlerType*<br/>
+Une combinaison de drapeaux UI_ANIMATION_PHT_ (voir remarques), qui précise les gestionnaires à définir ou à libérer.
 
 ### <a name="return-value"></a>Valeur de retour
 
-TRUE si le gestionnaire a été correctement défini ou libéré.
+VRAI si le gestionnaire a été réglé avec succès ou libéré.
 
 ### <a name="remarks"></a>Notes
 
-Lorsqu’un gestionnaire est défini (activé), l’animation Windows appelle les méthodes virtuelles suivantes en fonction de dwHandlerType: OnHasPriorityCancel, OnHasPriorityConclude, OnHasPriorityTrim, OnHasPriorityCompress. dwHandler peut être une combinaison des indicateurs suivants: UI_ANIMATION_PHT_NONE-Release All descripteurs UI_ANIMATION_PHT_CANCEL-SET CANCEL Comparison Handler UI_ANIMATION_PHT_CONCLUDE-Set conclut comparaison Handler UI_ANIMATION_PHT_COMPRESS-Set compress Comparison Handler UI_ANIMATION_PHT_TRIM-Set Trim compare Handler UI_ANIMATION_PHT_CANCEL_REMOVE-Remove Cancel compare Handler UI_ANIMATION_PHT_CONCLUDE_REMOVE-Remove conclut comparaison Handler UI_ANIMATION_PHT_COMPRESS_REMOVE-Remove compression Comparison Handler UI_ANIMATION_PHT _TRIM_REMOVE-supprimer le gestionnaire de comparaison de découpage
+Lorsqu’un gestionnaire est défini (activé) Windows Animation appelle les méthodes virtuelles suivantes en fonction de dwHandlerType: OnHasPriorityCancel, OnHasPriorityConclude, OnHasPriorityTrim, OnHasPriorityCompress. dwHandler peut être une combinaison des drapeaux suivants: UI_ANIMATION_PHT_NONE - libérer tous les gestionnaires UI_ANIMATION_PHT_CANCEL - définir Annuler le gestionnaire de comparaison UI_ANIMATION_PHT_CONCLUDE - définir Le gestionnaire de comparaison De conclusion UI_ANIMATION_PHT_COMPRESS - définir compresse gestionnaire de comparaison UI_ANIMATION_PHT_TRIM - définir Trim gestionnaire de comparaison UI_ANIMATION_PHT_CANCEL_REMOVE - supprimer Cancel gestionnaire de comparaison UI_ANIMATION_PHT_CONCLUDE_REMOVE - supprimer Le gestionnaire de comparaison Conclu UI_ANIMATION_PHT_COMPRESS_REMOVE - supprimer compress comparison gestionnaire UI_ANIMATION_PHT_TRIM_REMOVE - supprimer Trim gestionnaire de comparaison
 
-##  <a name="enablestoryboardeventhandler"></a>  CAnimationController::EnableStoryboardEventHandler
+## <a name="canimationcontrollerenablestoryboardeventhandler"></a><a name="enablestoryboardeventhandler"></a>CAnimationController::EnableStoryboardEventHandler
 
-Définit ou libère un gestionnaire pour l’état de la table de montage séquentiel et les événements de mise à jour.
+Définit ou libère un gestionnaire pour l’état du storyboard et mettre à jour les événements.
 
 ```
 virtual BOOL EnableStoryboardEventHandler(
@@ -433,23 +433,23 @@ virtual BOOL EnableStoryboardEventHandler(
 
 ### <a name="parameters"></a>Paramètres
 
-*nGroupID*<br/>
-Spécifie l’ID de groupe.
+*nGroupID (en anglais)*<br/>
+Spécifie l’ID du groupe.
 
 *bEnable*<br/>
-Spécifie s’il faut définir ou libérer un gestionnaire.
+Précise s’il faut régler ou libérer un gestionnaire.
 
 ### <a name="return-value"></a>Valeur de retour
 
-TRUE si le gestionnaire a été correctement défini ou libéré; FALSe si le groupe d’animation spécifié est maintenant trouvé ou si l’animation pour le groupe spécifié n’a pas été lancée et que son storyboard interne a la valeur NULL.
+VRAI si le gestionnaire a été réglé ou libéré avec succès; FALSE si le groupe d’animation spécifié est maintenant trouvé ou l’animation pour le groupe spécifié n’a pas été initiée et son storyboard interne est NULL.
 
 ### <a name="remarks"></a>Notes
 
-Lorsqu’un gestionnaire est défini (activé), les méthodes virtuelles OnStoryboardStatusChanges et OnStoryboardUpdated sont appelées par l’API d’animation Windows. Un gestionnaire doit être défini après l’appel de CAnimationController:: Animate pour le groupe d’animations spécifié, car il crée l’objet IUIAnimationStoryboard encapsulé.
+Lorsqu’un gestionnaire est défini (activé) Windows Animation API appelle OnStoryboardStatusChanges et OnStoryboardUpdated méthodes virtuelles. Un gestionnaire doit être placé après CAnimationController::Animate a été appelé pour le groupe d’animation spécifié, car il crée encapsulé IUIAnimationStoryboard objet.
 
-##  <a name="findanimationgroup"></a>  CAnimationController::FindAnimationGroup
+## <a name="canimationcontrollerfindanimationgroup"></a><a name="findanimationgroup"></a>CAnimationController::FindAnimationGroup
 
-Recherche un groupe d’animations par son ID de groupe.
+Trouve un groupe d’animation par son id de groupe.
 
 ```
 CAnimationGroup* FindAnimationGroup(UINT32 nGroupID);
@@ -458,23 +458,23 @@ CAnimationGroup* FindAnimationGroup(IUIAnimationStoryboard* pStoryboard);
 
 ### <a name="parameters"></a>Paramètres
 
-*nGroupID*<br/>
+*nGroupID (en anglais)*<br/>
 Spécifie un GroupID.
 
-*pStoryboard*<br/>
-Pointeur vers une table de montage séquentiel.
+*pStoryboard (en)*<br/>
+Un pointeur à un storyboard.
 
 ### <a name="return-value"></a>Valeur de retour
 
-Pointeur vers le groupe d’animation ou NULL si le groupe avec l’ID spécifié est introuvable.
+Un pointeur vers le groupe d’animation ou NULL si le groupe avec ID spécifié n’est pas trouvé.
 
 ### <a name="remarks"></a>Notes
 
-Utilisez cette méthode pour rechercher un groupe d’animations au moment de l’exécution. Un groupe est créé et ajouté à la liste interne des groupes d’animations lorsqu’un premier objet d’animation avec GroupID particulier est ajouté au contrôleur d’animation.
+Utilisez cette méthode pour trouver un groupe d’animation à l’heure de l’exécution. Un groupe est créé et ajouté à la liste interne des groupes d’animation lorsqu’un premier objet d’animation avec GroupID particulier est ajouté au contrôleur d’animation.
 
-##  <a name="findanimationobject"></a>  CAnimationController::FindAnimationObject
+## <a name="canimationcontrollerfindanimationobject"></a><a name="findanimationobject"></a>CAnimationController::FindAnimationObject
 
-Recherche un objet d’animation contenant une variable d’animation spécifiée.
+Trouve un objet d’animation contenant une variable d’animation spécifiée.
 
 ```
 BOOL FindAnimationObject(
@@ -486,33 +486,33 @@ BOOL FindAnimationObject(
 ### <a name="parameters"></a>Paramètres
 
 *pVariable*<br/>
-Pointeur vers une variable d’animation.
+Un pointeur à la variable d’animation.
 
 *ppObject*<br/>
-Sortie. Contient un pointeur vers un objet d’animation ou NULL.
+Sortie : Contient un pointeur à l’objet d’animation ou NULL.
 
-*ppGroup*<br/>
-Sortie. Contient un pointeur vers un groupe d’animation qui contient l’objet d’animation, ou NULL.
+*ppGroup (en anglais)*<br/>
+Sortie : Contient un pointeur au groupe d’animation qui détient l’objet d’animation, ou NULL.
 
 ### <a name="return-value"></a>Valeur de retour
 
-TRUE si l’objet a été trouvé; Sinon, FALSe.
+VRAI si l’objet a été trouvé; autrement FALSE.
 
 ### <a name="remarks"></a>Notes
 
-Appelée à partir des gestionnaires d’événements lorsqu’il est nécessaire de trouver un objet d’animation à partir de la variable d’animation entrante.
+Appelé à partir de gestionnaires d’événements quand il est nécessaire de trouver un objet d’animation à partir de la variable d’animation entrante.
 
-##  <a name="g_keyframestoryboardstart"></a>  CAnimationController::gkeyframeStoryboardStart
+## <a name="canimationcontrollergkeyframestoryboardstart"></a><a name="g_keyframestoryboardstart"></a>CAnimationController::gkeyframeStoryboardStart
 
-Image clé qui représente le début du Storyboard.
+Un cadre clé qui représente le début du storyboard.
 
 ```
 static CBaseKeyFrame gkeyframeStoryboardStart;
 ```
 
-##  <a name="getkeyframestoryboardstart"></a>  CAnimationController::GetKeyframeStoryboardStart
+## <a name="canimationcontrollergetkeyframestoryboardstart"></a><a name="getkeyframestoryboardstart"></a>CAnimationController::GetKeyframeStoryboardStart
 
-Retourne une image clé qui identifie le début du Storyboard.
+Retourne un cadre clé qui identifie le début du storyboard.
 
 ```
 static CBaseKeyFrame* GetKeyframeStoryboardStart();
@@ -520,15 +520,15 @@ static CBaseKeyFrame* GetKeyframeStoryboardStart();
 
 ### <a name="return-value"></a>Valeur de retour
 
-Pointeur vers l’image clé de base, qui identifie le début du Storyboard.
+Un pointeur pour base de keyframe, qui identifie le début du storyboard.
 
 ### <a name="remarks"></a>Notes
 
-Obtenez cette image clé pour baser les autres images clés ou transitions au moment du démarrage d’une table de montage séquentiel.
+Obtenez ce cadre clé pour baser d’autres cadres clés ou transitions sur le moment où un storyboard commence.
 
-##  <a name="getuianimationmanager"></a>  CAnimationController::GetUIAnimationManager
+## <a name="canimationcontrollergetuianimationmanager"></a><a name="getuianimationmanager"></a>CAnimationController::GetUIAnimationManager
 
-Fournit l’accès à l’objet IUIAnimationManager encapsulé.
+Donne accès à l’objet IUIAnimationManager encapsulé.
 
 ```
 IUIAnimationManager* GetUIAnimationManager();
@@ -536,15 +536,15 @@ IUIAnimationManager* GetUIAnimationManager();
 
 ### <a name="return-value"></a>Valeur de retour
 
-Pointeur vers l’interface IUIAnimationManager ou NULL, si la création du gestionnaire d’animations a échoué.
+Un pointeur à l’interface IUIAnimationManager ou NULL, si la création de gestionnaire d’animation a échoué.
 
 ### <a name="remarks"></a>Notes
 
-Si le système d’exploitation actuel ne prend pas en charge l’API d’animation Windows, cette méthode retourne NULL et après que tous les appels suivants sur CAnimationController:: IsValid retournent la valeur FALSe. Vous devrez peut-être accéder à IUIAnimationManager pour appeler ses méthodes d’interface, qui ne sont pas encapsulées par le contrôleur d’animation.
+Si le système d’exploitation actuel ne prend pas en charge l’API d’animation Windows, cette méthode renvoie NULL et après cela tous les appels ultérieurs sur CAnimationController::IsValid retour FALSE. Vous devrez peut-être accéder à IUIAnimationManager afin d’appeler ses méthodes d’interface, qui ne sont pas enveloppées par le contrôleur d’animation.
 
-##  <a name="getuianimationtimer"></a>  CAnimationController::GetUIAnimationTimer
+## <a name="canimationcontrollergetuianimationtimer"></a><a name="getuianimationtimer"></a>CAnimationController::GetUIAnimationTimer
 
-Fournit l’accès à l’objet IUIAnimationTimer encapsulé.
+Donne accès à l’objet IUIAnimationTimer encapsulé.
 
 ```
 IUIAnimationTimer* GetUIAnimationTimer();
@@ -552,15 +552,15 @@ IUIAnimationTimer* GetUIAnimationTimer();
 
 ### <a name="return-value"></a>Valeur de retour
 
-Pointeur vers l’interface IUIAnimationTimer ou NULL, si la création du minuteur d’animation a échoué.
+Un pointeur à l’interface IUIAnimationTimer ou NULL, si la création d’une minuterie d’animation a échoué.
 
 ### <a name="remarks"></a>Notes
 
-Si le système d’exploitation actuel ne prend pas en charge l’API d’animation Windows, cette méthode retourne NULL et après que tous les appels suivants sur CAnimationController:: IsValid retournent la valeur FALSe.
+Si le système d’exploitation actuel ne prend pas en charge l’API d’animation Windows, cette méthode renvoie NULL et après cela tous les appels ultérieurs sur CAnimationController::IsValid retour FALSE.
 
-##  <a name="getuitransitionfactory"></a>  CAnimationController::GetUITransitionFactory
+## <a name="canimationcontrollergetuitransitionfactory"></a><a name="getuitransitionfactory"></a>CAnimationController::GetUITransitionFactory
 
-Pointeur vers l’interface IUIAnimationTransitionFactory ou NULL, en cas d’échec de la création de la bibliothèque de transition.
+Un pointeur à l’interface IUIAnimationTransitionFactory ou NULL, si la création de la bibliothèque de transition a échoué.
 
 ```
 IUIAnimationTransitionFactory* GetUITransitionFactory();
@@ -568,15 +568,15 @@ IUIAnimationTransitionFactory* GetUITransitionFactory();
 
 ### <a name="return-value"></a>Valeur de retour
 
-Pointeur vers IUIAnimationTransitionFactory ou NULL, en cas d’échec de la création de la fabrique de transition.
+Un pointeur à IUIAnimationTransitionFactory ou NULL, si la création de l’usine de transition a échoué.
 
 ### <a name="remarks"></a>Notes
 
-Si le système d’exploitation actuel ne prend pas en charge l’API d’animation Windows, cette méthode retourne NULL et après que tous les appels suivants sur CAnimationController:: IsValid retournent la valeur FALSe.
+Si le système d’exploitation actuel ne prend pas en charge l’API d’animation Windows, cette méthode renvoie NULL et après cela tous les appels ultérieurs sur CAnimationController::IsValid retour FALSE.
 
-##  <a name="getuitransitionlibrary"></a>  CAnimationController::GetUITransitionLibrary
+## <a name="canimationcontrollergetuitransitionlibrary"></a><a name="getuitransitionlibrary"></a>CAnimationController::GetUITransitionLibrary
 
-Fournit l’accès à l’objet IUIAnimationTransitionLibrary encapsulé.
+Donne accès à l’objet IUIAnimationTransitionTransition encapsulé.
 
 ```
 IUIAnimationTransitionLibrary* GetUITransitionLibrary();
@@ -584,15 +584,15 @@ IUIAnimationTransitionLibrary* GetUITransitionLibrary();
 
 ### <a name="return-value"></a>Valeur de retour
 
-Pointeur vers l’interface IUIAnimationTransitionLibrary ou NULL, en cas d’échec de la création de la bibliothèque de transition.
+Un pointeur à IUIAnimationTransitionTransitionL’interfacelibérale ou NULL, si la création de la bibliothèque de transition a échoué.
 
 ### <a name="remarks"></a>Notes
 
-Si le système d’exploitation actuel ne prend pas en charge l’API d’animation Windows, cette méthode retourne NULL et après que tous les appels suivants sur CAnimationController:: IsValid retournent la valeur FALSe.
+Si le système d’exploitation actuel ne prend pas en charge l’API d’animation Windows, cette méthode renvoie NULL et après cela tous les appels ultérieurs sur CAnimationController::IsValid retour FALSE.
 
-##  <a name="isanimationinprogress"></a>CAnimationController:: IsAnimationInProgress
+## <a name="canimationcontrollerisanimationinprogress"></a><a name="isanimationinprogress"></a>CAnimationController::IsAnimationInProgress
 
-Indique si au moins un groupe lit l’animation.
+Indique si au moins un groupe joue de l’animation.
 
 ```
 virtual BOOL IsAnimationInProgress();
@@ -600,13 +600,13 @@ virtual BOOL IsAnimationInProgress();
 
 ### <a name="return-value"></a>Valeur de retour
 
-TRUE s’il existe une animation en cours pour ce contrôleur d’animation; Sinon, FALSe.
+VRAI s’il y a une animation en cours pour ce contrôleur d’animation ; autrement FALSE.
 
 ### <a name="remarks"></a>Notes
 
-Vérifie l’état du gestionnaire d’animations et retourne la valeur TRUE si l’État est UI_ANIMATION_MANAGER_BUSY.
+Vérifie l’état du gestionnaire d’animation et renvoie TRUE si le statut est UI_ANIMATION_MANAGER_BUSY.
 
-##  <a name="isvalid"></a>  CAnimationController::IsValid
+## <a name="canimationcontrollerisvalid"></a><a name="isvalid"></a>CAnimationController::IsValid
 
 Indique si le contrôleur d’animation est valide.
 
@@ -616,71 +616,71 @@ BOOL IsValid() const;
 
 ### <a name="return-value"></a>Valeur de retour
 
-TRUE si le contrôleur d’animation est valide; Sinon, FALSe.
+VRAI si le contrôleur d’animation est valide; autrement FALSE.
 
 ### <a name="remarks"></a>Notes
 
-Cette méthode retourne la valeur FALSe uniquement si l’API d’animation Windows n’est pas prise en charge sur le système d’exploitation actuel et que la création du gestionnaire d’animations a échoué, car elle n’est pas inscrite. Vous devez appeler GetUIAnimationManager au moins une fois après l’initialisation des bibliothèques COM pour provoquer le paramétrage de cet indicateur.
+Cette méthode ne renvoie FALSE que si Windows Animation API n’est pas pris en charge sur le système d’exploitation actuel et la création du gestionnaire d’animation a échoué parce qu’elle n’est pas enregistrée. Vous devez appeler GetUIAnimationManager au moins une fois après l’initialisation des bibliothèques COM pour provoquer le réglage de ce drapeau.
 
-##  <a name="m_bisvalid"></a>  CAnimationController::m_bIsValid
+## <a name="canimationcontrollerm_bisvalid"></a><a name="m_bisvalid"></a>CAnimationController::m_bIsValid
 
-Spécifie si un contrôleur d’animation est valide ou non. Ce membre a la valeur FALSe si le système d’exploitation actuel ne prend pas en charge l’API d’animation Windows.
+Précise si un contrôleur d’animation est valide ou non. Ce membre est configuré à FALSE si le système d’exploitation actuel ne prend pas en charge l’API d’animation Windows.
 
 ```
 BOOL m_bIsValid;
 ```
 
-##  <a name="m_lstanimationgroups"></a>  CAnimationController::m_lstAnimationGroups
+## <a name="canimationcontrollerm_lstanimationgroups"></a><a name="m_lstanimationgroups"></a>CAnimationController::m_lstAnimationGroups
 
-Liste des groupes d’animations qui appartiennent à ce contrôleur d’animation.
+Une liste de groupes d’animation qui appartiennent à ce contrôleur d’animation.
 
 ```
 CList<CAnimationGroup*, CAnimationGroup*> m_lstAnimationGroups;
 ```
 
-##  <a name="m_panimationmanager"></a>  CAnimationController::m_pAnimationManager
+## <a name="canimationcontrollerm_panimationmanager"></a><a name="m_panimationmanager"></a>CAnimationController::m_pAnimationManager
 
-Stocke un pointeur vers l’objet COM du gestionnaire d’animations.
+Stocke un pointeur vers l’objet Animation Manager COM.
 
 ```
 ATL::CComPtr<IUIAnimationManager> m_pAnimationManager;
 ```
 
-##  <a name="m_panimationtimer"></a>  CAnimationController::m_pAnimationTimer
+## <a name="canimationcontrollerm_panimationtimer"></a><a name="m_panimationtimer"></a>CAnimationController::m_pAnimationTimer
 
-Stocke un pointeur vers l’objet COM du minuteur d’animation.
+Stocke un pointeur vers l’objet Animation Timer COM.
 
 ```
 ATL::CComPtr<IUIAnimationTimer> m_pAnimationTimer;
 ```
 
-##  <a name="m_prelatedwnd"></a>  CAnimationController::m_pRelatedWnd
+## <a name="canimationcontrollerm_prelatedwnd"></a><a name="m_prelatedwnd"></a>CAnimationController::m_pRelatedWnd
 
-Pointeur vers un objet CWnd connexe, qui peut être redessiné automatiquement lorsque l’état du gestionnaire d’animations a changé ou lorsque l’événement de publication de mise à jour s’est produit. Peut avoir la valeur NULL.
+Un pointeur vers un objet CWnd connexe, qui peut être automatiquement redessiné lorsque l’état du gestionnaire d’animation a changé, ou l’événement de mise à jour post s’est produit. Sa valeur peut être NULL.
 
 ```
 CWnd* m_pRelatedWnd;
 ```
 
-##  <a name="m_ptransitionfactory"></a>  CAnimationController::m_pTransitionFactory
+## <a name="canimationcontrollerm_ptransitionfactory"></a><a name="m_ptransitionfactory"></a>CAnimationController::m_pTransitionFactory
 
-Stocke un pointeur vers l’objet COM de la fabrique de transition.
+Stocke un pointeur vers l’objet Transition Factory COM.
 
 ```
 ATL::CComPtr<IUIAnimationTransitionFactory> m_pTransitionFactory;
 ```
 
-##  <a name="m_ptransitionlibrary"></a>  CAnimationController::m_pTransitionLibrary
+## <a name="canimationcontrollerm_ptransitionlibrary"></a><a name="m_ptransitionlibrary"></a>CAnimationController::m_pTransitionLibrary
 
-Stocke un pointeur vers l’objet COM de la bibliothèque de transitions.
+Stocke un pointeur vers l’objet TRANSITION Library COM.
 
 ```
 ATL::CComPtr<IUIAnimationTransitionLibrary> m_pTransitionLibrary;
 ```
 
-##  <a name="onafterschedule"></a>  CAnimationController::OnAfterSchedule
+## <a name="canimationcontrolleronafterschedule"></a><a name="onafterschedule"></a>CAnimationController::OnAfterSchedule
 
-Appelé par le Framework lorsqu’une animation pour le groupe spécifié vient d’être planifiée.
+Appelé par le cadre quand une animation pour le groupe spécifié vient d’être programmée.
 
 ```
 virtual void OnAfterSchedule(CAnimationGroup* pGroup);
@@ -688,16 +688,16 @@ virtual void OnAfterSchedule(CAnimationGroup* pGroup);
 
 ### <a name="parameters"></a>Paramètres
 
-*pGroup*<br/>
-Pointeur vers un groupe d’animation, qui a été planifié.
+*pGroup (en anglais)*<br/>
+Un pointeur pour un groupe d’animation, qui a été programmé.
 
 ### <a name="remarks"></a>Notes
 
-L’implémentation par défaut supprime les images clés du groupe spécifié et les transitions à partir des variables d’animation qui appartiennent au groupe spécifié. Peut être substitué dans une classe dérivée pour prendre des mesures supplémentaires lors de la planification de l’animation.
+La mise en œuvre par défaut supprime les cadres clés du groupe spécifié et les transitions des variables d’animation qui appartiennent au groupe spécifié. Peut être remplacé dans une classe dérivée pour prendre toutes les mesures supplémentaires sur le calendrier d’animation.
 
-##  <a name="onanimationintegervaluechanged"></a>  CAnimationController::OnAnimationIntegerValueChanged
+## <a name="canimationcontrolleronanimationintegervaluechanged"></a><a name="onanimationintegervaluechanged"></a>CAnimationController::OnAnimationIntegerValueChanged
 
-Appelé par l’infrastructure lorsque la valeur entière de la variable d’animation a changé.
+Appelé par le cadre lorsque la valeur integer de la variable d’animation a changé.
 
 ```
 virtual void OnAnimationIntegerValueChanged(
@@ -710,16 +710,16 @@ virtual void OnAnimationIntegerValueChanged(
 
 ### <a name="parameters"></a>Paramètres
 
-*pGroup*<br/>
-Pointeur vers un groupe d’animation qui contient un objet d’animation dont la valeur a été modifiée.
+*pGroup (en anglais)*<br/>
+Un pointeur pour un groupe d’animation qui détient un objet d’animation dont la valeur a changé.
 
 *pObject*<br/>
-Pointeur vers un objet d’animation qui contient une variable d’animation dont la valeur a été modifiée.
+Pointeur d’un objet d’animation qui contient une variable d’animation dont la valeur a changé.
 
 *variable*<br/>
-Pointeur vers une variable d’animation.
+Un pointeur à une variable d’animation.
 
-*newValue*<br/>
+*Newvalue*<br/>
 Spécifie une nouvelle valeur.
 
 *prevValue*<br/>
@@ -727,11 +727,11 @@ Spécifie la valeur précédente.
 
 ### <a name="remarks"></a>Notes
 
-Cette méthode est appelée si vous activez les événements de variable d’animation avec EnableIntegerValueChangedEvent appelé pour une variable d’animation ou un objet d’animation spécifique. Elle peut être substituée dans une classe dérivée pour prendre des mesures propres à l'application.
+Cette méthode s’appelle si vous activez des événements variables d’animation avec EnableIntegerValueChangedEvent appelé pour une variable d’animation spécifique ou un objet d’animation. Elle peut être substituée dans une classe dérivée pour prendre des mesures propres à l'application.
 
-##  <a name="onanimationmanagerstatuschanged"></a>  CAnimationController::OnAnimationManagerStatusChanged
+## <a name="canimationcontrolleronanimationmanagerstatuschanged"></a><a name="onanimationmanagerstatuschanged"></a>CAnimationController::OnAnimationManagerStatusChanged
 
-Appelée par l’infrastructure en réponse à l’événement StatusChanged à partir du gestionnaire d’animations.
+Appelé par le cadre en réponse à l’événement StatusChanged du directeur de l’animation.
 
 ```
 virtual void OnAnimationManagerStatusChanged(
@@ -741,19 +741,19 @@ virtual void OnAnimationManagerStatusChanged(
 
 ### <a name="parameters"></a>Paramètres
 
-*newStatus*<br/>
-Nouvel État du gestionnaire d’animations.
+*nouveauStatus*<br/>
+Nouveau statut de directeur d’animation.
 
-*previousStatus*<br/>
-État du gestionnaire d’animations précédent.
+*précédentStatus*<br/>
+Statut de directeur d’animation précédent.
 
 ### <a name="remarks"></a>Notes
 
-Cette méthode est appelée si vous activez les événements du gestionnaire d’animations avec EnableAnimationManagerEvent. Elle peut être substituée dans une classe dérivée pour prendre des mesures propres à l'application. L’implémentation par défaut met à jour une fenêtre connexe si elle a été définie avec SetRelatedWnd.
+Cette méthode s’appelle si vous activez des événements de gestionnaire d’animation avec EnableAnimationManagerEvent. Elle peut être substituée dans une classe dérivée pour prendre des mesures propres à l'application. L’implémentation par défaut met à jour une fenêtre connexe si elle a été définie avec SetRelatedWnd.
 
-##  <a name="onanimationtimerpostupdate"></a>  CAnimationController::OnAnimationTimerPostUpdate
+## <a name="canimationcontrolleronanimationtimerpostupdate"></a><a name="onanimationtimerpostupdate"></a>CAnimationController::OnAnimationTimerPostUpdate
 
-Appelé par l’infrastructure une fois la mise à jour d’une animation terminée.
+Appelé par le cadre après une mise à jour d’animation est terminée.
 
 ```
 virtual void OnAnimationTimerPostUpdate();
@@ -761,11 +761,11 @@ virtual void OnAnimationTimerPostUpdate();
 
 ### <a name="remarks"></a>Notes
 
-Cette méthode est appelée si vous activez les gestionnaires d’événements de minuteur à l’aide de EnableAnimationTimerEventHandler. Elle peut être substituée dans une classe dérivée pour prendre des mesures propres à l'application.
+Cette méthode s’appelle si vous activez les gestionnaires d’événements minuteurs à l’aide de EnableAnimationTimerEventHandler. Elle peut être substituée dans une classe dérivée pour prendre des mesures propres à l'application.
 
-##  <a name="onanimationtimerpreupdate"></a>  CAnimationController::OnAnimationTimerPreUpdate
+## <a name="canimationcontrolleronanimationtimerpreupdate"></a><a name="onanimationtimerpreupdate"></a>CAnimationController::OnAnimationTimerPreUpdate
 
-Appelé par le Framework avant le début d’une mise à jour d’animation.
+Appelé par le cadre avant une mise à jour d’animation commence.
 
 ```
 virtual void OnAnimationTimerPreUpdate();
@@ -773,11 +773,11 @@ virtual void OnAnimationTimerPreUpdate();
 
 ### <a name="remarks"></a>Notes
 
-Cette méthode est appelée si vous activez les gestionnaires d’événements de minuteur à l’aide de EnableAnimationTimerEventHandler. Elle peut être substituée dans une classe dérivée pour prendre des mesures propres à l'application.
+Cette méthode s’appelle si vous activez les gestionnaires d’événements minuteurs à l’aide de EnableAnimationTimerEventHandler. Elle peut être substituée dans une classe dérivée pour prendre des mesures propres à l'application.
 
-##  <a name="onanimationtimerrenderingtooslow"></a>  CAnimationController::OnAnimationTimerRenderingTooSlow
+## <a name="canimationcontrolleronanimationtimerrenderingtooslow"></a><a name="onanimationtimerrenderingtooslow"></a>CAnimationController::OnAnimationTimerenderingTooSlow
 
-Appelée par l’infrastructure lorsque la fréquence d’images de rendu d’une animation passe sous une fréquence d’images minimale désirable.
+Appelé par le cadre lorsque le taux d’image de rendu pour une animation tombe en dessous d’un taux d’image minimum souhaitable.
 
 ```
 virtual void OnAnimationTimerRenderingTooSlow(UINT32 fps);
@@ -785,16 +785,16 @@ virtual void OnAnimationTimerRenderingTooSlow(UINT32 fps);
 
 ### <a name="parameters"></a>Paramètres
 
-*fps*<br/>
-Fréquence d’images actuelle en images par seconde.
+*Fps*<br/>
+Le taux d’image actuel dans les images par seconde.
 
 ### <a name="remarks"></a>Notes
 
-Cette méthode est appelée si vous activez les gestionnaires d’événements de minuteur à l’aide de EnableAnimationTimerEventHandler. Elle peut être substituée dans une classe dérivée pour prendre des mesures propres à l'application. La fréquence d’images minimale recommandée est spécifiée en appelant IUIAnimationTimer:: SetFrameRateThreshold.
+Cette méthode s’appelle si vous activez les gestionnaires d’événements minuteurs à l’aide de EnableAnimationTimerEventHandler. Elle peut être substituée dans une classe dérivée pour prendre des mesures propres à l'application. Le taux d’image minimum souhaitable est spécifié en appelant IUIAnimationTimer::SetFrameRateThreshold.
 
-##  <a name="onanimationvaluechanged"></a>  CAnimationController::OnAnimationValueChanged
+## <a name="canimationcontrolleronanimationvaluechanged"></a><a name="onanimationvaluechanged"></a>CAnimationController::OnAnimationValueChanged
 
-Appelé par le Framework lorsque la valeur de la variable d’animation a changé.
+Appelé par le cadre lorsque la valeur de la variable d’animation a changé.
 
 ```
 virtual void OnAnimationValueChanged(
@@ -807,16 +807,16 @@ virtual void OnAnimationValueChanged(
 
 ### <a name="parameters"></a>Paramètres
 
-*pGroup*<br/>
-Pointeur vers un groupe d’animation qui contient un objet d’animation dont la valeur a été modifiée.
+*pGroup (en anglais)*<br/>
+Un pointeur pour un groupe d’animation qui détient un objet d’animation dont la valeur a changé.
 
 *pObject*<br/>
-Pointeur vers un objet d’animation qui contient une variable d’animation dont la valeur a été modifiée.
+Pointeur d’un objet d’animation qui contient une variable d’animation dont la valeur a changé.
 
 *variable*<br/>
-Pointeur vers une variable d’animation.
+Un pointeur à une variable d’animation.
 
-*newValue*<br/>
+*Newvalue*<br/>
 Spécifie une nouvelle valeur.
 
 *prevValue*<br/>
@@ -824,11 +824,11 @@ Spécifie la valeur précédente.
 
 ### <a name="remarks"></a>Notes
 
-Cette méthode est appelée si vous activez les événements de variable d’animation avec EnableValueChangedEvent appelé pour une variable d’animation ou un objet d’animation spécifique. Elle peut être substituée dans une classe dérivée pour prendre des mesures propres à l'application.
+Cette méthode s’appelle si vous activez des événements variables d’animation avec EnableValueChangedEvent appelé pour une variable d’animation spécifique ou un objet d’animation. Elle peut être substituée dans une classe dérivée pour prendre des mesures propres à l'application.
 
-##  <a name="onbeforeanimationstart"></a>  CAnimationController::OnBeforeAnimationStart
+## <a name="canimationcontrolleronbeforeanimationstart"></a><a name="onbeforeanimationstart"></a>CAnimationController::OnBeforeAnimationStart
 
-Appelée par le Framework juste avant que l’animation soit planifiée.
+Appelé par le cadre juste avant l’animation est prévue.
 
 ```
 virtual void OnBeforeAnimationStart(CAnimationGroup* pGroup);
@@ -836,14 +836,14 @@ virtual void OnBeforeAnimationStart(CAnimationGroup* pGroup);
 
 ### <a name="parameters"></a>Paramètres
 
-*pGroup*<br/>
-Pointeur vers un groupe d’animation dont l’animation est sur le point de démarrer.
+*pGroup (en anglais)*<br/>
+Un pointeur pour un groupe d’animation dont l’animation est sur le point de commencer.
 
 ### <a name="remarks"></a>Notes
 
-Cet appel est routé à CWnd connexe et peut être substitué dans une classe dérivée pour exécuter des actions supplémentaires avant le démarrage de l’animation pour le groupe spécifié.
+Cet appel est acheminé vers CWnd connexe et peut être remplacé dans une classe dérivée pour effectuer toutes les actions supplémentaires avant que l’animation commence pour le groupe spécifié.
 
-##  <a name="onhasprioritycancel"></a>  CAnimationController::OnHasPriorityCancel
+## <a name="canimationcontrolleronhasprioritycancel"></a><a name="onhasprioritycancel"></a>CAnimationController::OnHasPriorityCancel
 
 Appelé par l'infrastructure pour résoudre les conflits de planification.
 
@@ -862,7 +862,7 @@ Groupe propriétaire du plan conceptuel actuellement planifié.
 *pGroupNew*<br/>
 Groupe propriétaire du nouveau plan conceptuel dont la planification est en conflit avec celle du plan conceptuel dont pGroupScheduled est propriétaire.
 
-*priorityEffect*<br/>
+*prioritéEffect*<br/>
 Effet potentiel sur pGroupNew si pGroupScheduled a une priorité plus élevée.
 
 ### <a name="return-value"></a>Valeur de retour
@@ -871,9 +871,9 @@ Doit retourner TRUE si le plan conceptuel détenu par pGroupNew est prioritaire.
 
 ### <a name="remarks"></a>Notes
 
-Cette méthode est appelée si vous activez les événements de comparaison de priorité à l'aide de CAnimationController::EnablePriorityComparisonHandler et que vous spécifiez UI_ANIMATION_PHT_CANCEL. Elle peut être substituée dans une classe dérivée pour prendre des mesures propres à l'application. Pour plus d’informations sur la [gestion des conflits](/windows/win32/api/uianimation/nf-uianimation-iuianimationprioritycomparison-haspriority), consultez la documentation de l’API d’animation Windows.
+Cette méthode est appelée si vous activez les événements de comparaison de priorité à l'aide de CAnimationController::EnablePriorityComparisonHandler et que vous spécifiez UI_ANIMATION_PHT_CANCEL. Elle peut être substituée dans une classe dérivée pour prendre des mesures propres à l'application. Lire la documentation de Windows Animation API pour plus d’informations sur [la gestion des conflits](/windows/win32/api/uianimation/nf-uianimation-iuianimationprioritycomparison-haspriority).
 
-##  <a name="onhasprioritycompress"></a>  CAnimationController::OnHasPriorityCompress
+## <a name="canimationcontrolleronhasprioritycompress"></a><a name="onhasprioritycompress"></a>CAnimationController::OnHasPriorityCompress
 
 Appelé par l'infrastructure pour résoudre les conflits de planification.
 
@@ -892,7 +892,7 @@ Groupe propriétaire du plan conceptuel actuellement planifié.
 *pGroupNew*<br/>
 Groupe propriétaire du nouveau plan conceptuel dont la planification est en conflit avec celle du plan conceptuel dont pGroupScheduled est propriétaire.
 
-*priorityEffect*<br/>
+*prioritéEffect*<br/>
 Effet potentiel sur pGroupNew si pGroupScheduled a une priorité plus élevée.
 
 ### <a name="return-value"></a>Valeur de retour
@@ -901,9 +901,9 @@ Doit retourner TRUE si le plan conceptuel détenu par pGroupNew est prioritaire.
 
 ### <a name="remarks"></a>Notes
 
-Cette méthode est appelée si vous activez les événements de comparaison de priorité à l'aide de CAnimationController::EnablePriorityComparisonHandler et que vous spécifiez UI_ANIMATION_PHT_COMPRESS. Elle peut être substituée dans une classe dérivée pour prendre des mesures propres à l'application. Pour plus d’informations sur la [gestion des conflits](/windows/win32/api/uianimation/nf-uianimation-iuianimationprioritycomparison-haspriority), consultez la documentation de l’API d’animation Windows.
+Cette méthode est appelée si vous activez les événements de comparaison de priorité à l'aide de CAnimationController::EnablePriorityComparisonHandler et que vous spécifiez UI_ANIMATION_PHT_COMPRESS. Elle peut être substituée dans une classe dérivée pour prendre des mesures propres à l'application. Lire la documentation de Windows Animation API pour plus d’informations sur [la gestion des conflits](/windows/win32/api/uianimation/nf-uianimation-iuianimationprioritycomparison-haspriority).
 
-##  <a name="onhaspriorityconclude"></a>  CAnimationController::OnHasPriorityConclude
+## <a name="canimationcontrolleronhaspriorityconclude"></a><a name="onhaspriorityconclude"></a>CAnimationController::OnHasPriorityConclude
 
 Appelé par l'infrastructure pour résoudre les conflits de planification.
 
@@ -922,7 +922,7 @@ Groupe propriétaire du plan conceptuel actuellement planifié.
 *pGroupNew*<br/>
 Groupe propriétaire du nouveau plan conceptuel dont la planification est en conflit avec celle du plan conceptuel dont pGroupScheduled est propriétaire.
 
-*priorityEffect*<br/>
+*prioritéEffect*<br/>
 Effet potentiel sur pGroupNew si pGroupScheduled a une priorité plus élevée.
 
 ### <a name="return-value"></a>Valeur de retour
@@ -931,9 +931,9 @@ Doit retourner TRUE si le plan conceptuel détenu par pGroupNew est prioritaire.
 
 ### <a name="remarks"></a>Notes
 
-Cette méthode est appelée si vous activez les événements de comparaison de priorité à l'aide de CAnimationController::EnablePriorityComparisonHandler et que vous spécifiez UI_ANIMATION_PHT_CONCLUDE. Elle peut être substituée dans une classe dérivée pour prendre des mesures propres à l'application. Pour plus d’informations sur la [gestion des conflits](/windows/win32/api/uianimation/nf-uianimation-iuianimationprioritycomparison-haspriority), consultez la documentation de l’API d’animation Windows.
+Cette méthode est appelée si vous activez les événements de comparaison de priorité à l'aide de CAnimationController::EnablePriorityComparisonHandler et que vous spécifiez UI_ANIMATION_PHT_CONCLUDE. Elle peut être substituée dans une classe dérivée pour prendre des mesures propres à l'application. Lire la documentation de Windows Animation API pour plus d’informations sur [la gestion des conflits](/windows/win32/api/uianimation/nf-uianimation-iuianimationprioritycomparison-haspriority).
 
-##  <a name="onhasprioritytrim"></a>  CAnimationController::OnHasPriorityTrim
+## <a name="canimationcontrolleronhasprioritytrim"></a><a name="onhasprioritytrim"></a>CAnimationController::OnHasPriorityTrim
 
 Appelé par l'infrastructure pour résoudre les conflits de planification.
 
@@ -952,7 +952,7 @@ Groupe propriétaire du plan conceptuel actuellement planifié.
 *pGroupNew*<br/>
 Groupe propriétaire du nouveau plan conceptuel dont la planification est en conflit avec celle du plan conceptuel dont pGroupScheduled est propriétaire.
 
-*priorityEffect*<br/>
+*prioritéEffect*<br/>
 Effet potentiel sur pGroupNew si pGroupScheduled a une priorité plus élevée.
 
 ### <a name="return-value"></a>Valeur de retour
@@ -961,11 +961,11 @@ Doit retourner TRUE si le plan conceptuel détenu par pGroupNew est prioritaire.
 
 ### <a name="remarks"></a>Notes
 
-Cette méthode est appelée si vous activez les événements de comparaison de priorité à l'aide de CAnimationController::EnablePriorityComparisonHandler et que vous spécifiez UI_ANIMATION_PHT_TRIM. Elle peut être substituée dans une classe dérivée pour prendre des mesures propres à l'application. Pour plus d’informations sur la [gestion des conflits](/windows/win32/api/uianimation/nf-uianimation-iuianimationprioritycomparison-haspriority), consultez la documentation de l’API d’animation Windows.
+Cette méthode est appelée si vous activez les événements de comparaison de priorité à l'aide de CAnimationController::EnablePriorityComparisonHandler et que vous spécifiez UI_ANIMATION_PHT_TRIM. Elle peut être substituée dans une classe dérivée pour prendre des mesures propres à l'application. Lire la documentation de Windows Animation API pour plus d’informations sur [la gestion des conflits](/windows/win32/api/uianimation/nf-uianimation-iuianimationprioritycomparison-haspriority).
 
-##  <a name="onstoryboardstatuschanged"></a>  CAnimationController::OnStoryboardStatusChanged
+## <a name="canimationcontrolleronstoryboardstatuschanged"></a><a name="onstoryboardstatuschanged"></a>CAnimationController::OnStoryboardStatusChanged
 
-Appelé par le Framework lorsque l’état de la table de montage séquentiel a changé.
+Appelé par le cadre lorsque le statut storyboard a changé.
 
 ```
 virtual void OnStoryboardStatusChanged(
@@ -976,22 +976,22 @@ virtual void OnStoryboardStatusChanged(
 
 ### <a name="parameters"></a>Paramètres
 
-*pGroup*<br/>
-Pointeur vers un groupe d’animation qui possède le Storyboard dont l’État a changé.
+*pGroup (en anglais)*<br/>
+Un pointeur pour un groupe d’animation qui possède le storyboard dont le statut a changé.
 
-*newStatus*<br/>
-Spécifie le nouvel État.
+*nouveauStatus*<br/>
+Spécifie le nouveau statut.
 
-*previousStatus*<br/>
-Spécifie l’état précédent.
+*précédentStatus*<br/>
+Spécifie le statut précédent.
 
 ### <a name="remarks"></a>Notes
 
-Cette méthode est appelée si vous activez les événements de Storyboard à l’aide de CAnimationController:: EnableStoryboardEventHandler. Elle peut être substituée dans une classe dérivée pour prendre des mesures propres à l'application.
+Cette méthode s’appelle si vous activez des événements storyboard en utilisant CAnimationController::EnableStoryboardEventHandler. Elle peut être substituée dans une classe dérivée pour prendre des mesures propres à l'application.
 
-##  <a name="onstoryboardupdated"></a>  CAnimationController::OnStoryboardUpdated
+## <a name="canimationcontrolleronstoryboardupdated"></a><a name="onstoryboardupdated"></a>CAnimationController::OnStoryboardUpdated
 
-Appelé par le Framework lorsque le Storyboard a été mis à jour.
+Appelé par le cadre lorsque storyboard a été mis à jour.
 
 ```
 virtual void OnStoryboardUpdated(CAnimationGroup* pGroup);
@@ -999,16 +999,16 @@ virtual void OnStoryboardUpdated(CAnimationGroup* pGroup);
 
 ### <a name="parameters"></a>Paramètres
 
-*pGroup*<br/>
-Pointeur vers un groupe qui possède le Storyboard.
+*pGroup (en anglais)*<br/>
+Un pointeur pour un groupe qui possède le storyboard.
 
 ### <a name="remarks"></a>Notes
 
-Cette méthode est appelée si vous activez les événements de Storyboard à l’aide de CAnimationController:: EnableStoryboardEventHandler. Elle peut être substituée dans une classe dérivée pour prendre des mesures propres à l'application.
+Cette méthode s’appelle si vous activez des événements storyboard en utilisant CAnimationController::EnableStoryboardEventHandler. Elle peut être substituée dans une classe dérivée pour prendre des mesures propres à l'application.
 
-##  <a name="removeallanimationgroups"></a>  CAnimationController::RemoveAllAnimationGroups
+## <a name="canimationcontrollerremoveallanimationgroups"></a><a name="removeallanimationgroups"></a>CAnimationController::RemoveAllAnimationGroups
 
-Supprime tous les groupes d’animations du contrôleur d’animation.
+Supprime tous les groupes d’animation du contrôleur d’animation.
 
 ```
 void RemoveAllAnimationGroups();
@@ -1016,11 +1016,11 @@ void RemoveAllAnimationGroups();
 
 ### <a name="remarks"></a>Notes
 
-Tous les groupes seront supprimés, leur pointeur, s’il est stocké au niveau de l’application, doit être invalidé. Si CAnimationGroup,:: m_bAutodestroyAnimationObjects pour un groupe en cours de suppression a la valeur TRUE, tous les objets d’animation qui appartiennent à ce groupe seront supprimés. dans le cas contraire, leurs références au contrôleur d’animation parent auront la valeur NULL et elles pourront être ajoutées à un autre contrôleur.
+Tous les groupes seront supprimés, leur pointeur, s’il est stocké au niveau de l’application, doit être invalidé. Si CAnimationGroup:m_bAutodestroyAnimationObjects pour un groupe supprimé est VRAI, tous les objets d’animation qui appartiennent à ce groupe seront supprimés; sinon, leurs références au contrôleur d’animation parent seront réglées à NULL et elles peuvent être ajoutées à un autre contrôleur.
 
-##  <a name="removeanimationgroup"></a>  CAnimationController::RemoveAnimationGroup
+## <a name="canimationcontrollerremoveanimationgroup"></a><a name="removeanimationgroup"></a>CAnimationController::RemoveAnimationGroup
 
-Supprime un groupe d’animation avec l’ID spécifié du contrôleur d’animation.
+Supprime un groupe d’animation avec un ID spécifié du contrôleur d’animation.
 
 ```
 void RemoveAnimationGroup(UINT32 nGroupID);
@@ -1028,16 +1028,16 @@ void RemoveAnimationGroup(UINT32 nGroupID);
 
 ### <a name="parameters"></a>Paramètres
 
-*nGroupID*<br/>
+*nGroupID (en anglais)*<br/>
 Spécifie l’ID du groupe d’animation.
 
 ### <a name="remarks"></a>Notes
 
-Cette méthode supprime un groupe d’animation de la liste interne des groupes et le supprime. par conséquent, si vous avez stocké un pointeur vers ce groupe d’animation, il doit être invalidé. Si CAnimationGroup,:: m_bAutodestroyAnimationObjects a la valeur TRUE, tous les objets d’animation qui appartiennent à ce groupe seront supprimés. dans le cas contraire, leurs références au contrôleur d’animation parent auront la valeur NULL et elles pourront être ajoutées à un autre contrôleur.
+Cette méthode supprime un groupe d’animation de la liste interne des groupes et le supprime, donc si vous avez stocké un pointeur à ce groupe d’animation, il doit être invalidé. Si CAnimationGroup:m_bAutodestroyAnimationObjects est VRAI, tous les objets d’animation qui appartiennent à ce groupe seront supprimés; sinon, leurs références au contrôleur d’animation parent seront réglées à NULL et elles peuvent être ajoutées à un autre contrôleur.
 
-##  <a name="removeanimationobject"></a>  CAnimationController::RemoveAnimationObject
+## <a name="canimationcontrollerremoveanimationobject"></a><a name="removeanimationobject"></a>CAnimationController::Supprimer l’élégationObject
 
-Supprimer un objet d’animation du contrôleur d’animation.
+Retirez un objet d’animation du contrôleur d’animation.
 
 ```
 void RemoveAnimationObject(
@@ -1048,16 +1048,16 @@ void RemoveAnimationObject(
 ### <a name="parameters"></a>Paramètres
 
 *pObject*<br/>
-Pointeur vers un objet d’animation.
+Un pointeur à un objet d’animation.
 
 *bNoDelete*<br/>
-Si ce paramètre a la valeur TRUE, l’objet n’est pas supprimé lors de la suppression.
+Si ce paramètre est VRAI, l’objet ne sera pas supprimé à la suppression.
 
 ### <a name="remarks"></a>Notes
 
-Supprime un objet d’animation du contrôleur d’animation et du groupe d’animation. Appelez cette fonction si un objet particulier ne doit plus être animé ou si vous devez déplacer l’objet vers un autre contrôleur d’animation. Dans le dernier cas, bNoDelete doit avoir la valeur TRUE.
+Supprime un objet d’animation du contrôleur d’animation et du groupe d’animation. Appelez cette fonction si un objet particulier ne doit plus être animé, ou si vous avez besoin de déplacer l’objet vers un autre contrôleur d’animation. Dans le dernier cas bNoDelete doit être VRAI.
 
-##  <a name="removetransitions"></a>  CAnimationController::RemoveTransitions
+## <a name="canimationcontrollerremovetransitions"></a><a name="removetransitions"></a>CAnimationController::RemoveTransitions
 
 Supprime les transitions des objets d’animation qui appartiennent au groupe spécifié.
 
@@ -1067,14 +1067,14 @@ void RemoveTransitions(UINT32 nGroupID);
 
 ### <a name="parameters"></a>Paramètres
 
-*nGroupID*<br/>
-Spécifie l’ID de groupe.
+*nGroupID (en anglais)*<br/>
+Spécifie l’ID du groupe.
 
 ### <a name="remarks"></a>Notes
 
-Le groupe effectue une boucle sur ses objets d’animation et appelle ClearTransitions (FALSe) pour chaque objet d’animation. Cette méthode est appelée par le Framework après que l’animation a été planifiée.
+Le groupe boucle ses objets d’animation et appelle ClearTransitions (FALSE) pour chaque objet d’animation. Cette méthode est appelée par le cadre après l’animation a été prévue.
 
-##  <a name="schedulegroup"></a>  CAnimationController::ScheduleGroup
+## <a name="canimationcontrollerschedulegroup"></a><a name="schedulegroup"></a>CAnimationController::Groupe d’horaires
 
 Planifie une animation.
 
@@ -1086,21 +1086,21 @@ BOOL ScheduleGroup(
 
 ### <a name="parameters"></a>Paramètres
 
-*nGroupID*<br/>
-Spécifie l’ID du groupe d’animations à planifier.
+*nGroupID (en anglais)*<br/>
+Spécifie l’ID du groupe d’animation à l’horaire.
 
-*time*<br/>
-Spécifie l’heure à planifier.
+*Temps*<br/>
+Spécifie le temps de planifier.
 
 ### <a name="return-value"></a>Valeur de retour
 
-TRUE si l’animation a été planifiée avec succès. FALSe si le Storyboard n’a pas été créé ou si une autre erreur se produit.
+VRAI si l’animation était programmée avec succès. FALSE si storyboard n’a pas été créé, ou une autre erreur se produit.
 
 ### <a name="remarks"></a>Notes
 
-Vous devez appeler AnimateGroup avec le paramètre bScheduleNow défini sur FALSe précédent ScheduleGroup. Vous pouvez spécifier l’heure d’animation souhaitée obtenue à partir de IUIAnimationTimer:: GetTime. Si le paramètre de temps est 0,0, l’animation est planifiée pour l’heure actuelle.
+Vous devez appeler AnimateGroup avec le paramètre bScheduleNow réglé à FALSE Prior ScheduleGroup. Vous pouvez spécifier le temps d’animation souhaité obtenu à partir de IUIAnimationTimer::GetTime. Si le paramètre de temps est de 0,0, l’animation est programmée pour l’heure actuelle.
 
-##  <a name="setrelatedwnd"></a>  CAnimationController::SetRelatedWnd
+## <a name="canimationcontrollersetrelatedwnd"></a><a name="setrelatedwnd"></a>CAnimationController::SetRelatedWnd
 
 Établit une relation entre le contrôleur d’animation et une fenêtre.
 
@@ -1110,16 +1110,16 @@ void SetRelatedWnd(CWnd* pWnd);
 
 ### <a name="parameters"></a>Paramètres
 
-*pWnd*<br/>
-Pointeur vers l’objet de fenêtre à définir.
+*Pwnd*<br/>
+Un pointeur à l’objet de fenêtre à régler.
 
 ### <a name="remarks"></a>Notes
 
-Si un objet CWnd associé est défini, le contrôleur d’animation peut le mettre à jour automatiquement (envoyer le message WM_PAINT) lorsque l’état du gestionnaire d’animations a changé ou lorsque l’événement de publication de mise à jour du minuteur s’est produit.
+Si un objet CWnd connexe est défini, le contrôleur d’animation peut automatiquement le mettre à jour (envoyer WM_PAINT message) lorsque l’état du gestionnaire d’animation a changé ou que l’événement de mise à jour de la minuterie s’est produit.
 
-##  <a name="updateanimationmanager"></a>  CAnimationController::UpdateAnimationManager
+## <a name="canimationcontrollerupdateanimationmanager"></a><a name="updateanimationmanager"></a>CAnimationController::Mise à jourAnimationManager
 
-Indique au gestionnaire d’animations de mettre à jour les valeurs de toutes les variables d’animation.
+Dirige le responsable de l’animation pour mettre à jour les valeurs de toutes les variables d’animation.
 
 ```
 virtual void UpdateAnimationManager();
@@ -1127,7 +1127,7 @@ virtual void UpdateAnimationManager();
 
 ### <a name="remarks"></a>Notes
 
-L’appel de cette méthode fait avancer le gestionnaire d’animations à l’heure actuelle, en modifiant les États des storyboards si nécessaire et en mettant à jour les variables d’animation avec les valeurs interpolées appropriées. En interne, cette méthode appelle IUIAnimationTimer:: GetTime (timeNow) et IUIAnimationManager:: Update (timeNow). Substituez cette méthode dans une classe dérivée pour personnaliser ce comportement.
+Appeler cette méthode avance le gestionnaire d’animation à l’heure actuelle, en changeant les statuts des storyboards au besoin et la mise à jour de toutes les variables d’animation à des valeurs interpolées appropriées. En interne, cette méthode appelle IUIAnimationTimer::GetTime (timeNow) et IUIAnimationManager::Update (timeNow). Remplacer cette méthode dans une classe dérivée pour personnaliser ce comportement.
 
 ## <a name="see-also"></a>Voir aussi
 

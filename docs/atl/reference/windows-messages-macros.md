@@ -1,31 +1,31 @@
 ---
-title: Macros de Messages Windows
+title: Windows Messages Macros
 ms.date: 11/04/2016
 f1_keywords:
 - atlbase/ATL::WM_FORWARDMSG
 ms.assetid: 63abd22c-372d-4148-bb04-c605950ae64f
-ms.openlocfilehash: 7bb5e2fa265c3a5dcabcc16d8343d5b86a4aaf42
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: a5a6d45c64d6123128ae362c1ef5643392439f41
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62275923"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81329411"
 ---
-# <a name="windows-messages-macros"></a>Macros de Messages Windows
+# <a name="windows-messages-macros"></a>Windows Messages Macros
 
-Cette macro transfère les messages de fenêtre.
+Cette macro transmet les messages de fenêtre.
 
 |||
 |-|-|
-|[WM_FORWARDMSG](#wm_forwardmsg)|Permet de transférer un message reçu par une fenêtre à une autre fenêtre pour le traitement.|
+|[WM_FORWARDMSG](#wm_forwardmsg)|Utilisez pour transmettre un message reçu par une fenêtre à une autre fenêtre pour le traitement.|
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
-**En-tête :** atlbase.h
+**En-tête:** atlbase.h
 
-##  <a name="wm_forwardmsg"></a>  WM_FORWARDMSG
+## <a name="wm_forwardmsg"></a><a name="wm_forwardmsg"></a>WM_FORWARDMSG
 
-Cette macro transfère un message reçu par une fenêtre à une autre fenêtre pour le traitement.
+Cette macro transmet un message reçu par une fenêtre à une autre fenêtre pour le traitement.
 
 ```
 WM_FORWARDMSG
@@ -33,20 +33,20 @@ WM_FORWARDMSG
 
 ### <a name="return-value"></a>Valeur de retour
 
-Différent de zéro si le message a été traité, zéro dans le cas contraire.
+Nonzero si le message a été traité, zéro sinon.
 
 ### <a name="remarks"></a>Notes
 
-Utilisez WM_FORWARDMSG pour transférer un message reçu par une fenêtre à une autre fenêtre pour le traitement. Les paramètres LPARAM et WPARAM sont utilisées comme suit :
+Utilisez WM_FORWARDMSG pour transmettre un message reçu par une fenêtre à une autre fenêtre pour le traitement. Les paramètres LPARAM et WPARAM sont utilisés comme suit :
 
-|Paramètre|Utilisation|
+|Paramètre|Usage|
 |---------------|-----------|
-|WPARAM|Données définies par l’utilisateur|
-|LPARAM|Un pointeur vers un `MSG` structure qui contient des informations sur un message|
+|Wparam|Données définies par l’utilisateur|
+|Lparam|Un pointeur `MSG` vers une structure qui contient des informations sur un message|
 
 ### <a name="example"></a>Exemple
 
-Dans l’exemple suivant, `m_hWndOther` représente l’autre fenêtre qui reçoit ce message.
+Dans l’exemple `m_hWndOther` suivant, représente l’autre fenêtre qui reçoit ce message.
 
 [!code-cpp[NVC_ATL_Windowing#137](../../atl/codesnippet/cpp/windows-messages-macros_1.cpp)]
 

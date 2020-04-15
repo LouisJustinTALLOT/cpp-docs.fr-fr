@@ -1,5 +1,5 @@
 ---
-title: Ccrtallocator, classe
+title: Classe CCRTAllocator
 ms.date: 11/04/2016
 f1_keywords:
 - CCRTAllocator
@@ -10,16 +10,16 @@ f1_keywords:
 helpviewer_keywords:
 - CCRTAllocator class
 ms.assetid: 3e1b8cb0-859a-41ab-8e93-6f0b5ceca49d
-ms.openlocfilehash: c08d594e1c0f4d532f46961e266bf6ced98c51b2
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 2f6bae3818fa0f1639e0e3cee4e09121580da768
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62259077"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81327178"
 ---
-# <a name="ccrtallocator-class"></a>Ccrtallocator, classe
+# <a name="ccrtallocator-class"></a>Classe CCRTAllocator
 
-Cette classe fournit des méthodes pour la gestion de la mémoire à l’aide des routines de mémoire CRT.
+Cette classe fournit des méthodes pour gérer la mémoire à l’aide de routines de mémoire CRT.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -33,19 +33,19 @@ class ATL::CCRTAllocator
 
 |Nom|Description|
 |----------|-----------------|
-|[CCRTAllocator::Allocate](#allocate)|(Statique) Appelez cette méthode pour allouer de la mémoire.|
-|[CCRTAllocator::Free](#free)|(Statique) Appelez cette méthode pour libérer de la mémoire.|
-|[CCRTAllocator::Reallocate](#reallocate)|(Statique) Appelez cette méthode pour réallouer de la mémoire.|
+|[CCRTAllocator::Allocate](#allocate)|(Statique) Appelez cette méthode pour allouer la mémoire.|
+|[CCRTAllocator::Gratuit](#free)|(Statique) Appelez cette méthode pour libérer la mémoire.|
+|[CCRTAllocator::Réallocate](#reallocate)|(Statique) Appelez cette méthode pour réaffecter la mémoire.|
 
 ## <a name="remarks"></a>Notes
 
-Cette classe est utilisée par [CHeapPtr](../../atl/reference/cheapptr-class.md) pour fournir des routines d’allocation de la mémoire CRT. La classe équivalent, [CComAllocator](../../atl/reference/ccomallocator-class.md), fournit les mêmes méthodes à l’aide des routines de COM.
+Cette classe est utilisée par [CHeapPtr](../../atl/reference/cheapptr-class.md) pour fournir les routines d’allocation de mémoire CRT. La classe de contrepartie, [CComAllocator](../../atl/reference/ccomallocator-class.md), fournit les mêmes méthodes en utilisant les routines COM.
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
-**En-tête :** atlcore.h
+**En-tête:** atlcore.h
 
-##  <a name="allocate"></a>  CCRTAllocator::Allocate
+## <a name="ccrtallocatorallocate"></a><a name="allocate"></a>CCRTAllocator::Allocate
 
 Appelez cette fonction statique pour allouer de la mémoire.
 
@@ -55,7 +55,7 @@ static __declspec(allocator) void* Allocate(size_t nBytes) throw();
 
 ### <a name="parameters"></a>Paramètres
 
-*nBytes*<br/>
+*nBytes (en)*<br/>
 Nombre d'octets à allouer.
 
 ### <a name="return-value"></a>Valeur de retour
@@ -64,11 +64,11 @@ Retourne un pointeur void vers l'espace alloué, ou NULL si la mémoire disponib
 
 ### <a name="remarks"></a>Notes
 
-Alloue de la mémoire. Consultez [malloc](../../c-runtime-library/reference/malloc.md) pour plus d’informations.
+Alloue de la mémoire. Voir [malloc](../../c-runtime-library/reference/malloc.md) pour plus de détails.
 
-##  <a name="free"></a>  CCRTAllocator::Free
+## <a name="ccrtallocatorfree"></a><a name="free"></a>CCRTAllocator::Gratuit
 
-Appelez cette fonction statique pour libérer de la mémoire.
+Appelez cette fonction statique à la mémoire libre.
 
 ```
 static void Free(void* p) throw();
@@ -76,14 +76,14 @@ static void Free(void* p) throw();
 
 ### <a name="parameters"></a>Paramètres
 
-*p*<br/>
+*P*<br/>
 Pointeur vers la mémoire allouée.
 
 ### <a name="remarks"></a>Notes
 
-Libère la mémoire allouée. Consultez [gratuit](../../c-runtime-library/reference/free.md) pour plus d’informations.
+Libère la mémoire allouée. Voir [gratuitement](../../c-runtime-library/reference/free.md) pour plus de détails.
 
-##  <a name="reallocate"></a>  CCRTAllocator::Reallocate
+## <a name="ccrtallocatorreallocate"></a><a name="reallocate"></a>CCRTAllocator::Réallocate
 
 Appelez cette fonction statique pour réallouer de la mémoire.
 
@@ -93,10 +93,10 @@ static __declspec(allocator) void* Reallocate(void* p, size_t nBytes) throw();
 
 ### <a name="parameters"></a>Paramètres
 
-*p*<br/>
+*P*<br/>
 Pointeur vers la mémoire allouée.
 
-*nBytes*<br/>
+*nBytes (en)*<br/>
 Nombre d'octets à réallouer.
 
 ### <a name="return-value"></a>Valeur de retour
@@ -105,10 +105,10 @@ Retourne un pointeur void vers l'espace alloué, ou NULL si la mémoire est insu
 
 ### <a name="remarks"></a>Notes
 
-Redimensionne la quantité de mémoire allouée. Consultez [realloc](../../c-runtime-library/reference/realloc.md) pour plus d’informations.
+Redimensionne la quantité de mémoire allouée. Voir [réaffecter](../../c-runtime-library/reference/realloc.md) pour plus de détails.
 
 ## <a name="see-also"></a>Voir aussi
 
-[CHeapPtr, classe](../../atl/reference/cheapptr-class.md)<br/>
-[CComAllocator, classe](../../atl/reference/ccomallocator-class.md)<br/>
-[Vue d’ensemble de la classe](../../atl/atl-class-overview.md)
+[Classe CHeapPtr](../../atl/reference/cheapptr-class.md)<br/>
+[Classe CComAllocator](../../atl/reference/ccomallocator-class.md)<br/>
+[Vue d'ensemble des classes](../../atl/atl-class-overview.md)

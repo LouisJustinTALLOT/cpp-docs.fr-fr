@@ -1,5 +1,5 @@
 ---
-title: Cmenutearoffmanager, classe
+title: Classe CMenuTearOffManager
 ms.date: 10/18/2018
 f1_keywords:
 - CMenuTearOffManager
@@ -24,18 +24,18 @@ helpviewer_keywords:
 - CMenuTearOffManager [MFC], SetInUse
 - CMenuTearOffManager [MFC], SetupTearOffMenus
 ms.assetid: ab7ca272-ce42-4678-95f7-6ad75038f5a0
-ms.openlocfilehash: 8b92ddad9d3a6de41cf6914dee268f6e54b5d420
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: f41937179dc055213f3af093e107bcb08c8a8fcc
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62163706"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81369960"
 ---
-# <a name="cmenutearoffmanager-class"></a>Cmenutearoffmanager, classe
+# <a name="cmenutearoffmanager-class"></a>Classe CMenuTearOffManager
 
 Gère les menus détachables. Un menu détachable est un menu de la barre de menus. L'utilisateur peut supprimer un menu détachable de la barre de menus, provoquant ainsi son flottement.
 
-   Pour plus d’informations, consultez le code source situé dans le **VC\\atlmfc\\src\\mfc** dossier de votre installation de Visual Studio.
+   Pour plus de détails, consultez le code source situé dans le dossier **VC\\\\atlmfc src\\mfc** de votre installation Visual Studio.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -55,10 +55,10 @@ class CMenuTearOffManager : public CObject
 
 |Nom|Description|
 |----------|-----------------|
-|[CMenuTearOffManager::Build](#build)||
+|[CMenuTearOffManager::Construire](#build)||
 |[CMenuTearOffManager::GetRegPath](#getregpath)||
-|[CMenuTearOffManager::Initialize](#initialize)|Initialise un `CMenuTearOffManager` objet.|
-|[CMenuTearOffManager::IsDynamicID](#isdynamicid)||
+|[CMenuTearOffManager::Initialize](#initialize)|Initialise un objet `CMenuTearOffManager`.|
+|[CMenuTearOffManager::IsDynamicICID](#isdynamicid)||
 |[CMenuTearOffManager::Parse](#parse)||
 |[CMenuTearOffManager::Reset](#reset)||
 |[CMenuTearOffManager::SetInUse](#setinuse)||
@@ -66,11 +66,11 @@ class CMenuTearOffManager : public CObject
 
 ## <a name="remarks"></a>Notes
 
-Pour utiliser les menus volants dans votre application, vous devez disposer un `CMenuTearOffManager` objet. Dans la plupart des cas, vous ne créez ou initialisez une `CMenuTearOffManager` directement l’objet. Ceci est géré pour vous lorsque vous appelez le [CWinAppEx::EnableTearOffMenus](../../mfc/reference/cwinappex-class.md#enabletearoffmenus) (fonction).
+Afin d’utiliser des menus déchirants dans votre `CMenuTearOffManager` application, vous devez avoir un objet. Dans la plupart des cas, vous `CMenuTearOffManager` ne créerez pas ou n’initialisez pas directement un objet. Ceci est géré pour vous lorsque vous appelez la fonction [CWinAppEx::EnableTearOffMenus.](../../mfc/reference/cwinappex-class.md#enabletearoffmenus)
 
 ## <a name="example"></a>Exemple
 
-L’exemple suivant montre comment créer et initialiser un `CMenuTearOffManager` objet en appelant le `CWinAppEX::EnableTearOffMenus` (méthode). Cet extrait de code fait partie de l’ [exemple Word Pad](../../overview/visual-cpp-samples.md).
+L’exemple suivant montre comment construire `CMenuTearOffManager` et initialiser `CWinAppEX::EnableTearOffMenus` un objet en appelant la méthode. Cet extrait de code fait partie de l’ [exemple Word Pad](../../overview/visual-cpp-samples.md).
 
 [!code-cpp[NVC_MFC_WordPad#12](../../mfc/reference/codesnippet/cpp/cmenutearoffmanager-class_1.cpp)]
 
@@ -80,11 +80,11 @@ L’exemple suivant montre comment créer et initialiser un `CMenuTearOffManager
 
 `CMenuTearOffManager`
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
-**En-tête :** afxmenutearoffmanager.h
+**En-tête:** afxmenutearoffmanager.h
 
-##  <a name="build"></a>  CMenuTearOffManager::Build
+## <a name="cmenutearoffmanagerbuild"></a><a name="build"></a>CMenuTearOffManager::Construire
 
 ```
 void Build(
@@ -94,15 +94,15 @@ void Build(
 
 ### <a name="parameters"></a>Paramètres
 
-[in] *uiTearOffBarID*<br/>
+[dans] *uiTearOffBarID*<br/>
 
-[in] *strText*<br/>
+[dans] *strText (en)*<br/>
 
 ### <a name="remarks"></a>Notes
 
-##  <a name="cmenutearoffmanager"></a>  CMenuTearOffManager::CMenuTearOffManager
+## <a name="cmenutearoffmanagercmenutearoffmanager"></a><a name="cmenutearoffmanager"></a>CMenuTearOffManager::CMenuTearOffManager
 
-Construit un [CMenuTearOffManager](../../mfc/reference/cmenutearoffmanager-class.md) objet.
+Construit un objet [CMenuTearOffManager.](../../mfc/reference/cmenutearoffmanager-class.md)
 
 ```
 CMenuTearOffManager();
@@ -110,9 +110,9 @@ CMenuTearOffManager();
 
 ### <a name="remarks"></a>Notes
 
-Dans la plupart des cas, vous ne devez pas créer un `CMenuTearOffManager` manuellement. L’infrastructure de votre application crée le `CMenuTearOffManager` lorsque vous appelez l’objet [CWinAppEx::EnableTearOffMenus](../../mfc/reference/cwinappex-class.md#enabletearoffmenus).
+Dans la plupart des cas, vous ne devez pas créer un `CMenuTearOffManager` manuellement. Le cadre de votre `CMenuTearOffManager` application crée l’objet lorsque vous appelez [CWinAppEx::EnableTearOffMenus](../../mfc/reference/cwinappex-class.md#enabletearoffmenus).
 
-##  <a name="getregpath"></a>  CMenuTearOffManager::GetRegPath
+## <a name="cmenutearoffmanagergetregpath"></a><a name="getregpath"></a>CMenuTearOffManager::GetRegPath
 
 ```
 LPCTSTR GetRegPath() const;
@@ -122,9 +122,9 @@ LPCTSTR GetRegPath() const;
 
 ### <a name="remarks"></a>Notes
 
-##  <a name="initialize"></a>  CMenuTearOffManager::Initialize
+## <a name="cmenutearoffmanagerinitialize"></a><a name="initialize"></a>CMenuTearOffManager::Initialize
 
-Initialise un [CMenuTearOffManager](../../mfc/reference/cmenutearoffmanager-class.md) objet.
+Initialise un objet [CMenuTearOffManager.](../../mfc/reference/cmenutearoffmanager-class.md)
 
 ```
 BOOL Initialize(
@@ -135,14 +135,14 @@ BOOL Initialize(
 
 ### <a name="parameters"></a>Paramètres
 
-*lpszRegEntry*<br/>
-[in] Chaîne qui contient le chemin d’accès d’une entrée de Registre. Vos applications stocke les paramètres pour les barres de détachable dans cette entrée de Registre.
+*lpszRegEntry (en)*<br/>
+[dans] Une chaîne qui contient le chemin d’une entrée de registre. Vos applications stockent les paramètres des barres de déchirure dans cette entrée de registre.
 
 *uiTearOffMenuFirst*<br/>
-[in] Le premier ID de menu pour un menu détachable.
+[dans] Le premier menu ID pour un menu déchirant.
 
 *uiTearOffMenuLast*<br/>
-[in] Le dernier ID de menu pour un menu détachable.
+[dans] Le dernier menu ID pour un menu déchirant.
 
 ### <a name="return-value"></a>Valeur de retour
 
@@ -150,9 +150,9 @@ Valeur différente de zéro cas de réussite ; sinon, 0.
 
 ### <a name="remarks"></a>Notes
 
-La plage d’ID de menu à partir de *uiTearOffMenuFirst* à *uiTearOffMenuLast* doit être un intervalle continu. L’intervalle définit le nombre de menus volants qui peuvent s’afficher en même temps dans l’application.
+La gamme d’articles d’ID de menu *d’uiTearOffMenuFirst* à *uiTearOffMenuLast* doit être un intervalle continu. L’intervalle définit le nombre de menus déchirants qui peuvent apparaître en même temps dans l’application.
 
-##  <a name="isdynamicid"></a>  CMenuTearOffManager::IsDynamicID
+## <a name="cmenutearoffmanagerisdynamicid"></a><a name="isdynamicid"></a>CMenuTearOffManager::IsDynamicICID
 
 ```
 BOOL IsDynamicID(UINT uiID) const;
@@ -160,13 +160,13 @@ BOOL IsDynamicID(UINT uiID) const;
 
 ### <a name="parameters"></a>Paramètres
 
-[in] *uiID*<br/>
+[dans] *uiID*<br/>
 
 ### <a name="return-value"></a>Valeur de retour
 
 ### <a name="remarks"></a>Notes
 
-##  <a name="parse"></a>  CMenuTearOffManager::Parse
+## <a name="cmenutearoffmanagerparse"></a><a name="parse"></a>CMenuTearOffManager::Parse
 
 ```
 UINT Parse(CString& str);
@@ -174,13 +174,13 @@ UINT Parse(CString& str);
 
 ### <a name="parameters"></a>Paramètres
 
-[in] *str*<br/>
+[dans] *str*<br/>
 
 ### <a name="return-value"></a>Valeur de retour
 
 ### <a name="remarks"></a>Notes
 
-##  <a name="reset"></a>  CMenuTearOffManager::Reset
+## <a name="cmenutearoffmanagerreset"></a><a name="reset"></a>CMenuTearOffManager::Reset
 
 ```
 void Reset(HMENU hmenu);
@@ -188,11 +188,11 @@ void Reset(HMENU hmenu);
 
 ### <a name="parameters"></a>Paramètres
 
-[in] *hmenu*<br/>
+[dans] *hmenu hmenu*<br/>
 
 ### <a name="remarks"></a>Notes
 
-##  <a name="setinuse"></a>  CMenuTearOffManager::SetInUse
+## <a name="cmenutearoffmanagersetinuse"></a><a name="setinuse"></a>CMenuTearOffManager::SetInUse
 
 ```
 void SetInUse(
@@ -202,13 +202,13 @@ void SetInUse(
 
 ### <a name="parameters"></a>Paramètres
 
-[in] *uiCmdId*<br/>
+[dans] *uiCmdId*<br/>
 
-[in] *bUtiliser*<br/>
+[dans] *bUse*<br/>
 
 ### <a name="remarks"></a>Notes
 
-##  <a name="setuptearoffmenus"></a>  CMenuTearOffManager::SetupTearOffMenus
+## <a name="cmenutearoffmanagersetuptearoffmenus"></a><a name="setuptearoffmenus"></a>CMenuTearOffManager::SetupTearOffMenus
 
 ```
 void SetupTearOffMenus(HMENU hMenu);
@@ -216,7 +216,7 @@ void SetupTearOffMenus(HMENU hMenu);
 
 ### <a name="parameters"></a>Paramètres
 
-[in] *hMenu*<br/>
+[dans] *hMenu*<br/>
 
 ### <a name="remarks"></a>Notes
 

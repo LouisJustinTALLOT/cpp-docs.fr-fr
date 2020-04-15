@@ -27,16 +27,16 @@ helpviewer_keywords:
 - Microsoft::WRL::Wrappers::HandleT::operator= operator
 - Microsoft::WRL::Wrappers::HandleT::~HandleT, destructor
 ms.assetid: 3822b32a-a426-4d94-a54d-919d4df60ee2
-ms.openlocfilehash: f66fbe23c305be15e09928242175dfa7ce8c141b
-ms.sourcegitcommit: b8c22e6d555cf833510753cba7a368d57e5886db
+ms.openlocfilehash: bde7d7f1bd6730d96cb0f7a0d191a32eb8ed3e8c
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/29/2020
-ms.locfileid: "76821816"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81371462"
 ---
 # <a name="handlet-class"></a>HandleT (classe)
 
-Représente un handle vers un objet.
+Représente une poignée à un objet.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -45,75 +45,75 @@ template <typename HandleTraits>
 class HandleT;
 ```
 
-### <a name="parameters"></a>Parameters
+### <a name="parameters"></a>Paramètres
 
-*HandleTraits*<br/>
-Instance de la structure [HandleTraits](handletraits-structure.md) qui définit les caractéristiques communes d’un handle.
+*PoignéeTraits*<br/>
+Un exemple de la structure [HandleTraits](handletraits-structure.md) qui définit les caractéristiques communes d’une poignée.
 
-## <a name="members"></a>Members
+## <a name="members"></a>Membres
 
 ### <a name="public-typedefs"></a>Typedefs publics
 
-Name     | Description
+Nom     | Description
 -------- | -----------------------------
 `Traits` | Synonyme de `HandleTraits`.
 
 ### <a name="public-constructors"></a>Constructeurs publics
 
-Name                                | Description
+Nom                                | Description
 ----------------------------------- | --------------------------------------------------
-[HandleT::HandleT](#handlet)        | Initialise une nouvelle instance de la classe `HandleT` .
-[Handler :: ~ Handlet](#tilde-handlet) | Déinitialise une instance de la classe `HandleT`.
+[Poignée::Handlet](#handlet)        | Initialise une nouvelle instance de la classe `HandleT`.
+[Handlet: :-HandleT](#tilde-handlet) | Désinitialise un exemple `HandleT` de la classe.
 
-### <a name="public-methods"></a>Méthodes publiques
+### <a name="public-methods"></a>M&#233;thodes publiques
 
-Name                         | Description
+Nom                         | Description
 ---------------------------- | ----------------------------------------------------------------------
-[HandleT::Attach](#attach)   | Associe le handle spécifié à l’objet `HandleT` actuel.
-[HandleT::Close](#close)     | Ferme l’objet de `HandleT` actif.
-[HandleT::Detach](#detach)   | Dissocie l’objet `HandleT` actuel de son handle sous-jacent.
-[Handlet :: obtient](#get)         | Obtient la valeur du handle sous-jacent.
-[Handlet :: IsValid](#isvalid) | Indique si l’objet `HandleT` actuel représente un handle.
+[HandleT::Attach](#attach)   | Associe la poignée spécifiée à l’objet actuel. `HandleT`
+[HandleT::Fermer](#close)     | Ferme l'objet `HandleT` en cours.
+[HandleT::Detach](#detach)   | Dissocie l’objet actuel `HandleT` de sa poignée sous-jacente.
+[HandleT::Get](#get)         | Obtient la valeur de la poignée sous-jacente.
+[Poignée::IsValid](#isvalid) | Indique si `HandleT` l’objet actuel représente une poignée.
 
 ### <a name="protected-methods"></a>Méthodes protégées
 
-Name                                     | Description
+Nom                                     | Description
 ---------------------------------------- | ------------------------------------
-[Handlet :: Internalclose,](#internalclose) | Ferme l’objet de `HandleT` actif.
+[HandleT::InternalClose](#internalclose) | Ferme l'objet `HandleT` en cours.
 
 ### <a name="public-operators"></a>Op&#233;rateurs publics
 
-Name                                   | Description
+Nom                                   | Description
 -------------------------------------- | ----------------------------------------------------------------------------------
-[HandleT::operator=](#operator-assign) | Déplace la valeur de l’objet `HandleT` spécifié vers l’objet `HandleT` actuel.
+[HandleT::opérateur](#operator-assign) | Déplace la valeur `HandleT` de l’objet spécifié à l’objet actuel. `HandleT`
 
-### <a name="protected-data-members"></a>Membres de données protégées
+### <a name="protected-data-members"></a>Membres de données protégés
 
-Name                        | Description
+Nom                        | Description
 --------------------------- | ----------------------------------------------------------------
-[Handlet :: handle_](#handle) | Contient le handle représenté par l’objet `HandleT`.
+[Poignée::handle_](#handle) | Contient la poignée qui est `HandleT` représentée par l’objet.
 
 ## <a name="inheritance-hierarchy"></a>Hiérarchie d'héritage
 
 `HandleT`
 
-## <a name="requirements"></a>Configuration requise pour
+## <a name="requirements"></a>Spécifications
 
-**En-tête :** corewrappers. h
+**En-tête:** corewrappers.h
 
-**Espace de noms :** Microsoft :: WRL :: wrappers
+**Espace nom:** Microsoft::WRL::Wrappers
 
-## <a name="tilde-handlet"></a>Handler :: ~ Handlet
+## <a name="handlethandlet"></a><a name="tilde-handlet"></a>Handlet: :-HandleT
 
-Déinitialise une instance de la classe `HandleT`.
+Désinitialise un exemple `HandleT` de la classe.
 
 ```cpp
 ~HandleT();
 ```
 
-## <a name="attach"></a>HandleT::Attach
+## <a name="handletattach"></a><a name="attach"></a>HandleT::Attach
 
-Associe le handle spécifié à l’objet `HandleT` actuel.
+Associe la poignée spécifiée à l’objet actuel. `HandleT`
 
 ```cpp
 void Attach(
@@ -121,14 +121,14 @@ void Attach(
 );
 ```
 
-### <a name="parameters"></a>Parameters
+### <a name="parameters"></a>Paramètres
 
 *h*<br/>
 Handle.
 
-## <a name="close"></a>HandleT::Close
+## <a name="handletclose"></a><a name="close"></a>HandleT::Fermer
 
-Ferme l’objet de `HandleT` actif.
+Ferme l'objet `HandleT` en cours.
 
 ```cpp
 void Close();
@@ -136,13 +136,13 @@ void Close();
 
 ### <a name="remarks"></a>Notes
 
-Le handle sous-jacent du `HandleT` actuel est fermé et le `HandleT` est défini sur l’état non valide.
+La poignée qui sous-tend le `HandleT` courant `HandleT` est fermée, et le est réglé à l’état invalide.
 
-Si le handle ne se ferme pas correctement, une exception est levée dans le thread appelant.
+Si le manche ne se ferme pas correctement, une exception est soulevée dans le fil d’appel.
 
-## <a name="detach"></a>HandleT::Detach
+## <a name="handletdetach"></a><a name="detach"></a>HandleT::Detach
 
-Dissocie l’objet `HandleT` actuel de son handle sous-jacent.
+Dissocie l’objet actuel `HandleT` de sa poignée sous-jacente.
 
 ```cpp
 typename HandleTraits::Type Detach();
@@ -150,15 +150,15 @@ typename HandleTraits::Type Detach();
 
 ### <a name="return-value"></a>Valeur de retour
 
-Handle sous-jacent.
+La poignée sous-jacente.
 
 ### <a name="remarks"></a>Notes
 
-Lorsque cette opération est terminée, le `HandleT` actuel est défini sur l’état non valide.
+Lorsque cette opération se `HandleT` termine, le courant est réglé à l’état invalide.
 
-## <a name="get"></a>Handlet :: obtient
+## <a name="handletget"></a><a name="get"></a>HandleT::Get
 
-Obtient la valeur du handle sous-jacent.
+Obtient la valeur de la poignée sous-jacente.
 
 ```cpp
 typename HandleTraits::Type Get() const;
@@ -168,17 +168,17 @@ typename HandleTraits::Type Get() const;
 
 Handle.
 
-## <a name="handle"></a>HandleT::handle_
+## <a name="handlethandle_"></a><a name="handle"></a>Poignée::handle_
 
-Contient le handle représenté par l’objet `HandleT`.
+Contient la poignée qui est `HandleT` représentée par l’objet.
 
 ```cpp
 typename HandleTraits::Type handle_;
 ```
 
-## <a name="handlet"></a>HandleT::HandleT
+## <a name="handlethandlet"></a><a name="handlet"></a>Poignée::Handlet
 
-Initialise une nouvelle instance de la classe `HandleT` .
+Initialise une nouvelle instance de la classe `HandleT`.
 
 ```cpp
 explicit HandleT(
@@ -191,18 +191,18 @@ HandleT(
 );
 ```
 
-### <a name="parameters"></a>Parameters
+### <a name="parameters"></a>Paramètres
 
 *h*<br/>
 Handle.
 
 ### <a name="remarks"></a>Notes
 
-Le premier constructeur initialise un objet `HandleT` qui n’est pas un handle valide d’un objet. Le deuxième constructeur crée un nouvel objet `HandleT` à partir du paramètre *h*.
+Le premier constructeur initialise `HandleT` un objet qui n’est pas une poignée valide à un objet. Le deuxième constructeur crée `HandleT` un nouvel objet à partir du paramètre *h*.
 
-## <a name="internalclose"></a>Handlet :: Internalclose,
+## <a name="handletinternalclose"></a><a name="internalclose"></a>HandleT::InternalClose
 
-Ferme l’objet de `HandleT` actif.
+Ferme l'objet `HandleT` en cours.
 
 ```cpp
 virtual bool InternalClose();
@@ -210,15 +210,15 @@ virtual bool InternalClose();
 
 ### <a name="return-value"></a>Valeur de retour
 
-**true** si l' `HandleT` actuel s’est correctement fermée ; Sinon, **false**.
+**vrai** si `HandleT` le courant s’est refermé avec succès; autrement, **faux**.
 
 ### <a name="remarks"></a>Notes
 
-`InternalClose()` est `protected`.
+`InternalClose()` a la valeur `protected`.
 
-## <a name="isvalid"></a>Handlet :: IsValid
+## <a name="handletisvalid"></a><a name="isvalid"></a>Poignée::IsValid
 
-Indique si l’objet `HandleT` actuel représente un handle.
+Indique si `HandleT` l’objet actuel représente une poignée.
 
 ```cpp
 bool IsValid() const;
@@ -226,11 +226,11 @@ bool IsValid() const;
 
 ### <a name="return-value"></a>Valeur de retour
 
-**true** si le `HandleT` représente un handle ; Sinon, **false**.
+**vrai** si `HandleT` le représente une poignée; autrement, **faux**.
 
-## <a name="operator-assign"></a>HandleT::operator=
+## <a name="handletoperator"></a><a name="operator-assign"></a>HandleT::opérateur
 
-Déplace la valeur de l’objet `HandleT` spécifié vers l’objet `HandleT` actuel.
+Déplace la valeur `HandleT` de l’objet spécifié à l’objet actuel. `HandleT`
 
 ```cpp
 HandleT& operator=(
@@ -238,14 +238,14 @@ HandleT& operator=(
 );
 ```
 
-### <a name="parameters"></a>Parameters
+### <a name="parameters"></a>Paramètres
 
 *h*<br/>
-Référence rvalue à un handle.
+Une référence rvalue à une poignée.
 
 ### <a name="return-value"></a>Valeur de retour
 
-Référence à l’objet de `HandleT` actuel.
+Une référence à `HandleT` l’objet actuel.
 
 ### <a name="remarks"></a>Notes
 
