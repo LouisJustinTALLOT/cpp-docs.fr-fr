@@ -1,46 +1,47 @@
 ---
-title: / SOURCELINK (fichier Sourcelink inclure dans le fichier PDB)
-ms.date: 08/20/2018
+title: /SOURCELINK (Inclure le fichier Sourcelink dans PDB)
+description: Guide de référence de l’option de liaison /SOURCELINK dans Microsoft C.
+ms.date: 03/31/2020
 f1_keywords:
 - /sourcelink
 helpviewer_keywords:
 - /SOURCELINK linker option
 - /SOURCELINK
-ms.openlocfilehash: 1643727d8f556a905eccbfa9626d1aaa8ea63cbf
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: bde55c401e17f7b3c84ffcdad29dda2badcc260b
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62317950"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81336066"
 ---
-# <a name="sourcelink-include-source-link-file-in-pdb"></a>/ SOURCELINK (fichier inclure un lien de Source dans le fichier PDB)
+# <a name="sourcelink-include-source-link-file-in-pdb"></a>/SOURCELINK (Inclure le fichier Source Link dans PDB)
 
-Spécifie un fichier de configuration de lien de la Source à inclure dans le fichier PDB généré par l’éditeur de liens.
+Spécifie un fichier de configuration Source Link à inclure dans le fichier PDB généré par le linker.
 
 ## <a name="syntax"></a>Syntaxe
 
-> **/ SOURCELINK :**_nom de fichier_
+> **`/SOURCELINK:`**_`filename`_
 
 ## <a name="arguments"></a>Arguments
 
-*filename*<br/>
-Spécifie au format JSON fichier de configuration qui contient un mappage simple des chemins d’accès de fichier local à l’URL où le fichier source peut être récupéré pour l’affichage par le débogueur. Pour plus d’informations sur le format de ce fichier, consultez [schéma JSON de lien Source](https://github.com/dotnet/designs/blob/master/accepted/diagnostics/source-link.md#source-link-json-schema).
+*Fichier*<br/>
+Spécifie un fichier de configuration formaté JSON qui contient une simple cartographie des trajectoires de fichiers locaux vers les URL pour les fichiers sources à afficher dans le débagé. Pour plus d’informations sur le format de ce fichier, voir [Source Link JSON Schema](https://github.com/dotnet/designs/blob/master/accepted/2020/diagnostics/source-link.md#source-link-json-schema).
 
 ## <a name="remarks"></a>Notes
 
-Lien de source est un système indépendant du contrôle de code source et de langue pour fournir le débogage du code source pour les fichiers binaires. Lien de source est pris en charge pour les fichiers binaires de C++ natifs à partir de Visual Studio 2017 version 15.8. Pour une vue d’ensemble de la Source de liaison, consultez [Sourcelink](https://github.com/dotnet/designs/blob/master/accepted/diagnostics/source-link.md). Pour plus d’informations sur la façon d’utiliser le lien Source dans vos projets et comment générer le fichier SourceLink dans le cadre de votre projet, consultez [à l’aide de la liaison de Source](https://github.com/dotnet/sourcelink#using-source-link-in-c-projects).
+Source Link est un système agnostique de contrôle de la langue et des sources pour fournir le débogage de source pour les binaires. Source Link est pris en charge pour les binaires natifs de CMD à partir de Visual Studio 2017 version 15.8. Pour un aperçu de Source Link, voir [Source Link](https://github.com/dotnet/designs/blob/master/accepted/2020/diagnostics/source-link.md). Pour plus d’informations sur la façon d’utiliser Source Link dans vos projets, et comment générer le fichier SourceLink dans le cadre de votre projet, voir [Using Source Link](https://github.com/dotnet/sourcelink#using-source-link-in-c-projects).
 
-### <a name="to-set-the-sourcelink-linker-option-in-visual-studio"></a>Pour définir l’option de l’éditeur de liens /SOURCELINK dans Visual Studio
+### <a name="to-set-the-sourcelink-linker-option-in-visual-studio"></a>Définir l’option de liaison /SOURCELINK dans Visual Studio
 
-1. Ouvrez le **Pages de propriétés** boîte de dialogue pour le projet. Pour plus d’informations, consultez [propriétés de compilateur et de build C++ définie dans Visual Studio](../working-with-project-properties.md).
+1. Ouvrez la boîte de dialogue **des Pages De la propriété** pour le projet. Pour plus d’informations, consultez [Définir le compilateur C++ et les propriétés de build dans Visual Studio](../working-with-project-properties.md).
 
-1. Sélectionnez le **propriétés de Configuration** > **l’éditeur de liens** > **ligne de commande** page de propriétés.
+1. Sélectionnez la page propriété **Configuration Properties** > **Linker** > **Command Line.**
 
-1. Dans le **des options supplémentaires** zone, ajoutez **/SOURCELINK :**_filename_ , puis **OK** ou **appliquer**pour enregistrer vos modifications.
+1. Dans la boîte **d’options supplémentaire,** **`/SOURCELINK:`** _`filename`_ ajoutez et choisissez **ensuite OK** ou **appliquez** pour enregistrer vos modifications.
 
 ### <a name="to-set-this-linker-option-programmatically"></a>Pour définir cette option de l'éditeur de liens par programmation
 
-- Cette option n’a pas un équivalent de programmation.
+- Cette option n’a pas d’équivalent programmatique.
 
 ## <a name="see-also"></a>Voir aussi
 

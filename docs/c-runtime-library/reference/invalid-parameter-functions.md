@@ -1,13 +1,16 @@
 ---
 title: _invalid_parameter, _invalid_parameter_noinfo, _invalid_parameter_noinfo_noreturn, _invoke_watson
-ms.date: 11/04/2016
+ms.date: 4/2/2020
 api_name:
 - _invalid_parameter
 - _invalid_parameter_noinfo
 - _invalid_parameter_noinfo_noreturn
 - _invoke_watson
+- _o__invalid_parameter_noinfo
+- _o__invalid_parameter_noinfo_noreturn
 api_location:
 - api-ms-win-crt-runtime-l1-1-0.dll
+- api-ms-win-crt-private-l1-1-0
 api_type:
 - DLLExport
 topic_type:
@@ -22,12 +25,12 @@ f1_keywords:
 - CORECRT/_invoke_watson
 - _invoke_watson
 ms.assetid: a4d6f1fd-ce56-4783-8719-927151a7a814
-ms.openlocfilehash: b2714c140a2396d88c700689244c6ec04e12169c
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 0f0a3ea3e1f2e43d53650b4017905c696269ce20
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70954606"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81343941"
 ---
 # <a name="_invalid_parameter-_invalid_parameter_noinfo-_invalid_parameter_noinfo_noreturn-_invoke_watson"></a>_invalid_parameter, _invalid_parameter_noinfo, _invalid_parameter_noinfo_noreturn, _invoke_watson
 
@@ -67,30 +70,32 @@ Chaîne représentant l’expression de paramètre de code source qui n’est pa
 *function_name*<br/>
 Nom de la fonction qui a appelé le gestionnaire.
 
-*file_name*<br/>
+*File_name*<br/>
 Fichier de code source dans lequel le gestionnaire a été appelé.
 
 *line_number*<br/>
 Numéro de ligne dans le code source où le gestionnaire a été appelé.
 
-*reserved*<br/>
-Non utilisé.
+*Réservés au*<br/>
+Inutilisé.
 
 ## <a name="return-value"></a>Valeur de retour
 
-Ces fonctions ne retournent pas de valeur. Les fonctions **_invalid_parameter_noinfo_noreturn** et **_invoke_watson** ne retournent pas à l’appelant et, dans certains cas, **_invalid_parameter** et **_invalid_parameter_noinfo** peuvent ne pas être retournés à l’appelant.
+Ces fonctions ne retournent pas de valeur. Les fonctions **_invalid_parameter_noinfo_noreturn** et **_invoke_watson** ne reviennent pas à l’appelant et, dans certains cas, **_invalid_parameter** et **_invalid_parameter_noinfo** peuvent ne pas revenir à l’appelant.
 
 ## <a name="remarks"></a>Notes
 
 Quand des paramètres non valides sont passés aux fonctions de la bibliothèque runtime C, celles-ci appellent un *gestionnaire de paramètres non valides*, fonction qui peut être spécifiée par le programmeur pour effectuer plusieurs actions. Par exemple, il peut signaler le problème à l’utilisateur, écrire dans un journal, marquer un arrêt dans un débogueur, mettre fin au programme ou ne rien faire du tout. Si aucune fonction n’est spécifiée par le programmeur, un gestionnaire par défaut, **_invoke_watson**, est appelé.
 
-Par défaut, lorsqu’un paramètre non valide est identifié dans le code de débogage, les fonctions de bibliothèque CRT appellent la fonction **_invalid_parameter** à l’aide de paramètres détaillés. Dans du code sans débogage, la fonction **_invalid_parameter_noinfo** est appelée, ce qui appelle la fonction **_invalid_parameter** à l’aide de paramètres vides. Si la fonction de bibliothèque CRT non déboguée nécessite l’arrêt du programme, la fonction **_invalid_parameter_noinfo_noreturn** est appelée, ce qui appelle la fonction **_invalid_parameter** à l’aide de paramètres vides, suivis d’un appel à **_invoke_ fonction Watson** permettant de forcer l’arrêt d’un programme.
+Par défaut, lorsqu’un paramètre non valide est identifié dans le code de débogé, les fonctions de bibliothèque CRT appellent la fonction **_invalid_parameter** à l’aide de paramètres verbeux. Dans le code non-débogé, la fonction **_invalid_parameter_noinfo** est appelée, qui appelle la fonction **_invalid_parameter** en utilisant des paramètres vides. Si la fonction de bibliothèque CRT non-débbug nécessite la résiliation du programme, la fonction **_invalid_parameter_noinfo_noreturn** est appelée, qui appelle la fonction **_invalid_parameter** en utilisant des paramètres vides, suivie d’un appel à la fonction **_invoke_watson** pour forcer la terminaison du programme.
 
-La fonction **_invalid_parameter** vérifie si un gestionnaire de paramètres non valides défini par l’utilisateur a été défini et, si tel est le cas, l’appelle. Par exemple, si un gestionnaire de thread local défini par l’utilisateur a été défini par un appel à [set_thread_local_invalid_parameter_handler](set-invalid-parameter-handler-set-thread-local-invalid-parameter-handler.md) dans le thread actuel, il est appelé, puis la fonction retourne le contrôle. Sinon, si un gestionnaire de paramètres non valides global défini par l’utilisateur a été défini par un appel à [set_invalid_parameter_handler](set-invalid-parameter-handler-set-thread-local-invalid-parameter-handler.md), il est appelé, puis la fonction retourne le contrôle. Dans le cas contraire, le gestionnaire par défaut **_invoke_watson** est appelé. Le comportement par défaut de **_invoke_watson** consiste à mettre fin au programme. Les gestionnaires définis par l’utilisateur peuvent arrêter le programme ou retourner le contrôle. Il est recommandé que les gestionnaires définis par l’utilisateur terminent le programme, sauf si la récupération est certaine.
+La **fonction _invalid_parameter** vérifie si un gestionnaire de paramètres invalide défini par l’utilisateur a été défini et, dans l’affirmative, l’appelle. Par exemple, si un gestionnaire de thread local défini par l’utilisateur a été défini par un appel à [set_thread_local_invalid_parameter_handler](set-invalid-parameter-handler-set-thread-local-invalid-parameter-handler.md) dans le thread actuel, il est appelé, puis la fonction retourne le contrôle. Sinon, si un gestionnaire de paramètres non valides global défini par l’utilisateur a été défini par un appel à [set_invalid_parameter_handler](set-invalid-parameter-handler-set-thread-local-invalid-parameter-handler.md), il est appelé, puis la fonction retourne le contrôle. Dans le cas contraire, le gestionnaire par défaut **_invoke_watson** est appelé. Le comportement par défaut de **_invoke_watson** est de mettre fin au programme. Les gestionnaires définis par l’utilisateur peuvent arrêter le programme ou retourner le contrôle. Il est recommandé que les gestionnaires définis par l’utilisateur terminent le programme, sauf si la récupération est certaine.
 
-Quand le gestionnaire par défaut **_invoke_watson** est appelé, si le processeur prend en charge une opération [__fastfail](../../intrinsics/fastfail.md) , il est appelé à l’aide d’un paramètre de **FAST_FAIL_INVALID_ARG** et le processus se termine. Sinon, une exception d’échec rapide est déclenchée, qui peut être interceptée par un débogueur attaché. Si le processus est autorisé à continuer, il est arrêté par un appel à la fonction Windows **TerminateProcess** à l’aide de l’état de code d’exception **STATUS_INVALID_CRUNTIME_PARAMETER**.
+Lorsque le gestionnaire par défaut **_invoke_watson** est appelé, si le processeur prend en charge une [opération __fastfail,](../../intrinsics/fastfail.md) il est invoqué à l’aide d’un paramètre de **FAST_FAIL_INVALID_ARG** et le processus se termine. Sinon, une exception d’échec rapide est déclenchée, qui peut être interceptée par un débogueur attaché. Si le processus est autorisé à se poursuivre, il est résilié par un appel à la fonction Windows **TerminateProcess** en utilisant un statut de code d’exception de **STATUS_INVALID_CRUNTIME_PARAMETER**.
 
-## <a name="requirements"></a>Configuration requise
+Par défaut, l’état global de cette fonction est étendue à l’application. Pour changer cela, voir [Global State dans le CRT](../global-state.md).
+
+## <a name="requirements"></a>Spécifications
 
 |Fonction|En-tête requis|
 |--------------|------------------|
@@ -103,4 +108,4 @@ Pour plus d'informations sur la compatibilité, voir [Compatibilité](../../c-ru
 [Référence alphabétique des fonctions](crt-alphabetical-function-reference.md)<br/>
 [_get_invalid_parameter_handler, _get_thread_local_invalid_parameter_handler](get-invalid-parameter-handler-get-thread-local-invalid-parameter-handler.md)<br/>
 [_set_invalid_parameter_handler, _set_thread_local_invalid_parameter_handler](set-invalid-parameter-handler-set-thread-local-invalid-parameter-handler.md)<br/>
-[Validation de paramètre](../../c-runtime-library/parameter-validation.md)<br/>
+[Validation des paramètres](../../c-runtime-library/parameter-validation.md)<br/>

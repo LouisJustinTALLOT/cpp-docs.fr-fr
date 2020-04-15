@@ -9,26 +9,26 @@ helpviewer_keywords:
 - ODBC connections, configuring
 - configuring ODBC data sources
 ms.assetid: b8cabe9b-9e12-4d73-ae36-7cb12dee3213
-ms.openlocfilehash: 38f0f383256a05c983fb7e7d7a498e16881c7b78
-ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
+ms.openlocfilehash: ba0224d166795b34d636ace610265e115209e49c
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/17/2020
-ms.locfileid: "79446948"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81358860"
 ---
 # <a name="data-source-programmatically-configuring-an-odbc-data-source"></a>Source de données : configuration d'une source de données ODBC par programme
 
-Cette rubrique explique comment configurer des noms de sources de données Open Database Connectivity (ODBC) par programmation. Vous bénéficiez ainsi d’une certaine flexibilité pour accéder aux données sans forcer l’utilisateur à utiliser explicitement l’administrateur ODBC ou d’autres programmes pour spécifier les noms des sources de données.
+Ce sujet explique comment vous pouvez configurer les noms de source de données Open Database Connectivity (ODBC) programmatiquement. Cela vous donne la flexibilité d’accéder aux données sans forcer l’utilisateur à utiliser explicitement l’administrateur ODBC ou d’autres programmes pour spécifier les noms des sources de données.
 
-En règle générale, un utilisateur exécute l’administrateur ODBC pour créer une source de données si le système de gestion de base de données (SGBD) associé prend en charge cette opération.
+En règle générale, un utilisateur exécute l’administrateur d’ODBC pour créer une source de données si le système de gestion de base de données associé (DBMS) prend en charge cette opération.
 
-Lors de la création d’une source de données ODBC Microsoft Access par le biais de l’administrateur ODBC, vous avez le choix entre deux options : vous pouvez sélectionner un fichier. mdb existant ou créer un nouveau fichier. mdb. Il n’existe aucun moyen de créer le fichier. mdb par programmation à partir de votre application ODBC MFC. Par conséquent, si votre application nécessite de placer des données dans une source de données Microsoft Access (fichier. mdb), vous souhaiterez probablement disposer d’un fichier. mdb vide que vous pouvez utiliser ou copier chaque fois que vous en avez besoin.
+Lors de la création d’une source de données Microsoft Access ODBC par l’intermédiaire de l’administrateur ODBC, vous avez deux choix : vous pouvez sélectionner un fichier .mdb existant ou vous pouvez créer un nouveau fichier .mdb. Il n’existe aucun moyen programmatique de créer le fichier .mdb à partir de votre application MFC ODBC. Par conséquent, si votre application exige que vous placez des données dans une source de données Microsoft Access (.mdb fichier), vous souhaitez très probablement avoir un fichier .mdb vide que vous pouvez utiliser ou copier chaque fois que vous en avez besoin.
 
-Toutefois, de nombreux SGBD autorisent la création de sources de données par programmation. Certaines sources de données conservent une spécification de répertoire pour les bases de données. Autrement dit, un répertoire est la source de données et chaque table de la source de données est stockée dans un fichier séparé (dans le cas de dBASE, chaque table est un fichier. dbf). Les pilotes d’autres bases de données ODBC, tels que Microsoft Access et SQL Server, requièrent que certains critères spécifiques soient respectés pour qu’une source de données puisse être établie. Par exemple, lors de l’utilisation du pilote ODBC SQL Server, vous devez avoir établi un ordinateur SQL Server.
+Cependant, de nombreux DBMS permettent la création de sources de données programmatiques. Certaines sources de données conservent une spécification d’annuaire pour les bases de données. Autrement dit, un répertoire est la source de données et chaque tableau dans la source de données est stocké dans un fichier séparé (dans le cas de dBASE, chaque table est un fichier .dbf). Les conducteurs d’autres bases de données ODBC, tels que Microsoft Access et SQL Server, exigent que certains critères spécifiques soient remplis avant qu’une source de données puisse être établie. Par exemple, lorsque vous utilisez le conducteur SQL Server ODBC, vous devez avoir établi un ordinateur SQL Server.
 
-##  <a name="_core_sqlconfigdatasource_example"></a>Exemple de SQLConfigDataSource
+## <a name="sqlconfigdatasource-example"></a><a name="_core_sqlconfigdatasource_example"></a>SQLConfigDataSource Exemple
 
-L’exemple suivant utilise la fonction API ODBC `::SQLConfigDataSource` pour créer une source de données Excel nommée New Excel Data Source :
+L’exemple suivant `::SQLConfigDataSource` utilise la fonction API ODBC pour créer une nouvelle source de données Excel appelée New Excel Data Source :
 
 ```
 SQLConfigDataSource(NULL,ODBC_ADD_DSN, "Excel Files (*.xls)",
@@ -39,23 +39,23 @@ SQLConfigDataSource(NULL,ODBC_ADD_DSN, "Excel Files (*.xls)",
                    "MaxScanRows=20\0");
 ```
 
-Notez que la source de données est en fait un répertoire (C:\EXCELDIR); ce répertoire doit exister. Le pilote Excel utilise des répertoires comme sources de données et fichiers en tant que tables individuelles (une table par fichier. xls).
+Notez que la source de données est en fait un répertoire (C: EXCELDIR); ce répertoire doit exister. Le pilote Excel utilise les répertoires comme sources de données et fichiers comme tableaux individuels (une table par fichier .xls).
 
-Pour plus d’informations sur la création de tables, consultez [source de données : création d’une table par programmation dans une source de données ODBC](../../data/odbc/data-source-programmatically-creating-a-table-in-an-odbc-data-source.md).
+Pour plus d’informations sur la création de tableaux, voir [Source de données : Création programmatique d’une table dans une source de données ODBC](../../data/odbc/data-source-programmatically-creating-a-table-in-an-odbc-data-source.md).
 
-Les informations suivantes décrivent les paramètres qui doivent être passés à la fonction API ODBC `::SQLConfigDataSource`. Pour utiliser `::SQLConfigDataSource`, vous devez inclure le fichier d’en-tête Odbcinst. h et utiliser la bibliothèque d’importation Odbcinst. lib. En outre, odbccp32. dll doit se trouver dans le chemin d’accès au moment de l’exécution (ou Odbcinst. dll pour 16 bits).
+Les informations suivantes discutent des paramètres qui `::SQLConfigDataSource` doivent être transmis à la fonction API ODBC. Pour `::SQLConfigDataSource`utiliser, vous devez inclure le fichier d’en-tête Odbcinst.h et utiliser la bibliothèque d’importation Odbcinst.lib. En outre, Odbccp32.dll doit être dans le chemin à l’heure de course (ou Odbcinst.dll pour 16 bits).
 
-Vous pouvez créer un nom de source de données ODBC à l’aide de l’administrateur ODBC ou d’un utilitaire similaire. Toutefois, il est parfois souhaitable de créer un nom de source de données directement à partir de votre application pour obtenir l’accès sans que l’utilisateur n’ait à exécuter un utilitaire séparé.
+Vous pouvez créer un nom source de données ODBC à l’aide d’un administrateur ODBC ou d’un utilitaire similaire. Cependant, il est parfois souhaitable de créer un nom de source de données directement à partir de votre application pour obtenir l’accès sans exiger de l’utilisateur d’exécuter un utilitaire distinct.
 
-L’administrateur ODBC (généralement installé dans le panneau de configuration) crée une nouvelle source de données en plaçant des entrées dans le Registre Windows (ou, pour les plates-formes 16 bits, dans le fichier ODBC. ini). Le gestionnaire de pilotes ODBC interroge ce fichier pour obtenir les informations nécessaires sur la source de données. Il est important de connaître les informations qui doivent être placées dans le registre, car vous devez les fournir avec l’appel à `::SQLConfigDataSource`.
+L’administrateur d’ODBC (généralement installé dans le panneau de contrôle) crée une nouvelle source de données en plaçant des entrées dans le registre Windows (ou, pour 16 bits, dans le fichier Odbc.ini). Le gestionnaire de chauffeur de l’ODBC interroge ce dossier pour obtenir les renseignements requis sur la source de données. Il est important de savoir quelles informations doivent être placées dans le `::SQLConfigDataSource`registre parce que vous devez lui fournir l’appel à .
 
-Bien que ces informations puissent être écrites directement dans le registre sans utiliser `::SQLConfigDataSource`, toute application qui le fait repose sur la technique actuelle utilisée par le gestionnaire de pilotes pour conserver ses données. Si une révision ultérieure du gestionnaire de pilotes ODBC implémente la conservation des enregistrements sur les sources de données d’une manière différente, toute application qui utilise cette technique est interrompue. Il est généralement recommandé d’utiliser une fonction API lorsqu’une fonction est fournie. Par exemple, votre code est portable de 16 bits à 32 bits si vous utilisez la fonction `::SQLConfigDataSource`, car la fonction écrit correctement dans le fichier ODBC. ini ou dans le registre.
+Bien que ces informations puissent être `::SQLConfigDataSource`écrites directement au registre sans l’utiliser, toute application qui le fait repose sur la technique actuelle utilisée par le gestionnaire de conducteur pour maintenir ses données. Si une révision ultérieure de l’ODBC Driver Manager implémente la tenue de dossiers sur les sources de données d’une manière différente, toute application qui utilise cette technique est cassée. Il est généralement conseillé d’utiliser une fonction API lorsque l’on est fourni. Par exemple, votre code est portable de 16 bits `::SQLConfigDataSource` à 32 bits si vous utilisez la fonction, parce que la fonction écrit correctement au fichier Odbc.ini ou au registre.
 
-##  <a name="_core_sqlconfigdatasource_parameters"></a>Paramètres de SQLConfigDataSource
+## <a name="sqlconfigdatasource-parameters"></a><a name="_core_sqlconfigdatasource_parameters"></a>Paramètres SQLConfigDataSource
 
-La rubrique suivante décrit les paramètres de la fonction `::SQLConfigDataSource`. La plupart des informations proviennent des informations de référence du *programmeur* de l’API ODBC C++ fournies avec Visual version 1,5 et versions ultérieures.
+Ce qui suit explique `::SQLConfigDataSource` les paramètres de la fonction. Une grande partie de l’information provient de la *référence du programmeur* API de l’ODBC fournie avec la version 1.5 visuelle et plus tard.
 
-###  <a name="_core_function_prototype"></a>Prototype de fonction
+### <a name="function-prototype"></a><a name="_core_function_prototype"></a>Prototype de fonction
 
 ```
 BOOL SQLConfigDataSource(HWND hwndParent,UINT fRequest, LPCSTR lpszDriver, LPCSTR lpszAttributes);
@@ -63,56 +63,56 @@ BOOL SQLConfigDataSource(HWND hwndParent,UINT fRequest, LPCSTR lpszDriver, LPCST
 
 ### <a name="remarks"></a>Notes
 
-####  <a name="_core_parameters_and_usage"></a>Paramètres et utilisation
+#### <a name="parameters-and-usage"></a><a name="_core_parameters_and_usage"></a>Paramètres et utilisation
 
 *hwndParent*<br/>
-Fenêtre spécifiée en tant que propriétaire de toutes les boîtes de dialogue que le gestionnaire de pilotes ODBC ou le pilote ODBC crée pour obtenir des informations supplémentaires de la part de l’utilisateur sur la nouvelle source de données. Si le paramètre *lpszAttributes* ne fournit pas suffisamment d’informations, une boîte de dialogue s’affiche. Le paramètre *hwndParent* peut avoir la valeur null.
+La fenêtre spécifiée comme propriétaire de toutes les boîtes de dialogue que le gestionnaire de pilote ODBC ou le pilote spécifique ODBC crée pour obtenir des informations supplémentaires de l’utilisateur sur la nouvelle source de données. Si le *paramètre lpszAttributes* ne fournit pas suffisamment d’informations, une boîte de dialogue apparaît. Le *paramètre hwndParent* peut être NULL.
 
-*lpszDriver*<br/>
-Description du pilote. Il s’agit du nom présenté aux utilisateurs plutôt que du nom du pilote physique (la DLL).
+*lpszDriver (en)*<br/>
+La description du conducteur. C’est le nom présenté aux utilisateurs plutôt que le nom du conducteur physique (le DLL).
 
 *lpszAttributes*<br/>
-Liste d’attributs sous la forme « KeyName = value ». Ces chaînes sont séparées par des marques de fin null avec deux marques de fin null consécutives à la fin de la liste. Ces attributs sont principalement des entrées propres au pilote par défaut, qui entrent dans le registre pour la nouvelle source de données. Une clé importante qui n’est pas mentionnée dans la référence de l’API ODBC pour cette fonction est « DSN » (« Data Source Name »), qui spécifie le nom de la nouvelle source de données. Le reste des entrées est spécifique au pilote pour la nouvelle source de données. Il n’est souvent pas nécessaire de fournir toutes les entrées, car le pilote peut demander à l’utilisateur des boîtes de dialogue pour les nouvelles valeurs. (Affectez à *hwndParent* la valeur null pour l’entraîner). Vous pouvez fournir explicitement des valeurs par défaut afin que l’utilisateur ne soit pas invité à le faire.
+Liste des attributs sous la forme de "keyname-value". Ces cordes sont séparées par des terminateurs nuls avec deux terminateurs nuls consécutifs à la fin de la liste. Ces attributs sont principalement des entrées spécifiques au conducteur par défaut, qui entrent dans le registre pour la nouvelle source de données. Une clé importante qui n’est pas mentionnée dans la référence ODBC API pour cette fonction est "DSN" ("nom source de données"), qui spécifie le nom de la nouvelle source de données. Le reste des entrées sont spécifiques au conducteur pour la nouvelle source de données. Souvent, il n’est pas nécessaire de fournir toutes les entrées parce que le pilote peut inciter l’utilisateur avec des boîtes de dialogue pour les nouvelles valeurs. (Définissez *hwndParent* à NULL pour causer ceci.) Vous pouvez fournir explicitement des valeurs par défaut afin que l’utilisateur ne soit pas invité.
 
-#### <a name="to-determine-the-description-of-a-driver-for-the-lpszdriver-parameter-using-odbc-administrator"></a>Pour déterminer la description d’un pilote pour le paramètre lpszDriver à l’aide de l’administrateur ODBC
+#### <a name="to-determine-the-description-of-a-driver-for-the-lpszdriver-parameter-using-odbc-administrator"></a>Déterminer la description d’un pilote pour le paramètre lpszDriver à l’aide de l’administrateur ODBC
 
-1. Exécutez l’administrateur ODBC.
+1. Exécuter l’administrateur ODBC.
 
-1. Cliquez sur **Ajouter**.
+1. Cliquez sur **Add**.
 
-Vous obtenez ainsi une liste des pilotes installés et leurs descriptions. Utilisez cette description comme paramètre *lpszDriver* . Notez que vous utilisez la description complète, telle que « fichiers Excel (*. xls) », y compris l’extension de nom de fichier et les parenthèses si elles existent dans la description.
+Cela vous donne une liste de pilotes installés et leurs descriptions. Utilisez cette description comme paramètre *lpszDriver.* Notez que vous utilisez l’ensemble de la description, comme "Excel Files (.xls)", y compris l’extension du nom de fichier et les parenthèses si elles existent dans la description.
 
-Vous pouvez également examiner le registre (ou, pour les 16 bits, le fichier Odbcinst. ini), qui contient une liste de toutes les entrées et descriptions de pilote sous la clé de Registre « ODBC Drivers » (ou la section [ODBC Drivers] dans Odbcinst. ini).
+Comme alternative, vous pouvez examiner le registre (ou, pour 16 bits, le fichier Odbcinst.ini), qui contient une liste de toutes les entrées et descriptions du pilote sous la clé du registre "ODBC Drivers" (ou la section [ODBC Drivers] dans Ocinst.ini).
 
-L’une des méthodes permettant de trouver les noms et les valeurs pour le paramètre *lpszAttributes* consiste à examiner le fichier ODBC. ini d’une source de données déjà configurée (peut-être une source de données qui a été configurée par l’administrateur ODBC).
+Une façon de trouver les noms de clés et les valeurs pour le paramètre *lpszAttributes* est d’examiner le fichier Odbc.ini pour une source de données déjà configurée (peut-être celle qui a été configurée par oDBC Administrateur).
 
-#### <a name="to-find-keynames-and-values-for-the-lpszattributes-parameter"></a>Pour rechercher les noms et les valeurs du paramètre lpszAttributes
+#### <a name="to-find-keynames-and-values-for-the-lpszattributes-parameter"></a>Trouver des noms de clés et des valeurs pour le paramètre lpszAttributes
 
-1. Exécutez l’éditeur du Registre Windows (ou, pour les 16 bits, ouvrez le fichier ODBC. ini).
+1. Exécutez l’éditeur du registre Windows (ou, pour 16 bits, ouvrez le fichier Odbc.ini).
 
-1. Recherchez les informations relatives aux sources de données ODBC à l’aide d’un des éléments suivants :
+1. Trouvez les informations sur les sources de données de l’ODBC à l’aide de l’une des suivantes :
 
-   - Pour 32 bits, recherchez la clé **HKEY_CURRENT_USER \software\odbc\odbc. INI\ODBC des sources de données** dans le volet gauche.
+   - Pour 32 bits, trouvez la clé **HKEY_CURRENT_USER-Logiciel-ODBC-ODBC. Sources de données INI-ODBC** dans la vitre gauche.
 
-      Le volet droit répertorie les entrées sous la forme : « pub : REG_SZ : *\<nom de la source de données >* », où *\<nom de la source de données >* est une source de données qui a déjà été configurée avec les paramètres souhaités pour le pilote que vous prévoyez d’utiliser. Sélectionnez la source de données souhaitée, par exemple SQL Server. Les éléments qui suivent la chaîne « pub : » sont, dans l’ordre, le KeyName et la valeur à utiliser dans votre paramètre *lpszAttributes* .
+      Le volet droit répertorie les entrées du formulaire: "pub: REG_SZ:*\<nom source de données>*", où * \<le nom de source de données>* est une source de données qui a déjà été configuré avec les paramètres souhaités pour le pilote que vous avez l’intention d’utiliser. Sélectionnez la source de données que vous souhaitez, par exemple, SQL Server. Les articles suivant la chaîne "pub:" sont, dans l’ordre, le nom de clé et la valeur à utiliser dans votre paramètre *lpszAttributes.*
 
-   - Pour le 16 bits, recherchez la section dans le fichier ODBC. ini marqué par [ *\<nom de la source de données >* ].
+   - Pour 16 bits, trouver la section dans le fichier Odbc.ini marqué par*\<[nom source de données>*].
 
-      Les lignes qui suivent cette ligne se présentent sous la forme « KeyName = value ». Il s’agit exactement des entrées à utiliser dans votre paramètre *lpszAttributes* .
+      Les lignes suivant cette ligne sont de la forme "keyname-value". Ce sont exactement les entrées à utiliser dans votre paramètre *lpszAttributes.*
 
-Vous pouvez également examiner la documentation du pilote spécifique que vous allez utiliser. Vous trouverez des informations utiles dans l’aide en ligne du pilote, à laquelle vous pouvez accéder en exécutant l’administrateur ODBC. Ces fichiers d’aide sont généralement placés dans le répertoire WINDOWS\SYSTEM pour Windows NT, Windows 3,1 ou Windows 95.
+Vous pouvez également examiner la documentation pour le pilote spécifique que vous allez utiliser. Vous pouvez trouver des informations utiles dans l’aide en ligne pour le conducteur, que vous pouvez accéder en exécutant oDBC Administrateur. Ces fichiers d’aide sont généralement placés dans l’annuaire WINDOWS-SYSTEM pour Windows NT, Windows 3.1 ou Windows 95.
 
-#### <a name="to-obtain-online-help-for-your-odbc-driver"></a>Pour obtenir de l’aide en ligne pour votre pilote ODBC
+#### <a name="to-obtain-online-help-for-your-odbc-driver"></a>Pour obtenir de l’aide en ligne pour votre chauffeur ODBC
 
-1. Exécutez l’administrateur ODBC.
+1. Exécuter l’administrateur ODBC.
 
-1. Cliquez sur **Ajouter**.
+1. Cliquez sur **Add**.
 
-1. Sélectionnez le nom du pilote.
+1. Sélectionnez le nom du conducteur.
 
 1. Cliquez sur **OK**.
 
-Lorsque l’administrateur ODBC affiche les informations relatives à la création d’une nouvelle source de données pour ce pilote particulier, cliquez sur **aide**. Cela ouvre le fichier d’aide de ce pilote particulier, qui contient généralement des informations importantes concernant l’utilisation du pilote.
+Lorsque l’administrateur d’ODBC affiche les informations pour créer une nouvelle source de données pour ce pilote particulier, cliquez sur **Aide**. Cela ouvre le fichier d’aide pour ce conducteur particulier, qui contient généralement des informations importantes concernant l’utilisation du conducteur.
 
 ## <a name="see-also"></a>Voir aussi
 

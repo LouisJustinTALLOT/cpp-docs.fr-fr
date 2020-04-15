@@ -1,8 +1,9 @@
 ---
 title: _pclose
-ms.date: 11/04/2016
+ms.date: 4/2/2020
 api_name:
 - _pclose
+- _o__pclose
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -15,6 +16,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-stdio-l1-1-0.dll
+- api-ms-win-crt-private-l1-1-0
 api_type:
 - DLLExport
 topic_type:
@@ -27,19 +29,19 @@ helpviewer_keywords:
 - pclose function
 - pipes, closing
 ms.assetid: e2e31a9e-ba3a-4124-bcbb-c4040110b3d3
-ms.openlocfilehash: 383dd96553463a2619537cf06fc6534770ed88d5
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: c66a749d6aeb74fdc677b2d6088e1b5093f3570b
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70951081"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81338528"
 ---
 # <a name="_pclose"></a>_pclose
 
 Attend un nouveau processeur de commandes et ferme le flux au niveau du canal associé.
 
 > [!IMPORTANT]
-> Cette API ne peut pas être utilisée dans les applications qui s’exécutent dans le Windows Runtime. Pour plus d’informations, consultez [Fonctions CRT non prises en charge dans les applications de la plateforme Windows universelle](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
+> Cette API ne peut pas être utilisée dans les applications qui s'exécutent dans le Windows Runtime. Pour plus d’informations, consultez [Fonctions CRT non prises en charge dans les applications de la plateforme Windows universelle](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -51,26 +53,28 @@ FILE *stream
 
 ### <a name="parameters"></a>Paramètres
 
-*stream*<br/>
-Valeur de retour de l’appel précédent à **_popen**.
+*Flux*<br/>
+Valeur de rendement de l’appel précédent à **_popen**.
 
 ## <a name="return-value"></a>Valeur de retour
 
-Retourne l’état de sortie du processeur de commandes de fin ou-1 si une erreur se produit. Le format de la valeur de retour est le même que pour **_cwait**, sauf que les octets de poids faible et de poids fort sont permutés. Si Stream a la **valeur null**, **_pclose** définit **errno** sur **EINVAL** et retourne-1.
+Renvoie l’état de sortie du processeur de commande de fin, ou -1 en cas d’erreur. Le format de la valeur de retour est le même que celui **de _cwait**, sauf que les octets de faible ordre et de haute commande sont échangés. Si le flux est **NULL**, **_pclose** définit **errno** à **EINVAL** et retourne -1.
 
 Pour obtenir des informations sur ces codes d’erreur et les autres, consultez [_doserrno, errno, _sys_errlist et _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
 
 ## <a name="remarks"></a>Notes
 
-La fonction **_pclose** recherche l’ID de processus du processeur de commandes (cmd. exe) Démarré par l’appel **_popen** associé, exécute un appel [_cwait](cwait.md) sur le nouveau processeur de commandes, puis ferme le flux sur le canal associé.
+La fonction **_pclose** recherche l’ID de processus du processeur de commande (Cmd.exe) commencé par **l’appel _popen** associé, exécute un appel [_cwait](cwait.md) sur le nouveau processeur de commande, et ferme le flux sur le tuyau associé.
 
-## <a name="requirements"></a>Configuration requise
+Par défaut, l’état global de cette fonction est étendue à l’application. Pour changer cela, voir [Global State dans le CRT](../global-state.md).
+
+## <a name="requirements"></a>Spécifications
 
 |Routine|En-tête requis|
 |-------------|---------------------|
 |**_pclose**|\<stdio.h>|
 
-Pour plus d'informations sur la compatibilité, voir [Compatibilité](../../c-runtime-library/compatibility.md).
+Pour plus d’informations sur la compatibilité, consultez [Compatibility](../../c-runtime-library/compatibility.md).
 
 ## <a name="libraries"></a>Bibliothèques
 
@@ -78,6 +82,6 @@ Toutes les versions des [bibliothèques Runtime C](../../c-runtime-library/crt-l
 
 ## <a name="see-also"></a>Voir aussi
 
-[Contrôle de processus et d’environnement](../../c-runtime-library/process-and-environment-control.md)<br/>
+[Contrôle des processus et de l’environnement](../../c-runtime-library/process-and-environment-control.md)<br/>
 [_pipe](pipe.md)<br/>
 [_popen, _wpopen](popen-wpopen.md)<br/>

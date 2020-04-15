@@ -1,11 +1,13 @@
 ---
 title: isspace, iswspace, _isspace_l, _iswspace_l
-ms.date: 11/04/2016
+ms.date: 4/2/2020
 api_name:
 - iswspace
 - _isspace_l
 - _iswspace_l
 - isspace
+- _o_isspace
+- _o_iswspace
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -19,6 +21,7 @@ api_location:
 - ucrtbase.dll
 - api-ms-win-crt-string-l1-1-0.dll
 - ntoskrnl.exe
+- api-ms-win-crt-private-l1-1-0
 api_type:
 - DLLExport
 topic_type:
@@ -37,12 +40,12 @@ helpviewer_keywords:
 - _istspace function
 - istspace function
 ms.assetid: b851e0c0-36bb-4dac-a1a3-533540939035
-ms.openlocfilehash: b01aaf29ff0cd3994c45433db9ff0b9f4ca7481c
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 43d66a191427e886941fd3dcac5dc6b71146b68a
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70953642"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81342764"
 ---
 # <a name="isspace-iswspace-_isspace_l-_iswspace_l"></a>isspace, iswspace, _isspace_l, _iswspace_l
 
@@ -69,7 +72,7 @@ int _iswspace_l(
 
 ### <a name="parameters"></a>Paramètres
 
-*c*<br/>
+*C*<br/>
 Entier à tester.
 
 *locale*<br/>
@@ -77,24 +80,28 @@ Paramètres régionaux à utiliser.
 
 ## <a name="return-value"></a>Valeur de retour
 
-Chacune de ces routines retourne une valeur différente de zéro si *c* est une représentation particulière d’un espace. **isspace** retourne une valeur différente de zéro si *c* est un espace blanc (0x09-0x0D ou 0x20). Le résultat de la condition de test pour la fonction **isspace** dépend du paramètre de catégorie **LC_CTYPE** des paramètres régionaux. Pour plus d’informations [, consultez setlocale, _wsetlocale](setlocale-wsetlocale.md) . Les versions de ces fonctions qui n’ont pas le suffixe **_L** utilisent les paramètres régionaux actuels pour tout comportement dépendant des paramètres régionaux ; les versions qui ont le suffixe **_L** sont identiques, sauf qu’elles utilisent à la place les paramètres régionaux qui sont passés. Pour plus d’informations, consultez [Locale](../../c-runtime-library/locale.md).
+Chacune de ces routines retourne nonzero si *c* est une représentation particulière d’un personnage spatial. **isspace** retourne une valeur non zéro si *c* est un personnage d’espace blanc (0x09 - 0x0D ou 0x20). Le résultat de l’état d’essai de la fonction **isspace** dépend de la **LC_CTYPE’établissement** de la catégorie du lieu; voir [setlocale, _wsetlocale](setlocale-wsetlocale.md) pour plus d’informations. Les versions de ces fonctions qui n’ont pas le **suffixe _l** utilisent le lieu actuel pour tout comportement local-dépendant; les versions qui ont le **suffixe _l** sont identiques, sauf qu’ils utilisent le lieu qui est passé à la place. Pour plus d’informations, consultez [Locale](../../c-runtime-library/locale.md).
 
-**iswspace** retourne une valeur différente de zéro si *c* est un caractère élargi qui correspond à un espace blanc standard.
+**iswspace** retourne une valeur non zéro si *c* est un personnage large qui correspond à un caractère standard de l’espace blanc.
 
-Le comportement de **isspace** et **_isspace_l** n’est pas défini si *c* n’est pas EOF ni dans la plage 0 à 0xFF, inclus. Quand une bibliothèque CRT de débogage est utilisée et que *c* n’est pas l’une de ces valeurs, les fonctions déclenchent une assertion.
+Le comportement de **l’isspace** et **_isspace_l** n’est pas défini si *c n’est* pas EOF ou dans la gamme 0 à 0xFF, inclusive. Lorsqu’une bibliothèque CRT débagé est utilisée et *que c* n’est pas l’une de ces valeurs, les fonctions soulèvent une affirmation.
 
 ### <a name="generic-text-routine-mappings"></a>Mappages de routines de texte générique
 
 |Routine TCHAR.H|_UNICODE et _MBCS non définis|_MBCS défini|_UNICODE défini|
 |---------------------|------------------------------------|--------------------|-----------------------|
-|**_** **istspace**|**isspace**|[_ismbcspace](ismbcgraph-functions.md)|**iswspace**|
+|**_** **Istspace**|**isspace**|[_ismbcspace](ismbcgraph-functions.md)|**iswspace (en)**|
 
-## <a name="requirements"></a>Configuration requise
+## <a name="remarks"></a>Notes
+
+Par défaut, l’état global de cette fonction est étendue à l’application. Pour changer cela, voir [Global State dans le CRT](../global-state.md).
+
+## <a name="requirements"></a>Spécifications
 
 |Routine|En-tête requis|
 |-------------|---------------------|
 |**isspace**|\<ctype.h>|
-|**iswspace**|\<ctype.h> ou \<wchar.h>|
+|**iswspace (en)**|\<ctype.h> ou \<wchar.h>|
 |**_isspace_l**|\<ctype.h>|
 |**_iswspace_l**|\<ctype.h> ou \<wchar.h>|
 
@@ -103,5 +110,5 @@ Pour plus d'informations sur la compatibilité, voir [Compatibilité](../../c-ru
 ## <a name="see-also"></a>Voir aussi
 
 [Classifications des caractères](../../c-runtime-library/character-classification.md)<br/>
-[Paramètres régionaux](../../c-runtime-library/locale.md)<br/>
+[Local](../../c-runtime-library/locale.md)<br/>
 [is, isw, routines](../../c-runtime-library/is-isw-routines.md)<br/>

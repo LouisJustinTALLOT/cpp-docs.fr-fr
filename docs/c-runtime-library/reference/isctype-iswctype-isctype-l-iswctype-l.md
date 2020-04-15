@@ -1,11 +1,15 @@
 ---
 title: _isctype, iswctype, _isctype_l, _iswctype_l
-ms.date: 11/04/2016
+ms.date: 4/2/2020
 api_name:
 - _isctype_l
 - iswctype
 - _iswctype_l
 - _isctype
+- _o__isctype
+- _o__isctype_l
+- _o__iswctype_l
+- _o_iswctype
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -18,6 +22,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-string-l1-1-0.dll
+- api-ms-win-crt-private-l1-1-0
 api_type:
 - DLLExport
 topic_type:
@@ -41,16 +46,16 @@ helpviewer_keywords:
 - isctype function
 - _iswctype function
 ms.assetid: cf7509b7-12fc-4d95-8140-ad2eb98173d3
-ms.openlocfilehash: 9fefb852f8ebd34b932842ee4c12b53f79b29641
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 5beedd8a5da6848fc8c43ab1a27ee52402fe394e
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70954399"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81343852"
 ---
 # <a name="_isctype-iswctype-_isctype_l-_iswctype_l"></a>_isctype, iswctype, _isctype_l, _iswctype_l
 
-Teste *c* pour la propriété CType spécifiée par l’argument *desc* . Pour chaque valeur valide de *desc*, il existe une routine de classification de caractères larges équivalente.
+Tests *c* pour la propriété de ctype spécifiée par *l’argument desc.* Pour chaque valeur valide de *desc*, il y a une routine de classification de caractère large équivalente.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -77,10 +82,10 @@ int _iswctype_l(
 
 ### <a name="parameters"></a>Paramètres
 
-*c*<br/>
+*C*<br/>
 Entier à tester.
 
-*desc*<br/>
+*Desc*<br/>
 Propriété à rechercher. Cette valeur est généralement récupérée à l’aide de ctype ou [wctype](wctype.md).
 
 *locale*<br/>
@@ -88,18 +93,22 @@ Paramètres régionaux à utiliser pour les tests dépendant des paramètres ré
 
 ## <a name="return-value"></a>Valeur de retour
 
-**_isctype** et **iswctype** retournent une valeur différente de zéro si *c* a la propriété spécifiée par *desc* dans les paramètres régionaux actuels ou 0 dans le cas contraire. Les versions de ces fonctions avec le suffixe **_L** sont identiques, sauf qu’elles utilisent les paramètres régionaux passés au lieu des paramètres régionaux actuels pour leur comportement dépendant des paramètres régionaux. Pour plus d’informations, consultez [Locale](../../c-runtime-library/locale.md).
+**_isctype** et **iswctype** retourner une valeur nonzero si *c* a la propriété spécifiée par *desc* dans le lieu actuel ou 0 si elle ne le fait pas. Les versions de ces fonctions avec le **suffixe _l** sont identiques, sauf qu’ils utilisent le lieu passé au lieu de la localisation actuelle pour leur comportement local-dépendant. Pour plus d’informations, consultez [Locale](../../c-runtime-library/locale.md).
 
-Le comportement de **_isctype** et **_isctype_l** n’est pas défini si *c* n’est pas EOF ni dans la plage 0 à 0xFF, inclus. Quand une bibliothèque CRT de débogage est utilisée et que *c* n’est pas l’une de ces valeurs, les fonctions déclenchent une assertion.
+Le comportement de **_isctype** et **_isctype_l** n’est pas défini si *c* n’est pas EOF ou dans la gamme 0 à 0xFF, inclusivement. Lorsqu’une bibliothèque CRT débagé est utilisée et *que c* n’est pas l’une de ces valeurs, les fonctions soulèvent une affirmation.
 
 ### <a name="generic-text-routine-mappings"></a>Mappages de routines de texte générique
 
 |Routine Tchar.h|_UNICODE et _MBCS non définis|_MBCS défini|_UNICODE défini|
 |---------------------|--------------------------------------|--------------------|-----------------------|
-|N/A|**_isctype**|N/A|**_iswctype**|
-|N/A|**_isctype_l**|N/A|**_iswctype_l**|
+|n/a|**_isctype**|n/a|**_iswctype**|
+|n/a|**_isctype_l**|n/a|**_iswctype_l**|
 
-## <a name="requirements"></a>Configuration requise
+## <a name="remarks"></a>Notes
+
+Par défaut, l’état global de cette fonction est étendue à l’application. Pour changer cela, voir [Global State dans le CRT](../global-state.md).
+
+## <a name="requirements"></a>Spécifications
 
 |Routine|En-tête requis|
 |-------------|---------------------|
@@ -108,7 +117,7 @@ Le comportement de **_isctype** et **_isctype_l** n’est pas défini si *c* n�
 |**_isctype_l**|\<ctype.h>|
 |**_iswctype_l**|\<ctype.h> ou \<wchar.h>|
 
-Pour plus d'informations sur la compatibilité, voir [Compatibilité](../../c-runtime-library/compatibility.md).
+Pour plus d’informations sur la compatibilité, consultez [Compatibility](../../c-runtime-library/compatibility.md).
 
 ## <a name="libraries"></a>Bibliothèques
 
@@ -117,5 +126,5 @@ Toutes les versions des [bibliothèques Runtime C](../../c-runtime-library/crt-l
 ## <a name="see-also"></a>Voir aussi
 
 [Classifications des caractères](../../c-runtime-library/character-classification.md)<br/>
-[Paramètres régionaux](../../c-runtime-library/locale.md)<br/>
+[Local](../../c-runtime-library/locale.md)<br/>
 [is, isw, routines](../../c-runtime-library/is-isw-routines.md)<br/>

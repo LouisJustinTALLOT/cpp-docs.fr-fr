@@ -1,9 +1,11 @@
 ---
 title: _memicmp, _memicmp_l
-ms.date: 11/04/2016
+ms.date: 4/2/2020
 api_name:
 - _memicmp_l
 - _memicmp
+- _o__memicmp
+- _o__memicmp_l
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -16,6 +18,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-string-l1-1-0.dll
+- api-ms-win-crt-private-l1-1-0
 api_type:
 - DLLExport
 topic_type:
@@ -30,12 +33,12 @@ helpviewer_keywords:
 - memicmp_l function
 - _memicmp_l function
 ms.assetid: 0a6eb945-4077-4f84-935d-1aaebe8db8cb
-ms.openlocfilehash: a463b9c79a76879311bb811b38e4aabcfd6e7226
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 5ad22f2107695b14d4a8361d4532d6e250b5af6f
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70951836"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81333234"
 ---
 # <a name="_memicmp-_memicmp_l"></a>_memicmp, _memicmp_l
 
@@ -59,10 +62,10 @@ int _memicmp_l(
 
 ### <a name="parameters"></a>Paramètres
 
-*buffer1*<br/>
+*tampon1*<br/>
 Première mémoire tampon.
 
-*buffer2*<br/>
+*tampon2*<br/>
 Seconde mémoire tampon.
 
 *count*<br/>
@@ -75,31 +78,33 @@ Paramètres régionaux à utiliser.
 
 La valeur de retour indique la relation entre les mémoires tampons.
 
-|Valeur de retour|Relation des count premiers octets de buf1 et buf2|
+|Valeur retournée|Relation des count premiers octets de buf1 et buf2|
 |------------------|--------------------------------------------------------|
-|< 0|*Buffer1* inférieur à *buffer2*.|
-|0|*Buffer1* identique à *buffer2*.|
-|> 0|*Buffer1* supérieur à *buffer2*.|
-|**_NLSCMPERROR**|Une erreur s'est produite.|
+|< 0|*tampon1* moins que *tampon2*.|
+|0|*tampon1* identique à *tampon2*.|
+|> 0|*tampon1* supérieur à *tampon2*.|
+|**_NLSCMPERROR**|Une erreur est survenue.|
 
 ## <a name="remarks"></a>Notes
 
-La fonction **_memicmp** compare les premiers caractères de *nombre* des deux mémoires tampons *Buffer1* et *buffer2* octet par octet. La comparaison ne respecte pas la casse.
+La fonction **_memicmp** compare les premiers caractères de *comptage* des deux tampons *tampon1* et *buffer2* byte by byte. La comparaison ne respecte pas la casse.
 
-Si *Buffer1* ou *buffer2* est un pointeur null, cette fonction appelle un gestionnaire de paramètres non valides, comme décrit dans [validation de paramètre](../../c-runtime-library/parameter-validation.md). Si l’exécution est autorisée à se poursuivre, la fonction retourne **_NLSCMPERROR** et définit **errno** sur **EINVAL**.
+Si le *tampon1* ou *le tampon2* est un pointeur nul, cette fonction invoque un gestionnaire de paramètres invalide, tel que décrit dans [la validation des paramètres](../../c-runtime-library/parameter-validation.md). Si l’exécution est autorisée à se poursuivre, la fonction renvoie **_NLSCMPERROR** et définit **errno** à **EINVAL**.
 
-**_memicmp** utilise les paramètres régionaux actuels pour le comportement dépendant des paramètres régionaux ; **_memicmp_l** est identique, à ceci près qu’il utilise à la place les paramètres régionaux transmis. Pour plus d’informations, consultez [Locale](../../c-runtime-library/locale.md).
+**_memicmp** utilise le lieu actuel pour un comportement local;; **_memicmp_l** est identique, sauf qu’il utilise le lieu passé à la place. Pour plus d’informations, consultez [Locale](../../c-runtime-library/locale.md).
 
-## <a name="requirements"></a>Configuration requise
+Par défaut, l’état global de cette fonction est étendue à l’application. Pour changer cela, voir [Global State dans le CRT](../global-state.md).
+
+## <a name="requirements"></a>Spécifications
 
 |Routine|En-tête requis|
 |-------------|---------------------|
 |**_memicmp**|\<memory.h> ou \<string.h>|
 |**_memicmp_l**|\<memory.h> ou \<string.h>|
 
-Pour plus d'informations sur la compatibilité, voir [Compatibilité](../../c-runtime-library/compatibility.md).
+Pour plus d’informations sur la compatibilité, consultez [Compatibility](../../c-runtime-library/compatibility.md).
 
-## <a name="example"></a>Exemples
+## <a name="example"></a>Exemple
 
 ```C
 // crt_memicmp.c

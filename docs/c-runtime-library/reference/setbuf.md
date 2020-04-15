@@ -1,8 +1,9 @@
 ---
 title: setbuf
-ms.date: 04/08/2019
+ms.date: 4/2/2020
 api_name:
 - setbuf
+- _o_setbuf
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -15,6 +16,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-stdio-l1-1-0.dll
+- api-ms-win-crt-private-l1-1-0
 api_type:
 - DLLExport
 topic_type:
@@ -25,12 +27,12 @@ helpviewer_keywords:
 - setbuf function
 - stream buffering
 ms.assetid: 13beda22-7b56-455d-8a6c-f2eb636885b9
-ms.openlocfilehash: c6c78297b1818131dcfcb10f4f2eaadd752d8ef4
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: f96cffb8770cda78ebff8d873b441ddc288bc41f
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70948279"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81332076"
 ---
 # <a name="setbuf"></a>setbuf
 
@@ -47,7 +49,7 @@ void setbuf(
 
 ### <a name="parameters"></a>Paramètres
 
-*stream*<br/>
+*Flux*<br/>
 Pointeur désignant la structure **FILE**.
 
 *buffer*<br/>
@@ -55,17 +57,19 @@ Mémoire tampon allouée par l’utilisateur.
 
 ## <a name="remarks"></a>Notes
 
-La fonction **setbuf** contrôle la mise en mémoire tampon pour le *flux*. L’argument *Stream* doit faire référence à un fichier ouvert qui n’a pas été lu ou écrit. Si l’argument de *mémoire tampon* a la **valeur null**, le flux n’est pas mis en mémoire tampon. Si ce n’est pas le cas, la mémoire tampon doit pointer vers un tableau de caractères de longueur **BUFSIZ**, où **BUFSIZ** est la taille de la mémoire tampon telle qu’elle est définie dans stdio. Manutention. La mémoire tampon spécifiée par l’utilisateur est utilisée pour la mise en mémoire tampon des E/S à la place de la mémoire tampon par défaut allouée par le système. Le flux **stderr** n’est pas mis en mémoire tampon par défaut, mais vous pouvez utiliser **setbuf** pour assigner des mémoires tampons à **stderr**.
+La fonction **setbuf** contrôle la mise en mémoire tampon pour *le flux*. *L’argument du flux* doit se référer à un fichier ouvert qui n’a pas été lu ou écrit. Si l’argument *du tampon* est **NULL**, le flux est inbuffered. Si ce n’est pas le cas, le tampon doit indiquer un tableau de caractère de longueur **BUFSIZ**, où **BUFSIZ** est la taille du tampon tel que défini dans STDIO. H. La mémoire tampon spécifiée par l’utilisateur est utilisée pour la mise en mémoire tampon des E/S à la place de la mémoire tampon par défaut allouée par le système. Le flux **stderr** est inbuffered par défaut, mais vous pouvez utiliser **setbuf** pour attribuer des tampons à **stderr**.
 
-**setbuf** a été remplacé par [setvbuf](setvbuf.md), qui est la routine préférée pour le nouveau code. Contrairement à **setvbuf**, **setbuf** n’a aucun moyen de signaler des erreurs. **setvbuf** vous permet également de contrôler à la fois le mode de mise en mémoire tampon et la taille de la mémoire tampon. **setbuf** existe pour la compatibilité avec le code existant.
+**setbuf** a été remplacé par [setvbuf](setvbuf.md), qui est la routine préférée pour le nouveau code. Contrairement **à setvbuf**, **setbuf n’a** aucun moyen de signaler les erreurs. **setvbuf** vous permet également de contrôler à la fois le mode tampon et la taille du tampon. **setbuf** existe pour la compatibilité avec le code existant.
 
-## <a name="requirements"></a>Configuration requise
+Par défaut, l’état global de cette fonction est étendue à l’application. Pour changer cela, voir [Global State dans le CRT](../global-state.md).
+
+## <a name="requirements"></a>Spécifications
 
 |Routine|En-tête requis|
 |-------------|---------------------|
 |**setbuf**|\<stdio.h>|
 
-Pour plus d’informations sur la compatibilité, voir consultez [Compatibilité](../../c-runtime-library/compatibility.md).
+Pour plus d'informations sur la compatibilité, voir [Compatibilité](../../c-runtime-library/compatibility.md).
 
 ## <a name="example"></a>Exemple
 

@@ -1,9 +1,11 @@
 ---
 title: _cputs, _cputws
-ms.date: 11/04/2016
+ms.date: 4/2/2020
 api_name:
 - _cputws
 - _cputs
+- _o__cputs
+- _o__cputws
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -16,6 +18,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-conio-l1-1-0.dll
+- api-ms-win-crt-private-l1-1-0
 api_type:
 - DLLExport
 topic_type:
@@ -33,19 +36,19 @@ helpviewer_keywords:
 - console, sending strings to
 - cputws function
 ms.assetid: ec418484-0f8d-43ec-8d8b-198a556c659e
-ms.openlocfilehash: 46fce16078b9ce289d45ee4e62bb4076eaf5795a
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 3b8f49fc7fbe90d4069a5dfeef9bbba3a7f05335
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70942628"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81348373"
 ---
 # <a name="_cputs-_cputws"></a>_cputs, _cputws
 
 Place une chaîne dans la console.
 
 > [!IMPORTANT]
-> Cette API ne peut pas être utilisée dans les applications qui s’exécutent dans le Windows Runtime. Pour plus d’informations, consultez [Fonctions CRT non prises en charge dans les applications de la plateforme Windows universelle](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
+> Cette API ne peut pas être utilisée dans les applications qui s'exécutent dans le Windows Runtime. Pour plus d’informations, consultez [Fonctions CRT non prises en charge dans les applications de la plateforme Windows universelle](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -60,18 +63,20 @@ int _cputws(
 
 ### <a name="parameters"></a>Paramètres
 
-*str*<br/>
+*Str*<br/>
 Chaîne de sortie.
 
 ## <a name="return-value"></a>Valeur de retour
 
-En cas de réussite, **_cputs** retourne 0. Si la fonction échoue, elle retourne une valeur différente de zéro.
+En cas de succès, **_cputs** revient 0. Si la fonction échoue, elle retourne une valeur différente de zéro.
 
 ## <a name="remarks"></a>Notes
 
-La fonction **_cputs** écrit la chaîne terminée par le caractère null vers laquelle pointe *Str* directement sur la console. Une combinaison de retour chariot-saut de ligne n'est pas ajoutée automatiquement à la chaîne.
+La fonction **_cputs** écrit la chaîne non terminée qui est pointée par *str* directement à la console. Une combinaison de retour chariot-saut de ligne n'est pas ajoutée automatiquement à la chaîne.
 
-Cette fonction valide son paramètre. Si *Str* a la **valeur null**, le gestionnaire de paramètres non valides est appelé, comme décrit dans [validation de paramètre](../../c-runtime-library/parameter-validation.md). Si l’exécution est autorisée à se poursuivre, **errno** a la valeur **EINVAL** et-1 est retourné.
+Cette fonction valide son paramètre. Si *str* est **NULL**, le gestionnaire de paramètre invalide est invoqué, tel que décrit dans La validation [de paramètres](../../c-runtime-library/parameter-validation.md). Si l’exécution se poursuit, **errno** est réglé sur **EINVAL** et -1 est retourné.
+
+Par défaut, l’état global de cette fonction est étendue à l’application. Pour changer cela, voir [Global State dans le CRT](../global-state.md).
 
 ### <a name="generic-text-routine-mappings"></a>Mappages de routines de texte générique
 
@@ -79,20 +84,20 @@ Cette fonction valide son paramètre. Si *Str* a la **valeur null**, le gestionn
 |---------------------|--------------------------------------|--------------------|-----------------------|
 |**_cputts**|**_cputs**|**_cputs**|**_cputws**|
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
 |Routine|En-tête requis|En-tête facultatif|
 |-------------|---------------------|---------------------|
 |**_cputs**|\<conio.h>|\<errno.h>|
 |**_cputws**|\<conio.h>|\<errno.h>|
 
-Pour plus d'informations sur la compatibilité, voir [Compatibilité](../../c-runtime-library/compatibility.md).
+Pour plus d’informations sur la compatibilité, consultez [Compatibility](../../c-runtime-library/compatibility.md).
 
 ## <a name="libraries"></a>Bibliothèques
 
 Toutes les versions des [bibliothèques Runtime C](../../c-runtime-library/crt-library-features.md).
 
-## <a name="example"></a>Exemples
+## <a name="example"></a>Exemple
 
 ```C
 // crt_cputs.c
@@ -151,5 +156,5 @@ Hello world (courtesy of _cputws)!
 
 ## <a name="see-also"></a>Voir aussi
 
-[E/S de console et de port](../../c-runtime-library/console-and-port-i-o.md)<br/>
+[Console et Port I/O](../../c-runtime-library/console-and-port-i-o.md)<br/>
 [_putch, _putwch](putch-putwch.md)<br/>

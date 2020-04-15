@@ -1,9 +1,11 @@
 ---
 title: _putc_nolock, _putwc_nolock
-ms.date: 11/04/2016
+ms.date: 4/2/2020
 api_name:
 - _putc_nolock
 - _putwc_nolock
+- _o__putc_nolock
+- _o__putwc_nolock
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -16,6 +18,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-stdio-l1-1-0.dll
+- api-ms-win-crt-private-l1-1-0
 api_type:
 - DLLExport
 topic_type:
@@ -37,12 +40,12 @@ helpviewer_keywords:
 - _puttc_nolock function
 - _putwc_nolock function
 ms.assetid: 3cfc7f21-c9e8-4b7f-b0fb-af0d4d85e7e1
-ms.openlocfilehash: fdec6373f79fd711b371014fc58e17c190a26e95
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: aa96275b29d2510400622f52fa34c58ae251ff6c
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70950123"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81338471"
 ---
 # <a name="_putc_nolock-_putwc_nolock"></a>_putc_nolock, _putwc_nolock
 
@@ -63,10 +66,10 @@ wint_t _putwc_nolock(
 
 ### <a name="parameters"></a>Paramètres
 
-*c*<br/>
+*C*<br/>
 Caractère à écrire.
 
-*stream*<br/>
+*Flux*<br/>
 Pointeur désignant la structure **FILE**.
 
 ## <a name="return-value"></a>Valeur de retour
@@ -75,9 +78,11 @@ Consultez **putc, putwc**.
 
 ## <a name="remarks"></a>Notes
 
-**_putc_nolock** et **_putwc_nolock** sont identiques aux versions sans suffixe **_nolock** , sauf qu’elles ne sont pas protégées contre les interférences par d’autres threads. Elles peuvent être plus rapides, car elles n'entraînent pas la charge du verrouillage des autres threads. Utilisez ces fonctions uniquement dans les contextes thread-safe, tels que les applications à un seul thread ou lorsque la portée appelante gère déjà l'isolation des threads.
+**_putc_nolock** et **_putwc_nolock** sont identiques aux versions sans le **suffixe _nolock,** sauf qu’ils ne sont pas protégés contre les interférences par d’autres threads. Elles peuvent être plus rapides, car elles n'entraînent pas la charge du verrouillage des autres threads. Utilisez ces fonctions uniquement dans les contextes thread-safe, tels que les applications à un seul thread ou lorsque la portée appelante gère déjà l'isolation des threads.
 
-**_putwc_nolock** est la version à caractères larges de **_putc_nolock**; les deux fonctions se comportent de la même manière si le flux est ouvert en mode ANSI. **_putc_nolock** ne prend pas actuellement en charge la sortie dans un flux Unicode.
+**_putwc_nolock** est la version à caractère large de **_putc_nolock**; les deux fonctions se comportent de la même manière si le flux est ouvert en mode ANSI. **_putc_nolock** ne prend pas actuellement en charge la production dans un flux UNICODE.
+
+Par défaut, l’état global de cette fonction est étendue à l’application. Pour changer cela, voir [Global State dans le CRT](../global-state.md).
 
 ### <a name="generic-text-routine-mappings"></a>Mappages de routines de texte générique
 
@@ -85,14 +90,14 @@ Consultez **putc, putwc**.
 |---------------------|--------------------------------------|--------------------|-----------------------|
 |**_puttc_nolock**|**_putc_nolock**|**_putc_nolock**|**_putwc_nolock**|
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
 |Routine|En-tête requis|
 |-------------|---------------------|
 |**_putc_nolock**|\<stdio.h>|
 |**_putwc_nolock**|\<stdio.h> ou \<wchar.h>|
 
-La console n’est pas prise en charge dans les applications de plateforme Windows universelle (UWP). Les handles de flux standard associés à la console, **stdin**, **stdout**et **stderr**, doivent être redirigés pour que les fonctions runtime C puissent les utiliser dans les applications UWP. Pour plus d'informations sur la compatibilité, voir [Compatibilité](../../c-runtime-library/compatibility.md).
+La console n’est pas prise en charge dans les applications Universal Windows Platform (UWP). Les poignées de flux standard qui sont associées à la console, **stdin**, **stdout**, et **stderr**, doivent être redirigés avant que les fonctions C run-time peuvent les utiliser dans les applications UWP. Pour plus d'informations sur la compatibilité, voir [Compatibilité](../../c-runtime-library/compatibility.md).
 
 ## <a name="libraries"></a>Bibliothèques
 
@@ -123,7 +128,7 @@ int main( void )
 }
 ```
 
-### <a name="output"></a>Sortie
+### <a name="output"></a>Output
 
 ```Output
 This is the line of output

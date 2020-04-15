@@ -1,18 +1,18 @@
 ---
-title: 'Procédure : organiser des fichiers de sortie de projet pour les générations'
+title: 'Comment : organiser des fichiers de sortie de projet pour les générations'
 ms.date: 05/06/2019
 helpviewer_keywords:
 - C++, output files
 - output files, organizing
 ms.assetid: 521d95ea-2dcc-4da0-b5eb-ac3e57941446
-ms.openlocfilehash: 202b2cbf135a5d8371354aac0fb8dd26367896c2
-ms.sourcegitcommit: da32511dd5baebe27451c0458a95f345144bd439
-ms.translationtype: HT
+ms.openlocfilehash: 13aa3d1f8e2993ca34163ecbc0515948db56eb79
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/07/2019
-ms.locfileid: "65220667"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81328529"
 ---
-# <a name="how-to-organize-project-output-files-for-builds"></a>Procédure : organiser des fichiers de sortie de projet pour les générations
+# <a name="how-to-organize-project-output-files-for-builds"></a>Comment : organiser des fichiers de sortie de projet pour les générations
 
 Cette rubrique décrit les bonnes pratiques relatives à l’organisation de fichiers de sortie de projet. Des erreurs de build peuvent se produire si vous ne configurez pas correctement les fichiers de sortie de projet. Cette rubrique décrit également les avantages et les inconvénients de chaque méthode d’organisation de vos fichiers de sortie de projet.
 
@@ -46,9 +46,9 @@ Cette rubrique décrit les bonnes pratiques relatives à l’organisation de fic
 
 1. Référencez le fichier d’en-tête approprié dans votre code à l’aide de la directive #include. Le fichier d’en-tête doit être dans le chemin include ou doit faire partie du projet actif. Pour plus d’informations, consultez [#include, directive (C/C++)](../preprocessor/hash-include-directive-c-cpp.md).
 
-1. Vous pouvez également définir des dépendances de projet. La définition de dépendances de projet garantit deux choses. Premièrement, comme les projets sont générés dans le bon ordre, ils peuvent toujours trouver les fichiers dépendants dont ils ont besoin. Deuxièmement, le répertoire de sortie du projet dépendant est ajouté implicitement au chemin, ce qui facilite la recherche des fichiers durant l’édition de liens.
+1. Vous pouvez également définir des dépendances de projet. La définition de dépendances de projet garantit deux choses. Premièrement, comme les projets sont générés dans le bon ordre, ils peuvent toujours trouver les fichiers dépendants dont ils ont besoin. Deuxièmement, il ajoute implicitement le répertoire de sortie du projet dépendant à la voie de sorte que les fichiers peuvent être trouvés facilement à l’heure de liaison.
 
-1. Pour déployer l’application, vous devez placer la DLL dans un emplacement approprié. Vous avez le choix entre les options suivantes :
+1. Pour déployer l’application, vous devez placer la DLL dans un emplacement approprié. Il peut s'agir de l'un des états suivants :
 
    1. Chemin identique à celui de l’exécutable.
 
@@ -70,4 +70,4 @@ L’emplacement des fichiers de sortie peut être un problème majeur en cas de 
 
 ## <a name="see-also"></a>Voir aussi
 
-[C++types de projets dans Visual Studio](reference/visual-cpp-project-types.md)
+[Types de projets C++ dans Visual Studio](reference/visual-cpp-project-types.md)

@@ -1,8 +1,9 @@
 ---
 title: _ecvt
-ms.date: 04/05/2018
+ms.date: 4/2/2020
 api_name:
 - _ecvt
+- _o__ecvt
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -15,6 +16,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-convert-l1-1-0.dll
+- api-ms-win-crt-private-l1-1-0
 api_type:
 - DLLExport
 topic_type:
@@ -27,16 +29,16 @@ helpviewer_keywords:
 - converting double numbers
 - ecvt function
 ms.assetid: a916eb05-92d1-4b5c-8563-093acdb49dc8
-ms.openlocfilehash: 9f91733c566c1782d5ccfc9a7c01e490a5915a85
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 5e1760d5c68e650f6fbf44866d4e368b9d6233b6
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70942042"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81348023"
 ---
 # <a name="_ecvt"></a>_ecvt
 
-Convertit un nombre **double** en une chaîne. Une version plus sécurisée de cette fonction est disponible. Consultez [_ecvt_s](ecvt-s.md).
+Convertit un **double** numéro en une chaîne. Une version plus sécurisée de cette fonction est disponible. Consultez [_ecvt_s](ecvt-s.md).
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -65,31 +67,33 @@ Signe du nombre converti.
 
 ## <a name="return-value"></a>Valeur de retour
 
-**_ecvt** retourne un pointeur vers la chaîne de chiffres ; **Null** si une erreur s’est produite.
+**_ecvt** renvoie un pointeur à la chaîne de chiffres; **NULL** en cas d’erreur.
 
 ## <a name="remarks"></a>Notes
 
-La fonction **_ecvt** convertit un nombre à virgule flottante en une chaîne de caractères. Le paramètre de *valeur* est le nombre à virgule flottante à convertir. Cette fonction stocke jusqu’à *Count* chiffres de *valeur* sous forme de chaîne et ajoute un caractère null (' \ 0 '). Si le nombre de chiffres dans la *valeur* dépasse le *nombre*, le chiffre de poids faible est arrondi. Si le *nombre* de chiffres est inférieur à, la chaîne est complétée par des zéros.
+La fonction **_ecvt** convertit un numéro de point flottant en une chaîne de caractères. Le paramètre de *valeur* est le nombre de points flottants à convertir. Cette fonction stocke jusqu’à *compter* les chiffres de *valeur* comme une chaîne et annexe un caractère nul ('0'). Si le nombre de chiffres en *valeur* dépasse le *nombre,* le chiffre de faible commande est arrondi. S’il y a moins de chiffres de *comptage,* la chaîne est rembourrée avec des zéros.
 
-Le nombre total de chiffres renvoyés par **_ecvt** ne dépasse pas **_CVTBUFSIZE**.
+Le nombre total de chiffres retournés par **_ecvt** ne dépassera pas **_CVTBUFSIZE**.
 
-Seuls des chiffres sont stockés dans la chaîne. La position de la virgule décimale et le signe de la *valeur* peuvent être obtenus à partir de *Dec* et du *signe* après l’appel. Le paramètre *Dec* pointe vers une valeur entière indiquant la position de la virgule décimale par rapport au début de la chaîne. Une valeur entière ou 0 indique que la virgule décimale est située à gauche du premier chiffre. Le paramètre *Sign* pointe sur un entier qui indique le signe du nombre converti. Si la valeur entière est 0, le nombre est positif. Sinon, le nombre est négatif.
+Seuls des chiffres sont stockés dans la chaîne. La position du point décimal et le signe de *valeur* peuvent être obtenus à partir de *déc* et *signe après* l’appel. Le paramètre *déc* indique une valeur integer donnant la position du point décimal par rapport au début de la chaîne. Une valeur entière ou 0 indique que la virgule décimale est située à gauche du premier chiffre. Le paramètre de *signe* indique un intégrant qui indique le signe du nombre converti. Si la valeur entière est 0, le nombre est positif. Sinon, le nombre est négatif.
 
-La différence entre **_ecvt** et **_fcvt** est l’interprétation du paramètre *Count* . **_ecvt** interprète le *nombre comme le* nombre total de chiffres dans la chaîne de sortie, tandis que **_fcvt** interprète le nombre comme le nombre de chiffres après la virgule décimale.
+La différence entre **_ecvt** et **_fcvt** réside dans l’interprétation du paramètre de *comptage.* **_ecvt** interprète *le* nombre total de chiffres dans la chaîne de sortie, tandis que **_fcvt** interprète le *nombre* de chiffres après le point décimal.
 
-**_ecvt** et **_fcvt** utilisent une seule mémoire tampon allouée de manière statique pour la conversion. Chaque appel à une de ces routines détruit le résultat de l’appel précédent.
+**_ecvt** et **_fcvt** utiliser un seul tampon statiquement alloué pour la conversion. Chaque appel à une de ces routines détruit le résultat de l’appel précédent.
 
-Cette fonction valide ses paramètres. Si *Dec* ou *Sign* est **null**ou si *Count* a la valeur 0, le gestionnaire de paramètre non valide est appelé, comme décrit dans [validation de paramètre](../../c-runtime-library/parameter-validation.md). Si l’exécution est autorisée à se poursuivre, **errno** a la valeur **EINVAL** et la **valeur null** est retournée.
+Cette fonction valide ses paramètres. Si *déc* ou *signe* est **NULL**, ou *compte* est de 0, le gestionnaire de paramètre invalide est invoqué, tel que décrit dans la validation [de paramètres](../../c-runtime-library/parameter-validation.md). Si l’exécution se poursuit, **errno** est réglé sur **EINVAL** et **NULL** est retourné.
 
-## <a name="requirements"></a>Configuration requise
+Par défaut, l’état global de cette fonction est étendue à l’application. Pour changer cela, voir [Global State dans le CRT](../global-state.md).
+
+## <a name="requirements"></a>Spécifications
 
 |Fonction|En-tête requis|
 |--------------|---------------------|
 |**_ecvt**|\<stdlib.h>|
 
-Pour plus d'informations sur la compatibilité, voir [Compatibilité](../../c-runtime-library/compatibility.md).
+Pour plus d’informations sur la compatibilité, consultez [Compatibility](../../c-runtime-library/compatibility.md).
 
-## <a name="example"></a>Exemples
+## <a name="example"></a>Exemple
 
 ```C
 // crt_ecvt.c
@@ -121,7 +125,7 @@ source: 3.1415926535   buffer: '3141592654'  decimal: 1  sign: 0
 ## <a name="see-also"></a>Voir aussi
 
 [Conversion de données](../../c-runtime-library/data-conversion.md)<br/>
-[Prise en charge de la virgule flottante](../../c-runtime-library/floating-point-support.md)<br/>
+[Soutien à la pointe flottante](../../c-runtime-library/floating-point-support.md)<br/>
 [atof, _atof_l, _wtof, _wtof_l](atof-atof-l-wtof-wtof-l.md)<br/>
 [_fcvt](fcvt.md)<br/>
 [_gcvt](gcvt.md)<br/>

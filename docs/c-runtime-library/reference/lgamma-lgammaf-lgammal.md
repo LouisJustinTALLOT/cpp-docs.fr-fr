@@ -1,10 +1,13 @@
 ---
 title: lgamma, lgammaf, lgammal
-ms.date: 04/05/2018
+ms.date: 4/2/2020
 api_name:
 - lgamma
 - lgammaf
 - lgammal
+- _o_lgamma
+- _o_lgammaf
+- _o_lgammal
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -17,6 +20,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-math-l1-1-0.dll
+- api-ms-win-crt-private-l1-1-0
 api_type:
 - DLLExport
 topic_type:
@@ -33,12 +37,12 @@ helpviewer_keywords:
 - lgammal function
 - lgammaf function
 ms.assetid: 6e326c58-7077-481a-a329-c82ae56ae9e6
-ms.openlocfilehash: 9baf8f0fefb50cea6a5301aac9ffd48ff3cd5bde
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: e2bdfbeac7b995be0b589156437a3ded39114adf
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70953370"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81342160"
 ---
 # <a name="lgamma-lgammaf-lgammal"></a>lgamma, lgammaf, lgammal
 
@@ -59,31 +63,33 @@ long double lgamma( long double x ); //C++ only
 
 ### <a name="parameters"></a>Paramètres
 
-*x*<br/>
+*X*<br/>
 Valeur à calculer.
 
 ## <a name="return-value"></a>Valeur de retour
 
-En cas de réussite, retourne le logarithme népérien de la valeur absolue de la fonction gamma de *x*.
+En cas de succès, retournez le logarithme naturel de la valeur absolue de la fonction gamma de *x*.
 
 |Problème|Renvoie|
 |-----------|------------|
-|*x* = Nan|NaN|
-|*x* = ±0|+INFINITY|
-|*x*= entier négatif|+INFINITY|
-|± INFINI|+INFINITY|
+|*x* NaN|NaN|
+|*x* 0 euros|+INFINITY|
+|*x*- integer négatif|+INFINITY|
+|L’INFINI|+INFINITY|
 |Erreur de pôle|+HUGE_VAL, +HUGE_VALF ou +HUGE_VALL|
-|Erreur de plage avec dépassement|± HUGE_VAL, ± HUGE_VALF ou ± HUGE_VALL|
+|Erreur de plage avec dépassement|HUGE_VAL, HUGE_VALF ou HUGE_VALL|
 
 Les erreurs sont signalées comme indiqué dans [_matherr](matherr.md).
 
 ## <a name="remarks"></a>Notes
 
-Étant C++ donné que autorise la surcharge, vous pouvez appeler des surcharges de **lgamma** qui acceptent et retournent des types **float** et **long** **double** . Dans un programme C, **lgamma** accepte et retourne toujours un **double**.
+Parce que le CMD permet la surcharge, vous pouvez appeler des surcharges de **lgamma** qui prennent et retournent **flotteur** et **de longs** **types doubles.** Dans un programme C, **lgamma** prend et renvoie toujours un **double.**
 
-Si x est un nombre rationnel, cette fonction retourne le logarithme de la factorielle de (x-1).
+Si x est un nombre rationnel, cette fonction renvoie le logarithme du factoriel de (x - 1).
 
-## <a name="requirements"></a>Configuration requise
+Par défaut, l’état global de cette fonction est étendue à l’application. Pour changer cela, voir [Global State dans le CRT](../global-state.md).
+
+## <a name="requirements"></a>Spécifications
 
 |Fonction|En-tête C|En-tête C++|
 |--------------|--------------|------------------|

@@ -1,8 +1,9 @@
 ---
 title: raise
-ms.date: 01/02/2018
+ms.date: 4/2/2020
 api_name:
 - raise
+- _o_raise
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -15,6 +16,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-runtime-l1-1-0.dll
+- api-ms-win-crt-private-l1-1-0
 api_type:
 - DLLExport
 topic_type:
@@ -26,19 +28,19 @@ helpviewer_keywords:
 - raise function
 - signals
 - programs [C++], sending signals to executing programs
-ms.openlocfilehash: bed377bb46abac252381344f0b1cf4339815a16e
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: b38a3430274b2324e345be30ce9e38f0c2749fa3
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70949672"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81338261"
 ---
 # <a name="raise"></a>raise
 
 Envoie un signal au programme en cours d’exécution.
 
 > [!NOTE]
-> N’utilisez pas cette méthode pour arrêter une application Microsoft Store, sauf dans les scénarios de test ou de débogage. Les méthodes de programmation ou d’interface utilisateur pour fermer une application du Windows Store ne sont pas autorisées selon les [stratégies de Microsoft Store](/legal/windows/agreements/store-policies). Pour plus d’informations, consultez la page relative au [cycle de vie des applications UWP](/windows/uwp/launch-resume/app-lifecycle).
+> N’utilisez pas cette méthode pour arrêter une application Microsoft Store, sauf dans les scénarios de test ou de débogage. Les moyens programmatiques ou d’interface utilisateur de fermer une application Store ne sont pas autorisés selon les politiques du [Microsoft Store](/legal/windows/agreements/store-policies). Pour plus d’informations, voir [le cycle de vie de l’application UWP](/windows/uwp/launch-resume/app-lifecycle).
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -55,7 +57,7 @@ Signal à déclencher.
 
 ## <a name="return-value"></a>Valeur de retour
 
-En cas de réussite, **raise** retourne 0. Dans le cas contraire, une valeur différente de zéro est retournée.
+En cas de réussite, **raise** retourne 0. Sinon, elle retourne une valeur différente de zéro.
 
 ## <a name="remarks"></a>Notes
 
@@ -70,18 +72,20 @@ La fonction **raise** envoie *sig* au programme en cours d’exécution. Si un a
 |**SIGSEGV**|Accès au stockage non conforme|Termine le programme appelant|
 |**SIGTERM**|Demande d’arrêt envoyée au programme|Ignore le signal|
 
-Si l’argument n’est pas un signal valide tel que spécifié ci-dessus, le gestionnaire de paramètre non valide est appelé, comme décrit dans [Validation de paramètre](../../c-runtime-library/parameter-validation.md). Si elle n’est pas gérée, la fonction définit **errno** sur **EINVAL** et retourne une valeur différente de zéro.
+Si l’argument n’est pas un signal valide tel que spécifié ci-dessus, le gestionnaire de paramètre non valide est appelé, comme décrit dans [Validation de paramètre](../../c-runtime-library/parameter-validation.md). Si elle n’est pas manipulée, la fonction définit **errno** à **EINVAL** et renvoie une valeur non zéro.
 
-## <a name="requirements"></a>Configuration requise
+Par défaut, l’état global de cette fonction est étendue à l’application. Pour changer cela, voir [Global State dans le CRT](../global-state.md).
+
+## <a name="requirements"></a>Spécifications
 
 |Routine|En-tête requis|
 |-------------|---------------------|
-|**raise**|\<signal.h>|
+|**raise**|\<signal.h >|
 
 Pour plus d'informations sur la compatibilité, voir [Compatibilité](../../c-runtime-library/compatibility.md).
 
 ## <a name="see-also"></a>Voir aussi
 
-[Contrôle de processus et d’environnement](../../c-runtime-library/process-and-environment-control.md)<br/>
+[Contrôle des processus et de l’environnement](../../c-runtime-library/process-and-environment-control.md)<br/>
 [abort](abort.md)<br/>
-[signal](signal.md)<br/>
+[Signal](signal.md)<br/>

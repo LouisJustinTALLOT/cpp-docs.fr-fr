@@ -1,8 +1,9 @@
 ---
 title: _isatty
-ms.date: 11/04/2016
+ms.date: 4/2/2020
 api_name:
 - _isatty
+- _o__isatty
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -15,6 +16,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-stdio-l1-1-0.dll
+- api-ms-win-crt-private-l1-1-0
 api_type:
 - DLLExport
 topic_type:
@@ -27,12 +29,12 @@ helpviewer_keywords:
 - _isatty function
 - checking character devices
 ms.assetid: 9f1b2e87-0cd7-4079-b187-f2b7ca15fcbe
-ms.openlocfilehash: 2d2ba2fdfeb1c8bffe47b0953f0629746d2eb599
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: c9611c2bd55ebc1602a73e4c71518716ea100420
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70954552"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81343903"
 ---
 # <a name="_isatty"></a>_isatty
 
@@ -46,32 +48,34 @@ int _isatty( int fd );
 
 ### <a name="parameters"></a>Paramètres
 
-*fd*<br/>
+*Fd*<br/>
 Descripteur de fichier qui fait référence au périphérique à tester.
 
 ## <a name="return-value"></a>Valeur de retour
 
-**_isatty** retourne une valeur différente de zéro si le descripteur est associé à un périphérique de caractères. Sinon, **_isatty** retourne 0.
+**_isatty** retourne une valeur non zéro si le descripteur est associé à un dispositif de caractère. Sinon, **_isatty** revient 0.
 
 ## <a name="remarks"></a>Notes
 
-La fonction **_isatty** détermine si *FD* est associé à un périphérique de caractères (terminal, console, imprimante ou port série).
+La fonction **_isatty** détermine si *fd* est associé à un dispositif de caractère (un terminal, une console, une imprimante ou un port en série).
 
-Cette fonction valide le paramètre *FD* . Si *FD* est un pointeur de fichier incorrect, le gestionnaire de paramètres non valides est appelé, comme décrit dans [validation de paramètre](../../c-runtime-library/parameter-validation.md). Si l’exécution est autorisée à se poursuivre, la fonction retourne 0 et définit **errno** sur **EBADF**.
+Cette fonction valide le *paramètre fd.* Si *fd* est un mauvais pointeur de fichier, le gestionnaire de paramètres invalide est invoqué, comme décrit dans [La validation de paramètres](../../c-runtime-library/parameter-validation.md). Si l’exécution est autorisée à se poursuivre, la fonction renvoie 0 et définit **errno** à **EBADF**.
 
-## <a name="requirements"></a>Configuration requise
+Par défaut, l’état global de cette fonction est étendue à l’application. Pour changer cela, voir [Global State dans le CRT](../global-state.md).
+
+## <a name="requirements"></a>Spécifications
 
 |Routine|En-tête requis|
 |-------------|---------------------|
 |**_isatty**|\<io.h>|
 
-Pour plus d'informations sur la compatibilité, voir [Compatibilité](../../c-runtime-library/compatibility.md).
+Pour plus d’informations sur la compatibilité, consultez [Compatibility](../../c-runtime-library/compatibility.md).
 
 ## <a name="libraries"></a>Bibliothèques
 
 Toutes les versions des [bibliothèques Runtime C](../../c-runtime-library/crt-library-features.md).
 
-## <a name="example"></a>Exemples
+## <a name="example"></a>Exemple
 
 ```C
 // crt_isatty.c
@@ -91,7 +95,7 @@ int main( void )
 }
 ```
 
-### <a name="sample-output"></a>Résultat de l'exemple
+### <a name="sample-output"></a>Exemple de sortie
 
 ```Output
 stdout has not been redirected to a file
