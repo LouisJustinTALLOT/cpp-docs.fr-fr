@@ -1,10 +1,11 @@
 ---
 title: asin, asinf, asinl
-ms.date: 04/05/2018
+ms.date: 4/2/2020
 api_name:
 - asinf
 - asinl
 - asin
+- _o_asin
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -17,6 +18,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-math-l1-1-0.dll
+- api-ms-win-crt-private-l1-1-0
 api_type:
 - DLLExport
 topic_type:
@@ -32,12 +34,12 @@ helpviewer_keywords:
 - trigonometric functions
 - arcsine function
 ms.assetid: ca05f9ea-b711-49f6-9f32-2f4019abfd69
-ms.openlocfilehash: 1e70c9b2187b97d3dea589c1757081da8bf2bd10
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 424fee6995fae4a7f878054ede1bb85d33d1706d
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70943647"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81334132"
 ---
 # <a name="asin-asinf-asinl"></a>asin, asinf, asinl
 
@@ -58,26 +60,28 @@ long double asin( long double x );  // C++ only
 
 ### <a name="parameters"></a>Paramètres
 
-*x*<br/>
+*X*<br/>
 Valeur dont l’arc sinus doit être calculé.
 
 ## <a name="return-value"></a>Valeur de retour
 
-La fonction **ASIN** retourne l’arc sinus (fonction sinus inverse) de *x* dans la plage-π/2 à π/2 radians.
+La fonction **asine** renvoie l’arcsine (la fonction sinusale inverse) de *x* dans la gamme --2 à 2 radians.
 
-Par défaut, si *x* est inférieur à-1 ou supérieur à 1, **ASIN** retourne un indéfini.
+Par défaut, si *x* est inférieur à -1 ou supérieur à 1, **asin** renvoie une indéfini.
 
-|Entrée|Exception SEH|Exception{b> <b}Matherr|
+|Entrée|Exception SEH|Exception\{b\> \<b\}Matherr|
 |-----------|-------------------|-----------------------|
-|± ∞|**NON VALIDE**|**_DOMAIN**|
-|± **QNAN**, **IND**|none|**_DOMAIN**|
-|&#124;x&#124;>1|**NON VALIDE**|**_DOMAIN**|
+|± ∞|**Non valide**|**_DOMAIN**|
+|**QNAN**, **IND**|Aucun|**_DOMAIN**|
+|&#124;x&#124;>1|**Non valide**|**_DOMAIN**|
 
 ## <a name="remarks"></a>Notes
 
-Étant C++ donné que autorise la surcharge, vous pouvez appeler des surcharges de **ASIN** avec des valeurs **float** et **long** **double** . Dans un programme C, **ASIN** prend toujours et retourne un **double**.
+Parce que le CMD permet la surcharge, vous pouvez appeler des surcharges **d’asin** avec **flotteur** et **de longues** valeurs **doubles.** Dans un programme C, **asin** prend et renvoie toujours un **double**.
 
-## <a name="requirements"></a>Configuration requise
+Par défaut, l’état global de cette fonction est étendue à l’application. Pour changer cela, voir [Global State dans le CRT](../global-state.md).
+
+## <a name="requirements"></a>Spécifications
 
 |Routine|En-tête requis (C)|En-tête requis (C++)|
 |-------------|---------------------|-|
@@ -89,7 +93,7 @@ Pour plus d’informations, consultez [acos, acosf, acosl](acos-acosf-acosl.md).
 
 ## <a name="see-also"></a>Voir aussi
 
-[Prise en charge de la virgule flottante](../../c-runtime-library/floating-point-support.md)<br/>
+[Soutien à la pointe flottante](../../c-runtime-library/floating-point-support.md)<br/>
 [acos, acosf, acosl](acos-acosf-acosl.md)<br/>
 [atan, atanf, atanl, atan2, atan2f, atan2l](atan-atanf-atanl-atan2-atan2f-atan2l.md)<br/>
 [cos, cosf, cosl](cos-cosf-cosl.md)<br/>

@@ -25,19 +25,19 @@ helpviewer_keywords:
 - _set_output_format function
 - set_output_format function
 ms.assetid: 1cb48df8-44b4-4400-bd27-287831d6b3ff
-ms.openlocfilehash: b67abb58f4d62c7c54b61d1b1699f09c1bd51b40
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: c855df4c29a53fd898b920f6446afe4e568ba5bb
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70957312"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81360920"
 ---
 # <a name="_set_output_format"></a>_set_output_format
 
 Personnalise les formats de sortie utilisés par les fonctions d’E-S mises en forme.
 
 > [!IMPORTANT]
->  Cette fonction est obsolète. Depuis Visual Studio 2015, elle n’est pas disponible dans la bibliothèque CRT.
+> Cette fonction est obsolète. Depuis Visual Studio 2015, elle n’est pas disponible dans la bibliothèque CRT.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -49,10 +49,10 @@ unsigned int _set_output_format(
 
 #### <a name="parameters"></a>Paramètres
 
-*format*<br/>
+*Format*<br/>
 [in] Valeur représentant le format à utiliser.
 
-## <a name="return-value"></a>Valeur de retour
+## <a name="return-value"></a>Valeur retournée
 
 Le format de sortie précédent.
 
@@ -64,15 +64,15 @@ Par défaut, la sortie des nombres à virgule flottante par des fonctions comme 
 
 Pour activer des exposants à deux chiffres, appelez cette fonction avec le paramètre `_TWO_DIGIT_EXPONENT`, comme illustré dans l’exemple. Pour désactiver les exposants à deux chiffres, appelez cette fonction avec un argument ayant la valeur 0.
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
 |Routine|En-tête requis|
 |-------------|---------------------|
 |`_set_output_format`|\<stdio.h>|
 
-Pour plus d'informations sur la compatibilité, voir [Compatibilité](../c-runtime-library/compatibility.md) dans l'introduction.
+Pour plus d’informations sur la compatibilité, consultez [Compatibilité](../c-runtime-library/compatibility.md) dans l’introduction.
 
-## <a name="example"></a>Exemples
+## <a name="example"></a>Exemple
 
 ```C
 // crt_set_output_format.c

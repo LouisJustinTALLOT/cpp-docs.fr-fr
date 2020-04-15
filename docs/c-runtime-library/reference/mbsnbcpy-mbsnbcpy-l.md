@@ -1,9 +1,11 @@
 ---
 title: _mbsnbcpy, _mbsnbcpy_l
-ms.date: 11/04/2016
+ms.date: 4/2/2020
 api_name:
 - _mbsnbcpy
 - _mbsnbcpy_l
+- _o__mbsnbcpy
+- _o__mbsnbcpy_l
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -16,6 +18,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-multibyte-l1-1-0.dll
+- api-ms-win-crt-private-l1-1-0
 api_type:
 - DLLExport
 topic_type:
@@ -35,19 +38,19 @@ helpviewer_keywords:
 - mbsnbcpy_l function
 - tcsncpy function
 ms.assetid: 83d17b50-3cbf-4df9-bce8-3b6d52f85d04
-ms.openlocfilehash: 9a52f8abb220c840f1b7f71d029efacd4c5206fb
-ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
+ms.openlocfilehash: 130e19fcb1107f27133854f4e379b35969130106
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/17/2020
-ms.locfileid: "79442861"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81340662"
 ---
 # <a name="_mbsnbcpy-_mbsnbcpy_l"></a>_mbsnbcpy, _mbsnbcpy_l
 
-Copie **n** octets d’une chaîne dans une chaîne de destination. Des versions plus sécurisées de ces fonctions sont disponibles (consultez [_mbsnbcpy_s, _mbsnbcpy_s_l](mbsnbcpy-s-mbsnbcpy-s-l.md)).
+Copies **n** octets d’une chaîne à une chaîne de destination. Des versions plus sécurisées de ces fonctions sont disponibles (consultez [_mbsnbcpy_s, _mbsnbcpy_s_l](mbsnbcpy-s-mbsnbcpy-s-l.md)).
 
 > [!IMPORTANT]
-> Cette API ne peut pas être utilisée dans les applications qui s’exécutent dans le Windows Runtime. Pour plus d’informations, consultez [Fonctions CRT non prises en charge dans les applications de la plateforme Windows universelle](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
+> Cette API ne peut pas être utilisée dans les applications qui s'exécutent dans le Windows Runtime. Pour plus d’informations, consultez [Fonctions CRT non prises en charge dans les applications de la plateforme Windows universelle](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -83,7 +86,7 @@ unsigned char * _mbsnbcpy_l(
 *strDest*<br/>
 Destination de la chaîne de caractères à copier.
 
-*strSource*<br/>
+*strSource (en)*<br/>
 Chaîne de caractères à copier.
 
 *count*<br/>
@@ -94,20 +97,22 @@ Paramètres régionaux à utiliser.
 
 ## <a name="return-value"></a>Valeur de retour
 
-**_mbsnbcpy** retourne un pointeur vers la chaîne de caractères de destination. Aucune valeur de retour n'est réservée pour indiquer une erreur.
+**_mbsnbcpy** renvoie un pointeur à la chaîne de caractère de destination. Aucune valeur de retour n'est réservée pour indiquer une erreur.
 
 ## <a name="remarks"></a>Notes
 
-La fonction **_mbsnbcpy** copie le *nombre* d’octets de *strSource* vers *strDest*. Si *Count* dépasse la taille de *strDest* ou que les chaînes source et de destination se chevauchent, le comportement de **_mbsnbcpy** n’est pas défini.
+Les copies de fonction **_mbsnbcpy** *comptent* les octets de *strSource* à *strDest*. Si le *nombre* dépasse la taille de *strDest* ou les chaînes de source et de destination se chevauchent, le comportement de **_mbsnbcpy** est indéfini.
 
-Si *strSource* ou *strDest* est un pointeur null, cette fonction appelle le gestionnaire de paramètre non valide comme décrit dans [validation de paramètre](../../c-runtime-library/parameter-validation.md). Si l’exécution est autorisée à se poursuivre, la fonction retourne la **valeur null** et définit **errno** sur **EINVAL**.
+Si *strSource* ou *strDest* est un pointeur nul, cette fonction invoque le gestionnaire de paramètres invalide tel que décrit dans [La validation des paramètres](../../c-runtime-library/parameter-validation.md). Si l’exécution est autorisée à se poursuivre, la fonction renvoie **NULL** et définit **errno** à **EINVAL**.
 
-La valeur de sortie est affectée par la valeur du paramètre de catégorie **LC_CTYPE** des paramètres régionaux. Pour plus d’informations [, consultez setlocale, _wsetlocale](setlocale-wsetlocale.md) . Les versions de ces fonctions sont identiques, sauf que celles qui n’ont pas le suffixe **_L** utilisent les paramètres régionaux actuels et les versions qui ont le suffixe **_L** à la place utilisent les paramètres régionaux qui sont passés. Pour plus d'informations, consultez [Locale](../../c-runtime-library/locale.md).
+La valeur de sortie est affectée par l’établissement de la **LC_CTYPE’établissement** de la catégorie du lieu; voir [setlocale, _wsetlocale](setlocale-wsetlocale.md) pour plus d’informations. Les versions de ces fonctions sont identiques, sauf que ceux qui n’ont pas le **suffixe _l** utilisent le lieu actuel et les versions qui ont le **suffixe _l** utilisent plutôt le paramètre local qui est passé. Pour plus d’informations, consultez [Locale](../../c-runtime-library/locale.md).
 
 > [!IMPORTANT]
 > Ces fonctions peuvent être vulnérables aux menaces de dépassement de mémoire tampon. Les dépassements de mémoire tampon peuvent servir à exécuter du code arbitraire émanant d'une personne malveillante, ce qui peut se traduire par une élévation de privilèges injustifiée et compromettre le système. Pour plus d’informations, consultez [Solutions contre les dépassements de mémoire tampon](/windows/win32/SecBP/avoiding-buffer-overruns).
 
-En C++, ces fonctions ont des surcharges de modèle qui appellent les équivalents plus récents et plus sécurisés de ces fonctions. Pour plus d'informations, consultez [Secure Template Overloads](../../c-runtime-library/secure-template-overloads.md).
+En C++, ces fonctions ont des surcharges de modèle qui appellent les équivalents plus récents et plus sécurisés de ces fonctions. Pour plus d’informations, consultez [Sécuriser les surcharges de modèle](../../c-runtime-library/secure-template-overloads.md).
+
+Par défaut, l’état global de cette fonction est étendue à l’application. Pour changer cela, voir [Global State dans le CRT](../global-state.md).
 
 ### <a name="generic-text-routine-mappings"></a>Mappages de routines de texte générique
 
@@ -123,11 +128,11 @@ En C++, ces fonctions ont des surcharges de modèle qui appellent les équivalen
 |**_mbsnbcpy**|\<mbstring.h>|
 |**_mbsnbcpy_l**|\<mbstring.h>|
 
-Pour plus d’informations sur la compatibilité, voir [Compatibilité](../../c-runtime-library/compatibility.md).
+Pour plus d’informations sur la compatibilité, consultez [Compatibility](../../c-runtime-library/compatibility.md).
 
 ## <a name="see-also"></a>Voir aussi
 
-[Manipulation de chaînes](../../c-runtime-library/string-manipulation-crt.md)<br/>
+[Manipulation des cordes](../../c-runtime-library/string-manipulation-crt.md)<br/>
 [_mbsnbcat, _mbsnbcat_l](mbsnbcat-mbsnbcat-l.md)<br/>
 [_mbsnbcmp, _mbsnbcmp_l](mbsnbcmp-mbsnbcmp-l.md)<br/>
 [_strncnt, _wcsncnt, _mbsnbcnt, _mbsnbcnt_l, _mbsnccnt, _mbsnccnt_l](strncnt-wcsncnt-mbsnbcnt-mbsnbcnt-l-mbsnccnt-mbsnccnt-l.md)<br/>

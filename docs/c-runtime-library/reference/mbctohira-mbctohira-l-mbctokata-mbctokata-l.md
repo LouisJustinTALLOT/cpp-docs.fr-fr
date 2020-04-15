@@ -1,11 +1,15 @@
 ---
 title: _mbctohira, _mbctohira_l, _mbctokata, _mbctokata_l
-ms.date: 11/04/2016
+ms.date: 4/2/2020
 api_name:
 - _mbctohira
 - _mbctohira_l
 - _mbctokata
 - _mbctokata_l
+- _o__mbctohira
+- _o__mbctohira_l
+- _o__mbctokata
+- _o__mbctokata_l
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -18,6 +22,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-multibyte-l1-1-0.dll
+- api-ms-win-crt-private-l1-1-0
 api_type:
 - DLLExport
 topic_type:
@@ -41,19 +46,19 @@ helpviewer_keywords:
 - _mbctohira function
 - mbctokata function
 ms.assetid: f949afd7-44d4-4f08-ac8f-1fef2c915a1c
-ms.openlocfilehash: 6e158e933442256b1d712ba42afc28b94e2b123c
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 817f5598f6a7dddfd148b7d7023e260b7bddfa4b
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70952558"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81341089"
 ---
 # <a name="_mbctohira-_mbctohira_l-_mbctokata-_mbctokata_l"></a>_mbctohira, _mbctohira_l, _mbctokata, _mbctokata_l
 
 Convertit des caractères Hiragana en caractères Katakana et inversement
 
 > [!IMPORTANT]
-> Cette API ne peut pas être utilisée dans les applications qui s’exécutent dans le Windows Runtime. Pour plus d’informations, consultez [Fonctions CRT non prises en charge dans les applications de la plateforme Windows universelle](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
+> Cette API ne peut pas être utilisée dans les applications qui s'exécutent dans le Windows Runtime. Pour plus d’informations, consultez [Fonctions CRT non prises en charge dans les applications de la plateforme Windows universelle](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -76,7 +81,7 @@ unsigned int _mbctokata_l(
 
 ### <a name="parameters"></a>Paramètres
 
-*c*<br/>
+*C*<br/>
 Caractère multioctet à convertir.
 
 *locale*<br/>
@@ -84,7 +89,7 @@ Paramètres régionaux à utiliser.
 
 ## <a name="return-value"></a>Valeur de retour
 
-Chacune de ces fonctions retourne le caractère converti *c*, si possible. Dans le cas contraire, elle retourne le caractère *c* inchangé.
+Chacune de ces fonctions renvoie le caractère converti *c*, si possible. Sinon, il retourne le caractère *c* inchangé.
 
 ## <a name="remarks"></a>Notes
 
@@ -95,11 +100,13 @@ Les fonctions **_mbctohira** et **_mbctokata** testent un caractère *c* et, si 
 |**_mbctohira**, **_mbctohira_l**|Katakana multioctet en hiragana multioctet.|
 |**_mbctokata**, **_mbctokata_l**|Hiragana multioctet en katakana multioctet.|
 
-La valeur de sortie est affectée par la valeur du paramètre de catégorie **LC_CTYPE** des paramètres régionaux. Pour plus d’informations, consultez [setlocale](setlocale-wsetlocale.md). Les versions de ces fonctions sont identiques, sauf que celles qui n’ont pas le suffixe **_L** utilisent les paramètres régionaux actuels pour ce comportement dépendant des paramètres régionaux et celles qui ont le suffixe **_L** utilisent à la place les paramètres régionaux qui sont passés. Pour plus d’informations, consultez [Locale](../../c-runtime-library/locale.md).
+La valeur de sortie est affectée par la valeur du paramètre de catégorie **LC_CTYPE** des paramètres régionaux. Pour plus d’informations, consultez [setlocale](setlocale-wsetlocale.md). Les versions de ces fonctions sont identiques, sauf que celles qui n’ont pas le **_l** suffixe utilisent le lieu actuel pour ce comportement local-dépendant et ceux qui ont le **suffixe _l** utilisent plutôt le paramètre local qui est passé. Pour plus d’informations, consultez [Locale](../../c-runtime-library/locale.md).
 
-Dans les versions antérieures, **_mbctohira** était nommé **jtohira** et **_mbctokata** était nommé **jtokata**. Pour le nouveau code, utilisez les nouveaux noms.
+Dans les versions précédentes, **_mbctohira** a été nommé **jtohira** et **_mbctokata** a été nommé **jtokata**. Pour le nouveau code, utilisez les nouveaux noms.
 
-## <a name="requirements"></a>Configuration requise
+Par défaut, l’état global de cette fonction est étendue à l’application. Pour changer cela, voir [Global State dans le CRT](../global-state.md).
+
+## <a name="requirements"></a>Spécifications
 
 |Routine|En-tête requis|
 |-------------|---------------------|
@@ -108,7 +115,7 @@ Dans les versions antérieures, **_mbctohira** était nommé **jtohira** et **_m
 |**_mbctokata**|\<mbstring.h>|
 |**_mbctokata_l**|\<mbstring.h>|
 
-Pour plus d'informations sur la compatibilité, voir [Compatibilité](../../c-runtime-library/compatibility.md).
+Pour plus d’informations sur la compatibilité, consultez [Compatibility](../../c-runtime-library/compatibility.md).
 
 ## <a name="see-also"></a>Voir aussi
 

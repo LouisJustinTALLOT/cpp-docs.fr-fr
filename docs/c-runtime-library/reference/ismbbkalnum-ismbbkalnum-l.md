@@ -1,9 +1,11 @@
 ---
 title: _ismbbkalnum, _ismbbkalnum_l
-ms.date: 11/04/2016
+ms.date: 4/2/2020
 api_name:
 - _ismbbkalnum
 - _ismbbkalnum_l
+- _o__ismbbkalnum
+- _o__ismbbkalnum_l
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -16,6 +18,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-multibyte-l1-1-0.dll
+- api-ms-win-crt-private-l1-1-0
 api_type:
 - DLLExport
 topic_type:
@@ -31,12 +34,12 @@ helpviewer_keywords:
 - _ismbbkalnum function
 - ismbbkalnum function
 ms.assetid: e1d70e7b-29d0-469c-9d93-442b99de22ac
-ms.openlocfilehash: 2b7f188e38a2d13bf08210d6c2408ab996f18849
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 936a7708a824ac6e9e8a07b34bbdb9a3b9e761ff
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70954177"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81343671"
 ---
 # <a name="_ismbbkalnum-_ismbbkalnum_l"></a>_ismbbkalnum, _ismbbkalnum_l
 
@@ -56,7 +59,7 @@ int _ismbbkalnum_l(
 
 ### <a name="parameters"></a>Paramètres
 
-*c*<br/>
+*C*<br/>
 Entier à tester.
 
 *locale*<br/>
@@ -64,18 +67,22 @@ Paramètres régionaux à utiliser.
 
 ## <a name="return-value"></a>Valeur de retour
 
-**_ismbbkalnum** retourne une valeur différente de zéro si l’entier *c* est un symbole de texte non-ASCII autre que la ponctuation, ou 0 dans le cas contraire. **_ismbbkalnum** utilise les paramètres régionaux actifs pour les informations sur les caractères dépendants des paramètres régionaux. **_ismbbkalnum_l** est identique à **_ismbbkalnum** , sauf qu’il prend les paramètres régionaux en tant que paramètre. Pour plus d’informations, consultez [Locale](../../c-runtime-library/locale.md).
+**_ismbbkalnum** retourne une valeur non zéro si l’integer *c* est un symbole de texte non-ASCII autre que la ponctuation, ou 0 si elle n’est pas. **_ismbbkalnum** utilise le lieu actuel pour des informations sur les caractères dépendants des lieux. **_ismbbkalnum_l** est identique à **_ismbbkalnum** sauf qu’il prend le lieu comme un paramètre. Pour plus d’informations, consultez [Locale](../../c-runtime-library/locale.md).
 
-## <a name="requirements"></a>Configuration requise
+## <a name="remarks"></a>Notes
+
+Par défaut, l’état global de cette fonction est étendue à l’application. Pour changer cela, voir [Global State dans le CRT](../global-state.md).
+
+## <a name="requirements"></a>Spécifications
 
 |Routine|En-tête requis|
 |-------------|---------------------|
 |**_ismbbkalnum**|\<mbctype.h>|
 |**_ismbbkalnum_l**|\<mbctype.h>|
 
-Pour plus d'informations sur la compatibilité, voir [Compatibilité](../../c-runtime-library/compatibility.md).
+Pour plus d’informations sur la compatibilité, consultez [Compatibility](../../c-runtime-library/compatibility.md).
 
 ## <a name="see-also"></a>Voir aussi
 
 [Classification d’octets](../../c-runtime-library/byte-classification.md)<br/>
-[_ismbb, routines](../../c-runtime-library/ismbb-routines.md)<br/>
+[routines _ismbb](../../c-runtime-library/ismbb-routines.md)<br/>

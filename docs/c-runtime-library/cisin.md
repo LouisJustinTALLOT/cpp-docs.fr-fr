@@ -1,8 +1,9 @@
 ---
 title: _CIsin
-ms.date: 04/10/2018
+ms.date: 4/2/2020
 api_name:
 - _CIsin
+- _o__CIsin
 api_location:
 - msvcr80.dll
 - msvcr100.dll
@@ -12,6 +13,7 @@ api_location:
 - msvcr90.dll
 - msvcr110_clr0400.dll
 - api-ms-win-crt-math-l1-1-0.dll
+- api-ms-win-crt-private-l1-1-0
 api_type:
 - DLLExport
 topic_type:
@@ -23,12 +25,12 @@ helpviewer_keywords:
 - _CIsin intrinsic
 - CIsin intrinsic
 ms.assetid: f215f39a-2341-4f1c-ba8e-cb522451ceb2
-ms.openlocfilehash: 66f26e9fa4dd08d18b15deca4efa40c236e092c9
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 8ed8bc0a4b62e3d68ed05a1955b360919838209d
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70944544"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81349540"
 ---
 # <a name="_cisin"></a>_CIsin
 
@@ -46,9 +48,11 @@ Cette version intrinsèque de la fonction [sin](../c-runtime-library/reference/s
 
 La valeur obtenue est envoyée (push) en haut de la pile virgule flottante.
 
-## <a name="requirements"></a>Configuration requise
+Par défaut, l’état global de cette fonction est étendue à l’application. Pour changer cela, voir [Global State dans le CRT](global-state.md).
 
-**Plateforme :** x86
+## <a name="requirements"></a>Spécifications
+
+**Plateforme:** x86
 
 ## <a name="see-also"></a>Voir aussi
 

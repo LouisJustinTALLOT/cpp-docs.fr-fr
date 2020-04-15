@@ -9,16 +9,16 @@ helpviewer_keywords:
 - Microsoft::WRL::Wrappers::HandleTraits::SemaphoreTraits structure
 - Microsoft::WRL::Wrappers::HandleTraits::SemaphoreTraits::Unlock method
 ms.assetid: eddb8576-d063-409b-9201-cc87ca5d111e
-ms.openlocfilehash: e7bd2e5d0993c8e4be7223d98ffb1dbec14cbb74
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 11719576c9fc7b23f4cd318ee1b3ed9ca3f5edaa
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62403111"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81360737"
 ---
 # <a name="semaphoretraits-structure"></a>SemaphoreTraits (structure)
 
-Définit les caractéristiques communes d’un `Semaphore` objet.
+Définit les caractéristiques `Semaphore` communes d’un objet.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -32,7 +32,7 @@ struct SemaphoreTraits : HANDLENullTraits;
 
 Nom                               | Description
 ---------------------------------- | --------------------------------------
-[SemaphoreTraits::Unlock](#unlock) | Contrôle de versions d’une ressource partagée.
+[SemaphoreTraits::Unlock](#unlock) | Communiqués de contrôle d’une ressource partagée.
 
 ## <a name="inheritance-hierarchy"></a>Hiérarchie d'héritage
 
@@ -40,15 +40,15 @@ Nom                               | Description
 
 `SemaphoreTraits`
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
-**En-tête :** corewrappers.h
+**En-tête:** corewrappers.h
 
-**Espace de noms :** Microsoft::WRL::Wrappers::HandleTraits
+**Espace nom:** Microsoft::WRL::Wrappers::HandleTraits
 
-## <a name="unlock"></a>SemaphoreTraits::Unlock
+## <a name="semaphoretraitsunlock"></a><a name="unlock"></a>SemaphoreTraits::Unlock
 
-Contrôle de versions d’une ressource partagée.
+Communiqués de contrôle d’une ressource partagée.
 
 ```cpp
 inline static void Unlock(
@@ -59,8 +59,8 @@ inline static void Unlock(
 ### <a name="parameters"></a>Paramètres
 
 *h*<br/>
-Handle vers un `Semaphore` objet.
+Manipuler à `Semaphore` un objet.
 
 ### <a name="remarks"></a>Notes
 
-Si l’opération de déverrouillage est infructueuse, `Unlock()` émet une erreur qui indique la cause de l’échec.
+Si l’opération de `Unlock()` déverrouillage est infructueuse, émet une erreur qui indique la cause de la défaillance.

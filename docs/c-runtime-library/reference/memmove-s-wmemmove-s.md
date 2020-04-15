@@ -1,9 +1,10 @@
 ---
 title: memmove_s, wmemmove_s
-ms.date: 11/04/2016
+ms.date: 4/2/2020
 api_name:
 - wmemmove_s
 - memmove_s
+- _o_wmemmove_s
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -17,6 +18,7 @@ api_location:
 - ucrtbase.dll
 - api-ms-win-crt-string-l1-1-0.dll
 - ntoskrnl.exe
+- api-ms-win-crt-private-l1-1-0
 api_type:
 - DLLExport
 topic_type:
@@ -28,12 +30,12 @@ helpviewer_keywords:
 - wmemmove_s function
 - memmove_s function
 ms.assetid: a17619e4-1307-4bb0-98c6-77f8c68dab2d
-ms.openlocfilehash: bc932bb0b13289349543d042e02ead884921d00a
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: baec33046f891f64c04adeccf21f41d3eec7b814
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70951782"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81333155"
 ---
 # <a name="memmove_s-wmemmove_s"></a>memmove_s, wmemmove_s
 
@@ -61,34 +63,36 @@ errno_t wmemmove_s(
 *dest*<br/>
 Objet de destination.
 
-*numberOfElements*<br/>
+*nombreOfElements*<br/>
 Taille de la mémoire tampon de destination.
 
 *src*<br/>
 Objet source.
 
 *count*<br/>
-Nombre d’octets (**memmove_s**) ou de caractères (**wmemmove_s**) à copier.
+Nombre d’octets **(memmove_s**) ou de caractères (**wmemmove_s**) à copier.
 
 ## <a name="return-value"></a>Valeur de retour
 
 Zéro si l’opération a réussi ; code d’erreur en cas de échec.
 
-### <a name="error-conditions"></a>Conditions d’erreur
+### <a name="error-conditions"></a>Conditions d'erreur
 
-|*dest*|*numberOfElements*|*src*|Valeur de retour|Contenu de *dest*|
+|*dest*|*nombreOfElements*|*src*|Valeur retournée|Contenu de *dest*|
 |------------|------------------------|-----------|------------------|------------------------|
-|**NULL**|any|any|**EINVAL**|non modifié|
-|any|any|**NULL**|**EINVAL**|non modifié|
-|any|< *count*|any|**ERANGE**|non modifié|
+|**Null**|n'importe laquelle|n'importe laquelle|**EINVAL (EN)**|non modifié|
+|n'importe laquelle|n'importe laquelle|**Null**|**EINVAL (EN)**|non modifié|
+|n'importe laquelle|< *Compter*|n'importe laquelle|**ERANGE**|non modifié|
 
 ## <a name="remarks"></a>Notes
 
-Copie le *nombre* d’octets des caractères de *src* vers *dest*. Si certaines régions de la zone source et de la destination se chevauchent, **memmove_s** garantit que les octets source d’origine dans la région de chevauchement sont copiés avant d’être remplacés.
+Les copies *comptent* les octets des personnages de *src* à *dest*. Si certaines régions de la zone source et le chevauchement de la destination, **memmove_s** s’assure que les octets de source d’origine dans la région qui se chevauchent sont copiés avant d’être écrasés.
 
-Si *dest* ou si *src* est un pointeur null, ou si la chaîne de destination est trop petite, ces fonctions appellent un gestionnaire de paramètres non valides, comme décrit dans [validation de paramètre](../../c-runtime-library/parameter-validation.md) . Si l’exécution est autorisée à se poursuivre, ces fonctions retournent **EINVAL** et attribuent à **errno** la valeur **EINVAL**.
+Si *le dest* ou si *le src* est un pointeur nul, ou si la chaîne de destination est trop petite, ces fonctions invoquent un gestionnaire de paramètre invalide, tel que décrit dans [la validation de paramètres](../../c-runtime-library/parameter-validation.md) . Si l’exécution est autorisée à se poursuivre, ces fonctions renvoient **EINVAL** et **placent errno** à **EINVAL**.
 
-## <a name="requirements"></a>Configuration requise
+Par défaut, l’état global de cette fonction est étendue à l’application. Pour changer cela, voir [Global State dans le CRT](../global-state.md).
+
+## <a name="requirements"></a>Spécifications
 
 |Routine|En-tête requis|
 |-------------|---------------------|
@@ -126,7 +130,7 @@ int main()
 }
 ```
 
-### <a name="output"></a>Sortie
+### <a name="output"></a>Output
 
 ```Output
 Before: 0123456789

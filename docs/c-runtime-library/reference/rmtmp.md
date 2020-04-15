@@ -1,8 +1,9 @@
 ---
 title: _rmtmp
-ms.date: 11/04/2016
+ms.date: 4/2/2020
 api_name:
 - _rmtmp
+- _o__rmtmp
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -15,6 +16,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-stdio-l1-1-0.dll
+- api-ms-win-crt-private-l1-1-0
 api_type:
 - DLLExport
 topic_type:
@@ -29,12 +31,12 @@ helpviewer_keywords:
 - files [C++], removing
 - temporary files [C++], removing
 ms.assetid: 7419501e-2587-4f2a-b469-0dca07f84736
-ms.openlocfilehash: de28768f479df00eae315c99b80103c5319b38af
-ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
+ms.openlocfilehash: 1dc95d0f77528c26bad796ab6166998fca20a8ac
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/17/2020
-ms.locfileid: "79442778"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81338035"
 ---
 # <a name="_rmtmp"></a>_rmtmp
 
@@ -49,11 +51,13 @@ int _rmtmp( void );
 
 ## <a name="return-value"></a>Valeur de retour
 
-**_rmtmp** retourne le nombre de fichiers temporaires fermés et supprimés.
+**_rmtmp** renvoie le nombre de fichiers temporaires fermés et supprimés.
 
 ## <a name="remarks"></a>Notes
 
-La fonction **_rmtmp** nettoie tous les fichiers temporaires dans le répertoire actif. La fonction supprime uniquement les fichiers créés par **tmpfile**; Utilisez-le uniquement dans le même répertoire que celui dans lequel les fichiers temporaires ont été créés.
+La fonction **_rmtmp** nettoie tous les fichiers temporaires dans l’annuaire actuel. La fonction supprime uniquement les fichiers créés par **tmpfile**; l’utiliser uniquement dans le même répertoire dans lequel les fichiers temporaires ont été créés.
+
+Par défaut, l’état global de cette fonction est étendue à l’application. Pour changer cela, voir [Global State dans le CRT](../global-state.md).
 
 ## <a name="requirements"></a>Spécifications
 
@@ -61,7 +65,7 @@ La fonction **_rmtmp** nettoie tous les fichiers temporaires dans le répertoire
 |-------------|---------------------|
 |**_rmtmp**|\<stdio.h>|
 
-Pour plus d’informations sur la compatibilité, voir [Compatibilité](../../c-runtime-library/compatibility.md).
+Pour plus d’informations sur la compatibilité, consultez [Compatibility](../../c-runtime-library/compatibility.md).
 
 ## <a name="libraries"></a>Bibliothèques
 

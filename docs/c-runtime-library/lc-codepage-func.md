@@ -1,8 +1,9 @@
 ---
 title: ___lc_codepage_func
-ms.date: 11/04/2016
+ms.date: 4/2/2020
 api_name:
 - ___lc_codepage_func
+- _o____lc_codepage_func
 api_location:
 - msvcr120.dll
 - msvcr110_clr0400.dll
@@ -11,6 +12,7 @@ api_location:
 - msvcr90.dll
 - msvcr110.dll
 - msvcrt.dll
+- api-ms-win-crt-private-l1-1-0
 api_type:
 - DLLExport
 topic_type:
@@ -21,12 +23,12 @@ f1_keywords:
 helpviewer_keywords:
 - ___lc_codepage_func
 ms.assetid: 6a663bd0-5a63-4a2f-9507-872ec1582aae
-ms.openlocfilehash: dbadf8239652f5c96e7177dedd91d340e545b9fe
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 2f3eeb4611a0a41ff1782e0b162cd65d86d3ef65
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70944923"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81351234"
 ---
 # <a name="___lc_codepage_func"></a>___lc_codepage_func
 
@@ -46,11 +48,13 @@ Page de code active du thread.
 
 `___lc_codepage_func` est une fonction CRT interne utilisée par d'autres fonctions CRT pour obtenir la page de code active à partir du stockage local des threads pour les données CRT. Ces informations sont également disponibles à l'aide de la fonction [_get_current_locale](../c-runtime-library/reference/get-current-locale.md).
 
-Une *page de code* est le mappage de codes sur un ou deux octets en caractères individuels. Les différentes pages de code incluent des caractères spéciaux différents, généralement personnalisés pour une langue ou un groupe de langues. Pour plus d’informations sur les pages de code, consultez [Code Pages](../c-runtime-library/code-pages.md).
+Une *page de code* est le mappage de codes sur un ou deux octets en caractères individuels. Les différentes pages de code incluent des caractères spéciaux différents, généralement personnalisés pour une langue ou un groupe de langues. Pour plus d’informations sur les pages de codes, consultez [Pages de codes](../c-runtime-library/code-pages.md).
 
-Les fonctions CRT internes sont spécifiques à l’implémentation et soumises à modification à chaque nouvelle mise en production. Nous vous déconseillons de les utiliser dans votre code.
+Les fonctions CRT internes sont spécifiques à l'implémentation et sont susceptibles d'être modifiées à chaque nouvelle version. Nous vous déconseillons de les utiliser dans votre code.
 
-## <a name="requirements"></a>Configuration requise
+Par défaut, l’état global de cette fonction est étendue à l’application. Pour changer cela, voir [Global State dans le CRT](global-state.md).
+
+## <a name="requirements"></a>Spécifications
 
 |Routine|En-tête requis|
 |-------------|---------------------|

@@ -1,11 +1,15 @@
 ---
 title: atof, _atof_l, _wtof, _wtof_l
-ms.date: 04/05/2018
+ms.date: 4/2/2020
 api_name:
 - _wtof_l
 - atof
 - _atof_l
 - _wtof
+- _o__atof_l
+- _o__wtof
+- _o__wtof_l
+- _o_atof
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -18,6 +22,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-convert-l1-1-0.dll
+- api-ms-win-crt-private-l1-1-0
 api_type:
 - DLLExport
 topic_type:
@@ -49,12 +54,12 @@ helpviewer_keywords:
 - _wtof function
 - string conversion, to floating point values
 ms.assetid: eb513241-c9a9-4f5c-b7e7-a49b14abfb75
-ms.openlocfilehash: a624ae9f900395ed2117ed2bb89e2768c64daba9
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 492719a0cc0f8ac079b257ec8d7aa1014c5b2a86
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70939569"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81348922"
 ---
 # <a name="atof-_atof_l-_wtof-_wtof_l"></a>atof, _atof_l, _wtof, _wtof_l
 
@@ -81,7 +86,7 @@ double _wtof_l(
 
 ## <a name="parameters"></a>Paramètres
 
-*str*<br/>
+*Str*<br/>
 Chaîne à convertir.
 
 *locale*<br/>
@@ -89,9 +94,9 @@ Paramètres régionaux à utiliser.
 
 ## <a name="return-value"></a>Valeur de retour
 
-Chaque fonction retourne la valeur **double** produite en interprétant les caractères d’entrée comme un nombre. La valeur de retour est 0.0 si l’entrée ne peut pas être convertie en valeur de ce type.
+Chaque fonction renvoie la **double** valeur produite en interprétant les caractères d’entrée comme un nombre. La valeur de retour est 0.0 si l’entrée ne peut pas être convertie en valeur de ce type.
 
-Dans tous les cas hors limites, **errno** a la valeur **ERANGE**. Si le paramètre passé a la **valeur null**, le gestionnaire de paramètres non valides est appelé, comme décrit dans [validation de paramètre](../../c-runtime-library/parameter-validation.md). Si l’exécution est autorisée à se poursuivre, ces fonctions définissent **errno** sur **EINVAL** et retournent 0.
+Dans tous les cas hors de portée, **errno** est réglé sur **ERANGE**. Si le paramètre passé est **NULL**, le gestionnaire de paramètre invalide est invoqué, tel que décrit dans [La validation des paramètres](../../c-runtime-library/parameter-validation.md). Si l’exécution est autorisée à se poursuivre, ces fonctions **définies errno** à **EINVAL** et retour 0.
 
 ## <a name="remarks"></a>Notes
 
@@ -99,15 +104,17 @@ Ces fonctions convertissent une chaîne de caractères en valeur à virgule flot
 
 La chaîne d’entrée est une séquence de caractères qui peut être interprétée comme une valeur numérique du type spécifié. La fonction arrête de lire la chaîne d’entrée au premier caractère qu’elle ne peut pas reconnaître comme faisant partie d’un nombre. Ce caractère peut être le caractère Null ('\0' ou L'\0') terminant la chaîne.
 
-L’argument *Str* de **atof** et **_wtof** se présente sous la forme suivante :
+L’argument de **l’atof** et **_wtof** a la forme suivante: *str*
 
-[*whitespace*] [*sign*] [*digits*] [ __.__ *digits*] [ {**e** &#124; **E** }[*sign*]*digits*]
+[*espace blanc*] [*signe*] [*chiffres*] [__.__ *chiffres*] [e**e** &#124; **E** [*signe*]*chiffres*]
 
-Un espace est constitué de caractères d’espace *ou de tabulation* , qui sont ignorés ; le *signe* est plus (+) ou moins (-); et les *chiffres* sont un ou plusieurs chiffres décimaux. Si aucun chiffre n’apparaît avant la virgule décimale, au moins un doit apparaître après celle-ci. Les chiffres décimaux peuvent être suivis d’un exposant, qui se compose d’une lettre d’introduction (**e**ou **e**) et d’un entier décimal éventuellement signé.
+Un *espace blanc* se compose de caractères d’espace ou d’onglet, qui sont ignorés ; *signe* est soit plus () ou moins (-); et *les chiffres* sont un ou plusieurs chiffres décimaux. Si aucun chiffre n’apparaît avant la virgule décimale, au moins un doit apparaître après celle-ci. Les chiffres décimaux peuvent être suivis d’un exposant, qui se compose d’une lettre d’introduction (**e**, ou **E**) et d’un intégrger décimal signé optionnellement.
 
-Les versions UCRT de ces fonctions ne prennent pas en charge la conversion des lettres d’exposant de style Fortran (**d** ou **d**). Cette extension non standard était prise en charge par les versions antérieures de la bibliothèque CRT et peut être une modification avec rupture pour votre code.
+Les versions UCRT de ces fonctions ne prennent pas en charge la conversion de lettres exposantes de style Fortran (**d** ou **D).** Cette extension non standard était prise en charge par les versions antérieures de la bibliothèque CRT et peut être une modification avec rupture pour votre code.
 
-Les versions de ces fonctions avec le suffixe **_L** sont identiques, sauf qu’elles utilisent les paramètres *régionaux* passés au lieu des paramètres régionaux actuels.
+Les versions de ces fonctions avec le **suffixe _l** sont identiques, sauf qu’elles utilisent le *paramètre local* passé au lieu du lieu actuel.
+
+Par défaut, l’état global de cette fonction est étendue à l’application. Pour changer cela, voir [Global State dans le CRT](../global-state.md).
 
 ### <a name="generic-text-routine-mappings"></a>Mappages de routines de texte générique
 
@@ -116,7 +123,7 @@ Les versions de ces fonctions avec le suffixe **_L** sont identiques, sauf qu’
 |**_tstof**|**atof**|**atof**|**_wtof**|
 |**_ttof**|**atof**|**atof**|**_wtof**|
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
 |Routine(s)|En-tête requis|
 |------------------|---------------------|
@@ -125,7 +132,7 @@ Les versions de ces fonctions avec le suffixe **_L** sont identiques, sauf qu’
 
 ## <a name="example"></a>Exemple
 
-Ce programme montre comment les nombres stockés sous forme de chaînes peuvent être convertis en valeurs numériques à l’aide des fonctions **atof** et **_atof_l** .
+Ce programme montre comment les nombres stockés sous forme de chaînes peuvent être convertis en valeurs numériques à l’aide des fonctions **atof** et **_atof_l.**
 
 ```C
 // crt_atof.c
@@ -177,8 +184,8 @@ Function: _atof_l("  -2,309e-25", fr)) = -2.309000e-25
 ## <a name="see-also"></a>Voir aussi
 
 [Conversion de données](../../c-runtime-library/data-conversion.md)<br/>
-[Prise en charge de la virgule flottante](../../c-runtime-library/floating-point-support.md)<br/>
-[Paramètres régionaux](../../c-runtime-library/locale.md)<br/>
+[Soutien à la pointe flottante](../../c-runtime-library/floating-point-support.md)<br/>
+[Local](../../c-runtime-library/locale.md)<br/>
 [_ecvt](ecvt.md)<br/>
 [_fcvt](fcvt.md)<br/>
 [_gcvt](gcvt.md)<br/>

@@ -1,10 +1,11 @@
 ---
 title: floor, floorf, floorl
-ms.date: 04/05/2018
+ms.date: 4/2/2020
 api_name:
 - floorf
 - floorl
 - floor
+- _o_floor
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -17,6 +18,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-math-l1-1-0.dll
+- api-ms-win-crt-private-l1-1-0
 api_type:
 - DLLExport
 topic_type:
@@ -32,12 +34,12 @@ helpviewer_keywords:
 - calculating floors of values
 - floorl function
 ms.assetid: e9955f70-d659-414f-8050-132e13c8ff36
-ms.openlocfilehash: c646437b4a1d79ef79e53d79fcbc342e5360f3cd
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 67902c61cd6e6cebd1be5182601baedfa1639ea7
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70957157"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81346671"
 ---
 # <a name="floor-floorf-floorl"></a>floor, floorf, floorl
 
@@ -65,32 +67,34 @@ long double floorl(
 
 ### <a name="parameters"></a>Paramètres
 
-*x*<br/>
+*X*<br/>
 Valeur à virgule flottante.
 
 ## <a name="return-value"></a>Valeur de retour
 
-Les fonctions **Floor** retournent une valeur à virgule flottante qui représente le plus grand entier inférieur ou égal à *x*. Aucun retour d'erreur.
+Les fonctions **de plancher** retournent une valeur flottante-point qui représente le plus grand intégrant qui est moins ou égal à *x.* Aucun retour d'erreur.
 
-|Entrée|Exception SEH|Exception{b> <b}Matherr|
+|Entrée|Exception SEH|Exception\{b\> \<b\}Matherr|
 |-----------|-------------------|-----------------------|
-|± QNAN,IND|none|_DOMAIN|
+|± QNAN,IND|Aucun|_DOMAIN|
 
-**Floor** a une implémentation qui utilise SSE2 (streaming SIMD Extensions 2). Pour obtenir des informations sur l’utilisation de l’implémentation SSE2 et sur les restrictions qui s’y rattachent, consultez [_set_SSE2_enable](set-sse2-enable.md).
+**a** une implémentation qui utilise Streaming SIMD Extensions 2 (SSE2). Pour plus d’informations sur l’utilisation de l’implémentation SSE2 et sur les restrictions qui s’y rattachent, consultez [_set_SSE2_enable](set-sse2-enable.md).
 
 ## <a name="remarks"></a>Notes
 
-C++autorise la surcharge, de sorte que vous pouvez appeler des surcharges de **plancher** qui acceptent et retournent des valeurs **float** et **long** **double** . Dans un programme C, **Floor** prend toujours et retourne un **double**.
+Le CMD permet la surcharge, de sorte que vous pouvez appeler des surcharges de **plancher** qui prennent et retournent **flotter** et **de longues** valeurs **doubles.** Dans un programme C, **le plancher** prend toujours et renvoie un **double**.
 
-## <a name="requirements"></a>Configuration requise
+Par défaut, l’état global de cette fonction est étendue à l’application. Pour changer cela, voir [Global State dans le CRT](../global-state.md).
+
+## <a name="requirements"></a>Spécifications
 
 |Fonction|En-tête requis|
 |--------------|---------------------|
-|**floor**, **floorf**, **floorl**|\<math.h>|
+|**étage**, **floorf**, **floorl**|\<math.h>|
 
 Pour plus d'informations sur la compatibilité, voir [Compatibilité](../../c-runtime-library/compatibility.md).
 
-## <a name="example"></a>Exemples
+## <a name="example"></a>Exemple
 
 ```C
 // crt_floor.c
@@ -127,7 +131,7 @@ The ceil of -2.8 is -2.000000
 
 ## <a name="see-also"></a>Voir aussi
 
-[Prise en charge de la virgule flottante](../../c-runtime-library/floating-point-support.md)<br/>
+[Soutien à la pointe flottante](../../c-runtime-library/floating-point-support.md)<br/>
 [ceil, ceilf, ceill](ceil-ceilf-ceill.md)<br/>
 [round, roundf, roundl](round-roundf-roundl.md)<br/>
 [fmod, fmodf](fmod-fmodf.md)<br/>

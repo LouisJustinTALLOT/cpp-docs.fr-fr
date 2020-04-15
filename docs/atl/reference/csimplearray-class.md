@@ -1,5 +1,5 @@
 ---
-title: CSimpleArray, classe
+title: Classe CSimpleArray
 ms.date: 11/04/2016
 f1_keywords:
 - CSimpleArray
@@ -16,16 +16,16 @@ f1_keywords:
 helpviewer_keywords:
 - CSimpleArray class
 ms.assetid: ee0c9f39-b61c-4c18-bc43-4eada21dca3a
-ms.openlocfilehash: 8c050002549fc6b7a18acb34f0e4f9a2f278db82
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: e45c9b3fd778aacd3a3e2d5d3696661afa0c6fb0
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62278005"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81330903"
 ---
-# <a name="csimplearray-class"></a>CSimpleArray, classe
+# <a name="csimplearray-class"></a>Classe CSimpleArray
 
-Cette classe fournit des méthodes pour la gestion d’un tableau simple.
+Cette classe fournit des méthodes pour gérer un tableau simple.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -39,8 +39,8 @@ class CSimpleArray
 *T*<br/>
 Le type de données à stocker dans le tableau.
 
-*TEqual*<br/>
-Un objet de trait, en définissant le test d’égalité pour les éléments de type *T*.
+*TEqual (TEqual)*<br/>
+Un objet trait, définissant le critère d’égalité pour les éléments de type *T*.
 
 ## <a name="members"></a>Membres
 
@@ -49,17 +49,17 @@ Un objet de trait, en définissant le test d’égalité pour les éléments de 
 |Nom|Description|
 |----------|-----------------|
 |[CSimpleArray::CSimpleArray](#csimplearray)|Le constructeur pour le tableau simple.|
-|[CSimpleArray::~CSimpleArray](#dtor)|Le destructeur de tableau simple.|
+|[CSimpleArray: :CSimpleArray](#dtor)|Le destructeur pour le tableau simple.|
 
 ### <a name="public-methods"></a>M&#233;thodes publiques
 
 |Nom|Description|
 |----------|-----------------|
-|[CSimpleArray::Add](#add)|Ajoute un nouvel élément dans le tableau.|
-|[CSimpleArray::Find](#find)|Recherche un élément dans le tableau.|
-|[CSimpleArray::GetData](#getdata)|Retourne un pointeur vers les données stockées dans le tableau.|
+|[CSimpleArray::Ajouter](#add)|Ajoute un nouvel élément au tableau.|
+|[CSimpleArray::Trouver](#find)|Trouve un élément dans le tableau.|
+|[CSimpleArray::GetData](#getdata)|Renvoie un pointeur aux données stockées dans le tableau.|
 |[CSimpleArray::GetSize](#getsize)|Retourne le nombre d’éléments stockés dans le tableau.|
-|[CSimpleArray::Remove](#remove)|Supprime un élément donné du tableau.|
+|[CSimpleArray::Supprimer](#remove)|Supprime un élément donné du tableau.|
 |[CSimpleArray::RemoveAll](#removeall)|Supprime tous les éléments du tableau.|
 |[CSimpleArray::RemoveAt](#removeat)|Supprime l’élément spécifié du tableau.|
 |[CSimpleArray::SetAtIndex](#setatindex)|Définit l’élément spécifié dans le tableau.|
@@ -69,27 +69,27 @@ Un objet de trait, en définissant le test d’égalité pour les éléments de 
 |Nom|Description|
 |----------|-----------------|
 |[CSimpleArray::operator\[\]](#operator_at)|Récupère un élément du tableau.|
-|[CSimpleArray::operator =](#operator_eq)|Opérateur d'assignation.|
+|[CSimpleArray::opérateur](#operator_eq)|Opérateur d'assignation.|
 
 ## <a name="remarks"></a>Notes
 
-`CSimpleArray` Fournit des méthodes pour créer et gérer un simple tableau, d’un type donné `T`.
+`CSimpleArray`fournit des méthodes pour créer et gérer `T`un tableau simple, de n’importe quel type donné.
 
-Le paramètre `TEqual` fournit un moyen de définir une fonction d’égalité pour les deux éléments de type `T`. En créant une classe similaire à [CSimpleArrayEqualHelper](../../atl/reference/csimplearrayequalhelper-class.md), il est possible de modifier le comportement du test d’égalité pour n’importe quel tableau donné. Par exemple, lorsque vous travaillez avec un tableau de pointeurs, il peut être utile définir l’égalité en tant qu’en fonction des valeurs que les pointeurs de référence. L’implémentation par défaut utilise **operator=()**.
+Le `TEqual` paramètre fournit un moyen de définir `T`une fonction d’égalité pour deux éléments de type . En créant une classe similaire à [CSimpleArrayEqualHelper](../../atl/reference/csimplearrayequalhelper-class.md), il est possible de modifier le comportement du test d’égalité pour n’importe quel tableau donné. Par exemple, lorsqu’il s’agit d’un tableau de pointeurs, il peut être utile de définir l’égalité comme en fonction des valeurs de référence des pointeurs. La mise en œuvre par défaut utilise **l’opérateur ()**.
 
-Les deux `CSimpleArray` et [CSimpleMap](../../atl/reference/csimplemap-class.md) sont conçus pour un petit nombre d’éléments. [CAtlArray](../../atl/reference/catlarray-class.md) et [CAtlMap](../../atl/reference/catlmap-class.md) doit être utilisé lorsque le tableau contient un grand nombre d’éléments.
+Les `CSimpleArray` deux et [CSimpleMap](../../atl/reference/csimplemap-class.md) sont conçus pour un petit nombre d’éléments. [CAtlArray](../../atl/reference/catlarray-class.md) et [CAtlMap](../../atl/reference/catlmap-class.md) doivent être utilisés lorsque le tableau contient un grand nombre d’éléments.
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
-**En-tête :** atlsimpcoll.h
+**En-tête:** atlsimpcoll.h
 
 ## <a name="example"></a>Exemple
 
 [!code-cpp[NVC_ATL_Utilities#86](../../atl/codesnippet/cpp/csimplearray-class_1.cpp)]
 
-##  <a name="add"></a>  CSimpleArray::Add
+## <a name="csimplearrayadd"></a><a name="add"></a>CSimpleArray::Ajouter
 
-Ajoute un nouvel élément dans le tableau.
+Ajoute un nouvel élément au tableau.
 
 ```
 BOOL Add(const T& t);
@@ -97,18 +97,18 @@ BOOL Add(const T& t);
 
 ### <a name="parameters"></a>Paramètres
 
-*t*<br/>
+*T*<br/>
 L’élément à ajouter au tableau.
 
 ### <a name="return-value"></a>Valeur de retour
 
-Retourne la valeur TRUE si l’élément est correctement ajouté dans le tableau, FALSE sinon.
+Retourne VRAI si l’élément est ajouté avec succès à la gamme, FALSE autrement.
 
 ### <a name="example"></a>Exemple
 
 [!code-cpp[NVC_ATL_Utilities#87](../../atl/codesnippet/cpp/csimplearray-class_2.cpp)]
 
-##  <a name="csimplearray"></a>  CSimpleArray::CSimpleArray
+## <a name="csimplearraycsimplearray"></a><a name="csimplearray"></a>CSimpleArray::CSimpleArray
 
 Le constructeur de l’objet de tableau.
 
@@ -124,9 +124,9 @@ Objet `CSimpleArray` existant.
 
 ### <a name="remarks"></a>Notes
 
-Initialise les membres de données, création d’un nouveau vide `CSimpleArray` objet ou une copie d’un existant `CSimpleArray` objet.
+Initialise les membres des données, `CSimpleArray` créant un nouvel objet `CSimpleArray` vide, ou une copie d’un objet existant.
 
-##  <a name="dtor"></a>  CSimpleArray::~CSimpleArray
+## <a name="csimplearraycsimplearray"></a><a name="dtor"></a>CSimpleArray: :CSimpleArray
 
 Destructeur.
 
@@ -138,9 +138,9 @@ Destructeur.
 
 Libère toutes les ressources allouées.
 
-##  <a name="find"></a>  CSimpleArray::Find
+## <a name="csimplearrayfind"></a><a name="find"></a>CSimpleArray::Trouver
 
-Recherche un élément dans le tableau.
+Trouve un élément dans le tableau.
 
 ```
 int Find(const T& t) const;
@@ -148,20 +148,20 @@ int Find(const T& t) const;
 
 ### <a name="parameters"></a>Paramètres
 
-*t*<br/>
-L’élément à rechercher.
+*T*<br/>
+L’élément pour lequel rechercher.
 
 ### <a name="return-value"></a>Valeur de retour
 
-Retourne l’index de l’élément est trouvé, ou -1 si l’élément est introuvable.
+Retourne l’index de l’élément trouvé, ou -1 si l’élément n’est pas trouvé.
 
 ### <a name="example"></a>Exemple
 
 [!code-cpp[NVC_ATL_Utilities#88](../../atl/codesnippet/cpp/csimplearray-class_3.cpp)]
 
-##  <a name="getdata"></a>  CSimpleArray::GetData
+## <a name="csimplearraygetdata"></a><a name="getdata"></a>CSimpleArray::GetData
 
-Retourne un pointeur vers les données stockées dans le tableau.
+Renvoie un pointeur aux données stockées dans le tableau.
 
 ```
 T* GetData() const;
@@ -169,9 +169,9 @@ T* GetData() const;
 
 ### <a name="return-value"></a>Valeur de retour
 
-Retourne un pointeur vers les données dans le tableau.
+Retourne un pointeur aux données du tableau.
 
-##  <a name="getsize"></a>  CSimpleArray::GetSize
+## <a name="csimplearraygetsize"></a><a name="getsize"></a>CSimpleArray::GetSize
 
 Retourne le nombre d’éléments stockés dans le tableau.
 
@@ -183,7 +183,7 @@ int GetSize() const;
 
 Retourne le nombre d’éléments stockés dans le tableau.
 
-##  <a name="operator_at"></a>  CSimpleArray::operator \[\]
+## <a name="csimplearrayoperator-"></a><a name="operator_at"></a>CSimpleArray::opérateur\[\]
 
 Récupère un élément du tableau.
 
@@ -194,17 +194,17 @@ T& operator[](int nindex);
 ### <a name="parameters"></a>Paramètres
 
 *nIndex*<br/>
-L’index d’élément.
+L’indice d’élément.
 
 ### <a name="return-value"></a>Valeur de retour
 
-Retourne l’élément de tableau référencé par *nIndex*.
+Retourne l’élément du tableau référencé par *nIndex*.
 
 ### <a name="example"></a>Exemple
 
 [!code-cpp[NVC_ATL_Utilities#89](../../atl/codesnippet/cpp/csimplearray-class_4.cpp)]
 
-##  <a name="operator_eq"></a>  CSimpleArray::operator =
+## <a name="csimplearrayoperator-"></a><a name="operator_eq"></a>CSimpleArray::opérateur
 
 Opérateur d'assignation.
 
@@ -221,17 +221,17 @@ Tableau à copier.
 
 ### <a name="return-value"></a>Valeur de retour
 
-Retourne un pointeur vers la mise à jour `CSimpleArray` objet.
+Retourne un pointeur `CSimpleArray` à l’objet mis à jour.
 
 ### <a name="remarks"></a>Notes
 
-Copie tous les éléments à partir de la `CSimpleArray` objet référencé par *src* dans l’objet de tableau actuel, en remplaçant toutes les données existantes.
+Copie tous les `CSimpleArray` éléments de l’objet référencé par src dans *l’objet* de tableau actuel, remplaçant toutes les données existantes.
 
 ### <a name="example"></a>Exemple
 
 [!code-cpp[NVC_ATL_Utilities#90](../../atl/codesnippet/cpp/csimplearray-class_5.cpp)]
 
-##  <a name="remove"></a>  CSimpleArray::Remove
+## <a name="csimplearrayremove"></a><a name="remove"></a>CSimpleArray::Supprimer
 
 Supprime un élément donné du tableau.
 
@@ -241,18 +241,18 @@ BOOL Remove(const T& t);
 
 ### <a name="parameters"></a>Paramètres
 
-*t*<br/>
+*T*<br/>
 L’élément à supprimer du tableau.
 
 ### <a name="return-value"></a>Valeur de retour
 
-Retourne la valeur TRUE si l’élément est trouvé et supprimé, FALSE sinon.
+Retourne VRAI si l’élément est trouvé et supprimé, FALSE autrement.
 
 ### <a name="remarks"></a>Notes
 
-Lorsqu’un élément est supprimé, les éléments restants dans le tableau sont alors renumérotés pour remplir l’espace vide.
+Lorsqu’un élément est enlevé, les éléments restants du tableau sont renumbered pour remplir l’espace vide.
 
-##  <a name="removeall"></a>  CSimpleArray::RemoveAll
+## <a name="csimplearrayremoveall"></a><a name="removeall"></a>CSimpleArray::RemoveAll
 
 Supprime tous les éléments du tableau.
 
@@ -264,7 +264,7 @@ void RemoveAll();
 
 Supprime tous les éléments actuellement stockés dans le tableau.
 
-##  <a name="removeat"></a>  CSimpleArray::RemoveAt
+## <a name="csimplearrayremoveat"></a><a name="removeat"></a>CSimpleArray::RemoveAt
 
 Supprime l’élément spécifié du tableau.
 
@@ -275,19 +275,19 @@ BOOL RemoveAtint nIndex);
 ### <a name="parameters"></a>Paramètres
 
 *nIndex*<br/>
-Index qui pointe vers l’élément à supprimer.
+Index pointant vers l’élément à supprimer.
 
 ### <a name="return-value"></a>Valeur de retour
 
-Retourne la valeur TRUE si l’élément a été supprimé, FALSE si l’index n’est pas valide.
+Retourne VRAI si l’élément a été supprimé, FALSE si l’index était invalide.
 
 ### <a name="remarks"></a>Notes
 
-Lorsqu’un élément est supprimé, les éléments restants dans le tableau sont alors renumérotés pour remplir l’espace vide.
+Lorsqu’un élément est enlevé, les éléments restants du tableau sont renumbered pour remplir l’espace vide.
 
-##  <a name="setatindex"></a>  CSimpleArray::SetAtIndex
+## <a name="csimplearraysetatindex"></a><a name="setatindex"></a>CSimpleArray::SetAtIndex
 
-Définir l’élément spécifié dans le tableau.
+Réglez l’élément spécifié dans le tableau.
 
 ```
 BOOL SetAtIndex(
@@ -298,15 +298,15 @@ BOOL SetAtIndex(
 ### <a name="parameters"></a>Paramètres
 
 *nIndex*<br/>
-Index de l’élément à modifier.
+L’index de l’élément à modifier.
 
-*t*<br/>
+*T*<br/>
 Valeur à assigner à l’élément spécifié.
 
 ### <a name="return-value"></a>Valeur de retour
 
-Retourne la valeur TRUE si réussi et FALSE si l’index n’est pas valide.
+Rendements VRAI en cas de succès, FALSE si l’indice n’était pas valide.
 
 ## <a name="see-also"></a>Voir aussi
 
-[Vue d’ensemble de la classe](../../atl/atl-class-overview.md)
+[Vue d'ensemble des classes](../../atl/atl-class-overview.md)

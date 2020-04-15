@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - xdcmake program
 ms.assetid: 14e65747-d000-4343-854b-8393bf01cbac
-ms.openlocfilehash: 097c105e005a3c734ba86139ed3b4b6ecdcf49d9
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 9970470d1feb471f9e0b8c9284a08337dac7ef0f
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62316390"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81335856"
 ---
 # <a name="xdcmake-reference"></a>Référence XDCMake
 
@@ -19,14 +19,14 @@ xdcmake.exe est un programme qui compile les fichiers .xdc en fichier .xml. Un f
 
 ### <a name="to-use-xdcmakeexe-in-the-visual-studio-development-environment"></a>Pour utiliser xdcmake.exe dans l’environnement de développement Visual Studio
 
-1. Ouvrez la boîte de dialogue **Pages de propriété** du projet. Pour plus d’informations, consultez [propriétés de compilateur et de build C++ définie dans Visual Studio](../working-with-project-properties.md).
+1. Ouvrez la boîte de dialogue **Pages de propriété** du projet. Pour plus d’informations, consultez [Définir le compilateur C++ et les propriétés de build dans Visual Studio](../working-with-project-properties.md).
 
 1. Ouvrez le dossier **Propriétés de configuration**.
 
 1. Cliquez sur la page de propriétés **Commentaires de document XML**.
 
 > [!NOTE]
->  Les options de xdcmake.exe au niveau de la ligne de commande diffèrent des options de xdcmake.exe quand celui-ci est utilisé dans l’environnement de développement (pages de propriétés). Pour plus d’informations sur l’utilisation de xdcmake.exe dans l’environnement de développement, consultez [Outil Générateur de documents XML, page de propriétés](xml-document-generator-tool-property-pages.md).
+> Les options de xdcmake.exe au niveau de la ligne de commande diffèrent des options de xdcmake.exe quand celui-ci est utilisé dans l’environnement de développement (pages de propriétés). Pour plus d’informations sur l’utilisation de xdcmake.exe dans l’environnement de développement, consultez [Outil Générateur de documents XML, page de propriétés](xml-document-generator-tool-property-pages.md).
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -37,7 +37,7 @@ xdcmake `input_filename options`
 *input_filename*<br/>
 Nom de fichier des fichiers .xdc utilisés comme entrée pour xdcmake.exe. Spécifiez un ou plusieurs fichiers .xdc, ou utilisez *.xdc pour employer tous les fichiers .xdc dans le répertoire actif.
 
-*options*<br/>
+*Options*<br/>
 Zéro ou plusieurs des éléments suivants :
 
 |Option|Description|
@@ -55,4 +55,4 @@ Consultez [Balises recommandées pour les commentaires de documentation](recomme
 
 ## <a name="see-also"></a>Voir aussi
 
-[Documentation XML](xml-documentation-visual-cpp.md)
+[XML Documentation](xml-documentation-visual-cpp.md)

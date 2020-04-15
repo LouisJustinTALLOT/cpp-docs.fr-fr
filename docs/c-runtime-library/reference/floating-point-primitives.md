@@ -1,6 +1,6 @@
 ---
 title: Primitives à virgule flottante
-ms.date: 01/31/2019
+ms.date: 4/2/2020
 api_name:
 - _dclass
 - _ldclass
@@ -37,6 +37,37 @@ api_name:
 - _dsin
 - _ldsin
 - _fdsin
+- _o__d_int
+- _o__dclass
+- _o__dlog
+- _o__dnorm
+- _o__dpcomp
+- _o__dpoly
+- _o__dscale
+- _o__dsign
+- _o__dsin
+- _o__dtest
+- _o__dunscale
+- _o__fd_int
+- _o__fdclass
+- _o__fdexp
+- _o__fdlog
+- _o__fdpcomp
+- _o__fdpoly
+- _o__fdscale
+- _o__fdsign
+- _o__fdsin
+- _o__ld_int
+- _o__ldclass
+- _o__ldexp
+- _o__ldlog
+- _o__ldpcomp
+- _o__ldpoly
+- _o__ldscale
+- _o__ldsign
+- _o__ldsin
+- _o__ldtest
+- _o__ldunscale
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -49,6 +80,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-math-l1-1-0.dll
+- api-ms-win-crt-private-l1-1-0
 api_type:
 - DLLExport
 topic_type:
@@ -125,16 +157,18 @@ helpviewer_keywords:
 - _dsin
 - _ldsin
 - _fdsin
-ms.openlocfilehash: 25d70062a76f9c32692f5df3f7abb96b49892725
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: d861fbf2b71d557354a60f65b8a76dc24ca1dd13
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70957171"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81346709"
 ---
 # <a name="floating-point-primitives"></a>Primitives à virgule flottante
 
-Fonctions primitives spécifiques à Microsoft utilisées pour implémenter certaines fonctions à virgule flottante de la bibliothèque C Runtime (CRT) standard. Elles sont documentées ici à des fins d’exhaustivité, mais ne sont pas recommandées pour une utilisation. Certaines de ces fonctions sont notées comme inutilisées, car elles sont connues pour présenter des problèmes de précision, de gestion des exceptions et de conformité au comportement IEEE-754. Ils existent uniquement dans la bibliothèque à des fins de compatibilité descendante. Pour un comportement, une portabilité et un respect corrects des normes, préférez les fonctions à virgule flottante standard sur ces fonctions.
+Fonctions primitives spécifiques à Microsoft qui sont utilisées pour implémenter certaines fonctions standard de la bibliothèque C runtime (CRT). Ils sont documentés ici pour l’exhaustivité, mais ne sont pas recommandés pour une utilisation. Certaines de ces fonctions sont notées comme inutilisées, parce qu’elles sont connues pour avoir des problèmes de précision, de manipulation des exceptions et de conformité au comportement de l’IEEE-754. Ils n’existent dans la bibliothèque que pour la compatibilité vers l’arrière. Pour un comportement correct, la portabilité et le respect des normes, préférez les fonctions standard de point flottant sur ces fonctions.
+
+Par défaut, l’état global de cette fonction est étendue à l’application. Pour changer cela, voir [Global State dans le CRT](../global-state.md).
 
 ## <a name="_dclass-_ldclass-_fdclass"></a>_dclass, _ldclass, _fdclass
 
@@ -148,22 +182,22 @@ short __cdecl _fdclass(float x);
 
 ### <a name="parameters"></a>Paramètres
 
-*x*<br/>
-Argument de fonction à virgule flottante.
+*X*<br/>
+Argument de fonction flottant-point.
 
 ### <a name="remarks"></a>Notes
 
-Ces primitives à virgule flottante implémentent les versions C de la macro CRT [fpclassify](fpclassify.md) pour les types à virgule flottante. La classification de l’argument *x* est retournée en tant que l’une de ces constantes, définie dans Math. h :
+Ces primitifs à point flottant implémentent les versions C de la macro [fpclassify](fpclassify.md) CRT pour les types de points flottants. La classification de l’argument *x* est retournée comme l’une de ces constantes, définies en math.h:
 
 |Valeur|Description|
 |-----------|-----------------|
 | **FP_NAN** | NaN silencieux, signalant ou indéterminé |
 | **FP_INFINITE** | Infini positif ou négatif |
 | **FP_NORMAL** | Valeur non nulle normalisée positive ou négative |
-| **FP_SUBNORMAL** | Valeur subnormale positive ou négative (dénormalisée) |
+| **FP_SUBNORMAL** | Une valeur sous-normale (dénormalisée) positive ou négative |
 | **FP_ZERO** | Valeur nulle positive ou négative |
 
-Pour plus d’informations, vous pouvez utiliser les fonctions [_fpclass, _fpclassf](fpclass-fpclassf.md) spécifiques à Microsoft. Utilisez la macro ou la fonction [fpclassify](fpclassify.md) pour la portabilité.
+Pour plus de détails, vous pouvez utiliser les [fonctions _fpclass, _fpclassf](fpclass-fpclassf.md) spécifiques à Microsoft. Utilisez la macro ou la fonction [fpclassify](fpclassify.md) pour la portabilité.
 
 ## <a name="_dsign-_ldsign-_fdsign"></a>_dsign, _ldsign, _fdsign
 
@@ -177,12 +211,12 @@ int __cdecl _fdsign(float x);
 
 ### <a name="parameters"></a>Paramètres
 
-*x*<br/>
-Argument de fonction à virgule flottante.
+*X*<br/>
+Argument de fonction flottant-point.
 
 ### <a name="remarks"></a>Notes
 
-Ces primitives à virgule flottante implémentent la macro ou la fonction [signbit,](signbit.md) dans le CRT. Elles retournent une valeur différente de zéro si le bit de signe est défini dans la mantisse (mantisse) de l’argument *x*, et 0 si le bit de signe n’est pas défini.
+Ces primitifs à point flottant implémentent la macro ou la fonction [signbit](signbit.md) dans le CRT. Ils retournent une valeur non-zéro si le bit de signe est placé dans le significand (mantissa) de l’argument *x*, et 0 si le bit de signe n’est pas réglé.
 
 ## <a name="_dpcomp-_ldpcomp-_fdpcomp"></a>_dpcomp, _ldpcomp, _fdpcomp
 
@@ -197,19 +231,19 @@ int __cdecl _fdpcomp(float x, float y);
 ### <a name="parameters"></a>Paramètres
 
 *x*, *y*<br/>
-Arguments de fonction à virgule flottante.
+Arguments de fonction de point flottant.
 
 ### <a name="remarks"></a>Notes
 
-Ces primitives à virgule flottante prennent deux arguments, *x* et *y*, et retournent une valeur qui indique leur relation de classement, exprimée sous la forme d’une opération de bits or de ces constantes, définie dans Math. h :
+Ces primitifs flottants prennent deux arguments, *x* et *y,* et retournent une valeur qui montre leur relation de commande, exprimée comme le bitwise ou de ces constantes, définies en math.h :
 
 | Valeur | Description |
 |------------|-----------------|
-| **_FP_LT** | *x* peut être considéré comme inférieur à *y* |
+| **_FP_LT** | *x* peut être considéré comme moins que *y* |
 | **_FP_EQ** | *x* peut être considéré comme égal à *y* |
-| **_FP_GT** | *x* peut être considéré comme supérieur à *y* |
+| **_FP_GT** | *x* peut être considéré comme plus grand que *y* |
 
-Ces primitives implémentent les macros [isgreater, isgreaterequal, îless, islessequal, islessgreater et isunordered](floating-point-ordering.md) et les fonctions dans le CRT.
+Ces primitifs mettent en œuvre [l’isgreater, l’isgreaterequal, l’instérable, l’islesse, l’islessgreater, et les](floating-point-ordering.md) macros et les fonctions ordonnées dans le CRT.
 
 ## <a name="_dtest-_ldtest-_fdtest"></a>_dtest, _ldtest, _fdtest
 
@@ -223,22 +257,22 @@ short __cdecl _fdtest(float* px);
 
 ### <a name="parameters"></a>Paramètres
 
-*px*<br/>
-Pointeur vers un argument à virgule flottante.
+*Px*<br/>
+Pointeur à un argument de point flottant.
 
 ### <a name="remarks"></a>Notes
 
-Ces primitives à virgule flottante implémentent les C++ versions de la fonction CRT [fpclassify](fpclassify.md) pour les types à virgule flottante. L’argument *x* est évalué et la classification est retournée en tant que l’une de ces constantes, définie dans Math. h :
+Ces primitifs à point flottant implémentent les versions CMD de la fonction CRT [fpclassify](fpclassify.md) pour les types de points flottants. L’argument *x* est évalué et la classification est retournée comme l’une de ces constantes, définies en math.h:
 
 |Valeur|Description|
 |-----------|-----------------|
 | **FP_NAN** | NaN silencieux, signalant ou indéterminé |
 | **FP_INFINITE** | Infini positif ou négatif |
 | **FP_NORMAL** | Valeur non nulle normalisée positive ou négative |
-| **FP_SUBNORMAL** | Valeur subnormale positive ou négative (dénormalisée) |
+| **FP_SUBNORMAL** | Une valeur sous-normale (dénormalisée) positive ou négative |
 | **FP_ZERO** | Valeur nulle positive ou négative |
 
-Pour plus d’informations, vous pouvez utiliser les fonctions [_fpclass, _fpclassf](fpclass-fpclassf.md) spécifiques à Microsoft. Utilisez la fonction [fpclassify](fpclassify.md) pour la portabilité.
+Pour plus de détails, vous pouvez utiliser les [fonctions _fpclass, _fpclassf](fpclass-fpclassf.md) spécifiques à Microsoft. Utilisez la fonction [fpclassify](fpclassify.md) pour la portabilité.
 
 ## <a name="_d_int-_ld_int-_fd_int"></a>_d_int, _ld_int, _fd_int
 
@@ -252,15 +286,15 @@ short __cdecl _fd_int(float* px, short exp);
 
 ### <a name="parameters"></a>Paramètres
 
-*px*<br/>
-Pointeur vers un argument à virgule flottante.
+*Px*<br/>
+Pointeur à un argument de point flottant.
 
-*exp*<br/>
-Exposant comme type intégral.
+*Exp*<br/>
+Un exposant comme un type intégral.
 
 ### <a name="remarks"></a>Notes
 
-Ces primitives à virgule flottante prennent un pointeur vers une valeur à virgule flottante *PX* et une valeur d’exposant *exp*, et suppriment la partie fractionnaire de la valeur à virgule flottante sous l’exposant donné, si possible. La valeur retournée est le résultat de **fpclassify** sur la valeur d’entrée de *PX* s’il s’agit d’un Nan ou d’une infini, et sur la valeur de sortie dans *PX* dans le cas contraire.
+Ces primitifs à point flottant prennent un pointeur à un *px* de valeur flottante-point et une valeur *exp*exposante , et enlèvent la partie fractionnelle de la valeur de point flottant en dessous de l’exposant donné, si possible. La valeur retournée est le résultat de **fpclassify** sur la valeur d’entrée en *px* si c’est un NaN ou à l’infini, et sur la valeur de sortie en *px* autrement.
 
 ## <a name="_dscale-_ldscale-_fdscale"></a>_dscale, _ldscale, _fdscale
 
@@ -274,15 +308,15 @@ short __cdecl _fdscale(float* px, long exp);
 
 ### <a name="parameters"></a>Paramètres
 
-*px*<br/>
-Pointeur vers un argument à virgule flottante.
+*Px*<br/>
+Pointeur à un argument de point flottant.
 
-*exp*<br/>
-Exposant comme type intégral.
+*Exp*<br/>
+Un exposant comme un type intégral.
 
 ### <a name="remarks"></a>Notes
 
-Ces primitives à virgule flottante prennent un pointeur vers une valeur à virgule flottante *PX* et une valeur d’exposant *exp*, et ajustent la valeur en *PX* de 2<sup>*exp*</sup>, si possible. La valeur retournée est le résultat de **fpclassify** sur la valeur d’entrée de *PX* s’il s’agit d’un Nan ou d’une infini, et sur la valeur de sortie dans *PX* dans le cas contraire. Pour la portabilité, préférez les fonctions [ldexp, ldexpf, et ldexpl](ldexp.md) .
+Ces primitifs à point flottant prennent un pointeur à un *px* de valeur flottante-point et une valeur *exp*exposante , et l’échelle de la valeur en *px* par 2<sup>*exp*</sup>, si possible. La valeur retournée est le résultat de **fpclassify** sur la valeur d’entrée en *px* si c’est un NaN ou à l’infini, et sur la valeur de sortie en *px* autrement. Pour la portabilité, préférez les fonctions [ldexp, ldexpf et ldexpl.](ldexp.md)
 
 ## <a name="_dunscale-_ldunscale-_fdunscale"></a>_dunscale, _ldunscale, _fdunscale
 
@@ -297,14 +331,14 @@ short __cdecl _fdunscale(short* pexp, float* px);
 ### <a name="parameters"></a>Paramètres
 
 *pexp*<br/>
-Pointeur vers un exposant en tant que type intégral.
+Un pointeur à un exposant comme un type intégral.
 
-*px*<br/>
-Pointeur vers un argument à virgule flottante.
+*Px*<br/>
+Pointeur à un argument de point flottant.
 
 ### <a name="remarks"></a>Notes
 
-Ces primitives à virgule flottante décomposent la valeur à virgule flottante pointée par *PX* dans une mantisse (mantisse) et un exposant, si possible. Le mantisse est mis à l’échelle de telle sorte que la valeur absolue soit supérieure ou égale à 0,5 et inférieure à 1,0. L’exposant est la valeur *n*, où la valeur à virgule flottante d’origine est égale au nombre de mantisse mis à l’échelle 2<sup>*n*</sup>. Cet exposant entier *n* est stocké à l’emplacement désigné par *pexp*. La valeur retournée est le résultat de **fpclassify** sur la valeur d’entrée de *PX* s’il s’agit d’une valeur NaN ou d’une valeur d’infini, et sur la valeur de sortie dans le cas contraire. Pour la portabilité, préférez les fonctions [frexp, frexpf,, frexpl](frexp.md) .
+Ces primitifs flottants décomposent la valeur de point flottant point point point pointée par *px* dans un significand (mantissa) et un exposant, si possible. Le significand est à l’échelle de telle sorte que la valeur absolue est supérieure ou égale à 0,5 et moins de 1,0. L’exposant est la valeur *n*, où la valeur flottante d’origine est égale à la significand à l’échelle fois 2<sup>*n*</sup>. Cet *exposant* n integer est stocké à l’emplacement indiqué par *pexp*. La valeur retournée est le résultat de **fpclassify** sur la valeur d’entrée en *px* si c’est un NaN ou à l’infini, et sur la valeur de sortie autrement. Pour la portabilité, préférez les [fonctions frexp, frexpf, frexpl.](frexp.md)
 
 ## <a name="_dexp-_ldexp-_fdexp"></a>_dexp, _ldexp, _fdexp
 
@@ -319,17 +353,17 @@ short __cdecl _fdexp(float* px, float y, long exp);
 ### <a name="parameters"></a>Paramètres
 
 *y*<br/>
-Argument de fonction à virgule flottante.
+Argument de fonction flottant-point.
 
-*px*<br/>
-Pointeur vers un argument à virgule flottante.
+*Px*<br/>
+Pointeur à un argument de point flottant.
 
-*exp*<br/>
-Exposant comme type intégral.
+*Exp*<br/>
+Un exposant comme un type intégral.
 
 ### <a name="remarks"></a>Notes
 
-Ces primitives à virgule flottante construisent une valeur à virgule flottante à l’emplacement désigné par *PX* égal à *y* * 2<sup>*exp*</sup>. La valeur retournée est le résultat de **fpclassify** sur la valeur d’entrée de *y* s’il s’agit d’un Nan ou d’une infini, et sur la valeur de sortie dans *PX* dans le cas contraire. Pour la portabilité, préférez les fonctions [ldexp, ldexpf, et ldexpl](ldexp.md) .
+Ces primitifs à point flottant construisent une valeur de point flottant dans l’emplacement pointé par *px* égal à *y* '2<sup>*exp*</sup>. La valeur retournée est le résultat de **fpclassify** sur la valeur d’entrée en *y* si c’est un NaN ou à l’infini, et sur la valeur de sortie en *px* autrement. Pour la portabilité, préférez les fonctions [ldexp, ldexpf et ldexpl.](ldexp.md)
 
 ## <a name="_dnorm-_fdnorm"></a>_dnorm, _fdnorm
 
@@ -342,12 +376,12 @@ short __cdecl _fdnorm(unsigned short* ps);
 
 ### <a name="parameters"></a>Paramètres
 
-*ps*<br/>
-Pointeur vers la représentation au niveau du bit d’une valeur à virgule flottante exprimée sous la forme d’un tableau de type **unsigned** **short**.
+*Ps*<br/>
+Pointeur à la représentation bitwise d’une valeur de point flottant exprimé comme un tableau de **court** **non signé** .
 
 ### <a name="remarks"></a>Notes
 
-Ces primitives à virgule flottante normalisent la partie fractionnaire d’une valeur à virgule flottante dépassée et ajustent la *caractéristique*, ou exposant biais, pour qu’elle corresponde. La valeur est passée en tant que représentation au niveau du bit du type à virgule flottante convertie en un tableau de `_double_val`type `_ldouble_val` **short** **non signé** par le, ou `_float_val` une Union de type punning déclarée dans Math. h. La valeur de retour est le résultat de **fpclassify** sur la valeur à virgule flottante d’entrée s’il s’agit d’un Nan ou d’une infini, et sur la valeur de sortie dans le cas contraire.
+Ces primitifs à point flottant normalisent la partie fractionnelle d’une valeur de point flottant sous-alimenté et ajustent la *caractéristique,* ou exposant biaisé, pour correspondre. La valeur est passée comme la représentation bitwise du type de point flottant converti `_double_val` `_ldouble_val`en `_float_val` un tableau de **court** **non signé** à travers le , , ou type punning union déclaré dans math.h. La valeur de rendement est le résultat de **fpclassify** sur la valeur flottante de l’entrée si c’est un NaN ou à l’infini, et sur la valeur de sortie autrement.
 
 ## <a name="_dpoly-_ldpoly-_fdpoly"></a>_dpoly, _ldpoly, _fdpoly
 
@@ -361,18 +395,18 @@ float __cdecl _fdpoly(float x, _float const* table, int n);
 
 ### <a name="parameters"></a>Paramètres
 
-*x*<br/>
-Argument de fonction à virgule flottante.
+*X*<br/>
+Argument de fonction flottant-point.
 
 *table*<br/>
-Pointeur vers une table de coefficients de constante pour un polynomial.
+Pointeur vers une table de coefficients constants pour un polynomial.
 
 *n*<br/>
-Ordre du polynôme à évaluer.
+Ordre du polynomial à évaluer.
 
 ### <a name="remarks"></a>Notes
 
-Ces primitives à virgule flottante retournent l’évaluation de *x* dans le degré polynomial de l’ordre *n* dont les coefficients sont représentés par les valeurs constantes correspondantes dans la *table*. Par exemple, si *table*\[0] = 3,0, *table*\[1] = 4,0, *table*\[2] = 5,0, et *n* = 2, il représente le polynôme 5,0 x<sup>2</sup> + 4.0 x + 3,0. Si ce polynôme est évaluée pour *x* de 2,0, le résultat est 31,0. Ces fonctions ne sont pas utilisées en interne.
+Ces primitifs à point flottant renvoient l’évaluation de *x* dans le polynomial de *l’ordre n* dont les coefficients sont représentés par les valeurs constantes correspondantes dans le *tableau.* Par exemple, si *le tableau*\[0] 3,0, *le tableau*\[1] 4,0, *le tableau*\[2, 5,0 et *n* 2, il représente le polynomial 5,0x<sup>2</sup> à 4,0x et 3,0. Si ce polynomial est évalué pour *x* de 2.0, le résultat est 31.0. Ces fonctions ne sont pas utilisées en interne.
 
 ## <a name="_dlog-_dlog-_dlog"></a>_dlog, _dlog, _dlog
 
@@ -386,15 +420,15 @@ float __cdecl _fdlog(float x, int base_flag);
 
 ### <a name="parameters"></a>Paramètres
 
-*x*<br/>
-Argument de fonction à virgule flottante.
+*X*<br/>
+Argument de fonction flottant-point.
 
 *base_flag*<br/>
-Indicateur qui contrôle la base à utiliser, 0 pour la base *e* et différente de zéro pour base 10.
+Indicateur qui contrôle la base à utiliser, 0 pour la base *e* et non-zéro pour la base 10.
 
 ### <a name="remarks"></a>Notes
 
-Ces primitives à virgule flottante retournent le logarithme népérien de *x*, ln (*x*) ou log<sub>*e*</sub>(*x*), lorsque *base_flag* est égal à 0. Ils retournent la base du journal 10 sur *x*ou log<sub>10</sub>(*x*), quand *base_flag* est différent de zéro. Ces fonctions ne sont pas utilisées en interne. Pour la portabilité, préférez les fonctions [log, LogF,, logl, log10, log10f, et log10L](log-logf-log10-log10f.md).
+Ces primitifs à point flottant retournent le journal naturel de *x,* ln *(x)* ou log<sub>*e*</sub>(*x*), quand *base_flag* est de 0. Ils retournent la base de journal 10 de *x*, ou le journal<sub>10</sub>(*x*), quand *base_flag* n’est pas zéro. Ces fonctions ne sont pas utilisées en interne. Pour la portabilité, préférez les fonctions [journal, logf, logl, log10, log10f, et log10l](log-logf-log10-log10f.md).
 
 ## <a name="_dsin-_ldsin-_fdsin"></a>_dsin, _ldsin, _fdsin
 
@@ -408,19 +442,19 @@ float __cdecl _fdsin(float x, unsigned int quadrant);
 
 ### <a name="parameters"></a>Paramètres
 
-*x*<br/>
-Argument de fonction à virgule flottante.
+*X*<br/>
+Argument de fonction flottant-point.
 
-*quadrant*<br/>
-Décalage du quadrant de 0, 1, 2 ou 3 à utiliser pour produire `sin`les `cos`résultats `-sin`,, `-cos` et.
+*Quadrant*<br/>
+Quadrant décalage de 0, 1, 2, ou `sin` `cos`3 à utiliser pour produire , , , `-sin`et `-cos` les résultats.
 
 ### <a name="remarks"></a>Notes
 
-Ces primitives à virgule flottante retournent le sinus de décalage *x* par le *quadrant* modulo 4. En effet, elles retournent le sinus, le cosinus, le sinus et le cosinus de *x* lorsque le *quadrant* modulo 4 est respectivement 0, 1, 2 ou 3. Ces fonctions ne sont pas utilisées en interne. Pour la portabilité, préférez les fonctions [Sin, sinf, sinl](sin-sinf-sinl.md), [cos, cosf, et COSL](cos-cosf-cosl.md) .
+Ces primitifs flottants retournent le sinus de *x* décalé par le *quadrant* modulo 4. En effet, ils retournent le sinus, le cosine, le -sine et le cosine de *x* lorsque le modulo *quadrant* 4 est respectivement 0, 1, 2 ou 3. Ces fonctions ne sont pas utilisées en interne. Pour la portabilité, préférez le [péché, sinf, sinl](sin-sinf-sinl.md), [cos, cosf, et les fonctions cosl.](cos-cosf-cosl.md)
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
-En- \<tête : Math. h >
+En-tête: \<math.h>
 
 Pour plus d'informations sur la compatibilité, voir [Compatibilité](../../c-runtime-library/compatibility.md).
 

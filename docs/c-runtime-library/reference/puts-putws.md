@@ -1,9 +1,11 @@
 ---
 title: puts, _putws
-ms.date: 11/04/2016
+ms.date: 4/2/2020
 api_name:
 - _putws
 - puts
+- _o__putws
+- _o_puts
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -16,6 +18,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-stdio-l1-1-0.dll
+- api-ms-win-crt-private-l1-1-0
 api_type:
 - DLLExport
 topic_type:
@@ -33,12 +36,12 @@ helpviewer_keywords:
 - putts function
 - _putws function
 ms.assetid: 32dada12-ed45-40ac-be06-3feeced9ecd6
-ms.openlocfilehash: 1cd38678b321853cb229d86f9554bb76efbc84d6
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 9681373ccf338daf05be3120fbadd39ba471e86a
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70949797"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81332958"
 ---
 # <a name="puts-_putws"></a>puts, _putws
 
@@ -57,22 +60,24 @@ int _putws(
 
 ### <a name="parameters"></a>Paramètres
 
-*str*<br/>
+*Str*<br/>
 Chaîne de sortie.
 
 ## <a name="return-value"></a>Valeur de retour
 
-Retourne une valeur non négative si l’opération aboutit. Si **put** échoue, elle retourne **EOF**; Si **_putws** échoue, elle retourne **WEOF**. Si *Str* est un pointeur null, le gestionnaire de paramètres non valides est appelé, comme décrit dans [validation de paramètre](../../c-runtime-library/parameter-validation.md). Si l’exécution est autorisée à se poursuivre, les fonctions définissent **errno** sur **EINVAL** et retournent **EOF** ou **WEOF**.
+Retourne une valeur non négative si l’opération aboutit. En cas **d’échec,** il renvoie **EOF**; si **_putws** échoue, il retourne **WEOF**. Si *str* est un pointeur nul, le gestionnaire de paramètre invalide est invoqué, tel que décrit dans [La validation de paramètres](../../c-runtime-library/parameter-validation.md). Si l’exécution est autorisée à se poursuivre, les fonctions définies **errno** à **EINVAL** et retourner **EOF** ou **WEOF**.
 
 Pour plus d’informations sur ces codes d’erreur et les autres, consultez [_doserrno, errno, _sys_errlist et _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
 
 ## <a name="remarks"></a>Notes
 
-La fonction **put** écrit *Str* dans le flux de sortie standard **stdout**, en remplaçant le caractère null de fin de la chaîne (' \ 0 ') par un caractère de saut de ligne (' \n') dans le flux de sortie.
+La fonction **met** écrit *str* à la **stdout**flux de sortie standard , remplaçant le caractère null de la chaîne de fin ('0') avec un caractère newline ('n') dans le flux de sortie.
 
-**_putws** est la version à caractères larges de **puts**; les deux fonctions se comportent de la même manière si le flux est ouvert en mode ANSI. **put** ne prend pas actuellement en charge la sortie dans un flux Unicode.
+**_putws** est la version à caractère large de **met;** les deux fonctions se comportent de la même manière si le flux est ouvert en mode ANSI. **ne prend** pas actuellement en charge la sortie dans un flux UNICODE.
 
-**_putwch** écrit des caractères Unicode en utilisant les paramètres régionaux actuels de la console.
+**_putwch** écrit des caractères Unicode à l’aide du paramètre CONSOLE LOCAL actuel.
+
+Par défaut, l’état global de cette fonction est étendue à l’application. Pour changer cela, voir [Global State dans le CRT](../global-state.md).
 
 ### <a name="generic-text-routine-mappings"></a>Mappages de routines de texte générique
 
@@ -80,14 +85,14 @@ La fonction **put** écrit *Str* dans le flux de sortie standard **stdout**, en 
 |---------------------|------------------------------------|--------------------|-----------------------|
 |**_putts**|**puts**|**puts**|**_putws**|
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
 |Routine|En-tête requis|
 |-------------|---------------------|
 |**puts**|\<stdio.h>|
 |**_putws**|\<stdio.h>|
 
-La console n’est pas prise en charge dans les applications de plateforme Windows universelle (UWP). Les handles de flux standard associés à la console, **stdin**, **stdout**et **stderr**, doivent être redirigés pour que les fonctions runtime C puissent les utiliser dans les applications UWP. Pour plus d'informations sur la compatibilité, voir [Compatibilité](../../c-runtime-library/compatibility.md).
+La console n’est pas prise en charge dans les applications Universal Windows Platform (UWP). Les poignées de flux standard qui sont associées à la console, **stdin**, **stdout**, et **stderr**, doivent être redirigés avant que les fonctions C run-time peuvent les utiliser dans les applications UWP. Pour plus d'informations sur la compatibilité, voir [Compatibilité](../../c-runtime-library/compatibility.md).
 
 ## <a name="libraries"></a>Bibliothèques
 
@@ -107,7 +112,7 @@ int main( void )
 }
 ```
 
-### <a name="output"></a>Sortie
+### <a name="output"></a>Output
 
 ```Output
 Hello world from puts!

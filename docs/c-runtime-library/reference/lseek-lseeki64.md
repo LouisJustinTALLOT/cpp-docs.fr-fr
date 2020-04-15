@@ -1,9 +1,11 @@
 ---
 title: _lseek, _lseeki64
-ms.date: 11/04/2016
+ms.date: 4/2/2020
 api_name:
 - _lseeki64
 - _lseek
+- _o__lseek
+- _o__lseeki64
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -16,6 +18,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-stdio-l1-1-0.dll
+- api-ms-win-crt-private-l1-1-0
 api_type:
 - DLLExport
 topic_type:
@@ -32,12 +35,12 @@ helpviewer_keywords:
 - file pointers [C++], moving
 - seek file pointers
 ms.assetid: aba8a768-d40e-48c3-b38e-473dbd782f93
-ms.openlocfilehash: 67bcce2a9936cd09973e8ddf1828704944866439
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: d35b3db157d4f33e3a8490c6620a08000ff090f5
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70952988"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81341618"
 ---
 # <a name="_lseek-_lseeki64"></a>_lseek, _lseeki64
 
@@ -60,26 +63,26 @@ __int64 _lseeki64(
 
 ### <a name="parameters"></a>Paramètres
 
-*fd*<br/>
+*Fd*<br/>
 Descripteur de fichier qui fait référence à un fichier ouvert.
 
 *offset*<br/>
 Nombre d’octets à partir d’*origin*.
 
-*origin*<br/>
+*Origine*<br/>
 Position initiale.
 
 ## <a name="return-value"></a>Valeur de retour
 
-**_lseek** retourne l’offset, en octets, de la nouvelle position à partir du début du fichier. **_lseeki64** retourne l’offset dans un entier 64 bits. La fonction retourne-1L pour indiquer une erreur. Si un paramètre non valide est passé, tel qu’un descripteur de fichier incorrect, que la valeur d’*origin* n’est pas valide ou que la position spécifiée par *offset* se situe avant le début du fichier, le gestionnaire de paramètres non valides est appelé, comme décrit dans [Validation de paramètre](../../c-runtime-library/parameter-validation.md). Si l’exécution est autorisée à se poursuivre, ces fonctions définissent **errno** à **EBADF** et retournent-1L. Sur les appareils sans fonctionnalités de recherche (tels que les terminaux et les imprimantes), la valeur de retour n’est pas définie.
+**_lseek** renvoie le décalage, dans les octets, de la nouvelle position dès le début du fichier. **_lseeki64** retourne le décalage dans un intégrier 64 bits. La fonction renvoie -1L pour indiquer une erreur. Si un paramètre non valide est passé, tel qu’un descripteur de fichier incorrect, que la valeur d’*origin* n’est pas valide ou que la position spécifiée par *offset* se situe avant le début du fichier, le gestionnaire de paramètres non valides est appelé, comme décrit dans [Validation de paramètre](../../c-runtime-library/parameter-validation.md). Si l’exécution est autorisée à se poursuivre, ces fonctions définies **errno** à **EBADF** et retour -1L. Sur les appareils sans fonctionnalités de recherche (tels que les terminaux et les imprimantes), la valeur de retour n’est pas définie.
 
 Pour plus d’informations sur ces codes d’erreur et autres, consultez [_doserrno, errno, _sys_errlist et _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
 
 ## <a name="remarks"></a>Notes
 
-La fonction **_lseek** déplace le pointeur de fichier associé à *FD* vers un nouvel emplacement qui est *décalé* d’octets par rapport à l' *origine*. L’opération suivante sur le fichier se produit au nouvel emplacement. L’argument *origin* doit être une des constantes suivantes, qui sont définies dans Stdio.h.
+La fonction **_lseek** déplace le pointeur de fichier associé à *fd* à un nouvel emplacement qui est *compensé* bytes de *l’origine*. L’opération suivante sur le fichier se produit au nouvel emplacement. L’argument *origin* doit être une des constantes suivantes, qui sont définies dans Stdio.h.
 
-|valeur d' *origine*||
+|valeur *d’origine*||
 |-|-|
 | **SEEK_SET** | Début du fichier. |
 | **SEEK_CUR** | Position actuelle du pointeur de fichier. |
@@ -87,14 +90,16 @@ La fonction **_lseek** déplace le pointeur de fichier associé à *FD* vers un 
 
 Vous pouvez utiliser **_lseek** pour repositionner le pointeur n’importe où dans un fichier ou au-delà de la fin du fichier.
 
-## <a name="requirements"></a>Configuration requise
+Par défaut, l’état global de cette fonction est étendue à l’application. Pour changer cela, voir [Global State dans le CRT](../global-state.md).
+
+## <a name="requirements"></a>Spécifications
 
 |Routine|En-tête requis|
 |-------------|---------------------|
 |**_lseek**|\<io.h>|
 |**_lseeki64**|\<io.h>|
 
-Pour plus d'informations sur la compatibilité, voir [Compatibilité](../../c-runtime-library/compatibility.md).
+Pour plus d’informations sur la compatibilité, consultez [Compatibility](../../c-runtime-library/compatibility.md).
 
 ## <a name="libraries"></a>Bibliothèques
 
@@ -162,7 +167,7 @@ Line four.
 Line five.
 ```
 
-### <a name="output"></a>Sortie
+### <a name="output"></a>Output
 
 ```Output
 Position for beginning of file seek = 0
@@ -172,6 +177,6 @@ Position for end of file seek = 57
 
 ## <a name="see-also"></a>Voir aussi
 
-[E/S de bas niveau](../../c-runtime-library/low-level-i-o.md)<br/>
+[E/S niveau bas](../../c-runtime-library/low-level-i-o.md)<br/>
 [fseek, _fseeki64](fseek-fseeki64.md)<br/>
 [_tell, _telli64](tell-telli64.md)<br/>

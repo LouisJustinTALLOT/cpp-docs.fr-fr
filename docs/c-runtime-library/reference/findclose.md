@@ -1,8 +1,9 @@
 ---
 title: _findclose
-ms.date: 11/04/2016
+ms.date: 4/2/2020
 api_name:
 - _findclose
+- _o__findclose
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -15,6 +16,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-filesystem-l1-1-0.dll
+- api-ms-win-crt-private-l1-1-0
 api_type:
 - DLLExport
 topic_type:
@@ -26,12 +28,12 @@ helpviewer_keywords:
 - _findclose function
 - findclose function
 ms.assetid: 9216c573-0878-444c-b5d7-cdaf16fb9163
-ms.openlocfilehash: c67336cc12bcdee754edd40b91078faa83a17984
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: ed17963dc7331962c3ac0d522db2843822ec5f79
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70957322"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81346787"
 ---
 # <a name="_findclose"></a>_findclose
 
@@ -47,20 +49,24 @@ int _findclose(
 
 ### <a name="parameters"></a>Paramètres
 
-*handle*<br/>
-Handle de recherche retourné par un appel précédent à **_findfirst**.
+*Poignée*<br/>
+Poignée de recherche retournée par un appel précédent à **_findfirst**.
 
 ## <a name="return-value"></a>Valeur de retour
 
-En cas de réussite, **_findclose** retourne 0. Sinon, elle retourne-1 et affecte à **errno** la valeur **ENOENT**, ce qui indique qu’aucun autre fichier correspondant n’a été trouvé.
+En cas de succès, **_findclose** revient 0. Sinon, il renvoie -1 et définit **errno** à **ENOENT**, indiquant qu’aucun fichier correspondant plus pourrait être trouvé.
 
-## <a name="requirements"></a>Configuration requise
+## <a name="remarks"></a>Notes
+
+Par défaut, l’état global de cette fonction est étendue à l’application. Pour changer cela, voir [Global State dans le CRT](../global-state.md).
+
+## <a name="requirements"></a>Spécifications
 
 |Fonction|En-tête requis|
 |--------------|---------------------|
 |**_findclose**|\<io.h>|
 
-Pour plus d'informations sur la compatibilité, voir [Compatibilité](../../c-runtime-library/compatibility.md).
+Pour plus d’informations sur la compatibilité, consultez [Compatibility](../../c-runtime-library/compatibility.md).
 
 ## <a name="see-also"></a>Voir aussi
 

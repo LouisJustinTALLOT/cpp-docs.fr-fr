@@ -8,16 +8,16 @@ helpviewer_keywords:
 - class libraries, MFC
 - MFC, about MFC
 ms.assetid: 7101cb18-a681-495c-8f2b-069ad20c72f7
-ms.openlocfilehash: d26cf1e92717d2925edf3730e1ae4ec935365321
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 3811fdcf278129ee72872ea489b42f8389957761
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80178455"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81359338"
 ---
 # <a name="mfc-desktop-applications"></a>MFC, applications de bureau
 
-La bibliothèque MFC (Microsoft Foundation Class) fournit un wrapper orienté objet pour une grande partie des API Win32 et COM. Bien qu'elle puisse servir à créer des applications bureautiques très simples, elle est très utile pour développer des interfaces utilisateur plus complexes avec plusieurs contrôles. Vous pouvez utiliser MFC pour créer des applications avec des interfaces utilisateur de style Office. Pour obtenir de la documentation sur la plateforme Windows elle-même, consultez la [documentation Windows](/windows/index). Pour plus d’informations sur la création C++ d’applications Windows dans sans MFC, consultez créer des applications [Windows pour ordinateur de bureau à l’aide de l’API Win32](/windows/win32/index).
+La bibliothèque MFC (Microsoft Foundation Class) fournit un wrapper orienté objet pour une grande partie des API Win32 et COM. Bien qu'elle puisse servir à créer des applications bureautiques très simples, elle est très utile pour développer des interfaces utilisateur plus complexes avec plusieurs contrôles. Vous pouvez utiliser MFC pour créer des applications avec des interfaces utilisateur de style Office. Pour la documentation sur la plate-forme Windows elle-même, voir [la documentation Windows](/windows/index). Pour plus d’informations sur la création d’applications Windows dans Cmd sans MFC, voir [les applications Windows de bureau Build à l’aide de l’API Win32](/windows/win32/index).
 
 Les informations de référence sur MFC couvrent les classes, les fonctions globales, les variables globales et les macros qui composent la bibliothèque MFC.
 
@@ -28,22 +28,22 @@ La documentation de chaque classe inclut une vue d'ensemble de la classe, un ré
 Les membres de classe publics et protégés sont documentés uniquement lorsqu'ils sont utilisés de façon normale dans les programmes d'application ou les classes dérivées. Consultez les fichiers d'en-tête de classe pour obtenir une liste complète des membres de classe.
 
 > [!IMPORTANT]
->  Les classes MFC et leurs membres ne peuvent pas être utilisés dans les applications qui s’exécutent dans l’environnement Windows Runtime.
+> Les classes MFC et leurs membres ne peuvent pas être utilisées dans les applications qui s’exécutent dans l’environnement Windows Runtime.
 >
->  Les bibliothèques MFC (DLL) pour l'encodage de caractères multioctets (MBCS) ne sont plus incluses dans Visual Studio, mais sont disponibles comme complément Visual Studio. Pour plus d’informations, consultez [module complémentaire dll MBCS MFC](mfc-mbcs-dll-add-on.md).
+> Les bibliothèques MFC (DLL) pour l'encodage de caractères multioctets (MBCS) ne sont plus incluses dans Visual Studio, mais sont disponibles comme complément Visual Studio. Pour plus d’informations, voir [MFC MBCS DLL Add-on](mfc-mbcs-dll-add-on.md).
 
 ## <a name="in-this-section"></a>Dans cette section
 
-[Concepts](mfc-concepts.md)<br/>
+[Concepts liés à la](mfc-concepts.md)<br/>
 Articles conceptuels sur les rubriques MFC.
 
 [Graphique hiérarchique](hierarchy-chart.md)<br/>
 Détaille visuellement les relations de classes dans la bibliothèque de classes.
 
-[Vue d’ensemble de la classe](class-library-overview.md)<br/>
+[Vue d'ensemble des classes](class-library-overview.md)<br/>
 Répertorie les classes de la bibliothèque MFC en fonction de la catégorie.
 
-[Procédures pas à pas](walkthroughs-mfc.md)<br/>
+[Procédures pas à pas](walkthroughs-mfc.md)<br/>
 Contient des articles qui décrivent pas à pas diverses tâches associées aux fonctionnalités de la bibliothèque MFC.
 
 [Notes techniques](mfc-technical-notes.md)<br/>
@@ -58,13 +58,13 @@ Fournit des liens et des informations relatives aux fichiers d'en-tête pour les
 [Classes internes](reference/internal-classes.md)<br/>
 Utilisé en interne dans MFC. Par souci d'exhaustivité, cette section décrit ces classes internes, mais elles ne sont pas destinées à être utilisées directement dans votre code.
 
-[Macros et globales](reference/mfc-macros-and-globals.md)<br/>
+[Macros et objet Globals](reference/mfc-macros-and-globals.md)<br/>
 Fournit des liens vers les macros et les fonctions globales de la bibliothèque MFC.
 
 [Structures, styles, rappels et tables de messages](reference/structures-styles-callbacks-and-message-maps.md)<br/>
 Fournit des liens vers les structures, les styles, les rappels et les tables des messages utilisés par la bibliothèque MFC.
 
-[MFC, assistants et boîtes de dialogue](reference/mfc-wizards-and-dialog-boxes.md)<br/>
+[MFC Wizards et Dialog Boxes](reference/mfc-wizards-and-dialog-boxes.md)<br/>
 Guide des fonctionnalités dans Visual Studio pour la création d'applications MFC.
 
 [Utilisation des fichiers de ressources](../windows/working-with-resource-files.md)<br/>
@@ -72,13 +72,13 @@ Comment utiliser des fichiers de ressources pour gérer les données de l'interf
 
 ## <a name="related-sections"></a>Sections connexes
 
-[Catégories du graphique hiérarchique](hierarchy-chart-categories.md)<br/>
+[Catégories de graphiques de hiérarchie](hierarchy-chart-categories.md)<br/>
 Décrit le graphique de la hiérarchie MFC par catégorie.
 
 [Classes partagées ATL/MFC](../atl-mfc-shared/atl-mfc-shared-classes.md)<br/>
 Fournit des liens vers les classes qui sont partagées entre MFC et ATL.
 
-[Exemples MFC](../overview/visual-cpp-samples.md#mfc-samples)<br/>
+[Échantillons de MFC](../overview/visual-cpp-samples.md#mfc-samples)<br/>
 Fournit des liens vers des exemples qui montrent comment utiliser MFC.
 
 [Informations de référence sur les bibliothèques Visual C++](../standard-library/cpp-standard-library-reference.md)<br/>

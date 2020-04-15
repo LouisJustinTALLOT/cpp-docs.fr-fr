@@ -1,8 +1,9 @@
 ---
 title: _heapchk
-ms.date: 11/04/2016
+ms.date: 4/2/2020
 api_name:
 - _heapchk
+- _o__heapchk
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -15,6 +16,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-heap-l1-1-0.dll
+- api-ms-win-crt-private-l1-1-0
 api_type:
 - DLLExport
 topic_type:
@@ -29,12 +31,12 @@ helpviewer_keywords:
 - heaps, checking consistency
 - _heapchk function
 ms.assetid: 859619a5-1e35-4f02-9e09-11d9fa266ec0
-ms.openlocfilehash: 857feb66d89d5dc406042478156483ecb86a2474
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 21c7f9e22728109676d3fc611405ccd43ac773f8
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70954818"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81344060"
 ---
 # <a name="_heapchk"></a>_heapchk
 
@@ -48,9 +50,9 @@ int _heapchk( void );
 
 ## <a name="return-value"></a>Valeur de retour
 
-**_heapchk** retourne l’une des constantes de manifeste entières suivantes définies dans malloc. h.
+**_heapchk** renvoie l’une des constantes manifestes integer suivantes définies dans Malloc.h.
 
-|Valeur de retour|Condition|
+|Valeur retournée|Condition|
 |-|-|
 | **_HEAPBADBEGIN** | Les informations d’en-tête initiales sont incorrectes ou introuvables. |
 | **_HEAPBADNODE** | Un nœud incorrect a été trouvé ou le tas est endommagé. |
@@ -58,19 +60,21 @@ int _heapchk( void );
 | **_HEAPEMPTY** | Le tas n’a pas été initialisé. |
 | **_HEAPOK** | Le tas est cohérent. |
 
-En outre, si une erreur se produit, **_heapchk** affecte à **errno** la valeur **ENOSYS**.
+En outre, si une erreur se produit, **_heapchk** définit **errno** à **ENOSYS**.
 
 ## <a name="remarks"></a>Notes
 
-La fonction **_heapchk** permet de déboguer les problèmes liés au tas en vérifiant une cohérence minimale du tas. Si le système d’exploitation ne prend pas en charge **_heapchk**(par exemple, Windows 98), la fonction retourne **_HEAPOK** et définit **errno** sur **ENOSYS**.
+La fonction **_heapchk** aide à débocher les problèmes liés au tas en vérifiant la cohérence minimale du tas. Si le système d’exploitation ne prend pas en charge **_heapchk**(par exemple, Windows 98), la fonction renvoie **_HEAPOK** et définit **errno** à **ENOSYS**.
 
-## <a name="requirements"></a>Configuration requise
+Par défaut, l’état global de cette fonction est étendue à l’application. Pour changer cela, voir [Global State dans le CRT](../global-state.md).
+
+## <a name="requirements"></a>Spécifications
 
 |Routine|En-tête requis|En-tête facultatif|
 |-------------|---------------------|---------------------|
 |**_heapchk**|\<malloc.h>|\<errno.h>|
 
-Pour plus d'informations sur la compatibilité, voir [Compatibilité](../../c-runtime-library/compatibility.md).
+Pour plus d’informations sur la compatibilité, consultez [Compatibility](../../c-runtime-library/compatibility.md).
 
 ## <a name="example"></a>Exemple
 

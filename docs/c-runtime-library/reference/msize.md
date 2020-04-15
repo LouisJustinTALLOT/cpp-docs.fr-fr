@@ -1,8 +1,9 @@
 ---
 title: _msize
-ms.date: 11/04/2016
+ms.date: 4/2/2020
 api_name:
 - _msize
+- _o__msize
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -15,6 +16,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-heap-l1-1-0.dll
+- api-ms-win-crt-private-l1-1-0
 api_type:
 - DLLExport
 topic_type:
@@ -27,12 +29,12 @@ helpviewer_keywords:
 - msize function
 - _msize function
 ms.assetid: 02b1f89e-d0d7-4f12-938a-9eeba48a0f88
-ms.openlocfilehash: c1760cfa6a416e2eb4cd7b549cb5ae9bed00a609
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 7d5f62bd6111a305c18b0ee19bb6d3e90f2ddb49
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70951433"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81338663"
 ---
 # <a name="_msize"></a>_msize
 
@@ -53,23 +55,25 @@ Pointeur désignant le bloc de mémoire.
 
 ## <a name="return-value"></a>Valeur de retour
 
-**_msize** retourne la taille (en octets) sous la forme d’un entier non signé.
+**_msize** retourne la taille (dans les octets) comme un integer non signé.
 
 ## <a name="remarks"></a>Notes
 
-La fonction **_msize** retourne la taille, en octets, du bloc de mémoire alloué par un appel à **calloc**, **malloc**ou **realloc**.
+La fonction **_msize** renvoie la taille, dans les octets, du bloc de mémoire alloué par un appel à **calloc**, **malloc**, ou **réaffecter**.
 
-Lorsque l’application est liée à une version Debug des bibliothèques Runtime C, **_msize** se résout en [_msize_dbg](msize-dbg.md). Pour plus d’informations sur la gestion du tas pendant le processus de débogage, consultez [Tas de débogage CRT](/visualstudio/debugger/crt-debug-heap-details).
+Lorsque l’application est liée à une version débogé de déboguer des bibliothèques C run-time, **_msize** se résout à [_msize_dbg](msize-dbg.md). Pour plus d’informations sur la gestion du tas pendant le processus de débogage, consultez [Tas de débogage CRT](/visualstudio/debugger/crt-debug-heap-details).
 
-Cette fonction valide son paramètre. Si *memblock* est un pointeur null, **_msize** appelle un gestionnaire de paramètres non valides, comme décrit dans [validation de paramètre](../../c-runtime-library/parameter-validation.md). Si l’erreur est gérée, la fonction affecte à **errno** la valeur **EINVAL** et retourne-1.
+Cette fonction valide son paramètre. Si *memblock* est un pointeur nul, **_msize** invoque un gestionnaire de paramètres invalide, tel que décrit dans La validation [des paramètres](../../c-runtime-library/parameter-validation.md). Si l’erreur est traitée, la fonction définit **errno** à **EINVAL** et renvoie -1.
 
-## <a name="requirements"></a>Configuration requise
+Par défaut, l’état global de cette fonction est étendue à l’application. Pour changer cela, voir [Global State dans le CRT](../global-state.md).
+
+## <a name="requirements"></a>Spécifications
 
 |Routine|En-tête requis|
 |-------------|---------------------|
 |**_msize**|\<malloc.h>|
 
-Pour plus d'informations sur la compatibilité, voir [Compatibilité](../../c-runtime-library/compatibility.md).
+Pour plus d’informations sur la compatibilité, consultez [Compatibility](../../c-runtime-library/compatibility.md).
 
 ## <a name="libraries"></a>Bibliothèques
 

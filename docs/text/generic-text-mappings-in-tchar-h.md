@@ -10,54 +10,54 @@ helpviewer_keywords:
 - TCHAR.H data types, mapping
 - mappings [C++], TCHAR.H
 ms.assetid: 01e1bb74-5a01-4093-8720-68b6c1fdda80
-ms.openlocfilehash: 779702aa33e2aa24bf5a380bd8435745cc0aadbd
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: bf872df2e6fb49e64a973e8799eef98dec1cb472
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62410705"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81361341"
 ---
 # <a name="generic-text-mappings-in-tcharh"></a>Mappages de texte générique dans tchar.h
 
-Pour simplifier le transport de code pour une utilisation internationale, la bibliothèque Runtime Microsoft fournit des mappages de texte générique spécifiques à Microsoft pour nombreux types de données, routines et autres objets. Vous pouvez utiliser ces mappages, qui sont définis dans tchar.h, pour écrire du code générique qui peut être compilé sur un octet, multioctet, ou de caractère Unicode définit, en fonction d’une constante de manifeste que vous définissez à l’aide un `#define` instruction. Les mappages de texte générique sont des extensions Microsoft non compatibles ANSI.
+Pour simplifier le transport de code à usage international, la bibliothèque Microsoft run-time fournit des cartographies de texte générique spécifiques à Microsoft pour de nombreux types de données, routines et autres objets. Vous pouvez utiliser ces cartes, qui sont définies dans tchar.h, pour écrire du code générique qui peut être compilé pour les ensembles `#define` de caractères uni-byte, multioctets ou Unicode, selon une constante manifeste que vous définissez à l’aide d’une déclaration. Les mappages de texte générique sont des extensions Microsoft non compatibles ANSI.
 
-En utilisant le fichier tchar.h, vous pouvez générer un octet, jeu de caractères multioctets (MBCS) et les applications Unicode à partir des mêmes sources. Tchar.h définit des macros (qui ont le préfixe `_tcs`) qui, avec les définitions de préprocesseur, correspondent aux `str`, `_mbs`, ou `wcs` fonctions, comme il convient. Pour générer du MBCS, définissez le symbole `_MBCS`. Pour générer du Unicode, définissez le symbole `_UNICODE`. Pour générer une application d’un octet, définissez ni (la valeur par défaut). Par défaut, `_UNICODE` est défini pour les applications MFC.
+En utilisant le tchar.h, vous pouvez créer des applications mono-byte, Multibyte Character Set (MBCS) et Unicode à partir des mêmes sources. tchar.h définit les macros (qui `_tcs`ont le préfixe ) qui, `str`avec `_mbs`les `wcs` définitions préprocessoires correctes, la carte à , , ou les fonctions, le cas échéant. Pour construire MBCS, `_MBCS`définissez le symbole . Pour construire Unicode, `_UNICODE`définissez le symbole . Pour créer une application unique, définissez ni l’un ni l’autre (la valeur par défaut). Par défaut, `_UNICODE` est défini pour les applications MFC.
 
-Le `_TCHAR` type de données est défini de façon conditionnelle dans tchar.h. Si le symbole `_UNICODE` est défini pour votre build, `_TCHAR` est défini comme **wchar_t**; sinon, pour un octet et MBCS builds, il est défini comme **char**. (**wchar_t**, type de données à caractère élargi Unicode de base, est l’équivalent de 16 bits de 8 bits signé **char**.) Dans les applications internationales, utilisez le `_tcs` famille de fonctions qui opèrent dans `_TCHAR` unités, non en octets. Par exemple, `_tcsncpy` copies `n` `_TCHARs`, et non `n` octets.
+Le `_TCHAR` type de données est défini sous condition dans tchar.h. Si le `_UNICODE` symbole est défini `_TCHAR` pour votre construction, est défini comme **wchar_t**; sinon, pour un seul-byte et MBCS construit, il est défini comme **char**. (**wchar_t**, le type de données de base Unicode à caractère large, est la contrepartie 16 bits à un char signé 8 **bits**.) Pour les applications `_tcs` internationales, utilisez la `_TCHAR` famille des fonctions, qui opèrent dans des unités, et non des octets. Par `_tcsncpy` exemple, `n` `_TCHARs`les `n` copies , pas les octets.
 
-Étant donné que les fonctions de certains gestion de chaîne unique le définir de caractère octet (SBCS) (signé) `char*` paramètres, des résultats d’avertissement du compilateur une incompatibilité type lorsque `_MBCS` est défini. Il existe trois façons d’éviter cet avertissement :
+Parce que certaines fonctions de manipulation des chaînes Single Byte `char*` Character Set (SBCS) prennent des `_MBCS` paramètres (signés), un type de compileur de compileur résulte lorsqu’il est défini. Il y a trois façons d’éviter cet avertissement :
 
-1. Utilisez les thunks de la fonction inline de type sécurisé dans tchar.h. Il s'agit du comportement par défaut.
+1. Utilisez les thunks de fonction inline de type-safe dans tchar.h. Il s'agit du comportement par défaut.
 
-1. Utilisez les macros directes dans tchar.h en définissant `_MB_MAP_DIRECT` sur la ligne de commande. Ce faisant, vous devez associer manuellement les types. La méthode est plus rapide, ce n’est pas de type sécurisé.
+1. Utilisez les macros directes dans `_MB_MAP_DIRECT` tchar.h en définissant sur la ligne de commande. Ce faisant, vous devez associer manuellement les types. C’est la méthode la plus rapide, mais n’est pas sans danger de type.
 
-1. Utilisez les thunks de fonction de bibliothèque liée statiquement de type sécurisé dans tchar.h. Pour cela, définissez la constante `_NO_INLINING` sur la ligne de commande. Cette méthode est la plus lente, mais la plus sécurisée pour le type.
+1. Utilisez les thunks de fonction de bibliothèque reliés statiquement sûrs dans tchar.h. Pour cela, définissez la constante `_NO_INLINING` sur la ligne de commande. Cette méthode est la plus lente, mais la plus sécurisée pour le type.
 
 ### <a name="preprocessor-directives-for-generic-text-mappings"></a>Directives de préprocesseur pour les mappages de texte générique
 
-|# define|Version compilée|Exemple|
+|Définir|Version compilée|Exemple|
 |---------------|----------------------|-------------|
 |`_UNICODE`|Unicode (caractères larges)|`_tcsrev` correspond à `_wcsrev`|
 |`_MBCS`|Caractères multioctets|`_tcsrev` correspond à `_mbsrev`|
-|Aucun (la valeur par défaut ne possède aucun `_UNICODE` ni `_MBCS` défini)|SBCS (ASCII)|`_tcsrev` correspond à `strrev`|
+|Aucun (la valeur `_UNICODE` `_MBCS` par défaut n’a ni ni définie)|SBCS (ASCII)|`_tcsrev` correspond à `strrev`|
 
-Par exemple, la fonction de texte générique `_tcsrev`, qui est défini dans tchar.h, correspond à `_mbsrev` si vous avez défini `_MBCS` dans votre programme, ou à `_wcsrev` si vous avez défini `_UNICODE`. Sinon, `_tcsrev` est mappée à `strrev`. Autres mappages de type de données sont fournis dans tchar.h pour faciliter la programmation, mais `_TCHAR` est le plus utile.
+Par exemple, la fonction `_tcsrev`de texte générique , qui est `_mbsrev` définie `_MBCS` dans tchar.h, cartes à si vous définissez dans votre programme, ou à `_wcsrev` si vous définissez `_UNICODE`. Sinon, `_tcsrev` est mappée à `strrev`. D’autres cartes de type de données sont fournies `_TCHAR` dans tchar.h pour plus de commodité de programmation, mais sont les plus utiles.
 
 ### <a name="generic-text-data-type-mappings"></a>Mappages de types de données de texte générique
 
-|Texte générique<br /> Nom de Type de données|_UNICODE &AMP;<br /> _MBCS non définis|_MBCS<br /> Défini|_UNICODE<br /> Défini|
+|Texte générique<br /> Nom de type de données|& _UNICODE<br /> _MBCS non définie|_MBCS<br /> Défini|_UNICODE<br /> Défini|
 |--------------------------------------|----------------------------------------|------------------------|---------------------------|
-|`_TCHAR`|**char**|**char**|**wchar_t**|
-|`_TINT`|**int**|**unsigned int**|`wint_t`|
-|`_TSCHAR`|**char signé**|**char signé**|**wchar_t**|
-|`_TUCHAR`|**unsigned char**|**unsigned char**|**wchar_t**|
-|`_TXCHAR`|**char**|**unsigned char**|**wchar_t**|
-|`_T` ou `_TEXT`|Aucun effet (supprimé par le préprocesseur)|Aucun effet (supprimé par le préprocesseur)|`L` (convertit le caractère ou la chaîne suivante en son équivalent Unicode)|
+|`_TCHAR`|**char**|**char**|**Wchar_t**|
+|`_TINT`|**int**|**nombre entier non signé**|`wint_t`|
+|`_TSCHAR`|**signed char**|**signed char**|**Wchar_t**|
+|`_TUCHAR`|**unsigned char**|**unsigned char**|**Wchar_t**|
+|`_TXCHAR`|**char**|**unsigned char**|**Wchar_t**|
+|`_T` ou `_TEXT`|Aucun effet (supprimé par le préprocesseur)|Aucun effet (supprimé par le préprocesseur)|`L`(convertit le personnage ou la chaîne suivant à son homologue Unicode)|
 
-Pour obtenir la liste des mappages de texte générique des routines, variables et autres objets, consultez [mappages de texte générique](../c-runtime-library/generic-text-mappings.md) dans le Run-Time Library Reference.
+Pour une liste de cartographies de texte générique de routines, variables et autres objets, voir [les cartographies génériques-texte](../c-runtime-library/generic-text-mappings.md) dans la référence de bibliothèque Run-Time.
 
 > [!NOTE]
->  N’utilisez pas le `str` famille de fonctions avec des chaînes Unicode, qui sont susceptibles de contenir des octets null incorporés. De même, n’utilisez pas le `wcs` famille de fonctions avec des chaînes MBCS (ou SBCS).
+> N’utilisez `str` pas la famille des fonctions avec des chaînes Unicode, qui sont susceptibles de contenir des octets nuls intégrés. De même, n’utilisez pas la `wcs` famille des fonctions avec les chaînes MBCS (ou SBCS).
 
 Les fragments de code suivants illustrent l’utilisation de `_TCHAR` et `_tcsrev` pour le mappage sur les modèles MBCS, Unicode et SBCS.
 
@@ -66,30 +66,30 @@ _TCHAR *RetVal, *szString;
 RetVal = _tcsrev(szString);
 ```
 
-Si `_MBCS` a été défini, le préprocesseur mappe ce fragment à ce code :
+Si `_MBCS` elle a été définie, le préprocesseur trace ce fragment à ce code :
 
 ```cpp
 char *RetVal, *szString;
 RetVal = _mbsrev(szString);
 ```
 
-Si `_UNICODE` a été défini, le préprocesseur mappe ce fragment à ce code :
+Si `_UNICODE` elle a été définie, le préprocesseur trace ce fragment à ce code :
 
 ```cpp
 wchar_t *RetVal, *szString;
 RetVal = _wcsrev(szString);
 ```
 
-Si ni `_MBCS` ni `_UNICODE` ont été défini, le préprocesseur mappe le fragment de code de ASCII codés sur un octet, comme suit :
+Si `_MBCS` ni `_UNICODE` ni n’ont été définis, le préprocesseur cartographie le fragment en code ASCII uni-byte, comme suit :
 
 ```cpp
 char *RetVal, *szString;
 RetVal = strrev(szString);
 ```
 
-Par conséquent, vous pouvez écrire, maintenir et compiler un fichier de code source unique à exécuter avec des routines qui sont spécifiques à un des trois types de jeux de caractères.
+Par conséquent, vous pouvez écrire, maintenir et compiler un fichier de code à source unique pour exécuter avec des routines qui sont spécifiques à l’un des trois types d’ensembles de caractères.
 
 ## <a name="see-also"></a>Voir aussi
 
 [Texte et chaînes](../text/text-and-strings-in-visual-cpp.md)<br/>
-[Utilisation de types de données TCHAR.H avec _MBCS](../text/using-tchar-h-data-types-with-mbcs-code.md)
+[Utilisation de TCHAR. Types de données H avec code _MBCS](../text/using-tchar-h-data-types-with-mbcs-code.md)

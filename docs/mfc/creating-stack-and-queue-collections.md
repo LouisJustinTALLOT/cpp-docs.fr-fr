@@ -11,18 +11,18 @@ helpviewer_keywords:
 - stack collections
 - collections, queue
 ms.assetid: 3c7bc198-35f0-4fc3-aaed-6005a0f22638
-ms.openlocfilehash: ed0ad9b98a69e56df4e66b25bc6ca08cdaaad413
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 5b3427f7bb2e46435ddf2768bcbb816f9d7e5c1a
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62242404"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81371604"
 ---
 # <a name="creating-stack-and-queue-collections"></a>Création de collections de piles et de files d’attente
 
-Cet article explique comment créer les autres structures de données, tel que [piles](#_core_stacks) et [files d’attente](#_core_queues), à partir de MFC répertorient les classes. Les exemples utilisent des classes dérivées de `CList`, mais vous pouvez utiliser `CList` directement à moins que vous deviez ajouter des fonctionnalités.
+Cet article explique comment créer d’autres structures de données, telles que [les piles](#_core_stacks) et [les files d’attente](#_core_queues), à partir des classes de liste MFC. Les exemples utilisent des classes dérivées de `CList`, mais vous pouvez utiliser `CList` directement à moins que vous deviez ajouter des fonctionnalités.
 
-##  <a name="_core_stacks"></a> Piles
+## <a name="stacks"></a><a name="_core_stacks"></a>Piles
 
 Étant donné que la collection de listes standard a un début et une fin, il est facile de créer une collection de listes dérivée qui reproduit le comportement d’une pile de type "dernière entrée - première sortie". Une pile est similaire à un empilement de plateaux dans une cafétéria. Lorsque les plateaux sont ajoutés à la pile, ils sont sur le dessus de la pile. Le dernier plateau ajouté est le premier à être enlevé. Les fonctions membres de la collection de listes `AddHead` et `RemoveHead` peuvent être utilisées pour ajouter et supprimer des éléments en particulier en tête de liste. Ainsi, le dernier élément ajouté est le premier à être supprimé.
 
@@ -36,7 +36,7 @@ Cet article explique comment créer les autres structures de données, tel que [
 
 Notez que cette approche présente la classe `CObList` sous-jacente. L'utilisateur peut appeler n'importe quelle fonction membre `CObList`, qu'elle soit logique pour une pile ou non.
 
-##  <a name="_core_queues"></a> Files d’attente
+## <a name="queues"></a>Files d'attente de <a name="_core_queues"></a>
 
 Étant donné que la collection de listes standard a un début et une fin, il est facile de créer une collection de listes dérivée qui reproduit le comportement d’une file de type "première entrée-première sortie". Une file d'attente est similaire à une ligne de personnes dans une cafétéria. La première personne de la file est la première à être servie. Lorsque plusieurs personnes viennent, elles arrivent à la fin de la file pour attendre leur tour. Les fonctions membres de la collection de listes `AddTail` et `RemoveHead` peuvent être utilisées pour ajouter et supprimer des éléments en particulier en tête ou queue de liste. Ainsi, le dernier élément ajouté est toujours le dernier à être supprimé.
 

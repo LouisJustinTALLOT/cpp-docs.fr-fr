@@ -1,10 +1,11 @@
 ---
 title: fmod, fmodf, fmodl
-ms.date: 04/05/2018
+ms.date: 4/2/2020
 api_name:
 - fmod
 - fmodf
 - fmodl
+- _o_fmod
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -17,6 +18,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-math-l1-1-0.dll
+- api-ms-win-crt-private-l1-1-0
 api_type:
 - DLLExport
 topic_type:
@@ -32,12 +34,12 @@ helpviewer_keywords:
 - fmod function
 - floating-point numbers, calculating remainders
 ms.assetid: 6962d369-d11f-40b1-a6d7-6f67239f8a23
-ms.openlocfilehash: e98432a73df8b872593d4cd610139bdfa72a25c4
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 0cf25e2029f06c2e02a24ca84926e1a8b8f30159
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70957081"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81346552"
 ---
 # <a name="fmod-fmodf-fmodl"></a>fmod, fmodf, fmodl
 
@@ -75,15 +77,17 @@ Valeurs à virgule flottante.
 
 ## <a name="return-value"></a>Valeur de retour
 
-**fmod** retourne le reste à virgule flottante de *x* / *y*. Si la valeur de *y* est 0,0, **fmod** retourne une valeur NaN calme. Pour plus d’informations sur la représentation d’une NaN calme par la famille **printf** , consultez [printf](printf-printf-l-wprintf-wprintf-l.md).
+**fmod** retourne le reste de point flottant de *x* / *y*. Si la valeur de *y* est de 0,0, **fmod** retourne un NaN tranquille. Pour plus d’informations sur la représentation d’un NaN tranquille par la famille **printf,** voir [printf](printf-printf-l-wprintf-wprintf-l.md).
 
 ## <a name="remarks"></a>Notes
 
-La fonction **fmod** calcule le reste à virgule flottante *f* de *x* / *y* , de telle sorte que *x* = *i* \* *y* + *f*, où *i* est un entier, *f* a le même signe que *x*et la valeur absolue de *f* est inférieure à la valeur absolue de *y*.
+La fonction **fmod** calcule le reste de point flottant *f* de *x* / *y* tel que *x* = *i* \* *y* + *f*, où *je* suis un intégré, *f* a le même signe que *x*, et la valeur absolue de *f* est inférieur à la valeur absolue de *y*.
 
-C++autorise la surcharge, de sorte que vous pouvez appeler des surcharges de **fmod** qui acceptent et retournent des valeurs **float** et **long** **double** . Dans un programme C, **fmod** prend toujours deux arguments **double** et retourne un **double**.
+CMD permet la surcharge, de sorte que vous pouvez appeler des surcharges de **fmod** qui prennent et retournent **flotteur** et **de longues** valeurs **doubles.** Dans un programme C, **fmod** prend toujours deux **doubles** arguments et retourne un **double**.
 
-## <a name="requirements"></a>Configuration requise
+Par défaut, l’état global de cette fonction est étendue à l’application. Pour changer cela, voir [Global State dans le CRT](../global-state.md).
+
+## <a name="requirements"></a>Spécifications
 
 |Fonction|En-tête requis|
 |--------------|---------------------|
@@ -91,7 +95,7 @@ C++autorise la surcharge, de sorte que vous pouvez appeler des surcharges de **f
 
 Pour plus d'informations sur la compatibilité, voir [Compatibilité](../../c-runtime-library/compatibility.md).
 
-## <a name="example"></a>Exemples
+## <a name="example"></a>Exemple
 
 ```C
 // crt_fmod.c
@@ -115,7 +119,7 @@ The remainder of -10.00 / 3.00 is -1.000000
 
 ## <a name="see-also"></a>Voir aussi
 
-[Prise en charge de la virgule flottante](../../c-runtime-library/floating-point-support.md)<br/>
+[Soutien à la pointe flottante](../../c-runtime-library/floating-point-support.md)<br/>
 [ceil, ceilf, ceill](ceil-ceilf-ceill.md)<br/>
 [fabs, fabsf, fabsl](fabs-fabsf-fabsl.md)<br/>
 [floor, floorf, floorl](floor-floorf-floorl.md)<br/>

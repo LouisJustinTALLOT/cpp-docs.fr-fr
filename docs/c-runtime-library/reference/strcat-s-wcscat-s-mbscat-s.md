@@ -1,11 +1,15 @@
 ---
 title: strcat_s, wcscat_s, _mbscat_s, _mbscat_s_l
-ms.date: 01/22/2019
+ms.date: 4/2/2020
 api_name:
 - strcat_s
 - _mbscat_s
 - _mbscat_s_l
 - wcscat_s
+- _o__mbscat_s
+- _o__mbscat_s_l
+- _o_strcat_s
+- _o_wcscat_s
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -20,6 +24,7 @@ api_location:
 - api-ms-win-crt-multibyte-l1-1-0.dll
 - api-ms-win-crt-string-l1-1-0.dll
 - ntoskrnl.exe
+- api-ms-win-crt-private-l1-1-0
 api_type:
 - DLLExport
 topic_type:
@@ -38,12 +43,12 @@ helpviewer_keywords:
 - _mbscat_s_l function
 - appending strings
 ms.assetid: 0f2f9901-c5c5-480b-98bc-f8f690792fc0
-ms.openlocfilehash: b0f2d1a295908ba2f0c8a89f57e81d6f822f3535
-ms.sourcegitcommit: 0cfc43f90a6cc8b97b24c42efcf5fb9c18762a42
+ms.openlocfilehash: 458c8ef4c69630b92f39c6ca13a538a1ba7ec72a
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/05/2019
-ms.locfileid: "73625792"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81355431"
 ---
 # <a name="strcat_s-wcscat_s-_mbscat_s-_mbscat_s_l"></a>strcat_s, wcscat_s, _mbscat_s, _mbscat_s_l
 
@@ -104,10 +109,10 @@ errno_t _mbscat_s_l(
 *strDestination*<br/>
 Mémoire tampon de la chaîne de destination se terminant par un caractère Null.
 
-*numberOfElements*<br/>
+*nombreOfElements*<br/>
 Taille de la mémoire tampon de la chaîne de destination.
 
-*strSource*<br/>
+*strSource (en)*<br/>
 Mémoire tampon de chaîne source se terminant par null.
 
 *locale*<br/>
@@ -117,17 +122,17 @@ Paramètres régionaux à utiliser.
 
 Zéro si l'opération a réussi ; code d'erreur en cas de échec.
 
-### <a name="error-conditions"></a>Conditions d’erreur
+### <a name="error-conditions"></a>Conditions d'erreur
 
-|*strDestination*|*numberOfElements*|*strSource*|Valeur de retour|Contenu de *strDestination*|
+|*strDestination*|*nombreOfElements*|*strSource (en)*|Valeur retournée|Contenu de la *strDestination*|
 |----------------------|------------------------|-----------------|------------------|----------------------------------|
-|**Null** ou inachevé|indifférent|indifférent|**EINVAL**|non modifié|
-|indifférent|indifférent|**NULL**|**EINVAL**|*strDestination*[0] a la valeur 0|
-|indifférent|0 ou trop petit|indifférent|**ERANGE**|*strDestination*[0] a la valeur 0|
+|**NULL** ou non déterminé|n'importe laquelle|n'importe laquelle|**EINVAL (EN)**|non modifié|
+|n'importe laquelle|n'importe laquelle|**Null**|**EINVAL (EN)**|*strDestination*[0] réglé à 0|
+|n'importe laquelle|0 ou trop petit|n'importe laquelle|**ERANGE**|*strDestination*[0] réglé à 0|
 
 ## <a name="remarks"></a>Notes
 
-La fonction **strcat_s** ajoute *strSource* à *strDestination* et met fin à la chaîne résultante avec un caractère null. Le caractère initial de *strSource* remplace le caractère null de fin de *strDestination*. Le comportement de **strcat_s** n’est pas défini si les chaînes source et de destination se chevauchent.
+La fonction **strcat_s** appende *strSource* à *strDestination* et met fin à la chaîne résultante avec un caractère nul. Le caractère initial de *strSource* surcrit le caractère nul de fin de *strDestination*. Le comportement de **strcat_s** n’est pas défini si les chaînes de la source et de la destination se chevauchent.
 
 Notez que le deuxième paramètre est la taille totale de la mémoire tampon, et non la taille restante :
 
@@ -138,15 +143,17 @@ strcat_s(buf, 16, " End");               // Correct
 strcat_s(buf, 16 - strlen(buf), " End"); // Incorrect
 ```
 
-**wcscat_s** et **_mbscat_s** sont des versions à caractères larges et à caractères multioctets de **strcat_s**. Les arguments et la valeur de retour de **wcscat_s** sont des chaînes à caractères larges ; ceux de **_mbscat_s** sont des chaînes de caractères multioctets. Ces trois fonctions se comportent sinon de façon identique.
+**wcscat_s** et **_mbscat_s** sont des versions à caractère large et multioctets de **strcat_s**. Les arguments et **la** valeur de retour de wcscat_s sont des chaînes de caractère large; ceux de **_mbscat_s** sont des cordes multioctets-caractères. Ces trois fonctions se comportent sinon de façon identique.
 
-Si *strDestination* est un pointeur null, si n’est pas terminé par le caractère null, si *strSource* est un pointeur **null** ou si la chaîne de destination est trop petite, le gestionnaire de paramètres non valides est appelé, comme décrit dans [validation de paramètre](../../c-runtime-library/parameter-validation.md). Si l’exécution est autorisée à se poursuivre, ces fonctions retournent **EINVAL** et attribuent à **errno** la valeur **EINVAL**.
+Si *la strDestination* est un pointeur nul, ou n’est pas non résilié, ou si *strSource* est un pointeur **NULL,** ou si la chaîne de destination est trop petite, le gestionnaire de paramètre invalide est invoqué, comme décrit dans [la validation de paramètres](../../c-runtime-library/parameter-validation.md). Si l’exécution est autorisée à se poursuivre, ces fonctions renvoient **EINVAL** et **placent errno** à **EINVAL**.
 
-Les versions des fonctions qui ont le suffixe **_L** ont le même comportement, mais utilisent les paramètres régionaux qui sont passés au lieu des paramètres régionaux actuels. Pour plus d'informations, consultez [Locale](../../c-runtime-library/locale.md).
+Les versions des fonctions qui ont le **suffixe _l** ont le même comportement, mais utilisez le paramètre local qui est passé au lieu de l’endroit actuel. Pour plus d’informations, consultez [Locale](../../c-runtime-library/locale.md).
 
 En C++, l’utilisation de ces fonctions est simplifiée par les surcharges de modèle ; les surcharges peuvent déduire la longueur de la mémoire tampon automatiquement (ce qui évite d’avoir à spécifier un argument taille) et peuvent remplacer automatiquement les fonctions plus anciennes et non sécurisées par leurs équivalentes plus récentes et sécurisées. Pour plus d’informations, consultez [Sécuriser les surcharges de modèle](../../c-runtime-library/secure-template-overloads.md).
 
-Les versions de la bibliothèque de débogage de ces fonctions remplissent d’abord la mémoire tampon avec 0xFE. Pour désactiver ce comportement, utilisez [_CrtSetDebugFillThreshold](crtsetdebugfillthreshold.md).
+Les versions de bibliothèque de débogé de ces fonctions remplissent d’abord le tampon avec 0xFE. Pour désactiver ce comportement, utilisez [_CrtSetDebugFillThreshold](crtsetdebugfillthreshold.md).
+
+Par défaut, l’état global de cette fonction est étendue à l’application. Pour changer cela, voir [Global State dans le CRT](../global-state.md).
 
 ### <a name="generic-text-routine-mappings"></a>Mappages de routines de texte générique
 
@@ -154,7 +161,7 @@ Les versions de la bibliothèque de débogage de ces fonctions remplissent d’a
 |---------------------|------------------------------------|--------------------|-----------------------|
 |**_tcscat_s**|**strcat_s**|**_mbscat_s**|**wcscat_s**|
 
-## <a name="requirements"></a>spécifications
+## <a name="requirements"></a>Spécifications
 
 |Routine|En-tête requis|
 |-------------|---------------------|
@@ -162,7 +169,7 @@ Les versions de la bibliothèque de débogage de ces fonctions remplissent d’a
 |**wcscat_s**|\<string.h> ou \<wchar.h>|
 |**_mbscat_s**|\<mbstring.h>|
 
-Pour plus d’informations sur la compatibilité, voir consultez [Compatibilité](../../c-runtime-library/compatibility.md).
+Pour plus d'informations sur la compatibilité, voir [Compatibilité](../../c-runtime-library/compatibility.md).
 
 ## <a name="example"></a>Exemple
 
@@ -170,7 +177,7 @@ Consultez l’exemple de code dans [strcpy_s, wcscpy_s, _mbscpy_s](strcpy-s-wcsc
 
 ## <a name="see-also"></a>Voir aussi
 
-[Manipulation de chaînes](../../c-runtime-library/string-manipulation-crt.md)<br/>
+[Manipulation des cordes](../../c-runtime-library/string-manipulation-crt.md)<br/>
 [strncat, _strncat_l, wcsncat, _wcsncat_l, _mbsncat, _mbsncat_l](strncat-strncat-l-wcsncat-wcsncat-l-mbsncat-mbsncat-l.md)<br/>
 [strncmp, wcsncmp, _mbsncmp, _mbsncmp_l](strncmp-wcsncmp-mbsncmp-mbsncmp-l.md)<br/>
 [strncpy, _strncpy_l, wcsncpy, _wcsncpy_l, _mbsncpy, _mbsncpy_l](strncpy-strncpy-l-wcsncpy-wcsncpy-l-mbsncpy-mbsncpy-l.md)<br/>
