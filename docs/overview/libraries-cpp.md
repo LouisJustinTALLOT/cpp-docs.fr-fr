@@ -2,22 +2,22 @@
 title: Bibliothèques
 ms.date: 11/18/2018
 ms.openlocfilehash: dc139fea346be8034fa80236844abb2303fa345d
-ms.sourcegitcommit: 8e285a766523e653aeeb34d412dc6f615ef7b17b
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/21/2020
+ms.lasthandoff: 04/14/2020
 ms.locfileid: "80075609"
 ---
 # <a name="libraries"></a>Bibliothèques
 
-Visual Studio inclut les bibliothèques suivantes lorsque vous installez une ou plusieurs charges de travail C++. Pour plus d’informations sur l’installation des bibliothèques tierces, consultez [vcpkg : gestionnaire de C++ package pour Windows, Linux et MacOS](../build/vcpkg.md).
+Visual Studio inclut les bibliothèques suivantes lorsque vous installez une ou plusieurs charges de travail C++. Pour plus d’informations sur l’installation de bibliothèques de 3ème partie, voir [vcpkg: A C 'package manager pour Windows, Linux et MacOS](../build/vcpkg.md).
 
 ## <a name="standard-libraries"></a>Bibliothèques standard
 
 [Bibliothèque Runtime C](../c-runtime-library/c-run-time-library-reference.md)<br/>
-[Bibliothèque C++ Standard](../standard-library/cpp-standard-library-reference.md)<br/>
+[Bibliothèque standard de CMD](../standard-library/cpp-standard-library-reference.md)<br/>
 [Bibliothèque SafeInt](../safeint/safeint-library.md)<br/>
-[OpenMP](../parallel/openmp/openmp-in-visual-cpp.md)
+[Openmp](../parallel/openmp/openmp-in-visual-cpp.md)
 
 ## <a name="libraries-for-windows-applications"></a>Bibliothèques pour les applications Windows
 

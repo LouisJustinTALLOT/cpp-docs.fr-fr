@@ -160,12 +160,12 @@ helpviewer_keywords:
 - CRT_REPORT_HOOK type
 - _finddata_t type
 ms.assetid: 23312dd2-4a6a-4d70-9b48-2a5d0d8c9f28
-ms.openlocfilehash: c93cf4bf138fc6bc648d33c180edbed0dbe5014e
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
-ms.translationtype: HT
+ms.openlocfilehash: d8d7abe0f5562250e51e011014a8f9587bc7636e
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69500636"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81367931"
 ---
 # <a name="standard-types"></a>Types standard
 
@@ -173,7 +173,7 @@ La bibliothèque Runtime Microsoft définit les types et typedefs standard suiva
 
 ### <a name="fixed-width-integral-types-stdinth"></a>Types intégraux de largeur fixe (stdint.h)
 
-|Name|Type intégré équivalent|
+|Nom|Type intégré équivalent|
 |----------|-------------------------------|
 |int8\_t, uint8\_t|signed char, unsigned char|
 |int16\_t, uint16\_t|short, unsigned short|
@@ -198,7 +198,7 @@ La bibliothèque Runtime Microsoft définit les types et typedefs standard suiva
 |Structure `_CrtMemState`|Fournit des informations sur l'état actuel du tas de débogage de la bibliothèque Runtime C.|CRTDBG.H|
 |`_CRT_REPORT_HOOK`,<br /><br /> `_CRT_REPORT_HOOKW`,<br /><br /> `_CRT_REPORT_HOOKW_M`|Une définition de type pour une fonction de rappel qui sera appelée dans [_CrtDbgReport](../c-runtime-library/reference/crtdbgreport-crtdbgreportw.md).<br /><br /> Les paramètres de cette fonction sont : le type de rapport, le message de sortie et la valeur de retour de la fonction de rappel.|CRTDBG.H|
 |`dev_t`, `_dev_t` entier court ou entier non signé|Représente les handles du périphérique.|SYS\TYPES.H|
-|Structure `_diskfree_t`|Contient des informations à propos d'un lecteur de disque. Utilisé par [_getdiskfree](../c-runtime-library/reference/getdiskfree.md) **.**|DOS.H et DIRECT.H|
+|Structure `_diskfree_t`|Contient des informations à propos d'un lecteur de disque. Utilisé par [_getdiskfree](../c-runtime-library/reference/getdiskfree.md)**.**|DOS.H et DIRECT.H|
 |Structures `div_t`, `ldiv_t` et `lldiv_t`|Stockent les valeurs retournées par [div](../c-runtime-library/reference/div.md), [ldiv](../c-runtime-library/reference/ldiv-lldiv.md) et [lldiv](../c-runtime-library/reference/ldiv-lldiv.md), respectivement.|STDLIB.H|
 |Entier `errno_t`|Utilisé pour un type de résultat ou un paramètre de fonction qui traite les codes d'erreur de `errno`.|STDDEF.H,<br /><br /> CRTDEFS.H|
 |Structure `_exception`|Stocke les informations sur l'erreur pour [_matherr](../c-runtime-library/reference/matherr.md).|MATH.H|
@@ -214,11 +214,11 @@ La bibliothèque Runtime Microsoft définit les types et typedefs standard suiva
 |`ino_t`, `_ino_t` (court non signé)|Pour retourner les informations d'état.|WCHAR.H|
 |`intmax_t`|Un type d'entier signé capable de représenter toute valeur d'un type d'entier signé.|stdint.h|
 |`intptr_t` (entier long ou `__int64`, selon la plateforme cible)|Stocke un pointeur (ou le HANDLE) sur des plateformes Win32 et Win64.|STDDEF.H et d'autres fichiers Include|
-|Tableau `jmp_buf`|Utilisé par [setjmp](../c-runtime-library/reference/setjmp.md) et [longjmp](../c-runtime-library/reference/longjmp.md) pour enregistrer et restaurer l'environnement de programme.|SETJMP.H|
+|`jmp_buf` tableau|Utilisé par [setjmp](../c-runtime-library/reference/setjmp.md) et [longjmp](../c-runtime-library/reference/longjmp.md) pour enregistrer et restaurer l'environnement de programme.|SETJMP.H|
 |Structure `lconv`|Contient des règles de mise en forme des valeurs numériques dans plusieurs pays ou régions. Utilisé par [localeconv](../c-runtime-library/reference/localeconv.md).|LOCALE.H|
 |`_LDOUBLE`,<br /><br /> `_LONGDOUBLE`,<br /><br /> `_LDBL12` (long double ou tableau de caractères non signé)|Utilisé pour représenter une valeur longue double.|STDLIB.H|
-|Structure `_locale_t`|Stocke les valeurs actuelles de paramètres régionaux ; utilisé dans toutes les bibliothèques spécifiques du moteur d'exécution C de paramètres régionaux.|CRTDEF.H|
-|`mbstate_t`|Suit l’état d’une conversion en caractères multioctets.|WCHAR.H|
+|Structure `_locale_t`|Stocke les valeurs actuelles de paramètres régionaux ; utilisé dans toutes les bibliothèques spécifiques du moteur d'exécution C de paramètres régionaux.|CRTDEFS.H|
+|`mbstate_t`|Suit l'état d'une conversion en caractères multioctets.|WCHAR.H|
 |Entier long `off_t`, `_off_t`|Représente la valeur d'offset du fichier .|WCHAR.H, SYS\TYPES.H|
 |`_onexit_t`,<br /><br /> Pointeur `_onexit_m_t`|Retourné par [_onexit, _onexit_m](../c-runtime-library/reference/onexit-onexit-m.md).|STDLIB.H|
 |Pointeur de fonction `_PNH`|Type d’argument pour [_set_new_handler](../c-runtime-library/reference/set-new-handler.md).|NEW.H|
@@ -255,4 +255,4 @@ La bibliothèque Runtime Microsoft définit les types et typedefs standard suiva
 
 ## <a name="see-also"></a>Voir aussi
 
-[Référence sur les bibliothèques Runtime C](../c-runtime-library/c-run-time-library-reference.md)
+[Informations de référence sur la bibliothèque Runtime C](../c-runtime-library/c-run-time-library-reference.md)

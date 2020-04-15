@@ -1,9 +1,11 @@
 ---
 title: wcstombs, _wcstombs_l
-ms.date: 11/04/2016
+ms.date: 4/2/2020
 api_name:
 - wcstombs
 - _wcstombs_l
+- _o__wcstombs_l
+- _o_wcstombs
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -17,6 +19,7 @@ api_location:
 - ucrtbase.dll
 - api-ms-win-crt-convert-l1-1-0.dll
 - ntoskrnl.exe
+- api-ms-win-crt-private-l1-1-0
 api_type:
 - DLLExport
 topic_type:
@@ -33,12 +36,12 @@ helpviewer_keywords:
 - characters, converting
 - string conversion, multibyte character strings
 ms.assetid: 91234252-9ea1-423a-af99-e9d0ce4a40e3
-ms.openlocfilehash: e4aa09ec8e6d97762d39e63aa05b0eb0cc159d17
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: fb95c6d73a3979a39995b9104a76fc42ca9e8535
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70945121"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81366720"
 ---
 # <a name="wcstombs-_wcstombs_l"></a>wcstombs, _wcstombs_l
 
@@ -89,23 +92,25 @@ Paramètres régionaux à utiliser.
 
 ## <a name="return-value"></a>Valeur de retour
 
-Si **wcstombs** convertit correctement la chaîne multioctets, elle retourne le nombre d’octets écrits dans la chaîne de sortie multioctet, à l’exclusion de la valeur null de fin (le cas échéant). Si l’argument *mbstr* a la **valeur null**, **wcstombs** retourne la taille requise en octets de la chaîne de destination. Si **wcstombs** rencontre un caractère étendu qu’il ne peut pas convertir en caractère multioctet, elle retourne-1 cast en type **size_t** et définit **errno** sur **EILSEQ**.
+Si **les wcstombs** convertissent avec succès la chaîne multioctet, il renvoie le nombre d’octets inscrits dans la chaîne de sortie multioctets, à l’exclusion de la mise fin nulle (le cas échéant). Si l’argument *mbstr* est **NULL**, **wcstombs** retourne la taille requise dans les octets de la chaîne de destination. Si **wcstombs** rencontre un personnage large qu’il ne peut pas convertir en un personnage multioctet, il retourne -1 casting pour taper **size_t** et définit **errno** à **EILSEQ**.
 
 ## <a name="remarks"></a>Notes
 
-La fonction **wcstombs** convertit la chaîne de caractères larges pointée par *wcstr* en caractères multioctets correspondants et stocke les résultats dans le tableau *mbstr* . Le paramètre *Count* indique le nombre maximal d’octets qui peuvent être stockés dans la chaîne de sortie multioctet (autrement dit, la taille de *mbstr*). En général, le nombre d’octets exigé au moment de la conversion d’une chaîne de caractères larges n’est pas connu. Certains caractères larges peuvent en exiger un seul dans la chaîne de sortie, alors que d’autres peuvent en exiger deux. S’il y a deux octets dans la chaîne de sortie multioctet pour chaque caractère élargi dans la chaîne d’entrée (y compris le caractère de largeur null), le résultat est garanti.
+La fonction **wcstombs** convertit la chaîne à caractère large pointée par *wcstr* aux caractères multioctets correspondants et stocke les résultats dans le tableau *mbstr.* Le *paramètre* de comptage indique le nombre maximum d’octets qui peuvent être stockés dans la chaîne de sortie multioctets (c’est-à-dire la taille de *mbstr).* En général, le nombre d’octets exigé au moment de la conversion d’une chaîne de caractères larges n’est pas connu. Certains caractères larges peuvent en exiger un seul dans la chaîne de sortie, alors que d’autres peuvent en exiger deux. S’il y a deux octets dans la chaîne de sortie multioctet pour chaque personnage large dans la chaîne d’entrée (y compris le caractère large nul), le résultat est garanti pour s’adapter.
 
-Si **wcstombs** rencontre le caractère null à caractères larges (L' \ 0 ') avant ou quand *Count* se produit, il le convertit en un 0 8 bits et s’arrête. Ainsi, la chaîne de caractères multioctets sur *mbstr* est terminée par un caractère NULL uniquement si **wcstombs** rencontre un caractère null à caractères larges pendant la conversion. Si les séquences pointées par *wcstr* et *mbstr* se chevauchent, le comportement de **wcstombs** n’est pas défini.
+Si **les wcstombs** rencontrent le caractère nul à caractère large (L'0') avant ou quand *le compte* se produit, il le convertit en un 0 8 bits et s’arrête. Ainsi, la chaîne de caractère multioctet à *mbstr* n’est annulée que si **wcstombs** rencontre un caractère nul à caractère large lors de la conversion. Si les séquences pointées par *le wcstr* et le *mbstr* se chevauchent, le comportement des **wcstombs** n’est pas défini.
 
-Si l’argument *mbstr* a la **valeur null**, **wcstombs** retourne la taille requise en octets de la chaîne de destination.
+Si l’argument *mbstr* est **NULL**, **wcstombs** retourne la taille requise dans les octets de la chaîne de destination.
 
-**wcstombs** valide ses paramètres. Si *wcstr* a la **valeur null**, ou si *Count* est supérieur à **INT_MAX**, cette fonction appelle le gestionnaire de paramètre non valide, comme décrit dans [validation de paramètre](../../c-runtime-library/parameter-validation.md) . Si l’exécution est autorisée à se poursuivre, la fonction affecte à **errno** la valeur **EINVAL** et retourne-1.
+**wcstombs** valide ses paramètres. Si *wcstr* est **NULL**, ou si *le nombre* est plus grand que **INT_MAX**, cette fonction invoque le gestionnaire de paramètres invalides, tel que décrit dans La validation [de paramètres](../../c-runtime-library/parameter-validation.md) . Si l’exécution est autorisée à se poursuivre, la fonction définit **errno** à **EINVAL** et renvoie -1.
 
-**wcstombs** utilise les paramètres régionaux actuels pour tout comportement dépendant des paramètres régionaux ; **_wcstombs_l** est identique, à ceci près qu’il utilise à la place les paramètres régionaux transmis. Pour plus d’informations, consultez [Locale](../../c-runtime-library/locale.md).
+**wcstombs** utilise le lieu actuel pour tout comportement local-dépendant; **_wcstombs_l** est identique, sauf qu’il utilise le lieu passé à la place. Pour plus d’informations, consultez [Locale](../../c-runtime-library/locale.md).
 
-En C++, ces fonctions ont des surcharges de modèle qui appellent les équivalents plus récents et sécurisés de ces fonctions. Pour plus d'informations, consultez [Secure Template Overloads](../../c-runtime-library/secure-template-overloads.md).
+En C++, ces fonctions ont des surcharges de modèle qui appellent les équivalents plus récents et sécurisés de ces fonctions. Pour plus d’informations, consultez [Sécuriser les surcharges de modèle](../../c-runtime-library/secure-template-overloads.md).
 
-## <a name="requirements"></a>Configuration requise
+Par défaut, l’état global de cette fonction est étendue à l’application. Pour changer cela, voir [Global State dans le CRT](../global-state.md).
+
+## <a name="requirements"></a>Spécifications
 
 |Routine|En-tête requis|
 |-------------|---------------------|
@@ -116,7 +121,7 @@ Pour plus d'informations sur la compatibilité, voir [Compatibilité](../../c-ru
 
 ## <a name="example"></a>Exemple
 
-Ce programme illustre le comportement de la fonction **wcstombs** .
+Ce programme illustre le comportement de la fonction **wcstombs.**
 
 ```C
 // crt_wcstombs.c
@@ -159,7 +164,7 @@ Convert wide-character string:
 ## <a name="see-also"></a>Voir aussi
 
 [Conversion de données](../../c-runtime-library/data-conversion.md)<br/>
-[Paramètres régionaux](../../c-runtime-library/locale.md)<br/>
+[Local](../../c-runtime-library/locale.md)<br/>
 [_mbclen, mblen, _mblen_l](mbclen-mblen-mblen-l.md)<br/>
 [mbstowcs, _mbstowcs_l](mbstowcs-mbstowcs-l.md)<br/>
 [mbtowc, _mbtowc_l](mbtowc-mbtowc-l.md)<br/>

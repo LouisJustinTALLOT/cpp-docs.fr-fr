@@ -3,11 +3,11 @@ title: Pages de propriétés d’un projet Linux C++ dans Visual Studio
 ms.date: 07/20/2018
 ms.assetid: 33d8c1f4-13f1-4f61-b407-30715b28142f
 ms.openlocfilehash: 0df31f3dac7026f3171f8af7b7ede664ea7fe346
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
-ms.translationtype: HT
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50451946"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "62393127"
 ---
 # <a name="linux-project-property-page-reference"></a>Informations de référence sur les pages de propriétés dans un projet Linux
 

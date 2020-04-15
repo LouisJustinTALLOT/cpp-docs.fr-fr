@@ -7,27 +7,27 @@ helpviewer_keywords:
 - Windows messages [MFC], adding message handlers
 - message maps [MFC], mapping messages to functions
 ms.assetid: a7727a62-f638-4b20-b7f5-131f47200d6a
-ms.openlocfilehash: 4a76e28bddda0ad3385ab2110e201d652c0623df
-ms.sourcegitcommit: 3caf5261b3ea80d9cf14038c116ba981d655cd13
+ms.openlocfilehash: 4c7e79e31bbf9b35f9d888dce4e4fc24feacc624
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/11/2019
-ms.locfileid: "70907876"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81365664"
 ---
 # <a name="mapping-messages-to-functions"></a>Mappage de messages à des fonctions
 
-L' [Assistant classe](mfc-class-wizard.md) vous permet de lier des gestionnaires de messages (fonctions membres de classes d’interface utilisateur MFC) aux messages générés par les ressources de votre application. Ils utilisent les [tables des messages MFC](../../mfc/messages-and-commands-in-the-framework.md) pour créer la liaison.
+Le [Class Wizard](mfc-class-wizard.md) vous permet de lier les gestionnaires de messages (fonctions membres des classes d’interface utilisateur MFC) aux messages générés par les ressources de votre application. Ils utilisent les [cartes de messages MFC](../../mfc/messages-and-commands-in-the-framework.md) pour créer la liaison.
 
-Quand vous utilisez Affichage de classes pour créer une classe dérivée de l’une des classes d’infrastructure, il place automatiquement une classe complète et fonctionnelle dans les fichiers d’en-tête (. h) et d’implémentation (. cpp) que vous spécifiez.
+Lorsque vous utilisez Class View pour créer une nouvelle classe dérivée de l’une des classes-cadres, elle place automatiquement une classe complète et fonctionnelle dans les fichiers d’en-tête (.h) et de mise en œuvre (.cpp) que vous spécifiez.
 
 > [!NOTE]
->  Pour ajouter une nouvelle classe qui ne gère pas les messages, créez la classe directement dans l’éditeur de texte.
+> Pour ajouter une nouvelle classe qui ne gère pas les messages, créez la classe directement dans l’éditeur de texte.
 
-### <a name="to-define-or-remove-a-message-handler-using-the-class-wizard"></a>Pour définir ou supprimer un gestionnaire de messages à l’aide de l’Assistant classe
+### <a name="to-define-or-remove-a-message-handler-using-the-class-wizard"></a>Définir ou supprimer un gestionnaire de message à l’aide de l’assistant de classe
 
-1. Dans **affichage de classes**, cliquez avec le bouton droit sur la classe.
+1. Dans **Class View**, cliquez à droite sur la classe.
 
-1. Dans le menu contextuel, choisissez [Assistant classe](mfc-class-wizard.md).
+1. Dans le menu contexte, choisissez [Class Wizard](mfc-class-wizard.md).
 
 ## <a name="see-also"></a>Voir aussi
 

@@ -1,5 +1,5 @@
 ---
-title: Cmfccustomcolorspropertypage, classe
+title: CMFCCustomColorsProétyPage Classe
 ms.date: 11/04/2016
 f1_keywords:
 - CMFCCustomColorsPropertyPage
@@ -8,16 +8,16 @@ f1_keywords:
 helpviewer_keywords:
 - CMFCCustomColorsPropertyPage [MFC], Setup
 ms.assetid: 46a45ba2-1fda-440d-8018-d4dcd44f5816
-ms.openlocfilehash: b28711991835dd14929e5387709046c3867c715e
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 01b73f44fcf26a820e43eb87a65e99c2ec186e64
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62403696"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81367665"
 ---
-# <a name="cmfccustomcolorspropertypage-class"></a>Cmfccustomcolorspropertypage, classe
+# <a name="cmfccustomcolorspropertypage-class"></a>CMFCCustomColorsProétyPage Classe
 
-Représente une page de propriétés que vous pouvez sélectionner des couleurs personnalisées dans une boîte de dialogue couleur.
+Représente une page de propriété qui peut sélectionner des couleurs personnalisées dans une boîte de dialogue de couleur.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -40,16 +40,16 @@ class CMFCCustomColorsPropertyPage : public CPropertyPage
 |-|-|
 |Nom|Description|
 |`CMFCCustomColorsPropertyPage::CreateObject`|Utilisé par l'infrastructure pour créer une instance dynamique de ce type de classe.|
-|`CMFCCustomColorsPropertyPage::GetThisClass`|Utilisé par l’infrastructure pour obtenir un pointeur vers le [CRuntimeClass](../../mfc/reference/cruntimeclass-structure.md) objet qui est associé à ce type de classe.|
-|[CMFCCustomColorsPropertyPage::Setup](#setup)|Définit les composants de couleur de la page de propriétés.|
+|`CMFCCustomColorsPropertyPage::GetThisClass`|Utilisé par le cadre pour obtenir un pointeur à l’objet [CRuntimeClass](../../mfc/reference/cruntimeclass-structure.md) qui est associé à ce type de classe.|
+|[CMFCCustomColorsPropertyPage::Setup](#setup)|Définit les composants de couleur de la page de propriété.|
 
 ### <a name="remarks"></a>Notes
 
-Le `CMFCColorDialog` utilise cette classe pour afficher la page de propriété de couleur personnalisée. Pour plus d’informations sur `CMFCColorDialog`, consultez [cmfccolordialog, classe](../../mfc/reference/cmfccolordialog-class.md).
+La `CMFCColorDialog` classe utilise cette classe pour afficher la page de propriété couleur personnalisée. Pour plus `CMFCColorDialog`d’informations sur , voir [CMFCColorDialog Class](../../mfc/reference/cmfccolordialog-class.md).
 
 ## <a name="example"></a>Exemple
 
-L’exemple suivant montre comment construire un `CMFCCustomColorsPropertyPage` de l’objet et définir les composants de couleur de la page de propriétés.
+L’exemple suivant montre comment `CMFCCustomColorsPropertyPage` construire un objet et définir les composants de couleur de la page de propriété.
 
 [!code-cpp[NVC_MFC_RibbonApp#35](../../mfc/reference/codesnippet/cpp/cmfccustomcolorspropertypage-class_1.cpp)]
 
@@ -67,13 +67,13 @@ L’exemple suivant montre comment construire un `CMFCCustomColorsPropertyPage` 
 
 [CMFCCustomColorsPropertyPage](../../mfc/reference/cmfccustomcolorspropertypage-class.md)
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
-**En-tête :** afxcustomcolorspropertypage.h
+**En-tête:** afxcustomcolorspropertypage.h
 
-##  <a name="setup"></a>  CMFCCustomColorsPropertyPage::Setup
+## <a name="cmfccustomcolorspropertypagesetup"></a><a name="setup"></a>CMFCCustomColorsPropertyPage::Setup
 
-Définit les composants de couleur de la page de propriétés.
+Définit les composants de couleur de la page de propriété.
 
 ```
 void Setup(
@@ -87,17 +87,17 @@ void Setup(
 |||
 |-|-|
 |Paramètre|Description|
-|*R*|[in] Le composant rouge de la valeur RVB.|
-|*G*|[in] Le composant vert de la valeur RVB.|
-|*B*|[in] La composante bleue de la valeur RVB.|
+|*R*|[dans] La composante rouge de la valeur RGB.|
+|*G*|[dans] La composante verte de la valeur RGB.|
+|*B*|[dans] La composante bleue de la valeur RGB.|
 
 ### <a name="remarks"></a>Notes
 
-Cette méthode met à jour le RVB actuel et TSL (teinte, luminosité et saturation) couleur valeurs associées de la page de propriétés. Le [CMFCColorDialog::SetPageTwo](../../mfc/reference/cmfccolordialog-class.md#setpagetwo) méthode appelle cette méthode lorsque le framework initialise la boîte de dialogue couleur ou l’utilisateur appuie sur le bouton gauche de la souris. Pour plus d’informations sur `CMFCColorDialog`, consultez [cmfccolordialog, classe](../../mfc/reference/cmfccolordialog-class.md).
+Cette méthode met à jour les valeurs de couleur actuelles du RGB et du HLS (teinte, légèreté et saturation) associées de la page de propriété. Le [CMFCColorDialog::SetPageTwo](../../mfc/reference/cmfccolordialog-class.md#setpagetwo) méthode appelle cette méthode lorsque le cadre initialise la boîte de dialogue couleur ou l’utilisateur appuie sur le bouton de la souris gauche. Pour plus `CMFCColorDialog`d’informations sur , voir [CMFCColorDialog Class](../../mfc/reference/cmfccolordialog-class.md).
 
 ## <a name="see-also"></a>Voir aussi
 
 [Graphique hiérarchique](../../mfc/hierarchy-chart.md)<br/>
 [Classes](../../mfc/reference/mfc-classes.md)<br/>
 [CMFCColorDialog, classe](../../mfc/reference/cmfccolordialog-class.md)<br/>
-[CMFCStandardColorsPropertyPage, classe](../../mfc/reference/cmfcstandardcolorspropertypage-class.md)
+[CmFCStandardColorsParertyPage Classe](../../mfc/reference/cmfcstandardcolorspropertypage-class.md)

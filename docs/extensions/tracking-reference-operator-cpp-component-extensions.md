@@ -8,22 +8,22 @@ helpviewer_keywords:
 - tracking references
 - '% tracking reference [C++]'
 ms.assetid: 142a7269-ab69-4b54-a6d7-833bef06228f
-ms.openlocfilehash: ab1b11d3f8d3416a6e9ed345085d63ce86d56010
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: ccd31b3e334dc5a4cd2e48b94c9dbe85cf13c16b
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80181783"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81368237"
 ---
 # <a name="tracking-reference-operator-ccli-and-ccx"></a>Opérateur de référence de suivi (C++/CLI et C++/CX)
 
-Une *référence de suivi* (`%`) se comporte comme une référence C++ ordinaire (`&`), sauf que lorsqu’un objet est assigné à une référence de suivi, le nombre de références de l’objet est incrémenté.
+Une *référence de suivi* (`%`) se comporte`&`comme une référence ordinaire de CMD () sauf que lorsqu’un objet est assigné à une référence de suivi, le compte de référence de l’objet est incrémenté.
 
 ## <a name="all-platforms"></a>Toutes les plateformes
 
 Une référence de suivi possède les caractéristiques suivantes.
 
-- L'assignation d'un objet à une référence de suivi provoque l'incrémentation du nombre de références de l'objet.
+- L’attribution d’un objet à une référence de suivi entraîne l’incrémentation du nombre de références de l’objet.
 
 - Une référence native (`&`) est le résultat obtenu lorsque vous déréférencez un `*`. Une référence de suivi (`%`) est le résultat obtenu lorsque vous déréférencez un `^`. Tant que vous avez une référence `%` à un objet, l’objet reste actif en mémoire.
 
@@ -75,7 +75,7 @@ Il est impossible d'avoir une référence C++ native à un objet sur le tas réc
 
 Pour plus d'informations sur les références de suivi en C++/CLI, consultez :
 
-- [Guide pratique pour utiliser des références de suivi dans C++-CLI](../dotnet/how-to-use-tracking-references-in-cpp-cli.md)
+- [Comment : Utiliser des références de suivi dans le CMD/CLI](../dotnet/how-to-use-tracking-references-in-cpp-cli.md)
 
 ### <a name="examples"></a>Exemples
 

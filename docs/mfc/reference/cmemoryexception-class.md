@@ -1,5 +1,5 @@
 ---
-title: CMemoryException, classe
+title: Classe CMemoryException
 ms.date: 11/04/2016
 f1_keywords:
 - CMemoryException
@@ -8,14 +8,14 @@ f1_keywords:
 helpviewer_keywords:
 - CMemoryException [MFC], CMemoryException
 ms.assetid: 9af0ed57-d12a-45ca-82b5-c910a60f7edf
-ms.openlocfilehash: 11be0eba080085c507ed718ea23219ca1c93aeba
-ms.sourcegitcommit: c6f8e6c2daec40ff4effd8ca99a7014a3b41ef33
+ms.openlocfilehash: 375b4227a25ae4c18cfd263eff4c3ec13f1304e1
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "64341185"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81370010"
 ---
-# <a name="cmemoryexception-class"></a>CMemoryException, classe
+# <a name="cmemoryexception-class"></a>Classe CMemoryException
 
 Représente une condition d'exception liée à une insuffisance de mémoire.
 
@@ -35,9 +35,9 @@ class CMemoryException : public CSimpleException
 
 ## <a name="remarks"></a>Notes
 
-Aucune qualification supplémentaire n’est nécessaire ou possible. Mémoire des exceptions sont levées automatiquement par **nouveau**. Si vous écrivez vos propres fonctions de mémoire, à l’aide `malloc`, par exemple, vous êtes responsable de la levée d’exceptions de mémoire.
+Aucune autre qualification n’est nécessaire ou possible. Les exceptions de mémoire sont lancées automatiquement par **de nouveaux**. Si vous écrivez vos propres `malloc`fonctions de mémoire, en utilisant, par exemple, alors vous êtes responsable de jeter des exceptions de mémoire.
 
-Pour plus d’informations sur `CMemoryException`, consultez l’article [gestion des exceptions (MFC)](../../mfc/exception-handling-in-mfc.md).
+Pour plus `CMemoryException`d’informations sur , voir l’article [Exception Handling (MFC)](../../mfc/exception-handling-in-mfc.md).
 
 ## <a name="inheritance-hierarchy"></a>Hiérarchie d'héritage
 
@@ -49,11 +49,11 @@ Pour plus d’informations sur `CMemoryException`, consultez l’article [gestio
 
 `CMemoryException`
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
-**En-tête :** afx.h
+**En-tête:** afx.h
 
-##  <a name="cmemoryexception"></a>  CMemoryException::CMemoryException
+## <a name="cmemoryexceptioncmemoryexception"></a><a name="cmemoryexception"></a>CMemoryException::CMemoryException
 
 Construit un objet `CMemoryException`.
 
@@ -63,9 +63,9 @@ CMemoryException();
 
 ### <a name="remarks"></a>Notes
 
-N’utilisez pas ce constructeur directement, mais plutôt appeler la fonction globale [AfxThrowMemoryException](exception-processing.md#afxthrowmemoryexception). Cette fonction globale peut réussir dans une situation d’insuffisance de mémoire, car il construit l’objet d’exception dans la mémoire précédemment alloué. Pour plus d’informations sur le traitement des exceptions, consultez l’article [exceptions](../exception-handling-in-mfc.md).
+N’utilisez pas ce constructeur directement, mais appelez plutôt la fonction globale [AfxThrowMemoryException](exception-processing.md#afxthrowmemoryexception). cette fonction globale peut réussir dans une situation hors mémoire parce qu’elle construit l’objet d’exception dans la mémoire précédemment allouée. pour plus d’informations sur le traitement des exceptions, voir les [exceptions](../exception-handling-in-mfc.md)de l’article .
 
 ## <a name="see-also"></a>Voir aussi
 
-[CException, classe](cexception-class.md)<br/>
+[Classe CException](cexception-class.md)<br/>
 [Graphique hiérarchique](../hierarchy-chart.md)

@@ -1,10 +1,12 @@
 ---
 title: timespec_get, _timespec32_get, _timespec64_get1
-ms.date: 11/04/2016
+ms.date: 4/2/2020
 api_name:
 - timespec_get
 - _timespec32_get
 - _timespec64_get
+- _o__timespec32_get
+- _o__timespec64_get
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -17,6 +19,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-time-l1-1-0.dll
+- api-ms-win-crt-private-l1-1-0
 api_type:
 - DLLExport
 topic_type:
@@ -36,12 +39,12 @@ helpviewer_keywords:
 - _timespec32_get function
 - _timespec64_get function
 ms.assetid: ed757258-b4f2-4c1d-a91b-22ea6ffce4ab
-ms.openlocfilehash: c0517c974bf58d502133ccd9868149bd178790d6
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: fc6d91b076f2dd2e25c55d9cf7062e81c3fab11a
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70957621"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81362490"
 ---
 # <a name="timespec_get-_timespec32_get-_timespec64_get"></a>timespec_get, _timespec32_get, _timespec64_get
 
@@ -74,19 +77,21 @@ Valeur propre à l’implémentation différente de zéro qui spécifie la base 
 
 ## <a name="return-value"></a>Valeur de retour
 
-La valeur de *base* en cas de réussite ; sinon, elle retourne zéro.
+La valeur de *base* en cas de succès, sinon elle renvoie zéro.
 
 ## <a name="remarks"></a>Notes
 
-Les fonctions **timespec_get** définissent l’heure actuelle dans le struct vers lequel pointe l’argument *time_spec* . Toutes les versions de ce struct ont deux membres, **tv_sec** et **tv_nsec**. La valeur **tv_sec** est définie sur le nombre entier de secondes et **tv_nsec** sur le nombre entier de nanosecondes, arrondi à la résolution de l’horloge système, depuis le début de l’époque spécifiée par *base*.
+Les fonctions **timespec_get** fixent l’heure actuelle de la struction soulignée par *l’argument time_spec.* Toutes les versions de cette struct ont deux membres, **tv_sec** et **tv_nsec**. La valeur **tv_sec** est réglée à l’ensemble des secondes et **tv_nsec** au nombre intégral de nanosecondes, arrondi à la résolution de l’horloge du système, depuis le début de l’époque spécifiée par *la base*.
 
-**Section spécifique à Microsoft**
+**Microsoft Spécifique**
 
-Ces fonctions prennent uniquement en charge **TIME_UTC** comme valeur de *base* . Cela définit la valeur *time_spec* sur le nombre de secondes et de nanosecondes depuis le début de l’époque, à partir du 1er janvier 1970, en temps universel coordonné (UTC). Dans un **_timespec32**de struct, **tv_sec** est une valeur **__time32_t** . Dans un **_timespec64**de struct, **tv_sec** est une valeur **__time64_t** . Dans un **struct** **timespec**, **tv_sec** est un type **time_t** , qui est de 32 bits ou 64 bits en longueur selon que la macro de préprocesseur _USE_32BIT_TIME_T est définie ou non. La fonction **timespec_get** est une fonction inline qui appelle **_timespec32_get** si _USE_32BIT_TIME_T est défini ; Sinon, elle appelle **_timespec64_get**.
+Ces fonctions ne prennent **en charge** que TIME_UTC comme valeur *de base.* Cela définit la valeur *time_spec* au nombre de secondes et de nanosecondes depuis le début de l’époque, Minuit, 1er janvier 1970, Coordinated Universal Time (UTC). Dans une **_timespec32 struct** **_timespec32**, **tv_sec** est une valeur **__time32_t.** Dans une **_timespec64 struct** **_timespec64**, **tv_sec** est une valeur **__time64_t.** Dans un **timespec struct** **,** **tv_sec** est un type **time_t,** qui est de 32 bits ou 64 bits de longueur selon que le préprocesseur macro _USE_32BIT_TIME_T est défini. La fonction **timespec_get** est une fonction inline qui appelle **_timespec32_get** si _USE_32BIT_TIME_T est définie; sinon il appelle **_timespec64_get**.
 
-**Fin de la section spécifique à Microsoft**
+**FIN de la section spécifique à Microsoft**
 
-## <a name="requirements"></a>Configuration requise
+Par défaut, l’état global de cette fonction est étendue à l’application. Pour changer cela, voir [Global State dans le CRT](../global-state.md).
+
+## <a name="requirements"></a>Spécifications
 
 |Routine|En-tête requis|
 |-------------|---------------------|

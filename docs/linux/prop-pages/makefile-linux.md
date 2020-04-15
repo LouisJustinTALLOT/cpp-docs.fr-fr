@@ -3,10 +3,10 @@ title: Général, propriétés (projet Makefile Linux C++) | Microsoft Docs
 ms.date: 06/07/2019
 ms.assetid: 3dec6853-43f6-412b-9806-9bfad333a204
 ms.openlocfilehash: 72a7919bc94be80acdbf7a2cef5b4a9875595545
-ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/17/2020
+ms.lasthandoff: 04/14/2020
 ms.locfileid: "79446152"
 ---
 # <a name="makefile-project-properties-linux-c"></a>Projet Makefile, propriétés (Linux C++)
@@ -25,10 +25,10 @@ Il s’agit d’une liste partielle des propriétés disponibles dans un projet 
 
 | Propriété | Description | Choices |
 |--|--|--|
-| Répertoire de sortie | Spécifie un chemin relatif au répertoire des fichiers de sortie ; peut inclure des variables d’environnement. |
+| Répertoire de sortie | Spécifie un chemin relatif vers le répertoire de fichiers de sortie ; peut inclure des variables d’environnement. |
 | Répertoire intermédiaire | Spécifie un chemin relatif vers le répertoire de fichiers intermédiaire ; peut inclure des variables d’environnement. |
 | Fichier journal de génération | Spécifie le fichier journal de génération à utiliser quand la journalisation de la génération est activée. |
-| Type de configuration | Spécifie le type de sortie générée par cette configuration. | **Bibliothèque dynamique (.so)**  : bibliothèque dynamique (.so)<br>**Bibliothèque statique (.a)** : bibliothèque statique (.a)<br>**Application (.out)**  : application (.out)<br>**Makefile** : fichier makefile<br> |
+| Type de configuration | Spécifie le type de sortie généré par cette configuration. | **Bibliothèque dynamique (.so)**  : bibliothèque dynamique (.so)<br>**Bibliothèque statique (.a)**  : bibliothèque statique (.a)<br>**Application (.out)**  : application (.out)<br>**Makefile** : makefile<br> |
 | Machine de build distante | Machine ou appareil cible à utiliser pour la génération, le déploiement et le débogage à distance. |
 | Répertoire racine de build distant | Spécifie le chemin d’un répertoire sur la machine ou l’appareil distant. |
 | Répertoire de projet de build distant | Spécifie le chemin d’un répertoire sur la machine ou l’appareil distant du projet. |

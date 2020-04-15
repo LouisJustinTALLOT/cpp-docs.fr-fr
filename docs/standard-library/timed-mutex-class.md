@@ -18,16 +18,16 @@ helpviewer_keywords:
 - std::timed_mutex [C++], try_lock_for
 - std::timed_mutex [C++], try_lock_until
 - std::timed_mutex [C++], unlock
-ms.openlocfilehash: 6b9785dc41791be63d585d18802953eade370b2a
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: 6c9840d9b8c00d4b03e6ea329c7707a0edff9512
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68459927"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81368016"
 ---
-# <a name="timedmutex-class"></a>timed_mutex, classe
+# <a name="timed_mutex-class"></a>timed_mutex, classe
 
-Représente un *type mutex limité dans le temps*. Les objets de ce type permettent d’appliquer une exclusion mutuelle (mutex) via un blocage limité dans le temps dans un programme.
+Représente un *type de mutex chronométré*. Les objets de ce type permettent d’appliquer une exclusion mutuelle (mutex) via un blocage limité dans le temps dans un programme.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -42,25 +42,25 @@ class timed_mutex;
 |Nom|Description|
 |----------|-----------------|
 |[timed_mutex](#timed_mutex)|Construit un objet `timed_mutex` qui n’est pas verrouillé.|
-|[timed_mutex::~timed_mutex, destructeur](#dtortimed_mutex_destructor)|Libère les ressources utilisées par l’objet `timed_mutex`.|
+|[timed_mutex: Timed_mutex Destructor](#dtortimed_mutex_destructor)|Libère les ressources utilisées par l’objet `timed_mutex`.|
 
 ### <a name="public-methods"></a>M&#233;thodes publiques
 
 |Nom|Description|
 |----------|-----------------|
-|[lock](#lock)|Bloque le thread appelant jusqu'à ce que le thread obtienne la propriété du `mutex`.|
+|[Verrouillage](#lock)|Bloque le thread appelant jusqu'à ce que le thread obtienne la propriété du `mutex`.|
 |[try_lock](#try_lock)|Tente d'obtenir la propriété de la référence `mutex` sans se bloquer.|
 |[try_lock_for](#try_lock_for)|Tente d’obtenir la propriété du `mutex` pour un intervalle de temps spécifié.|
 |[try_lock_until](#try_lock_until)|Tente d’obtenir la propriété du `mutex` jusqu’à une heure spécifiée.|
-|[unlock](#unlock)|Libère la propriété du `mutex`.|
+|[Déverrouiller](#unlock)|Libère la propriété du `mutex`.|
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
-**En-tête:** \<> mutex
+**En-tête:** \<mutex>
 
 **Espace de noms :** std
 
-## <a name="lock"></a>  timed_mutex::lock
+## <a name="timed_mutexlock"></a><a name="lock"></a>timed_mutex::lock
 
 Bloque le thread appelant jusqu'à ce que le thread obtienne la propriété du `mutex`.
 
@@ -72,7 +72,7 @@ void lock();
 
 Si le thread appelant possède déjà `mutex`, le comportement est indéfini.
 
-## <a name="timed_mutex"></a>  timed_mutex::timed_mutex, constructeur
+## <a name="timed_mutextimed_mutex-constructor"></a><a name="timed_mutex"></a>timed_mutex::timed_mutex Constructeur
 
 Construit un objet `timed_mutex` qui n’est pas verrouillé.
 
@@ -80,7 +80,7 @@ Construit un objet `timed_mutex` qui n’est pas verrouillé.
 timed_mutex();
 ```
 
-## <a name="dtortimed_mutex_destructor"></a>  timed_mutex::~timed_mutex, destructeur
+## <a name="timed_mutextimed_mutex-destructor"></a><a name="dtortimed_mutex_destructor"></a>timed_mutex: Timed_mutex Destructor
 
 Libère les ressources utilisées par l’objet `mutex`.
 
@@ -92,7 +92,7 @@ Libère les ressources utilisées par l’objet `mutex`.
 
 Si l'objet est verrouillé lorsque le destructeur s'exécute, le comportement est indéfini.
 
-## <a name="try_lock"></a>  timed_mutex::try_lock
+## <a name="timed_mutextry_lock"></a><a name="try_lock"></a>timed_mutex::try_lock
 
 Tente d'obtenir la propriété de la référence `mutex` sans se bloquer.
 
@@ -102,13 +102,13 @@ bool try_lock();
 
 ### <a name="return-value"></a>Valeur de retour
 
-**true** si la méthode obtient avec succès la propriété de `mutex`; sinon, **false**.
+**vrai** si la méthode obtient `mutex`avec succès la propriété de la ; autrement, **faux**.
 
 ### <a name="remarks"></a>Notes
 
 Si le thread appelant possède déjà `mutex`, le comportement est indéfini.
 
-## <a name="try_lock_for"></a>  timed_mutex::try_lock_for
+## <a name="timed_mutextry_lock_for"></a><a name="try_lock_for"></a>timed_mutex::try_lock_for
 
 Tente d'obtenir la propriété de la référence `mutex` sans se bloquer.
 
@@ -124,13 +124,13 @@ Objet [chrono::duration](../standard-library/duration-class.md) qui spécifie la
 
 ### <a name="return-value"></a>Valeur de retour
 
-**true** si la méthode obtient avec succès la propriété de `mutex`; sinon, **false**.
+**vrai** si la méthode obtient `mutex`avec succès la propriété de la ; autrement, **faux**.
 
 ### <a name="remarks"></a>Notes
 
 Si le thread appelant possède déjà `mutex`, le comportement est indéfini.
 
-## <a name="try_lock_until"></a>  timed_mutex::try_lock_until
+## <a name="timed_mutextry_lock_until"></a><a name="try_lock_until"></a>timed_mutex::try_lock_until
 
 Tente d'obtenir la propriété de la référence `mutex` sans se bloquer.
 
@@ -148,13 +148,13 @@ Point dans le temps qui spécifie le seuil au-delà duquel la méthode ne tente 
 
 ### <a name="return-value"></a>Valeur de retour
 
-**true** si la méthode obtient avec succès la propriété de `mutex`; sinon, **false**.
+**vrai** si la méthode obtient `mutex`avec succès la propriété de la ; autrement, **faux**.
 
 ### <a name="remarks"></a>Notes
 
 Si le thread appelant possède déjà `mutex`, le comportement est indéfini.
 
-## <a name="unlock"></a>  timed_mutex::unlock
+## <a name="timed_mutexunlock"></a><a name="unlock"></a>timed_mutex::unlock
 
 Libère la propriété du `mutex`.
 
@@ -168,5 +168,5 @@ Si le thread appelant ne possède pas `mutex`, le comportement est indéfini.
 
 ## <a name="see-also"></a>Voir aussi
 
-[Informations de référence sur les fichiers d’en-tête](../standard-library/cpp-standard-library-header-files.md)\
-[\<mutex>](../standard-library/mutex.md)
+[Référence de fichiers d’en-tête](../standard-library/cpp-standard-library-header-files.md)\
+[\<>mutex](../standard-library/mutex.md)

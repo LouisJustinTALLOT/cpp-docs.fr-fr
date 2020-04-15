@@ -10,22 +10,22 @@ helpviewer_keywords:
 - std::array [C++], get
 - std::get [C++]
 - std::swap [C++]
-ms.openlocfilehash: 61b5404d0f22cd902e35f6bee680df3c719804f2
-ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
+ms.openlocfilehash: d54e430853959c77b4042092409a8640a169e4c8
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/16/2020
-ms.locfileid: "79416913"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81364937"
 ---
 # <a name="ltarraygt-functions"></a>&lt;array&gt;, fonctions
 
-L’en-tête de > de tableau \<comprend deux fonctions non membres, `get` et `swap`, qui opèrent sur des objets de **tableau** .
+Le \<tableau> en-tête comprend deux fonctions non membres, `get` et `swap`, qui fonctionnent sur des objets de **tableau.**
 
 |||
 |-|-|
 |[get](#get)|[swap](#swap)|
 
-## <a name="get"></a>  get
+## <a name="get"></a><a name="get"></a>Avoir
 
 Retourne une référence à l’élément spécifié du tableau.
 
@@ -46,12 +46,12 @@ constexpr T&& get(array<T, N>&& arr) noexcept;
 Décalage de l’élément.
 
 *T*\
-Type d'un élément.
+Type d’un élément.
 
-*N*\
+*Â¡n*\
 Nombre d’éléments dans le tableau.
 
-*arr*\
+*Arr*\
 Tableau dans lequel opérer la sélection.
 
 ### <a name="example"></a>Exemple
@@ -86,9 +86,9 @@ int main()
 1 3
 ```
 
-## <a name="swap"></a>  swap
+## <a name="swap"></a><a name="swap"></a>Swap
 
-Une spécialisation de modèle non membre de `std::swap` qui échange deux objets **tableau** .
+Une spécialisation de modèle `std::swap` non-membre de cela échange deux objets **de tableau.**
 
 ```cpp
 template <class Ty, std::size_t N>
@@ -98,15 +98,15 @@ void swap(array<Ty, N>& left, array<Ty, N>& right);
 ### <a name="parameters"></a>Paramètres
 
 *Ty*\
-Type d'un élément.
+Type d’un élément.
 
-*N*\
+*Â¡n*\
 Taille du tableau.
 
-\ *gauche*
+*Gauche*\
 Premier tableau à échanger.
 
-\ *droit*
+*Oui*\
 Deuxième tableau à échanger.
 
 ### <a name="remarks"></a>Notes
@@ -161,4 +161,4 @@ int main()
 
 ## <a name="see-also"></a>Voir aussi
 
-[\<array>](../standard-library/array.md)
+[\<tableau>](../standard-library/array.md)

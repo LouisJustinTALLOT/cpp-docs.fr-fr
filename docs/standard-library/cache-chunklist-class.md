@@ -10,12 +10,12 @@ helpviewer_keywords:
 - stdext::cache_chunklist [C++], allocate
 - stdext::cache_chunklist [C++], deallocate
 ms.assetid: af19eccc-4ae7-4a34-bbb2-81e397424cb9
-ms.openlocfilehash: 035e5153b4e4c84743a64bcc9cec24920a6a0336
-ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
+ms.openlocfilehash: d0dd6176a34bd625069511106c491225d1467d08
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/21/2019
-ms.locfileid: "72688367"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81366758"
 ---
 # <a name="cache_chunklist-class"></a>cache_chunklist, classe
 
@@ -32,13 +32,13 @@ class cache_chunklist
 
 |Paramètre|Description|
 |---------------|-----------------|
-|*SZ*|Nombre d’éléments du tableau à allouer.|
+|*Sz*|Nombre d’éléments du tableau à allouer.|
 
 ## <a name="remarks"></a>Notes
 
-Ce modèle de classe utilise **operator new** pour allouer des blocs de mémoire brute, sous-allouer des blocs pour allouer du stockage pour un bloc de mémoire si nécessaire. elle stocke les blocs de mémoire désalloués dans une liste de libération distincte pour chaque segment, et utilise l' **opérateur delete** pour libérer un bloc quand aucun de ses blocs de mémoire n’est utilisé.
+Ce modèle de classe utilise **l’opérateur nouveau** pour allouer des morceaux de mémoire brute, sous-intribuant des blocs pour allouer le stockage pour un bloc de mémoire en cas de besoin; il stocke des blocs de mémoire deallocated dans une liste libre distincte pour chaque morceau, et utilise **l’opérateur supprimer** pour traiter un morceau quand aucun de ses blocs de mémoire est utilisé.
 
-Chaque bloc de mémoire contient des octets *SZ* de mémoire utilisable et un pointeur vers le segment auquel il appartient. Chaque bloc contient des blocs de mémoire `Nelts`, trois pointeurs, un entier et les données que l' **opérateur New** et l' **opérateur delete** requièrent.
+Chaque bloc de mémoire détient des octets *Sz* de mémoire utilisable et un pointeur sur le morceau auquel il appartient. Chaque morceau `Nelts` contient des blocs de mémoire, trois pointeurs, un int et les données que **l’opérateur nouveau** et **l’opérateur supprimer** exigent.
 
 ### <a name="constructors"></a>Constructeurs
 
@@ -46,20 +46,20 @@ Chaque bloc de mémoire contient des octets *SZ* de mémoire utilisable et un po
 |-|-|
 |[cache_chunklist](#cache_chunklist)|Construit un objet de type `cache_chunklist`.|
 
-### <a name="member-functions"></a>Fonctions membres
+### <a name="member-functions"></a>Fonctions Membre
 
 |Fonction membre|Description|
 |-|-|
-|[allocate](#allocate)|Alloue un bloc de mémoire.|
+|[Allouer](#allocate)|Alloue un bloc de mémoire.|
 |[deallocate](#deallocate)|Libère du stockage un nombre d'objets spécifié à partir d'une position spécifiée.|
 
-## <a name="requirements"></a>spécifications
+## <a name="requirements"></a>Spécifications
 
 **En-tête :** \<allocators>
 
 **Espace de noms :** stdext
 
-## <a name="allocate"></a>  cache_chunklist::allocate
+## <a name="cache_chunklistallocate"></a><a name="allocate"></a>cache_chunklist::allocate
 
 Alloue un bloc de mémoire.
 
@@ -79,7 +79,7 @@ Un pointeur vers l’objet alloué.
 
 ### <a name="remarks"></a>Notes
 
-## <a name="cache_chunklist"></a>  cache_chunklist::cache_chunklist
+## <a name="cache_chunklistcache_chunklist"></a><a name="cache_chunklist"></a>cache_chunklist::cache_chunklist
 
 Construit un objet de type `cache_chunklist`.
 
@@ -89,7 +89,7 @@ cache_chunklist();
 
 ### <a name="remarks"></a>Notes
 
-## <a name="deallocate"></a>  cache_chunklist::deallocate
+## <a name="cache_chunklistdeallocate"></a><a name="deallocate"></a>cache_chunklist::dallocate
 
 Libère du stockage un nombre d'objets spécifié à partir d'une position spécifiée.
 
@@ -101,11 +101,11 @@ void deallocate(void* ptr, std::size_t count);
 
 |Paramètre|Description|
 |---------------|-----------------|
-|*ptr*|Pointeur vers le premier objet à désallouer dans le stockage.|
+|*Ptr*|Pointeur vers le premier objet à désallouer dans le stockage.|
 |*count*|Nombre d’objets à désallouer dans le stockage.|
 
 ### <a name="remarks"></a>Notes
 
 ## <a name="see-also"></a>Voir aussi
 
-[\<allocators>](../standard-library/allocators-header.md)
+[\<les allocataires>](../standard-library/allocators-header.md)

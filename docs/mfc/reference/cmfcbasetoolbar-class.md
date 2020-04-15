@@ -1,5 +1,5 @@
 ---
-title: Cmfcbasetoolbar, classe
+title: CMFCBaseToolBar, classe
 ms.date: 11/04/2016
 f1_keywords:
 - CMFCBaseToolBar
@@ -12,16 +12,16 @@ helpviewer_keywords:
 - CMFCBaseToolBar [MFC], GetMinSize
 - CMFCBaseToolBar [MFC], OnAfterChangeParent
 ms.assetid: 5d79206d-55e4-46f8-b1b8-042e34d7f9da
-ms.openlocfilehash: 7a6ccdaf3d78b9973505dd4e90ca76f671fce889
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 027fe8569ff133bb3f348c9d0607f19c6d778c4e
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62403865"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81367830"
 ---
-# <a name="cmfcbasetoolbar-class"></a>Cmfcbasetoolbar, classe
+# <a name="cmfcbasetoolbar-class"></a>CMFCBaseToolBar, classe
 
-Classe de base pour les barres d’outils.
+Classe de base pour barres d’outils.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -43,9 +43,9 @@ class CMFCBaseToolBar : public CPane
 |Nom|Description|
 |----------|-----------------|
 |`CMFCBaseToolBar::CreateObject`|Utilisé par l'infrastructure pour créer une instance dynamique de ce type de classe.|
-|[CMFCBaseToolBar::GetDockingMode](#getdockingmode)|Retourne le mode d'ancrage. (Substitue [CBasePane::GetDockingMode](../../mfc/reference/cbasepane-class.md#getdockingmode).)|
-|[CMFCBaseToolBar::GetMinSize](#getminsize)|Retourne la taille minimale d’une barre d’outils. (Substitue [CPane::GetMinSize](../../mfc/reference/cpane-class.md#getminsize).)|
-|[CMFCBaseToolBar::OnAfterChangeParent](#onafterchangeparent)|Appelé par l’infrastructure après modification du parent du volet. (Substitue [CBasePane::OnAfterChangeParent](../../mfc/reference/cbasepane-class.md#onafterchangeparent).)|
+|[CMFCBaseToolBar::GetDockingMode](#getdockingmode)|Retourne le mode d'ancrage. (Overrides [CBasePane::GetDockingMode](../../mfc/reference/cbasepane-class.md#getdockingmode).)|
+|[CMFCBaseToolBar::GetMinSize](#getminsize)|Retourne la taille minimale d’une barre d’outils. (Overrides [CPane::GetMinSize](../../mfc/reference/cpane-class.md#getminsize).)|
+|[CMFCBaseToolBar::OnAfterChangeParent](#onafterchangeparent)|Appelé par le cadre après les changements parent du volet. (Overrides [CBasePane::OnAfterChangeParent](../../mfc/reference/cbasepane-class.md#onafterchangeparent).)|
 
 ## <a name="inheritance-hierarchy"></a>Hiérarchie d'héritage
 
@@ -61,11 +61,11 @@ class CMFCBaseToolBar : public CPane
 
 [CMFCBaseToolBar](../../mfc/reference/cmfcbasetoolbar-class.md)
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
-**En-tête :** afxbasetoolbar.h
+**En-tête:** afxbasetoolbar.h
 
-##  <a name="getdockingmode"></a>  CMFCBaseToolBar::GetDockingMode
+## <a name="cmfcbasetoolbargetdockingmode"></a><a name="getdockingmode"></a>CMFCBaseToolBar::GetDockingMode
 
 Retourne le mode d'ancrage.
 
@@ -75,9 +75,9 @@ virtual AFX_DOCK_TYPE GetDockingMode() const;
 
 ### <a name="return-value"></a>Valeur de retour
 
-Le mode d’ancrage.
+Le mode d’amarrage.
 
-##  <a name="getminsize"></a>  CMFCBaseToolBar::GetMinSize
+## <a name="cmfcbasetoolbargetminsize"></a><a name="getminsize"></a>CMFCBaseToolBar::GetMinSize
 
 Retourne la taille minimale d’une barre d’outils.
 
@@ -87,12 +87,12 @@ virtual void GetMinSize(CSize& size) const;
 
 ### <a name="parameters"></a>Paramètres
 
-*size*<br/>
+*Taille*<br/>
 [out] La taille minimale d’une barre d’outils.
 
-##  <a name="onafterchangeparent"></a>  CMFCBaseToolBar::OnAfterChangeParent
+## <a name="cmfcbasetoolbaronafterchangeparent"></a><a name="onafterchangeparent"></a>CMFCBaseToolBar::OnAfterChangeParent
 
-Appelé par l’infrastructure après modification du parent du volet.
+Appelé par le cadre après les changements parent du volet.
 
 ```
 virtual void OnAfterChangeParent(CWnd* pWndOldParent);
@@ -101,7 +101,7 @@ virtual void OnAfterChangeParent(CWnd* pWndOldParent);
 ### <a name="parameters"></a>Paramètres
 
 *pWndOldParent*<br/>
-[in] Pointeur vers la fenêtre parente précédente.
+[dans] Un pointeur à la fenêtre précédente parent.
 
 ## <a name="see-also"></a>Voir aussi
 

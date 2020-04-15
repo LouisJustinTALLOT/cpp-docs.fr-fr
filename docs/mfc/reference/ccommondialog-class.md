@@ -1,5 +1,5 @@
 ---
-title: Ccommondialog, classe
+title: Classe CCommonDialog
 ms.date: 11/04/2016
 f1_keywords:
 - CCommonDialog
@@ -8,14 +8,14 @@ f1_keywords:
 helpviewer_keywords:
 - CCommonDialog [MFC], CCommonDialog
 ms.assetid: 1f68d65f-a0fd-4778-be22-ebbe51a95f95
-ms.openlocfilehash: 4fa7aa51d1ce482e00f68365045cd35c3fb7939b
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 853a4756df3b70f4f33deb7159b4d1aee610092c
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62182265"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81369444"
 ---
-# <a name="ccommondialog-class"></a>Ccommondialog, classe
+# <a name="ccommondialog-class"></a>Classe CCommonDialog
 
 Classe de base pour les classes qui encapsulent les fonctionnalités des boîtes de dialogue communes Windows.
 
@@ -35,7 +35,7 @@ class CCommonDialog : public CDialog
 
 ## <a name="remarks"></a>Notes
 
-Les classes suivantes encapsulent la fonctionnalité des boîtes de dialogue communes Windows :
+Les classes suivantes résument la fonctionnalité des dialogues communs Windows :
 
 - [CFileDialog](../../mfc/reference/cfiledialog-class.md)
 
@@ -65,11 +65,11 @@ Les classes suivantes encapsulent la fonctionnalité des boîtes de dialogue com
 
 `CCommonDialog`
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
-**En-tête :** afxdlgs.h
+**En-tête:** afxdlgs.h
 
-##  <a name="ccommondialog"></a>  CCommonDialog::CCommonDialog
+## <a name="ccommondialogccommondialog"></a><a name="ccommondialog"></a>CCommonDialog::CCommonDialog
 
 Construit un objet `CCommonDialog`.
 
@@ -80,20 +80,20 @@ explicit CCommonDialog(CWnd* pParentWnd);
 ### <a name="parameters"></a>Paramètres
 
 *pParentWnd*<br/>
-Pointe vers l’objet de fenêtre parente ou propriétaire (de type [CWnd](../../mfc/reference/cwnd-class.md)) auquel appartient l’objet de la boîte de dialogue. Si sa valeur est NULL, la boîte de dialogue fenêtre l’objet parent est définie dans la fenêtre principale de l’application.
+Points à l’objet de fenêtre du parent ou du propriétaire (de type [CWnd](../../mfc/reference/cwnd-class.md)) auquel appartient l’objet de dialogue. S’il s’agit de NULL, la fenêtre parente de l’objet de dialogue est réglée sur la fenêtre d’application principale.
 
 ### <a name="remarks"></a>Notes
 
-Consultez [CDialog::CDialog](../../mfc/reference/cdialog-class.md#cdialog) pour obtenir des informations complètes.
+Voir [CDialog::CDialog](../../mfc/reference/cdialog-class.md#cdialog) pour des informations complètes.
 
 ## <a name="see-also"></a>Voir aussi
 
-[CDialog, classe](../../mfc/reference/cdialog-class.md)<br/>
+[Classe CDialog](../../mfc/reference/cdialog-class.md)<br/>
 [Graphique hiérarchique](../../mfc/hierarchy-chart.md)<br/>
 [CFileDialog, classe](../../mfc/reference/cfiledialog-class.md)<br/>
-[CFontDialog, classe](../../mfc/reference/cfontdialog-class.md)<br/>
+[Classe CFontDialog](../../mfc/reference/cfontdialog-class.md)<br/>
 [CColorDialog, classe](../../mfc/reference/ccolordialog-class.md)<br/>
-[CPageSetupDialog, classe](../../mfc/reference/cpagesetupdialog-class.md)<br/>
+[Classe CPageSetupDialog](../../mfc/reference/cpagesetupdialog-class.md)<br/>
 [CPrintDialog, classe](../../mfc/reference/cprintdialog-class.md)<br/>
-[CFindReplaceDialog, classe](../../mfc/reference/cfindreplacedialog-class.md)<br/>
+[Classe CFindReplaceDialog](../../mfc/reference/cfindreplacedialog-class.md)<br/>
 [COleDialog, classe](../../mfc/reference/coledialog-class.md)

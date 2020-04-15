@@ -14,61 +14,61 @@ helpviewer_keywords:
 - rowsets, bulk row fetching
 - RFX (ODBC), bulk row fetching
 ms.assetid: 20d10fe9-c58a-414a-b675-cdf9aa283e4f
-ms.openlocfilehash: cd9597da7ab4c405f90a145182d63945cef48c53
-ms.sourcegitcommit: 8e285a766523e653aeeb34d412dc6f615ef7b17b
+ms.openlocfilehash: ec4d83481f6335d4c40ffb8f004b617f2ee09c62
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/21/2020
-ms.locfileid: "80079823"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81367027"
 ---
 # <a name="recordset-fetching-records-in-bulk-odbc"></a>Recordset : extraction globale d'enregistrements (ODBC)
 
 Cette rubrique s’applique aux classes ODBC MFC.
 
-La classe `CRecordset` prend en charge l’extraction de lignes en bloc, ce qui signifie que plusieurs enregistrements peuvent être récupérés à la fois au cours d’une seule extraction, au lieu de récupérer un enregistrement à la fois à partir de la source de données. Vous pouvez implémenter l’extraction de lignes en bloc uniquement dans une classe de `CRecordset` dérivée. Le processus de transfert de données de la source de données vers l’objet Recordset est appelé échange de champs d’enregistrements en bloc (RFX en bloc). Notez que si vous n’utilisez pas l’extraction de lignes en bloc dans une classe dérivée d’un `CRecordset`, les données sont transférées via RFX (Record Field Exchange). Pour plus d’informations, consultez [Record Field Exchange (RFX)](../../data/odbc/record-field-exchange-rfx.md).
+La `CRecordset` classe fournit un soutien pour la mise à l’aller en vrac, ce qui signifie que plusieurs enregistrements peuvent être récupérés à la fois au cours d’un seul aller chercher, plutôt que de récupérer un enregistrement à la fois à partir de la source de données. Vous pouvez implémenter la `CRecordset` ligne en vrac aller chercher seulement dans une classe dérivée. Le processus de transfert des données de la source de données à l’objet de l’enregistreur est appelé échange de champ d’enregistrement en vrac (Bulk RFX). Notez que si vous n’utilisez `CRecordset`pas la ligne en vrac aller chercher dans une classe dérivée, les données sont transférées via l’échange de champ record (RFX). Pour plus d’informations, voir [Record Field Exchange (RFX)](../../data/odbc/record-field-exchange-rfx.md).
 
-Cette rubrique explique :
+Cette rubrique répond aux questions suivantes :
 
-- [Comment CRecordset prend en charge l’extraction de lignes en bloc](#_core_how_crecordset_supports_bulk_row_fetching).
+- [Comment CRecordset prend en charge la ligne en vrac aller chercher](#_core_how_crecordset_supports_bulk_row_fetching).
 
-- [Considérations particulières lors de l’utilisation de l’extraction de lignes en bloc](#_core_special_considerations).
+- [Quelques considérations spéciales lors de l’utilisation de la ligne en vrac aller chercher](#_core_special_considerations).
 
-- [Comment implémenter l’échange de champs d’enregistrements en bloc](#_core_how_to_implement_bulk_record_field_exchange).
+- [Comment mettre en œuvre l’échange de records en vrac sur le terrain](#_core_how_to_implement_bulk_record_field_exchange).
 
-##  <a name="how-crecordset-supports-bulk-row-fetching"></a><a name="_core_how_crecordset_supports_bulk_row_fetching"></a>Comment CRecordset prend en charge l’extraction de lignes en bloc
+## <a name="how-crecordset-supports-bulk-row-fetching"></a><a name="_core_how_crecordset_supports_bulk_row_fetching"></a>Comment CRecordset soutient bulk Row Fetching
 
-Avant d’ouvrir l’objet Recordset, vous pouvez définir une taille d’ensemble de lignes avec la fonction membre `SetRowsetSize`. La taille de l’ensemble de lignes spécifie le nombre d’enregistrements qui doivent être récupérés au cours d’une seule extraction. Lorsque l’extraction de lignes en bloc est implémentée, la taille de l’ensemble de lignes par défaut est 25. Si l’extraction de lignes en bloc n’est pas implémentée, la taille de l’ensemble de lignes reste fixée à 1.
+Avant d’ouvrir votre objet de boîte de `SetRowsetSize` disques, vous pouvez définir une taille de ligne avec la fonction membre. La taille de l’aviron précise le nombre d’enregistrements à récupérer au cours d’un seul aller. Lorsque la ramure en vrac est implémentée, la taille par défaut de l’adage en ligne est de 25. Si la mise à la recherche en vrac n’est pas implémentée, la taille de l’aviron reste fixée à 1.
 
-Après avoir initialisé la taille de l’ensemble de lignes, appelez la fonction membre [Open](../../mfc/reference/crecordset-class.md#open) . Ici, vous devez spécifier l’option `CRecordset::useMultiRowFetch` du paramètre *dwOptions* pour implémenter l’extraction de lignes en bloc. Vous pouvez également définir l’option `CRecordset::userAllocMultiRowBuffers`. Le mécanisme d’échange de champs d’enregistrements en bloc utilise des tableaux pour stocker les nombreuses lignes de données récupérées lors d’une extraction. Ces mémoires tampons de stockage peuvent être allouées automatiquement par l’infrastructure ou vous pouvez les allouer manuellement. La spécification de l’option `CRecordset::userAllocMultiRowBuffers` signifie que vous allez effectuer l’allocation.
+Une fois que vous avez para paralé la taille de l’aviron, appelez la fonction membre [Open.](../../mfc/reference/crecordset-class.md#open) Ici, vous `CRecordset::useMultiRowFetch` devez spécifier l’option du *paramètre dwOptions* pour implémenter la ligne en vrac aller chercher. Vous pouvez en `CRecordset::userAllocMultiRowBuffers` outre définir l’option. Le mécanisme d’échange de champ d’enregistrement en vrac utilise des tableaux pour stocker les multiples rangées de données récupérées lors d’un aller chercher. Ces tampons de stockage peuvent être attribués automatiquement par le cadre ou vous pouvez les allouer manuellement. Spécifier l’option `CRecordset::userAllocMultiRowBuffers` signifie que vous effectuerez l’allocation.
 
-Le tableau suivant répertorie les fonctions membres fournies par `CRecordset` pour prendre en charge l’extraction de lignes en bloc.
+Le tableau suivant énumère les `CRecordset` fonctions des membres fournies par l’appui de la remise en état des rangées en vrac.
 
 |Fonction membre|Description|
 |---------------------|-----------------|
-|[CheckRowsetError](../../mfc/reference/crecordset-class.md#checkrowseterror)|Fonction virtuelle qui gère toutes les erreurs qui se produisent pendant l’extraction.|
-|[DoBulkFieldExchange](../../mfc/reference/crecordset-class.md#dobulkfieldexchange)|Implémente l’échange de champs d’enregistrements en bloc. Appelé automatiquement pour transférer plusieurs lignes de données de la source de données vers l’objet Recordset.|
-|[GetRowsetSize](../../mfc/reference/crecordset-class.md#getrowsetsize)|Récupère le paramètre actuel pour la taille de l’ensemble de lignes.|
-|[GetRowsFetched](../../mfc/reference/crecordset-class.md#getrowsfetched)|Indique le nombre de lignes réellement récupérées après une extraction donnée. Dans la plupart des cas, il s’agit de la taille de l’ensemble de lignes, sauf si un ensemble de lignes incomplet a été extrait.|
-|[GetRowStatus](../../mfc/reference/crecordset-class.md#getrowstatus)|Retourne l’état d’extraction d’une ligne particulière au sein d’un ensemble de lignes.|
-|[RefreshRowset](../../mfc/reference/crecordset-class.md#refreshrowset)|Actualise les données et l’état d’une ligne particulière au sein d’un ensemble de lignes.|
-|[SetRowsetCursorPosition](../../mfc/reference/crecordset-class.md#setrowsetcursorposition)|Déplace le curseur vers une ligne particulière au sein d’un ensemble de lignes.|
-|[SetRowsetSize](../../mfc/reference/crecordset-class.md#setrowsetsize)|Fonction virtuelle qui modifie la valeur du paramètre pour la taille de l’ensemble de lignes à la valeur spécifiée.|
+|[CheckRowsetError](../../mfc/reference/crecordset-class.md#checkrowseterror)|Fonction virtuelle qui gère toutes les erreurs qui se produisent lors de la récupération.|
+|[DoBulkFieldExchange](../../mfc/reference/crecordset-class.md#dobulkfieldexchange)|Implémente l’échange de records en vrac sur le terrain. Appelé automatiquement pour transférer plusieurs lignes de données de la source de données à l’objet de l’enregistrement.|
+|[GetRowsetSize GetRowsetSize](../../mfc/reference/crecordset-class.md#getrowsetsize)|Récupère le réglage actuel pour la taille de l’aviron.|
+|[GetRowsFetched GetRowsFetched](../../mfc/reference/crecordset-class.md#getrowsfetched)|Indique combien de rangées ont été effectivement récupérées après un aller chercher donné. Dans la plupart des cas, il s’agit de la taille de l’aviron, à moins qu’un jeu de ligne incomplet n’ait été récupéré.|
+|[GetRowStatus GetRowStatus](../../mfc/reference/crecordset-class.md#getrowstatus)|Retourne un statut d’aller chercher pour une rangée particulière dans un jeu de rangée.|
+|[RefreshRowset (en anglais)](../../mfc/reference/crecordset-class.md#refreshrowset)|Rafraîchit les données et l’état d’une rangée particulière dans un jeu de rangée.|
+|[SetRowsetCursorPosition (en anglais)](../../mfc/reference/crecordset-class.md#setrowsetcursorposition)|Déplace le curseur à une rangée particulière dans un jeu de rangée.|
+|[SetRowsetSize SetRowsetSize SetRowsetSize SetRow](../../mfc/reference/crecordset-class.md#setrowsetsize)|Fonction virtuelle qui modifie le paramètre de la taille de l’assaillis à la valeur spécifiée.|
 
-##  <a name="special-considerations"></a><a name="_core_special_considerations"></a>Considérations spéciales
+## <a name="special-considerations"></a><a name="_core_special_considerations"></a>Considérations spéciales
 
-Bien que l’extraction de lignes en bloc soit un gain de performances, certaines fonctionnalités fonctionnent différemment. Avant de décider d’implémenter l’extraction de lignes en bloc, tenez compte des éléments suivants :
+Bien que la mise à l’allage en vrac soit un gain de performance, certaines fonctionnalités fonctionnent différemment. Avant de décider de mettre en œuvre la mise en place de la ligne en vrac, considérez ce qui suit:
 
-- L’infrastructure appelle automatiquement la fonction membre `DoBulkFieldExchange` pour transférer des données de la source de données vers l’objet Recordset. Toutefois, les données ne sont pas transférées du recordset vers la source de données. L’appel des fonctions membres `AddNew`, `Edit`, `Delete`ou `Update` entraîne l’échec d’une assertion. Bien que `CRecordset` ne fournisse pas de mécanisme de mise à jour des lignes de données en bloc, vous pouvez écrire vos propres fonctions à l’aide de la fonction API ODBC `SQLSetPos`. Pour plus d’informations sur `SQLSetPos`, consultez le *Guide de référence du programmeur ODBC SDK* dans la documentation MSDN.
+- Le cadre appelle `DoBulkFieldExchange` automatiquement la fonction membre pour transférer des données de la source de données à l’objet de l’enregistrement. Toutefois, les données ne sont pas transférées de l’enregistrement vers la source de données. Appeler `AddNew`le `Edit` `Delete`, `Update` , , ou les fonctions des membres entraîne une affirmation échouée. Bien `CRecordset` qu’actuellement ne fournit pas un mécanisme pour mettre à jour les lignes en vrac `SQLSetPos`de données, vous pouvez écrire vos propres fonctions en utilisant la fonction ODBC API . Pour plus `SQLSetPos`d’informations sur , voir la *référence du programmeur SDK ODBC* dans la documentation MSDN.
 
-- Les fonctions membres `IsDeleted`, `IsFieldDirty`, `IsFieldNull`, `IsFieldNullable`, `SetFieldDirty`et `SetFieldNull` ne peuvent pas être utilisées sur les recordsets qui implémentent l’extraction de lignes en bloc. Toutefois, vous pouvez appeler `GetRowStatus` à la place de `IsDeleted`et `GetODBCFieldInfo` à la place de `IsFieldNullable`.
+- Le membre `IsDeleted`fonctionne `IsFieldDirty` `IsFieldNull`, `IsFieldNullable` `SetFieldDirty`, `SetFieldNull` , , et ne peut pas être utilisé sur les enregistrements qui implémentent la ligne en vrac aller chercher. Cependant, vous `GetRowStatus` pouvez appeler `IsDeleted`à `GetODBCFieldInfo` la `IsFieldNullable`place de , et à la place de .
 
-- Le `Move` opérations repositionne votre Recordset par ensemble de lignes. Par exemple, supposons que vous ouvrez un jeu d’enregistrements qui contient 100 enregistrements avec une taille d’ensemble de lignes initiale de 10. `Open` extrait les lignes 1 à 10, avec l’enregistrement en cours positionné sur la ligne 1. Un appel à `MoveNext` récupère l’ensemble de lignes suivant, pas la ligne suivante. Cet ensemble de lignes se compose de lignes 11 à 20, avec l’enregistrement en cours positionné sur la ligne 11. Notez que `MoveNext` et `Move( 1 )` ne sont pas équivalents lorsque l’extraction de lignes en bloc est implémentée. `Move( 1 )` extrait l’ensemble de lignes qui commence 1 ligne de l’enregistrement en cours. Dans cet exemple, l’appel de `Move( 1 )` après l’appel de `Open` extrait l’ensemble de lignes composé de lignes 2 à 11, avec l’enregistrement en cours positionné sur la ligne 2. Pour plus d’informations, consultez la fonction de [déplacement](../../mfc/reference/crecordset-class.md#move) de membre.
+- Les `Move` opérations repositionnent votre recordet par ligne. Supposons, par exemple, d’ouvrir un jeu d’enregistrement qui compte 100 enregistrements d’une taille initiale de 10. `Open`récupère les rangées 1 à 10, le record actuel se positionne sur la ligne 1. Un appel `MoveNext` pour aller chercher le jeu de ligne suivant, pas la rangée suivante. Ce ramé se compose de lignes 11 à 20, avec le record actuel positionné sur la rangée 11. Notez `MoveNext` `Move( 1 )` cela et ne sont pas équivalents lorsque la ligne en vrac fetching est implémentée. `Move( 1 )`récupère le rowset qui commence 1 rangée du record actuel. Dans cet exemple, `Move( 1 )` `Open` appeler après avoir appelé récupère le rowset composé de rangées 2 à 11, avec le record actuel positionné sur la rangée 2. Pour plus d’informations, consultez la fonction membre [Move.](../../mfc/reference/crecordset-class.md#move)
 
-- Contrairement à l’échange de champs d’enregistrement, les assistants ne prennent pas en charge l’échange de champs d’enregistrements en bloc. Cela signifie que vous devez déclarer manuellement les membres de données de champ et substituer manuellement `DoBulkFieldExchange` en écrivant des appels aux fonctions RFX en bloc. Pour plus d’informations, consultez [Record Field Exchange Functions](../../mfc/reference/record-field-exchange-functions.md) dans la référence de la *bibliothèque de classes*.
+- Contrairement à l’échange record sur le terrain, les sorciers ne prennent pas en charge l’échange de records en vrac sur le terrain. Cela signifie que vous devez déclarer manuellement vos `DoBulkFieldExchange` membres de données sur le terrain et passer manuellement en écrivant des appels aux fonctions RFX en vrac. Pour plus d’informations, voir [Record Field Exchange Functions](../../mfc/reference/record-field-exchange-functions.md) in the *Class Library Reference*.
 
-##  <a name="how-to-implement-bulk-record-field-exchange"></a><a name="_core_how_to_implement_bulk_record_field_exchange"></a>Comment implémenter l’échange de champs d’enregistrements en bloc
+## <a name="how-to-implement-bulk-record-field-exchange"></a><a name="_core_how_to_implement_bulk_record_field_exchange"></a>Comment mettre en œuvre Bulk Record Field Exchange
 
-L’échange de champs d’enregistrements en bloc transfère un ensemble de lignes de données de la source de données vers l’objet Recordset. Les fonctions RFX en bloc utilisent des tableaux pour stocker ces données, ainsi que des tableaux pour stocker la longueur de chaque élément de données dans l’ensemble de lignes. Dans votre définition de classe, vous devez définir les membres de données de champ comme pointeurs pour accéder aux tableaux de données. En outre, vous devez définir un ensemble de pointeurs pour accéder aux tableaux de longueurs. Les membres de données de paramètre ne doivent pas être déclarés comme pointeurs ; la déclaration de membres de données de paramètre lors de l’utilisation de l’échange de champs d’enregistrements en bloc revient à les déclarer lors de l’utilisation d’un échange de champs d’enregistrement. Le code suivant illustre un exemple simple :
+L’échange de champ d’enregistrement en vrac transfère un ensemble de données de la source de données à l’objet de l’enregistrement. Les fonctions RFX en vrac utilisent des tableaux pour stocker ces données, ainsi que des tableaux pour stocker la longueur de chaque élément de données dans le ramset. Dans votre définition de classe, vous devez définir vos membres de données sur le terrain comme des indications pour accéder aux tableaux de données. En outre, vous devez définir un ensemble de pointeurs pour accéder aux tableaux de longueurs. Les membres des données de paramètres ne doivent pas être déclarés comme pointeurs; déclarer les membres des données de paramètres lors de l’utilisation de l’échange de données en vrac sur le terrain est le même que de les déclarer lors de l’utilisation d’échanges de records sur le terrain. Le code suivant montre un exemple simple :
 
 ```cpp
 class MultiRowSet : public CRecordset
@@ -93,7 +93,7 @@ public:
 }
 ```
 
-Vous pouvez soit allouer ces mémoires tampons de stockage manuellement, soit faire en sorte que l’infrastructure effectue l’allocation. Pour allouer les tampons vous-même, vous devez spécifier l’option `CRecordset::userAllocMultiRowBuffers` du paramètre *dwOptions* dans la fonction membre `Open`. Veillez à définir les tailles des tableaux au moins égal à la taille de l’ensemble de lignes. Si vous souhaitez que le Framework fasse l’allocation, vous devez initialiser vos pointeurs sur la valeur NULL. Cela s’effectue généralement dans le constructeur de l’objet Recordset :
+Vous pouvez soit allouer ces tampons de stockage manuellement ou faire en faire le cadre de l’allocation. Pour répartir les tampons vous-même, vous devez spécifier l’option `CRecordset::userAllocMultiRowBuffers` du paramètre *dwOptions* dans la `Open` fonction membre. Assurez-vous de définir les tailles des tableaux au moins égales à la taille de l’acart. Si vous voulez que le cadre fasse l’allocation, vous devriez initialiser vos pointeurs à NULL. Ceci est généralement fait dans le constructeur de l’objet de l’enregistrement :
 
 ```cpp
 MultiRowSet::MultiRowSet( CDatabase* pDB )
@@ -114,7 +114,7 @@ MultiRowSet::MultiRowSet( CDatabase* pDB )
 }
 ```
 
-Enfin, vous devez substituer la fonction membre `DoBulkFieldExchange`. Pour les membres de données de champ, appelez les fonctions RFX en bloc. pour les membres de données de paramètre, appelez les fonctions RFX. Si vous avez ouvert le Recordset en passant une instruction SQL ou une procédure stockée à `Open`, l’ordre dans lequel vous effectuez les appels RFX en bloc doit correspondre à l’ordre des colonnes dans le Recordset ; de même, l’ordre des appels RFX pour les paramètres doit correspondre à l’ordre des paramètres dans l’instruction SQL ou la procédure stockée.
+Enfin, vous devez `DoBulkFieldExchange` remplacer la fonction de membre. Pour les membres des données sur le terrain, appelez les fonctions RFX en vrac; pour tous les membres de données de paramètres, appelez les fonctions RFX. Si vous avez ouvert le registre en passant `Open`une déclaration SQL ou une procédure stockée à , l’ordre dans lequel vous effectuez les appels RFX en vrac doit correspondre à l’ordre des colonnes dans le dossier; de même, l’ordre de la RFX prévoit des paramètres doit correspondre à l’ordre des paramètres dans la déclaration SQL ou la procédure stockée.
 
 ```cpp
 void MultiRowSet::DoBulkFieldExchange( CFieldExchange* pFX )
@@ -135,12 +135,12 @@ void MultiRowSet::DoBulkFieldExchange( CFieldExchange* pFX )
 ```
 
 > [!NOTE]
->  Vous devez appeler la fonction membre `Close` avant que la classe `CRecordset` dérivée ne soit hors de portée. Cela garantit que toute mémoire allouée par l’infrastructure est libérée. Il est recommandé de toujours appeler explicitement `Close`, que vous ayez implémenté l’extraction de lignes en bloc ou non.
+> Vous devez `Close` appeler la fonction `CRecordset` membre avant que votre classe dérivée ne dépasse la portée. Cela garantit que toute mémoire allouée par le cadre est libérée. Il est bon pratique de `Close`programmation d’appeler toujours explicitement, peu importe si vous avez mis en œuvre la ligne en vrac aller chercher.
 
-Pour plus d’informations sur RFX (Record Field Exchange), consultez [Record Field Exchange : fonctionnement de RFX](../../data/odbc/record-field-exchange-how-rfx-works.md). Pour plus d’informations sur l’utilisation des paramètres, consultez [CFieldExchange :: SetFieldType](../../mfc/reference/cfieldexchange-class.md#setfieldtype) et [Recordset : paramétrage d’un Recordset (ODBC)](../../data/odbc/recordset-parameterizing-a-recordset-odbc.md).
+Pour plus d’informations sur l’échange record sur le terrain (RFX), voir [Record Field Exchange: How RFX Works](../../data/odbc/record-field-exchange-how-rfx-works.md). Pour plus d’informations sur l’utilisation des paramètres, voir [CFieldExchange:SetFieldType](../../mfc/reference/cfieldexchange-class.md#setfieldtype) et [Recordset: Parameterizing a Recordset (ODBC)](../../data/odbc/recordset-parameterizing-a-recordset-odbc.md).
 
 ## <a name="see-also"></a>Voir aussi
 
 [Recordset (ODBC)](../../data/odbc/recordset-odbc.md)<br/>
-[CRecordset :: m_nFields](../../mfc/reference/crecordset-class.md#m_nfields)<br/>
-[CRecordset :: m_nParams](../../mfc/reference/crecordset-class.md#m_nparams)
+[CRecordset::m_nFields](../../mfc/reference/crecordset-class.md#m_nfields)<br/>
+[CRecordset::m_nParams](../../mfc/reference/crecordset-class.md#m_nparams)

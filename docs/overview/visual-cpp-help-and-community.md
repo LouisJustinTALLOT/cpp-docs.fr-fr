@@ -4,10 +4,10 @@ ms.date: 11/30/2017
 ms.technology: cpp-ide
 ms.assetid: 6bc23c18-fcd9-47bc-bff2-17537700be4a
 ms.openlocfilehash: eb266354b818e95583c0d236c19209963a34f1f5
-ms.sourcegitcommit: 5f276064779d90a4cfda758f89e0c0f1e4d1a188
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/09/2020
+ms.lasthandoff: 04/14/2020
 ms.locfileid: "75791691"
 ---
 # <a name="visual-c-help-and-community"></a>Aide et communauté Visual C++
@@ -16,15 +16,15 @@ Voici comment obtenir des informations sur l’écriture de code C++ et l’util
 
 ## <a name="samples"></a>Exemples
 
-|Titre|Description|
+|Intitulé|Description|
 |-----------|-----------------|
-|[Exemples de code du développeur](https://code.msdn.microsoft.com/)|Contient un exemple de code téléchargeable auprès de Microsoft et des collaborateurs de la communauté.|
+|[Échantillons de code développeur](https://code.msdn.microsoft.com/)|Contient un exemple de code téléchargeable auprès de Microsoft et des collaborateurs de la communauté.|
 
 ## <a name="product-documentation"></a>Documentation du produit
 
-|Titre|Description|
+|Intitulé|Description|
 |-----------|-----------------|
-|[C++ dans Visual Studio](visual-cpp-in-visual-studio.md)|Contient une documentation de référence et conceptuelle sur Visual C++. Fait partie de MSDN Library.|
+|[CMD en Studio Visuel](visual-cpp-in-visual-studio.md)|Contient une documentation de référence et conceptuelle sur Visual C++. Fait partie de MSDN Library.|
 |[Centre de développement Windows](https://developer.microsoft.com/windows/)|Contient des informations sur l’utilisation de C++ et d’autres langages dans le but de développer des applications pour Windows 10. Fait partie du Centre de développement Windows. Le contenu C++ se trouve sous le nœud Documentation > Référence du langage.|
 
 ### <a name="online-and-offline-documentation"></a>Documentation en ligne et hors connexion
@@ -37,9 +37,9 @@ De nombreuses sections de la documentation sont également disponibles au format
 
 ## <a name="related-articles"></a>Articles connexes
 
-|Titre|Description|
+|Intitulé|Description|
 |-----------|-----------------|
-|[Blog de l'équipe Visual C++](https://blogs.msdn.microsoft.com/vcblog/)|Contient des billets sur divers sujets, rédigés par les experts de l’équipe produit Visual C++.|
-|[Channel 9](https://channel9.msdn.com/)|Contient des vidéos d’interviews et de cours. Utilisez la zone de recherche dans la page d’accueil de Channel 9 pour rechercher du contenu C++.|
-|[Visual Studio](https://visualstudio.microsoft.com/)|Contient des articles et des informations sur Visual Studio et les outils de développement associés.|
+|[Blog de l’équipe Visual CMD](https://blogs.msdn.microsoft.com/vcblog/)|Contient des billets sur divers sujets, rédigés par les experts de l’équipe produit Visual C++.|
+|[Canal 9](https://channel9.msdn.com/)|Contient des vidéos d’interviews et de cours. Utilisez la zone de recherche dans la page d’accueil de Channel 9 pour rechercher du contenu C++.|
+|[Visual Studio](https://visualstudio.microsoft.com/)|Contient des articles et des informations sur Visual Studio et les outils de développement associés.|
 |[Forums MSDN](https://social.msdn.microsoft.com/Forums/home?category=visualc) et [Developer Community](https://developercommunity.visualstudio.com)|Forums Microsoft officiels où vous pouvez publier des questions sur C++ et obtenir des réponses de la part de Microsoft et des experts de la communauté.|

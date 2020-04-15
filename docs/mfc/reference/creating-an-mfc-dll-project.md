@@ -9,30 +9,30 @@ helpviewer_keywords:
 - projects [MFC], creating
 - DLLs [MFC], creating
 ms.assetid: 05540b93-4781-4a90-aadf-55158313f5b2
-ms.openlocfilehash: 6a1718e1f347be46b2f228479d3dbd30027b3160
-ms.sourcegitcommit: 8e285a766523e653aeeb34d412dc6f615ef7b17b
+ms.openlocfilehash: 6367b2a4b85b2c586c5a4420a8be1f80d334b2e4
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/21/2020
-ms.locfileid: "80077443"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81363962"
 ---
 # <a name="creating-an-mfc-dll-project"></a>Création d'un projet DLL MFC
 
-Une DLL MFC est un fichier binaire qui agit comme une bibliothèque partagée de fonctions qui peuvent être utilisées simultanément par plusieurs applications. Le moyen le plus simple de créer un projet DLL MFC consiste à utiliser l’Assistant DLL MFC.
+Un MFC DLL est un fichier binaire qui agit comme une bibliothèque partagée de fonctions qui peuvent être utilisées simultanément par plusieurs applications. La façon la plus simple de créer un projet MFC DLL est d’utiliser le MFC DLL Wizard.
 
 > [!NOTE]
->  L’apparence des fonctionnalités dans l’IDE peut dépendre de vos paramètres actifs ou de l’édition et peut différer de ceux décrits dans l’aide de. Pour modifier vos paramètres, choisissez **Paramètres d'importation et d'exportation** dans le menu **Outils** . Pour plus d’informations, consultez [Personnaliser l’IDE Visual Studio](/visualstudio/ide/personalizing-the-visual-studio-ide).
+> L’apparence des fonctionnalités dans l’IDE peut dépendre de vos paramètres actifs ou de votre édition, et peut différer de celles décrites dans Help. Pour modifier vos paramètres, choisissez **Paramètres d'importation et d'exportation** dans le menu **Outils** . Pour plus d’informations, consultez [Personnaliser l’IDE Visual Studio](/visualstudio/ide/personalizing-the-visual-studio-ide).
 
-### <a name="to-create-an-mfc-dll-project-using-the-mfc-dll-wizard"></a>Pour créer un projet DLL MFC à l’aide de l’Assistant DLL MFC
+### <a name="to-create-an-mfc-dll-project-using-the-mfc-dll-wizard"></a>Créer un projet MFC DLL à l’aide du MFC DLL Wizard
 
-1. Suivez les instructions de la rubrique d’aide [création d’une application MFC](creating-an-mfc-application.md) , mais choisissez **bibliothèque de liens dynamiques MFC** ou **DLL MFC** dans la liste des modèles disponibles.
+1. Suivez les instructions dans le sujet [d’aide Création d’une application MFC,](creating-an-mfc-application.md) mais choisissez **MFC Dynamic Link Library** ou **MFC DLL** dans la liste des modèles disponibles.
 
-1. Définissez les paramètres de votre application à l’aide de la page Paramètres de l' [application](../../mfc/reference/application-settings-mfc-dll-wizard.md) de l' [Assistant DLL MFC](../../mfc/reference/mfc-dll-wizard.md).
+1. Définissez les paramètres de votre application à l’aide de la page [paramètres d’application](../../mfc/reference/application-settings-mfc-dll-wizard.md) de la [MFC DLL Wizard](../../mfc/reference/mfc-dll-wizard.md).
 
     > [!NOTE]
     >  Ignorez cette étape afin que l'Assistant conserve les paramètres par défaut.
 
-1. Cliquez sur **Terminer** pour fermer l’Assistant et ouvrir votre nouveau projet dans **Explorateur de solutions**.
+1. Cliquez sur **Finition** pour fermer l’assistant et ouvrir votre nouveau projet dans **Solution Explorer**.
 
 Une fois votre projet créé, vous pouvez visualiser les fichiers créés dans l’**Explorateur de solutions**. Pour plus d'informations sur les fichiers créés par l'Assistant pour votre projet, consultez le fichier Readme.txt généré pour le projet. Pour plus d’informations sur les types de fichiers, consultez [Types de fichiers créés pour les projets Visual Studio C++](../../build/reference/file-types-created-for-visual-cpp-projects.md).
 
