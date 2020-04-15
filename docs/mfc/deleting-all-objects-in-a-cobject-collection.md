@@ -10,21 +10,21 @@ helpviewer_keywords:
 - objects in CObject collections
 - collection classes [MFC], shared objects
 ms.assetid: 81d2c1d5-a0a5-46e1-8ab9-82b45cf7afd2
-ms.openlocfilehash: 95d4cec61b230df5a019655617a25b1dc309cde4
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 303b8a566a730c5abd06d51fb7977174e19a6435
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62153501"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81370538"
 ---
 # <a name="deleting-all-objects-in-a-cobject-collection"></a>Suppression de tous les objets d’une collection CObject
 
 Cet article explique comment supprimer tous les objets d’une collection (sans supprimer l’objet collection lui-même).
 
-Pour supprimer tous les objets dans une collection de `CObject`s (ou d’objets dérivés de `CObject`), vous utilisez une des techniques d’itération décrites dans l’article [l’accès à tous les membres d’une Collection](../mfc/accessing-all-members-of-a-collection.md) pour supprimer chaque objet dans activer.
+Pour supprimer tous les objets `CObject`d’une collection `CObject`de s (ou d’objets dérivés), vous utilisez l’une des techniques d’itération décrites dans l’article [Accessing All Members of a Collection](../mfc/accessing-all-members-of-a-collection.md) pour supprimer chaque objet à son tour.
 
 > [!CAUTION]
->  Les objets au sein des collections peuvent être partagés. Autrement dit, la collection conserve un pointeur vers l'objet, mais d'autres parties du programme peuvent également avoir des pointeurs sur le même objet. Vous devez alors veiller à ne pas supprimer un objet qui est partagé jusqu'à ce que toutes les parties aient fini d'utiliser l'objet.
+> Les objets au sein des collections peuvent être partagés. Autrement dit, la collection conserve un pointeur vers l'objet, mais d'autres parties du programme peuvent également avoir des pointeurs sur le même objet. Vous devez alors veiller à ne pas supprimer un objet qui est partagé jusqu'à ce que toutes les parties aient fini d'utiliser l'objet.
 
 Cet article explique comment supprimer des objets dans :
 
@@ -32,13 +32,13 @@ Cet article explique comment supprimer des objets dans :
 
 - [Un tableau](#_core_to_delete_all_elements_in_an_array)
 
-- [Une carte](#_core_to_delete_all_elements_in_a_map)
+- [Un mappage](#_core_to_delete_all_elements_in_a_map)
 
-#### <a name="_core_to_delete_all_objects_in_a_list_of_pointers_to_cobject"></a>  Pour supprimer tous les objets dans une liste de pointeurs vers CObject
+#### <a name="to-delete-all-objects-in-a-list-of-pointers-to-cobject"></a><a name="_core_to_delete_all_objects_in_a_list_of_pointers_to_cobject"></a>Supprimer tous les objets dans une liste de pointeurs à CObject
 
 1. Utilisez `GetHeadPosition` et `GetNext` pour parcourir la liste.
 
-1. Utilisez le **supprimer** opérateur pour supprimer chaque objet tel qu’il est trouvé dans l’itération.
+1. Utilisez l’opérateur **de suppression** pour supprimer chaque objet tel qu’il est rencontré dans l’itération.
 
 1. Appelez la fonction `RemoveAll` pour supprimer tous les éléments dans la liste une fois que les objets associés à ces éléments ont été supprimés.
 
@@ -50,11 +50,11 @@ Le dernier appel de fonction, `RemoveAll`, est une fonction membre de la liste q
 
 Notez la différence entre supprimer l'élément d'un objet et supprimer l'élément lui-même. Supprimer un élément de la liste supprime uniquement la référence de la liste à l'objet. L'objet existe encore en mémoire. Lorsque vous supprimez un objet, il arrête d'exister et sa mémoire est libérée. Par conséquent, il est important de supprimer un élément dès que l'objet de l'élément a été supprimé afin que la liste ne tente pas d'accéder aux objets qui n'existent plus.
 
-#### <a name="_core_to_delete_all_elements_in_an_array"></a>  Pour supprimer tous les éléments dans un tableau
+#### <a name="to-delete-all-elements-in-an-array"></a><a name="_core_to_delete_all_elements_in_an_array"></a>Supprimer tous les éléments d’un tableau
 
 1. Utilisez `GetSize` et des valeurs d'index entiers pour effectuer une itération au sein du tableau.
 
-1. Utilisez le **supprimer** opérateur pour supprimer chaque élément tel qu’il est trouvé dans l’itération.
+1. Utilisez l’opérateur **de suppression** pour supprimer chaque élément tel qu’il est rencontré dans l’itération.
 
 1. Appelez la fonction `RemoveAll` pour supprimer tous les éléments du tableau après leur suppression.
 
@@ -64,11 +64,11 @@ Notez la différence entre supprimer l'élément d'un objet et supprimer l'élé
 
 Comme dans l'exemple de liste ci-dessus, vous pouvez appeler `RemoveAll` pour supprimer tous les éléments d'un tableau ou `RemoveAt` pour supprimer chaque élément un par un.
 
-#### <a name="_core_to_delete_all_elements_in_a_map"></a> Pour supprimer tous les éléments dans un mappage
+#### <a name="to-delete-all-elements-in-a-map"></a><a name="_core_to_delete_all_elements_in_a_map"></a>Supprimer tous les éléments d’une carte
 
 1. Utilisez `GetStartPosition` et `GetNextAssoc` pour effectuer une itération au sein du tableau.
 
-1. Utilisez le **supprimer** opérateur à supprimer la clé et/ou la valeur pour chaque élément cartographique tel qu’il est trouvé dans l’itération.
+1. Utilisez l’opérateur **de suppression** pour supprimer la clé et/ou la valeur de chaque élément de carte tel qu’il est rencontré dans l’itération.
 
 1. Appelez la fonction `RemoveAll` pour supprimer tous les éléments du mappage après leur suppression.
 

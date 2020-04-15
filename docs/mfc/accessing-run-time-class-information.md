@@ -16,27 +16,27 @@ helpviewer_keywords:
 - run-time class [MFC]
 - RUNTIME_CLASS macro, using
 ms.assetid: 3445a9af-0bd6-4496-95c3-aa59b964570b
-ms.openlocfilehash: 2e4f8685033fc7a8a2f49dafa7ef4e4e019d8989
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 4a836bb7bd03bd6654e5c940442fecf541042fd1
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62392945"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81354224"
 ---
 # <a name="accessing-run-time-class-information"></a>Accès aux informations de classe d'exécution
 
 Cet article explique comment accéder aux informations sur la classe d'un objet au moment de l'exécution.
 
 > [!NOTE]
->  MFC n’utilise pas le [Run-Time Type Information](../cpp/run-time-type-information.md) support (RTTI) introduite dans Visual C++ 4.0.
+> MFC n’utilise pas le support [d’information de type temps d’exécution](../cpp/run-time-type-information.md) (RTTI) introduit dans Visual C 4.0.
 
-Si vous avez dérivé votre classe de [CObject](../mfc/reference/cobject-class.md) et utilisé la **DECLARE**_**dynamique** et `IMPLEMENT_DYNAMIC`, le `DECLARE_DYNCREATE` et `IMPLEMENT_DYNCREATE`, ou le `DECLARE_SERIAL` et `IMPLEMENT_SERIAL` macros expliqué dans l’article [dérivant une classe de CObject](../mfc/deriving-a-class-from-cobject.md), la `CObject` classe a la possibilité de déterminer la classe exacte d’un objet au moment de l’exécution.
+Si vous avez dérivé votre classe de [CObject](../mfc/reference/cobject-class.md) et `DECLARE_DYNCREATE` `IMPLEMENT_DYNCREATE`utilisé le `DECLARE_SERIAL` `IMPLEMENT_SERIAL` **DECLARE**-**DYNAMIC** et `IMPLEMENT_DYNAMIC`, le et , ou `CObject` l’et les macros expliqués dans [l’article Deriving une classe de CObject](../mfc/deriving-a-class-from-cobject.md), la classe a la capacité de déterminer la classe exacte d’un objet au moment de l’exécution.
 
 Cette option est très pratique lorsqu'une vérification de type supplémentaire des arguments de fonction est nécessaire et lorsque vous devez écrire un code spécial en fonction de la classe d'un autre objet. Toutefois, cette pratique n'est généralement pas recommandée car elle duplique les fonctionnalités des fonctions virtuelles.
 
 La fonction membre `CObject``IsKindOf` peut permettre de déterminer si un objet particulier appartient à une classe spécifiée ou si elle est dérivée d'une classe spécifique. L'argument pour `IsKindOf` est un objet `CRuntimeClass` que vous pouvez obtenir à l'aide de la macro `RUNTIME_CLASS` avec le nom de la classe.
 
-### <a name="to-use-the-runtimeclass-macro"></a>Pour utiliser la macro RUNTIME_CLASS
+### <a name="to-use-the-runtime_class-macro"></a>Pour utiliser la macro RUNTIME_CLASS
 
 1. Utilisez `RUNTIME_CLASS` avec le nom de la classe, comme indiqué ici pour la classe `CObject` :
 
@@ -46,7 +46,7 @@ Vous devrez rarement accéder à l'objet de classe d'exécution directement. Un 
 
 #### <a name="to-use-the-iskindof-function"></a>Pour utiliser la fonction IsKindOf
 
-1. Vérifiez que la classe possède la prise en charge de la classe d'exécution. Autrement dit, la classe doit avoir été dérivée directement ou indirectement de `CObject` et utilisé la **DECLARE**_**dynamique** et `IMPLEMENT_DYNAMIC`, le `DECLARE_DYNCREATE` et `IMPLEMENT_DYNCREATE`, ou le `DECLARE_SERIAL` et `IMPLEMENT_SERIAL` macros expliqué dans l’article [dérivant une classe de CObject](../mfc/deriving-a-class-from-cobject.md).
+1. Vérifiez que la classe possède la prise en charge de la classe d'exécution. Autrement dit, la classe doit avoir été `CObject` dérivée directement ou indirectement de et `DECLARE_SERIAL` `IMPLEMENT_SERIAL` utilisé le **DECLARE**-**DYNAMIC** et `IMPLEMENT_DYNAMIC`, le `DECLARE_DYNCREATE` et `IMPLEMENT_DYNCREATE`, ou le et les macros expliqués dans [l’article Deriving une classe de CObject](../mfc/deriving-a-class-from-cobject.md).
 
 1. Appelez la méthode `IsKindOf` pour les objets de cette classe, à l’aide de la macro `RUNTIME_CLASS` pour générer l’argument `CRuntimeClass`, comme indiqué ici :
 
@@ -55,11 +55,11 @@ Vous devrez rarement accéder à l'objet de classe d'exécution directement. Un 
    [!code-cpp[NVC_MFCCObjectSample#5](../mfc/codesnippet/cpp/accessing-run-time-class-information_3.cpp)]
 
     > [!NOTE]
-    >  IsKindOf retourne **TRUE** si l’objet est un membre de la classe spécifiée ou d’une classe dérivée de la classe spécifiée. `IsKindOf` ne prend pas en charge l'héritage multiple ou les classes de base virtuelles, bien que vous puissiez utiliser l'héritage multiple pour vos classes dérivées Microsoft Foundation, si nécessaire.
+    >  IsKindOf renvoie **TRUE** si l’objet est membre de la classe spécifiée ou d’une classe dérivée de la classe spécifiée. `IsKindOf` ne prend pas en charge l'héritage multiple ou les classes de base virtuelles, bien que vous puissiez utiliser l'héritage multiple pour vos classes dérivées Microsoft Foundation, si nécessaire.
 
-Une utilisation des informations sur la classe d'exécution est en création dynamique des objets. Cette procédure est décrite dans l’article [création d’objets dynamiques](../mfc/dynamic-object-creation.md).
+Une utilisation des informations sur la classe d'exécution est en création dynamique des objets. Ce processus est discuté dans l’article [Dynamic Object Creation](../mfc/dynamic-object-creation.md).
 
-Pour plus d’informations sur la sérialisation et les informations de classe d’exécution, consultez les articles [fichiers dans MFC](../mfc/files-in-mfc.md) et [sérialisation](../mfc/serialization-in-mfc.md).
+Pour plus d’informations détaillées sur la sérialisation et les informations de classe de temps d’exécution, voir les articles [Fichiers dans MFC](../mfc/files-in-mfc.md) et [Serialization](../mfc/serialization-in-mfc.md).
 
 ## <a name="see-also"></a>Voir aussi
 

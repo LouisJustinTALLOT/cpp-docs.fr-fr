@@ -1,10 +1,12 @@
 ---
 title: _strdate_s, _wstrdate_s
-description: _strdate_s et _wstrdate_s sont des versions CRT sécurisées des fonctions _strdate et _wstrdate qui placent la date actuelle dans une mémoire tampon.
-ms.date: 11/01/2019
+description: _strdate_s et _wstrdate_s sont des versions CRT sécurisées des fonctions _strdate et _wstrdate qui placent la date actuelle dans un tampon.
+ms.date: 4/2/2020
 api_name:
 - _strdate_s
 - _wstrdate_s
+- _o__strdate_s
+- _o__wstrdate_s
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -17,6 +19,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-time-l1-1-0.dll
+- api-ms-win-crt-private-l1-1-0
 api_type:
 - DLLExport
 topic_type:
@@ -37,16 +40,16 @@ helpviewer_keywords:
 - _strdate_s function
 - _wstrdate_s function
 ms.assetid: d41d8ea9-e5ce-40d4-864e-1ac29b455991
-ms.openlocfilehash: 7d04c134fcd19753ac0cecf8cc3b87e902d92e83
-ms.sourcegitcommit: 0cfc43f90a6cc8b97b24c42efcf5fb9c18762a42
+ms.openlocfilehash: b4d977ba3546eae17218c63b1786fd26c784d340
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/05/2019
-ms.locfileid: "73625758"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81359819"
 ---
 # <a name="_strdate_s-_wstrdate_s"></a>_strdate_s, _wstrdate_s
 
-Copient la date système actuelle dans une mémoire tampon. Ces fonctions sont des versions de [_strdate, _wstrdate](strdate-wstrdate.md) avec des améliorations de sécurité, comme décrit dans [fonctionnalités de sécurité dans le CRT](../../c-runtime-library/security-features-in-the-crt.md).
+Copient la date système actuelle dans une mémoire tampon. Ces fonctions sont des versions de [_strdate, _wstrdate](strdate-wstrdate.md) avec des améliorations de sécurité comme décrit dans [les caractéristiques de sécurité dans le CRT](../../c-runtime-library/security-features-in-the-crt.md).
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -71,50 +74,52 @@ errno_t _wstrdate_s(
 
 ### <a name="parameters"></a>Paramètres
 
-\ de la *mémoire tampon*
-Pointeur vers une mémoire tampon pour placer la chaîne de Date mise en forme.
+*Tampon*\
+Un pointeur à un tampon pour mettre la chaîne de date formatée.
 
-*taille* \
-Taille de la mémoire tampon en unités de caractères.
+*Taille*\
+Taille du tampon dans les unités de caractère.
 
-## <a name="return-value"></a>Valeur de retour
+## <a name="return-value"></a>Valeur retournée
 
-Zéro si l’opération aboutit. La valeur de retour est un code d’erreur en cas d’échec. Les codes d’erreur sont définis dans ERRNO.H. Consultez le tableau ci-dessous pour en savoir plus sur les erreurs générées exactement par cette fonction. Pour plus d’informations sur les codes d’erreur, consultez [errno](../../c-runtime-library/errno-constants.md).
+Zéro si l’opération réussit. La valeur de retour est un code d’erreur s’il y a un échec. Les codes d’erreur sont définis dans ERRNO.H. Consultez le tableau ci-dessous pour en savoir plus sur les erreurs générées exactement par cette fonction. Pour plus d’informations sur les codes d’erreur, consultez [errno](../../c-runtime-library/errno-constants.md).
 
 ## <a name="error-conditions"></a>Conditions d’erreur
 
-|*buffer*|*size*|Return|Contenu de la *mémoire tampon*|
+|*buffer*|*Taille*|Renvoie|Contenu du *tampon*|
 |--------------|------------------------|------------|--------------------------|
-|**NULL**|(indifférent)|**EINVAL**|Non modifié|
-|Not **null** (pointant vers une mémoire tampon valide)|0|**EINVAL**|Non modifié|
-|Not **null** (pointant vers une mémoire tampon valide)|0 *taille* de < < 9|**EINVAL**|Chaîne vide|
-|Not **null** (pointant vers une mémoire tampon valide)|*taille* > = 9|0|Date actuelle au format spécifié dans la section Notes|
+|**Null**|(indifférent)|**EINVAL (EN)**|Non modifiée|
+|Non **NULL** (pointant vers le tampon valide)|0|**EINVAL (EN)**|Non modifiée|
+|Non **NULL** (pointant vers le tampon valide)|0 taille < *<* 9|**EINVAL (EN)**|Chaîne vide|
+|Non **NULL** (pointant vers le tampon valide)|*taille* >9|0|Date actuelle au format spécifié dans la section Notes|
 
 ## <a name="security-issues"></a>Problèmes de sécurité
 
-Le passage d’une valeur non NULL non valide pour la *mémoire tampon* entraîne une violation d’accès si le paramètre de *taille* est supérieur à neuf.
+Le passage d’une valeur non valide et non-NULL pour *le tampon* entraîne une violation de l’accès si le paramètre *de taille* est supérieur à neuf.
 
-La transmission d’une *valeur supérieure à la taille réelle* de la *mémoire tampon* entraîne un dépassement de mémoire tampon.
+Passer une valeur pour *une taille* supérieure à la taille réelle du *tampon* entraîne un dépassement de mémoire tampon.
 
 ## <a name="remarks"></a>Notes
 
-Ces fonctions fournissent des versions plus sécurisées de **_strdate** et **_wstrdate**. La fonction **_strdate_s** copie la date système actuelle dans la mémoire tampon vers laquelle pointe la *mémoire tampon*. Il est mis en forme `mm/dd/yy`, où `mm` est le mois à deux chiffres, `dd` est le jour à deux chiffres et `yy` les deux derniers chiffres de l’année. Par exemple, la chaîne `12/05/99` représente le 5 décembre 1999. La mémoire tampon doit avoir une longueur d’au moins neuf caractères.
+Ces fonctions fournissent des versions plus sécurisées de **_strdate** et **_wstrdate**. La fonction **_strdate_s** copie la date actuelle du système à la mémoire tampon indiquée par *tampon*. Il `mm/dd/yy`est formaté `mm` , où est `dd` le mois à deux `yy` chiffres, est le jour à deux chiffres, et est les deux derniers chiffres de l’année. Par exemple, la chaîne `12/05/99` représente le 5 décembre 1999. Le tampon doit être d’au moins neuf caractères de long.
 
-**_wstrdate_s** est une version à caractères larges de **_strdate_s**; l’argument et la valeur de retour de **_wstrdate_s** sont des chaînes à caractères larges. Ces fonctions se comportent sinon de façon identique.
+**_wstrdate_s** est une version à caractère large de **_strdate_s**; l’argument et la valeur de retour de **_wstrdate_s** sont des chaînes de caractère large. Ces fonctions se comportent sinon de façon identique.
 
-Lorsque *buffer* est un pointeur **null** ou que la *taille* est inférieure à neuf caractères, le gestionnaire de paramètre non valide est appelé. Il est décrit dans [validation de paramètre](../../c-runtime-library/parameter-validation.md). Si l’exécution est autorisée à se poursuivre, ces fonctions retournent-1. Elles définissent **errno** sur **EINVAL** si la mémoire tampon est **null** ou si la *taille* est inférieure ou égale à 0. Ou, ils définissent **errno** sur **ERANGE** si la *taille* est inférieure à 9.
+Lorsque *le tampon* est un pointeur **NULL,** ou la *taille* est inférieure à neuf caractères, le gestionnaire de paramètres invalide est invoqué. Il est décrit dans [La validation des paramètres](../../c-runtime-library/parameter-validation.md). Si l’exécution est autorisée à se poursuivre, ces fonctions renvoient -1. Ils ont mis **errno** à **EINVAL** si le tampon est **NULL** ou si la *taille* est inférieure ou égale à 0. Ou, ils ont mis **errno** à **ERANGE** si *la taille* est inférieure à 9.
 
-Dans C++, l’utilisation de ces fonctions est simplifiée par les surcharges de modèle. Les surcharges peuvent déduire automatiquement la longueur de la mémoire tampon, ce qui évite d’avoir à spécifier un argument de *taille* . Ils peuvent remplacer automatiquement les fonctions non sécurisées par leurs équivalents plus récents et plus sécurisés. Pour plus d’informations, consultez [Sécuriser les surcharges de modèle](../../c-runtime-library/secure-template-overloads.md).
+Dans le C, l’utilisation de ces fonctions est simplifiée par des surcharges de modèles. Les surcharges peuvent déduire automatiquement la longueur du tampon, ce qui élimine la nécessité de spécifier un argument *de taille.* De plus, ils peuvent remplacer automatiquement les fonctions non sécurisées par leurs homologues plus récents et plus sûrs. Pour plus d’informations, consultez [Sécuriser les surcharges de modèle](../../c-runtime-library/secure-template-overloads.md).
 
-Les versions de la bibliothèque de débogage de ces fonctions remplissent d’abord la mémoire tampon avec 0xFE. Pour désactiver ce comportement, utilisez [_CrtSetDebugFillThreshold](crtsetdebugfillthreshold.md).
+Les versions de bibliothèque de débogé de ces fonctions remplissent d’abord le tampon avec 0xFE. Pour désactiver ce comportement, utilisez [_CrtSetDebugFillThreshold](crtsetdebugfillthreshold.md).
 
-### <a name="generic-text-routine-mapping"></a>Mappage de routines de texte générique :
+Par défaut, l’état global de cette fonction est étendue à l’application. Pour changer cela, voir [Global State dans le CRT](../global-state.md).
+
+### <a name="generic-text-routine-mapping"></a>Cartographie de routine de texte générique :
 
 |Routine TCHAR.H|_UNICODE et _MBCS non définis|_MBCS défini|_UNICODE défini|
 |---------------------|------------------------------------|--------------------|-----------------------|
 |**_tstrdate_s**|**_strdate_s**|**_strdate_s**|**_wstrdate_s**|
 
-## <a name="requirements"></a>spécifications
+## <a name="requirements"></a>Spécifications
 
 |Routine|En-tête requis|
 |-------------|---------------------|
@@ -134,5 +139,5 @@ Consultez l’exemple relatif à [time](time-time32-time64.md).
 [gmtime_s, _gmtime32_s, _gmtime64_s](gmtime-s-gmtime32-s-gmtime64-s.md)\
 [localtime_s, _localtime32_s, _localtime64_s](localtime-s-localtime32-s-localtime64-s.md)\
 [mktime, _mktime32, _mktime64](mktime-mktime32-mktime64.md)\
-[time, _time32, _time64](time-time32-time64.md)\
+[temps, _time32, _time64](time-time32-time64.md)\
 [_tzset](tzset.md)

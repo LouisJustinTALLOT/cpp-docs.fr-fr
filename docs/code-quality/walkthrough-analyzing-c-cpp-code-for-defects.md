@@ -1,128 +1,179 @@
 ---
-title: Procédure pas à pas :C++ analyse du code C/code pour les erreurs
-ms.date: 11/04/2016
+title: 'Procédure pas à pas : Analyse du code C/CMD pour les défauts'
+description: Démontre comment utiliser l’analyse de code avec Microsoft CMD dans Visual Studio.
+ms.date: 04/14/2020
 ms.topic: conceptual
 helpviewer_keywords:
 - C/C++, code analysis
 - code analysis, walkthroughs
 - code, analyzing C/C++
 - code analysis tool, walkthroughs
-ms.openlocfilehash: 5fbdf9e223b3c1e1b8664de2018381958c458f45
-ms.sourcegitcommit: 7bea0420d0e476287641edeb33a9d5689a98cb98
+ms.openlocfilehash: fe9b3775199b2a18cf940b99e87852350f1fbea9
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/17/2020
-ms.locfileid: "77418654"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81370216"
 ---
-# <a name="walkthrough-analyzing-cc-code-for-defects"></a>Procédure pas à pas :C++ analyse du code C/code pour les erreurs
+# <a name="walkthrough-analyzing-cc-code-for-defects"></a>Procédure pas à pas : Analyse du code C/CMD pour les défauts
 
-Cette procédure pas à pas montre comment analyserC++ c/code pour identifier les erreurs de code potentielles à l’aideC++ de l’outil d’analyse du code pour c/code.
+Cette procédure pas à pas montre comment analyser le code C/CMD pour les défauts de code potentiels. Il utilise les outils d’analyse de code pour le code C/CM.
 
-- Exécutez l’analyse du code sur du code natif.
+Dans cette procédure pas à pas, vous :
+
+- Exécuter l’analyse de code sur le code natif.
 - Analyser les avertissements de défaut de code.
 - Traiter l’avertissement comme une erreur.
-- Annoter le code source pour améliorer l’analyse des erreurs de code.
+- Annoter le code source pour améliorer l’analyse des défauts de code.
 
-## <a name="prerequisites"></a>Conditions préalables requises
+## <a name="prerequisites"></a>Prérequis
 
-- Copie de l' [exemple de démonstration](../code-quality/demo-sample.md).
-- Connaissances de base de CC++/.
+- Une copie de [l’échantillon CppDemo](../code-quality/demo-sample.md).
+- Compréhension de base du C/CMD.
 
-### <a name="to-run-code-defect-analysis-on-native-code"></a>Pour exécuter l’analyse des erreurs de code sur du code natif
+## <a name="run-code-analysis-on-native-code"></a>Analyse de code d’exécution sur le code indigène
 
-1. Ouvrez la solution de démonstration dans Visual Studio.
+### <a name="to-run-code-defect-analysis-on-native-code"></a>Pour exécuter l’analyse des défauts de code sur le code natif
 
-     La solution de démonstration remplit maintenant **Explorateur de solutions**.
+::: moniker range=">=vs-2019"
 
-1. Dans le menu **Générer**, cliquez sur **Régénérer la solution**.
+1. Ouvrez la solution CppDemo dans Visual Studio.
 
-     La solution est générée sans erreurs ou avertissements.
+     La solution CppDemo peuple maintenant **Solution Explorer**.
 
-1. Dans **Explorateur de solutions**, sélectionnez le projet CodeDefects.
+1. Sur le menu **Build,** choisissez **Rebuild Solution**.
 
-1. Dans le menu **Projet** , cliquez sur **Propriétés**.
+     La solution se construit sans aucune erreur ou avertissement.
 
-     La boîte de dialogue **pages de propriétés de CodeDefects** s’affiche.
+1. Dans **Solution Explorer**, sélectionnez le projet CodeDefects.
 
-1. Cliquez sur **Analyse du code**.
+1. Sur le menu du **projet,** choisissez **Propriétés**.
 
-1. Activez la case à cocher **activer l'C++ analyse du code pour C/on Build** .
+     La boîte de dialogue **CodeDefects Property Pages** est affichée.
 
-1. Régénérez le projet CodeDefects.
+1. Sélectionnez la page de propriété **Code Analysis.**
 
-     Les avertissements de l’analyse du code s’affichent dans la **liste d’erreurs**.
+1. Modifier **l’analyse de code d’activation sur la** propriété Build à **Oui**. Choisissez **OK** pour enregistrer vos modifications.
 
-### <a name="to-analyze-code-defect-warnings"></a>Pour analyser les avertissements de défauts de code
+1. Reconstruire le projet CodeDefects.
 
-1. Dans le menu **Affichage** , cliquez sur **Liste d'erreurs**.
+     Les avertissements d’analyse de code sont affichés dans la fenêtre **de la liste d’erreurs.**
 
-     En fonction du profil de développeur que vous avez choisi dans Visual Studio, vous devrez peut-être pointer sur **autres fenêtres** dans le menu **affichage** , puis cliquez sur **liste d’erreurs**.
+::: moniker-end
 
-1. Dans la **liste d’erreurs**, double-cliquez sur l’avertissement suivant :
+::: moniker range="<=vs-2017"
 
-     avertissement C6230 : cast implicite entre les types sémantiquement différents : utilisation de HRESULT dans un contexte booléen.
+1. Ouvrez la solution CppDemo dans Visual Studio.
 
-     L’éditeur de code affiche la ligne qui a provoqué l’avertissement dans la `bool ProcessDomain()`de la fonction. Cet avertissement indique qu’un `HRESULT` est utilisé dans une instruction’If’où un résultat booléen est attendu.  Il s’agit en général d’une erreur, car lorsque la `S_OK` HRESULT est retournée par la fonction, cette opération indique une réussite, mais lorsqu’elle est convertie en valeur booléenne, elle prend la valeur `false`.
+     La solution CppDemo peuple maintenant **Solution Explorer**.
 
-1. Corrigez cet avertissement à l’aide de la macro `SUCCEEDED`, qui convertit en `true` lorsqu’une `HRESULT` valeur de retour indique la réussite de l’opération. Votre code doit ressembler au code suivant :
+1. Sur le menu **Build,** choisissez **Rebuild Solution**.
+
+     La solution se construit sans aucune erreur ou avertissement.
+
+     > [!NOTE]
+     > Dans Visual Studio 2017, vous pouvez `E1097 unknown attribute "no_init_all"` voir un avertissement fallacieux dans le moteur IntelliSense. Vous pouvez ignorer cet avertissement sans problème.
+
+1. Dans **Solution Explorer**, sélectionnez le projet CodeDefects.
+
+1. Sur le menu du **projet,** choisissez **Propriétés**.
+
+     La boîte de dialogue **CodeDefects Property Pages** est affichée.
+
+1. Sélectionnez la page de propriété **Code Analysis.**
+
+1. Sélectionnez l’analyse de code Active sur la case à cocher **Build.** Choisissez **OK** pour enregistrer vos modifications.
+
+1. Reconstruire le projet CodeDefects.
+
+     Les avertissements d’analyse de code sont affichés dans la fenêtre **de la liste d’erreurs.**
+
+::: moniker-end
+
+### <a name="to-analyze-code-defect-warnings"></a>Analyser les avertissements de défaut de code
+
+1. Sur le menu **View,** choisissez **La liste d’erreurs**.
+
+     Cet élément de menu peut ne pas être visible. Cela dépend du profil du développeur que vous avez choisi dans Visual Studio. Vous devrez peut-être pointer vers **d’autres Fenêtres** sur le menu **View,** puis choisir **la liste d’erreurs**.
+
+1. Dans la fenêtre de la **liste d’erreurs,** cliquez double sur l’avertissement suivant :
+
+     C6230: Casting implicite entre les types sémantically différents: en utilisant HRESULT dans un contexte Boolean.
+
+     L’éditeur de code affiche la ligne `bool ProcessDomain()`qui a causé l’avertissement à l’intérieur de la fonction . Cet avertissement indique `HRESULT` qu’un est utilisé dans une déclaration «si» où un résultat Boolean est prévu. C’est généralement une erreur, `S_OK` parce que lorsque le HRESULT est retourné d’une fonction, il `false`indique le succès, mais lorsqu’il est converti en une valeur boolean, il évalue à .
+
+1. Corrigez cet avertissement `SUCCEEDED` en utilisant la `true` macro, qui se convertit au moment où une valeur de `HRESULT` retour indique le succès. Votre code doit ressembler au code suivant :
 
    ```cpp
-   if (SUCCEEDED (ReadUserAccount()) )
+   if (SUCCEEDED(ReadUserAccount()))
    ```
 
-1. Dans la **liste d’erreurs**, double-cliquez sur l’avertissement suivant :
+1. Dans la **liste d’erreurs**, double-cliquez sur l’avertissement suivant:
 
-     AVERTISSEMENT C6282 : opérateur incorrect : assignation à une constante dans le contexte de test. Était = = prévu ?
+     C6282: Opérateur incorrect : affectation de constante dans le contexte boolean. Envisagez plutôt d’utiliser le ' ' ' ' ' ' ' ' ' ' ' ' ' ' ' ' ' ' '
 
-1. Corrigez cet avertissement en vérifiant l’égalité. Votre code doit ressembler au code suivant :
+1. Corrigez cet avertissement en testant l’égalité. Votre code doit ressembler au code suivant :
 
    ```cpp
-   if ((len == ACCOUNT_DOMAIN_LEN) || (g_userAccount[len] != '\\'))
+   if ((len == ACCOUNT_DOMAIN_LEN) || (g_userAccount[len] != L'\\'))
    ```
 
-### <a name="to-treat-warning-as-an-error"></a>Pour traiter l’avertissement comme une erreur
+1. Corrigez les avertissements C6001 restants `i` `j` dans la **liste d’erreurs** en parasissant et à 0.
 
-1. Dans le fichier bug. cpp, ajoutez l’instruction `#pragma` suivante au début du fichier pour traiter l’avertissement C6001 comme une erreur :
+1. Reconstruire le projet CodeDefects.
+
+     Le projet se construit sans avertissements ni erreurs.
+
+## <a name="correct-source-code-annotation-warnings"></a>Avertissements corrects d’annotation de code source
+
+### <a name="to-enable-the-source-code-annotation-warnings-in-annotationc"></a>Pour activer les avertissements d’annotation du code source dans annotation.c
+
+::: moniker range=">=vs-2019"
+
+1. Dans Solution Explorer, sélectionnez le projet Annotations.
+
+1. Sur le menu du **projet,** choisissez **Propriétés**.
+
+     La boîte de dialogue **Annotations Property Pages** est affichée.
+
+1. Sélectionnez la page de propriété **Code Analysis.**
+
+1. Modifier **l’analyse de code d’activation sur la** propriété Build à **Oui**. Choisissez **OK** pour enregistrer vos modifications.
+
+::: moniker-end
+
+::: moniker range="<=vs-2017"
+
+1. Dans Solution Explorer, sélectionnez le projet Annotations.
+
+1. Sur le menu du **projet,** choisissez **Propriétés**.
+
+     La boîte de dialogue **Annotations Property Pages** est affichée.
+
+1. Sélectionnez la page de propriété **Code Analysis.**
+
+1. Sélectionnez l’analyse de code Active sur la case à cocher **Build.** Choisissez **OK** pour enregistrer vos modifications.
+
+::: moniker-end
+
+### <a name="to-correct-the-source-code-annotation-warnings-in-annotationc"></a>Pour corriger les avertissements d’annotation du code source dans annotation.c
+
+1. Reconstruire le projet Annotations.
+
+1. Sur le menu **Build,** choisissez **l’analyse du code d’exécution sur annotations**.
+
+1. Dans la **liste d’erreurs**, double-cliquez sur l’avertissement suivant:
+
+     C6011: Déférence NULL pointeur 'newNode'.
+
+     Cet avertissement indique l’échec de l’appelant à vérifier la valeur de retour. Dans ce cas, `AllocateNode` un appel pourrait retourner une valeur NULL. Voir le fichier d’en-tête annotations.h pour la déclaration de fonction pour `AllocateNode`.
+
+1. Le curseur se trouve sur l’emplacement du dossier annotations.cpp où l’avertissement s’est produit.
+
+1. Pour corriger cet avertissement, utilisez une instruction « si » pour tester la valeur de retour. Votre code doit ressembler au code suivant :
 
    ```cpp
-   #pragma warning (error: 6001)
-   ```
-
-1. Régénérez le projet CodeDefects.
-
-     Dans le **liste d’erreurs**, C6001 s’affiche à présent comme une erreur.
-
-1. Corrigez les deux erreurs C6001 restantes dans le **liste d’erreurs** en initialisant `i` et `j` sur 0.
-
-1. Régénérez le projet CodeDefects.
-
-     Le projet est généré sans avertissements ou erreurs.
-
-### <a name="to-correct-the-source-code-annotation-warnings-in-annotationc"></a>Pour corriger les avertissements d’annotation de code source dans annotation. c
-
-1. Dans Explorateur de solutions, sélectionnez le projet annotations.
-
-1. Dans le menu **Projet** , cliquez sur **Propriétés**.
-
-     La boîte de dialogue **pages de propriétés des annotations** s’affiche.
-
-1. Cliquez sur **Analyse du code**.
-
-1. Cochez la case **activer l’analyse du codeC++ pour C/on Build** .
-
-1. Régénérez le projet annotations.
-
-1. Dans la **liste d’erreurs**, double-cliquez sur l’avertissement suivant :
-
-     AVERTISSEMENT C6011 : suppression de la référence du pointeur NULL’newNode'.
-
-     Cet avertissement indique un échec de la vérification par l’appelant de la valeur de retour. Dans ce cas, un appel à **AllocateNode** peut retourner une valeur null (consultez le fichier d’en-tête annotations. h pour la déclaration de fonction pour AllocateNode).
-
-1. Ouvrez le fichier annotations. cpp.
-
-1. Pour corriger cet avertissement, utilisez une instruction’If’pour tester la valeur de retour. Votre code doit ressembler au code suivant :
-
-   ```cpp
+   LinkedList* newNode = AllocateNode();
    if (nullptr != newNode)
    {
        newNode->data = value;
@@ -131,27 +182,29 @@ Cette procédure pas à pas montre comment analyserC++ c/code pour identifier le
    }
    ```
 
-1. Régénérez le projet annotations.
+1. Reconstruire le projet Annotations.
 
-     Le projet est généré sans avertissements ou erreurs.
+     Le projet se construit sans avertissements ni erreurs.
 
-### <a name="to-use-source-code-annotation"></a>Pour utiliser l’annotation de code source
+## <a name="use-source-code-annotation-to-discover-more-issues"></a>Utiliser l’annotation du code source pour découvrir d’autres problèmes
 
-1. Annotez les paramètres formels et la valeur de retour de la fonction `AddTail` pour indiquer que les valeurs de pointeur peuvent être NULL :
+### <a name="to-use-source-code-annotation"></a>Utiliser l’annotation du code source
+
+1. Annoter les paramètres formels et `AddTail` la valeur de retour de la fonction pour indiquer que les valeurs de pointeur peuvent être nulles :
 
    ```cpp
    _Ret_maybenull_ LinkedList* AddTail(_Maybenull_ LinkedList* node, int value)
    ```
 
-1. Régénérez le projet annotations.
+1. Dans le menu **Générer**, choisissez **Exécuter l’analyse du code sur la solution**.
 
-1. Dans la **liste d’erreurs**, double-cliquez sur l’avertissement suivant :
+1. Dans la **liste d’erreurs**, double-cliquez sur l’avertissement suivant:
 
-     AVERTISSEMENT C6011 : suppression de la référence du pointeur NULL’node'.
+     C6011: Déférence NULL pointeur 'nœud'.
 
-     Cet avertissement indique que le nœud passé dans la fonction peut avoir la valeur null, et indique le numéro de ligne où l’avertissement a été déclenché.
+     Cet avertissement indique que le nœud passé dans la fonction peut être nul.
 
-1. Pour corriger cet avertissement, utilisez une instruction’If’au début de la fonction pour tester la valeur passée. Votre code doit ressembler au code suivant :
+1. Pour corriger cet avertissement, utilisez une déclaration « si » au début de la fonction pour tester la valeur passée. Votre code doit ressembler au code suivant :
 
    ```cpp
    if (nullptr == node)
@@ -160,11 +213,11 @@ Cette procédure pas à pas montre comment analyserC++ c/code pour identifier le
    }
    ```
 
-1. Régénérez le projet annotations.
+1. Dans le menu **Générer**, choisissez **Exécuter l’analyse du code sur la solution**.
 
-     Le projet se génère désormais sans avertissements ou erreurs.
+     Le projet se construit maintenant sans avertissements ni erreurs.
 
 ## <a name="see-also"></a>Voir aussi
 
-[Procédure pas à pas : analyse du code managé pour les erreurs de Code](/visualstudio/code-quality/walkthrough-analyzing-managed-code-for-code-defects)\
+[Procédure pas à pas : Analyse du code géré pour les défauts de code](/visualstudio/code-quality/walkthrough-analyzing-managed-code-for-code-defects)\
 [Analyse du code pour C/C++](../code-quality/code-analysis-for-c-cpp-overview.md)

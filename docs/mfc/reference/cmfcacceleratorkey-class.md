@@ -1,5 +1,5 @@
 ---
-title: Cmfcacceleratorkey, classe
+title: CMFCAcceleratorKey, classe
 ms.date: 11/04/2016
 f1_keywords:
 - CMFCAcceleratorKey
@@ -12,16 +12,16 @@ helpviewer_keywords:
 - CMFCAcceleratorKey [MFC], Format
 - CMFCAcceleratorKey [MFC], SetAccelerator
 ms.assetid: d140fbf7-23db-45ea-a63e-414a5ec7b3d5
-ms.openlocfilehash: 6a99ad00a43ac7912320ee469d542b6bf9cca3de
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 7d66e7043325bbbd324f3ac443368787a653ebe1
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62403956"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81369924"
 ---
-# <a name="cmfcacceleratorkey-class"></a>Cmfcacceleratorkey, classe
+# <a name="cmfcacceleratorkey-class"></a>CMFCAcceleratorKey, classe
 
-Une classe d’assistance qui implémente le mappage de clé virtuel et la mise en forme.
+Une classe d’aide qui met en œuvre la cartographie et le formatage des clés virtuelles.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -41,18 +41,18 @@ class CMFCAcceleratorKey : public CObject
 
 |Nom|Description|
 |----------|-----------------|
-|[CMFCAcceleratorKey::Format](#format)|Convertit la structure d’accélération à sa représentation visuelle.|
-|[CMFCAcceleratorKey::SetAccelerator](#setaccelerator)|Définit la touche de raccourci pour le `CMFCAcceleratorKey` objet.|
+|[CMFCAcceleratorKey::Format](#format)|Traduit la structure ACCEL à sa représentation visuelle.|
+|[CMFCAcceleratorKey::SetAccelerator](#setaccelerator)|Définit la clé de `CMFCAcceleratorKey` raccourci pour l’objet.|
 
 ## <a name="remarks"></a>Notes
 
-Touches accélérateur sont également appelées touches de raccourci. Si vous souhaitez afficher les raccourcis clavier entrées par un utilisateur, le [cmfcacceleratorkeyassignctrl, classe](../../mfc/reference/cmfcacceleratorkeyassignctrl-class.md) maps raccourcis clavier, tels que Alt + Maj + S, dans un format de texte personnalisé, tel que « Alt + Maj + S ». Chaque `CMFCAcceleratorKey` objet mappe une touche de raccourci unique dans un format de texte.
+Les touches d’accélérateur sont également connues sous le nom de touches de raccourci. Si vous souhaitez afficher des raccourcis clavier qu’un utilisateur entre, le [CMFCAcceleratorKeyAssignCtrl Class](../../mfc/reference/cmfcacceleratorkeyassignctrl-class.md) cartes des raccourcis clavier, tels qu’Alt-Shift-S, à un format texte personnalisé, tel que "Alt - Shift ' S". Chaque `CMFCAcceleratorKey` objet cartographie une seule clé de raccourci d’un format de texte.
 
-Pour plus d’informations sur l’utilisation des touches de raccourci et les tables d’accélérateurs, consultez [ckeyboardmanager, classe](../../mfc/reference/ckeyboardmanager-class.md).
+Pour plus d’informations sur la façon d’utiliser des touches de raccourci et des tables d’accélérateur, voir [CKeyboardManager Class](../../mfc/reference/ckeyboardmanager-class.md).
 
 ## <a name="example"></a>Exemple
 
-L’exemple suivant montre comment construire un `CMFCAcceleratorKey` objet et comment utiliser son `Format` (méthode).
+L’exemple suivant montre comment `CMFCAcceleratorKey` construire un objet `Format` et comment utiliser sa méthode.
 
 [!code-cpp[NVC_MFC_RibbonApp#30](../../mfc/reference/codesnippet/cpp/cmfcacceleratorkey-class_1.cpp)]
 
@@ -62,13 +62,13 @@ L’exemple suivant montre comment construire un `CMFCAcceleratorKey` objet et c
 
 `CMFCAcceleratorKey`
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
-**En-tête :** afxacceleratorkey.h
+**En-tête:** afxacceleratorkey.h
 
-##  <a name="cmfcacceleratorkey"></a>  CMFCAcceleratorKey::CMFCAcceleratorKey
+## <a name="cmfcacceleratorkeycmfcacceleratorkey"></a><a name="cmfcacceleratorkey"></a>CMFCAcceleratorKey::CMFCAcceleratorKey
 
-Construit un [CMFCAcceleratorKey](../../mfc/reference/cmfcacceleratorkey-class.md) objet.
+Construit un objet [CMFCAcceleratorKey.](../../mfc/reference/cmfcacceleratorkey-class.md)
 
 ```
 CMFCAcceleratorKey();
@@ -78,15 +78,15 @@ CMFCAcceleratorKey(LPACCEL lpAccel);
 ### <a name="parameters"></a>Paramètres
 
 *lpAccel*<br/>
-[in] Pointeur vers une touche de raccourci.
+[dans] Un pointeur à une clé de raccourci.
 
 ### <a name="remarks"></a>Notes
 
-Si vous ne fournissez pas une touche de raccourci lorsque vous créez un `CMFCAccleratorKey`, utilisez le [CMFCAcceleratorKey::SetAccelerator](#setaccelerator) méthode pour associer une touche de raccourci avec votre `CMFCAcceleratorKey` objet.
+Si vous ne fournissez pas une `CMFCAccleratorKey`clé de raccourci lorsque vous créez un, utilisez la méthode [CMFCAcceleratorKey::SetAccelerator](#setaccelerator) méthode pour associer une clé de raccourci avec votre `CMFCAcceleratorKey` objet.
 
-##  <a name="format"></a>  CMFCAcceleratorKey::Format
+## <a name="cmfcacceleratorkeyformat"></a><a name="format"></a>CMFCAcceleratorKey::Format
 
-Convertit la structure d’accélération à sa valeur de chaîne associée.
+Traduit la structure ACCEL à sa valeur de chaîne associée.
 
 ```
 void Format(CString& str) const;
@@ -94,16 +94,16 @@ void Format(CString& str) const;
 
 ### <a name="parameters"></a>Paramètres
 
-*str*<br/>
-[out] Une référence à un `CString` objet dans lequel la méthode écrit la touche de raccourci traduite.
+*Str*<br/>
+[out] Une référence `CString` à un objet où la méthode écrit la clé de raccourci traduite.
 
 ### <a name="remarks"></a>Notes
 
-Cette méthode récupère le format de chaîne de la touche de raccourci associé. Vous pouvez définir le format de chaîne d’un [CMFCAcceleratorKey](../../mfc/reference/cmfcacceleratorkey-class.md) de l’objet à l’aide du constructeur ou la méthode [CMFCAcceleratorKey::SetAccelerator](#setaccelerator).
+Cette méthode récupère le format de chaîne de la clé de raccourci associée. Vous pouvez définir le format de chaîne d’un objet [CMFCAcceleratorKey](../../mfc/reference/cmfcacceleratorkey-class.md) en utilisant soit le constructeur ou la méthode [CMFCAcceleratorKey::SetAccelerator](#setaccelerator).
 
-##  <a name="setaccelerator"></a>  CMFCAcceleratorKey::SetAccelerator
+## <a name="cmfcacceleratorkeysetaccelerator"></a><a name="setaccelerator"></a>CMFCAcceleratorKey::SetAccelerator
 
-Définit la touche de raccourci pour le [CMFCAcceleratorKey](../../mfc/reference/cmfcacceleratorkey-class.md) objet.
+Définit la clé de raccourci pour l’objet [CMFCAcceleratorKey.](../../mfc/reference/cmfcacceleratorkey-class.md)
 
 ```
 void SetAccelerator(LPACCEL lpAccel);
@@ -112,14 +112,14 @@ void SetAccelerator(LPACCEL lpAccel);
 ### <a name="parameters"></a>Paramètres
 
 *lpAccel*<br/>
-[in] Pointeur vers une touche de raccourci.
+[dans] Un pointeur à une clé de raccourci.
 
 ### <a name="remarks"></a>Notes
 
-Utilisez cette méthode pour définir la touche de raccourci pour un `CMFCAcceleratorKey` si vous n’avez pas fourni une touche de raccourci lorsque vous avez créé le `CMFCAcceleratorKey`.
+Utilisez cette méthode pour définir la `CMFCAcceleratorKey` clé de raccourci pour un si `CMFCAcceleratorKey`vous n’avez pas fourni une clé de raccourci lorsque vous avez créé le .
 
 ## <a name="see-also"></a>Voir aussi
 
 [Graphique hiérarchique](../../mfc/hierarchy-chart.md)<br/>
 [Classes](../../mfc/reference/mfc-classes.md)<br/>
-[CKeyboardManager, classe](../../mfc/reference/ckeyboardmanager-class.md)
+[Classe CKeyboardManager](../../mfc/reference/ckeyboardmanager-class.md)

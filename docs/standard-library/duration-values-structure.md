@@ -7,16 +7,16 @@ f1_keywords:
 - chrono/std::chrono::duration_values::min
 - chrono/std::chrono::duration_values::zero
 ms.assetid: 7f66d2e3-1faf-47c3-b47e-08f2a87f20e8
-ms.openlocfilehash: ba4b202a5c8c6da742ac884bf58a5b8c55373d14
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: e2c03b4540ea5f89843562d1310b71635b3bc259
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68454290"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81368742"
 ---
-# <a name="durationvalues-structure"></a>duration_values, structure
+# <a name="duration_values-structure"></a>duration_values, structure
 
-Fournit des valeurs spécifiques pour le paramètre de modèle [duration](../standard-library/duration-class.md) `Rep`.
+Fournit des valeurs spécifiques pour le paramètre de modèle [duration](../standard-library/duration-class.md)`Rep`.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -31,17 +31,17 @@ struct duration_values;
 
 |Nom|Description|
 |----------|-----------------|
-|[max](#max)|Static. Spécifie la limite supérieure pour une valeur de type `Rep`.|
-|[min](#min)|Static. Spécifie la limite inférieure pour une valeur de type `Rep`.|
-|[zero](#zero)|Static. Retourne `Rep(0)`.|
+|[Max](#max)|Statique. Spécifie la limite supérieure pour une valeur de type `Rep`.|
+|[Min](#min)|Statique. Spécifie la limite inférieure pour une valeur de type `Rep`.|
+|[Zéro](#zero)|Statique. Retourne `Rep(0)`.|
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
-**En-tête:** \<Chrono >
+**En-tête:** \<chrono>
 
 **Espace de noms :** std::chrono
 
-## <a name="max"></a>  duration_values::max
+## <a name="duration_valuesmax"></a><a name="max"></a>duration_values::max
 
 Méthode statique qui retourne la limite supérieure des valeurs de type `Ref`.
 
@@ -57,7 +57,7 @@ Retourne `numeric_limits<Rep>::max()`.
 
 Quand `Rep` est un type défini par l’utilisateur, la valeur de retour doit être supérieure à [duration_values::zero](#zero).
 
-## <a name="min"></a>  duration_values::min
+## <a name="duration_valuesmin"></a><a name="min"></a>duration_values::min
 
 Méthode statique qui retourne la limite inférieure des valeurs de type `Ref`.
 
@@ -73,7 +73,7 @@ Retourne `numeric_limits<Rep>::lowest()`.
 
 Quand `Rep` est un type défini par l’utilisateur, la valeur de retour doit être inférieure ou égale à [duration_values::zero](#zero).
 
-## <a name="zero"></a>  duration_values::zero
+## <a name="duration_valueszero"></a><a name="zero"></a>duration_values::zéro
 
 Retourne `Rep(0)`.
 
@@ -87,5 +87,5 @@ Quand `Rep` est un type défini par l'utilisateur, la valeur de retour doit repr
 
 ## <a name="see-also"></a>Voir aussi
 
-[Informations de référence sur les fichiers d’en-tête](../standard-library/cpp-standard-library-header-files.md)\
+[Référence de fichiers d’en-tête](../standard-library/cpp-standard-library-header-files.md)\
 [\<chrono>](../standard-library/chrono.md)

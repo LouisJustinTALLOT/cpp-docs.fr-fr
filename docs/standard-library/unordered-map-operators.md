@@ -5,20 +5,20 @@ f1_keywords:
 - unordered_map/std::operator!=
 - unordered_map/std::operator==
 ms.assetid: 9d5add0b-84bd-4a79-bd82-3f58b55145ed
-ms.openlocfilehash: fe4877bc5b371a2570c18950bac36a003078ccc7
-ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
+ms.openlocfilehash: f062c4fd0332525a8b8940d2d93df41df56d2baa
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/16/2020
-ms.locfileid: "79422548"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81373122"
 ---
 # <a name="ltunordered_mapgt-operators"></a>&lt;unordered_map&gt;, opérateurs
 
 |||||
 |-|-|-|-|
-|[operator!=](#op_neq)|[operator==](#op_eq_eq)|[operator!=](#op_neq_multimap)|[operator==](#op_eq_eq_multimap)|
+|[opérateur!](#op_neq)|[opérateur](#op_eq_eq)|[opérateur!](#op_neq_multimap)|[opérateur](#op_eq_eq_multimap)|
 
-## <a name="op_neq"></a>  operator!=
+## <a name="operator"></a><a name="op_neq"></a>opérateur!
 
 Teste si l’objet [unordered_map](../standard-library/unordered-map-class.md) situé à gauche de l’opérateur n’est pas égal à l’objet unordered_map situé à droite.
 
@@ -28,15 +28,15 @@ bool operator!=(const unordered_map <Key, Type, Hash, Pred, Allocator>& left, co
 
 ### <a name="parameters"></a>Paramètres
 
-\ *gauche*
+*Gauche*\
 Objet de type `unordered_map`.
 
-\ *droit*
+*Oui*\
 Objet de type `unordered_map`.
 
 ### <a name="return-value"></a>Valeur de retour
 
-**true** si les unordered_maps ne sont pas égaux ; **false** s’ils sont égaux.
+**vrai** si les unordered_maps ne sont pas égaux; **faux** s’ils sont égaux.
 
 ### <a name="remarks"></a>Notes
 
@@ -82,7 +82,7 @@ int main( )
 
 `um2 != um3: true`
 
-## <a name="op_eq_eq"></a>  operator==
+## <a name="operator"></a><a name="op_eq_eq"></a>opérateur
 
 Teste si l’objet [unordered_map](../standard-library/unordered-map-class.md) situé à gauche de l’opérateur est égal à l’objet unordered_map situé à droite.
 
@@ -92,15 +92,15 @@ bool operator==(const unordered_map <Key, Type, Hash, Pred, Allocator>& left, co
 
 ### <a name="parameters"></a>Paramètres
 
-\ *gauche*
+*Gauche*\
 Objet de type `unordered_map`.
 
-\ *droit*
+*Oui*\
 Objet de type `unordered_map`.
 
 ### <a name="return-value"></a>Valeur de retour
 
-**true** si les unordered_maps sont égales ; **false** si elles ne sont pas égales.
+**vrai** si les unordered_maps sont égaux; **faux** s’ils ne sont pas égaux.
 
 ### <a name="remarks"></a>Notes
 
@@ -146,7 +146,7 @@ int main( )
 
 `um2 == um3: false`
 
-## <a name="op_neq_multimap"></a>  operator!=
+## <a name="operator"></a><a name="op_neq_multimap"></a>opérateur!
 
 Teste si l’objet [unordered_multimap](../standard-library/unordered-multimap-class.md) situé à gauche de l’opérateur n’est pas égal à l’objet unordered_multimap situé à droite.
 
@@ -156,15 +156,15 @@ bool operator!=(const unordered_multimap <Key, Type, Hash, Pred, Allocator>& lef
 
 ### <a name="parameters"></a>Paramètres
 
-\ *gauche*
+*Gauche*\
 Objet de type `unordered_multimap`.
 
-\ *droit*
+*Oui*\
 Objet de type `unordered_multimap`.
 
 ### <a name="return-value"></a>Valeur de retour
 
-**true** si les unordered_multimaps ne sont pas égaux ; **false** s’ils sont égaux.
+**vrai** si les unordered_multimaps ne sont pas égaux; **faux** s’ils sont égaux.
 
 ### <a name="remarks"></a>Notes
 
@@ -211,7 +211,7 @@ int main( )
 
 `um2 != um3: true`
 
-## <a name="op_eq_eq_multimap"></a>  operator==
+## <a name="operator"></a><a name="op_eq_eq_multimap"></a>opérateur
 
 Teste si l’objet [unordered_multimap](../standard-library/unordered-multimap-class.md) situé à gauche de l’opérateur est égal à l’objet unordered_multimap situé à droite.
 
@@ -221,15 +221,15 @@ bool operator==(const unordered_multimap <Key, Type, Hash, Pred, Allocator>& lef
 
 ### <a name="parameters"></a>Paramètres
 
-\ *gauche*
+*Gauche*\
 Objet de type `unordered_multimap`.
 
-\ *droit*
+*Oui*\
 Objet de type `unordered_multimap`.
 
 ### <a name="return-value"></a>Valeur de retour
 
-**true** si les unordered_multimaps sont égales ; **false** si elles ne sont pas égales.
+**vrai** si les unordered_multimaps sont égaux; **faux** s’ils ne sont pas égaux.
 
 ### <a name="remarks"></a>Notes
 

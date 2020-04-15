@@ -1,5 +1,5 @@
 ---
-title: CComObjectNoLock, classe
+title: Classe CComObjectNoLock
 ms.date: 11/04/2016
 f1_keywords:
 - CComObjectNoLock
@@ -11,16 +11,16 @@ f1_keywords:
 helpviewer_keywords:
 - CComObjectNoLock class
 ms.assetid: 288c6506-7da8-4127-8d58-7f4bd779539a
-ms.openlocfilehash: 9253c7495f4d13ed6ce609988251d8abd09592ad
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: c190f495e284e98b27a6c6dc2099a8dfc4b1693d
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69497035"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81327611"
 ---
-# <a name="ccomobjectnolock-class"></a>CComObjectNoLock, classe
+# <a name="ccomobjectnolock-class"></a>Classe CComObjectNoLock
 
-Cette classe implémente `IUnknown` pour un objet non agrégé, mais n’incrémente pas le nombre de verrous de module dans le constructeur.
+Cette classe `IUnknown` implémente pour un objet non agrégaté, mais n’incrémente pas le nombre de verrouillage du module dans le constructeur.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -41,21 +41,21 @@ Votre classe, dérivée de [CComObjectRoot](../../atl/reference/ccomobjectroot-c
 |Nom|Description|
 |----------|-----------------|
 |[CComObjectNoLock::CComObjectNoLock](#ccomobjectnolock)|Constructeur.|
-|[CComObjectNoLock::~CComObjectNoLock](#dtor)|Destructeur.|
+|[CComObjectNoLock: CComObjectNoLock](#dtor)|Destructeur.|
 
 ### <a name="public-methods"></a>M&#233;thodes publiques
 
 |Nom|Description|
 |----------|-----------------|
-|[CComObjectNoLock::AddRef](#addref)|Incrémente le décompte de références sur l’objet.|
-|[CComObjectNoLock::QueryInterface](#queryinterface)|Retourne un pointeur vers l’interface demandée.|
-|[CComObjectNoLock::Release](#release)|Décrémente le décompte de références sur l’objet.|
+|[CComObjectNoLock::AddRef](#addref)|Incréments le compte de référence sur l’objet.|
+|[CComObjectNoLock:QueryInterface](#queryinterface)|Retourne un pointeur à l’interface demandée.|
+|[CComObjectNoLock::Libération](#release)|Décroisse le compte de référence sur l’objet.|
 
 ## <a name="remarks"></a>Notes
 
-`CComObjectNoLock`est semblable à [CComObject](../../atl/reference/ccomobject-class.md) en ce qu’il implémente [IUnknown](/windows/win32/api/unknwn/nn-unknwn-iunknown) pour un objet non agrégé. Toutefois, `CComObjectNoLock` n’incrémente pas le nombre de verrous de module dans le constructeur.
+`CComObjectNoLock`est similaire à [CComObject](../../atl/reference/ccomobject-class.md) en ce qu’il implémente [IUnknown](/windows/win32/api/unknwn/nn-unknwn-iunknown) pour un objet non agrégaté; cependant, `CComObjectNoLock` n’incrémente pas le nombre de verrouillage de module dans le constructeur.
 
-ATL utilise `CComObjectNoLock` en interne pour les fabriques de classes. En général, vous n’utiliserez pas cette classe directement.
+ATL `CComObjectNoLock` utilise en interne pour les usines de classe. En général, vous n’utiliserez pas cette classe directement.
 
 ## <a name="inheritance-hierarchy"></a>Hiérarchie d'héritage
 
@@ -63,13 +63,13 @@ ATL utilise `CComObjectNoLock` en interne pour les fabriques de classes. En gén
 
 `CComObjectNoLock`
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
-**En-tête:** atlcom. h
+**En-tête:** atlcom.h
 
-##  <a name="addref"></a>  CComObjectNoLock::AddRef
+## <a name="ccomobjectnolockaddref"></a><a name="addref"></a>CComObjectNoLock::AddRef
 
-Incrémente le décompte de références sur l’objet.
+Incréments le compte de référence sur l’objet.
 
 ```
 STDMETHOD_(ULONG, AddRef)();
@@ -77,11 +77,11 @@ STDMETHOD_(ULONG, AddRef)();
 
 ### <a name="return-value"></a>Valeur de retour
 
-Valeur qui peut être utile pour les diagnostics ou les tests.
+Une valeur qui peut être utile pour le diagnostic ou les tests.
 
-##  <a name="ccomobjectnolock"></a>  CComObjectNoLock::CComObjectNoLock
+## <a name="ccomobjectnolockccomobjectnolock"></a><a name="ccomobjectnolock"></a>CComObjectNoLock::CComObjectNoLock
 
-Constructeur. Contrairement à [CComObject](../../atl/reference/ccomobject-class.md), n’incrémente pas le nombre de verrous de module.
+Constructeur. Contrairement à [CComObject](../../atl/reference/ccomobject-class.md), n’incrémente pas le nombre de verrous du module.
 
 ```
 CComObjectNoLock(void* = NULL);
@@ -90,9 +90,9 @@ CComObjectNoLock(void* = NULL);
 ### <a name="parameters"></a>Paramètres
 
 <em>void\*</em><br/>
-dans Ce paramètre sans nom n’est pas utilisé. Il existe pour la symétrie avec `CComXXXObjectXXX` d’autres constructeurs.
+[dans] Ce paramètre anonyme n’est pas utilisé. Il existe pour la symétrie avec d’autres `CComXXXObjectXXX` constructeurs.
 
-##  <a name="dtor"></a>  CComObjectNoLock::~CComObjectNoLock
+## <a name="ccomobjectnolockccomobjectnolock"></a><a name="dtor"></a>CComObjectNoLock: CComObjectNoLock
 
 Destructeur.
 
@@ -104,7 +104,7 @@ Destructeur.
 
 Libère toutes les ressources allouées et appelle [FinalRelease](ccomobjectrootex-class.md#finalrelease).
 
-##  <a name="queryinterface"></a>  CComObjectNoLock::QueryInterface
+## <a name="ccomobjectnolockqueryinterface"></a><a name="queryinterface"></a>CComObjectNoLock:QueryInterface
 
 Récupère un pointeur vers l'interface demandée.
 
@@ -114,19 +114,19 @@ STDMETHOD(QueryInterface)(REFIID iid, void** ppvObject);
 
 ### <a name="parameters"></a>Paramètres
 
-*iid*<br/>
-dans Identificateur de l’interface demandée.
+*Iid*<br/>
+[dans] L’identifiant de l’interface demandée.
 
 *ppvObject*<br/>
-à Pointeur vers le pointeur d’interface identifié par *IID*. Si l’objet ne prend pas en charge cette interface, *ppvObject* a la valeur null.
+[out] Un pointeur au pointeur d’interface identifié par *iid*. Si l’objet ne prend pas en charge cette interface, *ppvObject* est réglé sur NULL.
 
 ### <a name="return-value"></a>Valeur de retour
 
-Valeur HRESULT standard.
+Une valeur HRESULT standard.
 
-##  <a name="release"></a>  CComObjectNoLock::Release
+## <a name="ccomobjectnolockrelease"></a><a name="release"></a>CComObjectNoLock::Libération
 
-Décrémente le décompte de références sur l’objet.
+Décroisse le compte de référence sur l’objet.
 
 ```
 STDMETHOD_(ULONG, Release)();
@@ -134,8 +134,8 @@ STDMETHOD_(ULONG, Release)();
 
 ### <a name="return-value"></a>Valeur de retour
 
-Dans les versions Debug `Release` , retourne une valeur qui peut être utile pour les diagnostics ou les tests. Dans les versions sans débogage `Release` , retourne toujours 0.
+Dans les constructions `Release` de débog, retourne une valeur qui peut être utile pour le diagnostic ou les tests. Dans les constructions non-debug, `Release` retourne toujours 0.
 
 ## <a name="see-also"></a>Voir aussi
 
-[Vue d’ensemble de la classe](../../atl/atl-class-overview.md)
+[Vue d'ensemble des classes](../../atl/atl-class-overview.md)

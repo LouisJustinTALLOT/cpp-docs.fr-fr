@@ -1,5 +1,5 @@
 ---
-title: Cmfcribbonundobutton, classe
+title: CMFCRibbonUndoButton, classe
 ms.date: 11/04/2016
 f1_keywords:
 - CMFCRibbonUndoButton
@@ -16,16 +16,16 @@ helpviewer_keywords:
 - CMFCRibbonUndoButton [MFC], GetActionNumber
 - CMFCRibbonUndoButton [MFC], HasMenu
 ms.assetid: 5c42adf7-871d-4239-901e-47ae7fb816fc
-ms.openlocfilehash: cd657ac035c004e7aa9bfcd2f6dbd2f3c90da80c
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: f30e6f78b0988b791617ee0926cf649377972ce2
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62410085"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81368811"
 ---
-# <a name="cmfcribbonundobutton-class"></a>Cmfcribbonundobutton, classe
+# <a name="cmfcribbonundobutton-class"></a>CMFCRibbonUndoButton, classe
 
-Le `CMFCRibbonUndoButton` classe implémente un bouton de liste déroulante qui contient les commandes utilisateur plus récente. Les utilisateurs peuvent sélectionner un ou plusieurs des commandes plus récente dans la liste déroulante de restauration par progression ou les annuler.
+La `CMFCRibbonUndoButton` classe implémente un bouton de liste d’abandon qui contient les commandes utilisateur les plus récentes. Les utilisateurs peuvent sélectionner une ou plusieurs des commandes les plus récentes de la liste d’abandon pour les refaire ou les défaire.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -39,24 +39,24 @@ class CMFCRibbonUndoButton : public CMFCRibbonGallery
 
 |Nom|Description|
 |----------|-----------------|
-|[CMFCRibbonUndoButton::CMFCRibbonUndoButton](#cmfcribbonundobutton)|Construit un nouvel `CMFCRibbonUndoButton` objet à l’aide de l’ID de commande que vous spécifiez, étiquette de texte et des images à partir de la liste d’images de l’objet parent.|
+|[CMFCRibbonUndoButton::CMFCRibbonUndoButton](#cmfcribbonundobutton)|Construit un `CMFCRibbonUndoButton` nouvel objet en utilisant l’ID de commande que vous spécifiez, l’étiquette de texte et les images de la liste d’images de l’objet parent.|
 
 ### <a name="public-methods"></a>M&#233;thodes publiques
 
 |Nom|Description|
 |----------|-----------------|
-|[CMFCRibbonUndoButton::AddUndoAction](#addundoaction)|Ajoute une nouvelle action à la liste d’actions.|
-|[CMFCRibbonUndoButton::CleanUpUndoList](#cleanupundolist)|Efface la liste d’actions, qui est la liste déroulante.|
-|[CMFCRibbonUndoButton::GetActionNumber](#getactionnumber)|Détermine le nombre d’éléments dont un utilisateur a sélectionné dans la liste déroulante.|
+|[CMFCRibbonUndoButton::AddUndoAction](#addundoaction)|Ajoute une nouvelle action à la liste des actions.|
+|[CMFCRibbonUndoButton::CleanUpUndoList](#cleanupundolist)|Efface la liste d’action, qui est la liste d’abandon.|
+|[CMFCRibbonUndoButton::GetActionNumber](#getactionnumber)|Détermine le nombre d’éléments qu’un utilisateur a sélectionnés dans la liste d’abandon.|
 |[CMFCRibbonUndoButton::HasMenu](#hasmenu)|Indique si l’objet contient un menu.|
 
 ## <a name="remarks"></a>Notes
 
-Le `CMFCRibbonUndoButton` classe utilise une pile pour représenter la liste déroulante.
+La `CMFCRibbonUndoButton` classe utilise une pile pour représenter la liste des dépôts.
 
 ## <a name="example"></a>Exemple
 
-L’exemple suivant montre comment construire un objet de la `CMFCRibbonUndoButton` classe et ajoutez une nouvelle action à la liste des actions. Cet extrait de code fait partie de la [exemples de Gadgets de ruban](../../overview/visual-cpp-samples.md).
+L’exemple suivant montre comment construire `CMFCRibbonUndoButton` un objet de la classe, et ajouter une nouvelle action à la liste des actions. Cet extrait de code fait partie de [l’échantillon De gadgets ruban](../../overview/visual-cpp-samples.md).
 
 [!code-cpp[NVC_MFC_RibbonGadgets#2](../../mfc/reference/codesnippet/cpp/cmfcribbonundobutton-class_1.cpp)]
 
@@ -72,13 +72,13 @@ L’exemple suivant montre comment construire un objet de la `CMFCRibbonUndoButt
 
 [CMFCRibbonUndoButton](../../mfc/reference/cmfcribbonundobutton-class.md)
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
-**En-tête :** afxribbonundobutton.h
+**En-tête:** afxribbonundobutton.h
 
-##  <a name="addundoaction"></a>  CMFCRibbonUndoButton::AddUndoAction
+## <a name="cmfcribbonundobuttonaddundoaction"></a><a name="addundoaction"></a>CMFCRibbonUndoButton::AddUndoAction
 
-Ajoute une nouvelle action à la liste d’actions.
+Ajoute une nouvelle action à la liste des actions.
 
 ```
 void AddUndoAction(LPCTSTR lpszLabel);
@@ -87,19 +87,19 @@ void AddUndoAction(LPCTSTR lpszLabel);
 ### <a name="parameters"></a>Paramètres
 
 *lpszLabel*<br/>
-[in] L’étiquette d’action qui s’affichera dans la liste déroulante.
+[dans] L’étiquette d’action qui sera affichée dans la liste d’abandon.
 
-##  <a name="cleanupundolist"></a>  CMFCRibbonUndoButton::CleanUpUndoList
+## <a name="cmfcribbonundobuttoncleanupundolist"></a><a name="cleanupundolist"></a>CMFCRibbonUndoButton::CleanUpUndoList
 
-Efface la liste d’actions, qui est la liste déroulante.
+Efface la liste d’action, qui est la liste d’abandon.
 
 ```
 void CleanUpUndoList();
 ```
 
-##  <a name="cmfcribbonundobutton"></a>  CMFCRibbonUndoButton::CMFCRibbonUndoButton
+## <a name="cmfcribbonundobuttoncmfcribbonundobutton"></a><a name="cmfcribbonundobutton"></a>CMFCRibbonUndoButton::CMFCRibbonUndoButton
 
-Construit un nouvel `CMFCRibbonUndoButton` objet à l’aide de l’ID de commande que vous spécifiez, étiquette de texte et des images à partir de la liste d’images de l’objet parent.
+Construit un `CMFCRibbonUndoButton` nouvel objet en utilisant l’ID de commande que vous spécifiez, l’étiquette de texte et les images de la liste d’images de l’objet parent.
 
 ```
 CMFCRibbonUndoButton(
@@ -117,23 +117,23 @@ CMFCRibbonUndoButton(
 ### <a name="parameters"></a>Paramètres
 
 *nID*<br/>
-[in] Spécifie l’identificateur de commande.
+[dans] Spécifie l’identifiant de commande.
 
 *lpszText*<br/>
-[in] Spécifie l’étiquette de texte du bouton.
+[dans] Spécifie l’étiquette de texte du bouton.
 
 *nSmallImageIndex*<br/>
-[in] Index de base zéro dans la liste d’images de l’objet parent pour l’image du bouton petit.
+[dans] Index basé sur zéro dans la liste d’images de l’objet parent pour la petite image du bouton.
 
 *nLargeImageIndex*<br/>
-[in] Index de base zéro dans la liste d’images de l’objet parent pour le d’image de grande taille du bouton.
+[dans] Index basé sur zéro dans la liste d’images de l’objet parent pour la grande image du bouton.
 
-*hIcon*<br/>
-[in] Un handle d’une icône que vous pouvez utiliser en tant qu’image d’un bouton.
+*hIcon (en)*<br/>
+[dans] Une poignée à une icône que vous pouvez utiliser comme image d’un bouton.
 
-##  <a name="getactionnumber"></a>  CMFCRibbonUndoButton::GetActionNumber
+## <a name="cmfcribbonundobuttongetactionnumber"></a><a name="getactionnumber"></a>CMFCRibbonUndoButton::GetActionNumber
 
-Détermine le nombre d’éléments dont un utilisateur a sélectionné dans la liste déroulante.
+Détermine le nombre d’éléments qu’un utilisateur a sélectionnés dans la liste d’abandon.
 
 ```
 int GetActionNumber() const;
@@ -141,9 +141,9 @@ int GetActionNumber() const;
 
 ### <a name="return-value"></a>Valeur de retour
 
-Le nombre d’éléments sélectionné par un utilisateur.
+Nombre d’éléments sélectionnés par un utilisateur.
 
-##  <a name="hasmenu"></a>  CMFCRibbonUndoButton::HasMenu
+## <a name="cmfcribbonundobuttonhasmenu"></a><a name="hasmenu"></a>CMFCRibbonUndoButton::HasMenu
 
 Indique si l’objet contient un menu.
 
@@ -153,7 +153,7 @@ virtual BOOL HasMenu() const;
 
 ### <a name="return-value"></a>Valeur de retour
 
-Renvoie toujours TRUE.
+Retourne toujours VRAI.
 
 ### <a name="remarks"></a>Notes
 
@@ -161,5 +161,5 @@ Renvoie toujours TRUE.
 
 [Graphique hiérarchique](../../mfc/hierarchy-chart.md)<br/>
 [Classes](../../mfc/reference/mfc-classes.md)<br/>
-[CMFCRibbonGallery, classe](../../mfc/reference/cmfcribbongallery-class.md)<br/>
+[Classe CMFCRibbonGallery](../../mfc/reference/cmfcribbongallery-class.md)<br/>
 [CMFCRibbonButton, classe](../../mfc/reference/cmfcribbonbutton-class.md)

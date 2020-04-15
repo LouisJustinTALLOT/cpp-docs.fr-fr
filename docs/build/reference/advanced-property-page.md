@@ -1,27 +1,27 @@
 ---
-title: Page de propriétés avancé (projet)
+title: Page de propriété avancée (Projet)
 ms.date: 07/19/2019
 f1_keywords:
 - VC.Project.VCConfiguration.VCToolsVersion
 ms.description: Use the Advanced property page in Visual Studio 2019 to set various properties for C++ projects.
-ms.openlocfilehash: fae3c76d4a62e3b0409664b3630ad76ab601c52b
-ms.sourcegitcommit: 610751254a01cba6ad15fb1e1764ecb2e71f66bf
+ms.openlocfilehash: 8ce62b768f5cda30501e791bcd040a40b18bfb23
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/18/2019
-ms.locfileid: "68315528"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81328428"
 ---
-# <a name="advanced-property-page"></a>Page de propriétés avancé
+# <a name="advanced-property-page"></a>Page de propriété avancée
 
-La page de propriétés avancé est disponible dans Visual Studio 2019 et versions ultérieures.
+La page de propriété Advanced est disponible en Visual Studio 2019 et plus tard.
 
 ::: moniker range="vs-2019"
 
 ## <a name="advanced-properties"></a>Propriétés avancées
 
-- **Extension de fichier cible**
+- **Extension du fichier cible**
 
-   Spécifie l’extension de fichier à utiliser pour la sortie de la génération. La valeur par défaut est **. exe** pour les applications, **. lib** pour les bibliothèques statiques et **. dll** pour les dll.
+   Spécifie l’extension de fichier à utiliser pour la sortie de construction. Par défaut de **.exe** pour les applications, **.lib** pour les bibliothèques statiques et **.dll** pour DLLs.
 
 - **Extensions à supprimer lors du nettoyage**
 
@@ -33,19 +33,19 @@ La page de propriétés avancé est disponible dans Visual Studio 2019 et versio
 
    Vous permet de spécifier un emplacement autre que l'emplacement par défaut pour le fichier journal créé chaque fois que vous générez un projet. L’emplacement par défaut est spécifié par les macros $(IntDir)$(MSBuildProjectName).log.
 
-   Vous pouvez utiliser des macros de projet pour modifier l'emplacement du répertoire. Consultez [les macros courantes pour les propriétés et les commandes de génération](common-macros-for-build-commands-and-properties.md).
+   Vous pouvez utiliser des macros de projet pour modifier l'emplacement du répertoire. Voir [macros communes pour les commandes de construction et les propriétés](common-macros-for-build-commands-and-properties.md).
 
-- **Architecture de l’outil de génération par défaut**
+- **Architecture d’outil de construction préférée**
 
-   Spécifie s’il faut utiliser les outils de génération x86 ou x64.
+   Précise s’il faut utiliser les outils de construction x86 ou x64.
 
-- **Utiliser les bibliothèques de débogage**
+- **Utiliser les bibliothèques Debug**
 
-   Spécifie s’il faut créer une version DEBUG ou RELEASE.
+   Précise s’il faut créer une construction DEBUG ou RELEASE.
 
-- **Activer la build Unity (JUMBO)**
+- **Activer la construction d’Unité (JUMBO)**
 
-   Active un processus de génération dans C++ lequel de nombreux fichiers sources sont combinés en un ou plusieurs fichiers «Unity» avant la compilation pour améliorer les performances de génération. Non lié au moteur de jeu Unity.
+   Permet un processus de construction où de nombreux fichiers source CMD sont combinés dans un ou plusieurs fichiers « unité » avant compilation pour améliorer les performances de construction. Sans rapport avec le moteur de jeu Unity.
 
 - **Utilisation des MFC**
 
@@ -53,21 +53,21 @@ La page de propriétés avancé est disponible dans Visual Studio 2019 et versio
 
    Pour accéder par programmation à cette propriété, consultez <xref:Microsoft.VisualStudio.VCProject.VCProjectConfigurationProperties.useOfMfc%2A>.
 
-- **Jeu de caractères**
+- **Ensemble de caractères**
 
    Définit si _UNICODE ou _MBCS doit être défini. Affecte également le point d'entrée de l'éditeur de liens le cas échéant.
 
    Pour accéder par programmation à cette propriété, consultez <xref:Microsoft.VisualStudio.VCProject.VCProjectConfigurationProperties.CharacterSet%2A>.
 
-- **Optimisation de l’ensemble du programme**
+- **Optimisation de l'ensemble du programme**
 
    Spécifie l’option du compilateur [/GL](gl-whole-program-optimization.md) et l’option de l’éditeur de liens [/LTCG](ltcg-link-time-code-generation.md). Par défaut, cette option est désactivée pour les configurations Debug, et activée pour les configurations Retail.
 
-- **Version de l’ensemble d’outils MSVC**
+- **MSVC Toolset Version**
 
-   Spécifie la version complète de l’ensemble d’outils MSVC qui sera utilisée pour générer le projet. Si vous avez installé plusieurs versions de mise à jour et de préversion d’un ensemble d’outils, vous pouvez spécifier celui à utiliser ici.
+   Spécifie la version complète de l’ensemble d’outils MSVC qui sera utilisé pour construire le projet. Si vous avez différentes versions de mise à jour et de prévisualisation d’un toolset installé, vous pouvez spécifier lequel utiliser ici.
 
-## <a name="ccli-properties"></a>C++Propriétés/CLI
+## <a name="ccli-properties"></a>Propriétés CMD/CLI
 
 - **Prise en charge du Common Language Runtime**
 
