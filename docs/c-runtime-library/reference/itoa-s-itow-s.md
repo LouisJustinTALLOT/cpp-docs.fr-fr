@@ -1,6 +1,6 @@
 ---
-title: _itoa_s, _itow_s, fonctions
-ms.date: 03/21/2018
+title: _itoa_s, _itow_s fonctions
+ms.date: 4/2/2020
 api_name:
 - _itoa_s
 - _ltoa_s
@@ -12,6 +12,16 @@ api_name:
 - _ultow_s
 - _i64tow_s
 - _ui64tow_s
+- _o__i64toa_s
+- _o__i64tow_s
+- _o__itoa_s
+- _o__itow_s
+- _o__ltoa_s
+- _o__ltow_s
+- _o__ui64toa_s
+- _o__ui64tow_s
+- _o__ultoa_s
+- _o__ultow_s
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -25,6 +35,7 @@ api_location:
 - ucrtbase.dll
 - api-ms-win-crt-convert-l1-1-0.dll
 - ntoskrnl.exe
+- api-ms-win-crt-private-l1-1-0
 api_type:
 - DLLExport
 topic_type:
@@ -79,16 +90,16 @@ helpviewer_keywords:
 - _ui64tot_s function
 - _i64toa_s function
 ms.assetid: eb746581-bff3-48b5-a973-bfc0a4478ecf
-ms.openlocfilehash: df7f3ec970e0205ab999d1a04299a22dcc422d42
-ms.sourcegitcommit: 0cfc43f90a6cc8b97b24c42efcf5fb9c18762a42
+ms.openlocfilehash: f392bb1dbcafd1666d082163190c4e988c7f1ab1
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/05/2019
-ms.locfileid: "73625068"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81342616"
 ---
 # <a name="_itoa_s-_ltoa_s-_ultoa_s-_i64toa_s-_ui64toa_s-_itow_s--_ltow_s--_ultow_s-_i64tow_s-_ui64tow_s"></a>_itoa_s, _ltoa_s, _ultoa_s, _i64toa_s, _ui64toa_s, _itow_s, _ltow_s, _ultow_s, _i64tow_s, _ui64tow_s
 
-Convertit un entier en chaîne. Il s’agit de versions des [fonctions _itoa, _itow](itoa-itow.md) avec des améliorations de sécurité, comme décrit dans [fonctionnalités de sécurité dans le CRT](../../c-runtime-library/security-features-in-the-crt.md).
+Convertit un entier en chaîne. Ce sont des versions de la [_itoa, _itow fonctions](itoa-itow.md) avec des améliorations de sécurité comme décrit dans [les caractéristiques de sécurité dans le CRT](../../c-runtime-library/security-features-in-the-crt.md).
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -135,44 +146,46 @@ errno_t _ultow_s( unsigned long value, wchar_t (&buffer)[size], int radix );
 
 ### <a name="parameters"></a>Paramètres
 
-*valeur*<br/>
+*value*<br/>
 Nombre à convertir.
 
 *buffer*<br/>
-Mémoire tampon de sortie qui contient le résultat de la conversion.
+Tampon de sortie qui détient le résultat de la conversion.
 
-*size*<br/>
-Taille de la *mémoire tampon* en caractères ou caractères larges.
+*Taille*<br/>
+Taille de *tampon* dans les caractères ou les personnages larges.
 
-*radix*<br/>
-Base ou valeur numérique à utiliser pour convertir la *valeur*, qui doit être comprise dans la plage 2-36.
+*Radix*<br/>
+Le radix ou la base numérique à utiliser pour convertir la *valeur*, qui doit être dans la gamme 2-36.
 
-## <a name="return-value"></a>Valeur de retour
+## <a name="return-value"></a>Valeur retournée
 
 Zéro si l'opération a réussi ; code d'erreur en cas de échec. Si l’une des conditions suivantes s’applique, la fonction appelle un gestionnaire de paramètres non valides, comme décrit dans [Validation de paramètre](../../c-runtime-library/parameter-validation.md).
 
 ### <a name="error-conditions"></a>Conditions d’erreur
 
-|valeur|buffer|size|radix|Return|
+|value|buffer|taille|radix|Renvoie|
 |-----------|------------|----------------------|-----------|------------|
-|indifférent|**NULL**|indifférent|indifférent|**EINVAL**|
-|indifférent|indifférent|<=0|indifférent|**EINVAL**|
-|indifférent|indifférent|<= longueur de la chaîne de résultat requise|indifférent|**EINVAL**|
-|indifférent|indifférent|indifférent|*base* < 2 ou *base* > 36|**EINVAL**|
+|n'importe laquelle|**Null**|n'importe laquelle|n'importe laquelle|**EINVAL (EN)**|
+|n'importe laquelle|n'importe laquelle|<=0|n'importe laquelle|**EINVAL (EN)**|
+|n'importe laquelle|n'importe laquelle|<= longueur de la chaîne de résultat requise|n'importe laquelle|**EINVAL (EN)**|
+|n'importe laquelle|n'importe laquelle|n'importe laquelle|*radix* < 2 ou *radix* > 36|**EINVAL (EN)**|
 
 ### <a name="security-issues"></a>Problèmes de sécurité
 
-Ces fonctions peuvent générer une violation d’accès si la mémoire *tampon* ne pointe pas vers une mémoire valide et n’a pas la **valeur null**, ou si la longueur de la mémoire tampon n’est pas suffisamment longue pour contenir la chaîne de résultat.
+Ces fonctions peuvent générer une violation d’accès si *le tampon* ne pointe pas vers la mémoire valide et n’est pas **NULL**, ou si la longueur du tampon n’est pas assez longue pour tenir la chaîne de résultat.
 
 ## <a name="remarks"></a>Notes
 
-À l’exception des paramètres et de la valeur de retour, les familles de fonctions **_itoa_s** et **_itow_s** ont le même comportement que les versions **_itoa** et **_itow** les moins sécurisées correspondantes.
+À l’exception des paramètres et de la valeur de retour, les familles **de fonctions _itoa_s** et **_itow_s** ont le même comportement que les versions **_itoa** et **_itow** moins sécurisées correspondantes.
 
 En C++, l’utilisation de ces fonctions est simplifiée par les surcharges de modèle ; les surcharges peuvent déduire la longueur de la mémoire tampon automatiquement (ce qui évite d’avoir à spécifier un argument taille) et peuvent remplacer automatiquement les fonctions plus anciennes et non sécurisées par leurs équivalentes plus récentes et sécurisées. Pour plus d’informations, consultez [Sécuriser les surcharges de modèle](../../c-runtime-library/secure-template-overloads.md).
 
-Les versions de la bibliothèque de débogage de ces fonctions remplissent d’abord la mémoire tampon avec 0xFE. Pour désactiver ce comportement, utilisez [_CrtSetDebugFillThreshold](crtsetdebugfillthreshold.md).
+Les versions de bibliothèque de débogé de ces fonctions remplissent d’abord le tampon avec 0xFE. Pour désactiver ce comportement, utilisez [_CrtSetDebugFillThreshold](crtsetdebugfillthreshold.md).
 
-Le CRT inclut des macros pratiques pour définir la taille de la mémoire tampon requise pour convertir la valeur la plus longue possible de chaque type entier, y compris le terminateur null et le signe, pour plusieurs bases communes. Pour plus d’informations, consultez [macros nombre maximal de conversions](itoa-itow.md#maximum-conversion-count-macros).
+Le CRT comprend des macros pratiques pour définir la taille du tampon nécessaire pour convertir la plus longue valeur possible de chaque type d’intégrateur, y compris le terminateur nul et le caractère de signe, pour plusieurs bases communes. Pour plus d’informations, voir [Macros de nombre de conversions maximales](itoa-itow.md#maximum-conversion-count-macros).
+
+Par défaut, l’état global de cette fonction est étendue à l’application. Pour changer cela, voir [Global State dans le CRT](../global-state.md).
 
 ### <a name="generic-text-routine-mappings"></a>Mappages de routines de texte générique
 
@@ -184,18 +197,18 @@ Le CRT inclut des macros pratiques pour définir la taille de la mémoire tampon
 |**_i64tot_s**|**_i64toa_s**|**_i64toa_s**|**_i64tow_s**|
 |**_ui64tot_s**|**_ui64toa_s**|**_ui64toa_s**|**_ui64tow_s**|
 
-## <a name="requirements"></a>spécifications
+## <a name="requirements"></a>Spécifications
 
 |Routine|En-tête requis|
 |-------------|---------------------|
 |**_itoa_s**, **_ltoa_s**, **_ultoa_s**, **_i64toa_s**, **_ui64toa_s**|\<stdlib.h>|
 |**_itow_s**, **_ltow_s**, **_ultow_s**, **_i64tow_s**, **_ui64tow_s**|\<stdlib.h> ou \<wchar.h>|
 
-Ces fonctions sont spécifiques à Microsoft. Pour plus d’informations sur la compatibilité, voir [Compatibilité](../../c-runtime-library/compatibility.md).
+Ces fonctions sont spécifiques à Microsoft. Pour plus d’informations sur la compatibilité, consultez [Compatibility](../../c-runtime-library/compatibility.md).
 
 ## <a name="example"></a>Exemple
 
-Cet exemple illustre l’utilisation de quelques fonctions de conversion d’entier. Notez que la macro [_countof](countof-macro.md) ne fonctionne que pour déterminer la taille de la mémoire tampon lorsque la déclaration de tableau est visible pour le compilateur, et non pour les paramètres qui ont été déconseillés pour les pointeurs.
+Cet échantillon démontre l’utilisation de quelques-unes des fonctions de conversion d’intégrants. Notez que la [_countof](countof-macro.md) macro ne fonctionne que pour déterminer la taille du tampon lorsque la déclaration de tableau est visible pour le compilateur, et non pas pour les paramètres qui ont pourri les pointeurs.
 
 ```C
 // crt_itoa_s.c
@@ -266,4 +279,4 @@ base 2: 1111111111111111111111111111111111111111111111111111111111111111 (64 cha
 ## <a name="see-also"></a>Voir aussi
 
 [Conversion de données](../../c-runtime-library/data-conversion.md)<br/>
-[_itoa, _itow, fonctions](itoa-itow.md)<br/>
+[_itoa, _itow fonctions](itoa-itow.md)<br/>

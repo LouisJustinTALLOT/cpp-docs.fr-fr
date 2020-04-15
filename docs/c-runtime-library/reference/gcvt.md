@@ -1,8 +1,9 @@
 ---
 title: _gcvt
-ms.date: 04/05/2018
+ms.date: 4/2/2020
 api_name:
 - _gcvt
+- _o__gcvt
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -15,6 +16,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-convert-l1-1-0.dll
+- api-ms-win-crt-private-l1-1-0
 api_type:
 - DLLExport
 topic_type:
@@ -31,12 +33,12 @@ helpviewer_keywords:
 - strings [C++], converting from floating point
 - CVTBUFSIZE
 ms.assetid: 5761411e-c06b-409a-912f-810fe7f4bcb5
-ms.openlocfilehash: 3618f5571275783131c74c89f29218f89023f70e
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: f161256c6dc86a045f49111cde3651bea08ead11
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70956101"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81345317"
 ---
 # <a name="_gcvt"></a>_gcvt
 
@@ -57,7 +59,7 @@ char *_gcvt(
 *value*<br/>
 Valeur à convertir.
 
-*digits*<br/>
+*chiffres*<br/>
 Nombre de chiffres significatifs stockés.
 
 *buffer*<br/>
@@ -65,23 +67,25 @@ Emplacement de stockage pour le résultat.
 
 ## <a name="return-value"></a>Valeur de retour
 
-**_gcvt** retourne un pointeur vers la chaîne de chiffres.
+**_gcvt** renvoie un pointeur à la chaîne de chiffres.
 
 ## <a name="remarks"></a>Notes
 
-La fonction **_gcvt** convertit une *valeur* à virgule flottante en une chaîne de caractères (qui comprend une virgule décimale et un octet de signe possible) et stocke la chaîne dans la *mémoire tampon*. La *mémoire tampon* doit être suffisamment grande pour accueillir la valeur convertie plus un caractère null de fin, qui est ajouté automatiquement. Si une taille de mémoire tampon de *chiffres* + 1 est utilisée, la fonction remplace la fin de la mémoire tampon. En effet, la chaîne convertie comprend une virgule décimale et peut contenir des informations de signe et d’exposant. Le dépassement n’est pas pris en charge. **_gcvt** tente de produire des chiffres de *chiffres* au format décimal. Si ce n’est pas le cas, il génère des chiffres de *chiffres* au format exponentiel. Les zéros de fin peuvent être supprimés pendant la conversion.
+La fonction **_gcvt** convertit une *valeur* de point flottant en une chaîne de caractère (qui comprend un point décimal et un byte de signe possible) et stocke la chaîne dans *le tampon.* Le *tampon* doit être suffisamment grand pour tenir compte de la valeur convertie plus un caractère nul de fin, qui est joint automatiquement. Si une taille tampon de *chiffres* 1 est utilisée, la fonction dépasse l’extrémité du tampon. En effet, la chaîne convertie comprend une virgule décimale et peut contenir des informations de signe et d’exposant. Le dépassement n’est pas pris en charge. **_gcvt** tente de produire des *chiffres* de chiffres en format décimal. Si elle ne peut pas, il produit *des chiffres* de chiffres en format exponentiel. Les zéros de fin peuvent être supprimés pendant la conversion.
 
-Une *mémoire tampon* de longueur **_CVTBUFSIZE** est suffisante pour toute valeur à virgule flottante.
+Un *tampon* de longueur **_CVTBUFSIZE** est suffisant pour toute valeur de point flottant.
 
-Cette fonction valide ses paramètres. Si *buffer* a la **valeur null**, le gestionnaire de paramètres non valides est appelé, comme décrit dans [validation de paramètre](../../c-runtime-library/parameter-validation.md). Si l’exécution est autorisée à se poursuivre, cette fonction affecte à **errno** la **valeur** **EINVAL** et retourne null.
+Cette fonction valide ses paramètres. Si *le tampon* est **NULL**, le gestionnaire de paramètre invalide est invoqué, tel que décrit dans la validation [de paramètres](../../c-runtime-library/parameter-validation.md). Si l’exécution est autorisée à se poursuivre, cette fonction définit **errno** à **EINVAL** et retourne **NULL**.
 
-## <a name="requirements"></a>Configuration requise
+Par défaut, l’état global de cette fonction est étendue à l’application. Pour changer cela, voir [Global State dans le CRT](../global-state.md).
+
+## <a name="requirements"></a>Spécifications
 
 |Routine|En-tête requis|
 |-------------|---------------------|
 |**_gcvt**|\<stdlib.h>|
 
-Pour plus d'informations sur la compatibilité, voir [Compatibilité](../../c-runtime-library/compatibility.md).
+Pour plus d’informations sur la compatibilité, consultez [Compatibility](../../c-runtime-library/compatibility.md).
 
 ## <a name="example"></a>Exemple
 
@@ -142,7 +146,7 @@ buffer: '-1.23456789012e-002' (19 chars)
 ## <a name="see-also"></a>Voir aussi
 
 [Conversion de données](../../c-runtime-library/data-conversion.md)<br/>
-[Prise en charge de la virgule flottante](../../c-runtime-library/floating-point-support.md)<br/>
+[Soutien à la pointe flottante](../../c-runtime-library/floating-point-support.md)<br/>
 [atof, _atof_l, _wtof, _wtof_l](atof-atof-l-wtof-wtof-l.md)<br/>
 [_ecvt](ecvt.md)<br/>
 [_fcvt](fcvt.md)<br/>

@@ -1,5 +1,5 @@
 ---
-title: IAtlAutoThreadModule Class
+title: Classe IAtlAutoThreadModule
 ms.date: 11/04/2016
 f1_keywords:
 - IAtlAutoThreadModule
@@ -7,19 +7,19 @@ f1_keywords:
 helpviewer_keywords:
 - IAtlAutoThreadModule class
 ms.assetid: fcb58cf9-a427-4be9-89eb-04e1ab5cc3a1
-ms.openlocfilehash: f65ce43f3e88e1bbff0d2fc012b4ca75d77efc80
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: e4528ca4e4d72518f4da9f30e7aa71d951ddaf5b
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62276365"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81330073"
 ---
-# <a name="iatlautothreadmodule-class"></a>IAtlAutoThreadModule Class
+# <a name="iatlautothreadmodule-class"></a>Classe IAtlAutoThreadModule
 
-Cette classe représente une interface pour un `CreateInstance` (méthode).
+Cette classe représente une `CreateInstance` interface à une méthode.
 
 > [!IMPORTANT]
->  Cette classe et ses membres ne peut pas être utilisés dans les applications qui s’exécutent dans le Windows Runtime.
+> Cette classe et ses membres ne peuvent pas être utilisés dans les applications qui s’exécutent dans le Windows Runtime.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -29,12 +29,12 @@ __interface IAtlAutoThreadModule
 
 ## <a name="remarks"></a>Notes
 
-La classe [CAtlAutoThreadModuleT](../../atl/reference/catlautothreadmodulet-class.md) dérive `IAtlAutoThreadModule`, à l’aide de la fournir du code pour la création d’un objet et l’extraction d’un pointeur d’interface.
+La classe [CAtlAutoThreadModuleT](../../atl/reference/catlautothreadmodulet-class.md) `IAtlAutoThreadModule`dérive de , l’utiliser pour fournir du code pour créer un objet et récupérer un pointeur d’interface.
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
-**En-tête :** atlbase.h
+**En-tête:** atlbase.h
 
 ## <a name="see-also"></a>Voir aussi
 
-[Vue d’ensemble de la classe](../../atl/atl-class-overview.md)
+[Vue d'ensemble des classes](../../atl/atl-class-overview.md)

@@ -9,16 +9,16 @@ f1_keywords:
 helpviewer_keywords:
 - runtime_exception class
 ms.assetid: 8fe3ce2c-3d4c-4b9c-95e8-e592f37adefd
-ms.openlocfilehash: 6ad784720833d2ae5de7d653d132ba144aec2677
-ms.sourcegitcommit: a8ef52ff4a4944a1a257bdaba1a3331607fb8d0f
+ms.openlocfilehash: ff54357055d373db98f469b071edc75fce75e0b4
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/11/2020
-ms.locfileid: "77126374"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81336799"
 ---
 # <a name="runtime_exception-class"></a>runtime_exception (classe)
 
-Type de base pour les exceptions dans C++ la bibliothèque amp (Accelerated massive parallelism).
+Le type de base pour les exceptions dans la bibliothèque de parallélisme massif accéléré (AMP).
 
 ### <a name="syntax"></a>Syntaxe
 
@@ -30,22 +30,22 @@ class runtime_exception : public std::exception;
 
 ### <a name="public-constructors"></a>Constructeurs publics
 
-|Name|Description|
+|Nom|Description|
 |----------|-----------------|
-|[Constructeur runtime_exception](#ctor)|Initialise une nouvelle instance de la classe `runtime_exception`.|
-|[Destructeur ~ runtime_exception](#dtor)|Détruit l’objet `runtime_exception`.|
+|[runtime_exception Constructeur](#ctor)|Initialise une nouvelle instance de la classe `runtime_exception`.|
+|[Destructeur runtime_exception](#dtor)|Détruit l’objet. `runtime_exception`|
 
 ### <a name="public-methods"></a>M&#233;thodes publiques
 
-|Name|Description|
+|Nom|Description|
 |----------|-----------------|
-|[get_error_code](#get_error_code)|Retourne le code d’erreur qui a provoqué l’exception.|
+|[get_error_code](#get_error_code)|Retourne le code d’erreur qui a causé l’exception.|
 
 ### <a name="public-operators"></a>Op&#233;rateurs publics
 
-|Name|Description|
+|Nom|Description|
 |----------|-----------------|
-|[operator=](#operator_eq)|Copie le contenu de l’objet `runtime_exception` spécifié dans celui-ci.|
+|[opérateur](#operator_eq)|Copie le contenu `runtime_exception` de l’objet spécifié dans celui-ci.|
 
 ## <a name="inheritance-hierarchy"></a>Hiérarchie d'héritage
 
@@ -55,11 +55,11 @@ class runtime_exception : public std::exception;
 
 ## <a name="requirements"></a>Spécifications
 
-**En-tête :** amprt. h
+**En-tête:** amprt.h
 
 **Espace de noms :** Concurrency
 
-## <a name="ctor"></a>Constructeur runtime_exception
+## <a name="runtime_exception-constructor"></a><a name="ctor"></a>runtime_exception Constructeur
 
 Initialise une nouvelle instance de la classe.
 
@@ -80,10 +80,10 @@ runtime_exception(
 ### <a name="parameters"></a>Paramètres
 
 *_Message*<br/>
-Description de l’erreur qui a provoqué l’exception.
+Une description de l’erreur qui a causé l’exception.
 
 *_Hresult*<br/>
-HRESULT de l’erreur qui a provoqué l’exception.
+Le HRESULT de l’erreur qui a causé l’exception.
 
 *_Other*<br/>
 Objet `runtime_exception` à copier.
@@ -92,7 +92,7 @@ Objet `runtime_exception` à copier.
 
 Objet `runtime_exception`.
 
-## <a name="dtor"></a>Destructeur ~ runtime_exception
+## <a name="runtime_exception-destructor"></a><a name="dtor"></a>Destructeur runtime_exception
 
 Détruit l'objet.
 
@@ -102,9 +102,9 @@ Détruit l'objet.
 virtual ~runtime_exception() throw();
 ```
 
-## <a name="get_error_code"></a>get_error_code
+## <a name="get_error_code"></a><a name="get_error_code"></a>get_error_code
 
-Retourne le code d’erreur qui a provoqué l’exception.
+Retourne le code d’erreur qui a causé l’exception.
 
 ### <a name="syntax"></a>Syntaxe
 
@@ -114,10 +114,11 @@ HRESULT get_error_code() const throw();
 
 ### <a name="return-value"></a>Valeur de retour
 
-HRESULT de l’erreur qui a provoqué l’exception.
+Le HRESULT de l’erreur qui a causé l’exception.
 
-## <a name="operator_eq"></a>  operator=
-  Copie le contenu de l’objet `runtime_exception` spécifié dans celui-ci.
+## <a name="operator"></a><a name="operator_eq"></a>opérateur
+
+Copie le contenu `runtime_exception` de l’objet spécifié dans celui-ci.
 
 ### <a name="syntax"></a>Syntaxe
 
@@ -132,8 +133,8 @@ Objet `runtime_exception` à copier.
 
 ### <a name="return-value"></a>Valeur de retour
 
-Référence à cet objet `runtime_exception`.
+Une référence `runtime_exception` à cet objet.
 
 ## <a name="see-also"></a>Voir aussi
 
-[Concurrency, espace de noms (C++ AMP)](concurrency-namespace-cpp-amp.md)
+[Concurrency Namespace (AMP)](concurrency-namespace-cpp-amp.md)

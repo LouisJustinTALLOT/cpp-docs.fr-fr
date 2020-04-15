@@ -1,5 +1,5 @@
 ---
-title: Cprimitiveelementtraits, classe
+title: Classe CPrimitiveElementTraits
 ms.date: 11/04/2016
 f1_keywords:
 - CPrimitiveElementTraits
@@ -9,16 +9,16 @@ f1_keywords:
 helpviewer_keywords:
 - CPrimitiveElementTraits class
 ms.assetid: 21c1cea8-2c5a-486c-b65c-85490f3ed4e6
-ms.openlocfilehash: 53d039b15c9f4a79956bd86fbb93600854f90e5f
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 6b45d93420d1832091cc451a3e6eb309f61d07a3
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62278161"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81331439"
 ---
-# <a name="cprimitiveelementtraits-class"></a>Cprimitiveelementtraits, classe
+# <a name="cprimitiveelementtraits-class"></a>Classe CPrimitiveElementTraits
 
-Cette classe fournit des méthodes par défaut et des fonctions pour une classe de collection composée de types de données primitifs.
+Cette classe fournit des méthodes et des fonctions par défaut pour une classe de collecte composée de types de données primitives.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -30,7 +30,7 @@ class CPrimitiveElementTraits : public CDefaultElementTraits<T>
 #### <a name="parameters"></a>Paramètres
 
 *T*<br/>
-Le type de données à stocker dans l’objet de classe de collection.
+Le type de données à stocker dans l’objet de classe de collecte.
 
 ## <a name="members"></a>Membres
 
@@ -38,14 +38,14 @@ Le type de données à stocker dans l’objet de classe de collection.
 
 |Nom|Description|
 |----------|-----------------|
-|[CPrimitiveElementTraits::INARGTYPE](#inargtype)|Le type de données à utiliser pour l’ajout d’éléments à l’objet de classe de collection.|
-|[CPrimitiveElementTraits::OUTARGTYPE](#outargtype)|Le type de données à utiliser pour récupérer des éléments de l’objet de classe de collection.|
+|[CPrimitiveElementTraits::INARGTYPE](#inargtype)|Le type de données à utiliser pour ajouter des éléments à l’objet de classe de collecte.|
+|[CPrimitiveElementTraits::OUTARGTYPE](#outargtype)|Le type de données à utiliser pour récupérer des éléments de l’objet de classe de collecte.|
 
 ## <a name="remarks"></a>Notes
 
-Cette classe fournit des méthodes pour déplacer, copier, comparaison et des éléments de type de données primitif stockés dans un objet de classe de collection de hachage et les fonctions statiques par défaut.
+Cette classe fournit des fonctions statiques par défaut et des méthodes pour déplacer, copier, comparer et hachage des éléments de type de données primitifs stockés dans un objet de classe de collecte.
 
-Pour plus d’informations, consultez [ATL, Classes de Collection](../../atl/atl-collection-classes.md).
+Pour plus d’informations, voir [cours de collecte ATL](../../atl/atl-collection-classes.md).
 
 ## <a name="inheritance-hierarchy"></a>Hiérarchie d'héritage
 
@@ -59,21 +59,21 @@ Pour plus d’informations, consultez [ATL, Classes de Collection](../../atl/atl
 
 `CPrimitiveElementTraits`
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
-**En-tête :** atlcoll.h
+**En-tête:** atlcoll.h
 
-##  <a name="inargtype"></a>  CPrimitiveElementTraits::INARGTYPE
+## <a name="cprimitiveelementtraitsinargtype"></a><a name="inargtype"></a>CPrimitiveElementTraits::INARGTYPE
 
-Le type de données à utiliser pour l’ajout d’éléments à l’objet de classe de collection.
+Le type de données à utiliser pour ajouter des éléments à l’objet de classe de collecte.
 
 ```
 typedef T INARGTYPE;
 ```
 
-##  <a name="outargtype"></a>  CPrimitiveElementTraits::OUTARGTYPE
+## <a name="cprimitiveelementtraitsoutargtype"></a><a name="outargtype"></a>CPrimitiveElementTraits::OUTARGTYPE
 
-Le type de données à utiliser pour récupérer des éléments de l’objet de classe de collection.
+Le type de données à utiliser pour récupérer des éléments de l’objet de classe de collecte.
 
 ```
 typedef T& OUTARGTYPE;
@@ -81,5 +81,5 @@ typedef T& OUTARGTYPE;
 
 ## <a name="see-also"></a>Voir aussi
 
-[CDefaultElementTraits, classe](../../atl/reference/cdefaultelementtraits-class.md)<br/>
-[Vue d’ensemble de la classe](../../atl/atl-class-overview.md)
+[Classe CDefaultElementTraits](../../atl/reference/cdefaultelementtraits-class.md)<br/>
+[Vue d'ensemble des classes](../../atl/atl-class-overview.md)

@@ -1,9 +1,11 @@
 ---
 title: _fgetchar, _fgetwchar
-ms.date: 11/04/2016
+ms.date: 4/2/2020
 api_name:
 - _fgetchar
 - _fgetwchar
+- _o__fgetchar
+- _o__fgetwchar
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -16,6 +18,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-stdio-l1-1-0.dll
+- api-ms-win-crt-private-l1-1-0
 api_type:
 - DLLExport
 topic_type:
@@ -35,16 +38,16 @@ helpviewer_keywords:
 - standard input, reading from
 - fgetchar function
 ms.assetid: 8bce874c-701a-41a3-b1b2-feff266fb5b9
-ms.openlocfilehash: 90a97308b8c60776d52e58feb84c5398456f26d5
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: b9d805483395d3050a1eb0bc78afef8cd99ca984
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70940861"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81346930"
 ---
 # <a name="_fgetchar-_fgetwchar"></a>_fgetchar, _fgetwchar
 
-Lit un caractère à partir de **stdin**.
+Lit un personnage de **stdin**.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -55,15 +58,17 @@ wint_t _fgetwchar( void );
 
 ## <a name="return-value"></a>Valeur de retour
 
-fgetchar retourne le caractère lu en tant que **int** ou `EOF` retourne pour indiquer une erreur ou la fin du fichier.  **\_** fgetwchar retourne, sous la forme d’un [wint_t](../../c-runtime-library/standard-types.md), le caractère élargi qui correspond au caractère lu `WEOF` ou retourne pour indiquer une erreur ou la fin du fichier.  **\_** Pour les deux fonctions, utilisez feof **ou un** pour faire la distinction entre une erreur et une condition de fin de fichier.
+fgetchar renvoie le personnage lu `EOF` comme un **int** ou des retours pour indiquer une erreur ou une fin de fichier. ** \_** fgetwchar renvoie, comme un [wint_t](../../c-runtime-library/standard-types.md), le caractère large qui `WEOF` correspond au personnage lu ou retourne pour indiquer une erreur ou une fin de fichier. ** \_** Pour les deux fonctions, utilisez **feof** ou **ferror** pour distinguer entre une erreur et une condition de fin de fichier.
 
 ## <a name="remarks"></a>Notes
 
-Ces fonctions lisent un caractère unique à partir de **stdin**. Ensuite, la fonction incrémente le pointeur de fichier associé (si défini) pour désigner le caractère suivant. Si le flux est à la fin du fichier, l’indicateur de fin de fichier pour le flux est défini.
+Ces fonctions lisent un seul personnage de **stdin**. Ensuite, la fonction incrémente le pointeur de fichier associé (si défini) pour désigner le caractère suivant. Si le flux est à la fin du fichier, l’indicateur de fin de fichier pour le flux est défini.
 
-**_fgetchar** est équivalent à `fgetc( stdin )`. Elle est également équivalente à **GetChar**, mais est implémentée uniquement comme une fonction, plutôt que comme une fonction et une macro. **_fgetwchar** est la version à caractères larges de **_fgetchar**.
+**_fgetchar** est équivalent à `fgetc( stdin )`. Il est également équivalent à **getchar**, mais mis en œuvre uniquement comme une fonction, plutôt que comme une fonction et une macro. **_fgetwchar** est la version grand caractère de **_fgetchar**.
 
 Ces fonctions ne sont pas compatibles avec la norme ANSI.
+
+Par défaut, l’état global de cette fonction est étendue à l’application. Pour changer cela, voir [Global State dans le CRT](../global-state.md).
 
 ### <a name="generic-text-routine-mappings"></a>Mappages de routines de texte générique
 
@@ -71,14 +76,14 @@ Ces fonctions ne sont pas compatibles avec la norme ANSI.
 |---------------------|--------------------------------------|--------------------|-----------------------|
 |**_fgettchar**|**_fgetchar**|**_fgetchar**|**_fgetwchar**|
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
 |Fonction|En-tête requis|
 |--------------|---------------------|
 |**_fgetchar**|\<stdio.h>|
 |**_fgetwchar**|\<stdio.h> ou \<wchar.h>|
 
-La console n’est pas prise en charge dans les applications de plateforme Windows universelle (UWP). Les handles de flux standard associés à la console (**stdin**, **stdout**et **stderr**) doivent être redirigés pour que les fonctions runtime C puissent les utiliser dans les applications UWP. Pour plus d'informations sur la compatibilité, voir [Compatibilité](../../c-runtime-library/compatibility.md).
+La console n’est pas prise en charge dans les applications Universal Windows Platform (UWP). Les poignées de flux standard qui sont associées à la console -**stdin**, **stdout**, et **stderr**- doivent être redirigées avant que les fonctions C run-time peuvent les utiliser dans les applications UWP. Pour plus d’informations sur la compatibilité, consultez [Compatibility](../../c-runtime-library/compatibility.md).
 
 ## <a name="example"></a>Exemple
 

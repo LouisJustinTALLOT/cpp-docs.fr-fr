@@ -1,10 +1,12 @@
 ---
 title: _popen, _wpopen
-description: Une référence pour les fonctions de la bibliothèque Microsoft C Runtime (CRT) _popen et _wpopen.
-ms.date: 01/28/2020
+description: Une référence pour les fonctions _popen de bibliothèque Microsoft _wpopenC runtime (CRT) et .
+ms.date: 4/2/2020
 api_name:
 - _popen
 - _wpopen
+- _o__popen
+- _o__wpopen
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -17,6 +19,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-stdio-l1-1-0.dll
+- api-ms-win-crt-private-l1-1-0
 api_type:
 - DLLExport
 topic_type:
@@ -46,12 +49,12 @@ no-loc:
 - _sys_errlist
 - _sys_nerr
 - EINVAL
-ms.openlocfilehash: 68531256fd688b50b659c885635ffa17d17773a5
-ms.sourcegitcommit: 684181561490e0d1955cf601d222f67f09af6d00
+ms.openlocfilehash: 5b478893ef8f201f39cb63ecfc7ab174d16b86de
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/31/2020
-ms.locfileid: "76894318"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81338513"
 ---
 # <a name="_popen-_wpopen"></a>_popen, _wpopen
 
@@ -73,25 +76,25 @@ FILE *_wpopen(
 );
 ```
 
-### <a name="parameters"></a>Parameters
+### <a name="parameters"></a>Paramètres
 
-\ de *commande*
+*Commande*\
 Commande à exécuter.
 
-\ du *mode*
+*Mode*\
 Mode du flux retourné.
 
-## <a name="return-value"></a>Valeur de retour
+## <a name="return-value"></a>Valeur retournée
 
-Retourne un flux associé à une extrémité du canal créé. L’autre extrémité du canal est associée à l’entrée ou à la sortie standard de la commande générée. Les fonctions retournent la valeur **NULL** en cas d’erreur. Si l’erreur est provoquée par un paramètre non valide, **errno** a la valeur **EINVAL**. Consultez la section Notes pour en savoir plus sur les modes valides.
+Retourne un flux associé à une extrémité du canal créé. L’autre extrémité du canal est associée à l’entrée ou à la sortie standard de la commande générée. Les fonctions retournent la valeur **NULL** en cas d’erreur. Si l’erreur est causée par un paramètre invalide, **errno** est réglé sur **EINVAL**. Consultez la section Notes pour en savoir plus sur les modes valides.
 
 Pour obtenir des informations sur ces codes d’erreur et les autres, consultez [_doserrno, errno, _sys_errlist et _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
 
 ## <a name="remarks"></a>Notes
 
-La fonction **_popen** crée un canal. Il exécute ensuite de manière asynchrone une copie générée du processeur de commandes et utilise la *commande* comme ligne de commande. La chaîne de caractères *mode* spécifie le type d’accès demandé, comme suit.
+La fonction **_popen** crée un tuyau. Il exécute ensuite asynchronement une copie engendrée du processeur de commande, et utilise la *commande* comme ligne de commande. La chaîne de caractères *mode* spécifie le type d’accès demandé, comme suit.
 
-|Mode d'accès|Description|
+|Mode d’accès|Description|
 |-|-|
 |**"r"**|Le processus appelant peut lire la sortie standard de la commande générée en utilisant le flux retourné.|
 |**"w"**|Le processus appelant peut écrire dans l’entrée standard de la commande générée en utilisant le flux retourné.|
@@ -99,9 +102,11 @@ La fonction **_popen** crée un canal. Il exécute ensuite de manière asynchron
 |**"t"**|Ouvre en mode texte.|
 
 > [!NOTE]
-> Si elle est utilisée dans un programme Windows, la fonction **_popen** retourne un pointeur de fichier non valide qui amène le programme à cesser de répondre indéfiniment. **_popen** fonctionne correctement dans une application console. Pour créer une application Windows qui redirige l’entrée et la sortie, consultez [création d’un processus enfant avec une entrée et une sortie redirigées](/windows/win32/ProcThread/creating-a-child-process-with-redirected-input-and-output) dans le SDK Windows.
+> S’il est utilisé dans un programme Windows, la fonction **_popen** renvoie un pointeur de fichier invalide qui provoque le programme d’arrêter de répondre indéfiniment. **_popen** fonctionne correctement dans une application de console. Pour créer une application Windows qui redirige l’entrée et la sortie, voir [Créer un processus pour enfants avec entrée et sortie redirigées](/windows/win32/ProcThread/creating-a-child-process-with-redirected-input-and-output) dans le SDK Windows.
 
-**_wpopen** est une version à caractères larges de **_popen**; l’argument *path* de **_wpopen** est une chaîne de caractères larges. dans le cas contraire, **_wpopen** et **_popen** se comportent de la même façon.
+**_wpopen** est une version à caractère large de **_popen**; l’argument *de chemin* à **_wpopen** est une chaîne de caractère large. **_wpopen** et **_popen** se comportent de façon identique autrement.
+
+Par défaut, l’état global de cette fonction est étendue à l’application. Pour changer cela, voir [Global State dans le CRT](../global-state.md).
 
 ### <a name="generic-text-routine-mappings"></a>Mappages de routines de texte générique
 
@@ -109,7 +114,7 @@ La fonction **_popen** crée un canal. Il exécute ensuite de manière asynchron
 |---------------------|--------------------------------------|--------------------|-----------------------|
 |**_tpopen**|**_popen**|**_popen**|**_wpopen**|
 
-## <a name="requirements"></a>Configuration requise pour
+## <a name="requirements"></a>Spécifications
 
 |Routine|En-tête requis|
 |-------------|---------------------|
@@ -166,7 +171,7 @@ int main( void )
 }
 ```
 
-Cette sortie suppose qu’il n’y a qu’un seul fichier dans le répertoire actif qui a une extension de nom de fichier `.c`.
+Cette sortie suppose qu’il n’y a qu’un seul fichier dans l’annuaire actuel qui a une `.c` extension de nom de fichier.
 
 ```Output
 Volume in drive C is CDRIVE
@@ -183,6 +188,6 @@ Process returned 0
 
 ## <a name="see-also"></a>Voir aussi
 
-\ [de contrôle de processus et d’environnement](../../c-runtime-library/process-and-environment-control.md)
+[Contrôle des processus et de l’environnement](../../c-runtime-library/process-and-environment-control.md)\
 [_pclose](pclose.md)\
 [_pipe](pipe.md)

@@ -1,8 +1,9 @@
 ---
 title: localeconv
-ms.date: 11/04/2016
+ms.date: 4/2/2020
 api_name:
 - localeconv
+- _o_localeconv
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -15,6 +16,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-locale-l1-1-0.dll
+- api-ms-win-crt-private-l1-1-0
 api_type:
 - DLLExport
 topic_type:
@@ -26,12 +28,12 @@ helpviewer_keywords:
 - localeconv function
 - locales, getting information on
 ms.assetid: 7ecdb1f2-88f5-4037-a0e7-c754ab003660
-ms.openlocfilehash: ca7113903e1ed6e9ffb94bef79beba41e09bfb71
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: a617980d60b3a12c06b30aab6cd457792a1aa770
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70953356"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81342142"
 ---
 # <a name="localeconv"></a>localeconv
 
@@ -45,22 +47,22 @@ struct lconv *localeconv( void );
 
 ## <a name="return-value"></a>Valeur de retour
 
-**localeconv** retourne un pointeur vers un objet rempli de type [struct lconv](../../c-runtime-library/standard-types.md). Les valeurs contenues dans l’objet sont copiées à partir des paramètres régionaux dans le stockage local des threads et peuvent être remplacées par les appels suivants à **localeconv**. Les modifications apportées aux valeurs de cet objet ne modifient pas les paramètres régionaux. Les appels à [setlocale](setlocale-wsetlocale.md) avec les valeurs de *catégorie* **LC_ALL**, **LC_MONETARY**ou **LC_NUMERIC** remplacent le contenu de la structure.
+**localconv** retourne un pointeur à un objet rempli de type [struct lconv](../../c-runtime-library/standard-types.md). Les valeurs contenues dans l’objet sont copiées à partir des paramètres locaux dans le stockage thread-local, et peuvent être écrasées par des appels ultérieurs à **localconv**. Les modifications apportées aux valeurs de cet objet ne modifient pas les paramètres locaux. Appels à [setlocale](setlocale-wsetlocale.md) avec des valeurs de *catégorie* de **LC_ALL**, **LC_MONETARY**, ou **LC_NUMERIC** de remplacer le contenu de la structure.
 
 ## <a name="remarks"></a>Notes
 
-La fonction **localeconv** obtient des informations détaillées sur la mise en forme numérique pour les paramètres régionaux actuels. Ces informations sont stockées dans une structure de type **lconv**. La structure **lconv**, définie dans LOCALE.H, contient les membres suivants :
+La fonction **localconv** obtient des informations détaillées sur le formatage numérique pour le lieu actuel. Ces informations sont stockées dans une structure de type **lconv**. La structure **lconv**, définie dans LOCALE.H, contient les membres suivants :
 
 |Champ|Signification|
 |-|-|
-decimal_point,<br/>_W_decimal_point|Pointeur vers le caractère de virgule décimale pour les quantités non monétaires.
-thousands_sep,<br/>_W_thousands_sep|Pointeur vers un caractère qui sépare les groupes de chiffres à gauche de la virgule décimale pour les quantités non monétaires.
-regroupement|Pointeur vers un entier de taille **char**qui contient la taille de chaque groupe de chiffres en quantités non monétaires.
-int_curr_symbol,<br/>_W_int_curr_symbol|Pointeur vers le symbole monétaire international pour les paramètres régionaux actuels. Les trois premiers caractères spécifient le symbole monétaire international alphabétique tel que le définit la *norme ISO 4217 sur les codes de représentation des monnaies et des fonds*. Le quatrième caractère (situé juste avant le caractère Null) sépare le symbole monétaire international de la quantité monétaire.
-currency_symbol,<br/>_W_currency_symbol|Pointeur vers le symbole monétaire local pour les paramètres régionaux actuels.
-mon_decimal_point,<br/>_W_mon_decimal_point|Pointeur vers le caractère de virgule décimale pour les quantités monétaires.
-mon_thousands_sep,<br/>_W_mon_thousands_sep|Pointeur vers le séparateur pour les groupes de chiffres à gauche de la décimale dans les quantités monétaires.
-mon_grouping|Pointeur vers un entier de taille **char**qui contient la taille de chaque groupe de chiffres en quantités monétaires.
+decimal_point,<br/>_W_decimal_point|Pointeur au caractère décimal-point pour les quantités non peu matrimariaires.
+thousands_sep,<br/>_W_thousands_sep|Pointeur au caractère qui sépare les groupes de chiffres à gauche du point décimal pour les quantités non peu matrimariaires.
+regroupement|Pointeur vers un intégrier de taille **char**qui contient la taille de chaque groupe de chiffres en quantités non matétaires.
+int_curr_symbol,<br/>_W_int_curr_symbol|Pointeur vers le symbole de devise internationale pour le lieu actuel. Les trois premiers caractères spécifient le symbole monétaire international alphabétique tel que le définit la *norme ISO 4217 sur les codes de représentation des monnaies et des fonds*. Le quatrième caractère (situé juste avant le caractère Null) sépare le symbole monétaire international de la quantité monétaire.
+currency_symbol,<br/>_W_currency_symbol|Pointeur vers le symbole de monnaie locale pour le local actuel.
+mon_decimal_point,<br/>_W_mon_decimal_point|Pointeur au caractère décimal-point pour les quantités monétaires.
+mon_thousands_sep,<br/>_W_mon_thousands_sep|Pointeur à séparateur pour les groupes de chiffres à gauche de la place décimale en quantités monétaires.
+mon_grouping|Pointeur vers un intégrisé de taille **char**qui contient la taille de chaque groupe de chiffres en quantités monétaires.
 positive_sign,<br/>_W_positive_sign|Chaîne indiquant le signe des quantités monétaires non négatives.
 negative_sign,<br/>_W_negative_sign|Chaîne indiquant le signe des quantités monétaires négatives.
 int_frac_digits|Nombre de chiffres à droite du séparateur décimal dans les quantités monétaires à la mise en forme internationale.
@@ -72,17 +74,17 @@ n_sep_by_space|Défini sur 1 si le symbole monétaire est séparé par un espace
 p_sign_posn|Position du signe positif dans les quantités monétaires mises en forme non négatives.
 n_sign_posn|Position du signe positif dans les quantités monétaires mises en forme négatives.
 
-Sauf indication contraire, les membres de la structure **lconv** qui `char *` ont `wchar_t *` des versions et sont des pointeurs vers des chaînes. L’un de ces qui est égal à **""** (ou **L ""** pour **wchar_t** <strong>\*</strong>) est de longueur nulle ou n’est pas pris en charge dans les paramètres régionaux actuels. Notez que **decimal_point** et **_W_decimal_point** sont toujours pris en charge et de longueur différente de zéro.
+Sauf comme indiqué, les membres de `char *` la `wchar_t *` structure **lconv** qui ont et les versions sont des pointeurs aux cordes. L’un de ces qui égale **""** (ou **L"** pour **wchar_t** <strong>\*</strong>) est soit de longueur zéro ou non pris en charge dans le lieu actuel. Notez que **decimal_point** et **_W_decimal_point** sont toujours pris en charge et de longueur non zéro.
 
-Les membres **char** de la structure sont de petits nombres non négatifs, et non des caractères. Si l’un d’eux est égal à **CHAR_MAX**, il n’est pas pris en charge dans les paramètres régionaux actuels.
+Les membres de **l’omble chevalier** de la structure sont de petits nombres non natifs, pas des caractères. Si l’un d’eux est égal à **CHAR_MAX**, il n’est pas pris en charge dans les paramètres régionaux actuels.
 
-Les valeurs de **GROUPING** et **mon_grouping** sont interprétées selon les règles suivantes :
+Les valeurs de **regroupement** et **de mon_grouping** sont interprétées selon les règles suivantes :
 
-- **CHAR_MAX** -ne pas effectuer de regroupement supplémentaire.
+- **CHAR_MAX** - N’effectuez aucun autre regroupement.
 
-- 0-utiliser l’élément précédent pour chacun des chiffres restants.
+- 0 - Utilisez l’élément précédent pour chacun des chiffres restants.
 
-- *n* -nombre de chiffres qui composent le groupe actuel. L’élément suivant est examiné pour déterminer la taille du groupe de chiffres suivant situé avant le groupe actuel.
+- *n* - Nombre de chiffres qui composent le groupe actuel. L’élément suivant est examiné pour déterminer la taille du groupe de chiffres suivant situé avant le groupe actuel.
 
 Les valeurs de **int_curr_symbol** sont interprétées selon les règles suivantes :
 
@@ -92,29 +94,31 @@ Les valeurs de **int_curr_symbol** sont interprétées selon les règles suivant
 
 Les valeurs de **p_cs_precedes** et **n_cs_precedes** sont interprétées selon les règles suivantes (la règle **n_cs_precedes** figure entre parenthèses) :
 
-- 0-le symbole monétaire suit la valeur de la valeur monétaire non négative (négative).
+- 0 - Le symbole de devise suit la valeur pour la valeur monétaire non native (négative).
 
-- 1-le symbole monétaire précède la valeur pour la valeur monétaire non négative (négative).
+- 1 - Le symbole de devise précède la valeur pour la valeur monétaire non native (négative).
 
 Les valeurs de **p_sep_by_space** et **n_sep_by_space** sont interprétées selon les règles suivantes (la règle **n_sep_by_space** figure entre parenthèses) :
 
-- 0-le symbole monétaire est séparé de la valeur par espace pour une valeur monétaire non négative (négative).
+- 0 - Le symbole de devise est séparé de la valeur par espace pour la valeur monétaire non native (négative).
 
-- 1-il n’y a pas de séparation d’espace entre le symbole monétaire et la valeur pour la valeur monétaire non négative (négative).
+- 1 - Il n’y a pas de séparation de l’espace entre le symbole de change et la valeur pour la valeur monétaire non native (négative).
 
 Les valeurs de **p_sign_posn** et **n_sign_posn** sont interprétées selon les règles suivantes :
 
-- 0-les parenthèses entourent le symbole de quantité et de devise.
+- 0 - Parenthèses entourent la quantité et le symbole de la monnaie.
 
-- 1-la chaîne de signe précède le symbole de quantité et de devise.
+- 1 - La chaîne de signe précède la quantité et le symbole de devise.
 
-- 2-la chaîne de signe suit la quantité et le symbole monétaire.
+- 2 - La chaîne de signe suit la quantité et le symbole de devise.
 
-- 3-la chaîne de signe précède immédiatement le symbole monétaire.
+- 3 - La chaîne de signalisation précède immédiatement le symbole de la monnaie.
 
-- 4-le signe de la chaîne suit immédiatement le symbole monétaire.
+- 4 - La chaîne de signe suit immédiatement le symbole de devise.
 
-## <a name="requirements"></a>Configuration requise
+Par défaut, l’état global de cette fonction est étendue à l’application. Pour changer cela, voir [Global State dans le CRT](../global-state.md).
+
+## <a name="requirements"></a>Spécifications
 
 |Routine|En-tête requis|
 |-------------|---------------------|
@@ -128,8 +132,8 @@ Toutes les versions des [bibliothèques Runtime C](../../c-runtime-library/crt-l
 
 ## <a name="see-also"></a>Voir aussi
 
-[Paramètres régionaux](../../c-runtime-library/locale.md)<br/>
-[setlocale](../../preprocessor/setlocale.md)<br/>
-[strcoll, fonctions](../../c-runtime-library/strcoll-functions.md)<br/>
+[Local](../../c-runtime-library/locale.md)<br/>
+[setlocale setlocale setlocale setloc](../../preprocessor/setlocale.md)<br/>
+[fonctions strcoll](../../c-runtime-library/strcoll-functions.md)<br/>
 [strftime, wcsftime, _strftime_l, _wcsftime_l](strftime-wcsftime-strftime-l-wcsftime-l.md)<br/>
 [strxfrm, wcsxfrm, _strxfrm_l, _wcsxfrm_l](strxfrm-wcsxfrm-strxfrm-l-wcsxfrm-l.md)<br/>

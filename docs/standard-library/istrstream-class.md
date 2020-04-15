@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - istrstream class
 ms.assetid: c2d41c75-bd2c-4437-bd77-5939ce1b97af
-ms.openlocfilehash: 59b69d3f862715840e1557a10d6087350488a3c9
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: d548a8c2c47a5a345be725afdedb47524344f720
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68448073"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81337523"
 ---
 # <a name="istrstream-class"></a>istrstream, classe
 
@@ -29,7 +29,7 @@ class istrstream : public istream
 L'objet stocke un objet de classe `strstreambuf`.
 
 > [!NOTE]
-> Cette classe est dépréciée. Utilisez plutôt [istringstream](../standard-library/sstream-typedefs.md#istringstream) ou [wistringstream](../standard-library/sstream-typedefs.md#wistringstream).
+> Cette classe est déconseillée. Utilisez plutôt [istringstream](../standard-library/sstream-typedefs.md#istringstream) ou [wistringstream](../standard-library/sstream-typedefs.md#wistringstream).
 
 ### <a name="constructors"></a>Constructeurs
 
@@ -37,20 +37,20 @@ L'objet stocke un objet de classe `strstreambuf`.
 |-|-|
 |[istrstream](#istrstream)|Construit un objet de type `istrstream`.|
 
-### <a name="member-functions"></a>Fonctions membres
+### <a name="member-functions"></a>Fonctions Membre
 
 |Fonction membre|Description|
 |-|-|
 |[rdbuf](#rdbuf)|Retourne un pointeur vers l'objet `strstreambuf` associé au flux.|
-|[str](#str)|Appelle [freeze](../standard-library/strstreambuf-class.md#freeze), puis retourne un pointeur vers le début de la séquence contrôlée.|
+|[Str](#str)|Appelle [freeze](../standard-library/strstreambuf-class.md#freeze), puis retourne un pointeur vers le début de la séquence contrôlée.|
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
 **En-tête :** \<strstream>
 
 **Espace de noms :** std
 
-## <a name="istrstream"></a>  istrstream::istrstream
+## <a name="istrstreamistrstream"></a><a name="istrstream"></a>istrstream::istrstream
 
 Construit un objet de type `istrstream`.
 
@@ -72,17 +72,17 @@ istrstream(
 
 ### <a name="parameters"></a>Paramètres
 
-*saut*\
-Longueur de la mémoire tampon (*ptr*).
+*Compter*\
+La longueur du tampon (*ptr*).
 
-*effectués*\
+*Ptr*\
 Contenu avec lequel la mémoire tampon est initialisée.
 
 ### <a name="remarks"></a>Notes
 
-Tous les constructeurs initialisent la classe de base en appelant [IStream](../standard-library/istream-typedefs.md#istream)(**SB**), où `sb` est l’objet stocké de la classe [strstreambuf](../standard-library/strstreambuf-class.md). Les deux premiers constructeurs s' `sb` initialisent également en appelant `strstreambuf`(( **const** `char` \*) `ptr`, 0). Les deux autres constructeurs appellent plutôt `strstreambuf`( ( **const**`char` *) `ptr`, `count` ).
+Tous les constructeurs initialisent la classe de base `sb` en appelant [istream](../standard-library/istream-typedefs.md#istream)( sb ), où est**l’objet**stocké de la classe [strstreambuf](../standard-library/strstreambuf-class.md). Les deux premiers constructeurs `sb` sont `strstreambuf`également parastérisants en appelant ( ( **const** `char` \*) `ptr`, 0 ). Les deux autres constructeurs `strstreambuf`appellent plutôt ( ( **const** `char` ) `ptr`, `count` .
 
-## <a name="rdbuf"></a>  istrstream::rdbuf
+## <a name="istrstreamrdbuf"></a><a name="rdbuf"></a>istrstream::rdbuf
 
 Retourne un pointeur vers l’objet strstreambuf associé au flux.
 
@@ -98,11 +98,11 @@ Un pointeur vers l’objet strstreambuf associé au flux.
 
 La fonction membre retourne l’adresse de la mémoire tampon de flux stockée de type pointeur vers [strstreambuf](../standard-library/strstreambuf-class.md).
 
-### <a name="example"></a>Exemples
+### <a name="example"></a>Exemple
 
 Pour obtenir un exemple qui utilise `rdbuf`, consultez [strstreambuf::pcount](../standard-library/strstreambuf-class.md#pcount).
 
-## <a name="str"></a>  istrstream::str
+## <a name="istrstreamstr"></a><a name="str"></a>istrstream::str
 
 Appelle [freeze](../standard-library/strstreambuf-class.md#freeze), puis retourne un pointeur vers le début de la séquence contrôlée.
 
@@ -118,13 +118,13 @@ Pointeur vers le début de la séquence contrôlée.
 
 La fonction membre retourne [rdbuf](#rdbuf) -> [str](../standard-library/strstreambuf-class.md#str).
 
-### <a name="example"></a>Exemples
+### <a name="example"></a>Exemple
 
-Consultez [strstream:: Str](../standard-library/strstreambuf-class.md#str) pour obtenir un exemple qui `str`utilise.
+Voir [strstream::str](../standard-library/strstreambuf-class.md#str) pour un `str`échantillon qui utilise .
 
 ## <a name="see-also"></a>Voir aussi
 
-[istream](../standard-library/istream-typedefs.md#istream)\
-[Sécurité des threads dans la bibliothèque C++ Standard](../standard-library/thread-safety-in-the-cpp-standard-library.md)\
-[iostream, programmation](../standard-library/iostream-programming.md)\
+[istream (en)](../standard-library/istream-typedefs.md#istream)\
+[Sécurité des fils dans la bibliothèque standard de CMD](../standard-library/thread-safety-in-the-cpp-standard-library.md)\
+[Programmation iostream](../standard-library/iostream-programming.md)\
 [iostreams, conventions](../standard-library/iostreams-conventions.md)

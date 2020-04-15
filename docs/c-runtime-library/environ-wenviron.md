@@ -13,19 +13,19 @@ helpviewer_keywords:
 - process environment
 - wenviron function
 ms.assetid: 7e639962-6536-47cd-8095-0cbe44a56e03
-ms.openlocfilehash: 56f6f1d06d834ccab68daf859fac065cf215582c
-ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
-ms.translationtype: HT
+ms.openlocfilehash: 8d67947c93d1387bfdc38c3bae5b3f978024a725
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/11/2019
-ms.locfileid: "57748921"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81349381"
 ---
-# <a name="environ-wenviron"></a>_environ, _wenviron
+# <a name="_environ-_wenviron"></a>_environ, _wenviron
 
 La variable `_environ` est un pointeur vers un tableau de pointeurs qui désignent les chaînes de caractères multioctets qui constituent l'environnement de processus. Cette variable globale a été déconseillée au profit des versions fonctionnelles plus sécurisées [getenv_s, _wgetenv_s](../c-runtime-library/reference/getenv-s-wgetenv-s.md) et [putenv_s, _wputenv_s](../c-runtime-library/reference/putenv-s-wputenv-s.md), qui doivent être utilisées à la place de la variable globale. `_environ` est déclaré dans Stdlib.h.
 
 > [!IMPORTANT]
->  Cette API ne peut pas être utilisée dans les applications qui s’exécutent dans le Windows Runtime. Pour plus d’informations, consultez [Fonctions CRT non prises en charge dans les applications de la plateforme Windows universelle](../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
+> Cette API ne peut pas être utilisée dans les applications qui s'exécutent dans le Windows Runtime. Pour plus d’informations, consultez [Fonctions CRT non prises en charge dans les applications de la plateforme Windows universelle](../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -33,7 +33,7 @@ La variable `_environ` est un pointeur vers un tableau de pointeurs qui désigne
 extern char **_environ;
 ```
 
-## <a name="remarks"></a>Remarques
+## <a name="remarks"></a>Notes
 
 Dans un programme qui utilise la fonction `main`, `_environ` est initialisé au démarrage du programme en fonction des paramètres tirés de l'environnement de système d'exploitation. L'environnement se compose d'une ou plusieurs entrées de la forme
 
@@ -56,7 +56,7 @@ De la même manière, dans un programme qui utilise `wmain`, la valeur initiale 
 Quand deux copies de l'environnement (MBCS et Unicode) existent simultanément dans un programme, le système Runtime doit gérer les deux copies, ce qui entraîne des temps d'exécution plus lents. Par exemple, quand vous appelez `_putenv`, un appel à `_wputenv` est aussi exécuté automatiquement, de sorte que les deux chaînes d'environnement correspondent.
 
 > [!CAUTION]
->  Dans de rares cas, quand le système Runtime gère à la fois une version Unicode et une version multioctet de l'environnement, ces deux versions d'environnement peuvent ne pas correspondre exactement. En effet, même si une chaîne de caractères multioctets unique est mappée à une chaîne Unicode unique, le mappage d'une chaîne Unicode unique à une chaîne de caractères multioctets n'est pas nécessairement unique. Par conséquent, deux chaînes Unicode distinctes peuvent être mappées à une même chaîne multioctet.
+> Dans de rares cas, quand le système Runtime gère à la fois une version Unicode et une version multioctet de l'environnement, ces deux versions d'environnement peuvent ne pas correspondre exactement. En effet, même si une chaîne de caractères multioctets unique est mappée à une chaîne Unicode unique, le mappage d'une chaîne Unicode unique à une chaîne de caractères multioctets n'est pas nécessairement unique. Par conséquent, deux chaînes Unicode distinctes peuvent être mappées à une même chaîne multioctet.
 
 Interroger `_environ` dans un contexte Unicode n'a pas de sens quand [/MD](../build/reference/md-mt-ld-use-run-time-library.md) ou une liaison `/MDd` est utilisé. Pour la DLL CRT, le type (large ou multioctet) du programme est inconnu. Seul le type multioctet est créé, car il s'agit du scénario le plus probable.
 

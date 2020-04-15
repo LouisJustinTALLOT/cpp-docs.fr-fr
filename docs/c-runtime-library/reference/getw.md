@@ -1,8 +1,9 @@
 ---
 title: _getw
-ms.date: 11/04/2016
+ms.date: 4/2/2020
 api_name:
 - _getw
+- _o__getw
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -15,6 +16,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-stdio-l1-1-0.dll
+- api-ms-win-crt-private-l1-1-0
 api_type:
 - DLLExport
 topic_type:
@@ -26,12 +28,12 @@ helpviewer_keywords:
 - integers, getting from streams
 - getw function
 ms.assetid: ef75facc-b84e-470f-9f5f-8746c90822a0
-ms.openlocfilehash: ad03c92ce90542ecae13609ee228ad094f64fc07
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: eddb68ae6108c8a66966472cebca60a9969b78d1
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70954877"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81344163"
 ---
 # <a name="_getw"></a>_getw
 
@@ -47,24 +49,26 @@ int _getw(
 
 ### <a name="parameters"></a>Paramètres
 
-*stream*<br/>
+*Flux*<br/>
 Pointeur désignant la structure **FILE**.
 
 ## <a name="return-value"></a>Valeur de retour
 
-**_getw** retourne la valeur entière lue. Une valeur de retour de **EOF** indique une erreur ou la fin du fichier. Toutefois, étant donné que la valeur **EOF** est également une valeur entière légitime, utilisez **feof** ou un pour vérifier une condition d’erreur **ou de fin** de fichier. Si *Stream* a la **valeur null**, le gestionnaire de paramètres non valides est appelé, comme décrit dans [validation de paramètre](../../c-runtime-library/parameter-validation.md). Si l’exécution est autorisée à se poursuivre, **errno** a la valeur **EINVAL** et la fonction retourne **EOF**.
+**_getw** retourne la valeur de l’intégrant lu. Une valeur de retour de **l’EOF** indique une erreur ou une fin de fichier. Toutefois, parce que la valeur **EOF** est également une valeur légitime d’intégrateur, utilisez **feof** ou **ferror** pour vérifier une condition de fin de fichier ou d’erreur. Si *le flux* est **NULL**, le gestionnaire de paramètres invalides est invoqué, tel que décrit dans La validation [de paramètres](../../c-runtime-library/parameter-validation.md). Si l’exécution est autorisée à se poursuivre, **errno** est réglé sur **EINVAL** et la fonction renvoie **EOF**.
 
 ## <a name="remarks"></a>Notes
 
-La fonction **_getw** lit la valeur binaire suivante de type **int** à partir du fichier associé au *flux* et incrémente le pointeur de fichier associé (le cas échéant) pour pointer vers le caractère non lu suivant. **_getw** ne prend pas en considération l’alignement spécial des éléments dans le flux. Des problèmes de Portage peuvent survenir avec **_getw** , car la taille du type **int** et l’ordre des octets dans le type **int** diffèrent entre les systèmes.
+La fonction **_getw** lit la prochaine valeur binaire de type **int** du fichier associé au *flux* et incréments le pointeur de fichier associé (s’il ya un) pour pointer vers le prochain personnage non lu. **_getw** ne suppose pas d’alignement spécial des éléments dans le flux. Les problèmes de portage peuvent se produire avec **_getw** parce que la taille du type **int** et la commande d’octets dans le type **int** diffèrent d’un système à l’autre.
 
-## <a name="requirements"></a>Configuration requise
+Par défaut, l’état global de cette fonction est étendue à l’application. Pour changer cela, voir [Global State dans le CRT](../global-state.md).
+
+## <a name="requirements"></a>Spécifications
 
 |Routine|En-tête requis|
 |-------------|---------------------|
 |**_getw**|\<stdio.h>|
 
-Pour plus d'informations sur la compatibilité, voir [Compatibilité](../../c-runtime-library/compatibility.md).
+Pour plus d’informations sur la compatibilité, consultez [Compatibility](../../c-runtime-library/compatibility.md).
 
 ## <a name="example"></a>Exemple
 
@@ -108,7 +112,7 @@ Line one.
 Line two.
 ```
 
-### <a name="output"></a>Sortie
+### <a name="output"></a>Output
 
 ```Output
 First data word in file: 0x656e694c
