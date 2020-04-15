@@ -16,16 +16,16 @@ helpviewer_keywords:
 - std::basic_fstream [C++], rdbuf
 - std::basic_fstream [C++], swap
 ms.assetid: 8473817e-42a4-430b-82b8-b476c86bcf8a
-ms.openlocfilehash: 8d26d0fe0e4e4152cf05476f546b753650209dfe
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: 80992430d6bef6fc46106452dfaa44cc0ed9e71c
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68459601"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81376861"
 ---
 # <a name="basic_fstream-class"></a>basic_fstream, classe
 
-Décrit un objet qui contrôle l’insertion et l’extraction d’éléments et d’objets codés à l’aide d’une mémoire tampon de flux de classe [basic_filebuf](../standard-library/basic-filebuf-class.md)< `Elem`, `Tr`>, avec des éléments de type `Elem`, dont les caractéristiques sont déterminées par la classe `Tr`.
+Décrit un objet qui contrôle l’insertion et l’extraction d’éléments et d’objets codés à l’aide d’un tampon de `Tr`flux de classe [basic_filebuf](../standard-library/basic-filebuf-class.md)< `Elem`, `Tr`>, avec des éléments de type `Elem`, dont les traits de caractère sont déterminés par la classe .
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -39,7 +39,7 @@ class basic_fstream : public basic_iostream<Elem, Tr>
 *Elem*\
 Élément de base de la mémoire tampon de fichier.
 
-*TR*\
+*Tr*\
 Caractéristiques de l’élément de base de la mémoire tampon de fichier (généralement `char_traits`< `Elem`>).
 
 ## <a name="remarks"></a>Notes
@@ -49,7 +49,7 @@ L’objet stocke un objet de classe `basic_filebuf`< `Elem`, `Tr`>.
 > [!NOTE]
 > Les pointeurs get et put d’un objet fstream ne sont **PAS** indépendants l’un de l’autre. Si le pointeur get bouge, le pointeur put bouge aussi.
 
-## <a name="example"></a>Exemples
+## <a name="example"></a>Exemple
 
 L'exemple suivant montre comment créer un objet `basic_fstream` qui peut être lu et écrit.
 
@@ -89,23 +89,23 @@ Writing to a basic_fstream object...
 |-|-|
 |[basic_fstream](#basic_fstream)|Construit un objet de type `basic_fstream`.|
 
-### <a name="member-functions"></a>Fonctions membres
+### <a name="member-functions"></a>Fonctions Membre
 
 |Fonction membre|Description|
 |-|-|
-|[close](#close)|Ferme un fichier.|
+|[Proche](#close)|Ferme un fichier.|
 |[is_open](#is_open)|Détermine si un fichier est ouvert.|
 |[open](#open)|Ouvre un fichier.|
-|[rdbuf](#rdbuf)|Retourne l’adresse de la mémoire tampon de flux stockée, de type pointeur à [basic_filebuf](../standard-library/basic-filebuf-class.md)< `Elem`, `Tr`>.|
+|[rdbuf](#rdbuf)|Retourne l’adresse du tampon de flux stocké, du `Tr` pointeur de type à< `Elem` [basic_filebuf,](../standard-library/basic-filebuf-class.md)>.|
 |[swap](#swap)|Échange le contenu de cet objet avec le contenu d'un autre objet `basic_fstream`.|
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
 **En-tête :** \<fstream>
 
 **Espace de noms :** std
 
-## <a name="basic_fstream"></a>  basic_fstream::basic_fstream
+## <a name="basic_fstreambasic_fstream"></a><a name="basic_fstream"></a>basic_fstream::basic_fstream
 
 Construit un objet de type `basic_fstream`.
 
@@ -127,20 +127,20 @@ basic_fstream(basic_fstream&& right);
 
 ### <a name="parameters"></a>Paramètres
 
-*Le nom*\
+*_Filename*\
 Nom du fichier à ouvrir.
 
 *_Mode*\
 Une des énumérations dans [ios_base::openmode](../standard-library/ios-base-class.md#openmode).
 
 *_Prot*\
-Protection d’ouverture de fichier par défaut, équivalente au paramètre *shflag* dans [_fsopen, _wfsopen](../c-runtime-library/reference/fsopen-wfsopen.md).
+La protection d’ouverture de fichier par défaut, équivalente au paramètre *shflag* dans [_fsopen, _wfsopen](../c-runtime-library/reference/fsopen-wfsopen.md).
 
 ### <a name="remarks"></a>Notes
 
-Le premier constructeur initialise la classe de base en appelant [basic_iostream](../standard-library/basic-iostream-class.md)(`sb`), où `sb` est l’objet stocké de la classe [basic_filebuf](../standard-library/basic-filebuf-class.md) \< **elem**, **TR**>. `sb` Elle s’initialise également en appelant `basic_filebuf` \< **elem**, **TR**>.
+Le premier constructeur initialise la classe de base`sb`en `sb` appelant [basic_iostream](../standard-library/basic-iostream-class.md)( ), où est l’objet stocké de la classe [basic_filebuf](../standard-library/basic-filebuf-class.md) \< **Elem**, **Tr**>. Il est également `sb` parasémis `basic_filebuf` \< en appelant **Elem**, **Tr**>.
 
-Les deuxième et troisième constructeurs initialisent la classe de base en appelant `basic_iostream`( **sb**). Elle initialise également `sb` en appelant `basic_filebuf`\< **elem**, **TR** >, puis **SB.** [Open](../standard-library/basic-filebuf-class.md#open)(_ *fileName*, `_Mode`). Si la dernière fonction retourne un pointeur null, le constructeur appelle [SetState](../standard-library/basic-ios-class.md#setstate)(`failbit`).
+Les deuxième et troisième constructeurs initialisent la classe de base en appelant `basic_iostream`( **sb**). Il est également `sb` parasémis `basic_filebuf` \< en appelant **Elem**, **Tr**>, puis `_Mode` **sb.**[ouvert](../standard-library/basic-filebuf-class.md#open) *(Filename*, ). Si cette dernière fonction renvoie un pointeur`failbit`nul, le constructeur appelle [setstate](../standard-library/basic-ios-class.md#setstate)( ).
 
 Le quatrième constructeur initialise l’objet avec le contenu de `right`, traité comme une référence rvalue.
 
@@ -148,7 +148,7 @@ Le quatrième constructeur initialise l’objet avec le contenu de `right`, trai
 
 Consultez [streampos](../standard-library/ios-typedefs.md#streampos) pour obtenir un exemple qui utilise `basic_fstream`.
 
-## <a name="close"></a>  basic_fstream::close
+## <a name="basic_fstreamclose"></a><a name="close"></a>basic_fstream::fermer
 
 Ferme un fichier.
 
@@ -158,13 +158,13 @@ void close();
 
 ### <a name="remarks"></a>Notes
 
-La fonction membre appelle [rdbuf](#rdbuf) **->** [close](../standard-library/basic-filebuf-class.md#close).
+La fonction membre appelle [rdbuf](#rdbuf) **->** [fermer](../standard-library/basic-filebuf-class.md#close).
 
-### <a name="example"></a>Exemples
+### <a name="example"></a>Exemple
 
 Consultez [basic_filebuf::close](../standard-library/basic-filebuf-class.md#close) pour obtenir un exemple d’utilisation de `close`.
 
-## <a name="is_open"></a>  basic_fstream::is_open
+## <a name="basic_fstreamis_open"></a><a name="is_open"></a>basic_fstream::is_open
 
 Détermine si un fichier est ouvert.
 
@@ -178,13 +178,13 @@ bool is_open() const;
 
 ### <a name="remarks"></a>Notes
 
-La fonction membre retourne [rdbuf](#rdbuf) **->** [is_open](../standard-library/basic-filebuf-class.md#is_open).
+La fonction membre retourne [rdbuf](#rdbuf)**->**[is_open](../standard-library/basic-filebuf-class.md#is_open).
 
 ### <a name="example"></a>Exemple
 
 Consultez [basic_filebuf::is_open](../standard-library/basic-filebuf-class.md#is_open) pour obtenir un exemple d’utilisation de `is_open`.
 
-## <a name="open"></a>  basic_fstream::open
+## <a name="basic_fstreamopen"></a><a name="open"></a>basic_fstream::ouvert
 
 Ouvre un fichier.
 
@@ -210,24 +210,24 @@ void open(
 
 ### <a name="parameters"></a>Paramètres
 
-*Le nom*\
+*_Filename*\
 Nom du fichier à ouvrir.
 
 *_Mode*\
 Une des énumérations dans [ios_base::openmode](../standard-library/ios-base-class.md#openmode).
 
 *_Prot*\
-Protection d’ouverture de fichier par défaut, équivalente au paramètre *shflag* dans [_fsopen, _wfsopen](../c-runtime-library/reference/fsopen-wfsopen.md).
+La protection d’ouverture de fichier par défaut, équivalente au paramètre *shflag* dans [_fsopen, _wfsopen](../c-runtime-library/reference/fsopen-wfsopen.md).
 
 ### <a name="remarks"></a>Notes
 
-La fonction membre appelle [rdbuf](#rdbuf) **->** [open](../standard-library/basic-filebuf-class.md#open)(_ *Filename*, `_Mode`). Si cette fonction retourne un pointeur null, la fonction appelle [SetState](../standard-library/basic-ios-class.md#setstate)( `failbit`).
+La fonction membre appelle [rdbuf](#rdbuf) **->** [ouvert](../standard-library/basic-filebuf-class.md#open) `_Mode` *(Filename*, ). Si cette fonction renvoie un pointeur `failbit`nul, la fonction appelle [setstate](../standard-library/basic-ios-class.md#setstate)( ).
 
 ### <a name="example"></a>Exemple
 
-Pour obtenir un exemple d’utilisation `open`de, consultez [basic_filebuf :: Open](../standard-library/basic-filebuf-class.md#open) .
+Voir [basic_filebuf::ouvrir](../standard-library/basic-filebuf-class.md#open) pour un exemple de `open`la façon d’utiliser .
 
-## <a name="op_eq"></a>  basic_fstream::operator=
+## <a name="basic_fstreamoperator"></a><a name="op_eq"></a>basic_fstream::opérateur
 
 Assigne à cet objet le contenu d'un objet de flux spécifié. Il s'agit d'une assignation de déplacement qui implique une rvalue qui ne laisse pas de copie.
 
@@ -246,9 +246,9 @@ Retourne `*this`.
 
 ### <a name="remarks"></a>Notes
 
-L’opérateur membre remplace le contenu de l’objet à l’aide du contenu de *droite*, traité comme une référence rvalue.
+L’opérateur membre remplace le contenu de l’objet en utilisant le contenu du *droit,* traité comme une référence rvalue.
 
-## <a name="rdbuf"></a>  basic_fstream::rdbuf
+## <a name="basic_fstreamrdbuf"></a><a name="rdbuf"></a>basic_fstream::rdbuf
 
 Retourne l’adresse de la mémoire tampon de flux stockée, de type pointeur à [basic_filebuf](../standard-library/basic-filebuf-class.md)\< **Elem**, **Tr**>.
 
@@ -260,11 +260,11 @@ basic_filebuf<Elem, Tr> *rdbuf() const
 
 Adresse de la mémoire tampon de flux stockée.
 
-### <a name="example"></a>Exemples
+### <a name="example"></a>Exemple
 
 Consultez [basic_filebuf::close](../standard-library/basic-filebuf-class.md#close) pour obtenir un exemple d’utilisation de `rdbuf`.
 
-## <a name="swap"></a>  basic_fstream::swap
+## <a name="basic_fstreamswap"></a><a name="swap"></a>basic_fstream::swap
 
 Échange le contenu de deux objets `basic_fstream`.
 
@@ -279,10 +279,10 @@ Référence `lvalue` à un objet `basic_fstream`.
 
 ### <a name="remarks"></a>Notes
 
-La fonction membre échange le contenu de cet objet et le contenu de *Right*.
+La fonction membre échange le contenu de cet objet et le contenu du *droit*.
 
 ## <a name="see-also"></a>Voir aussi
 
-[Sécurité des threads dans la bibliothèque C++ Standard](../standard-library/thread-safety-in-the-cpp-standard-library.md)\
-[iostream, programmation](../standard-library/iostream-programming.md)\
+[Sécurité des fils dans la bibliothèque standard de CMD](../standard-library/thread-safety-in-the-cpp-standard-library.md)\
+[Programmation iostream](../standard-library/iostream-programming.md)\
 [iostreams, conventions](../standard-library/iostreams-conventions.md)

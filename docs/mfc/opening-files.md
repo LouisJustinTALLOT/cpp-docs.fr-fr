@@ -16,40 +16,40 @@ helpviewer_keywords:
 - opening files [MFC]
 - exception handling [MFC], opening files
 ms.assetid: a991b8ec-b04a-4766-b47e-7485b5dd0b01
-ms.openlocfilehash: dab7a680d9b33a6e334da99a045b709fe00f215c
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 6119bf922b05c30a14d8421800e3931c4a038779
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62394479"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81375961"
 ---
 # <a name="opening-files"></a>Ouverture de fichiers
 
-Dans MFC, la méthode la plus courante pour ouvrir un fichier est un processus en deux étapes.
+Dans MFC, la façon la plus courante d’ouvrir un fichier est un processus en deux étapes.
 
-#### <a name="to-open-a-file"></a>Pour ouvrir un fichier
+#### <a name="to-open-a-file"></a>Ouvrir un fichier
 
-1. Créez l’objet de fichier sans spécifier un chemin d’accès ou d’autorisation des indicateurs.
+1. Créez l’objet de fichier sans spécifier un path ou des drapeaux d’autorisation.
 
-   Vous créez généralement un objet fichier en déclarant un [CFile](../mfc/reference/cfile-class.md) variable sur le frame de pile.
+   Vous créez généralement un objet de fichier en déclarant une variable [CFile](../mfc/reference/cfile-class.md) sur le cadre de pile.
 
-1. Appelez le [Open](../mfc/reference/cfile-class.md#open) fonction membre de l’objet de fichier, en fournissant un chemin d’accès et d’autorisation des indicateurs.
+1. Appelez la fonction membre [Open](../mfc/reference/cfile-class.md#open) pour l’objet de fichier, en fournissant un chemin et des drapeaux d’autorisation.
 
-   La valeur de retour pour `Open` sera différent de zéro si le fichier a été ouverte avec succès ou 0 si le fichier spécifié n’a pas pu être ouvert. Le `Open` fonction membre se présente comme suit :
+   La valeur `Open` de déclaration pour sera nonzero si le fichier a été ouvert avec succès ou 0 si le fichier spécifié ne pouvait pas être ouvert. La `Open` fonction membre est prototype comme suit :
 
    `virtual BOOL Open( LPCTSTR lpszFileName, UINT nOpenFlags, CFileException* pError = NULL );`
 
-   Les indicateurs d’ouverture spécifient les autorisations, comme en lecture seule, vous souhaitez pour le fichier. Les valeurs possibles des indicateurs sont définies en tant que constantes énumérées dans le `CFile` classe, afin qu’ils soient qualifiés avec «`CFile::`» comme dans `CFile::modeRead`. Utilisez le `CFile::modeCreate` indicateur si vous souhaitez créer le fichier.
+   Les drapeaux ouverts spécifient les autorisations, telles que la lecture seulement, que vous voulez pour le fichier. Les valeurs possibles du drapeau sont définies `CFile` comme des constantes`CFile::`énumérées `CFile::modeRead`au sein de la classe, de sorte qu’elles sont qualifiées avec " comme dans . Utilisez `CFile::modeCreate` le drapeau si vous voulez créer le fichier.
 
-L’exemple suivant montre comment créer un nouveau fichier avec l’autorisation de lecture/écriture (avec le même chemin, en remplaçant tout fichier précédent) :
+L’exemple suivant montre comment créer un nouveau fichier avec autorisation de lecture/écriture (remplacer tout fichier précédent par le même chemin) :
 
 [!code-cpp[NVC_MFCFiles#1](../atl-mfc-shared/reference/codesnippet/cpp/opening-files_1.cpp)]
 
 > [!NOTE]
->  Cet exemple crée et ouvre un fichier. S’il existe des problèmes, le `Open` appel peut retourner un `CFileException` de l’objet dans son dernier paramètre, comme indiqué ici. La macro TRACE imprime le nom de fichier et un code indiquant la raison de l’échec. Vous pouvez appeler la `AfxThrowFileException` fonctionner si vous avez besoin de plus le rapport d’erreurs.
+> Cet exemple crée et ouvre un fichier. En cas de `Open` problèmes, l’appel peut renvoyer un `CFileException` objet dans son dernier paramètre, comme indiqué ici. La macro TRACE imprime à la fois le nom du fichier et un code indiquant la raison de l’échec. Vous pouvez `AfxThrowFileException` appeler la fonction si vous avez besoin de rapports d’erreur plus détaillés.
 
 ## <a name="see-also"></a>Voir aussi
 
 [CFile, classe](../mfc/reference/cfile-class.md)<br/>
-[CFile::Open](../mfc/reference/cfile-class.md#open)<br/>
+[CFile::Ouvert](../mfc/reference/cfile-class.md#open)<br/>
 [Fichiers](../mfc/files-in-mfc.md)

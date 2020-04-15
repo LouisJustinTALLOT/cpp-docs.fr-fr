@@ -1,5 +1,5 @@
 ---
-title: Cmfcribbonmainpanel, classe
+title: CMFCRibbonMainPanel, classe
 ms.date: 11/04/2016
 f1_keywords:
 - CMFCRibbonMainPanel
@@ -16,16 +16,16 @@ helpviewer_keywords:
 - CMFCRibbonMainPanel [MFC], AddToRight
 - CMFCRibbonMainPanel [MFC], GetCommandsFrame
 ms.assetid: 1af78798-5e75-4365-9c81-a54aa5679602
-ms.openlocfilehash: e4bd1ab8cffc87d5079518cf9a1d6e430ca40fd9
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 1458039c25f2379b3c3db553b2010e9391df28db
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62403592"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81375105"
 ---
-# <a name="cmfcribbonmainpanel-class"></a>Cmfcribbonmainpanel, classe
+# <a name="cmfcribbonmainpanel-class"></a>CMFCRibbonMainPanel, classe
 
-Implémente un panneau de ruban qui s’affiche lorsque vous cliquez sur le [CMFCRibbonApplicationButton](../../mfc/reference/cmfcribbonapplicationbutton-class.md).
+Implémente un panneau ruban qui s’affiche lorsque vous cliquez sur le [CMFCRibbonApplicationButton](../../mfc/reference/cmfcribbonapplicationbutton-class.md).
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -46,23 +46,23 @@ class CMFCRibbonMainPanel : public CMFCRibbonPanel
 
 |Nom|Description|
 |----------|-----------------|
-|[CMFCRibbonMainPanel::Add](#add)|Ajoute un élément de ruban vers le volet gauche du panneau bouton application. (Substitue [CMFCRibbonPanel::Add](../../mfc/reference/cmfcribbonpanel-class.md#add).)|
-|[CMFCRibbonMainPanel::AddRecentFilesList](#addrecentfileslist)|Ajoute une chaîne de texte dans le menu de liste de fichiers récents.|
-|[CMFCRibbonMainPanel::AddToBottom](#addtobottom)|Ajoute un élément de ruban vers le volet en bas du panneau d’application de ruban.|
-|[CMFCRibbonMainPanel::AddToRight](#addtoright)|Ajoute un élément de ruban vers le volet droit du panneau bouton application.|
+|[CMFCRibbonMainPanel::Ajouter](#add)|Ajoute un élément ruban à la vitre gauche du panneau bouton d’application. (Overrides [CMFCRibbonPanel::Ajouter](../../mfc/reference/cmfcribbonpanel-class.md#add).)|
+|[CMFCRibbonMainPanel::AddRecentFilesList](#addrecentfileslist)|Ajoute une chaîne de texte au menu de liste de fichiers récents.|
+|[CMFCRibbonMainPanel::AddToBottom](#addtobottom)|Ajoute un élément ruban à la vitre inférieure du panneau d’application de ruban.|
+|[CMFCRibbonMainPanel::AddToRight](#addtoright)|Ajoute un élément ruban à la vitre droite du panneau bouton d’application.|
 |`CMFCRibbonMainPanel::CreateObject`|Utilisé par l'infrastructure pour créer une instance dynamique de ce type de classe.|
 |[CMFCRibbonMainPanel::GetCommandsFrame](#getcommandsframe)|Retourne un rectangle qui représente la zone du panneau principal du ruban.|
-|`CMFCRibbonMainPanel::GetThisClass`|Utilisé par l’infrastructure pour obtenir un pointeur vers le [CRuntimeClass](../../mfc/reference/cruntimeclass-structure.md) objet qui est associé à ce type de classe.|
+|`CMFCRibbonMainPanel::GetThisClass`|Utilisé par le cadre pour obtenir un pointeur à l’objet [CRuntimeClass](../../mfc/reference/cruntimeclass-structure.md) qui est associé à ce type de classe.|
 
 ## <a name="remarks"></a>Notes
 
-L’infrastructure affiche le `CMFCRibbonMainPanel` lorsque vous ouvrez le panneau de l’application. Il contient trois volets :
+Le cadre `CMFCRibbonMainPanel` affiche le moment où vous ouvrez le panneau d’application. Il contient trois volets :
 
-- Le volet gauche contient les commandes associées à des fichiers, tel que **Open**, **enregistrer**, **impression**, et **fermer**. Pour ajouter une commande à ce volet, appelez [CMFCRibbonMainPanel::Add](#add).
+- Le volet gauche contient des commandes associées à des fichiers, tels que **Open**, **Enregistrer**, **Imprimer**, et **Fermer**. Pour ajouter une commande à ce volet, appelez [CMFCRibbonMainPanel::Ajouter](#add).
 
-- Le volet droit contient les options qui modifient la commande que vous cliquez sur dans le volet gauche. Par exemple, si vous cliquez sur **Enregistrer sous** dans le volet gauche, le volet droit pour afficher les types de fichiers disponibles. Pour ajouter un élément à ce volet, appelez [CMFCRibbonMainPanel::AddToRight](#addtoright).
+- Le volet droit contient des options qui modifient la commande que vous cliquez dans la vitre gauche. Par exemple, si vous cliquez sur **Enregistrer comme** à partir de la vitre gauche, la vitre droite peut afficher les types de fichiers disponibles. Pour ajouter un élément à ce volet, appelez [CMFCRibbonMainPanel::AddToRight](#addtoright).
 
-- Le volet inférieur contient les boutons qui vous permettent de modifier les paramètres de l’application et pour quitter le programme. Pour ajouter un élément à ce volet, appelez [CMFCRibbonMainPanel::AddToBottom](#addtobottom).
+- Le volet inférieur contient des boutons qui vous permettent de modifier les paramètres de l’application et de quitter le programme. Pour ajouter un élément à ce volet, appelez [CMFCRibbonMainPanel::AddToBottom](#addtobottom).
 
 ## <a name="inheritance-hierarchy"></a>Hiérarchie d'héritage
 
@@ -72,13 +72,13 @@ L’infrastructure affiche le `CMFCRibbonMainPanel` lorsque vous ouvrez le panne
 
 [CMFCRibbonMainPanel](../../mfc/reference/cmfcribbonmainpanel-class.md)
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
-**En-tête :** afxRibbonMainPanel.h
+**En-tête:** afxRibbonMainPanel.h
 
-##  <a name="add"></a>  CMFCRibbonMainPanel::Add
+## <a name="cmfcribbonmainpaneladd"></a><a name="add"></a>CMFCRibbonMainPanel::Ajouter
 
-Ajoute un élément de ruban vers le volet gauche du panneau bouton application.
+Ajoute un élément ruban à la vitre gauche du panneau bouton d’application.
 
 ```
 virtual void Add(CMFCRibbonBaseElement* pElem);
@@ -86,16 +86,16 @@ virtual void Add(CMFCRibbonBaseElement* pElem);
 
 ### <a name="parameters"></a>Paramètres
 
-*pElem*<br/>
-[in, out] Un pointeur vers l’élément de ruban à ajouter au panneau principal.
+*pElem (en)*<br/>
+[dans, dehors] Un pointeur à l’élément ruban à ajouter au panneau principal.
 
 ### <a name="remarks"></a>Notes
 
-Ajoute un élément de ruban dans le panneau. Éléments ajoutés à l’aide de cette méthode seront situées dans la colonne gauche du panneau principal.
+Ajoute un élément ruban au panneau. Les éléments ajoutés à l’aide de cette méthode seront situés dans la colonne gauche du panneau principal.
 
-##  <a name="addrecentfileslist"></a>  CMFCRibbonMainPanel::AddRecentFilesList
+## <a name="cmfcribbonmainpaneladdrecentfileslist"></a><a name="addrecentfileslist"></a>CMFCRibbonMainPanel::AddRecentFilesList
 
-Ajoute une chaîne de texte dans le menu de liste de fichiers récents.
+Ajoute une chaîne de texte au menu de liste de fichiers récents.
 
 ```
 void AddRecentFilesList(
@@ -106,16 +106,16 @@ void AddRecentFilesList(
 ### <a name="parameters"></a>Paramètres
 
 *lpszLabel*<br/>
-Spécifie la chaîne à ajouter à la liste des fichiers récents.
+Spécifie la chaîne à ajouter à la liste de fichiers récents.
 
-*nWidth*<br/>
-Spécifie la largeur, en pixels, du Panneau de liste de fichiers récents.
+*nWidth (en)*<br/>
+Spécifie la largeur, en pixels, du panneau de liste de fichiers récents.
 
 ### <a name="remarks"></a>Notes
 
-##  <a name="addtobottom"></a>  CMFCRibbonMainPanel::AddToBottom
+## <a name="cmfcribbonmainpaneladdtobottom"></a><a name="addtobottom"></a>CMFCRibbonMainPanel::AddToBottom
 
-Ajoute un élément de ruban vers le volet en bas du panneau d’application de ruban.
+Ajoute un élément ruban à la vitre inférieure du panneau d’application de ruban.
 
 ```
 void AddToBottom(CMFCRibbonMainPanelButton* pElem);
@@ -123,14 +123,14 @@ void AddToBottom(CMFCRibbonMainPanelButton* pElem);
 
 ### <a name="parameters"></a>Paramètres
 
-*pElem*<br/>
-[in, out] Pointeur vers l’élément de ruban pour ajouter vers le bas du panneau principal.
+*pElem (en)*<br/>
+[dans, dehors] Un pointeur à l’élément ruban à ajouter au bas du panneau principal.
 
 ### <a name="remarks"></a>Notes
 
-##  <a name="addtoright"></a>  CMFCRibbonMainPanel::AddToRight
+## <a name="cmfcribbonmainpaneladdtoright"></a><a name="addtoright"></a>CMFCRibbonMainPanel::AddToRight
 
-Ajoute un élément de ruban vers le volet droit du panneau bouton application.
+Ajoute un élément ruban à la vitre droite du panneau bouton d’application.
 
 ```
 void AddToRight(
@@ -140,17 +140,17 @@ void AddToRight(
 
 ### <a name="parameters"></a>Paramètres
 
-*pElem*<br/>
-Pointeur vers un élément de ruban à ajouter à droite du panneau principal.
+*pElem (en)*<br/>
+Un pointeur à un élément ruban à ajouter sur le côté droit du panneau principal.
 
-*nWidth*<br/>
+*nWidth (en)*<br/>
 Spécifie la largeur, en pixels, du panneau droit.
 
 ### <a name="remarks"></a>Notes
 
-Utilisez cette fonction pour ajouter un élément de ruban vers le panneau droit. Le volet droit affiche généralement la liste des fichiers récents, mais vous pouvez ajouter n’importe quel autre élément de ruban ici.
+Utilisez cette fonction pour ajouter un élément ruban au panneau droit. Le panneau droit affiche généralement la liste de fichiers récents, mais vous pouvez ajouter n’importe quel autre élément ruban ici.
 
-##  <a name="getcommandsframe"></a>  CMFCRibbonMainPanel::GetCommandsFrame
+## <a name="cmfcribbonmainpanelgetcommandsframe"></a><a name="getcommandsframe"></a>CMFCRibbonMainPanel::GetCommandsFrame
 
 Retourne un rectangle qui représente la zone du panneau principal du ruban.
 
@@ -166,4 +166,4 @@ Un rectangle qui représente la zone du panneau principal du ruban.
 
 [Graphique hiérarchique](../../mfc/hierarchy-chart.md)<br/>
 [Classes](../../mfc/reference/mfc-classes.md)<br/>
-[CMFCRibbonPanel, classe](../../mfc/reference/cmfcribbonpanel-class.md)
+[Classe CMFCRibbonPanel](../../mfc/reference/cmfcribbonpanel-class.md)

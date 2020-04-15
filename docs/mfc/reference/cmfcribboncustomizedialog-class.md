@@ -1,5 +1,5 @@
 ---
-title: Cmfcribboncustomizedialog, classe
+title: CMFCRibbonCustomizeDialog Classe
 ms.date: 11/04/2016
 f1_keywords:
 - CMFCRibbonCustomizeDialog
@@ -8,16 +8,16 @@ f1_keywords:
 helpviewer_keywords:
 - CMFCRibbonCustomizeDialog [MFC], CMFCRibbonCustomizeDialog
 ms.assetid: ce67de7f-5eaa-4c75-9b94-f290f36df073
-ms.openlocfilehash: d73fd05a775ac26f5d289a5233341102f40e9af3
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: a66c0a19c04e0a900b91c0c28c45bb9c766d25c0
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62237616"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81375209"
 ---
-# <a name="cmfcribboncustomizedialog-class"></a>Cmfcribboncustomizedialog, classe
+# <a name="cmfcribboncustomizedialog-class"></a>CMFCRibbonCustomizeDialog Classe
 
-Affiche le ruban **personnaliser** page.
+Affiche la page **de personnalisation** du ruban.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -38,15 +38,15 @@ class CMFCRibbonCustomizeDialog : public CMFCPropertySheet
 
 |Nom|Description|
 |----------|-----------------|
-|`CMFCRibbonCustomizeDialog::GetThisClass`|Utilisé par l’infrastructure pour obtenir un pointeur vers le [CRuntimeClass](../../mfc/reference/cruntimeclass-structure.md) objet qui est associé à ce type de classe.|
+|`CMFCRibbonCustomizeDialog::GetThisClass`|Utilisé par le cadre pour obtenir un pointeur à l’objet [CRuntimeClass](../../mfc/reference/cruntimeclass-structure.md) qui est associé à ce type de classe.|
 
 ## <a name="remarks"></a>Notes
 
-MFC instancie automatiquement cette classe si vous ne traitez pas le message AFX_WM_ON_RIBBON_CUSTOMIZE, ou si vous retournez 0 à partir du Gestionnaire de message.
+MFC instantanéise automatiquement cette classe si vous ne traitez pas le AFX_WM_ON_RIBBON_CUSTOMIZE message, ou si vous retournez 0 du gestionnaire de message.
 
-Si vous souhaitez utiliser cette classe dans votre application pour afficher le ruban **personnaliser** boîte de dialogue zone, simplement instancier et appeler le `DoModal` (méthode).
+Si vous souhaitez utiliser cette classe dans votre application pour afficher la boîte de `DoModal` dialogue **de personnalisation** du ruban, il suffit de l’instantanéiser et d’appeler la méthode.
 
-Étant donné que cette classe est dérivée de [CMFCPropertySheet, classe](../../mfc/reference/cmfcpropertysheet-class.md), vous pouvez ajouter des pages personnalisées en utilisant le `CMFCPropertySheet` API.
+Parce que cette classe est dérivée de [CMFCPropertySheet](../../mfc/reference/cmfcpropertysheet-class.md) `CMFCPropertySheet` Class , vous pouvez ajouter des pages personnalisées en utilisant l’API.
 
 ## <a name="inheritance-hierarchy"></a>Hiérarchie d'héritage
 
@@ -62,11 +62,11 @@ Si vous souhaitez utiliser cette classe dans votre application pour afficher le 
 
 [CMFCRibbonCustomizeDialog](../../mfc/reference/cmfcribboncustomizedialog-class.md)
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
-**En-tête :** afxribboncustomizedialog.h
+**En-tête:** afxribboncustomizedialog.h
 
-##  <a name="cmfcribboncustomizedialog"></a>  CMFCRibbonCustomizeDialog::CMFCRibbonCustomizeDialog
+## <a name="cmfcribboncustomizedialogcmfcribboncustomizedialog"></a><a name="cmfcribboncustomizedialog"></a>CMFCRibbonCustomizeDialog::CMFCRibbonCustomizeDialog
 
 Construit un objet `CMFCRibbonCustomizeDialog`.
 
@@ -79,20 +79,20 @@ CMFCRibbonCustomizeDialog(
 ### <a name="parameters"></a>Paramètres
 
 *pWndParent*<br/>
-[in] Pointeur vers la fenêtre parente (généralement le frame principal).
+[dans] Un pointeur à la fenêtre parente (généralement le cadre principal).
 
-*pRibbon*<br/>
-[in] Un pointeur vers le `CMFCRibbonBar` qui doit être personnalisé.
+*pRibbon (pRibbon)*<br/>
+[dans] Un pointeur `CMFCRibbonBar` à celui qui doit être personnalisé.
 
 ### <a name="example"></a>Exemple
 
-L’exemple suivant montre comment construire un `CMFCRibbonCustomizeDialog` objet.
+L’exemple suivant montre comment `CMFCRibbonCustomizeDialog` construire un objet.
 
 [!code-cpp[NVC_MFC_RibbonApp#18](../../mfc/reference/codesnippet/cpp/cmfcribboncustomizedialog-class_1.cpp)]
 
 ### <a name="remarks"></a>Notes
 
-Le constructeur instancie un [cmfcribboncustomizepropertypage, classe](../../mfc/reference/cmfcribboncustomizepropertypage-class.md) de l’objet et l’ajoute à la collection de pages de feuille de propriétés.
+Le constructeur instantané un [objet CMFCRibbonCustomizePropertyPage Class](../../mfc/reference/cmfcribboncustomizepropertypage-class.md) et l’ajoute à la collection de pages de feuilles de propriété.
 
 ## <a name="see-also"></a>Voir aussi
 

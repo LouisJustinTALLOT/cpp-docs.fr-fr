@@ -1,5 +1,5 @@
 ---
-title: Cmfcribbonminitoolbar, classe
+title: CMFCRibbonMiniToolBar, classe
 ms.date: 11/04/2016
 f1_keywords:
 - CMFCRibbonMiniToolBar
@@ -16,14 +16,14 @@ helpviewer_keywords:
 - CMFCRibbonMiniToolBar [MFC], Show
 - CMFCRibbonMiniToolBar [MFC], ShowWithContextMenu
 ms.assetid: 7017e963-aeaf-4fe9-b540-e15a7ed41e94
-ms.openlocfilehash: 394182aa0f9c967524ed0db510d0b9cc0739118e
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 10b1d35c331df6563d09be0bea3c97c73e89acaa
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62151888"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81375087"
 ---
-# <a name="cmfcribbonminitoolbar-class"></a>Cmfcribbonminitoolbar, classe
+# <a name="cmfcribbonminitoolbar-class"></a>CMFCRibbonMiniToolBar, classe
 
 Implémente une barre d'outils contextuelle.
 
@@ -47,7 +47,7 @@ class CMFCRibbonMiniToolBar : public CMFCRibbonPanelMenu
 |Nom|Description|
 |----------|-----------------|
 |`CMFCRibbonMiniToolBar::CreateObject`|Utilisé par l'infrastructure pour créer une instance dynamique de ce type de classe.|
-|`CMFCRibbonMiniToolBar::GetThisClass`|Utilisé par l’infrastructure pour obtenir un pointeur vers le [CRuntimeClass](../../mfc/reference/cruntimeclass-structure.md) objet qui est associé à ce type de classe.|
+|`CMFCRibbonMiniToolBar::GetThisClass`|Utilisé par le cadre pour obtenir un pointeur à l’objet [CRuntimeClass](../../mfc/reference/cruntimeclass-structure.md) qui est associé à ce type de classe.|
 |[CMFCRibbonMiniToolBar::IsContextMenuMode](#iscontextmenumode)||
 |[CMFCRibbonMiniToolBar::IsRibbonMiniToolBar](#isribbonminitoolbar)|(Substitue `CMFCPopupMenu::IsRibbonMiniToolBar`.)|
 |[CMFCRibbonMiniToolBar::SetCommands](#setcommands)|Définit la liste des commandes à afficher sur la barre d'outils.|
@@ -78,11 +78,11 @@ La mini-barre d'outils devient transparente quand le pointeur de la souris sort 
 
 [CMFCRibbonMiniToolBar](../../mfc/reference/cmfcribbonminitoolbar-class.md)
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
-**En-tête :** afxRibbonMiniToolBar.h
+**En-tête:** afxRibbonMiniToolBar.h
 
-##  <a name="setcommands"></a>  CMFCRibbonMiniToolBar::SetCommands
+## <a name="cmfcribbonminitoolbarsetcommands"></a><a name="setcommands"></a>CMFCRibbonMiniToolBar::SetCommands
 
 Définit la liste des commandes à afficher sur la barre d'outils.
 
@@ -94,23 +94,23 @@ void SetCommands(
 
 ### <a name="parameters"></a>Paramètres
 
-*pRibbonBar*<br/>
-[in] La barre du ruban qui consiste à rechercher la mini-barre d’outils pour les boutons à afficher.
+*pRibbonBar (en)*<br/>
+[dans] La barre de ruban que la mini barre d’outils recherche les boutons à afficher.
 
 *lstCommands*<br/>
-[in] La liste des commandes à afficher sur la mini-barre d’outils. Toutes les catégories de ruban sont explorés pour rechercher les boutons associés.
+[dans] La liste des commandes à afficher sur la mini barre d’outils. Toutes les catégories de ruban sont recherchées pour trouver les boutons associés.
 
 ### <a name="remarks"></a>Notes
 
-Utilisez cette fonction pour définir la liste des commandes à afficher dans la mini-barre d’outils.
+Utilisez cette fonction pour définir la liste des commandes à afficher dans la mini barre d’outils.
 
 ### <a name="example"></a>Exemple
 
-L’exemple suivant montre comment utiliser le `SetCommands` méthode de la `CMFCRibbonMiniToolBar` classe. Cet extrait de code fait partie de la [exemple de démonstration de MS Office 2007](../../overview/visual-cpp-samples.md).
+L’exemple suivant montre comment `SetCommands` utiliser `CMFCRibbonMiniToolBar` la méthode de la classe. Cet extrait de code fait partie de [l’échantillon de démonstration ms Office 2007](../../overview/visual-cpp-samples.md).
 
 [!code-cpp[NVC_MFC_MSOffice2007Demo#9](../../mfc/reference/codesnippet/cpp/cmfcribbonminitoolbar-class_1.cpp)]
 
-##  <a name="show"></a>  CMFCRibbonMiniToolBar::Show
+## <a name="cmfcribbonminitoolbarshow"></a><a name="show"></a>CMFCRibbonMiniToolBar::Show
 
 Affiche la mini-barre d'outils au niveau des coordonnées d'écran spécifiées.
 
@@ -123,16 +123,16 @@ BOOL Show(
 ### <a name="parameters"></a>Paramètres
 
 *x*<br/>
-[in] Spécifie la position horizontale de la mini-barre d’outils en coordonnées d’écran.
+[dans] Spécifie la position horizontale de la mini barre d’outils dans les coordonnées de l’écran.
 
 *y*<br/>
-[in] Spécifie la position verticale de la mini-barre d’outils en coordonnées d’écran.
+[dans] Spécifie la position verticale de la mini barre d’outils dans les coordonnées de l’écran.
 
 ### <a name="return-value"></a>Valeur de retour
 
-TRUE si la mini-barre d’outils a été affiché avec succès ; Sinon, FALSE.
+VRAI si la mini barre d’outils a été affichée avec succès; autrement, FALSE.
 
-##  <a name="showwithcontextmenu"></a>  CMFCRibbonMiniToolBar::ShowWithContextMenu
+## <a name="cmfcribbonminitoolbarshowwithcontextmenu"></a><a name="showwithcontextmenu"></a>CMFCRibbonMiniToolBar:ShowWithContextMenu
 
 Affiche la mini-barre d'outils avec un menu contextuel.
 
@@ -147,28 +147,28 @@ BOOL ShowWithContextMenu(
 ### <a name="parameters"></a>Paramètres
 
 *x*<br/>
-[in] Spécifie la position horizontale du menu contextuel en coordonnées d’écran.
+[dans] Spécifie la position horizontale du menu contexte dans les coordonnées de l’écran.
 
 *y*<br/>
-[in] Spécifie la position verticale du menu contextuel en coordonnées d’écran.
+[dans] Spécifie la position verticale du menu contexte dans les coordonnées de l’écran.
 
 *uiMenuResID*<br/>
-[in] Spécifie l’ID de ressource du menu contextuel à afficher.
+[dans] Spécifie l’ID de ressources du menu contextuelle à afficher.
 
-*pWndOwner*<br/>
-[in] Identifie la fenêtre qui reçoit des messages dans le menu contextuel.
+*pWndOwner (en)*<br/>
+[dans] Identifie la fenêtre qui reçoit des messages du menu contextuel.
 
 ### <a name="return-value"></a>Valeur de retour
 
-TRUE si le menu contextuel a été affiché avec succès ; Sinon, FALSE.
+VRAI si le menu contextuelle a été affiché avec succès; autrement, FALSE.
 
 ### <a name="remarks"></a>Notes
 
-Utilisez cette fonction pour afficher une mini-barre d’outils qui a un menu contextuel. Le menu contextuel est positionnés 15 pixels sous la mini barre d’outils.
+Utilisez cette fonction pour afficher une mini barre d’outils qui a un menu contextuelle. Le menu contextuelle est positionné à 15 pixels sous la mini barre d’outils.
 
-##  <a name="iscontextmenumode"></a>  CMFCRibbonMiniToolBar::IsContextMenuMode
+## <a name="cmfcribbonminitoolbariscontextmenumode"></a><a name="iscontextmenumode"></a>CMFCRibbonMiniToolBar::IsContextMenuMode
 
-Pour plus d’informations, consultez le code source situé dans le **VC\\atlmfc\\src\\mfc** dossier de votre installation de Visual Studio.
+Pour plus de détails, consultez le code source situé dans le dossier **VC\\\\atlmfc src\\mfc** de votre installation Visual Studio.
 
 ```
 BOOL IsContextMenuMode() const;
@@ -178,9 +178,9 @@ BOOL IsContextMenuMode() const;
 
 ### <a name="remarks"></a>Notes
 
-##  <a name="isribbonminitoolbar"></a>  CMFCRibbonMiniToolBar::IsRibbonMiniToolBar
+## <a name="cmfcribbonminitoolbarisribbonminitoolbar"></a><a name="isribbonminitoolbar"></a>CMFCRibbonMiniToolBar::IsRibbonMiniToolBar
 
-Pour plus d’informations, consultez le code source situé dans le **VC\\atlmfc\\src\\mfc** dossier de votre installation de Visual Studio.
+Pour plus de détails, consultez le code source situé dans le dossier **VC\\\\atlmfc src\\mfc** de votre installation Visual Studio.
 
 ```
 virtual BOOL IsRibbonMiniToolBar() const;

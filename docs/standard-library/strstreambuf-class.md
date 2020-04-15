@@ -20,16 +20,16 @@ helpviewer_keywords:
 - std::strstreambuf [C++], str
 - std::strstreambuf [C++], underflow
 ms.assetid: b040b8ea-0669-4eba-8908-6a9cc159c54b
-ms.openlocfilehash: f24d8fe99bc211e026172e42669cf5e430ad31e8
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: 28399a1cd55407aadbc5d59e1e835892218ad0c8
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68459078"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81376611"
 ---
 # <a name="strstreambuf-class"></a>strstreambuf, classe
 
-Décrit une mémoire tampon de flux qui contrôle la transmission d’éléments vers et à partir d’une séquence d’éléments stockés dans un objet tableau de **caractères** .
+Décrit un tampon de flux qui contrôle la transmission des éléments vers et à partir d’une séquence d’éléments stockés dans un objet de tableau **d’omble** chevalier.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -56,7 +56,7 @@ Vous ne pouvez pas modifier ou étendre une séquence contrôlée figée, quel q
 L'objet stocke également des pointeurs vers deux fonctions qui contrôlent l'allocation de `strstreambuf`. Si ces pointeurs sont null, l'objet définit sa propre méthode d'allocation et de libération du stockage pour la séquence contrôlée.
 
 > [!NOTE]
-> Cette classe est dépréciée. Utilisez à la place [stringbuf](../standard-library/sstream-typedefs.md#stringbuf) ou [wstringbuf](../standard-library/sstream-typedefs.md#wstringbuf).
+> Cette classe est déconseillée. Utilisez à la place [stringbuf](../standard-library/sstream-typedefs.md#stringbuf) ou [wstringbuf](../standard-library/sstream-typedefs.md#wstringbuf).
 
 ### <a name="constructors"></a>Constructeurs
 
@@ -64,26 +64,26 @@ L'objet stocke également des pointeurs vers deux fonctions qui contrôlent l'al
 |-|-|
 |[strstreambuf](#strstreambuf)|Construit un objet de type `strstreambuf`.|
 
-### <a name="member-functions"></a>Fonctions membres
+### <a name="member-functions"></a>Fonctions Membre
 
 |Fonction membre|Description|
 |-|-|
-|[freeze](#freeze)|Fait en sorte qu'une mémoire tampon de flux soit indisponible via des opérations de mémoire tampon de flux.|
-|[overflow](#overflow)|Fonction virtuelle protégée qui peut être appelée quand un nouveau caractère est inséré dans une mémoire tampon saturée.|
+|[Gèlent](#freeze)|Fait en sorte qu'une mémoire tampon de flux soit indisponible via des opérations de mémoire tampon de flux.|
+|[Débordement](#overflow)|Fonction virtuelle protégée qui peut être appelée quand un nouveau caractère est inséré dans une mémoire tampon saturée.|
 |[pbackfail](#pbackfail)|Fonction membre virtuelle protégée qui tente de replacer un élément dans le flux d'entrée, puis d'en faire l'élément actif (vers lequel pointe le pointeur suivant).|
 |[pcount](#pcount)|Retourne le nombre d'éléments écrits dans la séquence contrôlée.|
 |[seekoff](#seekoff)|Fonction membre virtuelle protégée qui tente de modifier les positions actuelles des flux contrôlés.|
 |[seekpos](#seekpos)|Fonction membre virtuelle protégée qui tente de modifier les positions actuelles des flux contrôlés.|
-|[str](#str)|Appelle [freeze](#freeze), puis retourne un pointeur vers le début de la séquence contrôlée.|
+|[Str](#str)|Appelle [freeze](#freeze), puis retourne un pointeur vers le début de la séquence contrôlée.|
 |[underflow](#underflow)|Fonction virtuelle protégée pour extraire l'élément actuel du flux d'entrée.|
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
 **En-tête :** \<strstream>
 
 **Espace de noms :** std
 
-## <a name="freeze"></a>  strstreambuf::freeze
+## <a name="strstreambuffreeze"></a><a name="freeze"></a>strstreambuf::gel
 
 Fait en sorte qu'une mémoire tampon de flux soit indisponible via des opérations de mémoire tampon de flux.
 
@@ -94,11 +94,11 @@ void freeze(bool _Freezeit = true);
 ### <a name="parameters"></a>Paramètres
 
 *_Freezeit*\
-Valeur **booléenne** indiquant si vous souhaitez que le flux soit figé.
+Un **bool** indiquant si vous voulez que le flux soit gelé.
 
 ### <a name="remarks"></a>Notes
 
-Si *_Freezeit* a la valeur true, la fonction modifie le `strstreambuf` mode stocké pour rendre la séquence contrôlée figée. Dans le cas contraire, elle rend la séquence contrôlée non gelée.
+Si *_Freezeit* est vrai, la fonction `strstreambuf` modifie le mode stocké pour que la séquence contrôlée soit gelée. Dans le cas contraire, elle rend la séquence contrôlée non gelée.
 
 [str](#str) implique `freeze`.
 
@@ -171,7 +171,7 @@ after clearing stream: stream good
 test1test3
 ```
 
-## <a name="overflow"></a>  strstreambuf::overflow
+## <a name="strstreambufoverflow"></a><a name="overflow"></a>strstreambuf::débordement
 
 Fonction virtuelle protégée qui peut être appelée quand un nouveau caractère est inséré dans une mémoire tampon saturée.
 
@@ -186,17 +186,17 @@ Caractère à insérer dans la mémoire tampon, ou `EOF`.
 
 ### <a name="return-value"></a>Valeur de retour
 
-Si la fonction ne peut pas réussir, elle retourne `EOF`. Sinon, si  *\_Meta* ==  `EOF`, elle retourne une valeur autre que.`EOF` Dans le cas contraire, elle retourne  *\_Meta*.
+Si la fonction ne peut pas réussir, elle retourne `EOF`. Sinon, * \_* si Meta == `EOF`, il `EOF`retourne une certaine valeur autre que . Sinon, il * \_* retourne Meta .
 
 ### <a name="remarks"></a>Notes
 
-`EOF`Si  *\_Meta* ! =, la fonction membre virtuelle protégée essaie d’insérer l’élément `(char)_Meta` dans la mémoire tampon de sortie. Elle peut le faire de différentes manières :
+Si * \_Meta* `EOF`! , la fonction de membre `(char)_Meta` virtuel protégée tente d’insérer l’élément dans le tampon de sortie. Elle peut le faire de différentes manières :
 
 - Si une position d’écriture est disponible, elle peut stocker l’élément dans la position d’écriture et incrémenter le pointeur suivant pour la mémoire tampon de sortie.
 
 - Si le mode strstreambuf stocké indique que la séquence contrôlée est modifiable, extensible et non gelée, la fonction peut proposer une position d’écriture en en allouant une nouvelle pour la mémoire tampon de sortie. Cette façon d’étendre la mémoire tampon de sortie permet également d’étendre les mémoires tampons d’entrée associées.
 
-## <a name="pbackfail"></a>  strstreambuf::pbackfail
+## <a name="strstreambufpbackfail"></a><a name="pbackfail"></a>strstreambuf::pbackfail
 
 Fonction membre virtuelle protégée qui tente de replacer un élément dans le flux d’entrée, puis d’en faire l’élément actif (vers lequel pointe le pointeur suivant).
 
@@ -211,19 +211,19 @@ Caractère à insérer dans la mémoire tampon, ou `EOF`.
 
 ### <a name="return-value"></a>Valeur de retour
 
-Si la fonction ne peut pas réussir, elle retourne `EOF`. Sinon, si  *\_Meta* ==  `EOF`, elle retourne une valeur autre que.`EOF` Dans le cas contraire, elle retourne  *\_Meta*.
+Si la fonction ne peut pas réussir, elle retourne `EOF`. Sinon, * \_* si Meta == `EOF`, il `EOF`retourne une certaine valeur autre que . Sinon, il * \_* retourne Meta .
 
 ### <a name="remarks"></a>Notes
 
 La fonction membre virtuelle protégée tente de replacer un élément dans la mémoire tampon d’entrée, puis d’en faire l’élément actif (vers lequel pointe le pointeur suivant).
 
-*Si\_Meta*,l’élément`EOF`à envoyer à nouveau est effectivement celui qui se trouve déjà dans le flux avant l’élément actuel. ==  Sinon, cet élément est remplacé par `ch = (char)_Meta`. La fonction peut replacer un élément de différentes manières :
+Si * \_Meta* == `EOF`, l’élément à repousser est effectivement celui déjà dans le flux avant l’élément actuel. Sinon, cet élément `ch = (char)_Meta`est remplacé par . La fonction peut replacer un élément de différentes manières :
 
-- Si une position remise est disponible et que l’élément qui y est stocké est `ch`égal à, elle peut décrémenter le pointeur suivant pour la mémoire tampon d’entrée.
+- Si une position de remise est disponible, et `ch`l’élément stocké il se compare à égal à , il peut décroisser le pointeur suivant pour le tampon d’entrée.
 
-- Si une position remise est disponible et si le mode strstreambuf indique que la séquence contrôlée est modifiable, la fonction peut stocker `ch` dans la position remise et décrémenter le pointeur suivant pour la mémoire tampon d’entrée.
+- Si une position de remise est disponible, et si le mode strstreambuf indique `ch` que la séquence contrôlée est modifiable, la fonction peut stocker dans la position de remise et décrérer le pointeur suivant pour le tampon d’entrée.
 
-## <a name="pcount"></a>  strstreambuf::pcount
+## <a name="strstreambufpcount"></a><a name="pcount"></a>strstreambuf::pcount
 
 Retourne le nombre d'éléments écrits dans la séquence contrôlée.
 
@@ -237,9 +237,9 @@ Un décompte du nombre d’éléments écrits dans la séquence contrôlée.
 
 ### <a name="remarks"></a>Notes
 
-En particulier, si [pptr](../standard-library/basic-streambuf-class.md#pptr) est un pointeur Null, la fonction retourne zéro. Sinon, elle retourne `pptr`  -  [pbase](../standard-library/basic-streambuf-class.md#pbase).
+En particulier, si [pptr](../standard-library/basic-streambuf-class.md#pptr) est un pointeur Null, la fonction retourne zéro. Sinon, il `pptr`  - retourne [pbase](../standard-library/basic-streambuf-class.md#pbase).
 
-### <a name="example"></a>Exemples
+### <a name="example"></a>Exemple
 
 ```cpp
 // strstreambuf_pcount.cpp
@@ -258,7 +258,7 @@ int main( )
 }
 ```
 
-## <a name="seekoff"></a>  strstreambuf::seekoff
+## <a name="strstreambufseekoff"></a><a name="seekoff"></a>strstreambuf::seekoff
 
 Fonction membre virtuelle protégée qui tente de modifier les positions actuelles des flux contrôlés.
 
@@ -271,13 +271,13 @@ virtual streampos seekoff(streamoff _Off,
 ### <a name="parameters"></a>Paramètres
 
 *_Off*\
-Position à rechercher relative à *_Way*.
+La position à rechercher par rapport à *_Way*.
 
 *_Way*\
 Point de départ des opérations de décalage. Consultez [seekdir](../standard-library/ios-base-class.md#seekdir) pour connaître les valeurs possibles.
 
 *_Which*\
-Spécifie le mode pour la position du pointeur. Par défaut, vous êtes autorisé à modifier les positions de lecture et d’écriture.
+Spécifie le mode pour la position du pointeur. La valeur par défaut est de vous autoriser à modifier les positions de lecture et d’écriture.
 
 ### <a name="return-value"></a>Valeur de retour
 
@@ -289,17 +289,17 @@ La fonction membre virtuelle protégée s’efforce de modifier les positions ac
 
 La nouvelle position est déterminée comme suit :
 
-- Si `_Way == ios_base::beg`, la nouvelle position est le début du flux plus *_OFF*.
+- Si `_Way == ios_base::beg`, la nouvelle position est le début du flux plus *_Off*.
 
-- Si `_Way == ios_base::cur`, la nouvelle position est la position actuelle du flux plus *_OFF*.
+- Si `_Way == ios_base::cur`, la nouvelle position est la position actuelle du flux plus *_Off*.
 
-- Si `_Way == ios_base::end`, la nouvelle position est la fin du flux plus *_OFF*.
+- Si `_Way == ios_base::end`, la nouvelle position est la fin du flux plus *_Off*.
 
-Si `_Which & ios_base::in` est différent de zéro et que la mémoire tampon d’entrée existe, la fonction modifie la position suivante à lire dans la mémoire tampon d’entrée. Si `_Which & ios_base::out` est également différent de zéro `_Way != ios_base::cur`,, et que la mémoire tampon de sortie existe, la fonction définit également la position suivante à écrire pour qu’elle corresponde à la position suivante à lire.
+S’il `_Which & ios_base::in` n’existe pas de tampon et que le tampon d’entrée existe, la fonction modifie la position suivante pour lire dans le tampon d’entrée. Si `_Which & ios_base::out` elle n’est `_Way != ios_base::cur`pas non zéro, et que le tampon de sortie existe, la fonction définit également la position suivante à écrire pour correspondre à la position suivante à lire.
 
-Sinon, si `_Which & ios_base::out` est différent de zéro et que la mémoire tampon de sortie existe, la fonction modifie la position suivante à écrire dans la mémoire tampon de sortie. Dans le cas contraire, l’opération de positionnement échoue. Pour qu’une opération de positionnement réussisse, la position de flux obtenue doit se trouver dans la séquence contrôlée.
+Dans le cas contraire, si `_Which & ios_base::out` est différent de zéro et que la mémoire tampon de sortie existe, la fonction modifie la position suivante d’écriture dans la mémoire tampon de sortie. Dans le cas contraire, l’opération de positionnement échoue. Pour qu’une opération de positionnement réussisse, la position de flux obtenue doit se trouver dans la séquence contrôlée.
 
-## <a name="seekpos"></a>  strstreambuf::seekpos
+## <a name="strstreambufseekpos"></a><a name="seekpos"></a>strstreambuf::seekpos
 
 Fonction membre virtuelle protégée qui tente de modifier les positions actuelles des flux contrôlés.
 
@@ -313,11 +313,11 @@ virtual streampos seekpos(streampos _Sp, ios_base::openmode _Which = ios_base::i
 Position à rechercher.
 
 *_Which*\
-Spécifie le mode pour la position du pointeur. Par défaut, vous êtes autorisé à modifier les positions de lecture et d’écriture.
+Spécifie le mode pour la position du pointeur. La valeur par défaut est de vous autoriser à modifier les positions de lecture et d’écriture.
 
 ### <a name="return-value"></a>Valeur de retour
 
-Si la fonction réussit à modifier une ou les deux positions de flux, elle retourne la position de flux obtenue. Sinon, elle échoue et retourne une position de flux non valide. Pour déterminer si la position du flux est non valide, comparez la valeur de retour à `pos_type(off_type(-1))`.
+Si la fonction réussit à modifier une ou les deux positions de flux, elle retourne la position de flux obtenue. Sinon, elle échoue et retourne une position de flux non valide. Pour déterminer si la position du flux n’est pas valide, comparez la valeur de retour à `pos_type(off_type(-1))`.
 
 ### <a name="remarks"></a>Notes
 
@@ -325,7 +325,7 @@ La fonction membre virtuelle protégée s’efforce de modifier les positions ac
 
 Si `_Which` & **ios_base::in** est différent de zéro et que la mémoire tampon d’entrée existe, la fonction modifie la position suivante de lecture dans la mémoire tampon d’entrée. Si `_Which` & `ios_base::out` est différent de zéro et que la mémoire tampon de sortie existe, la fonction définit également la position suivante d’écriture pour qu’elle corresponde à la position suivante de lecture. Dans le cas contraire, si `_Which` & `ios_base::out` est différent de zéro et que la mémoire tampon de sortie existe, la fonction modifie la position suivante d’écriture dans la mémoire tampon de sortie. Dans le cas contraire, l’opération de positionnement échoue. Pour qu’une opération de positionnement réussisse, la position de flux obtenue doit se trouver dans la séquence contrôlée.
 
-## <a name="str"></a>  strstreambuf::str
+## <a name="strstreambufstr"></a><a name="str"></a>strstreambuf::str
 
 Appelle [freeze](#freeze), puis retourne un pointeur vers le début de la séquence contrôlée.
 
@@ -345,7 +345,7 @@ Aucun élément Null de fin n’existe, à moins que n’en insériez explicitem
 
 Consultez [strstreambuf::freeze](#freeze) pour obtenir un exemple qui utilise **str**.
 
-## <a name="strstreambuf"></a>  strstreambuf::strstreambuf
+## <a name="strstreambufstrstreambuf"></a><a name="strstreambuf"></a>strstreambuf::strstreambuf
 
 Construit un objet de type `strstreambuf`.
 
@@ -382,8 +382,8 @@ strstreambuf(const unsigned char* _Getptr,
 *_Allocfunc*\
 Fonction utilisée pour allouer de la mémoire tampon.
 
-*saut*\
-Détermine la longueur de la mémoire tampon vers laquelle pointe *_Getptr*. Si *_Getptr* n’est pas un argument (première forme de constructeur), une taille d’allocation suggérée pour les mémoires tampons.
+*Compter*\
+Détermine la longueur du tampon pointé vers *_Getptr*. Si *_Getptr n’est* pas un argument (premier formulaire constructeur), une taille d’allocation suggérée pour les tampons.
 
 *_Freefunc*\
 Fonction utilisée pour libérer de la mémoire tampon.
@@ -396,9 +396,9 @@ Mémoire tampon utilisée pour la sortie.
 
 ### <a name="remarks"></a>Notes
 
-Le premier constructeur stocke un pointeur Null dans tous les pointeurs contrôlant la mémoire tampon d’entrée, la mémoire tampon de sortie et l’allocation strstreambuf. Il définit le mode strstreambuf stocké pour rendre la séquence contrôlée modifiable et extensible. Il accepte également le *nombre* comme taille d’allocation initiale suggérée.
+Le premier constructeur stocke un pointeur Null dans tous les pointeurs contrôlant la mémoire tampon d’entrée, la mémoire tampon de sortie et l’allocation strstreambuf. Il définit le mode strstreambuf stocké pour rendre la séquence contrôlée modifiable et extensible. Il accepte également *le compte* comme une taille d’allocation initiale suggérée.
 
-Le deuxième constructeur se comporte comme le premier, sauf qu’il stocke  *\_Allocfunc* comme pointeur vers la fonction à appeler pour allouer le stockage et  *\_Freefunc* comme pointeur vers la fonction à appeler pour libérer ce stockage.
+Le deuxième constructeur se comporte comme le premier, sauf qu’il stocke * \_Allocfunc* comme pointeur à la fonction d’appeler à allouer le stockage et * \_Freefunc* comme pointeur à la fonction d’appeler pour libérer ce stockage.
 
 Les trois constructeurs :
 
@@ -416,13 +416,13 @@ strstreambuf(unsigned char *_Getptr,
     unsigned char *putptr = 0);
 ```
 
-se comportent également comme le premier, si ce n’est que `_Getptr` désigne l’objet tableau utilisé pour contenir la séquence contrôlée. (Par conséquent, ce ne doit pas être un pointeur Null.) Le nombre d’éléments *N* dans le tableau est déterminé comme suit :
+se comportent également comme le premier, si ce n’est que `_Getptr` désigne l’objet tableau utilisé pour contenir la séquence contrôlée. (Par conséquent, il ne doit pas être un pointeur nul.) Le nombre d’éléments *N* dans le tableau est déterminé comme suit :
 
-- Si (`count` > 0), *N* est `count`.
+- Si`count` (> 0), alors *N* N `count`est .
 
-- Si (`count` = = 0), la valeur *N* `strlen`est ( ( **const** `char` *) `_Getptr` ).
+- Si`count` (0), alors *N* N `strlen`est (const `_Getptr` **const** `char` ) .
 
-- Si (`count` < 0), *N* est **INT_MAX**.
+- Si`count` (< 0), alors *N* est **INT_MAX**.
 
 Si `_Putptr` est un pointeur Null, la fonction établit simplement une mémoire tampon d’entrée en exécutant :
 
@@ -466,7 +466,7 @@ streambuf((char *)_Getptr, count);
 
 si ce n’est que le mode stocké ne rend la séquence contrôlée ni modifiable, ni extensible.
 
-## <a name="underflow"></a>  strstreambuf::underflow
+## <a name="strstreambufunderflow"></a><a name="underflow"></a>strstreambuf::underflow
 
 Fonction virtuelle protégée pour extraire l'élément actuel du flux d'entrée.
 
@@ -480,11 +480,11 @@ Si la fonction ne peut pas réussir, elle retourne `EOF`. Sinon, elle retourne l
 
 ### <a name="remarks"></a>Notes
 
-La fonction membre virtuelle protégée s’efforce d’extraire `ch` l’élément actuel de la mémoire tampon d’entrée, d’avancer la position actuelle du flux et de retourner l’élément comme (`int`) (`unsigned char`) ch. Elle peut le faire d’une seule façon: si une position de lecture est disponible, elle `ch` prend comme élément stocké dans la position de lecture et avance le pointeur suivant pour la mémoire tampon d’entrée.
+La fonction virtuelle protégée des membres `ch` s’efforce d’extraire l’élément actuel du tampon`int`d’entrée, puis de faire progresser la position actuelle du flux, et de retourner l’élément comme ( ))`unsigned char` **ch**. Il ne peut le faire que d’une seule `ch` manière: si une position de lecture est disponible, il prend comme l’élément stocké dans la position de lecture et avance le pointeur suivant pour le tampon d’entrée.
 
 ## <a name="see-also"></a>Voir aussi
 
 [streambuf](../standard-library/streambuf-typedefs.md#streambuf)\
-[Sécurité des threads dans la bibliothèque C++ Standard](../standard-library/thread-safety-in-the-cpp-standard-library.md)\
-[iostream, programmation](../standard-library/iostream-programming.md)\
+[Sécurité des fils dans la bibliothèque standard de CMD](../standard-library/thread-safety-in-the-cpp-standard-library.md)\
+[Programmation iostream](../standard-library/iostream-programming.md)\
 [iostreams, conventions](../standard-library/iostreams-conventions.md)

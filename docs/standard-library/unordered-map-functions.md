@@ -8,12 +8,12 @@ f1_keywords:
 ms.assetid: cf2e4115-f205-4a0e-90be-a143ffcc1f44
 helpviewer_keywords:
 - std::swap (unordered_map/multimap)
-ms.openlocfilehash: 8ad81157d12de017198afeeb48f3b329ef20dbde
-ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
+ms.openlocfilehash: 759957028b74f984385f47647275cf22d561f59c
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/16/2020
-ms.locfileid: "79422555"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81373140"
 ---
 # <a name="ltunordered_mapgt-functions"></a>&lt;unordered_map&gt;, fonctions
 
@@ -21,7 +21,7 @@ ms.locfileid: "79422555"
 |-|-|
 |[swap (unordered_map)](#swap)|[swap (unordered_multimap)](#swap_function_multimap)|
 
-## <a name="swap"></a>  swap (unordered_map)
+## <a name="swap-unordered_map"></a><a name="swap"></a>swap (unordered_map)
 
 Échange le contenu de deux conteneurs.
 
@@ -34,30 +34,30 @@ void swap(
 
 ### <a name="parameters"></a>Paramètres
 
-\ de *clé*
+*Clé*\
 Type de clé.
 
 *Ty*\
 Type mappé.
 
-\ de *hachage*
-Type d'objet de la fonction de hachage.
+*Hachage*\
+Type d’objet de la fonction de hachage.
 
-*\ prévu*
+*Pred*\
 Type d’objet de fonction de comparaison d’égalité.
 
-\ *Alloc*
+*Alloc*\
 Classe allocator.
 
-\ *gauche*
+*Gauche*\
 Premier conteneur à échanger.
 
-\ *droit*
+*Oui*\
 Second conteneur à échanger.
 
 ### <a name="remarks"></a>Notes
 
-La fonction de modèle exécute `left.`[unordered_map::swap](../standard-library/unordered-map-class.md#swap)`(right)`.
+La fonction de `left.`modèle exécute [unordered_map ::swap](../standard-library/unordered-map-class.md#swap)`(right)`.
 
 ### <a name="example"></a>Exemple
 
@@ -114,7 +114,7 @@ int main()
 [c, 3] [b, 2] [a, 1]
 ```
 
-## <a name="swap_function_multimap"></a>  swap (unordered_multimap)
+## <a name="swap-unordered_multimap"></a><a name="swap_function_multimap"></a>swap (unordered_multimap)
 
 Échange le contenu de deux conteneurs.
 
@@ -127,30 +127,30 @@ void swap(
 
 ### <a name="parameters"></a>Paramètres
 
-\ de *clé*
+*Clé*\
 Type de clé.
 
 *Ty*\
 Type mappé.
 
-\ de *hachage*
-Type d'objet de la fonction de hachage.
+*Hachage*\
+Type d’objet de la fonction de hachage.
 
-*\ prévu*
+*Pred*\
 Type d’objet de fonction de comparaison d’égalité.
 
-\ *Alloc*
+*Alloc*\
 Classe allocator.
 
-\ *gauche*
+*Gauche*\
 Premier conteneur à échanger.
 
-\ *droit*
+*Oui*\
 Second conteneur à échanger.
 
 ### <a name="remarks"></a>Notes
 
-La fonction de modèle exécute `left.`[unordered_multimap::swap](../standard-library/unordered-multimap-class.md#swap)`(right)`.
+La fonction de `left.`modèle exécute [unordered_multimap::swap](../standard-library/unordered-multimap-class.md#swap)`(right)`.
 
 ### <a name="example"></a>Exemple
 

@@ -9,12 +9,12 @@ helpviewer_keywords:
 - Microsoft::WRL::Details::ArgTraits structure
 - Microsoft::WRL::Details::ArgTraits::args constant
 ms.assetid: 58ae4115-c1bc-48c8-b01b-e60554841c30
-ms.openlocfilehash: c13e7fec3289b66b40e44f91404a50cba7a473b1
-ms.sourcegitcommit: b8c22e6d555cf833510753cba7a368d57e5886db
+ms.openlocfilehash: 16c44d861ebbbc98fa1bffb62a00d1989c0c803c
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/29/2020
-ms.locfileid: "76821712"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81377173"
 ---
 # <a name="argtraits-structure"></a>ArgTraits (structure)
 
@@ -127,78 +127,78 @@ struct ArgTraits<
              (TArg1, TArg2, TArg3, TArg4, TArg5, TArg6, TArg7, TArg8, TArg9)>;
 ```
 
-### <a name="parameters"></a>Parameters
+### <a name="parameters"></a>Paramètres
 
 *TMemberFunction*<br/>
-Paramètre TypeName pour une structure ArgTraits qui ne peut pas correspondre à une signature de méthode `Invoke`.
+Paramètre typename pour une structure ArgTraits qui ne peut égaler aucune `Invoke` signature de méthode.
 
 *TDelegateInterface*<br/>
-Interface de délégué.
+Une interface déléguée.
 
 *TArg1*<br/>
-Type du premier argument de la méthode `Invoke`.
+Le type du premier `Invoke` argument de la méthode.
 
 *TArg2*<br/>
-Type du deuxième argument de la méthode `Invoke`.
+Le type du deuxième `Invoke` argument de la méthode.
 
-*TArg3*<br/>
-Type du troisième argument de la méthode `Invoke`.
+*Targ3*<br/>
+Le type du troisième `Invoke` argument de la méthode.
 
-*TArg4*<br/>
-Type du quatrième argument de la méthode `Invoke`.
+*TArg4 (en)*<br/>
+Le type du quatrième `Invoke` argument de la méthode.
 
 *TArg5*<br/>
-Type du cinquième argument de la méthode `Invoke`.
+Le type du cinquième `Invoke` argument de la méthode.
 
-*TArg6*<br/>
-Type du sixième argument de la méthode `Invoke`.
+*TArg6 (TArg6)*<br/>
+Le type du sixième `Invoke` argument de la méthode.
 
-*TArg7*<br/>
-Type du septième argument de la méthode `Invoke`.
+*TArg7 (en)*<br/>
+Le type du septième `Invoke` argument de la méthode.
 
 *TArg8*<br/>
-Type du huitième argument de la méthode `Invoke`.
+Le type du huitième `Invoke` argument de la méthode.
 
-*TArg9*<br/>
-Type du neuvième argument de la méthode `Invoke`.
+*TArg9 (TArg9)*<br/>
+Le type du neuvième `Invoke` argument de la méthode.
 
 ## <a name="remarks"></a>Notes
 
-La structure `ArgTraits` déclare une interface de délégué spécifiée et une fonction membre anonyme qui a un nombre spécifié de paramètres.
+La `ArgTraits` structure déclare une interface de délégué spécifiée et une fonction de membre anonyme qui a un nombre spécifié de paramètres.
 
-## <a name="members"></a>Members
+## <a name="members"></a>Membres
 
 ### <a name="public-typedefs"></a>Typedefs publics
 
-Name       | Description
+Nom       | Description
 ---------- | ----------------------
-`Arg1Type` | Typedef pour TArg1.
-`Arg2Type` | Typedef pour TArg2.
-`Arg3Type` | Typedef pour TArg3.
-`Arg4Type` | Typedef pour TArg4.
-`Arg5Type` | Typedef pour TArg5.
-`Arg6Type` | Typedef pour TArg6.
-`Arg7Type` | Typedef pour TArg7.
-`Arg8Type` | Typedef pour TArg8.
-`Arg9Type` | Typedef pour TArg9.
+`Arg1Type` | Le tapdef pour TArg1.
+`Arg2Type` | Le tapdef pour TArg2.
+`Arg3Type` | Le tapdef pour TArg3.
+`Arg4Type` | Le tapdef pour TArg4.
+`Arg5Type` | Le tapdef pour TArg5.
+`Arg6Type` | Le tapdef pour TArg6.
+`Arg7Type` | Le tapdef pour TArg7.
+`Arg8Type` | Le tapdef pour TArg8.
+`Arg9Type` | Le tapdef pour TArg9.
 
 ### <a name="public-constants"></a>Constantes publiques
 
-Name                     | Description
+Nom                     | Description
 ------------------------ | ---------------------------------------------------------------------------------------
-[ArgTraits::args](#args) | Conserve le nombre de paramètres sur la méthode `Invoke` d’une interface de délégué.
+[ArgTraits::args](#args) | Conserve le nombre de paramètres `Invoke` sur la méthode d’une interface déléguée.
 
 ## <a name="inheritance-hierarchy"></a>Hiérarchie d'héritage
 
 `ArgTraits`
 
-## <a name="requirements"></a>Configuration requise pour
+## <a name="requirements"></a>Spécifications
 
-**En-tête :** Event. h
+**En-tête:** event.h
 
-**Espace de noms :** Microsoft :: WRL ::D étails
+**Espace nom:** Microsoft::WRL::Details
 
-## <a name="args"></a>ArgTraits::args
+## <a name="argtraitsargs"></a><a name="args"></a>ArgTraits::args
 
 Prend en charge l’infrastructure WRL et n’est pas destiné à être utilisé directement à partir de votre code.
 
@@ -208,4 +208,4 @@ static const int args = -1;
 
 ### <a name="remarks"></a>Notes
 
-Conserve le nombre de paramètres sur la méthode `Invoke` d’une interface de délégué. Lorsque `args` est égal à-1, il ne peut y avoir aucune correspondance pour la signature de méthode `Invoke`.
+Conserve le nombre de paramètres `Invoke` sur la méthode d’une interface déléguée. Quand `args` est égal à -1, il `Invoke` ne peut y avoir de correspondance pour la signature de la méthode.

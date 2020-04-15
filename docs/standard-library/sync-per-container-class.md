@@ -7,14 +7,14 @@ f1_keywords:
 helpviewer_keywords:
 - sync_per_container class
 ms.assetid: 0b4b2904-b668-4d94-a422-d4f919cbffab
-ms.openlocfilehash: 378451ac2643d62271fd9e7fa44706a84ee8bb83
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: 2c60911b5469cbf74944c9f63af44f2351790280
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68450290"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81376552"
 ---
-# <a name="syncpercontainer-class"></a>sync_per_container, classe
+# <a name="sync_per_container-class"></a>sync_per_container, classe
 
 Décrit un [filtre de synchronisation](../standard-library/allocators-header.md) qui fournit un objet cache distinct pour chaque objet allocateur.
 
@@ -32,19 +32,19 @@ class sync_per_container
 |---------------|-----------------|
 |*Cache*|Type de cache associé au filtre de synchronisation. Il peut s’agir de [cache_chunklist](../standard-library/cache-chunklist-class.md), [cache_freelist](../standard-library/cache-freelist-class.md) ou [cache_suballoc](../standard-library/cache-suballoc-class.md).|
 
-### <a name="member-functions"></a>Fonctions membres
+### <a name="member-functions"></a>Fonctions Membre
 
 |Fonction membre|Description|
 |-|-|
 |[equals](#equals)|Compare l'égalité de deux caches.|
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
 **En-tête :** \<allocators>
 
 **Espace de noms :** stdext
 
-## <a name="equals"></a>  sync_per_container::equals
+## <a name="sync_per_containerequals"></a><a name="equals"></a>sync_per_container::égales
 
 Compare l'égalité de deux caches.
 
@@ -57,14 +57,14 @@ bool equals(const sync_per_container<Cache>& Other) const;
 |Paramètre|Description|
 |---------------|-----------------|
 |*Cache*|L’objet cache du filtre de synchronisation.|
-|*Autre*|Objet cache dont l’égalité est à comparer.|
+|*Autres*|Objet cache dont l’égalité est à comparer.|
 
 ### <a name="return-value"></a>Valeur de retour
 
-La fonction membre retourne toujours **false**.
+La fonction membre retourne toujours **fausse**.
 
 ### <a name="remarks"></a>Notes
 
 ## <a name="see-also"></a>Voir aussi
 
-[\<allocators>](../standard-library/allocators-header.md)
+[\<les allocataires>](../standard-library/allocators-header.md)

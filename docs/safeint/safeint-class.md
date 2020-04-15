@@ -10,19 +10,19 @@ helpviewer_keywords:
 - SafeInt class
 - SafeInt class, constructor
 ms.assetid: 27a8f087-2511-46f9-8d76-2aeb66ca272f
-ms.openlocfilehash: c69dc7ed5e34d98d5acff8f2bc28c34761bd31c6
-ms.sourcegitcommit: 8e285a766523e653aeeb34d412dc6f615ef7b17b
+ms.openlocfilehash: c365b5cab5814d3992e6570949a69fc5d39c1dd3
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/21/2020
-ms.locfileid: "80076818"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81373464"
 ---
 # <a name="safeint-class"></a>SafeInt, classe
 
 Étend les primitifs entiers afin d’éviter les débordements d’entiers et permet de comparer les différents types d’entiers.
 
 > [!NOTE]
-> La dernière version de cette bibliothèque se trouve dans [https://github.com/dcleblanc/SafeInt](https://github.com/dcleblanc/SafeInt).
+> La dernière version de cette [https://github.com/dcleblanc/SafeInt](https://github.com/dcleblanc/SafeInt)bibliothèque est située à .
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -42,20 +42,20 @@ class SafeInt;
 | Paramètre  |  Description |
 |---------|-----------------|
 | *rhs*      |  [in] Un paramètre d’entrée qui représente la valeur à droite de l’opérateur dans plusieurs fonctions autonomes. |
-| *i*        |  [in] Un paramètre d’entrée qui représente la valeur à droite de l’opérateur dans plusieurs fonctions autonomes. |
-| *bits*     |  [in] Un paramètre d’entrée qui représente la valeur à droite de l’opérateur dans plusieurs fonctions autonomes. |
+| *Ⅰ*        |  [in] Un paramètre d’entrée qui représente la valeur à droite de l’opérateur dans plusieurs fonctions autonomes. |
+| *Bits*     |  [in] Un paramètre d’entrée qui représente la valeur à droite de l’opérateur dans plusieurs fonctions autonomes. |
 
 ## <a name="members"></a>Membres
 
 ### <a name="public-constructors"></a>Constructeurs publics
 
-| Name                          |  Description |
+| Nom                          |  Description |
 |---------------------------|--------------------|
 | [SafeInt::SafeInt](#safeint)  |  Constructeur par défaut. |
 
 ### <a name="assignment-operators"></a>Opérateurs d’affectation
 
-| Name  |  Syntaxe |
+| Nom  |  Syntaxe |
 |----|---------|
 | =     |  `template<typename U>`<br />`SafeInt<T,E>& operator= (const U& rhs)` |
 | =     |  `SafeInt<T,E>& operator= (const T& rhs) throw()` |
@@ -64,7 +64,7 @@ class SafeInt;
 
 ### <a name="casting-operators"></a>Opérateurs de casting
 
-| Name              |  Syntaxe |
+| Nom              |  Syntaxe |
 |------|---------------------------------|
 | bool              |  `operator bool() throw()` |
 | char              |  `operator char() const` |
@@ -82,7 +82,7 @@ class SafeInt;
 
 ### <a name="comparison-operators"></a>Opérateurs de comparaison
 
-| Name  |  Syntaxe |
+| Nom  |  Syntaxe |
 |----|----------------|
 | \<     |  `template<typename U>`<br /><br /> `bool operator< (U rhs) const throw()` |
 | \<     |  `bool operator< (SafeInt<T,E> rhs) const throw()` |
@@ -101,7 +101,7 @@ class SafeInt;
 
 ### <a name="arithmetic-operators"></a>Opérateurs arithmétiques
 
-| Name  |  Syntaxe |
+| Nom  |  Syntaxe |
 |----|--------------|
 | +     |  `const SafeInt<T,E>& operator+ () const throw()` |
 | -     |  `SafeInt<T,E> operator- () const` |
@@ -134,7 +134,7 @@ class SafeInt;
 
 ### <a name="logical-operators"></a>Opérateurs logiques
 
-| Name     |  Syntaxe |
+| Nom     |  Syntaxe |
 |------|--------------|
 | !        |  `bool operator !() const throw()` |
 | ~        |  `SafeInt<T,E> operator~ () const throw()` |
@@ -257,10 +257,10 @@ SafeInt (
 
 ### <a name="parameters"></a>Paramètres
 
-*i*<br/>
+*Ⅰ*<br/>
 [in] La valeur du nouvel objet `SafeInt`. Il doit s’agir d’un paramètre de type T ou U, en fonction du constructeur.
 
-*b*<br/>
+*B*<br/>
 [in] La valeur booléenne du nouvel objet `SafeInt`.
 
 *u*<br/>

@@ -10,12 +10,12 @@ helpviewer_keywords:
 - CDocItem [MFC], GetDocument
 - CDocItem [MFC], IsBlank
 ms.assetid: 84fb8610-a4c8-4211-adc0-e70e8d002c11
-ms.openlocfilehash: 6c1c1da14d732b6aff6ae07f86ae7b9c1b690b84
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 438bc2a03239946dbfca53d5f2989c731b682ab0
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62168191"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81375620"
 ---
 # <a name="cdocitem-class"></a>CDocItem, classe
 
@@ -34,13 +34,13 @@ class CDocItem : public CCmdTarget
 |Nom|Description|
 |----------|-----------------|
 |[CDocItem::GetDocument](#getdocument)|Retourne le document qui contient l’élément.|
-|[CDocItem::IsBlank](#isblank)|Détermine si l’élément contient toutes les informations.|
+|[CDocItem::IsBlank](#isblank)|Détermine si l’élément contient des informations.|
 
 ## <a name="remarks"></a>Notes
 
-`CDocItem` objets sont utilisés pour représenter des éléments OLE dans les documents de client et serveur.
+`CDocItem`les objets sont utilisés pour représenter les éléments OLE dans les documents clients et serveur.
 
-Pour plus d’informations, consultez l’article [conteneurs : Implémentation d’un conteneur](../../mfc/containers-implementing-a-container.md).
+Pour plus d’informations, voir l’article [Containers: Implementing a Container](../../mfc/containers-implementing-a-container.md).
 
 ## <a name="inheritance-hierarchy"></a>Hiérarchie d'héritage
 
@@ -50,11 +50,11 @@ Pour plus d’informations, consultez l’article [conteneurs : Implémentation
 
 `CDocItem`
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
-**En-tête :** afxole.h
+**En-tête:** afxole.h
 
-##  <a name="getdocument"></a>  CDocItem::GetDocument
+## <a name="cdocitemgetdocument"></a><a name="getdocument"></a>CDocItem::GetDocument
 
 Appelez cette fonction pour obtenir le document qui contient l’élément.
 
@@ -64,15 +64,15 @@ CDocument* GetDocument() const;
 
 ### <a name="return-value"></a>Valeur de retour
 
-Un pointeur vers le document qui contient l’élément ; Valeur NULL, si l’élément ne fait pas partie d’un document.
+Un pointeur sur le document qui contient l’élément; NULL, si l’article ne fait pas partie d’un document.
 
 ### <a name="remarks"></a>Notes
 
-Cette fonction est substituée dans les classes dérivées [COleClientItem](../../mfc/reference/coleclientitem-class.md) et [COleServerItem](../../mfc/reference/coleserveritem-class.md), qui retourne un pointeur vers soit un [COleDocument](../../mfc/reference/coledocument-class.md), un [ COleLinkingDoc plutôt](../../mfc/reference/colelinkingdoc-class.md), ou un [COleServerDoc](../../mfc/reference/coleserverdoc-class.md) objet.
+Cette fonction est remplacée dans les classes dérivées [COleClientItem](../../mfc/reference/coleclientitem-class.md) et [COleServerItem](../../mfc/reference/coleserveritem-class.md), retournant un pointeur à soit un [COleDocument](../../mfc/reference/coledocument-class.md), un [COleLinkingDoc](../../mfc/reference/colelinkingdoc-class.md), ou un objet [COleServerDoc.](../../mfc/reference/coleserverdoc-class.md)
 
-##  <a name="isblank"></a>  CDocItem::IsBlank
+## <a name="cdocitemisblank"></a><a name="isblank"></a>CDocItem::IsBlank
 
-Appelé par l’infrastructure lors de la sérialisation par défaut.
+Appelé par le cadre lorsque la sérialisation par défaut se produit.
 
 ```
 virtual BOOL IsBlank() const;
@@ -80,13 +80,13 @@ virtual BOOL IsBlank() const;
 
 ### <a name="return-value"></a>Valeur de retour
 
-Différent de zéro si l’élément ne contient aucune information ; sinon 0.
+Nonzero si l’élément ne contient aucune information; sinon 0.
 
 ### <a name="remarks"></a>Notes
 
-Par défaut, `CDocItem` objets ne sont pas vides. [COleClientItem](../../mfc/reference/coleclientitem-class.md) objets sont parfois vides, car ils dérivent directement `CDocItem`. Toutefois, [COleServerItem](../../mfc/reference/coleserveritem-class.md) les objets sont toujours vides. Par défaut, les applications OLE contenant `COleClientItem` objets qui n’ont aucune x ou les y étendue sont sérialisés. Cela se fait en retournant la valeur TRUE à partir d’une substitution de `IsBlank` lorsque l’élément n’a ni y ni x étendue.
+Par défaut, les `CDocItem` objets ne sont pas vides. Les objets [COleClientItem](../../mfc/reference/coleclientitem-class.md) sont parfois `CDocItem`vides parce qu’ils dérivent directement de . Cependant, les objets [COleServerItem](../../mfc/reference/coleserveritem-class.md) sont toujours vides. Par défaut, les `COleClientItem` applications OLE contenant des objets qui n’ont pas d’étendue x ou y sont sérialisées. Ceci est fait en retournant `IsBlank` TRUE d’un remplacement de quand l’élément n’a pas d’étendue x ou y.
 
-Remplacez cette fonction si vous souhaitez implémenter d’autres actions pendant la sérialisation.
+Remplacez cette fonction si vous souhaitez implémenter d’autres actions lors de la sérialisation.
 
 ## <a name="see-also"></a>Voir aussi
 
@@ -94,4 +94,4 @@ Remplacez cette fonction si vous souhaitez implémenter d’autres actions penda
 [Graphique hiérarchique](../../mfc/hierarchy-chart.md)<br/>
 [COleDocument, classe](../../mfc/reference/coledocument-class.md)<br/>
 [COleServerItem, classe](../../mfc/reference/coleserveritem-class.md)<br/>
-[COleClientItem, classe](../../mfc/reference/coleclientitem-class.md)
+[Classe COleClientItem](../../mfc/reference/coleclientitem-class.md)

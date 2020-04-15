@@ -30,16 +30,16 @@ helpviewer_keywords:
 - CMFCRibbonButtonsGroup [MFC], SetImages
 - CMFCRibbonButtonsGroup [MFC], SetParentCategory
 ms.assetid: b993d93e-fc1a-472f-a87f-1d7b7b499845
-ms.openlocfilehash: 39979d48eb7b0f7aba9dbe7bd42c2f91845af968
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: af5919ff2a72fc2aa1eeeb95fc93afbe9e743582
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62410111"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81375286"
 ---
 # <a name="cmfcribbonbuttonsgroup-class"></a>CMFCRibbonButtonsGroup, classe
 
-Le `CMFCRibbonButtonsGroup` classe vous permet d’organiser un ensemble de boutons de ruban dans un groupe. Tous les boutons du groupe sont directement adjacents horizontalement et placés dans une bordure.
+La `CMFCRibbonButtonsGroup` classe vous permet d’organiser un ensemble de boutons ruban dans un groupe. Tous les boutons du groupe sont directement adjacents horizontalement et placés dans une bordure.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -61,23 +61,23 @@ class CMFCRibbonButtonsGroup : public CMFCRibbonBaseElement
 |----------|-----------------|
 |[CMFCRibbonButtonsGroup::AddButton](#addbutton)|Ajoute un bouton à un groupe.|
 |[CMFCRibbonButtonsGroup::AddButtons](#addbuttons)|Ajoute une liste de boutons à un groupe.|
-|[CMFCRibbonButtonsGroup::GetButton](#getbutton)|Retourne un pointeur vers le bouton qui se trouve à l’index spécifié.|
+|[CMFCRibbonButtonsGroup::GetButton](#getbutton)|Retourne un pointeur sur le bouton qui se trouve à un index spécifié.|
 |[CMFCRibbonButtonsGroup::GetCount](#getcount)|Retourne le nombre de boutons dans le groupe.|
 |[CMFCRibbonButtonsGroup::GetImageSize](#getimagesize)|Retourne la taille de l’image des images normales dans le groupe de ruban (remplace [CMFCRibbonBaseElement::GetImageSize](../../mfc/reference/cmfcribbonbaseelement-class.md#getimagesize).)|
-|[CMFCRibbonButtonsGroup::GetRegularSize](#getregularsize)|Retourne la taille normale de l’élément Ruban (remplace [CMFCRibbonBaseElement::GetRegularSize](../../mfc/reference/cmfcribbonbaseelement-class.md#getregularsize).)|
-|[CMFCRibbonButtonsGroup::HasImages](#hasimages)|Rapports si le `CMFCRibbonButtonsGroup` objet contient des images de barre d’outils.|
-|[CMFCRibbonButtonsGroup::OnDrawImage](#ondrawimage)|Dessine l’image appropriée pour un bouton spécifié, selon que le bouton est normal, en surbrillance ou désactivé.|
-|[CMFCRibbonButtonsGroup::RemoveAll](#removeall)|Supprime tous les boutons de la `CMFCRibbonButtonsGroup` objet.|
+|[CMFCRibbonButtonsGroup::GetRegularSize](#getregularsize)|Retourne la taille régulière de l’élément ruban (remplace [CMFCRibbonBaseElement::GetRegularSize](../../mfc/reference/cmfcribbonbaseelement-class.md#getregularsize).)|
+|[CMFCRibbonButtonsGroup::HasImages](#hasimages)|Indique si `CMFCRibbonButtonsGroup` l’objet contient des images de barre d’outils.|
+|[CMFCRibbonButtonsGroup::OnDrawImage](#ondrawimage)|Dessine l’image appropriée pour un bouton spécifié, selon que le bouton est normal, surligné ou désactivé.|
+|[CMFCRibbonButtonsGroup::RemoveAll](#removeall)|Supprime tous les boutons `CMFCRibbonButtonsGroup` de l’objet.|
 |[CMFCRibbonButtonsGroup::SetImages](#setimages)|Assigne des images au groupe.|
-|[CMFCRibbonButtonsGroup::SetParentCategory](#setparentcategory)|Définit le parent `CMFCRibbonCategory` de la `CMFCRibbonButtonsGroup` objet et tous les boutons qu’il contient (remplace [CMFCRibbonBaseElement::SetParentCategory](../../mfc/reference/cmfcribbonbaseelement-class.md#setparentcategory).)|
+|[CMFCRibbonButtonsGroup::SetParentCategory](#setparentcategory)|Définit le `CMFCRibbonCategory` parent `CMFCRibbonButtonsGroup` de l’objet et tous les boutons à l’intérieur (remplace [CMFCRibbonBaseElement::SetParentCategory](../../mfc/reference/cmfcribbonbaseelement-class.md#setparentcategory).)|
 
 ## <a name="remarks"></a>Notes
 
-Le groupe est dérivé de [CMFCBaseRibbonElement](../../mfc/reference/cmfcribbonbaseelement-class.md) et peuvent être manipulées comme une seule entité. Vous pouvez placer le groupe sur n’importe quel panneau ou un menu contextuel.
+Le groupe est dérivé de [CMFCBaseRibbonElement](../../mfc/reference/cmfcribbonbaseelement-class.md) et peut être manipulé en tant qu’entité unique. Vous pouvez positionner le groupe sur n’importe quel panneau ou menu popup.
 
 ## <a name="example"></a>Exemple
 
-L’exemple suivant montre comment utiliser différentes méthodes de la classe `CMFCRibbonButtonsGroup` . L’exemple montre comment construire un `CMFCRibbonButtonsGroup` de l’objet, assigner des images au groupe de boutons de ruban et ajoutez un bouton au groupe de boutons de ruban. Cet extrait de code fait partie de l’ [exemple Draw Client](../../overview/visual-cpp-samples.md).
+L’exemple suivant montre comment utiliser différentes méthodes de la classe `CMFCRibbonButtonsGroup` . L’exemple montre comment `CMFCRibbonButtonsGroup` construire un objet, attribuer des images au groupe de boutons ruban, et ajouter un bouton au groupe de boutons ruban. Cet extrait de code fait partie de l’ [exemple Draw Client](../../overview/visual-cpp-samples.md).
 
 [!code-cpp[NVC_MFC_DrawClient#2](../../mfc/reference/codesnippet/cpp/cmfcribbonbuttonsgroup-class_1.cpp)]
 
@@ -89,11 +89,11 @@ L’exemple suivant montre comment utiliser différentes méthodes de la classe 
 
 [CMFCRibbonButtonsGroup](../../mfc/reference/cmfcribbonbuttonsgroup-class.md)
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
-**En-tête :** afxribbonbuttonsgroup.h
+**En-tête:** afxribbonbuttonsgroup.h
 
-##  <a name="addbutton"></a>  CMFCRibbonButtonsGroup::AddButton
+## <a name="cmfcribbonbuttonsgroupaddbutton"></a><a name="addbutton"></a>CMFCRibbonButtonsGroup::AddButton
 
 Ajoute un bouton à un groupe.
 
@@ -104,9 +104,9 @@ void AddButton(CMFCRibbonBaseElement* pButton);
 ### <a name="parameters"></a>Paramètres
 
 *pButton*<br/>
-[in] Pointeur vers un bouton Ajouter.
+[dans] Un pointeur à un bouton à ajouter.
 
-##  <a name="addbuttons"></a>  CMFCRibbonButtonsGroup::AddButtons
+## <a name="cmfcribbonbuttonsgroupaddbuttons"></a><a name="addbuttons"></a>CMFCRibbonButtonsGroup::AddButtons
 
 Ajoute une liste de boutons à un groupe.
 
@@ -118,9 +118,9 @@ void AddButtons(
 ### <a name="parameters"></a>Paramètres
 
 *lstButtons*<br/>
-[in] Une liste de pointeurs vers les boutons que vous souhaitez ajouter.
+[dans] Une liste de pointeurs sur les boutons que vous souhaitez ajouter.
 
-##  <a name="cmfcribbonbuttonsgroup"></a>  CMFCRibbonButtonsGroup::CMFCRibbonButtonsGroup
+## <a name="cmfcribbonbuttonsgroupcmfcribbonbuttonsgroup"></a><a name="cmfcribbonbuttonsgroup"></a>CMFCRibbonButtonsGroup::CMFCRibbonButtonsGroup
 
 Construit un objet `CMFCRibbonButtonsGroup`.
 
@@ -132,15 +132,15 @@ CMFCRibbonButtonsGroup(CMFCRibbonBaseElement* pButton);
 ### <a name="parameters"></a>Paramètres
 
 *pButton*<br/>
-[in] Spécifie un bouton pour ajouter à la nouvelle `CMFCRibbonButtonsGroup` objet.
+[dans] Spécifie un bouton à `CMFCRibbonButtonsGroup` ajouter à l’objet nouvellement créé.
 
 ### <a name="return-value"></a>Valeur de retour
 
 ### <a name="remarks"></a>Notes
 
-##  <a name="getbutton"></a>  CMFCRibbonButtonsGroup::GetButton
+## <a name="cmfcribbonbuttonsgroupgetbutton"></a><a name="getbutton"></a>CMFCRibbonButtonsGroup::GetButton
 
-Retourne un pointeur vers le bouton qui se trouve à l’index spécifié.
+Retourne un pointeur sur le bouton qui se trouve à un index spécifié.
 
 ```
 CMFCRibbonBaseElement* GetButton(int i) const;
@@ -148,16 +148,16 @@ CMFCRibbonBaseElement* GetButton(int i) const;
 
 ### <a name="parameters"></a>Paramètres
 
-*i*<br/>
-[in] Index de base zéro d’un bouton à retourner.
+*Ⅰ*<br/>
+[dans] Un index à base nulle d’un bouton à retourner.
 
 ### <a name="return-value"></a>Valeur de retour
 
-Pointeur vers le bouton qui se trouve à l’index spécifié. NULL si l’index spécifié est hors limites.
+Un pointeur sur le bouton qui se trouve à l’index spécifié. NULL si l’indice spécifié est hors de portée.
 
 ### <a name="remarks"></a>Notes
 
-##  <a name="getcount"></a>  CMFCRibbonButtonsGroup::GetCount
+## <a name="cmfcribbonbuttonsgroupgetcount"></a><a name="getcount"></a>CMFCRibbonButtonsGroup::GetCount
 
 Retourne le nombre de boutons dans le groupe.
 
@@ -169,9 +169,9 @@ int GetCount() const;
 
 Le nombre de boutons dans le groupe.
 
-##  <a name="getimagesize"></a>  CMFCRibbonButtonsGroup::GetImageSize
+## <a name="cmfcribbonbuttonsgroupgetimagesize"></a><a name="getimagesize"></a>CMFCRibbonButtonsGroup::GetImageSize
 
-Récupère la taille de l’image source de l’élément protégé `CMFCToolBarImages` membre `m_Images`.
+Récupère la taille de l’image source du membre `CMFCToolBarImages` `m_Images`protégé .
 
 ```
 const CSize GetImageSize() const;
@@ -179,13 +179,13 @@ const CSize GetImageSize() const;
 
 ### <a name="return-value"></a>Valeur de retour
 
-Retourne la taille de l’image source des images de barre d’outils, le cas échéant, ou un `CSize` égale à zéro dans le cas contraire.
+Retourne la taille de l’image source des images `CSize` de la barre d’outils, le cas échéant, ou un de zéro sinon.
 
 ### <a name="remarks"></a>Notes
 
-##  <a name="getregularsize"></a>  CMFCRibbonButtonsGroup::GetRegularSize
+## <a name="cmfcribbonbuttonsgroupgetregularsize"></a><a name="getregularsize"></a>CMFCRibbonButtonsGroup::GetRegularSize
 
-Récupère la taille maximale possible de l’élément de groupe de ruban.
+Récupère la taille maximale possible de l’élément du groupe de ruban.
 
 ```
 virtual CSize GetRegularSize(CDC* pDC);
@@ -194,15 +194,15 @@ virtual CSize GetRegularSize(CDC* pDC);
 ### <a name="parameters"></a>Paramètres
 
 *pDC*<br/>
-[in] Pointeur vers le contexte de périphérique du groupe de ruban.
+[dans] Pointeur sur le contexte de l’appareil du groupe de ruban.
 
 ### <a name="return-value"></a>Valeur de retour
 
 ### <a name="remarks"></a>Notes
 
-##  <a name="hasimages"></a>  CMFCRibbonButtonsGroup::HasImages
+## <a name="cmfcribbonbuttonsgrouphasimages"></a><a name="hasimages"></a>CMFCRibbonButtonsGroup::HasImages
 
-Rapports si le `CMFCRibbonButtonsGroup` objet contient des images de barre d’outils.
+Indique si `CMFCRibbonButtonsGroup` l’objet contient des images de barre d’outils.
 
 ```
 BOOL HasImages() const;
@@ -210,13 +210,13 @@ BOOL HasImages() const;
 
 ### <a name="return-value"></a>Valeur de retour
 
-Retourne la valeur TRUE si l’élément protégé `CMFCToolBarImages` membre `m_Images` contient des images, ou FALSE si pas.
+Retourne VRAI si `CMFCToolBarImages` `m_Images` le membre protégé contient des images, ou FALSE si ce n’est pas le cas.
 
 ### <a name="remarks"></a>Notes
 
-##  <a name="ondrawimage"></a>  CMFCRibbonButtonsGroup::OnDrawImage
+## <a name="cmfcribbonbuttonsgroupondrawimage"></a><a name="ondrawimage"></a>CMFCRibbonButtonsGroup::OnDrawImage
 
-Dessine l’image appropriée pour un bouton spécifié, selon que le bouton est normal, en surbrillance ou désactivé.
+Dessine l’image appropriée pour un bouton spécifié, selon que le bouton est normal, surligné ou désactivé.
 
 ```
 virtual void OnDrawImage(
@@ -229,22 +229,22 @@ virtual void OnDrawImage(
 ### <a name="parameters"></a>Paramètres
 
 *pDC*<br/>
-[in] Pointeur vers le contexte de périphérique de le `CMFCRibbonButtonsGroup` objet.
+[dans] Pointeur sur le `CMFCRibbonButtonsGroup` contexte de l’appareil de l’objet.
 
 *rectImage*<br/>
-[in] Le rectangle dans lequel dessiner l’image.
+[dans] Le rectangle dans lequel dessiner l’image.
 
 *pButton*<br/>
-[in] Le bouton pour lequel dessiner l’image.
+[dans] Le bouton pour lequel dessiner l’image.
 
 *nImageIndex*<br/>
-[in] Index de l’image à dessiner sur le bouton (dans un des tableaux de trois images pour les boutons normales, en surbrillance ou désactivés).
+[dans] L’index de l’image pour dessiner sur le bouton (dans l’un des trois tableaux d’images pour les boutons normaux, surlignés ou désactivés).
 
 ### <a name="remarks"></a>Notes
 
-##  <a name="removeall"></a>  CMFCRibbonButtonsGroup::RemoveAll
+## <a name="cmfcribbonbuttonsgroupremoveall"></a><a name="removeall"></a>CMFCRibbonButtonsGroup::RemoveAll
 
-Supprime tous les boutons de la `CMFCRibbonButtonsGroup` objet.
+Supprime tous les boutons `CMFCRibbonButtonsGroup` de l’objet.
 
 ```
 void RemoveAll();
@@ -252,9 +252,9 @@ void RemoveAll();
 
 ### <a name="remarks"></a>Notes
 
-##  <a name="setimages"></a>  CMFCRibbonButtonsGroup::SetImages
+## <a name="cmfcribbonbuttonsgroupsetimages"></a><a name="setimages"></a>CMFCRibbonButtonsGroup::SetImages
 
-Assigne des images au groupe de boutons de ruban.
+Attribue des images au groupe de boutons ruban.
 
 ```
 void SetImages(
@@ -265,25 +265,25 @@ void SetImages(
 
 ### <a name="parameters"></a>Paramètres
 
-*pImages*<br/>
-[in] Les images.
+*pImages (en)*<br/>
+[dans] Images régulières.
 
-*pHotImages*<br/>
-[in] Images interactives.
+*pHotImages (en)*<br/>
+[dans] Images chaudes.
 
 *pDisabledImages*<br/>
-[in] Images désactivés.
+[dans] Images désactivées.
 
 ### <a name="remarks"></a>Notes
 
-Appelez `SetImages` avant d’ajouter des boutons à un groupe. Le nombre d’images doit être supérieur ou égal au nombre de boutons à ajouter au groupe.
+Appelez `SetImages` avant d’ajouter des boutons à un groupe. Le nombre d’images doit être plus ou égal au nombre de boutons à ajouter au groupe.
 
 > [!NOTE]
->  Images interactives sont des images qui sont affichent lorsque l’utilisateur pointe sur le bouton. Images désactivés sont des images qui sont affichent lorsque le bouton est désactivé.
+> Les images chaudes sont des images qui s’affichent lorsque l’utilisateur plane sur le bouton. Les images désactivées sont des images qui s’affichent lorsque le bouton est désactivé.
 
-##  <a name="setparentcategory"></a>  CMFCRibbonButtonsGroup::SetParentCategory
+## <a name="cmfcribbonbuttonsgroupsetparentcategory"></a><a name="setparentcategory"></a>CMFCRibbonButtonsGroup::SetParentCategory
 
-Définit le parent `CMFCRibbonCategory` de la `CMFCRibbonButtonsGroup` objet et tous les boutons qu’il contient.
+Définit le `CMFCRibbonCategory` parent `CMFCRibbonButtonsGroup` de l’objet et tous les boutons à l’intérieur.
 
 ```
 virtual void SetParentCategory(CMFCRibbonCategory* pCategory);
@@ -291,8 +291,8 @@ virtual void SetParentCategory(CMFCRibbonCategory* pCategory);
 
 ### <a name="parameters"></a>Paramètres
 
-*pCategory*<br/>
-[in] Pointeur vers la catégorie parente à définir (les groupes à onglets dans les contrôles de ruban sont appelés des catégories).
+*pCatégory*<br/>
+[dans] Pointeur vers la catégorie des parents à définir (les groupes tabbed dans les contrôles de ruban sont appelés catégories).
 
 ### <a name="remarks"></a>Notes
 

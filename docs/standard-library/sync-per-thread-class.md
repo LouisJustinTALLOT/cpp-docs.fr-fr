@@ -12,14 +12,14 @@ helpviewer_keywords:
 - stdext::sync_per_thread [C++], deallocate
 - stdext::sync_per_thread [C++], equals
 ms.assetid: 47bf75f8-5b02-4760-b1d3-3099d08fe14c
-ms.openlocfilehash: a08aa13aa46d5181e7c874b132b2bcbd5ec26dee
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: 2976cdc6671750f0da439e9eb42053518e4af8d9
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68450267"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81376546"
 ---
-# <a name="syncperthread-class"></a>sync_per_thread, classe
+# <a name="sync_per_thread-class"></a>sync_per_thread, classe
 
 Décrit un [filtre de synchronisation](../standard-library/allocators-header.md) qui fournit un objet cache distinct pour chaque thread.
 
@@ -40,21 +40,21 @@ class sync_per_thread
 
 Les allocateurs qui utilisent `sync_per_thread` peuvent être considérés comme égaux même si des blocs alloués dans un thread ne peuvent pas être désalloués à partir d’un autre thread. Quand un de ces allocateurs est utilisé, les blocs de mémoire alloués dans un thread ne doivent pas être visibles pour d’autres threads. Dans la pratique, cela signifie qu’un conteneur qui utilise un de ces allocateurs doit uniquement être accessible par un seul thread.
 
-### <a name="member-functions"></a>Fonctions membres
+### <a name="member-functions"></a>Fonctions Membre
 
 |Fonction membre|Description|
 |-|-|
-|[allocate](#allocate)|Alloue un bloc de mémoire.|
+|[Allouer](#allocate)|Alloue un bloc de mémoire.|
 |[deallocate](#deallocate)|Libère du stockage un nombre d'objets spécifié à partir d'une position spécifiée.|
 |[equals](#equals)|Compare l'égalité de deux caches.|
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
 **En-tête :** \<allocators>
 
 **Espace de noms :** stdext
 
-## <a name="allocate"></a>  sync_per_thread::allocate
+## <a name="sync_per_threadallocate"></a><a name="allocate"></a>sync_per_thread::allocate
 
 Alloue un bloc de mémoire.
 
@@ -72,7 +72,7 @@ void *allocate(std::size_t count);
 
 La fonction membre retourne le résultat d’un appel à `cache::allocate(count)` sur l’objet cache appartenant au thread actuel. Si aucun objet cache n’a été alloué pour le thread actuel, elle commence par en allouer un.
 
-## <a name="deallocate"></a>  sync_per_thread::deallocate
+## <a name="sync_per_threaddeallocate"></a><a name="deallocate"></a>sync_per_thread::dallocate
 
 Libère du stockage un nombre d'objets spécifié à partir d'une position spécifiée.
 
@@ -84,14 +84,14 @@ void deallocate(void* ptr, std::size_t count);
 
 |Paramètre|Description|
 |---------------|-----------------|
-|*ptr*|Pointeur vers le premier objet à désallouer dans le stockage.|
+|*Ptr*|Pointeur vers le premier objet à désallouer dans le stockage.|
 |*count*|Nombre d’objets à désallouer dans le stockage.|
 
 ### <a name="remarks"></a>Notes
 
 La fonction membre appelle `deallocate` sur l’objet cache appartenant au thread actuel. Si aucun objet cache n’a été alloué pour le thread actuel, elle commence par en allouer un.
 
-## <a name="equals"></a>  sync_per_thread::equals
+## <a name="sync_per_threadequals"></a><a name="equals"></a>sync_per_thread::égales
 
 Compare l'égalité de deux caches.
 
@@ -104,14 +104,14 @@ bool equals(const sync<Cache>& Other) const;
 |Paramètre|Description|
 |---------------|-----------------|
 |*Cache*|L’objet cache du filtre de synchronisation.|
-|*Autre*|Objet cache dont l’égalité est à comparer.|
+|*Autres*|Objet cache dont l’égalité est à comparer.|
 
 ### <a name="return-value"></a>Valeur de retour
 
-**false** si aucun objet cache n’a été alloué pour cet objet ou pour un *autre* dans le thread actuel. Sinon, elle retourne le résultat de l’application de `operator==` aux deux objets caches.
+**faux** si aucun objet de cache n’a été attribué pour cet objet ou pour *Autre* dans le thread actuel. Sinon, elle retourne le résultat de l’application de `operator==` aux deux objets caches.
 
 ### <a name="remarks"></a>Notes
 
 ## <a name="see-also"></a>Voir aussi
 
-[\<allocators>](../standard-library/allocators-header.md)
+[\<les allocataires>](../standard-library/allocators-header.md)

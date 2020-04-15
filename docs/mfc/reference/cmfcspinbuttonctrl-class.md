@@ -1,5 +1,5 @@
 ---
-title: Cmfcspinbuttonctrl, classe
+title: CMFCSpinButtonCtrl, classe
 ms.date: 11/04/2016
 f1_keywords:
 - CMFCSpinButtonCtrl
@@ -8,16 +8,16 @@ f1_keywords:
 helpviewer_keywords:
 - CMFCSpinButtonCtrl [MFC], OnDraw
 ms.assetid: 8773f259-4d3f-4bca-a71c-09e0c71bc843
-ms.openlocfilehash: 60808359c11604368493031e1b6f4573b3b2026f
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 445b857400d8c82109ca7220b84bac692a2abf89
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62410093"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81376179"
 ---
-# <a name="cmfcspinbuttonctrl-class"></a>Cmfcspinbuttonctrl, classe
+# <a name="cmfcspinbuttonctrl-class"></a>CMFCSpinButtonCtrl, classe
 
-Le `CMFCSpinButtonCtrl` classe prend en charge un gestionnaire visuel qui dessine un contrôle de bouton toupie (spin).
+La `CMFCSpinButtonCtrl` classe prend en charge un gestionnaire visuel qui dessine un contrôle de bouton de spin.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -38,15 +38,15 @@ class CMFCSpinButtonCtrl : public CSpinButtonCtrl
 
 |Nom|Description|
 |----------|-----------------|
-|[CMFCSpinButtonCtrl::OnDraw](#ondraw)|Redessine le contrôle de bouton toupie (spin) actuel.|
+|[CMFCSpinButtonCtrl::OnDraw](#ondraw)|Repeinte le contrôle actuel du bouton de rotation.|
 
 ## <a name="remarks"></a>Notes
 
-Pour utiliser un gestionnaire visuel pour dessiner un contrôle de bouton toupie (spin) dans votre application, remplacez toutes les instances de la `CSpinButtonCtrl` classe avec la `CMFCSpinButtonCtrl` classe.
+Pour utiliser un gestionnaire visuel pour dessiner un contrôle de `CSpinButtonCtrl` bouton de `CMFCSpinButtonCtrl` spin dans votre application, remplacez tous les instances de la classe par la classe.
 
 ## <a name="example"></a>Exemple
 
-L’exemple suivant montre comment créer un objet de la `CMFCSpinButtonCtrl` classe et utiliser ses `Create` (méthode).
+L’exemple suivant montre comment créer `CMFCSpinButtonCtrl` un objet `Create` de la classe et utiliser sa méthode.
 
 [!code-cpp[NVC_MFC_RibbonApp#25](../../mfc/reference/codesnippet/cpp/cmfcspinbuttonctrl-class_1.cpp)]
 
@@ -62,13 +62,13 @@ L’exemple suivant montre comment créer un objet de la `CMFCSpinButtonCtrl` cl
 
 [CMFCSpinButtonCtrl](../../mfc/reference/cmfcspinbuttonctrl-class.md)
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
-**En-tête :** afxspinbuttonctrl.h
+**En-tête:** afxspinbuttonctrl.h
 
-##  <a name="ondraw"></a>  CMFCSpinButtonCtrl::OnDraw
+## <a name="cmfcspinbuttonctrlondraw"></a><a name="ondraw"></a>CMFCSpinButtonCtrl::OnDraw
 
-Redessine le contrôle de bouton toupie (spin) actuel.
+Repeinte le contrôle actuel du bouton de rotation.
 
 ```
 virtual void OnDraw(CDC* pDC);
@@ -77,14 +77,14 @@ virtual void OnDraw(CDC* pDC);
 ### <a name="parameters"></a>Paramètres
 
 *pDC*<br/>
-[in] Pointeur vers un contexte de périphérique.
+[dans] Un pointeur vers un contexte d’appareil.
 
 ### <a name="remarks"></a>Notes
 
-Le framework appelle la `CMFCSpinButtonCtrl::OnPaint` méthode pour gérer la [CWnd::OnPaint](../../mfc/reference/cwnd-class.md#onpaint) message et que méthode appelle à son tour cette `CMFCSpinButtonCtrl::OnDraw` (méthode). Substituez cette méthode pour personnaliser la façon dont le framework Dessine le contrôle de bouton toupie (spin).
+Le cadre `CMFCSpinButtonCtrl::OnPaint` appelle la méthode pour gérer le [CWnd::OnPaint](../../mfc/reference/cwnd-class.md#onpaint) `CMFCSpinButtonCtrl::OnDraw` message, et cette méthode à son tour appelle cette méthode. Remplacer cette méthode pour personnaliser la façon dont le cadre dessine le contrôle du bouton de rotation.
 
 ## <a name="see-also"></a>Voir aussi
 
 [Graphique hiérarchique](../../mfc/hierarchy-chart.md)<br/>
 [Classes](../../mfc/reference/mfc-classes.md)<br/>
-[CMFCVisualManager, classe](../../mfc/reference/cmfcvisualmanager-class.md)
+[Classe CMFCVisualManager](../../mfc/reference/cmfcvisualmanager-class.md)

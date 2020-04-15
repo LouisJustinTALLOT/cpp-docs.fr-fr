@@ -15,12 +15,12 @@ f1_keywords:
 helpviewer_keywords:
 - reader_writer_lock class
 ms.assetid: 91a59cd2-ca05-4b74-8398-d826d9f86736
-ms.openlocfilehash: 1a7386e527b5327d928bfdcb3281c88666f1b106
-ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
+ms.openlocfilehash: 13b44387f3e9489090ec31345fe4347ff5f205ca
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/16/2020
-ms.locfileid: "79417123"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81376239"
 ---
 # <a name="reader_writer_lock-class"></a>reader_writer_lock, classe
 
@@ -36,45 +36,45 @@ class reader_writer_lock;
 
 ### <a name="public-classes"></a>Classes publiques
 
-|Name|Description|
+|Nom|Description|
 |----------|-----------------|
-|[reader_writer_lock :: scoped_lock, classe](#scoped_lock_class)|Wrapper RAII sécurisé pour l’exception qui peut être utilisé pour acquérir `reader_writer_lock` objets de verrou en tant qu’enregistreur.|
-|[reader_writer_lock :: scoped_lock_read, classe](#scoped_lock_read_class)|Wrapper RAII sécurisé pour l’exception qui peut être utilisé pour acquérir `reader_writer_lock` objets de verrou en tant que lecteur.|
+|[reader_writer_lock::scoped_lock, classe](#scoped_lock_class)|Un emballage RAII sûr d’exception `reader_writer_lock` qui peut être employé pour acquérir des objets de serrure en tant qu’auteur.|
+|[reader_writer_lock::scoped_lock_read, classe](#scoped_lock_read_class)|Un emballage RAII sûr d’exception `reader_writer_lock` qui peut être employé pour acquérir des objets de verrouillage en tant que lecteur.|
 
 ### <a name="public-constructors"></a>Constructeurs publics
 
-|Name|Description|
+|Nom|Description|
 |----------|-----------------|
 |[reader_writer_lock](#ctor)|Construit un nouvel objet `reader_writer_lock`.|
-|[Destructeur ~ reader_writer_lock](#dtor)|Détruit l’objet `reader_writer_lock`.|
+|[Destructeur reader_writer_lock](#dtor)|Détruit l’objet. `reader_writer_lock`|
 
 ### <a name="public-methods"></a>M&#233;thodes publiques
 
-|Name|Description|
+|Nom|Description|
 |----------|-----------------|
-|[lock](#lock)|Acquiert le verrou lecteur-writer en tant que writer.|
-|[lock_read](#lock_read)|Acquiert le verrou lecteur-writer en tant que lecteur. En présence d’enregistreurs, les lecteurs actifs doivent attendre la fin de leur exécution. Le lecteur enregistre simplement un intérêt dans le verrou et attend que les Writers le libèrent.|
-|[try_lock](#try_lock)|Tente d’acquérir le verrou lecteur-writer en tant qu’enregistreur sans blocage.|
-|[try_lock_read](#try_lock_read)|Tente d’acquérir le verrou lecteur-writer en tant que lecteur sans blocage.|
-|[unlock](#unlock)|Déverrouille le verrou lecteur-writer en fonction de la personne qui l’a verrouillé, lecteur ou enregistreur.|
+|[Verrouillage](#lock)|Acquiert le verrou lecteur-écrivain en tant qu’écrivain.|
+|[lock_read](#lock_read)|Acquiert le verrou lecteur-écrivain en tant que lecteur. S’il y a des écrivains, les lecteurs actifs doivent attendre jusqu’à ce qu’ils soient faits. Le lecteur enregistre simplement un intérêt pour la serrure et attend que les écrivains le libèrent.|
+|[try_lock](#try_lock)|Tentatives d’acquérir le verrou lecteur-écrivain comme un écrivain sans blocage.|
+|[try_lock_read](#try_lock_read)|Tentatives d’acquérir le verrou lecteur-écrivain comme un lecteur sans bloquer.|
+|[Déverrouiller](#unlock)|Débloque le verrou lecteur-écrivain en fonction de qui l’a verrouillé, lecteur ou écrivain.|
 
 ## <a name="remarks"></a>Notes
 
-Pour plus d’informations, consultez [structures de données de synchronisation](../../../parallel/concrt/synchronization-data-structures.md).
+Pour plus d’informations, voir [Structures de données de synchronisation](../../../parallel/concrt/synchronization-data-structures.md).
 
-## <a name="inheritance-hierarchy"></a>Hiérarchie d’héritage
+## <a name="inheritance-hierarchy"></a>Hiérarchie d'héritage
 
 `reader_writer_lock`
 
 ## <a name="requirements"></a>Spécifications
 
-**En-tête :** concrt. h
+**En-tête:** concrt.h
 
-**Espace de noms :** concurrency
+**Namespace:** concurrence
 
-## <a name="lock"></a>Lock
+## <a name="lock"></a><a name="lock"></a>Verrouillage
 
-Acquiert le verrou lecteur-writer en tant que writer.
+Acquiert le verrou lecteur-écrivain en tant qu’écrivain.
 
 ```cpp
 void lock();
@@ -82,17 +82,17 @@ void lock();
 
 ### <a name="remarks"></a>Notes
 
-Il est souvent plus sûr d’utiliser la construction [scoped_lock](#scoped_lock_class) pour acquérir et libérer un objet `reader_writer_lock` en tant qu’enregistreur, de manière sécurisée.
+Il est souvent plus [scoped_lock](#scoped_lock_class) sûr d’utiliser le scoped_lock `reader_writer_lock` construire pour acquérir et libérer un objet en tant qu’écrivain d’une manière sûre exception.
 
-Une fois qu’un enregistreur a tenté d’acquérir le verrou, tous les futurs lecteurs se bloquent jusqu’à ce que les enregistreurs aient réussi à acquérir et à libérer le verrou. Ce verrou est biaisé vers les writers et peut priver les lecteurs d’un chargement continu d’enregistreurs.
+Après un écrivain tente d’acquérir la serrure, tous les futurs lecteurs bloqueront jusqu’à ce que les écrivains ont acquis et libéré avec succès la serrure. Ce verrou est biaisé vers les écrivains et peut affamer les lecteurs sous une charge continue d’écrivains.
 
-Les writers sont chaînés afin qu’un enregistreur quittant le verrou libère le writer suivant en ligne.
+Les écrivains sont enchaînés de sorte qu’un écrivain sortant de la serrure libère le prochain écrivain en ligne.
 
-Si le verrou est déjà détenu par le contexte d’appel, une exception [improper_lock](improper-lock-class.md) sera levée.
+Si le verrou est déjà tenu par le contexte d’appel, [une](improper-lock-class.md) improper_lock exception sera jetée.
 
-## <a name="lock_read"></a>lock_read
+## <a name="lock_read"></a><a name="lock_read"></a>lock_read
 
-Acquiert le verrou lecteur-writer en tant que lecteur. En présence d’enregistreurs, les lecteurs actifs doivent attendre la fin de leur exécution. Le lecteur enregistre simplement un intérêt dans le verrou et attend que les Writers le libèrent.
+Acquiert le verrou lecteur-écrivain en tant que lecteur. S’il y a des écrivains, les lecteurs actifs doivent attendre jusqu’à ce qu’ils soient faits. Le lecteur enregistre simplement un intérêt pour la serrure et attend que les écrivains le libèrent.
 
 ```cpp
 void lock_read();
@@ -100,11 +100,11 @@ void lock_read();
 
 ### <a name="remarks"></a>Notes
 
-Il est souvent plus sûr d’utiliser la construction [scoped_lock_read](#scoped_lock_read_class) pour acquérir et libérer un objet `reader_writer_lock` en tant que lecteur de façon sécurisée.
+Il est souvent plus [scoped_lock_read](#scoped_lock_read_class) sûr d’utiliser la `reader_writer_lock` scoped_lock_read construire pour acquérir et libérer un objet en tant que lecteur d’une manière sûre d’exception.
 
-Si des Writers attendent sur le verrou, le lecteur attend que tous les enregistreurs de la ligne aient acquis et libéré le verrou. Ce verrou est biaisé vers les writers et peut priver les lecteurs d’un chargement continu d’enregistreurs.
+S’il ya des écrivains en attente sur la serrure, le lecteur attendra jusqu’à ce que tous les écrivains en ligne ont acquis et libéré la serrure. Ce verrou est biaisé vers les écrivains et peut affamer les lecteurs sous une charge continue d’écrivains.
 
-## <a name="ctor"></a>reader_writer_lock
+## <a name="reader_writer_lock"></a><a name="ctor"></a>reader_writer_lock
 
 Construit un nouvel objet `reader_writer_lock`.
 
@@ -112,9 +112,9 @@ Construit un nouvel objet `reader_writer_lock`.
 reader_writer_lock();
 ```
 
-## <a name="dtor"></a>~ reader_writer_lock
+## <a name="reader_writer_lock"></a><a name="dtor"></a>reader_writer_lock
 
-Détruit l’objet `reader_writer_lock`.
+Détruit l’objet. `reader_writer_lock`
 
 ```cpp
 ~reader_writer_lock();
@@ -122,19 +122,19 @@ Détruit l’objet `reader_writer_lock`.
 
 ### <a name="remarks"></a>Notes
 
-Il est supposé que le verrou n’est plus maintenu lors de l’exécution du destructeur. Autoriser le verrou de l’enregistreur de lecteur à se détruire avec le verrou conservé entraîne un comportement indéfini.
+On s’attend à ce que la serrure ne soit plus tenue lorsque le destructeur s’exécute. Permettre à l’auteur lecteur de verrouiller de détruire avec la serrure encore tenu résultats dans un comportement indéfini.
 
-## <a name="scoped_lock_class"></a>reader_writer_lock :: scoped_lock, classe
+## <a name="reader_writer_lockscoped_lock-class"></a><a name="scoped_lock_class"></a>reader_writer_lock::scoped_lock Classe
 
-Wrapper RAII sécurisé pour l’exception qui peut être utilisé pour acquérir `reader_writer_lock` objets de verrou en tant qu’enregistreur.
+Un emballage RAII sûr d’exception `reader_writer_lock` qui peut être employé pour acquérir des objets de serrure en tant qu’auteur.
 
 ```cpp
 class scoped_lock;
 ```
 
-## <a name="scoped_lock_ctor"></a>scoped_lock :: scoped_lock
+## <a name="scoped_lockscoped_lock"></a><a name="scoped_lock_ctor"></a>scoped_lock::scoped_lock
 
-Construit un objet `scoped_lock` et acquiert l’objet `reader_writer_lock` passé dans le paramètre `_Reader_writer_lock` en tant qu’enregistreur. Si le verrou est détenu par un autre thread, cet appel est bloqué.
+Construit un `scoped_lock` objet et `reader_writer_lock` acquiert `_Reader_writer_lock` l’objet passé dans le paramètre en tant qu’écrivain. Si le verrou est tenu par un autre thread, cet appel bloquera.
 
 ```cpp
 explicit _CRTIMP scoped_lock(reader_writer_lock& _Reader_writer_lock);
@@ -143,27 +143,27 @@ explicit _CRTIMP scoped_lock(reader_writer_lock& _Reader_writer_lock);
 ### <a name="parameters"></a>Paramètres
 
 *_Reader_writer_lock*<br/>
-Objet `reader_writer_lock` à acquérir en tant qu’enregistreur.
+L’objet `reader_writer_lock` à acquérir en tant qu’écrivain.
 
-## <a name="scoped_lock_dtor"></a>scoped_lock :: ~ scoped_lock
+## <a name="scoped_lockscoped_lock"></a><a name="scoped_lock_dtor"></a>scoped_lock: : scoped_lock
 
-Détruit un objet `reader_writer_lock` et libère le verrou fourni dans son constructeur.
+Détruit un `reader_writer_lock` objet et libère la serrure fournie dans son constructeur.
 
 ```cpp
 ~scoped_lock();
 ```
 
-## <a name="scoped_lock_read_class"></a>reader_writer_lock :: scoped_lock_read, classe
+## <a name="reader_writer_lockscoped_lock_read-class"></a><a name="scoped_lock_read_class"></a>reader_writer_lock::scoped_lock_read Classe
 
-Wrapper RAII sécurisé pour l’exception qui peut être utilisé pour acquérir `reader_writer_lock` objets de verrou en tant que lecteur.
+Un emballage RAII sûr d’exception `reader_writer_lock` qui peut être employé pour acquérir des objets de verrouillage en tant que lecteur.
 
 ```cpp
 class scoped_lock_read;
 ```
 
-## <a name="scoped_lock_read_ctor"></a>scoped_lock_read :: scoped_lock_read
+## <a name="scoped_lock_readscoped_lock_read"></a><a name="scoped_lock_read_ctor"></a>scoped_lock_read::scoped_lock_read
 
-Construit un objet `scoped_lock_read` et acquiert l’objet `reader_writer_lock` passé dans le paramètre `_Reader_writer_lock` en tant que lecteur. Si le verrou est détenu par un autre thread en tant qu’enregistreur ou si des enregistreurs sont en attente, cet appel sera bloqué.
+Construit un `scoped_lock_read` objet et `reader_writer_lock` acquiert `_Reader_writer_lock` l’objet passé dans le paramètre en tant que lecteur. Si la serrure est tenue par un autre fil en tant qu’écrivain ou il ya des écrivains en attente, cet appel va bloquer.
 
 ```cpp
 explicit _CRTIMP scoped_lock_read(reader_writer_lock& _Reader_writer_lock);
@@ -172,19 +172,19 @@ explicit _CRTIMP scoped_lock_read(reader_writer_lock& _Reader_writer_lock);
 ### <a name="parameters"></a>Paramètres
 
 *_Reader_writer_lock*<br/>
-Objet `reader_writer_lock` à acquérir en tant que lecteur.
+L’objet `reader_writer_lock` à acquérir en tant que lecteur.
 
-## <a name="a-namescoped_lock_read_dtor--reader_writer_lockscoped_lock_readscoped_lock_read-destructor"></a><a name="scoped_lock_read_dtor"> reader_writer_lock :: scoped_lock_read :: ~ scoped_lock_read destructeur
+## <a name="a-namescoped_lock_read_dtor--reader_writer_lockscoped_lock_readscoped_lock_read-destructor"></a><a name="scoped_lock_read_dtor">reader_writer_lock::scoped_lock_read::-scoped_lock_read Destructor
 
-Détruit un objet `scoped_lock_read` et libère le verrou fourni dans son constructeur.
+Détruit un `scoped_lock_read` objet et libère la serrure fournie dans son constructeur.
 
 ```cpp
 ~scoped_lock_read();
 ```
 
-## <a name="try_lock"></a>try_lock
+## <a name="try_lock"></a><a name="try_lock"></a>try_lock
 
-Tente d’acquérir le verrou lecteur-writer en tant qu’enregistreur sans blocage.
+Tentatives d’acquérir le verrou lecteur-écrivain comme un écrivain sans blocage.
 
 ### <a name="syntax"></a>Syntaxe
 
@@ -194,11 +194,11 @@ bool try_lock();
 
 ### <a name="return-value"></a>Valeur de retour
 
-Si le verrou a été acquis, la valeur **true**; Sinon, la valeur **false**.
+Si le verrou a été acquis, la valeur **est vraie;** autrement, la valeur **fausse**.
 
-## <a name="try_lock_read"></a>try_lock_read
+## <a name="try_lock_read"></a><a name="try_lock_read"></a>try_lock_read
 
-Tente d’acquérir le verrou lecteur-writer en tant que lecteur sans blocage.
+Tentatives d’acquérir le verrou lecteur-écrivain comme un lecteur sans bloquer.
 
 ```cpp
 bool try_lock_read();
@@ -206,11 +206,11 @@ bool try_lock_read();
 
 ### <a name="return-value"></a>Valeur de retour
 
-Si le verrou a été acquis, la valeur **true**; Sinon, la valeur **false**.
+Si le verrou a été acquis, la valeur **est vraie;** autrement, la valeur **fausse**.
 
-## <a name="unlock"></a>bloquer
+## <a name="unlock"></a><a name="unlock"></a>Déverrouiller
 
-Déverrouille le verrou lecteur-writer en fonction de la personne qui l’a verrouillé, lecteur ou enregistreur.
+Débloque le verrou lecteur-écrivain en fonction de qui l’a verrouillé, lecteur ou écrivain.
 
 ```cpp
 void unlock();
@@ -218,9 +218,9 @@ void unlock();
 
 ### <a name="remarks"></a>Notes
 
-Si des Writers attendent sur le verrou, la libération du verrou passera toujours au writer suivant dans l’ordre FIFO. Ce verrou est biaisé vers les writers et peut priver les lecteurs d’un chargement continu d’enregistreurs.
+S’il ya des écrivains en attente sur la serrure, la libération de la serrure sera toujours aller à l’auteur suivant dans l’ordre FIFO. Ce verrou est biaisé vers les écrivains et peut affamer les lecteurs sous une charge continue d’écrivains.
 
 ## <a name="see-also"></a>Voir aussi
 
 [accès concurrentiel Namespace](concurrency-namespace.md)<br/>
-[critical_section, classe](critical-section-class.md)
+[Classe critical_section](critical-section-class.md)

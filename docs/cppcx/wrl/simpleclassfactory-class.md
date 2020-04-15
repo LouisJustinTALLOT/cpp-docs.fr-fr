@@ -9,12 +9,12 @@ helpviewer_keywords:
 - Microsoft::WRL::SimpleClassFactory class
 - Microsoft::WRL::SimpleClassFactory::CreateInstance method
 ms.assetid: 6edda1b2-4e44-4e14-9364-72f519249962
-ms.openlocfilehash: 9a4c169944d56b693efa681bf7089636477012ea
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 924b9d2c30f11e6f0444d9c647807f1c86dcc411
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62403077"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81373551"
 ---
 # <a name="simpleclassfactory-class"></a>SimpleClassFactory (classe)
 
@@ -36,7 +36,7 @@ Une classe de base.
 
 La classe de base doit fournir un constructeur par défaut.
 
-L’exemple de code suivant montre comment utiliser `SimpleClassFactory` avec la [ActivatableClassWithFactoryEx](activatableclass-macros.md) (macro).
+L’exemple de code suivant `SimpleClassFactory` montre comment utiliser avec la macro [ActivatableClassWithFactoryEx.](activatableclass-macros.md)
 
 `ActivatableClassWithFactoryEx(MyClass, SimpleClassFactory, MyServerName);`
 
@@ -72,13 +72,13 @@ L’exemple de code suivant montre comment utiliser `SimpleClassFactory` avec la
 
 `SimpleClassFactory`
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
-**En-tête :** module.h
+**En-tête:** module.h
 
-**Espace de noms :** Microsoft::wrl
+**Espace de noms :** Microsoft::WRL
 
-## <a name="createinstance"></a>Simpleclassfactory::CreateInstance, méthode
+## <a name="simpleclassfactorycreateinstance-method"></a><a name="createinstance"></a>SimpleClassFactory::Créer la méthode De l’instance
 
 Crée une instance de l’interface spécifiée.
 
@@ -93,15 +93,15 @@ STDMETHOD( CreateInstance )(
 #### <a name="parameters"></a>Paramètres
 
 *pUnkOuter*<br/>
-Doit être `nullptr`; sinon, la valeur de retour est CLASS_E_NOAGGREGATION.
+Doit `nullptr`être ; autrement, la valeur de rendement est CLASS_E_NOAGGREGATION.
 
-SimpleClassFactory ne prend pas en charge d’agrégation. Si l’agrégation ont été prise en charge et de l’objet en cours de création faisait partie d’un agrégat, *pUnkOuter* serait un pointeur vers le contrôle `IUnknown` interface de l’agrégat.
+SimpleClassFactory ne prend pas en charge l’agrégation. Si l’agrégation était prise en charge et que l’objet créé faisait partie `IUnknown` d’un agrégat, *pUnkOuter* serait un pointeur de l’interface de contrôle de l’agrégat.
 
 *riid*<br/>
-ID d’interface de l’objet à créer.
+Interface ID de l’objet à créer.
 
 *ppvObject*<br/>
-Lorsque cette opération se termine, pointeur vers une instance de l’objet spécifié par le *riid* paramètre.
+Lorsque cette opération se termine, pointez vers une instance de l’objet spécifiée par le paramètre *riid.*
 
 ### <a name="return-value"></a>Valeur de retour
 
@@ -109,4 +109,4 @@ S_OK si l'opération réussit. Sinon, une valeur HRESULT indique l'erreur.
 
 ### <a name="remarks"></a>Notes
 
-Si `__WRL_STRICT__` est défini, une erreur d’assertion est émise si n’est pas dérivée de la classe de base spécifiée dans le paramètre de modèle de classe [RuntimeClass](runtimeclass-class.md), ou n’est pas configuré avec le ClassicCom ou WinRtClassicComMix [ RuntimeClassType](runtimeclasstype-enumeration.md) valeur d’énumération.
+Si `__WRL_STRICT__` elle est définie, une erreur d’affirmation est émise si la classe de base spécifiée dans le paramètre du modèle de classe n’est pas dérivée de [RuntimeClass](runtimeclass-class.md), ou n’est pas configurée avec la valeur d’énumération ClassicCom ou WinRtClassicComMix [RuntimeClassType.](runtimeclasstype-enumeration.md)

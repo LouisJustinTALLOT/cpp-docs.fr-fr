@@ -19,12 +19,12 @@ helpviewer_keywords:
 - Microsoft::WRL::WeakRef::operator& operator
 - Microsoft::WRL::WeakRef::WeakRef, constructor
 ms.assetid: 572be703-c641-496c-8af5-ad6164670ba1
-ms.openlocfilehash: 9616fcffac0b92d5ac6d96cfe5f4119f3a3b180f
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 681f5a64c3e2902c66facbd4f0ac3a3663a7e79d
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62223051"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81374256"
 ---
 # <a name="weakref-class"></a>WeakRef, classe
 
@@ -43,29 +43,29 @@ class WeakRef : public ComPtr<IWeakReference>;
 |Nom|Description|
 |----------|-----------------|
 |[WeakRef::WeakRef, constructeur](#weakref)|Initialise une nouvelle instance de la classe `WeakRef`.|
-|[WeakRef::~WeakRef, destructeur](#tilde-weakref)|Annule l’initialisation de l’instance actuelle de la `WeakRef` classe.|
+|[WeakRef::~WeakRef, destructeur](#tilde-weakref)|Désinitialise l’instance actuelle `WeakRef` de la classe.|
 
 ### <a name="public-methods"></a>M&#233;thodes publiques
 
 |Nom|Description|
 |----------|-----------------|
-|[WeakRef::As, méthode](#as)|Définit le texte spécifié `ComPtr` paramètre de pointeur pour représenter l’interface spécifiée.|
-|[WeakRef::AsIID, méthode](#asiid)|Définit le texte spécifié `ComPtr` paramètre de pointeur pour représenter l’ID de l’interface spécifiée.|
+|[WeakRef::As, méthode](#as)|Définit le `ComPtr` paramètre de pointeur spécifié pour représenter l’interface spécifiée.|
+|[WeakRef::AsIID, méthode](#asiid)|Définit le `ComPtr` paramètre de pointeur spécifié pour représenter l’ID d’interface spécifié.|
 |[WeakRef::CopyTo, méthode](#copyto)|Assigne un pointeur vers une interface, si disponible, à la variable pointeur spécifiée.|
 
 ### <a name="public-operators"></a>Op&#233;rateurs publics
 
 |Nom|Description|
 |----------|-----------------|
-|[WeakRef::operator&, opérateur](#operator-ampersand-operator)|Retourne un `ComPtrRef` objet qui représente l’actuel `WeakRef` objet.|
+|[WeakRef::operator&, opérateur](#operator-ampersand-operator)|Retourne `ComPtrRef` un objet qui `WeakRef` représente l’objet actuel.|
 
 ## <a name="remarks"></a>Notes
 
-Un `WeakRef` objet conserve un *référence forte*, qui est associé à un objet et peut être valide ou non valide. Appelez le `As()` ou `AsIID()` méthode pour obtenir une référence forte. Lorsque la référence forte est valide, elle peut accéder à l’objet associé. Lorsque la référence forte n’est pas valide (`nullptr`), l’objet associé n’est pas accessible.
+Un `WeakRef` objet maintient une *référence forte,* qui est associée à un objet, et peut être valide ou invalide. Appelez `As()` la `AsIID()` méthode ou l’obtention d’une référence forte. Lorsque la référence forte est valide, elle peut accéder à l’objet associé. Lorsque la référence forte n’est pas valide (`nullptr`), l’objet associé n’est pas accessible.
 
-Un `WeakRef` objet est généralement utilisé pour représenter un objet dont l’existence est contrôlée par un thread externe ou une application. Par exemple, construisez un `WeakRef` objet à partir d’une référence à un objet fichier. Pendant que le fichier est ouvert, la référence forte est valide, mais si le fichier est fermé, la référence forte devient non valide.
+Un `WeakRef` objet est généralement utilisé pour représenter un objet dont l’existence est contrôlée par un thread ou une application externe. Par exemple, `WeakRef` construisez un objet à partir d’une référence à un objet de fichier. Pendant que le fichier est ouvert, la référence forte est valide, mais si le fichier est fermé, la référence forte devient non valide.
 
-Notez qu’il existe un changement de comportement des méthodes [As](#as), [AsIID](#asiid) et [CopyTo](#copyto) dans le Kit de développement logiciel SDK Windows 10. Précédemment, après avoir appelé une de ces méthodes, vous pouvez vérifier le `WeakRef` pour `nullptr` pour déterminer si une référence forte était obtenue avec succès, comme dans le code suivant :
+Notez qu’il existe un changement de comportement des méthodes [As](#as), [AsIID](#asiid) et [CopyTo](#copyto) dans le Kit de développement logiciel SDK Windows 10. Auparavant, après avoir appelé l’une `WeakRef` de `nullptr` ces méthodes, vous pouvez vérifier la pour déterminer si une référence forte a été obtenue avec succès, comme dans le code suivant:
 
 ```cpp
 WeakRef wr;
@@ -84,7 +84,7 @@ if(wr == nullptr)
 }
 ```
 
-Le code ci-dessus ne fonctionne pas lorsque vous utilisez le Kit de développement logiciel SDK Windows 10 (ou version ultérieure). Au lieu de cela, vérifiez le pointeur qui a été transmis pour `nullptr`.
+Le code ci-dessus ne fonctionne pas lorsque vous utilisez le Kit de développement logiciel SDK Windows 10 (ou version ultérieure). Au lieu de cela, vérifier `nullptr`le pointeur qui a été passé pour .
 
 ```cpp
 if (strongRef == nullptr)
@@ -99,23 +99,23 @@ if (strongRef == nullptr)
 
 `WeakRef`
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
 **En-tête :** client.h
 
-**Espace de noms :** Microsoft::wrl
+**Espace de noms :** Microsoft::WRL
 
-## <a name="tilde-weakref"></a>WeakRef :: ~ WeakRef, destructeur
+## <a name="weakrefweakref-destructor"></a><a name="tilde-weakref"></a>FaibleRef::-WeakRef Destructor
 
-Annule l’initialisation de l’instance actuelle de la `WeakRef` classe.
+Désinitialise l’instance actuelle `WeakRef` de la classe.
 
 ```cpp
 ~WeakRef();
 ```
 
-## <a name="as"></a>Weakref::as, méthode
+## <a name="weakrefas-method"></a><a name="as"></a>WeakRef::Comme méthode
 
-Définit le texte spécifié `ComPtr` paramètre de pointeur pour représenter l’interface spécifiée.
+Définit le `ComPtr` paramètre de pointeur spécifié pour représenter l’interface spécifiée.
 
 ```cpp
 template<typename U>
@@ -134,28 +134,28 @@ HRESULT As(
 *U*<br/>
 ID d’interface.
 
-*ptr*<br/>
+*Ptr*<br/>
 Lorsque cette opération se termine, un objet qui représente le paramètre *U*.
 
 ### <a name="return-value"></a>Valeur de retour
 
-- S_OK si cette opération réussit ; Sinon, un HRESULT qui indique la raison pour laquelle l’opération a échoué, et *ptr* est défini sur `nullptr`.
+- S_OK si cette opération réussit; autrement, un HRESULT qui indique la raison pour laquelle `nullptr`l’opération a échoué, et *ptr* est réglé à .
 
-- S_OK si cette opération réussit, mais actuel `WeakRef` l’objet a déjà été libéré. Paramètre *ptr* est défini sur `nullptr`.
+- S_OK si cette opération réussit, mais `WeakRef` l’objet actuel a déjà été libéré. Paramètre *ptr* `nullptr`est réglé à .
 
-- S_OK si cette opération réussit, mais actuel `WeakRef` objet n’est pas dérivé de paramètre *U*. Paramètre *ptr* est défini sur `nullptr`.
+- S_OK si cette opération réussit, `WeakRef` mais l’objet actuel n’est pas dérivé du paramètre *U*. Paramètre *ptr* `nullptr`est réglé à .
 
 ### <a name="remarks"></a>Notes
 
-Une erreur est émise si le paramètre *U* est `IWeakReference`, ou n’est pas dérivé `IInspectable`.
+Une erreur est émise si `IWeakReference`le paramètre `IInspectable` *U* est, ou n’est pas dérivé de .
 
 Le premier modèle est le formulaire que vous devez utiliser dans votre code. Le deuxième modèle est une spécialisation d’assistance interne qui prend en charge les fonctionnalités du langage C++ telles que le mot clé de déduction de type [auto](../../cpp/auto-cpp.md) .
 
-À compter dans le SDK Windows 10, cette méthode n’affecte pas la `WeakRef` l’instance à `nullptr` si la référence faible n’a pas pu être obtenue, vous devez donc éviter le code de vérification des erreurs qui vérifie le `WeakRef` pour `nullptr`. Au lieu de cela, vérifiez *ptr* pour `nullptr`.
+À partir de la Windows 10 SDK, `WeakRef` `nullptr` cette méthode ne fixe pas l’instance à si la référence `WeakRef` `nullptr`faible n’a pas pu être obtenue, de sorte que vous devriez éviter le code de vérification des erreurs qui vérifie le pour . Au lieu de `nullptr`cela, vérifier *ptr* pour .
 
-## <a name="asiid"></a>Weakref::asiid, méthode
+## <a name="weakrefasiid-method"></a><a name="asiid"></a>WeakRef::Méthode AsIID
 
-Définit le texte spécifié `ComPtr` paramètre de pointeur pour représenter l’ID de l’interface spécifiée.
+Définit le `ComPtr` paramètre de pointeur spécifié pour représenter l’ID d’interface spécifié.
 
 ```cpp
 HRESULT AsIID(
@@ -169,26 +169,26 @@ HRESULT AsIID(
 *riid*<br/>
 ID d’interface.
 
-*ptr*<br/>
-Lorsque cette opération se termine, un objet qui représente le paramètre *riid*.
+*Ptr*<br/>
+Lorsque cette opération se termine, un objet qui représente *le paramètre riide*.
 
 ### <a name="return-value"></a>Valeur de retour
 
-- S_OK si cette opération réussit ; Sinon, un HRESULT qui indique la raison pour laquelle l’opération a échoué, et *ptr* est défini sur `nullptr`.
+- S_OK si cette opération réussit; autrement, un HRESULT qui indique la raison pour laquelle `nullptr`l’opération a échoué, et *ptr* est réglé à .
 
-- S_OK si cette opération réussit, mais actuel `WeakRef` l’objet a déjà été libéré. Paramètre *ptr* est défini sur `nullptr`.
+- S_OK si cette opération réussit, mais `WeakRef` l’objet actuel a déjà été libéré. Paramètre *ptr* `nullptr`est réglé à .
 
-- S_OK si cette opération réussit, mais actuel `WeakRef` objet n’est pas dérivé de paramètre *riid*. Paramètre *ptr* est défini sur `nullptr`. (Pour plus d’informations, consultez la section Notes.)
+- S_OK si cette opération réussit, mais `WeakRef` l’objet actuel n’est pas dérivé du *paramètre riid*. Paramètre *ptr* `nullptr`est réglé à . (Pour plus d’informations, consultez la section Notes.)
 
 ### <a name="remarks"></a>Notes
 
-Une erreur est émise si le paramètre *riid* n’est pas dérivé `IInspectable`. Cette erreur remplace la valeur de retour.
+Une erreur est émise si *le paramètre riid* n’est pas dérivé de `IInspectable`. Cette erreur remplace la valeur de retour.
 
 Le premier modèle est le formulaire que vous devez utiliser dans votre code. Le deuxième modèle (non illustré ici, mais déclaré dans le fichier d’en-tête) est une spécialisation d’assistance interne qui prend en charge les fonctionnalités du langage C++ telles que le mot clé de déduction de type [auto](../../cpp/auto-cpp.md) .
 
-À compter dans le SDK Windows 10, cette méthode n’affecte pas la `WeakRef` l’instance à `nullptr` si la référence faible n’a pas pu être obtenue, vous devez donc éviter le code de vérification des erreurs qui vérifie le `WeakRef` pour `nullptr`. Au lieu de cela, vérifiez *ptr* pour `nullptr`.
+À partir de la Windows 10 SDK, `WeakRef` `nullptr` cette méthode ne fixe pas l’instance à si la référence `WeakRef` `nullptr`faible n’a pas pu être obtenue, de sorte que vous devriez éviter le code de vérification des erreurs qui vérifie le pour . Au lieu de `nullptr`cela, vérifier *ptr* pour .
 
-## <a name="copyto"></a>Weakref::CopyTo, méthode
+## <a name="weakrefcopyto-method"></a><a name="copyto"></a>WeakRef::CopyTo Méthode
 
 Assigne un pointeur vers une interface, si disponible, à la variable pointeur spécifiée.
 
@@ -211,27 +211,27 @@ HRESULT CopyTo(
 ### <a name="parameters"></a>Paramètres
 
 *U*<br/>
-Pointeur un `IInspectable` interface. Une erreur est générée si *U* n’est pas dérivé `IInspectable`.
+Pointeur `IInspectable` d’une interface. Une erreur est *U* émise si U `IInspectable`n’est pas dérivé de .
 
 *riid*<br/>
-ID d’interface. Une erreur est générée si *riid* n’est pas dérivé `IWeakReference`.
+ID d’interface. Une erreur est émise si la `IWeakReference` *riid n’est* pas dérivée de .
 
-*ptr*<br/>
-Un pointeur doublement indirect vers `IInspectable` ou `IWeakReference`.
+*Ptr*<br/>
+Un pointeur doublement `IInspectable` `IWeakReference`indirect à ou .
 
 ### <a name="return-value"></a>Valeur de retour
 
-S_OK en cas de succès. Sinon, valeur HRESULT qui décrit l’erreur. Pour plus d’informations, consultez **Notes**.
+S_OK en cas de succès. Sinon, valeur HRESULT qui décrit l’erreur. Pour plus d’informations, voir **Remarques**.
 
 ### <a name="remarks"></a>Notes
 
-La valeur de retour S_OK signifie que cette opération a réussi, mais elle n’indique pas si la référence faible a été résolue en une référence forte. Ce paramètre de test si S_OK est retourné, *p* est un nom fort référence ; autrement dit, le paramètre *p* n’est pas égal à `nullptr`.
+La valeur de retour S_OK signifie que cette opération a réussi, mais elle n’indique pas si la référence faible a été résolue en une référence forte. Si S_OK est retournée, testez ce paramètre *p* est une référence forte; c’est-à-dire, le `nullptr`paramètre *p* n’est pas égal à .
 
-À compter dans le SDK Windows 10, cette méthode n’affecte pas la `WeakRef` l’instance à `nullptr` si la référence faible n’a pas pu être obtenue, vous devez donc éviter erreur de vérification du code qui vérifie le `WeakRef` pour `nullptr`. Au lieu de cela, vérifiez *ptr* pour `nullptr`.
+À partir de la Windows 10 SDK, `WeakRef` `nullptr` cette méthode ne fixe pas l’instance à si la `WeakRef` référence `nullptr`faible n’a pas pu être obtenue, de sorte que vous devriez éviter le code de vérification des erreurs qui vérifie le pour . Au lieu de `nullptr`cela, vérifier *ptr* pour .
 
-## <a name="operator-ampersand-operator"></a>WeakRef::operator&amp; opérateur
+## <a name="weakrefoperatoramp-operator"></a><a name="operator-ampersand-operator"></a>WeakRef::opérateur&amp; opérateur
 
-Retourne un `ComPtrRef` objet qui représente l’actuel `WeakRef` objet.
+Retourne `ComPtrRef` un objet qui `WeakRef` représente l’objet actuel.
 
 ```cpp
 Details::ComPtrRef<WeakRef> operator&() throw()
@@ -239,13 +239,13 @@ Details::ComPtrRef<WeakRef> operator&() throw()
 
 ### <a name="return-value"></a>Valeur de retour
 
-Un `ComPtrRef` objet qui représente l’actuel `WeakRef` objet.
+Un `ComPtrRef` objet qui `WeakRef` représente l’objet actuel.
 
 ### <a name="remarks"></a>Notes
 
-Il s’agit d’un opérateur d’assistance interne qui n’est pas destiné à être utilisé dans votre code.
+Il s’agit d’un opérateur d’aide interne qui n’est pas destiné à être utilisé dans votre code.
 
-## <a name="weakref"></a>Weakref::weakref, constructeur
+## <a name="weakrefweakref-constructor"></a><a name="weakref"></a>WeakRef::WeakRef Constructor
 
 Initialise une nouvelle instance de la classe `WeakRef`.
 
@@ -274,9 +274,9 @@ WeakRef(
 
 ### <a name="parameters"></a>Paramètres
 
-*ptr*<br/>
-Un pointeur, une référence ou une référence rvalue à un objet existant qui initialise actuel `WeakRef` objet.
+*Ptr*<br/>
+Un pointeur, une référence ou une référence à un objet `WeakRef` existant qui initialise l’objet actuel.
 
 ### <a name="remarks"></a>Notes
 
-Le premier constructeur initialise vide `WeakRef` objet. Le deuxième constructeur initialise un `WeakRef` objet d’un pointeur vers le `IWeakReference` interface. Le troisième constructeur initialise un `WeakRef` objet à partir d’une référence à un `ComPtr<IWeakReference>` objet. Les quatrième et cinquième constructeurs initialisent un `WeakRef` objet à partir d’un autre `WeakRef` objet.
+Le premier constructeur initialise `WeakRef` un objet vide. Le deuxième constructeur initialise `WeakRef` un objet d’un pointeur à l’interface. `IWeakReference` Le troisième constructeur initialise `WeakRef` un objet à `ComPtr<IWeakReference>` partir d’une référence à un objet. Les quatrième et cinquième constructeurs `WeakRef` initialisent `WeakRef` un objet d’un autre objet.
