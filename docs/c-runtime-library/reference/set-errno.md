@@ -1,8 +1,9 @@
 ---
 title: _set_errno
-ms.date: 11/04/2016
+ms.date: 4/2/2020
 api_name:
 - _set_errno
+- _o__set_errno
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -15,6 +16,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-runtime-l1-1-0.dll
+- api-ms-win-crt-private-l1-1-0
 api_type:
 - DLLExport
 topic_type:
@@ -27,16 +29,16 @@ helpviewer_keywords:
 - set_errno function
 - _set_errno function
 ms.assetid: d338914a-1894-4cf3-ae45-f2c4eb26590b
-ms.openlocfilehash: 09800276886ecf1c2fdd2ffee63ddcb8cc57f61e
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: acc54e209d1a09e72196d2a7881ebd6c4ff8f6fc
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70948603"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81337712"
 ---
 # <a name="_set_errno"></a>_set_errno
 
-Définissez la valeur de la variable globale **errno** .
+Définissez la valeur de la variable globale **errno.**
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -47,7 +49,7 @@ errno_t _set_errno( int error_value );
 ### <a name="parameters"></a>Paramètres
 
 *error_value*<br/>
-Nouvelle valeur de **errno**.
+La nouvelle valeur de **errno**.
 
 ## <a name="return-value"></a>Valeur de retour
 
@@ -56,6 +58,8 @@ Retourne zéro si l’opération réussit.
 ## <a name="remarks"></a>Notes
 
 Les valeurs possibles sont définies dans Errno.h. Voir aussi [errno, constantes](../../c-runtime-library/errno-constants.md).
+
+Par défaut, l’état global de cette fonction est étendue à l’application. Pour changer cela, voir [Global State dans le CRT](../global-state.md).
 
 ## <a name="example"></a>Exemple
 
@@ -75,13 +79,13 @@ int main()
 Oops: Illegal byte sequence
 ```
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
 |Routine|En-tête requis|En-tête facultatif|
 |-------------|---------------------|---------------------|
 |**_set_errno**|\<stdlib.h>|\<errno.h>|
 
-Pour plus d'informations sur la compatibilité, voir [Compatibilité](../../c-runtime-library/compatibility.md).
+Pour plus d’informations sur la compatibilité, consultez [Compatibility](../../c-runtime-library/compatibility.md).
 
 ## <a name="see-also"></a>Voir aussi
 

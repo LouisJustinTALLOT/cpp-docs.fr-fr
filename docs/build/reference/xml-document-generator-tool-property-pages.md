@@ -1,5 +1,5 @@
 ---
-title: Pages de propriétés Outil Générateur de documents XML
+title: Outil Générateur de documents XML, page de propriétés
 ms.date: 11/04/2016
 f1_keywords:
 - VC.Project.VCXDCMakeTool.ValidateIntelliSense
@@ -8,23 +8,23 @@ f1_keywords:
 - VC.Project.VCXDCMakeTool.OutputDocumentFile
 - VC.Project.VCXDCMakeTool.AdditionalDocumentFiles
 ms.assetid: 645912b5-197a-4c36-ba58-64df09444ca0
-ms.openlocfilehash: 9f10ddf98c238120750e72644779a6ad74af2d1e
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: d17913909532c5bebcac712937af00be3ad98712
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80171630"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81335765"
 ---
-# <a name="xml-document-generator-tool-property-pages"></a>Pages de propriétés Outil Générateur de documents XML
+# <a name="xml-document-generator-tool-property-pages"></a>Outil Générateur de documents XML, page de propriétés
 
 La page de propriétés Outil Générateur de documents XML expose les fonctionnalités de xdcmake.exe. xdcmake.exe fusionne des fichiers .xdc en fichier .xml quand votre code source contient des commentaires de documentation et que [/doc (Traiter les commentaires de documentation) (C/C++)](doc-process-documentation-comments-c-cpp.md) est spécifié. Consultez [Balises recommandées pour les commentaires de documentation](recommended-tags-for-documentation-comments-visual-cpp.md) pour plus d’informations sur l’ajout de commentaires de documentation dans le code source.
 
 > [!NOTE]
->  Les options de xdcmake.exe dans l’environnement de développement (pages de propriétés) diffèrent des options de xdcmake.exe quand celui-ci est utilisé sur la ligne de commande. Pour plus d’informations sur l’utilisation de xdcmake.exe à partir de la ligne de commande, consultez [Informations de référence sur XDCMake](xdcmake-reference.md).
+> Les options de xdcmake.exe dans l’environnement de développement (pages de propriétés) diffèrent des options de xdcmake.exe quand celui-ci est utilisé sur la ligne de commande. Pour plus d’informations sur l’utilisation de xdcmake.exe à partir de la ligne de commande, consultez [Informations de référence sur XDCMake](xdcmake-reference.md).
 
 ## <a name="uielement-list"></a>Liste des éléments de l'interface utilisateur
 
-- **Suppression de la bannière de démarrage**
+- **Supprimer la bannière de démarrage**
 
    Supprime le message de copyright.
 
@@ -34,7 +34,7 @@ La page de propriétés Outil Générateur de documents XML expose les fonctionn
 
 - **Fichier de document de sortie**
 
-   Nom et emplacement du répertoire du fichier de sortie .xml. Pour plus d’informations sur l’utilisation des macros pour spécifier des emplacements de répertoire [, consultez macros courantes pour les propriétés et les commandes de génération](common-macros-for-build-commands-and-properties.md) .
+   Nom et emplacement du répertoire du fichier de sortie .xml. Voir [les macros communes pour construire des commandes et des propriétés](common-macros-for-build-commands-and-properties.md) pour obtenir des informations sur l’utilisation de macros pour spécifier les emplacements des répertoires.
 
 - **Dépendances de bibliothèque de documents**
 
@@ -42,4 +42,4 @@ La page de propriétés Outil Générateur de documents XML expose les fonctionn
 
 ## <a name="see-also"></a>Voir aussi
 
-[C++Référence de la page de propriétés du projet](property-pages-visual-cpp.md)
+[Référence de page de propriété du projet CMD](property-pages-visual-cpp.md)

@@ -1,5 +1,5 @@
 ---
-title: Opérateurs pointeur vers membre :. * et-&gt;*
+title: 'Opérateurs pointeurs à membres : . .&gt;*'
 ms.date: 11/04/2016
 f1_keywords:
 - .*
@@ -11,14 +11,14 @@ helpviewer_keywords:
 - expressions [C++], operators
 - ->* operator
 ms.assetid: 2632be3f-1c81-4523-b56c-982a92a68688
-ms.openlocfilehash: 1ff7dd26f36f10948dac42783ad61d16f5feda09
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 2100933bf525f0717978528301049085eaecd4f7
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80188335"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81320339"
 ---
-# <a name="pointer-to-member-operators--and--gt"></a>Opérateurs pointeur vers membre :. * et-&gt;*
+# <a name="pointer-to-member-operators--and--gt"></a>Opérateurs pointeurs à membres : . .&gt;*
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -29,7 +29,7 @@ expression ->* expression
 
 ## <a name="remarks"></a>Notes
 
-Les opérateurs de pointeur vers membre,. * et->\*, retournent la valeur d’un membre de classe spécifique pour l’objet spécifié sur le côté gauche de l’expression.  Le côté droit doit spécifier un membre de la classe.  L'exemple ci-dessous illustre l'utilisation de ces opérateurs :
+Les opérateurs pointeurs-à-membres, .md et \*->, retournent la valeur d’un membre de classe spécifique pour l’objet spécifié sur le côté gauche de l’expression.  Le côté droit doit spécifier un membre de la classe.  L'exemple ci-dessous illustre l'utilisation de ces opérateurs :
 
 ```cpp
 // expre_Expressions_with_Pointer_Member_Operators.cpp
@@ -82,11 +82,11 @@ Dans l'exemple précédent, un pointeur vers un membre, `pmfn`, est utilisé pou
 
 L’opérateur binaire .* associe son premier opérande, qui doit être un objet de type classe, avec son second opérande, qui doit être un type pointeur vers membre.
 
-L’opérateur binaire-> * combine son premier opérande, qui doit être un pointeur vers un objet de classe type, avec son second opérande, qui doit être un type pointeur vers membre.
+L’opérateur binaire ->MD combine son premier opéra, qui doit être un pointeur à un objet de type classe, avec son deuxième opéra, qui doit être un pointeur à membre type.
 
 Dans une expression contenant l’opérateur .*, le premier opérande doit être du type classe du pointeur vers le membre spécifié dans le second opérande, et accessible à ce dernier, ou d’un type accessible clairement dérivé de cette classe et accessible à cette dernière.
 
-Dans une expression contenant l’opérateur-> *, le premier opérande doit être du type « pointeur vers le type de classe » du type spécifié dans le second opérande, ou il doit être d’un type sans ambiguïté dérivé de cette classe.
+Dans une expression contenant l’opérateur ->MD, le premier opérande doit être du type "pointer vers le type de classe" du type spécifié dans le deuxième opéra, ou il doit être d’un type sans ambiguïté dérivé de cette classe.
 
 ## <a name="example"></a>Exemple
 
@@ -128,10 +128,10 @@ int main() {
 }
 ```
 
-Le résultat de l’opérateur. * ou->\* opérateurs pointeur vers membre est un objet ou une fonction du type spécifié dans la déclaration du pointeur vers membre. Ainsi, dans l'exemple précédent, le résultat de l'expression `ADerived.*pmfnFunc1()` est un pointeur vers une fonction qui retourne void. Ce résultat est une l-value si le second opérande est une l-value.
+Le résultat des opérateurs .ou \* ->pointeur-à-membre est un objet ou une fonction du type spécifié dans la déclaration du pointeur au membre. Ainsi, dans l'exemple précédent, le résultat de l'expression `ADerived.*pmfnFunc1()` est un pointeur vers une fonction qui retourne void. Ce résultat est une l-value si le second opérande est une l-value.
 
 > [!NOTE]
->  Si le résultat d’un des opérateurs de pointeur vers membre est une fonction, le résultat peut être utilisé uniquement comme opérande pour l’opérateur d’appel de fonction.
+> Si le résultat d’un des opérateurs de pointeur vers membre est une fonction, le résultat peut être utilisé uniquement comme opérande pour l’opérateur d’appel de fonction.
 
 ## <a name="see-also"></a>Voir aussi
 

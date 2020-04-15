@@ -4,84 +4,84 @@ ms.date: 11/04/2016
 helpviewer_keywords:
 - Unicode, string objects
 ms.assetid: 0b53a542-eeb1-4108-9ada-6700645b6f8f
-ms.openlocfilehash: b247e97f5aa6b5e85a6a6b6f57a64224a9e0f435
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 7f92b38ac659faef2dd9319b2f204ba837f0d473
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62252660"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81317463"
 ---
 # <a name="string-data-management"></a>Gestion des données chaînes
 
-Visual C++ propose plusieurs façons de gérer les données de type chaîne :
+Visual CMMD fournit plusieurs façons de gérer les données des chaînes :
 
-- [Manipulation de chaînes](../c-runtime-library/string-manipulation-crt.md) pour travailler avec des chaînes de style C se terminant par null
+- [Manipulation des cordes](../c-runtime-library/string-manipulation-crt.md) pour travailler avec des cordes à mi-temps nuls de style C
 
-- Fonctions API Win32 pour la gestion des chaînes
+- Fonctions win32 API pour la gestion des cordes
 
-- La classe MFC [Classe CStringT](../atl-mfc-shared/reference/cstringt-class.md), qui fournit des objets chaîne redimensionnables flexible
+- Classe [CStringT](../atl-mfc-shared/reference/cstringt-class.md)de classe de MFC , qui fournit des objets à cordes flexibles et resizables
 
-- Classe [Classe CStringT](../atl-mfc-shared/reference/cstringt-class.md), qui fournit un objet de chaîne indépendant des MFC avec les mêmes fonctionnalités que `CString`
+- Classe [CStringT Class](../atl-mfc-shared/reference/cstringt-class.md), qui fournit un objet à chaîne MFC-indépendant avec la même fonctionnalité que`CString`
 
-Presque tous les programmes fonctionnent avec les données de type chaîne. MFC `CString` classe est souvent la meilleure solution pour la gestion des chaînes flexible. Depuis la version 7.0, `CString` peut être utilisé dans les programmes MFC ou indépendants des MFC. Les deux la bibliothèque d’exécution et `CString` prend en charge les chaînes contenant des caractères multioctets (larges), comme dans la programmation de MBCS ou Unicode.
+Presque tous les programmes fonctionnent avec des données de chaîne. La classe `CString` de MFC est souvent la meilleure solution pour une manipulation flexible des cordes. En commençant par la version `CString` 7.0, peut être utilisé dans les programmes MFC ou MFC-indépendants. La bibliothèque de course-temps et `CString` les chaînes de support contenant des caractères multioctets (larges), comme dans unicode ou MBCS programmation.
 
-Cet article décrit les services à usage général qui fournit de la bibliothèque de classes liées à la manipulation de chaînes. Les sujets abordés dans cet article sont les suivantes :
+Cet article décrit les services à usage général que la bibliothèque de classe fournit liés à la manipulation des cordes. Les sujets abordés dans cet article sont les suivants :
 
-- [Portabilité Unicode et MBCS fournir](#_core_unicode_and_mbcs_provide_portability)
+- [Unicode et MBCS assurent la portabilité](#_core_unicode_and_mbcs_provide_portability)
 
-- [CString et pointeurs const char](#_core_cstrings_and_const_char_pointers)
+- [CStrings et const char Pointers](#_core_cstrings_and_const_char_pointers)
 
-- [Décompte de références CString](#_core_cstring_reference_counting)
+- [Comptage des références CString](#_core_cstring_reference_counting)
 
-Le [Classe CStringT](../atl-mfc-shared/reference/cstringt-class.md) classe prend en charge la manipulation de chaînes. Il est destiné à remplacer et étendre la fonctionnalité normalement assurée par le package de chaîne de bibliothèque Runtime C. Le `CString` classe fournit des fonctions membres et des opérateurs pour la gestion simplifiée des chaînes, similaires à celles disponibles dans la base. La classe fournit également les constructeurs et des opérateurs pour la construction, l’affectation et la comparaison `CString`s et C++ standard des types de données string. Étant donné que `CString` n’est pas dérivé `CObject`, vous pouvez utiliser `CString` objets indépendamment de la plupart de la MFC Microsoft Foundation Class Library ().
+La classe [CStringT](../atl-mfc-shared/reference/cstringt-class.md) offre un soutien pour manipuler les cordes. Il est destiné à remplacer et étendre la fonctionnalité normalement fournie par le paquet de chaîne de bibliothèque C run-time. La `CString` classe fournit aux membres des fonctions et des opérateurs pour une manipulation simplifiée des cordes, semblable à celles trouvées dans Basic. La classe fournit également des constructeurs et des `CString`opérateurs pour la construction, l’attribution et la comparaison des types de données de chaîne C et standard. Parce `CString` que n’est pas `CString` dérivé de , vous pouvez utiliser des `CObject`objets indépendamment de la plupart de la Microsoft Foundation Class Library (MFC).
 
-`CString` les objets suivent la « valeur sémantique. » Un `CString` objet représente une valeur unique. Considérez un `CString` sous forme de chaîne réelle, et non comme un pointeur vers une chaîne.
+`CString`les objets suivent la « sémantique de valeur ». Un `CString` objet représente une valeur unique. Pensez à `CString` une chaîne réelle, pas comme un pointeur à une chaîne.
 
-Un `CString` objet représente une séquence d’un nombre variable de caractères. `CString` objets peuvent être considérés comme des tableaux de caractères.
+Un `CString` objet représente une séquence d’un nombre variable de caractères. `CString`objets peuvent être considérés comme des tableaux de caractères.
 
-##  <a name="_core_unicode_and_mbcs_provide_portability"></a> Unicode et MBCS assurent la portabilité
+## <a name="unicode-and-mbcs-provide-portability"></a><a name="_core_unicode_and_mbcs_provide_portability"></a>Unicode et MBCS assurent la portabilité
 
-Avec MFC version 3.0 et versions ultérieure, MFC, notamment `CString`, est activée pour Unicode et jeux de caractères multioctets (MBCS). Cette prise en charge facilite l’écriture d’applications portables que vous pouvez créer pour les caractères Unicode ou ANSI. Pour activer cette portabilité, chaque caractère dans un `CString` objet est de type TCHAR, qui est définie comme `wchar_t` si vous définissez le symbole _UNICODE quand vous générez votre application, ou en tant que `char` dans le cas contraire. Une `wchar_t` caractère est la largeur de 16 bits. MBCS est activé si vous générez avec le symbole _MBCS défini. Application MFC elle-même est générée avec le symbole _MBCS (pour les bibliothèques NAFX) ou le symbole _UNICODE (pour les bibliothèques UAFX) défini.
+Avec la version MFC 3.0 et `CString`plus tard, MFC, y compris, est activé pour unicode et ensembles de caractères multioctets (MBCS). Ce support vous permet d’écrire plus facilement des applications portables que vous pouvez créer pour des caractères Unicode ou ANSI. Pour activer cette portabilité, `CString` chaque personnage d’un objet `wchar_t` est de type TCHAR, qui est défini comme `char` si vous définissez le symbole _UNICODE lorsque vous construisez votre application, ou comme si ce n’était pas le cas. Un `wchar_t` personnage est de 16 bits de large. MBCS est activé si vous construisez avec le symbole _MBCS défini. MFC elle-même est construit avec le symbole _MBCS (pour les bibliothèques NAFX) ou le symbole _UNICODE (pour les bibliothèques UAFX) défini.
 
 > [!NOTE]
->  Le `CString` exemples dans cet article et les articles qui accompagne cet article sur les chaînes montrent des chaînes littérales correctement mis en forme pour la portabilité Unicode, à l’aide de la macro _T, qui se traduit par la chaîne littérale au formulaire :
+> Les `CString` exemples de ceci et les articles d’accompagnement sur les cordes montrent des chaînes littérales correctement formatées pour la portabilité d’Unicode, utilisant la macro _T, qui traduit la chaîne littérale à la forme :
 
 `L"literal string"`
 
 > [!NOTE]
->  que le compilateur traite comme une chaîne Unicode. Par exemple, le code suivant :
+> que le compilateur traite comme une chaîne Unicode. Par exemple, le code suivant :
 
 [!code-cpp[NVC_ATLMFC_Utilities#187](../atl-mfc-shared/codesnippet/cpp/string-data-management_1.cpp)]
 
 > [!NOTE]
->  la traduction en sous forme de chaîne Unicode si _UNICODE est défini ou sous forme de chaîne ANSI dans le cas contraire. Pour plus d’informations, consultez l’article [Unicode et la prise en charge du jeu de caractères multioctets (MBCS)](../atl-mfc-shared/unicode-and-multibyte-character-set-mbcs-support.md).
+> est traduit par une chaîne Unicode si _UNICODE est définie ou comme une chaîne ANSI si ce n’est pas le cas. Pour plus d’informations, voir l’article [Unicode et Multibyte Character Set (MBCS) Support](../atl-mfc-shared/unicode-and-multibyte-character-set-mbcs-support.md).
 
-Un `CString` objet permet de stocker caractères INT_MAX (2 147 483 647). Le type de données TCHAR est utilisé pour obtenir ou définir des caractères individuels à l’intérieur d’un `CString` objet. Contrairement aux tableaux de caractères, la `CString` classe a une fonction d’allocation de mémoire intégrée. Cela permet de `CString` objets à croître automatiquement en fonction des besoins (autrement dit, vous n’avez pas à vous soucier de croissance un `CString` objet en fonction de chaînes plus longues).
+Un `CString` objet peut stocker jusqu’à INT_MAX (2 147 483 647) caractères. Le type de données TCHAR est utilisé `CString` pour obtenir ou définir des caractères individuels à l’intérieur d’un objet. Contrairement aux tableaux `CString` de caractères, la classe dispose d’une capacité intégrée d’allocation de mémoire. Cela `CString` permet aux objets de croître automatiquement au besoin (c’est-à-dire que vous n’avez pas à vous soucier de la croissance d’un `CString` objet pour s’adapter à des cordes plus longues).
 
-##  <a name="_core_cstrings_and_const_char_pointers"></a> CString et pointeurs const char
+## <a name="cstrings-and-const-char-pointers"></a><a name="_core_cstrings_and_const_char_pointers"></a>CStrings et const char Pointers
 
-Un `CString` objet peut également agir comme une littéral chaîne de style C (une `PCXSTR`, qui est le même que **const char** <strong>\*</strong> si pas sous Unicode). Le [CSimpleStringT::operator PCXSTR](../atl-mfc-shared/reference/csimplestringt-class.md#operator_pcxstr) permet de l’opérateur de conversion `CString` objets à être librement remplacés par des pointeurs de caractères dans les appels de fonction. Le **CString (LPCWSTR** `pszSrc` **)** constructeur permet de pointeurs de caractère pour `CString` objets.
+Un `CString` objet peut également agir comme une chaîne `PCXSTR`littérale de style C (un , qui est le même que **l’omble de** <strong>\*</strong> const si ce n’est sous Unicode). L’opérateur de conversion [PCXSTR CSimpleStringT ::opérateur permet](../atl-mfc-shared/reference/csimplestringt-class.md#operator_pcxstr) aux `CString` objets d’être librement remplacés par des pointeurs de caractères dans les appels de fonction. Le **constructeur CString (LPCWSTR** `pszSrc` **)** permet de remplacer `CString` les pointeurs de caractères par des objets.
 
-Aucune tentative est effectuée pour plier `CString` objets. Si vous apportez des deux `CString` contenant des objets `Chicago`, par exemple, les caractères dans `Chicago` sont stockées dans deux emplacements. (Cela ne peut pas être vrai pour les versions futures de MFC, donc vous devez en dépendent pas.)
-
-> [!NOTE]
->  Utilisez le [CSimpleStringT::GetBuffer](../atl-mfc-shared/reference/csimplestringt-class.md#getbuffer) et [CSimpleStringT::ReleaseBuffer](../atl-mfc-shared/reference/csimplestringt-class.md#releasebuffer) fonctions membres lorsque vous avez besoin d’accéder directement à un `CString` en tant que pointeur vers un caractère non constant.
+Aucune tentative n’est faite pour plier des `CString` objets. Si vous `CString` faites `Chicago`deux objets contenant, `Chicago` par exemple, les caractères sont stockés en deux endroits. (Ce n’est peut-être pas le cas des futures versions de MFC, donc vous ne devriez pas en dépendre.)
 
 > [!NOTE]
->  Utilisez le [CStringT::AllocSysString](../atl-mfc-shared/reference/cstringt-class.md#allocsysstring) et [CStringT::SetSysString](../atl-mfc-shared/reference/cstringt-class.md#setsysstring) fonctions membres pour allouer et définir des objets BSTR utilisés dans Automation (anciennement appelé OLE Automation).
+> Utilisez le [CSimpleStringT::GetBuffer](../atl-mfc-shared/reference/csimplestringt-class.md#getbuffer) et [CSimpleStringT::ReleaseBuffer](../atl-mfc-shared/reference/csimplestringt-class.md#releasebuffer) fonctions membres `CString` lorsque vous avez besoin d’accéder directement à un pointeur nonconstant à un personnage.
 
 > [!NOTE]
->  Si possible, allouez `CString` objets sur le frame plutôt que sur le tas. Cela économise de la mémoire et simplifie le passage de paramètres.
+> Utilisez le [CStringT::AllocSysString](../atl-mfc-shared/reference/cstringt-class.md#allocsysstring) et [CStringT::SetSysString](../atl-mfc-shared/reference/cstringt-class.md#setsysstring) fonctions membres pour allouer et définir les objets BSTR utilisés dans l’automatisation (anciennement connu sous le nom OLE Automation).
 
-Le `CString` classe n’est pas implémentée comme une classe de collection de bibliothèque Microsoft Foundation Class, cependant `CString` objets peuvent certainement être stockés en tant qu’éléments dans les collections.
+> [!NOTE]
+> Dans la mesure `CString` du possible, répartissez les objets sur le cadre plutôt que sur le tas. Cela permet d’économiser la mémoire et de simplifier le passage des paramètres.
 
-##  <a name="_core_cstring_reference_counting"></a> Décompte de références CString
+La `CString` classe n’est pas mise en œuvre comme une classe de collecte Microsoft Foundation Class Library, bien que les `CString` objets peuvent certainement être stockés comme des éléments dans les collections.
 
-Depuis la version 4.0, MFC lorsque [Classe CStringT](../atl-mfc-shared/reference/cstringt-class.md) objets sont copiés, MFC incrémente un décompte de références, plutôt que de copier les données. Cela rend le passage de paramètres par valeur et en retournant `CString` objets par valeur plus efficace. Ces opérations provoquent le constructeur de copie qui sera appelée, parfois plusieurs fois. Incrémentation d’un décompte de références réduit le temps système pour les opérations courantes et facilite l’utilisation de `CString` une option plus attrayante.
+## <a name="cstring-reference-counting"></a><a name="_core_cstring_reference_counting"></a>Comptage des références CString
 
-Comme chaque copie est détruit, le décompte de références dans l’objet d’origine est décrémenté. La version d’origine `CString` pas détruit tant que son décompte de références est réduite à zéro.
+À partir de la version 4.0 de MFC, lorsque les objets [de la classe CStringT](../atl-mfc-shared/reference/cstringt-class.md) sont copiés, MFC incrémente un nombre de références plutôt que de copier les données. Cela rend le passage des `CString` paramètres par valeur et le retour des objets par valeur plus efficace. Ces opérations font appeler le constructeur de copie, parfois plus d’une fois. L’augmentation d’un nombre de références réduit les `CString` frais généraux de ces opérations courantes et rend l’utilisation d’une option plus attrayante.
 
-Vous pouvez utiliser la `CString` fonctions membres [CSimpleStringT::LockBuffer](../atl-mfc-shared/reference/csimplestringt-class.md#lockbuffer) et [CSimpleStringT::UnlockBuffer](../atl-mfc-shared/reference/csimplestringt-class.md#unlockbuffer) pour désactiver ou activer le décompte de références.
+Comme chaque copie est détruite, le nombre de références dans l’objet d’origine est décrète. L’objet d’origine `CString` n’est pas détruit tant que son nombre de références n’est pas réduit à zéro.
+
+Vous pouvez `CString` utiliser les fonctions membres [CSimpleStringT::LockBuffer](../atl-mfc-shared/reference/csimplestringt-class.md#lockbuffer) et [CSimpleStringT::UnlockBuffer](../atl-mfc-shared/reference/csimplestringt-class.md#unlockbuffer) pour désactiver ou activer le comptage des références.
 
 ## <a name="see-also"></a>Voir aussi
 

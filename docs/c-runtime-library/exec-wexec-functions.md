@@ -56,12 +56,12 @@ helpviewer_keywords:
 - _exec function
 - _texecvpe function
 ms.assetid: a261df93-206a-4fdc-b8ac-66aa7db83bc6
-ms.openlocfilehash: dab670c5baef1c51c39a4c936380fab92c5103cc
-ms.sourcegitcommit: a5fa9c6f4f0c239ac23be7de116066a978511de7
+ms.openlocfilehash: 52c9727db544d8b124b37cc5beae369ae06abe10
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/20/2019
-ms.locfileid: "75300301"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81351663"
 ---
 # <a name="_exec-_wexec-functions"></a>_exec, _wexec, fonctions
 
@@ -105,10 +105,10 @@ Le paramètre `cmdname` spécifie le fichier à exécuter comme nouveau processu
 Les paramètres sont passés au nouveau processus en fournissant un ou plusieurs pointeurs vers des chaînes de caractères comme paramètres dans l'appel de fonction `_exec`. Ces chaînes de caractères forment la liste de paramètres du nouveau processus. La longueur combinée des paramètres d'environnement hérités et des chaînes qui forment la liste de paramètres du nouveau processus ne doit pas dépasser 32 kilo-octets. Le caractère Null de fin ('\0') pour chaque chaîne n'est pas inclus dans le décompte, mais les espaces (insérés automatiquement pour séparer les paramètres) sont dénombrés.
 
 > [!NOTE]
->  Les espaces incorporés dans les chaînes peuvent provoquer un comportement inattendu ; par exemple, le passage à `_exec` de la chaîne `"hi there"` a comme conséquence que le nouveau processus obtient deux arguments, `"hi"` et `"there"`. Si l'objectif était que le nouveau processus ouvre un fichier nommé « hi there », le processus échoue. Vous pouvez éviter cela en plaçant la chaîne `"\"hi there\""` entre guillemets.
+> Les espaces incorporés dans les chaînes peuvent provoquer un comportement inattendu ; par exemple, le passage à `_exec` de la chaîne `"hi there"` a comme conséquence que le nouveau processus obtient deux arguments, `"hi"` et `"there"`. Si l'objectif était que le nouveau processus ouvre un fichier nommé « hi there », le processus échoue. Vous pouvez éviter cela en plaçant la chaîne `"\"hi there\""` entre guillemets.
 
 > [!IMPORTANT]
->  Ne passez pas d'entrée utilisateur à `_exec` sans vérifier explicitement son contenu. `_exec` entraîne un appel à [CreateProcess](/windows/win32/api/processthreadsapi/nf-processthreadsapi-createprocessw), alors gardez à l’esprit que les noms de chemin incomplets peut créer des failles de sécurité potentielles.
+> Ne passez pas d'entrée utilisateur à `_exec` sans vérifier explicitement son contenu. `_exec` entraîne un appel à [CreateProcess](/windows/win32/api/processthreadsapi/nf-processthreadsapi-createprocessw), alors gardez à l’esprit que les noms de chemin incomplets peut créer des failles de sécurité potentielles.
 
 Les fonctions `_exec` valident leurs paramètres. Si les paramètres attendus sont des pointeurs Null ou des chaînes vides, ou sont omis, les fonctions `_exec` appellent le gestionnaire de paramètre non valide comme décrit dans [Validation de paramètre](../c-runtime-library/parameter-validation.md). Si l'exécution est autorisée à se poursuivre, ces fonctions définissent `errno` avec la valeur `EINVAL` et retournent -1. Aucun nouveau processus n'est exécuté.
 
@@ -118,7 +118,7 @@ Les appels de fonctions `_execl`, `_execle`, `_execlp` et `_execlpe` sont géné
 
 Les appels de fonctions `_execv`, `_execve`, `_execvp` et `_execvpe` sont utiles quand le nombre de paramètres du nouveau processus est variable. Les pointeurs vers les paramètres sont passés comme tableau, `argv`. Le paramètre `argv`[0] est généralement un pointeur vers `cmdname`. Les paramètres `argv`[1] à `argv`[`n`] pointent vers les chaînes de caractères qui forment la nouvelle liste de paramètres. Le paramètre `argv`[`n`+1] doit être un pointeur **NULL** pour marquer la fin de la liste de paramètres.
 
-Les fichiers qui sont ouverts quand un appel de fonction `_exec` est effectué restent ouverts dans le nouveau processus. Dans les appels de fonctions `_execl`, `_execlp`, `_execv` et `_execvp`, le nouveau processus hérite de l'environnement du processus appelant. Les appels de fonctions `_execle`, `_execlpe`, `_execve` et `_execvpe` modifient l'environnement du nouveau processus en passant une liste de paramètres d'environnement via le paramètre `envp`. `envp` est un tableau de pointeurs de caractères, dont chaque élément (excepté le dernier) pointe vers une chaîne terminée par le caractère Null définissant une variable d'environnement. Une telle chaîne a généralement la forme `NAME`=`value` où `NAME` est le nom d’une variable d’environnement et `value` est la valeur de chaîne selon laquelle cette variable est définie. (Notez que `value` n’est pas placé entre guillemets doubles.) L’élément final du tableau `envp` doit avoir la **valeur null**. Quand `envp` a la valeur **NULL**, le nouveau processus hérite des paramètres d’environnement du processus appelant.
+Les fichiers qui sont ouverts quand un appel de fonction `_exec` est effectué restent ouverts dans le nouveau processus. Dans les appels de fonctions `_execl`, `_execlp`, `_execv` et `_execvp`, le nouveau processus hérite de l'environnement du processus appelant. Les appels de fonctions `_execle`, `_execlpe`, `_execve` et `_execvpe` modifient l'environnement du nouveau processus en passant une liste de paramètres d'environnement via le paramètre `envp`. `envp` est un tableau de pointeurs de caractères, dont chaque élément (excepté le dernier) pointe vers une chaîne terminée par le caractère Null définissant une variable d'environnement. Une telle chaîne a généralement la forme `NAME`=`value` où `NAME` est le nom d’une variable d’environnement et `value` est la valeur de chaîne selon laquelle cette variable est définie. (Remarquez `value` que n’est pas enfermé dans des marques de citation double.) Le dernier élément `envp` du tableau doit être **NULL**. Quand `envp` a la valeur **NULL**, le nouveau processus hérite des paramètres d’environnement du processus appelant.
 
 Un programme exécuté avec l'une des fonctions `_exec` est toujours chargé en mémoire comme si le champ d'allocation maximale dans l'en-tête du fichier .exe du programme avait pris la valeur par défaut 0xFFFFH.
 
@@ -232,16 +232,16 @@ int main( int ac, char* av[] )
 }
 ```
 
-## <a name="requirements"></a>Configuration requise pour
+## <a name="requirements"></a>Spécifications
 
 **En-tête :** process.h
 
 ## <a name="see-also"></a>Voir aussi
 
-[Contrôle de processus et d’environnement](../c-runtime-library/process-and-environment-control.md)<br/>
+[Contrôle des processus et de l’environnement](../c-runtime-library/process-and-environment-control.md)<br/>
 [abort](../c-runtime-library/reference/abort.md)<br/>
 [atexit](../c-runtime-library/reference/atexit.md)<br/>
 [exit, _Exit, _exit](../c-runtime-library/reference/exit-exit-exit.md)<br/>
 [_onexit, _onexit_m](../c-runtime-library/reference/onexit-onexit-m.md)<br/>
-[_spawn, _wspawn, fonctions](../c-runtime-library/spawn-wspawn-functions.md)<br/>
+[_spawn, fonctions _wspawn](../c-runtime-library/spawn-wspawn-functions.md)<br/>
 [system, _wsystem](../c-runtime-library/reference/system-wsystem.md)

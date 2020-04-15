@@ -1,6 +1,6 @@
 ---
-title: Constantes RELOG_RETENTION_SYSTEM_EVENT_FLAGS
-description: Le C++ Kit de développement logiciel (SDK) de Build Insights RELOG_RETENTION_SYSTEM_EVENT_FLAGS référence des constantes.
+title: RELOG_RETENTION_SYSTEM_EVENT_FLAGS constantes
+description: La référence des perspectives de construction de la CMD SDK RELOG_RETENTION_SYSTEM_EVENT_FLAGS constantes.
 ms.date: 02/12/2020
 helpviewer_keywords:
 - C++ Build Insights
@@ -9,23 +9,23 @@ helpviewer_keywords:
 - throughput analysis
 - build time analysis
 - vcperf.exe
-ms.openlocfilehash: 74afc10faa26ba39a669a05aa3e3cabd1a211293
-ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
+ms.openlocfilehash: 7110f809a819357b31951c203c1fa6ac9fb9f42e
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/05/2020
-ms.locfileid: "78332319"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81323468"
 ---
-# <a name="relog_retention_system_event_flags-constants"></a>Constantes RELOG_RETENTION_SYSTEM_EVENT_FLAGS
+# <a name="relog_retention_system_event_flags-constants"></a>RELOG_RETENTION_SYSTEM_EVENT_FLAGS constantes
 
 ::: moniker range="<=vs-2015"
 
-Le C++ Kit de développement logiciel (SDK) Build Insights est compatible avec Visual Studio 2017 et versions ultérieures. Pour consulter la documentation de ces versions, définissez le contrôle sélecteur de version de Visual Studio pour cet article sur Visual Studio 2017 ou Visual Studio 2019.
+Le SDK Build Insights est compatible avec Visual Studio 2017 et plus. Pour voir la documentation de ces versions, définissez le contrôle du sélecteur Visual Studio **Version** pour cet article à Visual Studio 2017 ou Visual Studio 2019. On le trouve en haut de la table des contenus sur cette page.
 
 ::: moniker-end
 ::: moniker range=">=vs-2017"
 
-Les constantes de `RELOG_RETENTION_SYSTEM_EVENT_FLAGS` sont utilisées pour décrire les événements système à conserver dans une trace reconnectée. Utilisez-les pour initialiser le champ `SystemEventsRetentionFlags` de la structure [RELOG_DESCRIPTOR](relog-descriptor-struct.md) .
+Les `RELOG_RETENTION_SYSTEM_EVENT_FLAGS` constantes sont utilisées pour décrire les événements du système à conserver dans une trace obstruée. Utilisez-les pour initialiser le champ `SystemEventsRetentionFlags` de la structure [RELOG_DESCRIPTOR.](relog-descriptor-struct.md)
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -41,8 +41,8 @@ static const unsigned long long
 
 |  |  |
 |--|--|
-| `RELOG_RETENTION_SYSTEM_EVENT_FLAGS_CPU_SAMPLES` | Conservez les événements système de l’exemple de processeur dans une trace reconnectée. |
-| `RELOG_RETENTION_SYSTEM_EVENT_FLAGS_ALL` | Conservez tous les événements système dans une trace reconnectée. |
+| `RELOG_RETENTION_SYSTEM_EVENT_FLAGS_CPU_SAMPLES` | Conservez les événements du système d’échantillonnage CPU dans une trace relogged. |
+| `RELOG_RETENTION_SYSTEM_EVENT_FLAGS_ALL` | Gardez tous les événements du système dans une trace relogged. |
 
 ## <a name="remarks"></a>Notes
 

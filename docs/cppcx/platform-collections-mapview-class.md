@@ -12,12 +12,12 @@ f1_keywords:
 helpviewer_keywords:
 - MapView Class
 ms.assetid: 9577dde7-f599-43c6-b1e4-7d653706fd62
-ms.openlocfilehash: 1e38865f1d43edac4fc895052f1ea1b5a54a34ab
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 24995f553c5fcb8626c0d51758577b948c9c67ad
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62161706"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81354426"
 ---
 # <a name="platformcollectionsmapview-class"></a>Platform::Collections::MapView, classe
 
@@ -42,11 +42,11 @@ Type de la clé dans la paire clé-valeur.
 Type de la valeur dans la paire clé-valeur.
 
 *C*<br/>
-Type qui fournit un objet de fonction qui peut comparer deux valeurs d'élément comme des clés de tri pour déterminer leur ordre relatif dans le MapView. Par défaut, [std::less\<K >](../standard-library/less-struct.md).
+Type qui fournit un objet de fonction qui peut comparer deux valeurs d'élément comme des clés de tri pour déterminer leur ordre relatif dans le MapView. Par défaut, [\<std::moins K>](../standard-library/less-struct.md).
 
 ### <a name="remarks"></a>Notes
 
-MapView est une implémentation C++ concrète de la [Windows::Foundation::Collections::IMapView \<K, V >](/uwp/api/Windows.Foundation.Collections.IMapView_K_V_) interface est passée à travers l’interface binaire d’application (ABI). Pour plus d'informations, consultez [Collections (C++/CX)](../cppcx/collections-c-cx.md).
+MapView est une implémentation concrète de la [Windows::Foundation::Collections::IMapView \<K,V>](/uwp/api/Windows.Foundation.Collections.IMapView_K_V_) interface qui est passée à travers l’interface binaire de l’application (ABI). Pour plus d'informations, consultez [Collections (C++/CX)](../cppcx/collections-c-cx.md).
 
 ### <a name="members"></a>Membres
 
@@ -60,7 +60,7 @@ MapView est une implémentation C++ concrète de la [Windows::Foundation::Collec
 
 |Nom|Description|
 |----------|-----------------|
-|[MapView::First](#first)|Retourne un itérateur qui est initialisé au premier élément de la vue cartographique.|
+|[MapView::Première](#first)|Retourne un itérateur qui est initialisé au premier élément de la vue cartographique.|
 |[MapView::HasKey](#haskey)|Détermine si le MapView actif contient la clé spécifiée.|
 |[MapView::Lookup](#lookup)|Récupère l'élément à la clé spécifiée dans l'objet MapView actif.|
 |[MapView::Size](#size)|Retourne le nombre d'éléments dans l'objet MapView actuel.|
@@ -70,13 +70,13 @@ MapView est une implémentation C++ concrète de la [Windows::Foundation::Collec
 
 `MapView`
 
-### <a name="requirements"></a>Configuration requise
+### <a name="requirements"></a>Spécifications
 
 **En-tête :** collection.h
 
-**Espace de noms :** Platform::Collections
+**Espace de noms :** Platform::Collections
 
-## <a name="first"></a> MapView::First (méthode)
+## <a name="mapviewfirst-method"></a><a name="first"></a>MapView::Première méthode
 
 Retourne un itérateur qui spécifie le premier élément de la vue de mappage.
 
@@ -93,9 +93,9 @@ Itérateur qui spécifie le premier élément de la vue cartographique.
 
 ### <a name="remarks"></a>Notes
 
-Un moyen pratique de contenir l’itérateur retourné par First() consiste à attribuer la valeur de retour à une variable est déclarée avec le **automatique** mot clé de déduction de type. Par exemple, `auto x = myMapView->First();`.
+Une façon pratique de tenir l’itérateur retourné par First() est d’attribuer la valeur de retour à une variable qui est déclarée avec le mot clé de déduction de type **automatique.** Par exemple : `auto x = myMapView->First();`.
 
-## <a name="haskey"></a>  MapView::HasKey (méthode)
+## <a name="mapviewhaskey-method"></a><a name="haskey"></a>MapView::HasKey Méthode
 
 Détermine si le MapView actif contient la clé spécifiée.
 
@@ -113,9 +113,9 @@ Clé utilisée pour rechercher l’élément MapView. Le type de *clé* est type
 
 ### <a name="return-value"></a>Valeur de retour
 
-**true** si la clé est trouvée ; sinon, **false**.
+**vrai** si la clé est trouvée; autrement, **faux**.
 
-##  <a name="lookup"></a> MapView::Lookup (méthode)
+## <a name="mapviewlookup-method"></a><a name="lookup"></a>MapView::Méthode Lookup
 
 Récupère la valeur du type V associé à la clé spécifiée de type K.
 
@@ -128,13 +128,13 @@ V Lookup(K key);
 ### <a name="parameters"></a>Paramètres
 
 *key*<br/>
-Clé utilisée pour trouver un élément dans le MapView. Le type de `key` est typename *K*.
+Clé utilisée pour trouver un élément dans le MapView. Le type `key` de est nom de type *K*.
 
 ### <a name="return-value"></a>Valeur de retour
 
-Valeur associée à `key`. Le type de la valeur de retour est typename *V*.
+Valeur associée à `key`. Le type de valeur de retour est typename *V*.
 
-##  <a name="ctor"></a> MapView::MapView (constructeur)
+## <a name="mapviewmapview-constructor"></a><a name="ctor"></a>MapView::MapView Constructor
 
 Initialise une nouvelle instance de la classe MapView.
 
@@ -159,25 +159,25 @@ MapView(
 
 ### <a name="parameters"></a>Paramètres
 
-*InIt*<br/>
+*Init*<br/>
 Typename du MapView actif.
 
-*comp*<br/>
+*Comp*<br/>
 Objet de fonction qui peut comparer deux valeurs d'élément comme des clés de tri pour déterminer leur ordre relatif dans le MapView.
 
-*m*<br/>
-Une référence ou [Lvalues et Rvalues](../cpp/lvalues-and-rvalues-visual-cpp.md) à un `map Class` qui est utilisé pour initialiser le MapView actif.
+*M*<br/>
+Une référence ou [Lvalues et Rvalues](../cpp/lvalues-and-rvalues-visual-cpp.md) à un `map Class` qui est utilisé pour initialiser le MapView actuel.
 
-*first*<br/>
+*Première*<br/>
 Itérateur d'entrée du premier élément d'une plage d'éléments utilisée pour initialiser le MapView actif.
 
-*last*<br/>
+*Dernière*<br/>
 Itérateur d'entrée du premier élément qui suit une plage d'éléments utilisée pour initialiser le MapView actif.
 
 *il*<br/>
-Un [std::initializer_list < std::pair\<K, V >>](../standard-library/initializer-list-class.md) dont les éléments seront insérées dans le MapView.
+Une [std::initializer_list<std::pair\<K,V>>](../standard-library/initializer-list-class.md) dont les éléments seront insérés dans le MapView.
 
-##  <a name="size"></a> Mapview::Size, méthode
+## <a name="mapviewsize-method"></a><a name="size"></a>MapView::Méthode de taille
 
 Retourne le nombre d'éléments dans l'objet MapView actuel.
 
@@ -191,7 +191,7 @@ virtual property unsigned int Size;
 
 Nombre d’éléments dans l’objet MapView actuel.
 
-##  <a name="split"></a> MapView::Split (méthode)
+## <a name="mapviewsplit-method"></a><a name="split"></a>MapView::Méthode Split
 
 Divise l'objet MapView actif en deux objets MapView. Cette méthode n'est pas opérationnelle.
 
@@ -210,7 +210,7 @@ void Split(
 *firstPartition*<br/>
 Première partie de l'objet MapView d'origine.
 
-*secondPartition*<br/>
+*deuxièmePartition*<br/>
 Deuxième partie de l'objet MapView d'origine.
 
 ### <a name="remarks"></a>Notes
@@ -219,4 +219,4 @@ Cette méthode n'est pas opérationnelle. Elle ne fait rien.
 
 ## <a name="see-also"></a>Voir aussi
 
-[Plateforme Namespace](platform-namespace-c-cx.md)
+[Espace nom de la plate-forme](platform-namespace-c-cx.md)

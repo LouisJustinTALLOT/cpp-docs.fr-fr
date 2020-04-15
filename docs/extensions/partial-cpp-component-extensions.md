@@ -8,12 +8,12 @@ helpviewer_keywords:
 - partial
 - C++/CX, partial
 ms.assetid: 43adf1f5-10c5-44aa-a66f-7507e2bdabf8
-ms.openlocfilehash: ad8faa08a2c85e777cbc8721e5842e708b9e6cb1
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 42e8cc9a20c96e65ed3ddf73d562fe014bd9fa28
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80181848"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81349997"
 ---
 # <a name="partial--ccli-and-ccx"></a>partiel (C++/CLI et C++/CX)
 
@@ -25,7 +25,7 @@ Le mot clé **partial** permet de créer indépendamment et dans différents fic
 
 ## <a name="windows-runtime"></a>Windows Runtime
 
-Pour une classe ref qui a deux définitions partielles, le mot clé **partial** est appliqué à la première occurrence de la définition, généralement par un code généré automatiquement. C’est pourquoi un codeur humain n’utilise pas le mot clé très souvent. Pour toutes les définitions partielles de la classe suivantes, omettez le modificateur **partial** du mot clé *class-key* et de l’identificateur de classe. Lorsque le compilateur rencontre une classe ref et un identificateur de classe définis précédemment, mais aucun mot clé **partial**, il combine en interne toutes les parties de la définition de classe ref dans une seule définition.
+Pour une classe d’arbitre qui a deux définitions partielles, le mot clé **partiel** est appliqué à la première occurrence de la définition, et cela est généralement fait par code auto-généré, de sorte qu’un codeur humain n’utilise pas le mot clé très souvent. Pour toutes les définitions partielles de la classe suivantes, omettez le modificateur **partial** du mot clé *class-key* et de l’identificateur de classe. Lorsque le compilateur rencontre une classe ref et un identificateur de classe définis précédemment, mais aucun mot clé **partial**, il combine en interne toutes les parties de la définition de classe ref dans une seule définition.
 
 ### <a name="syntax"></a>Syntaxe
 
@@ -46,26 +46,26 @@ class-key identifier {
 *class-key*<br/>
 Un mot clé qui déclare une classe ou un struct pris en charge par Windows Runtime. **ref class**, **value class**, **ref struct**, ou **value struct**.
 
-*identifier*<br/>
+*Identificateur*<br/>
 Le nom du type défini.
 
 ### <a name="remarks"></a>Notes
 
 Une classe partielle prend en charge les scénarios dans lesquels vous modifiez une partie d’une définition de classe dans un fichier, et un logiciel de génération de code automatique, par exemple le concepteur XAML, modifie le code de la même classe dans un autre fichier. L’utilisation d’une classe partielle vous permet d’empêcher le générateur de code automatique de remplacer votre code. Dans un projet Visual Studio, le modificateur **partial** est appliqué automatiquement au fichier généré.
 
-Contenu : à deux exceptions près, une définition de classe partielle peut contenir tout ce que la définition de classe complète peut contenir si le mot clé **Partial** a été omis. Toutefois, vous ne pouvez pas spécifier d’accessibilité de classe (par exemple, `public partial class X { ... };`), ou **declspec**.
+Contenu : À deux exceptions près, une définition partielle de la classe peut contenir tout ce que la définition de classe complète pourrait contenir si le mot clé **partiel** était omis. Toutefois, vous ne pouvez pas spécifier d’accessibilité de classe (par exemple, `public partial class X { ... };`), ou **declspec**.
 
 Les spécificateurs d’accès utilisés dans une définition de classe partielle pour *identifier* n’affectent pas l’accessibilité par défaut dans une définition de classe partielle ou complète suivante pour *identifier*. Les définitions incluses des membres de données statiques sont autorisées.
 
-Déclaration : une définition partielle d’un *identificateur* de classe introduit uniquement l' *identificateur*de nom, mais l' *identificateur* ne peut pas être utilisé d’une manière qui requiert une définition de classe. Le nom *identifier* ne peut pas être utilisé pour déterminer la taille d’*identifier*, ni pour utiliser une base ou un membre d’*identifier* jusqu’à ce que le compilateur rencontre la définition complète d’*identifier*.
+Déclaration : Une définition partielle d’un *identifiant* de classe n’introduit que *l’identifiant*de nom, mais *l’identifiant* ne peut pas être utilisé d’une manière qui exige une définition de classe. Le nom *identifier* ne peut pas être utilisé pour déterminer la taille d’*identifier*, ni pour utiliser une base ou un membre d’*identifier* jusqu’à ce que le compilateur rencontre la définition complète d’*identifier*.
 
-Nombre et classement : il peut y avoir zéro ou plusieurs définitions de classes partielles pour l' *identificateur*. Chaque définition de classe partielle d’*identifier* doit précéder lexicalement la définition complète d’*identifier* (s’il existe une définition complète ; sinon, la classe ne peut pas être utilisée, sauf si elle a été déclarée avant), mais ne doit pas obligatoirement précéder les déclarations anticipées d’*identifier*. Toutes les class-keys doivent correspondre.
+Nombre et commande : Il peut y avoir des définitions de classe partielles ou plus nulles pour *l’identifiant.* Chaque définition de classe partielle d’*identifier* doit précéder lexicalement la définition complète d’*identifier* (s’il existe une définition complète ; sinon, la classe ne peut pas être utilisée, sauf si elle a été déclarée avant), mais ne doit pas obligatoirement précéder les déclarations anticipées d’*identifier*. Toutes les class-keys doivent correspondre.
 
-Définition complète : au point de la définition complète de l' *identificateur*de classe, le comportement est le même que si la définition de l' *identificateur* avait déclaré toutes les classes de base, les membres, etc. dans l’ordre dans lequel ils ont été rencontrés et définis dans les classes partielles.
+Définition complète : Au point de la définition complète de *l’identifiant*de classe, le comportement est le même que si la définition de *l’identifiant* avait déclaré toutes les classes de base, les membres, etc. dans l’ordre dans lequel ils ont été rencontrés et définis dans les classes partielles.
 
-Modèles : une classe partielle ne peut pas être un modèle.
+Modèles : Une classe partielle ne peut pas être un modèle.
 
-Génériques : une classe partielle peut être générique si la définition complète peut être générique. Mais toutes les classes partielles et complètes doivent avoir exactement les mêmes paramètres génériques, y compris les noms de paramètres formels.
+Génériques: Une classe partielle peut être un générique si la définition complète pourrait être générique. Mais toutes les classes partielles et complètes doivent avoir exactement les mêmes paramètres génériques, y compris les noms de paramètres formels.
 
 Pour plus d’informations sur l’utilisation du mot clé **partial**, consultez [Classes partielles (C++/CX)](https://go.microsoft.com/fwlink/p/?LinkId=249023).
 
@@ -79,4 +79,4 @@ Option du compilateur : `/ZW`
 
 ## <a name="see-also"></a>Voir aussi
 
-[Classes partielles (C++/CX)](https://go.microsoft.com/fwlink/p/?LinkId=249023)
+[Classes partielles (C/CX)](https://go.microsoft.com/fwlink/p/?LinkId=249023)

@@ -1,5 +1,5 @@
 ---
-title: CComClassFactory, classe
+title: Classe CComClassFactory
 ms.date: 11/04/2016
 f1_keywords:
 - CComClassFactory
@@ -9,16 +9,16 @@ f1_keywords:
 helpviewer_keywords:
 - CComClassFactory class
 ms.assetid: e56dacf7-d5c4-4c42-aef4-a86d91981a1b
-ms.openlocfilehash: 892153e47ac4e9dd45d5dfc01b76f1ce29d23938
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: 041575339906b83488697f1db5a7f8b08b53070e
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69497448"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81321024"
 ---
-# <a name="ccomclassfactory-class"></a>CComClassFactory, classe
+# <a name="ccomclassfactory-class"></a>Classe CComClassFactory
 
-Cette classe implémente l’interface [IClassFactory](/windows/win32/api/unknwnbase/nn-unknwnbase-iclassfactory) .
+Cette classe implémente l’interface [IClassFactory.](/windows/win32/api/unknwnbase/nn-unknwnbase-iclassfactory)
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -34,34 +34,34 @@ class CComClassFactory
 
 |Nom|Description|
 |----------|-----------------|
-|[CComClassFactory::CreateInstance](#createinstance)|Crée un objet du CLSID spécifié.|
-|[CComClassFactory::LockServer](#lockserver)|Verrouille la fabrique de classe en mémoire.|
+|[CComClassFactory::CréerInstance](#createinstance)|Crée un objet du CLSID spécifié.|
+|[CComClassFactory::LockServer](#lockserver)|Verrouille l’usine de classe dans la mémoire.|
 
 ## <a name="remarks"></a>Notes
 
-`CComClassFactory`implémente l’interface [IClassFactory](/windows/win32/api/unknwnbase/nn-unknwnbase-iclassfactory) , qui contient des méthodes pour créer un objet d’un CLSID particulier, ainsi que le verrouillage de la fabrique de classe en mémoire pour permettre la création plus rapide de nouveaux objets. `IClassFactory`doit être implémentée pour chaque classe que vous inscrivez dans le registre système et pour laquelle vous affectez un CLSID.
+`CComClassFactory`implémente l’interface [IClassFactory,](/windows/win32/api/unknwnbase/nn-unknwnbase-iclassfactory) qui contient des méthodes pour créer un objet d’un CLSID particulier, ainsi que le verrouillage de l’usine de classe dans la mémoire pour permettre de nouveaux objets à créer plus rapidement. `IClassFactory`doit être mis en œuvre pour chaque classe que vous vous inscrivez dans le registre du système et à laquelle vous attribuez un CLSID.
 
-Les objets ATL acquièrent normalement une fabrique de classe en dérivant de [CComCoClass](../../atl/reference/ccomcoclass-class.md). Cette classe comprend la macro [DECLARE_CLASSFACTORY](aggregation-and-class-factory-macros.md#declare_classfactory), qui déclare `CComClassFactory` comme fabrique de classe par défaut. Pour remplacer cette valeur par défaut, spécifiez l' `DECLARE_CLASSFACTORY`une des macros *xxx* dans votre définition de classe. Par exemple, la macro [DECLARE_CLASSFACTORY_EX](aggregation-and-class-factory-macros.md#declare_classfactory_ex) utilise la classe spécifiée pour la fabrique de classe:
+Les objets ATL acquièrent normalement une usine de classe en dérivé de [CComCoClass](../../atl/reference/ccomcoclass-class.md). Cette classe comprend la macro [DECLARE_CLASSFACTORY](aggregation-and-class-factory-macros.md#declare_classfactory) `CComClassFactory` , qui déclare que l’usine de classe par défaut. Pour remplacer cette valeur par `DECLARE_CLASSFACTORY`défaut, spécifiez l’une des macros *XXX* dans votre définition de classe. Par exemple, la [macro DECLARE_CLASSFACTORY_EX](aggregation-and-class-factory-macros.md#declare_classfactory_ex) utilise la classe spécifiée pour l’usine de classe :
 
 [!code-cpp[NVC_ATL_COM#8](../../atl/codesnippet/cpp/ccomclassfactory-class_1.h)]
 
-La définition de classe ci- `CMyClassFactory` dessus spécifie que sera utilisé comme fabrique de classe par défaut de l’objet. `CMyClassFactory`doit dériver `CComClassFactory` de et substituer. `CreateInstance`
+La définition de classe `CMyClassFactory` ci-dessus spécifie qui sera utilisée comme usine de classe par défaut de l’objet. `CMyClassFactory`doit dériver `CComClassFactory` et `CreateInstance`passer outre .
 
-ATL fournit trois autres macros qui déclarent une fabrique de classes:
+ATL fournit trois autres macros qui déclarent une usine de classe:
 
-- [DECLARE_CLASSFACTORY2](aggregation-and-class-factory-macros.md#declare_classfactory2) Utilise [CComClassFactory2](../../atl/reference/ccomclassfactory2-class.md), qui contrôle la création via une licence.
+- [DECLARE_CLASSFACTORY2](aggregation-and-class-factory-macros.md#declare_classfactory2) Utilise [CComClassFactory2](../../atl/reference/ccomclassfactory2-class.md), qui contrôle la création par le biais d’une licence.
 
-- [DECLARE_CLASSFACTORY_AUTO_THREAD](aggregation-and-class-factory-macros.md#declare_classfactory_auto_thread) Utilise [CComClassFactoryAutoThread](../../atl/reference/ccomclassfactoryautothread-class.md), qui crée des objets dans plusieurs cloisonnements.
+- [DECLARE_CLASSFACTORY_AUTO_THREAD](aggregation-and-class-factory-macros.md#declare_classfactory_auto_thread) Utilise [CComClassFactoryAutoThread](../../atl/reference/ccomclassfactoryautothread-class.md), qui crée des objets dans plusieurs appartements.
 
-- [DECLARE_CLASSFACTORY_SINGLETON](aggregation-and-class-factory-macros.md#declare_classfactory_singleton) Utilise [CComClassFactorySingleton](../../atl/reference/ccomclassfactorysingleton-class.md), qui construit un objet [CComObjectGlobal](../../atl/reference/ccomobjectglobal-class.md) unique.
+- [DECLARE_CLASSFACTORY_SINGLETON](aggregation-and-class-factory-macros.md#declare_classfactory_singleton) Utilise [CComClassFactorySingleton](../../atl/reference/ccomclassfactorysingleton-class.md), qui construit un seul objet [CComObjectGlobal.](../../atl/reference/ccomobjectglobal-class.md)
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
-**En-tête:** atlcom. h
+**En-tête:** atlcom.h
 
-##  <a name="createinstance"></a>  CComClassFactory::CreateInstance
+## <a name="ccomclassfactorycreateinstance"></a><a name="createinstance"></a>CComClassFactory::CréerInstance
 
-Crée un objet du CLSID spécifié et récupère un pointeur d’interface vers cet objet.
+Crée un objet du CLSID spécifié et récupère un pointeur d’interface sur cet objet.
 
 ```
 STDMETHOD(CreateInstance)(LPUNKNOWN pUnkOuter, REFIID riid, void** ppvObj);
@@ -70,21 +70,21 @@ STDMETHOD(CreateInstance)(LPUNKNOWN pUnkOuter, REFIID riid, void** ppvObj);
 ### <a name="parameters"></a>Paramètres
 
 *pUnkOuter*<br/>
-dans Si l’objet est créé dans le cadre d’un agrégat, *pUnkOuter* doit être l’élément externe inconnu. Sinon, *pUnkOuter* doit avoir la valeur null.
+[dans] Si l’objet est créé dans le cadre d’un agrégat, puis *pUnkOuter* doit être l’inconnu extérieur. Sinon, *pUnkOuter* doit être NULL.
 
 *riid*<br/>
-dans IID de l’interface demandée. Si *pUnkOuter* n’est pas null, *riid* doit avoir `IID_IUnknown`la valeur.
+[dans] L’IID de l’interface demandée. Si *pUnkOuter* n’est pas- `IID_IUnknown`NULL, *riid* doit être .
 
 *ppvObj*<br/>
-à Pointeur vers le pointeur d’interface identifié par *riid*. Si l’objet ne prend pas en charge cette interface, *ppvObj* a la valeur null.
+[out] Un pointeur au pointeur d’interface identifié par *riid*. Si l’objet ne prend pas en charge cette interface, *ppvObj* est réglé sur NULL.
 
 ### <a name="return-value"></a>Valeur de retour
 
-Valeur HRESULT standard.
+Une valeur HRESULT standard.
 
-##  <a name="lockserver"></a>  CComClassFactory::LockServer
+## <a name="ccomclassfactorylockserver"></a><a name="lockserver"></a>CComClassFactory::LockServer
 
-Incrémente et décrémente le nombre de verrous de module `_Module::Lock` en `_Module::Unlock`appelant et, respectivement.
+Incréments et décroissements le `_Module::Lock` module `_Module::Unlock`verrou compte en appelant et , respectivement.
 
 ```
 STDMETHOD(LockServer)(BOOL fLock);
@@ -92,21 +92,21 @@ STDMETHOD(LockServer)(BOOL fLock);
 
 ### <a name="parameters"></a>Paramètres
 
-*fLock*<br/>
-dans Si la valeur est TRUE, le nombre de verrous est incrémenté; dans le cas contraire, le nombre de verrous est décrémenté.
+*Troupeau*<br/>
+[dans] Si VRAI, le nombre de serrures est incrémenté; autrement, le nombre de serrures est décrète.
 
 ### <a name="return-value"></a>Valeur de retour
 
-Valeur HRESULT standard.
+Une valeur HRESULT standard.
 
 ### <a name="remarks"></a>Notes
 
-`_Module`fait référence à l’instance globale de [CComModule](../../atl/reference/ccommodule-class.md) ou à une classe dérivée de celle-ci.
+`_Module`se réfère à l’exemple global de [CComModule](../../atl/reference/ccommodule-class.md) ou d’une classe qui en découle.
 
-L' `LockServer` appel de permet à un client de conserver une fabrique de classes pour que plusieurs objets puissent être créés rapidement.
+L’appel `LockServer` permet à un client de s’accrocher à une usine de classe afin que plusieurs objets puissent être créés rapidement.
 
 ## <a name="see-also"></a>Voir aussi
 
-[CComObjectRootEx, classe](../../atl/reference/ccomobjectrootex-class.md)<br/>
+[Classe CComObjectRootEx](../../atl/reference/ccomobjectrootex-class.md)<br/>
 [CComGlobalsThreadModel](atl-typedefs.md#ccomglobalsthreadmodel)<br/>
-[Vue d’ensemble de la classe](../../atl/atl-class-overview.md)
+[Vue d'ensemble des classes](../../atl/atl-class-overview.md)

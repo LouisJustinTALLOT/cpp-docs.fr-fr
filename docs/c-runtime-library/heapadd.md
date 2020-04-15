@@ -24,19 +24,19 @@ helpviewer_keywords:
 - heaps, adding memory
 - heapadd function
 ms.assetid: 4d691fe2-2763-49f4-afb1-62738b7cd3ff
-ms.openlocfilehash: 4be87710519c9a389adbaf41fefddb9ea8dfb1e6
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: c5eeb66ff0e6fb05063ec395e12cd97106ad724d
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70940286"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81351331"
 ---
 # <a name="_heapadd"></a>_heapadd
 
 Ajoute de la mémoire au tas.
 
 > [!IMPORTANT]
->  Cette fonction est obsolète. Depuis Visual Studio 2015, elle n’est pas disponible dans la bibliothèque CRT.
+> Cette fonction est obsolète. Depuis Visual Studio 2015, elle n’est pas disponible dans la bibliothèque CRT.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -52,7 +52,7 @@ int _heapadd(
 *memblock*<br/>
 Pointeur vers la mémoire du tas.
 
-*size*<br/>
+*Taille*<br/>
 Taille de la mémoire à ajouter, en octets.
 
 ## <a name="return-value"></a>Valeur de retour
@@ -65,18 +65,18 @@ Pour plus d’informations sur ce code de retour et sur les autres codes, consul
 
 Depuis Visual C++ version 4.0, la structure sous-jacente du tas a été déplacée dans les bibliothèques Runtime C pour prendre en charge les nouvelles fonctionnalités de débogage. Par conséquent, `_heapadd` n’est plus pris en charge sur aucune des plateformes basées sur l’API Win32.
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
 |Routine|En-tête requis|En-tête facultatif|
 |-------------|---------------------|---------------------|
 |`_heapadd`|\<malloc.h>|\<errno.h>|
 
-Pour plus d'informations sur la compatibilité, voir [Compatibilité](../c-runtime-library/compatibility.md) dans l'introduction.
+Pour plus d’informations sur la compatibilité, consultez [Compatibilité](../c-runtime-library/compatibility.md) dans l’introduction.
 
 ## <a name="see-also"></a>Voir aussi
 
 [Allocation de mémoire](../c-runtime-library/memory-allocation.md)<br/>
-[free](../c-runtime-library/reference/free.md)<br/>
+[Gratuit](../c-runtime-library/reference/free.md)<br/>
 [_heapchk](../c-runtime-library/reference/heapchk.md)<br/>
 [_heapmin](../c-runtime-library/reference/heapmin.md)<br/>
 [_heapset](../c-runtime-library/heapset.md)<br/>

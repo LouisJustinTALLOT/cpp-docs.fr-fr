@@ -7,20 +7,20 @@ helpviewer_keywords:
 - __LOCAL_SIZE constant
 - stack, stack frame layout
 ms.assetid: 3b8addec-e809-48e4-b1d0-5bad133bd4b8
-ms.openlocfilehash: 52403fc45bbb68d693ef154bf39c5dd366dd10c5
-ms.sourcegitcommit: f4be868c0d1d78e550fba105d4d3c993743a1f4b
-ms.translationtype: HT
+ms.openlocfilehash: e1559c75808a72cd3f9674399bec036cf392b44f
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56146480"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81334582"
 ---
 # <a name="considerations-when-writing-prologepilog-code"></a>Considérations relatives à l'écriture du code de prologue/épilogue
 
-**Section spécifique à Microsoft**
+**Microsoft Spécifique**
 
-Avant d'écrire vos propres séquences de code de prologue et d'épilogue, il importe de comprendre comment le frame de pile est disposé. Il est également utile de savoir utiliser la constante prédéfinie **__LOCAL_SIZE**.
+Avant d’écrire vos propres séquences de code prolog et épilog, il est important de comprendre comment le cadre de pile est disposé. Il est également utile de savoir comment utiliser la constante prédéfinie **__LOCAL_SIZE.**
 
-##  <a name="_clang_c_stack_frame_layout"></a> Disposition du frame de pile C
+## <a name="cstack-frame-layout"></a><a name="_clang_c_stack_frame_layout"></a>Mise en page du cadre CStack
 
 Cet exemple montre le code de prologue standard qui peut apparaître dans une fonction 32 bits :
 
@@ -42,11 +42,11 @@ ret                          ; Return from function
 
 La pile se réduit toujours (des adresses de mémoire supérieures aux adresses de mémoire inférieures). Le pointeur de base (`ebp`) pointe vers la valeur de `ebp` qui fait l'objet d'un push. La zone de variables locales commence à `ebp-2`. Pour accéder aux variables locales, calculez un décalage à partir de `ebp` en soustrayant la valeur appropriée de `ebp`.
 
-##  <a name="_clang_the___local_size_constant"></a>La constante __LOCAL_SIZE
+## <a name="the-__local_size-constant"></a><a name="_clang_the___local_size_constant"></a>La constante __LOCAL_SIZE
 
 Le compilateur fournit une constante, **__LOCAL_SIZE**, à utiliser dans le bloc assembleur inline de code de prologue de fonction. Cette constante est utilisée pour allouer de l'espace pour les variables locales sur le frame de pile dans le code de prologue personnalisé.
 
-Le compilateur détermine la valeur de **__LOCAL_SIZE**. Cette valeur est le nombre total d'octets de toutes les variables locales définies par l'utilisateur et des variables temporaires générées par le compilateur. La constante **__LOCAL_SIZE** peut être utilisée uniquement comme opérande immédiat. Elle ne peut pas être utilisée dans une expression. Vous ne devez pas modifier ou redéfinir la valeur de cette constante. Par exemple :
+Le compilateur détermine la valeur de **__LOCAL_SIZE**. Cette valeur est le nombre total d'octets de toutes les variables locales définies par l'utilisateur et des variables temporaires générées par le compilateur. La constante **__LOCAL_SIZE** peut être utilisée uniquement comme opérande immédiat. Elle ne peut pas être utilisée dans une expression. Vous ne devez pas modifier ou redéfinir la valeur de cette constante. Par exemple :
 
 ```
 mov      eax, __LOCAL_SIZE           ;Immediate operand--Okay
@@ -79,8 +79,8 @@ __declspec ( naked ) func()
 }
 ```
 
-**FIN de la section spécifique à Microsoft**
+**END Microsoft Spécifique**
 
 ## <a name="see-also"></a>Voir aussi
 
-[Fonctions naked](../c-language/naked-functions.md)
+[Fonctions nues](../c-language/naked-functions.md)

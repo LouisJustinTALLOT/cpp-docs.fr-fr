@@ -7,12 +7,12 @@ helpviewer_keywords:
 - source files, specifying in compiler
 - source programs
 ms.assetid: 18bb2826-17da-48e5-92a2-10e649f1bc9f
-ms.openlocfilehash: 4562f8397e9d2d3e044086b8da8d56ba25047ebd
-ms.sourcegitcommit: f4be868c0d1d78e550fba105d4d3c993743a1f4b
-ms.translationtype: HT
+ms.openlocfilehash: ac906925be551c6ee4da08e200d4028047b3d041
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56152532"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81349880"
 ---
 # <a name="source-files-and-source-programs"></a>Fichiers sources et programmes sources
 
@@ -21,17 +21,17 @@ Un programme source peut être divisé en un ou plusieurs « fichiers sources 
 ## <a name="syntax"></a>Syntaxe
 
 *translation-unit* :<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*external-declaration* <br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*déclaration extérieure* <br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*translation-unit* *external-declaration*
 
 *external-declaration*:<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*function-definition*<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*declaration*
+&nbsp;&nbsp;&nbsp;&nbsp;*fonction-définition*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*Déclaration*
 
 L'article [Vue d'ensemble des déclarations](../c-language/overview-of-declarations.md) fournit la syntaxe de l'élément non terminal `declaration` et la *référence du préprocesseur* explique comment [l'unité de traduction](../preprocessor/phases-of-translation.md) est traitée.
 
 > [!NOTE]
->  Reportez-vous à l'introduction [Résumé de syntaxe du langage C](../c-language/c-language-syntax-summary.md) pour obtenir une explication des conventions syntaxiques ANSI.
+> Reportez-vous à l'introduction [Résumé de syntaxe du langage C](../c-language/c-language-syntax-summary.md) pour obtenir une explication des conventions syntaxiques ANSI.
 
 Les composants d'une unité de traduction sont des déclarations externes qui incluent des définitions de fonctions et des déclarations d'identificateurs. Ces déclarations et définitions peuvent être dans des fichiers sources, des fichiers d'en-tête, des bibliothèques et d'autres fichiers dont le programme a besoin. Vous devez compiler chaque unité de traduction et lier les fichiers objets obtenus pour construire un programme.
 

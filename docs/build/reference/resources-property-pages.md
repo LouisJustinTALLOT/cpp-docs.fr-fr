@@ -14,55 +14,55 @@ f1_keywords:
 - VC.Project.VCResourceCompilerTool.ResourceOutputFileName
 - VC.Project.VCResourceCompilerTool.NullTerminateStrings
 - vc.project.AdditionalOptionsPage
-ms.openlocfilehash: 16168e7eb5e27f4ec0380d53cf8a5c4b9586ec34
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: c4a3048bfa07e9635662534b510fa57caa091f00
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80171136"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81336077"
 ---
-# <a name="resources-property-page"></a>Ressources, page de propriétés
+# <a name="resources-property-page"></a>Page de propriété des ressources
 
-Pour les programmes de bureau Windows natifs, la génération appelle le [compilateur de ressources (RC. exe)](/windows/win32/menurc/resource-compiler) pour ajouter des images, des tables de chaînes et des fichiers *. res* au fichier binaire. Les propriétés exposées dans cette page de propriétés sont passées au compilateur de ressources, pas au C++ compilateur ou à l’éditeur de liens. Pour plus d’informations sur les propriétés répertoriées ici et la façon dont elles sont mappées à des options de ligne de commande RC, consultez [utilisation de RC (ligne de commande RC)](/windows/win32/menurc/using-rc-the-rc-command-line-). Pour plus d’informations sur la façon d’accéder aux pages de propriétés des **ressources** , consultez [définir C++ les propriétés de compilation et de compilation dans Visual Studio](../working-with-project-properties.md). Pour accéder par programmation à ces propriétés, consultez <xref:Microsoft.VisualStudio.VCProjectEngine.VCResourceCompilerTool>.
+Pour les programmes de bureau Windows natifs, la version invoque le [compilateur de ressources (rc.exe)](/windows/win32/menurc/resource-compiler) pour ajouter des images, des tables de chaîne et des fichiers *.res* au binaire. Les propriétés exposées dans cette page de propriété sont transmises au compilateur de ressources, et non au compilateur CMD ou au lien. Pour plus d’informations sur les propriétés énumérées ici et comment elles cartographient les options de ligne de commande RC, voir [Using RC (The RC Command Line)](/windows/win32/menurc/using-rc-the-rc-command-line-). Pour plus d’informations sur la façon d’accéder aux pages de propriété **Des Ressources,** consultez [le compilateur Set CMD et construisez des propriétés dans Visual Studio](../working-with-project-properties.md). Pour accéder par programmation à ces propriétés, consultez <xref:Microsoft.VisualStudio.VCProjectEngine.VCResourceCompilerTool>.
 
-Les propriétés des ressources .NET C++dans les applications/CLI sont exposées dans la [page de propriétés ressources managées](managed-resources-property-page.md).
+Les propriétés pour les ressources .NET dans les applications CMD/CLI sont exposées dans la [page propriété des ressources gérées](managed-resources-property-page.md).
 
 ## <a name="preprocessor-definitions"></a>Définitions de préprocesseur
 
-Spécifie une ou plusieurs définitions pour le compilateur de ressources. (/d [macro])
+Spécifie une ou plusieurs définitions pour le compilateur de ressources. (/d[macro])
 
 ## <a name="undefine-preprocessor-definitions"></a>Annuler la définition de définitions de préprocesseur
 
-Annule la définition d’un symbole. /u.
+Indéfinis un symbole. (/u)
 
 ## <a name="culture"></a>Culture
 
-Répertorie la culture (par exemple, anglais (États-Unis) ou italien) utilisée dans les ressources. (/l [num])
+Répertorie la culture (comme l’anglais ou l’italien des États-Unis) utilisée dans les ressources. (/l [num])
 
 ## <a name="additional-include-directories"></a>Autres répertoires Include
 
-Spécifie un ou plusieurs répertoires à ajouter au chemin d’accès include ; Utilisez un point-virgule de délimitation si plusieurs. (/I [chemin])
+Spécifie un ou plusieurs répertoires à ajouter au chemin inclus; utiliser semi-colon delimiter si plus d’un. (/I[chemin])
 
-## <a name="ignore-standard-include-paths"></a>Ignorer les chemins d’accès Include standard
+## <a name="ignore-standard-include-paths"></a>Ignorer la norme Inclure les chemins
 
-Empêche le compilateur de ressources de rechercher les fichiers include dans les répertoires spécifiés dans les variables d’environnement INCLUDe. /Path
+Empêche le compilateur de ressources de rechercher des fichiers dans les répertoires spécifiés dans les variables de l’environnement INCLUDE. (/X)
 
 ## <a name="show-progress"></a>Afficher la progression
 
-Envoie des messages d’avancement à la fenêtre sortie. /f
+Envoyez des messages de progression à la fenêtre de sortie. (/v)
 
 ## <a name="suppress-startup-banner"></a>Supprimer la bannière de démarrage
 
-Supprimer l’affichage de la bannière de démarrage et du message d’information (/nologo)
+Supprimer l’affichage de la bannière de démarrage et le message d’information (/nologo)
 
 ## <a name="resource-file-name"></a>Nom du fichier de ressources
 
-Spécifie le nom du fichier de ressources (/FO [fichier])
+Précise le nom du fichier des ressources (/fo[file])
 
-## <a name="null-terminate-strings"></a>Chaînes de fin null
+## <a name="null-terminate-strings"></a>Null Terminate Strings
 
-Ajoutez la valeur null à toutes les chaînes des tables de chaînes. /n
+Annexe nulle à toutes les cordes dans les tables à cordes. (/n)
 
 ## <a name="see-also"></a>Voir aussi
 
-[C++Référence de la page de propriétés du projet](property-pages-visual-cpp.md)
+[Référence de page de propriété du projet CMD](property-pages-visual-cpp.md)

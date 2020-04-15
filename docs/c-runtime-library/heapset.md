@@ -25,19 +25,19 @@ helpviewer_keywords:
 - debugging [CRT], heap-related problems
 - _heapset function
 ms.assetid: 9667eeb0-55bc-4c19-af5f-d1fd0a142b3c
-ms.openlocfilehash: c47ab59b1d8b9e73add640f7a7cf5fb146dc7c53
-ms.sourcegitcommit: a5fa9c6f4f0c239ac23be7de116066a978511de7
+ms.openlocfilehash: 2a0aea37237f04939579eb059a42dd33771339ad
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/20/2019
-ms.locfileid: "75300259"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81351275"
 ---
 # <a name="_heapset"></a>_heapset
 
 Vérifie la cohérence minimale des tas et définit les entrées libres sur une valeur spécifiée.
 
 > [!IMPORTANT]
->  Cette fonction est obsolète. Depuis Visual Studio 2015, elle n’est pas disponible dans la bibliothèque CRT.
+> Cette fonction est obsolète. Depuis Visual Studio 2015, elle n’est pas disponible dans la bibliothèque CRT.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -47,9 +47,9 @@ int _heapset(
 );
 ```
 
-#### <a name="parameters"></a>Parameters
+#### <a name="parameters"></a>Paramètres
 
-*fill*<br/>
+*Remplir*<br/>
 Caractère de remplissage.
 
 ## <a name="return-value"></a>Valeur de retour
@@ -69,9 +69,9 @@ En outre, si une erreur se produit, `_heapset` définit `errno` sur `ENOSYS`.
 
 La fonction `_heapset` affiche les emplacements de mémoire disponible ou les nœuds qui ont été remplacés accidentellement.
 
-`_heapset` vérifie la cohérence minimale sur le tas, puis définit chaque octet des entrées libres du tas sur la valeur `fill` . Cette valeur connue indique les emplacements de mémoire du tas qui contiennent des nœuds libres et ceux qui contiennent des données qui ont été écrites accidentellement dans de la mémoire libérée. Si le système d’exploitation ne prend pas en charge `_heapset`(par exemple Windows 98), la fonction retourne `_HEAPOK` et définit `errno` sur `ENOSYS`.
+`_heapset` vérifie la cohérence minimale sur le tas, puis définit chaque octet des entrées libres du tas sur la valeur `fill` . Cette valeur connue indique les emplacements de mémoire du tas qui contiennent des nœuds libres et ceux qui contiennent des données qui ont été écrites accidentellement dans de la mémoire libérée. Si le système d’exploitation ne prend pas en charge `_heapset`(par exemple Windows 98), la fonction resururne `_HEAPOK` et définit `errno` sur `ENOSYS`.
 
-## <a name="requirements"></a>Configuration requise pour
+## <a name="requirements"></a>Spécifications
 
 |Routine|En-tête requis|En-tête facultatif|
 |-------------|---------------------|---------------------|

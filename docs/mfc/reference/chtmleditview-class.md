@@ -14,12 +14,12 @@ helpviewer_keywords:
 - CHtmlEditView [MFC], GetDHtmlDocument
 - CHtmlEditView [MFC], GetStartDocument
 ms.assetid: 166c8ba8-3fb5-4dd7-a9ea-5bca662d00f6
-ms.openlocfilehash: 8267a5272d2d542c4679bf30aa9d3ad8b933d81d
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 1254a3412846cdebd1d9accb91d27d0afbc4ef8d
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62389565"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81352077"
 ---
 # <a name="chtmleditview-class"></a>CHtmlEditView, classe
 
@@ -43,8 +43,8 @@ class CHtmlEditView : public CHtmlView, public CHtmlEditCtrlBase<CHtmlEditView>
 
 |Nom|Description|
 |----------|-----------------|
-|[CHtmlEditView::Create](#create)|Crée un nouvel objet de fenêtre.|
-|[CHtmlEditView::GetDHtmlDocument](#getdhtmldocument)|Retourne le `IHTMLDocument2` interface sur le document actif.|
+|[CHtmlEditView::Créer](#create)|Crée un nouvel objet de fenêtre.|
+|[CHtmlEditView::GetDHtmlDocument](#getdhtmldocument)|Retourne `IHTMLDocument2` l’interface sur le document actuel.|
 |[CHtmlEditView::GetStartDocument](#getstartdocument)|Récupère le nom du document par défaut pour cette vue.|
 
 ## <a name="inheritance-hierarchy"></a>Hiérarchie d'héritage
@@ -63,15 +63,15 @@ class CHtmlEditView : public CHtmlView, public CHtmlEditCtrlBase<CHtmlEditView>
 
 [CHtmlEditCtrlBase](../../mfc/reference/chtmleditctrlbase-class.md)
 
-[CHtmlView](../../mfc/reference/chtmlview-class.md)
+[CHtmlView (en anglais)](../../mfc/reference/chtmlview-class.md)
 
 `CHtmlEditView`
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
 **En-tête :** afxhtml.h
 
-##  <a name="chtmleditview"></a>  CHtmlEditView::CHtmlEditView
+## <a name="chtmleditviewchtmleditview"></a><a name="chtmleditview"></a>CHtmlEditView::CHtmlEditView
 
 Construit un objet `CHtmlEditView`.
 
@@ -79,7 +79,7 @@ Construit un objet `CHtmlEditView`.
 CHtmlEditView();
 ```
 
-##  <a name="create"></a>  CHtmlEditView::Create
+## <a name="chtmleditviewcreate"></a><a name="create"></a>CHtmlEditView::Créer
 
 Crée un nouvel objet de fenêtre.
 
@@ -96,34 +96,34 @@ virtual BOOL Create(
 
 ### <a name="parameters"></a>Paramètres
 
-*lpszClassName*<br/>
-Pointe vers une chaîne de caractères se terminant par null qui nomme la classe Windows. Le nom de classe peut être n’importe quel nom inscrit avec le [AfxRegisterWndClass](application-information-and-management.md#afxregisterwndclass) fonction globale ou `RegisterClass` (fonction) Windows. Si NULL, utilise la valeur par défaut prédéfinie [CFrameWnd](../../mfc/reference/cframewnd-class.md) attributs.
+*lpszClassName (en)*<br/>
+Indique une chaîne de caractères à durée nulle qui nomme la classe Windows. Le nom de la classe peut être n’importe quel nom `RegisterClass` enregistré auprès de la fonction globale [AfxRegisterWndClass](application-information-and-management.md#afxregisterwndclass) ou de la fonction Windows. Si NULL, utilise les attributs [CFrameWnd](../../mfc/reference/cframewnd-class.md) par défaut prédéfinis.
 
-*lpszWindowName*<br/>
-Pointe vers une chaîne de caractères se terminant par null qui représente le nom de la fenêtre.
+*lpszWindowName (en)*<br/>
+Indique une chaîne de caractères non terminée qui représente le nom de fenêtre.
 
-*dwStyle*<br/>
-Spécifie les attributs de style de fenêtre. Par défaut, les styles WS_VISIBLE et WS_CHILD Windows sont définies.
+*dwStyle (en)*<br/>
+Spécifie les attributs de style de fenêtre. Par défaut, les styles Windows WS_VISIBLE et WS_CHILD sont définis.
 
-*rect*<br/>
-Une référence à un [RECT](/previous-versions/dd162897\(v=vs.85\)) structure qui spécifie la taille et la position de la fenêtre. Le *rectDefault* valeur permet à Windows spécifier la taille et la position de la nouvelle fenêtre.
+*Rect*<br/>
+Une référence à une structure [RECT](/previous-versions/dd162897\(v=vs.85\)) précisant la taille et la position de la fenêtre. La valeur *rectDefault* permet à Windows de spécifier la taille et la position de la nouvelle fenêtre.
 
 *pParentWnd*<br/>
-Pointeur vers la fenêtre parente du contrôle.
+Un pointeur à la fenêtre parente du contrôle.
 
 *nID*<br/>
-Numéro d’identification de la vue. Par défaut, la valeur AFX_IDW_PANE_FIRST.
+Le numéro d’identification de la vue. Par défaut, configuré à AFX_IDW_PANE_FIRST.
 
 *pContext*<br/>
-Un pointeur vers un [CCreateContext](../../mfc/reference/ccreatecontext-structure.md). NULL par défaut.
+Un pointeur à un [CCreateContext](../../mfc/reference/ccreatecontext-structure.md). NULL par défaut.
 
 ### <a name="remarks"></a>Notes
 
-Cette méthode appelle également le contrôle WebBrowser relation contenant-contenu `Navigate` méthode pour charger un document par défaut (consultez [CHtmlEditView::GetStartDocument](#getstartdocument)).
+Cette méthode appellera également la `Navigate` méthode webBrowser contenue pour charger un document par défaut (voir [CHtmlEditView::GetStartDocument](#getstartdocument)).
 
-##  <a name="getdhtmldocument"></a>  CHtmlEditView::GetDHtmlDocument
+## <a name="chtmleditviewgetdhtmldocument"></a><a name="getdhtmldocument"></a>CHtmlEditView::GetDHtmlDocument
 
-Retourne le `IHTMLDocument2` interface sur le document actif.
+Retourne `IHTMLDocument2` l’interface sur le document actuel.
 
 ```
 BOOL GetDHtmlDocument(IHTMLDocument2** ppDocument) const;
@@ -132,9 +132,9 @@ BOOL GetDHtmlDocument(IHTMLDocument2** ppDocument) const;
 ### <a name="parameters"></a>Paramètres
 
 *ppDocument*<br/>
-Le [IHTMLDocument2](/previous-versions/windows/internet-explorer/ie-developer/platform-apis/aa752574\(v=vs.85\)) interface.
+L’interface [IHTMLDocument2.](/previous-versions/windows/internet-explorer/ie-developer/platform-apis/aa752574\(v=vs.85\))
 
-##  <a name="getstartdocument"></a>  CHtmlEditView::GetStartDocument
+## <a name="chtmleditviewgetstartdocument"></a><a name="getstartdocument"></a>CHtmlEditView::GetStartDocument
 
 Récupère le nom du document par défaut pour cette vue.
 
@@ -144,5 +144,5 @@ virtual LPCTSTR GetStartDocument();
 
 ## <a name="see-also"></a>Voir aussi
 
-[Exemple HTMLEdit](../../overview/visual-cpp-samples.md)<br/>
+[Échantillon HTMLEdit](../../overview/visual-cpp-samples.md)<br/>
 [Graphique hiérarchique](../../mfc/hierarchy-chart.md)

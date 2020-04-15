@@ -1,5 +1,5 @@
 ---
-title: Cautoptrarray, classe
+title: Classe CAutoPtrArray
 ms.date: 11/04/2016
 f1_keywords:
 - CAutoPtrArray
@@ -8,19 +8,19 @@ f1_keywords:
 helpviewer_keywords:
 - CAutoPtrArray class
 ms.assetid: 880a70da-8c81-4427-8ac6-49aa8d424244
-ms.openlocfilehash: beb0184a9945990b8d92efe03d4f54baa76ca380
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 93fc5cfea4ea655e57e785ca234df59fe10d6570
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62246809"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81318893"
 ---
-# <a name="cautoptrarray-class"></a>Cautoptrarray, classe
+# <a name="cautoptrarray-class"></a>Classe CAutoPtrArray
 
 Cette classe fournit des méthodes utiles lors de la construction d’un tableau de pointeurs intelligents.
 
 > [!IMPORTANT]
->  Cette classe et ses membres ne peut pas être utilisés dans les applications qui s’exécutent dans le Windows Runtime.
+> Cette classe et ses membres ne peuvent pas être utilisés dans les applications qui s’exécutent dans le Windows Runtime.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -46,9 +46,9 @@ Le type de pointeur.
 
 ## <a name="remarks"></a>Notes
 
-Cette classe fournit un constructeur et est dérivée des méthodes à partir de [CAtlArray](../../atl/reference/catlarray-class.md) et [CAutoPtrElementTraits](../../atl/reference/cautoptrelementtraits-class.md) afin de faciliter la création d’un objet de classe de collection stocker les pointeurs intelligents.
+Cette classe fournit un constructeur et dérive des méthodes de [CAtlArray](../../atl/reference/catlarray-class.md) et [CAutoPtrElementTraits](../../atl/reference/cautoptrelementtraits-class.md) pour aider à la création d’un objet de classe de collecte stockant des pointeurs intelligents.
 
-Pour plus d’informations, consultez [ATL, Classes de Collection](../../atl/atl-collection-classes.md).
+Pour plus d’informations, voir [cours de collecte ATL](../../atl/atl-collection-classes.md).
 
 ## <a name="inheritance-hierarchy"></a>Hiérarchie d'héritage
 
@@ -56,11 +56,11 @@ Pour plus d’informations, consultez [ATL, Classes de Collection](../../atl/atl
 
 `CAutoPtrArray`
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
-**En-tête :** atlcoll.h
+**En-tête:** atlcoll.h
 
-##  <a name="cautoptrarray"></a>  CAutoPtrArray::CAutoPtrArray
+## <a name="cautoptrarraycautoptrarray"></a><a name="cautoptrarray"></a>CAutoPtrArray::CAutoPtrArray
 
 Constructeur.
 
@@ -74,7 +74,7 @@ Initialise le tableau de pointeurs intelligents.
 
 ## <a name="see-also"></a>Voir aussi
 
-[CAtlArray, classe](../../atl/reference/catlarray-class.md)<br/>
-[CAutoPtrElementTraits, classe](../../atl/reference/cautoptrelementtraits-class.md)<br/>
-[CAutoPtrList, classe](../../atl/reference/cautoptrlist-class.md)<br/>
-[Vue d’ensemble de la classe](../../atl/atl-class-overview.md)
+[Classe CAtlArray](../../atl/reference/catlarray-class.md)<br/>
+[Classe CAutoPtrElementTraits](../../atl/reference/cautoptrelementtraits-class.md)<br/>
+[Classe CAutoPtrList](../../atl/reference/cautoptrlist-class.md)<br/>
+[Vue d'ensemble des classes](../../atl/atl-class-overview.md)

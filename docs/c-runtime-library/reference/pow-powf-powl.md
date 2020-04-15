@@ -1,10 +1,12 @@
 ---
 title: pow, powf, powl
-ms.date: 04/05/2018
+ms.date: 4/2/2020
 api_name:
 - powl
 - pow
 - powf
+- _o_pow
+- _o_powf
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -17,6 +19,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-math-l1-1-0.dll
+- api-ms-win-crt-private-l1-1-0
 api_type:
 - DLLExport
 topic_type:
@@ -36,16 +39,16 @@ helpviewer_keywords:
 - powf function
 - pow function
 ms.assetid: e75c33ed-2e59-48b1-be40-81da917324f1
-ms.openlocfilehash: 863d2b76ec131670b10eefc086fa3485bd0a983d
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: b181959ac05814a673ab11f33e4cfc5a39e3869e
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70950288"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81333117"
 ---
 # <a name="pow-powf-powl"></a>pow, powf, powl
 
-Calcule *x* élevé à la puissance de *y*.
+Calcule *x* soulevé à la puissance de *y*.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -65,7 +68,7 @@ long double pow( long double x, int y );  // C++ only
 
 ### <a name="parameters"></a>Paramètres
 
-*x*<br/>
+*X*<br/>
 Base.
 
 *y*<br/>
@@ -77,21 +80,23 @@ Retourne la valeur de *x*<sup>*y*</sup>. Aucun message d’erreur n’est imprim
 
 |Valeurs de x et y|Valeur de retour de pow|
 |-----------------------|-------------------------|
-|*x* ! = 0,0 et *y* = = 0,0|1|
-|*x* = = 0,0 et *y* = = 0,0|1|
-|*x* = = 0,0 et *y* < 0|INF|
+|*x* ! 0,0 et *y* 0,0|1|
+|*x* 0,0 et *y* 0,0|1|
+|*x* 0,0 et *y* < 0|INF|
 
 ## <a name="remarks"></a>Notes
 
-**Pow** ne reconnaît pas les valeurs à virgule flottante intégrales supérieures à 2<sup>64</sup> (par exemple, 1.0 E100).
+**pow** ne reconnaît pas les valeurs intégrales de points flottants supérieures à 2<sup>64</sup> (par exemple, 1.0E100).
 
-**Pow** a une implémentation qui utilise SSE2 (streaming SIMD Extensions 2). Pour obtenir des informations sur l’utilisation de l’implémentation SSE2 et sur les restrictions qui s’y rattachent, consultez [_set_SSE2_enable](set-sse2-enable.md).
+**pow** a une implémentation qui utilise Streaming SIMD Extensions 2 (SSE2). Pour plus d’informations sur l’utilisation de l’implémentation SSE2 et sur les restrictions qui s’y rattachent, consultez [_set_SSE2_enable](set-sse2-enable.md).
 
-Étant C++ donné que autorise la surcharge, vous pouvez appeler l’une des différentes surcharges de **Pow**. Dans un programme C, **Pow** prend toujours deux valeurs **doubles** et retourne une valeur **double** .
+Parce que CMD permet la surcharge, vous pouvez appeler l’une des différentes surcharges de **pow**. Dans un programme C, **pow** prend toujours deux **valeurs doubles** et retourne une **double** valeur.
 
-La surcharge `pow(int, int)` n’est plus disponible. Si vous utilisez cette surcharge, le compilateur peut émettre des [C2668](../../error-messages/compiler-errors-2/compiler-error-c2668.md). Pour éviter ce problème, effectuez un cast du premier paramètre en **double**, **float**ou **long** **double**.
+La surcharge `pow(int, int)` n’est plus disponible. Si vous utilisez cette surcharge, le compilateur peut émettre [C2668](../../error-messages/compiler-errors-2/compiler-error-c2668.md). Pour éviter ce problème, jetez le premier paramètre à **doubler,** **flotter,** ou **long** **double**.
 
-## <a name="requirements"></a>Configuration requise
+Par défaut, l’état global de cette fonction est étendue à l’application. Pour changer cela, voir [Global State dans le CRT](../global-state.md).
+
+## <a name="requirements"></a>Spécifications
 
 |Routine|En-tête requis (C)|En-tête requis (C++)|
 |-|-|-|
@@ -99,7 +104,7 @@ La surcharge `pow(int, int)` n’est plus disponible. Si vous utilisez cette sur
 
 Pour plus d'informations sur la compatibilité, voir [Compatibilité](../../c-runtime-library/compatibility.md).
 
-## <a name="example"></a>Exemples
+## <a name="example"></a>Exemple
 
 ```C
 // crt_pow.c
@@ -122,7 +127,7 @@ int main( void )
 
 ## <a name="see-also"></a>Voir aussi
 
-[Prise en charge de la virgule flottante](../../c-runtime-library/floating-point-support.md) <br/>
+[Soutien à la pointe flottante](../../c-runtime-library/floating-point-support.md) <br/>
 [exp, expf, expl](exp-expf.md) <br/>
 [log, logf, log10, log10f](log-logf-log10-log10f.md) <br/>
 [sqrt, sqrtf, sqrtl](sqrt-sqrtf-sqrtl.md) <br/>

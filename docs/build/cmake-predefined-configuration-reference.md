@@ -4,24 +4,25 @@ ms.description: Visual Studio provides several predefined build configurations f
 ms.date: 06/12/2019
 helpviewer_keywords:
 - CMake redefined configurations
-ms.openlocfilehash: c403f788b5a7941876ecafeb2fe0539f8bcc993a
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: a88b5ebbf05e11dc05e012c5bfbcc718d3742fb3
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80169836"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81323015"
 ---
 # <a name="cmake-predefined-build-configurations"></a>Configurations de build CMake prédéfinies
 
 ::: moniker range="vs-2015"
 
-Les projets CMake sont pris en charge dans Visual Studio 2017 et versions ultérieures.
+Les projets CMake sont soutenus dans Visual Studio 2017 et plus tard.
 
 ::: moniker-end
 
 ::: moniker range=">=vs-2017"
 
 Dans un projet CMake, les configurations de build sont stockées dans un fichier CMakeSettings.json. Quand vous choisissez **Gérer les configurations** dans la liste déroulante de la configuration de build dans la barre d’outils principale, une boîte de dialogue présente les configurations CMake par défaut disponibles dans Visual Studio :
+
 - x86 Debug
 - x86 Release
 - x64 Debug
@@ -33,7 +34,7 @@ Dans un projet CMake, les configurations de build sont stockées dans un fichier
 - MinGW Debug
 - MinGW Release
 
-Lorsque vous choisissez une configuration, elle est ajoutée au fichier *CMakeSettings. JSON* dans le dossier racine du projet. Vous pouvez ensuite l’utiliser pour générer votre projet. Pour plus d’informations sur les propriétés de configuration, consultez [référence CMakeSettings](cmakesettings-reference.md).
+Lorsque vous choisissez une configuration, elle est ajoutée au fichier *CMakeSettings.json* dans le dossier racine du projet. Vous pouvez ensuite l’utiliser pour générer votre projet. Pour plus d’informations sur les propriétés de configuration, voir [référence CMakeSettings](cmakesettings-reference.md).
 
 ## <a name="linux-predefined-build-configurations"></a>Configurations de build Linux prédéfinies :
 
@@ -358,25 +359,25 @@ Ces options vous permettent d’exécuter des commandes sur le système distant 
 Dans un projet CMake, les configurations de build sont stockées dans un fichier CMakeSettings.json. Quand vous choisissez **Gérer les configurations** dans la liste déroulante de la configuration de build dans la barre d’outils principale, une boîte de dialogue présente les configurations CMake par défaut disponibles dans Visual Studio :
 
 - x86 Debug
-- débogage Clang x86
+- x86 Clang Debug
 - x86 Release
-- Version x86 de Clang
+- x86 Clang Libération
 - x64 Debug
-- débogage Clang x64
+- x64 Clang Debug
 - x64 Release
-- Version x64 de Clang
+- x64 Clang Libération
 - Linux-Debug
 - Linux-Release
 - Linux-Clang-Debug
-- Linux-Clang-version
-- Cache existant (distant)
+- Linux-Clang-Libération
+- Cache existant (à distance)
 - Cache existant
 - MinGW Debug
 - MinGW Release
-- Débogage WSL
-- Version de WSL
-- Débogage WSL Clang
-- Version Clang de WSL
+- WSL Debug
+- Sortie WSL
+- WSL Clang Debug
+- WSL Clang Libération
 - Clang
 
 Quand vous choisissez une configuration, celle-ci est ajoutée au fichier CMakeSettings.json dans le dossier racine du projet. Vous pouvez ensuite l’utiliser pour générer votre projet.
@@ -694,6 +695,7 @@ Quand vous choisissez une configuration, celle-ci est ajoutée au fichier CMakeS
 ```
 
 ::: moniker-end
+
 ## <a name="see-also"></a>Voir aussi
 
 [Projets CMake dans Visual Studio](cmake-projects-in-visual-studio.md)<br/>

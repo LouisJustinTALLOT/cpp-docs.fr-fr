@@ -1,5 +1,5 @@
 ---
-title: Cstringelementtraitsi, classe
+title: Classe CStringElementTraitsI
 ms.date: 11/04/2016
 f1_keywords:
 - CStringElementTraitsI
@@ -12,16 +12,16 @@ f1_keywords:
 helpviewer_keywords:
 - CStringElementTraitsI class
 ms.assetid: c23f92b1-91e5-400f-96ed-258b02622b7a
-ms.openlocfilehash: 77357aa2be326ebebaaf5a8614faaf88a0c3c06b
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 32980e19443cb17a3a688c85ff21195c60ed2124
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62277433"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81330589"
 ---
-# <a name="cstringelementtraitsi-class"></a>Cstringelementtraitsi, classe
+# <a name="cstringelementtraitsi-class"></a>Classe CStringElementTraitsI
 
-Cette classe fournit des fonctions statiques relatives aux chaînes stockées dans les objets de classe de collection. Elle est similaire à [CStringElementTraits](../../atl/reference/cstringelementtraits-class.md), mais effectue des comparaisons de non-respect de la casse.
+Cette classe fournit des fonctions statiques liées aux cordes stockées dans des objets de classe de collection. Il est similaire à [CStringElementTraits](../../atl/reference/cstringelementtraits-class.md), mais effectue des comparaisons insensibles aux cas.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -41,22 +41,22 @@ Le type de données à stocker dans la collection.
 
 |Nom|Description|
 |----------|-----------------|
-|[CStringElementTraitsI::INARGTYPE](#inargtype)|Le type de données à utiliser pour l’ajout d’éléments à l’objet de classe de collection.|
-|[CStringElementTraitsI::OUTARGTYPE](#outargtype)|Le type de données à utiliser pour récupérer des éléments de l’objet de classe de collection.|
+|[CStringElementTraitsI::INARGTYPE](#inargtype)|Le type de données à utiliser pour ajouter des éléments à l’objet de classe de collecte.|
+|[CStringElementTraitsI::OUTARGTYPE](#outargtype)|Le type de données à utiliser pour récupérer des éléments de l’objet de classe de collecte.|
 
 ### <a name="public-methods"></a>M&#233;thodes publiques
 
 |Nom|Description|
 |----------|-----------------|
-|[CStringElementTraitsI::CompareElements](#compareelements)|Appelez cette fonction statique pour comparer deux éléments de chaîne pour l’égalité, en ignorant les différences de casse.|
-|[CStringElementTraitsI::CompareElementsOrdered](#compareelementsordered)|Appelez cette fonction statique pour comparer deux éléments de chaîne, en ignorant les différences de casse.|
-|[CStringElementTraitsI::Hash](#hash)|Appelez cette fonction statique pour calculer une valeur de hachage pour l’élément de la chaîne donnée.|
+|[CStringElementTraitsI::CompareElements](#compareelements)|Appelez cette fonction statique pour comparer deux éléments de chaîne pour l’égalité, ignorant les différences dans le cas.|
+|[CStringElementTraitsI::CompareElementsOrdered](#compareelementsordered)|Appelez cette fonction statique pour comparer deux éléments de chaîne, ignorant les différences dans le cas.|
+|[CStringElementTraitsI::Hash](#hash)|Appelez cette fonction statique pour calculer une valeur de hachage pour l’élément de chaîne donné.|
 
 ## <a name="remarks"></a>Notes
 
-Cette classe fournit des fonctions statiques pour la comparaison de chaînes et pour la création d’une valeur de hachage. Ces fonctions sont utiles lorsque vous utilisez une classe de collection pour stocker des données basé sur chaîne. Utilisez [CStringRefElementTraits](../../atl/reference/cstringrefelementtraits-class.md) lorsque les objets de chaîne sont avec agira en tant que références.
+Cette classe fournit des fonctions statiques pour comparer les cordes et pour créer une valeur de hachage. Ces fonctions sont utiles lors de l’utilisation d’une classe de collecte pour stocker des données à base de chaînes. Utilisez [CStringRefElementTraits](../../atl/reference/cstringrefelementtraits-class.md) lorsque les objets à cordes doivent être traités comme des références.
 
-Pour plus d’informations, consultez [ATL, Classes de Collection](../../atl/atl-collection-classes.md).
+Pour plus d’informations, voir [cours de collecte ATL](../../atl/atl-collection-classes.md).
 
 ## <a name="inheritance-hierarchy"></a>Hiérarchie d'héritage
 
@@ -64,13 +64,13 @@ Pour plus d’informations, consultez [ATL, Classes de Collection](../../atl/atl
 
 `CStringElementTraitsI`
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
-**En-tête :** atlcoll.h
+**En-tête:** atlcoll.h
 
-##  <a name="compareelements"></a>  CStringElementTraitsI::CompareElements
+## <a name="cstringelementtraitsicompareelements"></a><a name="compareelements"></a>CStringElementTraitsI::CompareElements
 
-Appelez cette fonction statique pour comparer deux éléments de chaîne pour l’égalité, en ignorant les différences de casse.
+Appelez cette fonction statique pour comparer deux éléments de chaîne pour l’égalité, ignorant les différences dans le cas.
 
 ```
 static bool CompareElements(INARGTYPE str1, INARGTYPE str2) throw();
@@ -79,22 +79,22 @@ static bool CompareElements(INARGTYPE str1, INARGTYPE str2) throw();
 ### <a name="parameters"></a>Paramètres
 
 *str1*<br/>
-La première chaîne d’élément.
+Le premier élément de chaîne.
 
 *str2*<br/>
 Le deuxième élément de chaîne.
 
 ### <a name="return-value"></a>Valeur de retour
 
-Retourne la valeur true si les éléments sont égaux, sinon false.
+Retourne vrai si les éléments sont égaux, faux autrement.
 
 ### <a name="remarks"></a>Notes
 
-Les comparaisons respectent la casse.
+Les comparaisons sont insensibles aux cas.
 
-##  <a name="compareelementsordered"></a>  CStringElementTraitsI::CompareElementsOrdered
+## <a name="cstringelementtraitsicompareelementsordered"></a><a name="compareelementsordered"></a>CStringElementTraitsI::CompareElementsOrdered
 
-Appelez cette fonction statique pour comparer deux éléments de chaîne, en ignorant les différences de casse.
+Appelez cette fonction statique pour comparer deux éléments de chaîne, ignorant les différences dans le cas.
 
 ```
 static int CompareElementsOrdered(INARGTYPE str1, INARGTYPE str2) throw();
@@ -103,22 +103,22 @@ static int CompareElementsOrdered(INARGTYPE str1, INARGTYPE str2) throw();
 ### <a name="parameters"></a>Paramètres
 
 *str1*<br/>
-La première chaîne d’élément.
+Le premier élément de chaîne.
 
 *str2*<br/>
 Le deuxième élément de chaîne.
 
 ### <a name="return-value"></a>Valeur de retour
 
-Zéro si les chaînes sont identiques, < 0 si *str1* est inférieure à *str2*, ou 0 > Si *str1* est supérieur à *str2*. Le [CStringT::Compare](../../atl-mfc-shared/reference/cstringt-class.md#compare) méthode est utilisée pour exécuter les comparaisons.
+Zéro si les cordes sont identiques, < 0 si *str1* est inférieur à *str2*, ou > 0 si *str1* est plus grand que *str2*. Le [CStringT::La](../../atl-mfc-shared/reference/cstringt-class.md#compare) méthode de comparaison est utilisée pour effectuer les comparaisons.
 
 ### <a name="remarks"></a>Notes
 
-Les comparaisons respectent la casse.
+Les comparaisons sont insensibles aux cas.
 
-##  <a name="hash"></a>  CStringElementTraitsI::Hash
+## <a name="cstringelementtraitsihash"></a><a name="hash"></a>CStringElementTraitsI::Hash
 
-Appelez cette fonction statique pour calculer une valeur de hachage pour l’élément de la chaîne donnée.
+Appelez cette fonction statique pour calculer une valeur de hachage pour l’élément de chaîne donné.
 
 ```
 static ULONG Hash(INARGTYPE str) throw();
@@ -126,24 +126,24 @@ static ULONG Hash(INARGTYPE str) throw();
 
 ### <a name="parameters"></a>Paramètres
 
-*str*<br/>
-L’élément de la chaîne.
+*Str*<br/>
+L’élément de chaîne.
 
 ### <a name="return-value"></a>Valeur de retour
 
-Retourne une valeur de hachage calculée à l’aide du contenu de la chaîne.
+Retourne une valeur de hachage, calculée à l’aide du contenu de la chaîne.
 
-##  <a name="inargtype"></a>  CStringElementTraitsI::INARGTYPE
+## <a name="cstringelementtraitsiinargtype"></a><a name="inargtype"></a>CStringElementTraitsI::INARGTYPE
 
-Le type de données à utiliser pour l’ajout d’éléments à l’objet de classe de collection.
+Le type de données à utiliser pour ajouter des éléments à l’objet de classe de collecte.
 
 ```
 typedef T::PCXSTR INARGTYPE;
 ```
 
-##  <a name="outargtype"></a>  CStringElementTraitsI::OUTARGTYPE
+## <a name="cstringelementtraitsioutargtype"></a><a name="outargtype"></a>CStringElementTraitsI::OUTARGTYPE
 
-Le type de données à utiliser pour récupérer des éléments de l’objet de classe de collection.
+Le type de données à utiliser pour récupérer des éléments de l’objet de classe de collecte.
 
 ```
 typedef T& OUTARGTYPE;
@@ -151,6 +151,6 @@ typedef T& OUTARGTYPE;
 
 ## <a name="see-also"></a>Voir aussi
 
-[CElementTraitsBase, classe](../../atl/reference/celementtraitsbase-class.md)<br/>
-[Vue d’ensemble de la classe](../../atl/atl-class-overview.md)<br/>
-[CStringElementTraits, classe](../../atl/reference/cstringelementtraits-class.md)
+[Classe CElementTraitsBase](../../atl/reference/celementtraitsbase-class.md)<br/>
+[Vue d'ensemble des classes](../../atl/atl-class-overview.md)<br/>
+[Classe CStringElementTraits](../../atl/reference/cstringelementtraits-class.md)

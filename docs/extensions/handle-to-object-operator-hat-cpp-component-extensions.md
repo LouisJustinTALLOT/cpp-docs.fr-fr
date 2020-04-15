@@ -5,16 +5,16 @@ ms.topic: reference
 helpviewer_keywords:
 - ^ handle to object [C++]
 ms.assetid: 70c411e6-be57-4468-a944-6ea7be89f392
-ms.openlocfilehash: bdf19b6b472cd4d224d749f59c75ca77d11c34f8
-ms.sourcegitcommit: c6f8e6c2daec40ff4effd8ca99a7014a3b41ef33
-ms.translationtype: HT
+ms.openlocfilehash: 3d08b2294da1599282feeb1739331c31d64a9e59
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "65516694"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81358331"
 ---
 # <a name="handle-to-object-operator---ccli-and-ccx"></a>Descripteur sur l’opérateur objet (^)  (C++/CLI et C++/CX)
 
-Le *déclarateur de handle* (`^`) modifie le [spécificateur](../cpp/overview-of-declarators.md) de type de façon à indiquer que l’objet déclaré doit être supprimé automatiquement lorsque le système détermine que l’objet n’est plus accessible.
+Le *déclarant de* `^`poignée (, prononcé « chapeau »), modifie le [spécificateur](../cpp/overview-of-declarators.md) de type pour signifier que l’objet déclaré doit être automatiquement supprimé lorsque le système détermine que l’objet n’est plus accessible.
 
 ## <a name="accessing-the-declared-object"></a>Accès à l'objet déclaré
 
@@ -38,7 +38,7 @@ Le système utilise le mécanisme de *garbage collector* du CLR pour déterminer
 
 Les pointeurs (`*`) et les références (`&`) C++ natifs n'étant pas des références managées, le garbage collector ne peut pas mettre à jour automatiquement les adresses vers lesquelles ils pointent. Pour résoudre ce problème, utilisez le déclarateur de handle pour spécifier une variable que le garbage collector connaît et peut mettre à jour automatiquement.
 
-Pour plus d'informations, voir [Procédure : déclarer des handles dans les types natifs](../dotnet/how-to-declare-handles-in-native-types.md).
+Pour plus d’informations, voir [Comment : Déclarer les poignées dans les types autochtones](../dotnet/how-to-declare-handles-in-native-types.md).
 
 ### <a name="examples"></a>Exemples
 
@@ -195,7 +195,7 @@ Array value: 7
 Cannot access array element 11, size is 10
 ```
 
-Cet exemple montre qu’une référence native (`&`) ne peut pas être liée à un membre **int** d’un type managé, car le membre **int** peut être stocké dans le tas récupéré par le garbage collector et les références natives n’effectuent pas le suivi du déplacement d’objets dans le tas managé. La solution consiste à utiliser une variable locale ou à remplacer `&` par `%` afin d'en faire une référence de suivi.
+Cet échantillon montre qu’une référence indigène (`&`) ne peut pas se lier à un membre **int** d’un type géré, car **l’int** pourrait être stocké dans le tas d’ordures collectés, et les références indigènes ne suivent pas le mouvement de l’objet dans le tas géré. La solution consiste à utiliser une variable locale ou à remplacer `&` par `%` afin d'en faire une référence de suivi.
 
 ```cpp
 // mcppv2_handle_5.cpp
