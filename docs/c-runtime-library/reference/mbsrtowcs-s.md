@@ -1,8 +1,9 @@
 ---
 title: mbsrtowcs_s
-ms.date: 11/04/2016
+ms.date: 4/2/2020
 api_name:
 - mbsrtowcs_s
+- _o_mbsrtowcs_s
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -15,6 +16,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-convert-l1-1-0.dll
+- api-ms-win-crt-private-l1-1-0
 api_type:
 - DLLExport
 topic_type:
@@ -24,12 +26,12 @@ f1_keywords:
 helpviewer_keywords:
 - mbsrtowcs_s function
 ms.assetid: 4ee084ec-b15d-4e5a-921d-6584ec3b5a60
-ms.openlocfilehash: d79cceaf923c1da126a1d133a8d2eb8752883457
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 62ae534e8080b74ada49cca005811a049055cb65
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70952101"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81338900"
 ---
 # <a name="mbsrtowcs_s"></a>mbsrtowcs_s
 
@@ -65,66 +67,68 @@ Nombre de caractères convertis.
 Adresse de la mémoire tampon où stocker la chaîne de caractères larges convertie.
 
 *sizeInWords*<br/>
-Taille de *wcstr* en mots (caractères larges).
+La taille du *wcstr* en mots (caractères larges).
 
 *mbstr*<br/>
 Pointeur indirect vers l'emplacement de la chaîne de caractères multioctets à convertir.
 
 *count*<br/>
-Nombre maximal de caractères larges à stocker dans la mémoire tampon *wcstr* , à l’exclusion de la valeur null de fin ou [_TRUNCATE](../../c-runtime-library/truncate.md).
+Le nombre maximum de caractères larges à stocker dans le tampon *wcstr,* sans compter la fin nulle, ou [_TRUNCATE](../../c-runtime-library/truncate.md).
 
-*mbstate*<br/>
-Pointeur vers un objet d’état de conversion **mbstate_t** . Si cette valeur est un pointeur null, un objet d'état de conversion interne statique est utilisé. Étant donné que l’objet **mbstate_t** interne n’est pas thread-safe, nous vous recommandons de toujours passer votre propre paramètre *mbstate* .
+*mbstate (en)*<br/>
+Un pointeur vers un objet d’état de conversion **mbstate_t.** Si cette valeur est un pointeur null, un objet d'état de conversion interne statique est utilisé. Parce que l’objet de **mbstate_t** interne n’est pas sans fil, nous vous recommandons de toujours passer votre propre paramètre *mbstate.*
 
 ## <a name="return-value"></a>Valeur de retour
 
 Zéro si la conversion est réussie, ou un code d'erreur en cas d'échec.
 
-|Condition d'erreur|Valeur de retour et **errno**|
+|État d’erreur|Valeur de rendement et **errno**|
 |---------------------|------------------------------|
-|*wcstr* est un pointeur null et *sizeInWords* > 0|**EINVAL**|
-|*mbstr* est un pointeur null|**EINVAL**|
-|La chaîne indirectement pointée par *mbstr* contient une séquence multioctet qui n’est pas valide pour les paramètres régionaux actuels.|**EILSEQ**|
-|La mémoire tampon de destination est trop petite pour contenir la chaîne convertie (à moins que *Count* ne soit **_TRUNCATE**; pour plus d’informations, consultez la section Notes).|**ERANGE**|
+|*wcstr* est un pointeur nul et *la tailleInWords* > 0|**EINVAL (EN)**|
+|*mbstr* est un pointeur nul|**EINVAL (EN)**|
+|La chaîne indirectement pointée vers *mbstr* contient une séquence multioctet qui n’est pas valide pour le lieu actuel.|**EILSEQ**|
+|Le tampon de destination est trop petit pour contenir la chaîne convertie (à moins que *le compte* soit **_TRUNCATE**; pour plus d’informations, voir Remarques)|**ERANGE**|
 
-Si l’une de ces conditions se produit, l’exception de paramètre non valide est appelée, comme décrit dans [Validation de paramètre](../../c-runtime-library/parameter-validation.md). Si l’exécution est autorisée à se poursuivre, la fonction retourne un code d’erreur et définit **errno** comme indiqué dans le tableau.
+Si l’une de ces conditions se produit, l’exception de paramètre non valide est appelée, comme décrit dans [Validation de paramètre](../../c-runtime-library/parameter-validation.md). Si l’exécution est autorisée à se poursuivre, la fonction renvoie un code d’erreur et définit **errno** comme indiqué dans le tableau.
 
 ## <a name="remarks"></a>Notes
 
-La fonction **mbsrtowcs_s** convertit une chaîne de caractères multioctets indirectement pointée par *mbstr* en caractères larges stockés dans la mémoire tampon pointée par *wcstr*, en utilisant l’état de conversion contenu dans *mbstate*. La conversion se poursuit pour chaque caractère jusqu'à ce qu'une des conditions suivantes soit remplie :
+La fonction **mbsrtowcs_s** convertit une chaîne de caractères multioctets indirectement pointé par *mbstr* en caractères larges stockés dans le tampon pointé par *wcstr*, en utilisant l’état de conversion contenu dans *mbstate*. La conversion se poursuit pour chaque caractère jusqu'à ce qu'une des conditions suivantes soit remplie :
 
 - Un caractère multioctet de null est rencontré.
 
 - Un caractère multioctet non valide est rencontré.
 
-- Le nombre de caractères larges stockés dans la mémoire tampon *wcstr* est égal à *Count*.
+- Le nombre de caractères larges stockés dans le tampon *wcstr* *équivaut à compter*.
 
-La chaîne de destination *wcstr* se termine toujours par un caractère null, même en cas d’erreur, sauf si *wcstr* est un pointeur null.
+Le *wcstr* de corde de destination est toujours annulé, même en cas d’erreur, à moins que *wcstr* soit un pointeur nul.
 
-Si *Count* est la valeur spéciale [_TRUNCATE](../../c-runtime-library/truncate.md), **mbsrtowcs_s** convertit la plus grande partie de la chaîne telle qu’elle est contenue dans la mémoire tampon de destination, tout en laissant de l’espace pour une marque de fin null.
+Si *le compte* est la valeur spéciale [_TRUNCATE](../../c-runtime-library/truncate.md), **mbsrtowcs_s** convertit autant de la chaîne que s’insérera dans le tampon de destination, tout en laissant de la place pour un terminateur nul.
 
-Si **mbsrtowcs_s** convertit correctement la chaîne source, elle place la taille en caractères larges de la chaîne convertie et la marque de fin null dans  *&#42;pReturnValue*, à condition que *pReturnValue* ne soit pas un pointeur null. Cela se produit même si l’argument *wcstr* est un pointeur null et vous permet de déterminer la taille de mémoire tampon requise. Notez que si *wcstr* est un pointeur null, *Count* est ignoré.
+Si **mbsrtowcs_s** convertit avec succès la chaîne source, il met la taille en caractères larges de la chaîne convertie et le terminateur nul en *&#42;pReturnValue*, à condition *pReturnValue n’est* pas un pointeur nul. Cela se produit même si l’argument *wcstr* est un pointeur nul et vous permet de déterminer la taille du tampon requis. Notez que si *wcstr* est un pointeur nul, *le compte* est ignoré.
 
-Si *wcstr* n’est pas un pointeur null, l’objet pointeur désigné par *mbstr* reçoit un pointeur null si la conversion s’est arrêtée, car un caractère null de fin a été atteint. Sinon, il est affecté de l'adresse qui se trouve juste après le dernier caractère multioctet converti, le cas échéant. Ceci permet à un appel de fonction ultérieur de redémarrer la conversion où cet appel s'est arrêté.
+Si *le wcstr* n’est pas un pointeur nul, l’objet pointeur pointé par *mbstr* se voit attribuer un pointeur nul si la conversion s’arrête parce qu’un caractère nul de fin a été atteint. Sinon, il est affecté de l'adresse qui se trouve juste après le dernier caractère multioctet converti, le cas échéant. Ceci permet à un appel de fonction ultérieur de redémarrer la conversion où cet appel s'est arrêté.
 
-Si *mbstate* est un pointeur null, l’objet statique d’état de conversion **mbstate_t** interne de la bibliothèque est utilisé. Comme cet objet statique interne n’est pas thread-safe, nous vous recommandons de passer votre propre valeur *mbstate* .
+Si *mbstate* est un pointeur nul, l’objet statique interne **mbstate_t** d’état de conversion de la bibliothèque est utilisé. Parce que cet objet statique interne n’est pas sans fil, nous vous recommandons de passer votre propre valeur *mbstate.*
 
-Si **mbsrtowcs_s** rencontre un caractère multioctet qui n’est pas valide dans les paramètres régionaux actuels, il place-1 dans  *&#42;pReturnValue*, définit la mémoire tampon de destination *wcstr* sur une chaîne vide, affecte à **errno** la valeur **EILSEQ**et retourne **EILSEQ**.
+Si **mbsrtowcs_s** rencontre un caractère multioctet qui n’est pas valable dans le lieu actuel, il met -1 dans *&#42;pReturnValue*, définit la *wcstr* tampon de destination à une chaîne vide, définit **errno** à **EILSEQ**, et retourne **EILSEQ**.
 
-Si les séquences pointées par *mbstr* et *wcstr* se chevauchent, le comportement de **mbsrtowcs_s** n’est pas défini. **mbsrtowcs_s** est affecté par la catégorie LC_TYPE des paramètres régionaux actuels.
+Si les séquences pointées par *mbstr* et *wcstr* se chevauchent, le comportement de **mbsrtowcs_s** est indéfini. **mbsrtowcs_s** est affectée par la LC_TYPE catégorie de l’endroit actuel.
 
 > [!IMPORTANT]
-> Assurez-vous que *wcstr* et *mbstr* ne se chevauchent pas, et que ce *nombre* reflète correctement le nombre de caractères multioctets à convertir.
+> Assurez-vous que *le wcstr* et *le mbstr* ne se chevauchent pas, et ce *nombre* reflète correctement le nombre de caractères multioctets à convertir.
 
-La fonction **mbsrtowcs_s** diffère de [mbstowcs_s, _mbstowcs_s_l](mbstowcs-s-mbstowcs-s-l.md) par son redémarrage. L’état de conversion est stocké dans *mbstate* pour les appels suivants à la même ou à d’autres fonctions redémarrables. Les résultats ne sont pas définis quand l'utilisation de fonctions redémarrables est combinée avec l'utilisation de fonctions non redémarrables. Par exemple, une application doit utiliser **mbsrlen** au lieu de **mbslen**, si un appel ultérieur à **mbsrtowcs_s** est utilisé à la place de **mbstowcs_s**.
+La fonction **mbsrtowcs_s** diffère de [mbstowcs_s, _mbstowcs_s_l](mbstowcs-s-mbstowcs-s-l.md) par sa redémarrabilité. L’état de conversion est stocké dans *mbstate* pour les appels ultérieurs vers les mêmes fonctions ou d’autres fonctions redémarrées. Les résultats ne sont pas définis quand l'utilisation de fonctions redémarrables est combinée avec l'utilisation de fonctions non redémarrables. Par exemple, une application doit utiliser **mbsrlen** au lieu de **mbslen**, si un appel ultérieur à **mbsrtowcs_s** est utilisé au lieu de **mbstowcs_s**.
 
-En C++, l’utilisation de cette fonction est simplifiée par les surcharges de modèle ; les surcharges peuvent déduire la longueur de la mémoire tampon automatiquement (ce qui évite d’avoir à spécifier un argument de taille) et elles peuvent remplacer automatiquement les fonctions plus anciennes et non sécurisées par leurs équivalents plus récents et sécurisés. Pour plus d'informations, consultez [Secure Template Overloads](../../c-runtime-library/secure-template-overloads.md).
+En C++, l’utilisation de cette fonction est simplifiée par les surcharges de modèle ; les surcharges peuvent déduire la longueur de la mémoire tampon automatiquement (ce qui évite d’avoir à spécifier un argument de taille) et elles peuvent remplacer automatiquement les fonctions plus anciennes et non sécurisées par leurs équivalents plus récents et sécurisés. Pour plus d’informations, consultez [Sécuriser les surcharges de modèle](../../c-runtime-library/secure-template-overloads.md).
+
+Par défaut, l’état global de cette fonction est étendue à l’application. Pour changer cela, voir [Global State dans le CRT](../global-state.md).
 
 ## <a name="exceptions"></a>Exceptions
 
-La fonction **mbsrtowcs_s** est multithread safe si aucune fonction du thread actif n’appelle **setlocale** tant que cette fonction est en cours d’exécution et que l’argument *mbstate* n’est pas un pointeur null.
+La fonction **mbsrtowcs_s** est multithread sûr si aucune fonction dans le thread actuel appelle **setlocale** tant que cette fonction est l’exécution et *l’argument mbstate n’est* pas un pointeur nul.
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
 |Routine|En-tête requis|
 |-------------|---------------------|
@@ -133,8 +137,8 @@ La fonction **mbsrtowcs_s** est multithread safe si aucune fonction du thread ac
 ## <a name="see-also"></a>Voir aussi
 
 [Conversion de données](../../c-runtime-library/data-conversion.md)<br/>
-[Paramètres régionaux](../../c-runtime-library/locale.md)<br/>
-[Interprétation des séquences de caractères multi-octets](../../c-runtime-library/interpretation-of-multibyte-character-sequences.md)<br/>
+[Local](../../c-runtime-library/locale.md)<br/>
+[Interprétation des séquences multioctets-caractères](../../c-runtime-library/interpretation-of-multibyte-character-sequences.md)<br/>
 [mbrtowc](mbrtowc.md)<br/>
 [mbtowc, _mbtowc_l](mbtowc-mbtowc-l.md)<br/>
 [mbstowcs_s, _mbstowcs_s_l](mbstowcs-s-mbstowcs-s-l.md)<br/>

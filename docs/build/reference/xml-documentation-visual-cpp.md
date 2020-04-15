@@ -7,12 +7,12 @@ helpviewer_keywords:
 - comments, C++ source code files
 - /// delimiter for C++ documentation
 ms.assetid: a1aec1c5-b2d1-4c74-83ae-1dbbbb76b506
-ms.openlocfilehash: c46cb77dd2efe41a41c7108115d6d22808782f01
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: c25c54e81bb9c10fc871a2abc178f57e661ae4e6
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62316338"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81335732"
 ---
 # <a name="xml-documentation-visual-c"></a>Documentation XML (Visual C++)
 
@@ -27,14 +27,14 @@ Dans un fichier de code Visual C++, les commentaires de documentation XML doiven
 1. dans une bibliothèque dont les déclarations de type et les implémentations se trouvent dans le même fichier d’en-tête
 
 > [!NOTE]
->  Dans la version actuelle, les commentaires de code ne sont pas traités sur des modèles ni tout élément contenant un type de modèle (par exemple, une fonction qui prend un paramètre comme modèle). L’ajout de ces commentaires entraîne un comportement non défini.
+> Dans la version actuelle, les commentaires de code ne sont pas traités sur des modèles ni tout élément contenant un type de modèle (par exemple, une fonction qui prend un paramètre comme modèle). L’ajout de ces commentaires entraîne un comportement non défini.
 
 Pour plus d’informations sur la création d’un fichier .xml avec des commentaires de documentation, consultez les rubriques suivantes.
 
-|Pour obtenir des informations sur|Voir|
+|Pour obtenir des informations sur|Consultez|
 |---------------------------|---------|
 |Options du compilateur à utiliser|[/doc](doc-process-documentation-comments-c-cpp.md)|
-|Balises que vous pouvez utiliser pour fournir les fonctionnalités couramment utilisées dans la documentation|[Balises recommandées pour les commentaires de documentation](recommended-tags-for-documentation-comments-visual-cpp.md)|
+|Balises que vous pouvez utiliser pour fournir les fonctionnalités couramment utilisées dans la documentation|[Tags recommandés pour les commentaires de documentation](recommended-tags-for-documentation-comments-visual-cpp.md)|
 |Chaînes d’ID que le compilateur produit pour identifier les constructions dans votre code|[Traitement du fichier .xml](dot-xml-file-processing.md)|
 |Procédure pour délimiter les balises de documentation|[Délimiteurs pour les étiquettes de documentation Visual C++](delimiters-for-visual-cpp-documentation-tags.md)|
 |Génération d’un fichier .xml à partir d’un ou de plusieurs fichiers .xdc|[Informations de référence sur XDCMake](xdcmake-reference.md)|

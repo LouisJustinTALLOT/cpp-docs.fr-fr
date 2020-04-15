@@ -1,5 +1,5 @@
 ---
-title: CComObject, classe
+title: Classe CComObject
 ms.date: 11/04/2016
 f1_keywords:
 - CComObject
@@ -12,16 +12,16 @@ f1_keywords:
 helpviewer_keywords:
 - CComObject class
 ms.assetid: e2b6433b-6349-4749-b4bc-acbd7a22c8b0
-ms.openlocfilehash: a2051932413d8658eb7cedb67ed0eab2077b599d
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: de6ffb45fe5c6f73ab656d5c6185b70d9f5edd38
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69497136"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81327647"
 ---
-# <a name="ccomobject-class"></a>CComObject, classe
+# <a name="ccomobject-class"></a>Classe CComObject
 
-Cette classe implémente `IUnknown` pour un objet non agrégé.
+Cette classe `IUnknown` met en œuvre pour un objet non agrégaté.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -42,22 +42,22 @@ Votre classe, dérivée de [CComObjectRoot](../../atl/reference/ccomobjectroot-c
 |Nom|Description|
 |----------|-----------------|
 |[CComObject::CComObject](#ccomobject)|Constructeur.|
-|[CComObject::~CComObject](#dtor)|Destructeur.|
+|[CComObject: CComObject](#dtor)|Destructeur.|
 
 ### <a name="public-methods"></a>M&#233;thodes publiques
 
 |Nom|Description|
 |----------|-----------------|
-|[CComObject::AddRef](#addref)|Incrémente le décompte de références sur l’objet.|
-|[CComObject::CreateInstance](#createinstance)|Statique Crée un `CComObject` objet.|
+|[CComObject::AddRef](#addref)|Incréments le compte de référence sur l’objet.|
+|[CComObject::CréerInstance](#createinstance)|(Statique) Crée un `CComObject` nouvel objet.|
 |[CComObject::QueryInterface](#queryinterface)|Récupère un pointeur vers l'interface demandée.|
-|[CComObject::Release](#release)|Décrémente le décompte de références sur l’objet.|
+|[CComObject::Libération](#release)|Décroisse le compte de référence sur l’objet.|
 
 ## <a name="remarks"></a>Notes
 
-`CComObject`implémente [IUnknown](/windows/win32/api/unknwn/nn-unknwn-iunknown) pour un objet non agrégé. Toutefois, les appels `QueryInterface`à `AddRef`, et `Release` sont délégués à `CComObjectRootEx`.
+`CComObject`implémente [IUnknown](/windows/win32/api/unknwn/nn-unknwn-iunknown) pour un objet non agrégaté. Cependant, les `QueryInterface` `AddRef`appels `Release` à , `CComObjectRootEx`, et sont délégués à .
 
-Pour plus d’informations sur `CComObject`l’utilisation de, consultez l’article [notions de base des objets COM ATL](../../atl/fundamentals-of-atl-com-objects.md).
+Pour plus d’informations sur l’utilisation `CComObject`, voir l’article [Fondamentaux de ATL COM Objects](../../atl/fundamentals-of-atl-com-objects.md).
 
 ## <a name="inheritance-hierarchy"></a>Hiérarchie d'héritage
 
@@ -65,13 +65,13 @@ Pour plus d’informations sur `CComObject`l’utilisation de, consultez l’art
 
 `CComObject`
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
-**En-tête:** atlcom. h
+**En-tête:** atlcom.h
 
-##  <a name="addref"></a>  CComObject::AddRef
+## <a name="ccomobjectaddref"></a><a name="addref"></a>CComObject::AddRef
 
-Incrémente le décompte de références sur l’objet.
+Incréments le compte de référence sur l’objet.
 
 ```
 STDMETHOD_(ULONG, AddRef)();
@@ -79,11 +79,11 @@ STDMETHOD_(ULONG, AddRef)();
 
 ### <a name="return-value"></a>Valeur de retour
 
-Cette fonction retourne le nouveau nombre de références incrémentées sur l’objet. Cette valeur peut être utile pour les diagnostics ou les tests.
+Cette fonction renvoie le nouveau nombre de références incrémentés sur l’objet. Cette valeur peut être utile pour le diagnostic ou les tests.
 
-##  <a name="ccomobject"></a>  CComObject::CComObject
+## <a name="ccomobjectccomobject"></a><a name="ccomobject"></a>CComObject::CComObject
 
-Le constructeur incrémente le nombre de verrous de module.
+Le constructeur incrémente le nombre de serrures du module.
 
 ```
 CComObject(void* = NULL);
@@ -92,15 +92,15 @@ CComObject(void* = NULL);
 ### <a name="parameters"></a>Paramètres
 
 <em>void\*</em><br/>
-dans Ce paramètre sans nom n’est pas utilisé. Il existe pour la symétrie avec `CComXXXObjectXXX` d’autres constructeurs.
+[dans] Ce paramètre anonyme n’est pas utilisé. Il existe pour la symétrie avec d’autres `CComXXXObjectXXX` constructeurs.
 
 ### <a name="remarks"></a>Notes
 
-Le destructeur le décrémente.
+Le destructeur le décréd.
 
-Si un `CComObject`objet dérivé de est correctement construit à l’aide de l’opérateur **New** , le nombre de références initiales est 0. Pour définir le décompte de références à la valeur appropriée (1), effectuez un appel à la fonction [AddRef](#addref) .
+Si `CComObject`un objet dérivé est construit avec succès à l’aide du **nouvel** opérateur, le nombre de références initiale est de 0. Pour définir le nombre de références à la valeur appropriée (1), faites un appel à la fonction [AddRef.](#addref)
 
-##  <a name="dtor"></a>  CComObject::~CComObject
+## <a name="ccomobjectccomobject"></a><a name="dtor"></a>CComObject: CComObject
 
 Destructeur.
 
@@ -110,11 +110,11 @@ CComObject();
 
 ### <a name="remarks"></a>Notes
 
-Libère toutes les ressources allouées, appelle [FinalRelease](ccomobjectrootex-class.md#finalrelease)et décrémente le nombre de verrous de module.
+Libère toutes les ressources [allouées, appelle FinalRelease](ccomobjectrootex-class.md#finalrelease)et décrète le nombre de verrous du module.
 
-##  <a name="createinstance"></a>  CComObject::CreateInstance
+## <a name="ccomobjectcreateinstance"></a><a name="createinstance"></a>CComObject::CréerInstance
 
-Cette fonction statique vous permet de créer un nouvel objet **CComObject <** `Base` **>** , sans la surcharge de [CoCreateInstance](/windows/win32/api/combaseapi/nf-combaseapi-cocreateinstance).
+Cette fonction statique vous permet de créer un nouvel `Base` **>** objet **CComObject<,** sans les frais généraux de [CoCreateInstance](/windows/win32/api/combaseapi/nf-combaseapi-cocreateinstance).
 
 ```
 static HRESULT WINAPI CreateInstance(CComObject<Base>** pp);
@@ -122,18 +122,18 @@ static HRESULT WINAPI CreateInstance(CComObject<Base>** pp);
 
 ### <a name="parameters"></a>Paramètres
 
-*pp*<br/>
-à Pointeur vers un pointeur de **<** `Base` **>** CComObject. En `CreateInstance` cas d’échec, *pp* a la valeur null.
+*Pp*<br/>
+[out] Un pointeur à un `Base` **>** **pointeur de<CComObject.** En `CreateInstance` cas d’échec, *pp* est réglé à NULL.
 
 ### <a name="return-value"></a>Valeur de retour
 
-Valeur HRESULT standard.
+Une valeur HRESULT standard.
 
 ### <a name="remarks"></a>Notes
 
-L’objet retourné a un nombre de références égal à zéro, `AddRef` donc appelez-le `Release` immédiatement, puis utilisez pour libérer la référence sur le pointeur d’objet lorsque vous avez terminé.
+L’objet retourné a un nombre `AddRef` de références `Release` de zéro, alors appelez immédiatement, puis utilisez pour libérer la référence sur le pointeur de l’objet lorsque vous avez terminé.
 
-Si vous n’avez pas besoin d’un accès direct à l’objet, mais que vous souhaitez toujours créer un nouvel objet `CoCreateInstance`sans la surcharge de, utilisez [CComCoClass:: CreateInstance](../../atl/reference/ccomcoclass-class.md#createinstance) à la place.
+Si vous n’avez pas besoin d’un accès direct à l’objet, mais que vous souhaitez toujours créer un nouvel objet sans frais généraux, `CoCreateInstance`utilisez [CComCoClass::CreateInstance](../../atl/reference/ccomcoclass-class.md#createinstance) à la place.
 
 ### <a name="example"></a>Exemple
 
@@ -141,7 +141,7 @@ Si vous n’avez pas besoin d’un accès direct à l’objet, mais que vous sou
 
 [!code-cpp[NVC_ATL_COM#39](../../atl/codesnippet/cpp/ccomobject-class_2.cpp)]
 
-##  <a name="queryinterface"></a>  CComObject::QueryInterface
+## <a name="ccomobjectqueryinterface"></a><a name="queryinterface"></a>CComObject::QueryInterface
 
 Récupère un pointeur vers l'interface demandée.
 
@@ -153,22 +153,22 @@ HRESULT STDMETHODCALLTYPE QueryInterface(Q** pp);
 
 ### <a name="parameters"></a>Paramètres
 
-*iid*<br/>
-dans Identificateur de l’interface demandée.
+*Iid*<br/>
+[dans] L’identifiant de l’interface demandée.
 
 *ppvObject*<br/>
-à Pointeur vers le pointeur d’interface identifié par *IID*. Si l’objet ne prend pas en charge cette interface, *ppvObject* a la valeur null.
+[out] Un pointeur au pointeur d’interface identifié par *iid*. Si l’objet ne prend pas en charge cette interface, *ppvObject* est réglé sur NULL.
 
-*pp*<br/>
-à Pointeur vers le pointeur d’interface identifié par le `Q`type. Si l’objet ne prend pas en charge cette interface, *pp* a la valeur null.
+*Pp*<br/>
+[out] Un pointeur au pointeur `Q`d’interface identifié par type . Si l’objet ne prend pas en charge cette interface, *pp* est réglé sur NULL.
 
 ### <a name="return-value"></a>Valeur de retour
 
-Valeur HRESULT standard.
+Une valeur HRESULT standard.
 
-##  <a name="release"></a>  CComObject::Release
+## <a name="ccomobjectrelease"></a><a name="release"></a>CComObject::Libération
 
-Décrémente le décompte de références sur l’objet.
+Décroisse le compte de référence sur l’objet.
 
 ```
 STDMETHOD_(ULONG, Release)();
@@ -176,12 +176,12 @@ STDMETHOD_(ULONG, Release)();
 
 ### <a name="return-value"></a>Valeur de retour
 
-Cette fonction retourne le nouveau décompte de références décrémenté sur l’objet. Dans les versions Debug, la valeur de retour peut être utile pour les diagnostics ou les tests. Dans les versions sans débogage `Release` , retourne toujours 0.
+Cette fonction renvoie le nouveau compte de référence décrément sur l’objet. Dans les constructions de débog, la valeur de retour peut être utile pour le diagnostic ou les tests. Dans les constructions non-debug, `Release` retourne toujours 0.
 
 ## <a name="see-also"></a>Voir aussi
 
-[CComAggObject, classe](../../atl/reference/ccomaggobject-class.md)<br/>
-[CComPolyObject, classe](../../atl/reference/ccompolyobject-class.md)<br/>
+[Classe CComAggObject](../../atl/reference/ccomaggobject-class.md)<br/>
+[Classe CComPolyObject](../../atl/reference/ccompolyobject-class.md)<br/>
 [DECLARE_AGGREGATABLE](aggregation-and-class-factory-macros.md#declare_aggregatable)<br/>
 [DECLARE_NOT_AGGREGATABLE](aggregation-and-class-factory-macros.md#declare_not_aggregatable)<br/>
-[Vue d’ensemble de la classe](../../atl/atl-class-overview.md)
+[Vue d'ensemble des classes](../../atl/atl-class-overview.md)

@@ -1,8 +1,9 @@
 ---
 title: fread_s
-ms.date: 11/04/2016
+ms.date: 4/2/2020
 api_name:
 - fread_s
+- _o_fread_s
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -15,6 +16,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-stdio-l1-1-0.dll
+- api-ms-win-crt-private-l1-1-0
 api_type:
 - DLLExport
 topic_type:
@@ -23,12 +25,12 @@ f1_keywords:
 - fread_s
 - stdio/fread_s
 ms.assetid: ce735de0-f005-435d-a8f2-6f4b80ac775e
-ms.openlocfilehash: d1f1756af7427ecdfc8ff332f4a2211984a177d8
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 97f7ca80d4b458b952393a5b1f72bebe0bdb0d9f
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70956848"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81346128"
 ---
 # <a name="fread_s"></a>fread_s
 
@@ -51,37 +53,39 @@ size_t fread_s(
 *buffer*<br/>
 Emplacement de stockage des données.
 
-*bufferSize*<br/>
+*tamponSize*<br/>
 Taille de la mémoire tampon de destination en octets.
 
-*elementSize*<br/>
+*élémentsSize*<br/>
 Taille de l’élément à lire en octets.
 
 *count*<br/>
 Nombre maximal d’éléments à lire.
 
-*stream*<br/>
+*Flux*<br/>
 Pointeur désignant la structure **FILE**.
 
 ## <a name="return-value"></a>Valeur de retour
 
-**fread_s** retourne le nombre d’éléments (entiers) qui ont été lus dans la mémoire tampon, ce qui peut être inférieur à *Count* si une erreur de lecture ou la fin du fichier est rencontrée avant que le *nombre* soit atteint. Utilisez la fonction **feof** ou **ferror** pour distinguer une erreur d’une condition de fin de fichier. Si la *taille* ou le *nombre* est égal à 0, **fread_s** retourne 0 et le contenu de la mémoire tampon n’est pas modifié. Si *Stream* ou *buffer* est un pointeur null, **fread_s** appelle le gestionnaire de paramètre non valide, comme décrit dans [validation de paramètre](../../c-runtime-library/parameter-validation.md). Si l’exécution est autorisée à se poursuivre, cette fonction affecte à **errno** la valeur **EINVAL** et retourne 0.
+**fread_s** renvoie le nombre d’éléments (entiers) qui ont été lus dans le tampon, ce qui peut être inférieur au *compte* si une erreur de lecture ou la fin du fichier est rencontrée avant que le *compte* soit atteint. Utilisez la fonction **feof** ou **ferror** pour distinguer une erreur d’une condition de fin de fichier. Si *la taille* ou le *nombre* est de 0, **fread_s** retourne 0 et le contenu tampon est inchangé. Si *le flux* ou le *tampon* est un pointeur nul, **fread_s** invoque le gestionnaire de paramètres invalide, tel que décrit dans la validation [des paramètres](../../c-runtime-library/parameter-validation.md). Si l’exécution est autorisée à se poursuivre, cette fonction définit **errno** à **EINVAL** et renvoie 0.
 
 Pour plus d’informations sur les codes d’erreur, consultez [_doserrno, errno, _sys_errlist et _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
 
 ## <a name="remarks"></a>Notes
 
-La fonction **fread_s** lit jusqu’à *compter* les éléments de l' *élément d’éléments* du *flux* d’entrée et les stocke dans la *mémoire tampon*.  Le pointeur de fichier associé au *flux* (le cas échéant) est augmenté du nombre d’octets réellement lus. Si le flux donné est ouvert en mode texte, les paires retour chariot-saut de ligne sont remplacées par des caractères de saut de ligne simples. Le remplacement n’a aucun effet sur le pointeur de fichier ou la valeur de retour. La position du pointeur de fichier est indéterminée si une erreur se produit. La valeur d’un élément partiellement lu ne peut pas être déterminée.
+La fonction **fread_s** se lit jusqu’à *compter* les éléments des *octets* de taille du *flux* d’entrée et les stocke dans *le tampon*.  Le pointeur de fichier qui est associé au *flux* (s’il y en a un) est augmenté par le nombre d’octets réellement lus. Si le flux donné est ouvert en mode texte, les paires d’alimentation de la ligne de retour de transport sont remplacées par des caractères d’alimentation en ligne unique. Le remplacement n’a aucun effet sur le pointeur de fichier ou la valeur de retour. La position du pointeur de fichier est indéterminée si une erreur se produit. La valeur d’un élément partiellement lu ne peut pas être déterminée.
 
-Cette fonction verrouille les autres threads. Si vous avez besoin d’une version sans verrouillage, utilisez **_fread_nolock**.
+Cette fonction verrouille les autres threads. Si vous avez besoin d’une version non verrouillée, utilisez **_fread_nolock**.
 
-## <a name="requirements"></a>Configuration requise
+Par défaut, l’état global de cette fonction est étendue à l’application. Pour changer cela, voir [Global State dans le CRT](../global-state.md).
+
+## <a name="requirements"></a>Spécifications
 
 |Fonction|En-tête requis|
 |--------------|---------------------|
 |**fread_s**|\<stdio.h>|
 
-Pour plus d’informations sur la compatibilité, voir consultez [Compatibilité](../../c-runtime-library/compatibility.md).
+Pour plus d'informations sur la compatibilité, voir [Compatibilité](../../c-runtime-library/compatibility.md).
 
 ## <a name="example"></a>Exemple
 

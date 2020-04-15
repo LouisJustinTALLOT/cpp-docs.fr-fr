@@ -42,16 +42,16 @@ helpviewer_keywords:
 - std::sqrt [C++]
 - std::tan [C++]
 - std::tanh [C++]
-ms.openlocfilehash: 5ecba1de1419203d75ba6a97fbd651469a472905
-ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
+ms.openlocfilehash: bc61022b52105a976f4e43779d554f43cb6e6efe
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/16/2020
-ms.locfileid: "79416801"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81358715"
 ---
 # <a name="ltcomplexgt-functions"></a>&lt;complex&gt;, fonctions
 
-## <a name="abs"></a>absolue
+## <a name="abs"></a><a name="abs"></a>Abs
 
 Calcule le module d'un nombre complexe.
 
@@ -138,19 +138,19 @@ arg ( c2 ) = 0.523599 radians, which is 30 degrees.
 The complex numbers c2 & c3 have the same principal arguments.
 ```
 
-## <a name="acos"></a>ACOS
+## <a name="acos"></a><a name="acos"></a>Acos
 
 ```cpp
 template<class T> complex<T> acos(const complex<T>&);
 ```
 
-## <a name="acosh"></a>acosh
+## <a name="acosh"></a><a name="acosh"></a>acosh acosh
 
 ```cpp
 template<class T> complex<T> acosh(const complex<T>&);
 ```
 
-## <a name="arg"></a>donnée
+## <a name="arg"></a><a name="arg"></a>Arg
 
 Extrait l’argument d’un nombre complexe.
 
@@ -170,7 +170,7 @@ Argument du nombre complexe.
 
 ### <a name="remarks"></a>Notes
 
-L' *argument* est l’angle que le vecteur complexe effectue avec l’axe réel positif dans le plan complexe. Pour un nombre complexe *a + bi*, l’argument est égal à arctan (*b/a*). L’angle a un sens positif quand il est mesuré dans le sens contraire des aiguilles d’une montre à partir de l’axe réel positif et un sens négatif quand il est mesuré dans le sens des aiguilles d’une montre. Les valeurs de principal sont supérieures à-pi et inférieures ou égales à + pi.
+*L’argument* est l’angle que le vecteur complexe fait avec l’axe réel positif dans le plan complexe. Pour un nombre complexe *a bi*, l’argument est égal à l’arctan *(b/a*). L’angle a un sens positif quand il est mesuré dans le sens contraire des aiguilles d’une montre à partir de l’axe réel positif et un sens négatif quand il est mesuré dans le sens des aiguilles d’une montre. Les valeurs principales sont supérieures à -pi et inférieures ou égales à 'pi.
 
 ### <a name="example"></a>Exemple
 
@@ -237,31 +237,31 @@ arg ( c2 ) = 0.523599 radians, which is 30 degrees.
 The complex numbers c2 & c3 have the same principal arguments.
 ```
 
-## <a name="asin"></a>ASIN
+## <a name="asin"></a><a name="asin"></a>Asin
 
 ```cpp
 template<class T> complex<T> asin(const complex<T>&);
 ```
 
-## <a name="asinh"></a>asinh
+## <a name="asinh"></a><a name="asinh"></a>asinh
 
 ```cpp
 template<class T> complex<T> asinh(const complex<T>&);
 ```
 
-## <a name="atan"></a>atan
+## <a name="atan"></a><a name="atan"></a>Atan
 
 ```cpp
 template<class T> complex<T> atan(const complex<T>&);
 ```
 
-## <a name="atanh"></a>ATANH
+## <a name="atanh"></a><a name="atanh"></a>atanh atanh
 
 ```cpp
 template<class T> complex<T> atanh(const complex<T>&);
 ```
 
-## <a name="conj"></a>  conj
+## <a name="conj"></a><a name="conj"></a>Conj
 
 Retourne le conjugué complexe d'un nombre complexe.
 
@@ -281,7 +281,7 @@ Conjugué complexe du nombre complexe d’entrée.
 
 ### <a name="remarks"></a>Notes
 
-Le conjugué complexe d’un nombre complexe *a + bi* est *un bi*. Le produit d’un nombre complexe et son conjugué est la norme du nombre *a*2 + *b*2.
+Le complexe conjugué *d’un* nombre complexe a bi est un *- bi*. Le produit d’un nombre complexe et son conjugué est la norme du nombre *a*2 + *b*2.
 
 ### <a name="example"></a>Exemple
 
@@ -336,7 +336,7 @@ The imaginary part of c2 is imag ( c2 ) = -3.
 The norm of (c1 * conj (c1) ) is c1 * c2 = 25
 ```
 
-## <a name="cos"></a>COS
+## <a name="cos"></a><a name="cos"></a>Cos
 
 Retourne le cosinus d'un nombre complexe.
 
@@ -358,9 +358,9 @@ Nombre complexe qui correspond au cosinus du nombre complexe d’entrée.
 
 Identités définissant les cosinus complexes :
 
-COS (*z*) = (1/2)\*(exp (*iz*) + exp (- *iz*))
+cos ( *iz**z*) (1/2)\*(exp (*iz*)
 
-COS (*z*) = cos (*a* + *bi*) = cos (*a*) Cosh ( *b*)-ISIN (*a*) sinh (*b*)
+cos (*z*) cos (*un* + *bi*) cos (*a*) cosh ( *b*) - isin (*a*) sinh (*b*)
 
 ### <a name="example"></a>Exemple
 
@@ -427,7 +427,7 @@ The complex components cos (vci), where abs (vci) = 1
 (0.540302,-1.74036e-013)
 ```
 
-## <a name="cosh"></a>cosh
+## <a name="cosh"></a><a name="cosh"></a>Cosh
 
 Retourne le cosinus hyperbolique d'un nombre complexe.
 
@@ -449,9 +449,9 @@ Nombre complexe qui correspond au cosinus hyperbolique du nombre complexe d’en
 
 Identités définissant les cosinus hyperboliques complexes :
 
-COS (*z*) = (1/2)\*(exp (*z*) + exp (- *z*))
+cos (*z*) (1/2)\*( exp (*z*) exp (- *z*)
 
-COS (*z*) = Cosh (*a + bi*) = Cosh (*a*) cos (*b*) + isinh (*a*) sin (*b*)
+cos (*a**z*) cosh (*a bi*) cosh (*a*) cos (*b**b*)
 
 ### <a name="example"></a>Exemple
 
@@ -518,7 +518,7 @@ The complex components cosh (vci), where abs (vci) = 1
 (1.54308,2.43059e-013)
 ```
 
-## <a name="exp"></a>venir
+## <a name="exp"></a><a name="exp"></a>Exp
 
 Retourne la fonction exponentielle d'un nombre complexe.
 
@@ -589,7 +589,7 @@ int main() {
 }
 ```
 
-## <a name="imag"></a>imag
+## <a name="imag"></a><a name="imag"></a>Imag
 
 Extrait le composant imaginaire d'un nombre complexe.
 
@@ -641,7 +641,7 @@ The real part of c1 is real ( c1 ) = 4.
 The imaginary part of c1 is imag ( c1 ) = 3.
 ```
 
-## <a name="log"></a>Sign
+## <a name="log"></a><a name="log"></a>rapport
 
 Retourne le logarithme naturel d'un nombre complexe.
 
@@ -711,7 +711,7 @@ int main() {
 }
 ```
 
-## <a name="log10"></a>log10
+## <a name="log10"></a><a name="log10"></a>journal10
 
 Retourne le logarithme de base 10 d'un nombre complexe.
 
@@ -781,7 +781,7 @@ int main() {
 }
 ```
 
-## <a name="norm"></a>rendement
+## <a name="norm"></a><a name="norm"></a>Norme
 
 Extrait la norme d'un nombre complexe.
 
@@ -801,7 +801,7 @@ Norme d’un nombre complexe.
 
 ### <a name="remarks"></a>Notes
 
-La norme d’un nombre complexe *a + bi* est *(a*<sup>2</sup> *+ b*<sup>2</sup> *).* La norme d’un nombre complexe est le carré de son module. Le module d’un nombre complexe est une mesure de la longueur du vecteur qui représente le nombre complexe. Le module d’un nombre complexe *a + bi* est `sqrt` *(a*<sup>2</sup> *+ b*<sup>2</sup> *),* écrit  *&#124;a + bi&#124;.*
+La norme d’un nombre complexe *a + bi* est *(a*<sup>2</sup> *+ b*<sup>2</sup>*).* La norme d’un nombre complexe est le carré de son module. Le module d’un nombre complexe est une mesure de la longueur du vecteur qui représente le nombre complexe. Le module d’un nombre complexe *a + bi* est `sqrt`*(a*<sup>2</sup> *+ b*<sup>2</sup>*),* écrit *&#124;a + bi&#124;.*
 
 ### <a name="example"></a>Exemple
 
@@ -864,7 +864,7 @@ The norm of c2 given by: norm ( c2 ) = 25
 The modulus of c2 is the square root of the norm: sqrt ( normc2 ) = 5.
 ```
 
-## <a name="polar"></a>polarisé
+## <a name="polar"></a><a name="polar"></a>Polaire
 
 Retourne le nombre complexe qui correspond à un module et à un argument spécifiés, au format cartésien.
 
@@ -887,7 +887,7 @@ Forme cartésienne du nombre complexe spécifiée en forme polaire.
 
 ### <a name="remarks"></a>Notes
 
-La forme polaire d’un nombre complexe fournit le modulo *r* et l’argument *p*, où ces paramètres sont liés aux composants cartésiens réel et imaginaire *a* et *b* par les équations *a* = r \* cos *p* et *b* = *r* \* Sin *p*.
+La forme polaire d’un nombre complexe fournit le modulus *r* et l’argument *p*, où ces paramètres sont liés aux composants cartésiens réels et imaginaires *a* et *b* par les équations *a* 'r \* cos *p* et *b* = *r* \* sin *p*.
 
 ### <a name="example"></a>Exemple
 
@@ -941,7 +941,7 @@ Argument of c2 is recovered from c2 using:
 arg ( c2 ) = 0.523599 radians, which is 30 degrees.
 ```
 
-## <a name="pow"></a>Poe
+## <a name="pow"></a><a name="pow"></a>Pow
 
 Évalue le nombre complexe obtenu en élevant une base qui est un nombre complexe à la puissance d'un autre nombre complexe.
 
@@ -1086,13 +1086,13 @@ The modulus of ce4 is: 9.8696
 The argument of ce4 is: -1.14473 radians, which is -65.5882 degrees.
 ```
 
-## <a name="proj"></a>proj
+## <a name="proj"></a><a name="proj"></a>Proj
 
 ```cpp
 template<class T> complex<T> proj(const complex<T>&);
 ```
 
-## <a name="real"></a>non
+## <a name="real"></a><a name="real"></a>Réel
 
 Extrait le composant réel d'un nombre complexe.
 
@@ -1144,7 +1144,7 @@ The real part of c1 is real ( c1 ) = 4.
 The imaginary part of c1 is imag ( c1 ) = 3.
 ```
 
-## <a name="sin"></a>Sin
+## <a name="sin"></a><a name="sin"></a>Péché
 
 Retourne le sinus d'un nombre complexe.
 
@@ -1166,9 +1166,9 @@ Nombre complexe qui correspond au sinus du nombre complexe d’entrée.
 
 Identités définissant les sinus complexes :
 
-Sin (*z*) = (1/2 *i*)\*(exp (*iz*)-exp (- *iz*))
+sin (*z*) (1/2 *i*)\*( exp (*iz*) - exp (- *iz*)
 
-Sin (*z*) = sin (*a + bi*) = sin (*a*) Cosh (*b*) + ICOS (*a*) sinh (*b*)
+péché (*z*) - péché (*a bi*) - péché (*a*) cosh (*b*) icos (*a*) sinh (*b*)
 
 ### <a name="example"></a>Exemple
 
@@ -1235,7 +1235,7 @@ The complex components sin (vci), where abs (vci) = 1
 (-0.841471,-1.11747e-013)
 ```
 
-## <a name="sinh"></a>Sinh
+## <a name="sinh"></a><a name="sinh"></a>Sinh
 
 Retourne le sinus hyperbolique d'un nombre complexe.
 
@@ -1257,9 +1257,9 @@ Nombre complexe qui correspond au sinus hyperbolique du nombre complexe d’entr
 
 Identités définissant les sinus hyperboliques complexes :
 
-sinh (*z*) = (1/2)\*(exp (*z*)-exp (- *z*))
+sinh (*z*) (1/2)\*( exp (*z*) - exp (- *z*)
 
-sinh (*z*) = sinh (*a + bi*) = sinh (*a*) cos (*b*) + *i*Cosh (*a*) sin (*b*)
+sinh (*z*) - sinh (*a bi*) - sinh (*a*) cos (*b*) ' *i*cosh (*a*) sin (*b*)
 
 ### <a name="example"></a>Exemple
 
@@ -1326,7 +1326,7 @@ The complex components sinh (vci), where abs (vci) = 1
 (-1.1752,-3.19145e-013)
 ```
 
-## <a name="sqrt"></a>racine
+## <a name="sqrt"></a><a name="sqrt"></a>Sqrt
 
 Calcule la racine carrée d’un nombre complexe.
 
@@ -1403,7 +1403,7 @@ The argument of c2 = ( 1 / 2 ) * arg ( c1 ) =0.785398 radians,
 which is 45 degrees.
 ```
 
-## <a name="tan"></a> tan
+## <a name="tan"></a><a name="tan"></a>Tan
 
 Retourne la tangente d'un nombre complexe.
 
@@ -1425,7 +1425,7 @@ Nombre complexe qui correspond à la tangente du nombre complexe d’entrée.
 
 Identités définissant la cotangente complexe :
 
-Tan (*z*) = sin (*z*)/cos (*z*) = (exp (*iz*)-exp (- *iz*))/ *i*(exp (*iz*) + exp (- *iz*))
+tan ( *iz**z*) - péché (*z*) / cos (*z*) ( exp (*iz*) - exp (- *iz*) ) / *i*( exp (*iz*)
 
 ### <a name="example"></a>Exemple
 
@@ -1492,7 +1492,7 @@ The complex components tan (vci), where abs (vci) = 1
 (-1.55741,-7.08476e-013)
 ```
 
-## <a name="tanh"></a>Tanh
+## <a name="tanh"></a><a name="tanh"></a>tanh tanh
 
 Retourne la tangente hyperbolique d'un nombre complexe.
 
@@ -1514,7 +1514,7 @@ Nombre complexe qui correspond à la tangente hyperbolique du nombre complexe d�
 
 Identités définissant la cotangente hyperbolique complexe :
 
-tanh (*z*) = sinh (*z*)/Cosh (*z*) = (exp (*z*)-exp (- *z*))/(exp (*z*) + exp (- *z*))
+*z*tanh (*z*) - sinh (*z*) / cosh (*z*) ( exp (*z*) - exp (- *z*) ) / ( exp (*z*)
 
 ### <a name="example"></a>Exemple
 

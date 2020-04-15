@@ -1,6 +1,6 @@
 ---
-title: 'Fonctions de Bessel : _j0, _j1, _jn, _y0, _y1, _yn'
-ms.date: 04/05/2018
+title: 'Fonctions de Bessel : _j0, _j1, _jn, _y0, _y1, _yn'
+ms.date: 4/2/2020
 api_name:
 - _j0
 - _j1
@@ -8,6 +8,12 @@ api_name:
 - _y0
 - _y1
 - _yn
+- _o__j0
+- _o__j1
+- _o__jn
+- _o__y0
+- _o__y1
+- _o__yn
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -20,6 +26,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-math-l1-1-0.dll
+- api-ms-win-crt-private-l1-1-0
 api_type:
 - DLLExport
 topic_type:
@@ -41,14 +48,14 @@ helpviewer_keywords:
 - _y1 function
 - _yn function
 ms.assetid: a21a8bf1-df9d-4ba0-a8c2-e7ef71921d96
-ms.openlocfilehash: 5420b34846998cdbcb4814d8319274f1a3516d91
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: cdf722c9c6f6055ac918d1bede59345a9ef8d90d
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70939458"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81348659"
 ---
-# <a name="bessel-functions-_j0-_j1-_jn-_y0-_y1-_yn"></a>Fonctions de Bessel : _j0, _j1, _jn, _y0, _y1, _yn
+# <a name="bessel-functions-_j0-_j1-_jn-_y0-_y1-_yn"></a>Fonctions de Bessel : _j0, _j1, _jn, _y0, _y1, _yn
 
 Calcule la fonction de Bessel de première ou deuxième espèce, d’ordre 0, 1 ou n. Les fonctions de Bessel sont couramment utilisées dans les calculs mathématiques de la théorie sur les ondes électromagnétiques.
 
@@ -79,7 +86,7 @@ double _yn(
 
 ### <a name="parameters"></a>Paramètres
 
-*x*<br/>
+*X*<br/>
 Valeur à virgule flottante.
 
 *n*<br/>
@@ -87,25 +94,27 @@ Ordre d’entier de la fonction de Bessel.
 
 ## <a name="return-value"></a>Valeur de retour
 
-Chacune de ces routines retourne une fonction de Bessel de *x*. Si *x* est négatif dans les **fonctions _y0**, **_Y1**ou **_Yn** , la routine définit **errno** sur **Edom**, imprime un message d’erreur **_DOMAIN** sur **stderr**et retourne **_HUGE_VAL**. Vous pouvez modifier la gestion des erreurs à l’aide de _ **matherr**.
+Chacune de ces routines renvoie une fonction Bessel de *x*. Si *x* est négatif dans le **_y0**, **_y1**, ou **_yn** fonctions, la routine définit **errno** à **EDOM**, imprime un message **d’erreur _DOMAIN** à **stderr**, et retourne **_HUGE_VAL**. Vous pouvez modifier la manipulation des erreurs en utilisant **_matherr**.
 
 ## <a name="remarks"></a>Notes
 
-Les routines **_j0**, **_j1**et **_jn** retournent les fonctions de Bessel du premier genre : Orders 0, 1 et n, respectivement.
+Les **_j0**, **_j1**, et **_jn** routines retournent les fonctions Bessel du premier type : les commandes 0, 1 et n, respectivement.
 
-|Entrée|Exception SEH|Exception{b> <b}Matherr|
+|Entrée|Exception SEH|Exception\{b\> \<b\}Matherr|
 |-----------|-------------------|-----------------------|
-|± **QNAN**, **IND**|**NON VALIDE**|**_DOMAIN**|
+|**QNAN**, **IND**|**Non valide**|**_DOMAIN**|
 
-Les routines **_y0**, **_Y1**et **_yn** retournent des fonctions de Bessel du deuxième genre : Orders 0, 1 et n, respectivement.
+Les **_y0,** **_y1**, et **_yn** routines retournent les fonctions Bessel du deuxième type : les commandes 0, 1 et n, respectivement.
 
-|Entrée|Exception SEH|Exception{b> <b}Matherr|
+|Entrée|Exception SEH|Exception\{b\> \<b\}Matherr|
 |-----------|-------------------|-----------------------|
-|± **QNAN**, **IND**|**NON VALIDE**|**_DOMAIN**|
-|± 0|**ZERODIVIDE**|**_SING**|
-|&#124;x&#124; < 0,0|**NON VALIDE**|**_DOMAIN**|
+|**QNAN**, **IND**|**Non valide**|**_DOMAIN**|
+|0|**ZERODIVIDE**|**_SING**|
+|&#124;x&#124; < 0,0|**Non valide**|**_DOMAIN**|
 
-## <a name="requirements"></a>Configuration requise
+Par défaut, l’état global de cette fonction est étendue à l’application. Pour changer cela, voir [Global State dans le CRT](../global-state.md).
+
+## <a name="requirements"></a>Spécifications
 
 |Routine|En-tête requis|
 |-------------|---------------------|
@@ -156,5 +165,5 @@ Bessel functions for x = 2.387000:
 
 ## <a name="see-also"></a>Voir aussi
 
-[Prise en charge de la virgule flottante](../../c-runtime-library/floating-point-support.md)<br/>
+[Soutien à la pointe flottante](../../c-runtime-library/floating-point-support.md)<br/>
 [_matherr](matherr.md)<br/>

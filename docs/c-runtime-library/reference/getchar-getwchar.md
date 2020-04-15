@@ -1,9 +1,11 @@
 ---
 title: getchar, getwchar
-ms.date: 11/04/2016
+ms.date: 4/2/2020
 api_name:
 - getchar
 - getwchar
+- _o_getchar
+- _o_getwchar
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -16,6 +18,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-stdio-l1-1-0.dll
+- api-ms-win-crt-private-l1-1-0
 api_type:
 - DLLExport
 topic_type:
@@ -30,12 +33,12 @@ helpviewer_keywords:
 - _gettchar function
 - standard input, reading from
 ms.assetid: 19fda588-3e33-415c-bb60-dd73c028086a
-ms.openlocfilehash: b969dc48e949efa02b807ec0ea442da7cb793e15
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 4311b5b896a5a406ebe14f09e7bb525cb47951b9
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70955413"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81344612"
 ---
 # <a name="getchar-getwchar"></a>getchar, getwchar
 
@@ -50,30 +53,32 @@ wint_t getwchar();
 
 ## <a name="return-value"></a>Valeur de retour
 
-Retourne le caractère lu. Pour indiquer une erreur de lecture ou une condition de fin de fichier, **GetChar** retourne **EOF**et **getwchar** retourne **WEOF**. Pour **GetChar**, utilisez l’option **feof** ou pour rechercher une **erreur ou la** fin du fichier.
+Retourne le caractère lu. Pour indiquer une erreur de lecture ou une condition de fin de dossier, **getchar** renvoie **EOF**, et **getwchar** renvoie **WEOF**. Pour **getchar**, utilisez **ferror** ou **feof** pour vérifier une erreur ou pour la fin du fichier.
 
 ## <a name="remarks"></a>Notes
 
-Chaque routine lit un caractère unique à partir de **stdin** et incrémente le pointeur de fichier associé pour pointer vers le caractère suivant. **GetChar** est identique à [_fgetchar](fgetc-fgetwc.md), mais il est implémenté en tant que fonction et en tant que macro.
+Chaque routine lit un seul personnage de **stdin** et incréments le pointeur de fichier associé pour pointer vers le personnage suivant. **getchar** est le même que [_fgetchar](fgetc-fgetwc.md), mais il est mis en œuvre comme une fonction et comme une macro.
 
 Ces fonctions verrouillent le thread appelant et sont donc thread-safe. Pour une version sans verrouillage, consultez [_getchar_nolock, _getwchar_nolock](getchar-nolock-getwchar-nolock.md).
+
+Par défaut, l’état global de cette fonction est étendue à l’application. Pour changer cela, voir [Global State dans le CRT](../global-state.md).
 
 ### <a name="generic-text-routine-mappings"></a>Mappages de routines de texte générique
 
 |Routine TCHAR.H|_UNICODE et _MBCS non définis|_MBCS défini|_UNICODE défini|
 |---------------------|------------------------------------|--------------------|-----------------------|
-|**_gettchar**|**getchar**|**getchar**|**getwchar**|
+|**_gettchar**|**Getchar**|**Getchar**|**getwchar**|
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
 |Routine|En-tête requis|
 |-------------|---------------------|
-|**getchar**|\<stdio.h>|
+|**Getchar**|\<stdio.h>|
 |**getwchar**|\<stdio.h> ou \<wchar.h>|
 
-La console n’est pas prise en charge dans les applications de plateforme Windows universelle (UWP). Les handles de flux standard associés à la console, **stdin**, **stdout**et **stderr**, doivent être redirigés pour que les fonctions runtime C puissent les utiliser dans les applications UWP. Pour plus d'informations sur la compatibilité, voir [Compatibilité](../../c-runtime-library/compatibility.md).
+La console n’est pas prise en charge dans les applications Universal Windows Platform (UWP). Les poignées de flux standard qui sont associées à la console, **stdin**, **stdout**, et **stderr**, doivent être redirigés avant que les fonctions C run-time peuvent les utiliser dans les applications UWP. Pour plus d'informations sur la compatibilité, voir [Compatibilité](../../c-runtime-library/compatibility.md).
 
-## <a name="example"></a>Exemples
+## <a name="example"></a>Exemple
 
 ```C
 // crt_getchar.c

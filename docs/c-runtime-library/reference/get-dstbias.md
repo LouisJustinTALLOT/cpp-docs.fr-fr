@@ -1,9 +1,11 @@
 ---
 title: _get_dstbias
-ms.date: 11/04/2016
+ms.date: 4/2/2020
 api_name:
 - _get_dstbias
 - __dstbias
+- _o___dstbias
+- _o__get_dstbias
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -16,6 +18,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-time-l1-1-0.dll
+- api-ms-win-crt-private-l1-1-0
 api_type:
 - DLLExport
 topic_type:
@@ -30,12 +33,12 @@ helpviewer_keywords:
 - get_dstbias function
 - _get_dstbias function
 ms.assetid: e751358c-1ecc-411b-ae2c-81b2ec54ea45
-ms.openlocfilehash: a48cc4fe35a1bbd18342750571214ed0977cf3ee
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 969b6d2dfd83a1a136fdfb3d17f8f843337b792c
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70955947"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81345230"
 ---
 # <a name="_get_dstbias"></a>_get_dstbias
 
@@ -49,28 +52,30 @@ error_t _get_dstbias( int* seconds );
 
 ### <a name="parameters"></a>Paramètres
 
-*durée*<br/>
+*Secondes*<br/>
 Décalage en secondes de l'heure d'été.
 
 ## <a name="return-value"></a>Valeur de retour
 
-Zéro en cas de réussite ou une valeur **errno** si une erreur se produit.
+Zéro en cas de succès ou d’une valeur **d’errno** en cas d’erreur.
 
 ## <a name="remarks"></a>Notes
 
-La fonction **_get_dstbias** récupère le nombre de secondes de l’heure d’été sous la forme d’un entier. Si l'heure d'été est en vigueur, le décalage par défaut est de 3 600 secondes, ce qui correspond au nombre de secondes dans une heure (même si quelques régions observent un décalage de deux heures).
+La fonction **_get_dstbias** récupère le nombre de secondes en heure d’été en tant qu’intégrant. Si l'heure d'été est en vigueur, le décalage par défaut est de 3 600 secondes, ce qui correspond au nombre de secondes dans une heure (même si quelques régions observent un décalage de deux heures).
 
-Si *seconds* a la **valeur null**, le gestionnaire de paramètre non valide est appelé, comme décrit dans [validation de paramètre](../../c-runtime-library/parameter-validation.md). Si l’exécution est autorisée à se poursuivre, cette fonction affecte à **errno** la valeur **EINVAL** et retourne **EINVAL**.
+Si *les secondes* sont **NULL**, le gestionnaire de paramètre invalide est invoqué comme décrit dans la validation [de paramètres](../../c-runtime-library/parameter-validation.md). Si l’exécution est autorisée à se poursuivre, cette fonction définit **errno** à **EINVAL** et retourne **EINVAL**.
 
-Nous vous recommandons d’utiliser cette fonction au lieu de la macro **_dstbias** ou de la fonction déconseillée **__dstbias**.
+Nous vous recommandons d’utiliser cette fonction au lieu de la macro **_dstbias** ou la fonction dépréciée **__dstbias**.
 
-## <a name="requirements"></a>Configuration requise
+Par défaut, l’état global de cette fonction est étendue à l’application. Pour changer cela, voir [Global State dans le CRT](../global-state.md).
+
+## <a name="requirements"></a>Spécifications
 
 |Routine|En-tête requis|
 |-------------|---------------------|
 |**_get_dstbias**|\<time.h>|
 
-Pour plus d'informations, voir [Compatibilité](../../c-runtime-library/compatibility.md).
+Pour plus d’informations, consultez [Compatibilité](../../c-runtime-library/compatibility.md).
 
 ## <a name="see-also"></a>Voir aussi
 

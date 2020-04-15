@@ -1,11 +1,15 @@
 ---
 title: strcpy_s, wcscpy_s, _mbscpy_s, _mbscpy_s_l
-ms.date: 01/22/2019
+ms.date: 4/2/2020
 api_name:
 - wcscpy_s
 - _mbscpy_s
 - _mbscpy_s_l
 - strcpy_s
+- _o__mbscpy_s
+- _o__mbscpy_s_l
+- _o_strcpy_s
+- _o_wcscpy_s
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -20,6 +24,7 @@ api_location:
 - api-ms-win-crt-multibyte-l1-1-0.dll
 - api-ms-win-crt-string-l1-1-0.dll
 - ntoskrnl.exe
+- api-ms-win-crt-private-l1-1-0
 api_type:
 - DLLExport
 topic_type:
@@ -40,12 +45,12 @@ helpviewer_keywords:
 - tcscpy_s function
 - wcscpy_s function
 ms.assetid: 611326f3-7929-4a5d-a465-a4683af3b053
-ms.openlocfilehash: 12c20abc13846388b7a303af4e29de3cd2a60fed
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: ac68d2fb86a43d7114b3b0e7651f5ae4367aa44b
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70957854"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81358706"
 ---
 # <a name="strcpy_s-wcscpy_s-_mbscpy_s-_mbscpy_s_l"></a>strcpy_s, wcscpy_s, _mbscpy_s, _mbscpy_s_l
 
@@ -111,7 +116,7 @@ errno_t _mbscpy_s_l(
 Emplacement de la mémoire tampon de chaîne de destination.
 
 *dest_size*<br/>
-Taille de la mémoire tampon de la chaîne de destination en unités de **caractères** pour les fonctions étroites et multioctets, et unités **wchar_t** pour les fonctions larges. Cette valeur doit être supérieure à zéro et n’est pas supérieure à **RSIZE_MAX**.
+Taille du tampon de chaîne de destination dans les unités **d’omble** pour les fonctions étroites et multi-byte, et **wchar_t** unités pour les fonctions larges. Cette valeur doit être supérieure à zéro et ne pas supérieure **à RSIZE_MAX**.
 
 *src*<br/>
 Mémoire tampon de chaîne source se terminant par null.
@@ -123,27 +128,29 @@ Paramètres régionaux à utiliser.
 
 Zéro en cas de réussite ; erreur dans un autre cas.
 
-### <a name="error-conditions"></a>Conditions d’erreur
+### <a name="error-conditions"></a>Conditions d'erreur
 
-|*dest*|*dest_size*|*src*|Valeur de retour|Contenu de *dest*|
+|*dest*|*dest_size*|*src*|Valeur retournée|Contenu de *dest*|
 |----------------------|------------------------|-----------------|------------------|----------------------------------|
-|**NULL**|any|any|**EINVAL**|non modifié|
-|any|any|**NULL**|**EINVAL**|*dest* . [0] a la valeur 0|
-|any|0 ou trop petit|any|**ERANGE**|*dest* . [0] a la valeur 0|
+|**Null**|n'importe laquelle|n'importe laquelle|**EINVAL (EN)**|non modifié|
+|n'importe laquelle|n'importe laquelle|**Null**|**EINVAL (EN)**|*dest*[0] réglé à 0|
+|n'importe laquelle|0 ou trop petit|n'importe laquelle|**ERANGE**|*dest*[0] réglé à 0|
 
 ## <a name="remarks"></a>Notes
 
-La fonction **strcpy_s** copie le contenu de l’adresse de *src*, y compris le caractère null de fin, à l’emplacement spécifié par *dest*. La chaîne de destination doit être suffisamment grande pour contenir la chaîne source et son caractère null de fin. Le comportement de **strcpy_s** n’est pas défini si les chaînes source et de destination se chevauchent.
+La fonction **strcpy_s** copie le contenu dans *l’adresse*de src , y compris le caractère null de fin, à l’endroit qui est spécifié par *dest*. La chaîne de destination doit être suffisamment grande pour contenir la chaîne source et son caractère null de fin. Le comportement de **strcpy_s** n’est pas défini si les chaînes de la source et de la destination se chevauchent.
 
-**wcscpy_s** est la version à caractères larges de **strcpy_s**et **_mbscpy_s** est la version à caractères multioctets. Les arguments de **wcscpy_s** sont des chaînes à caractères larges ; ceux de **_mbscpy_s** et **_mbscpy_s_l** sont des chaînes de caractères multioctets. Ces fonctions se comportent sinon de façon identique. **_mbscpy_s_l** est identique à **_mbscpy_s** , sauf qu’il utilise les paramètres régionaux passés au lieu des paramètres régionaux actuels. Pour plus d’informations, consultez [Locale](../../c-runtime-library/locale.md).
+**wcscpy_s** est la version grand caractère de **strcpy_s**, et **_mbscpy_s** est la version multioctet-caractère. Les arguments de **wcscpy_s** sont des chaînes de caractère large; ceux de **_mbscpy_s** et **_mbscpy_s_l** sont des cordes multioctets-caractères. Ces fonctions se comportent sinon de façon identique. **_mbscpy_s_l** est identique à **_mbscpy_s** sauf qu’il utilise le paramètre local passé au lieu de la localisation actuelle. Pour plus d’informations, consultez [Locale](../../c-runtime-library/locale.md).
 
-Si *dest* ou *src* est un pointeur null, ou si la taille de la chaîne de destination *dest_size* est trop petite, le gestionnaire de paramètres non valides est appelé, comme décrit dans [validation de paramètre](../../c-runtime-library/parameter-validation.md). Si l’exécution est autorisée à se poursuivre, ces fonctions retournent **EINVAL** et attribuent à **errno** la valeur **EINVAL** lorsque *dest* ou *src* est un pointeur null, et ils retournent **ERANGE** et attribuent à **errno** la valeur **ERANGE** lorsque la chaîne de destination est trop petite.
+Si *le dest* ou *le cr* est un pointeur nul, ou si la taille de la chaîne de destination *dest_size* est trop petite, le gestionnaire de paramètres invalide est invoqué, tel que décrit dans la validation [de paramètres](../../c-runtime-library/parameter-validation.md). Si l’exécution est autorisée à se poursuivre, ces fonctions retournent **EINVAL** et mettent **errno** à **EINVAL** lorsque *dest* ou *src* est un pointeur nul, et ils retournent **ERANGE** et mettent **errno** à **ERANGE** lorsque la chaîne de destination est trop petite.
 
 Si l'exécution aboutit, la chaîne de destination se termine toujours par un caractère null.
 
-En C++, l’utilisation de ces fonctions est simplifiée par les surcharges de modèle qui peuvent déduire la longueur de la mémoire tampon automatiquement, ce qui vous évite ainsi d’avoir à spécifier un argument de taille, et elles peuvent remplacer automatiquement les fonctions plus anciennes et moins sécurisées par leurs équivalents plus récents et sécurisés. Pour plus d'informations, consultez [Secure Template Overloads](../../c-runtime-library/secure-template-overloads.md).
+En C++, l’utilisation de ces fonctions est simplifiée par les surcharges de modèle qui peuvent déduire la longueur de la mémoire tampon automatiquement, ce qui vous évite ainsi d’avoir à spécifier un argument de taille, et elles peuvent remplacer automatiquement les fonctions plus anciennes et moins sécurisées par leurs équivalents plus récents et sécurisés. Pour plus d’informations, consultez [Sécuriser les surcharges de modèle](../../c-runtime-library/secure-template-overloads.md).
 
-Les versions de la bibliothèque de débogage de ces fonctions remplissent d’abord la mémoire tampon avec 0xFE. Pour désactiver ce comportement, utilisez [_CrtSetDebugFillThreshold](crtsetdebugfillthreshold.md).
+Les versions de bibliothèque de débogé de ces fonctions remplissent d’abord le tampon avec 0xFE. Pour désactiver ce comportement, utilisez [_CrtSetDebugFillThreshold](crtsetdebugfillthreshold.md).
+
+Par défaut, l’état global de cette fonction est étendue à l’application. Pour changer cela, voir [Global State dans le CRT](../global-state.md).
 
 ### <a name="generic-text-routine-mappings"></a>Mappages de routines de texte générique
 
@@ -151,7 +158,7 @@ Les versions de la bibliothèque de débogage de ces fonctions remplissent d’a
 |---------------------|------------------------------------|--------------------|-----------------------|
 |**_tcscpy_s**|**strcpy_s**|**_mbscpy_s**|**wcscpy_s**|
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
 |Routine|En-tête requis|
 |-------------|---------------------|
@@ -163,7 +170,7 @@ Ces fonctions sont spécifiques à Microsoft. Pour plus d'informations sur la co
 
 ## <a name="example"></a>Exemple
 
-Contrairement au code de qualité de production, cet exemple appelle les fonctions de chaîne sécurisée sans rechercher les erreurs :
+Contrairement au code de qualité de production, cet échantillon appelle les fonctions de chaîne sécurisées sans vérifier les erreurs :
 
 ```C
 // crt_strcpy_s.c
@@ -193,7 +200,7 @@ int main(void)
 String = Hello world from strcpy_s and strcat_s!
 ```
 
-Lors de C++ la génération de code, les versions de modèle peuvent être plus faciles à utiliser.
+Lors de la construction du code C, les versions de modèle peuvent être plus faciles à utiliser.
 
 ```cpp
 // crt_wcscpy_s.cpp
@@ -226,7 +233,7 @@ String = Hello world from wcscpy_s and wcscat_s!
 
 ## <a name="see-also"></a>Voir aussi
 
-[Manipulation de chaînes](../../c-runtime-library/string-manipulation-crt.md) <br/>
+[Manipulation des cordes](../../c-runtime-library/string-manipulation-crt.md) <br/>
 [strcat, wcscat, _mbscat, _mbscat_l](strcat-wcscat-mbscat.md) <br/>
 [strcmp, wcscmp, _mbscmp, _mbscmp_l](strcmp-wcscmp-mbscmp.md) <br/>
 [strncat_s, _strncat_s_l, wcsncat_s, _wcsncat_s_l, _mbsncat_s, _mbsncat_s_l](strncat-s-strncat-s-l-wcsncat-s-wcsncat-s-l-mbsncat-s-mbsncat-s-l.md) <br/>

@@ -1,10 +1,12 @@
 ---
 title: difftime, _difftime32, _difftime64
-ms.date: 11/04/2016
+ms.date: 4/2/2020
 api_name:
 - _difftime32
 - difftime
 - _difftime64
+- _o__difftime32
+- _o__difftime64
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -17,6 +19,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-time-l1-1-0.dll
+- api-ms-win-crt-private-l1-1-0
 api_type:
 - DLLExport
 topic_type:
@@ -35,12 +38,12 @@ helpviewer_keywords:
 - _difftime64 function
 - difftime32 function
 ms.assetid: 4cc0ac2b-fc7b-42c0-8283-8c9d10c566d0
-ms.openlocfilehash: 51d74ae447e87e91e9be3c27864b8dfe7f490b14
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: e2573f0bd5120796c0185c4dafe2699f8ceaae29
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70937645"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81348133"
 ---
 # <a name="difftime-_difftime32-_difftime64"></a>difftime, _difftime32, _difftime64
 
@@ -64,19 +67,21 @@ Heure de début
 
 ## <a name="return-value"></a>Valeur de retour
 
-**difftime** retourne le temps écoulé en secondes, de *timeStart* à *timeEnd*. La valeur retournée est un nombre à virgule flottante double précision. Cette valeur peut être 0, indiquant alors une erreur.
+**difftime** retourne le temps écoulé en quelques secondes, de *timeStart* à *timeEnd*. La valeur retournée est un nombre à virgule flottante double précision. Cette valeur peut être 0, indiquant alors une erreur.
 
 ## <a name="remarks"></a>Notes
 
-La fonction **difftime** calcule la différence entre les deux valeurs d’heure fournies *timeStart* et *timeEnd*.
+La fonction **difftime** calcule la différence entre les deux valeurs de temps fournies *timeStart* et *timeEnd*.
 
-La valeur de temps fournie doit être comprise dans la plage de **time_t**. **time_t** est une valeur de 64 bits. Ainsi, la fin de la plage a été repoussée du 18 janvier 2038 à 23:59:59, heure UTC au 31 décembre 3000 à 23:59:59. La plage inférieure de **time_t** est toujours le 1er janvier 1970.
+La valeur de temps fournie doit s’adapter dans la gamme de **time_t**. **time_t** est une valeur 64 bits. Ainsi, la fin de la plage a été repoussée du 18 janvier 2038 à 23:59:59, heure UTC au 31 décembre 3000 à 23:59:59. La fourchette inférieure de **time_t** est encore minuit, le 1er janvier 1970.
 
-**difftime** est une fonction inline qui prend la valeur **_difftime32** ou **_difftime64** , selon que **_USE_32BIT_TIME_T** est défini ou non. _difftime32 et _difftime64 peuvent être utilisés directement pour forcer l’utilisation d’une taille particulière du type d’heure.
+**difftime** est une fonction inline qui évalue à **_difftime32** ou **_difftime64** selon que **_USE_32BIT_TIME_T** est définie. _difftime32 et _difftime64 peuvent être utilisés directement pour forcer l’utilisation d’une taille particulière du type d’heure.
 
-Ces fonctions valident leurs paramètres. Si l’un des paramètres est zéro ou négatif, le gestionnaire de paramètres non valides est appelé, comme décrit dans [Validation de paramètre](../../c-runtime-library/parameter-validation.md). Si l’exécution est autorisée à se poursuivre, ces fonctions retournent 0 et attribuent à **errno** la valeur **EINVAL**.
+Ces fonctions valident leurs paramètres. Si l’un des paramètres est zéro ou négatif, le gestionnaire de paramètres non valides est appelé, comme décrit dans [Validation de paramètre](../../c-runtime-library/parameter-validation.md). Si l’exécution est autorisée à se poursuivre, ces fonctions retournent 0 et **placent errno** à **EINVAL**.
 
-## <a name="requirements"></a>Configuration requise
+Par défaut, l’état global de cette fonction est étendue à l’application. Pour changer cela, voir [Global State dans le CRT](../global-state.md).
+
+## <a name="requirements"></a>Spécifications
 
 |Routine|En-tête requis|
 |-------------|---------------------|
@@ -144,6 +149,6 @@ Program takes      3 seconds.
 
 ## <a name="see-also"></a>Voir aussi
 
-[Prise en charge de la virgule flottante](../../c-runtime-library/floating-point-support.md)<br/>
+[Soutien à la pointe flottante](../../c-runtime-library/floating-point-support.md)<br/>
 [Gestion du temps](../../c-runtime-library/time-management.md)<br/>
 [time, _time32, _time64](time-time32-time64.md)<br/>

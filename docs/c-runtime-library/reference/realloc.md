@@ -1,8 +1,9 @@
 ---
 title: realloc
-ms.date: 11/04/2016
+ms.date: 4/2/2020
 api_name:
 - realloc
+- _o_realloc
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -15,6 +16,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-heap-l1-1-0.dll
+- api-ms-win-crt-private-l1-1-0
 api_type:
 - DLLExport
 topic_type:
@@ -35,12 +37,12 @@ helpviewer_keywords:
 - _frealloc function
 - reallocate memory blocks
 ms.assetid: 2b2239de-810b-4b11-9438-32ab0a244185
-ms.openlocfilehash: 6197b7bca3ec9f416696e1ded8ea5ca813392616
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 964c465a95d44de9d8a4d399f23ec43f8a3a6692
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70949499"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81332934"
 ---
 # <a name="realloc"></a>realloc
 
@@ -60,28 +62,28 @@ void *realloc(
 *memblock*<br/>
 Pointeur désignant le bloc de mémoire précédemment alloué.
 
-*size*<br/>
+*Taille*<br/>
 Nouvelle taille en octets.
 
 ## <a name="return-value"></a>Valeur de retour
 
-**realloc** retourne un pointeur **void** vers le bloc de mémoire réalloué (et éventuellement déplacé).
+**réaffecter** retourne un pointeur **vide** au bloc de mémoire réaffecté (et peut-être déplacé).
 
-Si la mémoire disponible est insuffisante pour étendre le bloc à la taille donnée, le bloc d’origine reste inchangé et la **valeur null** est retournée.
+S’il n’y a pas assez de mémoire disponible pour étendre le bloc à la taille donnée, le bloc d’origine est laissé inchangé, et **NULL** est retourné.
 
-Si la *taille* est égale à zéro, le bloc pointé par *memblock* est libéré ; la valeur de retour est **null**et *memblock* pointe vers un bloc libéré.
+Si *la taille* est nulle, alors le bloc pointé vers le *memblock* est libéré; la valeur de retour est **NULL**, et *memblock* est laissé pointant vers un bloc libéré.
 
-La valeur de retour pointe vers un espace de stockage qui est obligatoirement aligné correctement pour le stockage de tout type d'objet. Pour obtenir un pointeur vers un type autre que **void**, utilisez un cast de type sur la valeur de retour.
+La valeur de retour pointe vers un espace de stockage qui est obligatoirement aligné correctement pour le stockage de tout type d'objet. Pour obtenir un pointeur à un type autre que **vide,** utilisez un type de fonte sur la valeur de retour.
 
 ## <a name="remarks"></a>Notes
 
-La fonction **realloc** modifie la taille d’un bloc de mémoire alloué. L’argument *memblock* pointe vers le début du bloc de mémoire. Si *memblock* a la **valeur null**, **realloc** se comporte de la même façon que **malloc** et alloue un nouveau bloc de *taille* octets. Si *memblock* n’a pas la **valeur null**, il doit s’agir d’un pointeur retourné par un appel précédent à **calloc**, **malloc**ou **realloc**.
+La fonction **de réaffectation** modifie la taille d’un bloc mémoire alloué. *L’argument memblock* indique le début du bloc de mémoire. Si *memblock* est **NULL**, **réaffecter** se comporte de la même manière que **malloc** et alloue un nouveau bloc d’octets de *taille.* Si *memblock* n’est pas **NULL**, il devrait être un pointeur retourné par un appel précédent à **calloc**, **malloc**, ou **réaffecter**.
 
-L’argument *Size* donne la nouvelle taille du bloc, en octets. Le contenu du bloc est inchangé tant que la plus courte des tailles nouvelle et ancienne n’est pas atteinte, même si le nouveau bloc peut se trouver à un autre emplacement. Étant donné que le nouveau bloc peut se trouver dans un nouvel emplacement de mémoire, il n’est pas garanti que le pointeur retourné par **realloc** soit le pointeur transmis via l’argument *memblock* . **realloc** n’a aucune mémoire allouée récemment dans le cas de la croissance de la mémoire tampon.
+*L’argument de taille* donne la nouvelle taille du bloc, dans les octets. Le contenu du bloc est inchangé tant que la plus courte des tailles nouvelle et ancienne n’est pas atteinte, même si le nouveau bloc peut se trouver à un autre emplacement. Parce que le nouveau bloc peut être dans un nouvel emplacement de mémoire, le pointeur retourné par **réaffectation n’est** pas garanti d’être le pointeur passé par l’argument *memblock.* **réaffecter** ne zéro mémoire nouvellement allouée dans le cas de la croissance tampon.
 
-**realloc** affecte à **errno** la valeur **ENOMEM** si l’allocation de mémoire échoue ou si la quantité de mémoire demandée dépasse **_HEAP_MAXREQ**. Pour plus d’informations sur ce code d’erreur et les autres, consultez [errno, _doserrno, _sys_errlist et _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
+**réaffectation** définit **errno** à **ENOMEM** si l’allocation de mémoire échoue ou si la quantité de mémoire demandée dépasse **_HEAP_MAXREQ**. Pour plus d’informations sur ce code d’erreur et les autres, consultez [errno, _doserrno, _sys_errlist et _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
 
-**realloc** appelle **malloc** afin d’utiliser la C++ fonction [_set_new_mode](set-new-mode.md) pour définir le nouveau mode de gestionnaire. Le nouveau mode de gestionnaire indique si, en cas d’échec, **malloc** est appelé la routine de nouveau gestionnaire telle qu’elle est définie par [_set_new_handler](set-new-handler.md). Par défaut, **malloc** n’appelle pas la routine de nouveau gestionnaire en cas d’échec d’allocation de mémoire. Vous pouvez remplacer ce comportement par défaut de sorte que, lorsque **realloc** ne parvient pas à allouer de la mémoire, **malloc** appelle la routine de nouveau gestionnaire de la même façon que le **nouvel** opérateur quand il échoue pour la même raison. Pour remplacer la valeur par défaut, appelez
+**réaffecter** les appels **malloc** afin d’utiliser la fonction [de _set_new_mode](set-new-mode.md) de C pour définir le nouveau mode de manutention. Le nouveau mode de manutention indique si, en cas de défaillance, **malloc** est d’appeler la nouvelle routine de gestionnaire tel que défini par [_set_new_handler](set-new-handler.md). Par défaut, **malloc** n’appelle pas la nouvelle routine de gestionnaire sur l’omission d’allouer la mémoire. Vous pouvez passer outre à ce comportement par défaut de sorte que, lorsque **la réaffectation** ne parvient pas à allouer la mémoire, **malloc** appelle la nouvelle routine de gestionnaire de la même manière que le **nouvel** opérateur fait quand il échoue pour la même raison. Pour ce faire, appelez
 
 ```C
 _set_new_mode(1);
@@ -89,11 +91,13 @@ _set_new_mode(1);
 
 au début de votre programme, ou créez un lien avec NEWMODE.OBJ (consultez [Options de lien](../../c-runtime-library/link-options.md)).
 
-Lorsque l’application est liée à une version de débogage des bibliothèques Runtime C, **realloc** se résout en [_realloc_dbg](realloc-dbg.md). Pour plus d’informations sur la gestion du tas pendant le processus de débogage, consultez [Tas de débogage CRT](/visualstudio/debugger/crt-debug-heap-details).
+Lorsque l’application est liée à une version débogéque des bibliothèques C run-time, **réaffecter résout** à [_realloc_dbg](realloc-dbg.md). Pour plus d’informations sur la gestion du tas pendant le processus de débogage, consultez [Tas de débogage CRT](/visualstudio/debugger/crt-debug-heap-details).
 
-**realloc** est marqué `__declspec(noalias)` et `__declspec(restrict)`, ce qui signifie que la fonction est garantie de ne pas modifier les variables globales et que le pointeur retourné n’a pas d’alias. Pour plus d’informations, consultez [noalias](../../cpp/noalias.md) et [restrict](../../cpp/restrict.md).
+**réaffectation** est marquée `__declspec(noalias)` et `__declspec(restrict)`, ce qui signifie que la fonction est garantie de ne pas modifier les variables globales, et que le pointeur retourné n’est pas alias. Pour plus d’informations, consultez [noalias](../../cpp/noalias.md) et [restrict](../../cpp/restrict.md).
 
-## <a name="requirements"></a>Configuration requise
+Par défaut, l’état global de cette fonction est étendue à l’application. Pour changer cela, voir [Global State dans le CRT](../global-state.md).
+
+## <a name="requirements"></a>Spécifications
 
 |Routine|En-tête requis|
 |-------------|---------------------|
@@ -101,7 +105,7 @@ Lorsque l’application est liée à une version de débogage des bibliothèques
 
 Pour plus d'informations sur la compatibilité, voir [Compatibilité](../../c-runtime-library/compatibility.md).
 
-## <a name="example"></a>Exemples
+## <a name="example"></a>Exemple
 
 ```C
 // crt_realloc.c
@@ -152,5 +156,5 @@ Size of block after realloc of 1000 more longs: 8000
 
 [Allocation de mémoire](../../c-runtime-library/memory-allocation.md)<br/>
 [calloc](calloc.md)<br/>
-[free](free.md)<br/>
+[Gratuit](free.md)<br/>
 [malloc](malloc.md)<br/>

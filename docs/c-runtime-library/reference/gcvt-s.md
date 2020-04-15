@@ -1,8 +1,9 @@
 ---
 title: _gcvt_s
-ms.date: 04/05/2018
+ms.date: 4/2/2020
 api_name:
 - _gcvt_s
+- _o__gcvt_s
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -15,6 +16,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-convert-l1-1-0.dll
+- api-ms-win-crt-private-l1-1-0
 api_type:
 - DLLExport
 topic_type:
@@ -32,12 +34,12 @@ helpviewer_keywords:
 - strings [C++], converting from floating point
 - CVTBUFSIZE
 ms.assetid: 0a8d8a26-5940-4ae3-835e-0aa6ec1b0744
-ms.openlocfilehash: da36641f6a3ba8dc1da0894aedbfa390d2e796ae
-ms.sourcegitcommit: 0cfc43f90a6cc8b97b24c42efcf5fb9c18762a42
+ms.openlocfilehash: 10d2b9af45b78a3f5ed673bde3d37894ccb00168
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/05/2019
-ms.locfileid: "73625045"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81345374"
 ---
 # <a name="_gcvt_s"></a>_gcvt_s
 
@@ -68,43 +70,45 @@ Mémoire tampon pour stocker le résultat de la conversion.
 *sizeInBytes*<br/>
 Taille de la mémoire tampon.
 
-*valeur*<br/>
+*value*<br/>
 Valeur à convertir.
 
-*digits*<br/>
+*chiffres*<br/>
 Nombre de chiffres significatifs stockés.
 
 ## <a name="return-value"></a>Valeur de retour
 
-Zéro si l’opération aboutit. En cas d’échec en raison d’un paramètre non valide (voir le tableau ci-après pour découvrir les valeurs non valides), le gestionnaire de paramètres non valides est appelé, comme décrit dans [Validation de paramètre](../../c-runtime-library/parameter-validation.md). Si l’exécution est autorisée à se poursuivre, un code d’erreur est retourné. Les codes d’erreur sont définis dans Errno.h. Pour obtenir la liste de ces erreurs, consultez [errno, _doserrno, _sys_errlist et _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
+Zéro si l’opération réussit. En cas d’échec en raison d’un paramètre non valide (voir le tableau ci-après pour découvrir les valeurs non valides), le gestionnaire de paramètres non valides est appelé, comme décrit dans [Validation de paramètre](../../c-runtime-library/parameter-validation.md). Si l’exécution est autorisée à se poursuivre, un code d’erreur est retourné. Les codes d’erreur sont définis dans Errno.h. Pour obtenir la liste de ces erreurs, consultez [errno, _doserrno, _sys_errlist et _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
 
-### <a name="error-conditions"></a>Conditions d’erreur
+### <a name="error-conditions"></a>Conditions d'erreur
 
-|*buffer*|*sizeInBytes*|*valeur*|*digits*|Return|Valeur dans la *mémoire tampon*|
+|*buffer*|*sizeInBytes*|*value*|*chiffres*|Renvoie|Valeur dans *le tampon*|
 |--------------|-------------------|-------------|--------------|------------|-----------------------|
-|**NULL**|indifférent|indifférent|indifférent|**EINVAL**|Non modifiée.|
-|Not **null** (pointe vers une mémoire valide)|zéro|indifférent|indifférent|**EINVAL**|Non modifiée.|
-|Not **null** (pointe vers une mémoire valide)|indifférent|indifférent|>= *sizeInBytes*|**EINVAL**|Non modifiée.|
+|**Null**|n'importe laquelle|n'importe laquelle|n'importe laquelle|**EINVAL (EN)**|Non modifiée.|
+|Non **NULL** (points à la mémoire valide)|zéro|n'importe laquelle|n'importe laquelle|**EINVAL (EN)**|Non modifiée.|
+|Non **NULL** (points à la mémoire valide)|n'importe laquelle|n'importe laquelle|>= *sizeInBytes*|**EINVAL (EN)**|Non modifiée.|
 
 **Problèmes de sécurité**
 
-**_gcvt_s** peut générer une violation d’accès si la *mémoire tampon* ne pointe pas vers une mémoire valide et n’a pas la **valeur null**.
+**_gcvt_s** peut générer une violation d’accès si *le tampon* ne pointe pas vers la mémoire valide et n’est pas **NULL**.
 
 ## <a name="remarks"></a>Notes
 
-La fonction **_gcvt_s** convertit une *valeur* à virgule flottante en une chaîne de caractères (qui comprend une virgule décimale et un octet de signe possible) et stocke la chaîne dans la *mémoire tampon*. la *mémoire tampon* doit être suffisamment grande pour accueillir la valeur convertie plus un caractère null de fin, qui est ajouté automatiquement. Une mémoire tampon de longueur **_CVTBUFSIZE** est suffisante pour toute valeur à virgule flottante. Si une taille de mémoire tampon de *chiffres* + 1 est utilisée, la fonction ne remplace pas la fin de la mémoire tampon. Veillez donc à fournir une mémoire tampon suffisante pour cette opération. **_gcvt_s** tente de produire des chiffres de *chiffres* au format décimal. Si ce n’est pas le cas, il génère des chiffres de *chiffres* au format exponentiel. Les zéros de fin peuvent être supprimés pendant la conversion.
+La fonction **_gcvt_s** convertit une *valeur* de point flottant en une chaîne de caractère (qui comprend un point décimal et un byte de signe possible) et stocke la chaîne dans *le tampon.* *tampon* doit être assez grand pour tenir compte de la valeur convertie plus un caractère nul de fin, qui est annexé automatiquement. Un tampon de longueur **_CVTBUFSIZE** est suffisant pour toute valeur de point flottant. Si une taille tampon de *chiffres* 1 est utilisée, la fonction ne remplacera pas l’extrémité du tampon, alors assurez-vous de fournir un tampon suffisant pour cette opération. **_gcvt_s** tente de produire des *chiffres* de chiffres en format décimal. Si elle ne peut pas, il produit *des chiffres* de chiffres en format exponentiel. Les zéros de fin peuvent être supprimés pendant la conversion.
 
 En C++, l’utilisation de cette fonction est simplifiée par une surcharge de modèle ; la surcharge peut déduire automatiquement la longueur de la mémoire tampon, ce qui évite d’avoir à spécifier un argument de taille. Pour plus d’informations, consultez [Sécuriser les surcharges de modèle](../../c-runtime-library/secure-template-overloads.md).
 
-La version de débogage de cette fonction remplit d’abord la mémoire tampon avec 0xFE. Pour désactiver ce comportement, utilisez [_CrtSetDebugFillThreshold](crtsetdebugfillthreshold.md).
+La version de débogé de cette fonction remplit d’abord le tampon avec 0xFE. Pour désactiver ce comportement, utilisez [_CrtSetDebugFillThreshold](crtsetdebugfillthreshold.md).
 
-## <a name="requirements"></a>spécifications
+Par défaut, l’état global de cette fonction est étendue à l’application. Pour changer cela, voir [Global State dans le CRT](../global-state.md).
+
+## <a name="requirements"></a>Spécifications
 
 |Routine|En-tête requis|En-tête facultatif|
 |-------------|---------------------|---------------------|
 |**_gcvt_s**|\<stdlib.h>|\<error.h>|
 
-Pour plus d’informations sur la compatibilité, voir [Compatibilité](../../c-runtime-library/compatibility.md).
+Pour plus d’informations sur la compatibilité, consultez [Compatibility](../../c-runtime-library/compatibility.md).
 
 ## <a name="example"></a>Exemple
 
@@ -140,7 +144,7 @@ Converted value: 1.2
 ## <a name="see-also"></a>Voir aussi
 
 [Conversion de données](../../c-runtime-library/data-conversion.md)<br/>
-[Prise en charge de la virgule flottante](../../c-runtime-library/floating-point-support.md)<br/>
+[Soutien à la pointe flottante](../../c-runtime-library/floating-point-support.md)<br/>
 [atof, _atof_l, _wtof, _wtof_l](atof-atof-l-wtof-wtof-l.md)<br/>
 [_ecvt_s](ecvt-s.md)<br/>
 [_fcvt_s](fcvt-s.md)<br/>

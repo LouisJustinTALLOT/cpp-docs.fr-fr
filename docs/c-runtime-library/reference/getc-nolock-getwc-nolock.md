@@ -1,9 +1,11 @@
 ---
 title: _getc_nolock, _getwc_nolock
-ms.date: 11/04/2016
+ms.date: 4/2/2020
 api_name:
 - _getc_nolock
 - _getwc_nolock
+- _o__getc_nolock
+- _o__getwc_nolock
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -16,6 +18,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-stdio-l1-1-0.dll
+- api-ms-win-crt-private-l1-1-0
 api_type:
 - DLLExport
 topic_type:
@@ -38,12 +41,12 @@ helpviewer_keywords:
 - gettc_nolock function
 - _gettc_nolock function
 ms.assetid: eb37b272-e177-41c9-b077-12ce7ffd3b88
-ms.openlocfilehash: f6c2da5297e07d82fdea96452c3282c19329f24f
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 5a352338f84c9f5dd7dc52099aed1de9aa26c09e
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70955509"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81344804"
 ---
 # <a name="_getc_nolock-_getwc_nolock"></a>_getc_nolock, _getwc_nolock
 
@@ -62,7 +65,7 @@ wint_t _getwc_nolock(
 
 ### <a name="parameters"></a>Paramètres
 
-*stream*<br/>
+*Flux*<br/>
 Flux d’entrée.
 
 ## <a name="return-value"></a>Valeur de retour
@@ -71,7 +74,9 @@ See [getc, getwc](getc-getwc.md).
 
 ## <a name="remarks"></a>Notes
 
-Ces fonctions sont identiques à **GETC** et **getwc** , à ceci près qu’elles ne verrouillent pas le thread appelant. Elles peuvent être plus rapides, car elles n'entraînent pas la charge du verrouillage des autres threads. Utilisez ces fonctions uniquement dans les contextes thread-safe, tels que les applications à un seul thread ou lorsque la portée appelante gère déjà l'isolation des threads.
+Ces fonctions sont identiques à **getc** et **getwc** sauf qu’ils ne verrouillent pas le fil d’appel. Elles peuvent être plus rapides, car elles n'entraînent pas la charge du verrouillage des autres threads. Utilisez ces fonctions uniquement dans les contextes thread-safe, tels que les applications à un seul thread ou lorsque la portée appelante gère déjà l'isolation des threads.
+
+Par défaut, l’état global de cette fonction est étendue à l’application. Pour changer cela, voir [Global State dans le CRT](../global-state.md).
 
 ### <a name="generic-text-routine-mappings"></a>Mappages de routines de texte générique
 
@@ -79,14 +84,14 @@ Ces fonctions sont identiques à **GETC** et **getwc** , à ceci près qu’elle
 |---------------------|--------------------------------------|--------------------|-----------------------|
 |**_gettc_nolock**|**getc_nolock**|**getc_nolock**|**getwc_nolock**|
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
 |Routine|En-tête requis|
 |-------------|---------------------|
 |**getc_nolock**|\<stdio.h>|
 |**getwc_nolock**|\<stdio.h> ou \<wchar.h>|
 
-Pour plus d'informations sur la compatibilité, voir [Compatibilité](../../c-runtime-library/compatibility.md).
+Pour plus d’informations sur la compatibilité, consultez [Compatibility](../../c-runtime-library/compatibility.md).
 
 ## <a name="example"></a>Exemple
 
@@ -131,7 +136,7 @@ Line the first.
 Line the second.
 ```
 
-### <a name="output"></a>Sortie
+### <a name="output"></a>Output
 
 ```Output
 Input was: Line the first.

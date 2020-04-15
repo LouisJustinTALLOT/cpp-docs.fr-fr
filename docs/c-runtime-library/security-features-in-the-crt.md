@@ -24,12 +24,12 @@ helpviewer_keywords:
 - CRT, security enhancements
 - parameters [C++], validation
 ms.assetid: d9568b08-9514-49cd-b3dc-2454ded195a3
-ms.openlocfilehash: cf8bee39d6ec0f41049586d3861dcf450b7b2aaa
-ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
-ms.translationtype: HT
+ms.openlocfilehash: 1b42c766a7b75cb3f4d5c20d715968905d529d04
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/11/2019
-ms.locfileid: "57746941"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81361010"
 ---
 # <a name="security-features-in-the-crt"></a>Fonctionnalités de sécurité dans le CRT
 
@@ -52,11 +52,11 @@ char szBuf[10];
 strcpy(szBuf, "test"); // warning: deprecated
 ```
 
-L'affectation de la valeur 1 à `_CRT_SECURE_CPP_OVERLOAD_STANDARD_NAMES` supprime l'avertissement en modifiant l'appel `strcpy` à `strcpy_s`, ce qui empêche les dépassements de mémoire tampon. Pour plus d'informations, consultez [Secure Template Overloads](../c-runtime-library/secure-template-overloads.md).
+L'affectation de la valeur 1 à `_CRT_SECURE_CPP_OVERLOAD_STANDARD_NAMES` supprime l'avertissement en modifiant l'appel `strcpy` à `strcpy_s`, ce qui empêche les dépassements de mémoire tampon. Pour plus d’informations, consultez [Sécuriser les surcharges de modèle](../c-runtime-library/secure-template-overloads.md).
 
 Pour les fonctions déconseillées sans surcharges de modèle sécurisées, vous devez envisager de mettre à jour manuellement votre code pour utiliser les versions sécurisées.
 
-Une autre source d'avertissements de désapprobation, sans rapport avec la sécurité, sont les fonctions POSIX. Remplacez les noms de fonction POSIX par leurs équivalents standard (par exemple, remplacez [access](../c-runtime-library/reference/access-crt.md) par [_access](../c-runtime-library/reference/access-waccess.md)), ou désactivez les avertissements de désapprobation POSIX en définissant `_CRT_NONSTDC_NO_WARNINGS`. Pour plus d'informations, voir [Compatibilité](compatibility.md).
+Une autre source d'avertissements de désapprobation, sans rapport avec la sécurité, sont les fonctions POSIX. Remplacez les noms de fonction POSIX par leurs équivalents standard (par exemple, remplacez [access](../c-runtime-library/reference/access-crt.md) par [_access](../c-runtime-library/reference/access-waccess.md)), ou désactivez les avertissements de désapprobation POSIX en définissant `_CRT_NONSTDC_NO_WARNINGS`. Pour plus d’informations, consultez [Compatibilité](compatibility.md).
 
 ## <a name="additional-security-features"></a>Fonctionnalités de sécurité supplémentaires
 
@@ -64,11 +64,11 @@ Voici quelques-unes des fonctions de sécurité :
 
 - `Parameter Validation`. Les paramètres passés aux fonctions CRT sont validés, dans les fonctions sécurisées et dans de nombreuses versions préexistantes de ces fonctions. Ces validations sont :
 
-   - Vérifier les valeurs **NULL** passées aux fonctions.
+  - Vérifier les valeurs **NULL** passées aux fonctions.
 
-   - Vérifier la validité des valeurs énumérées.
+  - Vérifier la validité des valeurs énumérées.
 
-   - Vérifier que les valeurs intégrales sont comprises dans des plages valides.
+  - Vérifier que les valeurs intégrales sont comprises dans des plages valides.
 
 - Pour plus d’informations, consultez [Validation de paramètre](../c-runtime-library/parameter-validation.md).
 
@@ -88,6 +88,6 @@ Voici quelques-unes des fonctions de sécurité :
 
 ## <a name="see-also"></a>Voir aussi
 
-[Validation de paramètre](../c-runtime-library/parameter-validation.md)<br/>
-[Sécuriser les surcharges de modèle](../c-runtime-library/secure-template-overloads.md)<br/>
-[Fonctionnalités de bibliothèque CRT](../c-runtime-library/crt-library-features.md)
+[Validation des paramètres](../c-runtime-library/parameter-validation.md)<br/>
+[Surcharges de modèle sécurisées](../c-runtime-library/secure-template-overloads.md)<br/>
+[Caractéristiques de la bibliothèque CRT](../c-runtime-library/crt-library-features.md)

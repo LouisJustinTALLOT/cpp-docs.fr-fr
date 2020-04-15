@@ -1,6 +1,6 @@
 ---
-title: OnRelogEventFunc (typedef)
-description: Référence C++ typedef OnRelogEventFunc du kit de développement logiciel (SDK) Build Insights.
+title: OnRelogEventFunc typéef
+description: La référence Dactylo SDK OnRelogEventFunc typedef.
 ms.date: 02/12/2020
 helpviewer_keywords:
 - C++ Build Insights
@@ -9,23 +9,23 @@ helpviewer_keywords:
 - throughput analysis
 - build time analysis
 - vcperf.exe
-ms.openlocfilehash: 619f9a142ad19a7809b867eda93f2db634825a8f
-ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
+ms.openlocfilehash: 2df8646d530c089b1239978d716b2b619a5b4b61
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/05/2020
-ms.locfileid: "78332389"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81329067"
 ---
-# <a name="onrelogeventfunc-typedef"></a>OnRelogEventFunc (typedef)
+# <a name="onrelogeventfunc-typedef"></a>OnRelogEventFunc typéef
 
 ::: moniker range="<=vs-2015"
 
-Le C++ Kit de développement logiciel (SDK) Build Insights est compatible avec Visual Studio 2017 et versions ultérieures. Pour consulter la documentation de ces versions, définissez le contrôle sélecteur de version de Visual Studio pour cet article sur Visual Studio 2017 ou Visual Studio 2019.
+Le SDK Build Insights est compatible avec Visual Studio 2017 et plus. Pour voir la documentation de ces versions, définissez le contrôle du sélecteur Visual Studio **Version** pour cet article à Visual Studio 2017 ou Visual Studio 2019. On le trouve en haut de la table des contenus sur cette page.
 
 ::: moniker-end
 ::: moniker range=">=vs-2017"
 
-Le `OnRelogEventFunc` typedef est l’une des signatures de fonction utilisées dans la structure [RELOG_CALLBACKS](relog-callbacks-struct.md) .
+Le `OnRelogEventFunc` tapdef est l’une des signatures de fonction utilisées dans la structure [RELOG_CALLBACKS.](relog-callbacks-struct.md)
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -38,17 +38,17 @@ typedef enum CALLBACK_CODE (BUILD_INSIGHTS_API *OnRelogEventFunc)(
 
 ### <a name="parameters"></a>Paramètres
 
-*eventStack*\
-Pile d’événements pour l’événement actuel. Pour plus d’informations sur les piles d’événements, consultez [événements](../event-table.md).
+*événementStack*\
+La pile d’événements pour l’événement actuel. Pour plus d’informations sur les piles d’événements, voir [Événements](../event-table.md).
 
 *relogSession*\
-Pointeur de session de rejournalisation à utiliser lors de l’appel de [InjectEvent](../functions/inject-event.md).
+Le pointeur de session de relogging à utiliser lors de l’appel de [l’InjectEvent](../functions/inject-event.md).
 
 *callbackContext*\
-Valeur de contexte qui a été définie pour ce rappel dans [RELOG_DESCRIPTOR](analysis-descriptor-struct.md).
+La valeur contextuelle qui a été fixée pour ce rappel en [RELOG_DESCRIPTOR](analysis-descriptor-struct.md).
 
 ### <a name="return-value"></a>Valeur de retour
 
-Valeur [CALLBACK_CODE](callback-code-enum.md) qui contrôle ce qui doit se passer ensuite.
+Une [valeur CALLBACK_CODE](callback-code-enum.md) qui contrôle ce qui devrait se passer ensuite.
 
 ::: moniker-end

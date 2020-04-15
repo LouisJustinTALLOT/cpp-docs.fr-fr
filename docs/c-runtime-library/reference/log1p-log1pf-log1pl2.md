@@ -1,10 +1,13 @@
 ---
 title: log1p, log1pf, log1pl2
-ms.date: 04/05/2018
+ms.date: 4/2/2020
 api_name:
 - log1p
 - log1pf
 - log1pl
+- _o_log1p
+- _o_log1pf
+- _o_log1pl
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -17,6 +20,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-math-l1-1-0.dll
+- api-ms-win-crt-private-l1-1-0
 api_type:
 - DLLExport
 topic_type:
@@ -33,12 +37,12 @@ helpviewer_keywords:
 - log1pf function
 - log1pl function
 ms.assetid: a40d965d-b4f6-42f4-ba27-2395546f7c12
-ms.openlocfilehash: aad6675a832e1715c505026fe11ffe77f1f6d275
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: b4e077f5b806dbe38ed4a4f4e8eef0259170cb7e
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70953218"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81341808"
 ---
 # <a name="log1p-log1pf-log1pl"></a>log1p, log1pf, log1pl
 
@@ -70,37 +74,39 @@ long double log1pl(
 
 ### <a name="parameters"></a>Paramètres
 
-*x*<br/>
+*X*<br/>
 Argument à virgule flottante.
 
 ## <a name="return-value"></a>Valeur de retour
 
-En cas de réussite, retourne le logarithme naturel (base-*e*) de (*x* + 1).
+En cas de succès, renvoie le journal naturel (base-*e)* de *(x* - 1).
 
 Sinon, peut retourner l’une des valeurs suivantes :
 
-|Entrée|Résultat|Exception SEH|errno|
+|Entrée|Résultats|Exception SEH|errno|
 |-----------|------------|-------------------|-----------|
 |+inf|+inf|||
-|Nombres dénormalisés|Identique à l’entrée|UNDERFLOW||
-|±0|Identique à l’entrée|||
+|Nombres dénormalisés|Comme dans l’entrée|UNDERFLOW||
+|0|Comme dans l’entrée|||
 |-1|-inf|DIVBYZERO|ERANGE|
-|< -1|nan|INVALID|EDOM|
-|-inf|nan|INVALID|EDOM|
-|±SNaN|Identique à l’entrée|INVALID||
-|± QNaN, indéfini|Identique à l’entrée|||
+|< -1|NaN|NON VALIDE|EDOM|
+|-inf|NaN|NON VALIDE|EDOM|
+|SNaN|Comme dans l’entrée|NON VALIDE||
+|QNaN, indéfini|Comme dans l’entrée|||
 
-La valeur **errno** est définie sur ERANGE si *x* =-1. La valeur **errno** est définie sur **EDOM** si *x* <-1.
+La valeur **errno** est réglée à ERANGE si *x* -1. La valeur **errno** est réglée à **EDOM** si *x* < -1.
 
 ## <a name="remarks"></a>Notes
 
-Les fonctions **log1p** peuvent être plus précises que l' `log(x + 1)` utilisation de lorsque *x* est proche de 0.
+Les fonctions **log1p** peuvent être `log(x + 1)` plus précises que l’utilisation lorsque *x* est près de 0.
 
-Étant C++ donné que autorise la surcharge, vous pouvez appeler des surcharges de **log1p** qui acceptent et retournent des types **float** et **long** **double** . Dans un programme C, **log1p** accepte et retourne toujours un **double**.
+Étant donné que le CMD permet la surcharge, vous pouvez appeler des surcharges de **log1p** qui prennent et retournent **flotteur** et **de longs** **types doubles.** Dans un programme C, **log1p** prend toujours et renvoie un **double**.
 
-Si *x* est un nombre naturel, cette fonction retourne le logarithme de la factorielle de (*x* -1).
+Si *x* est un nombre naturel, cette fonction renvoie le logarithme du factoriel de (*x* - 1).
 
-## <a name="requirements"></a>Configuration requise
+Par défaut, l’état global de cette fonction est étendue à l’application. Pour changer cela, voir [Global State dans le CRT](../global-state.md).
+
+## <a name="requirements"></a>Spécifications
 
 |Fonction|En-tête C|En-tête C++|
 |--------------|--------------|------------------|

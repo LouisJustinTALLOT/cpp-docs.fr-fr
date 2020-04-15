@@ -1,9 +1,11 @@
 ---
 title: _mbsnbcmp, _mbsnbcmp_l
-ms.date: 11/04/2016
+ms.date: 4/2/2020
 api_name:
 - _mbsnbcmp
 - _mbsnbcmp_l
+- _o__mbsnbcmp
+- _o__mbsnbcmp_l
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -16,6 +18,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-multibyte-l1-1-0.dll
+- api-ms-win-crt-private-l1-1-0
 api_type:
 - DLLExport
 topic_type:
@@ -34,19 +37,19 @@ helpviewer_keywords:
 - _tcsncmp function
 - _mbsnbcmp function
 ms.assetid: dbc99e50-cf85-4e57-a13f-067591f18ac8
-ms.openlocfilehash: 512fd2dae54afa4a37b2b3d3103ab090d81909fa
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 2334d7755a3eaf3fb973783db17ca398e6b7f0b5
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70952301"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81340692"
 ---
 # <a name="_mbsnbcmp-_mbsnbcmp_l"></a>_mbsnbcmp, _mbsnbcmp_l
 
-Compare les **n** premiers octets de deux chaînes de caractères multioctets.
+Compare les premiers **octets n** de deux cordes multioctets.
 
 > [!IMPORTANT]
-> Cette API ne peut pas être utilisée dans les applications qui s’exécutent dans le Windows Runtime. Pour plus d’informations, consultez [Fonctions CRT non prises en charge dans les applications de la plateforme Windows universelle](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
+> Cette API ne peut pas être utilisée dans les applications qui s'exécutent dans le Windows Runtime. Pour plus d’informations, consultez [Fonctions CRT non prises en charge dans les applications de la plateforme Windows universelle](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -77,25 +80,27 @@ Paramètres régionaux à utiliser.
 
 ## <a name="return-value"></a>Valeur de retour
 
-La valeur de retour indique la relation ordinale entre les sous-chaînes de *Chaîne1* et *Chaîne2*.
+La valeur de retour indique la relation ordinaire entre les sous-cordes de *string1* et *string2*.
 
-|Valeur de retour|Description|
+|Valeur retournée|Description|
 |------------------|-----------------|
-|< 0|*Chaîne1* SUBSTRING est inférieure à la sous-chaîne *Chaîne2* .|
-|0|*Chaîne1* SUBSTRING est identique à la sous-chaîne *string2* .|
-|> 0|la sous-chaîne *Chaîne1* est supérieure à la sous-chaîne *Chaîne2* .|
+|< 0|le sous-corde *string1* est inférieur au sous-corde *string2.*|
+|0|le sous-corde *string1* est identique au sous-corde *string2.*|
+|> 0|le sous-corde *string1* est plus grand que le sous-corde *string2.*|
 
-Dans le cas d’une erreur de validation de paramètre, **_mbsnbcmp** et **_mbsnbcmp_l** retournent **_NLSCMPERROR**, qui est \<défini dans \<String. h > et mbstring. h >.
+Sur une erreur de validation de paramètres, **_mbsnbcmp** et **_mbsnbcmp_l** retour **_NLSCMPERROR** \<, qui est définie \<en string.h> et mbstring.h>.
 
 ## <a name="remarks"></a>Notes
 
-Les fonctions **_mbsnbcmp** comparent au plus les premiers octets *Count* dans *Chaîne1* et *Chaîne2* et retournent une valeur qui indique la relation entre les sous-chaînes. **_mbsnbcmp** est une version de **_mbsnbicmp**qui respecte la casse. Contrairement à **_mbsnbcoll**, **_mbsnbcmp** n’est pas affecté par l’ordre de classement des paramètres régionaux. **_mbsnbcmp** reconnaît les séquences de caractères multioctets en fonction de la [page de codes](../../c-runtime-library/code-pages.md)multioctets actuelle.
+Les fonctions **_mbsnbcmp** comparent tout au plus les octets de premier *compte* dans *string1* et *string2* et retournent une valeur qui indique la relation entre les sous-cordes. **_mbsnbcmp** est une version sensible aux cas de **_mbsnbicmp**. Contrairement à **_mbsnbcoll,** **_mbsnbcmp** n’est pas affectée par l’ordre de collation du lieu. **_mbsnbcmp** reconnaît les séquences multioctets selon la page de [code](../../c-runtime-library/code-pages.md)multioctet actuelle .
 
-**_mbsnbcmp** ressemble à **_mbsncmp**, sauf que **_mbsncmp** compare les chaînes par caractères plutôt qu’en octets.
+**_mbsnbcmp** ressemble à **_mbsncmp,** sauf que **_mbsncmp** compare les cordes par des personnages plutôt que par des octets.
 
-La valeur de sortie est affectée par le paramètre de catégorie **LC_CTYPE** des paramètres régionaux, qui spécifie les octets de tête et les octets de fin des caractères multioctets. Pour plus d’informations, consultez [setlocale](setlocale-wsetlocale.md). La fonction **_mbsnbcmp** utilise les paramètres régionaux actuels pour ce comportement dépendant des paramètres régionaux. La fonction **_mbsnbcmp_l** est identique, à ceci près qu’elle utilise à la place les paramètres *régionaux* . Pour plus d’informations, consultez [Locale](../../c-runtime-library/locale.md).
+La valeur de sortie est affectée par le réglage de la catégorie **LC_CTYPE** de l’endroit, qui spécifie les octets de plomb et les octets de fuite des caractères multioctets. Pour plus d’informations, consultez [setlocale](setlocale-wsetlocale.md). La fonction **_mbsnbcmp** utilise le lieu actuel pour ce comportement local-dépendant. La fonction **_mbsnbcmp_l** est identique, sauf qu’elle utilise le paramètre *local* à la place. Pour plus d’informations, consultez [Locale](../../c-runtime-library/locale.md).
 
-Si *string1* ou *string2* est un pointeur null, ces fonctions appellent le gestionnaire de paramètres non valides, comme décrit dans [validation de paramètre](../../c-runtime-library/parameter-validation.md). Si l’exécution est autorisée à se poursuivre, les fonctions retournent **_NLSCMPERROR** et **errno** a la valeur **EINVAL**.
+Si *la chaîne1* ou *la chaîne2* est un pointeur nul, ces fonctions invoquent le gestionnaire de paramètres invalides, tel que décrit dans [La validation de paramètres](../../c-runtime-library/parameter-validation.md). Si l’exécution est autorisée à se poursuivre, les fonctions retournent **_NLSCMPERROR** et **errno** est réglé à **EINVAL**.
+
+Par défaut, l’état global de cette fonction est étendue à l’application. Pour changer cela, voir [Global State dans le CRT](../global-state.md).
 
 ### <a name="generic-text-routine-mappings"></a>Mappages de routines de texte générique
 
@@ -104,14 +109,14 @@ Si *string1* ou *string2* est un pointeur null, ces fonctions appellent le gesti
 |**_tcsncmp**|[strncmp](strncmp-wcsncmp-mbsncmp-mbsncmp-l.md)|**_mbsnbcmp**|[wcsncmp](strncmp-wcsncmp-mbsncmp-mbsncmp-l.md)|
 |**_tcsncmp_l**|[strncmp](strncmp-wcsncmp-mbsncmp-mbsncmp-l.md)|**_mbsnbcml**|[wcsncmp](strncmp-wcsncmp-mbsncmp-mbsncmp-l.md)|
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
 |Routine|En-tête requis|
 |-------------|---------------------|
 |**_mbsnbcmp**|\<mbstring.h>|
 |**_mbsnbcmp_l**|\<mbstring.h>|
 
-Pour plus d'informations sur la compatibilité, voir [Compatibilité](../../c-runtime-library/compatibility.md).
+Pour plus d’informations sur la compatibilité, consultez [Compatibility](../../c-runtime-library/compatibility.md).
 
 ## <a name="example"></a>Exemple
 
@@ -150,7 +155,7 @@ int main( void )
 }
 ```
 
-### <a name="output"></a>Sortie
+### <a name="output"></a>Output
 
 ```Output
 Compare strings:
@@ -166,10 +171,10 @@ Result:   String 1 is equal to string 2
 
 ## <a name="see-also"></a>Voir aussi
 
-[Manipulation de chaînes](../../c-runtime-library/string-manipulation-crt.md)<br/>
+[Manipulation des cordes](../../c-runtime-library/string-manipulation-crt.md)<br/>
 [_mbsnbcat, _mbsnbcat_l](mbsnbcat-mbsnbcat-l.md)<br/>
 [_mbsnbicmp, _mbsnbicmp_l](mbsnbicmp-mbsnbicmp-l.md)<br/>
 [strncmp, wcsncmp, _mbsncmp, _mbsncmp_l](strncmp-wcsncmp-mbsncmp-mbsncmp-l.md)<br/>
 [_strnicmp, _wcsnicmp, _mbsnicmp, _strnicmp_l, _wcsnicmp_l, _mbsnicmp_l](strnicmp-wcsnicmp-mbsnicmp-strnicmp-l-wcsnicmp-l-mbsnicmp-l.md)<br/>
-[Paramètres régionaux](../../c-runtime-library/locale.md)<br/>
-[Interprétation des séquences de caractères multi-octets](../../c-runtime-library/interpretation-of-multibyte-character-sequences.md)<br/>
+[Local](../../c-runtime-library/locale.md)<br/>
+[Interprétation des séquences multioctets-caractères](../../c-runtime-library/interpretation-of-multibyte-character-sequences.md)<br/>

@@ -1,9 +1,11 @@
 ---
 title: isleadbyte, _isleadbyte_l
-ms.date: 11/04/2016
+ms.date: 4/2/2020
 api_name:
 - _isleadbyte_l
 - isleadbyte
+- _o__isleadbyte_l
+- _o_isleadbyte
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -16,6 +18,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-string-l1-1-0.dll
+- api-ms-win-crt-private-l1-1-0
 api_type:
 - DLLExport
 topic_type:
@@ -31,19 +34,19 @@ helpviewer_keywords:
 - istleadbyte function
 - isleadbyte function
 ms.assetid: 3b2bcf09-d82b-4803-9e80-59d04942802a
-ms.openlocfilehash: 6b853dcea82c2afea91b2e0545d253786c88ae5e
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: dddf1d669f77805df8e00f506b6427603ac8fd9f
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70954316"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81343842"
 ---
 # <a name="isleadbyte-_isleadbyte_l"></a>isleadbyte, _isleadbyte_l
 
 Détermine si un caractère est l’octet de tête d’un caractère multioctet.
 
 > [!IMPORTANT]
-> Cette API ne peut pas être utilisée dans les applications qui s’exécutent dans le Windows Runtime. Pour plus d’informations, consultez [Fonctions CRT non prises en charge dans les applications de la plateforme Windows universelle](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
+> Cette API ne peut pas être utilisée dans les applications qui s'exécutent dans le Windows Runtime. Pour plus d’informations, consultez [Fonctions CRT non prises en charge dans les applications de la plateforme Windows universelle](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -54,20 +57,22 @@ int _isleadbyte_l( int c );
 
 ### <a name="parameters"></a>Paramètres
 
-*c*<br/>
+*C*<br/>
 Entier à tester.
 
 ## <a name="return-value"></a>Valeur de retour
 
-**isleadbyte** retourne une valeur différente de zéro si l’argument satisfait la condition de test ou 0 dans le cas contraire. Dans les paramètres régionaux « C » et dans les paramètres régionaux SBCS (jeu de caractères codés sur un octet), **isleadbyte** retourne toujours 0.
+**isleadbyte** retourne une valeur non zéro si l’argument satisfait la condition de test ou 0 si elle ne le fait pas. Dans le lieu "C" et dans un seul caractère ensemble (SBCS) lieux, **isleadbyte** retourne toujours 0.
 
 ## <a name="remarks"></a>Notes
 
-La macro **isleadbyte** retourne une valeur différente de zéro si son argument est le premier octet d’un caractère multioctet. **isleadbyte** produit un résultat significatif pour tout argument entier compris entre-1 (**EOF**) et **UCHAR_MAX** (0xFF), inclus.
+La macro **isleadbyte** retourne une valeur non zéro si son argument est le premier byte d’un caractère multioctet. **isleadbyte** produit un résultat significatif pour tout argument d’un intégriste de -1 (**EOF**) à **UCHAR_MAX** (0xFF), inclusivement.
 
-Le type d’argument attendu de **isleadbyte** est **int**; Si un caractère signé est passé, le compilateur peut le convertir en un entier par extension de signe, ce qui produit des résultats imprévisibles.
+Le type d’argument attendu de **l’isleadoctet** est **int**; si un personnage signé est passé, le compilateur peut le convertir en un intégrier par extension de signe, donnant des résultats imprévisibles.
 
-La version de cette fonction avec le suffixe **_L** est identique, à ceci près qu’elle utilise les paramètres régionaux passés au lieu des paramètres régionaux actuels pour son comportement dépendant des paramètres régionaux.
+La version de cette fonction avec le **suffixe _l** est identique sauf qu’elle utilise le lieu passé au lieu de la localisation actuelle pour son comportement local-dépendant.
+
+Par défaut, l’état global de cette fonction est étendue à l’application. Pour changer cela, voir [Global State dans le CRT](../global-state.md).
 
 ### <a name="generic-text-routine-mappings"></a>Mappages de routines de texte générique
 
@@ -75,7 +80,7 @@ La version de cette fonction avec le suffixe **_L** est identique, à ceci près
 |---------------------|------------------------------------|--------------------|-----------------------|
 |**_istleadbyte**|Retourne toujours la valeur false|**_isleadbyte**|Retourne toujours la valeur false|
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
 |Routine|En-tête requis|
 |-------------|---------------------|
@@ -87,5 +92,5 @@ Pour plus d'informations sur la compatibilité, voir [Compatibilité](../../c-ru
 ## <a name="see-also"></a>Voir aussi
 
 [Classification d’octets](../../c-runtime-library/byte-classification.md)<br/>
-[Paramètres régionaux](../../c-runtime-library/locale.md)<br/>
-[_ismbb, routines](../../c-runtime-library/ismbb-routines.md)<br/>
+[Local](../../c-runtime-library/locale.md)<br/>
+[routines _ismbb](../../c-runtime-library/ismbb-routines.md)<br/>

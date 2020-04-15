@@ -1,6 +1,6 @@
 ---
 title: _ismbcl0, _ismbcl0_l, _ismbcl1, _ismbcl1_l, _ismbcl2, _ismbcl2_l
-ms.date: 11/04/2016
+ms.date: 4/2/2020
 api_name:
 - _ismbcl2
 - _ismbcl1
@@ -8,6 +8,12 @@ api_name:
 - _ismbcl2_l
 - _ismbcl1_l
 - _ismbcl0_l
+- _o__ismbcl0
+- _o__ismbcl0_l
+- _o__ismbcl1
+- _o__ismbcl1_l
+- _o__ismbcl2
+- _o__ismbcl2_l
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -20,6 +26,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-multibyte-l1-1-0.dll
+- api-ms-win-crt-private-l1-1-0
 api_type:
 - DLLExport
 topic_type:
@@ -51,19 +58,19 @@ helpviewer_keywords:
 - _ismbcl2_l function
 - _ismbcl0 function
 ms.assetid: ee15ebd1-462c-4a43-95f3-6735836d626a
-ms.openlocfilehash: 04560b7dd3a7188531e247499bc2ffd18bc23ca5
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 5d9481ecc8e574b602124103f8524e07270fe058
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70953854"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81343231"
 ---
 # <a name="_ismbcl0-_ismbcl0_l-_ismbcl1-_ismbcl1_l-_ismbcl2-_ismbcl2_l"></a>_ismbcl0, _ismbcl0_l, _ismbcl1, _ismbcl1_l, _ismbcl2, _ismbcl2_l
 
 **Fonctions spécifiques à la page de codes 932**, en utilisant les paramètres régionaux actuels ou une catégorie d’état de conversion LC_CTYPE spécifiée.
 
 > [!IMPORTANT]
-> Cette API ne peut pas être utilisée dans les applications qui s’exécutent dans le Windows Runtime. Pour plus d’informations, consultez [Fonctions CRT non prises en charge dans les applications de la plateforme Windows universelle](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
+> Cette API ne peut pas être utilisée dans les applications qui s'exécutent dans le Windows Runtime. Pour plus d’informations, consultez [Fonctions CRT non prises en charge dans les applications de la plateforme Windows universelle](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -93,7 +100,7 @@ int _ismbcl2_l(
 
 ### <a name="parameters"></a>Paramètres
 
-*c*<br/>
+*C*<br/>
 Caractère à tester.
 
 *locale*<br/>
@@ -101,7 +108,7 @@ Paramètres régionaux à utiliser.
 
 ## <a name="return-value"></a>Valeur de retour
 
-Chacune de ces routines retourne une valeur différente de zéro si le caractère satisfait à la condition de test ou 0 dans le cas contraire. Si *c* < = 255 et qu’il existe une routine **_ismbb** correspondante (par exemple, **_ismbcalnum** correspond à **_ismbbalnum**), le résultat est la valeur de retour de la routine **_ismbb** correspondante.
+Chacune de ces routines retourne une valeur différente de zéro si le caractère satisfait à la condition de test ou 0 dans le cas contraire. Si *c* <255 et qu’il y a une routine **_ismbb** correspondante (par exemple, **_ismbcalnum** correspond à **_ismbbalnum),** le résultat est la valeur de rendement de la routine **_ismbb** correspondante.
 
 ## <a name="remarks"></a>Notes
 
@@ -111,18 +118,20 @@ La valeur de sortie est affectée par la valeur du paramètre de catégorie **LC
 
 |Routine|Condition de test (page de codes 932 uniquement)|
 |-------------|-------------------------------------------|
-|**_ismbcl0**|JIS non-Kanji : 0x8140 < =*c*< = 0x889E.|
-|**_ismbcl0_l**|JIS non-Kanji : 0x8140 < =*c*< = 0x889E.|
-|**_ismbcl1**|JIS niveau 1 : 0x889F < =*c*< = 0x9872.|
-|**_ismbcl1_l**|JIS niveau 1 : 0x889F < =*c*< = 0x9872.|
-|**_ismbcl2**|JIS niveau 2 : 0x989F<=*c*<=0xEAA4.|
-|**_ismbcl2_l**|JIS niveau 2 : 0x989F<=*c*<=0xEAA4.|
+|**_ismbcl0**|JIS non-Kanji: 0x8140<*c*<'0x889E.|
+|**_ismbcl0_l**|JIS non-Kanji: 0x8140<*c*<'0x889E.|
+|**_ismbcl1**|JIS niveau-1: 0x889F<*c*<'0x9872.|
+|**_ismbcl1_l**|JIS niveau-1: 0x889F<*c*<'0x9872.|
+|**_ismbcl2**|JIS niveau-2: 0x989F<'*c*<'0xEAA4.|
+|**_ismbcl2_l**|JIS niveau-2: 0x989F<'*c*<'0xEAA4.|
 
-Les fonctions vérifient que la valeur spécifiée *c* correspond aux conditions de test décrites ci-dessus, mais ne vérifie pas que *c* est un caractère multioctet valide. Si l’octet de poids faible est compris dans les plages 0x00-0x3F, 0x7F ou 0xFD-0xFF, ces fonctions retournent une valeur différente de zéro, indiquant que le caractère satisfait à la condition de test. Utilisez [_ismbbtrail](ismbbtrail-ismbbtrail-l.md) pour tester si le caractère multioctet est défini.
+Les fonctions vérifient que la valeur spécifiée *c* correspond aux conditions de test décrites ci-dessus, mais ne vérifiez pas que *c* est un caractère multioctet valide. Si l’octet de poids faible est compris dans les plages 0x00-0x3F, 0x7F ou 0xFD-0xFF, ces fonctions retournent une valeur différente de zéro, indiquant que le caractère satisfait à la condition de test. Utilisez [_ismbbtrail](ismbbtrail-ismbbtrail-l.md) pour tester si le caractère multioctet est défini.
 
-**Fin des fonctions spécifiques à la page de codes 932**
+**Fin De la page de code 932 Spécifique**
 
-## <a name="requirements"></a>Configuration requise
+Par défaut, l’état global de cette fonction est étendue à l’application. Pour changer cela, voir [Global State dans le CRT](../global-state.md).
+
+## <a name="requirements"></a>Spécifications
 
 |Routine|En-tête requis|
 |-------------|---------------------|
@@ -133,7 +142,7 @@ Les fonctions vérifient que la valeur spécifiée *c* correspond aux conditions
 |**_ismbcl2**|\<mbstring.h>|
 |**_ismbcl2_l**|\<mbstring.h>|
 
-Pour plus d'informations sur la compatibilité, voir [Compatibilité](../../c-runtime-library/compatibility.md).
+Pour plus d’informations sur la compatibilité, consultez [Compatibility](../../c-runtime-library/compatibility.md).
 
 ## <a name="see-also"></a>Voir aussi
 
