@@ -6,12 +6,12 @@ helpviewer_keywords:
 - troubleshooting isolated applications
 - troubleshooting Visual C++
 ms.assetid: 3257257a-1f0b-4ede-8564-9277a7113a35
-ms.openlocfilehash: 1bd0d7638a8e7f2e3c671229e1f8d118d681e6f4
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: 0dc8488acc90f1a38a4c0de0f052590ef4f398af
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69492573"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81335438"
 ---
 # <a name="troubleshooting-cc-isolated-applications-and-side-by-side-assemblies"></a>Dépannage d'applications isolées C/C++ et d'assemblys côte à côte
 
@@ -25,30 +25,30 @@ Si le chargement d'une application échoue car le manifeste de l'application sti
 
 - Le système ne peut exécuter le programme spécifié.
 
-Si votre application ne possède aucun manifeste et dépend d'une DLL que Windows ne peut pas trouver dans les emplacements standard de recherche, un message d'erreur semblable au suivant peut afficher :
+Si votre application n’a pas de manifeste et dépend d’un DLL que Windows ne peut pas trouver dans les emplacements de recherche typiques, un message d’erreur qui ressemble à celui-ci peut être affiché:
 
-- Cette application n’a pas pu démarrer car *une dll requise* est introuvable. La réinstallation de cette application peut corriger ce problème.
+- Cette application n’a pas commencé parce *qu’un DLL requis* n’a pas été trouvé. La réinstallation de cette application peut corriger ce problème.
 
 Si votre application est déployée sur un ordinateur qui ne dispose pas de Visual Studio, et qu'elle s'arrête avec des messages d'erreur semblables aux précédents, vérifiez les points suivants :
 
-1. Suivez les étapes décrites dans [fonctionnement des dépendances d’une application visuelle C++ ](../windows/understanding-the-dependencies-of-a-visual-cpp-application.md). Dependency Walker peut afficher la plupart des dépendances d'une application ou d'une DLL. Si vous constatez que certaines DLL sont manquantes, installez-les sur l'ordinateur sur lequel vous essayez d'exécuter votre application.
+1. Suivez les étapes décrites dans [Comprendre les dépendances d’une application visuelle CMD](../windows/understanding-the-dependencies-of-a-visual-cpp-application.md). Dependency Walker peut afficher la plupart des dépendances d'une application ou d'une DLL. Si vous constatez que certaines DLL sont manquantes, installez-les sur l'ordinateur sur lequel vous essayez d'exécuter votre application.
 
-1. Le chargeur du système d'exploitation utilise le manifeste de l'application pour charger les assemblys dont dépend l'application. Le manifeste peut être incorporé dans le fichier binaire en tant que ressource ou installé en tant que fichier distinct dans le dossier de l'application. Pour vérifier si le manifeste est incorporé dans le fichier binaire, ouvrez le fichier binaire dans Visual Studio et recherchez RT_MANIFEST dans sa liste de ressources. Si vous ne trouvez pas de manifeste incorporé, recherchez dans le dossier de l’application un fichier nommé, par exemple < binary_name >. \<extension >. manifest.
+1. Le chargeur du système d'exploitation utilise le manifeste de l'application pour charger les assemblys dont dépend l'application. Le manifeste peut être incorporé dans le fichier binaire en tant que ressource ou installé en tant que fichier distinct dans le dossier de l'application. Pour vérifier si le manifeste est intégré dans le binaire, ouvrez le binaire dans Visual Studio et recherchez RT_MANIFEST dans sa liste de ressources. Si vous ne trouvez pas de manifeste intégré, regardez dans le dossier d’application pour un fichier qui a été nommé quelque chose comme <binary_name>. \<extension>.manifeste.
 
-1. Si votre application dépend d'assemblys côte à côte et qu'un manifeste n'est pas présent, vous devez vous assurer que l'éditeur de liens génère un manifeste pour votre projet. Cochez l’option générer le **manifeste** de l’éditeur de liens dans la boîte de dialogue **Propriétés du projet** pour le projet.
+1. Si votre application dépend d'assemblys côte à côte et qu'un manifeste n'est pas présent, vous devez vous assurer que l'éditeur de liens génère un manifeste pour votre projet. Vérifiez l’option de liaison **Générer manifeste** dans la boîte de dialogue **Project Properties** pour le projet.
 
-1. Si le manifeste est incorporé dans le fichier binaire, assurez-vous que l'ID de RT_MANIFEST est correct pour ce type de fichier binaire. Pour plus d’informations sur l’ID de ressource à utiliser, consultez [utilisation d’assemblys côte à côte en tant que ressource (Windows)](/windows/win32/SbsCs/using-side-by-side-assemblies-as-a-resource). Si le manifeste est dans un fichier distinct, ouvrez-le dans un éditeur XML ou un éditeur de texte. Pour plus d’informations sur les manifestes et les règles de déploiement, consultez [manifestes](/windows/win32/sbscs/manifests).
+1. Si le manifeste est incorporé dans le fichier binaire, assurez-vous que l'ID de RT_MANIFEST est correct pour ce type de fichier binaire. Pour plus d’informations sur l’ID de ressources à utiliser, voir [Utiliser des assemblages côte à côte comme une ressource (Windows)](/windows/win32/SbsCs/using-side-by-side-assemblies-as-a-resource). Si le manifeste est dans un fichier distinct, ouvrez-le dans un éditeur XML ou un éditeur de texte. Pour plus d’informations sur les manifestes et les règles de déploiement, voir [Manifestes](/windows/win32/sbscs/manifests).
 
    > [!NOTE]
    > Si un manifeste incorporé et un fichier manifeste distinct sont tous les deux présents, le chargeur du système d'exploitation utilise le manifeste incorporé et ignore le fichier distinct. Toutefois, Windows XP fonctionne de manière inverse : le fichier manifeste distinct est utilisé et le manifeste incorporé est ignoré.
 
-1. Nous vous recommandons d'incorporer un manifeste dans chaque DLL car les manifestes externes sont ignorés quand une DLL est chargée via un appel à `LoadLibrary`. Pour plus d’informations, consultez [manifestes d’assembly](/windows/win32/SbsCs/assembly-manifests).
+1. Nous vous recommandons d'incorporer un manifeste dans chaque DLL car les manifestes externes sont ignorés quand une DLL est chargée via un appel à `LoadLibrary`. Pour plus d’informations, voir [l’Assemblée manifeste](/windows/win32/SbsCs/assembly-manifests).
 
-1. Vérifiez que tous les assemblys énumérés dans le manifeste sont correctement installés sur l'ordinateur. Chaque assembly est spécifié dans le manifeste par son nom, son numéro de version et son architecture de processeur. Si votre application dépend d’assemblys côte à côte, vérifiez que ces assemblys sont correctement installés sur l’ordinateur afin que le chargeur du système d’exploitation puisse les trouver, comme décrit dans [séquence de recherche d’assemblys](/windows/win32/SbsCs/assembly-searching-sequence). N'oubliez pas que les assemblys 64 bits ne peuvent pas être chargés dans des processus 32 bits ni exécutés sur des systèmes d'exploitation 32 bits.
+1. Vérifiez que tous les assemblys énumérés dans le manifeste sont correctement installés sur l'ordinateur. Chaque assembly est spécifié dans le manifeste par son nom, son numéro de version et son architecture de processeur. Si votre application dépend d’assemblages côte à côte, vérifiez que ces assemblages sont correctement installés sur l’ordinateur afin que le chargeur de système d’exploitation puisse les trouver, tel que décrit dans [La séquence de recherche d’assemblage.](/windows/win32/SbsCs/assembly-searching-sequence) N'oubliez pas que les assemblys 64 bits ne peuvent pas être chargés dans des processus 32 bits ni exécutés sur des systèmes d'exploitation 32 bits.
 
 ## <a name="example"></a>Exemple
 
-Supposons que nous ayons une application, Appl. exe, créée à l’aide C++de Visual. Le manifeste de l'application est soit incorporé dans appl.exe en tant que ressource binaire RT_MANIFEST, qui a un ID égal à 1, soit stocké en tant que fichier distinct appl.exe.manifest. Le contenu de ce manifeste ressemble à ceci :
+Supposons que nous avons une application, appl.exe, qui est construit en utilisant Visual C . Le manifeste de l'application est soit incorporé dans appl.exe en tant que ressource binaire RT_MANIFEST, qui a un ID égal à 1, soit stocké en tant que fichier distinct appl.exe.manifest. Le contenu de ce manifeste ressemble à ceci :
 
 ```
 <assembly xmlns="urn:schemas-microsoft-com:asm.v1" manifestVersion="1.0">
@@ -74,7 +74,7 @@ Dans le cas d'un assembly partagé, le manifeste de l'assembly est installé dan
 </assembly>
 ```
 
-Les assemblys côte à côte peuvent également utiliser des [fichiers de configuration d’éditeur](/windows/win32/SbsCs/publisher-configuration-files)(également appelés fichiers de stratégie) pour rediriger globalement des applications et des assemblys afin d’utiliser une version d’un assembly côte à côte au lieu d’une autre version du même assembly. Vous pouvez vérifier les stratégies pour un assembly partagé dans le dossier %WINDIR%\WinSxS\Policies\. Voici un exemple de fichier de stratégie :
+Les assemblages côte à côte peuvent également utiliser [des fichiers de configuration d’éditeurs](/windows/win32/SbsCs/publisher-configuration-files)— également appelés fichiers de stratégie — pour rediriger globalement les applications et les assemblages pour utiliser une version d’un assemblage côte à côte au lieu d’une autre version d’une même assemblée. Vous pouvez vérifier les stratégies pour un assembly partagé dans le dossier %WINDIR%\WinSxS\Policies\. Voici un exemple de fichier de stratégie :
 
 ```
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
@@ -94,13 +94,13 @@ Ce fichier de stratégie spécifie que toute application ou tout assembly qui de
 
 Toutefois, l'assembly peut également être installé comme un assembly côte à côte privé dans le dossier de l'application installée. Si le système d'exploitation ne parvient pas à trouver l'assembly sous la forme d'un assembly partagé, il le cherche sous la forme d'un assembly privé, dans l'ordre suivant :
 
-1. Recherchez dans le dossier de l’application un fichier manifeste portant le \<nom AssemblyName >. manifest. Dans cet exemple, le chargeur essaie de trouver Fabrikam.SxS.Library.manifest dans le dossier qui contient appl.exe. S'il trouve ce manifeste, le chargeur charge l'assembly à partir du dossier de l'application. Si l'assembly est introuvable, le chargement échoue.
+1. Vérifiez le dossier d’application pour un \<fichier manifeste qui a le nom assemblyName>.manifeste. Dans cet exemple, le chargeur essaie de trouver Fabrikam.SxS.Library.manifest dans le dossier qui contient appl.exe. S'il trouve ce manifeste, le chargeur charge l'assembly à partir du dossier de l'application. Si l'assembly est introuvable, le chargement échoue.
 
-1. Essayez d’ouvrir le \\dossier <\>AssemblyName \ dans le dossier qui contient Appl. exe, et si \\< AssemblyName\>\ Exists, essayez de charger un fichier manifeste portant le nom \<AssemblyName >. manifeste à partir de ce dossier. Si le manifeste est trouvé, le chargeur charge l’assembly à partir \\du dossier\>< AssemblyName \. Si l'assembly est introuvable, le chargement échoue.
+1. Essayez d’ouvrir \\ le<assemblyName\>- dossier dans le dossier qui contient \\ appl.exe,\>et si<assemblageName - existe, essayez de charger un fichier manifeste qui a le nom \<assemblyName>.manifeste à partir de ce dossier. Si le manifeste est trouvé, la chargeuse \\ charge l’assemblage\>du<'assemblageName - dossier. Si l'assembly est introuvable, le chargement échoue.
 
-Pour plus d’informations sur la façon dont le chargeur recherche les assemblys dépendants, consultez [séquence de recherche](/windows/win32/SbsCs/assembly-searching-sequence)d’assemblys. Si le chargeur ne parvient pas à trouver un assembly dépendant sous la forme d'un assembly privé, le chargement échoue et le message « Le système ne peut exécuter le programme spécifié » s'affiche. Pour résoudre cette erreur, assurez-vous que les assemblys dépendants (et les DLL qui en font partie) sont installés sur l'ordinateur en tant qu'assemblys privés ou partagés.
+Pour plus d’informations sur la façon dont le chargeur recherche des assemblages dépendants, voir [Séquence de recherche d’assemblage](/windows/win32/SbsCs/assembly-searching-sequence). Si le chargeur ne parvient pas à trouver un assembly dépendant sous la forme d'un assembly privé, le chargement échoue et le message « Le système ne peut exécuter le programme spécifié » s'affiche. Pour résoudre cette erreur, assurez-vous que les assemblys dépendants (et les DLL qui en font partie) sont installés sur l'ordinateur en tant qu'assemblys privés ou partagés.
 
 ## <a name="see-also"></a>Voir aussi
 
-[Concepts d’applications isolées et d’assemblys côte à côte](concepts-of-isolated-applications-and-side-by-side-assemblies.md)<br/>
-[Génération d’applications isolées et d’assemblys côte à côte C/C++](building-c-cpp-isolated-applications-and-side-by-side-assemblies.md)
+[Concepts d'applications isolées et d'assemblys côte à côte](concepts-of-isolated-applications-and-side-by-side-assemblies.md)<br/>
+[Construire des applications isolées et des assemblages côte à côte](building-c-cpp-isolated-applications-and-side-by-side-assemblies.md)

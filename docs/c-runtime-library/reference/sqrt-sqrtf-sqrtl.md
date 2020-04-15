@@ -1,10 +1,11 @@
 ---
 title: sqrt, sqrtf, sqrtl
-ms.date: 04/05/2018
+ms.date: 4/2/2020
 api_name:
 - sqrtl
 - sqrtf
 - sqrt
+- _o_sqrt
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -18,6 +19,7 @@ api_location:
 - ucrtbase.dll
 - api-ms-win-crt-math-l1-1-0.dll
 - ntoskrnl.exe
+- api-ms-win-crt-private-l1-1-0
 api_type:
 - DLLExport
 topic_type:
@@ -34,12 +36,12 @@ helpviewer_keywords:
 - calculating square roots
 - square roots, calculating
 ms.assetid: 2ba9467b-f172-41dc-8f10-b86f68fa813c
-ms.openlocfilehash: 9805141a630afc123c19416595b2a96bc801eee3
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 364db84bc20f9f6cfafbdc53e1f2df6da70592df
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70958108"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81355580"
 ---
 # <a name="sqrt-sqrtf-sqrtl"></a>sqrt, sqrtf, sqrtl
 
@@ -67,30 +69,32 @@ long double sqrtl(
 
 ### <a name="parameters"></a>Paramètres
 
-*x*<br/>
+*X*<br/>
 Valeur à virgule flottante non négative
 
 ## <a name="remarks"></a>Notes
 
-Étant C++ donné que autorise la surcharge, vous pouvez appeler des surcharges de **sqrt** qui acceptent des types **float** ou **long** **double** . Dans un programme C, **sqrt** prend toujours et retourne **double**.
+Étant donné que le CMD permet la surcharge, vous pouvez appeler des surcharges de **sqrt** qui prennent **flotteur** ou **de longs** **types doubles.** Dans un programme C, **sqrt** prend toujours et retourne **double.**
+
+Par défaut, l’état global de cette fonction est étendue à l’application. Pour changer cela, voir [Global State dans le CRT](../global-state.md).
 
 ## <a name="return-value"></a>Valeur de retour
 
-Les fonctions **sqrt** retournent la racine carrée de *x*. Par défaut, si *x* est négatif, **sqrt** retourne une valeur NaN indéfinie.
+Les fonctions **sqrt** retourner la racine carrée de *x*. Par défaut, si *x* est négatif, **sqrt renvoie** un NaN indéfini.
 
-|Entrée|Exception SEH|_ **matherr** Titre|
+|Entrée|Exception SEH|**_matherr** Exception|
 |-----------|-------------------|--------------------------|
-|± QNAN,IND|none|_DOMAIN|
-|- ∞|none|_DOMAIN|
-|x<0|none|_DOMAIN|
+|± QNAN,IND|Aucun|_DOMAIN|
+|- ∞|Aucun|_DOMAIN|
+|x<0|Aucun|_DOMAIN|
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
 |Fonction|En-tête C|En-tête C++|
 |--------------|--------------|------------------|
 |**sqrt**, **sqrtf**, **sqrtl**|\<math.h>|\<cmath>|
 
-Pour plus d'informations sur la compatibilité, voir [Compatibilité](../../c-runtime-library/compatibility.md).
+Pour plus d’informations sur la compatibilité, consultez [Compatibilité](../../c-runtime-library/compatibility.md).
 
 ## <a name="example"></a>Exemple
 
@@ -119,7 +123,7 @@ The square root of 45.35 is 6.73
 
 ## <a name="see-also"></a>Voir aussi
 
-[Prise en charge de la virgule flottante](../../c-runtime-library/floating-point-support.md)<br/>
+[Soutien à la pointe flottante](../../c-runtime-library/floating-point-support.md)<br/>
 [exp, expf, expl](exp-expf.md)<br/>
 [log, logf, log10, log10f](log-logf-log10-log10f.md)<br/>
 [pow, powf, powl](pow-powf-powl.md)<br/>

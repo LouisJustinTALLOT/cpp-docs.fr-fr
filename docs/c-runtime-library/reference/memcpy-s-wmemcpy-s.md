@@ -1,9 +1,11 @@
 ---
 title: memcpy_s, wmemcpy_s
-ms.date: 11/04/2016
+ms.date: 4/2/2020
 api_name:
 - memcpy_s
 - wmemcpy_s
+- _o_memcpy_s
+- _o_wmemcpy_s
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -17,6 +19,7 @@ api_location:
 - ucrtbase.dll
 - api-ms-win-crt-string-l1-1-0.dll
 - ntoskrnl.exe
+- api-ms-win-crt-private-l1-1-0
 api_type:
 - DLLExport
 topic_type:
@@ -28,12 +31,12 @@ helpviewer_keywords:
 - memcpy_s function
 - wmemcpy_s function
 ms.assetid: 5504e20a-83d9-4063-91fc-3f55f7dabe99
-ms.openlocfilehash: 8078590df6950201ef81356ba6c28173e80572ee
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: dc5e49115b65b6883e55df13d0610231a87c1c55
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70952799"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81333339"
 ---
 # <a name="memcpy_s-wmemcpy_s"></a>memcpy_s, wmemcpy_s
 
@@ -74,22 +77,24 @@ Nombre de caractères à copier.
 
 Zéro si l'opération a réussi ; code d'erreur en cas de échec.
 
-### <a name="error-conditions"></a>Conditions d’erreur
+### <a name="error-conditions"></a>Conditions d'erreur
 
-|*dest*|*destSize*|*src*|*count*|Valeur de retour|Contenu de *dest*|
+|*dest*|*destSize*|*src*|*count*|Valeur retournée|Contenu de *dest*|
 |------------|----------------|-----------|---|------------------|------------------------|
-|any|any|any|0|0|Non modifiée|
-|**NULL**|any|any|Différent de zéro|**EINVAL**|Non modifiée|
-|any|any|**NULL**|Différent de zéro|**EINVAL**|*dest* est mis à zéro|
-|any|< *count*|any|Différent de zéro|**ERANGE**|*dest* est mis à zéro|
+|n'importe laquelle|n'importe laquelle|n'importe laquelle|0|0|Non modifiée|
+|**Null**|n'importe laquelle|n'importe laquelle|Différent de zéro|**EINVAL (EN)**|Non modifiée|
+|n'importe laquelle|n'importe laquelle|**Null**|Différent de zéro|**EINVAL (EN)**|*dest* est mis à zéro|
+|n'importe laquelle|< *Compter*|n'importe laquelle|Différent de zéro|**ERANGE**|*dest* est mis à zéro|
 
 ## <a name="remarks"></a>Notes
 
-**memcpy_s** copie le *nombre* d’octets de *src* vers *dest*; **wmemcpy_s** copie le *nombre* de caractères larges (deux octets). Si la source et la destination se chevauchent, le comportement de **memcpy_s** n’est pas défini. Utilisez **memmove_s** pour gérer les régions qui se chevauchent.
+**memcpy_s** copies *comptent* des octets de *src* à *dest;* **wmemcpy_s** copies *comptent de* larges caractères (deux octets). Si la source et la destination se chevauchent, le comportement de **memcpy_s** n’est pas défini. Utilisez **memmove_s** pour gérer les régions qui se chevauchent.
 
-Ces fonctions valident leurs paramètres. Si *Count* n’est pas égal à zéro et que *dest* ou *src* est un pointeur null, ou que *destSize* est inférieur à *Count*, ces fonctions appellent le gestionnaire de paramètres non valides, comme décrit dans [validation de paramètre](../../c-runtime-library/parameter-validation.md). Si l’exécution est autorisée à se poursuivre, ces fonctions retournent **EINVAL** ou **ERANGE** et attribuent à **errno** la valeur de retour.
+Ces fonctions valident leurs paramètres. Si *le nombre* est non-zéro et *dest* ou *src* est un pointeur nul, ou *detSize* est plus petit que *le compte*, ces fonctions invoquent le gestionnaire de paramètres invalides, comme décrit dans la validation de [paramètres](../../c-runtime-library/parameter-validation.md). Si l’exécution est autorisée à se poursuivre, ces fonctions renvoient **EINVAL** ou **ERANGE** et **fixent errno** à la valeur de retour.
 
-## <a name="requirements"></a>Configuration requise
+Par défaut, l’état global de cette fonction est étendue à l’application. Pour changer cela, voir [Global State dans le CRT](../global-state.md).
+
+## <a name="requirements"></a>Spécifications
 
 |Routine|En-tête requis|
 |-------------|---------------------|

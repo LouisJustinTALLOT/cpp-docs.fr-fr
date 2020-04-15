@@ -1,8 +1,9 @@
 ---
 title: _get_fmode
-ms.date: 11/04/2016
+ms.date: 4/2/2020
 api_name:
 - _get_fmode
+- _o__get_fmode
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -15,6 +16,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-stdio-l1-1-0.dll
+- api-ms-win-crt-private-l1-1-0
 api_type:
 - DLLExport
 topic_type:
@@ -27,12 +29,12 @@ helpviewer_keywords:
 - file translation [C++], default mode
 - get_fmode function
 ms.assetid: 22ea70e2-b9b5-422d-b514-64f4beaea45c
-ms.openlocfilehash: 03e07ea44aadec7c15352bb63fd25aa777ee9bfb
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: fbaa30d0842400037f37508df94726f3e7fd7090
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70955882"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81345167"
 ---
 # <a name="_get_fmode"></a>_get_fmode
 
@@ -49,25 +51,27 @@ errno_t _get_fmode(
 ### <a name="parameters"></a>Paramètres
 
 *pmode*<br/>
-Pointeur vers un entier à remplir avec le mode par défaut actuel : **_O_TEXT** ou **_O_BINARY**.
+Un pointeur à un intégriste à remplir avec le mode par défaut actuel: **_O_TEXT** ou **_O_BINARY**.
 
 ## <a name="return-value"></a>Valeur de retour
 
-Retourne zéro si l'opération a réussi et un code d'erreur en cas d'échec. Si *PMODE* a la **valeur null**, le gestionnaire de paramètre non valide est appelé, comme décrit dans [validation de paramètre](../../c-runtime-library/parameter-validation.md). Si l’exécution est autorisée à se poursuivre, **errno** a la valeur **EINVAL** et la fonction retourne **EINVAL**.
+Retourne zéro si l'opération a réussi et un code d'erreur en cas d'échec. Si *le pmode* est **NULL**, le gestionnaire de paramètre invalide est invoqué tel que décrit dans La validation [de paramètres](../../c-runtime-library/parameter-validation.md). Si l’exécution est autorisée à se poursuivre, **errno** est réglé sur **EINVAL** et la fonction renvoie **EINVAL**.
 
 ## <a name="remarks"></a>Notes
 
-La fonction obtient la valeur de la variable globale [_fmode](../../c-runtime-library/fmode.md). Cette variable spécifie le mode de traduction de fichier par défaut pour les opérations d’e/s de fichier de flux et de bas niveau, telles que **_open**, **_pipe**, **fopen**et [freopen](freopen-wfreopen.md).
+La fonction obtient la valeur de la variable globale [_fmode](../../c-runtime-library/fmode.md). Cette variable spécifie le mode de traduction de fichiers par défaut pour les opérations I/O de fichier de bas niveau et de flux, telles que **_open**, **_pipe**, **fopen**, et [freopen](freopen-wfreopen.md).
 
-## <a name="requirements"></a>Configuration requise
+Par défaut, l’état global de cette fonction est étendue à l’application. Pour changer cela, voir [Global State dans le CRT](../global-state.md).
+
+## <a name="requirements"></a>Spécifications
 
 |Routine|En-tête requis|En-tête facultatif|
 |-------------|---------------------|---------------------|
 |**_get_fmode**|\<stdlib.h>|\<fcntl.h>|
 
-Pour plus d'informations sur la compatibilité, voir [Compatibilité](../../c-runtime-library/compatibility.md).
+Pour plus d’informations sur la compatibilité, consultez [Compatibility](../../c-runtime-library/compatibility.md).
 
-## <a name="example"></a>Exemples
+## <a name="example"></a>Exemple
 
 Consultez l’exemple dans [_set_fmode](set-fmode.md).
 
@@ -76,4 +80,4 @@ Consultez l’exemple dans [_set_fmode](set-fmode.md).
 [_fmode](../../c-runtime-library/fmode.md)<br/>
 [_set_fmode](set-fmode.md)<br/>
 [_setmode](setmode.md)<br/>
-[E/S de fichier en mode texte et binaire](../../c-runtime-library/text-and-binary-mode-file-i-o.md)<br/>
+[Fichier de texte et de mode binaire I/O](../../c-runtime-library/text-and-binary-mode-file-i-o.md)<br/>

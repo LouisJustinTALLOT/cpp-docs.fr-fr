@@ -1,8 +1,9 @@
 ---
 title: _putw
-ms.date: 11/04/2016
+ms.date: 4/2/2020
 api_name:
 - _putw
+- _o__putw
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -15,6 +16,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-stdio-l1-1-0.dll
+- api-ms-win-crt-private-l1-1-0
 api_type:
 - DLLExport
 topic_type:
@@ -27,12 +29,12 @@ helpviewer_keywords:
 - streams, writing integers to
 - _putw function
 ms.assetid: 83d63644-249d-4a39-87e5-3b7aa313968d
-ms.openlocfilehash: be2ee5c1b3706b1f2a0847415ab4a82a6a4bbe4f
-ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
+ms.openlocfilehash: 1dd506ed1b99867e3bc61324d9d02a542718770d
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/17/2020
-ms.locfileid: "79443726"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81338328"
 ---
 # <a name="_putw"></a>_putw
 
@@ -52,18 +54,20 @@ int _putw(
 *binint*<br/>
 Entier binaire à sortir.
 
-*train*<br/>
+*Flux*<br/>
 Pointeur désignant la structure **FILE**.
 
 ## <a name="return-value"></a>Valeur de retour
 
-Retourne la valeur écrite. Une valeur de retour de **EOF** peut indiquer une erreur. Comme **EOF** est également une valeur entière légitime **, utilisez l'** attaquant pour vérifier une erreur. Si *Stream* est un pointeur null, le gestionnaire de paramètres non valides est appelé, comme décrit dans [validation de paramètre](../../c-runtime-library/parameter-validation.md). Si l’exécution est autorisée à se poursuivre, cette fonction affecte à **errno** la valeur **EINVAL** et retourne **EOF**.
+Retourne la valeur écrite. Une valeur de retour de **l’EOF** peut indiquer une erreur. Parce que **L’EOF** est également une valeur légitime d’un intégrateur, utilisez **ferror** pour vérifier une erreur. Si *le flux* est un pointeur nul, le gestionnaire de paramètres invalides est invoqué, tel que décrit dans La validation de [paramètres](../../c-runtime-library/parameter-validation.md). Si l’exécution est autorisée à se poursuivre, cette fonction définit **errno** à **EINVAL** et renvoie **EOF**.
 
 Pour obtenir des informations sur ces codes d’erreur et les autres, consultez [_doserrno, errno, _sys_errlist et _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
 
 ## <a name="remarks"></a>Notes
 
-La fonction **_putw** écrit une valeur binaire de type **int** à la position actuelle du *flux.* **_putw** n’affecte pas l’alignement des éléments dans le flux et n’assume pas l’alignement spécial. **_putw** est principalement destiné à la compatibilité avec les bibliothèques précédentes. Des problèmes de portabilité peuvent survenir avec **_putw** car la taille d’un **int** et l’ordre des octets dans un **int** diffèrent entre les systèmes.
+La fonction **_putw** écrit une valeur binaire de type **int** à la position actuelle du *flux.* **_putw** n’affecte pas l’alignement des éléments dans le flux et n’assume pas d’alignement spécial. **_putw** est principalement pour la compatibilité avec les bibliothèques précédentes. Des problèmes de portabilité peuvent se produire avec **_putw** parce que la taille d’un **int** et la commande d’octets dans un **int** diffèrent d’un système à l’autre.
+
+Par défaut, l’état global de cette fonction est étendue à l’application. Pour changer cela, voir [Global State dans le CRT](../global-state.md).
 
 ## <a name="requirements"></a>Spécifications
 
@@ -71,7 +75,7 @@ La fonction **_putw** écrit une valeur binaire de type **int** à la position a
 |-------------|---------------------|
 |**_putw**|\<stdio.h>|
 
-Pour plus d’informations sur la compatibilité, voir [Compatibilité](../../c-runtime-library/compatibility.md).
+Pour plus d’informations sur la compatibilité, consultez [Compatibility](../../c-runtime-library/compatibility.md).
 
 ## <a name="libraries"></a>Bibliothèques
 

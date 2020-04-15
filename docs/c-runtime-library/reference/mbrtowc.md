@@ -1,8 +1,9 @@
 ---
 title: mbrtowc
-ms.date: 11/04/2016
+ms.date: 4/2/2020
 api_name:
 - mbrtowc
+- _o_mbrtowc
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -15,6 +16,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-convert-l1-1-0.dll
+- api-ms-win-crt-private-l1-1-0
 api_type:
 - DLLExport
 topic_type:
@@ -24,12 +26,12 @@ f1_keywords:
 helpviewer_keywords:
 - mbrtowc function
 ms.assetid: a1e87fcc-6de0-4ca1-bf26-508d28490286
-ms.openlocfilehash: b4c68ae8df9821d862b9f742d8a8ef7ace19c981
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: be46c3f3c728b70c7cbf060572acc24662637a81
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70952452"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81340931"
 ---
 # <a name="mbrtowc"></a>mbrtowc
 
@@ -48,41 +50,43 @@ size_t mbrtowc(
 
 ### <a name="parameters"></a>Paramètres
 
-*wchar*<br/>
-Adresse d’un caractère élargi devant recevoir la chaîne de caractères larges convertie (type **wchar_t**). Cette valeur peut être un pointeur null si un caractère large n'est pas requis en retour.
+*wchar (wchar)*<br/>
+Adresse d’un caractère large pour recevoir la chaîne de caractère large converti (type **wchar_t**). Cette valeur peut être un pointeur null si un caractère large n'est pas requis en retour.
 
-*mbchar*<br/>
+*mbchar (en)*<br/>
 Adresse d'une séquence d'octets (un caractère multioctet).
 
 *count*<br/>
 Nombre d'octets à vérifier.
 
-*mbstate*<br/>
-Pointeur vers un objet d'état de conversion. Si cette valeur est un pointeur null, la fonction utilise un objet d'état de conversion interne statique. Étant donné que l’objet **mbstate_t** interne n’est pas thread-safe, nous vous recommandons de toujours passer votre propre argument *mbstate* .
+*mbstate (en)*<br/>
+Pointeur vers un objet d'état de conversion. Si cette valeur est un pointeur null, la fonction utilise un objet d'état de conversion interne statique. Parce que l’objet interne **mbstate_t** n’est pas sans fil, nous vous recommandons de toujours passer votre propre argument *mbstate.*
 
 ## <a name="return-value"></a>Valeur de retour
 
 L’une des valeurs suivantes :
 
-0 le *nombre* suivant ou moins d’octets termine le caractère multioctet qui représente le caractère élargi null, qui est stocké dans *WCHAR*, si *WCHAR* n’est pas un pointeur null.
+0 Le *nombre* suivant ou moins d’octets complètent le caractère multioctet qui représente le caractère large nul, qui est stocké dans *wchar*, si *wchar n’est* pas un pointeur nul.
 
-1 à *compter*, inclus le *nombre* suivant ou un nombre d’octets inférieur termine un caractère multioctet valide. La valeur retournée est le nombre d'octets qui terminent le caractère multioctet. L’équivalent en caractères larges est stocké dans *WCHAR*, si *WCHAR* n’est pas un pointeur null.
+1 à *compter,* inclusive Le *nombre* suivant ou moins d’octets complètent un caractère multioctet valide. La valeur retournée est le nombre d'octets qui terminent le caractère multioctet. L’équivalent de caractère large est stocké dans *wchar*, si *wchar n’est* pas un pointeur nul.
 
-(size_t) (-1) Une erreur d’encodage s’est produite. Le *nombre* suivant ou un nombre d’octets inférieur ne contribue pas à un caractère multioctet complet et valide. Dans ce cas, **errno** a la valeur EILSEQ et l’état de décalage de la conversion dans *mbstate* n’est pas spécifié.
+(size_t) (-1) Une erreur d’encodage s’est produite. Le *nombre* suivant ou moins d’octets ne contribuent pas à un caractère multioctet complet et valide. Dans ce cas, **errno** est réglé à EILSEQ et l’état de changement de conversion dans *mbstate* n’est pas spécifié.
 
-(size_t) (-2) Les octets *suivants contribuent* à un caractère multioctet incomplet mais potentiellement valide, et tous les octets de *nombre* ont été traités. Aucune valeur n’est stockée dans *WCHAR*, mais *mbstate* est mis à jour pour redémarrer la fonction.
+(size_t) (-2) Les *octets de comptage* suivants contribuent à un caractère multioctet incomplet mais potentiellement valide, et tous les *octets de comptage* ont été traités. Aucune valeur n’est stockée dans *wchar*, mais *mbstate* est mis à jour pour redémarrer la fonction.
 
 ## <a name="remarks"></a>Notes
 
-Si *mbchar* est un pointeur null, la fonction est équivalente à l’appel :
+Si *mbchar* est un pointeur nul, la fonction est équivalente à l’appel :
 
 `mbrtowc(NULL, "", 1, &mbstate)`
 
-Dans ce cas, la valeur des arguments *WCHAR* et *Count* est ignorée.
+Dans ce cas, la valeur des arguments *wchar* et *le compte* sont ignorés.
 
-Si *mbchar* n’est pas un pointeur null, la fonction examine *le nombre d’octets à* partir de *mbchar* pour déterminer le nombre d’octets requis pour terminer le caractère multioctet suivant. Si le caractère suivant est valide, le caractère multioctet correspondant est stocké dans *WCHAR* s’il ne s’agit pas d’un pointeur null. Si le caractère est le caractère null étendu correspondant, l’état résultant de *mbstate* est l’état de conversion initial.
+Si *mbchar* n’est pas un pointeur nul, la fonction examine les octets de *comptage* de *mbchar* pour déterminer le nombre requis d’octets qui sont nécessaires pour compléter le caractère multioctet suivant. Si le personnage suivant est valide, le caractère multioctet correspondant est stocké dans *wchar* s’il n’est pas un pointeur nul. Si le personnage est le caractère nul large correspondant, l’état résultant de *mbstate* est l’état de conversion initial.
 
-La fonction **mbrtowc** diffère de [mbtowc, _mbtowc_l](mbtowc-mbtowc-l.md) par son redémarrage. L’état de conversion est stocké dans *mbstate* pour les appels suivants à la même ou à d’autres fonctions redémarrables. Les résultats ne sont pas définis quand l'utilisation de fonctions redémarrables est combinée avec l'utilisation de fonctions non redémarrables.  Par exemple, une application doit utiliser **wcsrlen** au lieu de **wcslen** si un appel ultérieur à **wcsrtombs** est utilisé à la place de **wcstombs**.
+La fonction **mbrtowc** diffère de [mbtowc, _mbtowc_l](mbtowc-mbtowc-l.md) par sa redémarrabilité. L’état de conversion est stocké dans *mbstate* pour les appels ultérieurs vers les mêmes fonctions ou d’autres fonctions redémarrées. Les résultats ne sont pas définis quand l'utilisation de fonctions redémarrables est combinée avec l'utilisation de fonctions non redémarrables.  Par exemple, une application doit utiliser **wcsrlen** au lieu de **wcslen** si un appel ultérieur à **wcsrtombs** est utilisé au lieu de **wcstombs**.
+
+Par défaut, l’état global de cette fonction est étendue à l’application. Pour changer cela, voir [Global State dans le CRT](../global-state.md).
 
 ## <a name="example"></a>Exemple
 
@@ -194,7 +198,7 @@ int main(int argc, char* argv[])
 }
 ```
 
-### <a name="sample-output"></a>Résultat de l'exemple
+### <a name="sample-output"></a>Exemple de sortie
 
 ```Output
 Locale set to: "French_Canada.1252"
@@ -203,7 +207,7 @@ Multibyte String: AaBbCcÜïα∩≡xXyYzZ
 WC String: AaBbCcÜïα∩≡xXyYzZ
 ```
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
 |Routine|En-tête requis|
 |-------------|---------------------|
@@ -212,5 +216,5 @@ WC String: AaBbCcÜïα∩≡xXyYzZ
 ## <a name="see-also"></a>Voir aussi
 
 [Conversion de données](../../c-runtime-library/data-conversion.md)<br/>
-[Paramètres régionaux](../../c-runtime-library/locale.md)<br/>
-[Interprétation des séquences de caractères multi-octets](../../c-runtime-library/interpretation-of-multibyte-character-sequences.md)<br/>
+[Local](../../c-runtime-library/locale.md)<br/>
+[Interprétation des séquences multioctets-caractères](../../c-runtime-library/interpretation-of-multibyte-character-sequences.md)<br/>

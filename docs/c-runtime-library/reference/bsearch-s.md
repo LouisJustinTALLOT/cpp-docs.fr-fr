@@ -1,8 +1,9 @@
 ---
 title: bsearch_s
-ms.date: 10/22/2019
+ms.date: 4/2/2020
 api_name:
 - bsearch_s
+- _o_bsearch_s
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -16,6 +17,7 @@ api_location:
 - ucrtbase.dll
 - api-ms-win-crt-utility-l1-1-0.dll
 - ntoskrnl.exe
+- api-ms-win-crt-private-l1-1-0
 api_type:
 - DLLExport
 topic_type:
@@ -26,16 +28,16 @@ helpviewer_keywords:
 - arrays [CRT], binary search
 - bsearch_s function
 ms.assetid: d5690d5e-6be3-4f1d-aa0b-5ca6dbded276
-ms.openlocfilehash: fc86576dbbe73f63da6bf0e28e7166ef7c552e55
-ms.sourcegitcommit: 0a5518fdb9d87fcc326a8507ac755936285fcb94
+ms.openlocfilehash: ef8a68f0db45e718af6b17fe0d08c33a6fd61d6c
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/23/2019
-ms.locfileid: "72811146"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81333849"
 ---
 # <a name="bsearch_s"></a>bsearch_s
 
-Effectue une recherche binaire dans un tableau trié. Cette fonction est une version de [ensuite bsearch](bsearch.md) avec des améliorations de sécurité, comme décrit dans [fonctionnalités de sécurité dans le CRT](../../c-runtime-library/security-features-in-the-crt.md).
+Effectue une recherche binaire dans un tableau trié. Cette fonction est une version de [bsearch](bsearch.md) avec des améliorations de sécurité comme décrit dans [les fonctionnalités de sécurité dans le CRT](../../c-runtime-library/security-features-in-the-crt.md).
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -52,63 +54,65 @@ void *bsearch_s(
 
 ### <a name="parameters"></a>Paramètres
 
-\ de *clé*
+*Clé*\
 Pointeur vers la clé à rechercher.
 
-*base*\
+*Base*\
 Pointeur vers la base des données de recherche.
 
-*nombre*\
+*Nombre*\
 Nombre d'éléments.
 
-*largeur*\
+*Largeur*\
 Largeur des éléments.
 
-*comparer*\
-Fonction de rappel qui compare deux éléments. Le premier argument est le pointeur de *contexte* . Le deuxième argument est un pointeur vers la *clé* de la recherche. Le troisième argument est un pointeur vers l’élément de tableau à comparer à la *clé*.
+*Comparer*\
+Fonction de rappel qui compare deux éléments. Le premier argument est le pointeur de *contexte.* Le deuxième argument est un pointeur à la *clé* de la recherche. Le troisième argument est un pointeur à l’élément de tableau à comparer avec *la clé*.
 
-\ de *contexte*
+*Contexte*\
 Pointeur vers un objet accessible dans la fonction de comparaison.
 
-## <a name="return-value"></a>Valeur de retour
+## <a name="return-value"></a>Valeur retournée
 
-**bsearch_s** retourne un pointeur vers une occurrence de la *clé* dans le tableau désigné par *base*. Si la *clé* est introuvable, la fonction retourne la **valeur null**. Si le tableau n’est pas trié par ordre croissant ou qu’il contient des enregistrements en double avec des clés identiques, le résultat est imprévisible.
+**bsearch_s** renvoie un pointeur à un événement de *la clé* dans le tableau pointé par *la base*. Si *la clé* n’est pas trouvée, la fonction renvoie **NULL**. Si le tableau n’est pas trié par ordre croissant ou qu’il contient des enregistrements en double avec des clés identiques, le résultat est imprévisible.
 
-Si des paramètres non valides sont passés à la fonction, elle appelle le gestionnaire de paramètres non valides, comme décrit dans [validation de paramètre](../../c-runtime-library/parameter-validation.md). Si l’exécution est autorisée à se poursuivre, **errno** a la valeur **EINVAL** et la fonction retourne la **valeur null**. Pour plus d’informations, consultez [errno, _doserrno, _sys_errlist et _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
+Si des paramètres non valides sont transmis à la fonction, il invoque le gestionnaire de paramètres invalide tel que décrit dans [la validation des paramètres](../../c-runtime-library/parameter-validation.md). Si l’exécution est autorisée à se poursuivre, **errno** est réglé sur **EINVAL** et la fonction renvoie **NULL**. Pour plus d’informations, consultez [errno, _doserrno, _sys_errlist et _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
 
 ### <a name="error-conditions"></a>Conditions d’erreur
 
 |||||||
 |-|-|-|-|-|-|
-|*key*|*base*|*compare*|*certain*|*width*|**errno**|
-|**NULL**|indifférent|indifférent|indifférent|indifférent|**EINVAL**|
-|indifférent|**NULL**|indifférent|!= 0|indifférent|**EINVAL**|
-|indifférent|indifférent|indifférent|indifférent|= 0|**EINVAL**|
-|indifférent|indifférent|**NULL**|an|indifférent|**EINVAL**|
+|*key*|*base*|*Comparer*|*nombre*|*Largeur*|**errno**|
+|**Null**|n'importe laquelle|n'importe laquelle|n'importe laquelle|n'importe laquelle|**EINVAL (EN)**|
+|n'importe laquelle|**Null**|n'importe laquelle|!= 0|n'importe laquelle|**EINVAL (EN)**|
+|n'importe laquelle|n'importe laquelle|n'importe laquelle|n'importe laquelle|= 0|**EINVAL (EN)**|
+|n'importe laquelle|n'importe laquelle|**Null**|an|n'importe laquelle|**EINVAL (EN)**|
 
 ## <a name="remarks"></a>Notes
 
-La fonction **bsearch_s** effectue une recherche binaire d’un tableau trié d’éléments Number, chacun d’un *nombre* d’octets de *largeur* . La valeur de *base* est un pointeur vers la base du tableau dans lequel effectuer la recherche, et *Key* est la valeur recherchée. Le paramètre de *comparaison* est un pointeur vers une routine fournie par l’utilisateur qui compare la clé demandée à un élément de tableau et retourne l’une des valeurs suivantes en spécifiant leur relation :
+La fonction **bsearch_s** effectue une recherche binaire d’un tableau trié d’éléments de *nombre,* chacun des octets de *largeur* dans la taille. La valeur *de base* est un pointeur à la base du tableau à rechercher, et la *clé* est la valeur recherchée. Le paramètre *de comparaison* est un pointeur à une routine fournie par l’utilisateur qui compare la clé demandée à un élément de tableau et renvoie l’une des valeurs suivantes spécifiant leur relation :
 
-|Valeur retournée par la routine de *comparaison*|Description|
+|Valeur retournée par la routine *de comparaison*|Description|
 |-----------------------------------------|-----------------|
 |\< 0|La clé est inférieure à l’élément de tableau.|
 |0|La clé est égale à l’élément de tableau.|
 |> 0|La clé est supérieure à l’élément de tableau.|
 
-Le pointeur de *contexte* peut être utile si la structure de données recherchée fait partie d’un objet et que la fonction de comparaison doit accéder aux membres de l’objet. La fonction *compare* peut effectuer un cast du pointeur void vers le type d’objet approprié et accéder aux membres de cet objet. L’ajout du paramètre de *contexte* rend **bsearch_s** plus sécurisé, car un contexte supplémentaire peut être utilisé pour éviter les bogues de réentrance associés à l’utilisation de variables statiques pour rendre les données disponibles pour la fonction de *comparaison* .
+Le pointeur *de contexte* peut être utile si la structure de données recherchée fait partie d’un objet, et la fonction de comparaison doit accéder aux membres de l’objet. La fonction *de comparaison* peut jeter le pointeur vide dans le type d’objet approprié et accéder aux membres de cet objet. L’ajout du paramètre *contextuelle* rend **bsearch_s** plus sûr puisque le contexte supplémentaire peut être utilisé pour éviter les bogues de réenterrabilité associés à l’utilisation de variables statiques pour rendre les données disponibles à la fonction *de comparaison.*
 
-## <a name="requirements"></a>spécifications
+Par défaut, l’état global de cette fonction est étendue à l’application. Pour changer cela, voir [Global State dans le CRT](../global-state.md).
+
+## <a name="requirements"></a>Spécifications
 
 |Routine|En-tête requis|
 |-------------|---------------------|
 |**bsearch_s**|\<stdlib.h> et \<search.h>|
 
-Pour plus d’informations sur la compatibilité, voir consultez [Compatibilité](../../c-runtime-library/compatibility.md).
+Pour plus d'informations sur la compatibilité, voir [Compatibilité](../../c-runtime-library/compatibility.md).
 
 ## <a name="example"></a>Exemple
 
-Ce programme trie un tableau de chaînes avec [qsort_s](qsort-s.md)et utilise ensuite bsearch_s pour rechercher le mot « cat ».
+Ce programme trie un tableau de chaînes avec [qsort_s](qsort-s.md) et utilise ensuite bsearch_s pour rechercher le mot « cat ».
 
 ```cpp
 // crt_bsearch_s.cpp

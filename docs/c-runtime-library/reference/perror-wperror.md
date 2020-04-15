@@ -1,9 +1,10 @@
 ---
 title: perror, _wperror
-ms.date: 11/04/2016
+ms.date: 4/2/2020
 api_name:
 - _wperror
 - perror
+- _o__wperror
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -16,6 +17,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-runtime-l1-1-0.dll
+- api-ms-win-crt-private-l1-1-0
 api_type:
 - DLLExport
 topic_type:
@@ -33,12 +35,12 @@ helpviewer_keywords:
 - _wperror function
 - perror function
 ms.assetid: 34fce792-16fd-4673-9849-cd88b54b6cd5
-ms.openlocfilehash: 755b638f320fcc583faecfe6aa82269e4e1b3d8f
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 0c50e77863b4b136ac59b6f79d8e529691032609
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70951036"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81338536"
 ---
 # <a name="perror-_wperror"></a>perror, _wperror
 
@@ -57,12 +59,14 @@ void _wperror(
 
 ### <a name="parameters"></a>Paramètres
 
-*message*<br/>
+*Message*<br/>
 Message de type chaîne à imprimer.
 
 ## <a name="remarks"></a>Notes
 
-La fonction **perror** imprime un message d’erreur vers **stderr**. **_wperror** est une version à caractères larges de **_perror**; l’argument de *message* pour **_wperror** est une chaîne de caractères larges. dans le cas contraire, **_wperror** et **_perror** se comportent de la même façon.
+La fonction **perror** imprime un message d’erreur à **stderr**. **_wperror** est une version à caractère large de **_perror**; l’argument du *message* à **_wperror** est une chaîne de caractère large. **_wperror** et **_perror** se comportent de façon identique autrement.
+
+Par défaut, l’état global de cette fonction est étendue à l’application. Pour changer cela, voir [Global State dans le CRT](../global-state.md).
 
 ### <a name="generic-text-routine-mappings"></a>Mappages de routines de texte générique
 
@@ -70,15 +74,15 @@ La fonction **perror** imprime un message d’erreur vers **stderr**. **_wperror
 |---------------------|------------------------------------|--------------------|-----------------------|
 |**_tperror**|**perror**|**perror**|**_wperror**|
 
-le *message* est d’abord imprimé, suivi d’un signe deux-points, du message d’erreur système pour le dernier appel de bibliothèque qui a généré l’erreur et enfin d’un caractère de saut de ligne. Si *message* est un pointeur null ou un pointeur vers une chaîne NULL, **perror** imprime uniquement le message d’erreur système.
+*message* est imprimé d’abord, suivi d’un côlon, puis par le message d’erreur du système pour le dernier appel de bibliothèque qui a produit l’erreur, et enfin par un caractère newline. Si *le message* est un pointeur nul ou un pointeur à une corde nulle, **perror** imprime uniquement le message d’erreur du système.
 
-Le numéro d’erreur est stocké dans la variable [errno](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md) (définie dans ERRNO.H). Les messages d’erreur système sont accessibles via la variable [_sys_errlist](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md), qui est un tableau de messages classés par numéro d’erreur. **perror** imprime le message d’erreur approprié en utilisant la valeur **errno** comme index de **_sys_errlist**. La valeur de la variable [_sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md) est définie comme le nombre maximal d’éléments dans le tableau **_sys_errlist** .
+Le numéro d’erreur est stocké dans la variable [errno](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md) (définie dans ERRNO.H). Les messages d’erreur système sont accessibles via la variable [_sys_errlist](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md), qui est un tableau de messages classés par numéro d’erreur. **perror** imprime le message d’erreur approprié en utilisant la valeur **errno** comme un index pour **_sys_errlist**. La valeur de la [_sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md) variable est définie comme le nombre maximal d’éléments dans le **tableau _sys_errlist.**
 
-Pour obtenir des résultats précis, appelez **perror** immédiatement après le retour d’une routine de bibliothèque avec une erreur. Sinon, les appels suivants peuvent remplacer la valeur **errno** .
+Pour obtenir des résultats précis, appelez **perror** immédiatement après qu’une routine de bibliothèque revient avec une erreur. Sinon, les appels ultérieurs peuvent dépasser la valeur **errno.**
 
-Dans le système d’exploitation Windows, certaines valeurs **errno** sont listées dans errno. H ne sont pas utilisés. Ces valeurs sont réservées au système d’exploitation UNIX. Pour obtenir la liste des valeurs **errno** utilisées par le système d’exploitation Windows, consultez [_doserrno, errno, _sys_errlist et _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md) . **perror** imprime une chaîne vide pour toute valeur **errno** non utilisée par ces plateformes.
+Dans le système d’exploitation Windows, certaines valeurs **errno** énumérées dans ERRNO. H sont inutilisés. Ces valeurs sont réservées au système d’exploitation UNIX. Voir [_doserrno, errno, _sys_errlist, et _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md) pour une liste des valeurs **errno** utilisés par le système d’exploitation Windows. **perror** imprime une chaîne vide pour toute valeur **errno** non utilisée par ces plates-formes.
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
 |Routine|En-tête requis|
 |-------------|---------------------|
@@ -141,7 +145,7 @@ _strerror says open failed: No such file or directory
 
 ## <a name="see-also"></a>Voir aussi
 
-[Contrôle de processus et d’environnement](../../c-runtime-library/process-and-environment-control.md)<br/>
+[Contrôle des processus et de l’environnement](../../c-runtime-library/process-and-environment-control.md)<br/>
 [clearerr](clearerr.md)<br/>
 [ferror](ferror.md)<br/>
 [strerror, _strerror, _wcserror, \__wcserror](strerror-strerror-wcserror-wcserror.md)<br/>

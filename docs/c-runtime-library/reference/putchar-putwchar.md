@@ -1,9 +1,11 @@
 ---
 title: putchar, putwchar
-ms.date: 11/04/2016
+ms.date: 4/2/2020
 api_name:
 - putchar
 - putwchar
+- _o_putchar
+- _o_putwchar
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -16,6 +18,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-stdio-l1-1-0.dll
+- api-ms-win-crt-private-l1-1-0
 api_type:
 - DLLExport
 topic_type:
@@ -31,12 +34,12 @@ helpviewer_keywords:
 - standard output, writing to
 - putwchar function
 ms.assetid: 93657c7f-cca1-4032-8e3a-cd6ab6193748
-ms.openlocfilehash: 88d1181fc2718d49533f3179c8fd0bfd818d589a
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 09ad53a7f4e953da05d7eafd6662bf250731b5d6
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70949919"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81333127"
 ---
 # <a name="putchar-putwchar"></a>putchar, putwchar
 
@@ -55,20 +58,22 @@ wint_t putwchar(
 
 ### <a name="parameters"></a>Paramètres
 
-*c*<br/>
+*C*<br/>
 Caractère à écrire.
 
 ## <a name="return-value"></a>Valeur de retour
 
-Retourne le caractère écrit. Pour indiquer une erreur ou une condition de fin de fichier, **putc** et **putchar** retournent **EOF**; **putwc** et **putwchar** retournent **WEOF**. Pour les quatre routines, utilisez [ferror](ferror.md) ou [feof](feof.md) pour rechercher la présence d’une erreur ou d’une fin de fichier. Si un pointeur null est passé pour *Stream*, ces fonctions génèrent une exception de paramètre non valide, comme décrit dans [validation de paramètre](../../c-runtime-library/parameter-validation.md). Si l’exécution est autorisée à se poursuivre, elles retournent **EOF** ou **WEOF** et attribuent à **errno** la valeur **EINVAL**.
+Retourne le caractère écrit. Pour indiquer une erreur ou une condition de fin de dossier, **putc** et **putchar** retournent **EOF**; **putwc** et **putwchar** retour **WEOF**. Pour les quatre routines, utilisez [ferror](ferror.md) ou [feof](feof.md) pour rechercher la présence d’une erreur ou d’une fin de fichier. Si passé un pointeur nul pour *le flux*, ces fonctions génèrent une exception de paramètre invalide, comme décrit dans La validation [de paramètres](../../c-runtime-library/parameter-validation.md). Si l’exécution est autorisée à se poursuivre, ils retournent **EOF** ou **WEOF** et mettent **errno** à **EINVAL**.
 
-Pour plus d’informations sur ces codes d’erreur et les autres, consultez [_doserrno, errno, _sys_errlist et _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
+Consultez [_doserrno, errno, _sys_errlist et _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md) pour plus d’informations sur ces éléments et autres codes d’erreur.
 
 ## <a name="remarks"></a>Notes
 
-La routine **putc** écrit le caractère unique *c* dans le *flux* de sortie à la position actuelle. Tout entier peut être passé à **putc**, mais seuls les 8 bits de poids faible sont écrits. La routine **putchar** est identique à `putc( c, stdout )`. Pour chaque routine, si une erreur de lecture se produit, l’indicateur d’erreur du flux est défini. **putc** et **putchar** sont similaires à **fputc** et **_fputchar**, respectivement, mais sont implémentés en tant que fonctions et en tant que macros (consultez [choix entre les fonctions et les macros](../../c-runtime-library/recommendations-for-choosing-between-functions-and-macros.md)). **putwc** et **putwchar** sont respectivement des versions à caractères larges de **putc** et **putchar**.
+La routine **putc** écrit le caractère *unique c* au *flux* de sortie à la position actuelle. N’importe quel intégrant peut être passé au **putc,** mais seulement les 8 bits inférieurs sont écrits. La routine **putchar** `putc( c, stdout )`est identique à . Pour chaque routine, si une erreur de lecture se produit, l’indicateur d’erreur du flux est défini. **putc** et **putchar** sont similaires à **fputc** et **_fputchar**, respectivement, mais sont mis en œuvre à la fois comme fonctions et comme macros (voir [Choisir entre les fonctions et les macros](../../c-runtime-library/recommendations-for-choosing-between-functions-and-macros.md)). **putwc** et **putwchar** sont des versions à caractère large de **putc** et **putchar**, respectivement.
 
 Les versions avec suffixe **_nolock** sont identiques, à ceci près qu’elles ne sont pas protégées contre les interférences avec d’autres threads. Elles peuvent être plus rapides, car elles n’entraînent pas la surcharge liée au verrouillage des autres threads. Utilisez ces fonctions uniquement dans les contextes thread-safe, tels que les applications à un seul thread ou lorsque la portée appelante gère déjà l'isolation des threads.
+
+Par défaut, l’état global de cette fonction est étendue à l’application. Pour changer cela, voir [Global State dans le CRT](../global-state.md).
 
 ### <a name="generic-text-routine-mappings"></a>Mappages de routines de texte générique
 
@@ -76,14 +81,14 @@ Les versions avec suffixe **_nolock** sont identiques, à ceci près qu’elles 
 |---------------------|------------------------------------|--------------------|-----------------------|
 |**_puttchar**|**putchar**|**putchar**|**putwchar**|
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
 |Routine|En-tête requis|
 |-------------|---------------------|
 |**putchar**|\<stdio.h>|
 |**putwchar**|\<stdio.h> ou \<wchar.h>|
 
-La console n’est pas prise en charge dans les applications de plateforme Windows universelle (UWP). Les handles de flux standard associés à la console, **stdin**, **stdout**et **stderr**, doivent être redirigés pour que les fonctions runtime C puissent les utiliser dans les applications UWP. Pour plus d'informations sur la compatibilité, voir [Compatibilité](../../c-runtime-library/compatibility.md).
+La console n’est pas prise en charge dans les applications Universal Windows Platform (UWP). Les poignées de flux standard qui sont associées à la console, **stdin**, **stdout**, et **stderr**, doivent être redirigés avant que les fonctions C run-time peuvent les utiliser dans les applications UWP. Pour plus d'informations sur la compatibilité, voir [Compatibilité](../../c-runtime-library/compatibility.md).
 
 ## <a name="libraries"></a>Bibliothèques
 
@@ -113,7 +118,7 @@ int main( void )
 }
 ```
 
-### <a name="output"></a>Sortie
+### <a name="output"></a>Output
 
 ```Output
 This is the line of output

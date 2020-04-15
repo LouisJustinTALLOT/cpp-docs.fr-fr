@@ -1,8 +1,9 @@
 ---
 title: _lock_file
-ms.date: 11/04/2016
+ms.date: 4/2/2020
 api_name:
 - _lock_file
+- _o__lock_file
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -15,6 +16,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-filesystem-l1-1-0.dll
+- api-ms-win-crt-private-l1-1-0
 api_type:
 - DLLExport
 topic_type:
@@ -27,16 +29,16 @@ helpviewer_keywords:
 - _lock_file function
 - lock_file function
 ms.assetid: 75c7e0e6-efff-4747-b6ed-9bcf2b0894c3
-ms.openlocfilehash: 43030030d1674cfba24c1300487f576b7a2085ea
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 9f7016f873dc9b159aab677615ff88a24628072c
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70953306"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81342109"
 ---
 # <a name="_lock_file"></a>_lock_file
 
-Verrouille un objet **fichier** pour garantir la cohérence des threads qui accèdent simultanément à l’objet **fichier** .
+Verrouille un objet **FILE** pour assurer la cohérence des threads accédant simultanément à l’objet **FILE.**
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -46,20 +48,22 @@ void _lock_file( FILE* file );
 
 ### <a name="parameters"></a>Paramètres
 
-*fichier*<br/>
+*Fichier*<br/>
 Descripteur de fichier.
 
 ## <a name="remarks"></a>Notes
 
-La fonction **_lock_file** verrouille l’objet **fichier** spécifié par le *fichier*. Le fichier sous-jacent n’est pas verrouillé par **_lock_file**. Utilisez [_unlock_file](unlock-file.md) pour libérer le verrou sur le fichier. Les appels à **_lock_file** et **_unlock_file** doivent être mis en correspondance dans un thread.
+La fonction **_lock_file** verrouille l’objet **FILE** spécifié par *fichier*. Le fichier sous-jacent n’est pas verrouillé par **_lock_file**. Utilisez [_unlock_file](unlock-file.md) pour libérer le verrou sur le fichier. Les appels à **_lock_file** et **_unlock_file** doivent être assortis dans un thread.
 
-## <a name="requirements"></a>Configuration requise
+Par défaut, l’état global de cette fonction est étendue à l’application. Pour changer cela, voir [Global State dans le CRT](../global-state.md).
+
+## <a name="requirements"></a>Spécifications
 
 |Routine|En-tête requis|
 |-------------|---------------------|
 |**_lock_file**|\<stdio.h>|
 
-Pour plus d'informations sur la compatibilité, voir [Compatibilité](../../c-runtime-library/compatibility.md).
+Pour plus d’informations sur la compatibilité, consultez [Compatibility](../../c-runtime-library/compatibility.md).
 
 ## <a name="example"></a>Exemple
 

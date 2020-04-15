@@ -1,6 +1,6 @@
 ---
 title: log, logf, logl, log10, log10f, log10l
-ms.date: 04/05/2018
+ms.date: 4/2/2020
 api_name:
 - log10f
 - logf
@@ -8,6 +8,8 @@ api_name:
 - log
 - log10l
 - logl
+- _o_log
+- _o_log10
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -20,6 +22,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-math-l1-1-0.dll
+- api-ms-win-crt-private-l1-1-0
 api_type:
 - DLLExport
 topic_type:
@@ -43,12 +46,12 @@ helpviewer_keywords:
 - logf function
 - logarithms
 ms.assetid: 7adc77c2-04f7-4245-a980-21215563cfae
-ms.openlocfilehash: f610ead4d71a877051fdec8df2a1564089141eea
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: ab6f2654e9e647f140d5c579087b76001b317887
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70953232"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81341877"
 ---
 # <a name="log-logf-logl-log10-log10f-log10l"></a>log, logf, logl, log10, log10f, log10l
 
@@ -74,26 +77,28 @@ long double log10( long double x );  // C++ only
 
 ### <a name="parameters"></a>Paramètres
 
-*x*<br/>
+*X*<br/>
 Valeur dont le logarithme doit être recherché.
 
 ## <a name="return-value"></a>Valeur de retour
 
-Les fonctions de **journalisation** retournent le logarithme népérien (base *e*) de *x* en cas de réussite. Les fonctions **log10** retournent le logarithme en base 10. Si *x* est négatif, ces fonctions retournent une valeur indéfinie (IND) par défaut. Si *x* est égal à 0, elles retournent l’infini (INF).
+Les fonctions **de journal** retournent le logarithm naturel (base *e*) de *x* en cas de succès. Les fonctions **log10** renvoient le logarithme de base-10. Si *x* est négatif, ces fonctions renvoient une indéfini (IND), par défaut. Si *x* est 0, ils retournent à l’infini (INF).
 
-|Entrée|Exception SEH|Exception{b> <b}Matherr|
+|Entrée|Exception SEH|Exception\{b\> \<b\}Matherr|
 |-----------|-------------------|-----------------------|
-|± QNAN, IND|none|_DOMAIN|
-|± 0|ZERODIVIDE|_SING|
-|*x* < 0|INVALID|_DOMAIN|
+|QNAN, IND|Aucun|_DOMAIN|
+|0|ZERODIVIDE|_SING|
+|*x* < 0|NON VALIDE|_DOMAIN|
 
-**log** et **log10** ont une implémentation qui utilise SSE2 (streaming SIMD Extensions 2). Consultez [_set_SSE2_enable](set-sse2-enable.md) pour plus d’informations sur l’utilisation de l’implémentation SSE2 et sur les restrictions qui s’y rattachent.
+**journal** et **log10** ont une implémentation qui utilise Streaming SIMD Extensions 2 (SSE2). Consultez [_set_SSE2_enable](set-sse2-enable.md) pour plus d’informations sur l’utilisation de l’implémentation SSE2 et sur les restrictions qui s’y rattachent.
 
 ## <a name="remarks"></a>Notes
 
-C++autorise la surcharge, de sorte que vous pouvez appeler des surcharges de **log** et **log10** qui acceptent et retournent des valeurs **float** ou **long double** . Dans un programme C, **log** et **log10** prennent et retournent toujours un **double**.
+Le CMD permet la surcharge, de sorte que vous pouvez appeler des surcharges de **journal** et de **journal10** qui prennent et retournent **flotteur** ou de longues valeurs **doubles.** Dans un programme C, **log** et **log10** toujours prendre et retourner un **double**.
 
-## <a name="requirements"></a>Configuration requise
+Par défaut, l’état global de cette fonction est étendue à l’application. Pour changer cela, voir [Global State dans le CRT](../global-state.md).
+
+## <a name="requirements"></a>Spécifications
 
 |Routine|En-tête requis|
 |-------------|---------------------|
@@ -158,7 +163,7 @@ Log base 2 of 65536.000000 is 16.000000
 
 ## <a name="see-also"></a>Voir aussi
 
-[Prise en charge de la virgule flottante](../../c-runtime-library/floating-point-support.md) <br/>
+[Soutien à la pointe flottante](../../c-runtime-library/floating-point-support.md) <br/>
 [exp, expf, expl](exp-expf.md) <br/>
 [_matherr](matherr.md) <br/>
 [pow, powf, powl](pow-powf-powl.md) <br/>
