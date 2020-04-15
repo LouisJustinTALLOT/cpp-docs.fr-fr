@@ -7,12 +7,12 @@ helpviewer_keywords:
 - multibyte characters [C++]
 - MBCS [C++]
 ms.assetid: b498733c-a1e1-45e3-8f26-d6da3cb5f2dd
-ms.openlocfilehash: c21b5b1ff059f26558749e904894cb5d15572519
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 0b43168ec4331e99dea7e939b097674cc880804e
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62410562"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81375762"
 ---
 # <a name="support-for-multibyte-character-sets-mbcss"></a>Prise en charge des jeux de caractères multioctets (MBCS)
 
@@ -28,11 +28,11 @@ Dans le cadre de MBCS, les caractères sont codés sur 1 ou 2 octets. Dans les 
 
 Prenez en compte tous les éléments suivants dans votre programmation MBCS.
 
-Caractères MBCS dans l’environnement MBCS de caractères caractères peuvent apparaître dans les chaînes telles que les noms de fichiers et de répertoires.
+Les caractères MBCS dans l’environnement que les caractères MBCS peuvent apparaître dans des chaînes telles que les noms de fichiers et de répertoire.
 
 ### <a name="editing-operations"></a>Opérations de modification
 
-Les opérations de modification dans les applications MBCS doivent porter sur des caractères, et non des octets. Le point d’insertion ne doit pas fractionner un caractère, le **flèche droite** clé doit déplacer un caractère vers la droite et ainsi de suite. **Supprimer** doit supprimer un caractère ; **Annuler** doit le réinsérer.
+Les opérations de modification dans les applications MBCS doivent porter sur des caractères, et non des octets. Le caret ne doit pas diviser un personnage, la clé **Droite Flèche** devrait se déplacer à droite un personnage, et ainsi de suite. **Supprimer** doit supprimer un personnage; **Annuler** devrait le réinsérer.
 
 ### <a name="string-handling"></a>Gestion des chaînes
 
@@ -40,20 +40,20 @@ Dans une application qui utilise MBCS, la gestion des chaînes pose des problèm
 
 ### <a name="run-time-library-support"></a>Prise en charge de la bibliothèque Runtime
 
-La bibliothèque Runtime C et MFC prennent en charge la programmation sur un octet, MBCS et Unicode. Les chaînes d’un octet sont traitées avec la `str` famille de fonctions d’exécution, les chaînes MBCS sont traitées avec correspondant `_mbs` fonctions et les chaînes Unicode sont traités avec correspondant `wcs` fonctions. Les implémentations des fonctions membres de la classe MFC utilisent des fonctions runtime portables qui sont mappées, quand les circonstances sont favorables, à la famille de fonctions `str` normale, aux fonctions MBCS ou aux fonctions Unicode, comme décrit dans « Portabilité MBCS/Unicode ».
+La bibliothèque Runtime C et MFC prennent en charge la programmation sur un octet, MBCS et Unicode. Les chaînes à un seul `str` byte sont traitées avec la famille des fonctions `_mbs` de temps d’exécution, les `wcs` chaînes MBCS sont traitées avec des fonctions correspondantes, et les chaînes Unicode sont traitées avec des fonctions correspondantes. Les implémentations des fonctions membres de la classe MFC utilisent des fonctions runtime portables qui sont mappées, quand les circonstances sont favorables, à la famille de fonctions `str` normale, aux fonctions MBCS ou aux fonctions Unicode, comme décrit dans « Portabilité MBCS/Unicode ».
 
 ### <a name="mbcsunicode-portability"></a>Portabilité MBCS/Unicode
 
-Le fichier d’en-tête tchar.h, vous pouvez générer un octet, MBCS et Unicode applications à partir des mêmes sources. Tchar.h définit des macros ayant pour préfixe *_tcs* , qui est mappé à `str`, `_mbs`, ou `wcs` fonctions, comme il convient. Pour générer du MBCS, définissez le symbole `_MBCS`. Pour générer du Unicode, définissez le symbole `_UNICODE`. Par défaut, `_UNICODE` est défini pour les applications MFC. Pour plus d’informations, consultez [des mappages de texte générique dans tchar.h](../text/generic-text-mappings-in-tchar-h.md).
+À l’aide du fichier d’en-tête tchar.h, vous pouvez créer des applications mono-byte, MBCS et Unicode à partir des mêmes sources. Tchar.h définit les macros préfixées avec *_tcs* `str`, `_mbs`qui `wcs` cartographient, ou fonctions, le cas échéant. Pour construire MBCS, `_MBCS`définissez le symbole . Pour construire Unicode, `_UNICODE`définissez le symbole . Par défaut, `_UNICODE` est défini pour les applications MFC. Pour plus d’informations, voir [Generic-Text Mappings in tchar.h](../text/generic-text-mappings-in-tchar-h.md).
 
 > [!NOTE]
->  Comportement n’est pas défini si vous définissez à la fois `_UNICODE` et `_MBCS`.
+> Le comportement n’est pas `_UNICODE` défini `_MBCS`si vous définissez les deux et .
 
 Les fichiers d'en-tête Mbctype.h et Mbstring.h définissent les fonctions et macros propres à MBCS, dont vous pouvez avoir besoin dans certains cas. Par exemple, `_ismbblead` vous indique si un octet spécifique dans une chaîne est un octet de tête.
 
-Pour une portabilité internationale, codez votre programme avec [Unicode](../text/support-for-unicode.md) ou jeux de caractères multioctets (MBCS).
+Pour la portabilité internationale, codez votre programme avec [Unicode](../text/support-for-unicode.md) ou ensembles de caractères multioctets (MBCS).
 
-## <a name="what-do-you-want-to-do"></a>Que voulez-vous faire ?
+## <a name="what-do-you-want-to-do"></a>Que voulez-vous faire ?
 
 - [Activer MBCS dans mon programme](../text/international-enabling.md)
 
@@ -61,9 +61,9 @@ Pour une portabilité internationale, codez votre programme avec [Unicode](../te
 
 - [Utiliser MBCS pour créer un programme internationalisé](../text/mbcs-programming-tips.md)
 
-- [Consultez un résumé de la programmation MBCS](../text/mbcs-programming-tips.md)
+- [Voir un résumé de la programmation MBCS](../text/mbcs-programming-tips.md)
 
-- [En savoir plus sur les mappages de texte générique pour la portabilité de la largeur en octets](../text/generic-text-mappings-in-tchar-h.md)
+- [Découvrir les mappages de texte générique pour la portabilité de la largeur en octets](../text/generic-text-mappings-in-tchar-h.md)
 
 ## <a name="see-also"></a>Voir aussi
 

@@ -1,6 +1,7 @@
 ---
 title: /EH (Modèle de gestion des exceptions)
-ms.date: 08/14/2018
+description: Guide de référence des options de compilateur Microsoft CMD/EH (modèle de manutention d’exception) dans Visual Studio.
+ms.date: 04/14/2020
 f1_keywords:
 - VC.Project.VCCLWCECompilerTool.ExceptionHandling
 - /eh
@@ -11,49 +12,78 @@ helpviewer_keywords:
 - EH compiler option [C++]
 - -EH compiler option [C++]
 - /EH compiler option [C++]
+no-loc:
+- SEH
+- try
+- catch
+- throw
+- extern
+- finally
+- noexcept
 ms.assetid: 754b916f-d206-4472-b55a-b6f1b0f2cb4d
-ms.openlocfilehash: 8546b14995317afb57e4cc23a5d6f81c2172a1a6
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 68d6af657e7c20c0f5e84674dd91803beb35fba0
+ms.sourcegitcommit: 0e4feb35b47c507947262d00349d4a893863a6d3
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81328292"
+ms.lasthandoff: 04/15/2020
+ms.locfileid: "81396288"
 ---
 # <a name="eh-exception-handling-model"></a>/EH (Modèle de gestion des exceptions)
 
-Spécifie le type de gestion des exceptions utilisé par le compilateur, quand optimiser la vérification des exceptions, et si les objets C++ hors de portée doivent être détruits en raison d’une exception. Si **/EH** n’est pas spécifié, le compilateur permet à votre code d’attraper à la fois des exceptions structurées asynchrones et des exceptions C , mais ne détruit pas les objets C ' qui sortent de portée en raison d’une exception asynchrone.
+Spécifie le support modèle de manutention d’exception généré par le compilateur. Les arguments précisent s’il faut appliquer `catch(...)` la syntaxe aux exceptions structurées et standard de C, si le throw **noexcept** ** extern ** code « C » est supposé à des exceptions, et s’il faut optimiser certaines vérifications.
 
 ## <a name="syntax"></a>Syntaxe
 
-> **/EH****'s**|**a**'[**c**][**r**] ]**-**
+> **`/EHa`**[**`-`**]\
+> **`/EHs`**[**`-`**]\
+> **`/EHc`**[**`-`**]\
+> **`/EHr`**[**`-`**]
 
 ## <a name="arguments"></a>Arguments
 
-**Un**<br/>
-Le modèle de manipulation d’exception qui capture à la fois des exceptions asynchrones `catch(...)` (structurées) et synchrones (CMD) par l’utilisation de la syntaxe C.
+**`a`**\
+Permet le dénouement standard de la pile CMD. Attrape à la fois des exceptions structurées (asynchrones) et `catch(...)` standard CMD (synchrones) lorsque vous utilisez la syntaxe. **`/EHa`** l’emporte **`/EHs`** à **`/EHc`** la fois et les arguments.
 
-**s**<br/>
-Le modèle de manipulation d’exception qui attrape les exceptions synchrones (C) seulement et dit au compilateur de supposer que les fonctions déclarées comme **extern "C"** peuvent jeter une exception.
+**`s`**\
+Permet le dénouement standard de la pile CMD. Attrape uniquement des exceptions standard `catch(...)` de Cmd lorsque vous utilisez la syntaxe. À **`/EHc`** moins d’être également spécifié, le compilateur suppose throw que les fonctions déclarées ** extern « C »** peuvent être une exception C.
 
-**C**<br/>
-**S’il est** utilisé avec s (**/EHsc**), attrape seulement les exceptions de C et dit au compilateur de supposer que les fonctions déclarées comme **extern "C"** ne jettent jamais une exception C. **/EHca** équivaut à **/EHa**.
+**`c`**\
+Lorsqu’il **`/EHs`** est utilisé avec , le compilateur suppose throw que les fonctions déclarées comme ** extern "C"** jamais une exception C . Il n’a aucun **`/EHa`** effet lorsqu’il est utilisé avec (c’est-à-dire, **`/EHca`** est équivalent à **`/EHa`**). **`/EHc`** est ignoré **`/EHs`** **`/EHa`** si ou ne sont pas spécifiés.
 
-**R**<br/>
-Indique au compilateur de toujours générer des contrôles de terminaison de temps d’exécution pour toutes les fonctions **noexcept.** Par défaut, les contrôles de **temps d’exécution pour noexcept** peuvent être optimisés si le compilateur détermine que la fonction appelle seulement des fonctions non-jet.
+**`r`**\
+Indique au compilateur de toujours générer **noexcept** des contrôles de terminaison en temps d’exécution pour toutes les fonctions. Par défaut, les **noexcept** contrôles d’exécution peuvent être optimisés si le compilateur détermine que la fonction n’appelle que des fonctions non-jet. Cette option donne une conformité stricte À CMD au prix d’un code supplémentaire. **`/EHr`** est ignoré **`/EHs`** **`/EHa`** si ou ne sont pas spécifiés.
+
+**`-`**\
+Efface l’argument d’option précédent. Par exemple, **`/EHsc-`** est **`/EHs /EHc-`** interprété comme **`/EHs`**, et est équivalent à .
+
+**`/EH`** les arguments peuvent être spécifiés séparément ou combinés, dans n’importe quel ordre. Si plus d’un cas du même argument est spécifié, le dernier l’emporte sur les précédents.  Par **`/EHr- /EHc /EHs`** exemple, est **`/EHscr-`** le **`/EHscr- /EHr`** même que , **`/EHscr`** et a le même effet que .
 
 ## <a name="remarks"></a>Notes
 
-L'option de compilateur **/EHa** permet de prendre en charge la gestion des exceptions structurées asynchrones (SEH) avec la clause C++ native `catch(...)` . Pour implémenter SEH sans spécifier **/EHa**, vous pouvez utiliser le **__try**, **__except**, et **__finally** syntaxe. Bien que Windows et Visual C++ prennent en charge la gestion des exceptions structurées, nous vous recommandons fortement d'utiliser la gestion des exceptions C++ normalisée par l'ISO (**/EHs** ou **/EHsc**), car elle rend le code plus portable et plus flexible. Néanmoins, dans le code existant ou pour certains types de programmes, par exemple, dans le code compilé pour soutenir l’heure courante de l’exécution de la langue[(/clr (Common Language Runtime Compilation)](clr-common-language-runtime-compilation.md))- vous pourriez encore avoir à utiliser SEH. Pour plus d'informations, consultez [Structured Exception Handling (C/C++)](../../cpp/structured-exception-handling-c-cpp.md).
+### <a name="default-exception-handling-behavior"></a>Comportement de manipulation par défaut d’exception
 
-Il peut s’avérer dangereux de spécifier **/EHa** et de tenter de gérer toutes les exceptions à l’aide de `catch(...)` . Dans la plupart des cas, les exceptions asynchrones sont irrécupérables et doivent être considérées comme telles. Si vous les interceptez sans les gérer, cela risque de provoquer une altération du processus et de générer des bogues difficiles à trouver et à résoudre.
+Le compilateur génère toujours du code qui prend enSEHcharge la manipulation d’exception structurée asynchrone ( ). Par défaut (c’est-à-dire, si **`/EHsc`** aucun, **`/EHs`**, ou **`/EHa`** option est spécifié), le compilateur prend en charge SEH les gestionnaires dans la clause native C . `catch(...)` Toutefois, il génère également du code qui ne prend en charge que partiellement les exceptions de C. Le code de dénouement par défaut n’détruit [try](../../cpp/try-throw-and-catch-statements-cpp.md) pas les objets automatiques CMD en dehors des blocs qui sortent de la portée en raison d’une exception. Les fuites de ressources et le comportement indéfini peuvent résulter lorsqu’une exception CMD est lancée.
 
-Si vous utilisez **/EHs** ou **/EHsc**, votre clause `catch(...)` n'intercepte pas les exceptions structurées asynchrones. Les violations d'accès et les exceptions <xref:System.Exception?displayProperty=fullName> non gérées ne sont pas interceptées. En outre, les objets contenus dans la portée lorsqu'une exception asynchrone est générée ne sont pas détruits même si l'exception asynchrone est gérée.
+### <a name="standard-c-exception-handling"></a>Manipulation d’exception standard de CMD
 
-Si vous utilisez **/EHa**, l’image peut être plus grande et pourrait effectuer moins bien parce que le compilateur n’optimise pas un bloc **d’essai** aussi agressivement. Cela laisse également des filtres d’exception qui appellent automatiquement les destructeurs de tous les objets locaux, même si le compilateur ne voit pas de code pouvant lever une exception C++. Cette approche permet un déroulement sécurisé de la pile pour les exceptions asynchrones, ainsi que pour les exceptions C++. Lorsque vous utilisez **/EHs**, le compilateur suppose que les exceptions ne peuvent se produire à une déclaration **de lancer** ou à un appel de fonction. Cela permet au compilateur d'éliminer le code de suivi de la durée de vie de nombreux objets non déroulables, ce qui peut entraîner une réduction considérable de la taille du code.
+Support complet de compilateur pour le modèle standard de manutention **`/EHsc`** d’exception de CMD qui dénoue en toute sécurité les objets de pile exige (recommandé), **`/EHs`**, ou **`/EHa`**.
 
-Nous vous recommandons de ne pas lier les objets compilés en utilisant **/EHa** avec des objets compilés à l’aide **de /EHs** ou **/EHsc** dans le même module exécutable. Si vous devez gérer une exception asynchrone à l’aide de **/EHa** dans votre module, utilisez **/EHa** pour compiler l’ensemble du code du module. Vous pouvez utiliser la syntaxe structurée de manipulation d’exception dans le même module que le code qui est compilé en utilisant **/EHs**, mais vous ne pouvez pas mélanger la syntaxe SEH avec **essayer,** **jeter**, et **attraper** dans la même fonction.
+Si vous **`/EHs`** **`/EHsc`** utilisez ou, alors `catch(...)` vos catch clauses ne sont pas asynchrones exceptions structurées. Toute violation de <xref:System.Exception?displayProperty=fullName> l’accès et les exceptions gérées ne sont pas marquées. Et, les objets de portée lorsqu’une exception asynchrone se produit ne sont pas détruits, même si le code gère l’exception asynchrone. Ce comportement est un argument pour laisser les exceptions structurées sans manipulation. Au lieu de cela, considérez ces exceptions fatales.
 
-Utilisez **/EHa** si vous voulez attraper une exception qui est soulevée par autre chose qu’un **lancer**. Cet exemple génère et intercepte une exception structurée :
+Lorsque vous **`/EHs`** **`/EHsc`** utilisez ou, le compilateur suppose que **throw** les exceptions ne peuvent se produire à une déclaration ou à un appel de fonction. Cette hypothèse permet au compilateur d’éliminer le code pour le suivi de la durée de vie de nombreux objets non résiliables, ce qui peut réduire considérablement la taille du code. Si vous **`/EHa`** utilisez, votre image exécutable peut être plus grande **try** et plus lente, parce que le compilateur n’optimise pas les blocs aussi agressivement. Il laisse également dans les filtres d’exception qui nettoient automatiquement les objets throw locaux, même si le compilateur ne voit aucun code qui peut une exception C.
+
+### <a name="structured-and-standard-c-exception-handling"></a>Manipulation d’exception structurée et standard de CMD
+
+L’option **`/EHa`** compilateur permet un dénouement de la pile sécuritaire pour les exceptions asynchrones et les exceptions C. Il prend en charge le traitement des exceptions standard et `catch(...)` structurées en utilisant la clause native C. Pour SEH implémenter sans **`/EHa`** spécifier, vous pouvez utiliser le **__try**, **__except**, et **__finally** syntaxe. Pour plus d’informations, voir [Traitement d’exception structuré](../../cpp/structured-exception-handling-c-cpp.md).
+
+> [!IMPORTANT]
+> Spécifier **`/EHa`** et essayer de `catch(...)` gérer toutes les exceptions en utilisant peut être dangereux. Dans la plupart des cas, les exceptions asynchrones sont irrécupérables et doivent être considérées comme telles. Si vous les interceptez sans les gérer, cela risque de provoquer une altération du processus et de générer des bogues difficiles à trouver et à résoudre.
+>
+> Même si Windows et Visual SEHCMD support , nous vous recommandons fortement d’utiliser la manipulation d’exception ISO-standard CMD (ou**`/EHsc`** **`/EHs`**). Il rend votre code plus portable et flexible. Il peut encore y avoir SEH des moments que vous devez utiliser dans le code hérité ou pour certains types de programmes. Il est nécessaire dans le code compilé pour soutenir l’heure courante de course de langue ([/clr](clr-common-language-runtime-compilation.md)), par exemple. Pour plus d’informations, voir [Traitement d’exception structuré](../../cpp/structured-exception-handling-c-cpp.md).
+>
+> Nous vous recommandons de ne **`/EHa`** jamais lier **`/EHs`** les **`/EHsc`** fichiers d’objets compilés à l’aide de fichiers compilés à l’aide ou dans le même module exécutable. Si vous devez gérer une exception asynchrone en **`/EHa`** utilisant **`/EHa`** n’importe où dans votre module, utilisez-le pour compiler tout le code dans le module. Vous pouvez utiliser la syntaxe structurée de manipulation d’exception dans le même module que le code qui est compilé en utilisant **`/EHs`**. Cependant, vous ne pouvez SEH pas mélanger la **try** **throw** syntaxe avec C , , et **catch** dans la même fonction.
+
+Utilisez **`/EHa`** si vous catch voulez une exception qui est **throw** soulevée par autre chose qu’un . Cet exemple génère et intercepte une exception structurée :
 
 ```cpp
 // compiler_options_EHA.cpp
@@ -62,39 +92,51 @@ Utilisez **/EHa** si vous voulez attraper une exception qui est soulevée par au
 #include <excpt.h>
 using namespace std;
 
-void fail() {   // generates SE and attempts to catch it using catch(...)
-   try {
-      int i = 0, j = 1;
-      j /= i;   // This will throw a SE (divide by zero).
-      printf("%d", j);
-   }
-   catch(...) {   // catch block will only be executed under /EHa
-      cout<<"Caught an exception in catch(...)."<<endl;
-   }
+void fail()
+{
+    // generates SE and attempts to catch it using catch(...)
+    try
+    {
+        int i = 0, j = 1;
+        j /= i;   // This will throw a SE (divide by zero).
+        printf("%d", j);
+    }
+    catch(...)
+    {
+        // catch block will only be executed under /EHa
+        cout << "Caught an exception in catch(...)." << endl;
+    }
 }
 
-int main() {
-   __try {
-      fail();
-   }
+int main()
+{
+    __try
+    {
+        fail();
+    }
 
-   // __except will only catch an exception here
-   __except(EXCEPTION_EXECUTE_HANDLER) {
-      // if the exception was not caught by the catch(...) inside fail()
-      cout << "An exception was caught in __except." << endl;
-   }
+    // __except will only catch an exception here
+    __except(EXCEPTION_EXECUTE_HANDLER)
+    {
+        // if the exception was not caught by the catch(...) inside fail()
+        cout << "An exception was caught in __except." << endl;
+    }
 }
 ```
 
-L'option **/EHc** exige la spécification de **/EHs** ou **/EHa** . **L’option /clr** implique **/EHa** (c’est-à-dire, **/clr** **/EHa** est redondant). Le compilateur génère une erreur si **/EHs** ou **/EHsc** est utilisé après **/clr**. Les optimisations n'affectent pas ce comportement. Lorsqu'une exception est interceptée, le compilateur appelle le ou les destructeurs de classe des objets compris dans la même portée que l'exception. Lorsqu'une exception n'est pas interceptée, ces destructeurs ne sont pas exécutés.
+### <a name="exception-handling-under-clr"></a>Manipulation d’exception sous /clr
 
-Pour plus d’informations sur les restrictions relatives à la gestion des exceptions sous **/clr**, consultez [_set_se_translator](../../c-runtime-library/reference/set-se-translator.md).
+L’option **`/clr`** **`/EHa`** implique (c’est-à-dire redondante). **`/clr /EHa`** Le compilateur génère une **`/EHs`** **`/EHsc`** erreur si **`/clr`** ou est utilisé après . Les optimisations n’affectent pas ce comportement. Lorsqu’une exception est capturée, le compilateur invoque les destructeurs de classe pour tous les objets qui sont dans la même portée que l’exception. Si une exception n’est pas prise, ces destructeurs ne sont pas exécutés.
 
-L’option peut être effacée en utilisant le symbole **-**. Par exemple, **/EHsc-** est interprété comme **/EHs** **/EHc-** et est équivalent à **/EHs**.
+Pour plus d’informations **`/clr`** sur les restrictions de traitement des exceptions en vertu , voir [_set_se_translator](../../c-runtime-library/reference/set-se-translator.md).
 
-**L’option compilateur /EHr** force les contrôles de terminaison de temps d’exécution dans toutes les fonctions qui ont un attribut **noexcept.** Par défaut, les vérifications à l’exécution peuvent être optimisées, si le compilateur back end détermine qu’une fonction appelle uniquement des fonctions *qui ne lèvent pas d’exceptions* . Les fonctions qui ne lèvent pas d’exceptions sont des fonctions qui ont un attribut spécifiant qu’aucune exception ne peut être levée. Cela comprend des fonctions marquées **noexcept** `throw()`, `__declspec(nothrow)`, et, lorsque **/EHc** est spécifié, **extern "C"** fonctions. Les fonctions qui ne lèvent pas d’exceptions incluent également les fonctions que le compilateur a identifiées par inspection comme des fonctions ne levant pas d’exceptions. Vous pouvez définir explicitement la valeur par défaut à l’aide de **/EHr-**.
+### <a name="runtime-exception-checks"></a>Vérifications d’exception en temps d’exécution
 
-Toutefois, l’attribut relatif à l’absence de levée d’exceptions ne garantit pas qu’une fonction ne peut pas lever d’exceptions. Contrairement au comportement d’une fonction **noexcept,** le compilateur MSVC `throw()` `__declspec(nothrow)`considère une exception jetée par une fonction déclarée en utilisant, , ou **extern "C"** comme un comportement indéfini. Les fonctions qui utilisent ces trois attributs de déclaration n’appliquent pas les vérifications d’arrêt au moment de l’exécution pour les exceptions. Vous pouvez utiliser l’option **/EHr** pour vous aider à identifier ce comportement indéfini, en forçant le compilateur à générer des contrôles de temps d’exécution pour les exceptions non gérées qui échappent à une fonction **noexcept.**
+L’option **`/EHr`** oblige les contrôles de terminaison de temps d’exécution dans toutes les fonctions qui ont un **noexcept** attribut. Par défaut, les contrôles de temps d’exécution peuvent être optimisés si le back-end du compilateur détermine qu’une fonction n’appelle que des fonctions *non-lancement.* Les fonctions qui ne lèvent pas d’exceptions sont des fonctions qui ont un attribut spécifiant qu’aucune exception ne peut être levée. Ils comprennent des **noexcept** `throw()`fonctions marquées, , `__declspec(nothrow)`, et, quand **`/EHc`** est spécifié, ** extern "C"** fonctions. Les fonctions qui ne lèvent pas d’exceptions incluent également les fonctions que le compilateur a identifiées par inspection comme des fonctions ne levant pas d’exceptions. Vous pouvez définir explicitement le **`/EHr-`** comportement par défaut en utilisant .
+
+Un attribut non-lancer n’est pas une garantie que les exceptions ne peuvent pas être jetées par une fonction. Contrairement au comportement **noexcept** d’une fonction, le compilateur MSVC `throw()`considère `__declspec(nothrow)`une exception jetée par une fonction déclarée en utilisant, , ou ** extern "C"** comme un comportement indéfini. Les fonctions qui utilisent ces trois attributs de déclaration n’appliquent pas les contrôles de terminaison en temps d’exécution pour les exceptions. Vous pouvez **`/EHr`** utiliser l’option pour vous aider à identifier ce comportement indéfini, en forçant le **noexcept** compilateur à générer des contrôles de temps d’exécution pour les exceptions non gérées qui échappent à une fonction.
+
+## <a name="set-the-option-in-visual-studio-or-programmatically"></a>Définissez l’option dans Visual Studio ou programmatiquement
 
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Pour définir cette option du compilateur dans l'environnement de développement Visual Studio
 
@@ -112,8 +154,8 @@ Toutefois, l’attribut relatif à l’absence de levée d’exceptions ne garan
 
 ## <a name="see-also"></a>Voir aussi
 
-[Options du compilateur MSVC](compiler-options.md)<br/>
-[Syntaxe de la ligne de commande du compilateur MSVC](compiler-command-line-syntax.md)<br/>
-[Gestion des erreurs et des exceptions](../../cpp/errors-and-exception-handling-modern-cpp.md)<br/>
-[Spécifications d’exception (throw)](../../cpp/exception-specifications-throw-cpp.md)<br/>
+[Options de compilateur MSVC](compiler-options.md)\
+[Syntaxe MSVC Compiler Command-Line](compiler-command-line-syntax.md)\
+[Erreurs et traitement des exceptions](../../cpp/errors-and-exception-handling-modern-cpp.md)\
+[Spécificationsthrowd’exception ( )](../../cpp/exception-specifications-throw-cpp.md)\
 [Structured Exception Handling (C/C++)](../../cpp/structured-exception-handling-c-cpp.md)

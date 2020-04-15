@@ -12,16 +12,16 @@ helpviewer_keywords:
 - stdext::rts_alloc [C++], deallocate
 - stdext::rts_alloc [C++], equals
 ms.assetid: ab41bffa-83d1-4a1c-87b9-5707d516931f
-ms.openlocfilehash: b0ec7d4d3dbe5ef1334bf3c394819a4f5235c28c
-ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
+ms.openlocfilehash: 6ed84d906944a09fa355e281640e9480f3173554
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/21/2019
-ms.locfileid: "72688984"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81373423"
 ---
 # <a name="rts_alloc-class"></a>rts_alloc, classe
 
-Le modèle de classe rts_alloc décrit un [filtre](../standard-library/allocators-header.md) qui contient un tableau d’instances de cache et détermine l’instance à utiliser pour l’allocation et la désallocation au moment de l’exécution plutôt qu’au moment de la compilation.
+Le modèle de classe rts_alloc décrit un [filtre](../standard-library/allocators-header.md) qui contient un éventail d’instances de cache et détermine l’instance à utiliser pour l’allocation et la transaction au moment de la transaction au lieu de le moment de la compilation.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -38,23 +38,23 @@ class rts_alloc
 
 ## <a name="remarks"></a>Notes
 
-Ce modèle de classe contient plusieurs instances d’allocateur de bloc et détermine l’instance à utiliser pour l’allocation ou la désallocation au moment de l’exécution plutôt qu’au moment de la compilation. Elle est utilisée avec les compilateurs qui ne peuvent pas compiler la reliaison.
+Ce modèle de classe contient plusieurs instances d’alloueur de bloc et détermine l’instance à utiliser pour l’allocation ou l’exécution au moment de l’exécution au lieu de le moment de compilation. Elle est utilisée avec les compilateurs qui ne peuvent pas compiler la reliaison.
 
-### <a name="member-functions"></a>Fonctions membres
+### <a name="member-functions"></a>Fonctions Membre
 
 |Fonction membre|Description|
 |-|-|
-|[allocate](#allocate)|Alloue un bloc de mémoire.|
+|[Allouer](#allocate)|Alloue un bloc de mémoire.|
 |[deallocate](#deallocate)|Libère du stockage un nombre d'objets spécifié à partir d'une position spécifiée.|
 |[equals](#equals)|Compare l'égalité de deux caches.|
 
-## <a name="requirements"></a>spécifications
+## <a name="requirements"></a>Spécifications
 
 **En-tête :** \<allocators>
 
 **Espace de noms :** stdext
 
-## <a name="allocate"></a>  rts_alloc::allocate
+## <a name="rts_allocallocate"></a><a name="allocate"></a>rts_alloc::allocate
 
 Alloue un bloc de mémoire.
 
@@ -74,9 +74,9 @@ Un pointeur vers l’objet alloué.
 
 ### <a name="remarks"></a>Notes
 
-La fonction membre retourne `caches[_IDX].allocate(count)`, où l’index `_IDX` est déterminé par le *nombre*de tailles de bloc demandé, ou, si *Count* est trop grand, elle retourne `operator new(count)`. `cache`, qui représente l’objet cache.
+La fonction `caches[_IDX].allocate(count)`membre retourne `_IDX` , lorsque l’indice est déterminé par le *nombre*de `operator new(count)`taille de bloc demandé, ou, si le *nombre* est trop grand, il retourne . `cache`, qui représente l’objet cache.
 
-## <a name="deallocate"></a>  rts_alloc::deallocate
+## <a name="rts_allocdeallocate"></a><a name="deallocate"></a>rts_alloc::dallocate
 
 Libère du stockage un nombre d'objets spécifié à partir d'une position spécifiée.
 
@@ -88,14 +88,14 @@ void deallocate(void* ptr, std::size_t count);
 
 |Paramètre|Description|
 |---------------|-----------------|
-|*ptr*|Pointeur vers le premier objet à désallouer dans le stockage.|
+|*Ptr*|Pointeur vers le premier objet à désallouer dans le stockage.|
 |*count*|Nombre d’objets à désallouer dans le stockage.|
 
 ### <a name="remarks"></a>Notes
 
-La fonction membre appelle `caches[_IDX].deallocate(ptr, count)`, où l’index `_IDX` est déterminé par le *nombre*de tailles de bloc demandé, ou, si *Count* est trop grand, elle retourne `operator delete(ptr)`.
+La fonction `caches[_IDX].deallocate(ptr, count)`membre appelle `_IDX` , lorsque l’index est déterminé par le *nombre*de `operator delete(ptr)`taille de bloc demandé , ou, si le *nombre* est trop grand, il retourne .
 
-## <a name="equals"></a>  rts_alloc::equals
+## <a name="rts_allocequals"></a><a name="equals"></a>rts_alloc::égales
 
 Compare l'égalité de deux caches.
 
@@ -112,9 +112,9 @@ bool equals(const sync<_Cache>& _Other) const;
 
 ### <a name="remarks"></a>Notes
 
-**true** si le résultat de `caches[0].equals(other.caches[0])` ; Sinon, **false**. `caches` représente le tableau d’objets cache.
+**vrai** si le `caches[0].equals(other.caches[0])`résultat de ; autrement, **faux**. `caches` représente le tableau d’objets cache.
 
 ## <a name="see-also"></a>Voir aussi
 
 [ALLOCATOR_DECL](../standard-library/allocators-functions.md#allocator_decl)\
-[\<allocators>](../standard-library/allocators-header.md)
+[\<les allocataires>](../standard-library/allocators-header.md)
