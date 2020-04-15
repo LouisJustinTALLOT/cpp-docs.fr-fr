@@ -7,23 +7,23 @@ f1_keywords:
 - istream/std::wiostream
 - istream/std::wistream
 ms.assetid: 55bc1f84-53a7-46ca-a36f-ac6ef75d0374
-ms.openlocfilehash: 9a25e4aa9ee42ea36d1bb8d6b196b36ff5c97758
-ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
+ms.openlocfilehash: e9228bddcc3b99503b6b5f0e93b5ed6eeed773d1
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/16/2020
-ms.locfileid: "79420147"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81363094"
 ---
 # <a name="ltistreamgt-typedefs"></a>&lt;istream&gt;, typedefs
 
 ||||
 |-|-|-|
-|[iostream](#iostream)|[istream](#istream)|[wiostream](#wiostream)|
+|[iostream](#iostream)|[istream (en)](#istream)|[wiostream](#wiostream)|
 |[wistream](#wistream)|
 
-## <a name="iostream"></a>  iostream
+## <a name="iostream"></a><a name="iostream"></a>iostream
 
-Type `basic_iostream` spécialisé sur **char**.
+Un `basic_iostream` type spécialisé sur **l’omble**chevalier.
 
 ```cpp
 typedef basic_iostream<char, char_traits<char>> iostream;
@@ -31,11 +31,11 @@ typedef basic_iostream<char, char_traits<char>> iostream;
 
 ### <a name="remarks"></a>Notes
 
-Le type est un synonyme du modèle de classe [basic_iostream](../standard-library/basic-iostream-class.md), spécialisé pour les éléments de type **char** avec des caractéristiques de caractère par défaut.
+Le type est synonyme de modèle de classe [basic_iostream](../standard-library/basic-iostream-class.md), spécialisé pour les éléments de type **char** avec des traits de caractère par défaut.
 
-## <a name="istream"></a>  istream
+## <a name="istream"></a><a name="istream"></a>istream (en)
 
-Type `basic_istream` spécialisé sur **char**.
+Un `basic_istream` type spécialisé sur **l’omble**chevalier.
 
 ```cpp
 typedef basic_istream<char, char_traits<char>> istream;
@@ -43,11 +43,11 @@ typedef basic_istream<char, char_traits<char>> istream;
 
 ### <a name="remarks"></a>Notes
 
-Le type est un synonyme du modèle de classe [basic_istream](../standard-library/basic-istream-class.md), spécialisé pour les éléments de type **char** avec des caractéristiques de caractère par défaut.
+Le type est synonyme de modèle de classe [basic_istream](../standard-library/basic-istream-class.md), spécialisé pour les éléments de type **char** avec des traits de caractère par défaut.
 
-## <a name="wiostream"></a>  wiostream
+## <a name="wiostream"></a><a name="wiostream"></a>wiostream
 
-Type `basic_iostream` spécialisé sur **wchar_t**.
+Un `basic_iostream` type spécialisé sur **wchar_t**.
 
 ```cpp
 typedef basic_iostream<wchar_t, char_traits<wchar_t>> wiostream;
@@ -55,11 +55,11 @@ typedef basic_iostream<wchar_t, char_traits<wchar_t>> wiostream;
 
 ### <a name="remarks"></a>Notes
 
-Le type est un synonyme du modèle de classe [basic_iostream](../standard-library/basic-iostream-class.md), spécialisé pour les éléments de type **wchar_t** avec des caractéristiques de caractère par défaut.
+Le type est synonyme de modèle de classe [basic_iostream](../standard-library/basic-iostream-class.md), spécialisé pour les éléments de type **wchar_t** avec des traits de caractère par défaut.
 
-## <a name="wistream"></a>  wistream
+## <a name="wistream"></a><a name="wistream"></a>wistream (wistream)
 
-Type `basic_istream` spécialisé sur **wchar_t**.
+Un `basic_istream` type spécialisé sur **wchar_t**.
 
 ```cpp
 typedef basic_istream<wchar_t, char_traits<wchar_t>> wistream;
@@ -67,8 +67,8 @@ typedef basic_istream<wchar_t, char_traits<wchar_t>> wistream;
 
 ### <a name="remarks"></a>Notes
 
-Le type est un synonyme du modèle de classe [basic_istream](../standard-library/basic-istream-class.md), spécialisé pour les éléments de type **wchar_t** avec des caractéristiques de caractère par défaut.
+Le type est synonyme de modèle de classe [basic_istream](../standard-library/basic-istream-class.md), spécialisé pour les éléments de type **wchar_t** avec des traits de caractère par défaut.
 
 ## <a name="see-also"></a>Voir aussi
 
-[\<istream>](../standard-library/istream.md)
+[\<>istream](../standard-library/istream.md)

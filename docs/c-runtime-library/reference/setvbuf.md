@@ -1,8 +1,9 @@
 ---
 title: setvbuf
-ms.date: 11/04/2016
+ms.date: 4/2/2020
 api_name:
 - setvbuf
+- _o_setvbuf
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -15,6 +16,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-stdio-l1-1-0.dll
+- api-ms-win-crt-private-l1-1-0
 api_type:
 - DLLExport
 topic_type:
@@ -26,12 +28,12 @@ helpviewer_keywords:
 - stream buffering
 - setvbuf function
 ms.assetid: 6aa5aa37-3408-4fa0-992f-87f9f9c4baea
-ms.openlocfilehash: 38b6474f550107a8edd941c7112ba98891ab3c12
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 203265a8dd85854bcedd737359b856fdc4cce04d
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70948180"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81316267"
 ---
 # <a name="setvbuf"></a>setvbuf
 
@@ -50,7 +52,7 @@ int setvbuf(
 
 ### <a name="parameters"></a>Paramètres
 
-*stream*<br/>
+*Flux*<br/>
 Pointeur désignant la structure **FILE**.
 
 *buffer*<br/>
@@ -59,30 +61,32 @@ Mémoire tampon allouée par l’utilisateur.
 *mode*<br/>
 Mode de mise en mémoire tampon.
 
-*size*<br/>
-Taille de la mémoire tampon en octets. Plage autorisée : 2 < = *taille* < = INT_MAX (2147483647). En interne, la valeur fournie pour *Size* est arrondie au multiple le plus proche de 2.
+*Taille*<br/>
+Taille de la mémoire tampon en octets. Gamme admissible : 2 <et *taille* <INT_MAX (2147483647). En interne, la valeur fournie pour la *taille* est arrondie vers le bas au multiple le plus proche de 2.
 
 ## <a name="return-value"></a>Valeur de retour
 
 Retourne 0 en cas de réussite.
 
-Si *Stream* a la **valeur null**, ou si le *mode* ou la *taille* ne se trouve pas dans une modification valide, le gestionnaire de paramètres non valides est appelé, comme décrit dans [validation de paramètre](../../c-runtime-library/parameter-validation.md). Si l’exécution est autorisée à se poursuivre, cette fonction retourne -1 et définit **errno** sur **EINVAL**.
+Si *le flux* est **NULL**, ou si *le mode* ou la *taille* n’est pas dans une modification valide, le gestionnaire de paramètres invalide est invoqué, tel que décrit dans la validation [de paramètres](../../c-runtime-library/parameter-validation.md). Si l’exécution est autorisée à se poursuivre, cette fonction retourne -1 et définit **errno** sur **EINVAL**.
 
 Pour plus d’informations sur ces codes d’erreur et les autres, consultez [_doserrno, errno, _sys_errlist et _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
 
 ## <a name="remarks"></a>Notes
 
-La fonction **setvbuf** permet au programme de contrôler la mise en mémoire tampon et la taille de la mémoire tampon pour le *flux*. le *flux* doit faire référence à un fichier ouvert qui n’a pas subi une opération d’e/s depuis son ouverture. Le tableau désigné par la *mémoire tampon* est utilisé comme mémoire tampon, sauf s’il est **null**, auquel cas **setvbuf** utilise une mémoire tampon allouée automatiquement de \* *taille*longueur/2 octets.
+La fonction **setvbuf** permet au programme de contrôler à la fois la mise en mémoire tampon et la taille du tampon pour *le flux*. *flux* doit se référer à un fichier ouvert qui n’a pas subi une opération I / O depuis son ouverture. Le tableau pointé par *le tampon* est utilisé comme tampon, sauf si c’est **NULL**, auquel \* cas **setvbuf** utilise un tampon automatiquement alloué de la *taille*de longueur /2 2 octets.
 
-Le mode doit être **_IOFBF**, **_IOLBF**ou **_IONBF**. Si le *mode* est **_IOFBF** ou **_IOLBF**, la *taille* est utilisée comme taille de la mémoire tampon. Si le *mode* est **_IONBF**, le flux est non mis en mémoire tampon et la *taille* et la *mémoire tampon* sont ignorées. Les valeurs pour le *mode* et leurs significations sont les suivantes :
+Le mode doit être **_IOFBF,** **_IOLBF,** ou **_IONBF**. Si *le mode* est **_IOFBF** ou **_IOLBF,** alors la *taille* est utilisée comme la taille du tampon. Si *le mode* est **_IONBF,** le flux est inbuffered et *la taille* et le *tampon* sont ignorés. Les valeurs pour *le mode* et leurs significations sont les :
 
-|valeur du *mode*|Signification|
+|valeur *du mode*|Signification|
 |-|-|
-| **_IOFBF** | Mise en mémoire tampon complète ; autrement dit, la *mémoire tampon* est utilisée comme mémoire tampon et la *taille* est utilisée comme taille de la mémoire tampon. Si *buffer* a la **valeur null**, une longueur d’octets de *taille* de mémoire tampon allouée automatiquement est utilisée. |
-| **_IOLBF** | Pour certains systèmes, ce mode assure une mise en mémoire tampon de ligne. Toutefois, pour Win32, le comportement est le même que pour la mise en mémoire tampon complète de **_IOFBF** . |
-| **_IONBF** | Aucune mémoire tampon n’est utilisée, quelle que soit la *taille*de la *mémoire tampon* ou. |
+| **_IOFBF** | Tampon complet; *c’est-à-dire* que le tampon est utilisé comme tampon et la *taille* est utilisée comme la taille du tampon. Si *le tampon* est **NULL**, un octets de *taille* tampon automatiquement allouée long est utilisé. |
+| **_IOLBF** | Pour certains systèmes, ce mode assure une mise en mémoire tampon de ligne. Cependant, pour Win32, le comportement est le même que **_IOFBF** - Full Buffering. |
+| **_IONBF** | Aucun tampon n’est utilisé, indépendamment du *tampon* ou de la *taille.* |
 
-## <a name="requirements"></a>Configuration requise
+Par défaut, l’état global de cette fonction est étendue à l’application. Pour changer cela, voir [Global State dans le CRT](../global-state.md).
+
+## <a name="requirements"></a>Spécifications
 
 |Routine|En-tête requis|
 |-------------|---------------------|

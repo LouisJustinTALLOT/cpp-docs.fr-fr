@@ -4,29 +4,29 @@ ms.date: 11/04/2016
 helpviewer_keywords:
 - type libraries [MFC], accessing
 ms.assetid: a03fa7f0-86c2-4119-bf81-202916fb74b3
-ms.openlocfilehash: 23d4675bd3638d2effd1b967f0729f9e70dac6de
-ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
+ms.openlocfilehash: 1794e16489ab48d919bbd4116588fba4b74b88d9
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/16/2020
-ms.locfileid: "79420749"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81372871"
 ---
 # <a name="type-library-access"></a>Accès à la bibliothèque de types
 
-Les bibliothèques de types exposent les interfaces d’un contrôle OLE à d’autres applications prenant en charge OLE. Chaque contrôle OLE doit avoir une bibliothèque de types si une ou plusieurs interfaces doivent être exposées.
+Les bibliothèques de type exposent les interfaces d’un contrôle OLE à d’autres applications OLE-aware. Chaque contrôle OLE doit avoir une bibliothèque de type si une ou plusieurs interfaces doivent être exposées.
 
-Les macros suivantes permettent à un contrôle OLE de fournir l’accès à sa propre bibliothèque de types :
+Les macros suivantes permettent à un contrôle OLE de donner accès à sa propre bibliothèque de type :
 
 ### <a name="type-library-access"></a>Accès à la bibliothèque de types
 
 |||
 |-|-|
-|[DECLARE_OLETYPELIB](#declare_oletypelib)|Déclare une fonction membre `GetTypeLib` d’un contrôle OLE (doit être utilisé dans la déclaration de classe).|
-|[IMPLEMENT_OLETYPELIB](#implement_oletypelib)|Implémente une fonction membre `GetTypeLib` d’un contrôle OLE (doit être utilisé dans l’implémentation de classe).|
+|[DECLARE_OLETYPELIB](#declare_oletypelib)|Déclare une `GetTypeLib` fonction de membre d’un contrôle OLE (doit être utilisé dans la déclaration de classe).|
+|[IMPLEMENT_OLETYPELIB](#implement_oletypelib)|Implémente une `GetTypeLib` fonction membre d’un contrôle OLE (doit être utilisé dans la mise en œuvre de la classe).|
 
-##  <a name="declare_oletypelib"></a>DECLARE_OLETYPELIB
+## <a name="declare_oletypelib"></a><a name="declare_oletypelib"></a>DECLARE_OLETYPELIB
 
-Déclare la fonction membre `GetTypeLib` de votre classe de contrôle.
+Déclare la `GetTypeLib` fonction de membre de votre classe de contrôle.
 
 ```
 DECLARE_OLETYPELIB(class_name)
@@ -35,7 +35,7 @@ DECLARE_OLETYPELIB(class_name)
 ### <a name="parameters"></a>Paramètres
 
 *class_name*<br/>
-Nom de la classe de contrôle associée à la bibliothèque de types.
+Le nom de la classe de contrôle se rapportait à la bibliothèque de type.
 
 ### <a name="remarks"></a>Notes
 
@@ -45,9 +45,9 @@ Utilisez cette macro dans le fichier d’en-tête de la classe de contrôle.
 
 **En-tête :** afxdisp.h
 
-##  <a name="implement_oletypelib"></a>IMPLEMENT_OLETYPELIB
+## <a name="implement_oletypelib"></a><a name="implement_oletypelib"></a>IMPLEMENT_OLETYPELIB
 
-Implémente la fonction membre `GetTypeLib` du contrôle.
+Implémente la `GetTypeLib` fonction de membre du contrôle.
 
 ```
 IMPLEMENT_OLETYPELIB(class_name, tlid, wVerMajor,  wVerMinor)
@@ -56,20 +56,20 @@ IMPLEMENT_OLETYPELIB(class_name, tlid, wVerMajor,  wVerMinor)
 ### <a name="parameters"></a>Paramètres
 
 *class_name*<br/>
-Nom de la classe de contrôle associée à la bibliothèque de types.
+Le nom de la classe de contrôle se rapportait à la bibliothèque de type.
 
-*tlid*<br/>
-Numéro d’identification de la bibliothèque de types.
+*tlid tlid*<br/>
+Le numéro d’identification de la bibliothèque de type.
 
-*wVerMajor*<br/>
-Numéro de version principale de la bibliothèque de types.
+*wVerMajor (en)*<br/>
+Le numéro de version principale de la bibliothèque de type.
 
-*wVerMinor*<br/>
-Numéro de version mineure de la bibliothèque de types.
+*wVerMinor (en)*<br/>
+Le numéro de version mineure de bibliothèque de type.
 
 ### <a name="remarks"></a>Notes
 
-Cette macro doit apparaître dans le fichier d’implémentation pour toute classe de contrôle qui utilise la macro DECLARE_OLETYPELIB.
+Cette macro doit apparaître dans le fichier d’implémentation de toute classe de contrôle qui utilise la macro DECLARE_OLETYPELIB.
 
 ### <a name="requirements"></a>Spécifications
 
@@ -77,4 +77,4 @@ Cette macro doit apparaître dans le fichier d’implémentation pour toute clas
 
 ## <a name="see-also"></a>Voir aussi
 
-[Macros et globales](../../mfc/reference/mfc-macros-and-globals.md)
+[Macros et objet Globals](../../mfc/reference/mfc-macros-and-globals.md)

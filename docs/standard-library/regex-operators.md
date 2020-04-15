@@ -10,22 +10,22 @@ f1_keywords:
 - regex/std::operator==
 - regex/std::operator<<
 ms.assetid: ec623e65-c186-491f-aa18-6b12b47e1127
-ms.openlocfilehash: 8795d0f1c387fb87c44f2d68c45aa27d1edbfb79
-ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
+ms.openlocfilehash: ebed98daaea895fa88dc654189fb3c3068d2b508
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/21/2019
-ms.locfileid: "72689070"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81366420"
 ---
 # <a name="ltregexgt-operators"></a>&lt;regex&gt;, opérateurs
 
 ||||
 |-|-|-|
-|[!=, opérateur](#op_neq)|[operator&gt;](#op_gt)|[operator&gt;=](#op_gt_eq)|
-|[operator&lt;](#op_lt)|[operator&lt;&lt;](#op_lt_lt)|[operator&lt;=](#op_lt_eq)|
-|[operator==](#op_eq_eq)|
+|[opérateur!](#op_neq)|[Opérateur&gt;](#op_gt)|[Opérateur&gt;=](#op_gt_eq)|
+|[Opérateur&lt;](#op_lt)|[Opérateur&lt;&lt;](#op_lt_lt)|[Opérateur&lt;=](#op_lt_eq)|
+|[opérateur](#op_eq_eq)|
 
-## <a name="op_neq"></a>  operator!=
+## <a name="operator"></a><a name="op_neq"></a>opérateur!
 
 Comparaison « n’est pas égal à » entre plusieurs objets.
 
@@ -66,19 +66,19 @@ bool operator!=(const match_results<BidIt, Alloc>& left,
 
 ### <a name="parameters"></a>Paramètres
 
-@No__t_1 *bidit*
+*BidIt*\
 Type d'itérateur.
 
-*IOtraits* \
+*IOtraits (en)*\
 Classe de caractéristiques des chaînes.
 
-@No__t_1 *Alloc*
+*Alloc*\
 Classe allocator.
 
-\ *gauche*
+*Gauche*\
 Objet de gauche à comparer.
 
-\ *droit*
+*Oui*\
 Objet de droite à comparer.
 
 ### <a name="remarks"></a>Notes
@@ -144,7 +144,7 @@ sub != "aab" == true
 sub != 'a' == true
 ```
 
-## <a name="op_lt"></a>  operator&lt;
+## <a name="operatorlt"></a><a name="op_lt"></a>Opérateur&lt;
 
 Comparaison « inférieur à » entre plusieurs objets.
 
@@ -181,24 +181,24 @@ bool operator<(const sub_match<BidIt>& left,
 
 ### <a name="parameters"></a>Paramètres
 
-@No__t_1 *bidit*
+*BidIt*\
 Type d'itérateur.
 
-*IOtraits* \
+*IOtraits (en)*\
 Classe de caractéristiques des chaînes.
 
-@No__t_1 *Alloc*
+*Alloc*\
 Classe allocator.
 
-\ *gauche*
+*Gauche*\
 Objet de gauche à comparer.
 
-\ *droit*
+*Oui*\
 Objet de droite à comparer.
 
 ### <a name="remarks"></a>Notes
 
-Chaque opérateur de modèle convertit ses arguments en un type chaîne et retourne true uniquement si la valeur convertie de *Left* est inférieure à la valeur convertie de *Right*.
+Chaque opérateur de modèle convertit ses arguments en type de chaîne et retourne vrai seulement si la valeur convertie de *gauche* compare moins que la valeur convertie de *droite.*
 
 ### <a name="example"></a>Exemple
 
@@ -254,7 +254,7 @@ sub < "aab" == true
 sub < 'a' == false
 ```
 
-## <a name="op_lt_lt"></a>  operator&lt;&lt;
+## <a name="operatorltlt"></a><a name="op_lt_lt"></a>Opérateur&lt;&lt;
 
 Insère un sub_match dans un flux.
 
@@ -266,22 +266,22 @@ basic_ostream<Elem, IOtraits>& operator<<(basic_ostream<Elem, IOtraits>& os,
 
 ### <a name="parameters"></a>Paramètres
 
-@No__t_1 *elem*
+*Elem*\
 Type de l’élément.
 
-*IOtraits* \
+*IOtraits (en)*\
 Classe de caractéristiques des chaînes.
 
-@No__t_1 *Alloc*
+*Alloc*\
 Classe allocator.
 
-@No__t_1 *bidit*
+*BidIt*\
 Type d'itérateur.
 
-\ *du système d’exploitation*
+*Os*\
 Flux de sortie.
 
-\ *droit*
+*Oui*\
 Objet à insérer.
 
 ### <a name="remarks"></a>Notes
@@ -314,7 +314,7 @@ int main()
 whole match: caaa
 ```
 
-## <a name="op_lt_eq"></a>  operator&lt;=
+## <a name="operatorlt"></a><a name="op_lt_eq"></a>Opérateur&lt;=
 
 Comparaison « inférieur ou égal à » entre plusieurs objets.
 
@@ -351,19 +351,19 @@ bool operator<=(const sub_match<BidIt>& left,
 
 ### <a name="parameters"></a>Paramètres
 
-@No__t_1 *bidit*
+*BidIt*\
 Type d'itérateur.
 
-*IOtraits* \
+*IOtraits (en)*\
 Classe de caractéristiques des chaînes.
 
-@No__t_1 *Alloc*
+*Alloc*\
 Classe allocator.
 
-\ *gauche*
+*Gauche*\
 Objet de gauche à comparer.
 
-\ *droit*
+*Oui*\
 Objet de droite à comparer.
 
 ### <a name="remarks"></a>Notes
@@ -424,7 +424,7 @@ sub <= "aab" == true
 sub <= 'a' == false
 ```
 
-## <a name="op_eq_eq"></a>  operator==
+## <a name="operator"></a><a name="op_eq_eq"></a>opérateur
 
 Comparaison « est égal à » entre plusieurs objets.
 
@@ -465,19 +465,19 @@ bool operator==(const match_results<BidIt, Alloc>& left,
 
 ### <a name="parameters"></a>Paramètres
 
-@No__t_1 *bidit*
+*BidIt*\
 Type d'itérateur.
 
-*IOtraits* \
+*IOtraits (en)*\
 Classe de caractéristiques des chaînes.
 
-@No__t_1 *Alloc*
+*Alloc*\
 Classe allocator.
 
-\ *gauche*
+*Gauche*\
 Objet de gauche à comparer.
 
-\ *droit*
+*Oui*\
 Objet de droite à comparer.
 
 ### <a name="remarks"></a>Notes
@@ -486,11 +486,11 @@ Chaque opérateur de modèle convertit chacun de ses arguments en type chaîne e
 
 Quand un opérateur de modèle convertit ses arguments en type chaîne, il utilise la première des transformations suivantes qui s’applique :
 
-les arguments dont les types sont une spécialisation du modèle de classe `match_results` ou `sub_match` sont convertis en appelant la fonction membre `str` ;
+arguments dont les types sont `match_results` une `sub_match` spécialisation du `str` modèle de classe ou sont convertis en appelant la fonction membre;
 
-les arguments dont les types sont une spécialisation du modèle de classe `basic_string` sont inchangés ;
+arguments dont les types sont une `basic_string` spécialisation du modèle de classe sont inchangés;
 
-tous les autres types d’arguments sont convertis en passant la valeur d’argument au constructeur pour une spécialisation appropriée du modèle de classe `basic_string`.
+tous les autres types d’arguments sont convertis en passant la valeur `basic_string`de l’argument au constructeur pour une spécialisation appropriée du modèle de classe .
 
 ### <a name="example"></a>Exemple
 
@@ -551,7 +551,7 @@ sub == "aab" == false
 sub == 'a' == false
 ```
 
-## <a name="op_gt"></a>  operator&gt;
+## <a name="operatorgt"></a><a name="op_gt"></a>Opérateur&gt;
 
 Comparaison « supérieur à » entre plusieurs objets.
 
@@ -588,19 +588,19 @@ bool operator>(const sub_match<BidIt>& left,
 
 ### <a name="parameters"></a>Paramètres
 
-@No__t_1 *bidit*
+*BidIt*\
 Type d'itérateur.
 
-*IOtraits* \
+*IOtraits (en)*\
 Classe de caractéristiques des chaînes.
 
-@No__t_1 *Alloc*
+*Alloc*\
 Classe allocator.
 
-\ *gauche*
+*Gauche*\
 Objet de gauche à comparer.
 
-\ *droit*
+*Oui*\
 Objet de droite à comparer.
 
 ### <a name="remarks"></a>Notes
@@ -661,7 +661,7 @@ sub > "aab" == false
 sub > 'a' == true
 ```
 
-## <a name="op_gt_eq"></a>  operator&gt;=
+## <a name="operatorgt"></a><a name="op_gt_eq"></a>Opérateur&gt;=
 
 Comparaison « supérieur ou égal à » entre plusieurs objets.
 
@@ -698,19 +698,19 @@ bool operator>=(const sub_match<BidIt>& left,
 
 ### <a name="parameters"></a>Paramètres
 
-@No__t_1 *bidit*
+*BidIt*\
 Type d'itérateur.
 
-*IOtraits* \
+*IOtraits (en)*\
 Classe de caractéristiques des chaînes.
 
-@No__t_1 *Alloc*
+*Alloc*\
 Classe allocator.
 
-\ *gauche*
+*Gauche*\
 Objet de gauche à comparer.
 
-\ *droit*
+*Oui*\
 Objet de droite à comparer.
 
 ### <a name="remarks"></a>Notes
@@ -774,10 +774,10 @@ sub >= 'a' == true
 ## <a name="see-also"></a>Voir aussi
 
 [\<regex>](../standard-library/regex.md)\
-\ de la [classe regex_constants](../standard-library/regex-constants-class.md)
-\ de la [classe regex_error](../standard-library/regex-error-class.md)
-[fonctions de > \<regex](../standard-library/regex-functions.md) \
-\ de la [classe regex_iterator](../standard-library/regex-iterator-class.md)
-\ de la [classe regex_token_iterator](../standard-library/regex-token-iterator-class.md)
-\ de la [classe regex_traits](../standard-library/regex-traits-class.md)
-[\<regex>, typedefs](../standard-library/regex-typedefs.md)
+[Classe regex_constants](../standard-library/regex-constants-class.md)\
+[Classe regex_error](../standard-library/regex-error-class.md)\
+[\<regex> fonctions](../standard-library/regex-functions.md)\
+[Classe regex_iterator](../standard-library/regex-iterator-class.md)\
+[Classe regex_token_iterator](../standard-library/regex-token-iterator-class.md)\
+[Classe regex_traits](../standard-library/regex-traits-class.md)\
+[\<regex> dactylographes](../standard-library/regex-typedefs.md)

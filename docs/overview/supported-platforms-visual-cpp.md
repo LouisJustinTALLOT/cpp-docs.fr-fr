@@ -7,32 +7,32 @@ helpviewer_keywords:
 - platforms [C++]
 ms.assetid: 0d893056-4008-411a-b3d1-5f57fd7da95c
 ms.openlocfilehash: 049b28d23c7f5f5f023f3b2964577b75992c2998
-ms.sourcegitcommit: 5f276064779d90a4cfda758f89e0c0f1e4d1a188
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/09/2020
+ms.lasthandoff: 04/14/2020
 ms.locfileid: "75793828"
 ---
 # <a name="supported-platforms-visual-c"></a>Plateformes prises en charge (Visual C++)
 
 Les applications générées à l'aide de Visual Studio peuvent être ciblées pour différentes plateformes, comme suit.
 
-|Système d'exploitation|x86|x64|ARM|ARM64\*\*\*\*|
+|Système d’exploitation|x86|x64|ARM|ARM64\*\*\*\*|
 |----------------------|---------|---------|---------|---------|
-|Windows XP|X\*|X\*|||
+|Windows XP|X\*|X\*|||
 |Windows Server 2003|X\*|X\*|||
-|Windows Vista|x|x|||
-|Windows Server 2008|x|x|||
-|Windows 7|x|x|||
-|Windows Server 2012 R2|x|x|||
-|Windows 8|x|x|x||
-|Windows 8.1|x|x|x||
-|Windows 10|x|x|x|x|
-|Android \*\*|x|x|x|x|
-|iOS \*\*|x|x|x|x|
-|Linux \*\*\*|x|x|x|x|
+|Windows Vista|X|X|||
+|Windows Server 2008|X|X|||
+|Windows 7|X|X|||
+|Windows Server 2012 R2|X|X|||
+|Windows 8|X|X|X||
+|Windows 8.1|X|X|X||
+|Windows 10|X|X|X|X|
+|Android \*\*|X|X|X|X|
+|iOS \*\*|X|X|X|X|
+|Linux \*\*\*|X|X|X|X|
 
-\* vous pouvez utiliser l’ensemble d’outils de plateforme Windows XP inclus dans Visual Studio 2017, Visual Studio 2015, Visual Studio 2013 et Visual Studio 2012 Update 1 pour générer des projets Windows XP et Windows Server 2003. Pour plus d’informations sur la façon d’utiliser cet ensemble d’outils de plateforme, consultez [Configuration des programmes pour Windows XP](../build/configuring-programs-for-windows-xp.md). Pour plus d’informations sur la modification de l’ensemble d’outils de plateforme, consultez [Guide pratique pour modifier le framework cible et l’ensemble d’outils de la plateforme](../build/how-to-modify-the-target-framework-and-platform-toolset.md).
+\*Vous pouvez utiliser l’toolset de plateforme Windows XP inclus dans Visual Studio 2017, Visual Studio 2015, Visual Studio 2013 et Visual Studio 2012 Update 1 pour construire des projets Windows XP et Windows Server 2003. Pour plus d’informations sur la façon d’utiliser cet ensemble d’outils de plateforme, consultez [Configuration des programmes pour Windows XP](../build/configuring-programs-for-windows-xp.md). Pour plus d’informations sur la modification de l’ensemble d’outils de plateforme, consultez [Guide pratique pour modifier le framework cible et l’ensemble d’outils de la plateforme](../build/how-to-modify-the-target-framework-and-platform-toolset.md).
 
 \*\* Vous pouvez installer la charge de travail **Développement mobile en C++** dans le programme d’installation pour Visual Studio 2017 et ultérieur. Lors de l’installation de Visual Studio 2015, choisissez le composant facultatif **Visual C++ pour le développement mobile multiplateforme** pour cibler les plateformes iOS ou Android. Pour obtenir des instructions, consultez [Installer Visual C++ pour le développement mobile multiplateforme](/visualstudio/cross-platform/install-visual-cpp-for-cross-platform-mobile-development). Pour générer du code iOS, vous devez disposer d’un ordinateur Mac et satisfaire à d’autres exigences. Pour obtenir une liste des prérequis et des instructions détaillées, consultez [Installer et configurer les outils de génération pour iOS](/visualstudio/cross-platform/install-and-configure-tools-to-build-using-ios). Vous pouvez générer du code x86 ou ARM en fonction du matériel cible. Utilisez des configurations x86 pour générer pour le simulateur iOS, pour l'émulateur Microsoft Visual Studio pour Android et pour certains appareils Android. Utilisez des configurations ARM pour générer des applications pour les appareils iOS et la plupart des appareils Android.
 
@@ -45,4 +45,4 @@ Pour plus d’informations sur la configuration d’une plateforme cible, consul
 ## <a name="see-also"></a>Voir aussi
 
 - [Outils et fonctionnalités Visual C++ dans les éditions de Visual Studio](visual-cpp-tools-and-features-in-visual-studio-editions.md)
-- [Bien démarrer](/visualstudio/ide/getting-started-with-cpp-in-visual-studio)
+- [Prise en main](/visualstudio/ide/getting-started-with-cpp-in-visual-studio)

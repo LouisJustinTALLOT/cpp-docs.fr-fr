@@ -4,16 +4,16 @@ ms.date: 11/04/2016
 f1_keywords:
 - istream/std::operator&gt;&gt;
 ms.assetid: 7174da41-f301-4a34-b631-0ab918b188d2
-ms.openlocfilehash: 5ac5c61488530f99cdad38ca1bfca365b6ac0f8c
-ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
+ms.openlocfilehash: 3b9521fde1b5a03389bfc1ad3e35fa407d9d6ac0
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/16/2020
-ms.locfileid: "79420126"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81363036"
 ---
 # <a name="ltistreamgt-operators"></a>&lt;istream&gt;, opérateurs
 
-## <a name="op_gt_gt"></a>  operator&gt;&gt;
+## <a name="operatorgtgt"></a><a name="op_gt_gt"></a>Opérateur&gt;&gt;
 
 Extrait des chaînes et des caractères à partir du flux.
 
@@ -59,13 +59,13 @@ basic_istream<Elem, Tr>& operator>>(
 *Ch*\
 Un caractère.
 
-*Istr*\
-Un flux.
+*Istr (Istr)*\
+Flux.
 
-*str*\
+*Str*\
 Une chaîne.
 
-\ *Val*
+*Val*\
 Type.
 
 ### <a name="return-value"></a>Valeur de retour
@@ -76,7 +76,7 @@ Flux.
 
 La classe `basic_istream` définit également plusieurs opérateurs d’extraction. Pour plus d’informations, consultez [basic_istream::operator>>](../standard-library/basic-istream-class.md#op_gt_gt).
 
-Le modèle de fonction :
+Le modèle de fonction :
 
 ```cpp
 template <class Elem, class Tr>
@@ -84,11 +84,11 @@ basic_istream<Elem, Tr>& operator>>(
     basic_istream<Elem, Tr>& Istr, Elem* str);
 ```
 
-extrait jusqu’à `N - 1` éléments et les stocke dans le tableau à partir de *Str*. Si `Istr.`[largeur](../standard-library/ios-base-class.md#width) est supérieure à zéro, *N* est `Istr.width`; dans le cas contraire, il s’agit de la taille du plus grand tableau de `Elem` qui peut être déclaré. La fonction stocke toujours la valeur `Elem()` après les éléments extraits qu’elle stocke. L’extraction s’arrête tôt à la fin du fichier, sur un caractère avec la valeur `Elem(0)` (qui n’est pas extraite) ou sur tout élément (qui n’est pas extrait) qui serait ignoré par [WS](../standard-library/istream-functions.md#ws). Si la fonction n’extrait aucun élément, elle appelle `Istr.`[`setstate`](../standard-library/basic-ios-class.md#setstate)`(failbit)`. Dans tous les cas, il appelle `Istr.width(0)` et retourne *ISTR*.
+extraits jusqu’à `N - 1` éléments et les stocke dans le tableau à partir *de str*. Si `Istr.` [la largeur](../standard-library/ios-base-class.md#width) est supérieure à zéro, *N* est `Istr.width`; sinon, c’est la taille de `Elem` la plus grande gamme de qui peut être déclaré. La fonction stocke `Elem()` toujours la valeur après les éléments extraits qu’elle stocke. L’extraction s’arrête tôt sur la `Elem(0)` fin du fichier, sur un personnage avec une valeur (qui n’est pas extrait), ou sur n’importe quel élément (qui n’est pas extrait) qui serait jeté par [ws](../standard-library/istream-functions.md#ws). Si la fonction n’extrait `Istr.` [`setstate`](../standard-library/basic-ios-class.md#setstate) `(failbit)`aucun élément, elle appelle . En tout cas, `Istr.width(0)` il appelle et renvoie *Istr*.
 
-**Note de sécurité** La chaîne terminée par le caractère null qui est extraite du flux d’entrée ne doit pas dépasser la taille de *la chaîne de la mémoire tampon*de destination. Pour plus d’informations, consultez [Solutions contre les dépassements de mémoire tampon](/windows/win32/SecBP/avoiding-buffer-overruns).
+**Note de sécurité** La chaîne non terminée extraite du flux d’entrée ne doit pas dépasser la taille de la *zone*tampon de destination. Pour plus d’informations, consultez [Solutions contre les dépassements de mémoire tampon](/windows/win32/SecBP/avoiding-buffer-overruns).
 
-Le modèle de fonction :
+Le modèle de fonction :
 
 ```cpp
 template <class Elem, class Tr>
@@ -96,9 +96,9 @@ basic_istream<Elem, Tr>& operator>>(
     basic_istream<Elem, Tr>& Istr, Elem& Ch);
 ```
 
-extrait un élément, si possible, et le stocke dans *ch*. Dans le cas contraire, il appelle `is.`[`setstate`](../standard-library/basic-ios-class.md#setstate)`(failbit)`. Dans tous les cas, elle retourne *ISTR*.
+extrait un élément, si possible, et le stocke dans *Ch*. Sinon, il `is.` [`setstate`](../standard-library/basic-ios-class.md#setstate) `(failbit)`appelle . En tout cas, il retourne *Istr*.
 
-Le modèle de fonction :
+Le modèle de fonction :
 
 ```cpp
 template <class Tr>
@@ -108,7 +108,7 @@ basic_istream<char, Tr>& operator>>(
 
 Retourne `Istr >> ( char * ) str`.
 
-Le modèle de fonction :
+Le modèle de fonction :
 
 ```cpp
 template <class Tr>
@@ -118,7 +118,7 @@ basic_istream<char, Tr>& operator>>(
 
 Retourne `Istr >> ( char& ) Ch`.
 
-Le modèle de fonction :
+Le modèle de fonction :
 
 ```cpp
 template <class Tr>
@@ -128,7 +128,7 @@ basic_istream<char, Tr>& operator>>(
 
 Retourne `Istr >> ( char * ) str`.
 
-Le modèle de fonction :
+Le modèle de fonction :
 
 ```cpp
 template <class Tr>
@@ -138,7 +138,7 @@ basic_istream<char, Tr>& operator>>(
 
 Retourne `Istr >> ( char& ) Ch`.
 
-Le modèle de fonction :
+Le modèle de fonction :
 
 ```cpp
 template <class Elem, class Tr, class Type>
@@ -147,7 +147,7 @@ basic_istream<Elem, Tr>& operator>>(
     Type& val);
 ```
 
-retourne `Istr >> val` (et convertit une référence rvalue en `Istr` en lvalue dans le processus).
+retourne `Istr >> val` (et convertit une référence `Istr` rvalue à une lvalue dans le processus).
 
 ### <a name="example"></a>Exemple
 
@@ -170,4 +170,4 @@ int main( )
 
 ## <a name="see-also"></a>Voir aussi
 
-[\<istream>](../standard-library/istream.md)
+[\<>istream](../standard-library/istream.md)

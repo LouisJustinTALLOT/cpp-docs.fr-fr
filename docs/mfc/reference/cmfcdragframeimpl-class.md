@@ -1,22 +1,22 @@
 ---
-title: Cmfcdragframeimpl, classe
+title: Classe CMFCDragFrameImpl
 ms.date: 10/18/2018
 f1_keywords:
 - CMFCDragFrameImpl
 helpviewer_keywords:
 - CMFCDragFrameImpl class [MFC]
 ms.assetid: 500cd824-8188-43c2-8754-b7bb46b5648a
-ms.openlocfilehash: 05b4426da6bee0443a407cff583f47bee60262e4
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: a2f6f558d6b4452ca06429c7e3017b7c575c6676
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62348612"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81367565"
 ---
-# <a name="cmfcdragframeimpl-class"></a>Cmfcdragframeimpl, classe
+# <a name="cmfcdragframeimpl-class"></a>Classe CMFCDragFrameImpl
 
-Le `CMFCDragFrameImpl` classe dessine le rectangle de glissement qui s’affiche lorsque l’utilisateur fait glisser un volet dans le mode d’ancrage standard.
-Pour plus d’informations, consultez le code source situé dans le **VC\\atlmfc\\src\\mfc** dossier de votre installation de Visual Studio.
+La `CMFCDragFrameImpl` classe dessine le rectangle de traînée qui apparaît lorsque l’utilisateur traîne une vitre en mode dock standard.
+Pour plus de détails, consultez le code source situé dans le dossier **VC\\\\atlmfc src\\mfc** de votre installation Visual Studio.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -26,19 +26,19 @@ class CMFCDragFrameImpl
 
 ## <a name="remarks"></a>Notes
 
-Un objet de cette classe est incorporé dans chaque [CPANE, classe](../../mfc/reference/cpane-class.md) objet. Par conséquent, chaque volet qui utilise le `CanFloat` méthode affiche un rectangle de glissement lorsque l’utilisateur fait glisser.
+Un objet de cette classe est intégré dans chaque objet [de classe CPane.](../../mfc/reference/cpane-class.md) Ainsi, chaque volet qui `CanFloat` utilise la méthode affiche un rectangle de traînée lorsque l’utilisateur le traîne.
 
-Vous pouvez contrôler l’épaisseur de la faire glisser le rectangle en utilisant [AFX_GLOBAL_DATA::m_nDragFrameThicknessFloat](afx-global-data-structure.md#m_ndragframethicknessfloat) et [AFX_GLOBAL_DATA::m_nDragFrameThicknessDock](afx-global-data-structure.md#m_ndragframethicknessdock).
+Vous pouvez contrôler l’épaisseur du rectangle de traînée en utilisant [AFX_GLOBAL_DATA::m_nDragFrameThicknessFloat](afx-global-data-structure.md#m_ndragframethicknessfloat) et [AFX_GLOBAL_DATA::m_nDragFrameThicknessDock](afx-global-data-structure.md#m_ndragframethicknessdock).
 
 ## <a name="inheritance-hierarchy"></a>Hiérarchie d'héritage
 
 [CMFCDragFrameImpl](../../mfc/reference/cmfcdragframeimpl-class.md)
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
-**En-tête :** afxdragframeimpl.h
+**En-tête:** afxdragframeimpl.h
 
-##  <a name="enddrawdragframe"></a>  CMFCDragFrameImpl::EndDrawDragFrame
+## <a name="cmfcdragframeimplenddrawdragframe"></a><a name="enddrawdragframe"></a>CMFCDragFrameImpl::EndDrawDragFrame
 
 ```
 void EndDrawDragFrame(BOOL bClearInternalRects = TRUE);
@@ -46,11 +46,11 @@ void EndDrawDragFrame(BOOL bClearInternalRects = TRUE);
 
 ### <a name="parameters"></a>Paramètres
 
-[in] *bClearInternalRects*<br/>
+[dans] *bClearInternalRects (en)*<br/>
 
 ### <a name="remarks"></a>Notes
 
-##  <a name="init"></a>  CMFCDragFrameImpl::Init
+## <a name="cmfcdragframeimplinit"></a><a name="init"></a>CMFCDragFrameImpl::Init
 
 ```
 void Init(CWnd* pDraggedWnd);
@@ -58,11 +58,11 @@ void Init(CWnd* pDraggedWnd);
 
 ### <a name="parameters"></a>Paramètres
 
-[in] *pDraggedWnd*<br/>
+[dans] *pDraggedWnd*<br/>
 
 ### <a name="remarks"></a>Notes
 
-##  <a name="movedragframe"></a>  CMFCDragFrameImpl::MoveDragFrame
+## <a name="cmfcdragframeimplmovedragframe"></a><a name="movedragframe"></a>CMFCDragFrameImpl::MoveDragFrame
 
 ```
 void MoveDragFrame(BOOL bForceMove = FALSE);
@@ -70,11 +70,11 @@ void MoveDragFrame(BOOL bForceMove = FALSE);
 
 ### <a name="parameters"></a>Paramètres
 
-[in] *bForceMove*<br/>
+[dans] *bForceMove (en)*<br/>
 
 ### <a name="remarks"></a>Notes
 
-##  <a name="placetabpredocking"></a>  CMFCDragFrameImpl::PlaceTabPreDocking
+## <a name="cmfcdragframeimplplacetabpredocking"></a><a name="placetabpredocking"></a>CMFCDragFrameImpl::PlaceTabPreDocking
 
 ```
 void PlaceTabPreDocking(
@@ -86,15 +86,15 @@ void PlaceTabPreDocking(CWnd* pCBarToPlaceOn);
 
 ### <a name="parameters"></a>Paramètres
 
-[in] *pTabbedBar*<br/>
+[dans] *pTabbedBar (en)*<br/>
 
-[in] *bFirstTime*<br/>
+[dans] *bFirstTime (en)*<br/>
 
-[in] *pCBarToPlaceOn*<br/>
+[dans] *pCBarToPlaceOn*<br/>
 
 ### <a name="remarks"></a>Notes
 
-##  <a name="removetabpredocking"></a>  CMFCDragFrameImpl::RemoveTabPreDocking
+## <a name="cmfcdragframeimplremovetabpredocking"></a><a name="removetabpredocking"></a>CMFCDragFrameImpl::RemoveTabPreDocking
 
 ```
 void RemoveTabPreDocking(CDockablePane* pOldTargetBar = NULL);
@@ -102,11 +102,11 @@ void RemoveTabPreDocking(CDockablePane* pOldTargetBar = NULL);
 
 ### <a name="parameters"></a>Paramètres
 
-[in] *pOldTargetBar*<br/>
+[dans] *pOldTargetBar*<br/>
 
 ### <a name="remarks"></a>Notes
 
-##  <a name="resetstate"></a>  CMFCDragFrameImpl::ResetState
+## <a name="cmfcdragframeimplresetstate"></a><a name="resetstate"></a>CMFCDragFrameImpl::ResetState
 
 ```
 void ResetState();
@@ -118,4 +118,4 @@ void ResetState();
 
 [Graphique hiérarchique](../../mfc/hierarchy-chart.md)<br/>
 [Classes](../../mfc/reference/mfc-classes.md)<br/>
-[CPane, classe](../../mfc/reference/cpane-class.md)
+[CPane Class](../../mfc/reference/cpane-class.md)

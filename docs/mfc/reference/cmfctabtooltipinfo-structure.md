@@ -1,21 +1,21 @@
 ---
-title: CMFCTabToolTipInfo Structure
+title: CMFCTabToolTipInfo, structure
 ms.date: 11/04/2016
 f1_keywords:
 - CMFCTabToolTipInfo
 helpviewer_keywords:
 - CMFCTabToolTipInfo struct
 ms.assetid: 9c3b3fb9-1497-4d59-932b-0da9348dd5e2
-ms.openlocfilehash: 87c8820bc33f3a344933faa797a9fc60d2422b13
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: a507d1e69b3524074e50fde0e87fc5ebb6e5ca03
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62252956"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81367338"
 ---
-# <a name="cmfctabtooltipinfo-structure"></a>CMFCTabToolTipInfo Structure
+# <a name="cmfctabtooltipinfo-structure"></a>CMFCTabToolTipInfo, structure
 
-Cette structure fournit des informations sur l’onglet MDI qui pointe sur l’utilisateur.
+Cette structure fournit des informations sur l’onglet MDI que l’utilisateur survole.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -25,21 +25,21 @@ struct CMFCTabToolTipInfo
 
 ## <a name="members"></a>Membres
 
-### <a name="data-members"></a>Membres de données
+### <a name="data-members"></a>Données membres
 
 |Nom|Description|
 |----------|-----------------|
-|[CMFCTabToolTipInfo::m_nTabIndex](#m_ntabindex)|Spécifie l’index du contrôle onglet.|
-|[CMFCTabToolTipInfo::m_pTabWnd](#m_ptabwnd)|Pointeur vers le contrôle onglet.|
-|[CMFCTabToolTipInfo::m_strText](#m_strtext)|Le texte info-bulle.|
+|[CMFCTabToolTipInfo:m_nTabIndex](#m_ntabindex)|Spécifie l’index du contrôle de l’onglet.|
+|[CMFCTabToolTipInfo:m_pTabWnd](#m_ptabwnd)|Un pointeur pour le contrôle de l’onglet.|
+|[CMFCTabToolTipInfo:m_strText](#m_strtext)|Texte info-bulle.|
 
 ## <a name="remarks"></a>Notes
 
-Un pointeur vers un `CMFCTabToolTipInfo` structure est passée en tant que paramètre du message AFX_WM_ON_GET_TAB_TOOLTIP. Ce message est généré lorsque les onglets MDI sont activés et l’utilisateur pointe sur un contrôle onglet.
+Un pointeur `CMFCTabToolTipInfo` d’une structure est passé comme un paramètre du message AFX_WM_ON_GET_TAB_TOOLTIP. Ce message est généré lorsque les onglets MDI sont activés et que l’utilisateur plane au-dessus d’un contrôle de l’onglet.
 
 ## <a name="example"></a>Exemple
 
-L’exemple suivant montre comment `CMFCTabToolTipInfo` est utilisé dans le [exemple MDITabsDemo : MFC avec onglet MDI Application](../../overview/visual-cpp-samples.md).
+L’exemple suivant `CMFCTabToolTipInfo` montre comment est utilisé dans [l’échantillon MDITabsDemo: MFC Tabbed MDI Application](../../overview/visual-cpp-samples.md).
 
 [!code-cpp[NVC_MFC_MDITabsDemo#2](../../mfc/reference/codesnippet/cpp/cmfctabtooltipinfo-structure_1.cpp)]
 
@@ -47,13 +47,13 @@ L’exemple suivant montre comment `CMFCTabToolTipInfo` est utilisé dans le [ex
 
 [CMFCTabToolTipInfo](../../mfc/reference/cmfctabtooltipinfo-structure.md)
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
 **En-tête :** afxbasetabctrl.h
 
-##  <a name="m_ntabindex"></a>  CMFCTabToolTipInfo::m_nTabIndex
+## <a name="cmfctabtooltipinfom_ntabindex"></a><a name="m_ntabindex"></a>CMFCTabToolTipInfo:m_nTabIndex
 
-Spécifie l’index du contrôle onglet.
+Spécifie l’index du contrôle de l’onglet.
 
 ```
 int m_nTabIndex;
@@ -61,17 +61,17 @@ int m_nTabIndex;
 
 ### <a name="remarks"></a>Notes
 
-Index de l’onglet sur laquelle l’utilisateur pointe.
+Index de l’onglet sur lequel l’utilisateur plane.
 
 ### <a name="example"></a>Exemple
 
-L’exemple suivant montre comment `m_nTabIndex` est utilisé dans le [exemple MDITabsDemo : MFC avec onglet MDI Application](../../overview/visual-cpp-samples.md).
+L’exemple suivant `m_nTabIndex` montre comment est utilisé dans [l’échantillon MDITabsDemo: MFC Tabbed MDI Application](../../overview/visual-cpp-samples.md).
 
 [!code-cpp[NVC_MFC_MDITabsDemo#2](../../mfc/reference/codesnippet/cpp/cmfctabtooltipinfo-structure_1.cpp)]
 
-##  <a name="m_ptabwnd"></a>  CMFCTabToolTipInfo::m_pTabWnd
+## <a name="cmfctabtooltipinfom_ptabwnd"></a><a name="m_ptabwnd"></a>CMFCTabToolTipInfo:m_pTabWnd
 
-Pointeur vers le contrôle onglet.
+Un pointeur pour le contrôle de l’onglet.
 
 ```
 CMFCBaseTabCtrl* m_pTabWnd;
@@ -79,13 +79,13 @@ CMFCBaseTabCtrl* m_pTabWnd;
 
 ### <a name="example"></a>Exemple
 
-L’exemple suivant montre comment `m_pTabWnd` est utilisé dans le [exemple MDITabsDemo : MFC avec onglet MDI Application](../../overview/visual-cpp-samples.md).
+L’exemple suivant `m_pTabWnd` montre comment est utilisé dans [l’échantillon MDITabsDemo: MFC Tabbed MDI Application](../../overview/visual-cpp-samples.md).
 
 [!code-cpp[NVC_MFC_MDITabsDemo#2](../../mfc/reference/codesnippet/cpp/cmfctabtooltipinfo-structure_1.cpp)]
 
-##  <a name="m_strtext"></a>  CMFCTabToolTipInfo::m_strText
+## <a name="cmfctabtooltipinfom_strtext"></a><a name="m_strtext"></a>CMFCTabToolTipInfo:m_strText
 
-Le texte info-bulle.
+Texte info-bulle.
 
 ```
 CString m_strText;
@@ -93,11 +93,11 @@ CString m_strText;
 
 ### <a name="remarks"></a>Notes
 
-Si la chaîne est vide, l’info-bulle n’est pas affichée.
+Si la chaîne est vide, l’outil n’est pas affiché.
 
 ### <a name="example"></a>Exemple
 
-L’exemple suivant montre comment `m_strText` est utilisé dans le [exemple MDITabsDemo : MFC avec onglet MDI Application](../../overview/visual-cpp-samples.md).
+L’exemple suivant `m_strText` montre comment est utilisé dans [l’échantillon MDITabsDemo: MFC Tabbed MDI Application](../../overview/visual-cpp-samples.md).
 
 [!code-cpp[NVC_MFC_MDITabsDemo#2](../../mfc/reference/codesnippet/cpp/cmfctabtooltipinfo-structure_1.cpp)]
 

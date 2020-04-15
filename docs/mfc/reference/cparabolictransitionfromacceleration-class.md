@@ -16,12 +16,12 @@ helpviewer_keywords:
 - CParabolicTransitionFromAcceleration [MFC], m_dblFinalValue
 - CParabolicTransitionFromAcceleration [MFC], m_dblFinalVelocity
 ms.assetid: 1e59b86f-358b-4da0-a4fd-8eaf5e85e00f
-ms.openlocfilehash: 3d4a073a0fd74f7564d9183779acfd66b41a9540
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 0aa5831e2262602ee46bd69031e5927a86b978e1
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62372970"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81364087"
 ---
 # <a name="cparabolictransitionfromacceleration-class"></a>CParabolicTransitionFromAcceleration, classe
 
@@ -39,25 +39,25 @@ class CParabolicTransitionFromAcceleration : public CBaseTransition;
 
 |Nom|Description|
 |----------|-----------------|
-|[CParabolicTransitionFromAcceleration::CParabolicTransitionFromAcceleration](#cparabolictransitionfromacceleration)|Construit une transition d’accélération parabolique et l’initialise avec les paramètres spécifiés.|
+|[CParabolicTransitionDeAcceleration::CParabolicTransitionDeAcceleration](#cparabolictransitionfromacceleration)|Construit une transition parabolique-accélération et l’initialise avec des paramètres spécifiés.|
 
 ### <a name="public-methods"></a>M&#233;thodes publiques
 
 |Nom|Description|
 |----------|-----------------|
-|[CParabolicTransitionFromAcceleration::Create](#create)|Appelle la bibliothèque de transition pour créer l’objet COM de transition encapsulé. (Substitue [CBaseTransition::Create](../../mfc/reference/cbasetransition-class.md#create).)|
+|[CParabolicTransitionDeAcceleration::Créer](#create)|Appelle la bibliothèque de transition pour créer un objet COM de transition encapsulé. (Overrides [CBaseTransition::Créer](../../mfc/reference/cbasetransition-class.md#create).)|
 
 ### <a name="public-data-members"></a>Membres de données publics
 
 |Nom|Description|
 |----------|-----------------|
-|[CParabolicTransitionFromAcceleration::m_dblAcceleration](#m_dblacceleration)|L’accélération de la variable d’animation pendant la transition.|
-|[CParabolicTransitionFromAcceleration::m_dblFinalValue](#m_dblfinalvalue)|La valeur de la variable à la fin de la transition de l’animation.|
-|[CParabolicTransitionFromAcceleration::m_dblFinalVelocity](#m_dblfinalvelocity)|Rapidité de la variable à la fin de la transition de l’animation.|
+|[CParabolicTransitionDeAcceleration::m_dblAcceleration](#m_dblacceleration)|L’accélération de la variable d’animation pendant la transition.|
+|[CParabolicTransitionDeAcceleration::m_dblFinalValue](#m_dblfinalvalue)|La valeur de la variable d’animation à la fin de la transition.|
+|[CParabolicTransitionDeAcceleration::m_dblFinalVelocity](#m_dblfinalvelocity)|La vitesse de la variable d’animation à la fin de la transition.|
 
 ## <a name="remarks"></a>Notes
 
-Pendant une transition d’accélération parabolique, la valeur de la variable de l’animation passe de la valeur initiale pour la valeur finale se terminant par une vitesse spécifiée. Vous pouvez contrôler la vitesse à laquelle la variable a atteint la valeur finale en spécifiant le taux d’accélération. Étant donné que toutes les transitions sont effacées automatiquement, il est recommandé de les allouer à l’aide de nouvel opérateur. L’objet COM IUIAnimationTransition encapsulé est créé par CAnimationController::AnimateGroup, jusqu'à ce que puis sa valeur est NULL. La modification de variables membres après que la création de cet objet COM n’a aucun effet.
+Au cours d’une transition parabolique-accélération, la valeur de la variable d’animation passe de la valeur initiale à la valeur finale se terminant à une vitesse spécifiée. Vous pouvez contrôler la rapidité avec laquelle la variable atteint la valeur finale en spécifiant le taux d’accélération. Étant donné que toutes les transitions sont effacées automatiquement, il est recommandé de les répartir à l’aide de l’opérateur nouveau. L’objet IUIAnimationTransition COM encapsulé est créé par CAnimationController::AnimateGroup, jusque-là c’est NULL. Changer les variables des membres après la création de cet objet COM n’a aucun effet.
 
 ## <a name="inheritance-hierarchy"></a>Hiérarchie d'héritage
 
@@ -65,15 +65,15 @@ Pendant une transition d’accélération parabolique, la valeur de la variable 
 
 [CBaseTransition](../../mfc/reference/cbasetransition-class.md)
 
-[CParabolicTransitionFromAcceleration](../../mfc/reference/cparabolictransitionfromacceleration-class.md)
+[CParabolicTransitionDeAcceleration](../../mfc/reference/cparabolictransitionfromacceleration-class.md)
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
 **En-tête :** afxanimationcontroller.h
 
-##  <a name="cparabolictransitionfromacceleration"></a>  CParabolicTransitionFromAcceleration::CParabolicTransitionFromAcceleration
+## <a name="cparabolictransitionfromaccelerationcparabolictransitionfromacceleration"></a><a name="cparabolictransitionfromacceleration"></a>CParabolicTransitionDeAcceleration::CParabolicTransitionDeAcceleration
 
-Construit une transition d’accélération parabolique et l’initialise avec les paramètres spécifiés.
+Construit une transition parabolique-accélération et l’initialise avec des paramètres spécifiés.
 
 ```
 CParabolicTransitionFromAcceleration(
@@ -84,18 +84,18 @@ CParabolicTransitionFromAcceleration(
 
 ### <a name="parameters"></a>Paramètres
 
-*dblFinalValue*<br/>
-La valeur de la variable à la fin de la transition de l’animation.
+*dblFinalValue (en)*<br/>
+La valeur de la variable d’animation à la fin de la transition.
 
-*dblFinalVelocity*<br/>
-Rapidité de la variable à la fin de la transition de l’animation.
+*dblFinalVelocity dblFinalVelocity dblFinalVelocity dbl*<br/>
+La vitesse de la variable d’animation à la fin de la transition.
 
 *dblAcceleration*<br/>
 L’accélération de la variable d’animation pendant la transition.
 
-##  <a name="create"></a>  CParabolicTransitionFromAcceleration::Create
+## <a name="cparabolictransitionfromaccelerationcreate"></a><a name="create"></a>CParabolicTransitionDeAcceleration::Créer
 
-Appelle la bibliothèque de transition pour créer l’objet COM de transition encapsulé.
+Appelle la bibliothèque de transition pour créer un objet COM de transition encapsulé.
 
 ```
 virtual BOOL Create(
@@ -105,14 +105,14 @@ virtual BOOL Create(
 
 ### <a name="parameters"></a>Paramètres
 
-*pLibrary*<br/>
-Pointeur vers la bibliothèque de transitions qui est responsable de la création de transitions standards.
+*pLibraire*<br/>
+Un pointeur vers la bibliothèque de transition, qui est responsable de la création de transitions standard.
 
 ### <a name="return-value"></a>Valeur de retour
 
-TRUE si la transition est créée avec succès ; Sinon, FALSE.
+VRAI si la transition est créée avec succès; autrement FALSE.
 
-##  <a name="m_dblacceleration"></a>  CParabolicTransitionFromAcceleration::m_dblAcceleration
+## <a name="cparabolictransitionfromaccelerationm_dblacceleration"></a><a name="m_dblacceleration"></a>CParabolicTransitionDeAcceleration::m_dblAcceleration
 
 L’accélération de la variable d’animation pendant la transition.
 
@@ -120,17 +120,17 @@ L’accélération de la variable d’animation pendant la transition.
 DOUBLE m_dblAcceleration;
 ```
 
-##  <a name="m_dblfinalvalue"></a>  CParabolicTransitionFromAcceleration::m_dblFinalValue
+## <a name="cparabolictransitionfromaccelerationm_dblfinalvalue"></a><a name="m_dblfinalvalue"></a>CParabolicTransitionDeAcceleration::m_dblFinalValue
 
-La valeur de la variable à la fin de la transition de l’animation.
+La valeur de la variable d’animation à la fin de la transition.
 
 ```
 DOUBLE m_dblFinalValue;
 ```
 
-##  <a name="m_dblfinalvelocity"></a>  CParabolicTransitionFromAcceleration::m_dblFinalVelocity
+## <a name="cparabolictransitionfromaccelerationm_dblfinalvelocity"></a><a name="m_dblfinalvelocity"></a>CParabolicTransitionDeAcceleration::m_dblFinalVelocity
 
-Rapidité de la variable à la fin de la transition de l’animation.
+La vitesse de la variable d’animation à la fin de la transition.
 
 ```
 DOUBLE m_dblFinalVelocity;

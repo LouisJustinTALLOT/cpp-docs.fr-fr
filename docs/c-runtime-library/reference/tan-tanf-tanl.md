@@ -1,10 +1,11 @@
 ---
 title: tan, tanf, tanl
-ms.date: 04/10/2018
+ms.date: 4/2/2020
 api_name:
 - tan
 - tanf
 - tanl
+- _o_tan
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -17,6 +18,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-math-l1-1-0.dll
+- api-ms-win-crt-private-l1-1-0
 api_type:
 - DLLExport
 topic_type:
@@ -35,12 +37,12 @@ helpviewer_keywords:
 - tanf function
 - trigonometric functions
 ms.assetid: 36cc0ce8-9c80-4653-b354-ddb3b378b6bd
-ms.openlocfilehash: 9fc1a75bdc6fddb5134b9db17961ba3c4550bc79
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 73a519614f17b6a8f8b26b5eae2172c87ea7f817
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80168705"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81362628"
 ---
 # <a name="tan-tanf-tanl"></a>tan, tanf, tanl
 
@@ -61,29 +63,31 @@ long double tan( long double x );  // C++ only
 
 ### <a name="parameters"></a>Paramètres
 
-*x*<br/>
+*X*<br/>
 Angle en radians.
 
 ## <a name="return-value"></a>Valeur retournée
 
-Les fonctions **Tan** retournent la tangente de *x*. Si *x* est supérieur ou égal à 263, ou inférieur ou égal à-263, une perte de précision dans le résultat se produit.
+Les fonctions **de bronzage** retournent la tangente de *x*. Si *x* est supérieur ou égal à 263, ou moins ou égal à -263, une perte d’importance dans le résultat se produit.
 
-|Entrée|Exception SEH|**Supertherr** Titre|
+|Entrée|Exception SEH|**Matherr Matherr** Exception|
 |-----------|-------------------|-------------------------|
 |± QNAN,IND|Aucun|_DOMAIN|
-|FICHIER INF ±|**Non valide**|_DOMAIN|
+|INF|**Non valide**|_DOMAIN|
 
 ## <a name="remarks"></a>Notes
 
-Étant C++ donné que autorise la surcharge, vous pouvez appeler des surcharges de **Tan** qui acceptent et retournent des valeurs **float** ou **long** **double** . Dans un programme C, **Tan** prend toujours et retourne **double**.
+Étant donné que le CMD permet la surcharge, vous pouvez appeler des surcharges de **bronzage** qui prennent et retournent **flotteur** ou **de longues** valeurs **doubles.** Dans un programme C, **le bronzage** prend et revient toujours **double.**
+
+Par défaut, l’état global de cette fonction est étendue à l’application. Pour changer cela, voir [Global State dans le CRT](../global-state.md).
 
 ## <a name="requirements"></a>Spécifications
 
 |Routine|En-tête requis (C)|En-tête requis (C++)|
 |-------------|---------------------|-|
-|**Tan**, **Tanf,** , **tanl**|\<math.h>|\<cmath> ou \<math.h>|
+|**tan**, **tanf**, **tanl**|\<math.h>|\<cmath> ou \<math.h>|
 
-Pour plus d’informations sur la compatibilité, voir [Compatibilité](../../c-runtime-library/compatibility.md).
+Pour plus d'informations sur la compatibilité, voir [Compatibilité](../../c-runtime-library/compatibility.md).
 
 ## <a name="example"></a>Exemple
 
@@ -111,7 +115,7 @@ tan( 0.785398 ) = 1.000000
 
 ## <a name="see-also"></a>Voir aussi
 
-[Prise en charge de la virgule flottante](../../c-runtime-library/floating-point-support.md)<br/>
+[Soutien à la pointe flottante](../../c-runtime-library/floating-point-support.md)<br/>
 [acos, acosf, acosl](acos-acosf-acosl.md)<br/>
 [asin, asinf, asinl](asin-asinf-asinl.md)<br/>
 [atan, atanf, atanl, atan2, atan2f, atan2l](atan-atanf-atanl-atan2-atan2f-atan2l.md)<br/>

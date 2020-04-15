@@ -10,14 +10,14 @@ f1_keywords:
 ms.assetid: 18be1e52-57b9-489a-8a9b-f58894f0aaad
 helpviewer_keywords:
 - std::chrono [C++], time_point
-ms.openlocfilehash: 4511c7b2d8629f1a052137c7997daf5913c976ab
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: e1de674d4a13ba465100923bffe6cba76e61ab4a
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68459986"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81368030"
 ---
-# <a name="timepoint-class"></a>time_point, classe
+# <a name="time_point-class"></a>time_point, classe
 
 Un `time_point` décrit un type qui représente un point dans le temps. Il contient un objet de type [duration](../standard-library/duration-class.md) qui stocke le temps écoulé depuis l’époque qui est représentée par l’argument de modèle `Clock`.
 
@@ -50,24 +50,24 @@ class time_point;
 
 |Nom|Description|
 |----------|-----------------|
-|[max](#max)|Spécifie la limite supérieure pour `time_point::ref`.|
-|[min](#min)|Spécifie la limite inférieure pour `time_point::ref`.|
+|[Max](#max)|Spécifie la limite supérieure pour `time_point::ref`.|
+|[Min](#min)|Spécifie la limite inférieure pour `time_point::ref`.|
 |[time_since_epoch](#time_since_epoch)|Retourne la valeur `duration` stockée.|
 
 ### <a name="public-operators"></a>Op&#233;rateurs publics
 
 |Nom|Description|
 |----------|-----------------|
-|[time_point::operator+=](#op_add_eq)|Ajoute une valeur spécifiée à la durée stockée.|
+|[time_point::opérateur](#op_add_eq)|Ajoute une valeur spécifiée à la durée stockée.|
 |[time_point::operator-=](#operator-_eq)|Soustrait une valeur spécifiée de la durée stockée.|
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
-**En-tête:** \<Chrono >
+**En-tête:** \<chrono>
 
 **Espace de noms :** std::chrono
 
-## <a name="max"></a>  time_point::max
+## <a name="time_pointmax"></a><a name="max"></a>time_point::max
 
 Méthode statique qui retourne la limite supérieure des valeurs de type `time_point::ref`.
 
@@ -79,7 +79,7 @@ static constexpr time_point max();
 
 Retourne `time_point(duration::max())`.
 
-## <a name="min"></a>  time_point::min
+## <a name="time_pointmin"></a><a name="min"></a>time_point::min
 
 Méthode statique qui retourne la limite inférieure des valeurs de type `time_point::ref`.
 
@@ -91,7 +91,7 @@ static constexpr time_point min();
 
 Retourne `time_point(duration::min())`.
 
-## <a name="op_add_eq"></a>  time_point::operator+=
+## <a name="time_pointoperator"></a><a name="op_add_eq"></a>time_point::opérateur
 
 Ajoute une valeur spécifiée à la valeur [duration](../standard-library/duration-class.md) stockée.
 
@@ -101,14 +101,14 @@ time_point& operator+=(const duration& Dur);
 
 ### <a name="parameters"></a>Paramètres
 
-*Dur*\
-Objet `duration`.
+*Dur Dur*\
+Objet `duration` .
 
 ### <a name="return-value"></a>Valeur de retour
 
 Objet `time_point` une fois l’addition effectuée.
 
-## <a name="operator-_eq"></a>  time_point::operator-=
+## <a name="time_pointoperator-"></a><a name="operator-_eq"></a>time_point::opérateur-MD
 
 Soustrait une valeur spécifiée de la valeur [duration](../standard-library/duration-class.md) stockée.
 
@@ -118,14 +118,14 @@ time_point& operator-=(const duration& Dur);
 
 ### <a name="parameters"></a>Paramètres
 
-*Dur*\
-Objet `duration`.
+*Dur Dur*\
+Objet `duration` .
 
 ### <a name="return-value"></a>Valeur de retour
 
 Objet `time_point` une fois la soustraction effectuée.
 
-## <a name="time_point"></a>  time_point::time_point, constructeur
+## <a name="time_pointtime_point-constructor"></a><a name="time_point"></a>time_point::time_point Constructeur
 
 Construit un objet `time_point`.
 
@@ -140,21 +140,21 @@ constexpr time_point(const time_point<clock, Duration2>& Tp);
 
 ### <a name="parameters"></a>Paramètres
 
-*Dur*\
+*Dur Dur*\
 Objet [duration](../standard-library/duration-class.md).
 
-*PM*\
-Objet `time_point`.
+*Tp*\
+Objet `time_point` .
 
 ### <a name="remarks"></a>Notes
 
 Le premier constructeur construit un objet dont la valeur `duration` stockée est égale à [duration::zero](../standard-library/duration-class.md#zero).
 
-Le deuxième constructeur construit un objet dont la *valeur de durée*stockée est égale à. À `is_convertible<Duration2, duration>` moins que ne contienne la valeur true, le deuxième constructeur ne participe pas à la résolution de surcharge. Pour plus d’informations, consultez [<type_traits>](../standard-library/type-traits.md).
+Le deuxième constructeur construit un objet dont la valeur de durée stockée est égale à *Dur*. À `is_convertible<Duration2, duration>` moins que cela ne soit vrai, le deuxième constructeur ne participe pas à la résolution de surcharge. Pour plus d’informations, consultez [<type_traits>](../standard-library/type-traits.md).
 
 Le deuxième constructeur initialise sa valeur `duration` à l'aide de `Tp.time_since_epoch()`.
 
-## <a name="time_since_epoch"></a>  time_point::time_since_epoch
+## <a name="time_pointtime_since_epoch"></a><a name="time_since_epoch"></a>time_point::time_since_epoch
 
 Récupère la valeur [duration](../standard-library/duration-class.md) stockée.
 
@@ -164,5 +164,5 @@ constexpr duration time_since_epoch() const;
 
 ## <a name="see-also"></a>Voir aussi
 
-[Informations de référence sur les fichiers d’en-tête](../standard-library/cpp-standard-library-header-files.md)\
+[Référence de fichiers d’en-tête](../standard-library/cpp-standard-library-header-files.md)\
 [\<chrono>](../standard-library/chrono.md)

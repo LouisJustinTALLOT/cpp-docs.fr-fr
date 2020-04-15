@@ -1,66 +1,66 @@
 ---
-title: 'Didacticiel : notions de base de l’analyseur de performances Windows'
-description: Didacticiel sur la façon d’effectuer des opérations de base dans l’analyseur de performances Windows.
+title: 'Tutorial: Windows Performance Analyzer basics'
+description: Tutoriel sur la façon de compléter les opérations de base dans Windows Performance Analyzer.
 ms.date: 11/03/2019
 helpviewer_keywords:
 - C++ Build Insights
 - throughput analysis
 - build time analysis
 - vcperf.exe
-ms.openlocfilehash: f197e7dfd852cd66039f7279f90e42b0cf75fd86
-ms.sourcegitcommit: 3e8fa01f323bc5043a48a0c18b855d38af3648d4
+ms.openlocfilehash: ae1050b9389527a12f5bdbea6d695c0f20510127
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/05/2020
-ms.locfileid: "78332228"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81323400"
 ---
-# <a name="tutorial-windows-performance-analyzer-basics"></a>Didacticiel : notions de base de l’analyseur de performances Windows
+# <a name="tutorial-windows-performance-analyzer-basics"></a>Tutorial: Windows Performance Analyzer basics
 
 ::: moniker range="<=vs-2017"
 
-Les C++ outils de génération Insights sont disponibles dans Visual Studio 2019. Pour afficher la documentation de cette version, définissez le contrôle sélecteur de version de Visual Studio pour cet article sur Visual Studio 2019.
+Les outils build Insights sont disponibles dans Visual Studio 2019. Pour voir la documentation de cette version, définissez le contrôle du sélecteur Visual Studio **Version** pour cet article à Visual Studio 2019. On le trouve en haut de la table des contenus sur cette page.
 
 ::: moniker-end
 ::: moniker range="vs-2019"
 
-L' C++ utilisation efficace de build Insights requiert une connaissance de l’analyseur de performances Windows (WPA). Cet article vous permet de vous familiariser avec les opérations WPA courantes. Pour plus d’informations sur l’utilisation de WPA, consultez la documentation de l' [Analyseur de performances Windows](/windows-hardware/test/wpt/windows-performance-analyzer) .
+L’utilisation efficace de L’utilisation de L’insights build de CMD nécessite une certaine connaissance de Windows Performance Analyzer (WPA). Cet article vous aide à vous familiariser avec les opérations communes de WPA. Pour plus d’informations sur la façon d’utiliser WPA, consultez la documentation [de Windows Performance Analyzer.](/windows-hardware/test/wpt/windows-performance-analyzer)
 
-## <a name="change-the-view-mode"></a>Modifier le mode d’affichage
+## <a name="change-the-view-mode"></a>Modifier le mode de vue
 
-WPA offre deux modes d’affichage de base qui vous permettent d’explorer vos traces :
+WPA offre deux modes de vue de base pour vous d’explorer vos traces:
 
-- mode graphique et
+- mode graphique, et
 - mode table.
 
-Vous pouvez basculer de l’un à l’autre à l’aide des icônes mode d’affichage en haut du volet d’affichage :
+Vous pouvez basculer entre eux en utilisant les icônes de mode de vue en haut de la vitre de vue :
 
-![Basculement entre le mode graphique et le mode table.](media/wpa-switching-view-mode.gif)
+![Passer du mode graphique au mode table.](media/wpa-switching-view-mode.gif)
 
-## <a name="select-presets"></a>Sélectionner les présélections
+## <a name="select-presets"></a>Sélectionnez des préréglages
 
-La C++ plupart des AFFICHAGEs WPA de build Insights offrent plusieurs paramètres prédéfinis que vous pouvez choisir. Vous pouvez sélectionner la présélection souhaitée à l’aide du menu déroulant en haut du volet d’affichage :
+La plupart des vues WPA Build Insights de CMD ont plusieurs presets à choisir. Vous pouvez sélectionner le préréglage que vous souhaitez en utilisant le menu drop-down en haut de la vitre de vue:
 
-![Sélection d’une présélection.](media/wpa-presets.png)
+![Sélection d’un préréglage.](media/wpa-presets.png)
 
-## <a name="zoom-in-and-out"></a>Zoom avant et arrière
+## <a name="zoom-in-and-out"></a>Zoom sur et hors
 
-Certains suivis de build sont tellement volumineux qu’il est difficile d’en faire les détails. Pour effectuer un zoom avant sur une zone qui vous intéresse, cliquez avec le bouton droit sur le graphique et sélectionnez **Zoom**. Vous pouvez toujours revenir au paramètre précédent en choisissant annuler le **Zoom**. Cette image montre un exemple d’utilisation d’une sélection et de la commande **Zoom** pour effectuer un zoom avant sur une section du graphique :
+Certaines traces de construction sont si grandes qu’il est difficile de faire ressortir les détails. Pour zoomer sur une zone qui vous intéresse, cliquez à droite sur le graphique et sélectionnez **Zoom**. Vous pouvez toujours revenir au paramètre précédent en choisissant **Undo Zoom**. Cette image montre un exemple d’utilisation d’une sélection et de la commande **Zoom** pour zoomer sur une section du graphique :
 
-![Zoom avant sur un graphique.](media/wpa-zooming.gif)
+![Zoom sur un graphique.](media/wpa-zooming.gif)
 
-## <a name="group-by-different-columns"></a>Regrouper par colonnes différentes
+## <a name="group-by-different-columns"></a>Groupe par différentes colonnes
 
-Vous pouvez personnaliser la façon dont votre trace s’affiche. Cliquez sur l’icône d’engrenage en haut du volet d’affichage et réorganisez les colonnes dans l’éditeur de vue de l’Explorateur de builds. Les colonnes se trouvant au-dessus de la ligne jaune dans cette boîte de dialogue sont celles par lesquelles vos lignes de données sont regroupées. La colonne située juste au-dessus de la ligne jaune est spéciale : dans la vue du graphique, elle est affichée sur les barres de couleur.
+Vous pouvez personnaliser la façon dont votre trace est affichée. Cliquez sur l’icône de l’engrenage en haut d’une vitre et réorganisez les colonnes de l’éditeur Build Explorer View. Les colonnes trouvées au-dessus de la ligne jaune dans ce dialogue sont ceux que vos lignes de données sont regroupées par. La colonne juste au-dessus de la ligne jaune est spéciale: dans la vue graphique, elle est affichée sur les barres colorées.
 
-Cette image montre un exemple de graphique à barres d’un appel de lien. Nous utilisons l’icône d’engrenage pour ouvrir la boîte de dialogue de l’éditeur de vue de l’Explorateur de builds. Ensuite, nous faisons glisser les entrées de colonne de composant et de nom au-dessus de la ligne jaune. La configuration est modifiée pour augmenter le niveau de détail et pour voir ce qui s’est effectivement produit dans l’éditeur de liens :
+Cette image montre un graphique à barres d’exemple d’une invocation de lien. Nous utilisons l’icône de l’engrenage pour ouvrir le dialogue Build Explorer View Editor. Ensuite, nous faisons glisser les entrées de la colonne composant et nom au-dessus de la ligne jaune. La configuration est modifiée pour augmenter le niveau de détail, et pour voir ce qui s’est réellement passé à l’intérieur du lien:
 
-![Zoom avant sur un graphique.](media/wpa-grouping.gif)
+![Zoom sur un graphique.](media/wpa-grouping.gif)
 
 ## <a name="see-also"></a>Voir aussi
 
-[Didacticiel : vcperf et Windows performance analyzer](vcperf-and-wpa.md)\
-[Référence : commandes vcperf](/cpp/build-insights/reference/vcperf-commands)\
-[Référence : vues de l’analyseur de performances Windows](/cpp/build-insights/reference/wpa-views)\
+[Tutorial: vcperf et Windows Performance Analyzer](vcperf-and-wpa.md)\
+[Référence: commandes de vcperf](/cpp/build-insights/reference/vcperf-commands)\
+[Référence: Vues d’analyseur de performance Windows](/cpp/build-insights/reference/wpa-views)\
 [Windows Performance Analyzer](/windows-hardware/test/wpt/windows-performance-analyzer)
 
 ::: moniker-end

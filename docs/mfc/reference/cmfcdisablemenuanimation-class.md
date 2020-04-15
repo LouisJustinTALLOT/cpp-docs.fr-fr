@@ -1,5 +1,5 @@
 ---
-title: Cmfcdisablemenuanimation, classe
+title: CMFCDisableMenuAnimation, classe
 ms.date: 11/04/2016
 f1_keywords:
 - CMFCDisableMenuAnimation
@@ -8,16 +8,16 @@ f1_keywords:
 helpviewer_keywords:
 - CMFCDisableMenuAnimation [MFC], Restore
 ms.assetid: c6eb07da-c382-43d6-8028-007f2320e50e
-ms.openlocfilehash: bf8c598e9e105569e0a5676267e205b3d3939712
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 990f41d2dfa6491d246797322ee275c9648d52a9
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62345602"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81367567"
 ---
-# <a name="cmfcdisablemenuanimation-class"></a>Cmfcdisablemenuanimation, classe
+# <a name="cmfcdisablemenuanimation-class"></a>CMFCDisableMenuAnimation, classe
 
-Désactive l’animation de menu contextuel.
+Désactiver l’animation du menu pop-up.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -40,26 +40,26 @@ class CMFCDisableMenuAnimation
 |||
 |-|-|
 |Nom|Description|
-|[CMFCDisableMenuAnimation::Restore](#restore)|Restaure l’animation précédente l’infrastructure utilisée pour afficher un menu contextuel.|
+|[CMFCDisableMenuAnimation::Restaurer](#restore)|Restaure l’animation précédente que le cadre utilisé pour afficher un menu pop-up.|
 
-### <a name="data-members"></a>Membres de données
+### <a name="data-members"></a>Données membres
 
 |||
 |-|-|
 |Nom|Description|
-|`CMFCDisableMenuAnimation::m_animType`|Stocke le type d’animation de menu déroulant précédent.|
+|`CMFCDisableMenuAnimation::m_animType`|Stocke le type d’animation de menu pop-up précédent.|
 
 ### <a name="remarks"></a>Notes
 
-Utilisez cette classe d’assistance pour désactiver temporairement d’animation de menu contextuel (par exemple, lorsque vous traitez la souris ou le clavier).
+Utilisez cette classe d’aide pour désactiver temporairement l’animation du menu pop-up (par exemple, lorsque vous traitez les commandes de souris ou de clavier).
 
-Un `CMFCDisableMenuAnimation` objet désactive l’animation de menu contextuel pendant sa durée de vie. Le constructeur stocke le type d’animation de menu contextuel actuel dans le `m_animType` champ et comment l’animation actuelle type `CMFCPopupMenu::NO_ANIMATION`. Le destructeur restaure le type d’animation précédente.
+Un `CMFCDisableMenuAnimation` objet désactive l’animation du menu pop-up au cours de sa vie. Le constructeur stocke le type d’animation `m_animType` de menu pop-up `CMFCPopupMenu::NO_ANIMATION`actuel dans le domaine et définit le type d’animation actuel à . Le destructeur restaure le type d’animation précédent.
 
-Vous pouvez créer un `CMFCDisableMenuAnimation` objet sur la pile pour désactiver l’animation de menu contextuel dans une seule fonction. Si vous souhaitez désactiver l’animation de menu contextuel entre les fonctions, créez un `CMFCDisableMenuAnimation` de l’objet sur le tas, puis le supprimer lorsque vous souhaitez restaurer l’animation de menu contextuel.
+Vous pouvez `CMFCDisableMenuAnimation` créer un objet sur la pile pour désactiver l’animation du menu pop-up tout au long d’une seule fonction. Si vous souhaitez désactiver l’animation du menu `CMFCDisableMenuAnimation` popup entre les fonctions, créez un objet sur le tas, puis supprimez-le lorsque vous souhaitez restaurer l’animation du menu pop-up.
 
 ## <a name="example"></a>Exemple
 
-L’exemple suivant montre comment utiliser la pile pour désactiver temporairement d’animation de menu.
+L’exemple suivant montre comment utiliser la pile pour désactiver temporairement l’animation du menu.
 
 [!code-cpp[NVC_MFC_Misc#1](../../mfc/reference/codesnippet/cpp/cmfcdisablemenuanimation-class_1.h)]
 
@@ -67,13 +67,13 @@ L’exemple suivant montre comment utiliser la pile pour désactiver temporairem
 
 [CMFCDisableMenuAnimation](../../mfc/reference/cmfcdisablemenuanimation-class.md)
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
-**En-tête :** afxpopupmenu.h
+**En-tête:** afxpopupmenu.h
 
-##  <a name="restore"></a>  CMFCDisableMenuAnimation::Restore
+## <a name="cmfcdisablemenuanimationrestore"></a><a name="restore"></a>CMFCDisableMenuAnimation::Restaurer
 
-Restaure l’animation précédente l’infrastructure utilisée pour afficher un menu contextuel.
+Restaure l’animation précédente que le cadre utilisé pour afficher un menu pop-up.
 
 ```
 void Restore ();
@@ -81,7 +81,7 @@ void Restore ();
 
 ### <a name="remarks"></a>Notes
 
-Cette méthode est appelée par le `CMFCDisableMenuAnimation` destructeur pour restaurer l’animation précédente l’infrastructure utilisée pour afficher un menu contextuel.
+Cette méthode est `CMFCDisableMenuAnimation` appelée par le destructeur pour restaurer l’animation précédente que le cadre utilisé pour afficher un menu pop-up.
 
 ## <a name="see-also"></a>Voir aussi
 

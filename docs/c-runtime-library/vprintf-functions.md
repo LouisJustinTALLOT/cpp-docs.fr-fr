@@ -18,12 +18,12 @@ helpviewer_keywords:
 - vprintf function
 - formatted text [C++]
 ms.assetid: 02ac7c51-eab1-4bf0-bf4c-77065e3fa744
-ms.openlocfilehash: 3c04879c7ec90aaba1199264c0c2128b9d1ea27c
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: db4927e983a27110e587dacd9acf909f0c735b87
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70957233"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81365678"
 ---
 # <a name="vprintf-functions"></a>Fonctions vprintf
 
@@ -44,32 +44,32 @@ Les fonctions `vprintf` sont semblables à leurs fonctions équivalentes, comme 
 
 Ces fonctions mettent en forme les données pour la sortie vers les destinations, comme suit.
 
-|Fonction|Fonction équivalente|Destination de sortie|Validation de paramètre|Prise en charge des paramètres positionnels|
+|Fonction|Fonction équivalente|Destination de sortie|Validation des paramètres|Prise en charge des paramètres positionnels|
 |--------------|--------------------------|------------------------|--------------------------|----------------------------------|
-|`_vcprintf`|[_cprintf](../c-runtime-library/reference/cprintf-cprintf-l-cwprintf-cwprintf-l.md)|console|Rechercher la valeur null.|Non|
-|`_vcwprintf`|[_cwprintf](../c-runtime-library/reference/cprintf-cprintf-l-cwprintf-cwprintf-l.md)|console|Rechercher la valeur null.|Non|
-|`vfprintf`|[fprintf](../c-runtime-library/reference/fprintf-fprintf-l-fwprintf-fwprintf-l.md)|*Flux*|Rechercher la valeur null.|Non|
-|**vfprintf_p**|[fprintf_p](../c-runtime-library/reference/fprintf-p-fprintf-p-l-fwprintf-p-fwprintf-p-l.md)|*Flux*|Rechercher valeur null et format valide.|oui|
-|`vfprintf_s`|[fprintf_s](../c-runtime-library/reference/fprintf-s-fprintf-s-l-fwprintf-s-fwprintf-s-l.md)|*Flux*|Rechercher valeur null et format valide.|Non|
-|`vfwprintf`|[fwprintf](../c-runtime-library/reference/fprintf-fprintf-l-fwprintf-fwprintf-l.md)|*Flux*|Rechercher la valeur null.|Non|
-|**vfwprintf_p**|[fwprintf_p](../c-runtime-library/reference/fprintf-p-fprintf-p-l-fwprintf-p-fwprintf-p-l.md)|*Flux*|Rechercher valeur null et format valide.|oui|
-|`vfwprintf_s`|[fwprintf_s](../c-runtime-library/reference/fprintf-s-fprintf-s-l-fwprintf-s-fwprintf-s-l.md)|*Flux*|Rechercher valeur null et format valide.|Non|
-|`vprintf`|[printf](../c-runtime-library/reference/printf-printf-l-wprintf-wprintf-l.md)|`Stdout`|Rechercher la valeur null.|Non|
-|**vprintf_p**|[printf_p](../c-runtime-library/reference/printf-p-printf-p-l-wprintf-p-wprintf-p-l.md)|`Stdout`|Rechercher valeur null et format valide.|oui|
-|`vprintf_s`|[printf_s](../c-runtime-library/reference/printf-s-printf-s-l-wprintf-s-wprintf-s-l.md)|`Stdout`|Rechercher valeur null et format valide.|Non|
-|`vwprintf`|[wprintf](../c-runtime-library/reference/printf-printf-l-wprintf-wprintf-l.md)|`Stdout`|Rechercher la valeur null.|Non|
-|**vwprintf_p**|[wprintf_p](../c-runtime-library/reference/printf-p-printf-p-l-wprintf-p-wprintf-p-l.md)|`Stdout`|Rechercher valeur null et format valide.|oui|
-|`vwprintf_s`|[wprintf_s](../c-runtime-library/reference/printf-s-printf-s-l-wprintf-s-wprintf-s-l.md)|`Stdout`|Rechercher valeur null et format valide.|Non|
-|**vsprintf**|[sprintf](../c-runtime-library/reference/sprintf-sprintf-l-swprintf-swprintf-l-swprintf-l.md)|mémoire vers laquelle pointe la *mémoire tampon*|Rechercher la valeur null.|Non|
-|**vsprintf_p**|[sprintf_p](../c-runtime-library/reference/sprintf-p-sprintf-p-l-swprintf-p-swprintf-p-l.md)|mémoire vers laquelle pointe la *mémoire tampon*|Rechercher valeur null et format valide.|oui|
-|`vsprintf_s`|[sprintf_s](../c-runtime-library/reference/sprintf-s-sprintf-s-l-swprintf-s-swprintf-s-l.md)|mémoire vers laquelle pointe la *mémoire tampon*|Rechercher valeur null et format valide.|Non|
-|`vswprintf`|[swprintf](../c-runtime-library/reference/sprintf-sprintf-l-swprintf-swprintf-l-swprintf-l.md)|mémoire vers laquelle pointe la *mémoire tampon*|Rechercher la valeur null.|Non|
-|**vswprintf_p**|[swprintf_p](../c-runtime-library/reference/sprintf-p-sprintf-p-l-swprintf-p-swprintf-p-l.md)|mémoire vers laquelle pointe la *mémoire tampon*|Rechercher valeur null et format valide.|oui|
-|`vswprintf_s`|[swprintf_s](../c-runtime-library/reference/sprintf-s-sprintf-s-l-swprintf-s-swprintf-s-l.md)|mémoire vers laquelle pointe la *mémoire tampon*|Rechercher valeur null et format valide.|Non|
-|`_vscprintf`|[_vscprintf](../c-runtime-library/reference/vscprintf-vscprintf-l-vscwprintf-vscwprintf-l.md)|mémoire vers laquelle pointe la *mémoire tampon*|Rechercher la valeur null.|Non|
-|`_vscwprintf`|[_vscwprintf](../c-runtime-library/reference/vscprintf-vscprintf-l-vscwprintf-vscwprintf-l.md)|mémoire vers laquelle pointe la *mémoire tampon*|Rechercher la valeur null.|Non|
-|`_vsnprintf`|[_snprintf](../c-runtime-library/reference/snprintf-snprintf-snprintf-l-snwprintf-snwprintf-l.md)|mémoire vers laquelle pointe la *mémoire tampon*|Rechercher la valeur null.|Non|
-|`_vsnwprintf`|[_snwprintf](../c-runtime-library/reference/snprintf-snprintf-snprintf-l-snwprintf-snwprintf-l.md)|mémoire vers laquelle pointe la *mémoire tampon*|Rechercher la valeur null.|Non|
+|`_vcprintf`|[_cprintf](../c-runtime-library/reference/cprintf-cprintf-l-cwprintf-cwprintf-l.md)|console|Rechercher la valeur null.|non|
+|`_vcwprintf`|[_cwprintf](../c-runtime-library/reference/cprintf-cprintf-l-cwprintf-cwprintf-l.md)|console|Rechercher la valeur null.|non|
+|`vfprintf`|[fprintf](../c-runtime-library/reference/fprintf-fprintf-l-fwprintf-fwprintf-l.md)|*STREAM*|Rechercher la valeur null.|non|
+|**vfprintf_p**|[fprintf_p](../c-runtime-library/reference/fprintf-p-fprintf-p-l-fwprintf-p-fwprintf-p-l.md)|*STREAM*|Rechercher valeur null et format valide.|Oui|
+|`vfprintf_s`|[fprintf_s](../c-runtime-library/reference/fprintf-s-fprintf-s-l-fwprintf-s-fwprintf-s-l.md)|*STREAM*|Rechercher valeur null et format valide.|non|
+|`vfwprintf`|[fwprintf](../c-runtime-library/reference/fprintf-fprintf-l-fwprintf-fwprintf-l.md)|*STREAM*|Rechercher la valeur null.|non|
+|**vfwprintf_p**|[fwprintf_p](../c-runtime-library/reference/fprintf-p-fprintf-p-l-fwprintf-p-fwprintf-p-l.md)|*STREAM*|Rechercher valeur null et format valide.|Oui|
+|`vfwprintf_s`|[fwprintf_s](../c-runtime-library/reference/fprintf-s-fprintf-s-l-fwprintf-s-fwprintf-s-l.md)|*STREAM*|Rechercher valeur null et format valide.|non|
+|`vprintf`|[printf](../c-runtime-library/reference/printf-printf-l-wprintf-wprintf-l.md)|`Stdout`|Rechercher la valeur null.|non|
+|**vprintf_p**|[printf_p](../c-runtime-library/reference/printf-p-printf-p-l-wprintf-p-wprintf-p-l.md)|`Stdout`|Rechercher valeur null et format valide.|Oui|
+|`vprintf_s`|[printf_s](../c-runtime-library/reference/printf-s-printf-s-l-wprintf-s-wprintf-s-l.md)|`Stdout`|Rechercher valeur null et format valide.|non|
+|`vwprintf`|[wprintf](../c-runtime-library/reference/printf-printf-l-wprintf-wprintf-l.md)|`Stdout`|Rechercher la valeur null.|non|
+|**vwprintf_p**|[wprintf_p](../c-runtime-library/reference/printf-p-printf-p-l-wprintf-p-wprintf-p-l.md)|`Stdout`|Rechercher valeur null et format valide.|Oui|
+|`vwprintf_s`|[wprintf_s](../c-runtime-library/reference/printf-s-printf-s-l-wprintf-s-wprintf-s-l.md)|`Stdout`|Rechercher valeur null et format valide.|non|
+|**vsprintf**|[sprintf](../c-runtime-library/reference/sprintf-sprintf-l-swprintf-swprintf-l-swprintf-l.md)|mémoire vers laquelle pointe la *mémoire tampon*|Rechercher la valeur null.|non|
+|**vsprintf_p**|[sprintf_p](../c-runtime-library/reference/sprintf-p-sprintf-p-l-swprintf-p-swprintf-p-l.md)|mémoire vers laquelle pointe la *mémoire tampon*|Rechercher valeur null et format valide.|Oui|
+|`vsprintf_s`|[sprintf_s](../c-runtime-library/reference/sprintf-s-sprintf-s-l-swprintf-s-swprintf-s-l.md)|mémoire vers laquelle pointe la *mémoire tampon*|Rechercher valeur null et format valide.|non|
+|`vswprintf`|[swprintf](../c-runtime-library/reference/sprintf-sprintf-l-swprintf-swprintf-l-swprintf-l.md)|mémoire vers laquelle pointe la *mémoire tampon*|Rechercher la valeur null.|non|
+|**vswprintf_p**|[swprintf_p](../c-runtime-library/reference/sprintf-p-sprintf-p-l-swprintf-p-swprintf-p-l.md)|mémoire vers laquelle pointe la *mémoire tampon*|Rechercher valeur null et format valide.|Oui|
+|`vswprintf_s`|[swprintf_s](../c-runtime-library/reference/sprintf-s-sprintf-s-l-swprintf-s-swprintf-s-l.md)|mémoire vers laquelle pointe la *mémoire tampon*|Rechercher valeur null et format valide.|non|
+|`_vscprintf`|[_vscprintf](../c-runtime-library/reference/vscprintf-vscprintf-l-vscwprintf-vscwprintf-l.md)|mémoire vers laquelle pointe la *mémoire tampon*|Rechercher la valeur null.|non|
+|`_vscwprintf`|[_vscwprintf](../c-runtime-library/reference/vscprintf-vscprintf-l-vscwprintf-vscwprintf-l.md)|mémoire vers laquelle pointe la *mémoire tampon*|Rechercher la valeur null.|non|
+|`_vsnprintf`|[_snprintf](../c-runtime-library/reference/snprintf-snprintf-snprintf-l-snwprintf-snwprintf-l.md)|mémoire vers laquelle pointe la *mémoire tampon*|Rechercher la valeur null.|non|
+|`_vsnwprintf`|[_snwprintf](../c-runtime-library/reference/snprintf-snprintf-snprintf-l-snwprintf-snwprintf-l.md)|mémoire vers laquelle pointe la *mémoire tampon*|Rechercher la valeur null.|non|
 
 L’argument `argptr` est de type `va_list`, qui est défini dans les VARARGS.H et STDARG.H. La variable `argptr` doit être initialisée par **va_start** et peut être réinitialisée par les appels ultérieurs à `va_arg` ; `argptr` pointe ensuite vers le début d’une liste d’arguments qui sont convertis et transmis pour la sortie en fonction des spécifications correspondantes dans l’argument *format*. *format* a la même forme et la même fonction que l’argument *format* pour [printf](../c-runtime-library/reference/printf-printf-l-wprintf-wprintf-l.md). Aucune de ces fonctions n’appelle `va_end`. Pour obtenir une description plus complète de chaque fonction `vprintf`, consultez la description de sa fonction équivalente, comme dans le tableau précédent.
 
@@ -81,10 +81,10 @@ Les versions de ces fonctions avec les suffixes **_s** et **_p** sont les versio
 
 Les versions de ces fonctions avec le suffixe **_p** permettent de spécifier l’ordre dans lequel les arguments fournis sont substitués dans la chaîne de format. Pour plus d’informations, consultez [Paramètres positionnels printf_p](../c-runtime-library/printf-p-positional-parameters.md).
 
-Pour **vsprintf**, `vswprintf`, `_vsnprintf` et `_vsnwprintf`, si une copie se produit entre des chaînes qui se chevauchent, le comportement est indéfini.
+Pour **vsprintf** `_vsnprintf` , `_vsnwprintf` `vswprintf`, et , si la copie se produit entre les chaînes qui se chevauchent, le comportement est indéfini.
 
 > [!IMPORTANT]
->  Assurez-vous que *format* n'est pas une chaîne définie par l'utilisateur. Pour plus d’informations, consultez [Solutions contre les dépassements de mémoire tampon](/windows/win32/SecBP/avoiding-buffer-overruns). Si vous utilisez les versions sécurisées de ces fonctions (avec le suffixe **_s** ou **_p**), une chaîne de format de fournie par l’utilisateur risque de déclencher une exception de paramètre non valide si la chaîne fournie par l’utilisateur contient des caractères de mise en forme non valides.
+> Assurez-vous que *format* n'est pas une chaîne définie par l'utilisateur. Pour plus d’informations, consultez [Solutions contre les dépassements de mémoire tampon](/windows/win32/SecBP/avoiding-buffer-overruns). Si vous utilisez les versions sécurisées de ces fonctions (avec le suffixe **_s** ou **_p**), une chaîne de format de fournie par l’utilisateur risque de déclencher une exception de paramètre non valide si la chaîne fournie par l’utilisateur contient des caractères de mise en forme non valides.
 
 ## <a name="see-also"></a>Voir aussi
 

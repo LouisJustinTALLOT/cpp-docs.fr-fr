@@ -1,8 +1,9 @@
 ---
 title: tmpfile_s
-ms.date: 11/04/2016
+ms.date: 4/2/2020
 api_name:
 - tmpfile_s
+- _o_tmpfile_s
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -15,6 +16,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-stdio-l1-1-0.dll
+- api-ms-win-crt-private-l1-1-0
 api_type:
 - DLLExport
 topic_type:
@@ -26,12 +28,12 @@ helpviewer_keywords:
 - tmpfile_s function
 - temporary files, creating
 ms.assetid: 50879c69-215e-425a-a2a3-8b5467121eae
-ms.openlocfilehash: 64107f26fa651739f4d5bdd7521b15d9d458df65
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 8f9dd58abdf1d3225341e40661c14ae3a5013257
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70946056"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81362463"
 ---
 # <a name="tmpfile_s"></a>tmpfile_s
 
@@ -54,34 +56,36 @@ Adresse d’un pointeur pour stocker l’adresse du pointeur généré désignan
 
 Retourne 0 si l’opération aboutit et un code d’erreur en cas d’échec.
 
-### <a name="error-conditions"></a>Conditions d’erreur
+### <a name="error-conditions"></a>Conditions d'erreur
 
-|*pFilePtr*|**Valeur de retour**|**Contenu de** *pFilePtr*|
+|*pFilePtr*|**Valeur de rendement**|**Contenu de**  *pFilePtr*|
 |----------------|----------------------|---------------------------------|
-|**NULL**|**EINVAL**|inchangé|
+|**Null**|**EINVAL (EN)**|inchangé|
 
-Si l’erreur de validation de paramètre ci-dessus se produit, le gestionnaire de paramètre non valide est appelé, comme décrit dans [Validation de paramètre](../../c-runtime-library/parameter-validation.md). Si l’exécution est autorisée à se poursuivre, **errno** a la valeur **EINVAL** et la valeur de retour est **EINVAL**.
+Si l’erreur de validation de paramètre ci-dessus se produit, le gestionnaire de paramètre non valide est appelé, comme décrit dans [Validation de paramètre](../../c-runtime-library/parameter-validation.md). Si l’exécution est autorisée à se poursuivre, **errno** est réglé sur **EINVAL** et la valeur de retour est **EINVAL**.
 
 ## <a name="remarks"></a>Notes
 
-La fonction **tmpfile_s** crée un fichier temporaire et place un pointeur vers ce flux dans l’argument *pFilePtr* . Le fichier temporaire est créé dans le répertoire racine. Pour créer un fichier temporaire dans un répertoire autre que la racine, utilisez [tmpnam_s](tmpnam-s-wtmpnam-s.md) ou [tempnam](tempnam-wtempnam-tmpnam-wtmpnam.md) en association avec [fopen](fopen-wfopen.md).
+La fonction **tmpfile_s** crée un fichier temporaire et met un pointeur à ce flux dans *l’argument pFilePtr.* Le fichier temporaire est créé dans le répertoire racine. Pour créer un fichier temporaire dans un répertoire autre que la racine, utilisez [tmpnam_s](tmpnam-s-wtmpnam-s.md) ou [tempnam](tempnam-wtempnam-tmpnam-wtmpnam.md) en association avec [fopen](fopen-wfopen.md).
 
-Si le fichier ne peut pas être ouvert, **tmpfile_s** écrit la **valeur null** dans le paramètre *pFilePtr* . Ce fichier temporaire est automatiquement supprimé lorsque le fichier est fermé, lorsque le programme se termine normalement ou lorsque **_rmtmp** est appelé, en supposant que le répertoire de travail actuel ne change pas. Le fichier temporaire est ouvert dans le mode **w + b** (lecture/écriture binaire).
+Si le fichier ne peut pas être ouvert, **tmpfile_s** écrit **NULL** au paramètre *PFilePtr.* Ce fichier temporaire est automatiquement supprimé lorsque le fichier est fermé, lorsque le programme se termine normalement, ou lorsque **_rmtmp** est appelé, en supposant que l’annuaire de travail actuel ne change pas. Le fichier temporaire est ouvert en mode **w-b** (lecture/écriture binaire).
 
-Une défaillance peut se produire si vous tentez plus de **TMP_MAX_S** (voir stdio. H) appels avec **tmpfile_s**.
+L’échec peut se produire si vous tentez plus de **TMP_MAX_S** (voir STDIO. H) appelle avec **tmpfile_s**.
 
-## <a name="requirements"></a>Configuration requise
+Par défaut, l’état global de cette fonction est étendue à l’application. Pour changer cela, voir [Global State dans le CRT](../global-state.md).
+
+## <a name="requirements"></a>Spécifications
 
 |Routine|En-tête requis|
 |-------------|---------------------|
 |**tmpfile_s**|\<stdio.h>|
 
-Pour plus d’informations sur la compatibilité, voir consultez [Compatibilité](../../c-runtime-library/compatibility.md).
+Pour plus d'informations sur la compatibilité, voir [Compatibilité](../../c-runtime-library/compatibility.md).
 
 ## <a name="example"></a>Exemple
 
 > [!NOTE]
-> Cet exemple peut nécessiter des privilèges d’administrateur pour s’exécuter sur Windows.
+> Cet exemple peut nécessiter des privilèges administratifs pour s’exécuter sur Windows.
 
 ```C
 // crt_tmpfile_s.c

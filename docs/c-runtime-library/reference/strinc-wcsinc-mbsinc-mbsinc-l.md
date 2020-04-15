@@ -1,11 +1,13 @@
 ---
 title: _strinc, _wcsinc, _mbsinc, _mbsinc_l
-ms.date: 11/04/2016
+ms.date: 4/2/2020
 api_name:
 - _mbsinc
 - _wcsinc
 - _mbsinc_l
 - _strinc
+- _o__mbsinc
+- _o__mbsinc_l
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -18,6 +20,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-multibyte-l1-1-0.dll
+- api-ms-win-crt-private-l1-1-0
 api_type:
 - DLLExport
 topic_type:
@@ -43,12 +46,12 @@ helpviewer_keywords:
 - _tcsinc function
 - tcsinc function
 ms.assetid: 54685943-8e2c-45e9-a559-2d94930dc6b4
-ms.openlocfilehash: a468438d747a9497e974b10f9974bb79ffef1add
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 0cfbe857ec8bbcdec887d4594cee0bf2b66de380
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70958246"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81362907"
 ---
 # <a name="_strinc-_wcsinc-_mbsinc-_mbsinc_l"></a>_strinc, _wcsinc, _mbsinc, _mbsinc_l
 
@@ -79,7 +82,7 @@ unsigned char *_mbsinc_l(
 
 ### <a name="parameters"></a>Paramètres
 
-*current*<br/>
+*Actuelle*<br/>
 Pointeur de caractère.
 
 *locale*<br/>
@@ -87,20 +90,22 @@ Paramètres régionaux à utiliser.
 
 ## <a name="return-value"></a>Valeur de retour
 
-Chacune de ces routines retourne un pointeur vers le caractère qui suit immédiatement le *actuel*.
+Chacune de ces routines renvoie un pointeur au personnage qui suit immédiatement *le courant*.
 
 ## <a name="remarks"></a>Notes
 
-La fonction **_mbsinc** retourne un pointeur vers le premier octet du caractère multioctet qui suit immédiatement le *actuel*. **_mbsinc** reconnaît les séquences de caractères multioctets en fonction de la [page de codes multioctets](../../c-runtime-library/code-pages.md) en cours d’utilisation ; **_mbsinc_l** est identique, à ceci près qu’il utilise à la place les paramètres régionaux qui sont passés. Pour plus d’informations, consultez [Locale](../../c-runtime-library/locale.md).
+La fonction **_mbsinc** renvoie un pointeur au premier byte du caractère multioctet qui suit immédiatement *le courant*. **_mbsinc** reconnaît les séquences multioctets selon la [page de code multioctet](../../c-runtime-library/code-pages.md) qui est actuellement utilisée; **_mbsinc_l** est identique, sauf qu’il utilise plutôt le paramètre local qui est passé. Pour plus d’informations, consultez [Locale](../../c-runtime-library/locale.md).
 
-La fonction de texte générique **_tcsinc**, définie dans Tchar. h, est mappée à **_Mbsinc** si **_ MBCS** a été défini, ou à **_wcsinc** si **_ Unicode** a été défini. Sinon, **_tcsinc** est mappé à **_strinc**. **_strinc** et **_wcsinc** sont des versions à caractères codés sur un octet et à caractères larges de **_mbsinc**. **_strinc** et **_wcsinc** sont fournis uniquement pour ce mappage et ne doivent pas être utilisés dans le cas contraire. Pour plus d’informations, consultez [Utilisation de mappages de texte générique](../../c-runtime-library/using-generic-text-mappings.md) et [Mappages de texte générique](../../c-runtime-library/generic-text-mappings.md).
+La fonction de texte générique **_tcsinc**, définie dans Tchar.h, cartes pour **_mbsinc** si **_MBCS** a été définie, ou pour **_wcsinc** si **_UNICODE** a été définie. Sinon, **_tcsinc** des cartes pour **_strinc**. **_strinc** et **_wcsinc** sont des versions à caractère unique et à caractère large de **_mbsinc**. **_strinc** et **_wcsinc** ne sont fournis que pour cette cartographie et ne doivent pas être utilisés autrement. Pour plus d’informations, consultez [Utilisation de mappages de texte générique](../../c-runtime-library/using-generic-text-mappings.md) et [Mappages de texte générique](../../c-runtime-library/generic-text-mappings.md).
 
-Si *Current* a la **valeur null**, le gestionnaire de paramètres non valides est appelé, comme décrit dans [validation de paramètre](../../c-runtime-library/parameter-validation.md). Si l’exécution est autorisée à se poursuivre, cette fonction retourne **EINVAL** et définit **errno** sur **EINVAL**.
+Si *le courant* est **NULL**, le gestionnaire de paramètres invalides est invoqué, tel que décrit dans La validation [de paramètres](../../c-runtime-library/parameter-validation.md). Si l’exécution est autorisée à se poursuivre, cette fonction renvoie **EINVAL** et définit **errno** à **EINVAL**.
 
 > [!IMPORTANT]
 > Ces fonctions peuvent être vulnérables aux menaces de dépassement de mémoire tampon. Les dépassements de mémoire tampon peuvent être utilisés pour les attaques du système, car ils peuvent provoquer une élévation des privilèges injustifiée. Pour plus d’informations, consultez [Solutions contre les dépassements de mémoire tampon](/windows/win32/SecBP/avoiding-buffer-overruns).
 
-## <a name="requirements"></a>Configuration requise
+Par défaut, l’état global de cette fonction est étendue à l’application. Pour changer cela, voir [Global State dans le CRT](../global-state.md).
+
+## <a name="requirements"></a>Spécifications
 
 |Routine|En-tête requis|
 |-------------|---------------------|
@@ -109,11 +114,11 @@ Si *Current* a la **valeur null**, le gestionnaire de paramètres non valides es
 |**_strinc**|\<tchar.h>|
 |**_wcsinc**|\<tchar.h>|
 
-Pour plus d'informations sur la compatibilité, voir [Compatibilité](../../c-runtime-library/compatibility.md).
+Pour plus d’informations sur la compatibilité, consultez [Compatibility](../../c-runtime-library/compatibility.md).
 
 ## <a name="see-also"></a>Voir aussi
 
-[Manipulation de chaînes](../../c-runtime-library/string-manipulation-crt.md)<br/>
+[Manipulation des cordes](../../c-runtime-library/string-manipulation-crt.md)<br/>
 [_strdec, _wcsdec, _mbsdec, _mbsdec_l](strdec-wcsdec-mbsdec-mbsdec-l.md)<br/>
 [_strnextc, _wcsnextc, _mbsnextc, _mbsnextc_l](strnextc-wcsnextc-mbsnextc-mbsnextc-l.md)<br/>
 [_strninc, _wcsninc, _mbsninc, _mbsninc_l](strninc-wcsninc-mbsninc-mbsninc-l.md)<br/>

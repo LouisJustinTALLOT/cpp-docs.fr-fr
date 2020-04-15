@@ -7,29 +7,29 @@ helpviewer_keywords:
 - ATL projects, adding objects
 - ATL Simple Object Wizard
 ms.assetid: f7f85741-9aad-4543-a917-a29b996364da
-ms.openlocfilehash: e18c1848c55208b02026aba7684db928e0d6fc0a
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: bd4c9eede16ed086020dd8f12d90876e50a0a341
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62260894"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81319200"
 ---
 # <a name="atl-simple-object-wizard"></a>Assistant Objet simple ATL
 
-Cet Assistant insère dans le projet un objet COM minimal. Utilisez cette page de l’Assistant pour spécifier les noms qui identifient les fichiers pour votre objet et ses fonctionnalités de COM et classe C++.
+Cet assistant insère dans le projet un objet COM minimal. Utilisez cette page de l’assistant pour spécifier les noms qui identifient la classe et les fichiers CMD pour votre objet et sa fonctionnalité COM.
 
-Utilisez le [Options](../../atl/reference/options-atl-simple-object-wizard.md) prennent en charge de la page de cet Assistant pour spécifier le modèle de thread de l’objet, son agrégation, et si elle prend en charge les interfaces doubles et l’automatisation. Vous pouvez également indiquer la prise en charge de l’interface d’informations d’erreur, points de connexion, prise en charge d’Internet Explorer et marshaling libre de threads.
+Utilisez la page [Options](../../atl/reference/options-atl-simple-object-wizard.md) de cet assistant pour spécifier le modèle de threading de l’objet, son support d’agrégation, et s’il prend en charge les interfaces doubles et l’automatisation. Vous pouvez également indiquer la prise en charge de l’interface d’information d’erreur, des points de connexion, du support Internet Explorer et du marshaling libre.
 
 ## <a name="remarks"></a>Notes
 
-À compter de Visual Studio 2008, le script d’inscription produit par cet Assistant inscrira ses composants COM sous **HKEY_CURRENT_USER** au lieu de **HKEY_LOCAL_MACHINE**. Pour modifier ce comportement, définissez la **inscrire le composant pour tous les utilisateurs** option de l’Assistant ATL.
+À partir de Visual Studio 2008, le script d’inscription produit par cet Assistant inscrit ses composants COM sous **HKEY_CURRENT_USER** et non plus **HKEY_LOCAL_MACHINE**. Pour modifier ce comportement, définissez l’option **Inscrire le composant pour tous les utilisateurs** de l’Assistant ATL.
 
-## <a name="names"></a>Noms
+## <a name="names"></a>noms
 
-Spécifiez les noms de l’objet, interface et les classes à ajouter à votre projet. À l’exception de **nom court**, toutes les autres zones peuvent être modifiées indépendamment des autres. Si vous modifiez le texte de **nom court**, la modification est répercutée dans les noms de tous les autres zones de cette page. Si vous modifiez le **coclasse** nom dans la section COM, la modification est répercutée dans le **Type** et **ProgID** cases, mais la **Interface** nom ne change pas. Ce comportement d’affectation de noms est conçu pour rendre tous les noms facilement identifiable pour vous lorsque vous développez votre contrôle.
+Spécifiez les noms de l’objet, de l’interface et des classes à ajouter à votre projet. À l’exception du champ **Nom court**, tous les autres peuvent être modifiés de manière indépendante. Si vous modifiez le contenu du champ **Nom court**, la modification se reflète dans les noms de tous les autres champs de cette page. Si vous modifiez le nom **CoClasse** dans la section COM, la modification se reflète dans les champs **Type** et **ProgID**. Toutefois, le nom dans le champ **Interface** n’est pas modifié. Ce comportement de nommage est conçu pour rendre tous les noms faciles à identifier lors du développement de votre contrôle.
 
 > [!NOTE]
->  **Coclasse** est modifiable uniquement les projets sans attributs. Si votre projet avec attributs, vous ne pouvez pas modifier **coclasse**.
+> **Coclasse** est modifiable uniquement pour les projets non attribués. Si votre projet est attribué, vous ne pouvez pas modifier **Coclasse**.
 
 ## <a name="c"></a>C++
 
@@ -37,54 +37,54 @@ Fournit des informations pour la classe C++ créée pour l’objet.
 
 - **Nom court**
 
-   Définit le nom abrégé pour l’objet. Le nom que vous fournissez détermine le `Class` et `Coclass` noms, le **fichier .cpp** et **fichier .h** noms, le **Interface** nom, le **Type** noms et le **ProgID**, sauf si vous modifiez ces champs individuellement.
+   Définit le nom abrégé de l’objet. Le nom que vous renseignez détermine les noms `Class` et `Coclass`, les noms de **fichier .cpp** et de **fichier .h**, le nom du champ **Interface**, les noms du champ **Type** et le nom du champ **ProgID**, sauf si vous modifiez ces champs individuellement.
 
 - **Fichier .h**
 
-   Définit le nom du fichier d’en-tête pour la nouvelle classe d’objet. Par défaut, ce nom est basé sur le nom que vous fournissez dans **nom court**. Cliquez sur le bouton de sélection pour enregistrer le fichier à l’emplacement de votre choix ou pour ajouter la déclaration de classe à un fichier existant. Si vous sélectionnez un fichier existant, l’Assistant pas enregistrera à l’emplacement sélectionné jusqu'à ce que vous cliquez sur **Terminer** dans l’Assistant.
+   Définit le nom du fichier d’en-tête pour la nouvelle classe d’objet. Par défaut, ce nom est basé sur celui que vous fournissez dans **Nom court**. Cliquez sur le bouton de sélection pour enregistrer le fichier à l’emplacement de votre choix ou pour ajouter la déclaration de classe à un fichier existant. Si vous sélectionnez un fichier existant, l’Assistant attend que vous cliquiez sur **Terminer** pour l’enregistrer à l’emplacement sélectionné.
 
    L’Assistant ne remplace aucun fichier. Si vous sélectionnez le nom d’un fichier existant et que vous cliquez sur **Terminer**, l’Assistant vous invite à indiquer si la déclaration de la classe doit être ajoutée au contenu du fichier. Cliquez sur **Oui** pour l’ajouter au fichier ou sur **Non** pour revenir à l’Assistant et spécifier un autre nom de fichier.
 
 - **Classe**
 
-   Définit le nom de la classe à créer. Ce nom est basé sur le nom que vous fournissez dans **nom court**, précédé de « C », le préfixe classique pour un nom de classe.
+   Définit le nom de la classe à créer. Ce nom est basé sur le nom que vous renseignez dans **Nom court**, précédé de « C », préfixe typique d’un nom de classe.
 
 - **Fichier .cpp**
 
-   Définit le nom du fichier d’implémentation pour la nouvelle classe d’objet. Par défaut, ce nom est basé sur le nom que vous fournissez dans **nom court**. Cliquez sur le bouton de sélection pour enregistrer le nom de fichier à l’emplacement de votre choix. L’Assistant attend que vous cliquiez sur **Terminer** pour enregistrer le fichier à l’emplacement sélectionné.
+   Définit le nom du fichier d’implémentation pour la nouvelle classe d’objet. Par défaut, ce nom est basé sur celui que vous fournissez dans **Nom court**. Cliquez sur le bouton de sélection pour enregistrer le nom de fichier à l’emplacement de votre choix. L’Assistant attend que vous cliquiez sur **Terminer** pour enregistrer le fichier à l’emplacement sélectionné.
 
    L’Assistant ne remplace aucun fichier. Si vous sélectionnez le nom d’un fichier existant et que vous cliquez sur **Terminer**, l’Assistant vous invite à indiquer si l’implémentation de la classe doit être ajoutée au contenu du fichier. Cliquez sur **Oui** pour l’ajouter au fichier ou sur **Non** pour revenir à l’Assistant et spécifier un autre nom de fichier.
 
-- **Attribué**
+- **Avec attributs**
 
-   Indique si l’objet utilise des attributs. Si vous ajoutez un objet à un projet ATL avec attributs, cette option est sélectionnée et indisponible à modifier. Autrement dit, vous pouvez ajouter uniquement les objets attribués à un projet créé avec prise en charge de l’attribut.
+   Indique si l’objet utilise des attributs. Si vous ajoutez un objet à un projet ATL avec des attributs, cette option est sélectionnée et ne peut pas être modifiée. Autrement dit, vous pouvez uniquement ajouter des objets avec des attributs à un projet créé avec prise en charge d’attributs.
 
-   Vous pouvez ajouter un objet avec attributs qu’à un projet ATL qui utilise des attributs. Si vous sélectionnez cette option pour un projet ATL qui n’a pas d’attribut prennent en charge, l’Assistant vous invite à spécifier si vous souhaitez ajouter la prise en charge de l’attribut au projet.
+   Vous pouvez ajouter un objet attribué uniquement à un projet ATL qui utilise des attributs. Si vous sélectionnez cette option pour un projet ATL qui ne prend pas en charge les attributs, l’Assistant vous invite à spécifier si vous souhaitez ajouter la prise en charge d’attributs au projet.
 
-   Par défaut, les objets que vous ajoutez après avoir défini cette option sont désignés avec attributs (la case à cocher est sélectionnée). Vous pouvez désactiver cette case pour ajouter un objet qui n’utilise pas d’attributs.
+   Par défaut, tous les objets que vous ajoutez après avoir défini cette option sont désignés comme attribués (la case est cochée). Vous pouvez effacer ce champ pour y ajouter un objet qui n’utilise pas d’attributs.
 
-   Consultez [paramètres d’Application, Assistant Projet ATL](../../atl/reference/application-settings-atl-project-wizard.md) et [mécanismes de base des attributs](../../windows/basic-mechanics-of-attributes.md) pour plus d’informations.
+   Consultez [Paramètre d’application, Assistant Projet ATL](../../atl/reference/application-settings-atl-project-wizard.md) et [Mécanismes de base des attributs](../../windows/basic-mechanics-of-attributes.md) pour plus d’informations.
 
 ## <a name="com"></a>COM
 
-Fournit des informations sur les fonctionnalités COM pour l’objet.
+Fournit des informations sur la fonctionnalité COM de l’objet.
 
-- **Coclass**
+- **CoClasse**
 
-   Définit le nom de la classe de composant qui contient une liste des interfaces prises en charge par l’objet.
+   Définit le nom de la classe du composant qui contient une liste d’interfaces prises en charge par l’objet.
 
    > [!NOTE]
-   > Si vous créez votre projet à l’aide d’attributs, ou si vous indiquez sur cette page d’Assistant que l’objet utilise des attributs, vous ne pouvez pas modifier cette option, car ATL n’inclut pas le `coclass` attribut.
+   > Si vous créez votre projet à l’aide d’attributs, ou si vous indiquez sur cette page `coclass` d’assistant que l’objet utilise des attributs, vous ne pouvez pas modifier cette option parce qu’ATL n’inclut pas l’attribut.
 
 - **Type**
 
-   Définit la description de l’objet qui apparaîtra dans le Registre
+   Définit la description de l’objet qui s’affiche dans le registre
 
 - **Interface**
 
    Définit l’interface que vous créez pour votre objet. Cette interface contient vos méthodes personnalisées.
 
-- **ProgID**
+- **Progid**
 
    Définit le nom que les conteneurs peuvent utiliser au lieu du CLSID de l’objet.
 

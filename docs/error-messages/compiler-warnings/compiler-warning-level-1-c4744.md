@@ -6,27 +6,27 @@ f1_keywords:
 helpviewer_keywords:
 - C4744
 ms.assetid: f2a7d0b5-afd5-4926-abc3-cfbd367e3ff5
-ms.openlocfilehash: 9f63da4acd87ef2bb0ba80df9e8c0e3e3db4bc79
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: f932b1bcdf011678d4f85e0edf1e116a954b59fe
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80185644"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81367376"
 ---
 # <a name="compiler-warning-level-1-c4744"></a>Avertissement du compilateur (niveau 1) C4744
 
-'var’a un type différent dans’fichier1 'et’fichier2 ' : 'type1 'et’type2 '
+'var' a un type différent dans 'fichier1' et 'file2': 'type1' et 'type2'
 
-Une variable externe référencée ou définie dans deux fichiers a des types différents dans ces fichiers.  Pour résoudre ce type de fichier, faites en sorte que les définitions de type soient identiques ou modifiez le nom de la variable dans l’un des fichiers.
+Une variable externe référencée ou définie dans deux fichiers a différents types dans ces fichiers.  Pour résoudre, soit faire les définitions de type les mêmes, ou changer le nom variable dans l’un des fichiers.
 
-C4744 est émis uniquement lorsque des fichiers sont compilés avec/GL.  Pour plus d’informations, consultez l’article [/GL (Optimisation de l’ensemble du programme)](../../build/reference/gl-whole-program-optimization.md).
+C4744 n’est émis que lorsque les fichiers sont compilés avec /GL.  Pour plus d’informations, consultez l’article [/GL (Optimisation de l’ensemble du programme)](../../build/reference/gl-whole-program-optimization.md).
 
 > [!NOTE]
->  C4744 se produit généralement dans les fichiers C++C (not), C++ car dans un nom de variable est décoré avec les informations de type.  Lorsque l’exemple (ci-dessous) est compilé en C++tant que, vous obtenez l’erreur de l’éditeur de liens LNK2019.
+> C4744 se produit habituellement dans les fichiers C (et non C), car dans le C, un nom variable est décoré d’informations de type.  Lorsque l’échantillon (ci-dessous) est compile sous le forme de C, vous obtiendrez l’erreur de liaison LNK2019.
 
 ## <a name="example"></a>Exemple
 
-Cet exemple contient la première définition.
+Cet échantillon contient la première définition.
 
 ```c
 // C4744.c
@@ -36,7 +36,7 @@ int global;
 
 ## <a name="example"></a>Exemple
 
-L’exemple suivant génère l’C4744.
+L’échantillon suivant génère du C4744.
 
 ```c
 // C4744b.c

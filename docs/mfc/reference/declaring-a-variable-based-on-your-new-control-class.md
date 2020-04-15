@@ -8,44 +8,44 @@ helpviewer_keywords:
 - control classes [MFC], variables
 - classes [MFC], declaring variables based on
 ms.assetid: 5722dc38-c0eb-40bd-93da-67a808140d03
-ms.openlocfilehash: d550b80beb124f3d8ec36ba81dad1a9ca7e9fa15
-ms.sourcegitcommit: 65ed563a8a1d4d90f872a2a6edcb086f84ec9f77
+ms.openlocfilehash: 994f81524001a80d1cf0dd3783b9de742d61e84d
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/06/2019
-ms.locfileid: "66741619"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81365846"
 ---
 # <a name="declaring-a-variable-based-on-your-new-control-class"></a>Déclaration d'une variable basée sur votre nouvelle classe de contrôle
 
-Une fois que vous avez créé une classe de contrôle MFC, vous pouvez déclarer une variable basée sur celui-ci. Pour fournir un contexte pour la nouvelle variable, vous devez ouvrir l’éditeur de boîtes de dialogue et modifier la boîte de dialogue dans laquelle vous souhaitez utiliser votre contrôle réutilisable. En outre, la boîte de dialogue doit avoir déjà associée à une classe. Pour plus d’informations sur l’utilisation de l’éditeur de boîtes de dialogue, consultez [boîte de dialogue Éditeur](../../windows/dialog-editor.md).
+Une fois que vous avez créé une classe de contrôle MFC, vous pouvez déclarer une variable basée sur elle. Pour fournir un contexte pour la nouvelle variable, vous devez ouvrir l’éditeur de dialogue et modifier la boîte de dialogue dans laquelle vous souhaitez utiliser votre contrôle réutilisable. En outre, la boîte de dialogue doit déjà avoir une classe qui lui est associée. Pour plus d’informations sur l’utilisation de l’éditeur de dialogue, voir [Dialog Editor](../../windows/dialog-editor.md).
 
-### <a name="to-declare-a-variable-based-on-your-reusable-class"></a>Pour déclarer une variable basée sur votre classe réutilisable
+### <a name="to-declare-a-variable-based-on-your-reusable-class"></a>Déclarer une variable en fonction de votre classe réutilisable
 
-1. Lors de la modification de la boîte de dialogue, faites glisser un contrôle du même type que la classe de base de votre nouveau contrôle à partir de la barre d’outils de contrôles sur la boîte de dialogue.
+1. Lors de l’édition de la boîte de dialogue, faites glisser un contrôle du même type que la classe de base de votre nouveau contrôle à partir de la barre d’outils Controls sur la boîte de dialogue.
 
-1. Placez le pointeur de la souris sur le contrôle supprimé.
+1. Placez le pointeur de la souris sur le contrôle abandonné.
 
-1. Tout en appuyant sur la touche CTRL enfoncée, double-cliquez sur le contrôle.
+1. Tout en appuyant sur la touche CTRL, cliquez double sur le contrôle.
 
-   Le [ajouter une Variable membre](../../ide/add-member-variable-wizard.md) boîte de dialogue s’affiche.
+   La boîte de dialogue [Variable Add Member](../../ide/add-member-variable-wizard.md) apparaît.
 
-1. Dans le **accès** , sélectionnez l’accès correct pour votre contrôle.
+1. Dans la boîte **d’accès,** sélectionnez l’accès correct pour votre contrôle.
 
-1. Cliquez sur le **variable de contrôle** case à cocher.
+1. Cliquez sur la case à cocher **variable Control.**
 
-1. Dans le **nom de la Variable** , tapez un nom.
+1. Dans la boîte **à noms variable,** tapez un nom.
 
-1. Sous **catégorie**, cliquez sur **contrôle**.
+1. Sous **catégorie**, cliquez sur **Contrôle**.
 
-1. Dans le **ID de contrôle** liste, sélectionnez le contrôle que vous avez ajouté. Le **type de Variable** liste affiche le type de variable correct et le **type de contrôle** zone doit afficher le type de contrôle correct.
+1. Dans la liste **d’identification de contrôle,** choisissez le contrôle que vous avez ajouté. La liste **de type variable** doit afficher le type variable correct, et la boîte de type **Contrôle** doit afficher le type de contrôle correct.
 
-9. Dans le **commentaire** zone, ajoutez des commentaires que vous souhaitez voir apparaître dans votre code.
+1. Dans la boîte **commentaire,** ajoutez n’importe quel commentaire que vous souhaitez apparaître dans votre code.
 
-10. Cliquez sur **OK**.
+1. Cliquez sur **OK**.
 
 ## <a name="see-also"></a>Voir aussi
 
-[Mappage des messages à des fonctions](../../mfc/reference/mapping-messages-to-functions.md)<br/>
+[Mappage de messages à des fonctions](../../mfc/reference/mapping-messages-to-functions.md)<br/>
 [Ajout de fonctionnalités à l’aide des Assistants Code](../../ide/adding-functionality-with-code-wizards-cpp.md)<br/>
 [Ajout d’une classe](../../ide/adding-a-class-visual-cpp.md)<br/>
 [Ajout d’une fonction membre](../../ide/adding-a-member-function-visual-cpp.md)<br/>

@@ -4,18 +4,18 @@ ms.date: 05/21/2019
 helpviewer_keywords:
 - tools and platforms [C++]
 ms.assetid: 3d88607b-9cc4-490a-8d4c-31ee7610a26f
-ms.openlocfilehash: 03a28c87bd0a122229a7e93b7077b1d6e3fea53f
-ms.sourcegitcommit: 8e285a766523e653aeeb34d412dc6f615ef7b17b
+ms.openlocfilehash: 88eb66440df023254cb806c03a00aa2d71980305
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/21/2020
-ms.locfileid: "80079252"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81366799"
 ---
 # <a name="c-tools-and-features-in-visual-studio-editions"></a>Outils et fonctionnalités C++ dans les éditions de Visual Studio
 
 ::: moniker range=">=vs-2019"
 
-Les fonctionnalités C++ suivantes sont disponibles dans Visual Studio 2019. Sauf indication contraire, toutes les fonctionnalités sont disponibles dans toutes les éditions : Communauté Visual Studio, Visual Studio Professional et Visual Studio Enterprise. Certaines fonctionnalités nécessitent des charges de travail ou des composants facultatifs spécifiques que vous pouvez installer avec Visual Studio Installer.
+Les fonctionnalités C++ suivantes sont disponibles dans Visual Studio 2019. Sauf indication contraire, toutes les fonctionnalités sont disponibles dans toutes les éditions: Visual Studio Community, Visual Studio Professional, et Visual Studio Enterprise. Certaines fonctionnalités nécessitent des charges de travail ou des composants facultatifs spécifiques que vous pouvez installer avec Visual Studio Installer.
 
 ## <a name="platforms"></a>Plateformes
 
@@ -41,9 +41,11 @@ Visual Studio comprend les charges de travail suivantes pour le développement C
 ### <a name="desktop-development-with-c"></a>Développement Desktop en C++
 
 Inclus :
+
 - Fonctionnalités de bureau de base C++
 
 Composants facultatifs :
+
 - MSVC v142 - VS 2019 C++ x64/x86 build tools (v14.21)
 - SDK Windows 10 (10.0.17763.0)
 - Débogueur juste-à-temps
@@ -54,7 +56,7 @@ Composants facultatifs :
 - Adaptateur de test pour Google Test
 - Live Share
 - IntelliCode
-- IntelliTrace (version Enterprise uniquement)
+- IntelliTrace (Enterprise uniquement)
 - C++ MFC pour Build Tools v142 (x86 et x64)
 - Prise en charge de C++/CLI pour Build Tools v142 (14.21)
 - Modules C++ pour Build Tools v142 (x64/x86 – expérimental)
@@ -68,17 +70,20 @@ Composants facultatifs :
 ### <a name="linux-development-with-c"></a>Développement Linux avec C++
 
 Inclus :
+
 - Fonctionnalités C++ de base
 - Runtime C Windows universel
 - Développement C++ pour Linux
 
 Composants facultatifs :
+
 - Outils C++ CMake pour Linux
 - Outils de développement incorporé et IoT
 
 ### <a name="universal-windows-platform-development"></a>Développement de la plateforme universelle Windows
 
 Inclus :
+
 - Blend pour Visual Studio
 - .NET Native et .NET Standard
 - Gestionnaire de package NuGet
@@ -86,8 +91,9 @@ Inclus :
 - SDK Windows 10 (10.0.17763.0)
 
 Composants facultatifs :
+
 - IntelliCode
-- IntelliTrace (version Enterprise uniquement)
+- IntelliTrace (Enterprise uniquement)
 - Connectivité des périphériques USB
 - Outils de plateforme Windows universelle C++ (v142)
 - Outils de plateforme Windows universelle C++ (v141)
@@ -100,16 +106,18 @@ Composants facultatifs :
 ### <a name="c-game-development"></a>Développement de jeux C++
 
 Inclus :
+
 - Fonctionnalités C++ de base
 - Runtime C Windows universel
 - Mise à jour de Redistributable C++ 2019
 - MSVC v142 - VS 2019 C++ x64/x86 build tools (v14.21)
 
 Composants facultatifs :
+
 - Outils de profilage C++
 - SDK Windows 10 (10.0.17763.0)
 - IntelliCode
-- IntelliTrace (version Enterprise uniquement)
+- IntelliTrace (Enterprise uniquement)
 - SDK Windows 10 (10.0.17134.0)
 - SDK Windows 10 (10.0.16299.0)
 - IncrediBuild - Accélération de build
@@ -120,10 +128,12 @@ Composants facultatifs :
 ### <a name="mobile-development-with-c"></a>Développement mobile avec C++
 
 Inclus :
+
 - Fonctionnalités C++ de base
 - Installation du kit Android SDK (niveau d’API 25) (installation locale pour le développement mobile en C++)
 
 Composants facultatifs :
+
 - Kit Android NDK (R16B)
 - Apache Ant (1.9.3)
 - Outils de développement C++ Android
@@ -172,6 +182,7 @@ Vous pouvez installer ces composants indépendamment de toute charge de travail.
 Les modèles de projet suivants sont disponibles selon les charges de travail sur lesquelles vous avez effectué l’installation.
 
 Bureau Windows :
+
 - Projet vide
 - Application console
 - Assistant Windows Desktop
@@ -192,17 +203,19 @@ Bureau Windows :
 - Google Test
 
 Plateforme Windows universelle (C++/CX) :
+
 - Applications vide
 - Application DirectX 11 et XAML
 - DirectX 11 App
 - Application DirectX 12
 - Application de tests unitaires
 - DLL
-- Composant Windows Runtime
+- Composant Windows Runtime
 - Bibliothèque statique
 - Projet de création de packages d’application Windows
 
 Linux :
+
 - Application console (Linux)
 - Projet vide (Linux)
 - Raspberry Pi Blink
@@ -245,7 +258,7 @@ Linux :
 - Concepteur/éditeur HTML
 - Éditeur XML
 - Éditeur de code source
-- Fonctionnalités de productivité : refactorisation, moteur IntelliSense EDG C++ , mise en forme du code
+- Caractéristiques de productivité : Refactoring, moteur EDG IntelliSense, Formatage de code CMD
 - Concepteur Windows Forms
 - Concepteur de données
 - Éditeur de ressources natives (fichiers .rc)
@@ -283,15 +296,15 @@ Linux :
 - Gestion de cas de test (Enterprise uniquement)
 - Intégration du débogueur de la carte du code (Enterprise uniquement)
 - Live Unit Testing (Enterprise uniquement)
-- IntelliTrace (version Enterprise uniquement)
+- IntelliTrace (Enterprise uniquement)
 - IntelliTest (Enterprise uniquement)
 - Microsoft Fakes (isolement de tests unitaires) (Enterprise uniquement)
 - Couverture du code (Enterprise uniquement)
 
 ## <a name="see-also"></a>Voir aussi
 
-[Installation de Visual Studio](/visualstudio/install/install-visual-studio)<br/>
-[Nouveautés de Visual Studio](/visualstudio/ide/whats-new-in-visual-studio)<br/>
+[Installer Visual Studio](/visualstudio/install/install-visual-studio)<br/>
+[Quoi de neuf dans Visual Studio](/visualstudio/ide/whats-new-in-visual-studio)<br/>
 [Types de projets C++ dans Visual Studio](../build/reference/visual-cpp-project-types.md)
 
 ::: moniker-end
@@ -342,7 +355,7 @@ Les tableaux suivants présentent les fonctionnalités Visual C++ disponibles da
 |Applications Direct3D|X||X|X|
 |DLL (Windows universel)|X||X|X|
 |Bibliothèque statique (Windows universel)|X||X|X|
-|Composant Windows Runtime|X||X|X|
+|Composant Windows Runtime|X||X|X|
 |Application de tests unitaires (Windows universel)|X||X|X|
 |Projet ATL|||X|X|
 |Bibliothèque de classes (CLR)||X|X|X|
@@ -458,8 +471,8 @@ Les tableaux suivants présentent les fonctionnalités Visual C++ disponibles da
 
 ## <a name="see-also"></a>Voir aussi
 
-[Installation de Visual Studio](/visualstudio/install/install-visual-studio)<br/>
-[Nouveautés de Visual Studio](/visualstudio/ide/whats-new-in-visual-studio)<br/>
+[Installer Visual Studio](/visualstudio/install/install-visual-studio)<br/>
+[Quoi de neuf dans Visual Studio](/visualstudio/ide/whats-new-in-visual-studio)<br/>
 [Types de projets C++ dans Visual Studio](../build/reference/visual-cpp-project-types.md)
 
 ::: moniker-end

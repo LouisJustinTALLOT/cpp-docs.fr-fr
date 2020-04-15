@@ -8,16 +8,16 @@ f1_keywords:
 helpviewer_keywords:
 - __assume keyword [C++]
 ms.assetid: d8565123-b132-44b1-8235-5a8c8bff85a7
-ms.openlocfilehash: f3f847b5268605bdc5df90a8bbc6a88c78431864
-ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
+ms.openlocfilehash: 06189405703a7cc34f3bd807ec79612394ee899f
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/03/2019
-ms.locfileid: "70216958"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81368200"
 ---
 # <a name="__assume"></a>__assume
 
-**Section spécifique à Microsoft**
+**Microsoft Spécifique**
 
 Passe une indication à l'optimiseur.
 
@@ -31,7 +31,7 @@ __assume(
 
 ### <a name="parameters"></a>Paramètres
 
-*formule*\
+*Expression*\
 Toute expression supposée être évaluée à True.
 
 ## <a name="remarks"></a>Notes
@@ -41,19 +41,19 @@ L'optimiseur part du principe que la condition représentée par `expression` es
 Si l'instruction `__assume` est écrite sous la forme d'une contradiction (expression toujours évaluée à False), elle est toujours considérée comme `__assume(0)`. Si votre code ne se comporte pas comme prévu, assurez-vous que l'`expression` que vous avez définie est valide et a la valeur True, comme indiqué plus haut. Pour plus d'informations sur le comportement attendu de `__assume(0)`, consultez les notes plus loin dans cet article.
 
 > [!WARNING]
->  Un programme ne doit pas contenir d'instruction `__assume` non valide sur un chemin d'accès accessible. Si le compilateur peut atteindre une instruction `__assume` non valide, le programme peut provoquer un comportement imprévisible et potentiellement dangereux.
+> Un programme ne doit pas contenir d'instruction `__assume` non valide sur un chemin d'accès accessible. Si le compilateur peut atteindre une instruction `__assume` non valide, le programme peut provoquer un comportement imprévisible et potentiellement dangereux.
 
 `__assume` n'est pas une véritable intrinsèque. Vous n'êtes pas obligé de la déclarer en tant que fonction et vous ne pouvez pas l'utiliser dans une directive `#pragma intrinsic`. Bien qu'aucun code ne soit généré, le code généré par l'optimiseur est affecté.
 
-Utilisez `__assume` dans une [assertion](../c-runtime-library/reference/assert-asserte-assert-expr-macros.md) uniquement lorsque l’assertion n’est pas récupérable. N'utilisez pas `__assume` dans une méthode assert pour laquelle vous avez du code de récupération d'erreur ultérieur, car le compilateur peut optimiser le code de gestion des erreurs.
+Utiliser `__assume` dans un [ASSERT](../c-runtime-library/reference/assert-asserte-assert-expr-macros.md) uniquement lorsque l’affirmation n’est pas récupérable. N'utilisez pas `__assume` dans une méthode assert pour laquelle vous avez du code de récupération d'erreur ultérieur, car le compilateur peut optimiser le code de gestion des erreurs.
 
 L'instruction `__assume(0)` est un cas spécial. Utilisez `__assume(0)` pour indiquer un chemin d'accès de code qui ne peut pas être atteint. L'exemple suivant montre comment utiliser `__assume(0)` pour indiquer que le cas par défaut d'une instruction switch ne peut pas être atteint. Il illustre l'utilisation la plus courante de `__assume(0)`.
 
-Pour la compatibilité avec les versions précédentes, **_assume** est un synonyme de _ _, sauf si l’option de compilateur [/za \(Disable Language Extensions)](../build/reference/za-ze-disable-language-extensions.md) est spécifiée.
+Pour la compatibilité avec les versions précédentes, **_assume** est synonyme **de __assume** à moins que l’option compilateur [/Za \(Désactiver extensions de langage)](../build/reference/za-ze-disable-language-extensions.md) est spécifiée.
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
-|Intrinsèque|Architecture|
+|Intrinsic|Architecture|
 |---------------|------------------|
 |`__assume`|x86, ARM, x64, ARM64|
 
@@ -114,9 +114,9 @@ Malheureusement, cette utilisation d'`assert` empêche le compilateur d'effectue
       NODEFAULT;
 ```
 
-**FIN de la section spécifique à Microsoft**
+**END Microsoft Spécifique**
 
 ## <a name="see-also"></a>Voir aussi
 
-[Intrinsèques du compilateur](../intrinsics/compiler-intrinsics.md)\
+[Compilateur intrinsèque](../intrinsics/compiler-intrinsics.md)\
 [Mots clés](../cpp/keywords-cpp.md)

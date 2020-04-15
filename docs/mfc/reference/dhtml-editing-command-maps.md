@@ -2,32 +2,32 @@
 title: Mappages de commande d'édition DHTML
 ms.date: 11/04/2016
 ms.assetid: c1b49876-039e-4a26-bb24-ea98ccf254a1
-ms.openlocfilehash: 7f420619983283c225ca8fca23c5ea349def1d1b
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 62b388eb178be018655ea2b2be00d7321da50335
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62323058"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81365819"
 ---
 # <a name="dhtml-editing-command-maps"></a>Mappages de commande d'édition DHTML
 
-Les macros suivantes peuvent être utilisées pour mapper les commandes d’édition DHTML [CHtmlEditView](../../mfc/reference/chtmleditview-class.md)-classes dérivées. Pour obtenir un exemple de leur utilisation, consultez [exemple HTMLEdit](../../overview/visual-cpp-samples.md).
+Les macros suivantes peuvent être utilisées pour cartographier les commandes d’édition DHTML dans les classes dérivées de [CHtmlEditView.](../../mfc/reference/chtmleditview-class.md) Pour un exemple de leur utilisation, voir [HTMLEdit Sample](../../overview/visual-cpp-samples.md).
 
-### <a name="dhtml-editing-command-map-macros"></a>Macros de table de commande de modification de DHTML
+### <a name="dhtml-editing-command-map-macros"></a>DHTML Modification De la carte de commande Macros
 
 |||
 |-|-|
-|[DECLARE_DHTMLEDITING_CMDMAP](#declare_dhtmlediting_cmdmap)|Déclare un mappage de commande de modification DHTML dans une classe.|
-|[BEGIN_DHTMLEDITING_CMDMAP](#begin_dhtmlediting_cmdmap)|Démarre la définition d’une table de commande édition DHTML dans une classe.|
-|[END_DHTMLEDITING_CMDMAP](#end_dhtmlediting_cmdmap)|Marque la fin d’un mappage de commande édition DHTML.|
-|[DHTMLEDITING_CMD_ENTRY](#dhtmlediting_cmd_entry)|Mappe un ID de commande à une commande d’édition HTML.|
-|[DHTMLEDITING_CMD_ENTRY_FUNC](#dhtmlediting_cmd_entry_func)|Mappe un ID de commande à une commande d’édition HTML et le Gestionnaire de messages.|
-|[DHTMLEDITING_CMD_ENTRY_TYPE](#dhtmlediting_cmd_entry_type)|Mappe un ID de commande à une commande d’édition HTML et d’un élément d’interface utilisateur.|
-|[DHTMLEDITING_CMD_ENTRY_FUNC_TYPE](#dhtmlediting_cmd_entry_func_type)|Mappe un ID de commande à la modification de commande, le Gestionnaire de messages et élément d’interface utilisateur HTML.|
+|[DECLARE_DHTMLEDITING_CMDMAP](#declare_dhtmlediting_cmdmap)|Déclare une carte de commande d’édition DHTML dans une classe.|
+|[BEGIN_DHTMLEDITING_CMDMAP](#begin_dhtmlediting_cmdmap)|Démarre la définition d’une carte de commande d’édition DHTML au sein d’une classe.|
+|[END_DHTMLEDITING_CMDMAP](#end_dhtmlediting_cmdmap)|Marque la fin d’une carte de commande d’édition DHTML.|
+|[DHTMLEDITING_CMD_ENTRY](#dhtmlediting_cmd_entry)|Cartes d’un ID de commande à une commande d’édition HTML.|
+|[DHTMLEDITING_CMD_ENTRY_FUNC](#dhtmlediting_cmd_entry_func)|Cartes d’un ID de commande à un gestionnaire de commande et de message HTML.|
+|[DHTMLEDITING_CMD_ENTRY_TYPE](#dhtmlediting_cmd_entry_type)|Cartes d’un ID de commande à un élément de commande et d’interface utilisateur HTML.|
+|[DHTMLEDITING_CMD_ENTRY_FUNC_TYPE](#dhtmlediting_cmd_entry_func_type)|Cartes d’un ID de commande à une commande d’édition HTML, gestionnaire de message, et élément d’interface utilisateur.|
 
-##  <a name="declare_dhtmlediting_cmdmap"></a>  DECLARE_DHTMLEDITING_CMDMAP
+## <a name="declare_dhtmlediting_cmdmap"></a><a name="declare_dhtmlediting_cmdmap"></a>DECLARE_DHTMLEDITING_CMDMAP
 
-Déclare un mappage de commande de modification DHTML dans une classe.
+Déclare une carte de commande d’édition DHTML dans une classe.
 
 ```
 DECLARE_DHTMLEDITING_CMDMAP(className)
@@ -35,26 +35,26 @@ DECLARE_DHTMLEDITING_CMDMAP(className)
 
 ### <a name="parameters"></a>Paramètres
 
-*className*<br/>
+*ClassName*<br/>
 Nom de la classe.
 
 ### <a name="remarks"></a>Notes
 
-Cette macro doit être utilisée dans la définition de [CHtmlEditView](../../mfc/reference/chtmleditview-class.md)-classes dérivées.
+Cette macro doit être utilisée dans la définition des classes dérivées de [CHtmlEditView.](../../mfc/reference/chtmleditview-class.md)
 
 Utilisez [BEGIN_DHTMLEDITING_CMDMAP](#begin_dhtmlediting_cmdmap) pour implémenter la carte.
 
 ### <a name="example"></a>Exemple
 
-Consultez [exemple HTMLEdit](../../overview/visual-cpp-samples.md).
+Voir [HTMLEdit Sample](../../overview/visual-cpp-samples.md).
 
-### <a name="requirements"></a>Configuration requise
+### <a name="requirements"></a>Spécifications
 
   **En-tête** afxhtml.h
 
-##  <a name="begin_dhtmlediting_cmdmap"></a>  BEGIN_DHTMLEDITING_CMDMAP
+## <a name="begin_dhtmlediting_cmdmap"></a><a name="begin_dhtmlediting_cmdmap"></a>BEGIN_DHTMLEDITING_CMDMAP
 
-Démarre la définition d’une table de commande édition DHTML dans une classe.
+Démarre la définition d’une carte de commande d’édition DHTML au sein d’une classe.
 
 ```
 BEGIN_DHTMLEDITING_CMDMAP(className)
@@ -62,22 +62,22 @@ BEGIN_DHTMLEDITING_CMDMAP(className)
 
 ### <a name="parameters"></a>Paramètres
 
-*className*<br/>
-Le nom de la classe contenant le mappage de commande édition DHTML. Cette classe doit dériver directement ou indirectement [CHtmlEditView](../../mfc/reference/chtmleditview-class.md) et incluent la [DECLARE_DHTMLEDITING_CMDMAP](#declare_dhtmlediting_cmdmap) macro dans sa définition de classe.
+*ClassName*<br/>
+Le nom de la classe contenant la carte de commande d’édition DHTML. Cette classe devrait dériver directement ou indirectement de [CHtmlEditView](../../mfc/reference/chtmleditview-class.md) et inclure la [macro DECLARE_DHTMLEDITING_CMDMAP](#declare_dhtmlediting_cmdmap) dans sa définition de classe.
 
 ### <a name="remarks"></a>Notes
 
-Ajoutez une carte de commande édition DHTML à votre classe pour mapper les commandes de l’interface utilisateur pour les commandes d’édition HTML.
+Ajoutez une carte de commande d’édition DHTML à votre classe pour cartographier les commandes d’interface utilisateur aux commandes d’édition HTML.
 
-Placez le begin_dhtmlediting_cmdmap (macro) dans le fichier d’implémentation (.cpp) de la classe suivie [DHTMLEDITING_CMD_ENTRY](#dhtmlediting_cmd_entry) macros pour les commandes de la classe consiste à mapper (par exemple, à partir de ID_EDIT_CUT à IDM_CUT). Utilisez le [END_DHTMLEDITING_CMDMAP](#end_dhtmlediting_cmdmap) macro pour marquer la fin de la table d’événements.
+Placez la BEGIN_DHTMLEDITING_CMDMAP macro dans le fichier de mise en œuvre (.cpp) de la classe suivi [d’DHTMLEDITING_CMD_ENTRY](#dhtmlediting_cmd_entry) macros pour les commandes que la classe est de cartographier (par exemple, de ID_EDIT_CUT à IDM_CUT). Utilisez la [macro END_DHTMLEDITING_CMDMAP](#end_dhtmlediting_cmdmap) pour marquer la fin de la carte de l’événement.
 
-### <a name="requirements"></a>Configuration requise
+### <a name="requirements"></a>Spécifications
 
   **En-tête** afxhtml.h
 
-##  <a name="end_dhtmlediting_cmdmap"></a>  END_DHTMLEDITING_CMDMAP
+## <a name="end_dhtmlediting_cmdmap"></a><a name="end_dhtmlediting_cmdmap"></a>END_DHTMLEDITING_CMDMAP
 
-Marque la fin d’un mappage de commande édition DHTML.
+Marque la fin d’une carte de commande d’édition DHTML.
 
 ```
 END_DHTMLEDITING_CMDMAP()
@@ -85,19 +85,19 @@ END_DHTMLEDITING_CMDMAP()
 
 ### <a name="remarks"></a>Notes
 
-Utilisé conjointement avec [BEGIN_DHTMLEDITING_CMDMAP](#begin_dhtmlediting_cmdmap).
+Utilisation en conjonction avec [BEGIN_DHTMLEDITING_CMDMAP](#begin_dhtmlediting_cmdmap).
 
 ### <a name="example"></a>Exemple
 
-Consultez [exemple HTMLEdit](../../overview/visual-cpp-samples.md).
+Voir [HTMLEdit Sample](../../overview/visual-cpp-samples.md).
 
-### <a name="requirements"></a>Configuration requise
+### <a name="requirements"></a>Spécifications
 
   **En-tête** afxhtml.h
 
-##  <a name="dhtmlediting_cmd_entry"></a>  DHTMLEDITING_CMD_ENTRY
+## <a name="dhtmlediting_cmd_entry"></a><a name="dhtmlediting_cmd_entry"></a>DHTMLEDITING_CMD_ENTRY
 
-Mappe un ID de commande à une commande d’édition HTML.
+Cartes d’un ID de commande à une commande d’édition HTML.
 
 ```
 DHTMLEDITING_CMD_ENTRY(cmdID,  dhtmlcmdID)
@@ -106,22 +106,22 @@ DHTMLEDITING_CMD_ENTRY(cmdID,  dhtmlcmdID)
 ### <a name="parameters"></a>Paramètres
 
 *cmdID*<br/>
-L’ID de commande (par exemple, ID_EDIT_COPY).
+L’ID de commande (comme ID_EDIT_COPY).
 
-*dhtmlcmdID*<br/>
-Le code HTML modification commande auquel *cmdID* mappe (par exemple, IDM_COPY).
+*dhtmlcmdID dhtmlcmdID*<br/>
+La commande d’édition HTML à laquelle les cartes *cmdID* (comme IDM_COPY).
 
 ### <a name="example"></a>Exemple
 
-Consultez [exemple HTMLEdit](../../overview/visual-cpp-samples.md).
+Voir [HTMLEdit Sample](../../overview/visual-cpp-samples.md).
 
-### <a name="requirements"></a>Configuration requise
+### <a name="requirements"></a>Spécifications
 
   **En-tête** afxhtml.h
 
-##  <a name="dhtmlediting_cmd_entry_func"></a>  DHTMLEDITING_CMD_ENTRY_FUNC
+## <a name="dhtmlediting_cmd_entry_func"></a><a name="dhtmlediting_cmd_entry_func"></a>DHTMLEDITING_CMD_ENTRY_FUNC
 
-Mappe un ID de commande à une commande d’édition HTML et le Gestionnaire de messages.
+Cartes d’un ID de commande à un gestionnaire de commande et de message HTML.
 
 ```
 DHTMLEDITING_CMD_ENTRY_FUNC(cmdID, dhtmlcmdID,  member_func_name)
@@ -130,25 +130,25 @@ DHTMLEDITING_CMD_ENTRY_FUNC(cmdID, dhtmlcmdID,  member_func_name)
 ### <a name="parameters"></a>Paramètres
 
 *cmdID*<br/>
-L’ID de commande (par exemple, ID_EDIT_COPY).
+L’ID de commande (comme ID_EDIT_COPY).
 
-*dhtmlcmdID*<br/>
-Le code HTML modification commande auquel *cmdID* mappe (par exemple, IDM_COPY).
+*dhtmlcmdID dhtmlcmdID*<br/>
+La commande d’édition HTML à laquelle les cartes *cmdID* (comme IDM_COPY).
 
 *member_func_name*<br/>
-Le nom de la fonction de gestionnaire de messages à laquelle la commande est mappée.
+Le nom de la fonction de gestionnaire de message à laquelle la commande est cartographiée.
 
 ### <a name="example"></a>Exemple
 
-Consultez [exemple HTMLEdit](../../overview/visual-cpp-samples.md).
+Voir [HTMLEdit Sample](../../overview/visual-cpp-samples.md).
 
-### <a name="requirements"></a>Configuration requise
+### <a name="requirements"></a>Spécifications
 
   **En-tête** afxhtml.h
 
-##  <a name="dhtmlediting_cmd_entry_type"></a>  DHTMLEDITING_CMD_ENTRY_TYPE
+## <a name="dhtmlediting_cmd_entry_type"></a><a name="dhtmlediting_cmd_entry_type"></a>DHTMLEDITING_CMD_ENTRY_TYPE
 
-Mappe un ID de commande à une commande d’édition HTML et d’un élément d’interface utilisateur.
+Cartes d’un ID de commande à un élément de commande et d’interface utilisateur HTML.
 
 ```
 DHTMLEDITING_CMD_ENTRY_TYPE(cmdID  ,   dhtmlcmdID  ,    elemType)
@@ -157,25 +157,25 @@ DHTMLEDITING_CMD_ENTRY_TYPE(cmdID  ,   dhtmlcmdID  ,    elemType)
 ### <a name="parameters"></a>Paramètres
 
 *cmdID*<br/>
-L’ID de commande (par exemple, ID_EDIT_COPY).
+L’ID de commande (comme ID_EDIT_COPY).
 
-*dhtmlcmdID*<br/>
-Le code HTML modification commande auquel *cmdID* mappe (par exemple, IDM_COPY).
+*dhtmlcmdID dhtmlcmdID*<br/>
+La commande d’édition HTML à laquelle les cartes *cmdID* (comme IDM_COPY).
 
 *elemType*<br/>
-Le type élément d’interface utilisateur ; une des AFX_UI_ELEMTYPE_NORMAL, AFX_UI_ELEMTYPE_CHECKBOX ou AFX_UI_ELEMTYPE_RADIO.
+Le type d’élément d’interface utilisateur; l’un des AFX_UI_ELEMTYPE_NORMAL, AFX_UI_ELEMTYPE_CHECKBOX, ou AFX_UI_ELEMTYPE_RADIO.
 
 ### <a name="example"></a>Exemple
 
-Consultez [exemple HTMLEdit](../../overview/visual-cpp-samples.md).
+Voir [HTMLEdit Sample](../../overview/visual-cpp-samples.md).
 
-### <a name="requirements"></a>Configuration requise
+### <a name="requirements"></a>Spécifications
 
   **En-tête** afxhtml.h
 
-##  <a name="dhtmlediting_cmd_entry_func_type"></a>  DHTMLEDITING_CMD_ENTRY_FUNC_TYPE
+## <a name="dhtmlediting_cmd_entry_func_type"></a><a name="dhtmlediting_cmd_entry_func_type"></a>DHTMLEDITING_CMD_ENTRY_FUNC_TYPE
 
-Mappe un ID de commande à la modification de commande, le Gestionnaire de messages et élément d’interface utilisateur HTML.
+Cartes d’un ID de commande à une commande d’édition HTML, gestionnaire de message, et élément d’interface utilisateur.
 
 ```
 DHTMLEDITING_CMD_ENTRY_FUNC_TYPE(cmdID, dhtmlcmdID, member_func_name,  elemType)
@@ -184,22 +184,22 @@ DHTMLEDITING_CMD_ENTRY_FUNC_TYPE(cmdID, dhtmlcmdID, member_func_name,  elemType)
 ### <a name="parameters"></a>Paramètres
 
 *cmdID*<br/>
-L’ID de commande (par exemple, ID_EDIT_COPY).
+L’ID de commande (comme ID_EDIT_COPY).
 
-*dhtmlcmdID*<br/>
-Le code HTML modification commande auquel *cmdID* mappe (par exemple, IDM_COPY).
+*dhtmlcmdID dhtmlcmdID*<br/>
+La commande d’édition HTML à laquelle les cartes *cmdID* (comme IDM_COPY).
 
 *member_func_name*<br/>
-Le nom de la fonction de gestionnaire de messages à laquelle la commande est mappée.
+Le nom de la fonction de gestionnaire de message à laquelle la commande est cartographiée.
 
 *elemType*<br/>
-Le type élément d’interface utilisateur ; une des AFX_UI_ELEMTYPE_NORMAL, AFX_UI_ELEMTYPE_CHECKBOX ou AFX_UI_ELEMTYPE_RADIO.
+Le type d’élément d’interface utilisateur; l’un des AFX_UI_ELEMTYPE_NORMAL, AFX_UI_ELEMTYPE_CHECKBOX, ou AFX_UI_ELEMTYPE_RADIO.
 
 ### <a name="example"></a>Exemple
 
-Consultez [exemple HTMLEdit](../../overview/visual-cpp-samples.md).
+Voir [HTMLEdit Sample](../../overview/visual-cpp-samples.md).
 
-### <a name="requirements"></a>Configuration requise
+### <a name="requirements"></a>Spécifications
 
   **En-tête** afxhtml.h
 

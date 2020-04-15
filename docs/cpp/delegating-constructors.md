@@ -1,17 +1,17 @@
 ---
-title: Constructeurs de délégation (C++)
-description: Utilisez des constructeurs de délégation dans C++ pour appeler d’autres constructeurs et réduire la répétition de code.
+title: Déléguer des constructeurs (C)
+description: Utilisez des constructeurs délédifiants dans le C POUR invoquer d’autres constructeurs et réduire la répétition du code.
 ms.date: 11/19/2019
-ms.openlocfilehash: 533cdfbeb882f3770cc554b0633611a4ffc2cfbd
-ms.sourcegitcommit: 654aecaeb5d3e3fe6bc926bafd6d5ace0d20a80e
+ms.openlocfilehash: f26a013aa3c081d900ffc3eb32649acc77505db0
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/20/2019
-ms.locfileid: "74250673"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81316670"
 ---
 # <a name="delegating-constructors"></a>Constructeurs effectuant une délégation
 
-De nombreuses classes ont plusieurs constructeurs qui effectuent des opérations similaires, par exemple valider des paramètres :
+De nombreuses classes ont plusieurs constructeurs qui font des choses similaires, par exemple, valider les paramètres:
 
 ```cpp
 class class_c {
@@ -36,7 +36,7 @@ public:
 };
 ```
 
-Vous pouvez réduire le code répétitif en ajoutant une fonction qui effectue toute la validation, mais le code pour `class_c` serait plus facile à comprendre et à gérer si un constructeur pourrait déléguer une partie du travail à un autre. Pour ajouter des constructeurs de délégation, utilisez la syntaxe `constructor (. . .) : constructor (. . .)` :
+Vous pourriez réduire le code répétitif en ajoutant une fonction `class_c` qui fait toute la validation, mais le code pour serait plus facile à comprendre et à maintenir si un constructeur pourrait déléguer une partie du travail à un autre. Pour ajouter des constructeurs délédants, utilisez la `constructor (. . .) : constructor (. . .)` syntaxe :
 
 ```cpp
 class class_c {
@@ -61,9 +61,9 @@ int main() {
 }
 ```
 
-À mesure que vous parcourez l’exemple précédent, remarquez que le constructeur `class_c(int, int, int)` appelle d’abord le constructeur `class_c(int, int)`, qui à son tour appelle `class_c(int)`. Chacun des constructeurs exécute uniquement le travail qui n’est pas effectué par les autres constructeurs.
+Lorsque vous passez par l’exemple précédent, notez que le constructeur `class_c(int, int, int)` appelle d’abord le `class_c(int, int)`constructeur, qui à son tour appelle `class_c(int)`. Chacun des constructeurs n’exécute que l’œuvre qui n’est pas effectuée par les autres constructeurs.
 
-Le premier constructeur appelé Initialise l’objet de sorte que tous ses membres soient initialisés à ce stade. Vous ne pouvez pas effectuer d’initialisation de membre dans un constructeur qui délègue à un autre constructeur, comme illustré ici :
+Le premier constructeur qui s’appelle initialise l’objet de sorte que tous ses membres sont parasécés à ce moment-là. Vous ne pouvez pas faire l’initialisation des membres dans un constructeur qui délègue à un autre constructeur, comme indiqué ici:
 
 ```cpp
 class class_a {
@@ -83,7 +83,7 @@ public:
 };
 ```
 
-L’exemple suivant illustre l’utilisation d’initialiseurs de membres de données non statiques. Notez que si un constructeur initialise également un membre de données donné, l’initialiseur de membre est substitué :
+L’exemple suivant montre l’utilisation d’initialisateurs non statiques de données-membres. Notez que si un constructeur initialise également un membre de données donné, l’initialisateur membre est remplacé :
 
 ```cpp
 class class_a {
@@ -101,7 +101,7 @@ int main() {
 }
 ```
 
-La syntaxe de délégation du constructeur n’empêche pas la création accidentelle de la récursivité du constructeur (constructor1 appelle Constructor2 qui appelle constructor1) et aucune erreur n’est levée tant qu’il n’y a pas de dépassement de capacité de la pile. Il vous incombe d’éviter les cycles.
+La syntaxe de délégation constructeur n’empêche pas la création accidentelle de récursion constructeur-Constructor1 appelle Constructor2 qui appelle Constructor1 - et aucune erreur n’est lancée jusqu’à ce qu’il y ait un débordement de pile. C’est votre responsabilité d’éviter les cycles.
 
 ```cpp
 class class_f{

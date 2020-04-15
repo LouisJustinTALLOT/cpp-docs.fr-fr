@@ -4,10 +4,10 @@ ms.date: 06/07/2019
 ms.assetid: 4bb8894b-c874-4a68-935e-b127d54e484f
 f1_keywords: []
 ms.openlocfilehash: 394cb501b4df6caed6a358ffa96ce0de5d187ae1
-ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/17/2020
+ms.lasthandoff: 04/14/2020
 ms.locfileid: "79441473"
 ---
 # <a name="cc-properties-linux-c"></a>C/C++, propriétés (Linux C++)
@@ -25,9 +25,9 @@ La prise en charge Linux est disponible dans Visual Studio 2017 et ultérieur.
 | Propriété | Description | Choices |
 |--|--|--|
 | Autres répertoires Include | Spécifie un ou plusieurs répertoires à ajouter au chemin include. Utilisez des points-virgules pour séparer plusieurs répertoires. (-I\[path]). |
-| Format des informations de débogage | Indique le type d'informations de débogage générées par le compilateur. | **Aucune** : ne génère aucune information de débogage, la compilation peut donc être plus rapide.<br/>**Informations de débogage minimales** : génère des informations de débogage minimales.<br/>**Informations de débogage complètes (DWARF2)**  : génère des informations de débogage DWARF2.<br/> |
+| Format des informations de débogage | Indique le type d'informations de débogage générées par le compilateur. | **Aucune** : ne génère aucune information de débogage ; la compilation peut donc être plus rapide.<br/>**Informations de débogage minimales** : génère des informations de débogage minimales.<br/>**Informations de débogage complètes (DWARF2)** : générez des informations de débogage DWARF2.<br/> |
 | Nom de fichier objet | Spécifie un nom de substitution pour le nom de fichier objet par défaut. Il peut s’agir d’un nom de fichier ou de répertoire. (-o [name]). |
-| Niveau d'avertissement | Sélectionne la rigueur avec laquelle le compilateur doit traiter les erreurs de code.  Ajoutez d’autres indicateurs directement dans les **Options supplémentaires**. (/w, /Weverything). | **Désactiver tous les avertissements** : désactive tous les avertissements du compilateur.<br/>**Activer tous les avertissements** : active tous les avertissements, dont ceux qui sont désactivés par défaut.<br/> |
+| Niveau d’avertissement | Sélectionne la rigueur avec laquelle le compilateur doit traiter les erreurs de code.  Ajoutez d’autres indicateurs directement dans les **Options supplémentaires**. (/w, /Weverything). | **Désactiver tous les avertissements** : désactive tous les avertissements du compilateur.<br/>**Activer tous les avertissements** : active tous les avertissements, dont ceux qui sont désactivés par défaut.<br/> |
 | Considérer les avertissements comme des erreurs | Considère tous les avertissements du compilateur comme des erreurs. Pour un nouveau projet, il peut être préférable d’utiliser /Werror dans toutes les compilations. Résolvez tous les avertissements pour avoir le moins de défauts de code difficiles à détecter possible. |
 | Avertissements supplémentaires C | Définit un ensemble de messages d’avertissement supplémentaires. |
 | Avertissements supplémentaires C++ | Définit un ensemble de messages d’avertissement supplémentaires. |
@@ -66,21 +66,21 @@ La prise en charge Linux est disponible dans Visual Studio 2017 et ultérieur.
 | Optimisation à virgule flottante | Active les optimisations à virgule flottante en assouplissant la conformité à la norme IEEE-754. |
 | Méthodes inline masquées | Une fois activées, les copies hors ligne des méthodes inline sont déclarées `private extern`. |
 | Symboles masqués par défaut | Tous les symboles sont déclarés `private extern` sauf s’ils sont explicitement marqués pour l’exportation à l’aide de la macro `__attribute`. |
-| Activer les exceptions C++ | Spécifie le modèle de gestion des exceptions utilisé par le compilateur. | **Non** : désactive la gestion des exceptions.<br/>**Oui** : activez la gestion des exceptions. |
+| Activer les exceptions C++ | Spécifie le modèle de gestion des exceptions utilisé par le compilateur. | **Non** : désactive la gestion des exceptions.<br/>**Oui** : active la gestion des exceptions. |
 
 ## <a name="language"></a>Langage
 
 | Propriété | Description | Choices |
 |--|--|--|
 | Activer les informations de type au moment de l’exécution | Ajoute le code permettant de vérifier les types d’objet C++ à l’exécution (informations de type au moment de l’exécution).     (frtti, fno-rtti) |
-| Norme du langage C | Détermine la norme du langage C. | **Par défaut**<br/>**C89** : norme du langage C89.<br/>**C99** : norme du langage C99.<br/>**C11** : norme du langage C11.<br/>**C99 (Dialecte GNU)**  : norme du langage C99 (Dialecte GNU).<br/>**C11 (Dialecte GNU)**  : norme du langage C11 (Dialecte GNU). |
-| Norme du langage C++ | Détermine la norme du langage C++. | **Par défaut**<br/>**C++03** : norme du langage C++03.<br/>**C++11** : norme du langage C++11.<br/>**C++14** : norme du langage C++14.<br/>**C++03 (Dialecte GNU)**  : norme du langage C++03 (Dialecte GNU).<br/>**C++11 (Dialecte GNU)**  : norme du langage C++11 (Dialecte GNU).<br/>**C++14 (Dialecte GNU)**  : norme du langage C++14 (Dialecte GNU). |
+| Norme du langage C | Détermine la norme du langage C. | **Par défaut**<br/>**C89** : norme du langage C89.<br/>**C99** : norme du langage C99.<br/>**C11** : norme du langage C11.<br/>**C99 (Dialecte GNU)**  : norme du langage C99 (Dialecte GNU).<br/>**C11 (GNU Dialect)** - C11 (GNU Dialect) Language Standard. |
+| Norme du langage C++ | Détermine la norme du langage C++. | **Par défaut**<br/>**C++03** : norme du langage C++03.<br/>**Norme linguistique de la 11e** J.-C.<br/>**C++14** : norme du langage C++14.<br/>**C++03 (Dialecte GNU)**  : norme du langage C++03 (Dialecte GNU).<br/>**C++11 (Dialecte GNU)**  : norme du langage C++11 (Dialecte GNU).<br/>**C++14 (Dialecte GNU)**  : norme du langage C++14 (Dialecte GNU). |
 
 ## <a name="advanced"></a>Avancé
 
 | Propriété | Description | Choices |
 |--|--|--|
-| Compiler en | Sélectionne l’option de langage de compilation pour les fichiers .c et .cpp. (-x c, -x c++) | **Par défaut** : effectue la détection d’après l’extension (.c ou .cpp).<br/>**Compiler en code C** : compile en code C.<br/>**Compiler en code C++**  : compile en code C++. |
+| Compiler en | Sélectionne l’option de langage de compilation pour les fichiers .c et .cpp. (-x c, -x c++) | **Par défaut** : effectue la détection d’après l’extension (.c ou .cpp).<br/>**Comile comme code C** - Compile comme code C.<br/>**Compilez sous le nom de Code CMD** - Comile en tant que code C. |
 | Fichiers Include forcés | Spécifie un ou plusieurs fichiers Include forcés (-include \[name]). |
 
 ::: moniker-end

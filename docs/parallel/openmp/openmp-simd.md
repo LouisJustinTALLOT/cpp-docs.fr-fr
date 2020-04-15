@@ -5,27 +5,27 @@ helpviewer_keywords:
 - SIMD
 - OpenMP in Visual C++, new features
 - explicit parallelization, new features
-ms.openlocfilehash: 52402aa553c6d68d3073aba26ecac7b784522ee9
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 0a7f1142a3a432628795341f4885b76a5c144990
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62363269"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81366454"
 ---
 # <a name="simd-extension"></a>Extension SIMD
 
-Visual C++ prend actuellement en charge la norme OpenMP 2.0, mais Visual Studio 2019 offre désormais des fonctionnalités SIMD.
+Visual CMD prend actuellement en charge la norme OpenMP 2.0, mais Visual Studio 2019 offre également maintenant des fonctionnalités SIMD.
 
 > [!NOTE]
-> Pour utiliser SIMD, compilez avec le `-openmp:experimental` commutateur qui permet des fonctionnalités OpenMP supplémentaires non disponibles lorsque vous utilisez le `-openmp` basculer.
+> Pour utiliser SIMD, compilez avec le `-openmp:experimental` commutateur qui permet `-openmp` des fonctionnalités OpenMP supplémentaires non disponibles lors de l’utilisation de l’interrupteur.
 >
-> Le `-openmp:experimental` commutateur absorbe `-openmp`, ce qui signifie que toutes les fonctionnalités d’OpenMP 2.0 sont incluses dans son utilisation.
+> Le `-openmp:experimental` commutateur `-openmp`sous-umes , ce qui signifie que toutes les fonctionnalités OpenMP 2.0 sont inclus dans son utilisation.
 
-Pour plus d’informations, consultez [Extension SIMD C++ OpenMP dans Visual Studio](https://devblogs.microsoft.com/cppblog/simd-extension-to-c-openmp-in-visual-studio/).
+Pour plus d’informations, voir [l’extension SIMD à L’OpenMP de CMD dans Visual Studio](https://devblogs.microsoft.com/cppblog/simd-extension-to-c-openmp-in-visual-studio/).
 
-## <a name="openmp-simd-in-visual-c"></a>SIMD OpenMP dans Visual c#C++
+## <a name="openmp-simd-in-visual-c"></a>OpenMP SIMD dans Visual C
 
-SIMD OpenMP, introduit dans 4.0 OpenMP standard, effectuer des boucles de vecteurs de cibles. À l’aide de la `simd` directive avant une boucle, le compilateur peut ignorer les dépendances vectorielles, vérifiez la boucle comme vecteur conviviale que possible et respecter l’intention des utilisateurs d’avoir plusieurs itérations de boucle exécutées simultanément.
+OpenMP SIMD, introduit dans la norme OpenMP 4.0, cible les boucles vectorielles. En utilisant `simd` la directive avant une boucle, le compilateur peut ignorer les dépendances vectorielles, rendre la boucle aussi vectorielle que possible, et respecter l’intention des utilisateurs de faire exécuter simultanément plusieurs itérations en boucle.
 
 ```c
     #pragma omp simd
@@ -37,15 +37,15 @@ SIMD OpenMP, introduit dans 4.0 OpenMP standard, effectuer des boucles de vecteu
     }
 ```
 
-Visual C++ fournit des pragmas de boucle non OpenMP similaires telles que `#pragma vector` et `#pragma ivdep`, mais avec OpenMP SIMD, le compilateur peut effectuer plus d’informations, telles que :
+Visual CMD fournit des pragmas en `#pragma vector` boucle `#pragma ivdep`similaires non OpenMP comme et, cependant avec OpenMP SIMD, le compilateur peut faire plus, comme:
 
-- Toujours autorisé à ignorer les dépendances vectorielles présents.
-- `/fp:fast` est activée dans la boucle.
-- Boucles externes et les boucles avec les appels de fonction sont compatibles avec le vecteur.
-- Boucles imbriquées peuvent être fusionnés dans une boucle et effectués des vecteurs.
-- Accélération hybride avec `#pragma omp for simd` pour activer des vecteurs de multi-threads et affinées à granularité grossière.  
+- Toujours autorisé à ignorer les dépendances actuelles vectorielles.
+- `/fp:fast`est activé dans la boucle.
+- Les boucles extérieures et les boucles avec les appels de fonction sont vectorielles.
+- Les boucles imbriquées peuvent être fusionnées en une seule boucle et rendues vectorielles.
+- Accélération hybride `#pragma omp for simd` avec pour permettre des vecteurs à grains multiples grossiers et à grain fin.  
 
-Pour les boucles de vecteurs, le compilateur reste en mode silencieux, sauf si vous utilisez un commutateur de journal vecteur-prise en charge :
+Pour les boucles vectorielles, le compilateur reste silencieux à moins d’utiliser un interrupteur de journal vectoriel :
 
 ```cmd
     cl -O2 -openmp:experimental -Qvec-report:2 mycode.cpp
@@ -57,7 +57,7 @@ Pour les boucles de vecteurs, le compilateur reste en mode silencieux, sauf si v
     mycode.cpp(96) : info C5001: Omp simd loop vectorized
 ```
 
-Pour les boucles non compatibles avec les vecteurs, le compilateur chacun émet un message :
+Pour les boucles non-vectorielles, le compilateur émet chacun un message :
 
 ```cmd
     cl -O2 -openmp:experimental mycode.cpp
@@ -70,23 +70,23 @@ Pour les boucles non compatibles avec les vecteurs, le compilateur chacun émet 
 
 ### <a name="clauses"></a>Clauses
 
-La directive OpenMP SIMD accepte également les clauses suivantes pour améliorer la prise en charge de vecteur :
+La directive SIMD OpenMP peut également prendre les clauses suivantes pour renforcer le soutien vectoriel :
 
 |Directive|Description|
 |---|---|
-|`simdlen(length)`|Spécifiez le nombre de couloirs de vecteur.|
-|`safelen(length)`|Spécifiez la distance de dépendance de vecteur.|
-|`linear(list[ : linear-step]`)|Le mappage linéaire à partir de la variable d’induction de boucle à l’abonnement de tableau.|
+|`simdlen(length)`|Spécifier le nombre de voies vectorielles.|
+|`safelen(length)`|Spécifier la distance de dépendance vectorielle.|
+|`linear(list[ : linear-step]`)|La cartographie linéaire de la variable d’induction de boucle à l’abonnement de tableau.|
 |`aligned(list[ : alignment])`|L’alignement des données.|
-|`private(list)`|Spécifiez la privatisation de données.|
-|`lastprivate(list)`|Spécifiez la privatisation de données avec la valeur finale à partir de la dernière itération.|
-|`reduction(reduction-identifier:list)`|Spécifier les opérations de réduction personnalisé.|
-|`collapse(n)`|Imbrication de boucle fusion.|
+|`private(list)`|Spécifier la privatisation des données.|
+|`lastprivate(list)`|Spécifier la privatisation des données avec la valeur finale de la dernière itération.|
+|`reduction(reduction-identifier:list)`|Spécifier les opérations de réduction personnalisées.|
+|`collapse(n)`|Nid de boucle de fusion.|
 
 > [!NOTE]
-> Clauses SIMD inefficace sont analysées et ignorés par le compilateur avec un avertissement.
+> Les clauses SIMD non efficaces sont analysées et ignorées par le compilateur avec un avertissement.
 >
-> Par exemple, utiliser des problèmes de code suivants un avertissement :
+> Par exemple, l’utilisation du code suivant émet un avertissement :
 >
 > ```c
 >    #pragma omp simd simdlen(8)
@@ -104,9 +104,9 @@ La directive OpenMP SIMD accepte également les clauses suivantes pour améliore
 
 ### <a name="example"></a>Exemple
   
-La directive OpenMP SIMD fournit aux utilisateurs un moyen de dicter le compilateur marque boucles vecteur conviviale. En annotant une boucle avec la directive OpenMP SIMD, les utilisateurs envisagez d’exécuter plusieurs itérations de boucle exécutées simultanément.
+La directive SimD OpenMP offre aux utilisateurs un moyen de dicter le compilateur faire des boucles vectorielles. En annotant une boucle avec la directive SIMD OpenMP, les utilisateurs ont l’intention d’avoir plusieurs itérations en boucle exécutées simultanément.
 
-Par exemple, la boucle suivante est annotée avec la directive OpenMP SIMD. Il est sans parallélisme parfait entre les itérations de boucle dans la mesure où il existe une dépendance vers l’arrière à partir d’un [i] [i-1], mais en raison de la directive SIMD que le compilateur est toujours autorisé à empaqueter des itérations consécutives de la première instruction dans une instruction de vecteur et exécuter les en parallèle.
+Par exemple, la boucle suivante est annotée avec la directive SIMD OpenMP. Il n’y a pas de parallélisme parfait parmi les itérations en boucle puisqu’il y a une dépendance rétrograde d’un[i] à un[i-1], mais en raison de la directive SIMD, le compilateur est toujours autorisé à emballer les itérations consécutives de la première déclaration dans une instruction vectorielle et à les exécuter en parallèle.
 
 ```c
     #pragma omp simd
@@ -118,7 +118,7 @@ Par exemple, la boucle suivante est annotée avec la directive OpenMP SIMD. Il e
     }
 ```
 
-Par conséquent, la forme de vecteur transformé suivante de la boucle est **juridique** , car le compilateur conserve le comportement séquentiel de chaque itération de boucle d’origine. En d’autres termes, `a[i]` est exécutée après `a[-1]`, `b[i]` est après `a[i]` et l’appel à `bar` se produit en dernier.
+Par conséquent, la forme vectorielle transformée suivante de la boucle est **légale** parce que le compilateur garde le comportement séquentiel de chaque itération de boucle originale. En d’autres `a[i]` termes, `a[-1]` `b[i]` est `a[i]` exécuté après `bar` , est après et l’appel à se produit en dernier.
 
 ```c
     for (i = 0; i < count; i+=4)
@@ -132,7 +132,7 @@ Par conséquent, la forme de vecteur transformé suivante de la boucle est **jur
     }
 ```
 
-Il a **légales** pour déplacer la référence de la mémoire `*c` en dehors de la boucle si elle peut alias avec `a[i]` ou `b[i]`. Également, il n’est pas conforme à réorganiser les instructions à l’intérieur d’une itération d’origine si elle rompt la dépendance séquentielle. Par exemple, la boucle transformée suivante n’est pas légale :
+Il n’est **pas légal** `*c` de déplacer la référence de `a[i]` `b[i]`mémoire hors de la boucle si elle peut alias avec ou . Il n’est pas non plus légal de réorganiser les déclarations à l’intérieur d’une itération originale si elle brise la dépendance séquentielle. Par exemple, la boucle transformée suivante n’est pas légale :
 
 ```c
     c = b;

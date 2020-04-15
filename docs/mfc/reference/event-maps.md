@@ -4,12 +4,12 @@ ms.date: 09/07/2019
 helpviewer_keywords:
 - event maps [MFC]
 ms.assetid: 1ed53aee-bc53-43cd-834a-6fb935c0d29b
-ms.openlocfilehash: 34741dc05efe77c0932343739540370f54db6008
-ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
+ms.openlocfilehash: c79d2fb1ac73947ddb13adcbd444ff7b5d50bdb4
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/16/2020
-ms.locfileid: "79420973"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81365735"
 ---
 # <a name="event-maps"></a>Tables d'événements
 
@@ -19,13 +19,13 @@ La bibliothèque MFC (Microsoft Foundation Class) offre un modèle de programmat
 
 [!code-cpp[NVC_MFCAxCtl#16](../../mfc/reference/codesnippet/cpp/event-maps_1.cpp)]
 
-La macro `EVENT_STOCK_CLICK` indique que le contrôle déclenche un événement de clic de stock chaque fois qu’il détecte un clic de souris. Pour obtenir une liste plus détaillée des autres événements stock, consultez l’article [contrôles ActiveX : événements](../../mfc/mfc-activex-controls-events.md). Les macros sont également disponibles pour afficher les événements personnalisés.
+La `EVENT_STOCK_CLICK` macro indique que le contrôle va tirer un stock Cliquez sur l’événement chaque fois qu’il détecte un clic de souris. Pour une liste plus détaillée d’autres événements boursiers, voir l’article [ActiveX Controls: Events](../../mfc/mfc-activex-controls-events.md). Les macros sont également disponibles pour afficher les événements personnalisés.
 
-Bien que les macros de table d'événements sont importantes, elles ne sont généralement pas insérées directement. Cela est dû au fait que la fenêtre **Propriétés** (dans **affichage de classes**) crée automatiquement des entrées de mappage d’événements dans vos fichiers sources quand vous l’utilisez pour associer des fonctions de déclenchement d’événements à des événements. Chaque fois que vous souhaitez modifier ou ajouter une entrée de la table des événements, vous pouvez utiliser la fenêtre **Propriétés** .
+Bien que les macros de table d'événements sont importantes, elles ne sont généralement pas insérées directement. C’est parce que la fenêtre **Propriétés** (dans **Class View**) crée automatiquement des entrées de carte d’événement dans vos fichiers source lorsque vous l’utilisez pour associer les fonctions de tir d’événements avec les événements. Chaque fois que vous souhaitez modifier ou ajouter une entrée de carte d’événement, vous pouvez utiliser la fenêtre **Propriétés.**
 
 Pour prendre en charge les tables d'événements, MFC fournit les macros suivantes :
 
-## <a name="event-map-macros"></a>Macros de la table des événements
+## <a name="event-map-macros"></a>Macros de carte d’événement
 
 ### <a name="event-map-declaration-and-demarcation"></a>Déclaration et démarcation de table d'événements
 
@@ -49,9 +49,9 @@ Pour prendre en charge les tables d'événements, MFC fournit les macros suivant
 |[ON_OLEVERB](#on_oleverb)|Désigne un verbe personnalisé géré par le contrôle OLE.|
 |[ON_STDOLEVERB](#on_stdoleverb)|Remplace un mappage de verbe standard du contrôle OLE.|
 
-##  <a name="declare_event_map"></a>DECLARE_EVENT_MAP
+## <a name="declare_event_map"></a><a name="declare_event_map"></a>DECLARE_EVENT_MAP
 
-Chaque classe dérivée d' `COleControl`dans votre programme peut fournir une table des événements pour spécifier les événements que votre contrôle doit déclencher.
+Chaque `COleControl`classe dérivée de votre programme peut fournir une carte d’événement pour spécifier les événements que votre contrôle tirera.
 
 ```cpp
 DECLARE_EVENT_MAP()
@@ -59,17 +59,17 @@ DECLARE_EVENT_MAP()
 
 ### <a name="remarks"></a>Notes
 
-Utilisez la macro DECLARE_EVENT_MAP à la fin de votre déclaration de classe. Ensuite, dans le fichier. cpp qui définit les fonctions membres de la classe, utilisez la macro BEGIN_EVENT_MAP, les entrées de macro pour chacun des événements du contrôle et la macro END_EVENT_MAP pour déclarer la fin de la liste d’événements.
+Utilisez la DECLARE_EVENT_MAP macro à la fin de votre déclaration de classe. Ensuite, dans le fichier .cpp qui définit les fonctions des membres pour la classe, utilisez les BEGIN_EVENT_MAP macro, macro entrées pour chacun des événements du contrôle, et le END_EVENT_MAP macro pour déclarer la fin de la liste d’événements.
 
-Pour plus d’informations sur les tables d’événements, consultez l’article [contrôles ActiveX : événements](../../mfc/mfc-activex-controls-events.md).
+Pour plus d’informations sur les cartes d’événements, voir l’article [ActiveX Controls: Events](../../mfc/mfc-activex-controls-events.md).
 
 ### <a name="requirements"></a>Spécifications
 
-**En-tête** afxctl. h
+**En-tête** afxctl.h
 
-## <a name="begin_event_map"></a>BEGIN_EVENT_MAP
+## <a name="begin_event_map"></a><a name="begin_event_map"></a>BEGIN_EVENT_MAP
 
-Commence la définition de votre table d’événements.
+Commence la définition de votre carte d’événement.
 
 ```cpp
 BEGIN_EVENT_MAP(theClass,  baseClass)
@@ -77,25 +77,25 @@ BEGIN_EVENT_MAP(theClass,  baseClass)
 
 ### <a name="parameters"></a>Paramètres
 
-*Les*<br/>
-Spécifie le nom de la classe de contrôle dont se trouve la table d’événements.
+*la Classe*<br/>
+Précise le nom de la classe de contrôle dont il s’agit de la carte de l’événement.
 
-*baseClass*<br/>
-Spécifie le nom de la classe de base de *les*.
+*Baseclass*<br/>
+Spécifie le nom de la classe de base de *la Classe*.
 
 ### <a name="remarks"></a>Notes
 
-Dans le fichier d’implémentation (. cpp) qui définit les fonctions membres pour votre classe, démarrez la table des événements avec la macro BEGIN_EVENT_MAP, puis ajoutez des entrées de macro pour chacun de vos événements et complétez la table des événements avec la macro END_EVENT_MAP.
+Dans le fichier d’implémentation (.cpp) qui définit les fonctions des membres pour votre classe, commencez la carte de l’événement avec la BEGIN_EVENT_MAP macro, puis ajoutez des entrées macro pour chacun de vos événements, et complétez la carte de l’événement avec la macro END_EVENT_MAP.
 
-Pour plus d’informations sur les tables d’événements et la macro BEGIN_EVENT_MAP, consultez l’article [contrôles ActiveX : événements](../../mfc/mfc-activex-controls-events.md).
+Pour plus d’informations sur les cartes d’événements et la macro BEGIN_EVENT_MAP, voir l’article [ActiveX Controls: Events](../../mfc/mfc-activex-controls-events.md).
 
 ### <a name="requirements"></a>Spécifications
 
-**En-tête** afxctl. h
+**En-tête** afxctl.h
 
-##  <a name="end_event_map"></a>END_EVENT_MAP
+## <a name="end_event_map"></a><a name="end_event_map"></a>END_EVENT_MAP
 
-Utilisez la macro END_EVENT_MAP pour terminer la définition de votre table d’événements.
+Utilisez la END_EVENT_MAP macro pour mettre fin à la définition de votre carte d’événement.
 
 ```cpp
 END_EVENT_MAP()
@@ -103,11 +103,11 @@ END_EVENT_MAP()
 
 ### <a name="requirements"></a>Spécifications
 
-**En-tête** afxctl. h
+**En-tête** afxctl.h
 
-## <a name="event_custom"></a>EVENT_CUSTOM
+## <a name="event_custom"></a><a name="event_custom"></a>EVENT_CUSTOM
 
-Définit une entrée de table d’événements pour un événement personnalisé.
+Définit une entrée de carte d’événement pour un événement personnalisé.
 
 ```cpp
 EVENT_CUSTOM(pszName, pfnFire,  vtsParams)
@@ -115,35 +115,35 @@ EVENT_CUSTOM(pszName, pfnFire,  vtsParams)
 
 ### <a name="parameters"></a>Paramètres
 
-*pszName*<br/>
+*pszName (en)*<br/>
 Nom de l’événement.
 
 *pfnFire*<br/>
-Nom de la fonction de déclenchement d’événements.
+Le nom de la fonction de tir de l’événement.
 
 *vtsParams*<br/>
-Liste séparée par des espaces d’une ou de plusieurs constantes spécifiant la liste de paramètres de la fonction.
+Une liste séparée par l’espace d’une ou plusieurs constantes spécifiant la liste des paramètres de la fonction.
 
 ### <a name="remarks"></a>Notes
 
-Le paramètre *vtsParams* est une liste de valeurs séparées par des espaces des constantes de `VTS_`. Une ou plusieurs de ces valeurs, séparées par des espaces (et non par des virgules), spécifient la liste de paramètres de la fonction. Par exemple :
+Le *paramètre vtsParams* est une liste `VTS_` de valeurs séparée par l’espace des constantes. Une ou plusieurs de ces valeurs séparées par des espaces (et non des virgules) spécifient la liste des paramètres de la fonction. Par exemple :
 
 [!code-cpp[NVC_MFCActiveXControl#13](../../mfc/codesnippet/cpp/event-maps_2.cpp)]
 
-spécifie une liste contenant un entier 32 bits représentant une valeur de couleur RVB, suivi d’un pointeur vers l’interface `IFontDisp` d’un objet OLE font.
+spécifie une liste contenant un intégrier 32 bits représentant une `IFontDisp` valeur de couleur RGB, suivie d’un pointeur à l’interface d’un objet de police OLE.
 
-Les constantes de `VTS_` et leurs significations sont les suivantes :
+Les `VTS_` constantes et leurs significations sont les suivantes :
 
 |Symbole|Type de paramètre|
 |------------|--------------------|
 |VTS_I2|**short**|
-|VTS_I4|**long**|
-|VTS_R4|**float**|
+|VTS_I4|**Long**|
+|VTS_R4|**Flotteur**|
 |VTS_R8|**double**|
 |VTS_COLOR|OLE_COLOR|
 |VTS_CY|Monétaire (Currency)|
 |VTS_DATE|DATE|
-|VTS_BSTR|**const** __char\*__|
+|VTS_BSTR|**const** __\* char__|
 |VTS_DISPATCH|LPDISPATCH|
 |VTS_FONT|`IFontDispatch*`|
 |VTS_HANDLE|HANDLE|
@@ -165,15 +165,15 @@ Les constantes de `VTS_` et leurs significations sont les suivantes :
 |VTS_YSIZE_HIMETRIC|OLE_YSIZE_HIMETRIC|
 
 > [!NOTE]
-> Des constantes variant supplémentaires ont été définies pour tous les types variant, à l’exception de VTS_FONT et VTS_PICTURE, qui fournissent un pointeur vers la constante de données Variant. Ces constantes sont nommées à l’aide de la Convention de `VTS_Pconstantname`. Par exemple, VTS_PCOLOR est un pointeur vers une constante VTS_COLOR.
+> D’autres constantes de variantes ont été définies pour tous les types de variantes, à l’exception de VTS_FONT et VTS_PICTURE, qui fournissent un pointeur à la constante de données de variante. Ces constantes sont `VTS_Pconstantname` nommées à l’aide de la convention. Par exemple, VTS_PCOLOR est un pointeur à une constante VTS_COLOR.
 
 ### <a name="requirements"></a>Spécifications
 
-**En-tête** afxctl. h
+**En-tête** afxctl.h
 
-## <a name="event_custom_id"></a>EVENT_CUSTOM_ID
+## <a name="event_custom_id"></a><a name="event_custom_id"></a>EVENT_CUSTOM_ID
 
-Définit une fonction de déclenchement d’événements pour un événement personnalisé appartenant à l’ID de dispatch spécifié par *DISPID*.
+Définit une fonction de tir d’événement pour un événement personnalisé appartenant à l’ID de répartition spécifié par *dispid*.
 
 ```cpp
 EVENT_CUSTOM_ID(
@@ -185,35 +185,35 @@ EVENT_CUSTOM_ID(
 
 ### <a name="parameters"></a>Paramètres
 
-*pszName*<br/>
+*pszName (en)*<br/>
 Nom de l’événement.
 
-*égal*<br/>
-ID de dispatch utilisé par le contrôle lors du déclenchement de l’événement.
+*dispid*<br/>
+L’ID de répartition utilisé par le contrôle lors du tir de l’événement.
 
 *pfnFire*<br/>
-Nom de la fonction de déclenchement d’événements.
+Le nom de la fonction de tir de l’événement.
 
 *vtsParams*<br/>
-Liste variable de paramètres passés au conteneur de contrôle lorsque l’événement est déclenché.
+Une liste variable des paramètres transmis au conteneur de contrôle lorsque l’événement est déclenché.
 
 ### <a name="remarks"></a>Notes
 
-L’argument *vtsParams* est une liste de valeurs séparées par des espaces des constantes `VTS_`. Une ou plusieurs de ces valeurs, séparées par des espaces, et non par des virgules, spécifient la liste de paramètres de la fonction. Par exemple :
+*L’argument vtsParams* est une liste de `VTS_` valeurs séparées par l’espace des constantes. Une ou plusieurs de ces valeurs séparées par des espaces, et non par des virgules, spécifient la liste des paramètres de la fonction. Par exemple :
 
 [!code-cpp[NVC_MFCActiveXControl#13](../../mfc/codesnippet/cpp/event-maps_2.cpp)]
 
-spécifie une liste contenant un entier 32 bits représentant une valeur de couleur RVB, suivi d’un pointeur vers l’interface `IFontDisp` d’un objet OLE font.
+spécifie une liste contenant un intégrier 32 bits représentant une `IFontDisp` valeur de couleur RGB, suivie d’un pointeur à l’interface d’un objet de police OLE.
 
-Pour obtenir la liste des constantes de `VTS_`, consultez [EVENT_CUSTOM](#event_custom).
+Pour une liste `VTS_` des constantes, voir [EVENT_CUSTOM](#event_custom).
 
 ### <a name="requirements"></a>Spécifications
 
-**En-tête** afxctl. h
+**En-tête** afxctl.h
 
-## <a name="on_oleverb"></a>ON_OLEVERB
+## <a name="on_oleverb"></a><a name="on_oleverb"></a>ON_OLEVERB
 
-Cette macro définit une entrée de la table des messages qui mappe un verbe personnalisé à une fonction membre spécifique de votre contrôle.
+Cette macro définit une entrée de carte de message qui cartographie un verbe personnalisé à une fonction de membre spécifique de votre contrôle.
 
 ```cpp
 ON_OLEVERB(idsVerbName,  memberFxn)
@@ -222,16 +222,16 @@ ON_OLEVERB(idsVerbName,  memberFxn)
 ### <a name="parameters"></a>Paramètres
 
 *idsVerbName*<br/>
-ID de ressource de chaîne du nom du verbe.
+L’ID de la ressource de chaîne du nom du verbe.
 
-*memberFxn*<br/>
-Fonction appelée par le Framework lorsque le verbe est appelé.
+*membreFxn*<br/>
+La fonction appelée par le cadre lorsque le verbe est invoqué.
 
 ### <a name="remarks"></a>Notes
 
-L’éditeur de ressources peut être utilisé pour créer des noms de verbes personnalisés qui sont ajoutés à votre table de chaînes.
+L’éditeur de ressources peut être utilisé pour créer des noms de verbe personnalisés qui sont ajoutés à votre table de chaîne.
 
-Le prototype de fonction pour *memberFxn* est :
+Le prototype de fonction pour *memberFxn* est :
 
 ```cpp
 BOOL memberFxn(
@@ -240,13 +240,13 @@ BOOL memberFxn(
    LPCRECT  lpRect);
 ```
 
-Les valeurs des paramètres *lpMsg*, *hwndParent*et *lpRect* sont extraites des paramètres correspondants de la fonction membre `IOleObject::DoVerb`.
+Les valeurs des paramètres *lpMsg*, *hWndParent*et *lpRect* sont prises `IOleObject::DoVerb` à partir des paramètres correspondants de la fonction membre.
 
 ### <a name="requirements"></a>Spécifications
 
-**En-tête** AFXOLE. h
+**En-tête** afxole.h
 
-## <a name="on_stdoleverb"></a>ON_STDOLEVERB
+## <a name="on_stdoleverb"></a><a name="on_stdoleverb"></a>ON_STDOLEVERB
 
 Utilisez cette macro pour remplacer le comportement par défaut d’un verbe standard.
 
@@ -256,22 +256,22 @@ ON_STDOLEVERB(iVerb, memberFxn)
 
 ### <a name="parameters"></a>Paramètres
 
-*iVerb*<br/>
-Index de verbe standard pour le verbe en cours de substitution.
+*iVerb (en)*<br/>
+L’indice de verbe standard pour le verbe étant remplacé.
 
-*memberFxn*<br/>
-Fonction appelée par le Framework lorsque le verbe est appelé.
+*membreFxn*<br/>
+La fonction appelée par le cadre lorsque le verbe est invoqué.
 
 ### <a name="remarks"></a>Notes
 
-L’index de verbe standard est de la forme `OLEIVERB_`, suivi d’une action. OLEIVERB_SHOW, OLEIVERB_HIDE et OLEIVERB_UIACTIVATE sont des exemples de verbes standard.
+L’indice de verbe `OLEIVERB_`standard est de la forme , suivie d’une action. OLEIVERB_SHOW, OLEIVERB_HIDE et OLEIVERB_UIACTIVATE sont quelques exemples de verbes standard.
 
-Pour obtenir une description du prototype de fonction à utiliser comme paramètre *memberFxn* , consultez [ON_OLEVERB](#on_oleverb) .
+Voir [ON_OLEVERB](#on_oleverb) pour une description du prototype de fonction à utiliser comme paramètre *membreFxn.*
 
 ### <a name="requirements"></a>Spécifications
 
-**En-tête** AFXOLE. h
+**En-tête** afxole.h
 
 ## <a name="see-also"></a>Voir aussi
 
-[Macros et globales](../../mfc/reference/mfc-macros-and-globals.md)
+[Macros et objet Globals](../../mfc/reference/mfc-macros-and-globals.md)

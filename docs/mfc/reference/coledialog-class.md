@@ -8,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - COleDialog [MFC], GetLastError
 ms.assetid: b1ed0aca-3914-4b00-af34-4a4fb491aec7
-ms.openlocfilehash: 353e2ed312fa7dbb9ef7bdfabc2b174abf8e1e1d
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 6a1983d426e97dd8063aee2857dc36557aa20677
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62375715"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81366096"
 ---
 # <a name="coledialog-class"></a>COleDialog, classe
 
@@ -35,7 +35,7 @@ class COleDialog : public CCommonDialog
 
 ## <a name="remarks"></a>Notes
 
-La bibliothèque Microsoft Foundation Class fournit plusieurs classes dérivées de `COleDialog`:
+La Bibliothèque de classe Microsoft `COleDialog`Foundation offre plusieurs classes dérivées de :
 
 - [COleInsertDialog](../../mfc/reference/coleinsertdialog-class.md)
 
@@ -55,7 +55,7 @@ La bibliothèque Microsoft Foundation Class fournit plusieurs classes dérivées
 
 - [COleChangeSourceDialog](../../mfc/reference/colechangesourcedialog-class.md)
 
-Pour plus d’informations sur les boîtes de dialogue spécifiques à OLE, consultez l’article [boîtes de dialogue dans OLE](../../mfc/dialog-boxes-in-ole.md).
+Pour plus d’informations sur les boîtes de dialogue spécifiques à l’OLOL, voir l’article [Dialog Boxes in OLE](../../mfc/dialog-boxes-in-ole.md).
 
 ## <a name="inheritance-hierarchy"></a>Hiérarchie d'héritage
 
@@ -71,13 +71,13 @@ Pour plus d’informations sur les boîtes de dialogue spécifiques à OLE, cons
 
 `COleDialog`
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
-**En-tête :** afxodlgs.h
+**En-tête:** afxodlgs.h
 
-##  <a name="getlasterror"></a>  COleDialog::GetLastError
+## <a name="coledialoggetlasterror"></a><a name="getlasterror"></a>COleDialog::GetLastError
 
-Appelez le `GetLastError` fonction membre pour obtenir des informations d’erreur supplémentaires lorsque `DoModal` retourne IDABORT.
+Appelez `GetLastError` la fonction membre pour `DoModal` obtenir des informations d’erreur supplémentaires lors de la déclaration idABORT.
 
 ```
 UINT GetLastError() const;
@@ -85,13 +85,13 @@ UINT GetLastError() const;
 
 ### <a name="return-value"></a>Valeur de retour
 
-Les codes d’erreur retournés par `GetLastError` dépendent de la boîte de dialogue spécifique affichée.
+Les codes d’erreur retournés dépendent `GetLastError` de la boîte de dialogue spécifique affichée.
 
 ### <a name="remarks"></a>Notes
 
-Consultez le `DoModal` fonction membre dans les classes dérivées pour plus d’informations sur les messages d’erreur spécifiques.
+Consultez `DoModal` la fonction de membre dans les classes dérivées pour obtenir des informations sur des messages d’erreur spécifiques.
 
 ## <a name="see-also"></a>Voir aussi
 
-[CCommonDialog, classe](../../mfc/reference/ccommondialog-class.md)<br/>
+[Classe CCommonDialog](../../mfc/reference/ccommondialog-class.md)<br/>
 [Graphique hiérarchique](../../mfc/hierarchy-chart.md)

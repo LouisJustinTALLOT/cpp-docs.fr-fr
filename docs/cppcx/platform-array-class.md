@@ -8,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - Platform::Array Class
 ms.assetid: 7815ab40-88c5-42b0-83b8-081cef0cda31
-ms.openlocfilehash: 7d9fca4de954b5ba9c7cbcb3bdfce0fe3263dbd7
-ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
+ms.openlocfilehash: d625d80df67a3c8207467ad629afd4c2bf88db18
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/17/2020
-ms.locfileid: "79445801"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81318657"
 ---
 # <a name="platformarray-class"></a>Classe Platform::Array
 
@@ -30,41 +30,41 @@ private ref class Array<TArg, 1> :
 
 ### <a name="members"></a>Membres
 
-Platform :: Array hérite de toutes ses méthodes de la [classe Platform :: WriteOnlyArray](../cppcx/platform-writeonlyarray-class.md) et implémente la propriété `Value` de l' [interface Platform :: IBoxArray](../cppcx/platform-iboxarray-interface.md).
+Plate-forme::Array hérite de toutes ses méthodes de [la plate-forme::WriteOnlyArray Classe](../cppcx/platform-writeonlyarray-class.md) et implémente la `Value` propriété de la [plate-forme::IBoxArray Interface](../cppcx/platform-iboxarray-interface.md).
 
 ### <a name="public-constructors"></a>Constructeurs publics
 
-|Name|Description|
+|Nom|Description|
 |----------|-----------------|
-|[Constructeurs de tableaux](#ctor)|Initialise un tableau unidimensionnel et modifiable de types spécifiés par le paramètre de modèle de classe, *T*.|
+|[Constructeurs de tableaux](#ctor)|Initialise un tableau unidimensionnel et modifiable de types spécifiés par le paramètre du modèle de classe, *T*.|
 
 ### <a name="methods"></a>Méthodes
 
-Consultez la [classe Platform :: WriteOnlyArray](../cppcx/platform-writeonlyarray-class.md).
+Voir [la plate-forme::WriteOnlyArray Class](../cppcx/platform-writeonlyarray-class.md).
 
 ### <a name="properties"></a>Propriétés
 
 |||
 |-|-|
-|[Array :: value](#value)|Récupère un handle vers le tableau actuel.|
+|[Array::Valeur](#value)|Récupère un handle vers le tableau actuel.|
 
 ### <a name="remarks"></a>Notes
 
 La classe Array est sealed et ne peut pas être héritée.
 
-Le système de type Windows Runtime ne prend pas en charge le concept de tableaux en escalier et vous ne pouvez donc pas passer un IVector < Platform :: Array\<T > > comme valeur de retour ou paramètre de méthode. Pour passer un tableau en escalier ou une séquence de séquences à travers l'ABI, utilisez `IVector<IVector<T>^>`.
+Le système de type Windows Runtime ne prend pas en charge le concept de tableaux déchiquetés\<et donc vous ne pouvez pas passer une plate-forme IVector<::Array T>> comme une valeur de retour ou un paramètre de méthode. Pour passer un tableau en escalier ou une séquence de séquences à travers l'ABI, utilisez `IVector<IVector<T>^>`.
 
-Pour plus d’informations sur le moment et la façon d’utiliser Platform :: Array, consultez [Array et WriteOnlyArray](../cppcx/array-and-writeonlyarray-c-cx.md).
+Pour plus d’informations sur quand et comment utiliser la plate-forme::Array, voir [Array et WriteOnlyArray](../cppcx/array-and-writeonlyarray-c-cx.md).
 
-Cette classe est définie dans l'en-tête vccorlib.h, qui est inclus automatiquement par le compilateur. Elle est visible dans IntelliSense, mais pas dans l’Explorateur d’objets, car il ne s’agit pas d’un type public défini dans Platform. winmd.
+Cette classe est définie dans l'en-tête vccorlib.h, qui est inclus automatiquement par le compilateur. Il est visible dans IntelliSense mais pas dans Object Browser car il n’est pas un type public défini dans platform.winmd.
 
 ### <a name="requirements"></a>Spécifications
 
 Option du compilateur : **/ZW**
 
-## <a name="ctor"></a>Constructeurs de tableau
+## <a name="array-constructors"></a><a name="ctor"></a>Constructeurs de panneaux
 
-Initialise un tableau unidimensionnel et modifiable de types spécifiés par le paramètre de modèle de classe, *T*.
+Initialise un tableau unidimensionnel et modifiable de types spécifiés par le paramètre du modèle de classe, *T*.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -78,7 +78,7 @@ Array(T* data, unsigned int size);
 *T*<br/>
 Paramètre de modèle de classe.
 
-*size*<br/>
+*Taille*<br/>
 Nombre d’éléments dans le tableau.
 
 *data*<br/>
@@ -86,9 +86,9 @@ Pointeur vers un tableau de données de type `T` utilisé pour initialiser l'obj
 
 ### <a name="remarks"></a>Notes
 
-Pour plus d’informations sur la création d’instances de Platform :: Array, consultez [Array et WriteOnlyArray](../cppcx/array-and-writeonlyarray-c-cx.md).
+Pour plus d’informations sur la façon de créer des instances de la plate-forme::Array, voir [Array et WriteOnlyArray](../cppcx/array-and-writeonlyarray-c-cx.md).
 
-## <a name="get"></a>Array :: obten, méthode
+## <a name="arrayget-method"></a><a name="get"></a>Array::obtenir la méthode
 
 Extrait une référence à l'élément de tableau à la position d'index spécifiée.
 
@@ -101,13 +101,13 @@ T& get(unsigned int index)  const;
 #### <a name="parameters"></a>Paramètres
 
 *index*<br/>
-Index de base zéro qui identifie un élément du tableau. L’index minimal est 0 et l’index maximal est la valeur spécifiée par le paramètre `size` dans le [constructeur du tableau](#ctor).
+Index de base zéro qui identifie un élément du tableau. L’indice minimum est de 0 et l’indice maximum est la valeur spécifiée par le `size` paramètre dans le constructeur [Array](#ctor).
 
 ### <a name="return-value"></a>Valeur de retour
 
 Élément de tableau spécifié par le paramètre `index`.
 
-## <a name="value"></a>Array :: value, propriété
+## <a name="arrayvalue-property"></a><a name="value"></a>Array::Valeur Propriété
 
 Récupère un handle vers le tableau actuel.
 

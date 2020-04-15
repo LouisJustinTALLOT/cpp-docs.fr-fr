@@ -1,9 +1,11 @@
 ---
 title: _strtime, _wstrtime
-ms.date: 11/04/2016
+ms.date: 4/2/2020
 api_name:
 - _wstrtime
 - _strtime
+- _o__strtime
+- _o__wstrtime
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -16,6 +18,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-time-l1-1-0.dll
+- api-ms-win-crt-private-l1-1-0
 api_type:
 - DLLExport
 topic_type:
@@ -36,12 +39,12 @@ helpviewer_keywords:
 - _tstrtime function
 - time, copying
 ms.assetid: 9e538161-cf49-44ec-bca5-c0ab0b9e4ca3
-ms.openlocfilehash: ea4a2b304dc30ec167f8a9094bcf278ff0d31f77
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 827e5a579d801c12b932440fcbbaa18343ad7ece
+ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70946557"
+ms.lasthandoff: 04/14/2020
+ms.locfileid: "81316880"
 ---
 # <a name="_strtime-_wstrtime"></a>_strtime, _wstrtime
 
@@ -73,15 +76,17 @@ Chaîne d’heure.
 
 ## <a name="return-value"></a>Valeur de retour
 
-Retourne un pointeur vers la chaîne de caractères résultante *timestr*.
+Retourne un pointeur à la chaîne de caractère résultant *timestr*.
 
 ## <a name="remarks"></a>Notes
 
-La fonction **_strtime** copie l’heure locale actuelle dans la mémoire tampon pointée par *timestr*. L’heure est au format **hh : mm : SS** , où **hh** est deux chiffres représentant l’heure dans une notation de 24 heures, **mm** est deux chiffres représentant les minutes après l’heure et **SS** deux chiffres représentant les secondes. Par exemple, la chaîne **18:23:44** représente 23 minutes et 44 secondes après 6 h 00. La mémoire tampon doit avoir une longueur au moins égale à 9 octets.
+La fonction **_strtime** copie l’heure locale actuelle dans le tampon indiqué par *timestr*. Le temps est formaté comme **hh:mm:ss** où **hh** est de deux chiffres représentant l’heure dans la notation de 24 heures, **mm** est de deux chiffres représentant les minutes après l’heure, et **ss** est de deux chiffres représentant secondes. Par exemple, la corde **18:23:44** représente 23 minutes et 44 secondes après 18h00. La mémoire tampon doit avoir une longueur au moins égale à 9 octets.
 
-**_wstrtime** est une version à caractères larges de **_strtime**; l’argument et la valeur de retour de **_wstrtime** sont des chaînes à caractères larges. Ces fonctions se comportent sinon de façon identique. Si *timestr* est un pointeur **null** ou si le format de *timestr* est incorrect, le gestionnaire de paramètres non valides est appelé, comme décrit dans [validation de paramètre](../../c-runtime-library/parameter-validation.md). Si l’exception est autorisée à se poursuivre, ces fonctions retournent une **valeur null** et attribuent à **errno** la valeur **EINVAL** si *timestr* était **null** ou défini **errno** sur **ERANGE** si *timestr* n’est pas mis en forme correctement.
+**_wstrtime** est une version à caractère large de **_strtime**; l’argument et la valeur de retour de **_wstrtime** sont des chaînes de caractère large. Ces fonctions se comportent sinon de façon identique. Si *timestr* est un pointeur **NULL** ou si *timestr* est mal formaté, le gestionnaire de paramètres invalide est invoqué, tel que décrit dans [La validation de paramètres](../../c-runtime-library/parameter-validation.md). Si l’exception est autorisée à se poursuivre, ces fonctions renvoient un **NULL** et **définissent un errno** à **EINVAL** si *timestr* était un **NULL** ou **définissez errno** à **ERANGE** si *timestr* est mal formaté.
 
-En C++, ces fonctions ont des surcharges de modèle qui appellent les équivalents plus récents et sécurisés de ces fonctions. Pour plus d'informations, consultez [Secure Template Overloads](../../c-runtime-library/secure-template-overloads.md).
+En C++, ces fonctions ont des surcharges de modèle qui appellent les équivalents plus récents et sécurisés de ces fonctions. Pour plus d’informations, consultez [Sécuriser les surcharges de modèle](../../c-runtime-library/secure-template-overloads.md).
+
+Par défaut, l’état global de cette fonction est étendue à l’application. Pour changer cela, voir [Global State dans le CRT](../global-state.md).
 
 ### <a name="generic-text-routine-mappings"></a>Mappages de routines de texte générique
 
@@ -89,7 +94,7 @@ En C++, ces fonctions ont des surcharges de modèle qui appellent les équivalen
 |---------------------|------------------------------------|--------------------|-----------------------|
 |**_tstrtime**|**_strtime**|**_strtime**|**_wstrtime**|
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
 |Routine|En-tête requis|
 |-------------|---------------------|
@@ -98,7 +103,7 @@ En C++, ces fonctions ont des surcharges de modèle qui appellent les équivalen
 
 Pour plus d'informations sur la compatibilité, voir [Compatibilité](../../c-runtime-library/compatibility.md).
 
-## <a name="example"></a>Exemples
+## <a name="example"></a>Exemple
 
 ```C
 // crt_strtime.c
