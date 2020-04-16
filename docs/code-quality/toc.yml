@@ -2,7 +2,7 @@
   href: index.yml
 - name: Analyser du code C/C++
   items:
-    - name: Vue d'ensemble
+    - name: Vue d’ensemble
       displayName: C++ code analysis
       href: code-analysis-for-c-cpp-overview.md
     - name: Démarrage rapide
@@ -21,7 +21,7 @@
       href: clang-tidy.md
     - name: Utiliser des annotations SAL pour réduire les défauts du code
       items:
-        - name: Vue d'ensemble
+        - name: Vue d’ensemble
           displayName: SAL annotations
           href: using-sal-annotations-to-reduce-c-cpp-code-defects.md
         - name: Comprendre SAL
@@ -44,7 +44,7 @@
       href: how-to-specify-additional-code-information-by-using-analysis-assume.md
     - name: Avertissements liés au vérificateur C++ Core Guidelines
       items:
-        - name: Vue d'ensemble
+        - name: Vue d’ensemble
           displayName: C++ core guidelines checker warnings
           href: code-analysis-for-cpp-corecheck.md
         - name: C26400
@@ -215,7 +215,7 @@
           href: c26817.md
     - name: avertissements C/C++
       items:
-        - name: Vue d'ensemble
+        - name: Vue d’ensemble
           displayName: C++ warnings
           href: code-analysis-for-c-cpp-warnings.md
         - name: C1250
@@ -570,6 +570,8 @@
           href: c26810.md
         - name: C26811
           href: c26811.md
+        - name: C26820
+          href: c26820.md
         - name: C28020
           href: c28020.md
         - name: C28021

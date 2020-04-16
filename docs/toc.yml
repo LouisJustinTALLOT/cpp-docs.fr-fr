@@ -121,9 +121,9 @@
           items:
             - name: vcperf et Analyseur de performance Windows
               href: build-insights/tutorials/vcperf-and-wpa.md
-            - name: Principes de base de l’Analyseur de performance Windows
+            - name: Principes de base de Windows Performance Analyzer
               href: build-insights/tutorials/wpa-basics.md
-        - name: Référence
+        - name: Informations de référence
           expanded: false
           items:
             - name: Commandes vcperf
@@ -133,14 +133,14 @@
             - name: Kit SDK C++ Build Insights
               expanded: false
               items:
-                - name: Vue d'ensemble
+                - name: Vue d’ensemble
                   href: build-insights/reference/sdk/overview.md
                 - name: Table d’événements
                   href: build-insights/reference/sdk/event-table.md
                 - name: Fonctions
                   expanded: false
                   items:
-                    - name: Analyze
+                    - name: Analyser
                       href: build-insights/reference/sdk/functions/analyze.md
                     - name: AnalyzeA
                       href: build-insights/reference/sdk/functions/analyze-a.md
@@ -211,13 +211,13 @@
                       href: build-insights/reference/sdk/cpp-event-data-types/code-generation.md
                     - name: CommandLine
                       href: build-insights/reference/sdk/cpp-event-data-types/command-line.md
-                    - name: Compiler
+                    - name: Compilateur
                       href: build-insights/reference/sdk/cpp-event-data-types/compiler.md
                     - name: CompilerPass
                       href: build-insights/reference/sdk/cpp-event-data-types/compiler-pass.md
                     - name: EnvironmentVariable
                       href: build-insights/reference/sdk/cpp-event-data-types/environment-variable.md
-                    - name: Event
+                    - name: Événement
                       href: build-insights/reference/sdk/cpp-event-data-types/event.md
                     - name: EventGroup
                       href: build-insights/reference/sdk/cpp-event-data-types/event-group.md
@@ -239,7 +239,7 @@
                       href: build-insights/reference/sdk/cpp-event-data-types/front-end-file-group.md
                     - name: FrontEndPass
                       href: build-insights/reference/sdk/cpp-event-data-types/front-end-pass.md
-                    - name: Function
+                    - name: Fonction
                       href: build-insights/reference/sdk/cpp-event-data-types/function.md
                     - name: ImpLibOutput
                       href: build-insights/reference/sdk/cpp-event-data-types/imp-lib-output.md
@@ -249,7 +249,7 @@
                       href: build-insights/reference/sdk/cpp-event-data-types/invocation-group.md
                     - name: LibOutput
                       href: build-insights/reference/sdk/cpp-event-data-types/lib-output.md
-                    - name: Linker
+                    - name: Éditeur de liens
                       href: build-insights/reference/sdk/cpp-event-data-types/linker.md
                     - name: LinkerGroup
                       href: build-insights/reference/sdk/cpp-event-data-types/linker-group.md
@@ -457,7 +457,7 @@
           href: build/how-to-integrate-custom-tools-into-the-project-properties.md
         - name: "Procédure\_: modifier le framework cible et l’ensemble d’outils de plateforme"
           href: build/how-to-modify-the-target-framework-and-platform-toolset.md
-    - name: "Procédure pas à pas\_: Création et utilisation d’une bibliothèque statique (C++)"
+    - name: "Procédure pas à pas\_: Créer et utiliser une bibliothèque statique (C++)"
       href: build/walkthrough-creating-and-using-a-static-library-cpp.md
     - name: "Génération de DLL C++ dans Visual\_Studio"
       expanded: false
@@ -471,13 +471,13 @@
           items:
             - name: Types de DLL
               href: build/kinds-of-dlls.md
-            - name: "DLL non MFC\_: Vue d'ensemble"
+            - name: "DLL non MFC\_: Vue d’ensemble"
               href: build/non-mfc-dlls-overview.md
             - name: DLL MFC normales liées de manière statique à MFC
               href: build/regular-dlls-statically-linked-to-mfc.md
             - name: DLL MFC normales liées de manière dynamique à MFC
               href: build/regular-dlls-dynamically-linked-to-mfc.md
-            - name: "DLL d’extension de MFC\_: Vue d'ensemble"
+            - name: "DLL d’extension de MFC\_: Vue d’ensemble"
               href: build/extension-dlls-overview.md
         - name: Forum aux questions sur les DLL MFC
           href: build/dll-frequently-asked-questions.md
@@ -1689,7 +1689,7 @@
               items:
                 - name: Informations de référence sur BSCMAKE
                   href: build/reference/bscmake-reference.md
-                - name: "Génération de fichiers d’informations de consultation\_: Vue d'ensemble"
+                - name: "Génération de fichiers d’informations de consultation\_: Vue d’ensemble"
                   href: build/reference/building-browse-information-files-overview.md
                 - name: Génération d’un fichier .bsc
                   expanded: false
@@ -1912,7 +1912,7 @@
                       href: atl-mfc-shared/cstring-argument-passing.md
                     - name: Prise en charge des jeux de caractères Unicode et MBCS (Multibyte Character Set)
                       href: atl-mfc-shared/unicode-and-multibyte-character-set-mbcs-support.md
-        - name: Référence
+        - name: Informations de référence
           expanded: false
           items:
             - name: 'CSize, classe'
@@ -2146,7 +2146,7 @@
         - name: Exemples de déploiement
           expanded: false
           items:
-            - name: Exemples de déploiement
+            - name: Exemples de déploiements
               href: windows/deployment-examples.md
             - name: "Procédure pas à pas\_: Déployer une application Visual C++ à l’aide d’un projet d’installation"
               href: windows/walkthrough-deploying-a-visual-cpp-application-by-using-a-setup-project.md
@@ -2172,7 +2172,7 @@
       items:
         - name: Informations de référence sur le langage C++/CX
           href: cppcx/visual-c-language-reference-c-cx.md
-        - name: Aide-mémoire
+        - name: Référence rapide
           href: cppcx/quick-reference-c-cx.md
         - name: Système des types
           expanded: false
@@ -3140,7 +3140,7 @@
       href: security/how-user-account-control-uac-affects-your-application.md
     - name: Guide pour les développeurs de C++ sur les canaux auxiliaires d’exécution spéculative
       href: security/developer-guidance-speculative-execution.md
-- name: Référence
+- name: Informations de référence
   expanded: false
   items:
     - name: Langage C++ et bibliothèques standard
@@ -3148,7 +3148,7 @@
     - name: Informations de référence sur les langages
       expanded: false
       items:
-        - name: Langages
+        - name: Languages
           href: overview/languages-cpp.md
         - name: Informations de référence sur le langage C
           expanded: false
@@ -3930,7 +3930,7 @@
                   href: cpp/basic-concepts-cpp.md
                 - name: Système de type C++
                   href: cpp/cpp-type-system-modern-cpp.md
-                - name: Portée
+                - name: Étendue
                   href: cpp/scope-visual-cpp.md
                 - name: Fichiers d’en-tête
                   href: cpp/header-files-cpp.md
@@ -3944,7 +3944,7 @@
                   href: cpp/lvalues-and-rvalues-visual-cpp.md
                 - name: Objets temporaires
                   href: cpp/temporary-objects.md
-                - name: Alignement
+                - name: Alignment
                   href: cpp/alignment-cpp-declarations.md
                 - name: 'Types de disposition standard, triviaux et POD'
                   href: cpp/trivial-standard-layout-and-pod-types.md
@@ -4174,7 +4174,7 @@
                       href: cpp/if-exists-statement.md
                     - name: '__if_not_exists, instruction'
                       href: cpp/if-not-exists-statement.md
-                    - name: 'switch, instruction'
+                    - name: instruction switch
                       href: cpp/switch-statement-cpp.md
                 - name: Instructions d’itération
                   expanded: false
@@ -4198,7 +4198,7 @@
                       href: cpp/break-statement-cpp.md
                     - name: 'continue, instruction'
                       href: cpp/continue-statement-cpp.md
-                    - name: 'return, instruction'
+                    - name: "Instruction\_RETURN"
                       href: cpp/return-statement-cpp.md
                     - name: 'goto, instruction'
                       href: cpp/goto-statement-cpp.md
@@ -4243,9 +4243,9 @@
                       href: cpp/increment-and-decrement-operator-overloading-cpp.md
                 - name: Opérateurs binaires
                   href: cpp/binary-operators.md
-                - name: Attribution
+                - name: Affectation
                   href: cpp/assignment.md
-                - name: 'Appel de fonction '
+                - name: Appel de fonction
                   href: cpp/function-call-cpp.md
                 - name: Indices
                   href: cpp/subscripting.md
@@ -4367,10 +4367,10 @@
                   href: cpp/lambda-expressions-constexpr.md
             - name: Tableaux
               href: cpp/arrays-cpp.md
-            - name: Références
+            - name: References
               expanded: false
               items:
-                - name: Références
+                - name: References
                   href: cpp/references-cpp.md
                 - name: "Déclarateur de référence Lvalue\_: &"
                   href: cpp/lvalue-reference-declarator-amp.md
@@ -4464,7 +4464,7 @@
                           href: cpp/writing-a-termination-handler.md
                         - name: 'try-finally, instruction'
                           href: cpp/try-finally-statement.md
-                        - name: Nettoyage des ressources
+                        - name: Suppression des ressources
                           href: cpp/cleaning-up-resources.md
                         - name: "Synchronisation de la gestion des exceptions\_: Un résumé"
                           href: cpp/timing-of-exception-handling-a-summary.md
@@ -5518,7 +5518,7 @@
                   href: assembler/masm/elseif-masm.md
                 - name: ELSEIF2
                   href: assembler/masm/elseif2.md
-                - name: FIN
+                - name: END
                   href: assembler/masm/end-masm.md
                 - name: .ENDIF
                   href: assembler/masm/dot-endif.md
@@ -5742,7 +5742,7 @@
                   href: assembler/masm/textequ.md
                 - name: .TFCOND
                   href: assembler/masm/dot-tfcond.md
-                - name: TITLE
+                - name: TITRE
                   href: assembler/masm/title.md
                 - name: TYPEDEF
                   href: assembler/masm/typedef-masm.md
@@ -5863,7 +5863,7 @@
                       href: assembler/masm/operator-single-quote.md
                     - name: opérateur !
                       href: assembler/masm/operator-logical-not-masm.md
-                    - name: ';, opérateur '
+                    - name: ';, opérateur'
                       href: assembler/masm/operator-semicolon.md
                     - name: ';;, opérateur'
                       href: assembler/masm/operator-semicolons.md
@@ -6142,7 +6142,7 @@
               href: extensions/delegate-cpp-component-extensions.md
             - name: 'enum, classe'
               href: extensions/enum-class-cpp-component-extensions.md
-            - name: event
+            - name: événement
               href: extensions/event-cpp-component-extensions.md
             - name: Gestion des exceptions
               href: extensions/exception-handling-cpp-component-extensions.md
@@ -6193,7 +6193,7 @@
               href: extensions/property-cpp-component-extensions.md
             - name: safe_cast
               href: extensions/safe-cast-cpp-component-extensions.md
-            - name: Chaîne
+            - name: String
               href: extensions/string-cpp-component-extensions.md
             - name: sealed
               href: extensions/sealed-cpp-component-extensions.md
@@ -6301,13 +6301,13 @@
                   href: windows/attributes/appobject.md
                 - name: async_uuid
                   href: windows/attributes/async-uuid.md
-                - name: Attribut
+                - name: attribut
                   href: windows/attributes/attribute.md
                 - name: bindable
                   href: windows/attributes/bindable.md
                 - name: call_as
                   href: windows/attributes/call-as.md
-                - name: casse
+                - name: cas
                   href: windows/attributes/case-cpp.md
                 - name: coclasse
                   href: windows/attributes/coclass.md
@@ -6355,7 +6355,7 @@
                   href: windows/attributes/event-receiver.md
                 - name: event_source
                   href: windows/attributes/event-source.md
-                - name: exporter
+                - name: export
                   href: windows/attributes/export.md
                 - name: first_is
                   href: windows/attributes/first-is.md
@@ -6371,7 +6371,7 @@
                   href: windows/attributes/helpstringdll.md
                 - name: hidden
                   href: windows/attributes/hidden.md
-                - name: ID
+                - name: id
                   href: windows/attributes/id.md
                 - name: idl_module
                   href: windows/attributes/idl-module.md
@@ -6385,13 +6385,13 @@
                   href: windows/attributes/implements-cpp.md
                 - name: implements_category
                   href: windows/attributes/implements-category.md
-                - name: d'importation
+                - name: importer
                   href: windows/attributes/import.md
                 - name: importidl
                   href: windows/attributes/importidl.md
                 - name: importlib
                   href: windows/attributes/importlib.md
-                - name: in
+                - name: commencer
                   href: windows/attributes/in-cpp.md
                 - name: include
                   href: windows/attributes/include-cpp.md
@@ -6407,7 +6407,7 @@
                   href: windows/attributes/library-block.md
                 - name: licensed
                   href: windows/attributes/licensed.md
-                - name: locaux
+                - name: local
                   href: windows/attributes/local-cpp.md
                 - name: max_is
                   href: windows/attributes/max-is.md
@@ -6429,7 +6429,7 @@
                   href: windows/attributes/odl.md
                 - name: oleautomation
                   href: windows/attributes/oleautomation.md
-                - name: facultatifs
+                - name: facultatif
                   href: windows/attributes/optional-cpp.md
                 - name: out
                   href: windows/attributes/out-cpp.md
@@ -6577,6 +6577,8 @@
                   href: c-runtime-library/potential-errors-passing-crt-objects-across-dll-boundaries.md
                 - name: Initialisation du CRT
                   href: c-runtime-library/crt-initialization.md
+                - name: État global dans le CRT
+                  href: c-runtime-library/global-state.md
             - name: Routines du runtime C universel par catégorie
               expanded: false
               items:
@@ -7022,7 +7024,7 @@
                   href: c-runtime-library/reference/alloca.md
                 - name: _amsg_exit
                   href: c-runtime-library/reference/amsg-exit.md
-                - name: et
+                - name: and
                   href: c-runtime-library/reference/and.md
                 - name: and_eq
                   href: c-runtime-library/reference/and-eq.md
@@ -7150,7 +7152,7 @@
                   href: c-runtime-library/reference/clog10-clog10f-clog10l.md
                 - name: _close
                   href: c-runtime-library/reference/close.md
-                - name: fermer
+                - name: close
                   href: c-runtime-library/reference/posix-close.md
                 - name: '_Cmulcc, _FCmulcc, _LCmulcc'
                   href: c-runtime-library/reference/cmulcc-fcmulcc-lcmulcc.md
@@ -7472,7 +7474,7 @@
                   href: c-runtime-library/reference/fread-nolock.md
                 - name: _fread_nolock_s2
                   href: c-runtime-library/reference/fread-nolock-s2.md
-                - name: free
+                - name: gratuit
                   href: c-runtime-library/reference/free.md
                 - name: _free_dbg
                   href: c-runtime-library/reference/free-dbg.md
@@ -7914,7 +7916,7 @@
                   href: c-runtime-library/reference/offsetof-macro.md
                 - name: '_onexit, _onexit_m'
                   href: c-runtime-library/reference/onexit-onexit-m.md
-                - name: ouvrir
+                - name: ouvert
                   href: c-runtime-library/reference/open.md
                 - name: '_open, _wopen'
                   href: c-runtime-library/reference/open-wopen.md
@@ -7922,7 +7924,7 @@
                   href: c-runtime-library/reference/open-osfhandle.md
                 - name: or_eq
                   href: c-runtime-library/reference/or-eq.md
-                - name: ou
+                - name: or
                   href: c-runtime-library/reference/or.md
                 - name: _pclose
                   href: c-runtime-library/reference/pclose.md
@@ -7984,7 +7986,7 @@
                   href: c-runtime-library/reference/rand.md
                 - name: rand_s
                   href: c-runtime-library/reference/rand-s.md
-                - name: read
+                - name: lire
                   href: c-runtime-library/reference/posix-read.md
                 - name: _read
                   href: c-runtime-library/reference/read.md
@@ -8460,7 +8462,7 @@
                   href: c-runtime-library/reference/wctrans.md
                 - name: wctype
                   href: c-runtime-library/reference/wctype.md
-                - name: écriture
+                - name: écrire
                   href: c-runtime-library/reference/posix-write.md
                 - name: _write
                   href: c-runtime-library/reference/write.md
@@ -8487,14 +8489,14 @@
                   items:
                     - name: <algorithm>
                       href: standard-library/algorithm.md
-                    - name: fonctions<algorithm>
+                    - name: <algorithm> fonctions
                       href: standard-library/algorithm-functions.md
                 - name: <allocators>
                   expanded: false
                   items:
                     - name: <allocators>
                       href: standard-library/allocators-header.md
-                    - name: fonctions<allocators>
+                    - name: <allocators> fonctions
                       href: standard-library/allocators-functions.md
                     - name: '<allocators>, opérateurs'
                       href: standard-library/allocators-operators.md
@@ -8543,7 +8545,7 @@
                   items:
                     - name: <any>
                       href: standard-library/any.md
-                    - name: fonctions<any>
+                    - name: <any> fonctions
                       href: standard-library/any-functions.md
                     - name: 'any, classe (bibliothèque standard C++)'
                       href: standard-library/any-class.md
@@ -8552,7 +8554,7 @@
                   items:
                     - name: <array>
                       href: standard-library/array.md
-                    - name: fonctions<array>
+                    - name: <array> fonctions
                       href: standard-library/array-functions.md
                     - name: '<array>, opérateurs'
                       href: standard-library/array-operators.md
@@ -8567,7 +8569,7 @@
                       href: standard-library/atomic-structure.md
                     - name: 'atomic_flag, struct'
                       href: standard-library/atomic-flag-structure.md
-                    - name: fonctions<atomic>
+                    - name: <atomic> fonctions
                       href: standard-library/atomic-functions.md
                     - name: '<atomic>, énumérations'
                       href: standard-library/atomic-enums.md
@@ -8597,7 +8599,7 @@
                   items:
                     - name: <chrono>
                       href: standard-library/chrono.md
-                    - name: fonctions<chrono>
+                    - name: <chrono> fonctions
                       href: standard-library/chrono-functions.md
                     - name: '<chrono>, opérateurs'
                       href: standard-library/chrono-operators.md
@@ -8645,7 +8647,7 @@
                   items:
                     - name: <complex>
                       href: standard-library/complex.md
-                    - name: fonctions<complex>
+                    - name: <complex> fonctions
                       href: standard-library/complex-functions.md
                     - name: '<complex>, opérateurs'
                       href: standard-library/complex-operators.md
@@ -8707,7 +8709,7 @@
                   items:
                     - name: <deque>
                       href: standard-library/deque.md
-                    - name: fonctions<deque>
+                    - name: <deque> fonctions
                       href: standard-library/deque-functions.md
                     - name: '<deque>, opérateurs'
                       href: standard-library/deque-operators.md
@@ -8718,7 +8720,7 @@
                   items:
                     - name: <exception>
                       href: standard-library/exception.md
-                    - name: fonctions<exception>
+                    - name: <exception> fonctions
                       href: standard-library/exception-functions.md
                     - name: '<exception>, typedefs'
                       href: standard-library/exception-typedefs.md
@@ -8735,7 +8737,7 @@
                       href: standard-library/filesystem.md
                     - name: '<filesystem>, opérateurs'
                       href: standard-library/filesystem-operators.md
-                    - name: fonctions<filesystem>
+                    - name: <filesystem> fonctions
                       href: standard-library/filesystem-functions.md
                     - name: '<filesystem>, énumerations'
                       href: standard-library/filesystem-enumerations.md
@@ -8784,7 +8786,7 @@
                   items:
                     - name: <functional>
                       href: standard-library/functional.md
-                    - name: fonctions<functional>
+                    - name: <functional> fonctions
                       href: standard-library/functional-functions.md
                     - name: '<functional>, opérateurs'
                       href: standard-library/functional-operators.md
@@ -8869,7 +8871,7 @@
                   items:
                     - name: <future>
                       href: standard-library/future.md
-                    - name: fonctions<future>
+                    - name: <future> fonctions
                       href: standard-library/future-functions.md
                     - name: '<future>, énumérations'
                       href: standard-library/future-enums.md
@@ -8929,14 +8931,14 @@
                   items:
                     - name: <iomanip>
                       href: standard-library/iomanip.md
-                    - name: fonctions<iomanip>
+                    - name: <iomanip> fonctions
                       href: standard-library/iomanip-functions.md
                 - name: <ios>
                   expanded: false
                   items:
                     - name: <ios>
                       href: standard-library/ios.md
-                    - name: fonctions<ios>
+                    - name: <ios> fonctions
                       href: standard-library/ios-functions.md
                     - name: '<ios>, typedefs'
                       href: standard-library/ios-typedefs.md
@@ -8955,7 +8957,7 @@
                   items:
                     - name: <istream>
                       href: standard-library/istream.md
-                    - name: fonctions<istream>
+                    - name: <istream> fonctions
                       href: standard-library/istream-functions.md
                     - name: '<istream>, opérateurs'
                       href: standard-library/istream-operators.md
@@ -8970,7 +8972,7 @@
                   items:
                     - name: <iterator>
                       href: standard-library/iterator.md
-                    - name: fonctions<iterator>
+                    - name: <iterator> fonctions
                       href: standard-library/iterator-functions.md
                     - name: '<iterator>, opérateurs'
                       href: standard-library/iterator-operators.md
@@ -9024,7 +9026,7 @@
                   items:
                     - name: <list>
                       href: standard-library/list.md
-                    - name: <list> opérateurs
+                    - name: '<list> , opérateurs'
                       href: standard-library/list-operators.md
                     - name: 'list, classe'
                       href: standard-library/list-class.md
@@ -9033,7 +9035,7 @@
                   items:
                     - name: <locale>
                       href: standard-library/locale.md
-                    - name: fonctions<locale>
+                    - name: <locale> fonctions
                       href: standard-library/locale-functions.md
                     - name: 'codecvt, classe'
                       href: standard-library/codecvt-class.md
@@ -9098,7 +9100,7 @@
                   items:
                     - name: <map>
                       href: standard-library/map.md
-                    - name: fonctions<map>
+                    - name: <map> fonctions
                       href: standard-library/map-functions.md
                     - name: '<map>, opérateurs'
                       href: standard-library/map-operators.md
@@ -9113,7 +9115,7 @@
                   items:
                     - name: <memory>
                       href: standard-library/memory.md
-                    - name: fonctions<memory>
+                    - name: <memory> fonctions
                       href: standard-library/memory-functions.md
                     - name: '<memory>, opérateurs'
                       href: standard-library/memory-operators.md
@@ -9157,7 +9159,7 @@
                   items:
                     - name: <mutex>
                       href: standard-library/mutex.md
-                    - name: fonctions<mutex>
+                    - name: <mutex> fonctions
                       href: standard-library/mutex-functions.md
                     - name: 'adopt_lock_t, struct'
                       href: standard-library/adopt-lock-t-structure.md
@@ -9184,7 +9186,7 @@
                   items:
                     - name: <new>
                       href: standard-library/new.md
-                    - name: fonctions<new>
+                    - name: <new> fonctions
                       href: standard-library/new-functions.md
                     - name: '<new>, typedefs'
                       href: standard-library/new-typedefs.md
@@ -9199,14 +9201,14 @@
                   items:
                     - name: <numeric>
                       href: standard-library/numeric.md
-                    - name: fonctions<numeric>
+                    - name: <numeric> fonctions
                       href: standard-library/numeric-functions.md
                 - name: <optional>
                   expanded: false
                   items:
                     - name: <optional>
                       href: standard-library/optional.md
-                    - name: fonctions<optional>
+                    - name: <optional> fonctions
                       href: standard-library/optional-functions.md
                     - name: '<optional>, opérateurs'
                       href: standard-library/optional-operators.md
@@ -9219,7 +9221,7 @@
                       href: standard-library/ostream.md
                     - name: basic_ostream (classe)
                       href: standard-library/basic-ostream-class.md
-                    - name: fonctions<ostream>
+                    - name: <ostream> fonctions
                       href: standard-library/ostream-functions.md
                     - name: '<ostream>, opérateurs'
                       href: standard-library/ostream-operators.md
@@ -9241,7 +9243,7 @@
                   items:
                     - name: <random>
                       href: standard-library/random.md
-                    - name: fonctions<random>
+                    - name: <random> fonctions
                       href: standard-library/random-functions.md
                     - name: 'bernoulli_distribution, classe'
                       href: standard-library/bernoulli-distribution-class.md
@@ -9306,7 +9308,7 @@
                   items:
                     - name: <regex>
                       href: standard-library/regex.md
-                    - name: fonctions<regex>
+                    - name: <regex> fonctions
                       href: standard-library/regex-functions.md
                     - name: '<regex>, opérateurs'
                       href: standard-library/regex-operators.md
@@ -9346,7 +9348,7 @@
                   items:
                     - name: <set>
                       href: standard-library/set.md
-                    - name: fonctions<set>
+                    - name: <set> fonctions
                       href: standard-library/set-functions.md
                     - name: '<set>, opérateurs'
                       href: standard-library/set-operators.md
@@ -9361,7 +9363,7 @@
                   items:
                     - name: <sstream>
                       href: standard-library/sstream.md
-                    - name: fonctions<sstream>
+                    - name: <sstream> fonctions
                       href: standard-library/sstream-functions.md
                     - name: '<sstream>, typedefs'
                       href: standard-library/sstream-typedefs.md
@@ -9380,14 +9382,14 @@
                       href: standard-library/stack.md
                     - name: '<stack>, opérateurs'
                       href: standard-library/stack-operators.md
-                    - name: 'stack, classe'
+                    - name: stack (classe)
                       href: standard-library/stack-class.md
                 - name: <stdexcept>
                   expanded: false
                   items:
                     - name: <stdexcept>
                       href: standard-library/stdexcept.md
-                    - name: domain_error (classe)
+                    - name: 'domain_error, classe'
                       href: standard-library/domain-error-class.md
                     - name: 'invalid_argument, classe'
                       href: standard-library/invalid-argument-class.md
@@ -9419,7 +9421,7 @@
                   items:
                     - name: <string>
                       href: standard-library/string.md
-                    - name: fonctions<string>
+                    - name: <string> fonctions
                       href: standard-library/string-functions.md
                     - name: '<string>, opérateurs'
                       href: standard-library/string-operators.md
@@ -9491,7 +9493,7 @@
                   items:
                     - name: <thread>
                       href: standard-library/thread.md
-                    - name: fonctions<thread>
+                    - name: <thread> fonctions
                       href: standard-library/thread-functions.md
                     - name: '<thread>, opérateurs'
                       href: standard-library/thread-operators.md
@@ -9504,7 +9506,7 @@
                   items:
                     - name: <tuple>
                       href: standard-library/tuple.md
-                    - name: fonctions<tuple>
+                    - name: <tuple> fonctions
                       href: standard-library/tuple-functions.md
                     - name: '<tuple>, opérateurs'
                       href: standard-library/tuple-operators.md
@@ -9747,7 +9749,7 @@
                   items:
                     - name: <utility>
                       href: standard-library/utility.md
-                    - name: fonctions<utility>
+                    - name: <utility> fonctions
                       href: standard-library/utility-functions.md
                     - name: '<utility>, opérateurs'
                       href: standard-library/utility-operators.md
@@ -9760,7 +9762,7 @@
                   items:
                     - name: <valarray>
                       href: standard-library/valarray.md
-                    - name: fonctions<valarray>
+                    - name: <valarray> fonctions
                       href: standard-library/valarray-functions.md
                     - name: '<valarray>, opérateurs'
                       href: standard-library/valarray-operators.md
@@ -9785,7 +9787,7 @@
                   items:
                     - name: <variant>
                       href: standard-library/variant.md
-                    - name: fonctions<variant>
+                    - name: <variant> fonctions
                       href: standard-library/variant-functions.md
                     - name: '<variant>, opérateurs'
                       href: standard-library/variant-operators.md
@@ -9813,7 +9815,7 @@
                               href: standard-library/vector-bool-reference-operator-bool.md
                             - name: 'vector<bool>::reference::operator='
                               href: standard-library/vector-bool-reference-operator-assign.md
-                    - name: fonctions<vector>
+                    - name: <vector> fonctions
                       href: standard-library/vector-functions.md
                     - name: '<vector>, opérateurs'
                       href: standard-library/vector-operators.md
@@ -9869,7 +9871,7 @@
                       items:
                         - name: '<sample container>, opérateurs'
                           href: standard-library/sample-container-operators.md
-                        - name: '!=, opérateur'
+                        - name: opérateur !=
                           href: standard-library/operator-inequality.md
                         - name: operator== (<sample container>)
                           href: standard-library/operator-equality-sample-container.md
@@ -10397,7 +10399,7 @@
                       href: parallel/concrt/best-practices-in-the-asynchronous-agents-library.md
                     - name: Bonnes pratiques générales pour runtime d’accès concurrentiel
                       href: parallel/concrt/general-best-practices-in-the-concurrency-runtime.md
-                - name: Référence
+                - name: Informations de référence
                   expanded: false
                   items:
                     - name: Référence (runtime d'accès concurrentiel)
@@ -10417,9 +10419,9 @@
                           href: parallel/concrt/reference/concurrency-namespace-enums.md
                         - name: 'affinity_partitioner, classe'
                           href: parallel/concrt/reference/affinity-partitioner-class.md
-                        - name: 'agent, classe'
+                        - name: agent (classe)
                           href: parallel/concrt/reference/agent-class.md
-                        - name: auto_partitioner (classe)
+                        - name: 'auto_partitioner, classe'
                           href: parallel/concrt/reference/auto-partitioner-class.md
                         - name: 'bad_target, classe'
                           href: parallel/concrt/reference/bad-target-class.md
@@ -10635,7 +10637,7 @@
                       href: parallel/openmp/2-directives.md
                     - name: Fonctions de la bibliothèque du runtime
                       href: parallel/openmp/3-run-time-library-functions.md
-                    - name: Variables d’environnement
+                    - name: Variables d'environnement
                       href: parallel/openmp/4-environment-variables.md
                     - name: Annexes
                       items:
@@ -10662,7 +10664,7 @@
                       href: parallel/openmp/reference/openmp-clauses.md
                     - name: Fonctions
                       href: parallel/openmp/reference/openmp-functions.md
-                    - name: Variables d’environnement
+                    - name: Variables d'environnement
                       href: parallel/openmp/reference/openmp-environment-variables.md
             - name: Prise en charge du multithreading pour le code plus ancien (C++)
               expanded: false
@@ -10764,7 +10766,7 @@
             - name: "Programmation OLE\_DB"
               expanded: false
               items:
-                - name: programmation OLE DB
+                - name: Programmation OLE DB
                   href: data/oledb/ole-db-programming.md
                 - name: "Vue d’ensemble de la programmation OLE\_DB"
                   expanded: false
@@ -10834,7 +10836,7 @@
                         - name: Utilisation de procédures stockées
                           expanded: false
                           items:
-                            - name: Utilisation de procédures stockées
+                            - name: Utilisation des procédures stockées
                               href: data/oledb/using-stored-procedures.md
                             - name: Définition de procédures stockées
                               href: data/oledb/defining-stored-procedures.md
