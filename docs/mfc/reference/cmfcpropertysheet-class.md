@@ -40,12 +40,12 @@ helpviewer_keywords:
 - CMFCPropertySheet [MFC], SetIconsList
 - CMFCPropertySheet [MFC], SetLook
 ms.assetid: 01d93573-9698-440f-a6a4-5bebbee879dc
-ms.openlocfilehash: 6cdb2e966ca1878377fd26a6d4b9075090d32c3e
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 9b1bb2ce9a957b9cd9f7add983b4da7a228d7a1d
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81361801"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81750058"
 ---
 # <a name="cmfcpropertysheet-class"></a>CMFCPropertySheet, classe
 
@@ -142,7 +142,7 @@ L’illustration suivante représente une feuille de propriétés dont le style 
 
 Ajoute une page à la feuille de propriétés.
 
-```
+```cpp
 void AddPage(CPropertyPage* pPage);
 ```
 
@@ -161,7 +161,7 @@ Si la feuille de propriété est dans le style de Microsoft Outlook, le cadre af
 
 Ajoute une nouvelle page de propriétés au contrôle d'arborescence.
 
-```
+```cpp
 void AddPageToTree(
     CMFCPropertySheetCategoryInfo* pCategory,
     CMFCPropertyPage* pPage,
@@ -261,7 +261,7 @@ Pour plus d’informations, consultez les paramètres de la feuille CProperty : 
 
 Réserve de l'espace en haut de chaque page pour dessiner un en-tête personnalisé.
 
-```
+```cpp
 void EnablePageHeader(int nHeaderHeight);
 ```
 
@@ -414,7 +414,7 @@ VRAI si cette méthode est réussie; autrement, FALSE.
 
 Supprime un nœud du contrôle d’arborescence.
 
-```
+```cpp
 void RemoveCategory(CMFCPropertySheetCategoryInfo* pCategory);
 ```
 
@@ -431,7 +431,7 @@ Utilisez cette méthode pour enlever un nœud, qui est également appelé une ca
 
 Supprime une page de propriétés de la feuille de propriétés.
 
-```
+```cpp
 void RemovePage(CPropertyPage* pPage);
 void RemovePage(int nPage);
 ```
@@ -488,7 +488,7 @@ Pour plus d’informations sur les méthodes qui prennent en charge cette métho
 
 Spécifie l'apparence de la feuille de propriétés.
 
-```
+```cpp
 void SetLook(
     PropSheetLook look,
     int nNavControlWidth=100);

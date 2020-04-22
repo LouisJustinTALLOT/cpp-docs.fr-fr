@@ -16,12 +16,12 @@ f1_keywords:
 helpviewer_keywords:
 - CAtlFileMappingBase class
 ms.assetid: be555723-2790-4f57-a8fb-be4d68460775
-ms.openlocfilehash: ae790cf1248c78ff9aa70c0e586f86af6c8f3b9a
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 16eebfff4330a47888d1b60eaa993ee87d120f72
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81318941"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81748296"
 ---
 # <a name="catlfilemappingbase-class"></a>Classe CAtlFileMappingBase
 
@@ -129,7 +129,7 @@ Retourne S_OK sur le succès, ou une erreur HRESULT sur l’échec.
 
 Appelez cette méthode pour obtenir les données à partir d’un objet de cartographie de fichiers.
 
-```
+```cpp
 void* GetData() const throw();
 ```
 

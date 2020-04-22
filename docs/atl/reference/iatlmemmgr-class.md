@@ -13,12 +13,12 @@ helpviewer_keywords:
 - memory, managing
 - memory, memory manager
 ms.assetid: 18b2c569-25fe-4464-bdb6-3b1abef7154a
-ms.openlocfilehash: c296c9de79c305d0f7d2f135f250d181d3cd667a
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: fcecf716e9d865b1b8590a733216576e0da4c2fb
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81330058"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81746001"
 ---
 # <a name="iatlmemmgr-class"></a>Classe IAtlMemMgr
 
@@ -60,7 +60,7 @@ Cette interface est implémentée par [CComHeap](../../atl/reference/ccomheap-cl
 
 Appelez cette méthode pour allouer un bloc de mémoire.
 
-```
+```cpp
 void* Allocate(size_t nBytes) throw();
 ```
 
@@ -85,7 +85,7 @@ Par exemple, voir [l’aperçu de l’IAtlMemMgr](../../atl/reference/iatlmemmgr
 
 Appelez cette méthode pour libérer un bloc de mémoire.
 
-```
+```cpp
 void Free(void* p) throw();
 ```
 
@@ -127,7 +127,7 @@ Par exemple, voir [l’aperçu de l’IAtlMemMgr](../../atl/reference/iatlmemmgr
 
 Appelez cette méthode pour réallouer la mémoire allouée par ce gestionnaire de mémoire.
 
-```
+```cpp
 void* Reallocate(void* p, size_t nBytes) throw();
 ```
 

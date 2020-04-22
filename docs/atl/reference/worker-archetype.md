@@ -4,12 +4,12 @@ ms.date: 11/04/2016
 helpviewer_keywords:
 - Worker archetype
 ms.assetid: 834145cd-09d3-4149-bc99-620e1871cbfb
-ms.openlocfilehash: b0b32232d7386df0c0f13a1c3af1003369b906e0
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: c9ed9b30b94a8debe133bc213c12063750bfb15a
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81329345"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81747344"
 ---
 # <a name="worker-archetype"></a>Archetype de travailleur
 
@@ -22,7 +22,7 @@ Pour mettre en œuvre une classe conforme à cet archétype, la classe doit four
 |Méthode|Description|
 |------------|-----------------|
 |[Initialiser](#initialize)|Appelé à initialiser l’objet du travailleur avant que toute demande ne soit transmise à [Exécuter](#execute).|
-|[Execute](#execute)|Appelé à traiter un élément de travail.|
+|[Exécuter](#execute)|Appelé à traiter un élément de travail.|
 |[Terminate](#terminate)|Appelé à uninitialiser l’objet du travailleur après que toutes les demandes ont été transmises à [Exécuter](#execute).|
 
 |Typedef|Description|
@@ -41,7 +41,7 @@ Ces classes sont conformes à cet archétype :
 |-----------|-----------------|
 |[CNonStatelessWorker](../../atl/reference/cnonstatelessworker-class.md)|Reçoit les demandes du pool de threads et les transmet à un objet de travailleur qui est créé et détruit pour chaque demande.|
 
-**Utiliser**
+**Utilisation**
 
 Ces paramètres de modèle s’attendent à ce que la classe se conforme à cet archétype :
 
@@ -58,7 +58,7 @@ Ces paramètres de modèle s’attendent à ce que la classe se conforme à cet 
 
 Appelé à traiter un élément de travail.
 
-```
+```cpp
 void Execute(
     RequestType request,
     void* pvWorkerParam,
@@ -67,7 +67,7 @@ void Execute(
 
 #### <a name="parameters"></a>Paramètres
 
-*Demande*<br/>
+*requête*<br/>
 L’élément de travail à traiter. L’élément de travail est `RequestType`du même type que .
 
 *pvWorkerParam*<br/>
@@ -109,7 +109,7 @@ Ce type doit être utilisé `WorkerArchetype::Execute` comme premier paramètre 
 
 Appelé à uninitialiser l’objet du travailleur `WorkerArchetype::Execute`après que toutes les demandes ont été transmises à ).
 
-```
+```cpp
 void Terminate(void* pvParam) throw();
 ```
 
@@ -120,5 +120,5 @@ Un paramètre personnalisé compris par la classe des travailleurs. Également p
 
 ## <a name="see-also"></a>Voir aussi
 
-[Concepts liés à la](../../atl/active-template-library-atl-concepts.md)<br/>
+[Concepts](../../atl/active-template-library-atl-concepts.md)<br/>
 [Composants de bureau COM ATL](../../atl/atl-com-desktop-components.md)

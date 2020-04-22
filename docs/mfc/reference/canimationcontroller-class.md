@@ -103,12 +103,12 @@ helpviewer_keywords:
 - CAnimationController [MFC], m_pTransitionFactory
 - CAnimationController [MFC], m_pTransitionLibrary
 ms.assetid: ed294c98-695e-40a6-b940-33ef1d40aa6b
-ms.openlocfilehash: 34a02567bfeb76666cc38ccf05dcc285a1f658f5
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 489e931c4063e7bf06ace1cb130b9891253c94d4
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81369751"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81750180"
 ---
 # <a name="canimationcontroller-class"></a>CAnimationController, classe
 
@@ -299,7 +299,7 @@ CAnimationController(void);
 
 Appelé par le cadre pour nettoyer le groupe lorsque l’animation a été programmée.
 
-```
+```cpp
 void CleanUpGroup(UINT32 nGroupID);
 void CleanUpGroup(CAnimationGroup* pGroup);
 ```
@@ -716,10 +716,10 @@ Un pointeur pour un groupe d’animation qui détient un objet d’animation don
 *pObject*<br/>
 Pointeur d’un objet d’animation qui contient une variable d’animation dont la valeur a changé.
 
-*variable*<br/>
+*Variable*<br/>
 Un pointeur à une variable d’animation.
 
-*Newvalue*<br/>
+*newValue*<br/>
 Spécifie une nouvelle valeur.
 
 *prevValue*<br/>
@@ -813,10 +813,10 @@ Un pointeur pour un groupe d’animation qui détient un objet d’animation don
 *pObject*<br/>
 Pointeur d’un objet d’animation qui contient une variable d’animation dont la valeur a changé.
 
-*variable*<br/>
+*Variable*<br/>
 Un pointeur à une variable d’animation.
 
-*Newvalue*<br/>
+*newValue*<br/>
 Spécifie une nouvelle valeur.
 
 *prevValue*<br/>
@@ -1010,7 +1010,7 @@ Cette méthode s’appelle si vous activez des événements storyboard en utilis
 
 Supprime tous les groupes d’animation du contrôleur d’animation.
 
-```
+```cpp
 void RemoveAllAnimationGroups();
 ```
 
@@ -1022,7 +1022,7 @@ Tous les groupes seront supprimés, leur pointeur, s’il est stocké au niveau 
 
 Supprime un groupe d’animation avec un ID spécifié du contrôleur d’animation.
 
-```
+```cpp
 void RemoveAnimationGroup(UINT32 nGroupID);
 ```
 
@@ -1039,7 +1039,7 @@ Cette méthode supprime un groupe d’animation de la liste interne des groupes 
 
 Retirez un objet d’animation du contrôleur d’animation.
 
-```
+```cpp
 void RemoveAnimationObject(
     CAnimationBaseObject* pObject,
     BOOL bNoDelete = FALSE);
@@ -1061,7 +1061,7 @@ Supprime un objet d’animation du contrôleur d’animation et du groupe d’an
 
 Supprime les transitions des objets d’animation qui appartiennent au groupe spécifié.
 
-```
+```cpp
 void RemoveTransitions(UINT32 nGroupID);
 ```
 
@@ -1089,7 +1089,7 @@ BOOL ScheduleGroup(
 *nGroupID (en anglais)*<br/>
 Spécifie l’ID du groupe d’animation à l’horaire.
 
-*Temps*<br/>
+*time*<br/>
 Spécifie le temps de planifier.
 
 ### <a name="return-value"></a>Valeur de retour
@@ -1104,7 +1104,7 @@ Vous devez appeler AnimateGroup avec le paramètre bScheduleNow réglé à FALSE
 
 Établit une relation entre le contrôleur d’animation et une fenêtre.
 
-```
+```cpp
 void SetRelatedWnd(CWnd* pWnd);
 ```
 

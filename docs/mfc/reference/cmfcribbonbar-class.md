@@ -188,12 +188,12 @@ helpviewer_keywords:
 - CMFCRibbonBar [MFC], ToggleMimimizeState
 - CMFCRibbonBar [MFC], TranslateChar
 ms.assetid: a65d06fa-1a28-4cc0-8971-bc9d7c9198fe
-ms.openlocfilehash: cf3cb7a6e4bc4bc6c79265eb5138aca9fb55ce21
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 51d7ad249d3f3a2556f461aea1a33dd7cbc787eb
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81361441"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81749752"
 ---
 # <a name="cmfcribbonbar-class"></a>Classe CMFCRibbonBar
 
@@ -581,7 +581,7 @@ La catégorie ruban de barre d’outils d’accès rapide n’est utilisée que 
 
 Ajoute l’élément ruban spécifié à la rangée d’onglets de la barre de ruban.
 
-```
+```cpp
 void AddToTabs(CMFCRibbonBaseElement* pElement);
 ```
 
@@ -679,7 +679,7 @@ VRAI si la fenêtre a été créée; autrement FALSE.
 
 Ferme tous les commandes de pointe sur la barre de ruban.
 
-```
+```cpp
 void DeactivateKeyboardFocus(BOOL bSetFocus = TRUE);
 ```
 
@@ -732,7 +732,7 @@ virtual void DWMCompositionChanged();
 
 Permet ou désactive la fonction de keytip pour la barre de ruban.
 
-```
+```cpp
 void EnableKeyTips(BOOL bEnable = TRUE);
 ```
 
@@ -749,7 +749,7 @@ Lorsque vous activez cette fonctionnalité, des conseils clés s’affichent lor
 
 Permet ou désactive la fonction **Aperçu d’impression.**
 
-```
+```cpp
 void EnablePrintPreview(BOOL bEnable = TRUE);
 ```
 
@@ -768,7 +768,7 @@ Par défaut, la fonction **Aperçu d’impression** est activée.
 
 Permet ou désactive les outils et les descriptions facultatives de bout d’outils sur la barre de ruban.
 
-```
+```cpp
 void EnableToolTips(
     BOOL bEnable = TRUE,
     BOOL bEnableDescr = TRUE);
@@ -865,7 +865,7 @@ L’indice zéro d’une catégorie de ruban si la méthode était réussie; sin
 
 Ajuste la disposition de tous les éléments de la barre de ruban et de la fenêtre parente et redessine toute la fenêtre.
 
-```
+```cpp
 void ForceRecalcLayout();
 ```
 
@@ -1017,7 +1017,7 @@ L’élément ruban qui est actuellement déposé; ou NULL si aucun élément ru
 
 Récupère un tableau de pointeurs à tous les éléments ruban qui ont une pièce d’identité de commande spécifique.
 
-```
+```cpp
 void GetElementsByID(
     UINT uiCmdID,
     CArray<CMFCRibbonBaseElement*,CMFCRibbonBaseElement*>& arButtons);
@@ -1060,7 +1060,7 @@ Le tableau suivant énumère la combinaison possible de drapeaux pour la valeur 
 
 Récupère les articles de commande pour la collecte spécifiée d’éléments ruban sur la barre de ruban.
 
-```
+```cpp
 void GetItemIDsList(CList<UINT, UINT>& lstItems,
     BOOL bHiddenOnly = FALSE) const;
 ```
@@ -1177,7 +1177,7 @@ Un pointeur à l’élément ruban sur la barre d’outils d’accès rapide qui
 
 Récupère une liste d’ID de commande pour les éléments ruban sur la barre d’outils d’accès rapide.
 
-```
+```cpp
 void GetQuickAccessCommands(CList<UINT,UINT>& lstCommands);
 ```
 
@@ -1286,7 +1286,7 @@ Si une catégorie de contexte est active, la catégorie active est réinitialis�
 
 Cache toutes les clés sur la barre de ruban.
 
-```
+```cpp
 void HideKeyTips();
 ```
 
@@ -1635,7 +1635,7 @@ VRAI si l’événement de frappe a été traité ; autrement FALSE.
 
 Supprime un tooltip de la vue.
 
-```
+```cpp
 void PopTooltip();
 ```
 
@@ -1676,7 +1676,7 @@ Après ajustement de mise en page, l’affichage de la barre de ruban est mis à
 
 Supprime toutes les catégories de ruban de la barre de ruban.
 
-```
+```cpp
 void RemoveAllCategories();
 ```
 
@@ -1688,7 +1688,7 @@ Cette méthode supprime toutes les catégories de ruban de mémoire et de la lis
 
 Supprime tous les éléments de ruban de la zone d'onglet.
 
-```
+```cpp
 void RemoveAllFromTabs();
 ```
 
@@ -1749,7 +1749,7 @@ Si la catégorie spécifiée par *pCategory* n’est pas affichée, elle ne peut
 
 Associe les boutons système sur la barre de ruban qui appartiennent à une fenêtre pour enfants à interface multi-documents (MDI) à la fenêtre spécifique pour enfants MDI.
 
-```
+```cpp
 void SetActiveMDIChild(CWnd* pWnd);
 ```
 
@@ -1764,7 +1764,7 @@ void SetActiveMDIChild(CWnd* pWnd);
 
 Affecte un bouton de ruban d'application à la barre du ruban.
 
-```
+```cpp
 void SetApplicationButton(
     CMFCRibbonApplicationButton* pButton,
     CSize sizeButton);
@@ -1822,7 +1822,7 @@ Le keytip de menu optionnel est pour les éléments ruban avec un bouton fendu q
 
 Définit le niveau de navigation du clavier lorsque l’utilisateur appuie sur les clés contenues sur la barre de ruban.
 
-```
+```cpp
 void SetKeyboardNavigationLevel(
     CObject* pLevel,
     BOOL bSetFocus = TRUE);
@@ -1844,7 +1844,7 @@ La navigation du clavier de la barre de ruban commence lorsque l’utilisateur a
 
 Ajuste la barre de ruban lorsque la taille de la fenêtre d’une fenêtre pour enfant à interface multi-documents (MDI) entre ou quitte l’état maximisé.
 
-```
+```cpp
 void SetMaximizeMode(
     BOOL bMax,
     CWnd* pWnd = NULL);
@@ -1866,7 +1866,7 @@ La barre de ruban affiche les boutons du système pour une fenêtre d’enfant M
 
 Ajoute un ou plusieurs éléments de ruban à la barre d'outils Accès rapide.
 
-```
+```cpp
 void SetQuickAccessCommands(
     const CList<UINT,UINT>& lstCommands,
     BOOL bRecalcLayout=TRUE);
@@ -1890,13 +1890,13 @@ L’exemple suivant montre comment `SetQuickAccessCommands` utiliser `CMFCRibbon
 
 Définit la barre d’outils d’accès rapide à l’état par défaut.
 
-```
+```cpp
 void SetQuickAccessDefaultState(const CMFCRibbonQuickAccessToolBarDefaultState& state);
 ```
 
 ### <a name="parameters"></a>Paramètres
 
-*État*<br/>
+*state*<br/>
 [dans] L’état par défaut de la barre d’outils d’accès rapide.
 
 ### <a name="remarks"></a>Notes
@@ -1913,7 +1913,7 @@ L’exemple suivant montre comment `SetQuickAccessDefaultState` utiliser `CMFCRi
 
 Positionne la barre d’outils d’accès rapide au-dessus ou au-dessous de la barre de ruban.
 
-```
+```cpp
 void SetQuickAccessToolbarOnTop(BOOL bOnTop);
 ```
 
@@ -1926,7 +1926,7 @@ void SetQuickAccessToolbarOnTop(BOOL bOnTop);
 
 Définit les tailles régulières et grandes des largeurs fixes de bout d’outils pour la barre de ruban.
 
-```
+```cpp
 void SetTooltipFixedWidth(
     int nWidthRegular,
     int nWidthLargeImage);
@@ -1948,7 +1948,7 @@ Le réglage d’un paramètre à 0 fait varier la largeur correspondante.
 
 Affiche ou masque la catégorie de ruban spécifiée.
 
-```
+```cpp
 void ShowCategory(
     int nIndex,
     BOOL bShow=TRUE);
@@ -1966,7 +1966,7 @@ void ShowCategory(
 
 Affiche ou masque les catégories de contexte qui ont l'ID spécifié.
 
-```
+```cpp
 void ShowContextCategories(
     UINT uiContextID,
     BOOL bShow=TRUE);
@@ -1984,7 +1984,7 @@ void ShowContextCategories(
 
 Affiche les keytips pour chaque élément ruban sur la barre de ruban.
 
-```
+```cpp
 void ShowKeyTips();
 ```
 
@@ -1994,7 +1994,7 @@ void ShowKeyTips();
 
 Bascule la barre de ruban entre les états minimisés et maximisés.
 
-```
+```cpp
 void ToggleMimimizeState();
 ```
 
@@ -2131,7 +2131,7 @@ TRUE en cas de réussite, sinon FALSE.
 
 Permet ou désactive Windows 7 look (petit bouton d’application rectangulaire) pour le ruban.
 
-```
+```cpp
 void SetWindows7Look(
     BOOL bWindows7Look,
     BOOL bRecalc = TRUE);

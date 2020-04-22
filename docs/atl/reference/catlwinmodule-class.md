@@ -10,12 +10,12 @@ f1_keywords:
 helpviewer_keywords:
 - CAtlWinModule class
 ms.assetid: 7ec844af-0f68-4a34-b0c8-9de50a025df0
-ms.openlocfilehash: 40385fd592563837546b483bb80978cde6a56555
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: e131ca1b4eb6e320d533ad1292c23add6ffa46e5
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81321275"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81748554"
 ---
 # <a name="catlwinmodule-class"></a>Classe CAtlWinModule
 
@@ -64,7 +64,7 @@ Cette classe fournit un soutien pour toutes les classes ATL qui nécessitent des
 
 Cette méthode est parastérisant et ajoute une `_AtlCreateWndData` structure.
 
-```
+```cpp
 void AddCreateWndData(_AtlCreateWndData* pData, void* pObject);
 ```
 
@@ -108,7 +108,7 @@ Libère toutes les ressources allouées.
 
 Cette méthode renvoie `_AtlCreateWndData` un pointeur à une structure.
 
-```
+```cpp
 void* ExtractCreateWndData();
 ```
 

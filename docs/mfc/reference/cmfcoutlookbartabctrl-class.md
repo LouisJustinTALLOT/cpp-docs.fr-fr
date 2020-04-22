@@ -44,12 +44,12 @@ helpviewer_keywords:
 - CMFCOutlookBarTabCtrl [MFC], SetToolbarImageList
 - CMFCOutlookBarTabCtrl [MFC], SetVisiblePageButtons
 ms.assetid: b1f2b3f7-cc59-49a3-99d8-7ff9b37c044b
-ms.openlocfilehash: 309b74126f57e76aa6399f57382d88fee4400700
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 9c5d7d5135c3b207bbf113970deb8cbeb186bcca
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81369664"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81749563"
 ---
 # <a name="cmfcoutlookbartabctrl-class"></a>CMFCOutlookBarTabCtrl Class
 
@@ -135,7 +135,7 @@ L’exemple suivant montre comment `CMFCOutlookBarTabCtrl` initialiser un objet 
 
 Ajoute un contrôle Windows comme nouvel onglet dans la barre Outlook.
 
-```
+```cpp
 void AddControl(
     CWnd* pWndCtrl,
     LPCTSTR lpszName,
@@ -277,7 +277,7 @@ Appelez cette fonction pour activer ou désactiver l’édition place des étiqu
 
 Appelé par le cadre pour activer les poignées de défilement qui permettent à l’utilisateur de faire défiler les boutons sur le volet de barre Outlook.
 
-```
+```cpp
 void EnableScrollButtons(
     BOOL bEnable = TRUE,
     BOOL bIsUp = TRUE,
@@ -416,7 +416,7 @@ L’effet visuel du réglage de l’onglet actif dépend de si vous avez activé
 
 Définit la taille de la bordure du contrôle de l’onglet Outlook.
 
-```
+```cpp
 void SetBorderSize(int nBorderSize);
 ```
 
@@ -433,7 +433,7 @@ Définit la nouvelle taille de la bordure et récalcule la disposition de la fen
 
 Définit l’alignement des étiquettes de texte sur les boutons d’onglet de la barre Outlook.
 
-```
+```cpp
 void SetPageButtonTextAlign(
     UINT uiAlign,
     BOOL bRedraw=TRUE);
@@ -495,7 +495,7 @@ Cette méthode ne doit pas être appelée si ce n’est en mode Microsoft Office
 
 ## <a name="cmfcoutlookbartabctrlsetvisiblepagebuttons"></a><a name="setvisiblepagebuttons"></a>CMFCOutlookBarTabCtrl::SetVisiblePageButtons
 
-```
+```cpp
 void SetVisiblePageButtons(int nVisiblePageButtons);
 ```
 

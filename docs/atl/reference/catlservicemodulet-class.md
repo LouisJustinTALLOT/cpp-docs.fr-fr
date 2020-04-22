@@ -35,12 +35,12 @@ f1_keywords:
 helpviewer_keywords:
 - CAtlServiceModuleT class
 ms.assetid: 8fc753ce-4a50-402b-9b4a-0a4ce5dd496c
-ms.openlocfilehash: 5d87eada997d0bbfe44cd07a819f6b012a7a3a20
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 6d1985384c2d9a324abac548f27be6be5f0cacf5
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81321335"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81748593"
 ---
 # <a name="catlservicemodulet-class"></a>Classe CAtlServiceModuleT
 
@@ -147,7 +147,7 @@ Initialise les membres des données et définit le statut de service initial.
 
 La routine du gestionnaire pour le service.
 
-```
+```cpp
 void Handler(DWORD dwOpcode) throw();
 ```
 
@@ -230,7 +230,7 @@ Retourne VRAI si le service est installé, FALSE autrement.
 
 Écrit au journal de l’événement.
 
-```
+```cpp
 void __cdecl LogEvent(LPCTSTR pszFormat, ...) throw();
 ```
 
@@ -310,7 +310,7 @@ Une chaîne non terminée qui stocke le nom du service.
 
 Remplacer cette méthode pour continuer le service.
 
-```
+```cpp
 void OnContinue() throw();
 ```
 
@@ -318,7 +318,7 @@ void OnContinue() throw();
 
 Remplacer cette méthode pour interroger le service.
 
-```
+```cpp
 void OnInterrogate() throw();
 ```
 
@@ -326,7 +326,7 @@ void OnInterrogate() throw();
 
 Remplacer cette méthode pour mettre en pause le service.
 
-```
+```cpp
 void OnPause() throw();
 ```
 
@@ -334,7 +334,7 @@ void OnPause() throw();
 
 Remplacez cette méthode pour arrêter le service.
 
-```
+```cpp
 void OnShutdown() throw();
 ```
 
@@ -342,7 +342,7 @@ void OnShutdown() throw();
 
 Remplacer cette méthode pour arrêter le service.
 
-```
+```cpp
 void OnStop() throw();
 ```
 
@@ -350,7 +350,7 @@ void OnStop() throw();
 
 Remplacer cette méthode pour traiter les demandes inconnues au service.
 
-```
+```cpp
 void OnUnknownRequest(DWORD /* dwOpcode*/) throw();
 ```
 
@@ -446,7 +446,7 @@ Après avoir `Run` été appelé, appelle [CAtlServiceModuleT::PreMessageLoop](#
 
 Cette méthode est appelée par le gestionnaire de contrôle de service.
 
-```
+```cpp
 void ServiceMain(DWORD dwArgc, LPTSTR* lpszArgv) throw();
 ```
 
@@ -468,7 +468,7 @@ Après les appels `ServiceMain`SCM , un service doit donner au SCM une fonction 
 
 Cette méthode met à jour l’état du service.
 
-```
+```cpp
 void SetServiceStatus(DWORD dwState) throw();
 ```
 

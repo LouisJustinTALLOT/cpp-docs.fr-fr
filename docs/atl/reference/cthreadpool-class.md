@@ -20,12 +20,12 @@ f1_keywords:
 helpviewer_keywords:
 - CThreadPool class
 ms.assetid: 06683718-01b9-413c-9481-2dc1734ec70f
-ms.openlocfilehash: 0b970915aa07fe2d1af2b3a07345d5b19826be69
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 5e52868f23883836919b96be9aec1815bc1c17b3
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81330566"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81747451"
 ---
 # <a name="cthreadpool-class"></a>Classe CThreadPool
 
@@ -254,7 +254,7 @@ BOOL QueueRequest(Worker::RequestType request) throw();
 
 ### <a name="parameters"></a>Paramètres
 
-*Demande*<br/>
+*requête*<br/>
 La demande d’être en file d’attente.
 
 ### <a name="return-value"></a>Valeur de retour
@@ -333,7 +333,7 @@ Notez que *dwMaxWait* est le moment où la piscine attendra un seul thread pour 
 
 Appelez cette méthode pour arrêter le pool de thread.
 
-```
+```cpp
 void Shutdown(DWORD dwMaxWait = 0) throw();
 ```
 

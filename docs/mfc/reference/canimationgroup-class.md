@@ -46,12 +46,12 @@ helpviewer_keywords:
 - CAnimationGroup [MFC], m_nGroupID
 - CAnimationGroup [MFC], m_pParentController
 ms.assetid: 8bc18ceb-33a2-41d0-9731-71811adacab7
-ms.openlocfilehash: 28d305e2107f7b9a8fd2164eb0ec9678d62ef8fa
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 14ac32524436ff46449171ad90599e60f63dff2a
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81369742"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81750154"
 ---
 # <a name="canimationgroup-class"></a>CAnimationGroup, classe
 
@@ -135,7 +135,7 @@ Destructeur. Appelé quand un groupe d’animation est détruit.
 
 Une aide qui ajoute des cadres clés à un storyboard.
 
-```
+```cpp
 void AddKeyframes(IUIAnimationStoryboard* pStoryboard, BOOL bAddDeep);
 ```
 
@@ -151,7 +151,7 @@ Précise si cette méthode doit ajouter aux cadres clés du tableau de l’histo
 
 Une aide qui ajoute des transitions à un storyboard.
 
-```
+```cpp
 void AddTransitions(
     IUIAnimationStoryboard* pStoryboard,
     BOOL bDependOnKeyframes);
@@ -193,7 +193,7 @@ Cette méthode crée un storyboard interne, crée et applique des transitions et
 
 Applique les transitions vers les objets d’animation.
 
-```
+```cpp
 void ApplyTransitions();
 ```
 
@@ -326,7 +326,7 @@ ATL::CComPtr<IUIAnimationStoryboard> m_pStoryboard;
 
 Supprime et détruit optionnellement tous les cadres clés qui appartiennent à un groupe d’animation.
 
-```
+```cpp
 void RemoveKeyframes();
 ```
 
@@ -338,7 +338,7 @@ Si m_bAutodestroyKeyframes membre est VRAI, alors les cadres clés sont enlevés
 
 Supprime les transitions des objets d’animation qui appartiennent à un groupe d’animation.
 
-```
+```cpp
 void RemoveTransitions();
 ```
 
@@ -359,7 +359,7 @@ BOOL Schedule(IUIAnimationTimer* pTimer, UI_ANIMATION_SECONDS time);
 *pTimer (en)*<br/>
 Un pointeur à la minuterie d’animation.
 
-*Temps*<br/>
+*time*<br/>
 Spécifie le temps de programmer l’animation.
 
 ### <a name="return-value"></a>Valeur de retour
@@ -374,7 +374,7 @@ Appelez cette fonction pour planifier une animation à l’heure spécifiée. Vo
 
 Les directives de tous les objets d’animation appartenant au groupe détruisent automatiquement les transitions.
 
-```
+```cpp
 void SetAutodestroyTransitions(BOOL bAutoDestroy = TRUE);
 ```
 

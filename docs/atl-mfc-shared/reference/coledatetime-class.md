@@ -34,12 +34,12 @@ helpviewer_keywords:
 - dates, handling in MFC
 - time, handling in MFC
 ms.assetid: e718f294-16ec-4649-88b6-a4dbae5178fb
-ms.openlocfilehash: 610cbec6cb65d4e9616c5e0e0d64e729f39febcc
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 8ba09430427b6ece8ae5956912cbcc40fb33fcf2
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81317744"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81747159"
 ---
 # <a name="coledatetime-class"></a>Classe COleDateTime
 
@@ -108,7 +108,7 @@ C’est l’un des types possibles pour le type de données [VARIANT](/windows/w
 
 Le `DATE` type est implémenté comme une valeur de point flottant. Les jours sont mesurés à partir du 30 décembre 1899, à minuit. Le tableau suivant montre quelques dates et leurs valeurs associées :
 
-|Date|Value|
+|Date|Valeur|
 |----------|-----------|
 |29 décembre 1899, minuit|-1.0|
 |29 décembre 1899, 6 h|-1.25|
@@ -155,7 +155,7 @@ bool operator>=(const COleDateTime& date) const throw();
 
 ### <a name="parameters"></a>Paramètres
 
-*Date*<br/>
+*date*<br/>
 Objet `COleDateTime` à comparer.
 
 ### <a name="remarks"></a>Notes
@@ -1014,7 +1014,7 @@ Si la valeur de date spécifiée par les paramètres n’est pas valide, l’ét
 
 Voici quelques exemples de valeurs de date :
 
-|*nYear (en)*|*nMonth (en)*|*nDay (en)*|Value|
+|*nYear (en)*|*nMonth (en)*|*nDay (en)*|Valeur|
 |-------------|--------------|------------|-----------|
 |2000|2|29|Le 29 février 2000|
 |1776|7|4|Le 4 juillet 1776|
@@ -1098,7 +1098,7 @@ Voici quelques exemples de valeurs temporelles :
 
 Voici quelques exemples de valeurs de date :
 
-|*nYear (en)*|*nMonth (en)*|*nDay (en)*|Value|
+|*nYear (en)*|*nMonth (en)*|*nDay (en)*|Valeur|
 |-------------|--------------|------------|-----------|
 |1995|4|15|Le 15 avril 1995|
 |1789|7|14|Le 17 juillet 1789|
@@ -1135,7 +1135,7 @@ Voir l’exemple pour [GetStatus](#getstatus).
 
 Définit l’état `COleDateTime` de cet objet.
 
-```
+```cpp
 void SetStatus(DateTimeStatus status) throw();
 ```
 

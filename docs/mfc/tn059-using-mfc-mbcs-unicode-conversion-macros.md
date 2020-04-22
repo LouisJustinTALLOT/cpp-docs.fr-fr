@@ -11,12 +11,12 @@ helpviewer_keywords:
 - macros [MFC], MBCS conversion macros
 - TN059
 ms.assetid: a2aab748-94d0-4e2f-8447-3bd07112a705
-ms.openlocfilehash: 0d63a87d0fddde30dd5cbb18207297a345d74b9c
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 657381d8247aef14b2c725996dfeb11d0e0535fe
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81366588"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81749440"
 ---
 # <a name="tn059-using-mfc-mbcsunicode-conversion-macros"></a>TN059 : utilisation des macros de conversion MBCS/Unicode MFC
 
@@ -114,7 +114,7 @@ Encore une fois, il existe des macros similaires pour faire TEXTMETRIC, DEVMODE,
 
 N'utilisez pas les macros dans une boucle étroite. Par exemple, vous ne souhaitez pas écrire le type de code suivant :
 
-```
+```cpp
 void BadIterateCode(LPCTSTR lpsz)
 {
     USES_CONVERSION;
@@ -126,7 +126,7 @@ void BadIterateCode(LPCTSTR lpsz)
 
 Le code ci-dessus peut entraîner l'allocation de mégaoctets de mémoire sur la pile en fonction de la nature du contenu de la chaîne `lpsz`. Il faut également du temps pour convertir la chaîne de chaque itération de la boucle. Pour gagner du temps, déplacez ces conversions de constantes en dehors de la boucle :
 
-```
+```cpp
 void MuchBetterIterateCode(LPCTSTR lpsz)
 {
     USES_CONVERSION;
@@ -140,7 +140,7 @@ void MuchBetterIterateCode(LPCTSTR lpsz)
 
 Si la chaîne n'est pas constante, encapsulez l'appel de la méthode au sein d'une fonction. Cela permet de libérer successivement de la mémoire tampon. Par exemple :
 
-```
+```cpp
 void CallSomeMethod(int ii, LPCTSTR lpsz)
 {
     USES_CONVERSION;

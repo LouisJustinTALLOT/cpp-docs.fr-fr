@@ -13,12 +13,12 @@ f1_keywords:
 helpviewer_keywords:
 - CDebugReportHook class
 ms.assetid: 798076c3-6e63-4286-83b8-aa1bbcd0c20c
-ms.openlocfilehash: 621d32a14618327873e6e0cce856c5792e1f8c46
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 8380556bbe007326156bf0ec0eefc23052e8e056
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81327112"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81747724"
 ---
 # <a name="cdebugreporthook-class"></a>Classe CDebugReportHook
 
@@ -107,7 +107,7 @@ static int __cdecl CDebugReportHookProc(
 *rapportType*<br/>
 Le type de rapport (_CRT_WARN, _CRT_ERROR ou _CRT_ASSERT).
 
-*Message*<br/>
+*message*<br/>
 Chaîne du message.
 
 *Returnvalue*<br/>
@@ -127,7 +127,7 @@ Le code de cette fonction est exécuté dans le contexte de sécurité sous-jace
 
 Appelez cette méthode pour arrêter d’envoyer des rapports de déboçon à la pipe nommée et restaurer le crochet de rapport précédent.
 
-```
+```cpp
 void RemoveHook() throw();
 ```
 
@@ -139,7 +139,7 @@ Les [appels _CrtSetReportHook2](../../c-runtime-library/reference/crtsetreportho
 
 Appelez cette méthode pour commencer à envoyer des rapports de déboçon à la pipe nommée.
 
-```
+```cpp
 void SetHook() throw();
 ```
 
@@ -173,7 +173,7 @@ Retourne TRUE sur le succès, FALSE sur l’échec.
 
 Appelez cette méthode pour régler le temps en millisecondes que cette classe attendra que le tuyau nommé devienne disponible.
 
-```
+```cpp
 void SetTimeout(DWORD dwTimeout);
 ```
 

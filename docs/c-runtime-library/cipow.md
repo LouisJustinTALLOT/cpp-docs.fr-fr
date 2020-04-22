@@ -25,12 +25,12 @@ helpviewer_keywords:
 - CIpow intrinsic
 - _CIpow intrinsic
 ms.assetid: 477aaf0c-ac58-4252-89dd-9f3e35d47536
-ms.openlocfilehash: 1b0c900fbd9cb3070f7666a3b032ee7e44f9f881
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 953f18eb9ba6978c6e97a6b3d1d8fa7a165a27d0
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81349417"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81745526"
 ---
 # <a name="_cipow"></a>_CIpow
 
@@ -38,7 +38,7 @@ Calcule *x* élevé à la puissance *y* en fonction des valeurs supérieures de 
 
 ## <a name="syntax"></a>Syntaxe
 
-```
+```cpp
 void __cdecl _CIpow();
 ```
 

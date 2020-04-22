@@ -27,12 +27,12 @@ f1_keywords:
 helpviewer_keywords:
 - CRBTree class
 ms.assetid: a1b1cb63-38e4-4fc2-bb28-f774d1721760
-ms.openlocfilehash: 56c9db9d1a7bcd7fe2a2647d8b1339d223c4b66b
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 58c001ccef35d4265ef5b7fe200654781f130872
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81331241"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81746579"
 ---
 # <a name="crbtree-class"></a>Classe CRBTree
 
@@ -53,7 +53,7 @@ class CRBTree
 *K*<br/>
 Le type d’élément clé.
 
-*V*<br/>
+*C*<br/>
 Le type d’élément de valeur.
 
 *Les KTraits*<br/>
@@ -276,7 +276,7 @@ Le compteur de position *pos* est mis à jour après chaque appel. Si l’élém
 
 Appelez cette méthode pour obtenir la clé et la valeur d’un élément stocké dans la carte et faire avancer la position à l’élément suivant.
 
-```
+```cpp
 void GetNextAssoc(
     POSITION& pos,
     KOUTARGTYPE key,
@@ -429,7 +429,7 @@ typedef KTraits::OUTARGTYPE KOUTARGTYPE;
 
 Appelez cette méthode pour supprimer `CRBTree` tous les éléments de l’objet.
 
-```
+```cpp
 void RemoveAll() throw();
 ```
 
@@ -441,7 +441,7 @@ Efface l’objet, `CRBTree` libérant la mémoire utilisée pour stocker les él
 
 Appelez cette méthode pour supprimer l’élément `CRBTree` à la position donnée dans l’objet.
 
-```
+```cpp
 void RemoveAt(POSITION pos) throw();
 ```
 
@@ -458,7 +458,7 @@ Supprime la paire de clés/valeur stockées à la position spécifiée. La mémo
 
 Appelez cette méthode pour modifier la valeur `CRBTree` stockée à une position donnée dans l’objet.
 
-```
+```cpp
 void SetValueAt(POSITION pos, VINARGTYPE value);
 ```
 

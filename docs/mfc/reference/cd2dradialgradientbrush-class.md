@@ -38,12 +38,12 @@ helpviewer_keywords:
 - CD2DRadialGradientBrush [MFC], m_pRadialGradientBrush
 - CD2DRadialGradientBrush [MFC], m_RadialGradientBrushProperties
 ms.assetid: 6c76d84a-d831-4ee2-96f1-82c1f5b0d6a9
-ms.openlocfilehash: aca9606271040e5c5c9aee81be0a08b64cf2bab7
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 450314fdbf8441b0cc345430518d083573659add
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81369128"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81750305"
 ---
 # <a name="cd2dradialgradientbrush-class"></a>CD2DRadialGradientBrush, classe
 
@@ -123,7 +123,7 @@ virtual ~CD2DRadialGradientBrush();
 
 Attache l’interface de ressources existante à l’objet
 
-```
+```cpp
 void Attach(ID2D1RadialGradientBrush* pResource);
 ```
 
@@ -303,7 +303,7 @@ Pointeur vers une interface ID2D1RadialGradientBrush ou NULL si l’objet n’es
 
 Spécifie le centre de l’ellipse de gradient dans l’espace de coordonnées de la brosse
 
-```
+```cpp
 void SetCenter(CD2DPointF point);
 ```
 
@@ -316,7 +316,7 @@ Le centre de l’ellipse de gradient, dans l’espace de coordonnées de la bros
 
 Spécifie le décalage de l’origine du gradient par rapport au centre de l’ellipse de gradient
 
-```
+```cpp
 void SetGradientOriginOffset(CD2DPointF gradientOriginOffset);
 ```
 
@@ -329,7 +329,7 @@ Le décalage de l’origine de gradient du centre de l’ellipse de gradient
 
 Spécifie le rayon x de l’ellipse de gradient, dans l’espace de coordonnées de la brosse
 
-```
+```cpp
 void SetRadiusX(FLOAT radiusX);
 ```
 
@@ -342,7 +342,7 @@ Le rayon x de l’ellipse de gradient. Cette valeur est dans l’espace de coord
 
 Spécifie le rayon y de l’ellipse de gradient, dans l’espace de coordonnées de la brosse
 
-```
+```cpp
 void SetRadiusY(FLOAT radiusY);
 ```
 

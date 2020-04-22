@@ -80,12 +80,12 @@ helpviewer_keywords:
 - shared classes, CStringT
 - CStringT class
 ms.assetid: 7cacc59c-425f-40f1-8f5b-6db921318ec9
-ms.openlocfilehash: 90f63b474f509b4d1a15ad6fe11bda61c343f483
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 8fcce4c426cd99785d34dc080f238cc78cdfee36
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81317589"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81746709"
 ---
 # <a name="cstringt-class"></a>Classe CStringT
 
@@ -306,7 +306,7 @@ L'exemple suivant montre l'utilisation de `CStringT::AllocSysString`.
 
 Convertit tous les `CStringT` personnages de cet objet à partir du personnage ANSI mis à l’ensemble de caractères OEM.
 
-```
+```cpp
 void AnsiToOem();
 ```
 
@@ -322,7 +322,7 @@ La fonction n’est pas disponible si _UNICODE est définie.
 
 Annexes données formatées à `CStringT` un objet existant.
 
-```
+```cpp
 void __cdecl AppendFormat(PCXSTR pszFormat, [, argument] ...);
 void __cdecl AppendFormat(UINT nFormatID, [, argument] ...);
 ```
@@ -335,7 +335,7 @@ Une chaîne de contrôle de format.
 *nFormatID (en)*<br/>
 L’identifiant de ressources de chaîne qui contient la chaîne de contrôle de format.
 
-*Argument*<br/>
+*argument*<br/>
 Arguments facultatifs.
 
 ### <a name="remarks"></a>Notes
@@ -696,7 +696,7 @@ Trouve la première occurrence de l’un des personnages dans *pszCharSet*.
 
 Écrit des données `CStringT` formatées de la même manière que [sprintf_s](../../c-runtime-library/reference/sprintf-s-sprintf-s-l-swprintf-s-swprintf-s-l.md) formate les données dans un tableau de caractères de type C.
 
-```
+```cpp
 void __cdecl Format(UINT nFormatID, [, argument]...);
 void __cdecl Format(PCXSTR pszFormat,  [, argument] ...);
 ```
@@ -709,7 +709,7 @@ L’identifiant de ressources de chaîne qui contient la chaîne de contrôle de
 *pszFormat*<br/>
 Une chaîne de contrôle de format.
 
-*Argument*<br/>
+*argument*<br/>
 Arguments facultatifs.
 
 ### <a name="remarks"></a>Notes
@@ -730,7 +730,7 @@ Pour plus d’informations, consultez [Syntaxe de spécification de format : fo
 
 Formate une chaîne de messages.
 
-```
+```cpp
 void __cdecl FormatMessage(UINT nFormatID, [, argument]...);
 void __cdecl FormatMessage(PCXSTR pszFormat, [, argument]...);
 ```
@@ -743,7 +743,7 @@ L’identifiant de ressources de chaîne qui contient le texte de message non fo
 *pszFormat*<br/>
 Points à la chaîne de format-contrôle. Il sera numérisé pour les inserts et formaté en conséquence. La chaîne de format est similaire aux chaînes de format de format de format de type *printf*de fonction en temps d’exécution, sauf qu’elle permet d’insérer les paramètres dans un ordre arbitraire.
 
-*Argument*<br/>
+*argument*<br/>
 Arguments facultatifs.
 
 ### <a name="remarks"></a>Notes
@@ -763,7 +763,7 @@ Chaque insert doit avoir un paramètre correspondant suivant le *paramètre pszF
 
 Formats une chaîne de message à l’aide d’une liste d’arguments variables.
 
-```
+```cpp
 void FormatMessageV(PCXSTR pszFormat, va_list* pArgList);
 ```
 
@@ -788,7 +788,7 @@ Pour plus d’informations, consultez la fonction [FormatMessage](/windows/win32
 
 Formats une chaîne de message à l’aide d’une liste d’arguments variables.
 
-```
+```cpp
 void FormatV(PCXSTR pszFormat, va_list args);
 ```
 
@@ -797,7 +797,7 @@ void FormatV(PCXSTR pszFormat, va_list args);
 *pszFormat*<br/>
 Points à la chaîne de format-contrôle. Il sera numérisé pour les inserts et formaté en conséquence. La chaîne de format est `printf`similaire aux chaînes de format de format de fonction-style run-time, sauf qu’elle permet d’insérer les paramètres dans un ordre arbitraire.
 
-*Args*<br/>
+*args*<br/>
 Pointeur à une liste d’arguments.
 
 ### <a name="remarks"></a>Notes
@@ -1012,7 +1012,7 @@ Pour les ensembles de caractères multioctets (MBCS), *nCount* se réfère à ch
 
 Convertit tous les `CStringT` personnages de cet objet à partir du personnage OEM mis à l’ensemble de caractères ANSI.
 
-```
+```cpp
 void OemToAnsi();
 ```
 
@@ -1056,7 +1056,7 @@ Un boolean précisant si le projet est un DLL MFC ou non.
 *BaseType*<br/>
 Le type de base de chaîne.
 
-*Var*<br/>
+*var*<br/>
 Un objet de variante à attribuer à cette chaîne.
 
 *Ch*<br/>
@@ -1150,7 +1150,7 @@ Un boolean précisant si le projet est un DLL MFC ou non.
 *BaseType*<br/>
 Le type de base de chaîne.
 
-*Var*<br/>
+*var*<br/>
 Un objet variante à concatenate à cette chaîne.
 
 *Ch*<br/>

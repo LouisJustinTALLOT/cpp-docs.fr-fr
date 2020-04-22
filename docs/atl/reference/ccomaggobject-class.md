@@ -17,12 +17,12 @@ helpviewer_keywords:
 - aggregation [C++], ATL objects
 - CComAggObject class
 ms.assetid: 7aa90d69-d399-477b-880d-e2cdf0ef7881
-ms.openlocfilehash: 9f05e83c8d0a1fd68fce3228dea9cfeab6183c96
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: b9200c9c396fc16b6df3f4c2f4c66fb7976316d4
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81321172"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81748162"
 ---
 # <a name="ccomaggobject-class"></a>Classe CComAggObject
 
@@ -171,7 +171,7 @@ Une valeur HRESULT standard.
 
 Appelée lors de la destruction d’objets, cette méthode libère le [m_contained](#m_contained) membre.
 
-```
+```cpp
 void FinalRelease();
 ```
 

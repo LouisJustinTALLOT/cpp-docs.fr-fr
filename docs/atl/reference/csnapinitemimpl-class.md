@@ -27,12 +27,12 @@ helpviewer_keywords:
 - CSnapInItemImpl class
 - snap-ins
 ms.assetid: 52caefbd-9eae-49b0-add2-d55524271aa7
-ms.openlocfilehash: 1e4f98dabd2d27b21dbe3e197f32e27ccca9d2d9
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 04eeba0239789b9f3220b7bfece3eb41dc7f2826
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81330721"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81746424"
 ---
 # <a name="csnapinitemimpl-class"></a>Classe CSnapInItemImpl
 
@@ -350,7 +350,7 @@ STDMETHOD(Notify)(
 *Arg*<br/>
 [dans] Dépend du type de notification.
 
-*param*<br/>
+*Param*<br/>
 [dans] Dépend du type de notification.
 
 *pComponentData*<br/>
@@ -382,7 +382,7 @@ QueryPagesFor(DATA_OBJECT_TYPES type);
 
 Appelez cette fonction pour modifier les indicateurs d’insertion du menu, spécifiés par *pInsertionAllowed*, pour l’objet snap-in.
 
-```
+```cpp
 void SetMenuInsertionFlags(
     bool bBeforeInsertion,
     long* pInsertionAllowed);
@@ -414,7 +414,7 @@ Vous ne devriez pas essayer de définir des bits dans *pInsertionAllowed* qui on
 
 Appelez cette fonction pour modifier tous les styles de bouton de barre d’outils, de l’objet de snap-in, avant que la barre d’outils soit créée.
 
-```
+```cpp
 void SetToolbarButtonInfo(
     UINT id,
     BYTE* fsState,
@@ -458,7 +458,7 @@ void SetToolbarButtonInfo(
 
 Appelez cette fonction pour modifier un élément de menu avant qu’il ne soit inséré dans le menu contextuelle de l’objet snap-in.
 
-```
+```cpp
 void UpdateMenuState(
     UINT id,
     LPTSTR pBuf,
@@ -473,7 +473,7 @@ void UpdateMenuState(
 *pBuf (pBuf)*<br/>
 [dans] Un pointeur à la chaîne pour l’élément de menu à mettre à jour.
 
-*Drapeaux*<br/>
+*flags*<br/>
 [dans] Spécifie les nouveaux drapeaux de l’État. Il peut s’agir d’une combinaison des drapeaux suivants :
 
 - MF_POPUP précise qu’il s’agit d’un sous-mois dans le menu du contexte. Des éléments de menu, des points d’insertion et d’autres sous-hommes peuvent être ajoutés à ce sous-mois en utilisant son `lCommandID` comme leur `IInsertionPointID`.

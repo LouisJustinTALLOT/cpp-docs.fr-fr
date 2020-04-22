@@ -50,12 +50,12 @@ helpviewer_keywords:
 - CAnimationBaseObject [MFC], m_nObjectID
 - CAnimationBaseObject [MFC], m_pParentController
 ms.assetid: 76b25917-940e-4eba-940f-31d270702603
-ms.openlocfilehash: 9581ea142c6f87ae12665374a483abc00763ad97
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 1874ddfdd26b8dd371e32f7e68ea8f668c47d8e1
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81371124"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81750221"
 ---
 # <a name="canimationbaseobject-class"></a>CAnimationBaseObject, classe
 
@@ -246,7 +246,7 @@ Boucles sur la liste des variables d’animation encapsulées dans un objet d’
 
 Détache un objet d’animation du contrôleur d’animation parent.
 
-```
+```cpp
 void DetachFromController();
 ```
 
@@ -425,7 +425,7 @@ CAnimationController* m_pParentController;
 
 Définit un drapeau pour détruire automatiquement les transitions.
 
-```
+```cpp
 void SetAutodestroyTransitions(BOOL bValue);
 ```
 
@@ -442,7 +442,7 @@ Réglez ce drapeau uniquement si vous avez attribué des objets de transition à
 
 Définit de nouvelles adresses d’adresses d’ensemble.
 
-```
+```cpp
 void SetID(
     UINT32 nObjectID,
     UINT32 nGroupID = 0);
@@ -476,7 +476,7 @@ Cette aide peut être utilisée pour établir une relation entre les variables d
 
 Définit les données définies par l’utilisateur.
 
-```
+```cpp
 void SetUserData (DWORD dwUserData);
 ```
 

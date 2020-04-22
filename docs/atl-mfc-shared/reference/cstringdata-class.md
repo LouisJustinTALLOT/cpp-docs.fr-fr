@@ -19,12 +19,12 @@ helpviewer_keywords:
 - CStringData class
 - shared classes, CStringData
 ms.assetid: 4e31b5ca-3dbe-4fd5-b692-8211fbfb2593
-ms.openlocfilehash: 5915d9e25588e4e35538619662281ceaf1b35ff7
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: f14f1d9c269f06099bd224f582de1f55da33ff0f
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81317612"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81746841"
 ---
 # <a name="cstringdata-class"></a>Classe CStringData
 
@@ -47,7 +47,7 @@ struct CStringData
 |[IsLocked](#islocked)|Détermine si le tampon de l’objet de chaîne associé est verrouillé.|
 |[IsShared](#isshared)|Détermine si le tampon de l’objet à chaîne associé est actuellement partagé.|
 |[Verrouiller](#lock)|Verrouille le tampon de l’objet de chaîne associé.|
-|[Libérer](#release)|Libère l’objet de chaîne spécifié.|
+|[Version release](#release)|Libère l’objet de chaîne spécifié.|
 |[Déverrouiller](#unlock)|Déverrouille le tampon de l’objet à chaîne associé.|
 
 ### <a name="data-members"></a>Données membres
@@ -91,7 +91,7 @@ Ces données sont composées de :
 
 Incréments le nombre de références de l’objet de chaîne.
 
-```
+```cpp
 void AddRef() throw();
 ```
 
@@ -106,7 +106,7 @@ Incréments le nombre de références de l’objet de chaîne.
 
 Retourne un pointeur au tampon de caractère d’un objet de chaîne.
 
-```
+```cpp
 void* data() throw();
 ```
 
@@ -157,7 +157,7 @@ Appelez cette fonction pour déterminer si le tampon de caractère d’un objet 
 
 Verrouille le tampon de caractère de l’objet de chaîne associé.
 
-```
+```cpp
 void Lock() throw();
 ```
 
@@ -220,7 +220,7 @@ Stocke le gestionnaire de mémoire pour l’objet de chaîne associé. Pour plus
 
 Décrément le nombre de références de l’objet de données de chaîne.
 
-```
+```cpp
 void Release() throw();
 ```
 
@@ -236,7 +236,7 @@ Par exemple, le code `CStringData::Release` suivant appellerait l’objet de don
 
 Débloque le tampon de caractère de l’objet de chaîne associé.
 
-```
+```cpp
 void Unlock() throw();
 ```
 

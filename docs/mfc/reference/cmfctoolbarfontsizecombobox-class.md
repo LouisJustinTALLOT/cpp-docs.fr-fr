@@ -14,12 +14,12 @@ helpviewer_keywords:
 - CMFCToolBarFontSizeComboBox [MFC], RebuildFontSizes
 - CMFCToolBarFontSizeComboBox [MFC], SetTwipSize
 ms.assetid: 72e0c44c-6a0e-4194-a71f-ab64e3afb9b5
-ms.openlocfilehash: 09811b14ed805b1965015a32a25c0b67c947ff4e
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 6c90bb1ce464a90295e7edb933d87594444c3648
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81358303"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81745319"
 ---
 # <a name="cmfctoolbarfontsizecombobox-class"></a>Classe CMFCToolBarFontSizeComboBox
 
@@ -99,7 +99,7 @@ Si la valeur de retour est positive, c’est la taille de la police en twips. Il
 
 Remplit une boîte combo de taille de police avec toutes les tailles valides de la police donnée.
 
-```
+```cpp
 void RebuildFontSizes(const CString& strFontName);
 ```
 
@@ -116,7 +116,7 @@ Appelez cette fonction lorsque vous souhaitez synchroniser entre la sélection d
 
 Arrondit la taille spécifiée (en twips) à la taille la plus proche en points, puis définit la taille sélectionnée dans la boîte de combo à cette valeur.
 
-```
+```cpp
 void SetTwipSize(int nSize);
 ```
 
