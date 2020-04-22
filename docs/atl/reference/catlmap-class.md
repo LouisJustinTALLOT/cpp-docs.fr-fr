@@ -37,12 +37,12 @@ f1_keywords:
 helpviewer_keywords:
 - CAtlMap class
 ms.assetid: 5e2fe028-8e6d-4686-93df-1433d2080ec3
-ms.openlocfilehash: 8a89ca7f7dedcd386abdd41e7487f1b838260c83
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 8954eeae28f13fb50643646b41c032588ecc278f
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81321441"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81748653"
 ---
 # <a name="catlmap-class"></a>Classe CAtlMap
 
@@ -63,7 +63,7 @@ class CAtlMap
 *K*<br/>
 Le type d’élément clé.
 
-*V*<br/>
+*C*<br/>
 Le type d’élément de valeur.
 
 *Les KTraits*<br/>
@@ -159,7 +159,7 @@ Pour plus d’informations, voir [cours de collecte ATL](../../atl/atl-collectio
 
 Appelez cette méthode pour provoquer `CAtlMap` un ASSERT si l’objet n’est pas valide.
 
-```
+```cpp
 void AssertValid() const;
 ```
 
@@ -249,7 +249,7 @@ Cette classe est utilisée par les méthodes [CAtlMap::GetNext](#getnext) et [CA
 
 Appelez cette méthode pour désactiver le `CAtlMap` rehashing automatique de l’objet.
 
-```
+```cpp
 void DisableAutoRehash() throw();
 ```
 
@@ -263,7 +263,7 @@ Lorsque le rehashing automatique est activé (ce qui est par défaut), le nombre
 
 Appelez cette méthode pour permettre le `CAtlMap` rehashing automatique de l’objet.
 
-```
+```cpp
 void EnableAutoRehash() throw();
 ```
 
@@ -277,7 +277,7 @@ Lorsque le rehashing automatique est activé (ce qui est par défaut), le nombre
 
 Appelez cette méthode pour retourner l’élément à une position spécifiée dans la carte.
 
-```
+```cpp
 void GetAt(
     POSITION pos,
     KOUTARGTYPE key,
@@ -376,7 +376,7 @@ Retourne un pointeur à la prochaine paire d’éléments clés/valeurs stockés
 
 Obtient le prochain élément pour itérer.
 
-```
+```cpp
 void GetNextAssoc(
     POSITION& pos,
     KOUTARGTYPE key,
@@ -597,7 +597,7 @@ Si la clé existe déjà, l’élément est remplacé. Si la clé n’existe pas
 
 Appelez cette méthode pour `CAtlMap` rehash l’objet.
 
-```
+```cpp
 void Rehash(UINT nBins = 0);
 ```
 
@@ -614,7 +614,7 @@ Si *nBins* est `CAtlMap` 0, calcule un nombre raisonnable en fonction du nombre 
 
 Appelez cette méthode pour supprimer `CAtlMap` tous les éléments de l’objet.
 
-```
+```cpp
 void RemoveAll() throw();
 ```
 
@@ -626,7 +626,7 @@ Efface l’objet, `CAtlMap` libérant la mémoire utilisée pour stocker les él
 
 Appelez cette méthode pour supprimer l’élément `CAtlMap` à la position donnée dans l’objet.
 
-```
+```cpp
 void RemoveAtPos(POSITION pos) throw();
 ```
 
@@ -690,7 +690,7 @@ Retourne la position de la paire `CAtlMap` d’éléments de clé/valeur dans l�
 
 Appelez cette méthode pour définir `CAtlMap` la charge optimale de l’objet.
 
-```
+```cpp
 void SetOptimalLoad(
     float fOptimalLoad,
     float fLoThreshold,
@@ -720,7 +720,7 @@ Cette méthode redéfinit la valeur `CAtlMap` de charge optimale pour l’objet.
 
 Appelez cette méthode pour modifier la valeur `CAtlMap` stockée à une position donnée dans l’objet.
 
-```
+```cpp
 void SetValueAt(
     POSITION pos,
     VINARGTYPE value);
@@ -777,7 +777,7 @@ V  m_value;
 
 ### <a name="parameters"></a>Paramètres
 
-*V*<br/>
+*C*<br/>
 Le type d’élément de valeur.
 
 ## <a name="see-also"></a>Voir aussi

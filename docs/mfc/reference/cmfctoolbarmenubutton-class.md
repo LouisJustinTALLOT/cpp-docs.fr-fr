@@ -92,12 +92,12 @@ helpviewer_keywords:
 - CMFCToolBarMenuButton [MFC], DrawDocumentIcon
 - CMFCToolBarMenuButton [MFC], m_bAlwaysCallOwnerDraw
 ms.assetid: cfa50176-7e4b-4527-9904-86a1b48fc1bc
-ms.openlocfilehash: 418ef29657271010c3a12f0f15a12f45e5351aac
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 0dffd273b51dd1c71328332f9f7e29e1ac5cd213
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81376167"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81745146"
 ---
 # <a name="cmfctoolbarmenubutton-class"></a>CMFCToolBarMenuButton, classe
 
@@ -328,7 +328,7 @@ La implémentation par défaut `CMFCPopupMenu` ne fait que construire et retourn
 
 Dessine une icône de document sur le bouton du menu.
 
-```
+```cpp
 void DrawDocumentIcon(
     CDC* pDC,
     const CRect& rectImage,
@@ -352,7 +352,7 @@ Cette méthode prend une icône de document et l’attire sur le bouton de menu,
 
 ## <a name="cmfctoolbarmenubuttonenablequickcustomize"></a><a name="enablequickcustomize"></a>CMFCToolBarMenuButton::EnableQuickCustomize
 
-```
+```cpp
 void EnableQuickCustomize();
 ```
 
@@ -428,7 +428,7 @@ Un bouton de menu de barre d’outils peut afficher un sous-mois. Vous pouvez fo
 
 Récupère le rectangle de délimitation pour l’image boutonnée.
 
-```
+```cpp
 void GetImageRect(CRect& rectImage);
 ```
 
@@ -794,7 +794,7 @@ Par défaut, cette méthode définit les données d’accessibilité pour l’é
 
 Précise si le bouton est dessiné comme un bouton de menu ou un bouton split quand il a à la fois un ID de commande valide et un sous-mois.
 
-```
+```cpp
 void SetMenuOnly(BOOL bMenuOnly);
 ```
 
@@ -811,7 +811,7 @@ Typiquement, quand un bouton de menu de barre d’outils a à la fois un sous-mo
 
 Précise si le menu de décrochage est en mode palette.
 
-```
+```cpp
 void SetMenuPaletteMode(
     BOOL bMenuPaletteMode=TRUE,
     int nPaletteRows=1);
@@ -831,7 +831,7 @@ En mode palette, tous les éléments du menu sont affichés sous forme de palett
 
 ## <a name="cmfctoolbarmenubuttonsetmessagewnd"></a><a name="setmessagewnd"></a>CMFCToolBarMenuButton::SetMessageWnd
 
-```
+```cpp
 void SetMessageWnd(CWnd* pWndMessage);
 ```
 

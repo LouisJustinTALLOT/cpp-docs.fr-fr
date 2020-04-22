@@ -42,12 +42,12 @@ helpviewer_keywords:
 - registry, writing to
 - registry, deleting keys
 ms.assetid: 3afce82b-ba2c-4c1a-8404-dc969e1af74b
-ms.openlocfilehash: 01810c16ff3e7fbc930983b9a52dc3a80f779f14
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: d3bdb2e7c3ab0ef56ef7f6fba5d43f1ba0bb7fc6
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81331033"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81746508"
 ---
 # <a name="cregkey-class"></a>Classe CRegKey
 
@@ -137,7 +137,7 @@ Lorsque vous fermez une clé, ses données de registre sont écrites (flushed) s
 
 Appelez cette méthode pour attacher `CRegKey` un HKEY à l’objet en définissant la [poignée m_hKey](#m_hkey) membre à *hKey*.
 
-```
+```cpp
 void Attach(HKEY hKey) throw();
 ```
 
@@ -414,7 +414,7 @@ Précise un indicateur qui indique s’il convient de signaler les changements d
 *dwNotifyFilter*<br/>
 Spécifie un ensemble de drapeaux qui contrôlent les changements qui doivent être signalés. Ce paramètre peut être une combinaison des valeurs suivantes :
 
-|Value|Signification|
+|Valeur|Signification|
 |-----------|-------------|
 |REG_NOTIFY_CHANGE_NAME|Informez l’appelant si un sous-clé est ajouté ou supprimé.|
 |REG_NOTIFY_CHANGE_ATTRIBUTES|Avisez l’appelant des modifications aux attributs de la clé, tels que les informations descripteur de sécurité.|
@@ -887,7 +887,7 @@ LONG SetKeySecurity(SECURITY_INFORMATION si, PSECURITY_DESCRIPTOR psd) throw();
 *si*<br/>
 Spécifie les composants du descripteur de sécurité à définir. La valeur peut être une combinaison des valeurs suivantes :
 
-|Value|Signification|
+|Valeur|Signification|
 |-----------|-------------|
 |DACL_SECURITY_INFORMATION|Définit la liste discrétionnaire de contrôle d’accès de la clé (DACL). La clé doit avoir WRITE_DAC accès, ou le processus d’appel doit être le propriétaire de l’objet.|
 |GROUP_SECURITY_INFORMATION|Définit l’identifiant de sécurité du groupe principal (SID) de la clé. La clé doit avoir WRITE_OWNER accès, ou le processus d’appel doit être le propriétaire de l’objet.|

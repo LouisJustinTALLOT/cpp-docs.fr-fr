@@ -50,12 +50,12 @@ helpviewer_keywords:
 - CObList [MFC], RemoveTail
 - CObList [MFC], SetAt
 ms.assetid: 80699c93-33d8-4f8b-b8cf-7b58aeab64ca
-ms.openlocfilehash: cccd45bf5a97ae7dcc8369015e0a431b3a9e960f
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: f24965357e0b71f28ba39b82d045600e7e1a44e2
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81360373"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81749686"
 ---
 # <a name="coblist-class"></a>CObList, classe
 
@@ -342,7 +342,7 @@ const CObject*& GetAt(POSITION position) const;
 
 ### <a name="parameters"></a>Paramètres
 
-*position*<br/>
+*Position*<br/>
 Une valeur POSITION retournée `GetHeadPosition` `Find` par un appel de fonction préalable ou membre.
 
 ### <a name="return-value"></a>Valeur de retour
@@ -646,7 +646,7 @@ POSITION InsertAfter(
 
 ### <a name="parameters"></a>Paramètres
 
-*position*<br/>
+*Position*<br/>
 Une valeur POSITION retournée `GetNext` `GetPrev`par `Find` un précédent , , ou appel de fonction de membre.
 
 *nouvel Element*<br/>
@@ -690,7 +690,7 @@ POSITION InsertBefore(
 
 ### <a name="parameters"></a>Paramètres
 
-*position*<br/>
+*Position*<br/>
 Une valeur POSITION retournée `GetNext` `GetPrev`par `Find` un précédent , , ou appel de fonction de membre.
 
 *nouvel Element*<br/>
@@ -749,7 +749,7 @@ Le tableau suivant montre d’autres `CObList::IsEmpty`fonctions de membre qui s
 
 Supprime tous les éléments de cette liste `CObList` et libère la mémoire associée.
 
-```
+```cpp
 void RemoveAll();
 ```
 
@@ -776,13 +776,13 @@ Voir [CObList:CObList](#coblist) pour une `CAge` liste de la classe.
 
 Supprime l’élément spécifié de cette liste.
 
-```
+```cpp
 void RemoveAt(POSITION position);
 ```
 
 ### <a name="parameters"></a>Paramètres
 
-*position*<br/>
+*Position*<br/>
 La position de l’élément à supprimer de la liste.
 
 ### <a name="remarks"></a>Notes
@@ -876,7 +876,7 @@ Voir [CObList:CObList](#coblist) pour une `CAge` liste de la classe.
 
 Définit l’élément à une position donnée.
 
-```
+```cpp
 void SetAt(
     POSITION pos,
     CObject* newElement);

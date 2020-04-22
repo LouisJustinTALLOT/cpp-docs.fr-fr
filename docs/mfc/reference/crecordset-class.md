@@ -130,12 +130,12 @@ helpviewer_keywords:
 - CRecordset [MFC], m_strFilter
 - CRecordset [MFC], m_strSort
 ms.assetid: dd89a21d-ef39-4aab-891b-1e373d67c855
-ms.openlocfilehash: 264c9eda4860dfbe41d40c9b454ec40a1a274ba5
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: ab6cde9f478dc6f2e3cb0ba5bb338a3852f083fd
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81368364"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81750505"
 ---
 # <a name="crecordset-class"></a>Classe CRecordset
 
@@ -331,7 +331,7 @@ Pour plus d’informations sur les signets et la navigation de recordset, voir l
 
 Demande que la source de données annule soit une opération asynchrone en cours, soit un processus à partir d’un deuxième thread.
 
-```
+```cpp
 void Cancel();
 ```
 
@@ -343,7 +343,7 @@ Notez que les classes MFC ODBC n’utilisent plus de traitement asynchrone; pour
 
 Annule toute mise à jour en attente, causée par une opération [Edit](#edit) ou [AddNew,](#addnew) avant [que la mise à jour](#update) ne soit appelée.
 
-```
+```cpp
 void CancelUpdate();
 ```
 
@@ -643,7 +643,7 @@ Le code suivant `COutParamRecordset` suppose `CRecordset`qu’il s’agit d’un
 
 Obtient la valeur de signet pour l’enregistrement actuel.
 
-```
+```cpp
 void GetBookmark(CDBVariant& varBookmark);
 ```
 
@@ -711,7 +711,7 @@ Pour plus d’informations, voir l’article [Recordset: Déclarer une classe po
 
 Récupère les données sur le terrain dans l’enregistrement actuel.
 
-```
+```cpp
 void GetFieldValue(
     LPCTSTR lpszName,
     CDBVariant& varValue,
@@ -805,7 +805,7 @@ Pour plus d’informations sur la création d’enregistrements, voir l’articl
 
 Obtient des informations sur les champs dans le dossier.
 
-```
+```cpp
 void GetODBCFieldInfo(
     LPCTSTR lpszName,
     CODBCFieldInfo& fieldinfo);
@@ -931,7 +931,7 @@ Pour plus d’informations, consultez la `SQLExtendedFetch` fonction API ODBC da
 
 Détermine l’indice du dossier actuel dans l’enregistrement et si le dernier enregistrement a été vu.
 
-```
+```cpp
 void GetStatus(CRecordsetStatus& rStatus) const;
 ```
 
@@ -1337,7 +1337,7 @@ Pour plus d’informations sur la navigation de recordset, voir les articles [Re
 
 Fait le premier enregistrement dans la première rangée le record actuel.
 
-```
+```cpp
 void MoveFirst();
 ```
 
@@ -1369,7 +1369,7 @@ Pour plus d’informations sur la navigation de recordset, voir les articles [Re
 
 Fait le premier enregistrement dans le dernier rowset complet le record actuel.
 
-```
+```cpp
 void MoveLast();
 ```
 
@@ -1399,7 +1399,7 @@ Pour plus d’informations sur la navigation de recordset, voir les articles [Re
 
 Fait le premier enregistrement dans le prochain rowset le record actuel.
 
-```
+```cpp
 void MoveNext();
 ```
 
@@ -1429,7 +1429,7 @@ Pour plus d’informations sur la navigation de recordset, voir les articles [Re
 
 Fait le premier enregistrement dans le rowset précédent le record actuel.
 
-```
+```cpp
 void MovePrev();
 ```
 
@@ -1617,7 +1617,7 @@ Les exemples de code `Open` suivants montrent différentes formes de l’appel.
 
 Mise à jour des données et de l’état d’une rangée dans le rowset actuel.
 
-```
+```cpp
 void RefreshRowset(
     WORD wRow,
     WORD wLockType = SQL_LOCK_NO_CHANGE);
@@ -1682,7 +1682,7 @@ Cet exemple reconstitue un jeu d’enregistrement pour appliquer un ordre de tri
 
 Positionne l’enregistrement de l’enregistrement correspondant au nombre record spécifié.
 
-```
+```cpp
 void SetAbsolutePosition(long nRows);
 ```
 
@@ -1711,7 +1711,7 @@ Pour plus d’informations sur la navigation et les signets, voir les articles [
 
 Positionne l’enregistrement sur l’enregistrement contenant le signet spécifié.
 
-```
+```cpp
 void SetBookmark(const CDBVariant& varBookmark);
 ```
 
@@ -1738,7 +1738,7 @@ Pour plus d’informations sur les signets et la navigation de recordset, voir l
 
 Signale un membre des données sur le terrain de l’enregistrement comme modifié ou inchangé.
 
-```
+```cpp
 void SetFieldDirty(void* pv, BOOL bDirty = TRUE);
 ```
 
@@ -1778,7 +1778,7 @@ Cela signifie que `param` vous ne pouvez pas `outputColumn` définir tous les ch
 
 Signale un membre des données sur le terrain de l’enregistrement comme Null (n’ayant aucune valeur) ou comme non-Null.
 
-```
+```cpp
 void SetFieldNull(void* pv, BOOL bNull = TRUE);
 ```
 
@@ -1823,7 +1823,7 @@ Cela signifie que `param` vous ne pouvez pas `outputColumn` définir tous les ch
 
 Définit le mode de verrouillage à verrouillage « optimiste » (par défaut) ou « pessimiste ». Détermine comment les enregistrements sont verrouillés pour les mises à jour.
 
-```
+```cpp
 void SetLockingMode(UINT nMode);
 ```
 
@@ -1844,7 +1844,7 @@ Appelez cette fonction de membre si vous devez spécifier laquelle des deux stra
 
 Signale un paramètre comme Null (n’ayant aucune valeur) ou comme non-Null.
 
-```
+```cpp
 void SetParamNull(
     int nIndex,
     BOOL bNull = TRUE);
@@ -1868,7 +1868,7 @@ Contrairement à [SetFieldNull](#setfieldnull) `SetParamNull` , vous pouvez appe
 
 Déplace le curseur à une rangée dans l’ensemble de rangées actuel.
 
-```
+```cpp
 void SetRowsetCursorPosition(WORD wRow, WORD wLockType = SQL_LOCK_NO_CHANGE);
 ```
 

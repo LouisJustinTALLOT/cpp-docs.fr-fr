@@ -14,12 +14,12 @@ helpviewer_keywords:
 - memory, managing
 - IAtlStringMgr class
 ms.assetid: 722f0346-a770-4aa7-8f94-177be8dba823
-ms.openlocfilehash: 49ef7850edb18cd51092f282644973376abd4c7c
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: c3fabb7a7a6da4129787d219bd83b2a35fa0c4dd
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81317495"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81746608"
 ---
 # <a name="iatlstringmgr-class"></a>Classe IAtlStringMgr
 
@@ -108,7 +108,7 @@ Toutefois, si le gestionnaire de mémoire ne `CSimpleStringT`prend pas en charge
 
 Libère une structure de données de chaîne.
 
-```
+```cpp
 void Free(CStringData* pData) throw();
 ```
 

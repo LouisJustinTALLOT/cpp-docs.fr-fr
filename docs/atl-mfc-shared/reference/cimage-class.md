@@ -54,12 +54,12 @@ helpviewer_keywords:
 - CImage class
 - transparent color
 ms.assetid: 52861e3d-bf7e-481f-a240-90e88f76c490
-ms.openlocfilehash: 5b5ef833a3755b07e42a60b24464b1f260062d16
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: a6d20e1bf12f5fe7d1e9b41d88b088ca9fad35ed
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81317808"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81747180"
 ---
 # <a name="cimage-class"></a>Classe CImage
 
@@ -258,7 +258,7 @@ Une valeur de transparence alpha à utiliser sur l’ensemble de la bitmap sourc
 La fonction alpha-mélange pour les bitmaps source et destination, une valeur alpha globale à appliquer à l’ensemble de la bitmap source, et des informations de format pour la bitmap source. Les fonctions de mélange source et destination sont actuellement limitées à AC_SRC_OVER.
 
 *pointDest*<br/>
-Une référence à une structure [POINT](/previous-versions/dd162805\(v=vs.85\)) qui identifie le coin supérieur gauche du rectangle de destination, dans les unités logiques.
+Une référence à une structure [POINT](/windows/win32/api/windef/ns-windef-point) qui identifie le coin supérieur gauche du rectangle de destination, dans les unités logiques.
 
 *nDestWidth (en)*<br/>
 La largeur, en unités logiques, du rectangle de destination.
@@ -279,7 +279,7 @@ La largeur, en unités logiques, du rectangle source.
 La hauteur, en unités logiques, du rectangle source.
 
 *rectDest*<br/>
-Une référence à une structure [RECT,](/previous-versions/dd162897\(v=vs.85\)) l’identification de la destination.
+Une référence à une structure [RECT,](/windows/win32/api/windef/ns-windef-rect) l’identification de la destination.
 
 *rectSrc*<br/>
 Une référence `RECT` à une structure, l’identification de la source.
@@ -298,7 +298,7 @@ Lorsque *bBlendOp* est réglé à la valeur par défaut de AC_SRC_OVER, le bitma
 
 Attache *hBitmap* à `CImage` un objet.
 
-```
+```cpp
 void Attach(HBITMAP hBitmap, DIBOrientation eOrientation = DIBOR_DEFAULT) throw();
 ```
 
@@ -368,7 +368,7 @@ La logique y-coordinate du coin supérieur gauche du rectangle de destination.
 L’opération de raster à effectuer. Les codes d’exploitation raster définissent exactement comment combiner les bits de la source, la destination et le modèle (tel que défini par le pinceau actuellement sélectionné) pour former la destination. Voir [BitBlt](/windows/win32/api/wingdi/nf-wingdi-bitblt) dans le Windows SDK pour une liste d’autres codes d’exploitation raster et leurs descriptions.
 
 *pointDest*<br/>
-Une structure [POINT](/previous-versions/dd162805\(v=vs.85\)) indiquant le coin supérieur gauche du rectangle de destination.
+Une structure [POINT](/windows/win32/api/windef/ns-windef-point) indiquant le coin supérieur gauche du rectangle de destination.
 
 *nDestWidth (en)*<br/>
 La largeur, en unités logiques, du rectangle de destination.
@@ -383,7 +383,7 @@ La logique x-coordonner le coin supérieur gauche du rectangle source.
 La logique y-coordinate du coin supérieur gauche du rectangle source.
 
 *rectDest*<br/>
-Une structure [RECT](/previous-versions/dd162897\(v=vs.85\)) indiquant le rectangle de destination.
+Une structure [RECT](/windows/win32/api/windef/ns-windef-rect) indiquant le rectangle de destination.
 
 *pointSrc*<br/>
 Une `POINT` structure indiquant le coin supérieur gauche du rectangle source.
@@ -480,7 +480,7 @@ Specifie le type de compression d’une bitmap ascendante comprimée (les DIB de
 - BI_BITFIELDS Le format n’est pas compressé et la table couleur se compose de trois masques de couleur DWORD qui spécifient les composants rouges, verts et bleus, respectivement, de chaque pixel. Ceci est valable lorsqu’il est utilisé avec des bitmaps de 16 et 32 bpp.
 
 *pdwBitfields*<br/>
-Utilisé uniquement si *l’eCompression* est configuré pour BI_BITFIELDS, sinon il doit être NULL. Un pointeur à un tableau de trois bitmasks DWORD, spécifiant quels morceaux de chaque pixel sont utilisés pour les composants rouges, verts et bleus de la couleur, respectivement. Pour plus d’informations sur les restrictions pour les bitfields, voir [BITMAPINFOHEADER](/previous-versions//dd183376\(v=vs.85\)) dans le SDK Windows.
+Utilisé uniquement si *l’eCompression* est configuré pour BI_BITFIELDS, sinon il doit être NULL. Un pointeur à un tableau de trois bitmasks DWORD, spécifiant quels morceaux de chaque pixel sont utilisés pour les composants rouges, verts et bleus de la couleur, respectivement. Pour plus d’informations sur les restrictions pour les bitfields, voir [BITMAPINFOHEADER](/windows/win32/api/wingdi/ns-wingdi-bitmapinfoheader) dans le SDK Windows.
 
 *dwFlags*<br/>
 Précise si l’objet bitmap a un canal alpha. Peut être une combinaison de zéro ou plus des valeurs suivantes :
@@ -507,7 +507,7 @@ m_myImage.CreateEx(100, 100, 16, BI_BITFIELDS, adwBitmasks, 0);
 
 Détache la bitmap de `CImage` l’objet et détruit la bitmap.
 
-```
+```cpp
 void Destroy() throw();
 ```
 
@@ -595,13 +595,13 @@ La largeur, en unités logiques, du rectangle source.
 La hauteur, en unités logiques, du rectangle source.
 
 *rectDest*<br/>
-Une référence à une structure [RECT,](/previous-versions/dd162897\(v=vs.85\)) l’identification de la destination.
+Une référence à une structure [RECT,](/windows/win32/api/windef/ns-windef-rect) l’identification de la destination.
 
 *rectSrc*<br/>
 Une référence `RECT` à une structure, l’identification de la source.
 
 *pointDest*<br/>
-Une référence à une structure [POINT](/previous-versions/dd162805\(v=vs.85\)) qui identifie le coin supérieur gauche du rectangle de destination, dans les unités logiques.
+Une référence à une structure [POINT](/windows/win32/api/windef/ns-windef-point) qui identifie le coin supérieur gauche du rectangle de destination, dans les unités logiques.
 
 ### <a name="return-value"></a>Valeur de retour
 
@@ -617,7 +617,7 @@ Pour les `Draw` versions de ce ne spécifient pas un rectangle source, l’image
 
 Récupère un pointeur sur les valeurs réelles de bits d’un pixel donné dans un bitmap.
 
-```
+```cpp
 void* GetBits() throw();
 ```
 
@@ -648,13 +648,13 @@ Le nombre de bits par pixel.
 
 Cette valeur détermine le nombre de bits qui définissent chaque pixel et le nombre maximum de couleurs dans la bitmap.
 
-Les bits par pixel est généralement 1, 4, 8, 16, 24, ou 32. Consultez `biBitCount` le membre de [BITMAPINFOHEADER](/previous-versions//dd183376\(v=vs.85\)) dans le Windows SDK pour plus d’informations sur cette valeur.
+Les bits par pixel est généralement 1, 4, 8, 16, 24, ou 32. Consultez `biBitCount` le membre de [BITMAPINFOHEADER](/windows/win32/api/wingdi/ns-wingdi-bitmapinfoheader) dans le Windows SDK pour plus d’informations sur cette valeur.
 
 ## <a name="cimagegetcolortable"></a><a name="getcolortable"></a>CImage::GetColorTable
 
 Récupère les valeurs de couleur rouge, verte, bleue (RGB) d’une gamme d’entrées dans la palette de la section DIB.
 
-```
+```cpp
 void GetColorTable(
     UINT iFirstColor,
     UINT nColors,
@@ -909,7 +909,7 @@ COLORREF GetPixel(int x, int y) const throw();
 
 ### <a name="parameters"></a>Paramètres
 
-*X*<br/>
+*x*<br/>
 La x-coordonnées du pixel.
 
 *y*<br/>
@@ -923,13 +923,13 @@ La valeur rouge, verte, bleue (RGB) du pixel. Si le pixel est en dehors de la r�
 
 Récupère l’adresse exacte d’un pixel.
 
-```
+```cpp
 void* GetPixelAddress(int x, int y) throw();
 ```
 
 ### <a name="parameters"></a>Paramètres
 
-*X*<br/>
+*x*<br/>
 La x-coordonnées du pixel.
 
 *y*<br/>
@@ -1076,7 +1076,7 @@ Les types d’images valides sont BMP, GIF, JPEG, PNG et TIFF.
 
 Charge une image à partir d’une ressource BITMAP.
 
-```
+```cpp
 void LoadFromResource(
     HINSTANCE hInstance,
     LPCTSTR pszResourceName) throw();
@@ -1259,10 +1259,10 @@ Le x-coordonner le coin supérieur gauche de la bitmap monochrome.
 Le y-coordinate du coin supérieur gauche de la bitmap monochrome.
 
 *rectSrc*<br/>
-Une référence à une structure [RECT](/previous-versions/dd162897\(v=vs.85\)) spécifiant les coordonnées du rectangle source.
+Une référence à une structure [RECT](/windows/win32/api/windef/ns-windef-rect) spécifiant les coordonnées du rectangle source.
 
 *pointMask*<br/>
-Une structure [POINT](/previous-versions/dd162805\(v=vs.85\)) indiquant le coin supérieur gauche de la bitmap masque.
+Une structure [POINT](/windows/win32/api/windef/ns-windef-point) indiquant le coin supérieur gauche de la bitmap masque.
 
 ### <a name="return-value"></a>Valeur de retour
 
@@ -1278,7 +1278,7 @@ Cette méthode s’applique à Windows NT, versions 4.0 et plus tard seulement. 
 
 Libère le contexte de l’appareil.
 
-```
+```cpp
 void ReleaseDC() const throw();
 ```
 
@@ -1290,7 +1290,7 @@ Parce qu’une seule bitmap peut être sélectionnée dans `ReleaseDC` un contex
 
 Libère les ressources utilisées par GDIMD.
 
-```
+```cpp
 void ReleaseGDIPlus() throw();
 ```
 
@@ -1346,7 +1346,7 @@ Appelez cette fonction pour enregistrer l’image à l’aide d’un nom et d’
 
 Définit les valeurs de couleur rouge, verte, bleue (RGB) pour une gamme d’entrées dans la palette de la section DIB.
 
-```
+```cpp
 void SetColorTable(
     UINT iFirstColor,
     UINT nColors,
@@ -1372,13 +1372,13 @@ Cette méthode ne prend en charge que les bitmaps de section DIB.
 
 Définit la couleur d’un pixel à un endroit donné dans la bitmap.
 
-```
+```cpp
 void SetPixel(int x, int y, COLORREF color) throw();
 ```
 
 ### <a name="parameters"></a>Paramètres
 
-*X*<br/>
+*x*<br/>
 L’emplacement horizontal du pixel à définir.
 
 *y*<br/>
@@ -1395,13 +1395,13 @@ Cette méthode échoue si les coordonnées de pixel se trouvent en dehors de la 
 
 Définit la couleur pixel à la couleur située à *iIndex* dans la palette de couleurs.
 
-```
+```cpp
 void SetPixelIndexed(int x, int y, int iIndex) throw();
 ```
 
 ### <a name="parameters"></a>Paramètres
 
-*X*<br/>
+*x*<br/>
 L’emplacement horizontal du pixel à définir.
 
 *y*<br/>
@@ -1414,7 +1414,7 @@ L’index d’une couleur dans la palette de couleurs.
 
 Définit le pixel aux endroits spécifiés par *x* et *y* aux couleurs indiquées par *r,* *g*, et *b*, dans une image rouge, verte, bleue (RGB).
 
-```
+```cpp
 void SetPixelRGB(
     int x,
     int y,
@@ -1425,13 +1425,13 @@ void SetPixelRGB(
 
 ### <a name="parameters"></a>Paramètres
 
-*X*<br/>
+*x*<br/>
 L’emplacement horizontal du pixel à définir.
 
 *y*<br/>
 L’emplacement vertical du pixel à définir.
 
-*R*<br/>
+*r*<br/>
 L’intensité de la couleur rouge.
 
 *G*<br/>
@@ -1519,7 +1519,7 @@ La hauteur, en unités logiques, du rectangle de destination.
 L’opération de raster à effectuer. Les codes d’exploitation raster définissent exactement comment combiner les bits de la source, la destination et le modèle (tel que défini par le pinceau actuellement sélectionné) pour former la destination. Voir [BitBlt](/windows/win32/api/wingdi/nf-wingdi-bitblt) dans le Windows SDK pour une liste d’autres codes d’exploitation raster et leurs descriptions.
 
 *rectDest*<br/>
-Une référence à une structure [RECT,](/previous-versions/dd162897\(v=vs.85\)) l’identification de la destination.
+Une référence à une structure [RECT,](/windows/win32/api/windef/ns-windef-rect) l’identification de la destination.
 
 *xSrc (en)*<br/>
 Le x-coordonner, dans les unités logiques, du coin supérieur gauche du rectangle source.
@@ -1602,7 +1602,7 @@ La hauteur, en unités logiques, du rectangle de destination.
 La couleur dans la bitmap source à traiter comme transparent. Par défaut, CLR_INVALID, indiquant que la couleur actuellement définie comme la couleur transparente de l’image doit être utilisée.
 
 *rectDest*<br/>
-Une référence à une structure [RECT,](/previous-versions/dd162897\(v=vs.85\)) l’identification de la destination.
+Une référence à une structure [RECT,](/windows/win32/api/windef/ns-windef-rect) l’identification de la destination.
 
 *xSrc (en)*<br/>
 Le x-coordonner, dans les unités logiques, du coin supérieur gauche du rectangle source.

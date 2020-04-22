@@ -114,12 +114,12 @@ helpviewer_keywords:
 - CRenderTarget [MFC], m_pRenderTarget
 - CRenderTarget [MFC], m_pTextFormatDefault
 ms.assetid: 30d1607d-68d3-4d14-ac36-fdbd0ef903a1
-ms.openlocfilehash: 1b165b485e067120477de560d2091c448e02fe44
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 8c0a0d1f578b2f0d186ce0f4ea8c7da07e741b71
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81368340"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81747201"
 ---
 # <a name="crendertarget-class"></a>CRenderTarget, classe
 
@@ -236,7 +236,7 @@ virtual ~CRenderTarget();
 
 Attache l’interface cible de rendu existante à l’objet
 
-```
+```cpp
 void Attach(ID2D1RenderTarget* pRenderTarget);
 ```
 
@@ -249,7 +249,7 @@ Interface cible de rendu existante. Impossible d’être NULL
 
 Initiés en s’appuyant sur cette cible de rendu.
 
-```
+```cpp
 void BeginDraw();
 ```
 
@@ -257,7 +257,7 @@ void BeginDraw();
 
 Efface la zone de dessin à la couleur spécifiée.
 
-```
+```cpp
 void Clear(D2D1_COLOR_F color);
 ```
 
@@ -314,7 +314,7 @@ La taille souhaitée de la nouvelle cible de rendu en pixels si elle doit être 
 *desiredFormat*<br/>
 Le format pixel désiré et le mode alpha de la nouvelle cible de rendu, ou NULL. Si le format pixel est réglé pour DXGI_FORMAT_UNKNOWN ou si ce paramètre est nul, la nouvelle cible de rendu utilise le même format de pixel que la cible de rendu d’origine. Si le mode alpha est D2D1_ALPHA_MODE_UNKNOWN ou si ce paramètre est NULL, le mode alpha de la nouvelle cible de rendu par défaut à D2D1_ALPHA_MODE_PREMULTIPLIED. Pour plus d’informations sur les formats de pixels pris en charge, consultez les formats Pixels pris en charge et les modes Alpha.
 
-*Options*<br/>
+*options*<br/>
 Une valeur qui précise si la nouvelle cible de rendu doit être compatible avec GDI.
 
 ### <a name="return-value"></a>Valeur de retour
@@ -362,7 +362,7 @@ Pointeur pour rendre détaché l’interface cible.
 
 Dessine le texte formaté décrit par l’objet IDWriteTextLayout spécifié.
 
-```
+```cpp
 void DrawBitmap(
     CD2DBitmap* pBitmap,
     const CD2DRectF& rectDest,
@@ -392,7 +392,7 @@ La taille et la position, en pixels indépendants de l’appareil dans l’espac
 
 Dessine le contour de l’ellipse spécifiée à l’aide du style de course spécifié.
 
-```
+```cpp
 void DrawEllipse(
     const CD2DEllipse& ellipse,
     CD2DBrush* pBrush,
@@ -418,7 +418,7 @@ Le style de course à appliquer sur le contour de l’ellipse, ou NULL pour pein
 
 Dessine le contour de la géométrie spécifiée à l’aide du style de course spécifié.
 
-```
+```cpp
 void DrawGeometry(
     CD2DGeometry* pGeometry,
     CD2DBrush* pBrush,
@@ -444,7 +444,7 @@ Le style de course à appliquer sur le contour de la géométrie, ou NULL pour p
 
 Dessine les glyphes spécifiés.
 
-```
+```cpp
 void DrawGlyphRun(
     const CD2DPointF& ptBaseLineOrigin,
     const DWRITE_GLYPH_RUN& glyphRun,
@@ -470,7 +470,7 @@ Une valeur qui indique comment les mesures de glyphe sont utilisées pour mesure
 
 Trace une ligne entre les points spécifiés à l’aide du style de course spécifié.
 
-```
+```cpp
 void DrawLine(
     const CD2DPointF& ptFrom,
     const CD2DPointF& ptTo,
@@ -500,7 +500,7 @@ Le style de course à peindre, ou NULL pour peindre une ligne solide.
 
 Dessine le contour d’un rectangle qui a les dimensions spécifiées et le style de course.
 
-```
+```cpp
 void DrawRectangle(
     const CD2DRectF& rectangle,
     CD2DBrush* pBrush,
@@ -526,7 +526,7 @@ Le style de course à peindre, ou NULL pour peindre un coup solide.
 
 Dessine le contour du rectangle arrondi spécifié à l’aide du style de course spécifié.
 
-```
+```cpp
 void DrawRoundedRectangle(
     const CD2DRoundedRect& rectRounded,
     CD2DBrush* pBrush,
@@ -552,7 +552,7 @@ Le style du trait du rectangle arrondi, ou NULL pour peindre un trait solide. La
 
 Dessine le texte spécifié à l’aide des informations de format fournies par un objet IDWriteTextFormat.
 
-```
+```cpp
 void DrawText(
     const CString& strText,
     const CD2DRectF& rectangle,
@@ -576,7 +576,7 @@ Pinceau utilisé pour peindre le texte.
 *textFormat*<br/>
 Un objet qui décrit les détails de formatage du texte à dessiner, tels que la police, la taille de la police et la direction du flux.
 
-*Options*<br/>
+*options*<br/>
 Une valeur qui indique si le texte doit être cassé aux limites des pixels et si le texte doit être coupé au rectangle de mise en page. La valeur par défaut est D2D1_DRAW_TEXT_OPTIONS_NONE, ce qui indique que le texte doit être cassé aux limites des pixels et il ne doit pas être coupé au rectangle de mise en page.
 
 *mesureMode*<br/>
@@ -586,7 +586,7 @@ Une valeur qui indique comment les mesures de glyphe sont utilisées pour mesure
 
 Dessine le texte formaté décrit par l’objet IDWriteTextLayout spécifié.
 
-```
+```cpp
 void DrawTextLayout(
     const CD2DPointF& ptOrigin,
     CD2DTextLayout* textLayout,
@@ -605,7 +605,7 @@ Le texte formaté à dessiner. Tous les effets de dessin qui n’héritent pas d
 *pBrushForeground*<br/>
 Le pinceau utilisé pour peindre n’importe quel texte dans textLayout qui n’a pas déjà un pinceau associé à elle comme un effet de dessin (spécifié par la méthode IDWriteTextLayout::SetDrawingEffect méthode).
 
-*Options*<br/>
+*options*<br/>
 Une valeur qui indique si le texte doit être cassé aux limites des pixels et si le texte doit être coupé au rectangle de mise en page. La valeur par défaut est D2D1_DRAW_TEXT_OPTIONS_NONE, ce qui indique que le texte doit être cassé aux limites des pixels et il ne doit pas être coupé au rectangle de mise en page.
 
 ## <a name="crendertargetenddraw"></a><a name="enddraw"></a>CRenderTarget::EndDraw
@@ -624,7 +624,7 @@ Si la méthode réussit, retourne S_OK. Sinon, il renvoie un code d’erreur HRE
 
 Peint l’intérieur de l’ellipse spécifiée.
 
-```
+```cpp
 void FillEllipse(
     const CD2DEllipse& ellipse,
     CD2DBrush* pBrush);
@@ -642,7 +642,7 @@ Le pinceau utilisé pour peindre l’intérieur de l’ellipse.
 
 Peint l’intérieur de la géométrie spécifiée.
 
-```
+```cpp
 void FillGeometry(
     CD2DGeometry* pGeometry,
     CD2DBrush* pBrush,
@@ -664,7 +664,7 @@ Le masque d’opacité à appliquer à la géométrie; NULL pour aucun masque d�
 
 Peint l’intérieur du maillage spécifié.
 
-```
+```cpp
 void FillMesh(
     CD2DMesh* pMesh,
     CD2DBrush* pBrush);
@@ -682,7 +682,7 @@ Le pinceau utilisé pour peindre le maillage.
 
 Applique le masque d’opacité décrit par la bitmap spécifiée à un pinceau et utilise ce pinceau pour peindre une région de la cible de rendu.
 
-```
+```cpp
 void FillOpacityMask(
     CD2DBitmap* pOpacityMask,
     CD2DBrush* pBrush,
@@ -712,7 +712,7 @@ La région de la bitmap à utiliser comme masque d’opacité, en pixels indépe
 
 Peint l’intérieur du rectangle spécifié.
 
-```
+```cpp
 void FillRectangle(
     const CD2DRectF& rectangle,
     CD2DBrush* pBrush);
@@ -730,7 +730,7 @@ Le pinceau utilisé pour peindre l’intérieur du rectangle.
 
 Peint l’intérieur du rectangle arrondi spécifié.
 
-```
+```cpp
 void FillRoundedRectangle(
     const CD2DRoundedRect& rectRounded,
     CD2DBrush* pBrush);
@@ -748,7 +748,7 @@ Le pinceau utilisé pour peindre l’intérieur du rectangle arrondi.
 
 Exécute toutes les commandes de dessin en attente.
 
-```
+```cpp
 void Flush(
     D2D1_TAG* tag1 = NULL,
     D2D1_TAG* tag2 = NULL);
@@ -850,7 +850,7 @@ La taille actuelle de la cible de rendu en pixels indépendants de l’appareil
 
 Obtient l’étiquette pour les opérations de dessin ultérieures.
 
-```
+```cpp
 void GetTags(
     D2D1_TAG* tag1 = NULL,
     D2D1_TAG* tag2 = NULL) const;
@@ -880,7 +880,7 @@ Mode anti-aliasing actuel pour les opérations de dessin de texte et de glyphe.
 
 Récupère les options actuelles de rendu de texte de la cible de rendu.
 
-```
+```cpp
 void GetTextRenderingParams(IDWriteRenderingParams** textRenderingParams);
 ```
 
@@ -893,7 +893,7 @@ Lorsque cette méthode revient, textRenderingParamscontains l’adresse d’un p
 
 Obtient la transformation actuelle de la cible de rendu.
 
-```
+```cpp
 void GetTransform(D2D1_MATRIX_3X2_F* transform);
 ```
 
@@ -971,7 +971,7 @@ Pointeur vers une interface ID2D1RenderTarget ou NULL si l’objet n’est pas e
 
 Supprime le dernier clip aligné sur l’axe de la cible de rendu. Une fois cette méthode appelée, le clip n’est plus appliqué aux opérations de dessin ultérieures.
 
-```
+```cpp
 void PopAxisAlignedClip();
 ```
 
@@ -979,7 +979,7 @@ void PopAxisAlignedClip();
 
 Arrête de rediriger les opérations de dessin vers la couche spécifiée par le dernier appel PushLayer.
 
-```
+```cpp
 void PopLayer();
 ```
 
@@ -987,7 +987,7 @@ void PopLayer();
 
 Supprime le dernier clip aligné sur l’axe de la cible de rendu. Une fois cette méthode appelée, le clip n’est plus appliqué aux opérations de dessin ultérieures.
 
-```
+```cpp
 void PushAxisAlignedClip(
     const CD2DRectF& rectClip,
     D2D1_ANTIALIAS_MODE mode = D2D1_ANTIALIAS_MODE_PER_PRIMITIVE);
@@ -998,14 +998,14 @@ void PushAxisAlignedClip(
 *rectClip*<br/>
 La taille et la position de la zone de coupure, en pixels indépendants de l’appareil.
 
-*mode*<br/>
+*Mode*<br/>
 Le mode anti-aliasing qui est utilisé pour dessiner les bords des rectangles de clip qui ont des limites de sous-pixel, et pour mélanger le clip avec le contenu de la scène. Le mélange est effectué une fois lorsque la méthode PopAxisAlignedClip est appelée, et ne s’applique pas à chaque primitif dans la couche.
 
 ## <a name="crendertargetpushlayer"></a><a name="pushlayer"></a>CRenderTarget::PushLayer
 
 Ajoute la couche spécifiée à la cible de rendu de sorte qu’elle reçoit toutes les opérations de dessin ultérieures jusqu’à ce que PopLayer soit appelé.
 
-```
+```cpp
 void PushLayer(
     const D2D1_LAYER_PARAMETERS& layerParameters,
     CD2DLayer& layer);
@@ -1023,7 +1023,7 @@ La couche qui reçoit les opérations de dessin ultérieures.
 
 Définit l’état de dessin de la cible de rendu à celui du id2D1DrawingStateBlock spécifié.
 
-```
+```cpp
 void RestoreDrawingState(ID2D1DrawingStateBlock& drawingStateBlock);
 ```
 
@@ -1036,7 +1036,7 @@ Le nouvel état de dessin de la cible de rendu.
 
 Enregistre l’état de dessin actuel sur le id2D1DrawingStateBlock spécifié.
 
-```
+```cpp
 void SaveDrawingState(ID2D1DrawingStateBlock& drawingStateBlock) const;
 ```
 
@@ -1049,7 +1049,7 @@ Lorsque cette méthode revient, contient l’état de dessin actuel de la cible 
 
 Définit le mode anti-aliasing de la cible de rendu. Le mode anti-aliasing s’applique à toutes les opérations de dessin ultérieures, à l’exclusion des opérations de dessin de texte et de glyphe.
 
-```
+```cpp
 void SetAntialiasMode(D2D1_ANTIALIAS_MODE antialiasMode);
 ```
 
@@ -1062,7 +1062,7 @@ Le mode anti-aliasing pour les futures opérations de dessin.
 
 Définit les points par pouce (DPI) de la cible de rendu.
 
-```
+```cpp
 void SetDpi(const CD2DSizeF& sizeDPI);
 ```
 
@@ -1075,7 +1075,7 @@ Une valeur supérieure ou égale à zéro qui spécifie l’horizontale/vertical
 
 Spécifie une étiquette pour les opérations de dessin ultérieures.
 
-```
+```cpp
 void SetTags(
     D2D1_TAG tag1,
     D2D1_TAG tag2);
@@ -1093,7 +1093,7 @@ Une étiquette à appliquer aux opérations de dessin ultérieures.
 
 Spécifie le mode anti-aliasing à utiliser pour les opérations ultérieures de dessin de texte et de glyphe.
 
-```
+```cpp
 void SetTextAntialiasMode(D2D1_TEXT_ANTIALIAS_MODE textAntialiasMode);
 ```
 
@@ -1106,7 +1106,7 @@ Le mode anti-aliasing à utiliser pour les opérations ultérieures de dessin de
 
 Spécifie les options de rendu de texte à appliquer à toutes les opérations ultérieures de dessin de texte et de glyphe.
 
-```
+```cpp
 void SetTextRenderingParams(IDWriteRenderingParams* textRenderingParams = NULL);
 ```
 
@@ -1119,7 +1119,7 @@ Les options de rendu du texte à appliquer à toutes les opérations ultérieure
 
 Applique la transformation spécifiée à la cible de rendu, remplaçant la transformation existante. Toutes les opérations de dessin ultérieures se produisent dans l’espace transformé.
 
-```
+```cpp
 void SetTransform(const D2D1_MATRIX_3X2_F* transform);
 void SetTransform(const D2D1_MATRIX_3X2_F& transform);
 ```

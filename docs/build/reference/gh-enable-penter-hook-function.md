@@ -9,16 +9,16 @@ helpviewer_keywords:
 - _penter function
 - -Gh compiler option [C++]
 ms.assetid: 1510a082-8a0e-486e-a309-6add814b494f
-ms.openlocfilehash: bf7734a7b81c9550c060d43c2eabf5cb05332407
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 87815b5f0e0450b84acbe3c35b7ef4f31216ec72
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62292579"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81749295"
 ---
-# <a name="gh-enable-penter-hook-function"></a>/Gh (Activer la fonction de raccordement _penter)
+# <a name="gh-enable-_penter-hook-function"></a>/Gh (Activer la fonction de raccordement _penter)
 
-Provoque un appel à la `_penter` fonction au début de chaque méthode ou fonction.
+Provoque un appel `_penter` à la fonction au début de chaque méthode ou fonction.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -28,11 +28,11 @@ Provoque un appel à la `_penter` fonction au début de chaque méthode ou fonct
 
 ## <a name="remarks"></a>Notes
 
-Le `_penter` fonction ne fait pas partie d’une bibliothèque quelconque, et il vous incombe de fournir une définition pour `_penter`.
+La `_penter` fonction ne fait partie d’aucune bibliothèque et c’est à vous de fournir une définition pour `_penter`.
 
-Sauf si vous envisagez d’appeler explicitement `_penter`, vous n’avez pas besoin de fournir un prototype. La fonction doit apparaître comme si elle avait le prototype suivant, et il doit transférer le contenu de tous les registres sur entrée et affiche le contenu non modifié à la sortie :
+Sauf si vous `_penter`avez l’intention d’appeler explicitement , vous n’avez pas besoin de fournir un prototype. La fonction doit apparaître comme si elle avait le prototype suivant, et il doit pousser le contenu de tous les registres à l’entrée et pop le contenu inchangé à la sortie:
 
-```
+```cpp
 void __declspec(naked) __cdecl _penter( void );
 ```
 
@@ -40,7 +40,7 @@ Cette déclaration n’est pas disponible pour les projets 64 bits.
 
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Pour définir cette option du compilateur dans l'environnement de développement Visual Studio
 
-1. Ouvrez la boîte de dialogue **Pages de propriété** du projet. Pour plus d’informations, consultez [propriétés de compilateur et de build C++ définie dans Visual Studio](../working-with-project-properties.md).
+1. Ouvrez la boîte de dialogue **Pages de propriété** du projet. Pour plus d’informations, consultez [Définir le compilateur C++ et les propriétés de build dans Visual Studio](../working-with-project-properties.md).
 
 1. Cliquez sur le dossier **C/C++** .
 
@@ -54,7 +54,7 @@ Cette déclaration n’est pas disponible pour les projets 64 bits.
 
 ## <a name="example"></a>Exemple
 
-Le code suivant, lors de la compilation avec **/Gh**, montre comment `_penter` est appelée deux fois ; une fois lors de la saisie de la fonction `main` et une fois lors de la saisie de la fonction `x`.
+Le code suivant, lorsqu’il est `_penter` compilé avec **/Gh**, montre comment est appelé deux fois; une fois `main` lors de l’entrée de la fonction et une fois lors de l’entrée de la fonction `x`.
 
 ```cpp
 // Gh_compiler_option.cpp

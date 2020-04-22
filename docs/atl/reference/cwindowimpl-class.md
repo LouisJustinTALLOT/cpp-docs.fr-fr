@@ -18,12 +18,12 @@ helpviewer_keywords:
 - CWindowImpl class
 - subclassing windows, ATL
 ms.assetid: 02eefd45-a0a6-4d1b-99f6-dbf627e2cc2f
-ms.openlocfilehash: d7f7f7363eb123181bd6e0389663810346094cba
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: ea150195f06d12cd6549b9026714d9e1bbf392df
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81330293"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81745995"
 ---
 # <a name="cwindowimpl-class"></a>Classe CWindowImpl
 
@@ -147,7 +147,7 @@ HWND Create(
 [dans] La poignée à la fenêtre du parent ou du propriétaire.
 
 *Rect*<br/>
-[dans] Une structure [RECT](/previous-versions/dd162897\(v=vs.85\)) spécifiant la position de la fenêtre. Le `RECT` peut être passé par pointeur ou par référence.
+[dans] Une structure [RECT](/windows/win32/api/windef/ns-windef-rect) spécifiant la position de la fenêtre. Le `RECT` peut être passé par pointeur ou par référence.
 
 *szWindowName*<br/>
 [dans] Précise le nom de la fenêtre. La valeur par défaut est NULL.

@@ -49,12 +49,12 @@ f1_keywords:
 helpviewer_keywords:
 - CPathT class
 ms.assetid: eba4137d-1fd2-4b44-a2e1-0944db64df3c
-ms.openlocfilehash: 13f46f549c7dd99852be0f322aef560cb454ed2a
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
-ms.translationtype: MT
+ms.openlocfilehash: c10b854ae5c2d7167a067675b1391be24b6a8122
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81331475"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81746597"
 ---
 # <a name="cpatht-class"></a>Classe CPathT
 
@@ -72,7 +72,7 @@ class CPathT
 
 #### <a name="parameters"></a>Paramètres
 
-*StringType (en)*<br/>
+*StringType*<br/>
 La classe de cordes ATL/MFC à utiliser pour le chemin (voir [CStringT](../../atl-mfc-shared/reference/cstringt-class.md)).
 
 ## <a name="members"></a>Membres
@@ -166,7 +166,7 @@ La classe de cordes ATL/MFC à utiliser pour le chemin (voir [CStringT](../../at
 
 Appelez cette méthode pour ajouter un contredage à l’extrémité d’une chaîne pour créer la syntaxe correcte pour un chemin. Si le chemin a déjà une barre oblique arrière de fuite, aucune barre oblique inverse ne sera ajoutée.
 
-```
+```cpp
 void AddBackslash();
 ```
 
@@ -220,7 +220,7 @@ Pour plus d’informations, voir [PathAppend](/windows/win32/api/shlwapi/nf-shlw
 
 Appelez cette méthode pour créer un chemin de racine à partir d’un numéro d’entraînement donné.
 
-```
+```cpp
 void BuildRoot(int iDrive);
 ```
 
@@ -237,7 +237,7 @@ Pour plus d’informations, voir [PathBuildRoot](/windows/win32/api/shlwapi/nf-s
 
 Appelez cette méthode pour convertir le chemin en forme canonique.
 
-```
+```cpp
 void Canonicalize();
 ```
 
@@ -249,7 +249,7 @@ Pour plus d’informations, voir [PathCanonicalize](/windows/win32/api/shlwapi/n
 
 Appelez cette méthode pour concatenate une chaîne représentant un nom d’annuaire et une chaîne représentant un nom de chemin de fichier dans un chemin.
 
-```
+```cpp
 void Combine(PCXSTR pszDir, PCXSTR  pszFile);
 ```
 
@@ -712,7 +712,7 @@ typedef StringType::PXSTR PXSTR;
 
 Appelez cette méthode pour enfermer le chemin dans des guillemets s’il contient des espaces.
 
-```
+```cpp
 void QuoteSpaces();
 ```
 
@@ -758,7 +758,7 @@ Pour plus d’informations, voir [PathRelativePathTo](/windows/win32/api/shlwapi
 
 Appelez cette méthode pour supprimer tous les arguments de ligne de commande du chemin.
 
-```
+```cpp
 void RemoveArgs();
 ```
 
@@ -770,7 +770,7 @@ Pour plus d’informations, voir [PathRemoveArgs](/windows/win32/api/shlwapi/nf-
 
 Appelez cette méthode pour enlever la barre oblique arrière de fuite du chemin.
 
-```
+```cpp
 void RemoveBackslash();
 ```
 
@@ -782,7 +782,7 @@ Pour plus d’informations, voir [PathRemoveBackslash](/windows/win32/api/shlwap
 
 Appelez cette méthode pour enlever tous les espaces de tête et de fuite du chemin.
 
-```
+```cpp
 void RemoveBlanks();
 ```
 
@@ -794,7 +794,7 @@ Pour plus d’informations, voir [PathRemoveBlanks](/windows/win32/api/shlwapi/n
 
 Appelez cette méthode pour supprimer l’extension du fichier du chemin, s’il y en a une.
 
-```
+```cpp
 void RemoveExtension();
 ```
 
@@ -859,7 +859,7 @@ Pour plus d’informations, voir [PathSkipRoot](/windows/win32/api/shlwapi/nf-sh
 
 Appelez cette méthode pour supprimer la partie de chemin d’un chemin entièrement qualifié et le nom de fichier.
 
-```
+```cpp
 void StripPath();
 ```
 
@@ -887,7 +887,7 @@ Pour plus d’informations, voir [PathStripToRoot](/windows/win32/api/shlwapi/nf
 
 Appelez cette méthode pour supprimer les guillemets du début et de la fin d’un chemin.
 
-```
+```cpp
 void UnquoteSpaces();
 ```
 

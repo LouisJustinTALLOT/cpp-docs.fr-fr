@@ -80,12 +80,12 @@ f1_keywords:
 helpviewer_keywords:
 - CComControlBase class
 ms.assetid: 3d1bf022-acf2-4092-8283-ff8cee6332f3
-ms.openlocfilehash: 2420e1643444e6cbbf8edff90bbd3ecb1eac8534
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 15cfa205337248181f02e6a1218d49e75bda58e6
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81320775"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81748108"
 ---
 # <a name="ccomcontrolbase-class"></a>Classe CComControlBase
 
@@ -606,7 +606,7 @@ HRESULT GetAmbientProperty(DISPID dispid, VARIANT& var);
 *dispid*<br/>
 Identification de la propriété du conteneur à récupérer.
 
-*Var*<br/>
+*var*<br/>
 Variable pour recevoir la propriété.
 
 ### <a name="return-value"></a>Valeur de retour
@@ -794,7 +794,7 @@ Cette valeur est définie à l’aide [de CComControlBase::SetDirty](#setdirty).
 
 Récupère les valeurs x et y du numérateur et du dénominateur du facteur zoom pour un contrôle activé pour l’édition en place.
 
-```
+```cpp
 void GetZoomInfo(ATL_DRAWINFO& di);
 ```
 
@@ -1553,7 +1553,7 @@ Pour un contrôle vitré, la fonction API Windows [SetFocus](/windows/win32/api/
 
 Définit le `m_bRequiresSave` membre des données à la valeur en *bDirty*.
 
-```
+```cpp
 void SetDirty(BOOL bDirty);
 ```
 

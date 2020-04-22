@@ -13,12 +13,12 @@ f1_keywords:
 helpviewer_keywords:
 - CAutoVectorPtr class
 ms.assetid: 0030362b-6bc4-4a47-9b5b-3c3899dceab4
-ms.openlocfilehash: 573446256aa89423837ebf73176a73f72054911b
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: fc4bd4ba7a2f41a25679f1da718671f525519708
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81318767"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81748216"
 ---
 # <a name="cautovectorptr-class"></a>Classe CAutoVectorPtr
 
@@ -105,7 +105,7 @@ Dans les constructions de déboguer, une défaillance d’affirmation se produir
 
 Appelez cette méthode pour prendre possession d’un pointeur existant.
 
-```
+```cpp
 void Attach(T* p) throw();
 ```
 
@@ -171,7 +171,7 @@ Libère la propriété d’un pointeur, définit le [CAutoVectorPtr : : m_p](#m_
 
 Appelez cette méthode pour supprimer un `CAutoVectorPtr`objet pointé par un .
 
-```
+```cpp
 void Free() throw();
 ```
 

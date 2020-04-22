@@ -130,12 +130,12 @@ helpviewer_keywords:
 - CMFCRibbonCategory [MFC], SetName
 - CMFCRibbonCategory [MFC], SetTabColor
 ms.assetid: 99ba25b6-d060-4fdd-bfab-3c46c22981bb
-ms.openlocfilehash: a1653242675db0e235b58f2c4865bb838753c484
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 9c72f70e373699addf952600a8d630bb320fa641
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81375275"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81749543"
 ---
 # <a name="cmfcribboncategory-class"></a>Classe CMFCRibbonCategory
 
@@ -260,7 +260,7 @@ Le diagramme suivant montre une figure de la catégorie Accueil de l’applicati
 
 Ajoute l’élément ruban spécifié à la gamme d’éléments ruban qui sont affichés sur la boîte de dialogue de personnalisation.
 
-```
+```cpp
 void AddHidden(CMFCRibbonBaseElement* pElem);
 ```
 
@@ -475,7 +475,7 @@ Pointer vers un élément ruban si la méthode a été réussie; autrement NULL.
 
 Récupère tous les éléments de ruban dans la catégorie ruban.
 
-```
+```cpp
 void GetElements(
     CArray <CMFCRibbonBaseElement*, CMFCRibbonBaseElement*>& arElements);
 ```
@@ -493,7 +493,7 @@ Les éléments ruban qui sont conçus pour une utilisation sur la barre d’outi
 
 Récupère tous les éléments ruban qui sont associés à l’ID de commande spécifié.
 
-```
+```cpp
 void GetElementsByID(
     UINT uiCmdID,
     CArray <CMFCRibbonBaseElement*, CMFCRibbonBaseElement*>& arElements);
@@ -597,7 +597,7 @@ La taille récupérée comprend le facteur global d’échelle d’image.
 
 Récupère les IDE de commande pour les éléments ruban qui sont contenus dans la catégorie ruban.
 
-```
+```cpp
 void GetItemIDsList(
     CList<UINT, UINT>& lstItems,
     BOOL bHiddenOnly = FALSE) const;
@@ -881,7 +881,7 @@ L’emplacement vertical du texte, en pixels, sur les boutons ruban qui affichen
 
 Récupère tous les éléments visibles qui appartiennent à la catégorie ruban.
 
-```
+```cpp
 void GetVisibleElements(
     CArray <CMFCRibbonBaseElement*,
     CMFCRibbonBaseElement*>& arElements);
@@ -1336,7 +1336,7 @@ virtual void ReposPanels(CDC* pDC);
 
 Définit l’ordre dans lequel les panneaux ruban de la catégorie ruban s’effondrent.
 
-```
+```cpp
 void SetCollapseOrder(const CArray<int,int>& arCollapseOrder);
 ```
 
@@ -1363,7 +1363,7 @@ L’exemple suivant montre comment `SetCollapseOrder` utiliser `CMFCRibbonCatego
 
 Définit les données définies par l’utilisateur pour être associées à la catégorie ruban.
 
-```
+```cpp
 void SetData(DWORD_PTR dwData);
 ```
 
@@ -1376,7 +1376,7 @@ void SetData(DWORD_PTR dwData);
 
 Assigne un keytip à la catégorie ruban.
 
-```
+```cpp
 void SetKeys(LPCTSTR lpszKeys);
 ```
 
@@ -1393,7 +1393,7 @@ Les keytips s’affichent lorsque l’utilisateur appuie sur la clé Alt ou la c
 
 Attribue un nom et un bout de touche à la catégorie ruban.
 
-```
+```cpp
 void SetName(LPCTSTR lpszName);
 ```
 
@@ -1410,7 +1410,7 @@ Pour définir le keytip pour la catégorie ruban, annexer une séquence d’éva
 
 Définit la couleur de la catégorie ruban.
 
-```
+```cpp
 void SetTabColor(AFX_RibbonCategoryColor color);
 ```
 

@@ -10,12 +10,12 @@ helpviewer_keywords:
 - CMFCRibbonApplicationButton [MFC], CMFCRibbonApplicationButton
 - CMFCRibbonApplicationButton [MFC], SetImage
 ms.assetid: beb81757-fabd-4641-9130-876ba8505b78
-ms.openlocfilehash: 0debd40825990b647cd5b1df9a144e3abd450de3
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: b28d075c5fcc4313e1a62ae731b3fad8ef4d8a12
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81361608"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81749929"
 ---
 # <a name="cmfcribbonapplicationbutton-class"></a>CMFCRibbonApplicationButton, classe
 
@@ -90,7 +90,7 @@ Le bouton d’application ruban est un bouton spécial qui est situé dans le co
 
 Assigne une image sur le bouton d’application.
 
-```
+```cpp
 void SetImage(UINT uiBmpResID);
 void SetImage(HBITMAP hBmp);
 ```

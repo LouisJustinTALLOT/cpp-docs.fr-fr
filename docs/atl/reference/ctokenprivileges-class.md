@@ -18,12 +18,12 @@ f1_keywords:
 helpviewer_keywords:
 - CTokenPrivileges class
 ms.assetid: 89590105-f001-4014-870d-142926091231
-ms.openlocfilehash: ceb9aeca6b99e7fc9d08625e11cbdb182fb3dc9e
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 75c09f723860540aa54cf3744cde7e61d9202f79
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81330541"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81747361"
 ---
 # <a name="ctokenprivileges-class"></a>Classe CTokenPrivileges
 
@@ -166,7 +166,7 @@ Cette méthode est utile comme outil pour créer des jetons restreints.
 
 Supprime tous les privilèges de l’objet symbolique d’accès. `CTokenPrivileges`
 
-```
+```cpp
 void DeleteAll() throw();
 ```
 
@@ -178,7 +178,7 @@ Supprime tous les privilèges `CTokenPrivileges` contenus dans l’objet symboli
 
 Récupère les noms d’affichage pour `CTokenPrivileges` les privilèges contenus dans l’objet symbolique d’accès.
 
-```
+```cpp
 void GetDisplayNames(CNames* pDisplayNames) const throw(...);
 ```
 
@@ -221,7 +221,7 @@ Retourne le nombre d’octets `TOKEN_PRIVILEGES` requis pour `CTokenPrivileges` 
 
 Récupère les identificateurs locaux uniques (LUID) `CTokenPrivileges` et attribue les drapeaux de l’objet.
 
-```
+```cpp
 void GetLuidsAndAttributes(
     CLUIDArray* pPrivileges,
     CAttributes* pAttributes = NULL) const throw(...);
@@ -243,7 +243,7 @@ Cette méthode énumérera tous les privilèges `CTokenPrivileges` contenus dans
 
 Récupère le nom et attribue `CTokenPrivileges` les drapeaux de l’objet.
 
-```
+```cpp
 void GetNamesAndAttributes(
     CNames* pNames,
     CAttributes* pAttributes = NULL) const throw(...);
