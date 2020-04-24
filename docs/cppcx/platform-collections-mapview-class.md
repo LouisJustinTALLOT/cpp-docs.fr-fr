@@ -12,12 +12,12 @@ f1_keywords:
 helpviewer_keywords:
 - MapView Class
 ms.assetid: 9577dde7-f599-43c6-b1e4-7d653706fd62
-ms.openlocfilehash: a770b318d893b9e81bdf11a75c2b0b05c0a9979f
-ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
-ms.translationtype: HT
+ms.openlocfilehash: 98c146cec2febefee9c16528bee8f6be83f2a026
+ms.sourcegitcommit: 89d9e1cb08fa872483d1cde98bc2a7c870e505e9
+ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 04/22/2020
-ms.locfileid: "81750610"
+ms.locfileid: "82032432"
 ---
 # <a name="platformcollectionsmapview-class"></a>Platform::Collections::MapView, classe
 
@@ -46,7 +46,7 @@ Type qui fournit un objet de fonction qui peut comparer deux valeurs d'élément
 
 ### <a name="remarks"></a>Notes
 
-MapView est une implémentation concrète de la [Windows::Foundation::Collections::IMapView \<K,V>](/uwp/api/Windows.Foundation.Collections.IMapView_K_V_) interface qui est passée à travers l’interface binaire de l’application (ABI). Pour plus d'informations, consultez [Collections (C++/CX)](../cppcx/collections-c-cx.md).
+MapView est une implémentation concrète de la [Windows::Foundation::Collections::IMapView \<K,V>](/uwp/api/windows.foundation.collections.imapview-2) interface qui est passée à travers l’interface binaire de l’application (ABI). Pour plus d'informations, consultez [Collections (C++/CX)](../cppcx/collections-c-cx.md).
 
 ### <a name="members"></a>Membres
 
