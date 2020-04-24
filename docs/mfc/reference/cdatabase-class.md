@@ -50,12 +50,12 @@ helpviewer_keywords:
 - CDatabase [MFC], SetQueryTimeout
 - CDatabase [MFC], m_hdbc
 ms.assetid: bd0de70a-e3c3-4441-bcaa-bbf434426ca8
-ms.openlocfilehash: 260a4a38fcee8994d804267709c11279266d393c
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: bc920307e09179dc214710a3b6b19ff27a82749d
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81376476"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81754639"
 ---
 # <a name="cdatabase-class"></a>Classe CDatabase
 
@@ -186,7 +186,7 @@ Dans votre remplacement, `SQLBindParameters` appelez et les fonctions connexes o
 
 Appelez cette fonction de membre pour demander à la source de données d’annuler soit une opération asynchrone en cours, soit un processus à partir d’un deuxième thread.
 
-```
+```cpp
 void Cancel();
 ```
 
@@ -294,7 +294,7 @@ Pour plus d’informations sur les transactions, voir l’article [Transaction (
 
 Appelez cette fonction de membre lorsque vous devez exécuter une commande SQL directement.
 
-```
+```cpp
 void ExecuteSQL(LPCTSTR lpszSQL);
 ```
 
@@ -606,7 +606,7 @@ Après un retour en arrière, le record qui était en cours avant la restauratio
 
 Appelez cette fonction de `OpenEx` membre `Open` — avant d’appeler ou — pour remplacer le nombre de secondes par défaut autorisés avant qu’une tentative de connexion de source de données ne soit disponible.
 
-```
+```cpp
 void SetLoginTimeout(DWORD dwSeconds);
 ```
 
@@ -625,7 +625,7 @@ La valeur par défaut pour les délais d’arrêt de connexion est de 15 seconde
 
 Appelez cette fonction de membre pour remplacer le nombre de secondes par défaut pour permettre avant les opérations ultérieures sur le temps d’inséquement de la source de données connectée.
 
-```
+```cpp
 void SetQueryTimeout(DWORD dwSeconds);
 ```
 

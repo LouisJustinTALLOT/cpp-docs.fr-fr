@@ -20,12 +20,12 @@ helpviewer_keywords:
 - COleVariant [MFC], GetByteArrayFromVariantArray
 - COleVariant [MFC], SetString
 ms.assetid: e1b5cd4a-b066-4b9b-b48b-6215ed52d998
-ms.openlocfilehash: f907ed7c058f87cf03530411bc8fa4a3c108a4f0
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 7d8abea39a9baa3f447ca0d5f3ab1183367d531f
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81374826"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81753711"
 ---
 # <a name="colevariant-class"></a>COleVariant, classe
 
@@ -93,7 +93,7 @@ Pour plus d’informations sur la `COleVariant` classe et son utilisation dans l
 
 Appelez cette fonction pour attacher l’objet [VARIANT](/windows/win32/api/oaidl/ns-oaidl-variant) donné à l’objet actuel. `COleVariant`
 
-```
+```cpp
 void Attach(VARIANT& varSrc);
 ```
 
@@ -212,7 +212,7 @@ Pour plus d’informations sur SCODE, voir [Structure of COM Error Codes](/windo
 
 Convertit le type de `COleVariant` valeur de variante dans cet objet.
 
-```
+```cpp
 void ChangeType(VARTYPE vartype, LPVARIANT pSrc = NULL);
 ```
 
@@ -232,7 +232,7 @@ Pour plus d’informations, voir les entrées [VARIANT](/windows/win32/api/oaidl
 
 Efface la `VARIANT`.
 
-```
+```cpp
 void Clear();
 ```
 
@@ -263,7 +263,7 @@ Pour plus d’informations, voir les entrées [VARIANT](/windows/win32/api/oaidl
 
 Récupère un tableau d’en-extraits à partir d’un tableau de variantes existant
 
-```
+```cpp
 void GetByteArrayFromVariantArray(CByteArray& bytes);
 ```
 
@@ -381,7 +381,7 @@ friend CArchive& AFXAPI operator>>(
 
 Définit la chaîne à un type particulier.
 
-```
+```cpp
 void SetString(LPCTSTR lpszSrc, VARTYPE vtSrc);
 ```
 

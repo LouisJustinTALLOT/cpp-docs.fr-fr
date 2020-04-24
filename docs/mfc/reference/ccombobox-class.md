@@ -108,12 +108,12 @@ helpviewer_keywords:
 - CComboBox [MFC], SetTopIndex
 - CComboBox [MFC], ShowDropDown
 ms.assetid: 4e73b5df-0d2e-4658-9706-38133fb10513
-ms.openlocfilehash: df935bb924c7d8908b1166852dc553a73fc71ff3
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: dc803fb4ce137b256f4197afaec7bc3327e1e85a
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81369509"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81754831"
 ---
 # <a name="ccombobox-class"></a>Classe CComboBox
 
@@ -308,7 +308,7 @@ CComboBox();
 
 Supprime (efface) la sélection actuelle, le cas échéant, dans le contrôle de modification de la boîte combo.
 
-```
+```cpp
 void Clear();
 ```
 
@@ -337,7 +337,7 @@ Un long pointeur vers une structure [COMPAREITEMSTRUCT.](/windows/win32/api/winu
 
 Indique la position relative des deux `COMPAREITEMSTRUCT` éléments décrits dans la structure. Il peut s’agir de l’une des valeurs suivantes :
 
-|Value|Signification|
+|Valeur|Signification|
 |-----------|-------------|
 |- 1|L’article 1 trie avant l’article 2.|
 |0|L’article 1 et l’article 2 trient de la même façon.|
@@ -357,7 +357,7 @@ Par défaut, cette fonction de membre ne fait rien. Si vous créez une boîte co
 
 Copie la sélection actuelle, le cas échéant, dans le contrôle de modification de la boîte combo sur le Clipboard en format CF_TEXT.
 
-```
+```cpp
 void Copy();
 ```
 
@@ -427,7 +427,7 @@ Appliquez les styles de [fenêtre](../../mfc/reference/styles-used-by-mfc.md#win
 
 Supprime (coupes) la sélection actuelle, le cas échéant, dans le contrôle de modification de la boîte combo et copie le texte supprimé sur le Clipboard dans CF_TEXT format.
 
-```
+```cpp
 void Cut();
 ```
 
@@ -708,7 +708,7 @@ L’index à base zéro de l’élément actuellement sélectionné dans la boî
 
 Appelez `GetDroppedControlRect` la fonction du membre pour récupérer les coordonnées de l’écran de la boîte de liste visible (larguée) d’une boîte combo d’abandon.
 
-```
+```cpp
 void GetDroppedControlRect(LPRECT lprect) const;
 ```
 
@@ -850,7 +850,7 @@ La valeur 32 bits peut être définie avec le paramètre *dwItemData* d’un app
 
 Récupère la valeur 32 bits fournie par l’application associée à l’élément combo-box spécifié comme pointeur **(vide** <strong>\*</strong>).
 
-```
+```cpp
 void* GetItemDataPtr(int nIndex) const;
 ```
 
@@ -1125,7 +1125,7 @@ Voir [CWnd::OnMeasureItem](../../mfc/reference/cwnd-class.md#onmeasureitem) pour
 
 Insère les données du Clipboard dans le contrôle de modification de la boîte combo à la position de curseur actuel.
 
-```
+```cpp
 void Paste();
 ```
 
@@ -1141,7 +1141,7 @@ Les données ne sont insérées que si le Clipboard contient des données en for
 
 Supprime tous les éléments de la boîte de liste et modifie le contrôle d’une boîte combo.
 
-```
+```cpp
 void ResetContent();
 ```
 
@@ -1337,7 +1337,7 @@ Le défilement dans le contrôle statique est désactivé lorsque la liste d’�
 
 Définit la largeur, en pixels, par laquelle la partie liste-boîte de la boîte combo peut être défilé horizontalement.
 
-```
+```cpp
 void SetHorizontalExtent(UINT nExtent);
 ```
 
@@ -1536,7 +1536,7 @@ Le système fait défiler la case de liste jusqu’à ce que l’élément spéc
 
 Affiche ou cache la case liste d’une boîte combo qui a le [CBS_DROPDOWN](../../mfc/reference/styles-used-by-mfc.md#combo-box-styles) ou [CBS_DROPDOWNLIST](../../mfc/reference/styles-used-by-mfc.md#combo-box-styles) style.
 
-```
+```cpp
 void ShowDropDown(BOOL bShowIt = TRUE);
 ```
 

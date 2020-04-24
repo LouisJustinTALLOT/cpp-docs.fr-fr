@@ -44,12 +44,12 @@ helpviewer_keywords:
 - CControlBar [MFC], m_bAutoDelete
 - CControlBar [MFC], m_pInPlaceOwner
 ms.assetid: 4d668c55-9b42-4838-97ac-cf2b3000b82c
-ms.openlocfilehash: deb95d76e6d68ba5b9fad82bca1d88fd71c5a547
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: c2f8ea48bf9a1f015928650085b07198b152771a
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81369392"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81754799"
 ---
 # <a name="ccontrolbar-class"></a>CControlBar Class
 
@@ -293,7 +293,7 @@ Remplacer cette fonction pour personnaliser l’apparence de la pince de barre d
 
 Appelez cette fonction pour permettre l’amarrage d’une barre de contrôle.
 
-```
+```cpp
 void EnableDocking(DWORD dwDockStyle);
 ```
 
@@ -450,7 +450,7 @@ Pour mettre à jour un bouton ou une vitre individuel, utilisez la ON_UPDATE_COM
 
 Appelez cette fonction pour définir les styles **CBRS_** souhaités pour la barre de contrôle.
 
-```
+```cpp
 void SetBarStyle(DWORD dwStyle);
 ```
 
@@ -493,7 +493,7 @@ N’affecte pas les **paramètres WS_** (style fenêtre).
 
 Appelez cette fonction pour définir la taille des bordures de la barre de contrôle.
 
-```
+```cpp
 void SetBorders(
     int cxLeft = 0,
     int cyTop = 0,
@@ -530,7 +530,7 @@ L’exemple de code suivant définit les bordures supérieures et inférieures d
 
 Change le propriétaire sur place d’une barre de contrôle.
 
-```
+```cpp
 void SetInPlaceOwner(CWnd* pWnd);
 ```
 

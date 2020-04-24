@@ -80,12 +80,12 @@ helpviewer_keywords:
 - CMFCButton [MFC], m_nAlignStyle
 - CMFCButton [MFC], m_nFlatStyle
 ms.assetid: 4b32f57c-7a53-4734-afb9-d47e3359f62e
-ms.openlocfilehash: 5434801969a55387a5b5555c9a4ade22f1969e7d
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: e949feaaac3570e1518cfb488cc1c42a471a1c46
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81367779"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81754868"
 ---
 # <a name="cmfcbutton-class"></a>Classe CMFCButton
 
@@ -215,7 +215,7 @@ virtual void CleanUp();
 
 Précise s’il faut afficher le texte intégral d’une pointe d’outils dans une grande fenêtre de pointe d’outils ou une version tronquée du texte dans une petite fenêtre de pointe à outils.
 
-```
+```cpp
 void EnableFullTextTooltip(BOOL bOn=TRUE);
 ```
 
@@ -230,7 +230,7 @@ void EnableFullTextTooltip(BOOL bOn=TRUE);
 
 Précise si la police de texte bouton est la même que la police de menu d’application.
 
-```
+```cpp
 void EnableMenuFont(
     BOOL bOn=TRUE,
     BOOL bRedraw=TRUE);
@@ -700,7 +700,7 @@ Remplacez cette méthode pour utiliser votre propre code pour récupérer la pol
 
 Définit un bouton en mode répétition automatique.
 
-```
+```cpp
 void SetAutorepeatMode(int nTimeDelay=500);
 ```
 
@@ -717,7 +717,7 @@ Cette méthode provoque le bouton d’envoyer constamment WM_COMMAND messages à
 
 Définit l’image pour un bouton vérifié.
 
-```
+```cpp
 void SetCheckedImage(
     HICON hIcon,
     BOOL bAutoDestroy=TRUE,
@@ -782,7 +782,7 @@ void SetCheckedImage(
 
 Définit la couleur de fond pour le texte du bouton.
 
-```
+```cpp
 void SetFaceColor(
     COLORREF crFace,
     BOOL bRedraw=TRUE);
@@ -804,7 +804,7 @@ Utilisez cette méthode pour définir une nouvelle couleur de remplissage pour l
 
 Définit l’image pour un bouton.
 
-```
+```cpp
 void SetImage(
     HICON hIcon,
     BOOL bAutoDestroy=TRUE,
@@ -876,7 +876,7 @@ L’exemple suivant montre comment utiliser différentes `SetImage` versions `CM
 
 Définit l’image du curseur.
 
-```
+```cpp
 void SetMouseCursor(HCURSOR hcursor);
 ```
 
@@ -900,7 +900,7 @@ L’exemple suivant montre comment `SetMouseCursor` utiliser `CMFCButton` la mé
 
 Définit le curseur à l’image d’une main.
 
-```
+```cpp
 void SetMouseCursorHand();
 ```
 
@@ -912,7 +912,7 @@ Utilisez cette méthode pour associer l’image curseur d’une main avec le bou
 
 Utilise `CMenuImages` un objet pour définir l’image bouton.
 
-```
+```cpp
 void SetStdImage(
     CMenuImages::IMAGES_IDS id,
     CMenuImages::IMAGE_STATE state=CMenuImages::ImageBlack,
@@ -924,7 +924,7 @@ void SetStdImage(
 *id*<br/>
 [dans] Un des identificateurs d’image `CMenuImage::IMAGES_IDS` bouton qui est défini dans le recensement. Les valeurs d’image spécifient des images telles que des flèches, des épingles et des boutons radio.
 
-*État*<br/>
+*state*<br/>
 [dans] Un des identifiants d’état d’image de bouton qui est défini dans l’énumération. `CMenuImages::IMAGE_STATE` Les états d’image spécifient des couleurs de bouton telles que le noir, le gris, le gris clair, le blanc et le gris foncé. La valeur par défaut est `CMenuImages::ImageBlack`.
 
 *idDisabled*<br/>
@@ -936,7 +936,7 @@ void SetStdImage(
 
 Définit la couleur du texte du bouton pour un bouton qui n’est pas sélectionné.
 
-```
+```cpp
 void SetTextColor(COLORREF clrText);
 ```
 
@@ -951,7 +951,7 @@ void SetTextColor(COLORREF clrText);
 
 Définit la couleur du texte du bouton pour un bouton sélectionné.
 
-```
+```cpp
 void SetTextHotColor(COLORREF clrTextHot);
 ```
 
@@ -966,7 +966,7 @@ void SetTextHotColor(COLORREF clrTextHot);
 
 Associe une boîte à outils à un bouton.
 
-```
+```cpp
 void SetTooltip(LPCTSTR lpszToolTipText);
 ```
 

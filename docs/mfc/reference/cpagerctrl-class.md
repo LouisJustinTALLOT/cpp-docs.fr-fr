@@ -48,12 +48,12 @@ helpviewer_keywords:
 - CPagerCtrl [MFC], SetChild
 - CPagerCtrl [MFC], SetScrollPos
 ms.assetid: 65ac58dd-4f5e-4b7e-b15c-e0d435a7e884
-ms.openlocfilehash: b2c4f1ac99735953f4832226b840ced4ea4c509a
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: cd27a3acf26abe39831089546df317679f2ecab6
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81376978"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81753703"
 ---
 # <a name="cpagerctrl-class"></a>Classe CPagerCtrl
 
@@ -149,7 +149,7 @@ virtual BOOL Create(
 |Paramètre|Description|
 |---------------|-----------------|
 |*dwStyle (en)*|[dans] Une combinaison bitwise (OU) de styles de [fenêtre](../../mfc/reference/styles-used-by-mfc.md#window-styles) et de styles de [contrôle de téléavertisseur](/windows/win32/Controls/pager-control-styles) à appliquer au contrôle.|
-|*Rect*|[dans] Une référence à une structure [RECT](/previous-versions/dd162897\(v=vs.85\)) qui contient la position et la taille du contrôle dans les coordonnées des clients.|
+|*Rect*|[dans] Une référence à une structure [RECT](/windows/win32/api/windef/ns-windef-rect) qui contient la position et la taille du contrôle dans les coordonnées des clients.|
 |*pParentWnd*|[dans] Un pointeur à un objet [CWnd](../../mfc/reference/cwnd-class.md) qui est la fenêtre parente du contrôle. Ce paramètre ne peut pas être NULL.|
 |*nID*|[dans] L’id du contrôle.|
 
@@ -186,7 +186,7 @@ virtual BOOL CreateEx(
 |---------------|-----------------|
 |*dwExStyle (en anglais)*|[dans] Une combinaison peu sage de styles étendus à appliquer au contrôle. Pour plus d’informations, consultez le paramètre *dwExStyle* de la fonction [CreateWindowEx.](/windows/win32/api/winuser/nf-winuser-createwindowexw)|
 |*dwStyle (en)*|[dans] Une combinaison bitwise (OU) de styles de [fenêtre](../../mfc/reference/styles-used-by-mfc.md#window-styles) et de styles de [contrôle de téléavertisseur](/windows/win32/Controls/pager-control-styles) à appliquer au contrôle.|
-|*Rect*|[dans] Une référence à une structure [RECT](/previous-versions/dd162897\(v=vs.85\)) qui contient la position et la taille du contrôle dans les coordonnées des clients.|
+|*Rect*|[dans] Une référence à une structure [RECT](/windows/win32/api/windef/ns-windef-rect) qui contient la position et la taille du contrôle dans les coordonnées des clients.|
 |*pParentWnd*|[dans] Un pointeur à un objet [CWnd](../../mfc/reference/cwnd-class.md) qui est la fenêtre parente du contrôle. Ce paramètre ne peut pas être NULL.|
 |*nID*|[dans] L’id du contrôle.|
 
@@ -202,7 +202,7 @@ Pour créer un contrôle de `CPagerCtrl` téléavertisseur, déclarez une variab
 
 Permet ou désactive le pas de [WM_MOUSEMOVE](/windows/win32/inputdev/wm-mousemove) messages à la fenêtre contenue dans le contrôle actuel du téléavertisseur.
 
-```
+```cpp
 void ForwardMouse(BOOL bForward);
 ```
 
@@ -462,7 +462,7 @@ Cette méthode envoie le [message PGM_GETBUTTONSTATE,](/windows/win32/Controls/p
 
 Provoque le contrôle actuel du téléavertisseur de recalculer la taille de la fenêtre contenue.
 
-```
+```cpp
 void RecalcSize();
 ```
 
@@ -572,7 +572,7 @@ L’exemple suivant crée un contrôle de téléavertisseur, puis utilise la mé
 
 Définit la fenêtre contenue pour le contrôle actuel du téléavertisseur.
 
-```
+```cpp
 void SetChild(HWND hwndChild);
 ```
 
@@ -598,7 +598,7 @@ L’exemple suivant crée un contrôle de téléavertisseur, puis utilise la mé
 
 Définit la position de défilement du contrôle actuel du téléavertisseur.
 
-```
+```cpp
 void SetScrollPos(int iPos);
 ```
 

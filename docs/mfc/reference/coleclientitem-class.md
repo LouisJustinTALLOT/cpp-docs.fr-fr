@@ -164,12 +164,12 @@ helpviewer_keywords:
 - COleClientItem [MFC], OnScrollBy
 - COleClientItem [MFC], OnShowItem
 ms.assetid: 7f571b7c-2758-4839-847a-0cf1ef643128
-ms.openlocfilehash: c880b1fb724b533bb049666460948c6df661a03c
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: ce321c9709b752602a664142f283884f4d17b50b
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81376284"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81753962"
 ---
 # <a name="coleclientitem-class"></a>Classe COleClientItem
 
@@ -310,7 +310,7 @@ Pour plus d’informations sur l’utilisation de l’interface conteneur, voir 
 
 Appelez cette fonction pour exécuter le verbe spécifié au lieu de [DoVerb](#doverb) afin que vous puissiez faire votre propre traitement quand une exception est lancée.
 
-```
+```cpp
 void Activate(
     LONG nVerb,
     CView* pView,
@@ -380,7 +380,7 @@ Ceci est appelé automatiquement par [COleConvertDialog::DoConvert](../../mfc/re
 
 Appelez cette fonction pour initialiser un [COleDataObject](../../mfc/reference/coledataobject-class.md) pour accéder aux données de l’élément OLE.
 
-```
+```cpp
 void AttachDataObject(COleDataObject& rDataObject) const;
 ```
 
@@ -493,7 +493,7 @@ Pour plus d’informations, voir [OleGetClipboard](/windows/win32/api/ole2/nf-ol
 
 Appelez cette fonction pour changer l’état d’un élément OLE de l’état de fonctionnement à l’état chargé, c’est-à-dire, chargé avec son gestionnaire dans la mémoire, mais avec le serveur ne fonctionne pas.
 
-```
+```cpp
 void Close(OLECLOSE dwCloseOption = OLECLOSE_SAVEIFDIRTY);
 ```
 
@@ -578,7 +578,7 @@ Ceci est appelé automatiquement par [COleConvertDialog](../../mfc/reference/col
 
 Appelez cette fonction pour copier l’article OLE au Clipboard.
 
-```
+```cpp
 void CopyToClipboard(BOOL bIncludeLink = FALSE);
 ```
 
@@ -936,7 +936,7 @@ Pour plus d’informations, voir [OleCreateStaticFromData](/windows/win32/api/ol
 
 Appelez cette fonction pour désactiver l’article OLE et libérer toutes les ressources associées.
 
-```
+```cpp
 void Deactivate();
 ```
 
@@ -952,7 +952,7 @@ Pour plus d’informations, voir [IOleInPlaceObject::InPlaceDeactivate](/windows
 
 Appelez cette fonction lorsque l’utilisateur désactive un élément activé en place.
 
-```
+```cpp
 void DeactivateUI();
 ```
 
@@ -968,7 +968,7 @@ Pour plus d’informations, voir [IOleInPlaceObject::InPlaceDeactivate](/windows
 
 Appelez cette fonction pour supprimer l’élément OLE du document de conteneur.
 
-```
+```cpp
 void Delete(BOOL bAutoDelete = TRUE);
 ```
 
@@ -1153,7 +1153,7 @@ Pour plus d’informations, voir [IViewObject2:GetExtent](/windows/win32/api/ole
 
 Retourne l’ID de classe de l’élément dans la mémoire pointée par *pClassID*.
 
-```
+```cpp
 void GetClassID(CLSID* pClassID) const;
 ```
 
@@ -1172,7 +1172,7 @@ Pour plus d’informations, voir [IPersist:GetClassID](/windows/win32/api/objidl
 
 Appelez cette fonction `COleDataSource` pour obtenir un objet contenant toutes les données qui seraient placées sur le Clipboard par un appel à la fonction membre [CopyToClipboard.](#copytoclipboard)
 
-```
+```cpp
 void GetClipboardData(
     COleDataSource* pDataSource,
     BOOL bIncludeLink = FALSE,
@@ -1400,7 +1400,7 @@ Un insignable avec l’une des valeurs suivantes :
 
 Appelez cette fonction pour obtenir la chaîne visible de l’utilisateur décrivant le type de l’élément OLE, tel que « document de mot ».
 
-```
+```cpp
 void GetUserType(
     USERCLASSTYPE nUserClassType,
     CString& rString);
@@ -1977,7 +1977,7 @@ Appelez `Reload` la fonction après avoir activé l’élément comme un éléme
 
 Exécute l’application associée à cet article.
 
-```
+```cpp
 void Run();
 ```
 
@@ -2016,7 +2016,7 @@ Cette fonction est appelée automatiquement par l’icône de changement (et d�
 
 Appelez cette fonction pour spécifier la quantité d’espace disponible pour l’article OLE.
 
-```
+```cpp
 void SetExtent(
     const CSize& size,
     DVASPECT nDrawAspect = DVASPECT_CONTENT);
@@ -2024,7 +2024,7 @@ void SetExtent(
 
 ### <a name="parameters"></a>Paramètres
 
-*Taille*<br/>
+*size*<br/>
 Un objet [CSize](../../atl-mfc-shared/reference/csize-class.md) qui contient les informations de taille.
 
 *nDrawAspect (en anglais seulement)*<br/>
@@ -2040,7 +2040,7 @@ Pour plus d’informations, voir [IOleObject:SetExtent](/windows/win32/api/oleid
 
 Appelez cette fonction pour spécifier le nom de l’application de conteneurs et le nom du conteneur pour un article OLE intégré.
 
-```
+```cpp
 void SetHostNames(
     LPCTSTR lpszHost,
     LPCTSTR lpszHostObj);
@@ -2117,7 +2117,7 @@ Pour plus d’informations, voir [IOleInPlaceObject:SetObjectRects](/windows/win
 
 Appelez cette fonction pour définir l’option de mise à jour du lien pour la présentation de l’élément lié spécifié.
 
-```
+```cpp
 void SetLinkUpdateOptions(OLEUPDATE dwUpdateOpt);
 ```
 

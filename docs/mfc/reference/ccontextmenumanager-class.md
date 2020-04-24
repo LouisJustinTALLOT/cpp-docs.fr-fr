@@ -28,12 +28,12 @@ helpviewer_keywords:
 - CContextMenuManager [MFC], ShowPopupMenu
 - CContextMenuManager [MFC], TrackPopupMenu
 ms.assetid: 1de20640-243c-47e1-85de-1baa4153bc83
-ms.openlocfilehash: f322f40beabeb9a837dda01c95e9f950a07585d1
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: c676355ebf44d6cc02bfa66ac870757627ae5a58
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81369423"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81754806"
 ---
 # <a name="ccontextmenumanager-class"></a>CContextMenuManager, classe
 
@@ -187,7 +187,7 @@ Si cette méthode trouve un menu qui `GetMenuByName` correspond *lpszName*, stoc
 
 Retourne la liste des noms de menu ajoutés au [CContextMenuManager](../../mfc/reference/ccontextmenumanager-class.md).
 
-```
+```cpp
 void GetMenuNames(CStringList& listOfNames) const;
 ```
 
@@ -262,7 +262,7 @@ Utilisez la méthode [CContextMenuManager::LoadState](#loadstate) pour charger l
 
 Contrôle si le [CContextMenuManager](../../mfc/reference/ccontextmenumanager-class.md) ferme le menu pop-up actif lorsqu’il affiche un nouveau menu pop-up.
 
-```
+```cpp
 void SetDontCloseActiveMenu (BOOL bSet = TRUE);
 ```
 
@@ -303,7 +303,7 @@ virtual CMFCPopupMenu* ShowPopupMenu(
 *uiMenuResId*<br/>
 [dans] L’ID de ressource du menu que cette méthode affichera.
 
-*X*<br/>
+*x*<br/>
 [dans] Le décalage horizontal pour le menu raccourci dans les coordonnées des clients.
 
 *y*<br/>
@@ -352,7 +352,7 @@ virtual UINT TrackPopupMenu(
 *hmenuPopup*<br/>
 [dans] Le manche du menu raccourci que cette méthode affiche.
 
-*X*<br/>
+*x*<br/>
 [dans] Le décalage horizontal pour le menu raccourci dans les coordonnées des clients.
 
 *y*<br/>

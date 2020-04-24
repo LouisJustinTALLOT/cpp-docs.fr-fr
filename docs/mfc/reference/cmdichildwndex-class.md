@@ -112,12 +112,12 @@ helpviewer_keywords:
 - CMDIChildWndEx [MFC], UnregisterTaskbarTab
 - CMDIChildWndEx [MFC], UpdateTaskbarTabIcon
 ms.assetid: d39fec06-0bd6-4271-917d-35aae3b24d8e
-ms.openlocfilehash: 92f3b95de3780a1593183c09b935db78c61a3a5f
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: cdc82ef48bacfe4d5b8d90222e7055c5fbe8b4a1
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81370066"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81754561"
 ---
 # <a name="cmdichildwndex-class"></a>CMDIChildWndEx, classe
 
@@ -249,7 +249,7 @@ VRAI si la vitre a été enregistrée avec succès auprès du gestionnaire d’a
 
 Ajoute une vitre tabbed.
 
-```
+```cpp
 void AddTabbedPane(CDockablePane* pControlBar);
 ```
 
@@ -301,7 +301,7 @@ Remplacer cette méthode dans une classe dérivée et retourner FALSE si la fen�
 
 Docks une vitre.
 
-```
+```cpp
 void DockPane(
     CBasePane* pBar,
     UINT nDockBarID = 0,
@@ -728,7 +728,7 @@ virtual void RecalcLayout(BOOL bNotify = TRUE);
 
 Enlève une vitre du gestionnaire d’amarrage.
 
-```
+```cpp
 void RemovePaneFromDockManager(
     CBasePane* pControlBar,
     BOOL bDestroy,
@@ -756,7 +756,7 @@ void RemovePaneFromDockManager(
 
 ## <a name="cmdichildwndexsetrelatedtabgroup"></a><a name="setrelatedtabgroup"></a>CMDIChildWndEx::SetRelatedTabGroup
 
-```
+```cpp
 void SetRelatedTabGroup(CMFCTabCtrl* p);
 ```
 
@@ -768,7 +768,7 @@ void SetRelatedTabGroup(CMFCTabCtrl* p);
 
 ## <a name="cmdichildwndexshowpane"></a><a name="showpane"></a>CMDIChildWndEx::ShowPane
 
-```
+```cpp
 void ShowPane(
     CBasePane* pBar,
     BOOL bShow,
@@ -807,7 +807,7 @@ Une poignée à une icône pour afficher sur l’onglet barre des tâches Window
 
 Supprime l’enfant MDI des onglets windows 7.
 
-```
+```cpp
 void UnregisterTaskbarTab(BOOL bCheckRegisteredMDIChildCount = TRUE);
 ```
 
@@ -841,7 +841,7 @@ TRUE en cas de réussite, sinon FALSE.
 
 Définit les propriétés d’un onglet de la barre des tâches Windows 7.
 
-```
+```cpp
 void SetTaskbarTabProperties(DWORD dwFlags);
 ```
 
@@ -856,7 +856,7 @@ Combinaison de valeurs STPFLAG. Pour plus d’informations, voir [ITaskbarList4:
 
 Insère l’enfant MDI avant la fenêtre spécifiée sur les onglets windows 7.
 
-```
+```cpp
 void SetTaskbarTabOrder(CMDIChildWndEx* pWndBefore = NULL);
 ```
 
@@ -871,7 +871,7 @@ Un pointeur à la fenêtre de l’enfant MDI dont la vignette est insérée à g
 
 Active l’onglet correspondant de la barre des tâches Windows 7.
 
-```
+```cpp
 void SetTaskbarTabActive();
 ```
 
@@ -941,7 +941,7 @@ Spécifie un pointeur vers la fenêtre parente de haut niveau de la fenêtre act
 *nHitTest (en)*<br/>
 Spécifie le code de zone de test. Un essai de coup est un test qui détermine l’emplacement du curseur.
 
-*Message*<br/>
+*message*<br/>
 Spécifie le numéro de message de la souris.
 
 ### <a name="remarks"></a>Notes
@@ -1146,7 +1146,7 @@ Un pointeur `CMDITabProxyWnd` vers un objet, qui est enregistré avec les onglet
 
 Permet ou désactive la sélection automatique d’une partie de la zone client d’une fenêtre pour afficher comme vignette de cette fenêtre dans la barre des tâches.
 
-```
+```cpp
 void EnableTaskbarThumbnailClipRect(BOOL bEnable = TRUE);
 ```
 

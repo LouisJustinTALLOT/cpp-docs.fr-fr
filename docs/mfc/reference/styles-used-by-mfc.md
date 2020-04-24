@@ -194,12 +194,12 @@ helpviewer_keywords:
 - WS_EX_TRANSPARENT constant [MFC]
 - WS_EX_WINDOWEDGE constant [MFC]
 ms.assetid: d3b9af37-31b5-4c97-a8ad-189fd724b04c
-ms.openlocfilehash: 1fe8e0e167ee1fe6150487dfff436a72a2d55868
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 20e3a453fd04f0eead53d8ee985b51c7f534b662
+ms.sourcegitcommit: 89d9e1cb08fa872483d1cde98bc2a7c870e505e9
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81372916"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "82032393"
 ---
 # <a name="styles-used-by-mfc"></a>Styles utilisés par MFC
 
@@ -418,7 +418,7 @@ Les styles statiques s’appliquent aux objets [de classe CStatic.](../../mfc/re
 |SS_BLACKRECT|Spécifie un rectangle rempli de la couleur utilisée pour dessiner des cadres de fenêtre. La valeur par défaut est noir.|
 |SS_CENTER|Désigne un rectangle simple et affiche le texte donné centré dans le rectangle. Le texte est formaté avant qu’il ne soit affiché. Les mots qui s’étendraient au-delà de la fin d’une ligne sont automatiquement enveloppés au début de la ligne centrée suivante.|
 |SS_CENTERIMAGE|Spécifie que, si la bitmap ou l’icône est plus petite que la zone cliente du contrôle statique, le reste de la zone client est rempli de la couleur du pixel dans le coin supérieur gauche de la bitmap ou de l’icône. Si le contrôle statique contient une seule ligne de texte, le texte est centré verticalement dans la zone client du contrôle.|
-|SS_ENDELLIPSIS|ou SS_PATHELLIPSIS remplace une partie de la chaîne donnée par des ellipses, si nécessaire, de sorte que le résultat s’adapte dans le rectangle spécifié. <br /><br />Vous pouvez spécifier SS_END_ELLIPSIS pour remplacer les caractères à la fin de la chaîne, ou SS_PATHELLIPSIS pour remplacer les personnages au milieu de la chaîne. Si la chaîne contient\\des caractères de barre oblique inverse, SS_PATHELLIPSIS conserve autant de texte après la dernière barre oblique inverse que possible.|
+|SS_ENDELLIPSIS|ou SS_PATHELLIPSIS remplace une partie de la chaîne donnée par l’ellipsis, si nécessaire, de sorte que le résultat s’adapte dans le rectangle spécifié. <br /><br />Vous pouvez spécifier SS_END_ELLIPSIS pour remplacer les caractères à la fin de la chaîne, ou SS_PATHELLIPSIS pour remplacer les personnages au milieu de la chaîne. Si la chaîne contient\\des caractères de barre oblique inverse, SS_PATHELLIPSIS conserve autant de texte après la dernière barre oblique inverse que possible.|
 |SS_ENHMETAFILE|Spécifie qu’un métaafile amélioré doit être affiché dans le contrôle statique. Le texte donné est le nom d’un metafile. Un contrôle statique métadilile amélioré a une taille fixe; le métafaisile est mis à l’échelle pour s’adapter à la zone client du contrôle statique.|
 |SS_ETCHEDFRAME|Dessine le cadre du contrôle statique en utilisant le style de bord EDGE_ETCHED.|
 |SS_ETCHEDHORZ|Dessine les bords supérieurs et inférieurs du contrôle statique à l’aide du style de bord EDGE_ETCHED.|
@@ -439,7 +439,7 @@ Les styles statiques s’appliquent aux objets [de classe CStatic.](../../mfc/re
 |SS_USERITEM|Spécifie un élément défini par l’utilisateur.|
 |SS_WHITEFRAME|Spécifie une boîte avec un cadre dessiné avec la même couleur que le fond de fenêtre. La valeur par défaut est blanc.|
 |SS_WHITERECT|Spécifie un rectangle rempli de la couleur utilisée pour remplir l’arrière-plan de la fenêtre. La valeur par défaut est blanc.|
-|SS_WORDELLIPSIS|Truncates texte qui ne correspond pas et ajoute des ellipses.|
+|SS_WORDELLIPSIS|Truncates texte qui ne correspond pas et ajoute ellipsis.|
 
 ## <a name="window-styles"></a><a name="window-styles"></a>Styles de fenêtre
 

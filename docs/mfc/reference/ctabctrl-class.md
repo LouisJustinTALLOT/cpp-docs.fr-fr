@@ -72,12 +72,12 @@ helpviewer_keywords:
 - CTabCtrl [MFC], SetPadding
 - CTabCtrl [MFC], SetToolTips
 ms.assetid: 42e4aff6-46ae-4b2c-beaa-d1dce8d82138
-ms.openlocfilehash: 7d4a478b560be686e4da6f6dea623d6058626562
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 42d4b24222b1760bc418e904881edb2bb0e5a1f4
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81365964"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81752307"
 ---
 # <a name="ctabctrl-class"></a>CTabCtrl, classe
 
@@ -160,7 +160,7 @@ Pour plus d’informations sur l’utilisation `CTabCtrl`, voir [Contrôles](../
 
 Calcule la zone d’affichage d’un onglet donné un rectangle de fenêtre, ou calcule le rectangle de fenêtre qui correspondrait à une zone d’affichage donnée.
 
-```
+```cpp
 void AdjustRect(BOOL bLarger,   LPRECT lpRect);
 ```
 
@@ -170,7 +170,7 @@ void AdjustRect(BOOL bLarger,   LPRECT lpRect);
 Indique quelle opération effectuer. Si ce paramètre est VRAI, *lpRect* spécifie un rectangle d’affichage et reçoit le rectangle de fenêtre correspondant. Si ce paramètre est FALSE, *lpRect* spécifie un rectangle de fenêtre et reçoit le rectangle d’affichage correspondant.
 
 *lpRect*<br/>
-Pointeur vers une structure [RECT](/previous-versions/dd162897\(v=vs.85\)) qui spécifie le rectangle donné et reçoit le rectangle calculé.
+Pointeur vers une structure [RECT](/windows/win32/api/windef/ns-windef-rect) qui spécifie le rectangle donné et reçoit le rectangle calculé.
 
 ### <a name="example"></a>Exemple
 
@@ -194,7 +194,7 @@ virtual BOOL Create(
 Spécifie le style du contrôle de l’onglet. Appliquer toute combinaison de styles de contrôle de [l’onglet](/windows/win32/Controls/tab-control-styles), décrit dans le SDK Windows. Voir **Remarques** pour une liste de styles de fenêtre que vous pouvez également appliquer au contrôle.
 
 *Rect*<br/>
-Spécifie la taille et la position du contrôle de l’onglet. Il peut s’agir soit d’un objet [CRect,](../../atl-mfc-shared/reference/crect-class.md) soit d’une structure [RECT.](/previous-versions/dd162897\(v=vs.85\))
+Spécifie la taille et la position du contrôle de l’onglet. Il peut s’agir soit d’un objet [CRect,](../../atl-mfc-shared/reference/crect-class.md) soit d’une structure [RECT.](/windows/win32/api/windef/ns-windef-rect)
 
 *pParentWnd*<br/>
 Spécifie la fenêtre parente `CDialog`du contrôle de l’onglet, généralement un . Ce ne doit pas être NULL.
@@ -250,7 +250,7 @@ Spécifie le style étendu du contrôle en cours de création. Pour une liste de
 Spécifie le style du contrôle de l’onglet. Appliquer toute combinaison de styles de contrôle de [l’onglet](/windows/win32/Controls/tab-control-styles), décrit dans le SDK Windows. Voir **Remarques** dans [Créer](#create) pour une liste de styles de fenêtre que vous pouvez également appliquer au contrôle.
 
 *Rect*<br/>
-Une référence à une structure [RECT](/previous-versions/dd162897\(v=vs.85\)) décrivant la taille et la position de la fenêtre à créer, dans les coordonnées des clients de *pParentWnd*.
+Une référence à une structure [RECT](/windows/win32/api/windef/ns-windef-rect) décrivant la taille et la position de la fenêtre à créer, dans les coordonnées des clients de *pParentWnd*.
 
 *pParentWnd*<br/>
 Un pointeur vers la fenêtre qui est le parent du contrôle.
@@ -313,7 +313,7 @@ Valeur différente de zéro cas de réussite ; sinon, 0.
 
 Réinitialise les éléments dans un contrôle d’onglet, effaçant tout ce qui a été pressé.
 
-```
+```cpp
 void DeselectAll(BOOL fExcludeFocus);
 ```
 
@@ -485,7 +485,7 @@ BOOL GetItemRect(int nItem,   LPRECT lpRect) const;
 Indice à base zéro de l’élément de l’onglet.
 
 *lpRect*<br/>
-Pointeur vers une structure [RECT](/previous-versions/dd162897\(v=vs.85\)) qui reçoit le rectangle de délimitation de l’onglet. Ces coordonnées utilisent le mode de cartographie actuel du viewport.
+Pointeur vers une structure [RECT](/windows/win32/api/windef/ns-windef-rect) qui reçoit le rectangle de délimitation de l’onglet. Ces coordonnées utilisent le mode de cartographie actuel du viewport.
 
 ### <a name="return-value"></a>Valeur de retour
 
@@ -682,7 +682,7 @@ Indice zéro du nouvel onglet en cas de succès; autrement - 1.
 
 Supprime l’image spécifiée de la liste d’images d’un contrôle de l’onglet.
 
-```
+```cpp
 void RemoveImage(int nImage);
 ```
 
@@ -699,7 +699,7 @@ Le contrôle de l’onglet met à jour l’index d’image de chaque onglet afin
 
 Définit la mise au point vers un onglet spécifié dans un contrôle d’onglet.
 
-```
+```cpp
 void SetCurFocus(int nItem);
 ```
 
@@ -829,7 +829,7 @@ CSize SetItemSize(CSize size);
 
 ### <a name="parameters"></a>Paramètres
 
-*Taille*<br/>
+*size*<br/>
 Nouvelles largeur et hauteur, en pixels, des éléments du contrôle des tabulations.
 
 ### <a name="return-value"></a>Valeur de retour
@@ -892,20 +892,20 @@ Cette fonction de membre implémente le comportement du message Win32 [TCM_SETMI
 
 Définit la quantité d’espace (remdding) autour de l’icône de chaque onglet et l’étiquette dans un contrôle d’onglet.
 
-```
+```cpp
 void SetPadding(CSize size);
 ```
 
 ### <a name="parameters"></a>Paramètres
 
-*Taille*<br/>
+*size*<br/>
 Définit la quantité d’espace (remdding) autour de l’icône de chaque onglet et l’étiquette dans un contrôle d’onglet.
 
 ## <a name="ctabctrlsettooltips"></a><a name="settooltips"></a>CTabCtrl::SetToolTips
 
 Attribue un contrôle de pointe d’outil à un contrôle d’onglet.
 
-```
+```cpp
 void SetToolTips(CToolTipCtrl* pWndTip);
 ```
 

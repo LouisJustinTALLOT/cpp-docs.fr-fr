@@ -64,12 +64,12 @@ helpviewer_keywords:
 - CHeaderCtrl [MFC], SetItem
 - CHeaderCtrl [MFC], SetOrderArray
 ms.assetid: b847ac90-5fae-4a87-88e0-ca45f77b8b3b
-ms.openlocfilehash: 6b5088526ad2c1f94fdc95ec3b84ab7cf64b59e1
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: de1705d47c5692d3563bc7d9cb2646531819197a
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81366854"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81750921"
 ---
 # <a name="cheaderctrl-class"></a>Classe CHeaderCtrl
 
@@ -231,7 +231,7 @@ virtual BOOL Create(
 Spécifie le style du contrôle de l’en-tête. Pour une description des styles de contrôle de l’en-tête, voir Les styles de contrôle de [l’en-tête](/windows/win32/Controls/header-control-styles) dans le SDK Windows.
 
 *Rect*<br/>
-Spécifie la taille et la position du contrôle de l’en-tête. Il peut s’agir soit d’un objet [CRect,](../../atl-mfc-shared/reference/crect-class.md) soit d’une structure [RECT.](/previous-versions/dd162897\(v=vs.85\))
+Spécifie la taille et la position du contrôle de l’en-tête. Il peut s’agir soit d’un objet [CRect,](../../atl-mfc-shared/reference/crect-class.md) soit d’une structure [RECT.](/windows/win32/api/windef/ns-windef-rect)
 
 *pParentWnd*<br/>
 Spécifie la fenêtre parente `CDialog`du contrôle de l’en-tête, généralement un . Ce ne doit pas être NULL.
@@ -301,7 +301,7 @@ Spécifie le style étendu du contrôle en cours de création. Pour une liste de
 Le style du contrôle de l’en-tête. Pour une description des styles de contrôle de l’en-tête, voir Les styles de contrôle de [l’en-tête](/windows/win32/Controls/header-control-styles) dans le SDK Windows. Voir [Créer](#create) pour une liste de styles supplémentaires.
 
 *Rect*<br/>
-Une référence à une structure [RECT](/previous-versions/dd162897\(v=vs.85\)) décrivant la taille et la position de la fenêtre à créer, dans les coordonnées des clients de *pParentWnd*.
+Une référence à une structure [RECT](/windows/win32/api/windef/ns-windef-rect) décrivant la taille et la position de la fenêtre à créer, dans les coordonnées des clients de *pParentWnd*.
 
 *pParentWnd*<br/>
 Un pointeur vers la fenêtre qui est le parent du contrôle.
@@ -543,7 +543,7 @@ BOOL GetItemDropDownRect(
 |Paramètre|Description|
 |---------------|-----------------|
 |*iItem*|[dans] Index à base zéro d’un élément d’en-tête dont le style est HDF_SPLITBUTTON. Pour plus d’informations, consultez le `fmt` membre de la structure [HDITEM.](/windows/win32/api/commctrl/ns-commctrl-hditemw)|
-|*lpRect*|[out] Pointeur vers une structure [RECT](/previous-versions/dd162897\(v=vs.85\)) pour recevoir les informations de rectangle de délimitation.|
+|*lpRect*|[out] Pointeur vers une structure [RECT](/windows/win32/api/windef/ns-windef-rect) pour recevoir les informations de rectangle de délimitation.|
 
 ### <a name="return-value"></a>Valeur de retour
 
@@ -581,7 +581,7 @@ BOOL GetItemRect(
 L’index à base nulle de l’élément de contrôle de l’en-tête.
 
 *lpRect*<br/>
-Un pointeur à l’adresse d’une structure [RECT](/previous-versions/dd162897\(v=vs.85\)) qui reçoit les informations de rectangle de délimitation.
+Un pointeur à l’adresse d’une structure [RECT](/windows/win32/api/windef/ns-windef-rect) qui reçoit les informations de rectangle de délimitation.
 
 ### <a name="return-value"></a>Valeur de retour
 
@@ -633,7 +633,7 @@ BOOL GetOverflowRect(LPRECT lpRect) const;
 
 |Paramètre|Description|
 |---------------|-----------------|
-|*lpRect*|[out] Pointeur vers une structure [RECT](/previous-versions/dd162897\(v=vs.85\)) qui reçoit les informations de rectangle de délimitation.|
+|*lpRect*|[out] Pointeur vers une structure [RECT](/windows/win32/api/windef/ns-windef-rect) qui reçoit les informations de rectangle de délimitation.|
 
 ### <a name="return-value"></a>Valeur de retour
 

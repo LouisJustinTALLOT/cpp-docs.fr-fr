@@ -28,12 +28,12 @@ helpviewer_keywords:
 - COleDataObject [MFC], IsDataAvailable
 - COleDataObject [MFC], Release
 ms.assetid: d1cc84be-2e1c-4bb3-a8a0-565eb08aaa34
-ms.openlocfilehash: 5e1545a033ab482e838fbc944b0ca9b3e543d651
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 8b9565382de8ae731c166f60a0d1994c1b948a7b
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81366131"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81753912"
 ---
 # <a name="coledataobject-class"></a>COleDataObject, classe
 
@@ -92,7 +92,7 @@ Pour plus d’informations sur l’utilisation d’objets de données dans votre
 
 Appelez cette fonction `COleDataObject` pour associer l’objet à un objet de données OLE.
 
-```
+```cpp
 void Attach(
     LPDATAOBJECT lpDataObject,
     BOOL bAutoRelease = TRUE);
@@ -131,7 +131,7 @@ Valeur différente de zéro cas de réussite ; sinon, 0.
 
 Appelez cette fonction pour vous `GetNextFormat` préparer aux appels ultérieurs pour récupérer une liste de formats de données à partir de l’élément.
 
-```
+```cpp
 void BeginEnumFormats();
 ```
 
@@ -288,7 +288,7 @@ Après un appel à [COleDataObject::BeginEnumFormats](#beginenumformats), la pos
 
 Pour vérifier la disponibilité d’un format donné, appelez [COleDataObject::IsDataAvailable](#isdataavailable).
 
-Pour plus d’informations, voir [IEnumXXXX::Next](/previous-versions//ms695273\(v=vs.85\)) in the Windows SDK.
+Pour plus d’informations, voir [IEnumXXXX::Next](/previous-versions/ms695273\(v=vs.85\)) in the Windows SDK.
 
 ## <a name="coledataobjectisdataavailable"></a><a name="isdataavailable"></a>COleDataObject::IsDataAvailable
 
@@ -328,7 +328,7 @@ Pour plus d’informations, voir [RegisterClipboardFormat](/windows/win32/api/wi
 
 Appelez cette fonction pour libérer la propriété de l’objet `COleDataObject` [IDataObject](/windows/win32/api/objidl/nn-objidl-idataobject) qui était auparavant associé à l’objet.
 
-```
+```cpp
 void Release();
 ```
 

@@ -40,12 +40,12 @@ helpviewer_keywords:
 - CMFCColorPickerCtrl [MFC], SetType
 - CMFCColorPickerCtrl [MFC], DrawCursor
 ms.assetid: b9bbd03c-beb0-4b55-9765-9985fd05e5dc
-ms.openlocfilehash: c3c11db448ab31324367b7f314cd6bfe44c2e96d
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: fe35ee5d6fc6484788a2636151c386689f4bdd96
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81367685"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81752539"
 ---
 # <a name="cmfccolorpickerctrl-class"></a>CMFCColorPickerCtrl, classe
 
@@ -184,7 +184,7 @@ La valeur RGB de la couleur sélectionnée.
 
 Récupère les valeurs de teinte, de luminance et de saturation de la couleur que l’utilisateur sélectionne.
 
-```
+```cpp
 void GetHLS(
     double* hue,
     double* luminance,
@@ -250,7 +250,7 @@ Le composant de saturation de la couleur sélectionnée.
 
 Définit la couleur actuelle à la couleur définie par les composants de couleur RGB spécifiés ou l’hexagone cellulaire spécifié.
 
-```
+```cpp
 void SelectCellHexagon(
     BYTE R,
     BYTE G,
@@ -272,7 +272,7 @@ BOOL SelectCellHexagon(
 *B*<br/>
 [dans] Le composant de couleur bleue.
 
-*X*<br/>
+*x*<br/>
 [dans] Le x-coordonner le curseur, qui pointe vers un hexagone cellulaire.
 
 *y*<br/>
@@ -292,13 +292,13 @@ La deuxième surcharge de cette méthode définit la couleur actuelle à la coul
 
 Définit la couleur actuelle à la valeur de couleur RGB spécifiée.
 
-```
+```cpp
 void SetColor(COLORREF Color);
 ```
 
 ### <a name="parameters"></a>Paramètres
 
-*Color*<br/>
+*Couleur*<br/>
 [dans] Une valeur de couleur RGB.
 
 ### <a name="remarks"></a>Notes
@@ -307,7 +307,7 @@ void SetColor(COLORREF Color);
 
 Définit la couleur actuelle à la valeur de couleur spécifiée HLS.
 
-```
+```cpp
 void SetHLS(
     double hue,
     double luminance,
@@ -335,7 +335,7 @@ void SetHLS(
 
 Change la teinte de la couleur actuellement sélectionnée.
 
-```
+```cpp
 void SetHue(double Hue);
 ```
 
@@ -350,7 +350,7 @@ void SetHue(double Hue);
 
 Modifie la luminosité de la couleur actuellement sélectionnée.
 
-```
+```cpp
 void SetLuminance(double Luminance);
 ```
 
@@ -365,13 +365,13 @@ void SetLuminance(double Luminance);
 
 Définit la largeur de la barre de luminance dans le contrôle du cueilleur de couleurs.
 
-```
+```cpp
 void SetLuminanceBarWidth(int w);
 ```
 
 ### <a name="parameters"></a>Paramètres
 
-*W*<br/>
+*w*<br/>
 [dans] La largeur de la barre de luminance mesurée en pixels.
 
 ### <a name="remarks"></a>Notes
@@ -382,7 +382,7 @@ Utilisez cette méthode pour resize la barre de luminance, qui est sur **l’ong
 
 Définit la couleur sélectionnée initiale.
 
-```
+```cpp
 void SetOriginalColor(COLORREF ref);
 ```
 
@@ -399,7 +399,7 @@ Appelez cette méthode lorsque le contrôle du cueilleur de couleurs est initial
 
 Définit la palette de couleurs actuelle.
 
-```
+```cpp
 void SetPalette(CPalette* pPalette);
 ```
 
@@ -416,7 +416,7 @@ La palette de couleurs définit la gamme de couleurs qui est présentée dans le
 
 Modifie la saturation de la couleur actuellement sélectionnée.
 
-```
+```cpp
 void SetSaturation(double Saturation);
 ```
 
@@ -431,7 +431,7 @@ void SetSaturation(double Saturation);
 
 Définit le type de contrôle de cueilleur de couleur pour afficher.
 
-```
+```cpp
 void SetType(COLORTYPE colorType);
 ```
 

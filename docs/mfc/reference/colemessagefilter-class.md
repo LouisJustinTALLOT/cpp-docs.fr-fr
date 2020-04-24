@@ -28,12 +28,12 @@ helpviewer_keywords:
 - COleMessageFilter [MFC], SetMessagePendingDelay
 - COleMessageFilter [MFC], SetRetryReply
 ms.assetid: b1fd1639-fac4-4fd0-bf17-15172deba13c
-ms.openlocfilehash: f6db5f012aedf08edd87980e304e181295bfb953
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 8a6c160a76ae27059238c3e8e26b5bea87a87f7f
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81374924"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81753833"
 ---
 # <a name="colemessagefilter-class"></a>COleMessageFilter, classe
 
@@ -120,7 +120,7 @@ COleMessageFilter();
 
 Permet et désactive la boîte de dialogue occupée, qui est affichée lorsque le délai en attente de message expire (voir [SetRetryReply](#setretryreply)) lors d’un appel OLE.
 
-```
+```cpp
 void EnableBusyDialog(BOOL bEnableBusy = TRUE);
 ```
 
@@ -133,7 +133,7 @@ Précise si la boîte de dialogue « occupée » est activée ou désactivée.
 
 Permet et désactive la boîte de dialogue « ne pas répondre », qui s’affiche si un message clavier ou souris est en attente lors d’un appel OLE et que l’appel s’est interrompu.
 
-```
+```cpp
 void EnableNotRespondingDialog(BOOL bEnableNotResponding = TRUE);
 ```
 
@@ -203,7 +203,7 @@ Le filtre de message par défaut du cadre est automatiquement enregistré lors d
 
 Révoque une inscription précédente effectuée par un appel à [l’inscription](#register).
 
-```
+```cpp
 void Revoke();
 ```
 
@@ -217,7 +217,7 @@ Le filtre de message par défaut, qui est créé et enregistré automatiquement 
 
 Cette fonction définit la « réponse occupée » de l’application.
 
-```
+```cpp
 void SetBusyReply(SERVERCALL nBusyReply);
 ```
 
@@ -244,7 +244,7 @@ Par défaut, la réponse occupée est SERVERCALL_RETRYLATER. Cette réponse prov
 
 Détermine combien de temps la demande d’appel attend une réponse de la demande appelée avant de prendre d’autres mesures.
 
-```
+```cpp
 void SetMessagePendingDelay(DWORD nTimeout = 5000);
 ```
 
@@ -261,7 +261,7 @@ Cette fonction fonctionne de concert avec [SetRetryReply](#setretryreply).
 
 Détermine l’action de l’application d’appel lorsqu’elle reçoit une réponse occupée d’une demande appelée.
 
-```
+```cpp
 void SetRetryReply(DWORD nRetryReply = 0);
 ```
 

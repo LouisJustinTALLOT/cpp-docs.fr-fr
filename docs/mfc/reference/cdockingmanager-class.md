@@ -160,12 +160,12 @@ helpviewer_keywords:
 - CDockingManager [MFC], m_nTimeOutBeforeDockingBarDock
 - CDockingManager [MFC], m_nTimeOutBeforeToolBarDock
 ms.assetid: 98e69c43-55d8-4f43-b861-4fda80ec1e32
-ms.openlocfilehash: 339e5d5e464aacb51d1c4ab8fe3c2957a3afbd4e
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 76fd12b0817c99d0d08327f9d9156eadf3559dc5
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81375583"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81753326"
 ---
 # <a name="cdockingmanager-class"></a>CDockingManager, classe
 
@@ -332,7 +332,7 @@ VRAI si le volet du quai a été créé avec succès; FALSE autrement.
 
 Ajoute une poignée à une vitre de bar à la liste des vitres cachées de barre de tabbed MDI.
 
-```
+```cpp
 void AddHiddenMDITabbedBar(CDockablePane* pBar);
 ```
 
@@ -455,7 +455,7 @@ Le *paramètre dwAlignment* peut avoir l’une des valeurs suivantes :
 
 Resizes a docking pane in autohide mode so that it takes the full width or height of the frame’s client area surrounded by dock sites.
 
-```
+```cpp
 void AlignAutoHidePane(
     CPaneDivider* pDefaultSlider,
     BOOL bIsVisible = TRUE);
@@ -495,7 +495,7 @@ NULL si la barre d’outils de cache automatique n’a pas été créée ; sinon
 
 Apporte les barres amarrés qui ont l’alignement spécifié vers le haut.
 
-```
+```cpp
 void BringBarsToTop(
     DWORD dwAlignment = 0,
     BOOL bExcludeDockedBars = TRUE);
@@ -513,7 +513,7 @@ void BringBarsToTop(
 
 Ajoute les noms des vitres d’amarrage et des barres d’outils à un menu.
 
-```
+```cpp
 void BuildPanesMenu(
     CMenu& menu,
     BOOL bToolbarsOnly);
@@ -531,7 +531,7 @@ void BuildPanesMenu(
 
 Calcule le rectangle prévu d’une fenêtre amarrée.
 
-```
+```cpp
 void CalcExpectedDockedRect(
     CWnd* pWnd,
     CPoint ptMouse,
@@ -631,7 +631,7 @@ Le statut d’amarrage peut être l’une des valeurs suivantes :
 
 Permet ou désactive le chargement de la disposition d’amarrage à partir du registre.
 
-```
+```cpp
 void DisableRestoreDockState(BOOL bDisable = TRUE);
 ```
 
@@ -648,7 +648,7 @@ Appelez cette méthode lorsque vous devez préserver la disposition actuelle des
 
 Amarre une vitre à une autre vitre ou à une fenêtre de cadre.
 
-```
+```cpp
 void DockPane(
     CBasePane* pBar,
     UINT nDockBarID = 0,
@@ -753,7 +753,7 @@ Par défaut, ce menu n’est pas affiché.
 
 Indique à la bibliothèque d’afficher un menu contexte spécial qui dispose d’une liste de barres d’outils d’application et de volets d’amarrage lorsque l’utilisateur clique sur le bouton de la souris droite et que la bibliothèque traite le message WM_CONTEXTMENU.
 
-```
+```cpp
 void EnablePaneContextMenu(
     BOOL bEnable,
     UINT uiCustomizeCmd,
@@ -973,7 +973,7 @@ Un rectangle qui contient les bords extérieurs du cadre.
 
 Retourne une liste de vitres qui appartiennent au gestionnaire d’amarrage. Cela comprend toutes les vitres flottantes.
 
-```
+```cpp
 void GetPaneList(
     CObList& lstBars,
     BOOL bIncludeAutohide = FALSE,
@@ -1043,7 +1043,7 @@ La classe qui contient les paramètres d’amarrage intelligents pour le gestion
 
 Cache un volet en mode autohide.
 
-```
+```cpp
 void HideAutoHidePanes(
     CDockablePane* pBarToExclude = NULL,
     BOOL bImmediately = FALSE);
@@ -1221,7 +1221,7 @@ VRAI si l’état de gestionnaire d’amarrage a été chargé avec succès ; au
 
 Verrouille la fenêtre donnée.
 
-```
+```cpp
 void LockUpdate(BOOL bLock);
 ```
 
@@ -1311,7 +1311,7 @@ virtual void OnActivateFrame(BOOL bActivate);
 
 Appelée par l’infrastructure quand un menu contextuel actif traite un message WM_DESTROY.
 
-```
+```cpp
 void OnClosePopupMenu();
 ```
 
@@ -1340,7 +1340,7 @@ VRAI si la méthode réussit; autrement FALSE.
 
 Appelé par le cadre quand il construit un menu qui a une liste de volets.
 
-```
+```cpp
 void OnPaneContextMenu(CPoint point);
 ```
 
@@ -1448,7 +1448,7 @@ virtual void RecalcLayout(BOOL bNotify = TRUE);
 
 Libère les contenants vides de vitres.
 
-```
+```cpp
 void ReleaseEmptyPaneContainers();
 ```
 
@@ -1456,7 +1456,7 @@ void ReleaseEmptyPaneContainers();
 
 Enlève la vitre cachée spécifiée.
 
-```
+```cpp
 void RemoveHiddenMDITabbedBar(CDockablePane* pBar);
 ```
 
@@ -1486,7 +1486,7 @@ VRAI si le cadre spécifié est supprimé; FALSE autrement.
 
 Désenregistre une vitre et la retire de la liste dans le gestionnaire d’amarrage.
 
-```
+```cpp
 void RemovePaneFromDockManager(
     CBasePane* pWnd,
     BOOL bDestroy,
@@ -1538,7 +1538,7 @@ VRAI si la vitre est remplacée avec succès; FALSE autrement.
 
 Resorts les cadres dans la liste des mini-cadres.
 
-```
+```cpp
 void ResortMiniFramesForZOrder();
 ```
 
@@ -1598,7 +1598,7 @@ VRAI toujours.
 
 Écrit le gestionnaire d’amarrage à une archive.
 
-```
+```cpp
 void Serialize(CArchive& ar);
 ```
 
@@ -1615,7 +1615,7 @@ L’écriture du gestionnaire d’amarrage à une archive implique de détermine
 
 Définit la taille, la largeur et la hauteur des barres de commande et de la vitre spécifiée.
 
-```
+```cpp
 void SetAutohideZOrder(CDockablePane* pAHDockingBar);
 ```
 
@@ -1666,7 +1666,7 @@ virtual void SetDockState();
 
 Définit le mode d’aperçu d’impression des barres qui sont affichées dans l’aperçu d’impression.
 
-```
+```cpp
 void SetPrintPreviewMode(
     BOOL bPreview,
     CPrintPreviewState* pState);
@@ -1703,7 +1703,7 @@ Pour utiliser le look par défaut pour les marqueurs d’amarrage intelligents, 
 
 Affiche ou cache les fenêtres des mini-cadres.
 
-```
+```cpp
 void ShowDelayShowMiniFrames(BOOL bshow);
 ```
 
@@ -1733,7 +1733,7 @@ Toujours FALSE.
 
 Démarre l’amarrage intelligent de la fenêtre spécifiée en fonction de l’alignement du gestionnaire d’amarrage intelligent.
 
-```
+```cpp
 void StartSDocking(CWnd* pDockingWnd);
 ```
 
@@ -1746,7 +1746,7 @@ void StartSDocking(CWnd* pDockingWnd);
 
 Arrête l’amarrage intelligent.
 
-```
+```cpp
 void StopSDocking();
 ```
 

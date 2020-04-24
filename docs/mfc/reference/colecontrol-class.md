@@ -334,12 +334,12 @@ helpviewer_keywords:
 - COleControl [MFC], IsInvokeAllowed
 - COleControl [MFC], SetInitialDataFormats
 ms.assetid: 53e95299-38e8-447b-9c5f-a381d27f5123
-ms.openlocfilehash: 8e931b03dc09926d44fa5cb4125dd2ffa41c5813
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 54138955b0aa61a5e307c64825f3c74fa6f592b1
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81366196"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81753939"
 ---
 # <a name="colecontrol-class"></a>COleControl, classe
 
@@ -781,7 +781,7 @@ Par exemple, un conteneur peut définir cela en mode DE conception FALSE.
 
 Signale que la valeur de la propriété liée a changé.
 
-```
+```cpp
 void BoundPropertyChanged(DISPID dispid);
 ```
 
@@ -878,7 +878,7 @@ Cette fonction n’est normalement pas appelée directement. Au lieu de cela, le
 
 Appelez cette fonction lorsque l’ensemble de mnémoniques soutenus par le contrôle a changé.
 
-```
+```cpp
 void ControlInfoChanged();
 ```
 
@@ -926,7 +926,7 @@ Remplacez cette fonction pour personnaliser la façon dont les erreurs s’affic
 
 Simule une action de clic de souris sur le contrôle.
 
-```
+```cpp
 void DoClick();
 ```
 
@@ -959,7 +959,7 @@ Si Control Wizard a été utilisé pour créer le projet de contrôle OLE, la `C
 
 Redessine un contrôle OLE qui a été sous-classé à partir d’un contrôle Windows.
 
-```
+```cpp
 void DoSuperclassPaint(
     CDC* pDC,
     const CRect& rcBounds);
@@ -983,7 +983,7 @@ Pour plus d’informations sur cette fonction et sous-classer un contrôle Windo
 
 Appelé par le cadre lorsque l’apparence du contrôle doit être mise à jour.
 
-```
+```cpp
 void DrawContent(
     CDC* pDC,
     CRect& rc);
@@ -1005,7 +1005,7 @@ Cette fonction appelle directement `OnDraw` la fonction primordiale.
 
 Appelé par le cadre lorsque le contexte de l’appareil métaafile est utilisé.
 
-```
+```cpp
 void DrawMetafile(
     CDC* pDC,
     CRect& rc);
@@ -1023,7 +1023,7 @@ Zone rectangulaire à attirer.
 
 Permet la caractéristique simple du cadre pour un contrôle OLE.
 
-```
+```cpp
 void EnableSimpleFrame();
 ```
 
@@ -1056,7 +1056,7 @@ Cette fonction est normalement appelée par `COleControl::DoPropExchange`la mise
 
 Sérialise ou initialise l’état des propriétés du contrôle.
 
-```
+```cpp
 void ExchangeStockProps(CPropExchange* pPX);
 ```
 
@@ -1105,7 +1105,7 @@ Pour plus d’informations sur la persistance et la version, voir l’article [A
 
 Appelé par le cadre lorsque la souris est cliqué sur un contrôle actif.
 
-```
+```cpp
 void FireClick();
 ```
 
@@ -1119,7 +1119,7 @@ Pour que le tir automatique d’un événement Click se produise, la carte de l�
 
 Appelé par le cadre lorsque la souris est à double clic sur un contrôle actif.
 
-```
+```cpp
 void FireDblClick();
 ```
 
@@ -1133,7 +1133,7 @@ Pour que le tir automatique d’un événement DblClick se produise, la carte de
 
 Le stock a l’événement d’erreur.
 
-```
+```cpp
 void FireError(
     SCODE scode,
     LPCTSTR lpszDescription,
@@ -1165,7 +1165,7 @@ Pour résoudre ce problème, modifiez manuellement le paramètre SCODE dans celu
 
 Tire un événement défini par l’utilisateur de votre contrôle avec un certain nombre d’arguments optionnels,.
 
-```
+```cpp
 void AFX_CDECL FireEvent(
     DISPID dispid,
     BYTE* pbParams,
@@ -1210,7 +1210,7 @@ Habituellement, cette fonction ne doit pas être appelée directement. Au lieu d
 
 Appelé par le cadre quand une clé est pressée tandis que le contrôle est actif de l’interface utilisateur.
 
-```
+```cpp
 void FireKeyDown(
     USHORT* pnChar,
     short nShiftState);
@@ -1240,7 +1240,7 @@ Pour que le tir automatique d’un événement KeyDown se produise, la carte de 
 
 Appelé par le cadre quand une clé est pressée et libérée tandis que le contrôle personnalisé est active dans le conteneur.
 
-```
+```cpp
 void FireKeyPress(USHORT* pnChar);
 ```
 
@@ -1261,7 +1261,7 @@ Pour que le tir automatique d’un événement KeyPress se produise, la carte d�
 
 Appelé par le cadre quand une clé est libérée tandis que le contrôle personnalisé est active d’interface utilisateur dans le conteneur.
 
-```
+```cpp
 void FireKeyUp(
     USHORT* pnChar,
     short nShiftState);
@@ -1291,7 +1291,7 @@ Pour que le tir automatique d’un événement KeyUp se produise, la carte de l�
 
 Appelé par le cadre quand un bouton de souris est appuyé sur un contrôle personnalisé actif.
 
-```
+```cpp
 void FireMouseDown(
     short nButton,
     short nShiftState,
@@ -1319,7 +1319,7 @@ Contient une combinaison des drapeaux suivants :
 
 - ALT_MASK La clé ALT a été pressée pendant l’action.
 
-*X*<br/>
+*x*<br/>
 La x-coordonnées du curseur lorsqu’un bouton de souris a été appuyé. La coordonnées est relative au coin supérieur gauche de la fenêtre de commande.
 
 *y*<br/>
@@ -1335,7 +1335,7 @@ Pour que le tir automatique d’un événement MouseDown se produise, la carte d
 
 Appelé par le cadre lorsque le curseur est déplacé sur un contrôle personnalisé actif.
 
-```
+```cpp
 void FireMouseMove(
     short nButton,
     short nShiftState,
@@ -1363,7 +1363,7 @@ Contient une combinaison des drapeaux suivants :
 
 - ALT_MASK La clé ALT a été pressée pendant l’action.
 
-*X*<br/>
+*x*<br/>
 La x-coordonnées du curseur. La coordonnées est relative au coin supérieur gauche de la fenêtre de commande.
 
 *y*<br/>
@@ -1379,7 +1379,7 @@ Pour que le tir automatique d’un événement MouseMove se produise, la carte d
 
 Appelé par le cadre lorsqu’un bouton de souris est libéré sur un contrôle personnalisé actif.
 
-```
+```cpp
 void FireMouseUp(
     short nButton,
     short nShiftState,
@@ -1407,7 +1407,7 @@ Contient une combinaison des drapeaux suivants :
 
 - ALT_MASK La clé ALT a été pressée pendant l’action.
 
-*X*<br/>
+*x*<br/>
 La x-coordonnées du curseur lors de la libération d’un bouton de souris. La coordonnées est relative au coin supérieur gauche de la fenêtre de commande.
 
 *y*<br/>
@@ -1423,7 +1423,7 @@ Pour que le tir automatique d’un événement MouseUp se produise, la carte de 
 
 Déclenche un événement avec la valeur actuelle de l’état de contrôle prêt.
 
-```
+```cpp
 void FireReadyStateChange();
 ```
 
@@ -1696,7 +1696,7 @@ Pour plus `GetControlFlags` d’informations sur et d’autres optimisations des
 
 Récupère la taille de la fenêtre de contrôle OLE.
 
-```
+```cpp
 void GetControlSize(
     int* pcx,
     int* pcy);
@@ -1814,7 +1814,7 @@ Notez que l’appelant doit libérer l’objet une fois terminé. Dans la mise e
 
 Mesure les mesures de `CFontHolder` texte pour tout objet appartenant au contrôle.
 
-```
+```cpp
 void GetFontTextMetrics(
     LPTEXTMETRIC lptm,
     CFontHolder& fontHolder);
@@ -1884,7 +1884,7 @@ Ceci peut être utilisé pour obtenir un message pour l’affichage dans une bar
 
 Empêche l’accès à la valeur de propriété d’un contrôle par l’utilisateur.
 
-```
+```cpp
 void GetNotSupported();
 ```
 
@@ -1941,7 +1941,7 @@ Le rectangle n’est valide que si le contrôle est actif.
 
 Mesure les paramètres de texte pour la propriété De la police des stocks du contrôle, qui peut être sélectionnée avec la fonction [SelectStockFont.](#selectstockfont)
 
-```
+```cpp
 void GetStockTextMetrics(LPTEXTMETRIC lptm);
 ```
 
@@ -1997,7 +1997,7 @@ Normalement, cela suppose que la fenêtre de contrôle soit stockée en tant que
 
 Informe la classe de base des CDS que le contrôle utilisera.
 
-```
+```cpp
 void InitializeIIDs(
     const IID* piidPrimary,
     const IID* piidEvents);
@@ -2043,7 +2043,7 @@ Une référence à la chaîne de texte de contrôle.
 
 Définit l’état de préparation du contrôle.
 
-```
+```cpp
 void InternalSetReadyState(long lNewReadyState);
 ```
 
@@ -2068,7 +2068,7 @@ La plupart des contrôles simples n’ont jamais besoin de faire la distinction 
 
 Force le contrôle à se redessiner.
 
-```
+```cpp
 void InvalidateControl(
     LPCRECT lpRect = NULL,
     BOOL bErase = TRUE);
@@ -2090,7 +2090,7 @@ Si *lpRect* a une valeur NULL, l’ensemble du contrôle sera redessiné. Si *lp
 
 Invalide la zone cliente de la fenêtre de conteneurs dans la région donnée.
 
-```
+```cpp
 void InvalidateRgn(CRgn* pRgn, BOOL bErase = TRUE);
 ```
 
@@ -2202,7 +2202,7 @@ Vous devez remplacer cette fonction et retourner VRAI si votre contrôle OLE sou
 
 Réinitialise toutes les données précédentes chargées asynchronement et initie un nouveau chargement de la propriété asynchrone du contrôle.
 
-```
+```cpp
 void Load(LPCTSTR strNewPath, CDataPathProperty& prop);
 ```
 
@@ -2811,7 +2811,7 @@ DWORD décrivant la forme ou l’aspect d’un objet doit être affichée. Les v
 - DVASPECT_TRANSPARENT Rectangle couvrant toutes les pièces transparentes ou irrégulières.
 
 *pRect (en)*<br/>
-Points à la structure [RECTL](/previous-versions/dd162907\(v=vs.85\)) spécifiant le rectangle dans lequel l’objet doit être dessiné. Ce paramètre contrôle le positionnement et l’étirement de l’objet.
+Points à la structure [RECTL](/windows/win32/api/windef/ns-windef-rectl) spécifiant le rectangle dans lequel l’objet doit être dessiné. Ce paramètre contrôle le positionnement et l’étirement de l’objet.
 
 ### <a name="return-value"></a>Valeur de retour
 
@@ -2873,7 +2873,7 @@ virtual void OnInactiveMouseMove(
 *lprcBounds (lprcBounds)*<br/>
 Le rectangle de délimitation de l’objet, dans les coordonnées du client de la fenêtre contenante. Indique à l’objet sa position et sa taille exactes à l’écran lorsque le message WM_MOUSEMOVE a été reçu.
 
-*X*<br/>
+*x*<br/>
 La coordonnées x de l’emplacement de la souris dans les coordonnées des clients de la fenêtre contenante.
 
 *y*<br/>
@@ -2904,7 +2904,7 @@ virtual BOOL OnInactiveSetCursor(
 *lprcBounds (lprcBounds)*<br/>
 Le rectangle de délimitation de l’objet, dans les coordonnées du client de la fenêtre contenante. Indique à l’objet sa position et sa taille exactes à l’écran lorsque le message WM_SETCURSOR a été reçu.
 
-*X*<br/>
+*x*<br/>
 La coordonnées x de l’emplacement de la souris dans les coordonnées des clients de la fenêtre contenante.
 
 *y*<br/>
@@ -3513,7 +3513,7 @@ Sur l’entrée *pPoint* est relative à l’origine du parent (coin supérieur 
 
 Informe le conteneur qu’une boîte de dialogue modal a été fermée.
 
-```
+```cpp
 void PostModalDialog(HWND hWndParent = NULL);
 ```
 
@@ -3530,7 +3530,7 @@ Appelez cette fonction après avoir affiché n’importe quelle boîte de dialog
 
 Informe le conteneur qu’une boîte de dialogue modal est sur le point d’être affichée.
 
-```
+```cpp
 void PreModalDialog(HWND hWndParent = NULL);
 ```
 
@@ -3547,7 +3547,7 @@ Appelez cette fonction avant d’afficher n’importe quelle boîte de dialogue 
 
 Détruit et re-crée la fenêtre du contrôle.
 
-```
+```cpp
 void RecreateControlWindow();
 ```
 
@@ -3559,7 +3559,7 @@ Cela peut être nécessaire si vous avez besoin de changer les bits de style de 
 
 Force un repeindre du contrôle de l’OL.
 
-```
+```cpp
 void Refresh();
 ```
 
@@ -3630,7 +3630,7 @@ Appelez cette fonction pour réinitialiser le parent de la fenêtre de contrôle
 
 Initialise l’état `COleControl` des propriétés boursières à leurs valeurs par défaut.
 
-```
+```cpp
 void ResetStockProps();
 ```
 
@@ -3648,7 +3648,7 @@ Vous pouvez améliorer les performances d’initialisation `ResetVersion` binair
 
 Initialise le numéro de version à une valeur spécifiée.
 
-```
+```cpp
 void ResetVersion(DWORD dwVersionDefault);
 ```
 
@@ -3665,7 +3665,7 @@ Vous pouvez améliorer les performances d’initialisation `ResetStockProps` bin
 
 Permet à un objet OLE sans fenêtre de faire défiler une zone à l’intérieur de son image active sur l’écran.
 
-```
+```cpp
 void ScrollWindow(
     int xAmount,
     int yAmount,
@@ -3730,7 +3730,7 @@ Un pointeur vers `CFont` l’objet précédemment sélectionné. Vous devez util
 
 Sérialise ou initialise l’état de l’espace d’affichage alloué au contrôle.
 
-```
+```cpp
 void SerializeExtent(CArchive& ar);
 ```
 
@@ -3751,7 +3751,7 @@ Vous pouvez améliorer les performances de `SerializeExtent`persistance `Seriali
 
 Sérialise ou initialise l’état des propriétés `COleControl` du stock : Apparence, BackColor, BorderStyle, Caption, Enabled, Font, ForeColor et Texte.
 
-```
+```cpp
 void SerializeStockProps(CArchive& ar);
 ```
 
@@ -3800,7 +3800,7 @@ Vous pouvez améliorer les performances de `SerializeVersion`persistance `Serial
 
 Définit la valeur de propriété d’apparence d’actions de votre contrôle.
 
-```
+```cpp
 void SetAppearance (short sAppearance);
 ```
 
@@ -3817,7 +3817,7 @@ Pour en savoir plus sur les propriétés des actions, voir [ActiveX Controls: Pr
 
 Définit la valeur de propriété BackColor de votre contrôle.
 
-```
+```cpp
 void SetBackColor(OLE_COLOR dwBackColor);
 ```
 
@@ -3834,7 +3834,7 @@ Pour plus d’informations sur l’utilisation de cette propriété et d’autre
 
 Définit la valeur de propriété De stock BorderStyle de votre contrôle.
 
-```
+```cpp
 void SetBorderStyle(short sBorderStyle);
 ```
 
@@ -3893,7 +3893,7 @@ Notez que toutes les coordonnées des fenêtres de contrôle sont relatives au c
 
 Définit la valeur de propriété activée en stock de votre contrôle.
 
-```
+```cpp
 void SetEnabled(BOOL bEnabled);
 ```
 
@@ -3928,7 +3928,7 @@ Si le contrôle n’est pas sans fenêtre, cette fonction provoque le `CWnd::Set
 
 Définit la propriété De fonte de stock de votre contrôle.
 
-```
+```cpp
 void SetFont(LPFONTDISP pFontDisp);
 ```
 
@@ -3941,7 +3941,7 @@ Un pointeur à une interface de répartition De Font.
 
 Définit la valeur de propriété ForeColor de votre contrôle.
 
-```
+```cpp
 void SetForeColor(OLE_COLOR dwForeColor);
 ```
 
@@ -3970,7 +3970,7 @@ L’implémentation par défaut spécifie deux formats : CF_METAFILEPICT et l’
 
 Définit la taille d’un contrôle OLE lorsqu’il est affiché pour la première fois dans un conteneur.
 
-```
+```cpp
 void SetInitialSize(
     int cx,
     int cy);
@@ -3992,7 +3992,7 @@ Appelez cette fonction dans votre constructeur pour définir la taille initiale 
 
 Modifications de l’état modifié d’un contrôle.
 
-```
+```cpp
 void SetModifiedFlag(BOOL bModified = TRUE);
 ```
 
@@ -4009,7 +4009,7 @@ Appelez cette fonction chaque fois qu’un changement se produit qui affecterait
 
 Indique qu’une demande de modification a échoué.
 
-```
+```cpp
 void SetNotPermitted();
 ```
 
@@ -4021,7 +4021,7 @@ Appelez cette `BoundPropertyRequestEdit` fonction en cas d’échec. Cette fonct
 
 Empêche la modification de la valeur de propriété d’un contrôle par l’utilisateur.
 
-```
+```cpp
 void SetNotSupported();
 ```
 
@@ -4054,7 +4054,7 @@ Si le contrôle est ouvert, il est resized; sinon la fonction `OnPosRectChanged`
 
 Définit la valeur de la catégorie d’actions de votre contrôle ou de la propriété Text.
 
-```
+```cpp
 void SetText(LPCTSTR pszText);
 ```
 
@@ -4071,7 +4071,7 @@ Notez que les propriétés caption d’actions et texte sont toutes deux cartogr
 
 Signale l’apparition d’une erreur dans votre contrôle.
 
-```
+```cpp
 void ThrowError(
     SCODE sc,
     UINT nDescriptionID,
@@ -4105,7 +4105,7 @@ Cette fonction ne doit être appelée qu’à partir d’une fonction Get or Set
 
 Transforme les valeurs de coordonnées entre les unités HIMETRIC et les unités indigènes du conteneur.
 
-```
+```cpp
 void TransformCoords(
     POINTL* lpptlHimetric,
     POINTF* lpptfContainer,
@@ -4120,7 +4120,7 @@ Pointeur `POINTL` vers une structure contenant des coordonnées dans les unités
 *lpptfContainer*<br/>
 Pointeur `POINTF` vers une structure contenant des coordonnées dans la taille de l’unité du conteneur.
 
-*Drapeaux*<br/>
+*flags*<br/>
 Une combinaison des valeurs suivantes :
 
 - XFORMCOORDS_POSITION une position dans le conteneur.
@@ -4190,7 +4190,7 @@ virtual LRESULT WindowProc(
 
 ### <a name="parameters"></a>Paramètres
 
-*Message*<br/>
+*message*<br/>
 Spécifie le message Windows à traiter.
 
 *wParam*<br/>
