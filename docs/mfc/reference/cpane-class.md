@@ -133,12 +133,12 @@ helpviewer_keywords:
 - CPane [MFC], m_bHandleMinSize
 - CPane [MFC], m_recentDockInfo
 ms.assetid: 5c651a64-3c79-4d94-9676-45f6402a6bc5
-ms.openlocfilehash: 7b2c5db976af832b1f1570dd431374c9e15520ad
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 95aec648009f6d037081c9b3f54d46e9865ca559
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81364161"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81753666"
 ---
 # <a name="cpane-class"></a>CPane Class
 
@@ -340,7 +340,7 @@ La différence de largeur et de hauteur entre *rectRequired* et le rectangle de 
 
 Calcule le rectangle intérieur d’une vitre, y compris les bordures et les pinces.
 
-```
+```cpp
 void CalcInsideRect(
     CRect& rect,
     BOOL bHorz) const;
@@ -362,7 +362,7 @@ Cette méthode est appelée par le cadre lorsqu’elle doit recalculer la dispos
 
 Calcule le rectangle récemment amarré.
 
-```
+```cpp
 void CalcRecentDockedRect();
 ```
 
@@ -864,7 +864,7 @@ virtual void GetMinSize(CSize& size) const;
 
 ### <a name="parameters"></a>Paramètres
 
-*Taille*<br/>
+*size*<br/>
 [out] Un `CSize` objet qui est rempli de la taille minimale autorisée.
 
 ### <a name="remarks"></a>Notes
@@ -890,7 +890,7 @@ Le titre de la vitre est affiché dans la zone de légende lorsque la vitre est 
 
 Récupère le *rectangle virtuel* de la vitre.
 
-```
+```cpp
 void GetVirtualRect(CRect& rectVirtual) const;
 ```
 
@@ -1381,7 +1381,7 @@ S’il `CMFCAutoHideButton::m_bOverlappingTabs` s’agit de FALSE, ou si la vitr
 
 Définit les valeurs frontalières de la vitre.
 
-```
+```cpp
 void SetBorders(
     int cxLeft = 0,
     int cyTop = 0,
@@ -1416,7 +1416,7 @@ Appelez cette fonction pour définir les tailles des bordures de la vitre.
 
 Définit le *point chaud* pour la vitre.
 
-```
+```cpp
 void SetClientHotSpot(const CPoint& ptNew);
 ```
 
@@ -1471,13 +1471,13 @@ Par défaut, toutes les barres d’outils ont désactivé le mode ligne exclusif
 
 Définit la taille minimale autorisée pour la vitre.
 
-```
+```cpp
 void SetMinSize(const CSize& size);
 ```
 
 ### <a name="parameters"></a>Paramètres
 
-*Taille*<br/>
+*size*<br/>
 [dans] Un `CSize` objet qui contient la taille minimale autorisée pour la vitre.
 
 ### <a name="remarks"></a>Notes
@@ -1486,7 +1486,7 @@ void SetMinSize(const CSize& size);
 
 Définit le *rectangle virtuel* de la vitre.
 
-```
+```cpp
 void SetVirtualRect(
     const CRect& rect,
     BOOL bMapToParent = TRUE);
@@ -1510,7 +1510,7 @@ N’appelez pas les méthodes qui sont liées à des rectangles virtuels, sauf s
 
 Définit les informations de classe de temps d’exécution pour la fenêtre mini-cadre par défaut.
 
-```
+```cpp
 void SetMiniFrameRTC(CRuntimeClass* pClass);
 ```
 
@@ -1582,7 +1582,7 @@ Utilisez cette méthode pour démantquer un volet programmatiquement.
 
 Mise à jour du rectangle virtuel.
 
-```
+```cpp
 void UpdateVirtualRect();
 void UpdateVirtualRect(CPoint ptOffset);
 void UpdateVirtualRect(CSize sizeNew);

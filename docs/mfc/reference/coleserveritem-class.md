@@ -74,12 +74,12 @@ helpviewer_keywords:
 - COleServerItem [MFC], OnShow
 - COleServerItem [MFC], m_sizeExtent
 ms.assetid: 80256df6-3888-4256-944b-787d4b2e6b0d
-ms.openlocfilehash: 5373075cf6dfc54e6e2368e46f48f317fcec64d9
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: bdb91168a7c0ae718ca7d7514448b55965186aa8
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81376113"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81753739"
 ---
 # <a name="coleserveritem-class"></a>COleServerItem, classe
 
@@ -175,7 +175,7 @@ Pour plus d’informations sur les serveurs et les sujets connexes, voir l’art
 
 Appelez cette fonction pour placer les formats de présentation `COleDataSource` et de conversion pour l’élément OLE dans l’objet spécifié.
 
-```
+```cpp
 void AddOtherClipboardData(COleDataSource* pDataSource);
 ```
 
@@ -210,7 +210,7 @@ Indicateur indiquant si l’objet peut être supprimé lorsqu’un lien vers lui
 
 Appelez cette fonction pour copier l’article OLE au Clipboard.
 
-```
+```cpp
 void CopyToClipboard(BOOL bIncludeLink = FALSE);
 ```
 
@@ -275,7 +275,7 @@ Pour plus d’informations sur la façon dont les informations sur les retards d
 
 Appelez cette fonction pour remplir l’objet [COleDataSource](../../mfc/reference/coledatasource-class.md) spécifié avec toutes les données qui seraient copiées sur le Clipboard si vous avez appelé [CopyToClipboard](#copytoclipboard) (les mêmes données seraient également transférées si vous appeliez [DoDragDrop](#dodragdrop)).
 
-```
+```cpp
 void GetClipboardData(
     COleDataSource* pDataSource,
     BOOL bIncludeLink = FALSE,
@@ -339,7 +339,7 @@ Cela permet l’accès au document serveur que `COleServerItem` vous avez transm
 
 Appelez cette fonction pour obtenir les données CF_EMBEDSOURCE pour un élément OLE.
 
-```
+```cpp
 void GetEmbedSourceData(LPSTGMEDIUM lpStgMedium);
 ```
 
@@ -401,7 +401,7 @@ Pour plus d’informations, voir [STGMEDIUM](/windows/win32/api/objidl/ns-objidl
 
 Appelez cette fonction pour obtenir les données CF_OBJECTDESCRIPTOR pour un élément OLE.
 
-```
+```cpp
 void GetObjectDescriptorData(
     LPPOINT lpOffset,
     LPSIZE lpSize,
@@ -475,7 +475,7 @@ La mise en œuvre par défaut [d’OnSetExtent](#onsetextent) définit ce membre
 
 Appelez cette fonction après que l’élément lié a été modifié.
 
-```
+```cpp
 void NotifyChanged(DVASPECT nDrawAspect = DVASPECT_CONTENT);
 ```
 
@@ -903,7 +903,7 @@ Spécifie l’aspect de l’article OLE dont les limites sont spécifiées. Ce p
 
 - DVASPECT_DOCPRINT’article est représenté comme s’il avait été imprimé à l’aide de la commande d’impression du menu Fichier.
 
-*Taille*<br/>
+*size*<br/>
 Une structure [de taille cSize](../../atl-mfc-shared/reference/csize-class.md) spécifiant la nouvelle taille de l’article OLE.
 
 ### <a name="return-value"></a>Valeur de retour
@@ -982,7 +982,7 @@ La implémentation par `COleClientItem` défaut appelle [UpdateLink](../../mfc/r
 
 Appelez cette fonction lorsque vous créez un élément lié pour définir son nom.
 
-```
+```cpp
 void SetItemName(LPCTSTR lpszItemName);
 ```
 

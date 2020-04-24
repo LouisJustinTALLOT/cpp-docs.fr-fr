@@ -16,12 +16,12 @@ helpviewer_keywords:
 - CMFCRibbonMainPanel [MFC], AddToRight
 - CMFCRibbonMainPanel [MFC], GetCommandsFrame
 ms.assetid: 1af78798-5e75-4365-9c81-a54aa5679602
-ms.openlocfilehash: 1458039c25f2379b3c3db553b2010e9391df28db
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 0fd1cd2fec31f9da0c2bec36d08586780f4f95c3
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81375105"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81753571"
 ---
 # <a name="cmfcribbonmainpanel-class"></a>CMFCRibbonMainPanel, classe
 
@@ -97,7 +97,7 @@ Ajoute un élément ruban au panneau. Les éléments ajoutés à l’aide de cet
 
 Ajoute une chaîne de texte au menu de liste de fichiers récents.
 
-```
+```cpp
 void AddRecentFilesList(
     LPCTSTR lpszLabel,
     int nWidth = 300);
@@ -117,7 +117,7 @@ Spécifie la largeur, en pixels, du panneau de liste de fichiers récents.
 
 Ajoute un élément ruban à la vitre inférieure du panneau d’application de ruban.
 
-```
+```cpp
 void AddToBottom(CMFCRibbonMainPanelButton* pElem);
 ```
 
@@ -132,7 +132,7 @@ void AddToBottom(CMFCRibbonMainPanelButton* pElem);
 
 Ajoute un élément ruban à la vitre droite du panneau bouton d’application.
 
-```
+```cpp
 void AddToRight(
     CMFCRibbonBaseElement* pElem,
     int nWidth = 300);

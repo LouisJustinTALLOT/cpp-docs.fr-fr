@@ -28,12 +28,12 @@ helpviewer_keywords:
 - CScrollView [MFC], SetScaleToFitSize
 - CScrollView [MFC], SetScrollSizes
 ms.assetid: 4ba16dac-1acb-4be0-bb55-5fb695b6948d
-ms.openlocfilehash: c22f438623ca1d1c9022ea7c3efc50e0826ad302
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 5d0eb163fae2aa5fc63470e1c499311ab1a402a6
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81318485"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81754422"
 ---
 # <a name="cscrollview-class"></a>CScrollView, classe
 
@@ -124,7 +124,7 @@ Pour plus d’informations sur l’utilisation `CScrollView`, voir Document / Af
 
 Appelez cette fonction de membre pour déterminer si la vue de défilement a des barres horizontales et verticales.
 
-```
+```cpp
 void CheckScrollBars(
     BOOL& bHasHorzBar,
     BOOL& bHasVertBar) const;
@@ -154,7 +154,7 @@ Vous devez `SetScrollSizes` appeler `SetScaleToFitSize` l’un ou l’autre ou a
 
 Appelez `FillOutsideRect` pour remplir la zone de la vue qui apparaît à l’extérieur de la zone de défilement.
 
-```
+```cpp
 void FillOutsideRect(
     CDC* pDC,
     CBrush* pBrush);
@@ -198,7 +198,7 @@ Cette paire de coordonnées correspond à l’emplacement dans le document auque
 
 `GetDeviceScrollSizes`obtient le mode de cartographie actuel, la taille totale, et la taille de la ligne et des pages de la vue défilementable.
 
-```
+```cpp
 void GetDeviceScrollSizes(
     int& nMapMode,
     SIZE& sizeTotal,
@@ -258,7 +258,7 @@ La taille totale de la vue de défilement dans les unités logiques. La taille h
 
 Appelez `ResizeParentToFit` pour laisser la taille de votre vue dicter la taille de sa fenêtre de cadre.
 
-```
+```cpp
 void ResizeParentToFit(BOOL bShrinkOnly = TRUE);
 ```
 
@@ -279,7 +279,7 @@ Ceci est recommandé uniquement pour les vues dans les fenêtres de cadre pour e
 
 Appelez `ScrollToPosition` pour faire défiler un point donné dans la vue.
 
-```
+```cpp
 void ScrollToPosition(POINT pt);
 ```
 
@@ -296,7 +296,7 @@ La vue sera défichée de sorte que ce point est au coin supérieur gauche de la
 
 Appelez `SetScaleToFitSize` lorsque vous souhaitez mettre à l’échelle la taille du viewport à la taille actuelle de la fenêtre automatiquement.
 
-```
+```cpp
 void SetScaleToFitSize(SIZE sizeTotal);
 ```
 
@@ -321,7 +321,7 @@ Vous placez généralement l’appel `SetScaleToFitSize` dans votre remplacement
 
 Appelez `SetScrollSizes` lorsque la vue est sur le point d’être mise à jour.
 
-```
+```cpp
 void SetScrollSizes(
     int nMapMode,
     SIZE sizeTotal,

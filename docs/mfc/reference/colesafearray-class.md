@@ -60,12 +60,12 @@ helpviewer_keywords:
 - COleSafeArray [MFC], UnaccessData
 - COleSafeArray [MFC], Unlock
 ms.assetid: f45a5224-5f48-40ec-9ddd-287ef9740150
-ms.openlocfilehash: a7be9910b573cb5bc430d6608e75ce6661b71bc2
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 10e9975bac776429a38bfc707215a9465ce35c2e
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81374860"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81753768"
 ---
 # <a name="colesafearray-class"></a>COleSafeArray, classe
 
@@ -144,7 +144,7 @@ class COleSafeArray : public tagVARIANT
 
 Récupère un pointeur sur les données du tableau.
 
-```
+```cpp
 void AccessData(void** ppvData);
 ```
 
@@ -165,7 +165,7 @@ Sur l’erreur, la fonction jette un [CMemoryException](../../mfc/reference/cmem
 
 Alloue la mémoire pour un tableau sûr.
 
-```
+```cpp
 void AllocData();
 ```
 
@@ -177,7 +177,7 @@ Sur l’erreur, la fonction jette un [CMemoryException](../../mfc/reference/cmem
 
 Alloue la mémoire au descripteur d’un tableau sûr.
 
-```
+```cpp
 void AllocDescriptor(DWORD dwDims);
 ```
 
@@ -194,7 +194,7 @@ Sur l’erreur, la fonction jette un [CMemoryException](../../mfc/reference/cmem
 
 Donne le contrôle des `VARIANT` données dans `COleSafeArray` un tableau existant à l’objet.
 
-```
+```cpp
 void Attach(VARIANT& varSrc);
 ```
 
@@ -215,7 +215,7 @@ Le `VARIANT`type de la source est réglé pour VT_EMPTY. Cette fonction efface l
 
 Efface le tableau de sécurité.
 
-```
+```cpp
 void Clear();
 ```
 
@@ -271,7 +271,7 @@ Sur l’erreur, la fonction jette un [CMemoryException](../../mfc/reference/cmem
 
 Crée une copie d’un tableau de sécurité existant.
 
-```
+```cpp
 void Copy(LPSAFEARRAY* ppsa);
 ```
 
@@ -288,7 +288,7 @@ Sur l’erreur, la fonction jette un [CMemoryException](../../mfc/reference/cmem
 
 Alloue et initialise les données pour le tableau.
 
-```
+```cpp
 void Create(
     VARTYPE vtSrc,
     DWORD dwDims,
@@ -326,7 +326,7 @@ Cette fonction effacera les données de tableau actuelles si nécessaire. Sur l�
 
 Crée un nouvel `COleSafeArray` objet unidimensionnel.
 
-```
+```cpp
 void CreateOneDim(
     VARTYPE vtSrc,
     DWORD dwElements,
@@ -362,7 +362,7 @@ Sur l’erreur, la fonction jette un [CMemoryException](../../mfc/reference/cmem
 
 Détruit un descripteur de tableau existant et toutes les données dans le tableau.
 
-```
+```cpp
 void Destroy();
 ```
 
@@ -374,7 +374,7 @@ Si des objets sont stockés dans le tableau, chaque objet est libéré. Sur l’
 
 Détruit toutes les données dans un tableau sécurisé.
 
-```
+```cpp
 void DestroyData();
 ```
 
@@ -386,7 +386,7 @@ Si des objets sont stockés dans le tableau, chaque objet est libéré. Sur l’
 
 Détruit un descripteur d’un tableau sûr.
 
-```
+```cpp
 void DestroyDescriptor();
 ```
 
@@ -420,7 +420,7 @@ Sur l’erreur, la fonction jette un [COleException](../../mfc/reference/coleexc
 
 Copie le contenu du tableau `CByteArray`de sécurité dans un .
 
-```
+```cpp
 void GetByteArray(CByteArray& bytes);
 ```
 
@@ -449,7 +449,7 @@ Le nombre de dimensions dans le tableau de sécurité.
 
 Récupère un seul élément du tableau de sécurité.
 
-```
+```cpp
 void GetElement(
     long* rgIndices,
     void* pvData);
@@ -489,7 +489,7 @@ La taille, dans les octets, des éléments d’un tableau de sécurité.
 
 Retourne la limite inférieure pour `COleSafeArray` n’importe quelle dimension d’un objet.
 
-```
+```cpp
 void GetLBound(
     DWORD dwDim,
     long* pLBound);
@@ -531,7 +531,7 @@ Le nombre d’éléments dans le tableau de sécurité unidimensionnel.
 
 Retourne la limite supérieure pour n’importe quelle dimension d’un tableau sûr.
 
-```
+```cpp
 void GetUBound(
     DWORD dwDim,
     long* pUBound);
@@ -557,7 +557,7 @@ Sur l’erreur, la fonction jette un [COleException](../../mfc/reference/coleexc
 
 Incréments le nombre de verrouillage d’un tableau et place un pointeur aux données de tableau dans le descripteur de tableau.
 
-```
+```cpp
 void Lock();
 ```
 
@@ -640,7 +640,7 @@ CDumpContext& AFXAPI operator<<(
 
 Retourne un pointeur à l’élément spécifié par les valeurs indiciels.
 
-```
+```cpp
 void PtrOfIndex(
     long* rgIndices,
     void** ppvData);
@@ -658,7 +658,7 @@ Au retour, pointeur à l’élément identifié par les valeurs dans *rgIndices*
 
 Affecte un élément unique dans le tableau.
 
-```
+```cpp
 void PutElement(
     long* rgIndices,
     void* pvData);
@@ -688,7 +688,7 @@ Sur l’erreur, la fonction jette un [CMemoryException](../../mfc/reference/cmem
 
 Change le moins significatif (le plus à droite) lié d’un tableau sûr.
 
-```
+```cpp
 void Redim(SAFEARRAYBOUND* psaboundNew);
 ```
 
@@ -705,7 +705,7 @@ Sur l’erreur, la fonction jette un [COleException](../../mfc/reference/coleexc
 
 Modifie le nombre d’éléments `COleSafeArray` d’un objet unidimensionnel.
 
-```
+```cpp
 void ResizeOneDim(DWORD dwElements);
 ```
 
@@ -726,7 +726,7 @@ Sur l’erreur, la fonction jette un [COleException](../../mfc/reference/coleexc
 
 Décrément le nombre de serrures d’un tableau `AccessData`et invalide le pointeur récupéré par .
 
-```
+```cpp
 void UnaccessData();
 ```
 
@@ -742,7 +742,7 @@ Sur l’erreur, la fonction jette un [COleException](../../mfc/reference/coleexc
 
 Décrément le nombre de serrures d’un tableau afin qu’il puisse être libéré ou resized.
 
-```
+```cpp
 void Unlock();
 ```
 

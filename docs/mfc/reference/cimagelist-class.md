@@ -74,12 +74,12 @@ helpviewer_keywords:
 - CImageList [MFC], Write
 - CImageList [MFC], m_hImageList
 ms.assetid: b6d1a704-1c82-4548-8a8f-77972adc98a5
-ms.openlocfilehash: eff2d0c1de88ebd9d949ebe197563c87c17e5b05
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 17cd2a94cb397e59e4622aea8ed7bb6fbe1eee43
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81372450"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81752684"
 ---
 # <a name="cimagelist-class"></a>CImageList, classe
 
@@ -295,7 +295,7 @@ L’index zéro de l’image à utiliser comme source de l’opération de copie
 *uFlags*<br/>
 La valeur du drapeau bit qui spécifie le type d’opération de copie à faire. Ce paramètre peut être l’une des valeurs suivantes :
 
-|Value|Signification|
+|Valeur|Signification|
 |-----------|-------------|
 |ILCF_MOVE|L’image source est copiée à l’index de l’image de destination. Cette opération se traduit par de multiples cas d’une image donnée. ILCF_MOVE est la valeur par défaut.|
 |ILCF_SWAP|Les images source et destination échangent des positions dans la liste d’images.|
@@ -357,7 +357,7 @@ Dimensions de chaque image, en pixels.
 *nFlags*<br/>
 Spécifie le type de liste d’images à créer. Ce paramètre peut être une combinaison des valeurs suivantes, `ILC_COLOR` mais il ne peut inclure qu’une seule des valeurs.
 
-|Value|Signification|
+|Valeur|Signification|
 |-----------|-------------|
 |ILC_COLOR|Utilisez le comportement par défaut si aucun des autres ILC_COLOR sont spécifiés. Typiquement, la valeur par défaut est ILC_COLOR4; mais pour les conducteurs d’affichage plus anciens, la valeur par défaut est ILC_COLORDDB.|
 |ILC_COLOR4|Utilisez une section de bits (16 couleurs) de bits (DIB) comme bitmap pour la liste d’images.|
@@ -591,7 +591,7 @@ Emplacement à partir duquel dessiner dans le contexte de l’appareil spécifi�
 *nStyle*<br/>
 Drapeau spécifiant le style de dessin. Il peut s’agir d’une ou de plusieurs de ces valeurs :
 
-|Value|Signification|
+|Valeur|Signification|
 |-----------|-------------|
 |ILD_BLEND25, ILD_FOCUS|Dessine l’image, mélangeant 25 pour cent avec le système mettre en évidence la couleur. Cette valeur n’a aucun effet si la liste d’images ne contient pas de masque.|
 |ILD_BLEND50, ILD_SELECTED, ILD_BLEND|Dessine l’image, mélangeant 50 pour cent avec le système mettre en évidence la couleur. Cette valeur n’a aucun effet si la liste d’images ne contient pas de masque.|
@@ -691,13 +691,13 @@ Un pointeur vers le contexte de l’appareil de destination. Vous devez supprime
 L’index zéro de l’image à dessiner.
 
 *Pt*<br/>
-Une structure [POINT](/previous-versions/dd162805\(v=vs.85\)) contenant les coordonnées x et y où l’image sera dessinée.
+Une structure [POINT](/windows/win32/api/windef/ns-windef-point) contenant les coordonnées x et y où l’image sera dessinée.
 
 *Sz*<br/>
 Une structure [SIZE](/windows/win32/api/windef/ns-windef-size) indiquant la taille de l’image à dessiner.
 
 *ptOrigin*<br/>
-Une structure [POINT](/previous-versions/dd162805\(v=vs.85\)) contenant les coordonnées x et y spécifiant le coin supérieur gauche de l’opération de dessin par rapport à l’image elle-même. Les pixels de l’image qui sont à gauche de la x-coordonner et au-dessus de la y-coordinate ne sont pas dessinés.
+Une structure [POINT](/windows/win32/api/windef/ns-windef-point) contenant les coordonnées x et y spécifiant le coin supérieur gauche de l’opération de dessin par rapport à l’image elle-même. Les pixels de l’image qui sont à gauche de la x-coordonner et au-dessus de la y-coordinate ne sont pas dessinés.
 
 *fStyle (en)*<br/>
 Drapeau spécifiant le style de dessin et, en option, l’image de superposition. Voir la section Remarques pour plus d’informations sur l’image de superposition. L’implémentation par défaut MFC, ILD_NORMAL, dessine l’image en utilisant la couleur de fond pour la liste d’images. Si la couleur de fond est la valeur CLR_NONE, l’image est dessinée de manière transparente à l’aide d’un masque.
@@ -712,7 +712,7 @@ D’autres valeurs possibles sont décrites sous le membre *dwRop* de la structu
 *rgbBack (rgbBack)*<br/>
 La couleur de fond d’image, par défaut CLR_DEFAULT. Ce paramètre peut être une valeur RGB définie par l’application ou l’une des valeurs suivantes :
 
-|Value|Signification|
+|Valeur|Signification|
 |-----------|-------------|
 |CLR_DEFAULT|Couleur de fond par défaut. L’image est dessinée à l’aide de la couleur de fond de la liste d’images.|
 |CLR_NONE|Pas de couleur de fond. L’image est dessinée de manière transparente.|
@@ -720,7 +720,7 @@ La couleur de fond d’image, par défaut CLR_DEFAULT. Ce paramètre peut être 
 *rgbFore (en)*<br/>
 Couleur de premier plan d’image, par défaut CLR_DEFAULT. Ce paramètre peut être une valeur RGB définie par l’application ou l’une des valeurs suivantes :
 
-|Value|Signification|
+|Valeur|Signification|
 |-----------|-------------|
 |CLR_DEFAULT|Couleur de premier plan par défaut. L’image est dessinée à l’aide du système mettre en évidence la couleur comme la couleur du premier plan.|
 |CLR_NONE|Pas de couleur de mélange. L’image est mélangée avec la couleur du contexte de l’appareil de destination.|
@@ -874,7 +874,7 @@ static CImageList* PASCAL GetDragImage(
 ### <a name="parameters"></a>Paramètres
 
 *lpPoint (en)*<br/>
-Adresse d’une structure [POINT](/previous-versions/dd162805\(v=vs.85\)) qui reçoit la position de traînée actuelle.
+Adresse d’une structure [POINT](/windows/win32/api/windef/ns-windef-point) qui reçoit la position de traînée actuelle.
 
 *lpPointHotSpot*<br/>
 Adresse d’une `POINT` structure qui reçoit le décalage de l’image de traînée par rapport à la position de traînée.

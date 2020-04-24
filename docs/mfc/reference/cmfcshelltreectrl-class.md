@@ -28,12 +28,12 @@ helpviewer_keywords:
 - CMFCShellTreeCtrl [MFC], SetFlags
 - CMFCShellTreeCtrl [MFC], SetRelatedList
 ms.assetid: 3d1da715-9554-4ed7-968c-055c48146267
-ms.openlocfilehash: 41d9a14e379c566f001eda8b10b2669b95beb171
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: c6f5856e92c2aca1d23ee6a37b99ea9700ea6db0
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81376141"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81753441"
 ---
 # <a name="cmfcshelltreectrl-class"></a>Classe CMFCShellTreeCtrl
 
@@ -96,7 +96,7 @@ L'exemple suivant montre comment créer un objet de la classe `CMFCShellTreeCtrl
 
 Permet le menu raccourci.
 
-```
+```cpp
 void EnableShellContextMenu(BOOL bEnable = TRUE);
 ```
 
@@ -221,7 +221,7 @@ virtual CString OnGetItemText(LPAFX_SHELLITEMINFO pItem);
 
 Rafraîchit et repeinte le [CMFCShellTreeCtrl](../../mfc/reference/cmfcshelltreectrl-class.md).
 
-```
+```cpp
 void Refresh();
 ```
 
@@ -254,7 +254,7 @@ S_OK en cas de succès; E_FAIL autrement.
 
 Définit des drapeaux pour filtrer le contexte de l’arbre.
 
-```
+```cpp
 void SetFlags(
     DWORD dwFlags,
     BOOL bRefresh = TRUE);
@@ -276,7 +276,7 @@ Les `CMFCShellTreeCtrl` passes tous les drapeaux mis à [IShellFolder::EnumObjec
 
 Associe un objet [CMFCShellListCtrl](../../mfc/reference/cmfcshelllistctrl-class.md) à un objet [CMFCShellTreeCtrl.](../../mfc/reference/cmfcshelltreectrl-class.md)
 
-```
+```cpp
 void SetRelatedList(CMFCShellListCtrl* pShellList);
 ```
 

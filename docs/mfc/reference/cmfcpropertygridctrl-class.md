@@ -150,12 +150,12 @@ helpviewer_keywords:
 - CMFCPropertyGridCtrl [MFC], OnSelectCombo
 - CMFCPropertyGridCtrl [MFC], ValidateItemData
 ms.assetid: 95877cae-2311-4a2a-9031-0c8c3cf0a5f9
-ms.openlocfilehash: c52550c4b2ed09d97f44e7ed773f2568ec14893f
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 844b206b2c34b82930116744bbbfd4d35ecacf15
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81361929"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81754144"
 ---
 # <a name="cmfcpropertygridctrl-class"></a>CMFCPropertyGridCtrl, classe
 
@@ -380,7 +380,7 @@ Cette méthode recalcule la façon de dessiner l’ensemble du contrôle du rés
 
 ## <a name="cmfcpropertygridctrlalwaysshowusertooltip"></a><a name="alwaysshowusertooltip"></a>CMFCPropertyGridCtrl::AlwaysShowUserToolTip
 
-```
+```cpp
 void AlwaysShowUserToolTip(BOOL bShow = TRUE);
 ```
 
@@ -552,7 +552,7 @@ VRAI si la méthode est réussie; autrement, FALSE.
 
 Permet ou désactive la zone de description qui est affichée sous la liste des propriétés dans le contrôle du réseau de propriété.
 
-```
+```cpp
 void EnableDescriptionArea(BOOL bEnable=TRUE);
 ```
 
@@ -569,7 +569,7 @@ La zone de description est affichée au bas du contrôle du réseau de propriét
 
 Permet ou désactive le contrôle de l’en-tête en haut du contrôle du réseau de propriété.
 
-```
+```cpp
 void EnableHeaderCtrl(
     BOOL bEnable=TRUE,
     LPCTSTR lpszLeftColumn=_T("Property"),
@@ -610,7 +610,7 @@ VRAI si l’opération de modification se termine avec succès; FALSE si les don
 
 Faites défiler un contrôle du réseau de propriété et élargit les éléments de propriété jusqu’à ce que la propriété spécifiée soit visible.
 
-```
+```cpp
 void EnsureVisible(
     CMFCPropertyGridProperty* pProp,
     BOOL bExpandParents=FALSE);
@@ -630,7 +630,7 @@ void EnsureVisible(
 
 Élargit ou effondre tous les nœuds de contrôle du réseau de propriété.
 
-```
+```cpp
 void ExpandAll(BOOL bExpand=TRUE);
 ```
 
@@ -808,7 +808,7 @@ Un pointeur de l’objet de propriété qui correspond à l’élément sélecti
 
 Récupère les couleurs personnalisées qui sont actuellement définies pour les éléments de contrôle du réseau de propriété.
 
-```
+```cpp
 void GetCustomColors(
     COLORREF& clrBackground,
     COLORREF& clrText,
@@ -1074,7 +1074,7 @@ La *zone de propriété* de terme se réfère à n’importe lequel du nom, de l
 
 Cette méthode définit la valeur de la variable que le paramètre *pnArea* indique. Le tableau suivant énumère les valeurs possibles et les zones correspondantes.
 
-|Value|Domaine|
+|Valeur|Domaine|
 |-----------|----------|
 |`ClickArea::ClickExpandBox`|La propriété étend le contrôle de boîte.|
 |`ClickArea::ClickName`|Nom de propriété.|
@@ -1225,7 +1225,7 @@ Utilisez la méthode [CMFCPropertyGridCtrl::SetVSDotNetLook](#setvsdotnetlook) p
 
 Précise comment afficher les propriétés modifiées.
 
-```
+```cpp
 void MarkModifiedProperties(
     BOOL bMark=TRUE,
     BOOL bRedraw=TRUE);
@@ -1376,7 +1376,7 @@ Par défaut, cette méthode envoie le [message AFX_WM_PROPERTY_CHANGED](../../mf
 
 Appelé par le cadre quand une propriété qui contient un contrôle de boîte combo est sélectionnée.
 
-```
+```cpp
 void OnSelectCombo();
 ```
 
@@ -1386,7 +1386,7 @@ void OnSelectCombo();
 
 Supprime tous les objets de propriété d’un contrôle de grille de propriété.
 
-```
+```cpp
 void RemoveAll();
 ```
 
@@ -1396,7 +1396,7 @@ void RemoveAll();
 
 Restaure les valeurs d’origine de toutes les propriétés.
 
-```
+```cpp
 void ResetOriginalValues(BOOL bRedraw=TRUE);
 ```
 
@@ -1411,7 +1411,7 @@ void ResetOriginalValues(BOOL bRedraw=TRUE);
 
 Définit ou réinitialise le mode alphabétique.
 
-```
+```cpp
 void SetAlphabeticMode(BOOL bSet=TRUE);
 ```
 
@@ -1428,7 +1428,7 @@ Lorsque le contrôle du réseau de propriété est en mode alphabétique, le con
 
 Spécifie le texte des étiquettes Boolean.
 
-```
+```cpp
 void SetBoolLabels(
     LPCTSTR lpszTrue,
     LPCTSTR lpszFalse);
@@ -1448,7 +1448,7 @@ void SetBoolLabels(
 
 Sélectionne une propriété dans un contrôle de réseau de propriété.
 
-```
+```cpp
 void SetCurSel(
     CMFCPropertyGridProperty* pProp,
     BOOL bRedraw=TRUE);
@@ -1470,7 +1470,7 @@ Utilisez cette méthode pour annuler la sélection de l’élément actuel dans 
 
 Specifie les couleurs personnalisées pour divers éléments du contrôle du réseau de propriété.
 
-```
+```cpp
 void SetCustomColors(
     COLORREF clrBackground,
     COLORREF clrText,
@@ -1514,7 +1514,7 @@ Pour personnaliser l’apparence d’une propriété spécifique, dérivez une c
 
 Spécifie le nombre de lignes à afficher dans la section de description du contrôle actuel du réseau de propriété.
 
-```
+```cpp
 void SetDescriptionRows(int nDescRows);
 ```
 
@@ -1527,7 +1527,7 @@ void SetDescriptionRows(int nDescRows);
 
 Précise s’il faut afficher la largeur complète du nom de la catégorie pour un groupe de propriétés dans le contrôle actuel du réseau immobilier.
 
-```
+```cpp
 void SetGroupNameFullWidth(
     BOOL bGroupNameFullWidth = TRUE,
     BOOL bRedraw = TRUE);
@@ -1551,7 +1551,7 @@ Les termes *nom de groupe* et nom de *catégorie* sont utilisés de manière int
 
 Définit un personnage qui est utilisé comme délimitant dans une liste de valeurs de propriété.
 
-```
+```cpp
 void SetListDelimiter(TCHAR c);
 ```
 
@@ -1570,7 +1570,7 @@ Par défaut, le [CMFCPropertyGridCtrl : ::CMFCPropertyGridCtrl](#cmfcpropertygri
 
 Précise si le cadre redessine les colonnes de nom et de valeur du contrôle actuel du réseau de propriété lorsqu’un utilisateur resize les colonnes.
 
-```
+```cpp
 void SetShowDragContext(BOOL bShowDragContext = TRUE);
 ```
 
@@ -1587,7 +1587,7 @@ L’utilisateur peut resize les colonnes de nom et de valeur d’un contrôle de
 
 Définit l’apparence du contrôle de la grille de propriété au style qui est utilisé dans Visual Studio .NET.
 
-```
+```cpp
 void SetVSDotNetLook(BOOL bSet=TRUE);
 ```
 

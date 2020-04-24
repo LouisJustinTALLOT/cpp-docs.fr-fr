@@ -42,12 +42,12 @@ helpviewer_keywords:
 - CMFCShellListCtrl [MFC], Refresh
 - CMFCShellListCtrl [MFC], SetItemTypes
 ms.assetid: ad472958-5586-4c50-aadf-1844c30bf6e7
-ms.openlocfilehash: d5c987e1d7dbe053a0cff093d1a9113f762cee26
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 445556535217b0887a02227a0773c287911922a2
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81368779"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81753478"
 ---
 # <a name="cmfcshelllistctrl-class"></a>Classe CMFCShellListCtrl
 
@@ -153,7 +153,7 @@ S_OK en cas de succès; E_FAIL autrement.
 
 Permet le menu raccourci.
 
-```
+```cpp
 void EnableShellContextMenu(BOOL bEnable = TRUE);
 ```
 
@@ -443,7 +443,7 @@ Appelez cette méthode pour actualiser la `CMFCShellListCtrl` liste des élémen
 
 Définit le type d’éléments qui sont répertoriés dans l’objet [CMFCShellListCtrl.](../../mfc/reference/cmfcshelllistctrl-class.md)
 
-```
+```cpp
 void SetItemTypes(SHCONTF nTypes);
 ```
 

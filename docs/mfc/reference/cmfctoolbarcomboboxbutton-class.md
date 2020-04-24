@@ -64,12 +64,12 @@ helpviewer_keywords:
 - CMFCToolBarComboBoxButton [MFC], SetDropDownHeight
 - CMFCToolBarComboBoxButton [MFC], SetFlatMode
 ms.assetid: 32fa39f7-8e4e-4f0a-a31d-7b540d969a6c
-ms.openlocfilehash: 0d003bdacf13403ad8dc4be4ec7e6f71ea57d156
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 995d7d0db55889130e1cad9585b8fc87285ffd27
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81372187"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81754014"
 ---
 # <a name="cmfctoolbarcomboboxbutton-class"></a>CMFCToolBarComboBoxButton, classe
 
@@ -1116,7 +1116,7 @@ VRAI si la méthode gère l’événement; autrement, FALSE.
 
 Supprime tous les éléments de la liste et modifie les cases.
 
-```
+```cpp
 void RemoveAllItems();
 ```
 
@@ -1255,7 +1255,7 @@ Par défaut, les boutons de la boîte combo sont alignés en haut.
 
 Définit l’ID de ressource de menu raccourci pour le bouton de boîte de combo.
 
-```
+```cpp
 void SetContextMenuID(UINT uiResID);
 ```
 
@@ -1268,7 +1268,7 @@ void SetContextMenuID(UINT uiResID);
 
 Définit la hauteur de la boîte de liste lorsqu’elle est tombée.
 
-```
+```cpp
 void SetDropDownHeight(int nHeight);
 ```
 
@@ -1319,7 +1319,7 @@ Pour une liste de styles de boutons de barre d’outils voir [Styles de contrôl
 
 Définit le texte dans la boîte de modification du bouton de la boîte combo.
 
-```
+```cpp
 void SetText(LPCTSTR lpszText);
 ```
 

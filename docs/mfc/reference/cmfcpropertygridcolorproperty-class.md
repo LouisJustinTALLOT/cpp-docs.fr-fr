@@ -20,12 +20,12 @@ helpviewer_keywords:
 - CMFCPropertyGridColorProperty [MFC], SetColumnsNumber
 - CMFCPropertyGridColorProperty [MFC], SetOriginalValue
 ms.assetid: af37be93-a91e-40a2-9a65-0f3412c6f0f8
-ms.openlocfilehash: 62015f384fa5f72ceeceed2605cbf9a6b646a1eb
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 393a871a881aa4bddd786b1d4333e02d5e0dbef1
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81375317"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81751825"
 ---
 # <a name="cmfcpropertygridcolorproperty-class"></a>Classe CMFCPropertyGridColorProperty
 
@@ -119,7 +119,7 @@ CMFCPropertyGridColorProperty(
 
 Permet le bouton *automatique* sur la boîte de dialogue de sélection des couleurs. (Le bouton automatique standard est étiqueté **automatique**.)
 
-```
+```cpp
 void EnableAutomaticButton(
     LPCTSTR lpszLabel,
     COLORREF colorAutomatic,
@@ -143,7 +143,7 @@ void EnableAutomaticButton(
 
 Permet *l’autre* bouton sur la boîte de dialogue de sélection des couleurs. (L’autre bouton standard est étiqueté **Plus de couleurs**.)
 
-```
+```cpp
 void EnableOtherButton(
     LPCTSTR lpszLabel,
     BOOL bAltColorDlg = TRUE,
@@ -181,7 +181,7 @@ Une valeur de couleur RGB.
 
 Définit une nouvelle couleur pour la propriété.
 
-```
+```cpp
 void SetColor(COLORREF color);
 ```
 
@@ -196,7 +196,7 @@ void SetColor(COLORREF color);
 
 Spécifie le nombre de colonnes de la grille de propriétés de couleur actuelle.
 
-```
+```cpp
 void SetColumnsNumber(int nColumnsNumber);
 ```
 

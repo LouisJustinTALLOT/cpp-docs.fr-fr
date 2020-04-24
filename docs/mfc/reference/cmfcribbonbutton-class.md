@@ -114,12 +114,12 @@ helpviewer_keywords:
 - CMFCRibbonButton [MFC], SetText
 - CMFCRibbonButton [MFC], OnClick
 ms.assetid: 732e941c-9504-4b83-a691-d18075965d53
-ms.openlocfilehash: b0118b47fd1bb1db15916d7deffbaa32dcfc9df7
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: e25a375f8bf5769a4a118318eac272db93062cbf
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81375295"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81752504"
 ---
 # <a name="cmfcribbonbutton-class"></a>CMFCRibbonButton, classe
 
@@ -250,7 +250,7 @@ pPanel->Add (new CMFCRibbonButton (ID_EDIT_PAINT, _T("Paint"), 9));
 
 Ajoute un élément de menu au menu contextuel associé au bouton.
 
-```
+```cpp
 void AddSubItem(
     CMFCRibbonBaseElement* pSubItem,
     int nIndex=-1);
@@ -803,7 +803,7 @@ virtual COLORREF OnFillBackground(CDC* pDC);
 
 Supprime tous les éléments de menu du menu contextuel.
 
-```
+```cpp
 void RemoveAllSubItems();
 ```
 
@@ -852,7 +852,7 @@ Rendements VRAI en cas de succès; autrement FALSE.
 
 Précise si le bouton affiche une image grande ou petite quand l‘utilisateur réduit le bouton.
 
-```
+```cpp
 void SetAlwaysLargeImage(BOOL bSet=TRUE);
 ```
 
@@ -865,7 +865,7 @@ void SetAlwaysLargeImage(BOOL bSet=TRUE);
 
 Active la commande par défaut pour le bouton du ruban.
 
-```
+```cpp
 void SetDefaultCommand(BOOL bSet=TRUE);
 ```
 
@@ -894,7 +894,7 @@ virtual void SetDescription(LPCTSTR lpszText);
 
 Affecte un index à l'image du bouton.
 
-```
+```cpp
 void SetImageIndex(
     int nIndex,
     BOOL bLargeImage);
@@ -912,7 +912,7 @@ void SetImageIndex(
 
 Affecte un menu contextuel au bouton du ruban.
 
-```
+```cpp
 void SetMenu(
     HMENU hMenu,
     BOOL bIsDefaultCommand=FALSE,
@@ -958,7 +958,7 @@ virtual void SetParentCategory(CMFCRibbonCategory* pParent);
 
 Aligne le menu pop-up sur le bord du bouton.
 
-```
+```cpp
 void SetRightAlignMenu(BOOL bSet=TRUE);
 ```
 

@@ -5,12 +5,12 @@ helpviewer_keywords:
 - property page data transfer functions in MFC
 - property pages [MFC], global MFC functions
 ms.assetid: 734f88bc-c776-4136-9b0e-f45c761a45c1
-ms.openlocfilehash: 1064cd99d1820ae8865fa632c3097441172c78c4
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 6456a192a502a0fcc032eaefc667c90ecec86d42
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81372999"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81751137"
 ---
 # <a name="property-pages-mfc"></a>Pages de propriétés (MFC)
 
@@ -49,7 +49,7 @@ Voici une liste de macros utilisées pour créer et gérer les pages de proprié
 
 Appelez cette fonction dans la `DoDataExchange` fonction de votre page de propriété pour synchroniser la valeur d’une propriété d’intégrage avec l’index de la sélection actuelle dans une boîte de combo sur la page de propriété.
 
-```
+```cpp
 void AFXAPI DDP_CBIndex(
     CDataExchange* pDX,
     int id,
@@ -83,7 +83,7 @@ Cette fonction doit être `DDX_CBIndex` appelée avant l’appel de fonction cor
 
 Appelez cette fonction dans la `DoDataExchange` fonction de votre page de propriété pour synchroniser la valeur d’une propriété de chaîne avec la sélection actuelle dans une boîte de combo sur la page de propriété.
 
-```
+```cpp
 void AFXAPI DDP_CBString(
     CDataExchange* pDX,
     int id,
@@ -117,7 +117,7 @@ Cette fonction doit être `DDX_CBString` appelée avant l’appel de fonction co
 
 Appelez cette fonction dans la `DoDataExchange` fonction de votre page de propriété pour synchroniser la valeur d’une propriété à cordes qui correspond exactement à la sélection actuelle dans une boîte combo sur la page de propriété.
 
-```
+```cpp
 void AFXAPI DDP_CBStringExact(
     CDataExchange* pDX,
     int id,
@@ -151,7 +151,7 @@ Cette fonction doit être `DDX_CBStringExact` appelée avant l’appel de foncti
 
 Appelez cette fonction dans la `DoDataExchange` fonction de votre page de propriété pour synchroniser la valeur de la propriété avec le contrôle de la boîte de cocher de page de propriété associée.
 
-```
+```cpp
 void AFXAPI DDP_Check(
     CDataExchange* pDX,
     int id,
@@ -185,7 +185,7 @@ Cette fonction doit être `DDX_Check` appelée avant l’appel de fonction corre
 
 Appelez cette fonction dans la `DoDataExchange` fonction de votre page de propriété pour synchroniser la valeur d’une propriété d’intégrage avec l’index de la sélection actuelle dans une boîte de liste sur la page de propriété.
 
-```
+```cpp
 void AFXAPI DDP_LBIndex(
     CDataExchange* pDX,
     int id,
@@ -219,7 +219,7 @@ Cette fonction doit être `DDX_LBIndex` appelée avant l’appel de fonction cor
 
 Appelez cette fonction dans la `DoDataExchange` fonction de votre page de propriété pour synchroniser la valeur d’une propriété de chaîne avec la sélection actuelle dans une boîte de liste sur la page de propriété.
 
-```
+```cpp
 void AFXAPI DDP_LBString(
     CDataExchange* pDX,
     int id,
@@ -253,7 +253,7 @@ Cette fonction doit être `DDX_LBString` appelée avant l’appel de fonction co
 
 Appelez cette fonction dans la `DoDataExchange` fonction de votre page de propriété pour synchroniser la valeur d’une propriété à cordes qui correspond exactement à la sélection actuelle dans une boîte de liste sur la page de propriété.
 
-```
+```cpp
 void AFXAPI DDP_LBStringExact(
     CDataExchange* pDX,
     int id,
@@ -287,7 +287,7 @@ Cette fonction doit être `DDX_LBStringExact` appelée avant l’appel de foncti
 
 Appelez cette fonction dans la `DoDataExchange` fonction de votre page de propriété, pour terminer le transfert des valeurs de propriété de la page de propriété à votre contrôle lorsque les valeurs de propriété sont enregistrées.
 
-```
+```cpp
 void AFXAPI DDP_PostProcessing(CDataExchange * pDX);
 ```
 
@@ -310,7 +310,7 @@ Cette fonction doit être appelée une fois toutes les fonctions d’échange de
 
 Appelez cette fonction dans `DoPropExchange` la fonction de votre contrôle pour synchroniser la valeur de la propriété avec le contrôle de bouton radio de la page de propriété associée.
 
-```
+```cpp
 void AFXAPI DDP_Radio(
     CDataExchange* pDX,
     int id,
@@ -344,7 +344,7 @@ Cette fonction doit être `DDX_Radio` appelée avant l’appel de fonction corre
 
 Appelez cette fonction dans `DoDataExchange` la fonction de votre contrôle pour synchroniser la valeur de la propriété avec le contrôle de la page de propriété associée.
 
-```
+```cpp
 void AFXAPI DDP_Text(
     CDataExchange* pDX,
     int id,

@@ -30,12 +30,12 @@ helpviewer_keywords:
 - CMFCHeaderCtrl [MFC], OnDrawSortArrow
 - CMFCHeaderCtrl [MFC], OnFillBackground
 ms.assetid: 2f5fbf7b-5c75-42db-9216-640b1628f777
-ms.openlocfilehash: 0a6b0cf39861ba995acff71fc40cf44ae5114642
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 5140d02c5acbbc430c3b4d175da1933c79c702b3
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81367462"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81752356"
 ---
 # <a name="cmfcheaderctrl-class"></a>CMFCHeaderCtrl Class
 
@@ -116,7 +116,7 @@ CMFCHeaderCtrl::CMFCHeaderCtrl()
 
 Ce constructeur initialise les variables membres suivantes aux valeurs spécifiées :
 
-|Variable membre|Value|
+|Variable membre|Valeur|
 |---------------------|-----------|
 |`m_bIsMousePressed`|FALSE|
 |`m_bMultipleSort`|FALSE|
@@ -130,7 +130,7 @@ Ce constructeur initialise les variables membres suivantes aux valeurs spécifi�
 
 Permet ou désactive le mode *de tri de colonne multiple* pour le contrôle actuel de l’en-tête.
 
-```
+```cpp
 void EnableMultipleSort(BOOL bEnable=TRUE);
 ```
 
@@ -295,7 +295,7 @@ virtual void OnFillBackground(CDC* pDC);
 
 Supprime la colonne spécifiée de la liste des colonnes de tri.
 
-```
+```cpp
 void RemoveSortColumn(int iColumn);
 ```
 
@@ -308,7 +308,7 @@ void RemoveSortColumn(int iColumn);
 
 Définit le tri d’ordre d’une colonne spécifiée dans un contrôle d’en-tête.
 
-```
+```cpp
 void SetSortColumn(
     int iColumn,
     BOOL bAscending=TRUE,

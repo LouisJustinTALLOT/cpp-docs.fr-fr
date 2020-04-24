@@ -22,12 +22,12 @@ helpviewer_keywords:
 - CTypedPtrArray [MFC], SetAt
 - CTypedPtrArray [MFC], SetAtGrow
 ms.assetid: e3ecdf1a-a889-4156-92dd-ddbd36ccd919
-ms.openlocfilehash: a996bca471ce82a7c2adaaad67670ddef417eda1
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 20cf147e955b6b19919f35750b0f46a8b5a67ad0
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81373277"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81752061"
 ---
 # <a name="ctypedptrarray-class"></a>CTypedPtrArray, classe
 
@@ -144,7 +144,7 @@ Pour des remarques plus détaillées, voir [CObArray::Append](../../mfc/referenc
 
 Cette fonction `BASE_CLASS`de membre appelle **::Copie**.
 
-```
+```cpp
 void Copy(const CTypedPtrArray<BASE_CLASS, TYPE>& src);
 ```
 
@@ -215,7 +215,7 @@ Pour des remarques plus détaillées, voir [CObArray::GetAt](../../mfc/reference
 
 Cette fonction `BASE_CLASS`de membre appelle **::InsertAt**.
 
-```
+```cpp
 void InsertAt(
     INT_PTR nIndex,
     TYPE newElement,
@@ -280,7 +280,7 @@ La version Debug de la bibliothèque affirme si le sous-scriptum (soit sur le c�
 
 Cette fonction `BASE_CLASS`de membre appelle **::SetAt**.
 
-```
+```cpp
 void SetAt(
     INT_PTR nIndex,
     TYPE ptr);
@@ -305,7 +305,7 @@ Pour des remarques plus détaillées, voir [CObArray::SetAt](../../mfc/reference
 
 Cette fonction `BASE_CLASS`de membre appelle **::SetAtGrow**.
 
-```
+```cpp
 void SetAtGrow(
     INT_PTR nIndex,
     TYPE newElement);

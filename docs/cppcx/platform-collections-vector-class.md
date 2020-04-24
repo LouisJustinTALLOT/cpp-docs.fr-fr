@@ -21,16 +21,16 @@ f1_keywords:
 helpviewer_keywords:
 - Vector Class (C++/Cx)
 ms.assetid: aee8c076-9700-47c3-99b6-799fd3edb0ca
-ms.openlocfilehash: b2d08461b4ab57ed8479549c18c35c872d0eb9f1
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 60c82a113bc19e9652af8c1ad531e1c479077f20
+ms.sourcegitcommit: 89d9e1cb08fa872483d1cde98bc2a7c870e505e9
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81354386"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "82032120"
 ---
 # <a name="platformcollectionsvector-class"></a>Platform::Collections::Vector, classe
 
-Représente une collection séquentielle d'objets accessibles séparément par index. Implémente [Windows::Foundation:Collections::IObservableVector](/uwp/api/Windows.Foundation.Collections.IObservableVector_T_) pour aider avec XAML [liaison de données](/windows/uwp/data-binding/data-binding-in-depth).
+Représente une collection séquentielle d'objets accessibles séparément par index. Implémente [Windows::Foundation:Collections::IObservableVector](/uwp/api/windows.foundation.collections.iobservablevector-1) pour aider avec XAML [liaison de données](/windows/uwp/data-binding/data-binding-in-depth).
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -61,9 +61,9 @@ Les types autorisés sont :
 
 1. classe d'énumération publique
 
-La classe **Vector** est la mise en œuvre concrète de [Windows::Foundation::Collections::IVector](/uwp/api/Windows.Foundation.Collections.IVector_T_) interface.
+La classe **Vector** est la mise en œuvre concrète de [Windows::Foundation::Collections::IVector](/uwp/api/windows.foundation.collections.ivector-1) interface.
 
-Si vous essayez d’utiliser un type **Vector** dans une valeur ou un paramètre de retour public, l’erreur de compilateur C3986 est soulevée. Vous pouvez corriger l'erreur en modifiant le type du paramètre ou le type de la valeur de retour par [Windows::Foundation::Collections::IVector](/uwp/api/Windows.Foundation.Collections.IVector_T_). Pour plus d'informations, consultez [Collections (C++/CX)](../cppcx/collections-c-cx.md).
+Si vous essayez d’utiliser un type **Vector** dans une valeur ou un paramètre de retour public, l’erreur de compilateur C3986 est soulevée. Vous pouvez corriger l'erreur en modifiant le type du paramètre ou le type de la valeur de retour par [Windows::Foundation::Collections::IVector](/uwp/api/windows.foundation.collections.ivector-1). Pour plus d'informations, consultez [Collections (C++/CX)](../cppcx/collections-c-cx.md).
 
 ### <a name="members"></a>Membres
 
@@ -96,7 +96,7 @@ Si vous essayez d’utiliser un type **Vector** dans une valeur ou un paramètre
 |||
 |-|-|
 |Nom|Description|
-|événement [Windows::Fondation::Collection::VectorChangedEventHandler\<T>-VectorChanged](/uwp/api/windows.foundation.collections.vectorchangedeventhandler)|Se produit lorsque le Vector est modifié.|
+|événement [Windows::Fondation::Collection::VectorChangedEventHandler\<T>-VectorChanged](/uwp/api/windows.foundation.collections.vectorchangedeventhandler-1)|Se produit lorsque le Vector est modifié.|
 
 ## <a name="inheritance-hierarchy"></a>Hiérarchie d'héritage
 
@@ -186,7 +186,7 @@ virtual unsigned int GetMany(
 
 ### <a name="parameters"></a>Paramètres
 
-*Startindex*<br/>
+*startIndex*<br/>
 L'index de base zéro du début des éléments à récupérer.
 
 *dest*<br/>
@@ -369,10 +369,10 @@ Type d’une collection d’objets utilisée pour initialiser l’objet Vector a
 *il*<br/>
 Un [std::initializer_list](../standard-library/initializer-list-class.md) d’objets de type *T* qui seront utilisés pour initialiser le vecteur.
 
-*Â¡n*<br/>
+*N*<br/>
 Nombre d’éléments d’une collection d’objets utilisée pour initialiser l’objet Vector actuel.
 
-*Taille*<br/>
+*size*<br/>
 Nombre d'éléments dans l'objet Vector.
 
 *value*<br/>
@@ -384,10 +384,10 @@ Un [Lvalues et Rvalues](../cpp/lvalues-and-rvalues-visual-cpp.md) à un [std::ve
 *Ptr*<br/>
 Pointeur vers un `std::vector` utilisé pour initialiser l'objet Vector actuel.
 
-*Première*<br/>
+*first*<br/>
 Premier élément d'une séquence d'objets utilisée pour initialiser l'objet Vector actuel. Le type de *premier* est passé au moyen de *l’avance parfaite*. Pour plus d'informations, consultez [Déclarateur de référence rvalue : &&](../cpp/rvalue-reference-declarator-amp-amp.md).
 
-*Dernière*<br/>
+*last*<br/>
 Dernier élément d'une séquence d'objets utilisée pour initialiser l'objet Vector actuel. Le type de *dernier* est passé au moyen de *l’avance parfaite*. Pour plus d'informations, consultez [Déclarateur de référence rvalue : &&](../cpp/rvalue-reference-declarator-amp-amp.md).
 
 ## <a name="see-also"></a>Voir aussi

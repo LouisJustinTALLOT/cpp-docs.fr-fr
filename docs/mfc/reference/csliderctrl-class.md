@@ -74,12 +74,12 @@ helpviewer_keywords:
 - CSliderCtrl [MFC], SetTipSide
 - CSliderCtrl [MFC], SetToolTips
 ms.assetid: dd12b084-4eda-4550-a810-8f3cfb06b871
-ms.openlocfilehash: 24e1cb18f979d1144f15cf6ffedc6cace5f5361e
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 2e3572b34f930bb6a7d99b437c01c8aaf970e6c3
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81318213"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81751275"
 ---
 # <a name="csliderctrl-class"></a>Classe CSliderCtrl
 
@@ -169,7 +169,7 @@ Pour plus d’informations sur l’utilisation `CSliderCtrl`, voir [Contrôles](
 
 Efface la sélection actuelle dans un contrôle de curseur.
 
-```
+```cpp
 void ClearSel(BOOL bRedraw = FALSE);
 ```
 
@@ -182,7 +182,7 @@ Drapeau redessiner. Si ce paramètre est VRAI, le curseur est redessiné après 
 
 Supprime les marques de tiques actuelles d’un contrôle de curseur.
 
-```
+```cpp
 void ClearTics(BOOL bRedraw = FALSE);
 ```
 
@@ -209,7 +209,7 @@ virtual BOOL Create(
 Spécifie le style du contrôle du curseur. Appliquer toute combinaison de styles de [contrôle de curseur](/windows/win32/Controls/trackbar-control-styles), décrits dans le SDK Windows, sur le contrôle.
 
 *Rect*<br/>
-Spécifie la taille et la position du contrôle du curseur. Il peut s’agir soit d’un objet [CRect,](../../atl-mfc-shared/reference/crect-class.md) soit d’une structure [RECT.](/previous-versions/dd162897\(v=vs.85\))
+Spécifie la taille et la position du contrôle du curseur. Il peut s’agir soit d’un objet [CRect,](../../atl-mfc-shared/reference/crect-class.md) soit d’une structure [RECT.](/windows/win32/api/windef/ns-windef-rect)
 
 *pParentWnd*<br/>
 Spécifie la fenêtre parente du `CDialog`contrôle du curseur, généralement un . Ce ne doit pas être NULL.
@@ -251,7 +251,7 @@ Spécifie le style étendu du contrôle en cours de création. Pour une liste de
 Spécifie le style du contrôle du curseur. Appliquer toute combinaison de styles de [contrôle de curseur](/windows/win32/Controls/trackbar-control-styles), décrits dans le SDK Windows, sur le contrôle.
 
 *Rect*<br/>
-Une référence à une structure [RECT](/previous-versions/dd162897\(v=vs.85\)) décrivant la taille et la position de la fenêtre à créer, dans les coordonnées des clients de *pParentWnd*.
+Une référence à une structure [RECT](/windows/win32/api/windef/ns-windef-rect) décrivant la taille et la position de la fenêtre à créer, dans les coordonnées des clients de *pParentWnd*.
 
 *pParentWnd*<br/>
 Un pointeur vers la fenêtre qui est le parent du contrôle.
@@ -304,7 +304,7 @@ Cette fonction de membre implémente le comportement du message Win32 [TBM_GETBU
 
 Récupère la taille et la position du rectangle de délimitation pour le canal d’un contrôle de curseur.
 
-```
+```cpp
 void GetChannelRect(LPRECT lprc) const;
 ```
 
@@ -377,7 +377,7 @@ Position actuelle.
 
 Récupère les positions maximales et minimales pour le curseur dans un contrôle de curseur.
 
-```
+```cpp
 void GetRange(
     int& nMin,
     int& nMax) const;
@@ -423,7 +423,7 @@ La position minimale du contrôle.
 
 Récupère les positions de départ et de fin de la sélection actuelle dans un contrôle de curseur.
 
-```
+```cpp
 void GetSelection(
     int& nMin,
     int& nMax) const;
@@ -457,7 +457,7 @@ Cette méthode envoie le [message TBM_GETTHUMBLENGTH,](/windows/win32/Controls/t
 
 Récupère la taille et la position du rectangle de délimitation pour le curseur (pouce) dans un contrôle de curseur.
 
-```
+```cpp
 void GetThumbRect(LPRECT lprc) const;
 ```
 
@@ -608,7 +608,7 @@ La taille de la page influe sur la quantité de mouvements du curseur pour les n
 
 Définit la position actuelle du curseur dans un contrôle de curseur.
 
-```
+```cpp
 void SetPos(int nPos);
 ```
 
@@ -621,7 +621,7 @@ Spécifie la nouvelle position du curseur.
 
 Définit la plage (positions minimales et maximales) pour le curseur dans un contrôle de curseur.
 
-```
+```cpp
 void SetRange(
     int nMin,
     int nMax,
@@ -643,7 +643,7 @@ Le drapeau redessiner. Si ce paramètre est VRAI, le curseur est redessiné apr�
 
 Définit la plage maximale pour le curseur dans un contrôle de curseur.
 
-```
+```cpp
 void SetRangeMax(
     int nMax,
     BOOL bRedraw = FALSE);
@@ -661,7 +661,7 @@ Le drapeau redessiner. Si ce paramètre est VRAI, le curseur est redessiné apr�
 
 Définit la plage minimale pour le curseur dans un contrôle de curseur.
 
-```
+```cpp
 void SetRangeMin(
     int nMin,
     BOOL bRedraw = FALSE);
@@ -679,7 +679,7 @@ Le drapeau redessiner. Si ce paramètre est VRAI, le curseur est redessiné apr�
 
 Définit les positions de départ et de fin de la sélection actuelle dans un contrôle de curseur.
 
-```
+```cpp
 void SetSelection(
     int nMin,
     int nMax);
@@ -697,7 +697,7 @@ Position de fin pour le curseur.
 
 Définit la longueur du curseur dans le contrôle actuel du guidon.
 
-```
+```cpp
 void SetThumbLength(int nLength);
 ```
 
@@ -746,7 +746,7 @@ Nonzero si la marque de tique est définie; sinon 0.
 
 Définit la fréquence avec laquelle les marques de tiques sont affichées dans un curseur.
 
-```
+```cpp
 void SetTicFreq(int nFreq);
 ```
 
@@ -786,7 +786,7 @@ Cette fonction de membre implémente le comportement du message Win32 TBM_SETTIP
 
 Attribue un contrôle de pointe à un contrôle de curseur.
 
-```
+```cpp
 void SetToolTips(CToolTipCtrl* pWndTip);
 ```
 

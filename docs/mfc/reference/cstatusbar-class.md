@@ -36,12 +36,12 @@ helpviewer_keywords:
 - CStatusBar [MFC], SetPaneStyle
 - CStatusBar [MFC], SetPaneText
 ms.assetid: a3bde3db-e71c-4881-a3ca-1d5481c345ba
-ms.openlocfilehash: 0549ee10faa15b80b18a0bee2f115425002e1479
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 969edb3b1c87da851d83d390ab9d4e707bd2eb1e
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81376260"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81753054"
 ---
 # <a name="cstatusbar-class"></a>Classe CStatusBar
 
@@ -271,7 +271,7 @@ L’ID de l’indicateur spécifié par *nIndex*.
 
 Copies des coordonnées de l’indicateur spécifiés par *nIndex* dans la structure pointée par *lpRect*.
 
-```
+```cpp
 void GetItemRect(
     int nIndex,
     LPRECT lpRect) const;
@@ -283,7 +283,7 @@ void GetItemRect(
 Index de l’indicateur dont les coordonnées de rectangle doivent être récupérées.
 
 *lpRect*<br/>
-Indique une structure [RECT](/previous-versions/dd162897\(v=vs.85\)) ou un objet [CRect](../../atl-mfc-shared/reference/crect-class.md) qui recevra les coordonnées de l’indicateur spécifié par *nIndex*.
+Indique une structure [RECT](/windows/win32/api/windef/ns-windef-rect) ou un objet [CRect](../../atl-mfc-shared/reference/crect-class.md) qui recevra les coordonnées de l’indicateur spécifié par *nIndex*.
 
 ### <a name="remarks"></a>Notes
 
@@ -293,7 +293,7 @@ Les coordonnées sont en pixels par rapport au coin supérieur gauche de la barr
 
 Définit *nID*, *nStyle*, et *cxWidth* à l’ID, le style et la largeur de la vitre de l’indicateur à l’emplacement spécifié par *nIndex*.
 
-```
+```cpp
 void GetPaneInfo(
     int nIndex,
     UINT& nID,
@@ -406,7 +406,7 @@ Valeur différente de zéro cas de réussite ; sinon, 0.
 
 Définit la vitre d’indicateur spécifiée à une nouvelle pièce d’identité, style et largeur.
 
-```
+```cpp
 void SetPaneInfo(
     int nIndex,
     UINT nID,
@@ -446,7 +446,7 @@ Les styles d’indicateurs suivants sont pris en charge :
 
 Appelez cette fonction de membre pour définir le style de la vitre d’une barre de statut.
 
-```
+```cpp
 void SetPaneStyle(
     int nIndex,
     UINT nStyle);
