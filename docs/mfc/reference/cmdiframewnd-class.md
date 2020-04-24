@@ -34,12 +34,12 @@ helpviewer_keywords:
 - CMDIFrameWnd [MFC], MDISetMenu
 - CMDIFrameWnd [MFC], MDITile
 ms.assetid: fa8736e6-511b-4c51-8b4d-eba78378aeb9
-ms.openlocfilehash: a6e68f6368a7b45e0a566a7d2d12f23a9cd62b12
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: d5c9bc12e6c3f0ab4742a940547087c9742caf73
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81370058"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81754548"
 ---
 # <a name="cmdiframewnd-class"></a>CMDIFrameWnd, classe
 
@@ -242,7 +242,7 @@ Remplacez cette fonction de membre si vous avez un menu Fenêtre qui n’utilise
 
 Active une fenêtre d’enfant MDI différente.
 
-```
+```cpp
 void MDIActivate(CWnd* pWndActivate);
 ```
 
@@ -268,7 +268,7 @@ Voir l’exemple pour [CMDIFrameWnd::GetWindowMenuPopup](#getwindowmenupopup).
 
 Organise toutes les fenêtres pour enfants MDI dans un format cascadeur.
 
-```
+```cpp
 void MDICascade();
 void MDICascade(int nType);
 ```
@@ -311,7 +311,7 @@ Voir l’exemple pour [CMDIChildWnd::MDIMaximize](../../mfc/reference/cmdichildw
 
 Organise toutes les fenêtres d’enfants de documents réduites au minimum.
 
-```
+```cpp
 void MDIIconArrange();
 ```
 
@@ -327,7 +327,7 @@ Voir l’exemple pour [CMDIFrameWnd::MDICascade](#mdicascade).
 
 Maximise la fenêtre spécifique pour enfants MDI.
 
-```
+```cpp
 void MDIMaximize(CWnd* pWnd);
 ```
 
@@ -350,7 +350,7 @@ Voir l’exemple pour [CMDIChildWnd::MDIMaximize](../../mfc/reference/cmdichildw
 
 Active la fenêtre de l’enfant immédiatement derrière la fenêtre de l’enfant actuellement actif et place la fenêtre de l’enfant actuellement actif derrière toutes les autres fenêtres d’enfant.
 
-```
+```cpp
 void MDINext();
 ```
 
@@ -366,7 +366,7 @@ Si la fenêtre d’enfant MDI actuellement active est maximisée, la fonction me
 
 Active la fenêtre de l’enfant précédent et place la fenêtre de l’enfant actuellement actif immédiatement derrière elle.
 
-```
+```cpp
 void MDIPrev();
 ```
 
@@ -378,7 +378,7 @@ Si la fenêtre d’enfant MDI actuellement active est maximisée, la fonction me
 
 Restaure une fenêtre d’enfant MDI de la taille maximisée ou minimisée.
 
-```
+```cpp
 void MDIRestore(CWnd* pWnd);
 ```
 
@@ -433,7 +433,7 @@ N’appelez pas cette fonction de membre si vous utilisez le cadre pour gérer v
 
 Arrange toutes les fenêtres des enfants dans un format carrelé.
 
-```
+```cpp
 void MDITile();
 void MDITile(int nType);
 ```

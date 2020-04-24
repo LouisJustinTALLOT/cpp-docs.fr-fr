@@ -42,12 +42,12 @@ helpviewer_keywords:
 - CObArray [MFC], SetAtGrow
 - CObArray [MFC], SetSize
 ms.assetid: 27894efd-2370-4776-9ed9-24a98492af17
-ms.openlocfilehash: 7b923fd9231d3652d8d2f1750a8024d15287811e
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: c19715f62704bfc97059421451929cbbec2506ce
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81360446"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81754472"
 ---
 # <a name="cobarray-class"></a>CObArray, classe
 
@@ -219,7 +219,7 @@ Voir [CObList:CObList](../../mfc/reference/coblist-class.md#coblist) pour une `C
 
 Appelez cette fonction de membre pour remplacer les éléments du tableau donné avec les éléments d’un autre tableau du même type.
 
-```
+```cpp
 void Copy(const CObArray& src);
 ```
 
@@ -316,7 +316,7 @@ Le tableau suivant montre d’autres `CObArray::ElementAt`fonctions de membre qu
 
 Libère toute mémoire supplémentaire qui a été allouée pendant que le tableau a été cultivé.
 
-```
+```cpp
 void FreeExtra();
 ```
 
@@ -516,7 +516,7 @@ Voir [CObList:CObList](../../mfc/reference/coblist-class.md#coblist) pour une `C
 
 Insère un élément (ou tous les éléments d'un autre tableau) à un index spécifique.
 
-```
+```cpp
 void InsertAt(
     INT_PTR nIndex,
     CObject* newElement,
@@ -626,7 +626,7 @@ Voir [CObList:CObList](../../mfc/reference/coblist-class.md#coblist) pour une `C
 
 Supprime tous les pointeurs de ce tableau, `CObject` mais ne supprime pas réellement les objets.
 
-```
+```cpp
 void RemoveAll();
 ```
 
@@ -657,7 +657,7 @@ Voir [CObList:CObList](../../mfc/reference/coblist-class.md#coblist) pour une `C
 
 Supprime un ou plusieurs éléments à partir d’un index spécifié dans un tableau.
 
-```
+```cpp
 void RemoveAt(
     INT_PTR nIndex,
     INT_PTR nCount = 1);
@@ -707,7 +707,7 @@ RemoveAt example: A CObArray with 1 elements
 
 Définit l’élément de tableau à l’index spécifié.
 
-```
+```cpp
 void SetAt(
     INT_PTR nIndex,
     CObject* newElement);
@@ -756,7 +756,7 @@ SetAt example: A CObArray with 2 elements
 
 Définit l’élément de tableau à l’index spécifié.
 
-```
+```cpp
 void SetAtGrow(
     INT_PTR nIndex,
     CObject* newElement);
@@ -805,7 +805,7 @@ SetAtGrow example: A CObArray with 4 elements
 
 Établit la taille d’un tableau vide ou existant; alloue la mémoire si nécessaire.
 
-```
+```cpp
 void SetSize(
     INT_PTR nNewSize,
     INT_PTR nGrowBy = -1);

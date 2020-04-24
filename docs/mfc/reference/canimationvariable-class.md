@@ -44,12 +44,12 @@ helpviewer_keywords:
 - CAnimationVariable [MFC], m_pParentObject
 - CAnimationVariable [MFC], m_variable
 ms.assetid: 506e697e-31a8-4033-a27e-292f4d7b42d9
-ms.openlocfilehash: 51cc4732ee8ad5f954e5bd758484cec74cf00fe6
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: b53a1338566a329fbdf5b91c41d0411a529afe8d
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81377052"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81755072"
 ---
 # <a name="canimationvariable-class"></a>CAnimationVariable, classe
 
@@ -132,7 +132,7 @@ virtual ~CAnimationVariable();
 
 Ajoute une transition.
 
-```
+```cpp
 void AddTransition(CBaseTransition* pTransition);
 ```
 
@@ -149,7 +149,7 @@ Cette méthode est appelée à ajouter une transition à la liste interne des tr
 
 Ajoute des transitions de la liste interne à storyboard.
 
-```
+```cpp
 void ApplyTransitions(
     CAnimationController* pController,
     IUIAnimationStoryboard* pStoryboard,
@@ -192,7 +192,7 @@ Construit un objet variable d’animation et définit sa valeur par défaut. Une
 
 Efface les transitions.
 
-```
+```cpp
 void ClearTransitions(BOOL bAutodestroy);
 ```
 
@@ -253,7 +253,7 @@ Cette méthode est appelée par le cadre lorsqu’elle doit créer des transitio
 
 Permet ou désactive l’événement IntegerValueChanged.
 
-```
+```cpp
 void EnableIntegerValueChangedEvent (
     CAnimationController* pController,
     BOOL bEnable);
@@ -275,7 +275,7 @@ Lorsque l’événement ValueChanged est activé, le cadre appelle la méthode v
 
 Permet ou désactive l’événement ValueChanged.
 
-```
+```cpp
 void EnableValueChangedEvent (
     CAnimationController* pController,
     BOOL bEnable);
@@ -414,7 +414,7 @@ ATL::CComPtr<IUIAnimationVariable> m_variable;
 
 Définit la valeur par défaut et libère l’objet COM IUIAnimationVariable.
 
-```
+```cpp
 void SetDefaultValue(DOUBLE dblDefaultValue);
 ```
 
@@ -431,7 +431,7 @@ Utilisez cette méthode pour réinitialiser la valeur par défaut. Cette méthod
 
 Définit la relation entre une variable d’animation et un objet d’animation.
 
-```
+```cpp
 void SetParentAnimationObject(CAnimationBaseObject* pParentObject);
 ```
 

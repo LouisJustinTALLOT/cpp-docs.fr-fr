@@ -28,12 +28,12 @@ helpviewer_keywords:
 - COlePasteSpecialDialog [MFC], GetSelectionType
 - COlePasteSpecialDialog [MFC], m_ps
 ms.assetid: 0e82ef9a-9bbe-457e-8240-42c86a0534f7
-ms.openlocfilehash: 5e67a81f48b8cdf0dae6dc90fc2ded8dc44a73ab
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 47fb421ef9dedcae7f92d33f55988dbbc2ea452d
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81376986"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81753815"
 ---
 # <a name="colepastespecialdialog-class"></a>Classe COlePasteSpecialDialog
 
@@ -105,7 +105,7 @@ Pour plus d’informations sur les boîtes de dialogue spécifiques à l’OLOL,
 
 Appelez cette fonction pour ajouter de nouveaux formats à la liste des formats que votre application peut prendre en charge dans une opération Spéciale Pâte.
 
-```
+```cpp
 void AddFormat(
     const FORMATETC& formatEtc,
     LPTSTR lpszFormat,
@@ -131,7 +131,7 @@ Chaîne qui décrit le format à l’utilisateur.
 *lpszResult*<br/>
 Chaîne qui décrit le résultat si ce format est choisi dans la boîte de dialogue.
 
-*Drapeaux*<br/>
+*flags*<br/>
 Les différentes options de liaison et d’intégration disponibles pour ce format. Ce drapeau est une combinaison un peu sage d’une ou plusieurs des différentes valeurs dans le type énuméré OLEUIPASTEFLAG.
 
 *Cf*<br/>
@@ -178,7 +178,7 @@ Une structure [OLEUIPASTEFLAG](/windows/win32/api/oledlg/ne-oledlg-oleuipastefla
 
 Appelez cette fonction pour ajouter les formats Clipboard suivants à la liste des formats que votre application peut prendre en charge dans une opération Spéciale Pâte :
 
-```
+```cpp
 void AddStandardFormats(BOOL bEnableLink = TRUE);
 ```
 

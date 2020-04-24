@@ -116,12 +116,12 @@ helpviewer_keywords:
 - CTaskDialog [MFC], ShowDialog
 - CTaskDialog [MFC], TaskDialogCallback
 ms.assetid: 1991ec98-ae56-4483-958b-233809c8c559
-ms.openlocfilehash: e9aeee31d2952d5362c983934ce85f0332f553fa
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 79f52d275d360cf8447b8977b8196ea5f95eacd8
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81366632"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81752286"
 ---
 # <a name="ctaskdialog-class"></a>CTaskDialog Class
 
@@ -255,7 +255,7 @@ L’image suivante `CTaskDialog` montre un échantillon pour illustrer l’empla
 
 Ajoute un nouveau contrôle `CTaskDialog`de bouton de commande à la .
 
-```
+```cpp
 void AddCommandControl(
     int nCommandControlID,
     const CString& strCaption,
@@ -291,7 +291,7 @@ Lorsque l’utilisateur sélectionne un contrôle `CTaskDialog` de bouton de com
 
 Ajoute un bouton `CTaskDialog`radio à la .
 
-```
+```cpp
 void CTaskDialog::AddRadioButton(
     int nRadioButtonID,
     const CString& strCaption,
@@ -648,7 +648,7 @@ Utilisez cette fonction pour déterminer au moment de l’exécution si l’ordi
 
 Ajoute des commandes de bouton de commande en utilisant les données de la table à cordes.
 
-```
+```cpp
 void LoadCommandControls(
     int nIDCommandControlsFirst,
     int nIDCommandControlsLast);
@@ -676,7 +676,7 @@ Par défaut, les nouvelles commandes de boutons de commande sont activées et ne
 
 Ajoute des commandes de bouton radio en utilisant les données de la table de chaîne.
 
-```
+```cpp
 void LoadRadioButtons(
     int nIDRadioButtonsFirst,
     int nIDRadioButtonsLast);
@@ -930,7 +930,7 @@ Remplacer cette méthode dans une classe dérivée pour mettre en œuvre un comp
 
 Supprime toutes les commandes du `CTaskDialog`bouton de commande .
 
-```
+```cpp
 void RemoveAllCommandControls();
 ```
 
@@ -942,7 +942,7 @@ void RemoveAllCommandControls();
 
 Supprime tous les boutons radio `CTaskDialog`de la .
 
-```
+```cpp
 void RemoveAllRadioButtons();
 ```
 
@@ -954,7 +954,7 @@ void RemoveAllRadioButtons();
 
 Mise à jour d’un contrôle de bouton de commande sur le `CTaskDialog`.
 
-```
+```cpp
 void SetCommandControlOptions(
     int nCommandControlID,
     BOOL bEnabled,
@@ -984,7 +984,7 @@ Utilisez cette méthode pour changer si un contrôle de bouton de `CTaskDialog` 
 
 Mise à jour d’un sous-ensemble de boutons communs à activer et à exiger l’élévation de l’UAC.
 
-```
+```cpp
 void SetCommonButtonOptions(
     int nDisabledButtonMask,
     int nElevationButtonMask = 0);
@@ -1014,7 +1014,7 @@ Cette méthode permet n’importe `CTaskDialog` quel bouton qui est disponible p
 
 Ajoute des boutons `CTaskDialog`communs à la .
 
-```
+```cpp
 void SetCommonButtons(
     int nButtonMask,
     int nDisabledButtonMask = 0,
@@ -1050,7 +1050,7 @@ Par défaut, tous les boutons courants sont activés et ne nécessitent pas d’
 
 Mises à jour `CTaskDialog`le contenu de la .
 
-```
+```cpp
 void SetContent(const CString& strContent);
 ```
 
@@ -1071,7 +1071,7 @@ Le contenu `CTaskDialog` de la classe est le texte qui est affiché à l’utili
 
 Spécifie le contrôle par défaut du bouton de commande.
 
-```
+```cpp
 void SetDefaultCommandControl(int nCommandControlID);
 ```
 
@@ -1094,7 +1094,7 @@ Cette méthode jette une exception si elle ne peut pas trouver le contrôle de b
 
 Spécifie le bouton radio par défaut.
 
-```
+```cpp
 void SetDefaultRadioButton(int nRadioButtonID);
 ```
 
@@ -1117,7 +1117,7 @@ Cette méthode jette une exception si elle ne peut pas trouver le bouton radio s
 
 Ajuste la `CTaskDialog`largeur de la .
 
-```
+```cpp
 void SetDialogWidth(int nWidth = 0);
 ```
 
@@ -1140,7 +1140,7 @@ Si *nWidth* est réglé à 0, cette méthode définit la boîte de dialogue à l
 
 Mises à jour `CTaskDialog`de la zone d’expansion de la .
 
-```
+```cpp
 void SetExpansionArea(
     const CString& strExpandedInformation,
     const CString& strCollapsedLabel = _T(""),
@@ -1172,7 +1172,7 @@ Lorsque `CTaskDialog` l’est affiché pour la première fois, il ne montre pas 
 
 Mises à jour de `CTaskDialog`l’icône de pied de la .
 
-```
+```cpp
 void SetFooterIcon(HICON hFooterIcon);
 void SetFooterIcon(LPCWSTR lpszFooterIcon);
 ```
@@ -1201,7 +1201,7 @@ A `CTaskDialog` ne peut `HICON` `LPCWSTR` accepter qu’une icône de pied ou co
 
 Mises à jour du texte `CTaskDialog`sur le pied de la .
 
-```
+```cpp
 void SetFooterText(const CString& strFooterText);
 ```
 
@@ -1222,7 +1222,7 @@ L’icône de pied apparaît à côté du `CTaskDialog`texte de pied sur le fond
 
 Mises à jour `CTaskDialog`de l’icône principale de la .
 
-```
+```cpp
 void SetMainIcon(HICON hMainIcon);
 void SetMainIcon(LPCWSTR lpszMainIcon);
 ```
@@ -1249,7 +1249,7 @@ A `CTaskDialog` ne peut `HICON` `LPCWSTR` accepter qu’une icône principale ou
 
 Mises à jour `CTaskDialog`de l’instruction principale de la .
 
-```
+```cpp
 void SetMainInstruction(const CString& strInstructions);
 ```
 
@@ -1270,7 +1270,7 @@ L’instruction principale `CTaskDialog` de la classe est le texte affiché à l
 
 Configure les options `CTaskDialog`pour le .
 
-```
+```cpp
 void SetOptions(int nOptionFlag);
 ```
 
@@ -1312,7 +1312,7 @@ Le tableau suivant répertorie toutes les options valides.
 
 Configure une barre de `CTaskDialog` chapiteau pour le et l’ajoute à la boîte de dialogue.
 
-```
+```cpp
 void SetProgressBarMarquee(
     BOOL bEnabled = TRUE,
     int nMarqueeSpeed = 0);
@@ -1342,7 +1342,7 @@ Cette méthode jette une exception avec la macro [ENSURE](diagnostic-services.md
 
 Ajuste la position de la barre de progression.
 
-```
+```cpp
 void SetProgressBarPosition(int nProgressPos);
 ```
 
@@ -1363,7 +1363,7 @@ Cette méthode jette une exception avec la macro [ENSURE](diagnostic-services.md
 
 Ajuste la portée de la barre de progression.
 
-```
+```cpp
 void SetProgressBarRange(
     int nRangeMin,
     int nRangeMax);
@@ -1393,7 +1393,7 @@ Cette méthode jette une exception avec la macro [ENSURE](diagnostic-services.md
 
 Définit l’état de la barre `CTaskDialog`de progression et l’affiche sur le .
 
-```
+```cpp
 void SetProgressBarState(int nState = PBST_NORMAL);
 ```
 
@@ -1424,7 +1424,7 @@ Vous pouvez définir où la barre de progression s’arrête avec [CTaskDialog::
 
 Permet ou désactive un bouton radio.
 
-```
+```cpp
 void SetRadioButtonOptions(
     int nRadioButtonID,
     BOOL bEnabled);
@@ -1450,7 +1450,7 @@ Cette méthode jette une exception avec la macro [ENSURE](diagnostic-services.md
 
 Définit l’état coché de la case à cocher de vérification.
 
-```
+```cpp
 void SetVerificationCheckbox(BOOL bChecked);
 ```
 
@@ -1467,7 +1467,7 @@ void SetVerificationCheckbox(BOOL bChecked);
 
 Définit le texte qui s’affiche à droite de la case à cocher de vérification.
 
-```
+```cpp
 void SetVerificationCheckboxText(CString& strVerificationText);
 ```
 
@@ -1488,7 +1488,7 @@ Cette méthode jette une [ENSURE](diagnostic-services.md#ensure) exception avec 
 
 Définit le titre `CTaskDialog`de la .
 
-```
+```cpp
 void SetWindowTitle(CString& strWindowTitle);
 ```
 

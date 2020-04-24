@@ -50,12 +50,12 @@ helpviewer_keywords:
 - CList [MFC], RemoveTail
 - CList [MFC], SetAt
 ms.assetid: 6f6273c3-c8f6-47f5-ac2a-0a950379ae5d
-ms.openlocfilehash: 253cf12033af497115ad600e457630ae834cc69c
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: adc065687f0c2c40b7e66326ff9d1e6210a6962c
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81372246"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81754131"
 ---
 # <a name="clist-class"></a>CList, classe
 
@@ -291,7 +291,7 @@ const TYPE& GetAt(POSITION position) const;
 *TYPE*<br/>
 Paramètre de modèle spécifiant le type d’objet dans la liste.
 
-*position*<br/>
+*Position*<br/>
 La position dans la liste de l’élément à obtenir.
 
 ### <a name="return-value"></a>Valeur de retour
@@ -515,7 +515,7 @@ POSITION InsertAfter(POSITION position, ARG_TYPE newElement);
 
 ### <a name="parameters"></a>Paramètres
 
-*position*<br/>
+*Position*<br/>
 Une valeur POSITION retournée `GetNext` `GetPrev`par `Find` un précédent , , ou appel de fonction de membre.
 
 *ARG_TYPE*<br/>
@@ -542,7 +542,7 @@ POSITION InsertBefore(POSITION position, ARG_TYPE newElement);
 
 ### <a name="parameters"></a>Paramètres
 
-*position*<br/>
+*Position*<br/>
 Une valeur POSITION retournée `GetNext` `GetPrev`par `Find` un précédent , , ou appel de fonction de membre.
 
 *ARG_TYPE*<br/>
@@ -583,7 +583,7 @@ Nonzero si cette liste est vide; sinon 0.
 
 Supprime tous les éléments de cette liste et libère la mémoire associée.
 
-```
+```cpp
 void RemoveAll();
 ```
 
@@ -599,13 +599,13 @@ Aucune erreur n’est générée si la liste est déjà vide.
 
 Supprime l’élément spécifié de cette liste.
 
-```
+```cpp
 void RemoveAt(POSITION position);
 ```
 
 ### <a name="parameters"></a>Paramètres
 
-*position*<br/>
+*Position*<br/>
 La position de l’élément à supprimer de la liste.
 
 ### <a name="remarks"></a>Notes
@@ -670,7 +670,7 @@ Vous devez vous assurer que la `RemoveTail`liste n’est pas vide avant d’appe
 
 Une variable de type POSITION est une clé pour la liste.
 
-```
+```cpp
 void SetAt(POSITION pos, ARG_TYPE newElement);
 ```
 

@@ -16,12 +16,12 @@ helpviewer_keywords:
 - CDockState [MFC], SaveState
 - CDockState [MFC], m_arrBarInfo
 ms.assetid: 09e7c10b-3abd-4cb2-ad36-42420fe6bc36
-ms.openlocfilehash: 1c76bcda6465ca86b8da4778d3653cb23001b78b
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 9850486407ee7550ee866a10e656d45ad18fc196
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81375549"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81753260"
 ---
 # <a name="cdockstate-class"></a>CDockState, classe
 
@@ -74,7 +74,7 @@ Pour plus d’informations sur les barres de contrôle d’amarrage, voir les ar
 
 Appelez cette fonction pour effacer toutes `CDockState` les informations d’amarrage stockées dans l’objet.
 
-```
+```cpp
 void Clear();
 ```
 
@@ -102,7 +102,7 @@ Le support de version permet à une barre révisée d’ajouter de nouvelles pro
 
 Appelez cette fonction pour récupérer les informations de l’État du registre ou . Fichier INI.
 
-```
+```cpp
 void LoadState(LPCTSTR lpszProfileName);
 ```
 
@@ -127,7 +127,7 @@ CPtrArray m_arrBarInfo;
 
 Appelez cette fonction pour enregistrer les informations de l’État au registre ou . Fichier INI.
 
-```
+```cpp
 void SaveState(LPCTSTR lpszProfileName);
 ```
 

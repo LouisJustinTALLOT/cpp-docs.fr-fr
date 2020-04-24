@@ -116,12 +116,12 @@ helpviewer_keywords:
 - CDHtmlDialog [MFC], m_strCurrentUrl
 - CDHtmlDialog [MFC], m_szHtmlResID
 ms.assetid: 3f941c85-87e1-4f0f-9cc5-ffee8498b312
-ms.openlocfilehash: 57ea8f3a1dbbce4fcfa350bd99e4ee628e9675c8
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: e2e4306320c52b8276d915848dfa6e460982c92b
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81375684"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81753372"
 ---
 # <a name="cdhtmldialog-class"></a>CDHtmlDialog, classe
 
@@ -348,7 +348,7 @@ Vous pouvez remplacer cette fonction de membre pour retourner une instance de vo
 
 Échangez des données entre une variable de membre et la valeur de propriété d’un contrôle ActiveX sur une page HTML.
 
-```
+```cpp
 void DDX_DHtml_AxControl(
     CDataExchange* pDX,
     LPCTSTR szId,
@@ -376,7 +376,7 @@ L’ID de répartition de la propriété avec laquelle vous souhaitez échanger 
 *szPropName (en)*<br/>
 Nom de la propriété.
 
-*Var*<br/>
+*var*<br/>
 Le membre de données, de type VARIANT, [COleVariant](../../mfc/reference/colevariant-class.md), ou [CComVariant](../../atl/reference/ccomvariant-class.md), qui détient la valeur échangée avec la propriété de contrôle ActiveX.
 
 ### <a name="example"></a>Exemple
@@ -387,7 +387,7 @@ Le membre de données, de type VARIANT, [COleVariant](../../mfc/reference/coleva
 
 Échangez des données entre une variable de membre et une case à cocher sur une page HTML.
 
-```
+```cpp
 void DDX_DHtml_CheckBox(
     CDataExchange* pDX,
     LPCTSTR szId,
@@ -413,7 +413,7 @@ La valeur échangée.
 
 Échangez des données entre une variable de membre et n’importe quelle propriété d’élément HTML sur une page HTML.
 
-```
+```cpp
 void DDX_DHtml_ElementText(
     CDataExchange* pDX,
     LPCTSTR szId,
@@ -475,7 +475,7 @@ La valeur échangée.
 
 Échangez des données entre une variable de membre et un bouton radio sur une page HTML.
 
-```
+```cpp
 void DDX_DHtml_Radio(
     CDataExchange* pDX,
     LPCTSTR szId,
@@ -497,7 +497,7 @@ La valeur échangée.
 
 Obtient ou définit l’index d’une boîte de liste sur une page HTML.
 
-```
+```cpp
 void DDX_DHtml_SelectIndex(
     CDataExchange* pDX,
     LPCTSTR szId,
@@ -519,7 +519,7 @@ La valeur échangée.
 
 Obtient ou définit le texte d’affichage d’une entrée de boîte de liste (basé sur l’index actuel) sur une page HTML.
 
-```
+```cpp
 void DDX_DHtml_SelectString(
     CDataExchange* pDX,
     LPCTSTR szId,
@@ -541,7 +541,7 @@ La valeur échangée.
 
 Obtient ou définit la valeur d’une entrée de boîte de liste (basée sur l’index actuel) sur une page HTML.
 
-```
+```cpp
 void DDX_DHtml_SelectValue(
     CDataExchange* pDX,
     LPCTSTR szId,
@@ -567,7 +567,7 @@ La valeur échangée.
 
 Détache une boîte de dialogue sans `CDHtmlDialog` mode de l’objet et détruit l’objet.
 
-```
+```cpp
 void DestroyModeless();
 ```
 
@@ -684,7 +684,7 @@ Les surcharges sont répertoriées du moins efficace en haut au plus efficace en
 
 Récupère le localisateur de ressources uniformes (URL) associé au document actuel.
 
-```
+```cpp
 void GetCurrentUrl(CString& szUrl);
 ```
 
@@ -1066,7 +1066,7 @@ LPTSTR m_szHtmlResID;
 
 Navigue vers la ressource identifiée par l’URL spécifiée par *lpszURL*.
 
-```
+```cpp
 void Navigate(
     LPCTSTR lpszURL,
     DWORD dwFlags = 0,
@@ -1242,7 +1242,7 @@ Retourne E_NOTIMPL.
 
 Définit la propriété d’un contrôle ActiveX à une nouvelle valeur.
 
-```
+```cpp
 void SetControlProperty(
     LPCTSTR szElementId,
     DISPID dispId,
@@ -1280,7 +1280,7 @@ Chaîne contenant le nom de la propriété à définir.
 
 Définit `innerHTML` la propriété d’un élément HTML.
 
-```
+```cpp
 void SetElementHtml(
     LPCTSTR szElementId,
     BSTR bstrText);
@@ -1305,7 +1305,7 @@ Le `IUnknown` pointeur d’un élément HTML.
 
 Définit une propriété d’un élément HTML.
 
-```
+```cpp
 void SetElementProperty(
     LPCTSTR szElementId,
     DISPID dispId,
@@ -1327,7 +1327,7 @@ Nouvelle valeur de la propriété.
 
 Définit `innerText` la propriété d’un élément HTML.
 
-```
+```cpp
 void SetElementText(
     LPCTSTR szElementId,
     BSTR bstrText);
@@ -1352,7 +1352,7 @@ Le `IUnknown` pointeur d’un élément HTML.
 
 Définit l’interface `IDispatch` de l’hôte.
 
-```
+```cpp
 void SetExternalDispatch(IDispatch* pdispExternal);
 ```
 
@@ -1365,7 +1365,7 @@ La `IDispatch` nouvelle interface.
 
 Définit les drapeaux de l’interface utilisateur hôte.
 
-```
+```cpp
 void SetHostFlags(DWORD dwFlags);
 ```
 

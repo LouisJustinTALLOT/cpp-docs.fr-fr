@@ -12,12 +12,12 @@ f1_keywords:
 helpviewer_keywords:
 - VectorView Class
 ms.assetid: 05cd461d-dce7-49d3-b0e7-2e5c78ed8192
-ms.openlocfilehash: cecbd61ad8862d5046cab9e0b418d5c4d16829d4
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 7f12c7b926cd8d3d8fc892cff6f2245e7c216219
+ms.sourcegitcommit: 89d9e1cb08fa872483d1cde98bc2a7c870e505e9
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81363806"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "82032224"
 ---
 # <a name="platformcollectionsvectorview-class"></a>Platform::Collections::VectorView, classe
 
@@ -40,7 +40,7 @@ Spécifie un prédicat binaire pour tester l'égalité des valeurs de type `T`. 
 
 ### <a name="remarks"></a>Notes
 
-La `VectorView` classe implémente le [Windows::Foundation::Collections::IVectorView\<T>](/uwp/api/Windows.Foundation.Collections.IVectorView_T_) interface, et le support pour les itérateurs Standard Template Library.
+La `VectorView` classe implémente le [Windows::Foundation::Collections::IVectorView\<T>](/uwp/api/windows.foundation.collections.ivectorview-1) interface, et le support pour les itérateurs Standard Template Library.
 
 ### <a name="members"></a>Membres
 
@@ -128,7 +128,7 @@ virtual unsigned int GetMany(
 
 ### <a name="parameters"></a>Paramètres
 
-*Startindex*<br/>
+*startIndex*<br/>
 L'index de base zéro du début des éléments à récupérer.
 
 *dest*<br/>
@@ -247,10 +247,10 @@ Type d’une collection d’objets utilisée pour initialiser le VectorView acti
 *il*<br/>
 Un [std::initializer_list](../standard-library/initializer-list-class.md) dont les éléments seront utilisés pour initialiser le VectorView.
 
-*Â¡n*<br/>
+*N*<br/>
 Nombre d’éléments d’une collection d’objets utilisée pour initialiser le VectorView actif.
 
-*Taille*<br/>
+*size*<br/>
 Nombre d'éléments du VectorView.
 
 *value*<br/>
@@ -268,10 +268,10 @@ Une [plate-forme::Array](../cppcx/platform-array-class.md) objet qui est utilis�
 *Un*<br/>
 Un [std::objet de tableau](../standard-library/array-class-stl.md) qui est utilisé pour initialiser l’actuel VectorView.
 
-*Première*<br/>
+*first*<br/>
 Premier élément d'une séquence d'objets utilisée pour initialiser le VectorView actif. Le type `first` de est passé au moyen de *l’avance parfaite*. Pour plus d'informations, consultez [Déclarateur de référence rvalue : &&](../cpp/rvalue-reference-declarator-amp-amp.md).
 
-*Dernière*<br/>
+*last*<br/>
 Dernier élément d'une séquence d'objets utilisée pour initialiser le VectorView actif. Le type `last` de est passé au moyen de *l’avance parfaite*. Pour plus d'informations, consultez [Déclarateur de référence rvalue : &&](../cpp/rvalue-reference-declarator-amp-amp.md).
 
 ## <a name="see-also"></a>Voir aussi

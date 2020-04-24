@@ -38,12 +38,12 @@ helpviewer_keywords:
 - COlePropertyPage [MFC], SetModifiedFlag
 - COlePropertyPage [MFC], SetPageName
 ms.assetid: e9972872-8e6b-4550-905e-d36a274d64dc
-ms.openlocfilehash: dbdc889e244b33365756bcbae5b37cf657a6d900
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 872ade08438e54098da730012f98cdd906483887
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81374880"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81753788"
 ---
 # <a name="colepropertypage-class"></a>COlePropertyPage, classe
 
@@ -187,7 +187,7 @@ Les contrôles et les conteneurs coopèrent afin que les utilisateurs puissent p
 
 Détermine quels contrôles n’activent pas le bouton Apply.
 
-```
+```cpp
 void IgnoreApply(UINT nID);
 ```
 
@@ -326,7 +326,7 @@ Si l’état d’un contrôle de page de propriété est sale lorsque la page de
 
 Définit la ressource de dialogue de la page de propriété.
 
-```
+```cpp
 void SetDialogResource(HGLOBAL hDialog);
 ```
 
@@ -339,7 +339,7 @@ Gérer la ressource de dialogue de la page de propriété.
 
 Spécifie les informations de pointe d’outil, le nom de fichier d’aide, et le contexte d’aide pour votre page de propriété.
 
-```
+```cpp
 void SetHelpInfo(
     LPCTSTR lpszDocString,
     LPCTSTR lpszHelpFile = NULL,
@@ -361,7 +361,7 @@ Contexte d’aide pour la page de propriété.
 
 Indique si l’utilisateur a modifié la page de propriété.
 
-```
+```cpp
 void SetModifiedFlag(BOOL bModified = TRUE);
 ```
 
@@ -374,7 +374,7 @@ Spécifie la nouvelle valeur du drapeau modifié de la page de propriété.
 
 Définit le nom de la page de propriété, que le cadre de propriété affichera généralement sur l’onglet de la page.
 
-```
+```cpp
 void SetPageName(LPCTSTR lpszPageName);
 ```
 

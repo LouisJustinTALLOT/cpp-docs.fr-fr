@@ -42,12 +42,12 @@ helpviewer_keywords:
 - CProgressCtrl [MFC], SetStep
 - CProgressCtrl [MFC], StepIt
 ms.assetid: 222630f4-1598-4026-8198-51649b1192ab
-ms.openlocfilehash: c5eb6a93cd68c2dafb76af3b0e42da8b56566e25
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: c9e94e334318b32efcf8c9de681a78349ab12151
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81364005"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81751127"
 ---
 # <a name="cprogressctrl-class"></a>CProgressCtrl, classe
 
@@ -149,7 +149,7 @@ Spécifie le style du contrôle de la barre de progression. Appliquer toute comb
 - PBS_SMOOTH affiche un remplissage progressif et lisse dans le contrôle de la barre de progression. Sans ce drapeau, le contrôle se remplira de blocs.
 
 *Rect*<br/>
-Spécifie la taille et la position du contrôle de la barre de progression. Il peut s’agir soit d’un objet [CRect,](../../atl-mfc-shared/reference/crect-class.md) soit d’une structure [RECT.](/previous-versions/dd162897\(v=vs.85\)) Étant donné que le contrôle doit être une fenêtre pour enfants, les coordonnées spécifiées sont relatives à la zone client du *pParentWnd*.
+Spécifie la taille et la position du contrôle de la barre de progression. Il peut s’agir soit d’un objet [CRect,](../../atl-mfc-shared/reference/crect-class.md) soit d’une structure [RECT.](/windows/win32/api/windef/ns-windef-rect) Étant donné que le contrôle doit être une fenêtre pour enfants, les coordonnées spécifiées sont relatives à la zone client du *pParentWnd*.
 
 *pParentWnd*<br/>
 Spécifie la fenêtre parente du `CDialog`contrôle de la barre de progression, généralement un . Ce ne doit pas être NULL.
@@ -191,7 +191,7 @@ Spécifie le style étendu du contrôle en cours de création. Pour une liste de
 Spécifie le style du contrôle de la barre de progression. Appliquez toute combinaison de styles de fenêtre décrits dans [CreateWindow](/windows/win32/api/winuser/nf-winuser-createwindoww) dans le SDK Windows.
 
 *Rect*<br/>
-Une référence à une structure [RECT](/previous-versions/dd162897\(v=vs.85\)) décrivant la taille et la position de la fenêtre à créer, dans les coordonnées des clients de *pParentWnd*.
+Une référence à une structure [RECT](/windows/win32/api/windef/ns-windef-rect) décrivant la taille et la position de la fenêtre à créer, dans les coordonnées des clients de *pParentWnd*.
 
 *pParentWnd*<br/>
 Un pointeur vers la fenêtre qui est le parent du contrôle.
@@ -263,7 +263,7 @@ La position du contrôle de la barre de progression n’est pas l’emplacement 
 
 Obtient les limites inférieures et supérieures actuelles, ou la portée, du contrôle de la barre de progression.
 
-```
+```cpp
 void GetRange(
     int& nLower,
     int& nUpper);
@@ -297,7 +297,7 @@ int GetState() const;
 
 L’état du contrôle actuel des barres de progression, qui est l’une des valeurs suivantes :
 
-|Value|State|
+|Valeur|State|
 |-----------|-----------|
 |PBST_NORMAL|En cours|
 |PBST_ERROR|Error|
@@ -495,7 +495,7 @@ La position du contrôle de la barre de progression n’est pas l’emplacement 
 
 Définit les limites supérieures et inférieures de la portée du contrôle de la barre de progression et redessine la barre pour refléter les nouvelles plages.
 
-```
+```cpp
 void SetRange(
     short nLower,
     short nUpper);

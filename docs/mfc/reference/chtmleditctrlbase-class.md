@@ -220,12 +220,12 @@ helpviewer_keywords:
 - CHtmlEditCtrlBase [MFC], Unlink
 - CHtmlEditCtrlBase [MFC], UnorderList
 ms.assetid: e0cc74b4-8320-4570-b673-16c03d2ae266
-ms.openlocfilehash: 95de66a66d9c1a6f3abf992c5a9cd64ee1fe91ef
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 8cb5d69ea6052b500ab7e92d2520ee70de597a83
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81352213"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81752337"
 ---
 # <a name="chtmleditctrlbase-class"></a>Classe CHtmlEditCtrlBase
 
@@ -2088,7 +2088,7 @@ Retourne S_OK sur le succès, ou une erreur HRESULT sur l’échec.
 
 ### <a name="remarks"></a>Notes
 
-Cette méthode envoie [l’ID ID ID DENAME Command IDM](/previous-versions/aa769880\(v=vs.85\)) au contrôle WebBrowser.
+Cette méthode envoie [l’ID de commande IDM_FONTNAME](/previous-versions/aa769880\(v=vs.85\)) au contrôle WebBrowser.
 
 ## <a name="chtmleditctrlbasesetfontsize"></a><a name="setfontsize"></a>CHtmlEditCtrlBase::SetFontSize
 
@@ -2100,7 +2100,7 @@ HRESULT SetFontSize(unsigned short size) const;
 
 ### <a name="parameters"></a>Paramètres
 
-*Taille*<br/>
+*size*<br/>
 La taille de la police HTML (1-7). Une valeur de 0 définit la taille de la police à 1.
 
 ### <a name="return-value"></a>Valeur de retour
@@ -2109,7 +2109,7 @@ Retourne S_OK sur le succès, ou une erreur HRESULT sur l’échec.
 
 ### <a name="remarks"></a>Notes
 
-Cette méthode envoie [l’ID de commande IDM FONTSIZE](/previous-versions/aa769881\(v=vs.85\)) au contrôle WebBrowser.
+Cette méthode envoie [l’ID de commande IDM_FONTSIZE](/previous-versions/aa769881\(v=vs.85\)) au contrôle WebBrowser.
 
 ## <a name="chtmleditctrlbasesetforecolor"></a><a name="setforecolor"></a>CHtmlEditCtrlBase::SetForeColor
 
@@ -2134,7 +2134,7 @@ Retourne S_OK sur le succès, ou une erreur HRESULT sur l’échec.
 
 ### <a name="remarks"></a>Notes
 
-Cette méthode envoie [l’ID de commande IDM FORECOLOR](/previous-versions/aa769882\(v=vs.85\)) au contrôle WebBrowser.
+Cette méthode envoie [l’ID de commande IDM_FORECOLOR](/previous-versions/aa769882\(v=vs.85\)) au contrôle WebBrowser.
 
 ## <a name="chtmleditctrlbasesetie5pastemode"></a><a name="setie5pastemode"></a>CHtmlEditCtrlBase::SetIE5PasteMode
 
@@ -2155,7 +2155,7 @@ Retourne S_OK sur le succès, ou une erreur HRESULT sur l’échec.
 
 ### <a name="remarks"></a>Notes
 
-Cette méthode envoie [l’ID ID de commande IE50_PASTE_MODE ID](/previous-versions/aa769923\(v=vs.85\)) à la commande WebBrowser.
+Cette méthode envoie [l’ID de commande IDM_IE50_PASTE_MODE](/previous-versions/aa769923\(v=vs.85\)) au contrôle WebBrowser.
 
 ## <a name="chtmleditctrlbasesetliveresize"></a><a name="setliveresize"></a>CHtmlEditCtrlBase::SetLiveResize
 
@@ -2176,7 +2176,7 @@ Retourne S_OK sur le succès, ou une erreur HRESULT sur l’échec.
 
 ### <a name="remarks"></a>Notes
 
-Cette méthode envoie [l’ID de commande IDM LIVERESIZE](/previous-versions/aa769928\(v=vs.85\)) au contrôle WebBrowser.
+Cette méthode envoie [l’ID de commande IDM_LIVERESIZE](/previous-versions/aa769928\(v=vs.85\)) au contrôle WebBrowser.
 
 ## <a name="chtmleditctrlbasesetmultiselect"></a><a name="setmultiselect"></a>CHtmlEditCtrlBase::SetMultiSelect
 
@@ -2197,7 +2197,7 @@ Retourne S_OK sur le succès, ou une erreur HRESULT sur l’échec.
 
 ### <a name="remarks"></a>Notes
 
-Cette méthode envoie [l’ID de commande IDM MULTIPLESELECTION](/previous-versions/aa769929\(v=vs.85\)) au contrôle WebBrowser.
+Cette méthode envoie [l’ID de commande IDM_MULTIPLESELECTION](/previous-versions/aa769929\(v=vs.85\)) au contrôle WebBrowser.
 
 ## <a name="chtmleditctrlbasesetoverridecursor"></a><a name="setoverridecursor"></a>CHtmlEditCtrlBase::SetOverrideCursor
 
@@ -2218,7 +2218,7 @@ Retourne S_OK sur le succès, ou une erreur HRESULT sur l’échec.
 
 ### <a name="remarks"></a>Notes
 
-Cette méthode envoie [l’ID ID OVERRIDE_CURSOR d’identification de commande](/previous-versions/aa769932\(v=vs.85\)) au contrôle WebBrowser.
+Cette méthode envoie [l’ID de commande IDM_OVERRIDE_CURSOR](/previous-versions/aa769932\(v=vs.85\)) au contrôle WebBrowser.
 
 ## <a name="chtmleditctrlbasesetoverwritemode"></a><a name="setoverwritemode"></a>CHtmlEditCtrlBase::SetOverwriteMode
 
@@ -2239,7 +2239,7 @@ Retourne S_OK sur le succès, ou une erreur HRESULT sur l’échec.
 
 ### <a name="remarks"></a>Notes
 
-Cette méthode envoie [l’ID de commande IDM OVERWRITE](/previous-versions/aa770016\(v=vs.85\)) au contrôle WebBrowser.
+Cette méthode envoie [l’ID de commande IDM_OVERWRITE](/previous-versions/aa770016\(v=vs.85\)) au contrôle WebBrowser.
 
 ## <a name="chtmleditctrlbasesetrespectvisindesign"></a><a name="setrespectvisindesign"></a>CHtmlEditCtrlBase::SetRespectVisInDesign
 
@@ -2260,7 +2260,7 @@ Retourne S_OK sur le succès, ou une erreur HRESULT sur l’échec.
 
 ### <a name="remarks"></a>Notes
 
-Cette méthode envoie [l’ID de commande IDM RESPECTVISIBILITY_INDESIGN](/previous-versions/aa770023\(v=vs.85\)) au contrôle WebBrowser.
+Cette méthode envoie [l’ID de commande IDM_RESPECTVISIBILITY_INDESIGN](/previous-versions/aa770023\(v=vs.85\)) au contrôle WebBrowser.
 
 ## <a name="chtmleditctrlbasesetshowalignedsitetags"></a><a name="setshowalignedsitetags"></a>CHtmlEditCtrlBase::SetShowAlignedSiteTags
 
@@ -2281,7 +2281,7 @@ Retourne S_OK sur le succès, ou une erreur HRESULT sur l’échec.
 
 ### <a name="remarks"></a>Notes
 
-Cette méthode envoie [l’ID de commande ID ID SHOWALIGNEDSITETAGS](/previous-versions/aa769947\(v=vs.85\)) à la commande WebBrowser.
+Cette méthode envoie [l’ID de commande IDM_SHOWALIGNEDSITETAGS](/previous-versions/aa769947\(v=vs.85\)) au contrôle WebBrowser.
 
 ## <a name="chtmleditctrlbasesetshowalltags"></a><a name="setshowalltags"></a>CHtmlEditCtrlBase::SetShowAllTags
 
@@ -2302,7 +2302,7 @@ Retourne S_OK sur le succès, ou une erreur HRESULT sur l’échec.
 
 ### <a name="remarks"></a>Notes
 
-Cette méthode envoie [l’ID de commande IDM SHOWALLTAGS](/previous-versions/aa769948\(v=vs.85\)) au contrôle WebBrowser.
+Cette méthode envoie [l’ID de commande IDM_SHOWALLTAGS](/previous-versions/aa769948\(v=vs.85\)) au contrôle WebBrowser.
 
 ## <a name="chtmleditctrlbasesetshowareatags"></a><a name="setshowareatags"></a>CHtmlEditCtrlBase::SetShowAreaTags
 
@@ -2323,7 +2323,7 @@ Retourne S_OK sur le succès, ou une erreur HRESULT sur l’échec.
 
 ### <a name="remarks"></a>Notes
 
-Cette méthode envoie [l’ID de commande IDM SHOWAREATAGS](/previous-versions/aa769949\(v=vs.85\)) au contrôle WebBrowser.
+Cette méthode envoie [l’ID de commande IDM_SHOWAREATAGS](/previous-versions/aa769949\(v=vs.85\)) au contrôle WebBrowser.
 
 ## <a name="chtmleditctrlbasesetshowbrtags"></a><a name="setshowbrtags"></a>CHtmlEditCtrlBase::SetShowBRTags
 
@@ -2344,7 +2344,7 @@ Retourne S_OK sur le succès, ou une erreur HRESULT sur l’échec.
 
 ### <a name="remarks"></a>Notes
 
-Cette méthode envoie [l’ID de commande IDM SHOWWBRTAGS](/previous-versions/aa769956\(v=vs.85\)) au contrôle WebBrowser.
+Cette méthode envoie [l’ID de commande IDM_SHOWWBRTAGS](/previous-versions/aa769956\(v=vs.85\)) au contrôle WebBrowser.
 
 ## <a name="chtmleditctrlbasesetshowcommenttags"></a><a name="setshowcommenttags"></a>CHtmlEditCtrlBase::SetShowCommentTags
 
@@ -2365,7 +2365,7 @@ Retourne S_OK sur le succès, ou une erreur HRESULT sur l’échec.
 
 ### <a name="remarks"></a>Notes
 
-Cette méthode envoie [l’ID de commande IDM SHOWCOMMENTTAGS](/previous-versions/aa769950\(v=vs.85\)) au contrôle WebBrowser.
+Cette méthode envoie [l’ID de commande IDM_SHOWCOMMENTTAGS](/previous-versions/aa769950\(v=vs.85\)) au contrôle WebBrowser.
 
 ## <a name="chtmleditctrlbasesetshowmisctags"></a><a name="setshowmisctags"></a>CHtmlEditCtrlBase::SetShowMiscTags
 
@@ -2386,7 +2386,7 @@ Retourne S_OK sur le succès, ou une erreur HRESULT sur l’échec.
 
 ### <a name="remarks"></a>Notes
 
-Cette méthode envoie [l’ID de commande IDM SHOWMISCTAGS](/previous-versions/aa769952\(v=vs.85\)) au contrôle WebBrowser.
+Cette méthode envoie [l’ID de commande IDM_SHOWMISCTAGS](/previous-versions/aa769952\(v=vs.85\)) au contrôle WebBrowser.
 
 ## <a name="chtmleditctrlbasesetshowscripttags"></a><a name="setshowscripttags"></a>CHtmlEditCtrlBase::SetShowScriptTags
 
@@ -2407,7 +2407,7 @@ Retourne S_OK sur le succès, ou une erreur HRESULT sur l’échec.
 
 ### <a name="remarks"></a>Notes
 
-Cette méthode envoie [l’ID de commande IDM SHOWSCRIPTTAGS](/previous-versions/aa769953\(v=vs.85\)) au contrôle WebBrowser.
+Cette méthode envoie [l’ID de commande IDM_SHOWSCRIPTTAGS](/previous-versions/aa769953\(v=vs.85\)) au contrôle WebBrowser.
 
 ## <a name="chtmleditctrlbasesetshowstyletags"></a><a name="setshowstyletags"></a>CHtmlEditCtrlBase::SetShowStyleTags
 
@@ -2428,7 +2428,7 @@ Retourne S_OK sur le succès, ou une erreur HRESULT sur l’échec.
 
 ### <a name="remarks"></a>Notes
 
-Cette méthode envoie [l’ID de commande IDM SHOWSTYLETAGS](/previous-versions/aa769954\(v=vs.85\)) au contrôle WebBrowser.
+Cette méthode envoie [l’ID de commande IDM_SHOWSTYLETAGS](/previous-versions/aa769954\(v=vs.85\)) au contrôle WebBrowser.
 
 ## <a name="chtmleditctrlbasesetshowunknowntags"></a><a name="setshowunknowntags"></a>CHtmlEditCtrlBase::SetShowUnknownTags
 
@@ -2449,7 +2449,7 @@ Retourne S_OK sur le succès, ou une erreur HRESULT sur l’échec.
 
 ### <a name="remarks"></a>Notes
 
-Cette méthode envoie [l’ID de commande IDM SHOWUNKNOWNTAGS](/previous-versions/aa769955\(v=vs.85\)) au contrôle WebBrowser.
+Cette méthode envoie [l’ID de commande IDM_SHOWUNKNOWNTAGS](/previous-versions/aa769955\(v=vs.85\)) au contrôle WebBrowser.
 
 ## <a name="chtmleditctrlbasetextarea"></a><a name="textarea"></a>CHtmlEditCtrlBase::TextArea
 
@@ -2470,7 +2470,7 @@ Retourne S_OK sur le succès, ou une erreur HRESULT sur l’échec.
 
 ### <a name="remarks"></a>Notes
 
-Cette méthode envoie [l’ID de commande IDM TEXTAREA](/previous-versions/aa769986\(v=vs.85\)) au contrôle WebBrowser.
+Cette méthode envoie [l’ID de commande IDM_TEXTAREA](/previous-versions/aa769986\(v=vs.85\)) au contrôle WebBrowser.
 
 ## <a name="chtmleditctrlbasetextbox"></a><a name="textbox"></a>CHtmlEditCtrlBase::TextBox
 
@@ -2491,7 +2491,7 @@ Retourne S_OK sur le succès, ou une erreur HRESULT sur l’échec.
 
 ### <a name="remarks"></a>Notes
 
-Cette méthode envoie [l’ID de commande IDM TEXTBOX](/previous-versions/aa769980\(v=vs.85\)) au contrôle WebBrowser.
+Cette méthode envoie [l’ID de commande IDM_TEXTBOX](/previous-versions/aa769980\(v=vs.85\)) au contrôle WebBrowser.
 
 ## <a name="chtmleditctrlbaseunbookmark"></a><a name="unbookmark"></a>CHtmlEditCtrlBase::UnBookmark
 
@@ -2507,7 +2507,7 @@ Retourne S_OK sur le succès, ou une erreur HRESULT sur l’échec.
 
 ### <a name="remarks"></a>Notes
 
-Cette méthode envoie [l’ID de commande IDM UNBOOKMARK](/previous-versions/aa770034\(v=vs.85\)) au contrôle WebBrowser.
+Cette méthode envoie [l’ID de commande IDM_UNBOOKMARK](/previous-versions/aa770034\(v=vs.85\)) au contrôle WebBrowser.
 
 ## <a name="chtmleditctrlbaseunderline"></a><a name="underline"></a>CHtmlEditCtrlBase::Underline
 
@@ -2523,7 +2523,7 @@ Retourne S_OK sur le succès, ou une erreur HRESULT sur l’échec.
 
 ### <a name="remarks"></a>Notes
 
-Cette méthode envoie [l’ID de commande IDM UNDERLINE](/previous-versions/aa770035\(v=vs.85\)) au contrôle WebBrowser.
+Cette méthode envoie [l’ID de commande IDM_UNDERLINE](/previous-versions/aa770035\(v=vs.85\)) au contrôle WebBrowser.
 
 ## <a name="chtmleditctrlbaseunlink"></a><a name="unlink"></a>CHtmlEditCtrlBase::Unlink
 
@@ -2539,7 +2539,7 @@ Retourne S_OK sur le succès, ou une erreur HRESULT sur l’échec.
 
 ### <a name="remarks"></a>Notes
 
-Cette méthode envoie [l’ID de commande IDM UNLINK](/previous-versions/aa770037\(v=vs.85\)) au contrôle WebBrowser.
+Cette méthode envoie [l’ID de commande IDM_UNLINK](/previous-versions/aa770037\(v=vs.85\)) au contrôle WebBrowser.
 
 ## <a name="chtmleditctrlbaseunorderlist"></a><a name="unorderlist"></a>CHtmlEditCtrlBase::UnorderList
 
@@ -2560,7 +2560,7 @@ Retourne S_OK sur le succès, ou une erreur HRESULT sur l’échec.
 
 ### <a name="remarks"></a>Notes
 
-Cette méthode envoie [l’ID de commande IDM UNORDERLIST](/previous-versions/aa769987\(v=vs.85\)) au contrôle WebBrowser.
+Cette méthode envoie [l’ID de commande IDM_UNORDERLIST](/previous-versions/aa769987\(v=vs.85\)) au contrôle WebBrowser.
 
 ## <a name="see-also"></a>Voir aussi
 

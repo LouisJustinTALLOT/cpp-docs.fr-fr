@@ -94,12 +94,12 @@ helpviewer_keywords:
 - CEdit [MFC], ShowBalloonTip
 - CEdit [MFC], Undo
 ms.assetid: b1533c30-7f10-4663-88d3-8b7f2c9f7024
-ms.openlocfilehash: 3ca2fe4486ae0751f37d046ef28ed11e60e776ac
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 94769a6fb3c5fceefda96b54cebb35b0533a8afa
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81373983"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81753221"
 ---
 # <a name="cedit-class"></a>CEdit Class
 
@@ -299,7 +299,7 @@ Pour plus d’informations, voir [EM_CHARFROMPOS](/windows/win32/Controls/em-cha
 
 Appelez cette fonction pour supprimer (clairement) la sélection actuelle (le cas échéant) dans le contrôle de modification.
 
-```
+```cpp
 void Clear();
 ```
 
@@ -319,7 +319,7 @@ Pour plus d’informations, voir [WM_CLEAR](/windows/win32/dataxchg/wm-clear) da
 
 Appelez cette fonction pour coy la sélection actuelle (le cas échéant) dans le contrôle de modification au Clipboard dans CF_TEXT format.
 
-```
+```cpp
 void Copy();
 ```
 
@@ -389,7 +389,7 @@ Appliquer les [styles de fenêtre](styles-used-by-mfc.md#window-styles) suivants
 
 Appelez cette fonction pour supprimer (couper) la sélection actuelle (le cas échéant) dans le contrôle de modification et copier le texte supprimé sur le Clipboard dans CF_TEXT format.
 
-```
+```cpp
 void Cut();
 ```
 
@@ -409,7 +409,7 @@ Pour plus d’informations, voir [WM_CUT](/windows/win32/dataxchg/wm-cut) dans l
 
 Appelez cette fonction pour réinitialiser (clair) le drapeau annuler d’un contrôle de modification.
 
-```
+```cpp
 void EmptyUndoBuffer();
 ```
 
@@ -720,7 +720,7 @@ Cette méthode envoie le [message EM_GETPASSWORDCHAR,](/windows/win32/Controls/e
 
 Appelez cette fonction pour obtenir le rectangle de formatage d’un contrôle de modification.
 
-```
+```cpp
 void GetRect(LPRECT lpRect) const;
 ```
 
@@ -793,7 +793,7 @@ Cette fonction envoie le [message EM_HIDEBALLOONTIP,](/windows/win32/Controls/em
 
 Appelez cette fonction pour limiter la durée du texte que l’utilisateur peut entrer dans un contrôle de modification.
 
-```
+```cpp
 void LimitText(int nChars = 0);
 ```
 
@@ -910,7 +910,7 @@ Cette méthode est prise en charge par le [message EM_LINELENGTH,](/windows/win3
 
 Appelez cette fonction pour faire défiler le texte d’un contrôle de modification à plusieurs lignes.
 
-```
+```cpp
 void LineScroll(
     int nLines,
     int nChars = 0);
@@ -942,7 +942,7 @@ Pour plus d’informations, voir [EM_LINESCROLL](/windows/win32/Controls/em-line
 
 Appelez cette fonction pour insérer les `CEdit` données du Clipboard dans le point d’insertion.
 
-```
+```cpp
 void Paste();
 ```
 
@@ -990,7 +990,7 @@ Pour plus d’informations, voir [EM_POSFROMCHAR](/windows/win32/Controls/em-pos
 
 Appelez cette fonction pour remplacer la sélection actuelle dans un contrôle de modification avec le texte spécifié par *lpszNewText*.
 
-```
+```cpp
 void ReplaceSel(LPCTSTR lpszNewText, BOOL bCanUndo = FALSE);
 ```
 
@@ -1056,7 +1056,7 @@ L’exemple suivant montre la méthode [CEdit:SetCueBanner.](#setcuebanner)
 
 Appelez cette fonction pour définir la poignée à la mémoire locale qui sera utilisée par un contrôle de modification à plusieurs lignes.
 
-```
+```cpp
 void SetHandle(HLOCAL hBuffer);
 ```
 
@@ -1090,7 +1090,7 @@ Pour plus d’informations, voir [EM_SETHANDLE](/windows/win32/Controls/em-setha
 
 Met en évidence une gamme de texte qui est affichée dans le contrôle de modification en cours.
 
-```
+```cpp
 void SetHighlight(
     int ichStart,
     int ichEnd);
@@ -1111,7 +1111,7 @@ Cette méthode envoie le [message EM_SETHILITE,](/windows/win32/Controls/em-seth
 
 Appelez cette fonction de membre pour `CEdit` définir la limite de texte pour cet objet.
 
-```
+```cpp
 void SetLimitText(UINT nMax);
 ```
 
@@ -1138,7 +1138,7 @@ Pour plus d’informations, voir [EM_SETLIMITTEXT](/windows/win32/Controls/em-se
 
 Appelez cette méthode pour définir les marges gauche et droite de ce contrôle de modification.
 
-```
+```cpp
 void SetMargins(
     UINT nLeft,
     UINT nRight);
@@ -1167,7 +1167,7 @@ Pour plus d’informations, voir [EM_SETMARGINS](/windows/win32/Controls/em-setm
 
 Appelez cette fonction pour définir ou effacer le drapeau modifié pour un contrôle de modification.
 
-```
+```cpp
 void SetModify(BOOL bModified = TRUE);
 ```
 
@@ -1190,7 +1190,7 @@ Pour plus d’informations, voir [EM_SETMODIFY](/windows/win32/Controls/em-setmo
 
 Appelez cette fonction pour définir ou supprimer un personnage de mot de passe affiché dans un contrôle de modification lorsque l’utilisateur tape du texte.
 
-```
+```cpp
 void SetPasswordChar(TCHAR ch);
 ```
 
@@ -1246,7 +1246,7 @@ Pour plus d’informations, voir [EM_SETREADONLY](/windows/win32/Controls/em-set
 
 Appelez cette fonction pour définir les dimensions d’un rectangle à l’aide des coordonnées spécifiées.
 
-```
+```cpp
 void SetRect(LPCRECT lpRect);
 ```
 
@@ -1275,7 +1275,7 @@ Pour plus d’informations, voir [EM_SETRECT](/windows/win32/Controls/em-setrect
 
 Appelez cette fonction pour définir le rectangle de formatage d’un contrôle de modification à plusieurs lignes.
 
-```
+```cpp
 void SetRectNP(LPCRECT lpRect);
 ```
 
@@ -1306,7 +1306,7 @@ Pour plus d’informations, voir [EM_SETRECTNP](/windows/win32/Controls/em-setre
 
 Appelez cette fonction pour sélectionner une gamme de caractères dans un contrôle de modification.
 
-```
+```cpp
 void SetSel(
     DWORD dwSelection,
     BOOL bNoScroll = FALSE);
@@ -1343,7 +1343,7 @@ Pour plus d’informations, voir [EM_SETSEL](/windows/win32/Controls/em-setsel) 
 
 Appelez cette fonction pour définir les arrêts de l’onglet dans un contrôle de modification à plusieurs lignes.
 
-```
+```cpp
 void SetTabStops();
 BOOL SetTabStops(const int& cxEachStop);
 

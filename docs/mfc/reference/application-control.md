@@ -4,12 +4,12 @@ ms.date: 11/04/2016
 helpviewer_keywords:
 - application control [MFC]
 ms.assetid: c1f69f15-e0fe-4515-9f36-d63d31869deb
-ms.openlocfilehash: 1f438d3344e90a16def2bd4c0f9cedcd47a64203
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 7e18b4504ddbfdd9a4399f33c34c6e6e9900233b
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81363554"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81752857"
 ---
 # <a name="application-control"></a>Contrôle d'application
 
@@ -104,7 +104,7 @@ L’utilisateur contrôle l’application lorsque l’utilisateur a explicitemen
 
 Définit ou efface le drapeau de contrôle de l’utilisateur, qui est expliqué dans la référence pour `AfxOleGetUserCtrl`.
 
-```
+```cpp
 void AFXAPI AfxOleSetUserCtrl(BOOL bUserCtrl);
 ```
 
@@ -127,7 +127,7 @@ Appelez cette fonction si d’autres actions de votre application doivent mettre
 
 Incréments le nombre global d’objets actifs dans l’application.
 
-```
+```cpp
 void AFXAPI AfxOleLockApp();
 ```
 
@@ -151,7 +151,7 @@ Appelez `AfxOleLockApp` à partir de tout objet qui expose les interfaces OLE, s
 
 Décrément le nombre d’objets actifs dans l’application.
 
-```
+```cpp
 void AFXAPI AfxOleUnlockApp();
 ```
 
@@ -268,7 +268,7 @@ Le registre se compose d’un ensemble de clés et de valeurs. Les arguments *rg
 
 Les symboles sont remplis comme suit :
 
-|Symbole|Value|
+|Symbole|Valeur|
 |------------|-----------|
 |%1|Id de classe, formaté comme une chaîne|
 |%2|Nom de classe|
@@ -284,7 +284,7 @@ Les symboles sont remplis comme suit :
 
 Implémente l’interface utilisateur pour la commande *d’objet de type.*
 
-```
+```cpp
 void AFXAPI AfxOleSetEditMenu(
     COleClientItem* pClient,
     CMenu* pMenu,

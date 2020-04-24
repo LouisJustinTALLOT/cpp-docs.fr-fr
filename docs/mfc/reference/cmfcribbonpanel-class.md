@@ -114,12 +114,12 @@ helpviewer_keywords:
 - CMFCRibbonPanel [MFC], SetKeys
 - CMFCRibbonPanel [MFC], ShowPopup
 ms.assetid: 51d70749-1140-4386-b103-f14082049ba6
-ms.openlocfilehash: fa07132ace37074effb02802353fc82d3e338be0
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 5d622b5c36729daca81a6093e9f21573ce86940e
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81368883"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81753545"
 ---
 # <a name="cmfcribbonpanel-class"></a>Classe CMFCRibbonPanel
 
@@ -432,7 +432,7 @@ Un pointeur valide à l’élément ruban de base situé à la position *nIndex*
 
 Récupère tous les éléments de ruban qui sont contenus dans le panneau de ruban.
 
-```
+```cpp
 void GetElements(CArray<CMFCRibbonBaseElement*, CMFCRibbonBaseElement*>& arElements);
 ```
 
@@ -447,7 +447,7 @@ void GetElements(CArray<CMFCRibbonBaseElement*, CMFCRibbonBaseElement*>& arEleme
 
 Ajoute des éléments ruban qui ont l’ID de commande spécifié à la gamme spécifiée.
 
-```
+```cpp
 void GetElementsByID(
 UINT uiCmdID,
 CArray<CMFCRibbonBaseElement*, CMFCRibbonBaseElement*>& arElements);
@@ -502,7 +502,7 @@ Indice à base de zéro de l’élément ruban spécifié si la méthode était 
 
 Récupère les Œuvres d’ID de commande pour tous les éléments ruban dans le panneau ruban.
 
-```
+```cpp
 void GetItemIDsList(CList<UINT, UINT>& lstItems) const;
 ```
 
@@ -891,7 +891,7 @@ Appelez cette méthode pour supprimer un élément du panneau ruban.
 
 Supprime tous les éléments ruban du panneau ruban.
 
-```
+```cpp
 void RemoveAll();
 ```
 
@@ -955,7 +955,7 @@ Pour remplacer un élément ruban basé sur la position, appelez [CMFCRibbonPane
 
 Permet ou désactive le centrage des positions verticales des éléments ruban dans leur rectangle d’affichage.
 
-```
+```cpp
 void SetCenterColumnVert(BOOL bSet = TRUE);
 ```
 
@@ -970,7 +970,7 @@ void SetCenterColumnVert(BOOL bSet = TRUE);
 
 Associe les données définies par l’utilisateur avec le panneau ruban.
 
-```
+```cpp
 void SetData(DWORD_PTR dwData);
 ```
 
@@ -1108,7 +1108,7 @@ pColorButton->EnableAutomaticButton(_T("Automatic"),
 
 Permet ou désactive l’ajustement de la largeur des éléments ruban dans la même colonne.
 
-```
+```cpp
 void SetJustifyColumns(BOOL bSet = TRUE);
 ```
 
@@ -1125,7 +1125,7 @@ Lorsque cette fonctionnalité est activée dans un panneau ruban, les largeurs d
 
 Définit le keytip pour le bouton par défaut du panneau ruban.
 
-```
+```cpp
 void SetKeys(LPCTSTR lpszKeys);
 ```
 
@@ -1163,7 +1163,7 @@ Le menu pop-up pour le panneau de ruban n’est disponible que lorsque l’affic
 
 Définit la mise au point de l’élément Ruban spécifié.
 
-```
+```cpp
 void SetFocused(CMFCRibbonBaseElement* pNewFocus);
 ```
 
@@ -1178,7 +1178,7 @@ Un pointeur à un élément ruban qui reçoit la mise au point.
 
 Faites défiler la galerie pour rendre visible l’élément Ruban spécifié.
 
-```
+```cpp
 void MakeGalleryItemVisible(CMFCRibbonBaseElement* pItem);
 ```
 
@@ -1207,7 +1207,7 @@ VRAI si le ruban parent a Windows 7 look; autrement FALSE.
 
 Récupère une gamme d’éléments visibles.
 
-```
+```cpp
 void GetVisibleElements(
 CArray<CMFCRibbonBaseElement*,
 CMFCRibbonBaseElement*>& arElements);

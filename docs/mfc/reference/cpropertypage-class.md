@@ -40,12 +40,12 @@ helpviewer_keywords:
 - CPropertyPage [MFC], SetModified
 - CPropertyPage [MFC], m_psp
 ms.assetid: d9000a21-aa81-4530-85d9-f43432afb4dc
-ms.openlocfilehash: 816948ea17f674c3cd693331502df33cce62610c
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: f46566eb562f1515e98aedf938ca68b225ee1b67
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81364002"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81751101"
 ---
 # <a name="cpropertypage-class"></a>CPropertyPage, classe
 
@@ -119,7 +119,7 @@ Pour plus d’informations sur l’établissement d’une feuille de propriété
 
 Appelez cette fonction après qu’un changement irrécupérable a été apporté aux données dans une page d’une feuille de propriété modale.
 
-```
+```cpp
 void CancelToClose();
 ```
 
@@ -137,7 +137,7 @@ La `CancelToClose` fonction membre ne fait rien dans une feuille de propriété 
 
 Appelez cette fonction de `CPropertyPage` membre pour construire un objet.
 
-```
+```cpp
 void Construct(
     UINT nIDTemplate,
     UINT nIDCaption = 0);
@@ -555,7 +555,7 @@ Si une page renvoie une valeur non zéro, la feuille de propriété n’envoie p
 
 Appelez cette fonction membre pour activer ou désactiver le bouton Apply Now, en fonction de la question de savoir si les paramètres de la page de propriété doivent être appliqués à l’objet externe approprié.
 
-```
+```cpp
 void SetModified(BOOL bChanged = TRUE);
 ```
 

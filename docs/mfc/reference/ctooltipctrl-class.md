@@ -72,12 +72,12 @@ helpviewer_keywords:
 - CToolTipCtrl [MFC], Update
 - CToolTipCtrl [MFC], UpdateTipText
 ms.assetid: 8973f70c-b73a-46c7-908d-758f364b9a97
-ms.openlocfilehash: fdf91549fd1b911de3af82bb940b92fe5e220b92
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 53a5a5b6871680f9758d140174dcceae6c53f568
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81365104"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81752201"
 ---
 # <a name="ctooltipctrl-class"></a>CToolTipCtrl Class
 
@@ -164,7 +164,7 @@ Pour plus d’informations sur l’utilisation `CToolTipCtrl`, voir [Contrôles]
 
 Appelez cette fonction pour activer ou désactiver un contrôle de pointe d’outil.
 
-```
+```cpp
 void Activate(BOOL bActivate);
 ```
 
@@ -210,7 +210,7 @@ Pointeur vers la fenêtre qui contient l’outil.
 ID de la ressource de chaîne qui contient le texte pour l’outil.
 
 *lpRectTool*<br/>
-Pointeur vers une structure [RECT](/previous-versions/dd162897\(v=vs.85\)) contenant des coordonnées du rectangle de délimitation de l’outil. Les coordonnées sont relatives au coin supérieur gauche de la zone cliente de la fenêtre identifiée par *pWnd*.
+Pointeur vers une structure [RECT](/windows/win32/api/windef/ns-windef-rect) contenant des coordonnées du rectangle de délimitation de l’outil. Les coordonnées sont relatives au coin supérieur gauche de la zone cliente de la fenêtre identifiée par *pWnd*.
 
 *nIDTool (en)*<br/>
 ID de l’outil.
@@ -248,7 +248,7 @@ BOOL AdjustRect(
 ### <a name="parameters"></a>Paramètres
 
 *lprc (lprc)*<br/>
-Pointeur vers une structure [RECT](/previous-versions/dd162897\(v=vs.85\)) qui contient soit un rectangle de fenêtre de pointe d’outil ou un rectangle d’affichage de texte.
+Pointeur vers une structure [RECT](/windows/win32/api/windef/ns-windef-rect) qui contient soit un rectangle de fenêtre de pointe d’outil ou un rectangle d’affichage de texte.
 
 *bLarger (en)*<br/>
 Si VRAI, *lprc* est utilisé pour spécifier un rectangle d’affichage de texte, et il reçoit le rectangle de fenêtre correspondant. Si FALSE, *lprc* est utilisé pour spécifier un rectangle de fenêtre, et il reçoit le rectangle d’affichage de texte correspondant.
@@ -352,7 +352,7 @@ Vous devez `Create` appeler après la construction de l’objet.
 
 Supprime l’outil spécifié par *pWnd* et *nIDTool* de la collection d’outils pris en charge par un contrôle de pointe d’outil.
 
-```
+```cpp
 void DelTool(
     CWnd* pWnd,
     UINT_PTR nIDTool = 0);
@@ -446,14 +446,14 @@ Cette fonction de membre implémente le comportement du message Win32 [TTM_GETDE
 
 Récupère les marges supérieure, gauche, inférieure et droite pour une fenêtre de pointe d’outil.
 
-```
+```cpp
 void GetMargin(LPRECT lprc) const;
 ```
 
 ### <a name="parameters"></a>Paramètres
 
 *lprc (lprc)*<br/>
-Adresse d’une `RECT` structure qui recevra l’information sur la marge. Les membres de la structure [RECT](/previous-versions/dd162897\(v=vs.85\)) ne définissent pas un rectangle de délimitation. Aux fins de ce message, les membres de la structure sont interprétés comme suit :
+Adresse d’une `RECT` structure qui recevra l’information sur la marge. Les membres de la structure [RECT](/windows/win32/api/windef/ns-windef-rect) ne définissent pas un rectangle de délimitation. Aux fins de ce message, les membres de la structure sont interprétés comme suit :
 
 |Membre|Représentation|
 |------------|--------------------|
@@ -486,7 +486,7 @@ Cette fonction de membre implémente le comportement du message Win32 [TTM_GETMA
 
 Récupère le texte qu’un contrôle de pointe d’outil maintient pour un outil.
 
-```
+```cpp
 void GetText(
     CString& str,
     CWnd* pWnd,
@@ -544,7 +544,7 @@ Cette fonction de membre implémente le comportement du message Win32 [TTM_GETTI
 
 Récupère le titre du contrôle actuel de la pointe d’outils.
 
-```
+```cpp
 void GetTitle(PTTGETTITLE pttgt) const;
 ```
 
@@ -656,7 +656,7 @@ typedef struct _TT_HITTESTINFO { // tthti
 
 Enlève une fenêtre de pointe d’outil affichée de la vue.
 
-```
+```cpp
 void Pop();
 ```
 
@@ -668,7 +668,7 @@ Cette fonction de membre implémente le comportement du message Win32 [TTM_POP](
 
 Provoque l’affichage actuel du contrôle de l’outil aux coordonnées du dernier message de souris.
 
-```
+```cpp
 void Popup();
 ```
 
@@ -686,7 +686,7 @@ L’exemple de code suivant affiche une fenêtre de pointe d’outil.
 
 Passe un message de souris à un contrôle de pointe d’outil pour le traitement.
 
-```
+```cpp
 void RelayEvent(LPMSG lpMsg);
 ```
 
@@ -713,7 +713,7 @@ Un contrôle de l’astuce d’outil ne `RelayEvent`traite que les messages suiv
 
 Définit le délai pour un contrôle de pointe d’outil.
 
-```
+```cpp
 void SetDelayTime(UINT nDelay);
 
 void SetDelayTime(
@@ -740,7 +740,7 @@ Le délai est la durée pendante pendant que le curseur doit rester sur un outil
 
 Définit les marges supérieure, gauche, inférieure et droite pour une fenêtre de pointe d’outil.
 
-```
+```cpp
 void SetMargin(LPRECT lprc);
 ```
 
@@ -778,7 +778,7 @@ Cette fonction membre implémente le comportement du message Win32 [TTM_SETMAXTI
 
 Définit la couleur de fond dans une fenêtre de pointe d’outil.
 
-```
+```cpp
 void SetTipBkColor(COLORREF clr);
 ```
 
@@ -795,7 +795,7 @@ Cette fonction de membre implémente le comportement du message Win32 [TTM_SETTI
 
 Définit la couleur du texte dans une fenêtre de pointe d’outil.
 
-```
+```cpp
 void SetTipTextColor(COLORREF clr);
 ```
 
@@ -838,7 +838,7 @@ Cette fonction de membre implémente le comportement du message Win32 [TTM_SETTI
 
 Définit l’information qu’un bout d’outil conserve pour un outil.
 
-```
+```cpp
 void SetToolInfo(LPTOOLINFO lpToolInfo);
 ```
 
@@ -851,7 +851,7 @@ Un pointeur vers une structure [TOOLINFO](/windows/win32/api/commctrl/ns-commctr
 
 Définit un nouveau rectangle de délimitation pour un outil.
 
-```
+```cpp
 void SetToolRect(
     CWnd* pWnd,
     UINT_PTR nIDTool,
@@ -867,7 +867,7 @@ Pointeur vers la fenêtre qui contient l’outil.
 ID de l’outil.
 
 *lpRect*<br/>
-Pointeur vers une structure [RECT](/previous-versions/dd162897\(v=vs.85\)) spécifiant le nouveau rectangle de délimitation.
+Pointeur vers une structure [RECT](/windows/win32/api/windef/ns-windef-rect) spécifiant le nouveau rectangle de délimitation.
 
 ## <a name="ctooltipctrlsetwindowtheme"></a><a name="setwindowtheme"></a>CToolTipCtrl::SetWindowTheme
 
@@ -894,7 +894,7 @@ Cette fonction de membre imite la fonctionnalité du message [TTM_SETWINDOWTHEME
 
 Force le redessin de l’outil actuel.
 
-```
+```cpp
 void Update();
 ```
 
@@ -902,7 +902,7 @@ void Update();
 
 Mise à jour du texte de pointe de l’outil pour les outils de ce contrôle.
 
-```
+```cpp
 void UpdateTipText(
     LPCTSTR lpszText,
     CWnd* pWnd,

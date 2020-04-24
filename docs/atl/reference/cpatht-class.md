@@ -49,12 +49,12 @@ f1_keywords:
 helpviewer_keywords:
 - CPathT class
 ms.assetid: eba4137d-1fd2-4b44-a2e1-0944db64df3c
-ms.openlocfilehash: c10b854ae5c2d7167a067675b1391be24b6a8122
-ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
-ms.translationtype: HT
+ms.openlocfilehash: 76273e7fbfa50e610b437e11859821374413d008
+ms.sourcegitcommit: 89d9e1cb08fa872483d1cde98bc2a7c870e505e9
+ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 04/22/2020
-ms.locfileid: "81746597"
+ms.locfileid: "82032132"
 ---
 # <a name="cpatht-class"></a>Classe CPathT
 
@@ -102,8 +102,8 @@ La classe de cordes ATL/MFC à utiliser pour le chemin (voir [CStringT](../../at
 |[CPathT::Canonicalize](#canonicalize)|Appelez cette méthode pour convertir le chemin en forme canonique.|
 |[CPathT::Combinez](#combine)|Appelez cette méthode pour concatenate une chaîne représentant un nom d’annuaire et une chaîne représentant un nom de chemin de fichier dans un chemin.|
 |[CPathT::CommonPrefix](#commonprefix)|Appelez cette méthode pour déterminer si le chemin spécifié partage un préfixe commun avec le chemin actuel.|
-|[CPathT::CompactPath](#compactpath)|Appelez cette méthode pour tronquer un chemin de fichier pour s’adapter dans une largeur de pixel donnée en remplaçant les composants de chemin par des ellipses.|
-|[CPathT::CompactPathEx](#compactpathex)|Appelez cette méthode pour tronquer un chemin de fichier pour s’adapter à un nombre donné de caractères en remplaçant les composants du chemin par des ellipses.|
+|[CPathT::CompactPath](#compactpath)|Appelez cette méthode pour tronquer un chemin de fichier pour s’adapter dans une largeur de pixel donnée en remplaçant les composants du chemin par l’ellipsis.|
+|[CPathT::CompactPathEx](#compactpathex)|Appelez cette méthode pour tronquer un chemin de fichier pour s’adapter à un nombre donné de caractères en remplaçant les composants du chemin par l’ellipsis.|
 |[CPathT::FileExists](#fileexists)|Appelez cette méthode pour vérifier si le fichier à ce nom de chemin existe.|
 |[CPathT::FindExtension](#findextension)|Appelez cette méthode pour trouver la position de l’extension du fichier dans le chemin.|
 |[CPathT::FindFileName](#findfilename)|Appelez cette méthode pour trouver la position du nom du fichier dans le chemin.|
@@ -288,7 +288,7 @@ Un préfixe est l’un\\\\de ces types: "C: ", ".", "..", ".. \\\\". Pour plus d
 
 ## <a name="cpathtcompactpath"></a><a name="compactpath"></a>CPathT::CompactPath
 
-Appelez cette méthode pour tronquer un chemin de fichier pour s’adapter dans une largeur de pixel donnée en remplaçant les composants de chemin par des ellipses.
+Appelez cette méthode pour tronquer un chemin de fichier pour s’adapter dans une largeur de pixel donnée en remplaçant les composants du chemin par l’ellipsis.
 
 ```
 BOOL CompactPath(HDC hDC, UINT nWidth);
@@ -312,7 +312,7 @@ Pour plus d’informations, voir [PathCompactPath](/windows/win32/api/shlwapi/nf
 
 ## <a name="cpathtcompactpathex"></a><a name="compactpathex"></a>CPathT::CompactPathEx
 
-Appelez cette méthode pour tronquer un chemin de fichier pour s’adapter à un nombre donné de caractères en remplaçant les composants du chemin par des ellipses.
+Appelez cette méthode pour tronquer un chemin de fichier pour s’adapter à un nombre donné de caractères en remplaçant les composants du chemin par l’ellipsis.
 
 ```
 BOOL CompactPathEx(UINT nMaxChars, DWORD dwFlags = 0);

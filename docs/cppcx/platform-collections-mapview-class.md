@@ -12,12 +12,12 @@ f1_keywords:
 helpviewer_keywords:
 - MapView Class
 ms.assetid: 9577dde7-f599-43c6-b1e4-7d653706fd62
-ms.openlocfilehash: 24995f553c5fcb8626c0d51758577b948c9c67ad
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
-ms.translationtype: MT
+ms.openlocfilehash: a770b318d893b9e81bdf11a75c2b0b05c0a9979f
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
+ms.translationtype: HT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81354426"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81750610"
 ---
 # <a name="platformcollectionsmapview-class"></a>Platform::Collections::MapView, classe
 
@@ -38,7 +38,7 @@ ref class MapView sealed;
 *K*<br/>
 Type de la clé dans la paire clé-valeur.
 
-*V*<br/>
+*C*<br/>
 Type de la valeur dans la paire clé-valeur.
 
 *C*<br/>
@@ -168,10 +168,10 @@ Objet de fonction qui peut comparer deux valeurs d'élément comme des clés de 
 *M*<br/>
 Une référence ou [Lvalues et Rvalues](../cpp/lvalues-and-rvalues-visual-cpp.md) à un `map Class` qui est utilisé pour initialiser le MapView actuel.
 
-*Première*<br/>
+*first*<br/>
 Itérateur d'entrée du premier élément d'une plage d'éléments utilisée pour initialiser le MapView actif.
 
-*Dernière*<br/>
+*last*<br/>
 Itérateur d'entrée du premier élément qui suit une plage d'éléments utilisée pour initialiser le MapView actif.
 
 *il*<br/>
@@ -197,7 +197,7 @@ Divise l'objet MapView actif en deux objets MapView. Cette méthode n'est pas op
 
 ### <a name="syntax"></a>Syntaxe
 
-```
+```cpp
 void Split(
    Windows::Foundation::Collections::IMapView<
                          K, V>^ * firstPartition,

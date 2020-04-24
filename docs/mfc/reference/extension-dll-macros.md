@@ -4,12 +4,12 @@ ms.date: 03/27/2019
 helpviewer_keywords:
 - module macros in MFC
 ms.assetid: 303f4161-cb5e-4099-81ad-acdb11aa60fb
-ms.openlocfilehash: 6945dcc02423516e8d1cee5d8c828c4ed5069bef
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 42a08ff2e806acae6713c9df3fe170f7e89f05af
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81365704"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81751598"
 ---
 # <a name="macros-and-functions-for-managing-dlls"></a>Macros et fonctions pour la gestion des LDL
 
@@ -91,7 +91,7 @@ Pour le support OLE d’un DLL MFC régulier qui est dynamiquement lié à `CWin
 
 ### <a name="syntax"></a>Syntaxe
 
-```
+```cpp
 void AFXAPI AfxOleInitModule( );
 ```
 
@@ -111,7 +111,7 @@ Pour le support MFC Sockets d’un DLL MFC régulier qui est dynamiquement lié 
 
 ### <a name="syntax"></a>Syntaxe
 
-```
+```cpp
 void AFXAPI AfxNetInitModule( );
 ```
 
@@ -193,7 +193,7 @@ BOOL AFXAPI AfxInitExtensionModule( AFX_EXTENSION_MODULE& state,  HMODULE hModul
 
 ### <a name="parameters"></a>Paramètres
 
-*État*<br/>
+*state*<br/>
 Une référence à la structure [AFX_EXTENSION_MODULE structure](afx-extension-module-structure.md) qui contiendra l’état du module DLL d’extension MFC après l’initialisation. L’état comprend une copie des objets de classe runtime qui ont été paralés par `DllMain` l’extension MFC DLL dans le cadre de la construction normale d’objets statiques exécutés avant est entré.
 
 *hModule*<br/>
@@ -244,7 +244,7 @@ Utilisez cette fonction pour définir le drapeau d’état par module, qui affec
 
 ### <a name="syntax"></a>Syntaxe
 
-```
+```cpp
 void AFXAPI AfxSetAmbientActCtx(BOOL bSet);
 ```
 
@@ -279,13 +279,13 @@ Appelez cette fonction pour permettre à MFC de nettoyer la DLL d’extension MF
 
 ### <a name="syntax"></a>Syntaxe
 
-```
+```cpp
 void AFXAPI AfxTermExtensionModule(  AFX_EXTENSION_MODULE& state,  BOOL bAll  = FALSE );
 ```
 
 ### <a name="parameters"></a>Paramètres
 
-*État*<br/>
+*state*<br/>
 Une référence à la structure [AFX_EXTENSION_MODULE](afx-extension-module-structure.md) qui contient l’état du module DLL d’extension MFC.
 
 *Balle*<br/>

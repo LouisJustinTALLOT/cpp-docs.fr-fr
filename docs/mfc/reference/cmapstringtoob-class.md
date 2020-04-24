@@ -34,12 +34,12 @@ helpviewer_keywords:
 - CMapStringToOb [MFC], RemoveKey
 - CMapStringToOb [MFC], SetAt
 ms.assetid: 09653980-b885-4f3a-8594-0aeb7f94c601
-ms.openlocfilehash: 12de7bd72f643f08cebf948634703172d6725ce6
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 6520d1c38701647ae51450b9b9800a7cd2701b7a
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81370104"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81754582"
 ---
 # <a name="cmapstringtoob-class"></a>CMapStringToOb, classe
 
@@ -201,7 +201,7 @@ Le tableau suivant montre d’autres `CMapStringToOb::GetHashTableSize`fonctions
 
 Récupère l’élément de carte à *rNextPosition*, puis met à jour *rNextPosition* pour se référer à l’élément suivant dans la carte.
 
-```
+```cpp
 void GetNextAssoc(
     POSITION& rNextPosition,
     CString& rKey,
@@ -353,7 +353,7 @@ Le tableau suivant montre d’autres `CMapStringToOb::HashKey`fonctions de membr
 
 Initialise la table de hachage.
 
-```
+```cpp
 void InitHashTable(
     UINT hashSize,
     BOOL bAllocNow = TRUE);
@@ -534,7 +534,7 @@ Operator [] example: A CMapStringToOb with 2 elements
 
 Supprime tous les éléments de cette `CString` carte et détruit les objets clés.
 
-```
+```cpp
 void RemoveAll();
 ```
 
@@ -612,7 +612,7 @@ RemoveKey example: A CMapStringToOb with 3 elements
 
 Le principal moyen d’insérer un élément dans une carte.
 
-```
+```cpp
 void SetAt(
     LPCTSTR key,
     CObject* newValue);
@@ -623,7 +623,7 @@ void SetAt(
 *key*<br/>
 Spécifie la chaîne qui est la clé du nouvel élément.
 
-*Newvalue*<br/>
+*newValue*<br/>
 Spécifie le `CObject` pointeur qui est la valeur du nouvel élément.
 
 ### <a name="remarks"></a>Notes

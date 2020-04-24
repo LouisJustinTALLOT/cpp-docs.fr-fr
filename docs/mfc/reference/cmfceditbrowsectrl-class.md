@@ -26,12 +26,12 @@ helpviewer_keywords:
 - CMFCEditBrowseCtrl [MFC], OnIllegalFileName
 - CMFCEditBrowseCtrl [MFC], SetBrowseButtonImage
 ms.assetid: 69cfd886-3d35-4bee-8901-7c88fcf9520f
-ms.openlocfilehash: 6c611297353f82e4ec90365cbe33db763d9c9838
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: d542af4a87b6f0a33c0344d1d3da76980f8c1a91
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81367533"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81752379"
 ---
 # <a name="cmfceditbrowsectrl-class"></a>Classe CMFCEditBrowseCtrl
 
@@ -133,7 +133,7 @@ L’exemple suivant montre comment utiliser `CMFCEditBrowseCtrl` deux `EnableFol
 
 Affiche ou n’affiche pas le bouton de navigation sur le contrôle de navigation de modification en cours.
 
-```
+```cpp
 void EnableBrowseButton(
     BOOL bEnable=TRUE,
     LPCTSTR szLabel=_T("..."));
@@ -157,7 +157,7 @@ Si le *paramètre bEnable* est VRAI, le `BrowseMode_Default`mode de navigation d
 
 Affiche le bouton de navigation sur le contrôle de navigation de navigation de modification en cours et met le contrôle en mode *de navigation de fichier.*
 
-```
+```cpp
 void EnableFileBrowseButton(
     LPCTSTR lpszDefExt=NULL,
     LPCTSTR lpszFilter=NULL,
@@ -185,7 +185,7 @@ Pour une liste complète des drapeaux disponibles, voir [la structure OPENFILENA
 
 Affiche le bouton de navigation sur le contrôle de navigation de navigation de modification en cours et met le contrôle en mode *de navigation de dossier.*
 
-```
+```cpp
 void EnableFolderBrowseButton();
 ```
 
@@ -288,7 +288,7 @@ Remplacer cette fonction dans une classe dérivée pour personnaliser l’appare
 
 Définit une image personnalisée sur le bouton de navigation du contrôle de navigation d’édition.
 
-```
+```cpp
 void SetBrowseButtonImage(
     HICON hIcon,
     BOOL bAutoDestroy= TRUE);

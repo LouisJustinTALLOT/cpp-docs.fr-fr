@@ -28,12 +28,12 @@ helpviewer_keywords:
 - CMFCListCtrl [MFC], SetSortColumn
 - CMFCListCtrl [MFC], Sort
 ms.assetid: 50d16aee-138c-4f34-8690-cb75d544ef2e
-ms.openlocfilehash: 63fbfd236ed98eee3b90f4a20b191817026903c7
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 099ec086bd95a1180af4cf5a8f6a9fa7f1d099ea
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81370769"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81754231"
 ---
 # <a name="cmfclistctrl-class"></a>Classe CMFCListCtrl
 
@@ -94,7 +94,7 @@ L’exemple suivant montre comment utiliser différentes méthodes de la classe 
 
 Marque les colonnes triées avec une couleur de fond différente.
 
-```
+```cpp
 void EnableMarkSortedColumn(
     BOOL bMark = TRUE,
     BOOL bRedraw = TRUE);
@@ -116,7 +116,7 @@ void EnableMarkSortedColumn(
 
 Permet de trier les lignes de données dans le contrôle de liste par plusieurs colonnes.
 
-```
+```cpp
 void EnableMultipleSort(BOOL bEnable = TRUE);
 ```
 
@@ -277,7 +277,7 @@ Par défaut, cette `GetTextColor` méthode appelle indépendamment des paramètr
 
 Supprime une colonne trise de la liste des colonnes triées.
 
-```
+```cpp
 void RemoveSortColumn(int iColumn);
 ```
 
@@ -294,7 +294,7 @@ Cette méthode supprime une colonne de tri du contrôle de l’en-tête. Il appe
 
 Définit la colonne triée en cours et l’ordre de tri.
 
-```
+```cpp
 void SetSortColumn(
     int iColumn,
     BOOL bAscending = TRUE,

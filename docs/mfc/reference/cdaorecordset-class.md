@@ -166,12 +166,12 @@ helpviewer_keywords:
 - CDaoRecordset [MFC], m_strFilter
 - CDaoRecordset [MFC], m_strSort
 ms.assetid: 2322067f-1027-4662-a5d7-aa2fc7488630
-ms.openlocfilehash: 5b4b2919405696c748ce01217ac82afeac316de2
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 6a1475d1b0bc083cfd180ea5a211e752c973e2f8
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81377150"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81754682"
 ---
 # <a name="cdaorecordset-class"></a>Classe CDaoRecordset
 
@@ -626,7 +626,7 @@ Pour plus d’informations connexes, consultez les thèmes "AddNew Method", "Edi
 
 Appelez cette fonction de membre pour mettre en cache un nombre spécifié d’enregistrements de l’enregistrement.
 
-```
+```cpp
 void FillCache(
     long* pSize = NULL,
     COleVariant* pBookmark = NULL);
@@ -1105,7 +1105,7 @@ Pour obtenir des renseignements connexes, consultez le thème « Count Property 
 
 Appelez cette fonction de membre pour obtenir des informations sur les champs dans un jeu d’enregistrement.
 
-```
+```cpp
 void GetFieldInfo(
     int nIndex,
     CDaoFieldInfo& fieldinfo,
@@ -1212,7 +1212,7 @@ Pour obtenir des renseignements connexes, consultez le thème « Propriété d�
 
 Appelez cette fonction de membre pour obtenir divers types d’information sur un index défini dans le tableau de base sous-jacent à un jeu d’enregistrement.
 
-```
+```cpp
 void GetIndexInfo(
     int nIndex,
     CDaoIndexInfo& indexinfo,
@@ -1802,7 +1802,7 @@ Pour plus d’informations connexes, consultez les thèmes «Move Method» et «
 
 Appelez cette fonction de membre pour faire le premier enregistrement dans le dossier (le cas échéant) le dossier actuel.
 
-```
+```cpp
 void MoveFirst();
 ```
 
@@ -1832,7 +1832,7 @@ Pour plus d’informations connexes, consultez les thèmes «Move Method» et «
 
 Appelez cette fonction de membre pour faire le dernier enregistrement (le cas échéant) dans le dossier d’enregistrement actuel.
 
-```
+```cpp
 void MoveLast();
 ```
 
@@ -1858,7 +1858,7 @@ Pour plus d’informations connexes, consultez les thèmes «Move Method» et «
 
 Appelez cette fonction de membre pour faire le prochain enregistrement dans le dossier d’enregistrement actuel.
 
-```
+```cpp
 void MoveNext();
 ```
 
@@ -1884,7 +1884,7 @@ Pour plus d’informations connexes, consultez les thèmes «Move Method» et «
 
 Appelez cette fonction de membre pour faire l’enregistrement précédent dans le dossier d’enregistrement actuel.
 
-```
+```cpp
 void MovePrev();
 ```
 
@@ -2129,7 +2129,7 @@ Pour obtenir des informations connexes, consultez le thème « Rechercher la mé
 
 Établit le nombre record relatif de l’enregistrement actuel d’un objet de recordet.
 
-```
+```cpp
 void SetAbsolutePosition(long lPosition);
 ```
 
@@ -2158,7 +2158,7 @@ Pour obtenir des informations connexes, consultez le thème « AbsolutePosition 
 
 Appelez cette fonction de membre pour positionner l’enregistrement sur l’enregistrement contenant le signet spécifié.
 
-```
+```cpp
 void SetBookmark(COleVariant varBookmark);
 ```
 
@@ -2182,7 +2182,7 @@ Pour plus d’informations connexes, consultez les thèmes «Bookmark Property»
 
 Appelez cette fonction de membre pour définir le nombre d’enregistrements à mettre en cache.
 
-```
+```cpp
 void SetCacheSize(long lSize);
 ```
 
@@ -2203,7 +2203,7 @@ Pour plus d’informations connexes, consultez le thème "CacheSize, CacheStart 
 
 Appelez cette fonction de membre pour spécifier le signet du premier enregistrement dans le livre d’enregistrement à mettre en cache.
 
-```
+```cpp
 void SetCacheStart(COleVariant varBookmark);
 ```
 
@@ -2230,7 +2230,7 @@ Pour plus d’informations connexes, consultez le sujet CacheSize, CacheStart Pr
 
 Appelez cette fonction de membre pour définir un index sur un ensemble de records de type table.
 
-```
+```cpp
 void SetCurrentIndex(LPCTSTR lpszIndex);
 ```
 
@@ -2253,7 +2253,7 @@ Pour obtenir des informations connexes, consultez le thème « Objet indiciel »
 
 Appelez cette fonction de membre pour signaler un membre des données sur le terrain de l’enregistrement comme changé ou comme inchangé.
 
-```
+```cpp
 void SetFieldDirty(
     void* pv,
     BOOL bDirty = TRUE);
@@ -2296,7 +2296,7 @@ Cela signifie que vous ne pouvez pas définir `outputColumn` tous les champs **d
 
 Appelez cette fonction de membre pour signaler un membre des données sur le terrain de l’enregistrement comme Null (en particulier n’ayant aucune valeur) ou comme non-Null.
 
-```
+```cpp
 void SetFieldNull(
     void* pv,
     BOOL bNull = TRUE);
@@ -2379,7 +2379,7 @@ Pour obtenir des renseignements connexes, consultez les thèmes « Objet de terr
 
 Appelez cette fonction de membre pour définir le champ à une valeur nulle.
 
-```
+```cpp
 void SetFieldValueNull(int nIndex);
 void SetFieldValueNull(LPCTSTR lpszName);
 ```
@@ -2402,7 +2402,7 @@ Pour obtenir des renseignements connexes, consultez les thèmes « Objet de terr
 
 Appelez cette fonction de membre pour définir le type de verrouillage pour le jeu d’enregistrement.
 
-```
+```cpp
 void SetLockingMode(BOOL bPessimistic);
 ```
 
@@ -2442,7 +2442,7 @@ virtual void SetParamValue(
 *nIndex*<br/>
 La position numérique du paramètre dans la collection paramètres de la requête.
 
-*Var*<br/>
+*var*<br/>
 La valeur à définir; voir Remarques.
 
 *lpszName (en)*<br/>
@@ -2458,7 +2458,7 @@ Spécifier la `COleVariant` valeur à définir comme objet. Pour plus d’inform
 
 Appelez cette fonction de membre pour définir le paramètre à une valeur nulle.
 
-```
+```cpp
 void SetParamValueNull(int nIndex);
 void SetParamValueNull(LPCTSTR lpszName);
 ```
@@ -2479,7 +2479,7 @@ LE NULL n’est pas le même que Null, ce qui, selon la terminologie de la base 
 
 Appelez cette fonction de membre pour établir une valeur qui modifie l’emplacement approximatif de l’enregistrement actuel dans l’objet de l’enregistrement en fonction d’un pourcentage des enregistrements dans le jeu d’enregistrement.
 
-```
+```cpp
 void SetPercentPosition(float fPosition);
 ```
 

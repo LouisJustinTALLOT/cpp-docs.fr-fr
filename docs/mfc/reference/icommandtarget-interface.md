@@ -8,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - ICommandTarget interface [MFC]
 ms.assetid: dd9927f6-3479-4e7c-8ef9-13206cf901f3
-ms.openlocfilehash: 865a8a27d96f84f536e40ec5a7bbbbdd9837dfcd
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: be64f4e0367b9ecc1b24fa96f067f4acd45a9978
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81356914"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81751451"
 ---
 # <a name="icommandtarget-interface"></a>ICommandTarget Interface
 
@@ -49,7 +49,7 @@ Pour plus d’informations sur l’utilisation des formulaires Windows, voir [à
 
 Initialise l’objet cible de commande.
 
-```
+```cpp
 void Initialize(ICommandSource^ cmdSource);
 ```
 

@@ -18,12 +18,12 @@ helpviewer_keywords:
 - diagnostics [MFC], diagnostic services
 - diagnostic functions and variables [MFC]
 ms.assetid: 8d78454f-9fae-49c2-88c9-d3fabd5393e8
-ms.openlocfilehash: 8db12a73d64641a52fea3056de8ab3180c9239b2
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: f952044f4320aea1a757559b3c9c51e8ffb7c3a6
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81365793"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81751644"
 ---
 # <a name="diagnostic-services"></a>Services de diagnostic
 
@@ -124,7 +124,7 @@ Appelez cette fonction pour provoquer une pause (à l’emplacement de l’appel
 
 ### <a name="syntax"></a>Syntaxe
 
-```
+```cpp
 void AfxDebugBreak( );
 ```
 
@@ -434,7 +434,7 @@ Fonction interne que MFC utilise pour vider l’état d’un objet tout en débo
 
 ### <a name="syntax"></a>Syntaxe
 
-```
+```cpp
 void AfxDump(const CObject* pOb);
 ```
 
@@ -483,7 +483,7 @@ int  afxMemDF;
 
 Cette fonction teste le SCODE passé pour voir s’il s’agit d’une erreur.
 
-```
+```cpp
 void AFXAPI AfxCheckError(SCODE sc);
 throw CMemoryException*
 throw COleException*
@@ -547,7 +547,7 @@ Cette fonction ne fonctionne que dans la version Debug de MFC.
 
 Appelez cette fonction tandis que dans le débogage pour vider l’état d’un objet tout en débogage.
 
-```
+```cpp
 void AfxDump(const CObject* pOb);
 ```
 
@@ -570,7 +570,7 @@ Votre code de `AfxDump`programme ne doit `Dump` pas appeler, mais devrait plutô
 
 Cette fonction globale peut être utilisée pour générer une image de la pile actuelle.
 
-```
+```cpp
 void AFXAPI AfxDumpStack(DWORD dwTarget = AFX_STACK_DUMP_TARGET_DEFAULT);
 ```
 
@@ -858,7 +858,7 @@ Notez que la convention d’appel AFXAPI implique que le destinataire doit suppr
 
 Appelle la fonction d’itération spécifiée pour toutes les classes sérialisables `CObject`dérivées dans l’espace mémoire de l’application.
 
-```
+```cpp
 void
 AFXAPI AfxDoForAllClasses(
     void (* pfn)(const CRuntimeClass* pClass, void* pContext),
@@ -894,7 +894,7 @@ Les classes `CObject`sérialisables sont des classes dérivées à l’aide de l
 
 Exécute la fonction d’itération spécifiée `CObject` pour tous les objets dérivés de ceux qui ont été alloués avec **de nouveaux**.
 
-```
+```cpp
 void AfxDoForAllObjects(
     void (* pfn)(CObject* pObject, void* pContext),
     void* pContext);

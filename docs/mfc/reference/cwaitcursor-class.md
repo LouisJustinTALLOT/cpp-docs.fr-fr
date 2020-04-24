@@ -10,12 +10,12 @@ helpviewer_keywords:
 - CWaitCursor [MFC], CWaitCursor
 - CWaitCursor [MFC], Restore
 ms.assetid: 5dfae2ff-d7b6-4383-b0ad-91e0868c67b3
-ms.openlocfilehash: 48ef8f9c965f54deafcc62451639f8c31021e900
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: aaa60e26d0a9bf99076f29124097b0629ce6f5d0
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81373176"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81754331"
 ---
 # <a name="cwaitcursor-class"></a>CWaitCursor, classe
 
@@ -100,7 +100,7 @@ Vous pouvez profiter du fait que le destructeur est appelé à la fin du bloc (q
 
 Pour restaurer le curseur d’attente, appelez cette fonction après l’exécution d’une opération, comme l’affichage d’une boîte de message ou d’une boîte de dialogue, qui pourrait changer le curseur d’attente à un autre curseur.
 
-```
+```cpp
 void Restore();
 ```
 

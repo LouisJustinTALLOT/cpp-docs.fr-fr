@@ -22,12 +22,12 @@ helpviewer_keywords:
 - CAutoHideDockSite [MFC], UnSetAutoHideMode
 - CAutoHideDockSite [MFC], m_nExtraSpace
 ms.assetid: 2a0f6bec-c369-4ab7-977d-564e7946ebad
-ms.openlocfilehash: 3a4593ac17f0af26517144edb7b01a9ca4203b1a
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 1f23729ced02a151c6186bdcc72cb8938416be46
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81352978"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81753002"
 ---
 # <a name="cautohidedocksite-class"></a>Classe CAutoHideDockSite
 
@@ -151,7 +151,7 @@ Si *lpRect* est NULL, le cadre met la vitre dans l’emplacement par défaut sur
 
 Récupère la taille du site du quai dans les coordonnées de l’écran.
 
-```
+```cpp
 void GetAlignRect(CRect& rect) const;
 ```
 
@@ -182,7 +182,7 @@ Lorsqu’un `CMFCAutoHideBar` est amarré à un, `CAutoHideDockSite`il ne doit p
 
 Définit la marge sur le côté gauche de la barre d’amarrage.
 
-```
+```cpp
 void SetOffsetLeft(int nOffset);
 ```
 
@@ -199,7 +199,7 @@ Les objets [CMFCAutoHideBar](../../mfc/reference/cmfcautohidebar-class.md) sont 
 
 Définit la marge sur le côté droit de la barre d’amarrage.
 
-```
+```cpp
 void SetOffsetRight(int nOffset);
 ```
 
@@ -235,7 +235,7 @@ La mise en œuvre par défaut n’utilise pas *rectNewClientArea*. Il redessiner
 
 Appelle [CMFCAutoHideBar::UnSetAutoHideMode](../../mfc/reference/cmfcautohidebar-class.md#unsetautohidemode) pour les objets sur le site du quai.
 
-```
+```cpp
 void UnSetAutoHideMode(CMFCAutoHideBar* pAutoHideToolbar);
 ```
 

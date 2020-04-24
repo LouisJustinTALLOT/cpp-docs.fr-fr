@@ -15,16 +15,16 @@ f1_keywords:
 helpviewer_keywords:
 - Map Class (C++/Cx)
 ms.assetid: 2b8cf968-1167-4898-a149-1195b32c1785
-ms.openlocfilehash: 7f41a924811be95160b06a2097db6103cde8fc11
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: ff27f6c543a2326dd4318f66aae51b89092b28e2
+ms.sourcegitcommit: 89d9e1cb08fa872483d1cde98bc2a7c870e505e9
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81354446"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "82032445"
 ---
 # <a name="platformcollectionsmap-class"></a>Platform::Collections::Map, classe
 
-Représente *une carte*qui est une collection de paires clé-valeur. Implémente [Windows::Foundation:Collections::IObservableMap](/uwp/api/windows.foundation.collections.iobservablemap_k_v_) pour aider avec XAML [liaison de données](/windows/uwp/data-binding/data-binding-in-depth).
+Représente *une carte*qui est une collection de paires clé-valeur. Implémente [Windows::Foundation:Collections::IObservableMap](/uwp/api/windows.foundation.collections.iobservablemap-2) pour aider avec XAML [liaison de données](/windows/uwp/data-binding/data-binding-in-depth).
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -41,7 +41,7 @@ ref class Map sealed;
 *K*<br/>
 Type de la clé dans la paire clé-valeur.
 
-*V*<br/>
+*C*<br/>
 Type de la valeur dans la paire clé-valeur.
 
 *C*<br/>
@@ -63,7 +63,7 @@ Les types autorisés sont :
 
 - classe d'énumération publique
 
-Map est essentiellement un wrapper pour [std::map](../standard-library/map-class.md). Il s’agit d’une implémentation concrète de [la Windows:::Foundation::Collections::IMap<Windows:::Foundation::Collections::IKeyValuePair\<K,V>>](/uwp/api/Windows.Foundation.Collections.IMap_K_V_) et [IObservableMap](/uwp/api/Windows.Foundation.Collections.IObservableMap_K_V_) types qui sont passés à travers les interfaces publiques Windows Runtime. Si vous tentez d'utiliser un type `Platform::Collections::Map` dans une valeur de retour ou un paramètre public, l'erreur de compilateur C3986 est générée. Vous pouvez corriger l’erreur en changeant le type du paramètre ou la valeur de retour à [Windows::Foundation::Collections::IMap\<K,V>](/uwp/api/Windows.Foundation.Collections.IMap_K_V_).
+Map est essentiellement un wrapper pour [std::map](../standard-library/map-class.md). Il s’agit d’une implémentation concrète de [la Windows:::Foundation::Collections::IMap<Windows:::Foundation::Collections::IKeyValuePair\<K,V>>](/uwp/api/windows.foundation.collections.imap-2) et [IObservableMap](/uwp/api/windows.foundation.collections.iobservablemap-2) types qui sont passés à travers les interfaces publiques Windows Runtime. Si vous tentez d'utiliser un type `Platform::Collections::Map` dans une valeur de retour ou un paramètre public, l'erreur de compilateur C3986 est générée. Vous pouvez corriger l’erreur en changeant le type du paramètre ou la valeur de retour à [Windows::Foundation::Collections::IMap\<K,V>](/uwp/api/windows.foundation.collections.imap-2).
 
 Pour plus d’informations, voir [Collections](../cppcx/collections-c-cx.md).
 
@@ -136,7 +136,7 @@ Une façon pratique de tenir l’itérateur retourné par First() est d’attrib
 
 ## <a name="mapgetview-method"></a><a name="getview"></a>Carte::GetView Méthode
 
-Renvoie une vue de lecture uniquement de la carte actuelle; [c’est-à-dire, une plate-forme::Collections::MapView Class](../cppcx/platform-collections-mapview-class.md), qui implémente\<l’interface [Windows::Foundation::Collections::IMapView K,V>]/uwp/api/Windows.Foundation.Collections.IMapView_K_V_) interface.
+Renvoie une vue de lecture uniquement de la carte actuelle; [c’est-à-dire, une plate-forme::Collections::MapView Class](../cppcx/platform-collections-mapview-class.md), qui implémente le [Windows::Foundation::Collections::IMapView\<K,V>](/uwp/api/windows.foundation.collections.imapview-2) interface.
 
 ### <a name="syntax"></a>Syntaxe
 
@@ -240,10 +240,10 @@ Type qui fournit un objet de fonction qui peut comparer deux valeurs d'élément
 *M*<br/>
 Une référence ou [une](../cpp/lvalues-and-rvalues-visual-cpp.md) `map Class` évaluation à un qui est utilisé pour initialiser la carte actuelle.
 
-*Première*<br/>
+*first*<br/>
 Itérateur d'entrée du premier élément d'une plage d'éléments utilisée pour initialiser le Map actuel.
 
-*Dernière*<br/>
+*last*<br/>
 Itérateur d'entrée du premier élément qui suit une plage d'éléments utilisée pour initialiser le Map actuel.
 
 ## <a name="mapmapchanged-event"></a><a name="mapchanged"></a>Carte::MapChanged Event
@@ -258,7 +258,7 @@ event Windows::Foundation::Collections::MapChangedEventHandler<K,V>^ MapChanged;
 
 ### <a name="property-valuereturn-value"></a>Valeur de propriété/valeur de retour
 
-Un [MapChangedEventHandler\<K,V>](/uwp/api/windows.foundation.collections.mapchangedeventhandler) qui contient des informations sur l’objet qui a soulevé l’événement, et le genre de changement qui s’est produit. Voir aussi [IMapChangedEventArgs\<K>](/uwp/api/Windows.Foundation.Collections.IMapChangedEventArgs_K_) et [CollectionChange Enumeration](/uwp/api/windows.foundation.collections.collectionchange).
+Un [MapChangedEventHandler\<K,V>](/uwp/api/windows.foundation.collections.mapchangedeventhandler-2) qui contient des informations sur l’objet qui a soulevé l’événement, et le genre de changement qui s’est produit. Voir aussi [IMapChangedEventArgs\<K>](/uwp/api/windows.foundation.collections.imapchangedeventargs-1) et [CollectionChange Enumeration](/uwp/api/windows.foundation.collections.collectionchange).
 
 ## <a name="net-framework-equivalent"></a>Équivalent .NET Framework
 
@@ -281,7 +281,7 @@ Partie de clé de la paire clé-valeur. Le type de *clé* est typename *K*.
 
 ## <a name="mapsize-method"></a><a name="size"></a>Carte::Méthode de taille
 
-Retourne le nombre de [Windows::Foundation::Collections::IKeyValuePair\<K,V>](/uwp/api/Windows.Foundation.Collections.IKeyValuePair_K_V_) éléments de la carte.
+Retourne le nombre de [Windows::Foundation::Collections::IKeyValuePair\<K,V>](/uwp/api/windows.foundation.collections.ikeyvaluepair-2) éléments de la carte.
 
 ### <a name="syntax"></a>Syntaxe
 

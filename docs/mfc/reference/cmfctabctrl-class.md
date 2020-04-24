@@ -104,12 +104,12 @@ helpviewer_keywords:
 - CMFCTabCtrl [MFC], SynchronizeScrollBar
 - CMFCTabCtrl [MFC], m_bEnableActivate
 ms.assetid: d441385d-2c72-4203-96fa-deae2273da35
-ms.openlocfilehash: 7c5e2c0f3ad3b40c5dbff619c45ebcd9573892ca
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: da871679665376342a6d23369a1e34c9a7060ce7
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81367369"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81753450"
 ---
 # <a name="cmfctabctrl-class"></a>CMFCTabCtrl Class
 
@@ -256,7 +256,7 @@ L’exemple suivant montre comment utiliser `CMFCTabCtrl` différentes méthodes
 
 Affiche l’onglet spécifié du contrôle de l’onglet actuel et met l’accent sur cet onglet.
 
-```
+```cpp
 void ActivateMDITab(int nTab = -1);
 ```
 
@@ -283,7 +283,7 @@ Toujours TRUE.
 
 Précise si le cadre est de resize la zone client de toutes les fenêtres de contrôle de l’onglet lorsqu’un élément d’interface utilisateur du contrôle de l’onglet change.
 
-```
+```cpp
 void AutoSizeWindow(BOOL bAutoSize = TRUE);
 ```
 
@@ -322,7 +322,7 @@ BOOL Create(
 *nID*<br/>
 [dans] L’ID du contrôle de l’onglet.
 
-*Emplacement*<br/>
+*location*<br/>
 [dans] L’emplacement des onglets. La valeur par défaut est LOCATION_BOTTOM. Pour plus d'informations, consultez la section Notes.
 
 *bCloseBtn (en)*<br/>
@@ -381,7 +381,7 @@ Cette méthode est appelée lorsque vous modifiez l’étiquette d’un onglet. 
 
 Affiche ou cache un bouton Close ( **X**) sur l’onglet actif.
 
-```
+```cpp
 void EnableActiveTabCloseButton(BOOL bEnable=TRUE);
 ```
 
@@ -409,7 +409,7 @@ virtual void EnableInPlaceEdit(BOOL bEnable);
 
 Bascule entre une interface utilisateur qui utilise deux boutons pour faire défiler les onglets de fenêtre et une interface qui affiche un menu pop-up de fenêtres tabbed.
 
-```
+```cpp
 void EnableTabDocumentsMenu(BOOL bEnable=TRUE);
 ```
 
@@ -508,7 +508,7 @@ Utilisez cette méthode pour accéder à la barre de défilement intégrée du c
 
 Récupère le rectangle de délimitation de la zone d’étiquette de l’onglet en haut ou en bas du contrôle de l’onglet.
 
-```
+```cpp
 void GetTabArea(
     CRect& rectTabAreaTop,
     CRect& rectTabAreaBottom) const;
@@ -571,7 +571,7 @@ virtual void GetTabsRect(CRect& rect) const;
 
 Récupère la limite de la zone cliente du contrôle actuel de l’onglet.
 
-```
+```cpp
 void GetWndArea(CRect& rect) const;
 ```
 
@@ -586,7 +586,7 @@ void GetWndArea(CRect& rect) const;
 
 Cache la barre de défilement horizontale, le cas échéant, dans la fenêtre active.
 
-```
+```cpp
 void HideActiveWindowHorzScrollBar();
 ```
 
@@ -598,7 +598,7 @@ Utilisez cette méthode pour empêcher le contrôle de l’onglet de clignoter l
 
 Précise si le cadre affiche des fenêtres de contrôle de l’onglet inactives.
 
-```
+```cpp
 void HideInactiveWindow(BOOL bHide = TRUE);
 ```
 
@@ -613,7 +613,7 @@ void HideInactiveWindow(BOOL bHide = TRUE);
 
 Permet ou désactive le dessin de la zone de l’onglet s’il n’y a pas d’onglets visibles.
 
-```
+```cpp
 void HideNoTabs(BOOL bHide=TRUE);
 ```
 
@@ -938,7 +938,7 @@ virtual void OnShowTabDocumentsMenu(CPoint point);
 
 Définit l’onglet actuel d’un contrôle d’onglet comme onglet actif dans un groupe d’onglets d’interface documentaire multiple.
 
-```
+```cpp
 void SetActiveInMDITabGroup(BOOL bActive);
 ```
 
@@ -978,7 +978,7 @@ La `SetActiveTab` méthode appelle automatiquement la méthode [CMFCTabCtrl::Hid
 
 Permet ou désactive l’utilisation d’une police audacieuse sur des onglets actifs.
 
-```
+```cpp
 void SetActiveTabBoldFont(BOOL bIsBold=TRUE);
 ```
 
@@ -993,7 +993,7 @@ void SetActiveTabBoldFont(BOOL bIsBold=TRUE);
 
 Précise si un rectangle de cadre est dessiné autour d’une barre intégrée.
 
-```
+```cpp
 void SetDrawFrame(BOOL bDraw=TRUE);
 ```
 
@@ -1008,7 +1008,7 @@ void SetDrawFrame(BOOL bDraw=TRUE);
 
 Précise s’il faut dessiner un cadre plat ou 3D autour de la zone de l’onglet.
 
-```
+```cpp
 void SetFlatFrame(
     BOOL bFlat=TRUE,
     BOOL bRepaint=TRUE);
@@ -1065,7 +1065,7 @@ Utilisez la méthode [CMFCBaseTabCtrl::AddTab](../../mfc/reference/cmfcbasetabct
 
 Précise comment le contrôle actuel de l’onglet peut être resized, puis redisjoue le contrôle.
 
-```
+```cpp
 void SetResizeMode(ResizeMode resizeMode);
 ```
 
@@ -1088,7 +1088,7 @@ Le *paramètre resizeMode* peut `ResizeMode` être l’une des valeurs d’énum
 
 Spécifie la largeur maximale de l’onglet dans une fenêtre tabbed.
 
-```
+```cpp
 void SetTabMaxWidth(int nTabMaxWidth);
 ```
 
@@ -1105,7 +1105,7 @@ Utilisez cette méthode pour limiter la largeur de chaque onglet dans une fenêt
 
 Termine l’opération de resize actuelle sur le contrôle de l’onglet.
 
-```
+```cpp
 void StopResize(BOOL bCancel);
 ```
 

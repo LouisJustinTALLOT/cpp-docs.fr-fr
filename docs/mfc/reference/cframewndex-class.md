@@ -178,12 +178,12 @@ helpviewer_keywords:
 - CFrameWndEx [MFC], UpdateCaption
 - CFrameWndEx [MFC], WinHelp
 ms.assetid: 5830aca8-4a21-4f31-91f1-dd5477ffcc8d
-ms.openlocfilehash: 6073feb5cad5bda5e20f3ff5c16e1ed6d380bca7
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 25d4c46d61c3f1b25d18a61a50ae9c2e8bdd8411
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81373763"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81752929"
 ---
 # <a name="cframewndex-class"></a>Classe CFrameWndEx
 
@@ -316,7 +316,7 @@ L’exemple suivant montre comment hériter d’une classe de la `CFrameWndEx` c
 
 Ajuste la disposition de l’élément client OLE et la zone client du cadre.
 
-```
+```cpp
 void ActiveItemRecalcLayout();
 ```
 
@@ -380,7 +380,7 @@ virtual void DelayUpdateFrameMenu(HMENU hMenuAlt);
 
 Docks la vitre spécifiée à la fenêtre de cadre.
 
-```
+```cpp
 void DockPane(
     CBasePane* pBar,
     UINT nDockBarID=0,
@@ -498,7 +498,7 @@ Le paramètre *dwDockStyle* peut avoir l’une des valeurs suivantes :
 
 Affiche ou cache le menu principal en mode plein écran.
 
-```
+```cpp
 void EnableFullScreenMainMenu(BOOL bEnableMenu);
 ```
 
@@ -511,7 +511,7 @@ void EnableFullScreenMainMenu(BOOL bEnableMenu);
 
 Permet le mode plein écran pour la fenêtre du cadre.
 
-```
+```cpp
 void EnableFullScreenMode(UINT uiFullScreenCmd);
 ```
 
@@ -532,7 +532,7 @@ Si vous souhaitez conserver le menu principal à l’écran, appelez [CFrameWndE
 
 Permet ou désactive le chargement de l’état d’amarrage.
 
-```
+```cpp
 void EnableLoadDockState(BOOL bEnable=TRUE);
 ```
 
@@ -545,7 +545,7 @@ void EnableLoadDockState(BOOL bEnable=TRUE);
 
 Permet ou désactive la manipulation automatique du menu de vitres.
 
-```
+```cpp
 void EnablePaneMenu(
     BOOL bEnable,
     UINT uiCustomizeCmd,
@@ -1712,7 +1712,7 @@ afx_msg void OnSizing(
 
 Appelé par le cadre lorsque les couleurs du système changent.
 
-```
+```cpp
 void OnSysColorChange();
 ```
 
@@ -1963,7 +1963,7 @@ Cette méthode est appelée lorsque la taille de la fenêtre de cadre a changé 
 
 Démarciez une vitre et la retire du gestionnaire d’amarrage.
 
-```
+```cpp
 void RemovePaneFromDockManager(
     CBasePane* pControlBar,
     BOOL bDestroy,
@@ -1999,20 +1999,20 @@ La [classe CDockingManager](../../mfc/reference/cdockingmanager-class.md) gère 
 
 Restaure la disposition d’amarrage à l’état d’amarrage stocké dans le registre.
 
-```
+```cpp
 void SetDockState(const CDockState& state);
 ```
 
 ### <a name="parameters"></a>Paramètres
 
-*État*<br/>
+*state*<br/>
 L’état d’amarrage. Ce paramètre est ignoré.
 
 ## <a name="cframewndexsetprintpreviewframe"></a><a name="setprintpreviewframe"></a>CFrameWndEx::SetPrintPreviewFrame
 
 Définit la fenêtre de l’image de prévisualisation d’impression.
 
-```
+```cpp
 void SetPrintPreviewFrame(CFrameWnd* pWnd);
 ```
 
@@ -2027,7 +2027,7 @@ void SetPrintPreviewFrame(CFrameWnd* pWnd);
 
 Insère les commandes définies par l’utilisateur dans un menu de barre d’outils.
 
-```
+```cpp
 void SetupToolbarMenu(
     CMenu& menu,
     const UINT uiViewUserToolbarCmdFirst,
@@ -2053,7 +2053,7 @@ Le cadre stocke les commandes définies par l’utilisateur dans une liste. Util
 
 Change le cadre principal entre le mode plein écran et le mode régulier.
 
-```
+```cpp
 void ShowFullScreen();
 ```
 
@@ -2061,7 +2061,7 @@ void ShowFullScreen();
 
 Affiche ou cache la vitre spécifiée.
 
-```
+```cpp
 void ShowPane(
     CBasePane* pBar,
     BOOL bShow,
@@ -2087,7 +2087,7 @@ void ShowPane(
 
 Appelé par le cadre pour mettre à jour la légende du cadre de fenêtre.
 
-```
+```cpp
 void UpdateCaption();
 ```
 

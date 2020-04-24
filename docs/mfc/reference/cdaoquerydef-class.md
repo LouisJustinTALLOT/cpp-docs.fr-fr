@@ -66,12 +66,12 @@ helpviewer_keywords:
 - CDaoQueryDef [MFC], m_pDAOQueryDef
 - CDaoQueryDef [MFC], m_pDatabase
 ms.assetid: 9676a4a3-c712-44d4-8c5d-d1cc78288d3a
-ms.openlocfilehash: 133746ff1e4a9453f9563347724a47855a8a3228
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: ed298c40daa9485683d0b989e47b97fdce9f6562
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81368952"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81754699"
 ---
 # <a name="cdaoquerydef-class"></a>Classe CDaoQueryDef
 
@@ -410,7 +410,7 @@ Le nombre de champs définis dans la requête.
 
 Appelez cette fonction de membre pour obtenir divers types d’informations sur un champ défini dans la requête.
 
-```
+```cpp
 void GetFieldInfo(
     int nIndex,
     CDaoFieldInfo& fieldinfo,
@@ -503,7 +503,7 @@ Pour plus d’informations, consultez les thèmes « Objet Paramètre », « Col
 
 Appelez cette fonction de membre pour obtenir des informations sur un paramètre défini dans la requête.
 
-```
+```cpp
 void GetParameterInfo(
     int nIndex,
     CDaoParameterInfo& paraminfo,
@@ -714,7 +714,7 @@ Une fois que la requête est ouverte, vous pouvez appeler sa fonction de membre 
 
 Appelez cette fonction de membre pour définir la chaîne de connexion de l’objet de requête.
 
-```
+```cpp
 void SetConnect(LPCTSTR lpszConnect);
 ```
 
@@ -738,7 +738,7 @@ Pour plus d’informations sur la structure de la chaîne de connexion et des ex
 
 Appelez cette fonction de membre si vous voulez changer le nom d’une requête qui n’est pas temporaire.
 
-```
+```cpp
 void SetName(LPCTSTR lpszName);
 ```
 
@@ -755,7 +755,7 @@ Les noms De requête sont des noms uniques définis par l’utilisateur. Vous po
 
 Appelez cette fonction de membre pour définir le délai avant une requête à une source de données ODBC fois.
 
-```
+```cpp
 void SetODBCTimeout(short nODBCTimeout);
 ```
 
@@ -805,7 +805,7 @@ Spécifier la `COleVariant` valeur à définir comme objet. Pour plus d’inform
 
 Appelez cette fonction de membre dans le cadre du processus de mise en place d’une requête de passage SQL à une base de données externe.
 
-```
+```cpp
 void SetReturnsRecords(BOOL bReturnsRecords);
 ```
 
@@ -822,7 +822,7 @@ Dans un tel cas, vous devez créer la requête `CDaoQueryDef` et définir ses pr
 
 Appelez cette fonction de membre pour définir la déclaration SQL que la requête exécute.
 
-```
+```cpp
 void SetSQL(LPCTSTR lpszSQL);
 ```
 

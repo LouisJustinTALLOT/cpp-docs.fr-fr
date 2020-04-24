@@ -66,12 +66,12 @@ helpviewer_keywords:
 - CMFCCaptionBar [MFC], m_clrBarBorder
 - CMFCCaptionBar [MFC], m_clrBarText
 ms.assetid: acb54d5f-14ff-4c96-aeb3-7717cf566d9a
-ms.openlocfilehash: 3a1e8890176fe686b54fe4756dfd578869cbcdfb
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: c42b1ccb51a3c290e0887717d900543b8d5b277a
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81367794"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81752628"
 ---
 # <a name="cmfccaptionbar-class"></a>CMFCCaptionBar, classe
 
@@ -227,7 +227,7 @@ Retourne FALSE à moins d’être dépassé.
 
 Permet ou désactive le bouton sur la barre de légende.
 
-```
+```cpp
 void EnableButton(BOOL bEnable=TRUE);
 ```
 
@@ -473,7 +473,7 @@ Remplacer cette méthode `CMFCCaptionBar` dans une classe dérivée pour personn
 
 Supprime l’image de bitmap de la barre de légende.
 
-```
+```cpp
 void RemoveBitmap();
 ```
 
@@ -481,7 +481,7 @@ void RemoveBitmap();
 
 Supprime le bouton de la barre de légende.
 
-```
+```cpp
 void RemoveButton();
 ```
 
@@ -493,7 +493,7 @@ La disposition des éléments de barre de légende est ajustée automatiquement.
 
 Retire l’icône de la barre de légende.
 
-```
+```cpp
 void RemoveIcon();
 ```
 
@@ -501,7 +501,7 @@ void RemoveIcon();
 
 Supprime l’étiquette de texte de la barre de légende.
 
-```
+```cpp
 void RemoveText();
 ```
 
@@ -509,7 +509,7 @@ void RemoveText();
 
 Définit l’image de bitmap pour la barre de légende.
 
-```
+```cpp
 void SetBitmap(
     HBITMAP hBitmap,
     COLORREF clrTransparent,
@@ -557,7 +557,7 @@ Le bitmap est aligné comme spécifié par le paramètre *bmpAlignment.*  Ce par
 
 Définit la taille de la bordure de la barre de légende.
 
-```
+```cpp
 void SetBorderSize(int nSize);
 ```
 
@@ -570,7 +570,7 @@ void SetBorderSize(int nSize);
 
 Définit le bouton pour la barre de légende.
 
-```
+```cpp
 void SetButton(
     LPCTSTR lpszLabel,
     UINT uiCmdUI,
@@ -596,7 +596,7 @@ VRAI si le bouton affiche une flèche de chute vers le bas, FALSE autrement.
 
 Précise si le bouton reste pressé.
 
-```
+```cpp
 void SetButtonPressed(BOOL bPresed=TRUE);
 ```
 
@@ -609,7 +609,7 @@ VRAI si le bouton garde son état pressé, FALSE autrement.
 
 Définit la pointe d’outils pour le bouton.
 
-```
+```cpp
 void SetButtonToolTip(
     LPCTSTR lpszToolTip,
     LPCTSTR lpszDescription=NULL);
@@ -627,7 +627,7 @@ void SetButtonToolTip(
 
 Définit le style frontière de la barre de légende.
 
-```
+```cpp
 void SetFlatBorder(BOOL bFlat=TRUE);
 ```
 
@@ -640,7 +640,7 @@ void SetFlatBorder(BOOL bFlat=TRUE);
 
 Définit l’icône pour une barre de légende.
 
-```
+```cpp
 void SetIcon(
     HICON hIcon,
     BarElementAlignment iconAlignment=ALIGN_RIGHT);
@@ -672,7 +672,7 @@ L’icône est alignée selon le *paramètre iconalignement.* Il peut s’agir `
 
 Définit la pointe d’outil pour l’image dans la barre de légende.
 
-```
+```cpp
 void SetImageToolTip(
     LPCTSTR lpszToolTip,
     LPCTSTR lpszDescription=NULL);
@@ -690,7 +690,7 @@ void SetImageToolTip(
 
 Définit la distance entre le bord de l’élément de barre de légende et le bord du contrôle de la barre de légende.
 
-```
+```cpp
 void SetMargin(int nMargin);
 ```
 
@@ -703,7 +703,7 @@ void SetMargin(int nMargin);
 
 Définit l’étiquette de texte pour la barre de légende.
 
-```
+```cpp
 void SetText(
     const CString& strText,
     BarElementAlignment textAlignment=ALIGN_RIGHT);

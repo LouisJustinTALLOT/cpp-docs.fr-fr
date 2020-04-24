@@ -20,12 +20,12 @@ helpviewer_keywords:
 - CNetAddressCtrl [MFC], GetAllowType
 - CNetAddressCtrl [MFC], SetAllowType
 ms.assetid: cb4c6aca-3f49-4b52-b76c-65f57096155b
-ms.openlocfilehash: 71e3b1a9fde84f96696d26c891ab6688f246d575
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: c6f391966ef6657363e8f23e5666a57a935b08e1
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81363313"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81752774"
 ---
 # <a name="cnetaddressctrl-class"></a>Classe CNetAddressCtrl
 
@@ -127,7 +127,7 @@ virtual BOOL Create(
 |Paramètre|Description|
 |---------------|-----------------|
 |*dwStyle (en)*|[dans] Une combinaison bitwise de styles à appliquer au contrôle. Pour plus d’informations, voir [Edit Styles](../../mfc/reference/styles-used-by-mfc.md#edit-styles).|
-|*Rect*|[dans] Une référence à une structure [RECT](/previous-versions/dd162897\(v=vs.85\)) qui contient la position et la taille du contrôle.|
+|*Rect*|[dans] Une référence à une structure [RECT](/windows/win32/api/windef/ns-windef-rect) qui contient la position et la taille du contrôle.|
 |*pParentWnd*|[dans] Un pointeur non nul à un objet [CWnd](../../mfc/reference/cwnd-class.md) qui est la fenêtre parente du contrôle.|
 |*nID*|[dans] L’id du contrôle.|
 
@@ -154,7 +154,7 @@ virtual BOOL CreateEx(
 |---------------|-----------------|
 |*dwExStyle (en anglais)*|[dans] Une combinaison bitwise (OU) de styles étendus à appliquer au contrôle. Pour plus d’informations, consultez le paramètre *dwExStyle* de la fonction [CreateWindowEx.](/windows/win32/api/winuser/nf-winuser-createwindowexw)|
 |*dwStyle (en)*|[dans] Une combinaison bitwise (OU) de styles à appliquer au contrôle. Pour plus d’informations, voir [Edit Styles](../../mfc/reference/styles-used-by-mfc.md#edit-styles).|
-|*Rect*|[dans] Une référence à une structure [RECT](/previous-versions/dd162897\(v=vs.85\)) qui contient la position et la taille du contrôle.|
+|*Rect*|[dans] Une référence à une structure [RECT](/windows/win32/api/windef/ns-windef-rect) qui contient la position et la taille du contrôle.|
 |*pParentWnd*|[dans] Un pointeur non nul à un objet [CWnd](../../mfc/reference/cwnd-class.md) qui est la fenêtre parente du contrôle.|
 |*nID*|[dans] L’id du contrôle.|
 

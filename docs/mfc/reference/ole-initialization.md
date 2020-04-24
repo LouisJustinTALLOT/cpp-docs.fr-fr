@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - OLE initialization
 ms.assetid: aa8a54a7-24c3-4344-b2c6-dbcf6084fa31
-ms.openlocfilehash: 39a6f28bfe38f254f15f441ed6305daa2cb5793e
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: fefb7eda242ffe15e85cd9f0e16e947a067044a0
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81373030"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81751225"
 ---
 # <a name="ole-initialization"></a>Initialisation d'OLE
 
@@ -31,7 +31,7 @@ Appelez cette fonction dans la `InitInstance` fonction de votre objet d’applic
 
 ### <a name="syntax"></a>Syntaxe
 
-```
+```cpp
 void AfxEnableControlContainer( );
 ```
 

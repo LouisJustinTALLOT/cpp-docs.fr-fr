@@ -40,12 +40,12 @@ helpviewer_keywords:
 - CEditView [MFC], OnTextNotFound
 - CEditView [MFC], dwStyleDefault
 ms.assetid: bf38255c-fcbe-450c-95b2-3c5e35f86c37
-ms.openlocfilehash: 8fbb2dc569e675ecff4ce04758a4eced40505bf6
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 33b5975eea534eeaf308f73b5ca7fca2cd76787f
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81373968"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81753198"
 ---
 # <a name="ceditview-class"></a>CEditView, classe
 
@@ -259,7 +259,7 @@ Utilisez cette fonction pour déterminer la police d’imprimante actuelle. Si c
 
 Appelez `GetSelectedText` pour copier le `CString` texte sélectionné dans un objet, jusqu’à la fin de la sélection ou le personnage précédant le premier personnage de transport-retour dans la sélection.
 
-```
+```cpp
 void GetSelectedText(CString& strResult) const;
 ```
 
@@ -423,7 +423,7 @@ L’élément `rect.bottom` de *l’objet rectLayout* est modifié de sorte que 
 
 Appelez `SerializeRaw` pour `CArchive` faire lire ou écrire `CEditView` le texte dans l’objet d’un fichier texte.
 
-```
+```cpp
 void SerializeRaw(CArchive& ar);
 ```
 
@@ -440,7 +440,7 @@ Référence à `CArchive` l’objet qui stocke le texte sérialisé.
 
 Appelez `SetPrinterFont` pour définir la police d’imprimante à la police spécifiée par *pFont*.
 
-```
+```cpp
 void SetPrinterFont(CFont* pFont);
 ```
 
@@ -457,7 +457,7 @@ Si vous voulez que votre vue utilise toujours une `SetPrinterFont` police partic
 
 Appelez cette fonction pour définir les arrêts d’onglet utilisés pour l’affichage et l’impression.
 
-```
+```cpp
 void SetTabStops(int nTabStops);
 ```
 
@@ -482,7 +482,7 @@ Ce fragment de code définit l’onglet s’arrête dans le contrôle à un pers
 
 Appelez cette fonction de membre pour déverrouiller le tampon.
 
-```
+```cpp
 void UnlockBuffer() const;
 ```
 

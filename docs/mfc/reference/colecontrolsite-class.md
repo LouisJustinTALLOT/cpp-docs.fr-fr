@@ -106,12 +106,12 @@ helpviewer_keywords:
 - COleControlSite [MFC], m_pWndCtrl
 - COleControlSite [MFC], m_rect
 ms.assetid: 43970644-5eab-434a-8ba6-56d144ff1e3f
-ms.openlocfilehash: 6cf12d017db1a1558b0dd915d9f3ba85894bee19
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 90c41a1be1a66cdceebb3f045a98167e56b7cf4c
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81366154"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81753948"
 ---
 # <a name="colecontrolsite-class"></a>Classe COleControlSite
 
@@ -397,7 +397,7 @@ virtual HRESULT DoVerb(
 *nVerb (en)*<br/>
 Spécifie le verbe à exécuter. Il peut inclure l’un des éléments suivants :
 
-|Value|Signification|Symbole|
+|Valeur|Signification|Symbole|
 |-----------|-------------|------------|
 |0|Primary (verbe)|OLEIVERB_PRIMARY|
 |-1|Verbe secondaire|(aucune)|
@@ -454,7 +454,7 @@ Nonzero si la fenêtre était auparavant désactivée, sinon 0.
 
 Précise si le site de contrôle gérera ou ignorera les événements déclenchés par un contrôle.
 
-```
+```cpp
 void FreezeEvents(BOOL bFreeze);
 ```
 
@@ -474,7 +474,7 @@ Si *bFreeze* est VRAI, le site de contrôle demande au contrôle d’arrêter le
 
 Récupère des informations sur les mnémoniques du clavier et le comportement du clavier.
 
-```
+```cpp
 void GetControlInfo();
 ```
 
@@ -953,7 +953,7 @@ virtual void MoveWindow(
 
 ### <a name="parameters"></a>Paramètres
 
-*X*<br/>
+*x*<br/>
 La nouvelle position du côté gauche de la fenêtre.
 
 *y*<br/>
@@ -1017,7 +1017,7 @@ Valeur différente de zéro en cas de réussite ; sinon, zéro.
 
 Définit le contrôle comme le bouton par défaut.
 
-```
+```cpp
 void SetDefaultButton(BOOL bDefault);
 ```
 
@@ -1142,7 +1142,7 @@ virtual BOOL SetWindowPos(
 *pWndInsertAprès*<br/>
 Un pointeur à la fenêtre.
 
-*X*<br/>
+*x*<br/>
 La nouvelle position du côté gauche de la fenêtre.
 
 *y*<br/>

@@ -24,12 +24,12 @@ helpviewer_keywords:
 - CMFCMaskedEdit [MFC], SetWindowText
 - CMFCMaskedEdit [MFC], IsMaskedChar
 ms.assetid: 13b1a645-2d5d-4c37-8599-16d5003f23a5
-ms.openlocfilehash: de28b308ec235e33e39aabd707677f4e75320b0b
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 26617f10605fe2a8a94adcc477cccab7e2ba4919
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81365279"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81754222"
 ---
 # <a name="cmfcmaskededit-class"></a>Classe CMFCMaskedEdit
 
@@ -113,7 +113,7 @@ L’exemple suivant montre comment configurer un masque (par exemple `EnableMask
 
 Désactiver la validation de l’entrée de l’utilisateur.
 
-```
+```cpp
 void DisableMask();
 ```
 
@@ -125,7 +125,7 @@ Si la validation des entrées utilisateur est désactivée, le contrôle masqué
 
 Précise si la `GetWindowText` méthode ne récupère que des caractères masqués.
 
-```
+```cpp
 void EnableGetMaskedCharsOnly(BOOL bEnable=TRUE);
 ```
 
@@ -142,7 +142,7 @@ Utilisez cette méthode pour permettre la récupération de caractères masqués
 
 Initialise le contrôle masqué de modification.
 
-```
+```cpp
 void EnableMask(
     LPCTSTR lpszMask,
     LPCTSTR lpszInputTemplate,
@@ -185,7 +185,7 @@ La liste de tableau suivante les caractères de masque par défaut :
 
 Précise si le contrôle d’édition masqué permet à l’utilisateur de sélectionner des entrées de groupes particulières, ou toutes les entrées.
 
-```
+```cpp
 void EnableSelectByGroup(BOOL bEnable=TRUE);
 ```
 
@@ -219,7 +219,7 @@ Si la sélection par groupe est activée, l’utilisateur ne peut récupérer qu
 
 Précise si le texte est validé contre uniquement les personnages masqués, ou contre l’ensemble du masque.
 
-```
+```cpp
 void EnableSetMaskedCharsOnly(BOOL bEnable=TRUE);
 ```
 
@@ -291,7 +291,7 @@ Remplacez cette méthode pour valider les caractères d’entrée par vous-même
 
 Spécifie une série de caractères valides que l’utilisateur peut entrer.
 
-```
+```cpp
 void SetValidChars(LPCTSTR lpszValid=NULL);
 ```
 
@@ -321,7 +321,7 @@ m_wndMaskEdit.SetValidChars(_T("1234567890ABCDEFabcdef"));m_wndMaskEdit.SetWindo
 
 Affiche une invite dans le contrôle masqué de modification.
 
-```
+```cpp
 void SetWindowText(LPCTSTR lpszString);
 ```
 

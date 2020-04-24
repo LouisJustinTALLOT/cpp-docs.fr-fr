@@ -74,12 +74,12 @@ helpviewer_keywords:
 - CMFCColorBar [MFC], SetPropList
 - CMFCColorBar [MFC], ShowCommandMessageString
 ms.assetid: 4756ee40-25a5-4cee-af7f-acab7993d1c7
-ms.openlocfilehash: 7b63fb66b800bd758c7f4c89c553e857ad9bbfbc
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 58fddeef9cb0afe930af84b05e6a87871f729da4
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81367772"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81752571"
 ---
 # <a name="cmfccolorbar-class"></a>CMFCColorBar, classe
 
@@ -330,7 +330,7 @@ CMFCColorBar(
 
 ### <a name="parameters"></a>Paramètres
 
-*Couleurs*<br/>
+*les couleurs*<br/>
 [dans] Un tableau de couleurs que le cadre affiche sur le contrôle de la barre de couleur.
 
 *Couleur*<br/>
@@ -380,7 +380,7 @@ L’étiquette standard pour l’autre bouton est **Plus de couleurs...**.
 
 Calcule les marges verticales et horizontales qui sont nécessaires pour contenir les boutons sur le contrôle de la barre de couleur, et ajuste l’emplacement de ces boutons.
 
-```
+```cpp
 void ContextToSize(
     BOOL bSquareButtons = TRUE,
     BOOL bCenterButtons = TRUE);
@@ -504,7 +504,7 @@ VRAI si cette méthode est réussie; autrement, FALSE.
 
 Affiche ou cache le bouton automatique.
 
-```
+```cpp
 void EnableAutomaticButton(
     LPCTSTR lpszLabel,
     COLORREF colorAutomatic,
@@ -532,7 +532,7 @@ L’étiquette de texte du bouton automatique est supprimée si le paramètre *l
 
 Permet ou désactive l’affichage d’une boîte de dialogue qui permet à l’utilisateur de sélectionner plus de couleurs.
 
-```
+```cpp
 void EnableOtherButton(
     LPCTSTR lpszLabel,
     BOOL bAltColorDlg=TRUE,
@@ -802,7 +802,7 @@ Pointeur vers la palette qui est remplacée par la palette du bouton parent du c
 
 Définit la couleur qui est actuellement sélectionnée.
 
-```
+```cpp
 void SetColor(COLORREF color);
 ```
 
@@ -837,7 +837,7 @@ Cette méthode modifie le nom de `CMFCColorBar` la couleur spécifiée dans tous
 
 Définit une nouvelle pièce d’identité de commande pour un contrôle de barre de couleur.
 
-```
+```cpp
 void SetCommandID(UINT nCommandID);
 ```
 
@@ -854,7 +854,7 @@ Appelez cette méthode pour modifier l’ID de commande d’un contrôle de barr
 
 Définit la liste des couleurs qui sont utilisées dans le document actuel.
 
-```
+```cpp
 void SetDocumentColors(
     LPCTSTR lpszCaption,
     CList<COLORREF,COLORREF>& lstDocColors,
@@ -880,7 +880,7 @@ void SetDocumentColors(
 
 Définit la marge horizontale, qui est l’espace entre la cellule de couleur gauche ou droite et la limite de la zone client.
 
-```
+```cpp
 void SetHorzMargin(int nHorzMargin);
 ```
 
@@ -897,7 +897,7 @@ Par défaut, le [constructeur CMFCColorBar : CMFCColorBar](#cmfccolorbar) fixe l
 
 Définit `m_pWndPropList` le membre des données protégées au pointeur spécifié à un contrôle du réseau de propriété.
 
-```
+```cpp
 void SetPropList(CMFCPropertyGridCtrl* pWndList);
 ```
 
@@ -911,7 +911,7 @@ void SetPropList(CMFCPropertyGridCtrl* pWndList);
 
 Définit la marge verticale, qui est l’espace entre la cellule de couleur supérieure ou inférieure et la limite de zone client.
 
-```
+```cpp
 void SetVertMargin(int nVertMargin);
 ```
 

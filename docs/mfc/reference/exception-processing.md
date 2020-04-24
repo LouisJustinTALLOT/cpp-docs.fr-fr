@@ -11,12 +11,12 @@ helpviewer_keywords:
 - MFC, exceptions
 - exceptions [MFC], MFC throwing functions
 ms.assetid: 26d4457c-8350-48f5-916e-78f919787c30
-ms.openlocfilehash: d819c170f47ea259e776bce6db0a6971e3f54bec
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: bdf9dee88c29621bdc77c83d2633d93b4b9d10a7
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81365712"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81751615"
 ---
 # <a name="exception-processing"></a>Traitement des exceptions
 
@@ -45,7 +45,7 @@ Pour des exemples et plus de détails, voir l’article [Exceptions](../../mfc/e
 |[AND_CATCH_ALL](#and_catch_all)|Désigne un bloc de code pour attraper tous les autres types d’exception supplémentaires jetés dans un bloc **TRY** précédent.|
 |[END_CATCH](#end_catch)|Termine le dernier **bloc de** code CATCH ou **AND_CATCH.**|
 |[END_CATCH_ALL](#end_catch_all)|Termine le dernier bloc de code **CATCH_ALL.**|
-|[Jeter](#throw)|Jette une exception spécifiée.|
+|[THROW](#throw)|Jette une exception spécifiée.|
 |[THROW_LAST](#throw_last)|Jetez l’exception actuellement manipulée au prochain gestionnaire extérieur.|
 
 ### <a name="exception-throwing-functions"></a>Fonctions de lancement d’exception
@@ -307,7 +307,7 @@ Voir l’exemple pour [CFile::Abort](../../mfc/reference/cfile-class.md#abort).
 
 Jette une exception d’archive.
 
-```
+```cpp
 void  AfxThrowArchiveException(int cause, LPCTSTR lpszArchiveName);
 ```
 
@@ -327,7 +327,7 @@ Indique une chaîne contenant le `CArchive` nom de l’objet qui a causé l’ex
 
 Jette une exception de fichier.
 
-```
+```cpp
 void AfxThrowFileException(
     int cause,
     LONG lOsError = -1,
@@ -359,7 +359,7 @@ Jette une exception d’argument invalide.
 
 ### <a name="syntax"></a>Syntaxe
 
-```
+```cpp
 void AfxThrowInvalidArgException( );
 ```
 
@@ -375,7 +375,7 @@ Cette fonction est appelée lorsque des arguments non valides sont utilisés.
 
 Jette une exception de mémoire.
 
-```
+```cpp
 void AfxThrowMemoryException();
 ```
 
@@ -391,7 +391,7 @@ Appelez cette fonction si les appels vers des allocateurs de mémoire système s
 
 Jette une exception qui est le résultat d’une demande pour une fonctionnalité non supportée.
 
-```
+```cpp
 void AfxThrowNotSupportedException();
 ```
 
@@ -403,7 +403,7 @@ void AfxThrowNotSupportedException();
 
 Jette une exception de ressources.
 
-```
+```cpp
 void  AfxThrowResourceException();
 ```
 
@@ -419,7 +419,7 @@ Cette fonction est normalement appelée lorsqu’une ressource Windows ne peut p
 
 Jetez une exception pour arrêter une opération utilisateur final.
 
-```
+```cpp
 void AfxThrowUserException();
 ```
 
@@ -435,7 +435,7 @@ Cette fonction est normalement `AfxMessageBox` appelée immédiatement après a 
 
 Utilisez cette fonction pour jeter une exception dans une fonction d’automatisation OLE.
 
-```
+```cpp
 void AFXAPI AfxThrowOleDispatchException(
     WORD wCode ,
     LPCSTR lpszDescription,
@@ -477,7 +477,7 @@ Les informations fournies à cette fonction peuvent être affichées par l’app
 
 Crée un objet `COleException` de type et lance une exception.
 
-```
+```cpp
 void AFXAPI AfxThrowOleException(SCODE sc);
 void AFXAPI AfxThrowOleException(HRESULT hr);
 ```
@@ -502,7 +502,7 @@ La version qui prend un HRESULT comme argument convertit ce code de résultat en
 
 Appelez cette fonction pour jeter une exception de type [CDaoException](../../mfc/reference/cdaoexception-class.md) à partir de votre propre code.
 
-```
+```cpp
 void AFXAPI AfxThrowDaoException(
     int nAfxDaoError = NO_AFX_DAO_ERROR,
     SCODE scode = S_OK);
@@ -530,7 +530,7 @@ Pour plus d’informations sur les exceptions liées `CDaoException` aux classes
 
 Appelez cette fonction pour jeter `CDBException` une exception de type de votre propre code.
 
-```
+```cpp
 void AfxThrowDBException(
     RETCODE nRetCode,
     CDatabase* pdb,
@@ -562,7 +562,7 @@ Pour plus d’informations sur les valeurs RETCODE définies par ODBC, voir le c
 
 La fonction de terminaison par défaut fournie par MFC.
 
-```
+```cpp
 void  AfxAbort();
 ```
 

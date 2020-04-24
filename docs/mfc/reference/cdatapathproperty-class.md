@@ -20,12 +20,12 @@ helpviewer_keywords:
 - CDataPathProperty [MFC], SetControl
 - CDataPathProperty [MFC], SetPath
 ms.assetid: 1f96efdb-54e4-460b-862c-eba5d4103488
-ms.openlocfilehash: e96106dcd6f496c6cc99c9d72d86052547b6d06b
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 479f5d47d9cff72d36dbd25e434182af1ba01ef4
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81376463"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81754649"
 ---
 # <a name="cdatapathproperty-class"></a>Classe CDataPathProperty
 
@@ -193,7 +193,7 @@ L’ouverture doit être redémarrée. Les classes dérivées peuvent remplacer 
 
 Appelez cette fonction de membre pour associer un contrôle `CDataPathProperty` asynchrone OLE avec l’objet.
 
-```
+```cpp
 void SetControl(COleControl* pControl);
 ```
 
@@ -206,7 +206,7 @@ Un pointeur au contrôle asynchrone OLE à associer à la propriété.
 
 Appelez cette fonction de membre pour définir le nom de la propriété.
 
-```
+```cpp
 void SetPath(LPCTSTR lpszPath);
 ```
 

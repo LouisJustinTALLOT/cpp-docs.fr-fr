@@ -24,12 +24,12 @@ helpviewer_keywords:
 - CMFCToolBarsCustomizeDialog [MFC], OnInitDialog
 - CMFCToolBarsCustomizeDialog [MFC], PostNcDestroy
 ms.assetid: 78e2cddd-4f13-4097-afc3-1ad646a113f1
-ms.openlocfilehash: d47ecf45a7bbfc563be0c05cd15ee84d430f502f
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 29e2c3d0238ac5a084ea916d95ad953f8c4aedce
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81377363"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81753405"
 ---
 # <a name="cmfctoolbarscustomizedialog-class"></a>CMFCToolBarsCustomizeDialog Classe
 
@@ -120,7 +120,7 @@ L’exemple suivant montre comment utiliser différentes méthodes de la classe 
 
 Insère un bouton de barre d’outils dans la liste des commandes sur la page **Commandes.**
 
-```
+```cpp
 void AddButton(
     UINT uiCategoryId,
     const CMFCToolBarButton& button,
@@ -187,7 +187,7 @@ Dans l’appel à `AddMenuCommands`, *bPopup* est FALSE. Par conséquent, cette 
 
 Ajoute des éléments à la liste des commandes de la page **Commandes** pour représenter tous les éléments du menu spécifié.
 
-```
+```cpp
 void AddMenuCommands(
     const CMenu* pMenu,
     BOOL bPopup,
@@ -351,7 +351,7 @@ Appelez `Create` la méthode seulement après avoir complètement initialisé la
 
 Permet ou désactive la création de nouvelles barres d’outils en utilisant la boîte de dialogue **Customize.**
 
-```
+```cpp
 void EnableUserDefinedToolbars(BOOL bEnable=TRUE);
 ```
 
@@ -391,7 +391,7 @@ La `CMFCMousePropertyPage` classe utilise cette méthode pour remplir la case de
 
 Remplit l’objet fourni `CComboBox` avec le nom de chaque catégorie de commande dans la boîte de dialogue **Customize.**
 
-```
+```cpp
 void FillCategoriesComboBox(
     CComboBox& wndCategory,
     BOOL bAddEmpty = TRUE) const;
@@ -419,7 +419,7 @@ Les `CMFCToolBarsKeyboardPropertyPage` `CMFCKeyMapDialog` classes et les classes
 
 Remplit l’objet fourni `CListBox` avec le nom de chaque catégorie de commande dans la boîte de dialogue **Customize.**
 
-```
+```cpp
 void FillCategoriesListBox(
     CListBox& wndCategory,
     BOOL bAddEmpty = TRUE) const;
@@ -705,7 +705,7 @@ Le nom de la catégorie doit être unique.
 
 Remplace un bouton de barre d’outils dans la boîte de commande des commandes sur la page **Commandes.**
 
-```
+```cpp
 void ReplaceButton(
     UINT uiCmd,
     const CMFCToolBarButton& button);

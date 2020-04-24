@@ -14,12 +14,12 @@ helpviewer_keywords:
 - CTypedPtrMap [MFC], RemoveKey
 - CTypedPtrMap [MFC], SetAt
 ms.assetid: 9f377385-c6e9-4471-8b40-8fe220c50164
-ms.openlocfilehash: 41416c8223ac94364e8f83028ea93189e9f3f60c
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 410f0101fd0f8cda271fe0f2353b06b9e8d773b8
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81373256"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81754365"
 ---
 # <a name="ctypedptrmap-class"></a>CTypedPtrMap, classe
 
@@ -82,7 +82,7 @@ Pour plus d’informations sur l’utilisation `CTypedPtrMap`, voir les articles
 
 Récupère l’élément `rNextPosition`de la `rNextPosition` carte à , puis mises à jour pour se référer à l’élément suivant dans la carte.
 
-```
+```cpp
 void GetNextAssoc(
     POSITION& rPosition,
     KEY& rKey,
@@ -195,7 +195,7 @@ Pour des remarques plus détaillées, voir [CMapStringToOb::RemoveKey](../../mfc
 
 Cette fonction `BASE_CLASS`de membre appelle **::SetAt**.
 
-```
+```cpp
 void SetAt(KEY key, VALUE newValue);
 ```
 

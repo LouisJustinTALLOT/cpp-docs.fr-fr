@@ -103,12 +103,12 @@ helpviewer_keywords:
 - CListBox [MFC], SetTopIndex
 - CListBox [MFC], VKeyToItem
 ms.assetid: 7ba3c699-c286-4cd9-9066-532c41ec05d1
-ms.openlocfilehash: 5bc66ab2775ebb9023c65c9decae205604c978c6
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 171038ebaaed815aa687c200fe3210bde8000be3
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81372232"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81753581"
 ---
 # <a name="clistbox-class"></a>CListBox, classe
 
@@ -342,7 +342,7 @@ Un long pointeur à une `COMPAREITEMSTRUCT` structure.
 
 Indique la position relative des deux éléments décrits dans la structure [COMPAREITEMSTRUCT.](/windows/win32/api/winuser/ns-winuser-compareitemstruct) Il peut s’agir de l’une ou l’autre des valeurs suivantes :
 
-|Value|Signification|
+|Valeur|Signification|
 |-----------|-------------|
 |-1|L’article 1 trie avant l’article 2.|
 |0|L’article 1 et l’article 2 trient de la même façon.|
@@ -479,7 +479,7 @@ int Dir(
 *Attr*<br/>
 Peut être n’importe quelle combinaison `CFile::GetStatu`des valeurs **enum** décrites dans s , ou [n’importe](../../mfc/reference/cfile-class.md#getstatus)quelle combinaison des valeurs suivantes :
 
-|Value|Signification|
+|Valeur|Signification|
 |-----------|-------------|
 |0x0000|Le fichier peut être lu ou écrit à.|
 |0x0001|Le fichier peut être lu à partir mais pas écrit à.|
@@ -717,7 +717,7 @@ La valeur de double mot était le paramètre *dwItemData* d’un appel [SetItemD
 
 Récupère la valeur 32 bits fournie par l’application associée à l’élément de boîte de liste spécifié comme pointeur **(vide** <strong>\*</strong>).
 
-```
+```cpp
 void* GetItemDataPtr(int nIndex) const;
 ```
 
@@ -1087,7 +1087,7 @@ Voir [CWnd::OnMeasureItem](../../mfc/reference/cwnd-class.md#onmeasureitem) pour
 
 Supprime tous les éléments d’une boîte de liste.
 
-```
+```cpp
 void ResetContent();
 ```
 
@@ -1169,7 +1169,7 @@ Utilisez cette fonction de membre uniquement avec des cases de liste de sélecti
 
 Définit l’ancre dans une boîte de liste de sélection multiple pour commencer une sélection étendue.
 
-```
+```cpp
 void SetAnchorIndex(int nIndex);
 ```
 
@@ -1220,7 +1220,7 @@ Si l’élément n’est pas visible, il est défiché en vue.
 
 Définit la largeur en pixels de toutes les colonnes dans une boîte de liste multicolumn (créée avec le style [LBS_MULTICOLUMN).](../../mfc/reference/styles-used-by-mfc.md#list-box-styles)
 
-```
+```cpp
 void SetColumnWidth(int cxWidth);
 ```
 
@@ -1266,7 +1266,7 @@ Pour définir ou supprimer une sélection dans une boîte de liste de sélection
 
 Définit la largeur, en pixels, par laquelle une boîte de liste peut être défichée horizontalement.
 
-```
+```cpp
 void SetHorizontalExtent(int cxExtent);
 ```
 
@@ -1434,7 +1434,7 @@ Pour sélectionner un élément dans une boîte de liste de sélection unique, u
 
 Définit les positions d’onglet-arrêt dans une boîte de liste.
 
-```
+```cpp
 void SetTabStops();
 BOOL SetTabStops(const int& cxEachStop);
 

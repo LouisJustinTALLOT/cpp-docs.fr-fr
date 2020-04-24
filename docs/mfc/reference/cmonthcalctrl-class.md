@@ -90,12 +90,12 @@ helpviewer_keywords:
 - CMonthCalCtrl [MFC], SizeMinReq
 - CMonthCalCtrl [MFC], SizeRectToMin
 ms.assetid: a42f6bd6-ab5c-4335-82f8-839982fc64a2
-ms.openlocfilehash: da9d588811361d3dfd72d44d5b9ced8460d23936
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 8c24c638d7006be112a53ec1e4f622ad528e348c
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81319754"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81752818"
 ---
 # <a name="cmonthcalctrl-class"></a>Classe CMonthCalCtrl
 
@@ -227,10 +227,10 @@ virtual BOOL Create(
 Spécifie la combinaison de styles Windows appliqués au contrôle du calendrier du mois. Voir [les styles de contrôle du calendrier](/windows/win32/Controls/month-calendar-control-styles) des mois dans le SDK Windows pour plus d’informations sur les styles.
 
 *Rect*<br/>
-Une référence à une structure [RECT.](/previous-versions/dd162897\(v=vs.85\)) Contient la position et la taille du contrôle du calendrier du mois.
+Une référence à une structure [RECT.](/windows/win32/api/windef/ns-windef-rect) Contient la position et la taille du contrôle du calendrier du mois.
 
 *Pt*<br/>
-Une référence à une structure [POINT](/previous-versions/dd162805\(v=vs.85\)) qui identifie l’emplacement du contrôle du calendrier du mois.
+Une référence à une structure [POINT](/windows/win32/api/windef/ns-windef-point) qui identifie l’emplacement du contrôle du calendrier du mois.
 
 *pParentWnd*<br/>
 Un pointeur à un objet [CWnd](../../mfc/reference/cwnd-class.md) qui est la fenêtre parente du contrôle du calendrier du mois. Ce ne doit pas être NULL.
@@ -373,7 +373,7 @@ DWORD GetCurrentView() const;
 
 Le point de vue actuel, qui est indiqué par l’une des valeurs suivantes :
 
-|Value|Signification|
+|Valeur|Signification|
 |-----------|-------------|
 |MCMV_MONTH|Vue mensuelle|
 |MCMV_YEAR|Vue annuelle|
@@ -448,7 +448,7 @@ Une valeur integer qui représente le premier jour de la semaine. Voir **Remarqu
 
 Cette fonction de membre implémente le comportement du message Win32 [MCM_GETFIRSTDAYOFWEEK](/windows/win32/Controls/mcm-getfirstdayofweek), tel que décrit dans le SDK Windows. Les jours de la semaine sont représentés comme des intégraux, comme suit.
 
-|Value|Jour de la semaine|
+|Valeur|Jour de la semaine|
 |-----------|---------------------|
 |0|Lundi|
 |1|Mardi|
@@ -523,7 +523,7 @@ BOOL GetMinReqRect(RECT* pRect) const;
 ### <a name="parameters"></a>Paramètres
 
 *pRect (en)*<br/>
-Un pointeur vers une structure [RECT](/previous-versions/dd162897\(v=vs.85\)) qui recevra des informations de rectangle de délimitation. Ce paramètre doit être une adresse valide et ne peut pas être NULL.
+Un pointeur vers une structure [RECT](/windows/win32/api/windef/ns-windef-rect) qui recevra des informations de rectangle de délimitation. Ce paramètre doit être une adresse valide et ne peut pas être NULL.
 
 ### <a name="return-value"></a>Valeur de retour
 
@@ -587,7 +587,7 @@ Un pointeur `SYSTEMTIME` à une structure contenant la date à l’extrémité l
 *dwFlags*<br/>
 Valeur spécifiant la portée des limites de portée à récupérer. Cette valeur doit être l’une des suivantes.
 
-|Value|Signification|
+|Valeur|Signification|
 |-----------|-------------|
 |GMR_DAYSTATE|Inclure des mois de plage visibles qui précèdent et qui traînent qui ne sont que partiellement affichés.|
 |GMR_VISIBLE|N’incluez que les mois qui sont entièrement affichés.|
@@ -634,7 +634,7 @@ Un pointeur `COleDateTime` vers `CTime` un objet, un objet ou une structure [SYS
 
 Un DWORD qui peut être nul (aucune limite n’est définie) ou une combinaison des valeurs suivantes qui spécifient des informations limites.
 
-|Value|Signification|
+|Valeur|Signification|
 |-----------|-------------|
 |GDTR_MAX|Une limite maximale est fixée pour le contrôle; *pMaxRange* est valide et contient les informations de date applicables.|
 |GDTR_MIN|Une limite minimale est fixée pour le contrôle; *pMinRange* est valide et contient les informations de date applicables.|
@@ -808,7 +808,7 @@ Cette méthode envoie le [message MCM_GETCURRENTVIEW,](/windows/win32/Controls/m
 
 Définit la largeur de la bordure du contrôle du calendrier du mois en cours.
 
-```
+```cpp
 void SetCalendarBorder(int cxyBorder);
 ```
 
@@ -840,7 +840,7 @@ L’exemple de code suivant définit la largeur de la bordure du contrôle du ca
 
 Définit la largeur par défaut de la bordure du contrôle du calendrier du mois en cours.
 
-```
+```cpp
 void SetCalendarBorderDefault();
 ```
 
@@ -917,7 +917,7 @@ COLORREF SetColor(
 *nRégion*<br/>
 Une valeur d’intégrage spécifiant quelle couleur de calendrier de mois à définir. Cette valeur peut être l’une des suivantes.
 
-|Value|Signification|
+|Valeur|Signification|
 |-----------|-------------|
 |MCSC_BACKGROUND|La couleur de fond affichée entre les mois.|
 |MCSC_MONTHBK|La couleur de fond affichée dans le mois.|
@@ -1219,7 +1219,7 @@ Cette fonction de membre implémente le comportement du message Win32 [MCM_SETSE
 
 Définit le contrôle du calendrier pour le jour en cours.
 
-```
+```cpp
 void SetToday(const COleDateTime& refDateTime);
 void SetToday(const CTime* pDateTime);
 void SetToday(const LPSYSTEMTIME pDateTime);
@@ -1290,11 +1290,11 @@ LPRECT SizeRectToMin(LPRECT lpRect);
 
 |Paramètre|Description|
 |---------------|-----------------|
-|*lpRect*|[dans] Pointeur vers une structure [RECT](/previous-versions/dd162897\(v=vs.85\)) qui définit un rectangle qui contient le nombre de calendriers souhaité.|
+|*lpRect*|[dans] Pointeur vers une structure [RECT](/windows/win32/api/windef/ns-windef-rect) qui définit un rectangle qui contient le nombre de calendriers souhaité.|
 
 ### <a name="return-value"></a>Valeur de retour
 
-Pointeur vers une structure [RECT](/previous-versions/dd162897\(v=vs.85\)) qui définit un rectangle dont la taille est inférieure ou égale au rectangle défini par le *paramètre lpRect.*
+Pointeur vers une structure [RECT](/windows/win32/api/windef/ns-windef-rect) qui définit un rectangle dont la taille est inférieure ou égale au rectangle défini par le *paramètre lpRect.*
 
 ### <a name="remarks"></a>Notes
 
