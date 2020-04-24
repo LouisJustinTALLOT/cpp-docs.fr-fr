@@ -60,12 +60,12 @@ helpviewer_keywords:
 - CFile [MFC], m_hFile
 - CFile [MFC], m_pTM
 ms.assetid: b2eb5757-d499-4e67-b044-dd7d1abaa0f8
-ms.openlocfilehash: 4ba37d481db73fb0556659ede267b3474c3f32f5
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 53afaf7732811e25729944eb71130a88e4f17a87
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81373920"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81755001"
 ---
 # <a name="cfile-class"></a>CFile, classe
 
@@ -751,7 +751,7 @@ Le gestionnaire d’exception pour cette méthode doit supprimer l’objet d’e
 
 Définit la valeur du pointeur de fichier au début du fichier.
 
-```
+```cpp
 void SeekToBegin();
 ```
 

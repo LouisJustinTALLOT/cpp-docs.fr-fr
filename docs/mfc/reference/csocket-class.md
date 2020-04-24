@@ -20,12 +20,12 @@ helpviewer_keywords:
 - CSocket [MFC], IsBlocking
 - CSocket [MFC], OnMessagePending
 ms.assetid: 7f23c081-d24d-42e3-b511-8053ca53d729
-ms.openlocfilehash: 3f0a7a9a90250ede7b112cfbd9bc1ca14d583356
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 730bea34354b008d641ecc28e7368f79efad12a7
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81318192"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81751155"
 ---
 # <a name="csocket-class"></a>CSocket, classe
 
@@ -129,7 +129,7 @@ Pour plus d’informations, voir [Windows Sockets: Using Sockets with Archives](
 
 Appelez cette fonction de membre pour annuler un appel de blocage actuellement en cours.
 
-```
+```cpp
 void CancelBlockingCall();
 ```
 

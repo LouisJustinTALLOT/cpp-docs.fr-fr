@@ -1,19 +1,26 @@
 ---
 title: Pointeurs bruts (C)
 description: Comment utiliser des pointeurs bruts dans C
-ms.date: 11/19/2019
+ms.date: 04/21/2020
 helpviewer_keywords:
 - pointers [C++]
-ms.openlocfilehash: 919447fcab123ce6b838391d3cc295fb8a8fe95e
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+no-loc:
+- void
+- nullptr
+- const
+- char
+- new
+- delete
+ms.openlocfilehash: 8ba188154d7395ce7be3878fa9dbee2fde08a130
+ms.sourcegitcommit: 89d9e1cb08fa872483d1cde98bc2a7c870e505e9
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81374676"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "82032094"
 ---
 # <a name="raw-pointers-c"></a>Pointeurs bruts (C)
 
-Un pointeur est un type de variable qui stocke l’adresse d’un objet dans la mémoire et est utilisé pour accéder à cet objet. Un *pointeur brut* est un pointeur dont la durée de vie n’est pas contrôlée par un objet encapsulant comme un [pointeur intelligent](smart-pointers-modern-cpp.md). Un pointeur brut peut être attribué l’adresse d’une autre variable non-pointeur, ou il peut être attribué une valeur de [nullptr](nullptr.md). Un pointeur qui n’a pas été attribué une valeur contient des données aléatoires.
+Un *pointeur* est un type de variable. Il stocke l’adresse d’un objet dans la mémoire, et est utilisé pour accéder à cet objet. Un *pointeur brut* est un pointeur dont la durée de vie n’est pas contrôlée par un objet encapsulant, comme un [pointeur intelligent](smart-pointers-modern-cpp.md). Un pointeur brut peut être attribué l’adresse d’une autre [nullptr](nullptr.md)variable non-pointeur, ou il peut être attribué une valeur de . Un pointeur qui n’a pas été attribué une valeur contient des données aléatoires.
 
 Un pointeur peut également être *déreféré* pour récupérer la valeur de l’objet qu’il pointe. *L’opérateur d’accès membre* donne accès aux membres d’un objet.
 
@@ -23,19 +30,17 @@ Un pointeur peut également être *déreféré* pour récupérer la valeur de l�
     int i = 5;
     p = &i; // assign pointer to address of object
     int j = *p; // dereference p to retrieve the value at its address
-
 ```
 
-Un pointeur peut pointer vers **void**un objet dactylographié ou vider. Lorsqu’un programme alloue un nouvel objet sur le [tas](https://wikipedia.org/wiki/Heap) dans la mémoire, il reçoit l’adresse de cet objet sous la forme d’un pointeur. De tels pointeurs sont appelés *pointeurs de possession*; un pointeur propriétaire (ou une copie de celui-ci) doit être utilisé pour supprimer explicitement l’objet alloué au tas lorsqu’il n’est plus nécessaire. L’omission de supprimer la mémoire entraîne une *fuite de mémoire* et rend cet emplacement de mémoire indisponible à tout autre programme sur la machine. Pour plus d’informations, voir [les opérateurs nouveaux et supprimer](new-and-delete-operators.md).
+Un pointeur peut pointer vers **void** un objet dactylographié ou à . Lorsqu’un programme alloue un objet sur le [tas](https://wikipedia.org/wiki/Heap) en mémoire, il reçoit l’adresse de cet objet sous la forme d’un pointeur. Ces pointeurs sont appelés *propriétaires de pointeurs*. Un pointeur de possession (ou une copie de celui-ci) doit être utilisé pour libérer explicitement l’objet alloué de tas quand il n’est plus nécessaire. L’omission de libérer la mémoire entraîne une *fuite de mémoire,* et rend cet emplacement de mémoire indisponible à tout autre programme sur la machine. La mémoire **new** allouée à **delete** l’utilisation doit être libérée en utilisant (ou ** delete \[]**). Pour plus d’informations, voir [ new et delete opérateurs](new-and-delete-operators.md).
 
 ```cpp
-
     MyClass* mc = new MyClass(); // allocate object on the heap
     mc->print(); // access class member
     delete mc; // delete object (please don't forget!)
 ```
 
-Un pointeur (s’il n’est pas déclaré comme **const**) peut être incrémenté ou décroissé de sorte qu’il indique un nouvel emplacement dans la mémoire. C’est ce qu’on appelle *l’arithmétique pointeur* et est utilisé dans la programmation de style C pour itérer sur les éléments dans les tableaux ou d’autres structures de données. Un pointeur **de cône** ne peut pas être fait pour indiquer un endroit différent de mémoire, et dans ce sens est très semblable à une [référence.](references-cpp.md) Pour plus d’informations, voir [const et pointeurs volatils](const-and-volatile-pointers.md).
+Un pointeur (s’il **const** n’est pas déclaré comme ) peut être incrémenté ou décroissé pour pointer vers un autre endroit dans la mémoire. Cette opération est appelée *arithmétique pointeur*. Il est utilisé dans la programmation de style C pour itérer sur les éléments dans les tableaux ou d’autres structures de données. Un **const** pointeur ne peut pas être fait pour pointer vers un endroit de mémoire différent, et en ce sens est similaire à une [référence](references-cpp.md). Pour plus d’informations, voir [ const et volatile pointeurs](const-and-volatile-pointers.md).
 
 ```cpp
     // declare a C-style string. Compiler adds terminating '\0'.
@@ -49,13 +54,13 @@ Un pointeur (s’il n’est pas déclaré comme **const**) peut être incrément
     // pconst2 = &c2; // Error! pconst2 is const.
 ```
 
-Sur les systèmes d’exploitation 64 bits, un pointeur a une taille de 64 bits; la taille du pointeur d’un système détermine la quantité de mémoire adressable qu’il peut avoir. Toutes les copies d’un pointeur pointent vers le même emplacement de mémoire. Les pointeurs (ainsi que les références) sont largement utilisés dans le C pour passer des objets plus grands vers et depuis les fonctions, car il est généralement beaucoup plus efficace de copier l’adresse 64 bits d’un objet que de copier un objet entier. Lors de la définition d’une fonction, spécifiez les paramètres de pointeur comme **const** sauf si vous avez l’intention pour la fonction de modifier l’objet. En général, les références **de cône** sont la manière préférée de passer des objets aux fonctions à moins que la valeur de l’objet puisse éventuellement être **nulleptr**.
+Sur les systèmes d’exploitation 64 bits, un pointeur a une taille de 64 bits. La taille du pointeur d’un système détermine la quantité de mémoire adressable qu’il peut avoir. Toutes les copies d’un pointeur pointent vers le même emplacement de mémoire. Les pointeurs (ainsi que les références) sont largement utilisés dans le C pour passer de plus grands objets vers et depuis les fonctions. C’est parce qu’il est souvent plus efficace de copier l’adresse d’un objet que de copier l’objet entier. Lors de la définition d’une fonction, spécifiez les paramètres de pointeur comme **const** sauf si vous avez l’intention de modifier l’objet. En général, **const** les références sont le moyen privilégié de transmettre des objets **nullptr** à des fonctions à moins que la valeur de l’objet ne puisse être.
 
 [Les pointeurs des fonctions](#pointers_to_functions) permettent de transmettre des fonctions à d’autres fonctions et sont utilisés pour les « rappels » dans la programmation de style C. Le Cmd moderne utilise des [expressions lambda](lambda-expressions-in-cpp.md) à cette fin.
 
 ## <a name="initialization-and-member-access"></a>Initialisation et accès des membres
 
-L’exemple suivant montre comment déclarer un pointeur brut et l’initialiser avec un objet alloué sur le tas, puis comment l’utiliser. Il montre également quelques-uns des dangers associés aux pointeurs bruts. (Rappelez-vous, c’est la programmation de style C et non pas moderne C'!)
+L’exemple suivant montre comment déclarer, initialiser et utiliser un pointeur brut. Il est paralé **new** à l’aide de pointer un objet **delete** alloué sur le tas, que vous devez explicitement . L’exemple montre également quelques-uns des dangers associés aux pointeurs bruts. (Rappelez-vous, cet exemple est la programmation de style C et non pas moderne C'!)
 
 ```cpp
 #include <iostream>
@@ -119,13 +124,13 @@ int main()
     pmc2->print(); // "Erika, 108"
 
     // Pass the pointer to a function.
-    func_A(mc);
+    func_A(pmc);
     pmc->print(); // "Erika, 3"
     pmc2->print(); // "Erika, 3"
 
     // Dereference the pointer and pass a copy
     // of the pointed-to object to a function
-    func_B(*mc);
+    func_B(*pmc);
     pmc->print(); // "Erika, 3" (original not modified by function)
 
     delete(pmc); // don't forget to give memory back to operating system!
@@ -135,7 +140,7 @@ int main()
 
 ## <a name="pointer-arithmetic-and-arrays"></a>Arithmétique et tableaux de pointeur
 
-Les pointeurs et les tableaux sont étroitement liés. Lorsqu’un tableau est transmis par valeur à une fonction, il est passé comme pointeur du premier élément. L’exemple suivant montre les propriétés importantes suivantes des pointeurs et des tableaux :
+Les pointeurs et les tableaux sont étroitement liés. Lorsqu’un tableau est transmis par valeur à une fonction, il est passé comme un pointeur du premier élément. L’exemple suivant montre les propriétés importantes suivantes des pointeurs et des tableaux :
 
 - l’opérateur `sizeof` retourne la taille totale dans les octets d’un tableau
 - pour déterminer le nombre d’éléments, diviser les octets totaux par la taille d’un élément
@@ -166,9 +171,9 @@ int main()
 }
 ```
 
-Certaines opérations arithmétiques peuvent être effectuées sur des pointeurs non-const pour les faire pointer vers un nouvel emplacement de mémoire. Un pointeur peut être incrémenté et **++** **+=** décroissé à l’aide de la , , **-=** et **--** les opérateurs. Cette technique peut être utilisée dans les tableaux et est particulièrement utile dans les tampons de données non saisies. Un **\* vide** incréments de la taille d’un **omble** (1 byte). Un pointeur dactylographié incréments par taille du type qu’il pointe vers.
+Certaines opérations arithmétiques peuventconst être utilisées sur des non-pointeurs pour les faire pointer vers un autre endroit de mémoire. Les pointeurs sont incrémentés et **++** décrmentés à l’aide du , , **+=** **-=** et **--** les opérateurs. Cette technique peut être utilisée dans les tableaux et est particulièrement utile dans les tampons de données non saisies. A ** void ** se fait incrémenter **char** par la taille d’un (1 byte). Un pointeur dactylographié est incrémenté par la taille du type qu’il pointe vers.
 
-L’exemple suivant montre comment l’arithmétique pointeur peut être utilisée pour accéder à des pixels individuels dans un bitmap sur Windows. Notez l’utilisation de **nouveau** et **supprimer**, et l’opérateur de déreférence.
+L’exemple suivant montre comment l’arithmétique pointeur peut être utilisée pour accéder à des pixels individuels dans un bitmap sur Windows. Notez l’utilisation et **new** **delete**, et l’opérateur de déreférence.
 
 ```cpp
 #include <Windows.h>
@@ -233,11 +238,11 @@ int main()
 }
 ```
 
-## <a name="void-pointers"></a>pointeurs voidMD
+## <a name="opno-locvoid-pointers"></a>void- pointeurs
 
-Un pointeur à **vider** indique simplement un emplacement de mémoire brut. Parfois, il est nécessaire d’utiliser des pointeurs **vides,\* ** par exemple lors de la transmission entre le code C et les fonctions C.
+Un pointeur pour **void** simplement pointer vers un emplacement de mémoire brut. Parfois, il est ** void ** nécessaire d’utiliser des pointeurs, par exemple lors de la transmission entre le code C et les fonctions C.
 
-Lorsqu’un pointeur dactylographié est projeté sur un pointeur vide, le contenu de l’emplacement de la mémoire n’est pas modifié, mais les informations de type sont perdues, de sorte que vous ne pouvez pas effectuer des opérations d’augmentation ou de décroissement. Un emplacement de mémoire peut être jeté, par exemple, de MyClassMD à vide et revenir à MyClass. Ces opérations sont intrinsèquement sujettes aux erreurs et nécessitent un grand soin pour éviter les erreurs. Le Cmd moderne décourage l’utilisation de pointeurs vides à moins que cela ne soit absolument nécessaire.
+Lorsqu’un pointeur dactylographique est projeté sur un void pointeur, le contenu de l’emplacement de la mémoire est inchangé. Cependant, les informations de type sont perdues, de sorte que vous ne pouvez pas faire des opérations d’augmentation ou de décroissement. Un emplacement de mémoire peut être `MyClass*` `void*` jeté, par `MyClass*`exemple, de et de retour à . Ces opérations sont intrinsèquement sujettes aux erreurs et nécessitent un grand soin pour éviter les erreurs. Le Cmd moderne décourage void l’utilisation de pointeurs dans presque toutes les circonstances.
 
 ```cpp
 
@@ -293,7 +298,7 @@ int main()
 
 ## <a name="pointers-to-functions"></a><a name="pointers_to_functions"></a>Pointeurs aux fonctions
 
-Dans la programmation de style C, les pointeurs de fonction sont utilisés principalement pour transmettre des fonctions à d’autres fonctions. Dans ce scénario, l’appelant peut personnaliser le comportement d’une fonction sans la modifier. Dans le C moderne, les [expressions lambda](lambda-expressions-in-cpp.md) offrent la même capacité avec une plus grande sécurité de type et d’autres avantages.
+Dans la programmation de style C, les pointeurs de fonction sont utilisés principalement pour transmettre des fonctions à d’autres fonctions. Cette technique permet à l’appelant de personnaliser le comportement d’une fonction sans la modifier. Dans le C moderne, les [expressions lambda](lambda-expressions-in-cpp.md) offrent la même capacité avec une plus grande sécurité de type et d’autres avantages.
 
 Une déclaration de pointeur de fonction précise la signature que la fonction pointue doit avoir :
 
@@ -311,7 +316,7 @@ void (*x)();
 int (*i)(int i, string s, double d);
 ```
 
-L’exemple suivant `combine` montre une fonction qui prend comme `std::string` paramètre `std::string`toute fonction qui accepte un et renvoie un . Selon la fonction qui `combine` lui est transmise, elle prépendra ou ajoutera une ficelle.
+L’exemple suivant `combine` montre une fonction qui prend comme `std::string` paramètre `std::string`toute fonction qui accepte un et renvoie un . Selon la fonction qui est `combine`passé à , il prépend ou annexe une chaîne.
 
 ```cpp
 #include <iostream>

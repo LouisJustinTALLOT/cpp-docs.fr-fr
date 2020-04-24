@@ -166,12 +166,12 @@ helpviewer_keywords:
 - CBasePane [MFC], UndockPane
 - CBasePane [MFC], DoPaint
 ms.assetid: 8163dd51-d7c7-4def-9c74-61f8ecdfad82
-ms.openlocfilehash: 56e4e30e23262da677c014a18e9fb8b175a6903d
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 941f32dfadffd97210586edd7c2aa63c3c1708cd
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81352937"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81752994"
 ---
 # <a name="cbasepane-class"></a>Classe CBasePane
 
@@ -377,7 +377,7 @@ virtual void AccNotifyObjectFocusEvent(int);
 
 Ajoute une vitre au gestionnaire d’amarrage.
 
-```
+```cpp
 void AddPane(CBasePane* pBar);
 ```
 
@@ -774,7 +774,7 @@ Appelez cette fonction pour amarrer une vitre à une autre vitre ou une barre de
 
 Docks la vitre en utilisant des informations de type temps d’exécution.
 
-```
+```cpp
 void DockPaneUsingRTTI(BOOL bUseDockSite);
 ```
 
@@ -1030,7 +1030,7 @@ virtual DWORD GetCurrentAlignment() const;
 
 L’alignement actuel de la barre de contrôle. Le tableau suivant montre les valeurs possibles :
 
-|Value|Alignment|
+|Valeur|Alignment|
 |-----------|---------------|
 |CBRS_ALIGN_LEFT|Alignement gauche.|
 |CBRS_ALIGN_RIGHT|Alignement droit.|
@@ -1740,7 +1740,7 @@ virtual void RecalcLayout();
 
 Désenregistre une vitre et la retire de la liste dans le gestionnaire d’amarrage.
 
-```
+```cpp
 void RemovePaneFromDockManager(
     CBasePane* pBar,
     BOOL bDestroy = TRUE,
@@ -1837,7 +1837,7 @@ virtual void SetControlBarStyle(DWORD dwNewStyle);
 
 Définit le mode d’amarrage pour la vitre.
 
-```
+```cpp
 void SetDockingMode(AFX_DOCK_TYPE dockModeNew);
 ```
 
@@ -1873,7 +1873,7 @@ Habituellement, le cadre appelle cette méthode lorsqu’une vitre est amarré d
 
 Le tableau suivant montre les valeurs possibles pour *dwAlignment*:
 
-|Value|Alignment|
+|Valeur|Alignment|
 |-----------|---------------|
 |CBRS_ALIGN_LEFT|Alignement gauche.|
 |CBRS_ALIGN_RIGHT|Alignement droit.|
@@ -1919,7 +1919,7 @@ virtual HDWP SetWindowPos(
 *pWndInsertAprès*<br/>
 [dans] Identifie l’objet `CWnd` qui `CWnd` vient avant cet objet dans l’ordre Z. Pour plus d’informations, voir [CWnd::SetWindowPos](../../mfc/reference/cwnd-class.md#setwindowpos).
 
-*X*<br/>
+*x*<br/>
 [dans] Spécifie la position du côté gauche de la fenêtre.
 
 *y*<br/>

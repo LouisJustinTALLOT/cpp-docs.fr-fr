@@ -14,12 +14,12 @@ helpviewer_keywords:
 - CBitmapButton [MFC], LoadBitmaps
 - CBitmapButton [MFC], SizeToContent
 ms.assetid: 9ad6cb45-c3c4-4fb1-96d3-1fe3df7bbcfc
-ms.openlocfilehash: c052f913f68d1890a470ed8a6aae2882ed181863
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: df21591dec1da5861125d7e9480fb9345aaad061
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81352717"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81752948"
 ---
 # <a name="cbitmapbutton-class"></a>Classe CBitmapButton
 
@@ -57,7 +57,7 @@ Ces bitmaps peuvent être de n’importe quelle taille, mais tous sont traités 
 
 Diverses applications exigent différentes combinaisons d’images bitmap :
 
-|Haut|Descendre|Avec focus|Désactivé|Application|
+|Haut|Bas|Avec focus|Désactivé|Application|
 |--------|----------|-------------|--------------|-----------------|
 |×||||Bitmap|
 |×|×|||Bouton sans style WS_TABSTOP|
@@ -214,7 +214,7 @@ Valeur différente de zéro cas de réussite ; sinon, 0.
 
 Appelez cette fonction pour resize un bouton bitmap à la taille de la bitmap.
 
-```
+```cpp
 void SizeToContent();
 ```
 

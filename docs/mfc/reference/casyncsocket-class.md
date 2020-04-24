@@ -74,12 +74,12 @@ helpviewer_keywords:
 - CAsyncSocket [MFC], OnSend
 - CAsyncSocket [MFC], m_hSocket
 ms.assetid: cca4d5a1-aa0f-48bd-843e-ef0e2d7fc00b
-ms.openlocfilehash: 7ab02dba4bf10b04dddac4e2e954623223af42d9
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: e384be534bdbb355554c28383e9e214e9084f217
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81353028"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81753030"
 ---
 # <a name="casyncsocket-class"></a>Classe CAsyncSocket
 
@@ -808,7 +808,7 @@ Nonzero si la fonction est réussie; sinon 0, et un code d’erreur spécifique 
 
 Les options suivantes `GetSockOpt`sont prises en charge pour . Le type identifie le type de données traitées par *lpOptionValue*. L’option TCP_NODELAY utilise des IPPROTO_TCP de niveau; toutes les autres options utilisent le niveau SOL_SOCKET.
 
-|Value|Type|Signification|
+|Valeur|Type|Signification|
 |-----------|----------|-------------|
 |SO_ACCEPTCONN|BOOL|Socket écoute.|
 |SO_BROADCAST|BOOL|Socket est configuré pour la transmission de messages de diffusion.|
@@ -827,7 +827,7 @@ Les options suivantes `GetSockOpt`sont prises en charge pour . Le type identifie
 
 Berkeley Software Distribution (BSD) `GetSockOpt` options non prises en charge sont les suivantes:
 
-|Value|Type|Signification|
+|Valeur|Type|Signification|
 |-----------|----------|-------------|
 |SO_RCVLOWAT|**int**|Recevez une faible marque d’eau.|
 |SO_RCVTIMEO|**int**|Recevez un délai d’attente.|
@@ -1112,7 +1112,7 @@ Pour plus d’informations, voir [Windows Sockets: Socket Notifications](../../m
 
 Attribue une nouvelle valeur `CAsyncSocket` à un objet.
 
-```
+```cpp
 void operator=(const CAsyncSocket& rSrc);
 ```
 
@@ -1715,7 +1715,7 @@ Certaines implémentations de Windows Sockets fournissent des informations de d�
 
 Les options suivantes `SetSockOpt`sont prises en charge pour . Le type identifie le type de données traitées par *lpOptionValue*.
 
-|Value|Type|Signification|
+|Valeur|Type|Signification|
 |-----------|----------|-------------|
 |SO_BROADCAST|BOOL|Autoriser la transmission de messages de diffusion sur la prise.|
 |SO_DEBUG|BOOL|Enregistrer les informations de débogage.|
@@ -1731,7 +1731,7 @@ Les options suivantes `SetSockOpt`sont prises en charge pour . Le type identifie
 
 Berkeley Software Distribution (BSD) `SetSockOpt` options non prises en charge sont les suivantes:
 
-|Value|Type|Signification|
+|Valeur|Type|Signification|
 |-----------|----------|-------------|
 |SO_ACCEPTCONN|BOOL|Socket est à l’écoute|
 |SO_ERROR|**int**|Obtenez le statut d’erreur et clair.|

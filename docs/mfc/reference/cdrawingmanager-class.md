@@ -56,12 +56,12 @@ helpviewer_keywords:
 - CDrawingManager [MFC], SetPixel
 - CDrawingManager [MFC], SmartMixColors
 ms.assetid: 9e4775ca-101b-4aa9-a85a-4d047c701215
-ms.openlocfilehash: 59c34a69b96cc9986db99b5f34bc38cf76f4909a
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 73c5775c2cb83dea79401615b31f2194094fac8e
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81374017"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81753238"
 ---
 # <a name="cdrawingmanager-class"></a>Classe CDrawingManager
 
@@ -157,7 +157,7 @@ static HBITMAP __stdcall CreateBitmap_32(
 |||
 |-|-|
 |Paramètre|Description|
-|*Taille*|[dans] Un [paramètre CSize](../../atl-mfc-shared/reference/csize-class.md) qui indique la taille de la bitmap.|
+|*size*|[dans] Un [paramètre CSize](../../atl-mfc-shared/reference/csize-class.md) qui indique la taille de la bitmap.|
 |*pBits (en)*|[out] Un pointeur à un pointeur de données qui reçoit l’emplacement des valeurs bits de la DIB.|
 |*Bitmap*|Une poignée à la bitmap d’origine|
 |*clrTransparent*|Une valeur RGB spécifiant la couleur transparente de la bitmap d’origine.|
@@ -174,7 +174,7 @@ Pour plus d’informations sur la façon de créer un bitmap DIB, voir [CreateDI
 
 Affiche des bitmaps qui ont des pixels transparents ou semi-transparents.
 
-```
+```cpp
 void DrawAlpha(
     CDC* pDstDC,
     const CRect& rectDst,
@@ -204,7 +204,7 @@ Cette méthode effectue l’alpha-mélange pour deux bitmaps. Pour plus d’info
 
 Dessine une ellipse avec le remplissage fourni et les couleurs de bordure.
 
-```
+```cpp
 void DrawEllipse(
     const CRect& rect,
     COLORREF clrFill,
@@ -276,7 +276,7 @@ Le rectangle défini par *rect* doit être d’au moins 5 pixels de large et 5 p
 
 Trace une ligne.
 
-```
+```cpp
 void DrawLine(
     int x1,
     int y1,
@@ -311,7 +311,7 @@ Cette méthode échoue si *clrLine* équivaut à -1.
 
 Dessine un rectangle avec le remplissage fourni et les couleurs de bordure.
 
-```
+```cpp
 void DrawRect(
     const CRect& rect,
     COLORREF clrFill,
@@ -397,7 +397,7 @@ L’exemple suivant montre comment `DrawShadow` utiliser `CDrawingManager` la m�
 
 Remplit une zone rectangulaire avec deux gradients de couleur.
 
-```
+```cpp
 void Fill4ColorsGradient(
     CRect rect,
     COLORREF colorStart1,
@@ -441,7 +441,7 @@ Cette méthode génère un échec d’affirmation si *nPercentage* est inférieu
 
 Remplit une zone rectangulaire avec le gradient de couleur spécifié.
 
-```
+```cpp
 void FillGradient(
     CRect rect,
     COLORREF colorStart,
@@ -481,7 +481,7 @@ L’exemple suivant montre comment `FillGradient` utiliser `CDrawingManager` la 
 
 Remplit une zone rectangulaire avec un gradient de couleur spécifié.
 
-```
+```cpp
 void FillGradient2 (
     CRect rect,
     COLORREF colorStart,
@@ -671,7 +671,7 @@ static COLORREF __stdcall HSVtoRGB(
 |Paramètre|Description|
 |*H (en)*|[dans] Un nombre entre 0 et 360 qui indique la teinte pour la couleur.|
 |*S*|[dans] Un nombre entre 0 et 1 qui indique la saturation de la couleur.|
-|*V*|[dans] Un nombre entre 0 et 1 qui indique la valeur de la couleur.|
+|*C*|[dans] Un nombre entre 0 et 1 qui indique la valeur de la couleur.|
 
 ### <a name="return-value"></a>Valeur de retour
 
@@ -737,7 +737,7 @@ Pour convertir une couleur HSV ou HSL en une représentation RGB, appelez l’un
 
 Retourne une zone rectangulaire.
 
-```
+```cpp
 void MirrorRect(
     CRect rect,
     BOOL bHorz = TRUE);
@@ -891,7 +891,7 @@ static void __stdcall RGBtoHSV(
 *S*<br/>
 [out] Un pointeur à un double où cette méthode stocke la saturation résultante pour la couleur.
 
-*V*<br/>
+*C*<br/>
 [out] Un pointeur à un double où cette méthode stocke la valeur résultante pour la couleur.
 
 ### <a name="remarks"></a>Notes
@@ -1012,7 +1012,7 @@ Le rapport pondéré est calculé avec la \* formule suivante : \* (couleur1 k1 
 
 Tourne un contenu DC source à l’intérieur du rectangle donné de 90 degrés.
 
-```
+```cpp
 void DrawRotated(
     CRect rectDest,
     CDC& dcSrc,

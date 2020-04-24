@@ -46,12 +46,12 @@ helpviewer_keywords:
 - CCmdTarget [MFC], OnFinalRelease
 - CCmdTarget [MFC], RestoreWaitCursor
 ms.assetid: 8883b132-2057-4ce0-a5f2-88979f8f2b13
-ms.openlocfilehash: 5ee4101302322a5212a80b32f095cdd13d9769e0
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 1ef7040f3be1e4c30a6dc19e6093727299c9f1c3
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81352291"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81752714"
 ---
 # <a name="ccmdtarget-class"></a>CCmdTarget, classe
 
@@ -121,7 +121,7 @@ Les cartes d’expédition, semblables aux cartes `IDispatch` de message, sont u
 
 Appelez cette fonction pour afficher le curseur comme un sablier lorsque vous vous attendez à ce qu’une commande prenne un intervalle de temps notable pour exécuter.
 
-```
+```cpp
 void BeginWaitCursor();
 ```
 
@@ -169,7 +169,7 @@ Pointeur vers la structure [MSG](/windows/win32/api/winuser/ns-winuser-msg) déc
 Handle de la fenêtre de document contenant l'objet.
 
 *lpRect*<br/>
-Pointeur vers la structure [RECT](/previous-versions/dd162897\(v=vs.85\)) contenant les coordonnées, en pixels, qui définissent le rectangle de délimitation d’un objet dans *hwndParent*.
+Pointeur vers la structure [RECT](/windows/win32/api/windef/ns-windef-rect) contenant les coordonnées, en pixels, qui définissent le rectangle de délimitation d’un objet dans *hwndParent*.
 
 ### <a name="return-value"></a>Valeur de retour
 
@@ -183,7 +183,7 @@ Cette fonction de membre est essentiellement une implémentation de [IOleObject:
 
 Appelez cette fonction pour activer l’automatisation OLE pour un objet.
 
-```
+```cpp
 void EnableAutomation();
 ```
 
@@ -195,7 +195,7 @@ Cette fonction est généralement appelée à partir du constructeur de votre ob
 
 Permet le tir événementiel sur les points de connexion.
 
-```
+```cpp
 void EnableConnections();
 ```
 
@@ -207,7 +207,7 @@ Pour activer les points de connexion, appelez cette fonction de membre dans le c
 
 Permet la bibliothèque de type d’objet.
 
-```
+```cpp
 void EnableTypeLib();
 ```
 
@@ -219,7 +219,7 @@ Appelez cette fonction de membre `CCmdTarget`dans le constructeur de votre objet
 
 Appelez cette fonction après `BeginWaitCursor` avoir appelé la fonction membre pour revenir du curseur de sablier au curseur précédent.
 
-```
+```cpp
 void EndWaitCursor();
 ```
 
@@ -284,7 +284,7 @@ virtual BOOL GetDispatchIID(IID* pIID);
 ### <a name="parameters"></a>Paramètres
 
 *pIID (en)*<br/>
-Un pointeur à un ID d’interface (un [GUID](/previous-versions/cc317743(v%3dmsdn.10)).
+Un pointeur sur un ID d’interface (un [GUID](/windows/win32/api/guiddef/ns-guiddef-guiddef-guidd.
 
 ### <a name="return-value"></a>Valeur de retour
 
@@ -349,8 +349,8 @@ HRESULT GetTypeInfoOfGuid(
 *lcid*<br/>
 Un identificateur local ( `LCID`).
 
-*Guid*<br/>
-Le [GUID](/previous-versions/cc317743(v%3dmsdn.10)) de la description de type.
+*guid*<br/>
+Le [GUID](/windows/win32/api/guiddef/ns-guiddef-guiddef-guidd de la description de type.
 
 *ppTypeInfo*<br/>
 Pointeur à un `ITypeInfo` pointeur à l’interface.
@@ -514,7 +514,7 @@ Remplacer cette fonction pour fournir une manipulation spéciale pour cette situ
 
 Appelez cette fonction pour restaurer le curseur de sablier approprié après que le curseur du système a changé (par exemple, après qu’une boîte de message a ouvert puis fermé au milieu d’une longue opération).
 
-```
+```cpp
 void RestoreWaitCursor();
 ```
 

@@ -344,12 +344,12 @@ helpviewer_keywords:
 - CMFCVisualManager [MFC], SetMenuShadowDepth
 - CMFCVisualManager [MFC], SetShadowHighlightedImage
 ms.assetid: beed80f7-36a2-4d64-9f09-e807cfefc3fe
-ms.openlocfilehash: 3ae37f1e7222b996e62490365869782bbf458ee9
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: df232fb8ad66dd259a69c4add82f6bcc9b34eeaf
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81319999"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81752848"
 ---
 # <a name="cmfcvisualmanager-class"></a>Classe CMFCVisualManager
 
@@ -661,7 +661,7 @@ static void __stdcall DestroyInstance(BOOL bAutoDestroyOnly = FALSE);
 
 ## <a name="cmfcvisualmanagerdodrawheadersortarrow"></a><a name="dodrawheadersortarrow"></a>CMFCVisualManager::DoDrawHeaderSortArrow
 
-```
+```cpp
 void DoDrawHeaderSortArrow(
     CDC* pDC,
     CRect rect,
@@ -765,7 +765,7 @@ virtual BOOL DrawTextOnGlass(
 
 ## <a name="cmfcvisualmanagerenabletoolbarbuttonfill"></a><a name="enabletoolbarbuttonfill"></a>CMFCVisualManager::EnableToolbarButtonFill
 
-```
+```cpp
 void EnableToolbarButtonFill(BOOL bEnable = TRUE);
 ```
 
@@ -1411,7 +1411,7 @@ virtual COLORREF GetToolbarButtonTextColor(
 *pButton*<br/>
 [dans] Un pointeur sur le bouton de la barre d’outils.
 
-*État*<br/>
+*state*<br/>
 [dans] L’état du bouton de la barre d’outils.
 
 ### <a name="return-value"></a>Valeur de retour
@@ -1822,7 +1822,7 @@ virtual BOOL OnDrawBrowseButton(
 *pEdit*<br/>
 [dans] Un pointeur à un contrôle de modification. Le gestionnaire visuel dessine le bouton de navigation pour ce contrôle d’édition.
 
-*État*<br/>
+*state*<br/>
 [dans] Une valeur énumérée qui spécifie l’état du bouton.
 
 *clrText*<br/>
@@ -1859,7 +1859,7 @@ virtual void OnDrawButtonBorder(
 *Rect*<br/>
 [dans] Un rectangle qui spécifie les limites du bouton de la barre d’outils.
 
-*État*<br/>
+*state*<br/>
 [dans] Un type de données énuméré qui spécifie l’état actuel du bouton de la barre d’outils.
 
 ### <a name="remarks"></a>Notes
@@ -4358,7 +4358,7 @@ virtual void OnFillButtonInterior(
 *Rect*<br/>
 [dans] Un rectangle qui spécifie les limites du bouton de la barre d’outils.
 
-*État*<br/>
+*state*<br/>
 [dans] L’état du bouton de la barre d’outils.
 
 ### <a name="remarks"></a>Notes
@@ -5011,7 +5011,7 @@ Utilisez cette méthode pour modifier le gestionnaire visuel que votre applicati
 
 Permet ou désactive le mode en relief pour les images de barres d’outils désactivées.
 
-```
+```cpp
 void SetEmbossDisabledImage (BOOL bEmboss = TRUE);
 ```
 
@@ -5028,7 +5028,7 @@ Utilisez la fonction [CMFCVisualManager::IsEmbossDisabledImage](#isembossdisable
 
 Permet ou désactive l’effet d’éclairage pour les images inactives sur un menu ou une barre d’outils.
 
-```
+```cpp
 void SetFadeInactiveImage(BOOL bFade = TRUE);
 ```
 
@@ -5045,7 +5045,7 @@ Cette fonctionnalité contrôle si les images inactives apparaissent fanées sur
 
 Définit un drapeau qui indique si les boutons du menu apparaissent à plat. Sinon, ils semblent tridimensionnels.
 
-```
+```cpp
 void SetMenuFlatLook(BOOL bMenuFlatLook = TRUE);
 ```
 
@@ -5062,7 +5062,7 @@ Par défaut, cette fonctionnalité n’est pas activée.
 
 Définit la largeur et la hauteur de l’ombre du menu.
 
-```
+```cpp
 void SetMenuShadowDepth(int nDepth);
 ```
 
@@ -5079,7 +5079,7 @@ La hauteur et la largeur de l’ombre du menu doivent être identiques. La valeu
 
 Définit un drapeau qui indique si le [CMFCVisualManager](../../mfc/reference/cmfcvisualmanager-class.md) affiche des ombres pour les images surlignées.
 
-```
+```cpp
 void SetShadowHighlightedImage(BOOL bShadow = TRUE);
 ```
 

@@ -52,12 +52,12 @@ helpviewer_keywords:
 - CArchive [MFC], WriteString
 - CArchive [MFC], m_pDocument
 ms.assetid: 9e950d23-b874-456e-ae4b-fe00781a7699
-ms.openlocfilehash: 46d30e38674d10aecdfdbf7be91c48063ba9f493
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: ef8b6ec9060e8c15dd45f8203dadd2a2aca9e168
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81377061"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81753123"
 ---
 # <a name="carchive-class"></a>CArchive, classe
 
@@ -146,7 +146,7 @@ Pour plus `CArchive`d’informations sur , voir les articles [Serialization](../
 
 Appelez cette fonction pour fermer les archives sans jeter une exception.
 
-```
+```cpp
 void Abort ();
 ```
 
@@ -208,7 +208,7 @@ Vous ne `CFile` pouvez pas utiliser les opérations pour modifier l’état du f
 
 Rincer toutes les données restantes dans le tampon, ferme l’archive et déconnecte l’archive du fichier.
 
-```
+```cpp
 void Close();
 ```
 
@@ -226,7 +226,7 @@ La fonction `Close` membre garantit que toutes les données sont transférées d
 
 Force toute donnée restante dans le tampon d’archivage à être écrite au fichier.
 
-```
+```cpp
 void Flush();
 ```
 
@@ -346,7 +346,7 @@ Si `IsStoring` l’état d’une archive n’est pas zéro, alors son `IsLoading
 
 Appelez cette fonction de membre pour placer des objets dans la carte qui ne sont pas vraiment sérialisés dans le fichier, mais qui sont disponibles pour les sous-exemples à référence.
 
-```
+```cpp
 void MapObject(const CObject* pOb);
 ```
 
@@ -676,7 +676,7 @@ Dans la version de la fonction membre avec le paramètre *nMax,* le tampon tiend
 
 Appelez cette fonction de membre lorsque vous souhaitez stocker et charger les informations de version d’une classe de base.
 
-```
+```cpp
 void SerializeClass(const CRuntimeClass* pClassRef);
 ```
 
@@ -703,7 +703,7 @@ Utilisez la [macro RUNTIME_CLASS](../../mfc/reference/run-time-object-model-serv
 
 Appelez `SetLoadParams` lorsque vous allez lire un `CObject`grand nombre d’objets dérivés à partir d’une archive.
 
-```
+```cpp
 void SetLoadParams(UINT nGrowBy = 1024);
 ```
 
@@ -726,7 +726,7 @@ Vous ne `SetLoadParams` devez pas appeler après qu’un objet soit chargé, ou 
 
 Appelez cette fonction de membre pour définir le schéma d’objet stocké dans l’objet d’archives à *nSchema*.
 
-```
+```cpp
 void SetObjectSchema(UINT nSchema);
 ```
 
@@ -749,7 +749,7 @@ Utilisation `SetObjectSchema` pour la version avancée; par exemple, lorsque vou
 
 Utiliser `SetStoreParams` lors du stockage `CObject`d’un grand nombre d’objets dérivés dans une archive.
 
-```
+```cpp
 void SetStoreParams(UINT nHashSize = 2053, UINT nBlockSize = 128);
 ```
 
@@ -775,7 +775,7 @@ Vous ne `SetStoreParams` devez pas appeler après que des objets sont stockés, 
 
 Écrit un nombre spécifié d’octets à l’archive.
 
-```
+```cpp
 void Write(const void* lpBuf, INT nMax);
 ```
 
@@ -801,7 +801,7 @@ Vous pouvez `Write` utiliser la `Serialize` fonction membre dans votre fonction 
 
 Utilisez `WriteClass` pour stocker la version et les informations de classe d’une classe de base lors de la sérialisation de la classe dérivée.
 
-```
+```cpp
 void WriteClass(const CRuntimeClass* pClassRef);
 ```
 
@@ -828,7 +828,7 @@ Vous pouvez utiliser [SerializeClass](#serializeclass) au lieu de `WriteClass`, 
 
 Stocke `CObject` le spécifié à l’archive.
 
-```
+```cpp
 void WriteObject(const CObject* pOb);
 ```
 
@@ -858,7 +858,7 @@ Pour une définition `CAge`de la classe , voir l’exemple pour [CObList::CObLis
 
 Utilisez cette fonction de membre pour écrire des `CArchive` données à partir d’un tampon au fichier associé à l’objet.
 
-```
+```cpp
 void WriteString(LPCTSTR lpsz);
 ```
 

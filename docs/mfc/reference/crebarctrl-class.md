@@ -98,12 +98,12 @@ helpviewer_keywords:
 - CReBarCtrl [MFC], ShowBand
 - CReBarCtrl [MFC], SizeToRect
 ms.assetid: 154570d7-e48c-425d-8c7e-c64542bcb4cc
-ms.openlocfilehash: 776892d71e2cb0f5d57512754cd7fa12730eb044
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 930322f1803eba7709505018c77ecea3f816dd15
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81367444"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81750631"
 ---
 # <a name="crebarctrl-class"></a>Classe CReBarCtrl
 
@@ -223,7 +223,7 @@ Pour plus d’informations, voir [Utilisation de CReBarCtrl](../../mfc/using-cre
 
 Implémente le comportement du message Win32 [RB_BEGINDRAG](/windows/win32/Controls/rb-begindrag), tel que décrit dans le SDK Windows.
 
-```
+```cpp
 void BeginDrag(
     UINT uBand,
     DWORD dwPos = (DWORD)-1);
@@ -255,7 +255,7 @@ virtual BOOL Create(
 Spécifie la combinaison de styles de contrôle des barres d’armature appliqués au contrôle. Consultez [Rebar Control Styles](/windows/win32/Controls/rebar-control-styles) dans le Windows SDK pour une liste de styles pris en charge.
 
 *Rect*<br/>
-Une référence à un objet [CRect](../../atl-mfc-shared/reference/crect-class.md) ou une structure [RECT,](/previous-versions/dd162897\(v=vs.85\)) qui est la position et la taille du contrôle des barres d’armature.
+Une référence à un objet [CRect](../../atl-mfc-shared/reference/crect-class.md) ou une structure [RECT,](/windows/win32/api/windef/ns-windef-rect) qui est la position et la taille du contrôle des barres d’armature.
 
 *pParentWnd*<br/>
 Un pointeur à un objet [CWnd](../../mfc/reference/cwnd-class.md) qui est la fenêtre parente du contrôle des barres d’armature. Ce ne doit pas être NULL.
@@ -303,7 +303,7 @@ Spécifie le style étendu du contrôle en cours de création. Pour une liste de
 Spécifie la combinaison de styles de contrôle des barres d’armature appliqués au contrôle. Pour une liste de styles pris en charge, voir [Rebar Control Styles](/windows/win32/Controls/rebar-control-styles) dans le SDK Windows.
 
 *Rect*<br/>
-Une référence à une structure [RECT](/previous-versions/dd162897\(v=vs.85\)) décrivant la taille et la position de la fenêtre à créer, dans les coordonnées des clients de *pParentWnd*.
+Une référence à une structure [RECT](/windows/win32/api/windef/ns-windef-rect) décrivant la taille et la position de la fenêtre à créer, dans les coordonnées des clients de *pParentWnd*.
 
 *pParentWnd*<br/>
 Un pointeur vers la fenêtre qui est le parent du contrôle.
@@ -356,7 +356,7 @@ Nonzero si la bande a supprimé avec succès; autrement zéro.
 
 Implémente le comportement du message Win32 [RB_DRAGMOVE](/windows/win32/Controls/rb-dragmove), tel que décrit dans le SDK Windows.
 
-```
+```cpp
 void DragMove(DWORD dwPos = (DWORD)-1);
 ```
 
@@ -369,7 +369,7 @@ Une valeur DWORD qui contient les nouvelles coordonnées de souris. La coordonn�
 
 Implémente le comportement du message Win32 [RB_ENDDRAG](/windows/win32/Controls/rb-enddrag), tel que décrit dans le SDK Windows.
 
-```
+```cpp
 void EndDrag();
 ```
 
@@ -377,7 +377,7 @@ void EndDrag();
 
 Implémente le comportement du message Win32 [RB_GETBANDBORDERS](/windows/win32/Controls/rb-getbandborders), tel que décrit dans le SDK Windows.
 
-```
+```cpp
 void GetBandBorders(
     UINT uBand,
     LPRECT prc) const;
@@ -389,7 +389,7 @@ void GetBandBorders(
 Indice zéro de la bande pour laquelle les frontières seront récupérées.
 
 *Rpc*<br/>
-Un pointeur vers une structure [RECT](/previous-versions/dd162897\(v=vs.85\)) qui recevra les frontières de la bande. Si le contrôle des barres d’armature a le style RBS_BANDBORDERS, chaque membre de cette structure recevra le nombre de pixels, du côté correspondant de la bande, qui constituent la frontière. Si le contrôle des barres d’armature n’a pas le style RBS_BANDBORDERS, seul le membre gauche de cette structure reçoit des informations valides. Pour une description des styles de contrôle des barres d’armature, voir [Rebar Control Styles](/windows/win32/Controls/rebar-control-styles) dans le SDK Windows.
+Un pointeur vers une structure [RECT](/windows/win32/api/windef/ns-windef-rect) qui recevra les frontières de la bande. Si le contrôle des barres d’armature a le style RBS_BANDBORDERS, chaque membre de cette structure recevra le nombre de pixels, du côté correspondant de la bande, qui constituent la frontière. Si le contrôle des barres d’armature n’a pas le style RBS_BANDBORDERS, seul le membre gauche de cette structure reçoit des informations valides. Pour une description des styles de contrôle des barres d’armature, voir [Rebar Control Styles](/windows/win32/Controls/rebar-control-styles) dans le SDK Windows.
 
 ## <a name="crebarctrlgetbandcount"></a><a name="getbandcount"></a>CReBarCtrl::GetBandCount
 
@@ -429,7 +429,7 @@ Valeur différente de zéro en cas de réussite ; sinon, zéro.
 
 Récupère les marges du groupe.
 
-```
+```cpp
 void GetBandMargins(PMARGINS pMargins);
 ```
 
@@ -584,7 +584,7 @@ BOOL GetRect(
 Indice zéro d’une bande dans le contrôle des barres d’armature.
 
 *Rpc*<br/>
-Un pointeur vers une structure [RECT](/previous-versions/dd162897\(v=vs.85\)) qui recevra les limites de la bande de barres d’armature.
+Un pointeur vers une structure [RECT](/windows/win32/api/windef/ns-windef-rect) qui recevra les limites de la bande de barres d’armature.
 
 ### <a name="return-value"></a>Valeur de retour
 
@@ -723,7 +723,7 @@ Valeur différente de zéro en cas de réussite ; sinon, zéro.
 
 Resizes une bande dans un contrôle de barre d’armature à sa plus grande taille.
 
-```
+```cpp
 void MaximizeBand(UINT uBand);
 ```
 
@@ -744,7 +744,7 @@ Implémente le comportement du message Win32 [RB_MAXIMIZEBAND](/windows/win32/Co
 
 Resizes une bande dans un contrôle de barre d’armature à sa plus petite taille.
 
-```
+```cpp
 void MinimizeBand(UINT uBand);
 ```
 
@@ -787,7 +787,7 @@ Valeur différente de zéro en cas de réussite ; sinon, zéro.
 
 Implémente le comportement du message Win32 [RB_PUSHCHEVRON](/windows/win32/Controls/rb-pushchevron), tel que décrit dans le SDK Windows.
 
-```
+```cpp
 void PushChevron(
     UINT uBand,
     LPARAM lAppValue);
@@ -805,7 +805,7 @@ Une application définissait la valeur 32 bits. Voir *lAppValue* dans [RB_PUSHCH
 
 Resizes une bande dans un contrôle de barre d’armature à sa taille idéale.
 
-```
+```cpp
 void RestoreBand(UINT uBand);
 ```
 
@@ -931,7 +931,7 @@ Voir ce sujet pour plus d’informations sur le moment de définir la couleur de
 
 Définit le schéma de couleur pour les boutons sur un contrôle de barre d’armature.
 
-```
+```cpp
 void SetColorScheme(const COLORSCHEME* lpcs);
 ```
 
@@ -1056,7 +1056,7 @@ Il est fourni pour soutenir la flexibilité de couleur de texte dans un contrôl
 
 Associe un contrôle de pointe d’outil avec un contrôle de barre d’armature.
 
-```
+```cpp
 void SetToolTips(CToolTipCtrl* pToolTip);
 ```
 

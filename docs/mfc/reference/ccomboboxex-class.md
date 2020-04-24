@@ -36,12 +36,12 @@ helpviewer_keywords:
 - CComboBoxEx [MFC], SetItem
 - CComboBoxEx [MFC], SetWindowTheme
 ms.assetid: 33ca960a-2409-478c-84a4-a2ee8ecfe8f7
-ms.openlocfilehash: 4151ea17fd3223c126715742c6149f2cf55bcbc7
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: a948d54be17103fa83848ff5f0e86dd2c522f0a3
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81369473"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81754827"
 ---
 # <a name="ccomboboxex-class"></a>Classe CComboBoxEx
 
@@ -150,7 +150,7 @@ virtual BOOL Create(
 Spécifie la combinaison de styles de boîte combo appliqués à la boîte combo. Voir **Remarques** ci-dessous pour plus d’informations sur les styles.
 
 *Rect*<br/>
-Une référence à un objet [CRect](../../atl-mfc-shared/reference/crect-class.md) ou une structure [RECT,](/previous-versions/dd162897\(v=vs.85\)) qui est la position et la taille de la boîte combo.
+Une référence à un objet [CRect](../../atl-mfc-shared/reference/crect-class.md) ou une structure [RECT,](/windows/win32/api/windef/ns-windef-rect) qui est la position et la taille de la boîte combo.
 
 *pParentWnd*<br/>
 Un pointeur à un objet [CWnd](../../mfc/reference/cwnd-class.md) qui est la `CDialog`fenêtre parente de la boîte combo (généralement un ). Ce ne doit pas être NULL.
@@ -210,7 +210,7 @@ Spécifie le style étendu du contrôle en cours de création. Pour une liste de
 Le style du contrôle de la boîte combo. Voir [Créer](#create) pour une liste de styles.
 
 *Rect*<br/>
-Une référence à une structure [RECT](/previous-versions/dd162897\(v=vs.85\)) décrivant la taille et la position de la fenêtre à créer, dans les coordonnées des clients de *pParentWnd*.
+Une référence à une structure [RECT](/windows/win32/api/windef/ns-windef-rect) décrivant la taille et la position de la fenêtre à créer, dans les coordonnées des clients de *pParentWnd*.
 
 *pParentWnd*<br/>
 Un pointeur vers la fenêtre qui est le parent du contrôle.

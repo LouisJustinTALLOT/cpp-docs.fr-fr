@@ -40,12 +40,12 @@ helpviewer_keywords:
 - CDateTimeCtrl [MFC], SetRange
 - CDateTimeCtrl [MFC], SetTime
 ms.assetid: 7113993b-5d37-4148-939f-500a190c5bdc
-ms.openlocfilehash: d0433507c32c7359f8033836bf845defa8ad7f7a
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 577dde7f4f4209f15590825fdb87fe23f788a1ce
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81321911"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81754612"
 ---
 # <a name="cdatetimectrl-class"></a>CDateTimeCtrl, classe
 
@@ -120,7 +120,7 @@ CDateTimeCtrl();
 
 Ferme la date actuelle et le contrôle du cueilleur d’heure.
 
-```
+```cpp
 void CloseMonthCal() const;
 ```
 
@@ -158,7 +158,7 @@ virtual BOOL Create(
 Spécifie la combinaison des styles de contrôle de l’heure de date. Consultez [les styles de contrôle de date et d’heure](/windows/win32/Controls/date-and-time-picker-control-styles) dans le SDK Windows pour plus d’informations sur les styles de cueilleur de dates et d’heure.
 
 *Rect*<br/>
-Une référence à une structure [RECT,](/previous-versions/dd162897\(v=vs.85\)) qui est la position et la taille de la date et le contrôle du cueilleur d’heure.
+Une référence à une structure [RECT,](/windows/win32/api/windef/ns-windef-rect) qui est la position et la taille de la date et le contrôle du cueilleur d’heure.
 
 *pParentWnd*<br/>
 Un pointeur à un objet [CWnd](../../mfc/reference/cwnd-class.md) qui est la fenêtre parente de la date et le contrôle du cueilleur d’heure. Ce ne doit pas être NULL.
@@ -446,7 +446,7 @@ COLORREF SetMonthCalColor(
 *iColor (iColor)*<br/>
 la valeur **int** spécifiant quelle zone du contrôle du calendrier du mois à définir. Cette valeur peut être l’une des suivantes.
 
-|Value|Signification|
+|Valeur|Signification|
 |-----------|-------------|
 |MCSC_BACKGROUND|Définissez la couleur de fond affichée entre les mois.|
 |MCSC_MONTHBK|Définissez la couleur de fond affichée dans un mois.|
@@ -474,7 +474,7 @@ Cette fonction de membre implémente le comportement du message Win32 [DTM_SETMC
 
 Définit la police que le contrôle du calendrier du mois de l’enfant du contrôle du mois de l’enfant du cueilleur de dates et d’heure utilisera.
 
-```
+```cpp
 void SetMonthCalFont(
     HFONT hFont,
     BOOL bRedraw = TRUE);

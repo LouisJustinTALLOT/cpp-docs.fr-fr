@@ -182,12 +182,12 @@ helpviewer_keywords:
 - CToolBarCtrl [MFC], SetToolTips
 - CToolBarCtrl [MFC], SetWindowTheme
 ms.assetid: 8f2f8ad2-05d7-4975-8715-3f2eed795248
-ms.openlocfilehash: c8968e7a516b7ed699517f6557f7ccd4bcb20505
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 50d3174d4569392be72efdad338eeaac3154ec56
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81365093"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81752221"
 ---
 # <a name="ctoolbarctrl-class"></a>CToolBarCtrl, classe
 
@@ -523,7 +523,7 @@ Vous ne devez `CString` pas passer un objet à cette fonction car il `CString`n�
 
 Resizes l’ensemble du contrôle de la barre d’outils.
 
-```
+```cpp
 void AutoSize();
 ```
 
@@ -627,7 +627,7 @@ virtual BOOL Create(
 Spécifie le style du contrôle de la barre d’outils. Les barres d’outils doivent toujours avoir le style WS_CHILD. En outre, vous pouvez spécifier n’importe quelle combinaison de styles de barre d’outils et de styles de fenêtre comme décrit sous **Remarques**.
 
 *Rect*<br/>
-Spécifie optionnellement la taille et la position du contrôle de la barre d’outils. Il peut s’agir soit d’un objet [CRect,](../../atl-mfc-shared/reference/crect-class.md) soit d’une structure [RECT.](/previous-versions/dd162897\(v=vs.85\))
+Spécifie optionnellement la taille et la position du contrôle de la barre d’outils. Il peut s’agir soit d’un objet [CRect,](../../atl-mfc-shared/reference/crect-class.md) soit d’une structure [RECT.](/windows/win32/api/windef/ns-windef-rect)
 
 *pParentWnd*<br/>
 Spécifie la fenêtre parente du contrôle de la barre d’outils. Ce ne doit pas être NULL.
@@ -681,7 +681,7 @@ Spécifie le style étendu du contrôle en cours de création. Pour une liste de
 Spécifie le style du contrôle de la barre d’outils. Les barres d’outils doivent toujours avoir le style WS_CHILD. En outre, vous pouvez spécifier n’importe quelle combinaison de styles de barre d’outils et de styles de fenêtre comme décrit dans la section **Remarques** de [Créer](#create).
 
 *Rect*<br/>
-Une référence à une structure [RECT](/previous-versions/dd162897\(v=vs.85\)) décrivant la taille et la position de la fenêtre à créer, dans les coordonnées des clients de *pParentWnd*.
+Une référence à une structure [RECT](/windows/win32/api/windef/ns-windef-rect) décrivant la taille et la position de la fenêtre à créer, dans les coordonnées des clients de *pParentWnd*.
 
 *pParentWnd*<br/>
 Un pointeur vers la fenêtre qui est le parent du contrôle.
@@ -713,7 +713,7 @@ Vous devez appeler [Create](#create) pour rendre la barre d’outils utilisable.
 
 Affiche la boîte de dialogue Customize Toolbar.
 
-```
+```cpp
 void Customize();
 ```
 
@@ -1040,7 +1040,7 @@ Cette fonction de membre implémente le comportement du message Win32 [TB_GETIMA
 
 Récupère la marque d’insertion actuelle pour la barre d’outils.
 
-```
+```cpp
 void GetInsertMark(TBINSERTMARK* ptbim) const;
 ```
 
@@ -1085,7 +1085,7 @@ BOOL GetItemRect(
 Index zéro du bouton pour lequel récupérer des informations.
 
 *lpRect*<br/>
-Adresse d’une structure [RECT](/previous-versions/dd162897\(v=vs.85\)) ou [d’un objet CRect](../../atl-mfc-shared/reference/crect-class.md) qui reçoit les coordonnées du rectangle de délimitation.
+Adresse d’une structure [RECT](/windows/win32/api/windef/ns-windef-rect) ou [d’un objet CRect](../../atl-mfc-shared/reference/crect-class.md) qui reçoit les coordonnées du rectangle de délimitation.
 
 ### <a name="return-value"></a>Valeur de retour
 
@@ -1132,7 +1132,7 @@ Le nombre maximum de lignes de texte affichées sur un bouton de barre d’outil
 
 Récupère les mesures de `CToolBarCtrl` l’objet.
 
-```
+```cpp
 void GetMetrics(LPTBMETRICS ptbm) const;
 ```
 
@@ -1202,7 +1202,7 @@ BOOL GetRect(
 L’identifiant du bouton.
 
 *lpRect*<br/>
-Un pointeur vers une structure [RECT](/previous-versions/dd162897\(v=vs.85\)) pour recevoir les informations de rectangle de délimitation.
+Un pointeur vers une structure [RECT](/windows/win32/api/windef/ns-windef-rect) pour recevoir les informations de rectangle de délimitation.
 
 ### <a name="return-value"></a>Valeur de retour
 
@@ -1325,7 +1325,7 @@ int HitTest(LPPOINT ppt) const;
 ### <a name="parameters"></a>Paramètres
 
 *Ppt*<br/>
-Un pointeur vers une structure [POINT](/previous-versions/dd162805\(v=vs.85\)) qui contient la `x` x-coordonnées du test de frappe `y` dans le membre et la y-coordinate du test de frappe dans le membre. Les coordonnées sont relatives à la zone client de la barre d’outils.
+Un pointeur vers une structure [POINT](/windows/win32/api/windef/ns-windef-point) qui contient la `x` x-coordonnées du test de frappe `y` dans le membre et la y-coordinate du test de frappe dans le membre. Les coordonnées sont relatives à la zone client de la barre d’outils.
 
 ### <a name="return-value"></a>Valeur de retour
 
@@ -1428,7 +1428,7 @@ BOOL InsertMarkHitTest(
 ### <a name="parameters"></a>Paramètres
 
 *Ppt*<br/>
-Un pointeur vers une structure [POINT](/previous-versions/dd162805\(v=vs.85\)) qui contient les coordonnées de test à succès, par rapport à la zone client de la barre d’outils.
+Un pointeur vers une structure [POINT](/windows/win32/api/windef/ns-windef-point) qui contient les coordonnées de test à succès, par rapport à la zone client de la barre d’outils.
 
 *ptbim ptbim*<br/>
 Un pointeur vers une structure [TBINSERTMARK](/windows/win32/api/commctrl/ns-commctrl-tbinsertmark) qui reçoit les informations de marque d’insertion.
@@ -1567,7 +1567,7 @@ Envisagez d’appeler [GetState](#getstate) si vous voulez récupérer plus d’
 
 Charge les bitmaps dans la liste d’images d’une barre d’outils.
 
-```
+```cpp
 void LoadImages(
     int iBitmapID,
     HINSTANCE hinst);
@@ -1730,7 +1730,7 @@ L’exemple de code suivant remplace la bitmap pour la barre d’outils standard
 
 Restaure l’état du contrôle de la barre d’outils à partir de l’emplacement du registre spécifié par les paramètres.
 
-```
+```cpp
 void RestoreState(
     HKEY hKeyRoot,
     LPCTSTR lpszSubKey,
@@ -1760,7 +1760,7 @@ Points à une chaîne contenant le nom de la valeur à récupérer. Si une valeu
 
 Enregistre l’état du contrôle de la barre d’outils dans l’emplacement du registre spécifié par les paramètres.
 
-```
+```cpp
 void SaveState(
     HKEY hKeyRoot,
     LPCTSTR lpszSubKey,
@@ -1817,7 +1817,7 @@ BOOL SetBitmapSize(CSize size);
 
 ### <a name="parameters"></a>Paramètres
 
-*Taille*<br/>
+*size*<br/>
 Largeur et hauteur, en pixels, des images mordues.
 
 ### <a name="return-value"></a>Valeur de retour
@@ -1864,7 +1864,7 @@ BOOL SetButtonSize(CSize size);
 
 ### <a name="parameters"></a>Paramètres
 
-*Taille*<br/>
+*size*<br/>
 Largeur et hauteur, en pixels, des boutons.
 
 ### <a name="return-value"></a>Valeur de retour
@@ -1883,7 +1883,7 @@ La taille du bouton doit toujours être au moins aussi grande que la taille de b
 
 Précise la taille de `TBBUTTON` la structure.
 
-```
+```cpp
 void SetButtonStructSize(int nSize);
 ```
 
@@ -1950,7 +1950,7 @@ Retourne nonzero en cas de succès; autrement zéro.
 
 Définit le schéma de couleur du contrôle actuel de la barre d’outils.
 
-```
+```cpp
 void SetColorScheme(const COLORSCHEME* lpColorScheme);
 ```
 
@@ -2128,7 +2128,7 @@ Valeur différente de zéro en cas de réussite ; sinon, zéro.
 
 Définit la marque d’insertion actuelle pour la barre d’outils.
 
-```
+```cpp
 void SetInsertMark(TBINSERTMARK* ptbim);
 ```
 
@@ -2183,7 +2183,7 @@ Valeur différente de zéro en cas de réussite ; sinon, zéro.
 
 Définit les mesures `CToolBarCtrl` de l’objet.
 
-```
+```cpp
 void SetMetrics(LPTBMETRICS ptbm);
 ```
 
@@ -2200,7 +2200,7 @@ Cette fonction de membre imite la fonctionnalité du [message TB_SETMETRICS,](/w
 
 Définit la fenêtre du propriétaire pour le contrôle de la barre d’outils.
 
-```
+```cpp
 void SetOwner(CWnd* pWnd);
 ```
 
@@ -2279,7 +2279,7 @@ L’exemple de code suivant définit la liste d’images pressée comme étant l
 
 Demande au contrôle de la barre d’outils de se resize au nombre demandé de lignes.
 
-```
+```cpp
 void SetRows(
     int nRows,
     BOOL bLarger,
@@ -2295,7 +2295,7 @@ Nombre demandé de lignes.
 Indique s’il faut utiliser plus de rangées ou moins de lignes si la barre d’outils ne peut pas être resized au nombre demandé de lignes.
 
 *lpRect*<br/>
-Points à l’objet [CRect](../../atl-mfc-shared/reference/crect-class.md) ou structure [RECT](/previous-versions/dd162897\(v=vs.85\)) qui recevra le nouveau rectangle de délimitation de la barre d’outils.
+Points à l’objet [CRect](../../atl-mfc-shared/reference/crect-class.md) ou structure [RECT](/windows/win32/api/windef/ns-windef-rect) qui recevra le nouveau rectangle de délimitation de la barre d’outils.
 
 ### <a name="remarks"></a>Notes
 
@@ -2341,7 +2341,7 @@ Cette fonction est particulièrement pratique si vous voulez définir plus d’u
 
 Définit les styles pour un contrôle de barre d’outils.
 
-```
+```cpp
 void SetStyle(DWORD dwStyle);
 ```
 
@@ -2354,7 +2354,7 @@ Un DWORD contenant une combinaison de styles de contrôle de [barre d’outils,]
 
 Associe un contrôle de pointe d’outil avec un contrôle de barre d’outils.
 
-```
+```cpp
 void SetToolTips(CToolTipCtrl* pTip);
 ```
 

@@ -156,12 +156,12 @@ helpviewer_keywords:
 - CMDIFrameWndEx [MFC], m_bCanCovertControlBarToMDIChild
 - CMDIFrameWndEx [MFC], m_bDisableSetRedraw
 ms.assetid: dbcafcb3-9a7a-4f11-9dfe-ba57565c81d0
-ms.openlocfilehash: e5b571ee677dab447075abb632cc013c9cd58d44
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 22ea89231487f214b797938e2202c9eed01fcb6e
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81370044"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81754539"
 ---
 # <a name="cmdiframewndex-class"></a>CMDIFrameWndEx, classe
 
@@ -296,7 +296,7 @@ L’exemple suivant tire `CMDIFrameWndEx`une classe de . Cet extrait de code pro
 
 Recalcule la disposition de l’élément actif.
 
-```
+```cpp
 void ActiveItemRecalcLayout();
 ```
 
@@ -481,7 +481,7 @@ Un pointeur vers la nouvelle fenêtre.
 
 Docks la vitre spécifiée à la fenêtre de cadre.
 
-```
+```cpp
 void DockPane(
     CBasePane* pBar,
     UINT nDockBarID=0,
@@ -603,7 +603,7 @@ L’exemple suivant `EnableDocking` montre comment la méthode est utilisée dan
 
 Affiche ou cache le menu principal en mode plein écran.
 
-```
+```cpp
 void EnableFullScreenMainMenu(BOOL bEnableMenu);
 ```
 
@@ -618,7 +618,7 @@ void EnableFullScreenMainMenu(BOOL bEnableMenu);
 
 Permet le mode plein écran pour la fenêtre du cadre.
 
-```
+```cpp
 void EnableFullScreenMode(UINT uiFullScreenCmd);
 ```
 
@@ -635,7 +635,7 @@ En mode plein écran, toutes les barres de contrôle d’amarrage, les barres d�
 
 Permet ou désactive le chargement de l’état d’amarrage.
 
-```
+```cpp
 void EnableLoadDockState(BOOL bEnable = TRUE);
 ```
 
@@ -650,7 +650,7 @@ void EnableLoadDockState(BOOL bEnable = TRUE);
 
 Permet ou désactive la fonction des groupes de tabbed MDI pour la fenêtre de cadre.
 
-```
+```cpp
 void EnableMDITabbedGroups(
     BOOL bEnable,
     const CMDITabInfo& params);
@@ -694,7 +694,7 @@ L’exemple suivant `EnableMDITabbedGroups` montre comment est utilisé dans [l�
 
 Permet ou désactive la fonction onglets MDI pour la fenêtre de cadre MDI. Lorsqu’elle est activée, la fenêtre du cadre affiche un onglet pour chaque fenêtre d’enfant MDI.
 
-```
+```cpp
 void EnableMDITabs(
     BOOL bEnable=TRUE,
     BOOL bIcons=TRUE,
@@ -746,7 +746,7 @@ L’exemple suivant `EnableMDITabs` montre comment est utilisé dans [l’échan
 
 Précise si le dernier onglet actif doit être ouvert lorsque l’utilisateur ferme l’onglet actuel.
 
-```
+```cpp
 void EnableMDITabsLastActiveActivation(BOOL bLastActiveTab=TRUE);
 ```
 
@@ -771,7 +771,7 @@ Utiliser `EnableMDITabsLastActiveActivation` pour activer la deuxième façon d�
 
 Permet ou désactive la création automatique et la gestion du menu de vitres pop-up, qui affiche une liste de volets d’application.
 
-```
+```cpp
 void EnablePaneMenu(
     BOOL bEnable,
     UINT uiCustomizeCmd,
@@ -815,7 +815,7 @@ L’exemple suivant `EnablePaneMenu` montre comment est utilisé dans [l’écha
 
 Insère un élément de menu dont l’ID de commande appelle une boîte de dialogue [CMFCWindowsManagerDialog.](../../mfc/reference/cmfcwindowsmanagerdialog-class.md)
 
-```
+```cpp
 void EnableWindowsDialog(
     UINT uiMenuId,
     LPCTSTR lpszMenuText,
@@ -1232,7 +1232,7 @@ L’exemple suivant `LoadMDIState` montre comment est utilisé dans [l’échant
 
 Déplace l’onglet actif de la fenêtre tabbed actuellement active vers le groupe tabbed suivant ou précédent.
 
-```
+```cpp
 void MDITabMoveToNextGroup(BOOL bNext=TRUE);
 ```
 
@@ -1245,7 +1245,7 @@ void MDITabMoveToNextGroup(BOOL bNext=TRUE);
 
 Crée un nouveau groupe tabbed qui a une seule fenêtre.
 
-```
+```cpp
 void MDITabNewGroup(BOOL bVert=TRUE);
 ```
 
@@ -1789,7 +1789,7 @@ Cette méthode l’emporte sur [CFrameWnd::RecalcLayout](../../mfc/reference/cfr
 
 Démarciez une vitre et la retire du gestionnaire d’amarrage.
 
-```
+```cpp
 void RemovePaneFromDockManager(
     CBasePane* pControlBar,
     BOOL bDestroy,
@@ -1864,7 +1864,7 @@ L’exemple suivant `SaveMDIState` montre comment est utilisé dans [l’échant
 
 Définit la fenêtre de l’image de prévisualisation d’impression.
 
-```
+```cpp
 void SetPrintPreviewFrame(CFrameWnd* pWnd);
 ```
 
@@ -1879,7 +1879,7 @@ void SetPrintPreviewFrame(CFrameWnd* pWnd);
 
 Modifie un objet de barre d’outils en remplaçant les éléments factices par des éléments définis par l’utilisateur.
 
-```
+```cpp
 void SetupToolbarMenu(
     CMenu& menu,
     const UINT uiViewUserToolbarCmdFirst,
@@ -1901,7 +1901,7 @@ void SetupToolbarMenu(
 
 Passe de l’image principale du mode régulier au mode plein écran.
 
-```
+```cpp
 void ShowFullScreen();
 ```
 
@@ -1911,7 +1911,7 @@ void ShowFullScreen();
 
 Affiche ou cache la vitre spécifiée.
 
-```
+```cpp
 void ShowPane(
     CBasePane* pBar,
     BOOL bShow,
@@ -1947,7 +1947,7 @@ L’exemple suivant `ShowPane` montre comment est utilisé dans [l’échantillo
 
 Crée une boîte [CMFCWindowsManagerDialog](../../mfc/reference/cmfcwindowsmanagerdialog-class.md) et l’ouvre.
 
-```
+```cpp
 void ShowWindowsDialog();
 ```
 
@@ -1988,7 +1988,7 @@ L’exemple suivant `TabbedDocumentToControlBar` montre comment est utilisé dan
 
 Appelé par le cadre pour mettre à jour la légende du cadre de fenêtre.
 
-```
+```cpp
 void UpdateCaption();
 ```
 
@@ -1998,7 +1998,7 @@ void UpdateCaption();
 
 Définit l’icône pour chaque volet tabbed MDI.
 
-```
+```cpp
 void UpdateMDITabbedBarsIcons();
 ```
 

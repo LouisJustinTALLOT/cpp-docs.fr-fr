@@ -52,12 +52,12 @@ helpviewer_keywords:
 - CMFCToolBarEditBoxButton [MFC], SetContextMenuID
 - CMFCToolBarEditBoxButton [MFC], SetFlatMode
 ms.assetid: b21d9b67-6bf7-4ca9-bd62-b237756e0ab3
-ms.openlocfilehash: 52989f7b523bf0ba9a00da350242a968ca0db153
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 064ebe1c8fe377064d410d09e5ef60ed628df2f3
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81360470"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81753998"
 ---
 # <a name="cmfctoolbareditboxbutton-class"></a>CMFCToolBarEditBoxButton, classe
 
@@ -638,7 +638,7 @@ Nonzero si le texte a été défini; 0 si `CMFCToolBarEditBoxButton` le contrôl
 
 Spécifie l’ID de ressources du menu raccourci qui est associé au bouton.
 
-```
+```cpp
 void SetContextMenuID(UINT uiResID);
 ```
 

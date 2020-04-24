@@ -22,12 +22,12 @@ helpviewer_keywords:
 - COleCurrency [MFC], m_cur
 - COleCurrency [MFC], m_status
 ms.assetid: 3a36e345-303f-46fb-a57c-858274378a8d
-ms.openlocfilehash: 3cb3217e02323f8a0afcd1639e6e24ee7b0f136e
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: cc69143101c5d00d4f9a689bd02abdd9596e5b53
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81366144"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81753921"
 ---
 # <a name="colecurrency-class"></a>Classe COleCurrency
 
@@ -518,7 +518,7 @@ BOOL operator>=(const COleCurrency& cur) const;
 
 Appelez cette fonction de membre pour définir `COleCurrency` les unités et la partie fractionnelle de cet objet.
 
-```
+```cpp
 void SetCurrency(
     long nUnits,
     long nFractionalUnits);
@@ -542,7 +542,7 @@ Notez que les unités et la partie fractionnaire sont spécifiées par des valeu
 
 Appelez cette fonction de membre pour définir `COleCurrency` le statut (validité) de cet objet.
 
-```
+```cpp
 void SetStatus(CurrencyStatus  status  );
 ```
 

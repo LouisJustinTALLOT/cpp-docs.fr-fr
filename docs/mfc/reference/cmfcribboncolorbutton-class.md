@@ -40,12 +40,12 @@ helpviewer_keywords:
 - CMFCRibbonColorButton [MFC], SetPalette
 - CMFCRibbonColorButton [MFC], UpdateColor
 ms.assetid: 6b4b4ee3-8cc0-41b4-a4eb-93e8847008e1
-ms.openlocfilehash: 8cf92d8d4b1b113f751bee85ac2a7df6eb06afea
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 528b883d75889589c7021f462324dd9dcb71be25
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81375238"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81754843"
 ---
 # <a name="cmfcribboncolorbutton-class"></a>CMFCRibbonColorButton (classe)
 
@@ -116,7 +116,7 @@ L’exemple suivant montre comment utiliser différentes méthodes de la classe 
 
 Ajoute un groupe de couleurs dans la zone de couleur normale.
 
-```
+```cpp
 void AddColorsGroup(
     LPCTSTR lpszName,
     const CList<COLORREF,COLORREF>& lstColors,
@@ -188,7 +188,7 @@ CMFCRibbonColorButton(
 
 Spécifie si le bouton **Automatique** est activé.
 
-```
+```cpp
 void EnableAutomaticButton(
     LPCTSTR lpszLabel,
     COLORREF colorAutomatic,
@@ -222,7 +222,7 @@ void EnableAutomaticButton(
 
 Active le bouton **Autres** .
 
-```
+```cpp
 void EnableOtherButton(
     LPCTSTR lpszLabel,
     LPCTSTR lpszToolTip=NULL);
@@ -310,7 +310,7 @@ La couleur de l’élément actuellement sélectionné sur la palette de couleur
 
 Supprime tous les groupes de couleurs de la zone de couleur normale.
 
-```
+```cpp
 void RemoveAllColorGroups();
 ```
 
@@ -318,7 +318,7 @@ void RemoveAllColorGroups();
 
 Sélectionne une couleur dans la zone de couleur normale.
 
-```
+```cpp
 void SetColor(COLORREF color);
 ```
 
@@ -331,7 +331,7 @@ void SetColor(COLORREF color);
 
 Définit la taille de tous les éléments de couleur qui apparaissent dans la barre de couleurs.
 
-```
+```cpp
 void SetColorBoxSize(CSize sizeBox);
 ```
 
@@ -366,7 +366,7 @@ Parce qu’il appelle `CMFCColorBar::SetColorName`, cette méthode change `CMFCC
 
 Définit le nombre de colonnes affichées dans le tableau des couleurs qui est présenté à l’utilisateur pendant le processus de sélection des couleurs de l’utilisateur.
 
-```
+```cpp
 void SetColumns(int nColumns);
 ```
 
@@ -381,7 +381,7 @@ void SetColumns(int nColumns);
 
 Spécifie une liste de valeurs RVB à afficher dans la zone de couleur du document.
 
-```
+```cpp
 void SetDocumentColors(
     LPCTSTR lpszLabel,
     CList<COLORREF,COLORREF>& lstColors);
@@ -399,7 +399,7 @@ void SetDocumentColors(
 
 Spécifie les couleurs standard à afficher dans la table couleur que le bouton de couleur affiche.
 
-```
+```cpp
 void SetPalette(CPalette* pPalette);
 ```
 
@@ -414,7 +414,7 @@ void SetPalette(CPalette* pPalette);
 
 Appelé par le cadre lorsque l’utilisateur sélectionne une couleur de la table couleur affichée lorsque l’utilisateur clique sur le bouton de couleur.
 
-```
+```cpp
 void UpdateColor(COLORREF color);
 ```
 

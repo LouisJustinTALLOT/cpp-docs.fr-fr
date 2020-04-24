@@ -30,12 +30,12 @@ helpviewer_keywords:
 - CMFCRibbonButtonsGroup [MFC], SetImages
 - CMFCRibbonButtonsGroup [MFC], SetParentCategory
 ms.assetid: b993d93e-fc1a-472f-a87f-1d7b7b499845
-ms.openlocfilehash: af5919ff2a72fc2aa1eeeb95fc93afbe9e743582
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: d690e8bf306234e7b742a4c6a0917e5430d92d10
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81375286"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81754101"
 ---
 # <a name="cmfcribbonbuttonsgroup-class"></a>CMFCRibbonButtonsGroup, classe
 
@@ -97,7 +97,7 @@ L’exemple suivant montre comment utiliser différentes méthodes de la classe 
 
 Ajoute un bouton à un groupe.
 
-```
+```cpp
 void AddButton(CMFCRibbonBaseElement* pButton);
 ```
 
@@ -110,7 +110,7 @@ void AddButton(CMFCRibbonBaseElement* pButton);
 
 Ajoute une liste de boutons à un groupe.
 
-```
+```cpp
 void AddButtons(
     const CList<CMFCRibbonBaseElement*,CMFCRibbonBaseElement*>& lstButtons);
 ```
@@ -246,7 +246,7 @@ virtual void OnDrawImage(
 
 Supprime tous les boutons `CMFCRibbonButtonsGroup` de l’objet.
 
-```
+```cpp
 void RemoveAll();
 ```
 
@@ -256,7 +256,7 @@ void RemoveAll();
 
 Attribue des images au groupe de boutons ruban.
 
-```
+```cpp
 void SetImages(
     CMFCToolBarImages* pImages,
     CMFCToolBarImages* pHotImages,

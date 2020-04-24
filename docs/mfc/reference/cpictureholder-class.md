@@ -28,12 +28,12 @@ helpviewer_keywords:
 - CPictureHolder [MFC], SetPictureDispatch
 - CPictureHolder [MFC], m_pPict
 ms.assetid: a4f59775-704a-41dd-b5bd-2e531c95127a
-ms.openlocfilehash: 067ea7238c48f2698d7bfe469e9c4be10129c065
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: edb93b05c1187d2c78f4c1120ee76282167c9b49
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81364055"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81753599"
 ---
 # <a name="cpictureholder-class"></a>CPictureHolder, classe
 
@@ -267,7 +267,7 @@ short GetType();
 
 Une valeur indiquant le type d’image. Les valeurs possibles et leurs significations sont les suivantes :
 
-|Value|Signification|
+|Valeur|Signification|
 |-----------|-------------|
 |PICTYPE_UNINITIALIZED|`CPictureHolder`l’objet est unitaire.|
 |PICTYPE_NONE|`CPictureHolder`l’objet est vide.|
@@ -287,7 +287,7 @@ LPPICTURE m_pPict;
 
 Rend l’image dans le rectangle référencé par *rcRender*.
 
-```
+```cpp
 void Render(
     CDC* pDC,
     const CRect& rcRender,
@@ -309,7 +309,7 @@ Un rectangle représentant le rectangle de délimitation de l’objet rendant l�
 
 Connecte `CPictureHolder` l’objet `IPictureDisp` à une interface.
 
-```
+```cpp
 void SetPictureDispatch(LPPICTUREDISP pDisp);
 ```
 

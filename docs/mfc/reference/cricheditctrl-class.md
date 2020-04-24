@@ -152,12 +152,12 @@ helpviewer_keywords:
 - CRichEditCtrl [MFC], StreamOut
 - CRichEditCtrl [MFC], Undo
 ms.assetid: 2be52788-822c-4c27-aafd-2471231e74eb
-ms.openlocfilehash: 07c3c864e91d8aebc8d70f54fed4286a24986208
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 1c601d036d05048bff9b60f837140e8f7a873964
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81368273"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81754432"
 ---
 # <a name="cricheditctrl-class"></a>Classe CRichEditCtrl
 
@@ -377,7 +377,7 @@ Pour plus d’informations, voir [EM_CHARFROMPOS](/windows/win32/Controls/em-cha
 
 Supprime (efface) la sélection actuelle (le cas échéant) dans le contrôle d’édition riche.
 
-```
+```cpp
 void Clear();
 ```
 
@@ -397,7 +397,7 @@ Pour plus d’informations, voir [WM_CLEAR](/windows/win32/dataxchg/wm-clear) da
 
 Copie la sélection actuelle (le cas échéant) dans le contrôle d’édition riche au Clipboard.
 
-```
+```cpp
 void Copy();
 ```
 
@@ -489,7 +489,7 @@ Spécifie le style étendu du contrôle en cours de création. Pour une liste de
 Spécifie le style du contrôle de modification. Appliquer une combinaison des styles de fenêtre énumérés dans la section **Remarques** de [Créer](#create) et modifier les styles de [contrôle](/windows/win32/Controls/edit-control-styles), décrit dans le SDK Windows.
 
 *Rect*<br/>
-Une référence à une structure [RECT](/previous-versions/dd162897\(v=vs.85\)) décrivant la taille et la position de la fenêtre à créer, dans les coordonnées des clients de *pParentWnd*.
+Une référence à une structure [RECT](/windows/win32/api/windef/ns-windef-rect) décrivant la taille et la position de la fenêtre à créer, dans les coordonnées des clients de *pParentWnd*.
 
 *pParentWnd*<br/>
 Un pointeur vers la fenêtre qui est le parent du contrôle.
@@ -525,7 +525,7 @@ Utilisez [Create](#create) pour construire le contrôle d’édition riche en fe
 
 Supprimer (coupes) la sélection actuelle (le cas échéant) dans le contrôle de modification riche et copie le texte supprimé à la Carte Clip.
 
-```
+```cpp
 void Cut();
 ```
 
@@ -572,7 +572,7 @@ Pour plus d’informations, voir [EM_DISPLAYBAND](/windows/win32/Controls/em-dis
 
 Réinitialise (clair) le drapeau annuler de ce contrôle d’édition riche.
 
-```
+```cpp
 void EmptyUndoBuffer();
 ```
 
@@ -966,7 +966,7 @@ Cette fonction de membre est disponible avec seulement les versions de langue as
 
 Récupère le rectangle de `CRichEditCtrl` formatage pour cet objet.
 
-```
+```cpp
 void GetRect(LPRECT lpRect) const;
 ```
 
@@ -1005,7 +1005,7 @@ Les types d’actions qui peuvent être annulés ou refaits comprennent les opé
 
 Récupère les limites de la `CRichEditCtrl` sélection actuelle dans cet objet.
 
-```
+```cpp
 void GetSel(CHARRANGE& cr) const;
 
 void GetSel(
@@ -1256,7 +1256,7 @@ Cette fonction de membre n’est disponible que pour les versions en langue asia
 
 Modifie la visibilité de la sélection.
 
-```
+```cpp
 void HideSelection(
     BOOL bHide,
     BOOL bPerm);
@@ -1284,7 +1284,7 @@ Pour plus d’informations, voir [EM_HIDESELECTION](/windows/win32/Controls/em-h
 
 Limite la longueur du texte que l’utilisateur peut entrer dans un contrôle de modification.
 
-```
+```cpp
 void LimitText(long nChars = 0);
 ```
 
@@ -1391,7 +1391,7 @@ Pour plus d’informations, voir [EM_LINELENGTH](/windows/win32/Controls/em-line
 
 Faites défiler le texte d’un contrôle de modification à plusieurs lignes.
 
-```
+```cpp
 void LineScroll(
     int nLines,
     int nChars = 0);
@@ -1421,7 +1421,7 @@ Pour plus d’informations, voir [EM_LINESCROLL](/windows/win32/Controls/em-line
 
 Insère les données du `CRichEditCtrl` Clipboard dans le point d’insertion, l’emplacement du caret.
 
-```
+```cpp
 void Paste();
 ```
 
@@ -1439,7 +1439,7 @@ Pour plus d’informations, voir [WM_PASTE](/windows/win32/dataxchg/wm-paste) da
 
 Colle les données dans un format `CRichEditCtrl` Clipboard spécifique dans cet objet.
 
-```
+```cpp
 void PasteSpecial(
     UINT nClipFormat,
     DWORD dvAspect = 0,
@@ -1508,7 +1508,7 @@ Pour plus d’informations, voir [EM_REDO](/windows/win32/Controls/em-redo) dans
 
 Remplace la sélection actuelle `CRichEditCtrl` dans cet objet par le texte spécifié.
 
-```
+```cpp
 void ReplaceSel(
     LPCTSTR lpszNewText,
     BOOL bCanUndo = FALSE);
@@ -1540,7 +1540,7 @@ Pour plus d’informations, voir [EM_REPLACESEL](/windows/win32/Controls/em-repl
 
 Force `CRichEditCtrl` cet objet à envoyer EN_REQUESTRESIZE messages de notification à sa fenêtre parente.
 
-```
+```cpp
 void RequestResize();
 ```
 
@@ -1667,7 +1667,7 @@ Pour plus d’informations, voir [EM_SETEVENTMASK](/windows/win32/Controls/em-se
 
 Définit ou efface le drapeau modifié pour un contrôle de modification.
 
-```
+```cpp
 void SetModify(BOOL bModified = TRUE);
 ```
 
@@ -1713,7 +1713,7 @@ Pour plus d’informations, voir [EM_SETOLECALLBACK](/windows/win32/Controls/em-
 
 Définit les options `CRichEditCtrl` pour cet objet.
 
-```
+```cpp
 void SetOptions(
     WORD wOp,
     DWORD dwFlags);
@@ -1848,7 +1848,7 @@ Pour plus d’informations, voir [EM_SETREADONLY](/windows/win32/Controls/em-set
 
 Définit le rectangle de `CRichEditCtrl` formatage pour cet objet.
 
-```
+```cpp
 void SetRect(LPCRECT lpRect);
 ```
 
@@ -1871,7 +1871,7 @@ Pour plus d’informations, voir [EM_SETRECT](/windows/win32/Controls/em-setrect
 
 Définit la sélection `CRichEditCtrl` dans cet objet.
 
-```
+```cpp
 void SetSel(
     long nStartChar,
     long nEndChar);
@@ -2076,7 +2076,7 @@ Ce message n’est disponible que dans les versions en langue asiatique du syst�
 
 Empêche le contrôle de collecter des actions de frappe supplémentaires dans l’action annuler en cours.
 
-```
+```cpp
 void StopGroupTyping();
 ```
 

@@ -22,12 +22,12 @@ helpviewer_keywords:
 - CMFCColorDialog [MFC], SetPageOne
 - CMFCColorDialog [MFC], SetPageTwo
 ms.assetid: 235bbbbc-a3b1-46e0-801b-fb55093ec579
-ms.openlocfilehash: 987e4f1e5e89c3c56b58adaad76cfd23d5e26c52
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 1d4bd31d5095f572ee80f0357a2d7526482f1caa
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81367718"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81752545"
 ---
 # <a name="cmfccolordialog-class"></a>CMFCColorDialog, classe
 
@@ -174,7 +174,7 @@ La palette de couleurs spécifie les couleurs que l’utilisateur peut choisir.
 
 Dérive une palette de la palette du système.
 
-```
+```cpp
 void RebuildPalette();
 ```
 
@@ -182,7 +182,7 @@ void RebuildPalette();
 
 Définit la couleur actuelle de la boîte de dialogue.
 
-```
+```cpp
 void SetCurrentColor(COLORREF rgb);
 ```
 
@@ -197,7 +197,7 @@ void SetCurrentColor(COLORREF rgb);
 
 Définit la couleur actuelle à la couleur dans la palette actuelle qui est le plus similaire.
 
-```
+```cpp
 void SetNewColor(COLORREF rgb);
 ```
 
@@ -212,7 +212,7 @@ void SetNewColor(COLORREF rgb);
 
 Spécifie explicitement les composants rouges, verts et bleus d’une couleur sélectionnée sur la première page de propriété d’un dialogue de couleur.
 
-```
+```cpp
 void SetPageOne(
     BYTE R,
     BYTE G,
@@ -236,7 +236,7 @@ void SetPageOne(
 
 Spécifie explicitement les composants rouges, verts et bleus d’une couleur sélectionnée sur la deuxième page de propriété d’un dialogue de couleur.
 
-```
+```cpp
 void SetPageTwo(
     BYTE R,
     BYTE G,

@@ -1,17 +1,17 @@
 ---
-title: module (C++ attribut com)
+title: module (attribut COM DE C)
 ms.date: 10/02/2018
 f1_keywords:
 - vc-attr.module
 helpviewer_keywords:
 - module attributes
 ms.assetid: 02223b2a-62b5-4262-832f-564b1e11e58e
-ms.openlocfilehash: e93073a1728063038ddd4e28dbb313854ee3c8c5
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 9d4f9e23aaf182e28930ba3a4462b07533ba9015
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80166690"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81754378"
 ---
 # <a name="module-c"></a>module (C++)
 
@@ -26,60 +26,60 @@ Définit le bloc de bibliothèque dans le fichier .idl.
 ### <a name="parameters"></a>Paramètres
 
 *type*<br/>
-Facultatif Il peut s’agir de l’un des éléments suivants :
+(Facultatif) Peut être l’un des éléments suivants:
 
-- `dll` ajoute des fonctions et des classes qui permettent à la DLL résultante de fonctionner en tant que serveur COM in-process. Il s’agit de la valeur par défaut.
+- `dll`Ajoute des fonctions et des classes qui permettent au DLL résultant de fonctionner comme un serveur COM en cours de traitement. Il s’agit de la valeur par défaut.
 
-- `exe` ajoute des fonctions et des classes qui permettent à l’exécutable résultant de fonctionner comme un serveur COM hors processus.
+- `exe`Ajoute des fonctions et des classes qui permettent à l’exécution résultant de fonctionner comme un serveur COM hors processus.
 
-- `service` ajoute des fonctions et des classes qui permettent à l’exécutable résultant de fonctionner en tant que service NT.
+- `service`Ajoute des fonctions et des classes qui permettent à l’exécution résultante de fonctionner comme un service NT.
 
-- `unspecified` désactive l’injection de code ATL associé à l’attribut de module : l’injection de classe de module ATL, les _AtlModule d’instances globales et les fonctions de point d’entrée. Ne désactive pas l’injection de code ATL due à d’autres attributs dans le projet.
+- `unspecified`Désactiver l’injection de code ATL liée à l’attribut du module : l’injection de la classe du module ATL, l'_AtlModule d’instance globale et les fonctions de point d’entrée. Ne désactive pas l’injection de code ATL due à d’autres attributs dans le projet.
 
 *name*<br/>
-Facultatif Nom du bloc de bibliothèque.
+(Facultatif) Le nom du bloc de la bibliothèque.
 
 *version*<br/>
-Facultatif Numéro de version que vous souhaitez affecter au bloc de bibliothèque. La valeur par défaut est 1,0.
+(Facultatif) Le numéro de version que vous souhaitez attribuer au bloc de la bibliothèque. La valeur par défaut est 1,0.
 
-*uuid*<br/>
-ID unique de la bibliothèque. Si vous omettez ce paramètre, un ID est généré automatiquement pour la bibliothèque. Vous devrez peut-être récupérer l' *UUID* de votre bloc de bibliothèque, ce que vous pouvez faire à l’aide de l’identificateur **__uuidof (** *NomBibliothèque* **)** .
+*Uuid*<br/>
+ID unique de la bibliothèque. Si vous omettez ce paramètre, un ID est généré automatiquement pour la bibliothèque. Vous devrez peut-être récupérer l’ *uuid* de votre bloc de bibliothèque, ce que vous pouvez faire à l’aide de l’identificateur **__uuidof(** *nom_bibliothèque* **)**.
 
 *lcid*<br/>
 Paramètre de localisation. Pour plus d’informations, consultez [lcid](/windows/win32/Midl/lcid) .
 
-*control*<br/>
-Facultatif Spécifie que toutes les coclasses dans la bibliothèque sont des contrôles.
+*Contrôle*<br/>
+(Facultatif) Précise que toutes les coclasses de la bibliothèque sont des contrôles.
 
 *helpstring*<br/>
 Spécifie la bibliothèque de types.
 
 *helpstringdll*<br/>
-Facultatif Définit le nom du fichier. dll à utiliser pour effectuer une recherche de chaîne de document. Pour plus d’informations, consultez [helpstringdll](/windows/win32/Midl/helpstringdll) .
+(Facultatif) Définit le nom du fichier .dll à utiliser pour effectuer un lookup chaîne de documents. Pour plus d’informations, consultez [helpstringdll](/windows/win32/Midl/helpstringdll) .
 
 *helpfile*<br/>
-Facultatif Nom du fichier d' **aide** pour la bibliothèque de types.
+(Facultatif) Le nom du fichier **d’aide** pour la bibliothèque de type.
 
 *helpcontext*<br/>
-Facultatif **ID d’aide** pour cette bibliothèque de types.
+(Facultatif) **L’ID d’aide** pour cette bibliothèque de type.
 
 *helpstringcontext*<br/>
-Facultatif Pour plus d’informations, consultez [helpstringcontext](helpstringcontext.md) .
+(Facultatif) Voir [helpstringcontext](helpstringcontext.md) pour plus d’informations.
 
-*hidden*<br/>
-Facultatif Empêche l’affichage de la bibliothèque entière. Cette utilisation est destinée aux contrôles. Les hôtes doivent créer une bibliothèque de types qui encapsule le contrôle avec des propriétés étendues. Pour plus d’informations, consultez l’attribut MIDL [hidden](/windows/win32/Midl/hidden) .
+*Cachés*<br/>
+(Facultatif) Empêche l’ensemble de la bibliothèque d’être affichée. Cette utilisation est destinée aux contrôles. Les hôtes doivent créer une bibliothèque de types qui encapsule le contrôle avec des propriétés étendues. Pour plus d’informations, consultez l’attribut MIDL [hidden](/windows/win32/Midl/hidden) .
 
-*restricted*<br/>
-Facultatif Les membres de la bibliothèque ne peuvent pas être appelés de façon arbitraire. Pour plus d’informations, consultez l’attribut MIDL [restricted](/windows/win32/Midl/restricted) .
+*Restreint*<br/>
+(Facultatif) Les membres de la bibliothèque ne peuvent pas être appelés arbitrairement. Pour plus d’informations, consultez l’attribut MIDL [restricted](/windows/win32/Midl/restricted) .
 
-*custom*<br/>
-Facultatif Un ou plusieurs attributs ; Cela est similaire à l’attribut [personnalisé](custom-cpp.md) . Le premier paramètre de *Custom* est le GUID de l’attribut. Par exemple :
+*Personnalisé*<br/>
+(Facultatif) Un ou plusieurs attributs; ceci est semblable à l’attribut [personnalisé.](custom-cpp.md) Le premier paramètre à *personnaliser* est le GUID de l’attribut. Par exemple :
 
 ```
 [module(custom={guid,1}, custom={guid1,2})]
 ```
 
-*nom_ressource*<br/>
+*resource_name*<br/>
 ID de ressource de chaîne du fichier .rgs utilisé pour enregistrer l’ID d’application de la DLL, de l’exécutable ou du service. Quand le module est de type service, cet argument sert également à obtenir l’ID de la chaîne contenant le nom du service.
 
 > [!NOTE]
@@ -93,21 +93,21 @@ Un bloc de bibliothèque est créé si, en plus de l’attribut **module** , le 
 
 Un seul bloc de bibliothèque est autorisé dans un fichier .idl. Les entrées de module multiples dans le code source sont fusionnées, les valeurs de paramètres les plus récentes étant implémentées.
 
-Si vous utilisez cet attribut dans un projet qui utilise ATL, le comportement de l’attribut change. Outre le comportement ci-dessus, l’attribut insère également un objet global (appelé `_AtlModule`) du type correct et du code de prise en charge supplémentaire. Si l’attribut est autonome, il insère une classe dérivée du type de module approprié. Si l’attribut est appliqué à une classe, il ajoute une classe de base du type de module approprié. Le type correct est déterminé par la valeur du paramètre de *type* :
+Si vous utilisez cet attribut dans un projet qui utilise ATL, le comportement de l’attribut change. En plus du comportement ci-dessus, l’attribut `_AtlModule`insère également un objet global (appelé ) du bon type et du code de support supplémentaire. Si l’attribut est autonome, il insère une classe dérivée du type de module approprié. Si l’attribut est appliqué à une classe, il ajoute une classe de base du type de module approprié. Le type correct est déterminé par la valeur du paramètre de *type* :
 
 - `type` = **dll**
 
-   [CAtlDllModuleT](../../atl/reference/catldllmodulet-class.md) est utilisé comme classe de base et comme points d’entrée de DLL standard requis pour un serveur COM. Ces points d’entrée sont [DllMain](/windows/win32/Dlls/dllmain), [DllRegisterServer](/windows/win32/api/olectl/nf-olectl-dllregisterserver), [DllUnRegisterServer](/windows/win32/api/olectl/nf-olectl-dllunregisterserver), [DllCanUnloadNow](/windows/win32/api/combaseapi/nf-combaseapi-dllcanunloadnow)et [DllGetClassObject](/previous-versions//dd797891\(v=vs.85\)).
+   [CAtlDllModuleT](../../atl/reference/catldllmodulet-class.md) est utilisé comme classe de base et comme points d’entrée de DLL standard requis pour un serveur COM. Ces points d’entrée sont [DllMain](/windows/win32/Dlls/dllmain), [DllRegisterServer](/windows/win32/api/olectl/nf-olectl-dllregisterserver), [DllUnRegisterServer](/windows/win32/api/olectl/nf-olectl-dllunregisterserver), [DllCanUnloadNow](/windows/win32/api/combaseapi/nf-combaseapi-dllcanunloadnow)et [DllGetClassObject](/windows/win32/api/combaseapi/nf-combaseapi-dllgetclassobject).
 
 - `type` = **exe**
 
    [CAtlExeModuleT](../../atl/reference/catlexemodulet-class.md) est utilisé comme classe de base et comme point d’entrée d’exécutable standard [WinMain](/windows/win32/api/winbase/nf-winbase-winmain).
 
-- `type` = **service**
+- `type` = **Service**
 
    [CAtlServiceModuleT](../../atl/reference/catlservicemodulet-class.md) est utilisé comme classe de base et comme point d’entrée d’exécutable standard [WinMain](/windows/win32/api/winbase/nf-winbase-winmain).
 
-- `type` = **unspecified**
+- `type` = **Quelconque**
 
    Désactive l’injection de code ATL associé à l’attribut de module.
 
@@ -152,8 +152,8 @@ BOOL WINAPI DllMain(DWORD dwReason, LPVOID lpReserved) {
 
 |||
 |-|-|
-|**S'applique à**|N'importe où|
-|**Renouvelable**|Non|
+|**S’applique à**|N'importe où|
+|**Répétable**|Non|
 |**Attributs requis**|None|
 |**Attributs non valides**|None|
 
@@ -164,7 +164,7 @@ Pour plus d'informations, consultez [Contextes d'attribut](cpp-attributes-com-ne
 [Attributs IDL](idl-attributes.md)<br/>
 [Attributs de classe](class-attributes.md)<br/>
 [Attributs autonomes](stand-alone-attributes.md)<br/>
-[Attributs Typedef, Enum, Union et Struct](typedef-enum-union-and-struct-attributes.md)<br/>
+[Typesdef, Enum, Union et Struct Attributes](typedef-enum-union-and-struct-attributes.md)<br/>
 [usesgetlasterror](usesgetlasterror.md)<br/>
 [Bibliothèque](/windows/win32/Midl/library)<br/>
 [helpcontext](helpcontext.md)<br/>

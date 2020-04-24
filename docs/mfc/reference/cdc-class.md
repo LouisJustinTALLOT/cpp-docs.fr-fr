@@ -402,12 +402,12 @@ helpviewer_keywords:
 - CDC [MFC], m_hAttribDC
 - CDC [MFC], m_hDC
 ms.assetid: 715b3334-cb2b-4c9c-8067-02eb7c66c8b2
-ms.openlocfilehash: 830c6d068a5074d0918107ca601c51d198a8a912
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: d25cad720a4e1abb9bca6b3ab22eea0261f24b48
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81375713"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81753433"
 ---
 # <a name="cdc-class"></a>Classe CDC
 
@@ -1354,7 +1354,7 @@ Un contexte d’appareil Windows.
 
 Utilisez cette fonction lorsque vous donnez des tailles HIMETRIC à OLE, en convertissant les pixels en HIMETRIC.
 
-```
+```cpp
 void DPtoHIMETRIC(LPSIZE lpSize) const;
 ```
 
@@ -1371,7 +1371,7 @@ Si le mode de cartographie de l’objet contextuelle de l’appareil est MM_LOEN
 
 Convertit les unités de périphériques en unités logiques.
 
-```
+```cpp
 void DPtoLP(
     LPPOINT lpPoints,
     int nCount = 1) const;
@@ -1402,7 +1402,7 @@ La fonction cartographie les coordonnées de chaque point, ou dimension d’une 
 
 Appelez cette fonction de membre pour dessiner un rectangle tridimensionnel.
 
-```
+```cpp
 void Draw3dRect(
     LPCRECT lpRect,
     COLORREF clrTopLeft,
@@ -1452,7 +1452,7 @@ Le rectangle sera dessiné avec les côtés supérieurs et gauches dans la coule
 
 Appelez cette fonction de membre à plusieurs reprises pour redessiner un rectangle de traînée.
 
-```
+```cpp
 void DrawDragRect(
     LPCRECT lpRect,
     SIZE size,
@@ -1467,7 +1467,7 @@ void DrawDragRect(
 *lpRect*<br/>
 Indique une structure [RECT](/windows/win32/api/windef/ns-windef-rect) ou un objet [CRect](../../atl-mfc-shared/reference/crect-class.md) qui spécifie les coordonnées logiques d’un rectangle — dans ce cas, la position de fin du rectangle étant redessiné.
 
-*Taille*<br/>
+*size*<br/>
 Spécifie le déplacement du coin supérieur gauche de la frontière extérieure jusqu’au coin supérieur gauche de la bordure intérieure (c’est-à-dire l’épaisseur de la bordure) d’un rectangle.
 
 *lpRectLast*<br/>
@@ -1548,7 +1548,7 @@ Lorsqu’une `DrawEscape`application appelle, les données identifiées par *nIn
 
 Dessine un rectangle dans le style utilisé pour indiquer que le rectangle a la mise au point.
 
-```
+```cpp
 void DrawFocusRect(LPCRECT lpRect);
 ```
 
@@ -1767,7 +1767,7 @@ BOOL DrawState(
 *Pt*<br/>
 Spécifie l’emplacement de l’image.
 
-*Taille*<br/>
+*size*<br/>
 Précise la taille de l’image.
 
 *hBitmap (en)*<br/>
@@ -2345,7 +2345,7 @@ Une fois son intérieur rempli, le chemin est écarté du contexte de l’appare
 
 Appelez cette fonction de membre pour remplir un rectangle donné à l’aide de la brosse spécifiée.
 
-```
+```cpp
 void FillRect(
     LPCRECT lpRect,
     CBrush* pBrush);
@@ -2403,7 +2403,7 @@ Le pinceau doit être `CBrush` créé en `CreateHatchBrush` `CreatePatternBrush`
 
 Appelez cette fonction de membre pour remplir le rectangle donné avec la couleur solide spécifiée.
 
-```
+```cpp
 void FillSolidRect(
     LPCRECT lpRect,
     COLORREF clr);
@@ -2492,7 +2492,7 @@ La `ExtFloodFill` fonction offre une capacité similaire, mais une plus grande f
 
 Dessine une bordure autour du rectangle spécifié par *lpRect*.
 
-```
+```cpp
 void FrameRect(
     LPCRECT lpRect,
     CBrush* pBrush);
@@ -2658,7 +2658,7 @@ UINT GetBoundsRect(
 *lpRectBounds*<br/>
 Points à un tampon qui recevra le rectangle de délimitation actuel. Le rectangle est retourné dans des coordonnées logiques.
 
-*Drapeaux*<br/>
+*flags*<br/>
 Précise si le rectangle de délimitation doit être effacé après son retour. Ce paramètre doit être nul ou réglé à la valeur suivante :
 
 - DCB_RESET Force le rectangle de délimitation à effacer après son retour.
@@ -4123,7 +4123,7 @@ Lorsque le cadre est en mode `GrayString` aperçu, un appel `TextOut` à la fonc
 
 Utilisez cette fonction lorsque vous convertissez les tailles HIMETRIC d’OLE en pixels.
 
-```
+```cpp
 void HIMETRICtoDP(LPSIZE lpSize) const;
 ```
 
@@ -4140,7 +4140,7 @@ Si le mode de cartographie de l’objet contextuelle de l’appareil est MM_LOEN
 
 Appelez cette fonction pour convertir les unités HIMETRIC en unités logiques.
 
-```
+```cpp
 void HIMETRICtoLP(LPSIZE lpSize) const;
 ```
 
@@ -4206,7 +4206,7 @@ GDI clips toute sortie ultérieure pour s’adapter à l’intérieur de la nouv
 
 Inverse le contenu du rectangle donné.
 
-```
+```cpp
 void InvertRect(LPCRECT lpRect);
 ```
 
@@ -4297,7 +4297,7 @@ La ligne est tracée avec le stylo sélectionné. La position actuelle est défi
 
 Convertit les unités logiques en unités d’appareils.
 
-```
+```cpp
 void LPtoDP(
     LPPOINT lpPoints,
     int nCount = 1) const;
@@ -4330,7 +4330,7 @@ Les x- et y-coordonnées des points sont des intégrants signés à 2 byte dans 
 
 Appelez cette fonction pour convertir les unités logiques en unités HIMETRIC.
 
-```
+```cpp
 void LPtoHIMETRIC(LPSIZE lpSize) const;
 ```
 
@@ -4516,7 +4516,7 @@ Spécifie le nombre d’unités logiques pour se déplacer à gauche ou à droit
 *y*<br/>
 Spécifie le nombre d’unités logiques à déplacer vers le haut ou vers le bas.
 
-*Taille*<br/>
+*size*<br/>
 Spécifie le montant à compenser.
 
 ### <a name="return-value"></a>Valeur de retour
@@ -5865,7 +5865,7 @@ UINT SetBoundsRect(
 *lpRectBounds*<br/>
 Points à `RECT` une `CRect` structure ou un objet qui est utilisé pour régler le rectangle de délimitation. Les dimensions de rectangle sont données dans les coordonnées logiques. Ce paramètre peut être NULL.
 
-*Drapeaux*<br/>
+*flags*<br/>
 Précise comment le nouveau rectangle sera combiné avec le rectangle accumulé. Ce paramètre peut être une combinaison des valeurs suivantes :
 
 - DCB_ACCUMULATE Ajouter le rectangle spécifié par *lpRectBounds* au rectangle de délimitation (à l’aide d’une opération rectangle-union).
@@ -6493,7 +6493,7 @@ Spécifie l’étendue x du viewport (dans les unités de périphérique).
 *Cy*<br/>
 Spécifie l’étendue y du viewport (dans les unités de périphérique).
 
-*Taille*<br/>
+*size*<br/>
 Spécifie les x- et y-étendues du viewport (dans les unités de périphérique).
 
 ### <a name="return-value"></a>Valeur de retour
@@ -6574,7 +6574,7 @@ Spécifie l’étendue x (dans les unités logiques) de la fenêtre.
 *Cy*<br/>
 Spécifie l’étendue y (dans les unités logiques) de la fenêtre.
 
-*Taille*<br/>
+*size*<br/>
 Spécifie les x- et y-extents (en unités logiques) de la fenêtre.
 
 ### <a name="return-value"></a>Valeur de retour
@@ -7029,7 +7029,7 @@ Pour plus d’informations, voir [TransparentBlt](/windows/win32/api/wingdi/nf-w
 
 Mise à jour de la zone cliente du contexte de l’appareil en faisant correspondre les couleurs actuelles de la zone client à la palette du système pixel par pixel.
 
-```
+```cpp
 void UpdateColors();
 ```
 

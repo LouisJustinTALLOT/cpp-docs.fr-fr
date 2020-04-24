@@ -58,12 +58,12 @@ helpviewer_keywords:
 - CDaoDatabase [MFC], m_pDAODatabase
 - CDaoDatabase [MFC], m_pWorkspace
 ms.assetid: 8ff5b342-964d-449d-bef1-d0ff56aadf6d
-ms.openlocfilehash: debba137878da49921df83da7630003a7d62db2f
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 0fbc4ee3f2033f7507a1ed68493fa7e48bc62c51
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81369019"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81754741"
 ---
 # <a name="cdaodatabase-class"></a>CDaoDatabase, classe
 
@@ -315,7 +315,7 @@ Si vous ometez la constante de chiffrement, une base de données non chiffrée e
 
 Appelez cette fonction de membre pour établir une relation entre un ou plusieurs champs dans un tableau primaire dans la base de données et un ou plusieurs champs dans une table étrangère (un autre tableau dans la base de données).
 
-```
+```cpp
 void CreateRelation(
     LPCTSTR lpszName,
     LPCTSTR lpszTable,
@@ -378,7 +378,7 @@ Pour plus d’informations connexes, voir le thème "Méthode de création de la
 
 Appelez cette fonction de membre pour supprimer la requête spécifiée — requête enregistrée — de la collection QueryDefs de l’objet. `CDaoDatabase`
 
-```
+```cpp
 void DeleteQueryDef(LPCTSTR lpszName);
 ```
 
@@ -397,7 +397,7 @@ Pour plus d’informations sur la création d’objets requête, voir classe [CD
 
 Appelez cette fonction de membre pour supprimer une relation existante de la collection relations de l’objet de base de données.
 
-```
+```cpp
 void DeleteRelation(LPCTSTR lpszName);
 ```
 
@@ -416,7 +416,7 @@ Pour obtenir des informations connexes, consultez le thème « Supprimer la mét
 
 Appelez cette fonction membre pour supprimer le tableau `CDaoDatabase` spécifié et toutes ses données de la collection TableDefs de l’objet.
 
-```
+```cpp
 void DeleteTableDef(LPCTSTR lpszName);
 ```
 
@@ -440,7 +440,7 @@ Pour obtenir des informations connexes, consultez le thème « Supprimer la mét
 
 Appelez cette fonction de membre pour exécuter une requête d’action ou exécuter une déclaration SQL sur la base de données.
 
-```
+```cpp
 void Execute(
     LPCTSTR lpszSQL,
     int nOptions = dbFailOnError);
@@ -559,7 +559,7 @@ Nombre de requêtes définies dans la base de données.
 
 Appelez cette fonction de membre pour obtenir divers types d’informations sur une requête définie dans la base de données.
 
-```
+```cpp
 void GetQueryDefInfo(
     int nIndex,
     CDaoQueryDefInfo& querydefinfo,
@@ -657,7 +657,7 @@ Pour illustrer le concept d’une relation, considérez une table fournisseurs e
 
 Appelez cette fonction de membre pour obtenir des informations sur une relation spécifiée dans la collection relations de la base de données.
 
-```
+```cpp
 void GetRelationInfo(
     int nIndex,
     CDaoRelationInfo& relinfo,
@@ -716,7 +716,7 @@ Le nombre de dépôts définis dans la base de données.
 
 Appelez cette fonction de membre pour obtenir divers types d’informations sur un tableau défini dans la base de données.
 
-```
+```cpp
 void GetTableDefInfo(
     int nIndex,
     CDaoTableDefInfo& tabledefinfo,
@@ -873,7 +873,7 @@ Vous pouvez également utiliser la chaîne de connexion pour plusieurs `CDaoData
 
 Appelez cette fonction de membre pour remplacer le nombre de secondes par défaut pour permettre avant les opérations ultérieures sur le temps d’inespérer de la base de données connectée.
 
-```
+```cpp
 void SetQueryTimeout(short nSeconds);
 ```
 

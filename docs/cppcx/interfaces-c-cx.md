@@ -2,12 +2,12 @@
 title: Interfaces (C++/CX)
 ms.date: 01/22/2017
 ms.assetid: 11034314-d54a-426d-923b-5ab7a6b9f8ce
-ms.openlocfilehash: b904f041e34bcf5fda78fed11aaad4998ba5208a
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 716bf86eddf621244415033dae1b9c93ad1baba5
+ms.sourcegitcommit: 89d9e1cb08fa872483d1cde98bc2a7c870e505e9
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81366041"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "82032354"
 ---
 # <a name="interfaces-ccx"></a>Interfaces (C++/CX)
 
@@ -63,7 +63,7 @@ Lorsqu'une classe ref implémente plusieurs interfaces, et ces interfaces ont de
 
 ## <a name="generic-interfaces"></a>Interfaces génériques
 
-Dans CMD/CX, `generic` le mot clé est utilisé pour représenter un type paramédiant Windows Runtime. Un type paramétré est émis dans les métadonnées et peut être consommé par le code écrit dans n'importe quel langage qui prend en charge les paramètres de type. Le Windows Runtime définit certaines interfaces génériques, par [exemple, Windows::Foundation::Collections::IVector\<T>](/uwp/api/Windows.Foundation.Collections.IVector_T_)- mais il ne prend pas en charge la création d’interfaces génériques définies par les utilisateurs publics dans C '/CX. Toutefois, vous pouvez créer des interfaces génériques privées.
+Dans CMD/CX, `generic` le mot clé est utilisé pour représenter un type paramédiant Windows Runtime. Un type paramétré est émis dans les métadonnées et peut être consommé par le code écrit dans n'importe quel langage qui prend en charge les paramètres de type. Le Windows Runtime définit certaines interfaces génériques, par [exemple, Windows::Foundation::Collections::IVector\<T>](/uwp/api/windows.foundation.collections.ivector-1)- mais il ne prend pas en charge la création d’interfaces génériques définies par les utilisateurs publics dans C '/CX. Toutefois, vous pouvez créer des interfaces génériques privées.
 
 Voici comment les types Windows Runtime peuvent être utilisés pour l’auteur d’une interface générique :
 

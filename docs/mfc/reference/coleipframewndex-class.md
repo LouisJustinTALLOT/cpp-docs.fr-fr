@@ -94,12 +94,12 @@ helpviewer_keywords:
 - COleIPFrameWndEx [MFC], WinHelpA
 - COleIPFrameWndEx [MFC], InitUserToobars
 ms.assetid: ebff1560-a1eb-4854-af00-95d4a192bd55
-ms.openlocfilehash: 4c5f4aa9a34e8cc8f30c0ef49f2f56c2bc2e0c3c
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 1dd57494c6fe153346dd99e2472f507d1ebb1c26
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81374978"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81753858"
 ---
 # <a name="coleipframewndex-class"></a>COleIPFrameWndEx, classe
 
@@ -194,7 +194,7 @@ L’exemple suivant montre comment créer une sous-classe d’une instance de la
 
 ## <a name="coleipframewndexadddocksite"></a><a name="adddocksite"></a>COleIPFrameWndEx::AddDockSite
 
-```
+```cpp
 void AddDockSite();
 ```
 
@@ -231,7 +231,7 @@ virtual void AdjustDockingLayout(HDWP hdwp = NULL);
 
 ## <a name="coleipframewndexdockpane"></a><a name="dockpane"></a>COleIPFrameWndEx::DockPane
 
-```
+```cpp
 void DockPane(
     CBasePane* pBar,
     UINT nDockBarID = 0,
@@ -302,7 +302,7 @@ BOOL EnableDocking(DWORD dwDockStyle);
 
 ## <a name="coleipframewndexenablepanemenu"></a><a name="enablepanemenu"></a>COleIPFrameWndEx::EnablePaneMenu
 
-```
+```cpp
 void EnablePaneMenu(
     BOOL bEnable,
     UINT uiCustomizeCmd,
@@ -471,7 +471,7 @@ Remplacer cette fonction pour personnaliser l’affichage des outils sur les bou
 
 Spécifie une gamme d’IDENTIFIANTs de contrôle que le cadre attribue aux barres d’outils définies par l’utilisateur.
 
-```
+```cpp
 void InitUserToolbars(
     LPCTSTR lpszRegEntry,
     UINT uiUserToolbarFirst,
@@ -877,7 +877,7 @@ virtual void RecalcLayout(BOOL bNotify = TRUE);
 
 ## <a name="coleipframewndexremovepanefromdockmanager"></a><a name="removepanefromdockmanager"></a>COleIPFrameWndEx::RemovePaneFromDockManager
 
-```
+```cpp
 void RemovePaneFromDockManager(
     CBasePane* pControlBar,
     BOOL bDestroy,
@@ -900,13 +900,13 @@ void RemovePaneFromDockManager(
 
 Applique l’état d’amarrage spécifié aux vitres qui appartiennent à la fenêtre de cadre.
 
-```
+```cpp
 void SetDockState(const CDockState& state);
 ```
 
 ### <a name="parameters"></a>Paramètres
 
-*État*<br/>
+*state*<br/>
 [dans] Spécifie l’état d’amarrage.
 
 ### <a name="remarks"></a>Notes
@@ -917,7 +917,7 @@ Utilisez cette fonction pour spécifier un nouvel `COleIPFrameWndEx` état d’a
 
 Modifie un objet de barre d’outils en recherchant des objets factices et en les remplaçant par les éléments définis par l’utilisateur spécifiés.
 
-```
+```cpp
 void SetupToolbarMenu(
     CMenu& menu,
     const UINT uiViewUserToolbarCmdFirst,
@@ -939,7 +939,7 @@ void SetupToolbarMenu(
 
 ## <a name="coleipframewndexshowpane"></a><a name="showpane"></a>COleIPFrameWndEx::ShowPane
 
-```
+```cpp
 void ShowPane(
     CBasePane* pBar,
     BOOL bShow,

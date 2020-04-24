@@ -15,12 +15,12 @@ f1_keywords:
 - AFXLAYOUT/CMFCDynamicLayout::LoadResource
 - AFXLAYOUT/CMFCDynamicLayout::SetMinSize
 ms.assetid: c2df2976-f049-47fc-9cf0-abe3e01948bc
-ms.openlocfilehash: b70deca78d079c6a95db225814fdc70528e48af9
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 77dd3a84a0c76b92495bb062eeb83ff013933087
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81367527"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81752393"
 ---
 # <a name="cmfcdynamiclayout-class"></a>CMFCDynamicLayout Class
 
@@ -123,7 +123,7 @@ La position et la taille d'un contrôle enfant change de façon dynamique à mes
 
 Ajoute une fenêtre enfant, généralement un contrôle, à la liste des fenêtres contrôlées par le gestionnaire de disposition dynamique.
 
-```
+```cpp
 void Adjust();
 ```
 
@@ -186,7 +186,7 @@ La position et la taille d'un contrôle enfant sont modifiées de façon dynamiq
 
 Récupère le rectangle pour la zone cliente active de la fenêtre.
 
-```
+```cpp
 void GetHostWndRect(CRect& rect,);
 ```
 
@@ -383,13 +383,13 @@ Une valeur [MoveSettings](#movesettings_structure) qui résume le ratio de dém�
 
 Définit la taille de fenêtre en dessous de laquelle la disposition n'est pas ajustée.
 
-```
+```cpp
 void SetMinSize(const CSize& size);
 ```
 
 ### <a name="parameters"></a>Paramètres
 
-*Taille*<br/>
+*size*<br/>
 Taille souhaitée en dessous de laquelle la disposition n'est pas ajustée.
 
 ### <a name="remarks"></a>Notes

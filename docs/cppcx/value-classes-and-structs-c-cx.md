@@ -5,16 +5,16 @@ helpviewer_keywords:
 - value struct
 - value class
 ms.assetid: 262a0992-9721-4c02-8297-efc07d90e5a4
-ms.openlocfilehash: 3340c5e387dc58ddcb5348cdc041a58840463995
-ms.sourcegitcommit: 180f63704f6ddd07a4172a93b179cf0733fd952d
+ms.openlocfilehash: 4a4897f0a3b5c95ffb58e5c9666a2d764d71b3ec
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/06/2019
-ms.locfileid: "70740934"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81752895"
 ---
 # <a name="value-classes-and-structs-ccx"></a>Classes de valeur et structures de valeur (C++/CX)
 
-Une structure de *valeur* ou une *classe de valeur* est un pod à compatibilité Windows Runtime (« Plain Old Data structure »). Elle a une taille fixe et se compose uniquement de champs ; contrairement à une classe ref, elle ne possède aucune propriété.
+Une *classe de structuration* de valeur ou *de valeur* est un POD compatible Windows Runtime (« structure de données ancienne »). Elle a une taille fixe et se compose uniquement de champs ; contrairement à une classe ref, elle ne possède aucune propriété.
 
 Les exemples suivants montrent comment déclarer et initialiser des structs value.
 
@@ -52,7 +52,7 @@ Lorsque la variable d'un type valeur est assignée à une autre variable, la val
 
 Une *classe value* est comparable à un `value struct` sauf que ses champs doivent avoir une accessibilité publique explicitement spécifiée. Elle est déclarée à l'aide du mot clé `value class` .
 
-Un struct value ou une classe value ne peut contenir comme champs que des types numériques fondamentaux, `Platform::String^`des classes enum, ou [Platform \<:: iBox T > ^](../cppcx/platform-ibox-interface.md) où T est un type numérique, une classe enum ou une classe value ou un struct. Un champ `IBox<T>^` peut avoir une valeur `nullptr`. C'est la façon dont C++ implémente le concept de *types valeur Nullable*.
+Une classe de struction de valeur ou de valeur `Platform::String^`peut contenir comme champs que les types numériques fondamentaux, les classes d’enum, ou [la plate-forme: ::IBox \<T>où](../cppcx/platform-ibox-interface.md) T est un type numérique ou classe enum ou classe de valeur ou de structure. Un champ `IBox<T>^` peut avoir une valeur `nullptr`. C'est la façon dont C++ implémente le concept de *types valeur Nullable*.
 
 Une classe value ou un struct value qui contient un type `Platform::String^` ou `IBox<T>^` comme membre n'est pas utilisable avec `memcpy`.
 
@@ -68,13 +68,13 @@ Si vous avez un type valeur comme paramètre de fonction ou de méthode, il est 
 
 Pour déclarer un paramètre qui passe un type valeur par valeur, utilisez du code semblable au suivant :
 
-```
+```cpp
 void Method1(MyValueType obj);
 ```
 
 Pour déclarer un paramètre qui passe un type valeur par référence, utilisez le symbole de référence (&), comme suit :
 
-```
+```cpp
 void Method2(MyValueType& obj);
 ```
 
@@ -90,7 +90,7 @@ Vous pouvez également utiliser un symbole de pointeur (*) pour passer un type v
 
 ## <a name="nullable-value-types"></a>Types valeur Nullable
 
-Comme mentionné précédemment, une classe value ou un struct value peut avoir un champ de type [Platform ::\<iBox T > ^](../cppcx/platform-ibox-interface.md), par exemple `IBox<int>^`,. Ce champ peut avoir n'importe quelle valeur numérique valide pour le type `int` ou une valeur `nullptr`. Vous pouvez passer un champ Nullable en tant qu'argument à une méthode dont le paramètre est déclaré comme facultatif, ou à tout emplacement où un type valeur n'est pas obligatoire pour l'obtention d'une valeur.
+Comme mentionné précédemment, une classe de valeur ou une struct de valeur peut avoir un champ de type [Plate-forme:\<:IBox T>](../cppcx/platform-ibox-interface.md)- -par exemple, `IBox<int>^`. Ce champ peut avoir n'importe quelle valeur numérique valide pour le type `int` ou une valeur `nullptr`. Vous pouvez passer un champ Nullable en tant qu'argument à une méthode dont le paramètre est déclaré comme facultatif, ou à tout emplacement où un type valeur n'est pas obligatoire pour l'obtention d'une valeur.
 
 L'exemple suivant montre comment initialiser un struct qui a un champ Nullable.
 
@@ -150,6 +150,6 @@ public:
 ## <a name="see-also"></a>Voir aussi
 
 [Système de type (C++/CX)](../cppcx/type-system-c-cx.md)<br/>
-[Informations de référence sur le langage C++/CX](../cppcx/visual-c-language-reference-c-cx.md)<br/>
+[Référence linguistique CMD/CX](../cppcx/visual-c-language-reference-c-cx.md)<br/>
 [Référence aux espaces de noms](../cppcx/namespaces-reference-c-cx.md)<br/>
 [Classes et structures de référence (C++/CX)](../cppcx/ref-classes-and-structs-c-cx.md)

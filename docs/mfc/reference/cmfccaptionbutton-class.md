@@ -24,12 +24,12 @@ helpviewer_keywords:
 - CMFCCaptionButton [MFC], OnDraw
 - CMFCCaptionButton [MFC], SetMiniFrameButton
 ms.assetid: c5774b38-c0dd-414a-9ede-3b2f78f233ec
-ms.openlocfilehash: fb47e4373bf53e66dd4af17c89fe2f761858fbfd
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 1b0a999f1fd1e3df1b0a971220454397cead02a9
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81367755"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81752600"
 ---
 # <a name="cmfccaptionbutton-class"></a>Classe CMFCCaptionButton
 
@@ -110,7 +110,7 @@ CMFCCaptionButton(
 
 Le tableau suivant répertorie les valeurs possibles pour le paramètre *nHit.*
 
-|Value|Commande|
+|Valeur|Commande|
 |-----------|-------------|
 |AFX_HTCLOSE|Fermez le bouton.|
 |HTMINBUTTON (EN)|Minimisez le bouton.|
@@ -140,7 +140,7 @@ La commande représentée par le bouton.
 
 Le tableau suivant énumère les valeurs de rendement possibles.
 
-|Value|Commande|
+|Valeur|Commande|
 |-----------|-------------|
 |AFX_HTCLOSE|Fermez le bouton.|
 |HTMINBUTTON (EN)|Minimisez le bouton.|
@@ -226,7 +226,7 @@ VRAI si la légende est réglée à la mini taille; autrement FALSE.
 
 Définit l’emplacement du tirage au bouton et l’état du spectacle de fenêtre.
 
-```
+```cpp
 void Move(
     const CPoint& ptTo,
     BOOL bHide = FALSE);
@@ -278,7 +278,7 @@ Le *paramètre bMaximized* est utilisé lorsque le bouton est un bouton maximise
 
 Définit la mini taille de la barre de titre.
 
-```
+```cpp
 void SetMiniFramebutton(BOOL bSet = TRUE);
 ```
 

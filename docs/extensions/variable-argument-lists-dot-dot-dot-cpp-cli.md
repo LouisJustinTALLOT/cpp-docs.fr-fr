@@ -6,19 +6,19 @@ helpviewer_keywords:
 - variable argument lists
 - parameter arrays
 ms.assetid: db1a27f4-02a8-4318-8690-1f2893f52b38
-ms.openlocfilehash: dfe40d20fc8bb795b0e530b3288b1c2101bc55ab
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 8ea4d71bf9a22fc96c794a92ba43bed6548cf5d1
+ms.sourcegitcommit: 89d9e1cb08fa872483d1cde98bc2a7c870e505e9
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80171877"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "82032302"
 ---
 # <a name="variable-argument-lists--ccli"></a>Listes d'arguments de variable (...) (C++/CLI)
 
 Cet exemple montre comment utiliser la syntaxe `...` dans C++/CLI pour implémenter des fonctions qui ont un nombre variable d’arguments.
 
 > [!NOTE]
-> Cette rubrique concerne C++/CLI. Pour plus d’informations sur l’utilisation de `...` dans la version ISO C++ standard, consultez [Ellipses et modèles variadiques](../cpp/ellipses-and-variadic-templates.md) et Ellipses et arguments par défaut dans [Expressions suffixées](../cpp/postfix-expressions.md).
+> Cette rubrique concerne C++/CLI. Pour plus d’informations sur l’utilisation de l’ISO `...` Standard C, voir [Ellipsis et modèles variadic](../cpp/ellipses-and-variadic-templates.md) et Ellipsis et arguments par défaut dans les expressions [Postfix](../cpp/postfix-expressions.md).
 
 Le paramètre qui utilise `...` doit être le dernier paramètre dans la liste de paramètres.
 

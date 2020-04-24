@@ -18,12 +18,12 @@ helpviewer_keywords:
 - CDumpContext [MFC], HexDump
 - CDumpContext [MFC], SetDepth
 ms.assetid: 98c52b2d-14b5-48ed-b423-479a4d1c60fa
-ms.openlocfilehash: aa549e5347bf2bd357fa3c28e81a0309ea4f4aff
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: e89bbc5f263dc9303140e43914619090109b8315
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81374007"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81753208"
 ---
 # <a name="cdumpcontext-class"></a>CDumpContext, classe
 
@@ -145,7 +145,7 @@ Appelez cette fonction de membre pour vider l’article du type spécifié comme
 
 Force toute donnée restante dans les tampons à être écrite au fichier attaché au contexte de décharge.
 
-```
+```cpp
 void Flush();
 ```
 
@@ -173,7 +173,7 @@ La profondeur de la `SetDepth`décharge telle qu’elle est définie par .
 
 Décharge une gamme d’octets formatés en nombres hexadecimal.
 
-```
+```cpp
 void HexDump(
     LPCTSTR lpszLine,
     BYTE* pby,
@@ -249,7 +249,7 @@ Si vous utilisez le IMPLEMENT_DYNAMIC ou IMPLEMENT_SERIAL macro dans la mise en 
 
 Définit la profondeur pour le dépotoir.
 
-```
+```cpp
 void SetDepth(int nNewDepth);
 ```
 

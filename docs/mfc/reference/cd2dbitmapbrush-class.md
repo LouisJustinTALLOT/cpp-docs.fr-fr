@@ -42,12 +42,12 @@ helpviewer_keywords:
 - CD2DBitmapBrush [MFC], m_pBitmapBrush
 - CD2DBitmapBrush [MFC], m_pBitmapBrushProperties
 ms.assetid: 46ebbe34-66e0-44c8-af1d-d129e851de5e
-ms.openlocfilehash: e26202392bf4783598aec0dddfea514fce806a8c
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 8d0804c094204bc0e8ab420e20c8b6a6a35dc70a
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81369297"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81754294"
 ---
 # <a name="cd2dbitmapbrush-class"></a>CD2DBitmapBrush, classe
 
@@ -132,7 +132,7 @@ virtual ~CD2DBitmapBrush();
 
 Attache l’interface de ressources existante à l’objet
 
-```
+```cpp
 void Attach(ID2D1BitmapBrush* pResource);
 ```
 
@@ -200,7 +200,7 @@ Pointeur vers une chaîne non terminée qui contient le nom du fichier.
 
 Initialise l’objet
 
-```
+```cpp
 void CommonInit(D2D1_BITMAP_BRUSH_PROPERTIES* pBitmapBrushProperties);
 ```
 
@@ -346,7 +346,7 @@ Pointeur vers une interface ID2D1BitmapBrush ou NULL si l’objet n’est pas en
 
 Spécifie la source de bitmap que ce pinceau utilise pour peindre
 
-```
+```cpp
 void SetBitmap(CD2DBitmap* pBitmap);
 ```
 
@@ -359,7 +359,7 @@ La source de bitmap utilisée par la brosse
 
 Précise comment la brosse tuiles horizontalement les zones qui s’étendent au-delà de sa bitmap
 
-```
+```cpp
 void SetExtendModeX(D2D1_EXTEND_MODE extendModeX);
 ```
 
@@ -372,7 +372,7 @@ Une valeur qui spécifie comment la brosse tuiles horizontalement les zones qui 
 
 Précise comment la brosse tuiles verticalement les zones qui s’étendent au-delà de sa bitmap
 
-```
+```cpp
 void SetExtendModeY(D2D1_EXTEND_MODE extendModeY);
 ```
 
@@ -385,7 +385,7 @@ Une valeur qui spécifie comment la brosse tuiles verticalement les zones qui s�
 
 Spécifie le mode d’interpolation utilisé lorsque le bitmap de brosse est mis à l’échelle ou tourné
 
-```
+```cpp
 void SetInterpolationMode(D2D1_BITMAP_INTERPOLATION_MODE interpolationMode);
 ```
 

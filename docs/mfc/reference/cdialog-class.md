@@ -40,12 +40,12 @@ helpviewer_keywords:
 - CDialog [MFC], OnCancel
 - CDialog [MFC], OnOK
 ms.assetid: ca64b77e-2cd2-47e3-8eff-c2645ad578f9
-ms.openlocfilehash: cad762f426012d9d1931b96d54d8a53c9bab465d
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 36913cfdd8beda31136176c966890a90077c1b30
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81375644"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81753364"
 ---
 # <a name="cdialog-class"></a>Classe CDialog
 
@@ -295,7 +295,7 @@ Si l’utilisateur clique sur l’un des pushbuttons dans la boîte de dialogue,
 
 Appelez cette fonction de membre pour mettre fin à une boîte de dialogue modal.
 
-```
+```cpp
 void EndDialog(int nResult);
 ```
 
@@ -338,7 +338,7 @@ Il s’agit généralement d’un bouton OK.
 
 Déplace la mise au point vers le contrôle spécifié dans la boîte de dialogue.
 
-```
+```cpp
 void GotoDlgCtrl(CWnd* pWndCtrl);
 ```
 
@@ -398,7 +398,7 @@ Les boîtes de dialogue qui contiennent des contrôles ActiveX nécessitent des 
 
 Appelez pour convertir les unités de boîte de dialogue d’un rectangle en unités d’écran.
 
-```
+```cpp
 void MapDialogRect(LPRECT lpRect) const;
 ```
 
@@ -419,7 +419,7 @@ La `MapDialogRect` fonction membre remplace les unités de boîte de dialogue en
 
 Déplace l’accent vers le contrôle suivant dans la boîte de dialogue.
 
-```
+```cpp
 void NextDlgCtrl() const;
 ```
 
@@ -522,7 +522,7 @@ L’éditeur de dialogue définit généralement la police de la boîte de dialo
 
 Met l’accent sur le contrôle précédent dans la boîte de dialogue.
 
-```
+```cpp
 void PrevDlgCtrl() const;
 ```
 
@@ -534,7 +534,7 @@ Si l’accent est mis sur le premier contrôle dans la boîte de dialogue, il se
 
 Modifie le contrôle par défaut du pushbutton pour une boîte de dialogue.
 
-```
+```cpp
 void SetDefID(UINT nID);
 ```
 
@@ -547,7 +547,7 @@ Spécifie l’ID du contrôle du pushbutton qui deviendra la valeur par défaut.
 
 Définit une pièce d’identité d’aide sensible au contexte pour la boîte de dialogue.
 
-```
+```cpp
 void SetHelpID(UINT nIDR);
 ```
 

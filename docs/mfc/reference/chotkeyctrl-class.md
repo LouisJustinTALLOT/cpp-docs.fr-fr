@@ -22,12 +22,12 @@ helpviewer_keywords:
 - CHotKeyCtrl [MFC], SetHotKey
 - CHotKeyCtrl [MFC], SetRules
 ms.assetid: 896f9766-0718-4f58-aab2-20325e118ca6
-ms.openlocfilehash: 758fb78fbd4e25a0e2fb8cea300c5371ece04fb4
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: a79cc0ab2c01633f96430477aa536a60385461e9
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81366886"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81750802"
 ---
 # <a name="chotkeyctrl-class"></a>CHotKeyCtrl, classe
 
@@ -151,7 +151,7 @@ Spécifie le style étendu du contrôle en cours de création. Pour une liste de
 Spécifie le style du contrôle des clés chaudes. Appliquer n’importe quelle combinaison de styles de contrôle. Pour plus d’informations, voir [Styles de contrôle commun](/windows/win32/Controls/common-control-styles) dans le SDK Windows.
 
 *Rect*<br/>
-Une référence à une structure [RECT](/previous-versions/dd162897\(v=vs.85\)) décrivant la taille et la position de la fenêtre à créer, dans les coordonnées des clients de *pParentWnd*.
+Une référence à une structure [RECT](/windows/win32/api/windef/ns-windef-rect) décrivant la taille et la position de la fenêtre à créer, dans les coordonnées des clients de *pParentWnd*.
 
 *pParentWnd*<br/>
 Un pointeur vers la fenêtre qui est le parent du contrôle.
@@ -254,7 +254,7 @@ Le nom clé que cette fonction retourne vient du conducteur du clavier, de sorte
 
 Définit le raccourci clavier pour un contrôle de clé chaud.
 
-```
+```cpp
 void SetHotKey(
     WORD wVirtualKeyCode,
     WORD wModifiers);
@@ -285,7 +285,7 @@ Le code clé virtuel et les touches modificateurs définissent ensemble le racco
 
 Appelez cette fonction pour définir les combinaisons invalides et la combinaison de modificateur par défaut pour un contrôle de clé chaud.
 
-```
+```cpp
 void SetRules(
     WORD wInvalidComb,
     WORD wModifiers);

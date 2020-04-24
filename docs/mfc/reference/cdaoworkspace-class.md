@@ -62,12 +62,12 @@ helpviewer_keywords:
 - CDaoWorkspace [MFC], SetLoginTimeout
 - CDaoWorkspace [MFC], m_pDAOWorkspace
 ms.assetid: 64f60de6-4df1-4d4a-a65b-c489b5257d52
-ms.openlocfilehash: 52aaa4970ef483988194691eb6b870cbfe51f494
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: c492c806d64b1cfe0e4f73b3bb880ec7bd0a7e80
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81377113"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81754666"
 ---
 # <a name="cdaoworkspace-class"></a>Classe CDaoWorkspace
 
@@ -213,7 +213,7 @@ Pour plus d’informations connexes, consultez le thème « Méthode d’annexe 
 
 Appelez cette fonction de membre pour lancer une transaction.
 
-```
+```cpp
 void BeginTrans();
 ```
 
@@ -272,7 +272,7 @@ Pour obtenir des informations connexes, consultez le thème « Méthode de clôt
 
 Appelez cette fonction membre pour valider une transaction — enregistrez un groupe de modifications et mises à jour dans une ou plusieurs bases de données dans l’espace de travail.
 
-```
+```cpp
 void CommitTrans();
 ```
 
@@ -437,7 +437,7 @@ Le nombre de bases de données ouvertes dans l’espace de travail.
 
 Appelez cette fonction de membre pour obtenir divers types d’informations sur une base de données ouverte dans l’espace de travail.
 
-```
+```cpp
 void GetDatabaseInfo(
     int nIndex,
     CDaoDatabaseInfo& dbinfo,
@@ -607,7 +607,7 @@ Ce décompte n’inclut pas les espaces de travail ouverts qui ne sont pas annex
 
 Appelez cette fonction de membre pour obtenir divers types d’informations sur un espace de travail ouvert dans la session.
 
-```
+```cpp
 void GetWorkspaceInfo(
     int nIndex,
     CDaoWorkspaceInfo& wkspcinfo,
@@ -754,7 +754,7 @@ Pour plus d’informations sur la réparation des bases de données, voir le th�
 
 Appelez cette fonction membre pour mettre fin à la transaction actuelle et restaurer toutes les bases de données dans l’espace de travail à leur état avant le début de la transaction.
 
-```
+```cpp
 void Rollback();
 ```
 
@@ -852,7 +852,7 @@ Vous pouvez utiliser ce mécanisme pour configurer le moteur de base de données
 
 Appelez cette fonction membre pour définir la valeur de la propriété DAO IsolateODBCTrans pour l’espace de travail.
 
-```
+```cpp
 void SetIsolateODBCTrans(BOOL bIsolateODBCTrans);
 ```
 

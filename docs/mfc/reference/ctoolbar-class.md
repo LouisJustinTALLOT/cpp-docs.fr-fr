@@ -44,12 +44,12 @@ helpviewer_keywords:
 - CToolBar [MFC], SetHeight
 - CToolBar [MFC], SetSizes
 ms.assetid: e868da26-5e07-4607-9651-e2f863ad9059
-ms.openlocfilehash: fdbf343c91725783afd79bbebd73f66fdb1d67e2
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: cbb2d1bb797737a14e9728d339305bf9c371b543
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81364278"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81752205"
 ---
 # <a name="ctoolbar-class"></a>CToolBar, classe
 
@@ -292,7 +292,7 @@ Appelez la fonction [membre Créer](#create) pour créer la fenêtre de barre d�
 
 Cette fonction de membre récupère l’ID de contrôle, le style et l’index d’image du bouton ou du séparateur de la barre d’outils à l’emplacement spécifié par *nIndex.*
 
-```
+```cpp
 void GetButtonInfo(
     int nIndex,
     UINT& nID,
@@ -522,7 +522,7 @@ Par exemple, `SetBitmap` appelez pour modifier l’image bitmapped après que l�
 
 Appelez cette fonction de membre pour définir l’ID de commande, le style et le numéro d’image du bouton.
 
-```
+```cpp
 void SetButtonInfo(
     int nIndex,
     UINT nID,
@@ -603,7 +603,7 @@ Si *lpIDArray* est NULL, cette fonction alloue de l’espace pour le nombre d’
 
 Appelez cette fonction de membre pour définir le style d’un bouton ou d’un séparateur, ou pour regrouper les boutons.
 
-```
+```cpp
 void SetButtonStyle(
     int nIndex,
     UINT nStyle);
@@ -672,7 +672,7 @@ Valeur différente de zéro cas de réussite ; sinon, 0.
 
 Cette fonction de membre définit la hauteur de la barre d’outils à la valeur, en pixels, spécifiée en *cyHeight*.
 
-```
+```cpp
 void SetHeight(int cyHeight);
 ```
 
@@ -691,7 +691,7 @@ Si cette fonction n’est pas appelée, le cadre utilise la taille du bouton pou
 
 Appelez cette fonction de membre pour définir les boutons de la barre d’outils à la taille, en pixels, spécifiés dans *la tailleButton*.
 
-```
+```cpp
 void SetSizes(
     SIZE sizeButton,
     SIZE sizeImage);

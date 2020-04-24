@@ -132,12 +132,12 @@ helpviewer_keywords:
 - CDockablePane [MFC], m_bHideInAutoHideMode
 - CDockablePane [MFC], m_nSlideSteps
 ms.assetid: e2495f4c-765f-48f9-a2e2-e45e47608d91
-ms.openlocfilehash: ae8dbed46dbcd7d2bd317c2113b2195d0531bce9
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 6dc87b36442691eafbfab87ac001df731f0d03b4
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81375605"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81753335"
 ---
 # <a name="cdockablepane-class"></a>CDockablePane Class
 
@@ -881,7 +881,7 @@ Remplacer cette méthode dans une classe dérivée pour personnaliser l’appare
 
 Permet ou désactive le mode autohide pour ce volet et pour les autres vitres du récipient.
 
-```
+```cpp
 void EnableAutohideAll(BOOL bEnable = TRUE);
 ```
 
@@ -1438,7 +1438,7 @@ Remplacer cette méthode dans une classe dérivée pour implémenter des effets 
 
 Le cadre appelle cette méthode lorsqu’un volet est désamarré.
 
-```
+```cpp
 void RemoveFromDefaultPaneDividier();
 ```
 
@@ -1476,7 +1476,7 @@ VRAI si le remplacement est réussi; autrement, FALSE.
 
 Lorsqu’un volet est déséialisé, le cadre appelle cette méthode pour restaurer le diviseur de vitre par défaut.
 
-```
+```cpp
 void RestoreDefaultPaneDivider();
 ```
 
@@ -1524,7 +1524,7 @@ Appelez cette méthode pour passer un volet amarré au mode autohide programmati
 
 Définit le bouton de cache automatique et la barre d’outils de cache automatique pour la vitre.
 
-```
+```cpp
 void SetAutoHideParents(
     CMFCAutoHideBar* pToolBar,
     CMFCAutoHideButton* pBtn);
@@ -1542,7 +1542,7 @@ void SetAutoHideParents(
 
 Définit le pourcentage d’espace qu’une vitre occupe dans son récipient.
 
-```
+```cpp
 void SetLastPercentInPaneContainer(int n);
 ```
 
@@ -1559,7 +1559,7 @@ Le cadre ajuste la vitre pour utiliser la nouvelle valeur lorsque la mise en pag
 
 Définit le diviseur de vitre par défaut restauré.
 
-```
+```cpp
 void SetRestoredDefaultPaneDivider(HWND hRestoredSlider);
 ```
 
@@ -1576,7 +1576,7 @@ Un diviseur de vitres par défaut restauré est obtenu lorsqu’un volet est dé
 
 Définit les informations de classe de temps d’exécution pour une fenêtre tabbed qui est créée lorsque deux volets s’amarrent ensemble.
 
-```
+```cpp
 void SetTabbedPaneRTC(CRuntimeClass* pRTC);
 ```
 

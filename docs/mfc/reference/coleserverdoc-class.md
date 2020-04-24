@@ -82,12 +82,12 @@ helpviewer_keywords:
 - COleServerDoc [MFC], OnSetItemRects
 - COleServerDoc [MFC], OnShowDocument
 ms.assetid: a9cdd96a-e0ac-43bb-9203-2c29237e965c
-ms.openlocfilehash: b535cc23901ba39e4beeb66d8ca6bb18d4abe2b8
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 8e75ec5c00c614a225a059a2b3cf97a7a307c61c
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81376130"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81753779"
 ---
 # <a name="coleserverdoc-class"></a>COleServerDoc, classe
 
@@ -192,7 +192,7 @@ Pour plus d’informations sur les serveurs, voir l’article [Serveurs: Implém
 
 Active le document DocObject associé.
 
-```
+```cpp
 void ActivateDocObject();
 ```
 
@@ -359,7 +359,7 @@ Il appelle [COleServerDoc::OnGetEmbeddedItem](#ongetembeddeditem), une fonction 
 
 Appelez `GetItemClipRect` la fonction du membre pour obtenir les coordonnées de la tonte de l’élément qui est en cours de modification.
 
-```
+```cpp
 void GetItemClipRect(LPRECT lpClipRect) const;
 ```
 
@@ -378,7 +378,7 @@ Le dessin ne doit pas se produire à l’extérieur du rectangle de coupure. Hab
 
 Appelez `GetItemPosition` la fonction membre pour obtenir les coordonnées de l’élément en cours de modification.
 
-```
+```cpp
 void GetItemPosition(LPRECT lpPosRect) const;
 ```
 
@@ -469,7 +469,7 @@ Nonzero si `COleServerDoc` l’objet est actif en place; sinon 0.
 
 Appelez cette fonction pour informer tous les éléments liés liés au document que le document a changé.
 
-```
+```cpp
 void NotifyChanged();
 ```
 
@@ -484,7 +484,7 @@ En règle générale, vous appelez cette fonction après que l’utilisateur mod
 
 Appelez cette fonction pour informer le conteneur(s) que le document a été fermé.
 
-```
+```cpp
 void NotifyClosed();
 ```
 
@@ -496,7 +496,7 @@ Lorsque l’utilisateur choisit la commande Close `NotifyClosed` dans `COleServe
 
 Appelez cette fonction après que l’utilisateur a renommé le document serveur.
 
-```
+```cpp
 void NotifyRename(LPCTSTR lpszNewName);
 ```
 
@@ -513,7 +513,7 @@ Lorsque l’utilisateur choisit la commande Save `NotifyRename` As dans `COleSer
 
 Appelez cette fonction après que l’utilisateur enregistre le document serveur.
 
-```
+```cpp
 void NotifySaved();
 ```
 
@@ -855,7 +855,7 @@ La implémentation par défaut appelle le [COleServerDoc::NotifySaved](#notifysa
 
 Appelez cette fonction de membre pour que l’application de conteneur change la position de l’élément.
 
-```
+```cpp
 void RequestPositionChange(LPCRECT lpPosRect);
 ```
 
@@ -872,7 +872,7 @@ Cette fonction est généralement appelée `UpdateAllItems`(en conjonction avec 
 
 Appelez cette fonction pour indiquer à l’application de conteneur pour enregistrer l’objet intégré.
 
-```
+```cpp
 void SaveEmbedding();
 ```
 
@@ -905,7 +905,7 @@ Les valeurs positives indiquent le défilement vers le bas et vers la droite; va
 
 Appelez cette fonction pour informer tous les éléments liés liés au document que le document a changé.
 
-```
+```cpp
 void UpdateAllItems(
     COleServerItem* pSender,
     LPARAM lHint = 0L,

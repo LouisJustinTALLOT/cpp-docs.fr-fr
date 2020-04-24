@@ -24,12 +24,12 @@ helpviewer_keywords:
 - CIPAddressCtrl [MFC], SetFieldFocus
 - CIPAddressCtrl [MFC], SetFieldRange
 ms.assetid: 9764d2f4-cb14-4ba8-b799-7f57a55a47c6
-ms.openlocfilehash: 28aa0e7137647bc49406dab1e82b9c2b05ca3538
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 0613dea766b022acf140a82bb4b01784793c2589
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81372338"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81754967"
 ---
 # <a name="cipaddressctrl-class"></a>CIPAddressCtrl, classe
 
@@ -96,7 +96,7 @@ CIPAddressCtrl();
 
 Efface le contenu du contrôle des adresses IP.
 
-```
+```cpp
 void ClearAddress();
 ```
 
@@ -122,7 +122,7 @@ virtual BOOL Create(
 Le style du contrôle de l’adresse IP. Appliquer une combinaison de styles de fenêtre. Vous devez inclure le style WS_CHILD parce que le contrôle doit être une fenêtre enfant. Voir [CreateWindow](/windows/win32/api/winuser/nf-winuser-createwindoww) dans le Windows SDK pour une liste de styles Windows.
 
 *Rect*<br/>
-Une référence à la taille et à la position du contrôle d’adresse IP. Il peut s’agir soit d’un objet [CRect,](../../atl-mfc-shared/reference/crect-class.md) soit d’une structure [RECT.](/previous-versions/dd162897\(v=vs.85\))
+Une référence à la taille et à la position du contrôle d’adresse IP. Il peut s’agir soit d’un objet [CRect,](../../atl-mfc-shared/reference/crect-class.md) soit d’une structure [RECT.](/windows/win32/api/windef/ns-windef-rect)
 
 *pParentWnd*<br/>
 Un pointeur à la fenêtre parente du contrôle d’adresse IP. Ce ne doit pas être NULL.
@@ -166,7 +166,7 @@ Spécifie le style étendu du contrôle en cours de création. Pour une liste de
 Le style du contrôle de l’adresse IP. Appliquer une combinaison de styles de fenêtre. Vous devez inclure le style WS_CHILD parce que le contrôle doit être une fenêtre enfant. Voir [CreateWindow](/windows/win32/api/winuser/nf-winuser-createwindoww) dans le Windows SDK pour une liste de styles Windows.
 
 *Rect*<br/>
-Une référence à une structure [RECT](/previous-versions/dd162897\(v=vs.85\)) décrivant la taille et la position de la fenêtre à créer, dans les coordonnées des clients de *pParentWnd*.
+Une référence à une structure [RECT](/windows/win32/api/windef/ns-windef-rect) décrivant la taille et la position de la fenêtre à créer, dans les coordonnées des clients de *pParentWnd*.
 
 *pParentWnd*<br/>
 Un pointeur vers la fenêtre qui est le parent du contrôle.
@@ -248,7 +248,7 @@ Cette fonction de membre implémente le comportement du message Win32 [IPM_ISBLA
 
 Définit les valeurs d’adresse pour les quatre domaines du contrôle des adresses IP.
 
-```
+```cpp
 void SetAddress(
     BYTE nField0,
     BYTE nField1,
@@ -290,7 +290,7 @@ Cette fonction de membre implémente le comportement du message Win32 [IPM_SETAD
 
 Définit la mise au point du clavier sur le champ spécifié dans le contrôle d’adresse IP.
 
-```
+```cpp
 void SetFieldFocus(WORD nField);
 ```
 
@@ -307,7 +307,7 @@ Cette fonction de membre implémente le comportement du message Win32 [IPM_SETFO
 
 Définit la plage dans le champ spécifié dans le contrôle d’adresse IP.
 
-```
+```cpp
 void SetFieldRange(
     int nField,
     BYTE nLower,

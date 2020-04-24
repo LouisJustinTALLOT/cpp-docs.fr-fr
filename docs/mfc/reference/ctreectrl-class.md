@@ -162,12 +162,12 @@ helpviewer_keywords:
 - CTreeCtrl [MFC], SortChildren
 - CTreeCtrl [MFC], SortChildrenCB
 ms.assetid: 96e20031-6161-4143-8c12-8d1816c66d90
-ms.openlocfilehash: 6fe7b133fa01285f85dc28dc8d8ca01e027f4a5c
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 2b6c11600010bc9f97ab8c3a531d33c92c94e442
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81373305"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81752115"
 ---
 # <a name="ctreectrl-class"></a>CTreeCtrl Class
 
@@ -315,7 +315,7 @@ virtual BOOL Create(
 Spécifie le style du contrôle de vue d’arbre. Appliquez des styles de fenêtre, décrits dans [CreateWindow](/windows/win32/api/winuser/nf-winuser-createwindoww), et toute combinaison de styles de contrôle de [vue d’arbre](/windows/win32/Controls/tree-view-control-window-styles) comme décrit dans le SDK windows.
 
 *Rect*<br/>
-Spécifie la taille et la position du contrôle de la vue sur l’arbre. Il peut s’agir soit d’un objet [CRect,](../../atl-mfc-shared/reference/crect-class.md) soit d’une structure [RECT.](/previous-versions/dd162897\(v=vs.85\))
+Spécifie la taille et la position du contrôle de la vue sur l’arbre. Il peut s’agir soit d’un objet [CRect,](../../atl-mfc-shared/reference/crect-class.md) soit d’une structure [RECT.](/windows/win32/api/windef/ns-windef-rect)
 
 *pParentWnd*<br/>
 Spécifie la fenêtre parente du `CDialog`contrôle de vue d’arbre, habituellement a. Ce ne doit pas être NULL.
@@ -361,7 +361,7 @@ Spécifie le style étendu du contrôle en cours de création. Pour une liste de
 Spécifie le style du contrôle de vue d’arbre. Appliquez des styles de fenêtre, décrits dans [CreateWindow](/windows/win32/api/winuser/nf-winuser-createwindoww), et toute combinaison de styles de contrôle de [vue d’arbre](/windows/win32/Controls/tree-view-control-window-styles) comme décrit dans le SDK windows.
 
 *Rect*<br/>
-Une référence à une structure [RECT](/previous-versions/dd162897\(v=vs.85\)) décrivant la taille et la position de la fenêtre à créer, dans les coordonnées des clients de *pParentWnd*.
+Une référence à une structure [RECT](/windows/win32/api/windef/ns-windef-rect) décrivant la taille et la position de la fenêtre à créer, dans les coordonnées des clients de *pParentWnd*.
 
 *pParentWnd*<br/>
 Un pointeur vers la fenêtre qui est le parent du contrôle.
@@ -887,7 +887,7 @@ BOOL GetItemPartRect(
 |---------------|-----------------|
 |*hItem (en)*|[dans] Poignée à un élément de commande de vue d’arbre.|
 |*nPart*|[dans] Identifiant pour la pièce. Doit être mis à TVGIPR_BUTTON.|
-|*lpRect*|[out] Pointeur vers une structure [RECT.](/previous-versions/dd162897\(v=vs.85\)) Si cette méthode est réussie, la structure reçoit les coordonnées rectangle de la pièce spécifiée par *hItem* et *nPart*.|
+|*lpRect*|[out] Pointeur vers une structure [RECT.](/windows/win32/api/windef/ns-windef-rect) Si cette méthode est réussie, la structure reçoit les coordonnées rectangle de la pièce spécifiée par *hItem* et *nPart*.|
 
 ### <a name="return-value"></a>Valeur de retour
 
@@ -928,7 +928,7 @@ BOOL GetItemRect(
 La poignée d’un élément de contrôle de vue d’arbre.
 
 *lpRect*<br/>
-Pointeur vers une structure [RECT](/previous-versions/dd162897\(v=vs.85\)) qui reçoit le rectangle de délimitation. Les coordonnées sont relatives au coin supérieur gauche du contrôle de la vue de l’arbre.
+Pointeur vers une structure [RECT](/windows/win32/api/windef/ns-windef-rect) qui reçoit le rectangle de délimitation. Les coordonnées sont relatives au coin supérieur gauche du contrôle de la vue de l’arbre.
 
 *bTextOnly*<br/>
 Si ce paramètre n’est pas zéro, le rectangle de délimitation ne comprend que le texte de l’élément. Sinon, il comprend la ligne entière que l’élément occupe dans le contrôle de vue d’arbre.
@@ -1833,7 +1833,7 @@ Pointeur vers la liste d’images précédente, le cas échéant; autrement NULL
 
 Appelez cette fonction pour définir la largeur de l’indentation pour un contrôle de vue d’arbre et redessiner le contrôle pour refléter la nouvelle largeur.
 
-```
+```cpp
 void SetIndent(UINT nIndent);
 ```
 
@@ -2269,7 +2269,7 @@ Pour utiliser des outils, indiquez le style TVS_NOTOOLTIPS `CTreeCtrl` lorsque v
 
 Affiche l’infotip pour l’élément spécifié dans le contrôle actuel de vue d’arbre.
 
-```
+```cpp
 void ShowInfoTip(HTREEITEM hItem);
 ```
 

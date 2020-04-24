@@ -194,12 +194,12 @@ helpviewer_keywords:
 - CMFCTasksPane [MFC], Update
 - CMFCTasksPane [MFC], OnActivateTasksPanePage
 ms.assetid: b456328e-2525-4642-b78b-9edd1a1a7d3f
-ms.openlocfilehash: d5c412b55d9037215f77b165dacb7cfc1a16ef17
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: fbcdd6a99375272f440282e76290401ff658d52e
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81375880"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81753422"
 ---
 # <a name="cmfctaskspane-class"></a>Classe CMFCTasksPane
 
@@ -591,7 +591,7 @@ CMFCTasksPane();
 
 ## <a name="cmfctaskspanecollapseallgroups"></a><a name="collapseallgroups"></a>CMFCTasksPane::CollapseAllGroups
 
-```
+```cpp
 void CollapseAllGroups(BOOL bCollapse = TRUE);
 
 void CollapseAllGroups(
@@ -675,7 +675,7 @@ Le menu pop-up que cette méthode crée contient la liste des pages dans le vole
 
 Permet ou désactive l’animation qui se produit lorsqu’un groupe de travail se développe ou s’effondre.
 
-```
+```cpp
 void EnableAnimation(BOOL bEnable = TRUE);
 ```
 
@@ -692,7 +692,7 @@ Par défaut, l’animation qui se produit lorsqu’un groupe de travail se déve
 
 Précise si un utilisateur peut effondrer des groupes de tâches.
 
-```
+```cpp
 void EnableGroupCollapse(BOOL bEnable);
 ```
 
@@ -709,7 +709,7 @@ Un groupe de travail qui s’effondre affiche seulement la légende du groupe; l
 
 Permet de déposer des menus sur les boutons de navigation **suivant** et **antérieur.**
 
-```
+```cpp
 void EnableHistoryMenuButtons(BOOL bEnable = TRUE);
 ```
 
@@ -728,7 +728,7 @@ Les menus contiennent l’historique des pages de tâches utilisées par l’uti
 
 Active ou désactive la barre d'outils de navigation.
 
-```
+```cpp
 void EnableNavigationToolbar(
     BOOL bEnable = TRUE,
     UINT uiToolbarBmpRes = 0,
@@ -760,7 +760,7 @@ Par défaut, le cadre n’affiche pas la barre d’outils de navigation. Si la b
 
 ## <a name="cmfctaskspaneenableoffsetcustomcontrols"></a><a name="enableoffsetcustomcontrols"></a>CMFCTasksPane::EnableOffsetCustomControls
 
-```
+```cpp
 void EnableOffsetCustomControls(BOOL bEnable);
 ```
 
@@ -774,7 +774,7 @@ void EnableOffsetCustomControls(BOOL bEnable);
 
 Permet de faire défiler les boutons au lieu d’une barre de défilement.
 
-```
+```cpp
 void EnableScrollButtons(BOOL bEnable = TRUE);
 ```
 
@@ -791,7 +791,7 @@ Par défaut, le cadre affiche les boutons de défilement dans le volet de tâche
 
 Permet ou désactive l’emballage de mot pour le texte dans les étiquettes.
 
-```
+```cpp
 void EnableWrapLabels(BOOL bEnable = TRUE);
 ```
 
@@ -808,7 +808,7 @@ Par défaut, le cadre n’enveloppe pas le texte dans les étiquettes. Lorsque l
 
 Permet ou désactive l’emballage de mot pour le texte dans les tâches.
 
-```
+```cpp
 void EnableWrapTasks(BOOL bEnable = TRUE);
 ```
 
@@ -937,7 +937,7 @@ L’espacement par défaut entre un volet de tâche et le bord de la zone client
 
 ## <a name="cmfctaskspanegetnextpages"></a><a name="getnextpages"></a>CMFCTasksPane::GetNextPages
 
-```
+```cpp
 void GetNextPages(CStringList& lstNextPages) const;
 ```
 
@@ -983,7 +983,7 @@ Le nombre de pages dans le volet de tâche.
 
 ## <a name="cmfctaskspanegetpreviouspages"></a><a name="getpreviouspages"></a>CMFCTasksPane::GetPreviousPages
 
-```
+```cpp
 void GetPreviousPages(CStringList& lstPrevPages) const;
 ```
 
@@ -1468,7 +1468,7 @@ virtual BOOL PreTranslateMessage(MSG* pMsg);
 
 ## <a name="cmfctaskspanerecalclayout"></a><a name="recalclayout"></a>CMFCTasksPane::RecalcLayout
 
-```
+```cpp
 void RecalcLayout(BOOL bRedraw = TRUE);
 ```
 
@@ -1482,7 +1482,7 @@ void RecalcLayout(BOOL bRedraw = TRUE);
 
 Supprime tous les groupes sur la page spécifiée.
 
-```
+```cpp
 void RemoveAllGroups(int nPageIdx = 0);
 ```
 
@@ -1499,7 +1499,7 @@ Supprime tous les groupes de la page spécifiées par *nPageIdx*, ou tous les gr
 
 Supprime toutes les pages du volet des tâches à l'exception de la (première) page par défaut.
 
-```
+```cpp
 void RemoveAllPages();
 ```
 
@@ -1507,7 +1507,7 @@ void RemoveAllPages();
 
 Supprime toutes les tâches du groupe spécifié.
 
-```
+```cpp
 void RemoveAllTasks(int nGroup);
 ```
 
@@ -1520,7 +1520,7 @@ void RemoveAllTasks(int nGroup);
 
 Supprime un groupe.
 
-```
+```cpp
 void RemoveGroup(int nGroup);
 ```
 
@@ -1539,7 +1539,7 @@ Lorsque le cadre supprime un groupe, toutes les tâches et les fenêtres utilisa
 
 Supprime une page spécifiée du volet des tâches.
 
-```
+```cpp
 void RemovePage(int nPageIdx);
 ```
 
@@ -1609,7 +1609,7 @@ virtual void Serialize(CArchive& ar);
 
 Rend la page spécifiée dans le volet de tâche active.
 
-```
+```cpp
 void SetActivePage(int nPageIdx);
 ```
 
@@ -1626,7 +1626,7 @@ Cette méthode affirme si le *nPageIdx* est invalide.
 
 Définit le nom de légende d'un volet de tâches.
 
-```
+```cpp
 void SetCaption(LPCTSTR lpszName);
 ```
 
@@ -1643,7 +1643,7 @@ Si un volet de tâche a plusieurs pages, la page par défaut a la légende qui a
 
 Définit la hauteur d'une légende de groupe.
 
-```
+```cpp
 void SetGroupCaptionHeight(int n = -1);
 ```
 
@@ -1662,7 +1662,7 @@ Si *n* est de -1, le cadre détermine la `CMFCVisualManager::GetTasksPaneGroupCa
 
 Définit le décalage horizontal d'une légende de groupe.
 
-```
+```cpp
 void SetGroupCaptionHorzOffset(int n = -1);
 ```
 
@@ -1675,7 +1675,7 @@ void SetGroupCaptionHorzOffset(int n = -1);
 
 Définit le décalage vertical d'une légende de groupe.
 
-```
+```cpp
 void SetGroupCaptionVertOffset(int n = -1);
 ```
 
@@ -1736,7 +1736,7 @@ VRAI si la couleur du texte de groupe a été changée avec succès; autrement, 
 
 Définit le décalage vertical pour un groupe.
 
-```
+```cpp
 void SetGroupVertOffset(int n = -1);
 ```
 
@@ -1755,7 +1755,7 @@ Appelez cette méthode pour personnaliser les marges des éléments de la partie
 
 Définit la marge horizontale.
 
-```
+```cpp
 void SetHorzMargin(int n = -1);
 ```
 
@@ -1807,7 +1807,7 @@ Cette méthode associe une liste d’images au contrôle de la partie de travail
 
 Définit le texte de légende d’une page de volet de tâches.
 
-```
+```cpp
 void SetPageCaption(
     int nPageIdx,
     LPCTSTR lpszName);
@@ -1855,7 +1855,7 @@ VRAI si le nom de la tâche a été réglé avec succès; autrement, FALSE.
 
 Définit le décalage horizontal pour les tâches.
 
-```
+```cpp
 void SetTasksHorzOffset(int n = -1);
 ```
 
@@ -1874,7 +1874,7 @@ Le décalage horizontal par défaut est de 12 pixels.
 
 ## <a name="cmfctaskspanesettasksiconhorzoffset"></a><a name="settasksiconhorzoffset"></a>CMFCTasksPane::SetTasksIconHorzOffset
 
-```
+```cpp
 void SetTasksIconHorzOffset(int n = -1);
 ```
 
@@ -1886,7 +1886,7 @@ void SetTasksIconHorzOffset(int n = -1);
 
 ## <a name="cmfctaskspanesettasksiconvertoffset"></a><a name="settasksiconvertoffset"></a>CMFCTasksPane::SetTasksIconVertOffset
 
-```
+```cpp
 void SetTasksIconVertOffset(int n = -1);
 ```
 
@@ -1930,7 +1930,7 @@ VRAI si la couleur de texte pour la tâche a été réglée avec succès; autrem
 
 Définit la marge verticale.
 
-```
+```cpp
 void SetVertMargin(int n = -1);
 ```
 

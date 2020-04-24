@@ -22,12 +22,12 @@ helpviewer_keywords:
 - CMDIChildWnd [MFC], MDIRestore
 - CMDIChildWnd [MFC], SetHandles
 ms.assetid: 6d07f5d4-9a3e-4723-9fa5-e65bb669fdd5
-ms.openlocfilehash: 0fbcb47f3148b72a3155e7c17cc913d652c70c2e
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: a547a21b96d035f507e749aeb19f891175498d5d
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81370082"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81754578"
 ---
 # <a name="cmdichildwnd-class"></a>CMDIChildWnd, classe
 
@@ -207,7 +207,7 @@ Le cadre retourné est deux `CMDIChildWnd` parents retirés de la et est le pare
 
 Appelez cette fonction de membre pour activer une fenêtre d’enfant MDI indépendamment de la fenêtre de cadre MDI.
 
-```
+```cpp
 void MDIActivate();
 ```
 
@@ -223,7 +223,7 @@ Lorsque le cadre devient actif, la fenêtre de l’enfant qui a été activée p
 
 Appelez cette fonction de membre pour détruire une fenêtre d’enfant MDI.
 
-```
+```cpp
 void MDIDestroy();
 ```
 
@@ -239,7 +239,7 @@ La fonction membre enlève le titre de la fenêtre de l’enfant de la fenêtre 
 
 Appelez cette fonction de membre pour maximiser une fenêtre d’enfant MDI.
 
-```
+```cpp
 void MDIMaximize();
 ```
 
@@ -255,7 +255,7 @@ Lorsqu’une fenêtre pour enfants est maximisée, Windows la resize pour que sa
 
 Appelez cette fonction de membre pour restaurer une fenêtre d’enfant MDI de taille maximisée ou minimisée.
 
-```
+```cpp
 void MDIRestore();
 ```
 
@@ -267,7 +267,7 @@ void MDIRestore();
 
 Définit les poignées pour les ressources de menu et d’accélérateur.
 
-```
+```cpp
 void SetHandles(
     HMENU hMenu,
     HACCEL hAccel);

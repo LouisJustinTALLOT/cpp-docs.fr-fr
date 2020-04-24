@@ -55,12 +55,12 @@ helpviewer_keywords:
 - AFX_GLOBAL_DATA structure [MFC]
 - AFX_GLOBAL_DATA constructor
 ms.assetid: c7abf2fb-ad5e-4336-a01d-260c29ed53a2
-ms.openlocfilehash: 60f7513075e8da7e17f2113c01b954af5a690aaf
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 0361d535a31526c5f7b79fdd4eab046dad0435cc
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81363667"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81752874"
 ---
 # <a name="afx_global_data-structure"></a>AFX_GLOBAL_DATA (structure)
 
@@ -170,7 +170,7 @@ TRUE indique que le mélange alpha est soutenu; autrement, FALSE.
 
 Libère les ressources allouées par l’infrastructure, telles que les pinceaux, les polices et les DLL.
 
-```
+```cpp
 void CleanUp();
 ```
 
@@ -288,7 +288,7 @@ Un thème définit le style visuel d’une application. Un thème n’est pas ut
 
 Active ou désactive la prise en charge de Microsoft Active Accessibility.
 
-```
+```cpp
 void EnableAccessibilitySupport(BOOL bEnable=TRUE);
 ```
 
@@ -404,7 +404,7 @@ BOOL GetNonClientMetrics(NONCLIENTMETRICS& info);
 
 ### <a name="parameters"></a>Paramètres
 
-*info*<br/>
+*Info*<br/>
 [dans, dehors] Une structure [NONCLIENTMETRICS](/windows/win32/api/winuser/ns-winuser-nonclientmetricsw) qui contient les mesures évolutives associées à la zone non complexe d’une fenêtre non-dimensionnisée.
 
 ### <a name="return-value"></a>Valeur de retour
@@ -676,7 +676,7 @@ Le `AFX_GLOBAL_DATA::AFX_GLOBAL_DATA` constructeur initialise ce membre à 4 pix
 
 Détecte l’état actuel des fonctionnalités de masquage automatique de la barre des tâches et de l’animation des menus du Bureau.
 
-```
+```cpp
 void OnSettingChange();
 ```
 
@@ -781,7 +781,7 @@ Cette méthode crée une police horizontale régulière, une police soulignée, 
 
 Réinitialise les polices logiques qui sont utilisées par l’infrastructure.
 
-```
+```cpp
 void UpdateFonts();
 ```
 
@@ -793,7 +793,7 @@ Pour plus d’informations sur `CFont::CreateFontIndirect`les polices logiques, 
 
 Initialise les couleurs, la profondeur de couleur, les pinceaux, les stylets et les images qui sont utilisés par l’infrastructure.
 
-```
+```cpp
 void UpdateSysColors();
 ```
 
@@ -861,7 +861,7 @@ Une valeur integer avec des drapeaux codés qui spécifient les positions des ba
 
 Communiqués interfaces obtenues `GetITaskbarList3` par le biais de la et des `GetITaskbarList` méthodes.
 
-```
+```cpp
 void ReleaseTaskBarRefs();
 ```
 

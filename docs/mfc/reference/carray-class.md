@@ -42,12 +42,12 @@ helpviewer_keywords:
 - CArray [MFC], SetAtGrow
 - CArray [MFC], SetSize
 ms.assetid: fead8b00-4cfd-4625-ad0e-251df62ba92f
-ms.openlocfilehash: 2c520a732edf54ebb36c07728ceb19791b351143
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 3355e72c58365e97f8f3f8ce09754285f671915a
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81377021"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81753979"
 ---
 # <a name="carray-class"></a>Classe CArray
 
@@ -209,7 +209,7 @@ Le tableau pousse un élément à la fois.
 
 Utilisez cette fonction de membre pour copier les éléments d’un tableau à un autre.
 
-```
+```cpp
 void Copy(const CArray& src);
 ```
 
@@ -258,7 +258,7 @@ Il est utilisé pour implémenter l’opérateur d’affectation côté gauche p
 
 Libère toute mémoire supplémentaire qui a été allouée pendant que le tableau a été cultivé.
 
-```
+```cpp
 void FreeExtra();
 ```
 
@@ -385,7 +385,7 @@ La `GetUpperBound( )` condition de -1 indique que le tableau ne contient aucun �
 
 La première `InsertAt` version des inserts d’un élément (ou de multiples copies d’un élément) à un index spécifié dans un tableau.
 
-```
+```cpp
 void InsertAt(
     INT_PTR nIndex,
     ARG_TYPE newElement,
@@ -502,7 +502,7 @@ Pour les tableaux dans lesquels un élément contient un pointeur à l’un de s
 
 Supprime tous les éléments de ce tableau.
 
-```
+```cpp
 void RemoveAll();
 ```
 
@@ -518,7 +518,7 @@ Si le tableau est déjà vide, la fonction fonctionne toujours.
 
 Supprime un ou plusieurs éléments à partir d’un index spécifié dans un tableau.
 
-```
+```cpp
 void RemoveAt(
     INT_PTR nIndex,
     INT_PTR nCount = 1);
@@ -546,7 +546,7 @@ Si vous essayez d’enlever plus d’éléments que ceux contenus dans le tablea
 
 Définit l’élément de tableau à l’index spécifié.
 
-```
+```cpp
 void SetAt(INT_PTR nIndex, ARG_TYPE newElement);
 ```
 
@@ -575,7 +575,7 @@ Vous devez vous assurer que votre valeur indicative représente une position val
 
 Définit l’élément de tableau à l’index spécifié.
 
-```
+```cpp
 void SetAtGrow(INT_PTR nIndex, ARG_TYPE newElement);
 ```
 
@@ -602,7 +602,7 @@ Le tableau se développe automatiquement si nécessaire (c’est-à-dire que la 
 
 Établit la taille d’un tableau vide ou existant; alloue la mémoire si nécessaire.
 
-```
+```cpp
 void SetSize(
     INT_PTR nNewSize,
     INT_PTR nGrowBy = -1);

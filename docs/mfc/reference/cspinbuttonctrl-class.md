@@ -32,12 +32,12 @@ helpviewer_keywords:
 - CSpinButtonCtrl [MFC], SetPos
 - CSpinButtonCtrl [MFC], SetRange
 ms.assetid: 509bfd76-1c5a-4af6-973f-e133c0b87734
-ms.openlocfilehash: 4230d43bad8bcc15bcb26aaf0357e70216909ba1
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: cedfe16a6870bc779121e8e864866cfcb711b148
+ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81318127"
+ms.lasthandoff: 04/22/2020
+ms.locfileid: "81753099"
 ---
 # <a name="cspinbuttonctrl-class"></a>CSpinButtonCtrl, classe
 
@@ -120,7 +120,7 @@ virtual BOOL Create(
 Spécifie le style du bouton de rotation. Appliquez n’importe quelle combinaison de styles de commande de bouton de rotation au contrôle. Ces styles sont décrits dans [Up-Down Control Styles](/windows/win32/Controls/up-down-control-styles) dans le Windows SDK.
 
 *Rect*<br/>
-Spécifie la taille et la position du bouton de rotation. Il peut s’agir soit d’un objet [CRect,](../../atl-mfc-shared/reference/crect-class.md) soit d’une structure [RECT](/previous-versions/dd162897\(v=vs.85\))
+Spécifie la taille et la position du bouton de rotation. Il peut s’agir soit d’un objet [CRect,](../../atl-mfc-shared/reference/crect-class.md) soit d’une structure [RECT](/windows/win32/api/windef/ns-windef-rect)
 
 *pParentWnd*<br/>
 Un pointeur à la fenêtre parente `CDialog`du bouton de rotation, habituellement un . Ce ne doit pas être NULL.
@@ -160,7 +160,7 @@ Spécifie le style étendu du contrôle en cours de création. Pour une liste de
 Spécifie le style du bouton de rotation. Appliquez n’importe quelle combinaison de styles de commande de bouton de rotation au contrôle. Ces styles sont décrits dans [Up-Down Control Styles](/windows/win32/Controls/up-down-control-styles) dans le Windows SDK.
 
 *Rect*<br/>
-Une référence à une structure [RECT](/previous-versions/dd162897\(v=vs.85\)) décrivant la taille et la position de la fenêtre à créer, dans les coordonnées des clients de *pParentWnd*.
+Une référence à une structure [RECT](/windows/win32/api/windef/ns-windef-rect) décrivant la taille et la position de la fenêtre à créer, dans les coordonnées des clients de *pParentWnd*.
 
 *pParentWnd*<br/>
 Un pointeur vers la fenêtre qui est le parent du contrôle.
@@ -375,7 +375,7 @@ La position précédente (16 `SetPos`bits de précision pour `SetPos32`, 32 bits
 
 Définit les limites supérieures et inférieures (portée) pour un contrôle de bouton de rotation.
 
-```
+```cpp
 void SetRange(
     short nLower,
     short nUpper);
