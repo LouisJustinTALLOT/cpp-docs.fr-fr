@@ -1,5 +1,5 @@
 ---
-title: Classe CA2WEX
+title: CA2WEX, classe
 ms.date: 11/04/2016
 f1_keywords:
 - CA2WEX
@@ -10,31 +10,31 @@ f1_keywords:
 helpviewer_keywords:
 - CA2WEX class
 ms.assetid: 317d9ffb-e84f-47e8-beda-57e28fb19124
-ms.openlocfilehash: c9123e163ca828fa71fe217e46537ceb18e6f549
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: a710034c5d94a8fb093a2b6a2a52373e2bab2d6d
+ms.sourcegitcommit: 2bc15c5b36372ab01fa21e9bcf718fa22705814f
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81319129"
+ms.lasthandoff: 04/27/2020
+ms.locfileid: "82168499"
 ---
-# <a name="ca2wex-class"></a>Classe CA2WEX
+# <a name="ca2wex-class"></a>CA2WEX, classe
 
-Cette classe est utilisée par les macros de conversion de cordes CA2TEX, CA2CTEX, CT2WEX et CT2CWEX, et le tapdef CA2W.
+Cette classe est utilisée par les macros de conversion de chaînes CA2TEX, CA2CTEX, CT2WEX et CT2CWEX, ainsi que les CA2W typedef.
 
 > [!IMPORTANT]
 > Cette classe et ses membres ne peuvent pas être utilisés dans les applications qui s’exécutent dans le Windows Runtime.
 
 ## <a name="syntax"></a>Syntaxe
 
-```
+```cpp
 template <int t_nBufferLength = 128>
 class CA2WEX
 ```
 
-#### <a name="parameters"></a>Paramètres
+### <a name="parameters"></a>Paramètres
 
 *t_nBufferLength*<br/>
-La taille du tampon utilisé dans le processus de traduction. La longueur par défaut est de 128 octets.
+Taille de la mémoire tampon utilisée dans le processus de traduction. La longueur par défaut est de 128 octets.
 
 ## <a name="members"></a>Membres
 
@@ -43,32 +43,32 @@ La taille du tampon utilisé dans le processus de traduction. La longueur par d�
 |Nom|Description|
 |----------|-----------------|
 |[CA2WEX::CA2WEX](#ca2wex)|Constructeur.|
-|[CA2WEX: :CA2WEX](#dtor)|Destructeur.|
+|[CA2WEX :: ~ CA2WEX](#dtor)|Destructeur.|
 
 ### <a name="public-operators"></a>Op&#233;rateurs publics
 
 |Nom|Description|
 |----------|-----------------|
-|[CA2WEX::opérateur LPWSTR](#operator_lpwstr)|Opérateur de conversion.|
+|[CA2WEX :: Operator LPWSTR](#operator_lpwstr)|Opérateur de conversion.|
 
 ### <a name="public-data-members"></a>Membres de données publics
 
 |Nom|Description|
 |----------|-----------------|
-|[CA2WEX::m_psz](#m_psz)|Le membre des données qui stocke la chaîne source.|
-|[CA2WEX::m_szBuffer](#m_szbuffer)|Le tampon statique, utilisé pour stocker la chaîne convertie.|
+|[CA2WEX :: m_psz](#m_psz)|Membre de données qui stocke la chaîne source.|
+|[CA2WEX :: m_szBuffer](#m_szbuffer)|Mémoire tampon statique, utilisée pour stocker la chaîne convertie.|
 
 ## <a name="remarks"></a>Notes
 
 À moins que des fonctionnalités supplémentaires ne soient requises, utilisez CA2TEX, CA2CTEX, CT2WEX, CT2CWEX ou CA2W dans votre code.
 
-Cette classe contient un tampon statique de taille fixe qui est utilisé pour stocker le résultat de la conversion. Si le résultat est trop grand pour s’adapter dans le tampon statique, la classe alloue la mémoire à l’aide **de malloc,** libérant la mémoire lorsque l’objet sort de portée. Cela garantit que, contrairement aux macros de conversion de texte disponibles dans les versions précédentes d’ATL, cette classe est sûre à utiliser en boucles et qu’elle ne débordera pas la pile.
+Cette classe contient une mémoire tampon statique de taille fixe qui est utilisée pour stocker le résultat de la conversion. Si le résultat est trop grand pour tenir dans la mémoire tampon statique, la classe alloue de la mémoire à l’aide de **malloc**, en libérant la mémoire lorsque l’objet est hors de portée. Cela garantit que, contrairement aux macros de conversion de texte disponibles dans les versions précédentes d’ATL, cette classe peut être utilisée en toute sécurité dans les boucles et qu’elle ne déborde pas la pile.
 
-Si la classe essaie d’allouer la mémoire `AtlThrow` sur le tas et échoue, il appellera avec un argument de E_OUTOFMEMORY.
+Si la classe tente d’allouer de la mémoire sur le tas et échoue, `AtlThrow` elle appellera avec un argument de E_OUTOFMEMORY.
 
-Par défaut, les classes de conversion ET les macros ATL utilisent la page de code ANSI du thread actuel pour la conversion. Si vous souhaitez remplacer ce comportement pour une conversion spécifique, spécifiez la page de code comme deuxième paramètre pour le constructeur pour la classe.
+Par défaut, les macros et les classes de conversion ATL utilisent la page de codes ANSI du thread actuel pour la conversion. Si vous souhaitez substituer ce comportement pour une conversion spécifique, spécifiez la page de codes comme deuxième paramètre du constructeur pour la classe.
 
-Les macros suivantes sont basées sur cette classe :
+Les macros suivantes sont basées sur cette classe :
 
 - CA2TEX
 
@@ -78,86 +78,86 @@ Les macros suivantes sont basées sur cette classe :
 
 - CT2CWEX
 
-Le tapdef suivant est basé sur cette classe :
+Le typedef suivant est basé sur cette classe :
 
-- CA2W CA2W
+- CA2W
 
-Pour une discussion de ces macros de conversion de texte, voir [ATL et MFC String Conversion Macros](string-conversion-macros.md).
+Pour plus d’informations sur ces macros de conversion de texte, consultez [macros de conversion de chaînes ATL et MFC](string-conversion-macros.md).
 
 ## <a name="example"></a>Exemple
 
-Voir [les macros de conversion des cordes ATL et MFC](string-conversion-macros.md) par exemple en utilisant ces macros de conversion de cordes.
+Pour obtenir un exemple d’utilisation de ces macros de conversion de chaînes [, consultez macros de conversion de chaînes ATL et MFC](string-conversion-macros.md) .
 
 ## <a name="requirements"></a>Spécifications
 
-**En-tête:** atlconv.h
+**En-tête :** atlconv. h
 
 ## <a name="ca2wexca2wex"></a><a name="ca2wex"></a>CA2WEX::CA2WEX
 
 Constructeur.
 
-```
+```cpp
 CA2WEX(LPCSTR psz, UINT nCodePage) throw(...);
 CA2WEX(LPCSTR psz) throw(...);
 ```
 
 ### <a name="parameters"></a>Paramètres
 
-*Zsp*<br/>
-La chaîne de texte à convertir.
+*psz*<br/>
+Chaîne de texte à convertir.
 
 *nCodePage*<br/>
-La page de code utilisée pour effectuer la conversion. Voir la discussion de paramètres de page de code pour la fonction Windows SDK [MultiByteToWideChar](/windows/win32/api/stringapiset/nf-stringapiset-multibytetowidechar) pour plus de détails.
+Page de codes utilisée pour effectuer la conversion. Pour plus d’informations, consultez la discussion sur les paramètres de page de codes pour la fonction SDK Windows [MultiByteToWideChar](/windows/win32/api/stringapiset/nf-stringapiset-multibytetowidechar) .
 
 ### <a name="remarks"></a>Notes
 
-Alloue le tampon utilisé dans le processus de traduction.
+Alloue la mémoire tampon utilisée dans le processus de traduction.
 
-## <a name="ca2wexca2wex"></a><a name="dtor"></a>CA2WEX: :CA2WEX
+## <a name="ca2wexca2wex"></a><a name="dtor"></a>CA2WEX :: ~ CA2WEX
 
 Destructeur.
 
-```
+```cpp
 ~CA2WEX() throw();
 ```
 
 ### <a name="remarks"></a>Notes
 
-Libère le tampon alloué.
+Libère la mémoire tampon allouée.
 
-## <a name="ca2wexm_psz"></a><a name="m_psz"></a>CA2WEX::m_psz
+## <a name="ca2wexm_psz"></a><a name="m_psz"></a>CA2WEX :: m_psz
 
-Le membre des données qui stocke la chaîne source.
+Membre de données qui stocke la chaîne source.
 
-```
+```cpp
 LPWSTR m_psz;
 ```
 
-## <a name="ca2wexm_szbuffer"></a><a name="m_szbuffer"></a>CA2WEX::m_szBuffer
+## <a name="ca2wexm_szbuffer"></a><a name="m_szbuffer"></a>CA2WEX :: m_szBuffer
 
-Le tampon statique, utilisé pour stocker la chaîne convertie.
+Mémoire tampon statique, utilisée pour stocker la chaîne convertie.
 
-```
+```cpp
 wchar_t m_szBuffer[t_nBufferLength];
 ```
 
-## <a name="ca2wexoperator-lpwstr"></a><a name="operator_lpwstr"></a>CA2WEX::opérateur LPWSTR
+## <a name="ca2wexoperator-lpwstr"></a><a name="operator_lpwstr"></a>CA2WEX :: Operator LPWSTR
 
 Opérateur de conversion.
 
-```
+```cpp
 operator LPWSTR() const throw();
 ```
 
 ### <a name="return-value"></a>Valeur de retour
 
-Retourne la chaîne de texte comme type LPWSTR.
+Retourne la chaîne de texte en tant que type LPWSTR.
 
 ## <a name="see-also"></a>Voir aussi
 
-[Classe CA2AEX](../../atl/reference/ca2aex-class.md)<br/>
-[Classe CA2CAEX](../../atl/reference/ca2caex-class.md)<br/>
-[Classe CW2AEX](../../atl/reference/cw2aex-class.md)<br/>
-[Classe CW2CWEX](../../atl/reference/cw2cwex-class.md)<br/>
-[Classe CW2WEX](../../atl/reference/cw2wex-class.md)<br/>
+[CA2AEX, classe](../../atl/reference/ca2aex-class.md)<br/>
+[CA2CAEX, classe](../../atl/reference/ca2caex-class.md)<br/>
+[CW2AEX, classe](../../atl/reference/cw2aex-class.md)<br/>
+[CW2CWEX, classe](../../atl/reference/cw2cwex-class.md)<br/>
+[CW2WEX, classe](../../atl/reference/cw2wex-class.md)<br/>
 [Vue d'ensemble des classes](../../atl/atl-class-overview.md)

@@ -5,12 +5,12 @@ ms.topic: reference
 helpviewer_keywords:
 - MessageHandler function
 ms.assetid: 8a0acf97-1b0d-4226-91b9-75446634a03c
-ms.openlocfilehash: aa044ef88ba3c872c2652cd774ac50024e52c68c
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: 65a8ce08e4f8606f168b101aa4daba23ef541051
+ms.sourcegitcommit: 2bc15c5b36372ab01fa21e9bcf718fa22705814f
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69492310"
+ms.lasthandoff: 04/27/2020
+ms.locfileid: "82168668"
 ---
 # <a name="messagehandler"></a>MessageHandler
 
@@ -18,7 +18,7 @@ ms.locfileid: "69492310"
 
 ## <a name="syntax"></a>Syntaxe
 
-```
+```cpp
 LRESULT MessageHandler(
     UINT uMsg,
     WPARAM wParam,
@@ -38,7 +38,7 @@ Informations supplémentaires spécifiques au message.
 Informations supplémentaires spécifiques au message.
 
 *bHandled*<br/>
-La table des messages affecte à *bHandled* la `MessageHandler` valeur true avant l’appel à. Si `MessageHandler` ne gère pas complètement le message, il doit affecter à *bHandled* la valeur false pour indiquer que le message doit être traité ultérieurement.
+La table des messages affecte à *bHandled* la `MessageHandler` valeur true avant l’appel à. Si `MessageHandler` ne gère pas complètement le message, il doit affecter à *BHANDLED* la valeur false pour indiquer que le message doit être traité ultérieurement.
 
 ## <a name="return-value"></a>Valeur de retour
 
