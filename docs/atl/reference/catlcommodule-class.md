@@ -1,5 +1,5 @@
 ---
-title: Classe CAtlComModule
+title: CAtlComModule, classe
 ms.date: 11/04/2016
 f1_keywords:
 - CAtlComModule
@@ -12,20 +12,20 @@ f1_keywords:
 helpviewer_keywords:
 - CAtlComModule class
 ms.assetid: af5dd71a-a0d1-4a2e-9a24-154a03381c75
-ms.openlocfilehash: 68fdb48edc9304d9d74df6f36bd208cfd35ff307
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 4b8c98630b27c35ed6a7e32318c6ebad8a82a5c5
+ms.sourcegitcommit: 2bc15c5b36372ab01fa21e9bcf718fa22705814f
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81321485"
+ms.lasthandoff: 04/27/2020
+ms.locfileid: "82168817"
 ---
-# <a name="catlcommodule-class"></a>Classe CAtlComModule
+# <a name="catlcommodule-class"></a>CAtlComModule, classe
 
 Cette classe implémente un module serveur COM.
 
 ## <a name="syntax"></a>Syntaxe
 
-```
+```cpp
 class CAtlComModule : public _ATL_COM_MODULE
 ```
 
@@ -36,22 +36,22 @@ class CAtlComModule : public _ATL_COM_MODULE
 |Nom|Description|
 |----------|-----------------|
 |[CAtlComModule::CAtlComModule](#catlcommodule)|Constructeur.|
-|[CAtlComModule: :CAtlComModule](#dtor)|Destructeur.|
+|[CAtlComModule :: ~ CAtlComModule](#dtor)|Destructeur.|
 
 ### <a name="public-methods"></a>M&#233;thodes publiques
 
 |Nom|Description|
 |----------|-----------------|
-|[CAtlComModule::RegisterServer](#registerserver)|Appelez cette méthode pour mettre à jour le registre du système pour chaque objet dans la carte de l’objet.|
-|[CAtlComModule::RegisterTypeLib](#registertypelib)|Appelez cette méthode pour enregistrer une bibliothèque de type.|
-|[CAtlComModule::UnregisterServer](#unregisterserver)|Appelez cette méthode pour désenregistrer chaque objet dans la carte de l’objet.|
-|[CAtlComModule::UnRegisterTypeLib](#unregistertypelib)|Appelez cette méthode pour désenregistrer une bibliothèque de type.|
+|[CAtlComModule::RegisterServer](#registerserver)|Appelez cette méthode pour mettre à jour le registre système pour chaque objet du mappage d’objets.|
+|[CAtlComModule::RegisterTypeLib](#registertypelib)|Appelez cette méthode pour inscrire une bibliothèque de types.|
+|[CAtlComModule::UnregisterServer](#unregisterserver)|Appelez cette méthode pour annuler l’inscription de chaque objet dans la table des objets.|
+|[CAtlComModule::UnRegisterTypeLib](#unregistertypelib)|Appelez cette méthode pour annuler l’inscription d’une bibliothèque de types.|
 
 ## <a name="remarks"></a>Notes
 
 `CAtlComModule`implémente un module serveur COM, permettant à un client d’accéder aux composants du module.
 
-Cette classe remplace la classe [CComModule](../../atl/reference/ccommodule-class.md) obsolète utilisée dans les versions antérieures d’ATL. Voir [les classes de module ATL](../../atl/atl-module-classes.md) pour plus de détails.
+Cette classe remplace la classe [CComModule](../../atl/reference/ccommodule-class.md) obsolète utilisée dans les versions antérieures d’ATL. Pour plus d’informations, consultez [classes de module ATL](../../atl/atl-module-classes.md) .
 
 ## <a name="inheritance-hierarchy"></a>Hiérarchie d'héritage
 
@@ -61,13 +61,13 @@ Cette classe remplace la classe [CComModule](../../atl/reference/ccommodule-clas
 
 ## <a name="requirements"></a>Spécifications
 
-**En-tête:** atlbase.h
+**En-tête :** atlbase. h
 
 ## <a name="catlcommodulecatlcommodule"></a><a name="catlcommodule"></a>CAtlComModule::CAtlComModule
 
 Constructeur.
 
-```
+```cpp
 CAtlComModule() throw();
 ```
 
@@ -75,37 +75,37 @@ CAtlComModule() throw();
 
 Initialise le module.
 
-## <a name="catlcommodulecatlcommodule"></a><a name="dtor"></a>CAtlComModule: :CAtlComModule
+## <a name="catlcommodulecatlcommodule"></a><a name="dtor"></a>CAtlComModule :: ~ CAtlComModule
 
 Destructeur.
 
-```
+```cpp
 ~CAtlComModule();
 ```
 
 ### <a name="remarks"></a>Notes
 
-Libère toutes les usines de classe.
+Libère toutes les fabriques de classes.
 
 ## <a name="catlcommoduleregisterserver"></a><a name="registerserver"></a>CAtlComModule::RegisterServer
 
-Appelez cette méthode pour mettre à jour le registre du système pour chaque objet dans la carte de l’objet.
+Appelez cette méthode pour mettre à jour le registre système pour chaque objet du mappage d’objets.
 
-```
+```cpp
 HRESULT RegisterServer(BOOL bRegTypeLib = FALSE, const CLSID* pCLSID = NULL);
 ```
 
 ### <a name="parameters"></a>Paramètres
 
 *bRegTypeLib*<br/>
-VRAI si la bibliothèque de type doit être enregistrée. La valeur par défaut est FALSE.
+TRUE si la bibliothèque de types doit être inscrite. La valeur par défaut est FALSE.
 
-*pCLSID (en)*<br/>
-Indique le CLSID de l’objet à enregistrer. Si NULL (la valeur par défaut), tous les objets de la carte de l’objet seront enregistrés.
+*pCLSID*<br/>
+Pointe vers le CLSID de l’objet à inscrire. Si la valeur est NULL (valeur par défaut), tous les objets dans le mappage d’objets sont inscrits.
 
 ### <a name="return-value"></a>Valeur de retour
 
-Retourne S_OK sur le succès, ou une erreur HRESULT sur l’échec.
+Retourne S_OK en cas de réussite, ou un HRESULT d’erreur en cas d’échec.
 
 ### <a name="remarks"></a>Notes
 
@@ -113,9 +113,9 @@ Appelle la fonction globale [AtlComModuleRegisterServer](server-registration-glo
 
 ## <a name="catlcommoduleregistertypelib"></a><a name="registertypelib"></a>CAtlComModule::RegisterTypeLib
 
-Appelez cette méthode pour enregistrer une bibliothèque de type.
+Appelez cette méthode pour inscrire une bibliothèque de types.
 
-```
+```cpp
 HRESULT RegisterTypeLib(LPCTSTR lpszIndex);
 HRESULT RegisterTypeLib();
 ```
@@ -123,21 +123,21 @@ HRESULT RegisterTypeLib();
 ### <a name="parameters"></a>Paramètres
 
 *lpszIndex*<br/>
-Chaîne dans le\\format " N ", où N est l’index integer de la ressource TYPELIB.
+Chaîne au format «\\\n », où N est l’index d’entier de la ressource TypeLib.
 
 ### <a name="return-value"></a>Valeur de retour
 
-Retourne S_OK sur le succès, ou une erreur HRESULT sur l’échec.
+Retourne S_OK en cas de réussite, ou un HRESULT d’erreur en cas d’échec.
 
 ### <a name="remarks"></a>Notes
 
-Ajoute de l’information sur une bibliothèque type au registre du système. Si l’instance du module contient plusieurs bibliothèques de type, utilisez la première version de cette méthode pour spécifier le type de bibliothèque à utiliser.
+Ajoute des informations sur une bibliothèque de types au registre système. Si l’instance de module contient plusieurs bibliothèques de types, utilisez la première version de cette méthode pour spécifier la bibliothèque de types à utiliser.
 
 ## <a name="catlcommoduleunregisterserver"></a><a name="unregisterserver"></a>CAtlComModule::UnregisterServer
 
-Appelez cette méthode pour désenregistrer chaque objet dans la carte de l’objet.
+Appelez cette méthode pour annuler l’inscription de chaque objet dans la table des objets.
 
-```
+```cpp
 HRESULT UnregisterServer(
     BOOL bRegTypeLib = FALSE,
     const CLSID* pCLSID = NULL);
@@ -146,14 +146,14 @@ HRESULT UnregisterServer(
 ### <a name="parameters"></a>Paramètres
 
 *bRegTypeLib*<br/>
-VRAI si la bibliothèque de type doit être non enregistrée. La valeur par défaut est FALSE.
+TRUE si l’inscription de la bibliothèque de types doit être annulée. La valeur par défaut est FALSE.
 
-*pCLSID (en)*<br/>
-Indique que le CLSID de l’objet n’est pas enregistré. Si NULL (la valeur par défaut), tous les objets de la carte de l’objet ne seront pas enregistrés.
+*pCLSID*<br/>
+Pointe vers le CLSID de l’objet dont l’inscription doit être annulée. Si la valeur est NULL (valeur par défaut), tous les objets dans le mappage d’objets sont désinscrits.
 
 ### <a name="return-value"></a>Valeur de retour
 
-Retourne S_OK sur le succès, ou une erreur HRESULT sur l’échec.
+Retourne S_OK en cas de réussite, ou un HRESULT d’erreur en cas d’échec.
 
 ### <a name="remarks"></a>Notes
 
@@ -161,9 +161,9 @@ Appelle la fonction globale [AtlComModuleUnregisterServer](server-registration-g
 
 ## <a name="catlcommoduleunregistertypelib"></a><a name="unregistertypelib"></a>CAtlComModule::UnRegisterTypeLib
 
-Appelez cette méthode pour désenregistrer une bibliothèque de type.
+Appelez cette méthode pour annuler l’inscription d’une bibliothèque de types.
 
-```
+```cpp
 HRESULT UnRegisterTypeLib(LPCTSTR lpszIndex);
 HRESULT UnRegisterTypeLib();
 ```
@@ -171,15 +171,15 @@ HRESULT UnRegisterTypeLib();
 ### <a name="parameters"></a>Paramètres
 
 *lpszIndex*<br/>
-Chaîne dans le\\format " N ", où N est l’index integer de la ressource TYPELIB.
+Chaîne au format «\\\n », où N est l’index d’entier de la ressource TypeLib.
 
 ### <a name="remarks"></a>Notes
 
-Supprime les informations sur une bibliothèque de type du registre du système. Si l’instance du module contient plusieurs bibliothèques de type, utilisez la première version de cette méthode pour spécifier le type de bibliothèque à utiliser.
+Supprime les informations relatives à une bibliothèque de types du Registre système. Si l’instance de module contient plusieurs bibliothèques de types, utilisez la première version de cette méthode pour spécifier la bibliothèque de types à utiliser.
 
 ### <a name="return-value"></a>Valeur de retour
 
-Retourne S_OK sur le succès, ou une erreur HRESULT sur l’échec.
+Retourne S_OK en cas de réussite, ou un HRESULT d’erreur en cas d’échec.
 
 ## <a name="see-also"></a>Voir aussi
 

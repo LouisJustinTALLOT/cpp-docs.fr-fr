@@ -1,34 +1,39 @@
 ---
-title: switch, instruction (C)
-ms.date: 11/04/2016
+title: switchInstruction (C)
+ms.date: 04/25/2020
 f1_keywords:
 - switch
 helpviewer_keywords:
 - switch keyword [C]
 ms.assetid: fbede014-23bd-4ab1-8094-c8d9d9cb963a
-ms.openlocfilehash: 0f781147bf4ed020cf925ca29c2ba1b0f601cde1
-ms.sourcegitcommit: f4be868c0d1d78e550fba105d4d3c993743a1f4b
-ms.translationtype: HT
+no-loc:
+- switch
+- case
+- default
+- break
+ms.openlocfilehash: 12163e85110092e3e372fa496cf42efd7574ea8d
+ms.sourcegitcommit: 2bc15c5b36372ab01fa21e9bcf718fa22705814f
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56148190"
+ms.lasthandoff: 04/27/2020
+ms.locfileid: "82167674"
 ---
-# <a name="switch-statement-c"></a>switch, instruction (C)
+# <a name="opno-locswitch-statement-c"></a>switchInstruction (C)
 
-Les instructions `switch` et **case** aident à contrôler les opérations conditionnelles et de création de branche complexes. L'instruction `switch` transfère le contrôle à une instruction dans son corps.
+Les **switch** instructions **case** et permettent de contrôler les opérations conditionnelles et de branchement complexes. L' **switch** instruction transfère le contrôle à une instruction dans son corps.
 
 ## <a name="syntax"></a>Syntaxe
 
-*selection-statement* :<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**switch (** *expression* **)** *statement*
+*instruction de sélection*:<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**`switch (`***expression* **`)`** *instruction* d’expression
 
-*labeled-statement* :<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**case**  *constant-expression*  **:**  *statement*<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**default :**  *statement*
+*instruction étiquetée*:<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**`case`**  *instruction constant-expression***`:`***statement*    <br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**`default :`**  *gestion*
 
-Le contrôle passe à l’instruction dont **case** *constant-expression* correspond à la valeur de **switch (** *expression* **)**. L’instruction `switch` peut inclure plusieurs instances de **case**, mais deux constantes case dans la même instruction `switch` ne peuvent pas avoir la même valeur. L’exécution du corps de l’instruction commence à l’instruction sélectionnée et continue jusqu’à la fin du corps ou jusqu’à ce qu’une instruction **break** transfère le contrôle hors du corps.
+Le contrôle passe à l’instruction dont **case** *constant-expression* correspond à la valeur de ** switch (** *expression* **)**. L' **switch** instruction peut inclure un nombre quelconque **case** d’instances. Toutefois, deux case constantes au sein de la **switch** même instruction ne peuvent pas avoir la même valeur. L’exécution du corps de l’instruction commence à l’instruction sélectionnée. Elle continue jusqu’à la fin du corps ou jusqu’à ce **break** qu’une instruction transfère le contrôle hors du corps.
 
-L'utilisation de l'instruction `switch` ressemble généralement à ceci :
+L’utilisation de **switch** l’instruction se présente généralement comme suit :
 
 ```C
 switch ( expression )
@@ -45,32 +50,32 @@ switch ( expression )
 }
 ```
 
-Vous pouvez utiliser l’instruction **break** pour terminer le traitement d’un cas particulier dans l’instruction `switch` et pour créer une branche à la fin de l’instruction `switch`. Sans **break**, le programme continue au cas suivant et exécute les instructions jusqu’à ce qu’il rencontre un **break** ou qu’il atteigne la fin de l’instruction. Dans certaines situations, cette continuation peut être souhaitable.
+Vous pouvez utiliser l' **break** instruction pour terminer le traitement d’une instruction étiquetée particulière **switch** dans l’instruction. Il se branche à la fin de **switch** l’instruction. Sans **break**, le programme continue jusqu’à l’instruction étiquetée suivante, en exécutant les instructions **break** jusqu’à ce qu’une ou la fin de l’instruction soit atteinte. Cette continuation peut être souhaitable dans certains cas.
 
-L’instruction **default** est exécutée si aucun **case** *constant-expression* n’est égale à la valeur de **switch (** *expression* **)**. Si l’instruction **default** est omise et qu’aucun **case** correspondant n’est trouvé, aucune des instructions dans le corps de `switch` n’est exécutée. Il peut y avoir au plus une instruction **default**. Il n’est pas obligatoire que l’instruction **default** soit à la fin ; elle peut apparaître n’importe où dans le corps de l’instruction `switch`. Une étiquette **case** ou **default** ne peut apparaître que dans une instruction `switch`.
+L' **default** instruction est exécutée si **case** *expression constante* n’est égale à la valeur de ** switch (** *expression* **)**. S’il n’existe **default** aucune instruction et qu' **case** aucune correspondance n’est trouvée, aucune des instructions du **switch** corps n’est exécutée. Il ne peut y avoir qu' **default** une seule instruction. L' **default** instruction n’a pas besoin de se trouver à la fin. Elle peut apparaître n’importe où dans le corps **switch** de l’instruction. Une **case** étiquette **default** ou ne peut apparaître qu’à **switch** l’intérieur d’une instruction.
 
-Le type de `switch` *expression* et **case** *constant-expression* doit être intégral. La valeur de chaque **case** *constant-expression* doit être unique dans le corps de l’instruction.
+Le type d' **switch** *expression* et **case** de *constant-expression* doit être intégral. La valeur de chaque **case** *expression constante* doit être unique dans le corps de l’instruction.
 
-Les étiquettes **case** et **default** du corps de l’instruction `switch` sont significatives uniquement lors du test initial qui détermine où commence l’exécution dans le corps de l’instruction. Les instructions switch peuvent être imbriquées. Toutes les variables statiques sont initialisées avant l'exécution dans les instructions `switch`.
+Les **case** étiquettes **default** et du corps **switch** de l’instruction sont significatives uniquement dans le test initial qui détermine où commence l’exécution dans le corps de l’instruction. **switch** les instructions peuvent être imbriquées. Toutes les variables statiques sont initialisées avant d’être **switch** exécutées dans des instructions.
 
 > [!NOTE]
-> Des déclarations peuvent apparaître au début de l'instruction composée formant le corps de `switch`, mais les initialisations incluses dans les déclarations ne sont pas exécutées. L'instruction `switch` transfère le contrôle directement à une instruction exécutable dans le corps, en ignorant les lignes qui contiennent des initialisations.
+> Les déclarations peuvent apparaître à l’en-tête de l’instruction **switch** composée formant le corps, mais les initialisations incluses dans les déclarations ne sont pas exécutées. L' **switch** instruction transfère le contrôle directement à une instruction exécutable dans le corps, en ignorant les lignes qui contiennent des initialisations.
 
-L'exemples suivant illustre des instructions `switch` :
+Les exemples suivants illustrent **switch** des instructions :
 
 ```C
 switch( c )
 {
     case 'A':
-        capa++;
+        capital_a++;
     case 'a':
-        lettera++;
+        letter_a++;
     default :
         total++;
 }
 ```
 
-Les trois instructions du corps de `switch` dans cet exemple sont exécutées si `c` est égal à `'A'`, car une instruction **break** n’apparaît pas avant le cas suivant. Le contrôle d'exécution est transféré à la première instruction (`capa++;`) et continue dans l'ordre à travers le reste du corps. Si `c` est égal à `'a'`, `lettera` et `total` sont incrémentés. Seul `total` est incrémenté si `c` n'est pas égal à `'A'` ou `'a'`.
+**switch** Les trois instructions du corps de cet exemple sont exécutées si `c` est égal à `'A'`, car aucune **break** instruction ne s’affiche avant casece qui suit. Le contrôle d'exécution est transféré à la première instruction (`capital_a++;`) et continue dans l'ordre à travers le reste du corps. Si `c` est égal à `'a'`, `letter_a` et `total` sont incrémentés. Seul `total` est incrémenté lorsque `c` n’est `'A'` pas `'a'`égal à ou.
 
 ```C
 switch( i )
@@ -87,29 +92,30 @@ switch( i )
 }
 ```
 
-Dans cet exemple, une instruction **break** suit chaque instruction du corps de `switch`. L’instruction **break** force une sortie du corps d’instruction après l’exécution d’une instruction. Si `i` est égal à -1, seul `n` est incrémenté. Le **break** suivant l’instruction `n++;` provoque le passage du contrôle d’exécution hors du corps d’instruction, ignorant les instructions restantes. De même, si `i` est égal à 0, seul `z` est incrémenté ; si `i` est égal à 1, seul `p` est incrémenté. L’instruction **break** finale n’est pas strictement nécessaire, car le contrôle passe hors du corps à la fin de l’instruction composée, mais elle est incluse pour des raisons de sécurité.
+Dans cet exemple, une **break** instruction suit chaque instruction du **switch** corps. L' **break** instruction force une sortie à partir du corps de l’instruction après l’exécution d’une instruction. Si `i` est égal à -1, seul `n` est incrémenté. L' **break** instruction `n++;` suivante provoque le passage du contrôle d’exécution hors du corps d’instruction, en ignorant les instructions restantes. De même, si `i` est égal à 0, seul `z` est incrémenté ; si `i` est égal à 1, seul `p` est incrémenté. La dernière **break** instruction n’est pas strictement nécessaire, car le contrôle passe hors du corps à la fin de l’instruction composée. Il est inclus pour des fins de cohérence.
 
-Une même instruction peut porter plusieurs étiquettes **case**, comme illustré dans l’exemple suivant :
+Une instruction unique peut comporter plusieurs **case** étiquettes, comme le montre l’exemple suivant :
 
 ```C
-case 'a' :
-case 'b' :
-case 'c' :
-case 'd' :
-case 'e' :
-case 'f' :  hexcvt(c);
+switch( c )
+{
+    case 'a' :
+    case 'b' :
+    case 'c' :
+    case 'd' :
+    case 'e' :
+    case 'f' :  convert_hex(c);
+}
 ```
 
-Dans cet exemple, si *constant-expression* est égale à toute lettre comprise entre `'a'` et `'f'`, la fonction `hexcvt` est appelée.
+Dans cet exemple, si *constant-expression* est égale à toute lettre comprise entre `'a'` et `'f'`, la fonction `convert_hex` est appelée.
 
-**Section spécifique à Microsoft**
+### <a name="microsoft-specific"></a>Spécifique à Microsoft
 
-Microsoft C ne limite pas le nombre de valeurs de cas dans une instruction `switch`. Le nombre est limité uniquement par la mémoire disponible. C ANSI requiert qu'au moins 257 étiquettes soient autorisées dans une instruction `switch`.
+Microsoft C ne limite pas le nombre case de valeurs dans **switch** une instruction. Le nombre est limité uniquement par la mémoire disponible. Le langage C ANSI requiert au case moins 257 étiquettes pour être **switch** autorisées dans une instruction.
 
-Par défaut pour Microsoft C, les extensions Microsoft sont activées. Utilisez l’option du compilateur /Za pour désactiver ces extensions.
-
-**FIN de la section spécifique à Microsoft**
+default Pour Microsoft C, les extensions Microsoft sont activées. Utilisez l’option de compilateur [/za](../build/reference/za-ze-disable-language-extensions.md) pour désactiver ces extensions.
 
 ## <a name="see-also"></a>Voir aussi
 
-[switch, instruction (C++)](../cpp/switch-statement-cpp.md)
+[switchInstruction (C++)](../cpp/switch-statement-cpp.md)

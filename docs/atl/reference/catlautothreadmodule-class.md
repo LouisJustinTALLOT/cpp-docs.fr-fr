@@ -1,5 +1,5 @@
 ---
-title: CAtlAutoThreadModule Class
+title: CAtlAutoThreadModule, classe
 ms.date: 11/04/2016
 f1_keywords:
 - CAtlAutoThreadModule
@@ -7,36 +7,36 @@ f1_keywords:
 helpviewer_keywords:
 - CAtlAutoThreadModule class
 ms.assetid: 3be834aa-55ef-403e-94ae-41979691b15f
-ms.openlocfilehash: 1ec66bf77d8dd705cb2e1e93f70a885ab96420a6
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: f4bd1071380bf3e31c69c593c5db81112fdf21de
+ms.sourcegitcommit: 2bc15c5b36372ab01fa21e9bcf718fa22705814f
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62247290"
+ms.lasthandoff: 04/27/2020
+ms.locfileid: "82168304"
 ---
-# <a name="catlautothreadmodule-class"></a>CAtlAutoThreadModule Class
+# <a name="catlautothreadmodule-class"></a>CAtlAutoThreadModule, classe
 
-Cette classe implémente un serveur COM mis en pool de thread, le modèle de cloisonnement.
+Cette classe implémente un serveur COM de modèle cloisonné et à pool de threads.
 
 > [!IMPORTANT]
-> Cette classe et ses membres ne peut pas être utilisés dans les applications qui s’exécutent dans le Windows Runtime.
+> Cette classe et ses membres ne peuvent pas être utilisés dans les applications qui s’exécutent dans le Windows Runtime.
 
 ## <a name="syntax"></a>Syntaxe
 
-```
+```cpp
 class CAtlAutoThreadModule : public CAtlAutoThreadModuleT<CAtlAutoThreadModule>
 ```
 
 ## <a name="remarks"></a>Notes
 
-`CAtlAutoThreadModule` dérive de [CAtlAutoThreadModuleT](../../atl/reference/catlautothreadmodulet-class.md) et implémente un serveur COM mis en pool de thread, le modèle de cloisonnement. `CAtlAutoThreadModule` utilise [CComApartment](../../atl/reference/ccomapartment-class.md) pour gérer un cloisonnement pour chaque thread dans le module.
+`CAtlAutoThreadModule`dérive de [CAtlAutoThreadModuleT](../../atl/reference/catlautothreadmodulet-class.md) et implémente un serveur com de modèle cloisonné et à pool de threads. `CAtlAutoThreadModule`utilise [CComApartment](../../atl/reference/ccomapartment-class.md) pour gérer un cloisonnement pour chaque thread dans le module.
 
-Vous devez utiliser le [DECLARE_CLASSFACTORY_AUTO_THREAD](aggregation-and-class-factory-macros.md#declare_classfactory_auto_thread) macro dans la définition de classe de votre objet pour spécifier [CComClassFactoryAutoThread](../../atl/reference/ccomclassfactoryautothread-class.md) car la fabrique de classe. Vous devez ensuite ajouter une seule instance d’une classe dérivée de `CAtlAutoThreadModuleT` comme `CAtlAutoThreadModule`. Exemple :
+Vous devez utiliser la macro [DECLARE_CLASSFACTORY_AUTO_THREAD](aggregation-and-class-factory-macros.md#declare_classfactory_auto_thread) dans la définition de classe de votre objet pour spécifier [CComClassFactoryAutoThread](../../atl/reference/ccomclassfactoryautothread-class.md) comme fabrique de classe. Vous devez ensuite ajouter une seule instance d’une classe dérivée `CAtlAutoThreadModuleT` de, `CAtlAutoThreadModule`telle que. Par exemple :
 
 `CAtlAutoThreadModule _AtlAutoModule; // name is immaterial.`
 
 > [!NOTE]
-> Cette classe remplace obsolète [CComAutoThreadModule](../../atl/reference/ccomautothreadmodule-class.md) classe.
+> Cette classe remplace la classe [CComAutoThreadModule](../../atl/reference/ccomautothreadmodule-class.md) obsolète.
 
 ## <a name="inheritance-hierarchy"></a>Hiérarchie d'héritage
 
@@ -46,13 +46,13 @@ Vous devez utiliser le [DECLARE_CLASSFACTORY_AUTO_THREAD](aggregation-and-class-
 
 `CAtlAutoThreadModule`
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
-**En-tête :** atlbase.h
+**En-tête :** atlbase. h
 
 ## <a name="see-also"></a>Voir aussi
 
 [CAtlAutoThreadModuleT, classe](../../atl/reference/catlautothreadmodulet-class.md)<br/>
 [IAtlAutoThreadModule, classe](../../atl/reference/iatlautothreadmodule-class.md)<br/>
-[Vue d’ensemble de la classe](../../atl/atl-class-overview.md)<br/>
+[Vue d'ensemble des classes](../../atl/atl-class-overview.md)<br/>
 [Classes de module](../../atl/atl-module-classes.md)

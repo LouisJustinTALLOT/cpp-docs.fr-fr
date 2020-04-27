@@ -1,5 +1,5 @@
 ---
-title: Classe CAutoPtrArray
+title: CAutoPtrArray, classe
 ms.date: 11/04/2016
 f1_keywords:
 - CAutoPtrArray
@@ -8,14 +8,14 @@ f1_keywords:
 helpviewer_keywords:
 - CAutoPtrArray class
 ms.assetid: 880a70da-8c81-4427-8ac6-49aa8d424244
-ms.openlocfilehash: 93fc5cfea4ea655e57e785ca234df59fe10d6570
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 11f39eac8b8d080fd840f6454f393e33ebcb9e1c
+ms.sourcegitcommit: 2bc15c5b36372ab01fa21e9bcf718fa22705814f
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81318893"
+ms.lasthandoff: 04/27/2020
+ms.locfileid: "82167659"
 ---
-# <a name="cautoptrarray-class"></a>Classe CAutoPtrArray
+# <a name="cautoptrarray-class"></a>CAutoPtrArray, classe
 
 Cette classe fournit des méthodes utiles lors de la construction d’un tableau de pointeurs intelligents.
 
@@ -24,17 +24,17 @@ Cette classe fournit des méthodes utiles lors de la construction d’un tableau
 
 ## <a name="syntax"></a>Syntaxe
 
-```
+```cpp
 template <typename E>
 class CAutoPtrArray : public CAtlArray<
                         ATL::CAutoPtr<E>,
                         CAutoPtrElementTraits<E>>
 ```
 
-#### <a name="parameters"></a>Paramètres
+### <a name="parameters"></a>Paramètres
 
-*E*<br/>
-Le type de pointeur.
+*Envoyer*<br/>
+Type de pointeur.
 
 ## <a name="members"></a>Membres
 
@@ -46,9 +46,9 @@ Le type de pointeur.
 
 ## <a name="remarks"></a>Notes
 
-Cette classe fournit un constructeur et dérive des méthodes de [CAtlArray](../../atl/reference/catlarray-class.md) et [CAutoPtrElementTraits](../../atl/reference/cautoptrelementtraits-class.md) pour aider à la création d’un objet de classe de collecte stockant des pointeurs intelligents.
+Cette classe fournit un constructeur et dérive les méthodes de [CAtlArray](../../atl/reference/catlarray-class.md) et [CAutoPtrElementTraits](../../atl/reference/cautoptrelementtraits-class.md) pour faciliter la création d’un objet de classe de collection qui stocke des pointeurs intelligents.
 
-Pour plus d’informations, voir [cours de collecte ATL](../../atl/atl-collection-classes.md).
+Pour plus d’informations, consultez [classes de collection ATL](../../atl/atl-collection-classes.md).
 
 ## <a name="inheritance-hierarchy"></a>Hiérarchie d'héritage
 
@@ -58,13 +58,13 @@ Pour plus d’informations, voir [cours de collecte ATL](../../atl/atl-collectio
 
 ## <a name="requirements"></a>Spécifications
 
-**En-tête:** atlcoll.h
+**En-tête :** atlcoll. h
 
 ## <a name="cautoptrarraycautoptrarray"></a><a name="cautoptrarray"></a>CAutoPtrArray::CAutoPtrArray
 
 Constructeur.
 
-```
+```cpp
 CAutoPtrArray() throw();
 ```
 
@@ -75,6 +75,6 @@ Initialise le tableau de pointeurs intelligents.
 ## <a name="see-also"></a>Voir aussi
 
 [Classe CAtlArray](../../atl/reference/catlarray-class.md)<br/>
-[Classe CAutoPtrElementTraits](../../atl/reference/cautoptrelementtraits-class.md)<br/>
-[Classe CAutoPtrList](../../atl/reference/cautoptrlist-class.md)<br/>
+[CAutoPtrElementTraits, classe](../../atl/reference/cautoptrelementtraits-class.md)<br/>
+[CAutoPtrList, classe](../../atl/reference/cautoptrlist-class.md)<br/>
 [Vue d'ensemble des classes](../../atl/atl-class-overview.md)

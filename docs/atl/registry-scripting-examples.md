@@ -1,5 +1,5 @@
 ---
-title: Exemples de script du registre
+title: Exemples de scripts du Registre
 ms.date: 11/04/2016
 helpviewer_keywords:
 - scripting, examples
@@ -7,31 +7,31 @@ helpviewer_keywords:
 - scripts, Registrar scripts
 - registry, Registrar
 ms.assetid: b6df80e1-e08b-40ee-9243-9b381b172460
-ms.openlocfilehash: 7bcdb7076982e2f0bd08f4fd82bb45f21e61ef20
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 0e225ce28309aa619fd9436d8f4b93e60544e86c
+ms.sourcegitcommit: 2bc15c5b36372ab01fa21e9bcf718fa22705814f
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81329330"
+ms.lasthandoff: 04/27/2020
+ms.locfileid: "82168746"
 ---
-# <a name="registry-scripting-examples"></a>Exemples de script du registre
+# <a name="registry-scripting-examples"></a>Exemples de scripts du Registre
 
-Les exemples de script dans ce sujet démontrent comment ajouter une clé au registre du système, enregistrer le serveur com registraire, et spécifier plusieurs arbres d’analyse.
+Les exemples de scripts de cette rubrique montrent comment ajouter une clé au registre système, inscrire le serveur de bureau d’enregistrement COM et spécifier plusieurs arborescences d’analyse.
 
 ## <a name="add-a-key-to-hkey_current_user"></a>Ajouter une clé à HKEY_CURRENT_USER
 
-L’arbre d’analyse suivant illustre un script simple qui ajoute une seule clé au registre du système. En particulier, le script `MyVeryOwnKey`ajoute `HKEY_CURRENT_USER`la clé, , à . Il attribue également la valeur `HowGoesIt` de la chaîne par défaut de la nouvelle clé:
+L’arborescence d’analyse suivante illustre un script simple qui ajoute une clé unique au registre système. En particulier, le script ajoute la clé, `MyVeryOwnKey`, à `HKEY_CURRENT_USER`. Elle affecte également la valeur de chaîne par défaut `HowGoesIt` de à la nouvelle clé :
 
-```
+```rgs
 HKEY_CURRENT_USER
 {
     'MyVeryOwnKey' = s 'HowGoesIt'
 }
 ```
 
-Ce script peut facilement être étendu pour définir plusieurs sous-clés comme suit:
+Ce script peut facilement être étendu pour définir plusieurs sous-clés, comme suit :
 
-```
+```rgs
 HKCU
 {
     'MyVeryOwnKey' = s 'HowGoesIt'
@@ -45,13 +45,13 @@ HKCU
 }
 ```
 
-Maintenant, le script ajoute `HasASubkey`un `MyVeryOwnKey`sous-clé, , à . Pour ce sous-clé, `PrettyCool` il ajoute à `DWORD` la fois le sous-clé (avec une valeur par défaut de 55) et la `ANameValue` valeur nommée (avec une valeur de chaîne de `WithANamedValue`).
+À présent, le script ajoute une sous `HasASubkey`-clé `MyVeryOwnKey`,, à. Pour cette sous-clé, elle ajoute `PrettyCool` la sous-clé ( `DWORD` avec une valeur par défaut de `ANameValue` 55) et la valeur nommée (avec `WithANamedValue`une valeur de chaîne de).
 
-## <a name="register-the-registrar-com-server"></a><a name="_atl_register_the_registrar_com_server"></a>Enregistrez le serveur COM Registrar
+## <a name="register-the-registrar-com-server"></a><a name="_atl_register_the_registrar_com_server"></a>Inscrire le serveur d’inscription COM
 
-Le script suivant enregistre le serveur Registrar COM lui-même.
+Le script suivant inscrit le serveur d’inscription COM.
 
-```
+```rgs
 HKCR
 {
     ATL.Registrar = s 'ATL Registrar Class'
@@ -72,31 +72,31 @@ HKCR
 }
 ```
 
-Au moment de la course, `ATL.Registrar` cet `HKEY_CLASSES_ROOT`arbre d’analyse ajoute la clé à . À cette nouvelle clé, il alors:
+Au moment de l’exécution, cette arborescence d' `ATL.Registrar` analyse ajoute `HKEY_CLASSES_ROOT`la clé à. À cette nouvelle clé :
 
-- Spécifie `ATL Registrar Class` comme la valeur de la chaîne par défaut de la clé.
+- Spécifie `ATL Registrar Class` comme valeur de chaîne par défaut de la clé.
 
-- Ajoute `CLSID` comme un sous-clé.
+- Ajoute `CLSID` en tant que sous-clé.
 
-- Specifie `{44EC053A-400F-11D0-9DCD-00A0C90391D3}` `CLSID`pour . (Cette valeur est le CLSID du registraire pour une utilisation avec `CoCreateInstance`.)
+- `{44EC053A-400F-11D0-9DCD-00A0C90391D3}` Spécifie `CLSID`pour. (Cette valeur est le CLSID du Bureau d’enregistrement à `CoCreateInstance`utiliser avec.)
 
-Depuis `CLSID` qu’il est partagé, il ne doit pas être supprimé en mode Unregister. La déclaration, `NoRemove CLSID`, le `CLSID` fait en indiquant que doit être ouvert en mode Registre et ignoré en mode Non-enregistrement.
+Étant `CLSID` donné que est partagé, il ne doit pas être supprimé en mode annulation de l’inscription. Dans ce cas `NoRemove CLSID`, l’instruction indique que `CLSID` doit être ouvert en mode Register et ignoré en mode Unregister.
 
-L’énoncé `ForceRemove` fournit une fonction d’entretien ménager en supprimant une clé et tous ses sous-clés avant de recréer la clé. Cela peut être utile si les noms des sous-clés ont changé. Dans cet exemple `ForceRemove` de script, `{44EC053A-400F-11D0-9DCD-00A0C90391D3}` vérifie si il existe déjà. Si c’est le cas, `ForceRemove`:
+L' `ForceRemove` instruction fournit une fonction de maintenance en supprimant une clé et toutes ses sous-clés avant de recréer la clé. Cela peut être utile si les noms des sous-clés ont été modifiés. Dans cet exemple de script, `ForceRemove` vérifie si `{44EC053A-400F-11D0-9DCD-00A0C90391D3}` existe déjà. Si c’est le `ForceRemove`cas, procédez comme suit :
 
-- Supprime de façon `{44EC053A-400F-11D0-9DCD-00A0C90391D3}` récursive et toutes ses sous-clés.
+- Supprime de manière récursive `{44EC053A-400F-11D0-9DCD-00A0C90391D3}` et toutes ses sous-clés.
 
-- Recréer `{44EC053A-400F-11D0-9DCD-00A0C90391D3}`.
+- Recrée `{44EC053A-400F-11D0-9DCD-00A0C90391D3}`.
 
-- Ajoute `ATL Registrar Class` que la valeur `{44EC053A-400F-11D0-9DCD-00A0C90391D3}`de chaîne par défaut pour .
+- Ajoute `ATL Registrar Class` comme valeur de chaîne par défaut `{44EC053A-400F-11D0-9DCD-00A0C90391D3}`pour.
 
-L’arbre d’analyse ajoute maintenant deux `{44EC053A-400F-11D0-9DCD-00A0C90391D3}`nouveaux sous-clés à . La première `ProgID`clé, , obtient une valeur de chaîne par défaut qui est le ProgID. La deuxième `InprocServer32`clé, , obtient `%MODULE%`une valeur de chaîne par défaut, , c’est une valeur préprocesseur expliquée dans la section, [En utilisant des paramètres remplaçables (Preprocesseur du registraire)](../atl/using-replaceable-parameters-the-registrar-s-preprocessor.md), de cet article. `InprocServer32`obtient également une `ThreadingModel`valeur nommée, , `Apartment`avec une valeur de chaîne de .
+L’arborescence d’analyse ajoute désormais deux nouvelles sous- `{44EC053A-400F-11D0-9DCD-00A0C90391D3}`clés à. La première clé, `ProgID`, obtient une valeur de chaîne par défaut qui est le ProgID. La deuxième clé, `InprocServer32`, obtient une valeur de chaîne par `%MODULE%`défaut,, qui est une valeur de préprocesseur expliquée dans la section [utilisation de paramètres remplaçables (le préprocesseur du greffier)](../atl/using-replaceable-parameters-the-registrar-s-preprocessor.md)de cet article. `InprocServer32`obtient également une valeur nommée, `ThreadingModel`, avec une valeur de chaîne `Apartment`de.
 
-## <a name="specify-multiple-parse-trees"></a>Spécifier les arbres à parse multiples
+## <a name="specify-multiple-parse-trees"></a>Spécifier plusieurs arborescences d’analyse
 
-Pour spécifier plus d’un arbre d’analyse dans un script, il suffit de placer un arbre à la fin d’un autre. Par exemple, le script suivant `MyVeryOwnKey`ajoute la clé, , `HKEY_CLASSES_ROOT` `HKEY_CURRENT_USER`aux arbres d’analyse pour les deux et :
+Pour spécifier plusieurs arborescences d’analyse dans un script, placez simplement une arborescence à la fin d’une autre. Par exemple, le script suivant ajoute la clé, `MyVeryOwnKey`, aux arborescences d’analyse pour `HKEY_CLASSES_ROOT` et `HKEY_CURRENT_USER`:
 
-```
+```rgs
 HKCR
 {
     'MyVeryOwnKey' = s 'HowGoesIt'
@@ -108,8 +108,8 @@ HKEY_CURRENT_USER
 ```
 
 > [!NOTE]
-> Dans un script de registraire, 4K est la taille maximale des jetons. (Un jeton est tout élément reconnaissable dans la syntaxe.) Dans l’exemple scriptant `HKEY_CURRENT_USER` `'MyVeryOwnKey'`précédent, `'HowGoesIt'` `HKCR`, , et sont tous des jetons.
+> Dans un script d’inscription, 4K est la taille de jeton maximale. (Un jeton est un élément reconnaissable dans la syntaxe.) Dans l’exemple de script précédent, `HKCR` `HKEY_CURRENT_USER` `'MyVeryOwnKey'`,, et `'HowGoesIt'` sont tous des jetons.
 
 ## <a name="see-also"></a>Voir aussi
 
-[Création de scripts registraires](../atl/creating-registrar-scripts.md)
+[Création de scripts d’inscription](../atl/creating-registrar-scripts.md)
