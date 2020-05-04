@@ -8,12 +8,12 @@ helpviewer_keywords:
 - pragmas, pack
 - pack pragma
 ms.assetid: e4209cbb-5437-4b53-b3fe-ac264501d404
-ms.openlocfilehash: 335289802b6c370158fc655646b710914a07a3f5
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 037c57a10b1de7dd00249ae60acaef0939e355eb
+ms.sourcegitcommit: 8a01ae145bc65f5bc90d6e47b4a1bdf47b073ee7
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80160331"
+ms.lasthandoff: 05/04/2020
+ms.locfileid: "82765732"
 ---
 # <a name="pack-pragma"></a>pack (pragma)
 
@@ -21,9 +21,9 @@ Spécifie l’alignement de la compression pour les membres de la structure, de 
 
 ## <a name="syntax"></a>Syntaxe
 
-> **#pragma Pack (afficher)** \
-> **#pragma Pack (push** [ **,** *identificateur* ] [ **,** *n* ] **)** \
-> **#pragma Pack (pop** [ **,** { *identifier* | *n* }] **)** \
+> **#pragma Pack (afficher)**\
+> **#pragma Pack (push** [ **,** *identificateur* ] [ **,** *n* ] **)**\
+> **#pragma Pack (pop** [ **,** { *identifier* | *n* }] **)**\
 > **#pragma Pack (** [ *n* ] **)**
 
 ### <a name="parameters"></a>Paramètres
@@ -31,13 +31,13 @@ Spécifie l’alignement de la compression pour les membres de la structure, de 
 **afficher**\
 Facultatif Affiche la valeur d’octet actuelle pour l’alignement de compression. La valeur est affichée par un message d'avertissement.
 
-\ **Push**
+**souleve**\
 Facultatif Exécute un push de la valeur d’alignement de compression actuelle sur la pile interne du compilateur et définit la valeur d’alignement de la compression actuelle sur *n*. Si *n* n’est pas spécifié, la valeur actuelle de l’alignement de compression fait l’objet d’un push.
 
-\ **pop**
-Facultatif Supprime l’enregistrement du haut de la pile interne du compilateur. Si *n* n’est pas spécifié avec **pop**, la valeur de compression associée à l’enregistrement obtenu en haut de la pile est la nouvelle valeur d’alignement de la compression. Si *n* est spécifié, par exemple, `#pragma pack(pop, 16)`, *n* devient la nouvelle valeur d’alignement de la compression. Si vous utilisez un *identificateur*, par exemple `#pragma pack(pop, r1)`, tous les enregistrements de la pile sont dépilés jusqu’à ce que l’enregistrement qui a l' *identificateur* soit trouvé. Cet enregistrement est dépilé et la valeur de compression associée à l’enregistrement obtenu en haut de la pile est la nouvelle valeur d’alignement de la compression. Si vous utilisez un *identificateur* qui n’est trouvé dans aucun enregistrement sur la pile, le **pop** est ignoré.
+**roulant**\
+Facultatif Supprime l’enregistrement du haut de la pile interne du compilateur. Si *n* n’est pas spécifié avec **pop**, la valeur de compression associée à l’enregistrement obtenu en haut de la pile est la nouvelle valeur d’alignement de la compression. Si *n* est spécifié, par exemple `#pragma pack(pop, 16)`, *n* devient la nouvelle valeur d’alignement de la compression. Si vous utilisez un *identificateur*, par exemple, `#pragma pack(pop, r1)`, tous les enregistrements de la pile sont dépilés jusqu’à ce que l’enregistrement qui a l' *identificateur* soit trouvé. Cet enregistrement est dépilé et la valeur de compression associée à l’enregistrement obtenu en haut de la pile est la nouvelle valeur d’alignement de la compression. Si vous utilisez un *identificateur* qui n’est trouvé dans aucun enregistrement sur la pile, le **pop** est ignoré.
 
-L’instruction `#pragma pack (pop, r1, 2)` équivaut à `#pragma pack (pop, r1)` suivi de `#pragma pack(2)`.
+L’instruction `#pragma pack (pop, r1, 2)` est équivalente `#pragma pack (pop, r1)` à suivie `#pragma pack(2)`de.
 
 *identificateur*\
 Facultatif En cas d’utilisation avec **Push**, assigne un nom à l’enregistrement sur la pile interne du compilateur. Lorsqu’il est utilisé avec **pop**, dépile les enregistrements de la pile interne jusqu’à la suppression de l' *identificateur* . Si l' *identificateur* est introuvable sur la pile interne, rien n’est dépilé.
@@ -45,9 +45,9 @@ Facultatif En cas d’utilisation avec **Push**, assigne un nom à l’enregistr
 *n*\
 Facultatif Spécifie la valeur, en octets, à utiliser pour la compression. Si l’option de compilateur [/ZP](../build/reference/zp-struct-member-alignment.md) n’est pas définie pour le module, la valeur par défaut de *n* est 8. Les valeurs valides sont 1, 2, 4, 8 et 16. L’alignement d’un membre se trouve sur une limite qui est un multiple de *n*ou un multiple de la taille du membre, la valeur la plus petite étant retenue.
 
-## <a name="remarks"></a>Notes
+## <a name="remarks"></a>Notes 
 
-Pour *empaqueter* une classe, vous pouvez placer ses membres directement après les autres en mémoire. Cela peut signifier que certains ou tous les membres peuvent être alignés sur une limite inférieure à l’alignement par défaut de l’architecture cible. **Pack** donne le contrôle au niveau de la déclaration de données. Il diffère de l’option de compilateur [/ZP](../build/reference/zp-struct-member-alignment.md), qui fournit uniquement le contrôle au niveau du module. **Pack** prend effet au niveau de la première déclaration de **struct**, d' **Union**ou de **classe** une fois que le pragma est visible. **Pack** n’a aucun effet sur les définitions. L’appel de **Pack** sans arguments affecte la valeur *n* à la valeur définie dans l’option du compilateur `/Zp`. Si l’option de compilateur n’est pas définie, la valeur par défaut est 8.
+Pour *empaqueter* une classe, vous pouvez placer ses membres directement après les autres en mémoire. Cela peut signifier que certains ou tous les membres peuvent être alignés sur une limite inférieure à l’alignement par défaut de l’architecture cible. **Pack** donne le contrôle au niveau de la déclaration de données. Il diffère de l’option de compilateur [/ZP](../build/reference/zp-struct-member-alignment.md), qui fournit uniquement le contrôle au niveau du module. **Pack** prend effet au niveau de la première déclaration de **struct**, d' **Union**ou de **classe** une fois que le pragma est visible. **Pack** n’a aucun effet sur les définitions. L’appel de **Pack** sans arguments affecte la valeur *n* à la valeur définie dans `/Zp`l’option du compilateur. Si l’option de compilateur n’est pas définie, la valeur par défaut est 8 pour x86, ARM et ARM64. La valeur par défaut est 16 pour x64 natif.
 
 Si vous modifiez l'alignement d'une structure, il est possible qu'elle n'utilise pas autant d'espace en mémoire, mais vous risquez de constater une baisse des performances ou même d'obtenir une exception générée par le matériel relative au non-alignement de l'accès.  Vous pouvez modifier ce comportement d’exception à l’aide de [SetErrorMode](/windows/win32/api/errhandlingapi/nf-errhandlingapi-seterrormode).
 
@@ -55,14 +55,14 @@ Pour plus d’informations sur la modification de l’alignement, consultez les 
 
 - [__alignof](../cpp/alignof-operator.md)
 
-- [align](../cpp/align-cpp.md)
+- [droite](../cpp/align-cpp.md)
 
 - [__unaligned](../cpp/unaligned.md)
 
 - [Exemples d’alignement de structure](../build/x64-software-conventions.md#examples-of-structure-alignment) (spécifique à x64)
 
    > [!WARNING]
-   > Dans Visual Studio 2015 et versions ultérieures, vous pouvez utiliser les opérateurs **alignas** et **alignof** standard, qui se trouvent à la différence `__alignof` et `declspec( align )` sont portables entre les compilateurs. La C++ norme ne traite pas la compression. vous devez donc toujours utiliser **Pack** (ou l’extension correspondante sur d’autres compilateurs) pour spécifier des alignements plus petits que la taille de mot de l’architecture cible.
+   > Dans Visual Studio 2015 et versions ultérieures, vous pouvez utiliser les opérateurs **alignas** et **alignof** standard `__alignof` , `declspec( align )` qui, contrairement à et, sont portables entre les compilateurs. La norme C++ n’adresse pas de compression. vous devez donc toujours utiliser **Pack** (ou l’extension correspondante sur d’autres compilateurs) pour spécifier des alignements plus petits que la taille de mot de l’architecture cible.
 
 ## <a name="examples"></a>Exemples
 
