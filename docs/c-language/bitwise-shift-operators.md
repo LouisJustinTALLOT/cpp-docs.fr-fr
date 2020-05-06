@@ -8,22 +8,22 @@ helpviewer_keywords:
 - operators [C++], shift
 ms.assetid: d0485785-5c72-47e1-a7c0-0adde03ade23
 ms.openlocfilehash: acf31fbfbe534e3f7eba1492c5aaf173fcb8b31c
-ms.sourcegitcommit: f4be868c0d1d78e550fba105d4d3c993743a1f4b
-ms.translationtype: HT
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56150413"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62326025"
 ---
 # <a name="bitwise-shift-operators"></a>Opérateurs de décalage de bits
 
-Les opérateurs de décalage décalent leur premier opérande vers la gauche (**&lt;&lt;**) ou vers la droite (**>>**) du nombre de positions spécifié par le second opérande.
+Les opérateurs de décalage décalent leur premier**&lt;** opérande vers la gauche**>>**() ou vers la droite () du nombre de positions que le second opérande spécifie.
 
 ## <a name="syntax"></a>Syntaxe
 
 *shift-expression* :<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*additive-expression*<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*shift-expression* **&lt;&lt;** *additive-expression*<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*shift-expression* **>>** *additive-expression*
+&nbsp;&nbsp;&nbsp;&nbsp;*Shift-expression* ** &lt; ** *additive-expression*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*Shift-expression* **>>** *additive-expression*
 
 Les deux opérandes doivent être des valeurs intégrales. Ces opérateurs exécutent les conversions arithmétiques habituelles ; le type du résultat est le type de l'opérande gauche après conversion.
 

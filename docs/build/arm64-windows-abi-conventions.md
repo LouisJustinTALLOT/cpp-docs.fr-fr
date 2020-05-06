@@ -12,7 +12,7 @@ ms.locfileid: "74303263"
 
 L’interface binaire d’application (ABI) de base pour Windows lorsqu’elle est compilée et exécutée sur des processeurs ARM en mode 64 bits (architectures ARMv8 ou ultérieures), pour la plupart, suit le interface EABI AArch64 standard de ARM. Cet article met en évidence certaines des hypothèses principales et les modifications apportées par rapport à ce qui est documenté dans le interface EABI. Pour plus d’informations sur l’ABI 32 bits, consultez [vue d’ensemble des conventions Abi ARM](overview-of-arm-abi-conventions.md). Pour plus d’informations sur le interface EABI ARM standard, consultez [interface binaire d’application (ABI) pour l’architecture ARM](http://infocenter.arm.com/help/index.jsp?topic=/com.arm.doc.subset.swdev.abi/index.html) (lien externe).
 
-## <a name="definitions"></a>définitions
+## <a name="definitions"></a>Définitions
 
 Avec l’introduction de la prise en charge de 64 bits, ARM a défini plusieurs termes :
 
@@ -33,7 +33,7 @@ Enfin, lorsque vous faites référence aux types de données, les définitions s
 - **HFA (agrégat à virgule flottante homogène)** : type de données avec 2 à 4 membres à virgule flottante identiques, flottant ou double.
 - **HVA (agrégat à vecteurs courts homogènes)** : type de données avec 2 à 4 membres de vecteurs courts identiques.
 
-## <a name="base-requirements"></a>Exigences de base
+## <a name="base-requirements"></a>Configuration de base requise
 
 La version ARM64 de Windows suppose qu’elle s’exécute à tout moment sur une architecture ARMv8 ou ultérieure. La prise en charge de la virgule flottante et du néon est supposée être présente dans le matériel.
 
@@ -43,7 +43,7 @@ La spécification ARMv8 décrit les nouveaux OpCodes de chiffrement et d’assis
 
 Comme avec la version ARM32 de Windows, sur ARM64 Windows s’exécute en mode Little-endian. Le basculement de endianness est difficile à réaliser sans prise en charge du mode noyau dans AArch64. il est donc plus facile à mettre en œuvre.
 
-## <a name="alignment"></a>Alignement
+## <a name="alignment"></a>Alignment
 
 Windows s’exécutant sur ARM64 permet au matériel du processeur de gérer les accès non alignés de manière transparente. Dans le cas d’une amélioration apportée par AArch32, cette prise en charge fonctionne également pour tous les accès d’entiers (y compris les accès à plusieurs mots) et pour les accès en virgule flottante.
 
@@ -65,21 +65,21 @@ Alignement de la disposition par défaut pour les valeurs globales et statiques�
 | 1 | 1 |
 | 2 - 7 | 4 |
 | 8 - 63 | 8 |
-| > = 64 | 16 |
+| >= 64 | 16 |
 
 ## <a name="integer-registers"></a>Registres d’entiers
 
 L’architecture AArch64 prend en charge les registres d’entiers 32 :
 
-| Registre | Volatil ? | Role |
+| Inscrire | Volatil ? | Role |
 | - | - | - |
-| x0 | Volatile | Registre des paramètres/brouillons 1, registre des résultats |
-| x1-x7 | Volatile | Paramètre/Registre de travail 2-8 |
-| x8-x15 | Volatile | Registres de travail |
-| x16-x17 | Volatile | Registres de travail intra-procédure-appel |
+| x0 | Volatil | Registre des paramètres/brouillons 1, registre des résultats |
+| x1-x 7 | Volatil | Paramètre/Registre de travail 2-8 |
+| x8-x15 | Volatil | Registres de travail |
+| X16-x17 | Volatil | Registres de travail intra-procédure-appel |
 | x18 | Non volatil | Registre de la plateforme : en mode noyau, pointe vers KPCR pour le processeur actuel. en mode utilisateur, pointe vers TEB |
 | x19-x28 | Non volatil | Registres de travail |
-| x29/fp | Non volatil | Pointeur de frame |
+| x29/FP | Non volatil | Pointeur de frame |
 | X30/LR | Non volatil | Lier les registres |
 
 Chaque registre est accessible en tant que valeur 64 bits complète (via x0-X30) ou en tant que valeur 32 bits (via W0-W30). 32 bits opérations zéro-étendent leurs résultats jusqu’à 64 bits.
@@ -94,12 +94,12 @@ Le pointeur de frame (x29) est requis pour la compatibilité avec le parcours de
 
 L’architecture AArch64 prend également en charge les registres à virgule flottante 32/SIMD, résumés ci-dessous :
 
-| Registre | Volatil ? | Role |
+| Inscrire | Volatil ? | Role |
 | - | - | - |
-| v0 | Volatile | Registre des paramètres/brouillons 1, registre des résultats |
-| v1-v7 | Volatile | Registres de paramètres/Scratch 2-8 |
-| v8-v15 | Non volatil | Registres de travail (seuls les 64 bits de poids faible sont non volatils) |
-| v16-v31 | Volatile | Registres de travail |
+| v0 | Volatil | Registre des paramètres/brouillons 1, registre des résultats |
+| v1-v7 | Volatil | Registres de paramètres/Scratch 2-8 |
+| V8-v15 | Non volatil | Registres de travail (seuls les 64 bits de poids faible sont non volatils) |
+| v16-v31 | Volatil | Registres de travail |
 
 Chaque registre est accessible en tant que valeur 128 bits complète (via v0-V31 ou Q0-Q31). Elle est accessible en tant que valeur 64 bits (via D0-D31), sous la forme d’une valeur 32 bits (via S0-S31), en tant que valeur 16 bits (via H0-H31) ou en tant que valeur 8 bits (via B0-B31). Les accès inférieurs à 128 bits accèdent uniquement aux bits inférieurs du Registre 128 bits complet. Ils laissent intacts les bits restants, sauf indication contraire. (AArch64 est différent de AArch32, où les registres plus petits ont été regroupés en plus des registres plus volumineux.)
 
@@ -117,7 +117,7 @@ Le registre de contrôle à virgule flottante (FPCR) a certaines exigences sur l
 
 Comme AArch32, la spécification AArch64 fournit trois registres « ID de thread » contrôlés par le système :
 
-| Registre | Role |
+| Inscrire | Role |
 | - | - |
 | TPIDR_EL0 | Réservé. |
 | TPIDRRO_EL0 | Contient le nombre de processeurs pour le processeur actuel. |
@@ -145,7 +145,7 @@ Cette étape est effectuée une seule fois, avant le début du traitement des ar
 
 Pour chaque argument de la liste, la première règle de correspondance de la liste suivante est appliquée. Si aucune règle ne correspond, l’argument est utilisé sans modification.
 
-1. Si le type d’argument est un type composite dont la taille ne peut pas être déterminée de manière statique par l’appelant et l’appelé, l’argument est copié en mémoire et l’argument est remplacé par un pointeur vers la copie. (Il n’y a pas de types deC++ ce type en C/mais ils existent dans d’autres langages ou dans les extensions de langage).
+1. Si le type d’argument est un type composite dont la taille ne peut pas être déterminée de manière statique par l’appelant et l’appelé, l’argument est copié en mémoire et l’argument est remplacé par un pointeur vers la copie. (Il n’existe pas de tels types en C/C++, mais ils existent dans d’autres langages ou dans les extensions de langage).
 
 1. Si le type d’argument est un HFA ou un HVA, l’argument est utilisé sans modification.
 
@@ -173,9 +173,9 @@ Pour chaque argument de la liste, les règles suivantes sont appliquées tour à
 
 1. Si l’argument a un alignement de 16, le NGRN est arrondi au nombre pair suivant.
 
-1. Si l’argument est un type intégral, que la taille de l’argument est égale à 16 et que NGRN est inférieur à 7, l’argument est copié dans x\[NGRN] et x\[NGRN + 1]. x\[NGRN] doit contenir le double mot adressé à la partie inférieure de la représentation de la mémoire de l’argument. Le NGRN est incrémenté de deux. L’argument a maintenant été alloué.
+1. Si l’argument est un type intégral, que la taille de l’argument est égale à 16 et que NGRN est inférieur à 7, l’argument est copié dans x\[NGRN] et x\[NGRN + 1]. x\[NGRN] doit contenir le double mot adressé à la limite inférieure de la représentation de la mémoire de l’argument. Le NGRN est incrémenté de deux. L’argument a maintenant été alloué.
 
-1. Si l’argument est un type composite et que la taille dans les mots doubles de l’argument n’est pas supérieure à 8 NGRN, l’argument est copié dans les registres à usage général consécutifs, à partir de x\[NGRN]. L’argument est passé comme s’il avait été chargé dans les registres à partir d’une adresse alignée sur deux mots, avec une séquence appropriée d’instructions LDR qui chargent des registres consécutifs à partir de la mémoire. Le contenu des parties inutilisées des registres n’est pas spécifié par cette norme. Le NGRN est incrémenté par le nombre de registres utilisés. L’argument a maintenant été alloué.
+1. Si l’argument est un type composite et que la taille dans les mots doubles de l’argument n’est pas supérieure à 8 NGRN, l’argument est copié dans des registres à usage général consécutifs, à partir\[de x NGRN]. L’argument est passé comme s’il avait été chargé dans les registres à partir d’une adresse alignée sur deux mots, avec une séquence appropriée d’instructions LDR qui chargent des registres consécutifs à partir de la mémoire. Le contenu des parties inutilisées des registres n’est pas spécifié par cette norme. Le NGRN est incrémenté par le nombre de registres utilisés. L’argument a maintenant été alloué.
 
 1. NGRN a la valeur 8.
 
@@ -197,7 +197,7 @@ Les fonctions qui acceptent un nombre variable d’arguments sont gérées diff�
 
 En fait, c’est la même chose que les règles C. 12 – C. 15 pour allouer des arguments à une pile imaginaire, où les 64 premiers octets de la pile sont chargés dans x0-x 7, et tous les arguments de pile restants sont placés normalement.
 
-## <a name="return-values"></a>Valeurs de retour
+## <a name="return-values"></a>Valeurs retournées
 
 Les valeurs intégrales sont retournées dans x0.
 
@@ -225,7 +225,7 @@ Tous les autres types utilisent la Convention suivante :
 
 À la suite du ABI présenté par ARM, la pile doit rester alignée sur 16 octets à tout moment. AArch64 contient une fonctionnalité matérielle qui génère des erreurs d’alignement de la pile chaque fois que le SP n’est pas aligné sur 16 octets et qu’un chargement ou un magasin relatif à un SP est effectué. Windows s’exécute avec cette fonctionnalité activée à tout moment.
 
-Les fonctions qui allouent 4 Ko ou plus de pile doivent s’assurer que chaque page avant la dernière page est touchée dans l’ordre. Cette action garantit qu’aucun code ne peut « effectuer une «Bond » sur» les pages de garde utilisées par Windows pour développer la pile. En général, le toucher est effectué par le programme d’assistance `__chkstk`, qui a une convention d’appel personnalisée qui passe l’allocation de pile totale divisée par 16 dans x15.
+Les fonctions qui allouent 4 Ko ou plus de pile doivent s’assurer que chaque page avant la dernière page est touchée dans l’ordre. Cette action garantit qu’aucun code ne peut « effectuer une «Bond » sur» les pages de garde utilisées par Windows pour développer la pile. En général, le toucher est effectué `__chkstk` par l’assistance, qui a une convention d’appel personnalisée qui passe l’allocation de pile totale divisée par 16 dans x15.
 
 ## <a name="red-zone"></a>Zone rouge
 
@@ -245,13 +245,13 @@ Le déroulement au cours de la gestion des exceptions est assisté par l’utili
 
 Le interface EABI ARM spécifie également un modèle de déroulement d’exception qui utilise des codes de déroulement. Toutefois, la spécification présentée est insuffisante pour le déroulement dans Windows, qui doit gérer les cas où l’ordinateur se trouve au milieu d’un prologue ou d’un épilogue de fonction.
 
-Le code généré dynamiquement doit être décrit avec des tables de fonctions dynamiques via des `RtlAddFunctionTable` et des fonctions associées, afin que le code généré puisse participer à la gestion des exceptions.
+Le code généré dynamiquement doit être décrit avec des tables de fonctions dynamiques `RtlAddFunctionTable` via et des fonctions associées, afin que le code généré puisse participer à la gestion des exceptions.
 
 ## <a name="cycle-counter"></a>Compteur de cycles
 
-Tous les processeurs ARMv8 sont requis pour prendre en charge un registre de compteur de cycle, un registre 64 bits que Windows configure pour être lisible à n’importe quel niveau d’exception, y compris le mode utilisateur. Il est accessible via le registre de PMCCNTR_EL0 spécial, à l’aide de l’opcode MSR dans le code assembleur, ou du `_ReadStatusReg`C++ intrinsèque dans C/code.
+Tous les processeurs ARMv8 sont requis pour prendre en charge un registre de compteur de cycle, un registre 64 bits que Windows configure pour être lisible à n’importe quel niveau d’exception, y compris le mode utilisateur. Elle est accessible via le registre de PMCCNTR_EL0 spécial, à l’aide de l’opcode MSR dans le code `_ReadStatusReg` assembleur, ou de l’intrinsèque dans le code C/C++.
 
-Le compteur de cycle ici est un compteur de cycle réel, et non une horloge murale. La fréquence de comptage varie en fonction de la fréquence du processeur. Si vous estimez que vous devez connaître la fréquence du compteur de cycles, vous ne devriez pas utiliser le compteur de cycle. Au lieu de cela, vous souhaitez mesurer l’heure de l’horloge, pour laquelle vous devez utiliser `QueryPerformanceCounter`.
+Le compteur de cycle ici est un compteur de cycle réel, et non une horloge murale. La fréquence de comptage varie en fonction de la fréquence du processeur. Si vous estimez que vous devez connaître la fréquence du compteur de cycles, vous ne devriez pas utiliser le compteur de cycle. Au lieu de cela, vous souhaitez mesurer l’heure de l’horloge, pour `QueryPerformanceCounter`laquelle vous devez utiliser.
 
 ## <a name="see-also"></a>Voir aussi
 

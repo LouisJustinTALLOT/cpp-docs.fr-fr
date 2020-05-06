@@ -1,5 +1,5 @@
 ---
-title: 'Procédure : Créer une version Release'
+title: 'Comment : créer une version release'
 ms.date: 11/04/2016
 helpviewer_keywords:
 - Win32, release build
@@ -12,13 +12,13 @@ ms.contentlocale: fr-FR
 ms.lasthandoff: 04/23/2019
 ms.locfileid: "62273519"
 ---
-# <a name="how-to-create-a-release-build"></a>Procédure : Créer une version Release
+# <a name="how-to-create-a-release-build"></a>Comment : créer une version release
 
 ### <a name="to-generate-a-release-build-of-your-program"></a>Pour générer une version Release de votre programme
 
-1. Sélectionnez **version** à partir de la **Configuration de la Solution** la liste déroulante, qui se trouve sur le **Standard** barre d’outils.
+1. Sélectionnez **version** dans la liste déroulante Configuration de la **solution** , située dans la barre d’outils **standard** .
 
-1. Sur le **Build** menu, cliquez sur **Build**.
+1. Dans le menu **générer** , cliquez sur **générer**.
 
 ## <a name="see-also"></a>Voir aussi
 

@@ -5,11 +5,11 @@ helpviewer_keywords:
 - abort function
 ms.assetid: caa62d67-ffc4-4481-87a4-0c1e2b0f537c
 ms.openlocfilehash: c4fe22916388eead98ac70fc81a6731b7db95ae2
-ms.sourcegitcommit: f4be868c0d1d78e550fba105d4d3c993743a1f4b
-ms.translationtype: HT
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56152805"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62313452"
 ---
 # <a name="abort-function-c"></a>abort, fonction (C)
 
@@ -19,4 +19,4 @@ La fonction **abort** ne ferme pas les fichiers ouverts ou temporaires. Elle ne 
 
 ## <a name="see-also"></a>Voir aussi
 
-[Fonctions des bibliothèques](../c-language/library-functions.md)
+[Fonctions de la bibliothèque](../c-language/library-functions.md)

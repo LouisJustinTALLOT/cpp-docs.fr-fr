@@ -16,11 +16,11 @@ helpviewer_keywords:
 - operators [C++], indirection
 ms.assetid: 10d62b00-12ba-4ea9-a2d5-09ac29ca2232
 ms.openlocfilehash: 146f84c90aa56b5abf6ae5212c1729022cb7e4dc
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
-ms.translationtype: HT
+ms.sourcegitcommit: c6f8e6c2daec40ff4effd8ca99a7014a3b41ef33
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50534366"
+ms.lasthandoff: 04/24/2019
+ms.locfileid: "64343893"
 ---
 # <a name="indirection-and-address-of-operators"></a>Indirection et opérateurs d'adresse
 
@@ -38,9 +38,9 @@ Si la valeur de pointeur n’est pas valide, le résultat de l’opérateur d’
 
 - Le pointeur spécifie une adresse non utilisée par le programme en cours d'exécution.
 
-L’opérateur address-of unaire (**&**) prend l’adresse de son opérande. L’opérande doit être soit une lvalue qui désigne un objet qui n’est pas déclaré __register__ et n’est pas un champ de bits, soit le résultat d’un opérateur __&#42;__ unaire ou un opérateur (__&#91;&#93;__) de déréférencement de tableau ou un désignateur de fonction. Le résultat est de type *pointeur-à-type* pour un opérande de type *type*.
+L’opérateur unaire Address-of**&**() donne l’adresse de son opérande. L’opérande doit être soit une lvalue qui désigne un objet qui n’est pas déclaré __register__ et n’est pas un champ de bits, soit le résultat d’un opérateur __&#42;__ unaire ou un opérateur (__&#91;&#93;__) de déréférencement de tableau ou un désignateur de fonction. Le résultat est de type *pointeur-à-type* pour un opérande de type *type*.
 
-Si l’opérande est le résultat d’un opérateur __&#42;__ unaire, aucun opérateur n’est évalué et le résultat est comme si les deux étaient omis. Le résultat n’est pas une lvalue et les contraintes sur les opérateurs s’appliquent toujours. Si l’opérande est le résultat d’un opérateur __&#91;&#93;__, ni l’opérateur __&__ ni l’opérateur __&#42;__ unaire impliqué par l’opérateur __&#91;&#93;__ ne sont évalués. Le résultat a le même effet que la suppression de l’opérateur __&__ et le remplacement de l’opérateur __&#91;&#93;__ par un opérateur __+__. Sinon, le résultat est un pointeur vers l’objet ou la fonction désignée par l’opérande.
+Si l’opérande est le résultat d’un opérateur __&#42;__ unaire, aucun opérateur n’est évalué et le résultat est comme si les deux étaient omis. Le résultat n’est pas une lvalue et les contraintes sur les opérateurs s’appliquent toujours. Si l’opérande est le résultat d’un opérateur __&#91;&#93;__, ni l’opérateur __&__ ni l’opérateur __&#42;__ unaire impliqué par l’opérateur __&#91;&#93;__ ne sont évalués. Le résultat a le même effet que la suppression __&__ de l’opérateur et la modification de l' __+__ opérateur __&#91;&#93;__ en opérateur. Sinon, le résultat est un pointeur vers l’objet ou la fonction désignée par l’opérande.
 
 ## <a name="examples"></a>Exemples
 
@@ -52,7 +52,7 @@ int a[20];
 double d;
 ```
 
-Cette déclaration utilise l’opérateur address-of (**&**) pour prendre l’adresse du sixième élément du tableau `a`. Le résultat est stocké dans la variable pointeur `pa` :
+Cette instruction utilise l’opérateur d’adresse (**&**) pour prendre l’adresse du sixième élément du tableau. `a` Le résultat est stocké dans la variable pointeur `pa` :
 
 ```C
 pa = &a[5];
