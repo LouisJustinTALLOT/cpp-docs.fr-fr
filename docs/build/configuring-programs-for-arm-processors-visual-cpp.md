@@ -15,25 +15,25 @@ Cette section de la documentation contient des informations sur l’utilisation 
 
 ## <a name="in-this-section"></a>Dans cette section
 
-[Vue d’ensemble des conventions Abi ARM](overview-of-arm-abi-conventions.md)\
+[Vue d’ensemble des conventions ABI ARM](overview-of-arm-abi-conventions.md)\
 Décrit l’interface binaire d’application utilisée par Windows on ARM pour l’utilisation des registres, les conventions d’appel et la gestion des exceptions.
 
-[Vue d’ensemble des conventions Abi ARM64](arm64-windows-abi-conventions.md)\
+[Vue d’ensemble des conventions ABI ARM64](arm64-windows-abi-conventions.md)\
 Décrit l’interface binaire d’application utilisée par Windows sur ARM64 pour l’utilisation des registres, les conventions d’appel et la gestion des exceptions.
 
 [Problèmes courants de migration MSVC ARM](common-visual-cpp-arm-migration-issues.md)\
 Décrit les éléments de code C++ généralement considérés comme étant portables entre les architectures, mais qui produisent sur ARM des résultats différents de ceux constatés sur x86 et x64.
 
-\ de [gestion des exceptions ARM](arm-exception-handling.md)
+[Gestion des exceptions ARM](arm-exception-handling.md)\
 Décrit le schéma d'encodage pour le déroulement de la pile pendant le traitement des exceptions structurées dans Windows on ARM.
 
-\ de [gestion des exceptions ARM64](arm64-exception-handling.md)
+[Gestion des exceptions ARM64](arm64-exception-handling.md)\
 Décrit le schéma d’encodage pour le déroulement de pile pendant la gestion des exceptions structurées dans Windows sur ARM64.
 
-## <a name="related-sections"></a>Rubriques connexes
+## <a name="related-sections"></a>Sections connexes
 
 [Intrinsèques ARM](../intrinsics/arm-intrinsics.md)\
 Décrit les intrinsèques du compilateur pour les processeurs qui utilisent l’architecture ARM.
 
-\ [intrinsèques ARM64](../intrinsics/arm-intrinsics.md)
+[ARM64 intrinsèques](../intrinsics/arm-intrinsics.md)\
 Décrit les intrinsèques du compilateur pour les processeurs qui utilisent l’architecture ARM64.

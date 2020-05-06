@@ -18,7 +18,7 @@ Une valeur à virgule flottante qui est convertie en un autre type à virgule fl
 
 Une valeur à virgule flottante qui est convertie en un type intégral est d’abord tronquée en ignorant toute valeur fractionnaire. Si cette valeur tronquée est représentable dans le type de résultat, le résultat doit être cette valeur. Lorsqu’il n’est pas représentable, la valeur de résultat n’est pas définie.
 
-**Section spécifique à Microsoft**
+**Spécifique à Microsoft**
 
 Les compilateurs Microsoft utilisent la représentation IEEE-754 binary32 pour les valeurs **float** et la représentation binary64 pour **long double** et **double**. Étant donné que les valeurs **long double** et **double** utilisent la même représentation, elles ont la même plage et la même précision.
 
@@ -34,16 +34,16 @@ Pour la conversion en types entiers au moins aussi grand que **long**, une conve
 
 - Pour la conversion en type **unsigned** long ou **unsigned long long**, le résultat de la conversion d’une valeur hors limites peut être une valeur autre que la valeur représentable la plus élevée ou la plus basse. Le fait que le résultat soit une valeur Sentinel ou saturée dépend des options du compilateur et de l’architecture cible. Les futures versions du compilateur peuvent retourner une valeur saturée ou Sentinel à la place.
 
-**FIN de la section spécifique à Microsoft**
+**FIN spécifique à Microsoft**
 
 Le tableau suivant répertorie les conversions des types de flottant.
 
 ## <a name="table-of-conversions-from-floating-point-types"></a>Table des conversions des types à virgule flottante
 
-|From|À|Méthode|
+|À partir|À|Méthode|
 |----------|--------|------------|
 |**float**|**char**|Convertir en **long**. Convertir **long** en **char**|
-|**float**|**short**|Convertir en **long**. Convertir **long** en **short**|
+|**float**|**Résumé**|Convertir en **long**. Convertir **long** en **short**|
 |**float**|**int**|Tronquer à la virgule décimale. Si le résultat est trop grand pour être représenté sous la forme **int**, le résultat n’est pas défini.|
 |**float**|**long**|Tronquer à la virgule décimale. Si le résultat est trop grand pour être représenté comme **long**, il n'est pas défini.|
 |**float**|**long long**|Tronquer à la virgule décimale. Si le résultat est trop grand pour être représenté comme **long long**, le résultat n’est pas défini.|
@@ -51,18 +51,18 @@ Le tableau suivant répertorie les conversions des types de flottant.
 |**float**|**unsigned short**|Convertir en **long**. Convertir **long** en **unsigned short**|
 |**float**|**unsigned**|Tronquer à la virgule décimale. Si le résultat est trop grand pour être représenté comme **non signé**, le résultat n’est pas défini.|
 |**float**|**unsigned long**|Tronquer à la virgule décimale. Si le résultat est trop grand pour être représenté comme **unsigned long**, le résultat n’est pas défini.|
-|**float**|**long long non signé**|Tronquer à la virgule décimale. Si le résultat est trop grand pour être représenté comme **unsigned long long**, le résultat n’est pas défini.|
+|**float**|**unsigned long long**|Tronquer à la virgule décimale. Si le résultat est trop grand pour être représenté comme **unsigned long long**, le résultat n’est pas défini.|
 |**float**|**double**|Représente un **double**.|
 |**float**|**long double**|Représente une **valeur de type long double**.|
 |**double**|**char**|Convertir en **float**. Convertir **float** en **char**|
-|**double**|**short**|Convertir en **float**. Convertir **float** en **short**|
+|**double**|**Résumé**|Convertir en **float**. Convertir **float** en **short**|
 |**double**|**int**|Tronquer à la virgule décimale. Si le résultat est trop grand pour être représenté sous la forme **int**, le résultat n’est pas défini.|
 |**double**|**long**|Tronquer à la virgule décimale. Si le résultat est trop grand pour être représenté comme **long**, il n'est pas défini.|
 |**double**|**unsigned char**|Convertir en **long**; convertir **long** en **char non signé**|
 |**double**|**unsigned short**|Convertir en **long**. Convertir **long** en **unsigned short**|
 |**double**|**unsigned**|Tronquer à la virgule décimale. Si le résultat est trop grand pour être représenté comme **non signé**, le résultat n’est pas défini.|
 |**double**|**unsigned long**|Tronquer à la virgule décimale. Si le résultat est trop grand pour être représenté comme **unsigned long**, le résultat n’est pas défini.|
-|**double**|**long long non signé**|Tronquer à la virgule décimale. Si le résultat est trop grand pour être représenté comme **unsigned long long**, le résultat n’est pas défini.|
+|**double**|**unsigned long long**|Tronquer à la virgule décimale. Si le résultat est trop grand pour être représenté comme **unsigned long long**, le résultat n’est pas défini.|
 |**double**|**float**|Représenter comme **float**. Si la valeur **double** ne peut pas être représentée exactement comme **float**, une perte de précision se produit. Si la valeur est trop grande pour être représentée comme **float**, le résultat n'est pas défini.|
 |**double**|**long double**|La valeur **long double** est traitée comme **double**.|
 
@@ -70,4 +70,4 @@ Les conversions de **long double** suivent la même méthode que les conversions
 
 ## <a name="see-also"></a>Voir aussi
 
-[Conversions d’assignation](../c-language/assignment-conversions.md)
+[Conversions d’affectation](../c-language/assignment-conversions.md)

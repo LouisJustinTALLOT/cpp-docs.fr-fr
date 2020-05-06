@@ -8,11 +8,11 @@ helpviewer_keywords:
 - void pointers
 ms.assetid: 3facc56f-06d3-4570-b1a2-7d4927b83086
 ms.openlocfilehash: 2d907dbcf4f826d364fb68ce65f7d44c6cfe97cd
-ms.sourcegitcommit: f4be868c0d1d78e550fba105d4d3c993743a1f4b
-ms.translationtype: HT
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56147241"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62312407"
 ---
 # <a name="conversions-to-and-from-pointer-types"></a>Conversions vers et depuis les types pointeur
 
@@ -34,7 +34,7 @@ Inversement, un type intégral peut être converti en un type pointeur selon les
 
 - Si la taille du type intégral est différente de la taille du type pointeur, le type intégral est d’abord converti en la taille du pointeur, en utilisant les chemins de conversion indiqués dans les tableaux [Conversion de types intégraux signés](../c-language/conversions-from-signed-integral-types.md) et [Conversion de types intégraux non signés](../c-language/conversions-from-unsigned-integral-types.md). Il est ensuite traité comme une valeur de pointeur.
 
-Une expression constante intégrale avec la valeur 0 ou cette même expression castée en type **void** <strong>\*</strong> peut être convertie par un cast de type, par assignation ou par comparaison en un pointeur de tout type. Il en résulte un pointeur null qui équivaut à un autre pointeur null du même type, mais ce pointeur null n'est pas égal à un pointeur vers une fonction ou un objet. Les entiers autres que la constante 0 peuvent être convertis en type pointeur, mais le résultat n'est pas portable.
+Une expression constante intégrale avec la valeur 0 ou une telle conversion d’expression en type **void** <strong>\*</strong> peut être convertie par un cast de type, par assignation ou par comparaison à un pointeur de tout type. Il en résulte un pointeur null qui équivaut à un autre pointeur null du même type, mais ce pointeur null n'est pas égal à un pointeur vers une fonction ou un objet. Les entiers autres que la constante 0 peuvent être convertis en type pointeur, mais le résultat n'est pas portable.
 
 ## <a name="see-also"></a>Voir aussi
 

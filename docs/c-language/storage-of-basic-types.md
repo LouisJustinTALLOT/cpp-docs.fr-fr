@@ -38,10 +38,10 @@ Le tableau suivant résume le stockage associé à chaque type de base.
 |----------|-------------|
 |**char**, **unsigned char**, signed **char**|1 octet|
 |**short**, **unsigned short**|2 octets|
-|**int**, **unsigned int**|4 octets|
-|**long**, **unsigned long**|4 octets|
+|**int**, **unsigned int**|4 octets|
+|**long**, **unsigned long**|4 octets|
 |**long long**, **unsigned long long**|8 octets|
-|**float**|4 octets|
+|**float**|4 octets|
 |**double**|8 octets|
 |**long double**|8 octets|
 

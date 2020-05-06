@@ -3,11 +3,11 @@ title: Dépassement des valeurs à virgule flottante
 ms.date: 11/04/2016
 ms.assetid: 78af8016-643c-47db-b4f1-7f06cb4b243e
 ms.openlocfilehash: 93230b50b81ede44a9c55406db1566df2660c1ba
-ms.sourcegitcommit: f4be868c0d1d78e550fba105d4d3c993743a1f4b
-ms.translationtype: HT
+ms.sourcegitcommit: c6f8e6c2daec40ff4effd8ca99a7014a3b41ef33
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56149924"
+ms.lasthandoff: 04/24/2019
+ms.locfileid: "64344061"
 ---
 # <a name="underflow-of-floating-point-values"></a>Dépassement des valeurs à virgule flottante
 
@@ -17,4 +17,4 @@ Un dépassement de capacité négatif à virgule flottante ne définit pas l'exp
 
 ## <a name="see-also"></a>Voir aussi
 
-[Fonctions des bibliothèques](../c-language/library-functions.md)
+[Fonctions de la bibliothèque](../c-language/library-functions.md)

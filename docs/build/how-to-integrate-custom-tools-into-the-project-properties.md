@@ -1,5 +1,5 @@
 ---
-title: 'Procédure : Intégrer des outils personnalisés dans les propriétés du projet'
+title: 'Comment : intégrer les outils personnalisés dans les propriétés du projet'
 ms.date: 05/16/2019
 helpviewer_keywords:
 - 'msbuild (c++), howto: integrate custom tools'
@@ -11,7 +11,7 @@ ms.contentlocale: fr-FR
 ms.lasthandoff: 05/17/2019
 ms.locfileid: "65837029"
 ---
-# <a name="how-to-integrate-custom-tools-into-the-project-properties"></a>Procédure : Intégrer des outils personnalisés dans les propriétés du projet
+# <a name="how-to-integrate-custom-tools-into-the-project-properties"></a>Comment : intégrer les outils personnalisés dans les propriétés du projet
 
 Vous pouvez ajouter des options d’outils personnalisés à la fenêtre **Pages de propriétés** de Visual Studio en créant un fichier de schéma XML sous-jacent.
 
@@ -37,4 +37,4 @@ Ce document explique comment créer un fichier dans un répertoire défini qui c
 
 ## <a name="see-also"></a>Voir aussi
 
-[MSBuild sur la ligne de commande – C++](msbuild-visual-cpp.md)
+[MSBuild sur la ligne de commande-C++](msbuild-visual-cpp.md)

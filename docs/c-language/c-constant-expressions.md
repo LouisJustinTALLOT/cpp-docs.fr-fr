@@ -7,11 +7,11 @@ helpviewer_keywords:
 - expressions [C++], constant
 ms.assetid: d48a6c47-e44c-4be2-9c8b-7944c7ef8de7
 ms.openlocfilehash: f6984c47ef8acde462a8e92e01b72ef26a61eddc
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
-ms.translationtype: HT
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50490530"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62325739"
 ---
 # <a name="c-constant-expressions"></a>Expressions constantes C
 
@@ -19,23 +19,23 @@ Une expression constante est évaluée au moment de la compilation, et non au mo
 
 ## <a name="syntax"></a>Syntaxe
 
-*constant-expression* :<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*conditional-expression*
+*expression constante*:<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*expression conditionnelle*
 
-*conditional-expression* :<br/>
+*expression conditionnelle*:<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*Expression OU logique*<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*logical-OR-expression* **?** *expression* **:** *conditional-expression*
+&nbsp;&nbsp;&nbsp;&nbsp;*logique-or-expression* **?** *expression* **:** *Conditional-expression*
 
-*expression* :<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*assignment-expression*<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*expression* **,** *assignment-expression*
+*expression*:<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*assignation-expression*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*expression* **,** *assignation-expression*
 
 *assignment-expression* :<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*conditional-expression*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*expression conditionnelle*<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*unary-expression* *assignment-operator* *assignment-expression*
 
 *assignment-operator* : un des éléments suivants :<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**=** **&#42;=** **/=** **%=** **+=** **-=** **\<\<=** **>>=** **&=** **^=** **&#124;=**
+&nbsp;&nbsp;&nbsp;&nbsp;**=****&#42;** **/=** **%=** = **+=** **-=** **&#124;** = ** \< \< ** **>>=** **&=** **^=**
 
 Les éléments non terminaux pour les déclarateurs de struct, l’énumérateur, le déclarateur direct, le déclarateur direct-abstract et l’instruction étiquetée contiennent l’élément non terminal *constant-expression*.
 
