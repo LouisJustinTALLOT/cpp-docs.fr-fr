@@ -41,20 +41,20 @@ helpviewer_keywords:
 - _outpw function
 - _outp function
 ms.assetid: c200fe22-41f6-46fd-b0be-ebb805b35181
-ms.openlocfilehash: 03d3df0bae9c2fa3cdd107f3c0de65105077c401
-ms.sourcegitcommit: 573b36b52b0de7be5cae309d45b68ac7ecf9a6d8
+ms.openlocfilehash: 3d0342ae94276c7875bcb737b0d1a64aabafd235
+ms.sourcegitcommit: 6b749db14b4cf3a2b8d581fda6fdd8cb98bc3207
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/10/2019
-ms.locfileid: "74988369"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82825926"
 ---
 # <a name="outp-outpw-_outp-_outpw-_outpd"></a>outp, outpw, _outp, _outpw, _outpd
 
 Génère, sur un port, un octet (`outp`, `_outp`), un mot (`outpw`, `_outpw`) ou un mot double (`_outpd`).
 
 > [!IMPORTANT]
-> Ces fonctions sont obsolètes. Depuis Visual Studio 2015, elles ne sont pas disponibles dans la bibliothèque CRT.  
-> Cette API ne peut pas être utilisée dans les applications qui s’exécutent dans le Windows Runtime. Pour plus d’informations, consultez [Fonctions CRT non prises en charge dans les applications de la plateforme Windows universelle](../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
+> Ces fonctions sont obsolètes. À compter de Visual Studio 2015, ils ne sont pas disponibles dans le CRT. \
+> Cette API ne peut pas être utilisée dans les applications qui s'exécutent dans le Windows Runtime. Pour plus d’informations, consultez [Fonctions CRT non prises en charge dans les applications de la plateforme Windows universelle](../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -73,10 +73,10 @@ unsigned long _outpd(
 );
 ```
 
-### <a name="parameters"></a>Parameters
+### <a name="parameters"></a>Paramètres
 
-\ de *port*
-Numéro du port.
+*importer*\
+Numéro de port.
 
 *databyte, dataword*\
 Valeurs de sortie.
@@ -85,15 +85,15 @@ Valeurs de sortie.
 
 Les fonctions retournent la sortie des données. Aucun retour d'erreur.
 
-## <a name="remarks"></a>Notes
+## <a name="remarks"></a>Notes 
 
-Les fonctions `_outp`, `_outpw`et `_outpd` écrivent respectivement un octet, un mot et un mot double sur le port de sortie spécifié. L’argument *port* peut être un entier non signé dans la plage 0-65 535, *databyte* peut être un entier dans la plage 0-255 et *dataword* peut être respectivement toute valeur de la plage d’un entier, un entier court non signé et un entier long non signé.
+Les fonctions `_outp`, `_outpw`et `_outpd` écrivent respectivement un octet, un mot et un mot double sur le port de sortie spécifié. L’argument *port* peut être un entier non signé compris entre 0 et 65 535 ; *databyte* peut être n’importe quel entier dans la plage 0-255 ; et *dataword* peuvent être n’importe quelle valeur dans la plage d’un entier, un entier Short non signé et un entier long non signé, respectivement.
 
 Étant donné que ces fonctions écrivent directement vers un port d’E/S, elles ne peuvent pas être utilisées dans le code utilisateur. Pour plus d’informations sur l’utilisation des ports d’E/S dans ces systèmes d’exploitation, recherchez « Communications série dans Win32 » sur MSDN.
 
-Les noms des `outp` et des `outpw` sont des noms plus anciens et dépréciés pour les fonctions `_outp` et `_outpw`. Pour plus d’informations, consultez [noms de fonctions POSIX](../error-messages/compiler-warnings/compiler-warning-level-3-c4996.md#posix-function-names).
+Les `outp` noms `outpw` et sont des noms plus anciens et déconseillés pour les `_outp` fonctions et `_outpw` . Pour plus d’informations, consultez [noms de fonctions POSIX](../error-messages/compiler-warnings/compiler-warning-level-3-c4996.md#posix-function-names).
 
-## <a name="requirements"></a>Configuration requise pour
+## <a name="requirements"></a>Configuration requise
 
 |Routine|En-tête requis|
 |-------------|---------------------|
@@ -101,7 +101,7 @@ Les noms des `outp` et des `outpw` sont des noms plus anciens et dépréciés po
 |`_outpw`|\<conio.h>|
 |`_outpd`|\<conio.h>|
 
-Pour plus d’informations sur la compatibilité, voir [Compatibilité](../c-runtime-library/compatibility.md).
+Pour plus d’informations sur la compatibilité, consultez [Compatibility](../c-runtime-library/compatibility.md).
 
 ## <a name="libraries"></a>Bibliothèques
 
@@ -109,5 +109,5 @@ Toutes les versions des [bibliothèques Runtime C](../c-runtime-library/crt-libr
 
 ## <a name="see-also"></a>Voir aussi
 
-[E/S de console et de port](../c-runtime-library/console-and-port-i-o.md)\
+[E/s de console et de port](../c-runtime-library/console-and-port-i-o.md)\
 [INP, inpw, _inp, _inpw, _inpd](../c-runtime-library/inp-inpw-inpd.md)

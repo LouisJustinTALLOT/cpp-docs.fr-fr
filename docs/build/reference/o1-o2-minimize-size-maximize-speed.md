@@ -16,12 +16,12 @@ helpviewer_keywords:
 - O1 compiler option [C++]
 - /O1 compiler option [C++]
 ms.assetid: 2d1423f5-53d9-44da-8908-b33a351656c2
-ms.openlocfilehash: d33fe6bceae09267fd3f79ffe3dc26864e87c764
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 3daf5dd5f9912194fd5d8aaeb4c7a312be142b69
+ms.sourcegitcommit: 6b749db14b4cf3a2b8d581fda6fdd8cb98bc3207
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62320355"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82825341"
 ---
 # <a name="o1-o2-minimize-size-maximize-speed"></a>/O1, /O2 (Réduire la taille, augmenter la vitesse)
 
@@ -29,29 +29,31 @@ Sélectionne un ensemble prédéfini d’options qui affectent la taille et la v
 
 ## <a name="syntax"></a>Syntaxe
 
-> /O1 /O2
+> O1
+> /O2
 
-## <a name="remarks"></a>Notes
+## <a name="remarks"></a>Notes 
 
-Le **/O1** et **/O2** options du compilateur constituent un moyen rapide pour définir plusieurs options d’optimisation spécifiques à la fois. Le **/O1** option définit les options d’optimisation qui créent le code plus petit dans la plupart des cas. Le **/O2** option définit les options qui créent le code le plus rapide dans la plupart des cas. Le **/O2** option est la valeur par défaut pour les versions release. Ce tableau montre les options spécifiques qui sont définies par **/O1** et **/O2**:
+Les options du compilateur **/O1** et **/O2** sont un moyen rapide de définir plusieurs options d’optimisation spécifiques à la fois. L’option **/O1** définit les options d’optimisation individuelles qui créent le plus petit code dans la majorité des cas. L’option **/O2** définit les options qui créent le code le plus rapide dans la majorité des cas. L’option **/O2** est la valeur par défaut pour les versions release. Ce tableau montre les options spécifiques qui sont définies par **/O1** et **/O2**:
 
 |Option|Équivalent à|
 |------------|-------------------|
-|**/ O1** (réduire la taille)|[/Og](og-global-optimizations.md) [/Os](os-ot-favor-small-code-favor-fast-code.md) [/Oy](oy-frame-pointer-omission.md) [/Ob2](ob-inline-function-expansion.md) [/GF](gf-eliminate-duplicate-strings.md)  [ /Gy](gy-enable-function-level-linking.md)|
-|**/ O2** (augmenter la vitesse)|[/Og](og-global-optimizations.md) [/Oi](oi-generate-intrinsic-functions.md) [/Ot](os-ot-favor-small-code-favor-fast-code.md) [/Oy](oy-frame-pointer-omission.md) [/Ob2](ob-inline-function-expansion.md) [/GF](gf-eliminate-duplicate-strings.md)  [ /Gy](gy-enable-function-level-linking.md)|
+|**/O1** (réduire la taille)|[/Og](og-global-optimizations.md) [/OS](os-ot-favor-small-code-favor-fast-code.md) [/Oy](oy-frame-pointer-omission.md) [/OB2](ob-inline-function-expansion.md) [/GF](gf-eliminate-duplicate-strings.md) [/Gy](gy-enable-function-level-linking.md)|
+|**/O2** (maximiser la vitesse)|[/Og](og-global-optimizations.md) [/OI](oi-generate-intrinsic-functions.md) [/OT](os-ot-favor-small-code-favor-fast-code.md) [/Oy](oy-frame-pointer-omission.md) [/OB2](ob-inline-function-expansion.md) [/GF](gf-eliminate-duplicate-strings.md) [/Gy](gy-enable-function-level-linking.md)|
 
-**/ O1** et **/O2** s’excluent mutuellement.
+**/O1** et **/O2** s’excluent mutuellement.
 
 > [!NOTE]
-> **x86 spécifique** ces options impliquent l’utilisation de l’Omission du pointeur Frame ([/Oy](oy-frame-pointer-omission.md)) option.
+> **Spécifique à x86**\
+> Ces options impliquent l’utilisation de l’option d’omission du pointeur de frame ([/Oy](oy-frame-pointer-omission.md)).
 
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Pour définir cette option du compilateur dans l'environnement de développement Visual Studio
 
-1. Ouvrez la boîte de dialogue **Pages de propriété** du projet. Pour plus d’informations, consultez [propriétés de compilateur et de build C++ définie dans Visual Studio](../working-with-project-properties.md).
+1. Ouvrez la boîte de dialogue **Pages de propriété** du projet. Pour plus d’informations, consultez [Définir le compilateur C++ et les propriétés de build dans Visual Studio](../working-with-project-properties.md).
 
-1. Sous **propriétés de Configuration**, ouvrez **C/C++** , puis choisissez le **optimisation** page de propriétés.
+1. Sous **Propriétés de configuration**, ouvrez **C/C++** , puis choisissez la page de propriétés **optimisation** .
 
-1. Modifier le **optimisation** propriété.
+1. Modifiez la propriété **Optimization** .
 
 ### <a name="to-set-this-compiler-option-programmatically"></a>Pour définir cette option du compilateur par programmation
 
@@ -59,7 +61,7 @@ Le **/O1** et **/O2** options du compilateur constituent un moyen rapide pour d�
 
 ## <a name="see-also"></a>Voir aussi
 
-[/O, options (Optimiser le code)](o-options-optimize-code.md)<br/>
+[/O (Optimiser le code), options](o-options-optimize-code.md)<br/>
 [Options du compilateur MSVC](compiler-options.md)<br/>
 [Syntaxe de la ligne de commande du compilateur MSVC](compiler-command-line-syntax.md)<br/>
 [/EH (Modèle de gestion des exceptions)](eh-exception-handling-model.md)
