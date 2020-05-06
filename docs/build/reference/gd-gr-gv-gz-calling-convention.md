@@ -20,12 +20,12 @@ helpviewer_keywords:
 - Gv compiler option [C++]
 - /Gr compiler option [C++]
 ms.assetid: fd3110cb-2d77-49f2-99cf-a03f9ead00a3
-ms.openlocfilehash: ab10ac1a4d0c327ff4d0ae54620f3fde752e020b
-ms.sourcegitcommit: eff68e4e82be292a5664616b16a526df3e9d1cda
+ms.openlocfilehash: 73fce079a98a3f4afaa35f8b8c6630fc8a9b4ca4
+ms.sourcegitcommit: 6b749db14b4cf3a2b8d581fda6fdd8cb98bc3207
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80150808"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82825524"
 ---
 # <a name="gd-gr-gv-gz-calling-convention"></a>/Gd, /Gr, /Gv, /Gz (Convention d'appel)
 
@@ -33,20 +33,20 @@ Ces options déterminent l’ordre dans lequel les arguments de fonction sont en
 
 ## <a name="syntax"></a>Syntaxe
 
-> **/Gd**<br/>
-> **/Gr**<br/>
-> **/Gv**<br/>
-> **/Gz**
+> **/GD**\
+> **/GR**\
+> **/GV**\
+> **/GZ**
 
-## <a name="remarks"></a>Notes
+## <a name="remarks"></a>Notes 
 
 **/Gd**, le paramètre par défaut, spécifie la convention d’appel [__cdecl](../../cpp/cdecl.md) pour toutes les fonctions hormis les fonctions membres C++ et les fonctions marquées [__stdcall](../../cpp/stdcall.md), [__fastcall](../../cpp/fastcall.md) ou [__vectorcall](../../cpp/vectorcall.md).
 
-**/Gr** spécifie la convention d’appel `__fastcall` pour toutes les fonctions hormis les fonctions membres C++, les fonctions nommées `main` et les fonctions marquées `__cdecl`, `__stdcall` ou `__vectorcall`. Toutes les fonctions `__fastcall` doivent avoir des prototypes. Cette convention d’appel est uniquement disponible dans les compilateurs qui ciblent x86 et est ignorée par les compilateurs qui ciblent d’autres architectures.
+**/GR** spécifie `__fastcall` la Convention d’appel pour toutes les fonctions à l’exception des `main`fonctions membres C++, des fonctions `__cdecl`nommées et des fonctions marquées, `__stdcall`ou `__vectorcall`. Toutes les fonctions `__fastcall` doivent avoir des prototypes. Cette convention d’appel est uniquement disponible dans les compilateurs qui ciblent x86 et est ignorée par les compilateurs qui ciblent d’autres architectures.
 
-**/Gz** spécifie la convention d’appel `__stdcall` pour toutes les fonctions hormis les fonctions membres C++, les fonctions nommées `main` et les fonctions marquées `__cdecl`, `__fastcall` ou `__vectorcall`. Toutes les fonctions `__stdcall` doivent avoir des prototypes. Cette convention d’appel est uniquement disponible dans les compilateurs qui ciblent x86 et est ignorée par les compilateurs qui ciblent d’autres architectures.
+**/Gz** spécifie `__stdcall` la Convention d’appel pour toutes les fonctions à l’exception des `main`fonctions membres C++, des fonctions `__cdecl`nommées et des fonctions marquées, `__fastcall`ou `__vectorcall`. Toutes les fonctions `__stdcall` doivent avoir des prototypes. Cette convention d’appel est uniquement disponible dans les compilateurs qui ciblent x86 et est ignorée par les compilateurs qui ciblent d’autres architectures.
 
-**/GV** spécifie la Convention d’appel de `__vectorcall` pour C++ toutes les fonctions, à l’exception des fonctions membres, des fonctions nommées `main`, des fonctions avec une liste d’arguments de variables `vararg` ou des fonctions marquées avec un attribut `__cdecl`, `__stdcall`ou `__fastcall` en conflit. Cette convention d’appel est disponible uniquement sur les architectures x86 et x64 qui prennent en charge/arch:SSE2 et ultérieur, et est ignorée par les compilateurs qui ciblent l’architecture ARM.
+**/GV** spécifie `__vectorcall` la Convention d’appel pour toutes les fonctions, à l’exception `main`des fonctions membres C++ `vararg` , des fonctions nommées, des fonctions avec une liste d’arguments `__cdecl`de `__stdcall`variable ou `__fastcall` des fonctions marquées avec un attribut, ou en conflit. Cette convention d’appel est disponible uniquement sur les architectures x86 et x64 qui prennent en charge/arch:SSE2 et ultérieur, et est ignorée par les compilateurs qui ciblent l’architecture ARM.
 
 Les fonctions qui prennent un nombre variable d’arguments doivent être marquées `__cdecl`.
 
@@ -74,7 +74,7 @@ Certains des arguments d’une fonction `__fastcall` sont passés dans les regis
 > [!NOTE]
 > Soyez prudent lorsque vous utilisez la convention d’appel `__fastcall` pour n’importe quelle fonction qui est écrite en langage assembleur inline. L’utilisation des registres peut entrer en conflit avec celle du compilateur.
 
-Pour C, la convention de nommage `__fastcall` utilise le nom de fonction précédé par un arobase ( **\@** ) suivi de la taille des arguments de la fonction en octets. Aucune conversion de casse n’est effectuée. Le compilateur utilise le modèle suivant pour la convention de nommage :
+Pour C, la `__fastcall` Convention d’affectation de noms utilise le nom de fonction précédé d’un**\@** arobase () suivi de la taille des arguments de la fonction en octets. Aucune conversion de casse n’est effectuée. Le compilateur utilise le modèle suivant pour la convention de nommage :
 
 `@function_name@number`
 
@@ -84,23 +84,23 @@ Lorsque vous utilisez la convention de nommage `__fastcall`, utilisez les fichie
 
 Les arguments d’une fonction `__stdcall` sont envoyés dans la pile de droite à gauche, et la fonction appelée enlève ces arguments de la pile avant d’être retournée.
 
-Pour C, la convention de nommage `__stdcall` utilise le nom de fonction précédé par un trait de soulignement ( **\_** ) et suivi d’un arobase ( **\@** ) et de la taille des arguments de la fonction en octets. Aucune conversion de casse n'a lieu. Le compilateur utilise le modèle suivant pour la convention de nommage :
+Pour C, la `__stdcall` Convention d’affectation de noms utilise le nom de fonction précédé d’un**\_** trait de soulignement () et**\@** suivi d’un arobase () et de la taille des arguments de la fonction en octets. Aucune conversion de casse n'a lieu. Le compilateur utilise le modèle suivant pour la convention de nommage :
 
 `_functionname@number`
 
 ## <a name="__vectorcall-specifics"></a>Spécificités de __vectorcall
 
-Les arguments entiers d’une fonction `__vectorcall` sont passés par valeur, en utilisant jusqu’à deux (sur x86) ou quatre (sur x64) des registres d’entiers, et jusqu’à six registres XMM pour les valeurs à virgule flottante et les vecteurs, et le reste est passé sur la pile de droite à gauche. La fonction appelée nettoie la pile avant d’être retournée. Les valeurs de retour à virgule flottante et vectorielles sont retournées dans XMM0.
+Les `__vectorcall` arguments entiers d’une fonction sont passés par valeur, en utilisant jusqu’à deux (sur x86) ou quatre (sur x64) des registres d’entiers, et jusqu’à six registres XMM pour les valeurs à virgule flottante et des vecteurs, et le reste est passé sur la pile de droite à gauche. La fonction appelée nettoie la pile avant d’être retournée. Les valeurs de retour à virgule flottante et vectorielles sont retournées dans XMM0.
 
-Pour C, la convention de nommage `__vectorcall` utilise le nom de fonction suivi de deux arobases ( **\@\@** ) et la taille des arguments de la fonction en octets. Aucune conversion de casse n'a lieu. Le compilateur utilise le modèle suivant pour la convention de nommage :
+Pour C, la `__vectorcall` Convention d’affectation de noms utilise le nom de la fonction suivi**\@** de deux signes arobase () et de la taille des arguments de la fonction en octets. Aucune conversion de casse n'a lieu. Le compilateur utilise le modèle suivant pour la convention de nommage :
 
 `functionname@@number`
 
-### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Pour définir cette option du compilateur dans l’environnement de développement Visual Studio
+### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Pour définir cette option du compilateur dans l'environnement de développement Visual Studio
 
-1. Ouvrez la boîte de dialogue **Pages de propriété** du projet. Pour plus d’informations, consultez [Définir le compilateur C++ et les propriétés de build dans Visual Studio](../working-with-project-properties.md).
+1. Ouvrez la boîte de dialogue **Pages de propriété** du projet. Pour plus d’informations, consultez [Définir le compilateur C++ et les propriétés de build dans Visual Studio](../working-with-project-properties.md).
 
-1. Sélectionnez la page de propriétés **C/C++**  > **Avancé**.
+1. Sélectionnez la page de propriétés**avancé** **C/C++** > .
 
 1. Modifiez la propriété **Convention d’appel**.
 
