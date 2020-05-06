@@ -14,34 +14,34 @@ helpviewer_keywords:
 - Tc compiler option [C++]
 - /Tp compiler option [C++]
 - -Tp compiler option [C++]
-ms.openlocfilehash: c93da6d2498d46e4b7bf3ad37dde852bb6bc82a1
-ms.sourcegitcommit: effb516760c0f956c6308eeded48851accc96b92
+ms.openlocfilehash: fa35249983284261252c8ada65e79ed1cb6ec79a
+ms.sourcegitcommit: 6b749db14b4cf3a2b8d581fda6fdd8cb98bc3207
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70927631"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82825390"
 ---
 # <a name="tc-tp-tc-tp-specify-source-file-type"></a>/Tc, /Tp, /TC, /TP (Spécifier le type de fichier source)
 
-L’option **/TC** spécifie que son argument FileName est un fichier source C, même s’il n’a pas d’extension. C. L’option **/TP** spécifie que son argument FileName est C++ un fichier source, même s’il n’a pas d’extension. cpp ou. cxx. Un espace entre l’option et le nom de fichier est facultatif. Chaque option spécifie un fichier ; pour spécifier des fichiers supplémentaires, répétez l’option.
+L’option **/TC** spécifie que son argument FileName est un fichier source C, même s’il n’a pas d’extension. C. L’option **/TP** spécifie que son argument FileName est un fichier source C++, même s’il n’a pas d’extension. cpp ou. cxx. Un espace entre l’option et le nom de fichier est facultatif. Chaque option spécifie un fichier ; pour spécifier des fichiers supplémentaires, répétez l’option.
 
-**/TC** et **/TP** sont des variantes globales de **/TC** et **/TP**. Ils spécifient au compilateur de traiter tous les fichiers nommés sur la ligne de commande en tant quefichiers sources C C++ (/TC) ou fichiers sources ( **/TP**), sans tenir compte de l’emplacement sur la ligne de commande par rapport à l’option. Ces options globales peuvent être substituées sur un seul fichier au moyen de **/TC** ou **/TP**.
+**/TC** et **/TP** sont des variantes globales de **/TC** et **/TP**. Ils spécifient au compilateur de traiter tous les fichiers nommés sur la ligne de commande en tant que fichiers sources C (**/TC**) ou fichiers sources C++ (**/TP**), sans tenir compte de l’emplacement sur la ligne de commande par rapport à l’option. Ces options globales peuvent être substituées sur un seul fichier au moyen de **/TC** ou **/TP**.
 
 ## <a name="syntax"></a>Syntaxe
 
-> **/TC** _nom du fichier_ **/TP NomFichier**/TC/TP
->  
-> 
-> 
+> **/Tc** _Nom de fichier_ /TC\
+> **/TP** _NomFichier_\
+> **/TC**\
+> **/TP**
 
-## <a name="arguments"></a>Arguments
+### <a name="arguments"></a>Arguments
 
-*filename*<br/>
-Fichier C ou C++ source.
+*extension*<br/>
+Fichier source C ou C++.
 
-## <a name="remarks"></a>Notes
+## <a name="remarks"></a>Notes 
 
-Par défaut, **CL** suppose que les fichiers avec l’extension. c sont des fichiers sources c et des fichiers avec l’extension. cpp ou. cxx C++ sont des fichiers sources.
+Par défaut, **CL** suppose que les fichiers avec l’extension. c sont des fichiers sources c et des fichiers avec l’extension. cpp ou. cxx sont des fichiers sources C++.
 
 Lorsque l’option **TC** ou **TC** est spécifiée, toute spécification de l’option [/Zc : Wchar_t (wchar_t est un type natif)](zc-wchar-t-wchar-t-is-native-type.md) est ignorée.
 
@@ -49,7 +49,7 @@ Lorsque l’option **TC** ou **TC** est spécifiée, toute spécification de l�
 
 1. Ouvrez la boîte de dialogue **Pages de propriété** du projet. Pour plus d’informations, consultez [Définir le compilateur C++ et les propriétés de build dans Visual Studio](../working-with-project-properties.md).
 
-1. Sélectionnez la page de propriétés **Propriétés** > de > configuration**C/C++** **avancé** .
+1. Sélectionnez la page de propriétés**avancé** des **Propriétés** > de configuration**C/C++** > .
 
 1. Modifiez la propriété **compiler en tant que** . Choisissez **OK** ou **appliquer** pour appliquer vos modifications.
 
@@ -63,9 +63,9 @@ Cette ligne de commande CL spécifie que MAIN. c, TEST. PRG et COLLATE. PRG sont
 
 > MAIN CL. C/TcTEST.PRG/TcCOLLATE.PRG imprimer. PRG
 
-Cette ligne de commande CL spécifie que TEST1. c, TEST2. cxx, TEST3. non et TEST4. o sont compilés en tant que C++ fichiers et que TEST5. z est compilé en tant que fichier c.
+Cette ligne de commande CL spécifie que TEST1. c, TEST2. cxx, TEST3. non et TEST4. o sont compilés en tant que fichiers C++, et TEST5. z est compilé en tant que fichier C.
 
-> CL TEST1.C TEST2.CXX TEST3.HUH TEST4.O /Tc TEST5.Z /TP
+> CL TEST1. TEST2 C. TEST3 CXX. N’EST PAS TEST4. O/TC TEST5. Z/TP
 
 ## <a name="see-also"></a>Voir aussi
 

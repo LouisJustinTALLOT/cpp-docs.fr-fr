@@ -1,5 +1,5 @@
 ---
-title: Opérateurs de décalage vers la gauche et droit (&gt; &gt; et &lt; &lt;)
+title: Opérateurs de décalage vers la gauche et&gt; &gt; de &lt; &lt;décalage vers la droite (et)
 ms.date: 08/13/2018
 f1_keywords:
 - <<
@@ -13,32 +13,32 @@ helpviewer_keywords:
 - shift operators [C++]
 - operators [C++], shift
 ms.assetid: 25fa0cbb-5fdd-4657-8745-b35f7d8f1606
-ms.openlocfilehash: fd048bedc45b14bdc7b83120ad039296b54aa850
-ms.sourcegitcommit: da32511dd5baebe27451c0458a95f345144bd439
-ms.translationtype: HT
+ms.openlocfilehash: 2020c2dbbf8ff91ee692366f55c836be0b3dddb0
+ms.sourcegitcommit: 6b749db14b4cf3a2b8d581fda6fdd8cb98bc3207
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/07/2019
-ms.locfileid: "65222049"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82825913"
 ---
-# <a name="left-shift-and-right-shift-operators-gtgt-and-ltlt"></a>Opérateurs de décalage vers la gauche et droit (&gt; &gt; et &lt; &lt;)
+# <a name="left-shift-and-right-shift-operators-gtgt-and-ltlt"></a>Opérateurs de décalage vers la gauche et&gt; &gt; de &lt; &lt;décalage vers la droite (et)
 
-Les opérateurs de décalage de bits sont l’opérateur de décalage vers la droite (**&gt;&gt;**), qui déplace les bits de *shift-expression* vers la droite et l’opérateur de décalage vers la gauche (**&lt; &lt;**), qui déplace les bits de *shift-expression* vers la gauche. <sup>1</sup>
+Les opérateurs de décalage de bits sont l’opérateur de décalage**&gt;** vers la droite (), qui déplace les bits de *Shift-expression* vers la droite, et l’opérateur**&lt;** de décalage vers la gauche (), qui déplace les bits de *Shift-expression* vers la gauche. <sup>1</sup>
 
 ## <a name="syntax"></a>Syntaxe
 
-> *shift-expression* `<<` *additive-expression*
+> *Shift-expression* `<<` *additive-expression*\
 > *shift-expression* `>>` *additive-expression*
 
-## <a name="remarks"></a>Notes
+## <a name="remarks"></a>Notes 
 
 > [!IMPORTANT]
-> Les descriptions et les exemples suivants sont valides sur Windows pour les architectures x86 et x64. L’implémentation des opérateurs de décalage vers la droite et vers la gauche est très différente sur Windows pour les appareils ARM. Pour plus d’informations, consultez la section « Shift Operators » de la [Hello ARM](https://blogs.msdn.com/b/vcblog/archive/2012/10/25/hello-arm-exploring-undefined-unspecified-and-implementation-defined-behavior-in-c.aspx) billet de blog.
+> Les descriptions et exemples suivants sont valides sur Windows pour les architectures x86 et x64. L’implémentation des opérateurs de décalage vers la gauche et vers la droite est très différente sur Windows pour les appareils ARM. Pour plus d’informations, consultez la section « opérateurs de décalage » du billet de blog [Hello ARM](https://blogs.msdn.com/b/vcblog/archive/2012/10/25/hello-arm-exploring-undefined-unspecified-and-implementation-defined-behavior-in-c.aspx) .
 
 ## <a name="left-shifts"></a>Décalages vers la gauche
 
-L’opérateur de décalage vers la gauche provoque les bits de *shift-expression* être décalés à gauche par le nombre de positions spécifié par *additive-expression*. Les positions de bits qui ont été libérées par l'opération de décalage sont remplies de zéros. Un décalage vers la gauche est un décalage logique (les bits qui sont déplacés après la fin sont ignorés, y compris le bit de signe). Pour plus d’informations sur les types de décalages de bits, consultez [décalages de bits](https://en.wikipedia.org/wiki/Bitwise_shift).
+L’opérateur de décalage vers la gauche entraîne le décalage des bits de *Shift-expression* vers la gauche du nombre de positions spécifié par *additive-expression*. Les positions de bits qui ont été libérées par l'opération de décalage sont remplies de zéros. Un décalage vers la gauche est un décalage logique (les bits qui sont déplacés après la fin sont ignorés, y compris le bit de signe). Pour plus d’informations sur les genres de décalages au niveau du bit, consultez [décalages au niveau du bit](https://en.wikipedia.org/wiki/Bitwise_shift).
 
-L'exemple suivant illustre les opérations de décalage vers la gauche à l'aide de nombres non signés. L'exemple montre ce qui arrive aux bits en représentant la valeur en tant que bitset. Pour plus d’informations, consultez [bitset, classe](../standard-library/bitset-class.md).
+L'exemple suivant illustre les opérations de décalage vers la gauche à l'aide de nombres non signés. L'exemple montre ce qui arrive aux bits en représentant la valeur en tant que bitset. Pour plus d’informations, consultez [BitSet, classe](../standard-library/bitset-class.md).
 
 ```cpp
 #include <iostream>
@@ -61,7 +61,7 @@ int main() {
 }
 ```
 
-Si vous décalez vers la gauche un nombre signé de manière à affecter le bit de signe, le résultat n'est pas défini. L’exemple suivant montre que se passe-t-il quand un bit 1 est décalée vers la gauche dans la position de bit de signe.
+Si vous décalez vers la gauche un nombre signé de manière à affecter le bit de signe, le résultat n'est pas défini. L’exemple suivant montre ce qui se passe quand un bit 1 est décalé vers la gauche dans la position du bit de signe.
 
 ```cpp
 #include <iostream>
@@ -86,10 +86,10 @@ int main() {
 
 ## <a name="right-shifts"></a>Décalages vers la droite
 
-L’opérateur de décalage vers la droite provoque le modèle binaire de *shift-expression* être décalés vers la droite par le nombre de positions spécifié par *additive-expression*. Pour les nombres non signés, les positions de bit qui ont été libérées par l'opération de décalage sont remplies de zéros. Pour les nombres signés, le bit de signe est utilisé pour remplir les positions de bit libérées. En d'autres termes, si le nombre est positif, 0 est utilisé, et si le nombre est négatif, 1 est utilisé.
+L’opérateur de décalage vers la droite fait basculer le modèle binaire de *Shift-expression* vers la droite du nombre de positions spécifié par *additive-expression*. Pour les nombres non signés, les positions de bit qui ont été libérées par l'opération de décalage sont remplies de zéros. Pour les nombres signés, le bit de signe est utilisé pour remplir les positions de bit libérées. En d'autres termes, si le nombre est positif, 0 est utilisé, et si le nombre est négatif, 1 est utilisé.
 
 > [!IMPORTANT]
-> Le résultat d'un décalage vers la droite d'une nombre négatif signé dépend de l'implémentation. Bien que Microsoft C++ compilateur utilise le bit de signe pour remplir les positions de bit libérées, il n’existe aucune garantie que d’autres implémentations également le faire.
+> Le résultat d'un décalage vers la droite d'une nombre négatif signé dépend de l'implémentation. Bien que le compilateur Microsoft C++ utilise le bit de signe pour remplir les positions de bits libérées, il n’y a aucune garantie que d’autres implémentations le fassent également.
 
 Cet exemple illustre les opérations de décalage vers la droite à l'aide de nombres non signés :
 
@@ -174,9 +174,9 @@ int main() {
 
 ## <a name="shifts-and-promotions"></a>Décalages et promotions
 
-Les expressions des deux côtés de l'opérateur de décalage doivent être de type intégral. Promotions intégrales sont exécutées selon les règles décrites dans [Conversions Standard](standard-conversions.md). Le type du résultat est le même que le type de promu *shift-expression*.
+Les expressions des deux côtés de l'opérateur de décalage doivent être de type intégral. Les promotions intégrales sont exécutées selon les règles décrites dans [conversions standard](standard-conversions.md). Le type du résultat est le même que le type de l' *expression Shift-expression*promue.
 
-Dans l’exemple suivant, une variable de type **char** est promu à un **int**.
+Dans l’exemple suivant, une variable de type **char** est promue en **int**.
 
 ```cpp
 #include <iostream>
@@ -197,7 +197,7 @@ int main() {
 
 ## <a name="additional-details"></a>Détails supplémentaires
 
-Le résultat d’une opération de décalage est indéfini si *additive-expression* est négatif ou si *additive-expression* est supérieur ou égal au nombre de bits dans (promues)  *expression-décalage*. Aucune opération de décalage n’est effectuée si *additive-expression* est 0.
+Le résultat d’une opération de décalage n’est pas défini si *additive-expression* est négatif ou si *additive-expression* est supérieur ou égal au nombre de bits dans (promu) *Shift-expression*. Aucune opération de décalage n’est effectuée si *additive-expression* est égal à 0.
 
 ```cpp
 #include <iostream>
@@ -222,11 +222,11 @@ int main() {
 
 ## <a name="footnotes"></a>Notes de bas de page
 
-<sup>1</sup> Voici la description des opérateurs de décalage dans la spécification C ++ 11 ISO (INCITS/ISO/IEC 14882-2011[2012]), sections 5.8.2 et 5.8.3.
+<sup>1</sup> Voici la description des opérateurs de décalage dans la spécification de la norme ISO c++ 11 (incitss/ISO/IEC 14882-2011 [2012]), sections 5.8.2 et 5.8.3.
 
-La valeur de `E1 << E2` est `E1` décalée vers la gauche de positions de bit `E2` ; les bits libérés sont remplis de zéros. Si `E1` a un type non signé, la valeur du résultat est **E1 × 2**<sup>**E2**</sup>, réduit au modulo plus que la valeur maximale représentable dans le type de résultat. Sinon, si `E1` a un type signé et une valeur non négative, et **E1 × 2**<sup>**E2** </sup> est représentable dans le type non signé correspondant du type du résultat, puis Cette valeur convertie en type de résultat, est la valeur résultante. Sinon, le comportement est indéfini.
+La valeur de `E1 << E2` est `E1` décalée vers la gauche de positions de bit `E2` ; les bits libérés sont remplis de zéros. Si `E1` a un type non signé, la valeur du résultat est **E1 × 2**<sup>**E2**</sup>, ce qui réduit le modulo d’une unité de plus que la valeur maximale pouvant être représentée dans le type de résultat. Sinon, si `E1` a un type signé et une valeur non négative et que **E1 × 2**<sup>**E2**</sup> est représentable dans le type non signé correspondant du type de résultat, cette valeur, convertie en type de résultat, est la valeur résultante ; dans le cas contraire, le comportement n’est pas défini.
 
-La valeur de `E1 >> E2` est `E1` décalée vers la droite de positions de bit `E2`. Si `E1` a un type non signé ou si `E1` a un type signé et une valeur non négative, la valeur du résultat fait partie intégrante du quotient de **E1/2**<sup>**E2** </sup>. Si `E1` a un type signé et une valeur négative, la valeur résultante est définie par l'implémentation.
+La valeur de `E1 >> E2` est `E1` décalée vers la droite de positions de bit `E2`. Si `E1` a un type non signé ou si `E1` a un type signé et une valeur non négative, la valeur du résultat fait partie intégrante du quotient de **E1/2**<sup>**E2**</sup>. Si `E1` a un type signé et une valeur négative, la valeur résultante est définie par l'implémentation.
 
 ## <a name="see-also"></a>Voir aussi
 
