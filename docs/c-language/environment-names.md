@@ -3,11 +3,11 @@ title: Noms d'environnement
 ms.date: 11/04/2016
 ms.assetid: 9af409a5-e724-465a-9a21-88d3586c2e92
 ms.openlocfilehash: 43e1254b4c1ee61a92fbb6499d9396e8b15a3047
-ms.sourcegitcommit: f4be868c0d1d78e550fba105d4d3c993743a1f4b
-ms.translationtype: HT
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56147995"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62234125"
 ---
 # <a name="environment-names"></a>Noms d'environnement
 
@@ -29,6 +29,6 @@ De même, les modifications apportées par la fonction `_putenv` durent uniqueme
 
 ## <a name="see-also"></a>Voir aussi
 
-[Fonctions des bibliothèques](../c-language/library-functions.md)<br/>
+[Fonctions de la bibliothèque](../c-language/library-functions.md)<br/>
 [_putenv, _wputenv](../c-runtime-library/reference/putenv-wputenv.md)<br/>
 [getenv, _wgetenv](../c-runtime-library/reference/getenv-wgetenv.md)

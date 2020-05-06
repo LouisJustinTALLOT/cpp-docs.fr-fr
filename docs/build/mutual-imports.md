@@ -23,34 +23,34 @@ ms.locfileid: "62295673"
 ---
 # <a name="mutual-imports"></a>Importations mutuelles
 
-Exporter ou importer vers un autre fichier exécutable présente des complications quand les importations sont mutuelles (ou circulaires). Par exemple, deux DLL importent symboles entre eux, similaires aux fonctions mutuellement récursives.
+L’exportation ou l’importation vers un autre fichier exécutable présente des complications lorsque les importations sont mutuelles (ou circulaires). Par exemple, deux dll importent des symboles les uns des autres, comme les fonctions mutuellement récursives.
 
-Le problème avec importer mutuellement des fichiers exécutables (généralement des DLL) est qu’aucune ne peut être généré sans générer d’autres la première. Chaque processus de génération requiert une entrée, une bibliothèque d’importation produite par l’autre processus de génération.
+Le problème avec l’importation mutuelle des fichiers exécutables (généralement des dll) est qu’aucun ne peut être généré sans créer l’autre en premier. Chaque processus de génération requiert, en entrée, une bibliothèque d’importation produite par l’autre processus de génération.
 
-La solution consiste à utiliser l’utilitaire LIB avec l’option /DEF, ce qui produit une bibliothèque d’importation sans générer le fichier exécutable. Cet utilitaire vous pouvez de générer toutes les bibliothèques d’importation vous avez besoin, quel que soit le nombre de DLL impliquées et le degré de complexité des dépendances.
+La solution consiste à utiliser l’utilitaire LIB avec l’option/DEF, qui produit une bibliothèque d’importation sans générer le fichier exécutable. À l’aide de cet utilitaire, vous pouvez créer toutes les bibliothèques d’importation dont vous avez besoin, quel que soit le nombre de dll impliquées ou la complexité des dépendances.
 
-La solution générale pour la gestion des importations mutuelles est :
+La solution générale pour gérer les importations mutuelles est la suivante :
 
-1. Traitez chaque DLL à son tour. (N’importe quel ordre est possible, bien que certaines commandes sont plus optimales). Si toutes les bibliothèques d’importation nécessaires existent et sont en cours, exécutez LINK pour générer le fichier exécutable (DLL). Cela génère une bibliothèque d’importation. Sinon, exécutez LIB pour produire une bibliothèque d’importation.
+1. Prenez chaque DLL à son tour. (N’importe quel ordre est faisable, bien que certaines commandes soient plus optimales.) Si toutes les bibliothèques d’importation nécessaires existent et sont à jour, exécutez LINK pour générer le fichier exécutable (DLL). Cela génère une bibliothèque d’importation. Dans le cas contraire, exécutez LIB pour générer une bibliothèque d’importation.
 
-   Exécution de LIB avec l’option /DEF génère un fichier supplémentaire avec un. Extension EXP. La barre d’outils. Fichier EXP doit être utilisé ultérieurement pour générer le fichier exécutable.
+   L’exécution de LIB avec l’option/DEF produit un fichier supplémentaire avec un. Extension EXP. La. Le fichier EXP doit être utilisé ultérieurement pour générer le fichier exécutable.
 
-1. Après avoir utilisé LINK ou LIB pour générer toutes les bibliothèques d’importation, revenez en arrière et exécutez LINK pour générer les fichiers exécutables qui n’ont pas été générés à l’étape précédente. Notez que le fichier .exp correspondant doit être spécifié sur la ligne de liaison.
+1. Après avoir utilisé LINK ou LIB pour générer toutes les bibliothèques d’importation, revenez en arrière et exécutez LINK pour générer tous les fichiers exécutables qui n’ont pas été générés à l’étape précédente. Notez que le fichier. exp correspondant doit être spécifié sur la ligne de liaison.
 
-   Si vous aviez exécuté l’utilitaire LIB plus tôt pour générer une bibliothèque d’importation pour DLL1, LIB aurait ont généré le fichier DLL1.exp. Vous devez utiliser DLL1.exp comme entrée de lien lors de la génération de DLL1.exp.
+   Si vous aviez exécuté l’utilitaire LIB plus tôt pour générer une bibliothèque d’importation pour DLL1, LIB aurait également produit le fichier DLL1. exp. Vous devez utiliser DLL1. exp comme entrée pour LINK lors de la génération de DLL1. dlll.
 
-L’illustration suivante montre une solution pour deux DLL importent mutuellement, DLL1 et DLL2. Étape 1 consiste à exécuter LIB, avec l’option /DEF définie, sur DLL1. Étape 1 produit DLL1.lib, une bibliothèque d’importation et DLL1.exp. À l’étape 2, la bibliothèque d’importation est utilisée pour générer DLL2, laquelle à son tour produit une bibliothèque d’importation pour les symboles de DLL2. Étape 3 génère DLL1, en utilisant DLL1.exp et DLL2.lib comme entrée. Notez qu’un fichier .exp pour DLL2 n’est pas nécessaire car LIB n’a pas été utilisé pour générer la bibliothèque d’importation de DLL2.
+L’illustration suivante montre une solution pour deux dll mutuellement importées, DLL1 et DLL2. L’étape 1 consiste à exécuter LIB, avec l’option/DEF définie, sur DLL1. L’étape 1 produit DLL1. lib, une bibliothèque d’importation et DLL1. exp. À l’étape 2, la bibliothèque d’importation est utilisée pour générer DLL2, qui à son tour produit une bibliothèque d’importation pour les symboles DLL2's. L’étape 3 génère DLL1, en utilisant DLL1. exp et DLL2. lib comme entrée. Notez qu’un fichier. exp pour DLL2 n’est pas nécessaire, car LIB n’a pas été utilisé pour générer la bibliothèque d’importation DLL2's.
 
-![À l’aide des importations mutuelles pour lier deux DLL](media/vc37yj1.gif "à l’aide des importations mutuelles pour lier deux DLL")<br/>
-Liaison de deux DLL avec des importations mutuelles
+![Utilisation d’importations mutuelles pour lier deux dll]à(media/vc37yj1.gif "l’aide d’importations mutuelles pour lier deux dll")<br/>
+Liaison de deux dll avec des importations mutuelles
 
-## <a name="limitations-of-afxext"></a>Limitations de _AFXEXT
+## <a name="limitations-of-_afxext"></a>Limitations de _AFXEXT
 
-Vous pouvez utiliser le `_AFXEXT` symbole de préprocesseur pour votre extension MFC DLL tant que vous n’avez pas plusieurs couches de DLL d’extension MFC. Si vous disposez d’extension MFC DLL qui appellent ou dérivent des classes dans vos propres MFC DLL d’extension, qui ensuite dériver des classes MFC, vous devez utiliser votre propre symbole de préprocesseur pour éviter toute ambiguïté.
+Vous pouvez utiliser le `_AFXEXT` symbole de préprocesseur pour vos dll d’extension MFC tant que vous n’avez pas plusieurs couches de DLL d’extension MFC. Si vous avez des dll d’extension MFC qui appellent ou dérivent de classes dans vos propres DLL d’extension MFC, qui dérivent ensuite des classes MFC, vous devez utiliser votre propre symbole de préprocesseur pour éviter toute ambiguïté.
 
-Le problème est que dans Win32, vous devez déclarer explicitement toutes les données en tant que **__declspec (dllexport)** s’il doit être exporté à partir d’une DLL, et **__declspec (dllimport)** s’il doit être importé à partir d’une DLL. Lorsque vous définissez `_AFXEXT`, les en-têtes MFC Assurez-vous que **AFX_EXT_CLASS** est défini correctement.
+Le problème est que dans Win32, vous devez déclarer explicitement toutes les données en tant que **__declspec (dllexport)** si elles doivent être exportées à partir d’une dll, et **__declspec (dllimport)** si elles doivent être importées à partir d’une dll. Lorsque vous définissez `_AFXEXT`, les en-têtes MFC s’assurent que **AFX_EXT_CLASS** est défini correctement.
 
-Lorsque vous avez plusieurs couches, un symbole comme **AFX_EXT_CLASS** n’est pas suffisant, car une DLL d’extension MFC peut exporter de nouvelles classes, ainsi que l’importation d’autres classes à partir d’une autre DLL d’extension MFC. Pour résoudre ce problème, utilisez un symbole de préprocesseur spécial qui indique que vous générez la DLL mais plutôt à l’aide de la DLL. Par exemple, imaginez deux DLL d’extension MFC, A.dll et B.dll. Chaque exportent certaines classes dans A.h et B.h, respectivement. B.dll utilise les classes de A.dll. Les fichiers d’en-tête ressemblent à ceci :
+Lorsque vous avez plusieurs couches, un symbole tel que **AFX_EXT_CLASS** n’est pas suffisant, car une DLL d’extension MFC peut exporter de nouvelles classes et importer d’autres classes à partir d’une autre DLL d’extension MFC. Pour résoudre ce problème, utilisez un symbole de préprocesseur spécial qui indique que vous générez la DLL elle-même plutôt qu’à l’aide de la DLL. Par exemple, Imaginez deux DLL d’extension MFC, A. dll et B. dll. Chacun exporte des classes dans A. h et B. h, respectivement. B. dll utilise les classes d’un fichier. dll. Les fichiers d’en-tête ressemblent à ceci :
 
 ```
 /* A.H */
@@ -75,15 +75,15 @@ class CLASS_DECL_B CExampleB : public CExampleA
 ...
 ```
 
-Lorsque A.dll est générée, il est créé avec `/D A_IMPL` et lorsque B.dll est générée, il est créé avec `/D B_IMPL`. À l’aide de symboles distincts pour chaque DLL, `CExampleB` est exporté et `CExampleA` est importé lors de la génération de B.dll. `CExampleA` est exporté lors de la génération de A.dll et importé lorsqu’il est utilisé par B.dll (ou un autre client).
+Lorsqu’un fichier. dll est généré, il est généré `/D A_IMPL` avec et quand B. dll est généré, il est généré `/D B_IMPL`avec. En utilisant des symboles distincts pour chaque DLL `CExampleB` , est exporté `CExampleA` et est importé lors de la génération de B. dll. `CExampleA`est exporté lors de la génération d’un fichier. dll et importé lorsqu’il est utilisé par B. dll (ou un autre client).
 
-Ce type de superposition ne peut pas être effectué lors de l’utilisation intégrée **AFX_EXT_CLASS** et `_AFXEXT` les symboles du préprocesseur. La technique décrite ci-dessus résout ce problème de manière à la différence pas que le mécanisme d’application MFC elle-même utilise lors de la création de ses technologies actives, la base de données et la DLL d’extension MFC de réseau.
+Ce type de superposition ne peut pas être effectué lors de l’utilisation **AFX_EXT_CLASS** de la `_AFXEXT` AFX_EXT_CLASS et des symboles de préprocesseur intégrés. La technique décrite ci-dessus résout ce problème d’une manière qui ne diffère pas du mécanisme utilisé par la bibliothèque MFC elle-même lors de la création de ses dll d’extension MFC, de base de données et de réseau active.
 
-## <a name="not-exporting-the-entire-class"></a>N’exportez ne pas la classe entière
+## <a name="not-exporting-the-entire-class"></a>Non-exportation de la classe entière
 
-Lorsque vous exportez pas une classe entière, vous devez vous assurer que les éléments de données nécessaires créés par les macros MFC sont exportés correctement. Cela est possible en redéfinissant `AFX_DATA` macro de votre classe spécifique. Cela doit être effectuée à tout moment que vous n’exportez pas la classe entière.
+Lorsque vous n’exportez pas une classe entière, vous devez vous assurer que les éléments de données nécessaires créés par les macros MFC sont exportés correctement. Pour ce faire, vous pouvez `AFX_DATA` redéfinir la macro de votre classe spécifique. Cela doit être fait à chaque fois que vous n’exportez pas la classe entière.
 
-Exemple :
+Par exemple :
 
 ```
 /* A.H */
@@ -107,13 +107,13 @@ class CExampleA : public CObject
 #define AFX_DATA
 ```
 
-### <a name="what-do-you-want-to-do"></a>Que voulez-vous faire ?
+### <a name="what-do-you-want-to-do"></a>Que voulez-vous faire ?
 
 - [Exporter à partir d’une DLL](exporting-from-a-dll.md)
 
-- [Exporter à partir d’une DLL à l’aide. Fichiers DEF](exporting-from-a-dll-using-def-files.md)
+- [Exportez à partir d’une DLL à l’aide de. Fichiers DEF](exporting-from-a-dll-using-def-files.md)
 
-- [Exporter à partir d’une DLL à l’aide de __declspec (dllexport)](exporting-from-a-dll-using-declspec-dllexport.md)
+- [Exporter à partir d’une DLL à l’aide d' __declspec (dllexport)](exporting-from-a-dll-using-declspec-dllexport.md)
 
 - [Exporter et importer à l’aide de AFX_EXT_CLASS](exporting-and-importing-using-afx-ext-class.md)
 
@@ -125,7 +125,7 @@ class CExampleA : public CObject
 
 ### <a name="what-do-you-want-to-know-more-about"></a>Sur quels éléments souhaitez-vous obtenir des informations supplémentaires ?
 
-- [L’utilitaire LIB et l’option /DEF](reference/lib-reference.md)
+- [L’utilitaire LIB et l’option/DEF](reference/lib-reference.md)
 
 ## <a name="see-also"></a>Voir aussi
 

@@ -13,21 +13,21 @@ ms.locfileid: "64342253"
 ---
 # <a name="checking-for-memory-overwrites"></a>Vérification des remplacements de mémoire
 
-Si vous obtenez une violation d’accès sur un appel à une fonction de manipulation de tas, il est possible que votre programme a altéré le tas. Un problème courant de cette situation serait :
+Si vous recevez une violation d’accès sur un appel à une fonction de manipulation de segment de mémoire, il est possible que votre programme ait endommagé le tas. Voici un symptôme courant de cette situation :
 
 ```
 Access Violation in _searchseg
 ```
 
-Le [_heapchk](../c-runtime-library/reference/heapchk.md) fonction est disponible dans les versions debug et release génère (Windows NT uniquement) pour vérifier l’intégrité du tas de bibliothèque d’exécution. Vous pouvez utiliser `_heapchk` dans la même façon que le `AfxCheckMemory` (fonction) pour identifier un remplacement tas, par exemple :
+La fonction [_heapchk](../c-runtime-library/reference/heapchk.md) est disponible à la fois dans les versions Debug et Release (Windows NT uniquement) pour vérifier l’intégrité du tas de la bibliothèque Runtime. Vous pouvez utiliser `_heapchk` à peu près de la même façon `AfxCheckMemory` que la fonction pour isoler un remplacement de segment de mémoire, par exemple :
 
 ```
 if(_heapchk()!=_HEAPOK)
    DebugBreak();
 ```
 
-Si cette fonction échoue, vous devez isoler à quel point le tas a été endommagé.
+Si cette fonction échoue, vous devez isoler à quel moment le segment de mémoire a été endommagé.
 
 ## <a name="see-also"></a>Voir aussi
 
-[Résolution de problèmes liés à la version Release](fixing-release-build-problems.md)
+[Résolution de problèmes liés à la version release](fixing-release-build-problems.md)

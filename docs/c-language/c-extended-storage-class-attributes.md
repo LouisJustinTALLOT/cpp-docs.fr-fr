@@ -16,7 +16,7 @@ ms.locfileid: "74857149"
 ---
 # <a name="c-extended-storage-class-attributes"></a>Attributs étendus de classe de stockage C
 
-**Section spécifique de Microsoft**
+**Spécifique à Microsoft**
 
 Des informations plus récentes à ce sujet sont disponibles dans [__declspec (Référence C++)](../cpp/declspec.md).
 
@@ -27,15 +27,15 @@ La syntaxe à attributs étendus utilisée pour la spécification des informatio
 ## <a name="syntax"></a>Syntaxe
 
 *storage-class-specifier* :<br/>
-&nbsp;&nbsp;&nbsp;&nbsp; **__declspec (** *Extended-decl-modifier-SEQ* **)**  /\* \*spécifique à Microsoft /
+&nbsp;&nbsp;&nbsp;&nbsp;**__declspec (** *Extended-decl-modifier-SEQ* **)**  / \* spécifique à Microsoft\*/
 
-*Extended-decl-modifier-SEQ*:&nbsp;&nbsp;&nbsp;&nbsp;/\* \*spécifique à Microsoft /<br/>
+*Extended-decl-modifier-SEQ*:&nbsp; &nbsp; &nbsp; &nbsp; / \* spécifique à Microsoft\*/<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*extended-decl-modifier*<sub>opt</sub><br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*extended-decl-modifier-seq* *extended-decl-modifier*
 
-*Extended-decl-modifier*:&nbsp;&nbsp;&nbsp;&nbsp;/\* \*spécifiques à Microsoft /<br/>
+*Extended-decl-modifier*:&nbsp; &nbsp; &nbsp; &nbsp; / \* spécifique à Microsoft\*/<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;**thread**<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**naked**<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**nue**<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;**dllimport**<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;**dllexport**
 
@@ -43,7 +43,7 @@ Un espace blanc sépare les modificateurs de déclaration. Notez que *extended-d
 
 Les attributs de classe de stockage thread, naked, dllimport et dllexport sont une propriété uniquement de la déclaration des données ou de la fonction à laquelle ils sont appliqués. Ils ne redéfinissent pas les attributs de type de la fonction elle-même. L'attribut thread affecte uniquement les données. L'attribut naked affecte uniquement les fonctions. Les attributs dllimport et dllexport affectent les fonctions et les données.
 
-**Fin de la section spécifique de Microsoft**
+**FIN spécifique à Microsoft**
 
 ## <a name="see-also"></a>Voir aussi
 

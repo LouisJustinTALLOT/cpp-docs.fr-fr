@@ -6,11 +6,11 @@ helpviewer_keywords:
 - side effects in expression evaluation
 ms.assetid: d9b3004a-830e-43a0-bea5-8989d501d670
 ms.openlocfilehash: de5e398afd8b95cfe5596f487a36b6a2d27e3287
-ms.sourcegitcommit: f4be868c0d1d78e550fba105d4d3c993743a1f4b
-ms.translationtype: HT
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56147475"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62158471"
 ---
 # <a name="side-effects"></a>Effets secondaires
 
@@ -33,4 +33,4 @@ Comme C ne définit pas l'ordre d'évaluation des effets secondaires, les deux m
 
 ## <a name="see-also"></a>Voir aussi
 
-[Évaluation des expressions](../c-language/expression-evaluation-c.md)
+[Évaluation d’expression](../c-language/expression-evaluation-c.md)

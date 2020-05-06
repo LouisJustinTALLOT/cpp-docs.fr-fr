@@ -8,15 +8,15 @@ helpviewer_keywords:
 - epilog code
 ms.assetid: 2543c8af-00d4-4a2a-8a87-e746da1f9929
 ms.openlocfilehash: b752dd6fa378bc1275e8a7da90420aa2b8247e4e
-ms.sourcegitcommit: f4be868c0d1d78e550fba105d4d3c993743a1f4b
-ms.translationtype: HT
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56152194"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62232813"
 ---
 # <a name="naked-functions"></a>Naked, fonctions
 
-**Section spécifique à Microsoft**
+**Spécifique à Microsoft**
 
 L'attribut de classe de stockage `naked` est une extension spécifique à Microsoft pour le langage C. Pour les fonctions déclarées avec l'attribut de classe de stockage `naked`, le compilateur génère un code dépourvu de code de prologue et d'épilogue. Vous pouvez utiliser cette fonctionnalité pour écrire vos propres séquences de code de prologue/épilogue à l'aide de code assembleur inline. Les fonctions naked sont particulièrement utiles pour l'écriture de pilotes de périphériques virtuels.
 
@@ -56,7 +56,7 @@ __declspec( naked ) int func();   /* Error--naked attribute not */
                      /* permitted on function declarations.    */   \
 ```
 
-**FIN de la section spécifique à Microsoft**
+**FIN spécifique à Microsoft**
 
 ## <a name="see-also"></a>Voir aussi
 

@@ -29,7 +29,7 @@ Si vos événements ou étapes de build personnalisées ne se comportent pas com
 
 - Examinez le journal de génération dans le répertoire des fichiers intermédiaires pour voir ce qui a réellement été exécuté. Le chemin et le nom du journal de génération sont représentés par l’expression de macro **MSBuild**, **$(IntDir)\\$(MSBuildProjectName).log**.
 
-- Modifiez les paramètres de votre projet pour collecter davantage que la quantité d’informations par défaut du journal de génération. Dans le menu **Outils**, cliquez sur **Options**. Dans la boîte de dialogue **Options**, cliquez sur le nœud **Projets et solutions**, puis sur le nœud **Générer et exécuter**. Ensuite, dans la zone **Commentaires du fichier journal de génération du projet MSBuild**, cliquez sur **Détaillé**.
+- Modifiez les paramètres de votre projet pour collecter davantage que la quantité d’informations par défaut du journal de génération. Dans le menu **Outils** , cliquez sur **Options**. Dans la boîte de dialogue **Options**, cliquez sur le nœud **Projets et solutions**, puis sur le nœud **Générer et exécuter**. Ensuite, dans la zone **Commentaires du fichier journal de génération du projet MSBuild**, cliquez sur **Détaillé**.
 
 - Vérifiez les valeurs des macros de nom de fichier ou de répertoire que vous utilisez. Vous pouvez répercuter des macros individuellement, ou vous pouvez ajouter `copy %0 command.bat` au début de votre étape de build personnalisée, ce qui copie les commandes de votre étape de build personnalisée vers command.bat avec toutes les macros développées.
 

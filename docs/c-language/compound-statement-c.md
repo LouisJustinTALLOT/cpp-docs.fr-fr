@@ -6,11 +6,11 @@ helpviewer_keywords:
 - statements, compound
 ms.assetid: 32d1bf86-cbbc-42a9-ba3a-1be1c6c7754c
 ms.openlocfilehash: 42d4c1d21c3e98dfc0281a47a35e033852f8de18
-ms.sourcegitcommit: f4be868c0d1d78e550fba105d4d3c993743a1f4b
-ms.translationtype: HT
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56152155"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62312561"
 ---
 # <a name="compound-statement-c"></a>Instruction composite (C)
 
@@ -18,15 +18,15 @@ Une instruction composée (également appelée « bloc ») correspond généra
 
 ## <a name="syntax"></a>Syntaxe
 
-*compound-statement*:<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**{** *declaration-list*<sub>opt</sub> *statement-list*<sub>opt</sub> **}**
+*Compound-Statement*:<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**{** *declaration-list*<sub>OPT</sub> *Statement-List*<sub>OPT</sub> **}**
 
 *declaration-list* :<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*declaration*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*déclaré*<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*declaration-list* *declaration*
 
 *statement-list*:<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*statement*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*gestion*<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*statement-list* *statement*
 
 S'il existe des déclarations, elles doivent précéder toutes les instructions. La portée de chaque identificateur déclaré au début d'une instruction composée s'étend de son point de déclaration jusqu'à la fin du bloc. Elle est visible dans l'ensemble du bloc à moins qu'une déclaration du même identificateur existe dans un bloc interne.

@@ -16,19 +16,19 @@ ms.locfileid: "62195232"
 ---
 # <a name="exporting-c-functions-for-use-in-c-language-executables"></a>Exportation de fonctions C++ à utiliser dans des exécutables en langage C
 
-Si vous disposez de fonctions dans une DLL écrite en C++ que vous souhaitez accéder à partir d’un module en langage C, vous devez déclarer ces fonctions avec liaison C au lieu d’une liaison C++. Sauf indication contraire, le compilateur C++ utilise C++ d’affectation de noms (également connu sous la décoration de nom) de type sécurisé et C++, conventions d’appel, qui peuvent être difficiles à appeler à partir de C.
+Si vous avez des fonctions dans une DLL écrite en C++ auxquelles vous souhaitez accéder à partir d’un module en langage C, vous devez déclarer ces fonctions avec une liaison C au lieu de la liaison C++. Sauf indication contraire, le compilateur C++ utilise l’appellation de type sécurisé C++ (également appelée décoration de nom) et les conventions d’appel C++, qui peuvent être difficiles à appeler à partir de C.
 
-Pour spécifier une liaison C, spécifiez `extern "C"` déclarations de fonctions. Exemple :
+Pour spécifier une liaison C, spécifiez `extern "C"` pour vos déclarations de fonction. Par exemple :
 
 ```
 extern "C" __declspec( dllexport ) int MyFunc(long parm1);
 ```
 
-## <a name="what-do-you-want-to-do"></a>Que voulez-vous faire ?
+## <a name="what-do-you-want-to-do"></a>Que voulez-vous faire ?
 
-- [Exporter à partir d’une DLL à l’aide de fichiers .def](exporting-from-a-dll-using-def-files.md)
+- [Exporter à partir d’une DLL à l’aide de fichiers. def](exporting-from-a-dll-using-def-files.md)
 
-- [Exporter à partir d’une DLL à l’aide de __declspec (dllexport)](exporting-from-a-dll-using-declspec-dllexport.md)
+- [Exporter à partir d’une DLL à l’aide d' __declspec (dllexport)](exporting-from-a-dll-using-declspec-dllexport.md)
 
 - [Exporter et importer à l’aide de AFX_EXT_CLASS](exporting-and-importing-using-afx-ext-class.md)
 

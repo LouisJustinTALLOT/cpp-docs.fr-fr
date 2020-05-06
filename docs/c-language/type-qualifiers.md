@@ -11,11 +11,11 @@ helpviewer_keywords:
 - volatile keyword [C], type specifier
 ms.assetid: bb4c6744-1dd7-40a8-b4eb-f5585be30908
 ms.openlocfilehash: a5cb7ab3de8938b77dc95be3ee442f71d3b18b42
-ms.sourcegitcommit: f4be868c0d1d78e550fba105d4d3c993743a1f4b
-ms.translationtype: HT
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56147306"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62344796"
 ---
 # <a name="type-qualifiers"></a>Qualificateurs de type
 
@@ -55,7 +55,7 @@ Si la spécification d'un type tableau inclut des qualificateurs de type, l'él�
 
 La liste suivante explique comment utiliser **const** et `volatile`.
 
-- Le mot clé **const** peut être utilisé pour modifier tout type fondamental ou d'agrégat, ou un pointeur vers un objet de tout type, ou un `typedef`. Si un élément est déclaré avec uniquement le qualificateur de type **const**, son type est considéré comme étant **const int**. Une variable **const** peut être initialisée ou placée dans une zone de stockage en lecture seule. Le mot clé **const** est utile pour déclarer des pointeurs vers **const** puisqu'il interdit à la fonction de modifier le pointeur d'une manière ou d'une autre.
+- Le mot clé **const** peut être utilisé pour modifier tout type fondamental ou d'agrégat, ou un pointeur vers un objet de tout type, ou un `typedef`. Si un élément est déclaré avec uniquement le qualificateur de type **const** , son type est considéré comme **const int**. Une variable **const** peut être initialisée ou placée dans une zone de stockage en lecture seule. Le mot clé **const** est utile pour déclarer des pointeurs vers **const** puisqu'il interdit à la fonction de modifier le pointeur d'une manière ou d'une autre.
 
 - Le compilateur suppose que, à tout moment dans le programme, une variable `volatile` est accessible par un processus inconnu qui utilise ou modifie sa valeur. Par conséquent, indépendamment des optimisations spécifiées sur la ligne de commande, le code pour chaque assignation ou référence d'une variable `volatile` doit être généré même s'il semble n'avoir aucun effet.
 

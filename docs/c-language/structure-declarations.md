@@ -9,11 +9,11 @@ helpviewer_keywords:
 - embedded structures
 ms.assetid: 5be3be77-a236-4153-b574-7aa77675df7f
 ms.openlocfilehash: a17bb996f13fdbe11bb569c8af5669a9d0c5363f
-ms.sourcegitcommit: f4be868c0d1d78e550fba105d4d3c993743a1f4b
-ms.translationtype: HT
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56152285"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62157793"
 ---
 # <a name="structure-declarations"></a>Déclarations de structure
 
@@ -21,19 +21,19 @@ Une déclaration de structure désigne un type et spécifie une séquence de val
 
 ## <a name="syntax"></a>Syntaxe
 
-*struct-or-union-specifier* :<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*struct-ou-union* *identificateur*<sub>opt</sub> **{** *liste-déclarations-struct* **}**<br/>
+*spécificateur struct-or-Union*:<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*identificateur struct-or-Union* *identifier*<sub>OPT</sub> **{** *struct-declaration-list* **}**<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*struct-ou-union* *identificateur*
 
 *struct-or-union* :<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**struct**<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**union**
+&nbsp;&nbsp;&nbsp;&nbsp;**modélis**<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**UE**
 
 *struct-declaration-list* :<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*struct-declaration*<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*struct-declaration-list* *struct-declaration*
 
-*struct-declaration* :<br/>
+*struct-DECLARATION*:<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*specifier-qualifier-list* *struct-declarator-list* **;**
 
 *specifier-qualifier-list* :<br/>
@@ -41,11 +41,11 @@ Une déclaration de structure désigne un type et spécifie une séquence de val
 &nbsp;&nbsp;&nbsp;&nbsp;*type-qualifier* *specifier-qualifier-list*<sub>opt</sub>
 
 *struct-declarator-list* :<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*struct-declarator* *struct-declarator-list* **,** *struct-declarator*
+&nbsp;&nbsp;&nbsp;&nbsp;struct *-déclarateur* struct *-declarator-List* **,** *struct-declarator*
 
-*struct-declarator* :<br/>
+*déclarateur de struct*:<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*declarator*<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*type-specifier* *declarator*<sub>opt</sub> **:** *constant-expression*
+&nbsp;&nbsp;&nbsp;&nbsp;*type-specifier* *declarator*<sub>OPT</sub> **:** *constant-expression*
 
 La déclaration d'un type structure ne met pas de côté l'espace pour une structure. C'est uniquement un modèle pour les déclarations suivantes de variables de structure.
 
@@ -122,7 +122,7 @@ struct sample   /* Defines a structure named x */
 
 Les deux premiers membres de la structure sont une variable `char` et un pointeur vers une valeur **float** . Le troisième membre, `next`, est déclaré comme un pointeur vers le type de structure définie (`sample`).
 
-Les structures anonymes peuvent être utiles lorsque la balise nommée n'est pas nécessaire. C'est le cas lorsqu'une déclaration définit toutes les instances de structure. Par exemple :
+Les structures anonymes peuvent être utiles lorsque la balise nommée n'est pas nécessaire. C'est le cas lorsqu'une déclaration définit toutes les instances de structure. Par exemple :
 
 ```C
 struct
@@ -145,11 +145,11 @@ struct somestruct
 } w;
 ```
 
-**Section spécifique à Microsoft**
+**Spécifique à Microsoft**
 
 Le compilateur autorise un tableau non dimensionné ou un tableau de taille zéro comme dernier membre d'une structure. Cela peut être utile si la taille d'un tableau fixe diffère lorsqu'elle est utilisée dans différentes situations. La déclaration de cette structure ressemble à ceci :
 
-**struct** *identifier* **{** *set-of-declarations* *type* <em>array-name</em>**\[]; };**
+**struct** *identificateur* de struct **{** *set-of-declarations* *de type* <em>tableau</em>**\[];};**
 
 Les tableaux non dimensionnés peuvent apparaître uniquement comme dernier membre d'une structure. Les structures contenant des déclarations de tableau non dimensionné peuvent être imbriquées dans d'autres structures tant qu'aucun autre membre n'est déclaré dans une structure englobante. Les tableaux de ces structures ne sont pas autorisés. L'opérateur `sizeof`, une fois appliqué à une variable de ce type ou au type lui-même, suppose 0 pour la taille du tableau.
 
@@ -173,7 +173,7 @@ p_s->b = 100;  /* A reference to a field in the s structure */
 
 Pour plus d’informations sur les références de structure, consultez [Membres de structure et d’union](../c-language/structure-and-union-members.md).
 
-**FIN de la section spécifique à Microsoft**
+**FIN spécifique à Microsoft**
 
 ## <a name="see-also"></a>Voir aussi
 

@@ -7,11 +7,11 @@ helpviewer_keywords:
 - arrays [C++], declaring
 ms.assetid: 5f958b97-cef0-4058-bbc6-37c460aaed9b
 ms.openlocfilehash: 4bc75e86601da77758490544cc5b02c485dcee46
-ms.sourcegitcommit: f4be868c0d1d78e550fba105d4d3c993743a1f4b
-ms.translationtype: HT
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56147774"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62313543"
 ---
 # <a name="array-declarations"></a>Déclarations de tableau
 
@@ -19,22 +19,22 @@ Une « déclaration de tableau » nomme le tableau et spécifie le type de ses
 
 ## <a name="syntax"></a>Syntaxe
 
-*declaration* :<br/>
+*déclaration*:<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*declaration-specifiers* *init-declarator-list*<sub>opt</sub> **;**
 
 *init-declarator-list* :<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*init-declarator*<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*init-declarator-list*  **,**  *init-declarator*
+&nbsp;&nbsp;&nbsp;&nbsp;*init-declarator-List*  **,**  *init-declarator*
 
-*init-declarator* :<br/>
+*init-declarator*:<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*declarator*<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*declarator* **=** *initializer*
+&nbsp;&nbsp;&nbsp;&nbsp;**=** *initialiseur* de *déclarateur*
 
-*declarator* :<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*pointer*<sub>opt</sub> *direct-declarator*
+*déclarateur*:<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*pointeur*<sub>OPT</sub> *direct-declarator*
 
-*direct-declarator* : /\*Déclarateur de fonction \*/<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*direct-declarator*  **[**  *constant-expression*<sub>opt</sub> **]**
+*direct-declarator*:/\* un déclarateur de fonction\*/<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*direct-declarator*  **[**  *constante-expression*<sub>OPT</sub> **]**
 
 Étant donné que *constant-expression* est facultatif, la syntaxe a deux formes :
 
@@ -48,7 +48,7 @@ Des qualificateurs de type peuvent apparaître dans la déclaration d'un objet d
 
 Vous pouvez déclarer un tableau de tableaux (tableau « multidimensionnel ») en indiquant après le déclarateur de tableau une liste d'expressions constantes entre crochets, comme illustré ici :
 
-> *type-specifier* *declarator* **[** *constant-expression* **]** **[** *constant-expression* **]** ...
+> *déclarateur* *de type-spécificateur* **[** *constant-expression* **]** **[** *constante-expression* **]** ...
 
 Chaque *constant-expression* entre crochets définit le nombre d'éléments d'une dimension donnée : les tableaux à deux dimensions comportent deux expressions entre crochets, les tableaux à trois dimensions en comportent trois, et ainsi de suite. Vous pouvez omettre la première expression constante si vous avez initialisé le tableau, si vous l'avez déclaré comme paramètre ou si vous l'avez déclaré comme référence à un tableau explicitement défini ailleurs dans le programme.
 
@@ -88,11 +88,11 @@ extern char *name[];
 
 Cette instruction déclare le type et le nom d'un tableau de pointeurs vers `char`. La définition réelle de `name` se produit ailleurs.
 
-**Section spécifique à Microsoft**
+**Spécifique à Microsoft**
 
 Le type d'entier requis pour conserver la taille maximale d'un tableau est la taille de **size_t**. Défini dans le fichier d'en-tête STDDEF.H, **size_t** est un `unsigned int` présentant la plage de 0x00000000 à 0x7CFFFFFF.
 
-**FIN de la section spécifique à Microsoft**
+**FIN spécifique à Microsoft**
 
 ## <a name="see-also"></a>Voir aussi
 

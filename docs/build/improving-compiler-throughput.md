@@ -16,11 +16,11 @@ ms.locfileid: "62188754"
 ---
 # <a name="improving-compiler-throughput"></a>Amélioration du débit du compilateur
 
-Utiliser des fichiers d’en-tête précompilés pour générer votre projet plus rapidement. Ceci est important si vous utilisez ATL, MFC ou les fichiers d’en-tête Windows SDK.
+Utilisez des fichiers d’en-tête précompilés pour générer votre projet plus rapidement. Cela est important si vous utilisez des fichiers d’en-tête ATL, MFC ou SDK Windows.
 
 Consultez [/Yc](reference/yc-create-precompiled-header-file.md) et [/Yu](reference/yu-use-precompiled-header-file.md).
 
-Pour plus d’informations sur les en-têtes précompilés, consultez [des fichiers d’en-tête précompilé](creating-precompiled-header-files.md).
+Pour plus d’informations sur les en-têtes précompilés, consultez [fichiers d’en-tête précompilés](creating-precompiled-header-files.md).
 
 ## <a name="see-also"></a>Voir aussi
 

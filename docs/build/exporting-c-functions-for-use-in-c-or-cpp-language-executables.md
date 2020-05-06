@@ -17,7 +17,7 @@ ms.locfileid: "62273571"
 ---
 # <a name="exporting-c-functions-for-use-in-c-or-c-language-executables"></a>Exportation de fonctions C à utiliser dans des exécutables en langage C ou C++
 
-Si vous disposez de fonctions dans une DLL écrite en C que vous souhaitez accéder à partir d’un langage C ou C++ module de langue, vous devez utiliser le **__cplusplus** macro de préprocesseur pour déterminer le langage en cours de compilation et ensuite déclarer ces fonctions avec liaison C si utilisé à partir d’un C++ module language. Si vous utilisez cette technique et fournissez les fichiers d’en-tête pour votre DLL, ces fonctions peuvent être utilisées par les utilisateurs de C et C++ sans modification.
+Si vous avez des fonctions dans une DLL écrite en C auxquelles vous souhaitez accéder à partir d’un module de langage C ou C++, vous devez utiliser la macro de préprocesseur **__cplusplus** pour déterminer la langue en cours de compilation, puis déclarer ces fonctions avec une liaison C si elles sont utilisées à partir d’un module de langage C++. Si vous utilisez cette technique et fournissez des fichiers d’en-tête pour votre DLL, ces fonctions peuvent être utilisées par les utilisateurs C et C++ sans aucune modification.
 
 Le code suivant montre un fichier d’en-tête qui peut être utilisé par les applications clientes C et C++ :
 
@@ -36,7 +36,7 @@ __declspec( dllimport ) void AnotherCFunc();
 #endif
 ```
 
-Si vous devez lier des fonctions C à votre exécutable C++ et les fichiers d’en-tête de déclaration (fonction) n’ont pas utilisé la technique ci-dessus, dans le fichier source C++, procédez comme suit pour empêcher le compilateur de décorer les noms de fonction C :
+Si vous avez besoin de lier des fonctions C à votre exécutable C++ et que les fichiers d’en-tête de déclaration de fonction n’ont pas utilisé la technique ci-dessus, dans le fichier source C++, procédez comme suit pour empêcher le compilateur de décorer les noms de fonctions C :
 
 ```cpp
 extern "C" {
@@ -44,11 +44,11 @@ extern "C" {
 }
 ```
 
-## <a name="what-do-you-want-to-do"></a>Que voulez-vous faire ?
+## <a name="what-do-you-want-to-do"></a>Que voulez-vous faire ?
 
-- [Exporter à partir d’une DLL à l’aide de fichiers .def](exporting-from-a-dll-using-def-files.md)
+- [Exporter à partir d’une DLL à l’aide de fichiers. def](exporting-from-a-dll-using-def-files.md)
 
-- [Exporter à partir d’une DLL à l’aide de __declspec (dllexport)](exporting-from-a-dll-using-declspec-dllexport.md)
+- [Exporter à partir d’une DLL à l’aide d' __declspec (dllexport)](exporting-from-a-dll-using-declspec-dllexport.md)
 
 - [Exporter et importer à l’aide de AFX_EXT_CLASS](exporting-and-importing-using-afx-ext-class.md)
 

@@ -20,13 +20,13 @@ Un *corps de fonction* est une instruction composée contenant les instructions 
 
 ## <a name="syntax"></a>Syntaxe
 
-*function-definition*:<br/>
+*définition de fonction*:<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*declaration-specifiers*<sub>opt</sub> *attribute-seq*<sub>opt</sub> *declarator* *declaration-list*<sub>opt</sub> *compound-statement*
 
-/\* *attribute-SEQ* est un \*spécifique à Microsoft /
+/\**attribute-SEQ* est spécifique à Microsoft\*/
 
-*compound-statement*: /\* Le corps de la fonction \*/<br/>
-&nbsp;&nbsp;&nbsp;&nbsp; **{** *declaration-list*<sub>opt</sub> *statement-list*<sub>opt</sub> **}**
+*Compound-Statement*:/\* le corps de la fonction\*/<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**{** *declaration-list*<sub>OPT</sub> *Statement-List*<sub>OPT</sub> **}**
 
 Les variables déclarées dans un corps de fonction, appelées *variables locales*, ont une classe de stockage **auto**, sauf indication contraire. Lorsque la fonction est appelée, du stockage est créé pour les variables locales et les initialisations locales sont exécutées. Le contrôle d'exécution passe à la première instruction dans *compound-statement* et continue jusqu'à ce qu'une instruction **return** soit exécutée ou jusqu'à la fin du corps de la fonction. Le contrôle revient ensuite au point auquel la fonction a été appelée.
 

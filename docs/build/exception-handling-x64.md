@@ -14,7 +14,7 @@ ms.locfileid: "74303197"
 ---
 # <a name="x64-exception-handling"></a>Gestion d’exceptions x64
 
-Vue d’ensemble de la gestion structurée des exceptions et C++ des conventions de codage et du comportement de gestion des exceptions sur le x64. Pour obtenir des informations générales sur la gestion des exceptions, consultez [gestion des exceptions dans Visual C++ ](../cpp/exception-handling-in-visual-cpp.md).
+Vue d’ensemble de la gestion structurée des exceptions et des conventions de codage et du comportement de gestion des exceptions C++ sur le x64. Pour obtenir des informations générales sur la gestion des exceptions, consultez [gestion des exceptions dans Visual C++](../cpp/exception-handling-in-visual-cpp.md).
 
 ## <a name="unwind-data-for-exception-handling-debugger-support"></a>Données de déroulement pour la gestion des exceptions, prise en charge du débogueur
 
@@ -92,7 +92,7 @@ La structure de UNWIND_INFO doit être alignée sur DWORD en mémoire. Voici ce 
 
 - **Décalage du Registre du frame (mis à l’échelle)**
 
-   Si le champ du registre des frames est différent de zéro, ce champ est le décalage à l’échelle de RSP appliqué au registre FP lorsqu’il est établi. Le registre FP réel a la valeur RSP + 16 \* ce nombre, ce qui permet de décaler de 0 à 240. Ce décalage permet de pointer le registre FP au milieu de l’allocation de pile locale pour les frames de pile dynamiques, ce qui permet une meilleure densité de code par le biais d’instructions plus courtes. (Autrement dit, d’autres instructions peuvent utiliser le format de décalage signé 8 bits.)
+   Si le champ du registre des frames est différent de zéro, ce champ est le décalage à l’échelle de RSP appliqué au registre FP lorsqu’il est établi. Le registre FP réel est défini sur RSP + 16 \* ce nombre, ce qui permet de décaler de 0 à 240. Ce décalage permet de pointer le registre FP au milieu de l’allocation de pile locale pour les frames de pile dynamiques, ce qui permet une meilleure densité de code par le biais d’instructions plus courtes. (Autrement dit, d’autres instructions peuvent utiliser le format de décalage signé 8 bits.)
 
 - **Tableau des codes de déroulement**
 
@@ -128,25 +128,25 @@ Offset (à partir du début du prologue) de la fin de l’instruction qui effect
 
 #### <a name="unwind-operation-code"></a>Code d’opération de déroulement
 
-Remarque : certains codes d’opération requièrent un décalage non signé vers une valeur dans le frame de pile local. Cet offset est compris entre le début, c’est-à-dire l’adresse la plus basse de l’allocation de pile fixe. Si le champ du registre des frames dans le UNWIND_INFO est égal à zéro, cet offset provient de RSP. Si le champ du registre des frames est différent de zéro, il s’agit de l’emplacement à partir duquel RSP a été trouvé lors de l’établissement du Registre FP. Il est égal au registre FP moins le décalage du Registre FP (16 \* le décalage du registre de frames mis à l’échelle dans le UNWIND_INFO). Si un registre FP est utilisé, tout code de déroulement qui prend un offset doit être utilisé uniquement après l’établissement du Registre FP dans le prologue.
+Remarque : certains codes d’opération requièrent un décalage non signé vers une valeur dans le frame de pile local. Cet offset est compris entre le début, c’est-à-dire l’adresse la plus basse de l’allocation de pile fixe. Si le champ du registre des frames dans le UNWIND_INFO est égal à zéro, cet offset provient de RSP. Si le champ du registre des frames est différent de zéro, il s’agit de l’emplacement à partir duquel RSP a été trouvé lors de l’établissement du Registre FP. Il est égal au registre FP moins le décalage du Registre FP ( \* 16 le décalage du registre de frames mis à l’échelle dans le UNWIND_INFO). Si un registre FP est utilisé, tout code de déroulement qui prend un offset doit être utilisé uniquement après l’établissement du Registre FP dans le prologue.
 
-Pour tous les OpCodes, à l’exception de `UWOP_SAVE_XMM128` et `UWOP_SAVE_XMM128_FAR`, le décalage est toujours un multiple de 8, car toutes les valeurs de pile d’intérêt sont stockées sur des limites de 8 octets (la pile elle-même est toujours alignée sur 16 octets). Pour les codes d’opération qui prennent un décalage bref (inférieur à 512 Ko), le dernier USHORT des nœuds pour ce code contient le décalage divisé par 8. Pour les codes d’opération qui prennent un décalage long (512 Ko < = décalage < 4 Go), les deux derniers nœuds USHORT pour ce code contiennent le décalage (au format Little endian).
+Pour tous les OpCodes `UWOP_SAVE_XMM128` à `UWOP_SAVE_XMM128_FAR`l’exception de et, le décalage est toujours un multiple de 8, car toutes les valeurs de pile d’intérêt sont stockées sur des limites de 8 octets (la pile elle-même est toujours alignée sur 16 octets). Pour les codes d’opération qui prennent un décalage bref (inférieur à 512 Ko), le dernier USHORT des nœuds pour ce code contient le décalage divisé par 8. Pour les codes d’opération qui prennent un décalage long (512 Ko <= décalage < 4 Go), les deux derniers nœuds USHORT pour ce code contiennent le décalage (au format Little endian).
 
-Pour les OpCodes `UWOP_SAVE_XMM128` et `UWOP_SAVE_XMM128_FAR`, le décalage est toujours un multiple de 16, étant donné que toutes les opérations XMM 128 bits doivent se produire sur une mémoire alignée sur 16 octets. Par conséquent, un facteur d’échelle de 16 est utilisé pour `UWOP_SAVE_XMM128`, ce qui permet d’obtenir des décalages inférieurs à 1M.
+Pour les OpCodes `UWOP_SAVE_XMM128` et `UWOP_SAVE_XMM128_FAR`, le décalage est toujours un multiple de 16, étant donné que toutes les opérations XMM 128 bits doivent se produire sur une mémoire alignée sur 16 octets. Par conséquent, un facteur d’échelle de 16 est `UWOP_SAVE_XMM128`utilisé pour, en autorisant des décalages inférieurs à 1M.
 
 Le code d’opération de déroulement est l’une des valeurs suivantes :
 
-- nœud `UWOP_PUSH_NONVOL` (0) 1
+- `UWOP_PUSH_NONVOL`(0) 1 nœud
 
-  Exécute un push d’un registre entier non volatil, en décrémentant RSP de 8. Les informations sur l’opération sont le numéro du Registre. En raison des contraintes sur épilogues, `UWOP_PUSH_NONVOL` codes de déroulement doivent apparaître en premier dans le prologue et en conséquence, en dernier dans le tableau de codes de déroulement. Ce classement relatif s’applique à tous les autres codes de déroulement, à l’exception de `UWOP_PUSH_MACHFRAME`.
+  Exécute un push d’un registre entier non volatil, en décrémentant RSP de 8. Les informations sur l’opération sont le numéro du Registre. En raison des contraintes sur les épilogues `UWOP_PUSH_NONVOL` , les codes de déroulement doivent apparaître en premier dans le prologue et en conséquence, en dernier dans le tableau de codes de déroulement. Ce classement relatif s’applique à tous les autres codes `UWOP_PUSH_MACHFRAME`de déroulement, à l’exception de.
 
-- `UWOP_ALLOC_LARGE` (1) 2 ou 3 nœuds
+- `UWOP_ALLOC_LARGE`(1) 2 ou 3 nœuds
 
   Allouez une zone de grande taille sur la pile. Il existe deux formes. Si les informations sur l’opération sont égales à 0, la taille de l’allocation divisée par 8 est enregistrée dans l’emplacement suivant, ce qui permet une allocation allant jusqu’à 512 Ko-8. Si les informations sur l’opération sont égales à 1, la taille non mise à l’échelle de l’allocation est enregistrée dans les deux emplacements suivants au format Little endian, ce qui permet d’allouer jusqu’à 4 Go-8.
 
-- nœud `UWOP_ALLOC_SMALL` (2) 1
+- `UWOP_ALLOC_SMALL`(2) 1 nœud
 
-  Allouez une zone de petite taille sur la pile. La taille de l’allocation est le champ d’informations sur l’opération \* 8 + 8, ce qui permet d’allouer de 8 à 128 octets.
+  Allouez une zone de petite taille sur la pile. La taille de l’allocation est le champ \* d’informations sur l’opération 8 + 8, ce qui permet d’allouer de 8 à 128 octets.
 
   Le code de déroulement pour une allocation de pile doit toujours utiliser le plus petit encodage possible :
 
@@ -156,27 +156,27 @@ Le code d’opération de déroulement est l’une des valeurs suivantes :
   |136 à 512 Ko-8 octets|`UWOP_ALLOC_LARGE`, informations sur l’opération = 0|
   |512 Ko à 4G-8 octets|`UWOP_ALLOC_LARGE`, informations sur l’opération = 1|
 
-- nœud `UWOP_SET_FPREG` (3) 1
+- `UWOP_SET_FPREG`(3) 1 nœud
 
-  Établissez le Registre du pointeur de frame en affectant au registre un décalage de la RSP actuelle. Le décalage est égal au champ décalage du Registre du frame (mis à l’échelle) dans le UNWIND_INFO \* 16, ce qui permet de décaler de 0 à 240. L’utilisation d’un décalage permet d’établir un pointeur de frame qui pointe vers le milieu de l’allocation de pile fixe, ce qui contribue à la densité de code en permettant à d’autres accès d’utiliser des formes d’instructions courtes. Le champ informations sur l’opération est réservé et ne doit pas être utilisé.
+  Établissez le Registre du pointeur de frame en affectant au registre un décalage de la RSP actuelle. Le décalage est égal au champ décalage du Registre du frame (mis à l’échelle) \* dans le UNWIND_INFO 16, ce qui permet de décaler de 0 à 240. L’utilisation d’un décalage permet d’établir un pointeur de frame qui pointe vers le milieu de l’allocation de pile fixe, ce qui contribue à la densité de code en permettant à d’autres accès d’utiliser des formes d’instructions courtes. Le champ informations sur l’opération est réservé et ne doit pas être utilisé.
 
-- nœuds `UWOP_SAVE_NONVOL` (4) 2
+- `UWOP_SAVE_NONVOL`(4) 2 nœuds
 
   Enregistrez un registre entier non volatile sur la pile à l’aide d’un MOV au lieu d’un PUSH. Ce code est principalement utilisé pour l' *encapsulage*, où un registre non volatil est enregistré dans la pile à une position précédemment allouée. Les informations sur l’opération sont le numéro du Registre. Le décalage de la pile mis à l’échelle par 8 est enregistré dans l’emplacement du code de l’opération de déroulement suivant, comme décrit dans la remarque ci-dessus.
 
-- `UWOP_SAVE_NONVOL_FAR` (5) 3 nœuds
+- `UWOP_SAVE_NONVOL_FAR`(5) 3 nœuds
 
   Enregistrez un registre entier non volatile sur la pile avec un décalage long, à l’aide d’un MOV au lieu d’un PUSH. Ce code est principalement utilisé pour l' *encapsulage*, où un registre non volatil est enregistré dans la pile à une position précédemment allouée. Les informations sur l’opération sont le numéro du Registre. Le décalage de la pile non mis à l’échelle est enregistré dans les deux emplacements de code d’opération de déroulement suivants, comme décrit dans la remarque ci-dessus.
 
-- nœuds `UWOP_SAVE_XMM128` (8) 2
+- `UWOP_SAVE_XMM128`(8) 2 nœuds
 
   Enregistrez tous les 128 bits d’un registre XMM non volatil sur la pile. Les informations sur l’opération sont le numéro du Registre. Le décalage de la pile mis à l’échelle par 16 est enregistré dans l’emplacement suivant.
 
-- nœuds `UWOP_SAVE_XMM128_FAR` (9) 3
+- `UWOP_SAVE_XMM128_FAR`(9) 3 nœuds
 
   Enregistrez tous les 128 bits d’un registre XMM non volatil sur la pile avec un décalage long. Les informations sur l’opération sont le numéro du Registre. Le décalage de la pile non mis à l’échelle est enregistré dans les deux emplacements suivants.
 
-- nœud `UWOP_PUSH_MACHFRAME` (10) 1
+- `UWOP_PUSH_MACHFRAME`(10) 1 nœud
 
   Exécute un push d’un frame de machine.  Ce code de déroulement est utilisé pour enregistrer l’effet d’une interruption ou d’une exception matérielle. Il existe deux formes. Si les informations sur l’opération sont égales à 0, l’un de ces frames a fait l’objet d’un push sur la pile :
 
@@ -185,21 +185,21 @@ Le code d’opération de déroulement est l’une des valeurs suivantes :
   |RSP + 32|SS|
   |RSP + 24|Ancien RSP|
   |RSP + 16|EFLAGS|
-  |RSP + 8|C|
+  |RSP + 8|CS|
   |RSP|PROTOCOLES|
 
   Si les informations sur l’opération sont égales à 1, cela signifie que l’un de ces frames a fait l’objet d’un push :
 
   |||
   |-|-|
-  |RSP+40|SS|
+  |RSP + 40|SS|
   |RSP + 32|Ancien RSP|
   |RSP + 24|EFLAGS|
-  |RSP + 16|C|
+  |RSP + 16|CS|
   |RSP + 8|PROTOCOLES|
   |RSP|Code d'erreur|
 
-  Ce code de déroulement apparaît toujours dans un prologue factice, qui n’est jamais réellement exécuté, mais il apparaît à la place avant le point d’entrée réel d’une routine d’interruption, et existe uniquement pour fournir un emplacement pour simuler la transmission de type push d’un frame de machine. `UWOP_PUSH_MACHFRAME` enregistre cette simulation, ce qui indique que l’ordinateur a effectué cette opération de manière conceptuelle :
+  Ce code de déroulement apparaît toujours dans un prologue factice, qui n’est jamais réellement exécuté, mais il apparaît à la place avant le point d’entrée réel d’une routine d’interruption, et existe uniquement pour fournir un emplacement pour simuler la transmission de type push d’un frame de machine. `UWOP_PUSH_MACHFRAME`enregistre cette simulation, qui indique que l’ordinateur a effectué cette opération de manière conceptuelle :
 
   1. Adresse de retour RIP du haut de la pile dans *temp*
   
@@ -215,7 +215,7 @@ Le code d’opération de déroulement est l’une des valeurs suivantes :
 
   1. Code d’erreur push (si les informations d’op sont égales à 1)
 
-  L’opération de `UWOP_PUSH_MACHFRAME` simulé décrémente RSP de 40 (op info est égal à 0) ou 48 (op info est égal à 1).
+  L' `UWOP_PUSH_MACHFRAME` opération simulée décrémente RSP de 40 (op info est égal à 0) ou 48 (op info est égal à 1).
 
 #### <a name="operation-info"></a>Informations sur l’opération
 
@@ -229,7 +229,7 @@ La signification des bits d’informations sur l’opération dépend du code d�
 |3|RBX|
 |4|RSP|
 |5|RBP|
-|6\.|RSI|
+|6|RSI|
 |7|RDI|
 |8 à 15|R8 à R15|
 
@@ -305,7 +305,7 @@ typedef struct _DISPATCHER_CONTEXT {
 } DISPATCHER_CONTEXT, *PDISPATCHER_CONTEXT;
 ```
 
-**ControlPc** est la valeur de RIP dans cette fonction. Cette valeur est soit une adresse d’exception, soit l’adresse à laquelle le contrôle a quitté la fonction d’établissement. Le RIP est utilisé pour déterminer si le contrôle se trouve dans une construction protégée à l’intérieur de cette fonction, par exemple un bloc `__try` pour `__try`/`__except` ou `__try`/`__finally`.
+**ControlPc** est la valeur de RIP dans cette fonction. Cette valeur est soit une adresse d’exception, soit l’adresse à laquelle le contrôle a quitté la fonction d’établissement. Le RIP est utilisé pour déterminer si le contrôle se trouve dans une construction protégée à l’intérieur de cette fonction, `__try` par exemple `__try` / `__except` un `__try` / `__finally`bloc pour ou.
 
 **ImageBase** est la base d’image (adresse de chargement) du module contenant cette fonction, à ajouter aux offsets 32 bits utilisés dans l’entrée de fonction et les informations de déroulement pour enregistrer les adresses relatives.
 
@@ -329,13 +329,13 @@ Pour écrire les routines d’assembly appropriées, il existe un ensemble de Ps
 
 |Pseudo-opération|Description|
 |-|-|
-|\[de la TRAMe de traitement :*ehandler*]|Fait en sorte que MASM génère une entrée de table de fonctions dans. pdata et les informations de déroulement dans. XData pour le comportement de déroulement de la gestion structurée des exceptions d’une fonction.  Si *ehandler* est présent, cette procédure est entrée dans le. XData comme gestionnaire spécifique au langage.<br /><br /> Lorsque l’attribut FRAME est utilisé, il doit être suivi d’un. Directive ENDPROLOG.  Si la fonction est une fonction feuille (telle que définie dans les [types de fonction](../build/stack-usage.md#function-types)), l’attribut Frame n’est pas nécessaire, comme le reste de ces pseudo-opérations.|
+|FRAME \[de proc. :*ehandler*]|Fait en sorte que MASM génère une entrée de table de fonctions dans. pdata et les informations de déroulement dans. XData pour le comportement de déroulement de la gestion structurée des exceptions d’une fonction.  Si *ehandler* est présent, cette procédure est entrée dans le. XData comme gestionnaire spécifique au langage.<br /><br /> Lorsque l’attribut FRAME est utilisé, il doit être suivi d’un. Directive ENDPROLOG.  Si la fonction est une fonction feuille (telle que définie dans les [types de fonction](../build/stack-usage.md#function-types)), l’attribut Frame n’est pas nécessaire, comme le reste de ces pseudo-opérations.|
 |. *Registre* PUSHREG|Génère une entrée de code de déroulement UWOP_PUSH_NONVOL pour le numéro de Registre spécifié à l’aide de l’offset actuel dans le prologue.<br /><br /> Utilisez-le uniquement avec des registres d’entiers non volatils.  Pour les notifications push de registres volatils, utilisez un. ALLOCSTACK 8, à la place|
 |. *Registre*SETFRAME, *décalage*|Remplit le champ du Registre du frame et le décalage dans les informations de déroulement à l’aide du Registre et de l’offset spécifiés. Le décalage doit être un multiple de 16 et inférieur ou égal à 240. Cette directive génère également une entrée de code de déroulement UWOP_SET_FPREG pour le registre spécifié à l’aide de l’offset de prologue actuel.|
 |. *Taille* de ALLOCSTACK|Génère un UWOP_ALLOC_SMALL ou un UWOP_ALLOC_LARGE avec la taille spécifiée pour l’offset actuel dans le prologue.<br /><br /> L’opérande de *taille* doit être un multiple de 8.|
 |. *Registre*SAVEREG, *décalage*|Génère un UWOP_SAVE_NONVOL ou une entrée de code de déroulement UWOP_SAVE_NONVOL_FAR pour le registre et l’offset spécifiés à l’aide de l’offset de prologue actuel. MASM choisit le codage le plus efficace.<br /><br /> *offset* doit être positif et un multiple de 8. l' *offset* est relatif à la base du frame de la procédure, qui est généralement dans RSP ou, si vous utilisez un pointeur de frame, le pointeur de frame non mis à l’échelle.|
 |. *Registre*SAVEXMM128, *décalage*|Génère un UWOP_SAVE_XMM128 ou une entrée de code de déroulement UWOP_SAVE_XMM128_FAR pour le registre XMM et le décalage spécifiés à l’aide de l’offset de prologue actuel. MASM choisit le codage le plus efficace.<br /><br /> *offset* doit être positif et un multiple de 16.  l' *offset* est relatif à la base du frame de la procédure, qui est généralement dans RSP ou, si vous utilisez un pointeur de frame, le pointeur de frame non mis à l’échelle.|
-|. PUSHFRAME \[*code*]|Génère une entrée de code de déroulement UWOP_PUSH_MACHFRAME. Si le *code* facultatif est spécifié, le modificateur 1 est attribué à l’entrée du code de déroulement. Sinon, le modificateur est 0.|
+|. \[ *Code*PUSHFRAME]|Génère une entrée de code de déroulement UWOP_PUSH_MACHFRAME. Si le *code* facultatif est spécifié, le modificateur 1 est attribué à l’entrée du code de déroulement. Sinon, le modificateur est 0.|
 |.ENDPROLOG|Signale la fin des déclarations de prologue.  Doit se produire dans les 255 premiers octets de la fonction.|
 
 Voici un exemple de prologue de fonction avec une utilisation correcte de la plupart des OpCodes :
@@ -395,13 +395,13 @@ Pour simplifier l’utilisation des [Pseudo-opérations brutes](#raw-pseudo-oper
 
 |Macro|Description|
 |-|-|
-|alloc_stack(n)|Alloue un frame de pile de n octets (à l’aide de `sub rsp, n`) et émet les informations de déroulement appropriées (. allocstack n)|
+|alloc_stack (n)|Alloue un frame de pile de n octets (à `sub rsp, n`l’aide de) et émet les informations de déroulement appropriées (. allocstack n)|
 |save_reg *reg*, *loc*|Enregistre *un registre de registres non* volatil sur la pile à l’emplacement RSP offset *loc*et émet les informations de déroulement appropriées. (. savereg reg, loc)|
 |push_reg *reg*|Exécute un *push d’un registre de registres non* volatil sur la pile et émet les informations de déroulement appropriées. (. pushreg reg)|
 |rex_push_reg *reg*|Enregistre un registre non volatil sur la pile à l’aide d’un push de 2 octets et émet les informations de déroulement appropriées (. pushreg reg).  Utilisez cette macro si l’envoi est la première instruction de la fonction, afin de garantir que la fonction peut être corrigée à chaud.|
 |save_xmm128 *reg*, *loc*|Enregistre un fichier de Registre XMM non *volatil sur la* pile à l’emplacement RSP offset *loc*et émet les informations de déroulement appropriées (. savexmm128 reg, loc)|
-|set_frame *reg*, *décalage*|Définit *la valeur de Registre du* Registre des frames sur le *décalage* RSP + (à l’aide d’un `mov`ou d’un `lea`) et émet les informations de déroulement appropriées (. set_frame reg, offset)|
-|push_eflags|Exécute un push du eflags avec une instruction `pushfq` et émet les informations de déroulement appropriées (. alloc_stack 8)|
+|set_frame *reg*, *décalage*|Définit la valeur de Registre du registre des frames sur le *décalage* RSP `mov`+ (à `lea`l’aide d’un, ou) et émet les *informations de déroulement* appropriées (. set_frame reg, offset)|
+|push_eflags|Exécute un push du eflags avec `pushfq` une instruction et émet les informations de déroulement appropriées (. alloc_stack 8)|
 
 Voici un exemple de prologue de fonction avec une utilisation correcte des macros :
 

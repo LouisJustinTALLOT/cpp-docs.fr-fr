@@ -8,11 +8,11 @@ helpviewer_keywords:
 - pointers, declarations
 ms.assetid: 8b3b7fc7-f44d-480d-b6f9-cebe4e5462a6
 ms.openlocfilehash: 0ee6e9e78f3793cd1912ece7f8627a4be68e929c
-ms.sourcegitcommit: f4be868c0d1d78e550fba105d4d3c993743a1f4b
-ms.translationtype: HT
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56151999"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62232150"
 ---
 # <a name="pointer-declarations"></a>Déclarations de pointeur
 
@@ -20,27 +20,27 @@ Une *déclaration de pointeur* nomme une variable de pointeur et spécifie le ty
 
 ## <a name="syntax"></a>Syntaxe
 
-*declarator* :<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*pointer*<sub>opt</sub> *direct-declarator*
+*déclarateur*:<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*pointeur*<sub>OPT</sub> *direct-declarator*
 
-*direct-declarator* :<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*identifier*<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**(** *declarator* **)**<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*direct-declarator* **[** *constant-expression*<sub>opt</sub> **]**<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*direct-declarator* **(** *parameter-type-list* **)**<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*direct-declarator* **(** *identifier-list*<sub>opt</sub> **)**
+*direct-declarator*:<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*identificateur*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**(** *déclarateur* **)**<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*direct-declarator* **[** *constante-expression*<sub>OPT</sub> **]**<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*direct-declarator* **(** *Parameter-type-list* **)**<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*direct-declarator* **(** *identifier-List*<sub>OPT</sub> **)**
 
-*pointer* :<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;<strong>\*</strong> *type-qualifier-list*<sub>opt</sub><br/>
-&nbsp;&nbsp;&nbsp;&nbsp;<strong>\*</strong> *type-qualifier-list*<sub>opt</sub> *pointer*
+*pointeur*:<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<strong>\*</strong>*type-qualifier-List*<sub>OPT</sub><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<strong>\*</strong>*type-qualifier-List-*<sub>opt</sub> *pointeur* opt
 
 *type-qualifier-list* :<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*type-qualifier*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*qualificateur de type*<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*type-qualifier-list* *type-qualifier*
 
 Le *type-specifier* donne le type de l’objet, qui peut être tout type base, structure ou union. Les variables pointeur peuvent également pointer vers des fonctions, des tableaux et d'autres pointeurs. Pour plus d’informations sur la déclaration et l’interprétation des types pointeur plus complexes, consultez [Interprétation de déclarateurs plus complexes](../c-language/interpreting-more-complex-declarators.md).
 
-En définissant le *type-specifier* sur **void**, vous pouvez différer la spécification du type auquel le pointeur se rapporte. Cet élément est appelé « pointeur vers **void** » et s’écrit `void *`. Une variable déclarée comme pointeur vers *void* peut être utilisée pour indiquer un objet de tout type. Toutefois, pour exécuter la plupart des opérations sur le pointeur ou sur l'objet vers lequel il pointe, le type vers lequel il pointe doit être spécifié explicitement pour chaque opération. Les variables de type **char** <strong>\*</strong> et de type **void** <strong>\*</strong> sont compatibles pour l’assignation sans cast de type. Cette conversion peut être effectuée avec un cast de type (pour plus d’informations, consultez [Conversions de cast de type](../c-language/type-cast-conversions.md)).
+En définissant le *type-specifier sur * **void**, vous pouvez différer la spécification du type auquel le pointeur se rapporte. Cet élément est appelé « pointeur vers **void** » et s’écrit `void *`. Une variable déclarée comme pointeur vers *void* peut être utilisée pour indiquer un objet de tout type. Toutefois, pour exécuter la plupart des opérations sur le pointeur ou sur l'objet vers lequel il pointe, le type vers lequel il pointe doit être spécifié explicitement pour chaque opération. (Les variables de type **char** <strong>\*</strong> et de type **void** <strong>\*</strong> sont compatibles avec l’assignation sans conversion de type.) Une telle conversion peut être effectuée avec un cast de type (consultez [conversions de cast de type](../c-language/type-cast-conversions.md) pour plus d’informations).
 
 Le *type-qualifier* peut être **const** ou **volatile** ou les deux. Ils spécifient, respectivement, que le pointeur ne peut pas être modifié par le programme lui-même (**const**) ou que le pointeur peut légitimement être modifié par un processus en dehors du contrôle du programme (**volatile**). Pour plus d’informations sur **const** et **volatile**, consultez [Qualificateurs de type](../c-language/type-qualifiers.md).
 
@@ -112,7 +112,7 @@ struct id
 } record;
 ```
 
-La variable *record* a le type de structure nommé *id*. Notez que *pname* est déclaré comme un pointeur vers un autre type de structure nommé *name*. Cette déclaration peut apparaître avant que le type *name* soit défini.
+L' *enregistrement* de la variable a le type de structure *ID*. Notez que *pname* est déclaré en tant que pointeur vers un autre type de structure nommé *Name*. Cette déclaration peut apparaître avant que le type *name* soit défini.
 
 ## <a name="see-also"></a>Voir aussi
 

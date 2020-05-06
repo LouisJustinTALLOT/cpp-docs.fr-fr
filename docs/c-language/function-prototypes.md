@@ -21,10 +21,10 @@ Une déclaration de fonction précède la définition de fonction et spécifie l
 
 ## <a name="syntax"></a>Syntaxe
 
-*declaration* :<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*declaration-specifiers* *attribute-seq*<sub>opt</sub> *init-declarator-list*<sub>opt</sub> **;**
+*déclaration*:<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*DECLARATION-Specifiers* *attribute-SEQ*<sub>OPT</sub> *init-declarator-List*<sub>OPT</sub> **;**
 
-/\* *attribut-SEQ*<sub>opt</sub> est un \*spécifique à Microsoft /
+/\**attribute-SEQ*<sub>OPT</sub> est spécifique à Microsoft\*/
 
 *declaration-specifiers* :<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*storage-class-specifier* *declaration-specifiers*<sub>opt</sub> <br/>
@@ -33,18 +33,18 @@ Une déclaration de fonction précède la définition de fonction et spécifie l
 
 *init-declarator-list* :<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*init-declarator*<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*init-declarator-list*  **,**  *init-declarator*
+&nbsp;&nbsp;&nbsp;&nbsp;*init-declarator-List*  **,**  *init-declarator*
 
-*init-declarator* :<br/>
+*init-declarator*:<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*declarator*<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*declarator* **=** *initializer*
+&nbsp;&nbsp;&nbsp;&nbsp;**=** *initialiseur* de *déclarateur*
 
-*declarator* :<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*pointer*<sub>opt</sub> *direct-declarator*
+*déclarateur*:<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*pointeur*<sub>OPT</sub> *direct-declarator*
 
-*direct-declarator* : /\*Déclarateur de fonction \*/<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*direct-declarator*  **(**  *parameter-type-list*  **)**   /\* Déclarateur de nouveau style \*/<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*direct-declarator*  **(**  *identifier-list*<sub>opt</sub> **)**  /\* Déclarateur de style obsolète \*/
+*direct-declarator*:/\* un déclarateur de fonction\*/<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;déclarateur *direct-declarator***(***Parameter-type-list***)**   / \* New-style declarator      \*/<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;déclarateur *direct-declarator***(***identifier-List*<sub>OPT</sub> **)**  / \* -déclarateur de style obsolète    \*/
 
 Le prototype a la même forme que la définition de fonction, sauf qu'il se termine par un point-virgule juste après la parenthèse fermante et qu'il n'a par conséquent aucun corps. Dans les deux cas, le type de retour doit correspondre à celui spécifié dans la définition de fonction.
 

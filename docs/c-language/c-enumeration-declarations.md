@@ -10,11 +10,11 @@ helpviewer_keywords:
 - declaring enumerations
 ms.assetid: bd18f673-4dda-4bc1-92fd-d1ce10074910
 ms.openlocfilehash: bc238dd0088558233d84f8bbd15d06743e133449
-ms.sourcegitcommit: f4be868c0d1d78e550fba105d4d3c993743a1f4b
-ms.translationtype: HT
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56149230"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62326012"
 ---
 # <a name="c-enumeration-declarations"></a>Déclarations d'énumération C
 
@@ -27,8 +27,8 @@ En C ANSI, les expressions qui définissent la valeur d'une constante d'énumér
 ## <a name="syntax"></a>Syntaxe
 
 *enum-specifier* :<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**enum** *identifier*<sub>opt</sub> **{** *enumerator-list* **}**<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**enum** *identifier*
+&nbsp;&nbsp;&nbsp;&nbsp;identificateur d' **énumération** *identifier*<sub>OPT</sub> **{** *Enumerator-List* **}**<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*identificateur* d' **énumération**
 
 L'élément facultatif *identifier* désigne le type énumération défini par *enumerator-list*. Cet identificateur est souvent appelé « étiquette » de l’énumération spécifiée par la liste. Un spécificateur de type de la forme
 
@@ -45,16 +45,16 @@ Si la déclaration d’une étiquette est visible, les déclarations suivantes q
 
 ## <a name="syntax"></a>Syntaxe
 
-*enumerator-list* :<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*enumerator*<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*enumerator-list* **,** *enumerator*
+*énumérateur-List*:<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*énumérateur*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*Enumerator-List* **,** *énumérateur*
 
-*enumerator*:<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*enumeration-constant*<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*enumeration-constant* **=** *constant-expression*
+*énumérateur*:<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*énumération-constante*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*énumération-* **=** constante constante *-expression*
 
-*enumeration-constant* :<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*identifier*
+*énumération-constante*:<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*identificateur*
 
 Chaque élément *enumeration-constant* d'un élément *enumeration-list* désigne une valeur de l'ensemble d'énumération. Par défaut, le premier élément *enumeration-constant* est associé à la valeur 0. L'élément *enumeration-constant* suivant dans la liste est associé à la valeur de (*constant-expression* + 1), sauf si vous l'associez explicitement à une autre valeur. Le nom d'un élément *enumeration-constant* est équivalent à sa valeur.
 

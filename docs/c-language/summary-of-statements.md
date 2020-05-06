@@ -11,57 +11,57 @@ ms.locfileid: "74856993"
 ---
 # <a name="summary-of-statements"></a>Résumé des instructions
 
-*instruction* :<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*labeled-statement*<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*compound-statement*<br/>
+*instruction*:<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*instruction étiquetée*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*Compound-Statement*<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*expression-statement*<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*selection-statement*<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*iteration-statement*<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*jump-statement*<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*try-except-statement* /\* \*spécifique à Microsoft /<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*try-finally-statement* /\* \*spécifique à Microsoft /
+&nbsp;&nbsp;&nbsp;&nbsp;*instruction de sélection*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*itération-instruction*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*instruction Jump*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*try-except-Statement*  / \* , spécifique à Microsoft\*/<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*try-finally-instruction*  / \* spécifique à Microsoft\*/
 
-*saut-instruction* :<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**goto**  *identifier*  **;**<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**continue ;**<br/>
+*instruction Jump*:<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**goto***identificateur*Goto **;**    <br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**pouvoir**<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;**break ;**<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;**return** *expression*<sub>opt</sub> **;**
 
-*compound-statement*:<br/>
-&nbsp;&nbsp;&nbsp;&nbsp; **{** *declaration-list*<sub>opt</sub> *statement-list*<sub>opt</sub> **}**
+*Compound-Statement*:<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**{** *declaration-list*<sub>OPT</sub> *Statement-List*<sub>OPT</sub> **}**
 
 *declaration-list* :<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*declaration*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*déclaré*<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*declaration-list* *declaration*
 
 *statement-list*:<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*statement*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*gestion*<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*statement-list* *statement*
 
-*expression-statement*:<br/>
+*instruction d’expression*:<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*expression*<sub>opt</sub> **;**
 
 *itération-instruction* :<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**while (**  *expression*  **)**  *statement*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*instruction* **while (***expression***)**      <br/>
 &nbsp;&nbsp;&nbsp;&nbsp;**do**  *statement*  **while (**  *expression*  **) ;**<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**for (**  *expression*<sub>opt</sub> **;** *expression*<sub>opt</sub> **;** *expression*<sub>opt</sub> **)** *statement*
+&nbsp;&nbsp;&nbsp;&nbsp;**for (***expression*<sub>OPT</sub> **;** *expression opt*<sub>opt</sub> **;** *expression*<sub>OPT</sub> **)** ( *instruction* )  
 
-*selection-statement* :<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**if (**  *expression*  **)**  *statement*<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**if (**  *expression*  **)**  *statement*  **else**  *statement*<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**switch (**  *expression*  **)**  *statement*
+*instruction de sélection*:<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*instruction* **if (***expression***)**      <br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*instruction* **if (***expression***)***statement***else**          <br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*instruction* **switch (***expression***)**      
 
-*labeled-statement* :<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*identifier*  **:**  *statement*<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**case**  *constant-expression*  **:**  *statement*<br/>
+*instruction étiquetée*:<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*identificateur*  **:**  *instruction*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**case**  *constant-expression*  **:**  *Statement*<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;**default :**  *statement*
 
-*try-except-Statement*:/\* \*spécifique à Microsoft /<br/>
-&nbsp;&nbsp;&nbsp;&nbsp; **__try**  *compound-statement* **__except (**  *expression*  **)**  *compound-statement*
+*try-except-Statement*:/\* spécifique à Microsoft\*/<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**__try composée**  *-* instruction **__except (**  *expression*  **)**  *Compound-Statement*
 
-*try-finally-Statement*:/\* \*spécifique à Microsoft /<br/>
-&nbsp;&nbsp;&nbsp;&nbsp; **__try**  *compound-statement* **__finally**  *compound-statement*
+*try-finally-Statement*:\* /spécifique à Microsoft\*/<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**__try**  *compound-statement* **__finally**  *compound-statement*
 
 ## <a name="see-also"></a>Voir aussi
 
-[Grammaire de la structure de la phrase](../c-language/phrase-structure-grammar.md)
+[Grammaire de la structure des expressions](../c-language/phrase-structure-grammar.md)

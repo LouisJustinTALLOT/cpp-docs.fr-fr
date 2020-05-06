@@ -23,10 +23,10 @@ Le type de retour d’une fonction génère la taille et le type de la valeur re
 
 ## <a name="syntax"></a>Syntaxe
 
-*function-definition*:<br/>
+*définition de fonction*:<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*declaration-specifiers*<sub>opt</sub> *attribute-seq*<sub>opt</sub> *declarator* *declaration-list*<sub>opt</sub> *compound-statement*
 
-/\* *attribute-SEQ* est un \*spécifique à Microsoft /
+/\**attribute-SEQ* est spécifique à Microsoft\*/
 
 *declaration-specifiers* :<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*storage-class-specifier* *declaration-specifiers*<sub>opt</sub><br/>
@@ -34,20 +34,20 @@ Le type de retour d’une fonction génère la taille et le type de la valeur re
 &nbsp;&nbsp;&nbsp;&nbsp;*type-qualifier* *declaration-specifiers*<sub>opt</sub>
 
 *type-specifier* :<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**void**<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**char**<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**short**<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**int**<br/>
-&nbsp;&nbsp;&nbsp;&nbsp; **__int8** /\* \*propres à Microsoft /<br/>
-&nbsp;&nbsp;&nbsp;&nbsp; **__int16** /\* \*propres à Microsoft /<br/>
-&nbsp;&nbsp;&nbsp;&nbsp; **__int32** /\* \*propres à Microsoft /<br/>
-&nbsp;&nbsp;&nbsp;&nbsp; **__int64** /\* \*propres à Microsoft /<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**nullité**<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**Char**<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**Résumé**<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**tiers**<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**__int8** / __int8\* spécifique à Microsoft\*/<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**__int16** / __int16\* spécifique à Microsoft\*/<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**__int32** / __int32\* spécifique à Microsoft\*/<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**__int64** / __int64\* spécifique à Microsoft\*/<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;**long**<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**float**<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**double**<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**signed**<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**unsigned**<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*struct-or-union-specifier*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**dissocié**<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**Cliquer**<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**abonné**<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**non signé**<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*struct-or-Union-specifier*<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*enum-specifier*<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*typedef-name*
 

@@ -7,11 +7,11 @@ helpviewer_keywords:
 - variant records
 ms.assetid: 978c6165-e0ae-4196-afa7-6d94e24f62f7
 ms.openlocfilehash: dbc85a467161457641dd86acf5f3720bf4e14247
-ms.sourcegitcommit: f4be868c0d1d78e550fba105d4d3c993743a1f4b
-ms.translationtype: HT
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56149256"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62291039"
 ---
 # <a name="union-declarations"></a>Déclarations d'union
 
@@ -19,13 +19,13 @@ Une « déclaration d’union » spécifie un ensemble de valeurs variables et
 
 ## <a name="syntax"></a>Syntaxe
 
-*struct-or-union-specifier* :<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*struct-ou-union* *identificateur*<sub>opt</sub> **{** *liste-déclarations-struct* **}**<br/>
+*spécificateur struct-or-Union*:<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*identificateur struct-or-Union* *identifier*<sub>OPT</sub> **{** *struct-declaration-list* **}**<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*struct-ou-union* *identificateur*
 
 *struct-or-union* :<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**struct**<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**union**
+&nbsp;&nbsp;&nbsp;&nbsp;**modélis**<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**UE**
 
 *struct-declaration-list* :<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*struct-declaration*<br/>
@@ -33,7 +33,7 @@ Une « déclaration d’union » spécifie un ensemble de valeurs variables et
 
 Le contenu d'union est défini comme
 
-*struct-declaration* :<br/>
+*struct-DECLARATION*:<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*specifier-qualifier-list* *struct-declarator-list*  **;**
 
 *specifier-qualifier-list* :<br/>
@@ -42,7 +42,7 @@ Le contenu d'union est défini comme
 
 *struct-declarator-list* :<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*struct-declarator*<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*struct-declarator-list*  **,**  *struct-declarator*
+&nbsp;&nbsp;&nbsp;&nbsp;*struct-declarator-List*  **,**  *struct-declarator*
 
 Une variable du type **union** stocke l'une des valeurs définies par ce type. Les mêmes règles gouvernent les déclarations de structure et d'union. Les unions peuvent également avoir des champs de bits.
 
@@ -81,7 +81,7 @@ union               /* Defines a two-dimensional */
 
 Le tableau `screen` contient 2 000 éléments. Chaque élément du tableau est une union individuelle avec deux membres : `window1` et `screenval`. Le membre `window1` est une structure avec deux membres de champ de bits `icon` et `color`. Le membre `screenval` est `int`. À un moment donné, chaque élément union contient soit `int` représenté par `screenval` soit la structure représentée par `window1`.
 
-**Section spécifique à Microsoft**
+**Spécifique à Microsoft**
 
 Les unions imbriquées peuvent être déclarées de façon anonyme lorsqu'elles sont membres d'une structure ou d'une union. Voici un exemple d'une union sans nom.
 
@@ -119,7 +119,7 @@ struct x
 
 Consultez [Membres de structure et d'union](../c-language/structure-and-union-members.md) pour plus d'informations sur le référencement des unions.
 
-**FIN de la section spécifique à Microsoft**
+**FIN spécifique à Microsoft**
 
 ## <a name="see-also"></a>Voir aussi
 

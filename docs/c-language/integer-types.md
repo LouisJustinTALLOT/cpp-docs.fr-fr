@@ -8,11 +8,11 @@ helpviewer_keywords:
 - integers, types
 ms.assetid: c8926a5e-0e98-4e37-9b05-ce97961379bd
 ms.openlocfilehash: 23da055b56e2ae77fed796d9ba8e7f227e572a9f
-ms.sourcegitcommit: f4be868c0d1d78e550fba105d4d3c993743a1f4b
-ms.translationtype: HT
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56146877"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62232850"
 ---
 # <a name="integer-types"></a>Types d'entier
 
@@ -36,9 +36,9 @@ Chaque constante entière reçoit un type selon sa valeur et la façon dont elle
 778866LU
 ```
 
-Le type que vous assignez à une constante dépend de la valeur que cette constante représente. La valeur d'une constante doit être dans la plage de valeurs pouvant être représentées pour son type. Le type d’une constante détermine quelles conversions sont exécutées lorsque la constante est utilisée dans une expression ou lorsque le signe moins (**-**) est appliqué. La liste suivante résume les règles de conversion des constantes entières.
+Le type que vous assignez à une constante dépend de la valeur que cette constante représente. La valeur d'une constante doit être dans la plage de valeurs pouvant être représentées pour son type. Le type d’une constante détermine quelles conversions sont exécutées lorsque la constante est utilisée dans une expression ou lorsque le signe**-** moins () est appliqué. La liste suivante résume les règles de conversion des constantes entières.
 
-- Le type d’une constante décimale sans suffixe est `int`, **long int** ou **unsigned long int**. Le premier de ces trois types dans lesquels la valeur de la constante peut être représentée est le type assigné à la constante.
+- Le type d’une constante décimale sans suffixe est `int`, **long int**ou **unsigned long int**. Le premier de ces trois types dans lequel la valeur de la constante peut être représentée est le type assigné à la constante.
 
 - Le type assigné à des constantes octales et hexadécimales sans suffixe est `int`, `unsigned int`, **long int** ou **unsigned long int**, selon la taille de la constante.
 

@@ -1,5 +1,5 @@
 ---
-title: 'Procédure : Déboguer une version Release'
+title: 'Comment : déboguer une version release'
 ms.date: 11/04/2016
 helpviewer_keywords:
 - debugging [C++], release builds
@@ -12,30 +12,30 @@ ms.contentlocale: fr-FR
 ms.lasthandoff: 04/23/2019
 ms.locfileid: "62188962"
 ---
-# <a name="how-to-debug-a-release-build"></a>Procédure : Déboguer une version Release
+# <a name="how-to-debug-a-release-build"></a>Comment : déboguer une version release
 
 Vous pouvez déboguer une version Release d’une application.
 
 ### <a name="to-debug-a-release-build"></a>Pour déboguer une version Release
 
-1. Ouvrez le **Pages de propriétés** boîte de dialogue pour le projet. Pour plus d’informations, consultez [propriétés de compilateur et de build C++ définie dans Visual Studio](working-with-project-properties.md).
+1. Ouvrez la boîte de dialogue **pages de propriétés** du projet. Pour plus d’informations, consultez [Définir le compilateur C++ et les propriétés de build dans Visual Studio](working-with-project-properties.md).
 
-1. Cliquez sur le **C/C++** nœud. Définissez **Format des informations de débogage** à [compatible C7 (/ Z7)](reference/z7-zi-zi-debug-information-format.md) ou **la base de données de programme (/Zi)**.
+1. Cliquez sur le nœud **C/C++** . Définissez le **format des informations de débogage** sur [Compatible C7 (/Z7)](reference/z7-zi-zi-debug-information-format.md) ou sur la **base de données du programme (/ZI)**.
 
-1. Développez **l’éditeur de liens** et cliquez sur le **général** nœud. Définissez **activation des liens incrémentiels** à [non (/ INCREMENTAL : NO)](reference/incremental-link-incrementally.md).
+1. Développez **éditeur de liens** , puis cliquez sur le nœud **général** . Définissez Activer l’édition de **liens incrémentielle** sur [non (/Incremental : no)](reference/incremental-link-incrementally.md).
 
-1. Sélectionnez le **débogage** nœud. Définissez **Generate Debug Info** à [Oui (/Debug)](reference/debug-generate-debug-info.md).
+1. Sélectionnez le nœud **débogage** . Définissez **générer les informations de débogage** sur [Oui (/Debug)](reference/debug-generate-debug-info.md).
 
-1. Sélectionnez le **optimisation** nœud. Définissez **références** à [/OPT : REF](reference/opt-optimizations.md) et **activation du repli COMDAT** à [/OPT : ICF](reference/opt-optimizations.md).
+1. Sélectionnez le nœud **optimisation** . Définissez les **références** à [/OPT : Ref](reference/opt-optimizations.md) et **activez le repli COMDAT** sur [/OPT : ICF](reference/opt-optimizations.md).
 
-1. Vous pouvez maintenant déboguer votre application de la build mise en production. Pour rechercher un problème, parcourez le code (ou le débogage juste-à-temps d’utilisation) jusqu'à ce que vous trouviez où la défaillance se produit et déterminer le code ou les paramètres incorrects.
+1. Vous pouvez désormais déboguer votre application de version Release. Pour identifier un problème, exécutez le code pas à pas (ou utilisez le débogage juste-à-temps) jusqu’à ce que vous trouviez l’endroit où se produit l’échec, puis déterminez les paramètres ou le code incorrects.
 
-   Si une application fonctionne dans une version debug, mais échoue dans une version Release, une des optimisations du compilateur peut présenter une erreur dans le code source. Pour isoler le problème, désactivez les optimisations sélectionnées pour chaque fichier de code source jusqu'à ce que vous trouviez le fichier et l’optimisation qui provoque le problème. (Pour accélérer le processus, vous pouvez diviser les fichiers en deux groupes, désactiver l’optimisation sur un groupe et lorsque vous rencontrez un problème dans un groupe, continuer à diviser jusqu'à ce que vous isoler le fichier posant problème.)
+   Si une application fonctionne dans une version Debug, mais échoue dans une version Release, l’une des optimisations du compilateur peut exposer une erreur dans le code source. Pour isoler le problème, désactivez les optimisations sélectionnées pour chaque fichier de code source jusqu’à ce que vous trouviez le fichier et l’optimisation à l’origine du problème. (Pour accélérer le processus, vous pouvez diviser les fichiers en deux groupes, désactiver l’optimisation sur un groupe et, lorsque vous détectez un problème dans un groupe, continuer à diviser jusqu’à ce que vous isolez le fichier de problème.)
 
-   Vous pouvez utiliser [/RTC](reference/rtc-run-time-error-checks.md) pour tenter d’exposer des bogues dans vos versions debug.
+   Vous pouvez utiliser [/RTC](reference/rtc-run-time-error-checks.md) pour essayer d’exposer de tels bogues dans vos versions Debug.
 
-   Pour plus d’informations, consultez [optimisation du Code](optimizing-your-code.md).
+   Pour plus d’informations, consultez [optimisation de votre code](optimizing-your-code.md).
 
 ## <a name="see-also"></a>Voir aussi
 
-[Résolution de problèmes liés à la version Release](fixing-release-build-problems.md)
+[Résolution de problèmes liés à la version release](fixing-release-build-problems.md)

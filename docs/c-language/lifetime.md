@@ -18,17 +18,17 @@ helpviewer_keywords:
 - global variables, lifetime
 ms.assetid: ff0b42cb-3f0f-49a3-a94f-d1d825d8ddfe
 ms.openlocfilehash: 962e5ef4cae1be142091d2a209b4c60c0b789e74
-ms.sourcegitcommit: f4be868c0d1d78e550fba105d4d3c993743a1f4b
-ms.translationtype: HT
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56149438"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62232772"
 ---
 # <a name="lifetime"></a>Durée de vie
 
 La « durée de vie » est la période durant l'exécution d'un programme pendant laquelle une variable ou une fonction existe. La durée de stockage de l'identificateur détermine sa durée de vie.
 
-Un identificateur déclaré avec le *storage-class-specifier* **static** possède une durée de stockage statique. Les identificateurs avec une durée de stockage statique (également appelés identificateurs « globaux ») ont un stockage et une valeur définie pendant toute la durée d'un programme. Le stockage est réservé et la valeur stockée de l'identificateur est initialisée une seule fois, avant le démarrage du programme. Un identificateur déclaré avec liaison externe ou interne a également une durée de stockage statique (consultez [Liaison](../c-language/linkage.md)).
+Un identificateur déclaré avec le *storage-class-specifier * **static** possède une durée de stockage statique. Les identificateurs avec une durée de stockage statique (également appelés identificateurs « globaux ») ont un stockage et une valeur définie pendant toute la durée d'un programme. Le stockage est réservé et la valeur stockée de l'identificateur est initialisée une seule fois, avant le démarrage du programme. Un identificateur déclaré avec liaison externe ou interne a également une durée de stockage statique (consultez [Liaison](../c-language/linkage.md)).
 
 Un identificateur déclaré sans spécificateur de classe de stockage **static** a une durée de stockage automatique s'il est déclaré dans une fonction. Un identificateur avec une durée de stockage automatique (un « identificateur local ») a un stockage et une valeur définie uniquement dans le bloc où il est défini ou déclaré. Un nouveau stockage est alloué à un identificateur automatique chaque fois que le programme accède à ce bloc, et il perd son stockage (et sa valeur) lorsque le programme quitte le bloc. Les identificateurs déclarés dans une fonction sans liaison ont également une durée de stockage automatique.
 

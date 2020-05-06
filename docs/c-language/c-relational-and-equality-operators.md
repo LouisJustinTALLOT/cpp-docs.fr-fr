@@ -10,7 +10,7 @@ helpviewer_keywords:
 ms.assetid: c89a3815-a65e-4e0d-8333-0e8dc7fdb30b
 ms.openlocfilehash: 25e9bb65492e0c4b100ecd7a800491d238b1dd38
 ms.sourcegitcommit: 8bb2bea1384b290b7570b01608a86c7488ae7a02
-ms.translationtype: HT
+ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 06/26/2019
 ms.locfileid: "67400532"
@@ -21,16 +21,16 @@ Les opérateurs binaires relationnels et d’égalité comparent leur premier op
 
 **Syntaxe**
 
-*relational-expression* :<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*shift-expression*<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*relational-expression* **&lt;** *shift-expression*<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*relational-expression* **>** *shift-expression*<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*relational-expression* **&lt;=** *shift-expression*<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*relational-expression* **>=** *shift-expression*
+*Relational-expression*:<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*Shift-expression*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*relationnelle-* **&lt;** expression *Shift-expression*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*relationnelle-* **>** expression *Shift-expression*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*relationnelle-* ** &lt; ** expression *Shift-expression*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*relationnelle-* **>=** expression *Shift-expression*
 
 *equality-expression* :<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*relational-expression*<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*equality-expression* **==** *relational-expression*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*égalité-expression* **==** *relationnelle-expression*<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*equality-expression* **!=** *relational-expression*
 
 Les opérateurs relationnels et d'égalité testent les relations suivantes :
@@ -48,7 +48,7 @@ Les quatre premiers opérateurs dans la liste ci-dessus ont une priorité plus �
 
 Les opérandes peuvent être de type intégral, flottant ou pointeur. Les types d'opérande peuvent être différents. Les opérateurs relationnels exécutent les conversions arithmétiques habituelles sur les opérandes de type intégral et flottant. En outre, vous pouvez utiliser les combinaisons suivantes des types d'opérande avec les opérateurs relationnels et d'égalité :
 
-- Les deux opérandes de tout opérateur relationnel ou d'égalité peuvent être des pointeurs vers le même type. Pour les opérateurs d'égalité (`==`) et d'inégalité (`!=`), le résultat de la comparaison indique si les deux pointeurs pointent vers le même emplacement de mémoire. Pour les autres opérateurs relationnels ( **\<** , **>** , **\<** = et **>** =), le résultat de la comparaison indique la position relative des deux adresses mémoire des objets vers lesquels le pointage est effectué. Les opérateurs relationnels comparent uniquement les décalages.
+- Les deux opérandes de tout opérateur relationnel ou d'égalité peuvent être des pointeurs vers le même type. Pour les opérateurs d'égalité (`==`) et d'inégalité (`!=`), le résultat de la comparaison indique si les deux pointeurs pointent vers le même emplacement de mémoire. Pour les autres opérateurs relationnels (**\<**, **>**, **\<**= et **>**=), le résultat de la comparaison indique la position relative des deux adresses mémoire des objets vers lesquels pointe. Les opérateurs relationnels comparent uniquement les décalages.
 
    La comparaison de pointeur est définie uniquement pour les parties du même objet. Si les pointeurs font référence aux membres d'un tableau, la comparaison est équivalente à la comparaison des indices correspondants. L'adresse du premier élément du tableau est « inférieure à » l'adresse du dernier élément. Dans le cas de structures, les pointeurs vers des membres de structures déclarés ultérieurement sont « supérieurs à » aux pointeurs vers des membres déclarés précédemment dans la structure. Les pointeurs vers des membres de la même union sont égaux.
 
@@ -93,4 +93,4 @@ Ces instructions déclarent une variable d'énumération nommée `col` avec la b
 ## <a name="see-also"></a>Voir aussi
 
 [Opérateurs relationnels : \<, >, \<= et >=](../cpp/relational-operators-equal-and-equal.md)<br/>
-[Opérateurs d’égalité : == et !=](../cpp/equality-operators-equal-equal-and-exclpt-equal.md)
+[Opérateurs d’égalité : = = et ! =](../cpp/equality-operators-equal-equal-and-exclpt-equal.md)

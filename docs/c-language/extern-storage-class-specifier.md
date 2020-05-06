@@ -9,17 +9,17 @@ helpviewer_keywords:
 - external linkage, extern modifier
 ms.assetid: 6e16d927-291f-49e4-986c-9d91a482a441
 ms.openlocfilehash: 6bbae7c778f5196ac0dca387265499b27119a367
-ms.sourcegitcommit: f4be868c0d1d78e550fba105d4d3c993743a1f4b
-ms.translationtype: HT
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56151388"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62233832"
 ---
 # <a name="extern-storage-class-specifier"></a>Spécificateur extern de classe de stockage
 
 Une variable déclarée avec le spécificateur de classe de stockage **extern** est une référence à une variable du même nom définie au niveau externe dans un autre fichier source. Elle permet de rendre la définition de variable au niveau externe visible. Une variable déclarée comme **extern** n’a aucun stockage alloué ; il s’agit uniquement d’un nom.
 
-## <a name="example"></a>Exemple
+## <a name="example"></a> Exemple
 
 Cet exemple montre les déclarations aux niveaux interne et externe :
 
@@ -61,7 +61,7 @@ void func(void)
 
 Dans cet exemple, la variable `i` est définie dans Source1.c avec la valeur initiale 1. Une déclaration **extern** dans Source2.c rend « i » visible dans ce fichier.
 
-Dans la fonction `func`, l'adresse de la variable globale `i` est utilisée pour initialiser la variable pointeur **static** `external_i`. Cela fonctionne, car la variable globale possède une durée de vie **static**, ce qui signifie que son adresse ne change pas pendant l'exécution du programme. Ensuite, une variable `i` est définie dans la portée de `func` comme une variable locale avec la valeur initiale 16. Cette définition n'affecte pas la valeur de `i` au niveau externe, qui est masquée par l'utilisation de son nom pour la variable locale. La valeur du `i` global n’est désormais accessible qu’avec le pointeur `external_i`.
+Dans la fonction `func`, l'adresse de la variable globale `i` est utilisée pour initialiser la variable pointeur **static**`external_i`. Cela fonctionne, car la variable globale possède une durée de vie **static**, ce qui signifie que son adresse ne change pas pendant l'exécution du programme. Ensuite, une variable `i` est définie dans la portée de `func` comme une variable locale avec la valeur initiale 16. Cette définition n'affecte pas la valeur de `i` au niveau externe, qui est masquée par l'utilisation de son nom pour la variable locale. La valeur du `i` global n’est désormais accessible qu’avec le pointeur `external_i`.
 
 ## <a name="see-also"></a>Voir aussi
 

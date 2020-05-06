@@ -7,15 +7,15 @@ helpviewer_keywords:
 - functions [C++], inline functions
 ms.assetid: 00f4b2ff-8ad0-4165-9f4c-2ef157d03f31
 ms.openlocfilehash: ebe0fd3d785903c149999bd4ec8de9eabeabdb05
-ms.sourcegitcommit: f4be868c0d1d78e550fba105d4d3c993743a1f4b
-ms.translationtype: HT
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56147255"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62325544"
 ---
 # <a name="inline-functions"></a>Fonctions inline
 
-**Section spécifique à Microsoft**
+**Spécifique à Microsoft**
 
 Le mot clé `__inline` indique au compilateur de substituer le code dans la définition de fonction pour chaque instance d'un appel de fonction. Toutefois, la substitution se produit uniquement à la discrétion du compilateur. Par exemple, le compilateur n'incorpore pas une fonction si son adresse est prise ou si elle trop volumineuse pour être incorporée.
 
@@ -35,8 +35,8 @@ Les fonctions inline permettent de générer un code plus rapide et parfois plus
 
 Les fonctions utilisant `__inline` ne doivent pas être confondues avec du code assembleur inline. Consultez [Assembleur inline](../c-language/inline-assembler-c.md) pour plus d’informations.
 
-**FIN de la section spécifique à Microsoft**
+**FIN spécifique à Microsoft**
 
 ## <a name="see-also"></a>Voir aussi
 
-[inline, __inline, \__forceinline](../cpp/inline-functions-cpp.md)
+[Inline, __inline, \__forceinline](../cpp/inline-functions-cpp.md)

@@ -27,12 +27,12 @@ C fournit les spécificateurs de classe de stockage suivants :
 ## <a name="syntax"></a>Syntaxe
 
 *storage-class-specifier* :<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**auto**<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**register**<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**static**<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**extern**<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**Auto**<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**annuler**<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**statique**<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**externes**<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;**typedef**<br/>
-&nbsp;&nbsp;&nbsp;&nbsp; **__declspec (** *Extended-decl-modifier-SEQ* **)**  /\* \*spécifique à Microsoft /
+&nbsp;&nbsp;&nbsp;&nbsp;**__declspec (** *Extended-decl-modifier-SEQ* **)**  / \* spécifique à Microsoft\*/
 
 Hormis pour `__declspec`, vous ne pouvez utiliser qu'un seul *storage-class-specifier* dans *declaration-specifier* dans une déclaration. Si aucune spécification classe-stockage n'est donnée, les déclarations dans un bloc créent des objets automatiques.
 
