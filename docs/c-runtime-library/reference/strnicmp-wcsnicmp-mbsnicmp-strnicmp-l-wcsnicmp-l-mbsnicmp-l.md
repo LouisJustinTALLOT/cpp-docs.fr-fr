@@ -28,7 +28,7 @@ api_location:
 - api-ms-win-crt-multibyte-l1-1-0.dll
 - api-ms-win-crt-string-l1-1-0.dll
 - ntoskrnl.exe
-- api-ms-win-crt-private-l1-1-0
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -76,12 +76,12 @@ helpviewer_keywords:
 - mbsnicmp function
 - _wcsnicmp function
 ms.assetid: df6e5037-4039-4c85-a0a6-21d4ef513966
-ms.openlocfilehash: b0bde60a230f1fd428716073471cd85b2728a614
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 3be900679dddbbab7cba0982c11d5c75a190d685
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81364824"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82920079"
 ---
 # <a name="_strnicmp-_wcsnicmp-_mbsnicmp-_strnicmp_l-_wcsnicmp_l-_mbsnicmp_l"></a>_strnicmp, _wcsnicmp, _mbsnicmp, _strnicmp_l, _wcsnicmp_l, _mbsnicmp_l
 
@@ -130,7 +130,7 @@ int _mbsnicmp_l(
 
 ### <a name="parameters"></a>Paramètres
 
-*string1*, *string2*<br/>
+*Chaîne1*, *Chaîne2*<br/>
 Chaîne terminée par Null à comparer.
 
 *count*<br/>
@@ -145,23 +145,23 @@ Indique la relation entre les sous-chaînes, comme suit.
 
 |Valeur retournée|Description|
 |------------------|-----------------|
-|< 0|le sous-corde *string1* est inférieur au sous-corde *string2.*|
-|0|le sous-corde *string1* est identique au sous-corde *string2.*|
-|> 0|le sous-corde *string1* est plus grand que le sous-corde *string2.*|
+|< 0|*Chaîne1* SUBSTRING est inférieure à la sous-chaîne *Chaîne2* .|
+|0|*Chaîne1* SUBSTRING est identique à la sous-chaîne *string2* .|
+|> 0|la sous-chaîne *Chaîne1* est supérieure à la sous-chaîne *Chaîne2* .|
 
-Sur une erreur de validation **_NLSCMPERROR**de paramètre, ces \<fonctions reviennent _NLSCMPERROR \<, qui est définie en string.h> et mbstring.h>.
+Dans le cas d’une erreur de validation de paramètre, ces fonctions retournent **_NLSCMPERROR**, qui est défini dans \<String. h> et \<mbstring. h>.
 
-## <a name="remarks"></a>Notes
+## <a name="remarks"></a>Notes 
 
-La fonction **_strnicmp** compare habituellement, tout au plus, les premiers personnages de *compte* de *string1* et *string2*. La comparaison est effectuée sans tenir compte de la casse, en convertissant chaque caractère en minuscule. **_strnicmp** est une version insensible au cas de **strncmp**. La comparaison se termine si un caractère nul de fin est atteint dans l’une ou l’autre chaîne avant que les caractères *de comptage* soient comparés. Si les cordes sont égales lorsqu’un caractère nul de fin est atteint dans l’une ou l’autre chaîne avant que les caractères *de comptage* soient comparés, la chaîne plus courte est moindre.
+La fonction **_strnicmp** compare, au plus, les premiers caractères de *nombre* de *string1* et *Chaîne2*. La comparaison est effectuée sans tenir compte de la casse, en convertissant chaque caractère en minuscule. **_strnicmp** est une version de **strncmp**qui ne respecte pas la casse. La comparaison se termine si un caractère null de fin est atteint dans l’une ou l’autre des chaînes avant que les caractères *Count* soient comparés. Si les chaînes sont égales lorsqu’un caractère null de fin est atteint dans l’une ou l’autre des chaînes avant que les caractères *Count* soient comparés, la chaîne la plus courte est inférieure.
 
-Les caractères compris entre 91 et 96 dans la table ASCII (« [ », « \\ », « ] », « ^ », « _ » et « \` ») sont évalués comme étant inférieurs à n’importe quel caractère alphabétique. Cette commande est identique à celle **de stricmp**.
+Les caractères compris entre 91 et 96 dans la table ASCII (« [ », « \\ », « ] », « ^ », « _ » et « \` ») sont évalués comme étant inférieurs à n’importe quel caractère alphabétique. Ce classement est identique à celui de **stricmp**.
 
-**_wcsnicmp** et **_mbsnicmp** sont des versions à caractère large et multioctets de **_strnicmp**. Les arguments de **_wcsnicmp** sont des chaînes de caractère large; ceux de **_mbsnicmp** sont des cordes multioctets-caractères. **_mbsnicmp** reconnaît les séquences multioctets en fonction de la page de code multioctet actuelle et renvoie **_NLSCMPERROR** sur une erreur. Pour plus d’informations, consultez [Pages de codes](../../c-runtime-library/code-pages.md). Ces trois fonctions se comportent sinon de façon identique. Ces fonctions sont affectées par le paramètre local, les versions qui n’ont pas le **suffixe _l** utiliser le lieu actuel pour leur comportement local-dépendant; les versions qui ont le **suffixe _l** utilisent plutôt le *lieu* qui est passé. Pour plus d’informations, consultez [Locale](../../c-runtime-library/locale.md).
+**_wcsnicmp** et **_mbsnicmp** sont des versions à caractères larges et à caractères multioctets de **_strnicmp**. Les arguments de **_wcsnicmp** sont des chaînes à caractères larges ; ceux de **_mbsnicmp** sont des chaînes de caractères multioctets. **_mbsnicmp** reconnaît les séquences de caractères multioctets en fonction de la page de codes multioctets actuelle et retourne **_NLSCMPERROR** en cas d’erreur. Pour plus d’informations, consultez [Pages de codes](../../c-runtime-library/code-pages.md). Ces trois fonctions se comportent sinon de façon identique. Ces fonctions sont affectées par les paramètres régionaux : les versions qui n’ont pas le suffixe **_L** utilisent les paramètres régionaux actuels pour leur comportement dépendant des paramètres régionaux ; les versions qui ont le suffixe **_L** utilisent à la place les *paramètres régionaux* qui sont passés. Pour plus d’informations, consultez [Locale](../../c-runtime-library/locale.md).
 
-Toutes ces fonctions valident leurs paramètres. Si *la chaîne1* ou *la chaîne2* est un pointeur nul, le gestionnaire de paramètres invalide est invoqué, tel que décrit dans [La validation de paramètres](../../c-runtime-library/parameter-validation.md). Si l’exécution est autorisée à se poursuivre, ces fonctions renvoient **_NLSCMPERROR** et mettent **errno** à **EINVAL**.
+Toutes ces fonctions valident leurs paramètres. Si *Chaîne1* ou *Chaîne2* est un pointeur null, le gestionnaire de paramètres non valides est appelé, comme décrit dans [validation de paramètre](../../c-runtime-library/parameter-validation.md). Si l’exécution est autorisée à se poursuivre, ces fonctions retournent **_NLSCMPERROR** et attribuent à **errno** la valeur **EINVAL**.
 
-Par défaut, l’état global de cette fonction est étendue à l’application. Pour changer cela, voir [Global State dans le CRT](../global-state.md).
+Par défaut, l’état global de cette fonction est limité à l’application. Pour modifier cette valeur, consultez [état global dans le CRT](../global-state.md).
 
 ### <a name="generic-text-routine-mappings"></a>Mappages de routines de texte générique
 
@@ -181,13 +181,13 @@ Par défaut, l’état global de cette fonction est étendue à l’application.
 
 Pour plus d'informations sur la compatibilité, voir [Compatibilité](../../c-runtime-library/compatibility.md).
 
-## <a name="example"></a>Exemple
+## <a name="example"></a> Exemple
 
 Consultez l’exemple relatif à [strncmp](strncmp-wcsncmp-mbsncmp-mbsncmp-l.md).
 
 ## <a name="see-also"></a>Voir aussi
 
-[Manipulation des cordes](../../c-runtime-library/string-manipulation-crt.md)<br/>
+[Manipulation de chaînes](../../c-runtime-library/string-manipulation-crt.md)<br/>
 [strcat, wcscat, _mbscat](strcat-wcscat-mbscat.md)<br/>
 [strcmp, wcscmp, _mbscmp](strcmp-wcscmp-mbscmp.md)<br/>
 [strcpy, wcscpy, _mbscpy](strcpy-wcscpy-mbscpy.md)<br/>

@@ -16,7 +16,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-locale-l1-1-0.dll
-- api-ms-win-crt-private-l1-1-0
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -31,12 +31,12 @@ helpviewer_keywords:
 - locales, freeing
 - _free_locale function
 ms.assetid: 1f08d348-ab32-4028-a145-6cbd51b49af9
-ms.openlocfilehash: 568e44d731f384a0503420339d716fdfdc81e13a
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 8dbc424c00464966605cce5c44118b88eb5335d3
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81346041"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82920434"
 ---
 # <a name="_free_locale"></a>_free_locale
 
@@ -55,17 +55,17 @@ void _free_locale(
 *locale*<br/>
 Objet de paramètres régionaux à libérer.
 
-## <a name="remarks"></a>Notes
+## <a name="remarks"></a>Notes 
 
-La fonction **_free_locale** est utilisée pour libérer l’objet local obtenu à partir d’un appel à **_get_current_locale** ou **_create_locale**.
+La fonction **_free_locale** est utilisée pour libérer l’objet de paramètres régionaux obtenu à partir d’un appel à **_get_current_locale** ou **_create_locale**.
 
-Le nom précédent de cette fonction, **__free_locale** (avec deux soulignements de premier plan) a été déprécié.
+Le nom précédent de cette fonction, **__free_locale** (avec deux traits de soulignement de début), est déconseillé.
 
-Par défaut, l’état global de cette fonction est étendue à l’application. Pour changer cela, voir [Global State dans le CRT](../global-state.md).
+Par défaut, l’état global de cette fonction est limité à l’application. Pour modifier cette valeur, consultez [état global dans le CRT](../global-state.md).
 
 ## <a name="requirements"></a>Spécifications
 
-|**Routine**|En-tête requis|
+|**Simple**|En-tête requis|
 |---------------|---------------------|
 |**_free_locale**|\<locale.h>|
 

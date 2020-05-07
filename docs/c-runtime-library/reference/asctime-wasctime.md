@@ -18,7 +18,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-time-l1-1-0.dll
-- api-ms-win-crt-private-l1-1-0
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -36,16 +36,16 @@ helpviewer_keywords:
 - time structure conversion
 - time, converting
 ms.assetid: 974f1727-10ff-4ed4-8cac-2eb2d681f576
-ms.openlocfilehash: bda14f3b6046378ad23148371f354bb910163d3c
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 00c6be8ee409d76b80d323102950f8c1d6420ba3
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81350478"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82909426"
 ---
 # <a name="asctime-_wasctime"></a>asctime, _wasctime
 
-Convertir une structure temporelle **tm** en chaîne de caractères. Des versions plus sécurisées de ces fonctions sont disponibles. Consultez [asctime_s, _wasctime_s](asctime-s-wasctime-s.md).
+Convertit une structure de temps **TM** en une chaîne de caractères. Des versions plus sécurisées de ces fonctions sont disponibles. Consultez [asctime_s, _wasctime_s](asctime-s-wasctime-s.md).
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -65,35 +65,35 @@ Structure date/heure.
 
 ## <a name="return-value"></a>Valeur de retour
 
-**asctime** renvoie un pointeur au résultat de la chaîne de caractère; **_wasctime** renvoie un pointeur au résultat de la chaîne à caractère large. Aucune valeur de retour d’erreur.
+**asctime** retourne un pointeur vers le résultat de chaîne de caractères ; **_wasctime** retourne un pointeur vers le résultat de chaîne à caractères larges. Aucune valeur de retour d’erreur.
 
-## <a name="remarks"></a>Notes
+## <a name="remarks"></a>Notes 
 
 Des versions plus sécurisées de ces fonctions sont disponibles. Consultez [asctime_s, _wasctime_s](asctime-s-wasctime-s.md).
 
-La fonction **asctime** convertit un temps stocké comme une structure en une chaîne de caractères. La valeur *de timeptr* est habituellement obtenue à partir d’un appel à **gmtime** ou **localtime**, qui retournent tous deux un pointeur à une structure **de tm,** définie dans TIME. H.
+La fonction **asctime** convertit une heure stockée sous la forme d’une structure en une chaîne de caractères. La valeur *timeptr* est généralement obtenue à partir d’un appel à **gmtime** ou **localtime**, qui retournent tous deux un pointeur vers une structure **TM** , définie dans le temps. Manutention.
 
 |Membre de timeptr|Value|
 |--------------------|-----------|
 |**tm_hour**|Heures depuis minuit (0-23)|
 |**tm_isdst**|Positif si l’heure d’été est en vigueur ; 0 si l’heure d’été n’est pas appliquée ; négatif si l’état de l’heure d’été est inconnu. La bibliothèque runtime C suppose que les règles de calcul de l’heure d’été sont celles des États-Unis.|
-|**tm_mday**|Jour du mois (1-31)|
-|**tm_min**|Minutes après heure (0-59)|
-|**tm_mon**|Mois (0-11; Janvier et 0)|
-|**tm_sec**|Secondes après minute (0-59)|
-|**tm_wday**|Jour de la semaine (0-6; Dimanche 0)|
-|**tm_yday**|Jour de l’année (0-365; 1er janvier à 0)|
+|**tm_mday**|Jour du mois (1 à 31)|
+|**tm_min**|Minutes après l’heure (0-59)|
+|**tm_mon**|Mois (0-11 ; Janvier = 0)|
+|**tm_sec**|Secondes après la minute (0-59)|
+|**tm_wday**|Jour de la semaine (0-6 ; Dimanche = 0)|
+|**tm_yday**|Jour de l’année (0-365 ; 1er janvier = 0)|
 |**tm_year**|Année (année en cours moins 1900)|
 
 La chaîne de caractères convertie est également ajustée en fonction des paramètres de fuseau horaire local. Pour plus d’informations sur la configuration de l’heure locale, consultez les fonctions [time](time-time32-time64.md), [_ftime](ftime-ftime32-ftime64.md) et [localtime](localtime-localtime32-localtime64.md) et, pour plus d’informations sur la définition des variables globales et d’environnement des fuseaux horaires, consultez la fonction [_tzset](tzset.md).
 
-Le résultat de la chaîne produite par **asctime** `Wed Jan 02 02:03:55 1980\n\0`contient exactement 26 caractères et a la forme . Une horloge de 24 heures est utilisée. Tous les champs ont une largeur constante. Le caractère de saut de ligne et le caractère null occupent les deux dernières positions de la chaîne. **asctime** utilise un tampon unique, statiquement alloué pour tenir la chaîne de retour. Chaque appel à cette fonction détruit le résultat de l’appel précédent.
+Le résultat de chaîne produit par **asctime** contient exactement 26 caractères et se présente `Wed Jan 02 02:03:55 1980\n\0`sous la forme. Une horloge de 24 heures est utilisée. Tous les champs ont une largeur constante. Le caractère de saut de ligne et le caractère null occupent les deux dernières positions de la chaîne. **asctime** utilise une seule mémoire tampon allouée de manière statique pour contenir la chaîne de retour. Chaque appel à cette fonction détruit le résultat de l’appel précédent.
 
-**_wasctime** est une version à caractère large de **l’asctime**. **_wasctime** et **le moment se** comportent de façon identique autrement.
+**_wasctime** est une version à caractères larges de **asctime**. dans le cas contraire, **_wasctime** et **asctime** se comportent de la même façon.
 
-Ces fonctions valident leurs paramètres. Si *le chronométreur* est un pointeur nul, ou s’il contient des valeurs hors de portée, le gestionnaire de paramètres invalide est invoqué, tel que décrit dans [La validation de paramètres](../../c-runtime-library/parameter-validation.md). Si l’exécution est autorisée à se poursuivre, la fonction renvoie **NULL** et définit **errno** à **EINVAL**.
+Ces fonctions valident leurs paramètres. Si *timeptr* est un pointeur null, ou s’il contient des valeurs hors limites, le gestionnaire de paramètres non valides est appelé, comme décrit dans [validation de paramètre](../../c-runtime-library/parameter-validation.md). Si l’exécution est autorisée à se poursuivre, la fonction retourne la **valeur null** et définit **errno** sur **EINVAL**.
 
-Par défaut, l’état global de cette fonction est étendue à l’application. Pour changer cela, voir [Global State dans le CRT](../global-state.md).
+Par défaut, l’état global de cette fonction est limité à l’application. Pour modifier cette valeur, consultez [état global dans le CRT](../global-state.md).
 
 ### <a name="generic-text-routine-mapping"></a>Mappage de routines de texte générique
 
@@ -108,9 +108,9 @@ Par défaut, l’état global de cette fonction est étendue à l’application.
 |**asctime**|\<time.h>|
 |**_wasctime**|\<time.h> ou \<wchar.h>|
 
-## <a name="example"></a>Exemple
+## <a name="example"></a> Exemple
 
-Ce programme place le temps du système dans **l’aclock**integer long , le traduit dans la structure **newtime,** puis le convertit en forme de chaîne pour la sortie, en utilisant la fonction **asctime.**
+Ce programme place l’heure système dans l’entier long **aclock**, le convertit en structure **Newtime** , puis le convertit sous forme de chaîne pour la sortie, à l’aide de la fonction **asctime** .
 
 ```C
 // crt_asctime.c

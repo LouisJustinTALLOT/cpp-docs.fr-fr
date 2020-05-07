@@ -16,7 +16,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-runtime-l1-1-0.dll
-- api-ms-win-crt-private-l1-1-0
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -28,16 +28,16 @@ helpviewer_keywords:
 - get_doserrno function
 - _get_doserrno function
 ms.assetid: 7fec7be3-6e39-4181-846b-8ef24489361c
-ms.openlocfilehash: 2d5d4e224b39e9fa597e12975d27fa5720fbfbc7
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 7b889bccc0b1f1fd99a9a0526bbfb42a2e520970
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81345256"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82919387"
 ---
 # <a name="_get_doserrno"></a>_get_doserrno
 
-Obtient la valeur d’erreur retournée par le système d’exploitation avant qu’elle ne soit traduite en valeur **errno.**
+Obtient la valeur d’erreur retournée par le système d’exploitation avant qu’elle ne soit traduite en valeur **errno** .
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -50,21 +50,21 @@ errno_t _get_doserrno(
 ### <a name="parameters"></a>Paramètres
 
 *pValue*<br/>
-Un pointeur à un intégriste à remplir avec la valeur actuelle de la **macro _doserrno** globale.
+Pointeur vers un entier à remplir avec la valeur actuelle de la macro globale **_doserrno** .
 
 ## <a name="return-value"></a>Valeur de retour
 
-Si **_get_doserrno** réussit, il revient à zéro; s’il échoue, il renvoie un code d’erreur. Si *pValue* est **NULL**, le gestionnaire de paramètres invalides est invoqué, tel que décrit dans [La validation de paramètres](../../c-runtime-library/parameter-validation.md). Si l’exécution est autorisée à se poursuivre, cette fonction définit **errno** à **EINVAL** et retourne **EINVAL**.
+Si **_get_doserrno** fonctionne, elle retourne zéro ; en cas d’échec, elle retourne un code d’erreur. Si *pValue* a la **valeur null**, le gestionnaire de paramètres non valides est appelé, comme décrit dans [validation de paramètre](../../c-runtime-library/parameter-validation.md). Si l’exécution est autorisée à se poursuivre, cette fonction affecte à **errno** la valeur **EINVAL** et retourne **EINVAL**.
 
-## <a name="remarks"></a>Notes
+## <a name="remarks"></a>Notes 
 
-La **macro _doserrno** globale est réglée à zéro pendant l’initialisation de CRT, avant que l’exécution de processus commence. Elle prend la valeur d'erreur du système d'exploitation retournée par tout appel de fonction au niveau système qui retourne une erreur de système d'exploitation, et elle n'est jamais réinitialisée à zéro pendant l'exécution. Lorsque vous écrivez du code pour vérifier la valeur d’erreur retournée par une fonction, toujours effacer **_doserrno** en utilisant [_set_doserrno](set-doserrno.md) avant l’appel de fonction. Étant donné qu’un autre appel de fonction peut **_doserrno,** vérifiez la valeur en utilisant **_get_doserrno** immédiatement après l’appel de fonction.
+La macro globale **_doserrno** est définie sur zéro pendant l’initialisation du CRT, avant le début de l’exécution du processus. Elle prend la valeur d'erreur du système d'exploitation retournée par tout appel de fonction au niveau système qui retourne une erreur de système d'exploitation, et elle n'est jamais réinitialisée à zéro pendant l'exécution. Quand vous écrivez du code pour vérifier la valeur d’erreur retournée par une fonction, effacez toujours **_doserrno** à l’aide de [_set_doserrno](set-doserrno.md) avant l’appel de fonction. Comme un autre appel de fonction peut remplacer **_doserrno**, vérifiez la valeur à l’aide de **_get_doserrno** immédiatement après l’appel de fonction.
 
-Nous recommandons [_get_errno](get-errno.md) au lieu de _get_doserrno pour **les** codes d’erreur portables.
+Nous vous recommandons [_get_errno](get-errno.md) au lieu de **_get_doserrno** pour les codes d’erreur portables.
 
-Les valeurs possibles de **_doserrno** \<sont définies dans les> errno.h.
+Les valeurs possibles de **_doserrno** sont définies \<dans errno. h>.
 
-Par défaut, l’état global de cette fonction est étendue à l’application. Pour changer cela, voir [Global State dans le CRT](../global-state.md).
+Par défaut, l’état global de cette fonction est limité à l’application. Pour modifier cette valeur, consultez [état global dans le CRT](../global-state.md).
 
 ## <a name="requirements"></a>Spécifications
 

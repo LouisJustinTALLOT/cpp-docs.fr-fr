@@ -18,7 +18,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-stdio-l1-1-0.dll
-- api-ms-win-crt-private-l1-1-0
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -38,12 +38,12 @@ helpviewer_keywords:
 - getwc function
 - gettc function
 ms.assetid: 354ef514-d0c7-404b-92f5-995f6a834bb3
-ms.openlocfilehash: 5c05d7a2743cd0c1e843d6895e8f5574031ab098
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 6248dd2287b2f11db72f64df1241affe8deec22d
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81344834"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82919650"
 ---
 # <a name="getc-getwc"></a>getc, getwc
 
@@ -62,16 +62,16 @@ wint_t getwc(
 
 ### <a name="parameters"></a>Paramètres
 
-*Flux*<br/>
+*train*<br/>
 Flux d’entrée.
 
 ## <a name="return-value"></a>Valeur de retour
 
-Retourne le caractère lu. Pour indiquer une erreur de lecture ou une condition de fin de fichier, **getc** renvoie **EOF**, et **getwc** retourne **WEOF**. Pour **getc**, utilisez **ferror** ou **feof** pour vérifier une erreur ou pour la fin du fichier. Si *le flux* est **NULL**, **getc** et **getwc** invoquer le gestionnaire de paramètres invalides, comme décrit dans [La validation de paramètres](../../c-runtime-library/parameter-validation.md). Si l’exécution est autorisée à se poursuivre, ces fonctions renvoient **EOF** (ou **WEOF** pour **getwc**) et mettent **errno** à **EINVAL**.
+Retourne le caractère lu. Pour indiquer une erreur de lecture ou une condition de fin de fichier, **GETC** retourne **EOF**et **getwc** retourne **WEOF**. Pour **GETC**, utilisez l’option **ferror** ou **feof** pour rechercher une erreur ou la fin du fichier. Si *Stream* a la **valeur null**, **GETC** et **getwc** appellent le gestionnaire de paramètres non valides, comme décrit dans [validation de paramètre](../../c-runtime-library/parameter-validation.md). Si l’exécution est autorisée à se poursuivre, ces fonctions retournent **EOF** (ou **WEOF** pour **getwc**) et attribuent à **errno** la valeur **EINVAL**.
 
 Consultez [_doserrno, errno, _sys_errlist et _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md) pour plus d’informations sur ces éléments et autres codes d’erreur.
 
-## <a name="remarks"></a>Notes
+## <a name="remarks"></a>Notes 
 
 Chaque routine lit un caractère à partir d’un fichier à la position actuelle et incrémente le pointeur de fichier associé (si défini) pour qu’il désigne le caractère suivant. Le fichier est associé au *flux*.
 
@@ -79,12 +79,12 @@ Ces fonctions verrouillent le thread appelant et sont donc thread-safe. Pour une
 
 Voici une série de notes spécifiques aux routines.
 
-|Routine|Notes|
+|Routine|Notes |
 |-------------|-------------|
-|**getc**|Même **que fgetc**, mais mis en œuvre comme une fonction et comme une macro.|
-|**getwc**|Version à caractère large de **getc**. Lit un personnage multioctet ou un personnage large selon que le *flux* est ouvert en mode texte ou en mode binaire.|
+|**getc**|Identique à **fgetc**, mais implémenté en tant que fonction et en tant que macro.|
+|**getwc**|Version à caractères larges de **GETC**. Lit un caractère multioctet ou un caractère élargi selon que le *flux* est ouvert en mode texte ou binaire.|
 
-Par défaut, l’état global de cette fonction est étendue à l’application. Pour changer cela, voir [Global State dans le CRT](../global-state.md).
+Par défaut, l’état global de cette fonction est limité à l’application. Pour modifier cette valeur, consultez [état global dans le CRT](../global-state.md).
 
 ### <a name="generic-text-routine-mappings"></a>Mappages de routines de texte générique
 
@@ -101,7 +101,7 @@ Par défaut, l’état global de cette fonction est étendue à l’application.
 
 Pour plus d'informations sur la compatibilité, voir [Compatibilité](../../c-runtime-library/compatibility.md).
 
-## <a name="example"></a>Exemple
+## <a name="example"></a> Exemple
 
 ```C
 // crt_getc.c

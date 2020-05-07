@@ -16,7 +16,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-filesystem-l1-1-0.dll
-- api-ms-win-crt-private-l1-1-0
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -30,12 +30,12 @@ helpviewer_keywords:
 - _unlock_file function
 - unlocking files
 ms.assetid: cf380a51-6d3a-4f38-bd64-2d4fb57b4369
-ms.openlocfilehash: 46d07a8b3645ae0d68276d96271be0a246716f0b
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: ed79f66baebf71c89e537c8343779bef44ebfbb8
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81361222"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82909211"
 ---
 # <a name="_unlock_file"></a>_unlock_file
 
@@ -51,14 +51,14 @@ void _unlock_file(
 
 ### <a name="parameters"></a>Paramètres
 
-*Fichier*<br/>
+*txt*<br/>
 Descripteur de fichier.
 
-## <a name="remarks"></a>Notes
+## <a name="remarks"></a>Notes 
 
-La fonction **_unlock_file** déverrouille le fichier spécifié par *fichier*. Le déverrouillage d’un fichier autorise d’autres processus à y accéder. Cette fonction ne doit pas être appelée à moins **que _lock_file** a été précédemment appelé sur le pointeur *de fichier.* Appeler **_unlock_file** sur un fichier qui n’est pas verrouillé peut entraîner une impasse. Pour obtenir un exemple, consultez [_lock_file](lock-file.md).
+La fonction **_unlock_file** déverrouille le fichier spécifié par le *fichier*. Le déverrouillage d’un fichier autorise d’autres processus à y accéder. Cette fonction ne doit pas être appelée, sauf si **_lock_file** a été appelée précédemment sur le pointeur de *fichier* . L’appel de **_unlock_file** sur un fichier qui n’est pas verrouillé peut entraîner un blocage. Pour obtenir un exemple, consultez [_lock_file](lock-file.md).
 
-Par défaut, l’état global de cette fonction est étendue à l’application. Pour changer cela, voir [Global State dans le CRT](../global-state.md).
+Par défaut, l’état global de cette fonction est limité à l’application. Pour modifier cette valeur, consultez [état global dans le CRT](../global-state.md).
 
 ## <a name="requirements"></a>Spécifications
 
