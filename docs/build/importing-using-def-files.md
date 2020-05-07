@@ -17,7 +17,7 @@ ms.locfileid: "62273415"
 ---
 # <a name="importing-using-def-files"></a>Importation à l'aide de fichiers DEF
 
-Si vous choisissez d’utiliser **__declspec (dllimport)** ainsi qu’un fichier .def, vous devez modifier le fichier .def pour utiliser des données à la place de constante pour réduire la probabilité que le codage incorrect entraîne un problème :
+Si vous choisissez d’utiliser **__declspec (dllimport)** avec un fichier. def, vous devez modifier le fichier. def pour utiliser les données à la place de constant afin de réduire la probabilité qu’un code incorrect provoque un problème :
 
 ```
 // project.def
@@ -26,16 +26,16 @@ EXPORTS
    ulDataInDll   DATA
 ```
 
-Le tableau suivant montre pourquoi.
+Le tableau suivant indique pourquoi.
 
-|Mot clé|Émet dans la bibliothèque d’importation|Exportations|
+|Mot clé|Émissions dans la bibliothèque d’importation|Exports|
 |-------------|---------------------------------|-------------|
 |`CONSTANT`|`_imp_ulDataInDll`, `_ulDataInDll`|`_ulDataInDll`|
 |`DATA`|`_imp_ulDataInDll`|`_ulDataInDll`|
 
-À l’aide de **__declspec (dllimport)** et constante répertorie les deux le `imp` version et le nom non décoré dans la DLL .lib importer la bibliothèque qui est créée pour permettre la liaison explicite. À l’aide de **__declspec (dllimport)** et des listes de données uniquement le `imp` version du nom.
+L’utilisation de **__declspec (dllimport)** et de la `imp` constante répertorie à la fois la version et le nom non décoré dans la bibliothèque d’importation de dll. lib qui est créée pour autoriser la liaison explicite. L’utilisation de **__declspec (dllimport)** et des données `imp` répertorie uniquement la version du nom.
 
-Si vous utilisez (constante), les constructions de code suivantes peuvent être utilisées pour accéder à `ulDataInDll`:
+Si vous utilisez CONSTANT, l’une des constructions de code suivantes peut être utilisée pour accéder `ulDataInDll`à :
 
 ```
 __declspec(dllimport) ULONG ulDataInDll; /*prototype*/
@@ -49,7 +49,7 @@ ULONG *ulDataInDll;      /*prototype*/
 if (*ulDataInDll == 0L)  /*sample code fragment*/
 ```
 
-Toutefois, si vous utilisez des données dans votre fichier .def, seul le code compilé avec la définition suivante peut accéder à la variable `ulDataInDll`:
+Toutefois, si vous utilisez des données dans votre fichier. def, seul le code compilé avec la définition suivante peut accéder `ulDataInDll`à la variable :
 
 ```
 __declspec(dllimport) ULONG ulDataInDll;
@@ -57,9 +57,9 @@ __declspec(dllimport) ULONG ulDataInDll;
 if (ulDataInDll == 0L)   /*sample code fragment*/
 ```
 
-À l’aide de la constante est plus risqué, car si vous oubliez d’utiliser le niveau supplémentaire d’indirection, vous pourriez éventuellement accéder un pointeur de la table adresses d’importation à la variable, pas la variable elle-même. Ce type de problème peut se manifester souvent une violation d’accès, car la table d’importation adresse est actuellement en lecture seule par le compilateur et l’éditeur de liens.
+L’utilisation de CONSTANT est plus risquée, car si vous oubliez d’utiliser le niveau supplémentaire d’indirection, vous pouvez accéder au pointeur de la table d’adresses d’importation vers la variable, et non à la variable elle-même. Ce type de problème peut souvent se manifester comme une violation d’accès, car la table d’adresses d’importation est actuellement mise en lecture seule par le compilateur et l’éditeur de liens.
 
-L’éditeur de liens MSVC actuel émet un avertissement s’il voit constante dans le fichier .def pour prendre en compte pour ce cas. La seule véritable raison d’utiliser constante est que si vous ne pouvez pas recompiler un fichier objet quelconque dans lequel le fichier d’en-tête ne pas répertorier **__declspec (dllimport)** sur le prototype.
+L’éditeur de liens MSVC actuel émet un avertissement s’il voit une constante dans le fichier. def pour tenir compte de ce cas. La seule véritable raison d’utiliser CONSTANT est si vous ne pouvez pas recompiler un fichier objet dans lequel le fichier d’en-tête ne faisait pas partie de la liste **__declspec (dllimport)** sur le prototype.
 
 ## <a name="see-also"></a>Voir aussi
 

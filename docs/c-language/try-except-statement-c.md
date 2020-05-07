@@ -19,7 +19,7 @@ ms.locfileid: "81349744"
 ---
 # <a name="try-except-statement-c"></a>try-except, instruction (C)
 
-**Microsoft Spécifique**
+**Spécifique à Microsoft**
 
 L’instruction **try-except** est une extension Microsoft du langage C qui permet aux applications d’assumer le contrôle d’un programme lorsque surviennent des événements qui terminent normalement l’exécution. Ces événements sont appelés « exceptions » et le mécanisme de gestion des exceptions s'appelle « gestion structurée des exceptions ».
 
@@ -29,7 +29,7 @@ Les exceptions peuvent être basées sur le matériel ou sur le logiciel. Même 
 
 *try-except-statement*: **__try**  *compound-statement*
 
-**__except (**  *expression*  **)**  *composé-déclaration*
+**__except (**  *expression*  **)**  *Compound-Statement*
 
 L'instruction composée après la clause `__try` est la section protégée. L'instruction composée après la clause `__except` constitue le gestionnaire d'exceptions. Le gestionnaire spécifie un ensemble d'actions à exécuter si une exception est levée pendant l'exécution de la section protégée. L'exécution se déroule comme suit :
 
@@ -59,7 +59,7 @@ Le mot clé `__leave` est valide dans un bloc d’instructions **try-except**. `
 
 Le fait de quitter une instruction **try-except** à l’aide de la fonction runtime `longjmp` est considéré comme un arrêt anormal. Il est non conforme de sauter dans une instruction `__try`, mais conforme d'en sortir d'une. Le gestionnaire d’exceptions n’est pas appelé si un processus est tué au milieu de l’exécution d’une instruction **try-except**.
 
-## <a name="example"></a>Exemple
+## <a name="example"></a> Exemple
 
 Voici un exemple de gestionnaire d'exceptions et de gestionnaire d'arrêt. Pour plus d’informations sur les gestionnaires d’arrêt, consultez [Instruction try-finally](../c-language/try-finally-statement-c.md).
 
@@ -94,7 +94,7 @@ in except           /* transfer control to selected handler */
 world               /* flow out of handler                  */
 ```
 
-**END Microsoft Spécifique**
+**FIN spécifique à Microsoft**
 
 ## <a name="see-also"></a>Voir aussi
 

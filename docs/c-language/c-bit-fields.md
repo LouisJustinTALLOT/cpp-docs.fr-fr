@@ -6,11 +6,11 @@ helpviewer_keywords:
 - bit fields
 ms.assetid: 9faf74c4-7fd5-4b44-ad18-04485193d06e
 ms.openlocfilehash: 62c982fa078182cb1902b6770f0a3713ca4ff7a8
-ms.sourcegitcommit: f4be868c0d1d78e550fba105d4d3c993743a1f4b
-ms.translationtype: HT
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56150231"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62326493"
 ---
 # <a name="c-bit-fields"></a>Champs de bits C
 
@@ -18,11 +18,11 @@ En plus des déclarateurs pour les membres d’une structure ou une union, un d�
 
 ## <a name="syntax"></a>Syntaxe
 
-*struct-declarator* :<br/>
+*déclarateur de struct*:<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*declarator*<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*type-specifier* *declarator*<sub>opt</sub> **:** *constant-expression*
+&nbsp;&nbsp;&nbsp;&nbsp;*type-specifier* *declarator*<sub>OPT</sub> **:** *constant-expression*
 
-*expression constante* spécifie la largeur du champ en bits. *type-specifier* pour le `declarator` doit être `unsigned int`, **signed int**, ou `int`, et *constant-expression* doit être une valeur d’entier non négatif. Si la valeur est zéro, la déclaration n’a aucun `declarator`. Les tableaux de champs de bits, pointeurs vers des champs de bits et fonctions qui retournent des champs de bits ne sont pas autorisés. Le `declarator` facultatif désigne le champ de bits. Les champs de bits peuvent uniquement être déclarés comme faisant partie d’une structure. L’opérateur address-of (**&**) ne peut pas être appliqué aux composants de champ de bits.
+*expression constante* spécifie la largeur du champ en bits. *type-specifier* pour le `declarator` doit être `unsigned int`, **signed int**, ou `int`, et *constant-expression* doit être une valeur d’entier non négatif. Si la valeur est zéro, la déclaration n’a aucun `declarator`. Les tableaux de champs de bits, pointeurs vers des champs de bits et fonctions qui retournent des champs de bits ne sont pas autorisés. Le `declarator` facultatif désigne le champ de bits. Les champs de bits peuvent uniquement être déclarés comme faisant partie d’une structure. L’opérateur address-of (**&**) ne peut pas être appliqué à des composants de champ de bits.
 
 Les champs de bits sans nom ne peuvent pas être référencés et leur contenu lors de l’exécution est imprévisible. Ils peuvent être utilisés comme des champs « factices », à des fins d’alignement. Un champ de bits sans nom dont la largeur est spécifiée comme 0 garantit que le stockage pour le membre suivant dans *struct-declaration-list* démarre sur une limite `int`.
 
@@ -49,7 +49,7 @@ Le tableau contient 2 000 éléments. Chaque élément est une structure indivi
 
 Les champs de bits ont la même sémantique que le type entier. Cela signifie qu'un champ de bits est utilisé dans les expressions exactement de la même façon qu’une variable du même type de base serait utilisée, quel que soit le nombre de bits dans le champ de bits.
 
-**Section spécifique à Microsoft**
+**Spécifique à Microsoft**
 
 Les champs de bits définis comme `int` sont considérés comme signés. Une extension Microsoft de la norme ANSI C autorise les types `char` et **long** (**signed** et `unsigned`) pour les champs de bits. Sans champs de bits avec le type de base **long**, **short** ou `char` (**signed** ou `unsigned`) forcent l’alignement sur une limite appropriée pour le type de base.
 
@@ -80,7 +80,7 @@ cccccccb bbbbaaaa
 
 Les processeurs de la gamme 8086 stockent l'octet faible des valeurs entières avant l'octet fort. L'entier `0x01F2` ci-dessus serait stocké en mémoire physique comme `0xF2` suivi de `0x01`.
 
-**FIN de la section spécifique à Microsoft**
+**FIN spécifique à Microsoft**
 
 ## <a name="see-also"></a>Voir aussi
 

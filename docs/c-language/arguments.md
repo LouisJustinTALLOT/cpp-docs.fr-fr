@@ -10,17 +10,17 @@ helpviewer_keywords:
 - function calls, arguments
 ms.assetid: 14cf0389-2265-41f0-9a96-f2223eb406ca
 ms.openlocfilehash: e60a7935cdddc116848b64461b064c5fd5cdd00a
-ms.sourcegitcommit: f4be868c0d1d78e550fba105d4d3c993743a1f4b
-ms.translationtype: HT
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56148723"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62313516"
 ---
 # <a name="arguments"></a>Arguments
 
 Les arguments figurant dans un appel de fonction ont la forme suivante :
 
-> *expression* **(** *expression-list*<SUB>opt</SUB> **)**  /* Function call */
+> *expression* **(** *expression-List*<SUB>OPT</SUB> **)** /* appel de fonction */
 
 Dans un appel de fonction, *expression-list* est une liste d'expressions (séparées par des virgules). Les valeurs de ces dernières expressions sont les arguments passés à la fonction. Si la fonction n’accepte aucun argument, *expression-list* doit contenir le mot clé `void`.
 
@@ -36,7 +36,7 @@ Le nombre d’expressions dans *expression-list* doit correspondre au nombre de 
 
 Si la liste de paramètres du prototype contient uniquement le mot clé `void`, le compilateur attend zéro argument dans l'appel de fonction et zéro paramètre dans la définition. Un message de diagnostic est publié si des arguments sont détectés.
 
-## <a name="example"></a>Exemple
+## <a name="example"></a> Exemple
 
 L'exemple ci-dessous utilise des pointeurs comme arguments :
 

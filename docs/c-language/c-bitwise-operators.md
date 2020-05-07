@@ -21,15 +21,15 @@ ms.locfileid: "80168771"
 ---
 # <a name="c-bitwise-operators"></a>Opérateurs de bits C
 
-Les opérateurs au niveau du bit effectuent de bits AND ( **&** ), des opérations de bits OR exclusives ( **^** ) et opérations de bits OR inclusives ( **&#124;** ).
+Les opérateurs au niveau du bit effectuent**&** des opérations au niveau du bit and (**^**), au niveau du bit exclusive-or () et au niveau du bit (**&#124;**).
 
 ## <a name="syntax"></a>Syntaxe
 
-*And-expression*: &nbsp;&nbsp;*expression d’égalité* &nbsp;&nbsp;*et-expression* **&** *égalité-* expression
+*And-expression*: &nbsp; &nbsp; *égalité-expression* &nbsp; &nbsp; *et-* **&** expression d' *égalité* d’expression
 
-*exclusive-or-expression*: &nbsp;&nbsp;*et-expression* &nbsp;&nbsp;*exclusive-OR-expression* **^** *et-* expression exclusive
+*exclusive-or-expression*: &nbsp; &nbsp; *and-expression* &nbsp; &nbsp; *exclusive-or-* **^** expression *et-expression*
 
-*inclusif-or-expression*: &nbsp;&nbsp;&nbsp;*exclusif* ou à une expression &nbsp;*inclusive* &#124; *-or* -expression
+*inclusif-* or-expression &nbsp;: &nbsp; *exclusive-or-expression* &nbsp; &nbsp; *inclusive* -or-expression &#124; *exclusive-or-expression*
 
 Les opérandes des opérateurs de bits doivent avoir des types intégraux, mais leurs types peuvent être différents. Ces opérateurs exécutent les conversions arithmétiques habituelles ; le type du résultat est le type de l'opérande après conversion.
 
@@ -63,7 +63,7 @@ n = i ^ j;
 
 L’OR inclusif au niveau du bit dans le deuxième exemple entraîne la valeur 0xABCD (hexadécimale), tandis que l’opération OR exclusive au niveau du bit dans le troisième exemple produit 0xCD (hexadécimal).
 
-**Section spécifique de Microsoft**
+**Spécifique à Microsoft**
 
 Les résultats d’une opération au niveau du bit sur des entiers signés sont définis par l’implémentation en fonction de la norme ANSI C. Pour le compilateur Microsoft C, les opérations au niveau du bit sur les entiers signés fonctionnent de la même façon que les opérations au niveau du bit sur les entiers non signés. Par exemple, les valeurs `-16 & 99` peuvent être exprimées au format binaire sous la forme
 
@@ -76,10 +76,10 @@ Les résultats d’une opération au niveau du bit sur des entiers signés sont 
 
 Le résultat de l'opération de bits AND est 96 décimal.
 
-**Fin de la section spécifique de Microsoft**
+**FIN spécifique à Microsoft**
 
 ## <a name="see-also"></a>Voir aussi
 
 [Opérateur de bits AND : &](../cpp/bitwise-and-operator-amp.md)<br/>
-[Opérateur de bits OR exclusif : ^](../cpp/bitwise-exclusive-or-operator-hat.md)<br/>
+[Opérateur de bits or exclusif : ^](../cpp/bitwise-exclusive-or-operator-hat.md)<br/>
 [Opérateur de bits OR inclusif : &#124;](../cpp/bitwise-inclusive-or-operator-pipe.md)

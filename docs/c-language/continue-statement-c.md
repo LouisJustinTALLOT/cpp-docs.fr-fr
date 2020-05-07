@@ -8,11 +8,11 @@ helpviewer_keywords:
 - continue keyword [C]
 ms.assetid: 969f293a-45fe-48a7-b4c6-287ba27a631d
 ms.openlocfilehash: 983775e6fe9887afa5784358ede1de9583b3afba
-ms.sourcegitcommit: f4be868c0d1d78e550fba105d4d3c993743a1f4b
-ms.translationtype: HT
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56147137"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62312557"
 ---
 # <a name="continue-statement-c"></a>continue, instruction (C)
 
@@ -20,8 +20,8 @@ L'instruction `continue` passe le contrôle à l'itération suivante pour l'inst
 
 ## <a name="syntax"></a>Syntaxe
 
-*saut-instruction* :<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**continue ;**
+*instruction Jump*:<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**pouvoir**
 
 L'itération suivante pour une instruction `do`, `for`, ou `while` est déterminée comme suit :
 
@@ -45,4 +45,4 @@ Dans cet exemple, le corps de l'instruction est exécuté alors que `i` est sup�
 
 ## <a name="see-also"></a>Voir aussi
 
-[Instruction continue](../cpp/continue-statement-cpp.md)
+[continue (instruction)](../cpp/continue-statement-cpp.md)

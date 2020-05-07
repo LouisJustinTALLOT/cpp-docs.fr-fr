@@ -18,17 +18,17 @@ Le tableau suivant récapitule les caractéristiques de durée de vie et de visi
 
 ### <a name="summary-of-lifetime-and-visibility"></a>Résumé de la durée de vie et de la visibilité
 
-|Attributs :<br /><br /> Niveau|Élément|Classe de stockage<br /><br /> Spécificateur|Résultat :<br /><br /> Durée de vie|Visibilité|
+|Attributs :<br /><br /> Level|Élément|Classe de stockage<br /><br /> Spécificateur|Résultat :<br /><br /> Durée de vie|Visibilité|
 |---------------------------|----------|----------------------------------|--------------------------|----------------|
-|Portée du fichier|Définition de variable|**static**|Global|Reste du fichier source dans lequel elle se produit|
-||Déclaration de variable|**extern**|Global|Reste du fichier source dans lequel elle se produit|
-||Définition ou prototype de fonction|**static**|Global|Fichier source unique|
-||Prototype de fonction|**extern**|Global|Reste du fichier source|
-|Portée de bloc|Déclaration de variable|**extern**|Global|Bloquer|
-||Définition de variable|**static**|Global|Bloquer|
+|Portée du fichier|Définition de variable|**statique**|Globale|Reste du fichier source dans lequel elle se produit|
+||Déclaration de variable|**extern**|Globale|Reste du fichier source dans lequel elle se produit|
+||Définition ou prototype de fonction|**statique**|Globale|Fichier source unique|
+||Prototype de fonction|**extern**|Globale|Reste du fichier source|
+|Portée de bloc|Déclaration de variable|**extern**|Globale|Bloquer|
+||Définition de variable|**statique**|Globale|Bloquer|
 ||Définition de variable|**auto** ou **register**|Local|Bloquer|
 
-## <a name="example"></a>Exemple
+## <a name="example"></a> Exemple
 
 ### <a name="description"></a>Description
 
@@ -62,7 +62,7 @@ int main()  // main function defined at external level
 }
 ```
 
-### <a name="comments"></a>Comments
+### <a name="comments"></a>Commentaires
 
 Dans cet exemple, il existe quatre niveaux de visibilité : le niveau externe et trois niveaux de bloc. Les valeurs sont imprimées à l'écran comme indiqué dans les commentaires suivant chaque instruction.
 
