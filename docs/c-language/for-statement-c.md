@@ -5,11 +5,11 @@ helpviewer_keywords:
 - for keyword [C]
 ms.assetid: 560a8de4-19db-4868-9f18-dbe51b17900d
 ms.openlocfilehash: df00bcab2f9f9e51a6f37e19670b6cd240fa5cc4
-ms.sourcegitcommit: f4be868c0d1d78e550fba105d4d3c993743a1f4b
-ms.translationtype: HT
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56152831"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62233642"
 ---
 # <a name="for-statement-c"></a>for, instruction (C)
 
@@ -18,7 +18,7 @@ L’instruction **for** vous permet de répéter une instruction, ou une instruc
 ## <a name="syntax"></a>Syntaxe
 
 *itération-instruction* :<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**for** **(** *init-expression*<sub>opt</sub> **;** *cond-expression*<sub>opt</sub> **;** *loop-expression*<sub>opt</sub> **)** *statement*
+&nbsp;&nbsp;&nbsp;&nbsp;**pour** **(** *init-expression*<sub>OPT</sub> **;** *cond-expression*<sub>OPT</sub> **;** *loop-expression*<sub>OPT</sub> **),** *instruction*
 
 L’exécution d’une instruction **for** continue comme suit :
 
@@ -40,7 +40,7 @@ for( ; ; )
 
 est la méthode courante pour produire une boucle infinie qui ne peut être quittée qu’avec une instruction **break**, **goto** ou **return**.
 
-## <a name="example"></a>Exemple
+## <a name="example"></a> Exemple
 
 L’exemple suivant illustre l’instruction **for** :
 
@@ -71,7 +71,7 @@ int main()
 }
 ```
 
-## <a name="output"></a>Sortie
+## <a name="output"></a>Output
 
 ```Output
 Number of spaces: 4

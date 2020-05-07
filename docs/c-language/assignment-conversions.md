@@ -22,7 +22,7 @@ Dans les opérations d'assignation, le type de la valeur assignée est converti 
 
 - [Conversions à partir des types à virgule flottante](../c-language/conversions-from-floating-point-types.md)
 
-- [Conversions vers et à partir des types pointeur](../c-language/conversions-to-and-from-pointer-types.md)
+- [Conversions vers et depuis les types pointeur](../c-language/conversions-to-and-from-pointer-types.md)
 
 - [Conversions à partir d’autres types](../c-language/conversions-from-other-types.md)
 
