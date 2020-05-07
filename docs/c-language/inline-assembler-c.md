@@ -6,15 +6,15 @@ helpviewer_keywords:
 - inline assembler [C]
 ms.assetid: 821acc77-60b1-434c-ba54-2ba930a25ab4
 ms.openlocfilehash: 8fb2a1dd3e87ef452083935e23048d80b4cdc8c3
-ms.sourcegitcommit: f4be868c0d1d78e550fba105d4d3c993743a1f4b
-ms.translationtype: HT
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56152025"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62233175"
 ---
 # <a name="inline-assembler-c"></a>Assembleur inline (C)
 
-**Section spécifique à Microsoft**
+**Spécifique à Microsoft**
 
 L'assembleur inline vous permet d'incorporer des instructions en langage assembleur directement dans vos programmes sources C sans code assembleur ni étapes de liaison supplémentaires. L'assembleur inline est intégré au compilateur. Vous n'avez pas besoin d'assembleur distinct tel que MASM (Microsoft Macro Assembler).
 
@@ -47,7 +47,7 @@ Dans la mesure où le mot clé `__asm` est un séparateur d'instruction, vous po
 __asm push ebp   __asm mov  ebp, esp   __asm sub  esp, __LOCAL_SIZE
 ```
 
-**FIN de la section spécifique à Microsoft**
+**FIN spécifique à Microsoft**
 
 ## <a name="see-also"></a>Voir aussi
 

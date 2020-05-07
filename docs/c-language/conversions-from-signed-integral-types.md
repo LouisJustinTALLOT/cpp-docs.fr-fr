@@ -35,53 +35,53 @@ Pour plus d’informations sur les tailles des types intégraux et à virgule fl
 
 Le tableau suivant répertorie les conversions de types intégraux signés. Il suppose que le type **char** est signé par défaut. Si vous utilisez une option au moment de la compilation pour modifier la valeur par défaut du type **char** en non signé, les conversions données dans le tableau conversions [de types intégraux non signés](../c-language/conversions-from-unsigned-integral-types.md) pour le type **unsigned char** s’appliquent, au lieu des conversions dans ce tableau.
 
-**Section spécifique à Microsoft**
+**Spécifique à Microsoft**
 
 Dans le compilateur Microsoft, les types **int** et **long** sont distincts, mais équivalents. La conversion d’une valeur **int** se déroule de la même façon que la conversion d’une valeur **long**.
 
-**FIN de la section spécifique à Microsoft**
+**FIN spécifique à Microsoft**
 
 ## <a name="table-of-conversions-from-signed-integral-types"></a>Tableau des conversions des types intégraux signés
 
-|From|À|Méthode|
+|À partir|À|Méthode|
 |----------|--------|------------|
-|**caractère**<sup>1</sup>|**short**|Étendre le signe|
+|**caractère**<sup>1</sup>|**Résumé**|Étendre le signe|
 |**char**|**long**|Étendre le signe|
 |**char**|**long long**|Étendre le signe|
 |**char**|**unsigned char**|Conserver le modèle. Le bit de poids fort perd sa fonction de bit de signe|
 |**char**|**unsigned short**|Étendre le signe à **short**. Convertir **short** en **unsigned short**|
 |**char**|**unsigned long**|Étendre le signe à **long**. Convertir **long** en **unsigned long**|
-|**char**|**long long non signé**|Étendre le signe à **long long**; convertir **long long** en **unsigned long** long|
+|**char**|**unsigned long long**|Étendre le signe à **long long**; convertir **long long** en **unsigned long** long|
 |**char**|**float**|Étendre le signe à **long**. Convertir **long** en **float**|
 |**char**|**double**|Étendre le signe à **long**. Convertir **long** en **double**|
 |**char**|**long double**|Étendre le signe à **long**. Convertir **long** en **double**|
-|**short**|**char**|Conserver l'octet de poids faible|
-|**short**|**long**|Étendre le signe|
-|**short**|**long long**|Étendre le signe|
-|**short**|**unsigned char**|Conserver l'octet de poids faible|
-|**short**|**unsigned short**|Conserver le modèle binaire. Le bit de poids fort perd sa fonction de bit de signe|
-|**short**|**unsigned long**|Étendre le signe à **long**. Convertir **long** en **unsigned long**|
-|**short**|**long long non signé**|Étendre le signe à **long long**; convertir **long long** en **unsigned long** long|
-|**short**|**float**|Étendre le signe à **long**. Convertir **long** en **float**|
-|**short**|**double**|Étendre le signe à **long**. Convertir **long** en **double**|
-|**short**|**long double**|Étendre le signe à **long**. Convertir **long** en **double**|
+|**Résumé**|**char**|Conserver l'octet de poids faible|
+|**Résumé**|**long**|Étendre le signe|
+|**Résumé**|**long long**|Étendre le signe|
+|**Résumé**|**unsigned char**|Conserver l'octet de poids faible|
+|**Résumé**|**unsigned short**|Conserver le modèle binaire. Le bit de poids fort perd sa fonction de bit de signe|
+|**Résumé**|**unsigned long**|Étendre le signe à **long**. Convertir **long** en **unsigned long**|
+|**Résumé**|**unsigned long long**|Étendre le signe à **long long**; convertir **long long** en **unsigned long** long|
+|**Résumé**|**float**|Étendre le signe à **long**. Convertir **long** en **float**|
+|**Résumé**|**double**|Étendre le signe à **long**. Convertir **long** en **double**|
+|**Résumé**|**long double**|Étendre le signe à **long**. Convertir **long** en **double**|
 |**long**|**char**|Conserver l'octet de poids faible|
-|**long**|**short**|Conserver le mot de poids faible|
+|**long**|**Résumé**|Conserver le mot de poids faible|
 |**long**|**long long**|Étendre le signe|
 |**long**|**unsigned char**|Conserver l'octet de poids faible|
 |**long**|**unsigned short**|Conserver le mot de poids faible|
 |**long**|**unsigned long**|Conserver le modèle binaire. Le bit de poids fort perd sa fonction de bit de signe|
-|**long**|**long long non signé**|Étendre le signe à **long long**; convertir **long long** en **unsigned long** long|
+|**long**|**unsigned long long**|Étendre le signe à **long long**; convertir **long long** en **unsigned long** long|
 |**long**|**float**|Représenter comme **float**. Si **long** ne peut pas être représenté exactement, certaines précisions sont perdues.|
 |**long**|**double**|Représenter comme **double**. Si **long** ne peut pas être représenté exactement comme un **double**, une précision est perdue.|
 |**long**|**long double**|Représenter comme **double**. Si **long** ne peut pas être représenté exactement comme un **double**, une précision est perdue.|
 |**long long**|**char**|Conserver l'octet de poids faible|
-|**long long**|**short**|Conserver le mot de poids faible|
+|**long long**|**Résumé**|Conserver le mot de poids faible|
 |**long long**|**long**|Conserver le DWORD de poids faible|
 |**long long**|**unsigned char**|Conserver l'octet de poids faible|
 |**long long**|**unsigned short**|Conserver le mot de poids faible|
 |**long long**|**unsigned long**|Conserver le DWORD de poids faible|
-|**long long**|**long long non signé**|Conserver le modèle binaire. Le bit de poids fort perd sa fonction de bit de signe|
+|**long long**|**unsigned long long**|Conserver le modèle binaire. Le bit de poids fort perd sa fonction de bit de signe|
 |**long long**|**float**|Représenter comme **float**. Si **long long** ne peut pas être représenté exactement, certaines précisions sont perdues.|
 |**long long**|**double**|Représenter comme **double**. Si **long long** ne peut pas être représenté exactement comme un **double**, une précision est perdue.|
 |**long long**|**long double**|Représenter comme **double**. Si **long long** ne peut pas être représenté exactement comme un **double**, une précision est perdue.|
@@ -90,4 +90,4 @@ Dans le compilateur Microsoft, les types **int** et **long** sont distincts, mai
 
 ## <a name="see-also"></a>Voir aussi
 
-[Conversions d’assignation](../c-language/assignment-conversions.md)
+[Conversions d’affectation](../c-language/assignment-conversions.md)

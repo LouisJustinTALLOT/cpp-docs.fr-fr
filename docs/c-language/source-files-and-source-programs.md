@@ -21,12 +21,12 @@ Un programme source peut être divisé en un ou plusieurs « fichiers sources 
 ## <a name="syntax"></a>Syntaxe
 
 *translation-unit* :<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*déclaration extérieure* <br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*External-DECLARATION* <br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*translation-unit* *external-declaration*
 
 *external-declaration*:<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*fonction-définition*<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*Déclaration*
+&nbsp;&nbsp;&nbsp;&nbsp;*définition de fonction*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*déclaré*
 
 L'article [Vue d'ensemble des déclarations](../c-language/overview-of-declarations.md) fournit la syntaxe de l'élément non terminal `declaration` et la *référence du préprocesseur* explique comment [l'unité de traduction](../preprocessor/phases-of-translation.md) est traitée.
 

@@ -19,21 +19,21 @@ ms.locfileid: "62196740"
 ---
 # <a name="exporting-from-a-dll"></a>Exportation à partir d'une DLL
 
-Un fichier DLL a une disposition ressemble beaucoup à un fichier .exe, avec une différence importante : un fichier DLL contient une table d’exportations. La table d’exportations contient le nom de chaque fonction de la DLL exporte vers d’autres exécutables. Ces fonctions sont les points d’entrée dans la DLL ; Seules les fonctions dans la table d’exportations sont accessibles par d’autres exécutables. Toutes les autres fonctions dans la DLL sont privées à la DLL. La table d’exportations de DLL peut être affichée à l’aide de la [DUMPBIN](reference/dumpbin-reference.md) outil avec l’option /EXPORTS.
+Un fichier DLL a une disposition très similaire à un fichier. exe, avec une différence importante : un fichier DLL contient une table d’exportations. La table d’exportations contient le nom de chaque fonction que la DLL exporte vers d’autres exécutables. Ces fonctions sont les points d’entrée dans la DLL. seules les fonctions dans la table d’exportations sont accessibles par d’autres exécutables. Toutes les autres fonctions de la DLL sont privées pour la DLL. La table d’exportations d’une DLL peut être affichée à l’aide de l’outil [DUMPBIN](reference/dumpbin-reference.md) avec l’option/EXPORTS.
 
 Vous pouvez exporter des fonctions à partir d’une DLL à l’aide de deux méthodes :
 
-- Créer un fichier de définition (.def) de module et utiliser le fichier .def lors de la génération de la DLL. Utilisez cette approche si vous souhaitez [exporter des fonctions à partir de votre DLL par ordinal plutôt que par nom](exporting-functions-from-a-dll-by-ordinal-rather-than-by-name.md).
+- Créez un fichier de définition de module (. def) et utilisez le fichier. def lors de la génération de la DLL. Utilisez cette approche si vous souhaitez [exporter des fonctions à partir de votre dll par ordinal plutôt que par nom](exporting-functions-from-a-dll-by-ordinal-rather-than-by-name.md).
 
 - Utilisez le mot clé **__declspec (dllexport)** dans la définition de la fonction.
 
-Lorsque vous exportez des fonctions soit la méthode, veillez à utiliser le [__stdcall](../cpp/stdcall.md) convention d’appel.
+Lorsque vous exportez des fonctions avec l’une ou l’autre des méthodes, veillez à utiliser la Convention d’appel [__stdcall](../cpp/stdcall.md) .
 
-## <a name="what-do-you-want-to-do"></a>Que voulez-vous faire ?
+## <a name="what-do-you-want-to-do"></a>Que voulez-vous faire ?
 
-- [Exporter à partir d’une DLL à l’aide de fichiers .def](exporting-from-a-dll-using-def-files.md)
+- [Exporter à partir d’une DLL à l’aide de fichiers. def](exporting-from-a-dll-using-def-files.md)
 
-- [Exporter à partir d’une DLL à l’aide de __declspec (dllexport)](exporting-from-a-dll-using-declspec-dllexport.md)
+- [Exporter à partir d’une DLL à l’aide d' __declspec (dllexport)](exporting-from-a-dll-using-declspec-dllexport.md)
 
 - [Exporter et importer à l’aide de AFX_EXT_CLASS](exporting-and-importing-using-afx-ext-class.md)
 

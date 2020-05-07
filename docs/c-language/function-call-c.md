@@ -7,11 +7,11 @@ helpviewer_keywords:
 - function calls
 ms.assetid: 35c66719-3f15-4d3b-97da-4e19dc97b308
 ms.openlocfilehash: d22bdebc8fa832afb14a2cc09e6a441b7b9e8a5a
-ms.sourcegitcommit: f4be868c0d1d78e550fba105d4d3c993743a1f4b
-ms.translationtype: HT
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56147410"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62233296"
 ---
 # <a name="function-call-c"></a>Appel de fonction (C)
 
@@ -19,12 +19,12 @@ Un *appel de fonction* est une expression qui inclut le nom de la fonction appel
 
 ## <a name="syntax"></a>Syntaxe
 
-*postfix-expression* :<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*postfix-expression*  **(**  *argument-expression-list*<sub>opt</sub> **)**
+*postfix-expression*:<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*postfix-expression*  **(**  *argument-expression-List*<sub>OPT</sub> **)**
 
 *argument-expression-list* :<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*assignment-expression*<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*argument-expression-list* **,** *assignment-expression*
+&nbsp;&nbsp;&nbsp;&nbsp;*assignation-expression*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*argument-expression-List* **,** *assignation-expression*
 
 *postfix-expression* doit prendre la valeur d’une adresse de fonction (par exemple, un identificateur de fonction ou la valeur d’un pointeur fonction), et *argument-expression-list* est une liste d’expressions (séparées par des virgules) dont les valeurs (les arguments) sont passées à la fonction. L’argument *argument-expression-list* peut être vide.
 
@@ -32,4 +32,4 @@ Une expression de fonction d'appel a la valeur et le type de la valeur de retour
 
 ## <a name="see-also"></a>Voir aussi
 
-[Opérateur d’appel de fonction](../cpp/function-call-operator-parens.md)
+[Opérateur d’appel de fonction : ()](../cpp/function-call-operator-parens.md)
