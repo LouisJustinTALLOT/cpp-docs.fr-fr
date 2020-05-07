@@ -32,12 +32,12 @@ Les rubriques suivantes sont présentées :
 
 - [Littéraux de chaîne](../c-language/c-string-literals.md)
 
-- [Caractères de ponctuation et spéciaux](../c-language/punctuation-and-special-characters.md)
+- [Caractères de ponctuation et caractères spéciaux](../c-language/punctuation-and-special-characters.md)
 
-La section comprend également des tables de référence pour les [trigraphes](../c-language/trigraphs.md), des [limites sur les constantes à virgule flottante](../c-language/limits-on-floating-point-constants.md), les [limites C et C++ entière](../c-language/cpp-integer-limits.md), ainsi que les [séquences d’échappement](../c-language/escape-sequences.md).
+La section comprend également des tables de référence pour les [trigraphes](../c-language/trigraphs.md), des [limites sur les constantes à virgule flottante](../c-language/limits-on-floating-point-constants.md), les [limites d’entiers C et C++](../c-language/cpp-integer-limits.md), et les [séquences d’échappement](../c-language/escape-sequences.md).
 
 Les opérateurs sont des symboles (caractères uniques et combinaisons de caractères) qui spécifient comment les valeurs doivent être manipulées. Chaque symbole est interprété comme une unité unique, appelée un jeton. Pour plus d’informations, consultez [Opérateurs](../c-language/c-operators.md).
 
 ## <a name="see-also"></a>Voir aussi
 
-[Informations de référence sur le langage C](../c-language/c-language-reference.md)
+[Référence du langage C](../c-language/c-language-reference.md)

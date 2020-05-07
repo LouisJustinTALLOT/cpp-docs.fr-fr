@@ -7,11 +7,11 @@ helpviewer_keywords:
 - types [C], declarations
 ms.assetid: e92a3b82-9269-4bc6-834a-6f431ccac83e
 ms.openlocfilehash: b4bf7bc82cdf792e5a23f6d5533cc4d800fe4252
-ms.sourcegitcommit: f4be868c0d1d78e550fba105d4d3c993743a1f4b
-ms.translationtype: HT
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56149620"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62346104"
 ---
 # <a name="typedef-declarations"></a>Déclarations typedef
 
@@ -21,37 +21,37 @@ Une déclaration typedef est interprétée de la même façon qu'une déclaratio
 
 ## <a name="syntax"></a>Syntaxe
 
-*declaration* :<br/>
+*déclaration*:<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*declaration-specifiers init-declarator-list*<sub>opt</sub> **;**
 
 *declaration-specifiers* :<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*storage-class-specifier declaration-specifiers*<sub>opt</sub> <br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*type-specifier declaration-specifiers*<sub>opt</sub> <br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*type-qualifier declaration-specifiers*<sub>opt</sub>
+&nbsp;&nbsp;&nbsp;&nbsp;*déclaration de Storage-Class-specifier-Specifiers*<sub>OPT</sub> <br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*type-specifier DECLARATION-Specifiers*<sub>OPT</sub> <br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*déclaration de qualificateur de type-spécificateurs*<sub>OPT</sub>
 
 *storage-class-specifier* :<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;**typedef**
 
 *type-specifier* :<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**void**<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**char**<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**short**<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**int**<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**nullité**<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**Char**<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**Résumé**<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**tiers**<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;**long**<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**float**<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**double**<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**signed**<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**unsigned**<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*struct-or-union-specifier*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**dissocié**<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**Cliquer**<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**abonné**<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**non signé**<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*struct-or-Union-specifier*<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*enum-specifier*<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*typedef-name*
 
-*typedef-name* :<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*identifier*
+*nom de typedef*:<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*identificateur*
 
 Notez qu'une déclaration typedef ne crée pas de types. Elle crée des synonymes pour des types existants ou des noms pour des types qui peuvent être spécifiés d'autres manières. Lorsqu'un nom typedef est utilisé comme spécificateur de type, il peut être combiné avec certains spécificateurs de type, mais pas d'autres. Les modificateurs acceptables sont **const** et `volatile`.
 
-Les noms typedef partagent l'espace de noms avec les identificateurs ordinaires (pour plus d'informations, consultez [Espaces de noms](../c-language/name-spaces.md)). Par conséquent, un programme peut avoir un nom typedef et un identificateur de portée locale du même nom. Par exemple :
+Les noms typedef partagent l'espace de noms avec les identificateurs ordinaires (pour plus d'informations, consultez [Espaces de noms](../c-language/name-spaces.md)). Par conséquent, un programme peut avoir un nom typedef et un identificateur de portée locale du même nom. Par exemple :
 
 ```C
 typedef char FlagType;

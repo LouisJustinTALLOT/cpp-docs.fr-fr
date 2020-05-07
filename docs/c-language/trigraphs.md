@@ -16,11 +16,11 @@ helpviewer_keywords:
 - ??' trigraph
 ms.assetid: 617f76ec-b8e8-4cfe-916c-4bc32cbd9aeb
 ms.openlocfilehash: 001eb90b5cb4dda933571fd053598995d3ef613e
-ms.sourcegitcommit: f4be868c0d1d78e550fba105d4d3c993743a1f4b
-ms.translationtype: HT
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56152298"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62345314"
 ---
 # <a name="trigraphs"></a>Trigraphes
 
@@ -48,7 +48,7 @@ Le tableau suivant indique les neuf séquences de trigraphe. Dans un fichier sou
 
 Un trigraphe est toujours traité comme un caractère source unique. La traduction des trigraphes a lieu dans la première [phase de traduction](../preprocessor/phases-of-translation.md), avant la reconnaissance des caractères d’échappement dans les littéraux de chaîne et des constantes de caractère. Seuls les neuf trigraphes indiqués dans le tableau ci-dessus sont identifiés. Toutes les autres séquences de caractères restent inchangées.
 
-La séquence d’échappement de caractère, **\\?**, évite que les séquences de caractères qui s’apparentent à un trigraphe ne soient mal interprétées. (Pour plus d’informations sur les séquences d’échappement, consultez [Séquences d’échappement](../c-language/escape-sequences.md).) Par exemple, si vous essayez d'imprimer la chaîne `What??!` avec cette instruction `printf`
+La séquence d’échappement de caractère, ** \\?**, empêche la mauvaise interprétation des séquences de caractères de type trigraphe. (Pour plus d’informations sur les séquences d’échappement, consultez [séquences d’échappement](../c-language/escape-sequences.md).) Par exemple, si vous essayez d’imprimer la chaîne `What??!` avec cette `printf` instruction
 
 ```C
 printf( "What??!\n" );
@@ -64,5 +64,5 @@ Dans cette instruction `printf`, un caractère d'échappement barre oblique inve
 
 ## <a name="see-also"></a>Voir aussi
 
-[/Zc:trigraphs (Substitution de trigraphes)](../build/reference/zc-trigraphs-trigraphs-substitution.md)<br/>
+[/Zc:, trigrammes (substitution de trigrammes) (C++)](../build/reference/zc-trigraphs-trigraphs-substitution.md)<br/>
 [identificateurs C](../c-language/c-identifiers.md)

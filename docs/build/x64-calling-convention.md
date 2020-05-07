@@ -1,6 +1,6 @@
 ---
 title: Convention d’appel x64
-description: Détails de la convention d’appel par défaut x64 ABI.
+description: Détails de la Convention d’appel ABI x64 par défaut.
 ms.date: 12/17/2018
 ms.assetid: 41ca3554-b2e3-4868-9a84-f1b46e6e21d9
 ms.openlocfilehash: caf22172ea5e9c20280bce8e508d72fd30c00c5b
@@ -12,66 +12,66 @@ ms.locfileid: "81335127"
 ---
 # <a name="x64-calling-convention"></a>Convention d’appel x64
 
-Cette section décrit les processus et conventions standard qu’une fonction (l’appelant) utilise pour faire des appels dans une autre fonction (la callee) dans le code x64.
+Cette section décrit les processus standard et les conventions qu’une fonction (l’appelant) utilise pour effectuer des appels dans une autre fonction (l’appelé) dans du code x64.
 
-## <a name="calling-convention-defaults"></a>Appel par défaut de convention
+## <a name="calling-convention-defaults"></a>Valeurs par défaut de la Convention d’appel
 
-L’interface binaire d’application x64 (ABI) utilise par défaut une convention d’appel rapide à quatre registres. L’espace est alloué sur la pile d’appels comme un magasin d’ombre pour les appelants pour enregistrer ces registres. Il y a une correspondance individuelle stricte entre les arguments à un appel de fonction et les registres utilisés pour ces arguments. Tout argument qui ne rentre pas dans 8 octets, ou n’est pas 1, 2, 4, ou 8 octets, doit être adopté par référence. Un seul argument n’est jamais réparti entre plusieurs registres. La pile de registre x87 n’est pas utilisée et peut être utilisée par le callee, mais doit être considérée comme volatile entre les appels de fonction. Toutes les opérations de point flottant sont effectuées à l’aide des 16 registres XMM. Les arguments d’Integer sont passés dans les registres RCX, RDX, R8 et R9. Les arguments de points flottants sont passés dans XMM0L, XMM1L, XMM2L, et XMM3L. Les arguments 16-byte sont adoptés par référence. Le passage de paramètres est décrit en détail dans [Le passage de paramètres](#parameter-passing). En plus de ces registres, RAX, R10, R11, XMM4 et XMM5 sont considérés comme volatils. Tous les autres registres ne sont pas volatils. L’utilisation du registre est documentée en détail dans les registres [d’utilisation](../build/x64-software-conventions.md#register-usage) du registre et [d’enregistrement enregistré par l’appelant/appelant.](#callercallee-saved-registers)
+L’interface binaire d’application x64 (ABI) utilise une convention d’appel rapide à quatre registres par défaut. L’espace est alloué sur la pile des appels en tant que magasin d’instantanés pour que les appelants enregistrent ces registres. Il existe une correspondance un-à-un stricte entre les arguments d’un appel de fonction et les registres utilisés pour ces arguments. Tout argument qui ne peut pas contenir plus de 8 octets, ou qui n’est pas 1, 2, 4 ou 8 octets, doit être passé par référence. Un argument unique n’est jamais réparti sur plusieurs registres. La pile de registres X87 est inutilisée et peut être utilisée par l’appelé, mais elle doit être considérée comme volatile entre les appels de fonction. Toutes les opérations à virgule flottante sont effectuées à l’aide des 16 registres XMM. Les arguments entiers sont passés dans les registres RCX, RDX, R8 et R9. Les arguments à virgule flottante sont passés dans XMM0L, XMM1L, XMM2L et XMM3L. les arguments de 16 octets sont passés par référence. Le passage de paramètres est décrit en détail dans [passage de paramètres](#parameter-passing). En plus de ces registres, RAX, R10, R11, XMM4 et XMM5 sont considérés comme volatiles. Tous les autres registres sont non volatils. L’utilisation des registres est documentée en détail dans la section utilisation des registres et registres enregistrés de [l'](../build/x64-software-conventions.md#register-usage) [appelant/appelé](#callercallee-saved-registers).
 
-Pour les fonctions prototypes, tous les arguments sont convertis aux types de callee attendus avant de passer. L’appelant est responsable de l’attribution de l’espace pour les paramètres au callee, et doit toujours allouer suffisamment d’espace pour stocker quatre paramètres d’enregistrement, même si le callee ne prend pas autant de paramètres. Cette convention simplifie le soutien aux fonctions non prototyped en C et aux fonctions vararg C/CMD. Pour les fonctions vararg ou non stéréotypées, toute valeur de point flottant doit être reproduite dans le registre général correspondant. Tous les paramètres au-delà des quatre premiers doivent être stockés sur la pile après le magasin d’ombre avant l’appel. Les détails de la fonction Vararg peuvent être trouvés dans [Varargs](#varargs). Les informations sur les fonctions non prorétotypes sont détaillées dans [les fonctions non prototypes](#unprototyped-functions).
+Pour les fonctions prototypées, tous les arguments sont convertis en types d’appel attendus avant de passer. L’appelant est chargé d’allouer de l’espace pour les paramètres à l’appelé, et doit toujours allouer suffisamment d’espace pour stocker quatre paramètres de Registre, même si l’appelé ne prend pas ce nombre de paramètres. Cette Convention simplifie la prise en charge des fonctions de langage C non prototypées et des fonctions vararg C/C++. Pour les fonctions vararg ou non prototypées, toute valeur à virgule flottante doit être dupliquée dans le registre à usage général correspondant. Tous les paramètres au-delà des quatre premiers doivent être stockés sur la pile après le magasin d’instantanés avant l’appel. Les détails de la fonction vararg se trouvent dans [varargs](#varargs). Les informations sur les fonctions non prototypées sont détaillées dans les [fonctions non prototypées](#unprototyped-functions).
 
 ## <a name="alignment"></a>Alignment
 
-La plupart des structures sont alignées à leur alignement naturel. Les principales exceptions sont `malloc` le `alloca` pointeur de pile et ou la mémoire, qui sont alignés à 16 octets afin d’aider à la performance. L’alignement au-dessus de 16 octets doit être fait manuellement, mais puisque 16 octets est une taille d’alignement commune pour les opérations XMM, cette valeur devrait fonctionner pour la plupart du code. Pour plus d’informations sur la disposition de la structure et l’alignement, voir [Types et Stockage](../build/x64-software-conventions.md#types-and-storage). Pour plus d’informations sur la disposition de la pile, voir [l’utilisation de la pile x64](../build/stack-usage.md).
+La plupart des structures sont alignées sur leur alignement naturel. Les principales exceptions sont le pointeur de pile `malloc` et `alloca` ou la mémoire, qui sont alignées sur 16 octets afin d’aider les performances. L’alignement au-dessus de 16 octets doit être effectué manuellement, mais étant donné que 16 octets sont une taille d’alignement commune pour les opérations XMM, cette valeur doit fonctionner pour la plupart du code. Pour plus d’informations sur la disposition et l’alignement de la structure, consultez [types et stockage](../build/x64-software-conventions.md#types-and-storage). Pour plus d’informations sur la disposition de la pile, consultez Utilisation de la [pile x64](../build/stack-usage.md).
 
-## <a name="unwindability"></a>Insevisibilité
+## <a name="unwindability"></a>La déroulabilité
 
-Les fonctions de feuilles sont des fonctions qui ne modifient aucun registre non volatil. Une fonction non feuille peut modifier le RER non volatil, par exemple en appelant une fonction ou en allouant de l’espace supplémentaire pour les variables locales. Afin de récupérer les registres non volatils lorsqu’une exception est traitée, les fonctions non feuille doivent être annotées avec des données statiques qui décrivent comment bien dénouer la fonction à une instruction arbitraire. Ces données sont stockées sous *forme de pdata*, ou de données de procédure, qui se réfèrent à *xdata*, les données de traitement d’exception. La xdata contient les informations de dénouement, et peut indiquer une pdata supplémentaire ou une fonction de gestionnaire d’exception. Les prologes et les épilogues sont très restreints afin qu’ils puissent être correctement décrits dans xdata. Le pointeur de pile doit être aligné à 16 octets dans n’importe quelle région de code qui ne fait pas partie d’un épilog ou d’un prolog, sauf dans les fonctions de feuille. Les fonctions de feuille peuvent être dénouées simplement en simulant un retour, de sorte que pdata et xdata ne sont pas nécessaires. Pour plus de détails sur la structure appropriée des prologs de fonction et des épilogues, voir [x64 prolog et épilog](../build/prolog-and-epilog.md). Pour plus d’informations sur le traitement des exceptions, et la manipulation et le dénouement des pdata et xdata, voir [x64 traitement d’exception](../build/exception-handling-x64.md).
+Les fonctions feuilles sont des fonctions qui ne modifient pas les registres non volatiles. Une fonction non-feuille peut changer RSP non volatile, par exemple, en appelant une fonction ou en allouant un espace de pile supplémentaire pour les variables locales. Pour récupérer des registres non volatils lorsqu’une exception est gérée, les fonctions non-feuille doivent être annotées avec des données statiques qui décrivent comment dérouler correctement la fonction au niveau d’une instruction arbitraire. Ces données sont stockées sous la forme de *pData*, ou de données de procédure, qui, à leur tour, fait référence à *XData*, les données de gestion des exceptions. Le XData contient les informations de déroulement et peut pointer vers une fonction pData ou un gestionnaire d’exceptions supplémentaire. Les journaux et les épilogues sont très restreints afin qu’ils puissent être décrits correctement dans XData. Le pointeur de pile doit être aligné sur 16 octets dans toute région de code qui ne fait pas partie d’un épilogue ou d’un prologue, sauf dans les fonctions feuille. Les fonctions feuilles peuvent être déroulées simplement en simulant un retour, de sorte que pData et XData ne sont pas nécessaires. Pour plus d’informations sur la structure correcte des prologues de fonction et des épilogues, consultez [prologue et épilogue x64](../build/prolog-and-epilog.md). Pour plus d’informations sur la gestion des exceptions, ainsi que sur la gestion des exceptions et le déroulement des pData et XData, consultez [gestion des exceptions x64](../build/exception-handling-x64.md).
 
 ## <a name="parameter-passing"></a>Passage de paramètres
 
-Les quatre premiers arguments sont adoptés dans les registres. Les valeurs integer sont passées dans l’ordre gauche-à-droite dans RCX, RDX, R8, et R9, respectivement. Les arguments cinq et plus sont passés sur la pile. Tous les arguments sont justifiés dans les registres, de sorte que le appelant peut ignorer les parties supérieures du registre et accéder uniquement à la partie du registre nécessaire.
+Les quatre premiers arguments entiers sont passés dans les registres. Les valeurs entières sont passées dans l’ordre de gauche à droite dans RCX, RDX, R8 et R9, respectivement. Les arguments cinq et supérieurs sont passés sur la pile. Tous les arguments sont justifiés à droite dans les registres. l’appelé peut donc ignorer les bits supérieurs du Registre et accéder uniquement à la partie du registre nécessaire.
 
-Tous les arguments de point flottant et de double précision dans les quatre premiers paramètres sont passés en XMM0 - XMM3, selon la position. Les registres d’integer RCX, RDX, R8 et R9 qui seraient normalement utilisés pour ces positions sont ignorés, sauf dans le cas des arguments de varargs. Pour plus de détails, voir [Varargs](#varargs). De même, les registres XMM0 - XMM3 sont ignorés lorsque l’argument correspondant est un type d’integer ou de pointeur.
+Les arguments à virgule flottante et à double précision dans les quatre premiers paramètres sont passés dans XMM0-XMM3, en fonction de la position. Les registres d’entiers RCX, RDX, R8 et R9 qui seraient normalement utilisés pour ces positions sont ignorés, sauf dans le cas des arguments varargs. Pour plus d’informations, consultez [varargs](#varargs). De même, les registres XMM0-XMM3 sont ignorés lorsque l’argument correspondant est un type entier ou pointeur.
 
-[__m128](../cpp/m128.md) types, tableaux et cordes ne sont jamais passés par valeur immédiate. Au lieu de cela, un pointeur est passé à la mémoire allouée par l’appelant. Les structs et les syndicats de taille 8, 16, 32 ou 64 bits, et __m64 types, sont adoptés comme s’ils étaient desintégriers de la même taille. Les structs ou les syndicats d’autres tailles sont adoptés comme pointeur de mémoire attribué par l’appelant. Pour ces types agrégés passés \_comme pointeur, y compris _m128, la mémoire temporaire allouée par l’appelant doit être alignée à 16 ans.
+les types de [__m128](../cpp/m128.md) , les tableaux et les chaînes ne sont jamais passés par la valeur immédiate. Au lieu de cela, un pointeur est passé à la mémoire allouée par l’appelant. Les structs et les unions de taille 8, 16, 32 ou 64 bits, ainsi que les types de __m64, sont passés comme s’il s’agissait d’entiers de la même taille. Les structs ou les unions d’autres tailles sont passés comme pointeur vers la mémoire allouée par l’appelant. Pour ces types d’agrégats passés comme un pointeur \_, y compris _m128, la mémoire temporaire allouée par l’appelant doit être alignée sur 16 octets.
 
-Fonctions intrinsèques qui n’allouent pas d’espace de pile, et n’appellent pas d’autres fonctions, parfois utiliser d’autres registres volatils pour passer des arguments de registre supplémentaires. Cette optimisation est rendue possible par la liaison serrée entre le compilateur et la mise en œuvre intrinsèque de la fonction.
+Les fonctions intrinsèques qui n’allouent pas d’espace de pile et n’appellent pas d’autres fonctions, utilisent parfois d’autres registres volatiles pour passer des arguments Register supplémentaires. Cette optimisation est rendue possible par la liaison étroite entre le compilateur et l’implémentation de la fonction intrinsèque.
 
-Le callee est responsable du dumping des paramètres du registre dans son espace d’ombre si nécessaire.
+L’appelé est chargé de vider les paramètres de Registre dans leur espace d’ombre si nécessaire.
 
-Le tableau suivant résume la façon dont les paramètres sont adoptés :
+Le tableau suivant résume la façon dont les paramètres sont transmis :
 
-|Type de paramètre|Comment passé|
+|Type de paramètre|Réussite|
 |--------------------|----------------|
-|Virgule flottante|Premiers 4 paramètres - XMM0 à XMM3. D’autres passèrent sur la pile.|
-|Integer|Premiers 4 paramètres - RCX, RDX, R8, R9. D’autres passèrent sur la pile.|
-|Agrégats (8, 16, 32 ou 64 bits) et __m64|Premiers 4 paramètres - RCX, RDX, R8, R9. D’autres passèrent sur la pile.|
-|Agrégats (autres)|Par pointeur. Les 4 premiers paramètres sont passés comme pointeurs dans RCX, RDX, R8 et R9|
-|__m128|Par pointeur. Les 4 premiers paramètres sont passés comme pointeurs dans RCX, RDX, R8 et R9|
+|Virgule flottante|4 premiers paramètres-XMM0 à XMM3. D’autres ont réussi sur la pile.|
+|Integer|4 premiers paramètres : RCX, RDX, R8, R9. D’autres ont réussi sur la pile.|
+|Agrégats (8, 16, 32 ou 64 bits) et __m64|4 premiers paramètres : RCX, RDX, R8, R9. D’autres ont réussi sur la pile.|
+|Agrégats (autres)|Par pointeur. 4 premiers paramètres passés comme pointeurs dans RCX, RDX, R8 et R9|
+|__m128|Par pointeur. 4 premiers paramètres passés comme pointeurs dans RCX, RDX, R8 et R9|
 
-### <a name="example-of-argument-passing-1---all-integers"></a>Exemple d’argument passant 1 - tous les entiers
+### <a name="example-of-argument-passing-1---all-integers"></a>Exemple de passage d’argument 1-tous les entiers
 
 ```cpp
 func1(int a, int b, int c, int d, int e);
 // a in RCX, b in RDX, c in R8, d in R9, e pushed on stack
 ```
 
-### <a name="example-of-argument-passing-2---all-floats"></a>Exemple d’argument passant 2 - tous les flotteurs
+### <a name="example-of-argument-passing-2---all-floats"></a>Exemple de passage d’argument 2-tous les valeurs float
 
 ```cpp
 func2(float a, double b, float c, double d, float e);
 // a in XMM0, b in XMM1, c in XMM2, d in XMM3, e pushed on stack
 ```
 
-### <a name="example-of-argument-passing-3---mixed-ints-and-floats"></a>Exemple d’argument passant 3 - ints mélangés et flotteurs
+### <a name="example-of-argument-passing-3---mixed-ints-and-floats"></a>Exemple d’argument passant 3-Mixed int et Floats
 
 ```cpp
 func3(int a, double b, int c, float d);
 // a in RCX, b in XMM1, c in R8, d in XMM3
 ```
 
-### <a name="example-of-argument-passing-4--__m64-__m128-and-aggregates"></a>Exemple d’argumentation passant 4 \_-__m64, _m128 et agrégats
+### <a name="example-of-argument-passing-4--__m64-__m128-and-aggregates"></a>Exemple de passage de l’argument 4- \___m64, _m128 et des agrégats
 
 ```cpp
 func4(__m64 a, _m128 b, struct c, float d);
@@ -80,11 +80,11 @@ func4(__m64 a, _m128 b, struct c, float d);
 
 ## <a name="varargs"></a>Varargs
 
-Si les paramètres sont adoptés par l’intermédiaire de varargs (par exemple, les arguments d’élipsis), alors le paramètre normal de passage de convention s’applique, y compris le déversement des arguments cinquième et suivant à la pile. C’est la responsabilité de l’appelant de jeter des arguments qui ont leur adresse prise. Pour les valeurs à points flottants seulement, le registre des integers et le registre des points flottants doivent contenir la valeur, au cas où le callee s’attend à la valeur dans les registres de l’intégrant.
+Si les paramètres sont passés via les varargs (par exemple, les arguments de sélection), la Convention de passage de paramètre de Registre normale s’applique, y compris le débordement des cinquième et deuxième arguments de la pile. Il incombe à l’appelé de vider les arguments dont l’adresse est prise. Pour les valeurs à virgule flottante uniquement, le registre d’entiers et le registre à virgule flottante doivent contenir la valeur, au cas où l’appelé attende la valeur dans les registres d’entiers.
 
-## <a name="unprototyped-functions"></a>Fonctions non proméotypes
+## <a name="unprototyped-functions"></a>Fonctions qui ne sont pas prototypées
 
-Pour les fonctions non entièrement prototypes, l’appelant passe des valeurs integer comme des intégrants et des valeurs de point flottant comme double précision. Pour les valeurs à points flottants seulement, le registre des integers et le registre des points flottants contiennent la valeur flottante au cas où le callee s’attend à la valeur dans les registres de l’intégrant.
+Pour les fonctions qui ne sont pas entièrement prototypées, l’appelant passe des valeurs entières en tant qu’entiers et valeurs à virgule flottante en tant que double précision. Pour les valeurs à virgule flottante uniquement, le registre d’entiers et le registre à virgule flottante contiennent la valeur float au cas où l’appelé attende la valeur dans les registres d’entiers.
 
 ```cpp
 func1();
@@ -95,13 +95,13 @@ func2() {   // RCX = 2, RDX = XMM1 = 1.0, and R8 = 7
 
 ## <a name="return-values"></a>Valeurs retournées
 
-Une valeur de retour scalaire qui peut s’adapter à 64 bits est retournée par RAX; cela comprend les types de __m64. Les types non-scalaires, y compris les flotteurs, les doubles et les vecteurs tels que [les __m128,](../cpp/m128.md) [__m128i,](../cpp/m128i.md) [__m128d](../cpp/m128d.md) sont retournés dans XMM0. L'état des bits non utilisés dans la valeur retournée dans RAX ou XMM0 est non défini.
+Une valeur de retour scalaire pouvant tenir dans 64 bits est retournée via RAX ; Cela comprend les types de __m64. Les types non scalaires, y compris les types float, double et Vector, comme [__m128](../cpp/m128.md), [__m128i](../cpp/m128i.md) [__m128d](../cpp/m128d.md) sont retournés dans XMM0. L'état des bits non utilisés dans la valeur retournée dans RAX ou XMM0 est non défini.
 
-Les types définis par l'utilisateur peuvent être retournés par valeur depuis des fonctions globales et des fonctions de membres statiques. Pour retourner un type défini par l’utilisateur par valeur dans RAX, il doit avoir une longueur de 1, 2, 4, 8, 16, 32, ou 64 bits. Il ne doit pas non plus avoir de constructeur, de destructeur ou d’opérateur d’affectation de copie défini par l’utilisateur; pas de membres privés ou protégés de données non statiques; pas de données non statiques membres de type de référence; pas de classes de base; pas de fonctions virtuelles; et aucun membre de données qui ne satisfont pas à ces exigences. (Il s'agit essentiellement de la définition d'un type POD de C++ 03. Étant donné que la définition a changé dans la norme C `std::is_pod` 11, nous ne recommandons pas d’utiliser pour ce test.) Dans le cas contraire, l’appelant assume la responsabilité d’attribuer la mémoire et de passer un pointeur pour la valeur de retour comme premier argument. Les arguments suivants sont décalés d’un argument vers la droite. Le même pointeur doit être retourné par l'appelé dans RAX.
+Les types définis par l'utilisateur peuvent être retournés par valeur depuis des fonctions globales et des fonctions de membres statiques. Pour retourner un type défini par l’utilisateur par valeur dans RAX, il doit avoir une longueur de 1, 2, 4, 8, 16, 32 ou 64 bits. Il ne doit pas non plus être un constructeur, un destructeur ou un opérateur d’assignation de copie défini par l’utilisateur ; aucune donnée membre non statique privée ou protégée ; aucun membre de données non statiques de type référence ; aucune classe de base ; aucune fonction virtuelle ; et aucun membre de données qui ne répond pas également à ces exigences. (Il s'agit essentiellement de la définition d'un type POD de C++ 03. Étant donné que la définition a changé dans la norme C++ 11, nous vous `std::is_pod` déconseillons d’utiliser pour ce test.) Dans le cas contraire, l’appelant assume la responsabilité d’allouer de la mémoire et de passer un pointeur pour la valeur de retour comme premier argument. Les arguments suivants sont décalés d’un argument vers la droite. Le même pointeur doit être retourné par l'appelé dans RAX.
 
 Ces exemples montrent comment les paramètres et les valeurs de retour sont passés pour les fonctions avec les déclarations spécifiées :
 
-### <a name="example-of-return-value-1---64-bit-result"></a>Exemple de valeur de rendement 1 - 64 bits
+### <a name="example-of-return-value-1---64-bit-result"></a>Exemple de valeur de retour 1-64 bits
 
 ```Output
 __int64 func1(int a, float b, int c, int d, int e);
@@ -109,7 +109,7 @@ __int64 func1(int a, float b, int c, int d, int e);
 // callee returns __int64 result in RAX.
 ```
 
-### <a name="example-of-return-value-2---128-bit-result"></a>Exemple de valeur de rendement 2 - 128 bits
+### <a name="example-of-return-value-2---128-bit-result"></a>Exemple de valeur de retour 2-128 bits
 
 ```Output
 __m128 func2(float a, double b, int c, __m64 d);
@@ -117,7 +117,7 @@ __m128 func2(float a, double b, int c, __m64 d);
 // callee returns __m128 result in XMM0.
 ```
 
-### <a name="example-of-return-value-3---user-type-result-by-pointer"></a>Exemple de valeur de retour 3 - résultat de type utilisateur par pointeur
+### <a name="example-of-return-value-3---user-type-result-by-pointer"></a>Exemple de valeur de retour 3-type d’utilisateur résultat par pointeur
 
 ```Output
 struct Struct1 {
@@ -129,7 +129,7 @@ Struct1 func3(int a, double b, int c, float d);
 // callee returns pointer to Struct1 result in RAX.
 ```
 
-### <a name="example-of-return-value-4---user-type-result-by-value"></a>Exemple de valeur de rendement 4 - résultat de type utilisateur par valeur
+### <a name="example-of-return-value-4---user-type-result-by-value"></a>Exemple de valeur de retour 4-résultat de type utilisateur par valeur
 
 ```Output
 struct Struct2 {
@@ -140,70 +140,70 @@ Struct2 func4(int a, double b, int c, float d);
 // callee returns Struct2 result by value in RAX.
 ```
 
-## <a name="callercallee-saved-registers"></a>Registres enregistrés de l’appelant/Callee
+## <a name="callercallee-saved-registers"></a>Registres enregistrés de l’appelant/appelé
 
-Les registres RAX, RCX, RDX, R8, R9, R10, R11, XMM0-5 et les parties supérieures de YMM0-15 et ZMM0-15 sont considérées comme volatiles et doivent être considérées comme détruites sur les appels de fonction (à moins que la sécurité autrement prouvable par des analyses telles que l’optimisation complète des programmes). Sur AVX512VL, les registres ZMM, YMM et XMM 16-31 sont volatils.
+Les registres RAX, RCX, RDX, R8, R9, R10, R11, XMM0-5 et les parties supérieures des YMM0-15 et ZMM0-15 sont considérés comme volatiles et doivent être considérés comme étant détruits sur les appels de fonction (sauf en cas de sécurité Provable par analyse, par exemple l’optimisation de l’ensemble du programme). Sur AVX512VL, les registres ZMM, YMM et XMM 16-31 sont volatiles.
 
-Les registres RBX, RBP, RDI, RSI, RSP, R12, R13, R14, R15 et XMM6-15 sont considérés comme nonvolatiles et doivent être sauvés et restaurés par une fonction qui les utilise.
+Les registres RBX, RBP, RDI, RSI, RSP, R12, R13, R14, R15 et XMM6-15 sont considérés comme non volatils et doivent être enregistrés et restaurés par une fonction qui les utilise.
 
 ## <a name="function-pointers"></a>Pointeurs fonction
 
-Les pointeurs de fonction sont simplement des pointeurs à l’étiquette de la fonction respective. Il n’y a pas de tableau des exigences de contenu (TOC) pour les pointeurs de fonction.
+Les pointeurs de fonction sont simplement des pointeurs vers l’étiquette de la fonction respective. Il n’existe aucune configuration de table des matières pour les pointeurs de fonction.
 
-## <a name="floating-point-support-for-older-code"></a>Soutien à point flottant pour un code plus ancien
+## <a name="floating-point-support-for-older-code"></a>Prise en charge de la virgule flottante pour le code plus ancien
 
-Les registres MMX et pile à points flottants (MM0-MM7/ST0-ST7) sont conservés sur les commutateurs de contexte. Il n’existe pas de convention d’appel explicite pour ces registres. L’utilisation de ces registres est strictement interdite dans le code de mode noyau.
+Les registres de pile MMX et à virgule flottante (MM0-MM7/ST0-ST7) sont conservés entre les changements de contexte. Il n’existe aucune convention d’appel explicite pour ces registres. L’utilisation de ces registres est strictement interdite dans le code en mode noyau.
 
 ## <a name="fpcsr"></a>FpCsr
 
-L’état du registre inclut également le mot de contrôle de l’UIP x87. La convention d’appel dicte que ce registre est nonvolatile.
+L’état du registre comprend également le mot de contrôle X87 FPU. La Convention d’appel impose à ce registre d’être non volatil.
 
-Le registre des mots de contrôle FPU x87 est défini selon les valeurs standard suivantes au début de l’exécution du programme :
+L’inscription du mot de contrôle X87 FPU est définie sur les valeurs standard suivantes au début de l’exécution du programme :
 
-| Enregistrez les\[bits] | Paramètre |
+| Inscrire\[les bits] | Paramètre |
 |-|-|
-| FPCSR\[0:6] | Masques d’exception tous les 1 (toutes les exceptions masquées) |
-| FPCSR\[7] | Réservé - 0 |
-| FPCSR\[8:9] | Contrôle de précision - 10B (double précision) |
-| FPCSR\[10:11] | Contrôle d’arrondissement - 0 (rond au plus proche) |
-| FPCSR\[12] | Contrôle de l’infini - 0 (non utilisé) |
+| FPCSR\[0:6] | L’exception masque tous les 1 (toutes les exceptions masquées) |
+| FPCSR\[7] | Réservé-0 |
+| FPCSR\[8:9] | Contrôle de précision-10 (précision double) |
+| FPCSR\[10:11] | Contrôle d’arrondi-0 (arrondi au plus proche) |
+| FPCSR\[12] | Contrôle infini-0 (non utilisé) |
 
-Un callee qui modifie l’un des champs au sein de la FPCSR doit les restaurer avant de retourner à son appelant. En outre, un appelant qui a modifié l’un de ces champs doit les restaurer à leurs valeurs standard avant d’invoquer un appelant à moins que, par accord, le callee s’attende aux valeurs modifiées.
+Un appelé qui modifie l’un des champs dans FPCSR doit les restaurer avant de retourner à son appelant. En outre, un appelant qui a modifié l’un de ces champs doit les restaurer dans leurs valeurs standard avant d’appeler un appelé, sauf en cas d’accord, l’appelé attend les valeurs modifiées.
 
-Il y a deux exceptions aux règles concernant la non-volatilité des indicateurs de contrôle :
+Il existe deux exceptions aux règles concernant la non-volatilité des indicateurs de contrôle :
 
-1. Dans les fonctions où le but documenté de la fonction donnée est de modifier les drapeaux FpCsr nonvolatiles.
+1. Dans les fonctions où l’objectif documenté de la fonction donnée est de modifier les indicateurs FpCsr non volatils.
 
-1. Lorsqu’il est manifestement exact que la violation de ces règles entraîne un programme qui se comporte de la même façon qu’un programme où ces règles ne sont pas violées, par exemple, par l’analyse de tout le programme.
+1. Lorsqu’il est prouvé que la violation de ces règles aboutit à un programme qui se comporte comme un programme dans lequel ces règles ne sont pas violées, par exemple, par le biais de l’analyse de l’ensemble du programme.
 
 ## <a name="mxcsr"></a>MxCsr
 
-L’état du registre comprend également MxCsr. La convention d’appel divise ce registre en une partie volatile et une partie non volatile. La partie volatile se compose des six drapeaux\[d’état, dans MXCSR 0:5], tandis que le reste du registre, MXCSR\[6:15], est considéré comme nonvolatile.
+L’état du registre comprend également MxCsr. La Convention d’appel divise ce registre en une partie volatile et une partie non volatile. La partie volatile se compose des six indicateurs d’État, en\[MxCsr 0:5], tandis que le reste du Registre\[, MXCSR 6:15], est considéré comme non volatile.
 
-La partie non volatile est fixée aux valeurs standard suivantes au début de l’exécution du programme :
+La partie non volatile est définie sur les valeurs standard suivantes au début de l’exécution du programme :
 
-| Enregistrez les\[bits] | Paramètre |
+| Inscrire\[les bits] | Paramètre |
 |-|-|
-| MXCSR\[6] | Les dénormes sont des zéros - 0 |
-| MXCSR\[07:12] | Masques d’exception tous les 1 (toutes les exceptions masquées) |
-| MXCSR\[13:14] | Contrôle d’arrondissement - 0 (rond au plus proche) |
-| MXCSR\[15] | Flush à zéro pour le underflow masqué - 0 (off) |
+| MXCSR\[6] | Les dénormals sont des zéros-0 |
+| MXCSR\[7:12] | L’exception masque tous les 1 (toutes les exceptions masquées) |
+| MXCSR\[13:14] | Contrôle d’arrondi-0 (arrondi au plus proche) |
+| MXCSR\[15] | Vidage sur zéro pour un dépassement de capacité négatif masqué-0 (désactivé) |
 
-Un callee qui modifie l’un des champs nonvolatiles dans MXCSR doit les restaurer avant de retourner à son appelant. En outre, un appelant qui a modifié l’un de ces champs doit les restaurer à leurs valeurs standard avant d’invoquer un appelant à moins que, par accord, le callee s’attende aux valeurs modifiées.
+Un appelé qui modifie l’un des champs non volatils dans MXCSR doit les restaurer avant de retourner à son appelant. En outre, un appelant qui a modifié l’un de ces champs doit les restaurer dans leurs valeurs standard avant d’appeler un appelé, sauf en cas d’accord, l’appelé attend les valeurs modifiées.
 
-Il y a deux exceptions aux règles concernant la non-volatilité des indicateurs de contrôle :
+Il existe deux exceptions aux règles concernant la non-volatilité des indicateurs de contrôle :
 
-- Dans les fonctions où le but documenté de la fonction donnée est de modifier les drapeaux MxCsr nonvolatiles.
+- Dans les fonctions où l’objectif documenté de la fonction donnée est de modifier les indicateurs MxCsr non volatils.
 
-- Lorsqu’il est manifestement exact que la violation de ces règles entraîne un programme qui se comporte de la même façon qu’un programme où ces règles ne sont pas violées, par exemple, par l’analyse de tout le programme.
+- Lorsqu’il est prouvé que la violation de ces règles aboutit à un programme qui se comporte comme un programme dans lequel ces règles ne sont pas violées, par exemple, par le biais de l’analyse de l’ensemble du programme.
 
-Aucune hypothèse ne peut être faite au sujet de l’état de la partie volatile de MXCSR à travers une limite de fonction, à moins d’être décrite spécifiquement dans la documentation d’une fonction.
+Aucune hypothèse ne peut être faite sur l’état de la partie volatile de MXCSR à travers une limite de fonction, sauf si elle est spécifiquement décrite dans la documentation d’une fonction.
 
 ## <a name="setjmplongjmp"></a>setjmp/longjmp
 
-Lorsque vous incluez setjmpex.h ou setjmp.h, tous les appels à [setjmp](../c-runtime-library/reference/setjmp.md) ou [longjmp](../c-runtime-library/reference/longjmp.md) aboutissent à un dénouement qui invoque destructeurs et `__finally` des appels.  Cela diffère de x86, où l’inclusion `__finally` de setjmp.h entraîne l’invoquation de clauses et de destructeurs.
+Quand vous incluez setjmpex. h ou setjmp. h, tous les appels à [setjmp](../c-runtime-library/reference/setjmp.md) ou [longjmp](../c-runtime-library/reference/longjmp.md) entraînent un déroulement qui appelle des destructeurs et des `__finally` appels.  Cela diffère de x86, où l’inclusion de setjmp. h `__finally` génère des clauses et des destructeurs qui ne sont pas appelés.
 
-Un appel `setjmp` pour préserver le pointeur de pile actuel, les registres non volatils et les registres MxCsr.  Appels `longjmp` à revenir au `setjmp` site d’appel le plus récent et réinitialise le pointeur de pile, les registres `setjmp` non volatils, et les registres MxCsr, de retour à l’état comme conservé par l’appel le plus récent.
+Un appel à `setjmp` conserve le pointeur de pile actuel, les registres non volatiles et les registres MxCsr.  Appelle pour `longjmp` revenir au site d’appel `setjmp` le plus récent et réinitialise le pointeur de pile, les registres non volatiles et les registres MxCsr à l’État comme conservé par l’appel le plus récent `setjmp` .
 
 ## <a name="see-also"></a>Voir aussi
 

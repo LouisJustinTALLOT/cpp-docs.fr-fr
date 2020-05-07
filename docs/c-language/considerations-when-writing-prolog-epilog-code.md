@@ -16,11 +16,11 @@ ms.locfileid: "81334582"
 ---
 # <a name="considerations-when-writing-prologepilog-code"></a>Considérations relatives à l'écriture du code de prologue/épilogue
 
-**Microsoft Spécifique**
+**Spécifique à Microsoft**
 
-Avant d’écrire vos propres séquences de code prolog et épilog, il est important de comprendre comment le cadre de pile est disposé. Il est également utile de savoir comment utiliser la constante prédéfinie **__LOCAL_SIZE.**
+Avant d’écrire vos propres séquences de code de prologue et d’épilogue, il est important de comprendre comment le frame de pile est disposé. Il est également utile de savoir comment utiliser la constante prédéfinie **__LOCAL_SIZE** .
 
-## <a name="cstack-frame-layout"></a><a name="_clang_c_stack_frame_layout"></a>Mise en page du cadre CStack
+## <a name="cstack-frame-layout"></a><a name="_clang_c_stack_frame_layout"></a>Disposition du frame CStack
 
 Cet exemple montre le code de prologue standard qui peut apparaître dans une fonction 32 bits :
 
@@ -79,8 +79,8 @@ __declspec ( naked ) func()
 }
 ```
 
-**END Microsoft Spécifique**
+**FIN spécifique à Microsoft**
 
 ## <a name="see-also"></a>Voir aussi
 
-[Fonctions nues](../c-language/naked-functions.md)
+[Fonctions Naked](../c-language/naked-functions.md)

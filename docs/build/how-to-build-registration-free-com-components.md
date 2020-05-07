@@ -1,5 +1,5 @@
 ---
-title: 'Procédure : Générer des composants COM sans inscription'
+title: 'Comment : générer des composants COM sans inscription'
 ms.date: 11/04/2016
 helpviewer_keywords:
 - COM components, registration-free
@@ -11,17 +11,17 @@ ms.contentlocale: fr-FR
 ms.lasthandoff: 04/23/2019
 ms.locfileid: "62188936"
 ---
-# <a name="how-to-build-registration-free-com-components"></a>Procédure : Générer des composants COM sans inscription
+# <a name="how-to-build-registration-free-com-components"></a>Comment : générer des composants COM sans inscription
 
-Les composants COM sans inscription sont des composants COM qui ont des manifestes générés dans les DLL.
+Les composants COM sans inscription sont des composants COM qui ont des manifestes intégrés aux dll.
 
-### <a name="to-build-manifests-into-com-components"></a>Pour générer des manifestes dans les composants COM
+### <a name="to-build-manifests-into-com-components"></a>Pour générer des manifestes dans des composants COM
 
-1. Ouvrez les pages de propriétés de projet pour le composant COM.
+1. Ouvrez les pages de propriétés du projet pour le composant COM.
 
-1. Développez le **propriétés de Configuration** nœud, puis développez le **outil manifeste** nœud.
+1. Développez le nœud **Propriétés de configuration** , puis développez le nœud **outil manifeste** .
 
-1. Sélectionnez le **d’entrée et sortie** page de propriétés, puis définissez le **incorporer le manifeste** propriété égale à **Oui**.
+1. Sélectionnez la page de propriétés **entrée et sortie** , puis affectez à la propriété **incorporer le manifeste** la valeur **Oui**.
 
 1. Cliquez sur **OK**.
 
@@ -29,4 +29,4 @@ Les composants COM sans inscription sont des composants COM qui ont des manifest
 
 ## <a name="see-also"></a>Voir aussi
 
-[Guide pratique pour générer des applications isolées afin de consommer des composants COM](how-to-build-isolated-applications-to-consume-com-components.md)
+[Guide pratique pour générer des applications isolées pour consommer des composants COM](how-to-build-isolated-applications-to-consume-com-components.md)

@@ -11,7 +11,7 @@ ms.locfileid: "70740097"
 ---
 # <a name="character-testing"></a>Test de caractère
 
-**ANSI 4.3.1** Les jeux de caractères testés par les fonctions `isalnum`, `isalpha`, `iscntrl`, `islower`, `isprint` et `isupper`
+**ANSI 4.3.1** Jeux de caractères testés par `isalnum`les fonctions, `isalpha`, `iscntrl`, `islower`, `isprint`et `isupper`
 
 La liste suivante décrit ces fonctions telles qu'elles sont implémentées par le compilateur Microsoft C.
 
@@ -26,4 +26,4 @@ La liste suivante décrit ces fonctions telles qu'elles sont implémentées par 
 
 ## <a name="see-also"></a>Voir aussi
 
-[Fonctions des bibliothèques](../c-language/library-functions.md)
+[Fonctions de la bibliothèque](../c-language/library-functions.md)

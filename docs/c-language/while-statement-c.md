@@ -8,11 +8,11 @@ helpviewer_keywords:
 - while keyword [C], syntax
 ms.assetid: d0c970b8-12a9-4827-afb2-a051111834b7
 ms.openlocfilehash: 4a789f248702f33342a19f95710a8ae313da1d94
-ms.sourcegitcommit: f4be868c0d1d78e550fba105d4d3c993743a1f4b
-ms.translationtype: HT
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56151895"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62344731"
 ---
 # <a name="while-statement-c"></a>while, instruction (C)
 
@@ -21,7 +21,7 @@ L'instruction `while` vous permet de répéter une instruction jusqu'à ce qu'un
 ## <a name="syntax"></a>Syntaxe
 
 *itération-instruction* :<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**while (**  *expression*  **)**  *statement*
+&nbsp;&nbsp;&nbsp;&nbsp;*instruction* **while (***expression***)**      
 
 L'élément *expression* doit être de type arithmétique ou pointeur. L'exécution se déroule comme suit :
 
@@ -31,7 +31,7 @@ L'élément *expression* doit être de type arithmétique ou pointeur. L'exécut
 
    Si l'élément *expression* est true (différent de zéro), le corps de l'instruction est exécuté et le processus est répété à partir de l'étape 1.
 
-L'instruction `while` peut également se terminer lorsqu'une instruction **break**, `goto` ou `return` est exécutée dans le corps de l'instruction. Utilisez l'instruction **continue** pour terminer une itération sans quitter la boucle de `while`. L'instruction **continue** passe le contrôle à l'itération suivante de l'instruction `while`.
+L' `while` instruction peut également se terminer lorsqu' **break**une instruction `goto`Break, `return` ou dans le corps de l’instruction est exécutée. Utilisez l'instruction **continue** pour terminer une itération sans quitter la boucle de `while`. L'instruction **continue** passe le contrôle à l'itération suivante de l'instruction `while`.
 
 Voici un exemple d'instruction `while` :
 

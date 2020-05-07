@@ -1,5 +1,5 @@
 ---
-title: Comment modifier les propriétés et les objectifs du projet CMD sans modifier le dossier du projet
+title: 'Comment : modifier les propriétés et les cibles de projet C++ sans modifier le fichier projet'
 ms.date: 11/28/2018
 helpviewer_keywords:
 - project properties [C++], modifying outside project file
@@ -10,9 +10,9 @@ ms.contentlocale: fr-FR
 ms.lasthandoff: 04/14/2020
 ms.locfileid: "81328464"
 ---
-# <a name="how-to-modify-c-project-properties-and-targets-without-changing-the-project-file"></a>Comment modifier les propriétés et les objectifs du projet CMD sans modifier le dossier du projet
+# <a name="how-to-modify-c-project-properties-and-targets-without-changing-the-project-file"></a>Comment : modifier les propriétés et les cibles de projet C++ sans modifier le fichier projet
 
-Vous pouvez remplacer les propriétés et les cibles de projet à partir de l’invite de commandes MSBuild sans changer le fichier projet. Cela est utile quand vous voulez appliquer certaines propriétés temporairement ou occasionnellement. Vous devez être familiarisé avec MSBuild. Pour plus d’informations, voir [MSBUild](https://docs.microsoft.com/visualstudio/msbuild/msbuild).
+Vous pouvez remplacer les propriétés et les cibles de projet à partir de l’invite de commandes MSBuild sans changer le fichier projet. Cela est utile quand vous voulez appliquer certaines propriétés temporairement ou occasionnellement. Vous devez être familiarisé avec MSBuild. Pour plus d’informations, consultez [MSBUild](https://docs.microsoft.com/visualstudio/msbuild/msbuild).
 
 > [!IMPORTANT]
 > Vous pouvez utiliser l’éditeur XML dans Visual Studio, ou n’importe quel éditeur de texte, pour créer le fichier .props ou .targets. N’utilisez pas le **Gestionnaire de propriétés** dans ce scénario, car il ajoute les propriétés au fichier projet.

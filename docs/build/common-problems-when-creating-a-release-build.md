@@ -26,41 +26,41 @@ ms.locfileid: "81328867"
 ---
 # <a name="common-problems-when-creating-a-release-build"></a>Problèmes courants lors de la création d’une version release
 
-Pendant le développement, vous construireez et testerez habituellement avec une construction de débbug de votre projet. Si vous construisez ensuite votre demande de version, vous pouvez obtenir une violation d’accès.
+Pendant le développement, vous créez et testez généralement avec une version Debug de votre projet. Si vous générez ensuite votre application pour une version Release, vous risquez d’obtenir une violation d’accès.
 
-La liste ci-dessous montre les principales différences entre un débbug et une version (nondebug) construire. Il ya d’autres différences, mais suivants sont les principales différences qui causerait une application à l’échec dans une version de construction quand il fonctionne dans une construction de débogé.
+La liste ci-dessous montre les principales différences entre une version Debug et une version Release (qui n’est pas déboguée). Il existe d’autres différences, mais voici les principales différences qui provoqueraient l’échec d’une application dans une version Release lorsqu’elle fonctionne dans une version Debug.
 
-- [Mise en page du tas](#_core_heap_layout)
+- [Disposition du tas](#_core_heap_layout)
 
 - [Compilation](#_core_compilation)
 
-- [Soutien pointeur](#_core_pointer_support)
+- [Prise en charge du pointeur](#_core_pointer_support)
 
 - [Optimisations](#_core_optimizations)
 
-Voir l’option [compilateur /GZ (Catch Release-Build Errors in Debug Build)](reference/gz-enable-stack-frame-run-time-error-checking.md) pour obtenir des informations sur la façon de capter les erreurs de construction de version dans les constructions de déboges.
+Pour plus d’informations sur la façon d’intercepter les erreurs de build de version dans les versions de débogage, consultez l’option de compilateur [/gz (intercepter les erreurs de build dans la version de débogage)](reference/gz-enable-stack-frame-run-time-error-checking.md) .
 
-## <a name="heap-layout"></a><a name="_core_heap_layout"></a>Mise en page du tas
+## <a name="heap-layout"></a><a name="_core_heap_layout"></a>Disposition du tas
 
-La disposition du tas sera la cause d’environ quatre-vingt-dix pour cent des problèmes apparents quand une application fonctionne dans le débbug, mais pas la libération.
+La disposition du tas sera la cause d’environ 90% des problèmes apparentés lorsqu’une application fonctionne dans Debug, mais pas dans la version Release.
 
-Lorsque vous construisez votre projet de débog, vous utilisez l’alloueur de mémoire de débogé. Cela signifie que toutes les allocations de mémoire ont des octets de garde placés autour d’eux. Ces octets de garde détectent un surmortrite de mémoire. Parce que la disposition du tas est différente entre les versions de libération et de débog, un surmortrite de mémoire pourrait ne pas créer de problèmes dans une construction de débbug, mais peut avoir des effets catastrophiques dans une version.
+Quand vous générez votre projet pour le débogage, vous utilisez l’allocateur de mémoire de débogage. Cela signifie que toutes les allocations de mémoire sont placées autour des octets de garde. Ces octets de protection détectent un remplacement de mémoire. Étant donné que la disposition du tas diffère entre les versions release et Debug, un remplacement de mémoire peut ne pas créer de problèmes dans une version Debug, mais peut avoir des effets catastrophiques dans une version Release.
 
-Pour plus d’informations, voir [Check for Memory Overwrite](checking-for-memory-overwrites.md) et [Utilisez la construction Debug pour vérifier pour le sursoil de la mémoire](using-the-debug-build-to-check-for-memory-overwrite.md).
+Pour plus d’informations, consultez [vérifier le remplacement de mémoire](checking-for-memory-overwrites.md) et [Utilisez la version Debug pour vérifier le remplacement de mémoire](using-the-debug-build-to-check-for-memory-overwrite.md).
 
-## <a name="compilation"></a><a name="_core_compilation"></a>Compilation
+## <a name="compilation"></a><a name="_core_compilation"></a>Élaboration
 
-Bon nombre des macros MFC et une grande partie des modifications de mise en œuvre de MFC lorsque vous construisez pour la libération. En particulier, la macro ASSERT n’évalue à rien dans une version, de sorte qu’aucun code trouvé dans ASSERTs ne sera exécuté. Pour plus d’informations, voir [Examinez les déclarations ASSERT](using-verify-instead-of-assert.md).
+La plupart des macros MFC et la majeure partie de l’implémentation de MFC changent lorsque vous générez pour la version finale. En particulier, la macro Assert prend la valeur Nothing dans une version Release, donc aucun code trouvé dans assertions ne sera exécuté. Pour plus d’informations, consultez [examiner les instructions Assert](using-verify-instead-of-assert.md).
 
-Certaines fonctions sont inlined pour la vitesse accrue dans la construction de version. Les optimisations sont généralement activées dans une version. Un alloueur de mémoire différent est également utilisé.
+Certaines fonctions sont Inline pour une vitesse accrue dans la version Release. Les optimisations sont généralement activées dans une version Release. Un allocateur de mémoire différent est également utilisé.
 
-## <a name="pointer-support"></a><a name="_core_pointer_support"></a>Soutien pointeur
+## <a name="pointer-support"></a><a name="_core_pointer_support"></a>Prise en charge du pointeur
 
-Le manque d’informations de débogage supprime le rembourrage de votre application. Dans une version de construction, pointeurs errants ont une plus grande chance de pointer vers la mémoire uninitialisée au lieu de pointer vers l’information de déboiffée.
+L’absence d’informations de débogage supprime le remplissage de votre application. Dans une version Release, les pointeurs isolés ont une plus grande chance de pointer vers une mémoire non initialisée au lieu de pointer vers les informations de débogage.
 
 ## <a name="optimizations"></a><a name="_core_optimizations"></a>Optimisations
 
-Selon la nature de certains segments de code, le compilateur d’optimisation peut générer du code inattendu. C’est la cause la moins probable de problèmes de construction de libération, mais il ne se pose à l’occasion. Pour une solution, voir [Optimiser votre code](optimizing-your-code.md).
+Selon la nature de certains segments de code, le compilateur d’optimisation peut générer du code inattendu. Il s’agit de la cause la moins probable des problèmes de génération de version, mais cela se produit à l’occasion. Pour obtenir une solution, consultez [optimisation de votre code](optimizing-your-code.md).
 
 ## <a name="see-also"></a>Voir aussi
 

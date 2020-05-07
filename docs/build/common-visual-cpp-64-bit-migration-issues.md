@@ -20,11 +20,11 @@ ms.locfileid: "69493311"
 ---
 # <a name="common-visual-c-64-bit-migration-issues"></a>Problèmes courants de migration vers Visual C++ 64 bits
 
-Lorsque vous utilisez le compilateur C++ Microsoft (MSVC) pour créer des applications qui s’exécutent sur un système d’exploitation Windows 64 bits, vous devez être conscient des problèmes suivants:
+Lorsque vous utilisez le compilateur Microsoft C++ (MSVC) pour créer des applications qui s’exécutent sur un système d’exploitation Windows 64 bits, vous devez être conscient des problèmes suivants :
 
 - `int` et `long` sont des valeurs 32 bits sur les systèmes d'exploitation Windows 64 bits. Pour les programmes que vous prévoyez de compiler pour des plateformes 64 bits, veillez à ne pas assigner de pointeurs à des variables 32 bits. Les pointeurs sont des valeurs 64 bits sur les plateformes 64 bits et vous tronquerez la valeur d'un pointeur si vous l'assignez à une variable 32 bits.
 
-- `size_t`, `time_t` et`ptrdiff_t` sont des valeurs 64 bits sur les systèmes d’exploitation Windows 64 bits.
+- `size_t`, `time_t`et `ptrdiff_t` sont des valeurs 64 bits sur les systèmes d’exploitation Windows 64 bits.
 
 - `time_t`est une valeur 32 bits sur les systèmes d’exploitation Windows 32 bits dans Visual Studio 2005 et versions antérieures. `time_t` est maintenant un entier 64 bits par défaut. Pour plus d’informations, consultez [gestion du temps](../c-runtime-library/time-management.md).
 
@@ -38,7 +38,7 @@ Le modificateur %x (format `int` hexadécimal) `printf` ne fonctionne pas comme 
 
 - Le %p (format hexadécimal pour un pointeur) fonctionnera comme prévu sur un système d'exploitation Windows 64 bits.
 
-Pour plus d'informations, voir :
+Pour plus d'informations, consultez les pages suivantes :
 
 - [Options du compilateur MSVC](reference/compiler-options.md)
 

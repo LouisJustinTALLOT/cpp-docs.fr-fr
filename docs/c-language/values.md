@@ -17,8 +17,8 @@ Le type **float** contient 32 bits : 1 pour le signe, 8 pour l’exposant et 2
 
 Le type **double** contient 64 bits : 1 pour le signe, 11 pour l’exposant et 52 pour la mantisse. Sa plage est +/- 1.7E308 avec au moins 15 chiffres de précision.
 
-Le **long double** type est distinct, mais a la même représentation que le type **double** dans le compilateur Microsoft C.
+Le type **long double** est distinct, mais a la même représentation que le type **double** dans le compilateur Microsoft C.
 
 ## <a name="see-also"></a>Voir aussi
 
-[Mathématiques à point flottant](../c-language/floating-point-math.md)
+[Mathématiques à virgule flottante](../c-language/floating-point-math.md)

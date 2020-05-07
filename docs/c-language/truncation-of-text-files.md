@@ -6,11 +6,11 @@ helpviewer_keywords:
 - text files, truncation
 ms.assetid: 238307b3-c580-4280-ac6f-51345a2365bc
 ms.openlocfilehash: ab7cecc2f784c9a8968d6a4103ec9323aa913046
-ms.sourcegitcommit: f4be868c0d1d78e550fba105d4d3c993743a1f4b
-ms.translationtype: HT
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56147371"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62344926"
 ---
 # <a name="truncation-of-text-files"></a>Troncation des fichiers texte
 
@@ -20,4 +20,4 @@ L'écriture dans un flux de texte ne tronque pas le fichier au delà de ce point
 
 ## <a name="see-also"></a>Voir aussi
 
-[Fonctions des bibliothèques](../c-language/library-functions.md)
+[Fonctions de la bibliothèque](../c-language/library-functions.md)

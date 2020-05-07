@@ -15,7 +15,7 @@ ms.locfileid: "81323015"
 
 ::: moniker range="vs-2015"
 
-Les projets CMake sont soutenus dans Visual Studio 2017 et plus tard.
+Les projets CMake sont pris en charge dans Visual Studio 2017 et versions ultérieures.
 
 ::: moniker-end
 
@@ -34,7 +34,7 @@ Dans un projet CMake, les configurations de build sont stockées dans un fichier
 - MinGW Debug
 - MinGW Release
 
-Lorsque vous choisissez une configuration, elle est ajoutée au fichier *CMakeSettings.json* dans le dossier racine du projet. Vous pouvez ensuite l’utiliser pour générer votre projet. Pour plus d’informations sur les propriétés de configuration, voir [référence CMakeSettings](cmakesettings-reference.md).
+Lorsque vous choisissez une configuration, elle est ajoutée au fichier *CMakeSettings. JSON* dans le dossier racine du projet. Vous pouvez ensuite l’utiliser pour générer votre projet. Pour plus d’informations sur les propriétés de configuration, consultez [référence CMakeSettings](cmakesettings-reference.md).
 
 ## <a name="linux-predefined-build-configurations"></a>Configurations de build Linux prédéfinies :
 
@@ -359,25 +359,25 @@ Ces options vous permettent d’exécuter des commandes sur le système distant 
 Dans un projet CMake, les configurations de build sont stockées dans un fichier CMakeSettings.json. Quand vous choisissez **Gérer les configurations** dans la liste déroulante de la configuration de build dans la barre d’outils principale, une boîte de dialogue présente les configurations CMake par défaut disponibles dans Visual Studio :
 
 - x86 Debug
-- x86 Clang Debug
+- débogage Clang x86
 - x86 Release
-- x86 Clang Libération
+- Version x86 de Clang
 - x64 Debug
-- x64 Clang Debug
+- débogage Clang x64
 - x64 Release
-- x64 Clang Libération
+- Version x64 de Clang
 - Linux-Debug
 - Linux-Release
 - Linux-Clang-Debug
-- Linux-Clang-Libération
-- Cache existant (à distance)
+- Linux-Clang-version
+- Cache existant (distant)
 - Cache existant
 - MinGW Debug
 - MinGW Release
-- WSL Debug
-- Sortie WSL
-- WSL Clang Debug
-- WSL Clang Libération
+- Débogage WSL
+- Version de WSL
+- Débogage WSL Clang
+- Version Clang de WSL
 - Clang
 
 Quand vous choisissez une configuration, celle-ci est ajoutée au fichier CMakeSettings.json dans le dossier racine du projet. Vous pouvez ensuite l’utiliser pour générer votre projet.

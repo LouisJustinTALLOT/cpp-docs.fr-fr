@@ -1,5 +1,5 @@
 ---
-title: Configurer C++ des projets pour des cibles x64 64 bits
+title: Configurer des projets C++ pour des cibles x64 64 bits
 ms.date: 11/04/2016
 helpviewer_keywords:
 - 64-bit compiler [C++], options
@@ -14,35 +14,35 @@ ms.contentlocale: fr-FR
 ms.lasthandoff: 08/15/2019
 ms.locfileid: "69493293"
 ---
-# <a name="configure-c-projects-for-64-bit-x64-targets"></a>Configurer C++ des projets pour des cibles x64 64 bits
+# <a name="configure-c-projects-for-64-bit-x64-targets"></a>Configurer des projets C++ pour des cibles x64 64 bits
 
-Cette section contient des rubriques sur le ciblage de matériel x64 64 bits avec C++ les outils de génération visuelle.
+Cette section contient des rubriques sur le ciblage de matériel x64 64 bits avec les outils de génération Visual C++.
 
 ## <a name="in-this-section"></a>Dans cette section
 
-- [Guide pratique : configurer des projets Visual C++ pour cibler des plateformes x64 64 bits](how-to-configure-visual-cpp-projects-to-target-64-bit-platforms.md)
+- [Guide pratique pour configurer des projets Visual C++ pour cibler des plateformes x64 64 bits](how-to-configure-visual-cpp-projects-to-target-64-bit-platforms.md)
 
-- [Guide pratique : Activer un ensemble d’outils MSVC hébergé x64 64 bits sur la ligne de commande](how-to-enable-a-64-bit-visual-cpp-toolset-on-the-command-line.md)
+- [Comment : activer un ensemble d’outils MSVC hébergés sur x64, 64 bits sur la ligne de commande](how-to-enable-a-64-bit-visual-cpp-toolset-on-the-command-line.md)
 
 - [Problèmes courants de migration vers Visual C++ 64 bits](common-visual-cpp-64-bit-migration-issues.md)
 
 - [Conventions des logiciels x64](x64-software-conventions.md)
 
-## <a name="related-sections"></a>Rubriques connexes
+## <a name="related-sections"></a>Sections connexes
 
 [.NET Framework des applications 64 bits](/dotnet/framework/64-bit-apps)
 
-[align](../cpp/align-cpp.md)
+[droite](../cpp/align-cpp.md)
 
 [/clr (Compilation pour le Common Language Runtime)](reference/clr-common-language-runtime-compilation.md)
 
 [/favor (Optimisation pour les particularités d’architecture)](reference/favor-optimize-for-architecture-specifics.md)
 
-[Guide de programmation pour Windows 64 bits](/windows/win32/WinProg64/programming-guide-for-64-bit-windows)
+[Guide de programmation pour Windows 64 bits](/windows/win32/WinProg64/programming-guide-for-64-bit-windows)
 
 [MASM pour x64 (ml64.exe)](../assembler/masm/masm-for-x64-ml64-exe.md)
 
-[x64 (amd64), liste de fonctions intrinsèques](../intrinsics/x64-amd64-intrinsics-list.md)
+[Liste d'intrinsèques x64 (amd64)](../intrinsics/x64-amd64-intrinsics-list.md)
 
 ## <a name="see-also"></a>Voir aussi
 

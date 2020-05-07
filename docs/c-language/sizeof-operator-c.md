@@ -7,11 +7,11 @@ helpviewer_keywords:
 - sizeof operator
 ms.assetid: 70826d03-3451-41e4-bebb-a820ae66d53f
 ms.openlocfilehash: 0bc0de5481cade10f89634d9e4ec78f4ec7b09f6
-ms.sourcegitcommit: f4be868c0d1d78e550fba105d4d3c993743a1f4b
-ms.translationtype: HT
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56149555"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62158123"
 ---
 # <a name="sizeof-operator-c"></a>sizeof, opérateur (C)
 
@@ -24,7 +24,7 @@ sizeof unary-expression
 sizeof ( type-name )
 ```
 
-## <a name="remarks"></a>Remarques
+## <a name="remarks"></a>Notes
 
 L’opérande est un identificateur qui est une *expression unaire* ou une expression de cast de type (c’est-à-dire, un spécificateur de type entre parenthèses). L’*expression unaire* ne peut pas représenter un objet de champ de bits, un type incomplet ou un indicateur de fonction. Le résultat est une constante intégrale non signée. L’en-tête standard STDDEF.H définit ce type comme **size_t**.
 
@@ -49,7 +49,7 @@ static char *strings[] = {
 const int string_no = ( sizeof strings ) / ( sizeof strings[0] );
 ```
 
-Dans cet exemple, `strings` est un tableau de pointeurs vers `char`. Le nombre de pointeurs est le nombre d'éléments du tableau, mais n'est pas spécifié. Il est facile de déterminer le nombre de pointeurs à l'aide de l'opérateur `sizeof` pour calculer le nombre d'éléments du tableau. La valeur entière **const** `string_no` est initialisée à ce nombre. Comme il s’agit d’une valeur **const**, `string_no` ne peut pas être modifié.
+Dans cet exemple, `strings` est un tableau de pointeurs vers `char`. Le nombre de pointeurs est le nombre d'éléments du tableau, mais n'est pas spécifié. Il est facile de déterminer le nombre de pointeurs à l'aide de l'opérateur `sizeof` pour calculer le nombre d'éléments du tableau. La valeur entière **const**`string_no` est initialisée à ce nombre. Comme il s’agit d’une valeur **const**, `string_no` ne peut pas être modifié.
 
 ## <a name="see-also"></a>Voir aussi
 

@@ -31,9 +31,9 @@ Pour créer une DLL de ressource uniquement, vous devez créer un nouveau projet
 
 1. Créez un script de ressources qui contient les ressources de la DLL (comme une chaîne ou un menu). Enregistrez le fichier `.rc`.
 
-1. Dans le menu **projet** , sélectionnez **Ajouter un élément existant**, puis insérez le nouveau fichier de `.rc` dans le projet.
+1. Dans le menu **projet** , sélectionnez **Ajouter un élément existant**, puis insérez le nouveau `.rc` fichier dans le projet.
 
-1. Spécifiez l’option [/noentry](reference/noentry-no-entry-point.md) de l’éditeur de liens. `/NOENTRY` empêche l’éditeur de liens de lier une référence à `_main` dans la DLL ; Cette option est requise pour créer une DLL de ressources uniquement.
+1. Spécifiez l’option [/noentry](reference/noentry-no-entry-point.md) de l’éditeur de liens. `/NOENTRY`empêche l’éditeur de liens de lier une référence `_main` à dans la dll ; Cette option est requise pour créer une DLL de ressources uniquement.
 
 1. Créez la DLL.
 
@@ -46,9 +46,9 @@ Pour créer une DLL de ressource uniquement, vous devez créer un nouveau projet
 
 1. Créez un script de ressources qui contient les ressources de la DLL (comme une chaîne ou un menu). Enregistrez le fichier `.rc`.
 
-1. Dans le menu **projet** , sélectionnez **Ajouter un élément existant**, puis insérez le nouveau fichier de `.rc` dans le projet.
+1. Dans le menu **projet** , sélectionnez **Ajouter un élément existant**, puis insérez le nouveau `.rc` fichier dans le projet.
 
-1. Spécifiez l’option [/noentry](reference/noentry-no-entry-point.md) de l’éditeur de liens. `/NOENTRY` empêche l’éditeur de liens de lier une référence à `_main` dans la DLL ; Cette option est requise pour créer une DLL de ressources uniquement.
+1. Spécifiez l’option [/noentry](reference/noentry-no-entry-point.md) de l’éditeur de liens. `/NOENTRY`empêche l’éditeur de liens de lier une référence `_main` à dans la dll ; Cette option est requise pour créer une DLL de ressources uniquement.
 
 1. Créez la DLL.
 
@@ -56,7 +56,7 @@ Pour créer une DLL de ressource uniquement, vous devez créer un nouveau projet
 
 ## <a name="use-a-resource-only-dll"></a>Utiliser une DLL de ressource uniquement
 
-L’application qui utilise la DLL de ressource uniquement doit appeler [LoadLibraryEx](loadlibrary-and-afxloadlibrary.md) ou une fonction associée pour établir une liaison explicite à la dll. Pour accéder aux ressources, appelez les fonctions génériques `FindResource` et `LoadResource`, qui fonctionnent sur n’importe quel type de ressource. Ou appelez l’une des fonctions spécifiques aux ressources suivantes :
+L’application qui utilise la DLL de ressource uniquement doit appeler [LoadLibraryEx](loadlibrary-and-afxloadlibrary.md) ou une fonction associée pour établir une liaison explicite à la dll. Pour accéder aux ressources, appelez les fonctions `FindResource` génériques et `LoadResource`, qui fonctionnent sur n’importe quel type de ressource. Ou appelez l’une des fonctions spécifiques aux ressources suivantes :
 
 - `FormatMessage`
 

@@ -38,13 +38,13 @@ strcpy_s( buf, sizeOfBuffer, "Hello, World" );
 free( buf );
 ```
 
-Ce code s’exécute parfaitement dans une version de débogage d’une application MFC. Si l’appel à `calloc( )` échoue, un message de diagnostic incluant le numéro de fichier et de ligne s’affiche. Toutefois, dans une version commerciale d’une application MFC :
+Ce code s’exécute parfaitement dans une version de débogage d’une application MFC. Si l’appel à `calloc( )` échoue, un message de diagnostic qui comprend le fichier et le numéro de ligne s’affiche. Toutefois, dans une version commerciale d’une application MFC :
 
-- l’appel à `calloc( )` ne se produit jamais, laissant `buf` non initialisé ou
+- l’appel à `calloc( )` ne se produit jamais `buf` , en laissant non initialisé ou
 
-- `strcpy_s( )` copie «`Hello, World`» dans une mémoire aléatoire, en bloquant éventuellement l’application ou en provoquant le blocage du système, ou
+- `strcpy_s( )`copie «`Hello, World`» dans une mémoire aléatoire, peut-être en cas de panne de l’application ou de blocage du système, ou
 
-- `free()` tente de libérer de la mémoire qui n’a jamais été allouée.
+- `free()`tente de libérer de la mémoire qui n’a jamais été allouée.
 
 Pour utiliser l’instruction Assert correctement, l’exemple de code doit être remplacé par ce qui suit :
 
@@ -73,4 +73,4 @@ free( buf );
 
 ## <a name="see-also"></a>Voir aussi
 
-[Résolution de problèmes liés à la version Release](fixing-release-build-problems.md)
+[Résolution de problèmes liés à la version release](fixing-release-build-problems.md)

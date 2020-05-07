@@ -6,11 +6,11 @@ helpviewer_keywords:
 - Visual C, functions
 ms.assetid: 31839f65-49f4-43e1-85ec-8769924ffa96
 ms.openlocfilehash: 50b03b6eb155b9f64803faccd65bce156455bc41
-ms.sourcegitcommit: f4be868c0d1d78e550fba105d4d3c993743a1f4b
-ms.translationtype: HT
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56148151"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62233127"
 ---
 # <a name="functions-c"></a>Fonctions (C)
 
@@ -18,7 +18,7 @@ La fonction est l'unité modulaire fondamentale en langage C. Une fonction est 
 
 - [Vue d’ensemble des fonctions](../c-language/overview-of-functions.md)
 
-- [Attributs de fonctions](../c-language/function-attributes.md)
+- [Attributs de fonction](../c-language/function-attributes.md)
 
 - [Spécifications des conventions d’appel](../c-language/specifying-calling-conventions.md)
 
@@ -26,7 +26,7 @@ La fonction est l'unité modulaire fondamentale en langage C. Une fonction est 
 
 - [Fonctions d'importation et d'exportation de DLL](../c-language/dll-import-and-export-functions.md)
 
-- [Fonctions naked](../c-language/naked-functions.md)
+- [Naked, fonctions](../c-language/naked-functions.md)
 
 - [Classe de stockage](../c-language/storage-class.md)
 
@@ -34,8 +34,8 @@ La fonction est l'unité modulaire fondamentale en langage C. Une fonction est 
 
 - [Arguments](../c-language/arguments.md)
 
-- [Paramètres](../c-language/parameters.md)
+- [Parameters](../c-language/parameters.md)
 
 ## <a name="see-also"></a>Voir aussi
 
-[Informations de référence sur le langage C](../c-language/c-language-reference.md)
+[Référence du langage C](../c-language/c-language-reference.md)

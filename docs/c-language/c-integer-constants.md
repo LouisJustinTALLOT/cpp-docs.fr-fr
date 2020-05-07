@@ -6,7 +6,7 @@ helpviewer_keywords:
 ms.assetid: fcf6b83c-2038-49ec-91ca-3d5ca1f83037
 ms.openlocfilehash: 48561599896bb8a6f9ee159630ff15df6c0454be
 ms.sourcegitcommit: 8bb2bea1384b290b7570b01608a86c7488ae7a02
-ms.translationtype: HT
+ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 06/26/2019
 ms.locfileid: "67400510"
@@ -23,11 +23,11 @@ Une *constante entière* est un nombre décimal (base 10), octal (base 8) ou hex
 &nbsp;&nbsp;&nbsp;&nbsp;*hexadecimal-constant* *integer-suffix*<sub>opt</sub>
 
 *decimal-constant*:<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*nonzero-digit*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*chiffre différent de zéro*<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*decimal-constant* *digit*
 
 *octal-constant* :<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**0**<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**entre**<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*octal-constant* *octal-digit*
 
 *hexadecimal-constant* :<br/>
@@ -35,7 +35,7 @@ Une *constante entière* est un nombre décimal (base 10), octal (base 8) ou hex
 &nbsp;&nbsp;&nbsp;&nbsp;*hexadecimal-constant* *hexadecimal-digit*
 
 *hexadecimal-prefix* : un des éléments suivants :<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**0x**  **0X**
+&nbsp;&nbsp;&nbsp;&nbsp;**0x**  **0x**
 
 *nonzero-digit* : un des éléments suivants :<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;**1 2 3 4 5 6 7 8 9**
@@ -70,7 +70,7 @@ Une *constante entière* est un nombre décimal (base 10), octal (base 8) ou hex
 
 Les suffixes **i64** et **I64** sont spécifiques à Microsoft.
 
-Les constantes Integer sont positives, à moins d’être précédées du signe moins ( **-** ). Le signe moins est interprété comme l'opérateur de négation arithmétique unaire. Pour plus d’informations sur cet opérateur, consultez [Opérateurs arithmétiques unaires](../c-language/unary-arithmetic-operators.md).
+Les constantes entières sont positives, sauf si elles sont précédées**-** d’un signe moins (). Le signe moins est interprété comme l'opérateur de négation arithmétique unaire. Pour plus d’informations sur cet opérateur, consultez [Opérateurs arithmétiques unaires](../c-language/unary-arithmetic-operators.md).
 
 Si une constante Integer commence par **0x** ou **0X**, elle est hexadécimale. Si elle commence par le chiffre **0**, elle est octale. Sinon, elle est supposée être décimale.
 

@@ -20,11 +20,11 @@ La taille d'un élément `int` signé ou non signé est la taille standard d'un 
 
 Les spécificateurs de type `int` et `unsigned int` (ou simplement `unsigned`) définissent certaines fonctionnalités du langage C (par exemple, le type `enum`). Dans ces cas, les définitions des types `int` et unsigned int pour une implémentation particulière déterminent le stockage réel.
 
-**Microsoft Spécifique**
+**Spécifique à Microsoft**
 
-Les entiers signés sont représentés sous la forme d'un complément à deux. Le bit le plus significatif indique le signe : 1 pour les nombres négatifs, 0 pour les nombres positifs et zéro. La gamme de valeurs est donnée dans [C et CMd Integer Limits](../c-language/cpp-integer-limits.md), qui est tirée des LIMITS. Fichier d’en-tête H.
+Les entiers signés sont représentés sous la forme d'un complément à deux. Le bit le plus significatif indique le signe : 1 pour les nombres négatifs, 0 pour les nombres positifs et zéro. La plage de valeurs est donnée en valeurs [entières C et C++](../c-language/cpp-integer-limits.md), qui sont extraites des limites. Fichier d’en-tête H.
 
-**END Microsoft Spécifique**
+**FIN spécifique à Microsoft**
 
 > [!NOTE]
 > Les spécificateurs de type int et unsigned int sont couramment utilisés dans les programmes C car ils permettent à un ordinateur particulier de traiter les valeurs entières de la façon la plus efficace possible pour cet ordinateur. Toutefois, puisque les tailles des types int et unsigned int varient, les programmes qui dépendent d'une taille d'entier spécifique peuvent ne pas être transposables à d'autres ordinateurs. Pour améliorer la portabilité des programmes, vous pouvez utiliser des expressions avec l'opérateur sizeof (comme indiqué dans [Opérateur sizeof](../c-language/sizeof-operator-c.md)) au lieu de tailles de données codées en dur.

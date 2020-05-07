@@ -18,18 +18,18 @@ ms.locfileid: "81334571"
 
 Un *appel de fonction* est une expression qui passe le contrôle et des arguments (le cas échéant) à une fonction et qui se présente sous la forme :
 
-*expression* *(expression-liste*<sub>opt</sub>)
+*expression* (*expression-List*<sub>OPT</sub>)
 
 où *expression* est un nom de fonction ou correspond à une adresse de fonction et où *expression-list* est une liste d'expressions (séparées par des virgules). Les valeurs de ces dernières expressions sont les arguments passés à la fonction. Si la fonction ne retourne pas de valeur, vous la déclarez comme une fonction qui retourne `void`.
 
 Si une déclaration existe avant l'appel de fonction, mais qu'aucune information n'est donnée concernant les paramètres, tous les arguments non déclarés subissent simplement les conversions arithmétiques habituelles.
 
 > [!NOTE]
-> Les expressions figurant dans la liste d'arguments de la fonction peuvent être évaluées dans un ordre quelconque, de sorte que les arguments dont les valeurs peuvent être modifiées par les effets secondaires d'un autre argument ont des valeurs non définies. Le point de séquence défini par l'opérateur d'appel de fonction garantit uniquement que tous les effets secondaires dans la liste d'arguments sont évalués avant que le contrôle passe à la fonction appelée. (Notez que l’ordre dans lequel les arguments sont poussés sur la pile est une question distincte.) Voir [les points de séquence](../c-language/c-sequence-points.md) pour plus d’informations.
+> Les expressions figurant dans la liste d'arguments de la fonction peuvent être évaluées dans un ordre quelconque, de sorte que les arguments dont les valeurs peuvent être modifiées par les effets secondaires d'un autre argument ont des valeurs non définies. Le point de séquence défini par l'opérateur d'appel de fonction garantit uniquement que tous les effets secondaires dans la liste d'arguments sont évalués avant que le contrôle passe à la fonction appelée. (Notez que l’ordre dans lequel les arguments font l’objet d’un push sur la pile est une question distincte.) Pour plus d’informations, consultez [points de séquence](../c-language/c-sequence-points.md) .
 
 La seule exigence à respecter dans un appel de fonction est que l’expression avant les parenthèses doit correspondre à une adresse de fonction. Cela signifie qu'une fonction peut être appelée via toute expression de pointeur fonction.
 
-## <a name="example"></a>Exemple
+## <a name="example"></a> Exemple
 
 L'exemple ci-dessous illustre des appels de fonction à partir d'une instruction `switch` :
 

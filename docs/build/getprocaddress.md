@@ -51,9 +51,9 @@ if (hDLL != NULL)
 
 La façon dont vous spécifiez la fonction que vous souhaitez lorsque vous appelez **GetProcAddress** dépend de la façon dont la dll a été générée.
 
-Vous pouvez obtenir l’ordinal d’exportation uniquement si la DLL à laquelle vous effectuez la liaison est créée à l’aide d’un fichier de définition de module (. def) et si les ordinaux sont répertoriés avec les fonctions de la section EXPORTS du fichier. def de la DLL. L’appel de **GetProcAddress** avec un ordinal d’exportation, par opposition au nom de la fonction, est légèrement plus rapide si la dll a de nombreuses fonctions exportées, car les ordinaux d’exportation servent d’index dans la table d’exportation de la dll. Avec un ordinal d’exportation, **GetProcAddress** peut localiser la fonction directement au lieu de comparer le nom spécifié aux noms de fonctions dans la table d’exportation de la dll. Toutefois, vous devez appeler **GetProcAddress** avec un ordinal d’exportation uniquement si vous avez le contrôle sur l’assignation des ordinaux aux fonctions exportées dans le fichier. def.
+Vous pouvez obtenir l’ordinal d’exportation uniquement si la DLL à laquelle vous effectuez la liaison est créée à l’aide d’un fichier de définition de module (. def) et si les ordinaux sont répertoriés avec les fonctions de la section **exports** du fichier. def de la dll. L’appel de **GetProcAddress** avec un ordinal d’exportation, par opposition au nom de la fonction, est légèrement plus rapide si la dll a de nombreuses fonctions exportées, car les ordinaux d’exportation servent d’index dans la table d’exportation de la dll. Avec un ordinal d’exportation, **GetProcAddress** peut localiser la fonction directement au lieu de comparer le nom spécifié aux noms de fonctions dans la table d’exportation de la dll. Toutefois, vous devez appeler **GetProcAddress** avec un ordinal d’exportation uniquement si vous avez le contrôle sur l’assignation des ordinaux aux fonctions exportées dans le fichier. def.
 
-## <a name="what-do-you-want-to-do"></a>Que voulez-vous faire ?
+## <a name="what-do-you-want-to-do"></a>Que voulez-vous faire ?
 
 - [Lier un exécutable à une DLL](linking-an-executable-to-a-dll.md#linking-implicitly)
 
@@ -65,7 +65,7 @@ Vous pouvez obtenir l’ordinal d’exportation uniquement si la DLL à laquelle
 
 - [FreeLibrary](/windows/win32/api/libloaderapi/nf-libloaderapi-freelibrary)
 
-- [Exportation à partir d’une DLL à l’aide de fichiers DEF](exporting-from-a-dll-using-def-files.md)
+- [Exportation à partir d'une DLL à l'aide de fichiers DEF](exporting-from-a-dll-using-def-files.md)
 
 ## <a name="see-also"></a>Voir aussi
 

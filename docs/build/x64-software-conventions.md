@@ -14,11 +14,11 @@ ms.locfileid: "79417193"
 ---
 # <a name="x64-software-conventions"></a>Conventions des logiciels x64
 
-Cette section décrit la C++ méthodologie de convention d’appel pour x64, l’extension 64 bits à l’architecture x86.
+Cette section décrit la méthodologie de convention d’appel C++ pour x64, l’extension 64 bits à l’architecture x86.
 
 ## <a name="overview-of-x64-calling-conventions"></a>Vue d’ensemble des conventions d’appel x64
 
-Deux différences importantes entre x86 et x64 sont la capacité d’adressage 64 bits et un ensemble plat de registres 16 64 bits pour une utilisation générale. À partir de l’ensemble de registres développé, x64 utilise la Convention d’appel [__fastcall](../cpp/fastcall.md) et un modèle de gestion des exceptions basé sur RISC. La Convention d' `__fastcall` utilise des registres pour les quatre premiers arguments et le frame de pile pour passer des arguments supplémentaires. Pour plus d’informations sur la Convention d’appel x64, y compris l’utilisation des registres, les paramètres de la pile, les valeurs de retour et le déroulement de la pile, consultez [Convention d’appel x64](x64-calling-convention.md).
+Deux différences importantes entre x86 et x64 sont la capacité d’adressage 64 bits et un ensemble plat de registres 16 64 bits pour une utilisation générale. À partir de l’ensemble de registres développé, x64 utilise la Convention d’appel [__fastcall](../cpp/fastcall.md) et un modèle de gestion des exceptions basé sur RISC. La `__fastcall` Convention utilise des registres pour les quatre premiers arguments et le frame de pile pour passer des arguments supplémentaires. Pour plus d’informations sur la Convention d’appel x64, y compris l’utilisation des registres, les paramètres de la pile, les valeurs de retour et le déroulement de la pile, consultez [Convention d’appel x64](x64-calling-convention.md).
 
 ## <a name="enable-optimization-for-x64"></a>Activer l’optimisation pour x64
 
@@ -49,7 +49,7 @@ Bien qu’il soit possible d’accéder aux données avec n’importe quel align
 |Type scalaire|Type de données C|Taille de stockage (en octets)|Alignement recommandé|
 |**INT8**|**char**|1|Byte|
 |**DESTINÉES**|**unsigned char**|1|Byte|
-|**INT16**|**short**|2|Word|
+|**INT16**|**Résumé**|2|Word|
 |**UINT16**|**unsigned short**|2|Word|
 |**ENTIER**|**entier** **long**|4|Mot|
 |**UINT32**|**unsigned int, unsigned long**|4|Mot|
@@ -84,7 +84,7 @@ Le tableau suivant indique l’alignement fortement suggéré pour les membres s
 |Type scalaire|Type de données C|Alignement requis|
 |**INT8**|**char**|Byte|
 |**DESTINÉES**|**unsigned char**|Byte|
-|**INT16**|**short**|Word|
+|**INT16**|**Résumé**|Word|
 |**UINT16**|**unsigned short**|Word|
 |**ENTIER**|**entier** **long**|Mot|
 |**UINT32**|**unsigned int, unsigned long**|Mot|
@@ -181,7 +181,7 @@ L’utilisation de données non alignées a deux implications.
 
 - Les emplacements non alignés ne peuvent pas être utilisés dans des opérations verrouillées.
 
-Si vous avez besoin d’un alignement plus strict, utilisez `__declspec(align(N))` sur vos déclarations de variable. Cela amène le compilateur à aligner dynamiquement la pile pour répondre à vos spécifications. Toutefois, l’ajustement dynamique de la pile au moment de l’exécution peut ralentir l’exécution de votre application.
+Si vous avez besoin d’un alignement plus `__declspec(align(N))` strict, utilisez sur vos déclarations de variable. Cela amène le compilateur à aligner dynamiquement la pile pour répondre à vos spécifications. Toutefois, l’ajustement dynamique de la pile au moment de l’exécution peut ralentir l’exécution de votre application.
 
 ## <a name="register-usage"></a>Inscrire l’utilisation
 
@@ -226,11 +226,11 @@ Chaque fonction qui alloue de l’espace de pile, appelle d’autres fonctions, 
 
 ## <a name="x64-exception-handling"></a>Gestion d’exceptions x64
 
-Pour plus d’informations sur les conventions et les structures de données utilisées pour implémenter la gestion structurée des exceptions et C++ le comportement de gestion des exceptions sur le x64, consultez [gestion des exceptions x64](exception-handling-x64.md).
+Pour plus d’informations sur les conventions et les structures de données utilisées pour implémenter la gestion structurée des exceptions et le comportement de gestion des exceptions C++ sur le x64, consultez [gestion des exceptions x64](exception-handling-x64.md).
 
 ## <a name="intrinsics-and-inline-assembly"></a>Assembly intrinsèques et Inline
 
-L’une des contraintes pour le compilateur x64 est l’absence de prise en charge de l’assembleur inline. Cela signifie que les fonctions qui ne peuvent pas être écrites C++ en C ou doivent être écrites en tant que sous-routines ou en tant que fonctions intrinsèques prises en charge par le compilateur. Certaines fonctions sont sensibles aux performances, tandis que d’autres ne le sont pas. Les fonctions sensibles aux performances doivent être implémentées en tant que fonctions intrinsèques.
+L’une des contraintes pour le compilateur x64 est l’absence de prise en charge de l’assembleur inline. Cela signifie que les fonctions qui ne peuvent pas être écrites en C ou C++ devront être écrites en tant que sous-routines ou en tant que fonctions intrinsèques prises en charge par le compilateur. Certaines fonctions sont sensibles aux performances, tandis que d’autres ne le sont pas. Les fonctions sensibles aux performances doivent être implémentées en tant que fonctions intrinsèques.
 
 Les intrinsèques pris en charge par le compilateur sont décrits dans [intrinsèques du compilateur](../intrinsics/compiler-intrinsics.md).
 

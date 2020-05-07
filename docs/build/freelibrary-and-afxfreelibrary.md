@@ -24,9 +24,9 @@ ms.locfileid: "76821549"
 
 Les processus qui sont explicitement liés à une DLL appellent la fonction [FreeLibrary](/windows/win32/api/libloaderapi/nf-libloaderapi-freelibrary) lorsque le module dll n’est plus nécessaire. Cette fonction décrémente le décompte de références du module. Et, si le nombre de références est égal à zéro, il est non mappé à partir de l’espace d’adressage du processus.
 
-Dans une application MFC, utilisez [AfxFreeLibrary](../mfc/reference/application-information-and-management.md#afxfreelibrary) au lieu de `FreeLibrary` pour décharger une DLL d’extension MFC. L’interface (prototype de fonction) de `AfxFreeLibrary` est identique à `FreeLibrary`.
+Dans une application MFC, utilisez [AfxFreeLibrary](../mfc/reference/application-information-and-management.md#afxfreelibrary) au lieu `FreeLibrary` de pour décharger une DLL d’extension MFC. L’interface (prototype de fonction) `AfxFreeLibrary` pour est identique à `FreeLibrary`.
 
-## <a name="what-do-you-want-to-do"></a>Que souhaitez-vous faire ?
+## <a name="what-do-you-want-to-do"></a>Que voulez-vous faire ?
 
 - [Lier un exécutable à une DLL](linking-an-executable-to-a-dll.md#linking-implicitly)
 
@@ -40,6 +40,6 @@ Dans une application MFC, utilisez [AfxFreeLibrary](../mfc/reference/application
 
 ## <a name="see-also"></a>Voir aussi
 
-[Créer des CC++ /dll dans Visual Studio](dlls-in-visual-cpp.md)\
-\ [FreeLibrary](/windows/win32/api/libloaderapi/nf-libloaderapi-freelibrary)
+[Créer des dll C/C++ dans Visual Studio](dlls-in-visual-cpp.md)\
+[FreeLibrary](/windows/win32/api/libloaderapi/nf-libloaderapi-freelibrary)\
 [AfxFreeLibrary](../mfc/reference/application-information-and-management.md#afxfreelibrary)

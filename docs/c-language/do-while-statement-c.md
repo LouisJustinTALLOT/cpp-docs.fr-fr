@@ -19,7 +19,7 @@ L'instruction *do-while* vous permet de répéter une instruction ou une instruc
 
 ## <a name="syntax"></a>Syntaxe
 
-*Iteration-Statement*: &nbsp;&nbsp;&nbsp;&nbsp;instruction **do***statement***while (** *expression* **);**
+instruction d' *itération*: &nbsp; &nbsp; &nbsp; &nbsp; **do***instruction*do**while (***expression***);**        
 
 L'élément *expression* dans une instruction *do-while* est évalué après l'exécution du corps de la boucle. Par conséquent, le corps de la boucle est toujours exécuté au moins une fois.
 

@@ -38,5 +38,5 @@ Consultez [Utilisation de wmain](../c-language/using-wmain.md) pour obtenir une 
 
 ## <a name="see-also"></a>Voir aussi
 
-[fonction main et arguments de ligne de commandeC++()](../cpp/main-function-command-line-args.md)\
+[fonction main et arguments de ligne de commande (C++)](../cpp/main-function-command-line-args.md)\
 [Analyse des arguments de ligne de commande C](../c-language/parsing-c-command-line-arguments.md)
