@@ -1,21 +1,21 @@
 ---
-title: Jeux de caractères
+title: Character Sets
 ms.date: 11/04/2016
 ms.assetid: ef21daa0-b4b4-4f1a-86f4-25904d83fc86
 ms.openlocfilehash: 64e83eb1932c3ee379b67351f0f283f1ea7c9836
 ms.sourcegitcommit: 878a164fe6d550ca81ab87d8425c8d3cd52fe384
-ms.translationtype: HT
+ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 07/22/2019
 ms.locfileid: "68375875"
 ---
-# <a name="character-sets"></a>Jeux de caractères
+# <a name="character-sets"></a>Character Sets
 
 **ANSI 3.1.3.4** Mappage de membres du jeu de caractères de code source
 
 Le jeu de caractères de code source et le jeu de caractères d'exécution incluent les caractères ASCII répertoriés dans le tableau suivant. Les séquences d'échappement figurent également dans le tableau.
 
-## <a name="escape-sequences"></a>Séquences d'échappement
+## <a name="escape-sequences"></a>Séquences d’échappement
 
 |Séquence d'échappement|Caractère|Valeur ASCII|
 |---------------------|---------------|-----------------|
