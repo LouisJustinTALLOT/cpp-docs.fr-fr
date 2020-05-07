@@ -10,11 +10,11 @@ helpviewer_keywords:
 - symbols, case sensitivity
 ms.assetid: d02edbbc-85a0-4118-997b-84ee6b972eb6
 ms.openlocfilehash: 1f3abf304e6fda52e2571d0bccb8d4db5a414dfe
-ms.sourcegitcommit: f4be868c0d1d78e550fba105d4d3c993743a1f4b
-ms.translationtype: HT
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56152584"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62325661"
 ---
 # <a name="c-identifiers"></a>Identificateurs C
 
@@ -38,8 +38,8 @@ Vous pouvez utiliser un type spécial d'identificateur, appelé étiquette d'ins
 
 ## <a name="syntax"></a>Syntaxe
 
-*identificateur* :<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*nondigit*<br/>
+*identificateur*:<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*caractère*<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*identifier* *nondigit*<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*identifier* *digit*
 
@@ -52,11 +52,11 @@ Vous pouvez utiliser un type spécial d'identificateur, appelé étiquette d'ins
 
 Le premier caractère d'un nom d'identificateur doit être `nondigit` (autrement dit, ce doit être un trait de soulignement ou une lettre majuscule ou minuscule). ANSI autorise six caractères significatifs dans un nom d'identificateur externe et 31 pour les noms des identificateurs internes (dans une fonction). Les identificateurs externes (ceux déclarés au niveau de la portée globale ou déclarés avec la classe de stockage `extern`) peuvent être soumis à des restrictions d'affectation de noms supplémentaires car ces identificateurs doivent être traités par d'autres logiciels tels que les éditeurs de liens.
 
-**Section spécifique à Microsoft**
+**Spécifique à Microsoft**
 
 Bien qu'ANSI autorise 6 caractères significatifs dans les noms d'identificateur externe et 31 pour les noms des identificateurs internes (dans une fonction), le compilateur C Microsoft autorise 247 caractères dans un nom d'identificateur interne ou externe. Si la compatibilité ANSI ne vous préoccupe pas, vous pouvez modifier cette valeur par défaut en définissant un nombre plus petit ou plus grand via l'option /H (restreindre la longueur des noms externes).
 
-**FIN de la section spécifique à Microsoft**
+**FIN spécifique à Microsoft**
 
 Le compilateur C considère les majuscules et les minuscules comme des caractères distincts. Cette fonctionnalité, appelée « respect de la casse », vous permet de créer des identificateurs distincts qui ont la même orthographe mais différentes casses pour une ou plusieurs des lettres. Par exemple, chacun de ces identificateurs suivants est unique :
 
@@ -67,11 +67,11 @@ Add
 aDD
 ```
 
-**Section spécifique à Microsoft**
+**Spécifique à Microsoft**
 
 Pour les identificateurs, ne sélectionnez pas des noms qui commencent par deux traits de soulignement ou par un trait de soulignement suivi d'une majuscule. La norme C ANSI permet de réserver les noms d'identificateur qui commencent par ces combinaisons de caractères à une utilisation par le compilateur. Les identificateurs ayant une portée de niveau fichier ne doivent pas être précédés d'un trait de soulignement et d'une minuscule comme deux premières lettres. Les noms d'identificateur qui commencent par ces caractères sont également réservés. Par convention, Microsoft utilise un trait de soulignement et une majuscule au début des noms de macro, et des traits de soulignement doubles pour les noms de mot clé spécifiques de Microsoft. Pour éviter les conflits de noms, sélectionnez toujours des noms d'identificateur ne commençant pas par un ou deux traits de soulignement, ou des noms commençant par un trait de soulignement suivi d'une majuscule.
 
-**FIN de la section spécifique à Microsoft**
+**FIN spécifique à Microsoft**
 
 Voici quelques exemples d'identificateurs valides conformes aux restrictions d'affectation de noms ANSI ou Microsoft :
 
@@ -84,7 +84,7 @@ skip12
 LastNum
 ```
 
-**Section spécifique à Microsoft**
+**Spécifique à Microsoft**
 
 Bien que les identificateurs dans les fichiers sources respectent la casse par défaut, les symboles dans les fichiers objets ne la respectent pas. Microsoft C traite les identificateurs d'une unité de compilation comme respectant la casse.
 
@@ -92,7 +92,7 @@ L'éditeur de liens Microsoft respecte la casse. Vous devez spécifier tous les 
 
 Le « jeu de caractères source » est le jeu de caractères reconnus qui peuvent figurer dans les fichiers sources. Pour Microsoft C, le jeu source est le jeu de caractères ASCII standard. Le jeu de caractères sources et le jeu de caractères d'exécution incluent les caractères ASCII utilisés en tant que séquences d'échappement. Consultez [Constantes caractères](../c-language/c-character-constants.md) pour plus d'informations sur le jeu de caractères d'exécution.
 
-**FIN de la section spécifique à Microsoft**
+**FIN spécifique à Microsoft**
 
 Un identificateur a une « portée », qui est la zone du programme dans laquelle il est connu, et une « liaison, » qui détermine si le même nom dans une autre portée fait référence à ce même identificateur. Ces rubriques sont expliquées dans [Durée de vie, portée, visibilité, et liaison](../c-language/lifetime-scope-visibility-and-linkage.md).
 

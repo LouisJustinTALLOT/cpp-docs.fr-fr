@@ -8,11 +8,11 @@ helpviewer_keywords:
 - parentheses, expressions
 ms.assetid: b8636147-6982-408c-9e64-29e40678ee43
 ms.openlocfilehash: d0105556530161991b46c5ee25cd73f2f995063f
-ms.sourcegitcommit: f4be868c0d1d78e550fba105d4d3c993743a1f4b
-ms.translationtype: HT
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56149347"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62233739"
 ---
 # <a name="expressions-in-parentheses"></a>Expressions entre parenthèses
 
@@ -22,7 +22,7 @@ Vous pouvez placer n’importe quel opérande entre parenthèses sans modifier l
 ( 10 + 5 ) / 5
 ```
 
-les parenthèses autour de `10 + 5` signifient que la valeur de `10 + 5` est d’abord déterminée, puis elle devient l’opérande gauche de l’opérateur de division (**/**). Le résultat de `( 10 + 5 ) / 5` est égal à 3. Sans parenthèses, la valeur de `10 + 5 / 5` serait égale à 11.
+les parenthèses autour `10 + 5` de signifient que la `10 + 5` valeur de est évaluée en premier et qu’elle devient l’opérande**/** de gauche de l’opérateur de division (). Le résultat de `( 10 + 5 ) / 5` est égal à 3. Sans parenthèses, la valeur de `10 + 5 / 5` serait égale à 11.
 
 Bien que les parenthèses aient une incidence sur la manière dont les opérandes sont regroupés dans une expression, elles ne peuvent pas garantir un ordre spécifique d'évaluation dans tous les cas. Par exemple, ni les parenthèses ni le regroupement de gauche à droite de l'expression suivante garantissent à quoi sera égale la valeur de `i` dans l'une ou l'autre des sous-expressions :
 

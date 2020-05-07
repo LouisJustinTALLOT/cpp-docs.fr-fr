@@ -17,15 +17,15 @@ Une étape de génération personnalisée est une étape définie par l’utilis
 
 Spécifiez une étape de génération personnalisée dans le fichier projet (. vcxproj). L’étape peut spécifier une ligne de commande à exécuter, tous les fichiers d’entrée ou de sortie supplémentaires et un message à afficher. Si **MSBuild** détermine que vos fichiers de sortie sont obsolètes par rapport à vos fichiers d’entrée, il affiche le message et exécute la commande.
 
-Pour spécifier l’emplacement de l’étape de génération personnalisée dans la séquence des cibles de génération, utilisez l’un des éléments XML `CustomBuildAfterTargets` et `CustomBuildBeforeTargets` (ou les deux) dans le fichier projet. Par exemple, vous pouvez spécifier que l’étape de génération personnalisée s’exécute après l’outil de liaison cible et avant la cible de l’outil manifeste. L’ensemble réel des cibles disponibles dépend de votre build particulière.
+Pour spécifier l’emplacement de l’étape de génération personnalisée dans l’ordre des cibles de génération, utilisez l’un des `CustomBuildAfterTargets` éléments `CustomBuildBeforeTargets` XML, ou les deux, dans le fichier projet. Par exemple, vous pouvez spécifier que l’étape de génération personnalisée s’exécute après l’outil de liaison cible et avant la cible de l’outil manifeste. L’ensemble réel des cibles disponibles dépend de votre build particulière.
 
-Spécifiez l’élément `CustomBuildBeforeTargets` pour exécuter l’étape de génération personnalisée avant l’exécution d’une cible particulière, l’élément `CustomBuildAfterTargets` pour exécuter l’étape après l’exécution d’une cible particulière, ou les deux éléments pour exécuter l’étape entre deux cibles adjacentes. Si aucun élément n’est spécifié, votre outil de génération personnalisée s’exécute à son emplacement par défaut, qui est après la cible du **lien** .
+Spécifiez `CustomBuildBeforeTargets` l’élément pour exécuter l’étape de génération personnalisée avant l’exécution d’une `CustomBuildAfterTargets` cible particulière, l’élément pour exécuter l’étape après l’exécution d’une cible particulière, ou les deux éléments pour exécuter l’étape entre deux cibles adjacentes. Si aucun élément n’est spécifié, votre outil de génération personnalisée s’exécute à son emplacement par défaut, qui est après la cible du **lien** .
 
-Les étapes de génération personnalisée et les outils de génération personnalisés partagent les informations spécifiées dans les éléments XML `CustomBuildBeforeTargets` et `CustomBuildAfterTargets`. Par conséquent, spécifiez ces cibles une seule fois dans votre fichier projet.
+Les étapes de génération personnalisée et les outils de génération personnalisés partagent les `CustomBuildBeforeTargets` informations `CustomBuildAfterTargets` spécifiées dans les éléments et XML. Par conséquent, spécifiez ces cibles une seule fois dans votre fichier projet.
 
 ### <a name="to-define-what-is-executed-by-the-custom-build-step"></a>Pour définir ce qui est exécuté par l’étape de génération personnalisée
 
-1. Ajoutez un groupe de propriétés au fichier projet. Dans ce groupe de propriétés, spécifiez la commande, ses entrées et sorties, ainsi qu’un message, comme indiqué dans l’exemple suivant. Cet exemple crée un fichier. cab à partir du fichier main. cpp que vous avez créé dans [procédure pas à pas C++ : utilisation de MSBuild pour créer un projet](walkthrough-using-msbuild-to-create-a-visual-cpp-project.md).
+1. Ajoutez un groupe de propriétés au fichier projet. Dans ce groupe de propriétés, spécifiez la commande, ses entrées et sorties, ainsi qu’un message, comme indiqué dans l’exemple suivant. Cet exemple crée un fichier. cab à partir du fichier main. cpp que vous avez créé dans [procédure pas à pas : utilisation de MSBuild pour créer un projet C++](walkthrough-using-msbuild-to-create-a-visual-cpp-project.md).
 
     ```
     <ItemDefinitionGroup>
@@ -50,6 +50,6 @@ Les étapes de génération personnalisée et les outils de génération personn
 
 ## <a name="see-also"></a>Voir aussi
 
-[Procédure pas à pas : utilisation de C++ MSBuild pour créer un projet](walkthrough-using-msbuild-to-create-a-visual-cpp-project.md)<br/>
-[Guide pratique pour utiliser des événements de build dans des projets MSBuild](how-to-use-build-events-in-msbuild-projects.md)<br/>
+[Procédure pas à pas : utilisation de MSBuild pour créer un projet C++](walkthrough-using-msbuild-to-create-a-visual-cpp-project.md)<br/>
+[Comment : utiliser des événements de build dans des projets MSBuild](how-to-use-build-events-in-msbuild-projects.md)<br/>
 [Guide pratique pour ajouter des outils de génération personnalisés à des projets MSBuild](how-to-add-custom-build-tools-to-msbuild-projects.md)

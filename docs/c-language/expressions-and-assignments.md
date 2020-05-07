@@ -12,17 +12,17 @@ helpviewer_keywords:
 - Visual C, assignments
 ms.assetid: 9c72919f-0768-4b47-85ca-afdfec6847f4
 ms.openlocfilehash: 30c076bcaf80a0d51a7f8aefc9c1b1806a12e42f
-ms.sourcegitcommit: f4be868c0d1d78e550fba105d4d3c993743a1f4b
-ms.translationtype: HT
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56147215"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62233720"
 ---
 # <a name="expressions-and-assignments"></a>Expressions et assignations
 
 Cette section décrit comment former des expressions et assigner des valeurs en langage C. Les constantes, les identificateurs, les chaînes, et les appels de fonction sont tous des opérandes qui sont manipulés dans des expressions. Le langage C dispose de tous les opérateurs habituels de langage. Cette section décrit ces opérateurs ainsi que ceux qui sont uniques à C ou à Microsoft C. Les rubriques abordées incluent :
 
-- [Expressions L-Value et R-Value](../c-language/l-value-and-r-value-expressions.md)
+- [Expressions L-value et r-value](../c-language/l-value-and-r-value-expressions.md)
 
 - [Expressions constantes](../c-language/c-constant-expressions.md)
 
@@ -40,4 +40,4 @@ Cette section décrit comment former des expressions et assigner des valeurs en 
 
 ## <a name="see-also"></a>Voir aussi
 
-[Informations de référence sur le langage C](../c-language/c-language-reference.md)
+[Référence du langage C](../c-language/c-language-reference.md)

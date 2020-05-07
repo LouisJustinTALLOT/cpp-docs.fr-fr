@@ -8,7 +8,7 @@ helpviewer_keywords:
 ms.assetid: 4ba5c360-1f17-4575-b370-45f62e1f2bc2
 ms.openlocfilehash: 34f5c60ba9ba5da869426ae4971808a5d75fee2f
 ms.sourcegitcommit: 16c0392fc8d96e814c3a40b0c5346d7389aeb525
-ms.translationtype: HT
+ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 08/12/2019
 ms.locfileid: "62233361"
@@ -21,7 +21,7 @@ Une expression d'indice peut également avoir plusieurs indices, comme suit :
 expression1 [ expression2 ] [ expression3 ] ...
 ```
 
-Les expressions d'indice s'associent de gauche à droite. L’expression d’indice la plus à gauche, *expression1* **[** *expression2* **]** , est évaluée en premier. L'adresse qui résulte de l'ajout *d'expression1* et *expression2* forme une expression de pointeur. Ensuite, *expression3* est ajouté à cette expression de pointeur pour former une nouvelle expression de pointeur, et ainsi de suite jusqu'à ce que la dernière expression d'indice ait été ajoutée. L'opérateur d'indirection (<strong>\*</strong>) est appliqué après l'évaluation de la dernière expression d'indice, sauf si la valeur de pointeur finale traite un type tableau (voir les exemples ci-dessous).
+Les expressions d'indice s'associent de gauche à droite. L’expression d’indice la plus à gauche, *expression1* **[** *Expression2* **]**, est évaluée en premier. L'adresse qui résulte de l'ajout *d'expression1* et *expression2* forme une expression de pointeur. Ensuite, *expression3* est ajouté à cette expression de pointeur pour former une nouvelle expression de pointeur, et ainsi de suite jusqu'à ce que la dernière expression d'indice ait été ajoutée. L’opérateur d’indirection (<strong>\*</strong>) est appliqué après l’évaluation de la dernière expression de script, sauf si la valeur de pointeur finale traite un type tableau (voir les exemples ci-dessous).
 
 Les expressions à indices multiples font référence à des éléments de tableaux multidimensionnels. Un tableau multidimensionnel est un tableau dont les éléments sont des tableaux. Par exemple, le premier élément d'un tableau tridimensionnel est un tableau à deux dimensions.
 
@@ -70,4 +70,4 @@ De même, le résultat de l'expression `prop[2]` dans la deuxième instruction `
 
 ## <a name="see-also"></a>Voir aussi
 
-[Opérateur d’indice](../cpp/subscript-operator.md)
+[Opérateur d’indice :](../cpp/subscript-operator.md)

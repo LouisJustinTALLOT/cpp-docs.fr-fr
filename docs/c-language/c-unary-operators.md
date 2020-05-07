@@ -6,11 +6,11 @@ helpviewer_keywords:
 - unary operators
 ms.assetid: 743e00b1-f874-4c0d-b211-8c24d4af9739
 ms.openlocfilehash: c0978464c21eff315936b75aa46e1df24e72506d
-ms.sourcegitcommit: f4be868c0d1d78e550fba105d4d3c993743a1f4b
-ms.translationtype: HT
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56150400"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62312739"
 ---
 # <a name="c-unary-operators"></a>Opérateurs unaires C
 
@@ -20,9 +20,9 @@ Les opérateurs unaires sont affichés avant leur opérande et sont associés de
 
 *unary-expression*: *postfix-expression*
 
-**++**  *unary-expression*
+**++**  *unaire-expression*
 
-`--`  *unary-expression*
+`--`  *unaire-expression*
 
 *unary-operator cast-expression*
 
@@ -30,7 +30,7 @@ Les opérateurs unaires sont affichés avant leur opérande et sont associés de
 
 **sizeof (**  *type-name*  **)**
 
-*unary-operator* : l’un des éléments suivants : **& \* + -** `~` **!**
+*unaire-Operator*: un des ** &  \* +-** `~` **!**
 
 ## <a name="see-also"></a>Voir aussi
 

@@ -12,11 +12,11 @@ helpviewer_keywords:
 - nested statements
 ms.assetid: d7fc16a0-fdbc-4f39-b596-76e1ca4ad4a5
 ms.openlocfilehash: b6df50d483a6e2958de3100a07c18b89b0c4f12f
-ms.sourcegitcommit: f4be868c0d1d78e550fba105d4d3c993743a1f4b
-ms.translationtype: HT
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56152610"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62233058"
 ---
 # <a name="if-statement-c"></a>if, instruction (C)
 
@@ -24,9 +24,9 @@ L’instruction **if** contrôle le branchement conditionnel. Le corps d'une ins
 
 ## <a name="syntax"></a>Syntaxe
 
-*selection-statement*: **if (**  *expression*  **)**  *statement*
+instruction *de sélection*:*instruction* **if (***expression***)**      
 
-**if (**  *expression*  **)**  *statement*  **else**  *statement*
+*instruction* **if (***expression***)***statement***else**          
 
 Dans les deux formes de l'instruction **if**, les expressions (qui peuvent avoir n'importe quelle valeur sauf une structure) sont évaluées, y compris tous les effets secondaires.
 

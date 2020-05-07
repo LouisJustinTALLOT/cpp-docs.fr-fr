@@ -51,4 +51,4 @@ La section suivante, [Définitions de fonctions C](../c-language/c-function-defi
 
 ## <a name="see-also"></a>Voir aussi
 
-[Aperçu des fonctions](../c-language/overview-of-functions.md)
+[Vue d’ensemble des fonctions](../c-language/overview-of-functions.md)

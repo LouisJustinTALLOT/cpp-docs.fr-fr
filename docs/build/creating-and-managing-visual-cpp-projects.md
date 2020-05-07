@@ -17,13 +17,13 @@ ms.locfileid: "80078694"
 ---
 # <a name="visual-studio-projects---c"></a>Projets Visual Studio – C++
 
-Un *projet Visual Studio* est un projet basé sur le système de génération MSBuild. MSBuild est le système de génération natif pour Visual Studio. il s’agit généralement du meilleur système de génération à utiliser pour les programmes spécifiques à Windows. MSBuild est étroitement intégré à Visual Studio, mais vous pouvez aussi l’utiliser à partir de la ligne de commande. Pour les projets multiplateforme, ou les projets qui utilisent des bibliothèques Open source, nous vous recommandons d’utiliser des [projets cmake dans Visual Studio](cmake-projects-in-visual-studio.md) dans visual studio 2017 et versions ultérieures. Pour plus d’informations sur la mise à niveau de projets MSBuild à partir de versions antérieures de Visual Studio, consultez le [Guide de Portage et de mise C++ à niveau de Microsoft](../porting/visual-cpp-porting-and-upgrading-guide.md).
+Un *projet Visual Studio* est un projet basé sur le système de génération MSBuild. MSBuild est le système de génération natif pour Visual Studio. il s’agit généralement du meilleur système de génération à utiliser pour les programmes spécifiques à Windows. MSBuild est étroitement intégré à Visual Studio, mais vous pouvez aussi l’utiliser à partir de la ligne de commande. Pour les projets multiplateforme, ou les projets qui utilisent des bibliothèques Open source, nous vous recommandons d’utiliser des [projets cmake dans Visual Studio](cmake-projects-in-visual-studio.md) dans visual studio 2017 et versions ultérieures. Pour plus d’informations sur la mise à niveau de projets MSBuild à partir de versions antérieures de Visual Studio, consultez le [Guide de Portage et de mise à niveau de Microsoft C++](../porting/visual-cpp-porting-and-upgrading-guide.md).
 
 ## <a name="create-a-project"></a>Création d’un projet
 
 ::: moniker range="vs-2019"
 
-Vous pouvez créer des projets C++ en choisissant **Fichier** > **Nouveau** > **Projet**, puis en définissant **Langage** sur C++. Dans la liste des résultats, vous voyez une liste de modèles de projet que vous pouvez filtrer en définissant le paramètre **Plateforme** ou **Type de projet** et ou tapant des mots clés dans la zone de recherche.
+Vous pouvez créer des projets C++ en choisissant **fichier** > **nouveau** > **projet**, puis en définissant le **langage** sur C++. Dans la liste des résultats, vous voyez une liste de modèles de projet que vous pouvez filtrer en définissant le paramètre **Plateforme** ou **Type de projet** et ou tapant des mots clés dans la zone de recherche.
 
    ![Modèles de projet Visual Studio 2019](../build/media/vs2019-choose-console-app.png "Boîte de dialogue Nouveau projet de Visual Studio 2019")
 
@@ -31,7 +31,7 @@ Vous pouvez créer des projets C++ en choisissant **Fichier** > **Nouveau** > **
 
 ::: moniker range="vs-2017"
 
-Vous pouvez créer des projets C++ en choisissant **Fichier** > **Nouveau** > **Projet**, puis en choisissant Visual C++ dans le volet gauche. Dans le volet central, vous voyez une liste de modèles de projet :
+Vous pouvez créer des projets C++ en choisissant **fichier** > **nouveau** > **projet**, puis en choisissant Visual C++ dans le volet gauche. Dans le volet central, vous voyez une liste de modèles de projet :
 
    ![Modèles de projet](../overview/media/vs2017-new-project.png "Boîte de dialogue Nouveau projet de Visual Studio 2017")
 
@@ -87,4 +87,4 @@ Guide pratique pour créer un projet Visual Studio à partir d’une collection 
 ## <a name="see-also"></a>Voir aussi
 
 [Projets et systèmes de build](projects-and-build-systems-cpp.md)<br>
-[Guide C++ de Portage et de mise à niveau Microsoft](../porting/visual-cpp-porting-and-upgrading-guide.md)
+[Guide de Portage et de mise à niveau de Microsoft C++](../porting/visual-cpp-porting-and-upgrading-guide.md)

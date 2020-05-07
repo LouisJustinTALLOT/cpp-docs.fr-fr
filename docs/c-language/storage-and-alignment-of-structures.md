@@ -8,21 +8,21 @@ helpviewer_keywords:
 - packing structures
 ms.assetid: 60ff292f-2595-4f37-ae00-4c4b4f047196
 ms.openlocfilehash: 8e15f39b5a7a78da117c3b8a551ebfba5e07c194
-ms.sourcegitcommit: f4be868c0d1d78e550fba105d4d3c993743a1f4b
-ms.translationtype: HT
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56150335"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62336166"
 ---
 # <a name="storage-and-alignment-of-structures"></a>Stockage et alignement de structures
 
-**Section spécifique à Microsoft**
+**Spécifique à Microsoft**
 
 Les membres d'une structure sont stockés de manière séquentielle dans l'ordre dans lequel ils sont déclarés : le premier membre a l'adresse mémoire la plus basse et le dernier la plus élevée.
 
 Chaque objet de données possède un *alignment-requirement*. Pour les structures, l’exigence est le membre le plus grand. Un *décalage* est alloué à chaque objet afin que
 
-*offset* `%` *alignment-requirement* `==` 0
+*offset* `%` *alignement de décalage-exigence* `==` 0
 
 Les champs de bits adjacents sont empaquetés dans la même unité d’allocation de 1, 2 ou 4 octets si les types intégraux sont de la même taille et si le champ de bits suivant s’insère dans l’unité d’allocation actuelle sans dépasser la limite imposée par les exigences d’alignement courantes des champs de bits.
 
@@ -38,7 +38,7 @@ Pour utiliser le pragma `pack` pour spécifier une compression autre que celle s
 
 Pour le compilateur Microsoft C, la taille par défaut des champs de bits est **long**. Les membres de la structure sont alignés sur la taille du type ou sur la taille de /Zp[*n*], selon celle qui est la plus petite. La taille par défaut est 4.
 
-**FIN de la section spécifique à Microsoft**
+**FIN spécifique à Microsoft**
 
 ## <a name="see-also"></a>Voir aussi
 

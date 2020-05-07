@@ -29,15 +29,15 @@ Les instructions C se composent de jetons, d'expressions et d'autres instructio
 
 [selection-statement](../c-language/if-statement-c.md)
 
-[iteration-statement](../c-language/do-while-statement-c.md)
+[itération-instruction](../c-language/do-while-statement-c.md)
 
 [jump-statement](../c-language/break-statement-c.md)
 
-[try-except-Statement](../c-language/try-except-statement-c.md) /* \*spécifique à Microsoft /
+[try-except-Statement](../c-language/try-except-statement-c.md) /* spécifique à Microsoft\*/
 
-[try-finally-statement](../c-language/try-finally-statement-c.md) /\* \*spécifique à Microsoft /
+[try-finally-instruction](../c-language/try-finally-statement-c.md)  / \* spécifique à Microsoft\*/
 
-Souvent, le corps de l'instruction est une « instruction composée ». Une instruction composée se compose d'autres instructions qui peuvent inclure des mots clés. L'instruction composée est délimitée par des accolades ( **{ }** ). Toutes les autres instructions C se terminent par un point-virgule ( **;** ). Le point-virgule est une marque de fin d'instruction.
+Souvent, le corps de l'instruction est une « instruction composée ». Une instruction composée se compose d'autres instructions qui peuvent inclure des mots clés. L'instruction composée est délimitée par des accolades (**{ }**). Toutes les autres instructions C se terminent par un point-virgule (**;**). Le point-virgule est une marque de fin d'instruction.
 
 Une instruction d'expression contient une expression C qui peut contenir les opérateurs arithmétiques ou logiques présentés dans [Expressions et assignations](../c-language/expressions-and-assignments.md). L'instruction null est une instruction vide.
 

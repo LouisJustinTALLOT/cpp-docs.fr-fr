@@ -19,7 +19,7 @@ ms.locfileid: "75299102"
 ---
 # <a name="one-dimensional-arrays"></a>Tableaux unidimensionnels
 
-Une expression suffixée suivie d'une expression entre crochets ( **[ ]** ) est une représentation indicée d'un élément d'un objet tableau. Une expression d'indice représente la valeur à l'adresse qui correspond aux positions de *expression* au-delà de *postfix-expression* une fois exprimée comme
+Une expression suffixée suivie d'une expression entre crochets (**[ ]**) est une représentation indicée d'un élément d'un objet tableau. Une expression d'indice représente la valeur à l'adresse qui correspond aux positions de *expression* au-delà de *postfix-expression* une fois exprimée comme
 
 ```
 postfix-expression [ expression ]
@@ -36,9 +36,9 @@ int main() {
 }
 ```
 
-Les expressions d'indice servent généralement à faire référence à des éléments de tableau, mais vous pouvez appliquer un indice à n'importe quel pointeur. Quel que soit l'ordre des valeurs, *expression* doit être placé entre crochets ( **[ ]** ).
+Les expressions d'indice servent généralement à faire référence à des éléments de tableau, mais vous pouvez appliquer un indice à n'importe quel pointeur. Quel que soit l'ordre des valeurs, *expression* doit être placé entre crochets (**[ ]**).
 
-L'expression d'indice est évaluée en ajoutant la valeur intégrale à la valeur de pointeur, puis en appliquant l'opérateur d'indirection (<strong>\*</strong>) au résultat. (Pour plus d’informations sur l’opérateur d’indirection, consultez opérateurs d’indirection [et d’adresse](../c-language/indirection-and-address-of-operators.md) .) En effet, pour un tableau unidimensionnel, les quatre expressions suivantes sont équivalentes, en supposant que `a` est un pointeur et `b` est un entier :
+L’expression d’indice est évaluée en ajoutant la valeur intégrale à la valeur de pointeur, puis en appliquant<strong>\*</strong>l’opérateur d’indirection () au résultat. (Pour plus d’informations sur l’opérateur d’indirection, consultez opérateurs d’indirection [et d’adresse](../c-language/indirection-and-address-of-operators.md) .) En effet, pour un tableau unidimensionnel, les quatre expressions suivantes sont équivalentes, en supposant `a` que est un pointeur `b` et qu’il s’agit d’un entier :
 
 ```
 a[b]
@@ -51,9 +51,9 @@ Selon les règles de conversion applicables à l'opérateur d'addition (données
 
 Par exemple, supposons que l'identificateur `line` fait référence à un tableau de valeurs `int`. La procédure suivante est utilisée pour évaluer l'expression d'indice `line[ i ]` :
 
-1. La valeur entière `i` est multipliée par le nombre d'octets définis comme longueur d'un élément `int`. La valeur convertie de `i` représente `i` positions de `int`.
+1. La valeur entière `i` est multipliée par le nombre d'octets définis comme longueur d'un élément `int`. La valeur convertie `i` `int` de représente des `i` positions.
 
-1. Cette valeur convertie est ajoutée à la valeur de pointeur d’origine (`line`) pour produire une adresse qui est décalée `i` positions de `int` à partir de `line`.
+1. Cette valeur convertie est ajoutée à la valeur de`line`pointeur d’origine () pour produire une `i` `int` adresse qui `line`correspond aux positions de décalage à partir de.
 
 1. L'opérateur d'indirection est appliqué à la nouvelle adresse. Le résultat est la valeur de l'élément de tableau à cette position (intuitivement, `line [ i ]`).
 
@@ -61,4 +61,4 @@ L'expression d'indice `line[0]` représente la valeur du premier élément de li
 
 ## <a name="see-also"></a>Voir aussi
 
-[Opérateur d’indice](../cpp/subscript-operator.md)
+[Opérateur d’indice :](../cpp/subscript-operator.md)

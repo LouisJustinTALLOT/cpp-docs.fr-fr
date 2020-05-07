@@ -6,11 +6,11 @@ helpviewer_keywords:
 - declaring variables, simple
 ms.assetid: b07adf9d-9e79-4b64-8a34-e6fe1c7eccec
 ms.openlocfilehash: 27710dabe512332564ee557a9d022457d9fddc5c
-ms.sourcegitcommit: f4be868c0d1d78e550fba105d4d3c993743a1f4b
-ms.translationtype: HT
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56149984"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62158234"
 ---
 # <a name="simple-variable-declarations"></a>Déclarations de variables simples
 
@@ -20,20 +20,20 @@ Les classes de stockage ou les types (ou les deux) sont requis sur les déclarat
 
 ## <a name="syntax"></a>Syntaxe
 
-*declarator* :<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*pointer*<sub>opt</sub> *direct-declarator*
+*déclarateur*:<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*pointeur*<sub>OPT</sub> *direct-declarator*
 
-*direct-declarator* :<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*identifier*
+*direct-declarator*:<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*identificateur*
 
-*identificateur* :<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*nondigit*<br/>
+*identificateur*:<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*caractère*<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*identifier* *nondigit*<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*identifier* *digit*
 
 Pour les types arithmétiques, de structure, d'union, d'énumération et void, ainsi que pour les types représentés par des noms `typedef`, des déclarateurs simples peuvent être utilisés dans une déclaration car le spécificateur de type fournit toutes les informations de saisie. Les types de pointeur, de tableau et de fonction nécessitent des déclarateurs plus complexes.
 
-Vous pouvez utiliser une liste d'identificateurs séparés par une virgule (**,**) pour spécifier plusieurs variables dans la même déclaration. Toutes les variables définies dans la déclaration ont le même type de base. Par exemple :
+Vous pouvez utiliser une liste d'identificateurs séparés par une virgule (**,**) pour spécifier plusieurs variables dans la même déclaration. Toutes les variables définies dans la déclaration ont le même type de base. Par exemple :
 
 ```C
 int x, y;        /* Declares two simple variables of type int */

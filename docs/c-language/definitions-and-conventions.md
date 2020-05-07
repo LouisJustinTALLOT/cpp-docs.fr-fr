@@ -5,11 +5,11 @@ helpviewer_keywords:
 - nonterminals definition
 ms.assetid: f9b3cf5f-6a7c-4a10-9b18-9d4a43efdaeb
 ms.openlocfilehash: 0ff3f8b447e29f0da59405a7c0286d7a696b4613
-ms.sourcegitcommit: f4be868c0d1d78e550fba105d4d3c993743a1f4b
-ms.translationtype: HT
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56152467"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62234431"
 ---
 # <a name="definitions-and-conventions"></a>Définitions et conventions
 
@@ -17,9 +17,9 @@ Les terminaux sont des points de terminaison dans une définition de syntaxe. Au
 
 Les non terminaux sont des espaces réservés dans la syntaxe qui sont définis ailleurs dans ce résumé de syntaxe. Les définitions peuvent être récursives.
 
-Un composant facultatif est indiqué par l'élément <sub>opt</sub> indicé. Par exemple :
+Un composant facultatif est indiqué par le script <sub>OPT</sub>. Par exemple,
 
-> **{** *expression*<sub>opt</sub> **}**
+> **{** *expression*<sub>OPT</sub> **}**
 
 indique une expression facultative entre accolades.
 
@@ -27,9 +27,9 @@ Les conventions syntaxiques utilisent différents attributs de police pour diff�
 
 |Attribut|Description|
 |---------------|-----------------|
-|*nonterminal*|Le type italique indique des symboles non terminaux.|
+|*élément non terminal*|Le type italique indique des symboles non terminaux.|
 |**const**|Les symboles terminaux en gras sont des mots réservés littéraux et des symboles littéraux qui doivent être écrits comme indiqué. Les caractères situés dans ce contexte respectent toujours la casse.|
-|<sub>opt</sub>|Les symboles non terminaux suivis d’<sub>opt</sub> sont toujours facultatifs.|
+|<sub>option</sub>|Les non terminaux suivis de <sub>OPT</sub> sont toujours facultatifs.|
 |police par défaut|Les caractères dans le jeu décrit ou répertorié dans cette police peuvent être utilisés comme terminaux dans les instructions C.|
 
 Un signe deux-points (**:**) qui suit un symbole non terminal introduit sa définition. Les définitions alternatives figurent sur des lignes distinctes, sauf lorsqu'elles sont précédées des mots « one of ».

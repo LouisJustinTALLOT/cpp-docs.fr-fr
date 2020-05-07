@@ -3,11 +3,11 @@ title: Arguments pour main
 ms.date: 11/04/2016
 ms.assetid: 39824fef-05ad-461d-ae82-49447dda8060
 ms.openlocfilehash: 918be9d281f1cb12c27c6c2f5dd834e4af137179
-ms.sourcegitcommit: f4be868c0d1d78e550fba105d4d3c993743a1f4b
-ms.translationtype: HT
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56150257"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62313556"
 ---
 # <a name="arguments-to-main"></a>Arguments pour main
 
@@ -29,7 +29,7 @@ Le tableau de chaînes se termine par **argv[argc]**, qui contient un pointeur n
 
 Tous les éléments du tableau **argv** sont des pointeurs vers des chaînes.
 
-Un programme appelé sans argument de ligne de commande reçoit une valeur de un pour **argc** lorsque le nom du fichier exécutable est placé dans **argv[0]**. Dans les versions MS-DOS antérieures à 3.0, le nom du fichier exécutable n'est pas disponible. La lettre C est placée dans **argv[0]**. Les chaînes pointées par **argv[1]** à **argv[argc - 1]** représentent des paramètres de programme.
+Un programme appelé sans argument de ligne de commande reçoit une valeur de un pour **argc** lorsque le nom du fichier exécutable est placé dans **argv[0]**. Dans les versions MS-DOS antérieures à 3.0, le nom du fichier exécutable n'est pas disponible. La lettre « C » est placée dans **argv [0]**. Les chaînes pointées par **argv [1]** à **argv [argc-1] représentent les** paramètres du programme.
 
 Les paramètres **argc** et **argv** sont modifiables et conservent leurs dernières valeurs stockées entre le démarrage du programme et l’arrêt du programme.
 

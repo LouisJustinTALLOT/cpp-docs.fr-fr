@@ -33,59 +33,59 @@ Lors de la conversion d’un entier non signé en type à virgule flottante, si 
 
 Consultez [stockage des types de base](../c-language/storage-of-basic-types.md) pour plus d’informations sur les tailles des types intégraux et à virgule flottante.
 
-**Section spécifique à Microsoft**
+**Spécifique à Microsoft**
 
 Dans le compilateur Microsoft, **non signé** (ou **unsigned int**) et **unsigned long** sont des types distincts, mais équivalents. La conversion d’une valeur **unsigned int** s’effectue de la même façon que la conversion d’une valeur **unsigned long**.
 
-**FIN de la section spécifique à Microsoft**
+**FIN spécifique à Microsoft**
 
 Le tableau suivant répertorie les conversions de types intégraux non signés.
 
 ## <a name="table-of-conversions-from-unsigned-integral-types"></a>Tableau des conversions des types intégraux non signés
 
-|From|À|Méthode|
+|À partir|À|Méthode|
 |----------|--------|------------|
 |**unsigned char**|**char**|Conserver le modèle binaire. Le bit de poids fort devient un bit de signe|
-|**unsigned char**|**short**|Extension zéro|
+|**unsigned char**|**Résumé**|Extension zéro|
 |**unsigned char**|**long**|Extension zéro|
 |**unsigned char**|**long long**|Extension zéro|
 |**unsigned char**|**unsigned short**|Extension zéro|
 |**unsigned char**|**unsigned long**|Extension zéro|
-|**unsigned char**|**long long non signé**|Extension zéro|
+|**unsigned char**|**unsigned long long**|Extension zéro|
 |**unsigned char**|**float**|Convertir en **long**. Convertir **long** en **float**|
 |**unsigned char**|**double**|Convertir en **long**. Convertir **long** en **double**|
 |**unsigned char**|**long double**|Convertir en **long**. Convertir **long** en **double**|
 |**unsigned short**|**char**|Conserver l'octet de poids faible|
-|**unsigned short**|**short**|Conserver le modèle binaire. Le bit de poids fort devient un bit de signe|
+|**unsigned short**|**Résumé**|Conserver le modèle binaire. Le bit de poids fort devient un bit de signe|
 |**unsigned short**|**long**|Extension zéro|
 |**unsigned short**|**long long**|Extension zéro|
 |**unsigned short**|**unsigned char**|Conserver l'octet de poids faible|
 |**unsigned short**|**unsigned long**|Extension zéro|
-|**unsigned short**|**long long non signé**|Extension zéro|
+|**unsigned short**|**unsigned long long**|Extension zéro|
 |**unsigned short**|**float**|Convertir en **long**. Convertir **long** en **float**|
 |**unsigned short**|**double**|Convertir en **long**. Convertir **long** en **double**|
 |**unsigned short**|**long double**|Convertir en **long**. Convertir **long** en **double**|
 |**unsigned long**|**char**|Conserver l'octet de poids faible|
-|**unsigned long**|**short**|Conserver le mot de poids faible|
+|**unsigned long**|**Résumé**|Conserver le mot de poids faible|
 |**unsigned long**|**long**|Conserver le modèle binaire. Le bit de poids fort devient un bit de signe|
 |**unsigned long**|**long long**|Extension zéro|
 |**unsigned long**|**unsigned char**|Conserver l'octet de poids faible|
 |**unsigned long**|**unsigned short**|Conserver le mot de poids faible|
-|**unsigned long**|**long long non signé**|Extension zéro|
+|**unsigned long**|**unsigned long long**|Extension zéro|
 |**unsigned long**|**float**|Convertir en **long**. Convertir **long** en **float**|
 |**unsigned long**|**double**|Convertir directement en **double**|
 |**unsigned long**|**long double**|Convertir en **long**. Convertir **long** en **double**|
-|**long long non signé**|**char**|Conserver l'octet de poids faible|
-|**long long non signé**|**short**|Conserver le mot de poids faible|
-|**long long non signé**|**long**|Conserver le DWORD de poids faible|
-|**long long non signé**|**long long**|Conserver le modèle binaire. Le bit de poids fort devient un bit de signe|
-|**long long non signé**|**unsigned char**|Conserver l'octet de poids faible|
-|**long long non signé**|**unsigned short**|Conserver le mot de poids faible|
-|**long long non signé**|**unsigned long**|Conserver le DWORD de poids faible|
-|**long long non signé**|**float**|Convertir en **long**. Convertir **long** en **float**|
-|**long long non signé**|**double**|Convertir directement en **double**|
-|**long long non signé**|**long double**|Convertir en **long**. Convertir **long** en **double**|
+|**unsigned long long**|**char**|Conserver l'octet de poids faible|
+|**unsigned long long**|**Résumé**|Conserver le mot de poids faible|
+|**unsigned long long**|**long**|Conserver le DWORD de poids faible|
+|**unsigned long long**|**long long**|Conserver le modèle binaire. Le bit de poids fort devient un bit de signe|
+|**unsigned long long**|**unsigned char**|Conserver l'octet de poids faible|
+|**unsigned long long**|**unsigned short**|Conserver le mot de poids faible|
+|**unsigned long long**|**unsigned long**|Conserver le DWORD de poids faible|
+|**unsigned long long**|**float**|Convertir en **long**. Convertir **long** en **float**|
+|**unsigned long long**|**double**|Convertir directement en **double**|
+|**unsigned long long**|**long double**|Convertir en **long**. Convertir **long** en **double**|
 
 ## <a name="see-also"></a>Voir aussi
 
-[Conversions d’assignation](../c-language/assignment-conversions.md)
+[Conversions d’affectation](../c-language/assignment-conversions.md)

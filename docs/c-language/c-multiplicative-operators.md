@@ -20,13 +20,13 @@ ms.locfileid: "81334999"
 ---
 # <a name="c-multiplicative-operators"></a>Opérateurs de multiplication C
 
-Les opérateurs multiplicatifs effectuent la multiplication (<strong>\*</strong>), division (**/**), et le reste (**%**) opérations.
+Les opérateurs de multiplication effectuent des<strong>\*</strong>opérations de multiplication (**/**), de division (**%**) et de reste ().
 
 ## <a name="syntax"></a>Syntaxe
 
-*expression multiplicative* &nbsp; &nbsp; &nbsp; &nbsp;: expression &nbsp; &nbsp; *multiplicative-expression* <strong>\*</strong> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; *de fonte-expression* *multiplicative-expression multiplicative-expression* **/** *cast-expression* &nbsp; *multiplicative-expression* **%** *cast-expression cast-expression* *cast-expression*
+multiplicatif *-* &nbsp; &nbsp; &nbsp; &nbsp; *expression :* *cast-expression* *multiplicative-expression* *multiplicative-expression* *cast-expression* *cast-expression* *multiplicative-expression* &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <strong>\*</strong> &nbsp;Cast-expression multiplicatif-expression cast-expression cast-expression multiplicative-expression cast-expression cast-expression cast-expression &nbsp; &nbsp; &nbsp; **/** &nbsp; &nbsp; &nbsp; **%**
 
-Les opérands de l’opérateur restant (**%**) doivent faire partie intégrante. La multiplication<strong>\*</strong>( )**/** et la division ( ) les opérateurs peuvent prendre des opérands de type intégral ou flottant; les types d’opérandes peuvent être différents.
+Les opérandes de l’opérateur de reste**%**() doivent être intégraux. Les opérateurs de multiplication<strong>\*</strong>() et de**/** Division () peuvent prendre des opérandes de type intégral ou flottant ; les types des opérandes peuvent être différents.
 
 Les opérateurs de multiplication exécutent les conversions arithmétiques courantes sur les opérandes. Le type du résultat est le type des opérandes après conversion.
 
@@ -38,8 +38,8 @@ Les opérateurs de multiplication C sont décrits ci-dessous :
 |Opérateur|Description|
 |--------------|-----------------|
 |<strong>\*</strong>|L’opérateur de multiplication provoque la multiplication de ces deux opérandes.|
-|**/**|L’opérateur de division provoque la division du premier opérande par le deuxième. Si deux opérandes entiers sont divisés et que le résultat n’est pas un entier, il est tronqué selon les règles suivantes :<br/><br/>- Le résultat de la division par 0 est indéfini selon la norme C ANSI. Le compilateur Microsoft C génère une erreur au moment de la compilation ou de l'exécution.<br/><br/>- Si les deux opérandes sont positifs ou non signés, le résultat est tronqué vers 0.<br/><br/>- Si l’un des opérandes est négatif, si le résultat de l’opération est le plus grand entier inférieur ou égal au quotient algébrique ou le plus petit entier supérieur ou égal au quotient algébrique, l’implémentation est définie. (Voir la section Microsoft-spécifique ci-dessous.)|
-|**%**|Le résultat de l’opérateur de reste est le reste lorsque le premier opérande est divisé par le deuxième. Lorsque la division est incorrecte, le résultat est déterminé par les règles suivantes :<br/><br/>- Si l’opérande de droite est zéro, le résultat est non défini.<br/><br/>- Si les deux opérandes sont positifs ou non signés, le résultat est positif.<br/><br/>- Si l’un des opérandes est négatif et que le résultat est incorrect, le résultat est que l’implémentation est définie. (Voir la section Microsoft-spécifique ci-dessous.)|
+|**/**|L’opérateur de division provoque la division du premier opérande par le deuxième. Si deux opérandes entiers sont divisés et que le résultat n’est pas un entier, il est tronqué selon les règles suivantes :<br/><br/>- Le résultat de la division par 0 est indéfini selon la norme C ANSI. Le compilateur Microsoft C génère une erreur au moment de la compilation ou de l'exécution.<br/><br/>- Si les deux opérandes sont positifs ou non signés, le résultat est tronqué vers 0.<br/><br/>- Si l’un des opérandes est négatif, si le résultat de l’opération est le plus grand entier inférieur ou égal au quotient algébrique ou le plus petit entier supérieur ou égal au quotient algébrique, l’implémentation est définie. (Consultez la section spécifique à Microsoft ci-dessous.)|
+|**%**|Le résultat de l’opérateur de reste est le reste lorsque le premier opérande est divisé par le deuxième. Lorsque la division est incorrecte, le résultat est déterminé par les règles suivantes :<br/><br/>- Si l’opérande de droite est zéro, le résultat est non défini.<br/><br/>- Si les deux opérandes sont positifs ou non signés, le résultat est positif.<br/><br/>- Si l’un des opérandes est négatif et que le résultat est incorrect, le résultat est que l’implémentation est définie. (Consultez la section spécifique à Microsoft ci-dessous.)|
 
 ### <a name="microsoft-specific"></a>Spécifique à Microsoft
 
@@ -76,7 +76,7 @@ n = i % j;
 
 Cette instruction assigne le reste entier `n` lorsque 10 est divisé par 3.
 
-**Microsoft Spécifique**
+**Spécifique à Microsoft**
 
 Le signe du reste est identique au signe du dividende. Par exemple :
 
@@ -87,8 +87,8 @@ Le signe du reste est identique au signe du dividende. Par exemple :
 
 Dans chaque cas, `50` et `2` ont le même signe.
 
-**END Microsoft Spécifique**
+**FIN spécifique à Microsoft**
 
 ## <a name="see-also"></a>Voir aussi
 
-[Les opérateurs multiplicatifs et l’opérateur Modulus](../cpp/multiplicative-operators-and-the-modulus-operator.md)
+[Opérateurs de multiplication et opérateur modulo](../cpp/multiplicative-operators-and-the-modulus-operator.md)

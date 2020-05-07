@@ -19,15 +19,15 @@ Vous pouvez importer des fonctions dans une application à l’aide de deux mét
 
 - Utiliser les mots clés **__declspec (dllimport)** dans une définition de fonction dans l’application principale
 
-- Utiliser un fichier de définition (.def) de module avec **__declspec (dllimport)**
+- Utiliser un fichier de définition de module (. def) avec **__declspec (dllimport)**
 
-## <a name="what-do-you-want-to-do"></a>Que voulez-vous faire ?
+## <a name="what-do-you-want-to-do"></a>Que voulez-vous faire ?
 
-- [Importer dans une Application à l’aide de __declspec (dllimport)](importing-into-an-application-using-declspec-dllimport.md)
+- [Importer dans une application à l’aide de __declspec (dllimport)](importing-into-an-application-using-declspec-dllimport.md)
 
 - [Importer des appels de fonction à l’aide de __declspec (dllimport)](importing-function-calls-using-declspec-dllimport.md)
 
-- [Importer des données à l’aide de __declspec (dllimport)](importing-data-using-declspec-dllimport.md)
+- [Importer des données à l’aide d' __declspec (dllimport)](importing-data-using-declspec-dllimport.md)
 
 - [Importer à l’aide de fichiers DEF](importing-using-def-files.md)
 

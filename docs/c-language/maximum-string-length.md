@@ -8,15 +8,15 @@ helpviewer_keywords:
 - strings [C++], length
 ms.assetid: 99a80e4a-6212-47b7-a6bd-bdf99bd44928
 ms.openlocfilehash: 650088249e4c6abd515c29b873a9f09dc1d2a60a
-ms.sourcegitcommit: f4be868c0d1d78e550fba105d4d3c993743a1f4b
-ms.translationtype: HT
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56148307"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62232876"
 ---
 # <a name="maximum-string-length"></a>Longueur maximale de chaîne
 
-**Section spécifique à Microsoft**
+**Spécifique à Microsoft**
 
 La compatibilité ANSI requiert un compilateur pour accepter jusqu'à 509 caractères dans un littéral de chaîne après concaténation. La longueur maximale d'un littéral de chaîne autorisé dans Microsoft C est d'environ 2 048 octets. Toutefois, si le littéral de chaîne comporte des parties placées entre guillemets, le préprocesseur concatène les parties dans une chaîne unique, et pour chaque ligne concaténée, il ajoute un octet supplémentaire au nombre total d'octets.
 
@@ -24,7 +24,7 @@ Par exemple, supposons qu'une chaîne se compose de 40 lignes avec 50 caractère
 
 Alors qu'une chaîne entre guillemets individuelle ne peut pas dépasser 2 048 octets, un littéral de chaîne d'environ 65 535 octets peut être construit en concaténant les chaînes.
 
-**FIN de la section spécifique à Microsoft**
+**FIN spécifique à Microsoft**
 
 ## <a name="see-also"></a>Voir aussi
 

@@ -12,27 +12,27 @@ helpviewer_keywords:
 - logical OR operator
 ms.assetid: c0a4e766-ad56-4300-bf76-b28dc0e19b43
 ms.openlocfilehash: 5df0c0f16bdf298c47a6a0699ec10c7392ab84ca
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
-ms.translationtype: HT
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50651267"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62326584"
 ---
 # <a name="c-logical-operators"></a>Opérateurs logiques C
 
-Les opérateurs logiques effectuent des opérations de ET logique (**&&**) et de OU logique (**||**).
+Les opérateurs logiques effectuent des opérations**&&** and logiques and ()**||** et Logical-or ().
 
 ## <a name="syntax"></a>Syntaxe
 
-*logical-AND-expression* :<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*inclusive-OR-expression*<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*logical-AND-expression*  **&&**  *inclusive-OR-expression*
+*expression and logique*:<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*inclusif ou expression*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*Logical-and-expression*  **&&**  *inclusif-or-expression*
 
-*logical-OR-expression* :<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*logical-AND-expression*<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*logical-OR-expression*  **&#124;&#124;**  *logical-AND-expression*
+*logique-or-expression*:<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*expression AND logique*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;Logical- *or-expression* **&#124;&#124;** *logique-and-expression*    
 
-## <a name="remarks"></a>Notes
+## <a name="remarks"></a>Notes 
 
 Les opérateurs logiques n’effectuent pas les conversions arithmétiques habituelles. Au lieu de cela, ils évaluent chaque opérande en termes d’équivalence à 0. Le résultat d’une opération logique est 0 ou 1. Le type du résultat est **int**.
 

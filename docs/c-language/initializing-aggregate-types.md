@@ -10,7 +10,7 @@ helpviewer_keywords:
 ms.assetid: a8f8ed75-39db-4592-93b9-d3920d915810
 ms.openlocfilehash: f6816a6f63de262b927a3c5aeed8774ba29c2eaa
 ms.sourcegitcommit: 16c0392fc8d96e814c3a40b0c5346d7389aeb525
-ms.translationtype: HT
+ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 08/12/2019
 ms.locfileid: "62326077"
@@ -21,13 +21,13 @@ Un type d’*agrégat* est un type de structure, d’union ou de tableau. Si un 
 
 ## <a name="syntax"></a>Syntaxe
 
-*initializer* :<br/>
-&nbsp;&nbsp;&nbsp;&nbsp; **{**  *initializer-list*  **}** /* Pour l’initialisation d’agrégats \*/<br/>
-&nbsp;&nbsp;&nbsp;&nbsp; **{**  *initializer-list*  **, }**
+*initialiseur*:<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**{**  *initializer-List*  **}** /* pour l’initialisation d’agrégats\*/<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**{**  *initializer-List*  **,}**
 
-*initializer-list* :<br/>
+*initialiseur-List*:<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*initializer*<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*initializer-list*  **,**  *initializer*
+&nbsp;&nbsp;&nbsp;&nbsp;*initializer-List*  **,**  *initialiseur*
 
 L'élément *initializer-list* est une liste d'initialiseurs séparés par des virgules. Chaque initialiseur de la liste est une expression constante ou une liste d'initialiseurs. Par conséquent, les listes d'initialiseurs peuvent être imbriquées. Cette forme est utile pour initialiser les membres d'agrégats d'un type d'agrégat, comme indiqué dans les exemples de cette section. Toutefois, si l'initialiseur d'un identificateur automatique est une expression unique, il n'a pas besoin d'être une expression constante ; il doit simplement avoir le type approprié pour être assigné à l'identificateur.
 
@@ -35,7 +35,7 @@ Pour chaque liste d'initialiseurs, les valeurs des expressions constantes sont a
 
 Si l'élément *initializer-list* comporte moins de valeurs qu'un type d'agrégat, les membres ou éléments restants du type d'agrégat sont initialisés à 0. La valeur initiale d'un identificateur automatique qui n'est pas initialisé explicitement n'est pas définie. Si *initializer-list* comporte plus de valeurs qu'un type d'agrégat, une erreur se produit. Ces règles s'appliquent à chaque liste d'initialiseurs incorporée, ainsi qu'à l'agrégat dans son ensemble.
 
-L'initialiseur d'une structure est une expression du même type, ou une liste d'initialiseurs pour ses membres placés entre accolades ( **{ }** ). Les membres champs de bits sans nom ne sont pas initialisés.
+L'initialiseur d'une structure est une expression du même type, ou une liste d'initialiseurs pour ses membres placés entre accolades (**{ }**). Les membres champs de bits sans nom ne sont pas initialisés.
 
 Lorsqu'une union est initialisée, *initializer-list* doit être une expression constante unique. La valeur de l'expression constante est assignée au premier membre de l'union.
 
@@ -49,11 +49,11 @@ int x[ ] = { 0, 1, 2 }
 
 Toutefois, si vous spécifiez la taille et indiquez un nombre erroné d'initialiseurs, le compilateur génère une erreur.
 
-**Section spécifique à Microsoft**
+**Spécifique à Microsoft**
 
 La taille maximale d'un tableau est définie par **size_t**. Défini dans le fichier d'en-tête STDDEF.H, **size_t** est un `unsigned int` présentant la plage de 0x00000000 à 0x7CFFFFFF.
 
-**FIN de la section spécifique à Microsoft**
+**FIN spécifique à Microsoft**
 
 ## <a name="examples"></a>Exemples
 
@@ -152,4 +152,4 @@ Dans cet exemple, la variable d'union `y` est initialisée. Le premier élément
 
 ## <a name="see-also"></a>Voir aussi
 
-[Initialisation](../c-language/initialization.md)
+[D’initialisation](../c-language/initialization.md)

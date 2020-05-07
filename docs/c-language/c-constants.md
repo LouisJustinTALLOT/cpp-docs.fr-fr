@@ -6,11 +6,11 @@ helpviewer_keywords:
 - constants
 ms.assetid: f5bd7213-97ab-4cad-b913-1fc91a486935
 ms.openlocfilehash: 39559f85585b3ba7f21935f43abfb6ada4b0a605
-ms.sourcegitcommit: f4be868c0d1d78e550fba105d4d3c993743a1f4b
-ms.translationtype: HT
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56152701"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62326090"
 ---
 # <a name="c-constants"></a>Constantes C
 
@@ -19,13 +19,13 @@ Une « constante » est un nombre, un caractère ou une chaîne de caractères
 ## <a name="syntax"></a>Syntaxe
 
 `constant`:<br/>
-*floating-point-constant*
+*constante à virgule flottante*
 
-*integer-constant*
+*entier-constante*
 
 *enumeration-constant*
 
-*character-constant*
+*caractère-constante*
 
 Les constantes sont caractérisées par le fait qu'elles ont une valeur et un type. Les constantes à [virgule flottante](../c-language/c-floating-point-constants.md), [entières](../c-language/c-integer-constants.md) et [caractères](../c-language/c-character-constants.md) sont traitées dans les trois sections suivantes. Les constantes d'énumération sont décrites dans [Déclarations d'énumération](../c-language/c-enumeration-declarations.md).
 

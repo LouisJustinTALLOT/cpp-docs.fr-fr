@@ -58,7 +58,7 @@ int main() {
 They are not equal! The value of c is  2.4679999352 or 2.468000
 ```
 
-## <a name="comments"></a>Comments
+## <a name="comments"></a>Commentaires
 
 Pour EPSILON, vous pouvez utiliser les constantes FLT_EPSILON, qui est défini pour float comme 1.192092896 e-07F, ou DBL_EPSILON, qui est défini pour double comme 2, 2204460492503131e e-016. Vous devez inclure float. h pour ces constantes. Ces constantes sont définies comme étant le plus petit nombre positif x, de sorte que x + 1,0 n’est pas égal à 1,0. Étant donné qu’il s’agit d’un très petit nombre, vous devez utiliser la tolérance définie par l’utilisateur pour les calculs impliquant de très grands nombres.
 

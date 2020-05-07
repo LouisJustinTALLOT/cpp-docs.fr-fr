@@ -14,7 +14,7 @@ ms.locfileid: "64341194"
 ---
 # <a name="pgosweep"></a>pgosweep
 
-Utilisé dans l’optimisation guidée par profil pour écrire toutes les données de profil à partir d’un programme en cours d’exécution dans le fichier .pgc.
+Utilisé dans l’optimisation guidée par profil pour écrire toutes les données de profil d’un programme en cours d’exécution dans le fichier. PGC.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -23,34 +23,34 @@ Utilisé dans l’optimisation guidée par profil pour écrire toutes les donné
 ### <a name="parameters"></a>Paramètres
 
 *options*<br/>
-(Facultatif) Les valeurs valides pour *options* sont :
+Facultatif Les valeurs valides pour les *options* sont les suivantes :
 
 - **/?** ou **/Help** affiche le message d’aide.
 
-- **/NoReset** conserve le compte dans les structures de données de runtime.
+- **/noreset** conserve le nombre dans les structures de données d’exécution.
 
 *image*<br/>
-Le chemin d’accès complet d’un fichier .exe ou .dll qui a été créé à l’aide de la [/genprofile](reference/genprofile-fastgenprofile-generate-profiling-instrumented-build.md), [/fastgenprofile](reference/genprofile-fastgenprofile-generate-profiling-instrumented-build.md), ou [/LTCG : PGINSTRUMENT](reference/ltcg-link-time-code-generation.md) option.
+Le chemin d’accès complet d’un fichier. exe ou. dll qui a été créé à l’aide de l’option [/GENPROFILE](reference/genprofile-fastgenprofile-generate-profiling-instrumented-build.md), [/FASTGENPROFILE](reference/genprofile-fastgenprofile-generate-profiling-instrumented-build.md)ou [/LTCG : PGINSTRUMENT](reference/ltcg-link-time-code-generation.md) .
 
 *pgcfile*<br/>
-Le fichier .pgc où cette commande écrit les données de nombres.
+Fichier. PGC dans lequel cette commande écrit le nombre de données.
 
-## <a name="remarks"></a>Notes
+## <a name="remarks"></a>Notes 
 
-Le **pgosweep** commande fonctionne sur les programmes qui ont été créés à l’aide de la [/GENPROFILE ou /fastgenprofile.](reference/genprofile-fastgenprofile-generate-profiling-instrumented-build.md) option ou déconseillées [/LTCG : PGINSTRUMENT](reference/ltcg-link-time-code-generation.md) option. Elle interrompt un programme en cours d’exécution et écrit les données de profil dans un nouveau fichier .pgc. Par défaut, la commande réinitialise les comptes après chaque opération d’écriture. Si vous spécifiez le **/noreset** option, la commande enregistre les valeurs, mais pas Réinitialisez-les dans le programme en cours d’exécution. Cette option vous donne les données en double si vous récupérez les données de profil ultérieurement.
+La commande **pgosweep** fonctionne sur les programmes qui ont été générés à l’aide de l’option [/GENPROFILE ou/FASTGENPROFILE](reference/genprofile-fastgenprofile-generate-profiling-instrumented-build.md) , ou l’option Deprecated [: PGINSTRUMENT](reference/ltcg-link-time-code-generation.md) déconseillée. Il interrompt un programme en cours d’exécution et écrit les données de profil dans un nouveau fichier. PGC. Par défaut, la commande réinitialise les nombres après chaque opération d’écriture. Si vous spécifiez l’option **/noreset** , la commande enregistre les valeurs, mais ne les réinitialise pas dans le programme en cours d’exécution. Cette option vous permet d’obtenir des données en double si vous récupérez les données de profil ultérieurement.
 
-Une utilisation alternative pour **pgosweep** consiste à récupérer des informations de profil uniquement pour le fonctionnement normal de l’application. Par exemple, vous pouvez exécuter **pgosweep** peu de temps après le démarrage de l’application et d’ignorer ce fichier. Cette action supprimera les données de profil associées à des coûts de démarrage. Ensuite, vous pouvez exécuter **pgosweep** avant la fin de l’application. Les données collectées ont maintenant des informations de profil uniquement à partir du moment que l’utilisateur peut interagir avec le programme.
+Une autre utilisation de **pgosweep** consiste à récupérer les informations de profil uniquement pour le fonctionnement normal de l’application. Par exemple, vous pouvez exécuter **pgosweep** peu de fois après avoir démarré l’application et ignoré ce fichier. Cela supprime les données de profil associées aux coûts de démarrage. Ensuite, vous pouvez exécuter **pgosweep** avant de mettre fin à l’application. Désormais, les données collectées comportent des informations de profil uniquement à partir du moment où l’utilisateur peut interagir avec le programme.
 
-Lorsque vous nommez un fichier .pgc (à l’aide de la *pgcfile* paramètre) vous pouvez utiliser le format standard, c'est-à-dire *appname ! n*.pgc. Si vous utilisez ce format, le compilateur détecte automatiquement ces données dans le **/LTCG /USEPROFILE** ou **/LTCG : PGO** phase. Si vous n’utilisez pas le format standard, vous devez utiliser [pgomgr](pgomgr.md) pour fusionner les fichiers .pgc.
+Quand vous nommez un fichier. PGC (à l’aide du paramètre *pgcfile* ), vous pouvez utiliser le format standard, qui est *appname ! n*. PGC. Si vous utilisez ce format, le compilateur trouve automatiquement ces données dans la phase **/LTCG/USEPROFILE** ou **/LTCG : PGO** . Si vous n’utilisez pas le format standard, vous devez utiliser [pgomgr](pgomgr.md) pour fusionner les fichiers. PGC.
 
 > [!NOTE]
 > Vous pouvez démarrer cet outil uniquement à partir d’une invite de commandes développeur Visual Studio. Vous ne pouvez pas le démarrer à partir d'une invite de commandes système ni de l'Explorateur de fichiers.
 
-Pour plus d’informations sur la façon de capturer les données de profil à partir de votre fichier exécutable, consultez [PgoAutoSweep](pgoautosweep.md).
+Pour plus d’informations sur la capture des données de profil à partir de votre fichier exécutable, consultez [PgoAutoSweep](pgoautosweep.md).
 
-## <a name="example"></a>Exemple
+## <a name="example"></a> Exemple
 
-Dans cet exemple de commande, **pgosweep** écrit les informations de profil actuelles pour myapp.exe sur myapp ! 1.pgc.
+Dans cet exemple de commande, **pgosweep** écrit les informations de profil actuelles pour MyApp. exe dans myapp ! 1. PGC.
 
 `pgosweep myapp.exe myapp!1.pgc`
 
