@@ -21,7 +21,7 @@ C contient un opérateur ternaire : l'opérateur d'expression conditionnelle (*
 
 *expression conditionnelle*:<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*Expression OU logique*<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*Expression OU logique*  **?**  *expression*  **:**  *expression conditionnelle*
+&nbsp;&nbsp;&nbsp;&nbsp;*Expression OU logique*  **?**  *expression*  **:**  *Conditional-expression*
 
 L'élément *logical-OR-expression* doit être de type intégral, flottant ou pointeur. Il est évalué en termes d'équivalence à 0. Un point de séquence suit l'élément *logical-OR-expression*. L’évaluation des opérandes continue comme suit :
 

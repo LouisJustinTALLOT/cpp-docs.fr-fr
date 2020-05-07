@@ -8,11 +8,11 @@ helpviewer_keywords:
 - single quotation mark
 ms.assetid: 388ae7d7-2c3a-44d6-a507-63f541ecd2da
 ms.openlocfilehash: 5d87b57726f741cc96f2180de33cae01403786ec
-ms.sourcegitcommit: f4be868c0d1d78e550fba105d4d3c993743a1f4b
-ms.translationtype: HT
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56152766"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62326298"
 ---
 # <a name="c-character-constants"></a>Constantes caractère C
 
@@ -20,33 +20,33 @@ Une constante caractère est formée en plaçant un caractère du jeu de caract�
 
 ## <a name="syntax"></a>Syntaxe
 
-*character-constant*: **'** *c-char-sequence* **'**
+*constante de caractère*: **'** *c-char-Sequence* **'**
 
-**L'** *c-char-sequence* **'**
+**L'** *c-char-Sequence* **'**
 
-*c-char-sequence*: *c-char*
+*c-char-Sequence*: *c-char*
 
 *c-char-sequence c-char*
 
-*c-char* : Tout membre du jeu de caractères source à l'exception du guillemet simple (**'**), de la barre oblique inverse (**\\**) ou du caractère de saut de ligne
+*c-char* : tout membre du jeu de caractères source à l’exception du guillemet simple (**'**), de la barre oblique inverse (**\\**) ou du caractère de saut de ligne
 
-*escape-sequence*
+*séquence d’échappement*
 
 *escape-sequence*: *simple-escape-sequence*
 
 *octal-escape-sequence*
 
-*hexadecimal-escape-sequence*
+*séquence d’échappement hexadécimale*
 
 *simple-escape-sequence* : un des éléments suivants : **\a \b \f \n \r \t \v**
 
 **\\' \\" \\\ \\?**
 
-*octal-escape-sequence*: **\\**  *octal-digit*
+*octal-séquence d’échappement-séquence*: **\\** *chiffre octal*  
 
-**\\**  *octal-digit octal-digit*
+**\\**  *chiffre octal-chiffre*
 
-**\\**  *octal-digit octal-digit octal-digit*
+**\\**  *chiffre octal-chiffre octal-chiffre*
 
 *hexadecimal-escape-sequence*: **\x**  *hexadecimal-digit*
 

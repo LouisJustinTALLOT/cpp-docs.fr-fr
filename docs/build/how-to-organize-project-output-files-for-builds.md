@@ -46,9 +46,9 @@ Cette rubrique décrit les bonnes pratiques relatives à l’organisation de fic
 
 1. Référencez le fichier d’en-tête approprié dans votre code à l’aide de la directive #include. Le fichier d’en-tête doit être dans le chemin include ou doit faire partie du projet actif. Pour plus d’informations, consultez [#include, directive (C/C++)](../preprocessor/hash-include-directive-c-cpp.md).
 
-1. Vous pouvez également définir des dépendances de projet. La définition de dépendances de projet garantit deux choses. Premièrement, comme les projets sont générés dans le bon ordre, ils peuvent toujours trouver les fichiers dépendants dont ils ont besoin. Deuxièmement, il ajoute implicitement le répertoire de sortie du projet dépendant à la voie de sorte que les fichiers peuvent être trouvés facilement à l’heure de liaison.
+1. Vous pouvez également définir des dépendances de projet. La définition de dépendances de projet garantit deux choses. Premièrement, comme les projets sont générés dans le bon ordre, ils peuvent toujours trouver les fichiers dépendants dont ils ont besoin. Deuxièmement, il ajoute implicitement le répertoire de sortie du projet dépendant au chemin d’accès afin que les fichiers puissent être facilement trouvés au moment de la liaison.
 
-1. Pour déployer l’application, vous devez placer la DLL dans un emplacement approprié. Il peut s'agir de l'un des états suivants :
+1. Pour déployer l’application, vous devez placer la DLL dans un emplacement approprié. Il peut s'agir de l'une des ressources suivantes :
 
    1. Chemin identique à celui de l’exécutable.
 

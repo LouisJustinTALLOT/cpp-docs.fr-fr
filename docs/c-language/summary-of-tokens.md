@@ -3,45 +3,45 @@ title: Résumé des jetons
 ms.date: 11/04/2016
 ms.assetid: 2978cbf6-e66e-46fc-9938-caa052f2ccf7
 ms.openlocfilehash: 4fdc1cf4c4e5a89cc9ecf029e64b6eb5422cd6a3
-ms.sourcegitcommit: f4be868c0d1d78e550fba105d4d3c993743a1f4b
-ms.translationtype: HT
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56149113"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62345134"
 ---
 # <a name="summary-of-tokens"></a>Résumé des jetons
 
-*token* :<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*keyword*<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*identifier*<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*constante*<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*string-literal*<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*opérateur*<br/>
+*jeton*:<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*mot*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*identificateur*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*suivantes*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*littéral de chaîne*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*and*<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*punctuator*
 
 *preprocessing-token* :<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*header-name*<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*identifier*<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*pp-number*<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*character-constant*<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*string-literal*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*nom-en-tête*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*identificateur*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*pp-numéro*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*caractère-constante*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*littéral de chaîne*<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*operator punctuator*<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;chaque caractère autre qu'un espace blanc qui ne peut pas être l'un des éléments ci-dessus
 
-*header-name* :<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**\<**  *path-spec*  **>**<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**"**  *path spec*  **"**
+*nom-en-tête*:<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**\<**  *chemin d’accès-spécification*  **>**<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**«**  *spécification du chemin*  **»**
 
-*path-spec* :<br/>
+*chemin d’accès-spécification*:<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;Chemin d’accès de fichier conforme
 
-*pp-number* :<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*digit*<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**.** *digit*<br/>
+*pp-numéro*:<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*caractères*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**.** *caractères*<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*pp-number* *digit* <br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*pp-number* *nondigit*<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*pp-number*  **e**  *sign*<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*pp-number*  **E**  *sign*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*pp-numéro***E***sign*    <br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*pp-number*  **.**
 
 ## <a name="see-also"></a>Voir aussi

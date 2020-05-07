@@ -21,15 +21,15 @@ L'instruction `goto` transfère le contrôle à une étiquette. L'étiquette don
 
 ## <a name="syntax"></a>Syntaxe
 
-*instruction* :<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*labeled-statement*<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*jump-statement*
+*instruction*:<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*instruction étiquetée*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*instruction Jump*
 
-*saut-instruction* :<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**goto** **.**
+*instruction Jump*:<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**goto***identificateur*Goto **;**    
 
-*labeled-statement* :<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*identificateur* **:** *instruction*
+*instruction étiquetée*:<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*identificateur*  **:**  *instruction*
 
 Une étiquette d'instruction est uniquement explicite pour une instruction `goto`. Dans tout autre contexte, une instruction étiquetée est exécutée sans tenir compte de l'étiquette.
 

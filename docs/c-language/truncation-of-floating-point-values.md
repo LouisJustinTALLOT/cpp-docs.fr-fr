@@ -15,8 +15,8 @@ ms.locfileid: "81480879"
 
 **ANSI 3.2.1.4** Sens de la troncation ou de l'arrondi lorsqu'un nombre à virgule flottante est converti en nombre à virgule flottante plus étroit
 
-Lorsqu’un débit de sous-flux se produit, la valeur d’une variable de point flottant est arrondie à zéro. Un dépassement de capacité positif peut provoquer une erreur d'exécution ou produire une valeur imprévisible, selon les optimisations spécifiées.
+Lorsqu’un dépassement de capacité négatif se produit, la valeur d’une variable à virgule flottante est arrondie à zéro. Un dépassement de capacité positif peut provoquer une erreur d'exécution ou produire une valeur imprévisible, selon les optimisations spécifiées.
 
 ## <a name="see-also"></a>Voir aussi
 
-[Mathématiques à point flottant](../c-language/floating-point-math.md)
+[Mathématiques à virgule flottante](../c-language/floating-point-math.md)

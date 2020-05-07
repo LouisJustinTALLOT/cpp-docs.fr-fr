@@ -11,19 +11,19 @@ helpviewer_keywords:
 - operators [C], member selection
 - structure member selection
 ms.assetid: bb1fe304-af49-4f98-808d-afdc99b3e319
-ms.openlocfilehash: db47362096506cf1c00f1ac566565b894253d798
-ms.sourcegitcommit: f4be868c0d1d78e550fba105d4d3c993743a1f4b
-ms.translationtype: HT
+ms.openlocfilehash: b22f5a29a4dc088ea4f3db863d635badee048d2c
+ms.sourcegitcommit: 6b749db14b4cf3a2b8d581fda6fdd8cb98bc3207
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56151362"
+ms.lasthandoff: 05/05/2020
+ms.locfileid: "82825689"
 ---
 # <a name="structure-and-union-members"></a>Structure et membres d'union
 
 Une « expression de sélection de membres » fait référence aux membres de structures et d'unions. Ce type d'expression a la valeur et le type du membre sélectionné.
 
-> *postfix-expression* **.** *identifier*
-> *postfix-expression* **->** *identifier*
+> *postfix-expression* **.** *identificateur*\
+> *postfix-* **->** *identificateur* d’expression
 
 La liste suivante décrit les deux formes d'expression de sélection de membres :
 
@@ -33,13 +33,13 @@ La liste suivante décrit les deux formes d'expression de sélection de membres�
 
 Les deux formes de ces expressions de sélection de membres ont des effets similaires.
 
-En fait, une expression utilisant l’opérateur de sélection de membres (**->**) est une version abrégée d’une expression utilisant le point (**.**) si l’expression avant le point inclut l’opérateur d’indirection (<strong>\*</strong>) appliqué à une valeur de pointeur. Par conséquent,
+En fait, une expression impliquant l’opérateur de sélection de membres**->**() est une version abrégée d’une expression utilisant le point (**.**) si l’expression avant le point se compose de l’opérateur d'<strong>\*</strong>indirection () appliqué à une valeur de pointeur. Par conséquent :
 
 ```cpp
 expression->identifier
 ```
 
-est équivalent à
+équivaut à :
 
 ```cpp
 (*expression).identifier
@@ -49,7 +49,7 @@ lorsque *expression* est une valeur de pointeur.
 
 ## <a name="examples"></a>Exemples
 
-Les exemples suivants font référence à cette déclaration de structure. Pour plus d’informations sur l’opérateur d’indirection (<strong>\*</strong>) utilisé dans ces exemples, consultez [Opérateurs d’indirection et d’adresse](../c-language/indirection-and-address-of-operators.md).
+Les exemples suivants font référence à cette déclaration de structure. Pour plus d’informations sur l’opérateur d’indirection (<strong>\*</strong>) utilisé dans ces exemples, consultez [opérateurs d’indirection et d’adresse](../c-language/indirection-and-address-of-operators.md).
 
 ```
 struct pair
@@ -72,7 +72,7 @@ Dans l'exemple ci-dessus, l'adresse de la structure `item` est assignée au memb
 (item.sp)->a = 24;
 ```
 
-Dans cet exemple, l’expression de pointeur `item.sp` est utilisée avec l’opérateur de sélection de membres (**->**) pour assigner une valeur au membre `a`.
+Dans cet exemple, l’expression `item.sp` de pointeur est utilisée avec l’opérateur de sélection de**->** membres () pour assigner une `a`valeur au membre.
 
 ```
 list[8].b = 12;

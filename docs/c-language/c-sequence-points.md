@@ -5,17 +5,17 @@ helpviewer_keywords:
 - sequence points
 ms.assetid: c84885a5-4336-4eba-a643-058df4249903
 ms.openlocfilehash: 13d6044269f60dc426a8b0b9b03463f387dfaa10
-ms.sourcegitcommit: f4be868c0d1d78e550fba105d4d3c993743a1f4b
-ms.translationtype: HT
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56152636"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62313335"
 ---
 # <a name="c-sequence-points"></a>Points de séquence C
 
 La valeur d'un objet peut être modifiée une seule fois par une expression entre les « points de séquence » consécutifs. Le langage C définit les points de séquence suivants :
 
-- Opérande de gauche de l’opérateur AND logique (**&&**). L’opérande gauche de l’opérateur AND logique est complètement évalué et tous les effets secondaires sont terminés avant la poursuite du traitement. Si l'opérande gauche a la valeur false (0), l'autre opérande n'est pas évaluée.
+- Opérande gauche de l’opérateur AND logique (**&&**). L’opérande gauche de l’opérateur AND logique est complètement évalué et tous les effets secondaires sont terminés avant la poursuite du traitement. Si l'opérande gauche a la valeur false (0), l'autre opérande n'est pas évaluée.
 
 - Opérande gauche de l'opérateur OR logique (`||`). L'opérande gauche de l'opérateur OR logique est complètement évalué et tous les effets secondaires sont terminés avant la poursuite du traitement. Si l'opérande gauche a la valeur true (différent de zéro), l'autre opérande n'est pas évalué.
 
@@ -39,4 +39,4 @@ La valeur d'un objet peut être modifiée une seule fois par une expression entr
 
 ## <a name="see-also"></a>Voir aussi
 
-[Évaluation des expressions](../c-language/expression-evaluation-c.md)
+[Évaluation d’expression](../c-language/expression-evaluation-c.md)

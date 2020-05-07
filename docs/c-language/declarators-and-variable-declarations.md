@@ -7,11 +7,11 @@ helpviewer_keywords:
 - declaring variables, declaration statements
 ms.assetid: 5fd67a6a-3a6a-4ec9-b257-3f7390a48d40
 ms.openlocfilehash: 928de4b1724577a9fdb282f5109b4b5d0b31c4e6
-ms.sourcegitcommit: f4be868c0d1d78e550fba105d4d3c993743a1f4b
-ms.translationtype: HT
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56147488"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62234521"
 ---
 # <a name="declarators-and-variable-declarations"></a>Déclarateurs et déclarations de variable
 
@@ -26,9 +26,9 @@ Le reste de cette section décrit la forme et la signification des déclarations
 |[Structures](../c-language/structure-declarations.md)|Variables composées d’une collection de valeurs qui peuvent avoir des types différents|
 |[Unions](../c-language/union-declarations.md)|Variables composées de plusieurs valeurs de types différents qui occupent le même espace de stockage|
 
-Un déclarateur est la partie d'une déclaration qui spécifie le nom qui doit être introduit dans le programme. Il peut inclure des modificateurs tels que <strong>\*</strong> (pointeur vers), et n’importe quel mot clé de convention d’appel Microsoft.
+Un déclarateur est la partie d'une déclaration qui spécifie le nom qui doit être introduit dans le programme. Il peut inclure des modificateurs tels <strong>\*</strong> que (pointeur vers) et l’un des mots clés de convention d’appel Microsoft.
 
-**Section spécifique à Microsoft**
+**Spécifique à Microsoft**
 
 Dans le déclarateur
 
@@ -38,28 +38,28 @@ __declspec(thread) char *var;
 
 `char` est le spécificateur de type, `__declspec(thread)` et `*` sont les modificateurs, et `var` est le nom de l'identificateur.
 
-**FIN de la section spécifique à Microsoft**
+**FIN spécifique à Microsoft**
 
 Vous utilisez des déclarateurs pour déclarer des tableaux de valeurs, des pointeurs vers des valeurs et des fonctions qui retournent des valeurs d'un type spécifié. Les déclarateurs sont indiqués dans le tableau et les déclarations de pointeur sont décrites plus loin dans cette section.
 
 ## <a name="syntax"></a>Syntaxe
 
-*declarator* :<br/>
+*déclarateur*:<br/>
 &nbsp;&nbsp;*pointer*<sub>opt</sub> *direct-declarator*
 
-*direct-declarator* :<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*identifier*<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**(**  *declarator*  **)**<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*direct-declarator*  **[**  *constant-expression*<sub>opt</sub> **]**<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*direct-declarator*  **(**  *parameter-type-list*  **)**<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*direct-declarator*  **(**  *identifier-list*<sub>opt</sub> **)**
+*direct-declarator*:<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*identificateur*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**(**  *déclarateur*  **)**<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*direct-declarator*  **[**  *constante-expression*<sub>OPT</sub> **]**<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*direct-declarator*  **(**  *Parameter-type-list*  **)**<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*direct-declarator*  **(**  *identifier-List*<sub>OPT</sub> **)**
 
-*pointer* :<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;<strong>\*</strong> *type-qualifier-list*<sub>opt</sub><br/>
-&nbsp;&nbsp;&nbsp;&nbsp;<strong>\*</strong> *type-qualifier-list*<sub>opt</sub> *pointer*
+*pointeur*:<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<strong>\*</strong>*type-qualifier-List*<sub>OPT</sub><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;<strong>\*</strong>*type-qualifier-List-*<sub>opt</sub> *pointeur* opt
 
 *type-qualifier-list* :<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*type-qualifier*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*qualificateur de type*<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*type-qualifier-list type-qualifier*
 
 > [!NOTE]
@@ -79,11 +79,11 @@ double func( void ); // Declares a function named func, with no
 int *aptr[10] // Declares an array of 10 pointers
 ```
 
-**Section spécifique à Microsoft**
+**Spécifique à Microsoft**
 
 Le compilateur Microsoft C ne limite pas le nombre de déclarateurs pouvant modifier un type arithmétique, structure ou union. Le nombre est limité uniquement par la mémoire disponible.
 
-**FIN de la section spécifique à Microsoft**
+**FIN spécifique à Microsoft**
 
 ## <a name="see-also"></a>Voir aussi
 

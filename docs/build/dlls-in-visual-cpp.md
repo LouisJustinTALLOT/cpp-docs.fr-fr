@@ -1,6 +1,6 @@
 ---
-title: Créer des CC++ /dll dans Visual Studio
-description: Vue d’ensemble de la raison et de la manière de créer C++ et d’utiliser des dll avec dans Visual Studio.
+title: Création de DLL C/C++ dans Visual Studio
+description: Vue d’ensemble de la raison et de la manière de créer et d’utiliser des dll avec C++ dans Visual Studio.
 ms.date: 01/27/2020
 helpviewer_keywords:
 - executable files [C++]
@@ -16,7 +16,7 @@ ms.contentlocale: fr-FR
 ms.lasthandoff: 03/16/2020
 ms.locfileid: "79417354"
 ---
-# <a name="create-cc-dlls-in-visual-studio"></a>Créer des CC++ /dll dans Visual Studio
+# <a name="create-cc-dlls-in-visual-studio"></a>Création de DLL C/C++ dans Visual Studio
 
 Dans Windows, une bibliothèque de liens dynamiques (DLL) est un type de fichier exécutable qui agit comme une bibliothèque partagée de fonctions et de ressources. La liaison dynamique est une fonctionnalité du système d’exploitation. Il permet à un exécutable d’appeler des fonctions ou d’utiliser des ressources stockées dans un fichier séparé. Ces fonctions et ressources peuvent être compilées et déployées séparément des exécutables qui les utilisent.
 
@@ -24,7 +24,7 @@ Une DLL n’est pas un exécutable autonome. Les dll s’exécutent dans le cont
 
 ## <a name="differences-between-dynamic-linking-and-static-linking"></a>Différences entre la liaison dynamique et la liaison statique
 
-La liaison statique copie tout le code d’objet d’une bibliothèque statique dans les exécutables qui l’utilisent lors de leur génération. La liaison dynamique inclut uniquement les informations requises par Windows au moment de l’exécution pour rechercher et charger la DLL qui contient un élément de données ou une fonction. Lorsque vous créez une DLL, vous créez également une bibliothèque d’importation qui contient ces informations. Quand vous générez un exécutable qui appelle la DLL, l’éditeur de liens utilise les symboles exportés dans la bibliothèque d’importation pour stocker ces informations pour le chargeur Windows. Lorsque le chargeur charge une DLL, la DLL est mappée dans l’espace mémoire de votre application. Si elle est présente, une fonction spéciale dans la DLL, `DllMain`, est appelée pour effectuer toute initialisation requise par la DLL.
+La liaison statique copie tout le code d’objet d’une bibliothèque statique dans les exécutables qui l’utilisent lors de leur génération. La liaison dynamique inclut uniquement les informations requises par Windows au moment de l’exécution pour rechercher et charger la DLL qui contient un élément de données ou une fonction. Lorsque vous créez une DLL, vous créez également une bibliothèque d’importation qui contient ces informations. Quand vous générez un exécutable qui appelle la DLL, l’éditeur de liens utilise les symboles exportés dans la bibliothèque d’importation pour stocker ces informations pour le chargeur Windows. Lorsque le chargeur charge une DLL, la DLL est mappée dans l’espace mémoire de votre application. Si elle est présente, une fonction spéciale dans la `DllMain`dll,, est appelée pour effectuer toute initialisation requise par la dll.
 
 <a name="differences-between-applications-and-dlls"></a>
 
@@ -62,15 +62,15 @@ Un inconvénient potentiel de l’utilisation des dll est que l’application n�
 
 ## <a name="more-information-on-how-to-create-and-use-dlls"></a>Plus d’informations sur la façon de créer et d’utiliser des dll
 
-Les articles suivants fournissent des informations détaillées sur la création de CC++ /dll dans Visual Studio.
+Les articles suivants fournissent des informations détaillées sur la façon de créer des dll C/C++ dans Visual Studio.
 
-[Procédure pas à pas : création et utilisation d’uneC++bibliothèque de liens dynamiques ()](walkthrough-creating-and-using-a-dynamic-link-library-cpp.md)\
+[Procédure pas à pas : création et utilisation d’une bibliothèque de liens dynamiques (C++)](walkthrough-creating-and-using-a-dynamic-link-library-cpp.md)\
 Montre comment créer et utiliser une DLL à l'aide de Visual Studio.
 
-[Types de dll](kinds-of-dlls.md)\
+[Genres de dll](kinds-of-dlls.md)\
 Fournit des informations sur les différentes sortes de DLL qui peuvent être générées.
 
-Forum [aux questions](dll-frequently-asked-questions.md) sur les dll\
+[Forum aux questions sur les DLL](dll-frequently-asked-questions.md)\
 Fournit des réponses à des questions fréquentes concernant les DLL.
 
 [Lier un exécutable à une DLL](linking-an-executable-to-a-dll.md)\
@@ -79,34 +79,34 @@ Décrit la liaison explicite et implicite à une DLL.
 [Initialiser une DLL](run-time-library-behavior.md#initializing-a-dll)\
 Traite du code d’initialisation de la DLL qui doit s’exécuter lors du chargement de votre DLL.
 
-[Dll et comportement C++ de la bibliothèque Runtime visuelle](run-time-library-behavior.md)\
+[Dll et comportement de la bibliothèque Runtime Visual C++](run-time-library-behavior.md)\
 Décrit la séquence de démarrage de la DLL de la bibliothèque Runtime.
 
 [LoadLibrary et AfxLoadLibrary](loadlibrary-and-afxloadlibrary.md)\
-Décrit l’utilisation de `LoadLibrary` et `AfxLoadLibrary` pour une liaison explicite à une DLL au moment de l’exécution.
+Décrit l’utilisation `LoadLibrary` de `AfxLoadLibrary` et de pour établir une liaison explicite à une dll au moment de l’exécution.
 
-\ [GetProcAddress](getprocaddress.md)
-Traite de l’utilisation de `GetProcAddress` pour obtenir l’adresse d’une fonction exportée dans la DLL.
+[GetProcAddress](getprocaddress.md)\
+Traite de l' `GetProcAddress` utilisation de pour obtenir l’adresse d’une fonction exportée dans la dll.
 
 [FreeLibrary et AfxFreeLibrary](freelibrary-and-afxfreelibrary.md)\
-Traite de l’utilisation de `FreeLibrary` et `AfxFreeLibrary` lorsque le module DLL n’est plus nécessaire.
+Traite de l' `FreeLibrary` utilisation `AfxFreeLibrary` de et de lorsque le module dll n’est plus nécessaire.
 
-\ [de l’ordre de recherche de la bibliothèque de liens dynamiques](/windows/win32/Dlls/dynamic-link-library-search-order)
+[Ordre de recherche de la bibliothèque de liens dynamiques](/windows/win32/Dlls/dynamic-link-library-search-order)\
 Décrit le chemin d’accès que le système d’exploitation Windows utilise pour rechercher une DLL sur le système.
 
-[États du module d’une DLL MFC normale liée de manière dynamique aux mfc](module-states-of-a-regular-dll-dynamically-linked-to-mfc.md)\
+[États du module d’une DLL MFC normale liée de manière dynamique aux MFC](module-states-of-a-regular-dll-dynamically-linked-to-mfc.md)\
 Décrit les États du module d’une DLL MFC normale liée de manière dynamique aux MFC.
 
 [Dll d’extension MFC](extension-dlls-overview.md)\
 Décrit les dll qui implémentent généralement des classes réutilisables dérivées des classes MFC existantes.
 
-[Création d’une dll de ressources uniquement](creating-a-resource-only-dll.md)\
+[Création d’une DLL de ressource uniquement](creating-a-resource-only-dll.md)\
 Traite des DLL de ressource uniquement, qui ne contiennent que des ressources, telles que des icônes, des images bitmap, des chaînes et des boîtes de dialogue.
 
 [Ressources localisées dans les applications MFC : dll satellites](localized-resources-in-mfc-applications-satellite-dlls.md)\
 Fournit une prise en charge améliorée pour les DLL satellites, une fonctionnalité qui vous aide à créer des applications localisées pour différentes langues.
 
-[Importation et exportation de](importing-and-exporting.md)\
+[Importation et exportation](importing-and-exporting.md)\
 Décrit l'importation de symboles publics dans une application ou l'exportation de fonctions à partir d'une DLL.
 
 [Technologie active et dll](active-technology-and-dlls.md)\
@@ -118,7 +118,7 @@ Décrit ce que fournit l'option Automation de l'Assistant DLL MFC.
 [Conventions d’affectation des noms pour les DLL MFC](../mfc/mfc-library-versions.md#mfc-static-library-naming-conventions)\
 Décrit comment les DLL et les bibliothèques incluses dans les MFC obéissent aux règles d'une convention d'attribution de noms structurée.
 
-[Appel de fonctions dll à partir d’applications Visual Basic](calling-dll-functions-from-visual-basic-applications.md)\
+[Appel de fonctions DLL à partir d’applications Visual Basic](calling-dll-functions-from-visual-basic-applications.md)\
 Explique comment appeler des fonctions DLL à partir d'applications Visual Basic.
 
 ## <a name="related-sections"></a>Sections connexes
