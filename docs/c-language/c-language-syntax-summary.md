@@ -23,4 +23,4 @@ Cette section fournit la description complète du langage C et des fonctionnalit
 
 ## <a name="see-also"></a>Voir aussi
 
-[C Référence linguistique](../c-language/c-language-reference.md)
+[Référence du langage C](../c-language/c-language-reference.md)

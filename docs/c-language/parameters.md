@@ -25,25 +25,25 @@ Les arguments sont les noms des valeurs passées à une fonction par un appel de
 
 ## <a name="syntax"></a>Syntaxe
 
-*fonction-définition*:<br/>
+*définition de fonction*:<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*declaration-specifiers*<sub>opt</sub> *attribute-seq*<sub>opt</sub> *declarator* *declaration-list*<sub>opt</sub> *compound-statement*
 
-/\**attribut-seq* est spécifique à Microsoft\*/
+/\**attribute-SEQ* est spécifique à Microsoft\*/
 
-*déclarant*:<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*pointeur*<sub>opt</sub> *direct-déclarator*
+*déclarateur*:<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*pointeur*<sub>OPT</sub> *direct-declarator*
 
-*déclarant direct*: /\* Un déclarateur de fonction\*/<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*déclarant direct**(paramètre-type-liste***)**  / \* Déclarateur de nouveau style **(**      \*/<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*déclarant direct***(liste***d’identification*<sub>opt</sub> **)**  / \* Déclarateur de style obsolète    \*/
+*direct-declarator*:/\* un déclarateur de fonction\*/<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;déclarateur *direct-declarator***(***Parameter-type-list***)**  / \* New-style declarator      \*/<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;déclarateur *direct-declarator***(***identifier-List*<sub>OPT</sub> **)**  / \* -déclarateur de style obsolète    \*/
 
-*paramètre-type-liste*\* : / La liste des paramètres\*/<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*liste des paramètres* <br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*paramètre-liste* **, ...**
+*Parameter-type-list*:/\* la liste de paramètres\*/<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*liste de paramètres* <br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*liste de paramètres* **,...**
 
-*liste des paramètres*:<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*paramètre-déclaration*<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*paramètre-liste* **,**  *paramètre-déclaration*
+*liste de paramètres*:<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*Déclaration de paramètre*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*parameter-list* **,**  *paramètre-DECLARATION*
 
 *parameter-declaration* :<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*declaration-specifiers* *declarator*<br/>
@@ -66,11 +66,11 @@ void new( double x, double y, double z )
 }
 ```
 
-Si au moins un paramètre se produit dans la liste des paramètres, la liste peut se terminer par une virgule suivie de trois périodes **(, ...**). Cette construction, appelée « notation d’ellipsis », indique un nombre variable d’arguments à la fonction. (Voir [appels avec un nombre variable d’arguments](../c-language/calls-with-a-variable-number-of-arguments.md) pour plus d’informations.) Cependant, un appel à la fonction doit avoir au moins autant d’arguments qu’il y a de paramètres avant la dernière virgule.
+Si au moins un paramètre apparaît dans la liste de paramètres, la liste peut se terminer par une virgule suivie de trois points (**,...**). Cette construction, appelée « notation de sélection », indique un nombre variable d’arguments à la fonction. (Pour plus d’informations, consultez [appels avec un nombre variable d’arguments](../c-language/calls-with-a-variable-number-of-arguments.md) .) Toutefois, un appel à la fonction doit avoir au moins autant d’arguments qu’il y a de paramètres avant la dernière virgule.
 
 Si aucun argument ne doit être passé à la fonction, la liste des paramètres est remplacée par le mot clé `void`. Cette utilisation de `void` est distincte de son utilisation comme un spécificateur de type.
 
-L'ordre et le type des paramètres, y compris toute utilisation de la notation de sélection, doivent être identiques dans toutes les déclarations de fonctions (le cas échéant) et dans la définition de fonction. Les types des arguments après les conversions arithmétiques habituelles doivent être compatibles-assignation avec les types de paramètres correspondants. (Voir [conversions arithmétiques habituelles](../c-language/usual-arithmetic-conversions.md) pour obtenir des informations sur les conversions arithmétiques.) Les arguments qui suivent l’ellipsis ne sont pas vérifiés. Un paramètre peut avoir n'importe quel type fondamental, structure, union, pointeur ou tableau.
+L'ordre et le type des paramètres, y compris toute utilisation de la notation de sélection, doivent être identiques dans toutes les déclarations de fonctions (le cas échéant) et dans la définition de fonction. Les types des arguments après les conversions arithmétiques habituelles doivent être compatibles-assignation avec les types de paramètres correspondants. (Consultez [conversions arithmétiques habituelles](../c-language/usual-arithmetic-conversions.md) pour plus d’informations sur les conversions arithmétiques.) Les arguments qui suivent les points de suspension ne sont pas activés. Un paramètre peut avoir n'importe quel type fondamental, structure, union, pointeur ou tableau.
 
 Le compilateur effectue les conversions arithmétiques habituelles indépendamment sur chaque paramètre et sur chaque argument, si nécessaire. Après la conversion, aucun paramètre n'est plus court que `int`, et aucun paramètre n'a le type **float** à moins que le type de paramètre soit explicitement spécifié comme **float** dans le prototype. Cela signifie, par exemple, que la déclaration d'un paramètre comme `char` revient à la déclarer comme `int`.
 

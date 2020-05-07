@@ -3,23 +3,23 @@ title: Fonctions des bibliothèques
 ms.date: 11/04/2016
 ms.assetid: 90c096ab-31df-479e-91d8-289900dc0bff
 ms.openlocfilehash: 6cb9c0197ad625487a2c0e98d176c46c4bba4139
-ms.sourcegitcommit: f4be868c0d1d78e550fba105d4d3c993743a1f4b
-ms.translationtype: HT
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56149516"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62232785"
 ---
 # <a name="library-functions"></a>Fonctions des bibliothèques
 
 - [Macro NULL](../c-language/null-macro.md)
 
-- [Diagnostic affiché par la fonction d’assertion](../c-language/diagnostic-printed-by-the-assert-function.md)
+- [Diagnostic imprimé par la fonction Assert](../c-language/diagnostic-printed-by-the-assert-function.md)
 
 - [Test de caractère](../c-language/character-testing.md)
 
 - [Erreurs de domaine](../c-language/domain-errors.md)
 
-- [Dépassement des valeurs à virgule flottante](../c-language/underflow-of-floating-point-values.md)
+- [Dépassement de capacité négatif des valeurs à virgule flottante](../c-language/underflow-of-floating-point-values.md)
 
 - [Fonction fmod](../c-language/fmod-function.md)
 
@@ -31,23 +31,23 @@ ms.locfileid: "56149516"
 
 - [Lignes vides](../c-language/blank-lines.md)
 
-- [Caractère Null](../c-language/null-characters.md)
+- [Caractères null](../c-language/null-characters.md)
 
-- [Position du fichier dans le mode adjonction](../c-language/file-position-in-append-mode.md)
+- [Position de fichier en mode Append](../c-language/file-position-in-append-mode.md)
 
 - [Troncation des fichiers texte](../c-language/truncation-of-text-files.md)
 
-- [Mise en mémoire tampon de fichiers](../c-language/file-buffering.md)
+- [Mise en mémoire tampon des fichiers](../c-language/file-buffering.md)
 
-- [Fichiers de longueur zéro](../c-language/zero-length-files.md)
+- [Fichiers de longueur nulle](../c-language/zero-length-files.md)
 
-- [Noms de fichiers](../c-language/filenames.md)
+- [Noms](../c-language/filenames.md)
 
 - [Limites d’accès au fichier](../c-language/file-access-limits.md)
 
 - [Suppression de fichiers ouverts](../c-language/deleting-open-files.md)
 
-- [Remplacement d’un nom par un nom qui existe](../c-language/renaming-with-a-name-that-exists.md)
+- [Attribution d’un nouveau nom à un nom existant](../c-language/renaming-with-a-name-that-exists.md)
 
 - [Lecture des valeurs de pointeur](../c-language/reading-pointer-values.md)
 

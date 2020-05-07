@@ -8,11 +8,11 @@ helpviewer_keywords:
 - null values, expressions
 ms.assetid: 72576ce6-26d0-4379-be65-fee522088790
 ms.openlocfilehash: 4fdfa2283e40856ccaffd55daacb697b1344134b
-ms.sourcegitcommit: f4be868c0d1d78e550fba105d4d3c993743a1f4b
-ms.translationtype: HT
+ms.sourcegitcommit: c6f8e6c2daec40ff4effd8ca99a7014a3b41ef33
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56148450"
+ms.lasthandoff: 04/24/2019
+ms.locfileid: "64343420"
 ---
 # <a name="null-statement-c"></a>null, instruction (C)
 
@@ -22,7 +22,7 @@ Une « instruction null » est une instruction contenant uniquement un point-v
 
 > **;**
 
-## <a name="remarks"></a>Remarques
+## <a name="remarks"></a>Notes 
 
 Les instructions telles que **do**, **for**, **if** et `while` requièrent qu'une instruction exécutable apparaissent comme corps d'instruction. L’instruction null répond à la syntaxe requise dans les situations qui ne nécessitent pas de corps d’instruction substantiel.
 
@@ -35,7 +35,7 @@ for ( i = 0; i < 10; line[i++] = 0 )
      ;
 ```
 
-Dans cet exemple, l'expression de boucle de l'instruction **for** `line[i++] = 0` initialise les 10 premiers éléments de `line` à 0. Le corps d'instruction est une instruction null, car aucune autre instruction n'est nécessaire.
+Dans cet exemple, l'expression de boucle de l'instruction **for**`line[i++] = 0` initialise les 10 premiers éléments de `line` à 0. Le corps d'instruction est une instruction null, car aucune autre instruction n'est nécessaire.
 
 ## <a name="see-also"></a>Voir aussi
 

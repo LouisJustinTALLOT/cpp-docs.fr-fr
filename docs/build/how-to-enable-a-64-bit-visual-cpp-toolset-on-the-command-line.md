@@ -29,18 +29,18 @@ Pour accéder à ces invites de commandes sur Windows 10, dans le menu **Démar
 
 ![Invite de commandes des outils natifs x64](media/x64-native-tools-command-prompt.png "Outils natifs x64 du menu Démarrer")
 
-Pour accéder à ces invites de commandes sur Windows 8, sur l’écran **Démarrer**, ouvrez **Toutes les applications**. Sous l’intitulé correspondant à la version installée de Visual Studio, ouvrez le dossier **Visual Studio** (dans les versions antérieures de Visual Studio, il peut être nommé **Visual Studio Tools**). Dans les versions antérieures de Windows, choisissez **Démarrer**, développez **Tous les programmes**, puis le dossier correspondant à votre version de **Visual Studio** (et sur les versions antérieures de Visual Studio,  **Visual Studio Tools**). Pour plus d’informations, consultez [Raccourcis de l’invite de commandes développeur](building-on-the-command-line.md#developer_command_prompt_shortcuts).
+Pour accéder à ces invites de commandes sur Windows 8, sur l’écran **Démarrer**, ouvrez **Toutes les applications**. Sous l’intitulé correspondant à la version installée de Visual Studio, ouvrez le dossier **Visual Studio** (dans les versions antérieures de Visual Studio, il peut être nommé **Visual Studio Tools**). Dans les versions antérieures de Windows, choisissez **Démarrer**, développez **Tous les programmes**, puis le dossier correspondant à votre version de **Visual Studio** (et sur les versions antérieures de Visual Studio, ** Visual Studio Tools**). Pour plus d’informations, consultez [Raccourcis de l’invite de commandes développeur](building-on-the-command-line.md#developer_command_prompt_shortcuts).
 
 ## <a name="use-vcvarsallbat-to-set-a-64-bit-hosted-build-architecture"></a>Utiliser Vcvarsall.bat pour définir une architecture de build 64 bits
 
 Vous pouvez utiliser n’importe quelle configuration de build des outils de compilation croisés ou natifs sur la ligne de commande en exécutant le fichier de commandes vcvarsall.bat. Ce fichier de commande configure le chemin et les variables d’environnement qui créent une architecture de build particulière dans une fenêtre d’invite de commandes existante. Pour des instructions spécifiques, consultez [Emplacements des fichiers de commandes développeur](building-on-the-command-line.md#developer_command_file_locations).
 
-## <a name="remarks"></a>Notes
+## <a name="remarks"></a>Notes 
 
 > [!NOTE]
 > Pour plus d’informations sur les outils spécifiques qui sont inclus dans chaque édition de Visual Studio, consultez [Outils et fonctionnalités Visual C++ dans les éditions de Visual Studio](../overview/visual-cpp-tools-and-features-in-visual-studio-editions.md).
 >
-> Pour plus d’informations sur l’utilisation de l’IDE de Visual Studio pour créer des applications 64 bits, consultez Guide pratique [pour configurer des projets C++ visuels pour cibler des plates-formes x64 64 bits](how-to-configure-visual-cpp-projects-to-target-64-bit-platforms.md).
+> Pour plus d’informations sur l’utilisation de l’IDE de Visual Studio pour créer des applications 64 bits, consultez Guide pratique [pour configurer des projets Visual C++ pour cibler des plateformes x64 64 bits](how-to-configure-visual-cpp-projects-to-target-64-bit-platforms.md).
 
 Quand vous installez une charge de travail C++ dans Visual Studio Installer, celui-ci installe toujours des outils de compilation croisés et natifs x86 32 bits pour la génération de code x86 et x64. Si vous incluez la charge de travail UWP, il installe également des outils de compilation croisés x86 pour la génération de code ARM. Si vous installez ces charges de travail sur un processeur x64 64 bits, vous obtenez également des outils de compilation natifs et croisés 64 bits pour la génération de code x86, x64 et ARM. Les outils 32 bits et 64 bits génèrent un code identique, mais les outils 64 bits prennent en charge davantage de mémoire pour les symboles d’en-têtes précompilés et les options d’optimisation de l’ensemble du programme ([/GL](reference/gl-whole-program-optimization.md) et [/LTCG](reference/ltcg-link-time-code-generation.md)). Si vous rencontrez des problèmes de mémoire lors de l’utilisation des outils 32 bits, essayez les outils 64 bits.
 

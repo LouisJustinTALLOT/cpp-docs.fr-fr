@@ -20,18 +20,18 @@ Dans un programme source C, l'élément de base reconnu par le compilateur est 
 
 *token*: *keyword*
 
-*Identificateur*
+*identificateur*
 
 *constant*
 
-*chaîne littérale*
+*littéral de chaîne*
 
-*Opérateur*
+*and*
 
 *punctuator*
 
 > [!NOTE]
-> Voir l’introduction à [C Language Syntax Résumé](../c-language/c-language-syntax-summary.md) pour une explication des conventions de syntaxe ANSI.
+> Consultez le résumé de la [syntaxe du langage C](../c-language/c-language-syntax-summary.md) pour obtenir une explication des conventions syntaxiques ANSI.
 
 Les mots clés, les identificateurs, les constantes, les littéraux de chaîne et les opérateurs décrits dans cette section sont des exemples de jetons. Les caractères de ponctuation tels que les crochets (**[ ]**), les accolades (**{ }**), les parenthèses ( **( )** ) et la virgule (**,**) sont également des jetons.
 

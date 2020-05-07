@@ -11,15 +11,15 @@ ms.locfileid: "81328433"
 ---
 # <a name="x64-prolog-and-epilog"></a>Prologue et épilogue x64
 
-Chaque fonction qui alloue de l’espace de pile, appelle d’autres fonctions, enregistre les registres non volontaires, ou utilise la manipulation d’exception doit avoir un prolog dont les limites d’adresse sont décrites dans les données de dénouement associées à l’entrée de table de fonction respective. Pour plus d’informations, voir [x64 traitement d’exception](../build/exception-handling-x64.md). Le prolog enregistre les registres d’argument dans leurs adresses à la maison si nécessaire, pousse des registres nonvolatiles sur la pile, alloue la partie fixe de la pile pour les habitants et les temporaires, et établit optionnellement un pointeur de cadre. Les données de dénouement associées doivent décrire l’action du prolog et doivent fournir les informations nécessaires pour annuler l’effet du code prolog.
+Chaque fonction qui alloue de l’espace de pile, appelle d’autres fonctions, enregistre les registres non volatiles, ou utilise la gestion des exceptions doit avoir un prologue dont les limites d’adresse sont décrites dans les données de déroulement associées à l’entrée de table de fonctions respective. Pour plus d’informations, consultez [gestion des exceptions x64](../build/exception-handling-x64.md). Le prologue enregistre les registres d’arguments dans leurs adresses personnelles, si nécessaire, exécute un push des registres non volatils sur la pile, alloue la partie fixe de la pile pour les variables locales et les paramètres de temporisation, et établit éventuellement un pointeur de frame. Les données de déroulement associées doivent décrire l’action du prologue et fournir les informations nécessaires pour annuler l’effet du code de prologue.
 
-Si l’allocation fixe dans la pile est de plus d’une page (c’est-à-dire supérieure à 4096 octets), alors il est possible que l’allocation de pile pourrait s’étendre sur plus d’une page de mémoire virtuelle et, par conséquent, l’allocation doit être vérifiée avant qu’elle ne soit allouée. Une routine spéciale qui est callable du prolog et qui ne détruit aucun des registres d’argument est prévu à cette fin.
+Si l’allocation fixe dans la pile est plus d’une page (autrement dit, plus de 4096 octets), il est possible que l’allocation de pile puisse s’étendre sur plusieurs pages de mémoire virtuelle et, par conséquent, l’allocation doit être vérifiée avant d’être allouée. Une routine spéciale qui peut être appelée à partir du prologue et qui ne détruit aucun des registres des arguments est fournie à cet effet.
 
-La méthode préférée pour enregistrer les registres nonvolatiles est de les déplacer sur la pile avant l’allocation de pile fixe. Si l’allocation de pile fixe est effectuée avant que les registres nonvolatiles soient enregistrés, alors très probablement un déplacement de 32 bits est nécessaire pour traiter la zone de registre enregistrée. (Apparemment, les poussées des registres sont aussi rapides que les mouvements et devraient le rester dans un avenir prévisible en dépit de la dépendance implicite entre les poussées.) Les registres nonvolatiles peuvent être enregistrés dans n’importe quel ordre. Cependant, la première utilisation d’un registre non volatile dans le prolog doit être de le sauver.
+La méthode recommandée pour enregistrer des registres non volatils consiste à les déplacer sur la pile avant l’allocation de pile fixe. Si l’allocation de pile fixe est effectuée avant l’enregistrement des registres non volatils, il est probable qu’un déplacement de 32 bits soit requis pour adresser la zone de Registre enregistrée. (Signalées, les notifications push des registres sont aussi rapides que les déplacements et devraient rester pour l’avenir prévisible en dépit de la dépendance implicite entre les push.) Les registres non volatiles peuvent être enregistrés dans n’importe quel ordre. Toutefois, la première utilisation d’un registre non volatil dans le prologue doit être l’enregistrement.
 
-## <a name="prolog-code"></a>Code Prolog
+## <a name="prolog-code"></a>Code de prologue
 
-Le code d’un prolog typique peut être :
+Le code d’un prologue classique peut être :
 
 ```MASM
     mov    [RSP + 8], RCX
@@ -31,9 +31,9 @@ Le code d’un prolog typique peut être :
     ...
 ```
 
-Ce prolog stocke l’argument registre RCX dans son emplacement à la maison, enregistre les registres nonvolatileS R13-R15, alloue la partie fixe du cadre de pile, et établit un pointeur de cadre qui pointe 128 octets dans la zone d’allocation fixe. L’utilisation d’un décalage permet de traiter une plus grande partie de la zone d’allocation fixe avec des compensations uniques.
+Ce prologue stocke l’argument Register RCX à son emplacement d’hébergement, enregistre les registres non volatils R13-R15, alloue la partie fixe du frame de pile et établit un pointeur de frame qui pointe 128 octets dans la zone d’allocation fixe. L’utilisation d’un décalage permet de traiter une plus grande partie de la zone d’allocation fixe avec des décalages d’un octet.
 
-Si la taille de l’allocation fixe est supérieure ou égale à une page de mémoire, alors une fonction d’aide doit être appelée avant de modifier le RER. Cette aide, `__chkstk`, sonde la gamme de piles à être alloué pour s’assurer que la pile est étendue correctement. Dans ce cas, l’exemple précédent de prolog serait plutôt :
+Si la taille d’allocation fixe est supérieure ou égale à une page de mémoire, une fonction d’assistance doit être appelée avant la modification de RSP. Cette application d’assistance `__chkstk`,, sonde la plage de la pile à allouer pour s’assurer que la pile est correctement étendue. Dans ce cas, l’exemple de prologue précédent serait à la place :
 
 ```MASM
     mov    [RSP + 8], RCX
@@ -47,15 +47,15 @@ Si la taille de l’allocation fixe est supérieure ou égale à une page de mé
     ...
 ```
 
-L’aide `__chkstk` ne modifiera aucun registre autre que R10, R11, et les codes d’état. En particulier, il retournera RAX inchangé et laissera tous les registres non volontaires et les registres de passage d’arguments non modifiés.
+L' `__chkstk` application auxiliaire ne modifiera pas les registres autres que R10, R11 et les codes de condition. En particulier, elle retourne RAX inchangé et laisse tous les registres non volatiles et les registres de passage d’argument non modifiés.
 
-## <a name="epilog-code"></a>Code Epilog
+## <a name="epilog-code"></a>Code d’épilogue
 
-Le code Epilog existe à chaque sortie vers une fonction. Alors qu’il n’y a normalement qu’un seul prolog, il peut y avoir beaucoup d’épilogues. Le code Epilog réduit la pile à sa taille d’allocation fixe (si nécessaire), réploce l’allocation de pile fixe, restaure les registres non volatiles en faisant éclater leurs valeurs enregistrées de la pile, et renvoie.
+Le code d’épilogue existe à chaque sortie d’une fonction. Alors qu’il n’y a généralement qu’un seul prologue, il peut y avoir plusieurs épilogues. Le code d’épilogue tronque la pile à sa taille d’allocation fixe (si nécessaire), libère l’allocation de pile fixe, restaure les registres non volatils en dépilant leurs valeurs enregistrées de la pile et retourne.
 
-Le code épilogue doit suivre un ensemble strict de règles pour que le code dénoué se déroule de façon fiable par des exceptions et des interruptions. Ces règles réduisent la quantité de données non ventilée requises, car aucune donnée supplémentaire n’est nécessaire pour décrire chaque épilogue. Au lieu de cela, le code de dénouement peut déterminer qu’une épilogue est exécutée en scannant vers l’avant à travers un flux de code pour identifier une épilogue.
+Le code d’épilogue doit suivre un ensemble strict de règles pour le code de déroulement afin de dérouler de manière fiable les exceptions et les interruptions. Ces règles réduisent la quantité de données de déroulement requises, car aucune donnée supplémentaire n’est nécessaire pour décrire chaque épilogue. Au lieu de cela, le code de déroulement peut déterminer qu’un épilogue est en cours d’exécution en analysant par progression un flux de code pour identifier un épilogue.
 
-Si aucun pointeur de cadre n’est employé dans la fonction, alors l’épilog doit d’abord traiter la partie fixe de la pile, les registres nonvolatiles sont sautés, et le contrôle est retourné à la fonction d’appel. Par exemple,
+Si aucun pointeur de frame n’est utilisé dans la fonction, l’épilogue doit d’abord libérer la partie fixe de la pile, les registres non volatils sont dépilés et le contrôle est retourné à la fonction appelante. Par exemple,
 
 ```MASM
     add      RSP, fixed-allocation-size
@@ -65,7 +65,7 @@ Si aucun pointeur de cadre n’est employé dans la fonction, alors l’épilog 
     ret
 ```
 
-Si un pointeur de cadre est utilisé dans la fonction, alors la pile doit être taillée à son allocation fixe avant l’exécution de l’épilog. Cette action ne fait techniquement pas partie de l’épilogue. Par exemple, l’épilog suivant pourrait être utilisé pour défaire le prolog précédemment utilisé :
+Si un pointeur de frame est utilisé dans la fonction, la pile doit être réduite à son allocation fixe avant l’exécution de l’épilogue. Cette action n’est techniquement pas une partie de l’épilogue. Par exemple, l’épilogue suivant peut être utilisé pour annuler le prologue utilisé précédemment :
 
 ```MASM
     lea      RSP, -128[R13]
@@ -77,7 +77,7 @@ Si un pointeur de cadre est utilisé dans la fonction, alors la pile doit être 
     ret
 ```
 
-Dans la pratique, lorsqu’un pointeur de cadre est utilisé, il n’y a aucune bonne raison d’ajuster le RER en deux étapes, de sorte que l’épilogue suivant serait utilisé à la place :
+Dans la pratique, lorsqu’un pointeur de frame est utilisé, il n’y a aucune bonne raison d’ajuster RSP en deux étapes. l’épilogue suivant est donc utilisé à la place :
 
 ```MASM
     lea      RSP, fixed-allocation-size - 128[R13]
@@ -87,12 +87,12 @@ Dans la pratique, lorsqu’un pointeur de cadre est utilisé, il n’y a aucune 
     ret
 ```
 
-Ces formulaires sont les seuls légaux pour une épilogue. Il doit se `add RSP,constant` composer `lea RSP,constant[FPReg]`d’un ou , suivie d’une série de `return` zéro `jmp`ou plus 8-byte registre pops et a ou a . (Seul un sous-ensemble d’instructions `jmp` est permis dans l’épilogue. Le sous-ensemble est `jmp` exclusivement la classe des déclarations avec des références mémoire ModRM où mod mod valeur de champ ModRM est de 00. L’utilisation `jmp` d’instructions dans l’épilog avec ModRM mod valeur de champ 01 ou 10 est interdite. Voir le tableau A-15 dans le programmeur d’architecture AMD x86-64 Volume 3: General Purpose and System Instructions, pour plus d’informations sur les références ModRM autorisées.) Aucun autre code ne peut apparaître. En particulier, rien ne peut être programmé dans une épilogue, y compris le chargement d’une valeur de retour.
+Ces formulaires sont les seuls à être autorisés pour un épilogue. Il doit se composer d’un `add RSP,constant` ou `lea RSP,constant[FPReg]`d’un, suivi d’une série de zéro ou plusieurs points de présence de Registre `return` de 8 `jmp`octets et d’un ou d’un. (Seul un sous- `jmp` ensemble d’instructions est autorisé dans l’épilogue. Le sous-ensemble est exclusivement la `jmp` classe d’instructions avec des références de mémoire ModRM où la valeur du champ mod ModRM est 00. L’utilisation d' `jmp` instructions dans l’épilogue avec la valeur de champ ModRM mod 01 ou 10 est interdite. Pour plus d’informations sur les références ModRM autorisées, consultez le tableau A-15 de l’architecture AMD x86-64 Guide de l’ouvrage manuel 3 : usage général et des instructions du système.) Aucun autre code ne peut apparaître. En particulier, rien ne peut être planifié dans un épilogue, y compris le chargement d’une valeur de retour.
 
-Lorsqu’un pointeur de cadre n’est pas utilisé, l’épilog doit utiliser `add RSP,constant` pour traiter la partie fixe de la pile. Il peut `lea RSP,constant[RSP]` ne pas utiliser à la place. Cette restriction existe de sorte que le code dénoué a moins de modèles à reconnaître lors de la recherche d’épilogues.
+Lorsqu’un pointeur de frame n’est pas utilisé, l’épilogue doit utiliser `add RSP,constant` pour libérer la partie fixe de la pile. Elle ne peut pas `lea RSP,constant[RSP]` utiliser à la place. Cette restriction existe afin que le code de déroulement ait moins de modèles à reconnaître lors de la recherche de épilogues.
 
-Le respect de ces règles permet au code de dénouer de déterminer qu’une épilogue est actuellement exécutée et de simuler l’exécution du reste de l’épilogue pour permettre de recréer le contexte de la fonction d’appel.
+Le respect de ces règles permet au code de déroulement de déterminer qu’un épilogue est en cours d’exécution et de simuler l’exécution du reste de l’épilogue pour permettre la recréation du contexte de la fonction appelante.
 
 ## <a name="see-also"></a>Voir aussi
 
-[x64 Conventions logicielles](x64-software-conventions.md)
+[Conventions des logiciels x64](x64-software-conventions.md)

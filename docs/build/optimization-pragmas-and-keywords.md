@@ -15,7 +15,7 @@ ms.locfileid: "80169797"
 ---
 # <a name="optimization-pragmas-and-keywords"></a>Pragmas et mots clés de l'optimisation
 
-Plusieurs mots clés et pragmas que vous utilisez dans votre code C C++ ou code affectent l’optimisation :
+Plusieurs mots clés et pragmas que vous utilisez dans votre code C ou C++ affectent l’optimisation :
 
 - [__asm](../assembler/inline/asm.md)
 

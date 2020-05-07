@@ -20,4 +20,4 @@ Le jeu de caractères source est le jeu de caractères reconnus qui peuvent figu
 
 ## <a name="see-also"></a>Voir aussi
 
-[Personnages](../c-language/characters.md)
+[Caractères](../c-language/characters.md)

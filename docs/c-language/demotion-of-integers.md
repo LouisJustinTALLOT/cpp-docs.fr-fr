@@ -5,11 +5,11 @@ helpviewer_keywords:
 - demoting integers
 ms.assetid: 51fb3654-60b0-4de7-80eb-bd910086c18a
 ms.openlocfilehash: edfb8f03094c10cf0cf33b0eb799d5d822ac017d
-ms.sourcegitcommit: f4be868c0d1d78e550fba105d4d3c993743a1f4b
-ms.translationtype: HT
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56152649"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62234403"
 ---
 # <a name="demotion-of-integers"></a>Rétrogradation des entiers
 

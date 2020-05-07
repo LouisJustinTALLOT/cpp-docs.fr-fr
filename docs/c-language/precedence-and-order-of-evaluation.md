@@ -9,7 +9,7 @@ helpviewer_keywords:
 ms.assetid: 201f7864-0c51-4c55-9d6f-39c5d013bcb0
 ms.openlocfilehash: 327a5a5344f17f1d84e0cebc1371d56426c95deb
 ms.sourcegitcommit: 0e3da5cea44437c132b5c2ea522bd229ea000a10
-ms.translationtype: HT
+ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 07/12/2019
 ms.locfileid: "67861077"
@@ -22,15 +22,15 @@ Le tableau ci-dessous résume la priorité et l'associativité (l'ordre dans leq
 
 ## <a name="precedence-and-associativity-of-c-operators"></a>Priorité et associativité des opérateurs C
 
-| Symbole <sup>1</sup> | Type d’opération | l'associativité |
+| Symbole <sup>1</sup> | Type d’opération | Associativité |
 |-------------|-----------------------|-------------------|
-| `[` `]` `(` `)` `.` `->`<br/>`++` `--` (suffixe) | Expression | De gauche à droite |
-| **sizeof** `&` `*` `+` `-` `~` `!`<br/>`++` `--` (préfixe) | Unaire | De droite à gauche |
+| `[` `]` `(` `)` `.` `->`<br/>`++``--` (suffixe) | Expression | De gauche à droite |
+| **sizeof** `&` `*` `+` `-` `~` `!`<br/>`++``--` (préfixe) | Unaire | De droite à gauche |
 | *casts de type* | Unaire | De droite à gauche |
-| `*` `/` `%` | Multiplication | De gauche à droite |
-| `+` `-` | Addition | De gauche à droite |
+| `*` `/` `%` | Multiplicatif | De gauche à droite |
+| `+` `-` | Additive | De gauche à droite |
 | `<<` `>>` | Décalage au niveau du bit | De gauche à droite |
-| `<` `>` `<=` `>=` | Relation | De gauche à droite |
+| `<` `>` `<=` `>=` | Relationnel | De gauche à droite |
 | `==` `!=` | Égalité | De gauche à droite |
 | `&` | Opération de bits AND | De gauche à droite |
 | `^` | Opération de bits OR exclusive | De gauche à droite |
@@ -47,7 +47,7 @@ Le tableau ci-dessous résume la priorité et l'associativité (l'ordre dans leq
 
 Une expression peut contenir plusieurs opérateurs avec une même priorité. Lorsque plusieurs opérateurs de ce type apparaissent au même niveau dans une expression, l'évaluation se poursuit selon l'associativité de l'opérateur, de droite à gauche ou de gauche à droite. Le sens de l’évaluation n’affecte pas les résultats des expressions comprenant plusieurs opérateurs de multiplication (`*`), plusieurs opérateurs d’addition (`+`) ou plusieurs opérateurs binaires au niveau du bit (`&`, `|` ou `^`), à un même niveau. L'ordre des opérations n'est pas défini par le langage. Le compilateur est libre d'évaluer de telles expressions dans n'importe quel ordre, s'il peut garantir un résultat cohérent.
 
-Seuls les opérateurs d’évaluation séquentielle (`,`), les opérateurs logiques AND (`&&`), les opérateurs logiques OR (`||`), les opérateurs d’expression conditionnelle (`? :`) et les opérateurs d’appel de fonction constituent des points de séquence, et garantissent par conséquent un ordre particulier d’évaluation pour leurs opérandes. L'opérateur d'appel de fonction correspond au jeu de parenthèses suivant l'identificateur de fonction. L’opérateur d’évaluation séquentielle (`,`) est assuré d’évaluer ses opérandes de gauche à droite. (L'opérateur virgule dans un appel de fonction n'est pas le même que l'opérateur d'évaluation-séquentielle et ne fournit pas de garantie.) Pour plus d’informations, consultez [Points de séquence](c-sequence-points.md).
+Seuls les opérateurs d’évaluation séquentielle (`,`), les opérateurs logiques AND (`&&`), les opérateurs logiques OR (`||`), les opérateurs d’expression conditionnelle (`? :`) et les opérateurs d’appel de fonction constituent des points de séquence, et garantissent par conséquent un ordre particulier d’évaluation pour leurs opérandes. L'opérateur d'appel de fonction correspond au jeu de parenthèses suivant l'identificateur de fonction. L’opérateur d’évaluation séquentielle (`,`) est assuré d’évaluer ses opérandes de gauche à droite. (L’opérateur virgule dans un appel de fonction n’est pas le même que l’opérateur d’évaluation séquentielle et ne fournit pas de garantie de ce type.) Pour plus d’informations, consultez [points de séquence](c-sequence-points.md).
 
 Les opérateurs logiques garantissent également l’évaluation de leurs opérandes de gauche à droite. Toutefois, ils évaluent le plus petit nombre d'opérandes nécessaires pour déterminer le résultat de l'expression. Cela est appelé « évaluation de court-circuit ». Ainsi, certains opérandes de l'expression ne peuvent pas être évalués. Par exemple, dans l'expression
 

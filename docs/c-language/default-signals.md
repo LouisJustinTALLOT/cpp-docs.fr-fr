@@ -6,11 +6,11 @@ helpviewer_keywords:
 - defaults, signals
 ms.assetid: db9fc17b-75c0-4d33-86be-c536584bbede
 ms.openlocfilehash: bb84e168d0693313373395e8d5f44be0eca9891e
-ms.sourcegitcommit: f4be868c0d1d78e550fba105d4d3c993743a1f4b
-ms.translationtype: HT
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56152558"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62234506"
 ---
 # <a name="default-signals"></a>Signaux par défaut
 
@@ -20,4 +20,4 @@ Les signaux sont définis à leur état par défaut au démarrage d'un programme
 
 ## <a name="see-also"></a>Voir aussi
 
-[Fonctions des bibliothèques](../c-language/library-functions.md)
+[Fonctions de la bibliothèque](../c-language/library-functions.md)

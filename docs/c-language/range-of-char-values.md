@@ -11,11 +11,11 @@ ms.locfileid: "81480906"
 ---
 # <a name="range-of-char-values"></a>Plage de valeurs char
 
-**ANSI 3.2.1.1** Qu’il s’agisse d’un **char** "simple" a la même gamme de valeurs qu’un **char signé** ou un **char non signé**
+**3.2.1.1 ANSI** Si un **caractère** « brut » a la même plage de valeurs qu’un caractère **signé** ou un caractère **non signé**
 
 Toutes les valeurs de caractères signées sont comprises entre -128 et 127. Toutes les valeurs de caractères non signées sont comprises entre 0 et 255.
 
-L’option [`/J`](../build/reference/j-default-char-type-is-unsigned.md) compilateur change le type par défaut pour **l’omble** de **l’omble signé** à **l’omble non signé**.
+L' [`/J`](../build/reference/j-default-char-type-is-unsigned.md) **option de compilateur** remplace le type par défaut char de signed **char** par **unsigned char**.
 
 ## <a name="see-also"></a>Voir aussi
 

@@ -17,11 +17,11 @@ helpviewer_keywords:
 - static storage class specifiers
 ms.assetid: b76b623a-80ec-4d5d-859b-6cef422657ee
 ms.openlocfilehash: 941994f668fa035b569f9ccae2c301ebf42bcda6
-ms.sourcegitcommit: f4be868c0d1d78e550fba105d4d3c993743a1f4b
-ms.translationtype: HT
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56152077"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62157953"
 ---
 # <a name="storage-class-specifiers-for-external-level-declarations"></a>Spécificateurs de classe de stockage pour les déclarations de niveau externe
 
@@ -40,7 +40,7 @@ Une déclaration de variable externe qui initialise aussi la variable (implicite
 
 - Une variable que vous initialisez explicitement au niveau externe. Par exemple, `int j = 3;` est une définition de la variable `j`.
 
-Dans les déclarations de variables au niveau externe (c'est-à-dire en dehors de toutes les fonctions), vous pouvez utiliser le spécificateur de classe de stockage **static** ou `extern`, ou omettre le spécificateur de classe de stockage entièrement. Vous ne pouvez pas utiliser les éléments terminaux *storage-class-specifier* **auto** et **register** au niveau externe.
+Dans les déclarations de variables au niveau externe (c'est-à-dire en dehors de toutes les fonctions), vous pouvez utiliser le spécificateur de classe de stockage **static** ou `extern`, ou omettre le spécificateur de classe de stockage entièrement. Vous ne pouvez pas utiliser les terminaux **auto** et **Register** *Storage-Class-specifier* au niveau externe.
 
 Une fois qu'une variable est définie au niveau externe, elle est visible dans le reste de l'unité de traduction. La variable n'est pas visible avant sa déclaration dans le même fichier source. En outre, elle n'est pas visible dans les autres fichiers sources du programme, à moins qu'une déclaration de référencement la rende visible, comme expliqué ci-dessous.
 
@@ -58,7 +58,7 @@ Les règles relatives à l'utilisation d'`extern` sont les suivantes :
 
 - Pour qu'une référence à `extern` soit valide, il faut que la variable à laquelle elle fait référence soit définie une seule fois au niveau externe. Cette définition (sans la classe de stockage `extern`) peut se trouver dans n'importe laquelle des unités de traduction qui composent le programme.
 
-## <a name="example"></a>Exemple
+## <a name="example"></a> Exemple
 
 L'exemple ci-dessous illustre les déclarations externes :
 

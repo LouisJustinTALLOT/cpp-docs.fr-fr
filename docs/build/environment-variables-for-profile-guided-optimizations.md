@@ -13,62 +13,62 @@ ms.locfileid: "62195264"
 ---
 # <a name="environment-variables-for-profile-guided-optimizations"></a>Variables d'environnement pour les optimisations guidées par profil
 
-Il existe trois variables d’environnement qui affectent des scénarios de test sur une image créée avec **/LTCG : PGI** pour les optimisations guidées par profil :
+Il existe trois variables d’environnement qui affectent les scénarios de test sur une image créée avec **/LTCG : PGI** pour les optimisations guidées par profil :
 
-- **PogoSafeMode** Spécifie s’il faut utiliser le mode rapide ou le mode sans échec pour le profilage de l’application.
+- **PogoSafeMode** spécifie s’il faut utiliser le mode rapide ou le mode sans échec pour le profilage de l’application.
 
 - **VCPROFILE_ALLOC_SCALE** ajoute de la mémoire supplémentaire pour une utilisation par le profileur.
 
-- **VCPROFILE_PATH** vous permet de spécifier le dossier utilisé pour les fichiers .pgc.
+- **VCPROFILE_PATH** vous permet de spécifier le dossier utilisé pour les fichiers. PGC.
 
-**Les variables d’environnement PogoSafeMode et VCPROFILE_ALLOC_SCALE sont déconseillées à compter de Visual Studio 2015.** Les options de l’éditeur de liens [/GENPROFILE ou /fastgenprofile.](reference/genprofile-fastgenprofile-generate-profiling-instrumented-build.md) et [/USEPROFILE](reference/useprofile.md) spécifient le même comportement de l’éditeur de liens en tant que ces variables d’environnement.
+**Les variables d’environnement PogoSafeMode et VCPROFILE_ALLOC_SCALE sont déconseillées à partir de Visual Studio 2015.** Les options de l’éditeur de liens [/GENPROFILE ou/FASTGENPROFILE](reference/genprofile-fastgenprofile-generate-profiling-instrumented-build.md) et [/USEPROFILE](reference/useprofile.md) spécifient le même comportement de l’éditeur de liens que ces variables d’environnement.
 
 ## <a name="pogosafemode"></a>PogoSafeMode
 
-Cette variable d’environnement est déconseillée. Utilisez le **EXACT** ou **NOEXACT** arguments à **/genprofile** ou **/fastgenprofile** pour contrôler ce comportement.
+Cette variable d’environnement est déconseillée. Utilisez les arguments **exacts** ou **noexacts** de **/GENPROFILE** ou **/FASTGENPROFILE** pour contrôler ce comportement.
 
-Effacer ou de définir le **PogoSafeMode** variable d’environnement pour spécifier s’il faut utiliser le mode rapide ou le mode sans échec pour le profilage d’application sur x86 systèmes.
+Désactivez ou définissez la variable d’environnement **PogoSafeMode** pour spécifier s’il faut utiliser le mode rapide ou le mode sans échec pour le profilage de l’application sur les systèmes x86.
 
-Optimisation guidée par profil (PGO) a deux modes possibles pendant la phase de profilage : *mode rapide* et *mode sans échec*. Lorsque le profilage est en mode rapide, il utilise le **INC** instruction pour incrémenter des compteurs de données. Le **INC** instruction est plus rapide mais n’est pas thread-safe. Lorsque le profilage est en mode sans échec, il utilise le **LOCK INC** instruction pour incrémenter des compteurs de données. Le **LOCK INC** instruction a les mêmes fonctionnalités que le **INC** instruction a et est thread-safe, mais il est plus lent que le **INC** instruction.
+L’optimisation guidée par profil (PGO) a deux modes possibles pendant la phase de profilage : le *mode rapide* et le *mode sans échec*. Lorsque le profilage est en mode rapide, il utilise l’instruction **Inc** pour augmenter les compteurs de données. L’instruction **Inc** est plus rapide, mais n’est pas thread-safe. Lorsque le profilage est en mode sans échec, il utilise l’instruction **Lock Inc** pour augmenter les compteurs de données. L’instruction **Lock Inc** a les mêmes fonctionnalités que l’instruction **Inc** , et est thread-safe, mais elle est plus lente que l’instruction **Inc** .
 
-Par défaut, le profilage PGO fonctionne en mode rapide. **PogoSafeMode** est nécessaire uniquement si vous souhaitez utiliser le mode sans échec.
+Par défaut, le profilage PGO fonctionne en mode rapide. **PogoSafeMode** est requis uniquement si vous souhaitez utiliser le mode sans échec.
 
-Pour exécuter le profilage PGO en mode sans échec, vous devez utiliser la variable d’environnement **PogoSafeMode** ou le commutateur de l’éditeur de liens **/PogoSafeMode**, selon le système. Si vous effectuez le profilage sur un x64 ordinateur, vous devez utiliser le commutateur de l’éditeur de liens. Si vous effectuez le profilage sur un x86 ordinateur, vous pouvez utiliser l’éditeur de liens basculer ou définir le **PogoSafeMode** variable d’environnement à n’importe quelle valeur avant de commencer le processus d’optimisation.
+Pour exécuter le profilage PGO en mode sans échec, vous devez utiliser la variable d’environnement **PogoSafeMode** ou le commutateur de l’éditeur de liens **/PogoSafeMode**, selon le système. Si vous effectuez le profilage sur un ordinateur x64, vous devez utiliser le commutateur de l’éditeur de liens. Si vous effectuez le profilage sur un ordinateur x86, vous pouvez utiliser le commutateur de l’éditeur de liens ou définir la variable d’environnement **PogoSafeMode** sur n’importe quelle valeur avant de démarrer le processus d’optimisation.
 
-### <a name="pogosafemode-syntax"></a>Syntaxe de PogoSafeMode
+### <a name="pogosafemode-syntax"></a>Syntaxe PogoSafeMode
 
-> **set PogoSafeMode**[**=**_value_]
+> **définir PogoSafeMode**[**=**_valeur_]
 
-Définissez **PogoSafeMode** à n’importe quelle valeur pour activer le mode sans échec. Définir sans une valeur pour effacer une valeur précédente et de réactiver le mode rapide.
+Définissez **PogoSafeMode** sur n’importe quelle valeur pour activer le mode sans échec. Définissez sans valeur pour effacer une valeur précédente et réactiver le mode rapide.
 
-## <a name="vcprofileallocscale"></a>VCPROFILE_ALLOC_SCALE
+## <a name="vcprofile_alloc_scale"></a>VCPROFILE_ALLOC_SCALE
 
-Cette variable d’environnement est déconseillée. Utilisez le **MEMMIN** et **MEMMAX** arguments à **/genprofile** ou **/fastgenprofile** pour contrôler ce comportement.
+Cette variable d’environnement est déconseillée. Utilisez les arguments **MEMMIN** et **MEMMAX** pour **/GENPROFILE** ou **/FASTGENPROFILE** afin de contrôler ce comportement.
 
-Modifier le **VCPROFILE_ALLOC_SCALE** variable d’environnement pour modifier la quantité de mémoire allouée pour contenir les données de profil. Dans de rares cas, il y aura suffisamment de mémoire disponible pour prendre en charge collecte des données de profil lors de l’exécution des scénarios de test. Dans ce cas, vous pouvez augmenter la quantité de mémoire en définissant **VCPROFILE_ALLOC_SCALE**. Si vous recevez un message d’erreur au cours d’une série de tests qui indique que vous disposez d’une mémoire insuffisante, attribuez une valeur supérieure à **VCPROFILE_ALLOC_SCALE**, jusqu'à ce que l’exécution du test terminé sans erreurs de mémoire insuffisante.
+Modifiez la variable d’environnement **VCPROFILE_ALLOC_SCALE** pour modifier la quantité de mémoire allouée pour contenir les données de profil. Dans de rares cas, il n’y a pas assez de mémoire disponible pour prendre en charge la collecte des données de profil lors de l’exécution de scénarios de test. Dans ce cas, vous pouvez augmenter la quantité de mémoire en définissant **VCPROFILE_ALLOC_SCALE**. Si vous recevez un message d’erreur pendant une série de tests qui indique que vous ne disposez pas de suffisamment de mémoire, assignez une plus grande valeur à **VCPROFILE_ALLOC_SCALE**, jusqu’à ce que l’exécution du test se termine sans erreurs de mémoire insuffisante.
 
-### <a name="vcprofileallocscale-syntax"></a>Syntaxe VCPROFILE_ALLOC_SCALE
+### <a name="vcprofile_alloc_scale-syntax"></a>Syntaxe de VCPROFILE_ALLOC_SCALE
 
-> **set VCPROFILE_ALLOC_SCALE**[__=__*scale_value*]
+> **définir VCPROFILE_ALLOC_SCALE**[__=__*scale_value*]
 
-Le *scale_value* paramètre est un facteur d’échelle pour la quantité de mémoire souhaitée pour l’exécution de scénarios de test.  La valeur par défaut est 1. Par exemple, cette ligne de commande définit le facteur d’échelle à 2 :
+Le paramètre *scale_value* est un facteur d’échelle pour la quantité de mémoire que vous souhaitez pour exécuter des scénarios de test.  La valeur par défaut est 1. Par exemple, cette ligne de commande définit le facteur d’échelle sur 2 :
 
 `set VCPROFILE_ALLOC_SCALE=2`
 
-## <a name="vcprofilepath"></a>VCPROFILE_PATH
+## <a name="vcprofile_path"></a>VCPROFILE_PATH
 
-Utilisez le **VCPROFILE_PATH** variable d’environnement pour spécifier le répertoire pour créer les fichiers .pgc. Par défaut, les fichiers .pgc sont créés dans le même répertoire que le fichier binaire profilé. Toutefois, si le chemin d’accès absolu du fichier binaire n’existe pas, as ne peut être le cas lorsque vous exécutez des scénarios de profil sur un autre ordinateur sur lequel le fichier binaire a été généré, vous pouvez définir **VCPROFILE_PATH** à un chemin d’accès qui existe sur l’ordinateur cible.
+Utilisez la variable d’environnement **VCPROFILE_PATH** pour spécifier le répertoire dans lequel créer les fichiers. PGC. Par défaut, les fichiers. PGC sont créés dans le même répertoire que le fichier binaire en cours de profilage. Toutefois, si le chemin d’accès absolu du fichier binaire n’existe pas, comme cela peut être le cas lorsque vous exécutez des scénarios de profil sur un autre ordinateur que celui sur lequel le fichier binaire a été généré, vous pouvez définir **VCPROFILE_PATH** sur un chemin d’accès qui existe sur l’ordinateur cible.
 
-### <a name="vcprofilepath-syntax"></a>Syntaxe VCPROFILE_PATH
+### <a name="vcprofile_path-syntax"></a>Syntaxe de VCPROFILE_PATH
 
-> **set VCPROFILE_PATH**[**=**_path_]
+> **Set VCPROFILE_PATH**[**=**_chemin_]
 
-Définir le *chemin d’accès* paramètre vers le chemin du répertoire dans lequel ajouter les fichiers .pgc. Par exemple, cette ligne de commande définit le dossier à C:\profile :
+Définissez le paramètre *path* sur le chemin d’accès du répertoire dans lequel ajouter les fichiers. PGC. Par exemple, cette ligne de commande définit le dossier C:\profile :
 
 `set VCPROFILE_PATH=c:\profile`
 
 ## <a name="see-also"></a>Voir aussi
 
 [Optimisations guidées par profil](profile-guided-optimizations.md)<br/>
-[/GENPROFILE et /FASTGENPROFILE](reference/genprofile-fastgenprofile-generate-profiling-instrumented-build.md)<br/>
+[/GENPROFILE et/FASTGENPROFILE](reference/genprofile-fastgenprofile-generate-profiling-instrumented-build.md)<br/>
 [/USEPROFILE](reference/useprofile.md)<br/>

@@ -30,7 +30,7 @@ Pour obtenir des informations générales sur les outils de génération personn
 
 ### <a name="to-specify-a-custom-build-tool"></a>Pour spécifier un outil de génération personnalisée
 
-1. Ouvrez la boîte de dialogue **Pages de propriété** du projet. Pour plus d’informations, consultez [propriétés de compilateur et de build C++ définie dans Visual Studio](working-with-project-properties.md).
+1. Ouvrez la boîte de dialogue **Pages de propriété** du projet. Pour plus d’informations, consultez [Définir le compilateur C++ et les propriétés de build dans Visual Studio](working-with-project-properties.md).
 
 1. Choisissez **Propriétés de configuration** pour activer la zone **Configuration**. Dans la zone **Configuration**, sélectionnez la configuration pour laquelle vous souhaitez spécifier un outil de génération personnalisée.
 
@@ -50,9 +50,9 @@ Pour obtenir des informations générales sur les outils de génération personn
 
    - Dans **Ligne de commande**, spécifiez une commande comme vous le feriez à une invite de commandes. Spécifiez une commande ou un fichier de commandes valide, ainsi que les fichiers d’entrée ou de sortie requis. Spécifiez la commande batch **call** avant le nom d’un fichier de commandes pour garantir l’exécution de toutes les commandes suivantes.
 
-      Il est possible de spécifier plusieurs fichiers d’entrée et de sortie symboliquement à l’aide de macros MSBuild. Pour plus d’informations sur la façon de spécifier l’emplacement des fichiers ou les noms des groupes de fichiers, consultez [macros courantes pour générer des propriétés et les commandes](reference/common-macros-for-build-commands-and-properties.md).
+      Il est possible de spécifier plusieurs fichiers d’entrée et de sortie symboliquement à l’aide de macros MSBuild. Pour plus d’informations sur la façon de spécifier l’emplacement des fichiers, ou les noms des ensembles de fichiers, consultez [macros courantes pour les commandes et les propriétés de génération](reference/common-macros-for-build-commands-and-properties.md).
 
-      Dans la mesure où le caractère « % » est réservé à MSBuild, quand vous spécifiez une variable d’environnement, il convient de remplacer chaque caractère d’échappement **%** par la séquence d’échappement hexadécimale **%25**. Par exemple, remplacez **%WINDIR%** par **%25WINDIR%25**. MSBuild remplace chaque séquence **%25** par le caractère **%** avant d’accéder à la variable d’environnement.
+      Étant donné que le caractère'% 'est réservé par MSBuild, si vous spécifiez une variable **%** d’environnement, remplacez chaque caractère d’échappement par la séquence d’échappement hexadécimale **%25** . Par exemple, remplacez **%WINDIR%** par **%25WINDIR%25**. MSBuild remplace chaque séquence **%25** par le caractère **%** avant d’accéder à la variable d’environnement.
 
    - Dans **Description**, entrez un message descriptif sur cet outil de génération personnalisée. Le message est imprimé dans la fenêtre **Sortie** quand le système de génération traite cet outil.
 
@@ -62,7 +62,7 @@ Pour obtenir des informations générales sur les outils de génération personn
 
 Si vous souhaitez que le système de génération fonctionne sur un fichier de sortie généré par l’outil de génération personnalisée, vous devez l’ajouter manuellement au projet. L’outil de génération personnalisée met à jour le fichier durant la génération.
 
-## <a name="example"></a>Exemple
+## <a name="example"></a> Exemple
 
 Imaginons que vous souhaitiez inclure un fichier nommé parser.l dans votre projet. Vous avez un analyseur lexical, **lexer.exe**, sur votre chemin exécutable. Vous souhaitez l’utiliser pour traiter parser.l afin de produire un fichier .c portant le même nom de base (parser.c).
 
@@ -74,7 +74,7 @@ Cette commande exécute l’analyseur lexical sur parser.l et génère en sortie
 
 Dans la propriété **Sorties**, entrez ce qui suit :
 
-> **.\%(Filename).c**
+> **. \%(Nom de fichier). c**
 
 Quand vous générez le projet, le système de génération compare les horodatages de parser.l et de parser.c. Si parser.l est plus récent, ou si parser.c n’existe pas, le système de génération exécute la valeur de la propriété **Ligne de commande** pour mettre à jour parser.c. Dans la mesure où parser.c a également été ajouté au projet, le système de génération compile parser.c.
 

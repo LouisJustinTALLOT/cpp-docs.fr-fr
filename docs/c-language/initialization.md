@@ -8,11 +8,11 @@ helpviewer_keywords:
 - initializers
 ms.assetid: f009ee12-3df6-4260-b7e4-a6149ebb95aa
 ms.openlocfilehash: f3e8951e4d1900746cc71215df665ad27d3f329f
-ms.sourcegitcommit: f4be868c0d1d78e550fba105d4d3c993743a1f4b
-ms.translationtype: HT
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56149067"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62232898"
 ---
 # <a name="initialization"></a>Initialisation
 

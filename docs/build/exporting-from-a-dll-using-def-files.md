@@ -34,9 +34,9 @@ EXPORTS
    Min   @4
 ```
 
-Si vous utilisez l' [Assistant DLL MFC](../mfc/reference/mfc-dll-wizard.md) pour créer une DLL MFC, l’Assistant crée un fichier de définition squelette pour vous et l’ajoute automatiquement à votre projet. Ajoutez les noms des fonctions à exporter dans ce fichier. Pour les dll non-MFC, créez vous-même le fichier DEF et ajoutez-le à votre projet. Accédez ensuite à **projet** > **Propriétés** > **éditeur de liens** > **fichier de définition de module** > **d’entrée** et entrez le nom du fichier def. Répétez cette étape pour chaque configuration et plateforme, ou faites-la tout à la fois en sélectionnant **configuration = toutes les configurations**et **plateforme = toutes les plateformes**.
+Si vous utilisez l' [Assistant DLL MFC](../mfc/reference/mfc-dll-wizard.md) pour créer une DLL MFC, l’Assistant crée un fichier de définition squelette pour vous et l’ajoute automatiquement à votre projet. Ajoutez les noms des fonctions à exporter dans ce fichier. Pour les dll non-MFC, créez vous-même le fichier DEF et ajoutez-le à votre projet. Accédez ensuite à **Project** > **Propriétés** > du projet**fichier de définition du module** **d’entrée** > de l'**éditeur de liens** > et entrez le nom du fichier def. Répétez cette étape pour chaque configuration et plateforme, ou faites-la tout à la fois en sélectionnant **configuration = toutes les configurations**et **plateforme = toutes les plateformes**.
 
-Si vous exportez des fonctions C++ dans un fichier, vous devez placer les noms décorés dans le fichier def ou définir vos fonctions exportées avec une liaison C standard à l’aide de extern "C". Si vous devez placer les noms décorés dans le fichier DEF, vous pouvez les obtenir à l’aide de l’outil [DUMPBIN](../build/reference/dumpbin-reference.md) ou à l’aide de l’option [/Map](../build/reference/map-generate-mapfile.md) de l’éditeur de liens. Notez que les noms décorés produits par le compilateur sont spécifiques au compilateur. Si vous placez les noms décorés produits par le C++ compilateur Microsoft (MSVC) dans un fichier def, les applications qui lient à votre dll doivent également être générées à l’aide de la même version de MSVC afin que les noms décorés dans l’application appelante correspondent aux noms exportés dans le fichier def de la dll.
+Si vous exportez des fonctions dans un fichier C++, vous devez placer les noms décorés dans le fichier DEF ou définir vos fonctions exportées avec une liaison C standard à l’aide de extern "C". Si vous devez placer les noms décorés dans le fichier DEF, vous pouvez les obtenir à l’aide de l’outil [DUMPBIN](../build/reference/dumpbin-reference.md) ou à l’aide de l’option [/Map](../build/reference/map-generate-mapfile.md) de l’éditeur de liens. Notez que les noms décorés produits par le compilateur sont spécifiques au compilateur. Si vous placez les noms décorés produits par le compilateur Microsoft C++ (MSVC) dans un fichier DEF, les applications qui lient à votre DLL doivent également être générées à l’aide de la même version de MSVC afin que les noms décorés dans l’application appelante correspondent aux noms exportés dans le fichier DEF de la DLL.
 
 > [!NOTE]
 > Une DLL générée avec Visual Studio 2015 peut être consommée par les applications générées avec Visual Studio 2017 ou Visual Studio 2019.
@@ -51,7 +51,7 @@ Si vous générez une [dll d’extension](../build/extension-dlls-overview.md)et
 #define AFX_DATA
 ```
 
-Ces lignes garantissent que les variables MFC utilisées en interne ou ajoutées à vos classes sont exportées (ou importées) à partir de votre DLL d’extension MFC. Par exemple, lors de la dérivation d’une classe à l’aide de `DECLARE_DYNAMIC`, la macro se développe pour ajouter une variable de membre `CRuntimeClass` à votre classe. Le fait de laisser ces quatre lignes peut entraîner la compilation ou le lien de votre DLL de manière incorrecte, ou provoquer une erreur lorsque l’application cliente est liée à la DLL.
+Ces lignes garantissent que les variables MFC utilisées en interne ou ajoutées à vos classes sont exportées (ou importées) à partir de votre DLL d’extension MFC. Par exemple, quand vous dérivez une `DECLARE_DYNAMIC`classe à l’aide de, la macro `CRuntimeClass` se développe pour ajouter une variable membre à votre classe. Le fait de laisser ces quatre lignes peut entraîner la compilation ou le lien de votre DLL de manière incorrecte, ou provoquer une erreur lorsque l’application cliente est liée à la DLL.
 
 Lors de la génération de la DLL, l’éditeur de liens utilise le fichier DEF pour créer un fichier d’exportation (. exp) et un fichier de bibliothèque d’importation (. lib). L’éditeur de liens utilise ensuite le fichier d’exportation pour générer le fichier DLL. Les exécutables qui sont implicitement liés à la DLL sont liés à la bibliothèque d’importation lorsqu’ils sont générés.
 
@@ -63,9 +63,9 @@ Notez que MFC lui-même utilise des fichiers DEF pour exporter des fonctions et 
 
 - [Exporter et importer à l’aide de AFX_EXT_CLASS](exporting-and-importing-using-afx-ext-class.md)
 
-- [Exporter C++ des fonctions à utiliser dans des exécutables en langage C](exporting-cpp-functions-for-use-in-c-language-executables.md)
+- [Exporter des fonctions C++ à utiliser dans des exécutables en langage C](exporting-cpp-functions-for-use-in-c-language-executables.md)
 
-- [Exporter des fonctions C à utiliser dans des C++exécutables en langage c ou en langage](exporting-c-functions-for-use-in-c-or-cpp-language-executables.md)
+- [Exporter des fonctions C à utiliser dans des exécutables en langage C ou C++](exporting-c-functions-for-use-in-c-or-cpp-language-executables.md)
 
 - [Déterminer la méthode d’exportation à utiliser](determining-which-exporting-method-to-use.md)
 

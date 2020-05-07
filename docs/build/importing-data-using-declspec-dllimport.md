@@ -16,7 +16,7 @@ ms.locfileid: "79440446"
 ---
 # <a name="importing-data-using-__declspecdllimport"></a>Importation de données à l'aide de __declspec(dllimport)
 
-Dans le cas de données, l’utilisation de **__declspec (dllimport)** est un élément pratique qui supprime une couche d’indirection. Lorsque vous importez des données à partir d’une DLL, vous devez toujours passer par la table d’adresses d’importation. Avant d' **__declspec (dllimport)** , cela signifiait que vous deviez vous souvenir d’effectuer un niveau supplémentaire d’indirection lors de l’accès aux données exportées à partir de la dll :
+Dans le cas de données, l’utilisation de **__declspec (dllimport)** est un élément pratique qui supprime une couche d’indirection. Lorsque vous importez des données à partir d’une DLL, vous devez toujours passer par la table d’adresses d’importation. Avant d' **__declspec (dllimport)**, cela signifiait que vous deviez vous souvenir d’effectuer un niveau supplémentaire d’indirection lors de l’accès aux données exportées à partir de la dll :
 
 ```
 // project.h
@@ -46,7 +46,7 @@ if (*ulDataInDll == 0L)
 }
 ```
 
-Quand vous marquez les données en tant que **__declspec (dllimport)** , le compilateur génère automatiquement le code d’indirection pour vous. Vous n’avez plus à vous soucier des étapes ci-dessus. Comme indiqué précédemment, n’utilisez pas la Déclaration **__declspec (dllimport)** sur les données lors de la génération de la dll. Les fonctions de la DLL n’utilisent pas la table d’adresses d’importation pour accéder à l’objet de données ; par conséquent, vous n’aurez pas le niveau supplémentaire d’indirection.
+Quand vous marquez les données en tant que **__declspec (dllimport)**, le compilateur génère automatiquement le code d’indirection pour vous. Vous n’avez plus à vous soucier des étapes ci-dessus. Comme indiqué précédemment, n’utilisez pas la Déclaration **__declspec (dllimport)** sur les données lors de la génération de la dll. Les fonctions de la DLL n’utilisent pas la table d’adresses d’importation pour accéder à l’objet de données ; par conséquent, vous n’aurez pas le niveau supplémentaire d’indirection.
 
 Pour exporter les données automatiquement à partir de la DLL, utilisez la déclaration suivante :
 

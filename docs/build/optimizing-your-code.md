@@ -21,7 +21,7 @@ En optimisant un fichier exécutable, vous pouvez obtenir un équilibre entre la
 
 ## <a name="language-features"></a>Fonctionnalités de langage
 
-Les rubriques suivantes décrivent quelques-unes des fonctionnalités d’optimisation dansC++ le langage C/.
+Les rubriques suivantes décrivent quelques-unes des fonctionnalités d’optimisation du langage C/C++.
 
 [Pragmas et Mots clés d’optimisation](optimization-pragmas-and-keywords.md) \
 Liste des mots clés et des pragmas que vous pouvez utiliser dans votre code pour améliorer les performances.
@@ -29,7 +29,7 @@ Liste des mots clés et des pragmas que vous pouvez utiliser dans votre code pou
 [Options du compilateur classées par catégorie](reference/compiler-options-listed-by-category.md) \
 Liste d’options du compilateur **/o** qui affectent spécifiquement la vitesse d’exécution ou la taille du code.
 
-[Déclarateur de référence rvalue : & &](../cpp/rvalue-reference-declarator-amp-amp.md) \
+[Déclarateur de référence rvalue :  &&](../cpp/rvalue-reference-declarator-amp-amp.md) \
 Les références rvalue prennent en charge l’implémentation de la *sémantique de déplacement*. Si la sémantique de déplacement est utilisée pour implémenter des bibliothèques de modèles, les performances des applications qui utilisent ces modèles peuvent être considérablement améliorées.
 
 ### <a name="the-optimize-pragma"></a>Le pragma optimize
@@ -52,10 +52,10 @@ Paradoxalement, l’optimisation d’un programme pour une vitesse peut entraîn
 
 Les rubriques suivantes abordent les bonnes pratiques en matière de programmation.
 
-[Conseils pour améliorer la \ du code critique dans le temps](tips-for-improving-time-critical-code.md)
+[Conseils pour améliorer le code critique dans le temps](tips-for-improving-time-critical-code.md) \
 De meilleures techniques de codage peuvent donner de meilleures performances. Cette rubrique suggère des techniques de codage qui peuvent vous aider à vous assurer que les parties critiques de votre code s’exécutent de manière satisfaisante.
 
-[Meilleures pratiques](optimization-best-practices.md) pour l’optimisation \
+[Meilleures pratiques pour l’optimisation](optimization-best-practices.md) \
 Fournit des indications générales sur la meilleure façon d’optimiser votre application.
 
 ## <a name="debugging-optimized-code"></a>Débogage du code optimisé
@@ -66,7 +66,7 @@ Les rubriques suivantes fournissent des informations sur le débogage des versio
 
 - [Débogage dans Visual Studio](/visualstudio/debugger/debugging-in-visual-studio)
 
-- [Guide pratique pour déboguer le code optimisé](/visualstudio/debugger/how-to-debug-optimized-code)
+- [Comment : déboguer le code optimisé](/visualstudio/debugger/how-to-debug-optimized-code)
 
 - [Pourquoi les nombres à virgule flottante peuvent manquer de précision](why-floating-point-numbers-may-lose-precision.md)
 
@@ -76,28 +76,28 @@ Les rubriques suivantes fournissent des informations sur l’optimisation de la 
 
 - [L’utilisation d’un nom de fonction sans () ne génère pas de code](using-function-name-without-parens-produces-no-code.md)
 
-- [Optimisation de l’assembly inline](../assembler/inline/optimizing-inline-assembly.md)
+- [Optimisation de l'assembly inline](../assembler/inline/optimizing-inline-assembly.md)
 
 - [Spécification de l’optimisation du compilateur pour un projet ATL](../atl/reference/specifying-compiler-optimization-for-an-atl-project.md)
 
-- [Quelles techniques d’optimisation dois-je utiliser pour améliorer les performances de l’application cliente lors du chargement ?](../build/dll-frequently-asked-questions.md#mfc_optimization)
+- [Quelles techniques d'optimisation dois-je utiliser pour améliorer les performances de l'application cliente lors du chargement ?](../build/dll-frequently-asked-questions.md#mfc_optimization)
 
 ## <a name="in-this-section"></a>Contenu de cette section
 
 [Pragmas et Mots clés d’optimisation](optimization-pragmas-and-keywords.md) \
 [Amélioration du débit du compilateur](improving-compiler-throughput.md) \
 [Pourquoi les nombres à virgule flottante peuvent perdre la précision](why-floating-point-numbers-may-lose-precision.md) \
- \ [de représentation à virgule flottante IEEE](ieee-floating-point-representation.md)
-[Conseils pour améliorer la \ du code critique dans le temps](tips-for-improving-time-critical-code.md)
-[L’utilisation d’un nom de fonction sans () ne génère pas de Code](using-function-name-without-parens-produces-no-code.md) \
-[Meilleures pratiques](optimization-best-practices.md) pour l’optimisation \
+[Représentation à virgule flottante IEEE](ieee-floating-point-representation.md) \
+[Conseils pour améliorer le code critique dans le temps](tips-for-improving-time-critical-code.md) \
+[L’utilisation d’un nom de fonction sans () ne génère pas de code](using-function-name-without-parens-produces-no-code.md) \
+[Meilleures pratiques pour l’optimisation](optimization-best-practices.md) \
 [Optimisations guidées par profil](profile-guided-optimizations.md) \
 [Variables d’environnement pour les optimisations guidées par profil](environment-variables-for-profile-guided-optimizations.md) \
 [PgoAutoSweep](pgoautosweep.md) \
 [pgomgr](pgomgr.md) \
 [pgosweep](pgosweep.md) \
-[Guide pratique pour fusionner plusieurs profils PGO en un seul profil](how-to-merge-multiple-pgo-profiles-into-a-single-profile.md)
+[Comment : fusionner plusieurs profils PGO en un seul profil](how-to-merge-multiple-pgo-profiles-into-a-single-profile.md)
 
 ## <a name="see-also"></a>Voir aussi
 
-[Référence de la génération C/C++](reference/c-cpp-building-reference.md)
+[Référence à la génération C/C++](reference/c-cpp-building-reference.md)

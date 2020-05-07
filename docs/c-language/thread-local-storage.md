@@ -10,14 +10,14 @@ helpviewer_keywords:
 ms.assetid: a0f1b109-c953-4079-aa10-e47f5483173d
 ms.openlocfilehash: a1099228e072a772ee7d8e7e93253b674d0cd24b
 ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
-ms.translationtype: HT
+ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 08/15/2019
 ms.locfileid: "69500260"
 ---
 # <a name="thread-local-storage"></a>stockage local des threads
 
-**Section spécifique à Microsoft**
+**Spécifique à Microsoft**
 
 Le stockage local des threads (TLS) est le mécanisme par lequel chaque thread d’un processus multithread donné alloue de l’espace de stockage pour les données spécifiques aux threads. Dans les programmes multithread standard, les données sont partagées entre tous les threads d’un processus donné, alors que le stockage local des threads est le mécanisme d’allocation des données par thread. Pour une description complète des threads, consultez [Threads et processus](/windows/win32/ProcThread/processes-and-threads) dans le kit SDK Windows.
 
@@ -75,7 +75,7 @@ Ces instructions doivent être observées lors de la déclaration de variables e
     int *p = &tls_i;      /* Error */
     ```
 
-- Le langage C permet l'initialisation d'une variable à l'aide d'une expression impliquant une auto-référence, mais uniquement pour les objets d'étendue non statique. Par exemple :
+- Le langage C permet l'initialisation d'une variable à l'aide d'une expression impliquant une auto-référence, mais uniquement pour les objets d'étendue non statique. Par exemple :
 
     ```C
     #define Thread   __declspec( thread )
@@ -86,11 +86,11 @@ Ces instructions doivent être observées lors de la déclaration de variables e
 
    Notez qu'une expression sizeof qui inclut la variable initialisée ne constitue pas une référence à elle-même et est autorisée.
 
-- L'utilisation d **\_\_declspec(thread)** peut perturber le [chargement différé](../build/reference/linker-support-for-delay-loaded-dlls.md) des importations de DLL.
+- L’utilisation de ** \_ \_declspec (thread)** peut interférer avec le [chargement différé](../build/reference/linker-support-for-delay-loaded-dlls.md) des importations de dll.
 
 Pour plus d'informations sur l'utilisation de l'attribut de thread, consultez [Rubriques de multithreading](../parallel/multithreading-support-for-older-code-visual-cpp.md).
 
-**FIN de la section spécifique à Microsoft**
+**FIN spécifique à Microsoft**
 
 ## <a name="see-also"></a>Voir aussi
 
