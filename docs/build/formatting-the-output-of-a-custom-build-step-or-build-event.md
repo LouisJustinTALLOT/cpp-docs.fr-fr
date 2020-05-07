@@ -30,7 +30,7 @@ Si la sortie d’un événement de build ou d’une étape de build personnalis�
 
 La sortie doit avoir le format suivant :
 
-> {<em>filename</em> **(** <em>line #</em> \[ **,** <em>Column #</em>] **)** &#124; *ToolName*} **:** \[ <em>n’importe quel texte</em> ] { **Warning** **Error** &#124; } <em>code + number</em> **:** <em>chaîne localisable</em> \[ <em>tout texte</em> ]
+> {<em>filename</em>**(**<em>line #</em> \[ **,** <em>Column #</em>]**)** &#124; *ToolName*} **:** \[ <em>n’importe quel texte</em> ] {**Error** &#124; **Warning**} <em>code + number</em>**:**<em>chaîne</em> \[ localisable <em>n’importe quel texte</em> ]
 
 Où :
 

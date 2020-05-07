@@ -16,7 +16,7 @@ ms.locfileid: "81349612"
 ---
 # <a name="try-finally-statement-c"></a>try-finally, instruction (C)
 
-**Microsoft Spécifique**
+**Spécifique à Microsoft**
 
 L'instruction `try-finally` est une extension Microsoft du langage C qui permet aux applications de garantir l'exécution du code de nettoyage lorsque l'exécution d'un bloc de code est interrompue. Le nettoyage se compose de tâches telles que la désallocation de mémoire, la fermeture de fichiers et la libération des handles de fichiers. L'instruction `try-finally` est particulièrement utile pour les routines qui ont plusieurs endroits où un contrôle est effectué pour une erreur qui peut provoquer un retour prématuré de la routine.
 
@@ -48,7 +48,7 @@ Le gestionnaire de terminaisons n'est pas appelé si un processus est tué tout 
 
 Consultez l'exemple pour [l'instruction try-except](../c-language/try-except-statement-c.md) pour voir comment l'instruction `try-finally` fonctionne.
 
-**END Microsoft Spécifique**
+**FIN spécifique à Microsoft**
 
 ## <a name="see-also"></a>Voir aussi
 

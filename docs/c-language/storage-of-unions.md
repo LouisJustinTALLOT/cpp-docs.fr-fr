@@ -7,15 +7,15 @@ helpviewer_keywords:
 - union keyword [C]
 ms.assetid: b33d246a-8d20-41c4-89b2-ab05f1428792
 ms.openlocfilehash: 49b99dc17fd7bdddd8a47e3bfd5913a70a7631a7
-ms.sourcegitcommit: f4be868c0d1d78e550fba105d4d3c993743a1f4b
-ms.translationtype: HT
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56152818"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62157921"
 ---
 # <a name="storage-of-unions"></a>Stockage des unions
 
-Le stockage associé à une variable d'union est le stockage requis pour le plus grand membre de l'union. Lorsqu'un membre plus petit est stocké, la variable d'union peut contenir l'espace mémoire non utilisé. Tous les membres sont stockés dans le même espace mémoire et démarrent à la même adresse. La valeur stockée est remplacée chaque fois qu'une valeur est assignée à un autre membre. Par exemple :
+Le stockage associé à une variable d'union est le stockage requis pour le plus grand membre de l'union. Lorsqu'un membre plus petit est stocké, la variable d'union peut contenir l'espace mémoire non utilisé. Tous les membres sont stockés dans le même espace mémoire et démarrent à la même adresse. La valeur stockée est remplacée chaque fois qu'une valeur est assignée à un autre membre. Par exemple :
 
 ```
 union         /* Defines a union named x */
@@ -29,4 +29,4 @@ Les membres de l'union `x` sont, dans l'ordre de leur déclaration, un pointeur 
 
 ## <a name="see-also"></a>Voir aussi
 
-[Déclarations d’union](../c-language/union-declarations.md)
+[Déclarations d'union](../c-language/union-declarations.md)

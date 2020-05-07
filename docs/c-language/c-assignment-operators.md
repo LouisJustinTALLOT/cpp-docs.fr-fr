@@ -44,11 +44,11 @@ Une opération d’assignation assigne la valeur de l’opérande droit à l’e
 ## <a name="syntax"></a>Syntaxe
 
 *assignment-expression* :<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*conditional-expression*<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;opérateur *unaire* Assignment-expression- *Operator* Assignment- *expression*
+&nbsp;&nbsp;&nbsp;&nbsp;*expression conditionnelle*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*unary-expression* *assignment-operator* *assignment-expression*
 
 *assignment-operator* : un des éléments suivants :<br/>
-&nbsp;&nbsp;&nbsp;&nbsp; **=** **\*=** **/=** **%=** **+=** **-=** **\<\<** **=>>=** **&=^=** **|=** **|=**
+&nbsp;&nbsp;&nbsp;&nbsp;**=** **\*=** **/=** **%=** **+=** **-=** **\<\<=** **>>=** **&=** **^=** **|=**
 
 Les opérateurs d'assignation en langage C peuvent transformer et assigner des valeurs dans une même opération. C propose les opérateurs d'assignation suivants :
 
@@ -70,4 +70,4 @@ Dans l'assignation, le type de la valeur droite est converti pour correspondre a
 
 ## <a name="see-also"></a>Voir aussi
 
-- [Opérateurs d’assignation](../cpp/assignment-operators.md)
+- [Opérateurs d'assignation](../cpp/assignment-operators.md)

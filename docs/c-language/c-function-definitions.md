@@ -26,17 +26,17 @@ Une définition de fonction spécifie le nom de la fonction, les types et le nom
 ## <a name="syntax"></a>Syntaxe
 
 *translation-unit* :<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*external-declaration* <br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*External-DECLARATION* <br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*translation-unit* *external-declaration*
 
-*external-declaration* : /\* Autorisé uniquement dans la portée (fichier) externe \*/<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*function-definition*<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*declaration*
+*External-DECLARATION*:/\* autorisé uniquement au niveau de l’étendue externe (fichier)\*/<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*définition de fonction*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*déclaré*
 
-*function-definition*:<br/>
+*définition de fonction*:<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*declaration-specifiers*<sub>opt</sub> *attribute-seq*<sub>opt</sub> *declarator* *declaration-list*<sub>opt</sub> *compound-statement*
 
-/\* *attribute-SEQ* est un \*spécifique à Microsoft /
+/\**attribute-SEQ* est spécifique à Microsoft\*/
 
 Les paramètres de prototype sont les suivants :
 
@@ -46,25 +46,25 @@ Les paramètres de prototype sont les suivants :
 &nbsp;&nbsp;&nbsp;&nbsp;*type-qualifier* *declaration-specifiers*<sub>opt</sub>
 
 *declaration-list* :<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*declaration*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*déclaré*<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*declaration-list* *declaration*
 
-*declarator* :<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*pointer*<sub>opt</sub> *direct-declarator*
+*déclarateur*:<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*pointeur*<sub>OPT</sub> *direct-declarator*
 
-*direct-declarator* : /\*Déclarateur de fonction \*/<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*direct-declarator*  **(**  *parameter-type-list*  **)**  /\* Déclarateur de nouveau style \*/<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*direct-declarator*  **(**  *identifier-list*<sub>opt</sub> **)**  /\* Déclarateur de style obsolète \*/
+*direct-declarator*:/\* un déclarateur de fonction\*/<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;déclarateur *direct-declarator***(***Parameter-type-list***)**  / \* New-style declarator      \*/<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;déclarateur *direct-declarator***(***identifier-List*<sub>OPT</sub> **)**  / \* -déclarateur de style obsolète    \*/
 
 La liste des paramètres dans une définition utilise la syntaxe suivante :
 
-*parameter-type-list* : /\* La liste de paramètrest \*/<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*parameter-list* <br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*parameter-list* **, ...**
+*Parameter-type-list*:/\* la liste de paramètres\*/<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*liste de paramètres* <br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*liste de paramètres* **,...**
 
-*parameter-list* :<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*parameter-declaration*<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*parameter-list* **,**  *parameter-declaration*
+*liste de paramètres*:<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*Déclaration de paramètre*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*parameter-list* **,**  *paramètre-DECLARATION*
 
 *parameter-declaration* :<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*declaration-specifiers* *declarator*<br/>
@@ -72,14 +72,14 @@ La liste des paramètres dans une définition utilise la syntaxe suivante :
 
 La liste des paramètres dans une définition de fonction de style ancien utilise la syntaxe suivante :
 
-*identifier-list* : /\* Utilisé dans les définitions et les déclarations de fonction de style obsolète \*/<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*identifier*<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*identifier-list* **,**  *identifier*
+*identifier-List*:/\* utilisé dans les définitions et les déclarations de fonction obsolètes\*/<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*identificateur*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*identificateur-liste* **,**  *identificateur*
 
 La syntaxe du corps de la fonction est la suivante :
 
-*compound-statement*:<br/>
-&nbsp;&nbsp;&nbsp;&nbsp; **{** *declaration-list*<sub>opt</sub> *statement-list*<sub>opt</sub> **}**
+*Compound-Statement*:<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**{** *declaration-list*<sub>OPT</sub> *Statement-List*<sub>OPT</sub> **}**
 
 Les seuls spécificateurs de classe de stockage pouvant modifier une déclaration de fonction sont **extern** et **static**. Le spécificateur **extern** signifie que la fonction peut être référencée à partir d'autres fichiers ; autrement dit, son nom est exporté vers l'éditeur de liens. Le spécificateur **static** signifie que la fonction ne peut pas être référencée à partir d'autres fichiers ; autrement dit, le nom n'est pas exporté par l'éditeur de liens. Si aucune classe de stockage n'apparaît dans une définition de fonction, **extern** est la valeur par défaut. Dans tous les cas, la fonction est toujours visible du point de définition jusqu'à la fin du fichier.
 
@@ -87,7 +87,7 @@ Les éléments *declaration-specifiers* facultatifs et l’élément *declarator
 
 L'élément *direct-declarator* (dans la syntaxe *declarator*) spécifie le nom de la fonction définie et les identificateurs de ses paramètres. Si l'élément *direct-declarator* inclut *parameter-type-list*, la liste spécifie les types de tous les paramètres. Ce déclarateur sert également de prototype de fonction pour les appels ultérieurs à la fonction.
 
-Un élément  *declaration*dans *declaration-list* dans les définitions de fonction ne peut pas contenir de *storage-class-specifier* autre que **register**. L’élément *type-specifier* de la syntaxe *declaration-specifiers* peut être omis uniquement si la classe de stockage **register** est spécifiée pour une valeur de type **int**.
+Un élément * declaration*dans *declaration-list* dans les définitions de fonction ne peut pas contenir de *storage-class-specifier* autre que **register**. L’élément *type-specifier* de la syntaxe *declaration-specifiers* peut être omis uniquement si la classe de stockage **register** est spécifiée pour une valeur de type **int**.
 
 L'élément *compound-statement* est le corps de la fonction contenant des déclarations de variables locales, des références à des éléments déclarés extérieurement et des instructions.
 

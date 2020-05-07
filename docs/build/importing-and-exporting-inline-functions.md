@@ -21,26 +21,26 @@ ms.locfileid: "81328517"
 ---
 # <a name="importing-and-exporting-inline-functions"></a>Importation et exportation de fonctions inline
 
-Les fonctions importées peuvent être définies comme inline. L’effet est à peu près le même que la définition d’une fonction standard en ligne; les appels à la fonction sont étendus dans le code inline, un peu comme une macro. Ceci est principalement utile comme un moyen de soutenir les classes de C dans un DLL qui pourrait inlimer certaines de leurs fonctions de membre pour l’efficacité.
+Les fonctions importées peuvent être définies en tant que fonctions inline. L’effet est à peu près identique à la définition d’une fonction standard Inline ; les appels à la fonction sont développés en code inline, à l’instar d’une macro. Cela est principalement utile comme un moyen de prendre en charge les classes C++ dans une DLL qui peuvent incorporer certaines de leurs fonctions membres pour plus d’efficacité.
 
-Une caractéristique d’une fonction en ligne importée est que vous pouvez prendre son adresse en C. Le compilateur renvoie l’adresse de la copie de la fonction en ligne résidant dans le DLL. Une autre caractéristique des fonctions inline importées est que vous pouvez initialiser les données locales statiques de la fonction importée, contrairement aux données importées à l’échelle mondiale.
+L’une des fonctionnalités d’une fonction inline importée est que vous pouvez prendre son adresse en C++. Le compilateur retourne l’adresse de la copie de la fonction inline résidant dans la DLL. Une autre fonctionnalité des fonctions inline importées est que vous pouvez initialiser des données locales statiques de la fonction importée, contrairement aux données importées globales.
 
 > [!CAUTION]
-> Vous devez faire preuve de prudence lors de la fourniture de fonctions en ligne importées, car elles peuvent créer la possibilité de conflits de version. Une fonction en ligne est étendue au code d’application; par conséquent, si vous réécrivez plus tard la fonction, elle ne se met pas à jour à moins que l’application elle-même ne soit recompilée. (Normalement, les fonctions DLL peuvent être mises à jour sans reconstruire les applications qui les utilisent.)
+> Vous devez faire preuve de prudence lorsque vous fournissez des fonctions inline importées, car elles peuvent créer des risques de conflits de versions. Une fonction inline est développée dans le code de l’application ; par conséquent, si vous réécrivez ultérieurement la fonction, elle n’est pas mise à jour, sauf si l’application elle-même est recompilée. (Normalement, les fonctions DLL peuvent être mises à jour sans recréer les applications qui les utilisent.)
 
 ## <a name="what-do-you-want-to-do"></a>Que voulez-vous faire ?
 
-- [Exportation d’un DLL](exporting-from-a-dll.md)
+- [Exporter à partir d’une DLL](exporting-from-a-dll.md)
 
-- [Exportation à partir d’un DLL en utilisant . Fichiers DEF](exporting-from-a-dll-using-def-files.md)
+- [Exportez à partir d’une DLL à l’aide de. Fichiers DEF](exporting-from-a-dll-using-def-files.md)
 
-- [Exportation d’un DLL à l’aide de __declspec (dllexport)](exporting-from-a-dll-using-declspec-dllexport.md)
+- [Exporter à partir d’une DLL à l’aide d' __declspec (dllexport)](exporting-from-a-dll-using-declspec-dllexport.md)
 
-- [Exportation et importation à l’aide de AFX_EXT_CLASS](exporting-and-importing-using-afx-ext-class.md)
+- [Exporter et importer à l’aide de AFX_EXT_CLASS](exporting-and-importing-using-afx-ext-class.md)
 
-- [Fonctions d’exportation CMD pour une utilisation dans les exécutables en langue C](exporting-cpp-functions-for-use-in-c-language-executables.md)
+- [Exporter des fonctions C++ à utiliser dans des exécutables en langage C](exporting-cpp-functions-for-use-in-c-language-executables.md)
 
-- [Déterminer quelle méthode d’exportation utiliser](determining-which-exporting-method-to-use.md)
+- [Déterminer la méthode d’exportation à utiliser](determining-which-exporting-method-to-use.md)
 
 - [Importer dans une application à l'aide de __declspec(dllimport)](importing-into-an-application-using-declspec-dllimport.md)
 
