@@ -18,7 +18,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-multibyte-l1-1-0.dll
-- api-ms-win-crt-private-l1-1-0
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -34,12 +34,12 @@ helpviewer_keywords:
 - ismbbalnum_l function
 - _ismbbalnum function
 ms.assetid: 8025de50-a871-49fd-9ae6-f437b47aa987
-ms.openlocfilehash: 3a200415571498c25ce5aacc6271004125ef16d2
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: abbc664170c274929875ef2e4b7af70bc5812a94
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81343699"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82917552"
 ---
 # <a name="_ismbbalnum-_ismbbalnum_l"></a>_ismbbalnum, _ismbbalnum_l
 
@@ -58,7 +58,7 @@ int _ismbbalnum_l(
 
 ### <a name="parameters"></a>Paramètres
 
-*C*<br/>
+*secteur*<br/>
 Entier à tester.
 
 *locale*<br/>
@@ -66,17 +66,17 @@ Paramètres régionaux à utiliser.
 
 ## <a name="return-value"></a>Valeur de retour
 
-**_ismbbalnum** retourne une valeur non zéro si l’expression :
+**_ismbbalnum** retourne une valeur différente de zéro si l’expression :
 
 `isalnum(c) || _ismbbkalnum(c)`
 
-est nonzero pour *c*, ou 0 si elle n’est pas.
+est différent de zéro pour *c*, ou 0 si ce n’est pas le cas.
 
-La version de cette fonction avec le **suffixe _l** est identique sauf qu’elle utilise le lieu passé au lieu de la localisation actuelle pour son comportement local-dépendant.
+La version de cette fonction avec le suffixe **_L** est identique, sauf qu’elle utilise les paramètres régionaux passés au lieu des paramètres régionaux actuels pour son comportement dépendant des paramètres régionaux.
 
-## <a name="remarks"></a>Notes
+## <a name="remarks"></a>Notes 
 
-Par défaut, l’état global de cette fonction est étendue à l’application. Pour changer cela, voir [Global State dans le CRT](../global-state.md).
+Par défaut, l’état global de cette fonction est limité à l’application. Pour modifier cette valeur, consultez [état global dans le CRT](../global-state.md).
 
 ## <a name="requirements"></a>Spécifications
 
@@ -94,4 +94,4 @@ Toutes les versions des [bibliothèques Runtime C](../../c-runtime-library/crt-l
 ## <a name="see-also"></a>Voir aussi
 
 [Classification d’octets](../../c-runtime-library/byte-classification.md)<br/>
-[routines _ismbb](../../c-runtime-library/ismbb-routines.md)<br/>
+[Routines de _ismbb](../../c-runtime-library/ismbb-routines.md)<br/>

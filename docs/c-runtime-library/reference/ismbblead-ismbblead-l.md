@@ -1,6 +1,6 @@
 ---
 title: _ismbblead, _ismbblead_l
-description: Décrit les fonctions Microsoft C Runtime Library (CRT) _ismbblead et _ismbblead_l.
+description: Décrit la bibliothèque Microsoft C Runtime (CRT) _ismbblead et les fonctions _ismbblead_l.
 ms.date: 4/2/2020
 api_name:
 - _ismbblead_l
@@ -19,7 +19,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-multibyte-l1-1-0.dll
-- api-ms-win-crt-private-l1-1-0
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -39,16 +39,16 @@ helpviewer_keywords:
 - ismbblead_l function
 - _istlead function
 ms.assetid: 2abc6f75-ed5c-472e-bfd0-e905a1835ccf
-ms.openlocfilehash: ee3085d49a27f2f3c97c6578463cf3a0598b73c7
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 7680793b71c4535ed75433ac98167e52a39896ba
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81343578"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82918666"
 ---
 # <a name="_ismbblead-_ismbblead_l"></a>_ismbblead, _ismbblead_l
 
-Teste un personnage pour déterminer s’il s’agit d’un byte de plomb d’un caractère multioctet.
+Teste un caractère pour déterminer s’il s’agit d’un octet de tête d’un caractère multioctet.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -64,7 +64,7 @@ int _ismbblead_l(
 
 ### <a name="parameters"></a>Paramètres
 
-*C*\
+*secteur*\
 Entier à tester.
 
 *locale*\
@@ -72,21 +72,21 @@ Paramètres régionaux à utiliser.
 
 ## <a name="return-value"></a>Valeur retournée
 
-Retourne une valeur non zéro si l’integer *c* est le premier byte d’un caractère multioctet.
+Retourne une valeur différente de zéro si l’entier *c* est le premier octet d’un caractère multioctet.
 
-## <a name="remarks"></a>Notes
+## <a name="remarks"></a>Notes 
 
-Les caractères multioctets sont constitués d’un octet de tête suivi d’un octet de fin. Les octets de tête se distinguent en faisant partie d’une plage particulière pour un jeu de caractères donné. Par exemple, dans la page de code 932 seulement, les octets de plomb vont de 0x81 - 0x9F et 0xE0 - 0xFC.
+Les caractères multioctets sont constitués d’un octet de tête suivi d’un octet de fin. Les octets de tête se distinguent en faisant partie d’une plage particulière pour un jeu de caractères donné. Par exemple, dans la page de codes 932 uniquement, les octets de tête sont compris entre 0x81-0x9F et 0xE0-0xFC.
 
-**_ismbblead** utilise le lieu actuel pour un comportement local-dépendant. **_ismbblead_l** est identique, sauf qu’il utilise le lieu passé à la place. Pour plus d’informations, consultez [Locale](../../c-runtime-library/locale.md).
+**_ismbblead** utilise les paramètres régionaux actuels pour le comportement dépendant des paramètres régionaux. **_ismbblead_l** est identique, à ceci près qu’il utilise à la place les paramètres régionaux transmis. Pour plus d’informations, consultez [Locale](../../c-runtime-library/locale.md).
 
-Lorsque le lieu est UTF-8, **_ismbblead** et **_ismbblead_l** toujours retourner 0 (faux), si *c* est un byte de plomb ou non.
+Lorsque les paramètres régionaux sont UTF-8, **_ismbblead** et **_ismbblead_l** retournent toujours 0 (false), que *c* soit un octet de tête ou non.
 
-**_ismbblead** et **_ismbblead_l** sont spécifiques à Microsoft, ne faisant pas partie de la bibliothèque Standard C. Nous ne vous recommandons pas de les utiliser là où vous voulez du code portable. Pour la compatibilité Standard C, utilisez **plutôt le mbrlen.**
+**_ismbblead** et **_ismbblead_l** sont spécifiques à Microsoft et ne font pas partie de la bibliothèque C standard. Nous vous déconseillons de les utiliser là où vous voulez un code portable. Pour la compatibilité C standard, utilisez **mbrlen** à la place.
 
-Par défaut, l’état global de cette fonction est étendue à l’application. Pour changer cela, voir [Global State dans le CRT](../global-state.md).
+Par défaut, l’état global de cette fonction est limité à l’application. Pour modifier cette valeur, consultez [état global dans le CRT](../global-state.md).
 
-### <a name="generic-text-routine-mappings"></a>Cartographies de routine de texte générique
+### <a name="generic-text-routine-mappings"></a>Mappages de routines de texte générique
 
 |Routine Tchar.h|_UNICODE et _MBCS non définis|_MBCS défini|_UNICODE défini|
 |---------------------|--------------------------------------|--------------------|-----------------------|
@@ -105,6 +105,6 @@ Pour plus d’informations sur la compatibilité, consultez [Compatibility](../.
 
 ## <a name="see-also"></a>Voir aussi
 
-[Classification Byte](../../c-runtime-library/byte-classification.md)\
-[_ismbb routines](../../c-runtime-library/ismbb-routines.md)\
+[Classification d’octets](../../c-runtime-library/byte-classification.md)\
+[routines de _ismbb](../../c-runtime-library/ismbb-routines.md)\
 [mbrlen](mbrlen.md)

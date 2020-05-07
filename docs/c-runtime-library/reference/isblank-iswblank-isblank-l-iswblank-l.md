@@ -20,7 +20,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-string-l1-1-0.dll
-- api-ms-win-crt-private-l1-1-0
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -33,12 +33,12 @@ f1_keywords:
 - _isblank_l
 - iswblank
 ms.assetid: 33ce96c0-f387-411a-8283-c3d2a69e56bd
-ms.openlocfilehash: 736a0791f1e5ee4b11e61164861cc6dc0c7a9c87
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 1c45319d7da48fad21af5375b0c310330d0f575a
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81343895"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82918470"
 ---
 # <a name="isblank-iswblank-_isblank_l-_iswblank_l"></a>isblank, iswblank, _isblank_l, _iswblank_l
 
@@ -65,7 +65,7 @@ int _iswblank_l(
 
 ### <a name="parameters"></a>Paramètres
 
-*C*<br/>
+*secteur*<br/>
 Entier à tester.
 
 *locale*<br/>
@@ -73,28 +73,28 @@ Paramètres régionaux à utiliser.
 
 ## <a name="return-value"></a>Valeur de retour
 
-Chacune de ces routines renvoie nonzero si *c* est une représentation particulière d’un espace ou un caractère d’onglet horizontal, ou est l’un d’un ensemble local spécifique de caractères qui sont utilisés pour séparer les mots dans une ligne de texte. **isblank** renvoie une valeur non zéro si *c* est un personnage spatial (0x20) ou un caractère d’onglet horizontal (0x09). Le résultat de l’état d’essai pour les fonctions **isblank** dépend de la **LC_CTYPE** cadre de catégorie du lieu; pour plus d’informations, voir [setlocale, _wsetlocale](setlocale-wsetlocale.md). Les versions de ces fonctions qui n’ont pas le **suffixe _l** utilisent le lieu actuel pour tout comportement local-dépendant; les versions qui ont le **suffixe _l** sont identiques, sauf qu’ils utilisent le lieu qui est passé à la place. Pour plus d’informations, consultez [Locale](../../c-runtime-library/locale.md).
+Chacune de ces routines retourne une valeur différente de zéro si *c* est une représentation particulière d’un espace ou d’un caractère de tabulation horizontale, ou est l’un des jeux de caractères spécifiques aux paramètres régionaux utilisés pour séparer les mots dans une ligne de texte. **ISBLANK** retourne une valeur différente de zéro si *c* est un espace (0x20) ou un caractère de tabulation horizontale (0x09). Le résultat de la condition de test pour les fonctions **ISBLANK** dépend du paramètre de catégorie **LC_CTYPE** des paramètres régionaux. Pour plus d’informations, consultez [setlocale, _wsetlocale](setlocale-wsetlocale.md). Les versions de ces fonctions qui n’ont pas le suffixe **_L** utilisent les paramètres régionaux actuels pour tout comportement dépendant des paramètres régionaux ; les versions qui ont le suffixe **_L** sont identiques, sauf qu’elles utilisent à la place les paramètres régionaux qui sont passés. Pour plus d’informations, consultez [Locale](../../c-runtime-library/locale.md).
 
-**iswblank** retourne une valeur non zéro si *c* est un caractère large qui correspond à un espace standard ou un caractère d’onglet horizontal.
+**iswblank** retourne une valeur différente de zéro si *c* est un caractère élargi qui correspond à un espace standard ou un caractère de tabulation horizontale.
 
-Le comportement de **l’isblank** et **_isblank_l** n’est pas défini si *c n’est* pas EOF ou dans la gamme 0 à 0xFF, inclusive. Lorsqu’une bibliothèque CRT débagé est utilisée et *que c* n’est pas l’une de ces valeurs, les fonctions soulèvent une affirmation.
+Le comportement de **ISBLANK** et **_isblank_l** n’est pas défini si *c* n’est pas EOF ni dans la plage 0 à 0xFF, inclus. Quand une bibliothèque CRT de débogage est utilisée et que *c* n’est pas l’une de ces valeurs, les fonctions déclenchent une assertion.
 
 ### <a name="generic-text-routine-mappings"></a>Mappages de routines de texte générique
 
 |Routine TCHAR.H|_UNICODE et _MBCS non définis|_MBCS défini|_UNICODE défini|
 |---------------------|------------------------------------|--------------------|-----------------------|
-|**_istblank**|**isblank**|[_ismbcblank](ismbcgraph-functions.md)|**iswblank**|
+|**_istblank**|**IsBlank**|[_ismbcblank](ismbcgraph-functions.md)|**iswblank**|
 |**_istblank_l**|**_isblank_l**|[_ismbcblank_l](ismbcgraph-functions.md)|**_iswblank_l**|
 
-## <a name="remarks"></a>Notes
+## <a name="remarks"></a>Notes 
 
-Par défaut, l’état global de cette fonction est étendue à l’application. Pour changer cela, voir [Global State dans le CRT](../global-state.md).
+Par défaut, l’état global de cette fonction est limité à l’application. Pour modifier cette valeur, consultez [état global dans le CRT](../global-state.md).
 
 ## <a name="requirements"></a>Spécifications
 
 |Routine|En-tête requis|
 |-------------|---------------------|
-|**isblank**|\<ctype.h>|
+|**IsBlank**|\<ctype.h>|
 |**iswblank**|\<ctype.h> ou \<wchar.h>|
 |**_isblank_l**|\<ctype.h>|
 |**_iswblank_l**|\<ctype.h> ou \<wchar.h>|
@@ -104,5 +104,5 @@ Pour plus d'informations sur la compatibilité, voir [Compatibilité](../../c-ru
 ## <a name="see-also"></a>Voir aussi
 
 [Classifications des caractères](../../c-runtime-library/character-classification.md)<br/>
-[Local](../../c-runtime-library/locale.md)<br/>
+[Paramètres régionaux](../../c-runtime-library/locale.md)<br/>
 [is, isw, routines](../../c-runtime-library/is-isw-routines.md)<br/>

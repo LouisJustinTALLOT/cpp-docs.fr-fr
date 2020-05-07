@@ -18,7 +18,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-convert-l1-1-0.dll
-- api-ms-win-crt-private-l1-1-0
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -32,16 +32,16 @@ helpviewer_keywords:
 - mbrtoc16 function
 - mbrtoc32 function
 ms.assetid: 099ade4d-56f7-4e61-8b45-493f1d7a64bd
-ms.openlocfilehash: 91755d19eacf73f19700eed7fffbffc529d4e235
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 0e3d5ceffa5adc9e9f6ba96cccb46a3fbcfca69a
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81340977"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82919565"
 ---
 # <a name="mbrtoc16-mbrtoc32"></a>mbrtoc16, mbrtoc32
 
-Traduit le premier caractère multioctet UTF-8 dans une chaîne dans le caractère équivalent UTF-16 ou UTF-32.
+Traduit le premier caractère multioctet UTF-8 dans une chaîne en un caractère équivalent UTF-16 ou UTF-32.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -63,45 +63,45 @@ size_t mbrtoc32(
 
 ### <a name="parameters"></a>Paramètres
 
-*Destination*\
-Pointeur vers le **char16_t** ou **char32_t’équivalent** du caractère multioctet UTF-8 à convertir. Si elle est nulle, la fonction ne stocke pas de valeur.
+*destination*\
+Pointeur vers le **char16_t** ou **char32_t** équivalent du caractère multioctet UTF-8 à convertir. Si la valeur est null, la fonction ne stocke pas de valeur.
 
-*Source*\
+*code*\
 Pointeur vers la chaîne de caractères multioctets UTF-8 à convertir.
 
 *max_bytes*\
-Le nombre maximum d’octets à *la source* à examiner pour qu’un personnage se convertisse. Cet argument devrait être une valeur entre un et le nombre d’octets, y compris tout terminateur nul, restant à *la source*.
+Nombre maximal d’octets dans la *source* à examiner pour un caractère à convertir. Cet argument doit être une valeur comprise entre 1 et le nombre d’octets, y compris toute marque de fin null, restant dans la *source*.
 
-*État*\
-Pointeur vers un objet **d’état de** conversion mbstate_t utilisé pour interpréter la chaîne multioctet UTF-8 à un ou plusieurs caractères de sortie.
+*Département*\
+Pointeur vers un objet d’état de conversion **mbstate_t** utilisé pour interpréter la chaîne multioctets UTF-8 à un ou plusieurs caractères de sortie.
 
 ## <a name="return-value"></a>Valeur retournée
 
-Sur le succès, retourne la valeur de la première de ces conditions qui s’applique, compte tenu de la valeur actuelle *de l’État:*
+En cas de réussite, retourne la valeur de la première des conditions qui s’applique, étant donné la valeur d' *État* actuelle :
 
 |Value|Condition|
 |-----------|---------------|
-|0|Les *max_bytes* ou moins de caractères convertis à partir de la *source* correspondent au caractère large nul, qui est la valeur stockée si la *destination* n’est pas nulle.<br /><br /> *l’état* contient l’état de décalage initial.|
-|Entre 1 et *max_bytes*, inclusivement|La valeur retournée est le nombre d’octets de *source* qui complètent un caractère multioctet valide. Le caractère large converti est stocké si *la destination* n’est pas nulle.|
-|-3|Le personnage suivant large résultant d’un appel précédent à la fonction a été stocké dans la *destination* si *la destination* n’est pas nulle. Aucun octets provenant de la *source* n’est consommé par cet appel à la fonction.<br /><br /> Lorsque *la source* pointe vers un personnage multioctet UTF-8 qui nécessite plus d’un personnage large pour représenter (par exemple, une paire de substitution), puis la valeur de *l’état* est mise à jour de sorte que l’appel de fonction suivante écrit le caractère supplémentaire.|
-|-2|Les *octets max_bytes* suivants représentent un caractère multioctet UTF-8 incomplet, mais potentiellement valide. Aucune valeur n’est stockée dans *la destination*. Ce résultat peut se produire si *max_bytes* est nulle.|
-|-1|Une erreur d’encodage s’est produite. Les *max_bytes* ou moins d’octets suivants ne contribuent pas à un caractère complet et valide UTF-8 multioctets. Aucune valeur n’est stockée dans *la destination*.<br /><br /> **EILSEQ** est stocké dans **errno** et *l’état* de valeur de l’état de conversion n’est pas spécifié.|
+|0|Le *max_bytes* suivant ou un nombre de caractères inférieur converti à partir de la *source* correspond au caractère élargi null, qui est la valeur stockée si *destination* n’est pas null.<br /><br /> l' *État* contient l’état de décalage initial.|
+|Entre 1 et *max_bytes*inclus|La valeur retournée est le nombre d’octets de la *source* qui terminent un caractère multioctet valide. Le caractère élargi converti est stocké si la *destination* n’est pas null.|
+|-3|Le caractère élargi suivant résultant d’un appel précédent à la fonction a été stocké dans la *destination* si la *destination* n’est pas null. Aucun octet de la *source* n’est consommé par cet appel à la fonction.<br /><br /> Lorsque la *source* pointe vers un caractère multioctet UTF-8 qui requiert plusieurs caractères larges à représenter (par exemple, une paire de substitution), la valeur d' *État* est mise à jour afin que l’appel de fonction suivant écrive le caractère supplémentaire.|
+|-2|Les octets *max_bytes* suivants représentent un caractère multioctet UTF-8 incomplet, mais potentiellement valide. Aucune valeur n’est stockée dans la *destination*. Ce résultat peut se produire si *max_bytes* est égal à zéro.|
+|-1|Une erreur d’encodage s’est produite. Le *max_bytes* suivant ou moins d’octets ne contribuent pas à un caractère multioctet UTF-8 complet et valide. Aucune valeur n’est stockée dans la *destination*.<br /><br /> **EILSEQ** est stocké dans **errno** et l' *État* de la valeur de l’état de conversion n’est pas spécifié.|
 
-## <a name="remarks"></a>Notes
+## <a name="remarks"></a>Notes 
 
-La fonction **mbrtoc16** se lit jusqu’à *max_bytes* octets de la *source* pour trouver le premier caractère complet et valide UTF-8 multioctets, puis stocke le caractère équivalent UTF-16 dans *la destination*. Si le personnage nécessite plus d’un caractère de sortie UTF-16, comme une paire de substitution, alors la valeur *de l’état* est configuré pour stocker le prochain caractère UTF-16 en *destination* sur le prochain appel à **mbrtoc16**. La fonction **mbrtoc32** est identique, mais la sortie est stockée sous forme de caractère UTF-32.
+La fonction **mbrtoc16** lit jusqu’à *max_bytes* octets à partir de la *source* pour rechercher le premier caractère multioctet UTF-8 valide complet, puis stocke le caractère UTF-16 équivalent dans la *destination*. Si le caractère requiert plus d’un caractère de sortie UTF-16, par exemple une paire de substitution, la valeur d' *État* est définie pour stocker le prochain caractère UTF-16 dans la *destination* lors du prochain appel à **mbrtoc16**. La fonction **mbrtoc32** est identique, mais la sortie est stockée sous la forme d’un caractère UTF-32.
 
-Si la *source* est nulle, ces fonctions renvoient l’équivalent `""` d’un appel fait à l’aide d’arguments de **NULL** pour la *destination*, (une chaîne vide, non terminée) pour la *source*, et 1 pour *max_bytes*. Les valeurs passées de *destination* et *de max_bytes* sont ignorées.
+Si *source* a la valeur null, ces fonctions retournent l’équivalent d’un appel effectué à *destination*l’aide `""` des arguments **null** pour la destination, (une chaîne vide se terminant par null) pour la *source*, et 1 pour *max_bytes*. Les valeurs passées de *destination* et *max_bytes* sont ignorées.
 
-Si la *source* n’est pas nulle, la fonction commence au début de la chaîne et inspecte *jusqu’à max_bytes* octets pour déterminer le nombre d’octets nécessaires pour compléter le prochain caractère multioctet UTF-8, y compris toutes les séquences de changement. Si les octets examinés contiennent un caractère multioctet UTF-8 valide et complet, la fonction convertit le personnage en caractère ou en caractères de large 16 ou 32 bits équivalents. Si la *destination* n’est pas nulle, la fonction stocke le premier (et peut-être seulement) le caractère de résultat dans la destination. Si des caractères de sortie supplémentaires sont nécessaires, une valeur est définie en *état,* de sorte que les appels ultérieurs à la sortie de la fonction les caractères supplémentaires et retourner la valeur -3. Si plus aucun caractère de sortie n’est requis, *l’état* est réglé à l’état de décalage initial.
+Si *source* n’est pas null, la fonction commence au début de la chaîne et inspecte jusqu’à *max_bytes* octets pour déterminer le nombre d’octets requis pour terminer le caractère multioctet UTF-8 suivant, y compris les séquences de décalage. Si les octets examinés contiennent un caractère multioctet UTF-8 valide et complet, la fonction convertit le caractère en caractères larges 16 bits ou 32 bits équivalents. Si *destination* n’est pas null, la fonction stocke le premier (et éventuellement) caractère de résultat dans la destination. Si des caractères de sortie supplémentaires sont nécessaires, une valeur est définie dans *État*, de sorte que les appels suivants à la fonction génèrent les caractères supplémentaires et retournent la valeur-3. Si aucun autre caractère de sortie n’est requis, *State* est défini sur l’état de décalage initial.
 
-Pour convertir les caractères multioctets non UTF-8 en caractères UTF-16 LE, utilisez les fonctions [mbrtowc,](mbrtowc.md) [mbtowc ou _mbtowc_l.](mbtowc-mbtowc-l.md)
+Pour convertir des caractères multioctets non UTF-8 en caractères UTF-16, utilisez les fonctions [mbrtowc](mbrtowc.md), [mbtowc ou _mbtowc_l](mbtowc-mbtowc-l.md) .
 
-Par défaut, l’état global de cette fonction est étendue à l’application. Pour changer cela, voir [Global State dans le CRT](../global-state.md).
+Par défaut, l’état global de cette fonction est limité à l’application. Pour modifier cette valeur, consultez [état global dans le CRT](../global-state.md).
 
 ## <a name="requirements"></a>Spécifications
 
-|Fonction|En-tête C|En-tête C++|
+|Function|En-tête C|En-tête C++|
 |--------------|--------------|------------------|
 |**mbrtoc16**, **mbrtoc32**|\<uchar.h>|\<cuchar>|
 
@@ -110,9 +110,9 @@ Pour plus d'informations sur la compatibilité, voir [Compatibilité](../compati
 ## <a name="see-also"></a>Voir aussi
 
 [Conversion de données](../data-conversion.md)\
-[Local](../locale.md)\
-[Interprétation des séquences multioctets-caractères](../interpretation-of-multibyte-character-sequences.md)\
+[Paramètres régionaux](../locale.md)\
+[Interprétation des séquences de caractères multioctets](../interpretation-of-multibyte-character-sequences.md)\
 [c16rtomb, c32rtomb](c16rtomb-c32rtomb1.md)\
-[mbrtowc (en)](mbrtowc.md)\
+[mbrtowc](mbrtowc.md)\
 [mbsrtowcs](mbsrtowcs.md)\
 [mbsrtowcs_s](mbsrtowcs-s.md)

@@ -20,7 +20,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-math-l1-1-0.dll
-- api-ms-win-crt-private-l1-1-0
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -34,12 +34,12 @@ helpviewer_keywords:
 - remquof function
 - remquo function
 ms.assetid: a1d3cb8b-8027-4cd3-8deb-04eb17f299fc
-ms.openlocfilehash: e6a6f211e83118379e0697464d21f5968ea68cee
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 774a35f257b02c67b22618224a60ed501476a6f4
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81332836"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82917822"
 ---
 # <a name="remquo-remquof-remquol"></a>remquo, remquof, remquol
 
@@ -60,30 +60,30 @@ long double remquo( long double numer, long double denom, int* quo ); /* C++ onl
 
 ### <a name="parameters"></a>Paramètres
 
-*Numer*<br/>
+*univoque*<br/>
 Numérateur.
 
-*déno nom*<br/>
+*denom*<br/>
 Dénominateur.
 
-*Quo*<br/>
+*devenu*<br/>
 Pointeur désignant un entier pour stocker une valeur qui a le signe et la grandeur approximative du quotient.
 
 ## <a name="return-value"></a>Valeur de retour
 
-**remquo** retourne le reste de point flottant de *x* / *y*. Si la valeur de *y* est de 0,0, **remquo** retourne un NaN tranquille. Pour plus d’informations sur la représentation d’un NaN tranquille par la famille **printf,** voir [printf, _printf_l, wprintf, _wprintf_l](printf-printf-l-wprintf-wprintf-l.md).
+**remquo** retourne le reste à virgule flottante de *x* / *y*. Si la valeur de *y* est 0,0, **remquo** retourne une valeur NaN calme. Pour plus d’informations sur la représentation d’une NaN calme par la famille **printf** , consultez [printf, _printf_l, wprintf, _wprintf_l](printf-printf-l-wprintf-wprintf-l.md).
 
-## <a name="remarks"></a>Notes
+## <a name="remarks"></a>Notes 
 
-La fonction **remquo** calcule le reste de point flottant *f* de *x* / *y* tel que *x* = *i* \* *y* + *f*, où *je* suis un intégrateur, *f* a le même signe que *x*, et la valeur absolue de *f* est inférieur à la valeur absolue de *y*.
+La fonction **remquo** calcule le reste à virgule flottante *f* de *x* / *y* , de telle sorte que *x* = *i* \* *y* + *f*, où *i* est un entier, *f* a le même signe que *x*, et la valeur absolue de *f* est inférieure à la valeur absolue de *y*.
 
-Le CMD permet la surcharge, de sorte que vous pouvez appeler des surcharges de **remquo** qui prennent et retournent **flotteur** ou **de longues** valeurs **doubles.** Dans un programme C, **remquo** prend toujours deux **doubles** arguments et retourne un **double**.
+C++ autorisant la surcharge, vous pouvez appeler des surcharges de **remquo** qui acceptent et retournent des valeurs **float** ou **long** **double** . Dans un programme C, **remquo** prend toujours deux arguments **double** et retourne un **double**.
 
-Par défaut, l’état global de cette fonction est étendue à l’application. Pour changer cela, voir [Global State dans le CRT](../global-state.md).
+Par défaut, l’état global de cette fonction est limité à l’application. Pour modifier cette valeur, consultez [état global dans le CRT](../global-state.md).
 
 ## <a name="requirements"></a>Spécifications
 
-|Fonction|En-tête requis (C)|En-tête requis (C++)|
+|Function|En-tête requis (C)|En-tête requis (C++)|
 |--------------|---------------------|-|
 |**remquo**, **remquof**, **remquol**|\<math.h>|\<cmath> ou \<math.h>|
 
@@ -116,7 +116,7 @@ Approximate signed quotient is -3
 
 ## <a name="see-also"></a>Voir aussi
 
-[Soutien à la pointe flottante](../../c-runtime-library/floating-point-support.md)<br/>
+[Prise en charge de la virgule flottante](../../c-runtime-library/floating-point-support.md)<br/>
 [ldiv, lldiv](ldiv-lldiv.md)<br/>
 [imaxdiv](imaxdiv.md)<br/>
 [fmod, fmodf](fmod-fmodf.md)<br/>
