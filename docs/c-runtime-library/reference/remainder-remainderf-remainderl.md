@@ -20,7 +20,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-math-l1-1-0.dll
-- api-ms-win-crt-private-l1-1-0
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -34,12 +34,12 @@ helpviewer_keywords:
 - remainderl
 - remainder
 ms.assetid: 5f721fb3-8b78-4597-9bc0-ca9bcd1f1d0e
-ms.openlocfilehash: 4b70d3175a125d72ff67710c83899c44dbf72015
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 6b2a1a94fa39f9e9474f7bc3da3150bf4134d35f
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81332862"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82917847"
 ---
 # <a name="remainder-remainderf-remainderl"></a>remainder, remainderf, remainderl
 
@@ -60,7 +60,7 @@ long double remainder( long double x, long double y ); /* C++ only */
 
 ### <a name="parameters"></a>Paramètres
 
-*X*<br/>
+*x*<br/>
 Numérateur.
 
 *y*<br/>
@@ -68,21 +68,21 @@ Dénominateur.
 
 ## <a name="return-value"></a>Valeur de retour
 
-Le reste de point flottant de *x* / *y*. Si la valeur de *y* est de 0,0, **le reste** renvoie un NaN tranquille. Pour plus d’informations sur la représentation d’un NaN tranquille par la famille **printf,** voir [printf, _printf_l, wprintf, _wprintf_l](printf-printf-l-wprintf-wprintf-l.md).
+Reste à virgule flottante de *x* / *y*. Si la valeur de *y* est 0,0, la fonction **Remainder** retourne une valeur NaN calme. Pour plus d’informations sur la représentation d’une NaN calme par la famille **printf** , consultez [printf, _printf_l, wprintf, _wprintf_l](printf-printf-l-wprintf-wprintf-l.md).
 
-## <a name="remarks"></a>Notes
+## <a name="remarks"></a>Notes 
 
-Les fonctions **restantes** calculent le reste de point flottant *r* de *x* / *y* tel que *x* = *n* \* *y* + *r*, où *n*est l’integer le plus proche en valeur *x* / *y* et *n*est même chaque fois que &#124; *n* - *x* / *y* &#124; - 1/2. Quand *r* 0, *r* a le même signe que *x*.
+Les **fonctions restantes** calculent le reste à virgule flottante *r* de *x* / *y* , de telle sorte que *x* = *n* \* *o* + *r*, où *n*est l’entier le plus proche dans la valeur de *x* / *y* et *n*, même chaque fois que &#124; *n* - *x* / *y* &#124; = 1/2. Lorsque *r* = 0, *r* a le même signe que *x*.
 
-Étant donné que le CMD permet la surcharge, vous pouvez appeler des surcharges de **reste** qui prennent et retournent **flotteur** ou **de longues** valeurs **doubles.** Dans un programme C, **le reste** prend toujours deux **doubles** arguments et retourne un **double**.
+C++ autorisant la surcharge, vous pouvez appeler des surcharges de **reste** qui acceptent et retournent des valeurs **float** ou **long** **double** . Dans un programme C, le **reste** prend toujours deux arguments **double** et retourne un **double**.
 
-Par défaut, l’état global de cette fonction est étendue à l’application. Pour changer cela, voir [Global State dans le CRT](../global-state.md).
+Par défaut, l’état global de cette fonction est limité à l’application. Pour modifier cette valeur, consultez [état global dans le CRT](../global-state.md).
 
 ## <a name="requirements"></a>Spécifications
 
-|Fonction|En-tête requis (C)|En-tête requis (C++)|
+|Function|En-tête requis (C)|En-tête requis (C++)|
 |--------------|---------------------|-|
-|**reste**, **remainderf**, **remainderl**|\<math.h>|\<cmath> ou \<math.h>|
+|**reste**, **remainderf**, **restante**|\<math.h>|\<cmath> ou \<math.h>|
 
 Pour plus d’informations sur la compatibilité, consultez [Compatibilité](../../c-runtime-library/compatibility.md).
 
@@ -110,7 +110,7 @@ The remainder of -10.00 / 3.00 is -1.000000
 
 ## <a name="see-also"></a>Voir aussi
 
-[Soutien à la pointe flottante](../../c-runtime-library/floating-point-support.md)<br/>
+[Prise en charge de la virgule flottante](../../c-runtime-library/floating-point-support.md)<br/>
 [ldiv, lldiv](ldiv-lldiv.md)<br/>
 [imaxdiv](imaxdiv.md)<br/>
 [fmod, fmodf](fmod-fmodf.md)<br/>

@@ -16,7 +16,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-heap-l1-1-0.dll
-- api-ms-win-crt-private-l1-1-0
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -30,12 +30,12 @@ helpviewer_keywords:
 - _get_heap_handle function
 - get_heap_handle function
 ms.assetid: a4d05049-8528-494a-8281-a470d1e1115c
-ms.openlocfilehash: e2e48e4acc26c7b8317a2d358d1a426d012ec508
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 895814a1a44910ef65a826cba330a3edd70b85a9
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81345091"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82916299"
 ---
 # <a name="_get_heap_handle"></a>_get_heap_handle
 
@@ -51,11 +51,11 @@ intptr_t _get_heap_handle( void );
 
 Retourne le handle vers le tas Win32 utilisé par le système runtime C.
 
-## <a name="remarks"></a>Notes
+## <a name="remarks"></a>Notes 
 
 Utilisez cette fonction pour appeler [HeapSetInformation](/windows/win32/api/heapapi/nf-heapapi-heapsetinformation) et activer le tas LFH (Low Fragmentation Heap) sur le tas CRT.
 
-Par défaut, l’état global de cette fonction est étendue à l’application. Pour changer cela, voir [Global State dans le CRT](../global-state.md).
+Par défaut, l’état global de cette fonction est limité à l’application. Pour modifier cette valeur, consultez [état global dans le CRT](../global-state.md).
 
 ## <a name="requirements"></a>Spécifications
 

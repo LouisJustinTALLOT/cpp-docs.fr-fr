@@ -20,7 +20,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-math-l1-1-0.dll
-- api-ms-win-crt-private-l1-1-0
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -34,12 +34,12 @@ helpviewer_keywords:
 - round function
 - roundf function
 ms.assetid: 6be90877-193c-4b80-a32b-c3eca33f9c6f
-ms.openlocfilehash: 7b502a02b540a6d2e659ba0e89263bf521be1d82
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 1c35972b38f8e440788404b5891a78d16197d739
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81337988"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82916717"
 ---
 # <a name="round-roundf-roundl"></a>round, roundf, roundl
 
@@ -67,28 +67,28 @@ long double roundl(
 
 ### <a name="parameters"></a>Paramètres
 
-*X*<br/>
+*x*<br/>
 Valeur à virgule flottante à arrondir.
 
 ## <a name="return-value"></a>Valeur de retour
 
-Les fonctions **rondes** retournent une valeur de point flottant qui représente l’intégrer le plus proche à *x*. Les valeurs médianes sont arrondies en s’éloignant de zéro, indépendamment du paramètre du mode d’arrondi à virgule flottante. Aucun retour d'erreur.
+Les fonctions **Round** retournent une valeur à virgule flottante qui représente l’entier le plus proche de *x*. Les valeurs médianes sont arrondies en s’éloignant de zéro, indépendamment du paramètre du mode d’arrondi à virgule flottante. Aucun retour d'erreur.
 
 |Entrée|Exception SEH|Exception\{b\> \<b\}Matherr|
 |-----------|-------------------|-----------------------|
-|**QNAN**, **IND**|Aucun|**_DOMAIN**|
+|± **QNAN**, **IND**|Aucun|**_DOMAIN**|
 
-## <a name="remarks"></a>Notes
+## <a name="remarks"></a>Notes 
 
-Étant donné que le CMD permet la surcharge, vous pouvez appeler des surcharges de **tour** qui prennent et retournent **flotteur** et **de longues** valeurs **doubles.** Dans un programme C, **ronde** prend toujours et retourne un **double**.
+C++ autorisant la surcharge, vous pouvez appeler des surcharges d' **arrondi** qui acceptent et retournent des valeurs **float** et **long** **double** . Dans un programme C, **Round** prend toujours et retourne un **double**.
 
-Par défaut, l’état global de cette fonction est étendue à l’application. Pour changer cela, voir [Global State dans le CRT](../global-state.md).
+Par défaut, l’état global de cette fonction est limité à l’application. Pour modifier cette valeur, consultez [état global dans le CRT](../global-state.md).
 
 ## <a name="requirements"></a>Spécifications
 
 |Routine|En-tête requis|
 |-------------|---------------------|
-|**ronde**, **roundf**, **roundl**|\<math.h>|
+|**Round**, **roundf,**, **arrondi**|\<math.h>|
 
 Pour plus d'informations sur la compatibilité, voir [Compatibilité](../../c-runtime-library/compatibility.md).
 
@@ -130,7 +130,7 @@ roundl(-2.500000) is -3
 
 ## <a name="see-also"></a>Voir aussi
 
-[Soutien à la pointe flottante](../../c-runtime-library/floating-point-support.md)<br/>
+[Prise en charge de la virgule flottante](../../c-runtime-library/floating-point-support.md)<br/>
 [ceil, ceilf, ceill](ceil-ceilf-ceill.md)<br/>
 [floor, floorf, floorl](floor-floorf-floorl.md)<br/>
 [fmod, fmodf](fmod-fmodf.md)<br/>

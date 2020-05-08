@@ -18,7 +18,7 @@ api_location:
 - ucrtbase.dll
 - api-ms-win-crt-string-l1-1-0.dll
 - ntoskrnl.exe
-- api-ms-win-crt-private-l1-1-0
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -30,12 +30,12 @@ helpviewer_keywords:
 - wmemmove_s function
 - memmove_s function
 ms.assetid: a17619e4-1307-4bb0-98c6-77f8c68dab2d
-ms.openlocfilehash: baec33046f891f64c04adeccf21f41d3eec7b814
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 04f920543c4f6a3d433e6426a96d617a3608a270
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81333155"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82914097"
 ---
 # <a name="memmove_s-wmemmove_s"></a>memmove_s, wmemmove_s
 
@@ -63,14 +63,14 @@ errno_t wmemmove_s(
 *dest*<br/>
 Objet de destination.
 
-*nombreOfElements*<br/>
+*numberOfElements*<br/>
 Taille de la mémoire tampon de destination.
 
 *src*<br/>
 Objet source.
 
 *count*<br/>
-Nombre d’octets **(memmove_s**) ou de caractères (**wmemmove_s**) à copier.
+Nombre d’octets (**memmove_s**) ou de caractères (**wmemmove_s**) à copier.
 
 ## <a name="return-value"></a>Valeur de retour
 
@@ -78,19 +78,19 @@ Zéro si l’opération a réussi ; code d’erreur en cas de échec.
 
 ### <a name="error-conditions"></a>Conditions d'erreur
 
-|*dest*|*nombreOfElements*|*src*|Valeur retournée|Contenu de *dest*|
+|*dest*|*numberOfElements*|*src*|Valeur retournée|Contenu de *dest*|
 |------------|------------------------|-----------|------------------|------------------------|
-|**Null**|n'importe laquelle|n'importe laquelle|**EINVAL (EN)**|non modifié|
-|n'importe laquelle|n'importe laquelle|**Null**|**EINVAL (EN)**|non modifié|
-|n'importe laquelle|< *Compter*|n'importe laquelle|**ERANGE**|non modifié|
+|**NUL**|n'importe laquelle|n'importe laquelle|**EINVAL**|non modifié|
+|n'importe laquelle|n'importe laquelle|**NUL**|**EINVAL**|non modifié|
+|n'importe laquelle|< *count*|n'importe laquelle|**ERANGE**|non modifié|
 
-## <a name="remarks"></a>Notes
+## <a name="remarks"></a>Notes 
 
-Les copies *comptent* les octets des personnages de *src* à *dest*. Si certaines régions de la zone source et le chevauchement de la destination, **memmove_s** s’assure que les octets de source d’origine dans la région qui se chevauchent sont copiés avant d’être écrasés.
+Copie le *nombre* d’octets des caractères de *src* vers *dest*. Si certaines régions de la zone source et de la destination se chevauchent, **memmove_s** garantit que les octets source d’origine dans la région de chevauchement sont copiés avant d’être remplacés.
 
-Si *le dest* ou si *le src* est un pointeur nul, ou si la chaîne de destination est trop petite, ces fonctions invoquent un gestionnaire de paramètre invalide, tel que décrit dans [la validation de paramètres](../../c-runtime-library/parameter-validation.md) . Si l’exécution est autorisée à se poursuivre, ces fonctions renvoient **EINVAL** et **placent errno** à **EINVAL**.
+Si *dest* ou si *src* est un pointeur null, ou si la chaîne de destination est trop petite, ces fonctions appellent un gestionnaire de paramètres non valides, comme décrit dans [validation de paramètre](../../c-runtime-library/parameter-validation.md) . Si l’exécution est autorisée à se poursuivre, ces fonctions retournent **EINVAL** et attribuent à **errno** la valeur **EINVAL**.
 
-Par défaut, l’état global de cette fonction est étendue à l’application. Pour changer cela, voir [Global State dans le CRT](../global-state.md).
+Par défaut, l’état global de cette fonction est limité à l’application. Pour modifier cette valeur, consultez [état global dans le CRT](../global-state.md).
 
 ## <a name="requirements"></a>Spécifications
 
@@ -101,7 +101,7 @@ Par défaut, l’état global de cette fonction est étendue à l’application.
 
 Pour plus d'informations sur la compatibilité, voir [Compatibilité](../../c-runtime-library/compatibility.md).
 
-## <a name="example"></a>Exemple
+## <a name="example"></a> Exemple
 
 ```C
 // crt_memmove_s.c
