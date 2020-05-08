@@ -18,7 +18,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-filesystem-l1-1-0.dll
-- api-ms-win-crt-private-l1-1-0
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -36,12 +36,12 @@ helpviewer_keywords:
 - wremove function
 - remove function
 ms.assetid: b6345ec3-3289-4645-93a4-28b9e478cc19
-ms.openlocfilehash: 6a3d7ea81b2f6b1a7e87c706ca883394e02dff3a
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: bf3eedaa9c24e7385686e2343857e69171e43090
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81338149"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82917837"
 ---
 # <a name="remove-_wremove"></a>remove, _wremove
 
@@ -65,15 +65,15 @@ Chemin du fichier à supprimer.
 
 ## <a name="return-value"></a>Valeur de retour
 
-Chacune de ces fonctions retourne 0 si le fichier est bien supprimé. Dans le cas contraire, il renvoie -1 et fixe **errno** soit à **EACCES** pour indiquer que le chemin spécifie un fichier de lecture seulement, spécifie un répertoire, ou le fichier est ouvert, ou à **ENOENT** pour indiquer que le nom de fichier ou le chemin n’a pas été trouvé.
+Chacune de ces fonctions retourne 0 si le fichier est bien supprimé. Sinon, elle retourne-1 et définit **errno** sur **EACCES** pour indiquer que le chemin d’accès spécifie un fichier en lecture seule, spécifie un répertoire ou que le fichier est ouvert, ou **ENOENT** pour indiquer que le nom de fichier ou le chemin d’accès est introuvable.
 
 Pour plus d’informations sur ces codes de retour et les autres, consultez [_doserrno, errno, _sys_errlist et _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
 
-## <a name="remarks"></a>Notes
+## <a name="remarks"></a>Notes 
 
-La fonction **remove** supprime le fichier spécifié par *path.* **_wremove** est une version à caractère large de **_remove**; l’argument *de chemin* à **_wremove** est une chaîne de caractère large. **_wremove** et **_remove** se comportent de façon identique autrement. Tous les descripteurs d’un fichier doivent être fermés avant de pouvoir être supprimés.
+La fonction **remove** supprime le fichier spécifié par *path.* **_wremove** est une version à caractères larges de **_remove**; l’argument *path* de **_wremove** est une chaîne de caractères larges. dans le cas contraire, **_wremove** et **_remove** se comportent de la même façon. Tous les descripteurs d’un fichier doivent être fermés avant de pouvoir être supprimés.
 
-Par défaut, l’état global de cette fonction est étendue à l’application. Pour changer cela, voir [Global State dans le CRT](../global-state.md).
+Par défaut, l’état global de cette fonction est limité à l’application. Pour modifier cette valeur, consultez [état global dans le CRT](../global-state.md).
 
 ### <a name="generic-text-routine-mappings"></a>Mappages de routines de texte générique
 
@@ -94,7 +94,7 @@ Pour plus d'informations sur la compatibilité, voir [Compatibilité](../../c-ru
 
 Toutes les versions des [bibliothèques Runtime C](../../c-runtime-library/crt-library-features.md).
 
-## <a name="example"></a>Exemple
+## <a name="example"></a> Exemple
 
 ```C
 // crt_remove.c

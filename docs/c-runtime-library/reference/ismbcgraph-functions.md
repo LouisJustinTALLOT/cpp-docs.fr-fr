@@ -34,7 +34,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-multibyte-l1-1-0.dll
-- api-ms-win-crt-private-l1-1-0
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -70,12 +70,12 @@ helpviewer_keywords:
 - _ismbcgraph_l function
 - _ismbcspace function
 ms.assetid: 8e0a5f47-ba64-4411-92a3-3c525d16e3be
-ms.openlocfilehash: eb76b6ebdbe4b27ce5a7368ad1b8c2dd8f858d85
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 5f2c8b595de323994aa670a8e0fee9e562897e49
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81343241"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82919764"
 ---
 # <a name="_ismbcgraph-_ismbcgraph_l-_ismbcprint-_ismbcprint_l-_ismbcpunct-_ismbcpunct_l-_ismbcblank-_ismbcblank_l-_ismbcspace-_ismbcspace_l"></a>_ismbcgraph, _ismbcgraph_l, _ismbcprint, _ismbcprint_l, _ismbcpunct, _ismbcpunct_l, _ismbcblank, _ismbcblank_l, _ismbcspace, _ismbcspace_l
 
@@ -126,7 +126,7 @@ int _ismbcspace_l(
 
 ### <a name="parameters"></a>Paramètres
 
-*C*<br/>
+*secteur*<br/>
 Caractère à déterminer.
 
 *locale*<br/>
@@ -134,23 +134,23 @@ Paramètres régionaux à utiliser.
 
 ## <a name="return-value"></a>Valeur de retour
 
-Chacune de ces routines retourne une valeur différente de zéro si le caractère satisfait à la condition de test, ou 0 dans le cas contraire. Si *c* <255 et qu’il y a une routine **_ismbb** correspondante (par exemple, **_ismbcalnum** correspond à **_ismbbalnum),** le résultat est la valeur de rendement de la routine **_ismbb** correspondante.
+Chacune de ces routines retourne une valeur différente de zéro si le caractère satisfait à la condition de test, ou 0 dans le cas contraire. Si *c* <= 255 et qu’il existe une routine **_ismbb** correspondante (par exemple, **_ismbcalnum** correspond à **_ismbbalnum**), le résultat est la valeur de retour de la routine **_ismbb** correspondante.
 
-Les versions de ces fonctions sont identiques, sauf que celles qui ont le **_l** suffixe utilisent le lieu qui est passé pour leur comportement local-dépendant, au lieu de la localisation actuelle. Pour plus d’informations, consultez [Locale](../../c-runtime-library/locale.md).
+Les versions de ces fonctions sont identiques, sauf que celles qui ont le suffixe **_L** utilisent les paramètres régionaux qui sont passés pour leur comportement dépendant des paramètres régionaux, au lieu des paramètres régionaux actuels. Pour plus d’informations, consultez [Locale](../../c-runtime-library/locale.md).
 
-## <a name="remarks"></a>Notes
+## <a name="remarks"></a>Notes 
 
 Chacune de ces fonctions teste un caractère multioctet fourni pour un état donné.
 
 |Routine|Condition de test|Exemple de page de codes 932|
 |-------------|--------------------|---------------------------|
-|**_ismbcgraph**|Graphic|Retourne nonzero si et seulement si *c* est une représentation unique de tout caractère imprimable ASCII ou katakana, sauf un espace blanc ( ).|
-|**_ismbcprint**|Imprimable|Retourne nonzero si et seulement si *c* est une représentation unique par un seul-byte de n’importe quel caractère imprimable ASCII ou katakana, y compris un espace blanc ( ).|
-|**_ismbcpunct**|Ponctuation|Retourne nonzero si et seulement si *c* est une représentation unique de n’importe quel caractère de ponctuation ASCII ou katakana.|
-|**_ismbcblank**|Espace ou tabulation horizontale|Retourne nonzero si et seulement si *c* est un espace ou un caractère d’onglet horizontal: *c*'0x20 ou *c*'0x09.|
-|**_ismbcspace**|Espace blanc|Retourne nonzero si et seulement si *c* est un caractère d’espace blanc: *c*'0x20 ou 0x09<*'c*<'0x0D.|
+|**_ismbcgraph**|Graphic|Retourne une valeur différente de zéro si et seulement si *c* est une représentation sur un octet d’un caractère imprimable ASCII ou Katakana, à l’exception d’un espace blanc ().|
+|**_ismbcprint**|Imprimable|Retourne une valeur différente de zéro si et seulement si *c* est une représentation sur un octet d’un caractère imprimable ASCII ou Katakana, y compris un espace blanc ().|
+|**_ismbcpunct**|Ponctuation|Retourne une valeur différente de zéro si et seulement si *c* est une représentation sur un octet d’un caractère de ponctuation ASCII ou Katakana.|
+|**_ismbcblank**|Espace ou tabulation horizontale|Retourne une valeur différente de zéro si et seulement si *c* est un espace ou un caractère de tabulation horizontale : *c*= 0x20 ou *c*= 0x09.|
+|**_ismbcspace**|Espace blanc|Retourne une valeur différente de zéro si et seulement si *c* est un espace blanc : *c*= 0x20 ou 0x09<=*c*<= 0x0D.|
 
-Par défaut, l’état global de cette fonction est étendue à l’application. Pour changer cela, voir [Global State dans le CRT](../global-state.md).
+Par défaut, l’état global de cette fonction est limité à l’application. Pour modifier cette valeur, consultez [état global dans le CRT](../global-state.md).
 
 ## <a name="requirements"></a>Spécifications
 
@@ -176,8 +176,8 @@ Toutes les versions des [bibliothèques Runtime C](../../c-runtime-library/crt-l
 ## <a name="see-also"></a>Voir aussi
 
 [Classifications des caractères](../../c-runtime-library/character-classification.md)<br/>
-[Local](../../c-runtime-library/locale.md)<br/>
-[Interprétation des séquences multioctets-caractères](../../c-runtime-library/interpretation-of-multibyte-character-sequences.md)<br/>
+[Paramètres régionaux](../../c-runtime-library/locale.md)<br/>
+[Interprétation des séquences de caractères multioctets](../../c-runtime-library/interpretation-of-multibyte-character-sequences.md)<br/>
 [_ismbc, routines](../../c-runtime-library/ismbc-routines.md)<br/>
 [is, isw, routines](../../c-runtime-library/is-isw-routines.md)<br/>
-[routines _ismbb](../../c-runtime-library/ismbb-routines.md)<br/>
+[Routines de _ismbb](../../c-runtime-library/ismbb-routines.md)<br/>

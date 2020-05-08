@@ -18,7 +18,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-multibyte-l1-1-0.dll
-- api-ms-win-crt-private-l1-1-0
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -40,16 +40,16 @@ helpviewer_keywords:
 - mbsnbicmp function
 - _wcsnicmp function
 ms.assetid: ddb44974-8b0c-42f0-90d0-56c9350bae0c
-ms.openlocfilehash: 80d2708396cdaeb86c25932c3d13129fb318719a
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: e84e6b367c428dc26a1864db80f6828f7ec9c176
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81340575"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82911833"
 ---
 # <a name="_mbsnbicmp-_mbsnbicmp_l"></a>_mbsnbicmp, _mbsnbicmp_l
 
-Compare **les octets n** de deux cordes multioctets et ignore le cas.
+Compare **n** octets de deux chaînes de caractères multioctets et ignore la casse.
 
 > [!IMPORTANT]
 > Cette API ne peut pas être utilisée dans les applications qui s'exécutent dans le Windows Runtime. Pour plus d’informations, consultez [Fonctions CRT non prises en charge dans les applications de la plateforme Windows universelle](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
@@ -66,7 +66,7 @@ int _mbsnbicmp(
 
 ### <a name="parameters"></a>Paramètres
 
-*string1*, *string2*<br/>
+*Chaîne1*, *Chaîne2*<br/>
 Chaîne terminée par Null à comparer.
 
 *count*<br/>
@@ -78,25 +78,25 @@ La valeur de retour indique la relation entre les sous-chaînes.
 
 |Valeur retournée|Description|
 |------------------|-----------------|
-|< 0|*chaîne1* sous-corde moins que le sous-corde *string2.*|
-|0|*sous-corde de chaîne1* identique au sous-corde *string2.*|
-|> 0|*sous-corde de chaîne1* plus grande que le sous-corde *string2.*|
+|< 0|*Chaîne1* sous-chaîne inférieure à *Chaîne2* sous-chaîne.|
+|0|*Chaîne1* sous-chaîne identique à la sous-chaîne *Chaîne2* .|
+|> 0|*Chaîne1* SUBSTRING supérieure à la sous-chaîne *Chaîne2* .|
 
-Sur une erreur, **_mbsnbicmp** retourne **_NLSCMPERROR**, qui est défini dans String.h et Mbstring.h.
+En cas d’erreur, **_mbsnbicmp** retourne **_NLSCMPERROR**, qui est défini dans String. h et mbstring. h.
 
-## <a name="remarks"></a>Notes
+## <a name="remarks"></a>Notes 
 
-La fonction **_mbsnbicmp** effectue une comparaison ordinaire des octets de *premier compte* de *string1* et *string2*. La comparaison est effectuée en convertissant chaque personnage en lowercase; [_mbsnbcmp](mbsnbcmp-mbsnbcmp-l.md) est une version sensible aux cas de **_mbsnbicmp**. La comparaison se termine si un caractère nul de fin est atteint dans l’une ou l’autre chaîne avant que les caractères *de comptage* soient comparés. Si les cordes sont égales lorsqu’un caractère nul de fin est atteint dans l’une ou l’autre chaîne avant que les caractères *de comptage* soient comparés, la chaîne plus courte est moindre.
+La fonction **_mbsnbicmp** effectue une comparaison ordinale d’au plus le premier *nombre* d’octets de *string1* et *Chaîne2*. La comparaison est effectuée en convertissant chaque caractère en minuscules ; [_mbsnbcmp](mbsnbcmp-mbsnbcmp-l.md) est une version de **_mbsnbicmp**qui respecte la casse. La comparaison se termine si un caractère null de fin est atteint dans l’une ou l’autre des chaînes avant que les caractères *Count* soient comparés. Si les chaînes sont égales lorsqu’un caractère null de fin est atteint dans l’une ou l’autre des chaînes avant que les caractères *Count* soient comparés, la chaîne la plus courte est inférieure.
 
-**_mbsnbicmp** est similaire à [_mbsnbcmp](mbsnbcmp-mbsnbcmp-l.md), sauf qu’il compare les cordes jusqu’à *compter* les octets au lieu de par les personnages.
+**_mbsnbicmp** est semblable à [_mbsnbcmp](mbsnbcmp-mbsnbcmp-l.md), à ceci près qu’elle compare des chaînes jusqu’au *nombre* d’octets au lieu de caractères.
 
-La comparaison de deux chaînes contenant des caractères qui se trouvent entre « Z » et « a » dans la table ASCII (« [ », « \\ », « ] », « ^ », « _ » et « \` ») donne des résultats différents selon leur casse. Par exemple, les deux chaînes "ABCDE" et "ABCD" comparer d’une façon si la comparaison est inférieure ("abcde" > "abcd") et dans l’autre sens ("ABCDE" < "ABCD") si elle est majuscule.
+La comparaison de deux chaînes contenant des caractères qui se trouvent entre « Z » et « a » dans la table ASCII (« [ », « \\ », « ] », « ^ », « _ » et « \` ») donne des résultats différents selon leur casse. Par exemple, les deux chaînes « ABCDe » et « ABCD ^ » sont comparées de façon unidirectionnelle si la comparaison est en minuscules (« ABCDE » > « ABCD ^ ») et l’autre méthode (« ABCDe » < « ABCD ^ ») si elle est en majuscules.
 
-**_mbsnbicmp** reconnaît les séquences multioctets selon la [page de code multioctet](../../c-runtime-library/code-pages.md) actuellement en service. Elle n'est pas affectée par les paramètres régionaux actuels.
+**_mbsnbicmp** reconnaît les séquences de caractères multioctets en fonction de la [page de codes multioctets](../../c-runtime-library/code-pages.md) en cours d’utilisation. Elle n'est pas affectée par les paramètres régionaux actuels.
 
-Si *la chaîne1* ou *la chaîne2* est un pointeur nul, **_mbsnbicmp** invoque le gestionnaire de paramètres invalide tel que décrit dans [la validation de paramètres](../../c-runtime-library/parameter-validation.md). Si l’exécution est autorisée à se poursuivre, la fonction renvoie **_NLSCMPERROR** et définit **errno** à **EINVAL**.
+Si *Chaîne1* ou *Chaîne2* est un pointeur null, **_mbsnbicmp** appelle le gestionnaire de paramètre non valide comme décrit dans [validation de paramètre](../../c-runtime-library/parameter-validation.md). Si l’exécution est autorisée à se poursuivre, la fonction retourne **_NLSCMPERROR** et définit **errno** sur **EINVAL**.
 
-Par défaut, l’état global de cette fonction est étendue à l’application. Pour changer cela, voir [Global State dans le CRT](../global-state.md).
+Par défaut, l’état global de cette fonction est limité à l’application. Pour modifier cette valeur, consultez [état global dans le CRT](../global-state.md).
 
 ### <a name="generic-text-routine-mappings"></a>Mappages de routines de texte générique
 
@@ -113,13 +113,13 @@ Par défaut, l’état global de cette fonction est étendue à l’application.
 
 Pour plus d’informations sur la compatibilité, consultez [Compatibility](../../c-runtime-library/compatibility.md).
 
-## <a name="example"></a>Exemple
+## <a name="example"></a> Exemple
 
 Consultez l’exemple relatif à [_mbsnbcmp, _mbsnbcmp_l](mbsnbcmp-mbsnbcmp-l.md).
 
 ## <a name="see-also"></a>Voir aussi
 
-[Manipulation des cordes](../../c-runtime-library/string-manipulation-crt.md)<br/>
+[Manipulation de chaînes](../../c-runtime-library/string-manipulation-crt.md)<br/>
 [_mbsnbcat, _mbsnbcat_l](mbsnbcat-mbsnbcat-l.md)<br/>
 [_mbsnbcmp, _mbsnbcmp_l](mbsnbcmp-mbsnbcmp-l.md)<br/>
 [_stricmp, _wcsicmp, _mbsicmp, _stricmp_l, _wcsicmp_l, _mbsicmp_l](stricmp-wcsicmp-mbsicmp-stricmp-l-wcsicmp-l-mbsicmp-l.md)<br/>

@@ -18,7 +18,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-multibyte-l1-1-0.dll
-- api-ms-win-crt-private-l1-1-0
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -34,12 +34,12 @@ helpviewer_keywords:
 - ismbbkpunct function
 - _ismbbkpunct function
 ms.assetid: a04c59cd-5ca7-4296-bec0-2b0d7f04edd0
-ms.openlocfilehash: 24e1676422d913bf406fc4cb5f114c1c025bdb97
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 8cf2d0d38466c370d0110b71a302471679e64657
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81343586"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82915694"
 ---
 # <a name="_ismbbkpunct-_ismbbkpunct_l"></a>_ismbbkpunct, _ismbbkpunct_l
 
@@ -59,7 +59,7 @@ int _ismbbkpunct_l(
 
 ### <a name="parameters"></a>Paramètres
 
-*C*<br/>
+*secteur*<br/>
 Entier à tester.
 
 *locale*<br/>
@@ -67,11 +67,11 @@ Paramètres régionaux à utiliser.
 
 ## <a name="return-value"></a>Valeur de retour
 
-**_ismbbkpunct** retourne une valeur non zéro si l’integer *c* est un symbole de ponctuation non-ASCII, ou 0 si elle n’est pas. Par exemple, dans la page de codes 932 uniquement, **_ismbbkpunct** teste la présence d’une ponctuation katakana. **_ismbbkpunct** utilise le lieu actuel pour tous les paramètres de caractères dépendants des lieux. **_ismbbkpunct_l** est identique, sauf qu’il utilise le lieu qui est passé. Pour plus d’informations, consultez [Locale](../../c-runtime-library/locale.md).
+**_ismbbkpunct** retourne une valeur différente de zéro si l’entier *c* est un symbole de ponctuation non-ASCII, ou 0 dans le cas contraire. Par exemple, dans la page de codes 932 uniquement, **_ismbbkpunct** teste la présence d’une ponctuation katakana. **_ismbbkpunct** utilise les paramètres régionaux actuels pour les paramètres de caractères dépendants des paramètres régionaux. **_ismbbkpunct_l** est identique, à ceci près qu’il utilise les paramètres régionaux qui sont passés. Pour plus d’informations, consultez [Locale](../../c-runtime-library/locale.md).
 
-## <a name="remarks"></a>Notes
+## <a name="remarks"></a>Notes 
 
-Par défaut, l’état global de cette fonction est étendue à l’application. Pour changer cela, voir [Global State dans le CRT](../global-state.md).
+Par défaut, l’état global de cette fonction est limité à l’application. Pour modifier cette valeur, consultez [état global dans le CRT](../global-state.md).
 
 ## <a name="requirements"></a>Spécifications
 
@@ -85,4 +85,4 @@ Pour plus d’informations sur la compatibilité, consultez [Compatibility](../.
 ## <a name="see-also"></a>Voir aussi
 
 [Classification d’octets](../../c-runtime-library/byte-classification.md)<br/>
-[routines _ismbb](../../c-runtime-library/ismbb-routines.md)<br/>
+[Routines de _ismbb](../../c-runtime-library/ismbb-routines.md)<br/>
