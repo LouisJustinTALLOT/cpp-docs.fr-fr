@@ -10,7 +10,7 @@ api_name:
 - _o__register_onexit_function
 api_location:
 - api-ms-win-crt-runtime-l1-1-0.dll
-- api-ms-win-crt-private-l1-1-0
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -27,12 +27,12 @@ helpviewer_keywords:
 - _initialize_onexit_table function
 - _register_onexit_function function
 ms.assetid: ad9e4149-d4ad-4fdf-aaaf-cf786fcb4473
-ms.openlocfilehash: a1e35d9e86a43e48849373a1cf1aa07febcd0e33
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 051961f049109b4fa6a2881e442e621036cb279c
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81351655"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82913834"
 ---
 # <a name="_execute_onexit_table-_initialize_onexit_table-_register_onexit_function"></a>_execute_onexit_table, _initialize_onexit_table, _register_onexit_function
 
@@ -60,16 +60,16 @@ int _execute_onexit_table(
 *table*<br/>
 [in, out] Pointeur vers la table de fonctions onexit.
 
-*Fonction*<br/>
+*fonctionnalités*<br/>
 [in] Pointeur vers une fonction à ajouter à la table de fonctions onexit.
 
 ## <a name="return-value"></a>Valeur de retour
 
 En cas de réussite, retourne 0. Sinon, retourne une valeur négative.
 
-## <a name="remarks"></a>Notes
+## <a name="remarks"></a>Notes 
 
-Ces fonctions sont les détails de l’implémentation de l’infrastructure utilisés pour prendre en charge le runtime C. Elles ne doivent pas être appelées directement depuis votre code. L’exécution C utilise une table de *fonction onexit* pour `atexit`représenter `at_quick_exit`la `_onexit`séquence des fonctions enregistrées par les appels à , , et . La structure de données de la table de fonctions onexit est un détail d’implémentation opaque du runtime C ; l’ordre et la signification de ses membres de données peuvent changer. Ils ne doivent pas être inspectés par du code externe.
+Ces fonctions sont les détails de l’implémentation de l’infrastructure utilisés pour prendre en charge le runtime C. Elles ne doivent pas être appelées directement depuis votre code. Le Runtime C utilise une *table de fonctions OnExit* pour représenter la séquence des fonctions inscrites `atexit`par `at_quick_exit`les appels `_onexit`à, et. La structure de données de la table de fonctions onexit est un détail d’implémentation opaque du runtime C ; l’ordre et la signification de ses membres de données peuvent changer. Ils ne doivent pas être inspectés par du code externe.
 
 La fonction `_initialize_onexit_table` rétablit la table de fonctions onexit à sa valeur initiale.  Cette fonction doit être appelée avant que la table de fonctions onexit ne passe à `_register_onexit_function` ou `_execute_onexit_table`.
 
@@ -77,7 +77,7 @@ La fonction `_register_onexit_function` ajoute une fonction à la fin de la tabl
 
 La fonction `_execute_onexit_table` exécute toutes les fonctions incluses dans la table de fonctions onexit, efface la table, puis retourne le résultat. Après un appel à `_execute_onexit_table`, la table est dans un état non valide ; elle doit être réinitialisée par un appel à `_initialize_onexit_table` avant d’être réutilisée.
 
-Par défaut, l’état global de cette fonction est étendue à l’application. Pour changer cela, voir [Global State dans le CRT](global-state.md).
+Par défaut, l’état global de cette fonction est limité à l’application. Pour modifier cette valeur, consultez [état global dans le CRT](global-state.md).
 
 ## <a name="requirements"></a>Spécifications
 
@@ -85,7 +85,7 @@ Par défaut, l’état global de cette fonction est étendue à l’application.
 |-------------|---------------------|
 |`_initialize_onexit_table function`, `_register_onexit_function`, `_execute_onexit_table`|C, C++: \<process.h>|
 
-Le `_initialize_onexit_table` `_register_onexit_function`, `_execute_onexit_table` , et les fonctions sont spécifiques à Microsoft. Pour plus d’informations sur la compatibilité, consultez [Compatibilité](../c-runtime-library/compatibility.md).
+Les `_initialize_onexit_table`fonctions `_register_onexit_function`, et `_execute_onexit_table` sont spécifiques à Microsoft. Pour plus d’informations sur la compatibilité, consultez [Compatibilité](../c-runtime-library/compatibility.md).
 
 ## <a name="see-also"></a>Voir aussi
 

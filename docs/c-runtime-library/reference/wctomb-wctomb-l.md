@@ -19,7 +19,7 @@ api_location:
 - ucrtbase.dll
 - api-ms-win-crt-convert-l1-1-0.dll
 - ntoskrnl.exe
-- api-ms-win-crt-private-l1-1-0
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -35,12 +35,12 @@ helpviewer_keywords:
 - characters, converting
 - string conversion, multibyte character strings
 ms.assetid: 4a543f0e-5516-4d81-8ff2-3c5206f02ed5
-ms.openlocfilehash: 162585ea866b4fb26cfaae3bc94345dadaba0baa
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 0a95d61c50af5f49e69df8ae20efccfd3fb8ff5f
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81367399"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82910426"
 ---
 # <a name="wctomb-_wctomb_l"></a>wctomb, _wctomb_l
 
@@ -62,23 +62,23 @@ int _wctomb_l(
 
 ### <a name="parameters"></a>Paramètres
 
-*mbchar (en)*<br/>
+*mbchar*<br/>
 Adresse d’un caractère multioctet.
 
-*wchar (wchar)*<br/>
+*WCHAR*<br/>
 Caractère large.
 
 ## <a name="return-value"></a>Valeur de retour
 
-Si **wctomb** convertit le caractère large en un caractère multioctet, il renvoie le nombre d’octets (qui n’est jamais plus grand que **MB_CUR_MAX)** dans le caractère large. Si *wchar* est le caractère nul à caractère large (L'0'), **wctomb** revient 1. Si le pointeur cible *mbchar* est **NULL**, **wctomb** retourne 0. Si la conversion n’est pas possible dans le lieu actuel, **wctomb** retourne -1 et **errno** est réglé à **EILSEQ**.
+Si **wctomb** convertit le caractère larges en caractère multioctet, il retourne le nombre d’octets (qui n’est jamais supérieur à **MB_CUR_MAX**) dans le caractère élargi. Si *WCHAR* est le caractère null à caractères larges (L' \ 0 '), **wctomb** retourne 1. Si le pointeur cible *mbchar* est **null**, **wctomb** retourne 0. Si la conversion n’est pas possible dans les paramètres régionaux actuels, **wctomb** retourne-1 et **errno** a la valeur **EILSEQ**.
 
-## <a name="remarks"></a>Notes
+## <a name="remarks"></a>Notes 
 
-La fonction **wctomb** convertit son argument *wchar* au caractère multioctet correspondant et stocke le résultat à *mbchar*. Vous pouvez appeler la fonction de n’importe quel endroit dans n’importe quel programme. **wctomb** utilise le lieu actuel pour tout comportement local-dépendant; **_wctomb_l** est identique à **wctomb,** sauf qu’il utilise le lieu passé à la place. Pour plus d’informations, consultez [Locale](../../c-runtime-library/locale.md).
+La fonction **wctomb** convertit son argument *WCHAR* en caractère multioctet correspondant et stocke le résultat sur *mbchar*. Vous pouvez appeler la fonction de n’importe quel endroit dans n’importe quel programme. **wctomb** utilise les paramètres régionaux actuels pour tout comportement dépendant des paramètres régionaux ; **_wctomb_l** est identique à **wctomb** , à ceci près qu’il utilise à la place les paramètres régionaux transmis. Pour plus d’informations, consultez [Locale](../../c-runtime-library/locale.md).
 
-**wctomb** valide ses paramètres. Si *mbchar* est **NULL**, le gestionnaire de paramètre invalide est invoqué, tel que décrit dans [La validation de paramètres](../../c-runtime-library/parameter-validation.md). Si l’exécution est autorisée à se poursuivre, **errno** est réglé sur **EINVAL** et la fonction renvoie -1.
+**wctomb** valide ses paramètres. Si *mbchar* a la **valeur null**, le gestionnaire de paramètres non valides est appelé, comme décrit dans [validation de paramètre](../../c-runtime-library/parameter-validation.md). Si l’exécution est autorisée à se poursuivre, **errno** a la valeur **EINVAL** et la fonction retourne-1.
 
-Par défaut, l’état global de cette fonction est étendue à l’application. Pour changer cela, voir [Global State dans le CRT](../global-state.md).
+Par défaut, l’état global de cette fonction est limité à l’application. Pour modifier cette valeur, consultez [état global dans le CRT](../global-state.md).
 
 ## <a name="requirements"></a>Spécifications
 
@@ -88,7 +88,7 @@ Par défaut, l’état global de cette fonction est étendue à l’application.
 
 Pour plus d'informations sur la compatibilité, voir [Compatibilité](../../c-runtime-library/compatibility.md).
 
-## <a name="example"></a>Exemple
+## <a name="example"></a> Exemple
 
 Ce programme illustre le comportement de la fonction wctomb.
 
@@ -121,7 +121,7 @@ Convert a wide character:
 ## <a name="see-also"></a>Voir aussi
 
 [Conversion de données](../../c-runtime-library/data-conversion.md)<br/>
-[Local](../../c-runtime-library/locale.md)<br/>
+[Paramètres régionaux](../../c-runtime-library/locale.md)<br/>
 [_mbclen, mblen, _mblen_l](mbclen-mblen-mblen-l.md)<br/>
 [mbstowcs, _mbstowcs_l](mbstowcs-mbstowcs-l.md)<br/>
 [mbtowc, _mbtowc_l](mbtowc-mbtowc-l.md)<br/>

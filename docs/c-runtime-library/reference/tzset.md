@@ -16,7 +16,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-time-l1-1-0.dll
-- api-ms-win-crt-private-l1-1-0
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -28,12 +28,12 @@ helpviewer_keywords:
 - time environment variables
 - environment variables, setting time
 ms.assetid: 3f6ed537-b414-444d-b272-5dd377481930
-ms.openlocfilehash: b2537a3bbfd2b5cec6bdf149c520aac7e3344b1e
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: d5afc1b05f52d73228abc1a1e102c1578eb2d2dc
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81362196"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82912147"
 ---
 # <a name="_tzset"></a>_tzset
 
@@ -48,43 +48,43 @@ Définit des variables d’environnement de date/heure.
 void _tzset( void );
 ```
 
-## <a name="remarks"></a>Notes
+## <a name="remarks"></a>Notes 
 
-La fonction **_tzset** utilise le réglage actuel de l’environnement variable **TZ** pour attribuer des valeurs à trois variables globales: **_daylight**, **_timezone**, et **_tzname**. Ces variables sont utilisées par les fonctions [_ftime](ftime-ftime32-ftime64.md) et [locales](localtime-localtime32-localtime64.md) pour apporter des corrections allant du temps universel coordonné (UTC) à l’heure locale, et par la fonction [temporelle](time-time32-time64.md) pour calculer UTC du temps du système. Utilisez la syntaxe suivante pour définir la variable de l’environnement **TZ** :
+La fonction **_tzset** utilise la valeur actuelle de la variable d' **environnement TZ** pour assigner des valeurs à trois variables globales : **_daylight**, **_timezone**et **_tzname**. Ces variables sont utilisées par les fonctions [_ftime](ftime-ftime32-ftime64.md) et [localtime](localtime-localtime32-localtime64.md) pour apporter des corrections du temps universel coordonné (UTC, Universal Time Coordinated) à l’heure locale, et par la fonction [Time](time-time32-time64.md) pour calculer l’heure UTC à partir de l’heure système. Pour définir la variable d’environnement **TZ** , utilisez la syntaxe ci-après :
 
-> **set TZ**_tzn_ \[ **+**&#124;**-**]*hh*\[**:**_mm_\[**:**_ss_] ] ]*dzn*
+> **Set TZ =**_tzn_ \[ **+**&#124;**-**]*hh*\[**:**_mm_\[**:**_SS_]] [*DZN*]
 
 |Paramètre|Description|
 |-|-|
-| *tzn tzn* | Nom du fuseau horaire en trois lettres, comme PST. Vous devez spécifier le décalage correct de l’heure locale à l’heure UTC. |
+| *tzn* | Nom du fuseau horaire en trois lettres, comme PST. Vous devez spécifier le décalage correct de l’heure locale à l’heure UTC. |
 | *hh* | Différence en heures entre l’heure UTC et l’heure locale. Signe (+) facultatif pour les valeurs positives. |
-| *Mm* | Minutes. Séparé de *hh* par un côlon (**: ).** |
-| *Ss* | Secondes. Séparé de *mm* par un côlon (**: ).** |
-| *dzn dzn* | Fuseau horaire de l’heure d’été en trois lettres, comme PDT. Si l’heure d’été n’est jamais en vigueur dans la localité, définissez **TZ** sans valeur pour *dzn*. La bibliothèque runtime C suppose que les règles de calcul de l’heure d’été sont celles des États-Unis. |
+| *MM* | Minutes. Séparés par *un* signe deux-points (**:**). |
+| *sécurité* | Secondes. Séparé de *mm* par un signe deux-points (**:**). |
+| *dzn* | Fuseau horaire de l’heure d’été en trois lettres, comme PDT. Si l’heure d’été n’est jamais en vigueur dans la localité, définissez **TZ** sans valeur pour *DZN*. La bibliothèque runtime C suppose que les règles de calcul de l’heure d’été sont celles des États-Unis. |
 
 > [!NOTE]
 > Soyez attentif au calcul du signe de la différence d’heure. Comme la différence d’heure est le décalage de l’heure locale avec l’heure UTC (plutôt que l’inverse), son signe peut être l’opposé de ce que vous attendez de façon intuitive. Pour les fuseaux horaires en avance sur l’heure UTC, la différence de temps est négative ; pour ceux qui sont en retard sur l’heure UTC, la différence est positive.
 
-Par exemple, pour définir la variable de l’environnement **TZ** pour correspondre au fuseau horaire actuel en Allemagne, entrez ce qui suit sur la ligne de commande :
+Par exemple, pour définir la variable d’environnement **TZ** pour correspondre au fuseau horaire actuel en Allemagne, entrez ce qui suit sur la ligne de commande :
 
-> **définir TZ-GST-1GDT**
+> **définir TZ = TPS-1GDT**
 
 Cette commande utilise GST pour indiquer l’heure standard allemande, suppose que l’heure UTC est en retard d’une heure sur l’Allemagne (ou autrement dit, que l’Allemagne est en avance d’une heure sur l’heure UTC) et suppose qu’Allemagne observe l’heure d’été.
 
-Si la valeur **TZ** n’est pas définie, **_tzset** tente d’utiliser les informations du fuseau horaire spécifiées par le système d’exploitation. Dans le système d’exploitation Windows, ces informations sont spécifiées dans l’application Date et heure du Panneau de configuration. Si **_tzset** ne peut pas obtenir ces informations, elle utilise PST8PDT par défaut, ce qui signifie le fuseau horaire du Pacifique.
+Si la valeur **TZ** n’est pas définie, **_tzset** tente d’utiliser les informations de fuseau horaire spécifiées par le système d’exploitation. Dans le système d’exploitation Windows, ces informations sont spécifiées dans l’application Date et heure du Panneau de configuration. Si **_tzset** ne parvient pas à obtenir ces informations, il utilise PST8PDT par défaut, ce qui signifie le fuseau horaire Pacifique.
 
-Sur la base de la valeur variable de l’environnement **TZ,** les valeurs suivantes sont attribuées aux variables globales **_daylight**, **_timezone**, et **_tzname** lorsque **_tzset** est appelé:
+En fonction de la valeur de la variable d’environnement **TZ** , les valeurs suivantes sont affectées aux variables globales **_daylight**, **_timezone**et **_tzname** lorsque **_tzset** est appelée :
 
 |Variable globale|Description|Valeur par défaut|
 |---------------------|-----------------|-------------------|
-|**_daylight**|Valeur non zéro si un fuseau horaire d’été est spécifié dans le paramètre **TZ;** autrement, 0.|1|
+|**_daylight**|Valeur différente de zéro si un fuseau horaire de l’heure d’été est spécifié dans le paramètre **TZ** ; Sinon, 0.|1|
 |**_timezone**|Différence en secondes entre l’heure locale et l’heure UTC.|28 800 (28 800 secondes est égal à 8 heures)|
-|**_tzname**[0]|Valeur de chaîne du nom de fuseau horaire de la variable environnementale **TZ;** vide si **TZ** n’a pas été fixé.|PST|
-|**_tzname**[1]|Valeur de la chaîne du fuseau horaire d’été; vide si le fuseau horaire d’été est omis de la variable environnementale **TZ.**|PDT|
+|**_tzname**[0]|Valeur de chaîne du nom du fuseau horaire à partir de la variable d’environnement **TZ** ; vide si **TZ** n’a pas été défini.|PST|
+|**_tzname**[1]|Valeur de chaîne du fuseau horaire de l’heure d’été ; vide si le fuseau horaire de l’heure d’été est omis de la variable d’environnement **TZ** .|PDT|
 
-Les valeurs par défaut indiquées dans le tableau précédent pour **_daylight** et le tableau **_tzname** correspondent à "PST8PDT". Si la zone d’heure d’été est omise de la variable environnementale **TZ,** la valeur de **_daylight** est de 0 et le [_ftime](ftime-ftime32-ftime64.md), [gmtime](gmtime-gmtime32-gmtime64.md), et les fonctions [locales](localtime-localtime32-localtime64.md) retourner 0 pour leurs drapeaux d’heure d’été.
+Les valeurs par défaut indiquées dans le tableau précédent pour **_daylight** et le tableau **_tzname** correspondent à « PST8PDT ». Si la zone DST est omise de la variable d’environnement **TZ** , la valeur de **_daylight** est 0 et les fonctions [_ftime](ftime-ftime32-ftime64.md), [gmtime](gmtime-gmtime32-gmtime64.md)et [localtime](localtime-localtime32-localtime64.md) retournent 0 pour les indicateurs DST.
 
-Par défaut, l’état global de cette fonction est étendue à l’application. Pour changer cela, voir [Global State dans le CRT](../global-state.md).
+Par défaut, l’état global de cette fonction est limité à l’application. Pour modifier cette valeur, consultez [état global dans le CRT](../global-state.md).
 
 ## <a name="requirements"></a>Spécifications
 

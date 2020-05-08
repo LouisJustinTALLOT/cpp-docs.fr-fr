@@ -18,7 +18,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-multibyte-l1-1-0.dll
-- api-ms-win-crt-private-l1-1-0
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -38,16 +38,16 @@ helpviewer_keywords:
 - tcsnset_l function
 - mbsnbset function
 ms.assetid: 8e46ef75-9a56-42d2-a522-a08450c67c19
-ms.openlocfilehash: 57c6d1a81c9aac817b0028e8eccad38d03b0eef7
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 6af5dd101de74c9f25451c7b72ee561db35505d4
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81340542"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82915551"
 ---
 # <a name="_mbsnbset-_mbsnbset_l"></a>_mbsnbset, _mbsnbset_l
 
-Définit les premiers **octets n** d’une chaîne multioctets à un caractère spécifié. Des versions plus sécurisées de ces fonctions sont disponibles. Consultez [_mbsnbset_s, _mbsnbset_s_l](mbsnbset-s-mbsnbset-s-l.md).
+Définit les **n** premiers octets d’une chaîne de caractères multioctets sur un caractère spécifié. Des versions plus sécurisées de ces fonctions sont disponibles. Consultez [_mbsnbset_s, _mbsnbset_s_l](mbsnbset-s-mbsnbset-s-l.md).
 
 > [!IMPORTANT]
 > Cette API ne peut pas être utilisée dans les applications qui s'exécutent dans le Windows Runtime. Pour plus d’informations, consultez [Fonctions CRT non prises en charge dans les applications de la plateforme Windows universelle](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
@@ -73,7 +73,7 @@ unsigned char *_mbsnbset_l(
 *Str*<br/>
 Chaîne à modifier.
 
-*C*<br/>
+*secteur*<br/>
 Paramètre de caractère codé sur un octet ou multioctet.
 
 *count*<br/>
@@ -84,21 +84,21 @@ Paramètres régionaux à utiliser.
 
 ## <a name="return-value"></a>Valeur de retour
 
-**_mbsnbset** renvoie un pointeur à la chaîne modifiée.
+**_mbsnbset** retourne un pointeur vers la chaîne modifiée.
 
-## <a name="remarks"></a>Notes
+## <a name="remarks"></a>Notes 
 
-Les **fonctions _mbsnbset** et **_mbsnbset_l** fixent, tout au plus, les premiers *octets* de compte de *str* to *c*. Si *le nombre* est plus grand que la longueur de *str,* la longueur de *str* est utilisé au lieu de *compter*. Si *c* est un personnage multioctet et ne peut pas être entièrement mis dans le dernier byte spécifié par *le compte*, le dernier byte est rembourré avec un caractère vide. **_mbsnbset** et **_mbsnbset_l** ne place pas un null de terminat à la fin de *str*.
+Les fonctions **_mbsnbset** et **_mbsnbset_l** définissent, au plus, le premier *nombre* d’octets de *Str* à *c*. Si *Count* est supérieur à la longueur de *Str*, la longueur de *Str* est utilisée à la place de *Count*. Si *c* est un caractère multioctet et ne peut pas être défini entièrement dans le dernier octet spécifié par *Count*, le dernier octet est rempli avec un caractère vide. **_mbsnbset** et **_mbsnbset_l** ne placent pas de caractère null de fin à la fin de *Str*.
 
-**_mbsnbset** et **_mbsnbset_l** est similaire à **_mbsnset**, sauf qu’il définit des octets *compter* plutôt que de *compter* les caractères de *c*.
+**_mbsnbset** et **_mbsnbset_l** est similaire à **_mbsnset**, à ceci près qu’il définit le *nombre* d’octets plutôt que le *nombre* de caractères de *c*.
 
-Si *str* est **NULL** ou *compte* est nul, cette fonction génère une exception de paramètre invalide comme décrit dans la validation [des paramètres](../../c-runtime-library/parameter-validation.md). Si l’exécution est autorisée à se poursuivre, **errno** est réglé sur **EINVAL** et la fonction renvoie **NULL**. En outre, si *c* n’est pas un caractère multioctet valide, **errno** est réglé sur **EINVAL** et un espace est utilisé à la place.
+Si *Str* est **null** ou que *Count* est égal à zéro, cette fonction génère une exception de paramètre non valide, comme décrit dans [validation de paramètre](../../c-runtime-library/parameter-validation.md). Si l’exécution est autorisée à se poursuivre, **errno** a la valeur **EINVAL** et la fonction retourne la **valeur null**. En outre, si *c* n’est pas un caractère multioctet valide, **errno** a la valeur **EINVAL** et un espace est utilisé à la place.
 
-La valeur de sortie est affectée par la valeur du paramètre de catégorie **LC_CTYPE** des paramètres régionaux. Pour plus d’informations, consultez [setlocale](setlocale-wsetlocale.md). La version **_mbsnbset** de cette fonction utilise le lieu actuel pour ce comportement local-dépendant; la version **_mbsnbset_l** est identique, sauf qu’elle utilise le paramètre local passé à la place. Pour plus d’informations, consultez [Locale](../../c-runtime-library/locale.md).
+La valeur de sortie est affectée par la valeur du paramètre de catégorie **LC_CTYPE** des paramètres régionaux. Pour plus d’informations, consultez [setlocale](setlocale-wsetlocale.md). La version **_mbsnbset** de cette fonction utilise les paramètres régionaux actuels pour ce comportement dépendant des paramètres régionaux ; la version de **_mbsnbset_l** est identique, à ceci près qu’elle utilise à la place les paramètres régionaux transmis. Pour plus d’informations, consultez [Locale](../../c-runtime-library/locale.md).
 
 **Remarque relative à la sécurité** Cette API est exposée à une menace potentielle liée à un problème de dépassement de mémoire tampon. Les dépassements de mémoire tampon sont une méthode fréquente d'attaque du système, ce qui provoque une élévation des privilèges injustifiée. Pour plus d’informations, consultez [Solutions contre les dépassements de mémoire tampon](/windows/win32/SecBP/avoiding-buffer-overruns).
 
-Par défaut, l’état global de cette fonction est étendue à l’application. Pour changer cela, voir [Global State dans le CRT](../global-state.md).
+Par défaut, l’état global de cette fonction est limité à l’application. Pour modifier cette valeur, consultez [état global dans le CRT](../global-state.md).
 
 ### <a name="generic-text-routine-mappings"></a>Mappages de routines de texte générique
 
@@ -116,7 +116,7 @@ Par défaut, l’état global de cette fonction est étendue à l’application.
 
 Pour plus d’informations sur la compatibilité, consultez [Compatibility](../../c-runtime-library/compatibility.md).
 
-## <a name="example"></a>Exemple
+## <a name="example"></a> Exemple
 
 ```C
 // crt_mbsnbset.c
@@ -144,7 +144,7 @@ After:  **** is a test
 
 ## <a name="see-also"></a>Voir aussi
 
-[Manipulation des cordes](../../c-runtime-library/string-manipulation-crt.md)<br/>
+[Manipulation de chaînes](../../c-runtime-library/string-manipulation-crt.md)<br/>
 [_mbsnbcat, _mbsnbcat_l](mbsnbcat-mbsnbcat-l.md)<br/>
 [_strnset, _strnset_l, _wcsnset, _wcsnset_l, _mbsnset, _mbsnset_l](strnset-strnset-l-wcsnset-wcsnset-l-mbsnset-mbsnset-l.md)<br/>
 [_strset, _strset_l, _wcsset, _wcsset_l, _mbsset, _mbsset_l](strset-strset-l-wcsset-wcsset-l-mbsset-mbsset-l.md)<br/>

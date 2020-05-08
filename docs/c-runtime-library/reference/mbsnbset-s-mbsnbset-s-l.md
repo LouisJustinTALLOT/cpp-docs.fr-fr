@@ -18,7 +18,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-multibyte-l1-1-0.dll
-- api-ms-win-crt-private-l1-1-0
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -38,16 +38,16 @@ helpviewer_keywords:
 - _tcsnset_s function
 - tcsnset_s_l function
 ms.assetid: 811f92c9-cc31-4bbd-8017-2d1bfc6fb96f
-ms.openlocfilehash: 0ecfac1f9c0f1f9aeb8de85411b0b2f696b578e2
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: b4880e774d6ad1b07052529461910ceff6897351
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81339023"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82915536"
 ---
 # <a name="_mbsnbset_s-_mbsnbset_s_l"></a>_mbsnbset_s, _mbsnbset_s_l
 
-Définit les premiers **octets n** d’une chaîne multioctets à un caractère spécifié. Ces versions de [_mbsnbset, _mbsnbset_l](mbsnbset-mbsnbset-l.md) intègrent des améliorations de sécurité, comme décrit dans [Fonctionnalités de sécurité dans le CRT](../../c-runtime-library/security-features-in-the-crt.md).
+Définit les **n** premiers octets d’une chaîne de caractères multioctets sur un caractère spécifié. Ces versions de [_mbsnbset, _mbsnbset_l](mbsnbset-mbsnbset-l.md) intègrent des améliorations de sécurité, comme décrit dans [Fonctionnalités de sécurité dans le CRT](../../c-runtime-library/security-features-in-the-crt.md).
 
 > [!IMPORTANT]
 > Cette API ne peut pas être utilisée dans les applications qui s'exécutent dans le Windows Runtime. Pour plus d’informations, consultez [Fonctions CRT non prises en charge dans les applications de la plateforme Windows universelle](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
@@ -88,10 +88,10 @@ errno_t _mbsnbset_s_l(
 *Str*<br/>
 Chaîne à modifier.
 
-*Taille*<br/>
+*size*<br/>
 Taille de la mémoire tampon de chaîne.
 
-*C*<br/>
+*secteur*<br/>
 Paramètre de caractère codé sur un octet ou multioctet.
 
 *count*<br/>
@@ -104,21 +104,21 @@ Paramètres régionaux à utiliser.
 
 Zéro en cas de réussite ; code d'erreur dans un autre cas.
 
-## <a name="remarks"></a>Notes
+## <a name="remarks"></a>Notes 
 
-Les **fonctions _mbsnbset_s** et **_mbsnbset_s_l** fixent, tout au plus, les premiers *octets* de compte de *str* to *c*. Si *le nombre* est plus grand que la longueur de *str,* la longueur de *str* est utilisé au lieu de *compter*. Si *c* est un personnage multioctet et ne peut pas être entièrement mis dans le dernier byte qui est spécifié par *le compte*, le dernier byte est rembourré avec un caractère vide. **_mbsnbset_s** et **_mbsnbset_s_l** ne placent pas un null de terminat à la fin de *str*.
+Les fonctions **_mbsnbset_s** et **_mbsnbset_s_l** définissent, au plus, le premier *nombre* d’octets de *Str* à *c*. Si *Count* est supérieur à la longueur de *Str*, la longueur de *Str* est utilisée à la place de *Count*. Si *c* est un caractère multioctet et ne peut pas être défini entièrement dans le dernier octet spécifié par *Count*, le dernier octet est rempli avec un caractère vide. **_mbsnbset_s** et **_mbsnbset_s_l** ne placent pas de caractère null de fin à la fin de *Str*.
 
-**_mbsnbset_s** et **_mbsnbset_s_l** ressemblent à **_mbsnset,** sauf qu’ils ont mis des octets *compter* plutôt que de *compter* les caractères de *c*.
+**_mbsnbset_s** et **_mbsnbset_s_l** ressemblent à **_mbsnset**, sauf qu’ils définissent le *nombre* d’octets plutôt que le *nombre* de caractères de *c*.
 
-Si *str* est **NULL** ou *compte* est nul, cette fonction génère une exception de paramètre invalide, comme décrit dans La validation [des paramètres](../../c-runtime-library/parameter-validation.md). Si l’exécution est autorisée à se poursuivre, **errno** est réglé sur **EINVAL** et la fonction renvoie **NULL**. En outre, si *c* n’est pas un caractère multioctet valide, **errno** est réglé sur **EINVAL** et un espace est utilisé à la place.
+Si *Str* est **null** ou que *Count* est égal à zéro, cette fonction génère une exception de paramètre non valide, comme décrit dans [validation de paramètre](../../c-runtime-library/parameter-validation.md). Si l’exécution est autorisée à se poursuivre, **errno** a la valeur **EINVAL** et la fonction retourne la **valeur null**. En outre, si *c* n’est pas un caractère multioctet valide, **errno** a la valeur **EINVAL** et un espace est utilisé à la place.
 
-La valeur de sortie est affectée par l’établissement de la **LC_CTYPE’établissement** de la catégorie du lieu; voir [setlocale, _wsetlocale](setlocale-wsetlocale.md) pour plus d’informations. La version **_mbsnbset_s** de cette fonction utilise le lieu actuel pour ce comportement local-dépendant; la version **_mbsnbset_s_l** est identique, sauf qu’elle utilise plutôt le paramètre local qui est passé. Pour plus d’informations, consultez [Locale](../../c-runtime-library/locale.md).
+La valeur de sortie est affectée par la valeur du paramètre de catégorie **LC_CTYPE** des paramètres régionaux. Pour plus d’informations [, consultez setlocale, _wsetlocale](setlocale-wsetlocale.md) . La version **_mbsnbset_s** de cette fonction utilise les paramètres régionaux actuels pour ce comportement dépendant des paramètres régionaux ; la version de **_mbsnbset_s_l** est identique, à ceci près qu’elle utilise à la place les paramètres régionaux qui sont passés. Pour plus d’informations, consultez [Locale](../../c-runtime-library/locale.md).
 
 En C++, l’utilisation de ces fonctions est simplifiée par les surcharges de modèle ; les surcharges peuvent déduire automatiquement la longueur de la mémoire tampon, ce qui évite ainsi d’avoir à spécifier un argument de taille. Pour plus d’informations, consultez [Sécuriser les surcharges de modèle](../../c-runtime-library/secure-template-overloads.md).
 
-Les versions de bibliothèque de débogé de ces fonctions remplissent d’abord le tampon avec 0xFE. Pour désactiver ce comportement, utilisez [_CrtSetDebugFillThreshold](crtsetdebugfillthreshold.md).
+Les versions de la bibliothèque de débogage de ces fonctions remplissent d’abord la mémoire tampon avec 0xFE. Pour désactiver ce comportement, utilisez [_CrtSetDebugFillThreshold](crtsetdebugfillthreshold.md).
 
-Par défaut, l’état global de cette fonction est étendue à l’application. Pour changer cela, voir [Global State dans le CRT](../global-state.md).
+Par défaut, l’état global de cette fonction est limité à l’application. Pour modifier cette valeur, consultez [état global dans le CRT](../global-state.md).
 
 ### <a name="generic-text-routine-mappings"></a>Mappages de routines de texte générique
 
@@ -136,7 +136,7 @@ Par défaut, l’état global de cette fonction est étendue à l’application.
 
 Pour plus d’informations sur la compatibilité, consultez [Compatibility](../../c-runtime-library/compatibility.md).
 
-## <a name="example"></a>Exemple
+## <a name="example"></a> Exemple
 
 ```C
 // crt_mbsnbset_s.c
@@ -162,7 +162,7 @@ After:  **** is a test
 
 ## <a name="see-also"></a>Voir aussi
 
-[Manipulation des cordes](../../c-runtime-library/string-manipulation-crt.md)<br/>
+[Manipulation de chaînes](../../c-runtime-library/string-manipulation-crt.md)<br/>
 [_mbsnbcat, _mbsnbcat_l](mbsnbcat-mbsnbcat-l.md)<br/>
 [_strnset, _strnset_l, _wcsnset, _wcsnset_l, _mbsnset, _mbsnset_l](strnset-strnset-l-wcsnset-wcsnset-l-mbsnset-mbsnset-l.md)<br/>
 [_strset, _strset_l, _wcsset, _wcsset_l, _mbsset, _mbsset_l](strset-strset-l-wcsset-wcsset-l-mbsset-mbsset-l.md)<br/>
