@@ -18,7 +18,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-math-l1-1-0.dll
-- api-ms-win-crt-private-l1-1-0
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -36,12 +36,12 @@ helpviewer_keywords:
 - modff function
 - modfl function
 ms.assetid: b1c7abf5-d476-43ca-a03c-02072a86e32d
-ms.openlocfilehash: b509da5f18ea1f606b8a3b47ab66a78e4f595558
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: def04602cdeb0ad180bd4c51c02f570c94809784
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81338698"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82914639"
 ---
 # <a name="modf-modff-modfl"></a>modf, modff, modfl
 
@@ -62,31 +62,31 @@ long double modf( long double x, long double * intptr );  // C++ only
 
 ### <a name="parameters"></a>Paramètres
 
-*X*<br/>
+*x*<br/>
 Valeur à virgule flottante.
 
-*Intptr*<br/>
+*IntPtr*<br/>
 Pointeur désignant la partie entière stockée.
 
 ## <a name="return-value"></a>Valeur de retour
 
 Cette fonction retourne la partie fractionnaire signée de *x*. Aucun retour d'erreur.
 
-## <a name="remarks"></a>Notes
+## <a name="remarks"></a>Notes 
 
-Les fonctions **modf** décomposent la valeur de point flottant *x* en pièces fractionnées et integer, chacune d’entre elles a le même signe que *x*. La partie fractionnaire signée de *x* est retournée. La partie integer est stockée comme une valeur de point flottant à *intptr*.
+Les fonctions **modf,** décomposent la valeur à virgule flottante *x* en parties fractionnaires et entières, chacune ayant le même signe que *x*. La partie fractionnaire signée de *x* est retournée. La partie entière est stockée sous la forme d’une valeur à virgule flottante à *IntPtr*.
 
-**modf** a une implémentation qui utilise Streaming SIMD Extensions 2 (SSE2). Consultez [_set_SSE2_enable](set-sse2-enable.md) pour plus d’informations sur l’utilisation de l’implémentation SSE2 et sur les restrictions qui s’y rattachent.
+**modf,** a une implémentation qui utilise SSE2 (streaming SIMD Extensions 2). Consultez [_set_SSE2_enable](set-sse2-enable.md) pour plus d’informations sur l’utilisation de l’implémentation SSE2 et sur les restrictions qui s’y rattachent.
 
-Le CMD permet la surcharge, de sorte que vous pouvez appeler des surcharges de **modf** qui prennent et retournent **flotteur** ou **de longs** paramètres **doubles.** Dans un programme C, **modf** prend toujours deux doubles valeurs et retourne une double valeur.
+C++ autorisant la surcharge, vous pouvez appeler des surcharges de **modf,** qui acceptent et retournent des paramètres **float** ou **long** **double** . Dans un programme C, **modf,** accepte toujours deux valeurs de type double et retourne une valeur double.
 
-Par défaut, l’état global de cette fonction est étendue à l’application. Pour changer cela, voir [Global State dans le CRT](../global-state.md).
+Par défaut, l’état global de cette fonction est limité à l’application. Pour modifier cette valeur, consultez [état global dans le CRT](../global-state.md).
 
 ## <a name="requirements"></a>Spécifications
 
 |Routine|En-tête requis|
 |-------------|---------------------|
-|**modf**, **modff**, **modfl**|C : \<math.h><br /><br /> C++ : \<cmath> ou \<math.h>|
+|**modf,**, **modff,**, **modfl**|C : \<math.h><br /><br /> C++ : \<cmath> ou \<math.h>|
 
 Pour plus d'informations sur la compatibilité, voir [Compatibilité](../../c-runtime-library/compatibility.md).
 
@@ -116,6 +116,6 @@ For -14.876543, the fraction is -0.876543 and the integer is -14
 
 ## <a name="see-also"></a>Voir aussi
 
-[Soutien à la pointe flottante](../../c-runtime-library/floating-point-support.md)<br/>
+[Prise en charge de la virgule flottante](../../c-runtime-library/floating-point-support.md)<br/>
 [frexp](frexp.md)<br/>
 [ldexp](ldexp.md)<br/>

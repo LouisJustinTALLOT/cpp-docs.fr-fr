@@ -17,7 +17,7 @@ api_location:
 - ucrtbase.dll
 - api-ms-win-crt-utility-l1-1-0.dll
 - ntoskrnl.exe
-- api-ms-win-crt-private-l1-1-0
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -28,12 +28,12 @@ helpviewer_keywords:
 - arrays [CRT], binary search
 - bsearch function
 ms.assetid: e0ad2f47-e7dd-49ed-8288-870457a14a2c
-ms.openlocfilehash: efad391eb2512cfa59cc3597430a84727676f27e
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 7843c1cd15a4bd39e1b24676402d635bd5f2de90
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81333802"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82913378"
 ---
 # <a name="bsearch"></a>bsearch
 
@@ -53,38 +53,38 @@ void *bsearch(
 
 ### <a name="parameters"></a>Paramètres
 
-*Clé*\
+*key*\
 Pointeur vers la clé à rechercher.
 
-*Base*\
+*base*\
 Pointeur vers la base des données de recherche.
 
-*Nombre*\
+*number*\
 Nombre d'éléments.
 
 *Largeur*\
 Largeur des éléments.
 
-*Comparer*\
-Fonction de rappel qui compare deux éléments. Le premier est un pointeur à la clé pour la recherche, et le second est un pointeur à l’élément de tableau à comparer avec la clé.
+*compar*\
+Fonction de rappel qui compare deux éléments. Le premier est un pointeur vers la clé de la recherche, tandis que le second est un pointeur vers l’élément de tableau à comparer à la clé.
 
 ## <a name="return-value"></a>Valeur retournée
 
-**bsearch renvoie** un pointeur à un événement de *la clé* dans le tableau pointé par *la base*. Si *la clé* n’est pas trouvée, la fonction renvoie **NULL**. Si le tableau n’est pas trié par ordre croissant ou qu’il contient des enregistrements en double avec des clés identiques, le résultat est imprévisible.
+**ensuite bsearch** retourne un pointeur vers une occurrence de la *clé* dans le tableau désigné par *base*. Si la *clé* est introuvable, la fonction retourne la **valeur null**. Si le tableau n’est pas trié par ordre croissant ou qu’il contient des enregistrements en double avec des clés identiques, le résultat est imprévisible.
 
-## <a name="remarks"></a>Notes
+## <a name="remarks"></a>Notes 
 
-La fonction **de bsearch** effectue une recherche binaire d’un tableau trié d’éléments de *nombre,* chacun des octets de *largeur* dans la taille. La valeur *de base* est un pointeur à la base du tableau à rechercher, et la *clé* est la valeur recherchée. Le paramètre *de comparaison* est un pointeur à une routine fournie par l’utilisateur qui compare la clé demandée à un élément de tableau. Il renvoie l’une des valeurs suivantes qui spécifient leur relation :
+La fonction **ensuite bsearch** effectue une recherche binaire d’un tableau trié d’éléments Number, chacun d’un *nombre* d’octets de *largeur* . La valeur de *base* est un pointeur vers la base du tableau dans lequel effectuer la recherche, et *Key* est la valeur recherchée. Le paramètre de *comparaison* est un pointeur vers une routine fournie par l’utilisateur qui compare la clé demandée à un élément de tableau. Elle retourne l’une des valeurs suivantes qui spécifient leur relation :
 
-|Valeur retournée par la routine *de comparaison*|Description|
+|Valeur retournée par la routine de *comparaison*|Description|
 |-----------------------------------------|-----------------|
 |\< 0|La clé est inférieure à l’élément de tableau.|
 |0|La clé est égale à l’élément de tableau.|
 |> 0|La clé est supérieure à l’élément de tableau.|
 
-Cette fonction valide ses paramètres. Si *comparer*, *clé* ou *numéro* est **NULL**, ou si *la base* est **NULL** et *le nombre* est nonzero, ou si la *largeur* est nulle, la fonction invoque le gestionnaire de paramètres invalides, tel que décrit dans la validation [de paramètres](../../c-runtime-library/parameter-validation.md). Si l’exécution est autorisée à `EINVAL` se poursuivre, **errno** est réglé et la fonction retourne **NULL**.
+Cette fonction valide ses paramètres. Si *compare*, *Key* ou *Number* a la **valeur null**, ou si *base* a la **valeur null** et que le *nombre* est différent de zéro, ou si *Width* est égal à zéro, la fonction appelle le gestionnaire de paramètre non valide, comme décrit dans [validation de paramètre](../../c-runtime-library/parameter-validation.md). Si l’exécution est autorisée à se poursuivre, **errno** a `EINVAL` la valeur et la fonction retourne la **valeur null**.
 
-Par défaut, l’état global de cette fonction est étendue à l’application. Pour changer cela, voir [Global State dans le CRT](../global-state.md).
+Par défaut, l’état global de cette fonction est limité à l’application. Pour modifier cette valeur, consultez [état global dans le CRT](../global-state.md).
 
 ## <a name="requirements"></a>Spécifications
 
@@ -94,7 +94,7 @@ Par défaut, l’état global de cette fonction est étendue à l’application.
 
 Pour plus d'informations sur la compatibilité, voir [Compatibilité](../../c-runtime-library/compatibility.md).
 
-## <a name="example"></a>Exemple
+## <a name="example"></a> Exemple
 
 Ce programme trie un tableau de chaînes avec qsort et utilise ensuite bsearch pour rechercher le mot « cat ».
 

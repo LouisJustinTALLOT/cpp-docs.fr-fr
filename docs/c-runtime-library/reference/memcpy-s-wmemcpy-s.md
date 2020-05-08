@@ -19,7 +19,7 @@ api_location:
 - ucrtbase.dll
 - api-ms-win-crt-string-l1-1-0.dll
 - ntoskrnl.exe
-- api-ms-win-crt-private-l1-1-0
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -31,12 +31,12 @@ helpviewer_keywords:
 - memcpy_s function
 - wmemcpy_s function
 ms.assetid: 5504e20a-83d9-4063-91fc-3f55f7dabe99
-ms.openlocfilehash: dc5e49115b65b6883e55df13d0610231a87c1c55
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 7b3df3542974f99009285c8df652cff1fd4fa173
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81333339"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82915403"
 ---
 # <a name="memcpy_s-wmemcpy_s"></a>memcpy_s, wmemcpy_s
 
@@ -82,17 +82,17 @@ Zéro si l'opération a réussi ; code d'erreur en cas de échec.
 |*dest*|*destSize*|*src*|*count*|Valeur retournée|Contenu de *dest*|
 |------------|----------------|-----------|---|------------------|------------------------|
 |n'importe laquelle|n'importe laquelle|n'importe laquelle|0|0|Non modifiée|
-|**Null**|n'importe laquelle|n'importe laquelle|Différent de zéro|**EINVAL (EN)**|Non modifiée|
-|n'importe laquelle|n'importe laquelle|**Null**|Différent de zéro|**EINVAL (EN)**|*dest* est mis à zéro|
-|n'importe laquelle|< *Compter*|n'importe laquelle|Différent de zéro|**ERANGE**|*dest* est mis à zéro|
+|**NUL**|n'importe laquelle|n'importe laquelle|Différent de zéro|**EINVAL**|Non modifiée|
+|n'importe laquelle|n'importe laquelle|**NUL**|Différent de zéro|**EINVAL**|*dest* est mis à zéro|
+|n'importe laquelle|< *count*|n'importe laquelle|Différent de zéro|**ERANGE**|*dest* est mis à zéro|
 
-## <a name="remarks"></a>Notes
+## <a name="remarks"></a>Notes 
 
-**memcpy_s** copies *comptent* des octets de *src* à *dest;* **wmemcpy_s** copies *comptent de* larges caractères (deux octets). Si la source et la destination se chevauchent, le comportement de **memcpy_s** n’est pas défini. Utilisez **memmove_s** pour gérer les régions qui se chevauchent.
+**memcpy_s** copie le *nombre* d’octets de *src* vers *dest*; **wmemcpy_s** copie le *nombre* de caractères larges (deux octets). Si la source et la destination se chevauchent, le comportement de **memcpy_s** n’est pas défini. Utilisez **memmove_s** pour gérer les régions qui se chevauchent.
 
-Ces fonctions valident leurs paramètres. Si *le nombre* est non-zéro et *dest* ou *src* est un pointeur nul, ou *detSize* est plus petit que *le compte*, ces fonctions invoquent le gestionnaire de paramètres invalides, comme décrit dans la validation de [paramètres](../../c-runtime-library/parameter-validation.md). Si l’exécution est autorisée à se poursuivre, ces fonctions renvoient **EINVAL** ou **ERANGE** et **fixent errno** à la valeur de retour.
+Ces fonctions valident leurs paramètres. Si *Count* n’est pas égal à zéro et que *dest* ou *src* est un pointeur null, ou que *destSize* est inférieur à *Count*, ces fonctions appellent le gestionnaire de paramètres non valides, comme décrit dans [validation de paramètre](../../c-runtime-library/parameter-validation.md). Si l’exécution est autorisée à se poursuivre, ces fonctions retournent **EINVAL** ou **ERANGE** et attribuent à **errno** la valeur de retour.
 
-Par défaut, l’état global de cette fonction est étendue à l’application. Pour changer cela, voir [Global State dans le CRT](../global-state.md).
+Par défaut, l’état global de cette fonction est limité à l’application. Pour modifier cette valeur, consultez [état global dans le CRT](../global-state.md).
 
 ## <a name="requirements"></a>Spécifications
 

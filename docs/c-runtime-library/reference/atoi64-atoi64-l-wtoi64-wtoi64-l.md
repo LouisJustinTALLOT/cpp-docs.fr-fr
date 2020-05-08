@@ -22,7 +22,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-convert-l1-1-0.dll
-- api-ms-win-crt-private-l1-1-0
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -54,12 +54,12 @@ helpviewer_keywords:
 - _wtoi64 function
 - _atoi64 function
 ms.assetid: 2c3e30fd-545d-4222-8364-0c5905df9526
-ms.openlocfilehash: 103b100b293ff183dd89f3e7c2f291f9d49519e6
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 555cd27e87324141f21bdd7ef12f9ff8ea1a4e09
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81348830"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82913571"
 ---
 # <a name="_atoi64-_atoi64_l-_wtoi64-_wtoi64_l"></a>_atoi64, _atoi64_l, _wtoi64, _wtoi64_l
 
@@ -94,29 +94,29 @@ Paramètres régionaux à utiliser.
 
 ## <a name="return-value"></a>Valeur de retour
 
-Chaque fonction renvoie la **valeur __int64** produite en interprétant les caractères d’entrée comme un nombre. La valeur de rendement est de 0 pour **_atoi64** si l’entrée ne peut pas être convertie en valeur de ce type.
+Chaque fonction retourne la valeur **__int64** produite en interprétant les caractères d’entrée comme un nombre. La valeur de retour est 0 pour **_atoi64** si l’entrée ne peut pas être convertie en valeur de ce type.
 
-En cas de débordement de grandes valeurs intégrales positives, **_atoi64** retourne **I64_MAX** et **I64_MIN** en cas de débordement de grandes valeurs intégrales négatives.
+Dans le cas d’un dépassement de capacité avec de grandes valeurs intégrales positives, **_atoi64** retourne **I64_MAX** et **I64_MIN** dans le cas d’un dépassement de capacité avec de grandes valeurs intégrales négatives.
 
-Dans tous les cas hors de portée, **errno** est réglé sur **ERANGE**. Si le paramètre passé est **NULL**, le gestionnaire de paramètre invalide est invoqué, tel que décrit dans [La validation des paramètres](../../c-runtime-library/parameter-validation.md). Si l’exécution est autorisée à se poursuivre, ces fonctions **définies errno** à **EINVAL** et retour 0.
+Dans tous les cas hors limites, **errno** a la valeur **ERANGE**. Si le paramètre passé a la **valeur null**, le gestionnaire de paramètres non valides est appelé, comme décrit dans [validation de paramètre](../../c-runtime-library/parameter-validation.md). Si l’exécution est autorisée à se poursuivre, ces fonctions définissent **errno** sur **EINVAL** et retournent 0.
 
-## <a name="remarks"></a>Notes
+## <a name="remarks"></a>Notes 
 
 Ces fonctions convertissent une chaîne de caractères en une valeur entière 64 bits.
 
 La chaîne d’entrée est une séquence de caractères qui peut être interprétée comme une valeur numérique du type spécifié. La fonction arrête de lire la chaîne d’entrée au premier caractère qu’elle ne peut pas reconnaître comme faisant partie d’un nombre. Ce caractère peut être le caractère null ('\0' ou L'\0') terminant la chaîne.
 
-*L’argument de* **_atoi64** a la forme suivante :
+L’argument *Str* de **_atoi64** se présente sous la forme suivante :
 
 > [*espace blanc*] [*signe*] [*chiffres*]
 
-Un *espace blanc* se compose de caractères d’espace ou d’onglet, qui sont ignorés ; *signe* est soit plus () ou moins (-); et *les chiffres* sont un ou plusieurs chiffres.
+Un espace est constitué de caractères d’espace *ou de tabulation* , qui sont ignorés ; le *signe* est plus (+) ou moins (-); et les *chiffres* correspondent à un ou plusieurs chiffres.
 
-**_wtoi64** est identique à **_atoi64** sauf qu’il faut une large chaîne de caractère comme paramètre.
+**_wtoi64** est identique à **_atoi64** , sauf qu’elle prend une chaîne de caractères larges en tant que paramètre.
 
-Les versions de ces fonctions avec le **suffixe _l** sont identiques, sauf qu’elles utilisent le paramètre local passé au lieu de l’endroit actuel. Pour plus d’informations, consultez [Locale](../../c-runtime-library/locale.md).
+Les versions de ces fonctions avec le suffixe **_L** sont identiques, sauf qu’elles utilisent les paramètres régionaux passés au lieu des paramètres régionaux actuels. Pour plus d’informations, consultez [Locale](../../c-runtime-library/locale.md).
 
-Par défaut, l’état global de cette fonction est étendue à l’application. Pour changer cela, voir [Global State dans le CRT](../global-state.md).
+Par défaut, l’état global de cette fonction est limité à l’application. Pour modifier cette valeur, consultez [état global dans le CRT](../global-state.md).
 
 ### <a name="generic-text-routine-mappings"></a>Mappages de routines de texte générique
 
@@ -132,9 +132,9 @@ Par défaut, l’état global de cette fonction est étendue à l’application.
 |**_atoi64**, **_atoi64_l**|\<stdlib.h>|
 |**_wtoi64**, **_wtoi64_l**|\<stdlib.h> ou \<wchar.h>|
 
-## <a name="example"></a>Exemple
+## <a name="example"></a> Exemple
 
-Ce programme montre comment les nombres stockés sous forme de chaînes peuvent être convertis en valeurs numériques à l’aide des fonctions **_atoi64.**
+Ce programme montre comment les nombres stockés sous forme de chaînes peuvent être convertis en valeurs numériques à l’aide des fonctions **_atoi64** .
 
 ```C
 // crt_atoi64.c
@@ -184,8 +184,8 @@ Overflow condition occurred.
 ## <a name="see-also"></a>Voir aussi
 
 [Conversion de données](../../c-runtime-library/data-conversion.md)<br/>
-[Soutien à la pointe flottante](../../c-runtime-library/floating-point-support.md)<br/>
-[Local](../../c-runtime-library/locale.md)<br/>
+[Prise en charge de la virgule flottante](../../c-runtime-library/floating-point-support.md)<br/>
+[Paramètres régionaux](../../c-runtime-library/locale.md)<br/>
 [_ecvt](ecvt.md)<br/>
 [_fcvt](fcvt.md)<br/>
 [_gcvt](gcvt.md)<br/>

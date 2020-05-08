@@ -18,7 +18,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-multibyte-l1-1-0.dll
-- api-ms-win-crt-private-l1-1-0
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -34,12 +34,12 @@ helpviewer_keywords:
 - _mbsbtype_l function
 - mbsbtype_l function
 ms.assetid: 0d5dd91a-d32d-4f98-ac57-98dfc9e98eac
-ms.openlocfilehash: d71a061d9af5028c9bc6b4008f9904606a233592
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: c1431a2d0886ffd3d16b43abf82b7342c166273a
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81340872"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82909471"
 ---
 # <a name="_mbsbtype-_mbsbtype_l"></a>_mbsbtype, _mbsbtype_l
 
@@ -75,24 +75,24 @@ Paramètres régionaux à utiliser.
 
 ## <a name="return-value"></a>Valeur de retour
 
-**_mbsbtype** et **_mbsbtype_l** renvoie une valeur d’intégrant indiquant le résultat du test sur le byte spécifié. Les constantes manifestes présentes dans le tableau suivant sont définies dans Mbctype.h.
+**_mbsbtype** et **_mbsbtype_l** retourne une valeur entière indiquant le résultat du test sur l’octet spécifié. Les constantes manifestes présentes dans le tableau suivant sont définies dans Mbctype.h.
 
 |Valeur retournée|Type d’octet|
 |------------------|---------------|
-|**_MBC_SINGLE** (0)|Caractère codé sur un octet. Par exemple, dans la page de code 932, **_mbsbtype** renvoie 0 si le byte spécifié se situe dans la plage 0x20 - 0x7E ou 0xA1 - 0xDF.|
-|**_MBC_LEAD** (1)|Octet de tête de caractère multioctet. Par exemple, dans la page de code 932, **_mbsbtype** renvoie 1 si le byte spécifié se situe dans la plage 0x81 - 0x9F ou 0xE0 - 0xFC.|
-|**_MBC_TRAIL** (2)|Octet de fin de caractère multioctet. Par exemple, dans la page de code 932, **_mbsbtype** renvoie 2 si le byte spécifié se situe dans la plage 0x40 - 0x7E ou 0x80 - 0xFC.|
-|**_MBC_ILLEGAL** (-1)|**NULL** string, caractère invalide, ou byte nul trouvé devant le byte au *compte* de compensation en *mbstr*.|
+|**_MBC_SINGLE** (0)|Caractère codé sur un octet. Par exemple, dans la page de codes 932, **_mbsbtype** retourne 0 si l’octet spécifié est compris dans la plage 0X20-0X7e ou 0XA1-0xDF.|
+|**_MBC_LEAD** (1)|Octet de tête de caractère multioctet. Par exemple, dans la page de codes 932, **_mbsbtype** retourne 1 si l’octet spécifié se trouve dans la plage 0X81-0X9f ou 0XE0-0xFC.|
+|**_MBC_TRAIL** (2)|Octet de fin de caractère multioctet. Par exemple, dans la page de codes 932, **_mbsbtype** retourne 2 si l’octet spécifié est compris dans la plage 0X40-0x7E ou 0X80-0xFC.|
+|**_MBC_ILLEGAL** (-1)|Chaîne **null** , caractère non valide ou octet NULL trouvé avant le *nombre* d’octets au niveau du décalage dans *mbstr*.|
 
-## <a name="remarks"></a>Notes
+## <a name="remarks"></a>Notes 
 
-La fonction **_mbsbtype** détermine le type d’en-l’air dans une chaîne de caractères multioctets. La fonction n’examine que le byte au *nombre* de décalages dans *mbstr*, ignorant les caractères invalides avant le byte spécifié.
+La fonction **_mbsbtype** détermine le type d’un octet dans une chaîne de caractères multioctets. La fonction examine uniquement le *nombre* d’octets au niveau du décalage dans *mbstr*, en ignorant les caractères non valides avant l’octet spécifié.
 
-La valeur de sortie est affectée par la valeur du paramètre de catégorie **LC_CTYPE** des paramètres régionaux. Pour plus d’informations, consultez [setlocale](setlocale-wsetlocale.md). La version de cette fonction sans le **suffixe _l** utilise le lieu actuel pour ce comportement local-dépendant; la version avec le **suffixe _l** est identique, sauf qu’elle utilise le paramètre local passé à la place. Pour plus d’informations, consultez [Locale](../../c-runtime-library/locale.md).
+La valeur de sortie est affectée par la valeur du paramètre de catégorie **LC_CTYPE** des paramètres régionaux. Pour plus d’informations, consultez [setlocale](setlocale-wsetlocale.md). La version de cette fonction sans le suffixe **_L** utilise les paramètres régionaux actuels pour ce comportement dépendant des paramètres régionaux ; la version avec le suffixe **_L** est identique, sauf qu’elle utilise à la place les paramètres régionaux transmis. Pour plus d’informations, consultez [Locale](../../c-runtime-library/locale.md).
 
-Si la chaîne d’entrée est **NULL**, le gestionnaire de paramètres invalide est invoqué, tel que décrit dans [La validation de paramètres](../../c-runtime-library/parameter-validation.md). Si l’exécution est autorisée à se poursuivre, **errno** est réglé sur **EINVAL** et la fonction retourne **_MBC_ILLEGAL**.
+Si la chaîne d’entrée est **null**, le gestionnaire de paramètres non valides est appelé, comme décrit dans [validation de paramètre](../../c-runtime-library/parameter-validation.md). Si l’exécution est autorisée à se poursuivre, **errno** a la valeur **EINVAL** et la fonction retourne **_MBC_ILLEGAL**.
 
-Par défaut, l’état global de cette fonction est étendue à l’application. Pour changer cela, voir [Global State dans le CRT](../global-state.md).
+Par défaut, l’état global de cette fonction est limité à l’application. Pour modifier cette valeur, consultez [état global dans le CRT](../global-state.md).
 
 ## <a name="requirements"></a>Spécifications
 
