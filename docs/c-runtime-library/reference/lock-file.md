@@ -16,7 +16,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-filesystem-l1-1-0.dll
-- api-ms-win-crt-private-l1-1-0
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -29,16 +29,16 @@ helpviewer_keywords:
 - _lock_file function
 - lock_file function
 ms.assetid: 75c7e0e6-efff-4747-b6ed-9bcf2b0894c3
-ms.openlocfilehash: 9f7016f873dc9b159aab677615ff88a24628072c
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: e4f99203d5330a44b89239911e4a035a7958bf0b
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81342109"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82911525"
 ---
 # <a name="_lock_file"></a>_lock_file
 
-Verrouille un objet **FILE** pour assurer la cohérence des threads accédant simultanément à l’objet **FILE.**
+Verrouille un objet **fichier** pour garantir la cohérence des threads qui accèdent simultanément à l’objet **fichier** .
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -48,14 +48,14 @@ void _lock_file( FILE* file );
 
 ### <a name="parameters"></a>Paramètres
 
-*Fichier*<br/>
+*txt*<br/>
 Descripteur de fichier.
 
-## <a name="remarks"></a>Notes
+## <a name="remarks"></a>Notes 
 
-La fonction **_lock_file** verrouille l’objet **FILE** spécifié par *fichier*. Le fichier sous-jacent n’est pas verrouillé par **_lock_file**. Utilisez [_unlock_file](unlock-file.md) pour libérer le verrou sur le fichier. Les appels à **_lock_file** et **_unlock_file** doivent être assortis dans un thread.
+La fonction **_lock_file** verrouille l’objet **fichier** spécifié par le *fichier*. Le fichier sous-jacent n’est pas verrouillé par **_lock_file**. Utilisez [_unlock_file](unlock-file.md) pour libérer le verrou sur le fichier. Les appels à **_lock_file** et **_unlock_file** doivent être mis en correspondance dans un thread.
 
-Par défaut, l’état global de cette fonction est étendue à l’application. Pour changer cela, voir [Global State dans le CRT](../global-state.md).
+Par défaut, l’état global de cette fonction est limité à l’application. Pour modifier cette valeur, consultez [état global dans le CRT](../global-state.md).
 
 ## <a name="requirements"></a>Spécifications
 

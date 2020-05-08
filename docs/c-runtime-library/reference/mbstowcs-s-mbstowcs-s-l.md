@@ -19,7 +19,7 @@ api_location:
 - ucrtbase.dll
 - api-ms-win-crt-multibyte-l1-1-0.dll
 - api-ms-win-crt-convert-l1-1-0.dll
-- api-ms-win-crt-private-l1-1-0
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -32,12 +32,12 @@ helpviewer_keywords:
 - mbstowcs_s function
 - mbstowcs_s_l function
 ms.assetid: 2fbda953-6918-498f-b440-3e7b21ed65a4
-ms.openlocfilehash: 07d694a7430f23e2f9600a5d2b147bcee2ef0e09
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 4a6e86e1122a7392862fa34a59042c32560fd69d
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81338813"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82915451"
 ---
 # <a name="mbstowcs_s-_mbstowcs_s_l"></a>mbstowcs_s, _mbstowcs_s_l
 
@@ -87,13 +87,13 @@ Nombre de caractères convertis.
 Adresse de la mémoire tampon pour la chaîne de caractères larges convertie résultante.
 
 *sizeInWords*<br/>
-La taille du tampon *wcstr* en mots.
+Taille de la mémoire tampon *wcstr* en mots.
 
 *mbstr*<br/>
 Adresse d’une séquence de caractères multioctets se terminant par un caractère Null.
 
 *count*<br/>
-Le nombre maximum de caractères larges à stocker dans le tampon *wcstr,* sans compter la fin nulle, ou [_TRUNCATE](../../c-runtime-library/truncate.md).
+Nombre maximal de caractères larges à stocker dans la mémoire tampon *wcstr* , à l’exclusion de la valeur null de fin ou [_TRUNCATE](../../c-runtime-library/truncate.md).
 
 *locale*<br/>
 Paramètres régionaux à utiliser.
@@ -102,43 +102,43 @@ Paramètres régionaux à utiliser.
 
 Zéro si l'opération a réussi, un code d'erreur en cas d'échec.
 
-|État d’erreur|Valeur de rendement et **errno**|
+|État d’erreur|Valeur de retour et **errno**|
 |---------------------|------------------------------|
-|*wcstr* est **NULL** et *sizeInWords* > 0|**EINVAL (EN)**|
-|*mbstr* est **NULL**|**EINVAL (EN)**|
-|Le tampon de destination est trop petit pour contenir la chaîne convertie (à moins que *le compte* ne **soit _TRUNCATE**; voir Remarques ci-dessous)|**ERANGE**|
-|*wcstr n’est* pas **NULL** et *tailleInWords* 0|**EINVAL (EN)**|
+|*wcstr* a la **valeur NULL** et *sizeInWords* > 0|**EINVAL**|
+|*mbstr* a la **valeur null**|**EINVAL**|
+|La mémoire tampon de destination est trop petite pour contenir la chaîne convertie (sauf si *Count* est **_TRUNCATE**; consultez les remarques ci-dessous)|**ERANGE**|
+|*wcstr* n’est pas **null** et *sizeInWords* = = 0|**EINVAL**|
 
-Si l’une de ces conditions se présente, l’exception de paramètre non valide est appelée, comme décrit dans [Validation de paramètre](../../c-runtime-library/parameter-validation.md). Si l’exécution est autorisée à se poursuivre, la fonction renvoie un code d’erreur et définit **errno** comme indiqué dans le tableau.
+Si l’une de ces conditions se présente, l’exception de paramètre non valide est appelée, comme décrit dans [Validation de paramètre](../../c-runtime-library/parameter-validation.md). Si l’exécution est autorisée à se poursuivre, la fonction retourne un code d’erreur et définit **errno** comme indiqué dans le tableau.
 
-## <a name="remarks"></a>Notes
+## <a name="remarks"></a>Notes 
 
-La fonction **mbstowcs_s** convertit une chaîne de caractères multioctets pointés par *mbstr* en caractères larges stockés dans le tampon pointé vers *le wcstr*. La conversion se poursuit pour chaque caractère jusqu'à ce qu'une des conditions suivantes soit remplie :
+La fonction **mbstowcs_s** convertit une chaîne de caractères multioctets pointée par *mbstr* en caractères larges stockés dans la mémoire tampon pointée par *wcstr*. La conversion se poursuit pour chaque caractère jusqu'à ce qu'une des conditions suivantes soit remplie :
 
 - Un caractère multioctet de null est rencontré.
 
 - Un caractère multioctet non valide est rencontré.
 
-- Le nombre de caractères larges stockés dans le tampon *wcstr* *équivaut à compter*.
+- Le nombre de caractères larges stockés dans la mémoire tampon *wcstr* est égal à *Count*.
 
 La chaîne de destination est toujours terminée par null (même en cas d'erreur).
 
-Si *le compte* est la valeur spéciale [_TRUNCATE](../../c-runtime-library/truncate.md), puis **mbstowcs_s** convertit autant de la chaîne que s’insérera dans le tampon de destination, tout en laissant de la place pour un terminateur nul.
+Si *Count* correspond à la valeur spéciale [_TRUNCATE](../../c-runtime-library/truncate.md), **mbstowcs_s** convertit autant de chaînes que vous le configurez dans la mémoire tampon de destination, tout en laissant de l’espace pour une marque de fin null.
 
-Si **mbstowcs_s** convertit avec succès la chaîne source, il met la taille en caractères larges de la chaîne convertie, y compris le terminateur nul, en *&#42;pReturnValue* (fourni *pReturnValue* n’est pas **NULL**). Cela se produit même si l’argument *wcstr* est **NULL** et fournit un moyen de déterminer la taille du tampon requis. Notez que si *wcstr* est **NULL**, *le compte* est ignoré, et *la tailleInWords* doit être 0.
+Si **mbstowcs_s** convertit correctement la chaîne source, elle place la taille en caractères larges de la chaîne convertie, y compris la marque de fin null, dans *&#42;PReturnValue* (le *PReturnValue* fourni n’est pas **null**). Cela se produit même si l’argument *wcstr* est **null** et fournit un moyen de déterminer la taille de mémoire tampon requise. Notez que si *wcstr* a la **valeur null**, *Count* est ignoré et *sizeInWords* doit avoir la valeur 0.
 
-Si **mbstowcs_s** rencontre un caractère multioctet invalide, il met 0 dans *&#42;pReturnValue*, définit le tampon de destination à une chaîne vide, définit **errno** à **EILSEQ**, et retourne **EILSEQ**.
+Si **mbstowcs_s** rencontre un caractère multioctet non valide, il place 0 dans *&#42;pReturnValue*, définit la mémoire tampon de destination sur une chaîne vide, affecte à **errno** la valeur **EILSEQ**et retourne **EILSEQ**.
 
-Si les séquences pointées par *mbstr* et *wcstr* se chevauchent, le comportement de **mbstowcs_s** est indéfini.
+Si les séquences pointées par *mbstr* et *wcstr* se chevauchent, le comportement de **mbstowcs_s** n’est pas défini.
 
 > [!IMPORTANT]
-> Assurez-vous que *le wcstr* et *le mbstr* ne se chevauchent pas, et ce *nombre* reflète correctement le nombre de caractères multioctets à convertir.
+> Assurez-vous que *wcstr* et *mbstr* ne se chevauchent pas, et que ce *nombre* reflète correctement le nombre de caractères multioctets à convertir.
 
-**mbstowcs_s** utilise le lieu actuel pour tout comportement local-dépendant; **_mbstowcs_s_l** est identique, sauf qu’il utilise le lieu passé à la place. Pour plus d’informations, consultez [Locale](../../c-runtime-library/locale.md).
+**mbstowcs_s** utilise les paramètres régionaux actuels pour tout comportement dépendant des paramètres régionaux ; **_mbstowcs_s_l** est identique, à ceci près qu’il utilise à la place les paramètres régionaux transmis. Pour plus d’informations, consultez [Locale](../../c-runtime-library/locale.md).
 
 En C++, l’utilisation de ces fonctions est simplifiée par les surcharges de modèle ; les surcharges peuvent déduire la longueur de la mémoire tampon automatiquement (ce qui évite d’avoir à spécifier un argument taille) et peuvent remplacer automatiquement les fonctions plus anciennes et non sécurisées par leurs équivalentes plus récentes et sécurisées. Pour plus d’informations, consultez [Sécuriser les surcharges de modèle](../../c-runtime-library/secure-template-overloads.md).
 
-Par défaut, l’état global de cette fonction est étendue à l’application. Pour changer cela, voir [Global State dans le CRT](../global-state.md).
+Par défaut, l’état global de cette fonction est limité à l’application. Pour modifier cette valeur, consultez [état global dans le CRT](../global-state.md).
 
 ## <a name="requirements"></a>Spécifications
 
@@ -152,9 +152,9 @@ Pour plus d'informations sur la compatibilité, voir [Compatibilité](../../c-ru
 ## <a name="see-also"></a>Voir aussi
 
 [Conversion de données](../../c-runtime-library/data-conversion.md)<br/>
-[Local](../../c-runtime-library/locale.md)<br/>
+[Paramètres régionaux](../../c-runtime-library/locale.md)<br/>
 [MultiByteToWideChar](/windows/win32/api/stringapiset/nf-stringapiset-multibytetowidechar)<br/>
-[Interprétation des séquences multioctets-caractères](../../c-runtime-library/interpretation-of-multibyte-character-sequences.md)<br/>
+[Interprétation des séquences de caractères multioctets](../../c-runtime-library/interpretation-of-multibyte-character-sequences.md)<br/>
 [_mbclen, mblen, _mblen_l](mbclen-mblen-mblen-l.md)<br/>
 [mbtowc, _mbtowc_l](mbtowc-mbtowc-l.md)<br/>
 [wcstombs, _wcstombs_l](wcstombs-wcstombs-l.md)<br/>

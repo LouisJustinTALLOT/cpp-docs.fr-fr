@@ -22,7 +22,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-convert-l1-1-0.dll
-- api-ms-win-crt-private-l1-1-0
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -41,16 +41,16 @@ helpviewer_keywords:
 - _wtoll function
 - _atoll_l function
 ms.assetid: 5e85fcac-b351-4882-bff2-6e7c469b7fa8
-ms.openlocfilehash: 34b7d0fdedb55241452f9a7f9937b64c58f7772c
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 89a4d94a98e58f4ef5489554e02866a8471ade20
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81348713"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82913522"
 ---
 # <a name="atoll-_atoll_l-_wtoll-_wtoll_l"></a>atoll, _atoll_l, _wtoll, _wtoll_l
 
-Convertit une corde **long** **en** une longue integer longue.
+Convertit une chaîne en **entier long long** **long** .
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -81,29 +81,29 @@ Paramètres régionaux à utiliser.
 
 ## <a name="return-value"></a>Valeur de retour
 
-Chaque fonction renvoie la **longue** **valeur** produite en interprétant les caractères d’entrée comme un nombre. La valeur de retour pour **l’atoll** est de 0 si l’entrée ne peut pas être convertie en une valeur de ce type.
+Chaque fonction **retourne la valeur longue longue** **long** générée en interprétant les caractères d’entrée comme un nombre. La valeur de retour pour **atoll** est 0 si l’entrée ne peut pas être convertie en valeur de ce type.
 
-Pour le débordement de grandes valeurs intégrales positives, les rendements **de l’atoll** **LLONG_MAX**, et pour le débordement de grandes valeurs intégrales négatives, il revient **LLONG_MIN**.
+Pour un dépassement de capacité avec de grandes valeurs intégrales positives, **atoll** retourne **LLONG_MAX**, et pour un dépassement de capacité avec de grandes valeurs intégrales négatives, il retourne **LLONG_MIN**.
 
-Dans tous les cas hors de portée, **errno** est réglé sur **ERANGE**. Si le paramètre qui est passé est **NULL**, le gestionnaire de paramètres invalides est invoqué, tel que décrit dans [la validation de paramètres](../../c-runtime-library/parameter-validation.md). Si l’exécution est autorisée à se poursuivre, ces fonctions **définies errno** à **EINVAL** et retour 0.
+Dans tous les cas hors limites, **errno** a la valeur **ERANGE**. Si le paramètre passé a la **valeur null**, le gestionnaire de paramètres non valides est appelé, comme décrit dans [validation de paramètre](../../c-runtime-library/parameter-validation.md). Si l’exécution est autorisée à se poursuivre, ces fonctions définissent **errno** sur **EINVAL** et retournent 0.
 
-## <a name="remarks"></a>Notes
+## <a name="remarks"></a>Notes 
 
-Ces fonctions convertissent une chaîne de caractères **en** une **longue** valeur d’intégrage.
+Ces fonctions convertissent une chaîne de caractères en valeur **entière longue.** **long**
 
 La chaîne d’entrée est une séquence de caractères qui peut être interprétée comme une valeur numérique du type spécifié. La fonction arrête de lire la chaîne d’entrée au premier caractère qu’elle ne peut pas reconnaître comme faisant partie d’un nombre. Ce caractère peut être le caractère null ('\0' ou L'\0') qui termine la chaîne.
 
-*L’argument de* l’atoll a la forme suivante : **atoll**
+L’argument *Str* de **atoll** se présente sous la forme suivante :
 
 > [*espace blanc*] [*signe*] [*chiffres*]
 
-Un *espace blanc* se compose de caractères d’espace ou d’onglet, qui sont ignorés ; *signe* est soit plus () ou moins (-); et *les chiffres* sont un ou plusieurs chiffres.
+Un espace est constitué de caractères d’espace *ou de tabulation* , qui sont ignorés ; le *signe* est plus (+) ou moins (-); et les *chiffres* correspondent à un ou plusieurs chiffres.
 
-**_wtoll** est identique à **l’atoll,** sauf qu’il faut une large chaîne de caractère comme paramètre.
+**_wtoll** est identique à **atoll** , à ceci près qu’elle prend une chaîne de caractères larges en tant que paramètre.
 
-Les versions de ces fonctions qui ont le **suffixe _l** sont identiques aux versions qui ne l’ont pas, sauf qu’ils utilisent le paramètre local qui est passé au lieu de la localisation actuelle. Pour plus d’informations, consultez [Locale](../../c-runtime-library/locale.md).
+Les versions de ces fonctions qui ont le suffixe **_L** sont identiques aux versions qui n’en disposent pas, sauf qu’elles utilisent les paramètres régionaux qui sont passés au lieu des paramètres régionaux actuels. Pour plus d’informations, consultez [Locale](../../c-runtime-library/locale.md).
 
-Par défaut, l’état global de cette fonction est étendue à l’application. Pour changer cela, voir [Global State dans le CRT](../global-state.md).
+Par défaut, l’état global de cette fonction est limité à l’application. Pour modifier cette valeur, consultez [état global dans le CRT](../global-state.md).
 
 ### <a name="generic-text-routine-mappings"></a>Mappages de routines de texte générique
 
@@ -120,9 +120,9 @@ Par défaut, l’état global de cette fonction est étendue à l’application.
 |**atoll**, **_atoll_l**|\<stdlib.h>|
 |**_wtoll**, **_wtoll_l**|\<stdlib.h> ou \<wchar.h>|
 
-## <a name="example"></a>Exemple
+## <a name="example"></a> Exemple
 
-Ce programme montre comment utiliser les fonctions **atoll** pour convertir les numéros stockés sous forme de chaînes en valeurs numériques.
+Ce programme montre comment utiliser les fonctions **atoll** pour convertir des nombres stockés sous forme de chaînes en valeurs numériques.
 
 ```C
 // crt_atoll.c
@@ -173,8 +173,8 @@ Overflow condition occurred.
 ## <a name="see-also"></a>Voir aussi
 
 [Conversion de données](../../c-runtime-library/data-conversion.md)<br/>
-[Soutien à la pointe flottante](../../c-runtime-library/floating-point-support.md)<br/>
-[Local](../../c-runtime-library/locale.md)<br/>
+[Prise en charge de la virgule flottante](../../c-runtime-library/floating-point-support.md)<br/>
+[Paramètres régionaux](../../c-runtime-library/locale.md)<br/>
 [_ecvt](ecvt.md)<br/>
 [_fcvt](fcvt.md)<br/>
 [_gcvt](gcvt.md)<br/>

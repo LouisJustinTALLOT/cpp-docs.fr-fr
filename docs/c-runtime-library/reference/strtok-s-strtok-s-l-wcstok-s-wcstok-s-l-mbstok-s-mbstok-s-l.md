@@ -26,7 +26,7 @@ api_location:
 - api-ms-win-crt-multibyte-l1-1-0.dll
 - api-ms-win-crt-string-l1-1-0.dll
 - ntoskrnl.exe
-- api-ms-win-crt-private-l1-1-0
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -56,12 +56,12 @@ helpviewer_keywords:
 - _mbstok_s function
 - strtok_s function
 ms.assetid: 7696c972-f83b-4617-8c82-95973e9fdb46
-ms.openlocfilehash: 9fe89fb897a5459b16c49060359b4bb40bc062a7
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 52c998f14fee080efc1d288abbba012752757632
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81365222"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82912679"
 ---
 # <a name="strtok_s-_strtok_s_l-wcstok_s-_wcstok_s_l-_mbstok_s-_mbstok_s_l"></a>strtok_s, _strtok_s_l, wcstok_s, _wcstok_s_l, _mbstok_s, _mbstok_s_l
 
@@ -116,46 +116,46 @@ unsigned char* _mbstok_s_l(
 ### <a name="parameters"></a>Paramètres
 
 *Str*<br/>
-Une chaîne contenant le jeton ou les jetons à trouver.
+Chaîne contenant le ou les jetons à rechercher.
 
 *delimiters*<br/>
-L’ensemble des caractères delimiter à utiliser.
+Ensemble de caractères de délimitation à utiliser.
 
 *context*<br/>
-Utilisé pour stocker des informations de position entre les appels à la fonction.
+Utilisé pour stocker les informations de position entre les appels à la fonction.
 
 *locale*<br/>
 Paramètres régionaux à utiliser.
 
 ## <a name="return-value"></a>Valeur de retour
 
-Retourne un pointeur au jeton suivant trouvé dans *str*. Retourne **NULL** lorsqu’il n’y a plus de jetons. Chaque appel modifie *str* en remplaçant un caractère nul pour le premier délimitant qui se produit après le jeton retourné.
+Retourne un pointeur vers le jeton suivant trouvé dans *Str*. Retourne la **valeur null** quand aucun jeton supplémentaire n’est trouvé. Chaque appel modifie *Str* en substituant un caractère null au premier délimiteur qui se produit après le jeton retourné.
 
 ### <a name="error-conditions"></a>Conditions d'erreur
 
 |*Str*|*delimiters*|*context*|Valeur retournée|**errno**|
 |----------------|------------------|---------------|------------------|-------------|
-|**Null**|n'importe laquelle|pointeur vers un pointeur Null|**Null**|**EINVAL (EN)**|
-|n'importe laquelle|**Null**|n'importe laquelle|**Null**|**EINVAL (EN)**|
-|n'importe laquelle|n'importe laquelle|**Null**|**Null**|**EINVAL (EN)**|
+|**NUL**|n'importe laquelle|pointeur vers un pointeur Null|**NUL**|**EINVAL**|
+|n'importe laquelle|**NUL**|n'importe laquelle|**NUL**|**EINVAL**|
+|n'importe laquelle|n'importe laquelle|**NUL**|**NUL**|**EINVAL**|
 
-Si *str* est **NULL** mais que *le contexte* est un pointeur vers un pointeur de contexte valide, il n’y a pas d’erreur.
+Si *Str* est **null** mais *Context* est un pointeur vers un pointeur de contexte valide, il n’y a pas d’erreur.
 
-## <a name="remarks"></a>Notes
+## <a name="remarks"></a>Notes 
 
-La **famille strtok_s** de fonctions trouve le jeton suivant en *str*. L’ensemble de caractères dans *les délires* spécifie délimitations possibles du jeton à trouver dans *str* sur l’appel en cours. **wcstok_s** et **_mbstok_s** sont des versions à caractère large et multioctets de **strtok_s**. Les arguments et **les** valeurs de retour de wcstok_s et **de _wcstok_s_l** sont des chaînes de caractère large; ceux de **_mbstok_s** et **_mbstok_s_l** sont des cordes multioctets-caractères. Ces fonctions se comportent sinon de façon identique.
+La famille de fonctions **strtok_s** trouve le jeton suivant dans *Str*. Le jeu de caractères dans les *délimiteurs* spécifie les délimiteurs possibles du jeton à trouver dans *Str* sur l’appel en cours. **wcstok_s** et **_mbstok_s** sont des versions à caractères larges et à caractères multioctets de **strtok_s**. Les arguments et les valeurs de retour de **wcstok_s** et **_wcstok_s_l** sont des chaînes à caractères larges ; celles de **_mbstok_s** et **_mbstok_s_l** sont des chaînes de caractères multioctets. Ces fonctions se comportent sinon de façon identique.
 
-Cette fonction valide ses paramètres. Lorsqu’une condition d’erreur se produit, comme dans le tableau des conditions d’erreur, le gestionnaire de paramètres invalide est invoqué, tel que décrit dans [la validation des paramètres](../../c-runtime-library/parameter-validation.md). Si l’exécution est autorisée à se poursuivre, ces fonctions **définies errno** à **EINVAL** et retourner **NULL**.
+Cette fonction valide ses paramètres. Lorsqu’une condition d’erreur se produit, comme dans le tableau des conditions d’erreur, le gestionnaire de paramètres non valides est appelé, comme décrit dans [validation de paramètre](../../c-runtime-library/parameter-validation.md). Si l’exécution est autorisée à se poursuivre, ces fonctions attribuent à **errno** la valeur **EINVAL** et retournent la **valeur null**.
 
-Sur le premier appel à **strtok_s**, la fonction saute delimiters de premier plan et retourne un pointeur à la première jeton en *str*, mettant fin au jeton avec un caractère nul. Plus de jetons peuvent être brisés du reste de *str* par une série d’appels à **strtok_s**. Chaque appel à **strtok_s** modifie *str* en insérant un caractère nul après le jeton retourné par cet appel. Le pointeur de *contexte* garde une trace de la chaîne qui est lue et où dans la chaîne le jeton suivant doit être lu. Pour lire le jeton suivant à partir de *str*, appelez **strtok_s** avec une valeur **NULL** pour *l’argument str,* et passer le même paramètre *de contexte.* *L’argument STR* **NULL** provoque **strtok_s** à la recherche du jeton suivant dans la *str*modifiée . *L’argument des délimitations* peut prendre n’importe quelle valeur d’un appel à l’autre de sorte que l’ensemble des délimitations peut varier.
+Lors du premier appel à **strtok_s**, la fonction ignore les délimiteurs de début et retourne un pointeur vers le premier jeton de *Str*, en terminant le jeton par un caractère null. Un plus grand nombre de jetons peuvent être décomposés du reste de *Str* par une série d’appels à **strtok_s**. Chaque appel à **strtok_s** modifie *Str* en insérant un caractère null après le jeton retourné par cet appel. Le pointeur de *contexte* effectue le suivi de la chaîne lue et de l’emplacement dans la chaîne où le jeton suivant doit être lu. Pour lire le jeton suivant dans *Str*, appelez **strtok_s** avec une valeur **null** pour l’argument *Str* et transmettez le même paramètre de *contexte* . Avec l’argument *Str* **null** , **strtok_s** recherche le jeton suivant dans la *chaîne*modifiée. L’argument *Delimiters* peut prendre n’importe quelle valeur d’un appel à la fonction suivante, afin que l’ensemble de délimiteurs puisse varier.
 
-Étant donné que le paramètre de *contexte* remplace les tampons statiques utilisés dans **le strtok** et **_strtok_l,** il est possible d’analyser deux cordes simultanément dans le même thread.
+Étant donné que le paramètre de *contexte* remplace les mémoires tampons statiques utilisées dans **strtok** et **_strtok_l**, il est possible d’analyser deux chaînes simultanément dans le même thread.
 
-La valeur de sortie est affectée par l’établissement de la **LC_CTYPE’établissement** de la catégorie du lieu. Pour plus d’informations, consultez [setlocale](setlocale-wsetlocale.md).
+La valeur de sortie est affectée par la valeur du paramètre de catégorie **LC_CTYPE** des paramètres régionaux. Pour plus d’informations, consultez [setlocale](setlocale-wsetlocale.md).
 
-Les versions de ces fonctions sans le **suffixe _l** utilisent le thread local actuel pour ce comportement local-dépendant. Les versions avec le **suffixe _l** sont identiques, sauf qu’elles utilisent plutôt le lieu spécifié par le paramètre *local.* Pour plus d’informations, consultez [Locale](../../c-runtime-library/locale.md).
+Les versions de ces fonctions sans le suffixe **_L** utilisent les paramètres régionaux de thread actuels pour ce comportement dépendant des paramètres régionaux. Les versions avec le suffixe **_L** sont identiques, sauf qu’elles utilisent à la place les paramètres régionaux spécifiés par les paramètres *régionaux* . Pour plus d’informations, consultez [Locale](../../c-runtime-library/locale.md).
 
-Par défaut, l’état global de cette fonction est étendue à l’application. Pour changer cela, voir [Global State dans le CRT](../global-state.md).
+Par défaut, l’état global de cette fonction est limité à l’application. Pour modifier cette valeur, consultez [état global dans le CRT](../global-state.md).
 
 ## <a name="requirements"></a>Spécifications
 
@@ -170,7 +170,7 @@ Pour plus d'informations sur la compatibilité, voir [Compatibilité](../../c-ru
 
 ### <a name="generic-text-routine-mappings"></a>Mappages de routines de texte générique
 
-|Routine TCHAR.H|\_UNICODE & \_MBCS non défini|\_MBCS défini|_UNICODE défini|
+|Routine TCHAR.H|\_& \_MBCS Unicode non défini|\_MBCS défini|_UNICODE défini|
 |---------------------|------------------------------------|--------------------|-----------------------|
 |**_tcstok_s**|**strtok_s**|**_mbstok_s**|**wcstok_s**|
 |**_tcstok_s_l**|**_strtok_s_l**|**_mbstok_s_l**|**_wcstok_s_l**|
@@ -243,8 +243,8 @@ tokens
 
 ## <a name="see-also"></a>Voir aussi
 
-[Manipulation des cordes](../../c-runtime-library/string-manipulation-crt.md)<br/>
-[Local](../../c-runtime-library/locale.md)<br/>
-[Interprétation des séquences multioctets-caractères](../../c-runtime-library/interpretation-of-multibyte-character-sequences.md)<br/>
+[Manipulation de chaînes](../../c-runtime-library/string-manipulation-crt.md)<br/>
+[Paramètres régionaux](../../c-runtime-library/locale.md)<br/>
+[Interprétation des séquences de caractères multioctets](../../c-runtime-library/interpretation-of-multibyte-character-sequences.md)<br/>
 [strcspn, wcscspn, _mbscspn, _mbscspn_l](strcspn-wcscspn-mbscspn-mbscspn-l.md)<br/>
 [strspn, wcsspn, _mbsspn, _mbsspn_l](strspn-wcsspn-mbsspn-mbsspn-l.md)<br/>
