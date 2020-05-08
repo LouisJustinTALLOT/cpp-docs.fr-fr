@@ -18,7 +18,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-stdio-l1-1-0.dll
-- api-ms-win-crt-private-l1-1-0
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -36,12 +36,12 @@ helpviewer_keywords:
 - file names [C++], temporary
 - wtmpnam_s function
 ms.assetid: e70d76dc-49f5-4aee-bfa2-f1baa2bcd29f
-ms.openlocfilehash: e34fbe64d342205659a4b0bdaf703248e62ed733
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 4839cb6baae8f163ac5e5efd8fecfab43f599d19
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81362413"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82917484"
 ---
 # <a name="tmpnam_s-_wtmpnam_s"></a>tmpnam_s, _wtmpnam_s
 
@@ -84,23 +84,23 @@ Ces deux fonctions retournent 0 en cas de réussite ou un numéro d’erreur en 
 
 |||||
 |-|-|-|-|
-|*Str*|*sizeInChars*|**Valeur de rendement**|**Contenu de**  *str*|
-|**Null**|n'importe laquelle|**EINVAL (EN)**|non modifié|
-|non **NULL** (points à la mémoire valide)|trop court|**ERANGE**|non modifié|
+|*Str*|*sizeInChars*|**Valeur de retour**|**Contenu de**  *Str*|
+|**NUL**|n'importe laquelle|**EINVAL**|non modifié|
+|not **null** (pointe vers une mémoire valide)|trop court|**ERANGE**|non modifié|
 
-Si *str* est **NULL**, le gestionnaire de paramètre invalide est invoqué, tel que décrit dans La validation [de paramètres](../../c-runtime-library/parameter-validation.md). Si l’exécution est autorisée à se poursuivre, ces fonctions **définies errno** à **EINVAL** et retourner **EINVAL**.
+Si *Str* a la **valeur null**, le gestionnaire de paramètres non valides est appelé, comme décrit dans [validation de paramètre](../../c-runtime-library/parameter-validation.md). Si l’exécution est autorisée à se poursuivre, ces fonctions définissent **errno** sur **EINVAL** et retournent **EINVAL**.
 
-## <a name="remarks"></a>Notes
+## <a name="remarks"></a>Notes 
 
-Chacune de ces fonctions retourne le nom d’un fichier qui n’existe pas actuellement. **tmpnam_s** renvoie un nom unique dans l’annuaire temporaire Windows désigné retourné par [GetTempPathW](/windows/win32/api/fileapi/nf-fileapi-gettemppathw). Notez que lorsqu’un nom de fichier est précédé d’une barre oblique inverse et d’aucune information de chemin, comme \fname21, cela indique que le nom est valide pour le répertoire de travail actif.
+Chacune de ces fonctions retourne le nom d’un fichier qui n’existe pas actuellement. **tmpnam_s** retourne un nom unique dans le répertoire temporaire Windows désigné renvoyé par [GetTempPathW](/windows/win32/api/fileapi/nf-fileapi-gettemppathw). Notez que lorsqu’un nom de fichier est précédé d’une barre oblique inverse et d’aucune information de chemin, comme \fname21, cela indique que le nom est valide pour le répertoire de travail actif.
 
-Pour **tmpnam_s**, vous pouvez stocker ce nom de fichier généré dans *str*. La longueur maximale d’une chaîne retournée par **tmpnam_s** est **L_tmpnam_s**, définie dans STDIO. H. Si *str* est **NULL**, puis **tmpnam_s** quitte le résultat dans un tampon statique interne. Par conséquent, tous les appels suivants détruisent cette valeur. Le nom généré par **tmpnam_s** se compose d’un nom de fichier généré par le programme et, après le premier appel à **tmpnam_s**, une extension de fichier de numéros séquentiels dans la base 32 (.1-.1vvvvvu, lors **TMP_MAX_S** dans STDIO. H est **INT_MAX**).
+Pour **tmpnam_s**, vous pouvez stocker ce nom de fichier généré dans *Str*. La longueur maximale d’une chaîne retournée par **tmpnam_s** est **L_tmpnam_s**, définie dans stdio. Manutention. Si *Str* a la **valeur null**, **tmpnam_s** laisse le résultat dans une mémoire tampon statique interne. Par conséquent, tous les appels suivants détruisent cette valeur. Le nom généré par **tmpnam_s** se compose d’un nom de fichier généré par le programme et, après le premier appel à **tmpnam_s**, une extension de fichier de nombres séquentiels dans la base 32 (. 1-. 1vvvvvu, lorsque **TMP_MAX_S** dans stdio. H est **INT_MAX**).
 
-**tmpnam_s** gère automatiquement les arguments de chaîne multioctets, le cas échéant, en reconnaissant les séquences multioctets-caractères selon la page de code OEM obtenue à partir du système d’exploitation. **_wtmpnam_s** est une version à caractère large de **tmpnam_s**; l’argument et la valeur de retour de **_wtmpnam_s** sont des chaînes de caractère large. **_wtmpnam_s** et **tmpnam_s** se comportent de la même façon, sauf que **_wtmpnam_s** ne gère pas les cordes multioctets.
+**tmpnam_s** gère automatiquement les arguments de chaîne de caractères multioctets si nécessaire, en identifiant les séquences de caractères multioctets en fonction de la page de codes OEM obtenue à partir du système d’exploitation. **_wtmpnam_s** est une version à caractères larges de **tmpnam_s**; l’argument et la valeur de retour de **_wtmpnam_s** sont des chaînes à caractères larges. **_wtmpnam_s** et **tmpnam_s** se comportent de la même manière, sauf que **_wtmpnam_s** ne gère pas les chaînes de caractères multioctets.
 
 En C++, l’utilisation de ces fonctions est simplifiée par les surcharges de modèle ; celles-ci peuvent déduire automatiquement la longueur de la mémoire tampon, ce qui évite d’avoir à spécifier un argument de taille. Pour plus d’informations, consultez [Sécuriser les surcharges de modèle](../../c-runtime-library/secure-template-overloads.md).
 
-Par défaut, l’état global de cette fonction est étendue à l’application. Pour changer cela, voir [Global State dans le CRT](../global-state.md).
+Par défaut, l’état global de cette fonction est limité à l’application. Pour modifier cette valeur, consultez [état global dans le CRT](../global-state.md).
 
 ### <a name="generic-text-routine-mappings"></a>Mappages de routines de texte générique
 

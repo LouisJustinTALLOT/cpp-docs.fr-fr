@@ -16,7 +16,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-heap-l1-1-0.dll
-- api-ms-win-crt-private-l1-1-0
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -28,16 +28,16 @@ helpviewer_keywords:
 - _recalloc function
 - recalloc function
 ms.assetid: 1db8305a-3f03-418c-8844-bf9149f63046
-ms.openlocfilehash: 57972a48336d8dd362b5da7513c854703134921b
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 342228635e69d49e0b51196aef03a296c1f0e652
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81338123"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82917866"
 ---
 # <a name="_recalloc"></a>_recalloc
 
-Une combinaison de **réaffectation** et **calloc**. Réalloue un tableau en mémoire et initialise ses éléments à 0.
+Combinaison de **realloc** et de **calloc**. Réalloue un tableau en mémoire et initialise ses éléments à 0.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -54,31 +54,31 @@ void *_recalloc(
 *memblock*<br/>
 Pointeur désignant le bloc de mémoire précédemment alloué.
 
-*nombre*<br/>
+*number*<br/>
 Nombre d'éléments.
 
-*Taille*<br/>
+*size*<br/>
 Longueur en octets de chaque élément.
 
 ## <a name="return-value"></a>Valeur de retour
 
-**_recalloc** retourne un pointeur **vide** au bloc de mémoire réaffecté (et peut-être déplacé).
+**_recalloc** retourne un pointeur **void** vers le bloc de mémoire réalloué (et éventuellement déplacé).
 
-S’il n’y a pas assez de mémoire disponible pour étendre le bloc à la taille donnée, le bloc d’origine est laissé inchangé, et **NULL** est retourné.
+Si la mémoire disponible est insuffisante pour étendre le bloc à la taille donnée, le bloc d’origine reste inchangé et la **valeur null** est retournée.
 
-Si la taille demandée est nulle, alors le bloc pointé vers *memblock* est libéré; la valeur de retour est **NULL**, et *memblock* est laissé pointant vers un bloc libéré.
+Si la taille demandée est égale à zéro, le bloc pointé par *memblock* est libéré ; la valeur de retour est **null**et *memblock* pointe vers un bloc libéré.
 
-La valeur de retour pointe vers un espace de stockage qui est obligatoirement aligné correctement pour le stockage de tout type d'objet. Pour obtenir un pointeur à un type autre que **vide,** utilisez un type de fonte sur la valeur de retour.
+La valeur de retour pointe vers un espace de stockage qui est obligatoirement aligné correctement pour le stockage de tout type d'objet. Pour obtenir un pointeur vers un type autre que **void**, utilisez un cast de type sur la valeur de retour.
 
-## <a name="remarks"></a>Notes
+## <a name="remarks"></a>Notes 
 
-La fonction **_recalloc** modifie la taille d’un bloc mémoire alloué. *L’argument memblock* indique le début du bloc de mémoire. Si *memblock* est **NULL**, **_recalloc** se comporte de la même manière que [calloc](calloc.md) et alloue un nouveau bloc d’octets de*taille* de *nombre.* *  Chaque élément est initialisé à 0. Si *memblock* n’est pas **NULL**, il devrait être un pointeur retourné par un appel précédent à **calloc**, [malloc](malloc.md), ou [réaffecter](realloc.md).
+La fonction **_recalloc** modifie la taille d’un bloc de mémoire alloué. L’argument *memblock* pointe vers le début du bloc de mémoire. Si *memblock* a la **valeur null**, **_recalloc** se comporte de la même façon que [calloc](calloc.md) et alloue un nouveau bloc de *nombre* * d’octets de*taille* . Chaque élément est initialisé à 0. Si *memblock* n’a pas la **valeur null**, il doit s’agir d’un pointeur retourné par un appel précédent à **calloc**, [malloc](malloc.md)ou [realloc](realloc.md).
 
-Parce que le nouveau bloc peut être dans un nouvel emplacement de mémoire, le pointeur retourné par **_recalloc** n’est pas garanti d’être le pointeur passé par l’argument *memblock.*
+Étant donné que le nouveau bloc peut se trouver dans un nouvel emplacement de mémoire, il n’est pas garanti que le pointeur renvoyé par **_recalloc** soit le pointeur transmis via l’argument *memblock* .
 
-**_recalloc** définit **errno** à **ENOMEM** si l’allocation de mémoire échoue ou si la quantité de mémoire demandée dépasse **_HEAP_MAXREQ**. Pour plus d’informations sur ce code d’erreur et les autres, consultez [errno, _doserrno, _sys_errlist et _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
+**_recalloc** affecte à **errno** la valeur **ENOMEM** si l’allocation de mémoire échoue ou si la quantité de mémoire demandée dépasse **_HEAP_MAXREQ**. Pour plus d’informations sur ce code d’erreur et les autres, consultez [errno, _doserrno, _sys_errlist et _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
 
-**recalloc** appelle **la réaffectation** afin d’utiliser la fonction [de _set_new_mode](set-new-mode.md) de Cmd pour définir le nouveau mode de manutention. Le nouveau mode de manutention indique si, en cas de défaillance, **la réaffectation** est d’appeler la nouvelle routine de gestionnaire tel qu’établi par [_set_new_handler](set-new-handler.md). Par défaut, **réaffecter** n’appelle pas la nouvelle routine de gestionnaire sur l’omission d’allouer la mémoire. Vous pouvez passer outre à ce comportement par défaut de sorte que, lorsque **_recalloc** ne parvient pas à allouer la mémoire, **réaffecter** appelle la nouvelle routine de gestionnaire de la même manière que le **nouvel** opérateur fait quand il échoue pour la même raison. Pour ce faire, appelez
+**recalloc** appelle **realloc** afin d’utiliser la fonction de [_set_new_mode](set-new-mode.md) C++ pour définir le nouveau mode de gestionnaire. Le nouveau mode de gestionnaire indique si, en cas d’échec, **realloc** est appelé à appeler la routine de nouveau gestionnaire telle qu’elle est définie par [_set_new_handler](set-new-handler.md). Par défaut, **realloc** n’appelle pas la routine de nouveau gestionnaire en cas d’échec d’allocation de mémoire. Vous pouvez remplacer ce comportement par défaut afin que, lorsque **_recalloc** ne parvient pas à allouer de la mémoire, **réalloue appelle la** routine de nouveau gestionnaire de la même façon que le **nouvel** opérateur quand il échoue pour la même raison. Pour ce faire, appelez
 
 ```C
 _set_new_mode(1);
@@ -86,11 +86,11 @@ _set_new_mode(1);
 
 au début de votre programme, ou créez un lien avec NEWMODE.OBJ.
 
-Lorsque l’application est liée à une version débogé de déboguer des bibliothèques C run-time, **_recalloc** se résout à [_recalloc_dbg](recalloc-dbg.md). Pour plus d’informations sur la gestion du tas pendant le processus de débogage, consultez [Tas de débogage CRT](/visualstudio/debugger/crt-debug-heap-details).
+Lorsque l’application est liée à une version Debug des bibliothèques Runtime C, **_recalloc** se résout en [_recalloc_dbg](recalloc-dbg.md). Pour plus d’informations sur la gestion du tas pendant le processus de débogage, consultez [Tas de débogage CRT](/visualstudio/debugger/crt-debug-heap-details).
 
-**_recalloc** est marquée `__declspec(noalias)` `__declspec(restrict)`et, ce qui signifie que la fonction est garantie de ne pas modifier les variables globales, et que le pointeur retourné n’est pas alias. Pour plus d’informations, consultez [noalias](../../cpp/noalias.md) et [restrict](../../cpp/restrict.md).
+**_recalloc** est marqué `__declspec(noalias)` et `__declspec(restrict)`, ce qui signifie que la fonction est garantie de ne pas modifier les variables globales et que le pointeur retourné n’a pas d’alias. Pour plus d’informations, consultez [noalias](../../cpp/noalias.md) et [restrict](../../cpp/restrict.md).
 
-Par défaut, l’état global de cette fonction est étendue à l’application. Pour changer cela, voir [Global State dans le CRT](../global-state.md).
+Par défaut, l’état global de cette fonction est limité à l’application. Pour modifier cette valeur, consultez [état global dans le CRT](../global-state.md).
 
 ## <a name="requirements"></a>Spécifications
 

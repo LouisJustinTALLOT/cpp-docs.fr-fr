@@ -26,7 +26,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-math-l1-1-0.dll
-- api-ms-win-crt-private-l1-1-0
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -48,12 +48,12 @@ helpviewer_keywords:
 - _y1 function
 - _yn function
 ms.assetid: a21a8bf1-df9d-4ba0-a8c2-e7ef71921d96
-ms.openlocfilehash: cdf722c9c6f6055ac918d1bede59345a9ef8d90d
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: ef914d542d058898cf9b16478fd40ef4b0725674
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81348659"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82913474"
 ---
 # <a name="bessel-functions-_j0-_j1-_jn-_y0-_y1-_yn"></a>Fonctions de Bessel : _j0, _j1, _jn, _y0, _y1, _yn
 
@@ -86,7 +86,7 @@ double _yn(
 
 ### <a name="parameters"></a>Paramètres
 
-*X*<br/>
+*x*<br/>
 Valeur à virgule flottante.
 
 *n*<br/>
@@ -94,31 +94,31 @@ Ordre d’entier de la fonction de Bessel.
 
 ## <a name="return-value"></a>Valeur de retour
 
-Chacune de ces routines renvoie une fonction Bessel de *x*. Si *x* est négatif dans le **_y0**, **_y1**, ou **_yn** fonctions, la routine définit **errno** à **EDOM**, imprime un message **d’erreur _DOMAIN** à **stderr**, et retourne **_HUGE_VAL**. Vous pouvez modifier la manipulation des erreurs en utilisant **_matherr**.
+Chacune de ces routines retourne une fonction de Bessel de *x*. Si *x* est négatif dans les **fonctions _y0**, **_Y1**ou **_Yn** , la routine définit **errno** sur **Edom**, imprime un message d’erreur **_DOMAIN** sur **stderr**et retourne **_HUGE_VAL**. Vous pouvez modifier la gestion des erreurs à l’aide de **_matherr**.
 
-## <a name="remarks"></a>Notes
+## <a name="remarks"></a>Notes 
 
-Les **_j0**, **_j1**, et **_jn** routines retournent les fonctions Bessel du premier type : les commandes 0, 1 et n, respectivement.
-
-|Entrée|Exception SEH|Exception\{b\> \<b\}Matherr|
-|-----------|-------------------|-----------------------|
-|**QNAN**, **IND**|**Non valide**|**_DOMAIN**|
-
-Les **_y0,** **_y1**, et **_yn** routines retournent les fonctions Bessel du deuxième type : les commandes 0, 1 et n, respectivement.
+Les routines **_j0**, **_j1**et **_jn** retournent des fonctions de Bessel du premier genre : Orders 0, 1 et n, respectivement.
 
 |Entrée|Exception SEH|Exception\{b\> \<b\}Matherr|
 |-----------|-------------------|-----------------------|
-|**QNAN**, **IND**|**Non valide**|**_DOMAIN**|
-|0|**ZERODIVIDE**|**_SING**|
+|± **QNAN**, **IND**|**Non valide**|**_DOMAIN**|
+
+Les routines **_y0**, **_Y1**et **_yn** retournent des fonctions de Bessel du deuxième genre : Orders 0, 1 et n, respectivement.
+
+|Entrée|Exception SEH|Exception\{b\> \<b\}Matherr|
+|-----------|-------------------|-----------------------|
+|± **QNAN**, **IND**|**Non valide**|**_DOMAIN**|
+|± 0|**ZERODIVIDE**|**_SING**|
 |&#124;x&#124; < 0,0|**Non valide**|**_DOMAIN**|
 
-Par défaut, l’état global de cette fonction est étendue à l’application. Pour changer cela, voir [Global State dans le CRT](../global-state.md).
+Par défaut, l’état global de cette fonction est limité à l’application. Pour modifier cette valeur, consultez [état global dans le CRT](../global-state.md).
 
 ## <a name="requirements"></a>Spécifications
 
 |Routine|En-tête requis|
 |-------------|---------------------|
-|**_j0**, **_j1**, **_jn**, **_y0**, **_y1**, **_yn**|\<cmath> (C++), \<math.h> (C, C++)|
+|**_j0**, **_j1**, **_jn**, **_y0**, **_Y1**, **_yn**|\<cmath> (C++), \<math.h> (C, C++)|
 
 Pour plus d'informations sur la compatibilité, voir [Compatibilité](../../c-runtime-library/compatibility.md).
 
@@ -165,5 +165,5 @@ Bessel functions for x = 2.387000:
 
 ## <a name="see-also"></a>Voir aussi
 
-[Soutien à la pointe flottante](../../c-runtime-library/floating-point-support.md)<br/>
+[Prise en charge de la virgule flottante](../../c-runtime-library/floating-point-support.md)<br/>
 [_matherr](matherr.md)<br/>
