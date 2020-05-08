@@ -16,7 +16,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-heap-l1-1-0.dll
-- api-ms-win-crt-private-l1-1-0
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -31,12 +31,12 @@ helpviewer_keywords:
 - heaps, checking consistency
 - _heapchk function
 ms.assetid: 859619a5-1e35-4f02-9e09-11d9fa266ec0
-ms.openlocfilehash: 21c7f9e22728109676d3fc611405ccd43ac773f8
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 2ddbdaec5861d48cc23a7cbcd28332e8c06ebbfe
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81344060"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82916211"
 ---
 # <a name="_heapchk"></a>_heapchk
 
@@ -50,7 +50,7 @@ int _heapchk( void );
 
 ## <a name="return-value"></a>Valeur de retour
 
-**_heapchk** renvoie l’une des constantes manifestes integer suivantes définies dans Malloc.h.
+**_heapchk** retourne l’une des constantes de manifeste entières suivantes définies dans malloc. h.
 
 |Valeur retournée|Condition|
 |-|-|
@@ -60,13 +60,13 @@ int _heapchk( void );
 | **_HEAPEMPTY** | Le tas n’a pas été initialisé. |
 | **_HEAPOK** | Le tas est cohérent. |
 
-En outre, si une erreur se produit, **_heapchk** définit **errno** à **ENOSYS**.
+En outre, si une erreur se produit, **_heapchk** affecte à **errno** la valeur **ENOSYS**.
 
-## <a name="remarks"></a>Notes
+## <a name="remarks"></a>Notes 
 
-La fonction **_heapchk** aide à débocher les problèmes liés au tas en vérifiant la cohérence minimale du tas. Si le système d’exploitation ne prend pas en charge **_heapchk**(par exemple, Windows 98), la fonction renvoie **_HEAPOK** et définit **errno** à **ENOSYS**.
+La fonction **_heapchk** permet de déboguer les problèmes liés au tas en vérifiant la cohérence minimale du tas. Si le système d’exploitation ne prend pas en charge **_heapchk**(par exemple, Windows 98), la fonction retourne **_HEAPOK** et définit **errno** sur **ENOSYS**.
 
-Par défaut, l’état global de cette fonction est étendue à l’application. Pour changer cela, voir [Global State dans le CRT](../global-state.md).
+Par défaut, l’état global de cette fonction est limité à l’application. Pour modifier cette valeur, consultez [état global dans le CRT](../global-state.md).
 
 ## <a name="requirements"></a>Spécifications
 

@@ -18,7 +18,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-conio-l1-1-0.dll
-- api-ms-win-crt-private-l1-1-0
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -36,12 +36,12 @@ helpviewer_keywords:
 - _cgetws_s function
 - cgetws_s function
 ms.assetid: 38b74897-afe6-4dd9-a43f-36a3c0d72c5c
-ms.openlocfilehash: b4871ff2c362e2c6cbe37be6a31bde4e6e258709
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 6e48602eee3d2135d4624b28d88661ac00f65542
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81333546"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82917097"
 ---
 # <a name="_cgets_s-_cgetws_s"></a>_cgets_s, _cgetws_s
 
@@ -80,7 +80,7 @@ errno_t _cgetws_s(
 *buffer*<br/>
 Emplacement de stockage des données.
 
-*nombreOfElements*<br/>
+*numberOfElements*<br/>
 Taille de la mémoire tampon en caractères larges ou codés sur un octet, qui correspond aussi au nombre maximal de caractères à lire.
 
 *pSizeRead*<br/>
@@ -92,23 +92,23 @@ La valeur de retour est égale à zéro en cas de réussite ; sinon, un code d'
 
 ### <a name="error-conditions"></a>Conditions d'erreur
 
-|*buffer*|*nombreOfElements*|*pSizeRead*|Renvoie|Contenu du *tampon*|
+|*buffer*|*numberOfElements*|*pSizeRead*|Renvoie|Contenu de la *mémoire tampon*|
 |--------------|------------------------|-----------------|------------|--------------------------|
-|**Null**|n'importe laquelle|n'importe laquelle|**EINVAL (EN)**|n/a|
-|pas **NULL**|zéro|n'importe laquelle|**EINVAL (EN)**|non modifié|
-|pas **NULL**|n'importe laquelle|**Null**|**EINVAL (EN)**|chaîne de longueur nulle|
+|**NUL**|n'importe laquelle|n'importe laquelle|**EINVAL**|n/a|
+|non **null**|zéro|n'importe laquelle|**EINVAL**|non modifié|
+|non **null**|n'importe laquelle|**NUL**|**EINVAL**|chaîne de longueur nulle|
 
-## <a name="remarks"></a>Notes
+## <a name="remarks"></a>Notes 
 
-**_cgets_s** et **_cgetws_s** lire une chaîne de la console et copier la chaîne (avec un terminateur nul) en *tampon*. **_cgetws_s** est la version à caractère large de la fonction; autre que la taille du personnage, le comportement de ces deux fonctions est identique. La taille maximale de la chaîne à lire est passée sous forme de *paramètre de nombreOfElements.* Cette taille doit inclure un caractère supplémentaire pour le caractère null de fin. Le nombre réel de caractères lus est placé dans *pSizeRead*.
+**_cgets_s** et **_cgetws_s** lire une chaîne à partir de la console et copier la chaîne (avec une marque de fin null) dans la *mémoire tampon*. **_cgetws_s** est la version à caractères larges de la fonction ; en dehors de la taille des caractères, le comportement de ces deux fonctions est identique. La taille maximale de la chaîne à lire est transmise en tant que paramètre *NumberOfElements* . Cette taille doit inclure un caractère supplémentaire pour le caractère null de fin. Le nombre réel de caractères lus est placé dans *pSizeRead*.
 
-Si une erreur se produit pendant l’opération ou durant la validation des paramètres, le gestionnaire de paramètres non valides est appelé, comme décrit dans [Validation de paramètre](../../c-runtime-library/parameter-validation.md). Si l’exécution se poursuit, **errno** est réglé sur **EINVAL** et **EINVAL** est retourné.
+Si une erreur se produit pendant l’opération ou durant la validation des paramètres, le gestionnaire de paramètres non valides est appelé, comme décrit dans [Validation de paramètre](../../c-runtime-library/parameter-validation.md). Si l’exécution est autorisée à se poursuivre, **errno** a la valeur **EINVAL** et **EINVAL** est retourné.
 
 En C++, l’utilisation de ces fonctions est simplifiée par les surcharges de modèle ; les surcharges peuvent déduire la longueur de la mémoire tampon automatiquement, ce qui évite ainsi d’avoir à spécifier un argument de taille, et elles peuvent remplacer automatiquement les fonctions plus anciennes et moins sécurisées par leurs équivalents plus récents et sécurisés. Pour plus d’informations, consultez [Sécuriser les surcharges de modèle](../../c-runtime-library/secure-template-overloads.md).
 
-Les versions de bibliothèque de débogé de ces fonctions remplissent d’abord le tampon avec 0xFE. Pour désactiver ce comportement, utilisez [_CrtSetDebugFillThreshold](crtsetdebugfillthreshold.md).
+Les versions de la bibliothèque de débogage de ces fonctions remplissent d’abord la mémoire tampon avec 0xFE. Pour désactiver ce comportement, utilisez [_CrtSetDebugFillThreshold](crtsetdebugfillthreshold.md).
 
-Par défaut, l’état global de cette fonction est étendue à l’application. Pour changer cela, voir [Global State dans le CRT](../global-state.md).
+Par défaut, l’état global de cette fonction est limité à l’application. Pour modifier cette valeur, consultez [état global dans le CRT](../global-state.md).
 
 ### <a name="generic-text-routine-mappings"></a>Mappages de routines de texte générique
 
@@ -127,5 +127,5 @@ Pour plus d’informations sur la compatibilité, consultez [Compatibility](../.
 
 ## <a name="see-also"></a>Voir aussi
 
-[Console et Port I/O](../../c-runtime-library/console-and-port-i-o.md)<br/>
+[E/s de console et de port](../../c-runtime-library/console-and-port-i-o.md)<br/>
 [_getch, _getwch](getch-getwch.md)<br/>

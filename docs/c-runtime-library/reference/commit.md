@@ -16,7 +16,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-stdio-l1-1-0.dll
-- api-ms-win-crt-private-l1-1-0
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -31,12 +31,12 @@ helpviewer_keywords:
 - _commit function
 - committing files to disk
 ms.assetid: d0c74d3a-4f2d-4fb0-b140-2d687db3d233
-ms.openlocfilehash: f8e13e7fc197c66395556d518ecbd1cd20ac1f77
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 217bccbc4ebc937b89bca5cc127de72b7118481c
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81348619"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82918528"
 ---
 # <a name="_commit"></a>_commit
 
@@ -52,20 +52,20 @@ int _commit(
 
 ### <a name="parameters"></a>Paramètres
 
-*Fd*<br/>
+*FD*<br/>
 Descripteur de fichier faisant référence au fichier ouvert.
 
 ## <a name="return-value"></a>Valeur de retour
 
-**_commit** renvoie 0 si le fichier a été rincé avec succès sur disque. Une valeur de rendement de -1 indique une erreur.
+**_commit** retourne 0 si le fichier a été correctement vidé sur le disque. Une valeur de retour de-1 indique une erreur.
 
-## <a name="remarks"></a>Notes
+## <a name="remarks"></a>Notes 
 
-La fonction **_commit** oblige le système d’exploitation à écrire le fichier associé au *fd* au disque. Grâce à cet appel, le fichier spécifié est vidé immédiatement, et non quand le système d’exploitation le souhaite.
+La fonction **_commit** force le système d’exploitation à écrire le fichier associé à *FD* sur le disque. Grâce à cet appel, le fichier spécifié est vidé immédiatement, et non quand le système d’exploitation le souhaite.
 
-Si *fd* est un descripteur de fichier invalide, le gestionnaire de paramètres invalide est invoqué, tel que décrit dans [La validation de paramètres](../../c-runtime-library/parameter-validation.md). Si l’exécution est autorisée à se poursuivre, la fonction renvoie -1 et **errno** est réglé sur **EBADF**.
+Si *FD* est un descripteur de fichier non valide, le gestionnaire de paramètres non valides est appelé, comme décrit dans [validation de paramètre](../../c-runtime-library/parameter-validation.md). Si l’exécution est autorisée à se poursuivre, la fonction retourne-1 et **errno** a la valeur **EBADF**.
 
-Par défaut, l’état global de cette fonction est étendue à l’application. Pour changer cela, voir [Global State dans le CRT](../global-state.md).
+Par défaut, l’état global de cette fonction est limité à l’application. Pour modifier cette valeur, consultez [état global dans le CRT](../global-state.md).
 
 ## <a name="requirements"></a>Spécifications
 

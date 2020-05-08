@@ -16,7 +16,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-math-l1-1-0.dll
-- api-ms-win-crt-private-l1-1-0
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -32,12 +32,12 @@ helpviewer_keywords:
 - frexp function
 - floating-point functions, mantissa and exponent
 ms.assetid: 9b020f2e-3967-45ec-a6a8-d467a071aa55
-ms.openlocfilehash: 79fe70341f0d6fef1dc7fe00f872456a11972876
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: d539a9ebb4042b18e6ec1ef8ed204a61cc7bb8cc
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81345795"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82911604"
 ---
 # <a name="frexp-frexpf-frexpl"></a>frexp, frexpf, frexpl
 
@@ -70,29 +70,29 @@ long double frexp(
 
 ### <a name="parameters"></a>Paramètres
 
-*X*<br/>
+*x*<br/>
 Valeur à virgule flottante.
 
-*expptr expptr*<br/>
+*expptr*<br/>
 Pointeur désignant l’exposant entier stocké.
 
 ## <a name="return-value"></a>Valeur de retour
 
-**frexp** retourne la mantissa. Si *x* est 0, la fonction renvoie 0 à la fois pour la mantissa et l’exposant. Si *expptr* est **NULL**, le gestionnaire de paramètre invalide est invoqué comme décrit dans [La validation de paramètres](../../c-runtime-library/parameter-validation.md). Si l’exécution est autorisée à se poursuivre, cette fonction définit **errno** à **EINVAL** et renvoie 0.
+**frexp** retourne la mantisse. Si *x* est égal à 0, la fonction retourne 0 pour la mantisse et l’exposant. Si *expptr* a la **valeur null**, le gestionnaire de paramètre non valide est appelé, comme décrit dans [validation de paramètre](../../c-runtime-library/parameter-validation.md). Si l’exécution est autorisée à se poursuivre, cette fonction affecte à **errno** la valeur **EINVAL** et retourne 0.
 
-## <a name="remarks"></a>Notes
+## <a name="remarks"></a>Notes 
 
-La fonction **frexp** décompose la valeur de point flottant (*x*) en une mantissa (*m*) et un exposant (*n*), de sorte que la valeur absolue de *m* est supérieure ou égale à 0,5 et moins de 1,0, et *x* = *m* - 2<sup>*n*</sup>. L’exposant n *n* integer est stocké à l’endroit indiqué par *expptr*.
+La fonction **frexp** décompose la valeur à virgule flottante (*x*) en une mantisse (*m*) et un exposant (*n*), de sorte que la valeur absolue de *m* est supérieure ou égale à 0,5 et inférieure à 1,0, et *x* = *m* * 2<sup>*n*</sup>. L’exposant entier *n* est stocké à l’emplacement désigné par *expptr*.
 
-CMD permet la surcharge, de sorte que vous pouvez appeler des surcharges de **frexp**. Dans un programme C, **frexp** prend toujours un **double** et un pointeur **int** et retourne un **double**.
+C++ autorisant la surcharge, vous pouvez appeler des surcharges de **frexp**. Dans un programme C, **frexp** prend toujours un pointeur de type **double** et **int** et retourne un **double**.
 
-Par défaut, l’état global de cette fonction est étendue à l’application. Pour changer cela, voir [Global State dans le CRT](../global-state.md).
+Par défaut, l’état global de cette fonction est limité à l’application. Pour modifier cette valeur, consultez [état global dans le CRT](../global-state.md).
 
 ## <a name="requirements"></a>Spécifications
 
-|Fonction|En-tête requis|
+|Function|En-tête requis|
 |--------------|---------------------|
-|**frexp**, **frexpf**, **frexpl**|\<math.h>|
+|**frexp**, **frexpf,**, **frexpl**|\<math.h>|
 
 Pour plus d'informations sur la compatibilité, voir [Compatibilité](../../c-runtime-library/compatibility.md).
 
@@ -123,6 +123,6 @@ frexp( 16.400000, &n ) = 0.512500, n = 5
 
 ## <a name="see-also"></a>Voir aussi
 
-[Soutien à la pointe flottante](../../c-runtime-library/floating-point-support.md)<br/>
+[Prise en charge de la virgule flottante](../../c-runtime-library/floating-point-support.md)<br/>
 [ldexp](ldexp.md)<br/>
 [modf, modff, modfl](modf-modff-modfl.md)<br/>

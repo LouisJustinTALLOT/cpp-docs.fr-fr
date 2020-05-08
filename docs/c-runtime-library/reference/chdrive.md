@@ -16,7 +16,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-filesystem-l1-1-0.dll
-- api-ms-win-crt-private-l1-1-0
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -29,12 +29,12 @@ helpviewer_keywords:
 - _chdrive function
 - chdrive function
 ms.assetid: 212a1a4b-4fa8-444e-9677-7fca4c8c47e3
-ms.openlocfilehash: 0c19fefcf6a766842ee2e25cbe6bdb61bbf48e7d
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: a597a67c7d2083cf5860112f6ed55ff248053d17
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81333346"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82917016"
 ---
 # <a name="_chdrive"></a>_chdrive
 
@@ -53,22 +53,22 @@ int _chdrive(
 
 ### <a name="parameters"></a>Paramètres
 
-*Disque*<br/>
+*unités*<br/>
 Entier compris entre 1 et 26 qui spécifie le lecteur de travail actif (1=A, 2=B et ainsi de suite).
 
 ## <a name="return-value"></a>Valeur de retour
 
 Zéro (0) si le lecteur de travail actif a été correctement changé ; Sinon, -1.
 
-## <a name="remarks"></a>Notes
+## <a name="remarks"></a>Notes 
 
-Si *le lecteur* n’est pas dans la plage de 1 à 26, le gestionnaire de paramètres invalides est invoqué comme décrit dans La validation de [paramètres](../../c-runtime-library/parameter-validation.md). Si l’exécution est autorisée à se poursuivre, la fonction **_chdrive** renvoie -1, **errno** est réglé sur **EACCES**, et **_doserrno** est mis à **ERROR_INVALID_DRIVE**.
+Si le *lecteur* n’est pas dans la plage comprise entre 1 et 26, le gestionnaire de paramètre non valide est appelé, comme décrit dans [validation de paramètre](../../c-runtime-library/parameter-validation.md). Si l’exécution est autorisée à se poursuivre, la fonction **_chdrive** retourne-1, **errno** a la valeur **EACCES**et **_doserrno** a la valeur **ERROR_INVALID_DRIVE**.
 
-La fonction **_chdrive** n’est pas thread-safe, car elle dépend de la fonction **SetCurrentDirectory**, qui elle-même n’est pas thread-safe. Pour utiliser **_chdrive** en toute sécurité dans une application multithread, vous devez fournir votre propre synchronisation de thread. Pour plus d’informations, voir [SetCurrentDirectory](/windows/win32/api/winbase/nf-winbase-setcurrentdirectory).
+La fonction **_chdrive** n’est pas thread-safe, car elle dépend de la fonction **SetCurrentDirectory**, qui elle-même n’est pas thread-safe. Pour utiliser **_chdrive** en toute sécurité dans une application multithread, vous devez fournir votre propre synchronisation de thread. Pour plus d’informations, consultez [SetCurrentDirectory](/windows/win32/api/winbase/nf-winbase-setcurrentdirectory).
 
 La fonction **_chdrive** change uniquement le lecteur travail actif ; **_chdir** change le répertoire de travail actif.
 
-Par défaut, l’état global de cette fonction est étendue à l’application. Pour changer cela, voir [Global State dans le CRT](../global-state.md).
+Par défaut, l’état global de cette fonction est limité à l’application. Pour modifier cette valeur, consultez [état global dans le CRT](../global-state.md).
 
 ## <a name="requirements"></a>Spécifications
 
@@ -78,7 +78,7 @@ Par défaut, l’état global de cette fonction est étendue à l’application.
 
 Pour plus d’informations, consultez [Compatibilité](../../c-runtime-library/compatibility.md).
 
-## <a name="example"></a>Exemple
+## <a name="example"></a> Exemple
 
 Consultez l’exemple relatif à [_getdrive](getdrive.md).
 

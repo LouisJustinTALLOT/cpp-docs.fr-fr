@@ -21,7 +21,7 @@ api_location:
 - ucrtbase.dll
 - api-ms-win-crt-multibyte-l1-1-0.dll
 - api-ms-win-crt-string-l1-1-0.dll
-- api-ms-win-crt-private-l1-1-0
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -50,12 +50,12 @@ helpviewer_keywords:
 - _mbspbrk function
 - mbspbrk_l function
 ms.assetid: 80b504f7-a167-4dde-97ad-4ae3000dc810
-ms.openlocfilehash: ecdf896587096f0370351aac07cbd6be57257305
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 507f6b99416cd59c3a0383e3e41a7ae26c44b019
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81322167"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82911183"
 ---
 # <a name="strpbrk-wcspbrk-_mbspbrk-_mbspbrk_l"></a>strpbrk, wcspbrk, _mbspbrk, _mbspbrk_l
 
@@ -125,7 +125,7 @@ const unsigned char *_mbspbrk_l(
 *Str*<br/>
 Chaîne se terminant par un caractère Null faisant l’objet de la recherche.
 
-*strCharSet (en anglais)*<br/>
+*strCharSet*<br/>
 Jeu de caractères se terminant par null.
 
 *locale*<br/>
@@ -133,23 +133,23 @@ Paramètres régionaux à utiliser.
 
 ## <a name="return-value"></a>Valeur de retour
 
-Retourne un pointeur à la première occurrence de n’importe quel personnage de *strCharSet* en *str*, ou un pointeur NULL si les deux arguments de cordes n’ont pas de caractères en commun.
+Retourne un pointeur vers la première occurrence d’un caractère de *strCharSet* dans *Str*, ou un pointeur null si les deux arguments de chaîne n’ont pas de caractères en commun.
 
-## <a name="remarks"></a>Notes
+## <a name="remarks"></a>Notes 
 
-La `strpbrk` fonction renvoie un pointeur à la première occurrence d’un personnage en *str* qui appartient à l’ensemble des personnages dans *strCharSet*. La recherche n’inclut pas le caractère Null de fin.
+La `strpbrk` fonction retourne un pointeur vers la première occurrence d’un caractère dans *Str* qui appartient au jeu de caractères dans *strCharSet*. La recherche n’inclut pas le caractère Null de fin.
 
 `wcspbrk` et `_mbspbrk` sont des versions à caractères larges et à caractères multioctets de `strpbrk`. Les arguments et la valeur de retour de `wcspbrk` sont des chaînes de caractères larges ; ceux de `_mbspbrk` sont des chaînes de caractères multioctets.
 
-`_mbspbrk` valide ses paramètres. Si *str* ou *strCharSet* est NULL, le gestionnaire de paramètres invalide est invoqué, tel que décrit dans [La validation de paramètres](../../c-runtime-library/parameter-validation.md). Si l’exécution se `_mbspbrk` poursuit, `errno` retourne NULL et se fixe à EINVAL. `strpbrk` et `wcspbrk` ne vérifient pas leurs paramètres. Ces trois fonctions se comportent sinon de façon identique.
+`_mbspbrk` valide ses paramètres. Si *Str* ou *strCharSet* a la valeur null, le gestionnaire de paramètres non valides est appelé, comme décrit dans [validation de paramètre](../../c-runtime-library/parameter-validation.md). Si l’exécution est autorisée à se `_mbspbrk` poursuivre, retourne null `errno` et définit sur EINVAL. `strpbrk` et `wcspbrk` ne vérifient pas leurs paramètres. Ces trois fonctions se comportent sinon de façon identique.
 
 `_mbspbrk` est similaire à `_mbscspn`, sauf que `_mbspbrk` retourne un pointeur et non une valeur de type [size_t](../../c-runtime-library/standard-types.md).
 
-Dans C, ces fonctions prennent un pointeur **const** pour le premier argument. En C++, deux surcharges sont disponibles. La surcharge prenant un pointeur pour **const** retourne un pointeur à **const**; la version qui prend un pointeur à**non-const** retourne un pointeur à**non-const**. Le macro _CRT_CONST_CORRECT_OVERLOADS est défini si les versions **const** et non**const** de ces fonctions sont disponibles. Si vous avez besoin du comportement non**const** pour les deux surcharges de C, définissez le symbole _CONST_RETURN.
+En C, ces fonctions acceptent un pointeur **const** pour le premier argument. En C++, deux surcharges sont disponibles. La surcharge qui prend un pointeur vers **const** retourne un pointeur vers **const**; la version qui accepte un pointeur vers non**const** retourne un pointeur vers non**const**. La macro _CRT_CONST_CORRECT_OVERLOADS est définie si les versions **const** et non**const** de ces fonctions sont disponibles. Si vous avez besoin du comportement non**const** pour les deux surcharges C++, définissez le symbole _CONST_RETURN.
 
-La valeur de sortie est affectée par l’établissement de la LC_CTYPE’établissement de la catégorie du lieu; pour plus d’informations, voir [setlocale](setlocale-wsetlocale.md). Les versions de ces fonctions sans le **suffixe _l** utilisent le lieu actuel pour ce comportement local-dépendant; la version avec le **suffixe _l** est identique, sauf qu’elle utilise le paramètre local passé à la place. Pour plus d’informations, consultez [Locale](../../c-runtime-library/locale.md).
+La valeur de sortie est affectée par la valeur du paramètre de catégorie LC_CTYPE des paramètres régionaux. Pour plus d’informations, consultez [setlocale](setlocale-wsetlocale.md). Les versions de ces fonctions sans le suffixe **_L** utilisent les paramètres régionaux actuels pour ce comportement dépendant des paramètres régionaux ; la version avec le suffixe **_L** est identique, sauf qu’elle utilise à la place les paramètres régionaux transmis. Pour plus d’informations, consultez [Locale](../../c-runtime-library/locale.md).
 
-Par défaut, l’état global de cette fonction est étendue à l’application. Pour changer cela, voir [Global State dans le CRT](../global-state.md).
+Par défaut, l’état global de cette fonction est limité à l’application. Pour modifier cette valeur, consultez [état global dans le CRT](../global-state.md).
 
 ### <a name="generic-text-routine-mappings"></a>Mappages de routines de texte générique
 
@@ -204,9 +204,9 @@ int main( void )
 
 ## <a name="see-also"></a>Voir aussi
 
-[Manipulation des cordes](../../c-runtime-library/string-manipulation-crt.md)<br/>
-[Local](../../c-runtime-library/locale.md)<br/>
-[Interprétation des séquences multioctets-caractères](../../c-runtime-library/interpretation-of-multibyte-character-sequences.md)<br/>
+[Manipulation de chaînes](../../c-runtime-library/string-manipulation-crt.md)<br/>
+[Paramètres régionaux](../../c-runtime-library/locale.md)<br/>
+[Interprétation des séquences de caractères multioctets](../../c-runtime-library/interpretation-of-multibyte-character-sequences.md)<br/>
 [strcspn, wcscspn, _mbscspn, _mbscspn_l](strcspn-wcscspn-mbscspn-mbscspn-l.md)<br/>
 [strchr, wcschr, _mbschr, _mbschr_l](strchr-wcschr-mbschr-mbschr-l.md)<br/>
 [strrchr, wcsrchr, _mbsrchr, _mbsrchr_l](strrchr-wcsrchr-mbsrchr-mbsrchr-l.md)<br/>
