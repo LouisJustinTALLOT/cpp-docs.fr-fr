@@ -19,7 +19,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-math-l1-1-0.dll
-- api-ms-win-crt-private-l1-1-0
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -39,12 +39,12 @@ helpviewer_keywords:
 - exponent, floating-point numbers
 - floating-point functions, mantissa and exponent
 ms.assetid: aa7f5310-3879-4f63-ae74-86a39fbdedfa
-ms.openlocfilehash: 0432cfb66db5a90c933401549aba1b538fa66855
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 95eb1eb3ca18e0e7d3450951c930a07f954bc299
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81342242"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82916538"
 ---
 # <a name="ldexp-ldexpf-ldexpl"></a>ldexp, ldexpf, ldexpl
 
@@ -77,33 +77,33 @@ long double ldexpl(
 
 ### <a name="parameters"></a>Paramètres
 
-*X*<br/>
+*x*<br/>
 Valeur à virgule flottante.
 
-*Exp*<br/>
+*venir*<br/>
 Exposant entier.
 
 ## <a name="return-value"></a>Valeur de retour
 
-Les fonctions **ldexp** retournent la valeur de *x* \* 2<sup>*exp*</sup> en cas de succès. Sur le débordement, et en fonction du signe de *x*, **ldexp** retourne -/- **HUGE_VAL**; la valeur **errno** est définie à **ERANGE**.
+Les fonctions **ldexp** retournent la valeur de *x* \* 2<sup>*exp*</sup> en cas de réussite. En cas de dépassement de capacité et selon le signe de *x*, **ldexp** retourne +/- **HUGE_VAL**; la valeur **errno** est définie sur **ERANGE**.
 
-Pour plus d’informations sur les valeurs **d’erreur** et de retour d’erreur possible, voir [errno, _doserrno, _sys_errlist, et _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
+Pour plus d’informations sur **errno** et les valeurs de retour possibles des erreurs, consultez [errno, _doserrno, _sys_errlist et _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
 
-## <a name="remarks"></a>Notes
+## <a name="remarks"></a>Notes 
 
-Étant donné que le CMD permet la surcharge, vous pouvez appeler des surcharges de **ldexp** qui prennent **flotteur** ou **de longs** **types doubles.** Dans un programme C, **ldexp** prend toujours un **double** et un **int** et retourne un **double**.
+Étant donné que C++ autorise la surcharge, vous pouvez appeler des surcharges de **ldexp** qui acceptent des types **float** ou **long** **double** . Dans un programme C, **ldexp** prend toujours un **double** et un **entier** et retourne un **double**.
 
-Par défaut, l’état global de cette fonction est étendue à l’application. Pour changer cela, voir [Global State dans le CRT](../global-state.md).
+Par défaut, l’état global de cette fonction est limité à l’application. Pour modifier cette valeur, consultez [état global dans le CRT](../global-state.md).
 
 ## <a name="requirements"></a>Spécifications
 
 |Routine|En-tête C|En-tête C++|
 |-------------|--------------|------------------|
-|**ldexp**, **ldexpf**, **ldexpl**|\<math.h>|\<cmath>|
+|**ldexp**, **ldexpf,**, **ldexpl**|\<math.h>|\<cmath>|
 
 Pour plus d’informations sur la compatibilité, consultez [Compatibilité](../../c-runtime-library/compatibility.md).
 
-## <a name="example"></a>Exemple
+## <a name="example"></a> Exemple
 
 ```C
 // crt_ldexp.c
@@ -129,6 +129,6 @@ int main( void )
 
 ## <a name="see-also"></a>Voir aussi
 
-[Soutien à la pointe flottante](../../c-runtime-library/floating-point-support.md)<br/>
+[Prise en charge de la virgule flottante](../../c-runtime-library/floating-point-support.md)<br/>
 [frexp](frexp.md)<br/>
 [modf, modff, modfl](modf-modff-modfl.md)<br/>
