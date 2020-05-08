@@ -16,7 +16,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-heap-l1-1-0.dll
-- api-ms-win-crt-private-l1-1-0
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -29,16 +29,16 @@ helpviewer_keywords:
 - _set_new_mode function
 - set_new_mode function
 ms.assetid: 4d14039a-e54e-4689-8c70-74a4b9834768
-ms.openlocfilehash: 3a27717d65714de54f477e4e2b3f243c4631fd8c
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: f3635d462d2c7438ce985d74ff347120c02c82e0
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81332320"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82920103"
 ---
 # <a name="_set_new_mode"></a>_set_new_mode
 
-Définit un nouveau mode de manutention pour **malloc**.
+Définit un nouveau mode de gestionnaire pour **malloc**.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -49,25 +49,25 @@ int _set_new_mode( int newhandlermode );
 ### <a name="parameters"></a>Paramètres
 
 *newhandlermode*<br/>
-Nouveau mode de manutention pour **malloc**; la valeur valide est de 0 ou 1.
+Nouveau mode de gestionnaire pour **malloc**; la valeur valide est 0 ou 1.
 
 ## <a name="return-value"></a>Valeur de retour
 
-Retourne le mode de manutention précédent réglé pour **malloc**. Une valeur de retour de 1 indique que, en cas d’omission d’allouer la mémoire, **malloc** précédemment appelé la nouvelle routine de gestionnaire; une valeur de rendement de 0 indique qu’elle ne l’a pas fait. Si l’argument *du newhandlermode* n’est pas égal à 0 ou 1, renvoie -1.
+Retourne le mode de gestionnaire précédent défini pour **malloc**. Une valeur de retour de 1 indique que, en cas d’échec d’allocation de mémoire, **malloc** a précédemment appelé la nouvelle routine de gestionnaire ; une valeur de retour de 0 indique qu’elle ne l’a pas fait. Si l’argument *newhandlermode* n’est pas égal à 0 ou 1, retourne-1.
 
-## <a name="remarks"></a>Notes
+## <a name="remarks"></a>Notes 
 
-La fonction C++ **_set_new_mode** définit le mode de nouveau gestionnaire pour [malloc](malloc.md). Le nouveau mode de manutention indique si, en cas de défaillance, **malloc** est d’appeler la nouvelle routine de gestionnaire tel que défini par [_set_new_handler](set-new-handler.md). Par défaut, **malloc** n’appelle pas la nouvelle routine de gestionnaire sur l’omission d’allouer la mémoire. Vous pouvez passer outre à ce comportement par défaut de sorte que, lorsque **malloc** ne parvient pas à allouer la mémoire, **malloc** appelle la nouvelle routine de gestionnaire de la même manière que le **nouvel** opérateur fait quand il échoue pour la même raison. Pour plus d’informations, voir les opérateurs [new](../../cpp/new-operator-cpp.md) et [delete](../../cpp/delete-operator-cpp.md) dans la *Référence du langage C++*. Pour substituer la valeur par défaut, appelez :
+La fonction C++ **_set_new_mode** définit le mode de nouveau gestionnaire pour [malloc](malloc.md). Le nouveau mode de gestionnaire indique si, en cas d’échec, **malloc** est appelé à appeler la routine de nouveau gestionnaire telle qu’elle est définie par [_set_new_handler](set-new-handler.md). Par défaut, **malloc** n’appelle pas la routine de nouveau gestionnaire en cas d’échec d’allocation de mémoire. Vous pouvez remplacer ce comportement par défaut de sorte que, lorsque **malloc** ne parvient pas à allouer de la mémoire, **malloc** appelle la routine de nouveau gestionnaire de la même façon que l’opérateur **New** lorsqu’il échoue pour la même raison. Pour plus d’informations, voir les opérateurs [new](../../cpp/new-operator-cpp.md) et [delete](../../cpp/delete-operator-cpp.md) dans la *Référence du langage C++*. Pour substituer la valeur par défaut, appelez :
 
 ```cpp
 _set_new_mode(1);
 ```
 
-au début de votre programme ou lien avec Newmode.obj (voir [Options Link](../../c-runtime-library/link-options.md)).
+tôt dans votre programme ou lien avec NewMode. obj (consultez [options de lien](../../c-runtime-library/link-options.md)).
 
-Cette fonction valide son paramètre. Si *newhandlermode* est autre chose que 0 ou 1, la fonction invoque le gestionnaire de paramètres invalides, tel que décrit dans [La validation de paramètres](../../c-runtime-library/parameter-validation.md). Si l’exécution est autorisée à se poursuivre, <strong>_set_new_mode</strong> renvoie -1 et définit **errno** à `EINVAL`.
+Cette fonction valide son paramètre. Si *newhandlermode* a une valeur autre que 0 ou 1, la fonction appelle le gestionnaire de paramètre non valide, comme décrit dans [validation de paramètre](../../c-runtime-library/parameter-validation.md). Si l’exécution est autorisée à se poursuivre, <strong>_set_new_mode</strong> retourne-1 et affecte `EINVAL`à **errno** la valeur.
 
-Par défaut, l’état global de cette fonction est étendue à l’application. Pour changer cela, voir [Global State dans le CRT](../global-state.md).
+Par défaut, l’état global de cette fonction est limité à l’application. Pour modifier cette valeur, consultez [état global dans le CRT](../global-state.md).
 
 ## <a name="requirements"></a>Spécifications
 

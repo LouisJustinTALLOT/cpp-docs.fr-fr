@@ -24,7 +24,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-time-l1-1-0.dll
-- api-ms-win-crt-private-l1-1-0
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -59,12 +59,12 @@ helpviewer_keywords:
 - _ctime32_s function
 - _tctime32_s function
 ms.assetid: 36ac419a-8000-4389-9fd8-d78b747a009b
-ms.openlocfilehash: d5121c795ed27c22d20087868f798a4b7f5f5b02
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: ca7636f7054b6c7e228b57e0e776250f1b4ccb32
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81348168"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82914819"
 ---
 # <a name="ctime_s-_ctime32_s-_ctime64_s-_wctime_s-_wctime32_s-_wctime64_s"></a>ctime_s, _ctime32_s, _ctime64_s, _wctime_s, _wctime32_s, _wctime64_s
 
@@ -131,20 +131,20 @@ errno_t _wctime64_s(
 ### <a name="parameters"></a>Paramètres
 
 *buffer*<br/>
-Doit être suffisamment grand pour contenir 26 caractères. Un pointeur sur le résultat de la chaîne de caractère, ou **NULL** si :
+Doit être suffisamment grand pour contenir 26 caractères. Pointeur vers le résultat de chaîne de caractères, ou **null** si :
 
-- *sourceTime* représente une date avant minuit, le 1er janvier 1970, UTC.
+- *sourceTime* représente une date antérieure au 1er janvier 1970 à minuit, heure UTC.
 
-- Si vous utilisez **_ctime32_s** ou **_wctime32_s** et *sourceTime* représente une date après 23:59:59 Janvier 18, 2038, UTC.
+- Si vous utilisez **_ctime32_s** ou **_Wctime32_s** et que *sourceTime* représente une date postérieure au 18 23:59:59 Janvier 2038, heure UTC.
 
-- Si vous utilisez **_ctime64_s** ou **_wctime64_s** et *sourceTime* représente une date après 23:59:59, Décembre 31, 3000, UTC.
+- Si vous utilisez **_ctime64_s** ou **_wctime64_s** et *sourceTime* représente une date 23:59:59 postérieure au 31 décembre 3000, UTC.
 
-- Si vous utilisez **_ctime_s** ou **_wctime_s,** ces fonctions sont des emballages aux fonctions précédentes. Consultez la section Notes.
+- Si vous utilisez **_ctime_s** ou **_wctime_s**, ces fonctions sont des wrappers pour les fonctions précédentes. Consultez la section Notes.
 
-*nombreOfElements*<br/>
+*numberOfElements*<br/>
 Taille de la mémoire tampon.
 
-*sourceTime sourceTime source*<br/>
+*sourceTime*<br/>
 Pointeur désignant la valeur de temps stockée.
 
 ## <a name="return-value"></a>Valeur de retour
@@ -153,33 +153,33 @@ Zéro si l’opération réussit. En cas d’échec en raison d’un paramètre 
 
 ## <a name="error-conditions"></a>Conditions d'erreur
 
-|*buffer*|*nombreOfElements*|*sourceTime sourceTime source*|Renvoie|Valeur dans *le tampon*|
+|*buffer*|*numberOfElements*|*sourceTime*|Renvoie|Valeur dans la *mémoire tampon*|
 |--------------|------------------------|------------|------------|-----------------------|
-|**Null**|n'importe laquelle|n'importe laquelle|**EINVAL (EN)**|Non modifiée|
-|Non **NULL** (points à la mémoire valide)|0|n'importe laquelle|**EINVAL (EN)**|Non modifiée|
-|Non **NULL**|0 < taille < 26|n'importe laquelle|**EINVAL (EN)**|Chaîne vide|
-|Non **NULL**|>= 26|NULL|**EINVAL (EN)**|Chaîne vide|
-|Non **NULL**|>= 26|< 0|**EINVAL (EN)**|Chaîne vide|
+|**NUL**|n'importe laquelle|n'importe laquelle|**EINVAL**|Non modifiée|
+|Not **null** (pointe vers une mémoire valide)|0|n'importe laquelle|**EINVAL**|Non modifiée|
+|Non **null**|0 < taille < 26|n'importe laquelle|**EINVAL**|Chaîne vide|
+|Non **null**|>= 26|NULL|**EINVAL**|Chaîne vide|
+|Non **null**|>= 26|< 0|**EINVAL**|Chaîne vide|
 
-## <a name="remarks"></a>Notes
+## <a name="remarks"></a>Notes 
 
-La fonction **ctime_s** convertit une valeur temporelle stockée sous [forme de structure time_t](../../c-runtime-library/standard-types.md) en une chaîne de caractères. La *valeur sourceTime* est généralement obtenue à partir d’un appel à [l’heure](time-time32-time64.md), qui retourne le nombre de secondes écoulées depuis minuit (00:00:00), Janvier 1, 1970, heure universelle coordonnée (UTC). La chaîne de valeur de retour contient exactement 26 caractères et présente la forme suivante :
+La fonction **ctime_s** convertit une valeur de temps stockée en tant que structure de [time_t](../../c-runtime-library/standard-types.md) en une chaîne de caractères. La valeur *sourceTime* est généralement obtenue à partir d’un appel à [Time](time-time32-time64.md), qui retourne le nombre de secondes écoulées depuis minuit (00:00:00), le 1er janvier 1970, le temps universel coordonné (UTC). La chaîne de valeur de retour contient exactement 26 caractères et présente la forme suivante :
 
 `Wed Jan 02 02:03:55 1980\n\0`
 
 Une horloge de 24 heures est utilisée. Tous les champs ont une largeur constante. Le caractère de saut de ligne (« \n ») et le caractère null (« \0 ») occupent les deux dernières positions de la chaîne.
 
-La chaîne de caractères convertie est également ajustée en fonction des paramètres de fuseau horaire local. Voir [l’heure,](time-time32-time64.md) [_ftime](ftime-ftime32-ftime64.md), et [localtime32_s](localtime-s-localtime32-s-localtime64-s.md) fonctions pour des informations sur la configuration de l’heure locale et la fonction [_tzset](tzset.md) pour l’information sur la définition de l’environnement fuseau horaire et les variables globales.
+La chaîne de caractères convertie est également ajustée en fonction des paramètres de fuseau horaire local. Consultez les fonctions [Time](time-time32-time64.md), [_ftime](ftime-ftime32-ftime64.md)et [localtime32_s](localtime-s-localtime32-s-localtime64-s.md) pour plus d’informations sur la configuration de l’heure locale et la fonction [_tzset](tzset.md) pour obtenir des informations sur la définition de l’environnement de fuseau horaire et des variables globales.
 
-**_wctime32_s** et **_wctime64_s** sont la version à caractère large de **_ctime32_s** et **_ctime64_s**; retour d’un pointeur à la corde de caractère large. Sinon, **_ctime64_s**, **_wctime32_s**, et **_wctime64_s** se comportent de la même façon à **_ctime32_s**.
+**_wctime32_s** et **_wctime64_s** sont la version à caractères larges de **_ctime32_s** et **_ctime64_s**; retour d’un pointeur vers une chaîne de caractères larges. Sinon, **_ctime64_s**, **_wctime32_s**et **_wctime64_s** se comportent de la même façon que **_ctime32_s**.
 
-**ctime_s** est une fonction inline qui évalue à **_ctime64_s** et **time_t** est équivalente à **__time64_t**. Si vous avez besoin de forcer le compilateur à interpréter **time_t** comme l’ancien time_t 32 **bits**, vous pouvez définir **_USE_32BIT_TIME_T**. Cela amènera **ctime_s** à évaluer pour **_ctime32_s**. Cela n’est pas recommandé, car votre application peut échouer après le 18 janvier 2038 et cela n’est pas autorisé sur les plateformes 64 bits.
+**ctime_s** est une fonction inline qui prend la valeur **_ctime64_s** et **time_t** équivaut à **__time64_t**. Si vous devez forcer le compilateur à interpréter **time_t** comme l’ancien **time_t**32 bits, vous pouvez définir **_USE_32BIT_TIME_T**. Si vous procédez ainsi, **ctime_s** sera évalué à **_ctime32_s**. Cela n’est pas recommandé, car votre application peut échouer après le 18 janvier 2038 et cela n’est pas autorisé sur les plateformes 64 bits.
 
 En C++, l’utilisation de ces fonctions est simplifiée par les surcharges de modèle ; celles-ci peuvent déduire automatiquement la longueur de la mémoire tampon, ce qui évite d’avoir à spécifier un argument de taille. Pour plus d’informations, consultez [Sécuriser les surcharges de modèle](../../c-runtime-library/secure-template-overloads.md).
 
-Les versions de bibliothèque de débogé de ces fonctions remplissent d’abord le tampon avec 0xFE. Pour désactiver ce comportement, utilisez [_CrtSetDebugFillThreshold](crtsetdebugfillthreshold.md).
+Les versions de la bibliothèque de débogage de ces fonctions remplissent d’abord la mémoire tampon avec 0xFE. Pour désactiver ce comportement, utilisez [_CrtSetDebugFillThreshold](crtsetdebugfillthreshold.md).
 
-Par défaut, l’état global de cette fonction est étendue à l’application. Pour changer cela, voir [Global State dans le CRT](../global-state.md).
+Par défaut, l’état global de cette fonction est limité à l’application. Pour modifier cette valeur, consultez [état global dans le CRT](../global-state.md).
 
 ### <a name="generic-text-routine-mappings"></a>Mappages de routines de texte générique
 
@@ -193,8 +193,8 @@ Par défaut, l’état global de cette fonction est étendue à l’application.
 
 |Routine|En-tête requis|
 |-------------|---------------------|
-|**ctime_s**, **_ctime32_s**, **_ctime64_s**|\<time.h>|
-|**_wctime_s**, **_wctime32_s**, **_wctime64_s**|\<time.h> ou \<wchar.h>|
+|**ctime_s**, **_ctime32_s** **_ctime64_s**|\<time.h>|
+|**_wctime_s**, **_wctime32_s** **_wctime64_s**|\<time.h> ou \<wchar.h>|
 
 Pour plus d'informations sur la compatibilité, voir [Compatibilité](../../c-runtime-library/compatibility.md).
 

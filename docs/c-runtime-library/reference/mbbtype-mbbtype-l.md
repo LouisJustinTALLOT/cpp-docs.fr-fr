@@ -18,7 +18,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-multibyte-l1-1-0.dll
-- api-ms-win-crt-private-l1-1-0
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -34,12 +34,12 @@ helpviewer_keywords:
 - mbbtype function
 - mbbtype_l function
 ms.assetid: b8e34b40-842a-4298-aa39-0bd2d8e51c2a
-ms.openlocfilehash: 7e2e818ed70ec393e4f81008f76ca9efe9cfa7e7
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: dca59f2d31cc5ad843a48e9825ef6a617d46ae4a
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81341412"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82919588"
 ---
 # <a name="_mbbtype-_mbbtype_l"></a>_mbbtype, _mbbtype_l
 
@@ -64,7 +64,7 @@ int _mbbtype_l(
 
 ### <a name="parameters"></a>Paramètres
 
-*C*<br/>
+*secteur*<br/>
 Caractère à tester.
 
 *type*<br/>
@@ -75,25 +75,25 @@ Paramètres régionaux à utiliser.
 
 ## <a name="return-value"></a>Valeur de retour
 
-**_mbbtype** retourne le type d’ense de fourre-tout dans une chaîne. Cette décision est sensible au contexte, comme le précise la valeur du *type,* qui fournit la condition de test de contrôle. *type* est le type de l’ente précédent dans la chaîne. Les constantes manifestes présentes dans le tableau suivant sont définies dans Mbctype.h.
+**_mbbtype** retourne le type d’octet dans une chaîne. Cette décision est contextuelle, comme spécifié par la valeur de *type*, qui fournit la condition de test de contrôle. *type* est le type de l’octet précédent dans la chaîne. Les constantes manifestes présentes dans le tableau suivant sont définies dans Mbctype.h.
 
-|Valeur du *type*|**_mbbtype** tests pour|Valeur retournée|*C*|
+|Valeur de *type*|tests de **_mbbtype** pour|Valeur retournée|*secteur*|
 |---------------------|--------------------------|------------------|---------|
-|Toute valeur sauf 1|Octet unique ou octet de tête valide|**_MBC_SINGLE** (0)|Single byte (0x20 - 0x7E, 0xA1 - 0xDF)|
-|Toute valeur sauf 1|Octet unique ou octet de tête valide|**_MBC_LEAD** (1)|Byte de plomb de caractère multioctet (0x81 - 0x9F, 0xE0 - 0xFC)|
-|Toute valeur sauf 1|Octet unique ou octet de tête valide|**_MBC_ILLEGAL**<br /><br /> ( -1)|Caractère invalide (toute valeur sauf 0x20 - 0x7E, 0xA1 - 0xDF, 0x81 - 0x9F, 0xE0 - 0xFC|
-|1|Octet de fin valide|**_MBC_TRAIL** (2)|Suivi byte de caractère multioctet (0x40 - 0x7E, 0x80 - 0xFC)|
-|1|Octet de fin valide|**_MBC_ILLEGAL**<br /><br /> ( -1)|Caractère invalide (toute valeur sauf 0x20 - 0x7E, 0xA1 - 0xDF, 0x81 - 0x9F, 0xE0 - 0xFC|
+|Toute valeur sauf 1|Octet unique ou octet de tête valide|**_MBC_SINGLE** (0)|Octet unique (0x20-0x7E, 0xA1-0xDF)|
+|Toute valeur sauf 1|Octet unique ou octet de tête valide|**_MBC_LEAD** (1)|Octet de tête d’un caractère multioctet (0x81-0x9F, 0xE0-0xFC)|
+|Toute valeur sauf 1|Octet unique ou octet de tête valide|**_MBC_ILLEGAL**<br /><br /> (-1)|Caractère non valide (n’importe quelle valeur, à l’exception de 0x20-0x7E, 0xA1-0xDF, 0x81-0x9F, 0xE0-0xFC|
+|1|Octet de fin valide|**_MBC_TRAIL** (2)|Octet de fin d’un caractère multioctet (0x40-0x7E, 0x80-0xFC)|
+|1|Octet de fin valide|**_MBC_ILLEGAL**<br /><br /> (-1)|Caractère non valide (n’importe quelle valeur, à l’exception de 0x20-0x7E, 0xA1-0xDF, 0x81-0x9F, 0xE0-0xFC|
 
-## <a name="remarks"></a>Notes
+## <a name="remarks"></a>Notes 
 
-La fonction **_mbbtype** détermine le type d’en-l’est dans un caractère multioctet. Si la valeur du *type* est une valeur à l’exception de 1, **_mbbtype** des tests pour un son unique ou un sous-lieu valide d’un caractère multioctet. Si la valeur du *type* est de 1, **_mbbtype** tests pour un byte de sentier valide d’un caractère multioctet.
+La fonction **_mbbtype** détermine le type d’un octet dans un caractère multioctet. Si la valeur de *type* est toute valeur sauf 1, **_mbbtype** teste un octet codé sur un octet ou un octet de tête valide d’un caractère multioctet. Si la valeur de *type* est 1, **_mbbtype** teste un octet de fin valide d’un caractère multioctet.
 
-La valeur de sortie est affectée par l’établissement de la **LC_CTYPE’établissement** de la catégorie du lieu; voir [setlocale, _wsetlocale](setlocale-wsetlocale.md) pour plus d’informations. La version **_mbbtype** de cette fonction utilise le lieu actuel pour ce comportement local-dépendant; la version **_mbbtype_l** est identique, sauf qu’elle utilise le paramètre local qui est passé à la place. Pour plus d’informations, consultez [Locale](../../c-runtime-library/locale.md).
+La valeur de sortie est affectée par la valeur du paramètre de catégorie **LC_CTYPE** des paramètres régionaux. Pour plus d’informations [, consultez setlocale, _wsetlocale](setlocale-wsetlocale.md) . La version **_mbbtype** de cette fonction utilise les paramètres régionaux actuels pour ce comportement dépendant des paramètres régionaux ; la version de **_mbbtype_l** est identique, à ceci près qu’elle utilise à la place les paramètres régionaux qui sont passés. Pour plus d’informations, consultez [Locale](../../c-runtime-library/locale.md).
 
-Dans les versions précédentes, **_mbbtype** a été nommé **chkctype**. Pour un nouveau code, utilisez **_mbbtype** à la place.
+Dans les versions antérieures, **_mbbtype** s’appelait **chkctype**. Pour le nouveau code, utilisez **_mbbtype** à la place.
 
-Par défaut, l’état global de cette fonction est étendue à l’application. Pour changer cela, voir [Global State dans le CRT](../global-state.md).
+Par défaut, l’état global de cette fonction est limité à l’application. Pour modifier cette valeur, consultez [état global dans le CRT](../global-state.md).
 
 ## <a name="requirements"></a>Spécifications
 

@@ -24,7 +24,7 @@ api_location:
 - api-ms-win-crt-multibyte-l1-1-0.dll
 - api-ms-win-crt-string-l1-1-0.dll
 - ntoskrnl.exe
-- api-ms-win-crt-private-l1-1-0
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -64,12 +64,12 @@ helpviewer_keywords:
 - _mbsncat_l function
 - tcsncat function
 ms.assetid: de67363b-68c6-4ca5-91e3-478610ad8159
-ms.openlocfilehash: 0e6fbc365d4e127d72df039b1351b1bfe91b1b74
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 98f13967d8abbe079934d0c09ab71c5e279d2b7f
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81364208"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82918153"
 ---
 # <a name="strncat-_strncat_l-wcsncat-_wcsncat_l-_mbsncat-_mbsncat_l"></a>strncat, _strncat_l, wcsncat, _wcsncat_l, _mbsncat, _mbsncat_l
 
@@ -134,7 +134,7 @@ unsigned char *_mbsncat_l(
 *strDest*<br/>
 Chaîne de destination se terminant par un caractère null.
 
-*strSource (en)*<br/>
+*strSource*<br/>
 Chaîne source se terminant par null.
 
 *count*<br/>
@@ -147,20 +147,20 @@ Paramètres régionaux à utiliser.
 
 Retourne un pointeur désignant la chaîne de destination. Aucune valeur de retour n'est réservée pour indiquer une erreur.
 
-## <a name="remarks"></a>Notes
+## <a name="remarks"></a>Notes 
 
-La fonction **strncat** annexe, tout au plus, les premiers caractères de *comptage* de *strSource* à *strDest*. Le caractère initial de *strSource* surcrit le caractère nul de fin de *strDest*. Si un personnage nul apparaît dans *strSource* avant que les caractères *de comptage* soient annexés, **strncat** joint tous les caractères de *strSource*, jusqu’au caractère nul. Si *le nombre* est supérieur à la longueur de *strSource*, la longueur de *strSource* est utilisée à la place du *compte*. Dans tous les cas, la chaîne obtenue se termine par un caractère Null. Si la copie se produit entre des chaînes qui se chevauchent, le comportement est indéfini.
+La fonction **strncat** ajoute, au plus, les *premiers caractères de* *strSource* à *strDest*. Le caractère initial de *strSource* remplace le caractère null de fin de *strDest*. Si un caractère NULL apparaît dans *strSource* avant que le *nombre* de caractères soit ajouté, **strncat** ajoute tous les caractères de *strSource*, jusqu’au caractère null. Si *Count* est supérieur à la longueur de *strSource*, la longueur de *strSource* est utilisée à la place de *Count*. Dans tous les cas, la chaîne obtenue se termine par un caractère Null. Si la copie se produit entre des chaînes qui se chevauchent, le comportement est indéfini.
 
 > [!IMPORTANT]
-> **strncat** ne vérifie pas suffisamment d’espace dans *strDest;* c’est donc une cause potentielle de dépassements de tampons. Gardez à l’esprit que le *nombre* limite le nombre de caractères annexés; ce n’est pas une limite à la taille de *strDest*. Reportez-vous à l’exemple ci-dessous. Pour plus d’informations, consultez [Solutions contre les dépassements de mémoire tampon](/windows/win32/SecBP/avoiding-buffer-overruns).
+> **strncat** ne vérifie pas si l’espace est suffisant dans *strDest*; Il s’agit donc d’une cause potentielle de dépassements de mémoire tampon. Gardez à l’esprit *que le nombre limite* le nombre de caractères ajoutés. il ne s’agit pas d’une limite de la taille de *strDest*. Reportez-vous à l’exemple ci-dessous. Pour plus d’informations, consultez [Solutions contre les dépassements de mémoire tampon](/windows/win32/SecBP/avoiding-buffer-overruns).
 
-**wcsncat** et **_mbsncat** sont des versions à caractère large et multioctets de **strncat**. Les arguments de chaîne et la valeur de retour du **wcsncat** sont des cordes de caractère large ; ceux de **_mbsncat** sont des cordes multioctets-caractères. Ces trois fonctions se comportent sinon de façon identique.
+**wcsncat** et **_mbsncat** sont des versions à caractères larges et à caractères multioctets de **strncat**. Les arguments de chaîne et la valeur de retour de **wcsncat** sont des chaînes à caractères larges ; ceux de **_mbsncat** sont des chaînes de caractères multioctets. Ces trois fonctions se comportent sinon de façon identique.
 
 La valeur de sortie est affectée par la valeur du paramètre de catégorie **LC_CTYPE** des paramètres régionaux. Pour plus d’informations, consultez [setlocale](setlocale-wsetlocale.md). Les versions de ces fonctions sans le suffixe **_l** utilisent les paramètres régionaux pour ce comportement dépendant des paramètres régionaux ; les versions avec le suffixe **_l** sont identiques, sauf qu’elles utilisent à la place les paramètres régionaux transmis. Pour plus d’informations, consultez [Locale](../../c-runtime-library/locale.md).
 
 En C++, ces fonctions ont des surcharges de modèle. Pour plus d’informations, consultez [Sécuriser les surcharges de modèle](../../c-runtime-library/secure-template-overloads.md).
 
-Par défaut, l’état global de cette fonction est étendue à l’application. Pour changer cela, voir [Global State dans le CRT](../global-state.md).
+Par défaut, l’état global de cette fonction est limité à l’application. Pour modifier cette valeur, consultez [état global dans le CRT](../global-state.md).
 
 ### <a name="generic-text-routine-mappings"></a>Mappages de routines de texte générique
 
@@ -170,7 +170,7 @@ Par défaut, l’état global de cette fonction est étendue à l’application.
 |**_tcsncat_l**|**_strncat_l**|**_mbsnbcat_l**|**_wcsncat_l**|
 
 > [!NOTE]
-> **_strncat_l** et **_wcsncat_l** n’ont aucune dépendance locale et ne sont pas censés être appelés directement. Ils sont fournis pour une utilisation interne par **_tcsncat_l**.
+> **_strncat_l** et **_wcsncat_l** n’ont aucune dépendance des paramètres régionaux et ne sont pas destinés à être appelés directement. Elles sont fournies pour une utilisation interne par **_tcsncat_l**.
 
 ## <a name="requirements"></a>Spécifications
 
@@ -183,7 +183,7 @@ Par défaut, l’état global de cette fonction est étendue à l’application.
 
 Pour plus d'informations sur la compatibilité, voir [Compatibilité](../../c-runtime-library/compatibility.md).
 
-## <a name="example"></a>Exemple
+## <a name="example"></a> Exemple
 
 ```C
 // crt_strncat.c
@@ -230,11 +230,11 @@ After BadAppend :  This is the initial string!Extra text to add to (47 chars)
 After GoodAppend:  This is the initial string!Extra text t (39 chars)
 ```
 
-Notez que **BadAppend** a causé un dépassement de mémoire tampon.
+Notez que **BadAppend** a provoqué un dépassement de mémoire tampon.
 
 ## <a name="see-also"></a>Voir aussi
 
-[Manipulation des cordes](../../c-runtime-library/string-manipulation-crt.md)<br/>
+[Manipulation de chaînes](../../c-runtime-library/string-manipulation-crt.md)<br/>
 [_mbsnbcat, _mbsnbcat_l](mbsnbcat-mbsnbcat-l.md)<br/>
 [strcat, wcscat, _mbscat](strcat-wcscat-mbscat.md)<br/>
 [strcmp, wcscmp, _mbscmp](strcmp-wcscmp-mbscmp.md)<br/>
@@ -245,5 +245,5 @@ Notez que **BadAppend** a causé un dépassement de mémoire tampon.
 [strrchr, wcsrchr, _mbsrchr, _mbsrchr_l](strrchr-wcsrchr-mbsrchr-mbsrchr-l.md)<br/>
 [_strset, _strset_l, _wcsset, _wcsset_l, _mbsset, _mbsset_l](strset-strset-l-wcsset-wcsset-l-mbsset-mbsset-l.md)<br/>
 [strspn, wcsspn, _mbsspn, _mbsspn_l](strspn-wcsspn-mbsspn-mbsspn-l.md)<br/>
-[Local](../../c-runtime-library/locale.md)<br/>
-[Interprétation des séquences multioctets-caractères](../../c-runtime-library/interpretation-of-multibyte-character-sequences.md)<br/>
+[Paramètres régionaux](../../c-runtime-library/locale.md)<br/>
+[Interprétation des séquences de caractères multioctets](../../c-runtime-library/interpretation-of-multibyte-character-sequences.md)<br/>

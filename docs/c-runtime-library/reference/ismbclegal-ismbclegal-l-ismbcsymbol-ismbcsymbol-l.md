@@ -22,7 +22,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-multibyte-l1-1-0.dll
-- api-ms-win-crt-private-l1-1-0
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -50,12 +50,12 @@ helpviewer_keywords:
 - _ismbcsymbol_l function
 - istlegal_l function
 ms.assetid: 31bf1ea5-b56f-4e28-b21e-b49a2cf93ffc
-ms.openlocfilehash: 5f7dacbb131094164c5256171dd54ab3ea94cda4
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 295eabdef37a7b8d6bfb8408ba0d3d683a59c42d
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81342964"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82919715"
 ---
 # <a name="_ismbclegal-_ismbclegal_l-_ismbcsymbol-_ismbcsymbol_l"></a>_ismbclegal, _ismbclegal_l, _ismbcsymbol, _ismbcsymbol_l
 
@@ -85,7 +85,7 @@ int _ismbcsymbol_l(
 
 ### <a name="parameters"></a>Paramètres
 
-*C*<br/>
+*secteur*<br/>
 Caractère à tester.
 
 *locale*<br/>
@@ -93,20 +93,20 @@ Paramètres régionaux à utiliser.
 
 ## <a name="return-value"></a>Valeur de retour
 
-Chacune de ces routines retourne une valeur différente de zéro si le caractère satisfait à la condition de test ou 0 dans le cas contraire. Si *c*<255 et qu’il y a une routine **_ismbb** correspondante (par exemple, **_ismbcalnum** correspond à **_ismbbalnum),** le résultat est la valeur de rendement de la routine **_ismbb** correspondante.
+Chacune de ces routines retourne une valeur différente de zéro si le caractère satisfait à la condition de test ou 0 dans le cas contraire. Si *c*<= 255 et qu’il existe une routine **_ismbb** correspondante (par exemple, **_ismbcalnum** correspond à **_ismbbalnum**), le résultat est la valeur de retour de la routine **_ismbb** correspondante.
 
-## <a name="remarks"></a>Notes
+## <a name="remarks"></a>Notes 
 
 Chacune de ces fonctions teste un caractère multioctet fourni pour un état donné.
 
-Les versions de ces fonctions avec le **suffixe _l** sont identiques, sauf qu’ils utilisent le lieu passé au lieu de la localisation actuelle pour leur comportement local-dépendant. Pour plus d’informations, consultez [Locale](../../c-runtime-library/locale.md).
+Les versions de ces fonctions avec le suffixe **_L** sont identiques, sauf qu’elles utilisent les paramètres régionaux passés au lieu des paramètres régionaux actuels pour leur comportement dépendant des paramètres régionaux. Pour plus d’informations, consultez [Locale](../../c-runtime-library/locale.md).
 
 |Routine|Condition de test|Exemple de page de codes 932|
 |-------------|--------------------|---------------------------|
-|**_ismbclegal**|Multioctet valide|Retourne nonzero si et seulement si le premier byte de *c* est dans les gammes 0x81 - 0x9F ou 0xE0 - 0xFC, tandis que le deuxième byte est dans les gammes 0x40 - 0x7E ou 0x80 - FC.|
-|**_ismbcsymbol**|Symbole multioctet|Retourne nonzero si et seulement si 0x8141<*c*<0x81AC.|
+|**_ismbclegal**|Multioctet valide|Retourne une valeur différente de zéro si et seulement si le premier octet de *c* se trouve dans les plages 0X81-0X9f ou 0XE0-0xFC, tandis que le deuxième octet se trouve dans les plages 0X40-0x7E ou 0X80-FC.|
+|**_ismbcsymbol**|Symbole multioctet|Retourne une valeur différente de zéro si et seulement si 0x8141<=*c*<= 0x81AC.|
 
-Par défaut, l’état global de cette fonction est étendue à l’application. Pour changer cela, voir [Global State dans le CRT](../global-state.md).
+Par défaut, l’état global de cette fonction est limité à l’application. Pour modifier cette valeur, consultez [état global dans le CRT](../global-state.md).
 
 ### <a name="generic-text-routine-mappings"></a>Mappages de routines de texte générique
 
@@ -129,4 +129,4 @@ Pour plus d’informations sur la compatibilité, consultez [Compatibility](../.
 [Classifications des caractères](../../c-runtime-library/character-classification.md)<br/>
 [_ismbc, routines](../../c-runtime-library/ismbc-routines.md)<br/>
 [is, isw, routines](../../c-runtime-library/is-isw-routines.md)<br/>
-[routines _ismbb](../../c-runtime-library/ismbb-routines.md)<br/>
+[Routines de _ismbb](../../c-runtime-library/ismbb-routines.md)<br/>
