@@ -18,7 +18,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-math-l1-1-0.dll
-- api-ms-win-crt-private-l1-1-0
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -36,12 +36,12 @@ helpviewer_keywords:
 - trigonometric functions
 - arccosine function
 ms.assetid: 00b89c48-8faf-4824-aa95-fa4349a4975d
-ms.openlocfilehash: 4dd467ab807875dcf4236e4fbb744c77ec47880d
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: c6e6b1da823f050d20d47ecbad96d4e0b58fa452
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81348972"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82916885"
 ---
 # <a name="acos-acosf-acosl"></a>acos, acosf, acosl
 
@@ -62,14 +62,14 @@ long double acos( long double x );   // C++ only
 
 ### <a name="parameters"></a>Paramètres
 
-*X*<br/>
-Valeur comprise entre -1 et 1, pour laquelle calculer l’arccosine (la cosine inverse).
+*x*<br/>
+Valeur comprise entre-1 et 1, pour laquelle calculer l’arccosinus (cosinus inverse).
 
 ## <a name="return-value"></a>Valeur de retour
 
-La fonction **acos** renvoie l’arccosine de *x* dans la gamme 0 à radians.
+La fonction **ACOS** retourne l’arc cosinus de *x* dans la plage de 0 à π radians.
 
-Par défaut, si *x* est inférieur à -1 ou supérieur à 1, **acos** retourne une indéfinie.
+Par défaut, si *x* est inférieur à-1 ou supérieur à 1, **ACOS** retourne un indéfini.
 
 |Entrée|Exception SEH|Exception\{b\> \<b\}Matherr|
 |-----------|-------------------|-----------------------|
@@ -77,19 +77,19 @@ Par défaut, si *x* est inférieur à -1 ou supérieur à 1, **acos** retourne u
 |± QNAN,IND|Aucun|_DOMAIN|
 |&#124;x&#124;>1|NON VALIDE|_DOMAIN|
 
-## <a name="remarks"></a>Notes
+## <a name="remarks"></a>Notes 
 
-Étant donné que le CMD permet la surcharge, vous pouvez appeler des surcharges **d’acos** qui prennent et retournent **flotteur** et **de longs** **types doubles.** Dans un programme C, **acos** prend et renvoie toujours un **double.**
+C++ autorisant la surcharge, vous pouvez appeler des surcharges de **ACOS** qui acceptent et retournent des types **float** et **long** **double** . Dans un programme C, **ACOS** prend toujours et retourne un **double**.
 
-Par défaut, l’état global de cette fonction est étendue à l’application. Pour changer cela, voir [Global State dans le CRT](../global-state.md).
+Par défaut, l’état global de cette fonction est limité à l’application. Pour modifier cette valeur, consultez [état global dans le CRT](../global-state.md).
 
 ## <a name="requirements"></a>Spécifications
 
 |Routine|En-tête requis|En-têtes facultatifs|
 |-------------|---------------------|----------------------|
-|**acos**, **acosf**, **acosl**|\<math.h>|\<errno.h>|
+|**ACOS**, **acosf**, **acosl**|\<math.h>|\<errno.h>|
 
-## <a name="example"></a>Exemple
+## <a name="example"></a> Exemple
 
 Ce programme vous invite à entrer une valeur comprise entre -1 et 1. Les valeurs d’entrée en dehors de cette plage génèrent des messages d’erreur `_DOMAIN`. Si une valeur valide est entrée, le programme affiche l’arc sinus et l’arc cosinus de cette valeur.
 
@@ -141,7 +141,7 @@ Arccosine of 0.000000 = 1.570796
 
 ## <a name="see-also"></a>Voir aussi
 
-[Soutien à la pointe flottante](../../c-runtime-library/floating-point-support.md)<br/>
+[Prise en charge de la virgule flottante](../../c-runtime-library/floating-point-support.md)<br/>
 [asin, asinf, asinl](asin-asinf-asinl.md)<br/>
 [atan, atanf, atanl, atan2, atan2f, atan2l](atan-atanf-atanl-atan2-atan2f-atan2l.md)<br/>
 [cos, cosf, cosl](cos-cosf-cosl.md)<br/>

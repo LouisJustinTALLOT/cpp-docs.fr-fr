@@ -18,7 +18,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-multibyte-l1-1-0.dll
-- api-ms-win-crt-private-l1-1-0
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -34,12 +34,12 @@ helpviewer_keywords:
 - _mbbtombc_l function
 - _mbbtombc function
 ms.assetid: 78593389-b0fc-43b6-8c1f-2a6bf702d64e
-ms.openlocfilehash: 5d26b06da1dcf8c53abda5d4ff2ee06ec3e7cd11
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: b2088ea83729a74a60e75d1710529480f34cd638
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81341415"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82919601"
 ---
 # <a name="_mbbtombc-_mbbtombc_l"></a>_mbbtombc, _mbbtombc_l
 
@@ -62,7 +62,7 @@ unsigned int _mbbtombc_l(
 
 ### <a name="parameters"></a>Paramètres
 
-*C*<br/>
+*secteur*<br/>
 Caractère codé sur un octet à convertir.
 
 *locale*<br/>
@@ -70,17 +70,17 @@ Paramètres régionaux à utiliser.
 
 ## <a name="return-value"></a>Valeur de retour
 
-Si **_mbbtombc** convertit avec succès *c,* il renvoie un caractère multioctets; sinon, il retourne *c*.
+Si **_mbbtombc** convertit correctement *c*, il retourne un caractère multioctet ; Sinon, elle retourne *c*.
 
-## <a name="remarks"></a>Notes
+## <a name="remarks"></a>Notes 
 
-La fonction **_mbbtombc** convertit un caractère multioctet unique donné en un caractère multioctet double-byte correspondant. Les caractères doivent être dans la plage 0x20 - 0x7E ou 0xA1 - 0xDF à convertir.
+La fonction **_mbbtombc** convertit un caractère multioctet codé sur un octet donné en caractère multioctet codé sur deux octets correspondant. Les caractères doivent être compris dans la plage 0x20-0x7E ou 0xA1-0xDF à convertir.
 
-La valeur de sortie est affectée par l’établissement de la **LC_CTYPE’établissement** de la catégorie du lieu; voir [setlocale, _wsetlocale](setlocale-wsetlocale.md) pour plus d’informations. Les versions de cette fonction sont identiques, sauf que **_mbbtombc** utilise le lieu actuel pour ce comportement local-dépendant et **_mbbtombc_l** utilise plutôt le paramètre local qui est passé dedans. Pour plus d’informations, consultez [Locale](../../c-runtime-library/locale.md).
+La valeur de sortie est affectée par la valeur du paramètre de catégorie **LC_CTYPE** des paramètres régionaux. Pour plus d’informations [, consultez setlocale, _wsetlocale](setlocale-wsetlocale.md) . Les versions de cette fonction sont identiques, sauf que **_mbbtombc** utilise les paramètres régionaux actuels pour ce comportement dépendant des paramètres régionaux et **_mbbtombc_l** utilise à la place les paramètres régionaux qui sont passés. Pour plus d’informations, consultez [Locale](../../c-runtime-library/locale.md).
 
-Dans les versions précédentes, **_mbbtombc** a été nommé **hantozen**. Pour un nouveau code, utilisez **_mbbtombc**.
+Dans les versions antérieures, **_mbbtombc** s’appelait **hantozen**. Pour le nouveau code, utilisez **_mbbtombc**.
 
-Par défaut, l’état global de cette fonction est étendue à l’application. Pour changer cela, voir [Global State dans le CRT](../global-state.md).
+Par défaut, l’état global de cette fonction est limité à l’application. Pour modifier cette valeur, consultez [état global dans le CRT](../global-state.md).
 
 ## <a name="requirements"></a>Spécifications
 

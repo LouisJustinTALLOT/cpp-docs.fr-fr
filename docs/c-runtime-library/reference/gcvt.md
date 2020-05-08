@@ -16,7 +16,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-convert-l1-1-0.dll
-- api-ms-win-crt-private-l1-1-0
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -33,12 +33,12 @@ helpviewer_keywords:
 - strings [C++], converting from floating point
 - CVTBUFSIZE
 ms.assetid: 5761411e-c06b-409a-912f-810fe7f4bcb5
-ms.openlocfilehash: f161256c6dc86a045f49111cde3651bea08ead11
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: d13ae6cee293036f0454b23e0349cabb2869be30
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81345317"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82919412"
 ---
 # <a name="_gcvt"></a>_gcvt
 
@@ -67,17 +67,17 @@ Emplacement de stockage pour le résultat.
 
 ## <a name="return-value"></a>Valeur de retour
 
-**_gcvt** renvoie un pointeur à la chaîne de chiffres.
+**_gcvt** retourne un pointeur vers la chaîne de chiffres.
 
-## <a name="remarks"></a>Notes
+## <a name="remarks"></a>Notes 
 
-La fonction **_gcvt** convertit une *valeur* de point flottant en une chaîne de caractère (qui comprend un point décimal et un byte de signe possible) et stocke la chaîne dans *le tampon.* Le *tampon* doit être suffisamment grand pour tenir compte de la valeur convertie plus un caractère nul de fin, qui est joint automatiquement. Si une taille tampon de *chiffres* 1 est utilisée, la fonction dépasse l’extrémité du tampon. En effet, la chaîne convertie comprend une virgule décimale et peut contenir des informations de signe et d’exposant. Le dépassement n’est pas pris en charge. **_gcvt** tente de produire des *chiffres* de chiffres en format décimal. Si elle ne peut pas, il produit *des chiffres* de chiffres en format exponentiel. Les zéros de fin peuvent être supprimés pendant la conversion.
+La fonction **_gcvt** convertit une *valeur* à virgule flottante en une chaîne de caractères (qui comprend une virgule décimale et un octet de signe possible) et stocke la chaîne dans la *mémoire tampon*. La *mémoire tampon* doit être suffisamment grande pour accueillir la valeur convertie plus un caractère null de fin, qui est ajouté automatiquement. Si une taille de mémoire tampon de *chiffres* + 1 est utilisée, la fonction remplace la fin de la mémoire tampon. En effet, la chaîne convertie comprend une virgule décimale et peut contenir des informations de signe et d’exposant. Le dépassement n’est pas pris en charge. **_gcvt** tente de produire des chiffres de *chiffres* au format décimal. Si ce n’est pas le cas, il génère des chiffres de *chiffres* au format exponentiel. Les zéros de fin peuvent être supprimés pendant la conversion.
 
-Un *tampon* de longueur **_CVTBUFSIZE** est suffisant pour toute valeur de point flottant.
+Une *mémoire tampon* de longueur **_CVTBUFSIZE** est suffisante pour toute valeur à virgule flottante.
 
-Cette fonction valide ses paramètres. Si *le tampon* est **NULL**, le gestionnaire de paramètre invalide est invoqué, tel que décrit dans la validation [de paramètres](../../c-runtime-library/parameter-validation.md). Si l’exécution est autorisée à se poursuivre, cette fonction définit **errno** à **EINVAL** et retourne **NULL**.
+Cette fonction valide ses paramètres. Si *buffer* a la **valeur null**, le gestionnaire de paramètres non valides est appelé, comme décrit dans [validation de paramètre](../../c-runtime-library/parameter-validation.md). Si l’exécution est autorisée à se poursuivre, cette fonction affecte à **errno** la **valeur** **EINVAL** et retourne null.
 
-Par défaut, l’état global de cette fonction est étendue à l’application. Pour changer cela, voir [Global State dans le CRT](../global-state.md).
+Par défaut, l’état global de cette fonction est limité à l’application. Pour modifier cette valeur, consultez [état global dans le CRT](../global-state.md).
 
 ## <a name="requirements"></a>Spécifications
 
@@ -146,7 +146,7 @@ buffer: '-1.23456789012e-002' (19 chars)
 ## <a name="see-also"></a>Voir aussi
 
 [Conversion de données](../../c-runtime-library/data-conversion.md)<br/>
-[Soutien à la pointe flottante](../../c-runtime-library/floating-point-support.md)<br/>
+[Prise en charge de la virgule flottante](../../c-runtime-library/floating-point-support.md)<br/>
 [atof, _atof_l, _wtof, _wtof_l](atof-atof-l-wtof-wtof-l.md)<br/>
 [_ecvt](ecvt.md)<br/>
 [_fcvt](fcvt.md)<br/>
