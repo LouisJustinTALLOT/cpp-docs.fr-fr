@@ -18,7 +18,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-math-l1-1-0.dll
-- api-ms-win-crt-private-l1-1-0
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -36,16 +36,16 @@ helpviewer_keywords:
 - trigonometric functions
 - sinf function
 ms.assetid: 737de73e-3590-45f9-8257-dc1c0c489dfc
-ms.openlocfilehash: d177eeca3d6b8248010ba1e65abf5154f27e19d7
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: ecd6a03fb7a933391f50de9eb075d8247d60924f
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81354999"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82915767"
 ---
 # <a name="sin-sinf-sinl"></a>sin, sinf, sinl
 
-Calcule le sinus d’une valeur de point flottant.
+Calcule le sinus d’une valeur à virgule flottante.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -62,31 +62,31 @@ long double sin(long double x);  // C++ only
 
 ### <a name="parameters"></a>Paramètres
 
-*X*<br/>
+*x*<br/>
 Angle en radians.
 
 ## <a name="return-value"></a>Valeur retournée
 
-Les fonctions de **péché** retournent le sin de *x*. Si *x* est supérieur ou égal à 263, ou moins ou égal à -263, une perte d’importance dans le résultat se produit.
+Les fonctions **Sin** retournent le sinus de *x*. Si *x* est supérieur ou égal à 263, ou inférieur ou égal à-263, une perte de précision dans le résultat se produit.
 
 |Entrée|Exception SEH|Exception\{b\> \<b\}Matherr|
 |-----------|-------------------|-----------------------|
 |± QNAN,IND|None|_DOMAIN|
-|(péché, sinf, sinl)|NON VALIDE|_DOMAIN|
+|± ∞ (Sin, sinf, sinl)|NON VALIDE|_DOMAIN|
 
 Pour plus d’informations sur les codes de retour, consultez [errno, _doserrno, _sys_errlist et _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
 
-## <a name="remarks"></a>Notes
+## <a name="remarks"></a>Notes 
 
-Parce que le CMD permet la surcharge, vous pouvez appeler des surcharges de **péché** qui prennent et retournent **flotter** ou **de longues** valeurs **doubles.** Dans un programme C, **le péché** prend toujours et retourne **double**.
+C++ autorisant la surcharge, vous pouvez appeler des surcharges de **Sin** qui acceptent et retournent des valeurs **float** ou **long** **double** . Dans un programme C, **Sin** prend toujours et retourne **double**.
 
-Par défaut, l’état global de cette fonction est étendue à l’application. Pour changer cela, voir [Global State dans le CRT](../global-state.md).
+Par défaut, l’état global de cette fonction est limité à l’application. Pour modifier cette valeur, consultez [état global dans le CRT](../global-state.md).
 
 ## <a name="requirements"></a>Spécifications
 
 |Routine|En-tête requis (C)|En-tête requis (C++)|
 |-|-|-|
-|**péché**, **sinf**, **sinl**|\<math.h>|\<cmath> ou \<math.h>|
+|**Sin**, **sinf**, **sinl**|\<math.h>|\<cmath> ou \<math.h>|
 
 Pour plus d'informations sur la compatibilité, voir [Compatibilité](../../c-runtime-library/compatibility.md).
 
@@ -120,7 +120,7 @@ cos( 1.570796 ) = 0.000000
 
 ## <a name="see-also"></a>Voir aussi
 
-[Soutien à la pointe flottante](../../c-runtime-library/floating-point-support.md)<br/>
+[Prise en charge de la virgule flottante](../../c-runtime-library/floating-point-support.md)<br/>
 [acos, acosf, acosl](acos-acosf-acosl.md)<br/>
 [asin, asinf, asinl](asin-asinf-asinl.md)<br/>
 [atan, atanf, atanl, atan2, atan2f, atan2l](atan-atanf-atanl-atan2-atan2f-atan2l.md)<br/>

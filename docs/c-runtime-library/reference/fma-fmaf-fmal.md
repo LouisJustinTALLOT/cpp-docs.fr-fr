@@ -20,7 +20,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-math-l1-1-0.dll
-- api-ms-win-crt-private-l1-1-0
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -37,12 +37,12 @@ helpviewer_keywords:
 - fmaf function
 - fmal function
 ms.assetid: 584a6037-da1e-4e86-9f0c-97aae86de0c0
-ms.openlocfilehash: 993ca4d57202b3789929161a964b3e41d48fd98f
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: be3578aa9c66f329e191749b4506091bff69b1eb
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81346570"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82914955"
 ---
 # <a name="fma-fmaf-fmal"></a>fma, fmaf, fmal
 
@@ -84,13 +84,13 @@ long double fmal(
 
 ### <a name="parameters"></a>Paramètres
 
-*X*<br/>
+*x*<br/>
 Première valeur à multiplier.
 
 *y*<br/>
 Seconde valeur à multiplier.
 
-*Z*<br/>
+*Lettre*<br/>
 Valeur à ajouter.
 
 ## <a name="return-value"></a>Valeur de retour
@@ -101,28 +101,28 @@ Sinon, peut retourner l’une des valeurs suivantes :
 
 |Problème|Renvoie|
 |-----------|------------|
-|*x* - INFINITY, *y* 0 ou<br /><br /> *x* 0, *y* et INFINITY|NaN|
-|*x* ou *y* ' exact ' INFINITY, *z* 'INFINITY avec le signe opposé|NaN|
-|*x* ou *y* - NaN|NaN|
-|pas *(x* '0, *y*'indéfini) et *z* 'NaN<br /><br /> pas *(x*'indéfini, *y*'0) et *z* 'NaN|NaN|
-|Erreur de plage avec dépassement|HUGE_VAL, HUGE_VALF ou HUGE_VALL|
+|*x* = Infinity, *y* = 0 ou<br /><br /> *x* = 0, *y* = infini|NaN|
+|*x* ou *y* = exact ± infini, *z* = infini avec le signe opposé|NaN|
+|*x* ou *y* = Nan|NaN|
+|Not (*x* = 0, *y*= indéfini) et *z* = Nan<br /><br /> Not (*x*= indéterminé, *y*= 0) et *z* = Nan|NaN|
+|Erreur de plage avec dépassement|± HUGE_VAL, ± HUGE_VALF ou ± HUGE_VALL|
 |Erreur de plage avec soupassement|valeur correcte, après arrondi.|
 
 Les erreurs sont signalées comme indiqué dans [_matherr](matherr.md).
 
-## <a name="remarks"></a>Notes
+## <a name="remarks"></a>Notes 
 
-Parce que le CMD permet la surcharge, vous pouvez appeler des surcharges de **fma** qui prennent et retournent **flotteur** et **de longs** **types doubles.** Dans un programme C, **fma** prend toujours et retourne un **double**.
+C++ autorisant la surcharge, vous pouvez appeler des surcharges de **FMA** qui acceptent et retournent des types **float** et **long** **double** . Dans un programme C, **FMA** accepte et retourne toujours un **double**.
 
 Cette fonction calcule la valeur avec une précision infinie, puis arrondit le résultat final.
 
-Par défaut, l’état global de cette fonction est étendue à l’application. Pour changer cela, voir [Global State dans le CRT](../global-state.md).
+Par défaut, l’état global de cette fonction est limité à l’application. Pour modifier cette valeur, consultez [état global dans le CRT](../global-state.md).
 
 ## <a name="requirements"></a>Spécifications
 
-|Fonction|En-tête C|En-tête C++|
+|Function|En-tête C|En-tête C++|
 |--------------|--------------|------------------|
-|**fma**, **fmaf**, **fmal**|\<math.h>|\<cmath>|
+|**FMA**, **fmaf**, **Fmal**|\<math.h>|\<cmath>|
 
 Pour plus d'informations sur la compatibilité, voir [Compatibilité](../../c-runtime-library/compatibility.md).
 

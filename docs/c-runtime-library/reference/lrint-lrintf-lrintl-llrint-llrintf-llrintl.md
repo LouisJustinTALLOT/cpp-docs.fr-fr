@@ -26,7 +26,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-math-l1-1-0.dll
-- api-ms-win-crt-private-l1-1-0
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -52,12 +52,12 @@ helpviewer_keywords:
 - llrintf function
 - llrintl function
 ms.assetid: 28ccd5b3-5e6f-434f-997d-a21d51b8ce7f
-ms.openlocfilehash: 6283cffaa094af4484d48781b5bb92d0339d38d1
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: effb146cac201a21651f21e3e5c040fbb68819a6
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81341667"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82911372"
 ---
 # <a name="lrint-lrintf-lrintl-llrint-llrintf-llrintl"></a>lrint, lrintf, lrintl, llrint, llrintf, llrintl
 
@@ -109,30 +109,30 @@ long long int llrintl(
 
 ### <a name="parameters"></a>Paramètres
 
-*X*<br/>
+*x*<br/>
 Valeur à arrondir.
 
 ## <a name="return-value"></a>Valeur de retour
 
-En cas de succès, retourne la valeur intégrale arrondie de *x*.
+En cas de réussite, retourne la valeur intégrale arrondie de *x*.
 
 |Problème|Renvoie|
 |-----------|------------|
-|*x* est en dehors de la plage du type de retour<br /><br /> *x* -<br /><br /> *x* NaN|Relance **FE_INVALID** et retourne zéro (0).|
+|*x* est en dehors de la plage du type de retour<br /><br /> *x* = ± ∞<br /><br /> *x* = Nan|Déclenche **FE_INVALID** et retourne zéro (0).|
 
-## <a name="remarks"></a>Notes
+## <a name="remarks"></a>Notes 
 
-Parce que le CMD permet la surcharge, vous pouvez appeler des surcharges de **lrint** et **de llrint** qui prennent **flotteur** et **de longs** **types doubles.** Dans un programme C, **lrint** et **llrint** toujours prendre un **double**.
+C++ autorisant la surcharge, vous pouvez appeler des surcharges de **lrint** et **llrint** qui prennent des types **float** et **long** **double** . Dans un programme C, **lrint** et **llrint** prennent toujours un **double**.
 
-Si *x* ne représente pas l’équivalent de point flottant d’une valeur intégrale, ces fonctions soulèvent **FE_INEXACT**.
+Si *x* ne représente pas l’équivalent à virgule flottante d’une valeur intégrale, ces fonctions déclenchent **FE_INEXACT**.
 
-**Microsoft spécifique**: Lorsque le résultat est en dehors de la plage du type de retour, ou lorsque le paramètre est un NaN ou une infinité, la valeur de retour est définie. Le compilateur Microsoft retourne zéro (0).
+**Spécifique à Microsoft**: lorsque le résultat est en dehors de la plage du type de retour, ou lorsque le paramètre est une valeur NaN ou l’infini, la valeur de retour est définie par l’implémentation. Le compilateur Microsoft retourne zéro (0).
 
-Par défaut, l’état global de cette fonction est étendue à l’application. Pour changer cela, voir [Global State dans le CRT](../global-state.md).
+Par défaut, l’état global de cette fonction est limité à l’application. Pour modifier cette valeur, consultez [état global dans le CRT](../global-state.md).
 
 ## <a name="requirements"></a>Spécifications
 
-|Fonction|En-tête C|En-tête C++|
+|Function|En-tête C|En-tête C++|
 |--------------|--------------|------------------|
 |**lrint**, **lrintf**, **lrintl**, **llrint**, **llrintf**, **llrintl**|\<math.h>|\<cmath>|
 

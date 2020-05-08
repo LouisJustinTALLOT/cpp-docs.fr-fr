@@ -19,7 +19,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-time-l1-1-0.dll
-- api-ms-win-crt-private-l1-1-0
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -41,16 +41,16 @@ helpviewer_keywords:
 - _gmtime_s function
 - _gmtime32_s function
 ms.assetid: 261c7df0-2b0c-44ba-ba61-cb83efaec60f
-ms.openlocfilehash: e73d2d3cca852b657631361d8271bec7f9c86ac5
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 152b0569d452fc48af7583b23c6a2449cb24d0d6
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81344081"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82916230"
 ---
 # <a name="gmtime_s-_gmtime32_s-_gmtime64_s"></a>gmtime_s, _gmtime32_s, _gmtime64_s
 
-Convertit une valeur temporelle en structure **tm.** Ces versions de [_gmtime32, _gmtime64](gmtime-gmtime32-gmtime64.md) intègrent les améliorations de sécurité décrites dans [Fonctionnalités de sécurité dans le CRT](../../c-runtime-library/security-features-in-the-crt.md).
+Convertit une valeur d’heure en une structure de **TM** . Ces versions de [_gmtime32, _gmtime64](gmtime-gmtime32-gmtime64.md) intègrent les améliorations de sécurité décrites dans [Fonctionnalités de sécurité dans le CRT](../../c-runtime-library/security-features-in-the-crt.md).
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -72,28 +72,28 @@ errno_t _gmtime64_s(
 ### <a name="parameters"></a>Paramètres
 
 *tmDest*<br/>
-Pointeur vers une structure [de tm.](../../c-runtime-library/standard-types.md) Les champs de la structure retournée détiennent la valeur évaluée de *l’argument* de la minuterie dans UTC plutôt qu’à l’heure locale.
+Pointeur vers une structure de [TM](../../c-runtime-library/standard-types.md) . Les champs de la structure retournée contiennent la valeur évaluée de l’argument *Timer* en UTC plutôt qu’en heure locale.
 
-*sourceTime sourceTime source*<br/>
+*sourceTime*<br/>
 Pointeur désignant la valeur de temps stockée. Le temps est représenté sous forme de secondes écoulées depuis le 1er janvier 1970 minuit (00:00:00), temps universel coordonné (UTC).
 
 ## <a name="return-value"></a>Valeur de retour
 
-Zéro si l’opération réussit. En cas d’échec, la valeur de retour est un code d’erreur. Les codes d’erreur sont définis dans Errno.h; pour une liste de ces erreurs, voir [errno](../../c-runtime-library/errno-constants.md).
+Zéro si l’opération réussit. En cas d’échec, la valeur de retour est un code d’erreur. Les codes d’erreur sont définis dans errno. h ; pour obtenir la liste de ces erreurs, consultez [errno](../../c-runtime-library/errno-constants.md).
 
 ### <a name="error-conditions"></a>Conditions d'erreur
 
-|*tmDest*|*sourceTime sourceTime source*|Renvoie|Valeur en *tmDest*|
+|*tmDest*|*sourceTime*|Renvoie|Valeur dans *tmDest*|
 |-----------|------------|------------|--------------------|
-|**Null**|n'importe laquelle|**EINVAL (EN)**|Non modifiée.|
-|Non **NULL** (points à la mémoire valide)|**Null**|**EINVAL (EN)**|Tous les champs définis sur -1.|
-|Non **NULL**|< 0|**EINVAL (EN)**|Tous les champs définis sur -1.|
+|**NUL**|n'importe laquelle|**EINVAL**|Non modifiée.|
+|Not **null** (pointe vers une mémoire valide)|**NUL**|**EINVAL**|Tous les champs définis sur -1.|
+|Non **null**|< 0|**EINVAL**|Tous les champs définis sur -1.|
 
-Concernant les deux premières conditions d’erreur, le gestionnaire de paramètres non valides est appelé, comme décrit dans [Validation de paramètre](../../c-runtime-library/parameter-validation.md). Si l’exécution est autorisée à se poursuivre, ces fonctions **définies errno** à **EINVAL** et retourner **EINVAL**.
+Concernant les deux premières conditions d’erreur, le gestionnaire de paramètres non valides est appelé, comme décrit dans [Validation de paramètre](../../c-runtime-library/parameter-validation.md). Si l’exécution est autorisée à se poursuivre, ces fonctions définissent **errno** sur **EINVAL** et retournent **EINVAL**.
 
-## <a name="remarks"></a>Notes
+## <a name="remarks"></a>Notes 
 
-La fonction **_gmtime32_s** décompose la valeur *sourceTime* et la stocke dans une structure de type **tm**, définie dans Time.h. L’adresse de la structure est passée en *tmDest*. La valeur de *sourceTime* est généralement obtenue d’un appel à la fonction [de temps.](time-time32-time64.md)
+La fonction **_gmtime32_s** décompose la valeur *sourceTime* et la stocke dans une structure de type **TM**, définie dans Time. h. L’adresse de la structure est passée dans *tmDest*. La valeur de *sourceTime* est généralement obtenue à partir d’un appel à la fonction [Time](time-time32-time64.md) .
 
 > [!NOTE]
 > L’environnement cible doit tenter de déterminer si l’heure d’été est en vigueur. La bibliothèque runtime C suppose que les règles de calcul de l’heure d’été sont celles des États-Unis.
@@ -102,27 +102,27 @@ Chacun des champs de structure est de type **int**, comme indiqué dans le table
 
 |Champ|Description|
 |-|-|
-|**tm_sec**|Quelques secondes après minute (0 - 59).|
-|**tm_min**|Minutes après heure (0 - 59).|
-|**tm_hour**|Heures depuis minuit (0 - 23).|
-|**tm_mday**|Jour du mois (1 - 31).|
-|**tm_mon**|Mois (0 - 11; Janvier et 0).|
+|**tm_sec**|Secondes après la minute (0-59).|
+|**tm_min**|Minutes après l’heure (0-59).|
+|**tm_hour**|Heures depuis minuit (0-23).|
+|**tm_mday**|Jour du mois (1-31).|
+|**tm_mon**|Mois (0-11 ; Janvier = 0).|
 |**tm_year**|Année (année en cours moins 1900).|
-|**tm_wday**|Jour de la semaine (0 - 6; Dimanche 0).|
-|**tm_yday**|Jour de l’année (0 - 365; 1er janvier et 0).|
+|**tm_wday**|Jour de la semaine (0-6 ; Dimanche = 0).|
+|**tm_yday**|Jour de l’année (0-365 ; 1er janvier = 0).|
 |**tm_isdst**|Toujours 0 pour **gmtime_s**.|
 
-**_gmtime64_s**, qui utilise la structure **__time64_t,** permet d’exprimer les dates jusqu’à 23:59:59, Décembre 31, 3000, UTC; considérant que **gmtime32_s** ne représentent les dates que jusqu’au 23:59:59 Janvier 18, 2038, UTC. Le 1er janvier 1970 à minuit est la limite inférieure de la plage de dates pour ces deux fonctions.
+**_gmtime64_s**, qui utilise la structure **__time64_t** , permet d’exprimer les dates jusqu’au 31 décembre 3000 à 23:59:59, heure UTC ; tandis que **gmtime32_s** représentent uniquement les dates jusqu' 23:59:59 au 18 janvier 2038, heure UTC. Le 1er janvier 1970 à minuit est la limite inférieure de la plage de dates pour ces deux fonctions.
 
-**gmtime_s** est une fonction inline qui évalue à **_gmtime64_s** et **time_t** est équivalente à **__time64_t**. Si vous avez besoin de forcer le compilateur à interpréter **time_t** comme l’ancien time_t 32 **bits**, vous pouvez définir **_USE_32BIT_TIME_T**. Cela entraînera **gmtime_s** d’être alignés à **_gmtime32_s**. Cela n’est pas recommandé, car votre application peut échouer après le 18 janvier 2038 et cela n’est pas autorisé sur les plateformes 64 bits.
+**gmtime_s** est une fonction inline qui prend la valeur **_gmtime64_s** et **time_t** équivaut à **__time64_t**. Si vous devez forcer le compilateur à interpréter **time_t** comme l’ancien **time_t**32 bits, vous pouvez définir **_USE_32BIT_TIME_T**. Si vous procédez ainsi, **gmtime_s** n’est pas aligné sur **_gmtime32_s**. Cela n’est pas recommandé, car votre application peut échouer après le 18 janvier 2038 et cela n’est pas autorisé sur les plateformes 64 bits.
 
-Par défaut, l’état global de cette fonction est étendue à l’application. Pour changer cela, voir [Global State dans le CRT](../global-state.md).
+Par défaut, l’état global de cette fonction est limité à l’application. Pour modifier cette valeur, consultez [état global dans le CRT](../global-state.md).
 
 ## <a name="requirements"></a>Spécifications
 
 |Routine|En-tête C requis|En-tête C++ requis|
 |-------------|---------------------|-|
-|**gmtime_s**, **_gmtime32_s**, **_gmtime64_s**|\<time.h>|\<ctime> ou \<time.h>|
+|**gmtime_s**, **_gmtime32_s** **_gmtime64_s**|\<time.h>|\<CTime> ou \<Time. h>|
 
 Pour plus d’informations sur la compatibilité, consultez [Compatibility](../../c-runtime-library/compatibility.md).
 
