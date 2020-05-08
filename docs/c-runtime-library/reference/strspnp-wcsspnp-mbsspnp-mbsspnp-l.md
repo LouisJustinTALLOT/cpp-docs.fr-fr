@@ -20,7 +20,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-multibyte-l1-1-0.dll
-- api-ms-win-crt-private-l1-1-0
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -48,12 +48,12 @@ helpviewer_keywords:
 - _tcsspnp function
 - tcsspnp function
 ms.assetid: 1ce18100-2edd-4c3b-af8b-53f204d80233
-ms.openlocfilehash: c45fc42fb9edce1b82b0910f8aae81d4058d5974
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 16c56f95fc89c1bb7b34c82cdf19c406b61c5a7e
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81317023"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82911046"
 ---
 # <a name="_strspnp-_wcsspnp-_mbsspnp-_mbsspnp_l"></a>_strspnp, _wcsspnp, _mbsspnp, _mbsspnp_l
 
@@ -89,7 +89,7 @@ unsigned char *_mbsspnp_l(
 *Str*<br/>
 Chaîne terminée par Null à trouver.
 
-*Charset*<br/>
+*caractères*<br/>
 Jeu de caractères se terminant par null.
 
 *locale*<br/>
@@ -97,15 +97,15 @@ Paramètres régionaux à utiliser.
 
 ## <a name="return-value"></a>Valeur de retour
 
-**_strspnp**, **_wcsspnp**, et **_mbsspnp** retourner un pointeur au premier personnage en *str* qui n’appartient pas à l’ensemble de personnages en *charset*. Chacune de ces fonctions retourne **NULL** si *str* se compose entièrement de caractères de *charset*. Pour chacune de ces routines, aucune valeur de retour n’est réservée pour indiquer une erreur.
+**_strspnp**, **_wcsspnp**et **_mbsspnp** retournent un pointeur désignant le premier caractère de *Str* qui n’appartient pas au jeu de caractères dans *charset*. Chacune de ces fonctions retourne la **valeur null** si *Str* est entièrement composé de caractères de *charset*. Pour chacune de ces routines, aucune valeur de retour n’est réservée pour indiquer une erreur.
 
-## <a name="remarks"></a>Notes
+## <a name="remarks"></a>Notes 
 
-La fonction **_mbsspnp** renvoie un pointeur au caractère multioctet qui est le premier personnage en *str* qui n’appartient pas à l’ensemble des personnages en *charset*. **_mbsspnp** reconnaît les séquences multioctets selon la [page de code multioctet](../../c-runtime-library/code-pages.md) actuellement en service. La recherche n’inclut pas les caractères Null de fin.
+La fonction **_mbsspnp** retourne un pointeur vers le caractère multioctet qui est le premier caractère de *Str* qui n’appartient pas au jeu de caractères dans *charset*. **_mbsspnp** reconnaît les séquences de caractères multioctets en fonction de la [page de codes multioctets](../../c-runtime-library/code-pages.md) en cours d’utilisation. La recherche n’inclut pas les caractères Null de fin.
 
-Si *l’éter ou* *le charset* est un pointeur nul, cette fonction invoque le gestionnaire de paramètres invalide, tel que décrit dans [la validation de paramètres](../../c-runtime-library/parameter-validation.md). Si l’exécution est autorisée à se poursuivre, la fonction renvoie **NULL** et définit **errno** à **EINVAL**.
+Si *Str* ou *charset* est un pointeur null, cette fonction appelle le gestionnaire de paramètre non valide, comme décrit dans [validation de paramètre](../../c-runtime-library/parameter-validation.md). Si l’exécution est autorisée à se poursuivre, la fonction retourne la **valeur null** et définit **errno** sur **EINVAL**.
 
-Par défaut, l’état global de cette fonction est étendue à l’application. Pour changer cela, voir [Global State dans le CRT](../global-state.md).
+Par défaut, l’état global de cette fonction est limité à l’application. Pour modifier cette valeur, consultez [état global dans le CRT](../global-state.md).
 
 ### <a name="generic-text-routine-mappings"></a>Mappages de routines de texte générique
 
@@ -113,9 +113,9 @@ Par défaut, l’état global de cette fonction est étendue à l’application.
 |---------------------|--------------------------------------|--------------------|-----------------------|
 |**_tcsspnp**|**_strspnp**|**_mbsspnp**|**_wcsspnp**|
 
-**_strspnp** et **_wcsspnp** sont un caractère uni-byte et des versions à caractère large de **_mbsspnp**. **_strspnp** et **_wcsspnp** se comportent de la même façon **que _mbsspnp** autrement; ils ne sont fournis que pour cette cartographie et ne doivent pas être utilisés pour une autre raison. Pour plus d’informations, consultez [Utilisation de mappages de texte générique](../../c-runtime-library/using-generic-text-mappings.md) et [Mappages de texte générique](../../c-runtime-library/generic-text-mappings.md).
+**_strspnp** et **_wcsspnp** sont des versions à caractères codés sur un octet et à caractères larges de **_mbsspnp**. les **_strspnp** et **_wcsspnp** se comportent de la même façon que **_mbsspnp** dans le cas contraire ; elles sont fournies uniquement pour ce mappage et ne doivent pas être utilisées pour une autre raison. Pour plus d’informations, consultez [Utilisation de mappages de texte générique](../../c-runtime-library/using-generic-text-mappings.md) et [Mappages de texte générique](../../c-runtime-library/generic-text-mappings.md).
 
-**_mbsspnp_l** est identique, sauf qu’il utilise le paramètre local passé à la place. Pour plus d’informations, consultez [Locale](../../c-runtime-library/locale.md).
+**_mbsspnp_l** est identique, à ceci près qu’elle utilise à la place les paramètres régionaux transmis. Pour plus d’informations, consultez [Locale](../../c-runtime-library/locale.md).
 
 ## <a name="requirements"></a>Spécifications
 
@@ -127,7 +127,7 @@ Par défaut, l’état global de cette fonction est étendue à l’application.
 
 Pour plus d’informations sur la compatibilité, consultez [Compatibility](../../c-runtime-library/compatibility.md).
 
-## <a name="example"></a>Exemple
+## <a name="example"></a> Exemple
 
 ```C
 // crt_mbsspnp.c
@@ -151,9 +151,9 @@ abbage
 
 ## <a name="see-also"></a>Voir aussi
 
-[Manipulation des cordes](../../c-runtime-library/string-manipulation-crt.md)<br/>
-[Local](../../c-runtime-library/locale.md)<br/>
-[Interprétation des séquences multioctets-caractères](../../c-runtime-library/interpretation-of-multibyte-character-sequences.md)<br/>
+[Manipulation de chaînes](../../c-runtime-library/string-manipulation-crt.md)<br/>
+[Paramètres régionaux](../../c-runtime-library/locale.md)<br/>
+[Interprétation des séquences de caractères multioctets](../../c-runtime-library/interpretation-of-multibyte-character-sequences.md)<br/>
 [strspn, wcsspn, _mbsspn, _mbsspn_l](strspn-wcsspn-mbsspn-mbsspn-l.md)<br/>
 [strncat_s, _strncat_s_l, wcsncat_s, _wcsncat_s_l, _mbsncat_s, _mbsncat_s_l](strncat-s-strncat-s-l-wcsncat-s-wcsncat-s-l-mbsncat-s-mbsncat-s-l.md)<br/>
 [strncmp, wcsncmp, _mbsncmp, _mbsncmp_l](strncmp-wcsncmp-mbsncmp-mbsncmp-l.md)<br/>

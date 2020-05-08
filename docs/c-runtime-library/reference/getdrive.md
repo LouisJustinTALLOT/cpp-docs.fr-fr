@@ -16,7 +16,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-filesystem-l1-1-0.dll
-- api-ms-win-crt-private-l1-1-0
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -30,12 +30,12 @@ helpviewer_keywords:
 - disk drives
 - _getdrive function
 ms.assetid: e40631a0-8f1a-4897-90ac-e1037ff30bca
-ms.openlocfilehash: 239bad8ef492396d713d81611e8d4c00da1697af
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: c9c30fa288469d2382b3923e50f0486d6e190f17
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81344330"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82913770"
 ---
 # <a name="_getdrive"></a>_getdrive
 
@@ -52,11 +52,11 @@ int _getdrive( void );
 
 ## <a name="return-value"></a>Valeur de retour
 
-Retourne le lecteur actuel (par défaut) (1 = A, 2 = B et ainsi de suite). Une valeur de retour de zéro signifie que le chemin actuel ne commence pas par un nom de lecteur de lettres, comme un chemin UNC. Ou, cela signifie qu’une allocation tampon interne a échoué. En cas d’échec d’une allocation interne, `errno` est réglé à ENOMEM.
+Retourne le lecteur actuel (par défaut) (1 = A, 2 = B et ainsi de suite). Une valeur de retour de zéro signifie que le chemin d’accès actuel ne commence pas par un nom de lecteur de lettre, tel qu’un chemin d’accès UNC. Ou, cela signifie qu’une allocation de mémoire tampon interne a échoué. En cas d’échec d’une `errno` allocation interne, est défini sur ENOMEM.
 
-## <a name="remarks"></a>Notes
+## <a name="remarks"></a>Notes 
 
-Par défaut, l’état global de cette fonction est étendue à l’application. Pour changer cela, voir [Global State dans le CRT](../global-state.md).
+Par défaut, l’état global de cette fonction est limité à l’application. Pour modifier cette valeur, consultez [état global dans le CRT](../global-state.md).
 
 ## <a name="requirements"></a>Spécifications
 

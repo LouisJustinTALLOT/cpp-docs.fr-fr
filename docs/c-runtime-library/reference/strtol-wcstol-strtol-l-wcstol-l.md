@@ -22,7 +22,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-convert-l1-1-0.dll
-- api-ms-win-crt-private-l1-1-0
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -77,16 +77,16 @@ no-loc:
 - _atof_l
 - _wtof
 - _wtof_l
-ms.openlocfilehash: dbeaf04d34aa20e15de48e99082ed07edb6129ab
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: cc54884cd32ffa9118abfb6d46d659125a44262c
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81320475"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82912653"
 ---
 # <a name="strtol-wcstol-_strtol_l-_wcstol_l"></a>strtol, wcstol, _strtol_l, _wcstol_l
 
-Convertir les cordes en une **longue** valeur d’intégrage.
+Convertit des chaînes en valeur entière **longue** .
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -117,13 +117,13 @@ long _wcstol_l(
 
 ### <a name="parameters"></a>Paramètres
 
-*String*\
+*chaîne*\
 Chaîne se terminant par un caractère Null à convertir.
 
 *end_ptr*\
-Un paramètre de sortie, défini pour indiquer le personnage après le dernier caractère interprété. Ignoré, si **NULL**.
+Paramètre de sortie, défini pour pointer vers le caractère après le dernier caractère interprété. Ignoré, si **null**.
 
-*Base*\
+*base*\
 Base numérique à utiliser.
 
 *locale*\
@@ -131,25 +131,25 @@ Paramètres régionaux à utiliser.
 
 ## <a name="return-value"></a>Valeur de retour
 
-**strtol**, **wcstol**, **_strtol_l**, et **_wcstol_l** retourner la valeur représentée en *chaîne*. Ils retournent 0 si aucune conversion n’est possible. Lorsque la représentation provoquerait un débordement, ils reviennent **LONG_MAX** ou **LONG_MIN**.
+**strtol**, **wcstol**, **_strtol_l**et **_wcstol_l** retournent la valeur représentée dans *String*. Elles retournent 0 si aucune conversion n’est possible. Lorsque la représentation provoque un dépassement de capacité, elles retournent **LONG_MAX** ou **LONG_MIN**.
 
-**errno** est réglé sur **ERANGE** en cas de débordement ou de sous-flux. Il est réglé à **EINVAL** si *la chaîne* est **NULL**. Ou, si *la base* est non zéro et moins de 2, ou plus de 36. Pour plus d’informations sur **ERANGE**, **EINVAL**, et d’autres codes de retour, voir [_doserrno, errno, _sys_errlist, et _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
+**errno** a la valeur **ERANGE** si le dépassement de capacité positif ou négatif se produit. Elle est définie sur **EINVAL** si la *chaîne* est **null**. Ou, si *base* a une valeur différente de zéro et inférieure à 2, ou supérieure à 36. Pour plus d’informations sur **ERANGE**, **EINVAL**et d’autres codes de retour, consultez [_doserrno, errno, _sys_errlist et _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
 
-## <a name="remarks"></a>Notes
+## <a name="remarks"></a>Notes 
 
-Le **strtol**, **wcstol**, **_strtol_l**, et **_wcstol_l** fonctions convertir *la chaîne* en une **longue**. Ils cessent de lire la *chaîne* au premier personnage non reconnu comme faisant partie d’un certain nombre. Il peut s’agir du caractère de fin nul, ou du premier caractère alphanumérique supérieur ou égal à *la base.*
+Les fonctions **strtol**, **wcstol**, **_strtol_l**et **_wcstol_l** convertissent une *chaîne* en valeur **long**. Ils cessent de lire la *chaîne* au premier caractère qui n’est pas reconnu comme faisant partie d’un nombre. Il peut s’agir du caractère de fin-null ou du premier caractère alphanumérique supérieur ou égal à *base*.
 
-**wcstol** et **_wcstol_l** sont des versions à caractère large de **strtol** et **_strtol_l**. Leur argument *de cordes* est une corde de caractère large. Ces fonctions se comportent de la même façon que **le strtol** et **_strtol_l** autrement. Le réglage de la catégorie **LC_NUMERIC** du lieu détermine la reconnaissance du caractère radix (le marqueur fractionnel ou le point décimal) en *chaîne.* Les fonctions **strtol** et **wcstol** utilisent le lieu actuel. **_strtol_l** et **_wcstol_l** utiliser le lieu passé à la place. Pour plus d’informations, voir [setlocale] et [Local](../../c-runtime-library/locale.md).
+**wcstol** et **_wcstol_l** sont des versions à caractères larges de **strtol** et de **_strtol_l**. Leur argument de *chaîne* est une chaîne de caractères larges. Ces fonctions se comportent de la même façon que **strtol** et **_strtol_l** dans le cas contraire. Le paramètre de catégorie **LC_NUMERIC** des paramètres régionaux détermine la reconnaissance du caractère de base (marque fractionnaire ou virgule décimale) dans la *chaîne*. Les fonctions **strtol** et **wcstol** utilisent les paramètres régionaux actuels. **_strtol_l** et **_wcstol_l** utilisez à la place les paramètres régionaux transmis. Pour plus d’informations, consultez [setlocale] et [paramètres régionaux](../../c-runtime-library/locale.md).
 
-Lorsque *end_ptr* est **NULL**, il est ignoré. Sinon, un pointeur sur le personnage qui a arrêté l’analyse est stocké à l’endroit indiqué par *end_ptr*. Aucune conversion n’est possible si aucun chiffre valide n’est trouvé, ou une base invalide est spécifiée. La valeur de *la chaîne* est ensuite stockée à l’endroit indiqué par *end_ptr*.
+Lorsque *end_ptr* a la **valeur null**, il est ignoré. Sinon, un pointeur vers le caractère qui a arrêté l’analyse est stocké à l’emplacement désigné par *end_ptr*. Aucune conversion n’est possible si aucun chiffre valide n’est trouvé, ou si une base non valide est spécifiée. La valeur de la *chaîne* est ensuite stockée à l’emplacement désigné par *end_ptr*.
 
-**strtol** s’attend à *ce que la chaîne* pointe vers une chaîne de la forme suivante:
+**strtol** s’attend à ce que la *chaîne* pointe vers une chaîne au format suivant :
 
-> [*espace blanc*] [&#124;]**+** **-** [**0** **[x** &#124; **X]]** [*alphanumériques*]
+> [*espace blanc*] [{**+** &#124; **-**}] [**0** [{ **x** &#124; **x** }]] [*alphanumériques*]
 
-Les supports`[ ]`carrés () entourent les éléments optionnels. Des accolades bouclées et`{ | }`une barre verticale () entourent des alternatives pour un seul élément. *l’espace blanc* peut se composer de caractères d’espace et d’onglet, qui sont ignorés. *alphanumériques* sont des chiffres décimaux ou les lettres 'a' par 'z' (ou 'A' par 'Z'). Le premier personnage qui ne correspond pas à ce formulaire arrête l’analyse. Si *la base* est comprise entre 2 et 36, alors il est utilisé comme base du nombre. Si la *base* est de 0, les caractères initiaux de la chaîne pointées par *la ficelle* sont utilisés pour déterminer la base. Si le premier personnage est 0, et le second personnage n’est pas 'x' ou 'X', la chaîne est interprétée comme un intégrant octal. Si le premier caractère est « 0 » et que le deuxième est « x » ou « X », la chaîne est interprétée comme étant un entier hexadécimal. Si le premier caractère est un chiffre compris entre « 1 » et « 9 », la chaîne est interprétée comme étant un entier décimal. Les lettres 'a' par 'z' (ou 'A' par 'Z') se voient attribuer les valeurs 10 à 35. L’analyse ne permet que les lettres dont les valeurs sont inférieures à *la base.* Le premier caractère situé en dehors de la plage de la base a pour effet d’arrêter l’analyse. Par exemple, supposons que *la chaîne* commence par "01". Si la *base* est de 0, le scanner suppose que c’est un intégrant octal. Un personnage '8' ou '9' arrête l’analyse.
+Les crochets (`[ ]`) entourent les éléments facultatifs. Les accolades et une barre verticale (`{ | }`) entourent des alternatives pour un élément unique. les *espaces blancs* peuvent être constitués d’espaces et de caractères de tabulation, qui sont ignorés. les *caractères alphanumériques* sont des chiffres décimaux ou des lettres de « a » à « z » (ou de « a » à « z »). Le premier caractère qui ne correspond pas à ce formulaire arrête l’analyse. Si *base* est comprise entre 2 et 36, elle est utilisée comme base du nombre. Si *base* a la valeur 0, les caractères initiaux de la chaîne vers laquelle pointe la *chaîne* sont utilisés pour déterminer la base. Si le premier caractère est 0 et que le deuxième est différent de « x » ou « X », la chaîne est interprétée comme un entier octal. Si le premier caractère est « 0 » et que le deuxième est « x » ou « X », la chaîne est interprétée comme étant un entier hexadécimal. Si le premier caractère est un chiffre compris entre « 1 » et « 9 », la chaîne est interprétée comme étant un entier décimal. Les lettres de « a » à « z » (ou de « A » à « Z ») se voient assigner les valeurs 10 à 35. L’analyse autorise uniquement les lettres dont les valeurs sont inférieures à la *base*. Le premier caractère situé en dehors de la plage de la base a pour effet d’arrêter l’analyse. Par exemple, supposons que la *chaîne* commence par « 01 ». Si *base* a la valeur 0, le scanneur suppose qu’il s’agit d’un entier octal. Un caractère « 8 » ou « 9 » arrête l’analyse.
 
-Par défaut, l’état global de cette fonction est étendue à l’application. Pour changer cela, voir [Global State dans le CRT](../global-state.md).
+Par défaut, l’état global de cette fonction est limité à l’application. Pour modifier cette valeur, consultez [état global dans le CRT](../global-state.md).
 
 ### <a name="generic-text-routine-mappings"></a>Mappages de routines de texte générique
 
@@ -167,19 +167,19 @@ Par défaut, l’état global de cette fonction est étendue à l’application.
 |**_strtol_l**|\<stdlib.h>|
 |**_wcstol_l**|\<stdlib.h> ou \<wchar.h>|
 
-Les **_strtol_l** **_wcstol_l** fonctions et les fonctions sont spécifiques à Microsoft, ne faisant pas partie de la bibliothèque Standard C. Pour plus d'informations sur la compatibilité, voir [Compatibilité](../compatibility.md).
+Les **_strtol_l** fonctions **_wcstol_l** et sont spécifiques à Microsoft et ne font pas partie de la bibliothèque C standard. Pour plus d'informations sur la compatibilité, voir [Compatibilité](../compatibility.md).
 
-## <a name="example"></a>Exemple
+## <a name="example"></a> Exemple
 
-Voir l’exemple pour [strtod](strtod-strtod-l-wcstod-wcstod-l.md).
+Consultez l’exemple pour [strtod](strtod-strtod-l-wcstod-wcstod-l.md).
 
 ## <a name="see-also"></a>Voir aussi
 
 [Conversion de données](../data-conversion.md)\
-[Local](../locale.md)\
+[Paramètres régionaux](../locale.md)\
 [localeconv](localeconv.md)\
 [setlocale, _wsetlocale](setlocale-wsetlocale.md)\
-[Fonctions de valeur ajoutée à numérique](../string-to-numeric-value-functions.md)\
+[Fonctions de chaîne en valeur numérique](../string-to-numeric-value-functions.md)\
 [strtod, _strtod_l, wcstod, _wcstod_l](strtod-strtod-l-wcstod-wcstod-l.md)\
 [strtoll, _strtoll_l, wcstoll, _wcstoll_l](strtoll-strtoll-l-wcstoll-wcstoll-l.md)\
 [strtoul, _strtoul_l, wcstoul, _wcstoul_l](strtoul-strtoul-l-wcstoul-wcstoul-l.md)\

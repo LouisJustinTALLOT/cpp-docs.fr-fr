@@ -12,7 +12,7 @@ api_location:
 - msvcr110_clr0400.dll
 - msvcr110.dll
 - msvcr90.dll
-- api-ms-win-crt-private-l1-1-0
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -22,12 +22,12 @@ f1_keywords:
 helpviewer_keywords:
 - ___lc_collate_cp_func
 ms.assetid: 46ccc084-7ac9-4e5d-9138-e12cb5845615
-ms.openlocfilehash: 241292f22beea0cbf4e14d1b4480f6621ef6ccca
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 7247827cb2bfe18c341ce60c2f3d8976f676b138
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81351135"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82914077"
 ---
 # <a name="___lc_collate_cp_func"></a>___lc_collate_cp_func
 
@@ -43,13 +43,13 @@ UINT ___lc_codepage_func(void);
 
 Page de code de classement active du thread.
 
-## <a name="remarks"></a>Notes
+## <a name="remarks"></a>Notes 
 
 `___lc_collate_cp_func` est une fonction CRT interne utilisée par d'autres fonctions CRT pour obtenir la page de code de classement active à partir du stockage local des threads pour les données CRT. Ces informations sont également disponibles à l'aide de la fonction [_get_current_locale](../c-runtime-library/reference/get-current-locale.md).
 
 Les fonctions CRT internes sont spécifiques à l'implémentation et sont susceptibles d'être modifiées à chaque nouvelle version. Nous vous déconseillons de les utiliser dans votre code.
 
-Par défaut, l’état global de cette fonction est étendue à l’application. Pour changer cela, voir [Global State dans le CRT](global-state.md).
+Par défaut, l’état global de cette fonction est limité à l’application. Pour modifier cette valeur, consultez [état global dans le CRT](global-state.md).
 
 ## <a name="requirements"></a>Spécifications
 
