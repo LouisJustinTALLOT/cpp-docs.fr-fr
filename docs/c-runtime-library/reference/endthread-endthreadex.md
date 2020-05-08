@@ -18,7 +18,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-runtime-l1-1-0.dll
-- api-ms-win-crt-private-l1-1-0
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -36,16 +36,16 @@ helpviewer_keywords:
 - _endthreadex function
 - threading [C++], terminating threads
 ms.assetid: 18a91f2f-659e-40b4-b266-ec12dcf2abf5
-ms.openlocfilehash: c76f479255080400e07678ef5dbde572b7a9dffc
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: a3889adcc90bd62e766102b72aae68577915e55b
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81348034"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82915081"
 ---
 # <a name="_endthread-_endthreadex"></a>_endthread, _endthreadex
 
-Termine un fil; **_endthread** met fin à un fil qui est créé par **_beginthread** et **_endthreadex** met fin à un fil qui est créé par **_beginthreadex**.
+Termine un thread ; **_endthread** met fin à un thread créé par **_beginthread** et **_endthreadex** met fin à un thread créé par **_beginthreadex**.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -61,25 +61,25 @@ void _endthreadex(
 *retval*<br/>
 Code de sortie de thread.
 
-## <a name="remarks"></a>Notes
+## <a name="remarks"></a>Notes 
 
-Vous pouvez appeler **_endthread** ou **_endthreadex** explicitement pour mettre fin à un thread; cependant, **_endthread** ou **_endthreadex** est appelé automatiquement lorsque le thread revient de la routine passée comme un paramètre à **_beginthread** ou **_beginthreadex**. La fin d’un thread avec un appel pour **mettre fin** ou **_endthreadex** permet d’assurer une récupération adéquate des ressources allouées au thread.
+Vous pouvez appeler **_endthread** ou **_endthreadex** explicitement pour terminer un thread ; Toutefois, **_endthread** ou **_endthreadex** est appelé automatiquement lorsque le thread retourne de la routine passée en tant que paramètre à **_beginthread** ou **_beginthreadex**. L’arrêt d’un thread à l’aide d’un appel à **endthread** ou **_endthreadex** permet de garantir une récupération correcte des ressources allouées pour le thread.
 
 > [!NOTE]
 > Pour un fichier exécutable lié à Libcmt.lib, n’appelez pas l’API [ExitThread](/windows/win32/api/processthreadsapi/nf-processthreadsapi-exitthread) Win32, car elle empêche le système runtime de récupérer les ressources allouées. **_endthread** et **_endthreadex** récupérer les ressources de thread allouées, puis appeler **ExitThread**.
 
-**_endthread** ferme automatiquement le manche du thread. (Ce comportement diffère de l’API Win32 **ExitThread.)** Par conséquent, lorsque vous utilisez **_beginthread** et **_endthread**, ne fermez pas explicitement le manche de thread en appelant l’API Win32 [CloseHandle.](/windows/win32/api/handleapi/nf-handleapi-closehandle)
+**_endthread** ferme automatiquement le handle de thread. (Ce comportement diffère de l’API **ExitThread** Win32.) Par conséquent, lorsque vous utilisez **_beginthread** et **_endthread**, ne fermez pas explicitement le handle du thread en appelant l’API [CloseHandle](/windows/win32/api/handleapi/nf-handleapi-closehandle) Win32.
 
-Comme l’API Win32 **ExitThread,** **_endthreadex** ne ferme pas la poignée de fil. Par conséquent, lorsque vous utilisez **_beginthreadex** et **_endthreadex,** vous devez fermer la poignée de thread en appelant l’API Win32 **CloseHandle.**
+À l’instar de l’API **ExitThread** Win32, **_endthreadex** ne ferme pas le handle de thread. Par conséquent, lorsque vous utilisez **_beginthreadex** et **_endthreadex**, vous devez fermer le handle du thread en appelant l’API **CloseHandle** Win32.
 
 > [!NOTE]
-> **_endthread** et **_endthreadex** causent que les destructeurs de CMD en attente dans le fil ne soient pas appelés.
+> **_endthread** et **_endthreadex** entraînent la non-appel des destructeurs C++ en attente dans le thread.
 
-Par défaut, l’état global de cette fonction est étendue à l’application. Pour changer cela, voir [Global State dans le CRT](../global-state.md).
+Par défaut, l’état global de cette fonction est limité à l’application. Pour modifier cette valeur, consultez [état global dans le CRT](../global-state.md).
 
 ## <a name="requirements"></a>Spécifications
 
-|Fonction|En-tête requis|
+|Function|En-tête requis|
 |--------------|---------------------|
 |**_endthread**|\<process.h>|
 |**_endthreadex**|\<process.h>|
@@ -90,11 +90,11 @@ Pour plus d’informations sur la compatibilité, consultez [Compatibility](../.
 
 Uniquement les versions multithread des [bibliothèques Runtime C](../../c-runtime-library/crt-library-features.md) .
 
-## <a name="example"></a>Exemple
+## <a name="example"></a> Exemple
 
 Voir l’exemple pour [_beginthread](beginthread-beginthreadex.md).
 
 ## <a name="see-also"></a>Voir aussi
 
-[Contrôle des processus et de l’environnement](../../c-runtime-library/process-and-environment-control.md)<br/>
+[Contrôle de processus et d’environnement](../../c-runtime-library/process-and-environment-control.md)<br/>
 [_beginthread, _beginthreadex](beginthread-beginthreadex.md)<br/>

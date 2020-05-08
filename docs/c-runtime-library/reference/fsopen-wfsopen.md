@@ -18,7 +18,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-stdio-l1-1-0.dll
-- api-ms-win-crt-private-l1-1-0
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -41,12 +41,12 @@ helpviewer_keywords:
 - _wfsopen function
 - file sharing [C++]
 ms.assetid: 5e4502ab-48a9-4bee-a263-ebac8d638dec
-ms.openlocfilehash: 49907808729375e3bea18a5f4bbf204852e0072a
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 7c7f079d8867416ab4f091d7c95a01ab9e40c0e8
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81345697"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82910153"
 ---
 # <a name="_fsopen-_wfsopen"></a>_fsopen, _wfsopen
 
@@ -69,7 +69,7 @@ FILE *_wfsopen(
 
 ### <a name="parameters"></a>Paramètres
 
-*Fichier*<br/>
+*extension*<br/>
 Nom du fichier à ouvrir.
 
 *mode*<br/>
@@ -80,41 +80,41 @@ Type de partage autorisé.
 
 ## <a name="return-value"></a>Valeur de retour
 
-Chacune de ces fonctions retourne un pointeur vers le flux. Une valeur de pointeur null indique une erreur. Si *le nom de fichier* ou le *mode* est **NULL** ou une chaîne vide, ces fonctions invoquent le gestionnaire de paramètres invalides, tel que décrit dans La validation [de paramètres](../../c-runtime-library/parameter-validation.md). Si l’exécution est autorisée à se poursuivre, ces fonctions renvoient **NULL** et **placent errno** à **EINVAL**.
+Chacune de ces fonctions retourne un pointeur vers le flux. Une valeur de pointeur null indique une erreur. Si *filename* ou *mode* a la **valeur null** ou est une chaîne vide, ces fonctions appellent le gestionnaire de paramètres non valides, comme décrit dans [validation de paramètre](../../c-runtime-library/parameter-validation.md). Si l’exécution est autorisée à se poursuivre, ces fonctions retournent la **valeur null** et attribuent à **errno** la valeur **EINVAL**.
 
 Pour plus d’informations sur ces codes d’erreur et autres, consultez [_doserrno, errno, _sys_errlist et _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
 
-## <a name="remarks"></a>Notes
+## <a name="remarks"></a>Notes 
 
-La fonction **_fsopen** ouvre le fichier spécifié par *nom de fichier* comme un flux et prépare le fichier pour la lecture ou l’écriture partagée ultérieure, tel que défini par le mode et les arguments *shflag.* **_wfsopen** est une version à caractère large de **_fsopen**; les arguments *de nom de fichier* et de *mode* pour **_wfsopen** sont des chaînes de caractère large. **_wfsopen** et **_fsopen** se comportent de façon identique autrement.
+La fonction **_fsopen** ouvre le fichier spécifié par *nom* de fichier en tant que flux et prépare le fichier pour la lecture ou l’écriture partagée ultérieure, tel que défini par les arguments mode et *shflag* . **_wfsopen** est une version à caractères larges de **_fsopen**; les arguments de *nom de fichier* et de *mode* de **_wfsopen** sont des chaînes à caractères larges. dans le cas contraire, **_wfsopen** et **_fsopen** se comportent de la même façon.
 
-Le *mode* de chaîne de caractères spécifie le type d’accès demandé pour le fichier, comme indiqué dans le tableau suivant.
-
-|Terme|Définition|
-|----------|----------------|
-|**"r"**|Ouvre pour l'accès en lecture. Si le fichier n’existe pas ou ne peut pas être trouvé, **l'_fsopen’appel** échoue.|
-|**"w"**|Ouvre un fichier vide pour l'accès en écriture. Si le fichier spécifié existe, son contenu est détruit.|
-|**"a"**|Ouvre pour l'écriture à la fin du fichier (ajout) ; crée d'abord le fichier s'il n'existe pas.|
-|**"r"**|Ouvre pour l'accès en lecture et en écriture. (Le fichier doit exister.)|
-|**"W"**|Ouvre un fichier vide pour l'accès en lecture et en écriture. Si le fichier spécifié existe, son contenu est détruit.|
-|**"A"**|Ouvre pour l'écriture et l'ajout ; crée d'abord le fichier s'il n'existe pas.|
-
-Utilisez les types **"w"** et **"w"** avec soin, car ils peuvent détruire les fichiers existants.
-
-Lorsqu’un fichier est ouvert avec le type **d’accès** **« a »** ou « a », toutes les opérations d’écriture se produisent à la fin du fichier. Le pointeur de fichier peut être repositionné à l’aide [de fseek](fseek-fseeki64.md) ou [rembobinage](rewind.md), mais il est toujours déplacé vers la fin du fichier avant toute opération de rédaction est effectuée. Par conséquent, les données existantes ne peuvent pas être écrasées. Lorsque le type **d’accès « r »**, **« w »** ou « **a »** est spécifié, la lecture et l’écriture sont autorisées (le fichier est dit ouvert pour la mise à jour). Cependant, quand vous basculez entre lecture et écriture, une opération intermédiaire [fsetpos](fsetpos.md), [fseek](fseek-fseeki64.md) ou [rewind](rewind.md) doit exister. La position actuelle peut être spécifiée pour [l’opération fsetpos](fsetpos.md) ou [fseek,](fseek-fseeki64.md) si désiré. En plus des valeurs ci-dessus, l’un des personnages suivants peut être inclus dans le *mode* pour spécifier le mode de traduction pour les nouvelles lignes, et pour la gestion des fichiers.
+Le *mode* chaîne de caractères spécifie le type d’accès demandé pour le fichier, comme indiqué dans le tableau suivant.
 
 |Terme|Définition|
 |----------|----------------|
-|**T**|Ouvre un fichier en mode texte (traduit). Dans ce mode, les combinaisons d’alimentation en ligne de retour de transport (CR-LF) sont traduites en flux à ligne unique (LF) sur l’entrée et les caractères LF sont traduits en combinaisons CR-LF sur la sortie. De même, Ctrl+Z est interprété comme un caractère de fin de fichier en entrée. Dans les fichiers ouverts pour la lecture ou la lecture/écriture, **_fsopen** vérifie un CTRL-Z à la fin du fichier et le supprime, si possible. Ceci est fait parce que l’utilisation [de fseek](fseek-fseeki64.md) et [ftell](ftell-ftelli64.md) pour se déplacer dans un fichier qui se termine par un CTRL-Z pourrait provoquer [fseek](fseek-fseeki64.md) de se comporter incorrectement près de la fin du fichier.|
-|**B**|Ouvre un fichier en mode binaire (non traduit) ; les traductions ci-dessus sont supprimées.|
-|**S**|Indique que la mise en cache est optimisée pour, mais non limitée à, l'accès séquentiel à partir du disque.|
+|**r**|Ouvre pour l'accès en lecture. Si le fichier n’existe pas ou est introuvable, l’appel de **_fsopen** échoue.|
+|**s**|Ouvre un fichier vide pour l'accès en écriture. Si le fichier spécifié existe, son contenu est détruit.|
+|**un**|Ouvre pour l'écriture à la fin du fichier (ajout) ; crée d'abord le fichier s'il n'existe pas.|
+|**"r +"**|Ouvre pour l'accès en lecture et en écriture. (Le fichier doit exister.)|
+|**"w +"**|Ouvre un fichier vide pour l'accès en lecture et en écriture. Si le fichier spécifié existe, son contenu est détruit.|
+|**"a +"**|Ouvre pour l'écriture et l'ajout ; crée d'abord le fichier s'il n'existe pas.|
+
+Utilisez les types **« w »** et **« w + »** avec précaution, car ils peuvent détruire les fichiers existants.
+
+Lorsqu’un fichier est ouvert avec le type d’accès **« a »** ou **« a + »** , toutes les opérations d’écriture se produisent à la fin du fichier. Le pointeur de fichier peut être repositionné à l’aide de [fseek](fseek-fseeki64.md) ou [rembobiner](rewind.md), mais il est toujours redéplacé à la fin du fichier avant toute opération d’écriture. Par conséquent, les données existantes ne peuvent pas être remplacées. Quand le type d’accès **"r +"**, **"w +"** ou **"a +"** est spécifié, la lecture et l’écriture sont autorisées (le fichier est dit ouvert pour mise à jour). Cependant, quand vous basculez entre lecture et écriture, une opération intermédiaire [fsetpos](fsetpos.md), [fseek](fseek-fseeki64.md) ou [rewind](rewind.md) doit exister. La position actuelle peut être spécifiée pour l’opération [fsetpos](fsetpos.md) ou [fseek](fseek-fseeki64.md) , si vous le souhaitez. Outre les valeurs ci-dessus, l’un des caractères suivants peut être inclus dans le *mode* pour spécifier le mode de traduction pour les nouvelles lignes et pour la gestion des fichiers.
+
+|Terme|Définition|
+|----------|----------------|
+|**t**|Ouvre un fichier en mode texte (traduit). Dans ce mode, les combinaisons retour chariot-saut de ligne sont traduites en flux à ligne unique (LF) en entrée et les caractères de saut de ligne sont traduits en combinaisons retour chariot/saut de ligne en sortie. De même, Ctrl+Z est interprété comme un caractère de fin de fichier en entrée. Dans les fichiers ouverts en lecture ou en lecture/écriture, **_fsopen** recherche un Ctrl + Z à la fin du fichier et le supprime, si possible. Cela est dû au fait que l’utilisation de [fseek](fseek-fseeki64.md) et de [ftell](ftell-ftelli64.md) pour se déplacer dans un fichier qui se termine par un Ctrl + Z peut provoquer un comportement incorrect de [fseek](fseek-fseeki64.md) à proximité de la fin du fichier.|
+|**p**|Ouvre un fichier en mode binaire (non traduit) ; les traductions ci-dessus sont supprimées.|
+|**X**|Indique que la mise en cache est optimisée pour, mais non limitée à, l'accès séquentiel à partir du disque.|
 |**R**|Indique que la mise en cache est optimisée pour, mais non limitée à, l'accès aléatoire à partir du disque.|
 |**T**|Spécifie un fichier comme temporaire. Si possible, il n'est pas vidé sur disque.|
 |**D**|Spécifie un fichier comme temporaire. Il est supprimé lorsque le dernier pointeur de fichier est fermé.|
 
-Si **t** ou **b** n'est pas spécifié dans *mode*, le mode de traduction est défini par la variable de mode par défaut **_fmode**. Si **t** ou **b** est préfixé à l’argument, la fonction échoue et renvoie **NULL**. Pour en savoir plus sur les modes texte et binaire, consultez [E/S de fichier en mode texte et binaire](../../c-runtime-library/text-and-binary-mode-file-i-o.md).
+Si **t** ou **b** n'est pas spécifié dans *mode*, le mode de traduction est défini par la variable de mode par défaut **_fmode**. Si **t** ou **b** est préfixé à l’argument, la fonction échoue et retourne la **valeur null**. Pour en savoir plus sur les modes texte et binaire, consultez [E/S de fichier en mode texte et binaire](../../c-runtime-library/text-and-binary-mode-file-i-o.md).
 
-*L’argument shflag* est une expression constante composée de l’une des constantes manifestes suivantes, définies dans Share.h.
+L’argument *shflag* est une expression constante constituée de l’une des constantes manifestes suivantes, définies dans share. h.
 
 |Terme|Définition|
 |----------|----------------|
@@ -124,7 +124,7 @@ Si **t** ou **b** n'est pas spécifié dans *mode*, le mode de traduction est d�
 |**_SH_DENYRW**|Refuse l'accès en lecture et en écriture au fichier.|
 |**_SH_DENYWR**|Refuse l'accès en écriture au fichier.|
 
-Par défaut, l’état global de cette fonction est étendue à l’application. Pour changer cela, voir [Global State dans le CRT](../global-state.md).
+Par défaut, l’état global de cette fonction est limité à l’application. Pour modifier cette valeur, consultez [état global dans le CRT](../global-state.md).
 
 ### <a name="generic-text-routine-mappings"></a>Mappages de routines de texte générique
 
@@ -134,10 +134,10 @@ Par défaut, l’état global de cette fonction est étendue à l’application.
 
 ## <a name="requirements"></a>Spécifications
 
-|Fonction|En-tête requis|En-têtes facultatifs|
+|Function|En-tête requis|En-têtes facultatifs|
 |--------------|---------------------|----------------------|
-|**_fsopen**|\<stdio.h>|\<share.h><br /><br /> Pour la constante manifeste pour le paramètre *de shflag.*|
-|**_wfsopen**|\<stdio.h> ou \<wchar.h>|\<share.h><br /><br /> Pour la constante manifeste pour le paramètre *de shflag.*|
+|**_fsopen**|\<stdio.h>|\<share.h><br /><br /> Pour la constante de manifeste pour le paramètre *shflag* .|
+|**_wfsopen**|\<stdio.h> ou \<wchar.h>|\<share.h><br /><br /> Pour la constante de manifeste pour le paramètre *shflag* .|
 
 ## <a name="example"></a>Exemple
 

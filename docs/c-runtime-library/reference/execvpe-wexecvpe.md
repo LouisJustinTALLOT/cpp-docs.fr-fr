@@ -18,7 +18,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-process-l1-1-0.dll
-- api-ms-win-crt-private-l1-1-0
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -33,12 +33,12 @@ helpviewer_keywords:
 - _wexecvpe function
 - _execvpe function
 ms.assetid: c0c3c986-d9c0-4814-a96c-10f0b3092766
-ms.openlocfilehash: dd2e4c91affe211cc58a2f1c147646172f3f34c4
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 4a1a2d66600a7502c088577adca4085c68e4ccd7
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81347641"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82909700"
 ---
 # <a name="_execvpe-_wexecvpe"></a>_execvpe, _wexecvpe
 
@@ -67,7 +67,7 @@ intptr_t _wexecvpe(
 *cmdname*<br/>
 Chemin d’accès du fichier à exécuter.
 
-*argv argv*<br/>
+*argv*<br/>
 Tableau de pointeurs vers les paramètres.
 
 *envp*<br/>
@@ -75,47 +75,47 @@ Tableau de pointeurs vers les paramètres d'environnement.
 
 ## <a name="return-value"></a>Valeur de retour
 
-En cas de réussite, ces fonctions ne retournent pas au processus appelant. Une valeur de rendement de -1 indique une erreur, auquel cas la variable globale **errno** est définie.
+En cas de réussite, ces fonctions ne retournent pas au processus appelant. Une valeur de retour de-1 indique une erreur, auquel cas la variable globale **errno** est définie.
 
-|**valeur errno**|Description|
+|valeur **errno**|Description|
 |-------------------|-----------------|
 |**E2BIG**|L’espace nécessaire aux arguments et aux paramètres d’environnement dépasse 32 Ko.|
-|**LES EACCES**|Le fichier spécifié possède un verrou ou une violation de partage.|
+|**EACCES**|Le fichier spécifié possède un verrou ou une violation de partage.|
 |**EMFILE**|Trop de fichiers sont ouverts. (Le fichier spécifié doit être ouvert pour déterminer s'il est exécutable.)|
-|**ENOENT (ENOENT)**|Fichier ou chemin d’accès introuvable.|
+|**ENOENT**|Fichier ou chemin d’accès introuvable.|
 |**ENOEXEC**|Le fichier spécifié n'est pas exécutable ou a un format de fichier exécutable non valide.|
-|**ENOMEM (ENOMEM)**|Mémoire insuffisante pour exécuter le nouveau processus ; la mémoire disponible est endommagée ; ou il existe un bloc non valide, ce qui indique que le processus appelant n'a pas été alloué correctement.|
+|**ENOMEM**|Mémoire insuffisante pour exécuter le nouveau processus ; la mémoire disponible est endommagée ; ou il existe un bloc non valide, ce qui indique que le processus appelant n'a pas été alloué correctement.|
 
 Pour plus d’informations sur ces codes de retour et les autres, consultez [errno, _doserrno, _sys_errlist et _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
 
-## <a name="remarks"></a>Notes
+## <a name="remarks"></a>Notes 
 
-Chacune de ces fonctions charge et exécute un nouveau processus, passe un tableau de pointeurs à des arguments de ligne de commande et un tableau de pointeurs aux paramètres d’environnement. Ces fonctions utilisent la variable **d’environnement PATH** pour trouver le fichier à exécuter.
+Chacune de ces fonctions charge et exécute un nouveau processus, passe un tableau de pointeurs à des arguments de ligne de commande et un tableau de pointeurs aux paramètres d’environnement. Ces fonctions utilisent la variable **d’environnement PATH** pour rechercher le fichier à exécuter.
 
-Les fonctions **_execvpe** valident leurs paramètres. Si le *cmdname* est un pointeur nul, ou si *argv* est un pointeur nul, un pointeur à un tableau vide, ou un pointeur à un tableau qui contient une chaîne vide comme premier argument, ces fonctions invoquent le gestionnaire de paramètre invalide, tel que décrit dans [La validation de paramètres](../../c-runtime-library/parameter-validation.md). Si l’exécution est autorisée à se poursuivre, ces fonctions **définies errno** à **EINVAL** et retour -1. Aucun processus lancé.
+Les fonctions **_execvpe** valident leurs paramètres. Si *CmdName* est un pointeur null, si *argv* est un pointeur null, un pointeur désignant un tableau vide ou un pointeur vers un tableau qui contient une chaîne vide comme premier argument, ces fonctions appellent le gestionnaire de paramètres non valides, comme décrit dans [validation de paramètre](../../c-runtime-library/parameter-validation.md). Si l’exécution est autorisée à se poursuivre, ces fonctions définissent **errno** sur **EINVAL** et retournent-1. Aucun processus lancé.
 
-Par défaut, l’état global de cette fonction est étendue à l’application. Pour changer cela, voir [Global State dans le CRT](../global-state.md).
+Par défaut, l’état global de cette fonction est limité à l’application. Pour modifier cette valeur, consultez [état global dans le CRT](../global-state.md).
 
 ## <a name="requirements"></a>Spécifications
 
-|Fonction|En-tête requis|En-tête facultatif|
+|Function|En-tête requis|En-tête facultatif|
 |--------------|---------------------|---------------------|
 |**_execvpe**|\<process.h>|\<errno.h>|
 |**_wexecvpe**|\<process.h> ou \<wchar.h>|\<errno.h>|
 
 Pour plus d’informations sur la compatibilité, consultez [Compatibility](../../c-runtime-library/compatibility.md).
 
-## <a name="example"></a>Exemple
+## <a name="example"></a> Exemple
 
 Consultez l’exemple dans [_exec, _wexec, fonctions](../../c-runtime-library/exec-wexec-functions.md).
 
 ## <a name="see-also"></a>Voir aussi
 
-[Contrôle des processus et de l’environnement](../../c-runtime-library/process-and-environment-control.md)<br/>
-[_exec, fonctions _wexec](../../c-runtime-library/exec-wexec-functions.md)<br/>
+[Contrôle de processus et d’environnement](../../c-runtime-library/process-and-environment-control.md)<br/>
+[_exec, _wexec fonctions](../../c-runtime-library/exec-wexec-functions.md)<br/>
 [abort](abort.md)<br/>
 [atexit](atexit.md)<br/>
 [exit, _Exit, _exit](exit-exit-exit.md)<br/>
 [_onexit, _onexit_m](onexit-onexit-m.md)<br/>
-[_spawn, fonctions _wspawn](../../c-runtime-library/spawn-wspawn-functions.md)<br/>
+[_spawn, _wspawn fonctions](../../c-runtime-library/spawn-wspawn-functions.md)<br/>
 [system, _wsystem](system-wsystem.md)<br/>

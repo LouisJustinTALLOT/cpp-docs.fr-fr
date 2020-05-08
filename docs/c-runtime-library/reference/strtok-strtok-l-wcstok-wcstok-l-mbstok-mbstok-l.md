@@ -25,7 +25,7 @@ api_location:
 - ucrtbase.dll
 - api-ms-win-crt-multibyte-l1-1-0.dll
 - api-ms-win-crt-string-l1-1-0.dll
-- api-ms-win-crt-private-l1-1-0
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -53,12 +53,12 @@ helpviewer_keywords:
 - _tcstok_l function
 - strtok_l function
 ms.assetid: 904cb734-f0d7-4d77-ba81-4791ddf461ae
-ms.openlocfilehash: d228d9824c534a21e4a22797e4b070e6d8d0b179
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 7d8f0d889d58fe776e53f78955fff7fd1cdfa40f
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81365198"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82912638"
 ---
 # <a name="strtok-_strtok_l-wcstok-_wcstok_l-_mbstok-_mbstok_l"></a>strtok, _strtok_l, wcstok, _wcstok_l, _mbstok, _mbstok_l
 
@@ -101,7 +101,7 @@ unsigned char *_mbstok_l(
 
 ### <a name="parameters"></a>Paramètres
 
-*strToken (en)*<br/>
+*strToken*<br/>
 Chaîne contenant le ou les jetons.
 
 *strDelimit*<br/>
@@ -112,25 +112,25 @@ Paramètres régionaux à utiliser.
 
 ## <a name="return-value"></a>Valeur de retour
 
-Retourne un pointeur au jeton suivant trouvé dans *strToken*. Les fonctions retournent **NULL** quand plus de jetons ne sont trouvés. Chaque appel modifie *strToken* en remplaçant un caractère nul pour le premier délimital qui se produit après le jeton retourné.
+Retourne un pointeur vers le jeton suivant trouvé dans *strToken*. Les fonctions retournent **null** quand aucun jeton supplémentaire n’est trouvé. Chaque appel modifie *strToken* en substituant un caractère null au premier délimiteur qui se produit après le jeton retourné.
 
-## <a name="remarks"></a>Notes
+## <a name="remarks"></a>Notes 
 
-La fonction **strtok** trouve le jeton suivant dans *strToken*. L’ensemble de caractères dans *strDelimit* spécifie délimitations possibles du jeton à trouver dans *strToken* sur l’appel en cours. **wcstok** et **_mbstok** sont des versions à caractère large et multioctets de **strtok**. Les arguments et la valeur de retour de **wcstok** sont des chaînes de caractère large; ceux de **_mbstok** sont des cordes multioctets-caractères. Ces trois fonctions se comportent sinon de façon identique.
+La fonction **strtok** recherche le jeton suivant dans *strToken*. Le jeu de caractères dans *strDelimit* spécifie les délimiteurs possibles du jeton à trouver dans *strToken* sur l’appel en cours. **wcstok** et **_mbstok** sont des versions à caractères larges et à caractères multioctets de **strtok**. Les arguments et la valeur de retour de **wcstok** sont des chaînes à caractères larges ; ceux de **_mbstok** sont des chaînes de caractères multioctets. Ces trois fonctions se comportent sinon de façon identique.
 
 > [!IMPORTANT]
 > Ces fonctions sont exposées à une menace potentielle liée à un problème de dépassement de mémoire tampon. Les dépassements de mémoire tampon sont une méthode fréquente d'attaque du système, ce qui provoque une élévation des privilèges injustifiée. Pour plus d’informations, consultez [Solutions contre les dépassements de mémoire tampon](/windows/win32/SecBP/avoiding-buffer-overruns).
 
-Sur le premier appel à **strtok**, la fonction saute delimiters de premier plan et retourne un pointeur à la première jeton en *strToken*, mettant fin au jeton avec un caractère nul. Plus de jetons peuvent être brisés du reste de *strToken* par une série d’appels à **strtok**. Chaque appel à **strtok** modifie *strToken* en insérant un caractère nul après le **jeton** retourné par cet appel. Pour lire le jeton suivant de *strToken*, appelez **strtok** avec une valeur **NULL** pour l’argument *strToken.* **L’argument** *STRToken* NULL provoque **strtok** à la recherche du jeton suivant dans le *strToken*modifié . *L’argument strDelimit* peut prendre n’importe quelle valeur d’un appel à l’autre de sorte que l’ensemble de délimitations peut varier.
+Lors du premier appel à **strtok**, la fonction ignore les délimiteurs de début et retourne un pointeur vers le premier jeton dans *strToken*, en terminant le jeton par un caractère null. Un plus grand nombre de jetons peuvent être décomposés du reste de *strToken* par une série d’appels à **strtok**. Chaque appel à **strtok** modifie *strToken* en insérant un caractère null après le **jeton** retourné par cet appel. Pour lire le jeton suivant dans *strToken*, appelez **strtok** avec une valeur **null** pour l’argument *strToken* . L’argument *StrToken* **null** force **strtok** à rechercher le jeton suivant dans le *strToken*modifié. L’argument *strDelimit* peut prendre n’importe quelle valeur d’un appel à la fonction suivante, afin que l’ensemble de délimiteurs puisse varier.
 
-La valeur de sortie est affectée par l’établissement de la **LC_CTYPE’établissement** de la catégorie du lieu. Pour plus d’informations, consultez [setlocale](setlocale-wsetlocale.md).
+La valeur de sortie est affectée par la valeur du paramètre de catégorie **LC_CTYPE** des paramètres régionaux. Pour plus d’informations, consultez [setlocale](setlocale-wsetlocale.md).
 
-Les versions de ces fonctions sans le **suffixe _l** utilisent le lieu actuel pour ce comportement local-dépendant. Les versions avec le **suffixe _l** sont identiques, sauf qu’elles utilisent le paramètre local passé à la place. Pour plus d’informations, consultez [Locale](../../c-runtime-library/locale.md).
+Les versions de ces fonctions sans le suffixe **_L** utilisent les paramètres régionaux actuels pour ce comportement dépendant des paramètres régionaux. Les versions avec le suffixe **_L** sont identiques, sauf qu’elles utilisent à la place les paramètres régionaux transmis. Pour plus d’informations, consultez [Locale](../../c-runtime-library/locale.md).
 
 > [!NOTE]
 > Chaque fonction utilise une variable statique locale de thread pour analyser la chaîne en jetons. Par conséquent, plusieurs threads peuvent appeler simultanément ces fonctions sans effets indésirables. Cependant, dans un thread unique, il est très probable que l’entrelacement d’appels dans l’une de ses fonctions se traduise par une altération des données et des résultats imprécis. Quand il s’agit d’analyser différentes chaînes, terminez l’analyse d’une chaîne avant de débuter celle de la suivante. De même, tenez compte du risque potentiel que représente l’appel de l’une de ces fonctions dans une boucle pendant qu’une autre fonction est appelée. S l’une de ces fonctions met fin à l’autre fonction, une séquence entrelacée d’appels est générée, ce qui a pour conséquence d’altérer les données.
 
-Par défaut, l’état global de cette fonction est étendue à l’application. Pour changer cela, voir [Global State dans le CRT](../global-state.md).
+Par défaut, l’état global de cette fonction est limité à l’application. Pour modifier cette valeur, consultez [état global dans le CRT](../global-state.md).
 
 ### <a name="generic-text-routine-mappings"></a>Mappages de routines de texte générique
 
@@ -197,8 +197,8 @@ tokens
 
 ## <a name="see-also"></a>Voir aussi
 
-[Manipulation des cordes](../../c-runtime-library/string-manipulation-crt.md)<br/>
-[Local](../../c-runtime-library/locale.md)<br/>
-[Interprétation des séquences multioctets-caractères](../../c-runtime-library/interpretation-of-multibyte-character-sequences.md)<br/>
+[Manipulation de chaînes](../../c-runtime-library/string-manipulation-crt.md)<br/>
+[Paramètres régionaux](../../c-runtime-library/locale.md)<br/>
+[Interprétation des séquences de caractères multioctets](../../c-runtime-library/interpretation-of-multibyte-character-sequences.md)<br/>
 [strcspn, wcscspn, _mbscspn, _mbscspn_l](strcspn-wcscspn-mbscspn-mbscspn-l.md)<br/>
 [strspn, wcsspn, _mbsspn, _mbsspn_l](strspn-wcsspn-mbsspn-mbsspn-l.md)<br/>
