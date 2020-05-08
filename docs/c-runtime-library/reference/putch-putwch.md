@@ -18,7 +18,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-conio-l1-1-0.dll
-- api-ms-win-crt-private-l1-1-0
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -35,12 +35,12 @@ helpviewer_keywords:
 - putch function
 - console, writing characters to
 ms.assetid: 3babc7cf-e333-405d-8449-c788d61d51aa
-ms.openlocfilehash: 123d4a9b1ee5024ed85b7034462b469740012b85
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 5d327030f816b4ad4d68e0366225d27fee00a7bf
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81338420"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82916188"
 ---
 # <a name="_putch-_putwch"></a>_putch, _putwch
 
@@ -63,20 +63,20 @@ wint_t _putwch(
 
 ### <a name="parameters"></a>Paramètres
 
-*C*<br/>
+*secteur*<br/>
 Caractère à sortir.
 
 ## <a name="return-value"></a>Valeur de retour
 
-Retourne *c* en cas de réussite. Si **_putch** échoue, elle renvoie **l’EOF**; si **_putwch** échoue, il retourne **WEOF**.
+Retourne *c* en cas de réussite. Si **_putch** échoue, elle retourne **EOF**; Si **_putwch** échoue, elle retourne **WEOF**.
 
-## <a name="remarks"></a>Notes
+## <a name="remarks"></a>Notes 
 
-Ces fonctions écrivent le personnage *c* directement, sans tamponnage, à la console. Dans Windows NT, **_putwch** écrit des caractères Unicode en utilisant les paramètres régionaux actifs de la console.
+Ces fonctions écrivent le caractère *c* directement, sans mise en mémoire tampon, sur la console. Dans Windows NT, **_putwch** écrit des caractères Unicode en utilisant les paramètres régionaux actifs de la console.
 
-Les versions avec suffixe **_nolock** sont identiques, à ceci près qu’elles ne sont pas protégées contre les interférences avec d’autres threads. Pour plus d’informations, voir **_putch_nolock**, **_putwch_nolock**.
+Les versions avec suffixe **_nolock** sont identiques, à ceci près qu’elles ne sont pas protégées contre les interférences avec d’autres threads. Pour plus d’informations, consultez **_putch_nolock**, **_putwch_nolock**.
 
-Par défaut, l’état global de cette fonction est étendue à l’application. Pour changer cela, voir [Global State dans le CRT](../global-state.md).
+Par défaut, l’état global de cette fonction est limité à l’application. Pour modifier cette valeur, consultez [état global dans le CRT](../global-state.md).
 
 ### <a name="generic-text-routine-mappings"></a>Mappages de routines de texte générique
 
@@ -97,12 +97,12 @@ Pour plus d’informations sur la compatibilité, consultez [Compatibility](../.
 
 Toutes les versions des [bibliothèques Runtime C](../../c-runtime-library/crt-library-features.md).
 
-## <a name="example"></a>Exemple
+## <a name="example"></a> Exemple
 
 Consultez l’exemple relatif à [_getch](getch-getwch.md).
 
 ## <a name="see-also"></a>Voir aussi
 
-[Console et Port I/O](../../c-runtime-library/console-and-port-i-o.md)<br/>
+[E/s de console et de port](../../c-runtime-library/console-and-port-i-o.md)<br/>
 [_cprintf, _cprintf_l, _cwprintf, _cwprintf_l](cprintf-cprintf-l-cwprintf-cwprintf-l.md)<br/>
 [_getch, _getwch](getch-getwch.md)<br/>

@@ -18,7 +18,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-stdio-l1-1-0.dll
-- api-ms-win-crt-private-l1-1-0
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -39,12 +39,12 @@ helpviewer_keywords:
 - files [C++], opening
 - Unicode [C++], files
 ms.assetid: c534857e-39ee-4a3f-bd26-dfe551ac96c3
-ms.openlocfilehash: f18b04cadfa80d7e0be193bbd552efe8486eeeda
-ms.sourcegitcommit: fcc3aeb271449f8be80348740cffef39ba543407
+ms.openlocfilehash: a06191791132784740fa85ca45e23e8aaa56279e
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/29/2020
-ms.locfileid: "82538601"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82914912"
 ---
 # <a name="fopen_s-_wfopen_s"></a>fopen_s, _wfopen_s
 
@@ -84,11 +84,11 @@ Zéro si l'opération a réussi ; code d'erreur en cas de échec. Pour plus d�
 
 |*pFile*|*extension*|*mode*|Valeur de retour|Contenu de *pFile*|
 |-------------|----------------|------------|------------------|------------------------|
-|**NULL**|n'importe laquelle|n'importe laquelle|**EINVAL**|inchangé|
-|n'importe laquelle|**NULL**|n'importe laquelle|**EINVAL**|inchangé|
-|n'importe laquelle|n'importe laquelle|**NULL**|**EINVAL**|inchangé|
+|**NUL**|n'importe laquelle|n'importe laquelle|**EINVAL**|inchangé|
+|n'importe laquelle|**NUL**|n'importe laquelle|**EINVAL**|inchangé|
+|n'importe laquelle|n'importe laquelle|**NUL**|**EINVAL**|inchangé|
 
-## <a name="remarks"></a>Notes
+## <a name="remarks"></a>Notes 
 
 Les fichiers ouverts par **fopen_s** et **_wfopen_s** ne peuvent pas être partagés. Si vous avez besoin qu’un fichier soit partageable, utilisez [_fsopen, _wfsopen](fsopen-wfsopen.md) avec la constante de mode de partage appropriée, par exemple, **_SH_DENYNO** pour le partage en lecture/écriture.
 
@@ -202,9 +202,9 @@ Les caractères valides pour la chaîne de *mode* utilisée dans **fopen_s** et 
 
 Si vous utilisez le mode **RB** , vous n’avez pas besoin de porter votre code et vous vous attendez à lire une grande partie du fichier et/ou ne vous souciez pas des performances réseau, les fichiers Win32 mappés en mémoire peuvent également être une option.
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
-|Fonction|En-tête requis|
+|Function|En-tête requis|
 |--------------|---------------------|
 |**fopen_s**|\<stdio.h>|
 |**_wfopen_s**|\<stdio.h> ou \<wchar.h>|

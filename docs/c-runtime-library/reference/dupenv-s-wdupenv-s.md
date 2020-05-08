@@ -18,7 +18,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-environment-l1-1-0.dll
-- api-ms-win-crt-private-l1-1-0
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -39,12 +39,12 @@ helpviewer_keywords:
 - dupenv_s function
 - tdupenv_s function
 ms.assetid: b729ecc2-a31d-4ccf-92a7-5accedb8f8c8
-ms.openlocfilehash: f65f1da3e8cef077df04d0bdb7eb2aaf75afd9fa
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 39184eff5db511dfb920782c3e29bf2b0cc9340e
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81348059"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82915181"
 ---
 # <a name="_dupenv_s-_wdupenv_s"></a>_dupenv_s, _wdupenv_s
 
@@ -73,38 +73,38 @@ errno_t _wdupenv_s(
 *buffer*<br/>
 Mémoire tampon pour stocker la valeur de la variable.
 
-*nombreOfElements*<br/>
-Taille du *tampon*.
+*numberOfElements*<br/>
+Taille de la *mémoire tampon*.
 
-*varname varname*<br/>
+*argument*<br/>
 Nom de la variable d'environnement.
 
 ## <a name="return-value"></a>Valeur de retour
 
 Zéro en cas de réussite, code d'erreur en cas d'échec.
 
-Ces fonctions valident leurs paramètres ; si *le tampon* ou le *varname* est **NULL**, le gestionnaire de paramètre invalide est invoqué comme décrit dans La validation [de paramètres](../../c-runtime-library/parameter-validation.md). Si l’exécution est autorisée à se poursuivre, les fonctions **définies errno** à **EINVAL** et retourner **EINVAL**.
+Ces fonctions valident leurs paramètres ; Si *buffer* ou *varname* a la **valeur null**, le gestionnaire de paramètre non valide est appelé, comme décrit dans [validation de paramètre](../../c-runtime-library/parameter-validation.md). Si l’exécution est autorisée à se poursuivre, les fonctions définissent **errno** sur **EINVAL** et retournent **EINVAL**.
 
-Si ces fonctions ne peuvent pas allouer suffisamment de mémoire, elles fixent le *tampon* à **NULL** et *numberOfElements* à 0, et renvoient **ENOMEM**.
+Si ces fonctions ne peuvent pas allouer suffisamment de mémoire, elles définissent la valeur de *buffer* à **null** et *NumberOfElements* sur 0, et retournent **ENOMEM**.
 
-## <a name="remarks"></a>Notes
+## <a name="remarks"></a>Notes 
 
-La fonction **_dupenv_s** recherche la liste des variables de l’environnement pour *le varname*. Si la variable est trouvée, **_dupenv_s** alloue un tampon et copie la valeur de la variable dans le tampon. L’adresse et la longueur du tampon sont retournées en *tampon* et *en nombreOfElements*. En allouant le tampon lui-même, **_dupenv_s** offre une alternative plus pratique à [getenv_s, _wgetenv_s](getenv-s-wgetenv-s.md).
+La fonction **_dupenv_s** recherche la liste de variables d’environnement pour *varname*. Si la variable est trouvée, **_dupenv_s** alloue une mémoire tampon et copie la valeur de la variable dans la mémoire tampon. L’adresse et la longueur de la mémoire tampon sont retournées dans *buffer* et *NumberOfElements*. En allouant la mémoire tampon elle-même, **_dupenv_s** offre une alternative plus pratique à [getenv_s, _wgetenv_s](getenv-s-wgetenv-s.md).
 
 > [!NOTE]
 > Il revient au programme appelant de libérer la mémoire en appelant [free](free.md).
 
-Si la variable n’est pas trouvée, alors *le tampon* est réglé à **NULL**, *numberOfElements* est réglé à 0, et la valeur de retour est de 0 parce que cette situation n’est pas considérée comme une condition d’erreur.
+Si la variable est introuvable, la *mémoire tampon* est définie sur **null**, *NumberOfElements* a la valeur 0 et la valeur de retour est 0, car cette situation n’est pas considérée comme une condition d’erreur.
 
-Si vous n’êtes pas intéressé par la taille du tampon, vous pouvez passer **NULL** pour *numberOfElements*.
+Si vous n’êtes pas intéressé par la taille de la mémoire tampon, vous pouvez passer la **valeur null** pour *NumberOfElements*.
 
-**_dupenv_s n’est** pas sensible au cas dans le système d’exploitation Windows. **_dupenv_s** utilise la copie de l’environnement pointée par la variable mondiale **_environ** pour accéder à l’environnement. Voir les remarques dans [getenv_s, _wgetenv_s](getenv-s-wgetenv-s.md) pour une discussion sur **_environ**.
+**_dupenv_s** ne respecte pas la casse dans le système d’exploitation Windows. **_dupenv_s** utilise la copie de l’environnement vers laquelle pointe la variable globale **_environ** pour accéder à l’environnement. Pour plus d’informations sur **_environ**, consultez les notes dans [getenv_s _wgetenv_s](getenv-s-wgetenv-s.md) .
 
-La valeur du *tampon* est une copie de la valeur de la variable de l’environnement; le modifier n’a aucun effet sur l’environnement. Utilisez la fonction [_putenv_s, _wputenv_s](putenv-s-wputenv-s.md) pour modifier la valeur d’une variable d’environnement.
+La valeur de *buffer* est une copie de la valeur de la variable d’environnement ; sa modification n’a aucun effet sur l’environnement. Utilisez la fonction [_putenv_s, _wputenv_s](putenv-s-wputenv-s.md) pour modifier la valeur d’une variable d’environnement.
 
-**_wdupenv_s** est une version à caractère large de **_dupenv_s**; les arguments de **_wdupenv_s** sont des chaînes de caractère large. La **variable mondiale _wenviron** est une version à caractère large de **_environ**. Voir les remarques dans [getenv_s, _wgetenv_s](getenv-s-wgetenv-s.md) pour en savoir plus sur **_wenviron**.
+**_wdupenv_s** est une version à caractères larges de **_dupenv_s**; les arguments de **_wdupenv_s** sont des chaînes à caractères larges. La variable globale **_wenviron** est une version à caractères larges de **_environ**. Pour plus d’informations sur **_wenviron**, consultez les notes dans [getenv_s, _wgetenv_s](getenv-s-wgetenv-s.md) .
 
-Par défaut, l’état global de cette fonction est étendue à l’application. Pour changer cela, voir [Global State dans le CRT](../global-state.md).
+Par défaut, l’état global de cette fonction est limité à l’application. Pour modifier cette valeur, consultez [état global dans le CRT](../global-state.md).
 
 ### <a name="generic-text-routine-mappings"></a>Mappages de routines de texte générique
 
@@ -149,8 +149,8 @@ nonexistentvariable = (null)
 
 ## <a name="see-also"></a>Voir aussi
 
-[Contrôle des processus et de l’environnement](../../c-runtime-library/process-and-environment-control.md)<br/>
-[Constants environnementaux](../../c-runtime-library/environmental-constants.md)<br/>
+[Contrôle de processus et d’environnement](../../c-runtime-library/process-and-environment-control.md)<br/>
+[Constantes environnementales](../../c-runtime-library/environmental-constants.md)<br/>
 [_dupenv_s_dbg, _wdupenv_s_dbg](dupenv-s-dbg-wdupenv-s-dbg.md)<br/>
 [getenv_s, _wgetenv_s](getenv-s-wgetenv-s.md)<br/>
 [_putenv_s, _wputenv_s](putenv-s-wputenv-s.md)<br/>
