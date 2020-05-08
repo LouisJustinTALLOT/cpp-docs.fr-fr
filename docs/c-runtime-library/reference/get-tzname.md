@@ -16,7 +16,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-time-l1-1-0.dll
-- api-ms-win-crt-private-l1-1-0
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -29,12 +29,12 @@ helpviewer_keywords:
 - time zones
 - get_tzname function
 ms.assetid: df0065ff-095f-4237-832c-2fe9ab913875
-ms.openlocfilehash: 50f1f6e4320e3ef905b4eda67ba1d458a5b1df08
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: bf63b0ade0adc0a2dfa471bbfbeebc0cb2d04911
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81344874"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82919680"
 ---
 # <a name="_get_tzname"></a>_get_tzname
 
@@ -54,50 +54,50 @@ errno_t _get_tzname(
 ### <a name="parameters"></a>Paramètres
 
 *pReturnValue*<br/>
-La durée de la *chaîneZoneName* y compris un terminateur nul.
+Longueur de chaîne de *timeZoneName* incluant une marque de fin null.
 
-*timeZoneName timeZoneName*<br/>
-L’adresse d’une chaîne de caractère pour la représentation du nom du fuseau horaire ou le nom du fuseau horaire standard de jour (DST), selon *l’index*.
+*timeZoneName*<br/>
+Adresse d’une chaîne de caractères pour la représentation du nom du fuseau horaire ou du nom du fuseau horaire de l’heure d’été (DST), en fonction de l' *index*.
 
 *sizeInBytes*<br/>
-La taille de la chaîne de caractère *timeZoneName* dans les octets.
+Taille de la chaîne de caractères *timeZoneName* en octets.
 
 *index*<br/>
 Index d’un des deux noms de fuseaux horaires à récupérer.
 
-|*index*|Contenu de *timeZoneName*|*timeZoneName* valeur par défaut|
+|*index*|Contenu de *timeZoneName*|valeur par défaut de *timeZoneName*|
 |-|-|-|
 |0|Nom du fuseau horaire|« PST »|
 |1|Nom du fuseau horaire d’hiver|« PDT »|
-|> 1 ou < 0|**errno** réglé à **EINVAL**|non modifié|
+|> 1 ou < 0|**errno** défini sur **EINVAL**|non modifié|
 
 À moins que les valeurs soient explicitement modifiées pendant l’exécution, les valeurs par défaut sont respectivement « PST » et « PDT ».
 
 ## <a name="return-value"></a>Valeur de retour
 
-Zéro en cas de succès, sinon une valeur de type **errno.**
+Zéro en cas de réussite, sinon une valeur de type **errno** .
 
-Si l’un ou l’autre *timeZoneName* est **NULL**, ou *sizeInBytes* est zéro ou moins que zéro (mais pas les deux), un gestionnaire de paramètre invalide est invoqué, comme décrit dans [la validation de paramètres](../../c-runtime-library/parameter-validation.md). Si l’exécution est autorisée à se poursuivre, cette fonction définit **errno** à **EINVAL** et retourne **EINVAL**.
+Si *timeZoneName* a la **valeur null**, si *sizeInBytes* est égal à zéro ou inférieur à zéro (mais pas les deux), un gestionnaire de paramètres non valides est appelé, comme décrit dans [validation de paramètre](../../c-runtime-library/parameter-validation.md). Si l’exécution est autorisée à se poursuivre, cette fonction affecte à **errno** la valeur **EINVAL** et retourne **EINVAL**.
 
 ### <a name="error-conditions"></a>Conditions d'erreur
 
-|*pReturnValue*|*timeZoneName timeZoneName*|*sizeInBytes*|*index*|Valeur retournée|Contenu de *timeZoneName*|
+|*pReturnValue*|*timeZoneName*|*sizeInBytes*|*index*|Valeur retournée|Contenu de *timeZoneName*|
 |--------------------|--------------------|-------------------|-------------|------------------|--------------------------------|
-|Taille du nom du fuseau horaire|**Null**|0|0 ou 1|0|non modifié|
+|Taille du nom du fuseau horaire|**NUL**|0|0 ou 1|0|non modifié|
 |Taille du nom du fuseau horaire|n'importe laquelle|> 0|0 ou 1|0|Nom du fuseau horaire|
-|non modifié|**Null**|> 0|n'importe laquelle|**EINVAL (EN)**|non modifié|
-|non modifié|n'importe laquelle|zéro|n'importe laquelle|**EINVAL (EN)**|non modifié|
-|non modifié|n'importe laquelle|> 0|> 1|**EINVAL (EN)**|non modifié|
+|non modifié|**NUL**|> 0|n'importe laquelle|**EINVAL**|non modifié|
+|non modifié|n'importe laquelle|zéro|n'importe laquelle|**EINVAL**|non modifié|
+|non modifié|n'importe laquelle|> 0|> 1|**EINVAL**|non modifié|
 
-## <a name="remarks"></a>Notes
+## <a name="remarks"></a>Notes 
 
-La fonction **_get_tzname** récupère la représentation de la chaîne de caractères du nom actuel du fuseau horaire ou du nom du fuseau horaire standard de la lumière du jour (DST) dans l’adresse de *timeZoneName* en fonction de la valeur de l’indice, ainsi que la taille de la chaîne dans *pReturnValue*. Si *timeZoneName* est **NULL** et *sizeInBytes* est nul, la taille de la chaîne requise pour tenir le fuseau horaire spécifié et une date de non dans les octets est retournée dans *pReturnValue*. Les valeurs de l’indice doivent être soit 0 pour le fuseau horaire standard ou 1 pour le fuseau horaire standard de jour; toutes les autres valeurs de *l’indice* ont des résultats indéterminés.
+La fonction **_get_tzname** récupère la représentation sous forme de chaîne de caractères du nom du fuseau horaire actuel ou du nom du fuseau horaire de l’heure d’été (DST) dans l’adresse de *timeZoneName* en fonction de la valeur d’index, ainsi que de la taille de la chaîne dans *pReturnValue*. Si *timeZoneName* a la **valeur null** et que *sizeInBytes* est égal à zéro, la taille de la chaîne requise pour contenir le fuseau horaire spécifié et une valeur null de fin en octets est retournée dans *pReturnValue*. Les valeurs d’index doivent être 0 pour le fuseau horaire standard ou 1 pour le fuseau horaire de l’heure d’été ; toutes les autres valeurs de l' *index* ont des résultats indéterminés.
 
-Par défaut, l’état global de cette fonction est étendue à l’application. Pour changer cela, voir [Global State dans le CRT](../global-state.md).
+Par défaut, l’état global de cette fonction est limité à l’application. Pour modifier cette valeur, consultez [état global dans le CRT](../global-state.md).
 
-## <a name="example"></a>Exemple
+## <a name="example"></a> Exemple
 
-Cet exemple appelle **_get_tzname** pour obtenir la taille du tampon requis pour afficher le nom actuel du fuseau horaire standard Daylight, alloue un tampon de cette taille, appelle **_get_tzname** à nouveau pour charger le nom dans le tampon, et l’imprime à la console.
+Cet exemple appelle **_get_tzname** pour obtenir la taille de mémoire tampon requise pour afficher le nom du fuseau horaire d’hiver actuel, alloue une mémoire tampon de cette taille, appelle à nouveau **_get_tzname** pour charger le nom dans la mémoire tampon, puis l’imprime sur la console.
 
 ```C
 // crt_get_tzname.c

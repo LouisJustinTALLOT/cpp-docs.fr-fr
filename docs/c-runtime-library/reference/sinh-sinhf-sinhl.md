@@ -19,7 +19,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-math-l1-1-0.dll
-- api-ms-win-crt-private-l1-1-0
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -37,12 +37,12 @@ helpviewer_keywords:
 - sinhf function
 - sinhl function
 - hyperbolic functions
-ms.openlocfilehash: 4a8ffd1dbce112272f04241a2502c5df63f163a1
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 107636d1e732ab7b3ed3003691d3678acc012b7d
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81318676"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82909910"
 ---
 # <a name="sinh-sinhf-sinhl"></a>sinh, sinhf, sinhl
 
@@ -63,31 +63,31 @@ long double sinh(long double x);  // C++ only
 
 ### <a name="parameters"></a>Paramètres
 
-*X*<br/>
+*x*<br/>
 Angle en radians.
 
 ## <a name="return-value"></a>Valeur de retour
 
-Les fonctions **sinh** retourner le sinbolique sinine de *x*. Par défaut, si le résultat est trop grand, **sinh** définit **errno** à **ERANGE** et retourne**HUGE_VAL**.
+Les fonctions **sinh** retournent le sinus hyperbolique de *x*. Par défaut, si le résultat est trop grand, **sinh** définit **errno** sur **ERANGE** et retourne ±**HUGE_VAL**.
 
 |Entrée|Exception SEH|Exception\{b\> \<b\}Matherr|
 |-----------|-------------------|-----------------------|
 |± QNAN,IND|None|_DOMAIN|
-|&#124;x&#124; 7,104760e-002|OVERFLOW+INEXACT|OVERFLOW|
+|&#124;x&#124; ≥ 7.104760 e + 002|OVERFLOW+INEXACT|OVERFLOW|
 
 Pour plus d’informations sur les codes de retour, consultez [errno, _doserrno, _sys_errlist et _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
 
-## <a name="remarks"></a>Notes
+## <a name="remarks"></a>Notes 
 
-Parce que le CMD permet la surcharge, vous pouvez appeler des surcharges de **sinh** qui prennent et retournent **flotter** ou **de longues** valeurs **doubles.** Dans un programme C, **sinh** prend toujours et retourne **double**.
+C++ autorisant la surcharge, vous pouvez appeler des surcharges de **sinh** qui acceptent et retournent des valeurs **float** ou **long** **double** . Dans un programme C, **sinh** prend toujours et retourne **double**.
 
-Par défaut, l’état global de cette fonction est étendue à l’application. Pour changer cela, voir [Global State dans le CRT](../global-state.md).
+Par défaut, l’état global de cette fonction est limité à l’application. Pour modifier cette valeur, consultez [état global dans le CRT](../global-state.md).
 
 ## <a name="requirements"></a>Spécifications
 
 |Routine|En-tête requis (C)|En-tête requis (C++)|
 |-|-|-|
-|**sinh**, **sinhf**, **sinhl**|\<math.h>|\<cmath> ou \<math.h>|
+|**sinh**, **sinhf,**, **sinhl**|\<math.h>|\<cmath> ou \<math.h>|
 
 Pour plus d'informations sur la compatibilité, voir [Compatibilité](../../c-runtime-library/compatibility.md).
 
@@ -122,7 +122,7 @@ cosh( 1.570796 ) = 2.509178
 
 ## <a name="see-also"></a>Voir aussi
 
-[Soutien à la pointe flottante](../../c-runtime-library/floating-point-support.md)<br/>
+[Prise en charge de la virgule flottante](../../c-runtime-library/floating-point-support.md)<br/>
 [acosh, acoshf, acoshl](acosh-acoshf-acoshl.md)<br/>
 [asinh, asinhf, asinhl](asinh-asinhf-asinhl.md)<br/>
 [atanh, atanhf, atanhl](atanh-atanhf-atanhl.md)<br/>

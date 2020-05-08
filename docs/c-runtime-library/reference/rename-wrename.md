@@ -18,7 +18,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-filesystem-l1-1-0.dll
-- api-ms-win-crt-private-l1-1-0
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -40,12 +40,12 @@ helpviewer_keywords:
 - names [C++], changing directory
 - renaming files
 ms.assetid: 9f0a6103-26a2-4dda-b14b-79a48946266a
-ms.openlocfilehash: 730458c5027f8f690e8238b29cbdb1056f09ed68
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: b0a5f43d92d6dd85626f00bf5c2a6350e5bfa10f
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81338101"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82917801"
 ---
 # <a name="rename-_wrename"></a>rename, _wrename
 
@@ -74,35 +74,35 @@ Pointeur désignant le nouveau nom.
 
 ## <a name="return-value"></a>Valeur de retour
 
-Chacune de ces fonctions retourne 0 en cas de réussite. Sur une erreur, la fonction renvoie une valeur non zéro et définit **errno** à l’une des valeurs suivantes:
+Chacune de ces fonctions retourne 0 en cas de réussite. En cas d’erreur, la fonction retourne une valeur différente de zéro et définit **errno** sur l’une des valeurs suivantes :
 
 |Valeur de la variable errno|Condition|
 |-|-|
-| **LES EACCES** | Le fichier ou le répertoire spécifié par *newname* existe déjà ou n’a pas pu être créé (chemin non valide) ; ou *oldname* est un répertoire et *newname* spécifie un autre chemin. |
-| **ENOENT (ENOENT)** | Le fichier ou le chemin spécifié par *oldname* est introuvable. |
-| **EINVAL (EN)** | Le nom contient des caractères non valides. |
+| **EACCES** | Le fichier ou le répertoire spécifié par *newname* existe déjà ou n’a pas pu être créé (chemin non valide) ; ou *oldname* est un répertoire et *newname* spécifie un autre chemin. |
+| **ENOENT** | Le fichier ou le chemin spécifié par *oldname* est introuvable. |
+| **EINVAL** | Le nom contient des caractères non valides. |
 
 Pour connaître les autres valeurs de retour possibles, consultez [_doserrno, _errno, syserrlist et _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
 
-## <a name="remarks"></a>Notes
+## <a name="remarks"></a>Notes 
 
 La fonction **rename** renomme le fichier ou le répertoire spécifié par *oldname* avec le nom fourni par *newname*. L’ancien nom doit être le chemin d’un fichier ou répertoire existant. Le nouveau nom doit être le nom d’un fichier ou répertoire existant. Vous pouvez utiliser **rename** pour déplacer un fichier d’un répertoire ou appareil vers un autre en indiquant un autre chemin dans l’argument *newname*. Cependant, vous ne pouvez pas utiliser **rename** pour déplacer un répertoire. Les répertoires peuvent être renommés, mais pas déplacés.
 
-**_wrename** est une version à caractère large de **_rename**; les arguments à **_wrename** sont des chaînes de caractère large. **_wrename** et **_rename** se comportent de façon identique autrement.
+**_wrename** est une version à caractères larges de **_rename**; les arguments de **_wrename** sont des chaînes à caractères larges. dans le cas contraire, **_wrename** et **_rename** se comportent de la même façon.
 
-Par défaut, l’état global de cette fonction est étendue à l’application. Pour changer cela, voir [Global State dans le CRT](../global-state.md).
+Par défaut, l’état global de cette fonction est limité à l’application. Pour modifier cette valeur, consultez [état global dans le CRT](../global-state.md).
 
 ### <a name="generic-text-routine-mappings"></a>Mappages de routines de texte générique
 
 |Routine TCHAR.H|_UNICODE et _MBCS non définis|_MBCS défini|_UNICODE défini|
 |---------------------|------------------------------------|--------------------|-----------------------|
-|**_trename**|**Renommer**|**Renommer**|**_wrename**|
+|**_trename**|**rename**|**rename**|**_wrename**|
 
 ## <a name="requirements"></a>Spécifications
 
 |Routine|En-tête requis|
 |-------------|---------------------|
-|**Renommer**|\<io.h> ou \<stdio.h>|
+|**rename**|\<io.h> ou \<stdio.h>|
 |**_wrename**|\<stdio.h> ou \<wchar.h>|
 
 Pour plus d'informations sur la compatibilité, voir [Compatibilité](../../c-runtime-library/compatibility.md).
@@ -111,7 +111,7 @@ Pour plus d'informations sur la compatibilité, voir [Compatibilité](../../c-ru
 
 Toutes les versions des [bibliothèques Runtime C](../../c-runtime-library/crt-library-features.md).
 
-## <a name="example"></a>Exemple
+## <a name="example"></a> Exemple
 
 ```C
 // crt_renamer.c

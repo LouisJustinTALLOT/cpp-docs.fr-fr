@@ -21,7 +21,7 @@ api_location:
 - ucrtbase.dll
 - api-ms-win-crt-string-l1-1-0.dll
 - ntoskrnl.exe
-- api-ms-win-crt-private-l1-1-0
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -43,12 +43,12 @@ helpviewer_keywords:
 - _istalnum_l function
 - _iswalnum_l function
 ms.assetid: 0dc51306-ade8-4944-af27-e4176fc89093
-ms.openlocfilehash: a64cdc28d78a4a8691c74c66e2b4c18e4d0c31b6
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: e32cdd2ad13ead282840e192e572757d759110f7
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81343970"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82919815"
 ---
 # <a name="isalnum-iswalnum-_isalnum_l-_iswalnum_l"></a>isalnum, iswalnum, _isalnum_l, _iswalnum_l
 
@@ -65,7 +65,7 @@ int _iswalnum_l( wint_t c, _locale_t locale );
 
 ### <a name="parameters"></a>Paramètres
 
-*C*<br/>
+*secteur*<br/>
 Entier à tester.
 
 *locale*<br/>
@@ -73,29 +73,29 @@ Paramètres régionaux à utiliser.
 
 ## <a name="return-value"></a>Valeur de retour
 
-Chacune de ces routines retourne nonzero si *c* est une représentation particulière d’un caractère alphanumérique. **isalnum** retourne une valeur nonzero si **isalpha** ou **isdigit** est nonzero pour *c*, c’est-à-dire, si *c* est dans les gammes A - Z, a - z, ou 0 - 9. **iswalnum** retourne une valeur nonzero si **iswalpha** ou **iswdigit** est nonzero pour *c*. Chacune de ces routines retourne 0 si *c* ne satisfait pas l’état d’essai.
+Chacune de ces routines retourne une valeur différente de zéro si *c* est une représentation particulière d’un caractère alphanumérique. **isalnum** retourne une valeur différente de zéro si **isalpha** ou **IsDigit** est différent de zéro pour *c*, autrement dit, si *c* est dans les plages a-Z, a-z ou 0-9. **iswalnum** retourne une valeur différente de zéro si **iswalpha** ou **iswdigit** est différent de zéro pour *c*. Chacune de ces routines retourne 0 si *c* ne satisfait pas la condition de test.
 
-Les versions de ces fonctions qui ont le **suffixe _l** utilisent le paramètre local qui est passé au lieu de la localisation actuelle. Pour plus d’informations, consultez [Locale](../../c-runtime-library/locale.md).
+Les versions de ces fonctions qui ont le suffixe **_L** utilisent les paramètres régionaux qui sont passés au lieu des paramètres régionaux actuels. Pour plus d’informations, consultez [Locale](../../c-runtime-library/locale.md).
 
-Le comportement de **l’isalnum** et **_isalnum_l** n’est pas défini si *c n’est* pas EOF ou dans la gamme 0 à 0xFF, inclusive. Lorsqu’une bibliothèque CRT débagé est utilisée et *que c* n’est pas l’une de ces valeurs, les fonctions soulèvent une affirmation.
+Le comportement de **isalnum** et **_isalnum_l** n’est pas défini si *c* n’est pas EOF ni dans la plage 0 à 0xFF, inclus. Quand une bibliothèque CRT de débogage est utilisée et que *c* n’est pas l’une de ces valeurs, les fonctions déclenchent une assertion.
 
 ### <a name="generic-text-routine-mappings"></a>Mappages de routines de texte générique
 
 |Routine TCHAR.H|_UNICODE et _MBCS non définis|_MBCS défini|_UNICODE défini|
 |---------------------|------------------------------------|--------------------|-----------------------|
-|**_istalnum**|**isalnum**|[_ismbcalnum](ismbcalnum-functions.md)|**iswalnum (iswalnum)**|
+|**_istalnum**|**isalnum**|[_ismbcalnum](ismbcalnum-functions.md)|**iswalnum**|
 |**_istalnum_l**|**_isalnum_l**|**_ismbcalnum_l**|**_iswalnum_l**|
 
-## <a name="remarks"></a>Notes
+## <a name="remarks"></a>Notes 
 
-Par défaut, l’état global de cette fonction est étendue à l’application. Pour changer cela, voir [Global State dans le CRT](../global-state.md).
+Par défaut, l’état global de cette fonction est limité à l’application. Pour modifier cette valeur, consultez [état global dans le CRT](../global-state.md).
 
 ## <a name="requirements"></a>Spécifications
 
 |Routine|En-tête requis|
 |-------------|---------------------|
 |**isalnum**|\<ctype.h>|
-|**iswalnum (iswalnum)**|\<ctype.h> ou \<wchar.h>|
+|**iswalnum**|\<ctype.h> ou \<wchar.h>|
 |**_isalnum_l**|\<ctype.h>|
 |**_iswalnum_l**|\<ctype.h> ou \<wchar.h>|
 
@@ -104,5 +104,5 @@ Pour plus d'informations sur la compatibilité, voir [Compatibilité](../../c-ru
 ## <a name="see-also"></a>Voir aussi
 
 [Classifications des caractères](../../c-runtime-library/character-classification.md)<br/>
-[Local](../../c-runtime-library/locale.md)<br/>
+[Paramètres régionaux](../../c-runtime-library/locale.md)<br/>
 [is, isw, routines](../../c-runtime-library/is-isw-routines.md)<br/>

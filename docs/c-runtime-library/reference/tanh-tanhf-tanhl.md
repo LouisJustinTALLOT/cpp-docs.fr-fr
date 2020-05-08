@@ -18,7 +18,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-math-l1-1-0.dll
-- api-ms-win-crt-private-l1-1-0
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -35,12 +35,12 @@ helpviewer_keywords:
 - tanhf function
 - trigonometric functions
 - hyperbolic functions
-ms.openlocfilehash: 626252285a11ae4cbcb8bd2e5658512b85bfd3d3
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: d368f9ca99753e0749fe3c77a512c0d0c8975161
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81362625"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82912296"
 ---
 # <a name="tanh-tanhf-tanhl"></a>tanh, tanhf, tanhl
 
@@ -61,28 +61,28 @@ long double tanh( long double x );  // C++ only
 
 ### <a name="parameters"></a>Paramètres
 
-*X*<br/>
+*x*<br/>
 Angle en radians.
 
 ## <a name="return-value"></a>Valeur retournée
 
-Les fonctions **tanh** retournent la tangente hyperbolique de *x*. Aucun retour d'erreur.
+Les fonctions **Tanh** retournent la tangente hyperbolique de *x*. Aucun retour d'erreur.
 
-|Entrée|Exception SEH|**Matherr Matherr** Exception|
+|Entrée|Exception SEH|**Supertherr** Titre|
 |-----------|-------------------|-------------------------|
 |± QNAN,IND|Aucun|_DOMAIN|
 
-## <a name="remarks"></a>Notes
+## <a name="remarks"></a>Notes 
 
-Étant donné que le CMD permet la surcharge, vous pouvez appeler des surcharges de **tanh** qui prennent et retournent **flotteur** ou **de longues** valeurs **doubles.** Dans un programme C, **tanh** prend et retourne toujours **double**.
+C++ autorisant la surcharge, vous pouvez appeler des surcharges de **Tanh** qui acceptent et retournent des valeurs **float** ou **long** **double** . Dans un programme C, **Tanh** prend toujours et retourne **double**.
 
-Par défaut, l’état global de cette fonction est étendue à l’application. Pour changer cela, voir [Global State dans le CRT](../global-state.md).
+Par défaut, l’état global de cette fonction est limité à l’application. Pour modifier cette valeur, consultez [état global dans le CRT](../global-state.md).
 
 ## <a name="requirements"></a>Spécifications
 
 |Routine|En-tête requis (C)|En-tête requis (C)|
 |-------------|---------------------|-|
-|**tanh**, **tanhf**, **tanhl**|\<math.h>|\<cmath> ou \<math.h>|
+|**Tanh**, **tanhf,**, **tanhl**|\<math.h>|\<cmath> ou \<math.h>|
 
 Pour plus d'informations sur la compatibilité, voir [Compatibilité](../../c-runtime-library/compatibility.md).
 
@@ -116,7 +116,7 @@ tanh( 1.000000 ) = 0.761594
 
 ## <a name="see-also"></a>Voir aussi
 
-[Soutien à la pointe flottante](../../c-runtime-library/floating-point-support.md)<br/>
+[Prise en charge de la virgule flottante](../../c-runtime-library/floating-point-support.md)<br/>
 [acosh, acoshf, acoshl](acosh-acoshf-acoshl.md)<br/>
 [asinh, asinhf, asinhl](asinh-asinhf-asinhl.md)<br/>
 [atanh, atanhf, atanhl](atanh-atanhf-atanhl.md)<br/>

@@ -18,7 +18,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-multibyte-l1-1-0.dll
-- api-ms-win-crt-private-l1-1-0
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -38,12 +38,12 @@ helpviewer_keywords:
 - _tccpy_s_l function
 - _mbccpy_s_l function
 ms.assetid: b6e965fa-53c1-4ec3-85ef-a1c4b4f2b2da
-ms.openlocfilehash: 08df395c6978c84b3f53ed0b07ce988afd0249f6
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 85db4e478b070823bb14028018d918e0f3cabbd7
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81341235"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82920318"
 ---
 # <a name="_mbccpy_s-_mbccpy_s_l"></a>_mbccpy_s, _mbccpy_s_l
 
@@ -92,7 +92,7 @@ Destination de la copie.
 Taille de la mémoire tampon de destination.
 
 *pCopied*<br/>
-Rempli avec le nombre d’octets copiés (1 ou 2 en cas de réussite). Passez **NULL** si vous ne vous souciez pas du numéro.
+Rempli avec le nombre d’octets copiés (1 ou 2 en cas de réussite). Transmettez la **valeur null** si vous ne vous souciez pas du nombre.
 
 *src*<br/>
 Caractère multioctet à copier.
@@ -102,30 +102,30 @@ Paramètres régionaux à utiliser.
 
 ## <a name="return-value"></a>Valeur de retour
 
-Zéro si l'opération a réussi ; code d'erreur en cas de échec. Si *le cr* ou le *dest* est **NULL**, ou si plus de **buffSizeinBytes octets** seraient copiés pour *dest*, alors le gestionnaire de paramètre invalide est invoqué, comme décrit dans [la validation de paramètres](../../c-runtime-library/parameter-validation.md). Si l’exécution est autorisée à se poursuivre, les fonctions retournent **EINVAL** et **errno** est réglé à **EINVAL**.
+Zéro si l'opération a réussi ; code d'erreur en cas de échec. Si *src* ou *dest* a la **valeur null**, ou si plus de **buffSizeinBytes** octets sont copiés vers *dest*, le gestionnaire de paramètres non valides est appelé, comme décrit dans [validation de paramètre](../../c-runtime-library/parameter-validation.md). Si l’exécution est autorisée à se poursuivre, les fonctions retournent **EINVAL** et **errno** a la valeur **EINVAL**.
 
-## <a name="remarks"></a>Notes
+## <a name="remarks"></a>Notes 
 
-La fonction **_mbccpy_s** copie un personnage multioctet de *src* à *dest*. Si *le src* ne pointe pas vers le byte de plomb d’un caractère multioctet tel que déterminé par un appel implicite à [_ismbblead](ismbblead-ismbblead-l.md), alors le byte unique qui *src* pointe à est copié. Si *src* pointe vers un byte de plomb mais que le byte suivant est de 0 et donc invalide, alors 0 est copié pour *dest*, **errno** est réglé sur **EILSEQ**, et la fonction **renvoie EILSEQ**.
+La fonction **_mbccpy_s** copie un caractère multioctet de *src* vers *dest*. Si *src* ne pointe pas vers l’octet de tête d’un caractère multioctet comme déterminé par un appel implicite à [_ismbblead](ismbblead-ismbblead-l.md), alors le seul octet vers lequel pointe *src* est copié. Si *src* pointe vers un octet de tête, mais que l’octet suivant est 0 et donc non valide, 0 est copié vers *dest*, **errno** a la valeur **EILSEQ**et la fonction retourne **EILSEQ**.
 
-**_mbccpy_s** n’appende pas un terminateur nul; cependant, si *src* pointe vers un caractère nul, alors ce null est copié pour *dest* (ce n’est qu’une copie régulière d’un seul-byte).
+**_mbccpy_s** n’ajoute pas de terminateur null ; Toutefois, si *src* pointe vers un caractère null, alors cette valeur null est copiée vers *dest* (il s’agit simplement d’une copie sur un octet standard).
 
-La valeur en *pCopied* est remplie du nombre d’octets copiés. Les valeurs possibles sont 1 et 2 si l’opération réussit. Si **NULL** est passé, ce paramètre est ignoré.
+La valeur de *pCopied* est remplie avec le nombre d’octets copiés. Les valeurs possibles sont 1 et 2 si l’opération réussit. Si la **valeur null** est passée, ce paramètre est ignoré.
 
-|*src*|copié pour *dest*|*pCopied*|Valeur retournée|
+|*src*|copié vers *dest* .|*pCopied*|Valeur retournée|
 |-----------|----------------------|---------------|------------------|
 |Octet autre qu’un octet de tête|Octet autre qu’un octet de tête|1|0|
 |0|0|1|0|
 |Octet de tête suivi d’une valeur différente de 0|Octet de tête suivi d’une valeur différente de 0|2|0|
 |Octet de tête suivi de 0|0|1|**EILSEQ**|
 
-Notez que la deuxième ligne est simplement un cas spécial de la première. Notez également que la table suppose *buffSizeInBytes* >= *pCopied*.
+Notez que la deuxième ligne est simplement un cas spécial de la première. Notez également que le tableau suppose que *buffSizeInBytes* >= *pCopied*.
 
-**_mbccpy_s** utilise le lieu actuel pour tout comportement local-dépendant. **_mbccpy_s_l** est identique à **_mbccpy_s** sauf que **_mbccpy_s_l** utilise le lieu passé pour tout comportement local-dépendant.
+**_mbccpy_s** utilise les paramètres régionaux actuels pour tout comportement dépendant des paramètres régionaux. **_mbccpy_s_l** est identique à **_mbccpy_s** sauf que **_mbccpy_s_l** utilise les paramètres régionaux passés pour tout comportement dépendant des paramètres régionaux.
 
 En C++, l’utilisation de ces fonctions est simplifiée par les surcharges de modèle ; celles-ci peuvent déduire automatiquement la longueur de la mémoire tampon, ce qui évite d’avoir à spécifier un argument de taille. Pour plus d’informations, consultez [Sécuriser les surcharges de modèle](../../c-runtime-library/secure-template-overloads.md).
 
-Par défaut, l’état global de cette fonction est étendue à l’application. Pour changer cela, voir [Global State dans le CRT](../global-state.md).
+Par défaut, l’état global de cette fonction est limité à l’application. Pour modifier cette valeur, consultez [état global dans le CRT](../global-state.md).
 
 ### <a name="generic-text-routine-mappings"></a>Mappages de routines de texte générique
 
@@ -144,6 +144,6 @@ Pour plus d’informations sur la compatibilité, consultez [Compatibility](../.
 
 ## <a name="see-also"></a>Voir aussi
 
-[Local](../../c-runtime-library/locale.md)<br/>
-[Interprétation des séquences multioctets-caractères](../../c-runtime-library/interpretation-of-multibyte-character-sequences.md)<br/>
+[Paramètres régionaux](../../c-runtime-library/locale.md)<br/>
+[Interprétation des séquences de caractères multioctets](../../c-runtime-library/interpretation-of-multibyte-character-sequences.md)<br/>
 [_mbclen, mblen, _mblen_l](mbclen-mblen-mblen-l.md)<br/>

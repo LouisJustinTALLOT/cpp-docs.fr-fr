@@ -22,7 +22,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-multibyte-l1-1-0.dll
-- api-ms-win-crt-private-l1-1-0
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -48,12 +48,12 @@ helpviewer_keywords:
 - ismbstrail_l function
 - _ismbstrail_l function
 ms.assetid: 86d2cd7a-3cff-443a-b713-14cc17a231e9
-ms.openlocfilehash: d4c9bfcec1deab8c00eb490dc044e62a6124aba3
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 892545ba0ac66604b0ea1c5adcfa32dd64b68973
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81342918"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82919158"
 ---
 # <a name="_ismbslead-_ismbstrail-_ismbslead_l-_ismbstrail_l"></a>_ismbslead, _ismbstrail, _ismbslead_l, _ismbstrail_l
 
@@ -90,7 +90,7 @@ int _ismbstrail_l(
 *Str*<br/>
 Pointeur indiquant le début de la chaîne ou l'octet de tête connu précédent.
 
-*Actuelle*<br/>
+*actif*<br/>
 Pointeur indiquant la position dans la chaîne à tester.
 
 *locale*<br/>
@@ -98,15 +98,15 @@ Paramètres régionaux à utiliser.
 
 ## <a name="return-value"></a>Valeur de retour
 
-**_ismbslead** revient -1 si le personnage est un byte de plomb et **_ismbstrail** retourne -1 si le personnage est un byte de piste. Si les chaînes d'entrée sont valides mais qu'elles ne correspondent ni à un octet de tête ni à un octet de fin, ces fonctions retournent zéro. Si l’un ou l’autre argument est **NULL**, le gestionnaire de paramètre invalide est invoqué, tel que décrit dans [La validation de paramètres](../../c-runtime-library/parameter-validation.md). Si l’exécution est autorisée à se poursuivre, ces fonctions renvoient **NULL** et **placent errno** à **EINVAL**.
+**_ismbslead** retourne-1 si le caractère est un octet de tête et **_ismbstrail** retourne-1 si le caractère est un octet de fin. Si les chaînes d'entrée sont valides mais qu'elles ne correspondent ni à un octet de tête ni à un octet de fin, ces fonctions retournent zéro. Si l’un des arguments a la **valeur null**, le gestionnaire de paramètres non valides est appelé, comme décrit dans [validation de paramètre](../../c-runtime-library/parameter-validation.md). Si l’exécution est autorisée à se poursuivre, ces fonctions retournent la **valeur null** et attribuent à **errno** la valeur **EINVAL**.
 
-## <a name="remarks"></a>Notes
+## <a name="remarks"></a>Notes 
 
-**_ismbslead** et **_ismbstrail** sont plus lents que les versions **_ismbblead** et **_ismbbtrail** parce qu’ils tiennent compte du contexte de la chaîne.
+les **_ismbslead** et les **_ismbstrail** sont plus lentes que les versions **_ismbblead** et **_ismbbtrail** , car elles prennent en compte le contexte de chaîne.
 
-Les versions de ces fonctions qui ont le **suffixe _l** sont identiques, sauf que pour leur comportement local-dépendant, ils utilisent le lieu qui est passé au lieu de la localisation actuelle. Pour plus d’informations, consultez [Locale](../../c-runtime-library/locale.md).
+Les versions de ces fonctions qui ont le suffixe **_L** sont identiques, sauf que pour leur comportement dépendant des paramètres régionaux, elles utilisent les paramètres régionaux qui sont passés au lieu des paramètres régionaux actuels. Pour plus d’informations, consultez [Locale](../../c-runtime-library/locale.md).
 
-Par défaut, l’état global de cette fonction est étendue à l’application. Pour changer cela, voir [Global State dans le CRT](../global-state.md).
+Par défaut, l’état global de cette fonction est limité à l’application. Pour modifier cette valeur, consultez [état global dans le CRT](../global-state.md).
 
 ## <a name="requirements"></a>Spécifications
 
@@ -126,4 +126,4 @@ Pour plus d’informations sur la compatibilité, consultez [Compatibility](../.
 [Classifications des caractères](../../c-runtime-library/character-classification.md)<br/>
 [_ismbc, routines](../../c-runtime-library/ismbc-routines.md)<br/>
 [is, isw, routines](../../c-runtime-library/is-isw-routines.md)<br/>
-[routines _ismbb](../../c-runtime-library/ismbb-routines.md)<br/>
+[Routines de _ismbb](../../c-runtime-library/ismbb-routines.md)<br/>

@@ -18,7 +18,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-conio-l1-1-0.dll
-- api-ms-win-crt-private-l1-1-0
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -35,12 +35,12 @@ helpviewer_keywords:
 - _getch function
 - getwch function
 ms.assetid: cc116be7-cff2-4274-970f-5e7b18ccc05c
-ms.openlocfilehash: 3fc90747d336e7b101739c41980332ad0b6b763a
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 1c62bd0793fef0683007fe21df0fc0c2acdf1357
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81344729"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82919630"
 ---
 # <a name="_getch-_getwch"></a>_getch, _getwch
 
@@ -60,13 +60,13 @@ wint_t _getwch( void );
 
 Retourne le caractère lu. Aucun retour d'erreur.
 
-## <a name="remarks"></a>Notes
+## <a name="remarks"></a>Notes 
 
-Les fonctions **_getch** et **_getwch** lisent un seul personnage depuis la console sans faire écho au personnage. Aucune de ces fonctions ne peut être utilisée pour lire Ctrl+C. Pour la lecture d’une touche de fonction ou de direction, chaque fonction doit être appelée deux fois ; le premier appel retourne 0 ou 0xE0, tandis que le second retourne le code de la touche.
+Les fonctions **_getch** et **_getwch** lisent un caractère unique à partir de la console sans renvoyer le caractère. Aucune de ces fonctions ne peut être utilisée pour lire Ctrl+C. Pour la lecture d’une touche de fonction ou de direction, chaque fonction doit être appelée deux fois ; le premier appel retourne 0 ou 0xE0, tandis que le second retourne le code de la touche.
 
 Ces fonctions verrouillent le thread appelant et sont donc thread-safe. Pour les versions sans verrouillage, consultez [_getch_nolock, _getwch_nolock](getch-nolock-getwch-nolock.md).
 
-Par défaut, l’état global de cette fonction est étendue à l’application. Pour changer cela, voir [Global State dans le CRT](../global-state.md).
+Par défaut, l’état global de cette fonction est limité à l’application. Pour modifier cette valeur, consultez [état global dans le CRT](../global-state.md).
 
 ### <a name="generic-text-routine-mappings"></a>Mappages de routines de texte générique
 
@@ -121,7 +121,7 @@ Type 'Y' when finished typing keys: Y
 
 ## <a name="see-also"></a>Voir aussi
 
-[Console et Port I/O](../../c-runtime-library/console-and-port-i-o.md)<br/>
+[E/s de console et de port](../../c-runtime-library/console-and-port-i-o.md)<br/>
 [_getche, _getwche](getche-getwche.md)<br/>
 [_cgets, _cgetws](../../c-runtime-library/cgets-cgetws.md)<br/>
 [getc, getwc](getc-getwc.md)<br/>

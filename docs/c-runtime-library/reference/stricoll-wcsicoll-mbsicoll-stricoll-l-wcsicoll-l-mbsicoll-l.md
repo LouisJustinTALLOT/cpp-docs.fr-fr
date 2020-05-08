@@ -27,7 +27,7 @@ api_location:
 - ucrtbase.dll
 - api-ms-win-crt-multibyte-l1-1-0.dll
 - api-ms-win-crt-string-l1-1-0.dll
-- api-ms-win-crt-private-l1-1-0
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -61,12 +61,12 @@ helpviewer_keywords:
 - strings [C++], comparing by code page
 - ftcsicoll function
 ms.assetid: 8ec93016-5a49-49d2-930f-721566661d82
-ms.openlocfilehash: d726d2d33f8f775d09e6197dfeda6abb91106a53
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 9c023405043dea1c0a1d8e6d7f6fcc6505677583
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81355326"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82919988"
 ---
 # <a name="_stricoll-_wcsicoll-_mbsicoll-_stricoll_l-_wcsicoll_l-_mbsicoll_l"></a>_stricoll, _wcsicoll, _mbsicoll, _stricoll_l, _wcsicoll_l, _mbsicoll_l
 
@@ -109,7 +109,7 @@ int _mbsicoll_l(
 
 ### <a name="parameters"></a>Paramètres
 
-*string1*, *string2*<br/>
+*Chaîne1*, *Chaîne2*<br/>
 Chaîne terminée par Null à comparer.
 
 *locale*<br/>
@@ -117,26 +117,26 @@ Paramètres régionaux à utiliser.
 
 ## <a name="return-value"></a>Valeur de retour
 
-Chacune de ces fonctions retourne une valeur indiquant la relation de *string1* à *string2*, comme suit.
+Chacune de ces fonctions retourne une valeur indiquant la relation de *Chaîne1* à *Chaîne2*, comme suit.
 
 |Valeur retournée|Relation de chaîne1 à chaîne2|
 |------------------|----------------------------------------|
-|< 0|*string1* moins que *string2*|
-|0|*string1* identique à *string2*|
-|> 0|*string1* plus grand que *string2*|
+|< 0|*Chaîne1* inférieure à *Chaîne2*|
+|0|*Chaîne1* identique à *Chaîne2*|
+|> 0|*Chaîne1* supérieure à *Chaîne2*|
 |**_NLSCMPERROR**|Une erreur est survenue.|
 
-Chacune de ces fonctions renvoie **_NLSCMPERROR**. Pour utiliser **_NLSCMPERROR**, \<inclure soit string.h \<> ou mbstring.h>. **_wcsicoll** peut échouer si *la chaîne1* ou *la chaîne2* contient des codes à caractère large en dehors du domaine de la séquence de collation. Lorsqu’une erreur se produit, **_wcsicoll** peut définir **errno** à **EINVAL**. Pour vérifier une erreur sur un appel à **_wcsicoll**, définir **errno** à 0, puis vérifier **errno** après avoir appelé **_wcsicoll**.
+Chacune de ces fonctions retourne **_NLSCMPERROR**. Pour utiliser **_NLSCMPERROR**, incluez \<String. h> ou \<mbstring. h>. **_wcsicoll** peut échouer si *Chaîne1* ou *string2* contient des codes à caractères larges en dehors du domaine de la séquence de classement. Lorsqu’une erreur se produit, **_wcsicoll** peut définir **errno** sur **EINVAL**. Pour rechercher une erreur lors d’un appel à **_wcsicoll**, attribuez la valeur 0 à **errno** , puis activez la case à cocher **errno** après l’appel de **_wcsicoll**.
 
-## <a name="remarks"></a>Notes
+## <a name="remarks"></a>Notes 
 
-Chacune de ces fonctions effectue une comparaison insensible cas de *la chaîne1* et de la *chaîne2* selon la page de code actuellement utilisée. Ces fonctions ne doivent être utilisées que s’il existe une différence entre l’ordre du jeu de caractères et l’ordre lexicographique des caractères dans la page de codes actuelle, et si cette différence présente un intérêt pour la comparaison de chaînes.
+Chacune de ces fonctions effectue une comparaison qui ne respecte pas la casse de *string1* et *string2* , en fonction de la page de codes en cours d’utilisation. Ces fonctions ne doivent être utilisées que s’il existe une différence entre l’ordre du jeu de caractères et l’ordre lexicographique des caractères dans la page de codes actuelle, et si cette différence présente un intérêt pour la comparaison de chaînes.
 
-**_stricmp** diffère de **_stricoll** en ce que la comparaison **_stricmp** est affectée par **LC_CTYPE**, tandis que la comparaison **_stricoll** est selon les catégories **LC_CTYPE** et **LC_COLLATE** de la localité. Pour plus d’informations sur la catégorie **LC_COLLATE,** voir [setlocale](setlocale-wsetlocale.md) et [Local Categories](../../c-runtime-library/locale-categories.md). Les versions de ces fonctions sans le **suffixe _l** utilisent le lieu actuel; les versions avec le **suffixe _l** sont identiques, sauf qu’ils utilisent le lieu passé à la place. Pour plus d’informations, consultez [Locale](../../c-runtime-library/locale.md).
+**_stricmp** diffère de **_stricoll** dans le sens où la comparaison **_stricmp** est affectée par **LC_CTYPE**, tandis que la **_stricoll** comparaison est conforme aux catégories **LC_CTYPE** et **LC_COLLATE** des paramètres régionaux. Pour plus d’informations sur la catégorie **LC_COLLATE** , consultez [setlocale](setlocale-wsetlocale.md) et [catégories de paramètres régionaux](../../c-runtime-library/locale-categories.md). Les versions de ces fonctions sans le suffixe **_L** utilisent les paramètres régionaux actuels. les versions avec le suffixe **_L** sont identiques, sauf qu’elles utilisent à la place les paramètres régionaux transmis. Pour plus d’informations, consultez [Locale](../../c-runtime-library/locale.md).
 
-Toutes ces fonctions valident leurs paramètres. Si *la chaîne1* ou *la chaîne2* sont des pointeurs **NULL,** le gestionnaire de paramètres invalide est invoqué, tel que décrit dans [La validation de paramètres](../../c-runtime-library/parameter-validation.md). Si l’exécution est autorisée à se poursuivre, ces fonctions renvoient **_NLSCMPERROR** et mettent **errno** à **EINVAL**.
+Toutes ces fonctions valident leurs paramètres. Si *string1* ou *string2* sont des pointeurs **null** , le gestionnaire de paramètres non valides est appelé, comme décrit dans [validation de paramètre](../../c-runtime-library/parameter-validation.md). Si l’exécution est autorisée à se poursuivre, ces fonctions retournent **_NLSCMPERROR** et attribuent à **errno** la valeur **EINVAL**.
 
-Par défaut, l’état global de cette fonction est étendue à l’application. Pour changer cela, voir [Global State dans le CRT](../global-state.md).
+Par défaut, l’état global de cette fonction est limité à l’application. Pour modifier cette valeur, consultez [état global dans le CRT](../global-state.md).
 
 ### <a name="generic-text-routine-mappings"></a>Mappages de routines de texte générique
 
@@ -156,9 +156,9 @@ Pour plus d'informations sur la compatibilité, voir [Compatibilité](../../c-ru
 
 ## <a name="see-also"></a>Voir aussi
 
-[Local](../../c-runtime-library/locale.md)<br/>
-[Manipulation des cordes](../../c-runtime-library/string-manipulation-crt.md)<br/>
-[fonctions strcoll](../../c-runtime-library/strcoll-functions.md)<br/>
+[Paramètres régionaux](../../c-runtime-library/locale.md)<br/>
+[Manipulation de chaînes](../../c-runtime-library/string-manipulation-crt.md)<br/>
+[strcoll, fonctions](../../c-runtime-library/strcoll-functions.md)<br/>
 [localeconv](localeconv.md)<br/>
 [_mbsnbcoll, _mbsnbcoll_l, _mbsnbicoll, _mbsnbicoll_l](mbsnbcoll-mbsnbcoll-l-mbsnbicoll-mbsnbicoll-l.md)<br/>
 [setlocale, _wsetlocale](setlocale-wsetlocale.md)<br/>

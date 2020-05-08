@@ -18,7 +18,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-math-l1-1-0.dll
-- api-ms-win-crt-private-l1-1-0
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -37,12 +37,12 @@ helpviewer_keywords:
 - fabs function
 - fabsl function
 ms.assetid: 23bca210-f408-4f5e-b46b-0ccaaec31e36
-ms.openlocfilehash: 38648f2108b5202cbb355da3abab9e7dedf4dc47
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 7a65e3ef5b0d15e82ada07eef495600a50531f34
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81347548"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82920242"
 ---
 # <a name="fabs-fabsf-fabsl"></a>fabs, fabsf, fabsl
 
@@ -70,37 +70,37 @@ long double fabsl(
 
 ### <a name="parameters"></a>Paramètres
 
-*X*<br/>
+*x*<br/>
 Valeur à virgule flottante.
 
 ## <a name="return-value"></a>Valeur de retour
 
-Les **fonctions fabs** retournent la valeur absolue de l’argument *x*. Aucun retour d'erreur.
+Les fonctions **FABS** retournent la valeur absolue de l’argument *x*. Aucun retour d'erreur.
 
 |Entrée|Exception SEH|Exception\{b\> \<b\}Matherr|
 |-----------|-------------------|-----------------------|
 |± QNAN,IND|Aucun|_DOMAIN|
 
-## <a name="remarks"></a>Notes
+## <a name="remarks"></a>Notes 
 
-CMD permet la surcharge, de sorte que vous pouvez appeler \<des surcharges de **fabs** si vous incluez le cmath> en-tête. Dans un programme C, **fabs** prend et renvoie toujours un **double**.
+C++ autorisant la surcharge, vous pouvez appeler des surcharges de **FABS** si vous incluez \<l’en-tête de> cmath. Dans un programme C, **FABS** accepte et retourne toujours un **double**.
 
-Par défaut, l’état global de cette fonction est étendue à l’application. Pour changer cela, voir [Global State dans le CRT](../global-state.md).
+Par défaut, l’état global de cette fonction est limité à l’application. Pour modifier cette valeur, consultez [état global dans le CRT](../global-state.md).
 
 ## <a name="requirements"></a>Spécifications
 
-|Fonction|En-tête C requis|En-tête C++ requis|
+|Function|En-tête C requis|En-tête C++ requis|
 |--------------|-----------------------|---------------------------|
-|**fabs**, **fabsf**, **fabsl**|\<math.h>|\<cmath> ou \<math.h>|
+|**FABS**, **fabsf**, **fabsl**|\<math.h>|\<cmath> ou \<math.h>|
 
 Pour plus d'informations sur la compatibilité, voir [Compatibilité](../../c-runtime-library/compatibility.md).
 
-## <a name="example"></a>Exemple
+## <a name="example"></a> Exemple
 
 Consultez l’exemple relatif à [abs](abs-labs-llabs-abs64.md).
 
 ## <a name="see-also"></a>Voir aussi
 
-[Soutien à la pointe flottante](../../c-runtime-library/floating-point-support.md)<br/>
+[Prise en charge de la virgule flottante](../../c-runtime-library/floating-point-support.md)<br/>
 [abs, labs, llabs, _abs64](abs-labs-llabs-abs64.md)<br/>
 [_cabs](cabs.md)<br/>

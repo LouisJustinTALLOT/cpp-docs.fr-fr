@@ -16,7 +16,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-runtime-l1-1-0.dll
-- api-ms-win-crt-private-l1-1-0
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -27,16 +27,16 @@ helpviewer_keywords:
 - terminate function
 - exception handling, termination
 ms.assetid: 90e67402-08e9-4b2a-962c-66a8afd3ccb4
-ms.openlocfilehash: 1aa95daeab424c933f10060fb4f87cb317aa188c
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 1ec4e27096dd6b5fea089e21c95022542d7adc82
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81362543"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82912220"
 ---
 # <a name="terminate-crt"></a>terminate (CRT)
 
-Appels [avorter](abort.md) ou une fonction que vous spécifiez à **l’aide de set_terminate**.
+Appelle [Abort](abort.md) ou une fonction que vous spécifiez à l’aide de **set_terminate**.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -44,9 +44,9 @@ Appels [avorter](abort.md) ou une fonction que vous spécifiez à **l’aide de 
 void terminate( void );
 ```
 
-## <a name="remarks"></a>Notes
+## <a name="remarks"></a>Notes 
 
-La fonction **de résiliation** est utilisée avec le traitement d’exception de Cmd et est appelée dans les cas suivants :
+La fonction **Terminate** est utilisée avec la gestion des exceptions C++ et est appelée dans les cas suivants :
 
 - Gestionnaire catch correspondant introuvable pour une exception C++ levée.
 
@@ -54,15 +54,15 @@ La fonction **de résiliation** est utilisée avec le traitement d’exception d
 
 - Pile endommagée après la levée d’une exception.
 
-**mettre fin aux** appels [avorter](abort.md) par défaut. Vous pouvez modifier ce défaut en écrivant votre propre fonction de terminaison et en appelant **set_terminate** avec le nom de votre fonction comme argument. **mettre fin aux** appels de la dernière fonction donnée comme un argument à **set_terminate**. Pour plus d’informations, consultez [Exceptions C++ non gérées](../../cpp/unhandled-cpp-exceptions.md).
+**arrêter** les appels [abandonnés](abort.md) par défaut. Vous pouvez modifier cette valeur par défaut en écrivant votre propre fonction d’arrêt et en appelant **set_terminate** avec le nom de votre fonction comme argument. **Terminate** appelle la dernière fonction donnée comme argument pour **set_terminate**. Pour plus d’informations, consultez [Exceptions C++ non gérées](../../cpp/unhandled-cpp-exceptions.md).
 
-Par défaut, l’état global de cette fonction est étendue à l’application. Pour changer cela, voir [Global State dans le CRT](../global-state.md).
+Par défaut, l’état global de cette fonction est limité à l’application. Pour modifier cette valeur, consultez [état global dans le CRT](../global-state.md).
 
 ## <a name="requirements"></a>Spécifications
 
 |Routine|En-tête requis|
 |-------------|---------------------|
-|**Mettre fin**|\<eh.h>|
+|**pire**|\<eh.h>|
 
 Pour plus d'informations sur la compatibilité, voir [Compatibilité](../../c-runtime-library/compatibility.md).
 
@@ -119,4 +119,4 @@ term_func() was called by terminate().
 [_set_se_translator](set-se-translator.md)<br/>
 [set_terminate](set-terminate-crt.md)<br/>
 [set_unexpected](set-unexpected-crt.md)<br/>
-[Inattendu](unexpected-crt.md)<br/>
+[erreur](unexpected-crt.md)<br/>
