@@ -23,7 +23,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-math-l1-1-0.dll
-- api-ms-win-crt-private-l1-1-0
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -44,12 +44,12 @@ helpviewer_keywords:
 - calculating hypotenuses
 - _hypot function
 ms.assetid: 6a13887f-bd53-43fc-9d77-5b42d6e49925
-ms.openlocfilehash: 85f975dace6aa0c79356f85a8ece53b82413a7c3
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 16db920d6e7d3836eb4a395b2029e2f9329f2681
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81343959"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82919843"
 ---
 # <a name="hypot-hypotf-hypotl-_hypot-_hypotf-_hypotl"></a>hypot, hypotf, hypotl, _hypot, _hypotf, _hypotl
 
@@ -91,17 +91,17 @@ Valeurs à virgule flottante.
 
 ## <a name="return-value"></a>Valeur de retour
 
-En cas de succès, **l’hypot** renvoie la longueur de l’hypoténuse; sur le débordement, **l’hypot** retourne INF (infini) et la variable **errno** est réglée à **ERANGE**. Vous pouvez utiliser **_matherr** pour modifier la gestion des erreurs.
+En cas de réussite, **hypot** retourne la longueur de l’hypoténuse ; en cas de dépassement de capacité, **hypot** retourne INF (infini) et la variable **errno** est définie sur **ERANGE**. Vous pouvez utiliser **_matherr** pour modifier la gestion des erreurs.
 
 Pour plus d’informations sur les codes de retour, consultez [errno, _doserrno, _sys_errlist et _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
 
-## <a name="remarks"></a>Notes
+## <a name="remarks"></a>Notes 
 
-Les fonctions **hypot** calculer la longueur de l’hypoténuse d’un triangle droit, étant donné la longueur des deux côtés *x* et *y* (en d’autres termes, la racine carrée de *x*<sup>2</sup> + *y*<sup>2</sup>).
+Les fonctions **hypot** calculent la longueur de l’hypoténuse d’un triangle rectangle, en fonction de la longueur des deux côtés *x* et *y* (en d’autres termes, la racine carrée de *x*<sup>2</sup> + *y*<sup>2</sup>).
 
 Les versions des fonctions qui comportent des traits de soulignement de début sont fournies à des fins de compatibilité avec les normes précédentes. Elles ont le même comportement que les versions qui n’en ont pas. Nous vous recommandons d’utiliser les versions sans traits de soulignement de début pour le nouveau code.
 
-Par défaut, l’état global de cette fonction est étendue à l’application. Pour changer cela, voir [Global State dans le CRT](../global-state.md).
+Par défaut, l’état global de cette fonction est limité à l’application. Pour modifier cette valeur, consultez [état global dans le CRT](../global-state.md).
 
 ## <a name="requirements"></a>Spécifications
 
@@ -135,6 +135,6 @@ If a right triangle has sides 3.0 and 4.0, its hypotenuse is 5.0
 
 ## <a name="see-also"></a>Voir aussi
 
-[Soutien à la pointe flottante](../../c-runtime-library/floating-point-support.md)<br/>
+[Prise en charge de la virgule flottante](../../c-runtime-library/floating-point-support.md)<br/>
 [_cabs](cabs.md)<br/>
 [_matherr](matherr.md)<br/>

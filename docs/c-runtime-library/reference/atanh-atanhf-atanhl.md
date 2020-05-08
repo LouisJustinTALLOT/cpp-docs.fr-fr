@@ -20,7 +20,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-math-l1-1-0.dll
-- api-ms-win-crt-private-l1-1-0
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -34,12 +34,12 @@ helpviewer_keywords:
 - atanhl function
 - atanh funciton
 ms.assetid: 83a43b5b-2580-4461-854f-dc84236d9f32
-ms.openlocfilehash: ef4a37c1ae76a88fd547b76c510097994a160253
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: ce40cf25fde12c6413e88519906b807f2ee65faa
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81350127"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82920063"
 ---
 # <a name="atanh-atanhf-atanhl"></a>atanh, atanhf, atanhl
 
@@ -60,27 +60,27 @@ long double atanh( long double x );  // C++ only
 
 ### <a name="parameters"></a>Paramètres
 
-*X*<br/>
+*x*<br/>
 Valeur à virgule flottante.
 
 ## <a name="return-value"></a>Valeur de retour
 
-Les fonctions **atanh** retournent la tangente hyberbolique inverse (tangente hyperbolique d’arc) de *x.* Si *x* est supérieur à 1, ou moins de -1, **errno** est réglé à **EDOM** et le résultat est un NaN calme. Si *x* est égal à 1 ou -1, une infinité positive ou négative est retournée, respectivement, et **errno** est réglé à **ERANGE**.
+Les fonctions **atanh** retournent la tangente hyperbolique inverse (arc tangente hyperbolique) de *x*. Si *x* est supérieur à 1, ou inférieur à-1, **errno** a la valeur **Edom** et le résultat est une valeur NaN silencieuse. Si *x* est égal à 1 ou-1, un infini positif ou négatif est retourné, respectivement, et **errno** a la valeur **ERANGE**.
 
-|Entrée|Exception SEH|**Matherr Matherr** Exception|
+|Entrée|Exception SEH|**Supertherr** Titre|
 |-----------|-------------------|-------------------------|
 |± QNAN,IND|Aucun|Aucun|
-|*X* 1; *x* -1|Aucun|Aucun|
+|*X* ≥ 1 ; *x* ≤-1|Aucun|Aucun|
 
-## <a name="remarks"></a>Notes
+## <a name="remarks"></a>Notes 
 
-Parce que le CMD permet la surcharge, vous pouvez appeler des surcharges **d’atanh** qui prennent et retournent **flotteur** ou **de longues** valeurs **doubles.** Dans un programme C, **atanh** prend et retourne toujours **double**.
+C++ autorisant la surcharge, vous pouvez appeler des surcharges de **atanh** qui acceptent et retournent des valeurs **float** ou **long** **double** . Dans un programme C, **atanh** prend toujours et retourne **double**.
 
-Par défaut, l’état global de cette fonction est étendue à l’application. Pour changer cela, voir [Global State dans le CRT](../global-state.md).
+Par défaut, l’état global de cette fonction est limité à l’application. Pour modifier cette valeur, consultez [état global dans le CRT](../global-state.md).
 
 ## <a name="requirements"></a>Spécifications
 
-|Fonction|En-tête C|En-tête C++|
+|Function|En-tête C|En-tête C++|
 |--------------|--------------|------------------|
 |**atanh**, **atanhf**, **atanhl**|\<math.h>|\<cmath> ou \<math.h>|
 
@@ -116,7 +116,7 @@ atanh( 0.655794 ) = 0.785398
 
 ## <a name="see-also"></a>Voir aussi
 
-[Soutien à la pointe flottante](../../c-runtime-library/floating-point-support.md)<br/>
+[Prise en charge de la virgule flottante](../../c-runtime-library/floating-point-support.md)<br/>
 [acosh, acoshf, acoshl](acosh-acoshf-acoshl.md)<br/>
 [asinh, asinhf, asinhl](asinh-asinhf-asinhl.md)<br/>
 [cosh, coshf, coshl](cosh-coshf-coshl.md)<br/>

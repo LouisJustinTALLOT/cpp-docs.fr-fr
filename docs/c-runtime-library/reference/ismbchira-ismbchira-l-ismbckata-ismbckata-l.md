@@ -22,7 +22,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-multibyte-l1-1-0.dll
-- api-ms-win-crt-private-l1-1-0
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -48,12 +48,12 @@ helpviewer_keywords:
 - Hiragana
 - ismbckata function
 ms.assetid: 2db388a2-be31-489b-81c8-f6bf3f0582d3
-ms.openlocfilehash: d450702ae41f404606cda1bea613f3d99fadd06f
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 89c6aacbb6726165703d38e3ea519806b1f970d2
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81343217"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82910698"
 ---
 # <a name="_ismbchira-_ismbchira_l-_ismbckata-_ismbckata_l"></a>_ismbchira, _ismbchira_l, _ismbckata, _ismbckata_l
 
@@ -83,7 +83,7 @@ int _ismbckata_l(
 
 ### <a name="parameters"></a>Paramètres
 
-*C*<br/>
+*secteur*<br/>
 Caractère à tester.
 
 *locale*<br/>
@@ -91,24 +91,24 @@ Paramètres régionaux à utiliser.
 
 ## <a name="return-value"></a>Valeur de retour
 
-Chacune de ces routines retourne une valeur différente de zéro si le caractère satisfait à la condition de test ou 0 dans le cas contraire. Si *c* <255 et qu’il y a une routine **_ismbb** correspondante (par exemple, **_ismbcalnum** correspond à **_ismbbalnum),** le résultat est la valeur de rendement de la routine **_ismbb** correspondante.
+Chacune de ces routines retourne une valeur différente de zéro si le caractère satisfait à la condition de test ou 0 dans le cas contraire. Si *c* <= 255 et qu’il existe une routine **_ismbb** correspondante (par exemple, **_ismbcalnum** correspond à **_ismbbalnum**), le résultat est la valeur de retour de la routine **_ismbb** correspondante.
 
-## <a name="remarks"></a>Notes
+## <a name="remarks"></a>Notes 
 
 Chacune de ces fonctions teste un caractère multioctet fourni pour un état donné.
 
-Les versions de ces fonctions avec le **suffixe _l** sont identiques, sauf qu’ils utilisent le lieu passé au lieu de la localisation actuelle pour leur comportement local-dépendant. Pour plus d’informations, consultez [Locale](../../c-runtime-library/locale.md).
+Les versions de ces fonctions avec le suffixe **_L** sont identiques, sauf qu’elles utilisent les paramètres régionaux passés au lieu des paramètres régionaux actuels pour leur comportement dépendant des paramètres régionaux. Pour plus d’informations, consultez [Locale](../../c-runtime-library/locale.md).
 
 |Routine|Condition de test (page de codes 932 uniquement)|
 |-------------|-------------------------------------------|
-|**_ismbchira**|Double-byte Hiragana: 0x829F<*'c*<'0x82F1.|
-|**_ismbchira_l**|Double-byte Hiragana: 0x829F<*'c*<'0x82F1.|
-|**_ismbckata**|Katakana double-byte: 0x8340<'*c*<'0x8396.|
-|**_ismbckata_l**|Katakana double-byte: 0x8340<'*c*<'0x8396.|
+|**_ismbchira**|Hiragana à deux octets : 0x829F<=*c*<= 0x82F1.|
+|**_ismbchira_l**|Hiragana à deux octets : 0x829F<=*c*<= 0x82F1.|
+|**_ismbckata**|Katakana sur deux octets : 0x8340<=*c*<= 0x8396.|
+|**_ismbckata_l**|Katakana sur deux octets : 0x8340<=*c*<= 0x8396.|
 
-**Fin De la page de code 932 Spécifique**
+**Fin spécifique de la page de codes 932**
 
-Par défaut, l’état global de cette fonction est étendue à l’application. Pour changer cela, voir [Global State dans le CRT](../global-state.md).
+Par défaut, l’état global de cette fonction est limité à l’application. Pour modifier cette valeur, consultez [état global dans le CRT](../global-state.md).
 
 ## <a name="requirements"></a>Spécifications
 
@@ -126,5 +126,5 @@ Pour plus d’informations sur la compatibilité, consultez [Compatibility](../.
 [Classifications des caractères](../../c-runtime-library/character-classification.md)<br/>
 [_ismbc, routines](../../c-runtime-library/ismbc-routines.md)<br/>
 [is, isw, routines](../../c-runtime-library/is-isw-routines.md)<br/>
-[Local](../../c-runtime-library/locale.md)<br/>
-[Interprétation des séquences multioctets-caractères](../../c-runtime-library/interpretation-of-multibyte-character-sequences.md)<br/>
+[Paramètres régionaux](../../c-runtime-library/locale.md)<br/>
+[Interprétation des séquences de caractères multioctets](../../c-runtime-library/interpretation-of-multibyte-character-sequences.md)<br/>

@@ -20,7 +20,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-string-l1-1-0.dll
-- api-ms-win-crt-private-l1-1-0
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -42,12 +42,12 @@ helpviewer_keywords:
 - _istgraph function
 - _ismbcgraph_l function
 ms.assetid: 531a5f34-4302-4d0a-8a4f-b7ea150ad941
-ms.openlocfilehash: b10038a783f05512f12f25a231dd553a1863c143
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 29fd8a4d9fcaded1f7750eaf9ba9dfbf28760cf7
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81343825"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82909634"
 ---
 # <a name="isgraph-iswgraph-_isgraph_l-_iswgraph_l"></a>isgraph, iswgraph, _isgraph_l, _iswgraph_l
 
@@ -74,16 +74,16 @@ int _iswgraph_l(
 
 ### <a name="parameters"></a>Paramètres
 
-*C*<br/>
+*secteur*<br/>
 Entier à tester.
 
 ## <a name="return-value"></a>Valeur de retour
 
-Chacune de ces routines retourne nonzero si *c* est une représentation particulière d’un personnage imprimable autre qu’un espace. **isgraph** retourne une valeur non zéro si *c* est un personnage imprimable autre qu’un espace. **iswgraph** retourne une valeur non zéro si *c* est un personnage large imprimable autre qu’un large espace de caractère. Chacune de ces routines retourne 0 si *c* ne satisfait pas l’état d’essai.
+Chacune de ces routines retourne une valeur différente de zéro si *c* est une représentation particulière d’un caractère imprimable autre qu’un espace. **isgraph** retourne une valeur différente de zéro si *c* est un caractère imprimable autre qu’un espace. **iswgraph** retourne une valeur différente de zéro si *c* est un caractère étendu imprimable autre qu’un espace de caractères larges. Chacune de ces routines retourne 0 si *c* ne satisfait pas la condition de test.
 
-Les versions de ces fonctions qui ont le **suffixe _l** utilisent le lieu qui est passé au lieu de la localisation actuelle pour leur comportement local-dépendant. Pour plus d’informations, consultez [Locale](../../c-runtime-library/locale.md).
+Les versions de ces fonctions qui ont le suffixe **_L** utilisent les paramètres régionaux qui sont passés au lieu des paramètres régionaux actuels pour leur comportement dépendant des paramètres régionaux. Pour plus d’informations, consultez [Locale](../../c-runtime-library/locale.md).
 
-Le comportement de **l’isgraphe** et **_isgraph_l** n’est pas défini si *c* n’est pas EOF ou dans la gamme 0 à 0xFF, inclusive. Lorsqu’une bibliothèque CRT débagé est utilisée et *que c* n’est pas l’une de ces valeurs, les fonctions soulèvent une affirmation.
+Le comportement de **isgraph** et **_isgraph_l** n’est pas défini si *c* n’est pas EOF ni dans la plage 0 à 0xFF, inclus. Quand une bibliothèque CRT de débogage est utilisée et que *c* n’est pas l’une de ces valeurs, les fonctions déclenchent une assertion.
 
 ### <a name="generic-text-routine-mappings"></a>Mappages de routines de texte générique
 
@@ -92,9 +92,9 @@ Le comportement de **l’isgraphe** et **_isgraph_l** n’est pas défini si *c*
 |**_istgraph**|**isgraph**|[_ismbcgraph](ismbcgraph-functions.md)|**iswgraph**|
 |**_istgraph_l**|**_isgraph_l**|[_ismbcgraph_l](ismbcgraph-functions.md)|**_iswgraph_l**|
 
-## <a name="remarks"></a>Notes
+## <a name="remarks"></a>Notes 
 
-Par défaut, l’état global de cette fonction est étendue à l’application. Pour changer cela, voir [Global State dans le CRT](../global-state.md).
+Par défaut, l’état global de cette fonction est limité à l’application. Pour modifier cette valeur, consultez [état global dans le CRT](../global-state.md).
 
 ## <a name="requirements"></a>Spécifications
 
@@ -110,5 +110,5 @@ Pour plus d'informations sur la compatibilité, voir [Compatibilité](../../c-ru
 ## <a name="see-also"></a>Voir aussi
 
 [Classifications des caractères](../../c-runtime-library/character-classification.md)<br/>
-[Local](../../c-runtime-library/locale.md)<br/>
+[Paramètres régionaux](../../c-runtime-library/locale.md)<br/>
 [is, isw, routines](../../c-runtime-library/is-isw-routines.md)<br/>
