@@ -20,7 +20,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-multibyte-l1-1-0.dll
-- api-ms-win-crt-private-l1-1-0
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -48,16 +48,16 @@ helpviewer_keywords:
 - mbsninc_l function
 - _tcsninc function
 ms.assetid: 6caace64-f9e4-48c0-afa8-ea51824ad723
-ms.openlocfilehash: 297d2fdf940ab81a3d636d4726e6e6a345ce5c02
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: fe35d3b37d5aadfbeae69de5ff00c349a2263e30
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81364481"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82914191"
 ---
 # <a name="_strninc-_wcsninc-_mbsninc-_mbsninc_l"></a>_strninc, _wcsninc, _mbsninc, _mbsninc_l
 
-Avance un pointeur de cordes par **n** caractères.
+Avance un pointeur de chaîne de **n** caractères.
 
 > [!IMPORTANT]
 > **_mbsninc** et **_mbsninc_l** ne peuvent pas être utilisés dans les applications qui s’exécutent dans le Windows Runtime. Pour plus d’informations, consultez [Fonctions CRT non prises en charge dans les applications de la plateforme Windows universelle](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
@@ -97,13 +97,13 @@ Paramètres régionaux à utiliser.
 
 ## <a name="return-value"></a>Valeur de retour
 
-Chacune de ces routines retourne un pointeur à *str* après *str* a été incrémenté par des personnages *de comptage* ou **NULL** si le pointeur fourni est **NULL**. Si *le nombre* est supérieur ou égal au nombre de caractères en *str,* le résultat n’est pas défini.
+Chacune de ces routines retourne un pointeur vers *Str* après l’incrémentation de *Str* par le *nombre* de caractères ou la **valeur null** si le pointeur fourni a la **valeur null**. Si *Count* est supérieur ou égal au nombre de caractères dans *Str*, le résultat n’est pas défini.
 
-## <a name="remarks"></a>Notes
+## <a name="remarks"></a>Notes 
 
-Le **_mbsninc** fonction incréments *str* par *compte* des caractères multioctets. **_mbsninc** reconnaît les séquences multioctets selon la [page de code multioctet](../../c-runtime-library/code-pages.md) actuellement en service.
+La fonction **_mbsninc** incrémente *Str* par *nombre* de caractères multioctets. **_mbsninc** reconnaît les séquences de caractères multioctets en fonction de la [page de codes multioctets](../../c-runtime-library/code-pages.md) en cours d’utilisation.
 
-Par défaut, l’état global de cette fonction est étendue à l’application. Pour changer cela, voir [Global State dans le CRT](../global-state.md).
+Par défaut, l’état global de cette fonction est limité à l’application. Pour modifier cette valeur, consultez [état global dans le CRT](../global-state.md).
 
 ### <a name="generic-text-routine-mappings"></a>Mappages de routines de texte générique
 
@@ -111,9 +111,9 @@ Par défaut, l’état global de cette fonction est étendue à l’application.
 |---------------------|--------------------------------------|--------------------|-----------------------|
 |**_tcsninc**|**_strninc**|**_mbsninc**|**_wcsninc**|
 
-**_strninc** et **_wcsninc** sont des versions de cordes à caractère unique et à caractère large de **_mbsninc**. **_wcsninc** et **_strninc** ne sont fournis que pour cette cartographie et ne doivent pas être utilisés autrement. Pour plus d’informations, consultez [Utilisation de mappages de texte générique](../../c-runtime-library/using-generic-text-mappings.md) et [Mappages de texte générique](../../c-runtime-library/generic-text-mappings.md).
+les **_strninc** et **_wcsninc** sont des chaînes de caractères codés sur un octet et des versions de chaîne à caractères larges de **_mbsninc**. **_wcsninc** et **_strninc** sont fournis uniquement pour ce mappage et ne doivent pas être utilisés dans le cas contraire. Pour plus d’informations, consultez [Utilisation de mappages de texte générique](../../c-runtime-library/using-generic-text-mappings.md) et [Mappages de texte générique](../../c-runtime-library/generic-text-mappings.md).
 
-**_mbsninc_l** est identique, sauf qu’il utilise le paramètre local passé à la place. Pour plus d’informations, consultez [Locale](../../c-runtime-library/locale.md).
+**_mbsninc_l** est identique, à ceci près qu’elle utilise à la place les paramètres régionaux transmis. Pour plus d’informations, consultez [Locale](../../c-runtime-library/locale.md).
 
 ## <a name="requirements"></a>Spécifications
 
@@ -128,9 +128,9 @@ Pour plus d’informations sur la compatibilité, consultez [Compatibility](../.
 
 ## <a name="see-also"></a>Voir aussi
 
-[Manipulation des cordes](../../c-runtime-library/string-manipulation-crt.md)<br/>
-[Local](../../c-runtime-library/locale.md)<br/>
-[Interprétation des séquences multioctets-caractères](../../c-runtime-library/interpretation-of-multibyte-character-sequences.md)<br/>
+[Manipulation de chaînes](../../c-runtime-library/string-manipulation-crt.md)<br/>
+[Paramètres régionaux](../../c-runtime-library/locale.md)<br/>
+[Interprétation des séquences de caractères multioctets](../../c-runtime-library/interpretation-of-multibyte-character-sequences.md)<br/>
 [_strdec, _wcsdec, _mbsdec, _mbsdec_l](strdec-wcsdec-mbsdec-mbsdec-l.md)<br/>
 [_strinc, _wcsinc, _mbsinc, _mbsinc_l](strinc-wcsinc-mbsinc-mbsinc-l.md)<br/>
 [_strnextc, _wcsnextc, _mbsnextc, _mbsnextc_l](strnextc-wcsnextc-mbsnextc-mbsnextc-l.md)<br/>

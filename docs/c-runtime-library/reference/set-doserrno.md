@@ -16,7 +16,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-runtime-l1-1-0.dll
-- api-ms-win-crt-private-l1-1-0
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -30,12 +30,12 @@ helpviewer_keywords:
 - set_doserrno function
 - _doserrno global variable
 ms.assetid: 8686c159-3797-4705-a53e-7457869ca6f3
-ms.openlocfilehash: 209fcf7e15ea01f146e3dab09f0c304d29236770
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 9de5ff8ccc4673468628275c3c3366681edc3776
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81337794"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82913064"
 ---
 # <a name="_set_doserrno"></a>_set_doserrno
 
@@ -50,17 +50,17 @@ errno_t _set_doserrno( int error_value );
 ### <a name="parameters"></a>Paramètres
 
 *error_value*<br/>
-La nouvelle valeur de **_doserrno**.
+Nouvelle valeur de **_doserrno**.
 
 ## <a name="return-value"></a>Valeur de retour
 
 Retourne zéro si l’opération réussit.
 
-## <a name="remarks"></a>Notes
+## <a name="remarks"></a>Notes 
 
 Les valeurs possibles sont définies dans Errno.h.
 
-Par défaut, l’état global de cette fonction est étendue à l’application. Pour changer cela, voir [Global State dans le CRT](../global-state.md).
+Par défaut, l’état global de cette fonction est limité à l’application. Pour modifier cette valeur, consultez [état global dans le CRT](../global-state.md).
 
 ## <a name="requirements"></a>Spécifications
 

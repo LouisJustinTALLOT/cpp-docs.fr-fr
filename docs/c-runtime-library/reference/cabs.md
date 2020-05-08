@@ -16,7 +16,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-math-l1-1-0.dll
-- api-ms-win-crt-private-l1-1-0
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -29,12 +29,12 @@ helpviewer_keywords:
 - _cabs function
 - calculating absolute values
 ms.assetid: fea292ee-1a39-4a0a-b416-4a189346ff26
-ms.openlocfilehash: e77e1811cb6f002c06e514b5f737b8a92ea84282
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 6e769d2caf65ef3c084bcb6add701f78b03a1b17
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81333693"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82913354"
 ---
 # <a name="_cabs"></a>_cabs
 
@@ -50,18 +50,18 @@ double _cabs(
 
 ### <a name="parameters"></a>Paramètres
 
-*Z*<br/>
+*Lettre*<br/>
 Nombre complexe.
 
 ## <a name="return-value"></a>Valeur de retour
 
-**_cabs** retourne la valeur absolue de son argument en cas de succès. Sur le débordement, **_cabs** retourne **HUGE_VAL** et met **errno** à **ERANGE**. Vous pouvez modifier la gestion des erreurs avec [_matherr](matherr.md).
+**_cabs** retourne la valeur absolue de son argument en cas de réussite. En cas de dépassement, **_cabs** retourne **HUGE_VAL** et définit **errno** sur **ERANGE**. Vous pouvez modifier la gestion des erreurs avec [_matherr](matherr.md).
 
-## <a name="remarks"></a>Notes
+## <a name="remarks"></a>Notes 
 
-La fonction **_cabs** calcule la valeur absolue d’un nombre complexe, qui doit être une structure de type [_complex](../../c-runtime-library/standard-types.md). La structure *z* est composée d’un composant réel *x* et d’un composant imaginaire *y*. Un appel à **_cabs** produit une valeur équivalente `sqrt( z.x * z.x + z.y * z.y )`à celle de l’expression .
+La fonction **_cabs** calcule la valeur absolue d’un nombre complexe, qui doit être une structure de type [_complex](../../c-runtime-library/standard-types.md). La structure *z* est composée d’un composant réel *x* et d’un composant imaginaire *y*. Un appel à **_cabs** produit une valeur équivalant à celle de l' `sqrt( z.x * z.x + z.y * z.y )`expression.
 
-Par défaut, l’état global de cette fonction est étendue à l’application. Pour changer cela, voir [Global State dans le CRT](../global-state.md).
+Par défaut, l’état global de cette fonction est limité à l’application. Pour modifier cette valeur, consultez [état global dans le CRT](../global-state.md).
 
 ## <a name="requirements"></a>Spécifications
 
@@ -98,6 +98,6 @@ The absolute value of 3.000000 + 4.000000i is 5.000000
 
 ## <a name="see-also"></a>Voir aussi
 
-[Soutien à la pointe flottante](../../c-runtime-library/floating-point-support.md)<br/>
+[Prise en charge de la virgule flottante](../../c-runtime-library/floating-point-support.md)<br/>
 [abs, labs, llabs, _abs64](abs-labs-llabs-abs64.md)<br/>
 [fabs, fabsf, fabsl](fabs-fabsf-fabsl.md)

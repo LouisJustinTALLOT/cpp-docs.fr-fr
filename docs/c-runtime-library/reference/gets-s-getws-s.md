@@ -18,7 +18,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-stdio-l1-1-0.dll
-- api-ms-win-crt-private-l1-1-0
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -37,16 +37,16 @@ helpviewer_keywords:
 - gets_s function
 - standard input, reading from
 ms.assetid: 5880c36f-122c-4061-a1a5-aeeced6fe58c
-ms.openlocfilehash: aac64a42a2979623f4314f7bf28d7e4917eaee18
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: b01456d3ed37c34dbc10980ebdfbe008e27f624a
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81344214"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82913610"
 ---
 # <a name="gets_s-_getws_s"></a>gets_s, _getws_s
 
-Obtient une ligne du flux **stdin.** Ces versions de [gets, _getws](../../c-runtime-library/gets-getws.md) intègrent des améliorations de sécurité, comme décrit dans [Fonctionnalités de sécurité dans le CRT](../../c-runtime-library/security-features-in-the-crt.md).
+Obtient une ligne du flux **stdin** . Ces versions de [gets, _getws](../../c-runtime-library/gets-getws.md) intègrent des améliorations de sécurité, comme décrit dans [Fonctionnalités de sécurité dans le CRT](../../c-runtime-library/security-features-in-the-crt.md).
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -79,21 +79,21 @@ Taille de la mémoire tampon.
 
 ## <a name="return-value"></a>Valeur de retour
 
-Retourne *tampon* en cas de succès. Un pointeur **NULL** indique une condition d’erreur ou de fin de fichier. Utilisez [ferror](ferror.md) ou [feof](feof.md) pour déterminer laquelle des deux s’est produite.
+Retourne la *mémoire tampon* en cas de réussite. Un pointeur **NULL** indique une condition d’erreur ou de fin de fichier. Utilisez [ferror](ferror.md) ou [feof](feof.md) pour déterminer laquelle des deux s’est produite.
 
-## <a name="remarks"></a>Notes
+## <a name="remarks"></a>Notes 
 
-La fonction **gets_s** lit une ligne à partir de la **stdin** flux d’entrée standard et le stocke dans *le tampon*. La ligne se compose de tous les caractères jusqu’à et y compris le premier caractère de saut de ligne (« \n »). **gets_s** remplace ensuite le personnage newline par un caractère nul ('0') avant de retourner la ligne. En revanche, la fonction **fgets_s** conserve le caractère newline.
+La fonction **gets_s** lit une ligne dans le flux d’entrée standard **stdin** et la stocke dans la *mémoire tampon*. La ligne se compose de tous les caractères jusqu’à et y compris le premier caractère de saut de ligne (« \n »). **gets_s** remplace ensuite le caractère de saut de ligne par un caractère null (« \ 0 ») avant de retourner la ligne. En revanche, la fonction **fgets_s** conserve le caractère de saut de ligne.
 
-Si le premier personnage lu est le caractère de fin de fichier, un caractère nul est stocké au début du *tampon* et **NULL** est retourné.
+Si le premier caractère lu est le caractère de fin de fichier, un caractère NULL est stocké au début de la *mémoire tampon* et la **valeur null** est retournée.
 
-**_getws_s** est une version à caractère large de **gets_s**; son argument et sa valeur de retour sont des chaînes de caractère large.
+**_getws_s** est une version à caractères larges de **gets_s**; son argument et sa valeur de retour sont des chaînes à caractères larges.
 
-Si *le tampon* est **NULL** ou la *tailleInCharacters* est inférieur ou égal à zéro, ou si le tampon est trop petit pour contenir la ligne d’entrée et le terminateur nul, ces fonctions invoquent un gestionnaire de paramètre invalide, tel que décrit dans [la validation de paramètres](../../c-runtime-library/parameter-validation.md). Si l’exécution est autorisée à se poursuivre, ces fonctions renvoient **NULL** et placent errno à **ERANGE**.
+Si *buffer* a la **valeur null** ou si la valeur de *sizeInCharacters* est inférieure ou égale à zéro, ou si la mémoire tampon est trop petite pour contenir la ligne d’entrée et la marque de fin null, ces fonctions appellent un gestionnaire de paramètres non valides, comme décrit dans [validation de paramètre](../../c-runtime-library/parameter-validation.md). Si l’exécution est autorisée à se poursuivre, ces fonctions retournent la **valeur null** et attribuent à errno la valeur **ERANGE**.
 
 En C++, l’utilisation de ces fonctions est simplifiée par les surcharges de modèle ; les surcharges peuvent déduire la longueur de la mémoire tampon automatiquement (ce qui évite d’avoir à spécifier un argument taille) et peuvent remplacer automatiquement les fonctions plus anciennes et non sécurisées par leurs équivalentes plus récentes et sécurisées. Pour plus d’informations, consultez [Sécuriser les surcharges de modèle](../../c-runtime-library/secure-template-overloads.md).
 
-Par défaut, l’état global de cette fonction est étendue à l’application. Pour changer cela, voir [Global State dans le CRT](../global-state.md).
+Par défaut, l’état global de cette fonction est limité à l’application. Pour modifier cette valeur, consultez [état global dans le CRT](../global-state.md).
 
 ### <a name="generic-text-routine-mappings"></a>Mappages de routines de texte générique
 
@@ -108,7 +108,7 @@ Par défaut, l’état global de cette fonction est étendue à l’application.
 |**gets_s**|\<stdio.h>|
 |**_getws_s**|\<stdio.h> ou \<wchar.h>|
 
-La console n’est pas prise en charge dans les applications Universal Windows Platform (UWP). Les poignées de flux standard qui sont associées à la console, **stdin**, **stdout**, et **stderr**, doivent être redirigés avant que les fonctions C run-time peuvent les utiliser dans les applications UWP. Pour plus d'informations sur la compatibilité, voir [Compatibilité](../../c-runtime-library/compatibility.md).
+La console n’est pas prise en charge dans les applications de plateforme Windows universelle (UWP). Les handles de flux standard associés à la console, **stdin**, **stdout**et **stderr**, doivent être redirigés pour que les fonctions runtime C puissent les utiliser dans les applications UWP. Pour plus d'informations sur la compatibilité, voir [Compatibilité](../../c-runtime-library/compatibility.md).
 
 ## <a name="example"></a>Exemple
 
@@ -138,7 +138,7 @@ The line entered was: Hello there!
 ## <a name="see-also"></a>Voir aussi
 
 [E/S de flux](../../c-runtime-library/stream-i-o.md)<br/>
-[obtient, _getws](../../c-runtime-library/gets-getws.md)<br/>
+[Obtient, _getws](../../c-runtime-library/gets-getws.md)<br/>
 [fgets, fgetws](fgets-fgetws.md)<br/>
 [fputs, fputws](fputs-fputws.md)<br/>
 [puts, _putws](puts-putws.md)<br/>

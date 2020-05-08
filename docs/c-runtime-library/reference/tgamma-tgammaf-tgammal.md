@@ -20,7 +20,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-math-l1-1-0.dll
-- api-ms-win-crt-private-l1-1-0
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -37,12 +37,12 @@ helpviewer_keywords:
 - tgammaf function
 - tgammal function
 ms.assetid: f1bd2681-8af2-48a9-919d-5358fd068acd
-ms.openlocfilehash: d7e27e8b818a16cb0c18f58e2f40c0090dd13ecf
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 6f3eb1bd791e645407b09a99a8c8e96025ca47e3
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81362506"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82912229"
 ---
 # <a name="tgamma-tgammaf-tgammal"></a>tgamma, tgammaf, tgammal
 
@@ -74,40 +74,40 @@ long double tgammal(
 
 ### <a name="parameters"></a>Paramètres
 
-*X*<br/>
+*x*<br/>
 Valeur dont le gamma doit être trouvé.
 
 ## <a name="return-value"></a>Valeur de retour
 
-En cas de succès, retourne le gamma de *x*.
+En cas de réussite, retourne la valeur gamma de *x*.
 
-Une erreur de portée peut se produire si l’ampleur de *x* est trop grande ou trop petite pour le type de données. Une erreur de domaine ou une erreur de portée peut se produire si *x* <0.
+Une erreur de plage peut se produire si l’amplitude de *x* est trop grande ou trop petite pour le type de données. Une erreur de domaine ou une erreur de plage peut se produire si *x* <= 0.
 
 |Problème|Renvoie|
 |-----------|------------|
-|x 0 euros|L’INFINI|
+|x = ± 0|± INFINI|
 |x = entier négatif|NaN|
-|x -INFINITY|NaN|
+|x =-infini|NaN|
 |x = +INFINITY|+INFINITY|
 |x = NaN|NaN|
 |Erreur de domaine|NaN|
-|Erreur de pôle|HUGE_VAL, HUGE_VALF ou HUGE_VALL|
-|Erreur de plage avec dépassement|HUGE_VAL, HUGE_VALF ou HUGE_VALL|
+|Erreur de pôle|± HUGE_VAL, ± HUGE_VALF ou ± HUGE_VALL|
+|Erreur de plage avec dépassement|± HUGE_VAL, ± HUGE_VALF ou ± HUGE_VALL|
 |erreur de plage avec dépassement de capacité négatif|valeur correcte après arrondi|
 
 Les erreurs sont signalées comme indiqué dans [_matherr](matherr.md).
 
-## <a name="remarks"></a>Notes
+## <a name="remarks"></a>Notes 
 
-Étant donné que le CMD permet la surcharge, vous pouvez appeler des surcharges de **tgamma** qui prennent et retournent **flotteur** et **de longs** **types doubles.** Dans un programme C, **tgamma** prend et renvoie toujours un **double**.
+C++ autorisant la surcharge, vous pouvez appeler des surcharges de **tgamma** qui acceptent et retournent des types **float** et **long** **double** . Dans un programme C, **tgamma** accepte et retourne toujours un **double**.
 
 Si x est un nombre naturel, cette fonction retourne la factorielle de (x-1).
 
-Par défaut, l’état global de cette fonction est étendue à l’application. Pour changer cela, voir [Global State dans le CRT](../global-state.md).
+Par défaut, l’état global de cette fonction est limité à l’application. Pour modifier cette valeur, consultez [état global dans le CRT](../global-state.md).
 
 ## <a name="requirements"></a>Spécifications
 
-|Fonction|En-tête C|En-tête C++|
+|Function|En-tête C|En-tête C++|
 |--------------|--------------|------------------|
 |**tgamma**, **tgammaf**, **tgammal**|\<math.h>|\<cmath>|
 
