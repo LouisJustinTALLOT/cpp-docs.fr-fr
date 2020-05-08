@@ -20,7 +20,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-math-l1-1-0.dll
-- api-ms-win-crt-private-l1-1-0
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -34,12 +34,12 @@ helpviewer_keywords:
 - rint function
 - rintl function
 ms.assetid: 312ae3e6-278c-459a-9393-11b8f87d9184
-ms.openlocfilehash: 6489b7ebed5246738fb660dffd07a0b8f8ed9743
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 5e2b3d7a571a3005b1c52eacaa85e1ede6d30b77
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81332763"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82917722"
 ---
 # <a name="rint-rintf-rintl"></a>rint, rintf, rintl
 
@@ -60,29 +60,29 @@ long double rint( long double x );  // C++ only
 
 ### <a name="parameters"></a>Paramètres
 
-*X*<br/>
+*x*<br/>
 Valeur à virgule flottante à arrondir.
 
 ## <a name="return-value"></a>Valeur de retour
 
-Les fonctions **de rint** retournent une valeur flottante-point qui représente l’intégrer le plus proche à *x*. Les valeurs à mi-chemin sont arrondies en fonction du réglage actuel du mode d’arrondissement des points flottants, les mêmes que les fonctions **de proximité.** Contrairement aux fonctions **de nearbyint,** les fonctions **de rint** peuvent soulever **l’exception FE_INEXACT** point flottant si le résultat diffère en valeur de l’argument. Aucun retour d'erreur.
+Les fonctions **Primer** retournent une valeur à virgule flottante qui représente l’entier le plus proche de *x*. Les valeurs à mi-chemin sont arrondies en fonction du paramètre actuel du mode d’arrondi à virgule flottante, comme les fonctions **nearbyint** . Contrairement aux fonctions **nearbyint** , les fonctions d' **Imprimer** peuvent déclencher l’exception de virgule flottante **FE_INEXACT** si le résultat est différent de la valeur de l’argument. Aucun retour d'erreur.
 
-|Entrée|Exception SEH|**_matherr** Exception|
+|Entrée|Exception SEH|**_matherr** Titre|
 |-----------|-------------------|--------------------------|
 |± ∞, QNAN, IND|Aucun|Aucun|
 |Nombres dénormalisés|EXCEPTION_FLT_UNDERFLOW|Aucun|
 
-## <a name="remarks"></a>Notes
+## <a name="remarks"></a>Notes 
 
-Parce que le CMD permet la surcharge, vous pouvez appeler des surcharges de **rint** qui prennent et retournent **flotteur** et **de longues** valeurs **doubles.** Dans un programme C, **rint** prend toujours et retourne un **double**.
+C++ autorisant la surcharge, vous pouvez appeler des surcharges d' **Imprimer** qui acceptent et retournent des valeurs **float** et **long** **double** . Dans un programme C, **Primer** accepte et retourne toujours un **double**.
 
-Par défaut, l’état global de cette fonction est étendue à l’application. Pour changer cela, voir [Global State dans le CRT](../global-state.md).
+Par défaut, l’état global de cette fonction est limité à l’application. Pour modifier cette valeur, consultez [état global dans le CRT](../global-state.md).
 
 ## <a name="requirements"></a>Spécifications
 
-|Fonction|En-tête C|En-tête C++|
+|Function|En-tête C|En-tête C++|
 |--------------|--------------|------------------|
-|**rint**, **rintf**, **rintl**|\<math.h>|\<cmath>|
+|**Primer**, **rintf**, **rintl**|\<math.h>|\<cmath>|
 
 Pour plus d'informations sur la compatibilité, voir [Compatibilité](../../c-runtime-library/compatibility.md).
 
@@ -124,7 +124,7 @@ rintl(-2.500000) is -3
 
 ## <a name="see-also"></a>Voir aussi
 
-[Soutien à la pointe flottante](../../c-runtime-library/floating-point-support.md)<br/>
+[Prise en charge de la virgule flottante](../../c-runtime-library/floating-point-support.md)<br/>
 [ceil, ceilf, ceill](ceil-ceilf-ceill.md)<br/>
 [floor, floorf, floorl](floor-floorf-floorl.md)<br/>
 [fmod, fmodf](fmod-fmodf.md)<br/>

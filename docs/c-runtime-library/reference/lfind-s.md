@@ -16,7 +16,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-utility-l1-1-0.dll
-- api-ms-win-crt-private-l1-1-0
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -32,12 +32,12 @@ helpviewer_keywords:
 - searching, linear
 - _lfind_s function
 ms.assetid: f1d9581d-5c9d-4222-a31c-a6dfafefa40d
-ms.openlocfilehash: 8f2983bee93c623eb936ed12422134281418076b
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 589a413c9f1fb49fbfe8cd1b5eacb9d452716523
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81342184"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82916512"
 ---
 # <a name="_lfind_s"></a>_lfind_s
 
@@ -64,40 +64,40 @@ Objet à rechercher.
 *base*<br/>
 Pointeur désignant la base de données de recherche.
 
-*nombre*<br/>
+*number*<br/>
 Nombre d’éléments de tableau.
 
-*Taille*<br/>
+*size*<br/>
 Taille des éléments de tableau en octets.
 
-*Comparer*<br/>
-Pointeur désignant la routine de comparaison. Le premier paramètre est le pointeur de *contexte.* Le deuxième paramètre est un pointeur désignant la clé pour la recherche. Le troisième paramètre est un pointeur désignant l’élément de tableau à comparer à la clé.
+*compar*<br/>
+Pointeur désignant la routine de comparaison. Le premier paramètre est le pointeur de *contexte* . Le deuxième paramètre est un pointeur désignant la clé pour la recherche. Le troisième paramètre est un pointeur désignant l’élément de tableau à comparer à la clé.
 
 *context*<br/>
 Pointeur désignant un objet accessible dans la fonction de comparaison.
 
 ## <a name="return-value"></a>Valeur de retour
 
-Si la clé est trouvée, **_lfind_s** renvoie un pointeur à l’élément du tableau à la *base* qui correspond à *la clé*. Si la clé n’est pas trouvée, **_lfind_s** renvoie **NULL**.
+Si la clé est trouvée, **_lfind_s** retourne un pointeur vers l’élément du tableau au niveau de *base* qui correspond à la *clé*. Si la clé est introuvable, **_lfind_s** retourne la **valeur null**.
 
-Si des paramètres non valides sont passés à la fonction, le gestionnaire de paramètre non valide est appelé, comme décrit dans [Validation de paramètre](../../c-runtime-library/parameter-validation.md). Si l’exécution est autorisée à se poursuivre, **errno** est réglé sur **EINVAL** et la fonction renvoie **NULL**.
+Si des paramètres non valides sont passés à la fonction, le gestionnaire de paramètre non valide est appelé, comme décrit dans [Validation de paramètre](../../c-runtime-library/parameter-validation.md). Si l’exécution est autorisée à se poursuivre, **errno** a la valeur **EINVAL** et la fonction retourne la **valeur null**.
 
 ### <a name="error-conditions"></a>Conditions d'erreur
 
 |key|base|compare|num|taille|errno|
 |---------|----------|-------------|---------|----------|-----------|
-|**Null**|n'importe laquelle|n'importe laquelle|n'importe laquelle|n'importe laquelle|**EINVAL (EN)**|
-|n'importe laquelle|**Null**|n'importe laquelle|!= 0|n'importe laquelle|**EINVAL (EN)**|
-|n'importe laquelle|n'importe laquelle|n'importe laquelle|n'importe laquelle|zéro|**EINVAL (EN)**|
-|n'importe laquelle|n'importe laquelle|**Null**|an|n'importe laquelle|**EINVAL (EN)**|
+|**NUL**|n'importe laquelle|n'importe laquelle|n'importe laquelle|n'importe laquelle|**EINVAL**|
+|n'importe laquelle|**NUL**|n'importe laquelle|!= 0|n'importe laquelle|**EINVAL**|
+|n'importe laquelle|n'importe laquelle|n'importe laquelle|n'importe laquelle|zéro|**EINVAL**|
+|n'importe laquelle|n'importe laquelle|**NUL**|an|n'importe laquelle|**EINVAL**|
 
-## <a name="remarks"></a>Notes
+## <a name="remarks"></a>Notes 
 
-La fonction **_lfind_s** effectue une recherche linéaire de la *clé* de valeur dans un tableau d’éléments de *nombre,* chacun des octets de *largeur.* Contrairement à **bsearch_s,** **_lfind_s** n’exige pas que le tableau soit trié. *L’argument de base* est un pointeur à la base du tableau à rechercher. *L’argument de comparaison* est un pointeur à une routine fournie par l’utilisateur qui compare deux éléments de tableau, puis retourne une valeur spécifiant leur relation. **_lfind_s** appelle la routine *de comparaison* une ou plusieurs fois au cours de la recherche, en passant le pointeur *de contexte* et les pointeurs à deux éléments de tableau sur chaque appel. La routine *de comparaison* doit comparer les éléments puis retourner nonzero (ce qui signifie que les éléments sont différents) ou 0 (ce qui signifie que les éléments sont identiques).
+La fonction **_lfind_s** effectue une recherche linéaire sur la *clé* de valeur dans un tableau d’éléments *Number* , chacun d’octets de *largeur* . Contrairement à **bsearch_s**, **_lfind_s** ne nécessite pas le tri du tableau. L’argument de *base* est un pointeur vers la base du tableau dans lequel effectuer la recherche. L’argument de *comparaison* est un pointeur vers une routine fournie par l’utilisateur qui compare deux éléments de tableau, puis retourne une valeur spécifiant leur relation. **_lfind_s** appelle la routine de *comparaison* une ou plusieurs fois pendant la recherche, en passant le pointeur de *contexte* et les pointeurs à deux éléments de tableau à chaque appel. La routine de *comparaison* doit comparer les éléments, puis retourner une valeur différente de zéro (ce qui signifie que les éléments sont différents) ou 0 (ce qui signifie que les éléments sont identiques).
 
-**_lfind_s** est similaire à **_lfind,** à l’exception de l’ajout du pointeur de *contexte* aux arguments de la fonction de comparaison et de la liste des paramètres de la fonction. Le pointeur *de contexte* peut être utile si la structure de données recherchée fait partie d’un objet et que la fonction *de comparaison* doit accéder aux membres de l’objet. La fonction *de comparaison* peut jeter le pointeur vide dans le type d’objet approprié et accéder aux membres de cet objet. L’ajout du paramètre *contextuelle* rend **_lfind_s** plus sûr parce que le contexte supplémentaire peut être utilisé pour éviter les bogues de réenterrabilité associés à l’utilisation de variables statiques pour rendre les données disponibles à la fonction *de comparaison.*
+**_lfind_s** est semblable à **_lfind** à l’exception de l’ajout du pointeur de *contexte* aux arguments de la fonction de comparaison et de la liste de paramètres de la fonction. Le pointeur de *contexte* peut être utile si la structure de données recherchée fait partie d’un objet et que la fonction de *comparaison* doit accéder aux membres de l’objet. La fonction *compare* peut effectuer un cast du pointeur void vers le type d’objet approprié et accéder aux membres de cet objet. L’ajout du paramètre de *contexte* rend **_lfind_s** plus sécurisé, car un contexte supplémentaire peut être utilisé pour éviter les bogues de réentrance associés à l’utilisation de variables statiques pour rendre les données disponibles pour la fonction de *comparaison* .
 
-Par défaut, l’état global de cette fonction est étendue à l’application. Pour changer cela, voir [Global State dans le CRT](../global-state.md).
+Par défaut, l’état global de cette fonction est limité à l’application. Pour modifier cette valeur, consultez [état global dans le CRT](../global-state.md).
 
 ## <a name="requirements"></a>Spécifications
 

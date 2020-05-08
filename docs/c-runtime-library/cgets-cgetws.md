@@ -16,7 +16,7 @@ api_location:
 - msvcr110_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-conio-l1-1-0.dll
-- api-ms-win-crt-private-l1-1-0
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -33,12 +33,12 @@ helpviewer_keywords:
 - cgetws function
 - cgets function
 ms.assetid: 4d5e134a-58c3-4f62-befd-5d235b0212f4
-ms.openlocfilehash: afffb691ca8bf8d180cac11ac5f16a84d871b1b9
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 9ae7baaa01029dcf2c02f6ea80b6e816bb671596
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81334413"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82917427"
 ---
 # <a name="_cgets-_cgetws"></a>_cgets, _cgetws
 
@@ -78,7 +78,7 @@ Emplacement de stockage des données.
 
 `_cgets` et `_cgetws` retournent un pointeur vers le début de la chaîne, à l’emplacement `buffer[2]`. Si `buffer` a la valeur **NULL** ou est une chaîne vide, ces fonctions appellent le gestionnaire de paramètres non valides, comme décrit dans [Validation de paramètre](../c-runtime-library/parameter-validation.md). Si l’exécution est autorisée à continuer, elles retournent **NULL** et définissent `errno` avec la valeur `EINVAL`.
 
-## <a name="remarks"></a>Notes
+## <a name="remarks"></a>Notes 
 
 Ces fonctions lisent une chaîne de caractères à partir de la console, et stockent la chaîne et sa longueur à l’emplacement désigné par `buffer`. Le paramètre `buffer` doit être un pointeur vers un tableau de caractères. Le premier élément du tableau, `buffer[0]`, doit contenir la longueur maximale (en caractères) de la chaîne à lire. Le tableau doit contenir suffisamment d’éléments pour stocker la chaîne, un caractère null de fin (« \0 ») et 2 octets supplémentaires. La fonction lit les caractères jusqu’à une combinaison CRLF (retour chariot - saut de ligne) ou jusqu’à ce que le nombre de caractères spécifiés soit lu. La chaîne est stockée à partir de `buffer[2]`. Si la fonction lit un CRLF, elle stocke le caractère null (« \0 »). La fonction stocke ensuite la longueur réelle de la chaîne dans le deuxième élément du tableau, `buffer[1]`.
 
@@ -86,7 +86,7 @@ Comme toutes les touches d’édition sont actives quand `_cgets` ou `_cgetws` e
 
 En C++, ces fonctions ont des surcharges de modèle qui appellent les équivalents plus récents et sécurisés de ces fonctions. Pour plus d’informations, consultez [Sécuriser les surcharges de modèle](../c-runtime-library/secure-template-overloads.md).
 
-Par défaut, l’état global de cette fonction est étendue à l’application. Pour changer cela, voir [Global State dans le CRT](global-state.md).
+Par défaut, l’état global de cette fonction est limité à l’application. Pour modifier cette valeur, consultez [état global dans le CRT](global-state.md).
 
 ### <a name="generic-text-routine-mappings"></a>Mappages de routines de texte générique
 
@@ -149,5 +149,5 @@ Text = A line of input.
 
 ## <a name="see-also"></a>Voir aussi
 
-[Console et Port I/O](../c-runtime-library/console-and-port-i-o.md)<br/>
+[E/s de console et de port](../c-runtime-library/console-and-port-i-o.md)<br/>
 [_getch, _getwch](../c-runtime-library/reference/getch-getwch.md)
