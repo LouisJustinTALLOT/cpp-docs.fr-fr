@@ -16,7 +16,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-heap-l1-1-0.dll
-- api-ms-win-crt-private-l1-1-0
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -28,12 +28,12 @@ helpviewer_keywords:
 - _aligned_offset_malloc function
 - aligned_offset_malloc function
 ms.assetid: 447681a3-7c95-4655-86ba-fa3a4ca4c521
-ms.openlocfilehash: 1f13afbab75d2926d1c642c1430a3ffe5ecbac8d
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 0a0dca94ec03286c92b3cbf1a51df59a1ca7af0c
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81350582"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82919487"
 ---
 # <a name="_aligned_offset_malloc"></a>_aligned_offset_malloc
 
@@ -51,10 +51,10 @@ void * _aligned_offset_malloc(
 
 ### <a name="parameters"></a>Paramètres
 
-*Taille*<br/>
+*size*<br/>
 Taille de l'allocation de mémoire demandée.
 
-*Alignement*<br/>
+*repère*<br/>
 Valeur d'alignement, qui doit être un entier à puissance 2.
 
 *offset*<br/>
@@ -62,19 +62,19 @@ Décalage dans l'allocation de mémoire pour forcer l'alignement.
 
 ## <a name="return-value"></a>Valeur de retour
 
-Un pointeur vers le bloc mémoire qui a été attribué ou **NULL** si l’opération a échoué.
+Pointeur vers le bloc de mémoire qui a été alloué ou **null** en cas d’échec de l’opération.
 
-## <a name="remarks"></a>Notes
+## <a name="remarks"></a>Notes 
 
-**_aligned_offset_malloc** est utile dans les situations où l’alignement est nécessaire sur un élément imbriqué; par exemple, si l’alignement était nécessaire sur une classe imbriquée.
+**_aligned_offset_malloc** est utile dans les situations où l’alignement est nécessaire sur un élément imbriqué ; par exemple, si l’alignement était nécessaire sur une classe imbriquée.
 
-**_aligned_offset_malloc** est basé sur **le malloc;** pour plus d’informations, voir [malloc](malloc.md).
+**_aligned_offset_malloc** est basé sur **malloc**; Pour plus d’informations, consultez [malloc](malloc.md).
 
-**_aligned_offset_malloc** est marquée `__declspec(noalias)` `__declspec(restrict)`et, ce qui signifie que la fonction est garantie de ne pas modifier les variables globales et que le pointeur retourné n’est pas alias. Pour plus d’informations, consultez [noalias](../../cpp/noalias.md) et [restrict](../../cpp/restrict.md).
+**_aligned_offset_malloc** est marqué `__declspec(noalias)` et `__declspec(restrict)`, ce qui signifie que la fonction est garantie de ne pas modifier les variables globales et que le pointeur retourné n’a pas d’alias. Pour plus d’informations, consultez [noalias](../../cpp/noalias.md) et [restrict](../../cpp/restrict.md).
 
-Cette fonction définit **errno** à **ENOMEM** si l’allocation de mémoire a échoué ou si la taille demandée était supérieure **à _HEAP_MAXREQ**. Pour plus d’informations sur **errno**, voir [errno, _doserrno, _sys_errlist, et _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md). En outre, **_aligned_offset_malloc** valide ses paramètres. Si *l’alignement* n’est pas une puissance de 2 ou si *le décalage* est supérieur ou égal à la *taille* et au non-zéro, cette fonction invoque le gestionnaire de paramètres invalide, tel que décrit dans la validation [de paramètres](../../c-runtime-library/parameter-validation.md). Si l’exécution est autorisée à se poursuivre, cette fonction renvoie **NULL** et définit **errno** à **EINVAL**.
+Cette fonction affecte à **errno** la valeur **ENOMEM** si l’allocation de mémoire a échoué ou si la taille demandée était supérieure à **_HEAP_MAXREQ**. Pour plus d’informations sur **errno**, consultez [errno, _doserrno, _sys_errlist et _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md). De plus, **_aligned_offset_malloc** valide ses paramètres. Si *alignment* n’est pas une puissance de 2 ou si *offset* est supérieur ou égal à *Size* et différent de zéro, cette fonction appelle le gestionnaire de paramètre non valide, comme décrit dans [validation de paramètre](../../c-runtime-library/parameter-validation.md). Si l’exécution est autorisée à se poursuivre, cette fonction retourne la **valeur null** et définit **errno** sur **EINVAL**.
 
-Par défaut, l’état global de cette fonction est étendue à l’application. Pour changer cela, voir [Global State dans le CRT](../global-state.md).
+Par défaut, l’état global de cette fonction est limité à l’application. Pour modifier cette valeur, consultez [état global dans le CRT](../global-state.md).
 
 ## <a name="requirements"></a>Spécifications
 
@@ -82,7 +82,7 @@ Par défaut, l’état global de cette fonction est étendue à l’application.
 |-------------|---------------------|
 |**_aligned_offset_malloc**|\<malloc.h>|
 
-## <a name="example"></a>Exemple
+## <a name="example"></a> Exemple
 
 Pour plus d’informations, consultez [_aligned_malloc](aligned-malloc.md).
 

@@ -16,7 +16,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-stdio-l1-1-0.dll
-- api-ms-win-crt-private-l1-1-0
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -28,12 +28,12 @@ helpviewer_keywords:
 - tmpfile_s function
 - temporary files, creating
 ms.assetid: 50879c69-215e-425a-a2a3-8b5467121eae
-ms.openlocfilehash: 8f9dd58abdf1d3225341e40661c14ae3a5013257
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 48c599887a8a903d52c7dcd46b98046119c9d3ad
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81362463"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82919930"
 ---
 # <a name="tmpfile_s"></a>tmpfile_s
 
@@ -58,21 +58,21 @@ Retourne 0 si l’opération aboutit et un code d’erreur en cas d’échec.
 
 ### <a name="error-conditions"></a>Conditions d'erreur
 
-|*pFilePtr*|**Valeur de rendement**|**Contenu de**  *pFilePtr*|
+|*pFilePtr*|**Valeur de retour**|**Contenu de**  *pFilePtr*|
 |----------------|----------------------|---------------------------------|
-|**Null**|**EINVAL (EN)**|inchangé|
+|**NUL**|**EINVAL**|inchangé|
 
-Si l’erreur de validation de paramètre ci-dessus se produit, le gestionnaire de paramètre non valide est appelé, comme décrit dans [Validation de paramètre](../../c-runtime-library/parameter-validation.md). Si l’exécution est autorisée à se poursuivre, **errno** est réglé sur **EINVAL** et la valeur de retour est **EINVAL**.
+Si l’erreur de validation de paramètre ci-dessus se produit, le gestionnaire de paramètre non valide est appelé, comme décrit dans [Validation de paramètre](../../c-runtime-library/parameter-validation.md). Si l’exécution est autorisée à se poursuivre, **errno** a la valeur **EINVAL** et la valeur de retour est **EINVAL**.
 
-## <a name="remarks"></a>Notes
+## <a name="remarks"></a>Notes 
 
-La fonction **tmpfile_s** crée un fichier temporaire et met un pointeur à ce flux dans *l’argument pFilePtr.* Le fichier temporaire est créé dans le répertoire racine. Pour créer un fichier temporaire dans un répertoire autre que la racine, utilisez [tmpnam_s](tmpnam-s-wtmpnam-s.md) ou [tempnam](tempnam-wtempnam-tmpnam-wtmpnam.md) en association avec [fopen](fopen-wfopen.md).
+La fonction **tmpfile_s** crée un fichier temporaire et place un pointeur vers ce flux dans l’argument *pFilePtr* . Le fichier temporaire est créé dans le répertoire racine. Pour créer un fichier temporaire dans un répertoire autre que la racine, utilisez [tmpnam_s](tmpnam-s-wtmpnam-s.md) ou [tempnam](tempnam-wtempnam-tmpnam-wtmpnam.md) en association avec [fopen](fopen-wfopen.md).
 
-Si le fichier ne peut pas être ouvert, **tmpfile_s** écrit **NULL** au paramètre *PFilePtr.* Ce fichier temporaire est automatiquement supprimé lorsque le fichier est fermé, lorsque le programme se termine normalement, ou lorsque **_rmtmp** est appelé, en supposant que l’annuaire de travail actuel ne change pas. Le fichier temporaire est ouvert en mode **w-b** (lecture/écriture binaire).
+Si le fichier ne peut pas être ouvert, **tmpfile_s** écrit la **valeur null** dans le paramètre *pFilePtr* . Ce fichier temporaire est automatiquement supprimé lorsque le fichier est fermé, lorsque le programme se termine normalement ou lorsque **_rmtmp** est appelé, en supposant que le répertoire de travail actuel ne change pas. Le fichier temporaire est ouvert dans le mode **w + b** (lecture/écriture binaire).
 
-L’échec peut se produire si vous tentez plus de **TMP_MAX_S** (voir STDIO. H) appelle avec **tmpfile_s**.
+Une défaillance peut se produire si vous tentez plus de **TMP_MAX_S** (voir stdio. H) appels avec **tmpfile_s**.
 
-Par défaut, l’état global de cette fonction est étendue à l’application. Pour changer cela, voir [Global State dans le CRT](../global-state.md).
+Par défaut, l’état global de cette fonction est limité à l’application. Pour modifier cette valeur, consultez [état global dans le CRT](../global-state.md).
 
 ## <a name="requirements"></a>Spécifications
 
@@ -82,10 +82,10 @@ Par défaut, l’état global de cette fonction est étendue à l’application.
 
 Pour plus d'informations sur la compatibilité, voir [Compatibilité](../../c-runtime-library/compatibility.md).
 
-## <a name="example"></a>Exemple
+## <a name="example"></a> Exemple
 
 > [!NOTE]
-> Cet exemple peut nécessiter des privilèges administratifs pour s’exécuter sur Windows.
+> Cet exemple peut nécessiter des privilèges d’administrateur pour s’exécuter sur Windows.
 
 ```C
 // crt_tmpfile_s.c

@@ -18,7 +18,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-filesystem-l1-1-0.dll
-- api-ms-win-crt-private-l1-1-0
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -39,12 +39,12 @@ helpviewer_keywords:
 - _mkdir function
 - _tmkdir function
 ms.assetid: 7f22d01d-63a5-4712-a6e7-d34878b2d840
-ms.openlocfilehash: 56e525dd765ff2594eebcfe9a0aed37670b12e3e
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: f4714e3e763b827772a7d2eb61ae2e14f0aece02
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81338786"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82919145"
 ---
 # <a name="_mkdir-_wmkdir"></a>_mkdir, _wmkdir
 
@@ -64,26 +64,26 @@ int _wmkdir(
 
 ### <a name="parameters"></a>Paramètres
 
-*Dirname*<br/>
+*dirname*<br/>
 Chemin du nouveau répertoire.
 
 ## <a name="return-value"></a>Valeur de retour
 
-Chacune de ces fonctions retourne la valeur 0 si le répertoire a été créé. Sur une erreur, la fonction renvoie -1 et définit **errno** comme suit.
+Chacune de ces fonctions retourne la valeur 0 si le répertoire a été créé. En cas d’erreur, la fonction retourne-1 et définit **errno** comme suit.
 
-**EEXIST (EEXIST)** L’annuaire n’a pas été créé parce que *le dirname* est le nom d’un fichier, d’un répertoire ou d’un appareil existant.
+**EEXIST** Le répertoire n’a pas été créé, car *dirname* est le nom d’un fichier, d’un répertoire ou d’un appareil existant.
 
-**ENOENT (ENOENT)** Le chemin n’a pas été trouvé.
+**ENOENT** Le chemin d’accès est introuvable.
 
 Pour plus d’informations sur ces codes de retour et les autres, consultez [_doserrno, errno, _sys_errlist et _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
 
-## <a name="remarks"></a>Notes
+## <a name="remarks"></a>Notes 
 
-La fonction **_mkdir** crée un nouvel annuaire avec le *dirname spécifié.* **_mkdir** ne peut créer qu’un seul nouvel annuaire par appel, de sorte que seul le dernier composant de *dirname* peut nommer un nouvel annuaire. **_mkdir** ne traduit pas les délimitants de chemin. Dans Windows NT, la barre oblique inverse (\\) et la barre oblique (/) sont des délimiteurs de chemin valides dans les chaînes de caractères au sein des routines d’exécution.
+La fonction **_mkdir** crée un répertoire avec le dirname spécifié *.* **_mkdir** ne pouvez créer qu’un seul répertoire par appel, donc seul le dernier composant de *dirname* peut nommer un nouveau répertoire. **_mkdir** ne traduit pas les délimiteurs de chemin. Dans Windows NT, la barre oblique inverse (\\) et la barre oblique (/) sont des délimiteurs de chemin valides dans les chaînes de caractères au sein des routines d’exécution.
 
-**_wmkdir** est une version à caractère large de **_mkdir**; *l’argument dirname* pour **_wmkdir** est une chaîne de caractère large. **_wmkdir** et **_mkdir** se comportent de façon identique autrement.
+**_wmkdir** est une version à caractères larges de **_mkdir**; l’argument *dirname* pour **_wmkdir** est une chaîne de caractères larges. dans le cas contraire, **_wmkdir** et **_mkdir** se comportent de la même façon.
 
-Par défaut, l’état global de cette fonction est étendue à l’application. Pour changer cela, voir [Global State dans le CRT](../global-state.md).
+Par défaut, l’état global de cette fonction est limité à l’application. Pour modifier cette valeur, consultez [état global dans le CRT](../global-state.md).
 
 ### <a name="generic-text-routine-mappings"></a>Mappages de routines de texte générique
 
@@ -104,7 +104,7 @@ Pour plus d’informations sur la compatibilité, consultez [Compatibility](../.
 
 Toutes les versions des [bibliothèques Runtime C](../../c-runtime-library/crt-library-features.md).
 
-## <a name="example"></a>Exemple
+## <a name="example"></a> Exemple
 
 ```C
 // crt_makedir.c

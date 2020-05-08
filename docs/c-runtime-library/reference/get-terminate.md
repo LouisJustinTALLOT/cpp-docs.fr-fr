@@ -16,7 +16,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-runtime-l1-1-0.dll
-- api-ms-win-crt-private-l1-1-0
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -30,16 +30,16 @@ helpviewer_keywords:
 - get_terminate function
 - _get_terminate function
 ms.assetid: c8f168c4-0ad5-4832-a522-dd1ef383c208
-ms.openlocfilehash: fff90037851b23f3525f514aba0f6f913f9dd776
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 2ee68506437cb1c5b76cac05d674527095055055
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81344932"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82920410"
 ---
 # <a name="_get_terminate"></a>_get_terminate
 
-Retourne la routine de résiliation à appeler par **résiliation**.
+Retourne la routine d’arrêt à appeler par **Terminate**.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -49,11 +49,11 @@ terminate_function _get_terminate( void );
 
 ## <a name="return-value"></a>Valeur de retour
 
-Retourne un pointeur désignant la fonction enregistrée par [set_terminate](set-terminate-crt.md). Si aucune fonction n’a été définie, la valeur de retour peut être utilisée pour restaurer le comportement par défaut; cette valeur peut être **NULL**.
+Retourne un pointeur désignant la fonction enregistrée par [set_terminate](set-terminate-crt.md). Si aucune fonction n’a été définie, la valeur de retour peut être utilisée pour restaurer le comportement par défaut ; Cette valeur peut être **null**.
 
-## <a name="remarks"></a>Notes
+## <a name="remarks"></a>Notes 
 
-Par défaut, l’état global de cette fonction est étendue à l’application. Pour changer cela, voir [Global State dans le CRT](../global-state.md).
+Par défaut, l’état global de cette fonction est limité à l’application. Pour modifier cette valeur, consultez [état global dans le CRT](../global-state.md).
 
 ## <a name="requirements"></a>Spécifications
 
@@ -68,5 +68,5 @@ Pour plus d'informations sur la compatibilité, voir [Compatibilité](../../c-ru
 [Routines de gestion des exceptions](../../c-runtime-library/exception-handling-routines.md)<br/>
 [abort](abort.md)<br/>
 [set_unexpected](set-unexpected-crt.md)<br/>
-[Mettre fin](terminate-crt.md)<br/>
-[Inattendu](unexpected-crt.md)<br/>
+[pire](terminate-crt.md)<br/>
+[erreur](unexpected-crt.md)<br/>

@@ -18,7 +18,7 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-time-l1-1-0.dll
-- api-ms-win-crt-private-l1-1-0
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
@@ -36,12 +36,12 @@ helpviewer_keywords:
 - time, copying
 - _strtime_s function
 ms.assetid: 42acf013-c334-485d-b610-84c0af8a46ec
-ms.openlocfilehash: 771dfdb6bd8035fe8683d62d52b3b4980ecda215
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 54828bf894ffc9062125c9680ec087cdf929b1a2
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81316933"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82910935"
 ---
 # <a name="_strtime_s-_wstrtime_s"></a>_strtime_s, _wstrtime_s
 
@@ -73,7 +73,7 @@ errno_t _wstrtime_s(
 *buffer*<br/>
 Mémoire tampon, d’une longueur d’au moins 10 octets, dans laquelle l’heure doit être écrite.
 
-*nombreOfElements*<br/>
+*numberOfElements*<br/>
 Taille de la mémoire tampon.
 
 ## <a name="return-value"></a>Valeur de retour
@@ -84,30 +84,30 @@ Si une condition d’erreur se présente, le gestionnaire de paramètre non vali
 
 ### <a name="error-conditions"></a>Conditions d'erreur
 
-|*buffer*|*nombreOfElements*|Renvoie|Contenu du *tampon*|
+|*buffer*|*numberOfElements*|Renvoie|Contenu de la *mémoire tampon*|
 |--------------|------------------------|------------|--------------------------|
-|**Null**|(indifférent)|**EINVAL (EN)**|Non modifiée|
-|Non **NULL** (pointant vers le tampon valide)|0|**EINVAL (EN)**|Non modifiée|
-|Non **NULL** (pointant vers le tampon valide)|0 < taille < 9|**EINVAL (EN)**|Chaîne vide|
-|Non **NULL** (pointant vers le tampon valide)|Taille > 9|0|Heure actuelle au format spécifié dans la section Notes|
+|**NUL**|(indifférent)|**EINVAL**|Non modifiée|
+|Not **null** (pointant vers une mémoire tampon valide)|0|**EINVAL**|Non modifiée|
+|Not **null** (pointant vers une mémoire tampon valide)|0 < taille < 9|**EINVAL**|Chaîne vide|
+|Not **null** (pointant vers une mémoire tampon valide)|Taille > 9|0|Heure actuelle au format spécifié dans la section Notes|
 
 ## <a name="security-issues"></a>Problèmes de sécurité
 
-Le passage d’une valeur**non-NULL** invalide pour le tampon entraînera une violation de l’accès si le *paramètre De nombreOfElements* est supérieur à 9.
+Le passage d’une valeur non**null** non valide pour la mémoire tampon entraîne une violation d’accès si le paramètre *NumberOfElements* est supérieur à 9.
 
-L’adoption d’une valeur pour *le nombreOfElements* qui est supérieure à la taille réelle du tampon entraînera un dépassement de mémoire tampon.
+Le passage d’une valeur pour *NumberOfElements* qui est supérieure à la taille réelle de la mémoire tampon entraîne un dépassement de mémoire tampon.
 
-## <a name="remarks"></a>Notes
+## <a name="remarks"></a>Notes 
 
-Ces fonctions fournissent des versions plus sécurisées de [_strtime](strtime-wstrtime.md) et [_wstrtime](strtime-wstrtime.md). La fonction **_strtime_s** copie l’heure locale actuelle dans le tampon indiqué par *timestr*. Le temps est formaté comme **hh:mm:ss** où **hh** est de deux chiffres représentant l’heure dans la notation de 24 heures, **mm** est de deux chiffres représentant les minutes après l’heure, et **ss** est de deux chiffres représentant secondes. Par exemple, la corde **18:23:44** représente 23 minutes et 44 secondes après 18h00. La mémoire tampon doit avoir une longueur au moins égale à 9 octets. La taille réelle est spécifiée par le deuxième paramètre.
+Ces fonctions fournissent des versions plus sécurisées de [_strtime](strtime-wstrtime.md) et [_wstrtime](strtime-wstrtime.md). La fonction **_strtime_s** copie l’heure locale actuelle dans la mémoire tampon vers laquelle pointe *timestr*. L’heure est au format **hh : mm : SS** , où **hh** est deux chiffres représentant l’heure dans une notation de 24 heures, **mm** est deux chiffres représentant les minutes après l’heure et **SS** deux chiffres représentant les secondes. Par exemple, la chaîne **18:23:44** représente 23 minutes et 44 secondes après 6 h 00. La mémoire tampon doit avoir une longueur au moins égale à 9 octets. La taille réelle est spécifiée par le deuxième paramètre.
 
-**_wstrtime** est une version à caractère large de **_strtime**; l’argument et la valeur de retour de **_wstrtime** sont des chaînes de caractère large. Ces fonctions se comportent sinon de façon identique.
+**_wstrtime** est une version à caractères larges de **_strtime**; l’argument et la valeur de retour de **_wstrtime** sont des chaînes à caractères larges. Ces fonctions se comportent sinon de façon identique.
 
 En C++, l’utilisation de ces fonctions est simplifiée par les surcharges de modèle ; les surcharges peuvent déduire la longueur de la mémoire tampon automatiquement (ce qui évite d’avoir à spécifier un argument taille) et peuvent remplacer automatiquement les fonctions plus anciennes et non sécurisées par leurs équivalentes plus récentes et sécurisées. Pour plus d’informations, consultez [Sécuriser les surcharges de modèle](../../c-runtime-library/secure-template-overloads.md).
 
-Les versions de bibliothèque de débogé de ces fonctions remplissent d’abord le tampon avec 0xFE. Pour désactiver ce comportement, utilisez [_CrtSetDebugFillThreshold](crtsetdebugfillthreshold.md).
+Les versions de la bibliothèque de débogage de ces fonctions remplissent d’abord la mémoire tampon avec 0xFE. Pour désactiver ce comportement, utilisez [_CrtSetDebugFillThreshold](crtsetdebugfillthreshold.md).
 
-Par défaut, l’état global de cette fonction est étendue à l’application. Pour changer cela, voir [Global State dans le CRT](../global-state.md).
+Par défaut, l’état global de cette fonction est limité à l’application. Pour modifier cette valeur, consultez [état global dans le CRT](../global-state.md).
 
 ### <a name="generic-text-routine-mapping"></a>Mappage de routines de texte générique :
 

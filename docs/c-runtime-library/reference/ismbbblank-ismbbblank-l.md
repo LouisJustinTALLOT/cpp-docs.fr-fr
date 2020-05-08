@@ -18,18 +18,18 @@ api_location:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-multibyte-l1-1-0.dll
-- api-ms-win-crt-private-l1-1-0
+- api-ms-win-crt-private-l1-1-0.dll
 api_type:
 - DLLExport
 topic_type:
 - apiref
 ms.assetid: d21b2e41-7206-41f5-85bb-9c9ab4f3e21b
-ms.openlocfilehash: 819ea45bb9d5775bb59764b587a75e368fa0e80d
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 8285a3ae34c3b0fd678e447c76a28495b6f4ffb3
+ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81343749"
+ms.lasthandoff: 05/07/2020
+ms.locfileid: "82909536"
 ---
 # <a name="_ismbbblank-_ismbbblank_l"></a>_ismbbblank, _ismbbblank_l
 
@@ -52,7 +52,7 @@ int _ismbbblank_l(
 
 ### <a name="parameters"></a>Paramètres
 
-*C*<br/>
+*secteur*<br/>
 Entier à tester.
 
 *locale*<br/>
@@ -60,11 +60,11 @@ Paramètres régionaux à utiliser.
 
 ## <a name="return-value"></a>Valeur de retour
 
-**_ismbbblank** retourne une valeur non zéro si *c* représente un caractère spatial (0x20), un onglet horizontal (0x09) caractère, ou un caractère local spécifique qui est utilisé pour séparer les mots dans une ligne de texte pour laquelle **l’espace** est vrai; sinon, retourne 0. **_ismbbblank** utilise le lieu actuel pour tout comportement local-dépendant. **_ismbbblank_l** est identique, sauf qu’il utilise plutôt le lieu qui est passé. Pour plus d’informations, consultez [Locale](../../c-runtime-library/locale.md).
+**_ismbbblank** retourne une valeur différente de zéro si *c* représente un caractère d’espace (0x20), un caractère de tabulation horizontale (0x09) ou un caractère spécifique aux paramètres régionaux qui est utilisé pour séparer les mots dans une ligne de texte pour laquelle **isspace** a la valeur true ; Sinon, retourne 0. **_ismbbblank** utilise les paramètres régionaux actuels pour tout comportement dépendant des paramètres régionaux. **_ismbbblank_l** est identique, à ceci près qu’elle utilise à la place les paramètres régionaux qui sont passés. Pour plus d’informations, consultez [Locale](../../c-runtime-library/locale.md).
 
-## <a name="remarks"></a>Notes
+## <a name="remarks"></a>Notes 
 
-Par défaut, l’état global de cette fonction est étendue à l’application. Pour changer cela, voir [Global State dans le CRT](../global-state.md).
+Par défaut, l’état global de cette fonction est limité à l’application. Pour modifier cette valeur, consultez [état global dans le CRT](../global-state.md).
 
 ## <a name="requirements"></a>Spécifications
 
@@ -78,4 +78,4 @@ Pour plus d’informations sur la compatibilité, consultez [Compatibility](../.
 ## <a name="see-also"></a>Voir aussi
 
 [Classification d’octets](../../c-runtime-library/byte-classification.md)<br/>
-[routines _ismbb](../../c-runtime-library/ismbb-routines.md)<br/>
+[Routines de _ismbb](../../c-runtime-library/ismbb-routines.md)<br/>
