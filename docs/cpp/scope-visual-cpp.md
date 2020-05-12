@@ -10,39 +10,39 @@ helpviewer_keywords:
 - functions [C++], scope
 - scope, C++ names
 ms.assetid: 81fecbb0-338b-4325-8332-49f33e716352
-ms.openlocfilehash: 534bb9711ff54e21ca091b399aa3d13ec5a7359d
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: a5b5601c89991fbe1a148ebaf781fe2ad6a9dfc4
+ms.sourcegitcommit: c4cf8976939dd0e13e25b82930221323ba6f15d4
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62267316"
+ms.lasthandoff: 05/12/2020
+ms.locfileid: "83204137"
 ---
 # <a name="scope-c"></a>Portée (C++)
 
-Lorsque vous déclarez un élément de programme comme une classe, une fonction ou une variable, son nom peut uniquement être « vu » et utilisé dans certaines parties de votre programme. Le contexte dans lequel un nom est visible est appelé son *étendue*. Par exemple, si vous déclarez une variable `x` au sein d’une fonction, `x` est uniquement visible dans le corps de la fonction. Il a *portée locale*. Vous pouvez avoir des autres variables portant le même nom dans votre programme ; tant qu’elles se trouvent dans des portées différentes, ils ne violent pas une règle de définitions et aucune erreur n’est générée.
+Lorsque vous déclarez un élément de programme tel qu’une classe, une fonction ou une variable, son nom ne peut être « visible » et utilisé dans certaines parties de votre programme. Le contexte dans lequel un nom est visible est appelé sa *portée*. Par exemple, si vous déclarez une variable `x` dans une fonction, `x` est visible uniquement dans le corps de cette fonction. Il a une *portée locale*. Vous pouvez avoir d’autres variables portant le même nom dans votre programme ; tant qu’elles se trouvent dans des portées différentes, elles ne violent pas la règle de définition et aucune erreur n’est générée.
 
-Pour les variables non statiques automatiques, étendue détermine également quand ils sont créés et détruits dans la mémoire programme.
+Pour les variables non statiques automatiques, la portée détermine également quand elles sont créées et détruites dans la mémoire du programme.
 
-Il existe six types de portée :
+Il existe six types d’étendue :
 
-- **Portée globale** un nom global est un qui est déclaré en dehors de toute classe, la fonction ou l’espace de noms. Cependant, en C++, même ces noms existent avec un espace de noms global implicite. La portée des noms globaux s’étend à partir du point de déclaration jusqu'à la fin du fichier dans lequel ils sont déclarés. Pour les noms globaux, visibilité est également régie par les règles de [liaison](program-and-linkage-cpp.md) qui déterminent si le nom est visible dans d’autres fichiers dans le programme.
+- **Portée globale** Un nom global est un nom qui est déclaré en dehors d’une classe, d’une fonction ou d’un espace de noms. Toutefois, dans C++, même ces noms existent avec un espace de noms global implicite. La portée des noms globaux s’étend du point de déclaration jusqu’à la fin du fichier dans lequel ils sont déclarés. Pour les noms globaux, la visibilité est également régie par les règles de [liaison](program-and-linkage-cpp.md) qui déterminent si le nom est visible dans d’autres fichiers du programme.
 
-- **Étendue de Namespace** un nom qui est déclaré dans un [espace de noms](namespaces-cpp.md), en dehors de toute définition de classe ou un enum ou un bloc de fonction, est visible à partir de son point de déclaration jusqu'à la fin de l’espace de noms. Un espace de noms peut-être être défini dans des blocs multiples entre différents fichiers.
+- **Portée espace de noms** Un nom qui est déclaré dans un [espace de noms](namespaces-cpp.md), en dehors d’une définition de classe ou d’enum ou d’un bloc de fonction, est visible à partir de son point de déclaration jusqu’à la fin de l’espace de noms. Un espace de noms peut être défini dans plusieurs blocs dans différents fichiers.
 
-- **Portée locale** un nom déclaré dans une fonction ou une expression lambda, y compris les noms de paramètre, ont une portée locale. Elles sont souvent appelées « variables locales ». Elles ne sont visibles à partir de leur point de déclaration jusqu'à la fin du corps du lambda ou fonction. Portée locale est un type de portée de bloc, qui est abordée plus loin dans cet article.
+- **Portée locale** Un nom déclaré dans une fonction ou une expression lambda, y compris les noms de paramètres, ont une portée locale. Elles sont souvent appelées « variables locales ». Elles sont uniquement visibles à partir de leur point de déclaration jusqu’à la fin de la fonction ou du corps lambda. L’étendue locale est un type d’étendue de bloc, qui est abordé plus loin dans cet article.
 
-- **Portée de classe** noms de membres de classe ont une portée de classe, qui étend tout au long de la définition de classe, quel que soit le point de déclaration. Accessibilité des membres de classe est plus contrôlée par le **public**, **privé**, et **protégé** mots clés. Membres publics ou protégés sont accessibles uniquement en utilisant les opérateurs de sélection de membre (**.** ou **->**) ou des opérateurs de pointeur vers membre (**.** <strong>\*</strong> ou **->** <strong>\*</strong>).
+- **Portée** de la classe Les noms des membres de classe ont une portée de classe, qui s’étend sur toute la définition de la classe, quel que soit le point de déclaration. L’accessibilité des membres de classe est contrôlée par les mots clés **public**, **Private**et **protected** . Les membres publics ou protégés sont accessibles uniquement à l’aide des opérateurs de sélection de membres (**.** ou **->** ) ou des opérateurs de pointeur vers membre (**.** <strong>\*</strong> ou **->** <strong>\*</strong> ).
 
-- **Portée de l’instruction** noms déclarés dans un **pour**, **si**, **tandis que**, ou **basculer** instruction sont visibles jusqu'à la fin de la bloc d’instructions.
+- **Portée** de l’instruction Les noms déclarés dans une instruction **for**, **If**, **while**ou **switch** sont visibles jusqu’à la fin du bloc d’instructions.
 
-- **Portée de la fonction** A [étiquette](labeled-statements.md) a une portée de fonction, ce qui signifie qu’elle est visible dans un corps de fonction même avant son point de déclaration. Portée de fonction rend possible d’écrire des instructions comme `goto cleanup` avant le `cleanup` étiquette est déclarée.
+- **Portée** de la fonction Une [étiquette](labeled-statements.md) a une portée de fonction, ce qui signifie qu’elle est visible dans l’ensemble d’un corps de fonction avant son point de déclaration. La portée de la fonction permet d’écrire des instructions comme `goto cleanup` avant la déclaration de l' `cleanup` étiquette.
 
 ## <a name="hiding-names"></a>Masquage des noms
 
 Vous pouvez masquer un nom en le déclarant dans un bloc englobé. Dans l'illustration suivante, `i` est redéclaré dans le bloc interne, masquant ainsi la variable associée à `i` dans la portée de bloc externe.
 
-![Bloc&#45;masquage de nom d’étendue](../cpp/media/vc38sf1.png "bloc&#45;masquage de nom d’étendue") <br/>
-Portée de bloc et de masquage de nom
+![Masquage du nom de l’étendue&#45;de bloc](../cpp/media/vc38sf1.png "Masquage du nom de l’étendue&#45;de bloc") <br/>
+Masquage de l’étendue et du nom
 
 La sortie du programme représentée dans l'illustration est la suivante :
 
@@ -58,7 +58,7 @@ i = 0
 
 ## <a name="hiding-class-names"></a>Masquage des noms de classes
 
-Vous pouvez masquer les noms de classe en déclarant une fonction, un objet, une variable ou un énumérateur dans la même portée. Toutefois, le nom de classe est toujours accessible lorsque précédé du mot clé **classe**.
+Vous pouvez masquer les noms de classe en déclarant une fonction, un objet, une variable ou un énumérateur dans la même portée. Toutefois, le nom de la classe est toujours accessible lorsqu’il est préfixé par la **classe**de mots clés.
 
 ```cpp
 // hiding_class_names.cpp
@@ -85,31 +85,31 @@ int main()
     class Account Checking( Account ); // Qualifies Account as
                                        //  class name
 
-    cout << "Opening account with balance of: "
+    cout << "Opening account with a balance of: "
          << Checking.GetBalance() << "\n";
 }
-//Output: Opening account with balance of: 15.37
+//Output: Opening account with a balance of: 15.37
 ```
 
 > [!NOTE]
-> Le nom de classe en tout lieu (`Account`) est appelé, la classe de mot clé doit être utilisée pour le différencier du compte de variable de portée globale. Cette règle ne s’applique pas lorsque le nom de classe apparaît à gauche de l’opérateur de résolution de portée (::). Les noms à gauche de l'opérateur de résolution de portée sont toujours considérés comme des noms de classe.
+> Chaque fois que le nom de la classe ( `Account` ) est appelé, la classe de mots clés doit être utilisée pour le différencier du compte de la variable de portée globale. Cette règle ne s’applique pas lorsque le nom de classe apparaît à gauche de l’opérateur de résolution de portée (::). Les noms à gauche de l'opérateur de résolution de portée sont toujours considérés comme des noms de classe.
 
-L’exemple suivant montre comment déclarer un pointeur vers un objet de type `Account` à l’aide de la **classe** mot clé :
+L’exemple suivant montre comment déclarer un pointeur vers un objet de type `Account` à l’aide du mot clé **Class** :
 
 ```cpp
 class Account *Checking = new class Account( Account );
 ```
 
-Le `Account` dans l’initialiseur (entre parenthèses) dans l’instruction précédente a une portée globale ; il s’agit du type **double**.
+La `Account` dans l’initialiseur (entre parenthèses) de l’instruction précédente a une portée globale ; elle est de type **double**.
 
 > [!NOTE]
 > La réutilisation des noms d'identificateur, comme l'indique cet exemple, est considérée comme un style de programmation médiocre.
 
-Pour plus d’informations sur la déclaration et initialisation des objets de classe, consultez [Classes, Structures et Unions](../cpp/classes-and-structs-cpp.md). Pour plus d’informations sur l’utilisation de la **nouveau** et **supprimer** opérateurs de magasin gratuit, consultez [nouveau et supprimer des opérateurs](new-and-delete-operators.md).
+Pour plus d’informations sur la déclaration et l’initialisation des objets de classe, consultez [classes, structures et unions](../cpp/classes-and-structs-cpp.md). Pour plus d’informations sur l’utilisation des opérateurs **New** et **Delete** Free-Store, consultez [opérateurs New et Delete](new-and-delete-operators.md).
 
-## <a name="hiding-names-with-global-scope"></a>Masquage des noms avec portée globale
+## <a name="hiding-names-with-global-scope"></a>Masquage des noms avec une portée globale
 
-Vous pouvez masquer des noms avec portée globale en déclarant explicitement le même nom dans la portée de bloc. Toutefois, les noms de portée globale est accessible à l’aide de l’opérateur de résolution de portée (`::`).
+Vous pouvez masquer les noms avec une portée globale en déclarant explicitement le même nom dans la portée du bloc. Toutefois, les noms de portée globale sont accessibles à l’aide de l’opérateur de résolution de portée ( `::` ).
 
 ```cpp
 #include <iostream>
