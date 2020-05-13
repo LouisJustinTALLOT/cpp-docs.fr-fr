@@ -1,0 +1,530 @@
+- name: Développement UWP
+  href: ../cppcx/universal-windows-apps-cpp.md
+- name: Informations de référence sur le langage C++/CX
+  expanded: false
+  items:
+    - name: Informations de référence sur le langage C++/CX
+      href: ../cppcx/visual-c-language-reference-c-cx.md
+    - name: Aide-mémoire
+      href: ../cppcx/quick-reference-c-cx.md
+    - name: Système des types
+      expanded: false
+      items:
+        - name: Système des types
+          href: ../cppcx/type-system-c-cx.md
+        - name: Visibilité des espaces de noms et des types (C++/CX)
+          href: ../cppcx/namespaces-and-type-visibility-c-cx.md
+        - name: Types fondamentaux
+          href: ../cppcx/fundamental-types-c-cx.md
+        - name: Chaînes
+          href: ../cppcx/strings-c-cx.md
+        - name: Array et WriteOnlyArray
+          href: ../cppcx/array-and-writeonlyarray-c-cx.md
+        - name: Classes et structures de référence
+          href: ../cppcx/ref-classes-and-structs-c-cx.md
+        - name: Classes de valeur et structures de valeur
+          href: ../cppcx/value-classes-and-structs-c-cx.md
+        - name: Classes partielles
+          href: ../cppcx/partial-classes-c-cx.md
+        - name: Propriétés
+          href: ../cppcx/properties-c-cx.md
+        - name: Collections
+          href: ../cppcx/collections-c-cx.md
+        - name: Classes ref de modèle
+          href: ../cppcx/template-ref-classes-c-cx.md
+        - name: Interfaces
+          href: ../cppcx/interfaces-c-cx.md
+        - name: Enums
+          href: ../cppcx/enums-c-cx.md
+        - name: Délégués
+          href: ../cppcx/delegates-c-cx.md
+        - name: Exceptions
+          href: ../cppcx/exceptions-c-cx.md
+        - name: Événements
+          href: ../cppcx/events-c-cx.md
+        - name: Cast
+          href: ../cppcx/casting-c-cx.md
+        - name: Boxing
+          href: ../cppcx/boxing-c-cx.md
+        - name: Attributs
+          href: ../cppcx/attributes-c-cx.md
+        - name: Dépréciation de types et de membres
+          href: ../cppcx/deprecating-types-and-members-c-cx.md
+    - name: Génération d'applications et de bibliothèques
+      expanded: false
+      items:
+        - name: Création d’applications et de bibliothèques
+          href: ../cppcx/building-apps-and-libraries-c-cx.md
+        - name: Options du compilateur et de l’éditeur de liens
+          href: ../cppcx/compiler-and-linker-options-c-cx.md
+        - name: Bibliothèques statiques
+          href: ../cppcx/static-libraries-c-cx.md
+        - name: DLL
+          href: ../cppcx/dlls-c-cx.md
+    - name: Interopérabilité avec d’autres langages
+      expanded: false
+      items:
+        - name: Interopérabilité avec d’autres langages
+          href: ../cppcx/interoperating-with-other-languages-c-cx.md
+        - name: "Intégration\_JavaScript"
+          href: ../cppcx/javascript-integration-c-cx.md
+        - name: "Intégration\_CLR"
+          href: ../cppcx/clr-integration-c-cx.md
+        - name: "Intégration\_WRL"
+          href: ../cppcx/wrl-integration-c-cx.md
+    - name: Obtention de pointeurs vers les mémoires tampons de données
+      href: ../cppcx/obtaining-pointers-to-data-buffers-c-cx.md
+    - name: Thread et marshaling
+      href: ../cppcx/threading-and-marshaling-c-cx.md
+    - name: Références faibles et cycles de rupture
+      href: ../cppcx/weak-references-and-breaking-cycles-c-cx.md
+    - name: Informations de référence sur les espaces de noms
+      expanded: false
+      items:
+        - name: Informations de référence sur les espaces de noms
+          href: ../cppcx/namespaces-reference-c-cx.md
+        - name: espace de noms par défaut
+          expanded: false
+          items:
+            - name: espace de noms par défaut
+              href: ../cppcx/default-namespace.md
+            - name: 'default::(type_name)::Equals'
+              href: ../cppcx/default-type-name-equals-method.md
+            - name: 'default::(type_name)::GetHashCode'
+              href: ../cppcx/default-type-name-gethashcode-method.md
+            - name: 'default::(type_name)::GetType'
+              href: ../cppcx/default-type-name-gettype-method.md
+            - name: 'default::(type_name)::ToString'
+              href: ../cppcx/default-type-name-tostring-method.md
+        - name: Espace de noms Platform
+          expanded: false
+          items:
+            - name: Espace de noms de plateforme
+              href: ../cppcx/platform-namespace-c-cx.md
+            - name: 'Platform::AccessDeniedException, classe'
+              href: ../cppcx/platform-accessdeniedexception-class.md
+            - name: 'Platform::Agile, classe'
+              href: ../cppcx/platform-agile-class.md
+            - name: 'Platform::Array, classe'
+              href: ../cppcx/platform-array-class.md
+            - name: 'Platform::ArrayReference, classe'
+              href: ../cppcx/platform-arrayreference-class.md
+            - name: 'Classe de valeur Platform::Boolean'
+              href: ../cppcx/platform-boolean-value-class.md
+            - name: 'Platform::Box, classe'
+              href: ../cppcx/platform-box-class.md
+            - name: 'Platform::CallbackContext, énumération'
+              href: ../cppcx/platform-callbackcontext-enumeration.md
+            - name: 'Platform::ChangedStateException, classe'
+              href: ../cppcx/platform-changedstateexception-class.md
+            - name: 'Platform::ClassNotRegisteredException, classe'
+              href: ../cppcx/platform-classnotregisteredexception-class.md
+            - name: 'Platform::COMException, classe'
+              href: ../cppcx/platform-comexception-class.md
+            - name: 'Platform::Delegate, classe'
+              href: ../cppcx/platform-delegate-class.md
+            - name: 'Platform::DisconnectedException, classe'
+              href: ../cppcx/platform-disconnectedexception-class.md
+            - name: 'Platform::Enum, classe'
+              href: ../cppcx/platform-enum-class.md
+            - name: 'Platform::Exception, classe'
+              href: ../cppcx/platform-exception-class.md
+            - name: 'Platform::FailureException, classe'
+              href: ../cppcx/platform-failureexception-class.md
+            - name: 'Classe de valeur Platform::Guid'
+              href: ../cppcx/platform-guid-value-class.md
+            - name: 'Platform::IBox, interface'
+              href: ../cppcx/platform-ibox-interface.md
+            - name: 'Platform::IBoxArray, interface'
+              href: ../cppcx/platform-iboxarray-interface.md
+            - name: 'Platform::IDisposable, interface'
+              href: ../cppcx/platform-idisposable-interface.md
+            - name: 'Classe de valeur Platform::IntPtr'
+              href: ../cppcx/platform-intptr-value-class.md
+            - name: 'Platform::InvalidArgumentException, classe'
+              href: ../cppcx/platform-invalidargumentexception-class.md
+            - name: 'Platform::InvalidCastException, classe'
+              href: ../cppcx/platform-invalidcastexception-class.md
+            - name: 'Platform::IValueType, interface'
+              href: ../cppcx/platform-ivaluetype-interface.md
+            - name: 'Platform::MTAThreadAttribute, classe'
+              href: ../cppcx/platform-mtathreadattribute-class.md
+            - name: 'Platform::NotImplementedException, classe'
+              href: ../cppcx/platform-notimplementedexception-class.md
+            - name: 'Platform::NullReferenceException, classe'
+              href: ../cppcx/platform-nullreferenceexception-class.md
+            - name: 'Platform::Object, classe'
+              href: ../cppcx/platform-object-class.md
+            - name: 'Platform::ObjectDisposedException, classe'
+              href: ../cppcx/platform-objectdisposedexception-class.md
+            - name: 'Platform::OperationCanceledException, classe'
+              href: ../cppcx/platform-operationcanceledexception-class.md
+            - name: 'Platform::OutOfBoundsException, classe'
+              href: ../cppcx/platform-outofboundsexception-class.md
+            - name: 'Platform::OutOfMemoryException, classe'
+              href: ../cppcx/platform-outofmemoryexception-class.md
+            - name: 'Platform::ReCreateException'
+              href: ../cppcx/platform-recreateexception-method.md
+            - name: 'Classe de valeur Platform::SizeT'
+              href: ../cppcx/platform-sizet-value-class.md
+            - name: 'Platform::STAThreadAttribute, classe'
+              href: ../cppcx/platform-stathreadattribute-class.md
+            - name: 'Platform::String, classe'
+              href: ../cppcx/platform-string-class.md
+            - name: 'Platform::StringReference, classe'
+              href: ../cppcx/platform-stringreference-class.md
+            - name: 'Platform::Type, classe'
+              href: ../cppcx/platform-type-class.md
+            - name: 'Platform::Type^, opérateur'
+              href: ../cppcx/operator-type-hat.md
+            - name: 'Platform::TypeCode, énumération'
+              href: ../cppcx/platform-typecode-enumeration.md
+            - name: 'Classe de valeur Platform::UIntPtr'
+              href: ../cppcx/platform-uintptr-value-class.md
+            - name: 'Platform::ValueType, classe'
+              href: ../cppcx/platform-valuetype-class.md
+            - name: 'Platform::WeakReference, classe'
+              href: ../cppcx/platform-weakreference-class.md
+            - name: 'Platform::WriteOnlyArray, classe'
+              href: ../cppcx/platform-writeonlyarray-class.md
+            - name: 'Platform::WrongThreadException, classe'
+              href: ../cppcx/platform-wrongthreadexception-class.md
+        - name: 'Platform::Collections, espace de noms'
+          expanded: false
+          items:
+            - name: 'Platform::Collections, espace de noms'
+              href: ../cppcx/platform-collections-namespace.md
+            - name: 'Platform::Collections::BackInsertIterator, classe'
+              href: ../cppcx/platform-collections-backinsertiterator-class.md
+            - name: 'Platform::Collections::InputIterator, classe'
+              href: ../cppcx/platform-collections-inputiterator-class.md
+            - name: 'Platform::Collections::Map, classe'
+              href: ../cppcx/platform-collections-map-class.md
+            - name: 'Platform::Collections::MapView, classe'
+              href: ../cppcx/platform-collections-mapview-class.md
+            - name: 'Platform::Collections::UnorderedMap, classe'
+              href: ../cppcx/platform-collections-unorderedmap-class.md
+            - name: 'Platform::Collections::UnorderedMapView, classe'
+              href: ../cppcx/platform-collections-unorderedmapview-class.md
+            - name: 'Platform::Collections::Vector, classe'
+              href: ../cppcx/platform-collections-vector-class.md
+            - name: 'Platform::Collections::VectorIterator, classe'
+              href: ../cppcx/platform-collections-vectoriterator-class.md
+            - name: 'Platform::Collections::VectorView, classe'
+              href: ../cppcx/platform-collections-vectorview-class.md
+            - name: 'Platform::Collections::VectorViewIterator, classe'
+              href: ../cppcx/platform-collections-vectorviewiterator-class.md
+        - name: 'Platform::Collections::Details, espace de noms'
+          href: ../cppcx/platform-collections-details-namespace.md
+        - name: 'Platform::Details, espace de noms'
+          expanded: false
+          items:
+            - name: 'Platform::Details, espace de noms'
+              href: ../cppcx/platform-details-namespace.md
+            - name: 'Platform::Details::__GUID, struct'
+              href: ../cppcx/platform-details-guid-struct.md
+            - name: 'Platform::Details::Console, classe'
+              href: ../cppcx/platform-details-console-class.md
+            - name: 'Platform::Details::Heap, classe'
+              href: ../cppcx/platform-details-heap-class.md
+            - name: 'Platform::Details::HeapAllocationTrackingLevel, énumération'
+              href: ../cppcx/platform-details-heapallocationtrackinglevel-enumeration.md
+            - name: 'Platform::Details::HeapEntryHandler, délégué'
+              href: ../cppcx/platform-details-heapentryhandler-delegate.md
+            - name: 'Platform::Details::IEquatable, interface'
+              href: ../cppcx/platform-details-iequatable-interface.md
+            - name: 'Platform::Details::IPrintable, interface'
+              href: ../cppcx/platform-details-iprintable-interface.md
+        - name: 'Platform::Metadata, espace de noms'
+          expanded: false
+          items:
+            - name: 'Platform::Metadata, espace de noms'
+              href: ../cppcx/platform-metadata-namespace.md
+            - name: 'Platform::Metadata::Attribute, attribut'
+              href: ../cppcx/platform-metadata-attribute-attribute.md
+            - name: 'Platform::Metadata::DefaultMemberAttribute, attribut'
+              href: ../cppcx/platform-metadata-defaultmemberattribute-attribute.md
+            - name: 'Platform::Metadata::FlagsAttribute, attribut'
+              href: ../cppcx/platform-metadata-flagsattribute-attribute.md
+            - name: 'Platform::Metadata::RuntimeClassName'
+              href: ../cppcx/platform-metadata-runtimeclassname.md
+        - name: 'Platform::Runtime::CompilerServices, espace de noms'
+          href: ../cppcx/platform-runtime-compilerservices-namespace.md
+        - name: 'Platform::Runtime::InteropServices, espace de noms'
+          href: ../cppcx/platform-runtime-interopservices-namespace.md
+        - name: 'Windows::Foundation::Collections, espace de noms'
+          expanded: false
+          items:
+            - name: 'Windows::Foundation::Collections, espace de noms'
+              href: ../cppcx/windows-foundation-collections-namespace-c-cx.md
+            - name: 'back_inserter, fonction'
+              href: ../cppcx/back-inserter-function.md
+            - name: 'begin, fonction'
+              href: ../cppcx/begin-function.md
+            - name: 'end, fonction'
+              href: ../cppcx/end-function.md
+            - name: 'to_vector, fonction'
+              href: ../cppcx/to-vector-function.md
+        - name: 'Windows::UI::Xaml::Interop::TypeName, opérateur'
+          href: ../cppcx/operator-windows-ui-xaml-interop-typename.md
+    - name: Fonctions CRT non prises en charge dans les applications de la plateforme Windows universelle
+      href: ../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md
+- name: Bibliothèque de modèles Windows Runtime C++ (WRL)
+  expanded: false
+  items:
+    - name: Bibliothèque de modèles Windows Runtime C++ (WRL)
+      href: ../cppcx/wrl/windows-runtime-cpp-template-library-wrl.md
+    - name: "Procédure\_: Activer et utiliser un composant Windows Runtime Component à l’aide de WRL"
+      href: ../cppcx/wrl/how-to-activate-and-use-a-windows-runtime-component-using-wrl.md
+    - name: "Procédure\_: Effectuer une opération asynchrone à l’aide de WRL"
+      href: ../cppcx/wrl/how-to-complete-asynchronous-operations-using-wrl.md
+    - name: "Procédure\_: Gérer les événements à l’aide de WRL"
+      href: ../cppcx/wrl/how-to-handle-events-using-wrl.md
+    - name: "Procédure pas à pas\_: Création d’une application UWP à l’aide de WRL et Media Foundation"
+      href: ../cppcx/wrl/walkthrough-creating-a-windows-store-app-using-wrl-and-media-foundation.md
+    - name: "Procédure\_: Créer un composant COM classique à l’aide de WRL"
+      href: ../cppcx/wrl/how-to-create-a-classic-com-component-using-wrl.md
+    - name: "Procédure\_: Instancier directement des composants WRL"
+      href: ../cppcx/wrl/how-to-instantiate-wrl-components-directly.md
+    - name: "Procédure\_: Utiliser winmdidl.exe et midlrt.exe pour créer les fichiers .h à partir des métadonnées Windows"
+      href: ../cppcx/wrl/use-winmdidl-and-midlrt-to-create-h-files-from-windows-metadata.md
+    - name: API WRL principales par catégorie
+      href: ../cppcx/wrl/key-wrl-apis-by-category.md
+    - name: Informations de référence sur WRL
+      expanded: false
+      items:
+        - name: Informations de référence sur WRL
+          href: ../cppcx/wrl/wrl-reference.md
+        - name: 'Microsoft::WRL, espace de noms'
+          expanded: false
+          items:
+            - name: 'Microsoft::WRL, espace de noms'
+              href: ../cppcx/wrl/microsoft-wrl-namespace.md
+            - name: 'ActivatableClass, macros'
+              href: ../cppcx/wrl/activatableclass-macros.md
+            - name: 'ActivationFactory, classe'
+              href: ../cppcx/wrl/activationfactory-class.md
+            - name: 'AgileActivationFactory, classe'
+              href: ../cppcx/wrl/agileactivationfactory-class.md
+            - name: 'AgileEventSource, classe'
+              href: ../cppcx/wrl/agileeventsource-class.md
+            - name: 'AsWeak, fonction'
+              href: ../cppcx/wrl/asweak-function.md
+            - name: 'AsyncBase, classe'
+              href: ../cppcx/wrl/asyncbase-class.md
+            - name: 'AsyncResultType, énumération'
+              href: ../cppcx/wrl/asyncresulttype-enumeration.md
+            - name: 'Callback, fonction (WRL)'
+              href: ../cppcx/wrl/callback-function-wrl.md
+            - name: 'CancelTransitionPolicy, énumération'
+              href: ../cppcx/wrl/canceltransitionpolicy-enumeration.md
+            - name: 'ChainInterfaces, struct'
+              href: ../cppcx/wrl/chaininterfaces-structure.md
+            - name: 'ClassFactory, classe'
+              href: ../cppcx/wrl/classfactory-class.md
+            - name: 'CloakedIid, struct'
+              href: ../cppcx/wrl/cloakediid-structure.md
+            - name: 'ComposableBase, classe'
+              href: ../cppcx/wrl/composablebase-class.md
+            - name: 'ComPtr, classe'
+              href: ../cppcx/wrl/comptr-class.md
+            - name: 'CreateActivationFactory, fonction'
+              href: ../cppcx/wrl/createactivationfactory-function.md
+            - name: 'CreateClassFactory, fonction'
+              href: ../cppcx/wrl/createclassfactory-function.md
+            - name: 'DeferrableEventArgs, classe'
+              href: ../cppcx/wrl/deferrableeventargs-class.md
+            - name: 'EventSource, classe'
+              href: ../cppcx/wrl/eventsource-class.md
+            - name: 'FactoryCacheFlags, énumération'
+              href: ../cppcx/wrl/factorycacheflags-enumeration.md
+            - name: 'FtmBase, classe'
+              href: ../cppcx/wrl/ftmbase-class.md
+            - name: 'GetModuleBase, fonction'
+              href: ../cppcx/wrl/getmodulebase-function.md
+            - name: 'Implements, struct'
+              href: ../cppcx/wrl/implements-structure.md
+            - name: 'InspectableClass, macro'
+              href: ../cppcx/wrl/inspectableclass-macro.md
+            - name: 'InvokeModeOptions, struct'
+              href: ../cppcx/wrl/invokemodeoptions-structure.md
+            - name: 'Make, fonction'
+              href: ../cppcx/wrl/make-function.md
+            - name: 'MixIn, struct'
+              href: ../cppcx/wrl/mixin-structure.md
+            - name: 'Module, classe'
+              expanded: false
+              items:
+                - name: Module (classe)
+                  href: ../cppcx/wrl/module-class.md
+                - name: 'Module::GenericReleaseNotifier, classe'
+                  href: ../cppcx/wrl/module-genericreleasenotifier-class.md
+                - name: 'Module::MethodReleaseNotifier, classe'
+                  href: ../cppcx/wrl/module-methodreleasenotifier-class.md
+                - name: 'Module::ReleaseNotifier, classe'
+                  href: ../cppcx/wrl/module-releasenotifier-class.md
+            - name: 'ModuleType, énumération'
+              href: ../cppcx/wrl/moduletype-enumeration.md
+            - name: 'operator!=, opérateur (Microsoft::WRL)'
+              href: ../cppcx/wrl/operator-inequality-operator-microsoft-wrl.md
+            - name: 'operator==, opérateur (Microsoft::WRL)'
+              href: ../cppcx/wrl/operator-equality-operator-microsoft-wrl.md
+            - name: 'operator<, opérateur (Microsoft::WRL)'
+              href: ../cppcx/wrl/operator-less-than-operator-microsoft-wrl.md
+            - name: 'RuntimeClass, classe'
+              href: ../cppcx/wrl/runtimeclass-class.md
+            - name: 'RuntimeClassFlags, struct'
+              href: ../cppcx/wrl/runtimeclassflags-structure.md
+            - name: 'RuntimeClassType, énumération'
+              href: ../cppcx/wrl/runtimeclasstype-enumeration.md
+            - name: 'SimpleActivationFactory, classe'
+              href: ../cppcx/wrl/simpleactivationfactory-class.md
+            - name: 'SimpleClassFactory, classe'
+              href: ../cppcx/wrl/simpleclassfactory-class.md
+            - name: 'WeakRef, classe'
+              href: ../cppcx/wrl/weakref-class.md
+        - name: 'Microsoft::WRL::Details, espace de noms'
+          expanded: false
+          items:
+            - name: 'Microsoft::WRL::Details, espace de noms'
+              href: ../cppcx/wrl/microsoft-wrl-details-namespace.md
+            - name: 'ActivationFactoryCallback, fonction'
+              href: ../cppcx/wrl/activationfactorycallback-function.md
+            - name: 'ArgTraits, struct'
+              href: ../cppcx/wrl/argtraits-structure.md
+            - name: 'ArgTraitsHelper, struct'
+              href: ../cppcx/wrl/argtraitshelper-structure.md
+            - name: 'AsyncStatusInternal, énumération'
+              href: ../cppcx/wrl/asyncstatusinternal-enumeration.md
+            - name: 'BoolStruct, struct'
+              href: ../cppcx/wrl/boolstruct-structure.md
+            - name: 'ComPtrRef, classe'
+              href: ../cppcx/wrl/comptrref-class.md
+            - name: 'ComPtrRefBase, classe'
+              href: ../cppcx/wrl/comptrrefbase-class.md
+            - name: 'CreatorMap, struct'
+              href: ../cppcx/wrl/creatormap-structure.md
+            - name: 'DerefHelper, struct'
+              href: ../cppcx/wrl/derefhelper-structure.md
+            - name: 'DontUseNewUseMake, classe'
+              href: ../cppcx/wrl/dontusenewusemake-class.md
+            - name: 'EnableIf, struct'
+              href: ../cppcx/wrl/enableif-structure.md
+            - name: 'EventTargetArray, classe'
+              href: ../cppcx/wrl/eventtargetarray-class.md
+            - name: 'FactoryCache, struct'
+              href: ../cppcx/wrl/factorycache-structure.md
+            - name: 'ImplementsBase, struct'
+              href: ../cppcx/wrl/implementsbase-structure.md
+            - name: 'ImplementsHelper, struct'
+              href: ../cppcx/wrl/implementshelper-structure.md
+            - name: 'InterfaceList, struct'
+              href: ../cppcx/wrl/interfacelist-structure.md
+            - name: 'InterfaceListHelper, struct'
+              href: ../cppcx/wrl/interfacelisthelper-structure.md
+            - name: 'InterfaceTraits, struct'
+              href: ../cppcx/wrl/interfacetraits-structure.md
+            - name: 'InvokeHelper, struct'
+              href: ../cppcx/wrl/invokehelper-structure.md
+            - name: 'IsBaseOfStrict, struct'
+              href: ../cppcx/wrl/isbaseofstrict-structure.md
+            - name: 'IsSame, struct'
+              href: ../cppcx/wrl/issame-structure.md
+            - name: 'MakeAllocator, classe'
+              href: ../cppcx/wrl/makeallocator-class.md
+            - name: 'MakeAndInitialize, fonction'
+              href: ../cppcx/wrl/makeandinitialize-function.md
+            - name: 'ModuleBase, classe'
+              href: ../cppcx/wrl/modulebase-class.md
+            - name: 'Move, fonction'
+              href: ../cppcx/wrl/move-function.md
+            - name: 'Nil, struct'
+              href: ../cppcx/wrl/nil-structure.md
+            - name: 'RaiseException, fonction'
+              href: ../cppcx/wrl/raiseexception-function.md
+            - name: 'RemoveIUnknown, classe'
+              href: ../cppcx/wrl/removeiunknown-class.md
+            - name: 'RemoveReference, struct'
+              href: ../cppcx/wrl/removereference-structure.md
+            - name: 'RuntimeClassBase, struct'
+              href: ../cppcx/wrl/runtimeclassbase-structure.md
+            - name: 'RuntimeClassBaseT, struct'
+              href: ../cppcx/wrl/runtimeclassbaset-structure.md
+            - name: 'Swap, fonction (WRL)'
+              href: ../cppcx/wrl/swap-function-wrl.md
+            - name: 'TerminateMap, fonction'
+              href: ../cppcx/wrl/terminatemap-function.md
+            - name: 'VerifyInheritanceHelper, struct'
+              href: ../cppcx/wrl/verifyinheritancehelper-structure.md
+            - name: 'VerifyInterfaceHelper, struct'
+              href: ../cppcx/wrl/verifyinterfacehelper-structure.md
+            - name: 'WeakReference, classe'
+              href: ../cppcx/wrl/weakreference-class.md
+        - name: 'Microsoft::WRL::Wrappers, espace de noms'
+          expanded: false
+          items:
+            - name: 'Microsoft::WRL::Wrappers, espace de noms'
+              href: ../cppcx/wrl/microsoft-wrl-wrappers-namespace.md
+            - name: 'CriticalSection, classe'
+              href: ../cppcx/wrl/criticalsection-class.md
+            - name: 'Event, classe (WRL)'
+              href: ../cppcx/wrl/event-class-wrl.md
+            - name: 'HandleT, classe'
+              href: ../cppcx/wrl/handlet-class.md
+            - name: 'HString, classe'
+              href: ../cppcx/wrl/hstring-class.md
+            - name: 'HStringReference, classe'
+              href: ../cppcx/wrl/hstringreference-class.md
+            - name: Mutex (classe)
+              href: ../cppcx/wrl/mutex-class.md
+            - name: 'RoInitializeWrapper, classe'
+              href: ../cppcx/wrl/roinitializewrapper-class.md
+            - name: 'Semaphore, classe'
+              href: ../cppcx/wrl/semaphore-class.md
+            - name: 'SRWLock, classe'
+              href: ../cppcx/wrl/srwlock-class.md
+        - name: 'Microsoft::WRL::Wrappers::Details, espace de noms'
+          expanded: false
+          items:
+            - name: 'Microsoft::WRL::Wrappers::Details, espace de noms'
+              href: ../cppcx/wrl/microsoft-wrl-wrappers-details-namespace.md
+            - name: 'CompareStringOrdinal, méthode'
+              href: ../cppcx/wrl/comparestringordinal-method.md
+            - name: 'SyncLockT, classe'
+              href: ../cppcx/wrl/synclockt-class.md
+            - name: 'SyncLockWithStatusT, classe'
+              href: ../cppcx/wrl/synclockwithstatust-class.md
+        - name: 'Microsoft::WRL::Wrappers::HandleTraits, espace de noms'
+          expanded: false
+          items:
+            - name: 'Microsoft::WRL::Wrappers::HandleTraits, espace de noms'
+              href: ../cppcx/wrl/microsoft-wrl-wrappers-handletraits-namespace.md
+            - name: 'CriticalSectionTraits, struct'
+              href: ../cppcx/wrl/criticalsectiontraits-structure.md
+            - name: 'EventTraits, struct'
+              href: ../cppcx/wrl/eventtraits-structure.md
+            - name: 'FileHandleTraits, struct'
+              href: ../cppcx/wrl/filehandletraits-structure.md
+            - name: 'HANDLENullTraits, struct'
+              href: ../cppcx/wrl/handlenulltraits-structure.md
+            - name: 'HANDLETraits, struct'
+              href: ../cppcx/wrl/handletraits-structure.md
+            - name: 'MutexTraits, struct'
+              href: ../cppcx/wrl/mutextraits-structure.md
+            - name: 'SemaphoreTraits, struct'
+              href: ../cppcx/wrl/semaphoretraits-structure.md
+            - name: 'SRWLockExclusiveTraits, struct'
+              href: ../cppcx/wrl/srwlockexclusivetraits-structure.md
+            - name: 'SRWLockSharedTraits, struct'
+              href: ../cppcx/wrl/srwlocksharedtraits-structure.md
+        - name: 'Windows::Foundation, espace de noms'
+          expanded: false
+          items:
+            - name: 'Windows::Foundation, espace de noms'
+              href: ../cppcx/wrl/windows-foundation-namespace.md
+            - name: 'ActivateInstance, fonction'
+              href: ../cppcx/wrl/activateinstance-function.md
+            - name: 'GetActivationFactory, fonction'
+              href: ../cppcx/wrl/getactivationfactory-function.md
+        - name: IID_PPV_ARGS_Helper (fonction)
+          href: ../cppcx/wrl/iid-ppv-args-helper-function.md

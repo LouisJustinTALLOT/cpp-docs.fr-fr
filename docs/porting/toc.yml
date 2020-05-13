@@ -1,0 +1,54 @@
+- name: "Guide de portage et de mise à niveau de Microsoft\_C++"
+  href: ../porting/visual-cpp-porting-and-upgrading-guide.md
+- name: Mise à niveau de projets à partir de versions antérieures
+  items:
+    - name: Mise à niveau de projets à partir de versions antérieures
+      href: ../porting/upgrading-projects-from-earlier-versions-of-visual-cpp.md
+    - name: Vue d’ensemble des problèmes de mise à niveau potentiels
+      href: ../porting/overview-of-potential-upgrade-issues-visual-cpp.md
+    - name: Mettre à niveau votre code vers le CRT universel
+      href: ../porting/upgrade-your-code-to-the-universal-crt.md
+    - name: Mettre à jour WINVER et _WIN32_WINNT
+      href: ../porting/modifying-winver-and-win32-winnt.md
+    - name: Résoudre vos dépendances aux éléments internes de bibliothèque
+      href: ../porting/fix-your-dependencies-on-library-internals.md
+    - name: Problèmes de migration de virgule flottante
+      href: ../porting/floating-point-migration-issues.md
+    - name: Utiliser le multiciblage natif dans Visual Studio pour générer d’anciens projets
+      href: ../porting/use-native-multi-targeting.md
+    - name: "Fonctionnalités\_C++ dépréciées dans Visual Studio\_2019"
+      href: ../porting/features-deprecated-in-visual-studio.md
+    - name: VCBuild et MSBuild
+      href: ../porting/build-system-changes.md
+    - name: Portage de bibliothèques de tiers
+      href: ../porting/porting-third-party-libraries.md
+    - name: Portage d’applications de données
+      href: ../data/data-access-programming-mfc-atl.md
+- name: Outils IDE pour la mise à niveau du code C++
+  href: ../porting/ide-tools-for-upgrading-code.md
+- name: "Historique des modifications de Visual\_C++ entre\_2003 et\_2015"
+  href: ../porting/visual-cpp-change-history-2003-2015.md
+- name: "Nouveautés de Visual\_C++ entre\_2003 et\_2015"
+  href: ../porting/visual-cpp-what-s-new-2003-through-2015.md
+- name: Compatibilité binaire C++ 2015-2019
+  href: ../porting/binary-compat-2015-2017.md
+- name: "Portage et mise à niveau\_: exemples et études de cas"
+  items:
+    - name: Exemples et études de cas
+      href: ../porting/porting-and-upgrading-examples-and-case-studies.md
+    - name: "Guide du portage\_: Scribble MFC"
+      href: ../porting/porting-guide-mfc-scribble.md
+    - name: "Guide du portage\_: COM Spy"
+      href: ../porting/porting-guide-com-spy.md
+    - name: "Guide du portage\_: Spy++"
+      href: ../porting/porting-guide-spy-increment.md
+- name: Introduction à Microsoft C++ pour les utilisateurs UNIX
+  href: ../porting/introduction-to-visual-cpp-for-unix-users.md
+- name: Exécution de programmes Linux sur Windows
+  href: ../porting/porting-from-unix-to-win32.md
+- name: "Introduction à la plateforme\_Windows\_universelle (C++)"
+  items:
+    - name: "Introduction à la plateforme\_Windows\_universelle (C++)"
+      href: ../porting/porting-to-the-universal-windows-platform-cpp.md
+    - name: "Procédure\_: Utiliser le code C++ existant dans une application de plateforme Windows universelle"
+      href: ../porting/how-to-use-existing-cpp-code-in-a-universal-windows-platform-app.md
