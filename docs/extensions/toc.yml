@@ -1,0 +1,125 @@
+- name: Extensions de composants pour .NET et UWP
+  href: ../extensions/component-extensions-for-runtime-platforms.md
+- name: Opérateur de référence de suivi
+  href: ../extensions/tracking-reference-operator-cpp-component-extensions.md
+- name: Handle vers l’opérateur d’objet (^)
+  href: ../extensions/handle-to-object-operator-hat-cpp-component-extensions.md
+- name: abstract
+  href: ../extensions/abstract-cpp-component-extensions.md
+- name: Tableaux
+  href: ../extensions/arrays-cpp-component-extensions.md
+- name: Boxing
+  href: ../extensions/boxing-cpp-component-extensions.md
+- name: Classes et structs
+  href: ../extensions/classes-and-structs-cpp-component-extensions.md
+- name: "Plateforme, valeurs par défaut et espaces de noms\_CLI"
+  href: ../extensions/platform-default-and-cli-namespaces-cpp-component-extensions.md
+- name: Prise en charge du compilateur pour les traits de types
+  href: ../extensions/compiler-support-for-type-traits-cpp-component-extensions.md
+- name: Mots clés contextuels
+  href: ../extensions/context-sensitive-keywords-cpp-component-extensions.md
+- name: délégué
+  href: ../extensions/delegate-cpp-component-extensions.md
+- name: 'enum, classe'
+  href: ../extensions/enum-class-cpp-component-extensions.md
+- name: event
+  href: ../extensions/event-cpp-component-extensions.md
+- name: Gestion des exceptions
+  href: ../extensions/exception-handling-cpp-component-extensions.md
+- name: Remplacements explicites
+  href: ../extensions/explicit-overrides-cpp-component-extensions.md
+- name: 'ref new, gcnew'
+  href: ../extensions/ref-new-gcnew-cpp-component-extensions.md
+- name: Génériques
+  expanded: false
+  items:
+    - name: Génériques
+      href: ../extensions/generics-cpp-component-extensions.md
+    - name: "Vue d’ensemble des génériques dans Visual\_C++"
+      href: ../extensions/overview-of-generics-in-visual-cpp.md
+    - name: Fonctions génériques
+      href: ../extensions/generic-functions-cpp-cli.md
+    - name: Classes génériques
+      href: ../extensions/generic-classes-cpp-cli.md
+    - name: Interfaces génériques
+      href: ../extensions/generic-interfaces-visual-cpp.md
+    - name: Délégués génériques
+      href: ../extensions/generic-delegates-visual-cpp.md
+    - name: Contraintes sur les paramètres de type générique
+      href: ../extensions/constraints-on-generic-type-parameters-cpp-cli.md
+    - name: Utilisation des génériques
+      href: ../extensions/consuming-generics-cpp-cli.md
+    - name: Génériques et modèles
+      href: ../extensions/generics-and-templates-visual-cpp.md
+    - name: "Procédure\_: Améliorer les performances avec des génériques"
+      href: ../extensions/how-to-improve-performance-with-generics-visual-cpp.md
+- name: 'interface, classe'
+  href: ../extensions/interface-class-cpp-component-extensions.md
+- name: littéral
+  href: ../extensions/literal-cpp-component-extensions.md
+- name: Windows Runtime et modèles gérés
+  href: ../extensions/windows-runtime-and-managed-templates-cpp-component-extensions.md
+- name: new (nouvel emplacement dans vtable)
+  href: ../extensions/new-new-slot-in-vtable-cpp-component-extensions.md
+- name: nullptr
+  href: ../extensions/nullptr-cpp-component-extensions.md
+- name: Spécificateurs de remplacement
+  href: ../extensions/override-specifiers-cpp-component-extensions.md
+- name: override
+  href: ../extensions/override-cpp-component-extensions.md
+- name: partial
+  href: ../extensions/partial-cpp-component-extensions.md
+- name: propriété
+  href: ../extensions/property-cpp-component-extensions.md
+- name: safe_cast
+  href: ../extensions/safe-cast-cpp-component-extensions.md
+- name: Chaîne
+  href: ../extensions/string-cpp-component-extensions.md
+- name: sealed
+  href: ../extensions/sealed-cpp-component-extensions.md
+- name: typeid
+  href: ../extensions/typeid-cpp-component-extensions.md
+- name: Attributs définis par l’utilisateur
+  expanded: false
+  items:
+    - name: Attributs définis par l’utilisateur
+      href: ../extensions/user-defined-attributes-cpp-component-extensions.md
+    - name: Types de paramètre d’attribut
+      href: ../extensions/attribute-parameter-types-cpp-component-extensions.md
+    - name: Cibles d’attribut
+      href: ../extensions/attribute-targets-cpp-component-extensions.md
+- name: Extensions spécifiques à C++/CLI
+  expanded: false
+  items:
+    - name: Extensions spécifiques à C++/CLI
+      href: ../extensions/extensions-that-are-specific-to-cpp-cli.md
+    - name: __identifier
+      href: ../extensions/identifier-cpp-cli.md
+    - name: Casts de style C avec -clr
+      href: ../extensions/c-style-casts-with-clr-cpp-cli.md
+    - name: interior_ptr
+      expanded: false
+      items:
+        - name: interior_ptr
+          href: ../extensions/interior-ptr-cpp-cli.md
+        - name: "Procédure\_: Déclarer et utiliser des pointeurs intérieurs et des tableaux managés"
+          href: ../extensions/how-to-declare-and-use-interior-pointers-and-managed-arrays-cpp-cli.md
+        - name: "Procédure\_: Déclarer des types de valeur avec le mot clé interior_ptr"
+          href: ../extensions/how-to-declare-value-types-with-the-interior-ptr-keyword-cpp-cli.md
+        - name: "Procédure\_: Surcharger des fonctions avec des pointeurs intérieurs et des pointeurs natifs"
+          href: ../extensions/how-to-overload-functions-with-interior-pointers-and-native-pointers-cpp-cli.md
+        - name: "Procédure\_: Déclarer des pointeurs intérieurs avec le mot clé const"
+          href: ../extensions/how-to-declare-interior-pointers-with-the-const-keyword-cpp-cli.md
+    - name: pin_ptr
+      expanded: false
+      items:
+        - name: pin_ptr
+          href: ../extensions/pin-ptr-cpp-cli.md
+        - name: "Procédure\_: Épingler des pointeurs et des tableaux"
+          href: ../extensions/how-to-pin-pointers-and-arrays.md
+        - name: "Procédure\_: Déclarer l’épinglage de pointeurs et de types de valeur"
+          href: ../extensions/how-to-declare-pinning-pointers-and-value-types.md
+    - name: Transfert de type
+      href: ../extensions/type-forwarding-cpp-cli.md
+    - name: Listes d’arguments variables (...)
+      href: ../extensions/variable-argument-lists-dot-dot-dot-cpp-cli.md

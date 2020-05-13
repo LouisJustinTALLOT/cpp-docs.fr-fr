@@ -1,0 +1,61 @@
+- name: Texte et chaînes dans MSVC
+  href: ../text/text-and-strings-in-visual-cpp.md
+- name: Unicode et MBCS
+  expanded: false
+  items:
+    - name: Unicode et MBCS
+      href: ../text/unicode-and-mbcs.md
+    - name: Compatibilité internationale
+      href: ../text/international-enabling.md
+    - name: Stratégies d’internationalisation
+      href: ../text/internationalization-strategies.md
+    - name: Paramètres régionaux et pages de codes
+      href: ../text/locales-and-code-pages.md
+    - name: Avantages de la portabilité d’un jeu de caractères
+      href: ../text/benefits-of-character-set-portability.md
+- name: Prise en charge pour Unicode
+  expanded: false
+  items:
+    - name: Prise en charge pour Unicode
+      href: ../text/support-for-unicode.md
+    - name: Prise en charge de l’utilisation de wmain
+      href: ../text/support-for-using-wmain.md
+    - name: Synthèse de la programmation Unicode
+      href: ../text/unicode-programming-summary.md
+- name: Prise en charge des jeux de caractères multioctets (MBCS)
+  expanded: false
+  items:
+    - name: Prise en charge des jeux de caractères multioctets (MBCS)
+      href: ../text/support-for-multibyte-character-sets-mbcss.md
+    - name: Prise en charge de MBCS dans MSVC
+      href: ../text/mbcs-support-in-visual-cpp.md
+    - name: Conseils de programmation MBCS
+      expanded: false
+      items:
+        - name: Conseils de programmation MBCS
+          href: ../text/mbcs-programming-tips.md
+        - name: Conseils généraux sur la programmation MBCS
+          href: ../text/general-mbcs-programming-advice.md
+        - name: Incrémentation et décrémentation de pointeurs
+          href: ../text/incrementing-and-decrementing-pointers.md
+        - name: Indices d’octets
+          href: ../text/byte-indices.md
+        - name: Dernier caractère d’une chaîne
+          href: ../text/last-character-in-a-string.md
+        - name: Affectation de caractères
+          href: ../text/character-assignment.md
+        - name: Comparaison de caractères
+          href: ../text/character-comparison.md
+        - name: Dépassement de capacité de la mémoire tampon
+          href: ../text/buffer-overflow.md
+- name: Prise en charge du format ANSI
+  href: ../text/support-for-ansi.md
+- name: Mappages de texte générique dans tchar.h
+  expanded: false
+  items:
+    - name: Mappages de texte générique dans tchar.h
+      href: ../text/generic-text-mappings-in-tchar-h.md
+    - name: Utilisation de types de données TCHAR.H avec le code _MBCS
+      href: ../text/using-tchar-h-data-types-with-mbcs-code.md
+- name: "Procédure\_: Effectuer une conversion entre différents types de chaînes"
+  href: ../text/how-to-convert-between-various-string-types.md

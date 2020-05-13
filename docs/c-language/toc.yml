@@ -1,0 +1,742 @@
+- name: Informations de référence sur le langage C
+  href: ../c-language/c-language-reference.md
+- name: "Organisation des informations de référence sur le langage\_C"
+  expanded: false
+  items:
+    - name: "Organisation des informations de référence sur le langage\_C"
+      href: ../c-language/organization-of-the-c-language-reference.md
+    - name: Étendue de ce manuel
+      href: ../c-language/scope-of-this-manual.md
+    - name: Conformité ANSI
+      href: ../c-language/ansi-conformance.md
+- name: Éléments de C
+  expanded: false
+  items:
+    - name: Éléments de C
+      href: ../c-language/elements-of-c.md
+    - name: Jetons C
+      expanded: false
+      items:
+        - name: Jetons C
+          href: ../c-language/c-tokens.md
+        - name: 'Espace blanc, caractères'
+          href: ../c-language/white-space-characters.md
+        - name: Commentaires en C
+          href: ../c-language/c-comments.md
+        - name: Évaluation des jetons
+          href: ../c-language/evaluation-of-tokens.md
+    - name: Mots clés C
+      href: ../c-language/c-keywords.md
+    - name: identificateurs C
+      expanded: false
+      items:
+        - name: Identificateurs C
+          href: ../c-language/c-identifiers.md
+        - name: Caractères multioctets et larges
+          href: ../c-language/multibyte-and-wide-characters.md
+        - name: Trigraphes
+          href: ../c-language/trigraphs.md
+    - name: Constantes C
+      expanded: false
+      items:
+        - name: Constantes C
+          href: ../c-language/c-constants.md
+        - name: Constantes à virgule flottante C
+          expanded: false
+          items:
+            - name: Constantes à virgule flottante C
+              href: ../c-language/c-floating-point-constants.md
+            - name: Limites des constantes à virgule flottante
+              href: ../c-language/limits-on-floating-point-constants.md
+        - name: Constantes entières C
+          expanded: false
+          items:
+            - name: Constantes entières C
+              href: ../c-language/c-integer-constants.md
+            - name: Types d'entier
+              href: ../c-language/integer-types.md
+            - name: Limites d’entier C et C++
+              href: ../c-language/cpp-integer-limits.md
+        - name: Constantes caractère C
+          expanded: false
+          items:
+            - name: Constantes caractère C
+              href: ../c-language/c-character-constants.md
+            - name: Types de caractères
+              href: ../c-language/character-types.md
+            - name: Jeu de caractères d’exécution
+              href: ../c-language/execution-character-set.md
+            - name: Séquences d’échappement
+              href: ../c-language/escape-sequences.md
+            - name: Spécifications de caractères en octal et en hexadécimal
+              href: ../c-language/octal-and-hexadecimal-character-specifications.md
+    - name: Littéraux de chaîne C
+      expanded: false
+      items:
+        - name: Littéraux de chaîne C
+          href: ../c-language/c-string-literals.md
+        - name: Type pour les littéraux de chaîne
+          href: ../c-language/type-for-string-literals.md
+        - name: Stockage de littéraux de chaîne
+          href: ../c-language/storage-of-string-literals.md
+        - name: Concaténation de littéraux de chaîne
+          href: ../c-language/string-literal-concatenation.md
+        - name: Longueur maximale des chaînes
+          href: ../c-language/maximum-string-length.md
+    - name: Caractères de ponctuation et spéciaux
+      href: ../c-language/punctuation-and-special-characters.md
+- name: Structure du programme
+  expanded: false
+  items:
+    - name: Structure du programme
+      href: ../c-language/program-structure.md
+    - name: Fichiers sources et programmes sources
+      expanded: false
+      items:
+        - name: Fichiers sources et programmes sources
+          href: ../c-language/source-files-and-source-programs.md
+        - name: Directives pour le préprocesseur
+          href: ../c-language/directives-to-the-preprocessor.md
+        - name: Pragmas C
+          href: ../c-language/c-pragmas.md
+        - name: Déclarations et définitions C
+          href: ../c-language/c-declarations-and-definitions.md
+        - name: Définitions et déclarations de fonctions
+          href: ../c-language/function-declarations-and-definitions.md
+        - name: Blocs
+          href: ../c-language/blocks.md
+        - name: Exemple de programme
+          href: ../c-language/example-program.md
+    - name: Fonction main et exécution du programme
+      expanded: false
+      items:
+        - name: Fonction main et exécution du programme
+          href: ../c-language/main-function-and-program-execution.md
+        - name: Utilisation de wmain
+          href: ../c-language/using-wmain.md
+        - name: Description des arguments
+          href: ../c-language/argument-description.md
+        - name: Développement des arguments avec caractères génériques
+          href: ../c-language/expanding-wildcard-arguments.md
+        - name: Analyse des arguments de ligne de commande C
+          href: ../c-language/parsing-c-command-line-arguments.md
+        - name: Personnalisation du traitement de ligne de commande C
+          href: ../c-language/customizing-c-command-line-processing.md
+    - name: 'Durée de vie, portée, visibilité et liaison'
+      expanded: false
+      items:
+        - name: 'Durée de vie, étendue, visibilité et liaison'
+          href: ../c-language/lifetime-scope-visibility-and-linkage.md
+        - name: Durée de vie
+          href: ../c-language/lifetime.md
+        - name: Étendue et visibilité
+          href: ../c-language/scope-and-visibility.md
+        - name: Résumé de la durée de vie et de la visibilité
+          href: ../c-language/summary-of-lifetime-and-visibility.md
+        - name: Liaison
+          expanded: false
+          items:
+            - name: Liaison
+              href: ../c-language/linkage.md
+            - name: Liaison interne
+              href: ../c-language/internal-linkage.md
+            - name: Liaison externe
+              href: ../c-language/external-linkage.md
+            - name: Aucune liaison
+              href: ../c-language/no-linkage.md
+    - name: Espaces de noms
+      href: ../c-language/name-spaces.md
+- name: Déclarations et types
+  expanded: false
+  items:
+    - name: Déclarations et types
+      href: ../c-language/declarations-and-types.md
+    - name: Vue d’ensemble des déclarations
+      href: ../c-language/overview-of-declarations.md
+    - name: Classes de stockage C
+      expanded: false
+      items:
+        - name: classes de stockage C
+          href: ../c-language/c-storage-classes.md
+        - name: Spécificateurs de classe de stockage pour les déclarations de niveau externe
+          href: ../c-language/storage-class-specifiers-for-external-level-declarations.md
+        - name: Spécificateurs de classe de stockage pour les déclarations de niveau interne
+          expanded: false
+          items:
+            - name: Spécificateurs de classe de stockage pour les déclarations de niveau interne
+              href: ../c-language/storage-class-specifiers-for-internal-level-declarations.md
+            - name: Spécificateur de classe de stockage auto
+              href: ../c-language/auto-storage-class-specifier.md
+            - name: Spécificateur de classe de stockage register
+              href: ../c-language/register-storage-class-specifier.md
+            - name: Spécificateur de classe de stockage static
+              href: ../c-language/static-storage-class-specifier.md
+            - name: Spécificateur de classe de stockage extern
+              href: ../c-language/extern-storage-class-specifier.md
+        - name: Spécificateurs de classe de stockage avec déclarations de fonction
+          href: ../c-language/storage-class-specifiers-with-function-declarations.md
+    - name: Spécificateurs de type C
+      expanded: false
+      items:
+        - name: Spécificateurs de type C
+          href: ../c-language/c-type-specifiers.md
+        - name: Spécificateurs de type de données et équivalents
+          href: ../c-language/data-type-specifiers-and-equivalents.md
+    - name: Qualificateurs de type
+      href: ../c-language/type-qualifiers.md
+    - name: Déclarateurs et déclarations de variable
+      expanded: false
+      items:
+        - name: Déclarateurs et déclarations des variables
+          href: ../c-language/declarators-and-variable-declarations.md
+        - name: Déclarations de variables simples
+          href: ../c-language/simple-variable-declarations.md
+        - name: Déclarations d’énumération C
+          href: ../c-language/c-enumeration-declarations.md
+        - name: Déclarations de structure
+          expanded: false
+          items:
+            - name: Déclarations de structure
+              href: ../c-language/structure-declarations.md
+            - name: Champs de bits C
+              href: ../c-language/c-bit-fields.md
+            - name: Stockage et alignement de structures
+              href: ../c-language/storage-and-alignment-of-structures.md
+        - name: Déclarations d’union
+          expanded: false
+          items:
+            - name: Déclarations d’union
+              href: ../c-language/union-declarations.md
+            - name: Stockage des unions
+              href: ../c-language/storage-of-unions.md
+        - name: Déclarations de tableau
+          expanded: false
+          items:
+            - name: Déclarations de tableau
+              href: ../c-language/array-declarations.md
+            - name: Stockage de tableaux
+              href: ../c-language/storage-of-arrays.md
+        - name: Déclarations de pointeur
+          expanded: false
+          items:
+            - name: Déclarations de pointeur
+              href: ../c-language/pointer-declarations.md
+            - name: Stockage des adresses
+              href: ../c-language/storage-of-addresses.md
+        - name: Pointeurs basés sur (C)
+          href: ../c-language/based-pointers-c.md
+        - name: Déclarateurs abstraits C
+          href: ../c-language/c-abstract-declarators.md
+    - name: Interprétation des déclarateurs plus complexes
+      href: ../c-language/interpreting-more-complex-declarators.md
+    - name: Initialisation
+      expanded: false
+      items:
+        - name: Initialisation
+          href: ../c-language/initialization.md
+        - name: Initialisation des types scalaires
+          href: ../c-language/initializing-scalar-types.md
+        - name: Initialisation des types d’agrégats
+          href: ../c-language/initializing-aggregate-types.md
+        - name: Initialisation de chaînes
+          href: ../c-language/initializing-strings.md
+    - name: Stockage de types de base
+      expanded: false
+      items:
+        - name: Stockage des types de base
+          href: ../c-language/storage-of-basic-types.md
+        - name: 'char, type'
+          href: ../c-language/type-char.md
+        - name: Type int
+          href: ../c-language/type-int.md
+        - name: Types d’entier dimensionné C
+          href: ../c-language/c-sized-integer-types.md
+        - name: 'float, type'
+          href: ../c-language/type-float.md
+        - name: 'double, type'
+          href: ../c-language/type-double.md
+        - name: Type double long
+          href: ../c-language/type-long-double.md
+    - name: Types incomplets
+      href: ../c-language/incomplete-types.md
+    - name: Déclarations typedef
+      href: ../c-language/typedef-declarations.md
+    - name: Attributs étendus de classe de stockage C
+      expanded: false
+      items:
+        - name: Attributs étendus de classe de stockage C
+          href: ../c-language/c-extended-storage-class-attributes.md
+        - name: Importation et exportation de DLL
+          href: ../c-language/dll-import-and-export.md
+        - name: Naked (C)
+          href: ../c-language/naked-c.md
+        - name: Stockage local des threads
+          href: ../c-language/thread-local-storage.md
+- name: Expressions et affectations
+  expanded: false
+  items:
+    - name: Expressions et affectations
+      href: ../c-language/expressions-and-assignments.md
+    - name: Opérandes et expressions
+      expanded: false
+      items:
+        - name: Opérandes et expressions
+          href: ../c-language/operands-and-expressions.md
+        - name: Expressions primaires C
+          expanded: false
+          items:
+            - name: Expressions primaires C
+              href: ../c-language/c-primary-expressions.md
+            - name: Identificateurs dans les expressions primaires
+              href: ../c-language/identifiers-in-primary-expressions.md
+            - name: Constantes dans les expressions primaires
+              href: ../c-language/constants-in-primary-expressions.md
+            - name: Littéraux de chaîne dans les expressions primaires
+              href: ../c-language/string-literals-in-primary-expressions.md
+            - name: Expressions entre parenthèses
+              href: ../c-language/expressions-in-parentheses.md
+        - name: Expressions L-Value et R-Value
+          href: ../c-language/l-value-and-r-value-expressions.md
+        - name: Expressions constantes C++
+          href: ../c-language/c-constant-expressions.md
+        - name: Évaluation d’expression (C)
+          expanded: false
+          items:
+            - name: Évaluation d’expression (C)
+              href: ../c-language/expression-evaluation-c.md
+            - name: Effets secondaires
+              href: ../c-language/side-effects.md
+            - name: Points de séquence C
+              href: ../c-language/c-sequence-points.md
+    - name: Opérateurs C
+      expanded: false
+      items:
+        - name: Opérateurs C
+          href: ../c-language/c-operators.md
+        - name: Priorité et ordre d’évaluation
+          href: ../c-language/precedence-and-order-of-evaluation.md
+        - name: Conversions arithmétiques courantes
+          href: ../c-language/usual-arithmetic-conversions.md
+        - name: Opérateurs suffixés
+          expanded: false
+          items:
+            - name: Opérateurs suffixés
+              href: ../c-language/postfix-operators.md
+            - name: Tableaux unidimensionnels
+              href: ../c-language/one-dimensional-arrays.md
+            - name: Tableaux multidimensionnels (C)
+              href: ../c-language/multidimensional-arrays-c.md
+            - name: Appel de fonction (C)
+              href: ../c-language/function-call-c.md
+            - name: Structure et membres d’union
+              href: ../c-language/structure-and-union-members.md
+            - name: Opérateurs suffixés d’incrémentation et de décrémentation C
+              href: ../c-language/c-postfix-increment-and-decrement-operators.md
+        - name: Opérateurs unaires C
+          expanded: false
+          items:
+            - name: Opérateurs unaires C
+              href: ../c-language/c-unary-operators.md
+            - name: Opérateurs préfixés d’incrémentation et de décrémentation
+              href: ../c-language/prefix-increment-and-decrement-operators.md
+            - name: Opérateurs d'indirection et d'adresse
+              href: ../c-language/indirection-and-address-of-operators.md
+            - name: Opérateurs arithmétiques unaires
+              href: ../c-language/unary-arithmetic-operators.md
+            - name: 'sizeof, opérateur (C)'
+              href: ../c-language/sizeof-operator-c.md
+        - name: Opérateurs de cast
+          href: ../c-language/cast-operators.md
+        - name: Opérateurs de multiplication C
+          href: ../c-language/c-multiplicative-operators.md
+        - name: Opérateurs additifs C
+          expanded: false
+          items:
+            - name: Opérateurs additifs C
+              href: ../c-language/c-additive-operators.md
+            - name: Addition (+)
+              href: ../c-language/addition-plus.md
+            - name: Soustraction (-)
+              href: ../c-language/subtraction-minus.md
+            - name: Utilisation des opérateurs additifs
+              href: ../c-language/using-the-additive-operators.md
+            - name: Arithmétique des pointeurs
+              href: ../c-language/pointer-arithmetic.md
+        - name: Opérateurs de décalage de bits
+          href: ../c-language/bitwise-shift-operators.md
+        - name: Opérateurs relationnels et d’égalité C
+          href: ../c-language/c-relational-and-equality-operators.md
+        - name: Opérateurs de bits C
+          href: ../c-language/c-bitwise-operators.md
+        - name: Opérateurs logiques C
+          href: ../c-language/c-logical-operators.md
+        - name: Opérateur d’expression conditionnelle
+          href: ../c-language/conditional-expression-operator.md
+        - name: Opérateurs d’affectation C
+          expanded: false
+          items:
+            - name: opérateurs d'assignation C
+              href: ../c-language/c-assignment-operators.md
+            - name: Affectation simple (C)
+              href: ../c-language/simple-assignment-c.md
+            - name: Affectation composée C
+              href: ../c-language/c-compound-assignment.md
+        - name: Opérateur d'évaluation séquentielle
+          href: ../c-language/sequential-evaluation-operator.md
+    - name: Conversions de type (C)
+      expanded: false
+      items:
+        - name: Conversions de type (C)
+          href: ../c-language/type-conversions-c.md
+        - name: Conversions d’affectation
+          expanded: false
+          items:
+            - name: Conversions d’affectation
+              href: ../c-language/assignment-conversions.md
+            - name: Conversions depuis des types intégraux signés
+              href: ../c-language/conversions-from-signed-integral-types.md
+            - name: Conversions depuis les types intégraux non signés
+              href: ../c-language/conversions-from-unsigned-integral-types.md
+            - name: Conversions depuis les types à virgule flottante
+              href: ../c-language/conversions-from-floating-point-types.md
+            - name: Conversions vers et depuis les types pointeur
+              href: ../c-language/conversions-to-and-from-pointer-types.md
+            - name: Conversions depuis les autres types
+              href: ../c-language/conversions-from-other-types.md
+        - name: Conversions de type cast
+          href: ../c-language/type-cast-conversions.md
+        - name: Conversions d’appel de fonction
+          href: ../c-language/function-call-conversions.md
+- name: Instructions (C)
+  expanded: false
+  items:
+    - name: Instructions (C)
+      href: ../c-language/statements-c.md
+    - name: Vue d’ensemble des instructions C
+      href: ../c-language/overview-of-c-statements.md
+    - name: 'break, instruction (C)'
+      href: ../c-language/break-statement-c.md
+    - name: Instruction composite (C)
+      href: ../c-language/compound-statement-c.md
+    - name: 'continue, instruction (C)'
+      href: ../c-language/continue-statement-c.md
+    - name: 'do-while, instruction (C)'
+      href: ../c-language/do-while-statement-c.md
+    - name: Instruction d’expression (C)
+      href: ../c-language/expression-statement-c.md
+    - name: 'for, instruction (C)'
+      href: ../c-language/for-statement-c.md
+    - name: Instructions goto et étiquetées (C)
+      href: ../c-language/goto-and-labeled-statements-c.md
+    - name: 'if, instruction (C)'
+      href: ../c-language/if-statement-c.md
+    - name: 'null, instruction (C)'
+      href: ../c-language/null-statement-c.md
+    - name: 'return, instruction (C)'
+      href: ../c-language/return-statement-c.md
+    - name: 'switch, instruction (C)'
+      href: ../c-language/switch-statement-c.md
+    - name: 'try-except, instruction (C)'
+      href: ../c-language/try-except-statement-c.md
+    - name: "try-finally, instruction\_(C)"
+      href: ../c-language/try-finally-statement-c.md
+    - name: 'while, instruction (C)'
+      href: ../c-language/while-statement-c.md
+- name: Fonctions (C)
+  expanded: false
+  items:
+    - name: Fonctions (C)
+      href: ../c-language/functions-c.md
+    - name: Vue d’ensemble des fonctions
+      expanded: false
+      items:
+        - name: Vue d'ensemble des fonctions
+          href: ../c-language/overview-of-functions.md
+        - name: Formes obsolètes des déclarations et définitions de fonctions
+          href: ../c-language/obsolete-forms-of-function-declarations-and-definitions.md
+    - name: Définitions de fonction C
+      expanded: false
+      items:
+        - name: Définitions de fonction C
+          href: ../c-language/c-function-definitions.md
+        - name: Attributs de fonction
+          expanded: false
+          items:
+            - name: Attributs de fonction
+              href: ../c-language/function-attributes.md
+            - name: Spécifications des conventions d’appel
+              href: ../c-language/specifying-calling-conventions.md
+            - name: Fonctions inline
+              href: ../c-language/inline-functions.md
+            - name: Assembleur inline (C)
+              href: ../c-language/inline-assembler-c.md
+        - name: Fonctions d’importation et d’exportation de DLL
+          expanded: false
+          items:
+            - name: Fonctions d’importation et d’exportation de DLL
+              href: ../c-language/dll-import-and-export-functions.md
+            - name: Définitions et déclarations (C)
+              href: ../c-language/definitions-and-declarations-c.md
+            - name: Définition de fonctions C incorporées avec dllexport et dllimport
+              href: ../c-language/defining-inline-c-functions-with-dllexport-and-dllimport.md
+            - name: Règles et limitations pour dllimport-dllexport
+              href: ../c-language/rules-and-limitations-for-dllimport-dllexport.md
+        - name: 'Naked, fonctions'
+          expanded: false
+          items:
+            - name: Fonctions naked
+              href: ../c-language/naked-functions.md
+            - name: Règles et limitations pour l’utilisation des fonctions naked
+              href: ../c-language/rules-and-limitations-for-using-naked-functions.md
+            - name: Considérations relatives à l’écriture du code de prologue-épilogue
+              href: ../c-language/considerations-when-writing-prolog-epilog-code.md
+        - name: Classe de stockage
+          href: ../c-language/storage-class.md
+        - name: Type de retour
+          href: ../c-language/return-type.md
+        - name: Paramètres
+          href: ../c-language/parameters.md
+        - name: Corps de fonction
+          href: ../c-language/function-body.md
+    - name: Prototypes de fonction
+      href: ../c-language/function-prototypes.md
+    - name: Appels de fonction
+      expanded: false
+      items:
+        - name: Appels de fonction
+          href: ../c-language/function-calls.md
+        - name: Arguments
+          href: ../c-language/arguments.md
+        - name: Appels avec un nombre variable d’arguments
+          href: ../c-language/calls-with-a-variable-number-of-arguments.md
+        - name: Fonctions récursives
+          href: ../c-language/recursive-functions.md
+- name: Résumé de la syntaxe du langage C
+  expanded: false
+  items:
+    - name: Résumé de la syntaxe du langage C
+      href: ../c-language/c-language-syntax-summary.md
+    - name: Définitions et conventions
+      href: ../c-language/definitions-and-conventions.md
+    - name: Grammaire lexicale
+      expanded: false
+      items:
+        - name: Grammaire lexicale
+          href: ../c-language/lexical-grammar.md
+        - name: Résumé des jetons
+          href: ../c-language/summary-of-tokens.md
+        - name: Résumé des mots clés
+          href: ../c-language/summary-of-keywords.md
+        - name: Résumé des identificateurs
+          href: ../c-language/summary-of-identifiers.md
+        - name: Résumé des constantes
+          href: ../c-language/summary-of-constants.md
+        - name: Résumé des littéraux de chaîne
+          href: ../c-language/summary-of-string-literals.md
+        - name: Opérateurs (C)
+          href: ../c-language/operators-c.md
+        - name: Signes de ponctuation
+          href: ../c-language/punctuators.md
+    - name: Grammaire de la structure des phrases
+      expanded: false
+      items:
+        - name: Grammaire de la structure des phrases
+          href: ../c-language/phrase-structure-grammar.md
+        - name: Résumé des expressions
+          href: ../c-language/summary-of-expressions.md
+        - name: Résumé des déclarations
+          href: ../c-language/summary-of-declarations.md
+        - name: Résumé des instructions
+          href: ../c-language/summary-of-statements.md
+        - name: Définitions externes
+          href: ../c-language/external-definitions.md
+- name: Comportement défini par l’implémentation
+  expanded: false
+  items:
+    - name: Comportement défini par l’implémentation
+      href: ../c-language/implementation-defined-behavior.md
+    - name: "Traduction\_: Diagnostics"
+      href: ../c-language/translation-diagnostics.md
+    - name: Environnement
+      expanded: false
+      items:
+        - name: Environnement
+          href: ../c-language/environment.md
+        - name: Arguments pour main
+          href: ../c-language/arguments-to-main.md
+        - name: Appareils interactifs
+          href: ../c-language/interactive-devices.md
+    - name: Comportement des identificateurs
+      expanded: false
+      items:
+        - name: Comportement des identificateurs
+          href: ../c-language/behavior-of-identifiers.md
+        - name: Caractères significatifs sans liaison externe
+          href: ../c-language/significant-characters-without-external-linkage.md
+        - name: Caractères significatifs avec liaison externe
+          href: ../c-language/significant-characters-with-external-linkage.md
+        - name: Majuscules et minuscules
+          href: ../c-language/uppercase-and-lowercase.md
+    - name: Caractères
+      expanded: false
+      items:
+        - name: Caractères
+          href: ../c-language/characters.md
+        - name: Jeu de caractères ASCII
+          href: ../c-language/ascii-character-set.md
+        - name: Caractères multioctets
+          href: ../c-language/multibyte-characters.md
+        - name: Bits par caractère
+          href: ../c-language/bits-per-character.md
+        - name: Jeux de caractères1
+          href: ../c-language/character-sets1.md
+        - name: Constantes caractères non représentées
+          href: ../c-language/unrepresented-character-constants.md
+        - name: Caractères larges
+          href: ../c-language/wide-characters.md
+        - name: Conversion de caractères multioctets
+          href: ../c-language/converting-multibyte-characters.md
+        - name: Plage des valeurs char
+          href: ../c-language/range-of-char-values.md
+    - name: Entiers
+      expanded: false
+      items:
+        - name: Entiers
+          href: ../c-language/integers.md
+        - name: Plage des valeurs entières
+          href: ../c-language/range-of-integer-values.md
+        - name: Rétrogradation des entiers
+          href: ../c-language/demotion-of-integers.md
+        - name: Opérations de bits signées
+          href: ../c-language/signed-bitwise-operations.md
+        - name: Restes
+          href: ../c-language/remainders.md
+        - name: Décalages vers la droite
+          href: ../c-language/right-shifts.md
+    - name: Mathématiques à virgule flottante
+      expanded: false
+      items:
+        - name: Mathématiques à virgule flottante
+          href: ../c-language/floating-point-math.md
+        - name: Valeurs
+          href: ../c-language/values.md
+        - name: Cast d’entiers en valeurs à virgule flottante
+          href: ../c-language/casting-integers-to-floating-point-values.md
+        - name: Troncation des valeurs à virgule flottante
+          href: ../c-language/truncation-of-floating-point-values.md
+    - name: Tableaux et pointeurs
+      expanded: false
+      items:
+        - name: Tableaux et pointeurs
+          href: ../c-language/arrays-and-pointers.md
+        - name: Taille de tableau la plus grande
+          href: ../c-language/largest-array-size.md
+        - name: Soustraction de pointeur
+          href: ../c-language/pointer-subtraction.md
+    - name: "Registres\_: Disponibilité des registres"
+      href: ../c-language/registers-availability-of-registers.md
+    - name: 'Structures, unions, énumérations et champs de bits'
+      expanded: false
+      items:
+        - name: 'Structures, unions, énumérations et champs de bits'
+          href: ../c-language/structures-unions-enumerations-and-bit-fields.md
+        - name: Accès inapproprié à une union
+          href: ../c-language/improper-access-to-a-union.md
+        - name: Remplissage et alignement des membres de structure
+          href: ../c-language/padding-and-alignment-of-structure-members.md
+        - name: Signe des champs de bits
+          href: ../c-language/sign-of-bit-fields.md
+        - name: Stockage des champs de bits
+          href: ../c-language/storage-of-bit-fields.md
+        - name: 'enum, type'
+          href: ../c-language/enum-type.md
+    - name: "Qualificateurs\_: Accès aux objets volatiles"
+      href: ../c-language/qualifiers-access-to-volatile-objects.md
+    - name: "Déclarateurs\_: Nombre maximal"
+      href: ../c-language/declarators-maximum-number.md
+    - name: "Instructions\_: Limites dans des instructions switch"
+      href: ../c-language/statements-limits-on-switch-statements.md
+    - name: Directives de prétraitement
+      expanded: false
+      items:
+        - name: Directives de prétraitement
+          href: ../c-language/preprocessing-directives.md
+        - name: Constantes de caractère et inclusion conditionnelle
+          href: ../c-language/character-constants-and-conditional-inclusion.md
+        - name: Inclusion de noms de fichiers entre crochets
+          href: ../c-language/including-bracketed-filenames.md
+        - name: Inclusion de noms de fichiers entre guillemets
+          href: ../c-language/including-quoted-filenames.md
+        - name: Séquences de caractères
+          href: ../c-language/character-sequences.md
+        - name: Pragmas
+          href: ../c-language/pragmas.md
+        - name: Date et heure par défaut
+          href: ../c-language/default-date-and-time.md
+    - name: Fonctions des bibliothèques
+      expanded: false
+      items:
+        - name: Fonctions des bibliothèques
+          href: ../c-language/library-functions.md
+        - name: Macro NULL
+          href: ../c-language/null-macro.md
+        - name: Diagnostic affiché par la fonction d’assertion
+          href: ../c-language/diagnostic-printed-by-the-assert-function.md
+        - name: Test de caractère
+          href: ../c-language/character-testing.md
+        - name: Erreurs de domaine
+          href: ../c-language/domain-errors.md
+        - name: Soupassement de valeurs à virgule flottante
+          href: ../c-language/underflow-of-floating-point-values.md
+        - name: 'fmod, fonction'
+          href: ../c-language/fmod-function.md
+        - name: 'signal, fonction (C)'
+          href: ../c-language/signal-function-c.md
+        - name: Signaux par défaut
+          href: ../c-language/default-signals.md
+        - name: Fin des caractères de saut de ligne
+          href: ../c-language/terminating-newline-characters.md
+        - name: Lignes vides
+          href: ../c-language/blank-lines.md
+        - name: Caractères null
+          href: ../c-language/null-characters.md
+        - name: Position dans un fichier en mode d’ajout
+          href: ../c-language/file-position-in-append-mode.md
+        - name: Troncation des fichiers texte
+          href: ../c-language/truncation-of-text-files.md
+        - name: Mise en mémoire tampon de fichiers
+          href: ../c-language/file-buffering.md
+        - name: Fichiers de longueur zéro
+          href: ../c-language/zero-length-files.md
+        - name: Noms de fichiers
+          href: ../c-language/filenames.md
+        - name: Limites d’accès au fichier
+          href: ../c-language/file-access-limits.md
+        - name: Suppression de fichiers ouverts
+          href: ../c-language/deleting-open-files.md
+        - name: Renommage avec un nom qui existe
+          href: ../c-language/renaming-with-a-name-that-exists.md
+        - name: Lecture des valeurs de pointeur
+          href: ../c-language/reading-pointer-values.md
+        - name: Lecture des plages
+          href: ../c-language/reading-ranges.md
+        - name: Erreurs de position dans un fichier
+          href: ../c-language/file-position-errors.md
+        - name: Messages générés par la fonction perror
+          href: ../c-language/messages-generated-by-the-perror-function.md
+        - name: Allocation de mémoire initialisée à zéro
+          href: ../c-language/allocating-zero-memory.md
+        - name: 'abort, fonction (C)'
+          href: ../c-language/abort-function-c.md
+        - name: 'atexit, fonction (C)'
+          href: ../c-language/atexit-function-c.md
+        - name: Noms d’environnement
+          href: ../c-language/environment-names.md
+        - name: 'system, fonction'
+          href: ../c-language/system-function.md
+        - name: 'strerror, fonction'
+          href: ../c-language/strerror-function.md
+        - name: Fuseau horaire
+          href: ../c-language/time-zone.md
+        - name: 'clock, fonction (C)'
+          href: ../c-language/clock-function-c.md
