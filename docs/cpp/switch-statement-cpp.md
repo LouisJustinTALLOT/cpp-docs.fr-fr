@@ -22,8 +22,8 @@ ms.openlocfilehash: d43a7a64b5a74f00833093ae8999d73edd7f5753
 ms.sourcegitcommit: c4cf8976939dd0e13e25b82930221323ba6f15d4
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/12/2020
-ms.locfileid: "83204159"
+ms.lasthandoff: 05/14/2020
+ms.locfileid: "83389699"
 ---
 # <a name="switch-statement-c"></a>`switch`instruction (C++)
 
@@ -46,7 +46,7 @@ Autorise la sélection parmi plusieurs sections de code, selon la valeur d'une e
 > &nbsp;&nbsp;&nbsp;&nbsp; __`case`__&nbsp;*`constant-expression`*&nbsp;__`:`__&nbsp;*`statement`*\
 > &nbsp;&nbsp;&nbsp;&nbsp; __`default`__&nbsp;__`:`__&nbsp;*`statement`*
 
-## <a name="remarks"></a>Notes 
+## <a name="remarks"></a>Notes
 
 Une __`switch`__ instruction provoque le transfert du contrôle à un *`labeled-statement`* dans son corps d’instruction, en fonction de la valeur de *`condition`* .
 
