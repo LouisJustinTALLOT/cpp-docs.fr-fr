@@ -35,12 +35,12 @@ helpviewer_keywords:
 - LIBCMTD.lib
 - -MT compiler option [C++]
 ms.assetid: cf7ed652-dc3a-49b3-aab9-ad60e5395579
-ms.openlocfilehash: 4e734233d94bf57d6838bd4d37c023d55f1d5f6b
-ms.sourcegitcommit: 7f5b29e24e1be9b5985044a030977485fea0b50c
+ms.openlocfilehash: a66677ebbef984e9a4c8190f184ca3a9126a7b83
+ms.sourcegitcommit: d4da3693f83a24f840e320e35c24a4a07cae68e2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/17/2019
-ms.locfileid: "68299755"
+ms.lasthandoff: 05/18/2020
+ms.locfileid: "83550756"
 ---
 # <a name="md-mt-ld-use-run-time-library"></a>/MD, /MT, /LD (Utiliser la bibliothèque Runtime)
 
@@ -67,19 +67,17 @@ Indique si un module multithread est une DLL et spécifie les versions retail ou
 
 Pour plus d’informations sur les bibliothèques Runtime C et les bibliothèques utilisées lors de la compilation avec [/clr (compilation pour le Common Language Runtime)](clr-common-language-runtime-compilation.md), consultez fonctionnalités de la [bibliothèque CRT](../../c-runtime-library/crt-library-features.md).
 
-Tous les modules passés à un appel donné de l’éditeur de liens doivent avoir été compilés avec la même option du compilateur de la bibliothèque Runtime ( **/MD**, **/MT**, **/LD**).
+Tous les modules passés à un appel donné de l’éditeur de liens doivent avoir été compilés avec la même option du compilateur de la bibliothèque Runtime (**/MD**, **/MT**, **/LD**).
 
 Pour plus d’informations sur l’utilisation des versions Debug des bibliothèques Runtime, consultez Référence de la [bibliothèque Runtime C](../../c-runtime-library/c-run-time-library-reference.md).
 
-Pour plus d’informations sur les dll, consultez [créer des C/C++ dll dans Visual Studio](../dlls-in-visual-cpp.md).
+Pour plus d’informations sur les dll, consultez [créer des dll C/C++ dans Visual Studio](../dlls-in-visual-cpp.md).
 
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Pour définir cette option du compilateur dans l'environnement de développement Visual Studio
 
 1. Ouvrez la boîte de dialogue **Pages de propriété** du projet. Pour plus d’informations, consultez [Définir le compilateur C++ et les propriétés de build dans Visual Studio](../working-with-project-properties.md).
 
-1. Sélectionnez la page de propriétés **Propriétés de configuration** > **C/C++**  > **Ligne de commande**.
-
-1. Sélectionnez la page de propriétés **génération de code** .
+1. Sélectionnez la page de propriétés **Propriétés de configuration**  >  **C/C++**  >  **génération de code** .
 
 1. Modifiez la propriété de la **bibliothèque Runtime** .
 

@@ -1,21 +1,21 @@
 ---
-title: Installer la prise en charge de C++ dans Visual Studio
+title: Installer la prise en charge de C et C++ dans Visual Studio
 description: Installer la prise en charge de Visual Studio pour Visual C++
 ms.custom: mvc
 ms.date: 04/02/2019
 ms.topic: tutorial
 ms.devlang: cpp
 ms.assetid: 45138d70-719d-42dc-90d7-1d0ca31a2f54
-ms.openlocfilehash: d3018bef9254a8eab557057c035cde84310a2452
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: a850803b8804c2463cd3388ec2bcf0ad9f4f3610
+ms.sourcegitcommit: d4da3693f83a24f840e320e35c24a4a07cae68e2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81335366"
+ms.lasthandoff: 05/18/2020
+ms.locfileid: "83550808"
 ---
-# <a name="install-c-support-in-visual-studio"></a>Installer la prise en charge de C++ dans Visual Studio
+# <a name="install-c-and-c-support-in-visual-studio"></a>Installer la prise en charge de C et C++ dans Visual Studio
 
-Si vous n’avez pas encore téléchargé et installé Visual Studio et les outils Visual C++, voici comment commencer.
+Si vous n’avez pas encore téléchargé et installé Visual Studio et les outils Microsoft C/C++, voici comment commencer.
 
 ::: moniker range="vs-2019"
 
@@ -73,9 +73,9 @@ Une fois le programme d’installation installé, vous pouvez l’utiliser pour 
 
    ![Visual Studio 2019 : installer une charge de travail](../get-started/media/vs-installer-workloads.png)
 
-   Pour la prise en charge de Core C++, choisissez la charge de travail « développement Desktop en C++ ». Elle comprend l’éditeur principal par défaut, qui inclut une prise en charge de la modification du code de base pour plus de 20 langues, la possibilité d’ouvrir et de modifier le code dans n’importe quel dossier sans projet et un contrôle de code source intégré.
+   Pour la prise en charge de Core C et C++, choisissez la charge de travail « développement Desktop en C++ ». Elle comprend l’éditeur principal par défaut, qui inclut une prise en charge de la modification du code de base pour plus de 20 langues, la possibilité d’ouvrir et de modifier le code dans n’importe quel dossier sans projet et un contrôle de code source intégré.
 
-   Des charges de travail supplémentaires prennent en charge d’autres types de développement C++. Par exemple, choisissez la charge de travail « développement plateforme Windows universelle » pour créer des applications qui utilisent le Windows Runtime pour le Microsoft Store. Choisissez « développement de jeux avec C++ » pour créer des jeux qui utilisent DirectX, inréel et cocos2d. Choisissez « développement Linux avec C++ » pour cibler les plateformes Linux, y compris le développement IoT.
+   Des charges de travail supplémentaires prennent en charge d’autres types de développement. Par exemple, choisissez la charge de travail « développement plateforme Windows universelle » pour créer des applications qui utilisent le Windows Runtime pour le Microsoft Store. Choisissez « développement de jeux avec C++ » pour créer des jeux qui utilisent DirectX, inréel et cocos2d. Choisissez « développement Linux avec C++ » pour cibler les plateformes Linux, y compris le développement IoT.
 
    Le volet Détails de l' **installation** répertorie les composants inclus et facultatifs installés par chaque charge de travail. Vous pouvez sélectionner ou désélectionner des composants facultatifs dans cette liste. Par exemple, pour prendre en charge le développement à l’aide des ensembles d’outils du compilateur Visual Studio 2017 ou 2015, choisissez les composants facultatifs MSVC V141 ou MSVC V140. Vous pouvez ajouter la prise en charge de MFC, de l’extension de langage des modules expérimentaux, de IncrediBuild et bien plus encore.
 
@@ -84,7 +84,7 @@ Une fois le programme d’installation installé, vous pouvez l’utiliser pour 
    Ensuite, des écrans d’état affichent la progression de votre installation de Visual Studio.
 
 > [!TIP]
-> À tout moment après l’installation, vous pouvez installer les charges de travail ou les composants que vous n’avez pas installés au début. Si Visual Studio est ouvert, accédez à **Outils** > **obtenir des outils et des fonctionnalités...** qui ouvre le Visual Studio installer. Vous pouvez également ouvrir **Visual Studio Installer** à partir du menu Démarrer. À partir de là, vous pouvez choisir les charges de travail ou les composants à installer. Ensuite, choisissez **Modifier**.
+> À tout moment après l’installation, vous pouvez installer les charges de travail ou les composants que vous n’avez pas installés au début. Si Visual Studio est ouvert, accédez à **Outils**  >  **obtenir des outils et des fonctionnalités...** qui ouvre le Visual Studio installer. Vous pouvez également ouvrir **Visual Studio Installer** à partir du menu Démarrer. À partir de là, vous pouvez choisir les charges de travail ou les composants à installer. Ensuite, choisissez **Modifier**.
 
 ### <a name="step-5---choose-individual-components-optional"></a>Étape 5 : Choisir des composants individuels (facultatif)
 
@@ -125,7 +125,7 @@ Vous pouvez réduire l’empreinte de l’installation de Visual Studio sur votr
 
 ::: moniker-end
 
-::: moniker range="<=vs-2017"
+::: moniker range="vs-2017"
 
 ## <a name="visual-studio-2017-installation"></a>Installation de Visual Studio 2017
 
@@ -159,7 +159,7 @@ Pour plus d’informations sur l’espace disque et la configuration requise pou
 
    ![Développement bureautique avec charge de travail C++](media/desktop-development-with-cpp.png "Développement Desktop en C++")
 
-   Pour C++, sélectionnez la charge de travail **développement Desktop en c++** , puis choisissez **installer**.
+   Pour C et C++, sélectionnez la charge **de travail développement Desktop en c++** , puis choisissez **installer**.
 
    ![Installer la charge de travail développement Desktop en C++](media/vscpp-concierge-choose-workload.gif "Installer la charge de travail développement Desktop en C++")
 
@@ -185,9 +185,9 @@ Pour plus d’informations sur l’espace disque et la configuration requise pou
 
 ## <a name="visual-studio-2015-installation"></a>Installation de Visual Studio 2015
 
-Pour installer Visual Studio 2015, accédez à [Télécharger d’anciennes versions de Visual Studio](https://www.visualstudio.com/vs/older-downloads/). Exécutez le programme d’installation, choisissez **Installation personnalisée**, puis le composant C++. Pour ajouter la prise en charge de C++ à une installation existante de Visual Studio 2015, cliquez sur le bouton Démarrer de Windows et tapez **Ajouter supprimer des programmes**. Ouvrez le programme dans la liste des résultats, puis localisez votre installation de Visual Studio 2015 dans la liste des programmes installés. Double-cliquez dessus, puis choisissez **modifier** et sélectionnez les composants Visual C++ à installer.
+Pour installer Visual Studio 2015, accédez à [Télécharger d’anciennes versions de Visual Studio](https://www.visualstudio.com/vs/older-downloads/). Exécutez le programme d’installation, choisissez **Installation personnalisée**, puis le composant C++. Pour ajouter la prise en charge de C et C++ à une installation existante de Visual Studio 2015, cliquez sur le bouton Démarrer de Windows et tapez **Ajouter supprimer des programmes**. Ouvrez le programme dans la liste des résultats, puis localisez votre installation de Visual Studio 2015 dans la liste des programmes installés. Double-cliquez dessus, puis choisissez **modifier** et sélectionnez les composants Visual C++ à installer.
 
-En règle générale, nous vous recommandons vivement d’utiliser Visual Studio 2017 même si vous avez besoin de compiler votre code en utilisant le compilateur de Visual Studio 2015. Pour plus d’informations, consultez [Utiliser le multiciblage natif dans Visual Studio pour générer d’anciens projets](../porting/use-native-multi-targeting.md).
+En général, nous vous recommandons vivement d’utiliser la dernière version de Visual Studio, même si vous devez compiler votre code à l’aide du compilateur Visual Studio 2015. Pour plus d’informations, consultez [Utiliser le multiciblage natif dans Visual Studio pour générer d’anciens projets](../porting/use-native-multi-targeting.md).
 
 ::: moniker-end
 

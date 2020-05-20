@@ -4,12 +4,12 @@ description: Décrit comment utiliser Visual Studio pour configurer les paramèt
 ms.date: 04/02/2020
 helpviewer_keywords:
 - CMake debugging
-ms.openlocfilehash: 8364e5b3dd3316a4ed7e754a104a14373040aa6e
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: f860d1ae78d401a9e5079e79684a053220deaa6c
+ms.sourcegitcommit: 3f91111c0350c0237fddb82766c290307f20e659
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81328843"
+ms.lasthandoff: 05/19/2020
+ms.locfileid: "83630524"
 ---
 # <a name="configure-cmake-debugging-sessions"></a>Configurer des sessions de débogage CMake
 
@@ -33,7 +33,7 @@ Ensuite, cliquez avec le bouton droit sur un exécutable et sélectionnez **Déb
 
 ## <a name="customize-debugger-settings"></a>Personnaliser les paramètres du débogueur
 
-Vous pouvez personnaliser les paramètres du débogueur pour toute cible CMake exécutable dans votre projet. Ils se trouvent dans un fichier de configuration nommé *Launch. vs. JSON*, situé dans *`.vs`* un dossier à la racine de votre projet. Un fichier de configuration de lancement est utile dans la plupart des scénarios de débogage, car vous pouvez configurer et enregistrer les détails de l’installation du débogage. Il existe trois points d’entrée pour ce fichier :
+Vous pouvez personnaliser les paramètres du débogueur pour toute cible CMake exécutable dans votre projet. Ils se trouvent dans un fichier de configuration nommé *Launch. vs. JSON*, situé dans un *`.vs`* dossier à la racine de votre projet. Un fichier de configuration de lancement est utile dans la plupart des scénarios de débogage, car vous pouvez configurer et enregistrer les détails de l’installation du débogage. Il existe trois points d’entrée pour ce fichier :
 
 - **Menu Déboguer :** Sélectionnez **Déboguer > paramètres de débogage et de lancement pour $ {activeDebugTarget}** dans le menu principal pour personnaliser la configuration de débogage spécifique à votre cible de débogage active. Si aucune cible de débogage n’est sélectionnée, cette option est grisée.
 
@@ -43,7 +43,7 @@ Vous pouvez personnaliser les paramètres du débogueur pour toute cible CMake e
 
 ![Point d’entrée de la vue cibles](media/cmake-targets-add-debug-configuration.png "Point d’entrée de la vue cibles")
 
-- **Racine fichier CMakeLists. txt :** Cliquez avec le bouton droit sur un *fichier CMakeLists. txt* racine et sélectionnez **Ajouter une configuration de débogage** pour ouvrir la boîte de dialogue **Sélectionner un débogueur** . La boîte de dialogue vous permet d’ajouter *n’importe quel* type de configuration de débogage, mais vous devez spécifier manuellement la `projectTarget` cible cmake à appeler via la propriété.
+- **Racine fichier CMakeLists. txt :** Cliquez avec le bouton droit sur un *fichier CMakeLists. txt* racine et sélectionnez **Ajouter une configuration de débogage** pour ouvrir la boîte de dialogue **Sélectionner un débogueur** . La boîte de dialogue vous permet d’ajouter *n’importe quel* type de configuration de débogage, mais vous devez spécifier manuellement la cible cmake à appeler via la `projectTarget` propriété.
 
 ![Sélectionner une boîte de dialogue du débogueur](media/cmake-select-a-debugger.png "Sélectionner une boîte de dialogue du débogueur")
 
@@ -51,7 +51,7 @@ Vous pouvez modifier le fichier *Launch. vs. JSON* pour créer des configuration
 
 ## <a name="reference-keys-in-cmakesettingsjson"></a>Clés de référence dans CMakeSettings. JSON
 
-Pour faire référence à une clé dans un fichier *CMakeSettings. JSON* , ajoutez `cmake.` -la au début dans *Launch. vs. JSON*. L’exemple suivant montre un fichier *Launch. vs. JSON* simple qui extrait la valeur de la `remoteCopySources` clé dans le fichier *CMakeSettings. JSON* pour la configuration actuellement sélectionnée :
+Pour faire référence à une clé dans un fichier *CMakeSettings. JSON* , ajoutez-la au début `cmake.` dans *Launch. vs. JSON*. L’exemple suivant montre un fichier *Launch. vs. JSON* simple qui extrait la valeur de la `remoteCopySources` clé dans le fichier *CMakeSettings. JSON* pour la configuration actuellement sélectionnée :
 
 ```json
 {
@@ -69,7 +69,7 @@ Pour faire référence à une clé dans un fichier *CMakeSettings. JSON* , ajout
 }
 ```
 
-Les **variables d’environnement** définies dans *CMakeSettings. JSON* peuvent également être utilisées dans Launch. vs. JSON à `${env.VARIABLE_NAME}`l’aide de la syntaxe. Dans Visual Studio 2019 version 16,4 et versions ultérieures, les cibles de débogage sont automatiquement lancées à l’aide de l’environnement que vous spécifiez dans *CMakeSettings. JSON*. Vous pouvez annuler la définition d’une variable d’environnement en lui affectant la **valeur null**.
+Les **variables d’environnement** définies dans *CMakeSettings. JSON* peuvent également être utilisées dans Launch. vs. JSON à l’aide de la syntaxe `${env.VARIABLE_NAME}` . Dans Visual Studio 2019 version 16,4 et versions ultérieures, les cibles de débogage sont automatiquement lancées à l’aide de l’environnement que vous spécifiez dans *CMakeSettings. JSON*. Vous pouvez annuler la définition d’une variable d’environnement en lui affectant la **valeur null**.
 
 ## <a name="launchvsjson-reference"></a>Référence Launch. vs. JSON
 
@@ -90,52 +90,61 @@ Il existe de nombreuses propriétés *Launch. vs. JSON* pour prendre en charge t
 
 ## <a name="launchvsjson-reference-for-remote-projects-and-wsl"></a>Référence Launch. vs. JSON pour les projets distants et WSL
 
-Dans Visual Studio 2019 version 16,6, nous avons ajouté une nouvelle configuration Debug `type: cppgdb` de pour simplifier le débogage sur les systèmes distants et les WSL. Les anciennes configurations de débogage de `type: cppdbg` sont toujours prises en charge.
+Dans Visual Studio 2019 version 16,6, nous avons ajouté une nouvelle configuration Debug de `type: cppgdb` pour simplifier le débogage sur les systèmes distants et les WSL. Les anciennes configurations de débogage de `type: cppdbg` sont toujours prises en charge.
 
 ### <a name="configuration-type-cppgdb"></a>Type de configuration`cppgdb`
 
 - `name`: Nom convivial permettant d’identifier la configuration dans la liste déroulante **élément de démarrage** .
 - `project`: Spécifie le chemin d’accès relatif au fichier projet. Normalement, vous n’avez pas besoin de modifier ce chemin d’accès lors du débogage d’un projet CMake.
 - `projectTarget`: Spécifie la cible CMake à appeler lors de la génération du projet. Visual Studio remplit cette propriété si vous entrez *Launch. vs. JSON* à partir du **menu Déboguer** ou de la **vue cibles**. Cette valeur cible doit correspondre au nom d’une cible de débogage existante figurant dans la liste déroulante **élément de démarrage** .
-- `debuggerConfiguration`: Indique le jeu de valeurs par défaut de débogage à utiliser. Dans Visual Studio 2019 version 16,6, la seule option valide est `gdb`. Les versions antérieures prennent `gdbserver`également en charge.
+- `debuggerConfiguration`: Indique le jeu de valeurs par défaut de débogage à utiliser. Dans Visual Studio 2019 version 16,6, la seule option valide est `gdb` . Visual Studio 2019 version 16,7 ou ultérieure prend également en charge `gdbserver` .
 - `args`: Arguments de ligne de commande passés au démarrage au programme en cours de débogage.
 - `env`: Autres variables d’environnement passées au programme en cours de débogage. Par exemple : `{"DISPLAY": "0.0"}`.
 - `processID`: ID de processus Linux à attacher. Utilisé uniquement lors de l’attachement à un processus distant. Pour plus d’informations, consultez [résoudre les problèmes liés à l’attachement à des processus à l’aide de gdb](https://github.com/Microsoft/MIEngine/wiki/Troubleshoot-attaching-to-processes-using-GDB).
 
-#### <a name="additional-options-for-the-gdb-configuration"></a>Options supplémentaires pour la `gdb` configuration
+#### <a name="additional-options-for-the-gdb-configuration"></a>Options supplémentaires pour la `gdb` Configuration
 
-- `program`: La valeur par `"${debugInfo.fullTargetPath}"`défaut est. Chemin d’accès UNIX à l’application à déboguer. Obligatoire uniquement s’il est différent de l’exécutable cible dans l’emplacement de génération ou de déploiement.
-- `remoteMachineName`: La valeur par `"${debugInfo.remoteMachineName}"`défaut est. Nom du système distant qui héberge le programme à déboguer. Obligatoire uniquement s’il est différent du système de génération. Doit avoir une entrée existante dans le [Gestionnaire de connexions](../linux/connect-to-your-remote-linux-computer.md). Appuyez sur **Ctrl + Espace** pour afficher la liste de toutes les connexions distantes existantes.
-- `cwd`: La valeur par `"${debugInfo.defaultWorkingDirectory}"`défaut est. Chemin d’accès UNIX au répertoire sur le système distant où `program` est exécuté. Le répertoire doit exister.
-- `gdbpath`: La valeur par `/usr/bin/gdb`défaut est. Chemin d’accès UNIX complet `gdb` au utilisé pour le débogage. Obligatoire uniquement si vous utilisez une version personnalisée `gdb`de.
-- `preDebugCommand`: Commande Linux à exécuter immédiatement avant d’appeler `gdb`. `gdb`ne démarre pas tant que la commande n’est pas terminée. Vous pouvez utiliser l’option pour exécuter un script avant l’exécution de `gdb`.
+- `program`: La valeur par défaut est `"${debugInfo.fullTargetPath}"` . Chemin d’accès UNIX à l’application à déboguer. Obligatoire uniquement s’il est différent de l’exécutable cible dans l’emplacement de génération ou de déploiement.
+- `remoteMachineName`: La valeur par défaut est `"${debugInfo.remoteMachineName}"` . Nom du système distant qui héberge le programme à déboguer. Obligatoire uniquement s’il est différent du système de génération. Doit avoir une entrée existante dans le [Gestionnaire de connexions](../linux/connect-to-your-remote-linux-computer.md). Appuyez sur **Ctrl + Espace** pour afficher la liste de toutes les connexions distantes existantes.
+- `cwd`: La valeur par défaut est `"${debugInfo.defaultWorkingDirectory}"` . Chemin d’accès UNIX au répertoire sur le système distant où `program` est exécuté. Le répertoire doit exister.
+- `gdbpath`: La valeur par défaut est `/usr/bin/gdb` . Chemin d’accès UNIX complet au `gdb` utilisé pour le débogage. Obligatoire uniquement si vous utilisez une version personnalisée de `gdb` .
+- `preDebugCommand`: Commande Linux à exécuter immédiatement avant d’appeler `gdb` . `gdb`ne démarre pas tant que la commande n’est pas terminée. Vous pouvez utiliser l’option pour exécuter un script avant l’exécution de `gdb` .
+
+#### <a name="additional-options-allowed-with-the-gdbserver-configuration-167-or-later"></a>Options supplémentaires autorisées avec la `gdbserver` Configuration (16,7 ou version ultérieure)
+
+- `program`: La valeur par défaut est `"${debugInfo.fullTargetPath}"` . Chemin d’accès UNIX à l’application à déboguer. Obligatoire uniquement s’il est différent de l’exécutable cible dans l’emplacement de génération ou de déploiement.
+- `remoteMachineName`: La valeur par défaut est `"${debugInfo.remoteMachineName}"` . Nom du système distant qui héberge le programme à déboguer. Obligatoire uniquement s’il est différent du système de génération. Doit avoir une entrée existante dans le [Gestionnaire de connexions](../linux/connect-to-your-remote-linux-computer.md). Appuyez sur **Ctrl + Espace** pour afficher la liste de toutes les connexions distantes existantes.
+- `cwd`: La valeur par défaut est `"${debugInfo.defaultWorkingDirectory}"` . Chemin d’accès UNIX complet au répertoire sur le système distant où `program` est exécuté. Le répertoire doit exister.
+- `gdbPath`: La valeur par défaut est `${debugInfo.vsInstalledGdb}` . Chemin Windows complet du `gdb` utilisé pour le débogage. La valeur par défaut est le `gdb` installé avec le développement Linux avec la charge de travail C/C++.
+- `gdbserverPath`: La valeur par défaut est `usr/bin/gdbserver` . Chemin d’accès UNIX complet au `gdbserver` utilisé pour le débogage.
+- `preDebugCommand`: Commande Linux à exécuter immédiatement avant le démarrage `gdbserver` . `gdbserver`ne démarre pas tant que la commande n’est pas terminée.
 
 #### <a name="deployment-options"></a>Options de déploiement
 
 Utilisez les options suivantes pour séparer votre ordinateur de build (défini dans CMakeSettings. Json) de votre ordinateur de débogage distant.
 
 - `remoteMachineName`: Ordinateur de débogage distant. Obligatoire uniquement s’il est différent de l’ordinateur de Build. Doit avoir une entrée existante dans le [Gestionnaire de connexions](../linux/connect-to-your-remote-linux-computer.md). Appuyez sur **Ctrl + Espace** pour afficher la liste de toutes les connexions distantes existantes.
-- `disableDeploy`: La valeur par `false`défaut est. Indique si la séparation de build/débogage est désactivée. Quand `false`cette option est activée, cette option permet de générer et de déboguer sur deux ordinateurs distincts.
-- `deployDirectory`: Chemin d’accès UNIX complet au répertoire `remoteMachineName` sur lequel l’exécutable est copié.
+- `disableDeploy`: La valeur par défaut est `false` . Indique si la séparation de build/débogage est désactivée. Quand `false` cette option est activée, cette option permet de générer et de déboguer sur deux ordinateurs distincts.
+- `deployDirectory`: Chemin d’accès UNIX complet au répertoire sur `remoteMachineName` lequel l’exécutable est copié.
 - `deploy`: Un tableau de paramètres de déploiement avancés. Vous devez configurer ces paramètres uniquement lorsque vous souhaitez un contrôle plus granulaire du processus de déploiement. Par défaut, seuls les fichiers nécessaires au débogage du processus sont déployés sur l’ordinateur de débogage distant.
   - `sourceMachine`: Ordinateur à partir duquel le fichier ou le répertoire est copié. Appuyez sur **Ctrl + Espace** pour afficher la liste de toutes les connexions distantes stockées dans le gestionnaire de connexions. Lors de la génération en mode natif sur WSL, cette option est ignorée.
   - `targetMachine`: Ordinateur sur lequel le fichier ou le répertoire est copié. Appuyez sur **Ctrl + Espace** pour afficher la liste de toutes les connexions distantes stockées dans le gestionnaire de connexions.
-  - `sourcePath`: Emplacement du fichier ou du répertoire `sourceMachine`sur.
-  - `targetPath`: Emplacement du fichier ou du répertoire `targetMachine`sur.
-  - `deploymentType`: Description du type de déploiement. `LocalRemote`et `RemoteRemote` sont pris en charge. `LocalRemote`signifie la copie à partir du système de fichiers local vers le système `remoteMachineName` distant spécifié par dans *Launch. vs. JSON*. `RemoteRemote`signifie la copie à partir du système de génération distant spécifié dans *CMakeSettings. JSON* vers le système distant différent spécifié dans *Launch. vs. JSON*.
+  - `sourcePath`: Emplacement du fichier ou du répertoire sur `sourceMachine` .
+  - `targetPath`: Emplacement du fichier ou du répertoire sur `targetMachine` .
+  - `deploymentType`: Description du type de déploiement. `LocalRemote`et `RemoteRemote` sont pris en charge. `LocalRemote`signifie la copie à partir du système de fichiers local vers le système distant spécifié par `remoteMachineName` dans *Launch. vs. JSON*. `RemoteRemote`signifie la copie à partir du système de génération distant spécifié dans *CMakeSettings. JSON* vers le système distant différent spécifié dans *Launch. vs. JSON*.
   - `executable`: Indique si le fichier déployé est un exécutable.
 
 ### <a name="execute-custom-gdb-commands"></a>Exécuter des `gdb` commandes personnalisées
 
-Visual Studio prend en charge l' `gdb` exécution de commandes personnalisées pour interagir directement avec le débogueur sous-jacent. Pour plus d’informations, consultez [exécution de `gdb` commandes lldb personnalisées](https://github.com/microsoft/MIEngine/wiki/Executing-custom-gdb-lldb-commands).
+Visual Studio prend en charge l’exécution `gdb` de commandes personnalisées pour interagir directement avec le débogueur sous-jacent. Pour plus d’informations, consultez [exécution de `gdb` commandes lldb personnalisées](https://github.com/microsoft/MIEngine/wiki/Executing-custom-gdb-lldb-commands).
 
 ### <a name="enable-logging"></a>Activation de la journalisation
 
-Activez la journalisation MIEngine pour voir les commandes qui `gdb`sont envoyées à `gdb` , la sortie renvoyée et la durée de chaque commande. [En savoir plus](https://github.com/microsoft/MIEngine/wiki/Logging)
+Activez la journalisation MIEngine pour voir les commandes qui sont envoyées à `gdb` , `gdb` la sortie renvoyée et la durée de chaque commande. [En savoir plus](https://github.com/microsoft/MIEngine/wiki/Logging)
 
 ### <a name="configuration-type-cppdbg"></a>Type de configuration`cppdbg`
 
-Les options suivantes peuvent être utilisées lors du débogage sur un système distant ou WSL à l' `cppdbg` aide du type de configuration. Dans Visual Studio 2019 version 16,6 ou ultérieure, le type `cppgdb` de configuration est recommandé.
+Les options suivantes peuvent être utilisées lors du débogage sur un système distant ou WSL à l’aide du `cppdbg` type de configuration. Dans Visual Studio 2019 version 16,6 ou ultérieure, le type de configuration `cppgdb` est recommandé.
 
 - `name`: Nom convivial permettant d’identifier la configuration dans la liste déroulante **élément de démarrage** .
 
@@ -147,11 +156,11 @@ Les options suivantes peuvent être utilisées lors du débogage sur un système
 
 - `processID`: ID de processus Linux à attacher. Utilisé uniquement lors de l’attachement à un processus distant. Pour plus d’informations, consultez [résoudre les problèmes liés à l’attachement à des processus à l’aide de gdb](https://github.com/Microsoft/MIEngine/wiki/Troubleshoot-attaching-to-processes-using-GDB).
 
-- `program`: La valeur par `"${debugInfo.fullTargetPath}"`défaut est. Chemin d’accès UNIX à l’application à déboguer. Obligatoire uniquement s’il est différent de l’exécutable cible dans l’emplacement de génération ou de déploiement.
+- `program`: La valeur par défaut est `"${debugInfo.fullTargetPath}"` . Chemin d’accès UNIX à l’application à déboguer. Obligatoire uniquement s’il est différent de l’exécutable cible dans l’emplacement de génération ou de déploiement.
 
-- `remoteMachineName`: La valeur par `"${debugInfo.remoteMachineName}"`défaut est. Nom du système distant qui héberge le programme à déboguer. Obligatoire uniquement s’il est différent du système de génération. Doit avoir une entrée existante dans le [Gestionnaire de connexions](../linux/connect-to-your-remote-linux-computer.md). Appuyez sur **Ctrl + Espace** pour afficher la liste de toutes les connexions distantes existantes.
+- `remoteMachineName`: La valeur par défaut est `"${debugInfo.remoteMachineName}"` . Nom du système distant qui héberge le programme à déboguer. Obligatoire uniquement s’il est différent du système de génération. Doit avoir une entrée existante dans le [Gestionnaire de connexions](../linux/connect-to-your-remote-linux-computer.md). Appuyez sur **Ctrl + Espace** pour afficher la liste de toutes les connexions distantes existantes.
 
-- `cwd`: La valeur par `"${debugInfo.defaultWorkingDirectory}"`défaut est. Chemin d’accès UNIX complet au répertoire sur le système distant `program` où est exécuté. Le répertoire doit exister.
+- `cwd`: La valeur par défaut est `"${debugInfo.defaultWorkingDirectory}"` . Chemin d’accès UNIX complet au répertoire sur le système distant où `program` est exécuté. Le répertoire doit exister.
 
 - `environment`: Autres variables d’environnement passées au programme en cours de débogage. Par exemple,
 
@@ -168,9 +177,9 @@ Les options suivantes peuvent être utilisées lors du débogage sur un système
       ]
   ```
 
-- `pipeArgs`: Tableau d’arguments de ligne de commande passés au programme canal pour configurer la connexion. Le programme pipe est utilisé pour relayer les entrées/sorties standard entre Visual `gdb`Studio et. La majeure partie de ce tableau **n’a pas besoin d’être personnalisée lors du** débogage de projets cmake. L’exception est `${debuggerCommand}`, qui se lance `gdb` sur le système distant. Il peut être modifié en :
+- `pipeArgs`: Tableau d’arguments de ligne de commande passés au programme canal pour configurer la connexion. Le programme pipe est utilisé pour relayer les entrées/sorties standard entre Visual Studio et `gdb` . La majeure partie de ce tableau **n’a pas besoin d’être personnalisée lors du** débogage de projets cmake. L’exception est `${debuggerCommand}` , qui se lance `gdb` sur le système distant. Il peut être modifié en :
 
-  - Exportez la valeur de l’affichage de la variable d’environnement sur votre système Linux. Dans l’exemple suivant, cette valeur est `:1`.
+  - Exportez la valeur de l’affichage de la variable d’environnement sur votre système Linux. Dans l’exemple suivant, cette valeur est `:1` .
 
     ```json
     "pipeArgs": [
@@ -184,7 +193,7 @@ Les options suivantes peuvent être utilisées lors du débogage sur un système
       ],
     ```
 
-  - Exécutez un script avant l’exécution de `gdb`. Vérifiez que les autorisations d’exécution sont définies sur votre script.
+  - Exécutez un script avant l’exécution de `gdb` . Vérifiez que les autorisations d’exécution sont définies sur votre script.
 
     ```json
     "pipeArgs": [
@@ -200,19 +209,19 @@ Les options suivantes peuvent être utilisées lors du débogage sur un système
 
 - `stopOnEntry`: Valeur booléenne qui spécifie s’il faut arrêter dès que le processus est lancé. La valeur par défaut est false.
 
-- `visualizerFile`: [Fichier. natvis](/visualstudio/debugger/create-custom-views-of-native-objects) à utiliser lors du débogage de ce processus. Cette option est incompatible avec `gdb` l’impression simple. Définissez `showDisplayString` également lorsque vous définissez cette propriété.
+- `visualizerFile`: [Fichier. natvis](/visualstudio/debugger/create-custom-views-of-native-objects) à utiliser lors du débogage de ce processus. Cette option est incompatible avec `gdb` l’impression simple. Définissez également `showDisplayString` lorsque vous définissez cette propriété.
 
-- `showDisplayString`: Valeur booléenne qui active la chaîne d’affichage lorsqu' `visualizerFile` un est spécifié. L’affectation de la `true` valeur à cette option peut entraîner une baisse des performances lors du débogage.
+- `showDisplayString`: Valeur booléenne qui active la chaîne d’affichage lorsqu’un `visualizerFile` est spécifié. L’affectation de la valeur à cette option `true` peut entraîner une baisse des performances lors du débogage.
 
 - `setupCommands`: Une ou plusieurs `gdb` commandes à exécuter, pour configurer le débogueur sous-jacent.
 
-- `miDebuggerPath`: Chemin d’accès complet `gdb`à. Quand il n’est pas spécifié, Visual Studio recherche d’abord le débogueur.
+- `miDebuggerPath`: Chemin d’accès complet à `gdb` . Quand il n’est pas spécifié, Visual Studio recherche d’abord le débogueur.
 
-- Enfin, toutes les options de déploiement définies pour le `cppgdb` type de configuration peuvent également être utilisées `cppdbg` par le type de configuration.
+- Enfin, toutes les options de déploiement définies pour le `cppgdb` type de configuration peuvent également être utilisées par le `cppdbg` type de configuration.
 
 ### <a name="debug-using-gdbserver"></a>Déboguer à l’aide de`gdbserver`
 
-Vous pouvez configurer la `cppdbg` configuration pour déboguer à l’aide `gdbserver`de. Pour plus d’informations et pour obtenir un exemple de configuration de lancement, consultez le billet de blog de l’équipe Microsoft C++ intitulé [débogage de projets cmake Linux avec `gdbserver` ](https://devblogs.microsoft.com/cppblog/debugging-linux-cmake-projects-with-gdbserver/).
+Vous pouvez configurer la `cppdbg` configuration pour déboguer à l’aide de `gdbserver` . Pour plus d’informations et pour obtenir un exemple de configuration de lancement, consultez le billet de blog de l’équipe Microsoft C++ intitulé [débogage de projets cmake Linux avec `gdbserver` ](https://devblogs.microsoft.com/cppblog/debugging-linux-cmake-projects-with-gdbserver/).
 
 ::: moniker-end
 
