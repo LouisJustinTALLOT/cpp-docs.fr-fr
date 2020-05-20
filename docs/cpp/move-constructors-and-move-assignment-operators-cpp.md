@@ -1,19 +1,19 @@
 ---
-title: 'Comment : définir des constructeurs de déplacement et des opérateurs d’assignationC++de déplacement ()'
+title: 'Comment : définir des constructeurs de déplacement et des opérateurs d’assignation de déplacement (C++)'
 ms.date: 03/05/2018
 helpviewer_keywords:
 - move constructor [C++]
 ms.assetid: e75efe0e-4b74-47a9-96ed-4e83cfc4378d
-ms.openlocfilehash: 81f717162e2c7bebc62a9deeb208700380f62cb8
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 2c8fed15787ec4b347694d8c4e40bf7912f3421d
+ms.sourcegitcommit: d4da3693f83a24f840e320e35c24a4a07cae68e2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80179365"
+ms.lasthandoff: 05/18/2020
+ms.locfileid: "83550769"
 ---
 # <a name="move-constructors-and-move-assignment-operators-c"></a>Constructeurs de déplacement et opérateurs d'assignation de déplacement (C++)
 
-Cette rubrique explique comment écrire un *constructeur de déplacement* et un opérateur d’assignation de déplacement C++ pour une classe. Un constructeur de déplacement permet de déplacer les ressources détenues par un objet rvalue dans une lvalue sans la copier. Pour plus d’informations sur la sémantique de déplacement, consultez [déclarateur de référence rvalue : & &](../cpp/rvalue-reference-declarator-amp-amp.md).
+Cette rubrique explique comment écrire un *constructeur de déplacement* et un opérateur d’assignation de déplacement pour une classe C++. Un constructeur de déplacement permet de déplacer les ressources détenues par un objet rvalue dans une lvalue sans la copier. Pour plus d’informations sur la sémantique de déplacement, consultez [déclarateur de référence rvalue :  &&](../cpp/rvalue-reference-declarator-amp-amp.md).
 
 Cette rubrique repose sur la classe C++ suivante, `MemoryBlock`, qui gère une mémoire tampon.
 
@@ -174,7 +174,7 @@ L'exemple suivant montre le constructeur de déplacement et l'opérateur d'assig
 
 ```cpp
 // Move constructor.
-MemoryBlock(MemoryBlock&& other)
+MemoryBlock(MemoryBlock&& other) noexcept
    : _data(nullptr)
    , _length(0)
 {
@@ -193,7 +193,7 @@ MemoryBlock(MemoryBlock&& other)
 }
 
 // Move assignment operator.
-MemoryBlock& operator=(MemoryBlock&& other)
+MemoryBlock& operator=(MemoryBlock&& other) noexcept
 {
    std::cout << "In operator=(MemoryBlock&&). length = "
              << other._length << "." << std::endl;
@@ -219,7 +219,7 @@ MemoryBlock& operator=(MemoryBlock&& other)
 
 ## <a name="example"></a>Exemple
 
-L'exemple suivant montre comment la sémantique de déplacement peut améliorer les performances de vos applications. L'exemple ajoute deux éléments à un objet vectoriel, puis insère un nouvel élément entre les deux éléments existants. La classe `vector` utilise la sémantique de déplacement pour exécuter efficacement l’opération d’insertion en déplaçant les éléments du vecteur au lieu de les copier.
+L'exemple suivant montre comment la sémantique de déplacement peut améliorer les performances de vos applications. L'exemple ajoute deux éléments à un objet vectoriel, puis insère un nouvel élément entre les deux éléments existants. La `vector` classe utilise la sémantique de déplacement pour exécuter efficacement l’opération d’insertion en déplaçant les éléments du vecteur au lieu de les copier.
 
 ```cpp
 // rvalue-references-move-semantics.cpp
@@ -248,15 +248,15 @@ In MemoryBlock(size_t). length = 25.
 In MemoryBlock(MemoryBlock&&). length = 25. Moving resource.
 In ~MemoryBlock(). length = 0.
 In MemoryBlock(size_t). length = 75.
+In MemoryBlock(MemoryBlock&&). length = 75. Moving resource.
 In MemoryBlock(MemoryBlock&&). length = 25. Moving resource.
 In ~MemoryBlock(). length = 0.
-In MemoryBlock(MemoryBlock&&). length = 75. Moving resource.
 In ~MemoryBlock(). length = 0.
 In MemoryBlock(size_t). length = 50.
 In MemoryBlock(MemoryBlock&&). length = 50. Moving resource.
-In MemoryBlock(MemoryBlock&&). length = 50. Moving resource.
-In operator=(MemoryBlock&&). length = 75.
-In operator=(MemoryBlock&&). length = 50.
+In MemoryBlock(MemoryBlock&&). length = 25. Moving resource.
+In MemoryBlock(MemoryBlock&&). length = 75. Moving resource.
+In ~MemoryBlock(). length = 0.
 In ~MemoryBlock(). length = 0.
 In ~MemoryBlock(). length = 0.
 In ~MemoryBlock(). length = 25. Deleting resource.
@@ -299,7 +299,7 @@ Si vous fournissez un constructeur de déplacement et un opérateur d'assignatio
 
 ```cpp
 // Move constructor.
-MemoryBlock(MemoryBlock&& other)
+MemoryBlock(MemoryBlock&& other) noexcept
    : _data(nullptr)
    , _length(0)
 {
@@ -307,7 +307,7 @@ MemoryBlock(MemoryBlock&& other)
 }
 ```
 
-La fonction [std :: Move](../standard-library/utility-functions.md#move) conserve la propriété rvalue de l' *autre* paramètre.
+La fonction [std :: Move](../standard-library/utility-functions.md#move) convertit la lvalue `other` en valeur Rvalue.
 
 ## <a name="see-also"></a>Voir aussi
 
