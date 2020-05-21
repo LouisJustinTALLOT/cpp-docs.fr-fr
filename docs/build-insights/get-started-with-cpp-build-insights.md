@@ -1,49 +1,61 @@
 ---
 title: Bien démarrer avec C++ Build Insights
-description: Un aperçu de haut niveau de C ' Build Insights.
+description: Une vue d’ensemble de C++ Build Insights.
 ms.date: 11/03/2019
 helpviewer_keywords:
 - C++ Build Insights
 - throughput analysis
 - build time analysis
 - vcperf.exe
-ms.openlocfilehash: 3a75dfe3bf1263cce53d70b764607cad4eec86d5
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 28d7e0758ea521af424129c546297fc97e3d6659
+ms.sourcegitcommit: 8c8ed02a6f3bcb5ee008e3fe30ba7595d7c4c922
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81325712"
+ms.lasthandoff: 05/21/2020
+ms.locfileid: "83759223"
 ---
 # <a name="get-started-with-c-build-insights"></a>Bien démarrer avec C++ Build Insights
 
 ::: moniker range="<=vs-2017"
 
-Les outils build Insights sont disponibles dans Visual Studio 2019. Pour voir la documentation de cette version, définissez le contrôle du sélecteur Visual Studio **Version** pour cet article à Visual Studio 2019. On le trouve en haut de la table des contenus sur cette page.
+Les outils C++ Build Insights sont disponibles dans Visual Studio 2019. Pour afficher la documentation de cette version, définissez le contrôle sélecteur de **version** de Visual Studio pour cet article sur visual studio 2019. Elle se trouve en haut de la table des matières sur cette page.
 
 ::: moniker-end
 ::: moniker range="vs-2019"
 
-Build Insights est une collection d’outils qui offre une visibilité accrue dans la chaîne d’outils Microsoft Visual CMD (MSVC). Les outils recueillent des données sur votre CMD et les présentent dans un format qui peut vous aider à répondre à des questions courantes, comme :
+C++ Build Insights est un ensemble d’outils qui offre une meilleure visibilité de la chaîne d’outils Microsoft Visual C++ (MSVC). Les outils recueillent des données sur vos builds C++ et les présentent dans un format qui peut vous aider à répondre à des questions courantes, telles que :
 
-- Mes builds sont-elles suffisamment parallélisées ?
-- Que dois-je inclure dans mon en-tête pré-compilé (PCH)?
-- Y a-t-il un goulot d’étranglement spécifique sur qui je devrais me concentrer pour augmenter mes vitesses de construction?
+- Mes Builds sont-elles suffisamment parallélisée ?
+- Que dois-je inclure dans mon en-tête précompilé (PCH) ?
+- S’agit-il d’un goulot d’étranglement spécifique, je dois me concentrer sur l’augmentation de la vitesse de génération ?
 
-Les principaux composants de cette technologie sont les principaux éléments :
+Les principaux composants de cette technologie sont les suivants :
 
-- *vcperf.exe*, un utilitaire de ligne de commande que vous pouvez utiliser pour recueillir des traces pour vos builds,
-- une extension d’analyseur de performance Windows (WPA) qui vous permet de visualiser des traces de construction dans WPA, et
-- le CMD Build Insights SDK, un kit de développement logiciel pour la création de vos propres outils qui consomment les données de construction de CMD Build Insights.
+- *vcperf. exe*, un utilitaire de ligne de commande que vous pouvez utiliser pour collecter les traces de vos builds,
+- une extension Windows Performance Analyzer (WPA) qui vous permet d’afficher les traces de build dans WPA, et
+- le kit de développement logiciel (SDK) C++ Build Insights, un kit de développement logiciel pour la création de vos propres outils qui consomment des données de build Insights C++.
 
-Cliquez sur les liens ci-dessous pour commencer rapidement avec ces composants:
+## <a name="documentation-sections"></a>Sections de la documentation
 
-[Tutorial: vcperf et Windows Performance Analyzer](tutorials/vcperf-and-wpa.md)\
-Découvrez comment collecter des traces de construction pour vos projets CMD et comment les voir dans WPA.
+[Didacticiel : vcperf et analyseur de performances Windows](tutorials/vcperf-and-wpa.md)\
+Découvrez Comment collecter des traces de génération pour vos projets C++ et comment les afficher dans WPA.
 
-[Tutorial: Windows Performance Basics](tutorials/wpa-basics.md)\
-Découvrez des conseils WPA utiles pour analyser vos traces de construction.
+[Didacticiel : principes de base des performances Windows](tutorials/wpa-basics.md)\
+Découvrez des conseils WPA utiles pour analyser vos suivis de Build.
 
-[Construire des aperçus SDK](reference/sdk/overview.md)\
-Un aperçu de la SDK Build Insights.
+[Kit de développement logiciel (SDK) C++ Build Insights](reference/sdk/overview.md)\
+Vue d’ensemble du kit de développement logiciel (SDK) C++ Build Insights.
+
+## <a name="articles"></a>Articles
+
+Lisez ces articles sur le blog officiel de l’équipe C++ pour plus d’informations sur C++ Build Insights :
+
+[Présentation de C++ Build Insights](https://devblogs.microsoft.com/cppblog/introducing-c-build-insights/)
+
+[Analyser vos builds par programmation avec le kit de développement logiciel (SDK) C++ Build Insights](https://devblogs.microsoft.com/cppblog/analyze-your-builds-programmatically-with-the-c-build-insights-sdk/)
+
+[Recherche des goulots d’étranglement de build avec C++ Build Insights](https://devblogs.microsoft.com/cppblog/finding-build-bottlenecks-with-cpp-build-insights/)
+
+[Builds plus rapides avec des suggestions PCH de C++ Build Insights](https://devblogs.microsoft.com/cppblog/faster-builds-with-pch-suggestions-from-c-build-insights/)
 
 ::: moniker-end

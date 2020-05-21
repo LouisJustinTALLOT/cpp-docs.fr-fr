@@ -41,12 +41,12 @@ helpviewer_keywords:
 - printf function, using
 - formatted text [C++]
 ms.assetid: 77a854ae-5b48-4865-89f4-f2dc5cf80f52
-ms.openlocfilehash: 7992649a13c2e103077c6311e1987fad80a99837
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 3766ea24459423e730ab84ecae24d758d7f61e88
+ms.sourcegitcommit: 8c8ed02a6f3bcb5ee008e3fe30ba7595d7c4c922
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70950202"
+ms.lasthandoff: 05/21/2020
+ms.locfileid: "83759236"
 ---
 # <a name="printf-_printf_l-wprintf-_wprintf_l"></a>printf, _printf_l, wprintf, _wprintf_l
 
@@ -119,7 +119,7 @@ Line one
         Line two
 ```
 
-Les [spécifications de format](../../c-runtime-library/format-specification-syntax-printf-and-wprintf-functions.md) commencent toujours par un signe **%** de pourcentage () et sont lues de gauche à droite. Lorsque **printf** rencontre la première spécification de format (le cas échéant), il convertit la valeur du premier argument après le *format* et la génère en conséquence. La deuxième spécification de format entraîne la conversion et la sortie du deuxième argument, et ainsi de suite. S’il y a plus d’arguments que de spécifications de format, les arguments en trop sont ignorés. Les résultats sont indéfinis s’il n’y a pas assez d’arguments pour toutes les spécifications de format.
+Les [spécifications de format](../../c-runtime-library/format-specification-syntax-printf-and-wprintf-functions.md) commencent toujours par un signe de pourcentage ( **%** ) et sont lues de gauche à droite. Lorsque **printf** rencontre la première spécification de format (le cas échéant), il convertit la valeur du premier argument après le *format* et la génère en conséquence. La deuxième spécification de format entraîne la conversion et la sortie du deuxième argument, et ainsi de suite. S’il y a plus d’arguments que de spécifications de format, les arguments en trop sont ignorés. Les résultats sont indéfinis s’il n’y a pas assez d’arguments pour toutes les spécifications de format.
 
 > [!IMPORTANT]
 > Assurez-vous que *format* n'est pas une chaîne définie par l'utilisateur.
@@ -131,7 +131,7 @@ Les [spécifications de format](../../c-runtime-library/format-specification-syn
 |**_tprintf**|**printf**|**printf**|**wprintf**|
 |**_tprintf_l**|**_printf_l**|**_printf_l**|**_wprintf_l**|
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Conditions requises
 
 |Routine|En-tête requis|
 |-------------|---------------------|
@@ -140,7 +140,7 @@ Les [spécifications de format](../../c-runtime-library/format-specification-syn
 
 La console n’est pas prise en charge dans les applications de plateforme Windows universelle (UWP). Les handles de flux standard associés à la console, **stdin**, **stdout**et **stderr**, doivent être redirigés pour que les fonctions runtime C puissent les utiliser dans les applications UWP. Pour plus d'informations sur la compatibilité, voir [Compatibilité](../../c-runtime-library/compatibility.md).
 
-## <a name="example"></a>Exemples
+## <a name="example"></a>Exemple
 
 ```C
 // crt_printf.c
@@ -199,7 +199,7 @@ int main( void )
 }
 ```
 
-### <a name="sample-output"></a>Résultat de l'exemple
+### <a name="sample-output"></a>Exemple de sortie
 
 ```Output
 Integer formats:
@@ -228,12 +228,13 @@ Address as:   0012FF3C
 
 ## <a name="see-also"></a>Voir aussi
 
+[Syntaxe de spécification de format : fonctions printf et wprintf](../format-specification-syntax-printf-and-wprintf-functions.md)<br/>
 [Prise en charge de la virgule flottante](../../c-runtime-library/floating-point-support.md)<br/>
 [E/S de flux](../../c-runtime-library/stream-i-o.md)<br/>
 [Paramètres régionaux](../../c-runtime-library/locale.md)<br/>
 [fopen, _wfopen](fopen-wfopen.md)<br/>
 [_fprintf_p, _fprintf_p_l, _fwprintf_p, _fwprintf_p_l](fprintf-p-fprintf-p-l-fwprintf-p-fwprintf-p-l.md)<br/>
 [scanf, _scanf_l, wscanf, _wscanf_l](scanf-scanf-l-wscanf-wscanf-l.md)<br/>
-[sprintf, _sprintf_l, swprintf, _swprintf_l, \__swprintf_l](sprintf-sprintf-l-swprintf-swprintf-l-swprintf-l.md)<br/>
+[sprintf, _sprintf_l, swprintf, _swprintf_l, \_ _swprintf_l](sprintf-sprintf-l-swprintf-swprintf-l-swprintf-l.md)<br/>
 [vprintf, fonctions](../../c-runtime-library/vprintf-functions.md)<br/>
 [_set_output_format](../../c-runtime-library/set-output-format.md)<br/>
