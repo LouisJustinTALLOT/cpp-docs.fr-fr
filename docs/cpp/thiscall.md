@@ -1,41 +1,37 @@
 ---
 title: __thiscall
-ms.date: 11/04/2016
+ms.date: 05/22/2020
 f1_keywords:
 - __thiscall
 - __thiscall_cpp
 helpviewer_keywords:
 - __thiscall keyword [C++]
 ms.assetid: a6a22dd2-0101-4885-b33b-22f6057965df
-ms.openlocfilehash: 8772159dca71bb7605af5e5919425065423d503d
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: b9edc2cd8caa5fd5458f6a53c5fdb1f8a5e69914
+ms.sourcegitcommit: 5bb421fdf61d290cac93a03e16a6a80959accf6d
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80188153"
+ms.lasthandoff: 05/26/2020
+ms.locfileid: "83854812"
 ---
-# <a name="__thiscall"></a>__thiscall
+# `__thiscall`
 
-**Section spécifique de Microsoft**
+La **Microsoft-specific** **`__thiscall`** Convention d’appel spécifique à Microsoft est utilisée sur les fonctions membres de classe C++ sur l’architecture x86. Il s’agit de la Convention d’appel par défaut utilisée par les fonctions membres qui n’utilisent pas d’arguments de variables ( `vararg` fonctions).
 
-La Convention d’appel **__thiscall** est utilisée sur les fonctions membres et est la Convention d’appel C++ par défaut utilisée par les fonctions membres qui n’utilisent pas d’arguments de variables. Sous **__thiscall**, l’appelé nettoie la pile, ce qui est impossible pour les fonctions `vararg`. Les arguments font l’objet d’un push sur la pile de droite à gauche, avec le pointeur **This** passé via le registre ECX et non sur la pile, sur l’architecture x86.
+Sous **`__thiscall`** , l’appelé nettoie la pile, ce qui est impossible pour les `vararg` fonctions. Les arguments font l’objet d’un push sur la pile de droite à gauche. Le **`this`** pointeur est passé via le registre ECX et non pas sur la pile.
 
-L’une des raisons d’utiliser **__thiscall** se trouve dans les classes dont les fonctions membres utilisent `__clrcall` par défaut. Dans ce cas, vous pouvez utiliser **__thiscall** pour que les fonctions membres puissent être appelées à partir du code natif.
+Sur les machines ARM, ARM64 et x64, **`__thiscall`** est accepté et ignoré par le compilateur. Cela est dû au fait qu’ils utilisent par défaut une convention d’appel basée sur un registre.
 
-Lors de la compilation avec [/clr : pure](../build/reference/clr-common-language-runtime-compilation.md), toutes les fonctions et les pointeurs fonction sont `__clrcall`, sauf indication contraire. Les options de compilateur **/clr : pure** et **/clr : safe** sont dépréciées dans Visual Studio 2015 et ne sont pas prises en charge dans Visual Studio 2017.
+L’une des raisons d’utiliser **`__thiscall`** est dans les classes dont les fonctions membres utilisent **`__clrcall`** par défaut. Dans ce cas, vous pouvez utiliser **`__thiscall`** pour que les fonctions membres individuelles puissent être appelées à partir du code natif.
 
-Dans les versions antérieures à Visual Studio 2005, la Convention d’appel **__thiscall** n’a pas pu être spécifiée explicitement dans un programme, car **__thiscall** n’était pas un mot clé.
+Lors de la compilation avec [**`/clr:pure`**](../build/reference/clr-common-language-runtime-compilation.md) , toutes les fonctions et les pointeurs fonction sont **`__clrcall`** sauf indication contraire. Les **`/clr:pure`** **`/clr:safe`** Options du compilateur et sont dépréciées dans visual studio 2015 et ne sont pas prises en charge dans visual studio 2017.
 
-`vararg` fonctions membres utilisent la Convention d’appel **__cdecl** . Tous les arguments de fonction font l’objet d’un push sur la pile, avec le pointeur **This** placé sur la pile en dernier
+`vararg`les fonctions membres utilisent la **`__cdecl`** Convention d’appel. Tous les arguments de fonction font l’objet d’un push sur la pile, avec le **`this`** pointeur placé sur la pile en dernier.
 
-Étant donné que cette Convention d’appel C++s’applique uniquement à, il n’existe aucun schéma de décoration de nom C.
+Étant donné que cette Convention d’appel s’applique uniquement à C++, elle n’a pas de schéma de décoration de nom C.
 
-Sur les ordinateurs ARM et x64, **__thiscall** est accepté et ignoré par le compilateur.
-
-Pour les fonctions de classe non statiques, si la fonction est définie hors ligne, il n’est pas nécessaire de spécifier le modificateur de convention d’appel dans la définition hors ligne. En d’autres termes, pour les méthodes membres non statiques de classe, la convention d’appel spécifiée dans le cadre de la déclaration est utilisée par défaut au stade de la définition.
-
-**Fin de la section spécifique de Microsoft**
+Quand vous définissez une fonction membre de classe non statique hors ligne, spécifiez le modificateur de convention d’appel uniquement dans la déclaration. Vous n’êtes pas obligé de le spécifier à nouveau sur la définition hors ligne. Le compilateur utilise la Convention d’appel spécifiée pendant la déclaration au point de définition.
 
 ## <a name="see-also"></a>Voir aussi
 
-[Passage des arguments et conventions de dénomination](../cpp/argument-passing-and-naming-conventions.md)
+[Passage des arguments et conventions de nommage](../cpp/argument-passing-and-naming-conventions.md)

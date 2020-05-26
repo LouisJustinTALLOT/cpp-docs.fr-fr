@@ -1,124 +1,135 @@
 ---
-title: 'Tutorial: vcperf et Windows Performance Analyzer'
-description: Tutorial sur la façon d’utiliser le vcperf et WPA pour analyser les traces de construction C .
+title: 'Didacticiel : vcperf et analyseur de performances Windows'
+description: Didacticiel sur l’utilisation de vcperf et WPA pour analyser les traces de build C++.
 ms.date: 11/03/2019
 helpviewer_keywords:
 - C++ Build Insights
 - throughput analysis
 - build time analysis
 - vcperf.exe
-ms.openlocfilehash: c22f3dfddfd346d4f0eee898cb5164fd8923336e
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 724df913400abb6d33c333f0a16c20fb982769bc
+ms.sourcegitcommit: 98139766b548c55181ff5ec5ad3bfd9db2bf5c89
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81323422"
+ms.lasthandoff: 05/26/2020
+ms.locfileid: "83865050"
 ---
-# <a name="tutorial-vcperf-and-windows-performance-analyzer"></a>Tutorial: vcperf et Windows Performance Analyzer
+# <a name="tutorial-vcperf-and-windows-performance-analyzer"></a>Didacticiel : vcperf et analyseur de performances Windows
 
 ::: moniker range="<=vs-2017"
 
-Les outils build Insights sont disponibles dans Visual Studio 2019. Pour voir la documentation de cette version, définissez le contrôle du sélecteur Visual Studio **Version** pour cet article à Visual Studio 2019. On le trouve en haut de la table des contenus sur cette page.
+Les outils C++ Build Insights sont disponibles dans Visual Studio 2019. Pour afficher la documentation de cette version, définissez le contrôle sélecteur de **version** de Visual Studio pour cet article sur visual studio 2019. Elle se trouve en haut de la table des matières sur cette page.
 
 ::: moniker-end
 ::: moniker range="vs-2019"
 
-Dans ce tutoriel, vous apprendrez à utiliser *vcperf.exe* pour recueillir une trace de votre build C. Vous apprendrez également à afficher cette trace dans Windows Performance Analyzer.
+Dans ce didacticiel, vous allez apprendre à utiliser *vcperf. exe* pour collecter une trace de votre Build C++. Vous allez également apprendre à afficher ce suivi dans Windows Performance Analyzer.
 
-## <a name="step-1-install-and-configure-windows-performance-analyzer"></a>Étape 1 : Installer et configurer l’analyseur des performances windows
+## <a name="step-1-install-and-configure-windows-performance-analyzer"></a>Étape 1 : installer et configurer l’analyseur de performances Windows
 
-WPA est une visionneuse de traces disponible dans la trousse d’évaluation et de déploiement Windows (ADK). Il s’agit d’un utilitaire distinct qui ne fait pas partie des composants que vous pouvez installer avec l’installateur Visual Studio.
+WPA est une visionneuse de trace disponible dans le kit de déploiement et d’évaluation Windows (ADK). Il s’agit d’un utilitaire distinct qui ne fait pas partie des composants que vous pouvez installer à l’aide du programme d’installation de Visual Studio.
 
-Une version de WPA qui prend en charge C Build Insights n’est actuellement disponible que dans le Windows ADK Insider Preview. Pour accéder à cet aperçu, vous devez vous inscrire au [programme Windows Insider](https://insider.windows.com). Vous n’avez pas besoin d’installer le système d’exploitation Windows 10 Insider Preview pour obtenir l’aperçu Windows ADK. Vous n’avez qu’à enregistrer votre compte Microsoft avec le programme Windows Insider.
+Une version de WPA qui prend en charge C++ Build Insights est actuellement disponible uniquement dans Windows ADK Insider preview. Pour accéder à cette version préliminaire, vous devez vous inscrire au [programme Windows Insider](https://insider.windows.com). Vous n’avez pas besoin d’installer le système d’exploitation Windows 10 Insider Preview pour obtenir la version préliminaire de Windows ADK. Vous devez uniquement inscrire votre compte Microsoft dans le programme Windows Insider.
 
 ### <a name="to-download-and-install-wpa"></a>Pour télécharger et installer WPA
 
-REMARQUE : Windows 8 ou plus est nécessaire pour installer l’analyseur de performance Windows.
+Remarque : Windows 8 ou version ultérieure est requis pour l’installation de l’analyseur de performances Windows.
 
-1. Naviguez sur la page de [téléchargement](https://www.microsoft.com/en-us/software-download/windowsinsiderpreviewADK)Windows ADK Insider Preview .
+1. Accédez à la page de [Téléchargement](https://docs.microsoft.com/windows-hardware/get-started/adk-install)de Windows ADK.
 
-1. Téléchargez l’aperçu Windows ADK Insider. C’est une image de disque.
+1. Téléchargez et installez la dernière version de Windows ADK.
 
-1. Ouvrez l’image du disque et exécutez *l’installateur adksetup.exe.*
+1. Lorsque vous êtes invité à entrer les fonctionnalités que vous souhaitez installer, sélectionnez **Windows performance Toolkit**. Vous pouvez sélectionner d’autres fonctionnalités si vous le souhaitez, mais elles ne sont pas requises pour installer WPA.
 
-1. Invité pour les fonctionnalités que vous souhaitez installer, sélectionnez la boîte à **outils de performance Windows**. Vous pouvez sélectionner d’autres fonctionnalités si vous le souhaitez, mais elles ne sont pas tenues d’installer WPA.
+   ![Écran de sélection des fonctionnalités du programme d’installation de Windows Performance Analyzer](media/wpa-installation.png)
 
-   ![L’écran de sélection des fonctionnalités de l’installateur d’analyse des performances Windows](media/wpa-installation.png)
+### <a name="to-configure-wpa"></a><a name="configuration-steps"></a>Pour configurer WPA
 
-### <a name="to-configure-build-insights"></a><a name="configuration-steps"></a>Configurer Build Insights
+L’affichage des suivis de build Insights C++ dans WPA requiert un complément spécial. Procédez comme suit pour l’installer :
 
-1. Lancer WPA.
+1. Procurez-vous le complément en téléchargeant l’un des composants ci-dessous. Vous n’avez pas besoin d’utiliser les deux. Choisissez celui que vous trouvez le plus pratique.
+    1. [Visual Studio 2019 version 16,6 ou ultérieure](https://visualstudio.microsoft.com/downloads/), ou,
+    1. [Package NuGet C++ Build Insights](https://www.nuget.org/packages/Microsoft.Cpp.BuildInsights/).
 
-1. Sélectionnez **Tables** > de sélection **de fenêtre (expérimentales)**.
+1. Copiez le `perf_msvcbuildinsights.dll` fichier dans votre répertoire d’installation WPA.
+    1. Dans Visual Studio 2019 version 16,6 et versions ultérieures, ce fichier se trouve ici : `C:\Program Files (x86)\Microsoft Visual Studio\2019\{Edition}\VC\Tools\MSVC\{Version}\bin\Host{Architecture}\{Architecture}` .
+    1. Dans le package NuGet C++ Build Insights, ce fichier se trouve ici : `wpa\{Architecture}` .
+    1. Dans les tracés ci-dessus, remplacez les variables entourées par des accolades comme suit :
+        1. `{Edition}`est votre édition Visual Studio 2019 telle que Community, Professional ou Enterprise.
+        1. `{Version}`est votre version de MSVC. Choisissez le plus élevé disponible.
+        1. `{Architecture}`: choisissez `x64` si vous disposez d’une version 64 bits de Windows. Dans le cas contraire, choisissez `x86` .
+    1. Le répertoire d’installation de WPA est généralement : `C:\Program Files (x86)\Windows Kits\10\Windows Performance Toolkit` .
 
-1. Faites défiler vers le bas pour la section **Diagnostics.**
+1. Dans votre répertoire d’installation WPA, ouvrez le `perfcore.ini` fichier et ajoutez une entrée pour `perf_msvcbuildinsights.dll` .
 
-1. Sélectionnez toutes les vues MSVC Build Insights.
+## <a name="step-2-trace-your-build-with-vcperfexe"></a>Étape 2 : tracer votre build avec vcperf. exe
 
-   ![Panneau de sélection de table de Windows Performance Analyzer](media/wpa-configuration.png)
+Pour afficher les données de build Insights C++, commencez par les collecter dans un fichier de trace en procédant comme suit :
 
-## <a name="step-2-trace-your-build-with-vcperfexe"></a>Étape 2: Tracez votre build avec vcperf.exe
+1. Ouvrez une **x64** invite de commandes des outils natifs x86 x64 **pour vs 2019** en mode administrateur. (Cliquez avec le bouton droit sur l’élément de menu Démarrer et choisissez **plus**  >  **Exécutez en tant qu’administrateur**.)
+    1. Choisissez **x64** si vous disposez d’une version 64 bits de Windows. Dans le cas contraire, choisissez **x86**.
 
-Pour afficher les données de L’insights de construction, collectez-les d’abord dans un fichier de traces en suivant ces étapes :
+1. Dans la fenêtre d’invite de commandes, entrez la commande suivante :
 
-1. Ouvrez une invite de commande de développeur d’outils ou d’outils croisés pour Visual Studio 2019 en mode administrateur. (Cliquez à droite sur l’élément du menu Démarrer et choisissez **More** > **Run en tant qu’administrateur**.)
+   **vcperf. exe/Start _nom_session_**
 
-1. Dans la fenêtre d’invite de commande, entrez cette commande :
+   Choisissez un nom de session dont vous vous souviendrez pour *nom_session*.
 
-   **vcperf.exe /start _SessionName_**
+1. Générez votre projet comme vous le feriez normalement. Vous n’avez pas besoin d’utiliser la même fenêtre d’invite de commandes pour générer.
 
-   Choisissez un nom de session dont vous vous souviendrez pour *SessionName*.
+1. Dans la fenêtre d’invite de commandes, entrez la commande suivante :
 
-1. Construisez votre projet comme vous le feriez normalement. Vous n’avez pas besoin d’utiliser la même fenêtre d’invitation de commande pour construire.
+   **vcperf. exe/Stop _nom_session_ _traceFile. etl_**
 
-1. Dans la fenêtre d’invite de commande, entrez cette commande :
+   Utilisez le même nom de session que celui que vous avez choisi pour *nom_session* . Choisissez un nom approprié pour le fichier de trace *traceFile. etl* .
 
-   **vcperf.exe /stop _SessionName_ _traceFile.etl_**
+Voici à quoi ressemble une séquence de commande *vcperf. exe* typique dans une fenêtre d’invite de commandes développeur :
 
-   Utilisez le même nom de session que vous avez choisi pour *SessionName* avant. Choisissez un nom approprié pour le fichier *trace trace trace tracefile.etl.*
+![Un simple scénario d’utilisation de vcperf. exe](media/vcperf-simple-usage.png)
 
-Voici à quoi ressemble une séquence de commande *vcperf.exe* typique dans une fenêtre d’invitation de commande de développeur :
+### <a name="important-notes-about-vcperfexe"></a>Remarques importantes sur vcperf. exe
 
-![Un scénario d’utilisation simple de vcperf.exe](media/vcperf-simple-usage.png)
+- Des privilèges d’administrateur sont nécessaires pour démarrer ou arrêter une trace *vcperf. exe* . Utilisez une fenêtre d’invite de commandes développeur que vous ouvrez en utilisant **exécuter en tant qu’administrateur**.
 
-### <a name="important-notes-about-vcperfexe"></a>Notes importantes sur vcperf.exe
+- Une seule session de suivi à la fois peut s’exécuter sur un ordinateur.
 
-- Les privilèges de l’administrateur sont nécessaires pour démarrer ou arrêter une trace *vcperf.exe.* Utilisez une fenêtre d’invitation de commande de développeur que vous ouvrez en utilisant **Run comme administrateur**.
+- Veillez à mémoriser le nom de session que vous avez utilisé pour démarrer votre trace. Il peut être pénible d’arrêter une session en cours d’exécution sans connaître son nom.
 
-- Une seule séance de traçage à la fois peut fonctionner sur une machine.
+- Tout comme *CL. exe* et *Link. exe*, l’utilitaire de ligne de commande *vcperf. exe* est inclus dans une installation MSVC. Aucune étape supplémentaire n’est requise pour obtenir ce composant.
 
-- N’oubliez pas le nom de session que vous avez utilisé pour commencer votre trace. Il peut être gênant d’arrêter une session de course sans connaître son nom.
+- *vcperf. exe* collecte des informations sur tous les outils MSVC en cours d’exécution sur votre système. Par conséquent, vous n’avez pas besoin de démarrer votre build à partir de l’invite de commandes que vous avez utilisée pour collecter la trace. Vous pouvez générer votre projet à partir d’une autre invite de commandes, ou même dans Visual Studio.
 
-- Tout comme *cl.exe* et *link.exe*, le service public de commande *vcperf.exe* est inclus dans une installation MSVC. Aucune étape supplémentaire n’est nécessaire pour obtenir ce composant.
+### <a name="vcperfexe-is-open-source"></a>vcperf. exe est open-source
 
-- *vcperf.exe* recueille des informations sur tous les outils MSVC fonctionnant sur votre système. En conséquence, vous n’avez pas à démarrer votre build à partir de la même invite de commande que vous avez utilisé pour recueillir la trace. Vous pouvez construire votre projet à partir d’une invite de commande différente, ou même dans Visual Studio.
+Si vous souhaitez générer et exécuter votre propre version de *vcperf. exe*, n’hésitez pas à le cloner à partir du [référentiel GitHub vcperf](https://github.com/microsoft/vcperf).
 
-## <a name="step-3-view-your-trace-in-windows-performance-analyzer"></a>Étape 3 : Affichez votre trace dans Windows Performance Analyzer
+## <a name="step-3-view-your-trace-in-windows-performance-analyzer"></a>Étape 3 : afficher votre suivi dans l’analyseur de performances Windows
 
-Lancez WPA et ouvrez la trace que vous venez de recueillir. WPA devrait le reconnaître comme une trace de C Build Insights, et les vues suivantes devraient apparaître dans le panneau Graph Explorer sur la gauche:
+Lancez WPA et ouvrez la trace que vous venez de collecter. WPA doit le reconnaître comme un suivi C++ Build Insights, et les affichages suivants doivent apparaître dans le volet de l’Explorateur graphique sur la gauche :
 
 - Build Explorer
-- Fichiers
-- Fonction
+- Files
+- Fonctions
+- Instanciations de modèle
 
-Si vous ne pouvez pas voir ces vues, vérifiez que WPA est configuré correctement, tel que décrit dans [l’étape 1](#configuration-steps). Vous pouvez afficher vos données de build en faisant glisser les vues dans la fenêtre d’analyse vide sur la droite, comme indiqué ici:
+Si vous ne voyez pas ces affichages, vérifiez que l’activation de la configuration WPA est correctement configurée, comme décrit à l' [étape 1](#configuration-steps). Vous pouvez afficher vos données de build en faisant glisser les vues dans la fenêtre d’analyse vide à droite, comme illustré ici :
 
-![Affichage d’une trace D’aperçus de construction de CMD dans l’analyseur de performance de Windows](media/wpa-viewing-trace.gif)
+![Affichage d’une trace C++ Build Insights dans Windows Performance Analyzer](media/wpa-viewing-trace.gif)
 
-D’autres vues sont disponibles dans le panneau Graph Explorer. Faites-les glisser dans la fenêtre d’analyse lorsque vous êtes intéressé par les informations qu’ils contiennent. Un utile est le CPU (Sampled) vue, qui montre l’utilisation CPU tout au long de votre build.
+D’autres vues sont disponibles dans le panneau de l’Explorateur graphique. Faites-les glisser dans la fenêtre d’analyse lorsque vous êtes intéressé par les informations qu’ils contiennent. Une vue utile est la vue UC (échantillonnée), qui montre l’utilisation de l’UC dans votre Build.
 
 ## <a name="more-information"></a>Informations complémentaires
 
-[Tutorial: Windows Performance Analyzer basics](wpa-basics.md)\
-Renseignez-vous sur les opérations WPA courantes qui peuvent vous aider à analyser vos traces de construction.
+[Didacticiel : notions de base de l’analyseur de performances Windows](wpa-basics.md)\
+Découvrez les opérations WPA courantes qui peuvent vous aider à analyser vos suivis de Build.
 
-[Référence: commandes de vcperf](/cpp/build-insights/reference/vcperf-commands)\
-La référence de commande *vcperf.exe répertorie* toutes les options de commande disponibles.
+[Référence : commandes vcperf](/cpp/build-insights/reference/vcperf-commands)\
+La référence de commande *vcperf. exe* répertorie toutes les options de commande disponibles.
 
-[Référence: Vues d’analyseur de performance Windows](/cpp/build-insights/reference/wpa-views)\
-Consultez cet article pour plus de détails sur les vues de L’APM.
+[Référence : vues de l’analyseur de performances Windows](/cpp/build-insights/reference/wpa-views)\
+Reportez-vous à cet article pour plus d’informations sur les vues C++ Build Insights dans WPA.
 
-[Analyseur de performance Windows](/windows-hardware/test/wpt/windows-performance-analyzer)\
+[Analyseur de performances Windows](/windows-hardware/test/wpt/windows-performance-analyzer)\
 Le site officiel de documentation WPA.
 
 ::: moniker-end
