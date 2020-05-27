@@ -5,17 +5,17 @@ ms.date: 07/02/2019
 ms.technology: cpp-ide
 helpviewer_keywords:
 - Visual C++, home page
-ms.openlocfilehash: f00ec21db29299549821aae09064f788f92bd667
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: adcf1334979fd083a4f32074f13b0bc204405a5c
+ms.sourcegitcommit: f7ebdfc3a260778c2ef938747cba1376c70ced15
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81365209"
+ms.lasthandoff: 05/27/2020
+ms.locfileid: "84108430"
 ---
 # <a name="c-in-visual-studio"></a>C++ dans Visual Studio
 
 > [!NOTE]
-> Cette documentation pour les développeurs s’applique à Visual Studio 2015 et versions ultérieures. Pour voir la documentation de votre version préférée de Visual Studio, utilisez le contrôle du sélecteur **Version.** On le trouve en haut de la table des contenus sur cette page.
+> Cette documentation pour les développeurs s’applique à Visual Studio 2015 et versions ultérieures. Pour consulter la documentation de votre version par défaut de Visual Studio, utilisez le contrôle sélecteur de **version** . Elle se trouve en haut de la table des matières sur cette page.
 >
 > Si vous recherchez un package redistribuable Visual C++ pour pouvoir exécuter un programme, accédez au [Centre de téléchargement Microsoft](https://www.microsoft.com/download/) et entrez **Visual C++** dans la zone de recherche.
 
@@ -34,7 +34,7 @@ Découvrez ce qui était nouveau dans C++ pour chaque version de Visual Studio d
 [Améliorations de la conformité de C++ dans Visual Studio](cpp-conformance-improvements.md)<br/>
 Découvrez les améliorations de la conformité de C++ dans Visual Studio.
 
-[Table de conformité linguistique Microsoft CMD](visual-cpp-language-conformance.md)<br/>
+[Table de conformité du langage Microsoft C++](visual-cpp-language-conformance.md)<br/>
 Liste des états de conformité par fonctionnalité dans le compilateur MSVC C++.
 
 [Historique des modifications de Visual C++ entre 2003 et 2015](../porting/visual-cpp-change-history-2003-2015.md)<br/>
@@ -42,7 +42,7 @@ Découvrez les modifications avec rupture introduites dans cette version.
 
 ## <a name="install-visual-studio-and-upgrade-from-earlier-versions"></a>Installer Visual Studio et mettre à niveau à partir de versions antérieures
 
-[Installer le support CMD dans Visual Studio](../build/vscpp-step-0-installation.md)<br/>
+[Installer la prise en charge de C++ dans Visual Studio](../build/vscpp-step-0-installation.md)<br/>
 Téléchargez Visual Studio 2017 ou Visual Studio 2019, puis installez l’ensemble d’outils Visual C++.
 
 [Guide du portage et de la mise à niveau de Visual C++](../porting/visual-cpp-porting-and-upgrading-guide.md)<br/>
@@ -51,7 +51,7 @@ Conseils sur le portage de code et la mise à niveau des projets vers Visual Stu
 [Outils et fonctionnalités Visual C++ dans les éditions de Visual Studio](visual-cpp-tools-and-features-in-visual-studio-editions.md)<br/>
 Découvrez les différentes éditions de Visual Studio.
 
-[Plates-formes soutenues](supported-platforms-visual-cpp.md)<br/>
+[Plateformes prises en charge](supported-platforms-visual-cpp.md)<br/>
 Découvrez quelles plateformes sont prises en charge.
 
 ## <a name="learn-c"></a>Apprendre C++
@@ -65,7 +65,7 @@ Découvrez C++, obtenez une vue d’ensemble du langage C++ moderne et bénéfic
 [Apprendre Visual C++](../build/vscpp-step-1-create.md)<br/>
 Commencez à vous familiariser avec le langage C++.
 
-[Échantillons Visual Studio CMD](visual-cpp-samples.md)<br/>
+[Exemples Visual Studio C++](visual-cpp-samples.md)<br/>
 Informations sur les exemples.
 
 ## <a name="c-development-tools"></a>Outils de développement C++
@@ -73,16 +73,16 @@ Informations sur les exemples.
 [Vue d’ensemble du développement C++ dans Visual Studio](overview-of-cpp-development.md)<br/>
 Comment utiliser l’IDE Visual Studio pour créer des projets, modifier du code, établir des liaisons à des bibliothèques, compiler, déboguer, créer des tests unitaires, effectuer une analyse statique, déployer et bien plus encore.
 
-[Projets et systèmes de construction](../build/projects-and-build-systems-cpp.md)<br/>
+[Projets et systèmes de génération](../build/projects-and-build-systems-cpp.md)<br/>
 Guide pratique pour créer et configurer des projets Visual Studio C++, des projets CMake et d’autres types de projets avec des options de compilateur et d’éditeur de liens MSVC.
 
 [Écriture et refactorisation du code C++](../ide/writing-and-refactoring-code-cpp.md)<br/>
 Comment utiliser les fonctionnalités de productivité dans l’éditeur C++ pour refactoriser, parcourir, comprendre et écrire du code.
 
-[Code autochtone de débogage](/visualstudio/debugger/debugging-native-code)<br/>
+[Débogage de code natif](/visualstudio/debugger/debugging-native-code)<br/>
 Utiliser le débogueur Visual Studio avec des projets C++.
 
-[Analyse du code pour la vue d’ensemble de C/C](/cpp/code-quality/code-analysis-for-c-cpp-overview)<br/>
+[Vue d’ensemble de l’analyse du code C/C++](/cpp/code-quality/code-analysis-for-c-cpp-overview)<br/>
 Utilisez des annotations SAL ou les vérificateurs C++ Core Guidelines pour effectuer une analyse statique.
 
 [Écrire des tests unitaires pour C/C++ dans Visual Studio](/visualstudio/test/writing-unit-tests-for-c-cpp)<br/>
@@ -99,7 +99,7 @@ Découvrez comment créer des applications de bureau C++ natives traditionnelles
 [Programmation .NET avec C++/CLI](../dotnet/dotnet-programming-with-cpp-cli-visual-cpp.md)<br/>
 Découvrez comment créer des DLL qui permettent une interopérabilité entre les programmes C++ et .NET natifs écrits dans des langages tels que C# ou Visual Basic.
 
-[Programmation Linux](../linux/index.md)<br/>
+[Programmation Linux](../linux/index.yml)<br/>
 Utilisez l’IDE de Visual Studio pour coder et déployer sur une machine Linux distante pour une compilation avec GCC.
 
 [Création de DLL C/C++ dans Visual Studio](../build/dlls-in-visual-cpp.md)<br/>
@@ -108,10 +108,10 @@ Découvrez comment utiliser Win32, ATL et MFC pour créer des DLL de bureau Wind
 [Programmation parallèle](../parallel/parallel-programming-in-visual-cpp.md)<br/>
 Apprenez à utiliser la bibliothèque de modèles parallèles, C++ AMP, OpenMP et d’autres fonctionnalités associées au multithreading dans Windows.
 
-[Pratiques exemplaires en matière de sécurité](../security/security-best-practices-for-cpp.md)<br/>
+[Meilleures pratiques de sécurité](../security/security-best-practices-for-cpp.md)<br/>
 Apprenez à protéger des applications contre un code malveillant et une utilisation non autorisée.
 
-[Programmation cloud et web](../cloud/cloud-and-web-programming-in-visual-cpp.md)<br/>
+[Cloud et programmation Web](../cloud/cloud-and-web-programming-in-visual-cpp.md)<br/>
 En C++, vous disposez de plusieurs options de connexion web et cloud.
 
 [Accès aux données](../data/data-access-in-cpp.md)<br/>
@@ -122,13 +122,13 @@ En savoir plus sur l’utilisation de différents formats et encodages de texte 
 
 ## <a name="languages-reference"></a>Informations de référence sur les langages
 
-[Référence linguistique de CMD](../cpp/cpp-language-reference.md)
+[Informations de référence sur le langage C++](../cpp/cpp-language-reference.md)
 
 [Référence du préprocesseur C/C++](../preprocessor/c-cpp-preprocessor-reference.md)
 
-[C Référence linguistique](../c-language/c-language-reference.md)
+[Référence du langage C](../c-language/c-language-reference.md)
 
-[Compiler Intrinsèques et Langue d’assemblage](../intrinsics/compiler-intrinsics-and-assembly-language.md)
+[Intrinsèques du compilateur et langage assembleur](../intrinsics/compiler-intrinsics-and-assembly-language.md)
 
 ## <a name="c-libraries-in-visual-studio"></a>Bibliothèques C++ dans Visual Studio
 
@@ -137,7 +137,7 @@ Les sections suivantes fournissent des informations sur les différentes bibliot
 [Informations de référence sur la bibliothèque Runtime C](../c-runtime-library/c-run-time-library-reference.md)<br/>
 Inclut des solutions alternatives optimisées en matière de sécurité pour les fonctions connues pour poser des problèmes de sécurité.
 
-[Bibliothèque standard de CMD](../standard-library/cpp-standard-library-reference.md)<br/>
+[Bibliothèque standard C++](../standard-library/cpp-standard-library-reference.md)<br/>
 Bibliothèque C++ standard.
 
 [Bibliothèque ATL (Active Template Library)](../atl/atl-com-desktop-components.md)<br/>
@@ -164,7 +164,7 @@ L’outil en ligne de commande **vcpkg** multiplateforme simplifie considérable
 
 ## <a name="feedback-and-community"></a>Commentaires et communauté
 
-[Comment signaler un problème avec le jeu d’outils Visual C](how-to-report-a-problem-with-the-visual-cpp-toolset.md)<br/>
+[Comment signaler un problème avec l’ensemble d’outils Visual C++](how-to-report-a-problem-with-the-visual-cpp-toolset.md)<br/>
 Découvrez comment créer des rapports d’erreurs efficaces portant sur l’ensemble d’outils Visual C++ (compilateur, éditeur de liens et autres outils) et différentes manières de soumettre votre rapport.
 
 [Blog de l’équipe C++](https://devblogs.microsoft.com/cppblog/) Microsoft<br/>
@@ -175,6 +175,6 @@ Découvrez comment obtenir de l’aide, consigner des bogues et envoyer des sugg
 
 ## <a name="see-also"></a>Voir aussi
 
-- [C Référence linguistique](../c-language/c-language-reference.md)
+- [Référence du langage C](../c-language/c-language-reference.md)
 - [Informations de référence sur la bibliothèque Runtime C](../c-runtime-library/c-run-time-library-reference.md)
-- [Compiler Intrinsèques et Langue d’assemblage](../intrinsics/compiler-intrinsics-and-assembly-language.md)
+- [Intrinsèques du compilateur et langage assembleur](../intrinsics/compiler-intrinsics-and-assembly-language.md)
