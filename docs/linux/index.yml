@@ -1,0 +1,55 @@
+### YamlMime:Landing
+title: Développement Linux avec C++ | Créer et déboguer des applications pour Linux
+summary: Utilisez C++ dans Visual Studio 2017 et ultérieur pour créer et déboguer des applications pour Linux.
+metadata:
+  title: Développement Linux avec C++
+  description: Apprenez à utiliser C++ dans Visual Studio 2017 et ultérieur pour créer et déboguer des applications pour Linux.
+  ms.topic: landing-page
+  author: corob-msft
+  ms.author: corob
+  ms.date: 04/26/2020
+  ms.openlocfilehash: ac705ae3ae457d804ed2ca884143c8c6cb5a4758
+  ms.sourcegitcommit: f7ebdfc3a260778c2ef938747cba1376c70ced15
+  ms.translationtype: HT
+  ms.contentlocale: fr-FR
+  ms.lasthandoff: 05/27/2020
+  ms.locfileid: "84108639"
+landingContent:
+- title: Créer des applications C++ Linux dans Visual Studio
+  linkLists:
+  - linkListType: get-started
+    links:
+    - text: Télécharger, installer et configurer la charge de travail Linux
+      url: download-install-and-setup-the-linux-development-workload.md
+  - linkListType: how-to-guide
+    links:
+    - text: Se connecter à votre système Linux cible
+      url: connect-to-your-remote-linux-computer.md
+  - linkListType: reference
+    links:
+    - text: Informations de référence sur ConnectionManager
+      url: connectionmanager-reference.md
+- title: Générer des projets Linux dans Visual Studio
+  linkLists:
+  - linkListType: quickstart
+    links:
+    - text: Créer un projet Linux
+      url: create-a-new-linux-project.md
+    - text: Configurer un projet Linux
+      url: configure-a-linux-project.md
+    - text: Déployer, exécuter et déboguer un projet Linux
+      url: deploy-run-and-debug-your-linux-project.md
+  - linkListType: reference
+    links:
+    - text: Informations de référence sur les pages de propriétés dans un projet Linux
+      url: prop-pages-linux.md
+- title: Générer des projets CMake Linux dans Visual Studio
+  linkLists:
+  - linkListType: quickstart
+    links:
+    - text: Créer et configurer un projet CMake Linux
+      url: cmake-linux-project.md
+  - linkListType: tutorial
+    links:
+    - text: Créer des projets multiplateformes C++ dans Visual Studio
+      url: /cpp/build/get-started-linux-cmake
