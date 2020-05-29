@@ -1,4 +1,4 @@
-- name: "Informations de référence sur les bibliothèques Runtime\_C"
+- name: "Informations de référence sur les bibliothèques Runtime\_C (CRT)"
   href: ../c-runtime-library/c-run-time-library-reference.md
 - name: Fonctionnalités des bibliothèques CRT
   expanded: false
