@@ -3,7 +3,6 @@
 - name: 'Télécharger, installer et configurer la charge de travail Développement Linux'
   href: ../linux/download-install-and-setup-the-linux-development-workload.md
 - name: Se connecter à un ordinateur Linux distant
-  expanded: true
   items:
     - name: Se connecter à un ordinateur Linux distant
       href: ../linux/connect-to-your-remote-linux-computer.md
@@ -11,40 +10,43 @@
       href: ../linux/set-up-fips-compliant-secure-remote-linux-development.md
     - name: Informations de référence sur ConnectionManager
       href: ../linux/connectionmanager-reference.md
-- name: Créer un projet Linux
-  href: ../linux/create-a-new-linux-project.md
-- name: Configurer un projet Linux
-  href: ../linux/configure-a-linux-project.md
-- name: Créer et configurer un projet CMake Linux
-  href: ../linux/cmake-linux-project.md
+- name: Générer des projets Linux avec MSBuild dans Visual Studio
+  items:
+    - name: Créer un projet Linux
+      href: ../linux/create-a-new-linux-project.md
+    - name: Configurer un projet Linux
+      href: ../linux/configure-a-linux-project.md
+    - name: 'Déployer, exécuter et déboguer un projet Linux'
+      href: ../linux/deploy-run-and-debug-your-linux-project.md
+    - name: Informations de référence sur les pages de propriétés d’un projet Linux
+      items:
+        - name: Informations de référence sur les pages de propriétés d’un projet Linux
+          href: ../linux/prop-pages-linux.md
+        - name: 'Général, propriétés (Linux)'
+          href: ../linux/prop-pages/general-linux.md
+        - name: 'Débogage, propriétés (Linux)'
+          href: ../linux/prop-pages/debugging-linux.md
+        - name: 'Répertoires VC++, propriétés (Linux)'
+          href: ../linux/prop-pages/directories-linux.md
+        - name: 'Copier les sources, propriétés (Linux)'
+          href: ../linux/prop-pages/copy-sources-project.md
+        - name: 'C/C++, propriétés (Linux)'
+          href: ../linux/prop-pages/c-cpp-linux.md
+        - name: 'Éditeur de liens, propriétés (Linux)'
+          href: ../linux/prop-pages/linker-linux.md
+        - name: 'Événement de build, propriétés (Linux)'
+          href: ../linux/prop-pages/build-events-linux.md
+        - name: 'Étape de build personnalisée, propriétés (Linux)'
+          href: ../linux/prop-pages/custom-build-step-linux.md
+        - name: 'Projet Makefile, propriétés (Linux)'
+          href: ../linux/prop-pages/makefile-linux.md
+        - name: 'Archive distante, propriétés (Linux)'
+          href: ../linux/prop-pages/remote-ar-linux.md
+- name: Générer des projets Linux avec CMake dans Visual Studio
+  items:
+    - name: Créer et configurer un projet CMake Linux
+      href: ../linux/cmake-linux-project.md
+    - name: "Tutoriel\_: Créer des projets multiplateformes C++ dans Visual Studio"
+      href: ../build/get-started-linux-cmake.md
 - name: Configurer des projets Linux pour utiliser Address Sanitizer
   href: ../linux/linux-asan-configuration.md
-- name: 'Déployer, exécuter et déboguer un projet Linux'
-  href: ../linux/deploy-run-and-debug-your-linux-project.md
-- name: "Tutoriel\_: Créer des projets multiplateformes C++ dans Visual Studio"
-  href: ../build/get-started-linux-cmake.md
-- name: Informations de référence sur les pages de propriétés d’un projet Linux
-  expanded: false
-  items:
-    - name: Informations de référence sur les pages de propriétés d’un projet Linux
-      href: ../linux/prop-pages-linux.md
-    - name: 'Général, propriétés (Linux)'
-      href: ../linux/prop-pages/general-linux.md
-    - name: 'Débogage, propriétés (Linux)'
-      href: ../linux/prop-pages/debugging-linux.md
-    - name: 'Répertoires VC++, propriétés (Linux)'
-      href: ../linux/prop-pages/directories-linux.md
-    - name: 'Copier les sources, propriétés (Linux)'
-      href: ../linux/prop-pages/copy-sources-project.md
-    - name: 'C/C++, propriétés (Linux)'
-      href: ../linux/prop-pages/c-cpp-linux.md
-    - name: 'Éditeur de liens, propriétés (Linux)'
-      href: ../linux/prop-pages/linker-linux.md
-    - name: 'Événement de build, propriétés (Linux)'
-      href: ../linux/prop-pages/build-events-linux.md
-    - name: 'Étape de build personnalisée, propriétés (Linux)'
-      href: ../linux/prop-pages/custom-build-step-linux.md
-    - name: 'Projet Makefile, propriétés (Linux)'
-      href: ../linux/prop-pages/makefile-linux.md
-    - name: 'Archive distante, propriétés (Linux)'
-      href: ../linux/prop-pages/remote-ar-linux.md
