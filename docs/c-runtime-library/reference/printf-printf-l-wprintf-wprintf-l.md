@@ -41,12 +41,12 @@ helpviewer_keywords:
 - printf function, using
 - formatted text [C++]
 ms.assetid: 77a854ae-5b48-4865-89f4-f2dc5cf80f52
-ms.openlocfilehash: 3766ea24459423e730ab84ecae24d758d7f61e88
-ms.sourcegitcommit: 8c8ed02a6f3bcb5ee008e3fe30ba7595d7c4c922
+ms.openlocfilehash: 431c27a26fb549705abde28b08654ce47498e239
+ms.sourcegitcommit: 7e011c68ca7547469544fac87001a33a37e1792e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/21/2020
-ms.locfileid: "83759236"
+ms.lasthandoff: 06/04/2020
+ms.locfileid: "84421323"
 ---
 # <a name="printf-_printf_l-wprintf-_wprintf_l"></a>printf, _printf_l, wprintf, _wprintf_l
 
@@ -86,7 +86,7 @@ Arguments facultatifs.
 *locale*<br/>
 Paramètres régionaux à utiliser.
 
-## <a name="return-value"></a>Valeur de retour
+## <a name="return-value"></a>Valeur renvoyée
 
 Retourne le nombre de caractères imprimés ou une valeur négative si une erreur se produit. Si *format* a la **valeur null**, le gestionnaire de paramètres non valides est appelé, comme décrit dans [validation de paramètre](../../c-runtime-library/parameter-validation.md). Si l’exécution est autorisée à se poursuivre, la fonction retourne-1 et définit **errno** sur **EINVAL**. Si **EOF** (0xFFFF) est rencontré dans un *argument*, la fonction retourne-1.
 
@@ -131,7 +131,7 @@ Les [spécifications de format](../../c-runtime-library/format-specification-syn
 |**_tprintf**|**printf**|**printf**|**wprintf**|
 |**_tprintf_l**|**_printf_l**|**_printf_l**|**_wprintf_l**|
 
-## <a name="requirements"></a>Conditions requises
+## <a name="requirements"></a>Spécifications
 
 |Routine|En-tête requis|
 |-------------|---------------------|
@@ -139,6 +139,9 @@ Les [spécifications de format](../../c-runtime-library/format-specification-syn
 |**wprintf**, **_wprintf_l**|\<stdio.h> ou \<wchar.h>|
 
 La console n’est pas prise en charge dans les applications de plateforme Windows universelle (UWP). Les handles de flux standard associés à la console, **stdin**, **stdout**et **stderr**, doivent être redirigés pour que les fonctions runtime C puissent les utiliser dans les applications UWP. Pour plus d'informations sur la compatibilité, voir [Compatibilité](../../c-runtime-library/compatibility.md).
+
+> [!IMPORTANT]
+> À compter de Windows 10 version 2004 (Build 19041), la `printf` famille de fonctions imprime exactement des nombres à virgule flottante représentables en fonction des règles IEEE 754 pour l’arrondi. Dans les versions précédentes de Windows, les nombres à virgule flottante représentables exactement se terminant par « 5 » s’arrondissent toujours. IEEE 754 déclare qu’il doit arrondir au chiffre pair le plus proche (également appelé « arrondissement de Banker »). Par exemple, 1,5 et 2,5 doivent arrondir à 2. Auparavant, 1,5 passerait à 2 et 2,5 à 3. Cette modification affecte uniquement les nombres exactement représentables. Par exemple, 2,35 (qui, lorsqu’il est représenté en mémoire, est plus proche de 2.35000000000000008) continue à s’arrondir à 2,4. L’arrondi effectué par ces fonctions respecte désormais également le mode d’arrondi de virgule flottante défini par [fesetenv](fesetenv1.md). Auparavant, l’arrondi a toujours choisi FE_TONEAREST comportement. Cette modification affecte uniquement les programmes créés à l’aide de Visual Studio 2019 version 16,2 et versions ultérieures. Pour utiliser le comportement d’arrondi de virgule flottante hérité, liez avec [legacy_stdio_float_rounding. obj](../link-options.md).
 
 ## <a name="example"></a>Exemple
 
