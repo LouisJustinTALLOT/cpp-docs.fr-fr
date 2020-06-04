@@ -2,118 +2,118 @@
   tocHref: /
   topicHref: /
   items:
-    - name: Microsoft C++
+    - name: 'Microsoft C++, C, et Assembleur'
       tocHref: /cpp/
       topicHref: /cpp
       items:
-        - name: Documentation
-          tocHref: /cpp/
+        - name: Microsoft C/C++
+          tocHref: /cpp/overview/
           topicHref: /cpp/overview/visual-cpp-in-visual-studio
+          items: null
+        - name: "Langage\_C++"
+          tocHref: /cpp/cpp/
+          topicHref: /cpp/cpp/cpp-language-reference
+        - name: Langage C
+          tocHref: /cpp/c-language/
+          topicHref: /cpp/c-language/c-language-reference
+        - name: Préprocesseur C/C++
+          tocHref: /cpp/preprocessor/
+          topicHref: /cpp/preprocessor/c-cpp-preprocessor-reference
+        - name: Fonctions intrinsèques du compilateur et langage assembleur
+          tocHref: /cpp/intrinsics/
+          topicHref: /cpp/intrinsics/compiler-intrinsics-and-assembly-language
           items:
-            - name: "Langage\_C++"
-              tocHref: /cpp/cpp/
-              topicHref: /cpp/cpp/cpp-language-reference
-            - name: Langage C
-              tocHref: /cpp/c-language/
-              topicHref: /cpp/c-language/c-language-reference
-            - name: Préprocesseur C/C++
-              tocHref: /cpp/preprocessor/
-              topicHref: /cpp/preprocessor/c-cpp-preprocessor-reference
-            - name: Fonctions intrinsèques du compilateur et langage assembleur
-              tocHref: /cpp/intrinsics/
-              topicHref: /cpp/intrinsics/compiler-intrinsics-and-assembly-language
-              items:
-                - name: ARM
-                  tocHref: /cpp/assembler/arm/
-                  topicHref: /cpp/assembler/arm/arm-assembler-reference
-                - name: Assembleur inline
-                  tocHref: /cpp/assembler/inline/
-                  topicHref: /cpp/assembler/inline/inline-assembler
-                - name: MASM
-                  tocHref: /cpp/assembler/masm/
-                  topicHref: /cpp/assembler/masm/microsoft-macro-assembler-reference
-            - name: "Bibliothèque Runtime\_C"
-              tocHref: /cpp/c-runtime-library/
-              topicHref: /cpp/c-runtime-library/c-run-time-library-reference
-              items:
-                - name: Référence
-                  tocHref: /cpp/c-runtime-library/reference/
-                  topicHref: /cpp/c-runtime-library/reference/crt-alphabetical-function-reference
-            - name: "Bibliothèque\_C++ Standard"
-              tocHref: /cpp/standard-library/
-              topicHref: /cpp/standard-library/cpp-standard-library-reference
-            - name: Windows
-              tocHref: /cpp/windows/
-              topicHref: /cpp/windows/overview-of-windows-programming-in-cpp
-              items: null
-            - name: ATL
-              tocHref: /cpp/atl/
-              topicHref: /cpp/atl/atl-com-desktop-components
-            - name: MFC
-              tocHref: /cpp/mfc/
-              topicHref: /cpp/mfc/mfc-desktop-applications
-              items:
-                - name: Référence
-                  tocHref: /cpp/mfc/reference/
-                  topicHref: /cpp/mfc/reference/mfc-classes
-            - name: Classes partagées ATL/MFC
-              tocHref: /cpp/atl-mfc-shared/
-              topicHref: /cpp/atl-mfc-shared/atl-mfc-shared-classes
-              items:
-                - name: Référence
-                  tocHref: /cpp/atl-mfc-shared/reference/
-                  topicHref: /cpp/atl-mfc-shared/reference/classes-shared-by-mfc-and-atl
-            - name: C++/CX
-              tocHref: /cpp/cppcx/
-              topicHref: /cpp/cppcx/visual-c-language-reference-c-cx
-            - name: Linux
-              tocHref: /cpp/linux/
-              topicHref: /cpp/linux/download-install-and-setup-the-linux-development-workload
-            - name: .NET
-              tocHref: /cpp/dotnet/
-              topicHref: /cpp/dotnet/dotnet-programming-with-cpp-cli-visual-cpp
-            - name: Programmation parallèle
-              tocHref: /cpp/parallel/
-              topicHref: /cpp/parallel/parallel-programming-in-visual-cpp
-            - name: Accès aux données
-              tocHref: /cpp/data/
-              topicHref: /cpp/data/data-access-in-cpp
-              items:
-                - name: OLEDB
-                  tocHref: /cpp/data/oledb/
-                  topicHref: /cpp/data/oledb/ole-db-programming
-                - name: ODBC
-                  tocHref: /cpp/data/odbc/
-                  topicHref: /cpp/data/odbc/open-database-connectivity-odbc
-            - name: 'Modifier, parcourir et refactoriser du code'
-              tocHref: /cpp/ide
-              topicHref: /cpp/ide/read-and-understand-code-cpp
-              items:
-                - name: IDE
-                  tocHref: /cpp/ide/
-                  topicHref: /cpp/ide/using-the-visual-studio-ide-for-cpp-desktop-development
-            - name: "Génération de projets\_C/C++"
-              tocHref: /cpp/build/
-              topicHref: /cpp/build/building-c-cpp-programs
-              items:
-                - name: Référence de build
-                  tocHref: /cpp/build/reference/
-                  topicHref: /cpp/build/reference/c-cpp-building-reference
-            - name: Insights de build
-              tocHref: /cpp/build-insights/
-              topicHref: /cpp/build-insights/get-started-with-cpp-build-insights
-            - name: Erreurs et avertissements
-              tocHref: /cpp/error-messages/
-              topicHref: /cpp/error-messages/compiler-errors-1/c-cpp-build-errors
-            - name: Portage et mise à niveau
-              tocHref: /cpp/porting/
-              topicHref: /cpp/porting/visual-cpp-porting-and-upgrading-guide
-            - name: Texte et chaînes
-              tocHref: /cpp/text/
-              topicHref: /cpp/text/text-and-strings-in-visual-cpp
-            - name: Sécurité
-              tocHref: /cpp/security
-              topicHref: /cpp/security/security-best-practices-for-cpp
-            - name: Cloud et web
-              tocHref: /cpp/cloud
-              topicHref: /cpp/cloud/cloud-and-web-programming-in-visual-cpp
+            - name: Assembleur ARM et ARM64
+              tocHref: /cpp/assembler/arm/
+              topicHref: /cpp/assembler/arm/arm-assembler-reference
+            - name: Assembleur x86 inline
+              tocHref: /cpp/assembler/inline/
+              topicHref: /cpp/assembler/inline/inline-assembler
+            - name: Assembleur x86 et x64 MASM
+              tocHref: /cpp/assembler/masm/
+              topicHref: /cpp/assembler/masm/microsoft-macro-assembler-reference
+        - name: "Bibliothèque Runtime\_C"
+          tocHref: /cpp/c-runtime-library/
+          topicHref: /cpp/c-runtime-library/c-run-time-library-reference
+          items:
+            - name: Informations de référence sur UCRT
+              tocHref: /cpp/c-runtime-library/reference/
+              topicHref: /cpp/c-runtime-library/reference/crt-alphabetical-function-reference
+        - name: "Bibliothèque\_C++ Standard"
+          tocHref: /cpp/standard-library/
+          topicHref: /cpp/standard-library/cpp-standard-library-reference
+        - name: Windows
+          tocHref: /cpp/windows/
+          topicHref: /cpp/windows/overview-of-windows-programming-in-cpp
+          items: null
+        - name: ATL
+          tocHref: /cpp/atl/
+          topicHref: /cpp/atl/atl-com-desktop-components
+        - name: MFC
+          tocHref: /cpp/mfc/
+          topicHref: /cpp/mfc/mfc-desktop-applications
+          items:
+            - name: Informations de référence sur MFC
+              tocHref: /cpp/mfc/reference/
+              topicHref: /cpp/mfc/reference/mfc-classes
+        - name: Classes partagées ATL/MFC
+          tocHref: /cpp/atl-mfc-shared/
+          topicHref: /cpp/atl-mfc-shared/atl-mfc-shared-classes
+          items:
+            - name: Informations de référence sur ATL/MFC
+              tocHref: /cpp/atl-mfc-shared/reference/
+              topicHref: /cpp/atl-mfc-shared/reference/classes-shared-by-mfc-and-atl
+        - name: C++/CX
+          tocHref: /cpp/cppcx/
+          topicHref: /cpp/cppcx/visual-c-language-reference-c-cx
+        - name: Linux
+          tocHref: /cpp/linux/
+          topicHref: /cpp/linux/download-install-and-setup-the-linux-development-workload
+        - name: C++/CLI pour .NET
+          tocHref: /cpp/dotnet/
+          topicHref: /cpp/dotnet/dotnet-programming-with-cpp-cli-visual-cpp
+        - name: Programmation parallèle
+          tocHref: /cpp/parallel/
+          topicHref: /cpp/parallel/parallel-programming-in-visual-cpp
+        - name: Accès aux données
+          tocHref: /cpp/data/
+          topicHref: /cpp/data/data-access-in-cpp
+          items:
+            - name: OLEDB
+              tocHref: /cpp/data/oledb/
+              topicHref: /cpp/data/oledb/ole-db-programming
+            - name: ODBC
+              tocHref: /cpp/data/odbc/
+              topicHref: /cpp/data/odbc/open-database-connectivity-odbc
+        - name: 'Modifier, parcourir et refactoriser du code'
+          tocHref: /cpp/ide
+          topicHref: /cpp/ide/read-and-understand-code-cpp
+          items:
+            - name: C++ dans l’IDE
+              tocHref: /cpp/ide/
+              topicHref: /cpp/ide/using-the-visual-studio-ide-for-cpp-desktop-development
+        - name: Générer des projets C/C++
+          tocHref: /cpp/build/
+          topicHref: /cpp/build/building-c-cpp-programs
+          items:
+            - name: Référence de build
+              tocHref: /cpp/build/reference/
+              topicHref: /cpp/build/reference/c-cpp-building-reference
+        - name: Insights de build
+          tocHref: /cpp/build-insights/
+          topicHref: /cpp/build-insights/get-started-with-cpp-build-insights
+        - name: Erreurs et avertissements
+          tocHref: /cpp/error-messages/
+          topicHref: /cpp/error-messages/compiler-errors-1/c-cpp-build-errors
+        - name: Portage et mise à niveau
+          tocHref: /cpp/porting/
+          topicHref: /cpp/porting/visual-cpp-porting-and-upgrading-guide
+        - name: Texte et chaînes
+          tocHref: /cpp/text/
+          topicHref: /cpp/text/text-and-strings-in-visual-cpp
+        - name: Sécurité
+          tocHref: /cpp/security
+          topicHref: /cpp/security/security-best-practices-for-cpp
+        - name: Cloud et web
+          tocHref: /cpp/cloud
+          topicHref: /cpp/cloud/cloud-and-web-programming-in-visual-cpp
