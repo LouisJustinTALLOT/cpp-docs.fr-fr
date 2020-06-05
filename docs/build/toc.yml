@@ -567,8 +567,10 @@
                   href: ../build/reference/gs-buffer-security-check.md
                 - name: /Gs (Contrôler les appels de contrôle de pile)
                   href: ../build/reference/gs-control-stack-checking-calls.md
-                - name: /guard (Activer la protection du flux de contrôle)
+                - name: '/guard:cf (Activer la protection du flux de contrôle)'
                   href: ../build/reference/guard-enable-control-flow-guard.md
+                - name: '/guard:ehcont (Activer les métadonnées de continuation EH)'
+                  href: ../build/reference/guard-enable-eh-continuation-metadata.md
                 - name: /GT (Prendre en charge le stockage local des threads avec fibres sécurisées)
                   href: ../build/reference/gt-support-fiber-safe-thread-local-storage.md
                 - name: /Gw (Optimiser les données globales)
