@@ -1,6 +1,6 @@
 ---
 title: log, logf, logl, log10, log10f, log10l
-ms.date: 4/2/2020
+ms.date: 6/5/2020
 api_name:
 - log10f
 - logf
@@ -10,6 +10,8 @@ api_name:
 - logl
 - _o_log
 - _o_log10
+- _o_log10f
+- _o_logf
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -46,12 +48,12 @@ helpviewer_keywords:
 - logf function
 - logarithms
 ms.assetid: 7adc77c2-04f7-4245-a980-21215563cfae
-ms.openlocfilehash: 0acfbefb1fb01215e543538b9fdb8d554b10f8c1
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: ce01a16e173ba3afb7ad8a0d55303559519fe19e
+ms.sourcegitcommit: fe146adb3a02872538637196bb3c45aeeeaaf5c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82911479"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84507038"
 ---
 # <a name="log-logf-logl-log10-log10f-log10l"></a>log, logf, logl, log10, log10f, log10l
 
@@ -80,25 +82,25 @@ long double log10( long double x );  // C++ only
 *x*<br/>
 Valeur dont le logarithme doit être recherché.
 
-## <a name="return-value"></a>Valeur de retour
+## <a name="return-value"></a>Valeur renvoyée
 
 Les fonctions de **journalisation** retournent le logarithme népérien (base *e*) de *x* en cas de réussite. Les fonctions **log10** retournent le logarithme en base 10. Si *x* est négatif, ces fonctions retournent une valeur indéfinie (IND) par défaut. Si *x* est égal à 0, elles retournent l’infini (INF).
 
 |Entrée|Exception SEH|Exception\{b\> \<b\}Matherr|
 |-----------|-------------------|-----------------------|
-|± QNAN, IND|Aucun|_DOMAIN|
+|± QNAN, IND|aucun|_DOMAIN|
 |± 0|ZERODIVIDE|_SING|
 |*x* < 0|NON VALIDE|_DOMAIN|
 
 **log** et **log10** ont une implémentation qui utilise SSE2 (streaming SIMD Extensions 2). Consultez [_set_SSE2_enable](set-sse2-enable.md) pour plus d’informations sur l’utilisation de l’implémentation SSE2 et sur les restrictions qui s’y rattachent.
 
-## <a name="remarks"></a>Notes 
+## <a name="remarks"></a>Remarques
 
 C++ autorisant la surcharge, vous pouvez appeler des surcharges de **log** et **log10** qui acceptent et retournent des valeurs **float** ou **long double** . Dans un programme C, **log** et **log10** prennent et retournent toujours un **double**.
 
 Par défaut, l’état global de cette fonction est limité à l’application. Pour modifier cette valeur, consultez [état global dans le CRT](../global-state.md).
 
-## <a name="requirements"></a>Spécifications
+## <a name="requirements"></a>Configuration requise
 
 |Routine|En-tête requis|
 |-------------|---------------------|
@@ -106,7 +108,7 @@ Par défaut, l’état global de cette fonction est limité à l’application. 
 
 Pour plus d'informations sur la compatibilité, voir [Compatibilité](../../c-runtime-library/compatibility.md).
 
-## <a name="example"></a> Exemple
+## <a name="example"></a>Exemple
 
 ```C
 // crt_log.c

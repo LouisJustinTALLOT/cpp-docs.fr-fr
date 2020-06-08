@@ -1,11 +1,12 @@
 ---
 title: sqrt, sqrtf, sqrtl
-ms.date: 4/2/2020
+ms.date: 6/5/2020
 api_name:
 - sqrtl
 - sqrtf
 - sqrt
 - _o_sqrt
+- _o_sqrtf
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -36,12 +37,12 @@ helpviewer_keywords:
 - calculating square roots
 - square roots, calculating
 ms.assetid: 2ba9467b-f172-41dc-8f10-b86f68fa813c
-ms.openlocfilehash: ee41d0747c31e5e8b89712a78eceda6a81d909a8
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: 8983d0854b82d532aad57fa80b03bbe3313970f0
+ms.sourcegitcommit: fe146adb3a02872538637196bb3c45aeeeaaf5c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82913915"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84506882"
 ---
 # <a name="sqrt-sqrtf-sqrtl"></a>sqrt, sqrtf, sqrtl
 
@@ -72,25 +73,25 @@ long double sqrtl(
 *x*<br/>
 Valeur à virgule flottante non négative
 
-## <a name="remarks"></a>Notes 
+## <a name="remarks"></a>Remarques
 
 C++ autorisant la surcharge, vous pouvez appeler des surcharges de **sqrt** qui acceptent des types **float** ou **long** **double** . Dans un programme C, **sqrt** prend toujours et retourne **double**.
 
 Par défaut, l’état global de cette fonction est limité à l’application. Pour modifier cette valeur, consultez [état global dans le CRT](../global-state.md).
 
-## <a name="return-value"></a>Valeur de retour
+## <a name="return-value"></a>Valeur renvoyée
 
 Les fonctions **sqrt** retournent la racine carrée de *x*. Par défaut, si *x* est négatif, **sqrt** retourne une valeur NaN indéfinie.
 
 |Entrée|Exception SEH|**_matherr** Titre|
 |-----------|-------------------|--------------------------|
-|± QNAN,IND|Aucun|_DOMAIN|
-|- ∞|Aucun|_DOMAIN|
-|x<0|Aucun|_DOMAIN|
+|± QNAN,IND|aucun|_DOMAIN|
+|- ∞|aucun|_DOMAIN|
+|x<0|aucun|_DOMAIN|
 
-## <a name="requirements"></a>Spécifications
+## <a name="requirements"></a>Configuration requise
 
-|Function|En-tête C|En-tête C++|
+|Fonction|En-tête C|En-tête C++|
 |--------------|--------------|------------------|
 |**sqrt**, **sqrtf,**, **sqrt**|\<math.h>|\<cmath>|
 

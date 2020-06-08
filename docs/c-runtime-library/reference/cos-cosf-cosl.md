@@ -1,11 +1,12 @@
 ---
 title: cos, cosf, cosl
-ms.date: 4/2/2020
+ms.date: 6/5/2020
 api_name:
 - cos
 - cosf
 - cosl
 - _o_cos
+- _o_cosf
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -36,12 +37,12 @@ helpviewer_keywords:
 - trigonometric functions
 - cosines, calculating
 ms.assetid: ae90435e-6b68-4a47-a81f-be87d5c08f16
-ms.openlocfilehash: 1aae123de5ef03af8bcaf8480a84327f88c457c5
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: 9007f043b64c666d463f46661cfa5f43646e26b7
+ms.sourcegitcommit: fe146adb3a02872538637196bb3c45aeeeaaf5c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82917243"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84506895"
 ---
 # <a name="cos-cosf-cosl"></a>cos, cosf, cosl
 
@@ -65,22 +66,22 @@ long double cos( long double x );  // C++ only
 *x*<br/>
 Angle en radians.
 
-## <a name="return-value"></a>Valeur de retour
+## <a name="return-value"></a>Valeur renvoyée
 
 Cosinus de *x*. Si *x* est supérieur ou égal à 263, ou inférieur ou égal à-263, une perte de précision dans le résultat se produit.
 
 |Entrée|Exception SEH|Exception\{b\> \<b\}Matherr|
 |-----------|-------------------|-----------------------|
-|± QNAN, IND|Aucun|**_DOMAIN**|
+|± QNAN, IND|aucun|**_DOMAIN**|
 |FICHIER INF ±|**Non valide**|**_DOMAIN**|
 
-## <a name="remarks"></a>Notes 
+## <a name="remarks"></a>Remarques
 
 C++ autorisant la surcharge, vous pouvez appeler des surcharges de **co** qui acceptent et retournent des valeurs **float** ou **long** **double** . Dans un programme C, **COS** prend toujours et retourne une valeur **double**.
 
 Par défaut, l’état global de cette fonction est limité à l’application. Pour modifier cette valeur, consultez [état global dans le CRT](../global-state.md).
 
-## <a name="requirements"></a>Spécifications
+## <a name="requirements"></a>Configuration requise
 
 |Routine|En-tête C requis|En-tête C++ requis|
 |-------------|---------------------|-|
@@ -88,7 +89,7 @@ Par défaut, l’état global de cette fonction est limité à l’application. 
 
 Pour plus d'informations sur la compatibilité, voir [Compatibilité](../../c-runtime-library/compatibility.md).
 
-## <a name="example"></a> Exemple
+## <a name="example"></a>Exemple
 
 Consultez l’exemple dans [Sin, sinf, sinl](sin-sinf-sinl.md).
 

@@ -1,11 +1,12 @@
 ---
 title: sin, sinf, sinl
-ms.date: 4/2/2020
+ms.date: 6/5/2020
 api_name:
 - sinl
 - sinf
 - sin
 - _o_sin
+- _o_sinf
 api_location:
 - msvcrt.dll
 - msvcr80.dll
@@ -36,12 +37,12 @@ helpviewer_keywords:
 - trigonometric functions
 - sinf function
 ms.assetid: 737de73e-3590-45f9-8257-dc1c0c489dfc
-ms.openlocfilehash: ecd6a03fb7a933391f50de9eb075d8247d60924f
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: 8e50a40df126b400163c2dde8c950da03d286aef
+ms.sourcegitcommit: fe146adb3a02872538637196bb3c45aeeeaaf5c2
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82915767"
+ms.lasthandoff: 06/08/2020
+ms.locfileid: "84507012"
 ---
 # <a name="sin-sinf-sinl"></a>sin, sinf, sinl
 
@@ -65,24 +66,24 @@ long double sin(long double x);  // C++ only
 *x*<br/>
 Angle en radians.
 
-## <a name="return-value"></a>Valeur retournée
+## <a name="return-value"></a>Valeur de retour
 
 Les fonctions **Sin** retournent le sinus de *x*. Si *x* est supérieur ou égal à 263, ou inférieur ou égal à-263, une perte de précision dans le résultat se produit.
 
 |Entrée|Exception SEH|Exception\{b\> \<b\}Matherr|
 |-----------|-------------------|-----------------------|
-|± QNAN,IND|None|_DOMAIN|
+|± QNAN,IND|Aucune|_DOMAIN|
 |± ∞ (Sin, sinf, sinl)|NON VALIDE|_DOMAIN|
 
 Pour plus d’informations sur les codes de retour, consultez [errno, _doserrno, _sys_errlist et _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
 
-## <a name="remarks"></a>Notes 
+## <a name="remarks"></a>Remarques
 
 C++ autorisant la surcharge, vous pouvez appeler des surcharges de **Sin** qui acceptent et retournent des valeurs **float** ou **long** **double** . Dans un programme C, **Sin** prend toujours et retourne **double**.
 
 Par défaut, l’état global de cette fonction est limité à l’application. Pour modifier cette valeur, consultez [état global dans le CRT](../global-state.md).
 
-## <a name="requirements"></a>Spécifications
+## <a name="requirements"></a>Configuration requise
 
 |Routine|En-tête requis (C)|En-tête requis (C++)|
 |-|-|-|
