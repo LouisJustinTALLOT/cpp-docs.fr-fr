@@ -1,4 +1,4 @@
-- name: C++ dans Visual Studio
+- name: Microsoft C/C++ dans Visual Studio
   expanded: false
   items:
     - name: C++ dans Visual Studio
@@ -40,7 +40,7 @@
       href: /windows/uwp/gaming/tutorial--create-your-first-uwp-directx-game
 - name: Projets et systèmes de build
   href: ../build/projects-and-build-systems-cpp.md
-- name: Lire et écrire du code C++ dans Visual Studio
+- name: Lire et écrire du code dans Visual Studio
   href: ../ide/read-and-understand-code-cpp.md
 - name: Développement du Bureau Windows
   href: ../windows/overview-of-windows-programming-in-cpp.md
@@ -123,6 +123,5 @@
           href: ../mfc/mfc-and-atl.md
         - name: Bibliothèques parallèles
           href: ../parallel/
-          items: null
         - name: Bibliothèques d’accès aux données
           href: ../data/
