@@ -7,33 +7,33 @@ helpviewer_keywords:
 - user interfaces, OLE
 - applications [OLE], user interface
 ms.assetid: 61cb5d3e-1108-4e9b-b301-a8d8fcc586cb
-ms.openlocfilehash: b37b1439462e36787baee6a77413de3d56f2cca5
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: ce35bad80a348bc89ce67065d26f9a82f2feba52
+ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62403972"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84624205"
 ---
 # <a name="ole-mfc"></a>OLE (MFC)
 
-Implémentation de la fonctionnalité OLE dans votre programme affecte votre interface utilisateur de plusieurs façons :
+L’implémentation de la fonctionnalité OLE dans votre programme affecte votre interface utilisateur de plusieurs façons :
 
-- Édition visuelle (in situ activation) affiche l’interface utilisateur d’un autre programme dans les fenêtres de votre programme et modifie les menus de votre programme avec des éléments à partir de l’autre programme.
+- La modification visuelle (activation sur place) affiche l’interface utilisateur d’un autre programme dans les fenêtres de votre programme et modifie les menus de votre programme avec les éléments de l’autre programme.
 
-- Glisser -déplacer permet aux utilisateurs de faire glisser des objets au sein et entre les fenêtres et entre des programmes.
+- La fonction glisser-déplacer permet aux utilisateurs de faire glisser des objets dans et entre des fenêtres, voire entre des programmes.
 
-- Dispositifs de suivi des repères visuels pour l’état des objets lors de l’édition visual et glisser -déplacer.
+- Les dispositifs de suivi fournissent des signaux visuels sur l’état des objets lors de l’édition visuelle et du glisser-déplacer.
 
-Pour plus d'informations, voir :
+Pour plus d'informations, voir :
 
-- [OLE et MFC](../mfc/ole-in-mfc.md)
+- [OLE et MFC](ole-in-mfc.md)
 
-- [Édition visuelle (Activation)](../mfc/activation-cpp.md)
+- [Modification visuelle (activation)](activation-cpp.md)
 
-- [Glisser-déposer](../mfc/drag-and-drop-ole.md)
+- [Glisser-déplacer](drag-and-drop-ole.md)
 
-- [Dispositifs de suivi](../mfc/trackers.md)
+- [Dispositifs de suivi](trackers.md)
 
 ## <a name="see-also"></a>Voir aussi
 
-[Éléments d’Interface utilisateur](../mfc/user-interface-elements-mfc.md)
+[Éléments de l’interface utilisateur](user-interface-elements-mfc.md)

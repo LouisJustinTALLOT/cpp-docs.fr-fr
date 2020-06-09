@@ -9,12 +9,12 @@ helpviewer_keywords:
 - MFC libraries
 - MFC, library versions
 - libraries [MFC], versions
-ms.openlocfilehash: b8e32366d9ff43bd6e5770f64f0ba9d8bf6e56ab
-ms.sourcegitcommit: 7ecd91d8ce18088a956917cdaf3a3565bd128510
+ms.openlocfilehash: bf10d8b56f82714fa708b5409923e765206eb16d
+ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/16/2020
-ms.locfileid: "79420175"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84626129"
 ---
 # <a name="mfc-library-versions"></a>Versions de bibliothèque MFC
 
@@ -77,9 +77,9 @@ Les fichiers d’en-tête MFC incluent également des directives à lier dans to
 
 Les versions de bibliothèque MFC ANSI/MBCS prennent en charge les jeux de caractères codés sur un octet tels que ASCII et les jeux de caractères multioctets tels que Shift-JIS. Les versions de bibliothèque Unicode MFC prennent en charge Unicode dans sa forme encodée en caractères larges UTF-16LE. Utilisez les versions de bibliothèque ANSI/MBCS de MFC pour la prise en charge Unicode encodée en UTF-8.
 
-Pour définir la configuration de votre projet de façon à utiliser la prise en charge des caractères et des chaînes Unicode sur un octet, multioctets ou à caractères larges dans l’IDE, utilisez la boîte de dialogue **Propriétés du projet** . Dans la **page Propriétés de Configuration** > **général** , définissez la propriété **jeu de caractères** sur **non défini** sur utiliser un jeu de caractères codés sur un octet. Affectez à la propriété la **valeur utiliser le jeu de caractères** multioctets pour utiliser un jeu de caractères multioctets, ou pour utiliser le **jeu de caractères Unicode** pour utiliser le codage Unicode UTF-16.
+Pour définir la configuration de votre projet de façon à utiliser la prise en charge des caractères et des chaînes Unicode sur un octet, multioctets ou à caractères larges dans l’IDE, utilisez la boîte de dialogue **Propriétés du projet** . Dans la page **Propriétés de configuration**  >  **général** , définissez la propriété **jeu de caractères** sur **non défini** sur utiliser un jeu de caractères codés sur un octet. Affectez à la propriété la **valeur utiliser le jeu de caractères** multioctets pour utiliser un jeu de caractères multioctets, ou pour utiliser le **jeu de caractères Unicode** pour utiliser le codage Unicode UTF-16.
 
-Les projets MFC utilisent le symbole de préprocesseur \_UNICODE pour indiquer la prise en charge Unicode à caractères larges UTF-16, et \_MBCS pour indiquer la prise en charge MBCS. Ces options s’excluent mutuellement dans un projet.
+Les projets MFC utilisent le symbole de préprocesseur \_ Unicode pour indiquer la prise en charge Unicode UTF-16 à caractères larges, et \_ MBCS pour indiquer la prise en charge MBCS. Ces options s’excluent mutuellement dans un projet.
 
 ## <a name="mfc-static-library-naming-conventions"></a>Conventions de nommage des bibliothèques statiques MFC
 
@@ -92,7 +92,7 @@ où les lettres en minuscules en italique sont des espaces réservés pour les s
 |Spécificateur|Valeurs et significations|
 |---------------|-------------------------|
 |*u*|ANSI/MBCS (N) ou Unicode (U); omettre pour la version sans contrôles MFC dans les boîtes de dialogue|
-|*c*|Version avec des contrôles MFC dans les boîtes de dialogue (CW) ou sans (NMCD)|
+|*secteur*|Version avec des contrôles MFC dans les boîtes de dialogue (CW) ou sans (NMCD)|
 |*d*|Debug ou Release : D = debug ; spécificateur d’omission pour la mise en sortie|
 
 Toutes les bibliothèques répertoriées dans le tableau suivant sont incluses prégénérées dans le répertoire \atlmfc\lib pour les architectures de build prises en charge.
@@ -101,10 +101,10 @@ Toutes les bibliothèques répertoriées dans le tableau suivant sont incluses p
 |-------------|-----------------|
 |NAFXCW.LIB|Bibliothèque de liens statiques MFC, version Release|
 |NAFXCWD.LIB|Bibliothèque de liens statiques MFC, version de débogage|
-|UAFXCW.LIB|Bibliothèque de liens statiques MFC avec prise en charge Unicode, version Release|
+|UAFXCW. LIB|Bibliothèque de liens statiques MFC avec prise en charge Unicode, version Release|
 |UAFXCWD. LIB|Bibliothèque de liens statiques MFC avec prise en charge Unicode, version de débogage|
-|AFXNMCD.LIB|Bibliothèque de liens statiques MFC sans contrôles de boîte de dialogue MFC, version Release|
-|AFXNMCDD.LIB|Bibliothèque de liens statiques MFC sans contrôles de boîte de dialogue MFC, version de débogage|
+|AFXNMCD. LIB|Bibliothèque de liens statiques MFC sans contrôles de boîte de dialogue MFC, version Release|
+|AFXNMCDD. LIB|Bibliothèque de liens statiques MFC sans contrôles de boîte de dialogue MFC, version de débogage|
 
 Les fichiers du débogueur qui ont le même nom de base et une extension. pdb sont également disponibles pour chacune des bibliothèques statiques.
 
@@ -129,16 +129,16 @@ Les bibliothèques d’importation nécessaires pour générer des applications 
 
 Si vous effectuez une liaison dynamique à la version DLL partagée de MFC, qu’il s’agisse d’une application ou d’une DLL d’extension MFC, vous devez inclure la*version*MFC correspondante. DLL ou MFC*version*U. dll lors du déploiement de votre produit.
 
-Pour obtenir la liste des C++ DLL Visual Studio qui peuvent être distribuées avec vos applications, consultez le [code distribuable pour Microsoft Visual Studio 2017 et Microsoft Visual Studio 2017 SDK (y compris les utilitaires et les fichiers BuildServer)](/visualstudio/productinfo/2017-redistribution-vs) ou le [code distribuable pour Visual Studio 2019](/visualstudio/releases/2019/redistribution).
+Pour obtenir la liste des DLL Visual C++ qui peuvent être distribuées avec vos applications, consultez le [code distribuable pour Microsoft Visual Studio 2017 et Microsoft Visual Studio 2017 SDK (y compris les utilitaires et les fichiers BuildServer)](/visualstudio/productinfo/2017-redistribution-vs) ou le [code distribuable pour Visual Studio 2019](/visualstudio/releases/2019/redistribution).
 
 Pour plus d’informations sur la prise en charge MBCS et Unicode dans MFC, consultez [prise en charge des jeux de caractères Unicode et MBCS](../atl-mfc-shared/unicode-and-multibyte-character-set-mbcs-support.md).
 
 ## <a name="dynamic-link-library-support"></a>Prise en charge des bibliothèques de liens dynamiques
 
-Vous pouvez utiliser les bibliothèques MFC dynamiques statiques ou partagées pour créer des dll qui peuvent être utilisées par les exécutables MFC et non-MFC. Celles-ci sont appelées « DLL normales » ou « DLL MFC standard » pour les distinguer des dll d’extension MFC qui peuvent uniquement être utilisées par les applications MFC et les DLL MFC. Une DLL générée à l’aide des bibliothèques statiques MFC est parfois appelée USRDLL dans des références plus anciennes, car les projets DLL MFC définissent le symbole de préprocesseur **\_USRDLL**. Une DLL qui utilise les DLL partagées MFC est parfois appelée AFXDLL dans des références plus anciennes, car elle définit le symbole de préprocesseur **\_AFXDLL**.
+Vous pouvez utiliser les bibliothèques MFC dynamiques statiques ou partagées pour créer des dll qui peuvent être utilisées par les exécutables MFC et non-MFC. Celles-ci sont appelées « DLL normales » ou « DLL MFC standard » pour les distinguer des dll d’extension MFC qui peuvent uniquement être utilisées par les applications MFC et les DLL MFC. Une DLL générée à l’aide des bibliothèques statiques MFC est parfois appelée USRDLL dans des références plus anciennes, car les projets DLL MFC définissent le symbole de préprocesseur ** \_ USRDLL**. Une DLL qui utilise les DLL partagées MFC est parfois appelée AFXDLL dans des références plus anciennes, car elle définit le symbole de préprocesseur ** \_ AFXDLL**.
 
 Lorsque vous créez votre projet DLL en établissant une liaison avec les bibliothèques statiques MFC, votre DLL peut être déployée sans les DLL partagées MFC. Lorsque votre projet DLL est lié à la*version*MFC des bibliothèques d’importation. LIB ou MFC*version*U. lib, vous devez déployer la*version*MFC partagée DLL MFC correspondante. DLL ou MFC*version*U. dll avec votre dll. Pour plus d’informations, consultez [dll](../build/dlls-in-visual-cpp.md).
 
 ## <a name="see-also"></a>Voir aussi
 
-[Rubriques MFC générales](../mfc/general-mfc-topics.md)
+[Rubriques MFC générales](general-mfc-topics.md)

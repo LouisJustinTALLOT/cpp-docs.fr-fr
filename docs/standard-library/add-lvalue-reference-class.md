@@ -6,14 +6,14 @@ f1_keywords:
 helpviewer_keywords:
 - add_lvalue_reference
 ms.assetid: 9933afc2-ad0d-465d-98fe-7d547fa3efe2
-ms.openlocfilehash: 6317b6665adb7f3a06da564fcf049d0b64eb42e8
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: 5f822e3393853c780bfe4ee86d5a5c799ec7646d
+ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68456565"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84617675"
 ---
-# <a name="addlvaluereference-class"></a>add_lvalue_reference, classe
+# <a name="add_lvalue_reference-class"></a>add_lvalue_reference, classe
 
 Crée une référence vers un type à partir d'un type.
 
@@ -34,7 +34,7 @@ Type à modifier.
 
 ## <a name="remarks"></a>Notes
 
-Une instance du modificateur de type contient un type modifié qui est *t* si *t* est une référence lvalue, sinon `T&`.
+Une instance du modificateur de type contient un type modifié qui est *t* si *t* est une référence lvalue, sinon `T&` .
 
 ## <a name="example"></a>Exemple
 
@@ -61,11 +61,11 @@ add_lvalue_reference_t<int> == int
 
 ## <a name="requirements"></a>Configuration requise
 
-**En-tête :** \<type_traits>
+**En-tête :**\<type_traits>
 
 **Espace de noms :** std
 
 ## <a name="see-also"></a>Voir aussi
 
-[<type_traits>](../standard-library/type-traits.md)\
-[remove_reference, classe](../standard-library/remove-reference-class.md)
+[<type_traits>](type-traits.md)\
+[Classe remove_reference](remove-reference-class.md)

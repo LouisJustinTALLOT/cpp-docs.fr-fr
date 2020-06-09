@@ -15,12 +15,12 @@ helpviewer_keywords:
 - dialog boxes [MFC], retrieving data
 - retrieving dialog box data
 ms.assetid: 7d373554-7330-43ae-abf1-4bb14e437b4a
-ms.openlocfilehash: 651ec5779e3fe1190ff1a3f0f807fb0187e348f8
-ms.sourcegitcommit: 1e6386be9084f70def7b3b8b4bab319a117102b2
+ms.openlocfilehash: 1aaeea11dd7916332ab0c281561550039ee03498
+ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/30/2019
-ms.locfileid: "71685749"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84616773"
 ---
 # <a name="dialog-data-exchange-and-validation"></a>Échange et validation de données de boîtes de dialogue
 
@@ -28,11 +28,11 @@ L’échange de données de boîtes de dialogue (DDX) est un moyen simple d’in
 
 ## <a name="what-do-you-want-to-know-more-about"></a>Que voulez-vous en savoir plus sur
 
-- [Échange de données de boîtes de dialogue](../mfc/dialog-data-exchange.md)
+- [Échange de données de boîtes de dialogue](dialog-data-exchange.md)
 
-- [Validation des données de boîte de dialogue](../mfc/dialog-data-validation.md)
+- [Validation des données de boîte de dialogue](dialog-data-validation.md)
 
 ## <a name="see-also"></a>Voir aussi
 
-[Boîtes de dialogue](../mfc/dialog-boxes.md)<br/>
-[Utilisation des boîtes de dialogue dans MFC](../mfc/life-cycle-of-a-dialog-box.md)
+[Boîtes de dialogue](dialog-boxes.md)<br/>
+[Utilisation des boîtes de dialogue dans MFC](life-cycle-of-a-dialog-box.md)

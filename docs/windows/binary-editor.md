@@ -21,12 +21,12 @@ helpviewer_keywords:
 - data resources [C++]
 - resources [C++], creating
 ms.assetid: 2483c48b-1252-4dbc-826b-82e6c1a0e9cb
-ms.openlocfilehash: 591a6714f1adabb30fda446cad0e79e2c28c30ad
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 955cce012ac30c3413d7d458e263643d0aefa711
+ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80215239"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84615349"
 ---
 # <a name="binary-editor-c"></a>Éditeur binaire (C++)
 
@@ -35,11 +35,11 @@ ms.locfileid: "80215239"
 
 L' **Éditeur binaire** vous permet de modifier n’importe quelle ressource au niveau binaire au format hexadécimal ou ASCII. Vous pouvez également utiliser la [commande Rechercher](/visualstudio/ide/reference/find-command) pour rechercher des chaînes ASCII ou des octets hexadécimaux. Utilisez l' **Éditeur binaire** uniquement lorsque vous avez besoin d’afficher ou d’apporter des modifications mineures à des ressources personnalisées ou à des types de ressources non pris en charge par l’environnement Visual Studio. L' **Éditeur binaire** n’est pas disponible dans les éditions Express.
 
-- Pour ouvrir l' **Éditeur binaire** sur un nouveau fichier, accédez à **fichier** de menu **New** > nouveau **fichier**de > , sélectionnez le type de fichier à modifier, puis sélectionnez la flèche déroulante en regard du bouton **ouvrir** et choisissez **Ouvrir avec** > **Éditeur binaire**.
+- Pour ouvrir l' **Éditeur binaire** sur un nouveau fichier, accédez à menu **fichier**  >  **nouveau**  >  **fichier**, sélectionnez le type de fichier que vous souhaitez modifier, puis sélectionnez la flèche déroulante en regard du bouton **ouvrir** et choisissez **Ouvrir avec**l'  >  **Éditeur binaire**.
 
-- Pour ouvrir l' **Éditeur binaire** sur un fichier existant, accédez au menu **fichier** > **ouvrez** > **fichier**, sélectionnez le fichier que vous souhaitez modifier, puis sélectionnez la flèche déroulante en regard du bouton **ouvrir** et choisissez **Ouvrir avec** > **Éditeur binaire**.
+- Pour ouvrir l' **Éditeur binaire** sur un fichier existant, accédez à menu **fichier**  >  **ouvrir**un  >  **fichier**, sélectionnez le fichier que vous souhaitez modifier, puis sélectionnez la flèche déroulante en regard du bouton **ouvrir** et choisissez **Ouvrir avec**l'  >  **Éditeur binaire**.
 
-   ![Binary Editor](../mfc/media/vcbinaryeditor2.gif "vcBinaryEditor2")<br/>
+   ![Éditeur binaire](../mfc/media/vcbinaryeditor2.gif "vcBinaryEditor2")<br/>
    Données binaires pour une boîte de dialogue affichée dans l' **Éditeur binaire**
 
 Seules certaines valeurs ASCII sont représentées dans l' **Éditeur binaire** (0X20 à 0x7E). Les caractères étendus sont affichés sous forme de points dans la section valeur ASCII du volet droit de l' **Éditeur binaire**. Les caractères imprimables sont des valeurs ASCII 32 à 126.
@@ -69,7 +69,7 @@ L' **Éditeur binaire** vous permet d’activer les éléments suivants :
 1. Dans la boîte de dialogue **Ouvrir avec** , sélectionnez **Éditeur binaire**.
 
 > [!NOTE]
-> Vous pouvez utiliser l' [éditeur d’images](../windows/image-editor-for-icons.md) et l' **Éditeur binaire** pour travailler avec des fichiers de ressources dans des projets managés. Toutes les ressources managées que vous souhaitez modifier doivent être liées. Les éditeurs de ressources Visual Studio ne prennent pas en charge la modification des ressources incorporées.
+> Vous pouvez utiliser l' [éditeur d’images](image-editor-for-icons.md) et l' **Éditeur binaire** pour travailler avec des fichiers de ressources dans des projets managés. Toutes les ressources managées que vous souhaitez modifier doivent être liées. Les éditeurs de ressources Visual Studio ne prennent pas en charge la modification des ressources incorporées.
 
 ### <a name="to-edit-a-resource"></a>Pour modifier une ressource
 
@@ -90,7 +90,7 @@ Si vous souhaitez utiliser l' **Éditeur binaire** sur une ressource déjà en c
 
 Vous pouvez rechercher des chaînes ASCII ou des octets hexadécimaux. Par exemple, pour rechercher *Hello*, vous pouvez rechercher la chaîne *Hello* ou sa valeur hexadécimale, *48 65 6C 6C 6F*.
 
-1. Accédez au menu **modifier** > [Rechercher](/visualstudio/ide/reference/find-command).
+1. Accédez au menu **modifier**la  >  [recherche](/visualstudio/ide/reference/find-command).
 
 1. Dans la zone **Rechercher** , sélectionnez une chaîne de recherche précédente dans la liste déroulante ou tapez les données que vous souhaitez rechercher.
 
@@ -100,13 +100,13 @@ Vous pouvez rechercher des chaînes ASCII ou des octets hexadécimaux. Par exemp
 
 Vous pouvez créer une ressource personnalisée ou une ressource de données en plaçant la ressource dans un fichier distinct à l’aide de la syntaxe de fichier de script de ressources normal (. RC), puis en incluant ce fichier en cliquant avec le bouton droit sur votre projet dans **Explorateur de solutions** et en sélectionnant **inclure les ressources**.
 
-1. [Créez un fichier .rc](../windows/how-to-create-a-resource-script-file.md) qui contient la ressource personnalisée ou de données.
+1. [Créez un fichier .rc](how-to-create-a-resource-script-file.md) qui contient la ressource personnalisée ou de données.
 
    Vous pouvez taper des données personnalisées dans un fichier .rc en tant que chaînes entre guillemets terminées par un caractère Null, ou sous forme d’entiers au format octal, hexadécimal ou décimal.
 
 1. Dans **Explorateur de solutions**, cliquez avec le bouton droit sur le fichier. RC de votre projet, puis sélectionnez **include des ressources**.
 
-1. Dans la zone **directives au moment** de la compilation, tapez une instruction `#include` qui donne le nom du fichier contenant votre ressource personnalisée, par exemple :
+1. Dans la zone **directives au moment** de la compilation, tapez une `#include` instruction qui donne le nom du fichier contenant votre ressource personnalisée, par exemple :
 
     ```cpp
     #include mydata.rc
@@ -121,10 +121,10 @@ Une autre façon de créer une ressource personnalisée consiste à importer un 
 > [!NOTE]
 > La création de nouvelles ressources personnalisées ou de données requiert Win32.
 
-## <a name="requirements"></a>Spécifications
+## <a name="requirements"></a>Configuration requise
 
 None
 
 ## <a name="see-also"></a>Voir aussi
 
-[Éditeurs de ressources](../windows/resource-editors.md)
+[Éditeurs de ressources](resource-editors.md)

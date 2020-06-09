@@ -10,35 +10,35 @@ helpviewer_keywords:
 - OLE [MFC], data objects
 - OLE [MFC], data sources
 ms.assetid: 8f68eed8-0ce8-4489-a4cc-f95554f89090
-ms.openlocfilehash: 485fa5c62aafa4c116a76547238325d2979bfdc4
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: dfe400dddfecce3e52337f7f449e975dff2ca83e
+ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62241189"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84616219"
 ---
 # <a name="data-objects-and-data-sources-ole"></a>Objets de données et sources de données (OLE)
 
-Lorsque vous effectuez un transfert de données à l’aide du Presse-papiers ou glisser -déplacer, les données ont une source et une destination. Une application fournit les données pour la copie et une autre application accepte de collage. Chaque côté du transfert a besoin effectuer diverses opérations sur les mêmes données pour le transfert réussisse. La bibliothèque Microsoft Foundation classes (MFC) fournit deux classes qui représentent chaque côté de ce transfert :
+Lorsque vous effectuez un transfert de données, soit à l’aide du presse-papiers, soit en effectuant un glisser-déplacer, les données ont une source et une destination. Une application fournit les données pour la copie, et une autre application l’accepte pour le collage. Chaque côté du transfert doit effectuer des opérations différentes sur les mêmes données pour que le transfert aboutisse. La bibliothèque MFC (Microsoft Foundation Class) fournit deux classes qui représentent chaque côté de ce transfert :
 
-- Sources de données (tel qu’implémenté par `COleDataSource` objets) représentent le côté source du transfert de données. Ils sont créés par l’application source lorsque les données ne doivent être copiés dans le Presse-papiers, ou lorsque les données sont fournies pour une opération de glisser-déplacer.
+- Les sources de données (implémentées par les `COleDataSource` objets) représentent le côté source du transfert de données. Elles sont créées par l’application source lorsque les données doivent être copiées dans le presse-papiers, ou lorsque les données sont fournies pour une opération de glisser-déplacer.
 
-- Objets de données (tel qu’implémenté par `COleDataObject` objets) représentent le côté destination du transfert de données. Ils sont créés lors de l’application de destination a des données déplacées dans celui-ci, ou lorsqu’il est invité à effectuer une opération de collage à partir du Presse-papiers.
+- Les objets de données (implémentés par les `COleDataObject` objets) représentent le côté destination du transfert de données. Ils sont créés lorsque des données sont déposées dans l’application de destination, ou lorsqu’il est demandé d’effectuer une opération de collage à partir du presse-papiers.
 
-Les articles suivants expliquent comment utiliser des objets de données et sources de données dans vos applications. Ces informations s’appliquent aux applications de conteneur et le serveur, car les deux peuvent être appelés à copier et coller des données.
+Les articles suivants expliquent comment utiliser des objets de données et des sources de données dans vos applications. Ces informations s’appliquent aux applications conteneur et serveur, car elles peuvent être appelées sur pour copier et coller des données.
 
-- [Objets de données et sources de données : Création et destruction](../mfc/data-objects-and-data-sources-creation-and-destruction.md)
+- [Objets de données et sources de données : création et destruction](data-objects-and-data-sources-creation-and-destruction.md)
 
-- [Objets de données et sources de données : Manipulation](../mfc/data-objects-and-data-sources-manipulation.md)
+- [Objets de données et sources de données : manipulation](data-objects-and-data-sources-manipulation.md)
 
 ## <a name="in-this-section"></a>Dans cette section
 
-[Glisser-déposer](../mfc/drag-and-drop-ole.md)
+[Glisser-déplacer](drag-and-drop-ole.md)
 
-[Presse-papiers](../mfc/clipboard.md)
+[Presse-papiers](clipboard.md)
 
 ## <a name="see-also"></a>Voir aussi
 
-[OLE](../mfc/ole-in-mfc.md)<br/>
-[COleDataObject, classe](../mfc/reference/coledataobject-class.md)<br/>
-[COleDataSource, classe](../mfc/reference/coledatasource-class.md)
+[OLE](ole-in-mfc.md)<br/>
+[COleDataObject, classe](reference/coledataobject-class.md)<br/>
+[COleDataSource, classe](reference/coledatasource-class.md)

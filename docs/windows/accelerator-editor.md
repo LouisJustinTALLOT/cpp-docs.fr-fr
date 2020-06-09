@@ -33,23 +33,23 @@ helpviewer_keywords:
 - keyboard shortcuts [C++], property changing
 - accelerator tables [C++], changing properties
 ms.assetid: 013c30b6-5d61-4f1c-acef-8bd15bed7060
-ms.openlocfilehash: 80ef6cc9ec956d0041c4aa3fb6a6211868cc9d73
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: fdd8a4be8830dc4b2ac1a559194828a4d2f56ab0
+ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80167561"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84623484"
 ---
 # <a name="accelerator-editor-c"></a>Éditeur d’accélérateurs (C++)
 
-Une table d’accélérateurs C++ est une ressource Windows qui contient une liste de touches accélérateur, appelées touches de raccourci, et les identificateurs de commande qui leur sont associés. Un programme peut avoir plusieurs tables d’accélérateurs.
+Une table d’accélérateurs est une ressource Windows C++ qui contient une liste de touches accélérateur, appelées touches de raccourci, et les identificateurs de commande qui leur sont associés. Un programme peut avoir plusieurs tables d’accélérateurs.
 
 Normalement, les accélérateurs sont utilisés comme raccourcis clavier pour des commandes de programme qui sont également disponibles dans un menu ou une barre d’outils. Toutefois, vous pouvez utiliser la table d’accélérateurs pour définir des combinaisons de touches pour des commandes qui ne sont associées à aucun objet d’interface utilisateur.
 
 > [!TIP]
 > Lorsque vous utilisez l' **éditeur d’accélérateurs**, cliquez avec le bouton droit pour afficher un menu contextuel de commandes fréquentes. Les commandes disponibles varient selon la cible du pointeur.
 
-Vous pouvez utiliser [Affichage de classes](/visualstudio/ide/viewing-the-structure-of-code) pour raccorder des commandes de touches accélérateur à du code. Pour obtenir la liste des touches accélérateur prédéfinies, consultez [touches accélérateur](../windows/predefined-accelerator-keys.md).
+Vous pouvez utiliser [Affichage de classes](/visualstudio/ide/viewing-the-structure-of-code) pour raccorder des commandes de touches accélérateur à du code. Pour obtenir la liste des touches accélérateur prédéfinies, consultez [touches accélérateur](predefined-accelerator-keys.md).
 
 > [!NOTE]
 > Windows ne vous permet pas de créer des tables d’accélérateurs vides. Si vous créez une table d’accélérateurs sans entrée, elle est supprimée automatiquement lorsque vous l’enregistrez.
@@ -73,8 +73,8 @@ Les éléments suivants sont des entrées légales pour la propriété de **modi
    |-----------|-----------------|
    |**Aucun**|L’utilisateur appuie uniquement sur la valeur de **clé** .<br/><br/>Cette valeur est utilisée le plus efficacement avec les valeurs ASCII/ANSI 001 à 026, qui est interprétée comme ^ A à ^ Z (**Ctrl + A** à **Ctrl + Z**).|
    |**Alt**|L’utilisateur doit appuyer sur **ALT** avant la valeur de la **clé** .|
-   |**Ctrl**|L’utilisateur doit appuyer sur **CTRL** avant la valeur de **clé** , non valide avec le type ASCII.|
-   |**Maj**|L’utilisateur doit appuyer sur **MAJ** avant la valeur de **clé** .|
+   |**Clavier**|L’utilisateur doit appuyer sur **CTRL** avant la valeur de **clé** , non valide avec le type ASCII.|
+   |**Majuscule**|L’utilisateur doit appuyer sur **MAJ** avant la valeur de **clé** .|
    |**Ctrl + Alt**|L’utilisateur doit appuyer sur **CTRL** et **ALT** avant la valeur de **clé** , non valide avec le type ASCII.|
    |**Ctrl + Maj**|L’utilisateur doit appuyer sur **CTRL** et **MAJ** avant la valeur de **clé** , non valide avec le type ASCII.|
    |**Alt + Maj**|L’utilisateur doit appuyer sur **ALT** et **MAJ** avant la valeur de **clé** , non valide avec le type ASCII.|
@@ -101,7 +101,7 @@ Les éléments suivants sont des entrées légales pour la propriété de **clé
 
 La propriété de **type** détermine si la combinaison de touches de raccourci associée à l' **ID** d’accélérateur est interprétée comme une valeur de clé ASCII/ANSI ou une combinaison de clé virtuelle (VIRTKEY).
 
-- Si la propriété de **type** est **ASCII**, la propriété de **modificateur** peut uniquement être `None` ou `Alt`, ou elle peut avoir un accélérateur qui utilise la touche **CTRL** , comme spécifié en faisant précéder la clé d’un `^`.
+- Si la propriété de **type** est **ASCII**, la propriété de **modificateur** peut être `None` ou `Alt` , ou elle peut avoir un accélérateur qui utilise la touche **CTRL** , comme spécifié en faisant précéder la clé d’un `^` .
 
 - Si la propriété **type** est **VIRTKEY**, toute combinaison de valeurs de **modificateur** et de **clé** est valide.
 
@@ -110,7 +110,7 @@ La propriété de **type** détermine si la combinaison de touches de raccourci 
 
 ## <a name="accelerator-tables"></a>Tables d’accélérateurs
 
-Dans un C++ projet, vous pouvez modifier une table d’accélérateurs directement avec la modification sur place dans l' **éditeur d’accélérateurs**.
+Dans un projet C++, vous pouvez modifier une table d’accélérateurs directement avec la modification sur place dans l' **éditeur d’accélérateurs**.
 
 Les procédures ci-dessous font référence à l’utilisation des pages de propriétés standard ; Toutefois, la modification sur place et la méthode de page de propriétés ont le même résultat. Les modifications apportées à l’aide des pages de propriétés ou de l’édition sur place sont immédiatement reflétées dans la table d’accélérateurs.
 
@@ -146,12 +146,12 @@ Les procédures ci-dessous font référence à l’utilisation des pages de prop
 
 1. Sélectionnez un **ID** dans la liste déroulante de la zone **ID** ou tapez un nouvel *ID* dans la zone **ID** .
 
-1. Tapez la *clé* que vous souhaitez utiliser comme accélérateur, ou cliquez avec le bouton droit et choisissez **clé suivante typée** pour définir une combinaison de touches, ou accédez à menu **modifier** > **clé suivante tapée**.
+1. Tapez la *clé* que vous souhaitez utiliser comme accélérateur, ou cliquez avec le bouton droit et choisissez **clé suivante tapée** pour définir une combinaison de touches, ou accédez à menu **modifier**la  >  **touche suivante tapée**.
 
 1. Modifiez le **modificateur** et le **type**, si nécessaire, puis appuyez sur **entrée**.
 
 > [!NOTE]
-> Assurez-vous que tous les accélérateurs définis sont uniques. Plusieurs combinaisons de touches peuvent être assignées au même ID sans effet. par exemple, la **touche Ctrl**+**P** et **F8** peuvent être assignées à ID_PRINT. Toutefois, l’utilisation d’une combinaison de touches affectée à plusieurs ID ne fonctionnera pas correctement, par exemple, **Ctrl**+**Z** affecté à la fois à ID_SPELL_CHECK et ID_THESAURUS.
+> Assurez-vous que tous les accélérateurs définis sont uniques. Plusieurs combinaisons de touches peuvent être assignées au même ID sans effet. par exemple, les **touches Ctrl** + **P** et **F8** peuvent toutes deux être affectées à ID_PRINT. Toutefois, l’utilisation d’une combinaison de touches affectée à plusieurs ID ne fonctionnera pas correctement, par exemple **CTRL** + **Z** affecté à la fois à ID_SPELL_CHECK et ID_THESAURUS.
 
 ### <a name="to-delete-an-entry-from-an-accelerator-table"></a>Pour supprimer une entrée dans une table d'accélérateurs
 
@@ -159,7 +159,7 @@ Les procédures ci-dessous font référence à l’utilisation des pages de prop
 
 1. Sélectionnez l’entrée que vous souhaitez supprimer, ou maintenez la touche **CTRL** ou **MAJ** enfoncée tout en sélectionnant plusieurs entrées.
 
-1. Cliquez avec le bouton droit et choisissez **supprimer**, ou accédez à menu **modifier** > **supprimer**.
+1. Cliquez avec le bouton droit et choisissez **supprimer**, ou accédez à menu **modifier**  >  **supprimer**.
 
 > [!TIP]
 > Vous pouvez également appuyer sur la touche **Suppr** pour supprimer.
@@ -186,11 +186,11 @@ Les procédures ci-dessous font référence à l’utilisation des pages de prop
 > [!NOTE]
 > Chaque valeur de modificateur apparaît sous la forme d’une propriété booléenne dans la fenêtre **Propriétés** . Si vous modifiez une valeur de [modificateur](../windows/accelerator-modifier-property.md) dans la fenêtre **Propriétés** , la table d’accélérateurs traite le nouveau modificateur comme un ajout à tous les modificateurs qui étaient auparavant. Pour cette raison, si vous définissez des valeurs de modificateur, vous devez les définir toutes pour vous assurer que chaque accélérateur partage les mêmes paramètres de **modificateur** .
 
-## <a name="requirements"></a>Spécifications
+## <a name="requirements"></a>Configuration requise
 
 Win32
 
 ## <a name="see-also"></a>Voir aussi
 
-[Éditeurs de ressources](../windows/resource-editors.md)<br/>
-[Touches accélérateur](../windows/predefined-accelerator-keys.md)<br/>
+[Éditeurs de ressources](resource-editors.md)<br/>
+[Touches accélérateur](predefined-accelerator-keys.md)<br/>

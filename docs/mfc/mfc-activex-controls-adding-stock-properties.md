@@ -9,37 +9,37 @@ helpviewer_keywords:
 - foreground colors, ActiveX controls
 - foreground colors [MFC]
 ms.assetid: 8b98c8c5-5b69-4366-87bf-0e61e6668ecb
-ms.openlocfilehash: 16bdfddf0c028bc6a312767844b38c58c942d56e
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 13e8af5ddb3dd5130c864e42383e3bb9ff23b87b
+ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81364661"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84625424"
 ---
 # <a name="mfc-activex-controls-adding-stock-properties"></a>Contrôles ActiveX MFC : ajout de propriétés stock
 
-Les propriétés boursières diffèrent des propriétés `COleControl`personnalisées en ce qu’elles sont déjà mises en œuvre par la classe. `COleControl`contient des fonctions prédéfinises des membres qui prennent en charge les propriétés communes pour le contrôle. Certaines propriétés courantes incluent la légende du contrôle et les couleurs de premier plan et de fond. Pour plus d’informations sur d’autres propriétés d’actions, voir [Stock Properties Supported by the Add Property Wizard](#_core_stock_properties_supported_by_classwizard) plus tard dans cet article. Les entrées de carte de répartition pour les propriétés stock sont toujours préfixées par DISP_STOCKPROP.
+Les propriétés stock diffèrent des propriétés personnalisées dans le fait qu’elles sont déjà implémentées par la classe `COleControl` . `COleControl`contient des fonctions membres prédéfinies qui prennent en charge des propriétés communes pour le contrôle. Certaines propriétés communes incluent la légende du contrôle, ainsi que les couleurs de premier plan et d’arrière-plan. Pour plus d’informations sur les autres propriétés stock, consultez [propriétés stock prises en charge par l’Assistant Ajout de propriété](#_core_stock_properties_supported_by_classwizard) plus loin dans cet article. Les entrées de la table de dispatch pour les propriétés stock sont toujours précédées de DISP_STOCKPROP.
 
-Cet article décrit comment ajouter une propriété stock (dans ce cas, caption) à un contrôle ActiveX à l’aide de l’Add Property Wizard et explique les modifications de code qui en résultent. Les sujets abordés sont les suivants :
+Cet article explique comment ajouter une propriété stock (en l’occurrence, Caption) à un contrôle ActiveX à l’aide de l’Assistant Ajout de propriété et explique les modifications de code qui en résultent. Les sujets abordés sont les suivants :
 
-- [Utilisation de l’Add Property Wizard pour ajouter une propriété en stock](#_core_using_classwizard_to_add_a_stock_property)
+- [Utilisation de l’Assistant Ajout de propriété pour ajouter une propriété stock](#_core_using_classwizard_to_add_a_stock_property)
 
-- [Ajouter des modifications de l’Assistant de propriété pour les propriétés des actions](#_core_classwizard_changes_for_stock_properties)
+- [Modifications de l’Assistant Ajout de propriété pour les propriétés stock](#_core_classwizard_changes_for_stock_properties)
 
-- [Propriétés d’actions prises en charge par l’Add Property Wizard](#_core_stock_properties_supported_by_classwizard)
+- [Propriétés stock prises en charge par l’Assistant Ajout de propriété](#_core_stock_properties_supported_by_classwizard)
 
-- [Propriétés d’actions et notification](#_core_stock_properties_and_notification)
+- [Propriétés et notification stock](#_core_stock_properties_and_notification)
 
 - [Propriétés de couleur](#_core_color_properties)
 
     > [!NOTE]
-    >  Les commandes personnalisées Visual Basic ont généralement des propriétés telles que Top, Gauche, Largeur, Hauteur, Align, Tag, Nom, TabIndex, TabStop et Parent. Les conteneurs de contrôle ActiveX, cependant, sont responsables de la mise en œuvre de ces propriétés de contrôle et, par conséquent, les contrôles ActiveX ne devraient pas prendre en charge ces propriétés.
+    >  Visual Basic contrôles personnalisés ont en général des propriétés telles que haut, gauche, largeur, hauteur, aligner, balise, nom, TabIndex, ArrêtTabulation et parent. Toutefois, les conteneurs de contrôles ActiveX sont responsables de l’implémentation de ces propriétés de contrôle. par conséquent, les contrôles ActiveX ne doivent pas prendre en charge ces propriétés.
 
-## <a name="using-the-add-property-wizard-to-add-a-stock-property"></a><a name="_core_using_classwizard_to_add_a_stock_property"></a>Utilisation de l’assistant de propriété Ajouter pour ajouter une propriété stock
+## <a name="using-the-add-property-wizard-to-add-a-stock-property"></a><a name="_core_using_classwizard_to_add_a_stock_property"></a>Utilisation de l’Assistant Ajout de propriété pour ajouter une propriété stock
 
-L’ajout de propriétés stock nécessite moins de code que `COleControl`l’ajout de propriétés personnalisées parce que le support pour la propriété est géré automatiquement par . La procédure suivante démontre l’ajout de la propriété caption stock à un cadre de contrôle ActiveX et peut également être utilisé pour ajouter d’autres propriétés de stock. Remplacez le nom de propriété d’actions sélectionnée par caption.
+L’ajout de propriétés stock requiert moins de code que l’ajout de propriétés personnalisées, car la prise en charge de la propriété est gérée automatiquement par `COleControl` . La procédure suivante montre comment ajouter la propriété stock Caption à une infrastructure de contrôle ActiveX et peut également être utilisée pour ajouter d’autres propriétés stock. Remplacez la légende par le nom de la propriété stock sélectionnée.
 
-#### <a name="to-add-the-stock-caption-property-using-the-add-property-wizard"></a>Pour ajouter la propriété de légende de stock utilisant le Magicien de propriété d’ajouter
+#### <a name="to-add-the-stock-caption-property-using-the-add-property-wizard"></a>Pour ajouter la propriété stock Caption à l’aide de l’Assistant Ajout de propriété
 
 1. Chargez votre projet de contrôle.
 
@@ -47,62 +47,62 @@ L’ajout de propriétés stock nécessite moins de code que `COleControl`l’aj
 
 1. Cliquez sur le nœud Interface de votre contrôle (le deuxième nœud du nœud Bibliothèque) pour ouvrir le menu contextuel.
 
-1. À partir du menu raccourci, cliquez sur **Ajouter** et cliquez ensuite **ajouter la propriété**.
+1. Dans le menu contextuel, cliquez sur **Ajouter** , puis sur **Ajouter une propriété**.
 
-   Cela ouvre le [Add Property Wizard](../ide/names-add-property-wizard.md).
+   L' [Assistant Ajouter une propriété](../ide/names-add-property-wizard.md)s’ouvre.
 
-1. Dans la boîte **nom de propriété,** cliquez sur **caption**.
+1. Dans la zone nom de la **propriété** , cliquez sur **légende**.
 
 1. Cliquez sur **Terminer**.
 
-## <a name="add-property-wizard-changes-for-stock-properties"></a><a name="_core_classwizard_changes_for_stock_properties"></a>Ajouter des changements de sorcier de propriété pour des propriétés d’actions
+## <a name="add-property-wizard-changes-for-stock-properties"></a><a name="_core_classwizard_changes_for_stock_properties"></a>Modifications de l’Assistant Ajout de propriété pour les propriétés stock
 
-Parce `COleControl` que prend en charge les propriétés des actions, l’Assistant De propriété Add ne change pas la déclaration de classe en aucune façon; il ajoute la propriété à la carte d’expédition. Le Assistant De propriété Add ajoute la ligne suivante à la carte de répartition du contrôle, qui est situé dans la mise en œuvre (. Dossier du RPC :
+Étant donné que `COleControl` prend en charge les propriétés stock, l’Assistant Ajout de propriété ne modifie en aucune façon la déclaration de classe ; il ajoute la propriété à la table de dispatch. L’Assistant Ajout de propriété ajoute la ligne suivante à la table de dispatch du contrôle, qui se trouve dans l’implémentation (. CPP) :
 
-[!code-cpp[NVC_MFC_AxUI#22](../mfc/codesnippet/cpp/mfc-activex-controls-adding-stock-properties_1.cpp)]
+[!code-cpp[NVC_MFC_AxUI#22](codesnippet/cpp/mfc-activex-controls-adding-stock-properties_1.cpp)]
 
-La ligne suivante est ajoutée à la description de l’interface de votre contrôle (. Fichier IDL) :
+La ligne suivante est ajoutée à la description de l’interface de votre contrôle (. Fichier IDL) :
 
-[!code-cpp[NVC_MFC_AxUI#23](../mfc/codesnippet/cpp/mfc-activex-controls-adding-stock-properties_2.idl)]
+[!code-cpp[NVC_MFC_AxUI#23](codesnippet/cpp/mfc-activex-controls-adding-stock-properties_2.idl)]
 
-Cette ligne attribue à la propriété caption une pièce d’identité spécifique. Notez que la propriété est liante et demandera la permission de la base de données avant de modifier la valeur.
+Cette ligne affecte un ID spécifique à la propriété Caption. Notez que la propriété peut être liée et qu’elle demande l’autorisation à la base de données avant de modifier la valeur.
 
-Cela rend la propriété caption accessible aux utilisateurs de votre contrôle. Pour utiliser la valeur d’une propriété d’actions, `COleControl` accédez à une variable de membre ou à la fonction membre de la classe de base. Pour plus d’informations sur ces variables de membre et les fonctions des membres, voir la section suivante, Stock Properties Supported by the Add Property Wizard.
+La propriété Caption est alors disponible pour les utilisateurs de votre contrôle. Pour utiliser la valeur d’une propriété stock, accédez à une variable membre ou à une fonction membre de la `COleControl` classe de base. Pour plus d’informations sur ces variables membres et fonctions membres, consultez la section suivante, propriétés stock prises en charge par l’Assistant Ajout de propriété.
 
-## <a name="stock-properties-supported-by-the-add-property-wizard"></a><a name="_core_stock_properties_supported_by_classwizard"></a>Propriétés d’actions soutenues par l’assistant de propriété d’ajouter
+## <a name="stock-properties-supported-by-the-add-property-wizard"></a><a name="_core_stock_properties_supported_by_classwizard"></a>Propriétés stock prises en charge par l’Assistant Ajout de propriété
 
-La `COleControl` classe fournit neuf propriétés de stock. Vous pouvez ajouter les propriétés que vous voulez en utilisant le Assistant De propriété Add.
+La `COleControl` classe fournit neuf propriétés stock. Vous pouvez ajouter les propriétés souhaitées à l’aide de l’Assistant Ajout d’une propriété.
 
-|Propriété|Entrée de carte d’expédition|Comment accéder à la valeur|
+|Propriété|Entrée de la table de dispatch|Comment accéder à la valeur|
 |--------------|------------------------|-------------------------|
-|`Appearance`|DISP_STOCKPROP_APPEARANCE)|Valeur accessible `m_sAppearance`comme .|
-|`BackColor`|DISP_STOCKPROP_BACKCOLOR)|Valeur accessible `GetBackColor`par appel .|
-|`BorderStyle`|DISP_STOCKPROP_BORDERSTYLE)|Valeur accessible `m_sBorderStyle`comme .|
-|`Caption`|DISP_STOCKPROP_CAPTION)|Valeur accessible `InternalGetText`par appel .|
-|`Enabled`|DISP_STOCKPROP_ENABLED)|Valeur accessible `m_bEnabled`comme .|
-|`Font`|DISP_STOCKPROP_FONT)|Voir l’article [MFC ActiveX Controls: Using Polices](../mfc/mfc-activex-controls-using-fonts.md) for use.|
-|`ForeColor`|DISP_STOCKPROP_FORECOLOR)|Valeur accessible `GetForeColor`par appel .|
-|`hWnd`|DISP_STOCKPROP_HWND)|Valeur accessible `m_hWnd`comme .|
-|`Text`|DISP_STOCKPROP_TEXT)|Valeur accessible `InternalGetText`par appel . Cette propriété est `Caption`la même que , sauf pour le nom de la propriété.|
-|`ReadyState`|DISP_STOCKPROP_READYSTATE()|Valeur accessible `m_lReadyState` au fur et à mesure ou`GetReadyState`|
+|`Appearance`|DISP_STOCKPROP_APPEARANCE ()|Valeur accessible en tant que `m_sAppearance` .|
+|`BackColor`|DISP_STOCKPROP_BACKCOLOR ()|Valeur accessible en appelant `GetBackColor` .|
+|`BorderStyle`|DISP_STOCKPROP_BORDERSTYLE ()|Valeur accessible en tant que `m_sBorderStyle` .|
+|`Caption`|DISP_STOCKPROP_CAPTION ()|Valeur accessible en appelant `InternalGetText` .|
+|`Enabled`|DISP_STOCKPROP_ENABLED ()|Valeur accessible en tant que `m_bEnabled` .|
+|`Font`|DISP_STOCKPROP_FONT ()|Consultez l’article [contrôles ActiveX MFC : utilisation des polices](mfc-activex-controls-using-fonts.md) pour l’utilisation.|
+|`ForeColor`|DISP_STOCKPROP_FORECOLOR ()|Valeur accessible en appelant `GetForeColor` .|
+|`hWnd`|DISP_STOCKPROP_HWND ()|Valeur accessible en tant que `m_hWnd` .|
+|`Text`|DISP_STOCKPROP_TEXT ()|Valeur accessible en appelant `InternalGetText` . Cette propriété est la même que `Caption` , à l’exception du nom de la propriété.|
+|`ReadyState`|DISP_STOCKPROP_READYSTATE ()|Valeur accessible en tant que `m_lReadyState` ou`GetReadyState`|
 
-## <a name="stock-properties-and-notification"></a><a name="_core_stock_properties_and_notification"></a>Propriétés et notification d’actions
+## <a name="stock-properties-and-notification"></a><a name="_core_stock_properties_and_notification"></a>Propriétés et notification stock
 
-La plupart des propriétés stock ont des fonctions de notification qui peuvent être annulées. Par exemple, `BackColor` chaque fois que `OnBackColorChanged` la propriété est modifiée, la fonction (fonction membre de la classe de contrôle) est appelée. La implémentation par défaut (dans `COleControl`) appels `InvalidateControl`. Remplacez cette fonction si vous souhaitez prendre des mesures supplémentaires en réponse à cette situation.
+La plupart des propriétés stock ont des fonctions de notification qui peuvent être remplacées. Par exemple, chaque fois que la `BackColor` propriété est modifiée, la `OnBackColorChanged` fonction (une fonction membre de la classe de contrôle) est appelée. L’implémentation par défaut (dans `COleControl` ) appelle `InvalidateControl` . Remplacez cette fonction si vous souhaitez effectuer des actions supplémentaires en réponse à cette situation.
 
 ## <a name="color-properties"></a><a name="_core_color_properties"></a>Propriétés de couleur
 
-Vous pouvez utiliser `ForeColor` `BackColor` le stock et les propriétés, ou vos propres propriétés de couleur personnalisées, lors de la peinture du contrôle. Pour utiliser une propriété de couleur, appelez la fonction de membre [COleControl::TranslateColor](../mfc/reference/colecontrol-class.md#translatecolor) membre. Les paramètres de cette fonction sont la valeur de la propriété de couleur et une poignée de palette facultative. La valeur de retour est une valeur **COLORREF** qui peut `SetTextColor` `CreateSolidBrush`être transmise aux fonctions GDI, telles que et .
+Vous pouvez utiliser la stock `ForeColor` et les `BackColor` Propriétés, ou vos propres propriétés de couleur personnalisées, lorsque vous peignez le contrôle. Pour utiliser une propriété Color, appelez la fonction membre [COleControl :: TranslateColor](reference/colecontrol-class.md#translatecolor) . Les paramètres de cette fonction sont la valeur de la propriété Color et un handle de palette facultatif. La valeur de retour est une valeur **COLORREF** qui peut être passée aux fonctions GDI, telles que `SetTextColor` et `CreateSolidBrush` .
 
-Les valeurs de `ForeColor` couleur `BackColor` pour le stock et `GetForeColor` les `GetBackColor` propriétés sont accessibles en appelant soit la fonction ou la fonction, respectivement.
+Les valeurs de couleur pour le stock `ForeColor` et les `BackColor` propriétés sont accessibles en appelant la `GetForeColor` fonction ou `GetBackColor` , respectivement.
 
-L’exemple suivant montre l’utilisation de ces deux propriétés de couleur lors de la peinture d’un contrôle. Il est parascatifatif d’une variable **COLORREF** temporaire et d’un `CBrush` objet avec des appels `TranslateColor`à : l’un utilisant la `ForeColor` propriété et l’autre à l’aide de la `BackColor` propriété. Un `CBrush` objet temporaire est ensuite utilisé pour peindre le rectangle du `ForeColor` contrôle, et la couleur du texte est définie à l’aide de la propriété.
+L’exemple suivant illustre l’utilisation de ces deux propriétés de couleur lors de la peinture d’un contrôle. Il Initialise une variable **COLORREF** temporaire et un `CBrush` objet avec des appels à `TranslateColor` : un à l’aide de la `ForeColor` propriété et de l’autre à l’aide de la `BackColor` propriété. Un `CBrush` objet temporaire est ensuite utilisé pour peindre le rectangle du contrôle, et la couleur du texte est définie à l’aide de la `ForeColor` propriété.
 
-[!code-cpp[NVC_MFC_AxUI#24](../mfc/codesnippet/cpp/mfc-activex-controls-adding-stock-properties_3.cpp)]
+[!code-cpp[NVC_MFC_AxUI#24](codesnippet/cpp/mfc-activex-controls-adding-stock-properties_3.cpp)]
 
 ## <a name="see-also"></a>Voir aussi
 
-[Contrôles ActiveX MFC](../mfc/mfc-activex-controls.md)<br/>
-[Contrôles ActiveX MFC : propriétés](../mfc/mfc-activex-controls-properties.md)<br/>
-[Contrôles ActiveX MFC : méthodes](../mfc/mfc-activex-controls-methods.md)<br/>
-[COleControl, classe](../mfc/reference/colecontrol-class.md)
+[Contrôles ActiveX MFC](mfc-activex-controls.md)<br/>
+[Contrôles ActiveX MFC : propriétés](mfc-activex-controls-properties.md)<br/>
+[Contrôles ActiveX MFC : méthodes](mfc-activex-controls-methods.md)<br/>
+[COleControl, classe](reference/colecontrol-class.md)

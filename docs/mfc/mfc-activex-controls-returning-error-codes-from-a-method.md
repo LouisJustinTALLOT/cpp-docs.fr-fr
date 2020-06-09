@@ -10,28 +10,28 @@ helpviewer_keywords:
 - SCODE, MFC ActiveX controls
 - ThrowError method [MFC]
 ms.assetid: 771fb9c9-2413-4dcc-b386-7bc4c4adeafd
-ms.openlocfilehash: 5314545a3a903158362dbfa65c4a9a1b2143e86b
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 1f7564d750b476ac3f57656f3392e0801652e5d5
+ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81364557"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84615515"
 ---
 # <a name="mfc-activex-controls-returning-error-codes-from-a-method"></a>Contrôles ActiveX MFC : retour de codes d'erreur à partir d'une méthode
 
-Cet article décrit comment retourner les codes d’erreur d’une méthode de contrôle ActiveX.
+Cet article explique comment retourner des codes d’erreur à partir d’une méthode de contrôle ActiveX.
 
-Pour indiquer qu’une erreur s’est produite dans le cadre d’une méthode, vous devez utiliser le [COleControl::ThrowError](../mfc/reference/colecontrol-class.md#throwerror) fonction membre, qui prend un SCODE (code d’état) comme un paramètre. Vous pouvez utiliser un SCODE prédéfini ou définir l’un des vôtres.
+Pour indiquer qu’une erreur s’est produite dans une méthode, vous devez utiliser la fonction membre [COleControl :: ThrowError](reference/colecontrol-class.md#throwerror) , qui prend un SCODE (code d’État) comme paramètre. Vous pouvez utiliser un SCODE prédéfini ou définir l’un de vos propres.
 
 > [!NOTE]
-> `ThrowError`est destiné à être utilisé uniquement comme un moyen de retourner une erreur à l’intérieur d’une propriété Get or Set fonction ou une méthode d’automatisation. Ce sont les seules fois où le gestionnaire d’exception approprié sera présent sur la pile.
+> `ThrowError`est destiné à être utilisé uniquement comme moyen de retourner une erreur à partir d’une fonction d’extraction ou de définition d’une propriété ou d’une méthode Automation. Il s’agit de la seule fois où le gestionnaire d’exceptions approprié sera présent sur la pile.
 
-Les fonctions d’aide existent pour les SCODE prédéfinis les plus communs, telles que [COleControl::SetNotSupported](../mfc/reference/colecontrol-class.md#setnotsupported), [COleControl::GetNotSupported](../mfc/reference/colecontrol-class.md#getnotsupported), et [COleControl::SetNotPermitted](../mfc/reference/colecontrol-class.md#setnotpermitted).
+Les fonctions d’assistance existent pour les SCODEs prédéfinis les plus courants, tels que [COleControl :: SetNotSupported](reference/colecontrol-class.md#setnotsupported), [COleControl :: GetNotSupported](reference/colecontrol-class.md#getnotsupported)et [COleControl :: SetNotPermitted](reference/colecontrol-class.md#setnotpermitted).
 
-Pour une liste de SCODE prédéfinis et des instructions sur la définition des SCODE personnalisés, consultez la section [Fautes de manipulation dans votre contrôle ActiveX](../mfc/mfc-activex-controls-advanced-topics.md) dans activeX Controls: Advanced Topics.
+Pour obtenir la liste des SCODEs prédéfinis et des instructions sur la définition des SCODEs personnalisés, consultez la section [gestion des erreurs dans votre contrôle ActiveX](mfc-activex-controls-advanced-topics.md) dans contrôles ActiveX : Rubriques avancées.
 
-Pour plus d’informations sur les exceptions de rapport dans d’autres domaines de votre code, voir [COleControl::FireError](../mfc/reference/colecontrol-class.md#fireerror) et la section [Fautes de manipulation dans votre contrôle ActiveX](../mfc/mfc-activex-controls-advanced-topics.md) dans activeX Controls: Advanced Topics.
+Pour plus d’informations sur la création de rapports d’exceptions dans d’autres zones de votre code, consultez [COleControl :: FireError (](reference/colecontrol-class.md#fireerror) et la section [gestion des erreurs dans votre contrôle ActiveX](mfc-activex-controls-advanced-topics.md) dans contrôles ActiveX : Rubriques avancées.
 
 ## <a name="see-also"></a>Voir aussi
 
-[Contrôles ActiveX MFC](../mfc/mfc-activex-controls.md)
+[Contrôles ActiveX MFC](mfc-activex-controls.md)

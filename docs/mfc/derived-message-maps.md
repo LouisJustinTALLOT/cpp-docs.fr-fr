@@ -7,34 +7,34 @@ helpviewer_keywords:
 - message maps [MFC], derived
 - derived message maps
 ms.assetid: 21829556-6e64-40c3-8279-fed85d99de77
-ms.openlocfilehash: fcdff67c57e932e414a2b61b28cd0498ab997c60
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 0868b12720cfa338ab7275a358e065506adc11d1
+ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62173580"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84615916"
 ---
 # <a name="derived-message-maps"></a>Tables des messages dérivées
 
-Au cours de la gestion des messages, la vérification d’un message de la classe map n’est pas la fin de l’histoire de la table des messages. Que se passe-t-il si classe `CMyView` (dérivée de `CView`) ne comporte aucune entrée correspondante pour un message
+Pendant la gestion des messages, la vérification de la propre table des messages d’une classe n’est pas la fin de l’histoire de la table des messages. Que se passe-t-il si `CMyView` la classe (dérivée de `CView` ) n’a pas d’entrée correspondante pour un message
 
-N’oubliez pas que `CView`, la classe de base de `CMyView`, est dérivé à son tour `CWnd`. Par conséquent `CMyView` *est* un `CView` et *est* un `CWnd`. Chacune de ces classes a sa propre table des messages. La figure « Hiérarchie d’une vue » ci-dessous montre la relation hiérarchique entre les classes, mais gardez à l’esprit qu’un `CMyView` objet est un objet unique qui présente les caractéristiques des trois classes.
+Gardez à l’esprit que `CView` , la classe de base de `CMyView` , est dérivée à son tour de `CWnd` . C' `CMyView` *est* donc un `CView` et *est* un `CWnd` . Chacune de ces classes possède sa propre table des messages. La figure « une hiérarchie d’affichage » ci-dessous montre la relation hiérarchique des classes, mais gardez à l’esprit qu’un `CMyView` objet est un objet unique qui a les caractéristiques des trois classes.
 
-![Hiérarchie d’une vue](../mfc/media/vc38621.gif "hiérarchie d’une vue") <br/>
+![Hiérarchie d'un affichage](../mfc/media/vc38621.gif "Hiérarchie d'un affichage") <br/>
 Une hiérarchie d’affichage
 
-Par conséquent, si un message ne peut pas être mis en correspondance dans la classe `CMyView`de table des messages, l’infrastructure recherche également dans la table des messages de sa classe de base immédiate. Le `BEGIN_MESSAGE_MAP` macro au début de la table des messages spécifie deux noms de classe comme arguments :
+Par conséquent, si un message ne peut pas être mis en correspondance dans `CMyView` la table des messages de la classe, le Framework recherche également la table des messages de sa classe de base immédiate. La `BEGIN_MESSAGE_MAP` macro au début de la table des messages spécifie deux noms de classe comme arguments :
 
-[!code-cpp[NVC_MFCMessageHandling#2](../mfc/codesnippet/cpp/derived-message-maps_1.cpp)]
+[!code-cpp[NVC_MFCMessageHandling#2](codesnippet/cpp/derived-message-maps_1.cpp)]
 
-Le premier argument nomme la classe à laquelle appartient la table des messages. Le deuxième argument fournit une connexion avec la classe de base immédiate — `CView` ici, pour que l’infrastructure peut rechercher sa table des messages trop.
+Le premier argument nomme la classe à laquelle appartient la table des messages. Le deuxième argument fournit une connexion avec la classe de base immédiate, ici, de `CView` sorte que l’infrastructure peut également rechercher dans sa table des messages.
 
-Les gestionnaires de messages fournis dans une classe de base sont ainsi hérités par la classe dérivée. Cela est très similaire aux fonctions membres virtuelles normales sans avoir à effectuer toutes les fonctions membres de gestionnaire virtuel.
+Les gestionnaires de messages fournis dans une classe de base sont donc hérités par la classe dérivée. Cela est très similaire aux fonctions membres virtuelles normales, sans qu’il soit nécessaire de faire en sorte que toutes les fonctions membres du gestionnaire soient virtuelles.
 
-Si aucun gestionnaire n’est trouvé dans un des mappages de message de la classe de base, par défaut de traitement du message est effectuée. Si le message est une commande, le framework achemine vers la cible de commande suivante. Dans le cas d’un message Windows standard, le message est passé à la procédure de fenêtre par défaut approprié.
+Si aucun gestionnaire n’est trouvé dans l’une des tables de messages de la classe de base, le traitement par défaut du message est effectué. Si le message est une commande, le Framework l’achemine vers la cible de la commande suivante. S’il s’agit d’un message Windows standard, le message est transmis à la procédure de fenêtre par défaut appropriée.
 
-Pour accélérer la correspondance de la table des messages, le framework met en cache les correspondances récentes sur la probabilité qu’il reçoit à nouveau le même message. Une conséquence de cela est que la structure traite les messages non gérés très efficacement. Tables des messages sont également plus compact que les implémentations qui utilisent des fonctions virtuelles.
+Pour accélérer la mise en correspondance de la table des messages, le Framework met en cache les correspondances récentes sur la probabilité qu’il reçoive le même message. L’une des conséquences est que l’infrastructure traite les messages non gérés de manière très efficace. Les tables des messages sont également plus efficaces que les implémentations qui utilisent des fonctions virtuelles.
 
 ## <a name="see-also"></a>Voir aussi
 
-[Comment le Framework effectue des recherches dans les tables des messages](../mfc/how-the-framework-searches-message-maps.md)
+[Comment le Framework effectue des recherches dans les tables des messages](how-the-framework-searches-message-maps.md)

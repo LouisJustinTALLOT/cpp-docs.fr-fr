@@ -42,12 +42,12 @@ helpviewer_keywords:
 - RichEdit 1.0 control
 - rich edit controls [C++], RichEdit 1.0
 ms.assetid: 73cef03f-5c8c-456a-87d1-1458dff185cf
-ms.openlocfilehash: ad14a0500336bc1ca61e00bcd6d9a6e1088afc81
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 9c1596b66f4387ea1f7ce309a5012ecd0f63d5de
+ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80167522"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84623461"
 ---
 # <a name="how-to-add-edit-or-delete-controls-c"></a>Comment : ajouter, modifier ou supprimer des contrôles (C++)
 
@@ -98,7 +98,7 @@ L’onglet **éditeur de boîtes de dialogue** s’affiche dans la [fenêtre bo�
 
 ### <a name="to-add-a-custom-control"></a>Pour ajouter un contrôle personnalisé
 
-Vous pouvez ajouter des contrôles personnalisés à la boîte de dialogue. Sélectionnez l’icône de **contrôle personnalisé** dans la **boîte à outils** et faites-la glisser vers votre boîte de dialogue. Pour ajouter un contrôle `Syslink`, ajoutez un contrôle personnalisé, puis affectez à la propriété de **classe** du contrôle la valeur `Syslink`. Cette action entraîne l’actualisation des propriétés et l’affichage des propriétés du contrôle `Syslink`. Pour plus d’informations sur la classe wrapper MFC, consultez [CLinkCtrl](../mfc/reference/clinkctrl-class.md).
+Vous pouvez ajouter des contrôles personnalisés à la boîte de dialogue. Sélectionnez l’icône de **contrôle personnalisé** dans la **boîte à outils** et faites-la glisser vers votre boîte de dialogue. Pour ajouter un `Syslink` contrôle, ajoutez un contrôle personnalisé, puis affectez à la propriété de **classe** du contrôle la valeur `Syslink` . Cette action entraîne l’actualisation des propriétés et l’affichage des `Syslink` Propriétés de contrôle. Pour plus d’informations sur la classe wrapper MFC, consultez [CLinkCtrl](../mfc/reference/clinkctrl-class.md).
 
 ## <a name="edit-controls"></a>Contrôles d’édition
 
@@ -118,14 +118,14 @@ Vous pouvez ajouter des contrôles personnalisés à la boîte de dialogue. Sél
 
 1. Assurez-vous que le contrôle a le focus dans l' **éditeur de boîtes de dialogue**.
 
-1. Accédez au menu **modifier** > **Annuler**. Si le focus n’est pas sur le contrôle, la commande **Annuler** n’est pas disponible.
+1. Accédez à menu **modifier**  >  **Annuler**. Si le focus n’est pas sur le contrôle, la commande **Annuler** n’est pas disponible.
 
 ### <a name="to-define-a-member-variable-for-a-non-button-dialog-box-control"></a>Pour définir une variable membre pour un contrôle de boîte de dialogue (à l'exception d'un bouton)
 
 > [!NOTE]
 > Ce processus s’applique uniquement aux contrôles de boîte de dialogue dans un projet MFC. Les projets ATL doivent utiliser la boîte de dialogue **nouveaux messages et gestionnaires d’événements Windows** . Pour plus d’informations, consultez [types de messages associés à des objets d’interface utilisateur](../mfc/reference/message-types-associated-with-user-interface-objects.md), [modification d’un gestionnaire de messages](../mfc/reference/editing-a-message-handler.md)et [définition d’un gestionnaire de messages pour un message réfléchi](../mfc/reference/defining-a-message-handler-for-a-reflected-message.md).
 
-1. Dans l' [éditeur de boîtes de dialogue](../windows/dialog-editor.md), sélectionnez un contrôle.
+1. Dans l' [éditeur de boîtes de dialogue](dialog-editor.md), sélectionnez un contrôle.
 
 1. Tout en appuyant sur la touche **CTRL** , double-cliquez sur le contrôle de boîte de dialogue.
 
@@ -142,7 +142,7 @@ Vous pouvez également utiliser l’onglet **variables membres** de l' [Assistan
 
 ## <a name="delete-controls"></a>Supprimer des contrôles
 
-Dans la boîte de dialogue, sélectionnez le contrôle, appuyez sur la touche **Suppr** ou accédez au menu **modifier** > **supprimer**.
+Dans la boîte de dialogue, sélectionnez le contrôle, appuyez sur la touche **Suppr** ou accédez à menu **modifier**  >  **supprimer**.
 
 ## <a name="other-issues"></a>Autres problèmes
 
@@ -176,7 +176,7 @@ Actuellement, l' **éditeur de boîtes de dialogue** n’ajoute pas automatiquem
 
 Pour utiliser des contrôles communs dans une boîte de dialogue, vous devez appeler [InitCommonControlsEx](/windows/win32/api/commctrl/nf-commctrl-initcommoncontrolsex) ou `AFXInitCommonControls` avant de créer la boîte de dialogue.
 
-Pour utiliser des contrôles RichEdit, vous devez appeler `LoadLibrary`. Pour plus d’informations, consultez [à propos des contrôles RichEdit](/windows/win32/Controls/about-rich-edit-controls) dans le SDK Windows et [vue d’ensemble du contrôle RichEdit](../mfc/overview-of-the-rich-edit-control.md).
+Pour utiliser des contrôles RichEdit, vous devez appeler `LoadLibrary` . Pour plus d’informations, consultez [à propos des contrôles RichEdit](/windows/win32/Controls/about-rich-edit-controls) dans le SDK Windows et [vue d’ensemble du contrôle RichEdit](../mfc/overview-of-the-rich-edit-control.md).
 
 > [!NOTE]
 > Pour utiliser un contrôle RichEdit avec MFC, vous devez d’abord appeler [AfxInitRichEdit2](../mfc/reference/application-information-and-management.md#afxinitrichedit2) pour charger le contrôle RichEdit 2,0 (Riched20. DLL) ou appelez [AfxInitRichEdit](../mfc/reference/application-information-and-management.md#afxinitrichedit) pour charger l’ancien contrôle RichEdit 1,0 (Riched32. DLL).
@@ -187,7 +187,7 @@ Pour utiliser des contrôles RichEdit, vous devez appeler `LoadLibrary`. Pour pl
 
 Avec Visual Studio, vous pouvez insérer des contrôles ActiveX dans votre boîte de dialogue. Pour plus d’informations, consultez [contrôles ActiveX MFC](../mfc/mfc-activex-controls.md) et [conteneurs de contrôles ActiveX](../mfc/activex-control-containers.md).
 
-La boîte de dialogue **Insérer un contrôle ActiveX** vous permet d’insérer des contrôles ActiveX dans votre boîte de dialogue tout en utilisant l' [éditeur de boîtes de dialogue](../windows/dialog-editor.md). Cette boîte de dialogue contient les propriétés suivantes :
+La boîte de dialogue **Insérer un contrôle ActiveX** vous permet d’insérer des contrôles ActiveX dans votre boîte de dialogue tout en utilisant l' [éditeur de boîtes de dialogue](dialog-editor.md). Cette boîte de dialogue contient les propriétés suivantes :
 
 |Propriété|Description|
 |---|---|
@@ -216,14 +216,14 @@ La boîte de dialogue **Insérer un contrôle ActiveX** vous permet d’insérer
 
 Les contrôles ActiveX fournis par des fournisseurs indépendants peuvent être dotés de leurs propres propriétés et caractéristiques. Ces propriétés sont affichées dans la fenêtre **Propriétés** . Toutes les pages de propriétés créées par les enregistreurs du contrôle ActiveX s’affichent dans la boîte de dialogue **pages de propriétés** . (Pour afficher la **page de propriétés** d’un contrôle ActiveX spécifique, sélectionnez le bouton **page de propriétés** dans le [fenêtre Propriétés](/visualstudio/ide/reference/properties-window)).
 
-- Sélectionnez le contrôle **ActiveX** et accédez à l' **affichage** du menu > **page de propriétés** pour afficher les propriétés. Apportez les modifications nécessaires dans la page de propriétés.
+- Sélectionnez le contrôle **ActiveX** et accédez à **View**  >  la page de**Propriétés** de la vue de menu pour afficher les propriétés. Apportez les modifications nécessaires dans la page de propriétés.
 
    Différents onglets s’affichent dans la page de propriétés d’un contrôle ActiveX, selon les feuilles de propriétés qui font partie du contrôle ActiveX.
 
 > [!NOTE]
 > Cette procédure s’applique à l’utilisation de la page de propriétés pour modifier les contrôles ActiveX. Vous pouvez également parcourir et modifier les propriétés ActiveX dans la nouvelle fenêtre **Propriétés** .
 
-## <a name="requirements"></a>Spécifications
+## <a name="requirements"></a>Configuration requise
 
 Win32
 

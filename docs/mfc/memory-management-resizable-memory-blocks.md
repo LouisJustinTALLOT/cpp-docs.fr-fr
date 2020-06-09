@@ -9,20 +9,20 @@ helpviewer_keywords:
 - blocks [MFC], memory allocation
 - resizable memory blocks [MFC]
 ms.assetid: f0efe6f4-a3ed-4541-9195-51ec1291967a
-ms.openlocfilehash: b048b60a5512ecc54750cb980ca67e2373e2c837
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 74ae94146b1ec711b586ea1fecbbc89a47b40b5e
+ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81364777"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84626278"
 ---
 # <a name="memory-management-resizable-memory-blocks"></a>Gestion de la mémoire : blocs de mémoire redimensionnables
 
-Les **nouveaux** opérateurs et **supprimer,** décrits dans l’article [Memory Management: Exemples](../mfc/memory-management-examples.md), sont bons pour l’attribution et l’attribution de blocs de mémoire fixes et d’objets. De temps en temps, votre application peut avoir besoin de blocs de mémoire resizables. Vous devez utiliser les fonctions standard de bibliothèque C run-time [malloc](../c-runtime-library/reference/malloc.md), [réaffecter](../c-runtime-library/reference/realloc.md), et [libre](../c-runtime-library/reference/free.md) de gérer les blocs de mémoire résizables sur le tas.
+Les opérateurs **New** et **Delete** , décrits dans l’article gestion de la [mémoire : exemples](memory-management-examples.md), sont corrects pour allouer et libérer des blocs de mémoire de taille fixe et des objets. Parfois, votre application peut nécessiter des blocs de mémoire redimensionnables. Vous devez utiliser les fonctions de la bibliothèque Runtime C standard [malloc](../c-runtime-library/reference/malloc.md), [realloc](../c-runtime-library/reference/realloc.md)et [Free](../c-runtime-library/reference/free.md) pour gérer les blocs de mémoire redimensionnables sur le tas.
 
 > [!IMPORTANT]
-> Mélanger les **nouveaux** opérateurs et **supprimer** les fonctions resizables d’allocation de mémoire sur le même bloc de mémoire se traduira par une mémoire corrompue dans la version Debug de MFC. Vous ne devez pas utiliser **réaffectation** sur un bloc de mémoire alloué avec **de nouveaux**. De même, vous ne devez pas allouer un bloc mémoire avec le **nouvel** opérateur et le supprimer **gratuitement**, ou utiliser l’opérateur de **suppression** sur un bloc de mémoire alloué avec **malloc**.
+> La combinaison des opérateurs **New** et **Delete** avec les fonctions d’allocation de mémoire redimensionnables sur le même bloc de mémoire entraîne une altération de la mémoire dans la version Debug des MFC. Vous ne devez pas utiliser la fonction **realloc** sur un bloc de mémoire alloué avec **New**. De même, vous ne devez pas allouer un bloc de mémoire avec l’opérateur **New** et le supprimer **gratuitement**, ni utiliser l’opérateur **Delete** sur un bloc de mémoire alloué avec **malloc**.
 
 ## <a name="see-also"></a>Voir aussi
 
-[Gestion de la mémoire : allocation de tas](../mfc/memory-management-heap-allocation.md)
+[Gestion de la mémoire : allocation de tas](memory-management-heap-allocation.md)

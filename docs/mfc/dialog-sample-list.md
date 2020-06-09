@@ -4,26 +4,26 @@ ms.date: 11/04/2016
 helpviewer_keywords:
 - sample applications [MFC], dialog boxes
 ms.assetid: 3fc7dd7c-d758-4c43-96bb-0ea638ca1ad7
-ms.openlocfilehash: 72470463c3d4ff402bca9c119456778cf7fadecb
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 28bf4beaafaaff5c4b9122daeca9d61ed05346fc
+ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62384073"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84625909"
 ---
 # <a name="dialog-sample-list"></a>Exemple de liste de boîte de dialogue
 
-Consultez les exemples de programmes suivants qui illustrent des boîtes de dialogue et les feuilles de propriétés :
+Consultez les exemples de programmes suivants qui illustrent les boîtes de dialogue et les feuilles de propriétés :
 
-*Exemple d’Application MDI avec des boîtes de dialogue*
+*Exemple d’application MDI avec boîtes de dialogue*
 
-- [DESSIN À MAIN LEVÉE](../overview/visual-cpp-samples.md)
+- [SCRIBBLE](../overview/visual-cpp-samples.md)
 
 *Boîte de dialogue non modale*
 
-- [NON MODAL](../overview/visual-cpp-samples.md)
+- [NON modale](../overview/visual-cpp-samples.md)
 
-*Boîte de dialogue de feuille de propriétés (onglet la boîte de dialogue)*
+*Boîte de dialogue feuille de propriétés (boîte de dialogue onglet)*
 
 - [PROPDLG](../overview/visual-cpp-samples.md)
 
@@ -45,7 +45,7 @@ Consultez les exemples de programmes suivants qui illustrent des boîtes de dial
 
 - [CTRLTEST](../overview/visual-cpp-samples.md)
 
-*Formulaire de boîtes de dialogue vues*
+*Affichages de formulaires de type dialogue*
 
 - [VIEWEX](../overview/visual-cpp-samples.md)
 
@@ -55,4 +55,4 @@ Consultez les exemples de programmes suivants qui illustrent des boîtes de dial
 
 ## <a name="see-also"></a>Voir aussi
 
-[Boîtes de dialogue](../mfc/dialog-boxes.md)
+[Boîtes de dialogue](dialog-boxes.md)

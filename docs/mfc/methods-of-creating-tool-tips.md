@@ -6,24 +6,24 @@ helpviewer_keywords:
 - tool tips [MFC], tool tip controls
 - tool tips [MFC], creating
 ms.assetid: b015e9f4-ddfb-49a4-a5a6-fa2d45e4d328
-ms.openlocfilehash: 2ba935f52f24f62dded3b89df1563454cf7e0335
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 26f31705068df009e906d50451efa9ea6572d7e6
+ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62383888"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84625454"
 ---
 # <a name="methods-of-creating-tool-tips"></a>Méthodes de création d'info-bulles
 
-MFC fournit trois classes pour créer et gérer le contrôle d’info-bulle Info : [CWnd](../mfc/reference/cwnd-class.md), [CToolBarCtrl](../mfc/reference/ctoolbarctrl-class.md), [CToolTipCtrl](../mfc/reference/ctooltipctrl-class.md) et [CMFCToolTipCtrl](../mfc/reference/cmfctooltipctrl-class.md). Les fonctions membres dans ces classes encapsulent les API des contrôles communs Windows. Classe `CToolBarCtrl` et classe `CToolTipCtrl` sont dérivés de la classe `CWnd`.
+MFC fournit trois classes pour créer et gérer le contrôle d’info-bulle : [CWnd](reference/cwnd-class.md), [CToolBarCtrl](reference/ctoolbarctrl-class.md), [CToolTipCtrl](reference/ctooltipctrl-class.md) et [CMFCToolTipCtrl](reference/cmfctooltipctrl-class.md). Les fonctions membres de l’info-bulle dans ces classes encapsulent l’API de contrôle commun Windows. La classe et la classe `CToolBarCtrl` `CToolTipCtrl` sont dérivées de la classe `CWnd` .
 
-`CWnd` fournit quatre fonctions membres pour créer et gérer des info-bulles : [EnableToolTips](../mfc/reference/cwnd-class.md#enabletooltips), [CancelToolTips](../mfc/reference/cwnd-class.md#canceltooltips), [FilterToolTipMessage](../mfc/reference/cwnd-class.md#filtertooltipmessage), et [OnToolHitTest](../mfc/reference/cwnd-class.md#ontoolhittest). Consultez ces fonctions membres pour plus d’informations sur l’implémentation des info-bulles.
+`CWnd`fournit quatre fonctions membres pour créer et gérer des info-bulles : [EnableToolTips](reference/cwnd-class.md#enabletooltips), [CancelToolTips](reference/cwnd-class.md#canceltooltips), [FilterToolTipMessage](reference/cwnd-class.md#filtertooltipmessage)et [OnToolHitTest](reference/cwnd-class.md#ontoolhittest). Pour plus d’informations sur la façon dont ils implémentent les info-bulles, consultez ces fonctions membres individuelles.
 
-Si vous créez un à l’aide de la barre d’outils `CToolBarCtrl`, vous pouvez implémenter des info-bulles pour cette barre d’outils directement à l’aide de fonctions membres suivantes : [GetToolTips](../mfc/reference/ctoolbarctrl-class.md#gettooltips) et [SetToolTips](../mfc/reference/ctoolbarctrl-class.md#settooltips). Consultez ces fonctions membres et [gestion des Notifications des info](../mfc/handling-tool-tip-notifications.md) pour plus d’informations sur l’implémentation des info-bulles.
+Si vous créez une barre d’outils à l’aide de `CToolBarCtrl` , vous pouvez implémenter des info-bulles pour cette barre d’outils directement à l’aide des fonctions membres suivantes : [GetToolTips](reference/ctoolbarctrl-class.md#gettooltips) et [SetToolTips](reference/ctoolbarctrl-class.md#settooltips). Pour plus d’informations sur la façon dont ils implémentent les info-bulles, consultez ces fonctions membres individuelles et [gestion des notifications d’info-bulle](handling-tool-tip-notifications.md) .
 
-Le `CToolTipCtrl` classe fournit les fonctionnalités de Windows courantes contrôle ToolTip. Un contrôle ToolTip unique peut fournir des informations pour plusieurs outils. Un outil peut être une fenêtre, telle qu’une fenêtre enfant ou de contrôle ou d’une zone rectangulaire définie par l’application au sein de la zone cliente d’une fenêtre. Le [CMFCToolTipCtrl](../mfc/reference/cmfctooltipctrl-class.md) dérive de la classe `CToolTipCtrl` et fournit des fonctionnalités et des styles visuels supplémentaires.
+La `CToolTipCtrl` classe fournit les fonctionnalités du contrôle commun d’info-bulle Windows. Un seul contrôle d’info-bulle peut fournir des informations pour plusieurs outils. Un outil est soit une fenêtre, telle qu’une fenêtre ou un contrôle enfant, soit une zone rectangulaire définie par l’application dans la zone cliente d’une fenêtre. La classe [CMFCToolTipCtrl](reference/cmfctooltipctrl-class.md) dérive de `CToolTipCtrl` et fournit des fonctionnalités et des styles visuels supplémentaires.
 
 ## <a name="see-also"></a>Voir aussi
 
-[Utilisation de CToolTipCtrl](../mfc/using-ctooltipctrl.md)<br/>
-[Contrôles](../mfc/controls-mfc.md)
+[Utilisation de CToolTipCtrl](using-ctooltipctrl.md)<br/>
+[Commandes](controls-mfc.md)

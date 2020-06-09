@@ -8,16 +8,16 @@ helpviewer_keywords:
 - memory [MFC], managing
 - memory allocation [MFC], MFC
 ms.assetid: 934ac81b-d630-4232-88e5-ea74f7187987
-ms.openlocfilehash: 5d81bd0a8bdd24059951cba5c8b69751b3d1db86
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: 464a31491f2c3017453bdd5bbdc8b059d348eb3c
+ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69508271"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84626255"
 ---
 # <a name="memory-management"></a>Gestion de la mémoire
 
-Ce groupe d’articles explique comment tirer parti des services à usage général du bibliothèque MFC (Microsoft Foundation Class) (MFC) relatifs à la gestion de la mémoire. L’allocation de mémoire peut être divisée en deux catégories principales: les allocations de frame et les allocations de tas.
+Ce groupe d’articles explique comment tirer parti des services à usage général du bibliothèque MFC (Microsoft Foundation Class) (MFC) relatifs à la gestion de la mémoire. L’allocation de mémoire peut être divisée en deux catégories principales : les allocations de frame et les allocations de tas.
 
 L’une des principales différences entre les deux techniques d’allocation est qu’avec l’allocation de frame, vous travaillez généralement avec le bloc de mémoire réel proprement dit, tandis que avec l’allocation de tas, vous recevez toujours un pointeur vers le bloc de mémoire. Une autre différence majeure entre les deux schémas est que les objets Frame sont automatiquement supprimés, tandis que les objets Heap doivent être supprimés explicitement par le programmeur.
 
@@ -25,21 +25,21 @@ Pour obtenir des informations non-MFC sur la gestion de la mémoire dans les pro
 
 ## <a name="what-do-you-want-to-know-more-about"></a>Que voulez-vous en savoir plus sur
 
-- [Allocation de frame](../mfc/memory-management-frame-allocation.md)
+- [Allocation d’images](memory-management-frame-allocation.md)
 
-- [Allocation du tas](../mfc/memory-management-heap-allocation.md)
+- [Allocation du tas](memory-management-heap-allocation.md)
 
-- [Allocation de mémoire pour un tableau](../mfc/memory-management-examples.md)
+- [Allocation de mémoire pour un tableau](memory-management-examples.md)
 
-- [Libération de la mémoire pour un tableau à partir du tas](../mfc/memory-management-examples.md)
+- [Libération de la mémoire pour un tableau à partir du tas](memory-management-examples.md)
 
-- [Allocation de mémoire pour une structure de données](../mfc/memory-management-examples.md)
+- [Allocation de mémoire pour une structure de données](memory-management-examples.md)
 
-- [Allocation de mémoire pour un objet](../mfc/memory-management-examples.md)
+- [Allocation de mémoire pour un objet](memory-management-examples.md)
 
-- [Blocs de mémoire redimensionnables](../mfc/memory-management-resizable-memory-blocks.md)
+- [Blocs de mémoire redimensionnables](memory-management-resizable-memory-blocks.md)
 
 ## <a name="see-also"></a>Voir aussi
 
-[Concepts](../mfc/mfc-concepts.md)<br/>
-[Rubriques MFC générales](../mfc/general-mfc-topics.md)
+[Concepts](mfc-concepts.md)<br/>
+[Rubriques MFC générales](general-mfc-topics.md)

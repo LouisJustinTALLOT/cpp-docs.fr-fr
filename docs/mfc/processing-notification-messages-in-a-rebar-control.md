@@ -7,20 +7,20 @@ helpviewer_keywords:
 - RBN_ notification messages [MFC]
 - notifications [MFC], CReBarCtrl
 ms.assetid: 40f43a60-0c18-4d8d-8fab-213a095624f9
-ms.openlocfilehash: 948990c8597c2ccdcec496252c6801c02a78cbf5
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: e1e1aaa5056b43f0dd23976fead94bc800163613
+ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69507955"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84625189"
 ---
 # <a name="processing-notification-messages-in-a-rebar-control"></a>Traitement des messages de notification dans un contrôle rebar
 
-Dans la classe parente du contrôle rebar, créez une `OnChildNotify` fonction de gestionnaire avec une instruction switch pour tous les messages de notification`CReBarCtrl`de contrôle rebar () que vous souhaitez gérer. Les notifications sont envoyées à la fenêtre parente lorsque l’utilisateur fait glisser des objets sur le contrôle rebar, modifie la disposition des bandes rebar, supprime les bandes du contrôle rebar, et ainsi de suite.
+Dans la classe parente du contrôle rebar, créez une `OnChildNotify` fonction de gestionnaire avec une instruction switch pour tous les messages de notification de contrôle rebar ( `CReBarCtrl` ) que vous souhaitez gérer. Les notifications sont envoyées à la fenêtre parente lorsque l’utilisateur fait glisser des objets sur le contrôle rebar, modifie la disposition des bandes rebar, supprime les bandes du contrôle rebar, et ainsi de suite.
 
-Les messages de notification suivants peuvent être envoyés par l’objet de contrôle rebar:
+Les messages de notification suivants peuvent être envoyés par l’objet de contrôle rebar :
 
-- RBN_AUTOSIZE envoyé par un contrôle rebar (créé avec le style RBS_AUTOSIZE) lorsque le rebar se redimensionne automatiquement.
+- RBN_AUTOSIZE envoyé par un contrôle rebar (créé avec le style RBS_AUTOSIZE) quand le rebar se redimensionne automatiquement.
 
 - RBN_BEGINDRAG Envoyé par un contrôle rebar lorsque l’utilisateur commence à faire glisser une bande.
 
@@ -42,5 +42,5 @@ Pour plus d’informations sur ces notifications, consultez [Rebar Control Refer
 
 ## <a name="see-also"></a>Voir aussi
 
-[Utilisation de CReBarCtrl](../mfc/using-crebarctrl.md)<br/>
-[Contrôles](../mfc/controls-mfc.md)
+[Utilisation de CReBarCtrl](using-crebarctrl.md)<br/>
+[Commandes](controls-mfc.md)

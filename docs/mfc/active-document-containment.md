@@ -8,35 +8,35 @@ helpviewer_keywords:
 - active document containers [MFC], about active document containers
 - MFC COM, active document containment
 ms.assetid: b8dfa74b-75ce-47df-b75e-fc87b7f7d687
-ms.openlocfilehash: dc13384454c4732d3efbf99def5d05dd4f2d44aa
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 1c524d6890cd7b86bcae2c40d8c602e7b04e751b
+ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62394961"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84623437"
 ---
 # <a name="active-document-containment"></a>Relation contenant-contenu de document actif
 
-Relation contenant-contenu de document actif est une technologie qui fournit un frame unique permettant de travailler avec des documents, au lieu de vous obliger à créer et utiliser plusieurs frames d’application pour chaque type de document. Elle est différente de la technologie OLE de base OLE fonctionne avec des objets incorporés dans un document composé dans lequel seule une partie du contenu peut être active. Avec relation contenant-contenu de document actif, vous activez un document entier (autrement dit, une application entière, y compris associés menus, barres d’outils et ainsi de suite) dans le contexte d’une seule image.
+La relation contenant-contenu de document actif est une technologie qui fournit une image unique dans laquelle travailler avec des documents, au lieu de vous contraindre à créer et à utiliser plusieurs frames d’application pour chaque type de document. Il diffère de la technologie OLE de base dans le sens où OLE fonctionne avec des objets incorporés dans un document composé dans lequel une seule partie du contenu peut être active. Avec la relation contenant-contenu de document actif, vous activez un document entier (c’est-à-dire, une application entière, y compris des menus associés, des barres d’outils, etc.) dans le contexte d’une image unique.
 
-La technologie de relation contenant-contenu de document actif a été développée pour Microsoft Office doivent implémenter le classeur Office. Toutefois, la technologie est suffisamment flexible pour prendre en charge des conteneurs de documents actifs autres que le classeur Office et peut prendre en charge les serveurs de documents autres que les applications Office et compatible avec Office.
+La technologie de relation contenant-contenu de document actif a été développée à l’origine pour Microsoft Office mettre en œuvre le classeur Office. Toutefois, la technologie est suffisamment flexible pour prendre en charge les conteneurs de documents actifs autres que le classeur Office et peut prendre en charge des serveurs de documents autres que des applications compatibles Office et Office.
 
-L’application qui héberge les documents actifs est appelée un [conteneur de documents actifs](../mfc/active-document-containers.md). Exemples de ces conteneurs sont le classeur Microsoft Office ou Microsoft Internet Explorer.
+L’application qui héberge des documents actifs est appelée un [conteneur de documents actifs](active-document-containers.md). Les exemples de ces conteneurs sont le classeur Microsoft Office ou Microsoft Internet Explorer.
 
-Relation contenant-contenu de document actif est implémenté comme un ensemble d’extensions vers OLE de documents, la technologie de document composé OLE. Les extensions sont des interfaces supplémentaires qui permettent à un objet intégrable, sur place représenter un document entier au lieu d’un seul élément de contenu incorporé. Comme avec les documents OLE, la relation contenant-contenu de document actif utilise un conteneur qui fournit l’espace d’affichage pour les documents actifs et les serveurs qui fournissent des fonctionnalités de manipulation et d’interface de l’utilisateur pour les documents actifs eux-mêmes.
+La relation contenant-contenu de document actif est implémentée sous la forme d’un ensemble d’extensions pour les documents OLE, la technologie de document composé d’OLE. Les extensions sont des interfaces supplémentaires qui permettent à un objet sur place incorporable de représenter un document entier plutôt qu’un seul élément de contenu incorporé. Comme avec les documents OLE, la relation contenant-contenu de document actif utilise un conteneur qui fournit l’espace d’affichage pour les documents actifs et les serveurs qui fournissent l’interface utilisateur et les fonctionnalités de manipulation pour les documents actifs eux-mêmes.
 
-Un [serveur de documents actifs](../mfc/active-document-servers.md) est une application (par exemple, Word, Excel ou PowerPoint) qui prend en charge une ou plusieurs classes de document actif, où chaque objet lui-même prend en charge les interfaces d’extension qui permettent à l’objet à activer dans un conteneur approprié.
+Un [serveur de documents actif](active-document-servers.md) est une application (telle que Word, Excel ou PowerPoint) qui prend en charge une ou plusieurs classes de document actives, où chaque objet lui-même prend en charge les interfaces d’extension qui autorisent l’activation de l’objet dans un conteneur approprié.
 
-Un [document actif](../mfc/active-documents.md) (fourni à partir d’un serveur de documents actifs tels que Word ou Excel) est essentiellement un document à grande échelle, conventionnel qui est incorporé en tant qu’objet dans un autre conteneur de documents actifs. Contrairement aux objets incorporés, les documents actifs contrôlent complètement leurs pages, et l’interface complète de l’application (avec toutes ses sous-jacente commandes et outils) est disponible à l’utilisateur pour les modifier.
+Un [document actif](active-documents.md) (fourni à partir d’un serveur de documents actif, tel que Word ou Excel) est essentiellement un document conventionnel à l’échelle complète qui est incorporé en tant qu’objet dans un autre conteneur de documents actifs. Contrairement aux objets incorporés, les documents actifs disposent d’un contrôle total sur leurs pages, et l’interface complète de l’application (avec tous ses outils et commandes sous-jacents) est à la disposition de l’utilisateur pour les modifier.
 
-Un document actif permet de mieux comprendre le comparer à partir d’un objet incorporé OLE standard. Suivre la convention OLE, un objet incorporé est un qui s’affiche dans la page du document auquel il appartient, et le document est géré par un conteneur OLE. Le conteneur stocke les données de l’objet incorporé avec le reste du document. Toutefois, les objets incorporés sont limitées dans la mesure où ils ne contrôlent pas la page sur laquelle ils apparaissent.
+Pour mieux comprendre un document actif, vous le distinguez d’un objet OLE incorporé standard. À la suite de la Convention OLE, un objet incorporé est un objet qui est affiché dans la page du document qui le possède et le document est géré par un conteneur OLE. Le conteneur stocke les données de l’objet incorporé avec le reste du document. Toutefois, les objets incorporés sont limités dans le fait qu’ils ne contrôlent pas la page sur laquelle ils apparaissent.
 
-Les utilisateurs d’une application de conteneur de documents actifs peuvent créer des documents actifs (appelés sections dans le classeur Office) à l’aide de leurs applications favorites (à condition que ces applications sont compatibles document actif), mais les utilisateurs peuvent gérer le projet résultant comme une une entité unique, ce qui peut porter un nom unique, enregistré, imprimé, et ainsi de suite. Dans la même façon, un utilisateur d’un navigateur Internet peut traiter l’ensemble du réseau, ainsi que les systèmes de fichiers locaux, comme une entité de stockage de document unique avec la possibilité de parcourir les documents dans ce stockage depuis un emplacement unique.
+Les utilisateurs d’une application de conteneur de documents actifs peuvent créer des documents actifs (appelés sections dans le classeur Office) à l’aide de leurs applications favorites (à condition que ces applications soient activées pour les documents actifs), mais les utilisateurs peuvent gérer le projet résultant en tant qu’entité unique, qui peut être nommée de manière unique, enregistrée, imprimée, etc. De la même façon, un utilisateur d’un navigateur Internet peut traiter l’ensemble du réseau, ainsi que des systèmes de fichiers locaux, comme une entité de stockage de documents unique, avec la possibilité de parcourir les documents de ce stockage à partir d’un emplacement unique.
 
 ## <a name="sample-programs"></a>Exemples de programmes
 
-- Le [MFCBIND](../overview/visual-cpp-samples.md) exemple illustre l’implémentation d’une application de conteneur de documents actifs.
+- L’exemple [MFCBIND](../overview/visual-cpp-samples.md) illustre l’implémentation d’une application de conteneur de documents actifs.
 
 ## <a name="see-also"></a>Voir aussi
 
-[MFC COM](../mfc/mfc-com.md)
+[MFC COM](mfc-com.md)
