@@ -7,19 +7,19 @@ helpviewer_keywords:
 - debugging [MFC], exception classes
 - debugging [MFC], classes for debugging
 ms.assetid: 0d158efd-2e62-452e-9d2a-d3c30dfee7f9
-ms.openlocfilehash: 328d7a38c544b56f83ea3e8b1136b1122c4dfa14
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 6c7d1fc20556993c3c6690122786d7a767d895ad
+ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62241170"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84625936"
 ---
 # <a name="debugging-and-exception-classes"></a>Débogage et classes d'exceptions
 
-Ces classes fournissent la prise en charge pour le débogage d’allocation de mémoire dynamique et pour passer des informations sur les exceptions à partir de la fonction où l’exception est levée à la fonction où elle est interceptée.
+Ces classes assurent la prise en charge du débogage de l’allocation de mémoire dynamique et du passage des informations sur les exceptions à partir de la fonction où l’exception est levée dans la fonction où elle est interceptée.
 
-Utilisez les classes [CDumpContext](../mfc/reference/cdumpcontext-class.md) et [CMemoryState](../mfc/reference/cmemorystate-structure.md) pendant le développement pour aider au débogage, comme décrit dans [débogage des Applications MFC](/visualstudio/debugger/mfc-debugging-techniques). Utilisez [CRuntimeClass](../mfc/reference/cruntimeclass-structure.md) pour déterminer la classe de n’importe quel objet en cours d’exécution, comme décrit dans l’article [l’accès aux informations sur la classe runtime](../mfc/accessing-run-time-class-information.md). L’infrastructure utilise `CRuntimeClass` pour créer dynamiquement des objets d’une classe particulière.
+Utilisez les classes [CDumpContext](reference/cdumpcontext-class.md) et [CMemoryState](reference/cmemorystate-structure.md) pendant le développement pour faciliter le débogage, comme décrit dans [débogage d’applications MFC](/visualstudio/debugger/mfc-debugging-techniques). Utilisez [CRuntimeClass](reference/cruntimeclass-structure.md) pour déterminer la classe d’un objet au moment de l’exécution, comme décrit dans l’article [accès aux informations de classe d’exécution](accessing-run-time-class-information.md). L’infrastructure utilise `CRuntimeClass` pour créer dynamiquement des objets d’une classe particulière.
 
 ## <a name="see-also"></a>Voir aussi
 
-[Vue d’ensemble de la classe](../mfc/class-library-overview.md)
+[Vue d'ensemble des classes](class-library-overview.md)

@@ -7,14 +7,14 @@ helpviewer_keywords:
 - aligned_storage class
 - aligned_storage
 ms.assetid: f255e345-1f05-4d07-81e4-017f420839fb
-ms.openlocfilehash: 8a4e907faa6175b9e03f5367d09501aaea388bce
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: 741106888cdab63a75e090e860269f125c35efa6
+ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68456475"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84623830"
 ---
-# <a name="alignedstorage-class"></a>aligned_storage, classe
+# <a name="aligned_storage-class"></a>aligned_storage, classe
 
 Crée un type correctement aligné.
 
@@ -38,7 +38,7 @@ Alignement de l'objet.
 
 ## <a name="remarks"></a>Notes
 
-Le typedef `type` de membre de modèle est un synonyme d’un type Pod avec alignement *align* et Size *Len*. *Align* doit être égal à `alignment_of<T>::value` pour un certain `T`type, ou à l’alignement par défaut.
+Le typedef de membre `type` de modèle est un synonyme d’un type Pod avec alignement *align* et Size *Len*. *Align* doit être égal à `alignment_of<T>::value` pour un certain type `T` , ou à l’alignement par défaut.
 
 ## <a name="example"></a>Exemple
 
@@ -66,11 +66,11 @@ aligned to double == 8
 
 ## <a name="requirements"></a>Configuration requise
 
-**En-tête :** \<type_traits>
+**En-tête :**\<type_traits>
 
 **Espace de noms :** std
 
 ## <a name="see-also"></a>Voir aussi
 
-[<type_traits>](../standard-library/type-traits.md)\
-[alignment_of, classe](../standard-library/alignment-of-class.md)
+[<type_traits>](type-traits.md)\
+[Classe alignment_of](alignment-of-class.md)

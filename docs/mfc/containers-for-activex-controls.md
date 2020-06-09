@@ -4,55 +4,55 @@ ms.date: 09/12/2018
 helpviewer_keywords:
 - ActiveX control containers [MFC], application support
 ms.assetid: 5ff0bf37-07f4-49aa-ad9c-c63d3756243a
-ms.openlocfilehash: 57b359d4d78c71ef2b0c8ceefad20c6521307a1b
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 875a5277da829b18befd56c50eeb1333c1635e0a
+ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81353565"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84625977"
 ---
 # <a name="containers-for-activex-controls"></a>Conteneurs de contrôles ActiveX
 
-Vous pouvez utiliser des contrôles ActiveX développés dans Visual CMD dans d’autres applications, tant qu’ils prennent en charge le confinement de contrôle ActiveX. Un certain nombre d’applications Microsoft, à commencer par les versions répertoriées, prennent en charge le confinement du contrôle ActiveX.
+Vous pouvez utiliser des contrôles ActiveX développés dans Visual C++ dans d’autres applications, à condition qu’ils prennent en charge la relation contenant-contenu des contrôles ActiveX. Plusieurs applications Microsoft, à partir des versions listées, prennent en charge la relation contenant-contenu des contrôles ActiveX.
 
 >[!IMPORTANT]
-> ActiveX est une technologie héritée qui ne devrait pas être utilisée pour de nouveaux développements. Pour plus d’informations sur les technologies modernes qui remplacent ActiveX, voir [ActiveX Controls](activex-controls.md).
+> ActiveX est une technologie héritée qui ne doit pas être utilisée pour un nouveau développement. Pour plus d’informations sur les technologies modernes qui remplacent ActiveX, consultez [contrôles ActiveX](activex-controls.md).
 
 > [!NOTE]
-> La liste suivante n’est pas une liste complète d’applications qui prennent en charge les contrôles ActiveX, mais représente l’ensemble utilisé le plus souvent dans les tests :
+> La liste suivante n’est pas une liste complète des applications qui prennent en charge les contrôles ActiveX, mais représente l’ensemble utilisé le plus souvent lors des tests :
 
-Les applications qui prennent en charge le confinement de contrôle ActiveX comprennent :
+Les applications qui prennent en charge la relation contenant-contenu de contrôle ActiveX sont les suivantes :
 
-- Internet Explorer 3.x et plus
+- Internet Explorer 3. x et versions ultérieures
 
-- Visual Basic 4.x et plus
+- Visual Basic 4. x et supérieur
 
-- Visuel C 4.x et plus
+- Visual C++ 4. x et supérieur
 
-- Accès 95 et plus
+- Access 95 et versions ultérieures
 
-- Excel 97 et plus
+- Excel 97 et versions ultérieures
 
-- Mot 97 et plus
+- Word 97 et versions ultérieures
 
-- Accès 97 et plus
+- Access 97 et versions ultérieures
 
-- FrontPage 97 et plus
+- FrontPage 97 et versions ultérieures
 
-- PowerPoint 97 et plus
+- PowerPoint 97 et versions ultérieures
 
-- Visual InterDev 97 et plus
+- Visual InterDev 97 et versions ultérieures
 
-Voici les applications non Microsoft qui prennent en charge le confinement de contrôle ActiveX :
+Voici les applications non-Microsoft qui prennent en charge la relation contenant-contenu des contrôles ActiveX :
 
 - PowerBuilder
 
 - Delphi
 
-- Constructeur de C
+- Générateur C++
 
-- NCompass Plug-in pour Netscape Navigator
+- Plug-in NCompass pour Netscape Navigator
 
 ## <a name="see-also"></a>Voir aussi
 
-[Conteneurs de contrôle ActiveX](../mfc/activex-control-containers.md)
+[Conteneurs de contrôles ActiveX](activex-control-containers.md)

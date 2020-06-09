@@ -2,12 +2,12 @@
 title: Configurer un projet Linux C++ dans Visual Studio
 ms.date: 06/11/2019
 ms.assetid: 4d7c6adf-54b9-4b23-bd23-5de0c825b768
-ms.openlocfilehash: 50d5df0e25e82238297458ec7fedb955654e525b
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: c60fd678caef20d8b5a715b0e40bba6a37407709
+ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "80150964"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84623596"
 ---
 # <a name="configure-a-linux-project"></a>Configurer un projet Linux
 
@@ -17,13 +17,13 @@ La prise en charge Linux est disponible dans Visual Studio 2017 et ultérieur.
 
 ::: moniker-end
 
-Cette rubrique explique comment configurer un projet Linux C++ comme décrit dans [Créer un projet Linux C++ dans Visual Studio](create-a-new-linux-project.md). Pour les projets CMake Linux, voir [Configurer un projet Linux CMake](cmake-linux-project.md).
+Cette rubrique explique comment configurer un projet Linux C++ comme décrit dans [Créer un projet Linux C++ dans Visual Studio](create-a-new-linux-project.md). Pour les projets CMake Linux, consultez [configurer un projet cmake Linux](cmake-linux-project.md).
 
 Vous pouvez configurer un projet Linux pour cibler une machine Linux physique, une machine virtuelle ou le [sous-système Windows pour Linux](/windows/wsl/about) (WSL).
 
 ::: moniker range="vs-2019"
 
-**Visual Studio 2019 version 16.1**:
+**Visual Studio 2019 version 16,1**:
 
 - Quand vous ciblez WSL, vous pouvez éviter les opérations de copie qui sont nécessaires pour la génération et IntelliSense lors du ciblage de systèmes Linux distants.
 
@@ -31,7 +31,7 @@ Vous pouvez configurer un projet Linux pour cibler une machine Linux physique, u
 
 ::: moniker-end
 
-## <a name="general-settings"></a>Paramètres généraux :
+## <a name="general-settings"></a>Paramètres généraux :
 
 Pour afficher les options de configuration, sélectionnez le menu **Projet > Propriétés** ou cliquez avec le bouton droit sur le projet dans l’**Explorateur de solutions** et sélectionnez **Propriétés** dans le menu contextuel. Les paramètres généraux s’affichent dans la section **Général**.
 
@@ -51,7 +51,7 @@ Pour changer les paramètres relatifs à l’ordinateur Linux distant, configure
 
    ::: moniker range="vs-2019"
 
-   **Visual Studio 2019 version 16.1**: Pour cibler Windows Subsystem pour Linux, cliquez sur la flèche vers le bas pour **Platform Toolset** et choisissez **WSL_1_0**. Les autres options distantes disparaissent et le chemin de l’interpréteur de commandes WSL par défaut s’affiche à leur place :
+   **Visual Studio 2019 version 16,1**: pour cibler le sous-système Windows pour Linux, cliquez sur la flèche vers le bas de l' **ensemble d’outils de plateforme** , puis choisissez **WSL_1_0**. Les autres options distantes disparaissent et le chemin de l’interpréteur de commandes WSL par défaut s’affiche à leur place :
 
    ![Machine de build WSL](media/wsl-remote-vs2019.png)
 
@@ -78,7 +78,7 @@ Cette section ne s’applique pas quand vous ciblez WSL.
 
 Lors de la génération sur des systèmes distants, les fichiers sources sur votre PC de développement sont copiés sur l’ordinateur Linux où ils sont compilés. Par défaut, toutes les sources dans le projet Visual Studio sont copiées aux emplacements définis dans les paramètres ci-dessus. Toutefois, des sources supplémentaires peuvent également être ajoutées à la liste, ou la copie des sources peut être entièrement désactivée, ce qui est le paramètre par défaut d’un projet Makefile.
 
-- L’option **Sources à copier** détermine quelles sources sont copiées sur l’ordinateur distant. Par défaut, les ** \@fichiers (SourcesToCopyRemotely)** sont par défaut à tous les fichiers de code source du projet, mais n’incluent aucun fichier d’actifs/ressources, tels que des images.
+- L’option **Sources à copier** détermine quelles sources sont copiées sur l’ordinateur distant. Par défaut, ** \@ (SourcesToCopyRemotely)** est défini par défaut sur tous les fichiers de code source du projet, mais n’inclut pas les fichiers de ressources/ressources, tels que les images.
 
 - L’option **Copier les sources** peut être activée et désactivée pour activer et désactiver la copie des fichiers sources sur l’ordinateur distant.
 
@@ -97,7 +97,7 @@ Lors de la génération sur des systèmes distants, les fichiers sources sur vot
 Quand vous ajoutez une nouvelle connexion dans le **Gestionnaire de connexions**, Visual Studio détecte automatiquement les répertoires include pour le compilateur sur le système distant. Visual Studio compresse ensuite ces fichiers et les copie dans un répertoire sur votre ordinateur Windows local. Après cela, chaque fois que vous utilisez cette connexion dans un projet Visual Studio ou CMake, les en-têtes dans ces répertoires sont utilisés pour fournir IntelliSense.
 
 > [!NOTE]
-> Dans Visual Studio 2019 version 16.5 et plus tard, la copie d’en-tête à distance a été optimisée. Les en-têtes sont maintenant copiés à la demande lors de l’ouverture d’un projet Linux ou de la configuration de CMake pour une cible Linux. La copie se fait en arrière-plan selon le projet, en fonction des compilateurs spécifiés du projet. Pour plus d’informations, voir [Améliorations à la précision et les performances de Linux IntelliSense](https://devblogs.microsoft.com/cppblog/improvements-to-accuracy-and-performance-of-linux-intellisense/).
+> Dans Visual Studio 2019 version 16,5 et versions ultérieures, la copie d’en-tête distant a été optimisée. Les en-têtes sont maintenant copiés à la demande lors de l’ouverture d’un projet Linux ou de la configuration de CMake pour une cible Linux. La copie se produit en arrière-plan par projet, en fonction des compilateurs spécifiés du projet. Pour plus d’informations, consultez améliorations de la [précision et des performances de Linux IntelliSense](https://devblogs.microsoft.com/cppblog/improvements-to-accuracy-and-performance-of-linux-intellisense/).
 
 Cette fonctionnalité nécessite l’installation de zip sur l’ordinateur Linux. Pour installer zip, utilisez cette commande apt-get :
 
@@ -126,7 +126,7 @@ Vous pouvez activer la journalisation pour faciliter la résolution des problèm
 ## <a name="see-also"></a>Voir aussi
 
 [Définir des propriétés de build et de compilateur](../build/working-with-project-properties.md)<br/>
-[Général C++, propriétés (Linux C++)](../linux/prop-pages/general-linux.md)<br/>
-[Répertoires VC++ (Linux C++)](../linux/prop-pages/directories-linux.md)<br/>
-[Copier les sources, propriétés de projet (Linux C++)](../linux/prop-pages/copy-sources-project.md)<br/>
-[Événement de build, propriétés (Linux C++)](../linux/prop-pages/build-events-linux.md)
+[Général C++, propriétés (Linux C++)](prop-pages/general-linux.md)<br/>
+[Répertoires VC++ (Linux C++)](prop-pages/directories-linux.md)<br/>
+[Copier les sources, propriétés de projet (Linux C++)](prop-pages/copy-sources-project.md)<br/>
+[Événement de build, propriétés (Linux C++)](prop-pages/build-events-linux.md)

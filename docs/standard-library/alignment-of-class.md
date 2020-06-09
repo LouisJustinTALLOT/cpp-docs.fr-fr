@@ -7,12 +7,12 @@ helpviewer_keywords:
 - alignment_of class
 - alignment_of
 ms.assetid: 4141c59a-f94e-41c4-93fd-9ea578b27387
-ms.openlocfilehash: d241848edf57fe4876c35e22f1762abf5d6888fa
-ms.sourcegitcommit: a5fa9c6f4f0c239ac23be7de116066a978511de7
+ms.openlocfilehash: c2af00ac32b3013820a3109783c4bf7eb42ec445
+ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/20/2019
-ms.locfileid: "75302313"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84623731"
 ---
 # <a name="alignment_of-class"></a>alignment_of, classe
 
@@ -25,7 +25,7 @@ template <class Ty>
 struct alignment_of;
 ```
 
-### <a name="parameters"></a>Parameters
+### <a name="parameters"></a>Paramètres
 
 *Ty*\
 Type à interroger.
@@ -34,13 +34,13 @@ Type à interroger.
 
 La requête de type contient la valeur de l’alignement du type *Ty*.
 
-## <a name="requirements"></a>Configuration requise pour
+## <a name="requirements"></a>Configuration requise
 
-**En-tête :** \<type_traits >
+**En-tête :**\<type_traits>
 
 **Espace de noms :** std
 
 ## <a name="see-also"></a>Voir aussi
 
-[<type_traits>](../standard-library/type-traits.md)\
-[aligned_storage, classe](../standard-library/aligned-storage-class.md)
+[<type_traits>](type-traits.md)\
+[Classe aligned_storage](aligned-storage-class.md)

@@ -10,23 +10,23 @@ helpviewer_keywords:
 - debugging [MFC], memory leaks
 - memory leaks, MFC debug classes
 ms.assetid: d79e084a-8326-4251-8700-4efac07c511e
-ms.openlocfilehash: 570a1e87eadcce18feacf20f9c25562662eb17c9
-ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
+ms.openlocfilehash: 46564cc3f2a10eb91ee3fff57a7d5f8bcafc8e49
+ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/17/2020
-ms.locfileid: "79446987"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84622887"
 ---
 # <a name="debugging-support-classes"></a>Classes de prise en charge du débogage
 
 MFC fournit les classes suivantes pour vous aider à déboguer les problèmes d’allocation de mémoire dynamique.
 
-[CDumpContext](../mfc/reference/cdumpcontext-class.md)<br/>
+[CDumpContext](reference/cdumpcontext-class.md)<br/>
 Fournit une destination pour les dumps de diagnostic.
 
-[CMemoryState](../mfc/reference/cmemorystate-structure.md)<br/>
+[CMemoryState](reference/cmemorystate-structure.md)<br/>
 Structure qui fournit des instantanés de l’utilisation de la mémoire. Permet également de comparer des instantanés de la mémoire antérieurs et ultérieurs.
 
 ## <a name="see-also"></a>Voir aussi
 
-[Vue d’ensemble de la classe](../mfc/class-library-overview.md)
+[Vue d'ensemble des classes](class-library-overview.md)

@@ -200,12 +200,12 @@ helpviewer_keywords:
 - std::count_if [C++]
 - std::partition_copy [C++]
 - std::swap [C++]
-ms.openlocfilehash: b9f1e5c4c5600fa07d2f9c5222bf57fb43446955
-ms.sourcegitcommit: 8e285a766523e653aeeb34d412dc6f615ef7b17b
+ms.openlocfilehash: c8c550be87eacf81fab994239e07ed2358fad39b
+ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/21/2020
-ms.locfileid: "80076828"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84617661"
 ---
 # <a name="ltalgorithmgt-functions"></a>&lt;algorithm&gt;, fonctions
 
@@ -241,16 +241,16 @@ ForwardIterator adjacent_find(
 
 ### <a name="parameters"></a>Paramètres
 
-\ d' *exécution*
+*exécutable*\
 Stratégie d’exécution à utiliser.
 
 *premier*\
 Itérateur vers l'avant ciblant la position du premier élément de la plage dans laquelle s'effectue la recherche.
 
-*dernier*\
+*famille*\
 Itérateur vers l'avant ciblant la position juste après le dernier élément de la plage dans laquelle s'effectue la recherche.
 
-*\ prévu*
+*prédit*\
 Prédicat binaire indiquant la condition à satisfaire par les valeurs des éléments adjacents de la plage dans laquelle s’effectue la recherche.
 
 ### <a name="return-value"></a>Valeur retournée
@@ -348,16 +348,16 @@ bool all_of(
 
 ### <a name="parameters"></a>Paramètres
 
-\ d' *exécution*
+*exécutable*\
 Stratégie d’exécution à utiliser.
 
 *premier*\
 Itérateur d’entrée qui indique le début de la recherche d’une condition. L’itérateur marque le début d’une plage d’éléments.
 
-*dernier*\
+*famille*\
 Itérateur d’entrée qui indique la fin d’une plage d’éléments dans laquelle rechercher une condition.
 
-*\ prévu*
+*prédit*\
 Condition à vérifier. Il s’agit d’un objet de fonction de prédicat défini par l’utilisateur qui définit la condition à satisfaire par l’élément vérifié. Un prédicat unaire accepte un seul argument et retourne **true** ou **false**.
 
 ### <a name="return-value"></a>Valeur retournée
@@ -366,7 +366,7 @@ Retourne la **valeur true** si la condition est détectée à chaque élément d
 
 ### <a name="remarks"></a>Notes
 
-La fonction de modèle retourne **true** uniquement si, pour chaque `N` de la plage `[0, last - first)`, le prédicat `pred(*(first + N))` a la **valeur true**.
+La fonction de modèle retourne **true** uniquement si, pour chaque `N` de la plage `[0, last - first)` , le prédicat `pred(*(first + N))` a la **valeur true**.
 
 ### <a name="example"></a>Exemple
 
@@ -424,16 +424,16 @@ bool any_of(
 
 ### <a name="parameters"></a>Paramètres
 
-\ d' *exécution*
+*exécutable*\
 Stratégie d’exécution à utiliser.
 
 *premier*\
 Itérateur d’entrée qui indique le début de la recherche d’une condition dans une plage d’éléments.
 
-*dernier*\
+*famille*\
 Itérateur d’entrée qui indique la fin d’une plage d’éléments dans laquelle rechercher une condition.
 
-*\ prévu*
+*prédit*\
 Condition à vérifier. Cette condition est fournie par un objet de fonction de prédicat défini par l’utilisateur. Le prédicat définit la condition à satisfaire par l’élément vérifié. Un prédicat unaire accepte un seul argument et retourne **true** ou **false**.
 
 ### <a name="return-value"></a>Valeur retournée
@@ -442,9 +442,9 @@ Retourne la **valeur true** si la condition est détectée au moins une fois dan
 
 ### <a name="remarks"></a>Notes
 
-La fonction de modèle retourne **true** uniquement si, pour certains `N` de la plage
+La fonction de modèle retourne **true** uniquement si, pour une partie `N` de la plage
 
-`[0, last - first)`, le prédicat `pred(*(first + N))` a la valeur true.
+`[0, last - first)`, le prédicat `pred(*(first + N))` est true.
 
 ### <a name="example"></a>Exemple
 
@@ -504,13 +504,13 @@ bool binary_search(
 *premier*\
 Itérateur vers l'avant ciblant la position du premier élément de la plage dans laquelle s'effectue la recherche.
 
-*dernier*\
+*famille*\
 Itérateur vers l'avant ciblant la position juste après le dernier élément de la plage dans laquelle s'effectue la recherche.
 
-*value*\
+*ajoutée*\
 Valeur qui doit correspondre à la valeur de l’élément ou qui doit satisfaire la condition avec la valeur d’élément spécifiée par le prédicat binaire.
 
-*\ prévu*
+*prédit*\
 Objet de fonction de prédicat défini par l’utilisateur qui définit la logique selon laquelle un élément est inférieur à un autre. Un prédicat binaire accepte deux arguments et retourne **true** quand la condition est satisfaite et **false** quand elle ne l’est pas.
 
 ### <a name="return-value"></a>Valeur retournée
@@ -527,7 +527,7 @@ Les plages sources ne sont pas modifiées par `binary_search`.
 
 Les types valeur des itérateurs vers l’avant doivent être comparables en termes d’infériorité pour être triés. Ainsi, pour deux éléments donnés, il est possible de déterminer s’ils sont équivalents (dans le sens où ni l’un ni l’autre n’est inférieur à l’autre) ou si l’un est inférieur à l’autre. De cette façon, les éléments non équivalents sont ordonnés
 
-La complexité de l’algorithme est logarithmique pour les itérateurs d’accès aléatoire et linéaire dans le cas contraire, avec le nombre d’étapes proportionnelles à (`last` - `first`).
+La complexité de l’algorithme est logarithmique pour les itérateurs d’accès aléatoire et linéaire dans le cas contraire, avec le nombre d’étapes proportionnelles à ( `last`  -  `first` ).
 
 ### <a name="example"></a>Exemple
 
@@ -640,21 +640,21 @@ constexpr const Type& clamp(
 
 ### <a name="parameters"></a>Paramètres
 
-*value*\
+*ajoutée*\
 Valeur à comparer en *majuscules* et en *minuscules*.
 
-\ *inférieure*
+*inférieur*\
 Limite inférieure des valeurs auxquelles fixer la *valeur* .
 
-\ *supérieur*
+*coin*\
 Limite supérieure des valeurs auxquelles fixer la *valeur* .
 
-*\ prévu*
+*prédit*\
 Prédicat utilisé pour comparer la valeur à la *valeur* *inférieure* ou *supérieure*. Un prédicat de comparaison prend deux arguments et retourne la **valeur true** si le premier est dans un sens inférieur à la seconde, et **false**dans le cas contraire.
 
 ### <a name="return-value"></a>Valeur retournée
 
-Retourne une référence à *Lower* si `value < lower`, ou une référence à *Upper* si `upper < value`. Sinon, elle retourne une référence à *value*.
+Retourne une référence à *Lower* si `value < lower` , ou une référence à *Upper* si `upper < value` . Sinon, elle retourne une référence à *value*.
 
 ### <a name="remarks"></a>Notes
 
@@ -681,13 +681,13 @@ ForwardIterator2 copy(
 
 ### <a name="parameters"></a>Paramètres
 
-\ d' *exécution*
+*exécutable*\
 Stratégie d’exécution à utiliser.
 
 *premier*\
 Itérateur d’entrée ciblant la position du premier élément dans la plage source.
 
-*dernier*\
+*famille*\
 Itérateur d’entrée ciblant la position située de suite après le dernier élément de la plage source.
 
 *destBeg*\
@@ -695,13 +695,13 @@ Itérateur de sortie qui traite la position du premier élément dans la plage d
 
 ### <a name="return-value"></a>Valeur retournée
 
-Itérateur de sortie ciblant la position située un après le dernier élément de la plage de destination, autrement dit, l’itérateur adresse `result` + (*last* - *First*).
+Itérateur de sortie ciblant la position située de suite après le dernier élément de la plage de destination, autrement dit, l’itérateur adresse `result` + (*Last*  -  *First*).
 
 ### <a name="remarks"></a>Notes
 
 La plage source doit être valide et il doit y avoir suffisamment d'espace au niveau de la destination pour contenir tous les éléments qui sont copiés.
 
-Étant donné que l’algorithme copie les éléments sources dans l’ordre en commençant par le premier élément, la plage de destination peut se chevaucher avec la plage source, à condition que la *dernière* position de la plage source ne soit pas contenue dans la plage de destination. `copy` peut être utilisé pour décaler des éléments vers la gauche mais pas vers la droite, sauf s’il n’existe aucun chevauchement entre les plages source et de destination. Pour décaler vers la droite d’un nombre quelconque de positions, utilisez l’algorithme [copy_backward](../standard-library/algorithm-functions.md#copy_backward).
+Étant donné que l’algorithme copie les éléments sources dans l’ordre en commençant par le premier élément, la plage de destination peut se chevaucher avec la plage source, à condition que la *dernière* position de la plage source ne soit pas contenue dans la plage de destination. `copy`peut être utilisé pour décaler des éléments vers la gauche mais pas vers la droite, sauf s’il n’existe aucun chevauchement entre les plages source et de destination. Pour décaler vers la droite d’un nombre quelconque de positions, utilisez l’algorithme [copy_backward](algorithm-functions.md#copy_backward).
 
 L'algorithme `copy` modifie uniquement les valeurs sur lesquelles pointent les itérateurs, assignant de nouvelles valeurs aux éléments dans la plage de destination. Il ne peut pas être utilisé pour créer de nouveaux éléments et ne peut pas insérer directement d'éléments dans un conteneur vide.
 
@@ -780,7 +780,7 @@ BidirectionalIterator2 copy_backward(
 *premier*\
 Itérateur bidirectionnel se rapportant à la position du premier élément dans la plage source.
 
-*dernier*\
+*famille*\
 Itérateur bidirectionnel se rapportant à la position située immédiatement après l'élément final dans la plage source.
 
 *destEnd*\
@@ -788,17 +788,17 @@ Itérateur bidirectionnel se rapportant à la position située immédiatement ap
 
 ### <a name="return-value"></a>Valeur retournée
 
-Itérateur de sortie ciblant la position située de suite après le dernier élément de la plage de destination, autrement dit, l’itérateur traite *destEnd* -(*Last* - *First*).
+Itérateur de sortie ciblant la position située de suite après le dernier élément de la plage de destination, autrement dit, l’itérateur adresse *destEnd* -(*Last*  -  *First*).
 
 ### <a name="remarks"></a>Notes
 
 La plage source doit être valide et il doit y avoir suffisamment d'espace au niveau de la destination pour contenir tous les éléments qui sont copiés.
 
-L’algorithme `copy_backward` impose des exigences plus strictes que celles de l’algorithme de `copy`. Ses itérateurs d'entrée et de sortie doivent être bidirectionnels.
+L' `copy_backward` algorithme impose des exigences plus strictes que celles de l' `copy` algorithme. Ses itérateurs d'entrée et de sortie doivent être bidirectionnels.
 
-Les algorithmes `copy_backward` et [move_backward](../standard-library/algorithm-functions.md#move_backward) sont les seuls algorithmes de la bibliothèque C++ Standard qui désignent la plage de sortie avec un itérateur pointant vers la fin de la plage de destination.
+Les algorithmes `copy_backward` et [move_backward](algorithm-functions.md#move_backward) sont les seuls algorithmes de la bibliothèque C++ Standard qui désignent la plage de sortie avec un itérateur pointant vers la fin de la plage de destination.
 
-Étant donné que l’algorithme copie les éléments sources dans l’ordre en commençant par le dernier élément, la plage de destination peut se chevaucher avec la plage source, à condition que la *première* position de la plage source ne soit pas contenue dans la plage de destination. `copy_backward` peut être utilisé pour décaler des éléments vers la droite mais pas vers la gauche, à moins qu'il n'y ait aucun chevauchement entre la plage source et celle de destination. Pour décaler vers la gauche d’un nombre quelconque de positions, utilisez l’algorithme [copy](../standard-library/algorithm-functions.md#copy).
+Étant donné que l’algorithme copie les éléments sources dans l’ordre en commençant par le dernier élément, la plage de destination peut se chevaucher avec la plage source, à condition que la *première* position de la plage source ne soit pas contenue dans la plage de destination. `copy_backward` peut être utilisé pour décaler des éléments vers la droite mais pas vers la gauche, à moins qu'il n'y ait aucun chevauchement entre la plage source et celle de destination. Pour décaler vers la gauche d’un nombre quelconque de positions, utilisez l’algorithme [copy](algorithm-functions.md#copy).
 
 L'algorithme `copy_backward` modifie uniquement les valeurs sur lesquelles pointent les itérateurs, assignant de nouvelles valeurs aux éléments dans la plage de destination. Il ne peut pas être utilisé pour créer de nouveaux éléments et ne peut pas insérer directement d'éléments dans un conteneur vide.
 
@@ -883,19 +883,19 @@ ForwardIterator2 copy_if(
 
 ### <a name="parameters"></a>Paramètres
 
-\ d' *exécution*
+*exécutable*\
 Stratégie d’exécution à utiliser.
 
 *premier*\
 Itérateur d’entrée qui indique le début d’une plage dans laquelle rechercher la condition.
 
-*dernier*\
+*famille*\
 Itérateur d’entrée qui indique la fin de la plage.
 
 *dest*\
 Itérateur de sortie qui indique la destination des éléments copiés.
 
-*\ prévu*
+*prédit*\
 Condition pour laquelle chaque élément de la plage est vérifié. Cette condition est fournie par un objet de fonction de prédicat défini par l’utilisateur. Un prédicat unaire accepte un argument et retourne **true** ou **false**.
 
 ### <a name="return-value"></a>Valeur retournée
@@ -908,7 +908,7 @@ La fonction de modèle évalue
 
 `if (pred(*first + N)) * dest++ = *(first + N))`
 
-une fois pour chaque `N` de la plage `[0, last - first)`, pour les valeurs strictement croissantes de `N` en commençant par la valeur la plus petite. Si *dest* et désignent d' *abord* les régions de stockage, la *destination* ne doit pas être comprise dans la plage `[ first, last )`.
+une fois pour chaque `N` de la plage `[0, last - first)`, pour les valeurs strictement croissantes de `N` en commençant par la valeur la plus petite. Si *dest* et désignent d' *abord* les régions de stockage, la *destination* ne doit pas être comprise dans la plage `[ first, last )` .
 
 ### <a name="example"></a>Exemple
 
@@ -986,13 +986,13 @@ ForwardIterator2 copy_n(
 
 ### <a name="parameters"></a>Paramètres
 
-\ d' *exécution*
+*exécutable*\
 Stratégie d’exécution à utiliser.
 
 *premier*\
 Itérateur d'entrée qui indique l'emplacement à partir duquel les éléments doivent être copiés.
 
-*nombre*\
+*saut*\
 Type entier signé ou non signé spécifiant le nombre d'éléments à copier.
 
 *dest*\
@@ -1004,7 +1004,7 @@ Retourne un itérateur de sortie indiquant où les éléments ont été copiés.
 
 ### <a name="remarks"></a>Notes
 
-La fonction de modèle évalue `*(dest + N) = *(first + N))` une fois pour chaque `N` de la plage `[0, count)`, afin d’améliorer strictement les valeurs de `N` à partir de la valeur la plus faible. Elle retourne ensuite `dest + N`. Si *dest* et désignent d' *abord* les régions de stockage, la *destination* ne doit pas être comprise dans la plage `[first, last)`.
+La fonction de modèle évalue `*(dest + N) = *(first + N))` une fois pour chaque `N` de la plage `[0, count)`, pour les valeurs strictement croissantes de `N` en commençant par la valeur la plus petite. Elle retourne ensuite `dest + N`. Si *dest* et désignent d' *abord* les régions de stockage, la *destination* ne doit pas être comprise dans la plage `[first, last)` .
 
 ### <a name="example"></a>Exemple
 
@@ -1057,27 +1057,27 @@ count(
 
 ### <a name="parameters"></a>Paramètres
 
-\ d' *exécution*
+*exécutable*\
 Stratégie d’exécution à utiliser.
 
 *premier*\
 Itérateur d’entrée ciblant la position du premier élément de la plage à traverser.
 
-*dernier*\
+*famille*\
 Itérateur d’entrée ciblant la position juste après le dernier élément de la plage à traverser.
 
-*value*\
+*ajoutée*\
 Valeur des éléments à compter.
 
 ### <a name="return-value"></a>Valeur retournée
 
-Type de différence du `InputIterator` qui compte le nombre d’éléments de la plage [*First*, *Last*) qui ont la *valeur*value.
+Type de différence du `InputIterator` qui compte le nombre d’éléments de la plage [*First*, *Last*) qui ont la valeur *value*value.
 
 ### <a name="remarks"></a>Notes
 
 `operator==`, qui sert à déterminer la correspondance entre un élément et la valeur spécifiée, doit imposer une relation d'équivalence entre ses opérandes.
 
-Cet algorithme est généralisé pour compter les éléments qui satisfont un prédicat avec la fonction de modèle [count_if](../standard-library/algorithm-functions.md#count_if).
+Cet algorithme est généralisé pour compter les éléments qui satisfont un prédicat avec la fonction de modèle [count_if](algorithm-functions.md#count_if).
 
 ### <a name="example"></a>Exemple
 
@@ -1138,16 +1138,16 @@ count_if(
 
 ### <a name="parameters"></a>Paramètres
 
-\ d' *exécution*
+*exécutable*\
 Stratégie d’exécution à utiliser.
 
 *premier*\
 Itérateur d'entrée qui traite la position du premier élément de la plage à rechercher.
 
-*dernier*\
+*famille*\
 Itérateur d'entrée qui traite la position située au-delà du dernier élément de la plage à rechercher.
 
-*\ prévu*
+*prédit*\
 Objet de fonction de prédicat défini par l’utilisateur qui définit la condition à satisfaire si un élément doit être compté. Un prédicat unaire accepte un seul argument et retourne **true** ou **false**.
 
 ### <a name="return-value"></a>Valeur retournée
@@ -1156,7 +1156,7 @@ Nombre d’éléments qui satisfont la condition spécifiée par le prédicat.
 
 ### <a name="remarks"></a>Notes
 
-Cette fonction de modèle est une généralisation de l’algorithme [count](../standard-library/algorithm-functions.md#count) et remplace le prédicat « est égal à une valeur spécifique » par un autre prédicat.
+Cette fonction de modèle est une généralisation de l’algorithme [count](algorithm-functions.md#count) et remplace le prédicat « est égal à une valeur spécifique » par un autre prédicat.
 
 ### <a name="example"></a>Exemple
 
@@ -1273,22 +1273,22 @@ bool equal(
 
 ### <a name="parameters"></a>Paramètres
 
-\ d' *exécution*
+*exécutable*\
 Stratégie d’exécution à utiliser.
 
-*first1*\
+*First1*\
 Itérateur d'entrée qui traite la position du premier élément de la première plage à tester.
 
 *last1*\
 Itérateur d'entrée qui traite la position qui suit le dernier élément de la première plage à tester.
 
-*first2*\
+*First2*\
 Itérateur d'entrée qui traite la position du premier élément de la deuxième plage à tester.
 
 *last2*\
 Itérateur d'entrée qui traite la position qui suit le dernier élément de la deuxième plage à tester.
 
-*\ prévu*
+*prédit*\
 Objet de fonction de prédicat défini par l'utilisateur qui définit la condition à satisfaire si deux éléments sont à considérer comme équivalents. Un prédicat binaire accepte deux arguments et retourne **true** quand la condition est satisfaite et **false** quand elle ne l’est pas.
 
 ### <a name="return-value"></a>Valeur retournée
@@ -1360,13 +1360,13 @@ pair<ForwardIterator, ForwardIterator> equal_range(
 *premier*\
 Itérateur vers l'avant ciblant la position du premier élément de la plage dans laquelle s'effectue la recherche.
 
-*dernier*\
+*famille*\
 Itérateur vers l'avant ciblant la position juste après le dernier élément de la plage dans laquelle s'effectue la recherche.
 
-*value*\
+*ajoutée*\
 Valeur recherchée dans la plage ordonnée.
 
-*\ prévu*
+*prédit*\
 Objet de fonction de prédicat défini par l’utilisateur qui définit la logique selon laquelle un élément est inférieur à un autre. Un prédicat de comparaison prend deux arguments et retourne la **valeur true** lorsque la valeur est satisfaite et **false** lorsqu’elle n’est pas satisfaite.
 
 ### <a name="return-value"></a>Valeur retournée
@@ -1377,13 +1377,13 @@ Si aucun élément de la plage n’est équivalent à *value*, les itérateurs v
 
 ### <a name="remarks"></a>Notes
 
-Le premier itérateur de la paire retournée par l’algorithme est [lower_bound](../standard-library/algorithm-functions.md#lower_bound) et le deuxième est [upper_bound](../standard-library/algorithm-functions.md#upper_bound).
+Le premier itérateur de la paire retournée par l’algorithme est [lower_bound](algorithm-functions.md#lower_bound) et le deuxième est [upper_bound](algorithm-functions.md#upper_bound).
 
 La plage doit être triée selon le prédicat fourni à `equal_range`. Par exemple, si vous comptez utiliser le prédicat Supérieur à, la plage doit être triée par ordre décroissant.
 
-Les éléments de la sous-plage éventuellement vide définie par la paire d’itérateurs retournés par `equal_range` seront équivalents à la *valeur* dans le sens défini par le prédicat utilisé.
+Les éléments de la sous-plage éventuellement vide définie par la paire d’itérateurs retournées par `equal_range` sont équivalents à la *valeur* dans le sens défini par le prédicat utilisé.
 
-La complexité de l’algorithme est logarithmique pour les itérateurs d’accès aléatoire et linéaire dans le cas contraire, avec le nombre d’étapes proportionnels à (*dernière* - en *premier*).
+La complexité de l’algorithme est logarithmique pour les itérateurs d’accès aléatoire et linéaire dans le cas contraire, avec le nombre d’étapes proportionnels à (*Last*  -  *First*).
 
 ### <a name="example"></a>Exemple
 
@@ -1523,16 +1523,16 @@ void fill(
 
 ### <a name="parameters"></a>Paramètres
 
-\ d' *exécution*
+*exécutable*\
 Stratégie d’exécution à utiliser.
 
 *premier*\
 Itérateur vers l’avant ciblant la position du premier élément de la plage à traverser.
 
-*dernier*\
+*famille*\
 Itérateur vers l’avant ciblant la position juste après le dernier élément de la plage à traverser.
 
-*value*\
+*ajoutée*\
 Valeur à assigner aux éléments de la plage [*First*, *Last*).
 
 ### <a name="remarks"></a>Notes
@@ -1601,16 +1601,16 @@ ForwardIterator fill_n(
 
 ### <a name="parameters"></a>Paramètres
 
-\ d' *exécution*
+*exécutable*\
 Stratégie d’exécution à utiliser.
 
 *premier*\
 Itérateur de sortie ciblant la position du premier élément de la plage à laquelle *la valeur de*la valeur doit être affectée.
 
-*nombre*\
+*saut*\
 Type entier signé ou non signé spécifiant le nombre d’éléments auxquels attribuer une valeur.
 
-*value*\
+*ajoutée*\
 Valeur à assigner aux éléments de la plage [*First*, *First + Count*).
 
 ### <a name="return-value"></a>Valeur retournée
@@ -1690,16 +1690,16 @@ ForwardIterator find(
 
 ### <a name="parameters"></a>Paramètres
 
-\ d' *exécution*
+*exécutable*\
 Stratégie d’exécution à utiliser.
 
 *premier*\
 Itérateur d'entrée qui traite la position du premier élément de la plage où effectuer la recherche de la valeur spécifiée.
 
-*dernier*\
+*famille*\
 Itérateur d'entrée qui traite la position située au-delà du dernier élément de la plage où effectuer la recherche de la valeur spécifiée.
 
-*value*\
+*ajoutée*\
 Valeur à rechercher.
 
 ### <a name="return-value"></a>Valeur retournée
@@ -1710,7 +1710,7 @@ Itérateur d'entrée qui traite la première occurrence de la valeur spécifiée
 
 `operator==`, qui sert à déterminer la correspondance entre un élément et la valeur spécifiée, doit imposer une relation d'équivalence entre ses opérandes.
 
-Pour obtenir un exemple de code avec `find()`, consultez [find_if](../standard-library/algorithm-functions.md#find_if).
+Pour obtenir un exemple de code avec `find()`, consultez [find_if](algorithm-functions.md#find_if).
 
 ## <a name="find_end"></a><a name="find_end"></a>find_end
 
@@ -1755,19 +1755,19 @@ find_end(
 
 ### <a name="parameters"></a>Paramètres
 
-*first1*\
+*First1*\
 Itérateur vers l'avant ciblant la position du premier élément de la plage dans laquelle s'effectue la recherche.
 
 *last1*\
 Itérateur vers l'avant ciblant la position juste après le dernier élément de la plage dans laquelle s'effectue la recherche.
 
-*first2*\
+*First2*\
 Itérateur vers l'avant ciblant la position du premier élément de la plage dans laquelle s'effectue la recherche.
 
 *last2*\
 Itérateur vers l'avant ciblant la position juste après le dernier élément de la plage dans laquelle s'effectue la recherche.
 
-*\ prévu*
+*prédit*\
 Objet de fonction de prédicat défini par l'utilisateur qui définit la condition à satisfaire si deux éléments sont à considérer comme équivalents. Un prédicat binaire accepte deux arguments et retourne **true** quand la condition est satisfaite et **false** quand elle ne l’est pas.
 
 ### <a name="return-value"></a>Valeur retournée
@@ -1919,19 +1919,19 @@ find_first_of(
 
 ### <a name="parameters"></a>Paramètres
 
-*first1*\
+*First1*\
 Itérateur vers l'avant ciblant la position du premier élément de la plage dans laquelle s'effectue la recherche.
 
 *last1*\
 Itérateur vers l'avant ciblant la position juste après le dernier élément de la plage dans laquelle s'effectue la recherche.
 
-*first2*\
+*First2*\
 Itérateur vers l'avant ciblant la position du premier élément de la plage dans laquelle s'effectue la correspondance.
 
 *last2*\
 Itérateur vers l'avant ciblant la position juste après le dernier élément de la plage dans laquelle s'effectue la correspondance.
 
-*\ prévu*
+*prédit*\
 Objet de fonction de prédicat défini par l'utilisateur qui définit la condition à satisfaire si deux éléments sont à considérer comme équivalents. Un prédicat binaire accepte deux arguments et retourne **true** quand la condition est satisfaite et **false** quand elle ne l’est pas.
 
 ### <a name="return-value"></a>Valeur retournée
@@ -2066,11 +2066,11 @@ ForwardIterator find_if(
 *premier*\
 Itérateur d'entrée qui traite la position du premier élément de la plage à rechercher.
 
-*dernier*\
+*famille*\
 Itérateur d'entrée qui traite la position située au-delà du dernier élément de la plage à rechercher.
 
-*\ prévu*
-Objet de fonction de prédicat défini par l’utilisateur ou [expression lambda](../cpp/lambda-expressions-in-cpp.md) qui définit la condition à satisfaire par l’élément recherché. Un prédicat unaire accepte un seul argument et retourne **true** s’il est satisfait ou **false** s’il n’est pas respecté. La signature de *prédit* doit être `bool pred(const T& arg);`, où `T` est un type dans lequel `InputIterator` peut être converti implicitement en cas de déréférencement. Le mot clé **const** s’affiche uniquement pour illustrer que l’objet de fonction ou l’expression lambda ne doit pas modifier l’argument.
+*prédit*\
+Objet de fonction de prédicat défini par l’utilisateur ou [expression lambda](../cpp/lambda-expressions-in-cpp.md) qui définit la condition à satisfaire par l’élément recherché. Un prédicat unaire accepte un seul argument et retourne **true** s’il est satisfait ou **false** s’il n’est pas respecté. La signature de *prédit* doit être effectivement `bool pred(const T& arg);` , où `T` est un type dans lequel `InputIterator` peut être converti implicitement lorsqu’il est déréférencé. Le mot clé **const** s’affiche uniquement pour illustrer que l’objet de fonction ou l’expression lambda ne doit pas modifier l’argument.
 
 ### <a name="return-value"></a>Valeur retournée
 
@@ -2078,7 +2078,7 @@ Itérateur d’entrée qui fait référence au premier élément de la plage qui
 
 ### <a name="remarks"></a>Notes
 
-Cette fonction de modèle est une généralisation de l’algorithme [find](../standard-library/algorithm-functions.md#find) et remplace le prédicat « est égal à une valeur spécifique » par un autre prédicat. Pour l’opposé logique (rechercher le premier élément qui ne satisfait pas le prédicat), consultez [find_if_not](../standard-library/algorithm-functions.md#find_if_not).
+Cette fonction de modèle est une généralisation de l’algorithme [find](algorithm-functions.md#find) et remplace le prédicat « est égal à une valeur spécifique » par un autre prédicat. Pour l’opposé logique (rechercher le premier élément qui ne satisfait pas le prédicat), consultez [find_if_not](algorithm-functions.md#find_if_not).
 
 ### <a name="example"></a>Exemple
 
@@ -2188,11 +2188,11 @@ ForwardIterator find_if_not(
 *premier*\
 Itérateur d'entrée qui traite la position du premier élément de la plage à rechercher.
 
-*dernier*\
+*famille*\
 Itérateur d'entrée qui traite la position située au-delà du dernier élément de la plage à rechercher.
 
-*\ prévu*
-Objet de fonction de prédicat défini par l’utilisateur ou [expression lambda](../cpp/lambda-expressions-in-cpp.md) qui définit la condition à ne pas satisfaire par l’élément recherché. Un prédicat unaire accepte un seul argument et retourne **true** s’il est satisfait ou **false** s’il n’est pas respecté. La signature de *prédit* doit être `bool pred(const T& arg);`, où `T` est un type dans lequel `InputIterator` peut être converti implicitement en cas de déréférencement. Le mot clé **const** s’affiche uniquement pour illustrer que l’objet de fonction ou l’expression lambda ne doit pas modifier l’argument.
+*prédit*\
+Objet de fonction de prédicat défini par l’utilisateur ou [expression lambda](../cpp/lambda-expressions-in-cpp.md) qui définit la condition à ne pas satisfaire par l’élément recherché. Un prédicat unaire accepte un seul argument et retourne **true** s’il est satisfait ou **false** s’il n’est pas respecté. La signature de *prédit* doit être effectivement `bool pred(const T& arg);` , où `T` est un type dans lequel `InputIterator` peut être converti implicitement lorsqu’il est déréférencé. Le mot clé **const** s’affiche uniquement pour illustrer que l’objet de fonction ou l’expression lambda ne doit pas modifier l’argument.
 
 ### <a name="return-value"></a>Valeur retournée
 
@@ -2200,9 +2200,9 @@ Itérateur d’entrée qui fait référence au premier élément de la plage qui
 
 ### <a name="remarks"></a>Notes
 
-Cette fonction de modèle est une généralisation de l’algorithme [find](../standard-library/algorithm-functions.md#find) et remplace le prédicat « est égal à une valeur spécifique » par un autre prédicat. Pour l’opposé logique (rechercher le premier élément qui satisfait le prédicat), consultez [find_if](../standard-library/algorithm-functions.md#find_if).
+Cette fonction de modèle est une généralisation de l’algorithme [find](algorithm-functions.md#find) et remplace le prédicat « est égal à une valeur spécifique » par un autre prédicat. Pour l’opposé logique (rechercher le premier élément qui satisfait le prédicat), consultez [find_if](algorithm-functions.md#find_if).
 
-Pour obtenir un exemple de code facilement adaptable à `find_if_not()`, consultez [find_if](../standard-library/algorithm-functions.md#find_if).
+Pour obtenir un exemple de code facilement adaptable à `find_if_not()`, consultez [find_if](algorithm-functions.md#find_if).
 
 ## <a name="for_each"></a><a name="for_each"></a>for_each
 
@@ -2228,10 +2228,10 @@ void for_each(
 *premier*\
 Itérateur d’entrée ciblant la position du premier élément de la plage à traiter.
 
-*dernier*\
+*famille*\
 Itérateur d’entrée ciblant la position juste après le dernier élément de la plage à traiter.
 
-\ *Func*
+*Func*\
 Objet de fonction défini par l’utilisateur appliqué à chaque élément de la plage.
 
 ### <a name="return-value"></a>Valeur retournée
@@ -2244,7 +2244,7 @@ L’algorithme `for_each` est très souple et autorise la modification de chaque
 
 La plage référencée doit être valide ; tous les pointeurs doivent pouvoir être déréférencés et, dans la séquence, la dernière position doit être accessible depuis la première au moyen d'une incrémentation.
 
-La complexité est linéaire avec au maximum (*dernière* - *première*) comparaisons.
+La complexité est linéaire avec au maximum (*dernière*  -  *priorité*) comparaisons.
 
 ### <a name="example"></a>Exemple
 
@@ -2399,10 +2399,10 @@ void generate(
 *premier*\
 Itérateur vers l’avant ciblant la position du premier élément de la plage auquel les valeurs doivent être attribuées.
 
-*dernier*\
+*famille*\
 Itérateur vers l’avant ciblant la position juste après le dernier élément de la plage auquel les valeurs doivent être attribuées.
 
-\ de la *génération*
+*général*\
 Objet de fonction qui est appelé sans argument qui permet de générer les valeurs à assigner à chacun des éléments de la plage.
 
 ### <a name="remarks"></a>Notes
@@ -2411,7 +2411,7 @@ L'objet de fonction est appelé pour chaque élément de la plage et n'a pas bes
 
 La plage référencée doit être valide ; tous les pointeurs doivent pouvoir être déréférencés et, dans la séquence, la dernière position doit être accessible depuis la première au moyen d'une incrémentation.
 
-La complexité est linéaire, avec exactement (`last` - `first`) les appels au générateur requis.
+La complexité est linéaire, avec exactement ( `last`  -  `first` ) les appels au générateur requis.
 
 ### <a name="example"></a>Exemple
 
@@ -2477,16 +2477,16 @@ ForwardIterator generate_n(
 
 ### <a name="parameters"></a>Paramètres
 
-\ d' *exécution*
+*exécutable*\
 Stratégie d’exécution à utiliser.
 
 *premier*\
 Itérateur de sortie se rapportant à la position du premier élément dans la plage auquel les valeurs doivent être assignées.
 
-*nombre*\
+*saut*\
 Type entier signé ou non signé spécifiant le nombre d'éléments auxquels une valeur doit être assignée par la fonction de générateur.
 
-\ de la *génération*
+*général*\
 Objet de fonction qui est appelé sans argument qui permet de générer les valeurs à assigner à chacun des éléments de la plage.
 
 ### <a name="remarks"></a>Notes
@@ -2582,22 +2582,22 @@ bool includes(
 
 ### <a name="parameters"></a>Paramètres
 
-\ d' *exécution*
+*exécutable*\
 Stratégie d’exécution à utiliser.
 
-*first1*\
+*First1*\
 Itérateur d’entrée ciblant la position du premier élément de la première de deux plages sources triées à vérifier pour déterminer si tous les éléments de la deuxième sont contenus dans la première.
 
 *last1*\
 Itérateur d’entrée ciblant la position juste après le dernier élément de la première de deux plages sources triées à vérifier pour déterminer si tous les éléments de la deuxième sont contenus dans la première.
 
-*first2*\
+*First2*\
 Itérateur d’entrée ciblant la position du premier élément de la deuxième de deux plages sources triées consécutives à vérifier pour déterminer si tous les éléments de la deuxième sont contenus dans la première.
 
 *last2*\
 Itérateur d’entrée ciblant la position juste après le dernier élément de la deuxième de deux plages sources triées consécutives à vérifier pour déterminer si tous les éléments de la deuxième sont contenus dans la première.
 
-*\ prévu*
+*prédit*\
 Objet de fonction de prédicat défini par l’utilisateur qui définit la logique selon laquelle un élément est inférieur à un autre. Un prédicat de comparaison prend deux arguments et retourne la **valeur true** lorsque la valeur est satisfaite et **false** lorsqu’elle n’est pas satisfaite.
 
 ### <a name="return-value"></a>Valeur retournée
@@ -2612,11 +2612,11 @@ Les plages sources triées référencées doivent être valides ; tous les poin
 
 Les plages sources triées doivent chacune être organisées comme une condition préalable à l’application de l’algorithme includes selon le même ordre que celui utilisé par l’algorithme pour trier les plages regroupées.
 
-Les plages sources ne sont pas modifiées par l’algorithme `merge`.
+Les plages sources ne sont pas modifiées par l’algorithme `merge` .
 
-Les types de valeur des itérateurs d’entrée doivent être comparables en termes d’infériorité pour être classés. Ainsi, pour deux éléments donnés, il est possible de déterminer s’ils sont équivalents (dans le sens où ni l’un ni l’autre n’est inférieur à l’autre) ou si l’un est inférieur à l’autre. Cela entraîne le tri des éléments non équivalents. Plus précisément, l’algorithme vérifie si tous les éléments de la première plage triée sous un prédicat binaire spécifié sont ordonnés de la même façon que ceux de la deuxième plage triée.
+Les types de valeur des itérateurs d’entrée doivent être comparables en termes d’infériorité pour être classés. Ainsi, pour deux éléments donnés, il est possible de déterminer s’ils sont équivalents (dans le sens où ni l’un ni l’autre n’est inférieur à l’autre) ou si l’un est inférieur à l’autre. Cela entraîne le tri des éléments non équivalents. Plus précisément, l’algorithme vérifie si tous les éléments de la première plage triée sous un prédicat binaire spécifié sont ordonnés de la même façon que ceux de la deuxième plage triée.
 
-La complexité de l’algorithme est linéaire avec au maximum `2 * ((last1 - first1) - (last2 - first2)) - 1` comparaisons pour les plages sources non vides.
+La complexité de l’algorithme est linéaire avec au maximum les `2 * ((last1 - first1) - (last2 - first2)) - 1` comparaisons pour les plages sources non vides.
 
 ### <a name="example"></a>Exemple
 
@@ -2803,19 +2803,19 @@ void inplace_merge(
 
 ### <a name="parameters"></a>Paramètres
 
-\ d' *exécution*
+*exécutable*\
 Stratégie d’exécution à utiliser.
 
 *premier*\
 Itérateur bidirectionnel ciblant la position du premier élément de la première de deux plages triées consécutives à regrouper en une seule plage et trier.
 
-\ *au milieu*
+*intergiciel*\
 Itérateur bidirectionnel ciblant la position du premier élément de la deuxième de deux plages triées consécutives à regrouper en une seule plage et trier.
 
-*dernier*\
+*famille*\
 Itérateur bidirectionnel ciblant la position juste après le dernier élément de la deuxième de deux plages triées consécutives à regrouper en une seule plage et trier.
 
-*\ prévu*
+*prédit*\
 Objet de fonction de prédicat défini par l’utilisateur qui définit la logique selon laquelle un élément est inférieur à un autre. Le prédicat de comparaison accepte deux arguments et doit retourner la **valeur true** lorsque le premier élément est inférieur au deuxième et **false** dans le cas contraire.
 
 ### <a name="remarks"></a>Notes
@@ -2824,7 +2824,7 @@ Les plages triées consécutives référencées doivent être valides ; tous le
 
 Les plages triées consécutives doivent chacune être organisées comme une condition préalable à l’application de l’algorithme `inplace_merge` selon le même ordre que celui utilisé par l’algorithme pour trier les plages regroupées. L’opération est stable, car l’ordre relatif des éléments de chaque plage est préservé. Quand il existe des éléments équivalents dans les deux plages sources, l’élément de la première plage précède celui de la deuxième dans la plage regroupée.
 
-La complexité dépend de la mémoire disponible, car l’algorithme alloue de la mémoire à une mémoire tampon temporaire. Si la mémoire disponible est suffisante, le meilleur cas est linéaire avec les comparaisons de `(last - first) - 1` ; Si aucune mémoire auxiliaire n’est disponible, le pire est `N log(N)`, où *N* = *dernier* - en *premier*.
+La complexité dépend de la mémoire disponible, car l’algorithme alloue de la mémoire à une mémoire tampon temporaire. Si une quantité suffisante de mémoire est disponible, le meilleur cas est linéaire avec les `(last - first) - 1` comparaisons ; si aucune mémoire auxiliaire n’est disponible, le pire des cas est `N log(N)` , où *n*pour la  =  *dernière*  -  *fois*.
 
 ### <a name="example"></a>Exemple
 
@@ -2969,16 +2969,16 @@ bool is_heap(
 
 ### <a name="parameters"></a>Paramètres
 
-\ d' *exécution*
+*exécutable*\
 Stratégie d’exécution à utiliser.
 
 *premier*\
 Itérateur d’accès aléatoire qui indique le début d’une plage dans laquelle rechercher un tas.
 
-*dernier*\
+*famille*\
 Itérateur d’accès aléatoire qui indique la fin d’une plage.
 
-*\ prévu*
+*prédit*\
 Condition à vérifier pour ordonner des éléments. Un prédicat de comparaison accepte deux arguments et retourne **true** ou **false**.
 
 ### <a name="return-value"></a>Valeur retournée
@@ -2987,7 +2987,7 @@ Retourne la **valeur true** si les éléments de la plage spécifiée forment un
 
 ### <a name="remarks"></a>Notes
 
-La première fonction de modèle retourne [is_heap_until](../standard-library/algorithm-functions.md#is_heap_until)`(first , last) == last`.
+La première fonction de modèle retourne [is_heap_until](algorithm-functions.md#is_heap_until) `(first , last) == last` .
 
 La deuxième fonction de modèle retourne
 
@@ -2995,7 +2995,7 @@ La deuxième fonction de modèle retourne
 
 ## <a name="is_heap_until"></a><a name="is_heap_until"></a>is_heap_until
 
-Retourne un itérateur positionné au premier élément de la plage [`first`, `last`) qui ne satisfait pas la condition d’ordonnancement du tas, ou *end* si la plage forme un tas.
+Retourne un itérateur positionné au premier élément de la plage [ `first` , `last` ) qui ne satisfait pas la condition d’ordonnancement du tas, ou *end* si la plage forme un tas.
 
 ```cpp
 template<class RandomAccessIterator>
@@ -3025,17 +3025,17 @@ RandomAccessIterator is_heap_until(
 
 ### <a name="parameters"></a>Paramètres
 
-\ d' *exécution*
+*exécutable*\
 Stratégie d’exécution à utiliser.
 
 *premier*\
 Itérateur à accès aléatoire qui spécifie le premier élément d'une plage dans laquelle effectuer la recherche d'un tas.
 
-*dernier*\
+*famille*\
 Itérateur à accès aléatoire qui spécifie le dernier élément de la plage où effectuer la recherche d'un tas.
 
-*\ prévu*
-Prédicat binaire qui spécifie la condition d'ordonnancement faible strict qui définit un tas. Le prédicat par défaut est `std::less<>` lorsque *prédit* n’est pas spécifié.
+*prédit*\
+Prédicat binaire qui spécifie la condition d'ordonnancement faible strict qui définit un tas. Le prédicat par défaut est `std::less<>` lorsque l’option *prédit* n’est pas spécifiée.
 
 ### <a name="return-value"></a>Valeur retournée
 
@@ -3043,7 +3043,7 @@ Retourne *Last* si la plage spécifiée forme un tas ou contient un ou plusieurs
 
 ### <a name="remarks"></a>Notes
 
-La première fonction de modèle retourne le dernier itérateur `next` dans `[first, last)` où `[first, next)` est un tas ordonné par l’objet de fonction `std::less<>`. Si la distance `last - first` est inférieure à 2, la fonction retourne *Last*.
+La première fonction de modèle retourne le dernier itérateur `next` de `[first, last)` où `[first, next)` est un tas ordonné par l’objet de fonction `std::less<>`. Si la distance `last - first` est inférieure à 2, la fonction retourne *Last*.
 
 La deuxième fonction de modèle se comporte comme la première, sauf qu’elle utilise le prédicat *prédit* au lieu de `std::less<>` comme condition d’ordonnancement du tas.
 
@@ -3068,16 +3068,16 @@ bool is_partitioned(
 
 ### <a name="parameters"></a>Paramètres
 
-\ d' *exécution*
+*exécutable*\
 Stratégie d’exécution à utiliser.
 
 *premier*\
 Itérateur d’entrée qui indique le début de la recherche d’une condition dans une plage.
 
-*dernier*\
+*famille*\
 Itérateur d’entrée qui indique la fin d’une plage.
 
-*\ prévu*
+*prédit*\
 Condition à vérifier. Cette condition est fournie par un objet de fonction de prédicat défini par l’utilisateur qui définit la condition à satisfaire par l’élément recherché. Un prédicat unaire accepte un seul argument et retourne **true** ou **false**.
 
 ### <a name="return-value"></a>Valeur retournée
@@ -3086,7 +3086,7 @@ Retourne la **valeur true** lorsque tous les éléments d’une plage donnée qu
 
 ### <a name="remarks"></a>Notes
 
-La fonction de modèle retourne **true** uniquement si tous les éléments de `[first, last)` sont partitionnés par *prédit*; autrement dit, tous les éléments `X` dans `[first, last)` pour lesquels `pred (X)` a la valeur true avant que tous les éléments `Y` pour lesquels `pred (Y)` a la **valeur false**.
+La fonction de modèle retourne **true** uniquement si tous les éléments de `[first, last)` sont partitionnés par *prédit*; autrement dit, tous les éléments `X` `[first, last)` pour lesquels `pred (X)` est true se produisent avant tous les éléments `Y` pour lesquels `pred (Y)` a la **valeur false**.
 
 ## <a name="is_permutation"></a><a name="is_permutation"></a>is_permutation
 
@@ -3125,19 +3125,19 @@ bool is_permutation(
 
 ### <a name="parameters"></a>Paramètres
 
-*first1*\
+*First1*\
 Itérateur vers l'avant qui fait référence au premier élément de la plage.
 
 *last1*\
 Itérateur vers l'avant qui fait référence à l'élément qui suit le dernier élément de la plage.
 
-*first2*\
+*First2*\
 Itérateur vers l'avant qui fait référence au premier élément d'une deuxième plage, utilisé à des fins de comparaison.
 
 *last2*\
 Itérateur vers l'avant qui fait référence à l'élément qui suit le dernier élément d'une deuxième plage, utilisé à des fins de comparaison.
 
-*\ prévu*
+*prédit*\
 Prédicat qui teste l’équivalence et retourne une valeur **booléenne**.
 
 ### <a name="return-value"></a>Valeur retournée
@@ -3148,7 +3148,7 @@ Prédicat qui teste l’équivalence et retourne une valeur **booléenne**.
 
 `is_permutation` a une complexité quadratique dans le pire des cas.
 
-La première fonction de modèle part du principe qu’il existe autant d’éléments dans la plage commençant à *First2* que dans la plage désignée par `[first1, last1)`. S'il y a plus d'éléments dans la deuxième plage, ils sont ignorés ; s'il y en a moins, le comportement est non défini. La troisième fonction de modèle (C++14 et versions ultérieures) ne part pas de ce principe. Les deux renvoient **true** uniquement si, pour chaque élément x dans la plage désignée par `[first1, last1)` il existe autant d’éléments y dans la même plage pour lesquels x = = y, comme dans la plage commençant à *First2* ou `[first2, last2)`. Ici, `operator==` doit effectuer une comparaison par paire entre ses opérandes.
+La première fonction de modèle part du principe qu’il existe autant d’éléments dans la plage commençant à *First2* que dans la plage désignée par `[first1, last1)` . S'il y a plus d'éléments dans la deuxième plage, ils sont ignorés ; s'il y en a moins, le comportement est non défini. La troisième fonction de modèle (C++14 et versions ultérieures) ne part pas de ce principe. Les deux renvoient **true** uniquement si, pour chaque élément x dans la plage désignée par, il y a autant d' `[first1, last1)` éléments y dans la même plage pour lesquels x = = y, comme dans la plage commençant à *First2* ou `[first2, last2)` . Ici, `operator==` doit effectuer une comparaison par paire entre ses opérandes.
 
 Les deuxième et quatrième fonctions avec modèle ont le même comportement, hormis le fait qu'elles remplacent `operator==(X, Y)` par `Pred(X, Y)`. Pour se comporter correctement, le prédicat doit être symétrique, réflexif et transitif.
 
@@ -3240,21 +3240,21 @@ bool is_sorted(
 
 ### <a name="parameters"></a>Paramètres
 
-\ d' *exécution*
+*exécutable*\
 Stratégie d’exécution à utiliser.
 
 *premier*\
 Itérateur vers l’avant qui indique où commence la plage à vérifier.
 
-*dernier*\
+*famille*\
 Itérateur vers l’avant qui indique la fin d’une plage.
 
-*\ prévu*
+*prédit*\
 Condition à vérifier pour déterminer un ordre entre deux éléments. Un prédicat de comparaison accepte deux arguments et retourne **true** ou **false**. Il effectue la même tâche que `operator<`.
 
 ### <a name="remarks"></a>Notes
 
-La première fonction de modèle retourne [is_sorted_until](#is_sorted_until)`( first, last ) == last`. La fonction `operator<` effectue la comparaison des commandes.
+La première fonction de modèle retourne [is_sorted_until](#is_sorted_until) `( first, last ) == last` . La `operator<` fonction effectue la comparaison d’ordre.
 
 La deuxième fonction de modèle retourne `is_sorted_until( first, last , pred ) == last`. La fonction de prédicat *prédit* effectue la comparaison d’ordre.
 
@@ -3292,16 +3292,16 @@ ForwardIterator is_sorted_until(
 
 ### <a name="parameters"></a>Paramètres
 
-\ d' *exécution*
+*exécutable*\
 Stratégie d’exécution à utiliser.
 
 *premier*\
 Itérateur vers l’avant qui indique où commence la plage à vérifier.
 
-*dernier*\
+*famille*\
 Itérateur vers l’avant qui indique la fin d’une plage.
 
-*\ prévu*
+*prédit*\
 Condition à vérifier pour déterminer un ordre entre deux éléments. Un prédicat de comparaison accepte deux arguments et retourne **true** ou **false**.
 
 ### <a name="return-value"></a>Valeur retournée
@@ -3310,7 +3310,7 @@ Retourne un `ForwardIterator` défini sur le dernier élément dans un ordre tri
 
 ### <a name="remarks"></a>Notes
 
-La première fonction de modèle retourne le dernier itérateur `next` dans `[first, last]` afin que `[first, next)` soit une séquence triée triée par `operator<`. Si `distance()` est inférieur à 2, la fonction retourne *Last*.
+La première fonction de modèle retourne le dernier itérateur `next` de `[first, last]` pour que `[first, next)` soit une séquence triée par `operator<`. Si `distance()` est inférieur à 2, la fonction retourne *Last*.
 
 La deuxième fonction de modèle se comporte de la même façon, sauf qu’elle remplace `operator<(X, Y)` par `pred(X, Y)`.
 
@@ -3325,15 +3325,15 @@ void iter_swap( ForwardIterator1 left, ForwardIterator2 right );
 
 ### <a name="parameters"></a>Paramètres
 
-\ *gauche*
+*gauche*\
 Un des itérateurs vers l’avant dont la valeur est à échanger.
 
-\ *droit*
+*Oui*\
 Le deuxième des itérateurs vers l’avant dont la valeur est à échanger.
 
 ### <a name="remarks"></a>Notes
 
-`swap` doit être utilisé de préférence pour **iter_swap**, qui a été inclus dans C++ la norme à des fins de compatibilité descendante. Si `Fit1` et `Fit2` sont des itérateurs vers l’avant, `iter_swap( Fit1, Fit2 )`est équivalent à `swap( *Fit1, *Fit2 )`.
+`swap`doit être utilisé de préférence pour **iter_swap**, qui a été inclus dans la norme C++ pour des raisons de compatibilité descendante. Si `Fit1` et `Fit2` sont des itérateurs vers l’avant, `iter_swap( Fit1, Fit2 )` est équivalent à `swap( *Fit1, *Fit2 )` .
 
 Les types valeur des itérateurs vers l’avant/d’entrée doivent avoir la même valeur.
 
@@ -3510,22 +3510,22 @@ bool lexicographical_compare(
 
 ### <a name="parameters"></a>Paramètres
 
-\ d' *exécution*
+*exécutable*\
 Stratégie d’exécution à utiliser.
 
-*first1*\
+*First1*\
 Itérateur d’entrée ciblant la position du premier élément de la première plage à comparer.
 
 *last1*\
 Itérateur d’entrée ciblant la position juste après le dernier élément de la première plage à comparer.
 
-*first2*\
+*First2*\
 Itérateur d’entrée ciblant la position du premier élément de la deuxième plage à comparer.
 
 *last2*\
 Itérateur d’entrée ciblant la position juste après le dernier élément de la deuxième plage à comparer.
 
-*\ prévu*
+*prédit*\
 Objet de fonction de prédicat défini par l’utilisateur qui définit la logique selon laquelle un élément est inférieur à un autre. Un prédicat de comparaison prend deux arguments et retourne la **valeur true** lorsque la valeur est satisfaite et **false** lorsqu’elle n’est pas satisfaite.
 
 ### <a name="return-value"></a>Valeur retournée
@@ -3661,13 +3661,13 @@ ForwardIterator lower_bound(
 *premier*\
 Itérateur vers l'avant ciblant la position du premier élément de la plage dans laquelle s'effectue la recherche.
 
-*dernier*\
+*famille*\
 Itérateur vers l'avant ciblant la position juste après le dernier élément de la plage dans laquelle s'effectue la recherche.
 
-*value*\
+*ajoutée*\
 Valeur dont la première position ou la première position possible est recherchée dans la plage ordonnée.
 
-*\ prévu*
+*prédit*\
 Objet de fonction de prédicat défini par l’utilisateur qui définit la logique selon laquelle un élément est inférieur à un autre. Un prédicat binaire accepte deux arguments et retourne **true** quand la condition est satisfaite et **false** quand elle ne l’est pas.
 
 ### <a name="return-value"></a>Valeur retournée
@@ -3684,7 +3684,7 @@ La plage n’est pas modifiée par l’algorithme `lower_bound`.
 
 Les types valeur des itérateurs vers l’avant doivent être comparables en termes d’infériorité pour être ordonnés. Ainsi, pour deux éléments donnés, il est possible de déterminer s’ils sont équivalents (dans le sens où ni l’un ni l’autre n’est inférieur à l’autre) ou si l’un est inférieur à l’autre. De cette façon, les éléments non équivalents sont ordonnés
 
-La complexité de l’algorithme est logarithmique pour les itérateurs d’accès aléatoire et linéaire dans le cas contraire, avec le nombre d’étapes proportionnelles à (`last - first`).
+La complexité de l’algorithme est logarithmique pour les itérateurs d’accès aléatoire et linéaire dans le cas contraire, avec le nombre d’étapes proportionnelles à ( `last - first` ).
 
 ### <a name="example"></a>Exemple
 
@@ -3798,10 +3798,10 @@ void make_heap(
 *premier*\
 Itérateur d’accès aléatoire ciblant la position du premier élément de la plage à convertir en tas.
 
-*dernier*\
+*famille*\
 Itérateur d’accès aléatoire ciblant la position juste après le dernier élément de la plage à convertir en tas.
 
-*\ prévu*
+*prédit*\
 Objet de fonction de prédicat défini par l’utilisateur qui définit la logique selon laquelle un élément est inférieur à un autre. Un prédicat binaire accepte deux arguments et retourne **true** quand la condition est satisfaite et **false** quand elle ne l’est pas.
 
 ### <a name="remarks"></a>Notes
@@ -3812,9 +3812,9 @@ Les tas ont deux propriétés :
 
 - Des éléments peuvent être ajoutés ou supprimés en temps logarithmique.
 
-Les tas sont un moyen idéal d’implémenter des files d’attente prioritaires et sont utilisés dans l’implémentation de la [classe priority_queue](../standard-library/priority-queue-class.md) de l’adaptateur de conteneur de bibliothèque C++ Standard.
+Les tas sont un moyen idéal d’implémenter des files d’attente prioritaires et sont utilisés dans l’implémentation de la [classe priority_queue](priority-queue-class.md) de l’adaptateur de conteneur de bibliothèque C++ Standard.
 
-La complexité est linéaire, ce qui nécessite des comparaisons de `3 * (last - first)`.
+La complexité est linéaire, ce qui nécessite des `3 * (last - first)` comparaisons.
 
 ### <a name="example"></a>Exemple
 
@@ -3883,16 +3883,16 @@ constexpr Type& max(
 
 ### <a name="parameters"></a>Paramètres
 
-\ *gauche*
+*gauche*\
 Premier des deux objets comparés.
 
-\ *droit*
+*Oui*\
 Second des deux objets comparés.
 
-*\ prévu*
+*prédit*\
 Prédicat binaire utilisé pour comparer deux objets.
 
-\ *inList*
+*liste*\
 Liste d'initialiseurs qui contient les objets à comparer.
 
 ### <a name="return-value"></a>Valeur retournée
@@ -3901,7 +3901,7 @@ Le plus grand des deux objets, sauf si aucun n'est plus grand que l'autre ; dan
 
 ### <a name="remarks"></a>Notes
 
-L'algorithme `max` est inhabituel, dans la mesure où les objets sont passés comme paramètres. La plupart des algorithmes de la bibliothèque C++ Standard opèrent sur une plage d’éléments dont la position est spécifiée par des itérateurs passés comme paramètres. Si vous avez besoin d’une fonction qui opère sur une plage d’éléments, utilisez plutôt [max_element](../standard-library/algorithm-functions.md#max_element). Visual Studio 2017 active **constexpr** sur les surcharges qui prennent un initializer_list.
+L'algorithme `max` est inhabituel, dans la mesure où les objets sont passés comme paramètres. La plupart des algorithmes de la bibliothèque C++ Standard opèrent sur une plage d’éléments dont la position est spécifiée par des itérateurs passés comme paramètres. Si vous avez besoin d’une fonction qui opère sur une plage d’éléments, utilisez plutôt [max_element](algorithm-functions.md#max_element). Visual Studio 2017 active **constexpr** sur les surcharges qui prennent un initializer_list.
 
 ### <a name="example"></a>Exemple
 
@@ -4103,16 +4103,16 @@ ForwardIterator max_element(
 
 ### <a name="parameters"></a>Paramètres
 
-\ d' *exécution*
+*exécutable*\
 Stratégie d’exécution à utiliser.
 
 *premier*\
 Itérateur vers l’avant ciblant la position du premier élément de la plage dans laquelle rechercher l’élément le plus grand.
 
-*dernier*\
+*famille*\
 Itérateur vers l’avant ciblant la position juste après le dernier élément de la plage dans laquelle rechercher l’élément le plus grand.
 
-*\ prévu*
+*prédit*\
 Objet de fonction de prédicat défini par l’utilisateur qui définit la logique selon laquelle un élément est inférieur à un autre. Le prédicat de comparaison accepte deux arguments et doit retourner la **valeur true** lorsque le premier élément est inférieur au deuxième et **false** dans le cas contraire.
 
 ### <a name="return-value"></a>Valeur retournée
@@ -4123,7 +4123,7 @@ Itérateur vers l’avant ciblant la position de la première occurrence de l’
 
 La plage référencée doit être valide ; tous les pointeurs doivent pouvoir être déréférencés et, dans chaque séquence, la dernière position est accessible à partir de la première par incrémentation.
 
-La complexité est linéaire : `(last - first) - 1` comparaisons sont nécessaires pour une plage non vide.
+La complexité est linéaire : les `(last - first) - 1` comparaisons sont nécessaires pour une plage non vide.
 
 ### <a name="example"></a>Exemple
 
@@ -4269,25 +4269,25 @@ ForwardIterator merge(
 
 ### <a name="parameters"></a>Paramètres
 
-\ d' *exécution*
+*exécutable*\
 Stratégie d’exécution à utiliser.
 
-*first1*\
+*First1*\
 Itérateur d’entrée ciblant la position du premier élément dans la première des deux plages sources triées à regrouper et trier au sein d’une même plage.
 
 *last1*\
 Itérateur d’entrée ciblant la position située de suite après le dernier élément de la première des deux plages sources triées à regrouper et trier au sein d’une même plage.
 
-*first2*\
+*First2*\
 Itérateur d’entrée ciblant la position du premier élément de la deuxième des deux plages sources triées consécutives à regrouper et trier au sein d’une même plage.
 
 *last2*\
 Itérateur d’entrée ciblant la position située de suite après le dernier élément de la deuxième des deux plages sources triées consécutives à regrouper et trier au sein d’une même plage.
 
-\ de *résultats*
+*venir*\
 Itérateur de sortie ciblant la position du premier élément de la plage de destination quand les deux plages sources doivent être regroupées au sein d’une même plage triée.
 
-*\ prévu*
+*prédit*\
 Objet de fonction de prédicat défini par l’utilisateur qui définit la logique selon laquelle un élément est inférieur à un autre. Le prédicat de comparaison accepte deux arguments et doit retourner **true** lorsque le premier élément est inférieur au second, et **false** dans le cas contraire.
 
 ### <a name="return-value"></a>Valeur retournée
@@ -4302,13 +4302,13 @@ La plage de destination ne doit pas chevaucher les plages sources et doit être 
 
 Les plages sources triées doivent chacune être structurées comme condition préalable à l’application de l’algorithme `merge` selon le même ordre que celui utilisé par l’algorithme pour trier les plages regroupées.
 
-L’opération est stable, car l’ordre relatif des éléments dans chaque plage est préservé dans la plage de destination. Les plages sources ne sont pas modifiées par l’algorithme `merge`.
+L’opération est stable, car l’ordre relatif des éléments dans chaque plage est préservé dans la plage de destination. Les plages sources ne sont pas modifiées par l’algorithme `merge` .
 
-Les types de valeur des itérateurs d’entrée doivent être comparables en termes d’infériorité pour être classés. Ainsi, pour deux éléments donnés, il est possible de déterminer s’ils sont équivalents (dans le sens où ni l’un ni l’autre n’est inférieur à l’autre) ou si l’un est inférieur à l’autre. Cela entraîne le tri des éléments non équivalents. Quand il existe des éléments équivalents dans les deux plages sources, les éléments de la première plage précèdent ceux de la deuxième dans la plage de destination.
+Les types de valeur des itérateurs d’entrée doivent être comparables en termes d’infériorité pour être classés. Ainsi, pour deux éléments donnés, il est possible de déterminer s’ils sont équivalents (dans le sens où ni l’un ni l’autre n’est inférieur à l’autre) ou si l’un est inférieur à l’autre. Cela entraîne le tri des éléments non équivalents. Quand il existe des éléments équivalents dans les deux plages sources, les éléments de la première plage précèdent ceux de la deuxième dans la plage de destination.
 
 La complexité de l’algorithme est linéaire avec au maximum `(last1 - first1) - (last2 - first2) - 1` comparaisons.
 
-La [classe list](../standard-library/list-class.md) fournit une fonction membre « merge » pour fusionner les éléments de deux listes.
+La [classe list](list-class.md) fournit une fonction membre « merge » pour fusionner les éléments de deux listes.
 
 ### <a name="example"></a>Exemple
 
@@ -4420,7 +4420,7 @@ int main() {
 }
 ```
 
-## <a name="min"></a><a name="min"></a>min
+## <a name="min"></a><a name="min"></a> minute(s)
 
 Compare deux objets et retourne le plus petit des deux. Un critère de tri peut être spécifié à l’aide d’un prédicat binaire.
 
@@ -4448,25 +4448,25 @@ constexpr Type min(
 
 ### <a name="parameters"></a>Paramètres
 
-\ *gauche*
+*gauche*\
 Premier des deux objets comparés.
 
-\ *droit*
+*Oui*\
 Second des deux objets comparés.
 
-*\ prévu*
+*prédit*\
 Prédicat binaire utilisé pour comparer deux objets.
 
-\ *inList*
-`initializer_list` qui contient les membres à comparer.
+*liste*\
+`initializer_list`Qui contient les membres à comparer.
 
 ### <a name="return-value"></a>Valeur retournée
 
-Le plus petit des deux objets, sauf si aucun n’est plus petit que l’autre ; dans ce cas, retourne le premier des deux objets. Dans le cas d’une `initializer_list`, elle retourne le moins des objets de la liste.
+Le plus petit des deux objets, sauf si aucun n’est plus petit que l’autre ; dans ce cas, retourne le premier des deux objets. Dans le cas d’un `initializer_list` , il retourne le moins des objets de la liste.
 
 ### <a name="remarks"></a>Notes
 
-L'algorithme `min` est inhabituel, dans la mesure où les objets sont passés comme paramètres. La plupart des algorithmes de la bibliothèque C++ Standard opèrent sur une plage d’éléments dont la position est spécifiée par des itérateurs passés comme paramètres. Si vous avez besoin d’une fonction qui utilise une plage d’éléments, utilisez [min_element](../standard-library/algorithm-functions.md#min_element). [constexpr](../cpp/constexpr-cpp.md) a été activé sur les surcharges `initializer_list` dans Visual Studio 2017.
+L'algorithme `min` est inhabituel, dans la mesure où les objets sont passés comme paramètres. La plupart des algorithmes de la bibliothèque C++ Standard opèrent sur une plage d’éléments dont la position est spécifiée par des itérateurs passés comme paramètres. Si vous avez besoin d’une fonction qui utilise une plage d’éléments, utilisez [min_element](algorithm-functions.md#min_element). [constexpr](../cpp/constexpr-cpp.md) a été activé sur les `initializer_list` surcharges dans Visual Studio 2017.
 
 ### <a name="example"></a>Exemple
 
@@ -4667,16 +4667,16 @@ ForwardIterator min_element(
 
 ### <a name="parameters"></a>Paramètres
 
-\ d' *exécution*
+*exécutable*\
 Stratégie d’exécution à utiliser.
 
 *premier*\
 Itérateur vers l’avant ciblant la position du premier élément de la plage dans laquelle rechercher l’élément le plus petit.
 
-*dernier*\
+*famille*\
 Itérateur vers l’avant ciblant la position juste après le dernier élément de la plage dans laquelle rechercher l’élément le plus petit.
 
-*\ prévu*
+*prédit*\
 Objet de fonction de prédicat défini par l’utilisateur qui définit la logique selon laquelle un élément est inférieur à un autre. Le prédicat de comparaison accepte deux arguments et doit retourner **true** lorsque le premier élément est inférieur au second, et **false** dans le cas contraire.
 
 ### <a name="return-value"></a>Valeur retournée
@@ -4687,7 +4687,7 @@ Itérateur vers l’avant ciblant la position de la première occurrence de l’
 
 La plage référencée doit être valide ; tous les pointeurs doivent pouvoir être déréférencés et, dans chaque séquence, la dernière position est accessible à partir de la première par incrémentation.
 
-La complexité est linéaire : `(last - first) - 1` comparaisons sont nécessaires pour une plage non vide.
+La complexité est linéaire : les `(last - first) - 1` comparaisons sont nécessaires pour une plage non vide.
 
 ### <a name="example"></a>Exemple
 
@@ -4831,16 +4831,16 @@ pair<ForwardIterator, ForwardIterator> minmax_element(
 
 ### <a name="parameters"></a>Paramètres
 
-\ d' *exécution*
+*exécutable*\
 Stratégie d’exécution à utiliser.
 
 *premier*\
 Itérateur vers l’avant qui indique le début d’une plage.
 
-*dernier*\
+*famille*\
 Itérateur vers l’avant qui indique la fin d’une plage.
 
-*\ prévu*
+*prédit*\
 Objet de fonction de prédicat défini par l’utilisateur qui définit le sens dans lequel un élément est inférieur à un autre. Le prédicat de comparaison accepte deux arguments et doit retourner la **valeur true** lorsque le premier est inférieur au second, et **false** dans le cas contraire.
 
 ### <a name="return-value"></a>Valeur retournée
@@ -4887,17 +4887,17 @@ constexpr pair<Type&, Type&> minmax(
 
 ### <a name="parameters"></a>Paramètres
 
-\ *gauche*
+*gauche*\
 Premier des deux objets comparés.
 
-\ *droit*
+*Oui*\
 Second des deux objets comparés.
 
-*\ prévu*
+*prédit*\
 Prédicat binaire utilisé pour comparer deux objets.
 
-\ *inList*
-`initializer_list` qui contient les membres à comparer.
+*liste*\
+`initializer_list`Qui contient les membres à comparer.
 
 ### <a name="remarks"></a>Notes
 
@@ -4987,22 +4987,22 @@ mismatch(
 
 ### <a name="parameters"></a>Paramètres
 
-\ d' *exécution*
+*exécutable*\
 Stratégie d’exécution à utiliser.
 
-*first1*\
+*First1*\
 Itérateur d'entrée qui traite la position du premier élément de la première plage à tester.
 
 *last1*\
 Itérateur d'entrée qui traite la position qui suit le dernier élément de la première plage à tester.
 
-*first2*\
+*First2*\
 Itérateur d'entrée qui traite la position du premier élément de la deuxième plage à tester.
 
 *last2*\
 Itérateur d'entrée qui traite la position qui suit le dernier élément de la deuxième plage à tester.
 
-*\ prévu*
+*prédit*\
 Objet de fonction de prédicat défini par l’utilisateur qui compare les éléments actuels dans chaque plage et détermine s’ils sont équivalents. Retourne **true** si la condition est satisfaite et **false** dans le cas contraire.
 
 ### <a name="return-value"></a>Valeur retournée
@@ -5114,7 +5114,7 @@ C++14: vec_1 and list_1 are a mismatch: false
 Press a key
 ```
 
-## <a name="ltalggt-move"></a><a name="alg_move"></a>&lt;ALG&gt; déplacer
+## <a name="ltalggt-move"></a><a name="alg_move"></a> &lt;alg&gt; move
 
 Déplace les éléments associés à une plage spécifiée.
 
@@ -5135,13 +5135,13 @@ ForwardIterator2 move(
 
 ### <a name="parameters"></a>Paramètres
 
-\ d' *exécution*
+*exécutable*\
 Stratégie d’exécution à utiliser.
 
 *premier*\
 Itérateur d’entrée qui indique le début de la plage d’éléments à déplacer.
 
-*dernier*\
+*famille*\
 Itérateur d’entrée qui indique la fin d’une plage d’éléments à déplacer.
 
 *dest*\
@@ -5149,7 +5149,7 @@ Itérateur de sortie qui doit contenir les éléments déplacés.
 
 ### <a name="remarks"></a>Notes
 
-La fonction de modèle évalue `*(dest + N) = move(*(first + N))` une fois pour chaque `N` de la plage `[0, last - first)`, afin d’améliorer strictement les valeurs de `N` à partir de la valeur la plus faible. Elle retourne ensuite `dest + N`. Si `dest` et désignent d' *abord* les régions de stockage, la *destination* ne doit pas être comprise dans la plage `[first, last)`.
+La fonction de modèle évalue `*(dest + N) = move(*(first + N))` une fois pour chaque `N` de la plage `[0, last - first)`, pour les valeurs strictement croissantes de `N` en commençant par la valeur la plus petite. Elle retourne ensuite `dest + N`. Si `dest` et désignent d' *abord* les régions de stockage, la *destination* ne doit pas être comprise dans la plage `[first, last)` .
 
 ## <a name="move_backward"></a><a name="move_backward"></a>move_backward
 
@@ -5168,7 +5168,7 @@ BidirectionalIterator2 move_backward(
 *premier*\
 Itérateur qui indique le début d’une plage à partir de laquelle déplacer des éléments.
 
-*dernier*\
+*famille*\
 Itérateur qui indique la fin d’une plage à partir de laquelle déplacer des éléments. Cet élément n’est pas déplacé.
 
 *destEnd*\
@@ -5176,7 +5176,7 @@ Itérateur bidirectionnel se rapportant à la position située immédiatement ap
 
 ### <a name="remarks"></a>Notes
 
-La fonction de modèle évalue `*(destEnd - N - 1) = move(*(last - N - 1))` une fois pour chaque `N` de la plage `[0, last - first)`, afin d’améliorer strictement les valeurs de `N` à partir de la valeur la plus faible. Elle retourne ensuite `destEnd - (last - first)`. Si *destEnd* et désignent d' *abord* les régions de stockage, *destEnd* ne doit pas figurer dans la plage `[first, last)`.
+La fonction de modèle évalue `*(destEnd - N - 1) = move(*(last - N - 1))` une fois pour chaque `N` de la plage `[0, last - first)`, pour les valeurs strictement croissantes de `N` en commençant par la valeur la plus petite. Elle retourne ensuite `destEnd - (last - first)`. Si *destEnd* et désignent d' *abord* les régions de stockage, *destEnd* ne doit pas figurer dans la plage `[first, last)` .
 
 `move` et `move_backward` reviennent fonctionnellement à utiliser `copy` et `copy_backward` avec un itérateur move.
 
@@ -5202,10 +5202,10 @@ bool next_permutation(
 *premier*\
 Itérateur bidirectionnel ciblant la position du premier élément de la plage à permuter.
 
-*dernier*\
+*famille*\
 Itérateur bidirectionnel ciblant la position juste après le dernier élément de la plage à permuter.
 
-*\ prévu*
+*prédit*\
 Objet de fonction de prédicat défini par l’utilisateur qui définit le critère de comparaison à satisfaire par les éléments consécutifs dans l’ordre. Un prédicat binaire accepte deux arguments et retourne **true** quand la condition est satisfaite et **false** quand elle ne l’est pas.
 
 ### <a name="return-value"></a>Valeur retournée
@@ -5218,7 +5218,7 @@ La plage référencée doit être valide ; tous les pointeurs doivent pouvoir �
 
 Le prédicat binaire par défaut est inférieur à et les éléments de la plage doivent être moins comparables pour garantir que la permutation suivante est bien définie.
 
-La complexité est linéaire avec au maximum `(last - first) / 2` swaps.
+La complexité est linéaire avec au maximum `(last - first) / 2` permutations.
 
 ### <a name="example"></a>Exemple
 
@@ -5361,7 +5361,7 @@ v1 =   ( -3 -2 -1 1 0 2 3 ).
 
 ## <a name="nth_element"></a><a name="nth_element"></a>nth_element
 
-Partitionne une plage d’éléments, en recherchant le *n*-ième élément de la séquence dans la plage, de sorte que tous les éléments qui le précèdent sont inférieurs ou égaux, et que tous les éléments qui le suivent sont supérieurs ou égaux.
+Partitionne une plage d’éléments, en localisant correctement le *n*ième élément de la séquence dans la plage, de sorte que tous les éléments qui le précèdent sont inférieurs ou égaux et que tous les éléments qui le suivent dans la séquence soient supérieurs ou égaux.
 
 ```cpp
 template<class RandomAccessIterator>
@@ -5395,26 +5395,26 @@ void nth_element(
 
 ### <a name="parameters"></a>Paramètres
 
-\ d' *exécution*
+*exécutable*\
 Stratégie d’exécution à utiliser.
 
 *premier*\
 Itérateur d’accès aléatoire ciblant la position du premier élément de la plage à partitionner.
 
-*nième*\
+*énième*\
 Itérateur d’accès aléatoire ciblant la position de l’élément à ordonner correctement sur la limite de la partition.
 
-*dernier*\
+*famille*\
 Itérateur d’accès aléatoire ciblant la position juste après le dernier élément de la plage à partitionner.
 
-*\ prévu*
+*prédit*\
 Objet de fonction de prédicat défini par l’utilisateur qui définit le critère de comparaison à satisfaire par les éléments consécutifs dans l’ordre. Un prédicat de comparaison prend deux arguments et retourne la **valeur true** lorsque la valeur est satisfaite et **false** lorsqu’elle n’est pas satisfaite.
 
 ### <a name="remarks"></a>Notes
 
 La plage référencée doit être valide ; tous les pointeurs doivent pouvoir être déréférencés et, dans la séquence, la dernière position est accessible depuis la première au moyen d'une incrémentation.
 
-L’algorithme `nth_element` ne garantit pas que les éléments des sous-plages de part et d’autre du *n*ième élément sont triés. Il apporte donc encore moins de garanties que `partial_sort`, qui ordonne les éléments de la plage en dessous d’un élément choisi, et peut être utilisé comme alternative plus rapide à `partial_sort` quand l’ordre de la plage inférieure n’est pas nécessaire.
+L' `nth_element` algorithme ne garantit pas que les éléments des sous-plages de part et d’autre du *n*ième élément sont triés. Il apporte donc encore moins de garanties que `partial_sort`, qui ordonne les éléments de la plage en dessous d’un élément choisi, et peut être utilisé comme alternative plus rapide à `partial_sort` quand l’ordre de la plage inférieure n’est pas nécessaire.
 
 Les éléments sont équivalents, mais pas nécessairement égaux si aucun n’est inférieur à l’autre.
 
@@ -5507,16 +5507,16 @@ bool none_of(
 
 ### <a name="parameters"></a>Paramètres
 
-\ d' *exécution*
+*exécutable*\
 Stratégie d’exécution à utiliser.
 
 *premier*\
 Itérateur d’entrée qui indique le début de la recherche d’une condition dans une plage d’éléments.
 
-*dernier*\
+*famille*\
 Itérateur d’entrée qui indique la fin d’une plage d’éléments.
 
-*\ prévu*
+*prédit*\
 Condition à vérifier. Cette condition est fournie par un objet de fonction de prédicat défini par l’utilisateur qui définit la condition. Un prédicat unaire accepte un seul argument et retourne **true** ou **false**.
 
 ### <a name="return-value"></a>Valeur retournée
@@ -5525,7 +5525,7 @@ Retourne la **valeur true** si la condition n’est pas détectée au moins une 
 
 ### <a name="remarks"></a>Notes
 
-La fonction de modèle retourne **true** uniquement si, pour certains `N` de la plage `[0, last - first)`, le prédicat `pred(*(first + N))` est toujours **false**.
+La fonction de modèle retourne **true** uniquement si, pour certains `N` de la plage `[0, last - first)` , le prédicat `pred(*(first + N))` est toujours **false**.
 
 ## <a name="partial_sort"></a><a name="partial_sort"></a>partial_sort
 
@@ -5563,7 +5563,7 @@ void partial_sort(
 
 ### <a name="parameters"></a>Paramètres
 
-\ d' *exécution*
+*exécutable*\
 Stratégie d’exécution à utiliser.
 
 *premier*\
@@ -5572,19 +5572,19 @@ Itérateur d’accès aléatoire ciblant la position du premier élément de la 
 *sortEnd*\
 Itérateur d’accès aléatoire ciblant la position juste après le dernier élément de la sous-plage à trier.
 
-*dernier*\
+*famille*\
 Itérateur d’accès aléatoire ciblant la position juste après le dernier élément de la plage à trier partiellement.
 
-*\ prévu*
+*prédit*\
 Objet de fonction de prédicat défini par l’utilisateur qui définit le critère de comparaison à satisfaire par les éléments consécutifs dans l’ordre. Un prédicat binaire accepte deux arguments et retourne **true** quand la condition est satisfaite et **false** quand elle ne l’est pas.
 
 ### <a name="remarks"></a>Notes
 
 La plage référencée doit être valide ; tous les pointeurs doivent pouvoir être déréférencés et, dans la séquence, la dernière position est accessible depuis la première au moyen d'une incrémentation.
 
-Les éléments sont équivalents, mais pas nécessairement égaux si aucun n’est inférieur à l’autre. L’algorithme `sort` n’est pas stable et ne garantit pas que l’ordre relatif des éléments équivalents sera préservé. L’algorithme `stable_sort` conserve cet ordre d’origine.
+Les éléments sont équivalents, mais pas nécessairement égaux si aucun n’est inférieur à l’autre. L' `sort` algorithme n’est pas stable et ne garantit pas que l’ordre relatif des éléments équivalents sera préservé. L’algorithme `stable_sort` conserve cet ordre d’origine.
 
-La complexité moyenne du tri partiel est *O*((`last`- `first`) log (`sortEnd`- `first`)).
+La complexité moyenne du tri partiel est *O*(( `last` -  `first` ) log ( `sortEnd` -  `first` )).
 
 ### <a name="example"></a>Exemple
 
@@ -5698,22 +5698,22 @@ RandomAccessIterator partial_sort_copy(
 
 ### <a name="parameters"></a>Paramètres
 
-\ d' *exécution*
+*exécutable*\
 Stratégie d’exécution à utiliser.
 
-*first1*\
+*First1*\
 Itérateur d’entrée ciblant la position du premier élément dans la plage source.
 
 *last1*\
 Itérateur d’entrée ciblant la position juste après le dernier élément de la plage source.
 
-*first2*\
+*First2*\
 Itérateur d’accès aléatoire ciblant la position du premier élément de la plage de destination triée.
 
 *last2*\
 Itérateur d’accès aléatoire ciblant la position juste après le dernier élément de la plage de destination triée.
 
-*\ prévu*
+*prédit*\
 Objet de fonction de prédicat défini par l’utilisateur qui définit le critère de comparaison à satisfaire par les éléments consécutifs dans l’ordre. Un prédicat binaire accepte deux arguments et retourne **true** quand la condition est satisfaite et **false** quand elle ne l’est pas.
 
 ### <a name="return-value"></a>Valeur retournée
@@ -5823,16 +5823,16 @@ ForwardIterator partition(
 
 ### <a name="parameters"></a>Paramètres
 
-\ d' *exécution*
+*exécutable*\
 Stratégie d’exécution à utiliser.
 
 *premier*\
 Itérateur bidirectionnel ciblant la position du premier élément de la plage à partitionner.
 
-*dernier*\
+*famille*\
 Itérateur bidirectionnel ciblant la position juste après le dernier élément de la plage à partitionner.
 
-*\ prévu*
+*prédit*\
 Objet de fonction de prédicat défini par l’utilisateur qui définit la condition à satisfaire si un élément doit être classé. Un prédicat unaire accepte un seul argument et retourne **true** ou **false**.
 
 ### <a name="return-value"></a>Valeur retournée
@@ -5843,9 +5843,9 @@ Itérateur bidirectionnel ciblant la position du premier élément de la plage q
 
 La plage référencée doit être valide ; tous les pointeurs doivent pouvoir être déréférencés et, dans la séquence, la dernière position est accessible depuis la première au moyen d'une incrémentation.
 
-Les éléments *a* et *b* sont équivalents, mais pas nécessairement égaux, si `pred( a, b )` a la valeur false et `pred( b, a )` a la valeur false, où *prédit* est le prédicat spécifié par le paramètre. L’algorithme `partition` n’est pas stable et ne garantit pas que l’ordre relatif des éléments équivalents sera préservé. L’algorithme `stable_partition` conserve cet ordre d’origine.
+Les éléments *a* et *b* sont équivalents, mais pas nécessairement égaux, si `pred( a, b )` a la valeur false et `pred( b, a )` a la valeur false, où *prédit* est le prédicat spécifié par le paramètre. L' `partition` algorithme n’est pas stable et ne garantit pas que l’ordre relatif des éléments équivalents sera préservé. L’algorithme `stable_partition` conserve cet ordre d’origine.
 
-La complexité est linéaire : il existe `(last - first)` applications de *prédit* et au plus `(last - first)/2` permutations.
+La complexité est linéaire : il existe `(last - first)` des applications qui sont *prédites* et au maximum `(last - first)/2` .
 
 ### <a name="example"></a>Exemple
 
@@ -5913,13 +5913,13 @@ pair<ForwardIterator1, ForwardIterator2> partition_copy(
 
 ### <a name="parameters"></a>Paramètres
 
-\ d' *exécution*
+*exécutable*\
 Stratégie d’exécution à utiliser.
 
 *premier*\
 Itérateur d’entrée qui indique le début d’une plage dans laquelle rechercher une condition.
 
-*dernier*\
+*famille*\
 Itérateur d’entrée qui indique la fin d’une plage.
 
 *dest1*\
@@ -5928,12 +5928,12 @@ Itérateur de sortie utilisé pour copier des éléments qui retournent la valeu
 *dest2*\
 Itérateur de sortie utilisé pour copier des éléments qui retournent la valeur false pour une condition testée à l’aide de *prédit*.
 
-*\ prévu*
+*prédit*\
 Condition à vérifier. Cette condition est fournie par un objet de fonction de prédicat défini par l’utilisateur qui définit la condition à vérifier. Un prédicat unaire accepte un seul argument et retourne **true** ou **false**.
 
 ### <a name="remarks"></a>Notes
 
-La fonction de modèle copie chaque élément `X` dans `[first,last)` à `*dest1++` si `pred(X)` a la valeur true, ou `*dest2++` dans le cas contraire. Il retourne `pair<OutputIterator1, OutputIterator2>(dest1, dest2)`.
+La fonction de modèle copie chaque élément `X` dans dans `[first,last)` `*dest1++` si `pred(X)` a la valeur true, ou la valeur à dans le `*dest2++` cas contraire. Elle retourne `pair<OutputIterator1, OutputIterator2>(dest1, dest2)`.
 
 ## <a name="partition_point"></a><a name="partition_point"></a>partition_point
 
@@ -5952,10 +5952,10 @@ ForwardIterator partition_point(
 *premier*\
 `ForwardIterator` qui indique le début d’une plage dans laquelle rechercher une condition.
 
-*dernier*\
+*famille*\
 `ForwardIterator` qui indique la fin d’une plage.
 
-*\ prévu*
+*prédit*\
 Condition à vérifier. Cette condition est fournie par un objet de fonction de prédicat défini par l’utilisateur qui définit la condition à satisfaire par l’élément recherché. Un prédicat unaire accepte un seul argument et retourne **true** ou **false**.
 
 ### <a name="return-value"></a>Valeur retournée
@@ -5988,10 +5988,10 @@ void pop_heap(
 *premier*\
 Itérateur d’accès aléatoire ciblant la position du premier élément du tas.
 
-*dernier*\
+*famille*\
 Itérateur d’accès aléatoire ciblant la position juste après le dernier élément du tas.
 
-*\ prévu*
+*prédit*\
 Objet de fonction de prédicat défini par l’utilisateur qui définit la logique selon laquelle un élément est inférieur à un autre. Un prédicat binaire accepte deux arguments et retourne **true** quand la condition est satisfaite et **false** quand elle ne l’est pas.
 
 ### <a name="remarks"></a>Notes
@@ -6004,13 +6004,13 @@ Les tas ont deux propriétés :
 
 - Des éléments peuvent être ajoutés ou supprimés en temps logarithmique.
 
-Les tas sont un moyen idéal d’implémenter des files d’attente prioritaires et sont utilisés dans l’implémentation de la [classe priority_queue](../standard-library/priority-queue-class.md) de l’adaptateur de conteneur de bibliothèque C++ Standard.
+Les tas sont un moyen idéal d’implémenter des files d’attente prioritaires et sont utilisés dans l’implémentation de la [classe priority_queue](priority-queue-class.md) de l’adaptateur de conteneur de bibliothèque C++ Standard.
 
 La plage référencée doit être valide ; tous les pointeurs doivent pouvoir être déréférencés et, dans la séquence, la dernière position est accessible depuis la première au moyen d'une incrémentation.
 
 La plage qui exclut l’élément qui vient d’être ajouté à la fin doit être un tas.
 
-La complexité est logarithmique et nécessite au maximum `log (last - first)` comparaisons.
+La complexité est logarithmique et nécessite au maximum les `log (last - first)` comparaisons.
 
 ### <a name="example"></a>Exemple
 
@@ -6097,10 +6097,10 @@ bool prev_permutation(
 *premier*\
 Itérateur bidirectionnel ciblant la position du premier élément de la plage à permuter.
 
-*dernier*\
+*famille*\
 Itérateur bidirectionnel ciblant la position juste après le dernier élément de la plage à permuter.
 
-*\ prévu*
+*prédit*\
 Objet de fonction de prédicat défini par l’utilisateur qui définit le critère de comparaison à satisfaire par les éléments consécutifs dans l’ordre. Un prédicat binaire accepte deux arguments et retourne **true** quand la condition est satisfaite et **false** quand elle ne l’est pas.
 
 ### <a name="return-value"></a>Valeur retournée
@@ -6113,7 +6113,7 @@ La plage référencée doit être valide ; tous les pointeurs doivent pouvoir �
 
 Le prédicat binaire par défaut est inférieur à et les éléments de la plage doivent être comparables pour garantir que la permutation précédente est bien définie.
 
-La complexité est linéaire, avec au plus (`last` - `first`)/2 swaps.
+La complexité est linéaire, avec au maximum ( `last`  -  `first` )/2 swaps.
 
 ### <a name="example"></a>Exemple
 
@@ -6272,10 +6272,10 @@ void push_heap(
 *premier*\
 Itérateur d’accès aléatoire ciblant la position du premier élément du tas.
 
-*dernier*\
+*famille*\
 Itérateur d’accès aléatoire ciblant la position juste après le dernier élément de la plage à convertir en tas.
 
-*\ prévu*
+*prédit*\
 Objet de fonction de prédicat défini par l’utilisateur qui définit la logique selon laquelle un élément est inférieur à un autre. Un prédicat binaire accepte deux arguments et retourne **true** quand la condition est satisfaite et **false** quand elle ne l’est pas.
 
 ### <a name="remarks"></a>Notes
@@ -6288,13 +6288,13 @@ Les tas ont deux propriétés :
 
 - Des éléments peuvent être ajoutés ou supprimés en temps logarithmique.
 
-Les tas sont un moyen idéal d’implémenter des files d’attente prioritaires et sont utilisés dans l’implémentation de la [classe priority_queue](../standard-library/priority-queue-class.md) de l’adaptateur de conteneur de bibliothèque C++ Standard.
+Les tas sont un moyen idéal d’implémenter des files d’attente prioritaires et sont utilisés dans l’implémentation de la [classe priority_queue](priority-queue-class.md) de l’adaptateur de conteneur de bibliothèque C++ Standard.
 
 La plage référencée doit être valide ; tous les pointeurs doivent pouvoir être déréférencés et, dans la séquence, la dernière position est accessible depuis la première au moyen d'une incrémentation.
 
 La plage qui exclut l’élément qui vient d’être ajouté à la fin doit être un tas.
 
-La complexité est logarithmique et nécessite au maximum `log(last - first)` comparaisons.
+La complexité est logarithmique et nécessite au maximum les `log(last - first)` comparaisons.
 
 ### <a name="example"></a>Exemple
 
@@ -6365,7 +6365,7 @@ int main() {
 
 ## <a name="random_shuffle"></a><a name="random_shuffle"></a>random_shuffle
 
-La fonction std :: random_shuffle () est déconseillée et remplacée par [std :: de lecture aléatoire](../standard-library/algorithm-functions.md#shuffle). Pour obtenir un exemple de code et plus d’informations, consultez [\<> aléatoire](../standard-library/random.md) et le Stack Overflow la publication [de la raison pour laquelle les méthodes std :: random_shuffle sont dépréciées dans c++ 14 ?](https://go.microsoft.com/fwlink/p/?linkid=397954).
+La fonction std :: random_shuffle () est déconseillée et remplacée par [std :: de lecture aléatoire](algorithm-functions.md#shuffle). Pour obtenir un exemple de code et plus d’informations, consultez [\<random>](random.md) et la Stack Overflow publication [de la raison pour laquelle les méthodes std :: random_shuffle sont dépréciées en c++ 14 ?](https://go.microsoft.com/fwlink/p/?linkid=397954).
 
 ## <a name="remove"></a><a name="remove"></a>Installez
 
@@ -6388,16 +6388,16 @@ ForwardIterator remove(
 
 ### <a name="parameters"></a>Paramètres
 
-\ d' *exécution*
+*exécutable*\
 Stratégie d’exécution à utiliser.
 
 *premier*\
 Itérateur de transfert se rapportant à la position du premier élément dans la plage de laquelle les éléments sont supprimés.
 
-*dernier*\
+*famille*\
 Itérateur de transfert se rapportant à la position située immédiatement après l'élément final dans la plage de laquelle les éléments sont supprimés.
 
-*value*\
+*ajoutée*\
 Valeur qui doit être supprimée de la plage.
 
 ### <a name="return-value"></a>Valeur retournée
@@ -6412,9 +6412,9 @@ L'ordre des éléments non supprimés reste stable.
 
 L' `operator==` utilisé pour déterminer l'égalité entre des éléments doit imposer une relation d'équivalence entre ses opérandes.
 
-La complexité est linéaire ; Il existe des comparaisons d’égalité (`last` - `first`).
+La complexité est linéaire ; Il existe ( `last`  -  `first` ) des comparaisons d’égalité.
 
-La [classe List](../standard-library/list-class.md) a une version de fonction membre plus efficace de `remove`, qui relient également les pointeurs.
+La [classe List](list-class.md) a une version de fonction membre plus efficace de `remove` , qui relient également les pointeurs.
 
 ### <a name="example"></a>Exemple
 
@@ -6486,19 +6486,19 @@ ForwardIterator2 remove_copy(
 
 ### <a name="parameters"></a>Paramètres
 
-\ d' *exécution*
+*exécutable*\
 Stratégie d’exécution à utiliser.
 
 *premier*\
 Itérateur d’entrée ciblant la position du premier élément dans la plage de laquelle les éléments sont supprimés.
 
-*dernier*\
+*famille*\
 Itérateur d’entrée ciblant la position située de suite après le dernier élément de la plage de laquelle les éléments sont supprimés.
 
-\ de *résultats*
+*venir*\
 Itérateur de sortie ciblant la position du premier élément dans la plage de destination dans laquelle les éléments sont supprimés.
 
-*value*\
+*ajoutée*\
 Valeur qui doit être supprimée de la plage.
 
 ### <a name="return-value"></a>Valeur retournée
@@ -6515,7 +6515,7 @@ L'ordre des éléments non supprimés reste stable.
 
 L' `operator==` utilisé pour déterminer l'égalité entre des éléments doit imposer une relation d'équivalence entre ses opérandes.
 
-La complexité est linéaire ; Il existe des comparaisons (`last` - `first`) pour l’égalité et au maximum (`last` - `first`).
+La complexité est linéaire ; Il existe ( `last`  -  `first` ) des comparaisons d’égalité et au maximum ( `last`  -  `first` ) assignations.
 
 ### <a name="example"></a>Exemple
 
@@ -6584,19 +6584,19 @@ ForwardIterator2 remove_copy_if(
 
 ### <a name="parameters"></a>Paramètres
 
-\ d' *exécution*
+*exécutable*\
 Stratégie d’exécution à utiliser.
 
 *premier*\
 Itérateur d’entrée ciblant la position du premier élément dans la plage de laquelle les éléments sont supprimés.
 
-*dernier*\
+*famille*\
 Itérateur d’entrée ciblant la position située de suite après le dernier élément de la plage de laquelle les éléments sont supprimés.
 
-\ de *résultats*
+*venir*\
 Itérateur de sortie ciblant la position du premier élément dans la plage de destination dans laquelle les éléments sont supprimés.
 
-*\ prévu*
+*prédit*\
 Prédicat unaire qui doit être satisfait si la valeur d’un élément doit être remplacée.
 
 ### <a name="return-value"></a>Valeur retournée
@@ -6613,9 +6613,9 @@ L'ordre des éléments non supprimés reste stable.
 
 L' `operator==` utilisé pour déterminer l'égalité entre des éléments doit imposer une relation d'équivalence entre ses opérandes.
 
-La complexité est linéaire : il existe des comparaisons (`last` - `first`) pour l’égalité et au maximum (`last` - `first`).
+La complexité est linéaire : il y a ( `last`  -  `first` ) des comparaisons d’égalité et au maximum ( `last`  -  `first` ) affectations.
 
-Pour plus d’informations sur le comportement de ces fonctions, consultez [Checked Iterators](../standard-library/checked-iterators.md).
+Pour plus d’informations sur le comportement de ces fonctions, consultez [Itérateurs vérifiés](checked-iterators.md).
 
 ### <a name="example"></a>Exemple
 
@@ -6689,16 +6689,16 @@ ForwardIterator remove_if(
 
 ### <a name="parameters"></a>Paramètres
 
-\ d' *exécution*
+*exécutable*\
 Stratégie d’exécution à utiliser.
 
 *premier*\
 Itérateur vers l’avant pointant sur la position du premier élément de la plage dont les éléments sont supprimés.
 
-*dernier*\
+*famille*\
 Itérateur vers l’avant pointant sur la position juste après le dernier élément de la plage dont les éléments sont supprimés.
 
-*\ prévu*
+*prédit*\
 Prédicat unaire qui doit être satisfait si la valeur d’un élément doit être remplacée.
 
 ### <a name="return-value"></a>Valeur retournée
@@ -6713,7 +6713,7 @@ L'ordre des éléments non supprimés reste stable.
 
 L' `operator==` utilisé pour déterminer l'égalité entre des éléments doit imposer une relation d'équivalence entre ses opérandes.
 
-La complexité est linéaire : il existe des comparaisons d’égalité (`last` - `first`).
+La complexité est linéaire : il y a ( `last`  -  `first` ) comparaisons d’égalité.
 
 La classe list a une version de fonction membre remove plus efficace qui rétablit les liens des pointeurs.
 
@@ -6792,19 +6792,19 @@ void replace(
 
 ### <a name="parameters"></a>Paramètres
 
-\ d' *exécution*
+*exécutable*\
 Stratégie d’exécution à utiliser.
 
 *premier*\
 Itérateur vers l’avant pointant sur la position du premier élément de la plage dont les éléments sont remplacés.
 
-*dernier*\
+*famille*\
 Itérateur vers l’avant pointant sur la position juste après le dernier élément de la plage dont les éléments sont remplacés.
 
 *oldVal*\
 Ancienne valeur des éléments remplacés.
 
-\ *newVal*
+*newVal*\
 Nouvelle valeur assignée aux éléments ayant l’ancienne valeur.
 
 ### <a name="remarks"></a>Notes
@@ -6815,7 +6815,7 @@ L’ordre des éléments non remplacés reste stable.
 
 L' `operator==` utilisé pour déterminer l'égalité entre des éléments doit imposer une relation d'équivalence entre ses opérandes.
 
-La complexité est linéaire ; Il existe des comparaisons (`last` - `first`) pour l’égalité et au maximum (`last` - `first`) Assigning de nouvelles valeurs.
+La complexité est linéaire ; Il existe ( `last`  -  `first` ) des comparaisons d’égalité et au maximum ( `last`  -  `first` ) des affectations de nouvelles valeurs.
 
 ### <a name="example"></a>Exemple
 
@@ -6881,22 +6881,22 @@ ForwardIterator2 replace_copy(
 
 ### <a name="parameters"></a>Paramètres
 
-\ d' *exécution*
+*exécutable*\
 Stratégie d’exécution à utiliser.
 
 *premier*\
 Itérateur d’entrée pointant vers la position du premier élément de la plage dont les éléments sont remplacés.
 
-*dernier*\
+*famille*\
 Itérateur d’entrée pointant vers la position située de suite après le dernier élément de la plage dont les éléments sont remplacés.
 
-\ de *résultats*
+*venir*\
 Itérateur de sortie pointant vers le premier élément de la plage de destination dans laquelle la séquence d’éléments modifiée est copiée.
 
 *oldVal*\
 Ancienne valeur des éléments remplacés.
 
-\ *newVal*
+*newVal*\
 Nouvelle valeur assignée aux éléments ayant l’ancienne valeur.
 
 ### <a name="return-value"></a>Valeur retournée
@@ -6911,7 +6911,7 @@ L’ordre des éléments non remplacés reste stable.
 
 L' `operator==` utilisé pour déterminer l'égalité entre des éléments doit imposer une relation d'équivalence entre ses opérandes.
 
-La complexité est linéaire : il existe des comparaisons (`last` - `first`) pour l’égalité et au maximum (`last` - `first`) les affectations de nouvelles valeurs.
+La complexité est linéaire : il existe ( `last`  -  `first` ) des comparaisons d’égalité et au maximum ( `last`  -  `first` ) des affectations de nouvelles valeurs.
 
 ### <a name="example"></a>Exemple
 
@@ -6996,22 +6996,22 @@ ForwardIterator2 replace_copy_if(
 
 ### <a name="parameters"></a>Paramètres
 
-\ d' *exécution*
+*exécutable*\
 Stratégie d’exécution à utiliser.
 
 *premier*\
 Itérateur d’entrée pointant vers la position du premier élément de la plage dont les éléments sont remplacés.
 
-*dernier*\
+*famille*\
 Itérateur d’entrée pointant vers la position située de suite après le dernier élément de la plage dont les éléments sont remplacés.
 
-\ de *résultats*
+*venir*\
 Itérateur de sortie pointant vers la position du premier élément de la plage de destination dans laquelle les éléments sont copiés.
 
-*\ prévu*
+*prédit*\
 Prédicat unaire qui doit être satisfait si la valeur d’un élément doit être remplacée.
 
-*value*\
+*ajoutée*\
 Nouvelle valeur assignée aux éléments dont l’ancienne valeur satisfait au prédicat.
 
 ### <a name="return-value"></a>Valeur retournée
@@ -7026,7 +7026,7 @@ L’ordre des éléments non remplacés reste stable.
 
 L' `operator==` utilisé pour déterminer l'égalité entre des éléments doit imposer une relation d'équivalence entre ses opérandes.
 
-La complexité est linéaire ; Il existe des comparaisons (`last` - `first`) pour l’égalité et au maximum (`last` - `first`) Assigning de nouvelles valeurs.
+La complexité est linéaire ; Il existe ( `last`  -  `first` ) des comparaisons d’égalité et au maximum ( `last`  -  `first` ) des affectations de nouvelles valeurs.
 
 ### <a name="example"></a>Exemple
 
@@ -7117,19 +7117,19 @@ void replace_if(
 
 ### <a name="parameters"></a>Paramètres
 
-\ d' *exécution*
+*exécutable*\
 Stratégie d’exécution à utiliser.
 
 *premier*\
 Itérateur vers l’avant pointant sur la position du premier élément de la plage dont les éléments sont remplacés.
 
-*dernier*\
+*famille*\
 Itérateur pointant sur la position juste après le dernier élément de la plage dont les éléments sont remplacés.
 
-*\ prévu*
+*prédit*\
 Prédicat unaire qui doit être satisfait si la valeur d’un élément doit être remplacée.
 
-*value*\
+*ajoutée*\
 Nouvelle valeur assignée aux éléments dont l’ancienne valeur satisfait au prédicat.
 
 ### <a name="remarks"></a>Notes
@@ -7138,11 +7138,11 @@ La plage référencée doit être valide ; tous les pointeurs doivent pouvoir �
 
 L’ordre des éléments non remplacés reste stable.
 
-L’algorithme `replace_if` est une généralisation de l’algorithme `replace`, qui permet de spécifier n’importe quel prédicat, plutôt que d’agir sur une valeur de constante spécifiée.
+L’algorithme `replace_if` est une généralisation de l’algorithme `replace` , qui permet de spécifier n’importe quel prédicat, plutôt que d’agir sur une valeur de constante spécifiée.
 
 L' `operator==` utilisé pour déterminer l'égalité entre des éléments doit imposer une relation d'équivalence entre ses opérandes.
 
-La complexité est linéaire : il existe des comparaisons (`last` - `first`) pour l’égalité et au maximum (`last` - `first`) les affectations de nouvelles valeurs.
+La complexité est linéaire : il existe ( `last`  -  `first` ) des comparaisons d’égalité et au maximum ( `last`  -  `first` ) des affectations de nouvelles valeurs.
 
 ### <a name="example"></a>Exemple
 
@@ -7209,13 +7209,13 @@ void reverse(
 
 ### <a name="parameters"></a>Paramètres
 
-\ d' *exécution*
+*exécutable*\
 Stratégie d’exécution à utiliser.
 
 *premier*\
 Itérateur bidirectionnel pointant sur la position du premier élément de la plage dont les éléments sont permutés.
 
-*dernier*\
+*famille*\
 Itérateur bidirectionnel pointant sur la position juste après le dernier élément de la plage dont les éléments sont permutés.
 
 ### <a name="remarks"></a>Notes
@@ -7286,16 +7286,16 @@ ForwardIterator reverse_copy(
 
 ### <a name="parameters"></a>Paramètres
 
-\ d' *exécution*
+*exécutable*\
 Stratégie d’exécution à utiliser.
 
 *premier*\
 Itérateur bidirectionnel pointant vers la position du premier élément de la plage source dont les éléments sont permutés.
 
-*dernier*\
+*famille*\
 Itérateur bidirectionnel pointant vers la position située de suite après le dernier élément de la plage source dont les éléments sont permutés.
 
-\ de *résultats*
+*venir*\
 Itérateur de sortie pointant vers la position du premier élément de la plage de destination dans laquelle les éléments sont copiés.
 
 ### <a name="return-value"></a>Valeur retournée
@@ -7368,23 +7368,23 @@ ForwardIterator rotate(
 
 ### <a name="parameters"></a>Paramètres
 
-\ d' *exécution*
+*exécutable*\
 Stratégie d’exécution à utiliser.
 
 *premier*\
 Itérateur vers l’avant ciblant la position du premier élément de la plage à faire pivoter.
 
-\ *au milieu*
+*intergiciel*\
 Itérateur vers l’avant définissant la limite au sein de la plage qui cible la position du premier élément dans la deuxième partie de la plage dont les éléments doivent être échangés avec ceux de la première partie de la plage.
 
-*dernier*\
+*famille*\
 Itérateur vers l’avant ciblant la position située de suite après le dernier élément de la plage à faire pivoter.
 
 ### <a name="remarks"></a>Notes
 
 Les plages référencées doivent être valides ; tous les pointeurs doivent pouvoir être déréférencés et, dans la séquence, la dernière position est accessible à partir de la première par incrémentation.
 
-La complexité est linéaire avec au maximum (`last` - `first`) des permutations.
+La complexité est linéaire avec au maximum ( `last`  -  `first` ) des permutations.
 
 ### <a name="example"></a>Exemple
 
@@ -7484,19 +7484,19 @@ ForwardIterator2 rotate_copy(
 
 ### <a name="parameters"></a>Paramètres
 
-\ d' *exécution*
+*exécutable*\
 Stratégie d’exécution à utiliser.
 
 *premier*\
 Itérateur vers l’avant ciblant la position du premier élément de la plage à faire pivoter.
 
-\ *au milieu*
+*intergiciel*\
 Itérateur vers l’avant définissant la limite au sein de la plage qui cible la position du premier élément dans la deuxième partie de la plage dont les éléments doivent être échangés avec ceux de la première partie de la plage.
 
-*dernier*\
+*famille*\
 Itérateur vers l’avant ciblant la position située de suite après le dernier élément de la plage à faire pivoter.
 
-\ de *résultats*
+*venir*\
 Itérateur de sortie qui traite la position du premier élément dans la plage de destination.
 
 ### <a name="return-value"></a>Valeur retournée
@@ -7507,7 +7507,7 @@ Itérateur de sortie ciblant la position située de suite après le dernier él�
 
 Les plages référencées doivent être valides ; tous les pointeurs doivent pouvoir être déréférencés et, dans la séquence, la dernière position est accessible à partir de la première par incrémentation.
 
-La complexité est linéaire avec au maximum (`last` - `first`) des permutations.
+La complexité est linéaire avec au maximum ( `last`  -  `first` ) des permutations.
 
 ### <a name="example"></a>Exemple
 
@@ -7627,25 +7627,25 @@ ForwardIterator search(
 
 ### <a name="parameters"></a>Paramètres
 
-\ d' *exécution*
+*exécutable*\
 Stratégie d’exécution à utiliser.
 
-*first1*\
+*First1*\
 Itérateur vers l'avant ciblant la position du premier élément de la plage dans laquelle s'effectue la recherche.
 
 *last1*\
 Itérateur vers l'avant ciblant la position juste après le dernier élément de la plage dans laquelle s'effectue la recherche.
 
-*first2*\
+*First2*\
 Itérateur vers l'avant ciblant la position du premier élément de la plage dans laquelle s'effectue la correspondance.
 
 *last2*\
 Itérateur vers l'avant ciblant la position juste après le dernier élément de la plage dans laquelle s'effectue la correspondance.
 
-*\ prévu*
+*prédit*\
 Objet de fonction de prédicat défini par l'utilisateur qui définit la condition à satisfaire si deux éléments sont à considérer comme équivalents. Un prédicat binaire accepte deux arguments et retourne **true** quand la condition est satisfaite et **false** quand elle ne l’est pas.
 
-\ de *recherche*
+*recherche*\
 Recherche qui encapsule le modèle à rechercher et l’algorithme de recherche à utiliser. Pour plus d’informations sur les recherches, consultez [default_searcher](default-searcher-class.md)classe, classe [boyer_moore_horspool_searcher](boyer-moore-horspool-searcher-class.md)et [classe boyer_moore_searcher](boyer-moore-searcher-class.md).
 
 ### <a name="return-value"></a>Valeur retournée
@@ -7799,22 +7799,22 @@ ForwardIterator search_n(
 
 ### <a name="parameters"></a>Paramètres
 
-\ d' *exécution*
+*exécutable*\
 Stratégie d’exécution à utiliser.
 
-*first1*\
+*First1*\
 Itérateur vers l'avant ciblant la position du premier élément de la plage dans laquelle s'effectue la recherche.
 
 *last1*\
 Itérateur vers l'avant ciblant la position juste après le dernier élément de la plage dans laquelle s'effectue la recherche.
 
-*nombre*\
+*saut*\
 Taille de la sous-séquence recherchée.
 
-*value*\
+*ajoutée*\
 Valeur des éléments de la séquence recherchée.
 
-*\ prévu*
+*prédit*\
 Objet de fonction de prédicat défini par l'utilisateur qui définit la condition à satisfaire si deux éléments sont à considérer comme équivalents. Un prédicat binaire accepte deux arguments et retourne **true** quand la condition est satisfaite et **false** quand elle ne l’est pas.
 
 ### <a name="return-value"></a>Valeur retournée
@@ -7956,25 +7956,25 @@ ForwardIterator set_difference(
 
 ### <a name="parameters"></a>Paramètres
 
-\ d' *exécution*
+*exécutable*\
 Stratégie d’exécution à utiliser.
 
-*first1*\
+*First1*\
 Itérateur d’entrée ciblant la position du premier élément dans la première des deux plages sources triées à regrouper et trier au sein d’une même plage représentant la différence des deux plages sources.
 
 *last1*\
 Itérateur d’entrée ciblant la position située de suite après le dernier élément dans la première des deux plages sources triées à regrouper et trier au sein d’une même plage représentant la différence des deux plages sources.
 
-*first2*\
+*First2*\
 Itérateur d’entrée ciblant la position du premier élément dans la deuxième des deux plages sources triées consécutives à regrouper et trier au sein d’une même plage représentant la différence des deux plages sources.
 
 *last2*\
 Itérateur d’entrée ciblant la position située de suite après le dernier élément dans la deuxième des deux plages sources triées consécutives à regrouper et trier au sein d’une même plage représentant la différence des deux plages sources.
 
-\ de *résultats*
+*venir*\
 Itérateur de sortie ciblant la position du premier élément dans la plage de destination dans la mesure où les deux plages sources doivent être regroupées au sein d’une même plage triée représentant la différence des deux plages sources.
 
-*\ prévu*
+*prédit*\
 Objet de fonction de prédicat défini par l’utilisateur qui définit la logique selon laquelle un élément est inférieur à un autre. Le prédicat binaire accepte deux arguments et doit retourner **true** quand le premier élément est inférieur au deuxième et **false** dans le cas contraire.
 
 ### <a name="return-value"></a>Valeur retournée
@@ -7991,9 +7991,9 @@ Les plages sources triées doivent chacune être structurées comme condition pr
 
 L’opération est stable, car l’ordre relatif des éléments dans chaque plage est préservé dans la plage de destination. Les plages sources ne sont pas modifiées par l’algorithme merge.
 
-Les types de valeur des itérateurs d’entrée doivent être comparables en termes d’infériorité pour être classés. Ainsi, pour deux éléments donnés, il est possible de déterminer s’ils sont équivalents (dans le sens où ni l’un ni l’autre n’est inférieur à l’autre) ou si l’un est inférieur à l’autre. Cela entraîne le tri des éléments non équivalents. Quand il existe des éléments équivalents dans les deux plages sources, les éléments de la première plage précèdent ceux de la deuxième dans la plage de destination. Si les plages sources contiennent des éléments en double (de telle sorte qu’il y a plus d’éléments dans la première plage source que dans la seconde), la plage de destination contient le nombre d’occurrences supplémentaires de ces éléments que contient la première plage source par rapport à la deuxième.
+Les types de valeur des itérateurs d’entrée doivent être comparables en termes d’infériorité pour être classés. Ainsi, pour deux éléments donnés, il est possible de déterminer s’ils sont équivalents (dans le sens où ni l’un ni l’autre n’est inférieur à l’autre) ou si l’un est inférieur à l’autre. Cela entraîne le tri des éléments non équivalents. Quand il existe des éléments équivalents dans les deux plages sources, les éléments de la première plage précèdent ceux de la deuxième dans la plage de destination. Si les plages sources contiennent des éléments en double (de telle sorte qu’il y a plus d’éléments dans la première plage source que dans la seconde), la plage de destination contient le nombre d’occurrences supplémentaires de ces éléments que contient la première plage source par rapport à la deuxième.
 
-La complexité de l’algorithme est linéaire avec au maximum `2 * ((last1 - first1) - (last2 - first2)) - 1` comparaisons pour les plages sources non vides.
+La complexité de l’algorithme est linéaire avec au maximum les `2 * ((last1 - first1) - (last2 - first2)) - 1` comparaisons pour les plages sources non vides.
 
 ### <a name="example"></a>Exemple
 
@@ -8158,25 +8158,25 @@ ForwardIterator set_intersection(
 
 ### <a name="parameters"></a>Paramètres
 
-\ d' *exécution*
+*exécutable*\
 Stratégie d’exécution à utiliser.
 
-*first1*\
+*First1*\
 Itérateur d’entrée ciblant la position du premier élément dans la première des deux plages sources triées à regrouper et trier au sein d’une même plage représentant l’intersection des deux plages sources.
 
 *last1*\
 Itérateur d’entrée ciblant la position située de suite après le dernier élément dans la première des deux plages sources triées à regrouper et trier au sein d’une même plage représentant l’intersection des deux plages sources.
 
-*first2*\
+*First2*\
 Itérateur d’entrée ciblant la position du premier élément dans la deuxième des deux plages sources triées consécutives à regrouper et trier au sein d’une même plage représentant l’intersection des deux plages sources.
 
 *last2*\
 Itérateur d’entrée ciblant la position située de suite après le dernier élément dans la deuxième des deux plages sources triées consécutives à regrouper et trier au sein d’une même plage représentant l’intersection des deux plages sources.
 
-\ de *résultats*
+*venir*\
 Itérateur de sortie ciblant la position du premier élément dans la plage de destination dans la mesure où les deux plages sources doivent être regroupées au sein d’une même plage triée représentant l’intersection des deux plages sources.
 
-*\ prévu*
+*prédit*\
 Objet de fonction de prédicat défini par l’utilisateur qui définit la logique selon laquelle un élément est inférieur à un autre. Le prédicat binaire accepte deux arguments et doit retourner **true** quand le premier élément est inférieur au deuxième et **false** dans le cas contraire.
 
 ### <a name="return-value"></a>Valeur retournée
@@ -8193,9 +8193,9 @@ Les plages sources triées doivent chacune être structurées comme condition pr
 
 L’opération est stable, car l’ordre relatif des éléments dans chaque plage est préservé dans la plage de destination. Les plages sources ne sont pas modifiées par l’algorithme.
 
-Les types de valeur des itérateurs d’entrée doivent être comparables en termes d’infériorité pour être classés. Ainsi, pour deux éléments donnés, il est possible de déterminer s’ils sont équivalents (dans le sens où ni l’un ni l’autre n’est inférieur à l’autre) ou si l’un est inférieur à l’autre. Cela entraîne le tri des éléments non équivalents. Quand il existe des éléments équivalents dans les deux plages sources, les éléments de la première plage précèdent ceux de la deuxième dans la plage de destination. Si les plages sources contiennent des éléments en double, la plage de destination contient le nombre maximal de ces éléments qui figurent dans les deux plages sources.
+Les types de valeur des itérateurs d’entrée doivent être comparables en termes d’infériorité pour être classés. Ainsi, pour deux éléments donnés, il est possible de déterminer s’ils sont équivalents (dans le sens où ni l’un ni l’autre n’est inférieur à l’autre) ou si l’un est inférieur à l’autre. Cela entraîne le tri des éléments non équivalents. Quand il existe des éléments équivalents dans les deux plages sources, les éléments de la première plage précèdent ceux de la deuxième dans la plage de destination. Si les plages sources contiennent des éléments en double, la plage de destination contient le nombre maximal de ces éléments qui figurent dans les deux plages sources.
 
-La complexité de l’algorithme est linéaire avec au maximum `2 * ((last1 - first1) + (last2 - first2)) - 1` comparaisons pour les plages sources non vides.
+La complexité de l’algorithme est linéaire avec au maximum les `2 * ((last1 - first1) + (last2 - first2)) - 1` comparaisons pour les plages sources non vides.
 
 ### <a name="example"></a>Exemple
 
@@ -8356,25 +8356,25 @@ ForwardIterator set_symmetric_difference(
 
 ### <a name="parameters"></a>Paramètres
 
-\ d' *exécution*
+*exécutable*\
 Stratégie d’exécution à utiliser.
 
-*first1*\
+*First1*\
 Itérateur d’entrée ciblant la position du premier élément dans la première des deux plages sources triées à regrouper et trier au sein d’une même plage représentant la différence symétrique des deux plages sources.
 
 *last1*\
 Itérateur d’entrée ciblant la position située de suite après le dernier élément dans la première des deux plages sources triées à regrouper et trier au sein d’une même plage représentant la différence symétrique des deux plages sources.
 
-*first2*\
+*First2*\
 Itérateur d’entrée ciblant la position du premier élément dans la deuxième des deux plages sources triées consécutives à regrouper et trier au sein d’une même plage représentant la différence symétrique des deux plages sources.
 
 *last2*\
 Itérateur d’entrée ciblant la position située de suite après le dernier élément dans la deuxième des deux plages sources triées consécutives à regrouper et trier au sein d’une même plage représentant la différence symétrique des deux plages sources.
 
-\ de *résultats*
+*venir*\
 Itérateur de sortie ciblant la position du premier élément dans la plage de destination dans la mesure où les deux plages sources doivent être regroupées au sein d’une même plage triée représentant la différence symétrique des deux plages sources.
 
-*\ prévu*
+*prédit*\
 Objet de fonction de prédicat défini par l’utilisateur qui définit la logique selon laquelle un élément est inférieur à un autre. Le prédicat binaire accepte deux arguments et doit retourner **true** quand le premier élément est inférieur au deuxième et **false** dans le cas contraire.
 
 ### <a name="return-value"></a>Valeur retournée
@@ -8391,9 +8391,9 @@ Les plages sources triées doivent chacune être structurées comme condition pr
 
 L’opération est stable, car l’ordre relatif des éléments dans chaque plage est préservé dans la plage de destination. Les plages sources ne sont pas modifiées par l’algorithme merge.
 
-Les types de valeur des itérateurs d’entrée doivent être comparables en termes d’infériorité pour être classés. Ainsi, pour deux éléments donnés, il est possible de déterminer s’ils sont équivalents (dans le sens où ni l’un ni l’autre n’est inférieur à l’autre) ou si l’un est inférieur à l’autre. Cela entraîne le tri des éléments non équivalents. Quand il existe des éléments équivalents dans les deux plages sources, les éléments de la première plage précèdent ceux de la deuxième dans la plage de destination. Si les plages sources contiennent des éléments en double, la plage de destination contient la valeur absolue du nombre d’occurrences supplémentaires de ces éléments que contient l’une des plages sources par rapport à la deuxième.
+Les types de valeur des itérateurs d’entrée doivent être comparables en termes d’infériorité pour être classés. Ainsi, pour deux éléments donnés, il est possible de déterminer s’ils sont équivalents (dans le sens où ni l’un ni l’autre n’est inférieur à l’autre) ou si l’un est inférieur à l’autre. Cela entraîne le tri des éléments non équivalents. Quand il existe des éléments équivalents dans les deux plages sources, les éléments de la première plage précèdent ceux de la deuxième dans la plage de destination. Si les plages sources contiennent des éléments en double, la plage de destination contient la valeur absolue du nombre d’occurrences supplémentaires de ces éléments que contient l’une des plages sources par rapport à la deuxième.
 
-La complexité de l’algorithme est linéaire avec au maximum `2 * ((last1 - first1) - (last2 - first2)) - 1` comparaisons pour les plages sources non vides.
+La complexité de l’algorithme est linéaire avec au maximum les `2 * ((last1 - first1) - (last2 - first2)) - 1` comparaisons pour les plages sources non vides.
 
 ### <a name="example"></a>Exemple
 
@@ -8558,25 +8558,25 @@ ForwardIterator set_union(
 
 ### <a name="parameters"></a>Paramètres
 
-\ d' *exécution*
+*exécutable*\
 Stratégie d’exécution à utiliser.
 
-*first1*\
+*First1*\
 Itérateur d’entrée ciblant la position du premier élément dans la première des deux plages sources triées à regrouper et trier au sein d’une même plage représentant l’union des deux plages sources.
 
 *last1*\
 Itérateur d’entrée ciblant la position située de suite après le dernier élément dans la première des deux plages sources triées à regrouper et trier au sein d’une même plage représentant l’union des deux plages sources.
 
-*first2*\
+*First2*\
 Itérateur d’entrée ciblant la position du premier élément dans la deuxième des deux plages sources triées consécutives à regrouper et trier au sein d’une même plage représentant l’union des deux plages sources.
 
 *last2*\
 Itérateur d’entrée ciblant la position située de suite après le dernier élément dans la deuxième des deux plages sources triées consécutives à regrouper et trier au sein d’une même plage représentant l’union des deux plages sources.
 
-\ de *résultats*
+*venir*\
 Itérateur de sortie ciblant la position du premier élément dans la plage de destination dans la mesure où les deux plages sources doivent être regroupées au sein d’une même plage triée représentant l’union des deux plages sources.
 
-*\ prévu*
+*prédit*\
 Objet de fonction de prédicat défini par l’utilisateur qui définit la logique selon laquelle un élément est inférieur à un autre. Le prédicat binaire accepte deux arguments et doit retourner **true** quand le premier élément est inférieur au deuxième et **false** dans le cas contraire.
 
 ### <a name="return-value"></a>Valeur retournée
@@ -8591,9 +8591,9 @@ La plage de destination ne doit pas chevaucher les plages sources et doit être 
 
 Les plages sources triées doivent chacune être structurées comme condition préalable à l’application de l’algorithme `merge` selon le même ordre que celui utilisé par l’algorithme pour trier les plages regroupées.
 
-L’opération est stable, car l’ordre relatif des éléments dans chaque plage est préservé dans la plage de destination. Les plages sources ne sont pas modifiées par l’algorithme `merge`.
+L’opération est stable, car l’ordre relatif des éléments dans chaque plage est préservé dans la plage de destination. Les plages sources ne sont pas modifiées par l’algorithme `merge` .
 
-Les types de valeur des itérateurs d’entrée doivent être comparables en termes d’infériorité pour être classés. Ainsi, pour deux éléments donnés, il est possible de déterminer s’ils sont équivalents (dans le sens où ni l’un ni l’autre n’est inférieur à l’autre) ou si l’un est inférieur à l’autre. Cela entraîne le tri des éléments non équivalents. Quand il existe des éléments équivalents dans les deux plages sources, les éléments de la première plage précèdent ceux de la deuxième dans la plage de destination. Si les plages sources contiennent des éléments en double, la plage de destination contient le nombre maximal de ces éléments qui figurent dans les deux plages sources.
+Les types de valeur des itérateurs d’entrée doivent être comparables en termes d’infériorité pour être classés. Ainsi, pour deux éléments donnés, il est possible de déterminer s’ils sont équivalents (dans le sens où ni l’un ni l’autre n’est inférieur à l’autre) ou si l’un est inférieur à l’autre. Cela entraîne le tri des éléments non équivalents. Quand il existe des éléments équivalents dans les deux plages sources, les éléments de la première plage précèdent ceux de la deuxième dans la plage de destination. Si les plages sources contiennent des éléments en double, la plage de destination contient le nombre maximal de ces éléments qui figurent dans les deux plages sources.
 
 La complexité de l’algorithme est linéaire avec au maximum `2 * ((last1 - first1) - (last2 - first2)) - 1` comparaisons.
 
@@ -8733,15 +8733,15 @@ void shuffle(
 *premier*\
 Itérateur sur le premier élément de la plage à lire de façon aléatoire, compris. Doit remplir les conditions de `RandomAccessIterator` et `ValueSwappable`.
 
-*dernier*\
+*famille*\
 Itérateur sur le dernier élément de la plage à lire de façon aléatoire, non compris. Doit remplir les conditions de `RandomAccessIterator` et `ValueSwappable`.
 
-\ de la *génération*
+*général*\
 Générateur de nombres aléatoires que la fonction `shuffle()` utilisera pour l'opération. Doit remplir les conditions d'un `UniformRandomNumberGenerator`.
 
 ### <a name="remarks"></a>Notes
 
-Pour plus d’informations et pour obtenir un exemple de code qui utilise `shuffle()`, consultez [\<random>](../standard-library/random.md).
+Pour plus d’informations et pour obtenir un exemple de code qui utilise `shuffle()` , consultez [\<random>](random.md) .
 
 ## <a name="sort"></a><a name="sort"></a>Tris
 
@@ -8775,17 +8775,17 @@ void sort(
 
 ### <a name="parameters"></a>Paramètres
 
-\ d' *exécution*
+*exécutable*\
 Stratégie d’exécution à utiliser.
 
 *premier*\
 Itérateur d’accès aléatoire ciblant la position du premier élément de la plage à trier.
 
-*dernier*\
+*famille*\
 Itérateur d’accès aléatoire ciblant la position juste après le dernier élément de la plage à trier.
 
-*\ prévu*
-Objet de fonction de prédicat défini par l’utilisateur qui définit le critère de comparaison à satisfaire par les éléments consécutifs dans l’ordre. Ce prédicat binaire accepte deux arguments et retourne **true** si les deux arguments sont dans l’ordre et **false** dans le cas contraire. Cette fonction de comparaison doit imposer un ordre faible strict sur les paires d’éléments de la séquence. Pour plus d’informations, consultez [Algorithmes](../standard-library/algorithms.md).
+*prédit*\
+Objet de fonction de prédicat défini par l’utilisateur qui définit le critère de comparaison à satisfaire par les éléments consécutifs dans l’ordre. Ce prédicat binaire accepte deux arguments et retourne **true** si les deux arguments sont dans l’ordre et **false** dans le cas contraire. Cette fonction de comparaison doit imposer un ordre faible strict sur les paires d’éléments de la séquence. Pour plus d’informations, consultez [Algorithmes](algorithms.md).
 
 ### <a name="remarks"></a>Notes
 
@@ -8793,7 +8793,7 @@ La plage référencée doit être valide ; tous les pointeurs doivent pouvoir �
 
 Les éléments sont équivalents, mais pas nécessairement égaux si aucun n’est inférieur à l’autre. L’algorithme `sort` n’est pas stable et ne garantit pas que l’ordre relatif des éléments équivalents est conservé. L’algorithme `stable_sort` conserve cet ordre d’origine.
 
-La moyenne d’une complexité de tri est `O( N log N )`, où *N* = *dernier* - en *premier*.
+La moyenne d’une complexité de tri est `O( N log N )` , où *N*pour la  =  *dernière*  -  *fois*.
 
 ### <a name="example"></a>Exemple
 
@@ -8885,10 +8885,10 @@ void sort_heap(
 *premier*\
 Itérateur d’accès aléatoire ciblant la position du premier élément du tas cible.
 
-*dernier*\
+*famille*\
 Itérateur d’accès aléatoire ciblant la position juste après le dernier élément du tas cible.
 
-*\ prévu*
+*prédit*\
 Objet de fonction de prédicat défini par l’utilisateur qui définit la logique selon laquelle un élément est inférieur à un autre. Un prédicat de comparaison prend deux arguments et retourne la **valeur true** lorsque la valeur est satisfaite et **false** lorsqu’elle n’est pas satisfaite.
 
 ### <a name="remarks"></a>Notes
@@ -8903,11 +8903,11 @@ Après l’application de cet algorithme, la plage à laquelle il a été appliq
 
 Il ne s’agit pas d’un tri stable, car l’ordre relatif des éléments équivalents n’est pas nécessairement conservé.
 
-Les tas sont un moyen idéal d’implémenter des files d’attente prioritaires et sont utilisés dans l’implémentation de la [classe priority_queue](../standard-library/priority-queue-class.md) de l’adaptateur de conteneur de bibliothèque C++ Standard.
+Les tas sont un moyen idéal d’implémenter des files d’attente prioritaires et sont utilisés dans l’implémentation de la [classe priority_queue](priority-queue-class.md) de l’adaptateur de conteneur de bibliothèque C++ Standard.
 
 La plage référencée doit être valide ; tous les pointeurs doivent pouvoir être déréférencés et, dans la séquence, la dernière position est accessible depuis la première au moyen d'une incrémentation.
 
-La complexité est au plus `N log N`, où *N* = *dernier* - en *premier*.
+La complexité est au maximum `N log N` , où *N*au plus le  =  *dernier*  -  *first*.
 
 ### <a name="example"></a>Exemple
 
@@ -8984,16 +8984,16 @@ BidirectionalIterator stable_partition(
 
 ### <a name="parameters"></a>Paramètres
 
-\ d' *exécution*
+*exécutable*\
 Stratégie d’exécution à utiliser.
 
 *premier*\
 Itérateur bidirectionnel ciblant la position du premier élément de la plage à partitionner.
 
-*dernier*\
+*famille*\
 Itérateur bidirectionnel ciblant la position juste après le dernier élément de la plage à partitionner.
 
-*\ prévu*
+*prédit*\
 Objet de fonction de prédicat défini par l’utilisateur qui définit la condition à satisfaire si un élément doit être classé. Un prédicat unaire accepte un seul argument et retourne **true** s’il est satisfait ou **false** s’il n’est pas respecté.
 
 ### <a name="return-value"></a>Valeur retournée
@@ -9004,7 +9004,7 @@ Itérateur bidirectionnel ciblant la position du premier élément de la plage q
 
 La plage référencée doit être valide ; tous les pointeurs doivent pouvoir être déréférencés et, dans la séquence, la dernière position est accessible depuis la première au moyen d'une incrémentation.
 
-Les éléments *a* et *b* sont équivalents, mais pas nécessairement égaux, si `pred( a, b )` a la valeur false et `pred( b, a )` a la valeur false, où *prédit* est le prédicat spécifié par le paramètre. L’algorithme `stable_partition` est stable et garantit que l’ordre relatif des éléments équivalents sera préservé. L’algorithme `partition` ne préserve pas nécessairement ce classement d’origine.
+Les éléments *a* et *b* sont équivalents, mais pas nécessairement égaux, si `pred( a, b )` a la valeur false et `pred( b, a )` a la valeur false, où *prédit* est le prédicat spécifié par le paramètre. L' `stable_partition` algorithme est stable et garantit que l’ordre relatif des éléments équivalents sera préservé. L’algorithme `partition` ne préserve pas nécessairement ce classement d’origine.
 
 ### <a name="example"></a>Exemple
 
@@ -9085,25 +9085,25 @@ void stable_sort(
 
 ### <a name="parameters"></a>Paramètres
 
-\ d' *exécution*
+*exécutable*\
 Stratégie d’exécution à utiliser.
 
 *premier*\
 Itérateur bidirectionnel ciblant la position du premier élément de la plage à trier.
 
-*dernier*\
+*famille*\
 Itérateur bidirectionnel ciblant la position située juste après le dernier élément de la plage à trier.
 
-*\ prévu*
+*prédit*\
 Objet de fonction de prédicat défini par l’utilisateur qui définit le critère de comparaison à satisfaire par les éléments consécutifs dans l’ordre. Un prédicat binaire accepte deux arguments et retourne **true** quand la condition est satisfaite et **false** quand elle ne l’est pas.
 
 ### <a name="remarks"></a>Notes
 
 La plage référencée doit être valide ; tous les pointeurs doivent pouvoir être déréférencés et, dans la séquence, la dernière position est accessible depuis la première au moyen d'une incrémentation.
 
-Les éléments sont équivalents, mais pas nécessairement égaux si aucun n’est inférieur à l’autre. L’algorithme `sort` est stable et garantit que l’ordre relatif des éléments équivalents sera préservé.
+Les éléments sont équivalents, mais pas nécessairement égaux si aucun n’est inférieur à l’autre. L' `sort` algorithme est stable et garantit que l’ordre relatif des éléments équivalents sera préservé.
 
-La complexité d’exécution de `stable_sort` dépend de la quantité de mémoire disponible, mais le meilleur cas (en raison de la mémoire suffisante) est `O(N log N)` et le pire cas est `O(N (log N)^2)`, où *N* = *dernier* - en *premier*. En règle générale, l’algorithme `sort` est beaucoup plus rapide que `stable_sort`.
+La complexité au moment de l’exécution de `stable_sort` dépend de la quantité de mémoire disponible, mais le meilleur cas (avec une mémoire suffisante) est `O(N log N)` et, dans le pire des cas, c’est le cas de la `O(N (log N)^2)` *N*  =  *dernière*  -  *première*. En règle générale, l' `sort` algorithme est beaucoup plus rapide que `stable_sort` .
 
 ### <a name="example"></a>Exemple
 
@@ -9189,10 +9189,10 @@ void swap(
 
 ### <a name="parameters"></a>Paramètres
 
-\ *gauche*
+*gauche*\
 Pour le premier remplacement, premier objet dont le contenu est échangé. Pour le deuxième remplacement, premier tableau d’objets dont le contenu est échangé.
 
-\ *droit*
+*Oui*\
 Pour le premier remplacement, deuxième objet dont le contenu est échangé. Pour le deuxième remplacement, deuxième tableau d’objets dont le contenu est échangé.
 
 ### <a name="remarks"></a>Notes
@@ -9276,16 +9276,16 @@ ForwardIterator2 swap_ranges(
 
 ### <a name="parameters"></a>Paramètres
 
-\ d' *exécution*
+*exécutable*\
 Stratégie d’exécution à utiliser.
 
-*first1*\
+*First1*\
 Itérateur vers l’avant pointant sur la première position de la première plage dont les éléments doivent être échangés.
 
 *last1*\
 Itérateur vers l’avant pointant juste après la dernière position de la première plage dont les éléments doivent être échangés.
 
-*first2*\
+*First2*\
 Itérateur vers l’avant pointant sur la première position de la deuxième plage dont les éléments doivent être échangés.
 
 ### <a name="return-value"></a>Valeur retournée
@@ -9296,7 +9296,7 @@ Itérateur vers l’avant pointant juste après la dernière position de la deux
 
 Les plages référencées doivent être valides ; tous les pointeurs doivent pouvoir être déréférencés et, dans chaque séquence, la dernière position est accessible à partir de la première par incrémentation. La deuxième plage doit être aussi grande que la première.
 
-La complexité est linéaire avec *last1* - *First1* swaps effectués. Si les éléments des conteneurs du même type sont échangés, la fonction membre `swap` de ce conteneur doit être utilisée, car la fonction membre a généralement une complexité constante.
+La complexité est linéaire avec les échanges *last1*  -  *First1* effectués. Si les éléments des conteneurs du même type sont échangés, la fonction membre `swap` de ce conteneur doit être utilisée, car la fonction membre a généralement une complexité constante.
 
 ### <a name="example"></a>Exemple
 
@@ -9399,22 +9399,22 @@ ForwardIterator transform(
 
 ### <a name="parameters"></a>Paramètres
 
-\ d' *exécution*
+*exécutable*\
 Stratégie d’exécution à utiliser.
 
-*first1*\
+*First1*\
 Itérateur d’entrée ciblant la position du premier élément de la première plage source à traiter.
 
 *last1*\
 Itérateur d’entrée ciblant la position juste après le dernier élément de la première plage source à traiter.
 
-*first2*\
+*First2*\
 Itérateur d'entrée qui traite la position du premier élément de la seconde plage source à traiter.
 
-\ de *résultats*
+*venir*\
 Itérateur de sortie qui traite la position du premier élément dans la plage de destination.
 
-\ *Func*
+*Func*\
 Objet de fonction unaire défini par l’utilisateur utilisé dans la première version de l’algorithme appliqué à chaque élément de la première plage source, ou objet de fonction binaire défini par l’utilisateur utilisé dans la deuxième version de l’algorithme appliqué par paire, dans un ordre vers l’avant, aux deux plages sources.
 
 ### <a name="return-value"></a>Valeur retournée
@@ -9425,9 +9425,9 @@ Itérateur de sortie qui traite la position située immédiatement après le der
 
 Les plages référencées doivent être valides ; tous les pointeurs doivent pouvoir être déréférencés et, dans chaque séquence, la dernière position doit être accessible à partir de la première par incrémentation. La plage de destination doit être suffisamment grande pour contenir la plage source transformée.
 
-Si le *résultat* est égal à *First1* dans la première version de l’algorithme, les plages source et de destination seront identiques et la séquence sera modifiée sur place. Toutefois, le *résultat* peut ne pas traiter une position dans la plage [`first1` + 1, `last1`).
+Si le *résultat* est égal à *First1* dans la première version de l’algorithme, les plages source et de destination seront identiques et la séquence sera modifiée sur place. Toutefois, le *résultat* peut ne pas traiter une position dans la plage [ `first1` + 1, `last1` ).
 
-La complexité est linéaire avec au maximum (`last1` - `first1`) comparaisons.
+La complexité est linéaire avec au maximum ( `last1`  -  `first1` ) comparaisons.
 
 ### <a name="example"></a>Exemple
 
@@ -9547,16 +9547,16 @@ ForwardIterator unique(
 
 ### <a name="parameters"></a>Paramètres
 
-\ d' *exécution*
+*exécutable*\
 Stratégie d’exécution à utiliser.
 
 *premier*\
 Itérateur vers l'avant ciblant la position du premier élément de la plage dans laquelle rechercher des doublons à supprimer.
 
-*dernier*\
+*famille*\
 Itérateur vers l’avant ciblant la position juste après le dernier élément de la plage dans laquelle rechercher des doublons à supprimer.
 
-*\ prévu*
+*prédit*\
 Objet de fonction de prédicat défini par l'utilisateur qui définit la condition à satisfaire si deux éléments sont à considérer comme équivalents. Un prédicat binaire accepte deux arguments et retourne **true** quand la condition est satisfaite et **false** quand elle ne l’est pas.
 
 ### <a name="return-value"></a>Valeur retournée
@@ -9569,9 +9569,9 @@ Les deux formes de l’algorithme suppriment le deuxième doublon d’une paire 
 
 Le fonctionnement de l’algorithme est stable pour ne pas modifier l’ordre relatif des éléments rétablis.
 
-La plage référencée doit être valide ; tous les pointeurs doivent pouvoir être déréférencés et, dans la séquence, la dernière position est accessible depuis la première au moyen d'une incrémentation. le nombre d’éléments dans la séquence n’est pas modifié par l’algorithme `unique` et les éléments au-delà de la fin de la séquence modifiée sont déréférencés, mais pas spécifiés.
+La plage référencée doit être valide ; tous les pointeurs doivent pouvoir être déréférencés et, dans la séquence, la dernière position est accessible depuis la première au moyen d'une incrémentation. le nombre d’éléments dans la séquence n’est pas modifié par l’algorithme `unique` et les éléments au-delà de la fin de la séquence modifiée sont déréférencés, mais ne sont pas spécifiés.
 
-La complexité est linéaire, ce qui nécessite des comparaisons de `(last - first) - 1`.
+La complexité est linéaire, ce qui nécessite des `(last - first) - 1` comparaisons.
 
 La classe list fournit une fonction membre « unique » plus efficace qui peut donner de meilleurs résultats.
 
@@ -9700,19 +9700,19 @@ ForwardIterator2 unique_copy(ExecutionPolicy&& exec,
 
 ### <a name="parameters"></a>Paramètres
 
-\ d' *exécution*
+*exécutable*\
 Stratégie d’exécution à utiliser.
 
 *premier*\
 Itérateur vers l’avant ciblant la position du premier élément de la plage source à copier.
 
-*dernier*\
+*famille*\
 Itérateur vers l’avant ciblant la position située de suite après le dernier élément de la plage source à copier.
 
-\ de *résultats*
+*venir*\
 Itérateur de sortie ciblant la position du premier élément dans la plage de destination recevant la copie avec suppression des doublons consécutifs.
 
-*\ prévu*
+*prédit*\
 Objet de fonction de prédicat défini par l'utilisateur qui définit la condition à satisfaire si deux éléments sont à considérer comme équivalents. Un prédicat binaire accepte deux arguments et retourne **true** quand la condition est satisfaite et **false** quand elle ne l’est pas.
 
 ### <a name="return-value"></a>Valeur retournée
@@ -9727,7 +9727,7 @@ Le fonctionnement de l’algorithme est stable pour ne pas modifier l’ordre re
 
 Les plages référencées doivent être valides ; tous les pointeurs doivent pouvoir être déréférencés et, dans une séquence, la dernière position est accessible depuis la première au moyen d’une incrémentation.
 
-La complexité est linéaire, ce qui nécessite des comparaisons (`last` - `first`).
+La complexité est linéaire, ce qui nécessite des `last`  -  `first` comparaisons ().
 
 ### <a name="example"></a>Exemple
 
@@ -9825,13 +9825,13 @@ ForwardIterator upper_bound(
 *premier*\
 Position du premier élément de la plage dans laquelle effectuer la recherche.
 
-*dernier*\
+*famille*\
 Position juste après le dernier élément de la plage dans laquelle effectuer la recherche.
 
-*value*\
+*ajoutée*\
 Valeur dans la plage ordonnée qui doit être dépassée par la valeur de l’élément ciblé par l’itérateur retourné.
 
-*\ prévu*
+*prédit*\
 Objet de fonction de prédicat de comparaison défini par l’utilisateur qui définit le sens dans lequel un élément est inférieur à un autre. Un prédicat de comparaison prend deux arguments et retourne la **valeur true** lorsque la valeur est satisfaite et **false** lorsqu’elle n’est pas satisfaite.
 
 ### <a name="return-value"></a>Valeur retournée
@@ -9848,7 +9848,7 @@ La plage n’est pas modifiée par l’algorithme `upper_bound`.
 
 Les types valeur des itérateurs vers l’avant doivent être comparables en termes d’infériorité pour être ordonnés. Ainsi, pour deux éléments donnés, il est possible de déterminer s’ils sont équivalents (dans le sens où ni l’un ni l’autre n’est inférieur à l’autre) ou si l’un est inférieur à l’autre. De cette façon, les éléments non équivalents sont ordonnés
 
-La complexité de l’algorithme est logarithmique pour les itérateurs d’accès aléatoire et linéaire dans le cas contraire, avec le nombre d’étapes proportionnelles à (`last - first`).
+La complexité de l’algorithme est logarithmique pour les itérateurs d’accès aléatoire et linéaire dans le cas contraire, avec le nombre d’étapes proportionnelles à ( `last - first` ).
 
 ### <a name="example"></a>Exemple
 

@@ -8,29 +8,29 @@ helpviewer_keywords:
 - data transfer [MFC], OLE
 - data transfer classes [MFC]
 ms.assetid: c8ab2825-ed69-4b88-8ae6-f368b94726b8
-ms.openlocfilehash: 7e01b6d5a7d14e0af4ca760e6e601e91359c8ab1
-ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
+ms.openlocfilehash: 530b1772dfb623689facd5b14eebe9ed1eacd4fd
+ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/17/2020
-ms.locfileid: "79447613"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84624143"
 ---
 # <a name="ole-drag-and-drop-and-data-transfer-classes"></a>Classes de glisser-déplacer OLE et de transfert de données
 
 Ces classes sont utilisées dans les transferts de données OLE. Elles autorisent le transfert des données entre les applications à l’aide du presse-papiers ou par glisser-déplacer.
 
-[COleDropSource](../mfc/reference/coledropsource-class.md)<br/>
+[COleDropSource](reference/coledropsource-class.md)<br/>
 Contrôle l’opération de glisser-déplacer du début à la fin. Cette classe détermine le moment où l’opération glisser commence et le moment où elle se termine. Il affiche également les commentaires du curseur pendant l’opération de glisser-déplacer.
 
-[COleDataSource](../mfc/reference/coledatasource-class.md)<br/>
-Utilisé lorsqu’une application fournit des données pour un transfert de données. `COleDataSource` peut être affiché en tant qu’objet de presse-papiers orienté objet.
+[COleDataSource](reference/coledatasource-class.md)<br/>
+Utilisé lorsqu’une application fournit des données pour un transfert de données. `COleDataSource`peut être affiché en tant qu’objet de presse-papiers orienté objet.
 
-[COleDropTarget](../mfc/reference/coledroptarget-class.md)<br/>
-Représente la cible d’une opération de glisser-déplacer. Un objet `COleDropTarget` correspond à une fenêtre à l’écran. Il détermine s’il faut accepter toutes les données déposées sur celui-ci et implémente l’opération de suppression réelle.
+[COleDropTarget](reference/coledroptarget-class.md)<br/>
+Représente la cible d’une opération de glisser-déplacer. Un `COleDropTarget` objet correspond à une fenêtre à l’écran. Il détermine s’il faut accepter toutes les données déposées sur celui-ci et implémente l’opération de suppression réelle.
 
-[COleDataObject](../mfc/reference/coledataobject-class.md)<br/>
-Utilisé comme côté récepteur pour `COleDataSource`. les objets `COleDataObject` fournissent l’accès aux données stockées par un objet `COleDataSource`.
+[COleDataObject](reference/coledataobject-class.md)<br/>
+Utilisé comme côté récepteur `COleDataSource` . `COleDataObject`les objets fournissent l’accès aux données stockées par un `COleDataSource` objet.
 
 ## <a name="see-also"></a>Voir aussi
 
-[Vue d’ensemble de la classe](../mfc/class-library-overview.md)
+[Vue d'ensemble des classes](class-library-overview.md)

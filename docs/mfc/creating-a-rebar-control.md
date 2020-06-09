@@ -5,36 +5,36 @@ helpviewer_keywords:
 - rebar controls [MFC], creating
 - CReBarCtrl class [MFC], creating
 ms.assetid: 0a012e08-772b-4f6a-af86-7cb651d11d3e
-ms.openlocfilehash: 0fb651aef599b64b787d96a668e2e1496c1dff8e
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 6828fa3b47eaa1e29579b09611d85cd68702c332
+ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62153343"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84617126"
 ---
 # <a name="creating-a-rebar-control"></a>Création d'un contrôle rebar
 
-[CReBarCtrl](../mfc/reference/crebarctrl-class.md) objets doivent être créés avant que l’objet parent est visible. Cela réduit les risques de problèmes de peinture.
+Les objets [CReBarCtrl](reference/crebarctrl-class.md) doivent être créés avant que l’objet parent soit visible. Cela réduit les possibilités de peinture des problèmes.
 
-Par exemple, contrôles rebar (utilisés dans les objets de fenêtre frame) sont couramment utilisés comme fenêtres parentes pour les contrôles de barre d’outils. Par conséquent, le parent du contrôle rebar est l’objet de fenêtre frame. Étant donné que l’objet de fenêtre frame est le parent, le `OnCreate` la fonction membre (du parent) est un excellent moyen pour créer le contrôle rebar.
+Par exemple, les contrôles rebar (utilisés dans les objets de fenêtre frame) sont couramment utilisés comme fenêtres parentes pour les contrôles ToolBar. Par conséquent, le parent du contrôle rebar est l’objet de fenêtre frame. Étant donné que l’objet de fenêtre frame est le parent, la `OnCreate` fonction membre (du parent) est un excellent emplacement pour créer le contrôle rebar.
 
-Pour utiliser un `CReBarCtrl` de l’objet, vous serez en général, procédez comme suit :
+Pour utiliser un `CReBarCtrl` objet, vous devez généralement suivre les étapes suivantes :
 
 ### <a name="to-use-a-crebarctrl-object"></a>Pour utiliser un objet CReBarCtrl
 
-1. Construire la [CReBarCtrl](../mfc/reference/crebarctrl-class.md) objet.
+1. Construisez l’objet [CReBarCtrl](reference/crebarctrl-class.md) .
 
-1. Appelez [créer](../mfc/reference/crebarctrl-class.md#create) pour créer le contrôle commun rebar de Windows et l’attacher à la `CReBarCtrl` objet et en spécifiant éventuellement les styles.
+1. Appelez [Create](reference/crebarctrl-class.md#create) pour créer le contrôle commun Rebar Windows et l’attacher à l' `CReBarCtrl` objet, en spécifiant les styles souhaités.
 
-1. Charger une image bitmap, avec un appel à [CBitmap::LoadBitmap](../mfc/reference/cbitmap-class.md#loadbitmap), pour être utilisée comme arrière-plan de l’objet de contrôle rebar.
+1. Chargez une bitmap, avec un appel à [CBitmap :: LoadBitmap](reference/cbitmap-class.md#loadbitmap), à utiliser comme arrière-plan de l’objet de contrôle rebar.
 
-1. Créer et initialiser des objets de fenêtre enfant (barres d’outils, les contrôles de boîte de dialogue et ainsi de suite) qui seront contenus par l’objet de contrôle rebar.
+1. Créez et initialisez les objets de fenêtre enfants (barres d’outils, contrôles de boîte de dialogue, etc.) qui seront contenus par l’objet de contrôle rebar.
 
-1. Initialiser un **REBARBANDINFO** structure avec les informations nécessaires pour la bande sur le point d’être inséré.
+1. Initialisez une structure **REBARBANDINFO** avec les informations nécessaires pour que la bande soit insérée.
 
-1. Appelez [InsertBand](../mfc/reference/crebarctrl-class.md#insertband) pour insérer des fenêtres enfants existantes (comme `m_wndReToolBar`) dans le nouveau contrôle rebar. Pour plus d’informations sur l’insertion de bandes dans un contrôle rebar existant, consultez [contrôles Rebar et bandes](../mfc/rebar-controls-and-bands.md).
+1. Appelez [InsertBand](reference/crebarctrl-class.md#insertband) pour insérer les fenêtres enfants existantes (telles que `m_wndReToolBar` ) dans le nouveau contrôle rebar. Pour plus d’informations sur l’insertion de bandes dans un contrôle rebar existant, consultez [contrôles Rebar et bandes](rebar-controls-and-bands.md).
 
 ## <a name="see-also"></a>Voir aussi
 
-[Utilisation de CReBarCtrl](../mfc/using-crebarctrl.md)<br/>
-[Contrôles](../mfc/controls-mfc.md)
+[Utilisation de CReBarCtrl](using-crebarctrl.md)<br/>
+[Commandes](controls-mfc.md)

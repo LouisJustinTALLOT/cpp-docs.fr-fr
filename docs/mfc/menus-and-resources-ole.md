@@ -18,48 +18,48 @@ helpviewer_keywords:
 - containers [MFC], OLE container applications
 - OLE menus and resources [MFC]
 ms.assetid: 52bfa086-7d3d-466f-94c7-c7061f3bdb3a
-ms.openlocfilehash: 4e8f8c7fa8e24349a741b99822f13d5473373e17
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: e705f28476df7b594f9648aee8317759211c66c9
+ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62225465"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84626208"
 ---
 # <a name="menus-and-resources-ole"></a>Menus et ressources (OLE)
 
 Ce groupe d’articles explique l’utilisation des menus et des ressources dans les applications de document OLE MFC.
 
-Édition visuelle OLE impose des exigences supplémentaires dans le menu et autres ressources fournies par les applications de document OLE, car il existe un nombre de modes de conteneur dans lequel les deux et les applications serveur (composant) peuvent être démarrées et utilisées. Par exemple, une application de serveur complet peut s’exécuter dans un des trois modes suivants :
+L’édition visuelle OLE impose des exigences supplémentaires dans le menu et d’autres ressources fournies par les applications de document OLE, car il existe un certain nombre de modes dans lesquels les applications de conteneur et de serveur (composant) peuvent être démarrées et utilisées. Par exemple, une application de serveur complet peut s’exécuter dans l’un de ces trois modes :
 
-- En mode autonome.
+- Autonome.
 
-- En place, pour modifier un élément dans le contexte d’un conteneur.
+- Sur place, pour la modification d’un élément dans le contexte d’un conteneur.
 
-- Ouvert pour modification d’un élément en dehors du contexte de son conteneur, souvent dans une fenêtre distincte.
+- Ouvre, pour la modification d’un élément en dehors du contexte de son conteneur, souvent dans une fenêtre séparée.
 
-Cela nécessite trois dispositions de menu distincts, un pour chaque mode possible de l’application. Tables d’accélérateurs sont également nécessaires pour chaque nouveau mode. Une application conteneur peut ou ne peut pas prendre en charge l’activation sur place ; dans l’affirmative, il a besoin d’une nouvelle structure de menu et associées des tables d’accélérateurs.
+Cela nécessite trois dispositions de menu distinctes, une pour chaque mode possible de l’application. Les tables d’accélérateurs sont également nécessaires pour chaque nouveau mode. Une application conteneur peut ou non prendre en charge l’activation sur place ; Si c’est le cas, il a besoin d’une nouvelle structure de menu et de tables d’accélérateur associées.
 
-L’activation sur place nécessite que les applications serveur et de conteneur doivent négocier pour l’espace de barre de menu, barre d’outils et l’état. Toutes les ressources doivent être conçues avec cela à l’esprit. L’article [Menus et ressources : Fusion du menu](../mfc/menus-and-resources-menu-merging.md) aborde ce sujet en détail.
+L’activation sur place exige que le conteneur et les applications serveur négocient pour l’espace de menu, de barre d’outils et de barre d’État. Toutes les ressources doivent être conçues avec cela à l’esprit. Les [menus et les ressources](menus-and-resources-menu-merging.md) de l’article : la fusion de menus couvre ce sujet en détail.
 
-En raison de ces problèmes, les applications de document OLE créées avec l’Assistant application peuvent avoir jusqu'à quatre de menus et ressources de table d’accélérateurs. Ceux-ci sont utilisés pour les raisons suivantes :
+En raison de ces problèmes, les applications de document OLE créées avec l’Assistant application peuvent avoir jusqu’à quatre ressources de table d’accélérateur et de menus distincts. Ils sont utilisés pour les raisons suivantes :
 
-|Nom de la ressource|Utilisez|
+|Nom de la ressource|Utilisation|
 |-------------------|---------|
-|IDR_MAINFRAME|Utilisé dans une application MDI si aucun fichier n’est ouvert, ou dans une application SDI, quel que soit les fichiers ouverts. Il s’agit du menu standard utilisé dans les applications non-OLE.|
-|IDR_\<projet > TYPE|Utilisé dans une application MDI si les fichiers sont ouverts. Utilisé lors de l’exécution d’une application autonome. Il s’agit du menu standard utilisé dans les applications non-OLE.|
-|IDR_\<project>TYPE_SRVR_IP|Utilisé par le serveur ou le conteneur lorsqu’un objet est ouvert en place.|
-|IDR_\<project>TYPE_SRVR_EMB|Utilisé par une application serveur si un objet est ouvert sans utiliser l’activation sur place.|
+|IDR_MAINFRAME|Utilisé dans une application MDI si aucun fichier n’est ouvert ou dans une application SDI, quels que soient les fichiers ouverts. Il s’agit du menu standard utilisé dans les applications non-OLE.|
+|TYPE de IDR_ \<project>|Utilisé dans une application MDI si des fichiers sont ouverts. Utilisé lorsqu’une application s’exécute en mode autonome. Il s’agit du menu standard utilisé dans les applications non-OLE.|
+|IDR_ \<project> TYPE_SRVR_IP|Utilisé par le serveur ou le conteneur lorsqu’un objet est ouvert sur place.|
+|IDR_ \<project> TYPE_SRVR_EMB|Utilisé par une application serveur si un objet est ouvert sans utiliser l’activation sur place.|
 
-Chacun de ces noms de ressource représente un menu et, en règle générale, une table d’accélérateurs. Un schéma similaire doit être utilisé dans les applications MFC qui ne sont pas créées avec l’Assistant application.
+Chacun de ces noms de ressources représente un menu et, généralement, une table d’accélérateurs. Un schéma similaire doit être utilisé dans les applications MFC qui ne sont pas créées avec l’Assistant Application.
 
-Les articles suivants traitent des conteneurs, les serveurs et la fusion de menus nécessaires pour implémenter l’activation sur place :
+Les articles suivants traitent des rubriques relatives aux conteneurs, aux serveurs et à la fusion de menus nécessaire pour implémenter l’activation sur place :
 
-- [Menus et ressources : Ajouts de conteneurs](../mfc/menus-and-resources-container-additions.md)
+- [Menus et ressources : ajouts de conteneurs](menus-and-resources-container-additions.md)
 
-- [Menus et ressources : Ajouts de serveurs](../mfc/menus-and-resources-server-additions.md)
+- [Menus et ressources : ajouts de serveurs](menus-and-resources-server-additions.md)
 
-- [Menus et ressources : Fusion des menus](../mfc/menus-and-resources-menu-merging.md)
+- [Menus et ressource : fusion de menus](menus-and-resources-menu-merging.md)
 
 ## <a name="see-also"></a>Voir aussi
 
-[OLE](../mfc/ole-in-mfc.md)
+[OLE](ole-in-mfc.md)
