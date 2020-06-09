@@ -10,12 +10,12 @@ helpviewer_keywords:
 - examples [MFC], dialog boxes
 - menu items [MFC], examples
 ms.assetid: e8692549-acd7-478f-9c5e-ba310ce8cccd
-ms.openlocfilehash: ec4e0495519db3e30213d8abb9292409f2110e3c
-ms.sourcegitcommit: 8e285a766523e653aeeb34d412dc6f615ef7b17b
+ms.openlocfilehash: 281fa77f4954691002268d1e597146a615264695
+ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/21/2020
-ms.locfileid: "80078838"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84616037"
 ---
 # <a name="example-displaying-a-dialog-box-via-a-menu-command"></a>Exemple : affichage d'une boîte de dialogue via une commande de menu
 
@@ -25,7 +25,7 @@ Cette rubrique contient des procédures pour :
 
 - Affiche une boîte de dialogue non modale via une commande de menu.
 
-Les deux exemples de procédures concernent les applications MFC et fonctionnent dans une application que vous créez à l’aide de l' [Assistant Application MFC](../mfc/reference/mfc-application-wizard.md).
+Les deux exemples de procédures concernent les applications MFC et fonctionnent dans une application que vous créez à l’aide de l' [Assistant Application MFC](reference/mfc-application-wizard.md).
 
 Les procédures utilisent les noms et valeurs suivants :
 
@@ -44,7 +44,7 @@ Les procédures utilisent les noms et valeurs suivants :
 
 1. Ajoutez une classe pour votre boîte de dialogue. Pour plus d’informations, consultez [Ajout d’une classe](../ide/adding-a-class-visual-cpp.md) .
 
-1. Dans **affichage de classes**, sélectionnez la classe de document (CDisplayDialogDoc). Dans la fenêtre **Propriétés**, cliquez sur le bouton **Événements**. Double-cliquez sur l’ID de la commande de menu (ID_VIEW_TEST). Ensuite, cliquez sur la flèche orientée vers le bas et sélectionnez **\<ajouter > OnViewTest**.
+1. Dans **affichage de classes**, sélectionnez la classe de document (CDisplayDialogDoc). Dans la fenêtre **Propriétés** , cliquez sur le bouton **Événements** . Double-cliquez sur l’ID de la commande de menu (ID_VIEW_TEST). Ensuite, cliquez sur la flèche orientée vers le bas et sélectionnez ** \<Add> OnViewTest**.
 
    Si vous avez ajouté la commande de menu au macroordinateur d’une application MDI, sélectionnez la classe d’application (CDisplayDialogApp) à la place.
 
@@ -112,5 +112,5 @@ Les procédures utilisent les noms et valeurs suivants :
 
 ## <a name="see-also"></a>Voir aussi
 
-[Boîtes de dialogue](../mfc/dialog-boxes.md)<br/>
-[Boîtes de dialogue modales et non modales](../mfc/modal-and-modeless-dialog-boxes.md)
+[Boîtes de dialogue](dialog-boxes.md)<br/>
+[Boîtes de dialogue modales et non modales](modal-and-modeless-dialog-boxes.md)

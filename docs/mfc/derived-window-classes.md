@@ -9,59 +9,59 @@ helpviewer_keywords:
 - derived classes [MFC], window classes
 - window classes [MFC], derived
 ms.assetid: 6f7e437e-fbde-4a06-bfab-72d9dbf05292
-ms.openlocfilehash: e86ca139b8470dce614564f0c0134a611adeda2c
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: c84284b765e740fa0a13972e9902e7737e15bbab
+ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62153372"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84623174"
 ---
 # <a name="derived-window-classes"></a>Classes de fenêtre dérivées
 
-Vous pouvez créer des fenêtres directement à partir de [CWnd](../mfc/reference/cwnd-class.md), ou dériver de nouvelles classes de fenêtre à partir de `CWnd`. Voici comment vous créez généralement des fenêtres personnalisées. Toutefois, la plupart des fenêtres utilisées dans un programme de framework sont créés à la place d’un de la `CWnd`-dérivées des classes de fenêtre frame fournies par MFC.
+Vous pouvez créer des fenêtres directement à partir de [CWnd](reference/cwnd-class.md)ou dériver de nouvelles classes de fenêtres à partir de `CWnd` . C’est ainsi que vous créez généralement vos propres fenêtres personnalisées. Toutefois, la plupart des fenêtres utilisées dans un programme d’infrastructure sont créées à partir de l’une des `CWnd` classes de fenêtre frame dérivées fournies par MFC.
 
-## <a name="frame-window-classes"></a>Classes de fenêtre frame
+## <a name="frame-window-classes"></a>Classes de fenêtres Frame
 
-[CFrameWnd](../mfc/reference/cframewnd-class.md)<br/>
-Utilisé pour les fenêtres frame SDI qui encadrent un seul document et sa vue. La fenêtre frame est la fenêtre frame principale de l’application et la fenêtre frame pour le document actif.
+[CFrameWnd](reference/cframewnd-class.md)<br/>
+Utilisé pour les fenêtres frame SDI qui encadrent un document unique et sa vue. La fenêtre frame est à la fois la fenêtre frame principale de l’application et la fenêtre frame pour le document actif.
 
-[CMDIFrameWnd](../mfc/reference/cmdiframewnd-class.md)<br/>
-Utilisé en tant que la fenêtre frame principale pour les applications MDI. La fenêtre frame principale est un conteneur pour toutes les fenêtres de document MDI et partage sa barre de menus avec eux. Une fenêtre frame MDI est une fenêtre de niveau supérieur qui apparaît sur le bureau.
+[CMDIFrameWnd](reference/cmdiframewnd-class.md)<br/>
+Utilisé comme fenêtre frame principale pour les applications MDI. La fenêtre frame principale est un conteneur pour toutes les fenêtres de document MDI et partage sa barre de menus avec elles. Une fenêtre frame MDI est une fenêtre de niveau supérieur qui apparaît sur le bureau.
 
-[CMDIChildWnd](../mfc/reference/cmdichildwnd-class.md)<br/>
-Utilisé pour les documents individuels ouverts dans une fenêtre frame principale MDI. Chaque document et sa vue sont encadrés par une fenêtre de frame enfant MDI contenue dans la fenêtre frame principale MDI. Une fenêtre enfant MDI ressemble beaucoup à une fenêtre frame typique, mais est contenue dans une fenêtre de frame MDI au lieu d’assis sur le bureau. Toutefois, la fenêtre enfant MDI ne dispose pas d’une barre de menus de son propre et doit faire partie de la barre de menus de la fenêtre frame MDI qui la contient.
+[CMDIChildWnd](reference/cmdichildwnd-class.md)<br/>
+Utilisé pour les documents individuels ouverts dans une fenêtre frame principale MDI. Chaque document et sa vue sont encadrés par une fenêtre frame enfant MDI contenue dans la fenêtre frame principale MDI. Une fenêtre enfant MDI ressemble à une fenêtre frame classique, mais se trouve à l’intérieur d’une fenêtre frame MDI au lieu de s’asseoir sur le bureau. Toutefois, la fenêtre enfant MDI n’a pas de barre de menus propre et doit partager la barre de menus de la fenêtre frame MDI qui la contient.
 
-Pour plus d’informations, consultez [Frame Windows](../mfc/frame-windows.md).
+Pour plus d’informations, consultez [fenêtres Frame](frame-windows.md).
 
-## <a name="other-window-classes-derived-from-cwnd"></a>Autres Classes de fenêtre dérivées de CWnd
+## <a name="other-window-classes-derived-from-cwnd"></a>Autres classes de fenêtres dérivées de CWnd
 
-En plus des fenêtres frame, plusieurs autres catégories principales de windows sont dérivés de `CWnd`:
+Outre les fenêtres Frame, plusieurs autres catégories principales de fenêtres sont dérivées de `CWnd` :
 
-*Vues*<br/>
-Les vues sont créées à l’aide de la `CWnd`-classe dérivée [CView](../mfc/reference/cview-class.md) (ou un de ses classes dérivées). Une vue est attachée à un document et fait Office d’intermédiaire entre le document et l’utilisateur. Une vue est une fenêtre enfant (pas un enfant MDI) qui remplit habituellement la zone cliente d’une fenêtre frame SDI ou une fenêtre de frame enfant MDI (ou la partie de la zone cliente non couverte par une barre d’outils et/ou une barre d’état).
+*Views*<br/>
+Les vues sont créées à l’aide de la `CWnd` classe dérivée de [CView](reference/cview-class.md) (ou de l’une de ses classes dérivées). Une vue est associée à un document et agit en tant qu’intermédiaire entre le document et l’utilisateur. Une vue est une fenêtre enfant (pas un enfant MDI) qui remplit généralement la zone cliente d’une fenêtre frame SDI ou d’une fenêtre frame enfant MDI (ou de la partie de la zone client non couverte par une barre d’outils et/ou une barre d’État).
 
 *Boîtes de dialogue*<br/>
-Boîtes de dialogue sont créés à l’aide de la `CWnd`-classe dérivée [CDialog](../mfc/reference/cdialog-class.md).
+Les boîtes de dialogue sont créées à l’aide de la `CWnd` classe dérivée de [CDialog](reference/cdialog-class.md).
 
 *Formulaires*<br/>
-Vues de formulaire en fonction des ressources de modèle de boîte de dialogue, telles que des boîtes de dialogue, sont créés à l’aide de classes [CFormView](../mfc/reference/cformview-class.md), [CRecordView](../mfc/reference/crecordview-class.md), ou [CDaoRecordView](../mfc/reference/cdaorecordview-class.md).
+Les vues de formulaire basées sur des ressources de modèle de boîte de dialogue, telles que des boîtes de dialogue, sont créées à l’aide des classes [CFormView](reference/cformview-class.md), [CRecordView](reference/crecordview-class.md)ou [CDaoRecordView](reference/cdaorecordview-class.md).
 
-*Contrôles*<br/>
-Les contrôles tels que des boutons, zones de liste et zones de liste déroulante sont créés à l’aide d’autres classes dérivées de `CWnd`. Consultez [contrôler rubriques](../mfc/controls-mfc.md).
+*Commandes*<br/>
+Les contrôles tels que les boutons, les zones de liste et les zones de liste modifiable sont créés à l’aide d’autres classes dérivées de `CWnd` . Consultez les [rubriques relatives au contrôle](controls-mfc.md).
 
 *Barres de contrôles*<br/>
-Fenêtres enfants qui contiennent des contrôles. Exemples : barres d’outils et des barres d’état. Consultez [barres de contrôles](../mfc/control-bars.md).
+Fenêtres enfants qui contiennent des contrôles. Les exemples incluent des barres d’outils et des barres d’État. Consultez [barres de contrôles](control-bars.md).
 
-## <a name="window-class-hierarchy"></a>Hiérarchie de classes de fenêtre
+## <a name="window-class-hierarchy"></a>Hiérarchie des classes de fenêtre
 
-Reportez-vous à la [graphique hiérarchique MFC](../mfc/hierarchy-chart.md) dans le *référence MFC*. Les vues sont expliquées dans [Architecture Document/vue](../mfc/document-view-architecture.md). Boîtes de dialogue sont expliquées dans [boîtes de dialogue](../mfc/dialog-boxes.md).
+Reportez-vous au [graphique hiérarchique MFC](hierarchy-chart.md) dans la *référence MFC*. Les vues sont expliquées dans l' [architecture document/vue](document-view-architecture.md). Les boîtes de dialogue sont expliquées dans les [boîtes de dialogue](dialog-boxes.md).
 
-## <a name="creating-your-own-special-purpose-window-classes"></a>Créer vos propres Classes de fenêtre de spécial
+## <a name="creating-your-own-special-purpose-window-classes"></a>Création de vos propres classes de fenêtre à usage spécial
 
-En plus des classes de fenêtre fournis par la bibliothèque de classes, vous devrez peut-être les fenêtres enfants de spécial. Pour créer une fenêtre de ce type, créez les vôtres [CWnd](../mfc/reference/cwnd-class.md)-classe dérivée et le rend une fenêtre enfant d’un frame ou la vue. N’oubliez pas que l’infrastructure gère l’étendue de la zone cliente d’une fenêtre frame de document. La plupart de la zone cliente est gérée par une vue, mais les autres fenêtres, telles que contrôle barres ou votre propre windows personnalisées, peuvent partager l’espace avec la vue. Vous devrez peut-être interagir avec les mécanismes des classes [CView](../mfc/reference/cview-class.md) et [CControlBar](../mfc/reference/ccontrolbar-class.md) pour le positionnement des fenêtres enfants dans la zone cliente d’une fenêtre frame.
+En plus des classes de fenêtres fournies par la bibliothèque de classes, vous pouvez avoir besoin de fenêtres enfants spécialisées. Pour créer une telle fenêtre, créez votre propre classe dérivée de [CWnd](reference/cwnd-class.md)et faites-en une fenêtre enfant d’un frame ou d’une vue. N’oubliez pas que l’infrastructure gère l’étendue de la zone cliente d’une fenêtre frame de document. La majeure partie de la zone cliente est gérée par une vue, mais d’autres fenêtres, telles que les barres de contrôle ou vos propres fenêtres personnalisées, peuvent partager l’espace avec la vue. Vous devrez peut-être interagir avec les mécanismes des classes [CView](reference/cview-class.md) et [CControlBar](reference/ccontrolbar-class.md) pour positionner les fenêtres enfants dans la zone cliente d’une fenêtre frame.
 
-[Création de Windows](../mfc/creating-windows.md) aborde la création d’objets de fenêtre et les fenêtres qu’ils gèrent.
+La [création de fenêtres](creating-windows.md) explique comment créer des objets de fenêtre et les fenêtres qu’elles gèrent.
 
 ## <a name="see-also"></a>Voir aussi
 
-[Objets fenêtre](../mfc/window-objects.md)
+[Objets fenêtres](window-objects.md)

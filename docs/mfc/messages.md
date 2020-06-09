@@ -5,19 +5,19 @@ helpviewer_keywords:
 - messages, MFC
 - messages [MFC]
 ms.assetid: b1476310-a135-42ca-817c-444fb3675491
-ms.openlocfilehash: 8e1bfd1baa8ffef76ba31912fc619c4217696683
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: f36dab679a2e41910b2445a7dab36f5786081563
+ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62384125"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84624279"
 ---
 # <a name="messages"></a>Messages
 
-La boucle de message dans le `Run` fonction membre de classe `CWinApp` récupère les messages générés par divers événements en file d’attente. Par exemple, lorsque l’utilisateur clique sur la souris, Windows envoie plusieurs messages liés à la souris, tels que WM_LBUTTONDOWN lorsque le bouton gauche de la souris est enfoncé et WM_LBUTTONUP lorsque le bouton gauche de la souris est relâché. Implémentation de l’infrastructure de la boucle de message d’application distribue le message à la fenêtre appropriée.
+La boucle de message dans la `Run` fonction membre de la classe `CWinApp` récupère les messages mis en file d’attente générés par divers événements. Par exemple, quand l’utilisateur clique sur la souris, Windows envoie plusieurs messages liés à la souris, par exemple WM_LBUTTONDOWN lorsque le bouton gauche de la souris est enfoncé et WM_LBUTTONUP lorsque le bouton gauche de la souris est relâché. L’implémentation du Framework de la boucle de message d’application distribue le message à la fenêtre appropriée.
 
-Les principales catégories de messages sont décrits dans [catégories de messages](../mfc/message-categories.md).
+Les catégories de messages importantes sont décrites dans [catégories de message](message-categories.md).
 
 ## <a name="see-also"></a>Voir aussi
 
-[Messages et commandes dans le Framework](../mfc/messages-and-commands-in-the-framework.md)
+[Messages et commandes dans le Framework](messages-and-commands-in-the-framework.md)

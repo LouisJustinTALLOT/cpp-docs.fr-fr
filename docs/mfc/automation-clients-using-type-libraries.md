@@ -1,5 +1,5 @@
 ---
-title: 'Clients Automation: Utilisation des bibliothèques de types'
+title: 'Clients Automation : utilisation des bibliothèques de types'
 ms.date: 11/04/2016
 f1_keywords:
 - MkTypLib
@@ -14,22 +14,22 @@ helpviewer_keywords:
 - MkTypLib tool
 - .odl files
 ms.assetid: d405bc47-118d-4786-b371-920d035b2047
-ms.openlocfilehash: 480f8fca46b13d445f372311ed837475c71a1e9d
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: e5f9ffcebc3725851c599e7b21369f45d0029d81
+ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69509219"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84626088"
 ---
-# <a name="automation-clients-using-type-libraries"></a>Clients Automation: Utilisation des bibliothèques de types
+# <a name="automation-clients-using-type-libraries"></a>Clients Automation : utilisation des bibliothèques de types
 
-Les clients Automation doivent avoir des informations sur les propriétés et les méthodes des objets serveur si les clients doivent manipuler les objets des serveurs. Les propriétés ont des types de données; les méthodes retournent souvent des valeurs et acceptent des paramètres. Le client nécessite des informations sur les types de données de tous ces types afin de lier statiquement au type d’objet serveur.
+Les clients Automation doivent avoir des informations sur les propriétés et les méthodes des objets serveur si les clients doivent manipuler les objets des serveurs. Les propriétés ont des types de données ; les méthodes retournent souvent des valeurs et acceptent des paramètres. Le client nécessite des informations sur les types de données de tous ces types afin de lier statiquement au type d’objet serveur.
 
 Ces informations de type peuvent être rendues de plusieurs façons. La méthode recommandée consiste à créer une bibliothèque de types.
 
 Pour plus d’informations sur [mktyplib](/windows/win32/Midl/differences-between-midl-and-mktyplib), consultez le SDK Windows.
 
-Visual C++ peut lire un fichier de bibliothèque de types et créer une classe de dispatch dérivée de [COleDispatchDriver](../mfc/reference/coledispatchdriver-class.md). Un objet de cette classe possède des propriétés et des opérations qui dupliquent celles de l’objet serveur. Votre application appelle les propriétés et les opérations de cet objet, et les `COleDispatchDriver` fonctionnalités héritées de acheminent ces appels au système OLE, qui à son tour les achemine vers l’objet serveur.
+Visual C++ pouvez lire un fichier de bibliothèque de types et créer une classe de dispatch dérivée de [COleDispatchDriver](reference/coledispatchdriver-class.md). Un objet de cette classe possède des propriétés et des opérations qui dupliquent celles de l’objet serveur. Votre application appelle les propriétés et les opérations de cet objet, et les fonctionnalités héritées de `COleDispatchDriver` acheminent ces appels au système OLE, qui à son tour les achemine vers l’objet serveur.
 
 Visual C++ gère automatiquement ce fichier de bibliothèque de types pour vous si vous avez choisi d’inclure l’automatisation lors de la création du projet. Dans le cadre de chaque Build, le fichier. tlb sera généré avec MkTypLib.
 
@@ -44,7 +44,7 @@ Visual C++ gère automatiquement ce fichier de bibliothèque de types pour vous 
     > [!NOTE]
     >  Vous pouvez sélectionner des interfaces à partir de plusieurs bibliothèques de types.
 
-   Pour sélectionner des interfaces, double-cliquez dessus ou cliquez sur le bouton **Ajouter** . Dans ce cas, les noms des classes de dispatch s’affichent dans la zone **classes générées** . Vous pouvez modifier les noms de classe dans `Class` la zone.
+   Pour sélectionner des interfaces, double-cliquez dessus ou cliquez sur le bouton **Ajouter** . Dans ce cas, les noms des classes de dispatch s’affichent dans la zone **classes générées** . Vous pouvez modifier les noms de classe dans la `Class` zone.
 
    La zone **fichier** affiche le fichier dans lequel la classe doit être déclarée. (vous pouvez également modifier ce nom de fichier). Vous pouvez également utiliser le bouton Parcourir pour sélectionner d’autres fichiers, si vous préférez que les informations d’en-tête et d’implémentation soient écrites dans des fichiers existants ou dans un répertoire autre que le répertoire du projet.
 
@@ -60,4 +60,4 @@ Visual C++ gère automatiquement ce fichier de bibliothèque de types pour vous 
 
 ## <a name="see-also"></a>Voir aussi
 
-[Clients Automation](../mfc/automation-clients.md)
+[Clients Automation](automation-clients.md)

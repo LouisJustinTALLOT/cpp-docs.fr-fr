@@ -7,36 +7,36 @@ helpviewer_keywords:
 - windows [MFC], creating
 - sequence [MFC]
 ms.assetid: 9cd8c7ea-5e24-429e-b6d9-d7b6041d8ba6
-ms.openlocfilehash: fb10ced78e230316a6e2982f24c1fb6e2e52ed8d
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 0b09543d659448454bbc7c2cca6abee5de3013e5
+ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81364274"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84618757"
 ---
 # <a name="general-window-creation-sequence"></a>Séquence de création d'une fenêtre générale
 
-Lorsque vous créez votre propre fenêtre, comme une fenêtre pour enfants, le cadre utilise à peu près le même processus que celui décrit dans [Document/View Creation](../mfc/document-view-creation.md).
+Lorsque vous créez une fenêtre de votre choix, telle qu’une fenêtre enfant, l’infrastructure utilise quasiment le même processus que celui décrit dans [création de document/vue](document-view-creation.md).
 
-Toutes les classes de fenêtre fournies par MFC emploient [la construction en deux étapes.](../mfc/one-stage-and-two-stage-construction-of-objects.md) C’est-à-dire, lors d’une invocation du **nouvel** opérateur C, le constructeur alloue et initialise un objet C, mais ne crée pas de fenêtre Windows correspondante. Cela se fait par la suite en appelant la fonction membre [Créer](../mfc/reference/cwnd-class.md#create) de l’objet de fenêtre.
+Toutes les classes de fenêtres fournies par MFC utilisent la [construction en deux étapes](one-stage-and-two-stage-construction-of-objects.md). Autrement dit, au cours d’un appel de l’opérateur **New** c++, le constructeur alloue et initialise un objet c++, mais ne crée pas de fenêtre Windows correspondante. Cette opération est effectuée par la suite en appelant la fonction membre [Create](reference/cwnd-class.md#create) de l’objet Window.
 
-La `Create` fonction membre rend la `HWND` fenêtre Windows et la stocke dans le membre public des données de l’objet [Cmd m_hWnd](../mfc/reference/cwnd-class.md#m_hwnd). `Create`donne une flexibilité totale sur les paramètres de création. Avant `Create`d’appeler, vous pouvez enregistrer une classe de fenêtre avec la fonction globale [AfxRegisterWndClass](../mfc/reference/application-information-and-management.md#afxregisterwndclass) afin de définir l’icône et les styles de classe pour le cadre.
+La `Create` fonction membre crée la fenêtre Windows et stocke son `HWND` dans la [m_hWnd](reference/cwnd-class.md#m_hwnd)membre de données publiques de l’objet C++. `Create`offre une flexibilité totale sur les paramètres de création. Avant d’appeler `Create` , vous souhaiterez peut-être inscrire une classe de fenêtre avec la fonction globale [AfxRegisterWndClass](reference/application-information-and-management.md#afxregisterwndclass) afin de définir les styles de l’icône et de la classe pour le frame.
 
-Pour les fenêtres de cadre, vous pouvez `Create`utiliser la fonction de membre [LoadFrame](../mfc/reference/cframewnd-class.md#loadframe) au lieu de . `LoadFrame`rend la fenêtre Windows en utilisant moins de paramètres. Il obtient de nombreuses valeurs par défaut à partir des ressources, y compris la légende du cadre, icône, table d’accélérateur, et le menu.
+Pour les fenêtres Frame, vous pouvez utiliser la fonction membre [LoadFrame](reference/cframewnd-class.md#loadframe) à la place de `Create` . `LoadFrame`Convertit la fenêtre Windows en utilisant moins de paramètres. Elle obtient de nombreuses valeurs par défaut à partir des ressources, notamment la légende, l’icône, la table d’accélérateur et le menu du frame.
 
 > [!NOTE]
-> Vos ressources d’icône, de table d’accélérateur et de menu doivent avoir un identifiant commun de ressource, tel que **IDR_MAINFRAME,** pour qu’elles soient chargées par LoadFrame.
+> Votre icône, votre table d’accélérateurs et vos ressources de menu doivent avoir un ID de ressource commun, tel que **IDR_MAINFRAME**, pour qu’elles soient chargées par LoadFrame.
 
-## <a name="what-do-you-want-to-know-more-about"></a>Qu’est-ce que vous voulez savoir plus sur
+## <a name="what-do-you-want-to-know-more-about"></a>Que voulez-vous en savoir plus sur
 
-- [Objets de fenêtre](../mfc/window-objects.md)
+- [Objets de fenêtre](window-objects.md)
 
-- [Enregistrement des "classes" de fenêtre](../mfc/registering-window-classes.md)
+- [Inscription de la fenêtre « classes »](registering-window-classes.md)
 
-- [Détruire des objets de fenêtre](../mfc/destroying-window-objects.md)
+- [Destruction d’objets fenêtres](destroying-window-objects.md)
 
-- [Création de fenêtres d’image de document](../mfc/creating-document-frame-windows.md)
+- [Création de fenêtres d’image de document](creating-document-frame-windows.md)
 
 ## <a name="see-also"></a>Voir aussi
 
-[Création de fenêtres](../mfc/creating-windows.md)
+[Création de fenêtres](creating-windows.md)

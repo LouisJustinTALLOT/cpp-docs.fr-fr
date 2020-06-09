@@ -4,48 +4,48 @@ ms.date: 11/04/2016
 helpviewer_keywords:
 - MFC ActiveX controls [MFC], optimizing
 ms.assetid: 29ff985d-9bf5-4678-b62d-aad12def75fb
-ms.openlocfilehash: 354ec1678747be57d387673f2611d526df8dfb47
-ms.sourcegitcommit: 0ad35b26e405bbde17dc0bd0141e72f78f0a38fb
+ms.openlocfilehash: 17cb7318e667fe4e16416d51e7e7fba02553cfe6
+ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/18/2019
-ms.locfileid: "67194736"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84621016"
 ---
 # <a name="optimizing-control-drawing"></a>Optimisation du contrôle de dessin
 
-Lorsqu’un contrôle reçoit l’instruction de se dessiner lui-même dans un contexte de périphérique fourni au conteneur, en général, sélectionne les objets GDI (par exemple, les stylets, pinceaux et polices) dans le contexte de périphérique, effectue les opérations de dessin et restaure les objets GDI précédents. Si le conteneur comporte plusieurs contrôles qui doivent être dessinés dans le même contexte de périphérique, et chaque contrôle sélectionne les objets GDI qu'il requiert, temps peuvent être enregistré si les contrôles ne restaurent pas individuellement les objets précédemment sélectionnés. Une fois que tous les contrôles sont dessinés, le conteneur peut restaurer automatiquement les objets d’origine.
+Lorsqu’un contrôle est chargé de se dessiner lui-même dans un contexte de périphérique fourni par un conteneur, il sélectionne généralement les objets GDI (tels que les stylets, les pinceaux et les polices) dans le contexte de périphérique, effectue ses opérations de dessin et restaure les objets GDI précédents. Si le conteneur a plusieurs contrôles qui doivent être dessinés dans le même contexte de périphérique et que chaque contrôle sélectionne les objets GDI dont il a besoin, l’heure peut être enregistrée si les contrôles ne restaurent pas individuellement les objets sélectionnés précédemment. Une fois que tous les contrôles ont été dessinés, le conteneur peut restaurer automatiquement les objets d’origine.
 
-Pour détecter si un conteneur prend en charge cette technique, un contrôle peut appeler le [fonction membre COleControl::IsOptimizedDraw](../mfc/reference/colecontrol-class.md#isoptimizeddraw) fonction membre. Si cette fonction retourne **TRUE**, le contrôle peut ignorer l’étape normale de restauration des objets précédemment sélectionnés.
+Pour détecter si un conteneur prend en charge cette technique, un contrôle peut appeler la fonction membre [COleControl :: IsOptimizedDraw](reference/colecontrol-class.md#isoptimizeddraw) . Si cette fonction retourne la **valeur true**, le contrôle peut ignorer l’étape normale de restauration des objets sélectionnés précédemment.
 
-Considérez un contrôle qui a ce qui suit (non optimisé) `OnDraw` (fonction) :
+Prenons l’exemple d’un contrôle qui a la fonction (non optimisée) suivante `OnDraw` :
 
-[!code-cpp[NVC_MFC_AxOpt#15](../mfc/codesnippet/cpp/optimizing-control-drawing_1.cpp)]
+[!code-cpp[NVC_MFC_AxOpt#15](codesnippet/cpp/optimizing-control-drawing_1.cpp)]
 
-Le stylet et le pinceau dans cet exemple sont des variables locales, ce qui signifie que leurs destructeurs sont appelées quand ils sont hors de portée (lorsque le `OnDraw` fonction se termine). Les destructeurs tente de supprimer les objets GDI correspondants. Mais ne doivent pas être supprimées si vous envisagez de les laisser sélectionnés dans le contexte de périphérique après le retour de `OnDraw`.
+Le stylet et le pinceau dans cet exemple sont des variables locales, ce qui signifie que leurs destructeurs sont appelés lorsqu’ils passent hors de portée (lorsque la `OnDraw` fonction se termine). Les destructeurs essaient de supprimer les objets GDI correspondants. Mais elles ne doivent pas être supprimées si vous envisagez de les conserver dans le contexte de périphérique lors du retour de `OnDraw` .
 
-Pour empêcher le [CPen](../mfc/reference/cpen-class.md) et [CBrush](../mfc/reference/cbrush-class.md) objets d’être détruits lorsque `OnDraw` se termine, les stocker dans des variables de membre au lieu de variables locales. Dans la déclaration de classe du contrôle, ajoutez les déclarations de deux nouvelles variables de membre :
+Pour empêcher que les objets [CPen](reference/cpen-class.md) et [CBrush](reference/cbrush-class.md) ne soient détruits lorsque se `OnDraw` termine, stockez-les dans des variables membres au lieu de variables locales. Dans la déclaration de classe du contrôle, ajoutez des déclarations pour deux nouvelles variables membres :
 
-[!code-cpp[NVC_MFC_AxOpt#16](../mfc/codesnippet/cpp/optimizing-control-drawing_2.h)]
-[!code-cpp[NVC_MFC_AxOpt#17](../mfc/codesnippet/cpp/optimizing-control-drawing_3.h)]
+[!code-cpp[NVC_MFC_AxOpt#16](codesnippet/cpp/optimizing-control-drawing_2.h)]
+[!code-cpp[NVC_MFC_AxOpt#17](codesnippet/cpp/optimizing-control-drawing_3.h)]
 
-Ensuite, le `OnDraw` fonction peut être réécrit comme suit :
+Ensuite, la `OnDraw` fonction peut être réécrite comme suit :
 
-[!code-cpp[NVC_MFC_AxOpt#18](../mfc/codesnippet/cpp/optimizing-control-drawing_4.cpp)]
+[!code-cpp[NVC_MFC_AxOpt#18](codesnippet/cpp/optimizing-control-drawing_4.cpp)]
 
-Cette approche évite la création du stylo et pinceau chaque fois `OnDraw` est appelée. L’amélioration de la vitesse vient au détriment de la gestion des données d’instance supplémentaires.
+Cette approche évite la création du stylet et du pinceau chaque fois que `OnDraw` est appelé. L’amélioration de la vitesse est le coût de la maintenance des données d’instance supplémentaires.
 
-Si la propriété ForeColor ou BackColor change, le stylet ou un pinceau doit être recréée. Pour ce faire, vous devez remplacer le [fonctions membres OnForeColorChanged](../mfc/reference/colecontrol-class.md#onforecolorchanged) et [OnBackColorChanged](../mfc/reference/colecontrol-class.md#onbackcolorchanged) fonctions membres :
+Si la propriété ForeColor ou BackColor change, le stylet ou le pinceau doit être recréé. Pour ce faire, remplacez les fonctions membres [OnForeColorChanged](reference/colecontrol-class.md#onforecolorchanged) et [OnBackColorChanged](reference/colecontrol-class.md#onbackcolorchanged) :
 
-[!code-cpp[NVC_MFC_AxOpt#19](../mfc/codesnippet/cpp/optimizing-control-drawing_5.cpp)]
+[!code-cpp[NVC_MFC_AxOpt#19](codesnippet/cpp/optimizing-control-drawing_5.cpp)]
 
-Enfin, pour éliminer inutiles `SelectObject` appels, modifier `OnDraw` comme suit :
+Enfin, pour éliminer `SelectObject` les appels inutiles, modifiez `OnDraw` comme suit :
 
-[!code-cpp[NVC_MFC_AxOpt#20](../mfc/codesnippet/cpp/optimizing-control-drawing_6.cpp)]
+[!code-cpp[NVC_MFC_AxOpt#20](codesnippet/cpp/optimizing-control-drawing_6.cpp)]
 
 ## <a name="see-also"></a>Voir aussi
 
-[Contrôles ActiveX MFC : Optimisation](../mfc/mfc-activex-controls-optimization.md)<br/>
-[COleControl, classe](../mfc/reference/colecontrol-class.md)<br/>
-[Contrôles ActiveX MFC](../mfc/mfc-activex-controls.md)<br/>
-[Contrôle ActiveX MFC, Assistant](../mfc/reference/mfc-activex-control-wizard.md)<br/>
-[Contrôles ActiveX MFC : Peinture d’un contrôle ActiveX](../mfc/mfc-activex-controls-painting-an-activex-control.md)
+[Contrôles ActiveX MFC : optimisation](mfc-activex-controls-optimization.md)<br/>
+[COleControl, classe](reference/colecontrol-class.md)<br/>
+[Contrôles ActiveX MFC](mfc-activex-controls.md)<br/>
+[Assistant contrôle ActiveX MFC](reference/mfc-activex-control-wizard.md)<br/>
+[Contrôles ActiveX MFC : peinture d’un contrôle ActiveX](mfc-activex-controls-painting-an-activex-control.md)

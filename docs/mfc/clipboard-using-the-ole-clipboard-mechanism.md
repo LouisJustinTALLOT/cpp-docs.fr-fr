@@ -1,5 +1,5 @@
 ---
-title: 'Presse-papiers : Utilisation du mécanisme de presse-papiers OLE'
+title: 'Presse-papiers : utilisation du mécanisme de Presse-papiers OLE'
 ms.date: 11/04/2016
 helpviewer_keywords:
 - applications [OLE], Clipboard
@@ -8,18 +8,18 @@ helpviewer_keywords:
 - OLE Clipboard, formats
 - formats [MFC], Clipboard for OLE
 ms.assetid: 229cc610-5bb1-435e-bd20-2c8b9964d1af
-ms.openlocfilehash: 0f2c10f4a88b723d1ab9f4bb0ca903987359c9fd
-ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
+ms.openlocfilehash: da0b99e6c9c803f3c3a4c09d67853649a4bac314
+ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69508911"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84626057"
 ---
-# <a name="clipboard-using-the-ole-clipboard-mechanism"></a>Presse-papiers : Utilisation du mécanisme de presse-papiers OLE
+# <a name="clipboard-using-the-ole-clipboard-mechanism"></a>Presse-papiers : utilisation du mécanisme de Presse-papiers OLE
 
 OLE utilise des formats standard et certains formats spécifiques à OLE pour transférer des données via le Presse-papiers.
 
-Lorsque vous découpez ou copiez des données à partir d'une application, les données sont stockées dans le Presse-papiers pour être utilisées ultérieurement dans les opérations de collage. Ces données sont disponibles dans une variété de formats. Lorsqu'un utilisateur choisit de coller des données à partir du Presse-papiers, l'application peut choisir le format à utiliser. L'application doit être écrite pour choisir le format qui offre le plus d'informations, à moins que l'utilisateur demande spécifiquement un certain format, en utilisant le Collage spécial. Avant de continuer, vous souhaiterez peut-être lire les rubriques [objets de données et sources de données (OLE)](../mfc/data-objects-and-data-sources-ole.md) . Elles décrivent les aspects fondamentaux de la façon dont les transferts de données fonctionnent, et leur implémentation dans vos applications.
+Lorsque vous découpez ou copiez des données à partir d'une application, les données sont stockées dans le Presse-papiers pour être utilisées ultérieurement dans les opérations de collage. Ces données sont disponibles dans une variété de formats. Lorsqu'un utilisateur choisit de coller des données à partir du Presse-papiers, l'application peut choisir le format à utiliser. L'application doit être écrite pour choisir le format qui offre le plus d'informations, à moins que l'utilisateur demande spécifiquement un certain format, en utilisant le Collage spécial. Avant de continuer, vous souhaiterez peut-être lire les rubriques [objets de données et sources de données (OLE)](data-objects-and-data-sources-ole.md) . Elles décrivent les aspects fondamentaux de la façon dont les transferts de données fonctionnent, et leur implémentation dans vos applications.
 
 Windows définit plusieurs formats standard qui peuvent être utilisés pour transférer des données dans le Presse-papiers. Cela inclut les métafichiers, le texte, les images bitmap, entre autres. OLE définit également plusieurs formats spécifiques OLE. Pour les applications qui nécessitent plus de détail que spécifié par ces formats standard, il est judicieux d'enregistrer leurs propres formats personnalisés de presse-papiers. Pour ce faire, utilisez la fonction API Win32 [RegisterClipboardFormat](/windows/win32/api/winuser/nf-winuser-registerclipboardformatw) .
 
@@ -33,16 +33,16 @@ Par exemple, pour activer la commande Couper, vous pouvez entrer un gestionnaire
 
 ## <a name="what-do-you-want-to-know-more-about"></a>Que voulez-vous en savoir plus sur
 
-- [Copier et coller des données](../mfc/clipboard-copying-and-pasting-data.md)
+- [Copie et collage de données](clipboard-copying-and-pasting-data.md)
 
-- [Ajout d’autres formats](../mfc/clipboard-adding-other-formats.md)
+- [Ajout d’autres formats](clipboard-adding-other-formats.md)
 
-- [Utilisation du presse-papiers Windows](../mfc/clipboard-using-the-windows-clipboard.md)
+- [Utilisation du presse-papiers Windows](clipboard-using-the-windows-clipboard.md)
 
-- [OLE](../mfc/ole-background.md)
+- [OLE](ole-background.md)
 
-- [Objets de données OLE et sources de données et transfert de données uniforme](../mfc/data-objects-and-data-sources-ole.md)
+- [Objets de données et sources de données OLE et transfert de données uniforme](data-objects-and-data-sources-ole.md)
 
 ## <a name="see-also"></a>Voir aussi
 
-[Presse-papiers](../mfc/clipboard.md)
+[Presse-papiers](clipboard.md)

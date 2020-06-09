@@ -1,5 +1,5 @@
 ---
-title: 'Contrôles ActiveX MFC : Optimisation'
+title: 'Contrôles ActiveX MFC : optimisation'
 ms.date: 09/12/2018
 helpviewer_keywords:
 - MFC ActiveX controls [MFC], windowless
@@ -14,57 +14,57 @@ helpviewer_keywords:
 - MFC ActiveX controls [MFC], active/inactive state
 - optimizing performance, ActiveX controls
 ms.assetid: 8b11f26a-190d-469b-b594-5336094a0109
-ms.openlocfilehash: 08cbb5ab0ff9b8c165e549bc2b250daebc1ce177
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: b4e12889ca1bb5f4bb423a1f1ede1c396f8d60b5
+ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62186890"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84615398"
 ---
-# <a name="mfc-activex-controls-optimization"></a>Contrôles ActiveX MFC : Optimisation
+# <a name="mfc-activex-controls-optimization"></a>Contrôles ActiveX MFC : optimisation
 
-Cet article explique les techniques que vous pouvez utiliser pour optimiser vos contrôles ActiveX pour de meilleures performances.
+Cet article explique les techniques que vous pouvez utiliser pour optimiser vos contrôles ActiveX afin d’améliorer les performances.
 
 >[!IMPORTANT]
-> ActiveX est une technologie héritée qui ne doit pas être utilisée pour tout nouveau développement. Pour plus d’informations sur les technologies modernes qui remplacent ActiveX, consultez [contrôles ActiveX](activex-controls.md).
+> ActiveX est une technologie héritée qui ne doit pas être utilisée pour un nouveau développement. Pour plus d’informations sur les technologies modernes qui remplacent ActiveX, consultez [contrôles ActiveX](activex-controls.md).
 
-Les rubriques [activation de désactiver l’Option actif quand Visible](../mfc/turning-off-the-activate-when-visible-option.md) et [fournissant Interaction souris pendant l’inactivité](../mfc/providing-mouse-interaction-while-inactive.md) traitent des contrôles qui ne créent une fenêtre jusqu'à l’activation. La rubrique [fournissant l’Activation sans fenêtre](../mfc/providing-windowless-activation.md) décrit les contrôles jamais créent une fenêtre, même lorsqu’ils sont activés.
+Les rubriques [désactivant l’option Activer quand](turning-off-the-activate-when-visible-option.md) elle est visible et l' [interaction avec la souris pendant qu’elle est inactive](providing-mouse-interaction-while-inactive.md) discutent des contrôles qui ne créent pas de fenêtre jusqu’à ce qu’ils soient activés. La rubrique [fournissant une activation sans fenêtre](providing-windowless-activation.md) traite des contrôles qui ne créent jamais de fenêtre, même lorsqu’ils sont activés.
 
-Windows ont deux inconvénients principaux pour les objets OLE : elles empêchent les objets d’être transparents ou non rectangulaires quand elle est active, et ils ajoutent une surcharge de grande taille à l’instanciation et l’affichage des contrôles. En règle générale, la création d’une fenêtre prend 60 pour cent du temps de création d’un contrôle. Avec une fenêtre unique partagée (généralement du conteneur) et du code dispatch, un contrôle reçoit les mêmes services de fenêtre, généralement sans perte de performances. Présence d’une fenêtre est essentiellement une surcharge inutile pour l’objet.
+Windows présente deux inconvénients majeurs pour les objets OLE : ils empêchent les objets d’être transparents ou non rectangulaires lorsqu’ils sont actifs, et ils ajoutent une surcharge importante à l’instanciation et à l’affichage des contrôles. En règle générale, la création d’une fenêtre prend 60% de la durée de création d’un contrôle. Avec une seule fenêtre partagée (généralement le du conteneur) et un code de distribution, un contrôle reçoit les mêmes services de fenêtre, généralement sans perte de performances. Le fait de disposer d’une fenêtre est surtout une surcharge inutile pour l’objet.
 
-Certaines optimisations n’améliorent pas nécessairement les performances lorsque votre contrôle est utilisé dans certains conteneurs. Par exemple, conteneurs publiées avant 1996 ne prenait pas en charge l’activation sans fenêtre, afin d’implémenter cette fonctionnalité ne fournira pas un avantage dans les conteneurs plus anciens. Cependant, presque chaque conteneur prend en charge la persistance, afin d’optimiser le code de persistance de votre contrôle sera probablement améliorer ses performances dans n’importe quel conteneur. Si votre contrôle est spécifiquement destiné à être utilisée avec un type particulier de conteneur, vous souhaiterez effectuer des recherches parmi ces optimisations est pris en charge par ce conteneur. En général, toutefois, vous devez tenter implémentent comme nombre de ces techniques sont applicables à votre contrôle afin de garantir que votre contrôle fonctionne aussi bien qu’éventuellement dans un large éventail de conteneurs.
+Certaines optimisations n’améliorent pas nécessairement les performances lorsque votre contrôle est utilisé dans certains conteneurs. Par exemple, les conteneurs antérieurs à 1996 ne prenaient pas en charge l’activation sans fenêtre. par conséquent, l’implémentation de cette fonctionnalité ne constitue pas un avantage dans les conteneurs plus anciens. Toutefois, presque tous les conteneurs prennent en charge la persistance. par conséquent, l’optimisation du code de persistance de votre contrôle améliorera probablement ses performances dans n’importe quel conteneur. Si votre contrôle est spécifiquement destiné à être utilisé avec un type particulier de conteneur, vous souhaiterez peut-être Rechercher les optimisations prises en charge par ce conteneur. En général, toutefois, vous devez essayer d’implémenter autant de ces techniques que celles applicables à votre contrôle particulier pour vous assurer que votre contrôle fonctionne aussi bien que possible dans un grand tableau de conteneurs.
 
-Vous pouvez implémenter la plupart de ces optimisations par le biais du [Assistant contrôle ActiveX MFC](../mfc/reference/mfc-activex-control-wizard.md), dans le [paramètres de contrôle](../mfc/reference/control-settings-mfc-activex-control-wizard.md) page.
+Vous pouvez implémenter un grand nombre de ces optimisations par le biais de l' [Assistant contrôle ActiveX MFC](reference/mfc-activex-control-wizard.md), sur la page [paramètres du contrôle](reference/control-settings-mfc-activex-control-wizard.md) .
 
-### <a name="mfc-activex-control-wizard-ole-optimization-options"></a>Options de l’optimisation MFC OLE de l’Assistant contrôle ActiveX
+### <a name="mfc-activex-control-wizard-ole-optimization-options"></a>Options d’optimisation OLE de l’Assistant contrôle ActiveX MFC
 
-|Paramètre de contrôle dans l’Assistant contrôle ActiveX MFC|Action|Complément d'information|
+|Paramètre de contrôle dans l’Assistant contrôle ActiveX MFC|Action|Informations complémentaires|
 |-------------------------------------------------------|------------|----------------------|
-|**Activer lorsqu’elle est visible** case à cocher|Effacer|[Désactivation de l’activer lorsque Option est Visible](../mfc/turning-off-the-activate-when-visible-option.md)|
-|**L’activation sans fenêtre** case à cocher|Sélectionner|[Mise à disposition de l’activation sans fenêtre](../mfc/providing-windowless-activation.md)|
-|**Contexte de périphérique non découpé** case à cocher|Sélectionner|[Utilisation d’un contexte d’appareil non découpé](../mfc/using-an-unclipped-device-context.md)|
-|**Activation sans scintillement** case à cocher|Sélectionner|[Mise à disposition de l’activation sans scintillement](../mfc/providing-flicker-free-activation.md)|
-|**Notifications du pointeur de cas d’inactivité de la souris** case à cocher|Sélectionner|[Prise en charge de l’interaction souris pendant l’inactivité](../mfc/providing-mouse-interaction-while-inactive.md)|
-|**Code de dessin optimisé** case à cocher|Sélectionner|[Optimisation du contrôle de dessin](../mfc/optimizing-control-drawing.md)|
+|Case à cocher **activer quand** elle est visible|Désactiver|[Désactivation de l’option Activer quand elle est visible](turning-off-the-activate-when-visible-option.md)|
+|Case à cocher **activation sans fenêtre**|Sélectionnez|[Mise à disposition de l'activation sans fenêtre](providing-windowless-activation.md)|
+|Case à cocher du **contexte de périphérique non découpé**|Sélectionnez|[Utilisation d’un contexte d’appareil non découpé](using-an-unclipped-device-context.md)|
+|Case à cocher **activation sans scintillement**|Sélectionnez|[Mise à disposition de l’activation sans scintillement](providing-flicker-free-activation.md)|
+|Case à cocher **des notifications de pointeur de souris en cas d’inactivité**|Sélectionnez|[Prise en charge de l’interaction souris pendant l’inactivité](providing-mouse-interaction-while-inactive.md)|
+|Case à cocher **Code de dessin optimisé**|Sélectionnez|[Optimisation du dessin de contrôle](optimizing-control-drawing.md)|
 
-Pour obtenir des informations détaillées sur les fonctions membres qui implémentent ces optimisations, consultez [COleControl](../mfc/reference/colecontrol-class.md).
+Pour plus d’informations sur les fonctions membres qui implémentent ces optimisations, consultez [COleControl](reference/colecontrol-class.md).
 
-Pour plus d'informations, voir :
+Pour plus d'informations, voir :
 
-- [Optimisation de la persistance et de l’initialisation](../mfc/optimizing-persistence-and-initialization.md)
+- [Optimisation de la persistance et de l’initialisation](optimizing-persistence-and-initialization.md)
 
-- [Mise à disposition de l’activation sans fenêtre](../mfc/providing-windowless-activation.md)
+- [Mise à disposition de l'activation sans fenêtre](providing-windowless-activation.md)
 
-- [Désactivation de l’activer lorsque Option est Visible](../mfc/turning-off-the-activate-when-visible-option.md)
+- [Désactivation de l’option Activer quand elle est visible](turning-off-the-activate-when-visible-option.md)
 
-- [Prise en charge de l’interaction souris pendant l’inactivité](../mfc/providing-mouse-interaction-while-inactive.md)
+- [Prise en charge de l’interaction souris pendant l’inactivité](providing-mouse-interaction-while-inactive.md)
 
-- [Mise à disposition de l’activation sans scintillement](../mfc/providing-flicker-free-activation.md)
+- [Mise à disposition de l’activation sans scintillement](providing-flicker-free-activation.md)
 
-- [Utilisation d’un contexte d’appareil non découpé](../mfc/using-an-unclipped-device-context.md)
+- [Utilisation d’un contexte d’appareil non découpé](using-an-unclipped-device-context.md)
 
-- [Optimisation du contrôle de dessin](../mfc/optimizing-control-drawing.md)
+- [Optimisation du dessin de contrôle](optimizing-control-drawing.md)
 
 ## <a name="see-also"></a>Voir aussi
 
-[Contrôles ActiveX MFC](../mfc/mfc-activex-controls.md)
+[Contrôles ActiveX MFC](mfc-activex-controls.md)

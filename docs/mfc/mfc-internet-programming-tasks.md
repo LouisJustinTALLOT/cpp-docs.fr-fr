@@ -5,22 +5,22 @@ helpviewer_keywords:
 - Internet applications [MFC], getting started
 - Internet applications [MFC], first steps
 ms.assetid: 6377e9b8-07c4-4380-b63b-05f5a9061313
-ms.openlocfilehash: 1b0a8696e25054099cdbf208dd5a1f713bfbe6d3
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 6d8a542ada94bc52ee2000bc92ae0457ec87609c
+ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62164954"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84617963"
 ---
 # <a name="mfc-internet-programming-tasks"></a>Tâches de programmation Internet MFC
 
-Cette section contient des procédures détaillées pour ajouter la prise en charge d'Internet dans vos applications. Les rubriques suivantes expliquent comment utiliser les classes MFC dans vos applications existantes avec Internet, et comment ajouter la prise en charge des documents actifs vers votre composant COM existant. Vous souhaitez créer un document avec boursiers, scores de football de Pittsburgh, et la dernière température en Antarctique Microsoft fournit un certain nombre de technologies pour vous aider à le faire via Internet.
+Cette section contient des procédures détaillées pour ajouter la prise en charge d'Internet dans vos applications. Les rubriques suivantes expliquent comment utiliser les classes MFC dans vos applications existantes avec Internet, et comment ajouter la prise en charge des documents actifs vers votre composant COM existant. Souhaitez-vous créer un document avec des cotations boursières à la minute, des scores de football Pittsburgh et la dernière température en Antarctique Microsoft fournit un certain nombre de technologies pour vous aider à le faire sur Internet.
 
-Les technologies Active incluent des contrôles ActiveX (anciennement contrôles OLE) et des documents Active, WinInet pour récupérer et enregistrer facilement des fichiers sur Internet, et des monikers asynchrones pour un téléchargement de données performant. Visual C++ propose des assistants pour vous faire découvrir une application de départ. Pour une introduction à ces technologies, consultez [notions de programmation Internet MFC](../mfc/mfc-internet-programming-basics.md) et [MFC COM](../mfc/mfc-com.md).
+Les technologies Active incluent des contrôles ActiveX (anciennement contrôles OLE) et des documents Active, WinInet pour récupérer et enregistrer facilement des fichiers sur Internet, et des monikers asynchrones pour un téléchargement de données performant. Visual C++ propose des assistants pour vous faire découvrir une application de départ. Pour obtenir une présentation de ces technologies, consultez concepts de base de la [programmation Internet MFC](mfc-internet-programming-basics.md) et [MFC com](mfc-com.md).
 
-Avez-vous toujours voulu FTP d’un fichier, mais ne l’avez pas appris WinSock et la programmation des classes WinInet de protocoles réseau encapsulent ces protocoles, vous offrant un ensemble simple de fonctions vous permettent d’écrire une application cliente sur Internet pour télécharger des fichiers à l’aide de HTTP, FTP et gopher. Vous pouvez utiliser WinInet pour rechercher des répertoires sur votre disque dur ou partout dans le monde. Vous pouvez de façon transparente collecter des données de différents types, et les présenter aux utilisateurs dans une interface intégrée.
+Avez-vous toujours voulu transférer un fichier via FTP, mais vous n’avez pas appris les classes WinInet WinSock et Network Programming Protocols pour encapsuler ces protocoles, en vous fournissant un ensemble simple de fonctions que vous pouvez utiliser pour écrire une application cliente sur Internet afin de télécharger des fichiers à l’aide de HTTP, FTP et Gopher. Vous pouvez utiliser WinInet pour rechercher des répertoires sur votre disque dur ou partout dans le monde. Vous pouvez de façon transparente collecter des données de différents types, et les présenter aux utilisateurs dans une interface intégrée.
 
-Vous disposez d’importants volumes de données à télécharger asynchrone monikers fournissent une solution COM (Component Object Model) pour le rendu progressif des objets volumineux. WinInet peut également être utilisé de manière asynchrone.
+Disposez-vous de grandes quantités de données pour télécharger des monikers asynchrones, fournissez une solution COM (Component Object Model) pour le rendu progressif des objets volumineux. WinInet peut également être utilisé de manière asynchrone.
 
 Le tableau suivant décrit quelques unes des opérations réalisables avec ces technologies.
 
@@ -32,21 +32,21 @@ Le tableau suivant décrit quelques unes des opérations réalisables avec ces t
 
 Consultez les rubriques suivantes pour savoir comment démarrer :
 
-- [Choix en matière de conception d’applications](../mfc/application-design-choices.md)
+- [Choix en matière de conception d’applications](application-design-choices.md)
 
-- [Écriture d’applications MFC](../mfc/writing-mfc-applications.md)
+- [Écriture d’applications MFC](writing-mfc-applications.md)
 
-- [Contrôles ActiveX sur Internet](../mfc/activex-controls-on-the-internet.md)
+- [Contrôles ActiveX sur Internet](activex-controls-on-the-internet.md)
 
-- [Mise à niveau d’un contrôle ActiveX](../mfc/upgrading-an-existing-activex-control.md)
+- [Mise à niveau d'un contrôle ActiveX](upgrading-an-existing-activex-control.md)
 
-- [Monikers asynchrones sur Internet](../mfc/asynchronous-monikers-on-the-internet.md)
+- [Monikers asynchrones sur Internet](asynchronous-monikers-on-the-internet.md)
 
-- [Test des applications Internet](../mfc/testing-internet-applications.md)
+- [Test des applications Internet](testing-internet-applications.md)
 
-- [Sécurité Internet](../mfc/internet-security-cpp.md)
+- [Sécurité Internet](internet-security-cpp.md)
 
 ## <a name="see-also"></a>Voir aussi
 
-[Notions de base de la programmation Internet MFC](../mfc/mfc-internet-programming-basics.md)<br/>
-[Informations Internet par tâche](../mfc/internet-information-by-task.md)
+[Concepts de base de la programmation Internet MFC](mfc-internet-programming-basics.md)<br/>
+[Informations Internet par tâche](internet-information-by-task.md)

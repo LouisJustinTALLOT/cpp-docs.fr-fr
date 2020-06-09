@@ -4,38 +4,38 @@ ms.date: 09/12/2018
 helpviewer_keywords:
 - Internet applications [MFC], Active technology
 ms.assetid: 6f782aa1-5c2f-47a2-9e63-ddd0829d5a08
-ms.openlocfilehash: e9f09715f53247cc8a3abf0fbc63517e76d810c3
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 2cd087c99c1ebdcaa8b4a44524e7691984877f20
+ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62394921"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84625154"
 ---
 # <a name="active-technology-on-the-internet"></a>Technologie active sur Internet
 
-Technologie active est une plateforme ouverte qui permet aux développeurs de créer des applications pour Internet, ou pour le réseau interne d’une société, appelé intranet et du contenu passionnant et dynamiques. Les principales technologies fournies par Microsoft pour la programmation Internet sont décrites ci-dessous.
+La technologie active est une plateforme ouverte qui permet aux développeurs de créer du contenu et des applications dynamiques et passionnants pour l’Internet global, ou pour le réseau interne d’une société, appelé intranet. Les principales technologies fournies par Microsoft pour la programmation Internet sont décrites ci-dessous.
 
 >[!IMPORTANT]
-> ActiveX est une technologie héritée qui ne doit pas être utilisée pour tout nouveau développement. Pour plus d’informations sur les technologies modernes qui remplacent ActiveX, consultez [contrôles ActiveX](activex-controls.md).
+> ActiveX est une technologie héritée qui ne doit pas être utilisée pour un nouveau développement. Pour plus d’informations sur les technologies modernes qui remplacent ActiveX, consultez [contrôles ActiveX](activex-controls.md).
 
 ## <a name="activex-controls"></a>Contrôles ActiveX
 
-Contrôles ActiveX (anciennement contrôles OLE) sont des objets qui peuvent être insérées dans les pages Web ou toute autre application qui est un conteneur de contrôles ActiveX. Exemples incluent les boutons, les téléscripteurs et les contrôles chart. Pour plus d’informations, consultez [contrôles ActiveX sur Internet](../mfc/activex-controls-on-the-internet.md).
+Les contrôles ActiveX (anciennement contrôles OLE) sont des objets qui peuvent être insérés dans des pages Web ou toute autre application qui est un conteneur de contrôles ActiveX. Les exemples incluent les boutons, les cotations boursières et les contrôles Chart. Pour plus d’informations, consultez [contrôles ActiveX sur Internet](activex-controls-on-the-internet.md).
 
-## <a name="internet-data-download-services"></a>Services de téléchargement de données d’Internet
+## <a name="internet-data-download-services"></a>Services de téléchargement de données Internet
 
-Données peuvent être téléchargées via Internet à l’aide de protocoles communs : HTTP, FTP et gopher. Les classes WinInet MFC facilitent le transfert de données à l’aide des protocoles HTTP, FTP et gopher en faisant abstraction les protocoles TCP/IP et WinSock. Les classes de moniker asynchrone de MFC fournissent un moyen pour télécharger des fichiers sans blocage et de restituer les objets volumineux de manière asynchrone. Pour plus d’informations, consultez [extension Internet Win32 (WinInet)](../mfc/win32-internet-extensions-wininet.md).
+Les données peuvent être téléchargées via Internet à l’aide de protocoles courants : HTTP, FTP et Gopher. Les classes WinInet MFC facilitent le transfert de données à l’aide de protocoles HTTP, FTP et Gopher en extrayant les protocoles TCP/IP et WinSock. Les classes moniker asynchrones MFC offrent un moyen de télécharger des fichiers sans bloquer et de restituer des objets volumineux de manière asynchrone. Pour plus d’informations, consultez [Win32 Internet Extensions (WinInet)](win32-internet-extensions-wininet.md).
 
 ## <a name="active-scripts"></a>Scripts actifs
 
-VBScript et autres langages de script connectent des contrôles et ajoutent des fonctionnalités interactives aux pages Web. Écriture de scripts déplace le traitement à partir du serveur au client. Par exemple, entrées de formulaire peuvent être validées sur le client, puis envoyées au serveur.
+VBScript et d’autres langages de script connectent les contrôles et ajoutent des fonctionnalités interactives aux pages Web. L’écriture de scripts déplace le traitement du serveur vers le client. Par exemple, les entrées de formulaire peuvent être validées sur le client, puis envoyées au serveur.
 
 ## <a name="html-extensions"></a>Extensions HTML
 
-Les extensions HTML, telles que la balise object, ont été ajoutées pour prendre en charge les contrôles et les scripts.
+Les extensions HTML, telles que la balise Object, ont été ajoutées pour prendre en charge les contrôles et les scripts.
 
 ## <a name="see-also"></a>Voir aussi
 
-[Notions de base de la programmation Internet MFC](../mfc/mfc-internet-programming-basics.md)<br/>
-[Contrôles ActiveX sur Internet](../mfc/activex-controls-on-the-internet.md)<br/>
-[Extension Internet Win32 (WinInet)](../mfc/win32-internet-extensions-wininet.md)
+[Concepts de base de la programmation Internet MFC](mfc-internet-programming-basics.md)<br/>
+[Contrôles ActiveX sur Internet](activex-controls-on-the-internet.md)<br/>
+[Extension Internet Win32 (WinInet)](win32-internet-extensions-wininet.md)

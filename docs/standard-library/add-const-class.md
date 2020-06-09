@@ -7,14 +7,14 @@ helpviewer_keywords:
 - add_const class
 - add_const
 ms.assetid: 1262a1eb-8c9c-4dd6-9f43-88ba280182f1
-ms.openlocfilehash: 6f27a8e4bc0bea3a469d46a56e8885dabe5894df
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: c82a3fac8ef95da9e226ca3e2e9122b3c8774cbf
+ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68456583"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84620828"
 ---
-# <a name="addconst-class"></a>add_const, classe
+# <a name="add_const-class"></a>add_const, classe
 
 Crée un type const à partir d'un type.
 
@@ -32,7 +32,7 @@ Type à modifier.
 
 ## <a name="remarks"></a>Notes
 
-Une instance du modificateur de type contient un type modifié qui est *Ty* si *Ty* est une référence, une fonction ou un type qualifié const; sinon `const Ty`,.
+Une instance du modificateur de type contient un type modifié qui est *Ty* si *Ty* est une référence, une fonction ou un type qualifié const ; sinon, `const Ty` .
 
 ## <a name="example"></a>Exemple
 
@@ -60,11 +60,11 @@ add_const<int> == int
 
 ## <a name="requirements"></a>Configuration requise
 
-**En-tête :** \<type_traits>
+**En-tête :**\<type_traits>
 
 **Espace de noms :** std
 
 ## <a name="see-also"></a>Voir aussi
 
-[<type_traits>](../standard-library/type-traits.md)\
-[remove_const, classe](../standard-library/remove-const-class.md)
+[<type_traits>](type-traits.md)\
+[Classe remove_const](remove-const-class.md)

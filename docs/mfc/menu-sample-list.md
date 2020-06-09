@@ -4,25 +4,25 @@ ms.date: 11/04/2016
 helpviewer_keywords:
 - sample applications [MFC], menus
 ms.assetid: 6d89c723-03d6-474e-8ca5-e98f93bd41cc
-ms.openlocfilehash: 1eab6947590375531df9027f853647ec6cb946f2
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: eb4d16a1aacb8a573b04dc1eb122289d9fba22bd
+ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62219011"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84626246"
 ---
 # <a name="menu-sample-list"></a>Exemple de liste de menu
 
-Consultez les exemples de programmes suivants qui illustrent la création, modification et la mise à jour de menus :
+Consultez les exemples de programmes suivants qui illustrent la création, la modification et la mise à jour des menus :
 
-*Exemple MDI : Activer et désactiver des éléments de Menu*
+*Exemple MDI : activer et désactiver les éléments de menu*
 
-- [DESSIN À MAIN LEVÉE](../overview/visual-cpp-samples.md)
+- [SCRIBBLE](../overview/visual-cpp-samples.md)
 
-*Modifier dynamiquement les Menus*
+*Modifier dynamiquement les menus*
 
 - [DYNAMENU](../overview/visual-cpp-samples.md)
 
 ## <a name="see-also"></a>Voir aussi
 
-[Menus](../mfc/menus-mfc.md)
+[Menus](menus-mfc.md)
