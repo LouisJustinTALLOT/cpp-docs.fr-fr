@@ -6,25 +6,25 @@ helpviewer_keywords:
 - exchanging data with property sheets [MFC]
 - DDX (dialog data exchange) [MFC], property sheets
 ms.assetid: 689f02d0-51a9-455b-8ffb-5b44f0aefa28
-ms.openlocfilehash: de82a337f19b7b2ac6039fd3f3c16ab67aa1dc99
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 5be82567e02fd5e935d42f9eff5bdee20fa0d5a8
+ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62405844"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84622707"
 ---
 # <a name="exchanging-data"></a>Échange des données
 
-Comme la plupart des boîtes de dialogue, l’échange de données entre la feuille de propriétés et de l’application est une des fonctions plus importantes de la feuille de propriétés. Cet article décrit comment accomplir cette tâche.
+Comme dans la plupart des boîtes de dialogue, l’échange de données entre la feuille de propriétés et l’application est l’une des fonctions les plus importantes de la feuille de propriétés. Cet article explique comment accomplir cette tâche.
 
-Échanger des données avec une feuille de propriétés consiste en fait un échange de données avec les pages de propriétés individuelles de la feuille de propriétés. La procédure pour échanger des données avec une page de propriétés est identique à celui d’échanger des données avec une boîte de dialogue depuis un [CPropertyPage](../mfc/reference/cpropertypage-class.md) objet est simplement spécialisé [CDialog](../mfc/reference/cdialog-class.md) objet. La procédure tire parti de boîte de dialogue données exchange (DDX) usine de l’infrastructure, qui échange des données entre les contrôles dans une boîte de dialogue et les variables membres de l’objet de boîte de dialogue.
+L’échange de données avec une feuille de propriétés est en fait une question d’échange de données avec les pages de propriétés individuelles de la feuille de propriétés. La procédure d’échange de données à l’aide d’une page de propriétés est la même que pour l’échange de données avec une boîte de dialogue, dans la mesure où un objet [CPropertyPage](reference/cpropertypage-class.md) est simplement un objet [CDialog](reference/cdialog-class.md) spécialisé. La procédure tire parti de la fonctionnalité d’échange de données de boîtes de dialogue (DDX) de l’infrastructure, qui échange des données entre des contrôles dans une boîte de dialogue et des variables membres de l’objet de boîte de dialogue.
 
-La différence importante entre l’échange de données avec une feuille de propriétés et une boîte de dialogue normale est que la feuille de propriétés comprend plusieurs pages, donc vous devez échanger des données avec toutes les pages de la feuille de propriétés. Pour plus d’informations sur DDX, consultez [échange de données de boîtes de dialogue et la Validation](../mfc/dialog-data-exchange-and-validation.md).
+La différence importante entre l’échange de données avec une feuille de propriétés et une boîte de dialogue normale est que la feuille de propriétés comporte plusieurs pages. vous devez donc échanger des données avec toutes les pages de la feuille de propriétés. Pour plus d’informations sur DDX, consultez [échange et validation de données de boîtes de dialogue](dialog-data-exchange-and-validation.md).
 
 L’exemple suivant illustre l’échange de données entre une vue et deux pages d’une feuille de propriétés :
 
-[!code-cpp[NVC_MFCDocView#4](../mfc/codesnippet/cpp/exchanging-data_1.cpp)]
+[!code-cpp[NVC_MFCDocView#4](codesnippet/cpp/exchanging-data_1.cpp)]
 
 ## <a name="see-also"></a>Voir aussi
 
-[Feuilles de propriétés](../mfc/property-sheets-mfc.md)
+[Feuilles de propriétés](property-sheets-mfc.md)

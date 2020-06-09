@@ -16,45 +16,45 @@ helpviewer_keywords:
 - heap corruption [MFC]
 - nested catch blocks [MFC]
 ms.assetid: d664a83d-879b-44d4-bdf0-029f0aca69e9
-ms.openlocfilehash: afad5335bedf001329ecb401a8a16c663afb5571
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: d669c58da04a1cd0ead424d93f6fad6adcd4c56c
+ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81371592"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84622728"
 ---
 # <a name="exceptions-using-mfc-macros-and-c-exceptions"></a>Exceptions : utilisation de macros MFC et d'exceptions C++
 
-Cet article traite des considérations relatives à la rédaction de code qui utilise à la fois les macros de manutention des exceptions MFC et les mots clés de manipulation des exceptions de C.
+Cet article aborde les considérations relatives à l’écriture de code qui utilise à la fois les macros de gestion des exceptions MFC et les mots clés de gestion des exceptions C++.
 
 Cet article aborde les thèmes suivants :
 
-- [Mélanger les mots clés d’exception et les macros](#_core_mixing_exception_keywords_and_macros)
+- [Combinaison de mots clés et macros d’exception](#_core_mixing_exception_keywords_and_macros)
 
-- [Essayez les blocs à l’intérieur des blocs de capture](#_core_try_blocks_inside_catch_blocks)
+- [Blocs try dans les blocs catch](#_core_try_blocks_inside_catch_blocks)
 
-## <a name="mixing-exception-keywords-and-macros"></a><a name="_core_mixing_exception_keywords_and_macros"></a>Mélanger les mots clés d’exception et les macros
+## <a name="mixing-exception-keywords-and-macros"></a><a name="_core_mixing_exception_keywords_and_macros"></a>Combinaison de mots clés et macros d’exception
 
-Vous pouvez mélanger des macros d’exception MFC et des mots clés d’exception CMD dans le même programme. Mais vous ne pouvez pas mélanger les macros MFC avec les mots clés d’exception Cmd dans le même bloc parce que les macros suppriment automatiquement les objets d’exception lorsqu’ils sortent de portée, alors que le code utilisant les mots clés de manipulation d’exception ne le fait pas. Pour plus d’informations, voir l’article [Exceptions: Catching and Deleting Exceptions](../mfc/exceptions-catching-and-deleting-exceptions.md).
+Vous pouvez mélanger les macros d’exception MFC et les mots clés d’exceptions C++ dans le même programme. Toutefois, vous ne pouvez pas mélanger les macros MFC avec les mots clés d’exceptions C++ dans le même bloc, car les macros suppriment automatiquement des objets d’exception lorsqu’ils sont hors de portée, alors que le code qui utilise les mots clés de gestion des exceptions ne le fait pas. Pour plus d’informations, consultez l’article [exceptions : interception et suppression d’exceptions](exceptions-catching-and-deleting-exceptions.md).
 
-La principale différence entre les macros et les mots clés est que les macros "automatiquement" supprimer une exception pris lorsque l’exception sort de portée. Code à l’aide des mots clés n’est pas; les exceptions prises dans un bloc de capture doivent être explicitement supprimées. Le mélange de macros et de mots-clés d’exception de CMD peut provoquer des fuites de mémoire lorsqu’un objet d’exception n’est pas supprimé, ou une corruption de tas lorsqu’une exception est supprimée deux fois.
+La principale différence entre les macros et les mots clés est que les macros suppriment « automatiquement » une exception interceptée lorsque l’exception est hors de portée. Le code qui utilise les mots clés ne le fait pas ; les exceptions interceptées dans un bloc catch doivent être supprimées explicitement. La combinaison de macros et de mots clés d’exceptions C++ peut provoquer des fuites de mémoire lorsqu’un objet exception n’est pas supprimé ou un tas endommagé quand une exception est supprimée deux fois.
 
-Le code suivant, par exemple, invalide le pointeur d’exception :
+Le code suivant, par exemple, invalide le pointeur d’exception :
 
-[!code-cpp[NVC_MFCExceptions#10](../mfc/codesnippet/cpp/exceptions-using-mfc-macros-and-cpp-exceptions_1.cpp)]
+[!code-cpp[NVC_MFCExceptions#10](codesnippet/cpp/exceptions-using-mfc-macros-and-cpp-exceptions_1.cpp)]
 
-Le problème `e` se produit parce qu’il est supprimé lorsque l’exécution sort du bloc **CATCH** « intérieur ». L’utilisation de la macro **THROW_LAST** au lieu de l’instruction **THROW** fera en sorte que le bloc **CATCH** « externe » recevra un pointeur valide :
+Le problème se produit car `e` est supprimé lorsque l’exécution est en dehors du bloc **catch** « interne ». Si vous utilisez la macro **THROW_LAST** au lieu de l’instruction **throw** , le bloc **catch** « Outer » reçoit un pointeur valide :
 
-[!code-cpp[NVC_MFCExceptions#11](../mfc/codesnippet/cpp/exceptions-using-mfc-macros-and-cpp-exceptions_2.cpp)]
+[!code-cpp[NVC_MFCExceptions#11](codesnippet/cpp/exceptions-using-mfc-macros-and-cpp-exceptions_2.cpp)]
 
-## <a name="try-blocks-inside-catch-blocks"></a><a name="_core_try_blocks_inside_catch_blocks"></a>Essayez les blocs à l’intérieur des blocs de capture
+## <a name="try-blocks-inside-catch-blocks"></a><a name="_core_try_blocks_inside_catch_blocks"></a>Blocs try dans les blocs catch
 
-Vous ne pouvez pas re-jeter l’exception actuelle à partir d’un bloc **d’essai** qui est à l’intérieur d’un bloc **CATCH.** L’exemple suivant est invalide :
+Vous ne pouvez pas lever à nouveau l’exception actuelle à partir d’un bloc **try** qui se trouve à l’intérieur d’un bloc **catch** . L’exemple suivant n’est pas valide :
 
-[!code-cpp[NVC_MFCExceptions#12](../mfc/codesnippet/cpp/exceptions-using-mfc-macros-and-cpp-exceptions_3.cpp)]
+[!code-cpp[NVC_MFCExceptions#12](codesnippet/cpp/exceptions-using-mfc-macros-and-cpp-exceptions_3.cpp)]
 
-Pour plus d’informations, voir [Exceptions: Examining Exceptions Contents](../mfc/exceptions-examining-exception-contents.md).
+Pour plus d’informations, consultez [exceptions : examen du contenu des exceptions](exceptions-examining-exception-contents.md).
 
 ## <a name="see-also"></a>Voir aussi
 
-[Gestion des exceptions](../mfc/exception-handling-in-mfc.md)
+[Gestion des exceptions](exception-handling-in-mfc.md)

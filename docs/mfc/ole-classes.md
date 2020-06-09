@@ -9,47 +9,47 @@ helpviewer_keywords:
 - OLE classes [MFC]
 - OLE [MFC], classes
 ms.assetid: 4c2b2bca-fafb-4d2d-8498-9ed1e04011d2
-ms.openlocfilehash: 69eb604b3a343fd135c76a4bb3c17245ece62092
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 039f60f98a9109ca578b52db7d087a22d0440808
+ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62186402"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84617841"
 ---
 # <a name="ole-classes"></a>Classes OLE
 
-Les classes OLE fonctionnent avec les autres classes de framework application pour accéder facilement à l’API ActiveX, ce qui donne à vos programmes un moyen simple de fournir la puissance des contrôles ActiveX à vos utilisateurs. À l’aide d’ActiveX, vous pouvez :
+Les classes OLE fonctionnent avec les autres classes de l’infrastructure d’application pour faciliter l’accès à l’API ActiveX, ce qui permet à vos programmes de fournir aux utilisateurs la puissance d’ActiveX. À l’aide d’ActiveX, vous pouvez :
 
-- Créer des documents composés, permettant aux utilisateurs de créer et modifier des documents contenant les données créées par plusieurs applications, y compris le texte, des graphiques, des feuilles de calcul, audio, ou autres types de données.
+- Créer des documents composés, qui permettent aux utilisateurs de créer et de modifier des documents contenant des données créées par plusieurs applications, notamment du texte, des graphiques, des feuilles de calcul, du son ou d’autres types de données.
 
 - Créer des objets OLE qui peuvent être incorporés dans des documents composés.
 
-- Utiliser le glisser-déplacer OLE pour copier des données entre applications.
+- Utilisez l’opération glisser-déplacer OLE pour copier des données entre des applications.
 
-- Utiliser Automation pour contrôler un programme avec un autre.
+- Utilisez l’automatisation pour contrôler un programme avec un autre.
 
-- Créer des contrôles ActiveX et les conteneurs de contrôles ActiveX (anciennement contrôles OLE et conteneurs de contrôles OLE, respectivement).
+- Créer des contrôles ActiveX et des conteneurs de contrôles ActiveX (anciennement appelés contrôles OLE et conteneurs de contrôles OLE, respectivement).
 
 Les catégories de classes suivantes prennent en charge ActiveX :
 
-- [OLE, classes de conteneur](../mfc/ole-container-classes.md)
+- [Classes de conteneur OLE](ole-container-classes.md)
 
-- [OLE, classes de serveur](../mfc/ole-server-classes.md)
+- [Classes de serveur OLE](ole-server-classes.md)
 
-- [OLE, classes de glisser-déposer et de transfert de données](../mfc/ole-drag-and-drop-and-data-transfer-classes.md)
+- [Classes de glisser-déplacer OLE et de transfert de données](ole-drag-and-drop-and-data-transfer-classes.md)
 
-- [OLE, classes de boîtes de dialogue communes](../mfc/ole-common-dialog-classes.md)
+- [Classes de boîtes de dialogue communes OLE](ole-common-dialog-classes.md)
 
-- [OLE, classes Automation](../mfc/ole-automation-classes.md)
+- [Classes OLE Automation](ole-automation-classes.md)
 
-- [OLE, classes de contrôle](../mfc/ole-control-classes.md)
+- [Classes de contrôle OLE](ole-control-classes.md)
 
-- [OLE, classes de documents actifs](../mfc/active-document-classes.md)
+- [Classes de documents actifs](active-document-classes.md)
 
-- [OLE, classes liées](../mfc/ole-related-classes.md)
+- [Classes liées à OLE](ole-related-classes.md)
 
-Pour afficher l’héritage d’une classe, utilisez le [graphique de hiérarchie de classe](../mfc/hierarchy-chart.md).
+Pour afficher l’héritage d’une classe, utilisez le [graphique de hiérarchie de classes](hierarchy-chart.md).
 
 ## <a name="see-also"></a>Voir aussi
 
-[Vue d’ensemble de la classe](../mfc/class-library-overview.md)
+[Vue d'ensemble des classes](class-library-overview.md)

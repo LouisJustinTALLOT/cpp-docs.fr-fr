@@ -35,29 +35,29 @@ helpviewer_keywords:
 - calculated symbols
 - shared symbols
 ms.assetid: 26541832-8dba-4177-b642-e08f94502ea7
-ms.openlocfilehash: 845834679bca274f1f2ca7a363b8a0681fb8f328
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: a6d2661a3467365482ea12bdfff53f730165faa0
+ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80215197"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84623065"
 ---
 # <a name="how-to-manage-symbols"></a>Comment : gérer des symboles
 
-Lorsque vous créez une ressource ou un objet de ressource, l’environnement de développement lui affecte un nom de symbole par défaut, par exemple, `IDD_DIALOG1`. Vous pouvez utiliser la [fenêtre Propriétés](/visualstudio/ide/reference/properties-window) pour modifier le nom de symbole par défaut ou pour modifier le nom d’un symbole déjà associé à une ressource.
+Lorsque vous créez une ressource ou un objet de ressource, l’environnement de développement lui assigne un nom de symbole par défaut, par exemple `IDD_DIALOG1` . Vous pouvez utiliser la [fenêtre Propriétés](/visualstudio/ide/reference/properties-window) pour modifier le nom de symbole par défaut ou pour modifier le nom d’un symbole déjà associé à une ressource.
 
 Pour les symboles associés à une ressource unique, vous pouvez également utiliser la fenêtre **Propriétés** pour modifier la valeur du symbole. Vous pouvez utiliser la [boîte de dialogue symboles des ressources](../windows/resource-symbols-dialog-box.md) pour modifier la valeur des symboles qui ne sont pas actuellement assignés à une ressource.
 
-Normalement, toutes les définitions de symbole sont enregistrées dans `Resource.h`. Toutefois, vous devrez peut-être changer ce nom de fichier Include pour pouvoir, par exemple, utiliser plusieurs fichiers de ressources dans le même répertoire.
+Normalement, toutes les définitions de symbole sont enregistrées dans `Resource.h` . Toutefois, vous devrez peut-être changer ce nom de fichier Include pour pouvoir, par exemple, utiliser plusieurs fichiers de ressources dans le même répertoire.
 
 > [!NOTE]
-> Si votre projet ne contient pas déjà un fichier. RC, consultez [Comment : créer des ressources](../windows/how-to-create-a-resource-script-file.md).
+> Si votre projet ne contient pas déjà un fichier. RC, consultez [Comment : créer des ressources](how-to-create-a-resource-script-file.md).
 
 ## <a name="symbol-name-restrictions"></a>Restrictions relatives au nom de symbole
 
 Les restrictions relatives aux noms de symboles sont les suivantes :
 
-- Tous les [symboles](../windows/symbols-resource-identifiers.md) doivent être uniques dans l’étendue de l’application pour empêcher les définitions de symbole conflictuelles dans les fichiers d’en-tête.
+- Tous les [symboles](symbols-resource-identifiers.md) doivent être uniques dans l’étendue de l’application pour empêcher les définitions de symbole conflictuelles dans les fichiers d’en-tête.
 
 - Les caractères valides pour un nom de symbole incluent A-Z, a-z, 0-9 et les traits de soulignement (_).
 
@@ -70,7 +70,7 @@ Les restrictions relatives aux noms de symboles sont les suivantes :
    Le fichier d'en-tête qui définit les symboles est utilisé par le compilateur/l'éditeur de ressources, ainsi que par le ou les programmes C++ pour faire référence aux ressources définies dans un fichier de ressources. Quand deux noms de symboles diffèrent uniquement par la casse, le programme C++ identifie deux symboles distincts alors que le compilateur/l'éditeur de ressources identifie les deux noms comme faisant référence à un symbole unique.
 
 > [!NOTE]
-> Si vous ne suivez pas le schéma de nom de symbole standard (ID * _ [Keyword]) présenté ci-dessous et que le nom de votre symbole est le même qu’un mot clé connu du compilateur de script de ressources, toute tentative de génération du fichier de script de ressources entraîne une génération d’erreurs apparemment aléatoires. Cela est difficile à diagnostiquer. Pour éviter cela, respectez le modèle d'affectation de noms standard.
+> Si vous ne suivez pas le schéma de nom de symbole standard (ID * _ [Keyword]) présenté ci-dessous et que le nom de votre symbole est le même qu’un mot clé connu du compilateur de script de ressources, la tentative de génération du fichier de script de ressources entraîne une génération d’erreurs apparemment aléatoires difficile à diagnostiquer. Pour éviter cela, respectez le modèle d'affectation de noms standard.
 
 Les noms de symboles comportent des préfixes descriptifs qui indiquent le genre de ressource ou d'objet qu'ils représentent. Ces préfixes descriptifs commencent par la combinaison de texte ID. La bibliothèque MFC (Microsoft Foundation Class) utilise les conventions d’affectation des noms de symboles indiquées dans le tableau suivant :
 
@@ -96,7 +96,7 @@ Les noms de symboles comportent des préfixes descriptifs qui indiquent le genre
 
 ## <a name="symbol-value-restrictions"></a>Restrictions relatives à la valeur d'un symbole
 
-Une valeur de symbole peut être tout entier exprimé de manière normale pour les directives de préprocesseur `#define`. Voici quelques exemples de valeurs de symboles :
+Une valeur de symbole peut être tout entier exprimé de manière normale pour les `#define` directives de préprocesseur. Voici quelques exemples de valeurs de symboles :
 
 ```
 18
@@ -119,7 +119,7 @@ Certaines limitations des valeurs de symbole sont les suivantes :
     #define IDC_MYEDIT  IDC_OTHEREDIT  //not supported
     ```
 
-- Vous ne pouvez pas utiliser de macros de préprocesseur avec des arguments comme définitions de valeur. L’exemple suivant n’est pas une expression valide, quelle que soit la `ID` qui est évaluée au moment de la compilation :
+- Vous ne pouvez pas utiliser de macros de préprocesseur avec des arguments comme définitions de valeur. L’exemple suivant n’est pas une expression valide, quelle que soit la `ID` valeur de au moment de la compilation :
 
     ```cpp
     #define   IDD_ABOUT  ID(7) //not supported
@@ -187,9 +187,9 @@ L'environnement interprète correctement ces symboles calculés tant que les con
 
 1. Dans [affichage des ressources](how-to-create-a-resource-script-file.md#create-resources), cliquez avec le bouton droit sur votre fichier *. RC* , puis sélectionnez [include des ressources](../windows/resource-includes-dialog-box.md).
 
-1. Dans la zone **directives de symbole en lecture seule** , utilisez la directive de compilateur `#include` pour spécifier le fichier dans lequel vous souhaitez conserver les symboles en lecture seule.
+1. Dans la zone **directives de symbole en lecture seule** , utilisez la `#include` directive du compilateur pour spécifier le fichier dans lequel vous souhaitez conserver les symboles en lecture seule.
 
-   N’appelez pas le fichier `Resource.h`, car il s’agit du nom de fichier normalement utilisé par le fichier d’en-tête de symbole principal.
+   N’appelez pas le fichier `Resource.h` , car il s’agit du nom de fichier normalement utilisé par le fichier d’en-tête de symbole principal.
 
    > [!NOTE]
    > Ce que vous tapez dans la zone **directives de symbole en lecture seule** est inclus dans le fichier de ressources exactement comme vous le tapez. Vérifiez que ce que vous tapez ne contient aucune erreur d'orthographe ou de syntaxe.
@@ -208,12 +208,12 @@ L'environnement interprète correctement ces symboles calculés tant que les con
 
 1. Dans la zone **fichier d’en-tête de symbole** , tapez le nouveau nom du fichier include.
 
-## <a name="requirements"></a>Spécifications
+## <a name="requirements"></a>Configuration requise
 
 Win32
 
 ## <a name="see-also"></a>Voir aussi
 
-[Identificateurs de ressources (symboles)](../windows/symbols-resource-identifiers.md)<br/>
-[Comment : créer des symboles](../windows/creating-new-symbols.md)<br/>
-[ID de symbole prédéfinis](../windows/predefined-symbol-ids.md)<br/>
+[Identificateurs de ressource (symboles)](symbols-resource-identifiers.md)<br/>
+[Comment : créer des symboles](creating-new-symbols.md)<br/>
+[ID de symboles prédéfinis](predefined-symbol-ids.md)<br/>

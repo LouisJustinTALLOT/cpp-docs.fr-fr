@@ -7,23 +7,23 @@ helpviewer_keywords:
 - command handling [MFC], routing commands
 - overriding, standard command routing
 ms.assetid: 872b698a-7432-40c4-9008-68721e8effa5
-ms.openlocfilehash: 5383c1053894d44e23baf51b19ac3df4e60158e5
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 680b185f8d68a834862bc0fe14bf6e7984effd65
+ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62410159"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84617720"
 ---
 # <a name="overriding-the-standard-command-routing"></a>Substitution du routage des commandes standard
 
-Dans de rares cas où vous devez implémenter une variation de la gamme de framework standard, vous pouvez la remplacer. L’idée est de modifier le routage dans une ou plusieurs classes en substituant `OnCmdMsg` dans ces classes. Procédez comme suit :
+Dans de rares cas, lorsque vous devez implémenter une variation du routage de Framework standard, vous pouvez la remplacer. L’idée est de modifier le routage dans une ou plusieurs classes en remplaçant `OnCmdMsg` ces classes. Procédez comme suit :
 
-- Dans la classe qui interrompt la commande à passer à un objet non défini par défaut.
+- Dans la classe qui arrête l’ordre à passer à un objet non défini par défaut.
 
-- Dans le nouvel objet non défini par défaut ou dans les cibles de la commande qu’il peut à son tour transmettre les commandes.
+- Dans le nouvel objet ou la cible de la commande, il est possible qu’elle passe à son tour les commandes à.
 
-Si vous insérez un nouvel objet dans le routage, sa classe doit être une classe de cible de commande. Dans vos versions de remplacement de `OnCmdMsg`, veillez à appeler la version que vous remplacez. Consultez le [OnCmdMsg](../mfc/reference/ccmdtarget-class.md#oncmdmsg) fonction membre de classe `CCmdTarget` dans le *référence MFC* et les versions de classes telles que `CView` et `CDocument` dans le code source fourni pour obtenir des exemples.
+Si vous insérez un nouvel objet dans le routage, sa classe doit être une classe de cible de commande. Dans vos versions de substitution de `OnCmdMsg` , veillez à appeler la version que vous substituez. Consultez la fonction membre [OnCmdMsg](reference/ccmdtarget-class.md#oncmdmsg) de `CCmdTarget` la classe dans la *référence MFC* et les versions de ces classes en tant que `CView` et `CDocument` dans le code source fourni pour obtenir des exemples.
 
 ## <a name="see-also"></a>Voir aussi
 
-[Méthode d’appel d’un gestionnaire par le Framework](../mfc/how-the-framework-calls-a-handler.md)
+[Méthode d’appel d’un gestionnaire par le Framework](how-the-framework-calls-a-handler.md)

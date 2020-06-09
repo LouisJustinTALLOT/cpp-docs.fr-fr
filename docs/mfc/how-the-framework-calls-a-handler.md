@@ -7,29 +7,29 @@ helpviewer_keywords:
 - command handling [MFC], calling handlers and code in MFC
 - command routing [MFC], MFC
 ms.assetid: d79bceba-4ff6-417a-9d52-6b6af62a909d
-ms.openlocfilehash: b48d8ac93ca33bd80f9a8a8369291f63fc623f5b
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 3fcfcbdd224db66550e7f0ff27de6313c85f856a
+ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62254005"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84618513"
 ---
 # <a name="how-the-framework-calls-a-handler"></a>Méthode d'appel d'un gestionnaire par le Framework
 
-Les rubriques suivantes d’abord examiner comment le framework achemine les commandes, puis examiner comment les autres messages et les notifications de contrôle sont envoyées à windows :
+Les rubriques suivantes examinent d’abord la façon dont l’infrastructure route les commandes, puis examinent la manière dont les autres messages et les notifications de contrôle sont envoyés à Windows :
 
-- [Envoi et réception de messages](../mfc/message-sending-and-receiving.md)
+- [Envoi et réception de messages](message-sending-and-receiving.md)
 
-- [Comment les messages noncommand parviennent à leurs gestionnaires](../mfc/how-noncommand-messages-reach-their-handlers.md)
+- [Comment les messages non-commande atteignent leurs gestionnaires](how-noncommand-messages-reach-their-handlers.md)
 
-- [Routage des commandes](../mfc/command-routing.md)
+- [Routage des commandes](command-routing.md)
 
-- [Illustration du routage des commandes](../mfc/command-routing-illustration.md)
+- [Illustration du routage des commandes](command-routing-illustration.md)
 
-- [Le gestionnaire OnCmdMsg](../mfc/oncmdmsg-handler.md)
+- [Gestionnaire OnCmdMsg](oncmdmsg-handler.md)
 
-- [Substitution du routage des commandes standard](../mfc/overriding-the-standard-command-routing.md)
+- [Substitution du routage des commandes standard](overriding-the-standard-command-routing.md)
 
 ## <a name="see-also"></a>Voir aussi
 
-[Gestion et mappage des messages](../mfc/message-handling-and-mapping.md)
+[Gestion et mappage des messages](message-handling-and-mapping.md)

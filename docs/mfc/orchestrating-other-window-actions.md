@@ -9,17 +9,17 @@ helpviewer_keywords:
 - frame windows [MFC], semimodal states
 - context-sensitive Help [MFC]
 ms.assetid: 5f34eea8-2bf8-4479-95c7-45e8f443db8f
-ms.openlocfilehash: 4b767ac8899217761cfcca8e24da841a694ead1c
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: b92a42766b96836dad527ce9191901270ff369ad
+ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62378154"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84622144"
 ---
 # <a name="orchestrating-other-window-actions"></a>Orchestration d'autres actions Windows
 
-La fenêtre frame orchestre des États semi-modaux tels que l’aide contextuelle et Aperçu avant impression. Pour obtenir une description du rôle de la fenêtre frame dans l’aperçu avant impression, consultez [l’impression et Aperçu avant impression](../mfc/printing-and-print-preview.md).
+La fenêtre frame orchestre les États semimodal tels que l’aide contextuelle et l’aperçu avant impression. Pour obtenir une description du rôle de la fenêtre frame dans l’aperçu avant impression, consultez [impression et aperçu avant impression](printing-and-print-preview.md).
 
 ## <a name="see-also"></a>Voir aussi
 
-[Utilisation de fenêtres frame](../mfc/using-frame-windows.md)
+[Utilisation des fenêtres Frame](using-frame-windows.md)

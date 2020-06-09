@@ -4,20 +4,20 @@ ms.date: 11/04/2016
 helpviewer_keywords:
 - MFC, ANSI deprecated methods
 ms.assetid: c7c5a6fd-95e4-4bee-b3d5-d3826c30947d
-ms.openlocfilehash: 88fb249e053a88a93510cb8f6f9b3092d41a0113
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: bbcae085b76e2dbce79265c0695c2b4e933553e2
+ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62153552"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84616999"
 ---
 # <a name="deprecated-ansi-apis"></a>API ANSI déconseillées
 
-La bibliothèque Microsoft Foundation classes (MFC) est la migration vers les classes et méthodes qui sont basées sur le jeu de caractères Unicode. Par conséquent, les versions ANSI de plusieurs méthodes MFC sont déconseillées. Utilisez les versions Unicode de ces méthodes dans vos futures applications.
+La bibliothèque MFC (Microsoft Foundation Class) migre vers des classes et des méthodes basées sur le jeu de caractères Unicode. Par conséquent, les versions ANSI de plusieurs méthodes MFC sont déconseillées. Utilisez les versions Unicode de ces méthodes dans vos futures applications.
 
-À partir de contrôles communs Windows version 6.1, qui est fourni avec Windows Vista, les méthodes ANSI suivantes sont déconseillées.
+À compter de Windows Common Controls version 6,1, qui est fourni avec Windows Vista, les méthodes ANSI suivantes sont déconseillées.
 
-## <a name="cbutton-class"></a>CButton, classe
+## <a name="cbutton-class"></a>Classe CButton
 
 ```
 AFX_ANSI_DEPRECATED BOOL GetIdealSize(LPSIZE psize) const;
@@ -47,7 +47,7 @@ AFX_ANSI_DEPRECATED BOOL SetCueBanner(LPCWSTR lpszText,
     BOOL fDrawIfFocused = FALSE);
 ```
 
-## <a name="clinkctrl-class"></a>CLinkCtrl, classe
+## <a name="clinkctrl-class"></a>Classe CLinkCtrl
 
 La classe entière est déconseillée.
 
@@ -152,4 +152,4 @@ AFX_ANSI_DEPRECATED HRESULT SetWindowTheme(LPCWSTR pszSubAppName);
 
 ## <a name="see-also"></a>Voir aussi
 
-[Configuration requise pour les contrôles communs Windows Vista](../mfc/build-requirements-for-windows-vista-common-controls.md)
+[Configuration requise pour les contrôles communs Windows Vista](build-requirements-for-windows-vista-common-controls.md)

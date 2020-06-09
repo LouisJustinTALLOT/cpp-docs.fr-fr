@@ -7,29 +7,29 @@ helpviewer_keywords:
 - window objects [MFC], destroying
 - window objects [MFC], removing
 ms.assetid: 3241fea0-c614-4a25-957d-20f21bd5fd0c
-ms.openlocfilehash: f50d198f9868a70d25370f6c1399b66efaa5490b
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 22b483c1005931b229453ae229935c0e716ab726
+ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62297240"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84621864"
 ---
 # <a name="destroying-window-objects"></a>Destruction d'objets fenêtres
 
-Être vigilant avec vos propres fenêtres enfants pour détruire l’objet fenêtre C++ lorsque l’utilisateur a terminé avec la fenêtre. Si ces objets ne sont pas détruits, votre application ne récupérera pas leur mémoire. Heureusement, le framework gère la destruction de fenêtres, ainsi que la création de fenêtres frame, les vues et les boîtes de dialogue. Si vous créez des fenêtres supplémentaires, vous êtes responsable de leur destruction.
+Vous devez veiller à ce que vos propres fenêtres enfants détruisent l’objet fenêtre C++ lorsque l’utilisateur a terminé la fenêtre. Si ces objets ne sont pas détruits, votre application ne récupérera pas leur mémoire. Heureusement, l’infrastructure gère la destruction de la fenêtre, ainsi que la création de fenêtres Frame, de vues et de boîtes de dialogue. Si vous créez des fenêtres supplémentaires, vous êtes chargé de les détruire.
 
-## <a name="what-do-you-want-to-know-more-about"></a>Ce que vous souhaitez en savoir plus sur
+## <a name="what-do-you-want-to-know-more-about"></a>Que voulez-vous en savoir plus sur
 
-- [Séquence de destruction de fenêtres](../mfc/window-destruction-sequence.md)
+- [Séquence de destruction de fenêtres](window-destruction-sequence.md)
 
-- [Allocation et libération de mémoire Windows](../mfc/allocating-and-deallocating-window-memory.md)
+- [Allocation et libération de la mémoire Windows](allocating-and-deallocating-window-memory.md)
 
-- [Détachement d’un objet CWnd de son HWND](../mfc/detaching-a-cwnd-from-its-hwnd.md)
+- [Détachement d’un CWnd de son HWND](detaching-a-cwnd-from-its-hwnd.md)
 
-- [Séquence de création d’une fenêtre générale](../mfc/general-window-creation-sequence.md)
+- [Séquence de création de fenêtre générale](general-window-creation-sequence.md)
 
-- [Destruction des fenêtres frame](../mfc/destroying-frame-windows.md)
+- [Destruction des fenêtres d’image](destroying-frame-windows.md)
 
 ## <a name="see-also"></a>Voir aussi
 
-[Objets fenêtre](../mfc/window-objects.md)
+[Objets fenêtres](window-objects.md)

@@ -1,5 +1,5 @@
 ---
-title: Conteneurs
+title: Containers
 ms.date: 11/04/2016
 helpviewer_keywords:
 - containers [MFC]
@@ -8,32 +8,32 @@ helpviewer_keywords:
 - containers [MFC], OLE container applications
 - containers [MFC], container applications
 ms.assetid: b19d7c05-4d02-44bd-b76a-4a6c25994a62
-ms.openlocfilehash: 35416025339b8fc059ed44b2b3c55d9c38d18570
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: a76bc9775e13350a031539c63476a4a8fae68ed0
+ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62153006"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84620633"
 ---
-# <a name="containers"></a>Conteneurs
+# <a name="containers"></a>Containers
 
-Une application de conteneur est une application qui peut incorporer des éléments liés ou incorporés dans ses propres documents. Les documents gérés par une application de conteneur doivent être en mesure de stocker et afficher les composants de document composé OLE ainsi que les données créées par l’application elle-même. Une application conteneur doit également permettre aux utilisateurs d’insérer de nouveaux éléments ou modifier des éléments existants.
+Une application conteneur est une application qui peut incorporer des éléments incorporés ou liés dans ses propres documents. Les documents gérés par une application conteneur doivent être en mesure de stocker et d’afficher des composants OLE composés de documents, ainsi que des données créées par l’application elle-même. Une application conteneur doit également permettre aux utilisateurs d’insérer de nouveaux éléments ou de modifier des éléments existants.
 
 ## <a name="in-this-section"></a>Dans cette section
 
-[Implémenter un conteneur](../mfc/containers-implementing-a-container.md)
+[Implémenter un conteneur](containers-implementing-a-container.md)
 
-[Éléments clients du conteneur](../mfc/containers-client-items.md)
+[Éléments du client de conteneur](containers-client-items.md)
 
-[Utiliser des fichiers composés](../mfc/containers-compound-files.md)
+[Utiliser des fichiers composés](containers-compound-files.md)
 
-[Problèmes d’Interface utilisateur de conteneur](../mfc/containers-user-interface-issues.md)
+[Problèmes d’interface utilisateur du conteneur](containers-user-interface-issues.md)
 
-[Fonctionnalités avancées de conteneurs](../mfc/containers-advanced-features.md)
+[Fonctionnalités avancées des conteneurs](containers-advanced-features.md)
 
 ## <a name="see-also"></a>Voir aussi
 
-[OLE](../mfc/ole-in-mfc.md)<br/>
-[Serveurs](../mfc/servers.md)<br/>
-[Activation](../mfc/activation-cpp.md)<br/>
-[Menus et ressources (OLE)](../mfc/menus-and-resources-ole.md)
+[OLE](ole-in-mfc.md)<br/>
+[Serveurs](servers.md)<br/>
+[Activation](activation-cpp.md)<br/>
+[Menus et ressources (OLE)](menus-and-resources-ole.md)

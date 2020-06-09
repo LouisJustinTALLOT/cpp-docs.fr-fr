@@ -8,52 +8,52 @@ helpviewer_keywords:
 - exception handling [MFC], exception classes
 - MFC, exceptions
 ms.assetid: 1a2caf12-b3e9-4189-86d2-bf7a595bf025
-ms.openlocfilehash: 99a2764dcad15267b1aab8a60951f99f21352726
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 907b34b12ffdaa70c4377a1012a66662fbba12d0
+ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62392867"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84619522"
 ---
 # <a name="exception-classes"></a>Classes d'exceptions
 
-La bibliothèque de classes fournit un mécanisme de gestion des exceptions basé sur la classe `CException`. L’infrastructure d’application utilise des exceptions dans son code ; Vous pouvez également les utiliser dans les vôtres. Pour plus d’informations, consultez l’article [Exceptions](../mfc/exception-handling-in-mfc.md). Vous pouvez dériver vos propres types d’exceptions à partir de `CException`.
+La bibliothèque de classes fournit un mécanisme de gestion des exceptions basé sur la classe `CException` . L’infrastructure d’application utilise des exceptions dans son code. vous pouvez également les utiliser dans les vôtres. Pour plus d’informations, consultez l’article [exceptions](exception-handling-in-mfc.md). Vous pouvez dériver vos propres types d’exception à partir de `CException` .
 
-MFC fournit une classe d’exception à partir de laquelle vous pouvez dériver votre propre exception, ainsi que des classes d’exception pour toutes les exceptions, qu'il prend en charge.
+MFC fournit une classe d’exception à partir de laquelle vous pouvez dériver votre propre exception, ainsi que des classes d’exception pour toutes les exceptions qu’elle prend en charge.
 
-[CException](../mfc/reference/cexception-class.md)<br/>
+[CException](reference/cexception-class.md)<br/>
 Classe de base des exceptions.
 
-[CArchiveException](../mfc/reference/carchiveexception-class.md)<br/>
-Une exception de l’archive.
+[CArchiveException](reference/carchiveexception-class.md)<br/>
+Une exception d’archive.
 
-[CDaoException](../mfc/reference/cdaoexception-class.md)<br/>
-Une exception résultant d’une défaillance dans une opération de base de données DAO.
+[CDaoException](reference/cdaoexception-class.md)<br/>
+Exception résultant d’une défaillance dans une opération de base de données DAO.
 
-[CDBException](../mfc/reference/cdbexception-class.md)<br/>
-Une exception résultant d’une défaillance lors du traitement de base de données ODBC.
+[CDBException](reference/cdbexception-class.md)<br/>
+Exception résultant d’un échec dans le traitement de la base de données ODBC.
 
-[CFileException](../mfc/reference/cfileexception-class.md)<br/>
-Une exception orienté fichier.
+[CFileException](reference/cfileexception-class.md)<br/>
+Une exception orientée fichier.
 
-[CMemoryException](../mfc/reference/cmemoryexception-class.md)<br/>
+[CMemoryException](reference/cmemoryexception-class.md)<br/>
 Une exception de mémoire insuffisante.
 
-[CNotSupportedException](../mfc/reference/cnotsupportedexception-class.md)<br/>
-Une exception résultant à l’aide d’une fonctionnalité non prise en charge.
+[CNotSupportedException](reference/cnotsupportedexception-class.md)<br/>
+Exception résultant de l’utilisation d’une fonctionnalité non prise en charge.
 
-[COleException](../mfc/reference/coleexception-class.md)<br/>
-Une exception résultant d’une défaillance lors du traitement de OLE. Cette classe est utilisée par les conteneurs et les serveurs.
+[COleException](reference/coleexception-class.md)<br/>
+Exception résultant d’un échec dans le traitement OLE. Cette classe est utilisée par les conteneurs et les serveurs.
 
-[COleDispatchException](../mfc/reference/coledispatchexception-class.md)<br/>
-Une exception résultant d’une erreur lors de l’automatisation. Exceptions de Automation sont générées par les serveurs automation et interceptées par les clients automation.
+[COleDispatchException](reference/coledispatchexception-class.md)<br/>
+Exception résultant d’une erreur lors de l’automatisation. Les exceptions Automation sont levées par les serveurs Automation et interceptées par les clients Automation.
 
-[CResourceException](../mfc/reference/cresourceexception-class.md)<br/>
-Une exception résultant d’un échec de chargement d’une ressource de Windows.
+[CResourceException](reference/cresourceexception-class.md)<br/>
+Exception résultant de l’échec du chargement d’une ressource Windows.
 
-[CUserException](../mfc/reference/cuserexception-class.md)<br/>
-Une exception utilisée pour arrêter une opération initiée par l’utilisateur. En règle générale, l’utilisateur a été averti du problème avant que cette exception est levée.
+[CUserException](reference/cuserexception-class.md)<br/>
+Exception utilisée pour arrêter une opération lancée par l’utilisateur. En général, l’utilisateur a été averti du problème avant que cette exception ne soit levée.
 
 ## <a name="see-also"></a>Voir aussi
 
-[Vue d’ensemble de la classe](../mfc/class-library-overview.md)
+[Vue d'ensemble des classes](class-library-overview.md)

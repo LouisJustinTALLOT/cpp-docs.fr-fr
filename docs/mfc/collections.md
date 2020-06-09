@@ -17,12 +17,12 @@ helpviewer_keywords:
 - collection classes [MFC], lists
 - collection classes [MFC], shapes
 ms.assetid: 02586e4c-851d-41d0-a722-feb11c17c74c
-ms.openlocfilehash: 3fba3a3c6cd3fecbda7f46575b1d72c450c44019
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: f2cd03afbb09dff38298454658c3d3dc2dfa6a8a
+ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81361872"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84619348"
 ---
 # <a name="collections"></a>Collections
 
@@ -39,7 +39,7 @@ La bibliothèque MFC fournit des classes de collection pour gérer des groupes d
 
 Une classe de collection est caractérisée par sa "forme" et par les types de ses éléments. La forme fait référence à la façon dont les objets sont organisés et stockés par la collection. MFC fournit trois formes de base de collection : listes, tableaux et mappages (également appelés dictionnaires). Choisissez la forme de collection qui est la plus adaptée à votre problème de programmation particulier.
 
-Chacune des trois formes de collection est décrite brièvement plus loin dans cette rubrique. Pour comparer les caractéristiques des formes pour vous aider à décider ce qui est le mieux pour votre programme, consultez [recommandations pour choisir une classe de collection](../mfc/recommendations-for-choosing-a-collection-class.md).
+Chacune des trois formes de collection est décrite brièvement plus loin dans cette rubrique. Pour comparer les fonctionnalités des formes pour vous aider à déterminer celle qui convient le mieux à votre programme, consultez [recommandations relatives au choix d’une classe de collection](recommendations-for-choosing-a-collection-class.md).
 
 - List
 
@@ -53,9 +53,9 @@ Chacune des trois formes de collection est décrite brièvement plus loin dans c
 
    Un mappage est une collection qui associe un objet principal à un objet de valeur.
 
-## <a name="the-template-based-collection-classes"></a><a name="_core_the_template_based_collection_classes"></a>Les classes de collection basées sur le modèle
+## <a name="the-template-based-collection-classes"></a><a name="_core_the_template_based_collection_classes"></a>Classes de collection basées sur des modèles
 
-La façon la plus simple d’implémenter une collection de type sécurisé qui contient des objets de tout type est d’utiliser l’une des classes MFC basées sur un modèle. Pour des exemples de ces classes, voir l’échantillon MFC [COLLECT](../overview/visual-cpp-samples.md).
+La façon la plus simple d’implémenter une collection de type sécurisé qui contient des objets de tout type est d’utiliser l’une des classes MFC basées sur un modèle. Pour obtenir des exemples de ces classes, consultez l’exemple de [collecte](../overview/visual-cpp-samples.md)MFC.
 
 Le tableau suivant répertorie les classes de collection MFC basées sur des modèles :
 
@@ -66,7 +66,7 @@ Le tableau suivant répertorie les classes de collection MFC basées sur des mod
 |Collections d’objets de n’importe quel type|`CArray`|`CList`|`CMap`|
 |Collections de pointeurs vers des objets de n’importe quel type|`CTypedPtrArray`|`CTypedPtrList`|`CTypedPtrMap`|
 
-## <a name="the-collection-classes-not-based-on-templates"></a><a name="_core_the_collection_classes_not_based_on_templates"></a>Les classes de collection ne sont pas basées sur des modèles
+## <a name="the-collection-classes-not-based-on-templates"></a><a name="_core_the_collection_classes_not_based_on_templates"></a>Classes de collection non basées sur des modèles
 
 Si votre application utilise déjà les classes MFC de collection qui ne se basent pas sur des modèles, vous pouvez continuer à les utiliser. Toutefois, pour les nouvelles collections, nous vous recommandons d’utiliser les classes basées sur des modèles. Le tableau suivant répertorie les classes de collection MFC qui ne sont pas basées sur des modèles.
 
@@ -82,7 +82,7 @@ Si votre application utilise déjà les classes MFC de collection qui ne se base
 |`CWordArray`||`CMapWordToOb`|
 |`CUIntArray`||`CMapWordToPtr`|
 
-La table caractéristiques des classes de collection MFC dans [Recommandations pour le choix d’une classe de collection](../mfc/recommendations-for-choosing-a-collection-class.md) décrit les classes de collecte MFC en termes de ces caractéristiques (autres que la forme) :
+Les caractéristiques du tableau classes de collection MFC dans [recommandations pour le choix d’une classe](recommendations-for-choosing-a-collection-class.md) de collection décrivent les classes de collection MFC en ce qui concerne ces caractéristiques (autres que la forme) :
 
 - Si la classe utilise des modèles C++
 
@@ -96,25 +96,25 @@ La table caractéristiques des classes de collection MFC dans [Recommandations p
 
 #### <a name="general-collection-class-tasks"></a>Tâches de classe de collection générales
 
-- [Recommandations relatives au choix d’une classe de collection](../mfc/recommendations-for-choosing-a-collection-class.md)
+- [Recommandations relatives au choix d’une classe de collection](recommendations-for-choosing-a-collection-class.md)
 
-- [Guide pratique pour définir une collection de type sécurisé](../mfc/how-to-make-a-type-safe-collection.md)
+- [Guide pratique pour définir une collection de type sécurisé](how-to-make-a-type-safe-collection.md)
 
-- [Création de collections de piles et de files d’attente](../mfc/creating-stack-and-queue-collections.md)
+- [Création de collections de piles et de files d’attente](creating-stack-and-queue-collections.md)
 
-- [CArray::Ajouter](../mfc/reference/carray-class.md#add)
+- [CArray :: Add](reference/carray-class.md#add)
 
 #### <a name="template-based-collection-class-tasks"></a>Tâches de classe de collection basées sur un modèle
 
-- [Catégories basées sur des modèles](../mfc/template-based-classes.md)
+- [Classes basées sur des modèles](template-based-classes.md)
 
 #### <a name="accessing-the-members-of-a-collection-template-based-or-not"></a>Accès aux membres d'une collection (basée sur un modèle ou non)
 
-- [Accès à tous les membres d’une collection](../mfc/accessing-all-members-of-a-collection.md)
+- [Accès à tous les membres d’une collection](accessing-all-members-of-a-collection.md)
 
-- [Suppression de tous les objets d’une collection CObject](../mfc/deleting-all-objects-in-a-cobject-collection.md)
+- [Suppression de tous les objets d’une collection CObject](deleting-all-objects-in-a-cobject-collection.md)
 
 ## <a name="see-also"></a>Voir aussi
 
-[Concepts liés à la](../mfc/mfc-concepts.md)<br/>
-[Rubriques MFC générales](../mfc/general-mfc-topics.md)
+[Concepts](mfc-concepts.md)<br/>
+[Rubriques MFC générales](general-mfc-topics.md)

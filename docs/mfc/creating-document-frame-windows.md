@@ -10,31 +10,31 @@ helpviewer_keywords:
 - document frame windows [MFC], creating
 - MFC, frame windows
 ms.assetid: 8671e239-b76f-4dea-afa8-7024e6e58ff5
-ms.openlocfilehash: 66a951994a75cbd99debeb2c6511739411cdd470
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: e15a2a6bc016bf23bc0decf529b4c3ffeecc3a4c
+ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62174027"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84621948"
 ---
 # <a name="creating-document-frame-windows"></a>Création de fenêtres frame de document
 
-[Création de document/vue](../mfc/document-view-creation.md) montre comment la [CDocTemplate](../mfc/reference/cdoctemplate-class.md) objet orchestre la création de la fenêtre frame, le document et la vue et en les connectant ensemble. Trois [CRuntimeClass](../mfc/reference/cruntimeclass-structure.md) arguments à la `CDocTemplate` constructeur spécifier la fenêtre frame, document et les classes d’affichage du modèle de document crée dynamiquement en réponse aux commandes utilisateur telles que la nouvelle commande sur le fichier menu ou la commande nouvelle fenêtre dans un menu Fenêtre MDI. Le modèle de document stocke ces informations pour une utilisation ultérieure lorsqu’il crée une fenêtre frame pour une vue et le document.
+La création d’un [document/](document-view-creation.md) d’une vue montre comment l’objet [CDocTemplate](reference/cdoctemplate-class.md) orchestre la création de la fenêtre frame, du document et de la vue et de la connexion de tous les deux. Trois arguments [CRuntimeClass](reference/cruntimeclass-structure.md) du `CDocTemplate` constructeur spécifient la fenêtre frame, le document et les classes de vue que le modèle de document crée dynamiquement en réponse à des commandes utilisateur telles que la commande nouveau du menu fichier ou la commande nouvelle fenêtre dans un menu Fenêtre MDI. Le modèle de document stocke ces informations pour une utilisation ultérieure lorsqu’il crée une fenêtre frame pour un affichage et un document.
 
-Pour le [RUNTIME_CLASS](../mfc/reference/run-time-object-model-services.md#runtime_class) mécanisme fonctionne correctement, votre dérivée des classes de fenêtre frame doivent être déclarés avec le [DECLARE_DYNCREATE](../mfc/reference/run-time-object-model-services.md#declare_dyncreate) macro. Il s’agit, car l’infrastructure a besoin créer des fenêtres frame à l’aide du mécanisme de construction dynamique de classe de document `CObject`.
+Pour que le mécanisme de [RUNTIME_CLASS](reference/run-time-object-model-services.md#runtime_class) fonctionne correctement, vos classes de fenêtres Frame dérivées doivent être déclarées avec la macro [DECLARE_DYNCREATE](reference/run-time-object-model-services.md#declare_dyncreate) . Cela est dû au fait que le Framework doit créer des fenêtres frame de document à l’aide du mécanisme de construction dynamique de la classe `CObject` .
 
-Lorsque l’utilisateur choisit une commande qui crée un document, le framework appelle le modèle de document pour créer l’objet de document, sa vue et la fenêtre frame qui affiche la vue. Lorsqu’il crée la fenêtre frame de document, le modèle de document crée un objet de la classe appropriée, une classe dérivée de [CFrameWnd](../mfc/reference/cframewnd-class.md) pour une application SDI ou à partir de [CMDIChildWnd](../mfc/reference/cmdichildwnd-class.md) pour un formulaire MDI application. Le framework appelle ensuite l’objet fenêtre frame [LoadFrame](../mfc/reference/cframewnd-class.md#loadframe) fonction membre pour obtenir des informations sur la création des ressources et créer la fenêtre Windows. L’infrastructure attache le handle de fenêtre à l’objet de fenêtre frame. Il crée ensuite la vue en tant que fenêtre enfant de la fenêtre frame de document.
+Quand l’utilisateur choisit une commande qui crée un document, le Framework appelle sur le modèle de document pour créer l’objet de document, sa vue et la fenêtre frame qui affichera la vue. Lorsqu’il crée la fenêtre frame de document, le modèle de document crée un objet de la classe appropriée (une classe dérivée de [CFrameWnd](reference/cframewnd-class.md) pour une application SDI ou de [CMDIChildWnd](reference/cmdichildwnd-class.md) pour une application MDI). Le Framework appelle ensuite la fonction membre [LoadFrame](reference/cframewnd-class.md#loadframe) de l’objet fenêtre frame pour recevoir des informations de création à partir des ressources et pour créer la fenêtre Windows. L’infrastructure attache le handle de fenêtre à l’objet de fenêtre frame. Ensuite, il crée la vue en tant que fenêtre enfant de la fenêtre frame de document.
 
-Soyez prudent dans la décision [quand initialiser](../mfc/when-to-initialize-cwnd-objects.md) votre `CWnd`-objet dérivé.
+Soyez vigilant lorsque vous décidez [quand initialiser](when-to-initialize-cwnd-objects.md) votre `CWnd` objet dérivé de.
 
-## <a name="what-do-you-want-to-know-more-about"></a>Ce que vous souhaitez en savoir plus sur
+## <a name="what-do-you-want-to-know-more-about"></a>Que voulez-vous en savoir plus sur
 
-- [Dérivation d’une classe de CObject (son mécanisme de création dynamique)](../mfc/deriving-a-class-from-cobject.md)
+- [Dérivation d’une classe de CObject (son mécanisme de création dynamique)](deriving-a-class-from-cobject.md)
 
-- [Création de document/vue (modèles et création de la fenêtre frame)](../mfc/document-view-creation.md)
+- [Création de document/vue (création de modèles et de fenêtres frames)](document-view-creation.md)
 
-- [Destruction des fenêtres frame](../mfc/destroying-frame-windows.md)
+- [Destruction des fenêtres d’image](destroying-frame-windows.md)
 
 ## <a name="see-also"></a>Voir aussi
 
-[Utilisation de fenêtres frame](../mfc/using-frame-windows.md)
+[Utilisation des fenêtres Frame](using-frame-windows.md)

@@ -7,16 +7,16 @@ helpviewer_keywords:
 - MFC dialog boxes [MFC], modal
 - modal dialog boxes [MFC]
 ms.assetid: e83df336-5994-4b8f-8233-7942f997315b
-ms.openlocfilehash: 886229a2b66968bf76129ecb1da838bd36e66215
-ms.sourcegitcommit: 1e6386be9084f70def7b3b8b4bab319a117102b2
+ms.openlocfilehash: 857bb3ea9e66ca0be155413faea23c0aba2abc9e
+ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/30/2019
-ms.locfileid: "71685181"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84622207"
 ---
 # <a name="modal-and-modeless-dialog-boxes"></a>Boîtes de dialogue modales et non modales
 
-Vous pouvez utiliser la classe [CDialog](../mfc/reference/cdialog-class.md) pour gérer deux types de boîtes de dialogue :
+Vous pouvez utiliser la classe [CDialog](reference/cdialog-class.md) pour gérer deux types de boîtes de dialogue :
 
 - *Boîtes de dialogue modales*, qui requièrent que l’utilisateur réponde avant de poursuivre le programme
 
@@ -32,9 +32,9 @@ La création d’une boîte de dialogue pour votre programme requiert les étape
 
 1. Connectez les [contrôles de la ressource de boîte de dialogue aux gestionnaires de messages](../windows/adding-event-handlers-for-dialog-box-controls.md) dans la classe dialog.
 
-1. Ajoutez des membres de données associés aux contrôles de la boîte de dialogue et spécifiez les [validations](../mfc/dialog-data-validation.md) d' [échange de données](../mfc/dialog-data-exchange.md) de boîtes de dialogue et de boîtes de dialogue pour les contrôles.
+1. Ajoutez des membres de données associés aux contrôles de la boîte de dialogue et spécifiez les [validations](dialog-data-validation.md) d' [échange de données](dialog-data-exchange.md) de boîtes de dialogue et de boîtes de dialogue pour les contrôles.
 
 ## <a name="see-also"></a>Voir aussi
 
-[Boîtes de dialogue](../mfc/dialog-boxes.md)<br/>
-[Utilisation des boîtes de dialogue dans MFC](../mfc/life-cycle-of-a-dialog-box.md)
+[Boîtes de dialogue](dialog-boxes.md)<br/>
+[Utilisation des boîtes de dialogue dans MFC](life-cycle-of-a-dialog-box.md)

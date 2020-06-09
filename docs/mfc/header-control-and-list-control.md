@@ -9,33 +9,33 @@ helpviewer_keywords:
 - header controls [MFC]
 - header controls [MFC], list controls used with
 ms.assetid: b20194b1-1a6b-4e2f-b890-1b3cca6650bc
-ms.openlocfilehash: 53dd6f1a7878d82a7f7ac48dd7082d791323941b
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: f9dd34b27ddbdc0b99fafbb23ad1cf9782d98605
+ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81370474"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84626418"
 ---
 # <a name="header-control-and-list-control"></a>Contrôle Header et contrôle List
 
-Dans la plupart des cas, vous utiliserez le contrôle d’en-tête qui est intégré dans un objet [CListCtrl](../mfc/reference/clistctrl-class.md) ou [CListView.](../mfc/reference/clistview-class.md) Cependant, il y a des cas où un objet de contrôle d’en-tête séparé est souhaitable, tel que manipuler des données, disposées en colonnes ou en rangées, dans un objet dérivé de [CView.](../mfc/reference/cview-class.md) Dans ces cas, vous avez besoin d’un plus grand contrôle sur l’apparence et le comportement par défaut d’un contrôle d’en-tête intégré.
+Dans la plupart des cas, vous utiliserez le contrôle header qui est incorporé dans un objet [CListCtrl](reference/clistctrl-class.md) ou [CListView](reference/clistview-class.md) . Toutefois, il existe des cas où un objet de contrôle d’en-tête distinct est souhaitable, tel que la manipulation de données, organisées en colonnes ou en lignes, dans un objet dérivé de [CView](reference/cview-class.md). Dans ce cas, vous avez besoin d’un contrôle accru sur l’apparence et le comportement par défaut d’un contrôle d’en-tête incorporé.
 
-Dans le cas courant que vous voulez un contrôle d’en-tête pour fournir la norme, comportement par défaut, vous pouvez utiliser [CListCtrl](../mfc/reference/clistctrl-class.md) ou [CListView](../mfc/reference/clistview-class.md) à la place. Utilisez `CListCtrl` lorsque vous voulez la fonctionnalité d’un contrôle d’en-tête par défaut, intégré dans une liste afficher le contrôle commun. Utilisez [CListView](../mfc/reference/clistview-class.md) lorsque vous souhaitez la fonctionnalité d’un contrôle d’en-tête par défaut, intégré dans un objet de vue.
+Dans le cas courant où vous souhaitez qu’un contrôle header fournisse un comportement par défaut standard, vous souhaiterez peut-être utiliser [CListCtrl](reference/clistctrl-class.md) ou [CListView](reference/clistview-class.md) à la place. Utilisez `CListCtrl` lorsque vous souhaitez les fonctionnalités d’un contrôle d’en-tête par défaut, incorporé dans un contrôle commun d’affichage de liste. Utilisez [CListView](reference/clistview-class.md) lorsque vous souhaitez les fonctionnalités d’un contrôle header par défaut, incorporé dans un objet View.
 
 > [!NOTE]
-> Ces contrôles n’incluent qu’un contrôle d’en-tête intégré si le contrôle de vue de liste est créé en utilisant le style **LVS_REPORT.**
+> Ces contrôles incluent uniquement un contrôle d’en-tête intégré si le contrôle d’affichage de liste est créé à l’aide du style de **LVS_REPORT** .
 
-Dans la plupart des cas, l’apparence du contrôle d’en-tête intégré peut être modifiée en modifiant les styles du contrôle de vue de liste contenant. En outre, les informations sur le contrôle de l’en-tête peuvent être obtenues grâce aux fonctions des membres du contrôle de vue de la liste mère. Toutefois, pour un contrôle complet et un accès, aux attributs et aux styles du contrôle de l’en-tête intégré, il est recommandé d’obtenir un pointeur à l’objet de contrôle de l’en-tête.
+Dans la plupart des cas, l’apparence du contrôle d’en-tête incorporé peut être modifiée en modifiant les styles du contrôle d’affichage de liste conteneur. En outre, les informations sur le contrôle header peuvent être obtenues via les fonctions membres du contrôle List View parent. Toutefois, pour un contrôle complet et un accès aux attributs et styles du contrôle d’en-tête incorporé, il est recommandé d’obtenir un pointeur vers l’objet de contrôle header.
 
-L’objet de contrôle d’en-tête intégré peut être accessible à partir de l’un ou l’autre `CListCtrl` ou `CListView` avec un appel à la fonction de membre de `GetHeaderCtrl` la classe respective. Le code suivant illustre cela :
+L’objet de contrôle d’en-tête incorporé est accessible à partir de `CListCtrl` ou `CListView` avec un appel à la fonction membre de la classe respective `GetHeaderCtrl` . Le code suivant illustre cela :
 
-[!code-cpp[NVC_MFCControlLadenDialog#14](../mfc/codesnippet/cpp/header-control-and-list-control_1.cpp)]
+[!code-cpp[NVC_MFCControlLadenDialog#14](codesnippet/cpp/header-control-and-list-control_1.cpp)]
 
-## <a name="what-do-you-want-to-know-more-about"></a>Qu’est-ce que vous voulez savoir plus sur
+## <a name="what-do-you-want-to-know-more-about"></a>Que voulez-vous en savoir plus sur
 
-- [Utilisation de listes d’images avec des commandes d’en-tête](../mfc/using-image-lists-with-header-controls.md)
+- [Utilisation de listes d’images avec des contrôles Header](using-image-lists-with-header-controls.md)
 
 ## <a name="see-also"></a>Voir aussi
 
-[Utilisation de CHeaderCtrl](../mfc/using-cheaderctrl.md)<br/>
-[Contrôles](../mfc/controls-mfc.md)
+[Utilisation de CHeaderCtrl](using-cheaderctrl.md)<br/>
+[Commandes](controls-mfc.md)

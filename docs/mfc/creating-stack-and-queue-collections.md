@@ -11,16 +11,16 @@ helpviewer_keywords:
 - stack collections
 - collections, queue
 ms.assetid: 3c7bc198-35f0-4fc3-aaed-6005a0f22638
-ms.openlocfilehash: 5b3427f7bb2e46435ddf2768bcbb816f9d7e5c1a
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 5db90422f78fc6ca3bc2a182f9569c33db56cad1
+ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81371604"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84623208"
 ---
 # <a name="creating-stack-and-queue-collections"></a>Création de collections de piles et de files d’attente
 
-Cet article explique comment créer d’autres structures de données, telles que [les piles](#_core_stacks) et [les files d’attente](#_core_queues), à partir des classes de liste MFC. Les exemples utilisent des classes dérivées de `CList`, mais vous pouvez utiliser `CList` directement à moins que vous deviez ajouter des fonctionnalités.
+Cet article explique comment créer d’autres structures de données, telles que des [piles](#_core_stacks) et des [files d’attente](#_core_queues), à partir de classes de liste MFC. Les exemples utilisent des classes dérivées de `CList`, mais vous pouvez utiliser `CList` directement à moins que vous deviez ajouter des fonctionnalités.
 
 ## <a name="stacks"></a><a name="_core_stacks"></a>Piles
 
@@ -32,7 +32,7 @@ Cet article explique comment créer d’autres structures de données, telles qu
 
    L'exemple suivant montre comment ajouter des fonctions membres pour empiler des éléments, jetez un coup d'œil à l'élément supérieur de la pile et désempilez-le :
 
-   [!code-cpp[NVC_MFCCollections#20](../mfc/codesnippet/cpp/creating-stack-and-queue-collections_1.h)]
+   [!code-cpp[NVC_MFCCollections#20](codesnippet/cpp/creating-stack-and-queue-collections_1.h)]
 
 Notez que cette approche présente la classe `CObList` sous-jacente. L'utilisateur peut appeler n'importe quelle fonction membre `CObList`, qu'elle soit logique pour une pile ou non.
 
@@ -46,8 +46,8 @@ Notez que cette approche présente la classe `CObList` sous-jacente. L'utilisate
 
    L'exemple suivant montre comment ajouter des fonctions membres pour insérer un élément à la fin de la file et obtenir l'élément situé au début de la file.
 
-   [!code-cpp[NVC_MFCCollections#21](../mfc/codesnippet/cpp/creating-stack-and-queue-collections_2.h)]
+   [!code-cpp[NVC_MFCCollections#21](codesnippet/cpp/creating-stack-and-queue-collections_2.h)]
 
 ## <a name="see-also"></a>Voir aussi
 
-[Collections](../mfc/collections.md)
+[Regroupements](collections.md)

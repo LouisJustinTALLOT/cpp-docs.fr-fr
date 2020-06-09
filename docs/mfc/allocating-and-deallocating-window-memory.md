@@ -9,25 +9,25 @@ helpviewer_keywords:
 - window objects [MFC], deallocating memory for
 - storage for window objects [MFC], allocating
 ms.assetid: 7c962539-8461-4846-b5ca-fe3b15c313dc
-ms.openlocfilehash: 60f99c01c7a311c31602269b49efaf434d16827a
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 02546559183d0e14973bc2e5ccb26a4570a39b1e
+ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62394700"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84623267"
 ---
 # <a name="allocating-and-deallocating-window-memory"></a>Allocation et libération de la mémoire Windows
 
-N’utilisez pas le C++ **supprimer** opérateur pour détruire une fenêtre frame ou une vue. Au lieu de cela, appelez le `CWnd` fonction membre `DestroyWindow`. Fenêtres frame, par conséquent, doivent être alloués sur le tas avec l’opérateur **nouveau**. Soyez prudent lors de l’allocation de fenêtres frame sur le frame de pile ou dans le monde entier. Autres fenêtres doivent être alloués sur le frame de pile chaque fois que possible.
+N’utilisez pas l’opérateur C++ **Delete** pour détruire une fenêtre frame ou une vue. Au lieu de cela, appelez la `CWnd` fonction membre `DestroyWindow` . Les fenêtres Frame, par conséquent, doivent être allouées sur le tas avec l’opérateur **New**. Soyez prudent lorsque vous allouez des fenêtres Frame sur le frame de pile ou globalement. Dans la mesure du possible, d’autres fenêtres doivent être allouées sur le frame de pile.
 
-## <a name="what-do-you-want-to-know-more-about"></a>Ce que vous souhaitez en savoir plus sur
+## <a name="what-do-you-want-to-know-more-about"></a>Que voulez-vous en savoir plus sur
 
-- [Création de fenêtres](../mfc/creating-windows.md)
+- [Création de fenêtres](creating-windows.md)
 
-- [Séquence de destruction de fenêtres](../mfc/window-destruction-sequence.md)
+- [Séquence de destruction de fenêtres](window-destruction-sequence.md)
 
-- [Détachement d’un objet CWnd de son HWND](../mfc/detaching-a-cwnd-from-its-hwnd.md)
+- [Détachement d’un CWnd de son HWND](detaching-a-cwnd-from-its-hwnd.md)
 
 ## <a name="see-also"></a>Voir aussi
 
-[Destruction d’objets fenêtres](../mfc/destroying-window-objects.md)
+[Destruction d'objets fenêtres](destroying-window-objects.md)

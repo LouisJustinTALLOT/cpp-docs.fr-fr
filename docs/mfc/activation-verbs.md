@@ -1,5 +1,5 @@
 ---
-title: 'Activation : Verbes'
+title: 'Activation : verbes'
 ms.date: 11/04/2016
 helpviewer_keywords:
 - verbs [MFC]
@@ -10,31 +10,31 @@ helpviewer_keywords:
 - Primary verb [MFC]
 - OLE activation {MFC]
 ms.assetid: eb56ff23-1de8-43ad-abeb-dc7346ba7b70
-ms.openlocfilehash: baf8e0ac3527407b2e5ba77dfdf3921419217fd7
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 03edba0a4336fdc147ef6dd10c7a8154aca19d3a
+ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62392906"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84616641"
 ---
-# <a name="activation-verbs"></a>Activation : Verbes
+# <a name="activation-verbs"></a>Activation : verbes
 
-Cet article explique le jeu de verbes principal et secondaire de rôle dans OLE [activation](../mfc/activation-cpp.md).
+Cet article explique les verbes principal et secondaire du rôle joués dans l' [activation](activation-cpp.md)OLE.
 
-En règle générale, double-cliquez sur un élément incorporé permet à l’utilisateur pour le modifier. Toutefois, certains éléments ne comportent pas de cette façon. Par exemple, double-cliquez sur un élément créé avec l’application Magnétophone n’ouvre pas le serveur dans une fenêtre distincte ; au lieu de cela, il lit le son.
+En règle générale, le fait de double-cliquer sur un élément incorporé permet à l’utilisateur de le modifier. Toutefois, certains éléments ne se comportent pas de cette façon. Par exemple, le fait de double-cliquer sur un élément créé avec l’application magnétophone n’ouvre pas le serveur dans une fenêtre distincte ; au lieu de cela, il lit le son.
 
-La raison de cette différence de comportement est que les éléments de Magnétophone possèdent un autre « primary (verbe). » Le verbe principal est l’action effectuée lorsque l’utilisateur double-clique sur un élément OLE. Pour la plupart des types d’éléments OLE, le verbe principal est Edit, ce qui lance le serveur qui a créé l’élément. Pour certains types d’éléments, tels que des éléments Magnétophone, le verbe principal est Play.
+Cette différence de comportement est due au fait que les éléments de l’enregistreur de sons ont un « verbe principal » différent. Le verbe principal est l’action effectuée lorsque l’utilisateur double-clique sur un élément OLE. Pour la plupart des types d’éléments OLE, le verbe principal est Edit, ce qui lance le serveur qui a créé l’élément. Pour certains types d’éléments, tels que les éléments d’enregistreur de sons, le verbe principal est Play.
 
-Prend en charge de nombreux types d’éléments OLE qu’un seul verbe et Edit est la plus courante. Toutefois, certains types d’éléments prennent en charge plusieurs verbes. Par exemple, le Magnétophone éléments prennent en charge Modifier sous forme verbale secondaire.
+De nombreux types d’éléments OLE ne prennent en charge qu’un seul verbe, et la modification est la plus courante. Toutefois, certains types d’éléments prennent en charge plusieurs verbes. Par exemple, les éléments d’enregistreur de sons prennent en charge la modification en tant que verbe secondaire.
 
-Un autre verbe fréquemment utilisé est ouverte. Le verbe Open est identique à modifier, sauf l’application serveur est lancée dans une fenêtre distincte. Ce verbe doit être utilisé lors de l’application conteneur ou l’application serveur ne prend pas en charge l’activation sur place.
+Un autre verbe utilisé fréquemment est ouvert. Le verbe Open est identique à Edit, sauf que l’application serveur est lancée dans une fenêtre distincte. Ce verbe doit être utilisé lorsque l’application conteneur ou l’application serveur ne prend pas en charge l’activation sur place.
 
-Tous les verbes autres que le verbe principal doivent être appelés via une commande de sous-menu lorsque l’élément est sélectionné. Ce sous-menu contient tous les verbes pris en charge par l’élément et est généralement atteint par le *typename* **objet** commande sur le **modifier** menu. Pour plus d’informations sur la *typename* **objet** de commande, consultez l’article [Menus et ressources : Ajouts de conteneurs](../mfc/menus-and-resources-container-additions.md).
+Les verbes autres que le verbe principal doivent être appelés à l’aide d’une commande de sous-menu lorsque l’élément est sélectionné. Ce sous-menu contient tous les verbes pris en charge par l’élément et est généralement atteint par la commande d' **objet** *TypeName* du menu **Edition** . Pour plus d’informations sur la commande d' **objet** *TypeName* , consultez l’article [menus et ressources : ajouts de conteneurs](menus-and-resources-container-additions.md).
 
-Les verbes de qu'une application serveur prend en charge sont répertoriées dans la base de données d’inscription Windows. Si votre application serveur est écrite avec la bibliothèque Microsoft Foundation Class, elle inscrit automatiquement tous les verbes lorsque le serveur est démarré. Si ce n’est pas le cas, vous devez les inscrire pendant la phase d’initialisation de l’application serveur. Pour plus d’informations, consultez l’article [inscription](../mfc/registration.md).
+Les verbes pris en charge par une application serveur sont répertoriés dans la base de données d’inscription Windows. Si votre application serveur est écrite avec le bibliothèque MFC (Microsoft Foundation Class), elle inscrira automatiquement tous les verbes lorsque le serveur sera démarré. Si ce n’est pas le cas, vous devez les inscrire pendant la phase d’initialisation de l’application serveur. Pour plus d’informations, consultez l’article [inscription](registration.md).
 
 ## <a name="see-also"></a>Voir aussi
 
-[Activation](../mfc/activation-cpp.md)<br/>
-[Conteneurs](../mfc/containers.md)<br/>
-[Serveurs](../mfc/servers.md)
+[Activation](activation-cpp.md)<br/>
+[Containers](containers.md)<br/>
+[Serveurs](servers.md)
