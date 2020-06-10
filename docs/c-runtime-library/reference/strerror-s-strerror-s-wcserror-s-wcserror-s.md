@@ -1,6 +1,6 @@
 ---
 title: strerror_s, _strerror_s, _wcserror_s, __wcserror_s
-ms.date: 4/2/2020
+ms.date: 06/09/2020
 api_name:
 - __wcserror_s
 - _strerror_s
@@ -46,12 +46,12 @@ helpviewer_keywords:
 - wcserror_s function
 - error messages, getting
 ms.assetid: 9e5b15a0-efe1-4586-b7e3-e1d7c31a03d6
-ms.openlocfilehash: b7361f626708672af5539dd3b3b9c0cf83fcd2d2
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: 91be8803a0695670e7afe673b25b54fccde40a9c
+ms.sourcegitcommit: 8167c67d76de58a7c2df3b4dcbf3d53e3b151b77
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82918394"
+ms.lasthandoff: 06/10/2020
+ms.locfileid: "84664324"
 ---
 # <a name="strerror_s-_strerror_s-_wcserror_s-__wcserror_s"></a>strerror_s, _strerror_s, _wcserror_s, __wcserror_s
 
@@ -62,22 +62,22 @@ Obtenir un message d’erreur système (**strerror_s**, **_wcserror_s**) ou impr
 ```C
 errno_t strerror_s(
    char *buffer,
-   size_t numberOfElements,
+   size_t sizeInBytes,
    int errnum
 );
 errno_t _strerror_s(
    char *buffer,
-   size_t numberOfElements,
+   size_t sizeInBytes,
    const char *strErrMsg
 );
 errno_t _wcserror_s(
    wchar_t *buffer,
-   size_t numberOfElements,
+   size_t sizeInWords,
    int errnum
 );
 errno_t __wcserror_s(
    wchar_t *buffer,
-   size_t numberOfElements,
+   size_t sizeInWords,
    const wchar_t *strErrMsg
 );
 template <size_t size>
@@ -107,8 +107,11 @@ errno_t __wcserror_s(
 *buffer*<br/>
 Mémoire tampon devant contenir la chaîne d’erreur.
 
-*numberOfElements*<br/>
-Taille de la mémoire tampon.
+*sizeInBytes*<br/>
+Nombre d'octets dans la mémoire tampon.
+
+*sizeInWords*<br/>
+Nombre de mots dans la mémoire tampon.
 
 *ErrNum*<br/>
 Numéro d’erreur.
@@ -116,18 +119,18 @@ Numéro d’erreur.
 *strErrMsg*<br/>
 Message fourni par l'utilisateur.
 
-## <a name="return-value"></a>Valeur de retour
+## <a name="return-value"></a>Valeur renvoyée
 
 Zéro si l'opération a réussi, un code d'erreur en cas d'échec.
 
 ### <a name="error-condtions"></a>Conditions d’erreur
 
-|*buffer*|*numberOfElements*|*strErrMsg*|Contenu de la *mémoire tampon*|
+|*buffer*|*sizeInBytes/sizeInWords*|*strErrMsg*|Contenu de la *mémoire tampon*|
 |--------------|------------------------|-----------------|--------------------------|
-|**NUL**|n'importe laquelle|n'importe laquelle|n/a|
+|**NULL**|n'importe laquelle|n'importe laquelle|n/a|
 |n'importe laquelle|0|n'importe laquelle|non modifié|
 
-## <a name="remarks"></a>Notes 
+## <a name="remarks"></a>Notes
 
 La fonction **strerror_s** mappe *ErrNum* à une chaîne de message d’erreur, en retournant la chaîne dans la *mémoire tampon*. **_strerror_s** ne prend pas le numéro d’erreur ; elle utilise la valeur actuelle de **errno** pour déterminer le message approprié. Ni **strerror_s** ni **_strerror_s** n’imprime réellement le message : pour cela, vous devez appeler une fonction de sortie telle que [fprintf](fprintf-fprintf-l-fwprintf-fwprintf-l.md):
 
@@ -141,7 +144,7 @@ if (( _access( "datafile",2 )) == -1 )
 
 Si *strErrMsg* a la **valeur null**, **_strerror_s** retourne une chaîne dans *buffer* contenant le message d’erreur système pour le dernier appel de bibliothèque qui a généré une erreur. La chaîne de message d'erreur se termine par le caractère de saut de ligne ('\n'). Si *strErrMsg* n’est pas égal à **null**, **_strerror_s** retourne une chaîne dans la *mémoire tampon* contenant (dans l’ordre) votre message de chaîne, un signe deux-points, un espace, le message d’erreur système pour le dernier appel de bibliothèque générant une erreur et un caractère de saut de ligne. La longueur maximale de votre message de type chaîne est de 94 caractères.
 
-Ces fonctions tronquent le message d’erreur si sa longueur dépasse *NumberOfElements* -1. La chaîne résultante dans la *mémoire tampon* se termine toujours par un caractère null.
+Ces fonctions tronquent le message d’erreur si sa longueur dépasse la taille de la mémoire tampon-1. La chaîne résultante dans la *mémoire tampon* sera toujours terminée par un caractère null.
 
 Le numéro d’erreur réel pour **_strerror_s** est stocké dans la variable [errno](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md). Les messages d’erreur système sont accessibles via la variable [_sys_errlist](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md), qui est un tableau de messages classés par numéro d’erreur. **_strerror_s** accède au message d’erreur approprié en utilisant la valeur **errno** comme index de la variable **_sys_errlist**. La valeur de la variable [_sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md) est définie comme le nombre maximal d’éléments dans le tableau **_sys_errlist** . Pour obtenir des résultats précis, appelez **_strerror_s** immédiatement après le retour d’une routine de bibliothèque avec une erreur. Sinon, les appels suivants à **strerror_s** ou **_strerror_s** peuvent remplacer la valeur **errno** .
 
@@ -163,7 +166,7 @@ Par défaut, l’état global de cette fonction est limité à l’application. 
 |---------------------|------------------------------------|--------------------|-----------------------|
 |**_tcserror_s**|**strerror_s**|**strerror_s**|**_wcserror_s**|
 
-## <a name="requirements"></a>Spécifications
+## <a name="requirements"></a>Configuration requise
 
 |Routine|En-tête requis|
 |-------------|---------------------|
@@ -172,7 +175,7 @@ Par défaut, l’état global de cette fonction est limité à l’application. 
 
 Pour plus d'informations sur la compatibilité, voir [Compatibilité](../../c-runtime-library/compatibility.md).
 
-## <a name="example"></a> Exemple
+## <a name="example"></a>Exemple
 
 Consultez l’exemple relatif à [perror](perror-wperror.md).
 
