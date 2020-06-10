@@ -8,12 +8,12 @@ helpviewer_keywords:
 - dialog classes [MFC], Add Class Wizard
 - dialog classes [MFC], creating
 ms.assetid: d5321741-da41-47a8-bb1c-6a0e8b28c4c1
-ms.openlocfilehash: b8275754d46e9d76933624af55335e956736319a
-ms.sourcegitcommit: 1e6386be9084f70def7b3b8b4bab319a117102b2
+ms.openlocfilehash: fab75268e39d75b67db435ebb8d0af6c0b8371fd
+ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/30/2019
-ms.locfileid: "71685655"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84620512"
 ---
 # <a name="creating-your-dialog-class"></a>Création de votre classe de boîte de dialogue
 
@@ -23,7 +23,7 @@ L' [Ajout d’une classe](../ide/adding-a-class-visual-cpp.md) explique comment 
 
 Dans le fichier. h :
 
-- Déclaration de classe pour la classe dialog. La classe est dérivée de [CDialog](../mfc/reference/cdialog-class.md).
+- Déclaration de classe pour la classe dialog. La classe est dérivée de [CDialog](reference/cdialog-class.md).
 
 Dans le fichier. cpp :
 
@@ -31,9 +31,9 @@ Dans le fichier. cpp :
 
 - Constructeur standard pour la boîte de dialogue.
 
-- Substitution de la fonction membre [DoDataExchange](../mfc/reference/cwnd-class.md#dodataexchange) . Modifiez cette fonction. Il est utilisé pour l’échange de données de boîtes de dialogue et les fonctionnalités de validation, comme décrit plus loin dans [échange et validation de données de boîtes de dialogue](../mfc/dialog-data-exchange-and-validation.md).
+- Substitution de la fonction membre [DoDataExchange](reference/cwnd-class.md#dodataexchange) . Modifiez cette fonction. Il est utilisé pour l’échange de données de boîtes de dialogue et les fonctionnalités de validation, comme décrit plus loin dans [échange et validation de données de boîtes de dialogue](dialog-data-exchange-and-validation.md).
 
 ## <a name="see-also"></a>Voir aussi
 
-[Création d’une classe de boîte de dialogue à l’aide des Assistants Code](../mfc/creating-a-dialog-class-with-code-wizards.md)<br/>
-[Utilisation des boîtes de dialogue dans MFC](../mfc/life-cycle-of-a-dialog-box.md)
+[Création d’une classe de boîte de dialogue à l’aide des assistants code](creating-a-dialog-class-with-code-wizards.md)<br/>
+[Utilisation des boîtes de dialogue dans MFC](life-cycle-of-a-dialog-box.md)

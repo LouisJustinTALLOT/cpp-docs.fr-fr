@@ -5,12 +5,12 @@ helpviewer_keywords:
 - allocators
 - C++ Standard Library, allocators
 ms.assetid: ac95023b-9e7d-49f5-861a-bf7a9a340746
-ms.openlocfilehash: cb1b0e0d1466d4af5ba255bdf3d00b11cd921fd6
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: abef6f4e641b7936157ee063443a5b2a220fdd52
+ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68457543"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84623516"
 ---
 # <a name="allocators"></a>Allocateurs
 
@@ -24,7 +24,7 @@ template <
 class vector
 ```
 
-La bibliothèque C++ Standard fournit une implémentation par défaut pour un allocateur. Dans C++11 et version supérieure, l’allocateur par défaut est mis à jour pour exposer une interface plus petite. Le nouvel allocateur est appelé *allocateur minimal*. En particulier, le membre `construct()` de l'allocateur minimal prend en charge la sémantique de déplacement, ce qui peut améliorer considérablement les performances. Dans la plupart des cas, cet allocateur par défaut suffit. Dans C++11, tous les types et les fonctions de la bibliothèque STL qui acceptent un paramètre de type allocateur prennent en charge l'interface d'allocateur minimal, y compris `std::function`, `shared_ptr, allocate_shared()` et `basic_string`.  Pour plus d’informations sur l’allocateur par défaut, consultez [allocator, classe](../standard-library/allocator-class.md).
+La bibliothèque C++ Standard fournit une implémentation par défaut pour un allocateur. Dans C++11 et version supérieure, l’allocateur par défaut est mis à jour pour exposer une interface plus petite. Le nouvel allocateur est appelé *allocateur minimal*. En particulier, le membre `construct()` de l'allocateur minimal prend en charge la sémantique de déplacement, ce qui peut améliorer considérablement les performances. Dans la plupart des cas, cet allocateur par défaut suffit. Dans C++11, tous les types et les fonctions de la bibliothèque STL qui acceptent un paramètre de type allocateur prennent en charge l'interface d'allocateur minimal, y compris `std::function`, `shared_ptr, allocate_shared()` et `basic_string`.  Pour plus d’informations sur l’allocateur par défaut, consultez [allocator, classe](allocator-class.md).
 
 ## <a name="writing-your-own-allocator-c11"></a>Écriture de votre propre allocateur (C++11)
 
@@ -34,9 +34,9 @@ Un allocateur minimal nécessite beaucoup moins de code réutilisable et vous pe
 
 1. un constructeur de copie de conversion (voir l'exemple)
 
-1. operator==
+1. opérateur ==
 
-1. operator!=
+1. !=, opérateur
 
 1. allocate
 
@@ -119,8 +119,8 @@ Par ailleurs, tout allocateur utilisé avec des conteneurs de bibliothèque C++ 
 |`allocate`|`operator!=`|
 |`construct`||
 
-Pour plus d’informations sur ces méthodes et définitions de types, consultez [allocator, classe](../standard-library/allocator-class.md).
+Pour plus d’informations sur ces méthodes et définitions de types, consultez [allocator, classe](allocator-class.md).
 
 ## <a name="see-also"></a>Voir aussi
 
-[Informations de référence sur la bibliothèque standard C++](../standard-library/cpp-standard-library-reference.md)
+[Informations de référence sur la bibliothèque C++ standard](cpp-standard-library-reference.md)

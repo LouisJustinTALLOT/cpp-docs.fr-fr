@@ -7,16 +7,16 @@ helpviewer_keywords:
 - add_cv class
 - add_cv
 ms.assetid: a5572c78-a097-45d7-b476-ed4876889dea
-ms.openlocfilehash: 0cc63558ea392976bd6a3c5a43735c592e4606b4
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: 412dc8426112e65d00b572a65f064667d2709a0d
+ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68456591"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84620780"
 ---
-# <a name="addcv-class"></a>add_cv, classe
+# <a name="add_cv-class"></a>add_cv, classe
 
-Crée  un type volatile const à partir d’un type.
+Crée un type **volatile const** à partir d’un type.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -35,9 +35,9 @@ Type à modifier.
 
 ## <a name="remarks"></a>Notes
 
-Une instance du type `add_cv<T>` modifié a un  `type` typedef de membre équivalent à *T* modifié par [add_volatile](../standard-library/add-volatile-class.md) et [add_const](../standard-library/add-const-class.md), sauf si *T* a déjà les qualificateurs CV, est une référence ou est un fonctionnalités.
+Une instance du type modifié `add_cv<T>` a un `type` **typedef** de membre équivalent à *T* modifié par [add_volatile](add-volatile-class.md) et [add_const](add-const-class.md), sauf si *T* a déjà les qualificateurs CV, est une référence ou est une fonction.
 
-Le type d’assistance `add_cv_t<T>` est un raccourci pour accéder au typedef de membre de `add_cv<T>` `type`.
+Le type d’assistance `add_cv_t<T>` est un raccourci pour accéder au typedef de membre de `add_cv<T>``type`.
 
 ## <a name="example"></a>Exemple
 
@@ -86,12 +86,12 @@ invoked const volatile S.f()
 
 ## <a name="requirements"></a>Configuration requise
 
-**En-tête :** \<type_traits>
+**En-tête :**\<type_traits>
 
 **Espace de noms :** std
 
 ## <a name="see-also"></a>Voir aussi
 
-[<type_traits>](../standard-library/type-traits.md)\
-[remove_const, classe](../standard-library/remove-const-class.md)\
-[remove_volatile, classe](../standard-library/remove-volatile-class.md)
+[<type_traits>](type-traits.md)\
+[Classe remove_const](remove-const-class.md)\
+[Classe remove_volatile](remove-volatile-class.md)

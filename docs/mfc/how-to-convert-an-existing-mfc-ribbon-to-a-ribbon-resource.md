@@ -1,26 +1,26 @@
 ---
-title: 'Procédure : Convertir un ruban MFC existant à une ressource de ruban'
+title: 'Comment : convertir un ruban MFC existant en ressource du ruban'
 ms.date: 11/04/2016
 helpviewer_keywords:
 - ribbon resource, converting from an MFC ribbon
 - MFC ribbon, converting to a ribbon resource
 ms.assetid: 324b7ff6-58f9-4691-96a9-9836a79d0fb6
-ms.openlocfilehash: b4265a7bf3ebe2c4926f21572d802b75bd525990
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 56f36c977453d338b9e9bbd2462c1a8830ffe258
+ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62389487"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84620055"
 ---
-# <a name="how-to-convert-an-existing-mfc-ribbon-to-a-ribbon-resource"></a>Procédure : Convertir un ruban MFC existant à une ressource de ruban
+# <a name="how-to-convert-an-existing-mfc-ribbon-to-a-ribbon-resource"></a>Comment : convertir un ruban MFC existant en ressource du ruban
 
-Ressources de ruban sont plus faciles à visualiser, modifier et à gérer que les rubans codés manuellement. Cette rubrique décrit comment convertir un ruban codé manuellement dans un projet MFC dans une ressource de ruban.
+Les ressources du ruban sont plus faciles à visualiser, à modifier et à gérer que les rubans codés manuellement. Cette rubrique explique comment convertir un ruban codé manuellement dans un projet MFC en ressource de ruban.
 
-Vous devez disposer d’un projet MFC existant qui comporte du code qui utilise les classes de ruban MFC, par exemple, [classe CMFCRibbonBar](../mfc/reference/cmfcribbonbar-class.md).
+Vous devez disposer d’un projet MFC existant contenant du code qui utilise les classes de ruban MFC, par exemple, la [classe CMFCRibbonBar](reference/cmfcribbonbar-class.md).
 
-### <a name="to-convert-an-mfc-ribbon-to-a-ribbon-resource"></a>Pour convertir un ruban MFC à une ressource de ruban
+### <a name="to-convert-an-mfc-ribbon-to-a-ribbon-resource"></a>Pour convertir un ruban MFC en ressource de ruban
 
-1. Dans Visual Studio, dans un projet MFC existant, ouvrez le fichier source où la `CMFCRibbonBar` objet est initialisé. En règle générale, le fichier est mainfrm.cpp. Ajoutez le code suivant après le code d’initialisation pour le ruban.
+1. Dans Visual Studio, dans un projet MFC existant, ouvrez le fichier source dans lequel l' `CMFCRibbonBar` objet est initialisé. En règle générale, le fichier est MainFrm. cpp. Ajoutez le code suivant après le code d’initialisation pour le ruban.
 
 ```
     m_wndRibbonBar.SaveToXMLFile("RibbonOutput.xml");
@@ -28,15 +28,15 @@ Vous devez disposer d’un projet MFC existant qui comporte du code qui utilise 
 
    Enregistrez et fermez le fichier.
 
-1. Générer et exécuter l’application MFC, puis dans le bloc-notes, ouvrez RibbonOutput.txt et copiez son contenu.
+1. Générez et exécutez l’application MFC, puis, dans le bloc-notes, ouvrez RibbonOutput. txt et copiez son contenu.
 
-1. Dans Visual Studio, sur le **projet** menu, cliquez sur **ajouter une ressource**. Dans le **ajouter une ressource** boîte de dialogue, sélectionnez **ruban** puis cliquez sur **New**.
+1. Dans Visual Studio, dans le menu **projet** , cliquez sur **Ajouter une ressource**. Dans la boîte de dialogue **Ajouter une ressource** , sélectionnez **ruban** , puis cliquez sur **nouveau**.
 
-   Visual Studio crée une ressource de ruban et s’ouvre en mode design. L’ID de ressource de ruban est IDR_RIBBON1, qui s’affiche dans **affichage des ressources**. Le ruban est défini dans le fichier XML de ribbon1.mfcribbon-ms.
+   Visual Studio crée une ressource de ruban et l’ouvre en mode Design. L’ID de ressource du ruban est IDR_RIBBON1, qui est affiché dans **affichage des ressources**. Le ruban est défini dans le fichier XML Ribbon1. mfcribbon-ms.
 
-1. Dans Visual Studio, ouvrez ribbon1.mfcribbon-ms, supprimez son contenu, puis collez le contenu du RibbonOutput.txt, ce qui vous avez copiée précédemment. Enregistrez et fermez ribbon1.mfcribbon-ms.
+1. Dans Visual Studio, ouvrez Ribbon1. mfcribbon-ms, supprimez son contenu, puis collez le contenu de RibbonOutput. txt, que vous avez copié précédemment. Enregistrez et fermez Ribbon1. mfcribbon-ms.
 
-1. Ouvrez à nouveau le fichier source où l’objet CMFCRibbonBar est initialisé (en règle générale, mainfrm.cpp) et mettez en commentaire existant code du ruban. Ajoutez le code suivant après le code qui vous commenté.
+1. Ouvrez de nouveau le fichier source dans lequel l’objet CMFCRibbonBar est initialisé (en général, MainFrm. cpp) et commentez le code de ruban existant. Ajoutez le code suivant après le code que vous avez mis en commentaire.
 
 ```
     m_wndRibbonBar.LoadFromResource(IDR_RIBBON1);
@@ -46,4 +46,4 @@ Vous devez disposer d’un projet MFC existant qui comporte du code qui utilise 
 
 ## <a name="see-also"></a>Voir aussi
 
-[Concepteur de ruban (MFC)](../mfc/ribbon-designer-mfc.md)
+[Concepteur de ruban (MFC)](ribbon-designer-mfc.md)

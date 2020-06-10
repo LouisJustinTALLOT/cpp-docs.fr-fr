@@ -8,27 +8,27 @@ helpviewer_keywords:
 - file status [MFC]
 - status of files [MFC]
 ms.assetid: 1b8891d6-eb0f-4037-a837-4928fe595222
-ms.openlocfilehash: 26c263b2d7e4e0243444925cb9416cb337dcd79d
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 23c626940e700d3e9827ef6a7cf849d970e40d5d
+ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62392958"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84619778"
 ---
 # <a name="accessing-file-status"></a>Accès au statut de fichier
 
-`CFile` prend également en charge l’obtention d’état du fichier, y compris si le fichier existe, création et modification de dates des heures, taille logique et chemin d’accès.
+`CFile`prend également en charge l’obtention de l’état du fichier, notamment si le fichier existe, les dates et heures de création et de modification, la taille logique et le chemin d’accès.
 
-### <a name="to-get-file-status"></a>Pour obtenir le statut du fichier
+### <a name="to-get-file-status"></a>Pour récupérer l’état d’un fichier
 
-1. Utilisez le [CFile](../mfc/reference/cfile-class.md) classe pour obtenir et définir les informations relatives à un fichier. Une application utile consiste à utiliser le `CFile` fonction membre statique **GetStatus** pour déterminer si un fichier existe. **GetStatus** retourne 0 si le fichier spécifié n’existe pas.
+1. Utilisez la classe [CFile](reference/cfile-class.md) pour obtenir et définir des informations sur un fichier. Une application utile consiste à utiliser la `CFile` fonction membre statique **GetStatus** pour déterminer si un fichier existe. **GetStatus** retourne 0 si le fichier spécifié n’existe pas.
 
-Par conséquent, vous pouvez utiliser le résultat de **GetStatus** pour déterminer s’il faut utiliser le **CFile::modeCreate** indicateur lors de l’ouverture d’un fichier, comme le montre l’exemple suivant :
+Par conséquent, vous pouvez utiliser le résultat de **GetStatus** pour déterminer s’il faut utiliser l’indicateur **CFile :: modeCreate** lors de l’ouverture d’un fichier, comme indiqué dans l’exemple suivant :
 
 [!code-cpp[NVC_MFCFiles#3](../atl-mfc-shared/reference/codesnippet/cpp/accessing-file-status_1.cpp)]
 
-Pour plus d’informations, consultez [sérialisation](../mfc/serialization-in-mfc.md).
+Pour obtenir des informations connexes, consultez [sérialisation](serialization-in-mfc.md).
 
 ## <a name="see-also"></a>Voir aussi
 
-[Fichiers](../mfc/files-in-mfc.md)
+[Fichiers](files-in-mfc.md)

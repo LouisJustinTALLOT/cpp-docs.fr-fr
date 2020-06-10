@@ -5,12 +5,12 @@ helpviewer_keywords:
 - extended combo boxes [MFC], notifications
 - notifications [MFC], extended combo box controls
 ms.assetid: 4e442758-d054-4746-bb1a-6ff84accb127
-ms.openlocfilehash: 044cef644f746f7cb70944805882bd8e2f2806b4
-ms.sourcegitcommit: 3caf5261b3ea80d9cf14038c116ba981d655cd13
+ms.openlocfilehash: 58a7c5ec36807489d24014055c39775b4552be03
+ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/11/2019
-ms.locfileid: "70908110"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84620986"
 ---
 # <a name="processing-notification-messages-in-extended-combo-box-controls"></a>Traitement des messages de notification dans les contrôles de zone de liste déroulante étendue
 
@@ -20,19 +20,19 @@ Utilisez l' [Assistant classe](reference/mfc-class-wizard.md) pour ajouter des g
 
 La liste suivante décrit les différentes notifications envoyées par le contrôle de zone de liste déroulante étendue.
 
-- CBEN_BEGINEDIT envoyé lorsque l’utilisateur active la liste déroulante ou clique dans la zone d’édition du contrôle.
+- CBEN_BEGINEDIT Envoyée quand l’utilisateur active la liste déroulante ou clique dans la zone d’édition du contrôle.
 
-- CBEN_DELETEITEM Envoyé lorsqu’un élément a été supprimé.
+- CBEN_DELETEITEM Envoyée quand un élément a été supprimé.
 
-- CBEN_DRAGBEGIN envoyé lorsque l’utilisateur commence à faire glisser l’image de l’élément affiché dans la partie modifiable du contrôle.
+- CBEN_DRAGBEGIN Envoyée quand l’utilisateur commence à faire glisser l’image de l’élément affichée dans la zone d’édition du contrôle.
 
-- CBEN_ENDEDIT envoyé lorsque l’utilisateur a terminé une opération dans la zone d’édition ou qu’il a sélectionné un élément dans la liste déroulante du contrôle.
+- CBEN_ENDEDIT Envoyée quand l’utilisateur a terminé une opération dans la zone d’édition ou qu’il a sélectionné un élément de la liste déroulante du contrôle.
 
-- CBEN_GETDISPINFO envoyé pour récupérer des informations d’affichage sur un élément de rappel.
+- CBEN_GETDISPINFO Envoyée pour récupérer les informations d’affichage sur un élément de rappel.
 
-- CBEN_INSERTITEM envoyé lorsqu’un nouvel élément a été inséré dans le contrôle.
+- CBEN_INSERTITEM Envoyée quand un nouvel élément a été inséré dans le contrôle.
 
 ## <a name="see-also"></a>Voir aussi
 
-[Utilisation de CComboBoxEx](../mfc/using-ccomboboxex.md)<br/>
-[Contrôles](../mfc/controls-mfc.md)
+[Utilisation de CComboBoxEx](using-ccomboboxex.md)<br/>
+[Commandes](controls-mfc.md)

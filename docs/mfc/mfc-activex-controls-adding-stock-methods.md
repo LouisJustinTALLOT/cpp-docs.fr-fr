@@ -6,32 +6,32 @@ helpviewer_keywords:
 - MFC ActiveX controls [MFC], methods
 - DoClick method [MFC]
 ms.assetid: bc4fad78-cabd-4cc0-a798-464b1a682f0b
-ms.openlocfilehash: ec59ccc0cbd48fc3114eb2dc0833dd3dd65691de
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 42d8dfecd32b4aecd0daa4034497ec9abff6d11a
+ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81364670"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84619941"
 ---
 # <a name="mfc-activex-controls-adding-stock-methods"></a>Contrôles ActiveX MFC : ajout de méthodes stock
 
-Une méthode de stock diffère d’une méthode personnalisée en ce qu’elle est déjà implémentée par la classe [COleControl](../mfc/reference/colecontrol-class.md). Par exemple, `COleControl` contient une fonction prédéfinie de membre qui prend en charge la méthode Refresh pour votre contrôle. L’entrée de carte de répartition pour cette méthode de stock est DISP_STOCKFUNC_REFRESH.
+Une méthode stock diffère d’une méthode personnalisée en ce qu’elle est déjà implémentée par la classe [COleControl](reference/colecontrol-class.md). Par exemple, `COleControl` contient une fonction membre prédéfinie qui prend en charge la méthode Refresh pour votre contrôle. L’entrée de la table de dispatch pour cette méthode stock est DISP_STOCKFUNC_REFRESH.
 
 >[!IMPORTANT]
-> ActiveX est une technologie héritée qui ne devrait pas être utilisée pour de nouveaux développements. Pour plus d’informations sur les technologies modernes qui remplacent ActiveX, voir [ActiveX Controls](activex-controls.md).
+> ActiveX est une technologie héritée qui ne doit pas être utilisée pour un nouveau développement. Pour plus d’informations sur les technologies modernes qui remplacent ActiveX, consultez [contrôles ActiveX](activex-controls.md).
 
-`COleControl`prend en charge deux méthodes de stock : DoClick et Refresh. Refresh est invoqué par l’utilisateur du contrôle pour mettre immédiatement à jour l’apparence du contrôle; DoClick est invoqué pour tirer l’événement Click du contrôle.
+`COleControl`prend en charge deux méthodes stock : le faire-cliquer et actualiser. L’actualisation est appelée par l’utilisateur du contrôle pour mettre immédiatement à jour l’apparence du contrôle. Le fait de cliquer est appelé pour déclencher l’événement Click du contrôle.
 
-|Méthode|Entrée de carte d’expédition|Commentaire|
+|Méthode|Entrée de la table de dispatch|Commentaire|
 |------------|------------------------|-------------|
-|`DoClick`|**DISP_STOCKPROP_DOCLICK)**|Feux d’un événement Cliquez.|
-|`Refresh`|**DISP_STOCKPROP_REFRESH)**|Mise immédiatement à jour de l’apparence du contrôle.|
+|`DoClick`|**DISP_STOCKPROP_DOCLICK ()**|Déclenche un événement Click.|
+|`Refresh`|**DISP_STOCKPROP_REFRESH ()**|Met immédiatement à jour l’apparence du contrôle.|
 
-## <a name="adding-a-stock-method-using-the-add-method-wizard"></a><a name="_core_adding_a_stock_method_using_classwizard"></a>Ajout d’une méthode stock à l’aide de l’assistant de méthode Add
+## <a name="adding-a-stock-method-using-the-add-method-wizard"></a><a name="_core_adding_a_stock_method_using_classwizard"></a>Ajout d’une méthode stock à l’aide de l’Assistant Ajout de méthode
 
-L’ajout d’une méthode de stock est simple à l’aide de [l’Add Method Wizard](../ide/add-method-wizard.md). La procédure suivante démontre l’ajout de la méthode Refresh à un contrôle créé à l’aide du MFC ActiveX Control Wizard.
+L’ajout d’une méthode stock est simple à l’aide de l' [Assistant Ajout de méthode](../ide/add-method-wizard.md). La procédure suivante montre comment ajouter la méthode Refresh à un contrôle créé à l’aide de l’Assistant contrôle ActiveX MFC.
 
-#### <a name="to-add-the-stock-refresh-method-using-the-add-method-wizard"></a>Pour ajouter la méthode De rafraîchissement du stock à l’aide de la méthode Add Wizard
+#### <a name="to-add-the-stock-refresh-method-using-the-add-method-wizard"></a>Pour ajouter la méthode d’actualisation des stocks à l’aide de l’Assistant Ajout de méthode
 
 1. Chargez votre projet de contrôle.
 
@@ -39,28 +39,28 @@ L’ajout d’une méthode de stock est simple à l’aide de [l’Add Method Wi
 
 1. Cliquez sur le nœud Interface de votre contrôle (le deuxième nœud du nœud Bibliothèque) pour ouvrir le menu contextuel.
 
-1. À partir du menu raccourci, cliquez sur **Ajouter** et cliquez ensuite ajouter **la méthode**.
+1. Dans le menu contextuel, cliquez sur **Ajouter** , puis sur **Ajouter une méthode**.
 
-   Cela ouvre le Assistant Méthode Add.
+   L’Assistant Ajout de méthode s’ouvre.
 
-1. Dans la boîte **De nom de méthode,** cliquez sur **Refresh**.
+1. Dans la zone nom de la **méthode** , cliquez sur **Actualiser**.
 
 1. Cliquez sur **Terminer**.
 
-## <a name="add-method-wizard-changes-for-stock-methods"></a><a name="_core_classwizard_changes_for_stock_methods"></a>Ajouter des modifications de magicien de méthode pour les méthodes de stock
+## <a name="add-method-wizard-changes-for-stock-methods"></a><a name="_core_classwizard_changes_for_stock_methods"></a>Modifications de l’Assistant Ajout de méthode pour les méthodes stock
 
-Étant donné que la méthode De rafraîchissement des stocks est prise en charge par la classe de base du contrôle, **l’Add Method Wizard** ne modifie en aucune façon la déclaration de classe du contrôle. Il ajoute une entrée pour la méthode à la carte de répartition du contrôle et à son . Fichier IDL. La ligne suivante est ajoutée à la carte de répartition du contrôle, située dans sa mise en œuvre (. Dossier du RPC :
+Étant donné que la méthode d’actualisation des actions est prise en charge par la classe de base du contrôle, l' **Assistant Ajout de méthode** ne modifie en aucune façon la déclaration de classe du contrôle. Elle ajoute une entrée pour la méthode au mappage de dispatch du contrôle et à son. Fichier IDL. La ligne suivante est ajoutée au mappage de dispatch du contrôle, situé dans son implémentation (. CPP) :
 
-[!code-cpp[NVC_MFC_AxUI#16](../mfc/codesnippet/cpp/mfc-activex-controls-adding-stock-methods_1.cpp)]
+[!code-cpp[NVC_MFC_AxUI#16](codesnippet/cpp/mfc-activex-controls-adding-stock-methods_1.cpp)]
 
-Cela rend la méthode Refresh à la disposition des utilisateurs du contrôle.
+La méthode Refresh est ainsi mise à la disposition des utilisateurs du contrôle.
 
-La ligne suivante est ajoutée à la ligne de contrôle . Fichier IDL:
+La ligne suivante est ajoutée au du contrôle. Fichier IDL :
 
-[!code-cpp[NVC_MFC_AxUI#17](../mfc/codesnippet/cpp/mfc-activex-controls-adding-stock-methods_2.idl)]
+[!code-cpp[NVC_MFC_AxUI#17](codesnippet/cpp/mfc-activex-controls-adding-stock-methods_2.idl)]
 
-Cette ligne attribue à la méthode Refresh un numéro d’identification spécifique.
+Cette ligne affecte à la méthode Refresh un numéro d’identification spécifique.
 
 ## <a name="see-also"></a>Voir aussi
 
-[Contrôles ActiveX MFC](../mfc/mfc-activex-controls.md)
+[Contrôles ActiveX MFC](mfc-activex-controls.md)

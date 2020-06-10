@@ -1,21 +1,21 @@
 ---
-title: 'Procédure : Personnaliser la barre d’outils accès rapide'
+title: "Comment : personnaliser la barre d'outils Accès rapide"
 ms.date: 09/07/2019
 helpviewer_keywords:
 - quick access toolbar [MFC], customization
 ms.assetid: 2554099b-0c89-4605-9249-31bf9cbcefe0
-ms.openlocfilehash: 8b2eb6f7c80c77f69e2bbb65b7bb31a385014c8c
-ms.sourcegitcommit: 3caf5261b3ea80d9cf14038c116ba981d655cd13
+ms.openlocfilehash: 5d168fc395e27eea3705fc8e69c88569ecb0f7ee
+ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/11/2019
-ms.locfileid: "70907783"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84620032"
 ---
-# <a name="how-to-customize-the-quick-access-toolbar"></a>Procédure : Personnaliser la barre d’outils accès rapide
+# <a name="how-to-customize-the-quick-access-toolbar"></a>Comment : personnaliser la barre d'outils Accès rapide
 
 La barre d’outils accès rapide (QAT) est une barre d’outils personnalisable qui contient un ensemble de commandes qui sont affichées en regard du bouton d’application ou sous les onglets de catégorie. L’illustration suivante montre une barre d’outils accès rapide classique.
 
-![Barre d’outils accès rapide du ruban MFC](../mfc/media/quick_access_toolbar.png "Barre d’outils accès rapide du ruban MFC")
+![Barre d'outils Accès rapide de ruban MFC](../mfc/media/quick_access_toolbar.png "Barre d'outils Accès rapide de ruban MFC")
 
 Pour personnaliser la barre d’outils accès rapide, ouvrez-la dans la fenêtre **Propriétés** , modifiez ses commandes, puis affichez un aperçu du contrôle du ruban.
 
@@ -38,7 +38,7 @@ Le tableau suivant définit les propriétés de la barre d’outils accès rapid
 
 #### <a name="to-add-or-remove-commands-on-the-quick-access-toolbar"></a>Pour ajouter ou supprimer des commandes dans la barre d’outils accès rapide
 
-1. Dans la fenêtre **Propriétés** , cliquez sur **éléments qat**, puis cliquez sur le bouton **de sélection (...)** .
+1. Dans la fenêtre **Propriétés** , cliquez sur **éléments qat**, puis cliquez sur le bouton **de sélection (...)**.
 
 1. Dans la boîte de dialogue **éditeur d’éléments qat** , utilisez les boutons **Ajouter** et **supprimer** pour modifier la liste des commandes dans la barre d’outils accès rapide.
 
@@ -54,4 +54,4 @@ Les commandes de la barre d’outils accès rapide n’apparaissent pas sur l’
 
 ## <a name="see-also"></a>Voir aussi
 
-[Concepteur de ruban (MFC)](../mfc/ribbon-designer-mfc.md)
+[Concepteur de ruban (MFC)](ribbon-designer-mfc.md)

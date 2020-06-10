@@ -7,29 +7,29 @@ helpviewer_keywords:
 - applications [MFC]
 - MFC, application development
 ms.assetid: 883f0f19-866f-4221-8a3d-5607941dc8d0
-ms.openlocfilehash: 989aecdfafc0d57bfb28874ee84dbf40f8fefc30
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 2c171b223892c8bca1b32e18c57c09027558c192
+ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62385334"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84619732"
 ---
 # <a name="building-on-the-framework"></a>Génération à partir du Framework
 
-Votre rôle dans la configuration d’une application avec l’infrastructure MFC est de fournir le code spécifique à l’application source et pour connecter les composants en définissant les messages et les commandes auxquels ils répondent. Vous permet le langage C++ et les techniques C++ standard pour dériver vos propres classes spécifiques à l’application à partir de celles fournies par la bibliothèque de classes et substituer et enrichir le comportement de la classe de base.
+Votre rôle dans la configuration d’une application avec l’infrastructure MFC consiste à fournir le code source spécifique à l’application et à connecter les composants en définissant les messages et les commandes auxquels ils répondent. Vous utilisez le langage C++ et les techniques C++ standard pour dériver vos propres classes spécifiques à l’application de celles fournies par la bibliothèque de classes et pour substituer et augmenter le comportement de la classe de base.
 
-Dans les rubriques connexes, les tableaux suivants décrivent la séquence générale des opérations que généralement suivront et vos responsabilités et les responsabilités de l’infrastructure :
+Dans les rubriques connexes, les tableaux suivants décrivent la séquence générale des opérations que vous suivez généralement et vos responsabilités par rapport aux responsabilités de l’infrastructure :
 
-- [Séquence de génération d’une Application avec l’infrastructure](../mfc/sequence-of-operations-for-building-mfc-applications.md)
+- [Séquence pour générer une application avec le framework](sequence-of-operations-for-building-mfc-applications.md)
 
-- [Ordre des opérations pour la création d’applications OLE](../mfc/sequence-of-operations-for-creating-ole-applications.md)
+- [Ordre des opérations pour la création d’applications OLE](sequence-of-operations-for-creating-ole-applications.md)
 
-- [Ordre des opérations pour la création de contrôles ActiveX](../mfc/sequence-of-operations-for-creating-activex-controls.md)
+- [Ordre des opérations pour la création de contrôles ActiveX](sequence-of-operations-for-creating-activex-controls.md)
 
-- [Ordre des opérations pour la création d’applications de base de données](../mfc/sequence-of-operations-for-creating-database-applications.md)
+- [Ordre des opérations pour la création d’applications de base de données](sequence-of-operations-for-creating-database-applications.md)
 
-La plupart du temps, vous pouvez suivre ces tables comme une séquence d’étapes de création d’une application MFC, bien que certaines étapes sont les autres options. Par exemple, la plupart des applications utilisent un seul type de classe d’affichage de plusieurs types disponibles.
+Pour l’essentiel, vous pouvez suivre ces tableaux comme une séquence d’étapes de création d’une application MFC, bien que certaines d’entre elles soient des options alternatives. Par exemple, la plupart des applications utilisent un type de classe d’affichage parmi les différents types disponibles.
 
 ## <a name="see-also"></a>Voir aussi
 
-[Rubriques MFC générales](../mfc/general-mfc-topics.md)
+[Rubriques MFC générales](general-mfc-topics.md)

@@ -1,41 +1,41 @@
 ---
-title: Avantages de l’Architecture Document / Vue
+title: Avantages de l’architecture document-vue
 ms.date: 11/04/2016
 helpviewer_keywords:
 - views [MFC], advantages
 - document/view architecture [MFC], advantages of
 ms.assetid: 0bc27071-e120-4889-939c-ce1e61fb9cb3
-ms.openlocfilehash: e250630bf3c9714fc01ff66b66fba3ac0d5b1cc1
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 80f7141ec62d509defdea361586399bd375df0d1
+ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62394726"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84623278"
 ---
 # <a name="advantages-of-the-documentview-architecture"></a>Avantages de l'architecture document/vue
 
-Le principal avantage à l’aide de l’architecture document/vue MFC est que l’excellente prise en charge plusieurs vues du même document. (Si vous n’avez pas besoin plusieurs vues et la surcharge de document/vue est excessive dans votre application, vous pouvez éviter l’architecture. [Alternatives à l’Architecture Document/vue](../mfc/alternatives-to-the-document-view-architecture.md).)
+Le principal avantage lié à l’utilisation de l’architecture document/vue MFC est que l’architecture prend en charge plusieurs vues du même document en particulier. (Si vous n’avez pas besoin de plusieurs vues et que la surcharge de document/vue est excessive dans votre application, vous pouvez éviter l’architecture. [Alternatives à l’architecture document/vue](alternatives-to-the-document-view-architecture.md).)
 
-Supposons que votre application permet aux utilisateurs d’afficher des données numériques sous forme de feuille de calcul ou sous forme de graphique. Un utilisateur peut souhaiter afficher simultanément les deux les données brutes, sous forme de feuille de calcul et un graphique obtenu à partir des données. Vous Affrichez ces vues distinctes dans des fenêtres frame distinct ou dans les volets de fractionnement au sein d’une fenêtre unique. Maintenant Supposons que l’utilisateur peut modifier les données dans la feuille de calcul et voir les modifications reflétées immédiatement dans le graphique.
+Supposons que votre application permette aux utilisateurs d’afficher des données numériques sous forme de feuille de calcul ou sous forme de graphique. Un utilisateur peut souhaiter voir simultanément les données brutes, le formulaire de feuille de calcul et un graphique qui résulte des données. Vous pouvez afficher ces vues distinctes dans des fenêtres Frame distinctes ou dans des volets Splitter au sein d’une même fenêtre. Supposons à présent que l’utilisateur puisse modifier les données dans la feuille de calcul et voir les modifications instantanément reflétées dans le graphique.
 
-Dans MFC, la vue de la feuille de calcul et l’affichage du graphique seraient basés sur les différentes classes dérivées de CView. Les deux vues seraient associés à un objet de document unique. Le document stocke les données (ou encore les obtient à partir d’une base de données). Les deux affichages accèdent au document et affichent les données qu’ils récupéreront à partir de celui-ci.
+Dans MFC, la vue de feuille de calcul et la vue de graphique sont basées sur différentes classes dérivées de CView. Les deux vues sont associées à un objet document unique. Le document stocke les données (ou peut les obtenir à partir d’une base de données). Les deux vues accèdent au document et affichent les données qu’elles récupèrent.
 
-Quand un utilisateur met à jour d’une des vues, d’afficher les appels de l’objet `CDocument::UpdateAllViews`. Cette fonction signale toutes les vues du document, et chaque vue met à jour lui-même à l’aide des données les plus récentes à partir du document. L’appel unique à `UpdateAllViews` synchronise les différentes vues.
+Lorsqu’un utilisateur met à jour l’une des vues, cet objet d’affichage appelle `CDocument::UpdateAllViews` . Cette fonction avertit toutes les vues du document, et chaque vue se met à jour en utilisant les données les plus récentes du document. L’appel unique à `UpdateAllViews` synchronise les différentes vues.
 
-Ce scénario serait difficile à coder sans la séparation des données à partir de la vue, en particulier si les vues stockent les données elles-mêmes. Document/vue, il est facile. L’infrastructure effectue l’essentiel du travail de coordination pour vous.
+Ce scénario serait difficile à coder sans la séparation des données de la vue, en particulier si les vues stockent les données elles-mêmes. Avec document/vue, c’est facile. L’infrastructure effectue la plupart des tâches de coordination pour vous.
 
-## <a name="what-do-you-want-to-know-more-about"></a>Ce que vous souhaitez en savoir plus sur
+## <a name="what-do-you-want-to-know-more-about"></a>Que voulez-vous en savoir plus sur
 
-- [Alternatives à document/vue](../mfc/alternatives-to-the-document-view-architecture.md)
+- [Alternatives à document/vue](alternatives-to-the-document-view-architecture.md)
 
-- [CDocument](../mfc/reference/cdocument-class.md)
+- [CDocument](reference/cdocument-class.md)
 
-- [CView](../mfc/reference/cview-class.md)
+- [CView](reference/cview-class.md)
 
-- [CDocument::UpdateAllViews](../mfc/reference/cdocument-class.md#updateallviews)
+- [CDocument :: UpdateAllViews](reference/cdocument-class.md#updateallviews)
 
-- [CView::GetDocument](../mfc/reference/cview-class.md#getdocument)
+- [CView :: GetDocument](reference/cview-class.md#getdocument)
 
 ## <a name="see-also"></a>Voir aussi
 
-[Architecture document/vue](../mfc/document-view-architecture.md)
+[Architecture document/vue](document-view-architecture.md)

@@ -18,12 +18,12 @@ helpviewer_keywords:
 - activation [MFC], embedded OLE items
 - OLE activation [MFC]
 ms.assetid: ed8357d9-e487-4aaa-aa6b-2edc4de25dfa
-ms.openlocfilehash: 9f3fba71002a19a0be0e3429a0faeeefb7c65197
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 47640a59180348bd3513013b65029a775545e211
+ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81354166"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84619184"
 ---
 # <a name="activation-c"></a>Activation (C++)
 
@@ -31,7 +31,7 @@ Cet article explique le rôle de l'activation dans la modification visuelle des 
 
 Il est également possible de modifier des éléments OLE incorporés dans une fenêtre distincte. Cela se produit si l'application conteneur ou serveur ne prend pas en charge l'activation sur place. Dans ce cas, lorsque l'utilisateur double-clique sur un élément incorporé, l'application serveur est lancée dans une fenêtre distincte et l'élément incorporé apparaît comme son propre document. L'utilisateur modifie l'élément dans cette fenêtre. Une fois la modification terminée, l'utilisateur ferme l'application serveur et retourne à l'application conteneur.
 
-Comme alternative, l’utilisateur peut choisir "édition ouverte" avec ** \<l’objet>** commande Ouverte sur le menu **Edit.** Cela ouvre l'objet dans une fenêtre distincte.
+En guise d’alternative, l’utilisateur peut choisir « ouvrir la modification » à l’aide de la commande ** \<object> ouvrir** du menu **Edition** . Cela ouvre l'objet dans une fenêtre distincte.
 
 > [!NOTE]
 > La modification des éléments incorporés dans une fenêtre distincte était un comportement standard d'OLE version 1, et certaines applications OLE ne peuvent prendre en charge que ce style de modification.
@@ -40,10 +40,10 @@ L'activation sur place utilise une approche centrée sur le document pour docume
 
 MFC ne prend pas en charge l'activation sur place imbriquée. Si vous créez une application conteneur ou serveur et si ce conteneur ou serveur est incorporé dans un autre conteneur et activé sur place, il ne peut pas activer sur place les objets qui y sont incorporés.
 
-Ce qui arrive à un élément incorporé lorsque l'utilisateur double-clique dessus dépend des verbes définis pour l'élément. Pour plus d’informations, voir [Activation: Verbs](../mfc/activation-verbs.md).
+Ce qui arrive à un élément incorporé lorsque l'utilisateur double-clique dessus dépend des verbes définis pour l'élément. Pour plus d’informations, consultez [activation : verbes](activation-verbs.md).
 
 ## <a name="see-also"></a>Voir aussi
 
-[OLE](../mfc/ole-in-mfc.md)<br/>
-[Containers](../mfc/containers.md)<br/>
-[Serveurs](../mfc/servers.md)
+[OLE](ole-in-mfc.md)<br/>
+[Containers](containers.md)<br/>
+[Serveurs](servers.md)
