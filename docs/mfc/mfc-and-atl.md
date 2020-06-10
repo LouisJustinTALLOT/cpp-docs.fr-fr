@@ -3,12 +3,12 @@ title: MFC et ATL
 ms.date: 01/24/2018
 ms.assetid: 31b1a3a8-4154-4c4a-af10-fafc23ecdc5c
 ms.topic: overview
-ms.openlocfilehash: 3a58e68925fd77d002400bfe9d1f2bd28c60f78c
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 2fd109792bde0717c88222d5d53be3a26df95239
+ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80214329"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84619918"
 ---
 # <a name="mfc-and-atl"></a>MFC et ATL
 
@@ -18,13 +18,13 @@ Vous pouvez créer des programmes MFC ou ATL avec Visual Studio Community Editio
 
 Dans Visual Studio 2015, Visual C++ est un composant facultatif, et les composants MFC et ATL sont des sous-composants facultatifs sous Visual C++. Si vous ne sélectionnez pas ces composants lors de l’installation de Visual Studio, il vous est demandé de les installer la première fois que vous tentez de créer ou d’ouvrir un projet MFC ou ATL.
 
-Dans Visual Studio 2017 et versions ultérieures, MFC et ATL sont des sous-composants facultatifs dans le cadre du **développement bureautique avec C++**  une charge de travail dans le programme Visual Studio installer. Vous pouvez installer la prise en charge ATL sans MFC, ou la prise en charge MFC et ATL combinée (MFC dépend de ATL). Pour plus d’informations sur les charges de travail et les composants, consultez [installer Visual Studio](/visualstudio/install/install-visual-studio).
+Dans Visual Studio 2017 et versions ultérieures, MFC et ATL sont des sous-composants facultatifs sous la charge de travail **développement Desktop avec C++** dans le programme Visual Studio installer. Vous pouvez installer la prise en charge ATL sans MFC, ou la prise en charge MFC et ATL combinée (MFC dépend de ATL). Pour plus d’informations sur les charges de travail et les composants, consultez [installer Visual Studio](/visualstudio/install/install-visual-studio).
 
-## <a name="related-articles"></a>Articles connexes
+## <a name="related-articles"></a>Articles associés
 
 |Intitulé|Description|
 |-----------|-----------------|
-|[MFC, applications de bureau](../mfc/mfc-desktop-applications.md)|MFC (Microsoft Foundation Classes) propose un wrapper léger orienté objet via Win32 qui permet de développer rapidement des applications GUI en C++.|
+|[MFC, applications de bureau](mfc-desktop-applications.md)|MFC (Microsoft Foundation Classes) propose un wrapper léger orienté objet via Win32 qui permet de développer rapidement des applications GUI en C++.|
 |[Composants de bureau COM ATL](../atl/atl-com-desktop-components.md)|ATL fournit des modèles de classe et d’autres constructions d’utilisation pour simplifier la création d’objets COM en C++.|
 |[Classes partagées ATL/MFC](../atl-mfc-shared/atl-mfc-shared-classes.md)|Références pour la [CStringT Class](../atl-mfc-shared/reference/cstringt-class.md) et d’autres classes partagées par MFC et ATL.|
 |[Utilisation des fichiers de ressources](../windows/working-with-resource-files.md)|L’éditeur de ressources permet de modifier les ressources d’interface utilisateur telles que les chaînes, les images et les boîtes de dialogue.|

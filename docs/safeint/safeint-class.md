@@ -10,19 +10,19 @@ helpviewer_keywords:
 - SafeInt class
 - SafeInt class, constructor
 ms.assetid: 27a8f087-2511-46f9-8d76-2aeb66ca272f
-ms.openlocfilehash: c365b5cab5814d3992e6570949a69fc5d39c1dd3
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: a7c0de8b5fd64fb9746f4c503189fcad409f1e85
+ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81373464"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84620955"
 ---
 # <a name="safeint-class"></a>SafeInt, classe
 
 Étend les primitifs entiers afin d’éviter les débordements d’entiers et permet de comparer les différents types d’entiers.
 
 > [!NOTE]
-> La dernière version de cette [https://github.com/dcleblanc/SafeInt](https://github.com/dcleblanc/SafeInt)bibliothèque est située à .
+> La dernière version de cette bibliothèque se trouve à l’adresse [https://github.com/dcleblanc/SafeInt](https://github.com/dcleblanc/SafeInt) .
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -42,8 +42,8 @@ class SafeInt;
 | Paramètre  |  Description |
 |---------|-----------------|
 | *rhs*      |  [in] Un paramètre d’entrée qui représente la valeur à droite de l’opérateur dans plusieurs fonctions autonomes. |
-| *Ⅰ*        |  [in] Un paramètre d’entrée qui représente la valeur à droite de l’opérateur dans plusieurs fonctions autonomes. |
-| *Bits*     |  [in] Un paramètre d’entrée qui représente la valeur à droite de l’opérateur dans plusieurs fonctions autonomes. |
+| *i*        |  [in] Un paramètre d’entrée qui représente la valeur à droite de l’opérateur dans plusieurs fonctions autonomes. |
+| *bits*     |  [in] Un paramètre d’entrée qui représente la valeur à droite de l’opérateur dans plusieurs fonctions autonomes. |
 
 ## <a name="members"></a>Membres
 
@@ -51,9 +51,9 @@ class SafeInt;
 
 | Nom                          |  Description |
 |---------------------------|--------------------|
-| [SafeInt::SafeInt](#safeint)  |  Constructeur par défaut. |
+| [SafeInt :: SafeInt](#safeint)  |  Constructeur par défaut. |
 
-### <a name="assignment-operators"></a>Opérateurs d’affectation
+### <a name="assignment-operators"></a>Opérateurs d'assignation
 
 | Nom  |  Syntaxe |
 |----|---------|
@@ -212,7 +212,7 @@ Int x = flag ? (int) SafeInt<unsigned int>(y) : -1;
 > [!NOTE]
 > Bien que la classe `SafeInt` accepte tous les types d’entier, elle effectue ses tâches plus efficacement avec les types non signés.
 
-`E` est le mécanisme de gestion des erreurs utilisé par `SafeInt`. Deux mécanismes de gestion des erreurs sont fournis avec la bibliothèque SafeInt. La stratégie par défaut est `SafeIntErrorPolicy_SafeIntException`, qui lève une exception [SafeIntException Class](../safeint/safeintexception-class.md) lorsqu’une erreur se produit. L’autre stratégie est `SafeIntErrorPolicy_InvalidParameter`, qui arrête le programme si une erreur se produit.
+`E` est le mécanisme de gestion des erreurs utilisé par `SafeInt`. Deux mécanismes de gestion des erreurs sont fournis avec la bibliothèque SafeInt. La stratégie par défaut est `SafeIntErrorPolicy_SafeIntException`, qui lève une exception [SafeIntException Class](safeintexception-class.md) lorsqu’une erreur se produit. L’autre stratégie est `SafeIntErrorPolicy_InvalidParameter`, qui arrête le programme si une erreur se produit.
 
 Deux options sont disponibles pour personnaliser la stratégie d’erreur. La première option consiste à définir le paramètre `E` lorsque vous créez un `SafeInt`. Utilisez cette option lorsque vous souhaitez modifier la stratégie de gestion des erreurs pour un seul `SafeInt`. L’autre option consiste à définir _SAFEINT_DEFAULT_ERROR_POLICY comme votre classe de gestion des erreurs personnalisée avant d’inclure la bibliothèque `SafeInt`. Utilisez cette option pour modifier la stratégie par défaut de gestion des erreurs pour toutes les instances de la classe `SafeInt` de votre code.
 
@@ -223,13 +223,13 @@ Deux options sont disponibles pour personnaliser la stratégie d’erreur. La pr
 
 `SafeInt`
 
-## <a name="requirements"></a>Spécifications
+## <a name="requirements"></a>Configuration requise
 
 **En-tête :** safeint.h
 
 **Espace de noms :** msl::utilities
 
-## <a name="safeintsafeint"></a><a name="safeint"></a>SafeInt::SafeInt
+## <a name="safeintsafeint"></a><a name="safeint"></a>SafeInt :: SafeInt
 
 Construit un objet `SafeInt`.
 
@@ -257,10 +257,10 @@ SafeInt (
 
 ### <a name="parameters"></a>Paramètres
 
-*Ⅰ*<br/>
+*i*<br/>
 [in] La valeur du nouvel objet `SafeInt`. Il doit s’agir d’un paramètre de type T ou U, en fonction du constructeur.
 
-*B*<br/>
+*p*<br/>
 [in] La valeur booléenne du nouvel objet `SafeInt`.
 
 *u*<br/>

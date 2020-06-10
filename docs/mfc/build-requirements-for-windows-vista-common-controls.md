@@ -5,12 +5,12 @@ helpviewer_keywords:
 - Common Controls (MFC), build requirements
 - Common Controls (MFC)
 ms.assetid: 025f7d55-55a2-4dcd-8f62-02424e3dcc04
-ms.openlocfilehash: 9ea90f95ba8e704cba5b22c5e7338659f0c5f033
-ms.sourcegitcommit: 9d4ffb8e6e0d70520a1e1a77805785878d445b8a
+ms.openlocfilehash: cf2139e04d2f72feb7951010caa351d67ccc5a93
+ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 08/20/2019
-ms.locfileid: "69630850"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84619741"
 ---
 # <a name="build-requirements-for-windows-common-controls"></a>Spécifications de build pour les contrôles communs Windows
 
@@ -34,7 +34,7 @@ Si vous générez votre application dans l’environnement de développement int
 
 ## <a name="migration-requirements"></a>Exigences de migration
 
-Si vous utilisez l’IDE de Visual Studio pour générer une nouvelle application MFC qui utilise les contrôles communs Windows, l’IDE déclare automatiquement un manifeste approprié. Toutefois, si vous migrez une application MFC existante à partir de Visual Studio 2005 ou version antérieure et que vous souhaitez utiliser les contrôles communs, l’IDE ne fournit pas automatiquement les informations de manifeste pour mettre à niveau votre application. Au lieu de cela, vous devez insérer manuellement le code source suivant dans votre fichier d’en-tête précompilé:
+Si vous utilisez l’IDE de Visual Studio pour générer une nouvelle application MFC qui utilise les contrôles communs Windows, l’IDE déclare automatiquement un manifeste approprié. Toutefois, si vous migrez une application MFC existante à partir de Visual Studio 2005 ou version antérieure et que vous souhaitez utiliser les contrôles communs, l’IDE ne fournit pas automatiquement les informations de manifeste pour mettre à niveau votre application. Au lieu de cela, vous devez insérer manuellement le code source suivant dans votre fichier d’en-tête précompilé :
 
 ```
 #ifdef UNICODE
@@ -52,6 +52,6 @@ Si vous utilisez l’IDE de Visual Studio pour générer une nouvelle applicatio
 
 ## <a name="see-also"></a>Voir aussi
 
-[Rubriques MFC générales](../mfc/general-mfc-topics.md)<br/>
-[Graphique hiérarchique](../mfc/hierarchy-chart.md)<br/>
-[API ANSI dépréciées](../mfc/deprecated-ansi-apis.md)
+[Rubriques MFC générales](general-mfc-topics.md)<br/>
+[Graphique hiérarchique](hierarchy-chart.md)<br/>
+[API ANSI dépréciées](deprecated-ansi-apis.md)

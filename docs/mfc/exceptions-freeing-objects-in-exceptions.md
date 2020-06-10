@@ -11,59 +11,59 @@ helpviewer_keywords:
 - throwing exceptions [MFC], after destroying
 - exception handling [MFC], destroying objects
 ms.assetid: 3b14b4ee-e789-4ed2-b8e3-984950441d97
-ms.openlocfilehash: 49c7c6b0481f90baa23609c1bb1596deda49f7bd
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: e4fafd12d22f6ff7635380e139f60c110a193d9d
+ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81371996"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84622826"
 ---
 # <a name="exceptions-freeing-objects-in-exceptions"></a>Exceptions : libération d'objets dans les exceptions
 
-Cet article explique le besoin et la méthode de libération des objets lorsqu’une exception se produit. Les sujets abordés sont les suivants :
+Cet article explique les besoins et la méthode de libération d’objets lorsqu’une exception se produit. Les sujets abordés sont les suivants :
 
-- [Gérer l’exception localement](#_core_handling_the_exception_locally)
+- [Gestion de l’exception en local](#_core_handling_the_exception_locally)
 
-- [Jeter des exceptions après la destruction d’objets](#_core_throwing_exceptions_after_destroying_objects)
+- [Levée d’exceptions après la destruction d’objets](#_core_throwing_exceptions_after_destroying_objects)
 
-Les exceptions prévues par le cadre ou par votre application interrompent le flux normal du programme. Ainsi, il est très important de garder une trace rapprochée des objets afin que vous puissiez bien les disposer au cas où une exception est lancée.
+Les exceptions levées par le Framework ou par votre application interrompent le déroulement normal du programme. Par conséquent, il est très important d’effectuer un suivi des objets afin de pouvoir les supprimer correctement au cas où une exception serait levée.
 
-Il existe deux méthodes principales pour ce faire.
+Pour ce faire, il existe deux méthodes principales.
 
-- Gérer les exceptions localement en utilisant les mots clés **essayer** et **attraper,** puis détruire tous les objets avec une seule instruction.
+- Gérez les exceptions localement à l’aide des mots clés **try** et **catch** , puis Détruisez tous les objets avec une seule instruction.
 
-- Détruisez tout objet dans le bloc **de capture** avant de jeter l’exception à l’extérieur du bloc pour une manipulation ultérieure.
+- Détruisez tout objet dans le bloc **catch** avant de lever l’exception en dehors du bloc pour une gestion ultérieure.
 
-Ces deux approches sont illustrées ci-dessous comme des solutions à l’exemple problématique suivant :
+Ces deux approches sont illustrées ci-dessous en tant que solutions aux exemples problématiques suivants :
 
-[!code-cpp[NVC_MFCExceptions#14](../mfc/codesnippet/cpp/exceptions-freeing-objects-in-exceptions_1.cpp)]
+[!code-cpp[NVC_MFCExceptions#14](codesnippet/cpp/exceptions-freeing-objects-in-exceptions_1.cpp)]
 
-Comme écrit `myPerson` ci-dessus, ne sera pas `SomeFunc`supprimé si une exception est jetée par . L’exécution saute directement vers le gestionnaire d’exception externe suivant, contournant la sortie de fonction normale et le code qui supprime l’objet. Le pointeur de l’objet sort de portée lorsque l’exception quitte la fonction, et la mémoire occupée par l’objet ne sera jamais récupérée tant que le programme est en cours d’exécution. Il s’agit d’une fuite de mémoire; il serait détecté en utilisant les diagnostics de mémoire.
+Comme indiqué ci-dessus, `myPerson` ne sera pas supprimé si une exception est levée par `SomeFunc` . L’exécution accède directement au gestionnaire d’exceptions externe suivant, en ignorant la sortie de la fonction normale et le code qui supprime l’objet. Le pointeur vers l’objet est hors de portée quand l’exception quitte la fonction, et la mémoire occupée par l’objet ne sera jamais Récupérée tant que le programme est en cours d’exécution. Il s’agit d’une fuite de mémoire ; elle est détectée à l’aide des diagnostics de la mémoire.
 
-## <a name="handling-the-exception-locally"></a><a name="_core_handling_the_exception_locally"></a>Gérer l’exception localement
+## <a name="handling-the-exception-locally"></a><a name="_core_handling_the_exception_locally"></a>Gestion de l’exception en local
 
-Le paradigme **d’essai/capture** fournit une méthode de programmation défensive pour éviter les fuites de mémoire et s’assurer que vos objets sont détruits lorsque des exceptions se produisent. Par exemple, l’exemple montré plus tôt dans cet article pourrait être réécrit comme suit :
+Le paradigme **try/catch** fournit une méthode de programmation défensive pour éviter les fuites de mémoire et vous assurer que vos objets sont détruits lorsque des exceptions se produisent. Par exemple, l’exemple indiqué plus haut dans cet article peut être réécrit comme suit :
 
-[!code-cpp[NVC_MFCExceptions#15](../mfc/codesnippet/cpp/exceptions-freeing-objects-in-exceptions_2.cpp)]
+[!code-cpp[NVC_MFCExceptions#15](codesnippet/cpp/exceptions-freeing-objects-in-exceptions_2.cpp)]
 
-Ce nouvel exemple met en place un gestionnaire d’exception pour attraper l’exception et la manipuler localement. Il quitte alors la fonction normalement et détruit l’objet. L’aspect important de cet exemple est qu’un contexte pour attraper l’exception est établi avec les blocs **d’essai/capture.** Sans un cadre d’exception local, la fonction ne saurait jamais qu’une exception avait été lancée et n’aurait pas la chance de sortir normalement et de détruire l’objet.
+Ce nouvel exemple configure un gestionnaire d’exceptions pour intercepter l’exception et la gérer localement. Il quitte ensuite la fonction normalement et détruit l’objet. L’aspect important de cet exemple est qu’un contexte pour intercepter l’exception est établi avec les blocs **try/catch** . Sans Frame d’exception locale, la fonction ne sait jamais qu’une exception a été levée et n’a pas la possibilité de se fermer normalement et de détruire l’objet.
 
-## <a name="throwing-exceptions-after-destroying-objects"></a><a name="_core_throwing_exceptions_after_destroying_objects"></a>Mettre des exceptions après la destruction d’objets
+## <a name="throwing-exceptions-after-destroying-objects"></a><a name="_core_throwing_exceptions_after_destroying_objects"></a>Levée d’exceptions après la destruction d’objets
 
-Une autre façon de gérer les exceptions est de les transmettre au contexte extérieur suivant de gestion des exceptions. Dans votre bloc **de capture,** vous pouvez faire un peu de nettoyage de vos objets attribués localement, puis jeter l’exception pour un traitement ultérieur.
+Une autre façon de gérer les exceptions consiste à les passer au contexte de gestion des exceptions externe suivant. Dans votre bloc **catch** , vous pouvez effectuer un nettoyage de vos objets alloués localement, puis lever l’exception sur pour un traitement supplémentaire.
 
-La fonction de lancement peut ou non avoir besoin de traiter des objets de tas. Si la fonction traite toujours l’objet de tas avant de revenir dans le cas normal, alors la fonction doit également traiter l’objet de tas avant de lancer l’exception. D’autre part, si la fonction ne traite pas normalement l’objet avant de revenir dans le cas normal, alors vous devez décider au cas par cas si l’objet de tas doit être deallocated.
+La fonction de levée peut ou non avoir besoin de libérer des objets de segment de mémoire. Si la fonction libère toujours l’objet segment de mémoire avant de retourner dans le cas normal, la fonction doit également libérer l’objet segment de mémoire avant de lever l’exception. En revanche, si la fonction ne libère pas normalement l’objet avant de retourner dans le cas normal, vous devez décider au cas par cas, si l’objet segment de mémoire doit être libéré.
 
-L’exemple suivant montre comment les objets attribués localement peuvent être nettoyés :
+L’exemple suivant montre comment les objets alloués localement peuvent être nettoyés :
 
-[!code-cpp[NVC_MFCExceptions#16](../mfc/codesnippet/cpp/exceptions-freeing-objects-in-exceptions_3.cpp)]
+[!code-cpp[NVC_MFCExceptions#16](codesnippet/cpp/exceptions-freeing-objects-in-exceptions_3.cpp)]
 
-Le mécanisme d’exception traite automatiquement les objets de cadre ; le destructeur de l’objet cadre est également appelé.
+Le mécanisme d’exception libère automatiquement les objets Frame ; le destructeur de l’objet frame est également appelé.
 
-Si vous appelez des fonctions qui peuvent jeter des exceptions, vous pouvez utiliser des blocs **d’essai/capture** pour vous assurer que vous attrapez les exceptions et que vous avez une chance de détruire tous les objets que vous avez créés. En particulier, sachez que de nombreuses fonctions MFC peuvent jeter des exceptions.
+Si vous appelez des fonctions qui peuvent lever des exceptions, vous pouvez utiliser des blocs **try/catch** pour vous assurer d’intercepter les exceptions et avoir la possibilité de détruire tous les objets que vous avez créés. En particulier, sachez que de nombreuses fonctions MFC peuvent lever des exceptions.
 
-Pour plus d’informations, voir [Exceptions: Catching and Deleting Exceptions](../mfc/exceptions-catching-and-deleting-exceptions.md).
+Pour plus d’informations, consultez [exceptions : interception et suppression d’exceptions](exceptions-catching-and-deleting-exceptions.md).
 
 ## <a name="see-also"></a>Voir aussi
 
-[Gestion des exceptions](../mfc/exception-handling-in-mfc.md)
+[Gestion des exceptions](exception-handling-in-mfc.md)

@@ -6,29 +6,29 @@ helpviewer_keywords:
 - properties [MFC], ActiveX controls
 - MFC ActiveX controls [MFC], properties
 ms.assetid: ec2e6759-5a8e-41d8-a275-99af8ff6f32e
-ms.openlocfilehash: d4f1265e6540e9f84bdb680e7948a4e308d31bb0
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: f5abef4db2f9c6d375428c0b0fd313198ce6283f
+ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81364649"
+ms.lasthandoff: 06/09/2020
+ms.locfileid: "84621228"
 ---
 # <a name="mfc-activex-controls-advanced-property-implementation"></a>Contrôles ActiveX MFC : implémentation des propriétés avancées
 
-Cet article décrit des sujets liés à la mise en œuvre de propriétés avancées dans un contrôle ActiveX.
+Cet article décrit les rubriques relatives à l’implémentation des propriétés avancées dans un contrôle ActiveX.
 
 >[!IMPORTANT]
-> ActiveX est une technologie héritée qui ne devrait pas être utilisée pour de nouveaux développements. Pour plus d’informations sur les technologies modernes qui remplacent ActiveX, voir [ActiveX Controls](activex-controls.md).
+> ActiveX est une technologie héritée qui ne doit pas être utilisée pour un nouveau développement. Pour plus d’informations sur les technologies modernes qui remplacent ActiveX, consultez [contrôles ActiveX](activex-controls.md).
 
-- [Propriétés de lecture seulement et d’écriture seulement](#_core_read2donly_and_write2donly_properties)
+- [Propriétés en lecture seule et en écriture seule](#_core_read2donly_and_write2donly_properties)
 
-- [Retour des codes d’erreur d’une propriété](#_core_returning_error_codes_from_a_property)
+- [Renvoi de codes d’erreur à partir d’une propriété](#_core_returning_error_codes_from_a_property)
 
-## <a name="read-only-and-write-only-properties"></a><a name="_core_read2donly_and_write2donly_properties"></a>Propriétés Read-Only et Write-Only
+## <a name="read-only-and-write-only-properties"></a><a name="_core_read2donly_and_write2donly_properties"></a>Propriétés en lecture seule et en écriture seule
 
-L’Add Property Wizard fournit une méthode rapide et facile pour implémenter des propriétés de lecture seulement ou d’écrire uniquement pour le contrôle.
+L’Assistant Ajout de propriété fournit une méthode simple et rapide pour implémenter les propriétés en lecture seule ou en écriture seule pour le contrôle.
 
-#### <a name="to-implement-a-read-only-or-write-only-property"></a>Mettre en œuvre une propriété lue ou une propriété uniquement d’écriture
+#### <a name="to-implement-a-read-only-or-write-only-property"></a>Pour implémenter une propriété en lecture seule ou en écriture seule
 
 1. Chargez votre projet de contrôle.
 
@@ -36,44 +36,44 @@ L’Add Property Wizard fournit une méthode rapide et facile pour implémenter 
 
 1. Cliquez sur le nœud Interface de votre contrôle (le deuxième nœud du nœud Bibliothèque) pour ouvrir le menu contextuel.
 
-1. À partir du menu raccourci, cliquez sur **Ajouter** et cliquez ensuite **ajouter la propriété**.
+1. Dans le menu contextuel, cliquez sur **Ajouter** , puis sur **Ajouter une propriété**.
 
-   Cela ouvre le [Add Property Wizard](../ide/names-add-property-wizard.md).
+   L' [Assistant Ajouter une propriété](../ide/names-add-property-wizard.md)s’ouvre.
 
-1. Dans la boîte **nom de propriété,** tapez le nom de votre propriété.
+1. Dans la zone nom de la **propriété** , tapez le nom de votre propriété.
 
 1. Pour **Type d’implémentation**, cliquez sur **Méthodes Get/Set**.
 
-1. Dans la boîte **de type de propriété,** sélectionnez le type approprié pour la propriété.
+1. Dans la zone **type de propriété** , sélectionnez le type approprié pour la propriété.
 
-1. Si vous voulez une propriété lue uniquement, effacez le nom de fonction Set. Si vous voulez une propriété d’écriture seulement, effacer le nom de fonction Get.
+1. Si vous souhaitez une propriété en lecture seule, effacez le nom de la fonction Set. Si vous souhaitez une propriété en écriture seule, effacez le nom de la fonction obtenir.
 
 1. Cliquez sur **Terminer**.
 
-Lorsque vous faites cela, l’Add `SetNotSupported` Property `GetNotSupported` Wizard insère la fonction ou dans l’entrée de la carte de répartition à la place d’un ensemble normal ou de la fonction Get.
+Dans ce cas, l’Assistant Ajout de propriété insère la fonction `SetNotSupported` ou `GetNotSupported` dans l’entrée de la table de dispatch à la place d’une fonction Set ou obtenir normale.
 
-Si vous souhaitez modifier une propriété existante pour être lue uniquement ou écrire uniquement, vous pouvez modifier manuellement la carte de répartition et supprimer la fonction d’ensemble ou d’obtenir inutile de la classe de contrôle.
+Si vous souhaitez modifier une propriété existante pour qu’elle soit en lecture seule ou en écriture seule, vous pouvez modifier la table de dispatch manuellement et supprimer la fonction Set ou obtenir inutile de la classe de contrôle.
 
-Si vous voulez qu’une propriété soit lue sous condition seulement ou qu’elle n’écrit que (par exemple, seulement lorsque votre `SetNotSupported` `GetNotSupported` contrôle fonctionne dans un mode particulier), vous pouvez fournir la fonction Set or Get, comme d’habitude, et appeler le ou la fonction le cas échéant. Par exemple :
+Si vous souhaitez qu’une propriété soit en lecture seule ou en écriture seule (par exemple, uniquement lorsque votre contrôle fonctionne dans un mode particulier), vous pouvez fournir la fonction Set ou obtenir, comme d’habitude, et appeler la `SetNotSupported` fonction ou le `GetNotSupported` cas échéant. Par exemple :
 
-[!code-cpp[NVC_MFC_AxUI#29](../mfc/codesnippet/cpp/mfc-activex-controls-advanced-property-implementation_1.cpp)]
+[!code-cpp[NVC_MFC_AxUI#29](codesnippet/cpp/mfc-activex-controls-advanced-property-implementation_1.cpp)]
 
-Cet échantillon `SetNotSupported` de `m_bReadOnlyMode` code appelle si le membre des données est **VRAI**. Si **FALSE**, alors la propriété est réglée à la nouvelle valeur.
+Cet exemple de code appelle `SetNotSupported` si le `m_bReadOnlyMode` membre de données a la **valeur true**. Si la valeur est **false**, la propriété est définie sur la nouvelle valeur.
 
-## <a name="returning-error-codes-from-a-property"></a><a name="_core_returning_error_codes_from_a_property"></a>Retour des codes d’erreur d’une propriété
+## <a name="returning-error-codes-from-a-property"></a><a name="_core_returning_error_codes_from_a_property"></a>Renvoi de codes d’erreur à partir d’une propriété
 
-Pour indiquer qu’une erreur s’est produite en `COleControl::ThrowError` tentant d’obtenir ou de définir une propriété, utilisez la fonction, qui prend un SCODE (code d’état) comme paramètre. Vous pouvez utiliser un SCODE prédéfini ou définir l’un des vôtres. Pour une liste de SCODE prédéfinis et des instructions pour définir les SCODE personnalisés, voir [erreurs de manipulation dans votre contrôle ActiveX](../mfc/mfc-activex-controls-advanced-topics.md) dans l’article ActiveX contrôles: Sujets avancés.
+Pour indiquer qu’une erreur s’est produite lors de la tentative d’obtenir ou de définir une propriété, utilisez la `COleControl::ThrowError` fonction, qui prend un SCODE (code d’État) comme paramètre. Vous pouvez utiliser un SCODE prédéfini ou définir l’un de vos propres. Pour obtenir la liste des SCODEs prédéfinis et des instructions permettant de définir des SCODEs personnalisés, consultez [gestion des erreurs dans votre contrôle ActiveX](mfc-activex-controls-advanced-topics.md) dans l’article contrôles ActiveX : Rubriques avancées.
 
-Les fonctions d’aide existent pour les SCODE prédéfinis les plus communs, telles que [COleControl::SetNotSupported](../mfc/reference/colecontrol-class.md#setnotsupported), [COleControl::GetNotSupported](../mfc/reference/colecontrol-class.md#getnotsupported), et [COleControl::SetNotPermitted](../mfc/reference/colecontrol-class.md#setnotpermitted).
+Les fonctions d’assistance existent pour les SCODEs prédéfinis les plus courants, tels que [COleControl :: SetNotSupported](reference/colecontrol-class.md#setnotsupported), [COleControl :: GetNotSupported](reference/colecontrol-class.md#getnotsupported)et [COleControl :: SetNotPermitted](reference/colecontrol-class.md#setnotpermitted).
 
 > [!NOTE]
-> `ThrowError`est destiné à être utilisé uniquement comme un moyen de retourner une erreur à partir de l’intérieur d’une propriété Get or Set fonction ou une méthode d’automatisation. Ce sont les seules fois où le gestionnaire d’exception approprié sera présent sur la pile.
+> `ThrowError`est destiné à être utilisé uniquement comme moyen de retourner une erreur à partir d’une fonction d’extraction ou de définition d’une propriété ou d’une méthode Automation. Il s’agit de la seule fois où le gestionnaire d’exceptions approprié sera présent sur la pile.
 
-Pour plus d’informations sur les exceptions de rapport dans d’autres domaines du code, voir [COleControl::FireError](../mfc/reference/colecontrol-class.md#fireerror) et la section [Fautes de manipulation dans votre contrôle ActiveX](../mfc/mfc-activex-controls-advanced-topics.md) dans l’article ActiveX Controls: Advanced Topics.
+Pour plus d’informations sur la création de rapports d’exceptions dans d’autres zones du code, consultez [COleControl :: FireError (](reference/colecontrol-class.md#fireerror) et la section [gestion des erreurs dans votre contrôle ActiveX](mfc-activex-controls-advanced-topics.md) dans l’article contrôles ActiveX : Rubriques avancées.
 
 ## <a name="see-also"></a>Voir aussi
 
-[Contrôles ActiveX MFC](../mfc/mfc-activex-controls.md)<br/>
-[Contrôles ActiveX MFC : propriétés](../mfc/mfc-activex-controls-properties.md)<br/>
-[Contrôles ActiveX MFC : méthodes](../mfc/mfc-activex-controls-methods.md)<br/>
-[COleControl, classe](../mfc/reference/colecontrol-class.md)
+[Contrôles ActiveX MFC](mfc-activex-controls.md)<br/>
+[Contrôles ActiveX MFC : propriétés](mfc-activex-controls-properties.md)<br/>
+[Contrôles ActiveX MFC : méthodes](mfc-activex-controls-methods.md)<br/>
+[COleControl, classe](reference/colecontrol-class.md)
