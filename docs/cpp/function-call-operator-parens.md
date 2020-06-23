@@ -1,6 +1,6 @@
 ---
-title: "Opérateur d'appel de fonction : ()"
-ms.date: 11/04/2016
+title: 'Opérateur d’appel de fonction : ()'
+ms.date: 06/11/2020
 helpviewer_keywords:
 - ( ) function call operator
 - function calls, C++ functions
@@ -10,48 +10,54 @@ helpviewer_keywords:
 - functions [C++], function-call operator
 - function call operator ()
 ms.assetid: 50c92e59-a4bf-415a-a6ab-d66c679ee80a
-ms.openlocfilehash: 08c60ff261e944ed5b54b51a013a6d331f212154
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+no-loc:
+- opt
+ms.openlocfilehash: 59fd36a5ae135c55813019f04b0f5df4be2800b3
+ms.sourcegitcommit: 2d7550d0f375aafa428ef0fb2e3962e4232be28e
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80179768"
+ms.lasthandoff: 06/15/2020
+ms.locfileid: "84777303"
 ---
 # <a name="function-call-operator-"></a>Opérateur d'appel de fonction : ()
 
-Une expression postfixer suivie de l’opérateur d’appel de fonction, **()** , spécifie un appel de fonction.
+Un appel de fonction est un type de *`postfix-expression`* , formé par une expression qui identifie une fonction suivie par l’opérateur d’appel de fonction, **`()`** . Un objet peut déclarer une `operator ()` fonction qui fournit la sémantique d’appel de fonction pour l’objet.
 
-## <a name="syntax"></a>Syntaxe
+## <a name="syntax"></a>Syntax
 
-```
-postfix-expression
-( [argument-expression-list ] )
-```
+> *`postfix-expression`*:\
+> &nbsp;&nbsp;&nbsp;&nbsp;*`postfix-expression`* **`(`** *`argument-expression-list`* <sub>opt</sub> **`)`**
 
-## <a name="remarks"></a>Notes
+## <a name="remarks"></a>Remarques
 
-Les arguments de l’opérateur d’appel de fonction sont zéro expression ou plus séparées par des virgules, les arguments réels de la fonction.
+Les arguments de l’opérateur d’appel de fonction proviennent d’un *`argument-expression-list`* , d’une liste d’expressions séparées par des virgules. Les valeurs de ces expressions sont passées à la fonction en tant qu’arguments. L' *argument-expression-List* peut être vide. Avant C++ 17, l’ordre d’évaluation de l’expression de fonction et des expressions d’argument n’est pas spécifié et peut se produire dans n’importe quel ordre. Dans C++ 17 et versions ultérieures, l’expression de fonction est évaluée avant toute expression d’argument ou argument par défaut. Les expressions d’arguments sont évaluées dans une séquence indéterminée.
 
-*Postfix-expression* doit correspondre à une adresse de fonction (par exemple, un identificateur de fonction ou la valeur d’un pointeur de fonction), et *argument-expression-List* est une liste d’expressions (séparées par des virgules) dont les valeurs (les arguments) sont passées à la fonction. L’argument *argument-expression-list* peut être vide.
+*`postfix-expression`* Identifie la fonction à appeler. Il doit correspondre à une adresse de fonction. Il peut prendre l’une des formes suivantes :
 
-*Postfix-expression* doit être de l’un des types suivants :
+- un pointeur ou un nom d’objet de fonction ou de fonction,
+- expression lvalue qui fait référence à une fonction ou à un objet de fonction,
+- accesseur de fonction membre, explicite ou implicite.
+
+La fonction spécifiée par *`postfix-expression`* peut être une fonction surchargée. Les règles habituelles pour la résolution de surcharge déterminent la fonction réelle à appeler.
+
+Exemples de déclarations :
 
 - Fonction retournant le type `T`. Voici un exemple de déclaration
 
     ```cpp
-    T func( int i )
+    T func( int i );
     ```
 
 - Pointeur d'une fonction qui retourne le type `T`. Voici un exemple de déclaration
 
     ```cpp
-    T (*func)( int i )
+    T (*func)( int i );
     ```
 
 - Référence à une fonction qui retourne le type `T`. Voici un exemple de déclaration
 
     ```cpp
-    T (&func)(int i)
+    T (&func)(int i);
     ```
 
 - Déréférencement de fonction de pointeur de membre qui retourne le type `T`. Voici des exemples d'appels de fonction
@@ -97,7 +103,7 @@ Welcome to C++
 
 ## <a name="function-call-results"></a>Résultats de l'appel de fonction
 
-Un appel de fonction prend une r-value, sauf si la fonction est déclarée en tant que type de référence. Les fonctions avec type de retour de référence ont des l-values et peuvent être utilisées à gauche d’une instruction d’assignation, comme suit :
+Un appel de fonction prend la valeur Rvalue, sauf si la fonction est déclarée en tant que type référence. Les fonctions avec des types de retour de référence prennent la valeur lvalues. Ces fonctions peuvent être utilisées sur le côté gauche d’une instruction d’assignation, comme illustré ici :
 
 ```cpp
 // expre_Function_Call_Results.cpp
@@ -129,9 +135,9 @@ int main()
 }
 ```
 
-Le code précédent définit une classe appelée `Point`, qui contient des objets de données privés qui représentent les coordonnées *x* et *y* . Ces objets de données doivent être modifiés et leurs valeurs, récupérées. Ce programme n'est qu'une des nombreuses conceptions de ce type de classe ; l'utilisation des fonctions `GetX` et `SetX` ou `GetY` et `SetY` est une autre conception possible.
+Le code précédent définit une classe appelée `Point` , qui contient des objets de données privés qui représentent les coordonnées *x* et *y* . Ces objets de données doivent être modifiés et leurs valeurs, récupérées. Ce programme n'est qu'une des nombreuses conceptions de ce type de classe ; l'utilisation des fonctions `GetX` et `SetX` ou `GetY` et `SetY` est une autre conception possible.
 
-Les fonctions qui retournent des types de classe, des pointeurs vers des types de classe ou des références à des types de classe peuvent être utilisées comme opérande gauche pour les opérateurs de sélection de membres. Par conséquent, le code suivant est conforme :
+Les fonctions qui retournent des types de classe, des pointeurs vers des types de classe ou des références à des types de classe peuvent être utilisées comme opérande gauche pour les opérateurs de sélection de membres. Le code suivant est légal :
 
 ```cpp
 // expre_Function_Results2.cpp
@@ -179,5 +185,5 @@ Les fonctions peuvent être appelées de manière récursive. Pour plus d’info
 ## <a name="see-also"></a>Voir aussi
 
 [Expressions suffixées](../cpp/postfix-expressions.md)<br/>
-[Opérateurs intégrés, priorité et associativité C++](../cpp/cpp-built-in-operators-precedence-and-associativity.md)<br/>
-[Appel de fonction ](../c-language/function-call-c.md)
+[Opérateurs, priorité et associativité C++ intégrés](../cpp/cpp-built-in-operators-precedence-and-associativity.md)<br/>
+[Appel de fonction](../c-language/function-call-c.md)

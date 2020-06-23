@@ -4,20 +4,20 @@ ms.date: 04/28/2018
 ms.topic: conceptual
 f1_keywords:
 - vs.codeanalysis.rulesets.native
-ms.openlocfilehash: 5cf0f88c6937f4c1609a29fd618af0fdadad4437
-ms.sourcegitcommit: 7bea0420d0e476287641edeb33a9d5689a98cb98
+ms.openlocfilehash: 233a5f8a549e33f63350115d90c7e7e6b5f6937b
+ms.sourcegitcommit: f9344b09a734e8b05a7494415991a22b7aec5ae8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/17/2020
-ms.locfileid: "77418717"
+ms.lasthandoff: 06/23/2020
+ms.locfileid: "85269713"
 ---
-# <a name="use-rule-sets-to-specify-the-c-rules-to-run"></a>Utiliser des ensembles de règles pour C++ spécifier les règles à exécuter
+# <a name="use-rule-sets-to-specify-the-c-rules-to-run"></a>Utiliser des ensembles de règles pour spécifier les règles C++ à exécuter
 
-Dans Visual Studio, vous pouvez créer et modifier un *ensemble de règles* personnalisé pour répondre à des besoins de projet spécifiques associés à l’analyse du code. Les ensembles de règles par défaut sont stockés dans `%VSINSTALLDIR%\Team Tools\Static Analysis Tools\Rule Sets`.
+Dans Visual Studio, vous pouvez créer et modifier un *ensemble de règles* personnalisé pour répondre à des besoins de projet spécifiques associés à l’analyse du code. Les ensembles de règles par défaut sont stockés dans `%VSINSTALLDIR%\Team Tools\Static Analysis Tools\Rule Sets` .
 
 **Visual Studio 2017 version 15,7 et versions ultérieures :** Vous pouvez créer des ensembles de règles personnalisés à l’aide de n’importe quel éditeur de texte et les appliquer dans les builds de ligne de commande, quel que soit le système de génération que vous utilisez. Pour plus d’informations, consultez [/analyze : RuleSet](/cpp/build/reference/analyze-code-analysis).
 
-Pour créer un ensemble C++ de règles personnalisé dans Visual Studio, un projetC++ C/doit être ouvert dans l’IDE de Visual Studio. Vous ouvrez ensuite un ensemble de règles standard dans l’éditeur d’ensembles de règles, puis vous ajoutez ou supprimez des règles spécifiques et modifiez éventuellement l’action qui se produit lorsque l’analyse du code détermine qu’une règle a été violée.
+Pour créer un ensemble de règles C++ personnalisé dans Visual Studio, un projet C/C++ doit être ouvert dans l’IDE de Visual Studio. Vous ouvrez ensuite un ensemble de règles standard dans l’éditeur d’ensembles de règles, puis vous ajoutez ou supprimez des règles spécifiques et modifiez éventuellement l’action qui se produit lorsque l’analyse du code détermine qu’une règle a été violée.
 
 Pour créer un ensemble de règles personnalisé, enregistrez-le à l’aide d’un nouveau nom de fichier. L’ensemble de règles personnalisé est automatiquement affecté au projet.
 
@@ -33,7 +33,7 @@ Pour créer un ensemble de règles personnalisé, enregistrez-le à l’aide d�
 
      \- ou -
 
-   - Choisir **\<parcourir... >** pour spécifier un ensemble de règles existant qui ne figure pas dans la liste.
+   - Choisissez **\<Browse...>** de spécifier un ensemble de règles existant qui ne figure pas dans la liste.
 
 1. Choisissez **ouvrir** pour afficher les règles dans l’éditeur d’ensembles de règles.
 
@@ -61,7 +61,7 @@ Pour créer un ensemble de règles personnalisé, enregistrez-le à l’aide d�
 
 - Pour réduire les règles de tous les groupes, choisissez **réduire tout**.
 
-- Pour modifier le champ par lequel les règles sont regroupées, choisissez le champ dans la liste **regrouper par** . Pour afficher les règles non groupées, choisissez **\<aucun >** .
+- Pour modifier le champ par lequel les règles sont regroupées, choisissez le champ dans la liste **regrouper par** . Pour afficher les règles non groupées, choisissez **\<None>** .
 
 - Pour ajouter ou supprimer des champs dans les colonnes de règles, choisissez **options de colonne**.
 
@@ -77,7 +77,7 @@ Pour créer un ensemble de règles personnalisé, enregistrez-le à l’aide d�
 
 ## <a name="to-create-a-rule-set-in-a-text-editor"></a>Pour créer un ensemble de règles dans un éditeur de texte
 
-Vous pouvez créer un ensemble de règles personnalisé dans un éditeur de texte, le stocker dans n’importe quel emplacement avec une extension de `.ruleset` et l’appliquer à l’aide de l’option de compilateur [/analyze : RuleSet](/cpp/build/reference/analyze-code-analysis) .
+Vous pouvez créer un ensemble de règles personnalisé dans un éditeur de texte, le stocker dans n’importe quel emplacement avec une `.ruleset` extension et l’appliquer à l’aide de l’option de compilateur [/analyze : RuleSet](/cpp/build/reference/analyze-code-analysis) .
 
 L’exemple suivant montre un fichier d’ensemble de règles de base que vous pouvez utiliser comme point de départ :
 
@@ -108,3 +108,145 @@ L’exemple suivant montre un fichier d’ensemble de règles de base que vous p
 ```
 
 ::: moniker-end
+
+## <a name="ruleset-schema"></a>Schéma de l’ensemble de règles
+
+Le schéma RuleSet suivant décrit le schéma XML d’un fichier RuleSet. Le schéma de l’ensemble de règles est stocké dans `%VSINSTALLDIR%\Team Tools\Static Analysis Tools\Schemas\RuleSet.xsd` . Vous pouvez l’utiliser pour créer vos propres RuleSet par programme ou pour valider si vos ensembles de règles personnalisés respectent le format correct. Pour plus d’informations, consultez [Comment : créer un document XML basé sur un schéma XSD](https://docs.microsoft.com/visualstudio/xml-tools/how-to-create-an-xml-document-based-on-an-xsd-schema?view=vs-2019).
+
+```xml
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+
+  <xs:annotation>
+    <xs:documentation xml:lang="en">
+            Visual Studio Code Analysis Rule Set Schema Definition Language.
+            Copyright (c) Microsoft Corporation. All rights reserved.
+        </xs:documentation>
+  </xs:annotation>
+
+  <!-- Every time this file changes, be sure to change the Validate method for the corresponding object in the code -->
+
+  <xs:element name="RuleSet" type="TRuleSet">
+  </xs:element>
+
+  <xs:complexType name="TLocalization">
+    <xs:all>
+      <xs:element name="Name" type="TName" minOccurs="0" maxOccurs="1" />
+      <xs:element name="Description" type="TDescription" minOccurs="0" maxOccurs="1" />
+    </xs:all>
+    <xs:attribute name="ResourceAssembly" type="TNonEmptyString" use="required" />
+    <xs:attribute name="ResourceBaseName" type="TNonEmptyString" use="required" />
+  </xs:complexType>
+
+  <xs:complexType name="TRuleHintPaths">
+    <xs:sequence>
+      <xs:element name="Path" type="TNonEmptyString" minOccurs="0" maxOccurs="unbounded" />
+    </xs:sequence>
+  </xs:complexType>
+  
+  <xs:complexType name="TName">
+    <xs:attribute name="Resource" type="TNonEmptyString" use="required" />
+  </xs:complexType>
+
+  <xs:complexType name="TDescription">
+    <xs:attribute name="Resource" type="TNonEmptyString" use="required" />
+  </xs:complexType>
+
+  <xs:complexType name="TInclude">
+    <xs:attribute name="Path" type="TNonEmptyString" use="required" />
+    <xs:attribute name="Action" type="TIncludeAction" use="required" />
+  </xs:complexType>
+
+  <xs:complexType name="TIncludeAll">
+    <xs:attribute name="Action" type="TIncludeAllAction" use="required" />
+  </xs:complexType>
+
+  <xs:complexType name="TRule">
+    <xs:attribute name="Id" type="TNonEmptyString" use="required" />
+    <xs:attribute name="Action" type="TRuleAction" use="required" />
+  </xs:complexType>
+
+  <xs:complexType name="TRules">
+    <xs:sequence>
+      <xs:element name="Rule" type="TRule" minOccurs="0" maxOccurs="unbounded" />
+    </xs:sequence>
+    <xs:attribute name="AnalyzerId" type="TNonEmptyString" use="required" />
+    <xs:attribute name="RuleNamespace" type="TNonEmptyString" use="required" />
+  </xs:complexType>
+
+  <xs:complexType name="TRuleSet">
+    <xs:sequence minOccurs="0" maxOccurs="1">
+      <xs:element name="Localization" type="TLocalization" minOccurs="0" maxOccurs="1" />
+      <xs:element name="RuleHintPaths" type="TRuleHintPaths" minOccurs="0" maxOccurs="1" />
+      <xs:element name="IncludeAll" type="TIncludeAll" minOccurs="0" maxOccurs="1" />
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="Include" type="TInclude" minOccurs="0" maxOccurs="unbounded" />
+        <xs:element name="Rules" type="TRules" minOccurs="0" maxOccurs="unbounded">
+          <xs:unique name="UniqueRuleName">
+            <xs:selector xpath="Rule" />
+            <xs:field xpath="@Id" />
+          </xs:unique>
+        </xs:element>
+      </xs:choice>
+    </xs:sequence>
+    <xs:attribute name="Name" type="TNonEmptyString" use="required" />
+    <xs:attribute name="Description" type="xs:string" use="optional" />
+    <xs:attribute name="ToolsVersion" type="TNonEmptyString" use="required" />
+  </xs:complexType>
+
+  <xs:simpleType name="TRuleAction">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Error"/>
+      <xs:enumeration value="Warning"/>
+      <xs:enumeration value="Info"/>
+      <xs:enumeration value="Hidden"/>
+      <xs:enumeration value="None"/>
+    </xs:restriction>
+  </xs:simpleType>
+
+  <xs:simpleType name="TIncludeAction">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Error"/>
+      <xs:enumeration value="Warning"/>
+      <xs:enumeration value="Info"/>
+      <xs:enumeration value="Hidden"/>
+      <xs:enumeration value="None"/>
+      <xs:enumeration value="Default"/>
+    </xs:restriction>
+  </xs:simpleType>
+
+  <xs:simpleType name="TIncludeAllAction">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Error"/>
+      <xs:enumeration value="Warning"/>
+      <xs:enumeration value="Info"/>
+      <xs:enumeration value="Hidden"/>
+    </xs:restriction>
+  </xs:simpleType>
+
+  <xs:simpleType name="TNonEmptyString">
+    <xs:restriction base="xs:string">
+      <xs:minLength value="1" />
+    </xs:restriction>
+  </xs:simpleType>
+  
+</xs:schema>
+
+```
+
+Détails de l’élément de schéma :
+
+- TLocalization : informations de localisation, y compris le nom du fichier RuleSet, la description du fichier RuleSet, le nom de l’assembly de ressources contenant la ressource localisée et le nom de base de la ressource localisée.
+- TRuleHintPaths : chemins d’accès aux fichiers utilisés comme indications pour rechercher des fichiers RuleSet.
+- TName : nom du fichier RuleSet actuel.
+- TDescription : description du fichier RuleSet actuel.
+- TInclude : chemin d’accès à un ensemble de règles inclus avec une action de règle.
+- TIncludeAll : action de règle pour toutes les règles.
+- TRule : ID de règle avec action de règle.
+- TRules : collection d’une ou plusieurs règles.
+- TRuleSet : le format de fichier RuleSet constitué d’informations de localisation, de chemins d’accès aux indicateurs de règle, inclut toutes les informations, inclut des informations, des informations sur les règles, un nom, une description et des informations sur la version des outils.
+- TRuleAction : énumération décrivant une action de règle, telle qu’une erreur, un avertissement, une info, un élément masqué ou aucun.
+- TIncludeAction : énumération décrivant une action de règle, telle qu’une erreur, un avertissement, une info, masqué, aucun ou par défaut.
+- TIncludeAllAction : énumération décrivant une action de règle, telle qu’une erreur, un avertissement, une info ou un masqué.
+
+Pour voir un exemple d’ensemble de règles, consultez [pour créer un ensemble de règles dans un éditeur de texte](#to-create-a-rule-set-in-a-text-editor)ou l’un des ensembles de règles par défaut stockés dans `%VSINSTALLDIR%\Team Tools\Static Analysis Tools\Rule Sets` .

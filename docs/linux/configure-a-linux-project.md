@@ -1,13 +1,13 @@
 ---
 title: Configurer un projet Linux C++ dans Visual Studio
-ms.date: 06/11/2019
+ms.date: 06/22/2020
 ms.assetid: 4d7c6adf-54b9-4b23-bd23-5de0c825b768
-ms.openlocfilehash: c60fd678caef20d8b5a715b0e40bba6a37407709
-ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
+ms.openlocfilehash: 6bc38e925e366804c8fe37604066b7cc20e04f15
+ms.sourcegitcommit: f9344b09a734e8b05a7494415991a22b7aec5ae8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84623596"
+ms.lasthandoff: 06/23/2020
+ms.locfileid: "85269739"
 ---
 # <a name="configure-a-linux-project"></a>Configurer un projet Linux
 
@@ -33,7 +33,7 @@ Vous pouvez configurer un projet Linux pour cibler une machine Linux physique, u
 
 ## <a name="general-settings"></a>Paramètres généraux :
 
-Pour afficher les options de configuration, sélectionnez le menu **Projet > Propriétés** ou cliquez avec le bouton droit sur le projet dans l’**Explorateur de solutions** et sélectionnez **Propriétés** dans le menu contextuel. Les paramètres généraux s’affichent dans la section **Général**.
+Pour afficher les options de configuration, sélectionnez le menu **Propriétés du projet >** , ou cliquez avec le bouton droit sur le projet dans **Explorateur de solutions** et sélectionnez **Propriétés** dans le menu contextuel. Les paramètres généraux s’affichent dans la section **Général**.
 
 ![Configuration générale](media/settings_general.png)
 
@@ -43,7 +43,7 @@ Pour plus d’informations sur les paramètres dans les pages de propriétés, c
 
 ## <a name="remote-settings"></a>Paramètres distants
 
-Pour changer les paramètres relatifs à l’ordinateur Linux distant, configurez les paramètres distants affichés sous [Général](prop-pages/general-linux.md).
+Pour modifier les paramètres relatifs à l’ordinateur Linux distant, configurez les paramètres distants qui s’affichent sous [général](prop-pages/general-linux.md).
 
 - Pour spécifier un ordinateur Linux cible distant, utilisez l’entrée **Machine de build distante**. Cela vous permet de sélectionner l’une des connexions créées précédemment. Pour créer une entrée, consultez la section [Connexion à votre ordinateur Linux distant](connect-to-your-remote-linux-computer.md).
 
@@ -72,7 +72,7 @@ Pour changer les paramètres relatifs à l’ordinateur Linux distant, configure
 
 ::: moniker range="vs-2019"
 
-Cette section ne s’applique pas quand vous ciblez WSL.
+Cette section ne s’applique pas lorsque vous ciblez WSL.
 
 ::: moniker-end
 
@@ -82,7 +82,7 @@ Lors de la génération sur des systèmes distants, les fichiers sources sur vot
 
 - L’option **Copier les sources** peut être activée et désactivée pour activer et désactiver la copie des fichiers sources sur l’ordinateur distant.
 
-- L’option **Sources supplémentaires à copier** vous permet d’ajouter des fichiers sources supplémentaires qui seront copiés sur le système distant. Vous pouvez spécifier une liste délimitée par des points-virgules ou utiliser la syntaxe **:=** pour spécifier un nom local et distant à utiliser :
+- **Des sources supplémentaires à copier** vous permettent d’ajouter des fichiers sources supplémentaires, qui seront copiés sur le système distant. Vous pouvez spécifier une liste délimitée par des points-virgules ou utiliser la syntaxe **:=** pour spécifier un nom local et distant à utiliser :
 
 `C:\Projects\ConsoleApplication1\MyFile.cpp:=~/projects/ConsoleApplication1/ADifferentName.cpp;C:\Projects\ConsoleApplication1\MyFile2.cpp:=~/projects/ConsoleApplication1/ADifferentName2.cpp;`
 
@@ -122,6 +122,10 @@ Vous pouvez activer la journalisation pour faciliter la résolution des problèm
 ![Journalisation à distance](media/remote-logging-vs2019.png)
 
 ::: moniker-end
+
+## <a name="linux-target-locale"></a><a name="locale"></a>Paramètres régionaux cibles Linux
+
+Les paramètres de langue de Visual Studio ne sont pas propagés aux cibles Linux, car Visual Studio ne gère pas ou ne configure pas les packages installés. Les messages affichés dans la fenêtre **sortie** , tels que les erreurs de build, s’affichent à l’aide de la langue et des paramètres régionaux de la cible Linux. Vous devez configurer vos cibles Linux pour les paramètres régionaux souhaités.
 
 ## <a name="see-also"></a>Voir aussi
 
