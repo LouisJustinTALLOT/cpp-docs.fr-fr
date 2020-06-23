@@ -1,25 +1,25 @@
 ---
 title: Mettre à jour WINVER et _WIN32_WINNT
 description: Quand et comment mettre à jour WINVER et _WIN32_WINNT macros dans des projets Visual Studio C++ mis à niveau.
-ms.date: 01/22/2020
+ms.date: 06/19/2020
 helpviewer_keywords:
 - WINVER in an upgraded Visual Studio C++ project
 - _WIN32_WINNT in an upgraded Visual Studio C++ project
 ms.assetid: 6a1f1d66-ae0e-48a7-81c3-524d8e8f3447
-ms.openlocfilehash: b81c7967732c7b0c23ff0eb73d2a866a9b33713b
-ms.sourcegitcommit: b67b08472b6f1ee8f1c5684bba7056d3e0fc745f
+ms.openlocfilehash: a0faed612517bf26cd89473e1aef248fb9e7b33e
+ms.sourcegitcommit: 493fd8747f832e1facb9a76c437a25a5c9fb55f6
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/24/2020
-ms.locfileid: "76725694"
+ms.lasthandoff: 06/22/2020
+ms.locfileid: "85141052"
 ---
 # <a name="update-winver-and-_win32_winnt"></a>Mettre à jour WINVER et _WIN32_WINNT
 
-Lorsque vous utilisez l’SDK Windows, vous pouvez spécifier les versions de Windows sur lesquelles votre code peut s’exécuter. Les macros de préprocesseur **winver** et **_WIN32_WINNT** spécifient la version minimale du système d’exploitation que votre code prend en charge. Visual Studio et le compilateur C++ Microsoft prennent en charge le ciblage de Windows 7 SP1 et versions ultérieures. Les ensembles d’outils plus anciens incluent la prise en charge de Windows XP SP4, Windows Server 2003 SP4, Vista et Windows Server 2008. Windows 95, Windows 98, Windows ME, Windows NT et Windows 2000 ne sont pas pris en charge.
+Lorsque vous utilisez l’SDK Windows, vous pouvez spécifier les versions de Windows sur lesquelles votre code peut s’exécuter. Les macros de préprocesseur **winver** et **_WIN32_WINNT** spécifient la version minimale du système d’exploitation que votre code prend en charge. Visual Studio et le compilateur Microsoft C++ prennent en charge le ciblage de Windows 7 SP1 et versions ultérieures. Les ensembles d’outils plus anciens incluent la prise en charge de Windows XP SP2, Windows Server 2003 SP1, Vista et Windows Server 2008. Windows 95, Windows 98, Windows ME, Windows NT et Windows 2000 ne sont pas pris en charge.
 
 Lorsque vous mettez à niveau un ancien projet, vous devrez peut-être mettre à jour vos macros **winver** ou **_WIN32_WINNT** . S’il s’agit de valeurs affectées à une version non prise en charge de Windows, vous pouvez voir des erreurs de compilation liées à ces macros.
 
-## <a name="remarks"></a>Notes
+## <a name="remarks"></a>Remarques
 
 Pour modifier les macros, dans un fichier d’en-tête (par exemple, dans *targetver. h*, qui est inclus par certains modèles de projet qui ciblent Windows), ajoutez les lignes suivantes.
 
