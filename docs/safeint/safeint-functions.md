@@ -1,6 +1,6 @@
 ---
 title: SafeInt, fonctions
-ms.date: 10/22/2018
+ms.date: 06/23/2020
 ms.topic: reference
 f1_keywords:
 - SafeInt functions
@@ -31,16 +31,16 @@ helpviewer_keywords:
 - SafeNotEquals function
 - SafeSubtract function
 ms.assetid: fdc208e5-5d8a-41a9-8271-567fd438958d
-ms.openlocfilehash: 585fd30715ff3520245210badc0fde2e2f87ae13
-ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
+ms.openlocfilehash: 9af34e7dcb13f54b824088fa81b6d5a7145c6ae5
+ms.sourcegitcommit: 8645408c7929558b8162f781776d0908d790a41c
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84622073"
+ms.lasthandoff: 06/24/2020
+ms.locfileid: "85334920"
 ---
 # <a name="safeint-functions"></a>SafeInt, fonctions
 
-La bibliothèque SafeInt fournit plusieurs fonctions que vous pouvez utiliser sans créer d’instance de la [classe SafeInt](safeint-class.md). Vous pouvez utiliser ces fonctions si vous souhaitez protéger une seule opération mathématique contre les dépassements d’entiers. Si vous souhaitez protéger plusieurs opérations mathématiques, vous devez créer des objets `SafeInt`. Il est plus efficace de créer des objets `SafeInt` plutôt que d’utiliser ces fonctions plusieurs fois.
+La bibliothèque SafeInt fournit plusieurs fonctions que vous pouvez utiliser sans créer d’instance de la [classe SafeInt](safeint-class.md). Vous pouvez utiliser ces fonctions si vous souhaitez protéger une seule opération mathématique contre les dépassements d’entiers. Si vous souhaitez protéger plusieurs opérations mathématiques, vous devez créer des objets `SafeInt`. Il est plus efficace de créer des `SafeInt` objets que d’utiliser ces fonctions plusieurs fois.
 
 Ces fonctions permettent de comparer ou d’effectuer des opérations mathématiques sur deux types de paramètres sans avoir à les convertir vers le même type.
 
@@ -136,10 +136,10 @@ inline bool SafeDivide (
 ### <a name="parameters"></a>Paramètres
 
 *t*<br/>
-[in] Diviseur. Il doit être de type T.
+[in] Dividende. Il doit être de type T.
 
 *u*<br/>
-[in] Dividende. Il doit être de type U.
+[in] Diviseur. Il doit être de type U.
 
 *result*<br/>
 [out] Le paramètre dans lequel `SafeDivide` stocke le résultat.
@@ -172,7 +172,7 @@ inline bool SafeEquals (
 
 **true** si *t* et *u* sont égaux ; sinon, **false**.
 
-### <a name="remarks"></a>Notes
+### <a name="remarks"></a>Remarques
 
 La méthode améliore `==` car `SafeEquals` vous permet de comparer deux types de nombres différents.
 
@@ -200,7 +200,7 @@ inline bool SafeGreaterThan (
 
 **true** si *t* est supérieur à *u* ; sinon, **false**.
 
-### <a name="remarks"></a>Notes
+### <a name="remarks"></a>Remarques
 
 `SafeGreaterThan` étend l’opérateur de comparaison régulier en vous permettant de comparer deux types de nombres différents.
 
@@ -228,7 +228,7 @@ inline bool SafeGreaterThanEquals (
 
 **true** si *t* est supérieur ou égal à *u* ; sinon, **false**.
 
-### <a name="remarks"></a>Notes
+### <a name="remarks"></a>Remarques
 
 `SafeGreaterThanEquals` améliore l’opérateur de comparaison standard en vous permettant de comparer deux types de nombres différents.
 
@@ -250,13 +250,13 @@ inline bool SafeLessThan (
 [in] Premier nombre. Il doit être de type `T`.
 
 *u*<br/>
-[in] Deuxième nombre. Il doit être de type `U`.
+dans Deuxième nombre. Il doit être de type `U`.
 
 ### <a name="return-value"></a>Valeur renvoyée
 
 **true** si *t* est inférieur à *u* ; sinon, **false**.
 
-### <a name="remarks"></a>Notes
+### <a name="remarks"></a>Remarques
 
 La méthode améliore l’opérateur de comparaison standard car `SafeLessThan` vous permet de comparer deux types de nombres différents.
 
@@ -284,7 +284,7 @@ inline bool SafeLessThanEquals (
 
 **true** si *t* est inférieur ou égal à *u* ; sinon, **false**.
 
-### <a name="remarks"></a>Notes
+### <a name="remarks"></a>Remarques
 
 `SafeLessThanEquals` étend l’opérateur de comparaison régulier en vous permettant de comparer deux types de nombres différents.
 
@@ -366,9 +366,9 @@ inline bool SafeNotEquals (
 
 ### <a name="return-value"></a>Valeur renvoyée
 
-**true** si *t* et *u* ne sont pas égaux ; sinon, **false**.
+**true** si *t* et *u* ne sont pas égaux ; Sinon, **false**.
 
-### <a name="remarks"></a>Notes
+### <a name="remarks"></a>Remarques
 
 La méthode améliore `!=` car `SafeNotEquals` vous permet de comparer deux types de nombres différents.
 
