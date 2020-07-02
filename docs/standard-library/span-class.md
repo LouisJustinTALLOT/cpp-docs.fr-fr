@@ -51,12 +51,12 @@ helpviewer_keywords:
 - std::span [C++], rend
 - std::span [C++], size
 - std::span [C++], size_bytes
-ms.openlocfilehash: b76c1db2176c27983ccdcd4742f889f5a4d95af6
-ms.sourcegitcommit: 1a8fac06478da8bee1f6d70e25afbad94144af1a
+ms.openlocfilehash: e77f57bc56a75406745349e19d03bc26edc5470d
+ms.sourcegitcommit: 83ea5df40917885e261089b103d5de3660314104
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/30/2020
-ms.locfileid: "84226110"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85813507"
 ---
 # <a name="span-class-c-standard-library"></a>span, classe (bibliothèque standard C++)
 
@@ -100,7 +100,7 @@ class span;
 |[répartis](#span)| Construit un `span` .|
 | **Prise en charge des itérateurs** | **Description** |
 |[commencer](#begin) | Obtient un itérateur pointant vers le premier élément de l’étendue.|
-|[effet](#end) | Obtient un itérateur pointant vers la fin de l’étendue. |
+|[end](#end) | Obtient un itérateur pointant vers la fin de l’étendue. |
 |[rbegin](#rbegin) | Obtient un itérateur inverse pointant vers le dernier élément de l’étendue. autrement dit, le début de l’étendue inversée.|
 |[rend](#rend) | Obtient un itérateur inverse pointant vers le début de l’étendue. autrement dit, la fin de l’étendue inversée.|
 | **Éléments d’accès**| **Description** |
@@ -142,7 +142,7 @@ Obtient le dernier élément de l’étendue.
 constexpr reference back() const noexcept;
 ```
 
-### <a name="return-value"></a>Valeur retournée
+### <a name="return-value"></a>Valeur renvoyée
 
 Référence au dernier élément de l’étendue.
 
@@ -175,7 +175,7 @@ Obtient un itérateur pointant sur le premier élément de l’étendue.
 constexpr iterator begin() const noexcept;
 ```
 
-### <a name="return-value"></a>Valeur retournée
+### <a name="return-value"></a>Valeur renvoyée
 
 Itérateur pointant sur le premier élément de l’étendue.
 
@@ -209,7 +209,7 @@ Obtient un pointeur vers le début des données de l’étendue.
 constexpr pointer data() const noexcept;
 ```
 
-### <a name="return-value"></a>Valeur retournée
+### <a name="return-value"></a>Valeur renvoyée
 
 Pointeur vers le premier élément stocké dans l’étendue.
 
@@ -304,7 +304,7 @@ Indique si l’étendue contient des éléments.
 constexpr bool empty() const noexcept;
 ```
 
-### <a name="return-value"></a>Valeur retournée
+### <a name="return-value"></a>Valeur renvoyée
 
 Retourne `true` si `this->size() == 0` . Sinon, `false`.
 
@@ -332,7 +332,7 @@ Obtient un itérateur à la fin de l’étendue.
 constexpr iterator end() const noexcept;
 ```
 
-### <a name="return-value"></a>Valeur retournée
+### <a name="return-value"></a>Valeur renvoyée
 
 Itérateur pointant juste après la fin de l’étendue.
 
@@ -363,11 +363,11 @@ template <size_t count> constexpr auto first() const noexcept;
 
 ### <a name="parameters"></a>Paramètres
 
-*count*\
+*saut*\
 Nombre d’éléments à partir de l’avant de cette étendue à placer dans la sous-étendue.  
 Le nombre d’éléments est spécifié en tant que paramètre pour le modèle, ou à la fonction, comme illustré ci-dessous.
 
-### <a name="return-value"></a>Valeur retournée
+### <a name="return-value"></a>Valeur renvoyée
 
 Étendue qui contient `count` les éléments de l’avant de cette étendue.
 
@@ -387,14 +387,14 @@ int main()
 {
     int a[] = { 0,1,2 };
     span<int> mySpan(a);
-    
+
     auto first2 = mySpan.first(2);
     cout << "mySpan.first(2): ";
     for (auto& i : first2)
     {
         cout << i;
     }
-    
+
     cout << "\nmySpan.first<2>: ";
     auto viewSpan = mySpan.first<2>();
     for (auto& i : viewSpan)
@@ -417,7 +417,7 @@ Obtient le premier élément de l’étendue.
 constexpr reference front() const noexcept;
 ```
 
-### <a name="return-value"></a>Valeur retournée
+### <a name="return-value"></a>Valeur renvoyée
 
 Référence au premier élément de l’étendue.
 
@@ -488,11 +488,11 @@ template <size_t count> constexpr span<element_type, count> last() const noexcep
 
 ### <a name="parameters"></a>Paramètres
 
-*count*\
+*saut*\
 Nombre d’éléments à partir de la fin de cette étendue à placer dans la sous-étendue.
 Le nombre peut être spécifié comme paramètre pour le modèle ou pour la fonction, comme illustré ci-dessous.
 
-### <a name="return-value"></a>Valeur retournée
+### <a name="return-value"></a>Valeur renvoyée
 
 Étendue contenant les derniers `count` éléments de cette étendue.
 
@@ -512,14 +512,14 @@ int main()
 {
     int a[] = { 0,1,2 };
     span<int> mySpan(a);
-    
+
     auto first2 = mySpan.last(2);
     cout << "mySpan.last(2): ";
     for (auto& i : last2)
     {
         cout << i;
     }
-    
+
     cout << "\nmySpan.last<2>: ";
     auto viewSpan = mySpan.last<2>();
     for (auto& i : viewSpan)
@@ -547,7 +547,7 @@ constexpr reference operator[](size_type offset) const;
 *décalage*\
 Élément de base zéro dans l’étendue à laquelle accéder.
 
-### <a name="return-value"></a>Valeur retournée
+### <a name="return-value"></a>Valeur renvoyée
 
 Référence à l’élément à l' *offset*de position. Si la position n’est pas valide, le comportement n’est pas défini.
 
@@ -584,7 +584,7 @@ constexpr span& operator=(const span& other) noexcept = default;
 *autres*\
 Étendue à assigner à celui-ci.
 
-### <a name="return-value"></a>Valeur retournée
+### <a name="return-value"></a>Valeur renvoyée
 
 `*this`
 
@@ -643,7 +643,7 @@ int main()
     span<int>::pointer ptr = &mySpan[2];
     *ptr = 9;
     cout << mySpan[2];
-    
+
     // const pointer
     span<int>::const_pointer cPtr = &mySpan[0];
     // *cPtr = 9; error - const
@@ -663,7 +663,7 @@ Obtient un itérateur inverse pointant vers le dernier élément de cette étend
 constexpr reverse_iterator rbegin() const noexcept;
 ```
 
-### <a name="return-value"></a>Valeur retournée
+### <a name="return-value"></a>Valeur renvoyée
 
 Itérateur pointant vers le début de l’étendue inversée.
 
@@ -736,7 +736,7 @@ Obtenez un itérateur à accès aléatoire qui pointe juste après la fin de l�
 constexpr reverse_iterator rend() const noexcept;
 ```
 
-### <a name="return-value"></a>Valeur retournée
+### <a name="return-value"></a>Valeur renvoyée
 
 Itérateur inverse de l’espace réservé qui suit le dernier élément de l’étendue inversée ; autrement dit, l’espace réservé avant le premier élément de l’étendue non inversée.
 
@@ -802,7 +802,7 @@ Obtient le nombre d’éléments dans l’étendue.
 constexpr size_t size() const noexcept;
 ```
 
-### <a name="return-value"></a>Valeur retournée
+### <a name="return-value"></a>Valeur renvoyée
 
 Nombre d’éléments dans l’étendue.
 
@@ -834,7 +834,7 @@ Obtient la taille des éléments dans l’étendue, en octets.
 constexpr size_type size_bytes() const noexcept;
 ```
 
-### <a name="return-value"></a>Valeur retournée
+### <a name="return-value"></a>Valeur renvoyée
 
 Nombre d’octets que tous les éléments de l’étendue occupent ; autrement dit, `sizeof(element_type)` multiplié par le nombre d’éléments dans l’étendue.
 
@@ -936,7 +936,7 @@ span(const span<T, OtherExtent>& other) noexcept
 *arr*\
 Construit une étendue à partir d’un tableau.
 
-*count*\
+*saut*\
 Nombre d’éléments qui seront dans l’étendue.
 
 *premier*\
@@ -978,13 +978,13 @@ using namespace std;
 int main()
 {
     const int MAX=10;
-    
+
     int x[MAX];
     for (int i = 0; i < MAX; i++)
     {
         x[i] = i;
     }
-    
+
     span<int, MAX> span1{ x }; // fixed-size span: compiler error if size of x doesn't match template argument MAX
     span<int> span2{ x }; // size is inferred from x
     span<const int> span3 = span2; // converting constructor
@@ -1005,13 +1005,13 @@ constexpr auto subspan() const noexcept
 
 ### <a name="parameters"></a>Paramètres
 
-*count*\
+*saut*\
 Nombre d’éléments à placer dans la sous-étendue. Si `count` a `dynamic_extent` la valeur (valeur par défaut), la sous-étendue est prise de `offset` jusqu’à la fin de cette étendue.
 
 *décalage*\
 Emplacement dans cette étendue pour démarrer la sous-étendue.
 
-### <a name="return-value"></a>Valeur retournée
+### <a name="return-value"></a>Valeur renvoyée
 
 Étendue commençant à `offset` dans cette étendue. Contient des `count` éléments.
 
@@ -1031,7 +1031,7 @@ int main()
 {
     int a[] = { 0,1,2 };
     span<int> mySpan(a);
-    
+
     cout << "mySpan.subspan(1,2): ";
     for (auto& i : mySpan.subspan(1,2))
     {

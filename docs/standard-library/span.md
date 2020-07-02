@@ -5,16 +5,16 @@ f1_keywords:
 - <span>
 helpviewer_keywords:
 - span header
-ms.openlocfilehash: ebd0a30c677ea44f95e64e2d2ba010bc99cb412b
-ms.sourcegitcommit: 1a8fac06478da8bee1f6d70e25afbad94144af1a
+ms.openlocfilehash: 27f27acfa84a3ccc42586593747e4657146cbe39
+ms.sourcegitcommit: 83ea5df40917885e261089b103d5de3660314104
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/30/2020
-ms.locfileid: "84226103"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85813533"
 ---
 # <a name="ltspangt"></a>&lt;répartis&gt;
 
-Un `span` est une vue sur une séquence contiguë d’objets. Il fournit un accès rapide et sécurisé aux limites. Contrairement `vector` `array` à ou, il n’est pas « propriétaire » des éléments auxquels il fournit l’accès. 
+Un `span` est une vue sur une séquence contiguë d’objets. Il fournit un accès rapide et sécurisé aux limites. Contrairement `vector` `array` à ou, il n’est pas « propriétaire » des éléments auxquels il fournit l’accès.
 
 Pour plus d’informations, consultez [classe span](span-class.md) . Voici un exemple de la façon dont une étendue peut être utilisée :
 

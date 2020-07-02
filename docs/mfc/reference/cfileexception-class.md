@@ -24,12 +24,12 @@ helpviewer_keywords:
 - CFileException [MFC], m_lOsError
 - CFileException [MFC], m_strFileName
 ms.assetid: f6491bb9-bfbc-42fd-a952-b33f9b62323f
-ms.openlocfilehash: f58ba02862e9c0f0c0c0d24797be939276ca8035
-ms.sourcegitcommit: 8167c67d76de58a7c2df3b4dcbf3d53e3b151b77
+ms.openlocfilehash: 85ff8d77bda30bcf0b107f733098d07c4fd80283
+ms.sourcegitcommit: 83ea5df40917885e261089b103d5de3660314104
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/10/2020
-ms.locfileid: "84664337"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85813520"
 ---
 # <a name="cfileexception-class"></a>CFileException, classe
 
@@ -67,7 +67,7 @@ class CFileException : public CException
 |[CFileException :: m_lOsError](#m_loserror)|Contient le numéro d’erreur du système d’exploitation associé.|
 |[CFileException :: m_strFileName](#m_strfilename)|Contient le nom du fichier pour cette exception.|
 
-## <a name="remarks"></a>Notes
+## <a name="remarks"></a>Remarques
 
 La `CFileException` classe comprend des membres de données publics qui contiennent le code de cause portable et le numéro d’erreur spécifique au système d’exploitation. La classe fournit également des fonctions membres statiques pour lever des exceptions de fichier et pour retourner des codes de cause à la fois pour les erreurs du système d’exploitation et les erreurs Runtime C.
 
@@ -81,7 +81,7 @@ La `CFileException` classe comprend des membres de données publics qui contienn
 
 `CFileException`
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
 **En-tête :** AFX. h
 
@@ -107,7 +107,7 @@ Raison spécifique au système d’exploitation de l’exception, si elle est di
 *lpszArchiveName*<br/>
 Pointe vers une chaîne contenant le nom de l' `CFile` objet à l’origine de l’exception.
 
-### <a name="remarks"></a>Notes
+### <a name="remarks"></a>Remarques
 
 N’utilisez pas ce constructeur directement, mais appelez plutôt la fonction globale [AfxThrowFileException](exception-processing.md#afxthrowfileexception).
 
@@ -131,7 +131,7 @@ Un code d’erreur entier, tel que défini dans le fichier include au moment de 
 
 Valeur énumérée qui correspond à une valeur d’erreur de la bibliothèque Runtime donnée.
 
-### <a name="remarks"></a>Notes
+### <a name="remarks"></a>Remarques
 
 Consultez [CFileException :: m_cause](#m_cause) pour obtenir la liste des valeurs énumérées possibles.
 
@@ -165,7 +165,7 @@ dans Nombre maximal de caractères que la mémoire tampon spécifiée peut conte
 
 TRUE si la méthode a réussi ; Sinon, FALSe.
 
-### <a name="remarks"></a>Notes
+### <a name="remarks"></a>Remarques
 
 Si la mémoire tampon spécifiée est trop petite, le message d’erreur est tronqué.
 
@@ -183,11 +183,11 @@ Contient des valeurs définies par un type énuméré `CFileException`.
 int m_cause;
 ```
 
-### <a name="remarks"></a>Notes
+### <a name="remarks"></a>Remarques
 
 Ce membre de données est une variable publique de type **int**. Les énumérateurs et leurs significations sont les suivants :
 
-| Erreur | Valeur et signification |
+| Error | Valeur et signification |
 |--|--|
 | `CFileException::none` |    0 : aucune erreur ne s'est produite. |
 | `CFileException::genericException` |    1 : une erreur non spécifiée s'est produite. |
@@ -205,11 +205,11 @@ Ce membre de données est une variable publique de type **int**. Les énumérate
 | `CFileException::diskFull` | 13 : le disque est plein. |
 | `CFileException::endOfFile` | 14 : la fin du fichier a été atteinte. |
 
-    > [!NOTE]
-    >  These `CFileException` cause enumerators are distinct from the `CArchiveException` cause enumerators.
+> [!NOTE]
+> Ces énumérateurs de cause `CFileException` sont distincts des énumérateurs de cause `CArchiveException`.
 
-    > [!NOTE]
-    > `CArchiveException::generic` is deprecated. Use `genericException` instead. If **generic** is used in an application and built with /clr, the resulting syntax errors are not easy to decipher.
+> [!NOTE]
+> `CArchiveException::generic` est déconseillé. Utilisez `genericException` à la place. Si le **générique** est utilisé dans une application et généré avec/CLR, les erreurs de syntaxe qui en résultent ne sont pas faciles à déchiffrer.
 
 ### <a name="example"></a>Exemple
 
@@ -223,7 +223,7 @@ Contient le code d’erreur du système d’exploitation pour cette exception.
 LONG m_lOsError;
 ```
 
-### <a name="remarks"></a>Notes
+### <a name="remarks"></a>Remarques
 
 Pour obtenir la liste des codes d’erreur, consultez le manuel technique de votre système d’exploitation. Ce membre de données est une variable publique de type LONG.
 

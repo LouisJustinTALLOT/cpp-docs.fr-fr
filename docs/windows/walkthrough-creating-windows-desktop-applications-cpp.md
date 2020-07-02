@@ -7,12 +7,12 @@ helpviewer_keywords:
 - Windows applications [C++], Win32
 - Windows Desktop applications [C++]
 - Windows API [C++]
-ms.openlocfilehash: ac141c6ce9e4cce37b72808de488df7f94d116f7
-ms.sourcegitcommit: 426e327c9f7c3a3b02300e3f924f9786d62958e9
+ms.openlocfilehash: 1b084cab0e985f9ab8c593e22d972913130e4380
+ms.sourcegitcommit: 83ea5df40917885e261089b103d5de3660314104
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/29/2020
-ms.locfileid: "84206204"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85813607"
 ---
 # <a name="walkthrough-create-a-traditional-windows-desktop-application-c"></a>Procédure pas à pas : créer une application de bureau Windows traditionnelle (C++)
 
@@ -29,7 +29,7 @@ L’API Windows (également appelée API Win32, Windows Desktop API et Windows A
 
 - Une copie de Visual Studio. Pour plus d’informations sur le téléchargement et l’installation de Visual Studio, consultez [Installer Visual Studio](/visualstudio/install/install-visual-studio). Lorsque vous exécutez le programme d’installation, assurez-vous que la charge de travail **développement Desktop en C++** est activée. Ne vous inquiétez pas si vous n’avez pas installé cette charge de travail en même temps que Visual Studio. Vous pouvez réexécuter le programme d’installation et l’installer maintenant.
 
-   ![Développement Desktop en C++](../build/media/desktop-development-with-cpp.png "Développement Desktop en C++")
+   ![Développement Desktop en C++](../build/media/desktop-development-with-cpp.png "Développement Desktop en C++")
 
 - Une compréhension des principes fondamentaux de l’utilisation de l’IDE Visual Studio. Si vous avez déjà utilisé des applications de bureau Windows, vous n’aurez probablement aucun mal à suivre. Pour une introduction, consultez [Visite guidée des fonctionnalités de l’IDE Visual Studio](/visualstudio/ide/visual-studio-ide).
 
@@ -389,7 +389,7 @@ Ensuite, vous apprendrez à créer le code d’une application de bureau Windows
    ```
 
    `HDC`dans, le code est un handle vers un contexte de périphérique, qui est utilisé pour dessiner dans la zone cliente de la fenêtre. Utilisez les `BeginPaint` `EndPaint` fonctions et pour préparer et terminer le dessin dans la zone cliente. `BeginPaint`retourne un handle vers le contexte de périphérique d’affichage utilisé pour le dessin dans la zone cliente. `EndPaint`met fin à la demande de peinture et libère le contexte de périphérique.
-   
+
 1. Une application gère généralement de nombreux autres messages. Par exemple, [WM_CREATE](/windows/win32/winmsg/wm-create) lorsqu’une fenêtre est créée pour la première fois, et [WM_DESTROY](/windows/win32/winmsg/wm-destroy) lorsque la fenêtre est fermée. Le code suivant illustre une fonction `WndProc` basique mais complète.
 
    ```cpp

@@ -1,31 +1,31 @@
 ---
-title: MFC, Assistants et boîtes de dialogue
-ms.date: 11/04/2016
+title: Assistants et boîtes de dialogue ATL
+ms.date: 06/26/2020
 helpviewer_keywords:
 - ATL, class wizards
 ms.assetid: 51cf002a-83bc-41ba-aeb8-364ea2331375
-ms.openlocfilehash: 1eea4e86d453939f5ba1bdda47906768c8012ba6
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: f2ba981c771572f93e9a452db83c722c817b6428
+ms.sourcegitcommit: 8fd49f8ac20457710ceb5403ca46fc73cb3f95f8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62247755"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85737462"
 ---
-# <a name="atl-wizards-and-dialog-boxes"></a>MFC, Assistants et boîtes de dialogue
+# <a name="atl-wizards-and-dialog-boxes"></a>Assistants et boîtes de dialogue ATL
 
-Les Assistants de la bibliothèque ATL (Active Template) génèrent un code réutilisable pour différents types d’objets COM. Vous pouvez exécuter les Assistants en ouvrant le menu contextuel pour un projet dans **l’Explorateur de solutions** et en choisissant **ajouter**, **classe**.
+Les assistants Active Template Library (ATL) génèrent du code réutilisable pour différents genres d’objets COM. Vous pouvez exécuter les assistants en ouvrant le menu contextuel d’un projet dans **Explorateur de solutions** et en choisissant **Ajouter**, **classe**.
 
-## <a name="related-articles"></a>Articles connexes
+## <a name="related-articles"></a>Articles associés
 
-|Titre|Description|
+|Intitulé|Description|
 |-----------|-----------------|
 |[Création d’un projet ATL](../../atl/reference/creating-an-atl-project.md)|Décrit l’Assistant Projet ATL et ses paramètres.|
 |[Objet simple ATL](../../atl/reference/adding-an-atl-simple-object.md)|Crée un objet de base.|
-|[Page de propriétés ATL](../../atl/reference/adding-an-atl-property-page.md)|Crée une page de propriétés de base.|
-|[Fournisseur OLE DB ATL](../../atl/reference/adding-an-atl-ole-db-provider.md)|Crée un fournisseur OLE DB de base.|
-|[Consommateur ATL OLE DB](../../atl/reference/adding-an-atl-ole-db-consumer.md)|Crée un consommateur OLE DB de base.|
+|[Page de propriétés ATL](../../atl/reference/adding-an-atl-property-page.md)|Crée une page de propriétés de base.</br>Non disponible dans Visual Studio 2019 et versions ultérieures.|
+|[Ajout d’un fournisseur OLE DB ATL](../../atl/reference/adding-an-atl-ole-db-provider.md)|Crée un fournisseur de OLE DB de base.</br>Non disponible dans Visual Studio 2019 et versions ultérieures.|
+|[Consommateur ATL OLE DB](../../atl/reference/adding-an-atl-ole-db-consumer.md)|Crée un consommateur de OLE DB de base.</br>Non disponible dans Visual Studio 2019 et versions ultérieures.|
 |[Boîte de dialogue ATL](../../atl/reference/adding-an-atl-dialog-box.md)|Crée une boîte de dialogue de base.|
 |[Contrôle ATL](../../atl/reference/adding-an-atl-control.md)|Crée un contrôle ActiveX de base.|
-|[Composant ATL COM + 1.0](../../atl/reference/adding-an-atl-com-plus-1-0-component.md)|Crée un composant ATL COM + 1.0 de base|
-|[Composant ASP ATL](../../atl/reference/adding-an-atl-active-server-page-component.md)|Crée un composant ASP ATL de base.|
-|[Composants de bureau COM ATL](../../atl/atl-com-desktop-components.md)|Liens vers la documentation de ATL.|
+|[Ajout d’un composant ATL COM+ 1.0](../../atl/reference/adding-an-atl-com-plus-1-0-component.md)|Crée un composant ATL COM+ 1,0 de base.</br>Non disponible dans Visual Studio 2019 et versions ultérieures.|
+|[Composant ASP ATL](../../atl/reference/adding-an-atl-active-server-page-component.md)|Crée un composant de page Active Server ATL de base.</br>Non disponible dans Visual Studio 2019 et versions ultérieures.|
+|[Composants de bureau COM ATL](../../atl/atl-com-desktop-components.md)|Liens vers la documentation ATL.|

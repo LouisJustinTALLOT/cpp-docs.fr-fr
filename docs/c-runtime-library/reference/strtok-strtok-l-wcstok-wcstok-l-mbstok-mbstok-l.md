@@ -1,6 +1,6 @@
 ---
 title: strtok, _strtok_l, wcstok, _wcstok_l, _mbstok, _mbstok_l
-ms.date: 4/2/2020
+ms.date: 6/24/2020
 api_name:
 - _mbstok_l
 - _mbstok
@@ -53,12 +53,12 @@ helpviewer_keywords:
 - _tcstok_l function
 - strtok_l function
 ms.assetid: 904cb734-f0d7-4d77-ba81-4791ddf461ae
-ms.openlocfilehash: 7d8f0d889d58fe776e53f78955fff7fd1cdfa40f
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: bf59d34c17165f9f5165a5a4bdb82ad5a82c737e
+ms.sourcegitcommit: 8fd49f8ac20457710ceb5403ca46fc73cb3f95f8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82912638"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85737522"
 ---
 # <a name="strtok-_strtok_l-wcstok-_wcstok_l-_mbstok-_mbstok_l"></a>strtok, _strtok_l, wcstok, _wcstok_l, _mbstok, _mbstok_l
 
@@ -82,6 +82,11 @@ char *strtok_l(
 wchar_t *wcstok(
    wchar_t *strToken,
    const wchar_t *strDelimit
+);
+wchar_t *wcstok(
+   wchar_t *strToken,
+   const wchar_t *strDelimit,
+   wchar_t **context
 );
 wchar_t *wcstok_l(
    wchar_t *strToken,
@@ -110,13 +115,18 @@ Jeu de caractères délimiteurs.
 *locale*<br/>
 Paramètres régionaux à utiliser.
 
-## <a name="return-value"></a>Valeur de retour
+*context*<br/>
+Pointe vers la mémoire utilisée pour stocker l’état interne de l’analyseur afin que l’analyseur puisse continuer là où il s’était arrêté la prochaine fois que vous appelez **wcstok**.
+
+## <a name="return-value"></a>Valeur renvoyée
 
 Retourne un pointeur vers le jeton suivant trouvé dans *strToken*. Les fonctions retournent **null** quand aucun jeton supplémentaire n’est trouvé. Chaque appel modifie *strToken* en substituant un caractère null au premier délimiteur qui se produit après le jeton retourné.
 
-## <a name="remarks"></a>Notes 
+## <a name="remarks"></a>Remarques
 
 La fonction **strtok** recherche le jeton suivant dans *strToken*. Le jeu de caractères dans *strDelimit* spécifie les délimiteurs possibles du jeton à trouver dans *strToken* sur l’appel en cours. **wcstok** et **_mbstok** sont des versions à caractères larges et à caractères multioctets de **strtok**. Les arguments et la valeur de retour de **wcstok** sont des chaînes à caractères larges ; ceux de **_mbstok** sont des chaînes de caractères multioctets. Ces trois fonctions se comportent sinon de façon identique.
+
+La version à deux arguments de **wcstok** n’est pas standard. Si vous devez utiliser cette version, vous devez définir `_CRT_NON_CONFORMING_WCSTOK` avant `#include <wchar.h>` (ou `#include <string.h>` ).
 
 > [!IMPORTANT]
 > Ces fonctions sont exposées à une menace potentielle liée à un problème de dépassement de mémoire tampon. Les dépassements de mémoire tampon sont une méthode fréquente d'attaque du système, ce qui provoque une élévation des privilèges injustifiée. Pour plus d’informations, consultez [Solutions contre les dépassements de mémoire tampon](/windows/win32/SecBP/avoiding-buffer-overruns).
@@ -145,6 +155,7 @@ Par défaut, l’état global de cette fonction est limité à l’application. 
 |-------------|---------------------|
 |**strtok**|\<string.h>|
 |**wcstok**|\<string.h> ou \<wchar.h>|
+|**_wcstok_l**|<tchar.h>|
 |**_mbstok**, **_mbstok_l**|\<mbstring.h>|
 
 Pour plus d'informations sur la compatibilité, voir [Compatibilité](../../c-runtime-library/compatibility.md).

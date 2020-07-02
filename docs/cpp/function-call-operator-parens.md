@@ -12,33 +12,34 @@ helpviewer_keywords:
 ms.assetid: 50c92e59-a4bf-415a-a6ab-d66c679ee80a
 no-loc:
 - opt
-ms.openlocfilehash: 59fd36a5ae135c55813019f04b0f5df4be2800b3
-ms.sourcegitcommit: 2d7550d0f375aafa428ef0fb2e3962e4232be28e
+ms.openlocfilehash: 5bb87795d3e91d853dc0d269ee9d2aa3ba025c0e
+ms.sourcegitcommit: 83ea5df40917885e261089b103d5de3660314104
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/15/2020
-ms.locfileid: "84777303"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85813548"
 ---
 # <a name="function-call-operator-"></a>Opérateur d'appel de fonction : ()
 
-Un appel de fonction est un type de *`postfix-expression`* , formé par une expression qui identifie une fonction suivie par l’opérateur d’appel de fonction, **`()`** . Un objet peut déclarer une `operator ()` fonction qui fournit la sémantique d’appel de fonction pour l’objet.
+Un appel de fonction est un type de *`postfix-expression`* , formé par une expression qui prend la valeur d’une fonction ou d’un objet pouvant être appelé, suivi par l’opérateur d’appel de fonction, **`()`** . Un objet peut déclarer une `operator ()` fonction qui fournit la sémantique d’appel de fonction pour l’objet.
 
-## <a name="syntax"></a>Syntax
+## <a name="syntax"></a>Syntaxe
 
 > *`postfix-expression`*:\
-> &nbsp;&nbsp;&nbsp;&nbsp;*`postfix-expression`* **`(`** *`argument-expression-list`* <sub>opt</sub> **`)`**
+> &emsp;*`postfix-expression`* **`(`** *`argument-expression-list`* <sub>opt</sub> **`)`**
 
 ## <a name="remarks"></a>Remarques
 
 Les arguments de l’opérateur d’appel de fonction proviennent d’un *`argument-expression-list`* , d’une liste d’expressions séparées par des virgules. Les valeurs de ces expressions sont passées à la fonction en tant qu’arguments. L' *argument-expression-List* peut être vide. Avant C++ 17, l’ordre d’évaluation de l’expression de fonction et des expressions d’argument n’est pas spécifié et peut se produire dans n’importe quel ordre. Dans C++ 17 et versions ultérieures, l’expression de fonction est évaluée avant toute expression d’argument ou argument par défaut. Les expressions d’arguments sont évaluées dans une séquence indéterminée.
 
-*`postfix-expression`* Identifie la fonction à appeler. Il doit correspondre à une adresse de fonction. Il peut prendre l’une des formes suivantes :
+*`postfix-expression`* Prend la valeur de la fonction à appeler. Il peut prendre l’une des formes suivantes :
 
-- un pointeur ou un nom d’objet de fonction ou de fonction,
-- expression lvalue qui fait référence à une fonction ou à un objet de fonction,
-- accesseur de fonction membre, explicite ou implicite.
+- identificateur de fonction, visible dans la portée actuelle ou dans la portée de l’un des arguments de fonction fournis.
+- expression qui prend la valeur d’une fonction, d’un pointeur de fonction, d’un objet pouvant être appelé ou d’une référence à une.
+- accesseur de fonction membre, explicite ou implicite,
+- pointeur déréférencé vers une fonction membre.
 
-La fonction spécifiée par *`postfix-expression`* peut être une fonction surchargée. Les règles habituelles pour la résolution de surcharge déterminent la fonction réelle à appeler.
+*`postfix-expression`* Peut être un identificateur de fonction surchargé ou un accesseur de fonction membre surchargé. Les règles de résolution de surcharge déterminent la fonction réelle à appeler. Si la fonction membre est virtuelle, la fonction à appeler est déterminée au moment de l’exécution.
 
 Exemples de déclarations :
 

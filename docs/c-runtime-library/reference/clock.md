@@ -28,12 +28,12 @@ helpviewer_keywords:
 - processor time used
 - calculating processor time used
 ms.assetid: 3e1853dd-498f-49ba-b06a-f2315f20904e
-ms.openlocfilehash: 836d0c6448adb4c99a251a0e97aa642e30362dcb
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 660c97882151127cc6c1caa64bb27f5728f169fb
+ms.sourcegitcommit: 8fd49f8ac20457710ceb5403ca46fc73cb3f95f8
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70939126"
+ms.lasthandoff: 07/01/2020
+ms.locfileid: "85737475"
 ---
 # <a name="clock"></a>horloge
 
@@ -47,15 +47,15 @@ clock_t clock( void );
 
 ## <a name="return-value"></a>Valeur de retour
 
-Temps écoulé depuis l’initialisation du CRT au début du processus, mesuré en unités **CLOCKS_PER_SEC** par seconde. Si le temps écoulé n’est pas disponible ou a dépassé le délai positif maximal pouvant être enregistré en tant que type **clock_t** , la fonction retourne la valeur `(clock_t)(-1)`.
+Temps écoulé depuis l’initialisation du CRT au début du processus, mesuré en unités de **CLOCKS_PER_SEC** par seconde. Si le temps écoulé n’est pas disponible ou a dépassé le délai positif maximal pouvant être enregistré en tant que type de **clock_t** , la fonction retourne la valeur `(clock_t)(-1)` .
 
-## <a name="remarks"></a>Notes
+## <a name="remarks"></a>Remarques
 
 La fonction **Clock** indique la quantité de temps horloge écoulée depuis l’initialisation du CRT pendant le démarrage du processus. Notez que cette fonction n’est pas strictement conforme à la norme ISO C, selon laquelle le temps processeur net est spécifié par la valeur de retour. Pour obtenir les temps processeur, utilisez la fonction Win32 [GetProcessTimes](/windows/win32/api/processthreadsapi/nf-processthreadsapi-getprocesstimes). Pour déterminer le temps écoulé en secondes, divisez la valeur retournée par la fonction **Clock** par la macro **CLOCKS_PER_SEC**.
 
-En raison de suffisamment de temps, la valeur retournée par **Clock** peut dépasser la valeur positive maximale de **clock_t**. Lorsque le processus s’exécute plus longtemps, la valeur retournée par **Clock** est toujours `(clock_t)(-1)`, comme spécifié par la norme ISO C99 (7.23.2.1) et ISO C11 standard (7.27.2.1). Microsoft implémente **clock_t** comme **long**, un entier signé 32 bits et la macro **CLOCKS_PER_SEC** est définie comme 1000. Cela donne une valeur de retour de fonction d' **horloge** maximale de 2147483,647 secondes, soit environ 24,8 jours. Ne vous fiez pas à la valeur retournée par **Clock** dans les processus qui ont été exécutés pendant plus longtemps que ce laps de temps. Vous pouvez utiliser la fonction [temps](time-time32-time64.md) 64 bits ou la fonction Windows [QueryPerformanceCounter](/windows/win32/api/profileapi/nf-profileapi-queryperformancecounter) pour enregistrer les durées de traitement écoulées de plusieurs années.
+En raison de suffisamment de temps, la valeur retournée par **Clock** peut dépasser la valeur positive maximale de **clock_t**. Lorsque le processus s’exécute plus longtemps, la valeur retournée par **Clock** est toujours `(clock_t)(-1)` , comme spécifié par la norme ISO C99 (7.23.2.1) et ISO C11 standard (7.27.2.1). Microsoft implémente **clock_t** comme **long**, un entier signé 32 bits et la macro **CLOCKS_PER_SEC** est définie comme 1000. Cela donne une valeur de retour de fonction d' **horloge** maximale de 2147483,647 secondes, soit environ 24,8 jours. Ne vous fiez pas à la valeur retournée par **Clock** dans les processus qui ont été exécutés pendant plus longtemps que ce laps de temps. Vous pouvez utiliser la fonction [temps](time-time32-time64.md) 64 bits ou la fonction Windows [QueryPerformanceCounter](/windows/win32/api/profileapi/nf-profileapi-queryperformancecounter) pour enregistrer les durées de traitement écoulées de plusieurs années.
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
 |Routine|En-tête requis|
 |-------------|---------------------|
@@ -75,7 +75,7 @@ Pour plus d'informations sur la compatibilité, voir [Compatibilité](../../c-ru
 #include <stdlib.h>
 #include <time.h>
 
-// Pauses for a specified number of milliseconds.
+// Pauses for a specified number of clock cycles.
 void do_sleep( clock_t wait )
 {
    clock_t goal;
