@@ -11,6 +11,7 @@ helpviewer_keywords:
 ms.assetid: 585c1dc4-5184-4f01-98f4-80c1909744d7
 ms.openlocfilehash: 7b671cfdf5d5ce43024ac3e038c214396ac8679c
 ms.sourcegitcommit: 85d96eeb1ce41d9e1dea947f65ded672e146238b
+ms.translationtype: MT
 ms.contentlocale: fr-FR
 ms.lasthandoff: 07/07/2020
 ms.locfileid: "86058618"
@@ -19,11 +20,11 @@ ms.locfileid: "86058618"
 
 La directive **#line** indique au préprocesseur de définir les valeurs signalées du compilateur pour le numéro de ligne et le nom de fichier sur un numéro de ligne et un nom de fichier donnés.
 
-## <a name="syntax"></a>Syntax
+## <a name="syntax"></a>Syntaxe
 
 > **`#line`***digit-Sequence* ["*nom_fichier*"]
 
-## <a name="remarks"></a>Remarques
+## <a name="remarks"></a>Notes
 
 Le compilateur utilise le numéro de ligne et le nom de fichier facultatif pour faire référence aux erreurs qu’il trouve pendant la compilation. Le numéro de ligne fait généralement référence à la ligne d’entrée en cours et le nom de fichier fait référence au fichier d’entrée en cours. Le numéro de ligne est incrémenté après le traitement de chaque ligne.
 

@@ -1,36 +1,36 @@
 ---
 title: noalias
-ms.date: 02/09/2018
+ms.date: 07/07/2020
 f1_keywords:
 - noalias_cpp
 helpviewer_keywords:
 - noalias __declspec keyword
 - __declspec keyword [C++], noalias
 ms.assetid: efafa8b0-7f39-4edc-a81e-d287ae882c9b
-ms.openlocfilehash: 2eceffd10f97615859918991320ceebf577d094c
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 70c1f4e8bfa426e858014a78febc424b473a89ae
+ms.sourcegitcommit: e17cc8a478b51739d67304d7d82422967b35f716
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62377437"
+ms.lasthandoff: 07/08/2020
+ms.locfileid: "86127878"
 ---
-# <a name="noalias"></a>noalias
+# `noalias`
 
-**Section spécifique à Microsoft**
+**Spécifique à Microsoft**
 
-**noalias** signifie qu’un appel de fonction ne pas modifier ou faire référence à un état global visible et modifie uniquement la mémoire pointée *directement* par les paramètres de pointeur (indirections de premier niveau).
+**`noalias`** signifie qu’un appel de fonction ne modifie pas ou ne référence pas l’état global visible et modifie uniquement la mémoire vers laquelle pointe *directement* les paramètres de pointeur (indirections de premier niveau).
 
-Si une fonction est annotée en tant que **noalias**, l’optimiseur peut supposer que, outre les paramètres eux-mêmes, indirections de premier niveau uniquement des paramètres de pointeur sont référencées ou modifiées à l’intérieur de la fonction. L'état global visible est l'ensemble de toutes les données qui ne sont pas définies ou référencées en dehors de la portée de compilation, et leur adresse n'est pas prise. La portée de compilation est tous les fichiers sources ([/LTCG (Link-time Code Generation)](../build/reference/ltcg-link-time-code-generation.md) génère) ou un fichier source unique (non -**/LTCG** build).
+Si une fonction est annotée comme **`noalias`** , l’optimiseur peut supposer que seuls les paramètres eux-mêmes et uniquement les indirections de premier niveau des paramètres de pointeur sont référencés ou modifiés à l’intérieur de la fonction.
 
-Le **noalias** annotation s’applique uniquement dans le corps de la fonction annoté. Marquage d’une fonction en tant que **__declspec (noalias)** n’affecte pas les alias des pointeurs retournés par la fonction.
+L' **`noalias`** annotation s’applique uniquement dans le corps de la fonction annotée. Le marquage d’une fonction comme **`__declspec(noalias)`** n’affecte pas l’alias des pointeurs retournés par la fonction.
 
-Pour une autre annotation qui peut affecter les alias, consultez [__declspec (Restrict)](../cpp/restrict.md).
+Pour obtenir une autre annotation qui peut avoir un impact sur les alias, consultez [`__declspec(restrict)`](../cpp/restrict.md) .
 
 ## <a name="example"></a>Exemple
 
-L’exemple suivant illustre l’utilisation de **__declspec (noalias)**.
+L’exemple suivant illustre l’utilisation de **`__declspec(noalias)`** .
 
-Lorsque la fonction `multiply` que les accès mémoire est annoté **__declspec (noalias)**, il indique au compilateur que cette fonction ne modifie pas l’état global, à l’exception à travers les pointeurs dans sa liste de paramètres.
+Lorsque la fonction `multiply` qui accède à la mémoire est annotée **`__declspec(noalias)`** , elle indique au compilateur que cette fonction ne modifie pas l’état global, sauf par le biais des pointeurs figurant dans sa liste de paramètres.
 
 ```C
 // declspec_noalias.c
@@ -100,6 +100,6 @@ int main()
 
 ## <a name="see-also"></a>Voir aussi
 
-[__declspec](../cpp/declspec.md)<br/>
+[`__declspec`](../cpp/declspec.md)<br/>
 [Mots clés](../cpp/keywords-cpp.md)<br/>
-[__declspec(restrict)](../cpp/restrict.md)
+[`__declspec(restrict)`](../cpp/restrict.md)
