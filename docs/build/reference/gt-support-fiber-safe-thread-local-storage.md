@@ -1,6 +1,7 @@
 ---
 title: /GT (Prendre en charge le stockage local des threads avec fibres sécurisées)
-ms.date: 11/04/2016
+description: L’option de compilateur MSVC/GT permet des optimisations sécurisées pour les données de stockage local des threads.
+ms.date: 07/08/2020
 f1_keywords:
 - VC.Project.VCCLCompilerTool.EnableFiberSafeOptimizations
 - /gt
@@ -12,38 +13,34 @@ helpviewer_keywords:
 - -GT compiler option [C++]
 - fiber-safe static thread-local storage compiler option [C++]
 ms.assetid: 071fec79-c701-432b-9970-457344133159
-ms.openlocfilehash: 417ac00a446f773a424553e42478a4f0cf58efc6
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 1b1d9f6514cec8c3d247f86be063f2ac3e0dfe72
+ms.sourcegitcommit: 80c8a512b361bd84e38958beb1a1bf6db7434021
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62291806"
+ms.lasthandoff: 07/09/2020
+ms.locfileid: "86180810"
 ---
-# <a name="gt-support-fiber-safe-thread-local-storage"></a>/GT (Prendre en charge le stockage local des threads avec fibres sécurisées)
+# <a name="gt-support-fiber-safe-thread-local-storage"></a>`/GT`(Prendre en charge le stockage local des threads à fibres sécurisées)
 
-Prend en charge de la sécurité des fibres pour les données allouées à l’aide du stockage local des threads statique, autrement dit, les données allouées avec `__declspec(thread)`.
+Prend en charge la sécurité des fibres pour les données allouées à l’aide du stockage local des threads statiques, c’est-à-dire des données allouées avec `__declspec(thread)` .
 
 ## <a name="syntax"></a>Syntaxe
 
-```
-/GT
-```
+> **`/GT`**
 
 ## <a name="remarks"></a>Notes
 
-Données déclarées avec `__declspec(thread)` est référencé via une baie de stockage local des threads (TLS). Le tableau TLS est un tableau d’adresses que le système gère pour chaque thread. Chaque adresse de ce tableau indique l’emplacement de données de stockage local des threads.
+Les données déclarées avec `__declspec(thread)` sont référencées par l’intermédiaire d’un tableau de stockage local des threads (TLS). Le tableau TLS est un tableau d’adresses géré par le système pour chaque thread. Chaque adresse de ce tableau indique l’emplacement des données de stockage local des threads.
 
-Une fibre est un objet léger qui se compose d’une pile et un contexte de Registre et peut être planifié sur différents threads. Une fibre peut être exécutée sur n’importe quel thread. Comme une fibre peut être transférée et redémarrée ultérieurement sur un thread différent, l’adresse du tableau TLS ne doit pas être mis en cache ou optimisée en tant qu’une sous-expression commune dans un appel de fonction (voir la [/Og (optimisations globales)](og-global-optimizations.md) option pour (détails). **/GT** empêche ces optimisations.
+Une fibre est un objet léger qui se compose d’une pile et d’un contexte de Registre, et qui peut être planifié sur différents threads. Une fibre peut s’exécuter sur n’importe quel thread. Comme une fibre peut être permutée et redémarrée ultérieurement sur un autre thread, le compilateur ne doit pas en cache l’adresse du tableau TLS, ou l’optimise en tant que sous-expression commune sur un appel de fonction. **`/GT`** empêche ces optimisations.
 
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Pour définir cette option du compilateur dans l'environnement de développement Visual Studio
 
-1. Ouvrez la boîte de dialogue **Pages de propriété** du projet. Pour plus d’informations, consultez [propriétés de compilateur et de build C++ définie dans Visual Studio](../working-with-project-properties.md).
+1. Ouvrez la boîte de dialogue **Pages de propriété** du projet. Pour plus d’informations, consultez [Définir le compilateur C++ et les propriétés de build dans Visual Studio](../working-with-project-properties.md).
 
-1. Cliquez sur le dossier **C/C++** .
+1. Sélectionnez la page de propriétés optimisation des **Propriétés de configuration**  >  **C/C++**  >  **Optimization** .
 
-1. Cliquez sur le **optimisation** page de propriétés.
-
-1. Modifier le **activer les optimisations à fibres sécurisées** propriété.
+1. Modifiez la propriété **activer les optimisations à fibres sécurisées** .
 
 ### <a name="to-set-this-compiler-option-programmatically"></a>Pour définir cette option du compilateur par programmation
 

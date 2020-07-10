@@ -1,6 +1,7 @@
 ---
 title: /Og (Optimisations globales)
-ms.date: 09/22/2017
+description: Décrit l’option/og du compilateur MSVC déconseillée, anciennement utilisée pour activer les optimisations globales.
+ms.date: 07/08/2020
 f1_keywords:
 - VC.Project.VCCLCompilerTool.GlobalOptimizations
 - /og
@@ -13,30 +14,30 @@ helpviewer_keywords:
 - common subexpression elimination
 - Og compiler option [C++]
 ms.assetid: d10630cc-b9cf-4e97-bde3-8d7ee79e9435
-ms.openlocfilehash: 5e45273b6b609f1bf78504a519c1fb98e2147f76
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: c1cab53ccb391bd7d6ca7660e2750f53aa7c72e4
+ms.sourcegitcommit: 80c8a512b361bd84e38958beb1a1bf6db7434021
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62320290"
+ms.lasthandoff: 07/09/2020
+ms.locfileid: "86180849"
 ---
-# <a name="og-global-optimizations"></a>/Og (Optimisations globales)
+# <a name="og-global-optimizations"></a>`/Og`(Optimisations globales)
 
-Obsolète. Fournit des optimisations locales et globales, une allocation automatique de registres et l’optimisation des boucles. Nous vous recommandons d’utiliser soit [/O1 (réduire la taille)](o1-o2-minimize-size-maximize-speed.md) ou [/O2 (augmenter la vitesse)](o1-o2-minimize-size-maximize-speed.md) à la place.
+Action déconseillée. Fournit des optimisations locales et globales, l’allocation automatique des registres et l’optimisation de la boucle. Nous vous recommandons d’utiliser à la place [ `/O1` (réduire la taille)](o1-o2-minimize-size-maximize-speed.md) ou [ `/O2` (maximiser la vitesse)](o1-o2-minimize-size-maximize-speed.md) .
 
 ## <a name="syntax"></a>Syntaxe
 
-> /Og
+> **`/Og`**
 
 ## <a name="remarks"></a>Notes
 
-**/Og** est déconseillée. Ces optimisations sont désormais généralement activées par défaut. Pour plus d’informations sur les optimisations, consultez [/O1, / O2 (réduire la taille, augmenter la vitesse)](o1-o2-minimize-size-maximize-speed.md) ou [/Ox (activer plus optimisations de vitesse)](ox-full-optimization.md).
+**`/Og`** est déconseillé. Ces optimisations sont désormais activées par défaut lorsque des optimisations sont activées. Pour plus d’informations sur les optimisations, consultez [ `/O1` , `/O2` (réduire la taille, augmenter la vitesse)](o1-o2-minimize-size-maximize-speed.md)ou [ `/Ox` (activer la plupart des optimisations de vitesse)](ox-full-optimization.md).
 
-Les optimisations suivantes sont disponibles sous **/Og**:
+Les optimisations suivantes sont disponibles sous **`/Og`** :
 
 - Élimination de sous-expressions communes locales et globales
 
-   Dans cette optimisation, la valeur d’une sous-expression commune est calculée une seule fois. Dans l’exemple suivant, si les valeurs de `b` et `c` ne changent pas entre les trois expressions, le compilateur peut assigner le calcul de `b + c` à une variable temporaire, puis remplacez la variable pour `b + c`:
+   Dans cette optimisation, la valeur d’une sous-expression commune est calculée une fois. Dans l’exemple suivant, si les valeurs de `b` et `c` ne changent pas entre les trois expressions, le compilateur peut assigner le calcul de `b + c` à une variable temporaire et utiliser cette variable pour `b + c` :
 
     ```C
     a = b + c;
@@ -44,15 +45,15 @@ Les optimisations suivantes sont disponibles sous **/Og**:
     e = b + c;
     ```
 
-   Pour une optimisation de sous-expressions communes locales, le compilateur examine de courtes sections de code pour les sous-expressions communes. Pour une optimisation de sous-expressions communes globales, le compilateur recherche des fonctions ensemble sous-expressions communes.
+   Pour l’optimisation de sous-expression commune locale, le compilateur examine les courtes sections de code pour les sous-expressions communes. Pour l’optimisation globale commune sous-expression, le compilateur recherche des sous-expressions communes dans les fonctions entières.
 
-- Allocation automatique de registres
+- Allocation automatique des registres
 
-   Cette optimisation permet au compilateur de magasin utilisé fréquemment variables et sous-expressions dans les registres ; le `register` mot clé est ignoré.
+   Cette optimisation permet au compilateur de stocker les variables et sous-expressions fréquemment utilisées dans les registres. le `register` mot clé est ignoré.
 
-- Optimisation des boucles
+- Optimisation de la boucle
 
-   Cette optimisation supprime les sous-expressions de type invariant à partir du corps d’une boucle. Une boucle optimale contient uniquement des expressions dont les valeurs changent à chaque exécution de la boucle. Dans l’exemple suivant, l’expression `x + y` ne change pas dans le corps de boucle :
+   Cette optimisation supprime les sous-expressions invariantes du corps d’une boucle. Une boucle optimale contient uniquement des expressions dont les valeurs changent à chaque exécution de la boucle. Dans l’exemple suivant, l’expression `x + y` ne change pas dans le corps de la boucle :
 
     ```C
     i = -100;
@@ -61,7 +62,7 @@ Les optimisations suivantes sont disponibles sous **/Og**:
     }
     ```
 
-   Après l’optimisation, `x + y` est calculée une seule fois et non à chaque exécution de la boucle :
+   Après l’optimisation, `x + y` est calculé une fois au lieu de chaque fois que la boucle est exécutée :
 
     ```C
     i = -100;
@@ -71,22 +72,20 @@ Les optimisations suivantes sont disponibles sous **/Og**:
     }
     ```
 
-   L’optimisation des boucles est beaucoup plus efficace lorsque le compilateur ne peut prendre aucune attribution d’alias, que vous définissez avec [__restrict](../../cpp/extension-restrict.md), [noalias](../../cpp/noalias.md), ou [restreindre](../../cpp/restrict.md).
+   L’optimisation de la boucle est bien plus efficace lorsque le compilateur peut supposer qu’il n’y a pas d’alias, que vous définissez avec [`__restrict`](../../cpp/extension-restrict.md) , [`noalias`](../../cpp/noalias.md) ou [`restrict`](../../cpp/restrict.md) .
 
    > [!NOTE]
-   > Vous pouvez activer ou désactiver l’optimisation globale sur une fonction par fonction à l’aide de la `optimize` pragma conjointement avec la `g` option.
+   > Vous pouvez activer ou désactiver l’optimisation globale sur une base fonction par fonction à l’aide du `optimize` pragma avec l' `g` option.
 
-Pour plus d’informations, consultez [/Oi (générer des fonctions intrinsèques)](oi-generate-intrinsic-functions.md) et [/Ox (activer plus optimisations de vitesse)](ox-full-optimization.md).
+Pour obtenir des informations connexes, consultez [ `/Oi` (générer des fonctions intrinsèques)](oi-generate-intrinsic-functions.md) et [ `/Ox ` (activer la plupart des optimisations de vitesse)](ox-full-optimization.md).
 
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Pour définir cette option du compilateur dans l'environnement de développement Visual Studio
 
-1. Ouvrez la boîte de dialogue **Pages de propriété** du projet. Pour plus d’informations, consultez [propriétés de compilateur et de build C++ définie dans Visual Studio](../working-with-project-properties.md).
+1. Ouvrez la boîte de dialogue **Pages de propriété** du projet. Pour plus d’informations, consultez [Définir le compilateur C++ et les propriétés de build dans Visual Studio](../working-with-project-properties.md).
 
-1. Cliquez sur le dossier **C/C++** .
+1. Sélectionnez la page de propriétés ligne de commande des **Propriétés de configuration**  >  **C/C++**  >  **Command Line** .
 
-1. Cliquez sur la page de propriétés **Ligne de commande** .
-
-1. Entrez l’option du compilateur dans le **des Options supplémentaires** boîte.
+1. Entrez l’option de compilateur dans la zone **options supplémentaires** .
 
 ### <a name="to-set-this-compiler-option-programmatically"></a>Pour définir cette option du compilateur par programmation
 
