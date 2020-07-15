@@ -4,16 +4,16 @@ ms.date: 11/04/2016
 helpviewer_keywords:
 - language strings
 ms.assetid: bbee63b1-af0b-4e44-9eaf-dd3e265c05fd
-ms.openlocfilehash: 18a94d33f9ca382bb6c7cd77a4f2b33ed800f2c6
-ms.sourcegitcommit: 63784729604aaf526de21f6c6b62813882af930a
+ms.openlocfilehash: 7713fe3f7cff4b80ce72927fa970e03914f94346
+ms.sourcegitcommit: 31a443c9998cf5cfbaff00fcf815b133f55b2426
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/17/2020
-ms.locfileid: "79438252"
+ms.lasthandoff: 07/14/2020
+ms.locfileid: "86373602"
 ---
 # <a name="language-strings"></a>Language Strings
 
-Les fonctions [setlocale](../c-runtime-library/reference/setlocale-wsetlocale.md) et [_create_locale](../c-runtime-library/reference/create-locale-wcreate-locale.md) peuvent utiliser les langues prises en charge par l’API NLS Windows sur les systèmes d’exploitation qui n’utilisent pas la page de codes Unicode. Pour voir une liste des langues prises en charge par la version du système d’exploitation, consultez [Appendix A: Product Behavior](https://msdn.microsoft.com/library/cc233982.aspx) dans [MS-LCID] : Informations de référence Windows LCID (Language Code Identifier). La chaîne de langue peut être une des valeurs des colonnes **Langue** et **Balise de la langue** de la liste des langues prises en charge. Pour obtenir un exemple de code énumérant les noms de paramètres régionaux disponibles et les valeurs associées, consultez [NLS : exemple d’API en fonction du nom](/windows/win32/intl/nls--name-based-apis-sample).
+Les fonctions [setlocale](../c-runtime-library/reference/setlocale-wsetlocale.md) et [_create_locale](../c-runtime-library/reference/create-locale-wcreate-locale.md) peuvent utiliser les langues prises en charge par l’API NLS Windows sur les systèmes d’exploitation qui n’utilisent pas la page de codes Unicode. Pour obtenir la liste des langues prises en charge par la version du système d’exploitation, voir [annexe a : comportement du produit](https://docs.microsoft.com/openspecs/windows_protocols/ms-lcid/a9eac961-e77d-41a6-90a5-ce1a8b0cdb9c) en \[ MS-LCID] : référence LCID (Language code identifier) Windows. La chaîne de langue peut être une des valeurs des colonnes **Langue** et **Balise de la langue** de la liste des langues prises en charge. Pour obtenir un exemple de code énumérant les noms de paramètres régionaux disponibles et les valeurs associées, consultez [NLS : exemple d’API en fonction du nom](/windows/win32/intl/nls--name-based-apis-sample).
 
 ## <a name="additional-supported-language-strings"></a>Chaînes de langues supplémentaires pris en charge
 
@@ -89,7 +89,7 @@ L’implémentation de la bibliothèque runtime Microsoft C prend également en 
 
 ## <a name="see-also"></a>Voir aussi
 
-[Chaînes relatives aux noms des paramètres régionaux, aux langues et au pays/à la région](../c-runtime-library/locale-names-languages-and-country-region-strings.md)<br/>
-[Country/Region Strings](../c-runtime-library/country-region-strings.md)<br/>
+[Chaînes de noms de paramètres régionaux, de langues et de pays/région](../c-runtime-library/locale-names-languages-and-country-region-strings.md)<br/>
+[Chaînes pays/région](../c-runtime-library/country-region-strings.md)<br/>
 [setlocale, _wsetlocale](../c-runtime-library/reference/setlocale-wsetlocale.md)<br/>
 [_create_locale, _wcreate_locale](../c-runtime-library/reference/create-locale-wcreate-locale.md)

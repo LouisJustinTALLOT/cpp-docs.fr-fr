@@ -9,12 +9,12 @@ helpviewer_keywords:
 - -JMC compiler option [C++]
 - User code, debugging
 - JMC compiler option [C++]
-ms.openlocfilehash: 90fcad40b3322f8a8ae7ffc58875c2850f143138
-ms.sourcegitcommit: 0867d648e0955ebad7260b5fbebfd6cd4d58f3c7
+ms.openlocfilehash: 7b22a754f9f49564cd7f76c7d1989cd562f70874
+ms.sourcegitcommit: 31a443c9998cf5cfbaff00fcf815b133f55b2426
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/19/2019
-ms.locfileid: "68341013"
+ms.lasthandoff: 07/14/2020
+ms.locfileid: "86373877"
 ---
 # <a name="jmc-just-my-code-debugging"></a>/JMC (Débogage Uniquement mon code)
 
@@ -22,23 +22,23 @@ Spécifie la prise en charge du compilateur pour le débogage *uniquement mon co
 
 ## <a name="syntax"></a>Syntaxe
 
-> **/JMC**\[ **-** ]
+> **/JMC** \[ **-** ]
 
 ## <a name="remarks"></a>Notes
 
-Les paramètres de [uniquement mon code](/visualstudio/debugger/just-my-code) de Visual Studio spécifient si le débogueur Visual Studio parcourt le système, le Framework, la bibliothèque et d’autres appels non-utilisateurs. L’option de compilateur **/JMC** permet la prise en charge de uniquement mon code débogage C++ dans votre code natif. Quand **/JMC** est activé, le compilateur insère les appels à une fonction d’assistance, `__CheckForDebuggerJustMyCode`, dans le prologue de la fonction. La fonction d’assistance fournit des raccordements qui prennent en charge le débogueur Visual Studio Uniquement mon code les opérations d’étape. Pour activer uniquement mon code dans le débogueur Visual Studio, dans la barre de menus, choisissez **Outils** > **options**, puis définissez > l’option dans **débogage** **général** > **activer uniquement mon code**.
+Les paramètres de [uniquement mon code](/visualstudio/debugger/just-my-code) de Visual Studio spécifient si le débogueur Visual Studio parcourt le système, le Framework, la bibliothèque et d’autres appels non-utilisateurs. L’option de compilateur **/JMC** permet la prise en charge de uniquement mon code débogage dans votre code C++ natif. Quand **/JMC** est activé, le compilateur insère les appels à une fonction d’assistance, `__CheckForDebuggerJustMyCode` , dans le prologue de la fonction. La fonction d’assistance fournit des raccordements qui prennent en charge le débogueur Visual Studio Uniquement mon code les opérations d’étape. Pour activer uniquement mon code dans le débogueur Visual Studio, dans la barre de menus, choisissez **Outils**  >  **options**, puis définissez l’option dans **débogage**  >  **général**  >  **activer uniquement mon code**.
 
-L’option **/JMC** nécessite que votre code soit lié à la bibliothèque Runtime C (CRT), qui fournit `__CheckForDebuggerJustMyCode` la fonction d’assistance. Si votre projet n’est pas lié au CRT, vous pouvez voir l’erreur de l’éditeur de liens **LNK2019: symbole externe non résolu __CheckForDebuggerJustMyCode**. Pour résoudre cette erreur, vous pouvez soit créer un lien vers la bibliothèque CRT, soit désactiver l’option **/JMC** .
+L’option **/JMC** nécessite que votre code soit lié à la bibliothèque Runtime C (CRT), qui fournit la `__CheckForDebuggerJustMyCode` fonction d’assistance. Si votre projet n’est pas lié au CRT, vous pouvez voir l’erreur de l’éditeur de liens **LNK2019 : symbole externe non résolu __CheckForDebuggerJustMyCode**. Pour résoudre cette erreur, vous pouvez soit créer un lien vers la bibliothèque CRT, soit désactiver l’option **/JMC** .
 
-Par défaut, l’option du compilateur **/JMC** est désactivée. Toutefois, à compter de Visual Studio 2017 version 15,8, cette option est activée dans la plupart des modèles de projet Visual Studio. Pour désactiver explicitement cette option, utilisez l’option **/JMC-** sur la ligne de commande. Dans Visual Studio, ouvrez la boîte de dialogue pages de propriétés du projet et modifiez la propriété **prise en charge uniquement mon code débogage** dans la page de propriétés **Propriétés** > de > configuration**C/C++** **général** pour **Non**.
+Par défaut, l’option du compilateur **/JMC** est désactivée. Toutefois, à compter de Visual Studio 2017 version 15,8, cette option est activée dans la plupart des modèles de projet Visual Studio. Pour désactiver explicitement cette option, utilisez l’option **/JMC-** sur la ligne de commande. Dans Visual Studio, ouvrez la boîte de dialogue pages de propriétés du projet et modifiez la propriété **prise en charge uniquement mon code débogage** dans la page de propriétés général des **Propriétés de configuration**  >  **C/C++**  >  **General** sur **non**.
 
-Pour plus d’informations, consultez [ C++ uniquement mon code](/visualstudio/debugger/just-my-code#BKMK_C___Just_My_Code) dans [spécifiez s’il faut déboguer uniquement le code utilisateur à l’aide de uniquement mon code dans Visual Studio](/visualstudio/debugger/just-my-code), et le billet de blog de l’équipe visuelle C++ [annonce C++ uniquement mon code pas à pas dans Visual Studio](https://blogs.msdn.microsoft.com/vcblog/2018/06/29/announcing-jmc-stepping-in-visual-studio/).
+Pour plus d’informations, consultez [c++ uniquement mon code](/visualstudio/debugger/just-my-code#BKMK_C___Just_My_Code) dans [spécifiez s’il faut déboguer uniquement le code utilisateur à l’aide de uniquement mon code dans Visual Studio](/visualstudio/debugger/just-my-code), et si le billet de Blog de l’équipe Visual C++ [annonce que C++ uniquement mon code pas à pas dans Visual Studio](https://devblogs.microsoft.com/cppblog/announcing-jmc-stepping-in-visual-studio/).
 
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Pour définir cette option du compilateur dans l'environnement de développement Visual Studio
 
 1. Ouvrez la boîte de dialogue **Pages de propriété** du projet. Pour plus d’informations, consultez [Définir le compilateur C++ et les propriétés de build dans Visual Studio](../working-with-project-properties.md).
 
-1. Sélectionnez la page de propriétés **Propriétés** > de > configuration**C/C++** **général** .
+1. Sélectionnez la page de propriétés général des **Propriétés de configuration**  >  **C/C++**  >  **General** .
 
 1. Modifiez la propriété **prise en charge du débogage uniquement mon code** .
 

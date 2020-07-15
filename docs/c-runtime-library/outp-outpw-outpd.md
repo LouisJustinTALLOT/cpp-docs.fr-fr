@@ -41,16 +41,16 @@ helpviewer_keywords:
 - _outpw function
 - _outp function
 ms.assetid: c200fe22-41f6-46fd-b0be-ebb805b35181
-ms.openlocfilehash: 3d0342ae94276c7875bcb737b0d1a64aabafd235
-ms.sourcegitcommit: 6b749db14b4cf3a2b8d581fda6fdd8cb98bc3207
+ms.openlocfilehash: 0d28511cdf7487226635c0317b7c0ba21ab1d1be
+ms.sourcegitcommit: 31a443c9998cf5cfbaff00fcf815b133f55b2426
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82825926"
+ms.lasthandoff: 07/14/2020
+ms.locfileid: "86373474"
 ---
 # <a name="outp-outpw-_outp-_outpw-_outpd"></a>outp, outpw, _outp, _outpw, _outpd
 
-Génère, sur un port, un octet (`outp`, `_outp`), un mot (`outpw`, `_outpw`) ou un mot double (`_outpd`).
+Génère, sur un port, un octet ( `outp` , `_outp` ), un mot ( `outpw` , `_outpw` ) ou un mot double ( `_outpd` ).
 
 > [!IMPORTANT]
 > Ces fonctions sont obsolètes. À compter de Visual Studio 2015, ils ne sont pas disponibles dans le CRT. \
@@ -85,15 +85,15 @@ Valeurs de sortie.
 
 Les fonctions retournent la sortie des données. Aucun retour d'erreur.
 
-## <a name="remarks"></a>Notes 
+## <a name="remarks"></a>Notes
 
 Les fonctions `_outp`, `_outpw`et `_outpd` écrivent respectivement un octet, un mot et un mot double sur le port de sortie spécifié. L’argument *port* peut être un entier non signé compris entre 0 et 65 535 ; *databyte* peut être n’importe quel entier dans la plage 0-255 ; et *dataword* peuvent être n’importe quelle valeur dans la plage d’un entier, un entier Short non signé et un entier long non signé, respectivement.
 
-Étant donné que ces fonctions écrivent directement vers un port d’E/S, elles ne peuvent pas être utilisées dans le code utilisateur. Pour plus d’informations sur l’utilisation des ports d’E/S dans ces systèmes d’exploitation, recherchez « Communications série dans Win32 » sur MSDN.
+Comme ces fonctions écrivent directement sur un port d’e/s, elles ne peuvent pas être utilisées dans le code Windows en mode utilisateur. Pour plus d’informations sur l’utilisation des ports d’e/s dans le système d’exploitation Windows, consultez [communications en série](https://docs.microsoft.com/previous-versions/ff802693(v=msdn.10)).
 
-Les `outp` noms `outpw` et sont des noms plus anciens et déconseillés pour les `_outp` fonctions et `_outpw` . Pour plus d’informations, consultez [noms de fonctions POSIX](../error-messages/compiler-warnings/compiler-warning-level-3-c4996.md#posix-function-names).
+Les `outp` `outpw` noms et sont des noms plus anciens et déconseillés pour les `_outp` `_outpw` fonctions et. Pour plus d’informations, consultez [noms de fonctions POSIX](../error-messages/compiler-warnings/compiler-warning-level-3-c4996.md#posix-function-names).
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
 |Routine|En-tête requis|
 |-------------|---------------------|

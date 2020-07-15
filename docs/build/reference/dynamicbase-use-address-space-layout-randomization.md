@@ -8,12 +8,12 @@ helpviewer_keywords:
 - /DYNAMICBASE linker option
 - DYNAMICBASE linker option
 ms.assetid: 6c0ced8e-fe9c-4b63-b956-eb8a55fbceb2
-ms.openlocfilehash: 66d6232ed43f9c842ebbb0e22b57c509cf610afa
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 206c054f383418e176e00f4155f9f6a25a37e253
+ms.sourcegitcommit: 31a443c9998cf5cfbaff00fcf815b133f55b2426
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80170057"
+ms.lasthandoff: 07/14/2020
+ms.locfileid: "86373708"
 ---
 # <a name="dynamicbase-use-address-space-layout-randomization"></a>/DYNAMICBASE (Utiliser la randomisation du format d'espace d'adresse)
 
@@ -21,7 +21,7 @@ Spécifie s’il faut générer une image exécutable qui peut être redéfinie 
 
 ## <a name="syntax"></a>Syntaxe
 
-> **/DynamicBase**[ **: no**]
+> **/DynamicBase**[**: no**]
 
 ## <a name="remarks"></a>Notes
 
@@ -33,7 +33,7 @@ Par défaut, **/DynamicBase** est activé. Pour désactiver cette option, utilis
 
 1. Ouvrez la boîte de dialogue **Pages de propriétés** du projet. Pour plus d’informations, consultez [Définir le compilateur C++ et les propriétés de build dans Visual Studio](../working-with-project-properties.md).
 
-1. Sélectionnez **Propriétés de Configuration** > **éditeur de liens** > page de propriétés **avancé** .
+1. Sélectionnez la page de propriétés avancé de l’éditeur de liens **Propriétés de configuration**  >  **Linker**  >  **Advanced** .
 
 1. Modifiez la propriété **adresse de base aléatoire** .
 
@@ -46,4 +46,4 @@ Par défaut, **/DynamicBase** est activé. Pour désactiver cette option, utilis
 - [Informations de référence sur l’éditeur de liens MSVC](linking.md)
 - [Options de l’éditeur de liens MSVC](linker-options.md)
 - [/HIGHENTROPYVA](highentropyva-support-64-bit-aslr.md)
-- [Défenses de la sécurité logicielle ISV Windows](https://msdn.microsoft.com/library/bb430720.aspx)
+- [Défenses de la sécurité logicielle ISV Windows](https://docs.microsoft.com/previous-versions/bb430720(v=msdn.10))

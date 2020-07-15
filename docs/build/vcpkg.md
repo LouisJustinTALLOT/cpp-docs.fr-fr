@@ -4,11 +4,12 @@ description: vcpkg est un gestionnaire de package en ligne de commande qui simpl
 ms.date: 07/06/2020
 ms.technology: cpp-ide
 ms.assetid: f50d459a-e18f-4b4e-814b-913e444cedd6
-ms.openlocfilehash: 2a179a25a7332a93486d42750f06f18658991b30
-ms.sourcegitcommit: 85d96eeb1ce41d9e1dea947f65ded672e146238b
+ms.openlocfilehash: 7131f301a22b2834b04ef932f3cee426b04dc7e5
+ms.sourcegitcommit: 31a443c9998cf5cfbaff00fcf815b133f55b2426
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/07/2020
-ms.locfileid: "86058644"
+ms.lasthandoff: 07/14/2020
+ms.locfileid: "86373630"
 ---
 # <a name="vcpkg-a-c-package-manager-for-windows-linux-and-macos"></a>vcpkg : gestionnaire de package C++ pour Windows, Linux et macOS
 
@@ -166,7 +167,7 @@ Exécutez **`vcpkg integrate install`** pour configurer Visual Studio code sur L
 
 ## <a name="target-linux-from-windows-via-wsl"></a>Cibler Linux à partir de Windows par le biais de WSL
 
-Vous pouvez produire des fichiers binaires Linux sur un ordinateur Windows à l’aide du sous-système Windows pour Linux ou WSL. Suivez les instructions pour [configurer WSL sur Windows 10](/windows/wsl/install-win10). Ensuite, configurez-le avec l' [extension Visual Studio pour Linux](https://blogs.msdn.microsoft.com/vcblog/2017/02/08/targeting-windows-subsystem-for-linux-from-visual-studio/). Il est possible de placer toutes vos bibliothèques intégrées pour Windows et Linux dans le même dossier. Ils sont accessibles à partir de Windows et WSL.
+Vous pouvez produire des fichiers binaires Linux sur un ordinateur Windows à l’aide du sous-système Windows pour Linux ou WSL. Suivez les instructions pour [configurer WSL sur Windows 10](/windows/wsl/install-win10). Ensuite, configurez-le avec l' [extension Visual Studio pour Linux](https://devblogs.microsoft.com/cppblog/targeting-windows-subsystem-for-linux-from-visual-studio/). Il est possible de placer toutes vos bibliothèques intégrées pour Windows et Linux dans le même dossier. Ils sont accessibles à partir de Windows et WSL.
 
 ## <a name="export-compiled-binaries-and-headers"></a><a name="export_binaries_per_project"></a> Exporter les fichiers binaires et les en-têtes compilés
 

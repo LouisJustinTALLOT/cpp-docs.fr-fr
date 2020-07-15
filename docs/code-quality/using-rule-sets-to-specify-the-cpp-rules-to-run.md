@@ -1,15 +1,15 @@
 ---
 title: Utilisation des ensembles de règles pour spécifier les règles C++ à exécuter
-ms.date: 04/28/2018
+ms.date: 07/13/2020
 ms.topic: conceptual
 f1_keywords:
 - vs.codeanalysis.rulesets.native
-ms.openlocfilehash: 233a5f8a549e33f63350115d90c7e7e6b5f6937b
-ms.sourcegitcommit: f9344b09a734e8b05a7494415991a22b7aec5ae8
+ms.openlocfilehash: 8b6d3fe8c8e441d4b233f2f4008d8aae9225726f
+ms.sourcegitcommit: 31a443c9998cf5cfbaff00fcf815b133f55b2426
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/23/2020
-ms.locfileid: "85269713"
+ms.lasthandoff: 07/14/2020
+ms.locfileid: "86373851"
 ---
 # <a name="use-rule-sets-to-specify-the-c-rules-to-run"></a>Utiliser des ensembles de règles pour spécifier les règles C++ à exécuter
 
@@ -17,7 +17,7 @@ Dans Visual Studio, vous pouvez créer et modifier un *ensemble de règles* pers
 
 **Visual Studio 2017 version 15,7 et versions ultérieures :** Vous pouvez créer des ensembles de règles personnalisés à l’aide de n’importe quel éditeur de texte et les appliquer dans les builds de ligne de commande, quel que soit le système de génération que vous utilisez. Pour plus d’informations, consultez [/analyze : RuleSet](/cpp/build/reference/analyze-code-analysis).
 
-Pour créer un ensemble de règles C++ personnalisé dans Visual Studio, un projet C/C++ doit être ouvert dans l’IDE de Visual Studio. Vous ouvrez ensuite un ensemble de règles standard dans l’éditeur d’ensembles de règles, puis vous ajoutez ou supprimez des règles spécifiques et modifiez éventuellement l’action qui se produit lorsque l’analyse du code détermine qu’une règle a été violée.
+Pour créer un ensemble de règles C++ personnalisé dans Visual Studio, un projet C/C++ doit être ouvert dans l’IDE de Visual Studio. Vous ouvrez ensuite un ensemble de règles standard dans l’éditeur d’ensembles de règles, puis vous ajoutez ou supprimez des règles spécifiques et, éventuellement, vous modifiez l’action qui se produit lorsque l’analyse du code détermine qu’une règle a été violée.
 
 Pour créer un ensemble de règles personnalisé, enregistrez-le à l’aide d’un nouveau nom de fichier. L’ensemble de règles personnalisé est automatiquement affecté au projet.
 
@@ -236,17 +236,19 @@ Le schéma RuleSet suivant décrit le schéma XML d’un fichier RuleSet. Le sch
 
 Détails de l’élément de schéma :
 
-- TLocalization : informations de localisation, y compris le nom du fichier RuleSet, la description du fichier RuleSet, le nom de l’assembly de ressources contenant la ressource localisée et le nom de base de la ressource localisée.
-- TRuleHintPaths : chemins d’accès aux fichiers utilisés comme indications pour rechercher des fichiers RuleSet.
-- TName : nom du fichier RuleSet actuel.
-- TDescription : description du fichier RuleSet actuel.
-- TInclude : chemin d’accès à un ensemble de règles inclus avec une action de règle.
-- TIncludeAll : action de règle pour toutes les règles.
-- TRule : ID de règle avec action de règle.
-- TRules : collection d’une ou plusieurs règles.
-- TRuleSet : le format de fichier RuleSet constitué d’informations de localisation, de chemins d’accès aux indicateurs de règle, inclut toutes les informations, inclut des informations, des informations sur les règles, un nom, une description et des informations sur la version des outils.
-- TRuleAction : énumération décrivant une action de règle, telle qu’une erreur, un avertissement, une info, un élément masqué ou aucun.
-- TIncludeAction : énumération décrivant une action de règle, telle qu’une erreur, un avertissement, une info, masqué, aucun ou par défaut.
-- TIncludeAllAction : énumération décrivant une action de règle, telle qu’une erreur, un avertissement, une info ou un masqué.
+| Schema (élément) | Description |
+|--------------------|--------------|
+| `TLocalization` | Informations de localisation, y compris le nom du fichier RuleSet, la description du fichier RuleSet, le nom de l’assembly de ressources contenant la ressource localisée et le nom de base de la ressource localisée |
+| `TRuleHintPaths` | Chemins d’accès aux fichiers utilisés comme indications pour rechercher des fichiers RuleSet |
+| `TName` | Nom du fichier RuleSet actuel |
+| `TDescription` | Description du fichier RuleSet actuel |
+| `TInclude` | Chemin d’un ensemble de règles inclus avec une action de règle |
+| `TIncludeAll` | Action de règle pour toutes les règles |
+| `TRule` | ID de règle avec action de règle |
+| `TRules` | Collection d’une ou plusieurs règles |
+| `TRuleSet` | Le format de fichier RuleSet constitué d’informations de localisation, de chemins d’accès aux indicateurs de règles, inclut toutes les informations, inclut des informations, des informations sur les règles, un nom, une description et des informations sur la version des outils |
+| `TRuleAction` | Énumération décrivant une action de règle, telle qu’une erreur, un avertissement, une info, un élément masqué ou aucun |
+| `TIncludeAction` | Énumération décrivant une action de règle telle qu’une erreur, un avertissement, une info, masqué, aucun ou par défaut |
+| `TIncludeAllAction` | Énumération décrivant une action de règle telle qu’une erreur, un avertissement, une info ou un masqué |
 
 Pour voir un exemple d’ensemble de règles, consultez [pour créer un ensemble de règles dans un éditeur de texte](#to-create-a-rule-set-in-a-text-editor)ou l’un des ensembles de règles par défaut stockés dans `%VSINSTALLDIR%\Team Tools\Static Analysis Tools\Rule Sets` .

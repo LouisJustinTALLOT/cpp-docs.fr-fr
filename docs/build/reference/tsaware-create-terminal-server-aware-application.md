@@ -11,12 +11,12 @@ helpviewer_keywords:
 - -TSAWARE linker option
 - TSAWARE linker option
 ms.assetid: fe1c1846-de5b-4839-b562-93fbfe36cd29
-ms.openlocfilehash: 0b3fa8bcfd973949e73fdf701db2adb6c58be687
-ms.sourcegitcommit: 2f9ff2041d70c406df76c5053151192aad3937ea
+ms.openlocfilehash: 135d919278c8e969dc3a31381d5abbd1058c8663
+ms.sourcegitcommit: 31a443c9998cf5cfbaff00fcf815b133f55b2426
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/29/2020
-ms.locfileid: "82587384"
+ms.lasthandoff: 07/14/2020
+ms.locfileid: "86373890"
 ---
 # <a name="tsaware-create-terminal-server-aware-application"></a>/TSAWARE (Créer une application sensible à Terminal Server)
 
@@ -24,7 +24,7 @@ ms.locfileid: "82587384"
 /TSAWARE[:NO]
 ```
 
-## <a name="remarks"></a>Notes 
+## <a name="remarks"></a>Notes
 
 L’option/TSAWARE définit un indicateur dans le champ IMAGE_OPTIONAL_HEADER DllCharacteristics dans l’en-tête facultatif de l’image du programme. Si cet indicateur est défini, le serveur Terminal Server n’apportera aucune modification à l’application.
 
@@ -59,4 +59,4 @@ Si une application a été liée avec l’utilitaire/TSAWARE, DUMPBIN [/headers]
 [Informations de référence sur l’éditeur de liens MSVC](linking.md)<br/>
 [Options de l’éditeur de liens MSVC](linker-options.md)<br/>
 [Stockage des informations spécifiques à l’utilisateur](/windows/win32/TermServ/storing-user-specific-information)<br/>
-[Applications héritées dans un environnement de services Terminal Server](https://msdn.microsoft.com/library/aa382957.aspx)
+[Applications héritées dans un environnement de services Terminal Server](https://docs.microsoft.com/previous-versions//aa382957(v=vs.85))

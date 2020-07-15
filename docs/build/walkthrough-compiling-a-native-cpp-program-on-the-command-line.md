@@ -9,12 +9,12 @@ helpviewer_keywords:
 - compiling programs [C++]
 - command-line applications [C++], native
 ms.assetid: b200cfd1-0440-498f-90ee-7ecf92492dc0
-ms.openlocfilehash: c24fdfdaef612059d5c2fbaaa58f10d83f5fe3a8
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 8af104598f56aa6c8eb5a9a87905324700da3d37
+ms.sourcegitcommit: 31a443c9998cf5cfbaff00fcf815b133f55b2426
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81335229"
+ms.lasthandoff: 07/14/2020
+ms.locfileid: "86373669"
 ---
 # <a name="walkthrough-compiling-a-native-c-program-on-the-command-line"></a>Procédure pas à pas : compilation d'un programme C++ natif sur la ligne de commande
 
@@ -45,7 +45,7 @@ Avant de pouvoir générer un programme C ou C++ sur la ligne de commande, véri
 
    Vous pouvez également utiliser la fonction de recherche Windows pour rechercher « invite de commandes développeur » et en choisir une qui correspond à la version installée de Visual Studio. Utilisez le raccourci pour ouvrir la fenêtre d’invite de commandes.
 
-1. Ensuite, vérifiez que l’invite de commandes développeur Visual C++ est correctement configurée. Dans la fenêtre d’invite de commandes `cl` , entrez et vérifiez que la sortie ressemble à ceci :
+1. Ensuite, vérifiez que l’invite de commandes développeur Visual C++ est correctement configurée. Dans la fenêtre d’invite de commandes, entrez `cl` et vérifiez que la sortie ressemble à ceci :
 
    ```Output
    C:\Program Files (x86)\Microsoft Visual Studio\2017\Enterprise>cl
@@ -58,16 +58,16 @@ Avant de pouvoir générer un programme C ou C++ sur la ligne de commande, véri
    Il peut y avoir des différences entre le répertoire actif et les numéros de version. Ces valeurs dépendent de la version de Visual C++ et des mises à jour installées. Si la sortie ci-dessus est similaire à ce que vous voyez, vous êtes prêt à générer des programmes C ou C++ sur la ligne de commande.
 
    > [!NOTE]
-   > Si vous recevez une erreur telle que « Cl » n’est pas reconnu en tant que commande interne ou externe, programme exécutable ou fichier de commandes, «erreur C1034 ou LNK1104 d’erreur lors de **`cl`** l’exécution de la commande, soit vous n’utilisez pas une invite de commandes développeur, soit un problème est survenu avec votre installation de Visual C++. Vous devez corriger ce problème avant de pouvoir continuer.
+   > Si vous recevez une erreur telle que « Cl » n’est pas reconnu en tant que commande interne ou externe, programme exécutable ou fichier de commandes, «erreur C1034 ou LNK1104 d’erreur lors de l’exécution **`cl`** de la commande, soit vous n’utilisez pas une invite de commandes développeur, soit un problème est survenu avec votre installation de Visual C++. Vous devez corriger ce problème avant de pouvoir continuer.
 
-   Si vous ne trouvez pas le raccourci d’invite de commandes développeur ou si vous recevez un message d’erreur `cl`lorsque vous entrez, votre installation de Visual C++ peut avoir un problème. Essayez de réinstaller le composant Visual C++ dans Visual Studio, ou réinstallez les outils de génération Microsoft Visual C++. N’passez pas à la section suivante jusqu’à **`cl`** ce que la commande fonctionne. Pour plus d’informations sur l’installation et la résolution des Visual C++, consultez [installer Visual Studio](/visualstudio/install/install-visual-studio).
+   Si vous ne trouvez pas le raccourci d’invite de commandes développeur ou si vous recevez un message d’erreur lorsque vous entrez `cl` , votre installation de Visual C++ peut avoir un problème. Essayez de réinstaller le composant Visual C++ dans Visual Studio, ou réinstallez les outils de génération Microsoft Visual C++. N’passez pas à la section suivante jusqu’à ce que la **`cl`** commande fonctionne. Pour plus d’informations sur l’installation et la résolution des Visual C++, consultez [installer Visual Studio](/visualstudio/install/install-visual-studio).
 
    > [!NOTE]
    > Selon la version de Windows sur l’ordinateur et la configuration de la sécurité du système, vous devrez peut-être cliquer avec le bouton droit pour ouvrir le menu contextuel du raccourci d’invite de commandes développeur, puis choisir **exécuter en tant qu’administrateur** pour générer et exécuter correctement le programme que vous créez en suivant cette procédure pas à pas.
 
 ### <a name="create-a-visual-c-source-file-and-compile-it-on-the-command-line"></a>Créer un fichier source Visual C++ et le compiler sur la ligne de commande
 
-1. Dans la fenêtre d’invite de commandes développeur `md c:\hello` , entrez pour créer un répertoire, puis `cd c:\hello` entrez pour basculer vers ce répertoire. Ce répertoire est l’emplacement où votre fichier source et le programme compilé sont créés.
+1. Dans la fenêtre d’invite de commandes développeur, entrez `md c:\hello` pour créer un répertoire, puis entrez `cd c:\hello` pour basculer vers ce répertoire. Ce répertoire est l’emplacement où votre fichier source et le programme compilé sont créés.
 
 1. Entrez `notepad hello.cpp` dans la fenêtre d’invite de commandes.
 
@@ -107,9 +107,9 @@ Avant de pouvoir générer un programme C ou C++ sur la ligne de commande, véri
 
    ```
 
-   Les dates et autres détails seront différents sur votre ordinateur. Si vous ne voyez pas votre fichier de code source, *Bonjour. cpp*, vérifiez que vous avez modifié le répertoire *\\c : Hello* que vous avez créé. Dans le bloc-notes, vérifiez que vous avez enregistré votre fichier source dans ce répertoire. Assurez-vous également que vous avez enregistré le code *`.cpp`* source avec une extension de nom *`.txt`* de fichier, et non une extension.
+   Les dates et autres détails seront différents sur votre ordinateur. Si vous ne voyez pas votre fichier de code source, *Bonjour. cpp*, vérifiez que vous avez modifié le répertoire *c : \\ Hello* que vous avez créé. Dans le bloc-notes, vérifiez que vous avez enregistré votre fichier source dans ce répertoire. Assurez-vous également que vous avez enregistré le code source avec une *`.cpp`* extension de nom de fichier, et non une *`.txt`* extension.
 
-1. À l’invite de commandes développeur, `cl /EHsc hello.cpp` entrez pour compiler votre programme.
+1. À l’invite de commandes développeur, entrez `cl /EHsc hello.cpp` pour compiler votre programme.
 
    Le compilateur cl.exe génère un fichier .obj qui contient le code compilé, puis exécute l’éditeur de liens pour créer un programme exécutable nommé hello.exe. Ce nom apparaît dans les lignes des informations de sortie affichées par le compilateur. La sortie du compilateur doit ressembler à ceci :
 
@@ -130,7 +130,7 @@ Avant de pouvoir générer un programme C ou C++ sur la ligne de commande, véri
    > Si vous recevez une erreur telle que « Cl » n’est pas reconnu en tant que commande interne ou externe, programme exécutable ou fichier de commandes, «erreur C1034 ou LNK1104 d’erreur, l’invite de commandes développeur n’est pas configurée correctement. Pour plus d’informations sur la résolution de ce problème, revenez à la section **ouvrir une invite de commandes développeur** .
 
    > [!NOTE]
-   > Si vous recevez une erreur ou un avertissement du compilateur ou de l’éditeur de liens différent, examinez votre code source pour corriger les erreurs éventuelles, puis enregistrez-le et réexécutez le compilateur. Pour plus d’informations sur des erreurs spécifiques, utilisez la zone de recherche sur cette page MSDN pour rechercher le numéro d’erreur.
+   > Si vous recevez une erreur ou un avertissement du compilateur ou de l’éditeur de liens différent, examinez votre code source pour corriger les erreurs éventuelles, puis enregistrez-le et réexécutez le compilateur. Pour plus d’informations sur des erreurs spécifiques, utilisez la zone de recherche pour rechercher le numéro d’erreur.
 
 1. Pour exécuter le programme hello.exe, à l’invite de commandes, entrez `hello`.
 
@@ -146,7 +146,7 @@ Avant de pouvoir générer un programme C ou C++ sur la ligne de commande, véri
 
 Cet exemple « Hello, World » est le plus simple qu’un programme C++ peut obtenir. Les programmes réels ont généralement des fichiers d’en-tête, des fichiers sources et des liens vers des bibliothèques.
 
-Vous pouvez utiliser les étapes de cette procédure pas à pas pour générer votre propre code C++ au lieu de taper l’exemple de code indiqué. Ces étapes vous permettent également de générer de nombreux exemples de code C++ que vous trouverez ailleurs. Vous pouvez placer votre code source et générer vos applications dans n’importe quel répertoire accessible en écriture. Par défaut, l’IDE de Visual Studio crée des projets dans le dossier de votre utilisateur, dans un sous-dossier *sources\\* . Les versions antérieures peuvent placer des projets dans un dossier *documents\\Visual \<Studio version \\>* projets *.
+Vous pouvez utiliser les étapes de cette procédure pas à pas pour générer votre propre code C++ au lieu de taper l’exemple de code indiqué. Ces étapes vous permettent également de générer de nombreux exemples de code C++ que vous trouverez ailleurs. Vous pouvez placer votre code source et générer vos applications dans n’importe quel répertoire accessible en écriture. Par défaut, l’IDE de Visual Studio crée des projets dans le dossier de votre utilisateur, dans un sous-dossier *sources \\ * . Les versions antérieures peuvent placer des projets dans un dossier *documents \\ Visual Studio \<version> \\ *Projects *.
 
 Pour compiler un programme qui contient des fichiers de code source supplémentaires, entrez-les tous sur la ligne de commande, par exemple :
 
@@ -154,7 +154,7 @@ Pour compiler un programme qui contient des fichiers de code source supplémenta
 
 L' `/EHsc` option de ligne de commande indique au compilateur d’activer le comportement de gestion des exceptions C++ standard. Sans lui, les exceptions levées peuvent entraîner des fuites de ressources et d’objets non détruits. Pour plus d’informations, consultez l’article [/EH (Modèle de gestion des exceptions)](reference/eh-exception-handling-model.md).
 
-Lorsque vous fournissez des fichiers sources supplémentaires, le compilateur utilise le premier fichier d’entrée pour créer le nom du programme. Dans ce cas, elle génère un programme nommé fichier1. exe. Pour modifier le nom en Program1. exe, ajoutez une option [/out](reference/out-output-file-name.md) de l’éditeur de liens :
+Lorsque vous fournissez des fichiers sources supplémentaires, le compilateur utilise le premier fichier d’entrée pour créer le nom du programme. Dans ce cas, elle génère un programme appelé file1.exe. Pour modifier le nom en program1.exe, ajoutez une option [/out](reference/out-output-file-name.md) de l’éditeur de liens :
 
 `cl /EHsc file1.cpp file2.cpp file3.cpp /link /out:program1.exe`
 
@@ -162,11 +162,11 @@ Et pour intercepter automatiquement d’autres erreurs de programmation, nous vo
 
 `cl /W4 /EHsc file1.cpp file2.cpp file3.cpp /link /out:program1.exe`
 
-Le compilateur, cl. exe, offre beaucoup plus d’options. Vous pouvez les appliquer pour générer, optimiser, déboguer et analyser votre code. Pour obtenir une liste rapide, `cl /?` entrez à l’invite de commandes développeur. Vous pouvez également compiler et lier séparément et appliquer des options de l’éditeur de liens dans des scénarios de génération plus complexes. Pour plus d’informations sur les options du compilateur et de l’éditeur de liens et sur son utilisation, consultez Référence de la [génération C/C++](reference/c-cpp-building-reference.md).
+Le compilateur, cl.exe, offre beaucoup plus d’options. Vous pouvez les appliquer pour générer, optimiser, déboguer et analyser votre code. Pour obtenir une liste rapide, entrez `cl /?` à l’invite de commandes développeur. Vous pouvez également compiler et lier séparément et appliquer des options de l’éditeur de liens dans des scénarios de génération plus complexes. Pour plus d’informations sur les options du compilateur et de l’éditeur de liens et sur son utilisation, consultez Référence de la [génération C/C++](reference/c-cpp-building-reference.md).
 
 Vous pouvez utiliser NMAKE et les Makefiles, MSBuild et les fichiers projet, ou CMake, pour configurer et générer des projets plus complexes sur la ligne de commande. Pour plus d’informations sur l’utilisation de ces outils, consultez la page relative aux projets de [Référence NMAKE](reference/nmake-reference.md), [MSBuild](msbuild-visual-cpp.md)et [cmake dans Visual Studio](cmake-projects-in-visual-studio.md).
 
-Les langages C et C++ sont similaires, mais pas identiques. Le compilateur MSVC utilise une règle simple pour déterminer le langage à utiliser lors de la compilation de votre code. Par défaut, le compilateur MSVC traite les fichiers qui se *`.c`* terminent par en tant que code source C, *`.cpp`* et les fichiers qui se terminent par en tant que code source C++. Pour forcer le compilateur à traiter tous les fichiers en C++ indépendamment de l’extension de nom de fichier, utilisez l’option de compilateur [/TP](reference/tc-tp-tc-tp-specify-source-file-type.md) .
+Les langages C et C++ sont similaires, mais pas identiques. Le compilateur MSVC utilise une règle simple pour déterminer le langage à utiliser lors de la compilation de votre code. Par défaut, le compilateur MSVC traite les fichiers qui se terminent par *`.c`* en tant que code source C, et les fichiers qui se terminent par *`.cpp`* en tant que code source C++. Pour forcer le compilateur à traiter tous les fichiers en C++ indépendamment de l’extension de nom de fichier, utilisez l’option de compilateur [/TP](reference/tc-tp-tc-tp-specify-source-file-type.md) .
 
 Le compilateur MSVC comprend une bibliothèque Runtime C (CRT) conforme à la norme ISO C99, avec des exceptions mineures. Le code portable se compile généralement et s’exécute comme prévu. Certaines fonctions de bibliothèque obsolètes et plusieurs noms de fonctions POSIX sont déconseillées par le compilateur MSVC. Les fonctions sont prises en charge, mais les noms préférés ont changé. Pour plus d’informations, consultez [fonctionnalités de sécurité dans le CRT](../c-runtime-library/security-features-in-the-crt.md) et [Avertissement du compilateur (niveau 3) C4996](../error-messages/compiler-warnings/compiler-warning-level-3-c4996.md).
 
