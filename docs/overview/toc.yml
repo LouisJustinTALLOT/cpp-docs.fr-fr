@@ -30,7 +30,7 @@
       href: ../build/vscpp-step-1-create.md
     - name: Générer et exécuter un projet d’application console C++
       href: ../build/vscpp-step-2-build.md
-    - name: Créer votre deuxième application C++
+    - name: Créer une calculatrice console en C++
       href: ../get-started/tutorial-console-cpp.md
     - name: Créer une application UWP
       href: /windows/uwp/cpp-and-winrt-apis/get-started
