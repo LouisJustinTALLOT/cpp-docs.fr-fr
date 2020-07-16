@@ -4,12 +4,12 @@ ms.date: 10/21/2019
 helpviewer_keywords:
 - breaking changes [C++]
 ms.assetid: b38385a9-a483-4de9-99a6-797488bc5110
-ms.openlocfilehash: a045b04e5a57e9963b2ad374fbdfdd533bde0a05
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 51de46487d85f4b8d7d357a0d1842f3d3192fff7
+ms.sourcegitcommit: 6b3d793f0ef3bbb7eefaf9f372ba570fdfe61199
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81374165"
+ms.lasthandoff: 07/15/2020
+ms.locfileid: "86404793"
 ---
 # <a name="visual-c-change-history-2003---2015"></a>Historique des modifications de Visual C++ entre 2003 et 2015
 
@@ -38,7 +38,7 @@ En outre, les améliorations suivies de la conformité du compilateur peuvent pa
 
 ## <a name="visual-studio-2015-conformance-changes"></a><a name="VC_2015"></a> Modifications de la mise en conformité de Visual Studio 2015
 
-### <a name="c-runtime-library-crt"></a><a name="BK_CRT"></a>C Runtime Library (CRT)
+### <a name="c-runtime-library-crt"></a><a name="BK_CRT"></a>Bibliothèque Runtime C (CRT)
 
 #### <a name="general-changes"></a>Modifications générales
 
@@ -46,7 +46,7 @@ En outre, les améliorations suivies de la conformité du compilateur peuvent pa
 
    La bibliothèque CRT a été refactorisée en deux fichiers binaires différents, la bibliothèque Universal CRT (ucrtbase), qui contient la plupart des fonctionnalités standard, et une bibliothèque runtime VC (vcruntime). La bibliothèque vcruntime contient les fonctionnalités associées au compilateur, telles que la gestion des exceptions, et les intrinsèques. Si vous utilisez les paramètres de projet par défaut, cette modification n’a aucune incidence, car l’éditeur de liens utilise automatiquement les nouvelles bibliothèques par défaut. Si vous avez défini, dans l’**éditeur de liens**, la propriété **Ignorer toutes les bibliothèques par défaut** du projet sur **Oui**, ou si vous utilisez l’option `/NODEFAULTLIB` de l’éditeur de liens sur la ligne de commande, vous devez mettre à jour votre liste de bibliothèques (dans la propriété **Dépendances supplémentaires**) pour inclure les nouvelles bibliothèques refactorisées. Remplacez l'ancienne bibliothèque CRT (libcmt.lib, libcmtd.lib, msvcrt.lib, msvcrtd.lib) par les bibliothèques refactorisées équivalentes. Pour chacune des deux bibliothèques refactorisées, il existe des versions statiques (.lib) et dynamiques (.dll), ainsi que des versions release (sans suffixe) et debug (avec le suffixe « d »). Les versions dynamiques ont une bibliothèque d'importation avec laquelle vous établissez une liaison. Les deux bibliothèques refactorisées sont Universal CRT, en particulier ucrtbase.dll ou ucrtbase.lib, ucrtbased.dll ou ucrtbased.lib, et la bibliothèque runtime VC, libvcruntime.lib, vcruntime*version*.dll, libvcruntimed.lib et vcruntimed*version*.dll. La *version* dans Visual Studio 2015 et Visual Studio 2017 est 140. Consultez [Fonctionnalités de bibliothèque CRT](../c-runtime-library/crt-library-features.md).
 
-#### <a name="localeh"></a>\<locale.h>
+#### \<locale.h>
 
 - **localeconv**
 
@@ -54,13 +54,13 @@ En outre, les améliorations suivies de la conformité du compilateur peuvent pa
 
    Si vous utilisez des paramètres régionaux par thread, vous devez vérifier votre utilisation de `localeconv`. Si votre code part du principe que les données `lconv` retournées sont pour les paramètres régionaux globaux, vous devez le corriger.
 
-#### <a name="mathh"></a>\<math.h>
+#### \<math.h>
 
 - **Surcharges C++ des fonctions mathématiques de la bibliothèque**
 
-   Dans les versions précédentes, \<math.h> définissait certaines surcharges C++ pour les fonctions mathématiques de la bibliothèque. Le reste des surcharges se trouvaient dans l’en-tête \<cmath>. Le code incluant uniquement \<math.h> pouvait rencontrer des problèmes de résolution de surcharge de fonction. À présent, toutes les surcharges C++ ont été supprimées de \<math.h> et sont présentes uniquement dans \<cmath>.
+   Dans les versions précédentes, \<math.h> définissait certaines des surcharges C++ pour les fonctions de bibliothèque mathématique. Le reste des surcharges se trouvaient dans l' \<cmath> en-tête. Le code inclus uniquement \<math.h> peut présenter des problèmes avec la résolution de surcharge de fonction. Désormais, les surcharges C++ ont été supprimées de \<math.h> et sont uniquement disponibles dans \<cmath> .
 
-   Pour résoudre les erreurs, incluez \<cmath> pour obtenir les déclarations des fonctions qui ont été supprimées de \<math.h>. Ces fonctions ont été déplacées :
+   Pour résoudre les erreurs, incluez \<cmath> pour récupérer les déclarations des fonctions qui ont été supprimées de \<math.h> . Ces fonctions ont été déplacées :
 
   - `double abs(double)` et `float abs(float)`
 
@@ -68,13 +68,13 @@ En outre, les améliorations suivies de la conformité du compilateur peuvent pa
 
   - Versions `float` et `long double` des fonctions à virgule flottante `acos`, `acosh`, `asin`, `asinh`, `atan`, `atanh`, `atan2`, `cbrt`, `ceil`, `copysign`, `cos`, `cosh`, `erf`, `erfc`, `exp`, `exp2`, `expm1`, `fabs`, `fdim`, `floor`, `fma`, `fmax`, `fmin`, `fmod`, `frexp`, `hypot`, `ilogb`, `ldexp`, `lgamma`, `llrint`, `llround`, `log`, `log10`, `log1p`, `log2`, `lrint`, `lround`, `modf`, `nearbyint`, `nextafter`, `nexttoward`, `remainder`, `remquo`, `rint`, `round`, `scalbln`, `scalbn`, `sin`, `sinh`, `sqrt`, `tan`, `tanh`, `tgamma` et `trunc`
 
-  Si vous avez du code qui utilise `abs` avec un type à virgule flottante incluant uniquement l’en-tête \<math.h>, les versions à virgule flottante ne sont plus disponibles. L’appel se traduit à présent par `abs(int)`, même avec un argument à virgule flottante, ce qui génère l’erreur :
+  Si vous avez du code qui utilise `abs` avec un type à virgule flottante qui ne comprend que l' \<math.h> en-tête, les versions à virgule flottante ne sont plus disponibles. L’appel se traduit à présent par `abs(int)`, même avec un argument à virgule flottante, ce qui génère l’erreur :
 
     ```Output
     warning C4244: 'argument' : conversion from 'float' to 'int', possible loss of data
     ```
 
-  Le correctif pour cet avertissement consiste à remplacer l’appel à `abs` par une version à virgule flottante de `abs`, comme `fabs` pour un argument double ou `fabsf` pour un argument float, ou à inclure l’en-tête \<cmath> et à continuer d’utiliser `abs`.
+  Le correctif pour cet avertissement consiste à remplacer l’appel à `abs` par une version à virgule flottante de `abs` , par exemple `fabs` pour un argument double ou `fabsf` pour un argument float, ou à inclure l' \<cmath> en-tête et continuer à utiliser `abs` .
 
 - **Conformité en matière de virgule flottante**
 
@@ -94,32 +94,32 @@ En outre, les améliorations suivies de la conformité du compilateur peuvent pa
 
    Il ne s’agit pas d’un changement cassant pour du code natif ou mixte (`/clr`). Toutefois, pour du code compilé avec [/clr:pure](../build/reference/clr-common-language-runtime-compilation.md), ce changement peut entraîner l’échec de la compilation de votre code. Si vous compilez du code avec `/clr:pure`, vous devrez peut-être ajouter `#include <new>` ou `#include <new.h>` pour éviter les erreurs de build causées par cette modification. L’option `/clr:pure` est dépréciée dans Visual Studio 2015 et non prise en charge dans Visual Studio 2017. Le code qui doit être « pur » doit être déplacé vers C#.
 
-#### <a name="processh"></a>\<process.h>
+#### \<process.h>
 
 - **_beginthread et _beginthreadex**
 
    Les fonctions [_beginthread](../c-runtime-library/reference/beginthread-beginthreadex.md) et [_beginthreadex](../c-runtime-library/reference/beginthread-beginthreadex.md) contiennent à présent une référence au module dans lequel la procédure de thread est définie pour la durée du thread. Cela permet de garantir que les modules ne sont pas déchargés tant qu’un thread n’a pas été exécuté jusqu’à la fin.
 
-#### <a name="stdargh"></a>\<stdarg.h>
+#### \<stdarg.h>
 
 - **va_start et types référence**
 
    Lors de la compilation de code C++, [va_start](../c-runtime-library/reference/va-arg-va-copy-va-end-va-start.md) valide désormais que l’argument qui lui est transmis n’est pas de type référence. Les arguments de type référence sont interdits par la norme C++.
 
-#### <a name="stdioh-and-conioh"></a><a name="stdio_and_conio"></a> \<stdio.h> et \<conio.h>
+#### <a name="stdioh-and-conioh"></a><a name="stdio_and_conio"></a>\<stdio.h>et\<conio.h>
 
 - **Les familles de fonctions printf et scanf sont maintenant définies inline.**
 
-   Les définitions de toutes les fonctions `printf` et `scanf` ont été placées inline dans \<stdio.h>, \<conio.h> et les autres en-têtes CRT. Ce changement cassant conduit à une erreur de l’éditeur de liens (LNK2019, symbole externe non résolu) pour tous les programmes ayant déclaré ces fonctions localement sans inclure les en-têtes CRT appropriés. Si possible, mettez à jour le code pour inclure les en-têtes CRT (c’est-à-dire, ajouter `#include <stdio.h>`) et les fonctions inline, mais si vous ne voulez pas modifier votre code pour inclure ces fichiers d’en-tête, une autre solution consiste à ajouter une bibliothèque supplémentaire à votre entrée d’éditeur de liens, legacy_stdio_definitions.lib.
+   Les définitions de toutes les `printf` fonctions et `scanf` ont été déplacées inline dans \<stdio.h> , et d' \<conio.h> autres en-têtes CRT. Ce changement cassant conduit à une erreur de l’éditeur de liens (LNK2019, symbole externe non résolu) pour tous les programmes ayant déclaré ces fonctions localement sans inclure les en-têtes CRT appropriés. Si possible, mettez à jour le code pour inclure les en-têtes CRT (c’est-à-dire, ajouter `#include <stdio.h>`) et les fonctions inline, mais si vous ne voulez pas modifier votre code pour inclure ces fichiers d’en-tête, une autre solution consiste à ajouter une bibliothèque supplémentaire à votre entrée d’éditeur de liens, legacy_stdio_definitions.lib.
 
    Pour ajouter cette bibliothèque à votre entrée d’éditeur de liens dans l’environnement IDE, ouvrez le menu contextuel du nœud du projet, choisissez **Propriétés**, puis dans la boîte de dialogue **Propriétés du projet**, choisissez **Éditeur de liens**. Ensuite, modifiez **l’entrée de l’éditeur de liens** afin d’ajouter `legacy_stdio_definitions.lib` à la liste délimitée par des points-virgules.
 
-   Si votre projet est lié à des bibliothèques statiques qui ont été compilées avec une version de Visual Studio antérieure à 2015, l’éditeur de liens peut signaler un symbole externe non résolu. Ces erreurs peuvent faire `_iob`référence `_iob_func`à des définitions internes pour , ou des importations connexes pour certaines \<fonctions stdio.h> sous la forme d’imp _imp_\*. Microsoft recommande de recompiler toutes les bibliothèques statiques avec la dernière version des bibliothèques et du compilateur C++ quand vous mettez à niveau un projet. Si la bibliothèque est une bibliothèque tierce dont la source n’est pas disponible, vous devez demander un fichier binaire mis à jour auprès de la tierce partie ou encapsuler votre utilisation de cette bibliothèque dans une DLL distincte que vous compilez à l’aide de l’ancienne version des bibliothèques et du compilateur.
+   Si votre projet est lié à des bibliothèques statiques qui ont été compilées avec une version de Visual Studio antérieure à 2015, l’éditeur de liens peut signaler un symbole externe non résolu. Ces erreurs peuvent référencer des définitions internes pour `_iob` , `_iob_func` ou des importations associées pour certaines \<stdio.h> fonctions sous la forme _IMP_ \* . Microsoft recommande de recompiler toutes les bibliothèques statiques avec la dernière version des bibliothèques et du compilateur C++ quand vous mettez à niveau un projet. Si la bibliothèque est une bibliothèque tierce dont la source n’est pas disponible, vous devez demander un fichier binaire mis à jour auprès de la tierce partie ou encapsuler votre utilisation de cette bibliothèque dans une DLL distincte que vous compilez à l’aide de l’ancienne version des bibliothèques et du compilateur.
 
     > [!WARNING]
     > Si vous établissez une liaison avec le Kit de développement logiciel (SDK) Windows 8.1 ou version antérieure, vous pouvez rencontrer ces erreurs de symbole externe non résolues. Dans ce cas, vous devez résoudre l'erreur en ajoutant legacy_stdio_definitions.lib à l'entrée de l'éditeur de liens, comme décrit précédemment.
 
-   Pour dépanner les erreurs de symbole non résolues, vous pouvez essayer d’utiliser [dumpbin.exe](../build/reference/dumpbin-reference.md) pour examiner les symboles définis dans un binaire. Essayez d'utiliser la ligne de commande ci-dessous pour afficher les symboles définis dans une bibliothèque.
+   Pour résoudre les erreurs de symbole non résolues, vous pouvez essayer d’utiliser [dumpbin.exe](../build/reference/dumpbin-reference.md) pour examiner les symboles définis dans un fichier binaire. Essayez d'utiliser la ligne de commande ci-dessous pour afficher les symboles définis dans une bibliothèque.
 
     ```cpp
     dumpbin.exe /LINKERMEMBER somelibrary.lib
@@ -225,7 +225,7 @@ En outre, les améliorations suivies de la conformité du compilateur peuvent pa
 
 - **snprintf et vsnprintf**
 
-   Les fonctions [snprintf](../c-runtime-library/reference/snprintf-snprintf-snprintf-l-snwprintf-snwprintf-l.md) et [vsnprintf](../c-runtime-library/reference/vsnprintf-vsnprintf-vsnprintf-l-vsnwprintf-vsnwprintf-l.md) sont à présent implémentées. Du code plus ancien fournissait souvent des versions macro de définitions de ces fonctions, car elles n’étaient pas implémentées par la bibliothèque CRT, mais elles ne sont plus nécessaires dans les versions plus récentes. Si [snprintf](../c-runtime-library/reference/snprintf-snprintf-snprintf-l-snwprintf-snwprintf-l.md) ou [vsnprintf](../c-runtime-library/reference/vsnprintf-vsnprintf-vsnprintf-l-vsnwprintf-vsnwprintf-l.md) est défini comme macro avant l’inclusion de \<stdio.h>, la compilation échoue désormais avec une erreur qui indique où la macro a été définie.
+   Les fonctions [snprintf](../c-runtime-library/reference/snprintf-snprintf-snprintf-l-snwprintf-snwprintf-l.md) et [vsnprintf](../c-runtime-library/reference/vsnprintf-vsnprintf-vsnprintf-l-vsnwprintf-vsnwprintf-l.md) sont à présent implémentées. Du code plus ancien fournissait souvent des versions macro de définitions de ces fonctions, car elles n’étaient pas implémentées par la bibliothèque CRT, mais elles ne sont plus nécessaires dans les versions plus récentes. Si [snprintf](../c-runtime-library/reference/snprintf-snprintf-snprintf-l-snwprintf-snwprintf-l.md) ou [vsnprintf](../c-runtime-library/reference/vsnprintf-vsnprintf-vsnprintf-l-vsnwprintf-vsnwprintf-l.md) est défini comme macro avant l’inclusion \<stdio.h> , la compilation échoue désormais avec une erreur qui indique où la macro a été définie.
 
    Normalement, le correctif de ce problème consiste à supprimer toutes les déclarations de `snprintf` ou `vsnprintf` dans le code utilisateur.
 
@@ -235,7 +235,7 @@ En outre, les améliorations suivies de la conformité du compilateur peuvent pa
 
 - **Encapsulation de FILE**
 
-   Dans les versions précédentes, le \<type COMPLET file a été défini publiquement en stdio.h>, de sorte qu’il était possible pour le code utilisateur d’atteindre dans un FILE et de modifier ses internes. La bibliothèque a été modifiée pour masquer les détails d’implémentation. Dans le cadre de cette modification, le type FILE tel que défini dans \<stdio.h> est désormais un type opaque et ses membres sont inaccessibles de l’extérieur de la bibliothèque CRT elle-même.
+   Dans les versions précédentes, le type de fichier complet était défini publiquement dans. \<stdio.h> il était donc possible pour le code utilisateur d’accéder à un fichier et de modifier ses éléments internes. La bibliothèque a été modifiée pour masquer les détails d’implémentation. Dans le cadre de cette modification, le fichier tel que défini dans \<stdio.h> est désormais un type opaque et ses membres sont inaccessibles à partir de l’extérieur du CRT lui-même.
 
 - **_outp et _inp**
 
@@ -259,7 +259,7 @@ En outre, les améliorations suivies de la conformité du compilateur peuvent pa
 
    L’option de lien `smallheap` a été supprimée. Consultez [Link Options](../c-runtime-library/link-options.md).
 
-#### <a name="stringh"></a>\<string.h>
+#### \<string.h>
 
 - **wcstok**
 
@@ -273,9 +273,9 @@ En outre, les améliorations suivies de la conformité du compilateur peuvent pa
 
    Une nouvelle fonction `_wcstok` a été ajoutée avec l’ancienne signature pour faciliter le portage. Quand vous compilez du code C++, il existe également une surcharge inline de `wcstok` qui a l’ancienne signature. Cette surcharge est déclarée comme déconseillée. Dans le code C, vous pouvez définir _CRT_NON_CONFORMING_WCSTOK pour que `_wcstok` soit utilisé à la place de `wcstok`.
 
-#### <a name="timeh"></a>\<time.h>
+#### \<time.h>
 
-- **Horloge**
+- **horloge**
 
    Dans les versions précédentes, la fonction [clock](../c-runtime-library/reference/clock.md) était implémentée à l’aide de l’API Windows [GetSystemTimeAsFileTime](/windows/win32/api/sysinfoapi/nf-sysinfoapi-getsystemtimeasfiletime). Avec cette implémentation, la fonction clock était sensible à l'heure système et n'était donc pas nécessairement unitone. La fonction clock a été réimplémentée en tant que [QueryPerformanceCounter](/windows/win32/api/profileapi/nf-profileapi-queryperformancecounter) . Elle est désormais monotone.
 
@@ -297,23 +297,23 @@ En outre, les améliorations suivies de la conformité du compilateur peuvent pa
 
 - **timespec et TIME_UTC**
 
-   L’en-tête \<time.h> définit à présent le type `timespec` et la fonction `timespec_get` issus de la norme C11. En outre, la macro TIME_UTC, à utiliser avec la fonction `timespec_get`, est maintenant définie. Il s’agit d’un changement cassant pour le code qui a une définition en conflit pour l’un de ces identificateurs.
+   L' \<time.h> en-tête définit maintenant le `timespec` type et la `timespec_get` fonction à partir de la norme C11. En outre, la macro TIME_UTC, à utiliser avec la fonction `timespec_get`, est maintenant définie. Il s’agit d’un changement cassant pour le code qui a une définition en conflit pour l’un de ces identificateurs.
 
 - **CLOCKS_PER_SEC**
 
    La macro CLOCKS_PER_SEC se développe désormais en un entier de type `clock_t`, comme cela est requis par le langage C.
 
-#### <a name="c-standard-library"></a><a name="BK_STL"></a>Bibliothèque standard de CMD
+#### <a name="c-standard-library"></a><a name="BK_STL"></a>Bibliothèque standard C++
 
-Pour activer les nouvelles optimisations et vérifications de débogage, l'implémentation Visual Studio de la bibliothèque C++ standard interrompt intentionnellement la compatibilité binaire d'une version à la suivante. Par conséquent, lorsque la bibliothèque C++ standard est utilisée, les fichiers objets et les bibliothèques statiques qui sont compilés à l'aide de différentes versions ne peuvent pas être combinés en un seul binaire (EXE ou DLL), et les objets de la bibliothèque C++ standard ne peuvent pas être transmis entre des binaires compilés à l'aide de différentes versions. Une telle combinaison entraîne des erreurs de l'éditeur de liens concernant des incompatibilités _MSC_VER. (_MSC_VER est la macro qui contient la version principale du compilateur, par exemple, 1800 pour Visual Studio 2013.) Cette vérification ne peut pas détecter le mixage DLL, et ne peut pas détecter le mélange qui implique Visual Studio 2008 ou plus tôt.
+Pour activer les nouvelles optimisations et vérifications de débogage, l'implémentation Visual Studio de la bibliothèque C++ standard interrompt intentionnellement la compatibilité binaire d'une version à la suivante. Par conséquent, lorsque la bibliothèque C++ standard est utilisée, les fichiers objets et les bibliothèques statiques qui sont compilés à l'aide de différentes versions ne peuvent pas être combinés en un seul binaire (EXE ou DLL), et les objets de la bibliothèque C++ standard ne peuvent pas être transmis entre des binaires compilés à l'aide de différentes versions. Une telle combinaison entraîne des erreurs de l'éditeur de liens concernant des incompatibilités _MSC_VER. (_MSC_VER est la macro qui contient la version principale du compilateur, par exemple 1800 pour Visual Studio 2013.) Cette vérification ne peut pas détecter la combinaison de DLL et ne peut pas détecter les combinaisons impliquant Visual Studio 2008 ou une version antérieure.
 
 - **Fichiers include de bibliothèque C++ standard**
 
-   Certaines modifications ont été apportées à la structure include dans les en-têtes de bibliothèque C++ standard. Les en-têtes de la bibliothèque C++ standard sont autorisés à s’inclure mutuellement de façons non spécifiées. En général, vous devez écrire votre code afin qu’il inclue soigneusement tous les en-têtes dont il a besoin conformément à la norme C++, et ne s’appuie pas sur quels en-têtes de la bibliothèque C++ standard incluent quels autres en-têtes de la bibliothèque C++ standard. Cela rend le code portable entre les versions et les plateformes. Au moins deux changements d’en-tête dans Visual Studio 2015 affectent le code utilisateur. Tout d’abord, \<string> n’inclut plus \<iterator>. Deuxièmement, \<tuple> déclare à présent `std::array` sans inclure tous les \<array>, ce qui peut casser le code par la combinaison suivante de constructions de code : votre code a une variable nommée « array », vous avez une directive using « using namespace std; » et vous incluez un en-tête de la bibliothèque C++ standard (tel que \<functional>) qui inclut \<tuple>, qui déclare maintenant `std::array`.
+   Certaines modifications ont été apportées à la structure include dans les en-têtes de bibliothèque C++ standard. Les en-têtes de la bibliothèque C++ standard sont autorisés à s’inclure mutuellement de façons non spécifiées. En général, vous devez écrire votre code afin qu’il inclue soigneusement tous les en-têtes dont il a besoin conformément à la norme C++, et ne s’appuie pas sur quels en-têtes de la bibliothèque C++ standard incluent quels autres en-têtes de la bibliothèque C++ standard. Cela rend le code portable entre les versions et les plateformes. Au moins deux changements d’en-tête dans Visual Studio 2015 affectent le code utilisateur. Tout d’abord, \<string> n’est plus inclus \<iterator> . Ensuite, \<tuple> déclare `std::array` sans inclure tout \<array> , ce qui peut rompre le code via la combinaison de constructions de code suivante : votre code a une variable nommée « Array », et vous avez une directive using « using namespace std ; », et vous incluez un en-tête de bibliothèque standard C++ (tel que \<functional> ) qui inclut à \<tuple> présent, qui déclare `std::array` .
 
 - **steady_clock**
 
-   L’implémentation \<chrono> de [steady_clock](../standard-library/steady-clock-struct.md) a changé pour satisfaire les exigences de la norme C++ en matière de stabilité et d’unitonicité. `steady_clock` est maintenant basé sur [QueryPerformanceCounter](/windows/win32/api/profileapi/nf-profileapi-queryperformancecounter), et `high_resolution_clock` est désormais un typedef pour `steady_clock`. Ainsi, dans Visual Studio, `steady_clock::time_point` est désormais un typedef pour `chrono::time_point<steady_clock>`. Toutefois, cela n’est pas nécessairement le cas pour d’autres implémentations.
+   L' \<chrono> implémentation de [steady_clock](../standard-library/steady-clock-struct.md) a changé pour répondre aux exigences de la norme C++ pour en matière et monotonique. `steady_clock` est maintenant basé sur [QueryPerformanceCounter](/windows/win32/api/profileapi/nf-profileapi-queryperformancecounter), et `high_resolution_clock` est désormais un typedef pour `steady_clock`. Ainsi, dans Visual Studio, `steady_clock::time_point` est désormais un typedef pour `chrono::time_point<steady_clock>`. Toutefois, cela n’est pas nécessairement le cas pour d’autres implémentations.
 
 - **allocateurs et const**
 
@@ -331,7 +331,7 @@ Pour activer les nouvelles optimisations et vérifications de débogage, l'impl�
 
 - **Éléments const**
 
-   La norme C++ a toujours interdit les conteneurs d’éléments const (tels que vector\<const T> ou set\<const T>). Visual Studio 2013 et les versions antérieures acceptaient ces conteneurs. Dans la version actuelle, la compilation de ces conteneurs échoue.
+   La norme C++ a toujours interdit les conteneurs d’éléments const (tels que Vector \<const T> ou Set \<const T> ). Visual Studio 2013 et les versions antérieures acceptaient ces conteneurs. Dans la version actuelle, la compilation de ces conteneurs échoue.
 
 - **std::allocator::deallocate**
 
@@ -339,11 +339,11 @@ Pour activer les nouvelles optimisations et vérifications de débogage, l'impl�
 
 - **hash_map et hash_set**
 
-   Les fichiers d’en-tête non standard \<hash_map> et \<hash_set> sont dépréciés dans Visual Studio 2015 et seront supprimés dans une version ultérieure. Utilisez \<unordered_map> et \<unordered_set> à la place.
+   Les fichiers d’en-tête non standard \<hash_map> et \<hash_set> sont déconseillés dans Visual Studio 2015 et seront supprimés dans une version ultérieure. Utilisez plutôt \<unordered_map> et \<unordered_set>.
 
 - **comparateurs et operator()**
 
-   Les conteneurs associatifs (famille \<map>) exigent que leurs comparateurs possèdent des opérateurs d’appel de fonction pouvant être appelée par const. À présent, la compilation du code suivant dans une déclaration de classe de comparateur échoue :
+   Les conteneurs associatifs (la \<map> famille) requièrent désormais que leurs comparateurs possèdent des opérateurs d’appel de fonction const pouvant être appelés. À présent, la compilation du code suivant dans une déclaration de classe de comparateur échoue :
 
     ```cpp
     bool operator()(const X& a, const X& b)
@@ -393,7 +393,7 @@ Pour activer les nouvelles optimisations et vérifications de débogage, l'impl�
 
    Le package redistribuable Visual C++ inclut toujours cette bibliothèque.
 
-#### <a name="concurrency-runtime"></a><a name="BK_ConcRT"></a>Cour d’exécution de concurrency
+#### <a name="concurrency-runtime"></a><a name="BK_ConcRT"></a>runtime d'accès concurrentiel
 
 - **Macro Yield de Windows.h en conflit avec concurrency::Context::Yield**
 
@@ -415,13 +415,13 @@ Même si ces différences peuvent affecter votre code source ou d’autres artef
 
 - [Améliorations de la conformité dans Visual Studio 2015](#VS_RTM)
 
-- [Améliorations de conformité dans la mise à jour 1](#VS_Update1)
+- [Améliorations de la conformité dans Update 1](#VS_Update1)
 
-- [Améliorations de conformité dans la mise à jour 2](#VS_Update2)
+- [Améliorations de la conformité dans Update 2](#VS_Update2)
 
-- [Améliorations de conformité dans la mise à jour 3](#VS_Update3)
+- [Améliorations de la conformité dans Update 3](#VS_Update3)
 
-### <a name="conformance-improvements-in-visual-studio-2015"></a><a name="VS_RTM"></a>Améliorations de conformité dans Visual Studio 2015
+### <a name="conformance-improvements-in-visual-studio-2015"></a><a name="VS_RTM"></a>Améliorations de la conformité dans Visual Studio 2015
 
 - /Zc:forScope-
 
@@ -449,7 +449,7 @@ Même si ces différences peuvent affecter votre code source ou d’autres artef
 
 - Vous ne pouvez plus exécuter de tests unitaires avec C++/CLI à partir de la ligne de commande avec mstest.exe. À la place, utilisez vstest.console.exe. Consultez [Options de ligne de commande VSTest.Console.exe](/visualstudio/test/vstest-console-options).
 
-- **mot-clé mutable**
+- **mot clé mutable**
 
    Le spécificateur de classe de stockage **mutable** n’est plus autorisé dans les emplacements où il était compilé sans erreur. À présent, le compilateur attribue l'erreur C2071 (classe de stockage non conforme). Conformément à la norme, le spécificateur **mutable** peut être appliqué uniquement à des noms de données membres de classe. Il ne peut pas être appliqué à des noms déclarés const ou static, ni à des membres de référence.
 
@@ -532,7 +532,7 @@ Même si ces différences peuvent affecter votre code source ou d’autres artef
 
    Pour résoudre ce problème, supprimez `__declspec(align)` de la déclaration de fonction. Comme cela n’avait aucun effet, la suppression ne change rien.
 
-- **Manipulation d’exception**
+- **Gestion des exceptions**
 
    Quelques modifications ont été apportées à la gestion des exceptions. Tout d'abord, les objets d'exception doivent pouvoir être copiés ou déplacés. Le code suivant se compile dans Visual Studio 2013, mais pas dans Visual Studio 2015 :
 
@@ -566,7 +566,7 @@ Même si ces différences peuvent affecter votre code source ou d’autres artef
     }
     ```
 
-   Pour mettre à jour votre code, assurez-vous que le constructeur de copie pour votre objet d’exception est **public** et non marqué **explicite**.
+   Pour mettre à jour votre code, assurez-vous que le constructeur de copie de votre objet d’exception est **public** et qu’il n’est pas marqué comme **Explicit**.
 
    L'interception d'une exception par sa valeur exige que l'objet d'exception puisse être copié. Le code suivant se compile dans Visual Studio 2013, mais pas dans Visual Studio 2015 :
 
@@ -641,7 +641,7 @@ Même si ces différences peuvent affecter votre code source ou d’autres artef
 
 - **Placement new et delete**
 
-   Une modification a été apportée à l’opérateur **delete** pour le rendre conforme à la norme C++14. Vous trouverez les détails relatifs au changement de normes sur la page décrivant la [libération dimensionnée C++](https://isocpp.org/files/papers/n3778.html). Les changements ajoutent une forme de l’opérateur **delete** global, qui accepte un paramètre de taille. Le changement de rupture est que si vous utilisiez auparavant une **suppression** d’opérateur avec la même signature (pour correspondre avec un nouveau opérateur **de placement),** vous recevrez une erreur de compilateur (C2956, qui se produit au point où le nouveau placement est utilisé, puisque c’est la position dans le code où le compilateur tente d’identifier un opérateur de **suppression** correspondant approprié).
+   Une modification a été apportée à l’opérateur **delete** pour le rendre conforme à la norme C++14. Vous trouverez les détails relatifs au changement de normes sur la page décrivant la [libération dimensionnée C++](https://isocpp.org/files/papers/n3778.html). Les changements ajoutent une forme de l’opérateur **delete** global, qui accepte un paramètre de taille. La modification avec rupture est que si vous utilisiez précédemment un opérateur **Delete** avec la même signature (pour correspondre à un opérateur **placement New** ), vous recevrez une erreur du compilateur (C2956, qui se produit au point où le nouvel emplacement est utilisé, puisque c’est la position dans le code où le compilateur tente d’identifier un opérateur **Delete** correspondant approprié).
 
    La fonction `void operator delete(void *, size_t)` était un opérateur **placement delete** correspondant à la fonction **placement new**`void * operator new(size_t, size_t)` dans C++11. Avec la libération dimensionnée C++14, cette fonction delete est maintenant une *fonction de libération habituelle* (opérateur **delete** global). La norme impose que si l'utilisation d'un opérateur placement new recherche une fonction delete correspondante et trouve une fonction de désallocation habituelle, le programme est incorrect.
 
@@ -658,11 +658,11 @@ Même si ces différences peuvent affecter votre code source ou d’autres artef
     enum class my_type : size_t {};
     ```
 
-   Ensuite, modifier votre définition de **placement nouveau** et **supprimer** pour `size_t`utiliser ce type comme le deuxième argument au lieu de . Vous devrez également mettre à jour les appels pour placer de nouveaux `static_cast<my_type>` pour passer le nouveau type (par exemple, en utilisant pour convertir à partir de la valeur integer) et mettre à jour la définition de **nouveau** et **supprimer** pour rejeter de nouveau au type d’intégreur. Vous n’avez pas besoin d’utiliser un **enum** pour cela; un type de `size_t` classe avec un membre fonctionnerait également.
+   Ensuite, modifiez votre définition de **placement New** et **Delete** pour utiliser ce type comme second argument à la place de `size_t` . Vous devez également mettre à jour les appels à placement New pour transmettre le nouveau type (par exemple, en utilisant `static_cast<my_type>` pour effectuer une conversion à partir de la valeur entière) et mettre à jour la définition de **New** et **Delete** pour effectuer un cast en retour vers le type entier. Vous n’avez pas besoin d’utiliser un **enum** pour ce. un type de classe avec un `size_t` membre fonctionne également.
 
    Une autre solution consiste à éliminer complètement **placement new**. Si votre code utilise **placement new** pour implémenter un pool de mémoires où l’argument de positionnement correspond à la taille de l’objet alloué ou supprimé, la fonction de libération dimensionnée peut servir à remplacer votre propre code de pool de mémoires personnalisé. De plus, vous pouvez supprimer les fonctions de positionnement et les remplacer simplement par un opérateur **delete** à deux arguments.
 
-   Si vous ne voulez pas mettre à jour votre code tout de suite, vous pouvez revenir à l’ancien comportement en utilisant l’option de compilateur `/Zc:sizedDealloc-`. Si vous utilisez cette option, les fonctions de suppression de deux arguments n’existent pas et ne causeront pas de conflit avec votre opérateur **de suppression de placement.**
+   Si vous ne voulez pas mettre à jour votre code tout de suite, vous pouvez revenir à l’ancien comportement en utilisant l’option de compilateur `/Zc:sizedDealloc-`. Si vous utilisez cette option, les fonctions Delete à deux arguments n’existent pas et ne provoquent pas de conflit avec votre opérateur **placement Delete** .
 
 - **Membres de données d'union**
 
@@ -1004,7 +1004,7 @@ Même si ces différences peuvent affecter votre code source ou d’autres artef
     //other partial specializations here
     ```
 
-- **Règles appliquées pour les déclarations à terme. (Ne s’applique qu’à C.)**
+- **Règles appliquées pour les déclarations anticipées. (S’applique uniquement à C.)**
 
    Le code suivant génère désormais l’erreur C2065 :
 
@@ -1217,7 +1217,7 @@ Même si ces différences peuvent affecter votre code source ou d’autres artef
 
 - **alignof est désormais un mot clé**
 
-   Le code suivant génère désormais l’erreur C2332 : 'classe' : nom de balise manquant. Pour fixer le code, vous devez renommer la classe ou, si la classe effectue le même travail que **l’alignement**, il suffit de remplacer la classe par le nouveau mot clé.
+   Le code suivant génère désormais l’erreur C2332 : 'classe' : nom de balise manquant. Pour corriger le code, vous devez renommer la classe ou, si la classe effectue le même travail que **alignof**, remplacez simplement la classe par le mot clé New.
 
     ```cpp
     class alignof{}
@@ -1496,7 +1496,7 @@ Même si ces différences peuvent affecter votre code source ou d’autres artef
 
    Pour corriger cette erreur, supprimez dans `S2` l’appel de `S1()` à partir du constructeur et placez-le si nécessaire dans une autre fonction.
 
-- **{}empêche la conversion au pointeur**
+- **{}empêche la conversion en pointeur**
 
    Le code suivant génère désormais l’erreur C2439 : 'S::p' : impossible d’initialiser le membre
 
@@ -1633,7 +1633,7 @@ Même si ces différences peuvent affecter votre code source ou d’autres artef
     static_assert(std::is_convertible<D*, B2*>::value, "fail");
     ```
 
-- **__declspec (novtable) les déclarations doivent être cohérentes**
+- **les déclarations __declspec (novtable) doivent être cohérentes**
 
    Les déclarations `__declspec` doivent être cohérentes entre toutes les bibliothèques. Le code suivant génère désormais une violation à une règle de définitions (ODR) :
 
@@ -1775,7 +1775,7 @@ Même si ces différences peuvent affecter votre code source ou d’autres artef
 
    De plus, bien que le compilateur ne donne pas de diagnostic spécifique, l’opérateur **new** inline est considéré comme incorrect.
 
-- **Appel « *type*opérateur ()» (conversion définie par l’utilisateur) sur les types non-classe**
+- **Appel de’operator *type*() ' (conversion définie par l’utilisateur) sur des types autres que des types classe**
 
    Les versions précédentes du compilateur autorisaient l’appel de ’operator *type*()’ sur des types autres que des types classe et ignoraient cet appel en silence. Cet ancien comportement créait un risque de génération de code incorrect en mode silencieux qui provoquait un comportement imprévisible au moment de l’exécution. Le compilateur n’accepte plus de code écrit de cette façon. Au lieu de cela, il émet l’erreur du compilateur C2228.
 
@@ -2294,7 +2294,7 @@ Même si ces différences peuvent affecter votre code source ou d’autres artef
 
 - Les variables membres `volatile` ** n’autorisent pas les constructeurs et les opérateurs d’assignation définis implicitement**
 
-   Dans les versions précédentes du compilateur, il était possible de générer automatiquement les constructeurs de copie/déplacement par défaut et les opérateurs d’assignation de copie/déplacement par défaut pour une classe contenant des variables membres **volatiles**. Cet ancien comportement était incorrect et non conforme à la norme C++. Le compilateur considère maintenant qu’une catégorie qui a des variables **membres volatiles** a des opérateurs de construction et d’affectation non négligeables, ce qui empêche la mise en œuvre par défaut de ces opérateurs d’être généré automatiquement. Quand une telle classe est membre d’une union (ou d’une union anonyme au sein d’une classe), les constructeurs de copie/déplacement et les opérateurs d’assignation de copie/déplacement de l’union (ou de la classe contenant l’union anonyme) sont implicitement définis comme étant supprimés. Toute tentative de construction ou de copie de l’union (ou de la classe contenant l’union anonyme) sans avoir défini explicitement les constructeurs ou opérateurs est considérée comme une erreur. Le compilateur génère alors l’erreur de compilateur C2280.
+   Dans les versions précédentes du compilateur, il était possible de générer automatiquement les constructeurs de copie/déplacement par défaut et les opérateurs d’assignation de copie/déplacement par défaut pour une classe contenant des variables membres **volatiles**. Cet ancien comportement était incorrect et non conforme à la norme C++. Désormais, le compilateur considère qu’une classe contenant des variables de membre **volatiles** a des opérateurs de construction et d’assignation non triviales, ce qui empêche la génération automatique des implémentations par défaut de ces opérateurs. Quand une telle classe est membre d’une union (ou d’une union anonyme au sein d’une classe), les constructeurs de copie/déplacement et les opérateurs d’assignation de copie/déplacement de l’union (ou de la classe contenant l’union anonyme) sont implicitement définis comme étant supprimés. Toute tentative de construction ou de copie de l’union (ou de la classe contenant l’union anonyme) sans avoir défini explicitement les constructeurs ou opérateurs est considérée comme une erreur. Le compilateur génère alors l’erreur de compilateur C2280.
 
     ```Output
     error C2280: 'B::B(const B &)': attempting to reference a deleted function
@@ -2804,7 +2804,7 @@ Même si ces différences peuvent affecter votre code source ou d’autres artef
     int y = x;
     ```
 
-   Ce code se `x` résout `std::initializer_list<int>` maintenant à un type de et `x` provoque une erreur sur la ligne suivante qui tente d’attribuer à taper **int**. (Il n’y a pas de conversion par défaut.) Pour corriger ce code, utilisez **int** pour remplacer **l’automobile**:
+   Ce code est désormais résolu `x` en un type `std::initializer_list<int>` et provoque une erreur sur la ligne suivante qui tente d’assigner `x` au type **int**. (Il n’existe pas de conversion par défaut.) Pour corriger ce code, utilisez **int** pour remplacer **auto**:
 
     ```cpp
     int x = {0};
@@ -2854,7 +2854,7 @@ Même si ces différences peuvent affecter votre code source ou d’autres artef
 
    Dans Visual Studio 2012, `E1` dans l’expression `E1::b` était résolu en `::E1` dans la portée globale. Dans Visual Studio 2013, `E1` dans l’expression `E1::b` correspond à la définition `typedef E2` dans `main()` et a le type `::E2`.
 
-- La disposition des objets a changé. Sur x64, la disposition des objets d'une classe peut changer par rapport aux versions précédentes. S’il a une fonction **virtuelle** mais qu’il n’a pas de classe de base qui a une fonction **virtuelle,** le modèle d’objet du compilateur insère un pointeur à une table de fonction **virtuelle** après la mise en page du membre des données. Cela signifie que la disposition peut ne pas être optimale dans tous les cas. Dans les versions précédentes, une optimisation pour x64 tentait d’améliorer la disposition pour vous, mais comme elle ne fonctionnait pas correctement dans les cas complexes de code, elle a été supprimée de Visual Studio 2013. Considérez par exemple le code suivant :
+- La disposition des objets a changé. Sur x64, la disposition des objets d'une classe peut changer par rapport aux versions précédentes. Si elle a une fonction **virtuelle** , mais qu’elle n’a pas de classe de base qui a une fonction **virtuelle** , le modèle objet du compilateur insère un pointeur vers une table de fonctions **virtuelles** après la disposition des membres de données. Cela signifie que la disposition peut ne pas être optimale dans tous les cas. Dans les versions précédentes, une optimisation pour x64 tentait d’améliorer la disposition pour vous, mais comme elle ne fonctionnait pas correctement dans les cas complexes de code, elle a été supprimée de Visual Studio 2013. Considérez par exemple le code suivant :
 
     ```cpp
     __declspec(align(16)) struct S1 {
@@ -2883,7 +2883,7 @@ Même si ces différences peuvent affecter votre code source ou d’autres artef
     };
     ```
 
-   Pour trouver des endroits dans votre code qu’une version antérieure aurait essayé d’optimiser, utilisez un compilateur à partir de cette version avec l’option compilateur et activez l’avertissement `/W3` C4370. Par exemple :
+   Pour rechercher les emplacements dans votre code qu’une version antérieure aurait essayé d’optimiser, utilisez un compilateur de cette version avec l' `/W3` option de compilateur, puis activez Warning C4370. Par exemple :
 
     ```cpp
     #pragma warning(default:4370)
@@ -2932,7 +2932,7 @@ Le compilateur C++ dans Visual Studio 2013 détecte des incompatibilités dans _
 
 - Vous devez utiliser `#include <algorithm>` lorsque vous appelez `std::min()` ou `std::max()`.
 
-- Si votre code existant utilise les enums à portée simulée de la version précédente, les enums nonscoped traditionnels enveloppés dans des espaces de nom, vous devez le modifier. Par exemple, si vous faisiez référence au type `std::future_status::future_status`, vous devez indiquer `std::future_status`. Toutefois, la plupart du code reste inchangé. Par exemple, `std::future_status::ready` est encore compilé.
+- Si votre code existant utilise les énumérations délimitées simulées de la version précédente, c’est-à-dire les énumérations délimitées traditionnelles encapsulées dans des espaces de noms, vous devez la modifier. Par exemple, si vous faisiez référence au type `std::future_status::future_status`, vous devez indiquer `std::future_status`. Toutefois, la plupart du code reste inchangé. Par exemple, `std::future_status::ready` est encore compilé.
 
 - `explicit operator bool()` est plus strict qu’operator unspecified-bool-type(). `explicit operator bool()` autorise les conversions explicites en type bool (par exemple, avec `shared_ptr<X> sp`, `static_cast<bool>(sp)` et `bool b(sp)` sont valides), ainsi que les « conversions contextuelles » booléennes testables en type bool (par exemple, `if (sp)`, `!sp`, `sp &&`). Toutefois, `explicit operator bool()` n’autorise pas les conversions implicites en type bool. Vous ne pouvez donc pas indiquer `bool b = sp;`, ni indiquer `return sp` avec un type de retour bool.
 
@@ -2942,17 +2942,17 @@ Le compilateur C++ dans Visual Studio 2013 détecte des incompatibilités dans _
 
 - `reference_wrapper`, `ref()` et `cref()` interdisent désormais toute liaison aux objets temporaires.
 
-- \<random> applique désormais strictement ses conditions préalables de compilation.
+- \<random>applique désormais strictement ses conditions préalables à la compilation.
 
 - Différents traits de type de la bibliothèque C++ standard ont la condition préalable « T sera un type complet ». Bien que le compilateur applique désormais cette condition préalable plus strictement, il peut ne pas l’appliquer dans toutes les situations. (Comme les violations de condition préalable de la bibliothèque C++ standard déclenchent un comportement indéfini, Standard ne garantit pas la mise en vigueur.)
 
 - La bibliothèque C++ standard ne prend pas en charge `/clr:oldSyntax`.
 
-- La spécification C++11 pour common_type<> a eu des conséquences inattendues et indésirables. En particulier, common_type\<int, int>::type a retourné int&&. Ainsi, le compilateur implémente la Résolution proposée pour le problème 2141 du groupe de travail de bibliothèque, qui fait que common_type\<int, int="">::type retourne int.
+- La spécification C++ 11 pour common_type<> avait des conséquences inattendues et indésirables. en particulier, il rend common_type \<int, int> :: type Return int&&. Par conséquent, le compilateur implémente la résolution proposée pour le problème 2141 du groupe de travail de la bibliothèque, ce qui fait que common_type \<int, int=""> :: type retourne int.
 
-   Effet secondaire de cette modification, le cas d’identité ne s’exécute plus (common_type\<T> ne produit pas toujours le type T). Ce comportement est conforme à la résolution proposée, mais casse le code qui était fondé sur le comportement précédent.
+   En tant qu’effet secondaire de cette modification, le cas d’identité ne fonctionne plus (common_type \<T> ne donne pas toujours le type t). Ce comportement est conforme à la résolution proposée, mais casse le code qui était fondé sur le comportement précédent.
 
-   Si vous avez besoin d’un trait de type d’identité, n’utilisez pas le trait `std::identity` non standard défini dans \<type_traits>, car il ne fonctionne pas pour \<void>. À la place, implémentez votre propre caractéristique de type d'identité pour répondre à vos besoins. Voici un exemple :
+   Si une caractéristique de type identité est requise, n'utilisez pas la caractéristique `std::identity` non standard définie dans \<type_traits> , car elle ne fonctionnera pas pour \<void>. À la place, implémentez votre propre caractéristique de type d'identité pour répondre à vos besoins. Voici un exemple :
 
     ```cpp
     template < typename T> struct Identity {
@@ -2962,7 +2962,7 @@ Le compilateur C++ dans Visual Studio 2013 détecte des incompatibilités dans _
 
 ### <a name="mfc-and-atl"></a>MFC et ATL
 
-- **Visual Studio 2013 seulement**: la bibliothèque MFC MBCS n’est pas incluse dans Visual Studio parce qu’Unicode est si populaire et que l’utilisation de MBCS a considérablement diminué. Cette modification maintient également MFC plus étroitement aligné avec le Kit de développement logiciel (SDK) Windows, car la plupart des nouveaux contrôles et messages sont seulement Unicode. Toutefois, si vous devez continuer à utiliser la bibliothèque MFC MBCS, vous pouvez la télécharger depuis le Centre de téléchargement MSDN à la page [Bibliothèque MFC multioctets pour Visual Studio 2013](https://www.microsoft.com/download/details.aspx?id=40770). Le package redistribuable Visual C++ inclut toujours cette bibliothèque.  (Remarque : La DLL MBCS est fournie avec les composants d’installation de C++ dans Visual Studio 2015 et les versions ultérieures).
+- **Visual Studio 2013 uniquement**: la bibliothèque MFC MBCS n’est pas incluse dans Visual Studio, car Unicode est tellement populaire et l’utilisation de MBCS a été considérablement refusée. Cette modification maintient également MFC plus étroitement aligné avec le Kit de développement logiciel (SDK) Windows, car la plupart des nouveaux contrôles et messages sont seulement Unicode. Toutefois, si vous devez continuer à utiliser la bibliothèque MFC MBCS, vous pouvez la télécharger à partir du centre de téléchargement Microsoft dans la [bibliothèque MFC multioctet pour Visual Studio 2013](https://www.microsoft.com/download/details.aspx?id=40770). Le package redistribuable Visual C++ inclut toujours cette bibliothèque.  (Remarque : La DLL MBCS est fournie avec les composants d’installation de C++ dans Visual Studio 2015 et les versions ultérieures).
 
 - L’accessibilité pour le ruban MFC est modifiée.  Au lieu d’une architecture d’un niveau, il y a maintenant une architecture hiérarchique. Vous pouvez continuer à utiliser l'ancien comportement en appelant `CRibbonBar::EnableSingleLevelAccessibilityMode()`.
 
@@ -3026,7 +3026,7 @@ Le compilateur C++ dans Visual Studio 2013 détecte des incompatibilités dans _
 
 - Le compilateur peut émettre des avertissements [avertissement du compilateur (niveau 4) C4703](../error-messages/compiler-warnings/compiler-warning-level-4-c4703.md) et C4701 là où il ne le faisait pas précédemment. Le compilateur effectue des vérifications plus strictes pour l’utilisation de variables locales non initialisées de type pointeur.
 
-- Quand le nouvel indicateur d’éditeur de liens `/HIGHENTROPYVA` est spécifié, les allocations de mémoire dans Windows 8 retournent en général une adresse 64 bits. (Avant Windows 8, ces allocations retournaient plus souvent les adresses inférieures à 2 Go.) Cette modification peut exposer les bogues de troncation de pointeurs dans le code existant. Par défaut, ce commutateur est activé. Pour désactiver ce comportement, spécifiez `/HIGHENTROPYVA:NO`.
+- Quand le nouvel indicateur d’éditeur de liens `/HIGHENTROPYVA` est spécifié, les allocations de mémoire dans Windows 8 retournent en général une adresse 64 bits. (Avant Windows 8, ces allocations retournaient plus souvent des adresses qui étaient inférieures à 2 Go.) Cette modification peut exposer des bogues de troncation de pointeur dans le code existant. Par défaut, ce commutateur est activé. Pour désactiver ce comportement, spécifiez `/HIGHENTROPYVA:NO`.
 
 - Le compilateur managé (Visual Basic/C#) prend également en charge `/HIGHENTROPYVA` pour les builds managées.  Toutefois, dans ce cas, le commutateur `/HIGHENTROPYVAswitch` est désactivé par défaut.
 
@@ -3040,13 +3040,13 @@ L’énumération `SchedulerType` d’`UmsThreadDefault` est dépréciée. La sp
 
 ### <a name="standard-library"></a>bibliothèque standard
 
-- En raison d’un changement cassant entre les normes C++98/03 et C++11, l’utilisation d’arguments template explicites pour appeler `make_pair()` (comme dans `make_pair<int, int>(x, y)`) ne permet généralement pas la compilation en Visual C++ dans Visual Studio 2012. La solution est `make_pair()` de toujours appeler sans `make_pair(x, y)`arguments de modèle explicites - comme dans . L’indication d’arguments template explicites va à l’encontre de l’objectif de la fonction. Si vous avez besoin d’un contrôle précis sur le type résultant, utilisez `pair` au lieu de `make_pair`, comme dans `pair<short, short>(int1, int2)`.
+- En raison d’un changement cassant entre les normes C++98/03 et C++11, l’utilisation d’arguments template explicites pour appeler `make_pair()` (comme dans `make_pair<int, int>(x, y)`) ne permet généralement pas la compilation en Visual C++ dans Visual Studio 2012. La solution consiste à toujours appeler `make_pair()` sans arguments template explicites, comme dans `make_pair(x, y)` . L’indication d’arguments template explicites va à l’encontre de l’objectif de la fonction. Si vous avez besoin d’un contrôle précis sur le type résultant, utilisez `pair` au lieu de `make_pair`, comme dans `pair<short, short>(int1, int2)`.
 
-- Un autre changement de rupture entre les normes C -98/03 et C -11 : lorsque A est implicitement convertible en B et B est implicitement convertible en C, mais A `pair<A, X>` n’est pas implicitement convertible `pair<C, X>`en C, C -98/03 et Visual Studio 2010 autorisés à être convertis (implicitement ou explicitement) à . (L’autre type, X, n’est pas d’intérêt ici, et n’est pas spécifique au premier type dans la paire.) Le compilateur CMD dans Visual Studio 2012 détecte que A n’est pas implicitement convertible en C, et supprime la conversion de paire de la résolution de surcharge. Ce changement est positif dans de nombreux scénarios. Par exemple, la surcharge de `func(const pair<int, int>&)` et `func(const pair<string, string>&)`, et l’appel de `func()` avec `pair<const char *, const char *>`, permettent maintenant la compilation. Toutefois, cette modification altère le code qui reposait sur des conversions de paires agressives. Ce code peut généralement être corrigé en effectuant une partie de la conversion explicitement, par exemple, en passant `make_pair(static_cast<B>(a), x)` à une fonction qui attend `pair<C, X>`.
+- Autre modification avec rupture entre les normes C++ 98/03 et C++ 11 : quand un est implicitement convertible en B et que B est implicitement convertible en C, mais A n’est pas implicitement convertible en C, C++ 98/03 et Visual Studio 2010 autorisé `pair<A, X>` à être converti (implicitement ou explicitement) en `pair<C, X>` . (L’autre type, X, n’est pas intéressant ici et n’est pas spécifique au premier type de la paire.) Le compilateur C++ dans Visual Studio 2012 détecte qu’un n’est pas implicitement convertible en C, et supprime la conversion de paire de la résolution de surcharge. Ce changement est positif dans de nombreux scénarios. Par exemple, la surcharge de `func(const pair<int, int>&)` et `func(const pair<string, string>&)`, et l’appel de `func()` avec `pair<const char *, const char *>`, permettent maintenant la compilation. Toutefois, cette modification altère le code qui reposait sur des conversions de paires agressives. Ce code peut généralement être corrigé en effectuant une partie de la conversion explicitement, par exemple, en passant `make_pair(static_cast<B>(a), x)` à une fonction qui attend `pair<C, X>`.
 
 - Visual Studio 2010 simulait des modèles variadiques, par exemple `make_shared<T>(arg1, arg2, argN)`, jusqu’à une limite de 10 arguments, en marquant les surcharges et les spécialisations avec le mécanisme de préprocesseur. Dans Visual Studio 2012, cette limite est réduite à cinq arguments pour améliorer les temps de compilation et la consommation de mémoire du compilateur pour la majorité des utilisateurs. Toutefois, vous pouvez définir la limite précédente en affectant explicitement 10 à _VARIADIC_MAX, au niveau du projet.
 
-- C++11 17.6.4.3.1 [macro.names]/2 interdit le remplacement par macro des mots clés quand les en-têtes de la bibliothèque C++ standard sont inclus. Les en-têtes émettent maintenant des erreurs de compilateur s’ils détectent des mots clés remplacés par macro. (Définir _ALLOW_KEYWORD_MACROS permet à un tel code de compiler, mais nous déconseillons fortement cette utilisation.) À titre d’exception, `new` la forme macro de est autorisée par défaut, parce que les en-têtes se défendent complètement en `#pragma push_macro("new")` / `#undef new` / `#pragma pop_macro("new")`utilisant . La définition de _ENFORCE_BAN_OF_MACRO_NEW fait exactement ce que son nom indique.
+- C++11 17.6.4.3.1 [macro.names]/2 interdit le remplacement par macro des mots clés quand les en-têtes de la bibliothèque C++ standard sont inclus. Les en-têtes émettent maintenant des erreurs de compilateur s’ils détectent des mots clés remplacés par macro. (Définir _ALLOW_KEYWORD_MACROS permet de compiler ce code, mais nous vous déconseillons fortement d’utiliser.) En guise d’exception, la forme macro de `new` est autorisée par défaut, car les en-têtes se protègent de manière complète eux-mêmes à l’aide de `#pragma push_macro("new")` / `#undef new` / `#pragma pop_macro("new")` . La définition de _ENFORCE_BAN_OF_MACRO_NEW fait exactement ce que son nom indique.
 
 - Pour implémenter différentes optimisations et vérifications de débogage, l’implémentation de la bibliothèque C++ standard interrompt intentionnellement la compatibilité binaire entre les versions de Visual Studio (2005, 2008, 2010, 2012). Quand la bibliothèque C++ standard est utilisée, elle interdit de combiner les fichiers objets et les bibliothèques statiques qui sont compilés à l’aide de différentes versions en un seul fichier binaire (EXE ou DLL), et aussi de transmettre les objets de la bibliothèque C++ standard entre des fichiers binaires compilés à l’aide de différentes versions. Avec la bibliothèque C++ standard, l’association de fichiers objets et de bibliothèques statiques qui ont été compilés en utilisant Visual Studio 2010 à ceux qui ont été compilés en utilisant le compilateur C++ dans Visual Studio 2012 génère des erreurs d’éditeur de liens sur l’incompatibilité de _MSC_VER, où _MSC_VER est la macro qui contient la version principale du compilateur (1700 pour Visual C++ dans Visual Studio 2012). Cette vérification ne peut pas détecter les combinaisons de DLL et ne peut pas détecter les combinaisons impliquant Visual Studio 2008 ou version antérieure.
 
@@ -3058,7 +3058,7 @@ L’énumération `SchedulerType` d’`UmsThreadDefault` est dépréciée. La sp
 
 ### <a name="crt"></a>CRT
 
-- Le tas Runtime C (CRT), qui est utilisé pour new et malloc(), n’est plus privé. La bibliothèque CRT utilise désormais le tas de processus. Cela signifie que le tas n’est pas détruit quand un DLL est déchargé, de sorte DLLs qui se lient statiquement à la CRT doit s’assurer que la mémoire qui est allouée par le code DLL est nettoyé avant qu’il ne soit déchargé.
+- Le tas Runtime C (CRT), qui est utilisé pour new et malloc(), n’est plus privé. La bibliothèque CRT utilise désormais le tas de processus. Cela signifie que le tas n’est pas détruit lorsqu’une DLL est déchargée, de sorte que les dll qui sont liées statiquement au CRT doivent s’assurer que la mémoire allouée par le code de la DLL est nettoyée avant d’être déchargée.
 
 - L’assertion de la fonction `iscsymf()` donne des valeurs négatives.
 
@@ -3068,7 +3068,7 @@ L’énumération `SchedulerType` d’`UmsThreadDefault` est dépréciée. La sp
 
 ### <a name="mfc-and-atl"></a>MFC et ATL
 
-- Suppression de la prise en charge de Fusion (afxcomctl32.h) ; par conséquent, toutes les méthodes qui sont définies dans \<afxcomctl32.h> ont été supprimées. Les fichiers d’en-tête \<afxcomctl32.h> et \<afxcomctl32.inl> ont été supprimés.
+- Suppression de la prise en charge de fusion (afxcomctl32. h); par conséquent, toutes les méthodes définies dans \<afxcomctl32.h> ont été supprimées. Les fichiers d’en-tête \<afxcomctl32.h> et \<afxcomctl32.inl> ont été supprimés.
 
 - Renommage de `CDockablePane::RemoveFromDefaultPaneDividier` en `CDockablePane::RemoveFromDefaultPaneDivider`.
 
@@ -3264,7 +3264,7 @@ L’énumération `SchedulerType` d’`UmsThreadDefault` est dépréciée. La sp
 
 ### <a name="ide"></a>IDE
 
-- La boîte de dialogue de fin de l’application n’arrête plus une application. Dans les versions précédentes, quand la fonction `abort()` ou `terminate()` fermait la version commerciale d’une application, la bibliothèque Runtime C affichait un message d’arrêt de l’application dans une fenêtre de console ou une boîte de dialogue. Le message indiquait en partie que l’application avait demandé son arrêt au Runtime d’une façon inhabituelle. L’utilisateur pouvait contacter l’équipe du support technique de l’application pour plus d’informations. Le message de terminaison d’application était redondant parce que Windows a ensuite affiché le gestionnaire de terminaison actuel, qui était habituellement la boîte de dialogue de rapport d’erreur de Windows (Dr. Watson) ou le débrilleur visual Studio. À partir de Visual Studio 2010, la bibliothèque Runtime C n’affiche plus le message. En outre, le Runtime empêche l’arrêt de l’application avant le démarrage d’un débogueur. Il s’agit d’un changement cassant uniquement si votre code dépend encore de l’ancien comportement du message d’arrêt de l’application.
+- La boîte de dialogue de fin de l’application n’arrête plus une application. Dans les versions précédentes, quand la fonction `abort()` ou `terminate()` fermait la version commerciale d’une application, la bibliothèque Runtime C affichait un message d’arrêt de l’application dans une fenêtre de console ou une boîte de dialogue. Le message indiquait en partie que l’application avait demandé son arrêt au Runtime d’une façon inhabituelle. L’utilisateur pouvait contacter l’équipe du support technique de l’application pour plus d’informations. Le message d’arrêt de l’application était redondant, car Windows affichait par la suite le gestionnaire de terminaisons actuel, qui était généralement la boîte de dialogue Rapport d’erreurs Windows (Dr. Watson) ou le débogueur Visual Studio. À partir de Visual Studio 2010, la bibliothèque Runtime C n’affiche plus le message. En outre, le Runtime empêche l’arrêt de l’application avant le démarrage d’un débogueur. Il s’agit d’un changement cassant uniquement si votre code dépend encore de l’ancien comportement du message d’arrêt de l’application.
 
 - Dans le cas particulier de Visual Studio 2010, IntelliSense ne fonctionne pas pour les attributs ou le code C++/CLI, **Rechercher toutes les références** ne fonctionne pas pour les variables locales, et le modèle de code ne récupère pas les noms de type des assemblys importés ni ne convertit les types en leurs noms qualifiés complets.
 
@@ -3278,13 +3278,13 @@ L’énumération `SchedulerType` d’`UmsThreadDefault` est dépréciée. La sp
 
 ### <a name="standard-library"></a>bibliothèque standard
 
-- L’en-tête \<iterator> n’est plus inclus automatiquement par de nombreux autres fichiers d’en-tête. Incluez plutôt cet en-tête explicitement si vous avez besoin de prendre en charge les itérateurs autonomes définis dans l’en-tête. Un projet existant est affecté s’il dépend de l’outil de génération précédent, VCBUILD.exe, ou du suffixe de fichier projet, .vcproj.iterator.
+- L' \<iterator> en-tête n’est plus inclus automatiquement par de nombreux autres fichiers d’en-tête. Incluez plutôt cet en-tête explicitement si vous avez besoin de prendre en charge les itérateurs autonomes définis dans l’en-tête. Un projet existant est affecté s’il dépend de l’outil de génération précédent, VCBUILD.exe, ou du suffixe de fichier projet, .vcproj.iterator.
 
-- Dans l’en-tête \<algorithm>, les fonctions checked_* et unchecked_\* sont supprimées. Dans l’en-tête \<iterator>>, la classe `checked_iterator` a été supprimée et la classe `unchecked_array_iterator` a été ajoutée.
+- Dans l' \<algorithm> en-tête, les fonctions checked_ * et unchecked_ \* sont supprimées. Et dans l' \<iterator> en-tête>, la `checked_iterator` classe est supprimée et la `unchecked_array_iterator` classe a été ajoutée.
 
 - Le constructeur `CComPtr::CComPtr(int)` est supprimé. Ce constructeur permettait de construire un objet `CComPtr` à partir de la macro NULL, mais il était inutile et autorisait des constructions absurdes à partir d’entiers non nuls.
 
-   Un objet `CComPtr` peut toujours être construit à partir de la macro NULL, qui a la valeur 0, mais il échouera s’il est construit à partir d’un entier autre que le littéral 0. Utilisez **nullptr** à la place.
+   Un objet `CComPtr` peut toujours être construit à partir de la macro NULL, qui a la valeur 0, mais il échouera s’il est construit à partir d’un entier autre que le littéral 0. Utilisez à la place **nullptr** .
 
 - Les fonctions membres `ctype` suivantes ont été supprimées : `ctype::_Do_narrow_s`, `ctype::_Do_widen_s`, `ctype::_narrow_s`, `ctype::_widen_s`. Si une application utilise l’une de ces fonctions membres, vous devez la remplacer par la version non sécurisée correspondante : `ctype::do_narrow`, `ctype::do_widen`, `ctype::narrow`, `ctype::widen`.
 
@@ -3408,9 +3408,9 @@ L’énumération `SchedulerType` d’`UmsThreadDefault` est dépréciée. La sp
 
 - Ordre de tabulation des contrôles dans les boîtes de dialogue MFC : l’ordre de tabulation correct de plusieurs contrôles dans une boîte de dialogue MFC est perturbé si un contrôle ActiveX MFC est inséré dans l’ordre de tabulation. Cette modification résout ce problème.
 
-   Par exemple, créez une application de boîte de dialogue MFC qui comporte un contrôle ActiveX et plusieurs contrôles d’édition. Placez le contrôle ActiveX au milieu de l’ordre de tabulation des contrôles d’édition. Démarrer l’application, cliquez sur un contrôle de modification dont l’ordre d’onglet est après le contrôle ActiveX, puis onglet. Avant cette modification, l’accent est allé au contrôle de modification suivant le contrôle ActiveX au lieu du contrôle de modification suivant dans l’ordre d’onglet.
+   Par exemple, créez une application de boîte de dialogue MFC qui comporte un contrôle ActiveX et plusieurs contrôles d’édition. Placez le contrôle ActiveX au milieu de l’ordre de tabulation des contrôles d’édition. Démarrez l’application, cliquez sur un contrôle d’édition dont l’ordre de tabulation est après le contrôle ActiveX, puis sur Tab. avant cette modification, le contrôle d’édition suit le contrôle ActiveX au lieu du contrôle d’édition suivant dans l’ordre de tabulation.
 
-- `CFileDialog`Classe : Les modèles `CFileDialog` personnalisés pour la classe ne peuvent pas être automatiquement portés à Windows Vista. Ils sont toujours utilisables, mais ne présentent pas l’aspect ni les fonctionnalités supplémentaires des boîtes de dialogue de style Windows Vista.
+- `CFileDialog`Classe : les modèles personnalisés pour la `CFileDialog` classe ne peuvent pas être automatiquement portés vers Windows Vista. Ils sont toujours utilisables, mais ne présentent pas l’aspect ni les fonctionnalités supplémentaires des boîtes de dialogue de style Windows Vista.
 
 - Classe `CWnd` et classe `CFrameWnd` : la méthode `CWnd::GetMenuBarInfo` a été supprimée.
 
@@ -3466,7 +3466,7 @@ L’énumération `SchedulerType` d’`UmsThreadDefault` est dépréciée. La sp
 
 ### <a name="standard-library-2005"></a>Bibliothèque standard (2005)
 
-- La classe d’exception (située dans l’en-tête \<exception>) a été déplacée dans l’espace de noms `std`. Dans les versions précédentes, cette classe était dans l’espace de noms global. Pour résoudre les erreurs indiquant que la classe d’exception est introuvable, ajoutez l’instruction using suivante dans votre code : `using namespace std;`
+- La classe d’exception (située dans l' \<exception> en-tête) a été déplacée vers l' `std` espace de noms. Dans les versions précédentes, cette classe était dans l’espace de noms global. Pour résoudre les erreurs indiquant que la classe d’exception est introuvable, ajoutez l’instruction using suivante dans votre code : `using namespace std;`
 
 - Quand `valarray::resize()` est appelé, le contenu de `valarray` est perdu et remplacé par les valeurs par défaut. La méthode `resize()` est destinée à réinitialiser `valarray` plutôt qu’à le développer de façon dynamique comme un vecteur.
 
@@ -3492,7 +3492,7 @@ L’énumération `SchedulerType` d’`UmsThreadDefault` est dépréciée. La sp
 
 - L’initialisation d’un **typedef** n’est pas autorisée par la norme et génère désormais une erreur ([erreur de compilateur C2513](../error-messages/compiler-errors-2/compiler-error-c2513.md)).
 
-- **bool** est maintenant un type approprié ([Compiler Erreur C2632](../error-messages/compiler-errors-2/compiler-error-c2632.md)).
+- **bool** est maintenant un type approprié ([Erreur du compilateur C2632](../error-messages/compiler-errors-2/compiler-error-c2632.md)).
 
 - Une conversion définie par l’utilisateur (UDC) peut maintenant créer une ambiguïté avec les opérateurs surchargés ([C2666](../error-messages/compiler-errors-2/compiler-error-c2666.md)).
 

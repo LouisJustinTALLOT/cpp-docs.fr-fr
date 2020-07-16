@@ -3,12 +3,12 @@ title: Nouveautés de C++ dans Visual Studio
 ms.date: 05/19/2020
 ms.technology: cpp-ide
 ms.assetid: 8801dbdb-ca0b-491f-9e33-01618bff5ae9
-ms.openlocfilehash: 7c36112f5d0f7f0475782eb40e31179e67ac4485
-ms.sourcegitcommit: 3f91111c0350c0237fddb82766c290307f20e659
+ms.openlocfilehash: f4b22cd11bcdee3d7dc2fe232642c02a331354bc
+ms.sourcegitcommit: 6b3d793f0ef3bbb7eefaf9f372ba570fdfe61199
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/19/2020
-ms.locfileid: "83630487"
+ms.lasthandoff: 07/15/2020
+ms.locfileid: "86404972"
 ---
 # <a name="whats-new-for-c-in-visual-studio"></a>Nouveautés de C++ dans Visual Studio
 
@@ -20,7 +20,7 @@ Visual Studio 2019 comprend un grand nombre de mises à jour et de correctifs d
 
 - Une prise en charge améliorée des fonctionnalités et correctifs d’exactitude C++17, plus une prise en charge expérimentale de fonctionnalités C++20 comme les modules et les coroutines. Pour plus d’informations, consultez [Améliorations de la conformité de C++ dans Visual Studio 2019](cpp-conformance-improvements.md).
 
-- L’option `/std:c++latest` inclut désormais les fonctionnalités de C++20 qui ne sont pas nécessairement complètes, notamment la prise en charge initiale de l’opérateur C++20 \<=> (« spaceship ») pour une comparaison triple.
+- L' `/std:c++latest` option inclut désormais des fonctionnalités c++ 20 qui ne sont pas nécessairement complètes, notamment la prise en charge initiale de l’opérateur c++ 20 \<=> (« Space ») pour la comparaison tridirectionnelle.
 
 - Le commutateur `/Gm` du compilateur C++ est maintenant déprécié. Envisagez de désactiver le commutateur `/Gm` dans vos scripts de build s’il y est défini explicitement. Vous pouvez cependant ignorer sans problème l’avertissement de dépréciation de `/Gm`, car il n’est pas traité en tant qu’erreur quand vous utilisez « Considérer les avertissements comme des erreurs » (`/WX`).
 
@@ -38,7 +38,7 @@ Analyse améliorée avec `/Qspectre` afin de fournir une aide à l’atténuatio
 
 - Le format clang a été appliqué aux en-têtes de la bibliothèque standard C++ pour une meilleure lisibilité.
 
-- Étant donné que Visual Studio prend désormais en charge Uniquement mon code pour C++, la bibliothèque standard n’a plus besoin de fournir de mécanisme personnalisé pour `std::function` et `std::visit` pour obtenir le même effet. La suppression de ce mécanisme n’aura quasiment aucun effet visible par l’utilisateur. Une exception est que le compilateur ne produira plus de diagnostics indiquant les problèmes de ligne 15732480 ou 16707566 de \<type_traits > ou de \<variant>.
+- Étant donné que Visual Studio prend désormais en charge Uniquement mon code pour C++, la bibliothèque standard n’a plus besoin de fournir de mécanisme personnalisé pour `std::function` et `std::visit` pour obtenir le même effet. La suppression de ce mécanisme n’aura quasiment aucun effet visible par l’utilisateur. Une exception est que le compilateur ne produit plus de diagnostics qui indiquent des problèmes à la ligne 15732480 ou 16707566 de \<type_traits> ou \<variant> .
 
 ## <a name="performancethroughput-improvements-in-the-compiler-and-standard-library"></a>Améliorations de performances/débit dans le compilateur et la bibliothèque standard
 
@@ -62,7 +62,7 @@ Analyse améliorée avec `/Qspectre` afin de fournir une aide à l’atténuatio
 
   - Amélioration de l’optimisation du code utilisant `memmove`, comme `std::copy` ou `std::vector` et une construction `std::string`.
 
-- Optimisez la conception physique de la bibliothèque standard afin d’éviter de compiler des parties de la bibliothèque standard qui ne sont pas directement incluses. Cette modification réduit le temps de génération d’un fichier vide qui inclut uniquement \<vector> de moitié. En conséquence, vous devrez peut-être ajouter des directives `#include` pour les en-têtes qui précédemment étaient indirectement inclus. Par exemple, le code qui utilise `std::out_of_range` pourrait maintenant avoir à ajouter `#include <stdexcept>`. Le code qui utilise un opérateur d’insertion de flux doit maintenant ajouter `#include <ostream>`. L’avantage est que seule les unités de traduction qui utilisent réellement des composants \<stdexcept> ou \<ostream> payent le débit de coût pour les compiler.
+- Optimisez la conception physique de la bibliothèque standard afin d’éviter de compiler des parties de la bibliothèque standard qui ne sont pas directement incluses. Cette modification permet de réduire la durée de la génération d’un fichier vide qui comprend uniquement une \<vector> demi-partie. En conséquence, vous devrez peut-être ajouter des directives `#include` pour les en-têtes qui précédemment étaient indirectement inclus. Par exemple, le code qui utilise `std::out_of_range` pourrait maintenant avoir à ajouter `#include <stdexcept>`. Le code qui utilise un opérateur d’insertion de flux doit maintenant ajouter `#include <ostream>`. L’avantage est que seules les unités de traduction qui utilisent réellement \<stdexcept> \<ostream> des composants ou paient le coût du débit pour les compiler.
 
 - `if constexpr` a été appliqué à plusieurs endroits dans la bibliothèque standard pour un débit amélioré et une taille de code réduite dans les opérations de copie, dans les permutations comme l’inversion et la rotation et dans la bibliothèque d’algorithmes parallèles.
 
@@ -221,7 +221,7 @@ Le composant expérimental Clang/C2 a été supprimé. Utilisez l’ensemble d�
 
 - L’analyse du code s’exécute désormais automatiquement en arrière-plan. Les avertissements sont marqués par des tildes verts dans l’éditeur à mesure que vous tapez. Pour plus d’informations, consultez [In-editor code analysis in Visual Studio 2019 Preview 2](https://devblogs.microsoft.com/cppblog/in-editor-code-analysis-in-visual-studio-2019-preview-2/).
 
-- Nouvelles règles ConcurrencyCheck expérimentales pour les types de bibliothèques standard courantes à partir de l’en-tête \<mutex>. Pour plus d’informations, consultez [Concurrency Code Analysis in Visual Studio 2019](https://devblogs.microsoft.com/cppblog/concurrency-code-analysis-in-visual-studio-2019/).
+- Nouvelles règles ConcurrencyCheck expérimentales pour les types de bibliothèque standard connus de l' \<mutex> en-tête. Pour plus d’informations, consultez [Concurrency Code Analysis in Visual Studio 2019](https://devblogs.microsoft.com/cppblog/concurrency-code-analysis-in-visual-studio-2019/).
 
 - Une implémentation partielle mise à jour du [vérificateur de profil de durée de vie](https://herbsutter.com/2018/09/20/lifetime-profile-v1-0-posted/), qui détecte les références et les pointeurs non résolus. Pour plus d’informations, consultez [Lifetime Profile Update in Visual Studio 2019 Preview 2](https://devblogs.microsoft.com/cppblog/lifetime-profile-update-in-visual-studio-2019-preview-2/).
 
@@ -358,8 +358,8 @@ Il existe d’autres améliorations de la bibliothèque standard dans Visual Stu
 
 ### <a name="conformance-improvements"></a>Améliorations de la conformité
 
-- Nous avons ajouté \<any\>, \<string_view\>, `apply()`, `make_from_tuple()`.
-- Ajout de \<optional\>, \<variant\>, `shared_ptr::weak_type` et \<cstdalign\>.
+- Nous avons ajouté \<any\> , \<string_view\> , `apply()` , `make_from_tuple()` .
+- Ajout \<optional\> de, de, de \<variant\> `shared_ptr::weak_type` et de \<cstdalign\> .
 - Activation de `constexpr` de C++14 dans `min(initializer_list)`, `max(initializer_list)`, et `minmax(initializer_list)`, et `min_element()`, `max_element()` et `minmax_element()`.
 
 Pour plus d’informations, consultez [table de conformité du langage Microsoft C++](../visual-cpp-language-conformance.md).
@@ -377,7 +377,7 @@ Pour plus d’informations, consultez [table de conformité du langage Microsoft
 - `static_assert(false, "message")` a été changé en `#error message`. Cette modification permet d’améliorer les diagnostics du compilateur, car `#error` arrête immédiatement la compilation.
 - La bibliothèque standard ne marque plus les fonctions en tant que `__declspec(dllimport)`. La technologie de l’éditeur de liens moderne ne requiert plus cela.
 - Extraction de SFINAE dans des arguments de modèle par défaut, ce qui réduit l’encombrement par rapport aux types de retour et aux types d’arguments de fonction.
-- Les vérifications de débogage dans \< Random \> utilisent désormais les machines habituelles de la bibliothèque standard, au lieu de la fonction interne `_Rng_abort()` , qui est appelée `fputs()` à **stderr**. L’implémentation de cette fonction a été conservée pour la compatibilité binaire. Nous la supprimerons dans la prochaine version non compatible binaire de la bibliothèque standard.
+- Les vérifications de débogage dans \<random\> utilisent désormais les machines habituelles de la bibliothèque standard, au lieu de la fonction interne `_Rng_abort()` , qui est appelée `fputs()` à **stderr**. L’implémentation de cette fonction a été conservée pour la compatibilité binaire. Nous la supprimerons dans la prochaine version non compatible binaire de la bibliothèque standard.
 
 ##### <a name="visual-studio-2017-version-155"></a>Visual Studio 2017 version 15.5
 
@@ -414,7 +414,7 @@ Pour plus d’informations, consultez [table de conformité du langage Microsoft
 ##### <a name="visual-studio-2017-version-157"></a>Visual Studio 2017 version 15.7
 
 - La prise en charge des algorithmes parallèles n’est plus expérimentale
-- Une nouvelle implémentation de \<filesystem>
+- Une nouvelle implémentation de\<filesystem>
 - Conversions de chaînes élémentaires (état partiel)
 - `std::launder()`
 - `std::byte`
@@ -454,7 +454,7 @@ Pour plus d’informations, consultez [table de conformité du langage Microsoft
 - Le chemin grow interne de `basic_string` n’est plus dans le chemin de `shrink_to_fit()`.
 - Les opérations de mutation de `basic_string` sont désormais incluses dans les fonctions de chemin rapide de non-allocation et de chemin lent d’allocation, rendant plus probable l’incorporation du cas no-reallocate fréquent dans les appelants.
 - Les `basic_string` opérations de mutation créent désormais des tampons réalloués dans l’État par défaut plutôt que de les redimensionner sur place. Par exemple, une instruction INSERT au début d’une chaîne déplace maintenant le contenu après l’insertion exactement une fois. Elle est déplacée vers le dessous ou vers la mémoire tampon nouvellement allouée. Elle n’est plus déplacée deux fois dans le cas de réallocation, d’abord vers la mémoire tampon qui vient d’être allouée, puis inversée.
-- Les opérations appelant la bibliothèque standard C dans \<string\> mettent maintenant en cache l’adresse de `errno` pour supprimer l’interaction répétée avec TLS.
+- Les opérations appelant la bibliothèque standard C dans prennent \<string\> maintenant en cache l' `errno` adresse pour supprimer l’interaction répétée avec TLS.
 - Simplification de l’implémentation de `is_pointer`.
 - Fin de la modification de Expression SFINAE basée sur une fonction en une valeur basée sur `struct` et `void_t`.
 - Désormais, les algorithmes de la bibliothèque standard évitent la post-incrémentation des itérateurs.
@@ -507,7 +507,7 @@ Le SDK C++ REST, une API web multiplateforme pour C++, a été mis à jour vers 
 - Plusieurs Assistants de projet et de code ont été réécrits pour refléter le style particulier des boîtes de dialogue.
 - **Ajouter une classe** lance désormais l’Assistant Ajouter une classe directement. Tous les autres éléments qui se trouvaient déjà ici sont maintenant disponibles sous **Ajouter > Nouvel élément**.
 - Les projets Win32 se trouvent désormais sous la catégorie **Windows Desktop** dans la boîte de dialogue **nouveau projet** .
-- Les modèles **Console Windows** et **Application de poste de travail** créent à présent les projets sans afficher d’Assistant. Il existe un nouvel **Assistant Windows Desktop** sous la même catégorie, qui affiche les mêmes options que l’ancien **Assistant Console Win32**.
+- La **console Windows** et les modèles d' **application de bureau** créent désormais les projets sans afficher d’Assistant. Il existe un nouvel **Assistant Windows Desktop** sous la même catégorie, qui affiche les mêmes options que l’ancien **Assistant Console Win32**.
 
 ##### <a name="visual-studio-2017-version-155"></a>Visual Studio 2017 version 15.5
 
@@ -598,7 +598,7 @@ Visual C++ Build Tools (disponible jusqu’ici comme produit autonome) est déso
 
 ## <a name="linux-development-with-c"></a>Développement Linux avec C++
 
-L’extension populaire [Visual C++ pour le développement Linux](https://visualstudiogallery.msdn.microsoft.com/725025cf-7067-45c2-8d01-1e0fd359ae6e) fait désormais partie de Visual Studio. Cette installation fournit tout ce dont vous avez besoin pour développer et déboguer des applications C++ exécutées dans un environnement Linux.
+L’extension populaire [Visual C++ pour le développement Linux](https://marketplace.visualstudio.com/items?itemName=VisualCppDevLabs.VisualCforLinuxDevelopment) fait désormais partie de Visual Studio. Cette installation fournit tout ce dont vous avez besoin pour développer et déboguer des applications C++ exécutées dans un environnement Linux.
 
 ##### <a name="visual-studio-2017-version-152"></a>Visual Studio 2017 version 15.2
 

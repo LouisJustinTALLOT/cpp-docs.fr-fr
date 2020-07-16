@@ -8,12 +8,12 @@ helpviewer_keywords:
 - data binding [C++], columns in recordsets
 - columns [C++], binding to recordsets
 ms.assetid: bff67254-d953-4ae4-9716-91c348cb840b
-ms.openlocfilehash: e26e62b0e8d613c1a09b077e3bf8d01d1eabba66
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: f00fb92726cc37fe2bb0e95dc36e5fc1b6df201d
+ms.sourcegitcommit: 6b3d793f0ef3bbb7eefaf9f372ba570fdfe61199
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81367048"
+ms.lasthandoff: 07/15/2020
+ms.locfileid: "86403866"
 ---
 # <a name="recordset-dynamically-binding-data-columns-odbc"></a>Recordset : liaison dynamique de colonnes de données (ODBC)
 
@@ -26,7 +26,7 @@ Un recordset gère la liaison des colonnes de table que vous spécifiez au momen
 - [Comment faire pour lier des colonnes dynamiquement au moment de l’exécution ?](#_core_how_to_bind_columns_dynamically)
 
 > [!NOTE]
-> Cette rubrique s’applique aux objets dérivés de `CRecordset` où l’extraction de lignes en bloc n’a pas été implémentée. Les techniques décrites ne sont généralement pas recommandées si vous utilisez la récupération (fetch) de lignes en bloc. Pour plus d’informations sur la ligne en vrac aller chercher, voir [Recordset: Fetching Records in Bulk (ODBC)](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md).
+> Cette rubrique s’applique aux objets dérivés de `CRecordset` où l’extraction de lignes en bloc n’a pas été implémentée. Les techniques décrites ne sont généralement pas recommandées si vous utilisez la récupération (fetch) de lignes en bloc. Pour plus d’informations sur l’extraction de lignes en bloc, consultez [Recordset : extraction globale d’enregistrements (ODBC)](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md).
 
 ## <a name="when-you-might-bind-columns-dynamically"></a><a name="_core_when_you_might_bind_columns_dynamically"></a> Quand lier des colonnes dynamiquement
 
@@ -45,7 +45,7 @@ Avec un petit peu de code supplémentaire, vous pouvez effectuer les opérations
 
 Votre recordset contient toujours des membres de données pour les colonnes que vous connaissiez au moment du design. Il contient aussi un petit peu de code supplémentaire qui détermine dynamiquement si de nouvelles colonnes ont été ajoutées à votre table cible et, le cas échéant, il lie ces nouvelles colonnes au stockage alloué dynamiquement (plutôt qu’aux membres de données du recordset).
 
-Cette rubrique ne s’intéresse pas à d’autres cas de liaison dynamique, comme les tables ou colonnes supprimées. Pour ces derniers, vous devez utiliser des appels d’API ODBC plus directement. Pour plus d’informations, consultez les *informations de référence du programmeur* du SDK ODBC sur MSDN Library CD.
+Cette rubrique ne s’intéresse pas à d’autres cas de liaison dynamique, comme les tables ou colonnes supprimées. Pour ces derniers, vous devez utiliser des appels d’API ODBC plus directement. Pour plus d’informations, consultez [Guide de référence du programmeur ODBC](/sql/odbc/reference/odbc-programmer-s-reference).
 
 ## <a name="how-to-bind-columns-dynamically"></a><a name="_core_how_to_bind_columns_dynamically"></a> Comment lier des colonnes dynamiquement
 
@@ -81,7 +81,7 @@ La liaison dynamique des colonnes ajoutées au moment de l’exécution exige d�
 
    Une approche consiste à créer une ou plusieurs listes dynamiques, une pour les noms de nouvelles colonnes, une autre pour leurs valeurs de résultat et une troisième pour leurs types de données (si nécessaire). Ces listes, en particulier la liste de valeurs, fournissent les informations et le stockage nécessaires à la liaison. La figure suivante illustre la création de ces listes.
 
-   ![Construire des listes de colonnes pour lier dynamiquement](../../data/odbc/media/vc37w61.gif "Création des listes de colonnes pour une liaison dynamique")<br/>
+   ![Création de listes de colonnes pour une liaison dynamique](../../data/odbc/media/vc37w61.gif "Création des listes de colonnes pour une liaison dynamique")<br/>
    Création des listes de colonnes à lier dynamiquement
 
 1. Ajoutez un appel de fonction RFX dans la fonction `DoFieldExchange` de votre recordset principal pour chaque colonne ajoutée. Ces appels RFX se chargent de récupérer (fetch) un enregistrement, notamment les colonnes supplémentaires, puis de lier les colonnes à des membres de données de recordset ou à votre stockage fourni dynamiquement pour elles.
@@ -139,14 +139,14 @@ Ensuite, configurez les emplacements de stockage pour les colonnes à lier dynam
 
 1. Créez Dynamic-Column-Values, en parallèle avec Columns-to-Bind-Dynamically, afin de contenir la valeur des données dans chaque colonne.
 
-   Par exemple, l’illustration montre Dynamic-Column-Values (Liste 4) avec un élément : un `CString` objet contenant le numéro de téléphone réel pour l’enregistrement actuel : « 555-1212 ».
+   Par exemple, l’illustration montre les valeurs de colonne dynamique (liste 4) avec un élément : un `CString` objet contenant le numéro de téléphone réel de l’enregistrement actuel : « 555-1212 ».
 
    Dans le cas le plus courant, Dynamic-Column-Values contient des éléments de type `CString`. Si vous avez affaire à des colonnes dont les types de données varient, vous avez besoin d’une liste pouvant contenir des éléments de divers types.
 
-Le résultat des procédures précédentes est deux listes principales : Colonnes-à-Bind-Dynamically contenant les noms des colonnes et Dynamic-Column-Valeurs contenant les valeurs dans les colonnes pour l’enregistrement actuel.
+Le résultat des procédures précédentes est le suivant : deux listes principales : Columns-to-Bind-qui contiennent dynamiquement les noms de colonnes et les valeurs de colonne dynamique contenant les valeurs des colonnes de l’enregistrement actif.
 
 > [!TIP]
-> Si les nouvelles colonnes ne sont pas toutes du même type de données, vous avez peut-être besoin d’une liste parallèle supplémentaire contenant des éléments qui définissent d’une manière ou d’une autre le type de chaque élément figurant dans la liste des colonnes. (Vous pouvez utiliser les valeurs AFX_RFX_BOOL, AFX_RFX_BYTE, etc. si vous le voulez. Ces constantes sont définies dans AFXDB. H.) Choisissez un type de liste basé sur la façon dont vous représentez les types de données de colonne.
+> Si les nouvelles colonnes ne sont pas toutes du même type de données, vous avez peut-être besoin d’une liste parallèle supplémentaire contenant des éléments qui définissent d’une manière ou d’une autre le type de chaque élément figurant dans la liste des colonnes. (Vous pouvez utiliser les valeurs AFX_RFX_BOOL, AFX_RFX_BYTE, etc. si vous le voulez. Ces constantes sont définies dans AFXDB. H.) choisissez un type de liste en fonction de la façon dont vous représentez les types de données de la colonne.
 
 ### <a name="adding-rfx-calls-to-bind-the-columns"></a><a name="_core_adding_rfx_calls_to_bind_the_columns"></a> Ajout d’appels RFX pour lier les colonnes
 
@@ -174,4 +174,4 @@ Quand le framework appelle `DoFieldExchange` pendant le processus `Open` pour li
 ## <a name="see-also"></a>Voir aussi
 
 [Recordset (ODBC)](../../data/odbc/recordset-odbc.md)<br/>
-[Recordset : utilisation d'éléments de données volumineux (ODBC)](../../data/odbc/recordset-working-with-large-data-items-odbc.md)
+[Recordset : utilisation d’éléments de données volumineux (ODBC)](../../data/odbc/recordset-working-with-large-data-items-odbc.md)

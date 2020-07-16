@@ -41,12 +41,12 @@ helpviewer_keywords:
 - _outpw function
 - _outp function
 ms.assetid: c200fe22-41f6-46fd-b0be-ebb805b35181
-ms.openlocfilehash: 0d28511cdf7487226635c0317b7c0ba21ab1d1be
-ms.sourcegitcommit: 31a443c9998cf5cfbaff00fcf815b133f55b2426
+ms.openlocfilehash: ceaaefbbe6f9debfb5ac8e1e8f5f3d1bbb36c8a8
+ms.sourcegitcommit: 6b3d793f0ef3bbb7eefaf9f372ba570fdfe61199
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/14/2020
-ms.locfileid: "86373474"
+ms.lasthandoff: 07/15/2020
+ms.locfileid: "86404058"
 ---
 # <a name="outp-outpw-_outp-_outpw-_outpd"></a>outp, outpw, _outp, _outpw, _outpd
 
@@ -61,15 +61,15 @@ Génère, sur un port, un octet ( `outp` , `_outp` ), un mot ( `outpw` , `_outpw
 ```cpp
 int _outp(
    unsigned short port,
-   int databyte
+   int data_byte
 );
 unsigned short _outpw(
    unsigned short port,
-   unsigned short dataword
+   unsigned short data_word
 );
 unsigned long _outpd(
    unsigned short port,
-   unsigned long dataword
+   unsigned long data_word
 );
 ```
 
@@ -78,18 +78,20 @@ unsigned long _outpd(
 *importer*\
 Numéro de port.
 
-*databyte, dataword*\
+*data_byte, data_word*\
 Valeurs de sortie.
 
 ## <a name="return-value"></a>Valeur de retour
 
-Les fonctions retournent la sortie des données. Aucun retour d'erreur.
+Les fonctions retournent la sortie des données. Il n’y a pas d’erreur de retour.
 
 ## <a name="remarks"></a>Notes
 
-Les fonctions `_outp`, `_outpw`et `_outpd` écrivent respectivement un octet, un mot et un mot double sur le port de sortie spécifié. L’argument *port* peut être un entier non signé compris entre 0 et 65 535 ; *databyte* peut être n’importe quel entier dans la plage 0-255 ; et *dataword* peuvent être n’importe quelle valeur dans la plage d’un entier, un entier Short non signé et un entier long non signé, respectivement.
+Les fonctions `_outp`, `_outpw`et `_outpd` écrivent respectivement un octet, un mot et un mot double sur le port de sortie spécifié. L’argument *port* peut être un entier non signé compris entre 0 et 65 535. *data_byte* peut être n’importe quel entier dans la plage 0-255. *data_word* peut être toute valeur comprise dans la plage d’un entier, un entier Short non signé et un entier long non signé, respectivement.
 
-Comme ces fonctions écrivent directement sur un port d’e/s, elles ne peuvent pas être utilisées dans le code Windows en mode utilisateur. Pour plus d’informations sur l’utilisation des ports d’e/s dans le système d’exploitation Windows, consultez [communications en série](https://docs.microsoft.com/previous-versions/ff802693(v=msdn.10)).
+Comme ces fonctions écrivent directement sur un port d’e/s, elles ne peuvent pas être utilisées dans le code Windows en mode utilisateur.
+
+Pour plus d’informations sur l’utilisation des ports d’e/s dans le système d’exploitation Windows, consultez [communications en série](https://docs.microsoft.com/previous-versions/ff802693(v=msdn.10)).
 
 Les `outp` `outpw` noms et sont des noms plus anciens et déconseillés pour les `_outp` `_outpw` fonctions et. Pour plus d’informations, consultez [noms de fonctions POSIX](../error-messages/compiler-warnings/compiler-warning-level-3-c4996.md#posix-function-names).
 
@@ -110,4 +112,4 @@ Toutes les versions des [bibliothèques Runtime C](../c-runtime-library/crt-libr
 ## <a name="see-also"></a>Voir aussi
 
 [E/s de console et de port](../c-runtime-library/console-and-port-i-o.md)\
-[INP, inpw, _inp, _inpw, _inpd](../c-runtime-library/inp-inpw-inpd.md)
+[`inp`, `inpw`, `_inp`, `_inpw`, `_inpd`](../c-runtime-library/inp-inpw-inpd.md)

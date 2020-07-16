@@ -3,12 +3,12 @@ title: Déployer, exécuter et déboguer votre projet Linux C++ dans Visual Stu
 description: Décrit comment compiler, exécuter et déboguer du code sur la cible distante au sein d’un projet Linux C++ dans Visual Studio.
 ms.date: 06/07/2019
 ms.assetid: f7084cdb-17b1-4960-b522-f84981bea879
-ms.openlocfilehash: e68feab3a71cd5bb3f6b88eee52f0872ef4bb213
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: df095d5561bea6dac94b9faa139c83c197802bbf
+ms.sourcegitcommit: 6b3d793f0ef3bbb7eefaf9f372ba570fdfe61199
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "80077835"
+ms.lasthandoff: 07/15/2020
+ms.locfileid: "86404409"
 ---
 # <a name="deploy-run-and-debug-your-linux-project"></a>Déployer, exécuter et déboguer un projet Linux
 
@@ -134,17 +134,17 @@ Dans Visual Studio 2019 version 16.1, vous pouvez séparer votre machine de buil
 
 ### <a name="msbuild-based-projects"></a>Projets MSBuild
 
-Par défaut, la machine à déboise à distance est la même que la machine de construction à distance **(Configuration Properties** > **General** > **Remote Build Machine**). Pour spécifier une nouvelle machine de débogage à distance, cliquez sur le projet dans **l’Explorateur de solutions** et accédez à **Propriétés de configuration** > **Débogage** > **Machine de débogage distante**.  
+Par défaut, l’ordinateur de débogage distant est le même que l’ordinateur de build distant (**Propriétés de configuration**  >  **général**  >  **machine de build distante**). Pour spécifier une nouvelle machine de débogage à distance, cliquez sur le projet dans **l’Explorateur de solutions** et accédez à **Propriétés de configuration** > **Débogage** > **Machine de débogage distante**.  
 
 ![Machine de débogage Linux distante](media/linux-remote-debug-machine.png)
 
-Le menu déroulant pour **Machine de débogage distante** est renseigné avec toutes les connexions à distance établies. Pour ajouter une nouvelle connexion à distance, naviguez vers **Tools** > **Options** > **Cross Platform** > **Connection Manager** ou recherchez "Connection Manager" dans Quick **Launch**. Vous pouvez également spécifier un nouvel annuaire de déploiement à distance dans les pages de propriété du projet **(Configuration Properties** > **General** > **Remote Deploy Directory**).
+Le menu déroulant pour **Machine de débogage distante** est renseigné avec toutes les connexions à distance établies. Pour ajouter une nouvelle connexion à distance, accédez à **Outils**  >  **options**  >  **Cross Platform**  >  **Gestionnaire de connexions** multiplateforme ou recherchez « gestionnaire de connexions » dans **lancement rapide**. Vous pouvez également spécifier un nouveau répertoire de déploiement distant dans les pages de propriétés du projet (**Propriétés de configuration**  >  **général**  >  **Répertoire de déploiement distant**général).
 
 Par défaut, seuls les fichiers nécessaires pour le processus à déboguer sont déployés sur la machine de débogage distante. Vous pouvez utiliser **l’Explorateur de solutions** pour configurer les fichiers source qui seront déployés sur la machine de débogage distante. Lorsque vous cliquez sur un fichier source, vous verrez un aperçu de ses propriétés de fichier directement en dessous de l’Explorateur de solutions.
 
 ![Fichiers à déployer Linux](media/linux-deployable-content.png)
 
-La propriété **Contenu** spécifie si le fichier doit être déployé sur la machine de débogage distante. Vous pouvez désactiver entièrement le déploiement en naviguant vers **Property Pages** > **Configuration Manager** et en décochant le **déploiement** de la configuration souhaitée.
+La propriété **Contenu** spécifie si le fichier doit être déployé sur la machine de débogage distante. Vous pouvez désactiver entièrement le déploiement en accédant à **pages de propriétés**  >  **Configuration Manager** et en désactivant **déployer** pour la configuration souhaitée.
 
 Dans certains cas, vous pourriez avoir besoin de davantage de contrôle sur le déploiement de votre projet. Par exemple, si certains fichiers que vous souhaitez déployer peuvent se trouver en dehors de votre solution ou si vous souhaitez personnaliser votre répertoire de déploiement distant par fichier ou répertoire. Dans ce cas, ajoutez le ou les blocs de code suivants à votre fichier .vcxproj et remplacez « example.cpp » par les noms des fichiers que vous souhaitez utiliser :
 
@@ -171,7 +171,7 @@ Pour les projets CMake qui ciblent une machine Linux distante, vous pouvez spéc
 
 ![Machine de débogage CMake distante](media/cmake-remote-debug-machine.png)
 
-IntelliSense propose une liste de toutes les connexions à distance établies. Vous pouvez ajouter une nouvelle connexion à distance en naviguant vers **Tools** > **Options** > **Cross Platform** > **Connection Manager** ou en recherchant "Connection Manager" dans Quick **Launch**.
+IntelliSense propose une liste de toutes les connexions à distance établies. Vous pouvez ajouter une nouvelle connexion à distance en accédant à **Outils**  >  **options**  >  **Cross Platform**  >  **Gestionnaire de connexions** multiplateforme ou en recherchant « gestionnaire de connexions » dans **lancement rapide**.
 
 Si vous souhaitez avoir le contrôle total sur votre déploiement, vous pouvez ajouter le ou les blocs de code suivants au fichier launch.vs.json. N’oubliez pas de remplacer les valeurs d’espace réservé par de vraies valeurs :
 
@@ -195,7 +195,7 @@ Si vous souhaitez avoir le contrôle total sur votre déploiement, vous pouvez a
 
 ## <a name="next-steps"></a>Étapes suivantes
 
-- Pour déboguer les appareils ARM sur Linux, consultez ce billet de blog : [Debugging an embedded ARM device in Visual Studio](https://blogs.msdn.microsoft.com/vcblog/2018/01/10/debugging-an-embedded-arm-device-in-visual-studio/).
+- Pour déboguer les appareils ARM sur Linux, consultez ce billet de blog : [Debugging an embedded ARM device in Visual Studio](https://devblogs.microsoft.com/cppblog/debugging-an-embedded-arm-device-in-visual-studio/).
 
 ## <a name="see-also"></a>Voir aussi
 

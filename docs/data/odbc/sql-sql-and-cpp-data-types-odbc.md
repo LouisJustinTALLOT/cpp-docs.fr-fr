@@ -6,53 +6,53 @@ helpviewer_keywords:
 - SQL data types [C++]
 - SQL [C++], vs. C++ data types
 ms.assetid: 066e0070-d4da-435c-9c4b-f7cab3352c86
-ms.openlocfilehash: cffe44b832ac1eb28d368072b8f0e92ea9f57feb
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 70796db02f8ff3fcfd67694fb596722664e8f904
+ms.sourcegitcommit: 6b3d793f0ef3bbb7eefaf9f372ba570fdfe61199
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81374482"
+ms.lasthandoff: 07/15/2020
+ms.locfileid: "86404253"
 ---
 # <a name="sql-sql-and-c-data-types-odbc"></a>SQL : types de données SQL et C++ (ODBC)
 
 > [!NOTE]
-> Ces informations s’appliquent aux classes ODBC MFC. Si vous travaillez avec les classes MFC DAO, consultez le thème "Comparaison de Microsoft Jet Database Engine SQL et ANSI SQL" dans DAO Help.
+> Ces informations s’appliquent aux classes ODBC MFC. Si vous utilisez les classes DAO MFC, consultez la rubrique « Comparaison de Microsoft Jet Moteur de base de données SQL et ANSI SQL » dans l’aide de DAO.
 
-Le tableau suivant cartographie les types de données ANSI SQL aux types de données CMD. Cela augmente les informations linguistiques C données à l’Annexe D de la *référence du programmeur* *SDK de l’ODBC* sur le CD de la Bibliothèque MSDN. Les assistants gèrent la plupart des cartes de type de données pour vous. Si vous n’utilisez pas un assistant, vous pouvez utiliser les informations de cartographie pour vous aider à écrire le code d’échange sur le terrain manuellement.
+Le tableau suivant mappe les types de données ANSI SQL aux types de données C++. Cela augmente les informations de langage C fournies dans l’annexe D de la documentation de [Référence du programmeur ODBC](/sql/odbc/reference/odbc-programmer-s-reference) . Les assistants gèrent la plupart des mappages de types de données. Si vous n’utilisez pas d’Assistant, vous pouvez utiliser les informations de mappage pour vous aider à écrire le code d’échange de champ manuellement.
 
-### <a name="ansi-sql-data-types-mapped-to-c-data-types"></a>Les types de données ANSI SQL cartographiés aux types de données CMD
+### <a name="ansi-sql-data-types-mapped-to-c-data-types"></a>Types de données SQL ANSI mappés aux types de données C++
 
-|Type de données ANSI SQL|Type de données C++|
+|Type de données SQL ANSI|Type de données C++|
 |------------------------|---------------------|
 |**CHAR**|`CString`|
-|**Decimales**|`CString`1|
-|**SMALLINT (EN)**|**int**|
-|**Réel**|**float**|
-|**Entier**|**Long**|
-|**Flotteur**|**double**|
-|**Double**|**double**|
-|**Numérique**|`CString`1|
-|**Varchar**|`CString`|
+|**SÉPAR**|`CString`1,0|
+|**SMALLINT**|**int**|
+|**NON**|**float**|
+|**ENTIÈRE**|**long**|
+|**DISSOCIÉ**|**double**|
+|**Cliquer**|**double**|
+|**CHIFFRE**|`CString`1,0|
+|**VARCHAR**|`CString`|
 |**LONGVARCHAR**|`CLongBinary`, `CString` 2|
-|**Peu**|**Bool**|
-|**Tinyint**|**Octet**|
-|**Bigint**|`CString`1|
-|**Binaire**|`CByteArray`|
-|**Varbinary**|`CByteArray`|
+|**64BITS**|**Boolean**|
+|**SA**|**POIDS**|
+|**COMPORTANT**|`CString`1,0|
+|**BINAIRE2**|`CByteArray`|
+|**VARBINARY**|`CByteArray`|
 |**LONGVARBINARY**|`CLongBinary`, `CByteArray` 3|
-|**Date**|`CTime`, `CString`|
-|**Temps**|`CTime`, `CString`|
-|**Timestamp**|`CTime`, `CString`|
+|**DATE**|`CTime`, `CString`|
+|**SIMULTANÉMENT**|`CTime`, `CString`|
+|**CONFIRMÉ**|`CTime`, `CString`|
 
-1. Carte ANSI **DECIMAL** `CString` et **NUMERIC** à cause **SQL_C_CHAR** est le type de transfert par défaut D’ODBC.
+1. Mappage **décimal** et **numérique** ANSI à `CString` , car **SQL_C_CHAR** est le type de transfert ODBC par défaut.
 
-2. Les données de caractère au-delà de 255 `CString`caractères sont tronquées par défaut lorsqu’elles sont cartographiées en . Vous pouvez étendre la longueur de troncation en définissant `RFX_Text`explicitement *l’argument nMaxLength* de .
+2. Les données de caractères au-delà de 255 caractères sont tronquées par défaut lorsqu’elles sont mappées à `CString` . Vous pouvez étendre la longueur de troncation en définissant explicitement l’argument *nMaxLength* de `RFX_Text` .
 
-3. Les données binaires au-delà de 255 `CByteArray`caractères sont tronquées par défaut lorsqu’elles sont cartographiées en . Vous pouvez étendre la longueur de troncation en définissant `RFX_Binary`explicitement *l’argument nMaxLength* de .
+3. Les données binaires au-delà de 255 caractères sont tronquées par défaut lorsqu’elles sont mappées à `CByteArray` . Vous pouvez étendre la longueur de troncation en définissant explicitement l’argument *nMaxLength* de `RFX_Binary` .
 
-Si vous n’utilisez pas la bibliothèque de curseurs ODBC, vous pourriez rencontrer un problème lorsque vous tentez de mettre à jour deux ou plusieurs longs champs à longueur variable à l’aide du pilote Microsoft SQL Server ODBC et des classes de base de données MFC ODBC. Les types ODBC, **SQL_LONGVARCHAR** et **SQL_LONGVARBINARY**, carte de texte et d’image SQL Server types. A `CDBException` est jeté si vous mettez à jour deux ou `CRecordset::Update`plusieurs longs champs de longueur variable sur le même appel à . Par conséquent, ne pas mettre `CRecordset::Update`à jour plusieurs colonnes longues en même temps avec . Vous pouvez mettre à jour plusieurs longues colonnes simultanément avec l’API `SQLPutData`ODBC . Vous pouvez également utiliser la bibliothèque de curseurs ODBC, mais ce n’est pas recommandé pour les conducteurs, comme le conducteur SQL Server, qui prennent en charge les curseurs et n’ont pas besoin de la bibliothèque de curseurs.
+Si vous n’utilisez pas la bibliothèque de curseurs ODBC, vous risquez de rencontrer un problème lors de la tentative de mise à jour d’au moins deux champs longs de longueur variable à l’aide de la Microsoft SQL Server pilote ODBC et des classes de base de données ODBC MFC. Les types ODBC, **SQL_LONGVARCHAR** et **SQL_LONGVARBINARY**, sont mappés aux types de SQL Server texte et image. Une `CDBException` exception est levée si vous mettez à jour au moins deux champs de longueur variable longue sur le même appel à `CRecordset::Update` . Par conséquent, ne mettez pas à jour plusieurs colonnes longues simultanément avec `CRecordset::Update` . Vous pouvez mettre à jour plusieurs colonnes longues simultanément avec l’API ODBC `SQLPutData` . Vous pouvez également utiliser la bibliothèque de curseurs ODBC, mais cela n’est pas recommandé pour les pilotes, comme le pilote SQL Server, qui prennent en charge les curseurs et qui n’ont pas besoin de la bibliothèque de curseurs.
 
-Si vous utilisez la bibliothèque de curseurs ODBC avec les classes de base de données MFC ODBC `CDBException` et le `CRecordset::Update` pilote Microsoft `CRecordset::Requery`SQL Server ODBC, un **ASSERT** peut se produire avec un si un appel pour suivre un appel à . Au lieu `CRecordset::Close` `CRecordset::Open` de `CRecordset::Requery`cela, appelez et plutôt que . Une autre solution est de ne pas utiliser la bibliothèque de curseurs ODBC, parce que le serveur SQL et le conducteur SQL Server ODBC fournissent un soutien autochtone pour les curseurs natifs et la bibliothèque de curseurs ODBC n’est pas nécessaire.
+Si vous utilisez la bibliothèque de curseurs ODBC avec les classes de base de données ODBC MFC et le pilote ODBC Microsoft SQL Server, une **assertion** peut se produire avec un `CDBException` si un appel à `CRecordset::Update` suit un appel à `CRecordset::Requery` . Au lieu de cela, appelez `CRecordset::Close` et `CRecordset::Open` plutôt que `CRecordset::Requery` . Une autre solution consiste à ne pas utiliser la bibliothèque de curseurs ODBC, car les SQL Server et le pilote ODBC SQL Server fournissent une prise en charge native des curseurs en mode natif et la bibliothèque de curseurs ODBC n’est pas nécessaire.
 
 ## <a name="see-also"></a>Voir aussi
 

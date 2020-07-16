@@ -16,12 +16,12 @@ helpviewer_keywords:
 - Internet content [MFC]
 - WinInet classes [MFC]
 ms.assetid: 6df2dfd0-6e3f-4587-9d01-2a32f00f8a6f
-ms.openlocfilehash: 3265bffb393eeff1d8a04a41357e2b138aa0ebf7
-ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
+ms.openlocfilehash: c9825cdcb5cb0963a4e0d3acdeb36dfee54b70fc
+ms.sourcegitcommit: 6b3d793f0ef3bbb7eefaf9f372ba570fdfe61199
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84615571"
+ms.lasthandoff: 07/15/2020
+ms.locfileid: "86405024"
 ---
 # <a name="mfc-internet-programming-basics"></a>Éléments fondamentaux relatifs à la programmation Internet MFC
 
@@ -68,11 +68,9 @@ MFC fournit des classes qui prennent en charge la programmation Internet. Vous p
 
 - [Prise en charge ATL pour les contrôles DHTML](../atl/atl-support-for-dhtml-controls.md)
 
-## <a name="web-sites-for-more-information"></a><a name="_core_web_sites_for_more_information"></a>Sites Web pour plus d’informations
+## <a name="websites-for-more-information"></a><a name="_core_web_sites_for_more_information"></a>Sites Web pour plus d’informations
 
-Pour plus d’informations sur la technologie Microsoft Internet, consultez le site Web [Microsoft Developer Network (MSDN)](https://go.microsoft.com/fwlink/p/?linkid=56322) . (Les liens peuvent changer sans préavis.)
-
-Ce site Web pour les développeurs contient des informations sur l’utilisation des technologies et des outils de développement Microsoft, ainsi que des histoires importantes sur les conférences récentes et à venir. À partir de cette page, vous pouvez accéder à de nombreux sites de développement associés, y compris les centres de développement XML et .NET. Vous pouvez également télécharger des kits de développement logiciel (SDK) bêta et des exemples.
+Pour plus d’informations sur la technologie Microsoft Internet, consultez [Microsoft docs](https://docs.microsoft.com/).
 
 Le [World Wide Web Consortium (W3C)](https://go.microsoft.com/fwlink/p/?linkid=37125) publie des spécifications pour html, http, CGI et d’autres technologies World Wide Web.
 

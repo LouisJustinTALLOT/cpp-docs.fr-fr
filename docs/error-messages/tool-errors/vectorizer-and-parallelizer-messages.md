@@ -8,16 +8,16 @@ f1_keywords:
 - C5001
 - C5012
 ms.assetid: d8f4844a-f414-42ab-b9a5-925a5da9d365
-ms.openlocfilehash: 4f105558d7795210e1edb2470af4e50326f49de6
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 1cdbb40d06d2b3da7e6444e3a6743c6e6ae1c874
+ms.sourcegitcommit: 6b3d793f0ef3bbb7eefaf9f372ba570fdfe61199
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80182199"
+ms.lasthandoff: 07/15/2020
+ms.locfileid: "86404998"
 ---
 # <a name="vectorizer-and-parallelizer-messages"></a>Messages du vectoriseur et du paralléliseur
 
-Vous pouvez utiliser les options C++ du compilateur Microsoft [/QPAR-Report](../../build/reference/qpar-report-auto-parallelizer-reporting-level.md) et [/qvec-Report](../../build/reference/qvec-report-auto-vectorizer-reporting-level.md) pour définir la [parallélisation automatique et la vectorisation automatique](../../parallel/auto-parallelization-and-auto-vectorization.md) afin de générer des codes de raison et des messages d’information concernant son activité. Cet article explique les code motifs et les messages.
+Vous pouvez utiliser les options du compilateur Microsoft C++ [/QPAR-Report](../../build/reference/qpar-report-auto-parallelizer-reporting-level.md) et [/qvec-Report](../../build/reference/qvec-report-auto-vectorizer-reporting-level.md) pour définir la [parallélisation automatique et la vectorisation automatique](../../parallel/auto-parallelization-and-auto-vectorization.md) afin de générer des codes de raison et des messages d’information concernant son activité. Cet article explique les code motifs et les messages.
 
 ## <a name="informational-messages"></a><a name="BKMK_InformationalMessages"></a>Messages d’information
 
@@ -964,10 +964,10 @@ void code_1505(int *A, int *B)
 
 ## <a name="see-also"></a>Voir aussi
 
-[Erreurs etC++ avertissements du C/compilateur et des outils de génération](../compiler-errors-1/c-cpp-build-errors.md)
-la [parallélisation automatique et la vectorisation automatique](../../parallel/auto-parallelization-and-auto-vectorization.md) \
-[Auto-vectoriseur dans Visual Studio 2012 – vue d’ensemble](https://blogs.msdn.microsoft.com/nativeconcurrency/2012/04/12/auto-vectorizer-in-visual-studio-2012-overview/) \
-[#pragma Loop ()](../../preprocessor/loop.md) \
+[Erreurs et avertissements du compilateur C/C++ et des outils de génération](../compiler-errors-1/c-cpp-build-errors.md) 
+ [Parallélisation automatique et vectorisation automatique](../../parallel/auto-parallelization-and-auto-vectorization.md) \
+[Auto-Vectoriseur dans Visual Studio 2012 – vue d’ensemble](/archive/blogs/nativeconcurrency/auto-vectorizer-in-visual-studio-2012-overview) \
+[boucle de #pragma ()](../../preprocessor/loop.md) \
 [/Q options (opérations de bas niveau)](../../build/reference/q-options-low-level-operations.md) \
 [/QPAR-Report (niveau de rapport paralléliseur automatique)](../../build/reference/qpar-report-auto-parallelizer-reporting-level.md) \
-[/Qvec-report (Niveau de rapport du vectoriseur automatique)](../../build/reference/qvec-report-auto-vectorizer-reporting-level.md)
+[/Qvec-Report (niveau de rapport Vectoriseur automatique)](../../build/reference/qvec-report-auto-vectorizer-reporting-level.md)

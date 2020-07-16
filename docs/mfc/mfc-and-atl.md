@@ -3,12 +3,12 @@ title: MFC et ATL
 ms.date: 01/24/2018
 ms.assetid: 31b1a3a8-4154-4c4a-af10-fafc23ecdc5c
 ms.topic: overview
-ms.openlocfilehash: 2fd109792bde0717c88222d5d53be3a26df95239
-ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
+ms.openlocfilehash: a0ad1eac7991655eae5ae1a328145e66031e40dd
+ms.sourcegitcommit: 6b3d793f0ef3bbb7eefaf9f372ba570fdfe61199
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84619918"
+ms.lasthandoff: 07/15/2020
+ms.locfileid: "86405037"
 ---
 # <a name="mfc-and-atl"></a>MFC et ATL
 
@@ -28,4 +28,4 @@ Dans Visual Studio 2017 et versions ultérieures, MFC et ATL sont des sous-compo
 |[Composants de bureau COM ATL](../atl/atl-com-desktop-components.md)|ATL fournit des modèles de classe et d’autres constructions d’utilisation pour simplifier la création d’objets COM en C++.|
 |[Classes partagées ATL/MFC](../atl-mfc-shared/atl-mfc-shared-classes.md)|Références pour la [CStringT Class](../atl-mfc-shared/reference/cstringt-class.md) et d’autres classes partagées par MFC et ATL.|
 |[Utilisation des fichiers de ressources](../windows/working-with-resource-files.md)|L’éditeur de ressources permet de modifier les ressources d’interface utilisateur telles que les chaînes, les images et les boîtes de dialogue.|
-|[C++ dans Visual Studio](../overview/visual-cpp-in-visual-studio.md)|Rubrique parente de l’ensemble du contenu C++ de MSDN Library.|
+|[C++ dans Visual Studio](../overview/visual-cpp-in-visual-studio.md)|Rubrique parente pour toute la documentation C++.|

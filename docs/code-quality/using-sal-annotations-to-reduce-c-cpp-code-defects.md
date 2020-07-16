@@ -7,12 +7,12 @@ helpviewer_keywords:
 - SAL annotations
 - code analysis, annotation
 ms.assetid: a16e47d0-6f3e-4ed6-8883-459b2874e9a4
-ms.openlocfilehash: bfd6a58c7dc8664dce91906279a62380768a5c65
-ms.sourcegitcommit: 7bea0420d0e476287641edeb33a9d5689a98cb98
+ms.openlocfilehash: 1d47608137e2a9d9ed13740a5f4424cc0aff2902
+ms.sourcegitcommit: 6b3d793f0ef3bbb7eefaf9f372ba570fdfe61199
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/17/2020
-ms.locfileid: "77418710"
+ms.lasthandoff: 07/15/2020
+ms.locfileid: "86403892"
 ---
 # <a name="using-sal-annotations-to-reduce-cc-code-defects"></a>Utilisation d’annotations SAL pour réduire les défauts du code C/C++
 
@@ -24,7 +24,7 @@ Les Articles de cette section de la documentation présentent les aspects du SAL
 
      Fournit des informations et des exemples qui illustrent les principales annotations SAL.
 
-- [Annotation des paramètres de fonction et des valeurs de retour](../code-quality/annotating-function-parameters-and-return-values.md)
+- [Annotation de paramètres de fonction et valeurs de retour](../code-quality/annotating-function-parameters-and-return-values.md)
 
      Répertorie les annotations SAL pour les fonctions et les paramètres de fonction.
 
@@ -40,7 +40,7 @@ Les Articles de cette section de la documentation présentent les aspects du SAL
 
      Explique comment utiliser des annotations SAL avec des mécanismes de verrouillage.
 
-- [Spécification du moment et de l’endroit où une annotation s’applique](../code-quality/specifying-when-and-where-an-annotation-applies.md)
+- [Spécification du moment où une annotation est applicable et dans quel cas](../code-quality/specifying-when-and-where-an-annotation-applies.md)
 
      Répertorie les annotations SAL qui spécifient la condition ou la portée (emplacement) d’autres annotations SAL.
 
@@ -51,10 +51,6 @@ Les Articles de cette section de la documentation présentent les aspects du SAL
 - [Bonnes pratiques et exemples](../code-quality/best-practices-and-examples-sal.md)
 
      Fournit des exemples qui montrent comment utiliser des annotations SAL. Décrit également les pièges courants.
-
-## <a name="related-resources"></a>Ressources associées
-
-[Blog de l’équipe d’analyse du code](https://blogs.msdn.microsoft.com/codeanalysis/)
 
 ## <a name="see-also"></a>Voir aussi
 

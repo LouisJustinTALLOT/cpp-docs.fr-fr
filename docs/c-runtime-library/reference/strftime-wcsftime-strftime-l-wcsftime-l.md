@@ -42,12 +42,12 @@ helpviewer_keywords:
 - _tcsftime function
 - time strings
 ms.assetid: 6330ff20-4729-4c4a-82af-932915d893ea
-ms.openlocfilehash: 9d262371369681cbbd5975a733950d6c4150fd88
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: 57fdd61a966cbeab07c0aeafdad0f6e6fb97cca1
+ms.sourcegitcommit: 6b3d793f0ef3bbb7eefaf9f372ba570fdfe61199
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82920020"
+ms.lasthandoff: 07/15/2020
+ms.locfileid: "86404318"
 ---
 # <a name="strftime-wcsftime-_strftime_l-_wcsftime_l"></a>strftime, wcsftime, _strftime_l, _wcsftime_l
 
@@ -109,7 +109,7 @@ Si le nombre total de caractères, y compris le caractère null de fin, est sup�
 
 Le nombre de caractères dans *strDest* est égal au nombre de caractères littéraux au *format* , ainsi qu’à tous les caractères qui peuvent être ajoutés au *format* par le biais des codes de mise en forme. Le caractère Null de fin d’une chaîne n’est pas compté dans la valeur de retour.
 
-## <a name="remarks"></a>Notes 
+## <a name="remarks"></a>Notes
 
 Les fonctions **strftime** et **wcsftime** mettent en forme la valeur de temps **TM** dans *timeptr* en fonction de l’argument de *format* fourni et stockent le résultat dans le *strDest*de mémoire tampon. Au maximum, les caractères *MaxSize* sont placés dans la chaîne. Pour obtenir une description des champs de la structure *timeptr* , consultez [asctime](asctime-wasctime.md). **wcsftime** est l’équivalent à caractères larges de **strftime**; son argument de pointeur de chaîne pointe vers une chaîne de caractères larges. Ces fonctions se comportent sinon de façon identique.
 
@@ -123,7 +123,7 @@ Par défaut, l’état global de cette fonction est limité à l’application. 
 |---------------------|------------------------------------|--------------------|-----------------------|
 |**_tcsftime**|**strftime**|**strftime**|**wcsftime**|
 
-L’argument *format* se compose d’un ou de plusieurs codes. comme dans **printf**, les codes de mise en forme sont précédés d’un**%** signe de pourcentage (). Les caractères qui ne commencent pas **%** par sont copiés sans être modifiés dans *strDest*. La catégorie **LC_TIME** des paramètres régionaux actuels affecte la mise en forme de la sortie de **strftime**. (Pour plus d’informations sur **LC_TIME**, consultez [setlocale](setlocale-wsetlocale.md).) Les fonctions **strftime** et **wcsftime** utilisent les paramètres régionaux actuellement définis. Les versions **_strftime_l** et **_wcsftime_l** de ces fonctions sont identiques, sauf qu’elles prennent les paramètres régionaux en tant que paramètre et les utilisent à la place des paramètres régionaux actuellement définis. Pour plus d’informations, consultez [Locale](../../c-runtime-library/locale.md).
+L’argument *format* se compose d’un ou de plusieurs codes. comme dans **printf**, les codes de mise en forme sont précédés d’un signe de pourcentage ( **%** ). Les caractères qui ne commencent pas par **%** sont copiés sans être modifiés dans *strDest*. La catégorie **LC_TIME** des paramètres régionaux actuels affecte la mise en forme de la sortie de **strftime**. (Pour plus d’informations sur **LC_TIME**, consultez [setlocale](setlocale-wsetlocale.md).) Les fonctions **strftime** et **wcsftime** utilisent les paramètres régionaux actuellement définis. Les versions **_strftime_l** et **_wcsftime_l** de ces fonctions sont identiques, sauf qu’elles prennent les paramètres régionaux en tant que paramètre et les utilisent à la place des paramètres régionaux actuellement définis. Pour plus d’informations, consultez [Locale](../../c-runtime-library/locale.md).
 
 Les fonctions **strftime** prennent en charge les codes de mise en forme suivants :
 
@@ -179,6 +179,9 @@ Comme dans la fonction **printf** , l' **#** indicateur peut préfixer tout code
 
 L’année ISO 8601 semaine et semaine générée par **% V**, **% g**et **% g**, utilise une semaine qui commence le lundi, où semaine 1 est la semaine qui contient le 4 janvier, soit la première semaine qui inclut au moins quatre jours de l’année. Si le premier lundi de l’année est le 2e, troisième ou quatrième, les jours précédents font partie de la dernière semaine de l’année précédente. Pour ces jours-ci, **% V** est remplacé par 53, et **% g** et **% g** sont remplacés par les chiffres de l’année précédente.
 
+> [!NOTE]
+> Lors de l’utilisation de l’une des `strftime` fonctions avec un `tm` pointeur retourné par `gmtime` , les valeurs imprimées via les `%Z` spécificateurs et ne sont `%z` pas exactes. Cela est dû au fait que le `tm` struct tel que spécifié par la norme C ne contient pas les informations relatives au nom et au décalage du fuseau horaire. Au lieu de cela, les informations de fuseau horaire sont renseignées via les variables globales [ `_timezone` et `_dstbias` ](../../c-runtime-library/daylight-dstbias-timezone-and-tzname.md).
+
 ## <a name="requirements"></a>Spécifications
 
 |Routine|En-tête requis|
@@ -190,7 +193,7 @@ L’année ISO 8601 semaine et semaine générée par **% V**, **% g**et **% g**
 
 Les fonctions **_strftime_l** et **_wcsftime_l** sont spécifiques à Microsoft. Pour plus d'informations sur la compatibilité, voir [Compatibilité](../../c-runtime-library/compatibility.md).
 
-## <a name="example"></a> Exemple
+## <a name="example"></a>Exemple
 
 Consultez l’exemple relatif à [time](time-time32-time64.md).
 

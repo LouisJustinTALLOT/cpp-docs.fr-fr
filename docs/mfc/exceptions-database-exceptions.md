@@ -11,12 +11,12 @@ helpviewer_keywords:
 - databases [MFC], exception handling
 - error codes [MFC], database exception handling
 ms.assetid: 28daf260-f824-4be6-aecc-1f859e6dec26
-ms.openlocfilehash: 98436e7519279197fe192d9ef8b7344b211b24bc
-ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
+ms.openlocfilehash: 96f9e5f836205df71e03638858cb00b788d03c0b
+ms.sourcegitcommit: 6b3d793f0ef3bbb7eefaf9f372ba570fdfe61199
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84624667"
+ms.lasthandoff: 07/15/2020
+ms.locfileid: "86403723"
 ---
 # <a name="exceptions-database-exceptions"></a>Exceptions : exceptions de base de données
 
@@ -38,7 +38,7 @@ L’approche la plus pragmatique pour intercepter les exceptions de base de donn
 
 En plus des codes de retour définis par le Framework, dont les noms se présentent sous la forme **AFX_SQL_ERROR_XXX**, certains [CDBExceptions](reference/cdbexception-class.md) sont basés sur des codes de retour [ODBC](../data/odbc/odbc-basics.md) . Les codes de retour pour ces exceptions ont des noms de la forme **SQL_ERROR_XXX**.
 
-Les codes de retour (à la fois définis par l’infrastructure et définis par ODBC) que les classes de base de données peuvent retourner sont documentés sous la [m_nRetCode](reference/cdbexception-class.md#m_nretcode) membre de données de la classe `CDBException` . Des informations supplémentaires sur les codes de retour définis par ODBC sont disponibles dans le *Guide de référence du programmeur* ODBC SDK de MSDN Library.
+Les codes de retour (à la fois définis par l’infrastructure et définis par ODBC) que les classes de base de données peuvent retourner sont documentés sous la [m_nRetCode](reference/cdbexception-class.md#m_nretcode) membre de données de la classe `CDBException` . Des informations supplémentaires sur les codes de retour définis par ODBC sont disponibles dans le [Guide de référence du programmeur ODBC](/sql/odbc/reference/odbc-programmer-s-reference).
 
 ### <a name="error-codes-used-for-dao-exceptions"></a>Codes d’erreur utilisés pour les exceptions DAO
 

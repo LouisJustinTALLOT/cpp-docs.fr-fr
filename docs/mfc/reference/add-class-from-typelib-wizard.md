@@ -4,24 +4,24 @@ ms.date: 05/09/2019
 helpviewer_keywords:
 - COM interfaces, adding classes
 ms.assetid: 96152afd-9374-4649-a6ab-b0fa2a5592a3
-ms.openlocfilehash: 7a866c0e6b772a992f5ae81dbb17646765f172e6
-ms.sourcegitcommit: fc1de63a39f7fcbfe2234e3f372b5e1c6a286087
+ms.openlocfilehash: 6fa1dd3985fd5b565bcc4b4727f41960d1f4f5d0
+ms.sourcegitcommit: 6b3d793f0ef3bbb7eefaf9f372ba570fdfe61199
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65708339"
+ms.lasthandoff: 07/15/2020
+ms.locfileid: "86405128"
 ---
 # <a name="add-class-from-typelib-wizard"></a>Assistant Ajout de classes d'une Typelib
 
 ::: moniker range="vs-2019"
 
-Cet Assistant n’est pas disponible dans Visual Studio 2019 et versions ultérieures.
+Cet Assistant n’est pas disponible dans Visual Studio 2019 et ultérieur.
 
 ::: moniker-end
 
 ::: moniker range="<=vs-2017"
 
-Utilisez cet Assistant pour ajouter une classe MFC à partir d’une bibliothèque de types disponibles. L’Assistant crée une classe pour chaque interface que vous ajoutez à partir de la bibliothèque de types sélectionnée.
+Utilisez cet Assistant pour ajouter une classe MFC à partir d’une bibliothèque de types disponible. L’Assistant crée une classe pour chaque interface que vous ajoutez à partir de la bibliothèque de types sélectionnée.
 
 - **Ajouter une classe à partir de**
 
@@ -29,41 +29,39 @@ Utilisez cet Assistant pour ajouter une classe MFC à partir d’une bibliothèq
 
    |Option|Description|
    |------------|-----------------|
-   |**Registry**|La bibliothèque de types est inscrite dans le système. Les bibliothèques de types inscrites sont répertoriées dans **Bibliothèques de types disponibles**.|
-   |**Fichier**|La bibliothèque de types n’est pas nécessairement inscrite dans le système, mais est contenue dans un fichier. Vous devez fournir l’emplacement du fichier dans **Emplacement**.|
+   |**Registre**|La bibliothèque de types est inscrite dans le système. Les bibliothèques de types inscrites sont répertoriées dans **Bibliothèques de types disponibles**.|
+   |**File**|La bibliothèque de types n’est pas nécessairement inscrite dans le système, mais est contenue dans un fichier. Vous devez fournir l’emplacement du fichier dans **Emplacement**.|
 
 - **Bibliothèques de types disponibles**
 
-   Répertorie les bibliothèques de types actuellement inscrits dans le système. Sélectionnez une bibliothèque de types à partir de cette liste pour afficher ses interfaces dans les **Interfaces** liste.
+   Répertorie les bibliothèques de types actuellement inscrites dans le système. Sélectionnez une bibliothèque de types dans cette liste pour afficher ses interfaces dans la liste **interfaces** .
 
-   Consultez « Inside Distributed COM : Type Libraries and Language Integration » dans MSDN library pour plus d’informations sur l’inscription des bibliothèques de types.
-
-- **Emplacement**
+- **Lieu**
 
    Spécifie l’emplacement de la bibliothèque de types. Si vous cliquez sur **Fichier** sous **Ajouter une classe à partir de**, vous pouvez indiquer l’emplacement du fichier contenant la bibliothèque de types. Pour accéder à l’emplacement du fichier, cliquez sur le bouton de sélection (...).
 
 - **Interfaces**
 
-   Répertorie les interfaces dans la bibliothèque de types actuellement sélectionné dans le **bibliothèques de types disponibles** liste.
+   Répertorie les interfaces dans la bibliothèque de types actuellement sélectionnée dans la liste **bibliothèques de types disponibles** .
 
    |Bouton de transfert|Description|
    |---------------------|-----------------|
-   |**>**|Ajoute l’interface actuellement sélectionnée à la liste **Interfaces**. Estompé si aucune interface n’est sélectionnée.|
-   |**>>**|Ajoute toutes les interfaces dans la bibliothèque de types actuellement sélectionnée dans le **bibliothèques de types disponibles** liste.|
-   |**\<**|Supprime la classe actuellement sélectionnée de la liste **Classes générées**. Estompé si aucune classe n’est sélectionnée dans le **classes générées** liste.|
-   |**\<\<**|Supprime toutes les classes de la liste **Classes générées**. If estompé le **classes générées** liste est vide.|
+   |**>**|Ajoute l’interface actuellement sélectionnée à la liste **Interfaces**. Grisé si aucune interface n’est sélectionnée.|
+   |**>>**|Ajoute toutes les interfaces dans la bibliothèque de types actuellement sélectionnée dans la liste **bibliothèques de types disponibles** .|
+   |**\<**|Supprime la classe actuellement sélectionnée de la liste **Classes générées**. Grisé si aucune classe n’est actuellement sélectionnée dans la liste **classes générées** .|
+   |**\<\<**|Supprime toutes les classes de la liste **Classes générées**. Grisé si la liste **classes générées** est vide.|
 
 - **Classes générées**
 
-   Spécifie les noms de classe à générer à partir des interfaces ajoutées à l’aide du bouton **>** ou **>>**. Vous pouvez cliquer sur cette case pour sélectionner une classe et puis utilisez le haut ou bas pour faire défiler la liste, afficher chaque nom de classe dans le **classe** boîte et nom de fichier dans le **fichier** zone que l’Assistant génère lorsque vous Cliquez sur **Terminer**. Vous ne pouvez sélectionner qu’une seule classe à la fois dans cette zone.
+   Spécifie les noms de classes à générer à partir des interfaces ajoutées à l’aide du **>** **>>** bouton ou. Vous pouvez cliquer sur cette zone pour sélectionner une classe, puis utiliser les touches haut ou haut pour faire défiler la liste, afficher chaque nom de classe dans la zone de **classe** et le nom de fichier dans la zone de **fichier** que l’Assistant génère quand vous cliquez sur **Terminer**. Vous ne pouvez sélectionner qu’une seule classe à la fois dans cette zone.
 
-   Pour supprimer une classe, sélectionnez-la dans cette liste et cliquez sur **<**. Vous n’avez pas besoin de sélectionner une classe dans la zone de classes générées pour supprimer toutes les classes ; en cliquant sur **<<**, vous supprimez toutes les classes dans le **classes générées** boîte.
+   Vous pouvez supprimer une classe en la sélectionnant dans cette liste, puis en cliquant sur **<** . Vous n’êtes pas obligé de sélectionner une classe dans la zone Classes générées pour supprimer toutes les classes. Cliquez sur **<<** pour supprimer toutes les classes de la zone **Classes générées**.
 
 - **Classe**
 
    Spécifie le nom de la classe sélectionnée dans la zone **Classes générées**. Cette classe est ajoutée par l’Assistant quand vous cliquez sur **Terminer**. Vous pouvez modifier le nom dans la zone **Class**.
 
-- **Fichier**
+- **File**
 
    Définit le nom du fichier d’en-tête de la nouvelle classe. Par défaut, ce nom est basé sur celui fourni dans **Classes générées**. Cliquez sur le bouton de sélection pour enregistrer le fichier à l’emplacement de votre choix ou pour ajouter la déclaration de classe à un fichier existant. Si vous choisissez un fichier existant, l’Assistant attend que vous cliquiez sur **Terminer** pour l’enregistrer à l’emplacement sélectionné.
 
@@ -73,5 +71,5 @@ Utilisez cet Assistant pour ajouter une classe MFC à partir d’une bibliothèq
 
 ## <a name="see-also"></a>Voir aussi
 
-[Classe MFC à partir d’une bibliothèque de types](../../mfc/reference/adding-an-mfc-class-from-a-type-library.md)<br/>
-[Clients Automation : Utilisation de bibliothèques de types](../../mfc/automation-clients-using-type-libraries.md)
+[Classe MFC à partir d'une bibliothèque de types](../../mfc/reference/adding-an-mfc-class-from-a-type-library.md)<br/>
+[Clients Automation : utilisation des bibliothèques de types](../../mfc/automation-clients-using-type-libraries.md)

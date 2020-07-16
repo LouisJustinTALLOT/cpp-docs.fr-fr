@@ -51,12 +51,12 @@ helpviewer_keywords:
 - Microsoft::WRL::ComPtr::Swap method
 - Microsoft::WRL::ComPtr::~ComPtr, destructor
 ms.assetid: a6551902-6819-478a-8df7-b6f312ab1fb0
-ms.openlocfilehash: 612747fe0acfa29acc3f516f1257e80069d5395c
-ms.sourcegitcommit: d695bb727bd2b081af4d50127b0242a9a5bdce61
+ms.openlocfilehash: 265553d29bcc153bbbb065443391d3aa4b3b0bd2
+ms.sourcegitcommit: 6b3d793f0ef3bbb7eefaf9f372ba570fdfe61199
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/03/2020
-ms.locfileid: "84332251"
+ms.lasthandoff: 07/15/2020
+ms.locfileid: "86404549"
 ---
 # <a name="comptr-class"></a>ComPtr (classe)
 
@@ -84,7 +84,7 @@ Classe à laquelle le actuel `ComPtr` est un Friend. (Le modèle qui utilise ce 
 
 `ComPtr<>`déclare un type qui représente le pointeur d’interface sous-jacent. Utilisez `ComPtr<>` pour déclarer une variable, puis utilisez l’opérateur d’accès aux membres Arrow ( `->` ) pour accéder à une fonction membre d’interface.
 
-Pour plus d’informations sur les pointeurs intelligents, consultez la sous-section « pointeurs intelligents COM » de l’article [pratiques de codage com](/windows/win32/LearnWin32/com-coding-practices) dans MSDN Library.
+Pour plus d’informations sur les pointeurs intelligents, consultez la sous-section « pointeurs intelligents COM » de l’article [pratiques de codage com](/windows/win32/LearnWin32/com-coding-practices) .
 
 ## <a name="members"></a>Membres
 
@@ -187,7 +187,7 @@ Interface à représenter par le paramètre *p*.
 
 Le premier modèle est le formulaire que vous devez utiliser dans votre code. Le deuxième modèle est une spécialisation d’assistance interne. Il prend en charge les fonctionnalités du langage C++ telles que le mot clé de déduction de type [auto](../../cpp/auto-cpp.md) .
 
-### <a name="return-value"></a>Valeur renvoyée
+### <a name="return-value"></a>Valeur de retour
 
 S_OK si l'opération réussit. Sinon, une valeur HRESULT indique l'erreur.
 
@@ -210,7 +210,7 @@ ID d’interface.
 *p*<br/>
 Si l’objet a une interface dont l’ID est égal à *riid*, pointeur doublement indirect vers l’interface spécifiée par le paramètre *riid* . Sinon, pointeur vers `IUnknown` .
 
-### <a name="return-value"></a>Valeur renvoyée
+### <a name="return-value"></a>Valeur de retour
 
 S_OK si l'opération réussit. Sinon, une valeur HRESULT indique l'erreur.
 
@@ -229,7 +229,7 @@ HRESULT AsWeak(
 *pWeakRef*<br/>
 Lorsque cette opération est terminée, pointeur vers un objet de référence faible.
 
-### <a name="return-value"></a>Valeur renvoyée
+### <a name="return-value"></a>Valeur de retour
 
 S_OK si l'opération réussit. Sinon, une valeur HRESULT indique l'erreur.
 
@@ -292,7 +292,7 @@ Type de l' *autre* paramètre.
 *autres*<br/>
 Objet de type *U*.
 
-### <a name="return-value"></a>Valeur renvoyée
+### <a name="return-value"></a>Valeur de retour
 
 ### <a name="remarks"></a>Notes
 
@@ -335,7 +335,7 @@ Lorsque cette opération est terminée, il s’agit d’un pointeur vers l’int
 *riid*<br/>
 ID d’interface.
 
-### <a name="return-value"></a>Valeur renvoyée
+### <a name="return-value"></a>Valeur de retour
 
 S_OK en cas de réussite ; Sinon, HRESULT qui indique la raison de l’échec de l’opération implicite `QueryInterface` .
 
@@ -355,7 +355,7 @@ Dissocie cet `ComPtr` objet de l’interface qu’il représente.
 T* Detach();
 ```
 
-### <a name="return-value"></a>Valeur renvoyée
+### <a name="return-value"></a>Valeur de retour
 
 Pointeur vers l’interface qui a été représentée par cet `ComPtr` objet.
 
@@ -367,7 +367,7 @@ Récupère un pointeur vers l’interface associée à ce `ComPtr` .
 T* Get() const;
 ```
 
-### <a name="return-value"></a>Valeur renvoyée
+### <a name="return-value"></a>Valeur de retour
 
 Pointeur vers l’interface associée à ce `ComPtr` .
 
@@ -380,7 +380,7 @@ T* const* GetAddressOf() const;
 T** GetAddressOf();
 ```
 
-### <a name="return-value"></a>Valeur renvoyée
+### <a name="return-value"></a>Valeur de retour
 
 Adresse d’une variable.
 
@@ -418,7 +418,7 @@ Details::ComPtrRef<WeakRef> operator&()
 const Details::ComPtrRef<const WeakRef> operator&() const
 ```
 
-### <a name="return-value"></a>Valeur renvoyée
+### <a name="return-value"></a>Valeur de retour
 
 Référence faible à l’objet actuel `ComPtr` .
 
@@ -434,7 +434,7 @@ Récupère un pointeur vers le type spécifié par le paramètre de modèle actu
 WRL_NOTHROW Microsoft::WRL::Details::RemoveIUnknown<InterfaceType>* operator->() const;
 ```
 
-### <a name="return-value"></a>Valeur renvoyée
+### <a name="return-value"></a>Valeur de retour
 
 Pointeur vers le type spécifié par le nom du type de modèle actuel.
 
@@ -481,7 +481,7 @@ Une classe.
 *autres*<br/>
 Une référence de pointeur, de référence ou rvalue à un type ou un autre `ComPtr` .
 
-### <a name="return-value"></a>Valeur renvoyée
+### <a name="return-value"></a>Valeur de retour
 
 Référence à l’objet actuel `ComPtr` .
 
@@ -530,7 +530,7 @@ Référence à un objet `ComPtr`.
 *p*<br/>
 Référence à un autre `ComPtr` objet.
 
-### <a name="return-value"></a>Valeur renvoyée
+### <a name="return-value"></a>Valeur de retour
 
 Le premier opérateur produit `true` si l’objet *a* est égal à l’objet *b*; sinon, `false` .
 
@@ -565,7 +565,7 @@ Référence à un objet `ComPtr`.
 *p*<br/>
 Référence à un autre `ComPtr` objet.
 
-### <a name="return-value"></a>Valeur renvoyée
+### <a name="return-value"></a>Valeur de retour
 
 Le premier opérateur produit `true` si l’objet *a* n’est pas égal à l’objet *b*; sinon, `false` .
 
@@ -579,7 +579,7 @@ Indique si un `ComPtr` gère la durée de vie des objets d’une interface.
 WRL_NOTHROW operator Microsoft::WRL::Details::BoolType() const;
 ```
 
-### <a name="return-value"></a>Valeur renvoyée
+### <a name="return-value"></a>Valeur de retour
 
 Si une interface est associée à, il s’agit `ComPtr` de l’adresse du membre de données [BoolStruct :: Member](boolstruct-structure.md#member) ; sinon, `nullptr` .
 
@@ -603,7 +603,7 @@ Libère l’interface associée à ce, puis `ComPtr` récupère l’adresse du m
 T** ReleaseAndGetAddressOf();
 ```
 
-### <a name="return-value"></a>Valeur renvoyée
+### <a name="return-value"></a>Valeur de retour
 
 Adresse du membre de données de [PTR_](#ptr) de ce `ComPtr` .
 
@@ -615,7 +615,7 @@ Libère l’interface associée à ce `ComPtr` et retourne le nouveau décompte 
 unsigned long Reset();
 ```
 
-### <a name="return-value"></a>Valeur renvoyée
+### <a name="return-value"></a>Valeur de retour
 
 Nombre de références restantes à l’interface sous-jacente, le cas échéant.
 
@@ -636,4 +636,4 @@ void Swap(
 ### <a name="parameters"></a>Paramètres
 
 *r*<br/>
-`ComPtr`.
+Un `ComPtr`.

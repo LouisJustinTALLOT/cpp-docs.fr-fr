@@ -6,18 +6,18 @@ helpviewer_keywords:
 - databases [C++], ODBC
 - data access [C++], ODBC
 ms.assetid: 56b6067a-651e-4c10-a24d-d4a6a17ca5e4
-ms.openlocfilehash: fc72b0bda2bfebd116481d6eaa06d054f904d084
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 12e4c0b74caa95af4dc4ed00dc77d46e47029b59
+ms.sourcegitcommit: 6b3d793f0ef3bbb7eefaf9f372ba570fdfe61199
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80213081"
+ms.lasthandoff: 07/15/2020
+ms.locfileid: "86403801"
 ---
 # <a name="open-database-connectivity-odbc"></a>ODBC (Open Database Connectivity)
 
 La bibliothèque Microsoft Foundation Classes (MFC) fournit des classes pour la programmation avec Open Database Connectivity (ODBC). À compter de Visual Studio 2015 et SQL Server 2012 ODBC est la meilleure façon de se connecter aux sources de données SQL.
 
-Pour plus d’informations sur l’utilisation de l’API ODBC sans MFC, consultez le kit de développement logiciel [(SDK) Open Database Connectivity (ODBC)](/sql/odbc/microsoft-open-database-connectivity-odbc) dans MSDN.
+Pour plus d’informations sur l’utilisation de l’API ODBC sans MFC, consultez la documentation de [Open Database Connectivity (ODBC)](/sql/odbc/microsoft-open-database-connectivity-odbc) .
 
 ## <a name="in-this-section"></a>Dans cette section
 
@@ -53,7 +53,7 @@ Pour plus d’informations sur l’utilisation de l’API ODBC sans MFC, consult
 
 - [Comment les classes de base de données fonctionnent-elles avec l’architecture document/vue de MFC ?](working-with-documents-and-views.md)
 
-- [Liste de pilotes ODBC](odbc-driver-list.md)
+- [Liste des pilotes ODBC](odbc-driver-list.md)
 
 ## <a name="odbc-database-tasks"></a>Tâches de base de données ODBC
 
@@ -61,19 +61,19 @@ Ces tâches sont basées sur les classes [ODBC](odbc-basics.md) MFC. Pour plus d
 
 - [Installer et prendre en main ODBC](installing-and-getting-started-with-odbc.md)
 
-- [Conception et création d’une application de base de données ODBC](design-and-create-an-odbc-database-application.md)
+- [Concevoir et créer une application de base de données ODBC](design-and-create-an-odbc-database-application.md)
 
-- [Utilisation des formulaires de base de données (mode Enregistrement) avec ODBC](use-database-forms-record-views-with-odbc.md)
+- [Utiliser des formulaires de base de données (vues d’enregistrement) avec ODBC](use-database-forms-record-views-with-odbc.md)
 
-- [Utilisation d’ODBC pour travailler avec d’autres utilisateurs](use-odbc-to-work-with-other-users.md)
+- [Utiliser ODBC pour travailler avec d’autres utilisateurs](use-odbc-to-work-with-other-users.md)
 
-- [Utilisation de connexions de base de données ODBC](work-with-odbc-database-connections.md)
+- [Utiliser des connexions de base de données ODBC](work-with-odbc-database-connections.md)
 
-- [Utilisation d’ODBC et de pilotes](work-with-odbc-and-drivers.md)
+- [Utiliser ODBC et les pilotes](work-with-odbc-and-drivers.md)
 
-- [Utilisation de la bibliothèque de curseurs ODBC](use-the-odbc-cursor-library.md)
+- [Utiliser la bibliothèque de curseurs ODBC](use-the-odbc-cursor-library.md)
 
-- [Utilisation des recordsets ODBC MFC](use-mfc-odbc-recordsets.md)
+- [Utiliser les recordsets ODBC MFC](use-mfc-odbc-recordsets.md)
 
 ## <a name="see-also"></a>Voir aussi
 

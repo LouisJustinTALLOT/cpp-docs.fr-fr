@@ -1,5 +1,5 @@
 ---
-title: Opérateurs de décalage vers la gauche et&gt; &gt; de &lt; &lt;décalage vers la droite (et)
+title: Opérateurs de décalage vers la gauche et de décalage vers la droite ( &gt; &gt; et &lt; &lt; )
 ms.date: 08/13/2018
 f1_keywords:
 - <<
@@ -13,26 +13,26 @@ helpviewer_keywords:
 - shift operators [C++]
 - operators [C++], shift
 ms.assetid: 25fa0cbb-5fdd-4657-8745-b35f7d8f1606
-ms.openlocfilehash: 2020c2dbbf8ff91ee692366f55c836be0b3dddb0
-ms.sourcegitcommit: 6b749db14b4cf3a2b8d581fda6fdd8cb98bc3207
+ms.openlocfilehash: 7cde299d305219f2bd0e53a9f19c2ca35a8c7b69
+ms.sourcegitcommit: 6b3d793f0ef3bbb7eefaf9f372ba570fdfe61199
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/05/2020
-ms.locfileid: "82825913"
+ms.lasthandoff: 07/15/2020
+ms.locfileid: "86404768"
 ---
-# <a name="left-shift-and-right-shift-operators-gtgt-and-ltlt"></a>Opérateurs de décalage vers la gauche et&gt; &gt; de &lt; &lt;décalage vers la droite (et)
+# <a name="left-shift-and-right-shift-operators-gtgt-and-ltlt"></a>Opérateurs de décalage vers la gauche et de décalage vers la droite ( &gt; &gt; et &lt; &lt; )
 
-Les opérateurs de décalage de bits sont l’opérateur de décalage**&gt;** vers la droite (), qui déplace les bits de *Shift-expression* vers la droite, et l’opérateur**&lt;** de décalage vers la gauche (), qui déplace les bits de *Shift-expression* vers la gauche. <sup>1</sup>
+Les opérateurs de décalage de bits sont l’opérateur de décalage vers la droite ( **&gt;&gt;** ), qui déplace les bits de *Shift-expression* vers la droite, et l’opérateur de décalage vers la gauche ( **&lt;&lt;** ), qui déplace les bits de *Shift-expression* vers la gauche. <sup>1</sup>
 
 ## <a name="syntax"></a>Syntaxe
 
 > *Shift-expression* `<<` *additive-expression*\
 > *shift-expression* `>>` *additive-expression*
 
-## <a name="remarks"></a>Notes 
+## <a name="remarks"></a>Notes
 
 > [!IMPORTANT]
-> Les descriptions et exemples suivants sont valides sur Windows pour les architectures x86 et x64. L’implémentation des opérateurs de décalage vers la gauche et vers la droite est très différente sur Windows pour les appareils ARM. Pour plus d’informations, consultez la section « opérateurs de décalage » du billet de blog [Hello ARM](https://blogs.msdn.com/b/vcblog/archive/2012/10/25/hello-arm-exploring-undefined-unspecified-and-implementation-defined-behavior-in-c.aspx) .
+> Les descriptions et exemples suivants sont valides sur Windows pour les architectures x86 et x64. L’implémentation des opérateurs de décalage vers la gauche et vers la droite est très différente sur Windows pour les appareils ARM. Pour plus d’informations, consultez la section « opérateurs de décalage » du billet de blog [Hello ARM](https://devblogs.microsoft.com/cppblog/hello-arm-exploring-undefined-unspecified-and-implementation-defined-behavior-in-c/) .
 
 ## <a name="left-shifts"></a>Décalages vers la gauche
 
@@ -195,7 +195,7 @@ int main() {
 }
 ```
 
-## <a name="additional-details"></a>Détails supplémentaires
+## <a name="additional-details"></a>Informations supplémentaires
 
 Le résultat d’une opération de décalage n’est pas défini si *additive-expression* est négatif ou si *additive-expression* est supérieur ou égal au nombre de bits dans (promu) *Shift-expression*. Aucune opération de décalage n’est effectuée si *additive-expression* est égal à 0.
 
@@ -224,7 +224,7 @@ int main() {
 
 <sup>1</sup> Voici la description des opérateurs de décalage dans la spécification de la norme ISO c++ 11 (incitss/ISO/IEC 14882-2011 [2012]), sections 5.8.2 et 5.8.3.
 
-La valeur de `E1 << E2` est `E1` décalée vers la gauche de positions de bit `E2` ; les bits libérés sont remplis de zéros. Si `E1` a un type non signé, la valeur du résultat est **E1 × 2**<sup>**E2**</sup>, ce qui réduit le modulo d’une unité de plus que la valeur maximale pouvant être représentée dans le type de résultat. Sinon, si `E1` a un type signé et une valeur non négative et que **E1 × 2**<sup>**E2**</sup> est représentable dans le type non signé correspondant du type de résultat, cette valeur, convertie en type de résultat, est la valeur résultante ; dans le cas contraire, le comportement n’est pas défini.
+La valeur de `E1 << E2` est `E1` décalée vers la gauche de positions de bit `E2` ; les bits libérés sont remplis de zéros. Si `E1` a un type non signé, la valeur du résultat est **E1 × 2**<sup>**E2**</sup>, ce qui réduit le modulo d’une unité de plus que la valeur maximale pouvant être représentée dans le type de résultat. Sinon, si `E1` a un type signé et une valeur non négative et que **E1 × 2**<sup>**E2**</sup> est représentable dans le type non signé correspondant du type de résultat, cette valeur, convertie en type de résultat, est la valeur résultante ; sinon, le comportement n’est pas défini.
 
 La valeur de `E1 >> E2` est `E1` décalée vers la droite de positions de bit `E2`. Si `E1` a un type non signé ou si `E1` a un type signé et une valeur non négative, la valeur du résultat fait partie intégrante du quotient de **E1/2**<sup>**E2**</sup>. Si `E1` a un type signé et une valeur négative, la valeur résultante est définie par l'implémentation.
 
