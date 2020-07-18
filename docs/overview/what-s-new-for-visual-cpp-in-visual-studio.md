@@ -3,12 +3,12 @@ title: Nouveautés de C++ dans Visual Studio
 ms.date: 05/19/2020
 ms.technology: cpp-ide
 ms.assetid: 8801dbdb-ca0b-491f-9e33-01618bff5ae9
-ms.openlocfilehash: f4b22cd11bcdee3d7dc2fe232642c02a331354bc
-ms.sourcegitcommit: 6b3d793f0ef3bbb7eefaf9f372ba570fdfe61199
+ms.openlocfilehash: 6813a119453bfd365763269169f1291fa165bdcd
+ms.sourcegitcommit: e15b46ea7888dbdd7e0bb47da76aeed680c3c1f3
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2020
-ms.locfileid: "86404972"
+ms.lasthandoff: 07/17/2020
+ms.locfileid: "86446868"
 ---
 # <a name="whats-new-for-c-in-visual-studio"></a>Nouveautés de C++ dans Visual Studio
 
@@ -70,7 +70,7 @@ Analyse améliorée avec `/Qspectre` afin de fournir une aide à l’atténuatio
 
 - La détection de lien dynamique de runtime pour la bibliothèque d’algorithmes parallèles n’utilise plus une page entière pour stocker le tableau de pointeurs de fonction. Le marquage de cette mémoire en lecture seule n’est plus considéré comme pertinent pour des raisons de sécurité.
 
-- `std::thread` du constructeur n’attend plus que le thread démarre, et n’insère plus autant de calques d’appels de fonction entre la bibliothèque C sous-jacente `_beginthreadex` et l’objet fourni pouvant être appelé. `std::thread`Placez précédemment six fonctions entre `_beginthreadex` et l’objet pouvant être appelé fourni. Ce nombre a été réduit à seulement trois, deux d’entre eux `std::invoke` . Ce changement résout également un bogue obscur de minutage qui bloquait le constructeur de `std::thread` si l’horloge du système avait été modifiée au moment précis où un `std::thread` était créé.
+- `std::thread` du constructeur n’attend plus que le thread démarre, et n’insère plus autant de calques d’appels de fonction entre la bibliothèque C sous-jacente `_beginthreadex` et l’objet fourni pouvant être appelé. `std::thread`Placez précédemment six fonctions entre `_beginthreadex` et l’objet pouvant être appelé fourni. Ce nombre a été réduit à seulement trois, deux d’entre eux `std::invoke` . Cette modification résout également un bogue de minutage obscur, où un `std::thread` constructeur cesserait de répondre si l’horloge système a changé au moment précis où le `std::thread` était en cours de création.
 
 - Correction d’une régression des performances dans `std::hash` que nous avons introduit lors de l’implémentation `std::hash<std::filesystem::path>`.
 
@@ -590,7 +590,7 @@ Visual Studio 2017 introduit la prise en charge de l’utilisation de projets C
 
 Nous fournissons à présent une expérience d’installation plus fine pour la charge de travail C++ d’origine. Nous avons ajouté des composants sélectionnables qui vous permettent d’installer uniquement les outils dont vous avez besoin. Les tailles d’installation indiquées pour les composants répertoriés dans l’interface utilisateur du programme d’installation sont incorrectes et sous-estiment la taille totale.
 
-Pour créer correctement des projets Win32 dans la charge de travail de bureau C++, vous devez installer un ensemble d’outils et un SDK Windows. Installez les composants recommandés (sélectionnés) **Ensemble d’outils VC++ 2017 v141 (x86,x64)** et **SDK Windows 10 (10.0.nnnnn)** pour assurer le bon fonctionnement. Si les outils nécessaires ne sont pas installés, les projets ne sont pas créés correctement et l’Assistant se bloque.
+Pour créer correctement des projets Win32 dans la charge de travail de bureau C++, vous devez installer un ensemble d’outils et un SDK Windows. Installez les composants recommandés (sélectionnés) **Ensemble d’outils VC++ 2017 v141 (x86,x64)** et **SDK Windows 10 (10.0.nnnnn)** pour assurer le bon fonctionnement. Si les outils nécessaires ne sont pas installés, les projets ne seront pas créés correctement et l’Assistant ne répondra plus.
 
 ##### <a name="visual-studio-2017-version-155"></a>Visual Studio 2017 version 15.5
 
@@ -697,7 +697,7 @@ Outils Visual Studio Graphics Diagnostics : vous pouvez les utiliser pour enreg
 
 - **Recherche et filtrage dans la table des objets :** fournit un moyen rapide et facile de trouver les ressources que vous recherchez.
 
-  ![Recherche](media/search.png)
+  ![Rechercher](media/search.png)
 
 - **Historique des ressources :** cette nouvelle vue offre une façon simplifiée d’afficher tout l’historique des modifications d’une ressource utilisée pendant le rendu d’un frame capturé. Pour appeler l’historique d’une ressource, cliquez sur l’icône d’horloge en regard de n’importe quel lien hypertexte de ressource.
 

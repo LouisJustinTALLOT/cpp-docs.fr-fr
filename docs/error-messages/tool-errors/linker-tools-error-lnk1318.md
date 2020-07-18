@@ -5,12 +5,12 @@ f1_keywords:
 - LNK1318
 helpviewer_keywords:
 - LNK1318
-ms.openlocfilehash: a61c11a9cbb25fea6fddc0bf1c5c4c2a7af1cf4f
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: cce2c03783039a62b5cb6f60ecf8d76b23589483
+ms.sourcegitcommit: e15b46ea7888dbdd7e0bb47da76aeed680c3c1f3
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80183577"
+ms.lasthandoff: 07/17/2020
+ms.locfileid: "86446699"
 ---
 # <a name="linker-tools-error-lnk1318"></a>Erreur des outils Éditeur de liens LNK1318
 
@@ -24,7 +24,7 @@ Ce message d’erreur est généré pour les problèmes rares dans les fichiers 
 
 - Effectuez une opération de nettoyage dans vos répertoires de build, puis effectuez une génération complète de votre solution.
 
-- Redémarrez votre ordinateur, ou recherchez les processus mspdbsrv. exe isolés ou bloqués, puis supprimez-les dans TaskManager.
+- Redémarrez votre ordinateur, ou recherchez les processus de mspdbsrv.exe isolés ou qui ne répondent pas et supprimez-les dans TaskManager.
 
 - Désactivez les vérifications antivirus dans les répertoires de votre projet.
 
@@ -32,4 +32,4 @@ Ce message d’erreur est généré pour les problèmes rares dans les fichiers 
 
 - Essayez de générer à l’aide de l’ensemble d’outils hébergé 64 bits.
 
-- Sérialisez la liaison pour atténuer les problèmes de liaison parallèle, si nécessaire. Cette erreur peut être provoquée si mspdbsrv. exe est lancé par une instance de Link et s’arrête avant qu’une autre instance de Link ne l’utilise. L’inconvénient de ce correctif est que l’exécution de votre projet peut prendre beaucoup plus de temps.
+- Sérialisez la liaison pour atténuer les problèmes de liaison parallèle, si nécessaire. Cette erreur peut être provoquée si mspdbsrv.exe est lancée par une instance de Link et s’arrête avant qu’une autre instance de lien ne l’utilise. L’inconvénient de ce correctif est que l’exécution de votre projet peut prendre beaucoup plus de temps.

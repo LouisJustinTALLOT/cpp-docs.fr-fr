@@ -1,168 +1,275 @@
 ---
 title: Référence des directives
-ms.date: 12/17/2019
+ms.date: 07/15/2020
 f1_keywords:
 - Directives Reference
 helpviewer_keywords:
 - MASM (Microsoft Macro Assembler), directives reference
 ms.assetid: da6efcd1-18f7-41de-81cd-a002a02f9a22
-ms.openlocfilehash: 8591ecdae0162eaec0760e08aaa44fdf5f0e297c
-ms.sourcegitcommit: 0781c69b22797c41630601a176b9ea541be4f2a3
+ms.openlocfilehash: 7ea9967bb3b617a798e7c573e93266faff5fb9a4
+ms.sourcegitcommit: e15b46ea7888dbdd7e0bb47da76aeed680c3c1f3
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/20/2019
-ms.locfileid: "75314716"
+ms.lasthandoff: 07/17/2020
+ms.locfileid: "86446448"
 ---
 # <a name="directives-reference"></a>Référence des directives
 
-## <a name="x64"></a>X64
+## <a name="x64"></a>x64
 
-||||
-|-|-|-|
-|[.ALLOCSTACK](dot-allocstack.md)|[.ENDPROLOG](dot-endprolog.md)|[PROC](proc.md)|
-|[.PUSHFRAME](dot-pushframe.md)|[.PUSHREG](dot-pushreg.md)|[.SAVEREG](dot-savereg.md)|
-|[.SAVEXMM128](dot-savexmm128.md)|[.SETFRAME](dot-setframe.md)||
+:::row:::
+   :::column span="":::
+      [`.ALLOCSTACK`](dot-allocstack.md)<br/>[`.ENDPROLOG`](dot-endprolog.md)<br/>[`PROC`](proc.md)
+   :::column-end:::
+   :::column span="":::
+      [`.PUSHFRAME`](dot-pushframe.md)<br/>[`.PUSHREG`](dot-pushreg.md)<br/>[`.SAVEREG`](dot-savereg.md)
+   :::column-end:::
+   :::column span="":::
+      [`.SAVEXMM128`](dot-savexmm128.md)<br/>[`.SETFRAME`](dot-setframe.md)
+   :::column-end:::
+:::row-end:::
 
-### <a name="code-labels"></a>Étiquettes de code
+## <a name="code-labels"></a>Étiquettes de code
 
-|||
-|-|-|
-|[DROITE](align-masm.md)|[EVEN](even.md)|
-|[NOMS](label-masm.md)|[ORG](org.md)|
+:::row:::
+   :::column span="":::
+      [`ALIGN`](align-masm.md)<br/>[`EVEN`](even.md)
+   :::column-end:::
+   :::column span="":::
+      [`LABEL`](label-masm.md)
+   :::column-end:::
+   :::column span="":::
+      [`ORG`](org.md)
+   :::column-end:::
+:::row-end:::
 
-### <a name="conditional-assembly"></a>Assembly conditionnel
+## <a name="conditional-assembly"></a>Assembly conditionnel
 
-||||
-|-|-|-|
-|[TIERCE](else-masm.md)|[ELSEIF](elseif-masm.md)|[ELSEIF2](elseif2.md)|
-|[QUE](if-masm.md)|[IF2](if2.md)|Appel d' [offres](ifb.md)/[IFNB](ifnb.md)|
-|[IFDEF](ifdef.md)/[ifndef](ifndef.md)|[IFDIF](ifdif.md)/[IFDIF&#91;&#91;I&#93; ](ifdif.md)|[IFE](ife.md)|
-|[IFIDN](ifidn.md)/[IFIDN&#91;&#91;I&#93; ](ifidn.md)|||
+:::row:::
+   :::column span="":::
+      [`ELSE`](else-masm.md)<br/>[`ELSEIF`](elseif-masm.md)<br/>[`ELSEIF2`](elseif2.md)<br/>[`IF`](if-masm.md)<br/>[`IF2`](if2.md)
+   :::column-end:::
+   :::column span="":::
+      [`IFB`](ifb.md)<br/>[`IFNB`](ifnb.md)<br/>[`IFDEF`](ifdef.md)<br/>[`IFNDEF`](ifndef.md)<br/>[`IFDIF`](ifdif.md)
+   :::column-end:::
+   :::column span="":::
+      [`IFDIFI`](ifdif.md)<br/>[`IFE`](ife.md)<br/>[`IFIDN`](ifidn.md)<br/>[`IFIDNI`](ifidn.md)
+   :::column-end:::
+:::row-end:::
 
-### <a name="conditional-control-flow"></a>Flow (contrôle conditionnel)
+## <a name="conditional-control-flow"></a>Flow (contrôle conditionnel)
 
-||||
-|-|-|-|
-|[.BREAK](dot-break.md)|[.CONTINUE](dot-continue.md)|[.ELSE](dot-else.md)|
-|[. ELSEIF](dot-if.md)|[.ENDIF](dot-endif.md)|[.ENDW](dot-endw.md)|
-|[.IF](dot-if.md)|[.REPEAT](dot-repeat.md)|[.UNTIL](dot-until.md)|
-|[.UNTILCXZ](dot-untilcxz.md)|[.WHILE](dot-while.md)||
+:::row:::
+   :::column span="":::
+      [`.BREAK`](dot-break.md)<br/>[`.CONTINUE`](dot-continue.md)<br/>[`.ELSE`](dot-else.md)<br/>[`.ELSEIF`](dot-if.md)
+   :::column-end:::
+   :::column span="":::
+      [`.ENDIF`](dot-endif.md)<br/>[`.ENDW`](dot-endw.md)<br/>[`.IF`](dot-if.md)<br/>[`.REPEAT`](dot-repeat.md)
+   :::column-end:::
+   :::column span="":::
+      [`.UNTIL`](dot-until.md)<br/>[`.UNTILCXZ`](dot-untilcxz.md)<br/>[`.WHILE`](dot-while.md)
+   :::column-end:::
+:::row-end:::
 
-### <a name="conditional-error"></a>Erreur conditionnelle
+## <a name="conditional-error"></a>Erreur conditionnelle
 
-||||
-|-|-|-|
-|[.ERR](dot-err.md)|[.ERR2](dot-err2.md)|[.ERRB](dot-errb.md)|
-|[.ERRDEF](dot-errdef.md)|[. ERRDIF](dot-errdif.md)/[. ERRDIF&#91;I&#93; &#91;&#93; ](dot-errdif.md)|[.ERRE](dot-erre.md)|
-|[. ERRIDN](dot-erridn.md)/[. ERRIDN&#91;I&#91;&#93; ](dot-erridn.md)|[.ERRNB](dot-errnb.md)|[.ERRNDEF](dot-errndef.md)|
-|[.ERRNZ](dot-errnz.md)|||
+:::row:::
+   :::column span="":::
+      [`.ERR`](dot-err.md)<br/>[`.ERR2`](dot-err2.md)<br/>[`.ERRB`](dot-errb.md)<br/>[`.ERRDEF`](dot-errdef.md)
+   :::column-end:::
+   :::column span="":::
+      [`.ERRDIF`](dot-errdif.md)<br/>[`.ERRDIFI`](dot-errdif.md)<br/>[`.ERRE`](dot-erre.md)<br/>[`.ERRIDN`](dot-erridn.md)
+   :::column-end:::
+   :::column span="":::
+      [`.ERRIDNI`](dot-erridn.md)<br/>[`.ERRNB`](dot-errnb.md)<br/>[`.ERRNDEF`](dot-errndef.md)<br/>[`.ERRNZ`](dot-errnz.md)
+   :::column-end:::
+:::row-end:::
 
-### <a name="data-allocation"></a>Allocation de données
+## <a name="data-allocation"></a>Allocation de données
 
-||||
-|-|-|-|
-|[DROITE](align-masm.md)|[Octet](byte-masm.md)/[SByte](sbyte-masm.md)|[DWORD](dword.md)/[SDWORD](sdword.md)|
-|[EVEN](even.md)|[FWORD](fword.md)|[NOMS](label-masm.md)|
-|[ORG](org.md)|[QWORD](qword.md)|[REAL4](real4.md)|
-|[REAL8](real8.md)|[REAL10](real10.md)|[TBYTE](tbyte.md)|
-|[Mot](word.md)/[épée](sword.md)|||
+:::row:::
+   :::column span="":::
+      [`ALIGN`](align-masm.md)<br/>[`BYTE`](byte-masm.md)<br/>[`SBYTE`](sbyte-masm.md)<br/>[`DWORD`](dword.md)<br/>[`SDWORD`](sdword.md)<br/>[`EVEN`](even.md)
+   :::column-end:::
+   :::column span="":::
+      [`FWORD`](fword.md)<br/>[`LABEL`](label-masm.md)<br/>[`ORG`](org.md)<br/>[`QWORD`](qword.md)<br/>[`REAL4`](real4.md)
+   :::column-end:::
+   :::column span="":::
+      [`REAL8`](real8.md)<br/>[`REAL10`](real10.md)<br/>[`TBYTE`](tbyte.md)<br/>[`WORD`](word.md)<br/>[`SWORD`](sword.md)
+   :::column-end:::
+:::row-end:::
 
-### <a name="equates"></a>Équivaut
+## <a name="equates"></a>Équivaut
 
-||||
-|-|-|-|
-|[=](equal.md)|[EQU](equ.md)|[TEXTEQU](textequ.md)|
+:::row:::
+   :::column span="":::
+      [`=`](equal.md)
+   :::column-end:::
+   :::column span="":::
+      [`EQU`](equ.md)
+   :::column-end:::
+   :::column span="":::
+      [`TEXTEQU`](textequ.md)
+   :::column-end:::
+:::row-end:::
 
-### <a name="listing-control"></a>Contrôle de liste
+## <a name="listing-control"></a>Contrôle de liste
 
-||||
-|-|-|-|
-|[.CREF](dot-cref.md)|[.LIST](dot-list.md)|[.LISTALL](dot-listall.md)|
-|[.LISTIF](dot-listif.md)|[.LISTMACRO](dot-listmacro.md)|[.LISTMACROALL](dot-listmacroall.md)|
-|[.NOCREF](dot-nocref.md)|[.NOLIST](dot-nolist.md)|[.NOLISTIF](dot-nolistif.md)|
-|[.NOLISTMACRO](dot-nolistmacro.md)|[PAGE](page.md)|[SUBTITLE](subtitle.md)|
-|[.TFCOND](dot-tfcond.md)|[TITLE](title.md)||
+:::row:::
+   :::column span="":::
+      [`.CREF`](dot-cref.md)<br/>[`.LIST`](dot-list.md)<br/>[`.LISTALL`](dot-listall.md)<br/>[`.LISTIF`](dot-listif.md)<br/>[`.LISTMACRO`](dot-listmacro.md)
+   :::column-end:::
+   :::column span="":::
+      [`.LISTMACROALL`](dot-listmacroall.md)<br/>[`.NOCREF`](dot-nocref.md)<br/>[`.NOLIST`](dot-nolist.md)<br/>[`.NOLISTIF`](dot-nolistif.md)<br/>[`.NOLISTMACRO`](dot-nolistmacro.md)
+   :::column-end:::
+   :::column span="":::
+      [`PAGE`](page.md)<br/>[`SUBTITLE`](subtitle.md)<br/>[`.TFCOND`](dot-tfcond.md)<br/>[`TITLE`](title.md)
+   :::column-end:::
+:::row-end:::
 
-### <a name="macros"></a>Macros
+## <a name="macros"></a>Macros
 
-||||
-|-|-|-|
-|[ENDM](endm.md)|[EXITM](exitm.md)|[GOTO](goto-masm.md)|
-|[LOCALISÉ](local-masm.md)|[MACRO](macro.md)|[PURGE](purge.md)|
+:::row:::
+   :::column span="":::
+      [`ENDM`](endm.md)<br/>[`EXITM`](exitm.md)
+   :::column-end:::
+   :::column span="":::
+      [`GOTO`](goto-masm.md)<br/>[`LOCAL`](local-masm.md)
+   :::column-end:::
+   :::column span="":::
+      [`MACRO`](macro.md)<br/>[`PURGE`](purge.md)
+   :::column-end:::
+:::row-end:::
 
-### <a name="miscellaneous"></a>Divers
+<br/><br/>
 
-||||
-|-|-|-|
-|[AFFECTÉ](alias-masm.md)|[ASSUME](assume.md)|[Commentaire](comment-masm.md)|
-|[ECHO](echo.md)|[EFFET](end-masm.md)|[.FPO](dot-fpo.md)|
-|[INCLUSION](include-masm.md)|[INCLUDELIB (](includelib-masm.md)|[MMWORD](mmword.md)|
-|[OPTION](option-masm.md)|[POPCONTEXT](popcontext.md)|[PUSHCONTEXT](pushcontext.md)|
-|[.RADIX](dot-radix.md)|[.SAFESEH](dot-safeseh.md)|[XMMWORD](xmmword.md)|
-|[YMMWORD](ymmword.md)|||
+## <a name="miscellaneous"></a>Divers
 
-### <a name="procedures"></a>Procédures
+:::row:::
+   :::column span="":::
+      [`ALIAS`](alias-masm.md)<br/>[`ASSUME`](assume.md)<br/>[`COMMENT`](comment-masm.md)<br/>[`ECHO`](echo.md)<br/>[`END`](end-masm.md)<br/>[`.FPO`](dot-fpo.md)
+   :::column-end:::
+   :::column span="":::
+      [`INCLUDE`](include-masm.md)<br/>[`INCLUDELIB`](includelib-masm.md)<br/>[`MMWORD`](mmword.md)<br/>[`OPTION`](option-masm.md)<br/>[`POPCONTEXT`](popcontext.md)
+   :::column-end:::
+   :::column span="":::
+      [`PUSHCONTEXT`](pushcontext.md)<br/>[`.RADIX`](dot-radix.md)<br/>[`.SAFESEH`](dot-safeseh.md)<br/>[`XMMWORD`](xmmword.md)<br/>[`YMMWORD`](ymmword.md)
+   :::column-end:::
+:::row-end:::
 
-||||
-|-|-|-|
-|[ENDP](endp.md)|[INVOKE](invoke.md)|[PROC](proc.md)|
-|[PROTO](proto.md)|||
+## <a name="procedures"></a>Procédures
 
-### <a name="processor"></a>Processeur
+:::row:::
+   :::column span="":::
+      [`ENDP`](endp.md)<br/>[`INVOKE`](invoke.md)
+   :::column-end:::
+   :::column span="":::
+      [`PROC`](proc.md)
+   :::column-end:::
+   :::column span="":::
+      [`PROTO`](proto.md)
+   :::column-end:::
+:::row-end:::
 
-||||
-|-|-|-|
-|[.386](dot-386.md)|[.386P](dot-386p.md)|[.387](dot-387.md)|
-|[.486](dot-486.md)|[.486P](dot-486p.md)|[.586](dot-586.md)|
-|[.586P](dot-586p.md)|[.686](dot-686.md)|[.686P](dot-686p.md)|
-|[.K3D](dot-k3d.md)|[.MMX](dot-mmx.md)|[.XMM](dot-xmm.md)|
+## <a name="processor"></a>Processeur
 
-### <a name="repeat-blocks"></a>Blocs de répétition
+:::row:::
+   :::column span="":::
+      [`.386`](dot-386.md)<br/>[`.386P`](dot-386p.md)<br/>[`.387`](dot-387.md)<br/>[`.486`](dot-486.md)
+   :::column-end:::
+   :::column span="":::
+      [`.486P`](dot-486p.md)<br/>[`.586`](dot-586.md)<br/>[`.586P`](dot-586p.md)<br/>[`.686`](dot-686.md)
+   :::column-end:::
+   :::column span="":::
+      [`.686P`](dot-686p.md)<br/>[`.K3D`](dot-k3d.md)<br/>[`.MMX`](dot-mmx.md)<br/>[`.XMM`](dot-xmm.md)
+   :::column-end:::
+:::row-end:::
 
-||||
-|-|-|-|
-|[ENDM](endm.md)|[POUR](for-masm.md)|[FORC](forc.md)|
-|[GOTO](goto-masm.md)|[REPEAT](repeat.md)|[DURANT](while-masm.md)|
+## <a name="repeat-blocks"></a>Blocs de répétition
 
-### <a name="scope"></a>Portée
+:::row:::
+   :::column span="":::
+      [`ENDM`](endm.md)<br/>[`FOR`](for-masm.md)
+   :::column-end:::
+   :::column span="":::
+      [`FORC`](forc.md)<br/>[`GOTO`](goto-masm.md)
+   :::column-end:::
+   :::column span="":::
+      [`REPEAT`](repeat.md)<br/>[`WHILE`](while-masm.md)
+   :::column-end:::
+:::row-end:::
 
-||||
-|-|-|-|
-|[COMM](comm.md)|[EXTERNES](extern-masm.md)|[EXTERNDEF](externdef.md)|
-|[INCLUDELIB (](includelib-masm.md)|[PUBLIQUE](public-masm.md)||
+## <a name="scope"></a>Étendue
 
-### <a name="segment"></a>Partie
+:::row:::
+   :::column span="":::
+      [`COMM`](comm.md)<br/>[`EXTERN`](extern-masm.md)
+   :::column-end:::
+   :::column span="":::
+      [`EXTERNDEF`](externdef.md)<br/>[`INCLUDELIB`](includelib-masm.md)
+   :::column-end:::
+   :::column span="":::
+      [`PUBLIC`](public-masm.md)
+   :::column-end:::
+:::row-end:::
 
-||||
-|-|-|-|
-|[.ALPHA](dot-alpha.md)|[ASSUME](assume.md)|[.DOSSEG](dot-dosseg.md)|
-|[EFFET](end-masm.md)|[FINS](ends-masm.md)|[GROUP](group.md)|
-|[SEGMENT](segment.md)|[.SEQ](dot-seq.md)||
+## <a name="segment"></a>Segment
 
-### <a name="simplified-segment"></a>Segment simplifié
+:::row:::
+   :::column span="":::
+      [`.ALPHA`](dot-alpha.md)<br/>[`ASSUME`](assume.md)<br/>[`.DOSSEG`](dot-dosseg.md)
+   :::column-end:::
+   :::column span="":::
+      [`END`](end-masm.md)<br/>[`ENDS`](ends-masm.md)<br/>[`GROUP`](group.md)
+   :::column-end:::
+   :::column span="":::
+      [`SEGMENT`](segment.md)<br/>[`.SEQ`](dot-seq.md)
+   :::column-end:::
+:::row-end:::
 
-||||
-|-|-|-|
-|[.CODE](dot-code.md)|[.CONST](dot-const.md)|[.DATA](dot-data.md)|
-|[.DATA?](dot-data-q.md)|[.DOSSEG](dot-dosseg.md)|[.EXIT](dot-exit.md)|
-|[.FARDATA](dot-fardata.md)|[.FARDATA?](dot-fardata-q.md)|[.MODEL](dot-model.md)|
-|[.STACK](dot-stack.md)|[.STARTUP](dot-startup.md)||
+## <a name="simplified-segment"></a>Segment simplifié
 
-### <a name="string"></a>String
+:::row:::
+   :::column span="":::
+      [`.CODE`](dot-code.md)<br/>[`.CONST`](dot-const.md)<br/>[`.DATA`](dot-data.md)<br/>[`.DATA?`](dot-data-q.md)
+   :::column-end:::
+   :::column span="":::
+      [`.DOSSEG`](dot-dosseg.md)<br/>[`.EXIT`](dot-exit.md)<br/>[`.FARDATA`](dot-fardata.md)<br/>[`.FARDATA?`](dot-fardata-q.md)
+   :::column-end:::
+   :::column span="":::
+      [`.MODEL`](dot-model.md)<br/>[`.STACK`](dot-stack.md)<br/>[`.STARTUP`](dot-startup.md)
+   :::column-end:::
+:::row-end:::
 
-|||
-|-|-|
-|[CATSTR](catstr.md)|[INSTR](instr.md)|
-|[SIZESTR](sizestr.md)|[SUBSTR](substr.md)|
+## <a name="string"></a>String
 
-### <a name="structure-and-record"></a>Structure et enregistrement
+:::row:::
+   :::column span="":::
+      [`CATSTR`](catstr.md)<br/>[`INSTR`](instr.md)
+   :::column-end:::
+   :::column span="":::
+      [`SIZESTR`](sizestr.md)
+   :::column-end:::
+   :::column span="":::
+      [`SUBSTR`](substr.md)
+   :::column-end:::
+:::row-end:::
 
-||||
-|-|-|-|
-|[FINS](ends-masm.md)|[ENREGISTREMENT](record-masm.md)|[MODÉLIS](struct-masm.md)|
-|[TYPEDEF](typedef-masm.md)|[UNION](union.md)||
+## <a name="structure-and-record"></a>Structure et enregistrement
+
+:::row:::
+   :::column span="":::
+      [`ENDS`](ends-masm.md)<br/>[`RECORD`](record-masm.md)
+   :::column-end:::
+   :::column span="":::
+      [`STRUCT`](struct-masm.md)<br/>[`TYPEDEF`](typedef-masm.md)
+   :::column-end:::
+   :::column span="":::
+      [`UNION`](union.md)
+   :::column-end:::
+:::row-end:::
 
 ## <a name="see-also"></a>Voir aussi
 
-Informations de [référence sur Microsoft Macro Assembler](microsoft-macro-assembler-reference.md)\
+[Référence de Microsoft Macro Assembler](microsoft-macro-assembler-reference.md)\
 [Syntaxe BNF de MASM](masm-bnf-grammar.md)
