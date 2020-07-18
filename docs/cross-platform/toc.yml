@@ -1,6 +1,6 @@
 - name: Développement mobile multiplateforme avec C++
   href: ../cross-platform/index.yml
-- name: Vue d'ensemble
+- name: Vue d’ensemble
   href: ../cross-platform/visual-cpp-for-cross-platform-mobile-development.md
 - name: Bien démarrer
   expanded: true

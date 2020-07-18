@@ -123,10 +123,10 @@
           href: accessing-run-time-class-information.md
         - name: Création d'objets dynamiques
           href: dynamic-object-creation.md
-        - name: 'Classe CObject : Forum aux questions'
+        - name: 'Classe CObject : FAQ'
           expanded: false
           items:
-            - name: 'Classe CObject : Forum aux questions'
+            - name: 'Classe CObject : FAQ'
               href: cobject-class-frequently-asked-questions.md
             - name: "Dois-je dériver les nouvelles classes de CObject\_?"
               href: do-i-have-to-derive-new-classes-from-cobject-q.md
@@ -318,10 +318,10 @@
               href: active-document-servers.md
             - name: Documents actifs
               href: active-documents.md
-        - name: Automatisation
+        - name: Automation
           expanded: false
           items:
-            - name: Automatisation
+            - name: Automation
               href: automation.md
             - name: clients Automation
               expanded: false
@@ -400,22 +400,22 @@
               href: activation-cpp.md
             - name: 'Activation : Verbes'
               href: activation-verbs.md
-        - name: Containers
+        - name: Conteneurs
           expanded: false
           items:
-            - name: Containers
+            - name: Conteneurs
               href: containers.md
-            - name: "Conteneurs\_: Implémentation d’un conteneur"
+            - name: "Containers\_: Implémentation d’un conteneur"
               href: containers-implementing-a-container.md
-            - name: "Conteneurs\_: Éléments clients"
+            - name: "Containers\_: Éléments clients"
               href: containers-client-items.md
-            - name: "Conteneurs\_: Notifications d’élément client"
+            - name: "Containers\_: Notifications d’élément client"
               href: containers-client-item-notifications.md
-            - name: "Conteneurs\_: États d’élément client"
+            - name: "Containers\_: États d’élément client"
               href: containers-client-item-states.md
-            - name: "Conteneurs\_: Fichiers composés"
+            - name: "Containers\_: Fichiers composés"
               href: containers-compound-files.md
-            - name: "Conteneurs\_: Problèmes d’interface utilisateur"
+            - name: "Containers\_: Problèmes d’interface utilisateur"
               href: containers-user-interface-issues.md
             - name: "Containers\_: Fonctionnalités avancées"
               href: containers-advanced-features.md
@@ -448,13 +448,13 @@
           items:
             - name: Serveurs
               href: servers.md
-            - name: "Serveurs\_: Implémentation d’un serveur"
+            - name: 'Serveurs : Implémentation d’un serveur'
               href: servers-implementing-a-server.md
-            - name: "Serveurs\_: Implémentation de documents de serveur"
+            - name: 'Serveurs : Implémentation de documents de serveur'
               href: servers-implementing-server-documents.md
-            - name: "Serveurs\_: Implémentation de fenêtres d’image sur place"
+            - name: 'Serveurs : Implémentation de fenêtres d’image sur place'
               href: servers-implementing-in-place-frame-windows.md
-            - name: "Serveurs\_: Éléments du serveur"
+            - name: 'Serveurs : Éléments du serveur'
               href: servers-server-items.md
             - name: 'Serveurs : Problèmes d’interface utilisateur'
               href: servers-user-interface-issues.md
@@ -516,10 +516,10 @@
               items:
                 - name: Contrôles ActiveX MFC
                   href: mfc-activex-controls.md
-                - name: 'Contrôles ActiveX MFC : Optimization'
+                - name: 'Contrôles ActiveX MFC : Optimisation'
                   expanded: false
                   items:
-                    - name: 'Contrôles ActiveX MFC : Optimization'
+                    - name: 'Contrôles ActiveX MFC : Optimisation'
                       href: mfc-activex-controls-optimization.md
                     - name: Optimisation de la persistance et de l'initialisation
                       href: optimizing-persistence-and-initialization.md
@@ -1370,7 +1370,7 @@
           items:
             - name: Windows Sockets dans MFC
               href: windows-sockets-in-mfc.md
-            - name: 'Windows Sockets : Arrière-plan'
+            - name: 'Windows Sockets : Présentation'
               href: windows-sockets-background.md
             - name: 'Windows Sockets : Sockets de flux'
               href: windows-sockets-stream-sockets.md
