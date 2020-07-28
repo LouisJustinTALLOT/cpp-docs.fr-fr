@@ -11,16 +11,16 @@ helpviewer_keywords:
 - Microsoft::WRL::Wrappers::HandleTraits::CriticalSectionTraits::GetInvalidValue method
 - Microsoft::WRL::Wrappers::HandleTraits::CriticalSectionTraits::Unlock method
 ms.assetid: c515a1b5-4eb0-40bc-9035-c4d9352c9de7
-ms.openlocfilehash: 05c93bf6a2765bd11489075067c627ab3c3ab691
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 3573cad21734a97629cbc12b76d73b99024cbc2f
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81372580"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87220507"
 ---
 # <a name="criticalsectiontraits-structure"></a>CriticalSectionTraits (structure)
 
-Il est `CriticalSection` spécialisé dans un objet à prendre en charge une section critique invalide ou une fonction de publication d’une section critique.
+Spécialise un `CriticalSection` objet pour prendre en charge une section critique non valide ou une fonction pour libérer une section critique.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -34,14 +34,14 @@ struct CriticalSectionTraits;
 
 Nom   | Description
 ------ | -----------------------------------------------------------------------------------------------------------------
-`Type` | Un `typedef` qui définit un pointeur à une section critique. `Type` est défini comme `typedef CRITICAL_SECTION* Type;`.
+`Type` | **`typedef`** Qui définit un pointeur vers une section critique. `Type` est défini comme `typedef CRITICAL_SECTION* Type;`.
 
 ### <a name="public-methods"></a>M&#233;thodes publiques
 
 Nom                                                       | Description
 ---------------------------------------------------------- | -----------------
-[CriticalSectionTraits::GetInvalidValue](#getinvalidvalue) | Se spécialise `CriticalSection` dans un modèle de sorte que le modèle est toujours invalide.
-[CriticalSectionTraits::Unlock](#unlock)                   | Il est `CriticalSection` spécialisé dans un modèle qui prend en charge la libération de la propriété de l’objet de section critique spécifié.
+[CriticalSectionTraits :: Getinvalidvalue,](#getinvalidvalue) | Spécialise un `CriticalSection` modèle afin que le modèle soit toujours non valide.
+[CriticalSectionTraits :: Unlock](#unlock)                   | Spécialise un `CriticalSection` modèle afin qu’il prenne en charge la libération de la propriété de l’objet de section critique spécifié.
 
 ## <a name="inheritance-hierarchy"></a>Hiérarchie d'héritage
 
@@ -49,13 +49,13 @@ Nom                                                       | Description
 
 ## <a name="requirements"></a>Spécifications
 
-**En-tête:** corewrappers.h
+**En-tête :** corewrappers. h
 
-**Espace nom:** Microsoft::WRL::Wrappers::HandleTraits
+**Espace de noms :** Microsoft :: WRL :: wrappers :: HandleTraits
 
-## <a name="criticalsectiontraitsgetinvalidvalue"></a><a name="getinvalidvalue"></a>CriticalSectionTraits::GetInvalidValue
+## <a name="criticalsectiontraitsgetinvalidvalue"></a><a name="getinvalidvalue"></a>CriticalSectionTraits :: Getinvalidvalue,
 
-Se spécialise `CriticalSection` dans un modèle de sorte que le modèle est toujours invalide.
+Spécialise un `CriticalSection` modèle afin que le modèle soit toujours non valide.
 
 ```cpp
 inline static Type GetInvalidValue();
@@ -63,15 +63,15 @@ inline static Type GetInvalidValue();
 
 ### <a name="return-value"></a>Valeur de retour
 
-Retourne toujours un pointeur à une section critique invalide.
+Retourne toujours un pointeur vers une section critique non valide.
 
 ### <a name="remarks"></a>Notes
 
-Le `Type` modificateur `typedef CRITICAL_SECTION* Type;`est défini comme .
+Le `Type` modificateur est défini comme `typedef CRITICAL_SECTION* Type;` .
 
-## <a name="criticalsectiontraitsunlock"></a><a name="unlock"></a>CriticalSectionTraits::Unlock
+## <a name="criticalsectiontraitsunlock"></a><a name="unlock"></a>CriticalSectionTraits :: Unlock
 
-Il est `CriticalSection` spécialisé dans un modèle qui prend en charge la libération de la propriété de l’objet de section critique spécifié.
+Spécialise un `CriticalSection` modèle afin qu’il prenne en charge la libération de la propriété de l’objet de section critique spécifié.
 
 ```cpp
 inline static void Unlock(
@@ -81,11 +81,11 @@ inline static void Unlock(
 
 ### <a name="parameters"></a>Paramètres
 
-*Cs*<br/>
-Un pointeur vers un objet de section critique.
+*c*<br/>
+Pointeur vers un objet de section critique.
 
 ### <a name="remarks"></a>Notes
 
-Le `Type` modificateur `typedef CRITICAL_SECTION* Type;`est défini comme .
+Le `Type` modificateur est défini comme `typedef CRITICAL_SECTION* Type;` .
 
-Pour plus d’informations, consultez **la fonction LeaveCriticalSection** dans la section **Fonctions** de synchronisation de la documentation API Windows.
+Pour plus d’informations, consultez **fonction LeaveCriticalSection** dans la section **fonctions de synchronisation** de la documentation de l’API Windows.

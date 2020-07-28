@@ -1,26 +1,26 @@
 ---
-title: C2131 d’erreur du compilateur
+title: Erreur du compilateur C2131
 ms.date: 02/28/2019
 f1_keywords:
 - C2131
 helpviewer_keywords:
 - C2131
-ms.openlocfilehash: 19bdf73efa82e624382446c94642ceddac00bf2e
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 9e5dc328375f720ad39ce57a3da500e0bedcb468
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62397586"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87220416"
 ---
-# <a name="compiler-error-c2131"></a>C2131 d’erreur du compilateur
+# <a name="compiler-error-c2131"></a>Erreur du compilateur C2131
 
-> expression ne correspond pas à une constante
+> l’expression n’a pas été évaluée en constante
 
-Une expression est déclarée en tant que **const** ou **constexpr** n’a pas été évaluée en constante au moment de la compilation. Le compilateur doit être en mesure de déterminer la valeur de l’expression au point qu’il est utilisé.
+Une expression déclarée comme **`const`** ou **`constexpr`** n’a pas été évaluée à une constante au moment de la compilation. Le compilateur doit pouvoir déterminer la valeur de l’expression au point où il est utilisé.
 
 ## <a name="example"></a>Exemple
 
-Cet exemple illustre une méthode pour provoquer l’erreur C2131 et comment la corriger.
+Cet exemple montre comment générer une erreur C2131 et comment la corriger.
 
 ```cpp
 // c2131.cpp

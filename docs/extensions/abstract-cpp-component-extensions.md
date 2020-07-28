@@ -8,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - abstract keyword [C++]
 ms.assetid: cbae3408-0378-4ac8-b70d-c016b381a6d5
-ms.openlocfilehash: d5060f1a0950b9b2ac2638b99ff157983944a3bb
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
-ms.translationtype: HT
+ms.openlocfilehash: 1e729589f78c56111717a87a27f9c7370dca7b90
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "65516164"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87214293"
 ---
 # <a name="abstract--ccli-and-ccx"></a>résumé (C++/CLI et C++/CX)
 
@@ -29,11 +29,11 @@ Le mot clé **abstract** peut déclarer :
 
 *class-declaration* *class-identifier* **abstract {}**
 
-**virtual** *return-type* *member-function-identifier* **() abstract ;**
+**`virtual`***type de retour* *membre-Function-identifier* **() abstract ;**
 
-### <a name="remarks"></a>Remarques
+### <a name="remarks"></a>Notes
 
-Le premier exemple de syntaxe déclare une classe comme étant abstraite. Le composant de *déclaration de classe* peut être une déclaration C++ native (**class** or **struct**) ou une déclaration d’extension C++ (**ref class** or **ref struct**) si l’option du compilateur `/ZW` ou `/clr` est spécifiée.
+Le premier exemple de syntaxe déclare une classe comme étant abstraite. Le composant *de déclaration de classe* peut être une déclaration c++ native (** `class` * * * * ou **`struct`** ) ou une déclaration d’extension c++ (** ref class * * ou **ref struct**) si l' `/ZW` `/clr` option du compilateur ou est spécifiée.
 
 Le deuxième exemple de syntaxe déclare une fonction membre virtuelle comme étant abstraite. La déclaration d'une fonction comme étant abstraite revient à déclarer qu'il s'agit d'une fonction virtuelle pure. La déclaration d'une fonction membre comme étant abstraite entraîne également la déclaration de la classe englobante comme étant abstraite.
 
@@ -41,7 +41,7 @@ Le mot clé **abstract** est pris en charge dans le code natif et spécifique à
 
 Vous pouvez détecter, au moment de la compilation, si un type est abstrait avec le trait de type `__is_abstract(type)`. Pour plus d’informations, consultez [Prise en charge du compilateur pour les caractéristiques de type](compiler-support-for-type-traits-cpp-component-extensions.md).
 
-Le mot clé **abstract** est un spécificateur de substitution contextuel. Pour plus d’informations sur les mots clés contextuels, consultez [Mots clés contextuels](context-sensitive-keywords-cpp-component-extensions.md). Pour plus d’informations sur les spécificateurs de substitution, consultez [Procédure : déclarer des spécificateurs de substitution dans les compilations natives](../dotnet/how-to-declare-override-specifiers-in-native-compilations-cpp-cli.md).
+Le mot clé **abstract** est un spécificateur de substitution contextuel. Pour plus d’informations sur les mots clés contextuels, consultez [Mots clés contextuels](context-sensitive-keywords-cpp-component-extensions.md). Pour plus d’informations sur les spécificateurs de substitution, consultez [Comment : déclarer des spécificateurs de substitution dans les compilations natives](../dotnet/how-to-declare-override-specifiers-in-native-compilations-cpp-cli.md).
 
 ## <a name="windows-runtime"></a>Windows Runtime
 
@@ -102,4 +102,4 @@ public:
 
 ## <a name="see-also"></a>Voir aussi
 
-[Extensions de composants pour .NET et UWP](component-extensions-for-runtime-platforms.md)
+[Extensions de composant pour .NET et UWP](component-extensions-for-runtime-platforms.md)

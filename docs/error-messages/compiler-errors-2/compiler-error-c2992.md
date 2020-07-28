@@ -6,18 +6,18 @@ f1_keywords:
 helpviewer_keywords:
 - C2992
 ms.assetid: 01b16447-43fe-4e91-9a5a-af884a166a31
-ms.openlocfilehash: 48d4902d34a806eeb26ef376e3b7a7b6ce843dbc
-ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
+ms.openlocfilehash: a51e87980eba90eb4e543a3d07a44c1b170334e9
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/03/2019
-ms.locfileid: "74751493"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87214553"
 ---
 # <a name="compiler-error-c2992"></a>Erreur du compilateur C2992
 
 'class' : liste de paramètres de type non valide ou manquante
 
-La classe est précédée d’un mot clé `template` ou **générique** avec des paramètres manquants ou non valides.
+La classe est précédée d’un **`template`** mot clé ou d’un mot clé **générique** avec des paramètres manquants ou non valides.
 
 ## <a name="example"></a>Exemple
 

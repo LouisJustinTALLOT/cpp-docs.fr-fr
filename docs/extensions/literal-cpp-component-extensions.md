@@ -8,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - literal keyword [C++]
 ms.assetid: 6b1a1f36-2e1d-4a23-8eb6-172f4f3c477f
-ms.openlocfilehash: 8c40adaed32bae23ec43cd553c3f755ac2b54cfb
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 2470d5680f7538af2db7bda3611abad11b827970
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80172137"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87214254"
 ---
 # <a name="literal-ccli-and-ccx"></a>literal (C++/CLI et C++/CX)
 
@@ -51,7 +51,7 @@ Pour plus d’informations, consultez [Static](../cpp/storage-classes-cpp.md) et
 
 ## <a name="example"></a>Exemple
 
-Cet exemple montre qu’une variable **literal** implique une variable **static**.
+Cet exemple montre qu’une variable **littérale** implique **`static`** .
 
 ```cpp
 // mcppv2_literal.cpp
@@ -127,4 +127,4 @@ Option du compilateur : `/clr`
 
 ## <a name="see-also"></a>Voir aussi
 
-[Extensions de composants pour .NET et UWP](component-extensions-for-runtime-platforms.md)
+[Extensions de composant pour .NET et UWP](component-extensions-for-runtime-platforms.md)

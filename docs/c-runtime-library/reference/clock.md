@@ -28,12 +28,12 @@ helpviewer_keywords:
 - processor time used
 - calculating processor time used
 ms.assetid: 3e1853dd-498f-49ba-b06a-f2315f20904e
-ms.openlocfilehash: 660c97882151127cc6c1caa64bb27f5728f169fb
-ms.sourcegitcommit: 8fd49f8ac20457710ceb5403ca46fc73cb3f95f8
+ms.openlocfilehash: 03d1a9ece92dbedfdceb89488e5d0440dc64f7ae
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/01/2020
-ms.locfileid: "85737475"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87220728"
 ---
 # <a name="clock"></a>horloge
 
@@ -49,11 +49,11 @@ clock_t clock( void );
 
 Temps écoulé depuis l’initialisation du CRT au début du processus, mesuré en unités de **CLOCKS_PER_SEC** par seconde. Si le temps écoulé n’est pas disponible ou a dépassé le délai positif maximal pouvant être enregistré en tant que type de **clock_t** , la fonction retourne la valeur `(clock_t)(-1)` .
 
-## <a name="remarks"></a>Remarques
+## <a name="remarks"></a>Notes
 
 La fonction **Clock** indique la quantité de temps horloge écoulée depuis l’initialisation du CRT pendant le démarrage du processus. Notez que cette fonction n’est pas strictement conforme à la norme ISO C, selon laquelle le temps processeur net est spécifié par la valeur de retour. Pour obtenir les temps processeur, utilisez la fonction Win32 [GetProcessTimes](/windows/win32/api/processthreadsapi/nf-processthreadsapi-getprocesstimes). Pour déterminer le temps écoulé en secondes, divisez la valeur retournée par la fonction **Clock** par la macro **CLOCKS_PER_SEC**.
 
-En raison de suffisamment de temps, la valeur retournée par **Clock** peut dépasser la valeur positive maximale de **clock_t**. Lorsque le processus s’exécute plus longtemps, la valeur retournée par **Clock** est toujours `(clock_t)(-1)` , comme spécifié par la norme ISO C99 (7.23.2.1) et ISO C11 standard (7.27.2.1). Microsoft implémente **clock_t** comme **long**, un entier signé 32 bits et la macro **CLOCKS_PER_SEC** est définie comme 1000. Cela donne une valeur de retour de fonction d' **horloge** maximale de 2147483,647 secondes, soit environ 24,8 jours. Ne vous fiez pas à la valeur retournée par **Clock** dans les processus qui ont été exécutés pendant plus longtemps que ce laps de temps. Vous pouvez utiliser la fonction [temps](time-time32-time64.md) 64 bits ou la fonction Windows [QueryPerformanceCounter](/windows/win32/api/profileapi/nf-profileapi-queryperformancecounter) pour enregistrer les durées de traitement écoulées de plusieurs années.
+En raison de suffisamment de temps, la valeur retournée par **Clock** peut dépasser la valeur positive maximale de **clock_t**. Lorsque le processus s’exécute plus longtemps, la valeur retournée par **Clock** est toujours `(clock_t)(-1)` , comme spécifié par la norme ISO C99 (7.23.2.1) et ISO C11 standard (7.27.2.1). Microsoft implémente **clock_t** en tant que **`long`** , un entier signé 32 bits et la macro **CLOCKS_PER_SEC** est définie comme 1000. Cela donne une valeur de retour de fonction d' **horloge** maximale de 2147483,647 secondes, soit environ 24,8 jours. Ne vous fiez pas à la valeur retournée par **Clock** dans les processus qui ont été exécutés pendant plus longtemps que ce laps de temps. Vous pouvez utiliser la fonction [temps](time-time32-time64.md) 64 bits ou la fonction Windows [QueryPerformanceCounter](/windows/win32/api/profileapi/nf-profileapi-queryperformancecounter) pour enregistrer les durées de traitement écoulées de plusieurs années.
 
 ## <a name="requirements"></a>Spécifications
 

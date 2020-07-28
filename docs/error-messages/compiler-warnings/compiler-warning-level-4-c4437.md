@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C4437
 ms.assetid: dc07e350-20eb-474c-a7ad-f841ae7ec339
-ms.openlocfilehash: 84c6e8d09495d871b8c490a92558aaba14b0574c
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 949cd208d8c4f86afb1ef0a36db8483de4aac232
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80185332"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87214384"
 ---
 # <a name="compiler-warning-level-4-c4437"></a>Avertissement du compilateur (niveau 4) C4437
 
@@ -19,21 +19,21 @@ l’dynamic_cast de la base virtuelle « classe1 » à « Class2 » peut éc
 
 Cet avertissement est désactivé par défaut. Consultez [Avertissements du compilateur désactivés par défaut](../../preprocessor/compiler-warnings-that-are-off-by-default.md) pour plus d'informations.
 
-Le compilateur a rencontré une opération de `dynamic_cast` avec les caractéristiques suivantes.
+Le compilateur a rencontré une **`dynamic_cast`** opération avec les caractéristiques suivantes.
 
 - Le cast provient d’un pointeur de classe de base vers un pointeur de classe dérivée.
 
 - La classe dérivée hérite pratiquement de la classe de base.
 
-- La classe dérivée n’a pas de champ `vtordisp` pour la base virtuelle.
+- La classe dérivée n’a pas de `vtordisp` champ pour la base virtuelle.
 
 - Le cast est introuvable dans un constructeur ou un destructeur de la classe dérivée, ou dans une classe qui hérite encore de la classe dérivée (sinon, l’avertissement du compilateur C4436 sera émis).
 
-L’avertissement indique que le `dynamic_cast` peut ne pas fonctionner correctement s’il fonctionne sur un objet partiellement construit.  Cette situation se produit lorsque la fonction englobante est appelée à partir d’un constructeur ou d’un destructeur d’une classe qui hérite de la classe dérivée nommée dans l’avertissement.  Si la classe dérivée nommée dans l’avertissement n’est jamais dérivée davantage ou si la fonction englobante n’est pas appelée pendant la construction ou la destruction de l’objet, l’avertissement peut être ignoré.
+L’avertissement indique que **`dynamic_cast`** peut ne pas fonctionner correctement s’il fonctionne sur un objet partiellement construit.  Cette situation se produit lorsque la fonction englobante est appelée à partir d’un constructeur ou d’un destructeur d’une classe qui hérite de la classe dérivée nommée dans l’avertissement.  Si la classe dérivée nommée dans l’avertissement n’est jamais dérivée davantage ou si la fonction englobante n’est pas appelée pendant la construction ou la destruction de l’objet, l’avertissement peut être ignoré.
 
 ## <a name="example"></a>Exemple
 
-L’exemple suivant génère l’erreur C4437 et montre le problème de génération de code qui se produit à partir du champ `vtordisp` manquant.
+L’exemple suivant génère l’erreur C4437 et montre le problème de génération de code qui se produit à partir du `vtordisp` champ manquant.
 
 ```cpp
 // C4437.cpp
@@ -83,6 +83,6 @@ int main()
 
 ## <a name="see-also"></a>Voir aussi
 
-[dynamic_cast, opérateur](../../cpp/dynamic-cast-operator.md)<br/>
+[Opérateur dynamic_cast](../../cpp/dynamic-cast-operator.md)<br/>
 [vtordisp](../../preprocessor/vtordisp.md)<br/>
-[Avertissement du compilateur (niveau 1) C4436](../../error-messages/compiler-warnings/compiler-warning-level-1-c4436.md)
+[Avertissement du compilateur (niveau 1) C4436](../../error-messages/compiler-warnings/compiler-warning-level-1-c4436.md)

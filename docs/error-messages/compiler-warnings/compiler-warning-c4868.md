@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C4868
 ms.assetid: fc6aa7e5-34dd-4ec2-88bd-16e430361dc7
-ms.openlocfilehash: 00c3e01f46bc98baff1b266bb8ee445b0f868522
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: fe113a948cdf2a6e4b4fcf6b0055fe92d583f004
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80165013"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87220130"
 ---
 # <a name="compiler-warning-level-4-c4868"></a>Avertissement du compilateur (niveau 4) C4868
 
@@ -25,7 +25,7 @@ Cet avertissement est désactivé par défaut. Utilisez `/Wall` pour activer cet
 
 Pour résoudre cet avertissement, commencez par déterminer si l’évaluation de gauche à droite des éléments de la liste d’initialiseurs est nécessaire, par exemple lorsque l’évaluation des éléments peut produire des effets secondaires dépendants de la commande. Dans de nombreux cas, l’ordre dans lequel les éléments sont évalués n’a pas d’effet observable.
 
-Si l’ordre d’évaluation doit être de gauche à droite, déterminez s’il est possible de passer les éléments par `const` référence à la place. Une modification telle que celle-ci élimine l’avertissement dans l’exemple de code suivant.
+Si l’ordre d’évaluation doit être de gauche à droite, déterminez s’il est possible de passer les éléments par **`const`** référence à la place. Une modification telle que celle-ci élimine l’avertissement dans l’exemple de code suivant.
 
 ## <a name="example"></a>Exemple
 

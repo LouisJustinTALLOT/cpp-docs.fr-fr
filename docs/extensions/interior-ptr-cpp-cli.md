@@ -9,12 +9,12 @@ f1_keywords:
 helpviewer_keywords:
 - interior_ptr keyword [C++]
 ms.assetid: 25160f74-569e-492d-9e3c-67ece7486baa
-ms.openlocfilehash: 264ac0a56996b0dcbeeb64246623eca1a3fc73ff
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: affec6dcd88290b24a92cd9035a131baee38bcf1
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80172150"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87214267"
 ---
 # <a name="interior_ptr-ccli"></a>interior_ptr (C++/CLI)
 
@@ -45,7 +45,7 @@ cli::interior_ptr<cv_qualifier type> var = &initializer;
 ### <a name="parameters"></a>Paramètres
 
 *cv_qualifier*<br/>
-Qualificateurs **const** ou **volatile**.
+**`const`****`volatile`** qualificateurs ou.
 
 *type*<br/>
 Type d’*initialiseur*.
@@ -66,21 +66,21 @@ Un pointeur intérieur peut uniquement être déclaré sur la pile.  Un pointeur
 
 Dans la mesure où il existe des pointeurs intérieurs uniquement sur la pile, prendre l’adresse d’un pointeur intérieur génère un pointeur non managé.
 
-**interior_ptr** a une conversion implicite en **bool**, ce qui permet son utilisation dans les instructions conditionnelles.
+**interior_ptr** a une conversion implicite en **`bool`** , ce qui permet son utilisation dans des instructions conditionnelles.
 
 Pour plus d’informations sur la façon de déclarer un pointeur intérieur qui pointe vers un objet qui ne peut pas être déplacé sur le tas récupéré par le récupérateur de mémoire, consultez [pin_ptr](pin-ptr-cpp-cli.md).
 
-**interior_ptr** est dans l’espace de noms CLI.  Consultez [Plateforme, valeurs par défaut et espaces de noms CLI](platform-default-and-cli-namespaces-cpp-component-extensions.md) pour plus d’informations.
+**interior_ptr** est dans l’espace de noms CLI.  Consultez [Plateforme, valeur par défaut et espaces de noms cli](platform-default-and-cli-namespaces-cpp-component-extensions.md) pour plus d’informations.
 
 Pour plus d’informations sur les pointeurs intérieurs, consultez
 
-- [Guide pratique pour déclarer et utiliser des pointeurs intérieurs et des tableaux managés (C++-CLI)](how-to-declare-and-use-interior-pointers-and-managed-arrays-cpp-cli.md)
+- [Comment : déclarer et utiliser des pointeurs intérieurs et des tableaux managés (C++/CLI)](how-to-declare-and-use-interior-pointers-and-managed-arrays-cpp-cli.md)
 
-- [Guide pratique pour déclarer des types de valeur avec le mot clé interior_ptr (C++-CLI)](how-to-declare-value-types-with-the-interior-ptr-keyword-cpp-cli.md)
+- [Comment : déclarer des types de valeur avec le mot clé interior_ptr (C++/CLI)](how-to-declare-value-types-with-the-interior-ptr-keyword-cpp-cli.md)
 
-- [Guide pratique pour surcharger des fonctions avec des pointeurs intérieurs et des pointeurs natifs (C++-CLI)](how-to-overload-functions-with-interior-pointers-and-native-pointers-cpp-cli.md)
+- [Comment : surcharger des fonctions avec des pointeurs intérieurs et des pointeurs natifs (C++/CLI)](how-to-overload-functions-with-interior-pointers-and-native-pointers-cpp-cli.md)
 
-- [Guide pratique pour déclarer des pointeurs intérieurs avec le mot clé const (C++-CLI)](how-to-declare-interior-pointers-with-the-const-keyword-cpp-cli.md)
+- [Comment : déclarer des pointeurs intérieurs avec le mot clé const (C++/CLI)](how-to-declare-interior-pointers-with-the-const-keyword-cpp-cli.md)
 
 ### <a name="requirements"></a>Spécifications
 
@@ -124,4 +124,4 @@ int main() {
 
 ## <a name="see-also"></a>Voir aussi
 
-[Extensions de composants pour .NET et UWP](component-extensions-for-runtime-platforms.md)
+[Extensions de composant pour .NET et UWP](component-extensions-for-runtime-platforms.md)

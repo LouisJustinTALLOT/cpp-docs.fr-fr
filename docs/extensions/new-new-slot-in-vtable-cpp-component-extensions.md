@@ -5,16 +5,16 @@ ms.topic: reference
 helpviewer_keywords:
 - new keyword [C++]
 ms.assetid: 1a9a5704-f02f-46ae-ad65-f0f2b6dbabc3
-ms.openlocfilehash: 684c6149457f7b0306f3d444a3652ecda1636839
-ms.sourcegitcommit: 8bb2bea1384b290b7570b01608a86c7488ae7a02
+ms.openlocfilehash: 29e43fe4c462fa6ac6523f8627abf923f02247a8
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/26/2019
-ms.locfileid: "70311804"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87214241"
 ---
 # <a name="new-new-slot-in-vtable--ccli-and-ccx"></a>nouveau (nouvel emplacement dans vtable) (C++/CLI et C++/CX)
 
-Le mot clé **new** indique qu’un membre virtuel obtient un nouvel emplacement dans la vtable.
+Le **`new`** mot clé indique qu’un membre virtuel obtiendra un nouvel emplacement dans la vtable.
 
 ## <a name="all-runtimes"></a>Tous les runtimes
 
@@ -28,21 +28,21 @@ Non pris en charge dans Windows Runtime.
 
 ### <a name="remarks"></a>Notes
 
-Dans une compilation `/clr`, **new** indique qu’un membre virtuel va obtenir un nouvel emplacement dans la vtable ; que la fonction ne remplace pas une méthode de classe de base.
+Dans une `/clr` compilation, **`new`** indique qu’un membre virtuel obtiendra un nouvel emplacement dans la vtable ; que la fonction ne substitue pas à une méthode de classe de base.
 
-**new** entraîne l’ajout du modificateur newslot au langage intermédiaire de la fonction.  Pour plus d’informations sur newslot, consultez :
+**`new`** fait en sorte que le modificateur newslot soit ajouté au langage intermédiaire pour la fonction.  Pour plus d’informations sur newslot, consultez :
 
 - <xref:System.Reflection.MethodInfo.GetBaseDefinition?displayProperty=nameWithType>
 
 - <xref:System.Reflection.MethodAttributes?displayProperty=nameWithType>
 
-### <a name="requirements"></a>Configuration requise
+### <a name="requirements"></a>Spécifications
 
 Option du compilateur : `/clr`
 
 ### <a name="examples"></a>Exemples
 
-L’exemple suivant illustre l’effet de **new**.
+L’exemple suivant montre l’effet de **`new`** .
 
 ```cpp
 // newslot.cpp
@@ -105,5 +105,5 @@ E::f() called
 
 ## <a name="see-also"></a>Voir aussi
 
-[Extensions de composants pour .NET et UWP](component-extensions-for-runtime-platforms.md)<br/>
+[Extensions de composant pour .NET et UWP](component-extensions-for-runtime-platforms.md)<br/>
 [Spécificateurs de substitution](override-specifiers-cpp-component-extensions.md)

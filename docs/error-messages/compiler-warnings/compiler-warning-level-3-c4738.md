@@ -6,28 +6,28 @@ f1_keywords:
 helpviewer_keywords:
 - C4738
 ms.assetid: 9094895f-7eec-46c2-83d3-249b761d585e
-ms.openlocfilehash: c1989518c3965f8faa54a05b2925d0e37455625e
-ms.sourcegitcommit: 573b36b52b0de7be5cae309d45b68ac7ecf9a6d8
+ms.openlocfilehash: 639fb14fc409a9954315184bab7ae1127460ea0d
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/10/2019
-ms.locfileid: "74991708"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87214410"
 ---
 # <a name="compiler-warning-level-3-c4738"></a>Avertissement du compilateur (niveau 1) C4738
 
 stockage de résultat flottant 32 bits en mémoire, perte possible de performances
 
-C4738 warns that the result of an assignment, cast, passed argument, or other operation may need to be rounded or that the operation ran out of registers and needed to use memory (spilling). This can result in performance loss.
+C4738 vous avertit que le résultat d’une assignation, d’un cast, d’un argument passé ou d’une autre opération doit peut-être être arrondi ou que l’opération ne s’est pas déroulée et qu’elle est nécessaire à l’utilisation de la mémoire (débordement). Cela peut entraîner une perte de performances.
 
-To resolve this warning and avoid rounding, compile with [/fp:fast](../../build/reference/fp-specify-floating-point-behavior.md) or use `double` instead of `float`.
+Pour résoudre cet avertissement et éviter l’arrondi, compilez avec [/FP : Fast](../../build/reference/fp-specify-floating-point-behavior.md) ou utilisez à la **`double`** place de **`float`** .
 
-To resolve this warning and avoid running out of registers, change the order of computation and modify your use of inlining
+Pour résoudre cet avertissement et éviter de manquer de registres, modifiez l’ordre de calcul et modifiez votre utilisation de l’incorporation
 
 Cet avertissement est désactivé par défaut. Pour plus d'informations, consultez [Compiler Warnings That Are Off by Default](../../preprocessor/compiler-warnings-that-are-off-by-default.md).
 
 ## <a name="example"></a>Exemple
 
-The following sample generates C4738:
+L’exemple suivant génère l’C4738 :
 
 ```cpp
 // C4738.cpp

@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C4101
 ms.assetid: d98563cd-9dce-4aae-8f12-bd552a4ea677
-ms.openlocfilehash: 0ac34fbaf4cbb54583394dff5b8645fe56b8b9cd
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: f9d3875fdc17def1e7d3bcb72149c5faf90f656a
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80199043"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87220052"
 ---
 # <a name="compiler-warning-level-3-c4101"></a>Avertissement du compilateur (niveau 3) C4101
 
@@ -27,7 +27,7 @@ int i;   // C4101
 }
 ```
 
-Toutefois, cet avertissement se produit également lors de l’appel d’une fonction membre **statique** via une instance de la classe :
+Toutefois, cet avertissement se produit également lors de l’appel d’une **`static`** fonction membre par le biais d’une instance de la classe :
 
 ```cpp
 // C4101b.cpp
@@ -46,10 +46,10 @@ int main() {
 }
 ```
 
-Dans ce cas, le compilateur utilise des informations sur `si` pour accéder à la fonction **statique** , mais l’instance de la classe n’est pas nécessaire pour appeler la fonction **statique** . par conséquent, l’avertissement. Pour résoudre cet avertissement, vous pouvez :
+Dans ce cas, le compilateur utilise des informations sur `si` pour accéder à la **`static`** fonction, mais l’instance de la classe n’est pas nécessaire pour appeler la **`static`** fonction ; par conséquent, l’avertissement. Pour résoudre cet avertissement, vous pouvez :
 
-- Ajoutez un constructeur, dans lequel le compilateur utiliserait l’instance de `si` dans l’appel à `func`.
+- Ajoutez un constructeur, dans lequel le compilateur utiliserait l’instance de `si` dans l’appel à `func` .
 
-- Supprimez le mot clé **static** de la définition de `func`.
+- Supprimez le **`static`** mot clé de la définition de `func` .
 
-- Appelez la fonction **statique** explicitement : `int y = S::func();`.
+- Appelez la **`static`** fonction explicitement : `int y = S::func();` .

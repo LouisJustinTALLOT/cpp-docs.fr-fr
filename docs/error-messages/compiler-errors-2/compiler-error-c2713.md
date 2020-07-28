@@ -6,15 +6,15 @@ f1_keywords:
 helpviewer_keywords:
 - C2713
 ms.assetid: bae9bee3-b4b8-4be5-b6a5-02df587a7278
-ms.openlocfilehash: 37bc147a08e1c369c3a6d19dbc2758abadd1dab4
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: e2446eb26ba01bbd2112a4c9a883b9c15a94d5cf
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80202291"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87214618"
 ---
 # <a name="compiler-error-c2713"></a>Erreur du compilateur C2713
 
 une seule forme de gestion des exceptions permise par fonction
 
-Vous ne pouvez pas utiliser la gestion structurée des exceptions ( C++`__try`/`__except`) et la gestion des exceptions (`try`/`catch`) dans la même fonction.
+Vous ne pouvez pas utiliser la gestion structurée des exceptions ( `__try` / **`__except`** ) et la gestion des exceptions C++ ( **`try`** / **`catch`** ) dans la même fonction.

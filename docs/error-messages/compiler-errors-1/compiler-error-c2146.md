@@ -6,18 +6,18 @@ f1_keywords:
 helpviewer_keywords:
 - C2146
 ms.assetid: 6bfb7de6-6723-4486-9350-c66ef88d7a64
-ms.openlocfilehash: 8dc7b521243c4eafdc22fab851812b6c12b004cf
-ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
+ms.openlocfilehash: c1a790902af92d72eb73be7fc2321762ab01fd8c
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/03/2019
-ms.locfileid: "74755913"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87214761"
 ---
 # <a name="compiler-error-c2146"></a>Erreur du compilateur C2146
 
 erreur de syntaxe : absence de’Token’avant l’identificateur’identifier'
 
-Le compilateur attendait `token` et a trouvé `identifier` à la place.  Causes possibles :
+Le compilateur attendait `token` et a été trouvé à la `identifier` place.  Causes possibles :
 
 1. Erreur d’orthographe ou de mise en majuscules.
 
@@ -46,7 +46,7 @@ int main() {
 
 ## <a name="example"></a>Exemple
 
-Cette erreur peut également être générée en raison du travail de conformité du compilateur pour Visual Studio .NET 2003 : mot clé `typename` manquant.
+Cette erreur peut également être générée en raison du travail de conformité du compilateur pour Visual Studio .NET 2003 : **`typename`** mot clé manquant.
 
 L’exemple suivant compile dans Visual Studio .NET 2002, mais échoue dans Visual Studio .NET 2003 :
 

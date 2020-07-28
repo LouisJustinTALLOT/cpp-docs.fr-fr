@@ -6,15 +6,15 @@ f1_keywords:
 helpviewer_keywords:
 - C4132
 ms.assetid: b60e5b4a-53ac-4503-8456-235477f48afd
-ms.openlocfilehash: 4c7e0f8b96daf6eea4f773f7245871ce3907591b
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: d4359629a6ca934dfe228c3a94871e7889a32076
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80161488"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87214397"
 ---
 # <a name="compiler-warning-level-4-c4132"></a>Avertissement du compilateur (niveau 4) C4132
 
 'objet' : un objet const doit être initialisé
 
-La constante n’est pas initialisée. Vous ne pouvez pas modifier la valeur d’un symbole avec l’attribut **const** après sa définition. Vous devez lui affecter une valeur d’initialisation.
+La constante n’est pas initialisée. La valeur d’un symbole avec l' **`const`** attribut ne peut pas être modifiée après sa définition, elle doit recevoir une valeur d’initialisation.

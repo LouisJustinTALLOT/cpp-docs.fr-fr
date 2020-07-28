@@ -21,12 +21,12 @@ helpviewer_keywords:
 - islessequal function
 - islessgreater function
 - isunordered function
-ms.openlocfilehash: 748360cae1dd0ee43645dee369c60c835246ed03
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 907b26f4e1824d7ef5c7c1a36b4e4d8ccb74c978
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62333701"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87220715"
 ---
 # <a name="isgreater-isgreaterequal-isless-islessequal-islessgreater-isunordered"></a>isgreater, isgreaterequal, isless, islessequal, islessgreater, isunordered
 
@@ -107,29 +107,29 @@ inline bool isunordered(
 ### <a name="parameters"></a>Paramètres
 
 *x*, *y*<br/>
-Les valeurs à virgule flottante à comparer.
+Valeurs à virgule flottante à comparer.
 
 ## <a name="return-value"></a>Valeur de retour
 
-Dans toutes les comparaisons, les valeurs infinies du même signe sont considérés comme égaux. Infini négatif est inférieure à toute valeur finie ou l’infini positif. Infini positif est supérieure à toute valeur finie ou l’infini négatif. Zéros non significatifs sont égales, quel que soit la connexion. Valeurs NaN ne sont pas inférieure, égale ou supérieure à n’importe quelle valeur, y compris une autre valeur NaN.
+Dans toutes les comparaisons, les infinis du même signe sont considérées comme égales. L’infini négatif est inférieur à toute valeur finie ou infini positif. L’infini positif est supérieur à toute valeur finie ou infini négatif. Les zéros sont égaux quel que soit le signe. Les valeurs NaN ne sont pas inférieures, égales ou supérieures à toute valeur, y compris une autre valeur NaN.
 
-Lorsque aucun de ces arguments est une valeur NaN, les macros de classement **isgreater**, **isgreaterequal**, **isless**, et **islessequal** retourner un zéro valeur si la relation de tri spécifiée entre *x* et *y* contienne la valeur true. Ces macros retournent 0 si les deux arguments sont des valeurs NaN ou si la relation de tri a la valeur false. Les formulaires de fonction se comportent de la même façon, mais retourner **true** ou **false**.
+Quand aucun argument n’est un NaN, les macros de classement **isgreater**, **isgreaterequal**, **Ile**et **islessequal** retournent une valeur différente de zéro si la relation de classement spécifiée entre *x* et *y* contient la valeur true. Ces macros retournent 0 si l’un des arguments ou les deux sont des valeurs NaN ou si la relation de classement est false. Les formulaires de fonction se comportent de la même façon, mais retournent **`true`** ou **`false`** .
 
-Le **islessgreater** macro retourne une valeur différente de zéro si les deux *x* et *y* ne sont pas des valeurs NaN, et *x* est soit inférieure ou supérieure à *y*. Elle retourne 0 si les deux arguments sont des valeurs NaN, ou si les valeurs sont égales. Le formulaire de la fonction se comporte de la même façon, mais retourne **true** ou **false**.
+La macro **islessgreater** retourne une valeur différente de zéro si *x* et *y* ne sont pas des valeurs NaN et si *x* est inférieur à ou supérieur à *y*. Elle retourne 0 si l’un ou l’autre des arguments ou les deux sont des valeurs NaN ou si les valeurs sont égales. Le formulaire de fonction se comporte de la même façon, mais retourne **`true`** ou **`false`** .
 
-Le **isunordered** macro retourne une valeur différente de zéro si *x*, *y*, ou les deux sont des valeurs NaN. Sinon, elle retourne 0. Le formulaire de la fonction se comporte de la même façon, mais retourne **true** ou **false**.
+La macro **isunordered** retourne une valeur différente de zéro si *x*, *y*ou les deux sont des valeurs NaN. Sinon, retourne 0. Le formulaire de fonction se comporte de la même façon, mais retourne **`true`** ou **`false`** .
 
 ## <a name="remarks"></a>Notes
 
-Ces opérations de comparaison sont implémentées en tant que macros lors de la compilation en C et en tant que fonctions de modèle inline lors de la compilation en C++.
+Ces opérations de comparaison sont implémentées en tant que macros lorsqu’elles sont compilées en tant que C, et en tant que fonctions de modèle Inline lorsqu’elles sont compilées en C++.
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
 |Fonction|En-tête requis (C)|En-tête requis (C++)|
 |--------------|---------------------------|-------------------------------|
-| **isgreater**, **isgreaterequal**, **isless**,<br/>**islessequal**, **islessgreater**, **isunordered** | \<math.h> | \<math.h> ou \<cmath> |
+| **isgreater**, **isgreaterequal**, **île**,<br/>**islessequal**, **islessgreater**, **isunordered** | \<math.h> | \<math.h> ou \<cmath> |
 
-Pour plus d'informations sur la compatibilité, voir [Compatibilité](../../c-runtime-library/compatibility.md).
+Pour plus d’informations sur la compatibilité, consultez [Compatibility](../../c-runtime-library/compatibility.md).
 
 ## <a name="see-also"></a>Voir aussi
 

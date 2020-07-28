@@ -37,12 +37,12 @@ helpviewer_keywords:
 - acosh function
 - acoshl function
 ms.assetid: 6985c4d7-9e2a-44ce-9a9b-5a43015f15f7
-ms.openlocfilehash: d0d691e394b0a508ca439934abdcdef1e1dfc95d
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: a6883c23d06115c8775dd919123671feac380b99
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82913026"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87220754"
 ---
 # <a name="acosh-acoshf-acoshl"></a>acosh, acoshf, acoshl
 
@@ -72,18 +72,18 @@ Les fonctions **acosh** retournent le cosinus hyperbolique inverse (arc cosinus 
 
 |Entrée|Exception SEH|`_matherr`|
 |-----------|-------------------|--------------------------|
-|± QNAN, IND, INF|Aucun|Aucun|
-|*x* < 1|Aucun|Aucun|
+|± QNAN, IND, INF|aucun|aucun|
+|*x* < 1|aucun|aucun|
 
-## <a name="remarks"></a>Notes 
+## <a name="remarks"></a>Notes
 
-Quand vous utilisez C++, vous pouvez appeler des surcharges de **acosh** qui acceptent et retournent des valeurs **float** ou **long** **double** . Dans un programme C, **acosh** accepte et retourne toujours la valeur **double**.
+Quand vous utilisez C++, vous pouvez appeler des surcharges de **acosh** qui acceptent et retournent des **`float`** **`long double`** valeurs ou. Dans un programme C, **acosh** accepte et retourne toujours **`double`** .
 
 Par défaut, l’état global de cette fonction est limité à l’application. Pour modifier cette valeur, consultez [état global dans le CRT](../global-state.md).
 
 ## <a name="requirements"></a>Spécifications
 
-|Function|En-tête C|En-tête C++|
+|Fonction|En-tête C|En-tête C++|
 |--------------|--------------|------------------|
 |**acosh**, **acoshf**, **acoshl**|\<math.h>|\<cmath>|
 

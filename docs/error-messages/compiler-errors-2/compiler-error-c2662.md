@@ -6,24 +6,24 @@ f1_keywords:
 helpviewer_keywords:
 - C2662
 ms.assetid: e172c2a4-f29e-4034-8232-e7dc6f83689f
-ms.openlocfilehash: b2fa2643898fed510aa7cf0f483b538ebb33b033
-ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
+ms.openlocfilehash: 5e2dd6b01db5f7d3026f14c5032ab4623eb6fb58
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/03/2019
-ms.locfileid: "74760450"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87220286"
 ---
 # <a name="compiler-error-c2662"></a>Erreur du compilateur C2662
 
 'fonction' : impossible de convertir le pointeur’This’de’type1 'en’type2 '
 
-Le compilateur n’a pas pu convertir le pointeur `this` de `type1` en `type2`.
+Le compilateur n’a pas pu convertir le **`this`** pointeur de `type1` en `type2` .
 
-Cette erreur peut être causée par l’appel d’une fonction membre non`const` sur un objet `const`.  Solutions possibles :
+Cette erreur peut être causée par l’appel d’une **`const`** fonction non membre sur un **`const`** objet.  Solutions possibles :
 
-- Supprimez le `const` de la déclaration de l’objet.
+- Supprimez **`const`** de la déclaration de l’objet.
 
-- Ajoutez `const` à la fonction membre.
+- Ajoutez **`const`** à la fonction membre.
 
 L’exemple suivant génère l’C2662 :
 
@@ -41,7 +41,7 @@ int main() {
 }
 ```
 
-Lors de la compilation avec **/CLR**, vous ne pouvez pas appeler une fonction sur un `const` ou `volatile` type managé qualifié. Vous ne pouvez pas déclarer une fonction membre const d’une classe managée, donc vous ne pouvez pas appeler des méthodes sur des objets managés const.
+Lors de la compilation avec **/CLR**, vous ne pouvez pas appeler une fonction sur un **`const`** **`volatile`** type managé qualifié ou. Vous ne pouvez pas déclarer une fonction membre const d’une classe managée, donc vous ne pouvez pas appeler des méthodes sur des objets managés const.
 
 ```cpp
 // C2662_b.cpp

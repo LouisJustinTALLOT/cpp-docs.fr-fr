@@ -13,12 +13,12 @@ helpviewer_keywords:
 - CRestrictions class
 - Open method
 ms.assetid: 0aaa2364-641c-4318-b110-7446aada4b4f
-ms.openlocfilehash: 4a4c86987ceff0f04986d32011ba941e0d2319fe
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 9fb911b469497a007550c042ade97b5a463e78fe
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80211300"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87220442"
 ---
 # <a name="crestrictions-class"></a>CRestrictions, classe
 
@@ -82,7 +82,7 @@ dans Spécifie un objet de session existant utilisé pour se connecter à la sou
 dans Spécifie les restrictions sur l’ensemble de lignes de schéma.
 
 *bBind*<br/>
-dans Spécifie s’il faut lier automatiquement le mappage de colonnes. La valeur par défaut est **true**, ce qui entraîne la liaison automatique du mappage de colonnes. La définition de *bBind* sur **false** empêche la liaison automatique de la carte de colonnes afin que vous puissiez la lier manuellement. (La liaison manuelle présente un intérêt particulier pour les utilisateurs OLAP.)
+dans Spécifie s’il faut lier automatiquement le mappage de colonnes. La valeur par défaut est **`true`** , ce qui entraîne la liaison automatique du mappage de colonnes. La définition de *bBind* **`false`** empêche la liaison automatique de la carte de colonnes afin que vous puissiez la lier manuellement. (La liaison manuelle présente un intérêt particulier pour les utilisateurs OLAP.)
 
 ### <a name="return-value"></a>Valeur de retour
 
@@ -96,6 +96,6 @@ Pour plus d’informations sur les restrictions définies sur chaque ensemble de
 
 ## <a name="see-also"></a>Voir aussi
 
-[OLE DB (modèles du consommateur)](../../data/oledb/ole-db-consumer-templates-cpp.md)<br/>
-[Référence des modèles du consommateur OLE DB](../../data/oledb/ole-db-consumer-templates-reference.md)<br/>
-[Classes de jeu de lignes du schéma et classes Typedef](../../data/oledb/schema-rowset-classes-and-typedef-classes.md)
+[Modèles du consommateur OLE DB](../../data/oledb/ole-db-consumer-templates-cpp.md)<br/>
+[Informations de référence sur les modèles de consommateurs OLE DB](../../data/oledb/ole-db-consumer-templates-reference.md)<br/>
+[Classes d’ensemble de lignes de schéma et classes typedef](../../data/oledb/schema-rowset-classes-and-typedef-classes.md)

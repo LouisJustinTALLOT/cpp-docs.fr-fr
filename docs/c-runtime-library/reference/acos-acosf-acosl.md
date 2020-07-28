@@ -36,12 +36,12 @@ helpviewer_keywords:
 - trigonometric functions
 - arccosine function
 ms.assetid: 00b89c48-8faf-4824-aa95-fa4349a4975d
-ms.openlocfilehash: c6e6b1da823f050d20d47ecbad96d4e0b58fa452
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: b6188c585d2f3b7f2bce1a50569e6bae60ee4942
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82916885"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87220767"
 ---
 # <a name="acos-acosf-acosl"></a>acos, acosf, acosl
 
@@ -74,12 +74,12 @@ Par défaut, si *x* est inférieur à-1 ou supérieur à 1, **ACOS** retourne un
 |Entrée|Exception SEH|Exception\{b\> \<b\}Matherr|
 |-----------|-------------------|-----------------------|
 |± ∞|NON VALIDE|_DOMAIN|
-|± QNAN,IND|Aucun|_DOMAIN|
+|± QNAN,IND|aucun|_DOMAIN|
 |&#124;x&#124;>1|NON VALIDE|_DOMAIN|
 
-## <a name="remarks"></a>Notes 
+## <a name="remarks"></a>Notes
 
-C++ autorisant la surcharge, vous pouvez appeler des surcharges de **ACOS** qui acceptent et retournent des types **float** et **long** **double** . Dans un programme C, **ACOS** prend toujours et retourne un **double**.
+C++ autorisant la surcharge, vous pouvez appeler des surcharges de **ACOS** qui acceptent et retournent des **`float`** **`long double`** types et. Dans un programme C, **ACOS** prend toujours et retourne un **`double`** .
 
 Par défaut, l’état global de cette fonction est limité à l’application. Pour modifier cette valeur, consultez [état global dans le CRT](../global-state.md).
 
@@ -89,7 +89,7 @@ Par défaut, l’état global de cette fonction est limité à l’application. 
 |-------------|---------------------|----------------------|
 |**ACOS**, **acosf**, **acosl**|\<math.h>|\<errno.h>|
 
-## <a name="example"></a> Exemple
+## <a name="example"></a>Exemple
 
 Ce programme vous invite à entrer une valeur comprise entre -1 et 1. Les valeurs d’entrée en dehors de cette plage génèrent des messages d’erreur `_DOMAIN`. Si une valeur valide est entrée, le programme affiche l’arc sinus et l’arc cosinus de cette valeur.
 

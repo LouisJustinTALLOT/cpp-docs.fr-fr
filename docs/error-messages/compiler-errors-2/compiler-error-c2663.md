@@ -6,24 +6,24 @@ f1_keywords:
 helpviewer_keywords:
 - C2663
 ms.assetid: 1e93e368-fd52-42bf-9908-9b6df467c8c9
-ms.openlocfilehash: f07b63202d8f171dfb69f4bb294b392152b9290b
-ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
+ms.openlocfilehash: f9746ecb41e873fb1d929a939c78f1817dc0e2f9
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/03/2019
-ms.locfileid: "74756030"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87220273"
 ---
 # <a name="compiler-error-c2663"></a>Erreur du compilateur C2663
 
 'fonction' : les surcharges de nombre n’ont pas de conversion autorisée pour le pointeur’This'
 
-Le compilateur n’a pas pu convertir `this` en aucune des versions surchargées de la fonction membre.
+Le compilateur n’a pas pu effectuer la conversion **`this`** en une des versions surchargées de la fonction membre.
 
-Cette erreur peut être causée par l’appel d’une fonction membre non`const` sur un objet `const`.  Solutions possibles :
+Cette erreur peut être causée par l’appel d’une **`const`** fonction non membre sur un **`const`** objet.  Solutions possibles :
 
-1. Supprimez le `const` de la déclaration de l’objet.
+1. Supprimez **`const`** de la déclaration de l’objet.
 
-1. Ajoutez `const` à l’une des surcharges de la fonction membre.
+1. Ajoutez **`const`** à l’une des surcharges de la fonction membre.
 
 L’exemple suivant génère l’C2663 :
 

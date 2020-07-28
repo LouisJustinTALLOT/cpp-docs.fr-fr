@@ -6,18 +6,18 @@ f1_keywords:
 helpviewer_keywords:
 - C2272
 ms.assetid: 1517706a-9c27-452e-9b10-3424b3d232bc
-ms.openlocfilehash: fd6fdecd3a491ce5f068f4d51d413e6767aabe2f
-ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
+ms.openlocfilehash: e4163d68e0fbfea062279ba91e2c902855245e4a
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/03/2019
-ms.locfileid: "74758695"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87220390"
 ---
 # <a name="compiler-error-c2272"></a>Erreur du compilateur C2272
 
 'fonction' : modificateurs non autorisés sur les fonctions membres statiques
 
-Une fonction membre `static` est déclarée avec un spécificateur de modèle de mémoire, tel que [const](../../cpp/const-cpp.md) ou [volatile](../../cpp/volatile-cpp.md), et ces modificateurs ne sont pas autorisés sur `static` fonctions membres.
+Une **`static`** fonction membre est déclarée avec un spécificateur de modèle de mémoire, tel que [const](../../cpp/const-cpp.md) ou [volatile](../../cpp/volatile-cpp.md), et ces modificateurs ne sont pas autorisés sur les **`static`** fonctions membres.
 
 L’exemple suivant génère l’C2272 :
 

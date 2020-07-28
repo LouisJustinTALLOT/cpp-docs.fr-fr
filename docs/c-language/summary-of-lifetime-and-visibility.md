@@ -5,12 +5,12 @@ helpviewer_keywords:
 - lifetime, and visibility
 - visibility, identifiers
 ms.assetid: ea05a253-7658-482c-9a6b-abd71169c42d
-ms.openlocfilehash: f364c3c0b558c00e3d411ab5b697ed01ec395cbd
-ms.sourcegitcommit: a5fa9c6f4f0c239ac23be7de116066a978511de7
+ms.openlocfilehash: 760973bba1798068b5a19ebeb7a285d241d4ef72
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/20/2019
-ms.locfileid: "75299076"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87220806"
 ---
 # <a name="summary-of-lifetime-and-visibility"></a>Résumé de la durée de vie et de la visibilité
 
@@ -18,17 +18,17 @@ Le tableau suivant récapitule les caractéristiques de durée de vie et de visi
 
 ### <a name="summary-of-lifetime-and-visibility"></a>Résumé de la durée de vie et de la visibilité
 
-|Attributs :<br /><br /> Level|Élément|Classe de stockage<br /><br /> Spécificateur|Résultat :<br /><br /> Durée de vie|Visibilité|
+|Attributs :<br /><br /> Level|Article|Classe de stockage<br /><br /> Spécificateur|Résultat :<br /><br /> Durée de vie|Visibilité|
 |---------------------------|----------|----------------------------------|--------------------------|----------------|
-|Portée du fichier|Définition de variable|**statique**|Globale|Reste du fichier source dans lequel elle se produit|
-||Déclaration de variable|**extern**|Globale|Reste du fichier source dans lequel elle se produit|
-||Définition ou prototype de fonction|**statique**|Globale|Fichier source unique|
-||Prototype de fonction|**extern**|Globale|Reste du fichier source|
-|Portée de bloc|Déclaration de variable|**extern**|Globale|Bloquer|
-||Définition de variable|**statique**|Globale|Bloquer|
-||Définition de variable|**auto** ou **register**|Local|Bloquer|
+|Portée du fichier|Définition de variable|**`static`**|Global|Reste du fichier source dans lequel elle se produit|
+||Déclaration de variable|**`extern`**|Global|Reste du fichier source dans lequel elle se produit|
+||Définition ou prototype de fonction|**`static`**|Global|Fichier source unique|
+||Prototype de fonction|**`extern`**|Global|Reste du fichier source|
+|Portée de bloc|Déclaration de variable|**`extern`**|Global|Bloquer|
+||Définition de variable|**`static`**|Global|Bloquer|
+||Définition de variable|**`auto`** ni**`register`**|Local|Bloquer|
 
-## <a name="example"></a> Exemple
+## <a name="example"></a>Exemple
 
 ### <a name="description"></a>Description
 

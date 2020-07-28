@@ -43,12 +43,12 @@ helpviewer_keywords:
 - streams [C++], reading formatted data from
 - fscanf_s_l function
 ms.assetid: b6e88194-714b-4322-be82-1cc0b343fe01
-ms.openlocfilehash: ceeba78aa70d3569742415551d20296d726d896e
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: ff4fa01fe53794ed04f087f264021de9beea4ba9
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70956558"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87220689"
 ---
 # <a name="fscanf_s-_fscanf_s_l-fwscanf_s-_fwscanf_s_l"></a>fscanf_s, _fscanf_s_l, fwscanf_s, _fwscanf_s_l
 
@@ -83,7 +83,7 @@ int _fwscanf_s_l(
 
 ### <a name="parameters"></a>Paramètres
 
-*stream*<br/>
+*train*<br/>
 Pointeur désignant la structure **FILE**.
 
 *format*<br/>
@@ -103,12 +103,12 @@ Ces fonctions valident leurs paramètres. Si *Stream* est un pointeur de fichier
 
 ## <a name="remarks"></a>Notes
 
-La fonction **fscanf_s** lit les données à partir de la position actuelle du *flux* dans les emplacements donnés par *argument* (le cas échéant). Chaque *argument* doit être un pointeur vers une variable d’un type qui correspond à un spécificateur de type au *format*. le *format* contrôle l’interprétation des champs d’entrée et a les mêmes forme et fonction que l’argument *format* pour **scanf_s**; consultez [champs de spécification de format : fonctions scanf et wscanf](../../c-runtime-library/format-specification-fields-scanf-and-wscanf-functions.md) pour obtenir une description du *format*.  **fwscanf_s** est une version à caractères larges de **fscanf_s**; l’argument format de **fwscanf_s** est une chaîne de caractères larges. Ces fonctions se comportent de la même façon si le flux est ouvert en mode ANSI. **fscanf_s** ne prend pas actuellement en charge l’entrée d’un flux Unicode.
+La fonction **fscanf_s** lit les données à partir de la position actuelle du *flux* dans les emplacements donnés par *argument* (le cas échéant). Chaque *argument* doit être un pointeur vers une variable d’un type qui correspond à un spécificateur de type au *format*. le *format* contrôle l’interprétation des champs d’entrée et a les mêmes forme et fonction que l’argument *format* pour **scanf_s**; consultez [champs de spécification de format : fonctions scanf et wscanf](../../c-runtime-library/format-specification-fields-scanf-and-wscanf-functions.md) pour obtenir une description du *format*.  **fwscanf_s** est une version à caractères larges de **fscanf_s**; l’argument de format de **fwscanf_s** est une chaîne de caractères larges. Ces fonctions se comportent de la même façon si le flux est ouvert en mode ANSI. **fscanf_s** ne prend pas actuellement en charge l’entrée d’un flux Unicode.
 
-La principale différence entre les fonctions les plus sécurisées (qui ont le suffixe **_s** ) et les autres versions est que les fonctions plus sécurisées requièrent que la taille en caractères de chaque **c**, **c**, **s**, **s**et **[** champ de type soit passé en tant qu’argument qui suit immédiatement la variable. Pour plus d’informations, consultez [scanf_s, _scanf_s_l, wscanf_s, _wscanf_s_l](scanf-s-scanf-s-l-wscanf-s-wscanf-s-l.md) et [Spécification de largeur scanf](../../c-runtime-library/scanf-width-specification.md).
+La principale différence entre les fonctions les plus sécurisées (qui ont le suffixe **_s** ) et les autres versions est que les fonctions plus sécurisées requièrent que la taille en caractères de chaque champ **c**, **c**, **s**, **s**et **[** type soit passée comme argument immédiatement après la variable. Pour plus d’informations, consultez [scanf_s, _scanf_s_l, wscanf_s, _wscanf_s_l](scanf-s-scanf-s-l-wscanf-s-wscanf-s-l.md) et [Spécification de largeur scanf](../../c-runtime-library/scanf-width-specification.md).
 
 > [!NOTE]
-> Le paramètre size est de type **unsigned**, et non **size_t**.
+> Le paramètre de taille est de type **`unsigned`** , et non **size_t**.
 
 Les versions de ces fonctions qui ont le suffixe **_L** sont identiques, sauf qu’elles utilisent les paramètres régionaux passés au lieu des paramètres régionaux du thread actuel.
 
@@ -119,7 +119,7 @@ Les versions de ces fonctions qui ont le suffixe **_L** sont identiques, sauf qu
 |**_ftscanf_s**|**fscanf_s**|**fscanf_s**|**fwscanf_s**|
 |**_ftscanf_s_l**|**_fscanf_s_l**|**_fscanf_s_l**|**_fwscanf_s_l**|
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
 |Fonction|En-tête requis|
 |--------------|---------------------|
@@ -128,7 +128,7 @@ Les versions de ces fonctions qui ont le suffixe **_L** sont identiques, sauf qu
 
 Pour plus d'informations sur la compatibilité, voir [Compatibilité](../../c-runtime-library/compatibility.md).
 
-## <a name="example"></a>Exemples
+## <a name="example"></a>Exemple
 
 ```C
 // crt_fscanf_s.c

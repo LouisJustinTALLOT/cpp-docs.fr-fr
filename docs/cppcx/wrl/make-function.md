@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - Make function
 ms.assetid: 66704143-df99-4a95-904d-ed99607e1034
-ms.openlocfilehash: ffd0967b741475b260eef80ec24d56874a6bcb1f
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 0f2e81e3cd757214805817af2a355a93c1cfd096
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80213809"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87220468"
 ---
 # <a name="make-function"></a>Make, fonction
 
@@ -165,7 +165,7 @@ ComPtr<T> Make();
 ### <a name="parameters"></a>Paramètres
 
 *T*<br/>
-Classe spécifiée par l’utilisateur qui hérite de `WRL::RuntimeClass`.
+Classe spécifiée par l’utilisateur qui hérite de `WRL::RuntimeClass` .
 
 *TArg1*<br/>
 Type d’argument 1 passé à la classe d’exécution spécifiée.
@@ -194,10 +194,10 @@ Type d’argument 8 passé à la classe d’exécution spécifiée.
 *TArg9*<br/>
 Type d’argument 9 passé à la classe d’exécution spécifiée.
 
-*Arg1*<br/>
+*arg1*<br/>
 Argument 1 passé à la classe d’exécution spécifiée.
 
-*Arg2*<br/>
+*arg2*<br/>
 Argument 2 passé à la classe d’exécution spécifiée.
 
 *Arg3*<br/>
@@ -223,7 +223,7 @@ Argument 9 passé à la classe d’exécution spécifiée.
 
 ## <a name="return-value"></a>Valeur de retour
 
-Objet `ComPtr<T>` en cas de réussite ; Sinon, `nullptr`.
+`ComPtr<T>`Objet en cas de réussite ; sinon, **`nullptr`** .
 
 ## <a name="remarks"></a>Notes
 
@@ -237,4 +237,4 @@ Consultez [Comment : instancier des composants WRL directement](how-to-instanti
 
 ## <a name="see-also"></a>Voir aussi
 
-[Microsoft::WRL, espace de noms](microsoft-wrl-namespace.md)
+[Microsoft :: WRL, espace de noms](microsoft-wrl-namespace.md)
