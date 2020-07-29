@@ -7,20 +7,20 @@ f1_keywords:
 - std::<memory>
 helpviewer_keywords:
 - memory header
-ms.openlocfilehash: 4a6383ee94d021373b984122926a5bb73e18f953
-ms.sourcegitcommit: 590e488e51389066a4da4aa06d32d4c362c23393
+ms.openlocfilehash: 57b7db798b4f44650513097137299d53b4e25266
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 10/21/2019
-ms.locfileid: "72689366"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87202959"
 ---
 # <a name="ltmemorygt"></a>&lt;memory&gt;
 
 Définit une classe, un opérateur et plusieurs modèles qui aident à allouer et libérer des objets.
 
-## <a name="requirements"></a>spécifications
+## <a name="requirements"></a>Spécifications
 
-**En-tête :** \<memory>
+**En-tête :**\<memory>
 
 **Espace de noms :** std
 
@@ -30,9 +30,9 @@ Définit une classe, un opérateur et plusieurs modèles qui aident à allouer e
 
 |||
 |-|-|
-|[addressof](../standard-library/memory-functions.md#addressof)|Obtient l'adresse exacte d'un objet.|
-|[align](../standard-library/memory-functions.md#align)|Retourne un pointeur vers une plage d'une taille donnée, en fonction de l'alignement et de l'adresse de départ.|
-|[allocate_shared](../standard-library/memory-functions.md#allocate_shared)|Crée un `shared_ptr` aux objets qui sont alloués et construits pour un type donné avec un allocateur spécifié.|
+|[AddressOf](../standard-library/memory-functions.md#addressof)|Obtient l'adresse exacte d'un objet.|
+|[droite](../standard-library/memory-functions.md#align)|Retourne un pointeur vers une plage d'une taille donnée, en fonction de l'alignement et de l'adresse de départ.|
+|[allocate_shared](../standard-library/memory-functions.md#allocate_shared)|Crée un `shared_ptr` objet aux objets qui sont alloués et construits pour un type donné avec un allocateur spécifié.|
 |[atomic_compare_exchange_strong](../standard-library/memory-functions.md#atomic_compare_exchange_strong)||
 |[atomic_compare_exchange_weak](../standard-library/memory-functions.md#atomic_compare_exchange_weak)||
 |[atomic_compare_exchange_strong_explicit](../standard-library/memory-functions.md#atomic_compare_exchange_strong_explicit)||
@@ -48,9 +48,9 @@ Définit une classe, un opérateur et plusieurs modèles qui aident à allouer e
 |[declare_no_pointers](../standard-library/memory-functions.md#declare_no_pointers)|Informe un récupérateur de mémoire que les caractères à partir d'une adresse spécifiée et compris dans la taille de bloc indiquée ne contiennent aucun pointeur traçable.|
 |[declare_reachable](../standard-library/memory-functions.md#declare_reachable)|Informe une opération garbage collection que l’adresse indiquée est dédiée au stockage alloué et est accessible.|
 |[default_delete](../standard-library/memory-functions.md#default_delete)|Supprime les objets alloués avec `operator new`. Fonction pouvant être utilisée avec `unique_ptr`.|
-|[destroy_at](../standard-library/memory-functions.md#destroy_at)|Méthode de `destroy` abrégée.|
-|[destroy](../standard-library/memory-functions.md#destroy)|Méthode de `destroy` abrégée.|
-|[destroy_n](../standard-library/memory-functions.md#destroy_n)|Méthode de `destroy` abrégée.|
+|[destroy_at](../standard-library/memory-functions.md#destroy_at)|`destroy`Méthode sténographique.|
+|[suppression](../standard-library/memory-functions.md#destroy)|`destroy`Méthode sténographique.|
+|[destroy_n](../standard-library/memory-functions.md#destroy_n)|`destroy`Méthode sténographique.|
 |[dynamic_pointer_cast](../standard-library/memory-functions.md#dynamic_pointer_cast)|Cast dynamique vers `shared_ptr`.|
 |[get_deleter](../standard-library/memory-functions.md#get_deleter)|Obtient une suppression à partir de `shared_ptr`.|
 |[get_pointer_safety](../standard-library/memory-functions.md#get_pointer_safety)|Retourne le type de sécurité de pointeur supposé par tout récupérateur de mémoire.|
@@ -64,28 +64,28 @@ Définit une classe, un opérateur et plusieurs modèles qui aident à allouer e
 |[undeclare_no_pointers](../standard-library/memory-functions.md#undeclare_no_pointers)|Informe un récupérateur de mémoire que les caractères dans le bloc de mémoire défini par un pointeur d'adresse de base et une taille de bloc peuvent maintenant contenir des pointeurs traçables.|
 |[undeclare_reachable](../standard-library/memory-functions.md#undeclare_reachable)|Informe un objet `garbage_collector` qu'un emplacement de mémoire spécifié n'est pas accessible.|
 |[uninitialized_copy](../standard-library/memory-functions.md#uninitialized_copy)|Copie les objets à partir d'une plage d'entrée spécifiée dans une plage de destination non initialisée.|
-|[uninitialized_copy_n](../standard-library/memory-functions.md#uninitialized_copy_n)|Crée une copie d'un nombre spécifié d'éléments à partir d'un itérateur d'entrée. Les copies sont placées dans un itérateur forward.|
-|[uninitialized_default_construct](../standard-library/memory-functions.md#uninitialized_default_construct)|Méthode de `uninitialized_default_construct` abrégée.|
-|[uninitialized_default_construct_n](../standard-library/memory-functions.md#uninitialized_default_construct_n)|Méthode de `uninitialized_construct` abrégée.|
+|[uninitialized_copy_n](../standard-library/memory-functions.md#uninitialized_copy_n)|Crée une copie d'un nombre spécifié d'éléments à partir d'un itérateur d'entrée. Les copies sont placées dans un itérateur vers l’avant.|
+|[uninitialized_default_construct](../standard-library/memory-functions.md#uninitialized_default_construct)|`uninitialized_default_construct`Méthode sténographique.|
+|[uninitialized_default_construct_n](../standard-library/memory-functions.md#uninitialized_default_construct_n)|`uninitialized_construct`Méthode sténographique.|
 |[uninitialized_fill](../standard-library/memory-functions.md#uninitialized_fill)|Copie les objets d'une valeur spécifiée dans une plage de destination non initialisée.|
 |[uninitialized_fill_n](../standard-library/memory-functions.md#uninitialized_fill_n)|Copie les objets d'une valeur spécifiée dans un nombre spécifié d'éléments d'une plage de destination non initialisée.|
-|[uninitialized_move](../standard-library/memory-functions.md#uninitialized_move)|Méthode de `uninitialized_move` abrégée.|
-|[uninitialized_move_n](../standard-library/memory-functions.md#uninitialized_move_n)|Méthode de `uninitialized_move` abrégée.|
-|[uninitialized_value_construct](../standard-library/memory-functions.md#uninitialized_value_construct)|Méthode de `uninitialized_value_construct` abrégée.|
-|[uninitialized_value_construct_n](../standard-library/memory-functions.md#uninitialized_value_construct_n)|Méthode de `uninitialized_value_construct` abrégée.|
+|[uninitialized_move](../standard-library/memory-functions.md#uninitialized_move)|`uninitialized_move`Méthode sténographique.|
+|[uninitialized_move_n](../standard-library/memory-functions.md#uninitialized_move_n)|`uninitialized_move`Méthode sténographique.|
+|[uninitialized_value_construct](../standard-library/memory-functions.md#uninitialized_value_construct)|`uninitialized_value_construct`Méthode sténographique.|
+|[uninitialized_value_construct_n](../standard-library/memory-functions.md#uninitialized_value_construct_n)|`uninitialized_value_construct`Méthode sténographique.|
 |[uses_allocator_v](../standard-library/memory-functions.md#uses_allocator_v)||
 
 ### <a name="operators"></a>Opérateurs
 
 |||
 |-|-|
-|[!=, opérateur](../standard-library/memory-operators.md#op_neq)|Vérifie l'inégalité entre les objets allocateurs d'une classe spécifiée.|
-|[operator==](../standard-library/memory-operators.md#op_eq_eq)|Vérifie l'égalité entre les objets allocateurs d'une classe spécifiée.|
-|[operator>=](../standard-library/memory-operators.md#op_gt_eq)|Vérifie si un objet allocateur est supérieur ou égal à un second objet allocateur d'une classe donnée.|
-|[operator<](../standard-library/memory-operators.md#op_lt)|Vérifie si un objet est inférieur à un second objet d'une classe donnée.|
-|[operator\<=](../standard-library/memory-operators.md#op_gt_eq)|Vérifie si un objet est inférieur ou égal à un second objet d'une classe donnée.|
-|[operator>](../standard-library/memory-operators.md#op_gt)|Vérifie si un objet est supérieur à un second objet d'une classe donnée.|
-|[operator<<](../standard-library/memory-operators.md#op_lt_lt)|Outil d'insertion `shared_ptr`.|
+|[opérateur ! =](../standard-library/memory-operators.md#op_neq)|Vérifie l'inégalité entre les objets allocateurs d'une classe spécifiée.|
+|[opérateur = =](../standard-library/memory-operators.md#op_eq_eq)|Vérifie l'égalité entre les objets allocateurs d'une classe spécifiée.|
+|[>opérateur =](../standard-library/memory-operators.md#op_gt_eq)|Vérifie si un objet allocateur est supérieur ou égal à un second objet allocateur d'une classe donnée.|
+|[<d’opérateur](../standard-library/memory-operators.md#op_lt)|Vérifie si un objet est inférieur à un second objet d'une classe donnée.|
+|[and\<=](../standard-library/memory-operators.md#op_gt_eq)|Vérifie si un objet est inférieur ou égal à un second objet d'une classe donnée.|
+|[>d’opérateur](../standard-library/memory-operators.md#op_gt)|Vérifie si un objet est supérieur à un second objet d'une classe donnée.|
+|[<<d’opérateur](../standard-library/memory-operators.md#op_lt_lt)|Outil d'insertion `shared_ptr`.|
 
 ### <a name="classes"></a>Classes
 
@@ -93,10 +93,10 @@ Définit une classe, un opérateur et plusieurs modèles qui aident à allouer e
 |-|-|
 |[allocator](../standard-library/allocator-class.md)|Le modèle de classe décrit un objet qui gère l’allocation et la libération de stockage pour des tableaux d’objets de type **type**.|
 |[allocator_traits](../standard-library/allocator-traits-class.md)|Décrit un objet qui détermine toutes les informations qui sont requises par un conteneur activé par allocateur.|
-|[auto_ptr](../standard-library/auto-ptr-class.md)|Le modèle de classe décrit un objet qui stocke un pointeur vers un objet alloué de type **type** <strong>\*</strong> qui garantit que l’objet vers lequel il pointe est supprimé lorsque son auto_ptr englobant est détruit.|
+|[auto_ptr](../standard-library/auto-ptr-class.md)|Le modèle de classe décrit un objet qui stocke un pointeur vers un objet alloué de **type type** <strong>\*</strong> qui garantit que l’objet vers lequel il pointe est supprimé lorsque son auto_ptr englobant est détruit.|
 |[bad_weak_ptr](../standard-library/bad-weak-ptr-class.md)|Signale une exception weak_ptr incorrecte.|
 |[enabled_shared_from_this](../standard-library/enable-shared-from-this-class.md)|Aide à générer un `shared_ptr`.|
-|[pointer_traits](../standard-library/pointer-traits-struct.md)|Fournit les informations nécessaires à un objet de type `allocator_traits` pour décrire un allocateur avec le type pointeur `Ptr`.|
+|[pointer_traits](../standard-library/pointer-traits-struct.md)|Fournit les informations nécessaires à un objet de type `allocator_traits` pour décrire un allocateur avec le type pointeur `Ptr` .|
 |[raw_storage_iterator](../standard-library/raw-storage-iterator-class.md)|Classe d'adaptateur fournie pour permettre aux algorithmes de stocker leurs résultats dans la mémoire non initialisée.|
 |[shared_ptr](../standard-library/shared-ptr-class.md)|Encapsule un pointeur intelligent contenant des références autour d'un objet alloué dynamiquement.|
 |[unique_ptr](../standard-library/unique-ptr-class.md)|Stocke un pointeur vers un objet détenu. Le pointeur n'est détenu par aucun autre `unique_ptr`. L'objet `unique_ptr` est détruit lorsque le propriétaire est détruit.|
@@ -108,7 +108,7 @@ Définit une classe, un opérateur et plusieurs modèles qui aident à allouer e
 |-|-|
 |[allocator_arg_t](../standard-library/allocator-class.md#allocator_arg_t)||
 |[default_delete](../standard-library/default-delete-struct.md)||
-|hash|Fournit des surcharges spécialisées pour `unique_ptr` et `shared_ptr`.|
+|Hachage|Fournit des surcharges spécialisées pour `unique_ptr` et `shared_ptr` .|
 |[owner_less](../standard-library/memory-functions.md#owner_less)|Permet des comparaisons mixtes basées sur la propriété de pointeurs partagés et faibles.|
 |[uses_allocator](../standard-library/allocator-class.md#uses_allocator)||
 
@@ -116,9 +116,9 @@ Définit une classe, un opérateur et plusieurs modèles qui aident à allouer e
 
 |||
 |-|-|
-|[allocator\<void>](../standard-library/allocator-void-class.md)|Spécialisation de l’allocateur de modèle de classe en type **void**, définissant uniquement les types de membres qui ont un sens dans ce contexte spécialisé.|
+|[allocator\<void>](../standard-library/allocator-void-class.md)|Spécialisation de l’allocateur de modèle de classe en type **`void`** , définissant uniquement les types de membres qui ont un sens dans ce contexte spécialisé.|
 
 ## <a name="see-also"></a>Voir aussi
 
-[Référence de fichiers d’en-tête](../standard-library/cpp-standard-library-header-files.md)\
-[Sécurité des threads dans la bibliothèque C++ Standard](../standard-library/thread-safety-in-the-cpp-standard-library.md)
+[Référence des fichiers d’en-tête](../standard-library/cpp-standard-library-header-files.md)\
+[Sécurité des threads dans la bibliothèque C++ standard](../standard-library/thread-safety-in-the-cpp-standard-library.md)

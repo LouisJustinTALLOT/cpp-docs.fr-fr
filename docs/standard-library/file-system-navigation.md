@@ -1,22 +1,22 @@
 ---
 title: Navigation dans le système de fichiers
-description: Comment utiliser les API de système de fichiers de bibliothèque standard pour naviguer dans le système de fichiers.
+description: Comment utiliser les API du système de fichiers de la bibliothèque standard C++ pour naviguer dans le système de fichiers.
 ms.date: 04/13/2020
 ms.assetid: f7cc5f5e-a541-4e00-87c7-a3769ef6096d
-ms.openlocfilehash: 412d865582a14da7b8c31d9f07a43106b0c49491
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 26abe2fad6cacf8959507f15e967278e85254024
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81368428"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87203284"
 ---
 # <a name="file-system-navigation"></a>Navigation dans le système de fichiers
 
-L’en-tête \<filesystem> implémente la spécification technique de système de fichiers C++ (C++ File System Technical Specification) ISO/IEC TS 18822:2015 (Projet final : [ISO/IEC JTC 1/SC 22/WG 21 N4100](https://wg21.link/n4100)), et a des types et des fonctions qui vous permettent d’écrire du code indépendant des plateformes pour naviguer dans le système de fichiers. Parce que c’est multi-plateforme, il contient des API qui ne sont pas pertinents pour les systèmes Windows. Par exemple, `is_fifo(const path&)` retourne toujours **faux** sur Windows.
+L' \<filesystem> en-tête implémente la spécification technique du système de fichiers C++ de la norme ISO/IEC TS 18822:2015 (Draft final : [ISO/IEC JTC 1/SC 22/WG 21 N4100](https://wg21.link/n4100)) et a des types et des fonctions qui vous permettent d’écrire du code indépendant de la plateforme pour naviguer dans le système de fichiers. Étant donné qu’il s’agit d’une multiplateforme, il contient des API qui ne sont pas pertinentes pour les systèmes Windows. Par exemple, `is_fifo(const path&)` retourne toujours **`false`** sur Windows.
 
 ## <a name="overview"></a>Vue d’ensemble
 
-Utilisez les API \<filesystem> pour les tâches suivantes :
+Utilisez les \<filesystem> API pour les tâches suivantes :
 
 - effectuer une itération des fichiers et répertoires sous un chemin d'accès spécifié ;
 
@@ -30,11 +30,11 @@ Utilisez les API \<filesystem> pour les tâches suivantes :
 
 Pour plus d’informations sur les E/S de fichiers avec la bibliothèque standard, consultez [iostream, programmation](../standard-library/iostream-programming.md).
 
-## <a name="paths"></a>Chemins
+## <a name="paths"></a>Chemins d'accès
 
 ### <a name="constructing-and-composing-paths"></a>Construction et composition de chemins d'accès
 
-Dans Windows (depuis XP), les chemins d'accès sont stockés en mode natif au format Unicode. La classe [de chemin](../standard-library/path-class.md) effectue automatiquement toutes les conversions de chaînes nécessaires. Il accepte les arguments des tableaux de caractères larges et étroits, et les deux `std::string` et `std::wstring` les types formatés comme UTF8 ou UTF16. La classe `path` normalise aussi automatiquement les séparateurs des chemins. Vous pouvez utiliser une seule barre oblique comme séparateur de répertoires dans les arguments de constructeur. Ce séparateur vous permet d’utiliser les mêmes chaînes pour stocker des chemins dans les environnements Windows et UNIX :
+Dans Windows (depuis XP), les chemins d'accès sont stockés en mode natif au format Unicode. La classe [path](../standard-library/path-class.md) effectue automatiquement toutes les conversions de chaînes nécessaires. Il accepte les arguments des tableaux de caractères larges et étroits, ainsi `std::string` `std::wstring` que les types et au format UTF8 ou UTF16. La classe `path` normalise aussi automatiquement les séparateurs des chemins. Vous pouvez utiliser une seule barre oblique comme séparateur de répertoires dans les arguments de constructeur. Ce séparateur vous permet d’utiliser les mêmes chaînes pour stocker des chemins d’accès dans les environnements Windows et UNIX :
 
 ```cpp
 path pathToDisplay(L"/FileSystemTest/SubDir3");     // OK!
@@ -42,7 +42,7 @@ path pathToDisplay2(L"\\FileSystemTest\\SubDir3");  // Still OK as always
 path pathToDisplay3(LR"(\FileSystemTest\SubDir3)"); // Raw string literals are OK, too.
 ```
 
-Pour concaténer deux chemins, utilisez les opérateurs `/` et `/=` surchargés, qui sont similaires aux opérateurs `+` et `+=` sur `std::string` et `std::wstring`. L’objet `path` fournira commodément les séparateurs si vous ne le faites pas.
+Pour concaténer deux chemins, utilisez les opérateurs `/` et `/=` surchargés, qui sont similaires aux opérateurs `+` et `+=` sur `std::string` et `std::wstring`. `path`Si ce n’est pas le cas, l’objet fournira facilement les séparateurs.
 
 ```cpp
 path myRoot("C:/FileSystemTest");  // no trailing separator, no problem!
@@ -51,7 +51,7 @@ myRoot /= path("SubDirRoot");      // C:/FileSystemTest/SubDirRoot
 
 ### <a name="examining-paths"></a>Examen des chemins d'accès
 
-La classe de chemin a plusieurs méthodes qui retournent des informations sur diverses parties du chemin lui-même. Ces informations sont distinctes des informations concernant l’entité du système de fichiers à laquelle elles pourraient faire référence. Vous pouvez ainsi obtenir la racine, le chemin d'accès relatif, le nom et l'extension de fichier, etc. Vous pouvez itérer un objet path pour examiner tous les répertoires de l'arborescence. L’exemple suivant montre comment itérer sur un objet de chemin. Et, comment récupérer des informations sur ses pièces.
+La classe Path possède plusieurs méthodes qui retournent des informations sur les différentes parties du chemin d’accès lui-même. Ces informations sont différentes des informations relatives à l’entité du système de fichiers à laquelle elles peuvent faire référence. Vous pouvez ainsi obtenir la racine, le chemin d'accès relatif, le nom et l'extension de fichier, etc. Vous pouvez itérer un objet path pour examiner tous les répertoires de l'arborescence. L’exemple suivant montre comment effectuer une itération sur un objet Path. Et, comment récupérer des informations sur ses composants.
 
 ```cpp
 // filesystem_path_example.cpp
@@ -120,7 +120,7 @@ extension() = .txt
 
 ### <a name="comparing-paths"></a>Comparaison des chemins d'accès
 
-La classe `path` surcharge les mêmes opérateurs de comparaison que `std::string` et `std::wstring`. Lorsque vous comparez deux chemins, vous faites une comparaison de cordes après que les séparateurs ont été normalisés. Si une barre oblique de fuite (ou barre oblique inverse) est manquante, elle n’est pas ajoutée, ce qui affecte la comparaison. L'exemple suivant montre comment les valeurs de chemin d'accès sont comparées :
+La classe `path` surcharge les mêmes opérateurs de comparaison que `std::string` et `std::wstring`. Lorsque vous comparez deux chemins d’accès, vous effectuez une comparaison de chaînes une fois que les séparateurs ont été normalisés. Si une barre oblique de fin (ou barre oblique inverse) est manquante, elle n’est pas ajoutée et affecte la comparaison. L'exemple suivant montre comment les valeurs de chemin d'accès sont comparées :
 
 ```cpp
 wstring ComparePaths()
@@ -155,7 +155,7 @@ Pour exécuter ce code, collez-le dans l’exemple complet ci-dessus avant `main
 
 ### <a name="converting-between-path-and-string-types"></a>Conversion entre les types chemin d'accès et chaîne
 
-Un objet `path` est implicitement convertible en `std::wstring` ou en `std::string`. Cela signifie que vous pouvez passer un chemin vers des fonctions telles que [wofstream::open](../standard-library/basic-ofstream-class.md#open), comme indiqué dans cet exemple:
+Un objet `path` est implicitement convertible en `std::wstring` ou en `std::string`. Cela signifie que vous pouvez passer un chemin d’accès à des fonctions telles que [wofstream :: Open](../standard-library/basic-ofstream-class.md#open), comme indiqué dans cet exemple :
 
 ```cpp
 // filesystem_path_conversion.cpp
@@ -208,6 +208,6 @@ Press Enter to exit
 
 ## <a name="iterating-directories-and-files"></a>Itération de répertoires et de fichiers
 
-L’en-tête \<filesystem> fournit le type [directory_iterator](../standard-library/directory-iterator-class.md) pour itérer sur des répertoires uniques, et la classe [recursive_directory_iterator](../standard-library/recursive-directory-iterator-class.md) pour itérer de manière récursive sur un répertoire et tous ses sous-répertoires. Après avoir construit un itérateur en lui passant un objet `path` , l’itérateur pointe vers le premier objet directory_entry dans le chemin. Créez l'itérateur de fin en appelant le constructeur par défaut.
+L' \<filesystem> en-tête fournit le type de [directory_iterator](../standard-library/directory-iterator-class.md) pour itérer au sein des répertoires uniques, et la classe [recursive_directory_iterator](../standard-library/recursive-directory-iterator-class.md) pour itérer de manière récursive un répertoire et ses sous-répertoires. Après avoir construit un itérateur en lui passant un objet `path` , l’itérateur pointe vers le premier objet directory_entry dans le chemin. Créez l'itérateur de fin en appelant le constructeur par défaut.
 
-Lors de l’itération à travers un répertoire, il ya plusieurs types d’éléments que vous pourriez découvrir. Ces éléments comprennent des répertoires, des fichiers, des liens symboliques, des fichiers de prise, et d’autres. `directory_iterator` retourne ses éléments sous la forme d’objets [directory_entry](../standard-library/directory-entry-class.md).
+Lors d’une itération dans un répertoire, il existe plusieurs types d’éléments que vous pouvez découvrir. Ces éléments incluent des répertoires, des fichiers, des liens symboliques, des fichiers de socket et d’autres. `directory_iterator` retourne ses éléments sous la forme d’objets [directory_entry](../standard-library/directory-entry-class.md).

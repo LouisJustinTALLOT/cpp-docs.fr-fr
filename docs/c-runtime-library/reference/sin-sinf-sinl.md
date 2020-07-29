@@ -37,12 +37,12 @@ helpviewer_keywords:
 - trigonometric functions
 - sinf function
 ms.assetid: 737de73e-3590-45f9-8257-dc1c0c489dfc
-ms.openlocfilehash: 8e50a40df126b400163c2dde8c950da03d286aef
-ms.sourcegitcommit: fe146adb3a02872538637196bb3c45aeeeaaf5c2
+ms.openlocfilehash: 7e6e4d9fee0df20ab81f15483cd5f7f4de16d751
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84507012"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87216724"
 ---
 # <a name="sin-sinf-sinl"></a>sin, sinf, sinl
 
@@ -66,24 +66,24 @@ long double sin(long double x);  // C++ only
 *x*<br/>
 Angle en radians.
 
-## <a name="return-value"></a>Valeur de retour
+## <a name="return-value"></a>Valeur retournée
 
 Les fonctions **Sin** retournent le sinus de *x*. Si *x* est supérieur ou égal à 263, ou inférieur ou égal à-263, une perte de précision dans le résultat se produit.
 
 |Entrée|Exception SEH|Exception\{b\> \<b\}Matherr|
 |-----------|-------------------|-----------------------|
-|± QNAN,IND|Aucune|_DOMAIN|
+|± QNAN,IND|None|_DOMAIN|
 |± ∞ (Sin, sinf, sinl)|NON VALIDE|_DOMAIN|
 
 Pour plus d’informations sur les codes de retour, consultez [errno, _doserrno, _sys_errlist et _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
 
-## <a name="remarks"></a>Remarques
+## <a name="remarks"></a>Notes
 
-C++ autorisant la surcharge, vous pouvez appeler des surcharges de **Sin** qui acceptent et retournent des valeurs **float** ou **long** **double** . Dans un programme C, **Sin** prend toujours et retourne **double**.
+C++ autorisant la surcharge, vous pouvez appeler des surcharges de **Sin** qui acceptent et retournent des **`float`** **`long double`** valeurs ou. Dans un programme C, **Sin** accepte et retourne toujours **`double`** .
 
 Par défaut, l’état global de cette fonction est limité à l’application. Pour modifier cette valeur, consultez [état global dans le CRT](../global-state.md).
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
 |Routine|En-tête requis (C)|En-tête requis (C++)|
 |-|-|-|

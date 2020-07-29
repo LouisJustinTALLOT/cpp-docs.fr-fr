@@ -1,5 +1,5 @@
 ---
-title: Extensions Microsoft pour C et C++
+title: Extensions Microsoft pour C et C++
 ms.date: 06/14/2018
 helpviewer_keywords:
 - or_eq operator
@@ -29,24 +29,24 @@ helpviewer_keywords:
 - extensions
 - compl method
 ms.assetid: e811a74a-45ba-4c00-b206-2f2321b8689a
-ms.openlocfilehash: dab8ac23be8b66ca84c57514c6c04e94dddebaae
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 77f2ed64a0c816d84e67f66b664141581a9fad51
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62321187"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87231505"
 ---
-# <a name="microsoft-extensions-to-c-and-c"></a>Extensions Microsoft pour C et C++
+# <a name="microsoft-extensions-to-c-and-c"></a>Extensions Microsoft pour C et C++
 
 Visual C++ étend les normes ANSI C et ANSI C++ comme suit.
 
 ## <a name="keywords"></a>Mots clés
 
-Plusieurs mots clés sont ajoutés. Dans la liste dans [mots clés](../../cpp/keywords-cpp.md), les mots clés avec deux traits de soulignement de début sont des extensions de Visual C++.
+Plusieurs mots clés sont ajoutés. Dans la liste des [Mots clés](../../cpp/keywords-cpp.md), les mots clés qui ont deux traits de soulignement de début sont Visual C++ extensions.
 
-## <a name="out-of-class-definition-of-static-const-integral-or-enum-members"></a>En dehors de la définition de classe de const integral (ou enum) des membres statiques
+## <a name="out-of-class-definition-of-static-const-integral-or-enum-members"></a>Définition hors classe des membres statiques const (ou enum) statiques
 
-Dans le système standard (**/Za**), vous devez vous une définition hors classe pour les membres de données, comme illustré ici :
+Sous la norme (**/za**), vous devez créer une définition hors classe pour les données membres, comme illustré ici :
 
 ```cpp
 class CMyClass  {
@@ -57,9 +57,9 @@ class CMyClass  {
 const int CMyClass::max;   // out of class definition
 ```
 
-Sous **/Ze**, la définition hors classe est facultative pour les membres de données statiques, const integral et const enum. Seuls les membres integral et enum qui sont de type static et const peuvent avoir des initialiseurs dans une classe ; l'expression d'initialisation doit être une expression de type const.
+Sous **/Ze**, la définition hors classe est facultative pour les membres de données static, const intégrale et const enum. Seuls les membres integral et enum qui sont de type static et const peuvent avoir des initialiseurs dans une classe ; l'expression d'initialisation doit être une expression de type const.
 
-Pour éviter des erreurs quand une définition hors classe est fournie dans un en-tête de fichier et le fichier d’en-tête est inclus dans plusieurs fichiers sources, utilisez [selectany](../../cpp/selectany.md). Exemple :
+Pour éviter les erreurs lorsqu’une définition hors classe est fournie dans un fichier d’en-tête et que le fichier d’en-tête est inclus dans plusieurs fichiers sources, utilisez [selectany](../../cpp/selectany.md). Par exemple :
 
 ```cpp
 __declspec(selectany) const int CMyClass::max = 5;
@@ -69,7 +69,7 @@ __declspec(selectany) const int CMyClass::max = 5;
 
 Le compilateur C++ et le compilateur C prennent tous les deux en charge les types de casts non ANSI suivants :
 
-- Casts non ANSI pour produire des valeurs l-value. Exemple :
+- Casts non ANSI pour produire des valeurs l-value. Par exemple :
 
    ```C
    char *p;
@@ -85,7 +85,7 @@ Le compilateur C++ et le compilateur C prennent tous les deux en charge les ty
    p = ( char * )(( int * )p + 1 );
    ```
 
-- Casts non ANSI d'un pointeur de fonction vers un pointeur de données. Exemple :
+- Casts non ANSI d'un pointeur de fonction vers un pointeur de données. Par exemple :
 
    ```C
    int ( * pfunc ) ();
@@ -117,7 +117,7 @@ Le compilateur C prend en charge les commentaires sur une seule ligne, qui comm
 // This is a single-line comment.
 ```
 
-## <a name="scope"></a>Portée
+## <a name="scope"></a>Étendue
 
 Le compilateur C prend en charge les fonctionnalités suivantes liées à la portée.
 
@@ -136,7 +136,7 @@ Le compilateur C prend en charge les fonctionnalités suivantes liées à la po
    typedef int INT;
    ```
 
-- Déclarateurs de fonction ont une portée de fichier :
+- Les déclarateurs de fonction ont une portée de fichier :
 
    ```C
    void func1()
@@ -168,7 +168,7 @@ Le compilateur C prend en charge les fonctionnalités suivantes liées à la po
    }
    ```
 
-## <a name="data-declarations-and-definitions"></a>Définitions et déclarations de données
+## <a name="data-declarations-and-definitions"></a>Déclarations et définitions de données
 
 Le compilateur C prend en charge les fonctionnalités de définition et de déclaration de données suivantes.
 
@@ -178,7 +178,7 @@ Le compilateur C prend en charge les fonctionnalités de définition et de déc
    char arr[5] = {'a', 'b', "cde"};
    ```
 
-- Champs qui ont des types de base autre que de bits **unsigned int** ou **type signed int**.
+- Champs de bits qui ont des types de base autres que **`unsigned int`** ou **`signed int`** .
 
 - Déclarateurs qui n'ont pas de type :
 
@@ -190,7 +190,7 @@ Le compilateur C prend en charge les fonctionnalités de définition et de déc
    }
    ```
 
-- Tableaux non dimensionnés comme dernier champ dans les structures et unions :
+- Tableaux non dimensionnés comme dernier champ dans les structures et les unions :
 
    ```C
    struct zero
@@ -210,7 +210,7 @@ Le compilateur C prend en charge les fonctionnalités de définition et de déc
    };
    ```
 
-- Unions sans nom (anonymes) :
+- Unions (anonymes) sans nom :
 
    ```C
    union
@@ -232,11 +232,11 @@ Le compilateur C prend en charge les fonctionnalités de définition et de déc
 
 ## <a name="intrinsic-floating-point-functions"></a>Fonctions à virgule flottante intrinsèques
 
-Les deux le x86 du compilateur C++ et le compilateur C prend en charge la génération inline de la `atan`, `atan2`, `cos`, `exp`, `log`, `log10`, `sin`, `sqrt`, et `tan` fonctions lorsque **/Oi** est spécifié. Pour le compilateur C, la conformité ANSI n'est plus assurée quand ces fonctions intrinsèques sont utilisées, car elles ne définissent pas la variable `errno`.
+Le compilateur C++ x86 et le compilateur C prennent tous les deux en charge la génération inline des `atan` fonctions,,,,,, `atan2` `cos` `exp` `log` `log10` `sin` , `sqrt` et `tan` quand **/OI** est spécifié. Pour le compilateur C, la conformité ANSI n'est plus assurée quand ces fonctions intrinsèques sont utilisées, car elles ne définissent pas la variable `errno`.
 
-## <a name="passing-a-non-const-pointer-parameter-to-a-function-that-expects-a-reference-to-a-const-pointer-parameter"></a>En passant un paramètre de pointeur non const à une fonction qui attend une référence à un paramètre de pointeur const
+## <a name="passing-a-non-const-pointer-parameter-to-a-function-that-expects-a-reference-to-a-const-pointer-parameter"></a>Passage d’un paramètre de pointeur non const à une fonction qui attend une référence à un paramètre de pointeur const
 
-Il s’agit d’une extension C++. Ce code est compilé avec **/Ze**:
+Il s’agit d’une extension de C++. Ce code se compilera avec **/Ze**:
 
 ```cpp
 typedef   int   T;
@@ -258,35 +258,35 @@ void func ()
 }
 ```
 
-## <a name="iso646h-not-enabled"></a>ISO646. H n’est ne pas activée
+## <a name="iso646h-not-enabled"></a>ISO646. H non activé
 
-Sous **/Ze**, vous devez inclure iso646.h si vous souhaitez utiliser les formulaires de texte des opérateurs suivants :
+Sous **/Ze**, vous devez inclure ISO646. h si vous souhaitez utiliser des formes de texte des opérateurs suivants :
 
-- & & (et)
+- && (and)
 
-- & = (and_eq)
+- &= (and_eq)
 
-- & (bitand)
+- & (BITAND)
 
-- &#124; (bitor)
+- &#124; (BITOR)
 
-- ~ (compl)
+- ~ (compl ()
 
-- ! (not)
+- ! pas
 
-- != (not_eq)
+- ! = (not_eq)
 
 - &#124;&#124; (or)
 
 - &#124;= (or_eq)
 
-- ^ (xor)
+- ^ (XOR)
 
 - ^ = (xor_eq)
 
-## <a name="address-of-string-literal-has-type-const-char--not-const-char--"></a>Adresse du littéral de chaîne est de type const char [], non const char (*)]
+## <a name="address-of-string-literal-has-type-const-char--not-const-char--"></a>L’adresse du littéral de chaîne a le type const char [], et non const char (*) []
 
-L’exemple suivant génère `char const (*)[4]` sous **/Za**, mais `char const [4]` sous **/Ze**.
+L’exemple suivant génère une sortie `char const (*)[4]` sous **/za**, mais `char const [4]` sous **/Ze**.
 
 ```cpp
 #include <stdio.h>
@@ -300,6 +300,6 @@ int main()
 
 ## <a name="see-also"></a>Voir aussi
 
-- [/Za, /Ze (Désactiver les extensions de langage)](za-ze-disable-language-extensions.md)
+- [/Za,/Ze (désactiver les extensions de langage)](za-ze-disable-language-extensions.md)
 - [Options du compilateur MSVC](compiler-options.md)
 - [Syntaxe de la ligne de commande du compilateur MSVC](compiler-command-line-syntax.md)

@@ -6,16 +6,16 @@ f1_keywords:
 - math/signbit
 helpviewer_keywords:
 - signbit function
-ms.openlocfilehash: ce2f632f11296bf71036011a57f242365951d7f2
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 7f8399c16d2abc70a50740b0629bc5d9b3a1f067
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62356327"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87216737"
 ---
 # <a name="signbit"></a>signbit
 
-Détermine si une valeur à virgule flottante est négatif.
+Détermine si une valeur à virgule flottante est négative.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -42,21 +42,21 @@ inline bool signbit(
 *x*<br/>
 Valeur à virgule flottante à tester.
 
-## <a name="return-value"></a>Valeur de retour
+## <a name="return-value"></a>Valeur retournée
 
-**signbit** retourne une valeur différente de zéro (**true** en C++) si l’argument *x* est l’infini négatif ou négatif. Elle retourne 0 (**false** en C++) si l’argument est négatif, positif infini ou une valeur NAN.
+**signbit,** retourne une valeur différente de zéro ( **`true`** en C++) si l’argument *x* est un infini négatif ou négatif. Elle retourne 0 ( **`false`** en C++) si l’argument n’est pas négatif, l’infini positif ou une valeur NaN.
 
 ## <a name="remarks"></a>Notes
 
-**signbit** est une macro lors de la compilation en tant que C et une fonction surchargée lors de la compilation en C++.
+**signbit,** est une macro qui est compilée en tant que C, et une fonction inline surchargée lorsqu’elle est compilée en C++.
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
 |Fonction|En-tête requis (C)|En-tête requis (C++)|
 |--------------|---------------------------|-------------------------------|
 |**signbit**|\<math.h>|\<math.h> ou \<cmath>|
 
-Pour plus d'informations sur la compatibilité, voir [Compatibilité](../../c-runtime-library/compatibility.md).
+Pour plus d’informations sur la compatibilité, consultez [Compatibility](../../c-runtime-library/compatibility.md).
 
 ## <a name="see-also"></a>Voir aussi
 

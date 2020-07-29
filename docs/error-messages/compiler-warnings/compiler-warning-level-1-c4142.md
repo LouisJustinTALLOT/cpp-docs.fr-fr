@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C4142
 ms.assetid: 1fdfc3dc-60a2-4f00-b133-20e400f9b7a6
-ms.openlocfilehash: c1721d472c81c62ba01282f43c7e678d7f84206b
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 3c9ab9c22d41e7732c86d43f5c6b4f09c50bbda8
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80200081"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87196849"
 ---
 # <a name="compiler-warning-level-1-c4142"></a>Avertissement du compilateur (niveau 1) C4142
 
@@ -23,7 +23,7 @@ Les causes possibles sont les suivantes :
 
 - Une fonction membre d’une classe dérivée a un type de retour différent de la fonction membre correspondante de la classe de base.
 
-- Un type défini avec la commande `typedef` est redéfini à l’aide d’une syntaxe différente.
+- Un type défini avec la **`typedef`** commande est redéfini à l’aide d’une syntaxe différente.
 
 L’exemple suivant génère l’C4142 :
 

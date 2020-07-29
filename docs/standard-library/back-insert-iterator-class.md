@@ -10,12 +10,12 @@ helpviewer_keywords:
 - std::back_insert_iterator [C++], container_type
 - std::back_insert_iterator [C++], reference
 ms.assetid: a1ee07f2-cf9f-46a1-8608-cfaf207f9713
-ms.openlocfilehash: c3bbb2ec8ce9a09dd17c4744a80913f95d85bd00
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 0a518253c28d89de6eeed51e152e11bfcb8bb969
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81376912"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87203878"
 ---
 # <a name="back_insert_iterator-class"></a>back_insert_iterator, classe
 
@@ -54,17 +54,17 @@ Le conteneur doit répondre aux exigences d’une insertion de fin de séquence 
 
 |Opérateur|Description|
 |-|-|
-|[opérateur](#op_star)|Opérateur de report utilisé pour implémenter \* `i`  =  `x` l’expression itérateur de sortie pour une insertion de dos.|
-|[opérateur](#op_add_add)|Incrémente le `back_insert_iterator` à l'emplacement suivant où une valeur peut être stockée.|
-|[opérateur](#op_eq)|Opérateur d’affectation utilisé pour implémenter l’expression \* `i`  =  `x` itérateur de sortie pour une insertion de dos.|
+|[and](#op_star)|Opérateur de suppression de référence utilisé pour implémenter l’expression \* `i`  =  `x` d’itérateur de sortie pour une insertion de retour.|
+|[opérateur + +](#op_add_add)|Incrémente le `back_insert_iterator` à l'emplacement suivant où une valeur peut être stockée.|
+|[opérateur =](#op_eq)|Opérateur d’assignation utilisé pour implémenter l’expression \* `i`  =  `x` d’itérateur de sortie pour une insertion de retour.|
 
 ## <a name="requirements"></a>Spécifications
 
-**En-tête**: \<itérateur>
+**En-tête**:\<iterator>
 
 **Espace de noms :** std
 
-## <a name="back_insert_iteratorback_insert_iterator"></a><a name="back_insert_iterator"></a>back_insert_iterator::back_insert_iterator
+## <a name="back_insert_iteratorback_insert_iterator"></a><a name="back_insert_iterator"></a>back_insert_iterator :: back_insert_iterator
 
 Construit `back_insert_iterator` qui insère des éléments après le dernier élément d'un conteneur.
 
@@ -129,7 +129,7 @@ The initial vector vec is: ( 1 2 3 ).
 After the insertions, the vector vec is: ( 1 2 3 40 50 600 700 ).
 ```
 
-## <a name="back_insert_iteratorcontainer_type"></a><a name="container_type"></a>back_insert_iterator::container_type
+## <a name="back_insert_iteratorcontainer_type"></a><a name="container_type"></a>back_insert_iterator :: container_type
 
 Type qui fournit un conteneur pour le `back_insert_iterator`.
 
@@ -183,9 +183,9 @@ The original vector vec is: ( 1 2 3 ).
 After the insertion, the vector is: ( 1 2 3 40 ).
 ```
 
-## <a name="back_insert_iteratoroperator"></a><a name="op_star"></a>back_insert_iterator::opérateur\*
+## <a name="back_insert_iteratoroperator"></a><a name="op_star"></a>back_insert_iterator ::, opérateur\*
 
-Opérateur de report utilisé pour implémenter \* l’expression itérateur de sortie *i* = *x*.
+Opérateur de suppression de référence utilisé pour implémenter l’expression d’itérateur de sortie \* *i*  =  *x*.
 
 ```cpp
 back_insert_iterator<Container>& operator*();
@@ -197,7 +197,7 @@ Référence à l’élément inséré à la fin du conteneur.
 
 ### <a name="remarks"></a>Notes
 
-Utilisé pour implémenter la**valeur** ** \*Iterator expression iterator** = de sortie . Si **Iter** est un itérateur qui cible un élément dans une séquence, alors **\*Iter** = **value** remplace cet élément par value et ne change pas le nombre total d’éléments dans la séquence.
+Utilisé pour implémenter la valeur d' ** \* ITER**de l’expression d’itérateur de sortie  =  **value**. Si **Iter** est un itérateur qui cible un élément dans une séquence, alors **\*Iter** = **value** remplace cet élément par value et ne change pas le nombre total d’éléments dans la séquence.
 
 ### <a name="example"></a>Exemple
 
@@ -243,7 +243,7 @@ The vector vec is: ( 1 2 3 ).
 After the insertions, the vector vec becomes: ( 1 2 3 10 20 ).
 ```
 
-## <a name="back_insert_iteratoroperator"></a><a name="op_add_add"></a>back_insert_iterator ::opérateur
+## <a name="back_insert_iteratoroperator"></a><a name="op_add_add"></a>back_insert_iterator :: Operator + +
 
 Incrémente le `back_insert_iterator` à l'emplacement suivant où une valeur peut être stockée.
 
@@ -304,7 +304,7 @@ The vector vec is: ( 10 20 ).
 After the insertions, the vector vec becomes: ( 10 20 30 40 ).
 ```
 
-## <a name="back_insert_iteratoroperator"></a><a name="op_eq"></a>back_insert_iterator::opérateur
+## <a name="back_insert_iteratoroperator"></a><a name="op_eq"></a>back_insert_iterator :: Operator =
 
 Ajoute ou pousse une valeur à la fin d’un conteneur.
 
@@ -315,7 +315,7 @@ back_insert_iterator<Container>& operator=(typename Container::value_type&& val)
 
 ### <a name="parameters"></a>Paramètres
 
-*Val*\
+*multiples*\
 Valeur à insérer dans le conteneur.
 
 ### <a name="return-value"></a>Valeur de retour
@@ -326,11 +326,11 @@ Référence au dernier élément inséré à la fin du conteneur.
 
 Le premier opérateur membre évalue `Container.push_back( val)`,
 
-puis retourne `*this`. Le deuxième opérateur membre évalue
+retourne ensuite **`*this`** . Le deuxième opérateur membre évalue
 
 `container->push_back((typename Container::value_type&&)val)`,
 
-puis retourne `*this`.
+retourne ensuite **`*this`** .
 
 ### <a name="example"></a>Exemple
 
@@ -371,7 +371,7 @@ int main( )
 }
 ```
 
-## <a name="back_insert_iteratorreference"></a><a name="reference"></a>back_insert_iterator::référence
+## <a name="back_insert_iteratorreference"></a><a name="reference"></a>back_insert_iterator :: référence
 
 Type qui fournit une référence pour le `back_insert_iterator`.
 
@@ -423,6 +423,6 @@ The last element in the vector vec is: 3.
 
 ## <a name="see-also"></a>Voir aussi
 
-[\<itérateur>](../standard-library/iterator.md)\
-[Sécurité des fils dans la bibliothèque standard de CMD](../standard-library/thread-safety-in-the-cpp-standard-library.md)\
-[Référence de bibliothèque standard de CMD](../standard-library/cpp-standard-library-reference.md)
+[\<iterator>](../standard-library/iterator.md)\
+[Sécurité des threads dans la bibliothèque C++ standard](../standard-library/thread-safety-in-the-cpp-standard-library.md)\
+[Informations de référence sur la bibliothèque C++ standard](../standard-library/cpp-standard-library-reference.md)

@@ -1,17 +1,17 @@
 ---
-title: registration_script (C++ attribut com)
+title: registration_script (attribut COM C++)
 ms.date: 10/02/2018
 f1_keywords:
 - vc-attr.registration_script
 helpviewer_keywords:
 - registration_script attribute
 ms.assetid: 786f8072-9187-4163-a979-7a604dd4c888
-ms.openlocfilehash: 780f3d41676d01458f47542d6f0862a278edff6a
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 53b5cb0cb36d9d6627f16f99cbb0d142af8cee6d
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80214576"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87217218"
 ---
 # <a name="registration_script"></a>registration_script
 
@@ -25,8 +25,8 @@ Exécute le script d’inscription personnalisé spécifié.
 
 ### <a name="parameters"></a>Paramètres
 
-*conseils*<br/>
-Chemin d’accès complet à un fichier de script d’inscription personnalisé (. RGS). La valeur **None**, par exemple `script = "none"`, indique que la coclasse n’a pas de spécifications d’inscription.
+*script*<br/>
+Chemin d’accès complet à un fichier de script d’inscription personnalisé (. RGS). La valeur **None**, par exemple `script = "none"` , indique que la coclasse n’a pas de spécifications d’inscription.
 
 ## <a name="remarks"></a>Notes
 
@@ -63,9 +63,9 @@ class CMyClass:public IFace {};
 
 |||
 |-|-|
-|**S'applique à**|**classe**, **struct**|
-|**Renouvelable**|Non|
-|**Attributs requis**|Une ou plusieurs des valeurs suivantes : `coclass`, `progid`ou `vi_progid`.|
+|**S’applique à**|**`class`**, **`struct`**|
+|**Repeatable Read**|Non|
+|**Attributs requis**|Une ou plusieurs des valeurs suivantes : `coclass` , `progid` ou `vi_progid` .|
 |**Attributs non valides**|None|
 
 Pour plus d'informations sur les contextes d'attribut, consultez [Contextes d'attribut](cpp-attributes-com-net.md#contexts).

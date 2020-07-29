@@ -1,21 +1,21 @@
 ---
-title: Implements (attribut de COM C++)
+title: Implements (attribut COM C++)
 ms.date: 10/02/2018
 f1_keywords:
 - vc-attr.implements
 helpviewer_keywords:
 - implements attribute
 ms.assetid: 9cf0858b-cb7d-4d3c-81a6-97d87ed00d25
-ms.openlocfilehash: 9425f998f0e8fbe5f16e6eb136e00ba3fb7bd5d9
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: e9e2d8f0bea26579fa40cf0e5d8d053b913ef318
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62409378"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87217231"
 ---
 # <a name="implements-c"></a>implements (C++)
 
-Spécifie les interfaces de dispatch obligés d’être membres de la coclasse IDL.
+Spécifie les interfaces de dispatch qui sont forcées à être membres de la coclasse IDL.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -27,33 +27,33 @@ Spécifie les interfaces de dispatch obligés d’être membres de la coclasse I
 ### <a name="parameters"></a>Paramètres
 
 *interfaces*<br/>
-Liste des interfaces qui sera un membre de la coclasse IDL séparés par une virgule. Est une méthode abrégée permettant de spécifier une seule interface **implémente (** *interface_name* **)**.
+Liste séparée par des virgules des interfaces qui seront membres de la coclasse IDL. Une méthode sténographique pour spécifier une interface unique est **Implements (** *INTERFACE_NAME* **)**.
 
 *dispinterfaces*<br/>
-Liste de la dispinterface qui sera un membre de la coclasse IDL séparés par une virgule. Est une méthode abrégée permettant de spécifier une dispinterface unique **implémente (dispinterfaces =** *dispinterface_name* **)**.
+Liste séparée par des virgules de la dispinterface qui sera membre de la coclasse IDL. Une méthode sténographique pour spécifier une dispinterface unique est **Implements (dispinterfaces =** *dispinterface_name* **)**.
 
 ## <a name="remarks"></a>Notes
 
-Par défaut, les classes de base des seules interfaces COM qui sont le `coclass` sont ajoutés dans la coclasse IDL. **implémente** vous permet de forcer les autres interfaces IDL `coclass` membres.
+Par défaut, seules les interfaces COM qui sont des classes de base de `coclass` sont ajoutées à la coclasse IDL. **Implements** vous permet de forcer d’autres interfaces comme des `coclass` membres IDL.
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
 ### <a name="attribute-context"></a>Contexte d'attribut
 
 |||
 |-|-|
-|**S'applique à**|**class**, **struct**|
-|**Renouvelable**|Oui|
-|**Attributs requis**|Aucun.|
-|**Attributs non valides**|Aucun.|
+|**S’applique à**|**`class`**, **`struct`**|
+|**Repeatable Read**|Oui|
+|**Attributs requis**|None|
+|**Attributs non valides**|None|
 
 Pour plus d'informations, consultez [Contextes d'attribut](cpp-attributes-com-net.md#contexts).
 
 ## <a name="example"></a>Exemple
 
-L’exemple suivant se fait en trois parties : un fichier .idl et son fichier .h associé et un fichier C++.
+L’exemple suivant se trouve en trois parties : un fichier. idl et son fichier. h associé, et un fichier C++.
 
-Supposons que le fichier .idl suivant, qui sera disponible pour le compilateur.
+Supposons le fichier. idl suivant, qui sera disponible pour le compilateur.
 
 ```
 // attr_implements.idl
@@ -101,7 +101,7 @@ library odod
 
 ## <a name="example"></a>Exemple
 
-Et le fichier .h suivant, qui doit également être disponibles pour le compilateur.
+Et le fichier. h suivant, qui doit également être disponible pour le compilateur.
 
 ```cpp
 // attr_implements.h
@@ -381,7 +381,7 @@ CBar;
 
 ## <a name="example"></a>Exemple
 
-Dans le programme suivant, sans implémente, `IBar1`, `IBar2`, et `ISna` ne sera pas dans le `coclass` dans le fichier IDL généré.
+Dans le programme suivant, sans implémente, `IBar1` , `IBar2` et ne se trouve `ISna` pas dans le `coclass` dans le IDL généré.
 
 ```cpp
 // attr_implements.cpp
@@ -486,5 +486,5 @@ public:
 
 ## <a name="see-also"></a>Voir aussi
 
-[Attributs de compilateur](compiler-attributes.md)<br/>
+[Attributs du compilateur](compiler-attributes.md)<br/>
 [Attributs de classe](class-attributes.md)

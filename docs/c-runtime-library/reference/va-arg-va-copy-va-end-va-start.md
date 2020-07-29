@@ -40,12 +40,12 @@ helpviewer_keywords:
 - va_alist macro
 - va_copy macro
 ms.assetid: a700dbbd-bfe5-4077-87b6-3a07af74a907
-ms.openlocfilehash: 47bd9e3913c6664a52c970dd8a190636683d214e
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: d35cf3aea99b7e832afb7d2a8e0aaa9d008226fa
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70957365"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87231284"
 ---
 # <a name="va_arg-va_copy-va_end-va_start"></a>va_arg, va_copy, va_end, va_start
 
@@ -97,17 +97,17 @@ Paramètre qui précède le premier argument facultatif.
 
 ## <a name="remarks"></a>Notes
 
-Les macros **va_arg**, **va_copy**, **va_end**et **va_start** offrent un moyen portable d’accéder aux arguments d’une fonction lorsque la fonction accepte un nombre variable d’arguments. Il existe deux versions des macros : Macros définies dans STDARG. H conforme à la norme ISO C99 ; macros définies dans VARARGS. H sont dépréciées, mais sont conservées pour la compatibilité descendante avec le code qui a été écrit avant la norme ANSI C89.
+Les macros **va_arg**, **va_copy**, **va_end**et **va_start** offrent un moyen portable d’accéder aux arguments d’une fonction lorsque la fonction accepte un nombre variable d’arguments. Il existe deux versions de ces macros : les macros définies dans STDARG.H, qui sont conformes à la norme ISO C99, et les macros définies dans VARARGS.H qui, bien que dépréciées, sont conservées pour des besoins de compatibilité descendante avec le code qui a été écrit avant la norme ANSI C89.
 
 Ces macros considèrent que la fonction accepte un nombre fixe d’arguments obligatoires, suivi d’un nombre variable d’arguments facultatifs. Les arguments obligatoires sont déclarés à la fonction en tant que paramètres ordinaires et sont accessibles via les noms des paramètres. Les arguments facultatifs sont accessibles via les macros contenues dans STDARG.H (ou dans VARARGS.H pour le code qui a été écrit avant la norme ANSI C89). Ils définissent le pointeur désignant le premier argument facultatif de la liste d’arguments, récupère les arguments de la liste et réinitialise le pointeur dès que le traitement de l’argument est terminé.
 
 Les macros standard C, définies dans STDARG.H, sont utilisées comme suit :
 
-- **va_start** définit *arg_ptr* sur le premier argument facultatif de la liste d’arguments passée à la fonction. L’argument *arg_ptr* doit avoir le type **va_list** . L’argument *prev_param* est le nom du paramètre requis qui précède immédiatement le premier argument facultatif dans la liste d’arguments. Si *prev_param* est déclaré avec la classe de stockage Register, le comportement de la macro n’est pas défini. **va_start** doit être utilisé avant que **va_arg** soit utilisé pour la première fois.
+- **va_start** définit *arg_ptr* sur le premier argument facultatif de la liste d’arguments passée à la fonction. L’argument *arg_ptr* doit avoir le type **va_list** . L’argument *prev_param* est le nom du paramètre requis qui précède immédiatement le premier argument facultatif dans la liste d’arguments. Si *prev_param* est déclarée avec la classe de stockage Register, le comportement de la macro n’est pas défini. **va_start** doit être utilisé avant que **va_arg** soit utilisé pour la première fois.
 
-- **va_arg** récupère une valeur de *type* à partir de l’emplacement donné par *arg_ptr*, et incrémente *arg_ptr* pour pointer vers l’argument suivant dans la liste en utilisant la taille du *type* pour déterminer l’emplacement où commence l’argument suivant. **va_arg** peut être utilisé un nombre quelconque de fois dans la fonction pour récupérer des arguments de la liste.
+- **va_arg** récupère une valeur de *type* à partir de l’emplacement donné par *arg_ptr*, et incrémente *arg_ptr* pour pointer vers l’argument suivant dans la liste en utilisant la taille du *type* pour déterminer où commence l’argument suivant. **va_arg** pouvez utiliser un nombre quelconque de fois dans la fonction pour récupérer des arguments de la liste.
 
-- **va_copy** effectue une copie d’une liste d’arguments dans son état actuel. Le paramètre *src* doit déjà être initialisé avec **va_start**; elle a peut-être été mise à jour avec des appels **va_arg** , mais elle ne doit pas avoir été réinitialisée avec **va_end**. L’argument suivant récupéré par **va_arg** à partir de *dest* est le même que l’argument suivant extrait de *src*.
+- **va_copy** effectue une copie d’une liste d’arguments dans son état actuel. Le paramètre *src* doit déjà être initialisé avec **va_start**; elle a peut-être été mise à jour avec des appels de **va_arg** , mais elle ne doit pas avoir été réinitialisée avec **va_end**. L’argument suivant extrait par **va_arg** de *dest* est le même que l’argument suivant extrait de *src*.
 
 - Une fois tous les arguments récupérés, **va_end** réinitialise le pointeur à la **valeur null**. **va_end** doit être appelé sur chaque liste d’arguments initialisée avec **va_start** ou **va_copy** avant le retour de la fonction.
 
@@ -146,7 +146,7 @@ int main()
 }
 ```
 
-Notez que **testit** s’attend à ce que le deuxième paramètre soit un **entier** ou un **caractère**<strong>\*</strong>. Les arguments passés sont 0xFFFFFFFF (un **int**non **signé** , et non un **int**) et **null** (en fait un **entier**, et non un **caractère**<strong>\*</strong>). Quand le programme est compilé pour du code natif, il génère cette sortie :
+Notez que **testit** s’attend à ce que le deuxième paramètre soit un **`int`** ou un **`char*`** . Les arguments passés sont 0xFFFFFFFF (un **`unsigned int`** , et non un **`int`** ) et **null** (en fait un **`int`** , et non un **`char*`** ). Quand le programme est compilé pour du code natif, il génère cette sortie :
 
 ```Output
 -1
@@ -154,11 +154,11 @@ Notez que **testit** s’attend à ce que le deuxième paramètre soit un **enti
 (null)
 ```
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
-**En-tête :** \<stdio.h> et \<stdarg.h>
+**En-tête :** \<stdio.h> les\<stdarg.h>
 
-**En-tête obsolète :** \<varargs.h>
+**En-tête déconseillé :**\<varargs.h>
 
 ## <a name="libraries"></a>Bibliothèques
 
@@ -231,5 +231,5 @@ Deviation is: 0.000000
 
 ## <a name="see-also"></a>Voir aussi
 
-[Accès à un argument](../../c-runtime-library/argument-access.md)<br/>
+[Accès aux arguments](../../c-runtime-library/argument-access.md)<br/>
 [vfprintf, _vfprintf_l, vfwprintf, _vfwprintf_l](vfprintf-vfprintf-l-vfwprintf-vfwprintf-l.md)<br/>

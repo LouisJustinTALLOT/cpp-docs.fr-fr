@@ -5,12 +5,12 @@ f1_keywords:
 - allocators/std::operator!=
 - allocators/std::operator==
 ms.assetid: b55d67cb-3c69-46bf-ad40-e845fb096c4e
-ms.openlocfilehash: a21708ca090b0db561391308f347d90b77c62645
-ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
+ms.openlocfilehash: 7d22e550c7054c2197163f2edf829ec17a85a145
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84623572"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87204558"
 ---
 # <a name="ltallocatorsgt-operators"></a>&lt;allocators&gt;, opérateurs
 
@@ -38,9 +38,9 @@ bool operator!=(
 |*gauche*|Un des objets allocateur dont l’inégalité doit être vérifiée.|
 |*Oui*|Un des objets allocateur dont l’inégalité doit être vérifiée.|
 
-### <a name="return-value"></a>Valeur renvoyée
+### <a name="return-value"></a>Valeur de retour
 
-**true** si les objets allocateur ne sont pas égaux ; **false** si les objets allocateur sont égaux.
+**`true`** Si les objets allocateur ne sont pas égaux ; **`false`** si les objets allocateur sont égaux.
 
 ### <a name="remarks"></a>Notes
 
@@ -64,9 +64,9 @@ bool operator==(
 |*gauche*|Un des objets allocateur dont l’égalité doit être vérifiée.|
 |*Oui*|Un des objets allocateur dont l’égalité doit être vérifiée.|
 
-### <a name="return-value"></a>Valeur renvoyée
+### <a name="return-value"></a>Valeur de retour
 
-**true** si les objets allocateur sont égaux ; **false** si les objets allocateur ne sont pas égaux.
+**`true`** Si les objets allocateur sont égaux ; **`false`** si les objets allocateurs ne sont pas égaux.
 
 ### <a name="remarks"></a>Notes
 

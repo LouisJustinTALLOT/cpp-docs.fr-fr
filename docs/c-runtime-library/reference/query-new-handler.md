@@ -28,12 +28,12 @@ helpviewer_keywords:
 - error handling
 - _query_new_handler function
 ms.assetid: 9a84b5c3-fe33-4c01-83a0-be87dc3ec518
-ms.openlocfilehash: 0cbd434ee0b75f78a2492bd6239bd89f584215ff
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 9c87a63a9ed94eb1473230aedb5e9c17fcc6410b
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70949698"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87216841"
 ---
 # <a name="_query_new_handler"></a>_query_new_handler
 
@@ -49,19 +49,19 @@ _PNH _query_new_handler(
 
 ## <a name="return-value"></a>Valeur de retour
 
-Retourne l’adresse de la routine de nouveau gestionnaire actuelle telle que définie par **_set_new_handler**.
+Retourne l’adresse de la routine actuelle du nouveau gestionnaire telle qu’elle est définie par **_set_new_handler**.
 
 ## <a name="remarks"></a>Notes
 
-La C++ fonction **_query_new_handler** retourne l’adresse de la fonction de gestion des exceptions actuelle définie par C++ la fonction [_set_new_handler](set-new-handler.md) . **_set_new_handler** est utilisé pour spécifier une fonction de gestion des exceptions qui doit prendre le contrôle si l’opérateur **New** ne parvient pas à allouer de la mémoire. Pour plus d’informations, consultez la description des [opérateurs new et delete](../../cpp/new-and-delete-operators.md) dans la Référence du langage C++.
+La fonction de **_Query_new_handler** c++ retourne l’adresse de la fonction de gestion des exceptions actuelle définie par la fonction de [_set_new_handler](set-new-handler.md) c++. **_set_new_handler** est utilisé pour spécifier une fonction de gestion des exceptions qui doit prendre le contrôle si l' **`new`** opérateur ne parvient pas à allouer de la mémoire. Pour plus d’informations, consultez la description des [opérateurs new et delete](../../cpp/new-and-delete-operators.md) dans la Référence du langage C++.
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
 |Routine|En-tête requis|
 |-------------|---------------------|
 |**_query_new_handler**|\<new.h>|
 
-Pour plus d'informations sur la compatibilité, voir [Compatibilité](../../c-runtime-library/compatibility.md).
+Pour plus d’informations sur la compatibilité, consultez [Compatibility](../../c-runtime-library/compatibility.md).
 
 ## <a name="libraries"></a>Bibliothèques
 
@@ -70,4 +70,4 @@ Toutes les versions des [bibliothèques Runtime C](../../c-runtime-library/crt-l
 ## <a name="see-also"></a>Voir aussi
 
 [Allocation de mémoire](../../c-runtime-library/memory-allocation.md)<br/>
-[free](free.md)<br/>
+[Gratuit](free.md)<br/>

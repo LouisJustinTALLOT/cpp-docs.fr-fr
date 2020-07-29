@@ -27,12 +27,12 @@ helpviewer_keywords:
 - handler modes
 - _query_new_mode function
 ms.assetid: e185c5f9-b73b-4257-8eff-b47648374768
-ms.openlocfilehash: 59724dafdc6488596478d0b44b254c4f498fce99
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 26fabc71337f1554b63909697b601a0bd9e86638
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70950112"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87216828"
 ---
 # <a name="_query_new_mode"></a>_query_new_mode
 
@@ -52,15 +52,15 @@ Retourne le nouveau mode de gestionnaire actuel, à savoir 0 ou 1, pour **malloc
 
 ## <a name="remarks"></a>Notes
 
-La C++ fonction **_query_new_mode** retourne un entier qui indique le nouveau mode de gestionnaire défini par C++ la fonction [_set_new_mode](set-new-mode.md) pour [malloc](malloc.md). Le nouveau mode de gestionnaire indique si, en cas d’échec d’allocation de mémoire, **malloc** doit appeler la routine de nouveau gestionnaire telle qu’elle est définie par [_set_new_handler](set-new-handler.md). Par défaut, **malloc** n’appelle pas la routine de nouveau gestionnaire en cas d’échec. Vous pouvez utiliser **_set_new_mode** pour remplacer ce comportement afin que l’opérateur **malloc** appelle la routine de nouveau gestionnaire de la même façon que le **nouvel** opérateur lorsqu’il ne parvient pas à allouer de la mémoire. Pour plus d’informations, consultez la description des [opérateurs new et delete](../../cpp/new-and-delete-operators.md) dans la Référence du langage C++.
+La fonction de **_Query_new_mode** c++ retourne un entier qui indique le nouveau mode de gestionnaire défini par la fonction de [_set_new_mode](set-new-mode.md) c++ pour [malloc](malloc.md). Le nouveau mode de gestionnaire indique si, en cas d’échec d’allocation de mémoire, **malloc** doit appeler la routine de nouveau gestionnaire telle qu’elle est définie par [_set_new_handler](set-new-handler.md). Par défaut, **malloc** n’appelle pas la routine de nouveau gestionnaire en cas d’échec. Vous pouvez utiliser **_set_new_mode** pour remplacer ce comportement afin que l’opérateur **malloc** appelle la routine de nouveau gestionnaire de la même façon que l' **`new`** opérateur quand il ne parvient pas à allouer de la mémoire. Pour plus d’informations, consultez la description des [opérateurs new et delete](../../cpp/new-and-delete-operators.md) dans la Référence du langage C++.
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
 |Routine|En-tête requis|
 |-------------|---------------------|
 |**_query_new_mode**|\<new.h>|
 
-Pour plus d'informations sur la compatibilité, voir [Compatibilité](../../c-runtime-library/compatibility.md).
+Pour plus d’informations sur la compatibilité, consultez [Compatibility](../../c-runtime-library/compatibility.md).
 
 ## <a name="libraries"></a>Bibliothèques
 
@@ -70,6 +70,6 @@ Toutes les versions des [bibliothèques Runtime C](../../c-runtime-library/crt-l
 
 [Allocation de mémoire](../../c-runtime-library/memory-allocation.md)<br/>
 [calloc](calloc.md)<br/>
-[free](free.md)<br/>
+[Gratuit](free.md)<br/>
 [realloc](realloc.md)<br/>
 [_query_new_handler](query-new-handler.md)<br/>

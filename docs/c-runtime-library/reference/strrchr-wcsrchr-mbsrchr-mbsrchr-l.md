@@ -48,12 +48,12 @@ helpviewer_keywords:
 - _ftcsrchr function
 - _mbsrchr_l function
 ms.assetid: 75cf2664-758e-49bb-bf6b-8a139cd474d2
-ms.openlocfilehash: 2475eab34c6a18b3dc7a8a15145c184cea543aee
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: d1350cf14df0c87d57a87ad3aced35e3887b6676
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82911156"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87231297"
 ---
 # <a name="strrchr-wcsrchr-_mbsrchr-_mbsrchr_l"></a>strrchr, wcsrchr, _mbsrchr, _mbsrchr_l
 
@@ -120,7 +120,7 @@ const unsigned char *_mbsrchr_l(
 
 ### <a name="parameters"></a>Paramètres
 
-*Str*<br/>
+*str*<br/>
 Chaîne terminée par Null à trouver.
 
 *secteur*<br/>
@@ -133,15 +133,15 @@ Paramètres régionaux à utiliser.
 
 Retourne un pointeur vers la dernière occurrence de *c* dans *Str*, ou null si *c* est introuvable.
 
-## <a name="remarks"></a>Notes 
+## <a name="remarks"></a>Notes
 
-La `strrchr` fonction recherche la dernière occurrence de *c* (convertie en **char**) dans *Str*. La recherche inclut le caractère Null de fin.
+La `strrchr` fonction recherche la dernière occurrence de *c* (convertie en **`char`** ) dans *Str*. La recherche inclut le caractère Null de fin.
 
 `wcsrchr` et `_mbsrchr` sont des versions à caractères larges et à caractères multioctets de `strrchr`. Les arguments et la valeur de retour de `wcsrchr` sont des chaînes de caractères larges ; ceux de `_mbsrchr` sont des chaînes de caractères multioctets.
 
-En C, ces fonctions acceptent un pointeur **const** pour le premier argument. En C++, deux surcharges sont disponibles. La surcharge qui prend un pointeur vers **const** retourne un pointeur vers **const**; la version qui accepte un pointeur vers non**const** retourne un pointeur vers non**const**. La macro _CRT_CONST_CORRECT_OVERLOADS est définie si les versions **const** et non**const** de ces fonctions sont disponibles. Si vous avez besoin du comportement non**const** pour les deux surcharges C++, définissez le symbole _CONST_RETURN.
+En C, ces fonctions acceptent un **`const`** pointeur pour le premier argument. En C++, deux surcharges sont disponibles. La surcharge qui prend un pointeur vers **`const`** retourne un pointeur vers **`const`** ; la version qui accepte un pointeur vers non- **`const`** retourne un pointeur vers non- **`const`** . La macro _CRT_CONST_CORRECT_OVERLOADS est définie si les **`const`** versions et non- **`const`** de ces fonctions sont disponibles. Si vous avez besoin du non- **`const`** comportement pour les deux surcharges C++, définissez le symbole _CONST_RETURN.
 
-`_mbsrchr` valide ses paramètres. Si *Str* a la valeur null, le gestionnaire de paramètres non valides est appelé, comme décrit dans [validation de paramètre](../../c-runtime-library/parameter-validation.md). Si l’exécution est autorisée à se `errno` poursuivre, a la valeur `_mbsrchr` EINVAL et retourne 0. `strrchr` et `wcsrchr` ne vérifient pas leurs paramètres. Ces trois fonctions se comportent sinon de façon identique.
+`_mbsrchr` valide ses paramètres. Si *Str* a la valeur null, le gestionnaire de paramètres non valides est appelé, comme décrit dans [validation de paramètre](../../c-runtime-library/parameter-validation.md). Si l’exécution est autorisée à se poursuivre, `errno` a la valeur EINVAL et `_mbsrchr` retourne 0. `strrchr` et `wcsrchr` ne vérifient pas leurs paramètres. Ces trois fonctions se comportent sinon de façon identique.
 
 La valeur de sortie est affectée par la valeur du paramètre de catégorie LC_CTYPE des paramètres régionaux. Pour plus d’informations, consultez [setlocale](setlocale-wsetlocale.md). Les versions de ces fonctions sans le suffixe **_l** utilisent les paramètres régionaux pour ce comportement dépendant des paramètres régionaux ; les versions avec le suffixe **_l** sont identiques, sauf qu’elles utilisent à la place les paramètres régionaux transmis. Pour plus d’informations, consultez [Locale](../../c-runtime-library/locale.md).
 
@@ -164,7 +164,7 @@ Par défaut, l’état global de cette fonction est limité à l’application. 
 
 Pour plus d’informations sur la compatibilité, consultez [Compatibility](../../c-runtime-library/compatibility.md).
 
-## <a name="example"></a> Exemple
+## <a name="example"></a>Exemple
 
 Pour obtenir un exemple d’utilisation de `strrchr`, consultez [cerr](strchr-wcschr-mbschr-mbschr-l.md).
 

@@ -50,12 +50,12 @@ helpviewer_keywords:
 - _mbspbrk function
 - mbspbrk_l function
 ms.assetid: 80b504f7-a167-4dde-97ad-4ae3000dc810
-ms.openlocfilehash: 507f6b99416cd59c3a0383e3e41a7ae26c44b019
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: fbde746cba02605be7fa42e941a30bfa02d0561a
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82911183"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87231310"
 ---
 # <a name="strpbrk-wcspbrk-_mbspbrk-_mbspbrk_l"></a>strpbrk, wcspbrk, _mbspbrk, _mbspbrk_l
 
@@ -122,7 +122,7 @@ const unsigned char *_mbspbrk_l(
 
 ### <a name="parameters"></a>Paramètres
 
-*Str*<br/>
+*str*<br/>
 Chaîne se terminant par un caractère Null faisant l’objet de la recherche.
 
 *strCharSet*<br/>
@@ -135,17 +135,17 @@ Paramètres régionaux à utiliser.
 
 Retourne un pointeur vers la première occurrence d’un caractère de *strCharSet* dans *Str*, ou un pointeur null si les deux arguments de chaîne n’ont pas de caractères en commun.
 
-## <a name="remarks"></a>Notes 
+## <a name="remarks"></a>Notes
 
 La `strpbrk` fonction retourne un pointeur vers la première occurrence d’un caractère dans *Str* qui appartient au jeu de caractères dans *strCharSet*. La recherche n’inclut pas le caractère Null de fin.
 
 `wcspbrk` et `_mbspbrk` sont des versions à caractères larges et à caractères multioctets de `strpbrk`. Les arguments et la valeur de retour de `wcspbrk` sont des chaînes de caractères larges ; ceux de `_mbspbrk` sont des chaînes de caractères multioctets.
 
-`_mbspbrk` valide ses paramètres. Si *Str* ou *strCharSet* a la valeur null, le gestionnaire de paramètres non valides est appelé, comme décrit dans [validation de paramètre](../../c-runtime-library/parameter-validation.md). Si l’exécution est autorisée à se `_mbspbrk` poursuivre, retourne null `errno` et définit sur EINVAL. `strpbrk` et `wcspbrk` ne vérifient pas leurs paramètres. Ces trois fonctions se comportent sinon de façon identique.
+`_mbspbrk` valide ses paramètres. Si *Str* ou *strCharSet* a la valeur null, le gestionnaire de paramètres non valides est appelé, comme décrit dans [validation de paramètre](../../c-runtime-library/parameter-validation.md). Si l’exécution est autorisée à se poursuivre, `_mbspbrk` retourne null et définit `errno` sur EINVAL. `strpbrk` et `wcspbrk` ne vérifient pas leurs paramètres. Ces trois fonctions se comportent sinon de façon identique.
 
 `_mbspbrk` est similaire à `_mbscspn`, sauf que `_mbspbrk` retourne un pointeur et non une valeur de type [size_t](../../c-runtime-library/standard-types.md).
 
-En C, ces fonctions acceptent un pointeur **const** pour le premier argument. En C++, deux surcharges sont disponibles. La surcharge qui prend un pointeur vers **const** retourne un pointeur vers **const**; la version qui accepte un pointeur vers non**const** retourne un pointeur vers non**const**. La macro _CRT_CONST_CORRECT_OVERLOADS est définie si les versions **const** et non**const** de ces fonctions sont disponibles. Si vous avez besoin du comportement non**const** pour les deux surcharges C++, définissez le symbole _CONST_RETURN.
+En C, ces fonctions acceptent un **`const`** pointeur pour le premier argument. En C++, deux surcharges sont disponibles. La surcharge qui prend un pointeur vers **`const`** retourne un pointeur vers **`const`** ; la version qui accepte un pointeur vers non- **`const`** retourne un pointeur vers non- **`const`** . La macro _CRT_CONST_CORRECT_OVERLOADS est définie si les **`const`** versions et non- **`const`** de ces fonctions sont disponibles. Si vous avez besoin du non- **`const`** comportement pour les deux surcharges C++, définissez le symbole _CONST_RETURN.
 
 La valeur de sortie est affectée par la valeur du paramètre de catégorie LC_CTYPE des paramètres régionaux. Pour plus d’informations, consultez [setlocale](setlocale-wsetlocale.md). Les versions de ces fonctions sans le suffixe **_L** utilisent les paramètres régionaux actuels pour ce comportement dépendant des paramètres régionaux ; la version avec le suffixe **_L** est identique, sauf qu’elle utilise à la place les paramètres régionaux transmis. Pour plus d’informations, consultez [Locale](../../c-runtime-library/locale.md).
 

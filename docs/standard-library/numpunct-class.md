@@ -30,16 +30,16 @@ helpviewer_keywords:
 - std::numpunct [C++], thousands_sep
 - std::numpunct [C++], truename
 ms.assetid: 73fb93cc-ac11-4c98-987c-bfa6267df596
-ms.openlocfilehash: 0bdd6556df892e5e231919dbc4ae95d14a6f95fe
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 602d8edef80f0e4d4abe4cb6773b774d174e1cbe
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81373617"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87202816"
 ---
 # <a name="numpunct-class"></a>numpunct, classe
 
-Un modèle de classe qui décrit un objet qui peut servir de `CharType` facette locale pour décrire les séquences de type utilisées pour représenter des informations sur le formatage et la ponctuation des expressions numériques et boolean.
+Modèle de classe qui décrit un objet pouvant servir de facette locale pour décrire les séquences de type `CharType` utilisées pour représenter des informations sur la mise en forme et la ponctuation d’expressions numériques et booléennes.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -50,7 +50,7 @@ class numpunct : public locale::facet;
 
 ### <a name="parameters"></a>Paramètres
 
-*CharType CharType*\
+*CharType*\
 Type utilisé dans un programme pour encoder des caractères dans des paramètres régionaux spécifiques.
 
 ## <a name="remarks"></a>Notes
@@ -76,22 +76,22 @@ Comme avec n'importe quelle facette de paramètres régionaux, l'ID d'objet stat
 |-|-|
 |[decimal_point](#decimal_point)|Retourne un élément spécifique aux paramètres régionaux devant être utilisé comme séparateur décimal.|
 |[do_decimal_point](#do_decimal_point)|Une fonction membre virtuelle est appelée pour retourner un élément spécifique aux paramètres régionaux devant être utilisé comme séparateur décimal.|
-|[do_falsename](#do_falsename)|Une fonction de membre virtuel protégée qui est appelé à retourner une chaîne à utiliser comme une représentation textuelle de la valeur **fausse**.|
+|[do_falsename](#do_falsename)|Fonction membre virtuelle protégée qui est appelée pour retourner une chaîne à utiliser comme représentation textuelle de la valeur **`false`** .|
 |[do_grouping](#do_grouping)|Fonction membre virtuelle protégée appelée pour retourner une règle spécifique aux paramètres régionaux permettant de déterminer la manière dont les chiffres sont regroupés à gauche de la virgule décimale.|
 |[do_thousands_sep](#do_thousands_sep)|Une fonction membre virtuelle est appelée pour retourner un élément spécifique aux paramètres régionaux devant être utilisé comme séparateur des milliers.|
-|[do_truename](#do_truename)|Fonction membre virtuelle protégée qui est appelée pour retourner une chaîne à utiliser comme représentation textuelle de la valeur **true**.|
-|[falsename](#falsename)|Retourne une chaîne à utiliser comme représentation textuelle de la valeur **false**.|
-|[Regroupement](#grouping)|Retourne une règle spécifique aux paramètres régionaux pour déterminer la manière dont les chiffres sont regroupés à gauche de la virgule décimale.|
+|[do_truename](#do_truename)|Fonction membre virtuelle protégée qui est appelée pour retourner une chaîne à utiliser comme représentation textuelle de la valeur **`true`** .|
+|[falsename](#falsename)|Retourne une chaîne à utiliser comme représentation textuelle de la valeur **`false`** .|
+|[regroupement](#grouping)|Retourne une règle spécifique aux paramètres régionaux pour déterminer la manière dont les chiffres sont regroupés à gauche de la virgule décimale.|
 |[thousands_sep](#thousands_sep)|Retourne un élément spécifique aux paramètres régionaux devant être utilisé comme séparateur des milliers.|
-|[truename](#truename)|Retourne une chaîne à utiliser comme représentation textuelle de la valeur **true**.|
+|[truename](#truename)|Retourne une chaîne à utiliser comme représentation textuelle de la valeur **`true`** .|
 
 ## <a name="requirements"></a>Spécifications
 
-**En-tête :** \<locale>
+**En-tête :**\<locale>
 
 **Espace de noms :** std
 
-## <a name="numpunctchar_type"></a><a name="char_type"></a>numpunct::char_type
+## <a name="numpunctchar_type"></a><a name="char_type"></a>numpunct :: char_type
 
 Type utilisé pour décrire un caractère utilisé par des paramètres régionaux.
 
@@ -101,9 +101,9 @@ typedef CharType char_type;
 
 ### <a name="remarks"></a>Notes
 
-Le type est synonyme du paramètre du modèle **CharType.**
+Le type est un synonyme du paramètre de modèle **CharType.**
 
-## <a name="numpunctdecimal_point"></a><a name="decimal_point"></a>numpunct::decimal-point
+## <a name="numpunctdecimal_point"></a><a name="decimal_point"></a>numpunct ::d ecimal_point
 
 Retourne un élément spécifique aux paramètres régionaux devant être utilisé comme séparateur décimal.
 
@@ -146,7 +146,7 @@ German_Germany.1252 decimal point ,
 German_Germany.1252 thousands separator .
 ```
 
-## <a name="numpunctdo_decimal_point"></a><a name="do_decimal_point"></a>numpunct::do-décimale
+## <a name="numpunctdo_decimal_point"></a><a name="do_decimal_point"></a>numpunct ::d o_decimal_point
 
 Une fonction membre virtuelle est appelée pour retourner un élément spécifique aux paramètres régionaux devant être utilisé comme séparateur décimal.
 
@@ -162,9 +162,9 @@ virtual CharType do_decimal_point() const;
 
 Consultez l’exemple relatif à [decimal_point](#decimal_point), où la fonction membre virtuelle est appelée par `decimal_point`.
 
-## <a name="numpunctdo_falsename"></a><a name="do_falsename"></a>numpunct::do-falsename
+## <a name="numpunctdo_falsename"></a><a name="do_falsename"></a>numpunct ::d o_falsename
 
-La fonction membre virtuelle protégée retourne une séquence à utiliser comme représentation textuelle de la valeur **false**.
+La fonction membre virtuelle protégée retourne une séquence à utiliser comme représentation textuelle de la valeur **`false`** .
 
 ```cpp
 virtual string_type do_falsename() const;
@@ -172,17 +172,17 @@ virtual string_type do_falsename() const;
 
 ### <a name="return-value"></a>Valeur de retour
 
-Chaîne contenant une séquence à utiliser comme représentation textuelle de la valeur **false**.
+Chaîne contenant une séquence à utiliser comme représentation textuelle de la valeur **`false`** .
 
 ### <a name="remarks"></a>Notes
 
-La fonction membre retourne la chaîne « false » pour représenter la valeur **false** dans tous les paramètres régionaux.
+La fonction membre retourne la chaîne « false » pour représenter la valeur **`false`** dans tous les paramètres régionaux.
 
 ### <a name="example"></a>Exemple
 
 Consultez l’exemple relatif à [falsename](#falsename), où la fonction membre virtuelle est appelée par `falsename`.
 
-## <a name="numpunctdo_grouping"></a><a name="do_grouping"></a>numpunct: :do-groupement
+## <a name="numpunctdo_grouping"></a><a name="do_grouping"></a>numpunct ::d o_grouping
 
 Fonction membre virtuelle protégée appelée pour retourner une règle spécifique aux paramètres régionaux permettant de déterminer la manière dont les chiffres sont regroupés à gauche de la virgule décimale.
 
@@ -200,9 +200,9 @@ Cette fonction membre virtuelle protégée retourne une règle spécifique aux p
 
 ### <a name="example"></a>Exemple
 
-Voir l’exemple pour [le regroupement](#grouping), `grouping`où la fonction de membre virtuel est appelée par .
+Consultez l’exemple de [regroupement](#grouping), où la fonction membre virtuelle est appelée par `grouping` .
 
-## <a name="numpunctdo_thousands_sep"></a><a name="do_thousands_sep"></a>numpunct::do-milliers
+## <a name="numpunctdo_thousands_sep"></a><a name="do_thousands_sep"></a>numpunct ::d o_thousands_sep
 
 Une fonction membre virtuelle est appelée pour retourner un élément spécifique aux paramètres régionaux devant être utilisé comme séparateur des milliers.
 
@@ -216,15 +216,15 @@ Retourne un élément spécifique aux paramètres régionaux devant être utilis
 
 ### <a name="remarks"></a>Notes
 
-La fonction de membre virtuel protégée renvoie un élément de type `CharType` local-spécifique à utiliser comme séparateur de groupe à gauche de n’importe quel point décimal.
+La fonction membre virtuelle protégée retourne un élément spécifique aux paramètres régionaux de type `CharType` à utiliser comme séparateur de groupes à gauche de n’importe quelle virgule décimale.
 
 ### <a name="example"></a>Exemple
 
 Consultez l’exemple relatif à [group separator](#thousands_sep), où la fonction membre virtuelle est appelée par `thousands_sep`.
 
-## <a name="numpunctdo_truename"></a><a name="do_truename"></a>numpunct::do-truename
+## <a name="numpunctdo_truename"></a><a name="do_truename"></a>numpunct ::d o_truename
 
-Fonction membre virtuelle protégée qui est appelée pour retourner une chaîne à utiliser comme représentation textuelle de la valeur **true**.
+Fonction membre virtuelle protégée qui est appelée pour retourner une chaîne à utiliser comme représentation textuelle de la valeur **`true`** .
 
 ```cpp
 virtual string_type do_truename() const;
@@ -232,17 +232,17 @@ virtual string_type do_truename() const;
 
 ### <a name="remarks"></a>Notes
 
-Chaîne à utiliser comme représentation textuelle de la valeur **true**.
+Chaîne à utiliser comme représentation textuelle de la valeur **`true`** .
 
-Tous les paramètres régionaux retournent une chaîne « true » pour représenter la valeur **true**.
+Tous les paramètres régionaux retournent une chaîne « true » pour représenter la valeur **`true`** .
 
 ### <a name="example"></a>Exemple
 
 Consultez l’exemple relatif à [truename](#truename), où la fonction membre virtuelle est appelée par `truename`.
 
-## <a name="numpunctfalsename"></a><a name="falsename"></a>numpunct::falsename
+## <a name="numpunctfalsename"></a><a name="falsename"></a>numpunct :: falsename
 
-Retourne une chaîne à utiliser comme représentation textuelle de la valeur **false**.
+Retourne une chaîne à utiliser comme représentation textuelle de la valeur **`false`** .
 
 ```cpp
 string_type falsename() const;
@@ -250,11 +250,11 @@ string_type falsename() const;
 
 ### <a name="return-value"></a>Valeur de retour
 
-Une chaîne contenant `CharType`une séquence de s à utiliser comme une représentation textuelle de la valeur **fausse**.
+Chaîne contenant une séquence de `CharType` s à utiliser comme représentation textuelle de la valeur **`false`** .
 
 ### <a name="remarks"></a>Notes
 
-La fonction membre retourne la chaîne « false » pour représenter la valeur **false** dans tous les paramètres régionaux.
+La fonction membre retourne la chaîne « false » pour représenter la valeur **`false`** dans tous les paramètres régionaux.
 
 La fonction membre retourne [do_falsename](#do_falsename).
 
@@ -289,7 +289,7 @@ French_France.1252 truename true
 French_France.1252 falsename false
 ```
 
-## <a name="numpunctgrouping"></a><a name="grouping"></a>numpunct::groupement
+## <a name="numpunctgrouping"></a><a name="grouping"></a>numpunct :: regroupement
 
 Retourne une règle spécifique aux paramètres régionaux pour déterminer la manière dont les chiffres sont regroupés à gauche de la virgule décimale.
 
@@ -335,7 +335,7 @@ German_Germany.1252 international grouping:
 the 0th group to the left of the radix character is of size 3
 ```
 
-## <a name="numpunctnumpunct"></a><a name="numpunct"></a>numpunct::numpunct
+## <a name="numpunctnumpunct"></a><a name="numpunct"></a>numpunct :: numpunct
 
 Constructeur des objets de type `numpunct`.
 
@@ -350,19 +350,19 @@ Valeur entière utilisée pour spécifier le type de gestion de mémoire pour l�
 
 ### <a name="remarks"></a>Notes
 
-Les valeurs possibles pour le *_Refs* paramètre et leur signification sont les suivante :
+Les valeurs possibles pour le paramètre *_Refs* et leur signification sont les suivantes :
 
 - 0 : la durée de vie de l’objet est gérée par les paramètres régionaux qui le contiennent.
 
 - 1 : la durée de vie de l’objet doit être gérée manuellement.
 
-- \>1: Ces valeurs ne sont pas définies.
+- \>1 : ces valeurs ne sont pas définies.
 
 Aucun exemple direct n’est possible, car le destructeur est protégé.
 
-Le constructeur initialise son objet de base avec`_Refs` **local::**[facette](../standard-library/locale-class.md#facet_class)( ).
+Le constructeur initialise son objet de base avec **locale ::**[facette](../standard-library/locale-class.md#facet_class)( `_Refs` ).
 
-## <a name="numpunctstring_type"></a><a name="string_type"></a>numpunct::string_type
+## <a name="numpunctstring_type"></a><a name="string_type"></a>numpunct :: string_type
 
 Type qui décrit une chaîne contenant des caractères de type **CharType**.
 
@@ -374,7 +374,7 @@ typedef basic_string<CharType, Traits, Allocator> string_type;
 
 Le type décrit une spécialisation du modèle de classe [basic_string](../standard-library/basic-string-class.md) dont les objets peuvent stocker des copies des séquences de ponctuation.
 
-## <a name="numpunctthousands_sep"></a><a name="thousands_sep"></a>numpunct::thousands_sep
+## <a name="numpunctthousands_sep"></a><a name="thousands_sep"></a>numpunct :: thousands_sep
 
 Retourne un élément spécifique aux paramètres régionaux devant être utilisé comme séparateur des milliers.
 
@@ -417,9 +417,9 @@ German_Germany.1252 decimal point ,
 German_Germany.1252 thousands separator .
 ```
 
-## <a name="numpuncttruename"></a><a name="truename"></a>numpunct::truename
+## <a name="numpuncttruename"></a><a name="truename"></a>numpunct :: TrueName
 
-Retourne une chaîne à utiliser comme représentation textuelle de la valeur **true**.
+Retourne une chaîne à utiliser comme représentation textuelle de la valeur **`true`** .
 
 ```cpp
 string_type falsename() const;
@@ -427,13 +427,13 @@ string_type falsename() const;
 
 ### <a name="return-value"></a>Valeur de retour
 
-Chaîne à utiliser comme représentation textuelle de la valeur **true**.
+Chaîne à utiliser comme représentation textuelle de la valeur **`true`** .
 
 ### <a name="remarks"></a>Notes
 
 La fonction membre retourne [do_truename](#do_truename).
 
-Tous les paramètres régionaux retournent une chaîne « true » pour représenter la valeur **true**.
+Tous les paramètres régionaux retournent une chaîne « true » pour représenter la valeur **`true`** .
 
 ### <a name="example"></a>Exemple
 
@@ -468,6 +468,6 @@ French_France.1252 falsename false
 
 ## <a name="see-also"></a>Voir aussi
 
-[\<local>](../standard-library/locale.md)\
-[Classe de facettes](../standard-library/locale-class.md#facet_class)\
-[Sécurité des fils dans la bibliothèque standard de CMD](../standard-library/thread-safety-in-the-cpp-standard-library.md)
+[\<locale>](../standard-library/locale.md)\
+[facette, classe](../standard-library/locale-class.md#facet_class)\
+[Sécurité des threads dans la bibliothèque C++ standard](../standard-library/thread-safety-in-the-cpp-standard-library.md)

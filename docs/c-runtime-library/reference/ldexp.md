@@ -39,12 +39,12 @@ helpviewer_keywords:
 - exponent, floating-point numbers
 - floating-point functions, mantissa and exponent
 ms.assetid: aa7f5310-3879-4f63-ae74-86a39fbdedfa
-ms.openlocfilehash: 95eb1eb3ca18e0e7d3450951c930a07f954bc299
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: bbd1742cdace30d5bc3bd5e9d592bb24a86f917f
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82916538"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87216919"
 ---
 # <a name="ldexp-ldexpf-ldexpl"></a>ldexp, ldexpf, ldexpl
 
@@ -80,7 +80,7 @@ long double ldexpl(
 *x*<br/>
 Valeur à virgule flottante.
 
-*venir*<br/>
+*exp*<br/>
 Exposant entier.
 
 ## <a name="return-value"></a>Valeur de retour
@@ -89,9 +89,9 @@ Les fonctions **ldexp** retournent la valeur de *x* \* 2<sup>*exp*</sup> en cas 
 
 Pour plus d’informations sur **errno** et les valeurs de retour possibles des erreurs, consultez [errno, _doserrno, _sys_errlist et _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
 
-## <a name="remarks"></a>Notes 
+## <a name="remarks"></a>Notes
 
-Étant donné que C++ autorise la surcharge, vous pouvez appeler des surcharges de **ldexp** qui acceptent des types **float** ou **long** **double** . Dans un programme C, **ldexp** prend toujours un **double** et un **entier** et retourne un **double**.
+C++ autorisant la surcharge, vous pouvez appeler des surcharges de **ldexp** qui acceptent **`float`** des **`long double`** types ou. Dans un programme C, **ldexp** prend toujours un **`double`** et un **`int`** et retourne un **`double`** .
 
 Par défaut, l’état global de cette fonction est limité à l’application. Pour modifier cette valeur, consultez [état global dans le CRT](../global-state.md).
 
@@ -103,7 +103,7 @@ Par défaut, l’état global de cette fonction est limité à l’application. 
 
 Pour plus d’informations sur la compatibilité, consultez [Compatibilité](../../c-runtime-library/compatibility.md).
 
-## <a name="example"></a> Exemple
+## <a name="example"></a>Exemple
 
 ```C
 // crt_ldexp.c

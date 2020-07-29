@@ -8,12 +8,12 @@ helpviewer_keywords:
 - structure members
 - embedded structures
 ms.assetid: 5be3be77-a236-4153-b574-7aa77675df7f
-ms.openlocfilehash: a17bb996f13fdbe11bb569c8af5669a9d0c5363f
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 3b9aa30cfeecbd60fda61e6a484043c82c9a3b28
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62157793"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87217049"
 ---
 # <a name="structure-declarations"></a>Déclarations de structure
 
@@ -26,8 +26,8 @@ Une déclaration de structure désigne un type et spécifie une séquence de val
 &nbsp;&nbsp;&nbsp;&nbsp;*struct-ou-union* *identificateur*
 
 *struct-or-union* :<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**modélis**<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**UE**
+&nbsp;&nbsp;&nbsp;&nbsp;**`struct`**<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**`union`**
 
 *struct-declaration-list* :<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*struct-declaration*<br/>
@@ -53,7 +53,7 @@ Un *identifier* (étiquette) défini peut être utilisé pour faire référence 
 
 *struct-declaration-list* spécifie les types et les noms des membres de structures. Un argument *struct-declaration-list* contient une ou plusieurs déclarations de variable ou de champ de bits.
 
-Chaque variable déclarée dans *struct-declaration-list* est définie comme membre du type structure. Les déclarations de variables dans *struct-declaration-list* ont la même forme que d’autres déclarations de variables décrites dans cette section, mais les déclarations ne peuvent pas contenir des spécificateurs ou initialiseurs de classe de stockage. Les membres de structures peuvent avoir tout type de variable sauf le type `void`, un type incomplet ou un type de fonction.
+Chaque variable déclarée dans *struct-declaration-list* est définie comme membre du type structure. Les déclarations de variables dans *struct-declaration-list* ont la même forme que d’autres déclarations de variables décrites dans cette section, mais les déclarations ne peuvent pas contenir des spécificateurs ou initialiseurs de classe de stockage. Les membres de structure peuvent avoir des types de variable, à l’exception de type **`void`** , un type incomplet ou un type de fonction.
 
 Un membre ne peut pas être déclaré comme ayant le type de la structure dans laquelle il apparaît. Toutefois, un membre peut être déclaré comme pointeur vers le type structure dans lequel il apparaît tant que le type structure a une balise. Cela vous permet de créer des listes de structures liées.
 
@@ -94,7 +94,7 @@ struct employee   /* Defines a structure variable named temp */
 } temp;
 ```
 
-La structure `employee` a trois membres : `name`, `id` et `class`. Le membre `name` est un tableau de 20 éléments et `id` et `class` sont des membres simples avec `int` et le type **long**, respectivement. L'identificateur `employee` est l'identificateur de structure.
+La structure `employee` a trois membres : `name`, `id` et `class`. Le `name` membre est un tableau de 20 éléments et `id` et `class` sont des membres simples avec **`int`** et **`long`** type, respectivement. L'identificateur `employee` est l'identificateur de structure.
 
 ```C
 struct employee student, faculty, staff;
@@ -109,7 +109,7 @@ struct           /* Defines an anonymous struct and a */
 } complex;
 ```
 
-La structure `complex` possède deux membres avec le type **float**, `x` et `y`. Le type de structure n’a aucune étiquette et est par conséquent sans nom ou anonyme.
+La `complex` structure a deux membres de **`float`** type, `x` et `y` . Le type de structure n’a aucune étiquette et est par conséquent sans nom ou anonyme.
 
 ```C
 struct sample   /* Defines a structure named x */
@@ -120,7 +120,7 @@ struct sample   /* Defines a structure named x */
 } x;
 ```
 
-Les deux premiers membres de la structure sont une variable `char` et un pointeur vers une valeur **float** . Le troisième membre, `next`, est déclaré comme un pointeur vers le type de structure définie (`sample`).
+Les deux premiers membres de la structure sont une **`char`** variable et un pointeur vers une **`float`** valeur. Le troisième membre, `next`, est déclaré comme un pointeur vers le type de structure définie (`sample`).
 
 Les structures anonymes peuvent être utiles lorsque la balise nommée n'est pas nécessaire. C'est le cas lorsqu'une déclaration définit toutes les instances de structure. Par exemple :
 
@@ -149,9 +149,9 @@ struct somestruct
 
 Le compilateur autorise un tableau non dimensionné ou un tableau de taille zéro comme dernier membre d'une structure. Cela peut être utile si la taille d'un tableau fixe diffère lorsqu'elle est utilisée dans différentes situations. La déclaration de cette structure ressemble à ceci :
 
-**struct** *identificateur* de struct **{** *set-of-declarations* *de type* <em>tableau</em>**\[];};**
+**`struct`***identificateur* **{** *set-of-declarations* de *type* <em>tableau</em>** \[ ];};**
 
-Les tableaux non dimensionnés peuvent apparaître uniquement comme dernier membre d'une structure. Les structures contenant des déclarations de tableau non dimensionné peuvent être imbriquées dans d'autres structures tant qu'aucun autre membre n'est déclaré dans une structure englobante. Les tableaux de ces structures ne sont pas autorisés. L'opérateur `sizeof`, une fois appliqué à une variable de ce type ou au type lui-même, suppose 0 pour la taille du tableau.
+Les tableaux non dimensionnés peuvent apparaître uniquement comme dernier membre d'une structure. Les structures contenant des déclarations de tableau non dimensionné peuvent être imbriquées dans d'autres structures tant qu'aucun autre membre n'est déclaré dans une structure englobante. Les tableaux de ces structures ne sont pas autorisés. L' **`sizeof`** opérateur, lorsqu’il est appliqué à une variable de ce type ou au type lui-même, suppose 0 pour la taille du tableau.
 
 Les déclarations de structure peuvent également être spécifiées sans déclarateur lorsqu'elles sont membres d'une autre structure ou union. Les noms de champ sont promus dans la structure englobante. Par exemple, une structure sans nom ressemble à ceci :
 

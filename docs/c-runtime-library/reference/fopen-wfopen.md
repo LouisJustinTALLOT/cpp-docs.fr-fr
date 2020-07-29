@@ -38,12 +38,12 @@ helpviewer_keywords:
 - files [C++], opening
 - fopen function
 ms.assetid: e868993f-738c-4920-b5e4-d8f2f41f933d
-ms.openlocfilehash: d468226028928e3edfe67cc7f9b9eec06e06bd56
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: 2bf1a1001f661b1ba972e7a5e699276591dda08a
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82914888"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87216958"
 ---
 # <a name="fopen-_wfopen"></a>fopen, _wfopen
 
@@ -76,7 +76,7 @@ Chacune de ces fonctions retourne un pointeur vers le fichier ouvert. Une valeur
 
 Pour plus d’informations, consultez [errno, _doserrno, _sys_errlist et _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
 
-## <a name="remarks"></a>Notes 
+## <a name="remarks"></a>Notes
 
 La fonction **fopen** ouvre le fichier spécifié par *filename*. Par défaut, une chaîne de *nom de fichier* étroite est interprétée à l’aide de la page de codes ANSI (CP_ACP). Dans les applications de bureau Windows, la page de codes OEM (CP_OEMCP) peut être utilisée à la place avec la fonction [SetFileApisToOEM](/windows/win32/api/fileapi/nf-fileapi-setfileapistooem) . Vous pouvez utiliser la fonction [AreFileApisANSI](/windows/win32/api/fileapi/nf-fileapi-arefileapisansi) pour déterminer si *filename* est interprété à l’aide de la page de codes ANSI ou de la page de codes OEM par défaut du système. **_wfopen** est une version à caractères larges de **fopen**; les arguments de **_wfopen** sont des chaînes à caractères larges. Dans le cas contraire, **_wfopen** et **fopen** se comportent de la même façon. L’utilisation simple de **_wfopen** n’affecte pas le jeu de caractères codé utilisé dans le flux de fichier.
 
@@ -90,11 +90,11 @@ Par défaut, l’état global de cette fonction est limité à l’application. 
 
 **fopen** prend en charge les flux de fichiers Unicode. Pour ouvrir un fichier Unicode, transmettez un indicateur **CCS** qui spécifie l’encodage souhaité à **fopen**, comme suit.
 
-> **FICHIER \*FP = fopen ("newFile. txt", "RT +, CCS =**_Encoding_**");**
+> **Fichier \* FP = fopen ("newfile.txt", "RT +, CCS =**_Encoding_**");**
 
 Les valeurs d' *encodage* autorisées sont **Unicode**, **UTF-8**et **UTF-16LE**.
 
-Lorsqu’un fichier est ouvert en mode Unicode, les fonctions d’entrée traduisent les données lues à partir du fichier en données UTF-16 stockées en tant que type **wchar_t**. Les fonctions qui écrivent dans un fichier ouvert en mode Unicode attendent des mémoires tampons qui contiennent des données UTF-16 stockées en tant que type **wchar_t**. Si le fichier est encodé au format UTF-8, les données UTF-16 sont traduites en UTF-8 lors de leur écriture et le contenu du fichier encodé au format UTF-8 est traduit en UTF-16 lorsqu'il est lu. Une tentative de lecture ou d’écriture d’un nombre impair d’octets en mode Unicode provoque une erreur de [validation de paramètre](../../c-runtime-library/parameter-validation.md) . Pour lire ou écrire des données stockées dans votre programme au format UTF-8, utilisez un mode de fichier binaire ou texte au lieu d'un mode Unicode. Vous êtes responsable de toute traduction d'encodage nécessaire.
+Lorsqu’un fichier est ouvert en mode Unicode, les fonctions d’entrée traduisent les données lues à partir du fichier en données UTF-16 stockées en tant que type **`wchar_t`** . Les fonctions qui écrivent dans un fichier ouvert en mode Unicode attendent des mémoires tampons qui contiennent des données UTF-16 stockées en tant que type **`wchar_t`** . Si le fichier est encodé au format UTF-8, les données UTF-16 sont traduites en UTF-8 lors de leur écriture et le contenu du fichier encodé au format UTF-8 est traduit en UTF-16 lorsqu'il est lu. Une tentative de lecture ou d’écriture d’un nombre impair d’octets en mode Unicode provoque une erreur de [validation de paramètre](../../c-runtime-library/parameter-validation.md) . Pour lire ou écrire des données stockées dans votre programme au format UTF-8, utilisez un mode de fichier binaire ou texte au lieu d'un mode Unicode. Vous êtes responsable de toute traduction d'encodage nécessaire.
 
 Si le fichier existe déjà et qu'il est ouvert pour lecture ou ajout, la marque d'ordre d'octet (BOM, Byte Order Mark), si elle est présente dans le fichier, détermine l'encodage. L’encodage BOM est prioritaire sur l’encodage spécifié par l’indicateur **CCS** . L’encodage **CCS** est utilisé uniquement si aucune marque Bom n’est présente ou si le fichier est un nouveau fichier.
 
@@ -160,7 +160,7 @@ Les options suivantes peuvent être ajoutées au *mode* pour spécifier des comp
 | **secteur** | Activez l’indicateur de validation pour le *nom* de fichier associé afin que le contenu de la mémoire tampon de fichier soit écrit directement sur le disque si **fflush** ou **_flushall** est appelé. |
 | **n** | Réinitialiser l’indicateur de validation pour le *nom de fichier* associé sur « no-commit ». Il s’agit de la valeur par défaut. Substitue également l'indicateur de validation global si vous liez votre programme avec COMMODE.OBJ. La valeur par défaut de l’indicateur de validation globale est « no-commit », sauf si vous liez explicitement votre programme avec COMMODE.OBJ (consultez [Link Options](../../c-runtime-library/link-options.md)). |
 | **N** | Indique que le fichier n'est pas hérité par les processus enfants. |
-| **X** | Indique que la mise en cache est optimisée pour, mais non limitée à, l'accès séquentiel à partir du disque. |
+| **S** | Indique que la mise en cache est optimisée pour, mais non limitée à, l'accès séquentiel à partir du disque. |
 | **R** | Indique que la mise en cache est optimisée pour, mais non limitée à, l'accès aléatoire à partir du disque. |
 | **T** | Spécifie un fichier comme temporaire. Si possible, il n'est pas vidé sur disque. |
 | **D** | Spécifie un fichier comme temporaire. Il est supprimé lorsque le dernier pointeur de fichier est fermé. |
@@ -168,31 +168,31 @@ Les options suivantes peuvent être ajoutées au *mode* pour spécifier des comp
 
 Les caractères valides pour la chaîne de *mode* utilisée dans **fopen** et **_fdopen** correspondent aux arguments *Oflag* utilisés dans [_open](open-wopen.md) et [_sopen](sopen-wsopen.md), comme suit.
 
-|Caractères dans la chaîne de *mode*|Valeur *Oflag* équivalente \_pour Open\_/sopen|
+|Caractères dans la chaîne de *mode*|Valeur *Oflag* équivalente pour \_ Open/ \_ sopen|
 |-------------------------------|----------------------------------------------------|
-|**un**|**\_O\_WRONLY** &#124; ** \_o\_Append** (généralement ** \_o\_WRONLY** &#124; ** \_o\_Create** &#124; ** \_o\_Append**)|
-|**r +**|**\_O\_RDWR** &#124; ** \_o\_Append** (généralement ** \_o\_RDWR** &#124; ** \_o\_Append** &#124; ** \_o\_Create** )|
-|**r**|**\_O\_RDONLY**|
-|**r +**|**\_O\_RDWR**|
-|**w**|**\_O\_WRONLY** (généralement ** \_o\_WRONLY** &#124; ** \_o\_Creating** &#124; ** \_o\_trunc**)|
-|**w +**|**\_O\_RDWR** (généralement ** \_o\_RDWR** &#124; ** \_o\_Creating** &#124; ** \_o\_trunc**)|
-|**p**|**\_binaire\_O**|
-|**t**|**\_O\_Text**|
+|**un**|** \_ O \_ WRONLY** &#124; ** \_ o \_ Append** (généralement ** \_ o \_ WRONLY** &#124; ** \_ o \_ Create** &#124; ** \_ o \_ Append**)|
+|**r +**|** \_ O \_ RDWR** &#124; ** \_ o \_ Append** (généralement ** \_ o \_ RDWR** &#124; ** \_ o \_ Append** &#124; ** \_ o \_ Create** )|
+|**r**|**\_O \_ RDONLY**|
+|**r +**|**\_O \_ RDWR**|
+|**w**|** \_ O \_ WRONLY** (généralement ** \_ o \_ WRONLY** &#124; ** \_ o \_ Creating** &#124; ** \_ o \_ trunc**)|
+|**w +**|** \_ O \_ RDWR** (généralement ** \_ o \_ RDWR** &#124; ** \_ o \_ Creating** &#124; ** \_ o \_ trunc**)|
+|**p**|**\_\_binaire O**|
+|**t**|**\_O \_ Text**|
 |**secteur**|None|
 |**n**|None|
-|**X**|**\_O\_séquentiel**|
-|**R**|**\_O\_aléatoire**|
-|**T**|**\_O\_SHORTLIVED**|
-|**D**|**\_O\_temporaire**|
-|**CCS = UNICODE**|**\_O\_WTEXT**|
-|**CCS = UTF-8**|**\_O\_UTF8**|
-|**CCS = UTF-16LE**|**\_O\_UTF16**|
+|**S**|**\_O \_ séquentiel**|
+|**R**|**\_O \_ aléatoire**|
+|**T**|**\_O \_ SHORTLIVED**|
+|**D**|**\_O \_ temporaire**|
+|**CCS = UNICODE**|**\_O \_ WTEXT**|
+|**CCS = UTF-8**|**\_O \_ UTF8**|
+|**CCS = UTF-16LE**|**\_O \_ UTF16**|
 
 Si vous utilisez le mode **RB** , vous n’avez pas besoin de porter votre code, et si vous prévoyez de lire la majeure partie d’un fichier volumineux ou que vous ne vous inquiétez pas des performances du réseau, vous pouvez également envisager d’utiliser des fichiers Win32 mappés en mémoire en tant qu’option.
 
 ## <a name="requirements"></a>Spécifications
 
-|Function|En-tête requis|
+|Fonction|En-tête requis|
 |--------------|---------------------|
 |**fopen**|\<stdio.h>|
 |**_wfopen**|\<stdio.h> ou \<wchar.h>|

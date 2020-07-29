@@ -23,12 +23,12 @@ f1_keywords:
 - signal
 helpviewer_keywords:
 - signal function
-ms.openlocfilehash: 232bf7bc518907db8744fbb85e0f3a33c9296006
-ms.sourcegitcommit: 0cfc43f90a6cc8b97b24c42efcf5fb9c18762a42
+ms.openlocfilehash: 1dacf23b6c4f698b61c5bfe2dd2fb1ff7ee389f5
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/05/2019
-ms.locfileid: "73625853"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87216750"
 ---
 # <a name="signal"></a>signal
 
@@ -45,7 +45,7 @@ void __cdecl *signal(int sig, int (*func)(int, int));
 
 ### <a name="parameters"></a>Paramètres
 
-*sig*<br/>
+*McAfee*<br/>
 Valeur du signal.
 
 *func*<br/>
@@ -77,15 +77,15 @@ Par défaut, le **signal** met fin au programme appelant avec le code de sortie 
 > [!NOTE]
 > **SIGINT** n’est pris en charge pour aucune application Win32. Lorsqu'une interruption CTRL+C se produit, les systèmes d'exploitation Win32 génèrent un nouveau thread pour gérer spécifiquement cette interruption. Cela peut amener une application à un seul thread, par exemple celle dans UNIX, à devenir multithread et à provoquer un comportement inattendu.
 
-L’argument *Func* est une adresse à un gestionnaire de signal que vous écrivez, ou à l’une des constantes prédéfinies **SIG_DFL** ou **SIG_IGN**, qui sont également définies dans signal. Manutention. Si *Func* est une fonction, elle est installée en tant que gestionnaire de signal pour le signal donné. Le prototype du gestionnaire de signal requiert un argument formel, *SIG*, de type **int**. Le système d’exploitation fournit l’argument réel via *SIG* lorsqu’une interruption se produit ; l’argument est le signal qui a généré l’interruption. Par conséquent, vous pouvez utiliser les six constantes de manifeste (répertoriées dans le tableau précédent) de votre gestionnaire de signal pour déterminer le type d'interruption et prendre les mesures appropriées. Par exemple, vous pouvez appeler **signal** deux fois pour assigner le même gestionnaire à deux signaux différents, puis tester l’argument *SIG* dans le gestionnaire pour prendre des mesures différentes selon le signal reçu.
+L’argument *Func* est une adresse à un gestionnaire de signal que vous écrivez, ou à l’une des constantes prédéfinies **SIG_DFL** ou **SIG_IGN**, qui sont également définies dans signal. Manutention. Si *Func* est une fonction, elle est installée en tant que gestionnaire de signal pour le signal donné. Le prototype du gestionnaire de signal requiert un argument formel, *SIG*, de type **`int`** . Le système d’exploitation fournit l’argument réel via *SIG* lorsqu’une interruption se produit ; l’argument est le signal qui a généré l’interruption. Par conséquent, vous pouvez utiliser les six constantes de manifeste (répertoriées dans le tableau précédent) de votre gestionnaire de signal pour déterminer le type d'interruption et prendre les mesures appropriées. Par exemple, vous pouvez appeler **signal** deux fois pour assigner le même gestionnaire à deux signaux différents, puis tester l’argument *SIG* dans le gestionnaire pour prendre des mesures différentes selon le signal reçu.
 
-Si vous testez des exceptions à virgule flottante (**SIGFPE**), *Func* pointe vers une fonction qui accepte un deuxième argument facultatif qui est l’une des nombreuses constantes de manifeste, définies en valeur float. H, de la forme **FPE_xxx**. Quand un signal **SIGFPE** se produit, vous pouvez tester la valeur du deuxième argument pour déterminer le type d’exception à virgule flottante, puis prendre les mesures appropriées. Cet argument et ses valeurs possibles sont des extensions Microsoft.
+Si vous testez des exceptions à virgule flottante (**SIGFPE**), *Func* pointe vers une fonction qui accepte un deuxième argument facultatif qui est l’une des nombreuses constantes de manifeste, définies en valeur float. H, sous la forme **FPE_xxx**. Quand un signal **SIGFPE** se produit, vous pouvez tester la valeur du deuxième argument pour déterminer le type d’exception à virgule flottante, puis prendre les mesures appropriées. Cet argument et ses valeurs possibles sont des extensions Microsoft.
 
 Pour les exceptions à virgule flottante, la valeur de *Func* n’est pas réinitialisée lorsque le signal est reçu. Pour récupérer des exceptions à virgule flottante, utilisez les clauses try/except pour cerner les opérations à virgule flottante. Il est aussi possible d’effectuer une récupération en utilisant [setjmp](setjmp.md) avec [longjmp](longjmp.md). Dans les deux cas, le processus appelant reprend l'exécution et quitte l'état à virgule flottante du processus non défini.
 
 Si le gestionnaire de signal retourne, le processus appelant reprend l'exécution immédiatement après le moment où il a reçu le signal d'interruption. Cela est vrai quel que soit le type de signal ou le mode de fonctionnement.
 
-Avant que la fonction spécifiée soit exécutée, la valeur de *Func* est définie sur **SIG_DFL**. Le signal d’interruption suivant est traité comme décrit pour **SIG_DFL**, sauf si un appel d’interrogation à **signal** spécifie autrement. Vous pouvez utiliser cette fonctionnalité pour réinitialiser les signaux dans la fonction appelée.
+Avant que la fonction spécifiée soit exécutée, la valeur de *Func* est définie sur **SIG_DFL**. Le signal d’interruption suivant est traité comme décrit pour **SIG_DFL**, à moins qu’un appel intermédiaire au **signal** spécifie autrement. Vous pouvez utiliser cette fonctionnalité pour réinitialiser les signaux dans la fonction appelée.
 
 Dans la mesure où les routines de gestion de signal sont généralement appelées de façon asynchrone lorsqu'une interruption se produit, votre fonction de gestion de signal peut obtenir le contrôle lorsqu'une opération du runtime est incomplète et dans un état inconnu. La liste suivante résume les restrictions qui déterminent les fonctions que vous pouvez utiliser dans votre routine de gestion de signal.
 
@@ -93,7 +93,7 @@ Dans la mesure où les routines de gestion de signal sont généralement appelé
 
 - N’appelez pas les routines de tas ou toute routine qui utilise les routines de tas (par exemple, **malloc**, **_strdup**ou **_putenv**). Pour plus d’informations, consultez [malloc](malloc.md).
 
-- N’utilisez aucune fonction qui génère un appel système (par exemple, **_getcwd** ou **Time**).
+- N’utilisez aucune fonction qui génère un appel système (par exemple, **_getcwd** ou une **heure**).
 
 - N’utilisez pas **longjmp** à moins que l’interruption soit provoquée par une exception à virgule flottante (c’est-à-dire que *SIG* est **SIGFPE**). Dans ce cas, réinitialisez d’abord le package à virgule flottante à l’aide d’un appel à **_fpreset**.
 
@@ -107,15 +107,15 @@ volatile double d = 0.0f;
 
 Les signaux **SIGILL** et **SIGTERM** ne sont pas générés sous Windows. Ils sont inclus pour la compatibilité ANSI. Par conséquent, vous pouvez définir des gestionnaires de signal pour ces signaux à l’aide de **signal**, et vous pouvez également générer explicitement ces signaux en appelant [Raise](raise.md).
 
-Les paramètres de signal ne sont pas conservés dans les processus générés créés par les appels aux fonctions [_exec](../../c-runtime-library/exec-wexec-functions.md) ou [_spawn](../../c-runtime-library/spawn-wspawn-functions.md) . Les valeurs par défaut des paramètres de signal sont réinitialisées dans le nouveau processus.
+Les paramètres de signal ne sont pas conservés dans les processus générés créés par des appels à des fonctions [_exec](../../c-runtime-library/exec-wexec-functions.md) ou [_spawn](../../c-runtime-library/spawn-wspawn-functions.md) . Les valeurs par défaut des paramètres de signal sont réinitialisées dans le nouveau processus.
 
-## <a name="requirements"></a>spécifications
+## <a name="requirements"></a>Spécifications
 
 |Routine|En-tête requis|
 |-------------|---------------------|
-|**signal**|\<signal.h >|
+|**signal**|\<signal.h>|
 
-Pour plus d’informations sur la compatibilité, voir consultez [Compatibilité](../../c-runtime-library/compatibility.md).
+Pour plus d'informations sur la compatibilité, voir [Compatibilité](../../c-runtime-library/compatibility.md).
 
 ## <a name="example"></a>Exemple
 
@@ -164,7 +164,7 @@ R6010
 
 [Contrôle de processus et d’environnement](../../c-runtime-library/process-and-environment-control.md)<br/>
 [abort](abort.md)<br/>
-[_exec, _wexec, fonctions](../../c-runtime-library/exec-wexec-functions.md)<br/>
+[_exec, _wexec fonctions](../../c-runtime-library/exec-wexec-functions.md)<br/>
 [exit, _Exit, _exit](exit-exit-exit.md)<br/>
 [_fpreset](fpreset.md)<br/>
-[_spawn, _wspawn, fonctions](../../c-runtime-library/spawn-wspawn-functions.md)<br/>
+[_spawn, _wspawn fonctions](../../c-runtime-library/spawn-wspawn-functions.md)<br/>

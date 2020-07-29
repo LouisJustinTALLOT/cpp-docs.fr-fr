@@ -36,12 +36,12 @@ helpviewer_keywords:
 - modff function
 - modfl function
 ms.assetid: b1c7abf5-d476-43ca-a03c-02072a86e32d
-ms.openlocfilehash: def04602cdeb0ad180bd4c51c02f570c94809784
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: 644e50564f1b433921a6a0d8099ea5229db7ed93
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82914639"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87216867"
 ---
 # <a name="modf-modff-modfl"></a>modf, modff, modfl
 
@@ -72,13 +72,13 @@ Pointeur désignant la partie entière stockée.
 
 Cette fonction retourne la partie fractionnaire signée de *x*. Aucun retour d'erreur.
 
-## <a name="remarks"></a>Notes 
+## <a name="remarks"></a>Notes
 
 Les fonctions **modf,** décomposent la valeur à virgule flottante *x* en parties fractionnaires et entières, chacune ayant le même signe que *x*. La partie fractionnaire signée de *x* est retournée. La partie entière est stockée sous la forme d’une valeur à virgule flottante à *IntPtr*.
 
 **modf,** a une implémentation qui utilise SSE2 (streaming SIMD Extensions 2). Consultez [_set_SSE2_enable](set-sse2-enable.md) pour plus d’informations sur l’utilisation de l’implémentation SSE2 et sur les restrictions qui s’y rattachent.
 
-C++ autorisant la surcharge, vous pouvez appeler des surcharges de **modf,** qui acceptent et retournent des paramètres **float** ou **long** **double** . Dans un programme C, **modf,** accepte toujours deux valeurs de type double et retourne une valeur double.
+C++ autorisant la surcharge, vous pouvez appeler des surcharges de **modf,** qui acceptent et retournent des **`float`** **`long double`** paramètres ou. Dans un programme C, **modf,** accepte toujours deux valeurs de type double et retourne une valeur double.
 
 Par défaut, l’état global de cette fonction est limité à l’application. Pour modifier cette valeur, consultez [état global dans le CRT](../global-state.md).
 
@@ -86,7 +86,7 @@ Par défaut, l’état global de cette fonction est limité à l’application. 
 
 |Routine|En-tête requis|
 |-------------|---------------------|
-|**modf,**, **modff,**, **modfl**|C : \<math.h><br /><br /> C++ : \<cmath> ou \<math.h>|
+|**modf,**, **modff,**, **modfl**|Secteur\<math.h><br /><br /> C++ : \<cmath> ou\<math.h>|
 
 Pour plus d'informations sur la compatibilité, voir [Compatibilité](../../c-runtime-library/compatibility.md).
 

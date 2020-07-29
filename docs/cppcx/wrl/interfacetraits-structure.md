@@ -19,12 +19,12 @@ helpviewer_keywords:
 - Microsoft::WRL::Details::InterfaceTraits::IidCount constant
 - Microsoft::WRL::Details::InterfaceTraits::Verify method
 ms.assetid: ede0c284-19a7-4892-9738-ff3da4923d0a
-ms.openlocfilehash: 17f743a38af3ddc600a55e38905d19868d076a22
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: c08c6e8bbcc16120dd44da69a2933fc3ec42f387
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81371372"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87216568"
 ---
 # <a name="interfacetraits-structure"></a>InterfaceTraits (structure)
 
@@ -48,40 +48,40 @@ struct __declspec(novtable) InterfaceTraits<Nil>;
 ### <a name="parameters"></a>Paramètres
 
 *I0*<br/>
-Le nom d’une interface.
+Nom d’une interface.
 
 *CloakedType*<br/>
-Pour `RuntimeClass` `Implements` , `ChainInterfaces`et , une interface qui ne sera pas dans la liste des interfaces prises en charge.
+Pour `RuntimeClass` , `Implements` et `ChainInterfaces` , il s’agit d’une interface qui ne figurera pas dans la liste des ID d’interface pris en charge.
 
 ## <a name="remarks"></a>Notes
 
 Implémente les caractéristiques communes d’une interface.
 
-Le deuxième modèle est une spécialisation pour les interfaces masquées. Le troisième modèle est une spécialisation des paramètres Nil.
+Le deuxième modèle est une spécialisation pour les interfaces masquées. Le troisième modèle est une spécialisation pour les paramètres Nil.
 
 ## <a name="members"></a>Membres
 
-### <a name="public-typedefs"></a><a name="public-typedefs"></a>Typesdefs publics
+### <a name="public-typedefs"></a><a name="public-typedefs"></a>Typedefs publics
 
 Nom   | Description
 ------ | ------------------------------------------
-`Base` | Un synonyme du paramètre du modèle *I0.*
+`Base` | Synonyme du paramètre de modèle *I0* .
 
 ### <a name="public-methods"></a>M&#233;thodes publiques
 
 Nom                                                   | Description
 ------------------------------------------------------ | ----------------------------------------------------------------------------------------
-[InterfaceTraits::CanCastTo](#cancastto)               | Indique si le pointeur spécifié peut `Base`être jeté à un pointeur à .
-[InterfaceTraits::CastToBase](#casttobase)             | Lance le pointeur spécifié `Base`à un pointeur à .
-[InterfaceTraits::CastToUnknown](#casttounknown)       | Lance le pointeur spécifié `IUnknown`à un pointeur à .
-[InterfaceTraits::FillArrayWithIid](#fillarraywithiid) | Assigne l’interface `Base` ID de l’élément de tableau spécifié par l’argument de l’index.
-[InterfaceTraits::Vérifier](#verify)                     | Vérifie qui `Base` est correctement dérivé.
+[InterfaceTraits :: CanCastTo,](#cancastto)               | Indique si le pointeur spécifié peut être casté en pointeur vers `Base` .
+[InterfaceTraits :: Casttobase,](#casttobase)             | Effectue un cast du pointeur spécifié vers un pointeur vers `Base` .
+[InterfaceTraits :: Casttounknown,](#casttounknown)       | Effectue un cast du pointeur spécifié vers un pointeur vers `IUnknown` .
+[InterfaceTraits :: Fillarraywithiid,](#fillarraywithiid) | Affecte l’ID d’interface de `Base` à l’élément de tableau spécifié par l’argument d’index.
+[InterfaceTraits :: Verify](#verify)                     | Vérifie que `Base` est correctement dérivé.
 
 ### <a name="public-constants"></a>Constantes publiques
 
 Nom                                   | Description
 -------------------------------------- | ---------------------------------------------------------------------------------------
-[InterfaceTraits::IidCount](#iidcount) | Détient le nombre d’interfaces d’interface associées à l’objet actuel. `InterfaceTraits`
+[InterfaceTraits :: Iidcount,](#iidcount) | Contient le nombre d’ID d’interface associés à l' `InterfaceTraits` objet actuel.
 
 ## <a name="inheritance-hierarchy"></a>Hiérarchie d'héritage
 
@@ -89,11 +89,11 @@ Nom                                   | Description
 
 ## <a name="requirements"></a>Spécifications
 
-**En-tête:** implements.h
+**En-tête :** Implements. h
 
-**Espace nom:** Microsoft::WRL::Details
+**Espace de noms :** Microsoft :: WRL ::D étails
 
-## <a name="interfacetraitscancastto"></a><a name="cancastto"></a>InterfaceTraits::CanCastTo
+## <a name="interfacetraitscancastto"></a><a name="cancastto"></a>InterfaceTraits :: CanCastTo,
 
 Prend en charge l’infrastructure WRL et n’est pas destiné à être utilisé directement à partir de votre code.
 
@@ -108,26 +108,26 @@ static __forceinline bool CanCastTo(
 
 ### <a name="parameters"></a>Paramètres
 
-*Ptr*<br/>
-Le nom d’un pointeur à un type.
+*ptr*<br/>
+Nom d’un pointeur vers un type.
 
 *riid*<br/>
-L’interface `Base`ID de .
+ID d’interface de `Base` .
 
-*Ppv*<br/>
-Si cette opération est réussie, *ppv* `Base`pointe vers l’interface spécifiée par . Sinon, *ppv* est `nullptr`réglé à .
+*ppv*<br/>
+Si cette opération réussit, *PPV* pointe vers l’interface spécifiée par `Base` . Sinon, *PPV* a la valeur **`nullptr`** .
 
 ### <a name="return-value"></a>Valeur de retour
 
-**vrai** si cette opération est réussie et *ptr* est jeté à un pointeur à `Base`; autrement, **faux**.
+**`true`** Si cette opération réussit et que *ptr* est casté en pointeur vers `Base` ; sinon, **`false`** .
 
 ### <a name="remarks"></a>Notes
 
-Indique si le pointeur spécifié peut `Base`être jeté à un pointeur à .
+Indique si le pointeur spécifié peut être casté en pointeur vers `Base` .
 
-Pour plus `Base`d’informations sur , voir la section [Dudefs publics.](#public-typedefs)
+Pour plus d’informations sur `Base` , consultez la section [typedefs publics](#public-typedefs) .
 
-## <a name="interfacetraitscasttobase"></a><a name="casttobase"></a>InterfaceTraits::CastToBase
+## <a name="interfacetraitscasttobase"></a><a name="casttobase"></a>InterfaceTraits :: Casttobase,
 
 Prend en charge l’infrastructure WRL et n’est pas destiné à être utilisé directement à partir de votre code.
 
@@ -141,10 +141,10 @@ static __forceinline Base* CastToBase(
 ### <a name="parameters"></a>Paramètres
 
 *T*<br/>
-Le type de paramètre *ptr*.
+Type de *ptr*du paramètre.
 
-*Ptr*<br/>
-Pointeur à un type *T*.
+*ptr*<br/>
+Pointeur vers un type *T*.
 
 ### <a name="return-value"></a>Valeur de retour
 
@@ -152,11 +152,11 @@ Pointeur vers `Base`.
 
 ### <a name="remarks"></a>Notes
 
-Lance le pointeur spécifié `Base`à un pointeur à .
+Effectue un cast du pointeur spécifié vers un pointeur vers `Base` .
 
-Pour plus `Base`d’informations sur , voir la section [Dudefs publics.](#public-typedefs)
+Pour plus d’informations sur `Base` , consultez la section [typedefs publics](#public-typedefs) .
 
-## <a name="interfacetraitscasttounknown"></a><a name="casttounknown"></a>InterfaceTraits::CastToUnknown
+## <a name="interfacetraitscasttounknown"></a><a name="casttounknown"></a>InterfaceTraits :: Casttounknown,
 
 Prend en charge l’infrastructure WRL et n’est pas destiné à être utilisé directement à partir de votre code.
 
@@ -170,22 +170,22 @@ static __forceinline IUnknown* CastToUnknown(
 ### <a name="parameters"></a>Paramètres
 
 *T*<br/>
-Le type de paramètre *ptr*.
+Type de *ptr*du paramètre.
 
-*Ptr*<br/>
-Pointeur pour taper *T*.
+*ptr*<br/>
+Pointeur vers le type *T*.
 
 ### <a name="return-value"></a>Valeur de retour
 
-Pointeur à l’IUnknown à partir de laquelle `Base` est dérivé.
+Pointeur vers IUnknown à partir duquel `Base` est dérivé.
 
 ### <a name="remarks"></a>Notes
 
-Lance le pointeur spécifié `IUnknown`à un pointeur à .
+Effectue un cast du pointeur spécifié vers un pointeur vers `IUnknown` .
 
-Pour plus `Base`d’informations sur , voir la section [Dudefs publics.](#public-typedefs)
+Pour plus d’informations sur `Base` , consultez la section [typedefs publics](#public-typedefs) .
 
-## <a name="interfacetraitsfillarraywithiid"></a><a name="fillarraywithiid"></a>InterfaceTraits::FillArrayWithIid
+## <a name="interfacetraitsfillarraywithiid"></a><a name="fillarraywithiid"></a>InterfaceTraits :: Fillarraywithiid,
 
 Prend en charge l’infrastructure WRL et n’est pas destiné à être utilisé directement à partir de votre code.
 
@@ -199,20 +199,20 @@ __forceinline static void FillArrayWithIid(
 ### <a name="parameters"></a>Paramètres
 
 *index*<br/>
-Pointeur vers un champ qui contient une valeur d’index à base de zéro.
+Pointeur vers un champ qui contient une valeur d’index de base zéro.
 
-*iids*<br/>
-Une gamme d’interfaces.
+*IID*<br/>
+Tableau d’ID d’interface.
 
 ### <a name="remarks"></a>Notes
 
-Assigne l’interface `Base` ID de l’élément de tableau spécifié par l’argument de l’index.
+Affecte l’ID d’interface de `Base` à l’élément de tableau spécifié par l’argument d’index.
 
-Contrairement au nom de cette API, un seul élément de tableau est modifié; pas tout le tableau.
+Contrairement au nom de cette API, un seul élément de tableau est modifié ; ce n’est pas le tableau entier.
 
-Pour plus `Base`d’informations sur , voir la section [Dudefs publics.](#public-typedefs)
+Pour plus d’informations sur `Base` , consultez la section [typedefs publics](#public-typedefs) .
 
-## <a name="interfacetraitsiidcount"></a><a name="iidcount"></a>InterfaceTraits::IidCount
+## <a name="interfacetraitsiidcount"></a><a name="iidcount"></a>InterfaceTraits :: Iidcount,
 
 Prend en charge l’infrastructure WRL et n’est pas destiné à être utilisé directement à partir de votre code.
 
@@ -222,9 +222,9 @@ static const unsigned long IidCount = 1;
 
 ### <a name="remarks"></a>Notes
 
-Détient le nombre d’interfaces d’interface associées à l’objet actuel. `InterfaceTraits`
+Contient le nombre d’ID d’interface associés à l' `InterfaceTraits` objet actuel.
 
-## <a name="interfacetraitsverify"></a><a name="verify"></a>InterfaceTraits::Vérifier
+## <a name="interfacetraitsverify"></a><a name="verify"></a>InterfaceTraits :: Verify
 
 Prend en charge l’infrastructure WRL et n’est pas destiné à être utilisé directement à partir de votre code.
 
@@ -234,6 +234,6 @@ __forceinline static void Verify();
 
 ### <a name="remarks"></a>Notes
 
-Vérifie qui `Base` est correctement dérivé.
+Vérifie que `Base` est correctement dérivé.
 
-Pour plus `Base`d’informations sur , voir la section [Dudefs publics.](#public-typedefs)
+Pour plus d’informations sur `Base` , consultez la section [typedefs publics](#public-typedefs) .

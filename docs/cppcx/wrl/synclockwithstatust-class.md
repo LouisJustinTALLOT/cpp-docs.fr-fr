@@ -15,12 +15,12 @@ helpviewer_keywords:
 - Microsoft::WRL::Wrappers::Details::SyncLockWithStatusT::status_ data member
 - Microsoft::WRL::Wrappers::Details::SyncLockWithStatusT::SyncLockWithStatusT, constructor
 ms.assetid: 4832fd93-0ac8-4168-9404-b43fefea7476
-ms.openlocfilehash: a111e0368ec6f4fcf8e89383b6261ad25ca6ebcf
-ms.sourcegitcommit: 6b3d793f0ef3bbb7eefaf9f372ba570fdfe61199
+ms.openlocfilehash: 4b7dbe8ae1648e4185a9eb1e1142df4a3869aa2f
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2020
-ms.locfileid: "86403819"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87216542"
 ---
 # <a name="synclockwithstatust-class"></a>SyncLockWithStatusT, classe
 
@@ -115,7 +115,7 @@ Indique si l' `SyncLockWithStatusT` objet actuel possède une ressource ; autre
 
 ### <a name="return-value"></a>Valeur de retour
 
-**true** si l' `SyncLockWithStatusT` objet est verrouillé ; sinon, **false**.
+**`true`** Si l' `SyncLockWithStatusT` objet est verrouillé ; sinon, **`false`** .
 
 ## <a name="synclockwithstatuststatus_"></a><a name="status"></a>SyncLockWithStatusT :: status_
 
@@ -159,4 +159,4 @@ Valeur de la [STATUS_](#status) membre de données de l' *autre* paramètre ou d
 
 Initialise une nouvelle instance de la classe `SyncLockWithStatusT`.
 
-Le premier constructeur initialise l’objet actuel `SyncLockWithStatusT` à partir d’un autre `SyncLockWithStatusT` spécifié par le paramètre *other*, puis invalide l’autre `SyncLockWithStatusT` objet. Le deuxième constructeur est `protected` , et initialise l’objet actuel `SyncLockWithStatusT` à un État non valide.
+Le premier constructeur initialise l’objet actuel `SyncLockWithStatusT` à partir d’un autre `SyncLockWithStatusT` spécifié par le paramètre *other*, puis invalide l’autre `SyncLockWithStatusT` objet. Le deuxième constructeur est **`protected`** , et initialise l’objet actuel `SyncLockWithStatusT` à un État non valide.

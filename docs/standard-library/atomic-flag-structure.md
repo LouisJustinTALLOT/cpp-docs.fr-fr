@@ -6,16 +6,16 @@ f1_keywords:
 - atomic/std::atomic_flag::clear
 - atomic/std::atomic_flag::test_and_set
 ms.assetid: 17f0c2f5-fd39-4a44-873a-b569720a670e
-ms.openlocfilehash: ad4b6dcaf6db1a8abe5b81b4d630e84b54fbaa63
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: ff60e05c7d14104e164e8251a9146f8b0d0dcde3
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81376869"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87203921"
 ---
 # <a name="atomic_flag-structure"></a>atomic_flag, structure
 
-Décrit un objet qui fixe et efface atomiquement un drapeau **bool.** Les opérations sur les indicateurs atomiques sont toujours sans verrou.
+Décrit un objet qui définit et efface atomiquement un **`bool`** indicateur. Les opérations sur les indicateurs atomiques sont toujours sans verrou.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -29,8 +29,8 @@ struct atomic_flag;
 
 |Nom|Description|
 |----------|-----------------|
-|[Clair](#clear)|Définit le drapeau stocké à **faux**.|
-|[test_and_set](#test_and_set)|Définit le drapeau stocké pour **vrai** et retourne la valeur initiale du drapeau.|
+|[clear](#clear)|Affecte la valeur à l’indicateur stocké **`false`** .|
+|[test_and_set](#test_and_set)|Définit l’indicateur stocké sur **`true`** et retourne la valeur de l’indicateur initial.|
 
 ## <a name="remarks"></a>Notes
 
@@ -38,13 +38,13 @@ Les objets `atomic_flag` peuvent être passés aux fonctions non-membres [atomic
 
 ## <a name="requirements"></a>Spécifications
 
-**En-tête:** \<> atomique
+**En-tête :**\<atomic>
 
 **Espace de noms :** std
 
-## <a name="atomic_flagclear"></a><a name="clear"></a>atomic_flag::clair
+## <a name="atomic_flagclear"></a><a name="clear"></a>atomic_flag :: Clear
 
-Définit le drapeau **bool** `*this` qui est stocké dans **faux**, dans les contraintes [spécifiées memory_order.](../standard-library/atomic-enums.md#memory_order_enum)
+Définit l' **`bool`** indicateur stocké dans dans **`*this`** **`false`** , dans les contraintes de [memory_order](../standard-library/atomic-enums.md#memory_order_enum) spécifiées.
 
 ```cpp
 void atomic_flag::clear(memory_order Order = memory_order_seq_cst) volatile noexcept;
@@ -53,12 +53,12 @@ void atomic_flag::clear(memory_order Order = memory_order_seq_cst) noexcept;
 
 ### <a name="parameters"></a>Paramètres
 
-*commande*\
+*Ordre*\
 Une énumération [memory_order](../standard-library/atomic-enums.md#memory_order_enum).
 
-## <a name="atomic_flagtest_and_set"></a><a name="test_and_set"></a>atomic_flag::test_and_set
+## <a name="atomic_flagtest_and_set"></a><a name="test_and_set"></a>atomic_flag :: test_and_set
 
-Définit le drapeau **bool** `*this` qui est stocké dans **vrai,** dans les contraintes [spécifiées memory_order.](../standard-library/atomic-enums.md#memory_order_enum)
+Définit l' **`bool`** indicateur stocké dans dans **`*this`** **`true`** , dans les contraintes de [memory_order](../standard-library/atomic-enums.md#memory_order_enum) spécifiées.
 
 ```cpp
 bool atomic_flag::test_and_set(memory_order Order = memory_order_seq_cst) volatile noexcept;
@@ -67,13 +67,13 @@ bool atomic_flag::test_and_set(memory_order Order = memory_order_seq_cst) noexce
 
 ### <a name="parameters"></a>Paramètres
 
-*commande*\
+*Ordre*\
 Une énumération [memory_order](../standard-library/atomic-enums.md#memory_order_enum).
 
 ### <a name="return-value"></a>Valeur de retour
 
-La valeur initiale de l’indicateur est stockée dans `*this`.
+Valeur initiale de l’indicateur stocké dans **`*this`** .
 
 ## <a name="see-also"></a>Voir aussi
 
-[\<>atomique](../standard-library/atomic.md)
+[\<atomic>](../standard-library/atomic.md)

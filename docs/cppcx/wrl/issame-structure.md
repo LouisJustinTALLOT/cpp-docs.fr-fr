@@ -9,12 +9,12 @@ helpviewer_keywords:
 - Microsoft::WRL::Details::IsSame structure
 - Microsoft::WRL::Details::IsSame::value constant
 ms.assetid: 1eddbc3f-3cc5-434f-8495-e4477e1f868e
-ms.openlocfilehash: fcaf33309521b44163022e0ffa9b1e03e53e2551
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 8c209d5a8d2a35f2643e90e5595d86f41519f30b
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81371347"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87216555"
 ---
 # <a name="issame-structure"></a>IsSame (structure)
 
@@ -35,8 +35,8 @@ struct IsSame<T1, T1>;
 *T1*<br/>
 Type.
 
-*T2 T2*<br/>
-Un autre type.
+*T2*<br/>
+Autre type.
 
 ## <a name="remarks"></a>Notes
 
@@ -48,7 +48,7 @@ Teste si un type spécifié est le même qu’un autre type spécifié.
 
 Nom                    | Description
 ----------------------- | --------------------------------------------------
-[IsSame::valeur](#value) | Indique si un type est le même qu’un autre.
+[IsSame :: value](#value) | Indique si un type est le même qu’un autre.
 
 ## <a name="inheritance-hierarchy"></a>Hiérarchie d'héritage
 
@@ -56,11 +56,11 @@ Nom                    | Description
 
 ## <a name="requirements"></a>Spécifications
 
-**En-tête:** internal.h
+**En-tête :** Internal. h
 
-**Espace nom:** Microsoft::WRL::Details
+**Espace de noms :** Microsoft :: WRL ::D étails
 
-## <a name="issamevalue"></a><a name="value"></a>IsSame::valeur
+## <a name="issamevalue"></a><a name="value"></a>IsSame :: value
 
 Prend en charge l’infrastructure WRL et n’est pas destiné à être utilisé directement à partir de votre code.
 
@@ -82,4 +82,4 @@ struct IsSame<T1, T1>
 
 Indique si un type est le même qu’un autre.
 
-`value`est **vrai** si les paramètres du modèle sont les mêmes, et **faux** si les paramètres du modèle sont différents.
+`value`est **`true`** si les paramètres de modèle sont identiques et **`false`** si les paramètres de modèle sont différents.

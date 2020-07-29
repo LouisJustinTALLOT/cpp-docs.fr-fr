@@ -17,12 +17,12 @@ helpviewer_keywords:
 - Microsoft::WRL::ClassFactory::QueryInterface method
 - Microsoft::WRL::ClassFactory::Release method
 ms.assetid: f13e6bce-722b-4f18-b7cf-3ffa6345c1db
-ms.openlocfilehash: 3b738cc8f439e6653162ab99b0a26e87aa8fee36
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: bbf20e2269e6d62206e06e748174d7b88898cd68
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81372667"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87198097"
 ---
 # <a name="classfactory-class"></a>ClassFactory (classe)
 
@@ -53,19 +53,19 @@ class ClassFactory :
 ### <a name="parameters"></a>Paramètres
 
 *I0*<br/>
-L’interface zéro.
+Interface avant toute chose.
 
-*I1 (en)*<br/>
-La première interface.
+*I1*<br/>
+Première interface.
 
-*I2 (en)*<br/>
-La deuxième interface.
+*I2*<br/>
+Deuxième interface.
 
 ## <a name="remarks"></a>Notes
 
-Utiliser `ClassFactory` pour fournir une mise en œuvre d’usine définie par l’utilisateur.
+Utilisez `ClassFactory` pour fournir une implémentation de fabrique définie par l’utilisateur.
 
-Le modèle de programmation suivant montre comment utiliser la structure [Implements](implements-structure.md) pour spécifier plus de trois interfaces sur une usine de classe.
+Le modèle de programmation suivant montre comment utiliser la structure [Implements](implements-structure.md) pour spécifier plus de trois interfaces sur une fabrique de classe.
 
 `struct MyFactory : ClassFactory<Implements<I1, I2, I3>, I4, I5>`
 
@@ -75,16 +75,16 @@ Le modèle de programmation suivant montre comment utiliser la structure [Implem
 
 Nom                                        | Description
 ------------------------------------------- | -----------
-[ClassFactory::ClassFactory](#classfactory) |
+[ClassFactory :: ClassFactory](#classfactory) |
 
 ### <a name="public-methods"></a>M&#233;thodes publiques
 
 Nom                                            | Description
 ----------------------------------------------- | ----------------------------------------------------------------------------------------------------------------
-[ClassFactory::AddRef](#addref)                 | Incréments le nombre de `ClassFactory` références pour l’objet actuel.
-[ClassFactory::LockServer](#lockserver)         | Incréments ou décroissant le nombre d’objets `ClassFactory` sous-jacents suivis par l’objet actuel.
-[ClassFactory::QueryInterface](#queryinterface) | Récupère un pointeur sur l’interface spécifiée par paramètre.
-[ClassFactory::Libération](#release)               | Décrément le nombre de `ClassFactory` références pour l’objet actuel.
+[ClassFactory :: AddRef](#addref)                 | Incrémente le décompte de références pour l' `ClassFactory` objet actuel.
+[ClassFactory :: LockServer,](#lockserver)         | Incrémente ou décrémente le nombre d’objets sous-jacents qui sont suivis par l' `ClassFactory` objet actuel.
+[ClassFactory :: QueryInterface](#queryinterface) | Récupère un pointeur vers l’interface spécifiée par le paramètre.
+[ClassFactory :: Release](#release)               | Décrémente le décompte de références pour l' `ClassFactory` objet actuel.
 
 ## <a name="inheritance-hierarchy"></a>Hiérarchie d'héritage
 
@@ -110,13 +110,13 @@ Nom                                            | Description
 
 ## <a name="requirements"></a>Spécifications
 
-**En-tête:** module.h
+**En-tête :** module. h
 
 **Espace de noms :** Microsoft::WRL
 
-## <a name="classfactoryaddref"></a><a name="addref"></a>ClassFactory::AddRef
+## <a name="classfactoryaddref"></a><a name="addref"></a>ClassFactory :: AddRef
 
-Incréments le nombre de `ClassFactory` références pour l’objet actuel.
+Incrémente le décompte de références pour l' `ClassFactory` objet actuel.
 
 ```cpp
 STDMETHOD_(
@@ -129,15 +129,15 @@ STDMETHOD_(
 
 S_OK en cas de succès. Sinon, valeur HRESULT qui décrit l’erreur.
 
-## <a name="classfactoryclassfactory"></a><a name="classfactory"></a>ClassFactory::ClassFactory
+## <a name="classfactoryclassfactory"></a><a name="classfactory"></a>ClassFactory :: ClassFactory
 
 ```cpp
 WRL_NOTHROW ClassFactory();
 ```
 
-## <a name="classfactorylockserver"></a><a name="lockserver"></a>ClassFactory::LockServer
+## <a name="classfactorylockserver"></a><a name="lockserver"></a>ClassFactory :: LockServer,
 
-Incréments ou décroissant le nombre d’objets `ClassFactory` sous-jacents suivis par l’objet actuel.
+Incrémente ou décrémente le nombre d’objets sous-jacents qui sont suivis par l' `ClassFactory` objet actuel.
 
 ```cpp
 STDMETHOD(
@@ -148,19 +148,19 @@ STDMETHOD(
 ### <a name="parameters"></a>Paramètres
 
 *Troupeau*<br/>
-**fidèle** à l’augmentation du nombre d’objets suivis. **faux** pour décroisser le nombre d’objets suivis.
+**`true`** pour incrémenter le nombre d’objets suivis. **`false`** pour décrémenter le nombre d’objets suivis.
 
 ### <a name="return-value"></a>Valeur de retour
 
-S_OK en cas de succès; autrement, E_FAIL.
+S_OK en cas de réussite ; Sinon, E_FAIL.
 
 ### <a name="remarks"></a>Notes
 
-`ClassFactory`garde une trace des objets dans un cas sous-jacent de la classe [Module.](module-class.md)
+`ClassFactory`effectue le suivi des objets dans une instance sous-jacente de la classe de [module](module-class.md) .
 
-## <a name="classfactoryqueryinterface"></a><a name="queryinterface"></a>ClassFactory::QueryInterface
+## <a name="classfactoryqueryinterface"></a><a name="queryinterface"></a>ClassFactory :: QueryInterface
 
-Récupère un pointeur sur l’interface spécifiée par paramètre.
+Récupère un pointeur vers l’interface spécifiée par le paramètre.
 
 ```cpp
 STDMETHOD(
@@ -174,15 +174,15 @@ STDMETHOD(
 ID d’interface.
 
 *ppvObject*<br/>
-Lorsque cette opération se termine, un pointeur à l’interface spécifiée par le *paramètre riid*.
+Lorsque cette opération est terminée, il s’agit d’un pointeur vers l’interface spécifiée par le paramètre *riid*.
 
 ### <a name="return-value"></a>Valeur de retour
 
 S_OK en cas de succès. Sinon, valeur HRESULT qui décrit l’erreur.
 
-## <a name="classfactoryrelease"></a><a name="release"></a>ClassFactory::Libération
+## <a name="classfactoryrelease"></a><a name="release"></a>ClassFactory :: Release
 
-Décrément le nombre de `ClassFactory` références pour l’objet actuel.
+Décrémente le décompte de références pour l' `ClassFactory` objet actuel.
 
 ```cpp
 STDMETHOD_(

@@ -30,12 +30,12 @@ helpviewer_keywords:
 - _lfind function
 - heap allocation, time-critical code performance
 ms.assetid: 3e95a8cc-6239-48d1-9d6d-feb701eccb54
-ms.openlocfilehash: 039b86eec024daf8e3473bba5d89f190507f3cfd
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: a2cc8062368b89e38b5f96b3134742123af24310
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81335457"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87231479"
 ---
 # <a name="tips-for-improving-time-critical-code"></a>Conseils pour l'amélioration du code à durée critique
 
@@ -65,7 +65,7 @@ Pour rassembler des informations sur les performances de votre code, vous pouvez
 
 - [Tas](#_core_heaps)
 
-- [Thèmes](#_core_threads)
+- [Threads](#_core_threads)
 
 - [Petite plage de travail](#_core_small_working_set)
 
@@ -107,11 +107,11 @@ Il existe moins d'alternatives pour les recherches que pour le tri. Si la recher
 
 La bibliothèque MFC (Microsoft Foundation Classes) peut grandement simplifier l'écriture de code. Lorsque vous écrivez du code fortement dépendant du temps, vous devez être conscient de la surcharge inhérente à certaines classes. Examinez le code MFC qu’utilise votre code fortement dépendant du temps pour voir s’il satisfait à vos exigences en matière de performances. La liste suivante identifie les fonctions et classes MFC dont vous devez être conscient :
 
-- `CString`MFC appelle la bibliothèque Runtime C pour allouer dynamiquement de la mémoire pour un [CString](../atl-mfc-shared/reference/cstringt-class.md) . Dans l'ensemble, `CString` est aussi efficace que toute autre chaîne allouée dynamiquement. Comme pour toute chaîne allouée dynamiquement, il a la surcharge de l’allocation et de la mise en production dynamiques. Souvent, un tableau `char` simple sur la pile peut servir le même objectif et être plus rapide. N'utilisez pas `CString` pour stocker une chaîne constante. Utilisez `const char *` à la place. Toute opération que vous effectuez avec un objet `CString` présente une certaine surcharge. L’utilisation des [fonctions de chaîne](../c-runtime-library/string-manipulation-crt.md) de la bibliothèque Runtime peut être plus rapide.
+- `CString`MFC appelle la bibliothèque Runtime C pour allouer dynamiquement de la mémoire pour un [CString](../atl-mfc-shared/reference/cstringt-class.md) . Dans l'ensemble, `CString` est aussi efficace que toute autre chaîne allouée dynamiquement. Comme pour toute chaîne allouée dynamiquement, il a la surcharge de l’allocation et de la mise en production dynamiques. Souvent, un **`char`** tableau simple sur la pile peut servir le même objectif et est plus rapide. N'utilisez pas `CString` pour stocker une chaîne constante. Utilisez `const char *` à la place. Toute opération que vous effectuez avec un objet `CString` présente une certaine surcharge. L’utilisation des [fonctions de chaîne](../c-runtime-library/string-manipulation-crt.md) de la bibliothèque Runtime peut être plus rapide.
 
 - `CArray`Un [CArray](../mfc/reference/carray-class.md) offre une certaine flexibilité qu’un tableau normal, mais votre programme n’en a peut-être pas besoin. Si vous connaissez les limites spécifiques du tableau, vous pouvez utiliser un tableau fixe global à la place. Si vous utilisez `CArray`, utilisez `CArray::SetSize` pour établir sa taille et spécifiez le nombre d'éléments dont il croîtra quand une réallocation sera nécessaire. Dans le cas contraire, l'ajout d'éléments peut entraîner la réallocation et la copie fréquentes de votre tableau, ce qui est inefficace et peut fragmenter la mémoire. De plus, sachez que si vous insérez un élément dans un tableau, l'objet `CArray` déplace les éléments suivants dans la mémoire et peut être amené à augmenter la taille du tableau. Ces actions peuvent provoquer des défauts de page et des échecs dans le cache. Si vous examinez le code que la bibliothèque MFC utilise, vous pouvez voir que vous pouvez écrire quelque chose de plus spécifique dans votre scénario pour améliorer les performances. Comme `CArray` est un modèle, par exemple, vous pouvez fournir des spécialisations de `CArray` pour des types spécifiques.
 
-- `CList`[CList](../mfc/reference/clist-class.md) est une liste doublement liée. par conséquent, l’insertion d’éléments est rapide à la tête, à la fin et à`POSITION`une position connue () dans la liste. La recherche d'un élément par valeur ou index exige une recherche séquentielle, toutefois, laquelle peut être lente si la liste est longue. Si votre code ne requiert pas de liste à double liaison, vous voudrez peut-être reconsidérer l'utilisation de `CList`. L'utilisation d'une liste à liaison unique économise la surcharge liée à la mise à jour d'un pointeur supplémentaire pour toutes les opérations, ainsi que la mémoire pour ce pointeur. La mémoire supplémentaire n’est pas de grande ampleur, mais elle représente une autre opportunité de défauts de page ou d’échecs dans le cache.
+- `CList`[CList](../mfc/reference/clist-class.md) est une liste doublement liée. par conséquent, l’insertion d’éléments est rapide à la tête, à la fin et à une position connue ( `POSITION` ) dans la liste. La recherche d'un élément par valeur ou index exige une recherche séquentielle, toutefois, laquelle peut être lente si la liste est longue. Si votre code ne requiert pas de liste à double liaison, vous voudrez peut-être reconsidérer l'utilisation de `CList`. L'utilisation d'une liste à liaison unique économise la surcharge liée à la mise à jour d'un pointeur supplémentaire pour toutes les opérations, ainsi que la mémoire pour ce pointeur. La mémoire supplémentaire n’est pas de grande ampleur, mais elle représente une autre opportunité de défauts de page ou d’échecs dans le cache.
 
 - `IsKindOf`Cette fonction peut générer de nombreux appels et accéder à une grande quantité de mémoire dans différentes zones de données, ce qui se traduit par une localité de référence incorrecte. Il est utile pour une version Debug (dans un appel ASSERT, par exemple), mais essayez d’éviter de l’utiliser dans une version Release.
 
@@ -119,7 +119,7 @@ La bibliothèque MFC (Microsoft Foundation Classes) peut grandement simplifier l
 
    Ne contournez pas le chemin de distribution normal en utilisant `PreTranslateMessage` pour traiter des messages quelconques envoyés vers des fenêtres quelconques. Utilisez les [procédures de fenêtre](../mfc/registering-window-classes.md) et les tables des messages MFC à cet effet.
 
-- `OnIdle`Les événements inactifs peuvent se produire à des moments inattendus `WM_KEYDOWN` , `WM_KEYUP` par exemple entre des événements et. Les minuteries peuvent fournir un moyen plus efficace de déclencher votre code. Ne forcez pas les appels répétés à `OnIdle` en générant des messages faux ou en retournant toujours `TRUE` à partir d'une substitution d'`OnIdle`, ce qui ne permettrait jamais la mise en veille de votre thread. À nouveau, une minuterie ou un thread distinct peuvent être plus appropriés.
+- `OnIdle`Les événements inactifs peuvent se produire à des moments inattendus, par exemple entre `WM_KEYDOWN` des `WM_KEYUP` événements et. Les minuteries peuvent fournir un moyen plus efficace de déclencher votre code. Ne forcez pas les appels répétés à `OnIdle` en générant des messages faux ou en retournant toujours `TRUE` à partir d'une substitution d'`OnIdle`, ce qui ne permettrait jamais la mise en veille de votre thread. À nouveau, une minuterie ou un thread distinct peuvent être plus appropriés.
 
 ## <a name="shared-libraries"></a><a name="vcovrsharedlibraries"></a>Bibliothèques partagées
 
@@ -159,4 +159,4 @@ De petites plages de travail induisent une meilleure localité de référence, m
 
 ## <a name="see-also"></a>Voir aussi
 
-[Optimisation du code](optimizing-your-code.md)
+[Optimisation de votre code](optimizing-your-code.md)

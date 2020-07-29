@@ -46,12 +46,12 @@ helpviewer_keywords:
 - llroundf function
 - lroundl function
 ms.assetid: cfb88a35-54c6-469f-85af-f7d695dcfdd8
-ms.openlocfilehash: 10d5e1284f756107cee03b970d026d9e2896adf2
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: 0be17ceb579bfc7da7b9f47ac1b6942383eebb91
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82911367"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87216893"
 ---
 # <a name="lround-lroundf-lroundl-llround-llroundf-llroundl"></a>lround, lroundf, lroundl, llround, llroundf, llroundl
 
@@ -99,15 +99,15 @@ Valeur à virgule flottante à arrondir.
 
 ## <a name="return-value"></a>Valeur de retour
 
-Les **fonctions lround** et **llround** retournent **l’entier** **long** **ou long long le** plus proche en *x*. Les valeurs médianes sont arrondies en s’éloignant de zéro, indépendamment du paramètre du mode d’arrondi à virgule flottante. Aucun retour d'erreur.
+Les fonctions **lround** et **llround** retournent l’entier ou le plus proche **`long`** **`long long`** à *x*. Les valeurs médianes sont arrondies en s’éloignant de zéro, indépendamment du paramètre du mode d’arrondi à virgule flottante. Aucun retour d'erreur.
 
 |Entrée|Exception SEH|Exception\{b\> \<b\}Matherr|
 |-----------|-------------------|-----------------------|
-|± **QNAN**, **IND**|Aucun|**_DOMAIN**|
+|± **QNAN**, **IND**|aucun|**_DOMAIN**|
 
-## <a name="remarks"></a>Notes 
+## <a name="remarks"></a>Notes
 
-C++ autorisant la surcharge, vous pouvez appeler des surcharges de **lround** ou **llround** qui acceptent et retournent des valeurs **float** et **long** **double** . Dans un programme C, **lround** et **llround** prennent toujours et retournent un **double**.
+C++ autorisant la surcharge, vous pouvez appeler des surcharges de **lround** ou **llround** qui acceptent et retournent des **`float`** **`long double`** valeurs et. Dans un programme C, **lround** et **llround** prennent toujours et retournent un **`double`** .
 
 Par défaut, l’état global de cette fonction est limité à l’application. Pour modifier cette valeur, consultez [état global dans le CRT](../global-state.md).
 

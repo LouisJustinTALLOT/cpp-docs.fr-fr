@@ -37,12 +37,12 @@ helpviewer_keywords:
 - fmaf function
 - fmal function
 ms.assetid: 584a6037-da1e-4e86-9f0c-97aae86de0c0
-ms.openlocfilehash: be3578aa9c66f329e191749b4506091bff69b1eb
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: d82565ed53f311ef1b2cf5942d207bf96090bd13
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82914955"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87216997"
 ---
 # <a name="fma-fmaf-fmal"></a>fma, fmaf, fmal
 
@@ -110,9 +110,9 @@ Sinon, peut retourner l’une des valeurs suivantes :
 
 Les erreurs sont signalées comme indiqué dans [_matherr](matherr.md).
 
-## <a name="remarks"></a>Notes 
+## <a name="remarks"></a>Notes
 
-C++ autorisant la surcharge, vous pouvez appeler des surcharges de **FMA** qui acceptent et retournent des types **float** et **long** **double** . Dans un programme C, **FMA** accepte et retourne toujours un **double**.
+C++ autorisant la surcharge, vous pouvez appeler des surcharges de **FMA** qui acceptent et retournent des **`float`** **`long double`** types et. Dans un programme C, **FMA** accepte et retourne toujours un **`double`** .
 
 Cette fonction calcule la valeur avec une précision infinie, puis arrondit le résultat final.
 
@@ -120,7 +120,7 @@ Par défaut, l’état global de cette fonction est limité à l’application. 
 
 ## <a name="requirements"></a>Spécifications
 
-|Function|En-tête C|En-tête C++|
+|Fonction|En-tête C|En-tête C++|
 |--------------|--------------|------------------|
 |**FMA**, **fmaf**, **Fmal**|\<math.h>|\<cmath>|
 
@@ -128,6 +128,6 @@ Pour plus d'informations sur la compatibilité, voir [Compatibilité](../../c-ru
 
 ## <a name="see-also"></a>Voir aussi
 
-[Référence alphabétique des fonctions](crt-alphabetical-function-reference.md)<br/>
+[Référence de fonction alphabétique](crt-alphabetical-function-reference.md)<br/>
 [remainder, remainderf, remainderl](remainder-remainderf-remainderl.md)<br/>
 [remquo, remquof, remquol](remquo-remquof-remquol.md)<br/>

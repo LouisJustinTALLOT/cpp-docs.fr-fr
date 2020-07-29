@@ -1,5 +1,5 @@
 ---
-title: struct de high_resolution_clock | Microsoft Docs
+title: struct high_resolution_clock | Microsoft Docs
 ms.custom: ''
 ms.date: 05/22/2018
 ms.technology: cpp-standard-libraries
@@ -12,16 +12,16 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0b00b20e7cea4fa24b37ad33d5536eb9844e6953
-ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
+ms.openlocfilehash: 850d5e3a5434aa44e23a7f74aeb9c306ab6c0a8e
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68269121"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87203206"
 ---
-# <a name="steadyclock-struct"></a>steady_clock, struct
+# <a name="steady_clock-struct"></a>steady_clock, struct
 
-Représente un *high_resolution* horloge.
+Représente une horloge de *high_resolution* .
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -31,23 +31,23 @@ class high_resolution_clock
 
 ## <a name="members"></a>Membres
 
-### <a name="typedefs"></a>Typedef
+### <a name="typedefs"></a>Typedefs
 
-|Name|Description|
+|Nom|Description|
 |----------|-----------------|
-|`duration`|Un synonyme de `nanoseconds`, défini dans \<chrono >.|
-|`period`|Un synonyme de `nano`, défini dans \<ratio >.|
-|`rep`|Un synonyme de **long** **long**, le type qui est utilisé pour représenter le nombre de battements d’horloge dans l’instanciation contenue de `duration`.|
+|`duration`|Synonyme de `nanoseconds` , défini dans \<chrono> .|
+|`period`|Synonyme de `nano` , défini dans \<ratio> .|
+|`rep`|Synonyme de **`long long`** , type utilisé pour représenter le nombre de battements d’horloge dans l’instanciation contenue de `duration` .|
 |`time_point`|Synonyme de `chrono::time_point<high_resolution_clock>`.|
 
 ## <a name="functions"></a>Fonctions
 
 |||
 |-|-|
-|`now`|Retourne l’heure actuelle comme un `time_point` valeur.|
+|`now`|Retourne l’heure actuelle en tant que `time_point` valeur.|
 
 ## <a name="constants"></a>Constantes
 
 |Nom|Description|
 |----------|-----------------|
-|`is_steady`|Contient **true**. Un `high_resolution_clock` est *steady*.|
+|`is_steady`|Contient **`true`** . Un `high_resolution_clock` est *steady*.|

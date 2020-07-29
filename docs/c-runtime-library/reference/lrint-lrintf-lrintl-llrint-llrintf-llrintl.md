@@ -52,12 +52,12 @@ helpviewer_keywords:
 - llrintf function
 - llrintl function
 ms.assetid: 28ccd5b3-5e6f-434f-997d-a21d51b8ce7f
-ms.openlocfilehash: effb146cac201a21651f21e3e5c040fbb68819a6
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: c692b97598e2342628c3171fc22aeead9c864d60
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82911372"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87216906"
 ---
 # <a name="lrint-lrintf-lrintl-llrint-llrintf-llrintl"></a>lrint, lrintf, lrintl, llrint, llrintf, llrintl
 
@@ -120,9 +120,9 @@ En cas de réussite, retourne la valeur intégrale arrondie de *x*.
 |-----------|------------|
 |*x* est en dehors de la plage du type de retour<br /><br /> *x* = ± ∞<br /><br /> *x* = Nan|Déclenche **FE_INVALID** et retourne zéro (0).|
 
-## <a name="remarks"></a>Notes 
+## <a name="remarks"></a>Notes
 
-C++ autorisant la surcharge, vous pouvez appeler des surcharges de **lrint** et **llrint** qui prennent des types **float** et **long** **double** . Dans un programme C, **lrint** et **llrint** prennent toujours un **double**.
+C++ autorisant la surcharge, vous pouvez appeler des surcharges de **lrint** et **llrint** qui acceptent **`float`** les **`long double`** types et. Dans un programme C, **lrint** et **llrint** prennent toujours un **`double`** .
 
 Si *x* ne représente pas l’équivalent à virgule flottante d’une valeur intégrale, ces fonctions déclenchent **FE_INEXACT**.
 
@@ -132,7 +132,7 @@ Par défaut, l’état global de cette fonction est limité à l’application. 
 
 ## <a name="requirements"></a>Spécifications
 
-|Function|En-tête C|En-tête C++|
+|Fonction|En-tête C|En-tête C++|
 |--------------|--------------|------------------|
 |**lrint**, **lrintf**, **lrintl**, **llrint**, **llrintf**, **llrintl**|\<math.h>|\<cmath>|
 
@@ -140,4 +140,4 @@ Pour plus d'informations sur la compatibilité, voir [Compatibilité](../../c-ru
 
 ## <a name="see-also"></a>Voir aussi
 
-[Référence alphabétique des fonctions](crt-alphabetical-function-reference.md)<br/>
+[Référence de fonction alphabétique](crt-alphabetical-function-reference.md)<br/>

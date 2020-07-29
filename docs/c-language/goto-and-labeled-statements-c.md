@@ -8,16 +8,16 @@ helpviewer_keywords:
 - statements, labeled
 - goto keyword [C]
 ms.assetid: 3d0473dc-4b18-4fcc-9616-31a38499d7d7
-ms.openlocfilehash: b5e0d602332c87510b1fe5f59db3e497b88f0acb
-ms.sourcegitcommit: a5fa9c6f4f0c239ac23be7de116066a978511de7
+ms.openlocfilehash: d84aa6701ef030dc494f6a40a7223d6f9bcd5073
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/20/2019
-ms.locfileid: "75299115"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87199982"
 ---
 # <a name="goto-and-labeled-statements-c"></a>Instructions goto et étiquetées (C)
 
-L'instruction `goto` transfère le contrôle à une étiquette. L'étiquette donnée doit résider dans la même fonction et peut apparaître devant une seule instruction dans la même fonction.
+L' **`goto`** instruction transfère le contrôle à une étiquette. L'étiquette donnée doit résider dans la même fonction et peut apparaître devant une seule instruction dans la même fonction.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -26,18 +26,18 @@ L'instruction `goto` transfère le contrôle à une étiquette. L'étiquette don
 &nbsp;&nbsp;&nbsp;&nbsp;*instruction Jump*
 
 *instruction Jump*:<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**goto***identificateur*Goto **;**    
+&nbsp;&nbsp;&nbsp;&nbsp;**`goto`**  *identificateur*  **;**
 
 *instruction étiquetée*:<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*identificateur*  **:**  *instruction*
 
-Une étiquette d'instruction est uniquement explicite pour une instruction `goto`. Dans tout autre contexte, une instruction étiquetée est exécutée sans tenir compte de l'étiquette.
+Une étiquette d’instruction est significative uniquement pour une **`goto`** instruction. dans tout autre contexte, une instruction étiquetée est exécutée sans tenir compte de l’étiquette.
 
-*jump-statement* doit résider dans la même fonction et peut apparaître devant une seule instruction dans la même fonction. L'ensemble des noms *identifier* suivant une instruction `goto` a son propre espace de noms et les noms n'interfèrent donc pas avec d'autres identificateurs. Les étiquettes ne peuvent pas être redéclarées. Pour plus d'informations, consultez [Espaces de noms](../c-language/name-spaces.md).
+*jump-statement* doit résider dans la même fonction et peut apparaître devant une seule instruction dans la même fonction. L’ensemble de noms d' *identificateur* suivant un **`goto`** a son propre espace de noms, les noms n’interfèrent donc pas avec d’autres identificateurs. Les étiquettes ne peuvent pas être redéclarées. Pour plus d'informations, consultez [Espaces de noms](../c-language/name-spaces.md).
 
-Il est toutefois conseillé d'utiliser l'instruction **break**, **continue** et `return` plutôt que `goto` dans la mesure du possible. Étant donné que l'instruction **break** n'exécute une sortie que d'un niveau de la boucle, une instruction `goto` peut être nécessaire pour quitter une boucle dans une boucle profondément imbriquée.
+Il s’agit d’un bon style de programmation pour utiliser l' **`break`** **`continue`** instruction, et **`return`** de préférence à **`goto`** chaque fois que cela est possible. Étant donné que l' **`break`** instruction se termine uniquement à partir d’un niveau de la boucle, un **`goto`** peut être nécessaire pour quitter une boucle dans une boucle profondément imbriquée.
 
-Cet exemple illustre l'instruction `goto` :
+Cet exemple illustre l' **`goto`** instruction :
 
 ```c
 // goto.c
@@ -65,7 +65,7 @@ int main()
 }
 ```
 
-Dans cet exemple, une instruction `goto` transfère le contrôle au point étiqueté `stop` lorsque `i` est égal à 5.
+Dans cet exemple, une **`goto`** instruction transfère le contrôle au point étiqueté `stop` lorsque `i` est égal à 5.
 
 ## <a name="see-also"></a>Voir aussi
 

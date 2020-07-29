@@ -34,12 +34,12 @@ helpviewer_keywords:
 - remainderl
 - remainder
 ms.assetid: 5f721fb3-8b78-4597-9bc0-ca9bcd1f1d0e
-ms.openlocfilehash: 6b2a1a94fa39f9e9474f7bc3da3150bf4134d35f
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: b880054430574b6ea1e8bc456774acc35cf116ad
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82917847"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87216802"
 ---
 # <a name="remainder-remainderf-remainderl"></a>remainder, remainderf, remainderl
 
@@ -68,19 +68,19 @@ Dénominateur.
 
 ## <a name="return-value"></a>Valeur de retour
 
-Reste à virgule flottante de *x* / *y*. Si la valeur de *y* est 0,0, la fonction **Remainder** retourne une valeur NaN calme. Pour plus d’informations sur la représentation d’une NaN calme par la famille **printf** , consultez [printf, _printf_l, wprintf, _wprintf_l](printf-printf-l-wprintf-wprintf-l.md).
+Reste à virgule flottante de *x*  /  *y*. Si la valeur de *y* est 0,0, la fonction **Remainder** retourne une valeur NaN calme. Pour plus d’informations sur la représentation d’une NaN calme par la famille **printf** , consultez [printf, _printf_l, wprintf, _wprintf_l](printf-printf-l-wprintf-wprintf-l.md).
 
-## <a name="remarks"></a>Notes 
+## <a name="remarks"></a>Notes
 
-Les **fonctions restantes** calculent le reste à virgule flottante *r* de *x* / *y* , de telle sorte que *x* = *n* \* *o* + *r*, où *n*est l’entier le plus proche dans la valeur de *x* / *y* et *n*, même chaque fois que &#124; *n* - *x* / *y* &#124; = 1/2. Lorsque *r* = 0, *r* a le même signe que *x*.
+Les fonctions **restantes** calculent le reste à virgule flottante *r* de *x*  /  *y* , de telle sorte que *x*  =  *n* \* *o*  +  *r*, où *n*est l’entier le plus proche dans la valeur de *x*  /  *y* et *n*, même chaque fois que &#124; *n*  -  *x*  /  *y* &#124; = 1/2. Lorsque *r* = 0, *r* a le même signe que *x*.
 
-C++ autorisant la surcharge, vous pouvez appeler des surcharges de **reste** qui acceptent et retournent des valeurs **float** ou **long** **double** . Dans un programme C, le **reste** prend toujours deux arguments **double** et retourne un **double**.
+C++ autorisant la surcharge, vous pouvez appeler des surcharges de **reste** qui acceptent et retournent des **`float`** **`long double`** valeurs ou. Dans un programme C, le **reste** prend toujours deux **`double`** arguments et retourne un **`double`** .
 
 Par défaut, l’état global de cette fonction est limité à l’application. Pour modifier cette valeur, consultez [état global dans le CRT](../global-state.md).
 
 ## <a name="requirements"></a>Spécifications
 
-|Function|En-tête requis (C)|En-tête requis (C++)|
+|Fonction|En-tête requis (C)|En-tête requis (C++)|
 |--------------|---------------------|-|
 |**reste**, **remainderf**, **restante**|\<math.h>|\<cmath> ou \<math.h>|
 

@@ -43,19 +43,19 @@ helpviewer_keywords:
 - wscanf_l function
 - _wscanf_l function
 ms.assetid: 73eac607-117f-4be4-9ff0-4afd9cf3c848
-ms.openlocfilehash: df63baa8ffa878a4a65c84e07f0e68aa383e79cf
-ms.sourcegitcommit: 8e285a766523e653aeeb34d412dc6f615ef7b17b
+ms.openlocfilehash: 62f97c901bc7e6dc34a2db6ad80193cc4aaa986a
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/21/2020
-ms.locfileid: "80079210"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87231349"
 ---
 # <a name="scanf-_scanf_l-wscanf-_wscanf_l"></a>scanf, _scanf_l, wscanf, _wscanf_l
 
 Lit les données mises en forme du flux d'entrée standard. Il existe des versions plus sécurisées de ces fonctions. Consultez [scanf_s, _scanf_s_l, wscanf_s, _wscanf_s_l](scanf-s-scanf-s-l-wscanf-s-wscanf-s-l.md).
 
 > [!NOTE]
-> Dans Visual Studio 2015, la famille de fonctions `printf` et `scanf` a été déclarée comme **inline** et déplacée vers les en-têtes `<stdio.h>` et `<conio.h>`. Si vous migrez du code plus ancien, vous pouvez voir l’erreur *LNK2019* en relation avec ces fonctions. Pour plus d’informations, [consultez C++ historique des modifications visuelles 2003-2015](../../porting/visual-cpp-change-history-2003-2015.md#stdio_and_conio).
+> Dans Visual Studio 2015, `printf` la `scanf` famille et des fonctions ont été déclarées comme **`inline`** et déplacées vers les `<stdio.h>` `<conio.h>` en-têtes et. Si vous migrez du code plus ancien, vous pouvez voir l’erreur *LNK2019* en relation avec ces fonctions. Pour plus d’informations, consultez [l’historique des modifications de Visual C++ 2003-2015](../../porting/visual-cpp-change-history-2003-2015.md#stdio_and_conio).
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -97,14 +97,14 @@ Retourne le nombre de champs correctement convertis et assignés. La valeur de r
 
 Si *format* est un pointeur **null** , le gestionnaire de paramètres non valides est appelé, comme décrit dans [validation de paramètre](../../c-runtime-library/parameter-validation.md). Si l’exécution est autorisée à se poursuivre, ces fonctions retournent **EOF** et attribuent à **errno** la valeur **EINVAL**.
 
-Pour obtenir des informations sur ces codes d’erreur et les autres, consultez [_doserrno, errno, _sys_errlist et _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
+Pour plus d’informations sur ces codes d’erreur et les autres, consultez [_doserrno, errno, _sys_errlist et _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
 
 ## <a name="remarks"></a>Notes
 
 La fonction **scanf** lit les données à partir du flux d’entrée standard **stdin** et écrit les données dans l’emplacement donné par *argument*. Chaque *argument* doit être un pointeur vers une variable d’un type qui correspond à un spécificateur de type au *format*. Si la copie se produit entre des chaînes qui se chevauchent, le comportement est indéfini.
 
 > [!IMPORTANT]
-> Lors de la lecture d’une chaîne avec **scanf**, spécifiez toujours une largeur pour le format **% s** (par exemple, **« % 32s »** au lieu de **« % s »** ); dans le cas contraire, une entrée mal mise en forme peut facilement provoquer un dépassement de mémoire tampon. Vous pouvez aussi envisager d’utiliser [scanf_s, _scanf_s_l, wscanf_s, _wscanf_s_l](scanf-s-scanf-s-l-wscanf-s-wscanf-s-l.md) ou [fgets](fgets-fgetws.md).
+> Lors de la lecture d’une chaîne avec **scanf**, spécifiez toujours une largeur pour le format **% s** (par exemple, **« % 32s »** au lieu de **« % s »**); dans le cas contraire, une entrée mal mise en forme peut facilement provoquer un dépassement de mémoire tampon. Vous pouvez aussi envisager d’utiliser [scanf_s, _scanf_s_l, wscanf_s, _wscanf_s_l](scanf-s-scanf-s-l-wscanf-s-wscanf-s-l.md) ou [fgets](fgets-fgetws.md).
 
 **wscanf** est une version à caractères larges de **scanf**; l’argument *format* de **wscanf** est une chaîne de caractères larges. **wscanf** et **scanf** se comportent de la même manière si le flux est ouvert en mode ANSI. **scanf** ne prend pas actuellement en charge l’entrée d’un flux Unicode.
 
@@ -126,7 +126,7 @@ Pour plus d’informations, consultez [Champs de spécification de format : fon
 |**scanf**, **_scanf_l**|\<stdio.h>|
 |**wscanf**, **_wscanf_l**|\<stdio.h> ou \<wchar.h>|
 
-La console n’est pas prise en charge dans les applications de plateforme Windows universelle (UWP). Les handles de flux standard associés à la console, **stdin**, **stdout**et **stderr**, doivent être redirigés pour que les fonctions runtime C puissent les utiliser dans les applications UWP. Pour plus d’informations sur la compatibilité, voir [Compatibilité](../../c-runtime-library/compatibility.md).
+La console n’est pas prise en charge dans les applications de plateforme Windows universelle (UWP). Les handles de flux standard associés à la console, **stdin**, **stdout**et **stderr**, doivent être redirigés pour que les fonctions runtime C puissent les utiliser dans les applications UWP. Pour plus d'informations sur la compatibilité, voir [Compatibilité](../../c-runtime-library/compatibility.md).
 
 ## <a name="example"></a>Exemple
 
@@ -173,5 +173,5 @@ The contents are: 36 92.300003 y n Wide characters
 [Paramètres régionaux](../../c-runtime-library/locale.md)<br/>
 [fscanf, _fscanf_l, fwscanf, _fwscanf_l](fscanf-fscanf-l-fwscanf-fwscanf-l.md)<br/>
 [printf, _printf_l, wprintf, _wprintf_l](printf-printf-l-wprintf-wprintf-l.md)<br/>
-[sprintf, _sprintf_l, swprintf, _swprintf_l, \__swprintf_l](sprintf-sprintf-l-swprintf-swprintf-l-swprintf-l.md)<br/>
+[sprintf, _sprintf_l, swprintf, _swprintf_l, \_ _swprintf_l](sprintf-sprintf-l-swprintf-swprintf-l-swprintf-l.md)<br/>
 [sscanf, _sscanf_l, swscanf, _swscanf_l](sscanf-sscanf-l-swscanf-swscanf-l.md)<br/>

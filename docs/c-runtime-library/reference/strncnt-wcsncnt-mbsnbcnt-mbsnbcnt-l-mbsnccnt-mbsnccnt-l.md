@@ -58,12 +58,12 @@ helpviewer_keywords:
 - _mbsnccnt function
 - _wcsncnt function
 ms.assetid: 2a022e9e-a307-4acb-a66b-e56e5357f848
-ms.openlocfilehash: 020b844d884182ae7553fec9e9db746987189910
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: 77746af98e5d62b80d5a0d2d93eb1f717c74b33e
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82914210"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87231336"
 ---
 # <a name="_strncnt-_wcsncnt-_mbsnbcnt-_mbsnbcnt_l-_mbsnccnt-_mbsnccnt_l"></a>_strncnt, _wcsncnt, _mbsnbcnt, _mbsnbcnt_l, _mbsnccnt, _mbsnccnt_l
 
@@ -105,7 +105,7 @@ size_t _mbsnccnt_l(
 
 ### <a name="parameters"></a>Paramètres
 
-*Str*<br/>
+*str*<br/>
 Chaîne à examiner.
 
 *count*<br/>
@@ -116,11 +116,11 @@ Paramètres régionaux à utiliser.
 
 ## <a name="return-value"></a>Valeur de retour
 
-**_mbsnbcnt** et **_mbsnbcnt_l** retournent le nombre d’octets trouvés dans le premier *nombre* de caractères multioctets de *Str*. **_mbsnccnt** et **_mbsnccnt_l** retournent le nombre de caractères trouvés dans le premier *nombre* d’octets de *Str*. Si un caractère NULL est rencontré avant la fin de l’examen de *Str* , il retourne le nombre d’octets ou de caractères trouvés avant le caractère null. Si *Str* est inférieur à *Count* caractères ou bytes, ils retournent le nombre de caractères ou d’octets dans la chaîne. Si *Count* est inférieur à zéro, elles retournent 0. Dans les versions précédentes, ces fonctions avaient une valeur de retour de type **int** au lieu de **size_t**.
+**_mbsnbcnt** et **_mbsnbcnt_l** retournent le nombre d’octets trouvés dans le premier *nombre* de caractères multioctets de *Str*. **_mbsnccnt** et **_mbsnccnt_l** retournent le nombre de caractères trouvés dans le premier *nombre* d’octets de *Str*. Si un caractère NULL est rencontré avant la fin de l’examen de *Str* , il retourne le nombre d’octets ou de caractères trouvés avant le caractère null. Si *Str* est inférieur à *Count* caractères ou bytes, ils retournent le nombre de caractères ou d’octets dans la chaîne. Si *Count* est inférieur à zéro, elles retournent 0. Dans les versions précédentes, ces fonctions avaient une valeur de retour de type **`int`** au lieu de **size_t**.
 
 **_strncnt** retourne le nombre de caractères dans le premier *nombre* d’octets de la chaîne codée sur un *octet.* **_wcsncnt** retourne le nombre de caractères dans le premier *nombre* de caractères larges de la chaîne de caractères larges *Str*.
 
-## <a name="remarks"></a>Notes 
+## <a name="remarks"></a>Notes
 
 **_mbsnbcnt** et **_mbsnbcnt_l** comptent le nombre d’octets trouvés dans le premier *nombre* de caractères multioctets de *Str*. **_mbsnbcnt** et **_mbsnbcnt_l** remplacer **mtob** et doivent être utilisés à la place de **mtob**.
 
@@ -155,7 +155,7 @@ Par défaut, l’état global de cette fonction est limité à l’application. 
 
 Pour plus d’informations sur la compatibilité, consultez [Compatibility](../../c-runtime-library/compatibility.md).
 
-## <a name="example"></a> Exemple
+## <a name="example"></a>Exemple
 
 ```C
 // crt_mbsnbcnt.c

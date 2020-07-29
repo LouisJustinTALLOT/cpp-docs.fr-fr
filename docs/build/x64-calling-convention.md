@@ -3,11 +3,12 @@ title: Convention d’appel x64
 description: Détails de la Convention d’appel x64 par défaut.
 ms.date: 07/06/2020
 ms.assetid: 41ca3554-b2e3-4868-9a84-f1b46e6e21d9
-ms.openlocfilehash: 9bfecd0fb154658a299d3dac7d9e45398ebe450b
-ms.sourcegitcommit: 85d96eeb1ce41d9e1dea947f65ded672e146238b
+ms.openlocfilehash: b615d2e4473fed1d090b7411211c08b0b824bc8f
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/07/2020
-ms.locfileid: "86058631"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87200853"
 ---
 # <a name="x64-calling-convention"></a>Convention d’appel x64
 
@@ -25,7 +26,7 @@ Les arguments entiers sont passés dans les registres RCX, RDX, R8 et R9. Les ar
 
 Pour les fonctions prototypées, tous les arguments sont convertis en types d’appel attendus avant de passer. L’appelant est chargé d’allouer de l’espace pour les paramètres de l’appelé. L’appelant doit toujours allouer suffisamment d’espace pour stocker quatre paramètres de Registre, même si l’appelé ne prend pas autant de paramètres. Cette Convention simplifie la prise en charge des fonctions de langage C non prototypées et des fonctions vararg C/C++. Pour les fonctions vararg ou non prototypées, toute valeur à virgule flottante doit être dupliquée dans le registre à usage général correspondant. Tous les paramètres au-delà des quatre premiers doivent être stockés sur la pile après le magasin d’instantanés avant l’appel. Les détails de la fonction vararg se trouvent dans [varargs](#varargs). Les informations sur les fonctions non prototypées sont détaillées dans les [fonctions non prototypées](#unprototyped-functions).
 
-## <a name="alignment"></a>Alignement
+## <a name="alignment"></a>Alignment
 
 La plupart des structures sont alignées sur leur alignement naturel. Les principales exceptions sont le pointeur de pile et `malloc` ou la `alloca` mémoire, qui sont alignées sur 16 octets pour faciliter les performances. L’alignement au-dessus de 16 octets doit être effectué manuellement. Étant donné que 16 octets est une taille d’alignement commune pour les opérations XMM, cette valeur doit fonctionner pour la plupart du code. Pour plus d’informations sur la disposition et l’alignement de la structure, consultez [types et stockage](../build/x64-software-conventions.md#types-and-storage). Pour plus d’informations sur la disposition de la pile, consultez Utilisation de la [pile x64](../build/stack-usage.md).
 
@@ -43,7 +44,7 @@ Les arguments de valeur entière dans les quatre positions les plus à gauche so
 
 Les arguments à virgule flottante et à double précision dans les quatre premiers paramètres sont passés dans XMM0-XMM3, en fonction de la position. Les valeurs à virgule flottante sont placées uniquement dans les registres d’entiers RCX, RDX, R8 et R9 lorsqu’il y a des arguments varargs. Pour plus d’informations, consultez [varargs](#varargs). De même, les registres XMM0-XMM3 sont ignorés lorsque l’argument correspondant est un type entier ou pointeur.
 
-[`__m128`](../cpp/m128.md)les types, les tableaux et les chaînes ne sont jamais passés par la valeur immédiate. Au lieu de cela, un pointeur est passé à la mémoire allouée par l’appelant. Les structs et les unions de taille 8, 16, 32 ou 64 bits, et les `__m64` types, sont passés comme s’il s’agissait d’entiers de la même taille. Les structs ou les unions d’autres tailles sont passés comme pointeur vers la mémoire allouée par l’appelant. Pour ces types d’agrégats passés comme pointeur, y compris `__m128` , la mémoire temporaire allouée par l’appelant doit être alignée sur 16 octets.
+[`__m128`](../cpp/m128.md)les types, les tableaux et les chaînes ne sont jamais passés par la valeur immédiate. Au lieu de cela, un pointeur est passé à la mémoire allouée par l’appelant. Les structs et les unions de taille 8, 16, 32 ou 64 bits, et les **`__m64`** types, sont passés comme s’il s’agissait d’entiers de la même taille. Les structs ou les unions d’autres tailles sont passés comme pointeur vers la mémoire allouée par l’appelant. Pour ces types d’agrégats passés comme pointeur, y compris **`__m128`** , la mémoire temporaire allouée par l’appelant doit être alignée sur 16 octets.
 
 Les fonctions intrinsèques qui n’allouent pas d’espace de pile et n’appellent pas d’autres fonctions, utilisent parfois d’autres registres volatiles pour passer des arguments Register supplémentaires. Cette optimisation est rendue possible par la liaison étroite entre le compilateur et l’implémentation de la fonction intrinsèque.
 
@@ -55,9 +56,9 @@ Le tableau suivant résume la façon dont les paramètres sont transmis, par typ
 |-|-|-|-|-|-|
 | virgule flottante | pile | XMM3 | XMM2 | XMM1 | XMM0 |
 | entier | pile | R9 | R8 | RDX | RCX |
-| Agrégats (8, 16, 32 ou 64 bits) et`__m64` | pile | R9 | R8 | RDX | RCX |
+| Agrégats (8, 16, 32 ou 64 bits) et**`__m64`** | pile | R9 | R8 | RDX | RCX |
 | Autres agrégats, en tant que pointeurs | pile | R9 | R8 | RDX | RCX |
-| `__m128`, en tant que pointeur | pile | R9 | R8 | RDX | RCX |
+| **`__m128`**, en tant que pointeur | pile | R9 | R8 | RDX | RCX |
 
 ### <a name="example-of-argument-passing-1---all-integers"></a>Exemple de passage d’argument 1-tous les entiers
 
@@ -105,7 +106,7 @@ func2() {   // RCX = 2, RDX = XMM1 = 1.0, and R8 = 7
 
 ## <a name="return-values"></a>Valeurs retournées
 
-Une valeur de retour scalaire qui peut tenir dans 64 bits, y compris le `__m64` type, est retournée via Rax. Les types non scalaires, y compris les types float, double et Vector, comme [`__m128`](../cpp/m128.md) , [`__m128i`](../cpp/m128i.md) , [`__m128d`](../cpp/m128d.md) sont retournés dans XMM0. L'état des bits non utilisés dans la valeur retournée dans RAX ou XMM0 est non défini.
+Une valeur de retour scalaire qui peut tenir dans 64 bits, y compris le **`__m64`** type, est retournée via Rax. Les types non scalaires, y compris les types float, double et Vector, comme [`__m128`](../cpp/m128.md) , [`__m128i`](../cpp/m128i.md) , [`__m128d`](../cpp/m128d.md) sont retournés dans XMM0. L'état des bits non utilisés dans la valeur retournée dans RAX ou XMM0 est non défini.
 
 Les types définis par l'utilisateur peuvent être retournés par valeur depuis des fonctions globales et des fonctions de membres statiques. Pour retourner un type défini par l’utilisateur par valeur dans RAX, il doit avoir une longueur de 1, 2, 4, 8, 16, 32 ou 64 bits. Elle ne doit pas non plus être un constructeur, un destructeur ou un opérateur d’assignation de copie défini par l’utilisateur. Elle ne peut pas avoir de membres de données non statiques privés ou protégés, ni de membres de données non statiques de type référence. Il ne peut pas avoir de classes de base ou de fonctions virtuelles. En outre, il peut uniquement avoir des membres de données qui répondent à ces exigences. (Cette définition est fondamentalement identique à un type POD C++ 03. Étant donné que la définition a changé dans la norme C++ 11, nous vous déconseillons `std::is_pod` d’utiliser pour ce test.) Dans le cas contraire, l’appelant doit allouer de la mémoire pour la valeur de retour et passer un pointeur vers ce dernier en tant que premier argument. Les arguments restants sont décalés d’un argument vers la droite. Le même pointeur doit être retourné par l'appelé dans RAX.
 
@@ -211,7 +212,7 @@ N’effectuez aucune supposition sur l’état de la partie volatile du Registre
 
 ## <a name="setjmplongjmp"></a>setjmp/longjmp
 
-Quand vous incluez setjmpex. h ou setjmp. h, tous les appels à [`setjmp`](../c-runtime-library/reference/setjmp.md) ou [`longjmp`](../c-runtime-library/reference/longjmp.md) aboutissent à un déroulement qui appelle des destructeurs et des `__finally` appels.  Ce comportement diffère de x86, où l’inclusion de setjmp. h génère des `__finally` clauses et des destructeurs qui ne sont pas appelés.
+Quand vous incluez setjmpex. h ou setjmp. h, tous les appels à [`setjmp`](../c-runtime-library/reference/setjmp.md) ou [`longjmp`](../c-runtime-library/reference/longjmp.md) aboutissent à un déroulement qui appelle des destructeurs et des **`__finally`** appels.  Ce comportement diffère de x86, où l’inclusion de setjmp. h génère des **`__finally`** clauses et des destructeurs qui ne sont pas appelés.
 
 Un appel à `setjmp` conserve le pointeur de pile actuel, les registres non volatiles et les registres MxCsr.  Appelle pour `longjmp` revenir au site d’appel le plus récent `setjmp` et réinitialise le pointeur de pile, les registres non volatiles et les registres MxCsr à l’État comme conservé par l’appel le plus récent `setjmp` .
 

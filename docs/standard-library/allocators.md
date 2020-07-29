@@ -5,12 +5,12 @@ helpviewer_keywords:
 - allocators
 - C++ Standard Library, allocators
 ms.assetid: ac95023b-9e7d-49f5-861a-bf7a9a340746
-ms.openlocfilehash: abef6f4e641b7936157ee063443a5b2a220fdd52
-ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
+ms.openlocfilehash: 5aee23f72c5b0fb955b4dcc76a3f8c51eca7be70
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84623516"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87204233"
 ---
 # <a name="allocators"></a>Allocateurs
 
@@ -28,7 +28,7 @@ La bibliothèque C++ Standard fournit une implémentation par défaut pour un al
 
 ## <a name="writing-your-own-allocator-c11"></a>Écriture de votre propre allocateur (C++11)
 
-L’allocateur par défaut utilise **New** et **Delete** pour allouer et libérer de la mémoire. Si vous souhaitez utiliser une autre méthode d'allocation de la mémoire, telle que l'utilisation de la mémoire partagée, vous devez créer votre propre allocateur. Si vous ciblez C++11 et que vous devez écrire un nouvel allocateur personnalisé, faites-en un allocateur minimal si possible. Même si vous avez déjà implémenté un allocateur de style antérieur, changez-le en *allocateur minimal* pour tirer parti de la méthode `construct()` la plus efficace fournie automatiquement.
+L’allocateur par défaut utilise **`new`** et **`delete`** pour allouer et libérer de la mémoire. Si vous souhaitez utiliser une autre méthode d'allocation de la mémoire, telle que l'utilisation de la mémoire partagée, vous devez créer votre propre allocateur. Si vous ciblez C++11 et que vous devez écrire un nouvel allocateur personnalisé, faites-en un allocateur minimal si possible. Même si vous avez déjà implémenté un allocateur de style antérieur, changez-le en *allocateur minimal* pour tirer parti de la méthode `construct()` la plus efficace fournie automatiquement.
 
 Un allocateur minimal nécessite beaucoup moins de code réutilisable et vous permet de vous concentrer sur les fonctions membres `allocate` et `deallocate` qui effectuent tout le travail. Lors de la création d'un allocateur minimal, n'implémentez aucun membre à l'exception de ceux indiqués dans l'exemple ci-dessous :
 

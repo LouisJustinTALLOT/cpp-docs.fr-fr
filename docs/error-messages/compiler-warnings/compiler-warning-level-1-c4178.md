@@ -6,18 +6,18 @@ f1_keywords:
 helpviewer_keywords:
 - C4178
 ms.assetid: 2c2c8f97-a5c4-47cd-8dd2-beea172613f3
-ms.openlocfilehash: 031f0f06c1ad7471aa7ca440b32de38de51a235a
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: e8d20da1ec8ca6ef4a06fdd1d8417d1cb9706947
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80176076"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87196641"
 ---
 # <a name="compiler-warning-level-1-c4178"></a>Avertissement du compilateur (niveau 1) C4178
 
 constante case 'constant' trop grande pour le type de l’expression de switch
 
-Une constante case dans une expression `switch` ne tient pas dans le type auquel elle est assignée.
+Une constante case dans une **`switch`** expression ne tient pas dans le type auquel elle est assignée.
 
 ## <a name="example"></a>Exemple
 

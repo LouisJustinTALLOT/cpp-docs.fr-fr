@@ -7,18 +7,18 @@ helpviewer_keywords:
 - R-value expressions
 - subscript expressions
 ms.assetid: b790303e-ec6f-4d0d-bc55-df42da267172
-ms.openlocfilehash: bd5f702588a11b7841f77de539d113206833cde9
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 0c287c45f2d7ea121c9c706b3b761ff7ce6ec232
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62325518"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87199826"
 ---
 # <a name="l-value-and-r-value-expressions"></a>Expressions L-Value et R-Value
 
-Les expressions qui font référence à des emplacements de mémoire sont appelées expressions « l-value ». Une l-value représente la valeur « Localisateur » d’une région de stockage, ou une valeur « gauche », ce qui signifie qu’elle peut apparaître à gauche du signe égal**=**(). Les l-values sont souvent des identificateurs.
+Les expressions qui font référence à des emplacements de mémoire sont appelées expressions « l-value ». Une l-value représente la valeur « Localisateur » d’une région de stockage, ou une valeur « gauche », ce qui signifie qu’elle peut apparaître à gauche du signe égal ( **=** ). Les l-values sont souvent des identificateurs.
 
-Les expressions faisant référence à des emplacements modifiables sont appelées « l-values modifiables ». Une l-value modifiable ne peut pas être définie avec un type de tableau, un type incomplet ou un type avec l’attribut **const**. Pour que les structures et les unions soient des l-values modifiables, elles ne doivent comporter aucun membre défini avec l’attribut **const**. Le nom de l'identificateur désigne un emplacement de stockage, alors que la valeur de la variable est la valeur stockée à cet emplacement.
+Les expressions faisant référence à des emplacements modifiables sont appelées « l-values modifiables ». Une l-value modifiable ne peut pas avoir un type tableau, un type incomplet ou un type avec l' **`const`** attribut. Pour que les structures et les unions soient des l-value modifiables, elles ne doivent pas avoir de membres avec l' **`const`** attribut. Le nom de l'identificateur désigne un emplacement de stockage, alors que la valeur de la variable est la valeur stockée à cet emplacement.
 
 Un identificateur est une l-value modifiable si elle fait référence à un emplacement mémoire et si son type est arithmétique, structure, union ou pointeur. Par exemple, si `ptr` est un pointeur vers une zone de stockage, `*ptr` est une l-value modifiable qui désigne la zone de stockage vers laquelle `ptr` pointe.
 
@@ -28,13 +28,13 @@ Les expressions C suivantes peuvent être des expressions l-value :
 
 - Une expression d’indice (**[ ]**) qui ne correspond pas à un tableau
 
-- Une expression de sélection de membres**->** (ou **.**)
+- Une expression de sélection de membres ( **->** ou **.**)
 
-- Expression d’indirection unaire (<strong>\*</strong>) qui ne fait pas référence à un tableau
+- Expression d’indirection unaire ( <strong>\*</strong> ) qui ne fait pas référence à un tableau
 
 - Une expression l-value entre parenthèses
 
-- Un objet **const** (une l-value non modifiable)
+- **`const`** Objet (une l-value non modifiable)
 
 Le terme « r- value » est parfois utilisé pour décrire la valeur d'une expression et pour établir une distinction par rapport à une l-value. Toutes les l-values sont des r- values, mais les r- values ne sont pas toutes des l-values.
 

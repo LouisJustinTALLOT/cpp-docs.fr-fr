@@ -1,17 +1,17 @@
 ---
-title: helpstringdll (C++ attribut com)
+title: helpstringdll (attribut COM C++)
 ms.date: 10/02/2018
 f1_keywords:
 - vc-attr.helpstringdll
 helpviewer_keywords:
 - helpstringdll attribute [C++]
 ms.assetid: 121271fa-f061-492b-b87f-bbfcf4b02e7b
-ms.openlocfilehash: 4ec0d959b2fc10fc34bfc7050a1970359dae5bbc
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 46323a7ff4164111b48aed24b12bef5d400afacc
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80168120"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87217244"
 ---
 # <a name="helpstringdll"></a>helpstringdll
 
@@ -30,7 +30,7 @@ DLL à utiliser pour effectuer une recherche de chaîne de document.
 
 ## <a name="remarks"></a>Notes
 
-L’attribut **helpstringdll** C++ a les mêmes fonctionnalités que l’attribut MIDL [helpstringdll](/windows/win32/Midl/helpstringdll) .
+L’attribut C++ **helpstringdll** a les mêmes fonctionnalités que l’attribut MIDL [helpstringdll](/windows/win32/Midl/helpstringdll) .
 
 ## <a name="example"></a>Exemple
 
@@ -53,8 +53,8 @@ __interface IMyI
 
 |||
 |-|-|
-|**S'applique à**|**classe**, **interface**, méthode d’interface|
-|**Renouvelable**|Non|
+|**S’applique à**|**`class`**, **interface**, méthode d’interface|
+|**Repeatable Read**|Non|
 |**Attributs requis**|None|
 |**Attributs non valides**|None|
 

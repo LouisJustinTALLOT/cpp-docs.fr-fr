@@ -1,5 +1,5 @@
 ---
-title: n’importe quelle classe
+title: toute classe
 ms.date: 04/04/2019
 f1_keywords:
 - any/std::any
@@ -15,18 +15,18 @@ helpviewer_keywords:
 - any/std::any::reset
 - any/std::any::swap
 - any/std::any::type
-ms.openlocfilehash: 050276da665ab6ed3eb53d9e65bfea06b88bcbea
-ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
+ms.openlocfilehash: 66e74a7fa7f35aae9ac9e1f3ba7520e8d3f9b3f2
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68268751"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87203960"
 ---
-# <a name="any-class"></a>n’importe quelle classe
+# <a name="any-class"></a>toute classe
 
-Stocke une instance de n’importe quel type qui satisfait les exigences de constructeur, ou il n’a aucune valeur, qui est appelée à l’état de la classe n’importe quel objet.
+Stocke une instance de n’importe quel type qui répond aux exigences du constructeur ou n’a aucune valeur, appelée état de la classe tout objet.
 
-L’instance stockée est appelée à la valeur de relation contenant-contenue. Deux États sont les mêmes si elles n’ont aucune valeur, ou disposer d’une valeur, et pour les valeurs de relation contenant-contenus sont les mêmes.
+L’instance stockée est appelée valeur contenue. Deux États sont les mêmes s’ils n’ont pas de valeur, ou les deux ont une valeur et les valeurs contenues sont les mêmes.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -40,27 +40,27 @@ class any
 
 |||
 |-|-|
-|[any](#any)|Construit un objet de type `any`.|
+|[aux](#any)|Construit un objet de type `any`.|
 
 ### <a name="functions"></a>Fonctions
 
 |||
 |-|-|
-|[emplace](#emplace)|Définit une valeur de n’importe quel.|
-|[has_value](#has_value)|Retourne **true** si une a une valeur.|
-|[reset](#reset)|Réinitialise des.|
-|[swap](#swap)|Échange deux tous les objets.|
-|[type](#type)|Retourne n’importe quel type.|
+|[emplace](#emplace)|Définit une valeur any.|
+|[has_value](#has_value)|Retourne **`true`** si un a une valeur.|
+|[reset](#reset)|Réinitialise un.|
+|[swap](#swap)|Échange deux objets.|
+|[type](#type)|Retourne le type any.|
 
 ### <a name="operators"></a>Opérateurs
 
 |||
 |-|-|
-|[operator=](#op_eq)|Remplace tout le tout avec une copie d’un autre.|
+|[opérateur =](#op_eq)|Remplace any par une copie d’un autre.|
 
-## <a name="any"></a> N’importe quel
+## <a name="any"></a><a name="any"></a>aux
 
-Construit un objet de type `any`. Inclut également un destructeur.
+Construit un objet de type `any`. Comprend également un destructeur.
 
 ```cpp
 constexpr any() noexcept;
@@ -76,9 +76,9 @@ template <class T, class U, class... Args>
 ~any();
 ```
 
-## <a name="emplace"></a> emplace
+## <a name="emplace"></a><a name="emplace"></a>emplace
 
-Définit une valeur de n’importe quel.
+Définit une valeur any.
 
 ```cpp
 template <class T, class... Args>
@@ -87,17 +87,17 @@ template <class T, class U, class... Args>
     decay_t<T>& emplace(initializer_list<U>, Args&&...);
 ```
 
-## <a name="has_value"></a> has_value
+## <a name="has_value"></a><a name="has_value"></a>has_value
 
-Retourne **true** si une a une valeur.
+Retourne **`true`** si un a une valeur.
 
 ```cpp
 bool has_value() const noexcept;
 ```
 
-## <a name="op_eq"></a> opérateur =
+## <a name="operator"></a><a name="op_eq"></a>opérateur =
 
-Remplace tout le tout avec une copie d’un autre.
+Remplace any par une copie d’un autre.
 
 ```cpp
 any& operator=(const any& right);
@@ -109,27 +109,27 @@ template <class T>
 ### <a name="parameters"></a>Paramètres
 
 *Oui*\
-Toutes copiées dans aucune.
+Tout en cours de copie dans le.
 
-## <a name="reset"></a> Réinitialiser
+## <a name="reset"></a><a name="reset"></a>initialisation
 
-Réinitialise des.
+Réinitialise un.
 
 ```cpp
 void reset() noexcept;
 ```
 
-## <a name="swap"></a> échange
+## <a name="swap"></a><a name="swap"></a>échange
 
-Échange deux tous les objets.
+Échange deux objets.
 
 ```cpp
 void swap(any& rhs) noexcept;
 ```
 
-## <a name="type"></a> Type
+## <a name="type"></a>Type<a name="type"></a>
 
-Retourne n’importe quel type.
+Retourne le type any.
 
 ```cpp
 const type_info& type() const noexcept;

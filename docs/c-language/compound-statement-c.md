@@ -5,16 +5,16 @@ helpviewer_keywords:
 - compound statements
 - statements, compound
 ms.assetid: 32d1bf86-cbbc-42a9-ba3a-1be1c6c7754c
-ms.openlocfilehash: 42d4c1d21c3e98dfc0281a47a35e033852f8de18
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 93f7fd24049c744874fb0ab3bda37eedef3a139a
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62312561"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87200580"
 ---
 # <a name="compound-statement-c"></a>Instruction composite (C)
 
-Une instruction composée (également appelée « bloc ») correspond généralement au corps d'une autre instruction, telle que l'instruction **if**. L'article [Déclarations et types](../c-language/declarations-and-types.md) décrit la forme et la signification des déclarations qui peuvent figurer en tête d'une instruction composée.
+Une instruction composée (également appelée « bloc ») apparaît généralement en tant que corps d’une autre instruction, telle que l' **`if`** instruction. L'article [Déclarations et types](../c-language/declarations-and-types.md) décrit la forme et la signification des déclarations qui peuvent figurer en tête d'une instruction composée.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -31,11 +31,11 @@ Une instruction composée (également appelée « bloc ») correspond généra
 
 S'il existe des déclarations, elles doivent précéder toutes les instructions. La portée de chaque identificateur déclaré au début d'une instruction composée s'étend de son point de déclaration jusqu'à la fin du bloc. Elle est visible dans l'ensemble du bloc à moins qu'une déclaration du même identificateur existe dans un bloc interne.
 
-Les identificateurs figurant dans une instruction composée sont supposés **auto** à moins qu'ils soient explicitement déclarés autrement à l'aide de **register**, **static** ou `extern`, à l'exception des fonctions, qui peuvent être `extern` uniquement. Vous pouvez omettre le spécificateur `extern` dans les déclarations de fonction et la fonction sera néanmoins `extern`.
+Les identificateurs dans une instruction composée sont présumés **`auto`** sauf s’ils sont explicitement déclarés avec **`register`** , **`static`** ou **`extern`** , à l’exception des fonctions, qui peuvent être uniquement **`extern`** . Vous pouvez ignorer le **`extern`** spécificateur dans les déclarations de fonction et la fonction sera toujours **`extern`** .
 
-Le stockage n'est pas alloué et l'initialisation n'est pas autorisée si une variable ou une fonction est déclarée dans une instruction composée au moyen de la classe de stockage `extern`. La déclaration fait référence à une variable ou fonction externe définie ailleurs.
+Le stockage n’est pas alloué et l’initialisation n’est pas autorisée si une variable ou une fonction est déclarée dans une instruction composée avec une classe de stockage **`extern`** . La déclaration fait référence à une variable ou fonction externe définie ailleurs.
 
-Les variables déclarées dans un bloc avec le mot clé **auto** ou **register** sont réaffectées et, si nécessaire, initialisées chaque fois que l'instruction composée est écrite. Ces variables ne sont pas définies une fois que vous quittez l'instruction composée. Si une variable déclarée dans un bloc possède l'attribut **static**, elle est initialisée au début de l'exécution du programme et conserve sa valeur tout au long du programme. Consultez [Classes de stockage](../c-language/c-storage-classes.md) pour plus d'informations sur l'attribut **static**.
+Les variables déclarées dans un bloc avec le **`auto`** **`register`** mot clé ou sont réallouées et, si nécessaire, initialisées chaque fois que l’instruction composée est entrée. Ces variables ne sont pas définies une fois que vous quittez l'instruction composée. Si une variable déclarée à l’intérieur d’un bloc possède l' **`static`** attribut, la variable est initialisée lorsque l’exécution du programme commence et conserve sa valeur tout au long du programme. Pour plus d’informations sur, consultez [classes de stockage](../c-language/c-storage-classes.md) **`static`** .
 
 L'exemple suivant illustre une instruction composée :
 

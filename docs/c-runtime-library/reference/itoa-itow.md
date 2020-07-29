@@ -113,12 +113,12 @@ helpviewer_keywords:
 - converting numbers, to strings
 - _itoa function
 ms.assetid: 46592a00-77bb-4e73-98c0-bf629d96cea6
-ms.openlocfilehash: 424ee4fb732811bffc6a83c0de57cd35fe747c42
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: 28e6e2300c96e6236ffc4fd927d8153a1f8bcd13
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82914664"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87216932"
 ---
 # <a name="itoa-_itoa-ltoa-_ltoa-ultoa-_ultoa-_i64toa-_ui64toa-_itow-_ltow-_ultow-_i64tow-_ui64tow"></a>itoa, _itoa, ltoa, _ltoa, ultoa, _ultoa, _i64toa, _ui64toa, _itow, _ltow, _ultow, _i64tow, _ui64tow
 
@@ -182,7 +182,7 @@ wchar_t * _ui64tow( unsigned long long value, wchar_t (&buffer)[size],
 *value*<br/>
 Nombre à convertir.
 
-*buffer*<br/>
+*mémoire tampon*<br/>
 Mémoire tampon qui contient le résultat de la conversion.
 
 *dicaux*<br/>
@@ -195,9 +195,9 @@ Longueur de la mémoire tampon en unités du type de caractère. Ce paramètre e
 
 Chacune de ces fonctions retourne un pointeur vers la *mémoire tampon*. Aucun retour d'erreur.
 
-## <a name="remarks"></a>Notes 
+## <a name="remarks"></a>Notes
 
-Les fonctions **_itoa**, **_ltoa**, **_ultoa**, **_i64toa**et **_ui64toa** convertissent les chiffres de l’argument de *valeur* donné en chaîne de caractères se terminant par un caractère null et stockent le résultat (jusqu’à 33 caractères pour **_itoa**, **_ltoa**et **_ultoa**, et 65 pour **_i64toa** et **_ui64toa**) dans *buffer*. Si la *base* est égale à 10 et que la *valeur* est négative, le premier caractère de la chaîne stockée**-** est le signe moins (). Les fonctions **_itow**, **_ltow**, **_ultow**, **_i64tow**et **_ui64tow** sont des versions à caractères larges de **_itoa**, **_ltoa**, **_ultoa**, **_i64toa**et **_ui64toa**, respectivement.
+Les fonctions **_itoa**, **_ltoa**, **_ultoa**, **_i64toa**et **_ui64toa** convertissent les chiffres de l’argument de *valeur* donné en chaîne de caractères se terminant par un caractère null et stockent le résultat (jusqu’à 33 caractères pour **_itoa**, **_ltoa**et **_ultoa**, et 65 pour **_i64toa** et **_ui64toa**) dans *buffer*. Si la *base* est égale à 10 et que la *valeur* est négative, le premier caractère de la chaîne stockée est le signe moins ( **-** ). Les fonctions **_itow**, **_ltow**, **_ultow**, **_i64tow**et **_ui64tow** sont des versions à caractères larges de **_itoa**, **_ltoa**, **_ultoa**, **_i64toa**et **_ui64toa**, respectivement.
 
 > [!IMPORTANT]
 > Ces fonctions peuvent écrire au-delà de la fin d’une mémoire tampon qui est trop petite. Pour éviter les dépassements de mémoire tampon, vérifiez que la *mémoire tampon* est suffisamment grande pour contenir les chiffres convertis, plus le caractère null de fin et un signe de caractère. Une utilisation incorrecte de ces fonctions peut entraîner de sérieux problèmes de sécurité dans votre code.
@@ -240,7 +240,7 @@ Pour utiliser l’une de ces macros dans une fonction de conversion de chaînes,
 |**_i64toa**, **_i64tow**|16<br/>10<br/>8<br/>2|**_MAX_I64TOSTR_BASE16_COUNT**<br/>**_MAX_I64TOSTR_BASE10_COUNT**<br/>**_MAX_I64TOSTR_BASE8_COUNT**<br/>**_MAX_I64TOSTR_BASE2_COUNT**|
 |**_ui64toa**, **_ui64tow**|16<br/>10<br/>8<br/>2|**_MAX_U64TOSTR_BASE16_COUNT**<br/>**_MAX_U64TOSTR_BASE10_COUNT**<br/>**_MAX_U64TOSTR_BASE8_COUNT**<br/>**_MAX_U64TOSTR_BASE2_COUNT**|
 
-Cet exemple utilise une macro de nombre de conversions pour définir une mémoire tampon suffisamment grande pour contenir un long long **non signé** dans la base 2 :
+Cet exemple utilise une macro de nombre de conversions pour définir une mémoire tampon suffisamment grande pour contenir un **`unsigned long long`** en base 2 :
 
 ```cpp
 #include <wchar.h>
@@ -272,7 +272,7 @@ int main()
 
 Ces fonctions et macros sont spécifiques à Microsoft. Pour plus d’informations sur la compatibilité, consultez [Compatibility](../../c-runtime-library/compatibility.md).
 
-## <a name="example"></a> Exemple
+## <a name="example"></a>Exemple
 
 Cet exemple illustre l’utilisation de certaines fonctions de conversion d’entier. Notez l’utilisation de la macro **_CRT_SECURE_NO_WARNINGS** pour le silence de l’avertissement C4996.
 

@@ -37,12 +37,12 @@ helpviewer_keywords:
 - nearbyintf function
 - nearbyintl function
 ms.assetid: dd39cb68-96b0-434b-820f-6ff2ea65584f
-ms.openlocfilehash: d9e7adb321d85c728c5185c1663fd7f945fc4a82
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: 898544f5b191eb68e0ed6f17d7c3c7df849e8d11
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82914575"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87216854"
 ---
 # <a name="nearbyint-nearbyintf-nearbyintl"></a>nearbyint, nearbyintf, nearbyintl
 
@@ -78,19 +78,19 @@ En cas de réussite, retourne *x*, arrondi à l’entier le plus proche, en util
 
 Les erreurs ne sont pas signalées par [_matherr](matherr.md); plus précisément, cette fonction ne signale pas d’exception **FE_INEXACT** .
 
-## <a name="remarks"></a>Notes 
+## <a name="remarks"></a>Notes
 
 La principale différence entre cette fonction et l' [Imprimer](rint-rintf-rintl.md) est que cette fonction ne génère pas l’exception à virgule flottante inexacte.
 
 Étant donné que les valeurs à virgule flottante maximales sont des entiers exacts, cette fonction ne provoque jamais de dépassement par elle-même. Cependant, la sortie peut dépasser la valeur de retour, selon la version de la fonction que vous utilisez.
 
-C++ autorisant la surcharge, vous pouvez appeler des surcharges de **nearbyint** qui acceptent et retournent des paramètres **float** ou **long** **double** . Dans un programme C, **nearbyint** accepte toujours deux valeurs de type double et retourne une valeur double.
+C++ autorisant la surcharge, vous pouvez appeler des surcharges de **nearbyint** qui acceptent et retournent des **`float`** **`long double`** paramètres ou. Dans un programme C, **nearbyint** accepte toujours deux valeurs de type double et retourne une valeur double.
 
 Par défaut, l’état global de cette fonction est limité à l’application. Pour modifier cette valeur, consultez [état global dans le CRT](../global-state.md).
 
 ## <a name="requirements"></a>Spécifications
 
-|Function|En-tête C|En-tête C++|
+|Fonction|En-tête C|En-tête C++|
 |--------------|--------------|------------------|
 |**nearbyint**, **nearbyintf**, **nearbyintl**|\<math.h>|\<cmath> ou \<math.h>|
 
@@ -98,5 +98,5 @@ Pour plus d'informations sur la compatibilité, voir [Compatibilité](../../c-ru
 
 ## <a name="see-also"></a>Voir aussi
 
-[Référence alphabétique des fonctions](crt-alphabetical-function-reference.md)<br/>
+[Référence de fonction alphabétique](crt-alphabetical-function-reference.md)<br/>
 [Prise en charge des fonctions mathématiques et à virgule flottante](../floating-point-support.md)<br/>

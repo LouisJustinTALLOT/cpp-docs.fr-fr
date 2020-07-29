@@ -34,12 +34,12 @@ helpviewer_keywords:
 - remquof function
 - remquo function
 ms.assetid: a1d3cb8b-8027-4cd3-8deb-04eb17f299fc
-ms.openlocfilehash: 774a35f257b02c67b22618224a60ed501476a6f4
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: d1b5c60e2e6bd8ba4d5f3b4297dff4bd57c650f2
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82917822"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87216789"
 ---
 # <a name="remquo-remquof-remquol"></a>remquo, remquof, remquol
 
@@ -71,19 +71,19 @@ Pointeur désignant un entier pour stocker une valeur qui a le signe et la grand
 
 ## <a name="return-value"></a>Valeur de retour
 
-**remquo** retourne le reste à virgule flottante de *x* / *y*. Si la valeur de *y* est 0,0, **remquo** retourne une valeur NaN calme. Pour plus d’informations sur la représentation d’une NaN calme par la famille **printf** , consultez [printf, _printf_l, wprintf, _wprintf_l](printf-printf-l-wprintf-wprintf-l.md).
+**remquo** retourne le reste à virgule flottante de *x*  /  *y*. Si la valeur de *y* est 0,0, **remquo** retourne une valeur NaN calme. Pour plus d’informations sur la représentation d’une NaN calme par la famille **printf** , consultez [printf, _printf_l, wprintf, _wprintf_l](printf-printf-l-wprintf-wprintf-l.md).
 
-## <a name="remarks"></a>Notes 
+## <a name="remarks"></a>Notes
 
-La fonction **remquo** calcule le reste à virgule flottante *f* de *x* / *y* , de telle sorte que *x* = *i* \* *y* + *f*, où *i* est un entier, *f* a le même signe que *x*, et la valeur absolue de *f* est inférieure à la valeur absolue de *y*.
+La fonction **remquo** calcule le reste à virgule flottante *f* de *x*  /  *y* , de telle sorte que *x*  =  *i* \* *y*  +  *f*, où *i* est un entier, *f* a le même signe que *x*, et la valeur absolue de *f* est inférieure à la valeur absolue de *y*.
 
-C++ autorisant la surcharge, vous pouvez appeler des surcharges de **remquo** qui acceptent et retournent des valeurs **float** ou **long** **double** . Dans un programme C, **remquo** prend toujours deux arguments **double** et retourne un **double**.
+C++ autorisant la surcharge, vous pouvez appeler des surcharges de **remquo** qui acceptent et retournent des **`float`** **`long double`** valeurs ou. Dans un programme C, **remquo** accepte toujours deux **`double`** arguments et retourne un **`double`** .
 
 Par défaut, l’état global de cette fonction est limité à l’application. Pour modifier cette valeur, consultez [état global dans le CRT](../global-state.md).
 
 ## <a name="requirements"></a>Spécifications
 
-|Function|En-tête requis (C)|En-tête requis (C++)|
+|Fonction|En-tête requis (C)|En-tête requis (C++)|
 |--------------|---------------------|-|
 |**remquo**, **remquof**, **remquol**|\<math.h>|\<cmath> ou \<math.h>|
 

@@ -73,12 +73,12 @@ helpviewer_keywords:
 - strings [C++], initializing
 - tcsnset_l function
 ms.assetid: 3f306489-5763-48e5-b939-aefee7c94ef5
-ms.openlocfilehash: 2bd0c31b025b9a11cbdb10e8607a283d6ae1f84b
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: eb23e63fa5eba7ab79fc45b8c8cb6ea350685a7e
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82911197"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87231323"
 ---
 # <a name="_strnset-_strnset_l-_wcsnset-_wcsnset_l-_mbsnset-_mbsnset_l"></a>_strnset, _strnset_l, _wcsnset, _wcsnset_l, _mbsnset, _mbsnset_l
 
@@ -127,7 +127,7 @@ unsigned char *_mbsnset_l(
 
 ### <a name="parameters"></a>Paramètres
 
-*Str*<br/>
+*str*<br/>
 Chaîne à modifier.
 
 *secteur*<br/>
@@ -143,9 +143,9 @@ Paramètres régionaux à utiliser.
 
 Retourne un pointeur vers la chaîne modifiée.
 
-## <a name="remarks"></a>Notes 
+## <a name="remarks"></a>Notes
 
-La fonction **_strnset** définit, au plus, les premiers *caractères de* *Str* en *c* (convertis en **char**). Si *Count* est supérieur à la longueur de *Str*, la longueur de *Str* est utilisée à la place de *Count*.
+La fonction **_strnset** définit, au plus, les premiers *caractères de* *Str* à *c* (convertis en **`char`** ). Si *Count* est supérieur à la longueur de *Str*, la longueur de *Str* est utilisée à la place de *Count*.
 
 **_wcsnset** et **_mbsnset** sont des versions à caractères larges et à caractères multioctets de **_strnset**. Les arguments de chaîne et la valeur de retour de **_wcsnset** sont des chaînes à caractères larges ; ceux de **_mbsnset** sont des chaînes de caractères multioctets. Ces trois fonctions se comportent sinon de façon identique.
 

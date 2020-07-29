@@ -9,12 +9,12 @@ helpviewer_keywords:
 - conversions [C++], arithmetic
 - arithmetic operators [C++], type conversions
 ms.assetid: bfa49803-0efd-45d0-b987-111412a140d7
-ms.openlocfilehash: 729e173c695db3b4970490e84bedfd441e6ff6d3
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 7e28c8a234ff840a16228416720ac48763fccc76
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62344835"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87231414"
 ---
 # <a name="usual-arithmetic-conversions"></a>Conversions arithmétiques courantes
 
@@ -22,23 +22,23 @@ La plupart des opérateurs C effectuent des conversions de type pour faire des o
 
 Les conversions arithmétiques résumées ci-dessous sont appelées « conversions arithmétiques habituelles ». La procédure ci-dessous est appliquée uniquement pour les opérateurs binaires qui nécessitent un type arithmétique. L'objectif est de retourner un type commun qui est également le type du résultat. Pour déterminer quelles conversions ont effectivement lieu, le compilateur applique l'algorithme suivant aux opérations binaires dans l'expression. Les étapes ci-dessous ne constituent pas un ordre de priorité.
 
-1. Si l'un des opérandes est de type `long double`, l'autre opérande est converti en type `long double`.
+1. Si l’un des opérandes est de type **`long double`** , l’autre opérande est converti en type **`long double`** .
 
-1. Si la condition ci-dessus n’est pas remplie et que l’un des opérandes est de type **double**, l’autre opérande est converti en type **double**.
+1. Si la condition ci-dessus n’est pas remplie et que l’un des opérandes est de type **`double`** , l’autre opérande est converti en type **`double`** .
 
-1. Si les deux conditions ci-dessus ne sont pas remplies et que l’un des opérandes est de type **flottant**, l’autre opérande est converti en type **flottant**.
+1. Si les deux conditions ci-dessus ne sont pas remplies et que l’un des opérandes est de type **`float`** , l’autre opérande est converti en type **`float`** .
 
 1. Si les trois conditions ci-dessus ne sont pas remplies (aucun des opérandes n’est de type flottant), des conversions de type intégral sont exécutées sur les opérandes, comme suit :
 
-   - Si l'un des opérandes est de type `unsigned long`, l'autre opérande est converti en type `unsigned long`.
+   - Si l’un des opérandes est de type **`unsigned long`** , l’autre opérande est converti en type **`unsigned long`** .
 
-   - Si la condition ci-dessus n’est pas remplie et que l’un des opérandes est de type **long** et l’autre de type `unsigned int`, les deux opérandes sont convertis en type `unsigned long`.
+   - Si la condition ci-dessus n’est pas remplie et que l’un des opérandes est de type **`long`** et l’autre de type **`unsigned int`** , les deux opérandes sont convertis en type **`unsigned long`** .
 
-   - Si les deux conditions ci-dessus ne sont pas remplies et que l’un des opérandes est de type **long**, l’autre opérande est converti en type **long**.
+   - Si les deux conditions ci-dessus ne sont pas remplies et que l’un des opérandes est de type **`long`** , l’autre opérande est converti en type **`long`** .
 
-   - Si les trois conditions ci-dessus ne sont pas réunies et que l'un des opérandes est de type `unsigned int`, l'autre opérande est converti en type `unsigned int`.
+   - Si les trois conditions ci-dessus ne sont pas remplies et que l’un des opérandes est de type **`unsigned int`** , l’autre opérande est converti en type **`unsigned int`** .
 
-   - Si aucune des conditions ci-dessus n'est remplie, les deux opérandes sont convertis en type `int`.
+   - Si aucune des conditions ci-dessus n’est remplie, les deux opérandes sont convertis en type **`int`** .
 
 Le code suivant illustre ces règles de conversion :
 

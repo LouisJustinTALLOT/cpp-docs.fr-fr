@@ -1,17 +1,17 @@
 ---
-title: unique (C++ attribut com)
+title: unique (attribut COM C++)
 ms.date: 10/02/2018
 f1_keywords:
 - vc-attr.unique
 helpviewer_keywords:
 - unique attribute
 ms.assetid: abd7ed14-5ae7-44a8-8333-0058e9c92b2f
-ms.openlocfilehash: d8c01e2fcee6b906b7f70370a0d539192e348104
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: a46d607ef03fcb75fea31835726d0e2d95e71df8
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80214433"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87201022"
 ---
 # <a name="unique-c"></a>unique (C++)
 
@@ -25,7 +25,7 @@ Spécifie un pointeur unique.
 
 ## <a name="remarks"></a>Notes
 
-L’attribut **unique** C++ a les mêmes fonctionnalités que l’attribut MIDL [unique](/windows/win32/Midl/unique) .
+L’attribut C++ **unique** a les mêmes fonctionnalités que l’attribut MIDL [unique](/windows/win32/Midl/unique) .
 
 ## <a name="example"></a>Exemple
 
@@ -37,8 +37,8 @@ Consultez l’exemple [ref](ref-cpp.md) pour obtenir un exemple d’utilisation 
 
 |||
 |-|-|
-|**S'applique à**|**typedef**, **struct**, **Union**, paramètre d’interface, méthode d’interface|
-|**Renouvelable**|Non|
+|**S’applique à**|**`typedef`**, **`struct`** , **`union`** , paramètre d’interface, méthode d’interface|
+|**Repeatable Read**|Non|
 |**Attributs requis**|None|
 |**Attributs non valides**|None|
 
@@ -47,5 +47,5 @@ Pour plus d'informations sur les contextes d'attribut, consultez [Contextes d'at
 ## <a name="see-also"></a>Voir aussi
 
 [Attributs IDL](idl-attributes.md)<br/>
-[Attributs Typedef, Enum, Union et Struct](typedef-enum-union-and-struct-attributes.md)<br/>
-[Attributs de paramètres](parameter-attributes.md)
+[Attributs typedef, enum, Union et struct](typedef-enum-union-and-struct-attributes.md)<br/>
+[Attributs de paramètre](parameter-attributes.md)

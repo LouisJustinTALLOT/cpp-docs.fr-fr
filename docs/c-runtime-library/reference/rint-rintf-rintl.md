@@ -34,12 +34,12 @@ helpviewer_keywords:
 - rint function
 - rintl function
 ms.assetid: 312ae3e6-278c-459a-9393-11b8f87d9184
-ms.openlocfilehash: 5e2b3d7a571a3005b1c52eacaa85e1ede6d30b77
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: 009f56de506b50f81502a2aad7632244b069d09a
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82917722"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87216763"
 ---
 # <a name="rint-rintf-rintl"></a>rint, rintf, rintl
 
@@ -69,18 +69,18 @@ Les fonctions **Primer** retournent une valeur à virgule flottante qui représe
 
 |Entrée|Exception SEH|**_matherr** Titre|
 |-----------|-------------------|--------------------------|
-|± ∞, QNAN, IND|Aucun|Aucun|
-|Nombres dénormalisés|EXCEPTION_FLT_UNDERFLOW|Aucun|
+|± ∞, QNAN, IND|aucun|aucun|
+|Nombres dénormalisés|EXCEPTION_FLT_UNDERFLOW|aucun|
 
-## <a name="remarks"></a>Notes 
+## <a name="remarks"></a>Notes
 
-C++ autorisant la surcharge, vous pouvez appeler des surcharges d' **Imprimer** qui acceptent et retournent des valeurs **float** et **long** **double** . Dans un programme C, **Primer** accepte et retourne toujours un **double**.
+C++ autorisant la surcharge, vous pouvez appeler des surcharges d' **Imprimer** qui acceptent et retournent des **`float`** **`long double`** valeurs et. Dans un programme C, **Primer** accepte et retourne toujours un **`double`** .
 
 Par défaut, l’état global de cette fonction est limité à l’application. Pour modifier cette valeur, consultez [état global dans le CRT](../global-state.md).
 
 ## <a name="requirements"></a>Spécifications
 
-|Function|En-tête C|En-tête C++|
+|Fonction|En-tête C|En-tête C++|
 |--------------|--------------|------------------|
 |**Primer**, **rintf**, **rintl**|\<math.h>|\<cmath>|
 

@@ -21,12 +21,12 @@ helpviewer_keywords:
 - std::student_t_distribution [C++], max
 - std::student_t_distribution [C++], param_type
 ms.assetid: 87b48127-9311-4d07-95df-833ed46bf0b1
-ms.openlocfilehash: adebaa76f9560cfc5443e2260a42a8c4af0085e6
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: c23298b931e751a8020883bfb3cf687e35ba3276
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81376593"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87202010"
 ---
 # <a name="student_t_distribution-class"></a>student_t_distribution, classe
 
@@ -64,12 +64,12 @@ public:
 
 ### <a name="parameters"></a>Paramètres
 
-*RealType RealType*\
-Le type de résultat de point flottant, par défaut pour **doubler**. Pour les types [ \< ](../standard-library/random.md)possibles, voir>aléatoire .
+*RealType*\
+Le type de résultat à virgule flottante a comme valeur par défaut **`double`** . Pour connaître les types possibles, consultez [\<random>](../standard-library/random.md) .
 
 ## <a name="remarks"></a>Notes
 
-Le modèle de classe décrit une distribution qui produit des valeurs d’un type intégral spécifié par l’utilisateur, ou le **type double** si aucune n’est fournie, distribuée selon le *t-Distribution*de l’étudiant. Le tableau suivant contient des liens vers des articles sur différents membres.
+Le modèle de classe décrit une distribution qui produit des valeurs d’un type intégral spécifié par l’utilisateur, ou du type **`double`** si aucun n’est fourni, distribuées en fonction de la distribution *t*de Student. Le tableau suivant contient des liens vers des articles sur différents membres.
 
 ||||
 |-|-|-|
@@ -78,7 +78,7 @@ Le modèle de classe décrit une distribution qui produit des valeurs d’un typ
 
 La fonction de propriété `n()` retourne la valeur du paramètre de distribution stocké `n`.
 
-Pour plus d’informations sur les [ \< ](../standard-library/random.md)classes de distribution et leurs membres, voir>aléatoire .
+Pour plus d’informations sur les classes de distribution et leurs membres, consultez [\<random>](../standard-library/random.md) .
 
 Pour obtenir des informations détaillées sur la distribution *T* de Student, consultez l’article de Wolfram MathWorld sur la [distribution T de Student](https://mathworld.wolfram.com/Studentst-Distribution.html).
 
@@ -159,11 +159,11 @@ Distribution for 10 samples:
 
 ## <a name="requirements"></a>Spécifications
 
-**En-tête :** \<random>
+**En-tête :**\<random>
 
 **Espace de noms :** std
 
-## <a name="student_t_distributionstudent_t_distribution"></a><a name="student_t_distribution"></a>student_t_distribution::student_t_distribution
+## <a name="student_t_distributionstudent_t_distribution"></a><a name="student_t_distribution"></a>student_t_distribution :: student_t_distribution
 
 Construit la distribution.
 
@@ -174,7 +174,7 @@ explicit student_t_distribution(const param_type& parm);
 
 ### <a name="parameters"></a>Paramètres
 
-*Â¡n*\
+*n*\
 Paramètre de distribution `n`.
 
 *Parm*\
@@ -182,13 +182,13 @@ Package de paramètres utilisé pour construire la distribution.
 
 ### <a name="remarks"></a>Notes
 
-**Condition préalable :**`0.0 < n`
+**Condition préalable :**`0.0 < n`
 
 Le premier constructeur construit un objet dont la valeur `n` stockée contient la valeur *n*.
 
 Le deuxième constructeur construit un objet dont les paramètres stockés sont initialisés à partir de *parm*. Vous pouvez obtenir et définir les paramètres actuels d'une distribution existante en appelant la fonction membre `param()`.
 
-## <a name="student_t_distributionparam_type"></a><a name="param_type"></a>student_t_distribution::param-type
+## <a name="student_t_distributionparam_type"></a><a name="param_type"></a>student_t_distribution ::p aram_type
 
 Stocke tous les paramètres de la distribution.
 
@@ -205,7 +205,7 @@ struct param_type {
 
 ### <a name="parameters"></a>Paramètres
 
-*Â¡n*\
+*n*\
 Paramètre de distribution `n`.
 
 *Oui*\
@@ -213,10 +213,10 @@ Objet `param_type` à comparer à this.
 
 ### <a name="remarks"></a>Notes
 
-**Condition préalable :**`0.0 < n`
+**Condition préalable :**`0.0 < n`
 
 Cette structure peut être passée au constructeur de classe de la distribution au moment de l'instanciation, à la fonction membre `param()` pour définir les paramètres stockés d'une distribution existante et à `operator()` pour une utilisation à la place des paramètres stockés.
 
 ## <a name="see-also"></a>Voir aussi
 
-[\<>aléatoires](../standard-library/random.md)
+[\<random>](../standard-library/random.md)

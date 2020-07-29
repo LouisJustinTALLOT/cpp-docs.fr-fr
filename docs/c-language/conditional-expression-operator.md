@@ -6,12 +6,12 @@ helpviewer_keywords:
 - operators [C++], conditional
 - expressions [C++], conditional
 ms.assetid: c4f1a5ca-0844-44a7-a384-eca584d4e3dd
-ms.openlocfilehash: a64317c75e48111148053cc7efb62fb5a6d79f7f
-ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
+ms.openlocfilehash: 03f9673da109151bd2146daf7539841f1cac07c6
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/22/2020
-ms.locfileid: "81749194"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87217127"
 ---
 # <a name="conditional-expression-operator"></a>Opérateur d'expression conditionnelle
 
@@ -37,13 +37,13 @@ Le type du résultat d’une opération conditionnelle dépend du type de l’op
 
 - Si *expression* et *conditional-expression* ont le même type de structure, d'union, ou de pointeur, le type du résultat est le même type de structure, d'union ou de pointeur.
 
-- Si les deux opérandes ont le type `void`, le résultat a le type `void`.
+- Si les deux opérandes ont **`void`** le type, le résultat a le type **`void`** .
 
-- Si l'un des opérandes est un pointeur vers un objet de tout type, et que l'autre opérande est un pointeur vers `void`, le pointeur vers l'objet est converti en pointeur vers `void` et le résultat est un pointeur vers `void`.
+- Si l’un des opérandes est un pointeur vers un objet de tout type, et que l’autre opérande est un pointeur vers **`void`** , le pointeur vers l’objet est converti en pointeur vers **`void`** et le résultat est un pointeur vers **`void`** .
 
 - Si *expression* ou *conditional-expression* est un pointeur et que l’autre opérande est une expression constante ayant la valeur 0, le type du résultat est le type pointeur.
 
-Dans la comparaison de type pour les pointeurs, les qualificateurs de type (**const** ou `volatile`) dans le type vers lequel le pointeur pointe ne sont pas significatifs, mais le type de résultat hérite des qualificateurs des deux composants du conditionnel.
+Dans la comparaison de type pour les pointeurs, tous les qualificateurs de type ( **`const`** ou **`volatile`** ) dans le type vers lequel le pointeur pointe ne sont pas significatifs, mais le type de résultat hérite des qualificateurs des deux composants du conditionnel.
 
 ## <a name="examples"></a>Exemples
 

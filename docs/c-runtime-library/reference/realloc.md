@@ -37,12 +37,12 @@ helpviewer_keywords:
 - _frealloc function
 - reallocate memory blocks
 ms.assetid: 2b2239de-810b-4b11-9438-32ab0a244185
-ms.openlocfilehash: 15c818ee6f70d02fb9b63f12deef6b1bf3698322
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: 72c38021452940553bad770160ecc5db7ea546d0
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82917942"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87216815"
 ---
 # <a name="realloc"></a>realloc
 
@@ -67,15 +67,15 @@ Nouvelle taille en octets.
 
 ## <a name="return-value"></a>Valeur de retour
 
-**realloc** retourne un pointeur **void** vers le bloc de mémoire réalloué (et éventuellement déplacé).
+**realloc** retourne un **`void`** pointeur vers le bloc de mémoire réalloué (et éventuellement déplacé).
 
 Si la mémoire disponible est insuffisante pour étendre le bloc à la taille donnée, le bloc d’origine reste inchangé et la **valeur null** est retournée.
 
 Si la *taille* est égale à zéro, le bloc pointé par *memblock* est libéré ; la valeur de retour est **null**et *memblock* pointe vers un bloc libéré.
 
-La valeur de retour pointe vers un espace de stockage qui est obligatoirement aligné correctement pour le stockage de tout type d'objet. Pour obtenir un pointeur vers un type autre que **void**, utilisez un cast de type sur la valeur de retour.
+La valeur de retour pointe vers un espace de stockage qui est obligatoirement aligné correctement pour le stockage de tout type d'objet. Pour obtenir un pointeur vers un type autre que **`void`** , utilisez un cast de type sur la valeur de retour.
 
-## <a name="remarks"></a>Notes 
+## <a name="remarks"></a>Notes
 
 La fonction **realloc** modifie la taille d’un bloc de mémoire alloué. L’argument *memblock* pointe vers le début du bloc de mémoire. Si *memblock* a la **valeur null**, **realloc** se comporte de la même façon que **malloc** et alloue un nouveau bloc de *taille* octets. Si *memblock* n’a pas la **valeur null**, il doit s’agir d’un pointeur retourné par un appel précédent à **calloc**, **malloc**ou **realloc**.
 
@@ -83,7 +83,7 @@ L’argument *Size* donne la nouvelle taille du bloc, en octets. Le contenu du b
 
 **realloc** affecte à **errno** la valeur **ENOMEM** si l’allocation de mémoire échoue ou si la quantité de mémoire demandée dépasse **_HEAP_MAXREQ**. Pour plus d’informations sur ce code d’erreur et les autres, consultez [errno, _doserrno, _sys_errlist et _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
 
-**realloc** appelle **malloc** afin d’utiliser la fonction de [_set_new_mode](set-new-mode.md) C++ pour définir le nouveau mode de gestionnaire. Le nouveau mode de gestionnaire indique si, en cas d’échec, **malloc** est appelé à appeler la routine de nouveau gestionnaire telle qu’elle est définie par [_set_new_handler](set-new-handler.md). Par défaut, **malloc** n’appelle pas la routine de nouveau gestionnaire en cas d’échec d’allocation de mémoire. Vous pouvez remplacer ce comportement par défaut de sorte que, lorsque **realloc** ne parvient pas à allouer de la mémoire, **malloc** appelle la routine de nouveau gestionnaire de la même façon que le **nouvel** opérateur quand il échoue pour la même raison. Pour ce faire, appelez
+**realloc** appelle **malloc** afin d’utiliser la fonction de [_set_new_mode](set-new-mode.md) C++ pour définir le nouveau mode de gestionnaire. Le nouveau mode de gestionnaire indique si, en cas d’échec, **malloc** est appelé à appeler la routine de nouveau gestionnaire telle qu’elle est définie par [_set_new_handler](set-new-handler.md). Par défaut, **malloc** n’appelle pas la routine de nouveau gestionnaire en cas d’échec d’allocation de mémoire. Vous pouvez remplacer ce comportement par défaut de sorte que, lorsque **realloc** ne parvient pas à allouer de la mémoire, **malloc** appelle la routine de nouveau gestionnaire de la même façon que l' **`new`** opérateur quand il échoue pour la même raison. Pour ce faire, appelez
 
 ```C
 _set_new_mode(1);
@@ -93,7 +93,7 @@ au début de votre programme, ou créez un lien avec NEWMODE.OBJ (consultez [Opt
 
 Lorsque l’application est liée à une version Debug des bibliothèques Runtime C, **réallocation** prend la valeur [_realloc_dbg](realloc-dbg.md). Pour plus d’informations sur la gestion du tas pendant le processus de débogage, consultez [Tas de débogage CRT](/visualstudio/debugger/crt-debug-heap-details).
 
-**realloc** est marqué `__declspec(noalias)` et `__declspec(restrict)`, ce qui signifie que la fonction est garantie de ne pas modifier les variables globales et que le pointeur retourné n’a pas d’alias. Pour plus d’informations, consultez [noalias](../../cpp/noalias.md) et [restrict](../../cpp/restrict.md).
+**realloc** est marqué `__declspec(noalias)` et `__declspec(restrict)` , ce qui signifie que la fonction est garantie de ne pas modifier les variables globales et que le pointeur retourné n’a pas d’alias. Pour plus d’informations, consultez [noalias](../../cpp/noalias.md) et [restrict](../../cpp/restrict.md).
 
 Par défaut, l’état global de cette fonction est limité à l’application. Pour modifier cette valeur, consultez [état global dans le CRT](../global-state.md).
 

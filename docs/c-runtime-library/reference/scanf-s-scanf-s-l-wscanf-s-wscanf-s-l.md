@@ -45,12 +45,12 @@ helpviewer_keywords:
 - wscanf_s_l function
 - buffers [C++], avoiding overruns
 ms.assetid: 42cafcf7-52d6-404a-80e4-b056a7faf2e5
-ms.openlocfilehash: e869f9e0d4fa87c87878ffea987e4b6d85a75616
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 8811bd0b6e4009cd6aba570e65d0687fab465614
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70948876"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87231362"
 ---
 # <a name="scanf_s-_scanf_s_l-wscanf_s-_wscanf_s_l"></a>scanf_s, _scanf_s_l, wscanf_s, _wscanf_s_l
 
@@ -98,13 +98,13 @@ Pour obtenir des informations sur ces codes d’erreur et les autres, consultez 
 
 ## <a name="remarks"></a>Notes
 
-La fonction **scanf_s** lit les données du flux d’entrée standard, **stdin**, et les écrit dans un *argument*. Chaque *argument* doit être un pointeur vers un type de variable qui correspond au spécificateur de type dans le *format*. Si une copie se produit entre des chaînes qui se chevauchent, le comportement est indéfini.
+La fonction **scanf_s** lit les données du flux d’entrée standard, **stdin**et les écrit dans l' *argument*. Chaque *argument* doit être un pointeur vers un type de variable qui correspond au spécificateur de type dans le *format*. Si une copie se produit entre des chaînes qui se chevauchent, le comportement est indéfini.
 
-**wscanf_s** est une version à caractères larges de **scanf_s**; l’argument *format* de **wscanf_s** est une chaîne de caractères larges. **wscanf_s** et **scanf_s** se comportent de la même manière si le flux est ouvert en mode ANSI. **scanf_s** ne prend pas actuellement en charge l’entrée d’un flux Unicode.
+**wscanf_s** est une version à caractères larges de **scanf_s**; l’argument de *format* de **wscanf_s** est une chaîne de caractères larges. **wscanf_s** et **scanf_s** se comportent de la même manière si le flux est ouvert en mode ANSI. **scanf_s** ne prend pas actuellement en charge l’entrée d’un flux Unicode.
 
 Les versions de ces fonctions qui ont le suffixe **_L** sont identiques, sauf qu’elles utilisent les paramètres *régionaux* à la place des paramètres régionaux du thread actuel.
 
-Contrairement à **scanf** et **wscanf**, **scanf_s** et **wscanf_s** nécessitent que vous spécifiiez des tailles de mémoire tampon pour certains paramètres. Spécifiez les tailles pour tous les paramètres **c**, **c**, **s** **, ou**jeu de contrôle de chaîne **[]** . La taille de la mémoire tampon en caractères est passée en tant que paramètre supplémentaire. Il suit immédiatement le pointeur vers la mémoire tampon ou la variable. Par exemple, si vous lisez une chaîne, la taille de la mémoire tampon pour cette chaîne est passée comme suit :
+Contrairement à **scanf** et **wscanf**, **scanf_s** et **wscanf_s** vous obligent à spécifier des tailles de mémoire tampon pour certains paramètres. Spécifiez les tailles pour tous les paramètres **c**, **c**, **s** **, ou**jeu de contrôle de chaîne **[]** . La taille de la mémoire tampon en caractères est passée en tant que paramètre supplémentaire. Il suit immédiatement le pointeur vers la mémoire tampon ou la variable. Par exemple, si vous lisez une chaîne, la taille de la mémoire tampon pour cette chaîne est passée comme suit :
 
 ```C
 char s[10];
@@ -114,7 +114,7 @@ scanf_s("%9s", s, (unsigned)_countof(s)); // buffer size is 10, width specificat
 La taille de la mémoire tampon comprend le terminal null. Vous pouvez utiliser un champ de spécification de largeur pour vous assurer que le jeton lu s’intègre dans la mémoire tampon. Lorsqu’un jeton est trop grand pour tenir, rien n’est écrit dans la mémoire tampon, sauf s’il existe une spécification de largeur.
 
 > [!NOTE]
-> Le paramètre size est de type **unsigned**, et non **size_t**. Utilisez un cast statique pour convertir une valeur **size_t** en **non signée** pour les configurations de build 64 bits.
+> Le paramètre de taille est de type **`unsigned`** , et non **size_t**. Utilisez un cast statique pour convertir une valeur **size_t** en **`unsigned`** pour les configurations de build 64 bits.
 
 Le paramètre taille de la mémoire tampon décrit le nombre maximal de caractères, pas les octets. Dans cet exemple, la largeur du type de mémoire tampon ne correspond pas à la largeur du spécificateur de format.
 
@@ -150,7 +150,7 @@ Pour plus d’informations, consultez [Spécification de largeur scanf](../../c-
 
 Pour plus d’informations, consultez [Champs de spécification de format : fonctions scanf et wscanf](../../c-runtime-library/format-specification-fields-scanf-and-wscanf-functions.md).
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
 |Routine|En-tête requis|
 |-------------|---------------------|
@@ -213,5 +213,5 @@ The contents are: 36 92.300003 y n Wide characters
 [Paramètres régionaux](../../c-runtime-library/locale.md)<br/>
 [fscanf, _fscanf_l, fwscanf, _fwscanf_l](fscanf-fscanf-l-fwscanf-fwscanf-l.md)<br/>
 [printf, _printf_l, wprintf, _wprintf_l](printf-printf-l-wprintf-wprintf-l.md)<br/>
-[sprintf, _sprintf_l, swprintf, _swprintf_l, \__swprintf_l](sprintf-sprintf-l-swprintf-swprintf-l-swprintf-l.md)<br/>
+[sprintf, _sprintf_l, swprintf, _swprintf_l, \_ _swprintf_l](sprintf-sprintf-l-swprintf-swprintf-l-swprintf-l.md)<br/>
 [sscanf, _sscanf_l, swscanf, _swscanf_l](sscanf-sscanf-l-swscanf-swscanf-l.md)<br/>

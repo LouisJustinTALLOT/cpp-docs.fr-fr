@@ -66,12 +66,12 @@ helpviewer_keywords:
 - _tcsset_s function
 - mbsset_s function
 ms.assetid: dceb2909-6b41-4792-acb7-888e45bb8b35
-ms.openlocfilehash: 0338d84cbea864eca561c37f1d107a08f1c1e01e
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: 520e272955884b6701f12576e2f5d5c86fe25684
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82911143"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87216711"
 ---
 # <a name="_strset_s-_strset_s_l-_wcsset_s-_wcsset_s_l-_mbsset_s-_mbsset_s_l"></a>_strset_s, _strset_s_l, _wcsset_s, _wcsset_s_l, _mbsset_s, _mbsset_s_l
 
@@ -120,7 +120,7 @@ errno_t _mbsset_s_l(
 
 ### <a name="parameters"></a>Paramètres
 
-*Str*<br/>
+*str*<br/>
 Chaîne se terminant par un caractère Null à définir.
 
 *numberOfElements*<br/>
@@ -138,9 +138,9 @@ Zéro en cas de réussite ; code d’erreur dans un autre cas.
 
 Ces fonctions valident leurs arguments. Si *Str* est un pointeur null ou si l’argument *NumberOfElements* est inférieur ou égal à 0, ou si le bloc passé ne se termine pas par un caractère null, le gestionnaire de paramètres non valides est appelé, comme décrit dans [validation de paramètre](../../c-runtime-library/parameter-validation.md). Si l’exécution est autorisée à se poursuivre, ces fonctions retournent **EINVAL** et attribuent à **errno** la valeur **EINVAL**.
 
-## <a name="remarks"></a>Notes 
+## <a name="remarks"></a>Notes
 
-La fonction **_strset_s** définit tous les caractères de *Str* sur *c* (convertis en **char**), à l’exception du caractère null de fin. **_wcsset_s** et **_mbsset_s** sont des versions à caractères larges et à caractères multioctets de **_strset_s**. Les types de données des arguments et des valeurs de retour varient en conséquence. Ces fonctions se comportent sinon de façon identique.
+La fonction **_strset_s** affecte à tous les caractères de *Str* la valeur *c* (converti en **`char`** ), à l’exception du caractère null de fin. **_wcsset_s** et **_mbsset_s** sont des versions à caractères larges et à caractères multioctets de **_strset_s**. Les types de données des arguments et des valeurs de retour varient en conséquence. Ces fonctions se comportent sinon de façon identique.
 
 La valeur de sortie est affectée par la valeur du paramètre de catégorie **LC_CTYPE** des paramètres régionaux. Pour plus d’informations, consultez [setlocale](setlocale-wsetlocale.md). Les versions de ces fonctions sans le suffixe **_l** utilisent les paramètres régionaux pour ce comportement dépendant des paramètres régionaux ; les versions avec le suffixe **_l** sont identiques, sauf qu’elles utilisent à la place les paramètres régionaux transmis. Pour plus d’informations, consultez [Locale](../../c-runtime-library/locale.md).
 

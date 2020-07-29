@@ -36,12 +36,12 @@ helpviewer_keywords:
 - _fullpath function
 - fullpath function
 ms.assetid: 4161ec17-0d22-45dd-b07d-0222553afae9
-ms.openlocfilehash: f7ef9e8416e73a403abfb30f637afeb4a68e8592
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: 8583ea17930721f8d8b80aa5066dbc07372ce243
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82909940"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87231388"
 ---
 # <a name="_fullpath-_wfullpath"></a>_fullpath, _wfullpath
 
@@ -71,13 +71,13 @@ Pointeur vers une mémoire tampon contenant le nom de chemin d’accès absolu o
 Nom de chemin d’accès relatif.
 
 *maxLength*<br/>
-Longueur maximale de la mémoire tampon du nom de chemin d’accès absolu (*absPath*). Cette longueur est en octets pour **_fullpath** , mais en caractères larges (**wchar_t**) pour **_wfullpath**.
+Longueur maximale de la mémoire tampon du nom de chemin d’accès absolu (*absPath*). Cette longueur est en octets pour **_fullpath** , mais en caractères larges ( **`wchar_t`** ) pour **_wfullpath**.
 
 ## <a name="return-value"></a>Valeur de retour
 
 Chacune de ces fonctions retourne un pointeur vers une mémoire tampon contenant le nom de chemin d’accès absolu (*absPath*). En cas d’erreur (par exemple, si la valeur passée dans *relPath* inclut une lettre de lecteur qui n’est pas valide ou est introuvable, ou si la longueur du nom de chemin d’accès absolu créé (*absPath*) est supérieure à *MaxLength*), la fonction retourne la **valeur null**.
 
-## <a name="remarks"></a>Notes 
+## <a name="remarks"></a>Notes
 
 La fonction **_fullpath** étend le nom de chemin d’accès relatif dans *relPath* à son chemin d’accès complet ou absolu et stocke ce nom dans *absPath*. Si *absPath* a la **valeur null**, **malloc** est utilisé pour allouer une mémoire tampon d’une longueur suffisante pour contenir le nom du chemin d’accès. Il incombe à l’appelant de libérer cette mémoire tampon. Un nom de chemin relatif spécifie un chemin vers un autre emplacement à partir de l’emplacement actuel (tel que le répertoire de travail actuel : « . »). Un nom de chemin absolu est l’extension d’un nom de chemin relatif qui indique le chemin complet requis pour atteindre l’emplacement souhaité à partir de la racine du système de fichiers. Contrairement à **_makepath**, **_fullpath** peut être utilisé pour obtenir le nom de chemin d’accès absolu pour les chemins d’accès relatifs (*relPath*) qui incluent « ./ » ou «.. /» dans leur nom.
 
@@ -109,7 +109,7 @@ Si la mémoire tampon *absPath* a la **valeur null**, **_fullpath** appelle [mal
 
 ## <a name="requirements"></a>Spécifications
 
-|Function|En-tête requis|
+|Fonction|En-tête requis|
 |--------------|---------------------|
 |**_fullpath**|\<stdlib.h>|
 |**_wfullpath**|\<stdlib.h> ou \<wchar.h>|

@@ -6,12 +6,12 @@ helpviewer_keywords:
 - visibility
 - file scope [C++]
 ms.assetid: a019eb7c-66ed-46a7-bc9f-89a963930a56
-ms.openlocfilehash: 01b2bc8d75c3c65639a3ff0c57b1a368760eba53
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 354b354a72b5a96a190ce2322eb160b7d6bff1c2
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62158343"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87199397"
 ---
 # <a name="scope-and-visibility"></a>Portée et visibilité
 
@@ -27,7 +27,7 @@ Portée de bloc Le spécificateur de déclarateur ou de type pour un identificat
 
 Portée de prototype de fonction Le spécificateur de déclarateur ou de type pour un identificateur avec portée de prototype de fonction apparaît dans la liste des déclarations de paramètre dans un prototype de fonction (pas dans une déclaration de fonction). Sa portée se termine à la fin du déclarateur de fonction.
 
-Les déclarations appropriées pour rendre des variables visibles dans d'autres fichiers sources sont décrites dans [Classes de stockage](../c-language/c-storage-classes.md). Toutefois, les variables et les fonctions déclarées au niveau externe avec le spécificateur de classe de stockage **statique** sont visibles uniquement dans le fichier source dans lequel elles sont définies. Toutes les autres fonctions sont visibles globalement.
+Les déclarations appropriées pour rendre des variables visibles dans d'autres fichiers sources sont décrites dans [Classes de stockage](../c-language/c-storage-classes.md). Toutefois, les variables et les fonctions déclarées au niveau externe avec le **`static`** spécificateur de classe de stockage sont visibles uniquement dans le fichier source dans lequel elles sont définies. Toutes les autres fonctions sont visibles globalement.
 
 ## <a name="see-also"></a>Voir aussi
 

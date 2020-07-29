@@ -11,12 +11,12 @@ helpviewer_keywords:
 - Standards conformance compiler options
 - permissive compiler options [C++]
 ms.assetid: db1cc175-6e93-4a2e-9396-c3725d2d8f71
-ms.openlocfilehash: 3b5ddc4b4e9b70b2191a17d2201a441603182149
-ms.sourcegitcommit: fe146adb3a02872538637196bb3c45aeeeaaf5c2
+ms.openlocfilehash: 69a6b413ec6d9d6897e5f11a11aac8c75db2cf5f
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84507025"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87217205"
 ---
 # <a name="permissive--standards-conformance"></a>/permissive - (Conformité aux standards)
 
@@ -40,7 +40,7 @@ L' **`/permissive-`** option définit les [**`/Zc:referenceBinding`**](zc-refere
 
 Dans les versions du compilateur qui commencent dans Visual Studio 2017 version 15,3, l' **`/permissive-`** option définit l' [**`/Zc:ternary`**](zc-ternary.md) option. Le compilateur implémente également davantage d’exigences pour la recherche de nom en deux phases. Lorsque l' **`/permissive-`** option est définie, le compilateur analyse les définitions de fonction et de modèle de classe et identifie les noms dépendants et non dépendants utilisés dans les modèles. Dans cette version, seule l’analyse des dépendances de nom est exécutée.
 
-Les extensions spécifiques à l’environnement et les zones de langage que le standard laisse à l’implémentation ne sont pas affectées par **`/permissive-`** . Par exemple, les mots clés spécifiques à Microsoft `__declspec` , la Convention d’appel et la gestion structurée des exceptions, ainsi que les directives ou attributs pragma spécifiques au compilateur, ne sont pas signalés par le compilateur en **`/permissive-`** mode.
+Les extensions spécifiques à l’environnement et les zones de langage que le standard laisse à l’implémentation ne sont pas affectées par **`/permissive-`** . Par exemple, les mots clés spécifiques à Microsoft **`__declspec`** , la Convention d’appel et la gestion structurée des exceptions, ainsi que les directives ou attributs pragma spécifiques au compilateur, ne sont pas signalés par le compilateur en **`/permissive-`** mode.
 
 L' **`/permissive-`** option utilise la prise en charge de la conformité dans la version actuelle du compilateur pour déterminer les constructions de langage qui ne sont pas conformes. L’option ne détermine pas si votre code est conforme à une version spécifique de la norme C++. Pour activer toutes les prises en charge du compilateur implémentées pour la dernière norme préliminaire, utilisez l' [**`/std:c++latest`**](std-specify-language-standard-version.md) option. Pour limiter la prise en charge du compilateur à la norme C++ 17 actuellement implémentée, utilisez l' [**`/std:c++17`**](std-specify-language-standard-version.md) option. Pour limiter la prise en charge du compilateur à une correspondance plus étroite avec la norme C++ 14, utilisez l' [**`/std:c++14`**](std-specify-language-standard-version.md) option, qui est la valeur par défaut.
 

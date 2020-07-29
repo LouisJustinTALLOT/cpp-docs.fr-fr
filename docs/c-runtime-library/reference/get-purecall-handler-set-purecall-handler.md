@@ -37,12 +37,12 @@ helpviewer_keywords:
 - _set_purecall_handler_m function
 - _get_purecall_handler function
 ms.assetid: 2759b878-8afa-4129-86e7-72afc2153d9c
-ms.openlocfilehash: 73fc2ffe5cd4ed65c8695432b53816090bbc5f8e
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: 9f21258fa1f6ecd2d1717b00ef2cecaee9c865e2
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70955675"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87216945"
 ---
 # <a name="_get_purecall_handler-_set_purecall_handler"></a>_get_purecall_handler, _set_purecall_handler
 
@@ -65,25 +65,25 @@ Fonction à appeler quand une fonction virtuelle pure est appelée. Une fonction
 
 ## <a name="return-value"></a>Valeur de retour
 
-**_Purecall_handler**précédent. Retourne **nullptr** s’il n’y avait pas de gestionnaire précédent.
+**_Purecall_handler**précédent. Retourne **`nullptr`** s’il n’y avait pas de gestionnaire précédent.
 
 ## <a name="remarks"></a>Notes
 
-Les fonctions **_get_purecall_handler** et **_set_purecall_handler** sont spécifiques à Microsoft et s’appliquent C++ uniquement au code.
+Les fonctions **_get_purecall_handler** et **_set_purecall_handler** sont spécifiques à Microsoft et s’appliquent uniquement au code C++.
 
-Un appel à une fonction virtuelle pure est une erreur, car elle n’a pas d’implémentation. Par défaut, le compilateur génère du code pour appeler une fonction de gestionnaire d’erreurs quand une fonction virtuelle pure est appelée, ce qui met fin au programme. Vous pouvez installer votre propre fonction de gestionnaire d’erreurs pour les appels de fonctions virtuelles pures, de façon à les intercepter à des fins de débogage ou de création de rapports. Pour utiliser votre propre gestionnaire d’erreurs, créez une fonction qui a la signature **_purecall_handler** , puis utilisez **_set_purecall_handler** pour en faire le gestionnaire actuel.
+Un appel à une fonction virtuelle pure est une erreur, car il n’a aucune implémentation. Par défaut, le compilateur génère du code pour appeler une fonction de gestionnaire d’erreurs quand une fonction virtuelle pure est appelée, ce qui met fin au programme. Vous pouvez installer votre propre fonction de gestionnaire d’erreurs pour les appels de fonctions virtuelles pures, de façon à les intercepter à des fins de débogage ou de création de rapports. Pour utiliser votre propre gestionnaire d’erreurs, créez une fonction qui a la signature **_purecall_handler** , puis utilisez **_set_purecall_handler** pour en faire le gestionnaire actuel.
 
-Étant donné qu’il n’existe qu’un seul **_purecall_handler** pour chaque processus, lorsque vous appelez **_set_purecall_handler** , cela a un impact immédiat sur tous les threads. Le dernier appelant au niveau d'un thread est celui qui définit le gestionnaire.
+Étant donné qu’il n’y a qu’un seul **_purecall_handler** pour chaque processus, lorsque vous appelez **_set_purecall_handler** cela a un impact immédiat sur tous les threads. Le dernier appelant au niveau d'un thread est celui qui définit le gestionnaire.
 
-Pour restaurer le comportement par défaut, appelez **_set_purecall_handler** à l’aide d’un argument **nullptr** .
+Pour restaurer le comportement par défaut, appelez **_set_purecall_handler** à l’aide d’un **`nullptr`** argument.
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
 |Routine|En-tête requis|
 |-------------|---------------------|
 |**_get_purecall_handler**, **_set_purecall_handler**|\<cstdlib> ou \<stdlib.h>|
 
-Pour plus d'informations sur la compatibilité, voir [Compatibilité](../../c-runtime-library/compatibility.md).
+Pour plus d’informations sur la compatibilité, consultez [Compatibilité](../../c-runtime-library/compatibility.md).
 
 ## <a name="example"></a>Exemple
 

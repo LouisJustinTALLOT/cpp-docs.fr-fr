@@ -2,18 +2,18 @@
 title: Taille de tableau la plus grande
 ms.date: 11/04/2016
 ms.assetid: 4c782cf6-73f3-40b0-b306-229d22da4ee1
-ms.openlocfilehash: a1f48bdade27d0d037609e3ad0e64b2f0fc7b9a9
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: a26165053a453f2f9e5322548e95457129dbafa1
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62232746"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87199722"
 ---
 # <a name="largest-array-size"></a>Taille de tableau la plus grande
 
 **ANSI 3.3.3.4, 4.1.1** Le type d’entier requis pour conserver la taille maximale d’un tableau, c’est-à-dire la taille de **size_t**.
 
-Le typedef `size_t` est un `unsigned int` sur la plateforme x86 32 bits. Sur les plateformes 64 bits, le typedef `size_t` est un `unsigned __int64`.
+Le `size_t` typedef est un **`unsigned int`** sur la plateforme x86 32 bits. Sur les plateformes 64 bits, le `size_t` typedef est un **`unsigned __int64`** .
 
 ## <a name="see-also"></a>Voir aussi
 

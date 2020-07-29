@@ -8,12 +8,12 @@ helpviewer_keywords:
 - integral promotions
 - type casts, when performed
 ms.assetid: d130ee7c-03c3-48f4-af7b-1fdba0d3b086
-ms.openlocfilehash: 281234b857a97acbb57ebbfca7b678a637d00764
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 7d7c55c15a8f3e2a53e350da947cf524ae064a09
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62346286"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87231427"
 ---
 # <a name="type-conversions-c"></a>Conversions de type (C)
 
@@ -25,7 +25,7 @@ Les conversions de type dépendent de l’opérateur spécifié et du type de l�
 
 - Lorsqu'une valeur est passée comme argument à une fonction ou lorsqu'un type est retourné depuis une fonction
 
-Un caractère, un entier court ou un champ de bits entier, tous signés ou non signés, ou un objet de type énumération, peuvent être utilisés dans une expression partout où un entier peut être utilisé. Si `int` peut représenter toutes les valeurs du type d'origine, la valeur est convertie en `int` ; sinon, elle est convertie en `unsigned int`. Ce processus porte le nom de « promotion d'un intégral ». Les promotions d'un intégral conservent la valeur. Autrement dit, vous pouvez être sûr que la valeur après la promotion est identique à celle précédant la promotion. Pour plus d'informations, consultez [Conversions arithmétiques ordinaires](../c-language/usual-arithmetic-conversions.md).
+Un caractère, un entier court ou un champ de bits entier, tous signés ou non signés, ou un objet de type énumération, peuvent être utilisés dans une expression partout où un entier peut être utilisé. Si un **`int`** peut représenter toutes les valeurs du type d’origine, la valeur est convertie en **`int`** ; sinon, elle est convertie en **`unsigned int`** . Ce processus porte le nom de « promotion d'un intégral ». Les promotions d'un intégral conservent la valeur. Autrement dit, vous pouvez être sûr que la valeur après la promotion est identique à celle précédant la promotion. Pour plus d'informations, consultez [Conversions arithmétiques ordinaires](../c-language/usual-arithmetic-conversions.md).
 
 ## <a name="see-also"></a>Voir aussi
 
