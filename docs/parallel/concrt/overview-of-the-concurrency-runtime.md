@@ -7,44 +7,44 @@ helpviewer_keywords:
 - Concurrency Runtime, overview
 - Concurrency Runtime, lambda expressions
 ms.assetid: 56237d96-10b0-494a-9cb4-f5c5090436c5
-ms.openlocfilehash: b50c943bb83c587ab4001556b1143f9d5f868a0b
-ms.sourcegitcommit: a8ef52ff4a4944a1a257bdaba1a3331607fb8d0f
+ms.openlocfilehash: 11035f9e202d964ae91378560b9244cde6d1828b
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/11/2020
-ms.locfileid: "77142933"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87194613"
 ---
 # <a name="overview-of-the-concurrency-runtime"></a>Vue d'ensemble du runtime d'accès concurrentiel
 
 Ce document fournit une vue d'ensemble du runtime d'accès concurrentiel. Il décrit les avantages du runtime d'accès concurrentiel, quand l'utiliser et la façon dont ses composants interagissent entre eux et avec le système d'exploitation et les applications.
 
-## <a name="top"></a> Sections
+## <a name="sections"></a><a name="top"></a>Sections
 
 Ce document contient les sections suivantes :
 
 - [Historique d’implémentation runtime d’accès concurrentiel](#dlls)
 
-- [Pourquoi un Runtime pour l’accès concurrentiel est-il important ?](#runtime)
+- [Pourquoi un runtime d'accès concurrentiel est-il important ?](#runtime)
 
 - [Architecture](#architecture)
 
-- [C++Expressions lambda](#lambda)
+- [Expressions lambda C++](#lambda)
 
 - [Configuration requise](#requirements)
 
-## <a name="dlls"></a>Historique d’implémentation runtime d’accès concurrentiel
+## <a name="concurrency-runtime-implementation-history"></a><a name="dlls"></a>Historique d’implémentation runtime d’accès concurrentiel
 
-Dans Visual Studio 2010 à 2013, la runtime d’accès concurrentiel a été incorporée dans msvcr100. dll via msvcr120. dll.  Quand la refactorisation UCRT s’est produite dans Visual Studio 2015, cette DLL a été refactorie en trois parties :
+Dans Visual Studio 2010 à 2013, le runtime d’accès concurrentiel a été incorporé dans msvcr100.dll par le biais de msvcr120.dll.  Quand la refactorisation UCRT s’est produite dans Visual Studio 2015, cette DLL a été refactorie en trois parties :
 
-- API ucrtbase. dll – C, fournie dans Windows 10 et en service de niveau inférieur via Windows Update-
+- API ucrtbase.dll – C, fournie dans Windows 10 et de niveau inférieur par le biais de Windows Update-
 
-- vcruntime140. dll – fonctions de prise en charge du compilateur et Runtime EH, inclus dans Visual Studio
+- vcruntime140.dll – fonctions de prise en charge du compilateur et du runtime EH, fournies par le biais de Visual Studio
 
-- concrt140. dll – runtime d’accès concurrentiel, fourni via Visual Studio. Requis pour les conteneurs et les algorithmes parallèles tels que `concurrency::parallel_for`. En outre, la bibliothèque STL requiert que cette DLL sur Windows XP utilise des primitives de synchronisation de l’alimentation, car Windows XP n’a pas de variables de condition.
+- concrt140.dll – runtime d’accès concurrentiel, fourni via Visual Studio. Requis pour les conteneurs et les algorithmes parallèles tels que `concurrency::parallel_for` . En outre, la bibliothèque STL requiert que cette DLL sur Windows XP utilise des primitives de synchronisation de l’alimentation, car Windows XP n’a pas de variables de condition.
 
 Dans Visual Studio 2015 et versions ultérieures, le planificateur de tâches du runtime d'accès concurrentiel n'est plus le planificateur de la classe de tâche et des types associés dans ppltasks.h. Ces types utilisent désormais le pool de threads Windows pour de meilleures performances et une meilleure interopérabilité avec les primitives de synchronisation Windows.
 
-## <a name="runtime"></a>Pourquoi un Runtime pour l’accès concurrentiel est-il important ?
+## <a name="why-a-runtime-for-concurrency-is-important"></a><a name="runtime"></a>Pourquoi un Runtime pour l’accès concurrentiel est-il important ?
 
 Un runtime d'accès concurrentiel fournit l'uniformité et la prévisibilité aux applications et à leurs composants qui s'exécutent simultanément. Deux exemples des avantages du runtime d’accès concurrentiel sont la *planification des tâches coopératives* et le *blocage coopératif*.
 
@@ -54,13 +54,13 @@ Le runtime d’accès concurrentiel fournit également des primitives de synchro
 
 [[Haut](#top)]
 
-## <a name="architecture"></a> Architecture
+## <a name="architecture"></a><a name="architecture"></a> Architecture
 
 Le runtime d'accès concurrentiel se divise en quatre composants : la bibliothèque de modèles parallèles (PPL), la bibliothèque d'agents asynchrones, le planificateur de tâches et le gestionnaire des ressources. Ces composants résident entre le système d'exploitation et les applications. L'illustration suivante montre comment les composants du runtime d'accès concurrentiel interagit entre le système d'exploitation et les applications :
 
-**Architecture runtime d’accès concurrentiel**
+**Architecture du runtime d'accès concurrentiel**
 
-![Architecture runtime d’accès concurrentiel](../../parallel/concrt/media/concurrencyrun.png "Architecture de runtime d'accès concurrentiel")
+![Architecture de runtime d'accès concurrentiel](../../parallel/concrt/media/concurrencyrun.png "Architecture de runtime d'accès concurrentiel")
 
 > [!IMPORTANT]
 > Les composants Planificateur de tâches et Gestionnaire des ressources ne sont pas disponibles à partir d’une application plateforme Windows universelle (UWP) ou lorsque vous utilisez la classe de tâche ou d’autres types dans ppltasks. h.
@@ -71,15 +71,15 @@ Le runtime d’accès concurrentiel fournit également des primitives de synchro
 
 Les sections suivantes fournissent un bref aperçu de ce que fournit chaque composant et quand les utiliser.
 
-### <a name="parallel-patterns-library"></a>Bibliothèque de modèles parallèles
+### <a name="parallel-patterns-library"></a>bibliothèque de modèles parallèles
 
 La bibliothèque de modèles parallèles (PPL) fournit des algorithmes et des conteneurs à usage général pour effectuer un parallélisme affiné. La bibliothèque de modèles parallèles active le *parallélisme de données impératif* en fournissant des algorithmes parallèles qui distribuent des calculs sur des collections ou sur des jeux de données à travers des ressources informatiques. Il active également le *parallélisme des tâches* en fournissant des objets de tâche qui répartissent plusieurs opérations indépendantes sur les ressources de calcul.
 
-Utilisez la bibliothèque de modèles parallèles quand vous avez un calcul local qui peut tirer parti d’une exécution en parallèle. Par exemple, vous pouvez utiliser l’algorithme [Concurrency ::p arallel_for](reference/concurrency-namespace-functions.md#parallel_for) pour transformer une boucle `for` existante afin qu’elle agisse en parallèle.
+Utilisez la bibliothèque de modèles parallèles quand vous avez un calcul local qui peut tirer parti d’une exécution en parallèle. Par exemple, vous pouvez utiliser l’algorithme [Concurrency ::p arallel_for](reference/concurrency-namespace-functions.md#parallel_for) pour transformer une **`for`** boucle existante afin qu’elle agisse en parallèle.
 
 Pour plus d’informations sur la bibliothèque de modèles parallèles, consultez [bibliothèque de modèles parallèles (PPL)](../../parallel/concrt/parallel-patterns-library-ppl.md).
 
-### <a name="asynchronous-agents-library"></a>Bibliothèque d'agents asynchrones
+### <a name="asynchronous-agents-library"></a>bibliothèque d’agents asynchrones
 
 La bibliothèque d’agents asynchrones (ou simplement la *bibliothèque d’agents*) fournit à la fois un modèle de programmation basé sur acteur et des interfaces de passage de messages pour les tâches de flux de données de granularité grossière et de traitement pipeline. Les agents asynchrones vous permettent d'utiliser de façon productive la latence, en effectuant le travail pendant que d'autres composants attendent des données.
 
@@ -103,7 +103,7 @@ Le gestionnaire des ressources sert d’abstraction sur les ressources informati
 
 [[Haut](#top)]
 
-## <a name="lambda"></a>C++ Expressions lambda
+## <a name="c-lambda-expressions"></a><a name="lambda"></a>Expressions lambda C++
 
 La plupart des types et algorithmes définis par le runtime d'accès concurrentiel sont implémentés en tant que modèles C++. Certains de ces types et algorithmes prennent comme paramètre une routine qui effectue le travail. Ce paramètre peut être une fonction lambda, un objet de fonction ou un pointeur de fonction. Ces entités sont également appelées *fonctions de travail* ou *routines de travail*.
 
@@ -123,22 +123,22 @@ L’exemple suivant compare la syntaxe des fonctions lambda, des objets de fonct
 390625
 ```
 
-Pour plus d’informations sur les fonctions C++lambda dans, consultez [expressions lambda](../../cpp/lambda-expressions-in-cpp.md).
+Pour plus d’informations sur les fonctions lambda en C++, consultez [expressions lambda](../../cpp/lambda-expressions-in-cpp.md).
 
 [[Haut](#top)]
 
-## <a name="requirements"></a> Spécifications
+## <a name="requirements"></a><a name="requirements"></a> Spécifications
 
 Le tableau suivant présente les fichiers d'en-tête associés à chaque composant du runtime d'accès concurrentiel :
 
 |Composant|Fichiers d’en-tête|
 |---------------|------------------|
 |Bibliothèque de modèles parallèles|ppl.h<br /><br /> concurrent_queue.h<br /><br /> concurrent_vector.h|
-|Bibliothèque d'agents asynchrones|agents.h|
+|bibliothèque d’agents asynchrones|agents.h|
 |Planificateur de tâches|concrt.h|
 |Gestionnaire de ressources|concrtrm.h|
 
-Le runtime d’accès concurrentiel est déclaré dans l’espace de noms d' [accès concurrentiel](../../parallel/concrt/reference/concurrency-namespace.md) . (Vous pouvez également utiliser la [concurrence](../../parallel/concrt/reference/concurrency-namespace.md), qui est un alias pour cet espace de noms.) L’espace de noms `concurrency::details` prend en charge l’infrastructure runtime d’accès concurrentiel et n’est pas destiné à être utilisé directement à partir de votre code.
+Le runtime d’accès concurrentiel est déclaré dans l’espace de noms d' [accès concurrentiel](../../parallel/concrt/reference/concurrency-namespace.md) . (Vous pouvez également utiliser la [concurrence](../../parallel/concrt/reference/concurrency-namespace.md), qui est un alias pour cet espace de noms.) L' `concurrency::details` espace de noms prend en charge l’infrastructure runtime d’accès concurrentiel et n’est pas destiné à être utilisé directement à partir de votre code.
 
 Le runtime d'accès concurrentiel est fourni dans le cadre de la bibliothèque Runtime C (CRT). Pour plus d’informations sur la création d’une application qui utilise le CRT, consultez fonctionnalités de la [bibliothèque CRT](../../c-runtime-library/crt-library-features.md).
 

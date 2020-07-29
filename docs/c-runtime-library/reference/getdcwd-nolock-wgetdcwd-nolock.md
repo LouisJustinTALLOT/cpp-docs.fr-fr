@@ -37,19 +37,19 @@ helpviewer_keywords:
 - _wgetdcwd_nolock function
 - directories [C++], current working
 ms.assetid: d9bdf712-43f8-4173-8f9a-844e82beaa97
-ms.openlocfilehash: cef2c39d3cfcb7690a644d9d2db68f25259b8162
-ms.sourcegitcommit: f19474151276d47da77cdfd20df53128fdcc3ea7
+ms.openlocfilehash: c07c52e0dcfe84c5f00a9a0b67d872a860941c6f
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70955189"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87229439"
 ---
 # <a name="_getdcwd_nolock-_wgetdcwd_nolock"></a>_getdcwd_nolock, _wgetdcwd_nolock
 
 Obtient le chemin d'accès complet du répertoire de travail actuel sur le lecteur spécifié.
 
 > [!IMPORTANT]
-> Cette API ne peut pas être utilisée dans les applications qui s’exécutent dans le Windows Runtime. Pour plus d’informations, consultez [Fonctions CRT non prises en charge dans les applications de la plateforme Windows universelle](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
+> Cette API ne peut pas être utilisée dans les applications qui s'exécutent dans le Windows Runtime. Pour plus d’informations, consultez [Fonctions CRT non prises en charge dans les applications de la plateforme Windows universelle](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -68,14 +68,14 @@ wchar_t *_wgetdcwd_nolock(
 
 ### <a name="parameters"></a>Paramètres
 
-*drive*<br/>
+*unités*<br/>
 Lecteur de disque.
 
-*buffer*<br/>
+*mémoire tampon*<br/>
 Emplacement de stockage pour le chemin.
 
 *maxlen*<br/>
-Longueur maximale du chemin d’accès en caractères : **char** pour **_getdcwd** et **wchar_t** pour **_wgetdcwd**.
+Longueur maximale du chemin d’accès en caractères : **`char`** pour **_getdcwd** et **`wchar_t`** pour **_wgetdcwd**.
 
 ## <a name="return-value"></a>Valeur de retour
 
@@ -91,14 +91,14 @@ Consultez [_getdcwd, _wgetdcwd](getdcwd-wgetdcwd.md).
 |---------------------|--------------------------------------|--------------------|-----------------------|
 |**_tgetdcwd_nolock**|**_getdcwd_nolock**|**_getdcwd_nolock**|**_wgetdcwd_nolock**|
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
 |Routine|En-tête requis|
 |-------------|---------------------|
 |**_getdcwd_nolock**|\<direct.h>|
 |**_wgetdcwd_nolock**|\<direct.h> ou \<wchar.h>|
 
-Pour plus d'informations sur la compatibilité, voir [Compatibilité](../../c-runtime-library/compatibility.md).
+Pour plus d’informations sur la compatibilité, consultez [Compatibility](../../c-runtime-library/compatibility.md).
 
 ## <a name="see-also"></a>Voir aussi
 

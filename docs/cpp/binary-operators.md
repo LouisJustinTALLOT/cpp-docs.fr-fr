@@ -6,12 +6,12 @@ helpviewer_keywords:
 - operators [C++], binary
 - binary operators [C++]
 ms.assetid: c0e7fbff-bc87-4708-8333-504ac09ee83e
-ms.openlocfilehash: 030ae71fec7a0d1572804f30d09f6f9b2749e436
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: f44217b68f6700603218c6f4f3e846075b7e7d55
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80181302"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87229127"
 ---
 # <a name="binary-operators"></a>Opérateurs binaires
 
@@ -19,7 +19,7 @@ Le tableau suivant affiche une liste des opérateurs qui peuvent être surcharg�
 
 ## <a name="redefinable-binary-operators"></a>Opérateurs binaires redéfinissables
 
-|Opérateur|Name|
+|Opérateur|Nom|
 |--------------|----------|
 |**,**|Comma|
 |**!=**|Inégalité|
@@ -56,13 +56,13 @@ Le tableau suivant affiche une liste des opérateurs qui peuvent être surcharg�
 
 Pour déclarer une fonction d'opérateur binaire en tant que membre non statique, vous devez la déclarer comme suit :
 
-> *RET-type* **Operator** *op* **(** *arg* **)**
+> *RET-type* **`operator`** *op* **(** *arg* **)**
 
 où *RET-type* est le type de retour, *op* est l’un des opérateurs listés dans le tableau précédent et *arg* est un argument de n’importe quel type.
 
 Pour déclarer une fonction d'opérateur binaire en tant que fonction globale, vous devez la déclarer comme suit :
 
-> *RET-type* **Operator** *op* **(** _Arg1_ **,** _Arg2_ **)**
+> *RET-type* **`operator`** *op* **(** _Arg1_**,** _Arg2_ **)**
 
 où *RET-type* et *op* sont décrits pour les fonctions d’opérateur de membre et *Arg1* et *Arg2* sont des arguments. Au moins un des arguments doit être de type classe.
 
@@ -71,4 +71,4 @@ où *RET-type* et *op* sont décrits pour les fonctions d’opérateur de membre
 
 ## <a name="see-also"></a>Voir aussi
 
-[Surcharge d'opérateur](../cpp/operator-overloading.md)
+[Surcharge d’opérateur](../cpp/operator-overloading.md)

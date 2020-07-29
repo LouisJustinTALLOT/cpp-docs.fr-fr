@@ -37,12 +37,12 @@ helpviewer_keywords:
 - _sopen_s function
 - files [C++], sharing
 ms.assetid: 059a0084-d08c-4973-9174-55e391b72aa2
-ms.openlocfilehash: 6c3de36482c4ffdf1ef402b4059816639014eb8b
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: bddee0b6c5e08e7a7fbae3ca72c3125fa9849c03
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82912690"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87229387"
 ---
 # <a name="_sopen_s-_wsopen_s"></a>_sopen_s, _wsopen_s
 
@@ -102,7 +102,7 @@ Pour plus d’informations sur ces codes de retour et les autres, consultez [err
 
 Dans le cas d’une erreur,-1 est retourné via *PFH* (sauf si *PFH* est un pointeur null).
 
-## <a name="remarks"></a>Notes 
+## <a name="remarks"></a>Notes
 
 La fonction **_sopen_s** ouvre le fichier spécifié par *filename* et prépare le fichier pour la lecture ou l’écriture partagée, comme défini par *Oflag* et *shflag*. **_wsopen_s** est une version à caractères larges de **_sopen_s**; l’argument de *nom de fichier* pour **_wsopen_s** est une chaîne de caractères larges. dans le cas contraire, **_wsopen_s** et **_sopen_s** se comportent de la même façon.
 
@@ -114,7 +114,7 @@ Par défaut, l’état global de cette fonction est limité à l’application. 
 |---------------------|--------------------------------------|--------------------|-----------------------|
 |**_tsopen_s**|**_sopen_s**|**_sopen_s**|**_wsopen_s**|
 
-L’expression entière *Oflag* est formée en combinant une ou plusieurs constantes manifestes, qui sont définies \<dans fcntl. h>. Quand au moins deux constantes forment l’argument *Oflag*, elles sont combinées avec l’opérateur or au niveau du bit ( **&#124;** ).
+L’expression entière *Oflag* est formée en combinant une ou plusieurs constantes manifestes, qui sont définies dans \<fcntl.h> . Quand au moins deux constantes forment l’argument *Oflag*, elles sont combinées avec l’opérateur or au niveau du bit ( **&#124;** ).
 
 |*Oflag* constante)|Comportement|
 |-|-|
@@ -138,11 +138,11 @@ L’expression entière *Oflag* est formée en combinant une ou plusieurs consta
 
 Pour spécifier le mode d’accès au fichier, vous devez spécifier **_O_RDONLY**, **_O_RDWR**ou **_O_WRONLY**. Il n'y a aucune valeur par défaut pour le mode d'accès.
 
-Lorsqu’un fichier est ouvert en mode Unicode à l’aide de **_O_WTEXT**, **_O_U8TEXT**ou **_O_U16TEXT**, les fonctions d’entrée traduisent les données lues à partir du fichier en données UTF-16 stockées en tant que type **wchar_t**. Les fonctions qui écrivent dans un fichier ouvert en mode Unicode attendent des mémoires tampons qui contiennent des données UTF-16 stockées en tant que type **wchar_t**. Si le fichier est encodé au format UTF-8, les données UTF-16 sont traduites en UTF-8 lors de leur écriture et le contenu du fichier encodé au format UTF-8 est traduit en UTF-16 lorsqu'il est lu. Toute tentative de lecture ou d'écriture d'une quantité impaire d'octets en mode Unicode provoque une erreur de validation de paramètre. Pour lire ou écrire des données stockées dans votre programme au format UTF-8, utilisez un mode de fichier binaire ou texte au lieu d'un mode Unicode. Vous êtes responsable de toute traduction d'encodage nécessaire.
+Lorsqu’un fichier est ouvert en mode Unicode à l’aide de **_O_WTEXT**, **_O_U8TEXT**ou **_O_U16TEXT**, les fonctions d’entrée traduisent les données lues à partir du fichier en données UTF-16 stockées en tant que type **`wchar_t`** . Les fonctions qui écrivent dans un fichier ouvert en mode Unicode attendent des mémoires tampons qui contiennent des données UTF-16 stockées en tant que type **`wchar_t`** . Si le fichier est encodé au format UTF-8, les données UTF-16 sont traduites en UTF-8 lors de leur écriture et le contenu du fichier encodé au format UTF-8 est traduit en UTF-16 lorsqu'il est lu. Toute tentative de lecture ou d'écriture d'une quantité impaire d'octets en mode Unicode provoque une erreur de validation de paramètre. Pour lire ou écrire des données stockées dans votre programme au format UTF-8, utilisez un mode de fichier binaire ou texte au lieu d'un mode Unicode. Vous êtes responsable de toute traduction d'encodage nécessaire.
 
-Si **_sopen_s** est appelé avec **_O_WRONLY** | **_O_APPEND** (mode Append) et **_O_WTEXT**, **_O_U16TEXT**ou **_O_U8TEXT**, il tente d’abord d’ouvrir le fichier pour la lecture et l’écriture, de lire la nomenclature, puis de la rouvrir en écriture. Si l'ouverture du fichier pour l'accès en lecture et en écriture échoue, elle ouvre le fichier pour l'accès en écriture uniquement et utilise la valeur par défaut pour le paramètre de mode Unicode.
+Si **_sopen_s** est appelé avec **_O_WRONLY**  |  **_O_APPEND** (mode Append) et **_O_WTEXT**, **_O_U16TEXT**ou **_O_U8TEXT**, il tente d’abord d’ouvrir le fichier pour la lecture et l’écriture, de lire la nomenclature, puis de la rouvrir en écriture. Si l'ouverture du fichier pour l'accès en lecture et en écriture échoue, elle ouvre le fichier pour l'accès en écriture uniquement et utilise la valeur par défaut pour le paramètre de mode Unicode.
 
-L’argument *shflag* est une expression constante qui se compose de l’une des constantes manifestes suivantes, qui sont \<définies dans share. h>.
+L’argument *shflag* est une expression constante qui se compose de l’une des constantes manifestes suivantes, qui sont définies dans \<share.h> .
 
 |*shflag* constante)|Comportement|
 |-|-|
@@ -151,7 +151,7 @@ L’argument *shflag* est une expression constante qui se compose de l’une des
 | **_SH_DENYRD** | Refuse l'accès en lecture à un fichier. |
 | **_SH_DENYNO** | Autorise l'accès en lecture et en écriture. |
 
-L’argument *PMODE* est toujours requis, contrairement à **_sopen**. Lorsque vous spécifiez **_O_CREAT**, si le fichier n’existe pas, *PMODE* spécifie les paramètres d’autorisation du fichier, qui sont définis quand le nouveau fichier est fermé la première fois. Sinon, *PMODE* est ignoré. *PMODE* est une expression entière qui contient l’une des constantes de manifeste, ou les deux, **_S_IWRITE** et les **_S_IREAD**, qui sont définis dans \<les> sys\stat.h. Quand les deux constantes sont données, elles sont combinées avec l'opérateur OR au niveau du bit. La signification de *PMODE* est la suivante.
+L’argument *PMODE* est toujours requis, contrairement à **_sopen**. Lorsque vous spécifiez **_O_CREAT**, si le fichier n’existe pas, *PMODE* spécifie les paramètres d’autorisation du fichier, qui sont définis quand le nouveau fichier est fermé la première fois. Sinon, *PMODE* est ignoré. *PMODE* est une expression entière qui contient l’une des constantes manifestes, ou les deux, **_S_IWRITE** et **_S_IREAD**, qui sont définis dans \<sys\stat.h> . Quand les deux constantes sont données, elles sont combinées avec l'opérateur OR au niveau du bit. La signification de *PMODE* est la suivante.
 
 |*pmode*|Signification|
 |-|-|
@@ -159,7 +159,7 @@ L’argument *PMODE* est toujours requis, contrairement à **_sopen**. Lorsque v
 | **_S_IWRITE** | Écriture autorisée. (En fait, autorise la lecture et l'écriture.) |
 | **_S_IREAD** &#124; **_S_IWRITE** | Lecture et écriture autorisées. |
 
-Si l'autorisation d'écriture n'est pas accordée, le fichier est en lecture seule. Dans le système d'exploitation Windows, tous les fichiers sont lisibles ; il est impossible d'accorder une autorisation en écriture seule. Par conséquent, les modes **_S_IWRITE** et **_S_IREAD** | **_S_IWRITE** sont équivalents.
+Si l'autorisation d'écriture n'est pas accordée, le fichier est en lecture seule. Dans le système d'exploitation Windows, tous les fichiers sont lisibles ; il est impossible d'accorder une autorisation en écriture seule. Par conséquent, les modes **_S_IWRITE** et **_S_IREAD**  |  **_S_IWRITE** sont équivalents.
 
 **_sopen_s** applique le masque d’autorisation de fichier actuel à *PMODE* avant que les autorisations ne soient définies. (Voir [_umask](umask.md).)
 
@@ -172,13 +172,13 @@ Si l'autorisation d'écriture n'est pas accordée, le fichier est en lecture seu
 
 **_sopen_s** et **_wsopen_s** sont des extensions Microsoft. Pour plus d’informations sur la compatibilité, consultez [Compatibility](../../c-runtime-library/compatibility.md).
 
-## <a name="example"></a> Exemple
+## <a name="example"></a>Exemple
 
 Consultez l’exemple relatif à [_locking](locking.md).
 
 ## <a name="see-also"></a>Voir aussi
 
-[E/S niveau bas](../../c-runtime-library/low-level-i-o.md)<br/>
+[E/s de bas niveau](../../c-runtime-library/low-level-i-o.md)<br/>
 [_close](close.md)<br/>
 [_creat, _wcreat](creat-wcreat.md)<br/>
 [fopen, _wfopen](fopen-wfopen.md)<br/>

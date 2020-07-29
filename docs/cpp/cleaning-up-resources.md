@@ -9,12 +9,12 @@ helpviewer_keywords:
 - exception handling [C++], cleanup code
 - try-catch keyword [C++], termination handlers
 ms.assetid: 65753efe-6a27-4750-b90c-50635775c1b6
-ms.openlocfilehash: ba7841f4fa8f0b6654e78e529e82f86237707787
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: b172695044057f58771af0f4cfcb5ca869b36678
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80180861"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87229049"
 ---
 # <a name="cleaning-up-resources"></a>Nettoyage des ressources
 
@@ -26,7 +26,7 @@ Ainsi, par sécurité, vous devez vérifier les ressources qui sont réellement 
 
 1. Dans le bloc d’instructions **__try** , allouez des ressources. Les handles sont définis sur des valeurs positives lorsque la ressource est allouée.
 
-1. Dans le bloc d’instructions **__finally** , libérez chaque ressource dont la variable de handle ou d’indicateur correspondante est différente de zéro ou non null.
+1. Dans le **`__finally`** bloc d’instructions, libérez chaque ressource dont la variable de handle ou d’indicateur correspondante est différente de zéro ou non null.
 
 ## <a name="example"></a>Exemple
 
@@ -72,5 +72,5 @@ int main() {
 
 ## <a name="see-also"></a>Voir aussi
 
-[Écriture d’un gestionnaire de terminaisons](../cpp/writing-a-termination-handler.md)<br/>
-[Gestion structurée des exceptions (C/C++)](../cpp/structured-exception-handling-c-cpp.md)
+[Écriture d’un gestionnaire des arrêts](../cpp/writing-a-termination-handler.md)<br/>
+[Structured Exception Handling (C/C++)](../cpp/structured-exception-handling-c-cpp.md)

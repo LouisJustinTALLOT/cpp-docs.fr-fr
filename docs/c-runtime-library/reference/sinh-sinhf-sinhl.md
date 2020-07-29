@@ -37,12 +37,12 @@ helpviewer_keywords:
 - sinhf function
 - sinhl function
 - hyperbolic functions
-ms.openlocfilehash: 107636d1e732ab7b3ed3003691d3678acc012b7d
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: ea7051fc086a254dabcf7fcd59f6a70e8fa0c0cd
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82909910"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87229413"
 ---
 # <a name="sinh-sinhf-sinhl"></a>sinh, sinhf, sinhl
 
@@ -77,9 +77,9 @@ Les fonctions **sinh** retournent le sinus hyperbolique de *x*. Par défaut, si 
 
 Pour plus d’informations sur les codes de retour, consultez [errno, _doserrno, _sys_errlist et _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
 
-## <a name="remarks"></a>Notes 
+## <a name="remarks"></a>Notes
 
-C++ autorisant la surcharge, vous pouvez appeler des surcharges de **sinh** qui acceptent et retournent des valeurs **float** ou **long** **double** . Dans un programme C, **sinh** prend toujours et retourne **double**.
+C++ autorisant la surcharge, vous pouvez appeler des surcharges de **sinh** qui acceptent et retournent des **`float`** **`long double`** valeurs ou. Dans un programme C, **sinh** prend et retourne toujours **`double`** .
 
 Par défaut, l’état global de cette fonction est limité à l’application. Pour modifier cette valeur, consultez [état global dans le CRT](../global-state.md).
 

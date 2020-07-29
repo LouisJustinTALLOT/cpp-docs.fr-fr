@@ -37,12 +37,12 @@ helpviewer_keywords:
 - calculating square roots
 - square roots, calculating
 ms.assetid: 2ba9467b-f172-41dc-8f10-b86f68fa813c
-ms.openlocfilehash: 8983d0854b82d532aad57fa80b03bbe3313970f0
-ms.sourcegitcommit: fe146adb3a02872538637196bb3c45aeeeaaf5c2
+ms.openlocfilehash: 6b769be6bcb0fba8c322e3df7a9ac96e4e83a85d
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/08/2020
-ms.locfileid: "84506882"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87229361"
 ---
 # <a name="sqrt-sqrtf-sqrtl"></a>sqrt, sqrtf, sqrtl
 
@@ -73,13 +73,13 @@ long double sqrtl(
 *x*<br/>
 Valeur à virgule flottante non négative
 
-## <a name="remarks"></a>Remarques
+## <a name="remarks"></a>Notes
 
-C++ autorisant la surcharge, vous pouvez appeler des surcharges de **sqrt** qui acceptent des types **float** ou **long** **double** . Dans un programme C, **sqrt** prend toujours et retourne **double**.
+C++ autorisant la surcharge, vous pouvez appeler des surcharges de **sqrt** qui acceptent **`float`** des **`long double`** types ou. Dans un programme C, **sqrt** accepte et retourne toujours **`double`** .
 
 Par défaut, l’état global de cette fonction est limité à l’application. Pour modifier cette valeur, consultez [état global dans le CRT](../global-state.md).
 
-## <a name="return-value"></a>Valeur renvoyée
+## <a name="return-value"></a>Valeur de retour
 
 Les fonctions **sqrt** retournent la racine carrée de *x*. Par défaut, si *x* est négatif, **sqrt** retourne une valeur NaN indéfinie.
 
@@ -89,7 +89,7 @@ Les fonctions **sqrt** retournent la racine carrée de *x*. Par défaut, si *x* 
 |- ∞|aucun|_DOMAIN|
 |x<0|aucun|_DOMAIN|
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
 |Fonction|En-tête C|En-tête C++|
 |--------------|--------------|------------------|

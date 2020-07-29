@@ -26,12 +26,12 @@ f1_keywords:
 helpviewer_keywords:
 - mbrtowc function
 ms.assetid: a1e87fcc-6de0-4ca1-bf26-508d28490286
-ms.openlocfilehash: a77049edba9a98d9e3e4df93ee2ba007a3eb7381
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: 55d866e6f0e372c148de36bf259954bed11a953c
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82919187"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87229426"
 ---
 # <a name="mbrtowc"></a>mbrtowc
 
@@ -51,7 +51,7 @@ size_t mbrtowc(
 ### <a name="parameters"></a>Paramètres
 
 *WCHAR*<br/>
-Adresse d’un caractère élargi devant recevoir la chaîne de caractères larges convertie (type **wchar_t**). Cette valeur peut être un pointeur null si un caractère large n'est pas requis en retour.
+Adresse d’un caractère élargi devant recevoir la chaîne de caractères larges convertie (type **`wchar_t`** ). Cette valeur peut être un pointeur null si un caractère large n'est pas requis en retour.
 
 *mbchar*<br/>
 Adresse d'une séquence d'octets (un caractère multioctet).
@@ -74,7 +74,7 @@ Une des valeurs suivantes :
 
 (size_t) (-2) Les octets *suivants contribuent* à un caractère multioctet incomplet mais potentiellement valide, et tous les octets de *nombre* ont été traités. Aucune valeur n’est stockée dans *WCHAR*, mais *mbstate* est mis à jour pour redémarrer la fonction.
 
-## <a name="remarks"></a>Notes 
+## <a name="remarks"></a>Notes
 
 Si *mbchar* est un pointeur null, la fonction est équivalente à l’appel :
 
@@ -88,7 +88,7 @@ La fonction **mbrtowc** diffère de [mbtowc, _mbtowc_l](mbtowc-mbtowc-l.md) par 
 
 Par défaut, l’état global de cette fonction est limité à l’application. Pour modifier cette valeur, consultez [état global dans le CRT](../global-state.md).
 
-## <a name="example"></a> Exemple
+## <a name="example"></a>Exemple
 
 Convertit un caractère multioctet en son équivalent en caractère large.
 

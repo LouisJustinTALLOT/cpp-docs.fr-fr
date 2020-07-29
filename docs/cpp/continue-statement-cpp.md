@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - continue keyword [C++]
 ms.assetid: 3c94ee57-f732-4c1d-8537-d0ce5382bfd4
-ms.openlocfilehash: b3790ecfde0af958b3244cfdaa61524ba78d6267
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 55a81338f1a0f9036a6d42c4bac7c99489c18d64
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80180275"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87228997"
 ---
 # <a name="continue-statement-c"></a>continue, instruction (C++)
 
@@ -27,11 +27,11 @@ continue;
 
 Toutes les instructions restantes dans l'itération actuelle ne sont pas exécutées. L'itération suivante de la boucle est déterminée comme suit :
 
-- Dans une boucle **do** ou **while** , l’itération suivante démarre en réévaluant l’expression de contrôle de l’instruction **do** ou **while** .
+- Dans une **`do`** **`while`** boucle ou, l’itération suivante démarre en réévaluant l’expression de contrôle de l' **`do`** **`while`** instruction ou.
 
-- Dans une boucle **for** (à l’aide de la syntaxe `for`(`init-expr`; `cond-expr`; `loop-expr`)), la clause `loop-expr` est exécutée. Ensuite la clause `cond-expr` est réévaluée et, selon le résultat, la boucle se termine ou une autre itération a lieu.
+- Dans une **`for`** boucle (à l’aide de la syntaxe `for( <init-expr> ; <cond-expr> ; <loop-expr> )` ), la `<loop-expr>` clause est exécutée. Ensuite la clause `<cond-expr>` est réévaluée et, selon le résultat, la boucle se termine ou une autre itération a lieu.
 
-L’exemple suivant montre comment l’instruction **continue** peut être utilisée pour ignorer des sections de code et commencer l’itération suivante d’une boucle.
+L’exemple suivant montre comment l' **`continue`** instruction peut être utilisée pour ignorer des sections de code et commencer l’itération suivante d’une boucle.
 
 ## <a name="example"></a>Exemple
 

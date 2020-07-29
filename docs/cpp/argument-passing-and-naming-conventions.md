@@ -13,16 +13,16 @@ helpviewer_keywords:
 - passing arguments [C++], conventions
 - conventions [C++], argument names
 ms.assetid: de468979-eab8-4158-90c5-c198932f93b9
-ms.openlocfilehash: e621db339102f1f40030bc7826d383d306a39be8
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: b6b65b4e0cc33ea384eff306952589a49e7ad41a
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80190766"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87229231"
 ---
 # <a name="argument-passing-and-naming-conventions"></a>Passage des arguments et conventions de dénomination
 
-**Section spécifique de Microsoft**
+**Spécifique à Microsoft**
 
 Les compilateurs Microsoft C++ vous permettent de spécifier des conventions pour passer des arguments et des valeurs de retour entre les fonctions et les appelants. Les conventions ne sont pas toutes disponibles sur toutes les plateformes prises en charge et certaines conventions utilisent des implémentations spécifiques à la plateforme. Dans la plupart des cas, les mots clés ou les commutateurs de compilation qui spécifient une convention non prise en charge sur une plateforme spécifique sont ignorés et la convention par défaut de la plateforme est utilisée.
 
@@ -35,7 +35,7 @@ Le compilateur génère du code de prologue et d'épilogue pour enregistrer et r
 
 Pour plus d’informations sur la façon de définir votre propre prologue de fonction et le code d’épilogue, consultez [appels de fonction Naked](../cpp/naked-function-calls.md).
 
-Pour plus d’informations sur les conventions d’appel par défaut dans le code qui cible les plateformes x64, consultez [Convention d’appel x64](../build/x64-calling-convention.md). Pour plus d’informations sur les problèmes de convention d’appel dans le code qui cible les plateformes ARM, consultez [problèmes courants de migration ARM Visual C++ ](../build/common-visual-cpp-arm-migration-issues.md).
+Pour plus d’informations sur les conventions d’appel par défaut dans le code qui cible les plateformes x64, consultez [Convention d’appel x64](../build/x64-calling-convention.md). Pour plus d’informations sur les problèmes de convention d’appel dans le code qui cible les plateformes ARM, consultez [problèmes courants de Migration Visual C++ Arm](../build/common-visual-cpp-arm-migration-issues.md).
 
 Les conventions d'appel suivantes sont prises en charge par le compilateur Visual C/C++.
 
@@ -45,12 +45,12 @@ Les conventions d'appel suivantes sont prises en charge par le compilateur Visua
 |[__clrcall](../cpp/clrcall.md)|n/a|Charger les paramètres sur la pile d'expression CLR dans l'ordre (de gauche à droite).|
 |[__stdcall](../cpp/stdcall.md)|Appelé|Effectue un push des paramètres sur la pile, dans l'ordre inverse (de droite à gauche)|
 |[__fastcall](../cpp/fastcall.md)|Appelé|Stocké dans les registres, puis fait l'objet d'un push sur la pile|
-|[__thiscall](../cpp/thiscall.md)|Appelé|Push effectué sur la pile ; **ce** pointeur est stocké dans ecx|
+|[__thiscall](../cpp/thiscall.md)|Appelé|Push effectué sur la pile ; **`this`** pointeur stocké dans ecx|
 |[__vectorcall](../cpp/vectorcall.md)|Appelé|Stocké dans les registres, puis fait l'objet d'un push sur la pile dans l'ordre inverse (de droite à gauche)|
 
 Pour obtenir des informations connexes, consultez [conventions d’appel obsolètes](../cpp/obsolete-calling-conventions.md).
 
-**Fin de la section spécifique de Microsoft**
+**FIN spécifique à Microsoft**
 
 ## <a name="see-also"></a>Voir aussi
 

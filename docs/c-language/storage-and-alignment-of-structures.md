@@ -7,12 +7,12 @@ helpviewer_keywords:
 - storing structures
 - packing structures
 ms.assetid: 60ff292f-2595-4f37-ae00-4c4b4f047196
-ms.openlocfilehash: 8e15f39b5a7a78da117c3b8a551ebfba5e07c194
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 81f5b640585ec3b55e4e3d65b37ea0929a757473
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62336166"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87229478"
 ---
 # <a name="storage-and-alignment-of-structures"></a>Stockage et alignement de structures
 
@@ -22,7 +22,7 @@ Les membres d'une structure sont stockés de manière séquentielle dans l'ordre
 
 Chaque objet de données possède un *alignment-requirement*. Pour les structures, l’exigence est le membre le plus grand. Un *décalage* est alloué à chaque objet afin que
 
-*offset* `%` *alignement de décalage-exigence* `==` 0
+*décalage* `%` *alignement-exigence* `==` entre
 
 Les champs de bits adjacents sont empaquetés dans la même unité d’allocation de 1, 2 ou 4 octets si les types intégraux sont de la même taille et si le champ de bits suivant s’insère dans l’unité d’allocation actuelle sans dépasser la limite imposée par les exigences d’alignement courantes des champs de bits.
 
@@ -36,7 +36,7 @@ où *n* est la taille d’assemblage exprimée avec l’option /Zp[*n*] et *item
 
 Pour utiliser le pragma `pack` pour spécifier une compression autre que celle spécifiée sur la ligne de commande pour une structure particulière, indiquez le pragma `pack`, où la taille de compression est 1, 2, 4, 8 ou 16, avant la structure. Pour rétablir la compression donnée sur la ligne de commande, spécifiez le pragma `pack` sans argument.
 
-Pour le compilateur Microsoft C, la taille par défaut des champs de bits est **long**. Les membres de la structure sont alignés sur la taille du type ou sur la taille de /Zp[*n*], selon celle qui est la plus petite. La taille par défaut est 4.
+Par défaut, les champs de bits sont dimensionnés **`long`** pour le compilateur Microsoft C. Les membres de la structure sont alignés sur la taille du type ou sur la taille de /Zp[*n*], selon celle qui est la plus petite. La taille par défaut est 4.
 
 **FIN spécifique à Microsoft**
 

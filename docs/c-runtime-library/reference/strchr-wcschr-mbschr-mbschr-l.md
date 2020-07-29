@@ -47,12 +47,12 @@ helpviewer_keywords:
 - tcschr function
 - mbschr_l function
 ms.assetid: 2639905d-e983-43b7-b885-abef32cfac43
-ms.openlocfilehash: 69d82ae1a89e58b8cefcd2c1e24f49e24379ba11
-ms.sourcegitcommit: 5a069c7360f75b7c1cf9d4550446ec2fa2eb2293
+ms.openlocfilehash: a7cea0b2c640b7cb87d7097cea7bdf94a73abfb8
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/07/2020
-ms.locfileid: "82920400"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87229309"
 ---
 # <a name="strchr-wcschr-_mbschr-_mbschr_l"></a>strchr, wcschr, _mbschr, _mbschr_l
 
@@ -119,7 +119,7 @@ const unsigned char *_mbschr_l(
 
 ### <a name="parameters"></a>Paramètres
 
-*Str*<br/>
+*str*<br/>
 Chaîne source se terminant par null.
 
 *secteur*<br/>
@@ -132,15 +132,15 @@ Paramètres régionaux à utiliser.
 
 Chacune de ces fonctions retourne un pointeur vers la première occurrence de *c* dans *Str*, ou null si *c* est introuvable.
 
-## <a name="remarks"></a>Notes 
+## <a name="remarks"></a>Notes
 
 La `strchr` fonction recherche la première occurrence de *c* dans *Str*ou retourne la valeur null si *c* est introuvable. Le caractère Null de fin est inclus dans la recherche.
 
-`wcschr`, `_mbschr` et `_mbschr_l` sont des versions à caractères larges et à caractères multioctets de `strchr`. Les arguments et la valeur de retour de `wcschr` sont des chaînes de caractères larges ; ceux de `_mbschr` sont des chaînes de caractères multioctets. `_mbschr` reconnaît les séquences de caractères multioctets. De même, si la chaîne est un pointeur Null, `_mbschr` appelle le gestionnaire de paramètre non valide, comme décrit dans [Validation de paramètre](../../c-runtime-library/parameter-validation.md). Si l’exécution est autorisée à se `_mbschr` poursuivre, retourne null `errno` et définit sur EINVAL. `strchr` et `wcschr` ne vérifient pas leurs paramètres. Ces trois fonctions se comportent sinon de façon identique.
+`wcschr`, `_mbschr` et `_mbschr_l` sont des versions à caractères larges et à caractères multioctets de `strchr`. Les arguments et la valeur de retour de `wcschr` sont des chaînes de caractères larges ; ceux de `_mbschr` sont des chaînes de caractères multioctets. `_mbschr` reconnaît les séquences de caractères multioctets. De même, si la chaîne est un pointeur Null, `_mbschr` appelle le gestionnaire de paramètre non valide, comme décrit dans [Validation de paramètre](../../c-runtime-library/parameter-validation.md). Si l’exécution est autorisée à se poursuivre, `_mbschr` retourne null et définit `errno` sur EINVAL. `strchr` et `wcschr` ne vérifient pas leurs paramètres. Ces trois fonctions se comportent sinon de façon identique.
 
 La valeur de sortie est affectée par la valeur du paramètre de catégorie LC_CTYPE des paramètres régionaux. Pour plus d’informations, consultez [setlocale](setlocale-wsetlocale.md). Les versions de ces fonctions sans le suffixe **_l** utilisent les paramètres régionaux pour ce comportement dépendant des paramètres régionaux ; les versions avec le suffixe **_l** sont identiques, sauf qu’elles utilisent à la place les paramètres régionaux transmis. Pour plus d’informations, consultez [Locale](../../c-runtime-library/locale.md).
 
-En C, ces fonctions acceptent un pointeur **const** pour le premier argument. En C++, deux surcharges sont disponibles. La surcharge qui prend un pointeur vers **const** retourne un pointeur vers **const**; la version qui accepte un pointeur vers non**const** retourne un pointeur vers non**const**. La macro _CRT_CONST_CORRECT_OVERLOADS est définie si les versions **const** et non**const** de ces fonctions sont disponibles. Si vous avez besoin du comportement non**const** pour les deux surcharges C++, définissez le symbole _CONST_RETURN.
+En C, ces fonctions acceptent un **`const`** pointeur pour le premier argument. En C++, deux surcharges sont disponibles. La surcharge qui prend un pointeur vers **`const`** retourne un pointeur vers **`const`** ; la version qui accepte un pointeur vers non- **`const`** retourne un pointeur vers non- **`const`** . La macro _CRT_CONST_CORRECT_OVERLOADS est définie si les **`const`** versions et non- **`const`** de ces fonctions sont disponibles. Si vous avez besoin du non- **`const`** comportement pour les deux surcharges C++, définissez le symbole _CONST_RETURN.
 
 Par défaut, l’état global de cette fonction est limité à l’application. Pour modifier cette valeur, consultez [état global dans le CRT](../global-state.md).
 

@@ -1,36 +1,38 @@
 ---
-title: 'Opérateur de bits OU inclusif : |'
-ms.date: 06/14/2018
+title: 'Opérateur de bits OR inclusif : &#124;'
+description: Syntaxe de l’opérateur OR inclusif de langage C++ standard et utilisation.
+ms.date: 07/23/2020
 f1_keywords:
 - '|'
+- bitor_cpp
 helpviewer_keywords:
 - OR operator [C++], bitwise inclusive
 - bitwise operators [C++], OR operator
 - inclusive OR operator
 - '| operator'
 ms.assetid: 4c8a6a68-d828-447d-875a-aedb4ce3aa9a
-ms.openlocfilehash: 38def2b1ac585c751699227d2a065b45145d290d
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 76f80c2101b3acfac71dc4d8ad1be4a999f69aa5
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80190753"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87229088"
 ---
-# <a name="bitwise-inclusive-or-operator-"></a>Opérateur de bits OU inclusif : |
+# <a name="bitwise-inclusive-or-operator-124"></a>Opérateur de bits OR inclusif : &#124;
 
 ## <a name="syntax"></a>Syntaxe
 
-> *expression1* **|** *Expression2*
+> *expression1* **`|`** *Expression2*
 
 ## <a name="remarks"></a>Notes
 
-L’opérateur de bits OR inclusif ( **&#124;** ) compare chaque bit de son premier opérande au bit correspondant de son second opérande. Si l'un des deux bits a pour valeur 1, le bit obtenu correspondant a pour valeur 1. Sinon, il a pour valeur 0.
+L’opérateur de bits OR inclusif ( **`|`** ) compare chaque bit de son premier opérande au bit correspondant de son second opérande. Si l'un des deux bits a pour valeur 1, le bit obtenu correspondant a pour valeur 1. Sinon, il a pour valeur 0.
 
-Les deux opérandes de l’opérateur OR inclusif de bits doivent être de types intégraux. Les conversions arithmétiques habituelles traitées dans les [conversions standard](standard-conversions.md) sont appliquées aux opérandes.
+Les deux opérandes de l’opérateur doivent avoir des types intégraux. Les conversions arithmétiques habituelles traitées dans les [conversions standard](standard-conversions.md) sont appliquées aux opérandes.
 
-## <a name="operator-keyword-for-124"></a>Mot clé Operator pour&#124;
+## <a name="operator-keyword-for-124"></a>Mot clé Operator pour &#124;
 
-L’opérateur **BITOR** est l’équivalent textuel de **&#124;** . Il existe deux façons d’accéder à l’opérateur **BITOR** dans vos programmes : incluez le fichier d’en-tête \<ISO646. h > ou compilez avec l’option de compilateur [/za](../build/reference/za-ze-disable-language-extensions.md) (désactivation des extensions de langage).
+C++ spécifie **`bitor`** comme autre orthographe pour **`|`** . En C, l’orthographe alternative est fournie sous la forme d’une macro dans l' \<iso646.h> en-tête. En C++, l’orthographe alternative est un mot clé. l’utilisation de \<iso646.h> ou de l’équivalent C++ \<ciso646> est déconseillée. Dans Microsoft C++, l' [`/permissive-`](../build/reference/permissive-standards-conformance.md) [`/Za`](../build/reference/za-ze-disable-language-extensions.md) option du compilateur ou est requise pour activer l’orthographe alternative.
 
 ## <a name="example"></a>Exemple
 
@@ -51,5 +53,5 @@ int main() {
 
 ## <a name="see-also"></a>Voir aussi
 
-[Opérateurs intégrés, priorité et associativité C++](../cpp/cpp-built-in-operators-precedence-and-associativity.md)<br/>
+[Opérateurs, priorité et associativité C++ intégrés](../cpp/cpp-built-in-operators-precedence-and-associativity.md)<br/>
 [Opérateurs de bits C](../c-language/c-bitwise-operators.md)

@@ -8,16 +8,16 @@ helpviewer_keywords:
 - exceptions [C++], bad_cast
 - bad_cast keyword [C++]
 ms.assetid: 31eae1e7-d8d5-40a0-9fef-64a6a4fc9021
-ms.openlocfilehash: 11b42c9e6210c2432563bba43c55517abd4265fe
-ms.sourcegitcommit: 654aecaeb5d3e3fe6bc926bafd6d5ace0d20a80e
+ms.openlocfilehash: 2efe5be5e44751831a56b29cfc629df2d21843f7
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 11/20/2019
-ms.locfileid: "74245955"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87229179"
 ---
 # <a name="bad_cast-exception"></a>bad_cast, exception
 
-L’exception **bad_cast** est levée par l’opérateur **dynamic_cast** à la suite de l’échec d’un cast en un type référence.
+L’exception **bad_cast** est levée par l' **`dynamic_cast`** opérateur en raison de l’échec d’un cast en un type référence.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -34,7 +34,7 @@ L’interface pour **bad_cast** est :
 class bad_cast : public exception
 ```
 
-Le code suivant contient un exemple d’échec de **dynamic_cast** qui lève l’exception **bad_cast** .
+Le code suivant contient un exemple d’échec de **`dynamic_cast`** la levée de l’exception **bad_cast** .
 
 ```cpp
 // expre_bad_cast_Exception.cpp
@@ -72,7 +72,7 @@ Circle circle_instance;
 Circle& ref_circle = circle_instance;
 ```
 
-Ensuite, inversez le sens du cast dans le bloc **try** comme suit :
+Puis inversez le sens du cast dans le **`try`** bloc comme suit :
 
 ```cpp
 Shape& ref_shape = dynamic_cast<Shape&>(ref_circle);
@@ -96,9 +96,9 @@ Shape& ref_shape = dynamic_cast<Shape&>(ref_circle);
 
 |Opérateur|Description|
 |-|-|
-|[operator=](#op_eq)|Opérateur d’assignation qui assigne un objet `bad_cast` à un autre objet.|
+|[opérateur =](#op_eq)|Opérateur d’assignation qui assigne un `bad_cast` objet à un autre.|
 
-## <a name="bad_cast"></a>bad_cast
+## <a name="bad_cast"></a><a name="bad_cast"></a>bad_cast
 
 Constructeur des objets de type `bad_cast`.
 
@@ -107,15 +107,15 @@ bad_cast(const char * _Message = "bad cast");
 bad_cast(const bad_cast &);
 ```
 
-## <a name="op_eq"></a>opérateur =
+## <a name="operator"></a><a name="op_eq"></a>opérateur =
 
-Opérateur d’assignation qui assigne un objet `bad_cast` à un autre objet.
+Opérateur d’assignation qui assigne un `bad_cast` objet à un autre.
 
 ```cpp
 bad_cast& operator=(const bad_cast&) noexcept;
 ```
 
-## <a name="what"></a>données
+## <a name="what"></a><a name="what"></a>données
 
 ```cpp
 const char* what() const noexcept override;
@@ -123,6 +123,6 @@ const char* what() const noexcept override;
 
 ## <a name="see-also"></a>Voir aussi
 
-[opérateur dynamic_cast](../cpp/dynamic-cast-operator.md)\
-[Mots clés](../cpp/keywords-cpp.md)\
-[Meilleures C++ pratiques modernes pour les exceptions et la gestion des erreurs](../cpp/errors-and-exception-handling-modern-cpp.md)
+[Opérateur dynamic_cast](../cpp/dynamic-cast-operator.md)\
+[Mot](../cpp/keywords-cpp.md)\
+[Meilleures pratiques C++ modernes pour les exceptions et la gestion des erreurs](../cpp/errors-and-exception-handling-modern-cpp.md)

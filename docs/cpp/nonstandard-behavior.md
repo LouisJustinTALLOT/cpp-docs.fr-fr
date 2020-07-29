@@ -6,18 +6,18 @@ helpviewer_keywords:
 - Microsoft-specific, compiler behavior
 - nonstandard behavior, compliance and compatibility
 ms.assetid: a57dea27-dc79-4f64-8a83-017e84841773
-ms.openlocfilehash: d3bb4ca843833cfe9e027f694f25c989895487bb
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: f31938c78e443bb53a286f79661d86b7a6e9edbc
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80161033"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87186540"
 ---
 # <a name="nonstandard-behavior"></a>Comportement non standard
 
-Les sections suivantes répertorient certains des emplacements où l’implémentation Microsoft de C++ n’est pas conforme à la C++ norme. Les numéros de section ci-dessous correspondent aux numéros de section de la norme C++11 (ISO/IEC 14882:2011(E)).
+Les sections suivantes répertorient certains des endroits où l’implémentation Microsoft de C++ n’est pas conforme à la norme C++. Les numéros de section ci-dessous correspondent aux numéros de section de la norme C++11 (ISO/IEC 14882:2011(E)).
 
-La liste des limites du compilateur qui diffèrent de celles définies C++ dans la norme est indiquée dans les [limites du compilateur](../cpp/compiler-limits.md).
+La liste des limites du compilateur qui diffèrent de celles définies dans la norme C++ est indiquée dans les [limites du compilateur](../cpp/compiler-limits.md).
 
 ## <a name="covariant-return-types"></a>Types de retour covariant
 
@@ -38,7 +38,7 @@ class B : virtual A
 
 ## <a name="binding-nondependent-names-in-templates"></a>Liaison de noms non dépendants dans des modèles
 
-Le compilateur C++ Microsoft ne prend pas actuellement en charge la liaison de noms non dépendants lors de l’analyse initiale d’un modèle. Ceci n'est pas conforme à la section 14.6.3 de la spécification ISO C++. Cela peut provoquer la déclaration de surcharges après le modèle à afficher (mais avant que le modèle soit instancié).
+Le compilateur Microsoft C++ ne prend actuellement pas en charge la liaison de noms non dépendants lors de l’analyse initiale d’un modèle. Ceci n'est pas conforme à la section 14.6.3 de la spécification ISO C++. Cela peut provoquer la déclaration de surcharges après le modèle à afficher (mais avant que le modèle soit instancié).
 
 ```cpp
 #include <iostream>
@@ -75,7 +75,7 @@ Pour plus d’informations sur les spécifications d’exceptions, consultez [sp
 
 ## <a name="char_traitseof"></a>char_traits::eof()
 
-Les C++ États standard que [char_traits :: EOF](../standard-library/char-traits-struct.md#eof) ne doivent pas correspondre à une valeur de `char_type` valide. Le compilateur C++ Microsoft applique cette contrainte pour le type **char**, mais pas pour le type **wchar_t**. Ceci n’est pas conforme à l’exigence du tableau 62 de la section 12.1.1 de la spécification ISO C++. C'est ce qu'illustre l'exemple ci-dessous.
+La norme C++ indique que [char_traits :: EOF](../standard-library/char-traits-struct.md#eof) ne doit pas correspondre à une `char_type` valeur valide. Le compilateur Microsoft C++ applique cette contrainte pour le type **`char`** , mais pas pour le type **`wchar_t`** . Ceci n’est pas conforme à l’exigence du tableau 62 de la section 12.1.1 de la spécification ISO C++. C'est ce qu'illustre l'exemple ci-dessous.
 
 ```cpp
 #include <iostream>
@@ -94,4 +94,4 @@ int main()
 
 ## <a name="storage-location-of-objects"></a>Emplacement de stockage des objets
 
-La norme C++ (section 1.8, paragraphe 6) exige que les objets C++ complets aient des emplacements de stockage uniques. Toutefois, avec C++Microsoft, il existe des cas où les types sans données membres partagent un emplacement de stockage avec d’autres types pendant la durée de vie de l’objet.
+La norme C++ (section 1.8, paragraphe 6) exige que les objets C++ complets aient des emplacements de stockage uniques. Toutefois, avec Microsoft C++, il existe des cas où les types sans données membres partagent un emplacement de stockage avec d’autres types pendant la durée de vie de l’objet.

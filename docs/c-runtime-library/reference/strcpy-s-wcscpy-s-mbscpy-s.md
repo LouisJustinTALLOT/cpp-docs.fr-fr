@@ -45,12 +45,12 @@ helpviewer_keywords:
 - tcscpy_s function
 - wcscpy_s function
 ms.assetid: 611326f3-7929-4a5d-a465-a4683af3b053
-ms.openlocfilehash: d8cfbc97f6c2a6d865a1436a276641a4d8f93713
-ms.sourcegitcommit: 426e327c9f7c3a3b02300e3f924f9786d62958e9
+ms.openlocfilehash: b2957490dbf045b9a3258a72b6bda0aaf1a38c0f
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 05/29/2020
-ms.locfileid: "84206191"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87229296"
 ---
 # <a name="strcpy_s-wcscpy_s-_mbscpy_s-_mbscpy_s_l"></a>strcpy_s, wcscpy_s, _mbscpy_s, _mbscpy_s_l
 
@@ -116,7 +116,7 @@ errno_t _mbscpy_s_l(
 Emplacement de la mémoire tampon de chaîne de destination.
 
 *dest_size*<br/>
-Taille de la mémoire tampon de la chaîne de destination en unités de **caractères** pour les fonctions étroites et multioctets, et **wchar_t** unités pour les fonctions larges. Cette valeur doit être supérieure à zéro et n’est pas supérieure à **RSIZE_MAX**. Assurez-vous que cette taille tient compte de l’arrêt `NULL` suivant la chaîne.
+Taille de la mémoire tampon de la chaîne de destination en **`char`** unités pour les fonctions étroites et multioctets, et **`wchar_t`** unités pour les fonctions larges. Cette valeur doit être supérieure à zéro et n’est pas supérieure à **RSIZE_MAX**. Assurez-vous que cette taille tient compte de l’arrêt `NULL` suivant la chaîne.
 
 *src*<br/>
 Mémoire tampon de chaîne source se terminant par null.
@@ -124,7 +124,7 @@ Mémoire tampon de chaîne source se terminant par null.
 *locale*<br/>
 Paramètres régionaux à utiliser.
 
-## <a name="return-value"></a>Valeur renvoyée
+## <a name="return-value"></a>Valeur de retour
 
 Zéro en cas de réussite ; erreur dans un autre cas.
 
@@ -136,7 +136,7 @@ Zéro en cas de réussite ; erreur dans un autre cas.
 |n'importe laquelle|n'importe laquelle|**NULL**|**EINVAL**|*dest*[0] a la valeur 0|
 |n'importe laquelle|0 ou trop petit|n'importe laquelle|**ERANGE**|*dest*[0] a la valeur 0|
 
-## <a name="remarks"></a>Remarques
+## <a name="remarks"></a>Notes
 
 La fonction **strcpy_s** copie le contenu de l’adresse de *src*, y compris le caractère null de fin, à l’emplacement spécifié par *dest*. La chaîne de destination doit être suffisamment grande pour contenir la chaîne source et son caractère null de fin. Le comportement de **strcpy_s** n’est pas défini si les chaînes source et de destination se chevauchent.
 

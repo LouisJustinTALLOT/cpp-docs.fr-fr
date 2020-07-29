@@ -7,70 +7,70 @@ f1_keywords:
 - _declspec
 helpviewer_keywords:
 - __declspec keyword [C++]
-ms.openlocfilehash: e0c99ea9379aa6e29096250e8bd36ce3d4f183e8
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 945202beca6c5deb525bd19886b947331f6f3ac3
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80180223"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87228945"
 ---
-# <a name="__declspec"></a>__declspec
+# `__declspec`
 
-**Section spécifique de Microsoft**
+**Spécifique à Microsoft**
 
-La syntaxe d’attribut étendu pour la spécification des informations de classe de stockage utilise le mot clé **__declspec** , qui spécifie qu’une instance d’un type donné doit être stockée avec un attribut de classe de stockage spécifique à Microsoft ci-dessous. Parmi les exemples d’autres modificateurs de classe de stockage figurent les mots clés **static** et **extern** . Toutefois, ces mots clés font partie de la spécification ANSI des langages C et C++ et, en tant que tels, ne sont pas couverts par la syntaxe à attributs étendus. La syntaxe à attributs étendus simplifie et normalise les extensions spécifiques à Microsoft pour les langages C et C++.
+La syntaxe d’attribut étendu pour la spécification des informations de classe de stockage utilise le **`__declspec`** mot clé, qui spécifie qu’une instance d’un type donné doit être stockée avec un attribut de classe de stockage spécifique à Microsoft ci-dessous. Les **`static`** Mots clés et sont des exemples d’autres modificateurs de classe de stockage **`extern`** . Toutefois, ces mots clés font partie de la spécification ANSI des langages C et C++ et, en tant que tels, ne sont pas couverts par la syntaxe à attributs étendus. La syntaxe à attributs étendus simplifie et normalise les extensions spécifiques à Microsoft pour les langages C et C++.
 
 ## <a name="grammar"></a>Grammaire
 
 *decl-specifier*:<br/>
-&nbsp;&nbsp;&nbsp;&nbsp; **__declspec (** *Extended-decl-modifier-SEQ* **)**
+&nbsp;&nbsp;&nbsp;&nbsp;**`__declspec (`**  *Extended-decl-modifier-Seq*  **`)`**
 
 *extended-decl-modifier-seq* :<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*extended-decl-modifier*<sub>opt</sub><br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*Extended-decl-modifier* *Extended-decl-modifier-SEQ*
 
 *extended-decl-modifier* :<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**aligner (** *#* **)**<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**allocate («** *segname* **»)**<br/>
-&nbsp;&nbsp;&nbsp;**Allocator** de &nbsp;<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**AppDomain**<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**code_seg («** *segname* **»)**<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**déconseillé**<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**dllimport**<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**dllexport**<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**jitintrinsic**<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**naked**<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**noalias**<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**noinline**<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**noreturn**<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**nothrow**<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**novtable**<br/>
-&nbsp;&nbsp;&nbsp;**processus** de &nbsp;<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**propriété (** { **obtient =** _get_func_name_ &#124; **, put =** _put_func_name_ } **)**<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**restreindre**<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**safebuffers**<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**selectany**<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**spectre (nomitigation)**<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**thread**<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**UUID («** *ComObjectGUID* **»)**
+&nbsp;&nbsp;&nbsp;&nbsp;**`align(`** *#* **`)`**<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**`allocate("`***segname***`")`**<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**`allocator`**<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**`appdomain`**<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**`code_seg("`***segname***`")`**<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**`deprecated`**<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**`dllimport`**<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**`dllexport`**<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**`jitintrinsic`**<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**`naked`**<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**`noalias`**<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**`noinline`**<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**`noreturn`**<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**`nothrow`**<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**`novtable`**<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**`process`**<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**`property(`**{ **`get=`** _get_func_name_ &#124; **`,put=`** _put_func_name_ }**`)`**<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**`restrict`**<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**`safebuffers`**<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**`selectany`**<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**`spectre(nomitigation)`**<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**`thread`**<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**`uuid("`***ComObjectGUID***`")`**
 
 Un espace blanc sépare la séquence de modificateur de déclaration. Des exemples sont donnés dans des sections ultérieures.
 
-La grammaire des attributs étendus prend en charge les attributs de classe de stockage spécifiques à Microsoft suivants : [align](../cpp/align-cpp.md), [allocation](../cpp/allocate.md), [allocator](../cpp/allocator.md), [AppDomain](../cpp/appdomain.md), [code_seg](../cpp/code-seg-declspec.md), [Deprecated](../cpp/deprecated-cpp.md), [dllexport](../cpp/dllexport-dllimport.md), [DllImport](../cpp/dllexport-dllimport.md), [jitintrinsic](../cpp/jitintrinsic.md), [Naked](../cpp/naked-cpp.md), [noalias](../cpp/noalias.md), [noinline](../cpp/noinline.md), [noreturn](../cpp/noreturn.md), [nothrow](../cpp/nothrow-cpp.md), [novtable](../cpp/novtable.md), [Process](../cpp/process.md), [restrict](../cpp/restrict.md), [safebuffers](../cpp/safebuffers.md), [selectany](../cpp/selectany.md), [ spectre](../cpp/spectre.md)et [thread](../cpp/thread.md). Il prend également en charge ces attributs d’objet COM : [Property](../cpp/property-cpp.md) et [UUID](../cpp/uuid-cpp.md).
+La grammaire des attributs étendus prend en charge les attributs de classe de stockage spécifiques à Microsoft suivants :,,,,,,,,,, [`align`](../cpp/align-cpp.md) [`allocate`](../cpp/allocate.md) [`allocator`](../cpp/allocator.md) [`appdomain`](../cpp/appdomain.md) [`code_seg`](../cpp/code-seg-declspec.md) [`deprecated`](../cpp/deprecated-cpp.md) [`dllexport`](../cpp/dllexport-dllimport.md) [`dllimport`](../cpp/dllexport-dllimport.md) [`jitintrinsic`](../cpp/jitintrinsic.md) [`naked`](../cpp/naked-cpp.md) [`noalias`](../cpp/noalias.md) , [`noinline`](../cpp/noinline.md) , [`noreturn`](../cpp/noreturn.md) , [`nothrow`](../cpp/nothrow-cpp.md) , [`novtable`](../cpp/novtable.md) , [`process`](../cpp/process.md) , [`restrict`](../cpp/restrict.md) , [`safebuffers`](../cpp/safebuffers.md) ,, [`selectany`](../cpp/selectany.md) [`spectre`](../cpp/spectre.md) et [`thread`](../cpp/thread.md) . Il prend également en charge ces attributs d’objet COM : [`property`](../cpp/property-cpp.md) et [`uuid`](../cpp/uuid-cpp.md) .
 
-Les attributs de classe de stockage **code_seg**, **dllexport**, **DllImport**, **Naked**, **noalias**, **nothrow**, **Property**, **restrict**, **selectany**, **thread**et **UUID** sont des propriétés uniquement de la déclaration de l’objet ou de la fonction à laquelle ils sont appliqués. L’attribut **thread** affecte uniquement les données et les objets. Les attributs **Naked** et **spectre** affectent uniquement les fonctions. Les attributs **DllImport** et **dllexport** affectent les fonctions, les données et les objets. Les attributs **Property**, **selectany**et **UUID** affectent les objets com.
+Les attributs de classe de stockage,,,,,,,,, **`code_seg`** **`dllexport`** **`dllimport`** **`naked`** **`noalias`** **`nothrow`** **`property`** **`restrict`** **`selectany`** **`thread`** et **`uuid`** sont des propriétés uniquement de la déclaration de l’objet ou de la fonction à laquelle ils sont appliqués. L' **`thread`** attribut affecte uniquement les données et les objets. Les **`naked`** **`spectre`** attributs et affectent uniquement les fonctions. Les **`dllimport`** **`dllexport`** attributs et affectent les fonctions, les données et les objets. Les **`property`** **`selectany`** attributs, et **uu’id** affectent les objets com.
 
-Pour la compatibilité avec les versions précédentes, **_declspec** est un synonyme de **__declspec** sauf si l’option de compilateur [/za \(désactiver les extensions de langage)](../build/reference/za-ze-disable-language-extensions.md) est spécifiée.
+Pour la compatibilité avec les versions précédentes, **`_declspec`** est un synonyme de, **`__declspec`** sauf si l’option de compilateur [/za \( Désactiver les extensions de langage)](../build/reference/za-ze-disable-language-extensions.md) est spécifiée.
 
-Les mots clés **__declspec** doivent être placés au début d’une déclaration simple. Le compilateur ignore, sans avertissement, les mots clés **__declspec** placés après * ou & et devant l’identificateur de variable dans une déclaration.
+Les **`__declspec`** Mots clés doivent être placés au début d’une déclaration simple. Le compilateur ignore, sans avertissement, les **`__declspec`** Mots clés placés après * ou & et devant l’identificateur de variable dans une déclaration.
 
-Un attribut **__declspec** spécifié au début d’une déclaration de type défini par l’utilisateur s’applique à la variable de ce type. Par exemple :
+Un **`__declspec`** attribut spécifié au début d’une déclaration de type défini par l’utilisateur s’applique à la variable de ce type. Par exemple :
 
 ```cpp
 __declspec(dllimport) class X {} varX;
 ```
 
-Dans ce cas, l'attribut s'applique à `varX`. Un **__declspec** attribut placé après le mot clé de **classe** ou de **struct** s’applique au type défini par l’utilisateur. Par exemple :
+Dans ce cas, l'attribut s'applique à `varX`. Un **`__declspec`** attribut placé après le **`class`** **`struct`** mot clé ou s’applique au type défini par l’utilisateur. Par exemple :
 
 ```cpp
 class __declspec(dllimport) X {};
@@ -78,11 +78,11 @@ class __declspec(dllimport) X {};
 
 Dans ce cas, l'attribut s'applique à `X`.
 
-La règle générale pour l’utilisation de l’attribut **__declspec** pour les déclarations simples est la suivante :
+Les instructions générales pour l’utilisation **`__declspec`** de l’attribut pour les déclarations simples sont les suivantes :
 
 *decl-specifier-SEQ* *init-declarator-List*;
 
-*Decl-specifier-SEQ* doit contenir, entre autres choses, un type de base (par exemple **, int**, **float**, un **typedef**ou un nom de classe), une classe de stockage (par exemple, **static**, **extern**) ou l’extension **__declspec** . La *liste init-declarator-List* doit contenir, entre autres choses, le pointeur partie des déclarations. Par exemple :
+*Decl-specifier-SEQ* doit contenir, entre autres choses, un type de base (par exemple,, **`int`** **`float`** un **`typedef`** ou un nom de classe), une classe de stockage (par exemple, **`static`** **`extern`** ) ou l' **`__declspec`** extension. La *liste init-declarator-List* doit contenir, entre autres choses, le pointeur partie des déclarations. Par exemple :
 
 ```cpp
 __declspec(selectany) int * pi1 = 0;   //Recommended, selectany & int both part of decl-specifier
@@ -97,7 +97,7 @@ Le code suivant déclare une variable locale de thread entière et lui affecte u
 __declspec( thread ) int tls_i = 1;
 ```
 
-**Fin de la section spécifique de Microsoft**
+**FIN spécifique à Microsoft**
 
 ## <a name="see-also"></a>Voir aussi
 
