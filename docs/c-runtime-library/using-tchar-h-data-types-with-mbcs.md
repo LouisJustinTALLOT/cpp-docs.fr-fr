@@ -6,22 +6,22 @@ helpviewer_keywords:
 - MBCS data type
 - _MBCS data type
 ms.assetid: 48f471e7-9d2b-4a39-b841-16a0e15c0a18
-ms.openlocfilehash: b86cbc6d99cbc6969536934c1583ba5207a53629
-ms.sourcegitcommit: 9e85c2e029d06b4c1c69837437468718b4d54908
-ms.translationtype: HT
+ms.openlocfilehash: d1aab0c21a348e4b1a6e85a7adb7f7f8ea1587b2
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/18/2019
-ms.locfileid: "57814434"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87188633"
 ---
-# <a name="using-tcharh-data-types-with-mbcs"></a>Utilisation de types de données TCHAR.H avec _MBCS
+# <a name="using-tcharh-data-types-with-_mbcs"></a>Utilisation de types de données TCHAR.H avec _MBCS
 
-**Section spécifique à Microsoft**
+**Spécifique à Microsoft**
 
 Comme indiqué dans la table de mappages de routines de texte générique (consultez [Mappages de texte générique](../c-runtime-library/generic-text-mappings.md)), lorsque la constante manifeste **_MBCS** est définie, une routine de texte générique donnée correspond à un des types suivants de routines :
 
 - Une routine SBCS qui gère correctement les chaînes, caractères et caractères multioctets. Dans ce cas, les arguments de chaîne doivent être de type **char&#42;**. Par exemple, **_tprintf** est mappé à **printf**. Les arguments de chaîne pour **printf** sont de type **char&#42;**. Si vous utilisez le type de données de texte générique **_TCHAR** pour vos types de chaîne, les types de paramètres formels et réels de **printf** correspondent, car **_TCHAR&#42;** est mappé à **char&#42;**.
 
-- Une routine spécifique à MBCS. Dans ce cas, les arguments de chaîne doivent être de type __unsigned char&#42;__. Par exemple, **_tcsrev** est mappé à **_mbsrev**, qui attend et retourne une chaîne de type __unsigned char&#42;__. Là encore, si vous utilisez le type de données de texte générique **_TCHAR** pour vos types de chaîne, il y a un conflit de type potentiel, car **_TCHAR** correspond au type **char**.
+- Une routine spécifique à MBCS. Dans ce cas, les arguments de chaîne doivent être de type __unsigned char&#42;__. Par exemple, **_tcsrev** est mappé à **_mbsrev**, qui attend et retourne une chaîne de type __unsigned char&#42;__. Là encore, si vous utilisez le **_TCHAR** type de données de texte générique pour vos types de chaîne, il y a un conflit de type potentiel, car **_TCHAR** est mappé au type **`char`** .
 
 Voici les trois solutions pour empêcher ce conflit de types (et les avertissements du compilateur C ou erreurs du compilateur C++ qui en découleraient) :
 
@@ -60,9 +60,9 @@ Voici les trois solutions pour empêcher ce conflit de types (et les avertisseme
    #define _tcschr _mbschr
    ```
 
-Lorsque vous adoptez cette approche, vous devez veiller à vous assurer que les types de données appropriés sont utilisés pour les arguments de chaîne et les valeurs de retour de chaîne. Vous pouvez utiliser la conversion de type pour assurer la bonne correspondance des types, ou vous pouvez utiliser le type de données de texte générique **_TXCHAR**. **_TXCHAR** correspond au type **char** dans le code SBCS, mais il correspond au type **unsigned char** dans le code MBCS. Pour plus d’informations sur les macros de texte générique, consultez [Mappages de texte générique](../c-runtime-library/generic-text-mappings.md).
+Lorsque vous adoptez cette approche, vous devez veiller à vous assurer que les types de données appropriés sont utilisés pour les arguments de chaîne et les valeurs de retour de chaîne. Vous pouvez utiliser la conversion de type pour assurer la bonne correspondance des types, ou vous pouvez utiliser le type de données de texte générique **_TXCHAR**. **_TXCHAR** est mappée au type **`char`** dans le code SBCS mais est mappée au type **`unsigned char`** dans le code MBCS. Pour plus d’informations sur les macros de texte générique, consultez [Mappages de texte générique](../c-runtime-library/generic-text-mappings.md).
 
-**FIN de la section spécifique à Microsoft**
+**FIN spécifique à Microsoft**
 
 ## <a name="see-also"></a>Voir aussi
 
