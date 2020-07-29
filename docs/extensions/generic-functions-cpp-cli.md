@@ -9,12 +9,12 @@ helpviewer_keywords:
 - methods [C++], generic
 - generic functions
 ms.assetid: 8e409364-58f9-4360-b486-e7d555e0c218
-ms.openlocfilehash: a4a1702c8b9902f5265a8a5f92316d7c82751609
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
-ms.translationtype: HT
+ms.openlocfilehash: 3d648a23176786985a7ca1e22165c7c5a695e601
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "65516374"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87216009"
 ---
 # <a name="generic-functions-ccli"></a>Fonctions génériques (C++/CLI)
 
@@ -22,13 +22,13 @@ Une fonction générique est une fonction déclarée avec des paramètres de typ
 
 ## <a name="all-platforms"></a>Toutes les plateformes
 
-### <a name="remarks"></a>Remarques
+### <a name="remarks"></a>Notes
 
 Cette fonctionnalité ne s’applique pas à toutes les plateformes.
 
 ## <a name="windows-runtime"></a>Windows Runtime
 
-### <a name="remarks"></a>Remarques
+### <a name="remarks"></a>Notes
 
 Cette fonctionnalité n’est pas prise en charge dans Windows Runtime.
 
@@ -53,16 +53,16 @@ return-type identifier<type-parameter identifier(s)>
 
 ### <a name="parameters"></a>Paramètres
 
-*Attributs*<br/>
+*attributes*<br/>
 (Facultatif) Informations déclaratives supplémentaires. Pour plus d’informations sur les attributs et les classes d’attributs, consultez Attributs.
 
-*modifiers*<br/>
-(Facultatif) Un modificateur de la fonction, tel que static.  **virtual** n’est pas autorisé dans la mesure où les méthodes virtuelles peuvent ne pas être génériques.
+*modificateurs*<br/>
+(Facultatif) Un modificateur de la fonction, tel que static.  **`virtual`** n’est pas autorisé, car les méthodes virtuelles ne sont peut-être pas génériques.
 
-*return-type*<br/>
+*type de retour*<br/>
 Type retourné par la méthode. Si le type de retour spécifié est vide, aucune valeur de retour n’est requise.
 
-*identifier*<br/>
+*identificateur*<br/>
 Nom de la fonction.
 
 *type-parameter identifier(s)*<br/>
@@ -74,10 +74,10 @@ Liste d’identificateurs séparés par des virgules.
 *type-parameter-constraints-clauses*<br/>
 Spécifie les restrictions sur les types qui peuvent être utilisés comme arguments de type, et prend la forme spécifiée dans [Contraintes sur les paramètres de type générique (C++/CLI)](constraints-on-generic-type-parameters-cpp-cli.md).
 
-*function-body*<br/>
+*corps de la fonction*<br/>
 Le corps de la méthode, qui peut se référer aux identificateurs de paramètre de type.
 
-### <a name="remarks"></a>Remarques
+### <a name="remarks"></a>Notes
 
 Les fonctions génériques sont des fonctions déclarées avec un paramètre de type générique. Il peut s’agir de méthodes dans une classe ou un struct, ou de fonctions autonomes. Une déclaration générique unique déclare implicitement une famille de fonctions qui diffèrent uniquement par la substitution d’un autre type réel au paramètre de type générique.
 
@@ -183,5 +183,5 @@ My function returned a string: Hello generic functions!
 
 ## <a name="see-also"></a>Voir aussi
 
-[Extensions de composants pour .NET et UWP](component-extensions-for-runtime-platforms.md)<br/>
+[Extensions de composant pour .NET et UWP](component-extensions-for-runtime-platforms.md)<br/>
 [Génériques](generics-cpp-component-extensions.md)

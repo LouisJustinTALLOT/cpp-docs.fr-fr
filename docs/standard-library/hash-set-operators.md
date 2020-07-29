@@ -5,21 +5,21 @@ f1_keywords:
 - hash_set/std::operator!=
 - hash_set/std::operator==
 ms.assetid: 403d8e4e-0b3f-43fb-bc5a-8100c4f331c5
-ms.openlocfilehash: 5830c9e459c0d778e85c5ab5900d39c3190df178
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 1769519d3bc92f329c347f083e64ba1f35a719db
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81368572"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87212304"
 ---
 # <a name="lthash_setgt-operators"></a>&lt;hash_set&gt;, opérateurs
 
 ||||
 |-|-|-|
-|[opérateur!](#op_neq)|[operator!= (hash_multiset)](#op_neq_hash_multiset)|[opérateur](#op_eq_eq)|
-|[opérateurMD (hash_multiset)](#op_eq_eq_hash_multiset)|
+|[opérateur ! =](#op_neq)|[operator!= (hash_multiset)](#op_neq_hash_multiset)|[opérateur = =](#op_eq_eq)|
+|[opérateur = = (hash_multiset)](#op_eq_eq_hash_multiset)|
 
-## <a name="operator"></a><a name="op_neq"></a>opérateur!
+## <a name="operator"></a><a name="op_neq"></a>opérateur ! =
 
 > [!NOTE]
 > Cette API méthode est obsolète. L’alternative est [unordered_set, classe](../standard-library/unordered-set-class.md).
@@ -32,7 +32,7 @@ bool operator!=(const hash_set <Key, Traits, Allocator>& left, const hash_set <K
 
 ### <a name="parameters"></a>Paramètres
 
-*Gauche*\
+*gauche*\
 Objet de type `hash_set`.
 
 *Oui*\
@@ -40,13 +40,13 @@ Objet de type `hash_set`.
 
 ### <a name="return-value"></a>Valeur de retour
 
-**true** si les hash_sets ne sont pas égaux ; **false** si les hash_sets sont égaux.
+**`true`** Si les hash_sets ne sont pas égales ; **`false`** si les hash_sets sont égales.
 
 ### <a name="remarks"></a>Notes
 
 La comparaison entre les objets hash_set est basée sur une comparaison par paire de leurs éléments. Deux hash_sets sont égaux s’ils ont le même nombre d’éléments et si leurs éléments respectifs ont les mêmes valeurs. Sinon, elles sont inégales.
 
-Les membres de la [<hash_map>](../standard-library/hash-map.md) et<hash_set>fichiers d’en-tête sont dans le [stdext Namespace](../standard-library/stdext-namespace.md). [<hash_set>](../standard-library/hash-set.md)
+Les membres des fichiers d’en-tête [<hash_map>](../standard-library/hash-map.md) et [<hash_set](../standard-library/hash-set.md)>se trouvent dans l' [espace de noms stdext](../standard-library/stdext-namespace.md).
 
 ### <a name="example"></a>Exemple
 
@@ -87,7 +87,7 @@ The hash_sets hs1 and hs2 are not equal.
 The hash_sets hs1 and hs3 are equal.
 ```
 
-## <a name="operator"></a><a name="op_eq_eq"></a>opérateur
+## <a name="operator"></a><a name="op_eq_eq"></a>opérateur = =
 
 > [!NOTE]
 > Cette API méthode est obsolète. L’alternative est [unordered_set, classe](../standard-library/unordered-set-class.md).
@@ -100,7 +100,7 @@ bool operator!==(const hash_set <Key, Traits, Allocator>& left, const hash_set <
 
 ### <a name="parameters"></a>Paramètres
 
-*Gauche*\
+*gauche*\
 Objet de type `hash_set`.
 
 *Oui*\
@@ -108,7 +108,7 @@ Objet de type `hash_set`.
 
 ### <a name="return-value"></a>Valeur de retour
 
-**true** si le hash_set situé à gauche de l’opérateur est égal au hash_set situé à droite de l’opérateur. Sinon, **false**.
+**`true`** Si le hash_set situé à gauche de l’opérateur est égal au hash_set situé à droite de l’opérateur ; Sinon, **`false`** .
 
 ### <a name="remarks"></a>Notes
 
@@ -153,7 +153,7 @@ The hash_sets s1 and s2 are not equal.
 The hash_sets s1 and s3 are equal.
 ```
 
-## <a name="operator-hash_multiset"></a><a name="op_neq_hash_multiset"></a>opérateur! (hash_multiset)
+## <a name="operator-hash_multiset"></a><a name="op_neq_hash_multiset"></a>opérateur ! = (hash_multiset)
 
 > [!NOTE]
 > Cette API méthode est obsolète. L’alternative est [unordered_set, classe](../standard-library/unordered-set-class.md).
@@ -166,7 +166,7 @@ bool operator!=(const hash_multiset <Key, Traits, Allocator>& left, const hash_m
 
 ### <a name="parameters"></a>Paramètres
 
-*Gauche*\
+*gauche*\
 Objet de type `hash_multiset`.
 
 *Oui*\
@@ -174,7 +174,7 @@ Objet de type `hash_multiset`.
 
 ### <a name="return-value"></a>Valeur de retour
 
-**true** si les hash_multisets ne sont pas égaux ; **false** si les hash_multisets sont égaux.
+**`true`** Si les hash_multisets ne sont pas égales ; **`false`** si les hash_multisets sont égales.
 
 ### <a name="remarks"></a>Notes
 
@@ -219,7 +219,7 @@ The hash_multisets hs1 and hs2 are not equal.
 The hash_multisets hs1 and hs3 are equal.
 ```
 
-## <a name="operator-hash_multiset"></a><a name="op_eq_eq_hash_multiset"></a>opérateurMD (hash_multiset)
+## <a name="operator-hash_multiset"></a><a name="op_eq_eq_hash_multiset"></a>opérateur = = (hash_multiset)
 
 > [!NOTE]
 > Cette API méthode est obsolète. L’alternative est [unordered_set, classe](../standard-library/unordered-set-class.md).
@@ -232,7 +232,7 @@ bool operator!==(const hash_multiset <Key, Traits, Allocator>& left, const hash_
 
 ### <a name="parameters"></a>Paramètres
 
-*Gauche*\
+*gauche*\
 Objet de type `hash_multiset`.
 
 *Oui*\
@@ -240,7 +240,7 @@ Objet de type `hash_multiset`.
 
 ### <a name="return-value"></a>Valeur de retour
 
-**true** si le hash_multiset situé à gauche de l’opérateur est égal au hash_multiset situé à droite de l’opérateur. Sinon, **false**.
+**`true`** Si le hash_multiset situé à gauche de l’opérateur est égal au hash_multiset situé à droite de l’opérateur ; Sinon, **`false`** .
 
 ### <a name="remarks"></a>Notes
 

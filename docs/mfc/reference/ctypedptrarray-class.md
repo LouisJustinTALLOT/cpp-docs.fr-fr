@@ -22,12 +22,12 @@ helpviewer_keywords:
 - CTypedPtrArray [MFC], SetAt
 - CTypedPtrArray [MFC], SetAtGrow
 ms.assetid: e3ecdf1a-a889-4156-92dd-ddbd36ccd919
-ms.openlocfilehash: 20cf147e955b6b19919f35750b0f46a8b5a67ad0
-ms.sourcegitcommit: 7a6116e48c3c11b97371b8ae4ecc23adce1f092d
+ms.openlocfilehash: db24e3992e5db70895ccc2908dba108de843bcdc
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/22/2020
-ms.locfileid: "81752061"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87215944"
 ---
 # <a name="ctypedptrarray-class"></a>CTypedPtrArray, classe
 
@@ -43,10 +43,10 @@ class CTypedPtrArray : public BASE_CLASS
 #### <a name="parameters"></a>Paramètres
 
 *BASE_CLASS*<br/>
-Classe de base de la classe de tableau de pointeur dactylographie; doit être une `CObArray` classe `CPtrArray`de tableau ( ou ).
+Classe de base de la classe de tableau de pointeurs typés ; doit être une classe de tableau ( `CObArray` ou `CPtrArray` ).
 
 *TYPE*<br/>
-Type des éléments stockés dans le tableau de base.
+Type des éléments stockés dans le tableau de la classe de base.
 
 ## <a name="members"></a>Membres
 
@@ -54,30 +54,30 @@ Type des éléments stockés dans le tableau de base.
 
 |Nom|Description|
 |----------|-----------------|
-|[CTypedPtrArray::Ajouter](#add)|Ajoute un nouvel élément à la fin d’un tableau. Développe le tableau si nécessaire|
-|[CTypedPtrArray::Append](#append)|Ajoute le contenu d’un tableau à la fin d’un autre. Développe le tableau si nécessaire|
-|[CTypedPtrArray::Copie](#copy)|Copie un autre tableau dans le tableau ; étend le tableau si nécessaire.|
-|[CTypedPtrArray::ElementAt](#elementat)|Retourne une référence temporaire au pointeur d'élément dans le tableau.|
-|[CTypedPtrArray::GetAt](#getat)|Retourne la valeur à un index donné.|
-|[CTypedPtrArray::InsertAt](#insertat)|Insère un élément (ou tous les éléments d'un autre tableau) à un index spécifique.|
-|[CTypedPtrArray::SetAt](#setat)|Définit la valeur d'un index donné. Le tableau n'est pas autorisé à s'étendre.|
-|[CTypedPtrArray::SetAtGrow](#setatgrow)|Définit la valeur d'un index donné. Le tableau est étendu si nécessaire.|
+|[CTypedPtrArray :: Add](#add)|Ajoute un nouvel élément à la fin d’un tableau. Augmente le tableau si nécessaire|
+|[CTypedPtrArray :: Append](#append)|Ajoute le contenu d’un tableau à la fin d’un autre. Augmente le tableau si nécessaire|
+|[CTypedPtrArray :: Copy](#copy)|Copie un autre tableau dans le tableau ; étend le tableau si nécessaire.|
+|[CTypedPtrArray :: ElementAt](#elementat)|Retourne une référence temporaire au pointeur d'élément dans le tableau.|
+|[CTypedPtrArray :: GetAt](#getat)|Retourne la valeur à un index donné.|
+|[CTypedPtrArray :: InsertAt](#insertat)|Insère un élément (ou tous les éléments d'un autre tableau) à un index spécifique.|
+|[CTypedPtrArray :: SetAt](#setat)|Définit la valeur d'un index donné. Le tableau n'est pas autorisé à s'étendre.|
+|[CTypedPtrArray :: SetAtGrow](#setatgrow)|Définit la valeur d'un index donné. Le tableau est étendu si nécessaire.|
 
 ### <a name="public-operators"></a>Op&#233;rateurs publics
 
 |Nom|Description|
 |----------|-----------------|
-|[CTypedPtrArray::opérateur \[\]](#operator_at)|Définit ou obtient l'élément au niveau de l'index spécifié.|
+|[CTypedPtrArray ::, opérateur \[\]](#operator_at)|Définit ou obtient l'élément au niveau de l'index spécifié.|
 
 ## <a name="remarks"></a>Notes
 
-Lorsque vous `CTypedPtrArray` utilisez `CPtrArray` `CObArray`plutôt que ou, l’installation de vérification de type CMD aide à éliminer les erreurs causées par des types de pointeurs dépareillés.
+Lorsque vous utilisez `CTypedPtrArray` plutôt que `CPtrArray` ou `CObArray` , la fonctionnalité de contrôle de type C++ permet d’éliminer les erreurs provoquées par des types pointeur incompatibles.
 
-En outre, `CTypedPtrArray` l’emballage effectue une grande partie de `CObArray` la `CPtrArray`coulée qui serait nécessaire si vous avez utilisé ou .
+En outre, le `CTypedPtrArray` Wrapper effectue une grande partie du cast qui serait nécessaire si vous utilisiez `CObArray` ou `CPtrArray` .
 
-Étant `CTypedPtrArray` donné que toutes les fonctions sont inlines, l’utilisation de ce modèle n’affecte pas de manière significative la taille ou la vitesse de votre code.
+Étant donné que toutes les `CTypedPtrArray` fonctions sont Inline, l’utilisation de ce modèle n’affecte pas de manière significative la taille ou la vitesse de votre code.
 
-Pour plus d’informations sur l’utilisation `CTypedPtrArray`, voir les articles [Collections](../../mfc/collections.md) et [Template-Based Classes](../../mfc/template-based-classes.md).
+Pour plus d’informations sur l’utilisation de `CTypedPtrArray` , consultez les articles [Collections](../../mfc/collections.md) et [classes basées sur des modèles](../../mfc/template-based-classes.md).
 
 ## <a name="inheritance-hierarchy"></a>Hiérarchie d'héritage
 
@@ -89,9 +89,9 @@ Pour plus d’informations sur l’utilisation `CTypedPtrArray`, voir les articl
 
 **En-tête :** afxtempl.h
 
-## <a name="ctypedptrarrayadd"></a><a name="add"></a>CTypedPtrArray::Ajouter
+## <a name="ctypedptrarrayadd"></a><a name="add"></a>CTypedPtrArray :: Add
 
-Cette fonction `BASE_CLASS`de membre appelle **::Ajouter**.
+Cette fonction membre appelle `BASE_CLASS` **:: Add**.
 
 ```
 INT_PTR Add(TYPE newElement);
@@ -102,20 +102,20 @@ INT_PTR Add(TYPE newElement);
 *TYPE*<br/>
 Paramètre de modèle spécifiant le type d’élément à ajouter au tableau.
 
-*nouvel Element*<br/>
-L’élément à ajouter à ce tableau.
+*newElement*<br/>
+Élément à ajouter à ce tableau.
 
 ### <a name="return-value"></a>Valeur de retour
 
-L’index de l’élément ajouté.
+Index de l’élément ajouté.
 
 ### <a name="remarks"></a>Notes
 
-Pour des remarques plus détaillées, voir [CObArray::Ajouter](../../mfc/reference/cobarray-class.md#add).
+Pour plus d’informations, consultez [CObArray :: Add](../../mfc/reference/cobarray-class.md#add).
 
-## <a name="ctypedptrarrayappend"></a><a name="append"></a>CTypedPtrArray::Append
+## <a name="ctypedptrarrayappend"></a><a name="append"></a>CTypedPtrArray :: Append
 
-Cette fonction `BASE_CLASS`de membre appelle ::Append.
+Cette fonction membre appelle `BASE_CLASS` :: Append * *.
 
 ```
 INT_PTR Append(const CTypedPtrArray<BASE_CLASS, TYPE>& src);
@@ -124,25 +124,25 @@ INT_PTR Append(const CTypedPtrArray<BASE_CLASS, TYPE>& src);
 ### <a name="parameters"></a>Paramètres
 
 *BASE_CLASS*<br/>
-Classe de base de la classe de tableau de pointeur dactylographie; doit être une classe de tableau ( [CObArray](../../mfc/reference/cobarray-class.md) ou [CPtrArray](../../mfc/reference/cptrarray-class.md)).
+Classe de base de la classe de tableau de pointeurs typés ; doit être une classe de tableau ( [CObArray](../../mfc/reference/cobarray-class.md) ou [CPtrArray](../../mfc/reference/cptrarray-class.md)).
 
 *TYPE*<br/>
-Type des éléments stockés dans le tableau de base.
+Type des éléments stockés dans le tableau de la classe de base.
 
 *src*<br/>
-Source des éléments à annexer à un tableau.
+Source des éléments à ajouter à un tableau.
 
 ### <a name="return-value"></a>Valeur de retour
 
-L’index du premier élément joint.
+Index du premier élément ajouté.
 
 ### <a name="remarks"></a>Notes
 
-Pour des remarques plus détaillées, voir [CObArray::Append](../../mfc/reference/cobarray-class.md#append).
+Pour obtenir des remarques plus détaillées, consultez [CObArray :: Append](../../mfc/reference/cobarray-class.md#append).
 
-## <a name="ctypedptrarraycopy"></a><a name="copy"></a>CTypedPtrArray::Copie
+## <a name="ctypedptrarraycopy"></a><a name="copy"></a>CTypedPtrArray :: Copy
 
-Cette fonction `BASE_CLASS`de membre appelle **::Copie**.
+Cette fonction membre appelle `BASE_CLASS` **:: Copy**.
 
 ```cpp
 void Copy(const CTypedPtrArray<BASE_CLASS, TYPE>& src);
@@ -151,21 +151,21 @@ void Copy(const CTypedPtrArray<BASE_CLASS, TYPE>& src);
 ### <a name="parameters"></a>Paramètres
 
 *BASE_CLASS*<br/>
-Classe de base de la classe de tableau de pointeur dactylographie; doit être une classe de tableau ( [CObArray](../../mfc/reference/cobarray-class.md) ou [CPtrArray](../../mfc/reference/cptrarray-class.md)).
+Classe de base de la classe de tableau de pointeurs typés ; doit être une classe de tableau ( [CObArray](../../mfc/reference/cobarray-class.md) ou [CPtrArray](../../mfc/reference/cptrarray-class.md)).
 
 *TYPE*<br/>
-Type des éléments stockés dans le tableau de base.
+Type des éléments stockés dans le tableau de la classe de base.
 
 *src*<br/>
-Source des éléments à copier à un tableau.
+Source des éléments à copier dans un tableau.
 
 ### <a name="remarks"></a>Notes
 
-Pour des remarques plus détaillées, voir [CObArray::Copy](../../mfc/reference/cobarray-class.md#copy).
+Pour obtenir des remarques plus détaillées, consultez [CObArray :: Copy](../../mfc/reference/cobarray-class.md#copy).
 
-## <a name="ctypedptrarrayelementat"></a><a name="elementat"></a>CTypedPtrArray::ElementAt
+## <a name="ctypedptrarrayelementat"></a><a name="elementat"></a>CTypedPtrArray :: ElementAt
 
-Cette fonction en `BASE_CLASS`ligne appelle **::ElementAt**.
+Cette fonction inline appelle `BASE_CLASS` **:: ElementAt**.
 
 ```
 TYPE& ElementAt(INT_PTR nIndex);
@@ -174,22 +174,22 @@ TYPE& ElementAt(INT_PTR nIndex);
 ### <a name="parameters"></a>Paramètres
 
 *TYPE*<br/>
-Paramètre de modèle spécifiant le type d’éléments stockés dans ce tableau.
+Paramètre de modèle qui spécifie le type des éléments stockés dans ce tableau.
 
 *nIndex*<br/>
-Un indice d’intégration supérieur ou égal à 0 et inférieur `BASE_CLASS`ou égal à la valeur retournée par **::GetUpperBound**.
+Index entier qui est supérieur ou égal à 0 et inférieur ou égal à la valeur retournée par `BASE_CLASS` **:: GetUpperBound**.
 
 ### <a name="return-value"></a>Valeur de retour
 
-Une référence temporaire à l’élément à l’emplacement spécifié par *nIndex*. Cet élément est du type spécifié par le paramètre type *TYPE*.
+Référence temporaire à l’élément à l’emplacement spécifié par *nIndex*. Cet élément est du type spécifié par le *type*de paramètre de modèle.
 
 ### <a name="remarks"></a>Notes
 
-Pour des remarques plus détaillées, voir [CObArray::ElementAt](../../mfc/reference/cobarray-class.md#elementat).
+Pour obtenir des remarques plus détaillées, consultez [CObArray :: ElementAt](../../mfc/reference/cobarray-class.md#elementat).
 
-## <a name="ctypedptrarraygetat"></a><a name="getat"></a>CTypedPtrArray::GetAt
+## <a name="ctypedptrarraygetat"></a><a name="getat"></a>CTypedPtrArray :: GetAt
 
-Cette fonction en `BASE_CLASS`ligne appelle **::GetAt**.
+Cette fonction inline appelle `BASE_CLASS` **:: GetAt**.
 
 ```
 TYPE GetAt(INT_PTR nIndex) const;
@@ -198,22 +198,22 @@ TYPE GetAt(INT_PTR nIndex) const;
 ### <a name="parameters"></a>Paramètres
 
 *TYPE*<br/>
-Paramètre de modèle spécifiant le type d’éléments stockés dans le tableau.
+Paramètre de modèle qui spécifie le type des éléments stockés dans le tableau.
 
 *nIndex*<br/>
-Un indice d’intégration supérieur ou égal à 0 et inférieur `BASE_CLASS`ou égal à la valeur retournée par **::GetUpperBound**.
+Index entier qui est supérieur ou égal à 0 et inférieur ou égal à la valeur retournée par `BASE_CLASS` **:: GetUpperBound**.
 
 ### <a name="return-value"></a>Valeur de retour
 
-Une copie de l’élément à l’emplacement spécifié par *nIndex*. Cet élément est du type spécifié par le paramètre type *TYPE*.
+Copie de l’élément à l’emplacement spécifié par *nIndex*. Cet élément est du type spécifié par le *type*de paramètre de modèle.
 
 ### <a name="remarks"></a>Notes
 
-Pour des remarques plus détaillées, voir [CObArray::GetAt](../../mfc/reference/cobarray-class.md#getat)
+Pour plus d’informations, consultez [CObArray :: GetAt](../../mfc/reference/cobarray-class.md#getat)
 
-## <a name="ctypedptrarrayinsertat"></a><a name="insertat"></a>CTypedPtrArray::InsertAt
+## <a name="ctypedptrarrayinsertat"></a><a name="insertat"></a>CTypedPtrArray :: InsertAt
 
-Cette fonction `BASE_CLASS`de membre appelle **::InsertAt**.
+Cette fonction membre appelle `BASE_CLASS` **:: InsertAt**.
 
 ```cpp
 void InsertAt(
@@ -229,33 +229,33 @@ void InsertAt(
 ### <a name="parameters"></a>Paramètres
 
 *nIndex*<br/>
-Un indice d’intégrateur qui peut être supérieur à la valeur retournée par [CObArray::GetUpperBound](../../mfc/reference/cobarray-class.md#getupperbound).
+Index entier qui peut être supérieur à la valeur retournée par [CObArray :: GetUpperBound](../../mfc/reference/cobarray-class.md#getupperbound).
 
 *TYPE*<br/>
-Type des éléments stockés dans le tableau de base.
+Type des éléments stockés dans le tableau de la classe de base.
 
-*nouvel Element*<br/>
-Le pointeur d’objet à placer dans ce tableau. Un *nouvel Element* de la valeur **NULL** est autorisé.
+*newElement*<br/>
+Pointeur d’objet à placer dans ce tableau. Un *newelement* de valeur **null** est autorisé.
 
-*nCompte*<br/>
-Le nombre de fois cet élément doit être inséré (par défaut à 1).
+*nCount*<br/>
+Nombre de fois où cet élément doit être inséré (1 par défaut).
 
 *nStartIndex*<br/>
-Un indice d’intégration qui peut `CObArray::GetUpperBound`être supérieur à la valeur retournée par .
+Index entier qui peut être supérieur à la valeur retournée par `CObArray::GetUpperBound` .
 
 *BASE_CLASS*<br/>
-Classe de base de la classe de tableau de pointeur dactylographie; doit être une classe de tableau ( [CObArray](../../mfc/reference/cobarray-class.md) ou [CPtrArray](../../mfc/reference/cptrarray-class.md)).
+Classe de base de la classe de tableau de pointeurs typés ; doit être une classe de tableau ( [CObArray](../../mfc/reference/cobarray-class.md) ou [CPtrArray](../../mfc/reference/cptrarray-class.md)).
 
-*pNewArray (en)*<br/>
-Un autre tableau qui contient des éléments à ajouter à ce tableau.
+*pNewArray*<br/>
+Autre tableau qui contient les éléments à ajouter à ce tableau.
 
 ### <a name="remarks"></a>Notes
 
-Pour des remarques plus détaillées, voir [CObArray::InsertAt](../../mfc/reference/cobarray-class.md#insertat).
+Pour obtenir des remarques plus détaillées, consultez [CObArray :: InsertAt](../../mfc/reference/cobarray-class.md#insertat).
 
-## <a name="ctypedptrarrayoperator--"></a><a name="operator_at"></a>CTypedPtrArray::opérateur [ ]
+## <a name="ctypedptrarrayoperator--"></a><a name="operator_at"></a>CTypedPtrArray :: Operator []
 
-Ces opérateurs en `BASE_CLASS`ligne appellent **::opérateur [ ]**.
+Ces opérateurs Inline appellent `BASE_CLASS` **:: Operator []**.
 
 ```
 TYPE& operator[ ](int_ptr nindex);
@@ -265,20 +265,20 @@ TYPE operator[ ](int_ptr nindex) const;
 ### <a name="parameters"></a>Paramètres
 
 *TYPE*<br/>
-Paramètre de modèle spécifiant le type d’éléments stockés dans le tableau.
+Paramètre de modèle qui spécifie le type des éléments stockés dans le tableau.
 
 *nIndex*<br/>
-Un indice d’intégration supérieur ou égal à 0 et inférieur `BASE_CLASS`ou égal à la valeur retournée par **::GetUpperBound**.
+Index entier qui est supérieur ou égal à 0 et inférieur ou égal à la valeur retournée par `BASE_CLASS` **:: GetUpperBound**.
 
 ### <a name="remarks"></a>Notes
 
-Le premier opérateur, appelé pour des tableaux qui ne sont pas **const**, peut être utilisé soit sur la droite (r-valeur) ou la gauche (l-valeur) d’une déclaration d’affectation. Le second, invoqué pour les tableaux **de cônes,** ne peut être utilisé que sur la droite.
+Le premier opérateur, appelé pour les tableaux qui ne le sont pas **`const`** , peut être utilisé sur le droit (r-value) ou sur la gauche (l-value) d’une instruction d’assignation. La seconde, appelée pour les **`const`** tableaux, peut être utilisée uniquement à droite.
 
-La version Debug de la bibliothèque affirme si le sous-scriptum (soit sur le côté gauche ou à droite d’une déclaration d’affectation) est hors limites.
+La version de débogage de la bibliothèque déclare si l’indice (à gauche ou à droite d’une instruction d’assignation) est hors limites.
 
-## <a name="ctypedptrarraysetat"></a><a name="setat"></a>CTypedPtrArray::SetAt
+## <a name="ctypedptrarraysetat"></a><a name="setat"></a>CTypedPtrArray :: SetAt
 
-Cette fonction `BASE_CLASS`de membre appelle **::SetAt**.
+Cette fonction membre appelle `BASE_CLASS` **:: setat**.
 
 ```cpp
 void SetAt(
@@ -289,21 +289,21 @@ void SetAt(
 ### <a name="parameters"></a>Paramètres
 
 *nIndex*<br/>
-Un indice d’intégration supérieur ou égal à 0 et inférieur ou égal à la valeur retournée par [CObArray::GetUpperBound](../../mfc/reference/cobarray-class.md#getupperbound).
+Index entier qui est supérieur ou égal à 0 et inférieur ou égal à la valeur retournée par [CObArray :: GetUpperBound](../../mfc/reference/cobarray-class.md#getupperbound).
 
 *TYPE*<br/>
-Type des éléments stockés dans le tableau de base.
+Type des éléments stockés dans le tableau de la classe de base.
 
-*Ptr*<br/>
-Un pointeur à l’élément à insérer dans le tableau à l’index n. Une valeur NULL est autorisée.
+*ptr*<br/>
+Pointeur vers l’élément à insérer dans le tableau au niveau du nIndex. Une valeur NULL est autorisée.
 
 ### <a name="remarks"></a>Notes
 
-Pour des remarques plus détaillées, voir [CObArray::SetAt](../../mfc/reference/cobarray-class.md#setat).
+Pour obtenir des remarques plus détaillées, consultez [CObArray :: setat](../../mfc/reference/cobarray-class.md#setat).
 
-## <a name="ctypedptrarraysetatgrow"></a><a name="setatgrow"></a>CTypedPtrArray::SetAtGrow
+## <a name="ctypedptrarraysetatgrow"></a><a name="setatgrow"></a>CTypedPtrArray :: SetAtGrow
 
-Cette fonction `BASE_CLASS`de membre appelle **::SetAtGrow**.
+Cette fonction membre appelle `BASE_CLASS` **:: SetAtGrow**.
 
 ```cpp
 void SetAtGrow(
@@ -314,21 +314,21 @@ void SetAtGrow(
 ### <a name="parameters"></a>Paramètres
 
 *nIndex*<br/>
-Un indice d’intégration supérieur ou égal à 0.
+Index entier supérieur ou égal à 0.
 
 *TYPE*<br/>
-Type des éléments stockés dans le tableau de base.
+Type des éléments stockés dans le tableau de la classe de base.
 
-*nouvel Element*<br/>
-Le pointeur d’objet à ajouter à ce tableau. Une valeur **NULL** est autorisée.
+*newElement*<br/>
+Pointeur d’objet à ajouter à ce tableau. Une valeur **null** est autorisée.
 
 ### <a name="remarks"></a>Notes
 
-Pour des remarques plus détaillées, voir [CObArray::SetAtGrow](../../mfc/reference/cobarray-class.md#setatgrow).
+Pour obtenir des remarques plus détaillées, consultez [CObArray :: SetAtGrow](../../mfc/reference/cobarray-class.md#setatgrow).
 
 ## <a name="see-also"></a>Voir aussi
 
-[MFC Échantillon COLLECT](../../overview/visual-cpp-samples.md)<br/>
+[Exemple de collecte MFC](../../overview/visual-cpp-samples.md)<br/>
 [Graphique hiérarchique](../../mfc/hierarchy-chart.md)<br/>
 [CPtrArray, classe](../../mfc/reference/cptrarray-class.md)<br/>
 [CObArray, classe](../../mfc/reference/cobarray-class.md)

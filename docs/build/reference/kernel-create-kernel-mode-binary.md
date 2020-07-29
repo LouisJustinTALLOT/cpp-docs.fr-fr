@@ -5,12 +5,12 @@ f1_keywords:
 - /kernel
 - /kernel-
 ms.assetid: 6d7fdff0-c3d1-4b78-9367-4da588ce8b05
-ms.openlocfilehash: d065364cf6d3ae824098634c070f3651324aa52a
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: bcef52144e4da932e9e1b6acbcd5f2170c4c7f86
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62291338"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87211942"
 ---
 # <a name="kernel-create-kernel-mode-binary"></a>/kernel (Créer un fichier binaire pour le mode noyau)
 
@@ -25,30 +25,30 @@ Crée un fichier binaire qui peut être exécuté dans le noyau Windows.
 ## <a name="arguments"></a>Arguments
 
 **/kernel**<br/>
-Le code dans le projet actuel est compilé et lié à l’aide d’un ensemble de règles de langage C++ qui sont spécifiques au code qui s’exécute en mode noyau.
+Le code du projet actuel est compilé et lié à l’aide d’un jeu de règles du langage C++ qui sont spécifiques au code qui s’exécute en mode noyau.
 
-**/kernel-**<br/>
-Le code dans le projet actuel est compilé et lié sans utiliser les règles de langage C++ qui sont spécifiques au code qui s’exécute en mode noyau.
+**/kernel**<br/>
+Le code du projet actuel est compilé et lié sans utiliser les règles du langage C++ qui sont spécifiques au code qui s’exécute en mode noyau.
 
 ## <a name="remarks"></a>Notes
 
-Il existe aucune `#pragma` équivalent pour contrôler cette option.
+Il n’existe aucun `#pragma` équivalent pour contrôler cette option.
 
-En spécifiant le **/kernel** option indique au compilateur et l’éditeur de liens arbitrer les fonctionnalités de langage sont autorisées en mode noyau et s’assurer que vous disposez de puissance suffisante afin d’éviter une instabilité du runtime qui est unique pour en mode noyau C++. Cela est accompli en interdisant l’utilisation de fonctionnalités du langage C++ qui entraînent des perturbations en mode noyau et en fournissant des avertissements pour les fonctionnalités du langage C++ qui sont des interruptions de service, mais ne peut pas être désactivées.
+La spécification de l’option **/kernel** indique au compilateur et à l’éditeur de liens d’arbitrer les fonctionnalités de langage qui sont autorisées en mode noyau et de s’assurer que vous disposez d’une puissance d’expressivité suffisante pour éviter l’instabilité du runtime propre au C++ en mode noyau. Cela est accompli en interdisant l’utilisation des fonctionnalités du langage C++ qui sont perturbatrices en mode noyau et en fournissant des avertissements pour les fonctionnalités du langage C++ qui sont potentiellement perturbatrices, mais qui ne peuvent pas être désactivées.
 
-Le **/kernel** option s’applique aux phases le compilateur et l’éditeur de liens d’une build et est définie au niveau du projet. Passer le **/kernel** permettant d’indiquer au compilateur que le fichier binaire qui en résulte, après avoir lié, doit être chargé dans le noyau Windows. Le compilateur restreindra la gamme de fonctionnalités du langage C++ à un sous-ensemble qui est compatible avec le noyau.
+L’option **/kernel** s’applique aux phases du compilateur et de l’éditeur de liens d’une build et est définie au niveau du projet. Passez le commutateur **/kernel** pour indiquer au compilateur que le fichier binaire résultant, après la liaison, doit être chargé dans le noyau Windows. Le compilateur va réduire le spectre des fonctionnalités du langage C++ à un sous-ensemble compatible avec le noyau.
 
-Le tableau suivant répertorie les changements de comportement du compilateur lorsque **/kernel** est spécifié.
+Le tableau suivant répertorie les modifications apportées au comportement du compilateur lorsque **/kernel** est spécifié.
 
-|Type de comportement|**/Kernel** comportement|
+|Type de comportement|**/kernel** Comportement|
 |-------------------|---------------------------|
-|Gestion d'exceptions C++|Désactivé. Toutes les instances de la `throw` et `try` mots clés émettent une erreur du compilateur (à l’exception de la spécification d’exception `throw()`). Ne **/EH** options sont compatibles avec **/kernel**, à l’exception de **/EH-**.|
-|RTTI|Désactivé. Toutes les instances de la `dynamic_cast` et `typeid` mots clés émettent une erreur du compilateur, sauf si `dynamic_cast` est utilisée de manière statique.|
-|`new` et `delete`|Vous devez définir explicitement la `new()` ou `delete()` opérateur ; le compilateur ni le runtime fournit une définition default.|
+|Gestion d'exceptions C++|Désactivé. Toutes les instances des **`throw`** **`try`** Mots clés et émettent une erreur du compilateur (à l’exception de la spécification d’exception `throw()` ). Aucune option **/Eh** n’est compatible avec **/kernel**, à l’exception de **/Eh-**.|
+|RTTI|Désactivé. Toutes les instances des **`dynamic_cast`** **`typeid`** Mots clés et émettent une erreur du compilateur, sauf si **`dynamic_cast`** est utilisé de manière statique.|
+|`new` et `delete`|Vous devez définir explicitement l' `new()` `delete()` opérateur or ; ni le compilateur, ni le runtime ne fourniront une définition par défaut.|
 
-Custom conventions d’appel, le [/GS](gs-buffer-security-check.md) option de build et toutes les optimisations sont autorisés lorsque vous utilisez le **/kernel** option. La fonctionnalité inline est en grande partie non affectée par **/kernel**, avec la même sémantique honorée par le compilateur. Si vous souhaitez vous assurer que le `__forceinline` qualificateur de l’incorporation (inlining) est prise en compte, vous devez vous assurer que l’avertissement [C4714](../../error-messages/compiler-warnings/compiler-warning-level-4-c4714.md) est activée afin que vous sachiez quand un particulier `__forceinline` fonction n’est pas inline.
+Les conventions d’appel personnalisées, l’option de build [/GS](gs-buffer-security-check.md) et toutes les optimisations sont autorisées lorsque vous utilisez l’option **/kernel** . L’incorporation n’est en grande partie pas affectée par **/kernel**, avec la même sémantique honorée par le compilateur. Si vous souhaitez vous assurer que le **`__forceinline`** qualificateur d’incorporation est respecté, vous devez vous assurer que le [C4714](../../error-messages/compiler-warnings/compiler-warning-level-4-c4714.md) d’avertissement est activé pour que vous sachiez quand une **`__forceinline`** fonction particulière n’est pas Inline.
 
-Lorsque le compilateur est passé le **/kernel** commutateur, il prédéfinit une macro de préprocesseur qui est nommée `_KERNEL_MODE` et a la valeur **1**. Vous pouvez utiliser cela pour effectuer une compilation conditionnelle code selon que l’environnement d’exécution est en mode utilisateur ou en mode noyau. Par exemple, le code suivant spécifie que la classe doit être dans un segment de mémoire non paginable lorsqu’il est compilé pour l’exécution en mode noyau.
+Quand le commutateur **/kernel** est passé au compilateur, il prédéfinit une macro de préprocesseur nommée `_KERNEL_MODE` et a la valeur **1**. Vous pouvez l’utiliser pour compiler de façon conditionnelle le code selon que l’environnement d’exécution est en mode utilisateur ou en mode noyau. Par exemple, le code suivant spécifie que la classe doit être dans un segment de mémoire non paginable lorsqu’elle est compilée pour l’exécution en mode noyau.
 
 ```cpp
 #ifdef _KERNEL_MODE
@@ -63,38 +63,38 @@ class NONPAGESECTION MyNonPagedClass
 };
 ```
 
-Certaines combinaisons suivantes d’architecture cible et le **/arch** option génère une erreur lorsqu’ils sont utilisés avec **/kernel**:
+Certaines combinaisons suivantes de l’architecture cible et de l’option **/ARCH** génèrent une erreur lorsqu’elles sont utilisées avec **/kernel**:
 
-- **/ arch : {SSE&#124;SSE2&#124;AVX}** ne sont pas pris en charge sur x86. Uniquement **/arch : IA32** est pris en charge avec **/kernel** sur x86.
+- **/arch : {SSE&#124;SSE2&#124;AVX}** ne sont pas pris en charge sur x86. Seul **/arch : ia32** est pris en charge avec **/kernel** sur x86.
 
-- **/ arch : AVX** n’est pas pris en charge avec **/kernel** sur x64.
+- **/arch : AVX** n’est pas pris en charge avec **/kernel** sur x64.
 
-Génération avec **/kernel** passe également **/kernel** l’éditeur de liens. Voici comment cela affecte le comportement de l’éditeur de liens :
+La génération avec **/kernel** passe également **/kernel** à l’éditeur de liens. La manière dont cela affecte le comportement de l’éditeur de liens :
 
-- Édition des liens incrémentielle sont désactivée. Si vous ajoutez **/ incremental** à la ligne de commande, l’éditeur de liens émet cette erreur irrécupérable :
+- La liaison incrémentielle est désactivée. Si vous ajoutez **/INCREMENTAL** à la ligne de commande, l’éditeur de liens émet l’erreur irrécupérable suivante :
 
-   **LINK : erreur irrécupérable des LNK1295 : '/ INCREMENTAL' non compatible avec ' / noyau « spécification ; lier sans '/ INCRÉMENTIELLES**
+   **LIEN : erreur irrécupérable LNK1295 : « /INCREMENTAL » n’est pas compatible avec la spécification « /KERNEL »; lier sans'/INCREMENTAL'**
 
-- L’éditeur de liens inspecte chaque fichier objet (ou n’importe quel membre de l’archive inclus à partir de bibliothèques statiques) pour voir si elle pourrait ont été compilé à l’aide de la **/kernel** option mais elle ne était pas. Si toutes les instances répondent à ce critère, l’éditeur de liens lie toujours correctement mais peut émettre un avertissement, comme indiqué dans le tableau suivant.
+- L’éditeur de liens inspecte chaque fichier objet (ou tout membre archive inclus dans des bibliothèques statiques) pour voir s’il a pu être compilé à l’aide de l’option **/kernel** , mais pas. Si des instances respectent ce critère, l’éditeur de liens a toujours des liens avec succès, mais peut émettre un avertissement, comme indiqué dans le tableau suivant.
 
-   ||**/kernel** obj|**/Kernel-** obj, obj MASM, ou cvtresed|Un mélange de **/kernel** et **/kernel-** obj|
+   ||**/kernel** obj|**/kernel-** obj, MASM obj ou cvtresed|Combinaison de **/kernel** et **/kernel-** ne comportaient|
    |-|----------------------|-----------------------------------------------|-------------------------------------------------|
-   |**link /kernel**|Oui|Oui|Oui avec avertissement LNK4257|
-   |**link**|Oui|Oui|Oui|
+   |**lien/kernel**|Oui|Oui|Oui avec avertissement LNK4257|
+   |**lien**|Oui|Oui|Oui|
 
-   **Objet de liaison de LNK4257 ne pas compilé avec /KERNEL ; image ne peut pas s’exécuter**
+   **Objet de liaison LNK4257 non compilé avec/KERNEL ; l’image risque de ne pas s’exécuter**
 
-Le **/kernel** option et la **/driver** option fonctionnent indépendamment et aucune n’affecte l’autre.
+L’option **/kernel** et l’option **/Driver** fonctionnent indépendamment et n’affectent pas l’autre.
 
-### <a name="to-set-the-kernel-compiler-option-in-visual-studio"></a>Pour définir l’option de compilateur /kernel dans Visual Studio
+### <a name="to-set-the-kernel-compiler-option-in-visual-studio"></a>Pour définir l’option du compilateur/kernel dans Visual Studio
 
-1. Ouvrez le **Pages de propriétés** boîte de dialogue pour le projet. Pour plus d’informations, consultez [propriétés de compilateur et de build C++ définie dans Visual Studio](../working-with-project-properties.md).
+1. Ouvrez la boîte de dialogue **pages de propriétés** du projet. Pour plus d’informations, consultez [Définir le compilateur C++ et les propriétés de build dans Visual Studio](../working-with-project-properties.md).
 
-1. Sélectionnez le **C/C++** dossier.
+1. Sélectionnez le dossier **C/C++** .
 
-1. Sélectionnez le **ligne de commande** page de propriétés.
+1. Sélectionnez la page de propriétés **ligne de commande** .
 
-1. Dans le **des options supplémentaires** zone, ajoutez `/kernel` ou `/kernel-`.
+1. Dans la zone **options supplémentaires** , ajoutez `/kernel` ou `/kernel-` .
 
 ## <a name="see-also"></a>Voir aussi
 

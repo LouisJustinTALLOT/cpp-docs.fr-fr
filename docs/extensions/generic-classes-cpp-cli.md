@@ -9,12 +9,12 @@ helpviewer_keywords:
 - generic classes
 - generics [C++], declaring generic classes
 ms.assetid: 0beb99e1-1ec4-4fee-9836-ce9657d67a3a
-ms.openlocfilehash: 78f4bf3abb98aab5e626e8ada538a22bdbca2912
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 894bbffcc73693e5d0976831d65df54b09c853d2
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80172358"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87216022"
 ---
 # <a name="generic-classes-ccli"></a>Classes génériques (C++/CLI)
 
@@ -41,9 +41,9 @@ Dans la syntaxe ci-dessus, les termes suivants sont utilisés :
 (Facultatif) Informations déclaratives supplémentaires. Pour plus d’informations sur les attributs et les classes d’attributs, consultez Attributs.
 
 *class-key*<br/>
-**class** ou **typename**
+**`class`** Ou**`typename`**
 
-*type-parameter-identifier(s)* , une liste d’identificateurs séparée par des virgules spécifiant les noms des paramètres de type.
+*type-parameter-identifier(s)*, une liste d’identificateurs séparée par des virgules spécifiant les noms des paramètres de type.
 
 *constraint-clauses*<br/>
 Une liste (non séparée par des virgules) de clauses **where** spécifiant les contraintes pour les paramètres de type. Son format est le suivant :
@@ -51,15 +51,15 @@ Une liste (non séparée par des virgules) de clauses **where** spécifiant les 
 > **où** *type-Parameter-identifier* **:** *Constraint-List*  **...**
 
 *constraint-list*<br/>
-*Class-or-interface*[`,` *...* ]
+*Class-or-interface*[ `,` *...*]
 
 *accessibility-modifiers*<br/>
-Modificateurs d’accessibilité pour la classe générique. Pour Windows Runtime, le seul modificateur autorisé est **private**. Pour common language runtime, les modificateurs autorisés sont **private** et **public**.
+Modificateurs d’accessibilité pour la classe générique. Pour le Windows Runtime, le seul modificateur autorisé est **`private`** . Pour le common language runtime, les modificateurs autorisés sont **`private`** et **`public`** .
 
-*identifier*<br/>
+*identificateur*<br/>
 Le nom de la classe générique, tout identificateur C++ valide.
 
-*modifiers*<br/>
+*modificateurs*<br/>
 (Facultatif) Les modificateurs autorisés sont **sealed** et **abstract**.
 
 *base-list*<br/>
@@ -69,9 +69,9 @@ Une liste qui contient la classe de base et les interfaces implémentées, toute
 Le corps de la classe contenant les champs, les fonctions membres, etc.
 
 *declarators*<br/>
-Déclarations de toute variable de ce type. Par exemple : `^`*identifier*[`,` ...]
+Déclarations de toute variable de ce type. Par exemple : `^` *identificateur*[ `,` ...]
 
-Vous pouvez déclarer des classes génériques telles que celles-ci (notez qu’il est possible d’utiliser le mot clé **class** au lieu de **typename**). Dans cet exemple, `ItemType`, `KeyType` et `ValueType` sont des types inconnus qui sont spécifiés au point où le type `HashTable<int, int>` est un type construit du type générique `HashTable<KeyType, ValueType>`. Plusieurs types construits différents peuvent être construits à partir d’un même type générique. Les types construits à partir de classes génériques sont traités comme tout autre type de classe de référence.
+Vous pouvez déclarer des classes génériques telles que celles-ci (Notez que le mot clé **`class`** peut être utilisé à la place de **`typename`** ). Dans cet exemple, `ItemType`, `KeyType` et `ValueType` sont des types inconnus qui sont spécifiés au point où le type `HashTable<int, int>` est un type construit du type générique `HashTable<KeyType, ValueType>`. Plusieurs types construits différents peuvent être construits à partir d’un même type générique. Les types construits à partir de classes génériques sont traités comme tout autre type de classe de référence.
 
 ```cpp
 // generic_classes_1.cpp
@@ -95,9 +95,9 @@ int main() {
 }
 ```
 
-Les types de valeur (qu’il s’agisse des types intégrés tels que **int** ou **double**, ou des types valeur définis par l’utilisateur) comme les types de référence peuvent être utilisés en tant qu’argument de type générique. La syntaxe dans la définition générique est la même dans les deux cas. D’un point de vue syntaxique, le type unknown est traité comme s’il s’agissait d’un type référence. Toutefois, le runtime est en mesure de déterminer si le type réellement utilisé est un type valeur et de remplacer le code généré approprié pour que les membres y aient directement accès. Les types valeur utilisés en tant qu’arguments de type générique ne sont pas convertis (boxed) et par conséquent, ne souffrent pas de la baisse des performances associée à une conversion. La syntaxe utilisée dans le corps du générique doit être `T^` et `->` au lieu de `.`. Toute utilisation de paramètre de type [ref new, gcnew](ref-new-gcnew-cpp-component-extensions.md) sera correctement interprétée par le runtime en tant que simple création d’un type valeur si l’argument de type est un type valeur.
+Les deux types valeur (types intégrés tels que **`int`** ou **`double`** , ou types valeur définis par l’utilisateur) et les types référence peuvent être utilisés comme argument de type générique. La syntaxe dans la définition générique est la même dans les deux cas. D’un point de vue syntaxique, le type unknown est traité comme s’il s’agissait d’un type référence. Toutefois, le runtime est en mesure de déterminer si le type réellement utilisé est un type valeur et de remplacer le code généré approprié pour que les membres y aient directement accès. Les types valeur utilisés en tant qu’arguments de type générique ne sont pas convertis (boxed) et par conséquent, ne souffrent pas de la baisse des performances associée à une conversion. La syntaxe utilisée dans le corps du générique doit être `T^` et `->` au lieu de `.`. Toute utilisation de paramètre de type [ref new, gcnew](ref-new-gcnew-cpp-component-extensions.md) sera correctement interprétée par le runtime en tant que simple création d’un type valeur si l’argument de type est un type valeur.
 
-Vous pouvez également déclarer une classe générique avec des [contraintes sur les paramètres de type générique (C++/CLI)](constraints-on-generic-type-parameters-cpp-cli.md) au niveau des types pouvant être utilisés pour le paramètre de type. Dans l’exemple suivant, tout type utilisé pour `ItemType` doit implémenter l’interface `IItem`. Si, par exemple, vous essayez d’utiliser **int**, qui n’implémente pas `IItem`, vous obtiendriez une erreur de compilation, car l’argument de type ne satisfait pas la contrainte.
+Vous pouvez également déclarer une classe générique avec des [contraintes sur les paramètres de type générique (C++/CLI)](constraints-on-generic-type-parameters-cpp-cli.md) au niveau des types pouvant être utilisés pour le paramètre de type. Dans l’exemple suivant, tout type utilisé pour `ItemType` doit implémenter l’interface `IItem`. Toute tentative d’utilisation **`int`** de, par exemple, qui n’implémente pas `IItem` , génère une erreur au moment de la compilation, car l’argument de type ne satisfait pas la contrainte.
 
 ```cpp
 // generic_classes_2.cpp
@@ -159,7 +159,7 @@ Les variables d’instance d’une classe générique peuvent disposer de types 
 
 ## <a name="example"></a>Exemple
 
-Dans l’exemple suivant, trois différentes instances de la classe générique, MyClass\<ItemType>, sont créées en utilisant les arguments de type appropriés (**int**, **double**et **string**).
+Dans l’exemple suivant, trois instances différentes de la classe générique, MyClass \<ItemType> , sont créées à l’aide des arguments de type appropriés ( **`int`** , **`double`** , et **String**).
 
 ```cpp
 // generics_instance_fields1.cpp
@@ -665,7 +665,7 @@ Les règles de déclaration et d’utilisation de structs génériques sont iden
 
 ## <a name="example"></a>Exemple
 
-L’exemple suivant déclare un struct générique, `MyGenStruct`, avec un champ, `myField`et assigne des valeurs de différents types (**int**, **double**, `String^`) à ce champ.
+L’exemple suivant déclare une structure générique,, `MyGenStruct` avec un champ, `myField` , et assigne des valeurs de différents types ( **`int`** , **`double`** , `String^` ) à ce champ.
 
 ```cpp
 // generics_generic_struct1.cpp

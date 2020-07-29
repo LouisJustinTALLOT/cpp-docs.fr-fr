@@ -14,12 +14,12 @@ f1_keywords:
 helpviewer_keywords:
 - multi_link_registry class
 ms.assetid: b2aa73a8-e8a6-4255-b117-d07530c328b2
-ms.openlocfilehash: e22df5ee65d0219a46065044385dca46aac297a3
-ms.sourcegitcommit: a8ef52ff4a4944a1a257bdaba1a3331607fb8d0f
+ms.openlocfilehash: 777b3f5206b4a595b5dcac653d608255e92f4ef6
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/11/2020
-ms.locfileid: "77142374"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87231700"
 ---
 # <a name="multi_link_registry-class"></a>multi_link_registry, classe
 
@@ -35,27 +35,27 @@ class multi_link_registry : public network_link_registry<_Block>;
 ### <a name="parameters"></a>Paramètres
 
 *_Block*<br/>
-Type de données de bloc stocké dans l’objet `multi_link_registry`.
+Type de données de bloc stocké dans l' `multi_link_registry` objet.
 
 ## <a name="members"></a>Membres
 
 ### <a name="public-constructors"></a>Constructeurs publics
 
-|Name|Description|
+|Nom|Description|
 |----------|-----------------|
 |[multi_link_registry](#ctor)|Construit un objet `multi_link_registry`.|
-|[Destructeur ~ multi_link_registry](#dtor)|Détruit l’objet `multi_link_registry`.|
+|[Destructeur ~ multi_link_registry](#dtor)|Détruit l' `multi_link_registry` objet.|
 
 ### <a name="public-methods"></a>M&#233;thodes publiques
 
-|Name|Description|
+|Nom|Description|
 |----------|-----------------|
-|[add](#add)|Ajoute un lien à l’objet `multi_link_registry`. (Substitue [network_link_registry :: Add](network-link-registry-class.md#add).)|
-|[begin](#begin)|Retourne un itérateur au premier élément de l’objet `multi_link_registry`. (Substitue [network_link_registry :: Begin](network-link-registry-class.md#begin).)|
-|[contains](#contains)|Recherche un bloc spécifié dans l’objet `multi_link_registry`. (Substitue [network_link_registry :: Contains](network-link-registry-class.md#contains).)|
-|[count](#count)|Compte le nombre d’éléments dans l’objet `multi_link_registry`. (Substitue [network_link_registry :: Count](network-link-registry-class.md#count).)|
-|[remove](#remove)|Supprime un lien de l’objet `multi_link_registry`. (Substitue [network_link_registry :: Remove](network-link-registry-class.md#remove).)|
-|[set_bound](#set_bound)|Définit une limite supérieure du nombre de liens que l’objet `multi_link_registry` peut contenir.|
+|[add](#add)|Ajoute un lien à l' `multi_link_registry` objet. (Substitue [network_link_registry :: Add](network-link-registry-class.md#add).)|
+|[commencer](#begin)|Retourne un itérateur au premier élément de l' `multi_link_registry` objet. (Substitue [network_link_registry :: Begin](network-link-registry-class.md#begin).)|
+|[contains](#contains)|Recherche `multi_link_registry` un bloc spécifié dans l’objet. (Substitue [network_link_registry :: Contains](network-link-registry-class.md#contains).)|
+|[count](#count)|Compte le nombre d’éléments dans l' `multi_link_registry` objet. (Substitue [network_link_registry :: Count](network-link-registry-class.md#count).)|
+|[remove](#remove)|Supprime un lien de l' `multi_link_registry` objet. (Substitue [network_link_registry :: Remove](network-link-registry-class.md#remove).)|
+|[set_bound](#set_bound)|Définit une limite supérieure du nombre de liens que l' `multi_link_registry` objet peut contenir.|
 
 ## <a name="inheritance-hierarchy"></a>Hiérarchie d'héritage
 
@@ -67,11 +67,11 @@ Type de données de bloc stocké dans l’objet `multi_link_registry`.
 
 **En-tête :** agents.h
 
-**Espace de noms :** concurrency
+**Espace de noms :** concurrence
 
-## <a name="add"></a>complémentaires
+## <a name="add"></a><a name="add"></a>complémentaires
 
-Ajoute un lien à l’objet `multi_link_registry`.
+Ajoute un lien à l' `multi_link_registry` objet.
 
 ```cpp
 virtual void add(_EType _Link);
@@ -84,11 +84,11 @@ Pointeur vers un bloc à ajouter.
 
 ### <a name="remarks"></a>Notes
 
-La méthode lève une exception [invalid_link_target](invalid-link-target-class.md) si le lien est déjà présent dans le registre, ou si une limite a déjà été définie avec la fonction `set_bound` et qu’un lien a été supprimé.
+La méthode lève une exception [invalid_link_target](invalid-link-target-class.md) si le lien est déjà présent dans le registre ou si une limite a déjà été définie avec la `set_bound` fonction et qu’un lien a été supprimé depuis.
 
-## <a name="begin"></a>commencer
+## <a name="begin"></a><a name="begin"></a>commencer
 
-Retourne un itérateur au premier élément de l’objet `multi_link_registry`.
+Retourne un itérateur au premier élément de l' `multi_link_registry` objet.
 
 ```cpp
 virtual iterator begin();
@@ -96,15 +96,15 @@ virtual iterator begin();
 
 ### <a name="return-value"></a>Valeur de retour
 
-Itérateur qui traite le premier élément de l’objet `multi_link_registry`.
+Itérateur qui traite le premier élément de l' `multi_link_registry` objet.
 
 ### <a name="remarks"></a>Notes
 
-L’état final est indiqué par un lien `NULL`.
+L’état final est indiqué par un `NULL` lien.
 
-## <a name="contains"></a>comprend
+## <a name="contains"></a><a name="contains"></a>comprend
 
-Recherche un bloc spécifié dans l’objet `multi_link_registry`.
+Recherche `multi_link_registry` un bloc spécifié dans l’objet.
 
 ```cpp
 virtual bool contains(_EType _Link);
@@ -113,15 +113,15 @@ virtual bool contains(_EType _Link);
 ### <a name="parameters"></a>Paramètres
 
 *_Link*<br/>
-Pointeur vers un bloc qui doit être recherché dans l’objet `multi_link_registry`.
+Pointeur vers un bloc qui doit être recherché dans l' `multi_link_registry` objet.
 
 ### <a name="return-value"></a>Valeur de retour
 
-**true** si le bloc spécifié a été trouvé ; sinon, **false** .
+**`true`** Si le bloc spécifié a été trouvé ; **`false`** sinon,.
 
-## <a name="count"></a>saut
+## <a name="count"></a><a name="count"></a>saut
 
-Compte le nombre d’éléments dans l’objet `multi_link_registry`.
+Compte le nombre d’éléments dans l' `multi_link_registry` objet.
 
 ```cpp
 virtual size_t count();
@@ -131,7 +131,7 @@ virtual size_t count();
 
 Nombre d'éléments de l'objet `multi_link_registry`.
 
-## <a name="ctor"></a>multi_link_registry
+## <a name="multi_link_registry"></a><a name="ctor"></a>multi_link_registry
 
 Construit un objet `multi_link_registry`.
 
@@ -139,9 +139,9 @@ Construit un objet `multi_link_registry`.
 multi_link_registry();
 ```
 
-## <a name="dtor"></a>~ multi_link_registry
+## <a name="multi_link_registry"></a><a name="dtor"></a>~ multi_link_registry
 
-Détruit l’objet `multi_link_registry`.
+Détruit l' `multi_link_registry` objet.
 
 ```cpp
 virtual ~multi_link_registry();
@@ -151,9 +151,9 @@ virtual ~multi_link_registry();
 
 La méthode lève une exception [invalid_operation](invalid-operation-class.md) si elle est appelée avant la suppression de tous les liens.
 
-## <a name="remove"></a>Installez
+## <a name="remove"></a><a name="remove"></a>Installez
 
-Supprime un lien de l’objet `multi_link_registry`.
+Supprime un lien de l' `multi_link_registry` objet.
 
 ```cpp
 virtual bool remove(_EType _Link);
@@ -166,11 +166,11 @@ Pointeur vers un bloc à supprimer, s’il est trouvé.
 
 ### <a name="return-value"></a>Valeur de retour
 
-**true** si le lien a été trouvé et supprimé ; sinon, **false** .
+**`true`** Si le lien a été trouvé et supprimé ; **`false`** sinon,.
 
-## <a name="set_bound"></a>set_bound
+## <a name="set_bound"></a><a name="set_bound"></a>set_bound
 
-Définit une limite supérieure du nombre de liens que l’objet `multi_link_registry` peut contenir.
+Définit une limite supérieure du nombre de liens que l' `multi_link_registry` objet peut contenir.
 
 ```cpp
 void set_bound(size_t _MaxLinks);
@@ -179,13 +179,13 @@ void set_bound(size_t _MaxLinks);
 ### <a name="parameters"></a>Paramètres
 
 *_MaxLinks*<br/>
-Nombre maximal de liens que l’objet `multi_link_registry` peut contenir.
+Nombre maximal de liens que l' `multi_link_registry` objet peut contenir.
 
 ### <a name="remarks"></a>Notes
 
-Une fois qu’une limite est définie, la dissociation d’une entrée amène l’objet `multi_link_registry` à entrer dans un état immuable où d’autres appels à `add` lèvera une exception `invalid_link_target`.
+Une fois qu’une limite est définie, la dissociation d’une entrée amène l' `multi_link_registry` objet à entrer dans un état immuable où d’autres appels à `add` lèvera une `invalid_link_target` exception.
 
 ## <a name="see-also"></a>Voir aussi
 
-[accès concurrentiel Namespace](concurrency-namespace.md)<br/>
-[single_link_registry, classe](single-link-registry-class.md)
+[Espace de noms d’accès concurrentiel](concurrency-namespace.md)<br/>
+[Classe single_link_registry](single-link-registry-class.md)

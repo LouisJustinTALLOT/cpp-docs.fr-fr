@@ -8,12 +8,12 @@ helpviewer_keywords:
 - pragmas, const_seg
 - const_seg pragma
 ms.assetid: 1eb58ee2-fb0e-4a39-9621-699c8f5ef957
-ms.openlocfilehash: 845583889eb922ba97d145eefe6bca280a83817b
-ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
+ms.openlocfilehash: 04467df1205bd6d4c70687422572aef898d46f68
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/03/2019
-ms.locfileid: "70220433"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87231622"
 ---
 # <a name="const_seg-pragma"></a>const_seg, pragma
 
@@ -21,8 +21,8 @@ Spécifie la section (segment) où les variables [const](../cpp/const-cpp.md) so
 
 ## <a name="syntax"></a>Syntaxe
 
-> **#pragma const_seg (** ["*section-Name*" [ **,** "*section-Class*"]] **)** \
-> **#pragma const_seg (** { **Push** | **pop** } [ **,** *identificateur* ] [ **,** "*section-Name*" [ **,** "*section-Class*"]] **)**
+> **#pragma const_seg (** ["*section-Name*" [ **,** "*section-Class*"]] **)**\
+> **#pragma const_seg (** { **Push**  |  **pop** } [ **,** *identificateur* ] [ **,** "*section-Name*" [ **,** "*section-Class*"]] **)**
 
 ### <a name="parameters"></a>Paramètres
 
@@ -39,21 +39,21 @@ Facultatif En cas d’utilisation avec **Push**, assigne un nom à l’enregistr
 Facultatif Nom d’une section. Lorsqu’elle est utilisée avec **pop**, la pile est dépilée et la *section-Name* devient le nom de la section Const active.
 
 «*section-Class*» \
-Facultatif Ignoré, mais inclus pour la compatibilité avec les versions C++ de Microsoft antérieures à la version 2,0.
+Facultatif Ignoré, mais inclus pour la compatibilité avec les versions de Microsoft C++ antérieures à la version 2,0.
 
 ## <a name="remarks"></a>Notes
 
 Une *section* dans un fichier objet est un bloc de données nommé qui est chargé en mémoire en tant qu’unité. Une *section const* est une section qui contient des données constantes. Dans cet article, les termes *segment* et *section* ont la même signification.
 
-La directive pragma **const_seg** indique au compilateur de placer tous les éléments de données constantes à partir de l’unité de traduction dans une section const nommée *section-Name*. La section par défaut du fichier objet pour les variables **const** est `.rdata`. Certaines variables **const** , telles que les scalaires, sont automatiquement incorporées dans le flux de code. Le code inline n’apparaît pas `.rdata`dans. Une directive pragma **const_seg** sans paramètre *section-Name* réinitialise le nom de la section pour les éléments de données **const** suivants `.rdata`sur.
+La directive **const_seg** pragma indique au compilateur de placer tous les éléments de données constantes à partir de l’unité de traduction dans une section const nommée *section-Name*. La section par défaut du fichier objet pour les **`const`** variables est `.rdata` . Certaines **`const`** variables, telles que les scalaires, sont automatiquement incorporées dans le flux de code. Le code inline n’apparaît pas dans `.rdata` . Une **const_seg** directive pragma sans paramètre de *nom de section* réinitialise le nom de la section pour les **`const`** éléments de données suivants sur `.rdata` .
 
-Si vous définissez un objet qui nécessite une initialisation dynamique dans un `const_seg`, le résultat est un comportement indéfini.
+Si vous définissez un objet qui nécessite une initialisation dynamique dans un `const_seg` , le résultat est un comportement indéfini.
 
 Pour obtenir la liste des noms qui ne doivent pas être utilisés pour créer une section, consultez [/section](../build/reference/section-specify-section-attributes.md).
 
 Vous pouvez également spécifier des sections pour les données initialisées ([data_seg](../preprocessor/data-seg.md)), les données non initialisées ([bss_seg](../preprocessor/bss-seg.md)) et les fonctions ([code_seg](../preprocessor/code-seg.md)).
 
-Vous pouvez utiliser [DUMPBIN. EXE](../build/reference/dumpbin-command-line.md) pour afficher les fichiers objets. Les versions de DUMPBIN pour chaque architecture cible prise en charge sont incluses dans Visual Studio.
+Vous pouvez utiliser l’application [DUMPBIN.EXE](../build/reference/dumpbin-command-line.md) pour afficher les fichiers objets. Les versions de DUMPBIN pour chaque architecture cible prise en charge sont incluses dans Visual Studio.
 
 ## <a name="example"></a>Exemple
 
@@ -93,4 +93,4 @@ test4
 
 ## <a name="see-also"></a>Voir aussi
 
-[Directives pragma et mot clé __Pragma](../preprocessor/pragma-directives-and-the-pragma-keyword.md)
+[Directives Pragma et mot clé __pragma](../preprocessor/pragma-directives-and-the-pragma-keyword.md)

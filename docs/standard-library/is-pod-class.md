@@ -7,14 +7,14 @@ helpviewer_keywords:
 - is_pod class
 - is_pod
 ms.assetid: d73ebdee-746b-4082-9fa4-2db71432eb0e
-ms.openlocfilehash: 1249e9a3689d4b91334e545ba294c28984898035
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: 1398da92890072d8aa8a6f07c61920fe3bee1776
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68455764"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87212239"
 ---
-# <a name="ispod-class"></a>is_pod, classe
+# <a name="is_pod-class"></a>is_pod, classe
 
 Teste si le type est POD.
 
@@ -32,7 +32,7 @@ Type à interroger.
 
 ## <a name="remarks"></a>Notes
 
-`is_pod<T>::value`a la **valeur true** si le type *T* est Plain Old Data (Pod). Dans le cas contraire, la **valeur**est false.
+`is_pod<T>::value`est **`true`** si le type *T* est Plain Old Data (Pod). Dans le cas contraire, il s’agit de **`false`** .
 
 Les types arithmétiques, les types énumération, les types pointeur et les pointeurs vers des types de membres sont des types POD.
 
@@ -94,9 +94,9 @@ is_pod<int> == true
 is_pod<throws> == false
 ```
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
-**En-tête :** \<type_traits>
+**En-tête :**\<type_traits>
 
 **Espace de noms :** std
 

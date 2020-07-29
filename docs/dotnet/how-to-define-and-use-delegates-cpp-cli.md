@@ -1,25 +1,25 @@
 ---
-title: 'Procédure : Définir et utiliser des délégués (C++ / c++ / CLI)'
+title: 'Comment : définir et utiliser des délégués (C++/CLI)'
 ms.date: 11/04/2016
 helpviewer_keywords:
 - delegates
 ms.assetid: 1cdf3420-89c1-47c0-b796-aa984020e0f8
-ms.openlocfilehash: bcbf5bf978da5b6c13dd131e7a19975381bd97a5
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 495ceea6afb222d13953b3a25b7a1c836b299de6
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62387368"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87216399"
 ---
-# <a name="how-to-define-and-use-delegates-ccli"></a>Procédure : Définir et utiliser des délégués (C++ / c++ / CLI)
+# <a name="how-to-define-and-use-delegates-ccli"></a>Comment : définir et utiliser des délégués (C++/CLI)
 
-Cet article explique comment définir et utiliser des délégués en C / c++ / CLI.
+Cet article explique comment définir et utiliser des délégués en C++/CLI.
 
-Bien que le .NET Framework fournit un nombre de délégués, parfois, vous devrez peut-être définir de nouveaux délégués.
+Bien que le .NET Framework fournisse plusieurs délégués, vous pouvez parfois être amené à définir de nouveaux délégués.
 
-L’exemple de code suivant définit un délégué nommé `MyCallback`. Le code de gestion des événements, la fonction est appelée lorsque ce nouveau délégué est déclenché, doit avoir un type de retour `void` et prendre une <xref:System.String> référence.
+L’exemple de code suivant définit un délégué nommé `MyCallback` . Le code de gestion d’événements — la fonction qui est appelée quand ce nouveau délégué est déclenché — doit avoir un type de retour **`void`** et prendre une <xref:System.String> référence.
 
-La fonction principale utilise une méthode statique qui est définie par `SomeClass` pour instancier le `MyCallback` déléguer. Le délégué devient alors une autre méthode d’appel de cette fonction, comme illustré par l’envoi de la chaîne « single » à l’objet de délégué. Ensuite, les autres instances de `MyCallback` sont liées entre elles et ensuite exécutée par un appel à l’objet de délégué.
+La fonction main utilise une méthode statique définie par `SomeClass` pour instancier le `MyCallback` délégué. Le délégué devient alors une autre méthode d’appel à cette fonction, comme illustré par l’envoi de la chaîne « Single » à l’objet délégué. Ensuite, les instances supplémentaires de `MyCallback` sont liées ensemble, puis exécutées par un appel à l’objet délégué.
 
 ```cpp
 // use_delegate.cpp
@@ -113,7 +113,7 @@ test
 
 ## <a name="how-to-compose-delegates"></a>Comment composer des délégués
 
-Vous pouvez utiliser le «`-`» opérateur à supprimer un délégué de composant d’un délégué composé.
+Vous pouvez utiliser l' `-` opérateur «» pour supprimer un délégué de composant d’un délégué composé.
 
 ```cpp
 // mcppv2_compose_delegates.cpp
@@ -167,9 +167,9 @@ Invoking delegate d:
 
 ## <a name="pass-a-delegate-to-a-native-function-that-expects-a-function-pointer"></a>Passer un délégué ^ à une fonction native qui attend un pointeur de fonction
 
-À partir d’un composant managé vous pouvez appeler une fonction native avec fonction de paramètres de pointeur où la fonction native puis permettre appeler la fonction membre de délégué du composant managé.
+À partir d’un composant managé, vous pouvez appeler une fonction native avec des paramètres de pointeur de fonction où la fonction native peut ensuite appeler la fonction membre du délégué du composant managé.
 
-Cet exemple crée le fichier .dll qui exporte la fonction native :
+Cet exemple crée le fichier. dll qui exporte la fonction native :
 
 ```cpp
 // delegate_to_native_function.cpp
@@ -183,7 +183,7 @@ extern "C" {
 }
 ```
 
-L’exemple suivant utilise le fichier .dll et passe un handle de délégué à la fonction native qui attend un pointeur de fonction.
+L’exemple suivant utilise le fichier. dll et passe un handle de délégué à la fonction native qui attend un pointeur de fonction.
 
 ```cpp
 // delegate_to_native_function_2.cpp
@@ -215,9 +215,9 @@ int main() {
 Call to Managed Function
 ```
 
-## <a name="to-associate-delegates-with-unmanaged-functions"></a>Pour associer des délégués avec des fonctions non managées
+## <a name="to-associate-delegates-with-unmanaged-functions"></a>Pour associer des délégués à des fonctions non managées
 
-Pour associer un délégué à une fonction native, vous devez encapsuler la fonction native dans un type managé et déclarez la fonction à appeler via `PInvoke`.
+Pour associer un délégué à une fonction native, vous devez encapsuler la fonction native dans un type managé et déclarer la fonction à appeler via `PInvoke` .
 
 ```cpp
 // mcppv2_del_to_umnangd_func.cpp
@@ -261,17 +261,17 @@ hello
 
 ## <a name="to-use-unbound-delegates"></a>Pour utiliser des délégués indépendants
 
-Vous pouvez utiliser un délégué indépendant pour transmettre une instance du type dont la fonction à appeler lorsque le délégué est appelé.
+Vous pouvez utiliser un délégué indépendant pour passer une instance du type dont vous souhaitez appeler la fonction lorsque le délégué est appelé.
 
-Délégués indépendants sont particulièrement utiles si vous souhaitez effectuer une itération dans les objets dans une collection, à l’aide de [pour chacun, dans](../dotnet/for-each-in.md) mots clés et appeler une fonction de membre sur chaque instance.
+Les délégués indépendants sont particulièrement utiles si vous souhaitez itérer au sein des objets d’une collection (à l’aide [de for each, dans](../dotnet/for-each-in.md) des mots clés) et appeler une fonction membre sur chaque instance.
 
-Voici comment déclarer, instancier et appel liés et indépendants des délégués :
+Voici comment déclarer, instancier et appeler des délégués liés et indépendants :
 
-|Action|Liée de délégués|Délégués indépendants|
+|Action|Délégués liés|Délégués indépendants|
 |------------|---------------------|-----------------------|
-|Déclarer|La signature du délégué doit correspondre à la signature de la fonction que vous souhaitez appeler via le délégué.|Le premier paramètre de la signature du délégué est le type de `this` pour l’objet que vous souhaitez appeler.<br /><br /> Après le premier paramètre, la signature du délégué doit correspondre à la signature de la fonction que vous souhaitez appeler via le délégué.|
-|Instancier|Lorsque vous instanciez un délégué lié, vous pouvez spécifier une fonction d’instance, ou une fonction membre globale ou statique.<br /><br /> Pour spécifier une fonction d’instance, le premier paramètre est une instance du type dont vous souhaitez appeler la fonction membre et le deuxième paramètre est l’adresse de la fonction que vous souhaitez appeler.<br /><br /> Si vous souhaitez appeler une fonction membre globale ou statique, transmettez simplement le nom d’une fonction globale ou le nom de la fonction membre statique.|Lorsque vous instanciez un délégué indépendant, transmettez simplement l’adresse de la fonction que vous souhaitez appeler.|
-|Appel|Lorsque vous appelez un délégué lié, transmettez simplement les paramètres qui sont requis par la signature du délégué.|Identique à une limite déléguer, mais n’oubliez pas que le premier paramètre doit être une instance de l’objet qui contient la fonction que vous souhaitez appeler.|
+|Declare|La signature du délégué doit correspondre à la signature de la fonction que vous souhaitez appeler par le biais du délégué.|Le premier paramètre de la signature du délégué est le type de **`this`** pour l’objet que vous souhaitez appeler.<br /><br /> Après le premier paramètre, la signature du délégué doit correspondre à la signature de la fonction que vous souhaitez appeler par le biais du délégué.|
+|Créées|Quand vous instanciez un délégué lié, vous pouvez spécifier une fonction d’instance, ou une fonction membre globale ou statique.<br /><br /> Pour spécifier une fonction d’instance, le premier paramètre est une instance du type dont vous souhaitez appeler la fonction et le deuxième paramètre est l’adresse de la fonction que vous souhaitez appeler.<br /><br /> Si vous souhaitez appeler une fonction membre globale ou statique, il vous suffit de transmettre le nom d’une fonction globale ou le nom de la fonction membre statique.|Quand vous instanciez un délégué indépendant, il vous suffit de transmettre l’adresse de la fonction que vous souhaitez appeler.|
+|Appeler|Quand vous appelez un délégué lié, il vous suffit de passer les paramètres requis par la signature du délégué.|Identique à un délégué lié, mais n’oubliez pas que le premier paramètre doit être une instance de l’objet qui contient la fonction que vous souhaitez appeler.|
 
 Cet exemple montre comment déclarer, instancier et appeler des délégués indépendants :
 
@@ -351,7 +351,7 @@ int main() {
 7
 ```
 
-L’exemple suivant montre comment utiliser des délégués indépendants et les [pour chacun, dans](../dotnet/for-each-in.md) mots clés pour effectuer une itération dans les objets d’une collection et appeler une fonction de membre sur chaque instance.
+L’exemple suivant montre comment utiliser des délégués indépendants et le [pour chaque, dans](../dotnet/for-each-in.md) les mots clés pour itérer au sein des objets d’une collection et appeler une fonction membre sur chaque instance.
 
 ```cpp
 // unbound_delegates_2.cpp
@@ -383,7 +383,7 @@ int main() {
 }
 ```
 
-Cet exemple crée un délégué indépendant pour les fonctions d’accesseur d’une propriété :
+Cet exemple crée un délégué indépendant aux fonctions d’accesseur d’une propriété :
 
 ```cpp
 // unbound_delegates_3.cpp
@@ -418,7 +418,7 @@ int main() {
 11
 ```
 
-L’exemple suivant montre comment appeler un délégué multicast, où une seule instance est liée et une seule instance est indépendante.
+L’exemple suivant montre comment appeler un délégué multicast, où une instance est liée et qu’une instance est détachée.
 
 ```cpp
 // unbound_delegates_4.cpp
@@ -504,4 +504,4 @@ int main() {
 
 ## <a name="see-also"></a>Voir aussi
 
-[delegate (extensions du composant C++)](../extensions/delegate-cpp-component-extensions.md)
+[delegate (extensions du composant C++)](../extensions/delegate-cpp-component-extensions.md)

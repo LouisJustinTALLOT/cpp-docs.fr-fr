@@ -11,12 +11,12 @@ f1_keywords:
 helpviewer_keywords:
 - IExecutionResource structure
 ms.assetid: 6b27042b-b98c-4f7f-b831-566950af84cd
-ms.openlocfilehash: 4305948aa4e5da36023c1d4fe8b0b84aa4d59e23
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: af6b10d1552770c776762ed195f5efceab30a3d5
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81377312"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87215788"
 ---
 # <a name="iexecutionresource-structure"></a>IExecutionResource, structure
 
@@ -34,14 +34,14 @@ struct IExecutionResource;
 
 |Nom|Description|
 |----------|-----------------|
-|[IExecutionResource::CurrentSubscriptionLevel](#currentsubscriptionlevel)|Retourne le nombre de racines de processeur virtuel activé et les threads externes souscrits actuellement associés au fil matériel sous-jacent que représente cette ressource d’exécution.|
-|[IExecutionResource::GetExecutionResourceId](#getexecutionresourceid)|Retourne un identifiant unique pour le fil matériel que représente cette ressource d’exécution.|
-|[IExecutionResource::GetNodeId](#getnodeid)|Renvoie un identifiant unique pour le nœud processeur auquel appartient cette ressource d’exécution.|
-|[IExecutionResource::Supprimer](#remove)|Retourne cette ressource d’exécution au gestionnaire des ressources.|
+|[IExecutionResource :: CurrentSubscriptionLevel](#currentsubscriptionlevel)|Retourne le nombre de racines de processeur virtuel activées et de threads externes abonnés actuellement associés au thread matériel sous-jacent représenté par cette ressource d’exécution.|
+|[IExecutionResource :: GetExecutionResourceId](#getexecutionresourceid)|Retourne un identificateur unique pour le thread matériel que cette ressource d’exécution représente.|
+|[IExecutionResource :: GetNodeId](#getnodeid)|Retourne un identificateur unique pour le nœud de processeur auquel cette ressource d’exécution appartient.|
+|[IExecutionResource :: Remove](#remove)|Retourne cette ressource d’exécution au Gestionnaire des ressources.|
 
 ## <a name="remarks"></a>Notes
 
-Les ressources d’exécution peuvent être autonomes ou associées aux racines du processeur virtuel. Une ressource d’exécution autonome est créée lorsqu’un thread de votre application crée un abonnement de thread. Les méthodes [ISchedulerProxy::SubscribeThread](ischedulerproxy-structure.md#subscribecurrentthread) et [ISchedulerProxy:::RequestInitialVirtualProcessors](ischedulerproxy-structure.md#requestinitialvirtualprocessors) créer `IExecutionResource` des abonnements de fil, et retourner une interface représentant l’abonnement. La création d’un abonnement de fil est un moyen d’informer le gestionnaire de ressources qu’un thread donné participera au travail en file d’attente à un planificateur, ainsi que le gestionnaire de ressources virtuels racines processeur assigne au planificateur. Le gestionnaire des ressources utilise ces informations pour éviter de sursoumis les threads matériels là où il le peut.
+Les ressources d’exécution peuvent être autonomes ou associées à des racines de processeur virtuel. Une ressource d’exécution autonome est créée lorsqu’un thread de votre application crée un abonnement de thread. Les méthodes [ISchedulerProxy :: SubscribeThread](ischedulerproxy-structure.md#subscribecurrentthread) et [ISchedulerProxy :: RequestInitialVirtualProcessors](ischedulerproxy-structure.md#requestinitialvirtualprocessors) créent des abonnements à des threads, et retournent une `IExecutionResource` interface représentant l’abonnement. La création d’un abonnement de thread est un moyen d’informer le Gestionnaire des ressources qu’un thread donné participera au travail mis en file d’attente dans un planificateur, ainsi que les racines de processeur virtuel Gestionnaire des ressources affectées au planificateur. Le Gestionnaire des ressources utilise les informations pour éviter les threads matériels surabonnant à l’endroit où il peut.
 
 ## <a name="inheritance-hierarchy"></a>Hiérarchie d'héritage
 
@@ -49,13 +49,13 @@ Les ressources d’exécution peuvent être autonomes ou associées aux racines 
 
 ## <a name="requirements"></a>Spécifications
 
-**En-tête:** concrtrm.h
+**En-tête :** concrtrm. h
 
-**Namespace:** concurrence
+**Espace de noms :** concurrence
 
-## <a name="iexecutionresourcecurrentsubscriptionlevel-method"></a><a name="currentsubscriptionlevel"></a>IExecutionResource::CurrentSubscriptionLevel Méthode
+## <a name="iexecutionresourcecurrentsubscriptionlevel-method"></a><a name="currentsubscriptionlevel"></a>IExecutionResource :: CurrentSubscriptionLevel, méthode
 
-Retourne le nombre de racines de processeur virtuel activé et les threads externes souscrits actuellement associés au fil matériel sous-jacent que représente cette ressource d’exécution.
+Retourne le nombre de racines de processeur virtuel activées et de threads externes abonnés actuellement associés au thread matériel sous-jacent représenté par cette ressource d’exécution.
 
 ```cpp
 virtual unsigned int CurrentSubscriptionLevel() const = 0;
@@ -63,21 +63,21 @@ virtual unsigned int CurrentSubscriptionLevel() const = 0;
 
 ### <a name="return-value"></a>Valeur de retour
 
-Le niveau d’abonnement actuel.
+Niveau d’abonnement actuel.
 
 ### <a name="remarks"></a>Notes
 
-Le niveau d’abonnement vous indique le nombre de threads en cours d’exécution associés au fil matériel. Cela ne comprend que les fils que le gestionnaire de ressources est au courant sous la forme de threads abonnés, et les racines du processeur virtuel qui exécutent activement des procurations de thread.
+Le niveau d’abonnement indique le nombre de threads en cours d’exécution associés au thread matériel. Cela comprend uniquement les threads pris en charge par le Gestionnaire des ressources sous la forme de threads abonnés, et les racines de processeur virtuel qui exécutent activement des proxys de thread.
 
-Appel de la méthode [ISchedulerProxy::SubscribeCurrentThread](ischedulerproxy-structure.md#subscribecurrentthread), ou la méthode [ISchedulerProxy::RequestInitialVirtualProcessors](ischedulerproxy-structure.md#requestinitialvirtualprocessors) avec le paramètre `doSubscribeCurrentThread` réglé à la valeur **réelle** incréments le niveau d’abonnement d’un fil matériel par un. Ils retournent `IExecutionResource` également une interface représentant l’abonnement. Un appel correspondant à [l’IExecutionResource: :Supprimer](#remove) décrète le niveau d’abonnement du thread matériel par un.
+L’appel de la méthode [ISchedulerProxy :: SubscribeCurrentThread](ischedulerproxy-structure.md#subscribecurrentthread)ou de la méthode [ISchedulerProxy :: RequestInitialVirtualProcessors](ischedulerproxy-structure.md#requestinitialvirtualprocessors) avec le paramètre `doSubscribeCurrentThread` défini sur la valeur **`true`** incrémente de 1 le niveau d’abonnement d’un thread matériel. Elles retournent également une `IExecutionResource` interface représentant l’abonnement. Un appel correspondant à l' [IExecutionResource :: Remove](#remove) décrémente le niveau d’abonnement du thread matériel d’une unité.
 
-L’acte d’activer une racine de processeur virtuel en utilisant la méthode [IVirtualProcessorRoot::Activer](ivirtualprocessorroot-structure.md#activate) incréments le niveau d’abonnement d’un fil matériel par un. Les méthodes [IVirtualProcessorRoot::Deactivate](ivirtualprocessorroot-structure.md#deactivate), ou [IExecutionResource::Supprimer](#remove) la décroissance du niveau d’abonnement par un lorsqu’il est invoqué sur une racine de processeur virtuel activé.
+Le fait d’activer une racine de processeur virtuel à l’aide de la méthode [IVirtualProcessorRoot :: Activate](ivirtualprocessorroot-structure.md#activate) incrémente le niveau d’abonnement d’un thread matériel d’une unité. Les méthodes [IVirtualProcessorRoot ::D eactivate](ivirtualprocessorroot-structure.md#deactivate)ou [IExecutionResource :: Remove](#remove) décrément le niveau d’abonnement lorsqu’il est appelé sur une racine de processeur virtuel activée.
 
-Le gestionnaire des ressources utilise l’information sur le niveau d’abonnement comme l’une des façons de déterminer quand déplacer les ressources entre les planificateurs.
+L’Gestionnaire des ressources utilise les informations de niveau d’abonnement pour déterminer quand déplacer des ressources entre les planificateurs.
 
-## <a name="iexecutionresourcegetexecutionresourceid-method"></a><a name="getexecutionresourceid"></a>IExecutionResource::GetExecutionResourceId Méthode
+## <a name="iexecutionresourcegetexecutionresourceid-method"></a><a name="getexecutionresourceid"></a>IExecutionResource :: GetExecutionResourceId, méthode
 
-Retourne un identifiant unique pour le fil matériel que représente cette ressource d’exécution.
+Retourne un identificateur unique pour le thread matériel que cette ressource d’exécution représente.
 
 ```cpp
 virtual unsigned int GetExecutionResourceId() const = 0;
@@ -85,15 +85,15 @@ virtual unsigned int GetExecutionResourceId() const = 0;
 
 ### <a name="return-value"></a>Valeur de retour
 
-Un identifiant unique pour le fil matériel sous-jacent à cette ressource d’exécution.
+Identificateur unique pour le thread matériel sous-jacent à cette ressource d’exécution.
 
 ### <a name="remarks"></a>Notes
 
-Chaque thread matériel se voit attribuer un identifiant unique par le Concurrency Runtime. Si plusieurs ressources d’exécution sont associées au fil matériel, elles auront toutes le même identifiant de ressource d’exécution.
+Un identificateur unique est attribué à chaque thread matériel par le runtime d’accès concurrentiel. Si plusieurs ressources d’exécution sont associées à un thread matériel, elles ont toutes le même identificateur de ressource d’exécution.
 
-## <a name="iexecutionresourcegetnodeid-method"></a><a name="getnodeid"></a>IExecutionResource::GetNodeId Méthode
+## <a name="iexecutionresourcegetnodeid-method"></a><a name="getnodeid"></a>IExecutionResource :: GetNodeId, méthode
 
-Renvoie un identifiant unique pour le nœud processeur auquel appartient cette ressource d’exécution.
+Retourne un identificateur unique pour le nœud de processeur auquel cette ressource d’exécution appartient.
 
 ```cpp
 virtual unsigned int GetNodeId() const = 0;
@@ -101,17 +101,17 @@ virtual unsigned int GetNodeId() const = 0;
 
 ### <a name="return-value"></a>Valeur de retour
 
-Un identifiant unique pour un nœud processeur.
+Identificateur unique pour un nœud de processeur.
 
 ### <a name="remarks"></a>Notes
 
-Le Concurrency Runtime représente des fils matériels sur le système en groupes de nœuds de processeur. Les nœuds sont généralement dérivés de la topologie matérielle du système. Par exemple, tous les processeurs sur une prise spécifique ou un nœud NUMA spécifique peuvent appartenir au même nœud de processeur. Le gestionnaire de ressources attribue des identifiants `0` uniques à `nodeCount - 1`ces `nodeCount` nœuds en commençant par jusqu’à et y compris, où représente le nombre total de nœuds processeur sur le système.
+Le runtime d’accès concurrentiel représente les threads matériels sur le système dans des groupes de nœuds de processeur. Les nœuds sont généralement dérivés de la topologie matérielle du système. Par exemple, tous les processeurs sur un socket spécifique ou un nœud NUMA spécifique peuvent appartenir au même nœud de processeur. Le Gestionnaire des ressources assigne des identificateurs uniques à ces nœuds à partir de `0` jusqu’à et y compris `nodeCount - 1` , où `nodeCount` représente le nombre total de nœuds de processeur sur le système.
 
-Le nombre de nœuds peut être obtenu à partir de la fonction [GetProcessorNodeCount](concurrency-namespace-functions.md).
+Le nombre de nœuds peut être obtenu à partir de la fonction [GetProcessorNodeCount,](concurrency-namespace-functions.md).
 
-## <a name="iexecutionresourceremove-method"></a><a name="remove"></a>IExecutionResource::Supprimer la méthode
+## <a name="iexecutionresourceremove-method"></a><a name="remove"></a>IExecutionResource :: Remove, méthode
 
-Retourne cette ressource d’exécution au gestionnaire des ressources.
+Retourne cette ressource d’exécution au Gestionnaire des ressources.
 
 ```cpp
 virtual void Remove(_Inout_ IScheduler* pScheduler) = 0;
@@ -120,21 +120,21 @@ virtual void Remove(_Inout_ IScheduler* pScheduler) = 0;
 ### <a name="parameters"></a>Paramètres
 
 *pScheduler*<br/>
-Une interface avec le planificateur qui fait la demande de suppression de cette ressource d’exécution.
+Interface au planificateur qui demande la suppression de cette ressource d’exécution.
 
 ### <a name="remarks"></a>Notes
 
-Utilisez cette méthode pour remettre aux ressources d’exécution autonomes ainsi qu’aux ressources d’exécution associées aux racines virtuelles du processeur au gestionnaire de ressources.
+Utilisez cette méthode pour retourner des ressources d’exécution autonomes ainsi que des ressources d’exécution associées à des racines de processeur virtuel à la Gestionnaire des ressources.
 
-S’il s’agit d’une ressource d’exécution autonome que vous avez reçue de l’une ou l’autre des méthodes [ISchedulerProxy::SubscribeCurrentThread](ischedulerproxy-structure.md#subscribecurrentthread) ou [ISchedulerProxy::RequestInitialVirtualProcessors](ischedulerproxy-structure.md#requestinitialvirtualprocessors), appelant la méthode `Remove` mettra fin à l’abonnement de fil que la ressource a été créée pour représenter. Vous devez mettre fin à tous les abonnements de thread `Remove` avant d’arrêter un proxy de planificateur, et devez appeler à partir du thread qui a créé l’abonnement.
+S’il s’agit d’une ressource d’exécution autonome que vous avez reçue de l’une des méthodes [ISchedulerProxy :: SubscribeCurrentThread](ischedulerproxy-structure.md#subscribecurrentthread) ou [ISchedulerProxy :: RequestInitialVirtualProcessors](ischedulerproxy-structure.md#requestinitialvirtualprocessors), l’appel de la méthode `Remove` met fin à l’abonnement de thread que la ressource a créé pour représenter. Vous devez mettre fin à tous les abonnements de thread avant d’arrêter un proxy de planificateur et appeler `Remove` à partir du thread qui a créé l’abonnement.
 
-Les racines du processeur virtuel peuvent également être retournées `Remove` au gestionnaire `IVirtualProcessorRoot` des ressources `IExecutionResource` en invoquant la méthode, car l’interface hérite de l’interface. Vous devrez peut-être retourner une racine de processeur virtuel soit en réponse à un appel à la méthode [IScheduler::RemoveVirtualProcessors](ischeduler-structure.md#removevirtualprocessors) méthode, ou lorsque vous avez terminé avec une racine de processeur virtuel sursouscrit que vous avez obtenu de la méthode [ISchedulerProxy::CreateOversubscriber](ischedulerproxy-structure.md#createoversubscriber) méthode. Pour les racines de processeur virtuel, il `Remove` n’y a aucune restriction sur laquelle le thread peut invoquer la méthode.
+Les racines de processeur virtuel, également, peuvent être retournées à la Gestionnaire des ressources en appelant la `Remove` méthode, car l’interface `IVirtualProcessorRoot` hérite de l' `IExecutionResource` interface. Vous devrez peut-être retourner une racine de processeur virtuel soit en réponse à un appel à la méthode [iScheduler :: RemoveVirtualProcessors](ischeduler-structure.md#removevirtualprocessors) , soit lorsque vous avez terminé avec une racine de processeur virtuel surabonnée que vous avez obtenue à partir de la méthode [ISchedulerProxy :: CreateOversubscriber](ischedulerproxy-structure.md#createoversubscriber) . Pour les racines de processeur virtuel, il n’existe aucune restriction sur le thread qui peut appeler la `Remove` méthode.
 
-`invalid_argument`est jeté si `pScheduler` le `NULL`paramètre est réglé à .
+`invalid_argument`est levée si le paramètre `pScheduler` a la valeur `NULL` .
 
-`invalid_operation`est jeté si `pScheduler` le paramètre est différent de l’planificateur que cette ressource d’exécution a été créé pour, ou, avec une ressource d’exécution autonome, si le thread actuel est différent du thread qui a créé l’abonnement de fil.
+`invalid_operation`est levée si le paramètre `pScheduler` est différent du planificateur pour lequel cette ressource d’exécution a été créée, ou avec une ressource d’exécution autonome, si le thread actuel est différent du thread qui a créé l’abonnement de thread.
 
 ## <a name="see-also"></a>Voir aussi
 
-[accès concurrentiel Namespace](concurrency-namespace.md)<br/>
+[Espace de noms d’accès concurrentiel](concurrency-namespace.md)<br/>
 [IVirtualProcessorRoot, structure](ivirtualprocessorroot-structure.md)

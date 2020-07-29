@@ -2,12 +2,12 @@
 title: Vue d’ensemble des problèmes de mise à niveau potentiels (Visual C++)
 ms.date: 05/03/2019
 ms.assetid: 2c99a8cb-098f-4a9d-bf2c-b80fd06ace43
-ms.openlocfilehash: e42762d4b47931f21536146cd0146b2749c52cf9
-ms.sourcegitcommit: 6b3d793f0ef3bbb7eefaf9f372ba570fdfe61199
+ms.openlocfilehash: fcfa8e8ea334cf7c2486513ae162b04014e7f24b
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2020
-ms.locfileid: "86404819"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87231635"
 ---
 # <a name="overview-of-potential-upgrade-issues-visual-c"></a>Vue d’ensemble des problèmes de mise à niveau potentiels (Visual C++)
 
@@ -88,7 +88,7 @@ dumpbin.exe /LINKERMEMBER somelibrary.lib
 
 ### <a name="zcwchar_t-wchar_t-is-native-type"></a>/Zc:wchar_t (wchar_t est un type natif)
 
-(Dans Microsoft Visual C++ 6,0 et versions antérieures, **wchar_t** n’a pas été implémenté en tant que type intégré, mais a été déclaré dans WCHAR. h comme typedef pour unsigned short.) La norme C++ requiert que **wchar_t** soit un type intégré. L’utilisation de la version typedef peut entraîner des problèmes de portabilité. Si vous effectuez une mise à niveau à partir de versions antérieures de Visual Studio et si vous rencontrez l’erreur de compilateur C2664, car le code essaie de convertir implicitement **wchar_t** en **unsigned short**, nous vous recommandons de changer le code pour corriger cette erreur, au lieu de définir `/Zc:wchar_t-`. Pour plus d’informations, consultez [/Zc:wchar_t (wchar_t est un type natif)](../build/reference/zc-wchar-t-wchar-t-is-native-type.md).
+(Dans Microsoft Visual C++ 6,0 et versions antérieures, **`wchar_t`** n’a pas été implémenté en tant que type intégré, mais a été déclaré dans WCHAR. h comme typedef pour unsigned short.) La norme C++ nécessite que **`wchar_t`** soit un type intégré. L’utilisation de la version typedef peut entraîner des problèmes de portabilité. Si vous effectuez une mise à niveau à partir de versions antérieures de Visual Studio et que vous rencontrez une erreur du compilateur C2664, car le code tente de convertir implicitement un **`wchar_t`** en **`unsigned short`** , nous vous recommandons de modifier le code pour corriger l’erreur, au lieu de définir `/Zc:wchar_t-` . Pour plus d’informations, consultez [/Zc:wchar_t (wchar_t est un type natif)](../build/reference/zc-wchar-t-wchar-t-is-native-type.md).
 
 ### <a name="upgrading-with-the-linker-options-nodefaultlib-entry-and-noentry"></a>Mise à niveau avec les options de l’éditeur de liens /NODEFAULTLIB, /ENTRY et /NOENTRY
 

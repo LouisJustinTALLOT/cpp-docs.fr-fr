@@ -6,17 +6,17 @@ f1_keywords:
 helpviewer_keywords:
 - C2696
 ms.assetid: 6c6eb7df-1230-4346-9a73-abf14c20785d
-ms.openlocfilehash: 340a5d0596160b6c9c7bcfc78aed812f8c5f3fa3
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: f6af217dbcd871ac4edd1852042144802388545b
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62367601"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87216087"
 ---
 # <a name="compiler-error-c2696"></a>Erreur du compilateur C2696
 
-Impossible de créer un objet temporaire d’un type managé 'type'
+Impossible de créer un objet temporaire d’un type managé’type'
 
-Références à `const` dans un programme non managé contraindre le compilateur à appeler le constructeur et créer un objet temporaire sur la pile. Toutefois, une classe managée ne peut jamais être créée sur la pile.
+Les références à **`const`** dans un programme non managé provoquent l’appel du constructeur par le compilateur et la création d’un objet temporaire sur la pile. Toutefois, une classe managée ne peut jamais être créée sur la pile.
 
-C2696 est uniquement accessible à l’aide de l’option de compilateur obsolète **/CLR : oldSyntax**.
+C2696 est accessible uniquement à l’aide de l’option de compilateur obsolète **/clr : oldSyntax**.

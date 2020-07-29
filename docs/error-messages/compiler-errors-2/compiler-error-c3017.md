@@ -6,18 +6,18 @@ f1_keywords:
 helpviewer_keywords:
 - C3017
 ms.assetid: 12ab2c2a-d0d2-4900-9cbf-39be0af590dd
-ms.openlocfilehash: af3f24a1a814fa79fa63b7e5bee204083006c9a2
-ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
+ms.openlocfilehash: 34347abffd91246ada080d19fee88ee09c8fce99
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/03/2019
-ms.locfileid: "74749738"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87232064"
 ---
 # <a name="compiler-error-c3017"></a>Erreur du compilateur C3017
 
 forme incorrecte du test de fin dans l'instruction 'for' OpenMP
 
-Une boucle `for` dans une instruction OpenMP doit être spécifiée complètement et explicitement.
+Une **`for`** boucle dans une instruction OpenMP doit être spécifiée de manière explicite et complète.
 
 L’exemple suivant génère l’erreur C3017 :
 

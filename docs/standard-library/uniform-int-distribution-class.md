@@ -26,12 +26,12 @@ helpviewer_keywords:
 - std::uniform_int_distribution [C++], param_type
 - std::uniform_int_distribution [C++], param_type
 ms.assetid: a1867dcd-3bd9-4787-afe3-4b62692c1d04
-ms.openlocfilehash: 44121b6791d06768e51f425fc322ef78045fc0e7
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 2e5d63268413912931c61037f6665d2ceea8f372
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81367282"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87212046"
 ---
 # <a name="uniform_int_distribution-class"></a>uniform_int_distribution, classe
 
@@ -71,12 +71,12 @@ public:
 
 ### <a name="parameters"></a>Paramètres
 
-*IntType (IntType)*\
-Le type de résultat integer, par défaut à **int**. Pour les types [ \< ](../standard-library/random.md)possibles, voir>aléatoire .
+*IntType*\
+Le type de résultat entier est par défaut **`int`** . Pour connaître les types possibles, consultez [\<random>](../standard-library/random.md) .
 
 ## <a name="remarks"></a>Notes
 
-Le modèle de classe décrit une distribution inclusive et inclusive qui produit des valeurs d’un type intégral spécifié par l’utilisateur avec une distribution de sorte que chaque valeur est tout aussi probable. Le tableau suivant contient des liens vers des articles sur différents membres.
+Le modèle de classe décrit une distribution inclusive qui produit des valeurs d’un type intégral spécifié par l’utilisateur avec une distribution afin que chaque valeur soit également probable. Le tableau suivant contient des liens vers des articles sur différents membres.
 
 ||||
 |-|-|-|
@@ -93,7 +93,7 @@ La fonction membre `reset()` ignore toutes les valeurs mises en cache. Ainsi, le
 
 Les fonctions membres `operator()` retournent la valeur générée suivante d’après le moteur URNG, à partir du package de paramètres actuel ou spécifié.
 
-Pour plus d’informations sur les [ \< ](../standard-library/random.md)classes de distribution et leurs membres, voir>aléatoire .
+Pour plus d’informations sur les classes de distribution et leurs membres, consultez [\<random>](../standard-library/random.md) .
 
 ## <a name="example"></a>Exemple
 
@@ -175,11 +175,11 @@ Distribution for 200 samples:
 
 ## <a name="requirements"></a>Spécifications
 
-**En-tête :** \<random>
+**En-tête :**\<random>
 
 **Espace de noms :** std
 
-## <a name="uniform_int_distributionuniform_int_distribution"></a><a name="uniform_int_distribution"></a>uniform_int_distribution::uniform_int_distribution
+## <a name="uniform_int_distributionuniform_int_distribution"></a><a name="uniform_int_distribution"></a>uniform_int_distribution :: uniform_int_distribution
 
 Construit la distribution.
 
@@ -191,10 +191,10 @@ explicit uniform_int_distribution(const param_type& parm);
 
 ### <a name="parameters"></a>Paramètres
 
-*Un*\
+*un*\
 Limite inférieure pour les valeurs aléatoires, valeur comprise.
 
-*B*\
+*p*\
 Limite supérieure pour les valeurs aléatoires, valeur comprise.
 
 *Parm*\
@@ -202,13 +202,13 @@ Structure `param_type` utilisée pour construire la distribution.
 
 ### <a name="remarks"></a>Notes
 
-**Condition préalable :**`a ≤ b`
+**Condition préalable :**`a ≤ b`
 
-Le premier constructeur construit un objet dont *la* valeur stockée détient la valeur *a* et dont la valeur *b* stockée détient la valeur *b*.
+Le premier constructeur construit un objet dont la valeur *stockée* contient la valeur *a* et dont la valeur *b* stockée contient la valeur *b*.
 
 Le deuxième constructeur construit un objet dont les paramètres stockés sont initialisés à partir de *parm*. Vous pouvez obtenir et définir les paramètres actuels d'une distribution existante en appelant la fonction membre `param()`.
 
-## <a name="uniform_int_distributionparam_type"></a><a name="param_type"></a>uniform_int_distribution::param-type
+## <a name="uniform_int_distributionparam_type"></a><a name="param_type"></a>uniform_int_distribution ::p aram_type
 
 Stocke les paramètres de la distribution.
 
@@ -227,10 +227,10 @@ struct param_type {
 
 ### <a name="parameters"></a>Paramètres
 
-*Un*\
+*un*\
 Limite inférieure pour les valeurs aléatoires, valeur comprise.
 
-*B*\
+*p*\
 Limite supérieure pour les valeurs aléatoires, valeur comprise.
 
 *Oui*\
@@ -238,10 +238,10 @@ Objet `param_type` à comparer à this.
 
 ### <a name="remarks"></a>Notes
 
-**Condition préalable :**`a ≤ b`
+**Condition préalable :**`a ≤ b`
 
 Cette structure peut être passée au constructeur de classe de la distribution au moment de l'instanciation, à la fonction membre `param()` pour définir les paramètres stockés d'une distribution existante et à `operator()` pour une utilisation à la place des paramètres stockés.
 
 ## <a name="see-also"></a>Voir aussi
 
-[\<>aléatoires](../standard-library/random.md)
+[\<random>](../standard-library/random.md)

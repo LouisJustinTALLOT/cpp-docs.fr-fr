@@ -1,17 +1,17 @@
 ---
-title: switch_type (C++ attribut com)
+title: switch_type (attribut COM C++)
 ms.date: 10/02/2018
 f1_keywords:
 - vc-attr.switch_type
 helpviewer_keywords:
 - switch_type attribute
 ms.assetid: e24544dc-b3bc-48ae-b249-f967db49271e
-ms.openlocfilehash: b4264681a55f45c8a4a2696e8cebbbd0eb12a4ed
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: 13ea76e1153e1a42fd41fe0c087a7c7f15416760
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80214524"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87211929"
 ---
 # <a name="switch_type"></a>switch_type
 
@@ -32,9 +32,9 @@ Le type de commutateur peut être un type entier, caractère, booléen ou énum�
 
 ## <a name="remarks"></a>Notes
 
-L’attribut **switch_type** C++ a les mêmes fonctionnalités que l’attribut MIDL [switch_type](/windows/win32/Midl/switch-type) .
+L’attribut C++ **switch_type** a les mêmes fonctionnalités que l’attribut MIDL [switch_type](/windows/win32/Midl/switch-type) .
 
-C++les attributs ne prennent pas en charge les [unions encapsulées](/windows/win32/Midl/encapsulated-unions). Les unions qui ne sont pas [encapsulées](/windows/win32/Midl/nonencapsulated-unions) sont prises en charge uniquement sous la forme suivante :
+Les attributs C++ ne prennent pas en charge les [unions encapsulées](/windows/win32/Midl/encapsulated-unions). Les unions qui ne sont pas [encapsulées](/windows/win32/Midl/nonencapsulated-unions) sont prises en charge uniquement sous la forme suivante :
 
 ```cpp
 // cpp_attr_ref_switch_type.cpp
@@ -63,8 +63,8 @@ Pour obtenir un exemple d’utilisation de **switch_type**, consultez l’exempl
 
 |||
 |-|-|
-|**S'applique à**|**typedef**|
-|**Renouvelable**|Non|
+|**S’applique à**|**`typedef`**|
+|**Repeatable Read**|Non|
 |**Attributs requis**|None|
 |**Attributs non valides**|None|
 
@@ -73,5 +73,5 @@ Pour plus d'informations sur les contextes d'attribut, consultez [Contextes d'at
 ## <a name="see-also"></a>Voir aussi
 
 [Attributs IDL](idl-attributes.md)<br/>
-[Attributs Typedef, Enum, Union et Struct](typedef-enum-union-and-struct-attributes.md)<br/>
-[export](export.md)
+[Attributs typedef, enum, Union et struct](typedef-enum-union-and-struct-attributes.md)<br/>
+[exporter](export.md)

@@ -11,12 +11,12 @@ helpviewer_keywords:
 - incompatible iterators
 - debug iterator support
 ms.assetid: f3f5bd15-4be8-4d64-a4d0-8bc0761c68b6
-ms.openlocfilehash: f43367fd58d8ab2a62fb2312efcd9fc9ec0cfc42
-ms.sourcegitcommit: 7bea0420d0e476287641edeb33a9d5689a98cb98
+ms.openlocfilehash: a5773add9a26d647df6678ffa4f2681b73cff44f
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 02/17/2020
-ms.locfileid: "77416203"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87231583"
 ---
 # <a name="debug-iterator-support"></a>Debug Iterator Support
 
@@ -126,11 +126,11 @@ int main()
 }
 ```
 
-Notez que cet exemple utilise l’expression lambda `[] (int& elem) { elem *= 2; }` au lieu d’un foncteur. Bien que ce choix n’ait aucune incidence sur l’échec de l’assertion (un foncteur similaire entraîne un échec de la même façon), les expressions lambda sont un moyen très utile d’accomplir des tâches d’objet de fonction compact. Pour plus d’informations sur les expressions lambda, consultez [Expressions Lambda](../cpp/lambda-expressions-in-cpp.md).
+Notez que cet exemple utilise l’expression lambda `[] (int& elem) { elem *= 2; }` au lieu d’un foncteur. Bien que ce choix n’ait aucune incidence sur l’échec de l’assertion (un foncteur similaire entraîne un échec de la même façon), les expressions lambda sont un moyen très utile d’accomplir des tâches d’objet de fonction compact. Pour plus d’informations sur les expressions lambda, consultez [expressions lambda](../cpp/lambda-expressions-in-cpp.md).
 
 ## <a name="iterators-going-out-of-scope"></a>Itérateurs hors de portée
 
-Les contrôles d’itérateur de débogage entraînent également la non-portée d’une variable d’itérateur déclarée dans une boucle **for** lorsque l’étendue de la boucle **for** se termine.
+Les contrôles d’itérateur de débogage entraînent également la non-portée d’une variable d’itérateur déclarée dans une **`for`** boucle lorsque l’étendue de la **`for`** boucle se termine.
 
 ```cpp
 // iterator_debugging_4.cpp

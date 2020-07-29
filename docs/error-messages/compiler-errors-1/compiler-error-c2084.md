@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C2084
 ms.assetid: 990b107f-3721-4851-ae8b-4b69a8c149ed
-ms.openlocfilehash: 881ae051b2779fe674b31b64a7cbe7be7cf63705
-ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
+ms.openlocfilehash: f217e0b94e27c0f85879e80b3ae887cb4f76f486
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/03/2019
-ms.locfileid: "74757889"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87216360"
 ---
 # <a name="compiler-error-c2084"></a>Erreur du compilateur C2084
 
@@ -23,7 +23,7 @@ Avant Visual Studio 2002,
 
 - Le compilateur accepte plusieurs spécialisations de modèle qui se sont résolues vers le même type réel, bien que les définitions supplémentaires ne soient jamais disponibles. Le compilateur détecte maintenant ces plusieurs définitions.
 
-- `__int32` et `int` ont été traités comme des types distincts. Le compilateur traite désormais `__int32` comme synonyme de `int`. Cela signifie que le compilateur détecte plusieurs définitions si une fonction est surchargée à la fois sur `__int32` et `int` et génère une erreur.
+- **`__int32`** et **`int`** ont été traités comme des types distincts. Le compilateur traite désormais **`__int32`** comme synonyme de **`int`** . Cela signifie que le compilateur détecte plusieurs définitions si une fonction est surchargée à la fois sur **`__int32`** et **`int`** et génère une erreur.
 
 ## <a name="example"></a>Exemple
 

@@ -7,12 +7,12 @@ helpviewer_keywords:
 - C++ Accelerated Massive Parallelism, debugging
 - debugging, C++ AMP
 ms.assetid: 40e92ecc-f6ba-411c-960c-b3047b854fb5
-ms.openlocfilehash: 6eb93d617ac9909a67719b144a44ed461701225e
-ms.sourcegitcommit: 6b3d793f0ef3bbb7eefaf9f372ba570fdfe61199
+ms.openlocfilehash: 031fb3837dbefe500eb33f9509f3270204d19b89
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2020
-ms.locfileid: "86404715"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87215879"
 ---
 # <a name="walkthrough-debugging-a-c-amp-application"></a>Procédure pas-à-pas : débogage d’une application C++ AMP
 
@@ -215,7 +215,7 @@ Les instructions de création d’un projet varient en fonction de la version de
 
 ## <a name="debugging-the-cpu-code"></a>Débogage du code UC
 
-Dans cette procédure, vous allez utiliser le débogueur Windows local pour vous assurer que le code de l’UC dans cette application est correct. Le segment du code UC de cette application qui est particulièrement intéressant est la `for` boucle dans la `reduction_sum_gpu_kernel` fonction. Il contrôle la réduction parallèle basée sur l’arborescence qui est exécutée sur le GPU.
+Dans cette procédure, vous allez utiliser le débogueur Windows local pour vous assurer que le code de l’UC dans cette application est correct. Le segment du code UC de cette application qui est particulièrement intéressant est la **`for`** boucle dans la `reduction_sum_gpu_kernel` fonction. Il contrôle la réduction parallèle basée sur l’arborescence qui est exécutée sur le GPU.
 
 ### <a name="to-debug-the-cpu-code"></a>Pour déboguer le code UC
 

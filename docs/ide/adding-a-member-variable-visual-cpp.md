@@ -12,12 +12,12 @@ helpviewer_keywords:
 - dialog box controls, variable types
 - variables, dialog box control member variables
 ms.assetid: 437783bd-8eb4-4508-8b73-7380116e9d71
-ms.openlocfilehash: 0f10b4867b443f0db69743d7ff23bb059290b0a5
-ms.sourcegitcommit: c1f646c8b72f330fa8cf5ddb0f8f261ba10d16f0
-ms.translationtype: HT
+ms.openlocfilehash: a8f693345fcb265cf8e97af342c6e0cd539c9001
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
+ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/21/2019
-ms.locfileid: "58328959"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87215996"
 ---
 # <a name="add-a-member-variable"></a>Ajouter une variable membre
 
@@ -55,7 +55,7 @@ Vous pouvez ajouter une variable membre à une classe à l’aide d’Affichage 
 
 1. Sélectionnez **Terminer** pour ajouter la définition et le code d’implémentation au projet et fermer l’Assistant.
 
-## <a name="in-this-section"></a>Dans cette section
+## <a name="in-this-section"></a>Contenu de cette section
 
 - [Assistant Ajout de variable membre](#add-member-variable-wizard)
 - [Contrôles de boîtes de dialogue et types de variables](#dialog-box-controls-and-variable-types)
@@ -64,13 +64,13 @@ Vous pouvez ajouter une variable membre à une classe à l’aide d’Affichage 
 
 Cet Assistant ajoute une déclaration de variable membre au fichier d’en-tête. En fonction des options, elle peut ajouter le code au fichier .cpp. Une fois que vous avez ajouté la variable membre avec l’Assistant, vous pouvez modifier le code dans l’environnement de développement.
 
-- **Accès**
+- **y accéder**
 
-  Définit l’accès à la variable membre. Les modificateurs d’accès sont des mots clés spécifiant l’accès des autres classes à la variable membre. Pour plus d’informations sur la spécification de l’accès, consultez [Contrôle d’accès aux membres](../cpp/member-access-control-cpp.md). Le niveau d’accès à la variable membre est défini par défaut sur `public`.
+  Définit l’accès à la variable membre. Les modificateurs d’accès sont des mots clés spécifiant l’accès des autres classes à la variable membre. Pour plus d’informations sur la spécification de l’accès, consultez [contrôle d’accès aux membres](../cpp/member-access-control-cpp.md). Par défaut, le niveau d’accès à la variable membre est défini sur **`public`** .
 
   - [public](../cpp/public-cpp.md)
   - [protected](../cpp/protected-cpp.md)
-  - [private](../cpp/private-cpp.md)
+  - [priv](../cpp/private-cpp.md)
 
 - **Type de variable**
 
@@ -78,15 +78,15 @@ Cet Assistant ajoute une déclaration de variable membre au fichier d’en-tête
 
   - Si vous ajoutez une variable membre qui n’est pas un contrôle de boîte de dialogue, sélectionnez dans la liste des types disponibles.
 
-    Pour plus d’informations sur les types, consultez [Types fondamentaux](../cpp/fundamental-types-cpp.md).
+    Pour plus d’informations sur les types, consultez [types fondamentaux](../cpp/fundamental-types-cpp.md).
 
     |||
     |-|-|
-    |`char`|`short`|
-    |`double`|`unsigned char`|
-    |`float`|`unsigned int`|
-    |`int`|`unsigned long`|
-    |`long`||
+    |**`char`**|**`short`**|
+    |**`double`**|**`unsigned char`**|
+    |**`float`**|**`unsigned int`**|
+    |**`int`**|**`unsigned long`**|
+    |**`long`**||
 
   - Si vous ajoutez une variable membre pour un contrôle de boîte de dialogue, cette zone est renseignée avec le type de l’objet retourné pour un contrôle ou une valeur. Si vous sélectionnez **Contrôle**, **Type de variable** spécifie la classe de base du contrôle que vous sélectionnez dans la zone **ID de contrôle**. Si le contrôle de boîte de dialogue peut contenir une valeur et si vous sélectionnez **Valeur**, **Type de variable** spécifie le type approprié pour la valeur que le contrôle peut contenir. Pour plus d’informations, consultez [Contrôles de boîtes de dialogue et types de variables](#dialog-box-controls-and-variable-types).
 
@@ -123,11 +123,11 @@ Cet Assistant ajoute une déclaration de variable membre au fichier d’en-tête
 
 - **Valeur minimale**
 
-  Disponible uniquement quand le type de variable est `BOOL`, `int`, `UINT`, `long`, `DWORD`, `float`, `double`, `BYTE`, `short`, [COLECurrency](../mfc/reference/colecurrency-class.md) ou [CTime](../atl-mfc-shared/reference/ctime-class.md). Indique la plus petite valeur acceptable pour une plage de mise à l’échelle ou de dates.
+  Disponible uniquement lorsque le type de variable est `BOOL` , **`int`** , `UINT` , **`long`** , `DWORD` , **`float`** , **`double`** , `BYTE` , **`short`** , [COleCurrency](../mfc/reference/colecurrency-class.md) ou [ctime](../atl-mfc-shared/reference/ctime-class.md). Indique la plus petite valeur acceptable pour une plage de mise à l’échelle ou de dates.
 
 - **Valeur maximale**
 
-  Disponible uniquement quand le type de variable est `BOOL`, `int`, `UINT`, `long`, `DWORD`, `float`, `double`, `BYTE`, `short`, `COLECurrency` ou `CTime`. Indique la plus haute valeur acceptable pour une plage de mise à l’échelle ou de dates.
+  Disponible uniquement lorsque le type de variable est `BOOL` , **`int`** , `UINT` , **`long`** , `DWORD` , **`float`** , **`double`** ,,, `BYTE` **`short`** `COLECurrency` ou `CTime` . Indique la plus haute valeur acceptable pour une plage de mise à l’échelle ou de dates.
 
 - **Fichier .h**
 
@@ -147,12 +147,12 @@ Vous pouvez utiliser l’[Assistant Ajout de variable membre](#add-member-variab
 
 Le tableau suivant décrit tous les types de contrôles de boîtes de dialogue pris en charge dans MFC et dans l’[Éditeur de boîtes de dialogue](../windows/dialog-editor.md). Il montre également leurs types et valeurs disponibles.
 
-|Contrôle|Type de contrôle|Type de variable de contrôle|Type de variable de valeur|Valeurs min/max (type valeur uniquement)|
+|Control|Type de contrôle|Type de variable de contrôle|Type de variable de valeur|Valeurs min/max (type valeur uniquement)|
 |-------------|------------------|---------------------------|-------------------------|-----------------------------------------|
 |Contrôle Animation|SysAnimate32|[CAnimateCtrl](../mfc/reference/canimatectrl-class.md)|Aucun ; contrôle uniquement|N/A|
 |Bouton|BUTTON|[CButton](../mfc/reference/cbutton-class.md)|Aucun ; contrôle uniquement|N/A|
 |Case à cocher|CHECK|[CButton](../mfc/reference/cbutton-class.md)|`BOOL`|Valeur min/Valeur max|
-|Zone de liste modifiable|COMBOBOX|[CComboBox](../mfc/reference/ccombobox-class.md)|[CString](../atl-mfc-shared/reference/cstringt-class.md)|Nombre maximal de caractères|
+|Combo box|COMBOBOX|[CComboBox](../mfc/reference/ccombobox-class.md)|[CString](../atl-mfc-shared/reference/cstringt-class.md)|Nombre maximal de caractères|
 |Contrôle Sélecteur de date et d’heure|SysDateTimePick32|[CDateTimeCtrl](../mfc/reference/cdatetimectrl-class.md)|[CTime](../atl-mfc-shared/reference/ctime-class.md)|Valeur min/Valeur max|
 |Zone d’édition|EDITION|[CEdit](../mfc/reference/cedit-class.md)|`CString`, int, UINT, long, DWORD, float, double, BYTE, short, BOOL, `COleDateTime` ou `COleCurrency`|Valeur min/Valeur max ; certaines prennent en charge le nombre maximal de caractères|
 |Contrôle de touche d’accès rapide|msctls_hotkey32|[CHotKeyCtrl](../mfc/reference/chotkeyctrl-class.md)|Aucun ; contrôle uniquement|N/A|
@@ -162,8 +162,8 @@ Le tableau suivant décrit tous les types de contrôles de boîtes de dialogue p
 |Contrôle Progress|msctls_progress32|[CProgressCtrl](../mfc/reference/cprogressctrl-class.md)|Aucun ; contrôle uniquement|N/A|
 |Contrôle RichEdit 2|RichEdit20A|[CRichEditCtrl](../mfc/reference/cricheditctrl-class.md)|`CString`|Nombre maximal de caractères|
 |Contrôle RichEdit|RICHEDIT|`CRichEditCtrl`|`CString`|Nombre maximal de caractères|
-|Barre de défilement (verticale ou horizontale)|SCROLLBAR|[CScrollBar](../mfc/reference/cscrollbar-class.md)|`int`|Valeur min/Valeur max|
-|Slider (contrôle)|msctls_trackbar32|[CSliderCtrl](../mfc/reference/csliderctrl-class.md)|`int`|Valeur min/Valeur max|
+|Barre de défilement (verticale ou horizontale)|SCROLLBAR|[CScrollBar](../mfc/reference/cscrollbar-class.md)|**`int`**|Valeur min/Valeur max|
+|Contrôle de curseur|msctls_trackbar32|[CSliderCtrl](../mfc/reference/csliderctrl-class.md)|**`int`**|Valeur min/Valeur max|
 |Contrôle Spin|msctls_updown32|[CSpinButtonCtrl](../mfc/reference/cspinbuttonctrl-class.md)|Aucun ; contrôle uniquement|N/A|
 |Contrôle Tab|SysTabControl32|[CTabCtrl](../mfc/reference/ctabctrl-class.md)|Aucun ; contrôle uniquement|N/A|
 |Contrôle Tree|SysTreeView32|[CTreeCtrl](../mfc/reference/ctreectrl-class.md)|Aucun ; contrôle uniquement|N/A|

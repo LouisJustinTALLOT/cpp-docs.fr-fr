@@ -7,12 +7,12 @@ helpviewer_keywords:
 - single document interface (SDI), adding views
 - views [MFC], SDI applications
 ms.assetid: 86d0c134-01d5-429c-b672-36cfb956dc01
-ms.openlocfilehash: 83bb7e54567319a7af4bd3d8a6bf02256fef68fb
-ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
+ms.openlocfilehash: 95de3a582c3d45db858e2b4bce0268e1dab63931
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84623354"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87215970"
 ---
 # <a name="adding-multiple-views-to-a-single-document"></a>Ajout de plusieurs vues à un seul document
 
@@ -23,7 +23,7 @@ Dans une application SDI (single-document interface) créée à l’aide de la b
 
 Vous pouvez implémenter cette fonctionnalité en ajoutant une nouvelle `CView` classe dérivée de et du code supplémentaire pour basculer dynamiquement les affichages vers une application MFC existante.
 
-La procédure comporte trois étapes :
+Les étapes sont les suivantes :
 
 - [Modifier la classe d’application existante](#vcconmodifyexistingapplicationa1)
 
@@ -65,7 +65,7 @@ La création de la nouvelle classe d’affichage est simplifiée à l’aide de 
 
 Une fois que vous avez ajouté la classe au projet, vous devez modifier l’accessibilité de certains membres de classe de vue.
 
-Modifiez *NewView. H* en remplaçant le spécificateur d’accès **protégé** par **public** pour le constructeur et le destructeur. Cela permet à la classe d’être créée et détruite dynamiquement, et de modifier l’apparence de la vue avant qu’elle ne soit visible.
+Modifiez *NewView. H* en remplaçant le spécificateur d’accès par **`protected`** **`public`** pour le constructeur et le destructeur. Cela permet à la classe d’être créée et détruite dynamiquement, et de modifier l’apparence de la vue avant qu’elle ne soit visible.
 
 Enregistrez vos modifications et passez à l’étape suivante.
 

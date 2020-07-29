@@ -6,18 +6,18 @@ f1_keywords:
 helpviewer_keywords:
 - C3018
 ms.assetid: 685be45f-f116-43a8-a88d-05ab6616e2f1
-ms.openlocfilehash: 7d61bcb7364e90f5b5137f549989da769223a04f
-ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
+ms.openlocfilehash: 137d09cb510a27a495c91b343a56dd11b41b42b5
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/03/2019
-ms.locfileid: "74742195"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87232051"
 ---
 # <a name="compiler-error-c3018"></a>Erreur du compilateur C3018
 
 'var1' : le test ou l’incrément de l’instruction 'for' OpenMP doivent utiliser la variable d’index 'var2'
 
-Une boucle `for` dans une instruction OpenMP doit utiliser la même variable pour son test et l’incrémentation que celle qu’elle utilise pour ses index.
+Une **`for`** boucle dans une instruction OpenMP doit utiliser la même variable pour son test et l’incrémentation que celle qu’elle utilise pour son index.
 
 L’exemple suivant génère l’erreur C3018 :
 

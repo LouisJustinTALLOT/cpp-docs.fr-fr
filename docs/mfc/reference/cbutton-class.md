@@ -74,12 +74,12 @@ helpviewer_keywords:
 - CButton [MFC], SetState
 - CButton [MFC], SetTextMargin
 ms.assetid: cdc76d5b-31da-43c5-bc43-fde4cb39de5b
-ms.openlocfilehash: ae6fcbbcbb1a526dbba857fc9bfa2da5eb897c73
-ms.sourcegitcommit: 6b3d793f0ef3bbb7eefaf9f372ba570fdfe61199
+ms.openlocfilehash: 108bbbbb7fcb491ecc9ed278c5f7d5002ad02ef3
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/15/2020
-ms.locfileid: "86404304"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87231856"
 ---
 # <a name="cbutton-class"></a>CButton, classe
 
@@ -170,7 +170,7 @@ Les entrées de table des messages potentielles sont les suivantes :
 
 Si vous créez un `CButton` objet à partir d’une ressource de boîte de dialogue, l' `CButton` objet est automatiquement détruit lorsque l’utilisateur ferme la boîte de dialogue.
 
-Si vous créez un `CButton` objet dans une fenêtre, vous devrez peut-être le détruire. Si vous créez l' `CButton` objet sur le tas à l’aide de la fonction **New** , vous devez appeler **Delete** sur l’objet pour le détruire lorsque l’utilisateur ferme le contrôle Button Windows. Si vous créez l' `CButton` objet sur la pile, ou qu’il est incorporé dans l’objet de boîte de dialogue parent, il est détruit automatiquement.
+Si vous créez un `CButton` objet dans une fenêtre, vous devrez peut-être le détruire. Si vous créez l' `CButton` objet sur le tas à l’aide de la **`new`** fonction, vous devez appeler **`delete`** sur l’objet pour le détruire lorsque l’utilisateur ferme le contrôle bouton Windows. Si vous créez l' `CButton` objet sur la pile, ou qu’il est incorporé dans l’objet de boîte de dialogue parent, il est détruit automatiquement.
 
 ## <a name="inheritance-hierarchy"></a>Hiérarchie d'héritage
 
@@ -1120,7 +1120,7 @@ Cette fonction membre émule les fonctionnalités de la BCM_SETTEXTMARGIN messag
 [Graphique hiérarchique](../../mfc/hierarchy-chart.md)<br/>
 [CWnd, classe](../../mfc/reference/cwnd-class.md)<br/>
 [CComboBox (classe)](../../mfc/reference/ccombobox-class.md)<br/>
-[CEdit Class](../../mfc/reference/cedit-class.md)<br/>
+[CEdit, classe](../../mfc/reference/cedit-class.md)<br/>
 [CListBox, classe](../../mfc/reference/clistbox-class.md)<br/>
 [CScrollBar, classe](../../mfc/reference/cscrollbar-class.md)<br/>
 [CStatic, classe](../../mfc/reference/cstatic-class.md)<br/>

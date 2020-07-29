@@ -9,12 +9,12 @@ helpviewer_keywords:
 - main function
 - programs [C++], terminating
 ms.assetid: 5984f1bd-072d-4e06-8640-122fb1454401
-ms.openlocfilehash: 28b0d826dc02376f952d3522f2f037eacd298b8e
-ms.sourcegitcommit: e93f3e6a110fe38bc642055bdf4785e620d4220f
+ms.openlocfilehash: f2419820fb6018613fe3fae39194584076121898
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 01/16/2020
-ms.locfileid: "76123940"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87211786"
 ---
 # <a name="main-function-and-program-execution"></a>Fonction main et exécution du programme
 
@@ -28,7 +28,7 @@ main( int argc, char *argv[ ], char *envp[ ] )
 
 ## <a name="remarks"></a>Notes
 
-Les fonctions du programme source effectuent une ou plusieurs tâches spécifiques. La fonction **main** peut appeler ces fonctions afin qu’elles effectuent leurs tâches respectives. Lorsque **main** appelle une autre fonction, elle passe le contrôle d'exécution à cette fonction afin que l'exécution commence à la première instruction de cette fonction. Une fonction retourne le contrôle à **main** lorsqu'une instruction `return` est exécutée ou que la fin de la fonction est atteinte.
+Les fonctions du programme source effectuent une ou plusieurs tâches spécifiques. La fonction **main** peut appeler ces fonctions afin qu’elles effectuent leurs tâches respectives. Lorsque **main** appelle une autre fonction, elle passe le contrôle d'exécution à cette fonction afin que l'exécution commence à la première instruction de cette fonction. Une fonction retourne le contrôle à **main** lorsqu’une **`return`** instruction est exécutée ou lorsque la fin de la fonction est atteinte.
 
 Vous pouvez déclarer toute fonction, notamment **main**, pour avoir des paramètres. Le terme « paramètre » ou « paramètre formel » désigne l'identificateur qui reçoit une valeur passée à une fonction. Pour plus d’informations sur la transmission d’arguments aux paramètres, consultez [Paramètres](../c-language/parameters.md). Lorsqu'une fonction en appelle une autre, la fonction appelée reçoit de la fonction appelante des valeurs pour ses paramètres. Ces valeurs sont appelées des arguments. Vous pouvez déclarer des paramètres formels à la fonction **main** pour lui permettre de recevoir des arguments de la ligne de commande. Pour cela, utilisez le format suivant :
 

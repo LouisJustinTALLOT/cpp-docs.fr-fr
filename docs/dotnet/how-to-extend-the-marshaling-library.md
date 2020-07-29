@@ -5,18 +5,18 @@ ms.date: 11/04/2016
 helpviewer_keywords:
 - Marshaling Library, extending
 ms.assetid: 4c4a56d7-1d44-4118-b85f-f9686515e6e9
-ms.openlocfilehash: ab3b17638e07a54189803c83163db67c5ebf82a5
-ms.sourcegitcommit: 573b36b52b0de7be5cae309d45b68ac7ecf9a6d8
+ms.openlocfilehash: 2a3dccd33b7ad2caee64e31e0f79180dda4649be
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/10/2019
-ms.locfileid: "74988488"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87216386"
 ---
 # <a name="how-to-extend-the-marshaling-library"></a>Comment : étendre la bibliothèque de marshaling
 
 Cette rubrique explique comment étendre la bibliothèque de marshaling pour fournir plus de conversions entre les types de données. Les utilisateurs peuvent étendre la bibliothèque de marshaling pour toutes les conversions de données qui ne sont pas actuellement prises en charge par la bibliothèque.
 
-Vous pouvez étendre la bibliothèque de marshaling de l’une des deux manières suivantes : avec ou sans [classe marshal_context](../dotnet/marshal-context-class.md). Consultez la [vue d’ensemble du marshaling dans C++ ](../dotnet/overview-of-marshaling-in-cpp.md) la rubrique pour déterminer si une nouvelle conversion requiert un contexte.
+Vous pouvez étendre la bibliothèque de marshaling de l’une des deux manières suivantes : avec ou sans [classe marshal_context](../dotnet/marshal-context-class.md). Consultez la rubrique [vue d’ensemble du marshaling dans C++](../dotnet/overview-of-marshaling-in-cpp.md) pour déterminer si une nouvelle conversion requiert un contexte.
 
 Dans les deux cas, vous créez d’abord un fichier pour les nouvelles conversions de marshaling. Pour préserver l’intégrité des fichiers de la bibliothèque de marshaling standard. Si vous souhaitez déplacer un projet vers un autre ordinateur ou un autre programmeur, vous devez copier le nouveau fichier de marshaling avec le reste du projet. De cette manière, l’utilisateur recevant le projet sera assuré de recevoir les nouvelles conversions et n’aura pas à modifier les fichiers de bibliothèque.
 
@@ -30,13 +30,13 @@ Dans les deux cas, vous créez d’abord un fichier pour les nouvelles conversio
 
    - marshal_windows. h pour les types de données Windows.
 
-   - marshal_cppstd. h pour C++ les types de données de la bibliothèque standard.
+   - marshal_cppstd. h pour les types de données de la bibliothèque standard C++.
 
    - marshal_atl. h pour les types de données ATL.
 
 1. Utilisez le code à la fin de ces étapes pour écrire la fonction de conversion. Dans ce code, TO est le type vers lequel effectuer la conversion, est le type à partir duquel effectuer la conversion, et `from` est le paramètre à convertir.
 
-1. Remplacez le commentaire relatif à la logique de conversion par du code pour convertir le paramètre `from` en un objet de type et retournez l’objet converti.
+1. Remplacez le commentaire relatif à la logique de conversion par du code pour convertir le `from` paramètre en un objet de en type et retourner l’objet converti.
 
 ```
 namespace msclr {
@@ -59,19 +59,19 @@ namespace msclr {
 
    - marshal_windows. h pour les types de données Windows.
 
-   - marshal_cppstd. h pour C++ les types de données de la bibliothèque standard.
+   - marshal_cppstd. h pour les types de données de la bibliothèque standard C++.
 
    - marshal_atl. h pour les types de données ATL.
 
 1. Utilisez le code à la fin de ces étapes pour écrire la fonction de conversion. Dans ce code, TO est le type vers lequel effectuer la conversion, est le type à partir duquel effectuer la conversion, `toObject` est un pointeur dans lequel stocker le résultat, et `fromObject` est le paramètre à convertir.
 
-1. Remplacez le commentaire à propos de l’initialisation de par le code pour initialiser le `toPtr` à la valeur vide appropriée. Par exemple, s’il s’agit d’un pointeur, affectez-lui la valeur `NULL`.
+1. Remplacez le commentaire à propos de l’initialisation de par le code pour initialiser `toPtr` à la valeur vide appropriée. Par exemple, s’il s’agit d’un pointeur, affectez-lui la valeur `NULL` .
 
-1. Remplacez le commentaire relatif à la logique de conversion par du code pour convertir le paramètre `from` en un objet *de type.* Cet objet converti sera stocké dans `toPtr`.
+1. Remplacez le commentaire relatif à la logique de conversion par du code pour convertir le `from` paramètre en un objet de *en* type. Cet objet converti sera stocké dans `toPtr` .
 
-1. Remplacez le commentaire relatif à la définition de `toObject` par du code pour définir `toObject` à votre objet converti.
+1. Remplacez le commentaire relatif au paramètre `toObject` par le code pour définir `toObject` à votre objet converti.
 
-1. Remplacez le commentaire sur le nettoyage des ressources natives par du code pour libérer de la mémoire allouée par `toPtr`. Si `toPtr` alloué la mémoire à l’aide d' `new`, utilisez `delete` pour libérer de la mémoire.
+1. Remplacez le commentaire sur le nettoyage des ressources natives par du code pour libérer de la mémoire allouée par `toPtr` . En cas de `toPtr` mémoire allouée à l’aide **`new`** de, utilisez **`delete`** pour libérer la mémoire.
 
 ```
 namespace msclr {
@@ -156,7 +156,7 @@ int main() {
 }
 ```
 
-Dans l’exemple précédent, la fonction `marshal_as` retourne un handle vers les données converties. Cela a été fait pour empêcher la création d’une copie supplémentaire des données. Le retour direct de la variable aurait un coût de performance inutile qui lui est associé.
+Dans l’exemple précédent, la `marshal_as` fonction retourne un handle vers les données converties. Cela a été fait pour empêcher la création d’une copie supplémentaire des données. Le retour direct de la variable aurait un coût de performance inutile qui lui est associé.
 
 ```Output
 Managed name: Jeff Smith

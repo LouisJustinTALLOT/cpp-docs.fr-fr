@@ -1,5 +1,5 @@
 ---
-title: Classe CStatic
+title: CStatic, classe
 ms.date: 11/04/2016
 f1_keywords:
 - CStatic
@@ -28,14 +28,14 @@ helpviewer_keywords:
 - CStatic [MFC], SetEnhMetaFile
 - CStatic [MFC], SetIcon
 ms.assetid: e7c94cd9-5ebd-428a-aa30-b3e51f8efb95
-ms.openlocfilehash: e5c3705c0aa2fd90e73cb54ba5a97c252ed2cf83
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 1f6aac50b2143a4d5296baac906b1ebd0ef542f5
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81371641"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87215957"
 ---
-# <a name="cstatic-class"></a>Classe CStatic
+# <a name="cstatic-class"></a>CStatic, classe
 
 Fournit les fonctionnalités d'un contrôle statique Windows.
 
@@ -57,26 +57,26 @@ class CStatic : public CWnd
 
 |Nom|Description|
 |----------|-----------------|
-|[CStatic::Créer](#create)|Crée le contrôle statique Windows et `CStatic` le fixe à l’objet.|
-|[CStatic::DrawItem](#drawitem)|Remplacer pour dessiner un contrôle statique dessiné par le propriétaire.|
-|[CStatic::GetBitmap](#getbitmap)|Récupère la poignée de la bitmap précédemment réglée avec [SetBitmap](#setbitmap).|
-|[CStatic::GetCursor](#getcursor)|Récupère la poignée de l’image curseur précédemment réglée avec [SetCursor](#setcursor).|
-|[CStatic::GetEnhMetaFile](#getenhmetafile)|Récupère la poignée du métaafile amélioré précédemment réglé avec [SetEnhMetaFile](#setenhmetafile).|
-|[CStatic::GetIcon](#geticon)|Récupère la poignée de l’icône précédemment définie avec [SetIcon](#seticon).|
-|[CStatic::SetBitmap](#setbitmap)|Spécifie une bitmap à afficher dans le contrôle statique.|
+|[CStatic :: Create](#create)|Crée le contrôle statique Windows et l’attache à l' `CStatic` objet.|
+|[CStatic ::D rawItem](#drawitem)|Substituez pour dessiner un contrôle statique dessiné par le propriétaire.|
+|[CStatic::GetBitmap](#getbitmap)|Récupère le handle de la bitmap précédemment définie avec [SetBitmap](#setbitmap).|
+|[CStatic::GetCursor](#getcursor)|Récupère le handle de l’image de curseur précédemment définie avec [SetCursor](#setcursor).|
+|[CStatic::GetEnhMetaFile](#getenhmetafile)|Récupère le handle du métafichier amélioré précédemment défini avec [SetEnhMetaFile](#setenhmetafile).|
+|[CStatic::GetIcon](#geticon)|Récupère le handle de l’icône précédemment définie avec [seticon](#seticon).|
+|[CStatic::SetBitmap](#setbitmap)|Spécifie une image bitmap à afficher dans le contrôle statique.|
 |[CStatic::SetCursor](#setcursor)|Spécifie une image de curseur à afficher dans le contrôle statique.|
-|[CStatic::SetEnhMetaFile](#setenhmetafile)|Spécifie un métaafile amélioré à afficher dans le contrôle statique.|
+|[CStatic::SetEnhMetaFile](#setenhmetafile)|Spécifie un métafichier amélioré à afficher dans le contrôle statique.|
 |[CStatic::SetIcon](#seticon)|Spécifie une icône à afficher dans le contrôle statique.|
 
 ## <a name="remarks"></a>Notes
 
-Un contrôle statique affiche une chaîne de texte, une boîte, un rectangle, une icône, un curseur, une bitmap ou un métaafile amélioré. Il peut être utilisé pour étiqueter, boxer ou séparer d’autres commandes. Un contrôle statique ne prend normalement aucune entrée et ne fournit aucune sortie; cependant, il peut avertir son parent des clics de souris si elle est créée avec SS_NOTIFY style.
+Un contrôle statique affiche une chaîne de texte, une zone, un rectangle, une icône, un curseur, une image bitmap ou un métafichier amélioré. Il peut être utilisé pour étiqueter, Box ou séparer d’autres contrôles. Un contrôle statique ne prend normalement aucune entrée et ne fournit aucune sortie ; Toutefois, il peut notifier son parent de clics de souris s’il est créé avec SS_NOTIFY style.
 
-Créez un contrôle statique en deux étapes. Tout d’abord, appelez `CStatic` le constructeur pour construire l’objet, puis appelez la `CStatic` fonction membre [Créer](#create) pour créer le contrôle statique et l’attacher à l’objet.
+Créez un contrôle statique en deux étapes. Tout d’abord, appelez le constructeur pour construire l' `CStatic` objet, puis appelez la fonction membre [Create](#create) pour créer le contrôle statique et l’attacher à l' `CStatic` objet.
 
-Si vous `CStatic` créez un objet dans une boîte de `CStatic` dialogue (via une ressource de dialogue), l’objet est automatiquement détruit lorsque l’utilisateur ferme la boîte de dialogue.
+Si vous créez un `CStatic` objet dans une boîte de dialogue (par le biais d’une ressource de boîte de dialogue), l' `CStatic` objet est automatiquement détruit lorsque l’utilisateur ferme la boîte de dialogue.
 
-Si vous `CStatic` créez un objet à l’intérieur d’une fenêtre, vous devrez peut-être aussi le détruire. Un `CStatic` objet créé sur la pile à l’intérieur d’une fenêtre est automatiquement détruit. Si vous `CStatic` créez l’objet sur le tas en utilisant la **nouvelle** fonction, vous devez appeler **supprimer** sur l’objet pour le détruire lorsque vous en avez fini avec elle.
+Si vous créez un `CStatic` objet dans une fenêtre, vous devrez peut-être également le détruire. Un `CStatic` objet créé sur la pile au sein d’une fenêtre est automatiquement détruit. Si vous créez l' `CStatic` objet sur le tas à l’aide de la **`new`** fonction, vous devez appeler **`delete`** sur l’objet pour le détruire une fois que vous avez fini de l’utiliser.
 
 ## <a name="inheritance-hierarchy"></a>Hiérarchie d'héritage
 
@@ -92,9 +92,9 @@ Si vous `CStatic` créez un objet à l’intérieur d’une fenêtre, vous devre
 
 **En-tête :** afxwin.h
 
-## <a name="cstaticcreate"></a><a name="create"></a>CStatic::Créer
+## <a name="cstaticcreate"></a><a name="create"></a>CStatic :: Create
 
-Crée le contrôle statique Windows et `CStatic` le fixe à l’objet.
+Crée le contrôle statique Windows et l’attache à l' `CStatic` objet.
 
 ```
 virtual BOOL Create(
@@ -108,16 +108,16 @@ virtual BOOL Create(
 ### <a name="parameters"></a>Paramètres
 
 *lpszText*<br/>
-Spécifie le texte à placer dans le contrôle. Si NULL, aucun texte ne sera visible.
+Spécifie le texte à placer dans le contrôle. Si la valeur est NULL, aucun texte ne sera visible.
 
-*dwStyle (en)*<br/>
-Spécifie le style de fenêtre du contrôle statique. Appliquer toute combinaison de styles de [contrôle statiques](../../mfc/reference/styles-used-by-mfc.md#static-styles) au contrôle.
+*dwStyle*<br/>
+Spécifie le style de fenêtre du contrôle statique. Appliquez une combinaison quelconque de [styles de contrôle statiques](../../mfc/reference/styles-used-by-mfc.md#static-styles) au contrôle.
 
-*Rect*<br/>
-Spécifie la position et la taille du contrôle statique. Il peut s’agir `RECT` `CRect` d’une structure ou d’un objet.
+*rectangulaire*<br/>
+Spécifie la position et la taille du contrôle statique. Il peut s’agir d’une `RECT` structure ou d’un `CRect` objet.
 
 *pParentWnd*<br/>
-Spécifie la `CStatic` fenêtre `CDialog` parente, généralement un objet. Ce ne doit pas être NULL.
+Spécifie la `CStatic` fenêtre parente, généralement un `CDialog` objet. Il ne doit pas être NULL.
 
 *nID*<br/>
 Spécifie l’ID de contrôle du contrôle statique.
@@ -128,27 +128,27 @@ Valeur différente de zéro cas de réussite ; sinon, 0.
 
 ### <a name="remarks"></a>Notes
 
-Construire `CStatic` un objet en deux étapes. Tout d’abord, `CStatic`appelez le `Create`constructeur, puis appelez , ce qui `CStatic` crée le contrôle statique Windows et le fixe à l’objet.
+Construisez un `CStatic` objet en deux étapes. Tout d’abord, appelez le constructeur `CStatic` , puis appelez `Create` , qui crée le contrôle statique Windows et l’attache à l' `CStatic` objet.
 
-Appliquer les styles de [fenêtre](../../mfc/reference/styles-used-by-mfc.md#window-styles) suivants à un contrôle statique :
+Appliquez les [styles de fenêtre](../../mfc/reference/styles-used-by-mfc.md#window-styles) suivants à un contrôle statique :
 
 - WS_CHILD toujours
 
-- WS_VISIBLE Habituellement
+- WS_VISIBLE généralement
 
-- WS_DISABLED Rarement
+- WS_DISABLED rarement
 
-Si vous devez afficher une bitmap, curseur, icône ou metafile dans le contrôle statique, vous devrez appliquer l’un des [styles statiques](../../mfc/reference/styles-used-by-mfc.md#static-styles)suivants :
+Si vous envisagez d’afficher une bitmap, un curseur, une icône ou un métafichier dans le contrôle statique, vous devez appliquer l’un des [styles statiques](../../mfc/reference/styles-used-by-mfc.md#static-styles)suivants :
 
-- SS_BITMAP Utilisez ce style pour les bitmaps.
+- SS_BITMAP utilisez ce style pour les bitmaps.
 
-- SS_ICON Utilisez ce style pour les curseurs et les icônes.
+- SS_ICON utilisez ce style pour les curseurs et les icônes.
 
-- SS_ENHMETAFILE Utilisez ce style pour des métafiles améliorées.
+- SS_ENHMETAFILE utiliser ce style pour les refichiers améliorés.
 
-Pour les curseurs, les bitmaps ou les icônes, vous pouvez également utiliser le style suivant :
+Pour les curseurs, les bitmaps ou les icônes, vous pouvez également utiliser le style suivant :
 
-- SS_CENTERIMAGE Utiliser pour centrer l’image dans le contrôle statique.
+- SS_CENTERIMAGE utiliser pour centrer l’image dans le contrôle statique.
 
 ### <a name="example"></a>Exemple
 
@@ -166,9 +166,9 @@ CStatic();
 
 [!code-cpp[NVC_MFC_CStatic#2](../../mfc/reference/codesnippet/cpp/cstatic-class_2.cpp)]
 
-## <a name="cstaticdrawitem"></a><a name="drawitem"></a>CStatic::DrawItem
+## <a name="cstaticdrawitem"></a><a name="drawitem"></a>CStatic ::D rawItem
 
-Appelé par le cadre pour dessiner un contrôle statique dessiné par le propriétaire.
+Appelé par l’infrastructure pour dessiner un contrôle statique dessiné par le propriétaire.
 
 ```
 virtual void DrawItem(LPDRAWITEMSTRUCT lpDrawItemStruct);
@@ -177,15 +177,15 @@ virtual void DrawItem(LPDRAWITEMSTRUCT lpDrawItemStruct);
 ### <a name="parameters"></a>Paramètres
 
 *lpDrawItemStruct*<br/>
-Un pointeur vers une structure [DRAWITEMSTRUCT.](/windows/win32/api/winuser/ns-winuser-drawitemstruct) La structure contient des informations sur l’élément à dessiner et le type de dessin requis.
+Pointeur vers une structure [drawitemstruct,](/windows/win32/api/winuser/ns-winuser-drawitemstruct) . La structure contient des informations sur l’élément à dessiner et le type de dessin requis.
 
 ### <a name="remarks"></a>Notes
 
-Remplacer cette fonction pour implémenter `CStatic` le dessin d’un objet dessiné par le propriétaire (le contrôle a le style SS_OWNERDRAW).
+Substituez cette fonction pour implémenter le dessin pour un objet owner-drawn `CStatic` (le contrôle a le style SS_OWNERDRAW).
 
 ## <a name="cstaticgetbitmap"></a><a name="getbitmap"></a>CStatic::GetBitmap
 
-Obtient la poignée de la bitmap, précédemment réglé avec `CStatic` [SetBitmap](#setbitmap), qui est associé à .
+Obtient le handle de l’image bitmap, précédemment définie avec [SetBitmap](#setbitmap), qui est associé à `CStatic` .
 
 ```
 HBITMAP GetBitmap() const;
@@ -193,7 +193,7 @@ HBITMAP GetBitmap() const;
 
 ### <a name="return-value"></a>Valeur de retour
 
-Une poignée à la bitmap actuelle, ou NULL si aucune bitmap n’a été réglée.
+Handle vers la bitmap actuelle, ou NULL si aucune bitmap n’a été définie.
 
 ### <a name="example"></a>Exemple
 
@@ -201,7 +201,7 @@ Une poignée à la bitmap actuelle, ou NULL si aucune bitmap n’a été réglé
 
 ## <a name="cstaticgetcursor"></a><a name="getcursor"></a>CStatic::GetCursor
 
-Obtient la poignée du curseur, précédemment réglé avec [SetCursor](#setcursor), qui est associé `CStatic`à .
+Obtient le handle du curseur, précédemment défini avec [SetCursor](#setcursor), qui est associé à `CStatic` .
 
 ```
 HCURSOR GetCursor();
@@ -209,7 +209,7 @@ HCURSOR GetCursor();
 
 ### <a name="return-value"></a>Valeur de retour
 
-Une poignée au curseur actuel, ou NULL si aucun curseur n’a été réglé.
+Handle du curseur actuel, ou NULL si aucun curseur n’a été défini.
 
 ### <a name="example"></a>Exemple
 
@@ -217,7 +217,7 @@ Une poignée au curseur actuel, ou NULL si aucun curseur n’a été réglé.
 
 ## <a name="cstaticgetenhmetafile"></a><a name="getenhmetafile"></a>CStatic::GetEnhMetaFile
 
-Obtient la poignée du metafile amélioré, précédemment réglé avec [SetEnhMetafile](#setenhmetafile), qui est associé `CStatic`à .
+Obtient le handle du métafichier amélioré, précédemment défini avec [SetEnhMetafile](#setenhmetafile), qui est associé à `CStatic` .
 
 ```
 HENHMETAFILE GetEnhMetaFile() const;
@@ -225,7 +225,7 @@ HENHMETAFILE GetEnhMetaFile() const;
 
 ### <a name="return-value"></a>Valeur de retour
 
-Une poignée au métaafile amélioré actuel, ou NULL si aucun metafile amélioré n’a été défini.
+Handle vers le métafichier amélioré actuel, ou NULL si aucun métafichier amélioré n’a été défini.
 
 ### <a name="example"></a>Exemple
 
@@ -233,7 +233,7 @@ Une poignée au métaafile amélioré actuel, ou NULL si aucun metafile amélior
 
 ## <a name="cstaticgeticon"></a><a name="geticon"></a>CStatic::GetIcon
 
-Obtient la poignée de l’icône, précédemment réglé avec `CStatic` [SetIcon](#seticon), qui est associé à .
+Obtient le handle de l’icône, précédemment définie avec [seticon](#seticon), qui est associé à `CStatic` .
 
 ```
 HICON GetIcon() const;
@@ -241,7 +241,7 @@ HICON GetIcon() const;
 
 ### <a name="return-value"></a>Valeur de retour
 
-Une poignée à l’icône actuelle, ou NULL si aucune icône n’a été définie.
+Handle de l’icône actuelle, ou NULL si aucune icône n’a été définie.
 
 ### <a name="example"></a>Exemple
 
@@ -257,34 +257,34 @@ HBITMAP SetBitmap(HBITMAP hBitmap);
 
 ### <a name="parameters"></a>Paramètres
 
-*hBitmap (en)*<br/>
-Poignée de la bitmap à tirer dans le contrôle statique.
+*hBitmap*<br/>
+Handle de l’image bitmap à dessiner dans le contrôle statique.
 
 ### <a name="return-value"></a>Valeur de retour
 
-La poignée de la bitmap qui était auparavant associée au contrôle statique, ou NULL si aucune bitmap n’était associée au contrôle statique.
+Handle de la bitmap précédemment associée au contrôle statique, ou NULL si aucune bitmap n’a été associée au contrôle statique.
 
 ### <a name="remarks"></a>Notes
 
-La bitmap sera automatiquement dessinée dans le contrôle statique. Par défaut, il sera dessiné dans le coin supérieur gauche et le contrôle statique sera redimensionné à la taille de la bitmap.
+L’image bitmap sera automatiquement dessinée dans le contrôle statique. Par défaut, il est dessiné dans l’angle supérieur gauche et le contrôle statique est redimensionné à la taille de l’image bitmap.
 
-Vous pouvez utiliser différents styles de fenêtre et de contrôle statique, y compris ceux-ci:
+Vous pouvez utiliser divers styles de contrôle de fenêtre et statique, y compris les suivants :
 
-- SS_BITMAP Utilisez ce style toujours pour les bitmaps.
+- SS_BITMAP Utilisez toujours ce style pour les bitmaps.
 
-- SS_CENTERIMAGE Utiliser pour centrer l’image dans le contrôle statique. Si l’image est plus grande que le contrôle statique, elle sera coupée. S’il est plus petit que le contrôle statique, l’espace vide autour de l’image sera rempli par la couleur du pixel dans le coin supérieur gauche de la bitmap.
+- SS_CENTERIMAGE utiliser pour centrer l’image dans le contrôle statique. Si l’image est plus grande que le contrôle statique, elle est découpée. S’il est plus petit que le contrôle statique, l’espace vide autour de l’image sera rempli par la couleur du pixel dans le coin supérieur gauche de la bitmap.
 
-- MFC fournit `CBitmap`la classe , que vous pouvez utiliser lorsque vous avez à faire plus `LoadBitmap`avec une image bitmap que d’appeler simplement la fonction Win32 . `CBitmap`, qui contient un type d’objet GDI, est souvent utilisé en coopération avec `CStatic`, qui est une `CWnd` classe qui est utilisé pour afficher un objet graphique comme un contrôle statique.
+- MFC fournit la classe `CBitmap` , que vous pouvez utiliser lorsque vous devez faire plus avec une image bitmap que d’appeler simplement la fonction Win32 `LoadBitmap` . `CBitmap`, qui contient un type d’objet GDI, est souvent utilisé en collaboration avec `CStatic` , qui est une `CWnd` classe utilisée pour afficher un objet graphique en tant que contrôle statique.
 
-`CImage`est une classe ATL/MFC qui vous permet de travailler plus facilement avec des bitmaps indépendants (DIB). Pour plus d’informations, voir [CImage Class](../../atl-mfc-shared/reference/cimage-class.md).
+`CImage`est une classe ATL/MFC qui vous permet de travailler plus facilement avec les bitmaps indépendantes des appareils (DIB). Pour plus d’informations, consultez la [classe CImage](../../atl-mfc-shared/reference/cimage-class.md).
 
-- L’utilisation typique `CStatic::SetBitmap` est de donner un objet GDI qui `CBitmap` est `CImage` retourné par l’opérateur HBITMAP d’un ou d’un objet. Le code pour ce faire ressemble à la ligne suivante.
+- L’utilisation classique consiste à fournir `CStatic::SetBitmap` un objet GDI qui est retourné par l’opérateur HBITMAP d' `CBitmap` un `CImage` objet ou. Le code permettant d’effectuer cette opération ressemble à la ligne suivante.
 
 ```
 MyStaticControl.SetBitmap(HBITMAP(MyBitmap));
 ```
 
-L’exemple suivant `CStatic` crée deux objets sur le tas. Il charge ensuite l’un avec `CBitmap::LoadOEMBitmap` un bitmap système `CImage::Load`en utilisant et l’autre à partir d’un fichier en utilisant .
+L’exemple suivant crée deux `CStatic` objets sur le tas. Il en charge ensuite un avec une bitmap système à l’aide de `CBitmap::LoadOEMBitmap` et l’autre à partir d’un fichier à l’aide de `CImage::Load` .
 
 ### <a name="example"></a>Exemple
 
@@ -301,21 +301,21 @@ HCURSOR SetCursor(HCURSOR hCursor);
 ### <a name="parameters"></a>Paramètres
 
 *hCursor*<br/>
-Poignée du curseur à tirer dans le contrôle statique.
+Handle du curseur à dessiner dans le contrôle statique.
 
 ### <a name="return-value"></a>Valeur de retour
 
-La poignée du curseur précédemment associée au contrôle statique, ou NULL si aucun curseur n’était associé au contrôle statique.
+Handle du curseur précédemment associé au contrôle statique, ou NULL si aucun curseur n’a été associé au contrôle statique.
 
 ### <a name="remarks"></a>Notes
 
-Le curseur sera automatiquement tiré dans le contrôle statique. Par défaut, il sera dessiné dans le coin supérieur gauche et le contrôle statique sera redimensionné à la taille du curseur.
+Le curseur est automatiquement dessiné dans le contrôle statique. Par défaut, il est dessiné dans l’angle supérieur gauche et le contrôle statique est redimensionné à la taille du curseur.
 
-Vous pouvez utiliser différents styles de contrôle de fenêtre et statiques, y compris les suivants :
+Vous pouvez utiliser divers styles de contrôle de fenêtre et statique, notamment les suivants :
 
-- SS_ICON Utilisez ce style toujours pour les curseurs et les icônes.
+- SS_ICON Utilisez toujours ce style pour les curseurs et les icônes.
 
-- SS_CENTERIMAGE Utiliser pour centrer dans le contrôle statique. Si l’image est plus grande que le contrôle statique, elle sera coupée. S’il est plus petit que le contrôle statique, l’espace vide autour de l’image sera rempli de la couleur de fond du contrôle statique.
+- SS_CENTERIMAGE utiliser pour centrer dans le contrôle statique. Si l’image est plus grande que le contrôle statique, elle est découpée. S’il est plus petit que le contrôle statique, l’espace vide autour de l’image sera rempli avec la couleur d’arrière-plan du contrôle statique.
 
 ### <a name="example"></a>Exemple
 
@@ -323,7 +323,7 @@ Vous pouvez utiliser différents styles de contrôle de fenêtre et statiques, y
 
 ## <a name="cstaticsetenhmetafile"></a><a name="setenhmetafile"></a>CStatic::SetEnhMetaFile
 
-Associe une nouvelle image métadique améliorée avec le contrôle statique.
+Associe une nouvelle image de métafichier amélioré au contrôle statique.
 
 ```
 HENHMETAFILE SetEnhMetaFile(HENHMETAFILE hMetaFile);
@@ -331,20 +331,20 @@ HENHMETAFILE SetEnhMetaFile(HENHMETAFILE hMetaFile);
 
 ### <a name="parameters"></a>Paramètres
 
-*hMetaFile (en)*<br/>
-Poignée du metafile amélioré à tirer dans le contrôle statique.
+*hMetaFile*<br/>
+Handle du métafichier amélioré à dessiner dans le contrôle statique.
 
 ### <a name="return-value"></a>Valeur de retour
 
-La poignée du metafile amélioré précédemment associé au contrôle statique, ou NULL si aucun metafile amélioré n’était associé au contrôle statique.
+Handle du métafichier amélioré précédemment associé au contrôle statique, ou NULL si aucun métafichier amélioré n’a été associé au contrôle statique.
 
 ### <a name="remarks"></a>Notes
 
-Le métaafile amélioré sera automatiquement dessiné dans le contrôle statique. Le métafaisile amélioré est mis à l’échelle pour s’adapter à la taille du contrôle statique.
+Le métafichier amélioré est automatiquement dessiné dans le contrôle statique. Le métafichier amélioré est mis à l’échelle pour s’ajuster à la taille du contrôle statique.
 
-Vous pouvez utiliser différents styles de contrôle de fenêtre et statiques, y compris les suivants :
+Vous pouvez utiliser divers styles de contrôle de fenêtre et statique, notamment les suivants :
 
-- SS_ENHMETAFILE Utilisez ce style toujours pour des métafiles améliorées.
+- SS_ENHMETAFILE utiliser ce style toujours pour les refichiers améliorés.
 
 ### <a name="example"></a>Exemple
 
@@ -352,7 +352,7 @@ Vous pouvez utiliser différents styles de contrôle de fenêtre et statiques, y
 
 ## <a name="cstaticseticon"></a><a name="seticon"></a>CStatic::SetIcon
 
-Associe une nouvelle image d’icône au contrôle statique.
+Associe une nouvelle image icône au contrôle statique.
 
 ```
 HICON SetIcon(HICON hIcon);
@@ -360,22 +360,22 @@ HICON SetIcon(HICON hIcon);
 
 ### <a name="parameters"></a>Paramètres
 
-*hIcon (en)*<br/>
-Poignée de l’icône à dessiner dans le contrôle statique.
+*hIcon*<br/>
+Handle de l’icône à dessiner dans le contrôle statique.
 
 ### <a name="return-value"></a>Valeur de retour
 
-La poignée de l’icône précédemment associée au contrôle statique, ou NULL si aucune icône n’était associée au contrôle statique.
+Handle de l’icône précédemment associée au contrôle statique, ou NULL si aucune icône n’a été associée au contrôle statique.
 
 ### <a name="remarks"></a>Notes
 
-L’icône sera automatiquement dessinée dans le contrôle statique. Par défaut, il sera dessiné dans le coin supérieur gauche et le contrôle statique sera redimensionné à la taille de l’icône.
+L’icône sera automatiquement dessinée dans le contrôle statique. Par défaut, il est dessiné dans l’angle supérieur gauche et le contrôle statique est redimensionné à la taille de l’icône.
 
-Vous pouvez utiliser différents styles de contrôle de fenêtre et statiques, y compris les suivants :
+Vous pouvez utiliser divers styles de contrôle de fenêtre et statique, notamment les suivants :
 
-- SS_ICON Utilisez ce style toujours pour les curseurs et les icônes.
+- SS_ICON Utilisez toujours ce style pour les curseurs et les icônes.
 
-- SS_CENTERIMAGE Utiliser pour centrer dans le contrôle statique. Si l’image est plus grande que le contrôle statique, elle sera coupée. S’il est plus petit que le contrôle statique, l’espace vide autour de l’image sera rempli de la couleur de fond du contrôle statique.
+- SS_CENTERIMAGE utiliser pour centrer dans le contrôle statique. Si l’image est plus grande que le contrôle statique, elle est découpée. S’il est plus petit que le contrôle statique, l’espace vide autour de l’image sera rempli avec la couleur d’arrière-plan du contrôle statique.
 
 ### <a name="example"></a>Exemple
 
@@ -386,9 +386,9 @@ Vous pouvez utiliser différents styles de contrôle de fenêtre et statiques, y
 [CWnd, classe](../../mfc/reference/cwnd-class.md)<br/>
 [Graphique hiérarchique](../../mfc/hierarchy-chart.md)<br/>
 [CWnd, classe](../../mfc/reference/cwnd-class.md)<br/>
-[Classe CButton](../../mfc/reference/cbutton-class.md)<br/>
-[Classe CComboBox](../../mfc/reference/ccombobox-class.md)<br/>
-[CEdit Class](../../mfc/reference/cedit-class.md)<br/>
+[CButton, classe](../../mfc/reference/cbutton-class.md)<br/>
+[CComboBox (classe)](../../mfc/reference/ccombobox-class.md)<br/>
+[CEdit, classe](../../mfc/reference/cedit-class.md)<br/>
 [CListBox, classe](../../mfc/reference/clistbox-class.md)<br/>
 [CScrollBar, classe](../../mfc/reference/cscrollbar-class.md)<br/>
-[Classe CDialog](../../mfc/reference/cdialog-class.md)
+[CDialog (classe)](../../mfc/reference/cdialog-class.md)

@@ -22,12 +22,12 @@ helpviewer_keywords:
 - handler functions [MFC], declaring
 - message ranges [MFC], mapping
 ms.assetid: a271478b-5e1c-46f5-9f29-e5be44b27d08
-ms.openlocfilehash: 0ff9178679792929bbd6eb92bb6148cfa008dcad
-ms.sourcegitcommit: c21b05042debc97d14875e019ee9d698691ffc0b
+ms.openlocfilehash: 44194a6e5bafea2b17c9a1d58c41bf9dc541729d
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 06/09/2020
-ms.locfileid: "84621693"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87231908"
 ---
 # <a name="handlers-for-message-map-ranges"></a>Gestionnaires pour les plages de table des messages
 
@@ -143,7 +143,7 @@ Lorsque vous écrivez la fonction gestionnaire, spécifiez le paramètre **uint*
 
 Le `OnButtonClicked` Gestionnaire d’un seul message de **BN_CLICKED** ne prend pas de paramètres. Le même gestionnaire pour une plage de boutons prend un **uint**. Le paramètre supplémentaire permet d’identifier le contrôle particulier chargé de générer le **BN_CLICKED** message.
 
-Le code présenté dans l’exemple est standard : la conversion de la valeur passée à un `int` dans la plage de messages et la déclaration que c’est le cas. Vous pouvez effectuer une action différente selon le bouton sur lequel l’utilisateur a cliqué.
+Le code présenté dans l’exemple est standard : la conversion de la valeur passée à un **`int`** dans la plage de messages et la déclaration que c’est le cas. Vous pouvez effectuer une action différente selon le bouton sur lequel l’utilisateur a cliqué.
 
 ## <a name="see-also"></a>Voir aussi
 

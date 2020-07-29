@@ -6,18 +6,18 @@ f1_keywords:
 helpviewer_keywords:
 - C2646
 ms.assetid: 92ff1f02-5eaf-40a5-8b7a-a682f149e967
-ms.openlocfilehash: a5c4dbc967c304fc6b13eb00e2c7093380ec8be9
-ms.sourcegitcommit: 16fa847794b60bf40c67d20f74751a67fccb602e
+ms.openlocfilehash: a05c98564c4e45dc380690c1b8c9bace5fc14cf4
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 12/03/2019
-ms.locfileid: "74758214"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87216152"
 ---
 # <a name="compiler-error-c2646"></a>Erreur du compilateur C2646
 
 une struct ou union anonyme au niveau de la portée globale ou de la portée de l'espace de noms doit être déclarée statique
 
-Un struct ou une union anonyme possède une portée globale ou une portée d'espace de noms mais n'est pas déclaré(e) `static`.
+Une struct ou une Union anonyme a une portée globale ou d’espace de noms, mais n’est pas déclarée **`static`** .
 
 L'exemple suivant génère l'erreur C2646 et montre comment la corriger :
 

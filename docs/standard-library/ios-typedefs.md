@@ -9,16 +9,16 @@ f1_keywords:
 - iosfwd/std::wios
 - iosfwd/std::wstreampos
 ms.assetid: 0b962632-3439-44de-bf26-20c67a7f0ff3
-ms.openlocfilehash: 0f63f65fb4c10fbe2ad538852222e6468b9061d0
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 6167856c579acfca2bde600b2dd4d457199cafcc
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81375398"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87212278"
 ---
 # <a name="ltiosgt-typedefs"></a>&lt;ios&gt;, typedefs
 
-## <a name="ios"></a><a name="ios"></a>Ios
+## <a name="ios"></a><a name="ios"></a>libéré
 
 Prend en charge la classe ios de l'ancienne bibliothèque iostream.
 
@@ -28,7 +28,7 @@ typedef basic_ios<char, char_traits<char>> ios;
 
 ### <a name="remarks"></a>Notes
 
-Le type est synonyme de modèle de classe [basic_ios](../standard-library/basic-ios-class.md), spécialisé pour les éléments de type **char** avec des traits de caractère par défaut.
+Le type est un synonyme du modèle de classe [basic_ios](../standard-library/basic-ios-class.md), spécialisé pour les éléments de type **`char`** avec des caractéristiques de caractère par défaut.
 
 ## <a name="streamoff"></a><a name="streamoff"></a>streamoff
 
@@ -44,7 +44,7 @@ Prend en charge les opérations internes.
 
 ### <a name="remarks"></a>Notes
 
-Le type est un entier signé qui décrit un objet capable de stocker un décalage d’octet impliqué dans différentes opérations de positionnement de flux. Sa représentation a au moins 32 bits de valeur. Elle n’est pas nécessairement assez grande pour représenter une position d’octet arbitraire dans un flux. La `streamoff(-1)` valeur indique généralement une compensation erronée.
+Le type est un entier signé qui décrit un objet capable de stocker un décalage d’octet impliqué dans différentes opérations de positionnement de flux. Sa représentation a au moins 32 bits de valeur. Elle n’est pas nécessairement assez grande pour représenter une position d’octet arbitraire dans un flux. La valeur `streamoff(-1)` indique généralement un décalage erroné.
 
 ## <a name="streampos"></a><a name="streampos"></a>streampos
 
@@ -56,7 +56,7 @@ typedef fpos<mbstate_t> streampos;
 
 ### <a name="remarks"></a>Notes
 
-Le type est synonyme de [fpos](../standard-library/fpos-class.md) <  `mbstate_t`>.
+Le type est un synonyme de [fpos](../standard-library/fpos-class.md) <  `mbstate_t`>.
 
 ### <a name="example"></a>Exemple
 
@@ -81,7 +81,7 @@ int main( )
 7
 ```
 
-## <a name="streamsize"></a><a name="streamsize"></a>streamsize
+## <a name="streamsize"></a><a name="streamsize"></a>données StreamSize
 
 Indique la taille du flux.
 
@@ -127,9 +127,9 @@ typedef basic_ios<wchar_t, char_traits<wchar_t>> wios;
 
 ### <a name="remarks"></a>Notes
 
-Le type est synonyme de modèle de classe [basic_ios](../standard-library/basic-ios-class.md), spécialisé pour les éléments de type **wchar_t** avec des traits de caractère par défaut.
+Le type est un synonyme du modèle de classe [basic_ios](../standard-library/basic-ios-class.md), spécialisé pour les éléments de type **`wchar_t`** avec des caractéristiques de caractère par défaut.
 
-## <a name="wstreampos"></a><a name="wstreampos"></a>wstreampos wstreampos
+## <a name="wstreampos"></a><a name="wstreampos"></a>wstreampos
 
 Contient la position actuelle du pointeur de mémoire tampon ou du pointeur de fichier.
 
@@ -139,7 +139,7 @@ typedef fpos<mbstate_t> wstreampos;
 
 ### <a name="remarks"></a>Notes
 
-Le type est synonyme de [fpos](../standard-library/fpos-class.md) <  `mbstate_t`>.
+Le type est un synonyme de [fpos](../standard-library/fpos-class.md) <  `mbstate_t`>.
 
 ### <a name="example"></a>Exemple
 

@@ -1,5 +1,5 @@
 ---
-title: /Zc:throwingNew (supposer opérateur de nouvelles levées)
+title: /Zc:throwingNew (Supposer de nouvelles levées d’exception de l’opérateur)
 ms.date: 03/01/2018
 f1_keywords:
 - throwingNew
@@ -11,30 +11,30 @@ helpviewer_keywords:
 - /Zc compiler options (C++)
 - Zc compiler options (C++)
 ms.assetid: 20ff0101-9677-4d83-8c7b-8ec9ca49f04f
-ms.openlocfilehash: c8c7b4e7246cc3bb1b3a73cde4f6830eb7178dd2
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 7593107a280995145d252efa76e0a88bddbd2275
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62315987"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87211864"
 ---
-# <a name="zcthrowingnew-assume-operator-new-throws"></a>/Zc:throwingNew (supposer opérateur de nouvelles levées)
+# <a name="zcthrowingnew-assume-operator-new-throws"></a>/Zc:throwingNew (Supposer de nouvelles levées d’exception de l’opérateur)
 
-Lorsque le **/Zc:throwingNew** est spécifiée, le compilateur optimise les appels à `operator new` d’ignorer les contrôles d’un pointeur null en retour. Cette option indique au compilateur de supposer que tous les liés des implémentations de `operator new` et allocateurs personnalisés sont conformes à la norme C++ et lever en cas d’échec d’allocation. Par défaut dans Visual Studio, le compilateur génère pessimiste vérifications « null » (**/Zc:throwingNew-**) pour ces appels, étant donné que les utilisateurs peuvent lier avec une implémentation non lanceurs de `operator new` ou écrire des routines de l’allocateur personnalisé qui retournent des pointeurs null.
+Lorsque l’option **/Zc : throwingNew** est spécifiée, le compilateur optimise les appels à `operator new` pour ignorer les vérifications d’un retour de pointeur null. Cette option indique au compilateur de supposer que toutes les implémentations liées d’et d' `operator new` allocateurs personnalisés sont conformes à la norme C++ et lèvent en cas d’échec d’allocation. Par défaut dans Visual Studio, le compilateur pessimistically génère des contrôles de valeur null (**/Zc : throwingNew-**) pour ces appels, car les utilisateurs peuvent établir une liaison avec une implémentation sans levée de `operator new` ou écrire des routines d’allocation personnalisées qui retournent des pointeurs null.
 
 ## <a name="syntax"></a>Syntaxe
 
-> **/Zc:throwingNew**[**-**]
+> **/Zc : throwingNew**[ **-** ]
 
 ## <a name="remarks"></a>Notes
 
-La norme ISO C ++ 98, depuis l’a spécifié que la valeur par défaut [opérateur new](../../standard-library/new-operators.md#op_new) lève `std::bad_alloc` lorsque l’allocation de mémoire échoue. Versions de Visual C++ dans Visual Studio 6.0 a retourné un pointeur null sur un échec d’allocation. À compter de Visual Studio 2002, `operator new` conforme au standard et lève en cas d’échec. Pour prendre en charge de code qui utilise l’ancien style d’allocation, Visual Studio fournit une implémentation pouvant être liée de `operator new` dans nothrownew.obj qui retourne un pointeur null en cas d’échec. Par défaut, le compilateur génère également des contrôles de valeur null défensives pour empêcher ces allocateurs anciens provoque un blocage immédiat en cas d’échec. Le **/Zc:throwingNew** option indique au compilateur d’omettre ces vérifications « null », sur l’hypothèse que tous les liés mémoire allocateurs sont conformes à la norme. Cela ne s’applique pas à non lever explicite `operator new` surcharges, qui sont déclarés à l’aide d’un paramètre supplémentaire de type `std::nothrow_t` et avez explicite `noexcept` spécification.
+Depuis la norme ISO C++ 98, la norme a spécifié que l’opérateur par défaut New lève une exception en cas d’échec [de](../../standard-library/new-operators.md#op_new) l’allocation de `std::bad_alloc` mémoire. Les versions de Visual C++ jusqu’à Visual Studio 6,0 retournaient un pointeur null sur un échec d’allocation. À compter de Visual Studio 2002, est `operator new` conforme à la norme et lève une exception en cas d’échec. Pour prendre en charge le code qui utilise l’ancien style d’allocation, Visual Studio fournit une implémentation pouvant être liée de `operator new` dans nothrownew. obj qui retourne un pointeur null en cas d’échec. Par défaut, le compilateur génère également des vérifications de valeur null défensives pour empêcher ces allocateurs de style plus anciens de provoquer un incident immédiat en cas d’échec. L’option **/Zc : throwingNew** indique au compilateur de conserver ces contrôles de valeur null, en partant du principe que tous les allocateurs de mémoire liés sont conformes à la norme. Cela ne s’applique pas aux surcharges explicites sans levée `operator new` , qui sont déclarées à l’aide d’un paramètre supplémentaire de type `std::nothrow_t` et qui ont une **`noexcept`** spécification explicite.
 
-Conceptuellement, pour créer un objet dans le magasin libre, le compilateur génère du code pour allouer la mémoire, puis à appeler son constructeur pour initialiser la mémoire. Étant donné que le compilateur MSVC normalement ne peut pas déterminer si ce code sera lié à un allocateur non conformes, pas d’exceptions, par défaut il génère également une vérification de valeur null avant d’appeler le constructeur. Cela empêche un pointeur null dans l’appel de constructeur de déréférencement si une allocation non lanceurs échoue. Dans la plupart des cas, ces vérifications sont inutiles, étant donné que la valeur par défaut `operator new` allocateurs lever au lieu de retourner des pointeurs null. Les vérifications ont également fâcheux effets secondaires. Ils enfler la taille du code, ils inondent PRÉDICTEUR de branche, et ils empêchent les autres optimisations du compilateur utiles telles que devirtualization ou const propagation hors de l’objet initialisé. Les vérifications existent uniquement au code de prise en charge des liens vers *nothrownew.obj* ou a non conformes personnalisé `operator new` implémentations. Si vous n’utilisez pas non conformes `operator new`, nous vous recommandons d’utiliser **/Zc:throwingNew** d’optimiser votre code.
+Conceptuellement, pour créer un objet sur le magasin gratuit, le compilateur génère du code pour allouer sa mémoire, puis appeler son constructeur pour initialiser la mémoire. Étant donné que le compilateur MSVC ne peut normalement pas déterminer si ce code sera lié à un allocateur non conforme et non levant, par défaut, il génère également une vérification de valeur null avant d’appeler le constructeur. Cela empêche la déréférencement d’un pointeur null dans l’appel de constructeur si une allocation sans levée échoue. Dans la plupart des cas, ces contrôles ne sont pas nécessaires, car les `operator new` allocateurs par défaut lèvent au lieu de retourner des pointeurs null. Les contrôles ont également des effets secondaires indésirables. Ils encombrent la taille du code, ils inondent le prédiction de branche et empêchent d’autres optimisations de compilateur utiles, telles que la dévirtualisation ou la propagation const de l’objet initialisé. Les contrôles existent uniquement pour prendre en charge le code lié à *nothrownew. obj* ou ayant des implémentations personnalisées non conformes `operator new` . Si vous n’utilisez pas de non-conformité `operator new` , nous vous recommandons d’utiliser **/Zc : throwingNew** pour optimiser votre code.
 
-Le **/Zc:throwingNew** option est désactivée par défaut et n’est pas affectée par le [/ permissive-](permissive-standards-conformance.md) option.
+L’option **/Zc : throwingNew** est désactivée par défaut et n’est pas affectée par l’option [/permissive-](permissive-standards-conformance.md) .
 
-Si vous compilez à l’aide de la génération de code de l’édition de liens (LTCG), vous n’avez pas besoin de spécifier **/Zc:throwingNew**. Lorsque votre code est compilé à l’aide de LTCG, le compilateur peut détecter si la valeur par défaut, conforme `operator new` implémentation est utilisée. Dans ce cas, le compilateur omet automatiquement les contrôles de valeur null. L’éditeur de liens recherche le **/ThrowingNew** indicateur pour indiquer si l’implémentation de `operator new` est conforme. Vous pouvez spécifier cet indicateur pour l’éditeur de liens en incluant cette directive dans la source pour votre implémentation de nouvel opérateur personnalisé :
+Si vous compilez à l’aide de la génération de code durant l’édition de liens (LTCG), vous n’avez pas besoin de spécifier **/Zc : throwingNew**. Lorsque votre code est compilé à l’aide de LTCG, le compilateur peut détecter si l’implémentation conforme par défaut `operator new` est utilisée. Si c’est le cas, le compilateur quitte automatiquement les contrôles de valeur null. L’éditeur de liens recherche l’indicateur **/ThrowingNew** pour déterminer si l’implémentation de `operator new` est conforme. Vous pouvez spécifier cet indicateur à l’éditeur de liens en incluant cette directive dans la source pour votre nouvelle implémentation d’opérateur personnalisé :
 
 ```cpp
 #pragma comment(linker, "/ThrowingNew")
@@ -44,13 +44,13 @@ Pour plus d’informations sur les problèmes de conformité dans Visual C++, co
 
 ## <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Pour définir cette option du compilateur dans l'environnement de développement Visual Studio
 
-1. Ouvrez la boîte de dialogue **Pages de propriété** du projet. Pour plus d’informations, consultez [propriétés de compilateur et de build C++ définie dans Visual Studio](../working-with-project-properties.md).
+1. Ouvrez la boîte de dialogue **Pages de propriété** du projet. Pour plus d’informations, consultez [Définir le compilateur C++ et les propriétés de build dans Visual Studio](../working-with-project-properties.md).
 
-1. À partir de la **Configuration** menu déroulant, choisissez **toutes les Configurations**.
+1. Dans le menu déroulant **configuration** , choisissez **toutes les configurations**.
 
-1. Sélectionnez le **propriétés de Configuration** > **C/C++** > **ligne de commande** page de propriétés.
+1. Sélectionnez la page de propriétés ligne de commande des **Propriétés de configuration**  >  **C/C++**  >  **Command Line** .
 
-1. Modifier le **des Options supplémentaires** propriété à inclure **/Zc:throwingNew** ou **/Zc:throwingNew-** , puis **OK**.
+1. Modifiez la propriété **options supplémentaires** pour inclure **/Zc : throwingNew** ou **/Zc : ThrowingNew-** , puis choisissez **OK**.
 
 ## <a name="see-also"></a>Voir aussi
 
@@ -59,4 +59,4 @@ Pour plus d’informations sur les problèmes de conformité dans Visual C++, co
 [/Zc (Conformité)](zc-conformance.md)<br/>
 [noexcept (C++)](../../cpp/noexcept-cpp.md)<br/>
 [Spécifications d’exception (throw) (C++)](../../cpp/exception-specifications-throw-cpp.md)<br/>
-[terminate (exception)](../../standard-library/exception-functions.md#terminate)<br/>
+[Terminate (exception)](../../standard-library/exception-functions.md#terminate)<br/>

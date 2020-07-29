@@ -1,17 +1,17 @@
 ---
-title: support_error_info (C++ attribut com)
+title: support_error_info (attribut COM C++)
 ms.date: 10/02/2018
 f1_keywords:
 - vc-attr.support_error_info
 helpviewer_keywords:
 - support_error_info attribute
 ms.assetid: 20a2b55c-4738-4b35-a71d-e5e9c3a7e3bc
-ms.openlocfilehash: e61ef2efbdc4039f496d7ffbcccc37cc8d111935
-ms.sourcegitcommit: 857fa6b530224fa6c18675138043aba9aa0619fb
+ms.openlocfilehash: f23241cf5478fa52d9d649acfb4c836b8b9d8f13
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 03/24/2020
-ms.locfileid: "80166144"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87211955"
 ---
 # <a name="support_error_info"></a>support_error_info
 
@@ -26,17 +26,17 @@ Implémente la prise en charge du retour d’erreurs détaillées.
 ### <a name="parameters"></a>Paramètres
 
 *error_interface*<br/>
-Identificateur de l’interface qui implémente `IErrorInfo`.
+Identificateur de l’interface qui implémente `IErrorInfo` .
 
 ## <a name="remarks"></a>Notes
 
-L’attribut C++ **support_error_info** implémente la prise en charge permettant de retourner au client les erreurs détaillées et contextuelles rencontrées par l’objet cible. Pour que l’objet prenne en charge les erreurs, les méthodes de l’interface `IErrorInfo` doivent être implémentées par l’objet. Pour plus d’informations, consultez [Prise en charge d’IDispatch et IErrorInfo](../../atl/supporting-idispatch-and-ierrorinfo.md).
+L’attribut C++ **support_error_info** implémente la prise en charge permettant de retourner au client les erreurs détaillées et contextuelles rencontrées par l’objet cible. Pour que l’objet prenne en charge les erreurs, les méthodes de l' `IErrorInfo` interface doivent être implémentées par l’objet. Pour plus d’informations, consultez [Prise en charge d’IDispatch et IErrorInfo](../../atl/supporting-idispatch-and-ierrorinfo.md).
 
 Cet attribut ajoute la classe [ISupportErrorInfoImpl](../../atl/reference/isupporterrorinfoimpl-class.md) comme classe de base à l’objet cible. Il en résulte une implémentation par défaut de `ISupportErrorInfo` et peut être utilisée quand une seule interface génère des erreurs sur un objet.
 
 ## <a name="example"></a>Exemple
 
-Le code suivant ajoute la prise en charge par défaut de l’interface `ISupportErrorInfo` à l’objet `CMyClass`.
+Le code suivant ajoute la prise en charge par défaut de l' `ISupportErrorInfo` interface à l' `CMyClass` objet.
 
 ```cpp
 // cpp_attr_ref_support_error_info.cpp
@@ -64,8 +64,8 @@ class CMyClass
 
 |||
 |-|-|
-|**S'applique à**|**class**|
-|**Renouvelable**|Oui|
+|**S’applique à**|**`class`**|
+|**Repeatable Read**|Oui|
 |**Attributs requis**|None|
 |**Attributs non valides**|None|
 

@@ -6,16 +6,16 @@ f1_keywords:
 helpviewer_keywords:
 - is_literal_type
 ms.assetid: a03a4ebb-ee66-48d6-91bb-41cf72b2401f
-ms.openlocfilehash: 450c32d050a18f64e71992bd7a30412ebafe93de
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: d5b750755f2499c89e91e497ed03244a11484871
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68456215"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87212252"
 ---
-# <a name="isliteraltype-class"></a>is_literal_type, classe
+# <a name="is_literal_type-class"></a>is_literal_type, classe
 
-Teste si un type peut être utilisé comme variable `constexpr`, ou être construit, utilisé par ou retourné à partir de fonctions `constexpr`.
+Teste si un type peut être utilisé comme **`constexpr`** variable ou être construit, utilisé par ou retourné à partir de **`constexpr`** fonctions.
 
 ## <a name="syntax"></a>Syntaxe
 
@@ -31,11 +31,11 @@ Type à interroger.
 
 ## <a name="remarks"></a>Notes
 
-Une instance du prédicat de type a la valeur true si le type *T* est un *type littéral*; sinon, sa valeur est false. Un type littéral est **void**, un type scalaire, un type référence, un tableau de type littéral ou un type de classe littérale. Un type de classe littéral est un type de classe qui a un destructeur trivial, est un type d’agrégation ou a au moins un constructeur `constexpr` sans déplacement et sans copie, et toutes ses classes de base et données membres non statiques sont des types littéraux non volatiles. Bien que le type d’un littéral soit toujours un type littéral, le concept de type littéral inclut tout ce que le compilateur peut évaluer en tant que `constexpr` au moment de la compilation.
+Une instance du prédicat de type a la valeur true si le type *T* est un *type littéral*; sinon, sa valeur est false. Un type littéral est **`void`** , un type scalaire, un type référence, un tableau de type littéral ou un type de classe littérale. Un type de classe littérale est un type de classe qui a un destructeur trivial, est un type d’agrégation ou a au moins un constructeur non-déplacement, non-copie **`constexpr`** , et toutes ses classes de base et données membres non statiques sont des types de littéraux non volatils. Alors que le type d’un littéral est toujours un type littéral, le concept de type littéral comprend tout ce que le compilateur peut évaluer en tant que **`constexpr`** au moment de la compilation.
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
-**En-tête :** \<type_traits>
+**En-tête :**\<type_traits>
 
 **Espace de noms :** std
 

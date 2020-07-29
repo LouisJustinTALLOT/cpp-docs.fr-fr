@@ -7,12 +7,12 @@ helpviewer_keywords:
 - data binding [C++], operator precedence
 - operators [C++], precedence
 ms.assetid: 201f7864-0c51-4c55-9d6f-39c5d013bcb0
-ms.openlocfilehash: 327a5a5344f17f1d84e0cebc1371d56426c95deb
-ms.sourcegitcommit: 0e3da5cea44437c132b5c2ea522bd229ea000a10
+ms.openlocfilehash: c1a5feb4552dd43b26263ebd3080e18adef6cb32
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 07/12/2019
-ms.locfileid: "67861077"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87211734"
 ---
 # <a name="precedence-and-order-of-evaluation"></a>Priorité et ordre d’évaluation
 
@@ -24,8 +24,8 @@ Le tableau ci-dessous résume la priorité et l'associativité (l'ordre dans leq
 
 | Symbole <sup>1</sup> | Type d’opération | Associativité |
 |-------------|-----------------------|-------------------|
-| `[` `]` `(` `)` `.` `->`<br/>`++``--` (suffixe) | Expression | De gauche à droite |
-| **sizeof** `&` `*` `+` `-` `~` `!`<br/>`++``--` (préfixe) | Unaire | De droite à gauche |
+| `[` `]` `(` `)` `.` `->`<br/>`++``--`(suffixe) | Expression | De gauche à droite |
+| **`sizeof`** `&` `*` `+` `-` `~` `!`<br/>`++``--`(préfixe) | Unaire | De droite à gauche |
 | *casts de type* | Unaire | De droite à gauche |
 | `*` `/` `%` | Multiplicatif | De gauche à droite |
 | `+` `-` | Additive | De gauche à droite |

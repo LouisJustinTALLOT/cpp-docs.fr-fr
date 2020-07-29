@@ -7,16 +7,16 @@ helpviewer_keywords:
 - movntss instruction
 - _mm_stream_ss intrinsic
 ms.assetid: c53dffe9-0dfe-4063-85d3-e8987b870fce
-ms.openlocfilehash: 005f4f697d64f6ea68b35dc32daf1217be463a2a
-ms.sourcegitcommit: 6e1c1822e7bcf3d2ef23eb8fac6465f88743facf
+ms.openlocfilehash: ef1a2045a20070b667d416175826e5377fe30ef6
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 09/03/2019
-ms.locfileid: "70217356"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87215983"
 ---
 # <a name="_mm_stream_ss"></a>_mm_stream_ss
 
-**Section spécifique à Microsoft**
+**Spécifique à Microsoft**
 
 Écrit des données 32 bits dans un emplacement de mémoire sans polluer les caches.
 
@@ -34,26 +34,26 @@ void _mm_stream_ss(
 *Destination*\
 à Pointeur vers l’emplacement où les données sources sont écrites.
 
-*Source*\
-dans Nombre 128 bits qui contient la `float` valeur à écrire dans ses 32 derniers bits de poids fort.
+*Code*\
+dans Nombre 128 bits qui contient la **`float`** valeur à écrire dans ses 32 derniers bits de poids fort.
 
-## <a name="return-value"></a>Valeur de retour
+## <a name="return-value"></a>Valeur retournée
 
-Aucune.
+Aucun.
 
-## <a name="requirements"></a>Configuration requise
+## <a name="requirements"></a>Spécifications
 
-|Intrinsèque|Architecture|
+|Intrinsic|Architecture|
 |---------------|------------------|
 |`_mm_stream_ss`|SSE4a|
 
-**Fichier d’en-tête** \<> Intro. h
+**Fichier d’en-tête** \<intrin.h>
 
 ## <a name="remarks"></a>Notes
 
-L’intrinsèque génère l' `movntss` instruction. Pour déterminer la prise en charge matérielle pour cette instruction `__cpuid` , appelez `InfoType=0x80000001` l’intrinsèque avec et vérifiez `CPUInfo[2] (ECX)`le bit 6 de. Ce bit est égal à 1 lorsque l’instruction est prise en charge et 0 dans le cas contraire.
+L’intrinsèque génère l' `movntss` instruction. Pour déterminer la prise en charge matérielle pour cette instruction, appelez l' `__cpuid` intrinsèque avec `InfoType=0x80000001` et vérifiez le bit 6 de `CPUInfo[2] (ECX)` . Ce bit est égal à 1 lorsque l’instruction est prise en charge et 0 dans le cas contraire.
 
-Si vous exécutez du code qui utilise `_mm_stream_ss` l’intrinsèque sur du matériel qui ne `movntss` prend pas en charge l’instruction, les résultats sont imprévisibles.
+Si vous exécutez du code qui utilise l' `_mm_stream_ss` intrinsèque sur du matériel qui ne prend pas en charge l' `movntss` instruction, les résultats sont imprévisibles.
 
 ## <a name="example"></a>Exemple
 
@@ -87,7 +87,7 @@ f[0] = -1, f[1] = -2
 f[2] = -3, f[3] = 3
 ```
 
-**FIN de la section spécifique à Microsoft**
+**FIN spécifique à Microsoft**
 
 Parties Copyright 2007 par Advanced Micro Devices, Inc. Tous droits réservés. Reproduit avec l’autorisation de Advanced Micro Devices, Inc.
 

@@ -99,90 +99,90 @@ helpviewer_keywords:
 - END_PARAM_MAP macro
 - SET_PARAM_TYPE macro
 ms.assetid: 8765eb7b-32dd-407c-bacf-8890ef959837
-ms.openlocfilehash: 8b898990672f590f6047eef6fdfd1ed7eecb3f92
-ms.sourcegitcommit: c123cc76bb2b6c5cde6f4c425ece420ac733bf70
+ms.openlocfilehash: 0263289e75dc79ecf0b75e484b4bb97aede87ea7
+ms.sourcegitcommit: 1f009ab0f2cc4a177f2d1353d5a38f164612bdb1
 ms.translationtype: MT
 ms.contentlocale: fr-FR
-ms.lasthandoff: 04/14/2020
-ms.locfileid: "81369823"
+ms.lasthandoff: 07/27/2020
+ms.locfileid: "87232129"
 ---
 # <a name="macros-and-global-functions-for-ole-db-consumer-templates"></a>Macros et fonctions globales pour les modèles du consommateur OLE DB
 
-Les modèles de consommation OLE DB comprennent les macros et les fonctions mondiales suivantes :
+Les modèles de consommateur OLE DB incluent les macros et les fonctions globales suivantes :
 
 ## <a name="global-functions"></a>Fonctions globales
 
 |||
 |-|-|
-|[AtlTraceErrorRecords](#atltraceerrorrecords)|Décharge les informations d’enregistrement d’erreur OLE DB à l’appareil de décharge si une erreur est retournée.|
+|[AtlTraceErrorRecords](#atltraceerrorrecords)|Vide OLE DB informations d’enregistrement d’erreur sur le périphérique de vidage si une erreur est retournée.|
 
-## <a name="accessor-map-macros"></a>Macros carte d’accesseur
+## <a name="accessor-map-macros"></a>Macros de mappage d’accesseur
 
 |||
 |-|-|
 |[BEGIN_ACCESSOR](#begin_accessor)|Marque le début d’une entrée d’accesseur.|
 |[BEGIN_ACCESSOR_MAP](#begin_accessor_map)|Marque le début des entrées de mappage d’accesseur.|
 |[END_ACCESSOR](#end_accessor)|Marque la fin d’une entrée d’accesseur.|
-|[END_ACCESSOR_MAP](#end_accessor_map)|Marque la fin des entrées de carte de l’accesseur.|
+|[END_ACCESSOR_MAP](#end_accessor_map)|Marque la fin des entrées de mappage d’accesseur.|
 
-## <a name="column-map-macros"></a>Macros de carte de colonne
+## <a name="column-map-macros"></a>Macros de mappage de colonnes
 
 |||
 |-|-|
-|[BEGIN_COLUMN_MAP](#begin_column_map)|Marque le début des entrées de la carte de colonne dans la classe d’enregistrement de l’utilisateur.|
-|[BLOB_ENTRY](#blob_entry)|Utilisé pour lier un grand objet binaire (BLOB).|
-|[BLOB_ENTRY_LENGTH](#blob_entry_length)|Signale la longueur de la colonne de données BLOB.|
-|[BLOB_ENTRY_LENGTH_STATUS](#blob_entry_length_status)|Signale la longueur et l’état de la colonne de données BLOB.|
-|[BLOB_ENTRY_STATUS](#blob_entry_status)|Signale l’état de la colonne de données BLOB.|
-|[BLOB_NAME](#blob_name)|Utilisé pour lier un grand objet binaire par nom de colonne.|
-|[BLOB_NAME_LENGTH](#blob_name_length)|Signale la longueur de la colonne de données BLOB.|
-|[BLOB_NAME_LENGTH_STATUS](#blob_name_length_status)|Signale la longueur et l’état de la colonne de données BLOB.|
-|[BLOB_NAME_STATUS](#blob_name_status)|Signale l’état de la colonne de données BLOB.|
-|[BOOKMARK_ENTRY](#bookmark_entry)|Représente une entrée de signet sur le rame. Une entrée de signet est un type spécial d’entrée de colonne.|
+|[BEGIN_COLUMN_MAP](#begin_column_map)|Marque le début des entrées de mappage de colonnes dans la classe d’enregistrement utilisateur.|
+|[BLOB_ENTRY](#blob_entry)|Utilisé pour lier un objet BLOB (Binary Large Object).|
+|[BLOB_ENTRY_LENGTH](#blob_entry_length)|Indique la longueur de la colonne de données BLOB.|
+|[BLOB_ENTRY_LENGTH_STATUS](#blob_entry_length_status)|Indique la longueur et l’état de la colonne de données BLOB.|
+|[BLOB_ENTRY_STATUS](#blob_entry_status)|Indique l’état de la colonne de données d’objet BLOB.|
+|[BLOB_NAME](#blob_name)|Utilisé pour lier un objet binaire volumineux par nom de colonne.|
+|[BLOB_NAME_LENGTH](#blob_name_length)|Indique la longueur de la colonne de données BLOB.|
+|[BLOB_NAME_LENGTH_STATUS](#blob_name_length_status)|Indique la longueur et l’état de la colonne de données BLOB.|
+|[BLOB_NAME_STATUS](#blob_name_status)|Indique l’état de la colonne de données d’objet BLOB.|
+|[BOOKMARK_ENTRY](#bookmark_entry)|Représente une entrée de signet sur l’ensemble de lignes. Une entrée de signet est un type spécial d’entrée de colonne.|
 |[COLUMN_ENTRY](#column_entry)|Représente une liaison à une colonne spécifique dans la base de données.|
-|[COLUMN_ENTRY_EX](#column_entry_ex)|Représente une liaison à la colonne spécifique de la base de données. Supports *type,* *longueur,* *précision,* *échelle,* et paramètres *d’état.*|
-|[COLUMN_ENTRY_LENGTH](#column_entry_length)|Représente une liaison à la colonne spécifique de la base de données. Prend en charge la variable *de longueur.*|
-|[COLUMN_ENTRY_LENGTH_STATUS](#column_entry_length_status)|Représente une liaison à la colonne spécifique de la base de données. Prend en charge les paramètres *d’état* et *de longueur.*|
-|[COLUMN_ENTRY_PS](#column_entry_ps)|Représente une liaison à la colonne spécifique de la base de données. Prend en charge la *précision* et les paramètres *d’échelle.*|
-|[COLUMN_ENTRY_PS_LENGTH](#column_entry_ps_length)|Représente une liaison à la colonne spécifique de la base de données. Prend en charge la variable de *longueur,* *la précision* et les paramètres *d’échelle.*|
-|[COLUMN_ENTRY_PS_LENGTH_STATUS](#column_entry_ps_length_status)|Représente une liaison à la colonne spécifique de la base de données. Prend en charge les variables *de l’état* et *de la longueur,* *la précision* et les paramètres *d’échelle.*|
-|[COLUMN_ENTRY_PS_STATUS](#column_entry_ps_status)|Représente une liaison à la colonne spécifique de la base de données. Prend en charge la variable de *statut,* *la précision* et les paramètres *d’échelle.*|
-|[COLUMN_ENTRY_STATUS](#column_entry_status)|Représente une liaison à la colonne spécifique de la base de données. Prend en charge la variable *de statut.*|
-|[COLUMN_ENTRY_TYPE](#column_entry_type)|Représente une liaison à une colonne spécifique dans la base de données. Prend en charge le paramètre *de type.*|
-|[COLUMN_ENTRY_TYPE_SIZE](#column_entry_type_size)|Représente une liaison à la colonne spécifique de la base de données. Prend en charge les paramètres *de type* et *de taille.*|
+|[COLUMN_ENTRY_EX](#column_entry_ex)|Représente une liaison à la colonne spécifique dans la base de données. Prend en charge les paramètres de *type*, de *longueur*, de *précision*, d' *échelle*et d' *État* .|
+|[COLUMN_ENTRY_LENGTH](#column_entry_length)|Représente une liaison à la colonne spécifique dans la base de données. Prend en charge la variable de *longueur* .|
+|[COLUMN_ENTRY_LENGTH_STATUS](#column_entry_length_status)|Représente une liaison à la colonne spécifique dans la base de données. Prend en charge les paramètres d' *État* et de *longueur* .|
+|[COLUMN_ENTRY_PS](#column_entry_ps)|Représente une liaison à la colonne spécifique dans la base de données. Prend en charge les paramètres de *précision* et d' *échelle* .|
+|[COLUMN_ENTRY_PS_LENGTH](#column_entry_ps_length)|Représente une liaison à la colonne spécifique dans la base de données. Prend en charge les paramètres de variable de *longueur* , de *précision* et d' *échelle* .|
+|[COLUMN_ENTRY_PS_LENGTH_STATUS](#column_entry_ps_length_status)|Représente une liaison à la colonne spécifique dans la base de données. Prend en charge les variables d' *État* et de *longueur* , les paramètres de *précision* et d' *échelle* .|
+|[COLUMN_ENTRY_PS_STATUS](#column_entry_ps_status)|Représente une liaison à la colonne spécifique dans la base de données. Prend en charge la variable d' *État* , les paramètres de *précision* et d' *échelle* .|
+|[COLUMN_ENTRY_STATUS](#column_entry_status)|Représente une liaison à la colonne spécifique dans la base de données. Prend en charge la variable d' *État* .|
+|[COLUMN_ENTRY_TYPE](#column_entry_type)|Représente une liaison à une colonne spécifique dans la base de données. Prend en charge le paramètre de *type* .|
+|[COLUMN_ENTRY_TYPE_SIZE](#column_entry_type_size)|Représente une liaison à la colonne spécifique dans la base de données. Prend en charge les paramètres de *type* et de *taille* .|
 |[COLUMN_NAME](#column_name)|Représente une liaison à une colonne spécifique dans la base de données par nom.|
-|[COLUMN_NAME_EX](#column_name_ex)|Représente une liaison à une colonne spécifique dans la base de données par nom. Prend en charge les spécifications du type de données, de la taille, de la précision, de l’échelle, de la longueur de la colonne et de l’état de la colonne.|
-|[COLUMN_NAME_LENGTH](#column_name_length)|Représente une liaison à une colonne spécifique dans la base de données par nom. Prend en charge les spécifications de la longueur de la colonne.|
-|[COLUMN_NAME_LENGTH_STATUS](#column_name_length_status)|Représente une liaison à une colonne spécifique dans la base de données par nom. Prend en charge les spécifications de la longueur et du statut de la colonne.|
-|[COLUMN_NAME_PS](#column_name_ps)|Représente une liaison à une colonne spécifique dans la base de données par nom. Prend en charge les spécifications de précision et d’échelle.|
-|[COLUMN_NAME_PS_LENGTH](#column_name_ps_length)|Représente une liaison à une colonne spécifique dans la base de données par nom. Prend en charge les spécifications de précision, d’échelle et de longueur de colonne.|
-|[COLUMN_NAME_PS_LENGTH_STATUS](#column_name_ps_length_status)|Représente une liaison à une colonne spécifique dans la base de données par nom. Prend en charge les spécifications de précision, d’échelle, de longueur de colonne et d’état de colonne.|
-|[COLUMN_NAME_PS_STATUS](#column_name_ps_status)|Représente une liaison à une colonne spécifique dans la base de données par nom. Prend en charge les spécifications de précision, d’échelle et d’état de colonne.|
-|[COLUMN_NAME_STATUS](#column_name_status)|Représente une liaison à une colonne spécifique dans la base de données par nom. Prend en charge les spécifications de l’état de la colonne.|
-|[COLUMN_NAME_TYPE](#column_name_type)|Représente une liaison à une colonne spécifique dans la base de données par nom. Prend en charge les spécifications du type de données.|
-|[COLUMN_NAME_TYPE_PS](#column_name_type_ps)|Représente une liaison à une colonne spécifique dans la base de données par nom. Prend en charge les spécifications du type de données, de la précision et de l’échelle.|
-|[COLUMN_NAME_TYPE_SIZE](#column_name_type_size)|Représente une liaison à une colonne spécifique dans la base de données par nom. Prend en charge les spécifications du type et de la taille des données.|
-|[COLUMN_NAME_TYPE_STATUS](#column_name_type_status)|Représente une liaison à une colonne spécifique dans la base de données par nom. Prend en charge les spécifications du type de données et de l’état de la colonne.|
-|[END_COLUMN_MAP](#end_column_map)|Marque la fin des entrées de la carte de colonne.|
+|[COLUMN_NAME_EX](#column_name_ex)|Représente une liaison à une colonne spécifique dans la base de données par nom. Prend en charge la spécification du type de données, la taille, la précision, l’échelle, la longueur de colonne et l’état de colonne.|
+|[COLUMN_NAME_LENGTH](#column_name_length)|Représente une liaison à une colonne spécifique dans la base de données par nom. Prend en charge la spécification de longueur de colonne.|
+|[COLUMN_NAME_LENGTH_STATUS](#column_name_length_status)|Représente une liaison à une colonne spécifique dans la base de données par nom. Prend en charge la spécification de la longueur et de l’état des colonnes.|
+|[COLUMN_NAME_PS](#column_name_ps)|Représente une liaison à une colonne spécifique dans la base de données par nom. Prend en charge la spécification de la précision et de l’échelle.|
+|[COLUMN_NAME_PS_LENGTH](#column_name_ps_length)|Représente une liaison à une colonne spécifique dans la base de données par nom. Prend en charge la spécification de la précision, de l’échelle et de la longueur de colonne.|
+|[COLUMN_NAME_PS_LENGTH_STATUS](#column_name_ps_length_status)|Représente une liaison à une colonne spécifique dans la base de données par nom. Prend en charge la spécification de la précision, de l’échelle, de la longueur de colonne et de l’état des colonnes.|
+|[COLUMN_NAME_PS_STATUS](#column_name_ps_status)|Représente une liaison à une colonne spécifique dans la base de données par nom. Prend en charge la spécification de la précision, de l’échelle et de l’état des colonnes.|
+|[COLUMN_NAME_STATUS](#column_name_status)|Représente une liaison à une colonne spécifique dans la base de données par nom. Prend en charge la spécification de l’état des colonnes.|
+|[COLUMN_NAME_TYPE](#column_name_type)|Représente une liaison à une colonne spécifique dans la base de données par nom. Prend en charge la spécification du type de données.|
+|[COLUMN_NAME_TYPE_PS](#column_name_type_ps)|Représente une liaison à une colonne spécifique dans la base de données par nom. Prend en charge la spécification du type de données, de la précision et de l’échelle.|
+|[COLUMN_NAME_TYPE_SIZE](#column_name_type_size)|Représente une liaison à une colonne spécifique dans la base de données par nom. Prend en charge la spécification du type et de la taille des données.|
+|[COLUMN_NAME_TYPE_STATUS](#column_name_type_status)|Représente une liaison à une colonne spécifique dans la base de données par nom. Prend en charge la spécification du type de données et de l’état des colonnes.|
+|[END_COLUMN_MAP](#end_column_map)|Marque la fin des entrées de mappage de colonne.|
 
-## <a name="command-macros"></a>Macros de commandement
-
-|||
-|-|-|
-|[DEFINE_COMMAND](#define_command)|Spécifie la commande qui sera utilisée pour créer le jeu de ligne lors de l’utilisation de la classe [CCommand.](../../data/oledb/ccommand-class.md) Accepte uniquement les types de chaînes correspondant au type d’application spécifié (ANSI ou Unicode). Il est recommandé d’utiliser [DEFINE_COMMAND_EX](../../data/oledb/define-command-ex.md) au lieu de DEFINE_COMMAND.|
-|[DEFINE_COMMAND_EX](#define_command_ex)|Spécifie la commande qui sera utilisée pour créer le jeu de ligne lors de l’utilisation de la classe [CCommand.](../../data/oledb/ccommand-class.md) Prend en charge les applications ANSI et Unicode.|
-
-## <a name="parameter-map-macros"></a>Macros de carte de paramètres
+## <a name="command-macros"></a>Macros de commande
 
 |||
 |-|-|
-|[BEGIN_PARAM_MAP](#begin_param_map)|Marque le début des entrées de carte de paramètres dans la classe d’enregistrement de l’utilisateur.|
-|[END_PARAM_MAP](#end_param_map)|Marque la fin des entrées de carte de paramètres.|
-|[SET_PARAM_TYPE](#set_param_type)|Spécifie COLUMN_ENTRY macros qui suivent le macro SET_PARAM_TYPE comme entrée, sortie, ou entrée /sortie.|
+|[DEFINE_COMMAND](#define_command)|Spécifie la commande qui sera utilisée pour créer l’ensemble de lignes lors de l’utilisation de la classe [CCommand](../../data/oledb/ccommand-class.md) . Accepte uniquement les types chaîne correspondant au type d’application spécifié (ANSI ou Unicode). Nous vous recommandons d’utiliser [DEFINE_COMMAND_EX](../../data/oledb/define-command-ex.md) au lieu de DEFINE_COMMAND.|
+|[DEFINE_COMMAND_EX](#define_command_ex)|Spécifie la commande qui sera utilisée pour créer l’ensemble de lignes lors de l’utilisation de la classe [CCommand](../../data/oledb/ccommand-class.md) . Prend en charge les applications ANSI et Unicode.|
+
+## <a name="parameter-map-macros"></a>Macros de mappage de paramètres
+
+|||
+|-|-|
+|[BEGIN_PARAM_MAP](#begin_param_map)|Marque le début des entrées de mappage de paramètres dans la classe d’enregistrement utilisateur.|
+|[END_PARAM_MAP](#end_param_map)|Marque la fin des entrées de mappage de paramètres.|
+|[SET_PARAM_TYPE](#set_param_type)|Spécifie COLUMN_ENTRY macros qui suivent la macro SET_PARAM_TYPE comme entrée, sortie ou entrée/sortie.|
 
 ### <a name="atltraceerrorrecords"></a><a name="atltraceerrorrecords"></a>AtlTraceErrorRecords
 
-Décharge les informations d’enregistrement d’erreur OLE DB à l’appareil de décharge si une erreur est retournée.
+Vide OLE DB informations d’enregistrement d’erreur sur le périphérique de vidage si une erreur est retournée.
 
 #### <a name="syntax"></a>Syntaxe
 
@@ -192,12 +192,12 @@ inline void AtlTraceErrorRecords(HRESULT hrErr = S_OK);
 
 #### <a name="parameters"></a>Paramètres
 
-*Herr*<br/>
-[dans] Un HRESULT retourné par une fonction membre OLE DB Consumer Template.
+*hErr*<br/>
+dans HRESULT retourné par une fonction membre de modèle de consommateur OLE DB.
 
 #### <a name="remarks"></a>Notes
 
-Si *hErr* n’est `AtlTraceErrorRecords` pas S_OK, décharge les informations d’enregistrement d’erreur OLE DB à l’appareil de décharge (l’onglet **Debug** de la fenêtre de sortie ou un fichier). Les informations sur l’enregistrement d’erreur, qui sont obtenues auprès du fournisseur, comprennent le numéro de rangée, la source, la description, le fichier d’aide, le contexte et le GUID pour chaque saisie d’enregistrement d’erreur. `AtlTraceErrorRecords`décharge cette information uniquement dans les constructions de débogé. Dans les versions, c’est un talon vide qui est optimisé. Pour plus d’informations, voir [CDBErrorInfo Class](../../data/oledb/cdberrorinfo-class.md).
+Si *hErr* n’est pas S_OK, `AtlTraceErrorRecords` vide OLE DB informations sur l’enregistrement de l’erreur sur le périphérique de vidage (onglet **débogage** de la fenêtre sortie ou d’un fichier). Les informations de l’enregistrement d’erreur, qui sont obtenues auprès du fournisseur, incluent le numéro de ligne, la source, la description, le fichier d’aide, le contexte et le GUID pour chaque entrée d’enregistrement d’erreur. `AtlTraceErrorRecords`vide ces informations uniquement dans les versions Debug. Dans les versions release, il s’agit d’un stub vide qui est optimisé. Pour plus d’informations, consultez [CDBErrorInfo, classe](../../data/oledb/cdberrorinfo-class.md).
 
 ### <a name="begin_accessor"></a><a name="begin_accessor"></a>BEGIN_ACCESSOR
 
@@ -212,18 +212,18 @@ BEGIN_ACCESSOR(num, bAuto)
 #### <a name="parameters"></a>Paramètres
 
 *num*<br/>
-[dans] Le numéro zéro-offset pour l’accesseur dans cette carte d’accesseur.
+dans Nombre de décalage zéro pour l’accesseur dans ce mappage d’accesseur.
 
 *bAuto*<br/>
-[dans] Précise si cet accesseur est un accesseur automatique ou un accesseur manuel. Si **c’est vrai,** l’accesseur est auto; si **faux,** l’accesseur est manuel. Un accesseur automatique signifie que les données sont récupérées pour vous sur les opérations de déménagement.
+dans Spécifie si cet accesseur est un accesseur automatique ou un accesseur manuel. Si **`true`** , l’accesseur est auto ; si **`false`** , l’accesseur est manuel. Un accesseur automatique signifie que les données sont extraites pour vous lors des opérations de déplacement.
 
 #### <a name="remarks"></a>Notes
 
-Dans le cas de plusieurs accesseurs sur un jeu de ligne, vous devez spécifier BEGIN_ACCESSOR_MAP et utiliser la macro BEGIN_ACCESSOR pour chaque accesseur individuel. La macro BEGIN_ACCESSOR est complétée par la macro END_ACCESSOR. La macro BEGIN_ACCESSOR_MAP est complétée par la macro END_ACCESSOR_MAP.
+Dans le cas de plusieurs accesseurs sur un ensemble de lignes, vous devez spécifier BEGIN_ACCESSOR_MAP et utiliser la macro BEGIN_ACCESSOR pour chaque accesseur individuel. La macro BEGIN_ACCESSOR s’est terminée avec la macro END_ACCESSOR. La macro BEGIN_ACCESSOR_MAP s’est terminée avec la macro END_ACCESSOR_MAP.
 
 #### <a name="example"></a>Exemple
 
-Voir [BEGIN_ACCESSOR_MAP](../../data/oledb/begin-accessor-map.md).
+Consultez [BEGIN_ACCESSOR_MAP](../../data/oledb/begin-accessor-map.md).
 
 ### <a name="begin_accessor_map"></a><a name="begin_accessor_map"></a>BEGIN_ACCESSOR_MAP
 
@@ -237,7 +237,7 @@ BEGIN_ACCESSOR_MAP(x, num)
 
 #### <a name="parameters"></a>Paramètres
 
-*X*<br/>
+*x*<br/>
 [in] Nom de la classe d’enregistrement utilisateur.
 
 *num*<br/>
@@ -245,7 +245,7 @@ BEGIN_ACCESSOR_MAP(x, num)
 
 #### <a name="remarks"></a>Notes
 
-Dans le cas de plusieurs accesseurs sur un jeu de ligne, vous devez spécifier BEGIN_ACCESSOR_MAP au début et utiliser la macro BEGIN_ACCESSOR pour chaque accesseur individuel. La macro BEGIN_ACCESSOR est complétée par la macro END_ACCESSOR. La carte de l’accesseur est complétée par la macro END_ACCESSOR_MAP.
+Dans le cas de plusieurs accesseurs sur un ensemble de lignes, vous devez spécifier BEGIN_ACCESSOR_MAP au début et utiliser la macro BEGIN_ACCESSOR pour chaque accesseur individuel. La macro BEGIN_ACCESSOR s’est terminée avec la macro END_ACCESSOR. Le mappage d’accesseur est terminé avec la macro END_ACCESSOR_MAP.
 
 Si l’enregistrement utilisateur ne comprend qu’un seul accesseur, utilisez la macro [BEGIN_COLUMN_MAP](../../data/oledb/begin-column-map.md).
 
@@ -306,15 +306,15 @@ END_ACCESSOR()
 
 #### <a name="remarks"></a>Notes
 
-Pour plusieurs accesseurs sur un jeu de ligne, vous devez spécifier BEGIN_ACCESSOR_MAP et utiliser la macro BEGIN_ACCESSOR pour chaque accesseur individuel. La macro BEGIN_ACCESSOR est complétée par la macro END_ACCESSOR. La macro BEGIN_ACCESSOR_MAP est complétée par la macro END_ACCESSOR_MAP.
+Pour les accesseurs multiples d’un ensemble de lignes, vous devez spécifier BEGIN_ACCESSOR_MAP et utiliser la macro BEGIN_ACCESSOR pour chaque accesseur individuel. La macro BEGIN_ACCESSOR s’est terminée avec la macro END_ACCESSOR. La macro BEGIN_ACCESSOR_MAP s’est terminée avec la macro END_ACCESSOR_MAP.
 
 #### <a name="example"></a>Exemple
 
-Voir [BEGIN_ACCESSOR_MAP](../../data/oledb/begin-accessor-map.md).
+Consultez [BEGIN_ACCESSOR_MAP](../../data/oledb/begin-accessor-map.md).
 
 ### <a name="end_accessor_map"></a><a name="end_accessor_map"></a>END_ACCESSOR_MAP
 
-Marque la fin des entrées de carte de l’accesseur.
+Marque la fin des entrées de mappage d’accesseur.
 
 #### <a name="syntax"></a>Syntaxe
 
@@ -324,11 +324,11 @@ END_ACCESSOR_MAP()
 
 #### <a name="remarks"></a>Notes
 
-Pour plusieurs accesseurs sur un jeu de ligne, vous devez spécifier BEGIN_ACCESSOR_MAP et utiliser la macro BEGIN_ACCESSOR pour chaque accesseur individuel. La macro BEGIN_ACCESSOR est complétée par la macro END_ACCESSOR. La macro BEGIN_ACCESSOR_MAP est complétée par la macro END_ACCESSOR_MAP.
+Pour les accesseurs multiples d’un ensemble de lignes, vous devez spécifier BEGIN_ACCESSOR_MAP et utiliser la macro BEGIN_ACCESSOR pour chaque accesseur individuel. La macro BEGIN_ACCESSOR s’est terminée avec la macro END_ACCESSOR. La macro BEGIN_ACCESSOR_MAP s’est terminée avec la macro END_ACCESSOR_MAP.
 
 #### <a name="example"></a>Exemple
 
-Voir [BEGIN_ACCESSOR_MAP](../../data/oledb/begin-accessor-map.md).
+Consultez [BEGIN_ACCESSOR_MAP](../../data/oledb/begin-accessor-map.md).
 
 ### <a name="begin_column_map"></a><a name="begin_column_map"></a>BEGIN_COLUMN_MAP
 
@@ -342,14 +342,14 @@ BEGIN_COLUMN_MAP(x)
 
 #### <a name="parameters"></a>Paramètres
 
-*X*<br/>
+*x*<br/>
 [in] Nom de la classe d’enregistrement utilisateur dérivée de `CAccessor`.
 
 #### <a name="remarks"></a>Notes
 
 Cette macro est utilisée dans le cas d’un seul accesseur sur un ensemble de lignes. Si vous avez plusieurs accesseurs sur un ensemble de lignes, utilisez [BEGIN_ACCESSOR_MAP](../../data/oledb/begin-accessor-map.md).
 
-La macro BEGIN_COLUMN_MAP est complétée par la macro END_COLUMN_MAP. Cette macro est utilisée quand un seul accesseur est obligatoire dans l’enregistrement utilisateur.
+La macro BEGIN_COLUMN_MAP s’est terminée avec la macro END_COLUMN_MAP. Cette macro est utilisée quand un seul accesseur est obligatoire dans l’enregistrement utilisateur.
 
 Les colonnes correspondent aux champs de l’ensemble de lignes à lier.
 
@@ -361,7 +361,7 @@ Voici un exemple de mappage de colonnes et de paramètres :
 
 ### <a name="blob_entry"></a><a name="blob_entry"></a>BLOB_ENTRY
 
-Utilisé avec BEGIN_COLUMN_MAP et END_COLUMN_MAP pour lier un gros objet binaire ([BLOB](/previous-versions/windows/desktop/ms711511(v=vs.85))).
+Utilisé avec BEGIN_COLUMN_MAP et END_COLUMN_MAP pour lier un objet[BLOB](/previous-versions/windows/desktop/ms711511(v=vs.85))(Binary Large Object).
 
 #### <a name="syntax"></a>Syntaxe
 
@@ -372,24 +372,24 @@ BLOB_ENTRY(nOrdinal, IID, flags, data)
 #### <a name="parameters"></a>Paramètres
 
 *nOrdinal*<br/>
-[dans] Le numéro de colonne.
+dans Numéro de la colonne.
 
 *IID*<br/>
-[dans] Interface GUID, `IDD_ISequentialStream`comme , utilisé pour récupérer le BLOB.
+dans GUID d’interface, tel que `IDD_ISequentialStream` , utilisé pour récupérer l’objet BLOB.
 
-*Drapeaux*<br/>
-[dans] Drapeaux en mode stockage tels que définis par `STGM_READ`le modèle de stockage structuré OLE (par exemple, ).
+*flags*<br/>
+dans Indicateurs de mode de stockage tels que définis par le modèle de stockage structuré OLE (par exemple, `STGM_READ` ).
 
 *data*<br/>
-[dans] Le membre de données correspondant dans l’enregistrement utilisateur.
+dans Données membres correspondantes dans l’enregistrement de l’utilisateur.
 
 #### <a name="example"></a>Exemple
 
-Voir [comment puis-je récupérer un BLOB?](../../data/oledb/retrieving-a-blob.md).
+Découvrez [Comment récupérer un objet BLOB](../../data/oledb/retrieving-a-blob.md).
 
 ### <a name="blob_entry_length"></a><a name="blob_entry_length"></a>BLOB_ENTRY_LENGTH
 
-Utilisé avec BEGIN_COLUMN_MAP et END_COLUMN_MAP pour lier un gros objet binaire ([BLOB](/previous-versions/windows/desktop/ms711511(v=vs.85))). Semblable à [BLOB_ENTRY](../../data/oledb/blob-entry.md), sauf que cette macro obtient également la longueur dans les octets de la colonne BLOB.
+Utilisé avec BEGIN_COLUMN_MAP et END_COLUMN_MAP pour lier un objet[BLOB](/previous-versions/windows/desktop/ms711511(v=vs.85))(Binary Large Object). Semblable à [BLOB_ENTRY](../../data/oledb/blob-entry.md), à ceci près que cette macro obtient également la longueur en octets de la colonne BLOB.
 
 #### <a name="syntax"></a>Syntaxe
 
@@ -400,27 +400,27 @@ BLOB_ENTRY_LENGTH(nOrdinal, IID, flags, data, length)
 #### <a name="parameters"></a>Paramètres
 
 *nOrdinal*<br/>
-[dans] Le numéro de colonne.
+dans Numéro de la colonne.
 
 *IID*<br/>
-[dans] Interface GUID, `IDD_ISequentialStream`comme , utilisé pour récupérer le BLOB.
+dans GUID d’interface, tel que `IDD_ISequentialStream` , utilisé pour récupérer l’objet BLOB.
 
-*Drapeaux*<br/>
-[dans] Drapeaux en mode stockage tels que définis par `STGM_READ`le modèle de stockage structuré OLE (par exemple, ).
+*flags*<br/>
+dans Indicateurs de mode de stockage tels que définis par le modèle de stockage structuré OLE (par exemple, `STGM_READ` ).
 
 *data*<br/>
-[dans] Le membre de données correspondant dans l’enregistrement utilisateur.
+dans Données membres correspondantes dans l’enregistrement de l’utilisateur.
 
 *length*<br/>
-[out] La longueur (réelle) dans les octets de la colonne BLOB.
+à Longueur (réelle) en octets de la colonne BLOB.
 
 #### <a name="example"></a>Exemple
 
-Voir [comment puis-je récupérer un BLOB?](../../data/oledb/retrieving-a-blob.md).
+Découvrez [Comment récupérer un objet BLOB](../../data/oledb/retrieving-a-blob.md).
 
 ### <a name="blob_entry_length_status"></a><a name="blob_entry_length_status"></a>BLOB_ENTRY_LENGTH_STATUS
 
-Utilisé avec BEGIN_COLUMN_MAP et END_COLUMN_MAP pour lier un gros objet binaire ([BLOB](/previous-versions/windows/desktop/ms711511(v=vs.85))). Semblable à [BLOB_ENTRY](../../data/oledb/blob-entry.md), sauf que cette macro obtient également la longueur et le statut de la colonne BLOB.
+Utilisé avec BEGIN_COLUMN_MAP et END_COLUMN_MAP pour lier un objet[BLOB](/previous-versions/windows/desktop/ms711511(v=vs.85))(Binary Large Object). Semblable à [BLOB_ENTRY](../../data/oledb/blob-entry.md), à ceci près que cette macro obtient également la longueur et l’état de la colonne BLOB.
 
 #### <a name="syntax"></a>Syntaxe
 
@@ -437,30 +437,30 @@ BLOB_ENTRY_LENGTH_STATUS(
 #### <a name="parameters"></a>Paramètres
 
 *nOrdinal*<br/>
-[dans] Le numéro de colonne.
+dans Numéro de la colonne.
 
 *IID*<br/>
-[dans] Interface GUID, `IDD_ISequentialStream`comme , utilisé pour récupérer le BLOB.
+dans GUID d’interface, tel que `IDD_ISequentialStream` , utilisé pour récupérer l’objet BLOB.
 
-*Drapeaux*<br/>
-[dans] Drapeaux en mode stockage tels que définis par `STGM_READ`le modèle de stockage structuré OLE (par exemple, ).
+*flags*<br/>
+dans Indicateurs de mode de stockage tels que définis par le modèle de stockage structuré OLE (par exemple, `STGM_READ` ).
 
 *data*<br/>
-[dans] Le membre de données correspondant dans l’enregistrement utilisateur.
+dans Données membres correspondantes dans l’enregistrement de l’utilisateur.
 
 *length*<br/>
-[out] La longueur (réelle) dans les octets de la colonne BLOB.
+à Longueur (réelle) en octets de la colonne BLOB.
 
 *statut*<br/>
-[out] L’état de la colonne de données BLOB.
+à État de la colonne de données de l’objet BLOB.
 
 #### <a name="example"></a>Exemple
 
-Voir [comment puis-je récupérer un BLOB?](../../data/oledb/retrieving-a-blob.md).
+Découvrez [Comment récupérer un objet BLOB](../../data/oledb/retrieving-a-blob.md).
 
 ### <a name="blob_entry_status"></a><a name="blob_entry_status"></a>BLOB_ENTRY_STATUS
 
-Utilisé avec BEGIN_COLUMN_MAP ou BEGIN_ACCESSOR_MAP pour lier un gros objet binaire ([BLOB](/previous-versions/windows/desktop/ms711511(v=vs.85))). Semblable à [BLOB_ENTRY](../../data/oledb/blob-entry.md), sauf que cette macro obtient également le statut de la colonne BLOB.
+Utilisé avec BEGIN_COLUMN_MAP ou BEGIN_ACCESSOR_MAP pour lier un objet[BLOB](/previous-versions/windows/desktop/ms711511(v=vs.85))(Binary Large Object). Semblable à [BLOB_ENTRY](../../data/oledb/blob-entry.md), à ceci près que cette macro obtient également l’état de la colonne BLOB.
 
 #### <a name="syntax"></a>Syntaxe
 
@@ -471,27 +471,27 @@ BLOB_ENTRY_STATUS(nOrdinal, IID, flags, data, status)
 #### <a name="parameters"></a>Paramètres
 
 *nOrdinal*<br/>
-[dans] Le numéro de colonne.
+dans Numéro de la colonne.
 
 *IID*<br/>
-[dans] Interface GUID, `IDD_ISequentialStream`comme , utilisé pour récupérer le BLOB.
+dans GUID d’interface, tel que `IDD_ISequentialStream` , utilisé pour récupérer l’objet BLOB.
 
-*Drapeaux*<br/>
-[dans] Drapeaux en mode stockage tels que définis par `STGM_READ`le modèle de stockage structuré OLE (par exemple, ).
+*flags*<br/>
+dans Indicateurs de mode de stockage tels que définis par le modèle de stockage structuré OLE (par exemple, `STGM_READ` ).
 
 *data*<br/>
-[dans] Le membre de données correspondant dans l’enregistrement utilisateur.
+dans Données membres correspondantes dans l’enregistrement de l’utilisateur.
 
 *statut*<br/>
-[out] L’état du champ BLOB.
+à État du champ BLOB.
 
 #### <a name="example"></a>Exemple
 
-Voir [comment puis-je récupérer un BLOB?](../../data/oledb/retrieving-a-blob.md).
+Découvrez [Comment récupérer un objet BLOB](../../data/oledb/retrieving-a-blob.md).
 
 ### <a name="blob_name"></a><a name="blob_name"></a>BLOB_NAME
 
-Utilisé avec BEGIN_COLUMN_MAP et END_COLUMN_MAP pour lier un gros objet binaire ([BLOB](/previous-versions/windows/desktop/ms711511(v=vs.85))). Semblable à [BLOB_ENTRY](../../data/oledb/blob-entry.md), sauf que cette macro prend un nom de colonne au lieu d’un numéro de colonne.
+Utilisé avec BEGIN_COLUMN_MAP et END_COLUMN_MAP pour lier un objet[BLOB](/previous-versions/windows/desktop/ms711511(v=vs.85))(Binary Large Object). Semblable à [BLOB_ENTRY](../../data/oledb/blob-entry.md), sauf que cette macro accepte un nom de colonne au lieu d’un numéro de colonne.
 
 #### <a name="syntax"></a>Syntaxe
 
@@ -501,25 +501,25 @@ BLOB_NAME(pszName, IID, flags, data )
 
 #### <a name="parameters"></a>Paramètres
 
-*pszName (en)*<br/>
-[dans] Un pointeur sur le nom de la colonne. Le nom doit être une chaîne Unicode. Vous pouvez y parvenir en mettant un «L» en `L"MyColumn"`face du nom, par exemple: .
+*pszName*<br/>
+dans Pointeur vers le nom de la colonne. Le nom doit être une chaîne Unicode. Pour ce faire, vous pouvez placer un « L » devant le nom, par exemple : `L"MyColumn"` .
 
 *IID*<br/>
-[dans] Interface GUID, `IDD_ISequentialStream`comme , utilisé pour récupérer le BLOB.
+dans GUID d’interface, tel que `IDD_ISequentialStream` , utilisé pour récupérer l’objet BLOB.
 
-*Drapeaux*<br/>
-[dans] Drapeaux en mode stockage tels que définis par `STGM_READ`le modèle de stockage structuré OLE (par exemple, ).
+*flags*<br/>
+dans Indicateurs de mode de stockage tels que définis par le modèle de stockage structuré OLE (par exemple, `STGM_READ` ).
 
 *data*<br/>
-[dans] Le membre de données correspondant dans l’enregistrement utilisateur.
+dans Données membres correspondantes dans l’enregistrement de l’utilisateur.
 
 #### <a name="example"></a>Exemple
 
-Voir [comment puis-je récupérer un BLOB?](../../data/oledb/retrieving-a-blob.md).
+Découvrez [Comment récupérer un objet BLOB](../../data/oledb/retrieving-a-blob.md).
 
 ### <a name="blob_name_length"></a><a name="blob_name_length"></a>BLOB_NAME_LENGTH
 
-Utilisé avec BEGIN_COLUMN_MAP et END_COLUMN_MAP pour lier un gros objet binaire ([BLOB](/previous-versions/windows/desktop/ms711511(v=vs.85))). Semblable à [BLOB_NAME](../../data/oledb/blob-name.md), sauf que cette macro obtient également la longueur dans les octets de la colonne de données BLOB.
+Utilisé avec BEGIN_COLUMN_MAP et END_COLUMN_MAP pour lier un objet[BLOB](/previous-versions/windows/desktop/ms711511(v=vs.85))(Binary Large Object). Semblable à [BLOB_NAME](../../data/oledb/blob-name.md), à ceci près que cette macro obtient également la longueur en octets de la colonne de données BLOB.
 
 #### <a name="syntax"></a>Syntaxe
 
@@ -529,24 +529,24 @@ BLOB_NAME_LENGTH(pszName, IID, flags, data, length )
 
 #### <a name="parameters"></a>Paramètres
 
-*pszName (en)*<br/>
-[dans] Un pointeur sur le nom de la colonne. Le nom doit être une chaîne Unicode. Vous pouvez y parvenir en mettant un «L» en `L"MyColumn"`face du nom, par exemple: .
+*pszName*<br/>
+dans Pointeur vers le nom de la colonne. Le nom doit être une chaîne Unicode. Pour ce faire, vous pouvez placer un « L » devant le nom, par exemple : `L"MyColumn"` .
 
 *IID*<br/>
-[dans] Interface GUID, `IDD_ISequentialStream`comme , utilisé pour récupérer le BLOB.
+dans GUID d’interface, tel que `IDD_ISequentialStream` , utilisé pour récupérer l’objet BLOB.
 
-*Drapeaux*<br/>
-[dans] Drapeaux en mode stockage tels que définis par `STGM_READ`le modèle de stockage structuré OLE (par exemple, ).
+*flags*<br/>
+dans Indicateurs de mode de stockage tels que définis par le modèle de stockage structuré OLE (par exemple, `STGM_READ` ).
 
 *data*<br/>
-[dans] Le membre de données correspondant dans l’enregistrement utilisateur.
+dans Données membres correspondantes dans l’enregistrement de l’utilisateur.
 
 *length*<br/>
-[out] La longueur (réelle) dans les octets de la colonne BLOB.
+à Longueur (réelle) en octets de la colonne BLOB.
 
 ### <a name="blob_name_length_status"></a><a name="blob_name_length_status"></a>BLOB_NAME_LENGTH_STATUS
 
-Utilisé avec BEGIN_COLUMN_MAP et END_COLUMN_MAP pour lier un gros objet binaire ([BLOB](/previous-versions/windows/desktop/ms711511(v=vs.85))). Semblable à [BLOB_NAME](../../data/oledb/blob-name.md), sauf que cette macro obtient également la longueur et l’état de la colonne de données BLOB.
+Utilisé avec BEGIN_COLUMN_MAP et END_COLUMN_MAP pour lier un objet[BLOB](/previous-versions/windows/desktop/ms711511(v=vs.85))(Binary Large Object). Semblable à [BLOB_NAME](../../data/oledb/blob-name.md), à ceci près que cette macro obtient également la longueur et l’état de la colonne de données BLOB.
 
 #### <a name="syntax"></a>Syntaxe
 
@@ -556,27 +556,27 @@ BLOB_NAME_LENGTH_STATUS(pszName, IID, flags, data, length, status )
 
 #### <a name="parameters"></a>Paramètres
 
-*pszName (en)*<br/>
-[dans] Un pointeur sur le nom de la colonne. Le nom doit être une chaîne Unicode. Vous pouvez y parvenir en mettant un «L» en `L"MyColumn"`face du nom, par exemple: .
+*pszName*<br/>
+dans Pointeur vers le nom de la colonne. Le nom doit être une chaîne Unicode. Pour ce faire, vous pouvez placer un « L » devant le nom, par exemple : `L"MyColumn"` .
 
 *IID*<br/>
-[dans] Interface GUID, `IDD_ISequentialStream`comme , utilisé pour récupérer le BLOB.
+dans GUID d’interface, tel que `IDD_ISequentialStream` , utilisé pour récupérer l’objet BLOB.
 
-*Drapeaux*<br/>
-[dans] Drapeaux en mode stockage tels que définis par `STGM_READ`le modèle de stockage structuré OLE (par exemple, ).
+*flags*<br/>
+dans Indicateurs de mode de stockage tels que définis par le modèle de stockage structuré OLE (par exemple, `STGM_READ` ).
 
 *data*<br/>
-[dans] Le membre de données correspondant dans l’enregistrement utilisateur.
+dans Données membres correspondantes dans l’enregistrement de l’utilisateur.
 
 *length*<br/>
-[out] La longueur (réelle) dans les octets de la colonne BLOB.
+à Longueur (réelle) en octets de la colonne BLOB.
 
 *statut*<br/>
-[out] L’état du champ BLOB.
+à État du champ BLOB.
 
 ### <a name="blob_name_status"></a><a name="blob_name_status"></a>BLOB_NAME_STATUS
 
-Utilisé avec BEGIN_COLUMN_MAP et END_COLUMN_MAP pour lier un gros objet binaire ([BLOB](/previous-versions/windows/desktop/ms711511(v=vs.85))). Semblable à [BLOB_NAME](../../data/oledb/blob-name.md), sauf que cette macro obtient également le statut de la colonne de données BLOB.
+Utilisé avec BEGIN_COLUMN_MAP et END_COLUMN_MAP pour lier un objet[BLOB](/previous-versions/windows/desktop/ms711511(v=vs.85))(Binary Large Object). Semblable à [BLOB_NAME](../../data/oledb/blob-name.md), sauf que cette macro obtient également l’état de la colonne de données BLOB.
 
 #### <a name="syntax"></a>Syntaxe
 
@@ -586,20 +586,20 @@ BLOB_NAME_STATUS(pszName, IID, flags, data, status )
 
 #### <a name="parameters"></a>Paramètres
 
-*pszName (en)*<br/>
-[dans] Un pointeur sur le nom de la colonne. Le nom doit être une chaîne Unicode. Vous pouvez y parvenir en mettant un «L» en `L"MyColumn"`face du nom, par exemple: .
+*pszName*<br/>
+dans Pointeur vers le nom de la colonne. Le nom doit être une chaîne Unicode. Pour ce faire, vous pouvez placer un « L » devant le nom, par exemple : `L"MyColumn"` .
 
 *IID*<br/>
-[dans] Interface GUID, `IDD_ISequentialStream`comme , utilisé pour récupérer le BLOB.
+dans GUID d’interface, tel que `IDD_ISequentialStream` , utilisé pour récupérer l’objet BLOB.
 
-*Drapeaux*<br/>
-[dans] Drapeaux en mode stockage tels que définis par `STGM_READ`le modèle de stockage structuré OLE (par exemple, ).
+*flags*<br/>
+dans Indicateurs de mode de stockage tels que définis par le modèle de stockage structuré OLE (par exemple, `STGM_READ` ).
 
 *data*<br/>
-[dans] Le membre de données correspondant dans l’enregistrement utilisateur.
+dans Données membres correspondantes dans l’enregistrement de l’utilisateur.
 
 *statut*<br/>
-[out] L’état du champ BLOB.
+à État du champ BLOB.
 
 ### <a name="bookmark_entry"></a><a name="bookmark_entry"></a>BOOKMARK_ENTRY
 
@@ -614,7 +614,7 @@ BOOKMARK_ENTRY(variable)
 #### <a name="parameters"></a>Paramètres
 
 *variable*<br/>
-[dans] La variable à lié à la colonne de signets.
+dans Variable à lier à la colonne de signets.
 
 #### <a name="example"></a>Exemple
 
@@ -664,11 +664,11 @@ END_COLUMN_MAP()
 };
 ```
 
-Pour plus d’informations, voir [à l’aide de signets](using-bookmarks.md) et [de classe CBookmark](../../data/oledb/cbookmark-class.md).
+Pour plus d’informations, consultez [utilisation de signets](using-bookmarks.md) et de la [classe CBookmark](../../data/oledb/cbookmark-class.md).
 
 ### <a name="column_entry"></a><a name="column_entry"></a>COLUMN_ENTRY
 
-Représente une liaison sur le ligne à la colonne spécifique dans le ramage.
+Représente une liaison sur l’ensemble de lignes à la colonne spécifique dans l’ensemble de lignes.
 
 #### <a name="syntax"></a>Syntaxe
 
@@ -678,31 +678,31 @@ COLUMN_ENTRY(nOrdinal, data)
 
 #### <a name="parameters"></a>Paramètres
 
-Voir [DBBINDING](/previous-versions/windows/desktop/ms716845(v=vs.85)) dans la *référence du programmeur OLE DB*.
+Consultez [DBBINDING](/previous-versions/windows/desktop/ms716845(v=vs.85)) dans le *Guide de référence du programmeur OLE DB*.
 
 *nOrdinal*<br/>
-[dans] Le numéro de colonne.
+dans Numéro de la colonne.
 
 *data*<br/>
-[dans] Le membre de données correspondant dans l’enregistrement utilisateur.
+dans Données membres correspondantes dans l’enregistrement de l’utilisateur.
 
 #### <a name="remarks"></a>Notes
 
-La macro COLUMN_ENTRY est utilisée dans les endroits suivants :
+La macro COLUMN_ENTRY est utilisée aux emplacements suivants :
 
-- Entre les [macros BEGIN_COLUMN_MAP](../../data/oledb/begin-column-map.md) et [END_COLUMN_MAP.](../../data/oledb/end-column-map.md)
+- Entre les macros [BEGIN_COLUMN_MAP](../../data/oledb/begin-column-map.md) et [END_COLUMN_MAP](../../data/oledb/end-column-map.md) .
 
-- Entre les [macros BEGIN_ACCESSOR](../../data/oledb/begin-accessor.md) et [END_ACCESSOR.](../../data/oledb/end-accessor.md)
+- Entre les macros [BEGIN_ACCESSOR](../../data/oledb/begin-accessor.md) et [END_ACCESSOR](../../data/oledb/end-accessor.md) .
 
-- Entre les [BEGIN_PARAM_MAP](../../data/oledb/begin-param-map.md) et [END_PARAM_MAP](../../data/oledb/end-param-map.md) macros.
+- Entre les macros [BEGIN_PARAM_MAP](../../data/oledb/begin-param-map.md) et [END_PARAM_MAP](../../data/oledb/end-param-map.md) .
 
 #### <a name="example"></a>Exemple
 
-Voir les exemples dans les sujets macro, [BEGIN_COLUMN_MAP](../../data/oledb/begin-column-map.md) et [BEGIN_ACCESSOR_MAP](../../data/oledb/begin-accessor-map.md).
+Consultez les exemples dans les rubriques relatives aux macros, [BEGIN_COLUMN_MAP](../../data/oledb/begin-column-map.md) et [BEGIN_ACCESSOR_MAP](../../data/oledb/begin-accessor-map.md).
 
 ### <a name="column_entry_ex"></a><a name="column_entry_ex"></a>COLUMN_ENTRY_EX
 
-Représente une liaison sur le ligne à la colonne spécifique de la base de données.
+Représente une liaison sur l’ensemble de lignes à la colonne spécifique dans la base de données.
 
 #### <a name="syntax"></a>Syntaxe
 
@@ -712,49 +712,49 @@ COLUMN_ENTRY_EX(nOrdinal, wType, nLength, nPrecision, nScale, data, length, stat
 
 #### <a name="parameters"></a>Paramètres
 
-Voir [DBBINDING](/previous-versions/windows/desktop/ms716845(v=vs.85)) dans la *référence du programmeur OLE DB*.
+Consultez [DBBINDING](/previous-versions/windows/desktop/ms716845(v=vs.85)) dans le *Guide de référence du programmeur OLE DB*.
 
 *nOrdinal*<br/>
-[dans] Le numéro de colonne.
+dans Numéro de la colonne.
 
 *wType*<br/>
-[dans] Le type de données.
+dans Type de données.
 
-*nLength (en)*<br/>
-[dans] La taille des données dans les octets.
+*nLength*<br/>
+dans Taille des données en octets.
 
 *nPrecision*<br/>
-[dans] La précision maximale à utiliser lors de `DBTYPE_NUMERIC`l’obtention de données et *wType* est . Sinon, ce paramètre est ignoré.
+dans Précision maximale à utiliser lors de l’obtention de données et de *wType* `DBTYPE_NUMERIC` . Sinon, ce paramètre est ignoré.
 
-*nScale (en)*<br/>
-[dans] L’échelle à utiliser lors de l’obtention de données et *wType* est `DBTYPE_NUMERIC` ou `DBTYPE_DECIMAL`.
+*nScale*<br/>
+dans L’échelle à utiliser lors de l’obtention de données et de *wType* est `DBTYPE_NUMERIC` ou `DBTYPE_DECIMAL` .
 
 *data*<br/>
-[dans] Le membre de données correspondant dans l’enregistrement utilisateur.
+dans Données membres correspondantes dans l’enregistrement de l’utilisateur.
 
 *length*<br/>
-[dans] La variable à lié à la longueur de la colonne.
+dans Variable à lier à la longueur de la colonne.
 
 *statut*<br/>
-[dans] La variable à lié à l’état de la colonne.
+dans Variable à lier à l’état de colonne.
 
 #### <a name="remarks"></a>Notes
 
-La macro COLUMN_ENTRY_EX est utilisée dans les endroits suivants :
+La macro COLUMN_ENTRY_EX est utilisée aux emplacements suivants :
 
-- Entre les [macros BEGIN_COLUMN_MAP](../../data/oledb/begin-column-map.md) et [END_COLUMN_MAP.](../../data/oledb/end-column-map.md)
+- Entre les macros [BEGIN_COLUMN_MAP](../../data/oledb/begin-column-map.md) et [END_COLUMN_MAP](../../data/oledb/end-column-map.md) .
 
-- Entre les [macros BEGIN_ACCESSOR](../../data/oledb/begin-accessor.md) et [END_ACCESSOR.](../../data/oledb/end-accessor.md)
+- Entre les macros [BEGIN_ACCESSOR](../../data/oledb/begin-accessor.md) et [END_ACCESSOR](../../data/oledb/end-accessor.md) .
 
-- Entre les [BEGIN_PARAM_MAP](../../data/oledb/begin-param-map.md) et [END_PARAM_MAP](../../data/oledb/end-param-map.md) macros.
+- Entre les macros [BEGIN_PARAM_MAP](../../data/oledb/begin-param-map.md) et [END_PARAM_MAP](../../data/oledb/end-param-map.md) .
 
 #### <a name="example"></a>Exemple
 
-Voir [BOOKMARK_ENTRY](../../data/oledb/bookmark-entry.md).
+Consultez [BOOKMARK_ENTRY](../../data/oledb/bookmark-entry.md).
 
 ### <a name="column_entry_length"></a><a name="column_entry_length"></a>COLUMN_ENTRY_LENGTH
 
-Représente une liaison sur le ligne à la colonne spécifique de la base de données.
+Représente une liaison sur l’ensemble de lignes à la colonne spécifique dans la base de données.
 
 #### <a name="syntax"></a>Syntaxe
 
@@ -764,30 +764,30 @@ COLUMN_ENTRY_LENGTH(nOrdinal, data, length)
 
 #### <a name="parameters"></a>Paramètres
 
-Voir [DBBINDING](/previous-versions/windows/desktop/ms716845(v=vs.85)) dans la *référence du programmeur OLE DB*.
+Consultez [DBBINDING](/previous-versions/windows/desktop/ms716845(v=vs.85)) dans le *Guide de référence du programmeur OLE DB*.
 
 *nOrdinal*<br/>
-[dans] Le numéro de colonne, en commençant par un. Le signet correspond à la colonne zéro.
+dans Numéro de colonne, commençant par un. Signet correspond à la colonne zéro.
 
 *data*<br/>
-[dans] Le membre de données correspondant dans l’enregistrement utilisateur.
+dans Données membres correspondantes dans l’enregistrement de l’utilisateur.
 
 *length*<br/>
-[dans] La variable à lié à la longueur de la colonne.
+dans Variable à lier à la longueur de la colonne.
 
 #### <a name="remarks"></a>Notes
 
-Cette macro soutient la variable *de longueur.* Il est utilisé dans les endroits suivants:
+Cette macro prend en charge la variable de *longueur* . Il est utilisé aux emplacements suivants :
 
-- Entre les [macros BEGIN_COLUMN_MAP](../../data/oledb/begin-column-map.md) et [END_COLUMN_MAP.](../../data/oledb/end-column-map.md)
+- Entre les macros [BEGIN_COLUMN_MAP](../../data/oledb/begin-column-map.md) et [END_COLUMN_MAP](../../data/oledb/end-column-map.md) .
 
-- Entre les [macros BEGIN_ACCESSOR](../../data/oledb/begin-accessor.md) et [END_ACCESSOR.](../../data/oledb/end-accessor.md)
+- Entre les macros [BEGIN_ACCESSOR](../../data/oledb/begin-accessor.md) et [END_ACCESSOR](../../data/oledb/end-accessor.md) .
 
-- Entre les [BEGIN_PARAM_MAP](../../data/oledb/begin-param-map.md) et [END_PARAM_MAP](../../data/oledb/end-param-map.md) macros.
+- Entre les macros [BEGIN_PARAM_MAP](../../data/oledb/begin-param-map.md) et [END_PARAM_MAP](../../data/oledb/end-param-map.md) .
 
 ### <a name="column_entry_length_status"></a><a name="column_entry_length_status"></a>COLUMN_ENTRY_LENGTH_STATUS
 
-Représente une liaison sur le ligne à la colonne spécifique de la base de données.
+Représente une liaison sur l’ensemble de lignes à la colonne spécifique dans la base de données.
 
 #### <a name="syntax"></a>Syntaxe
 
@@ -797,33 +797,33 @@ COLUMN_ENTRY_LENGTH_STATUS(nOrdinal, data, length, status)
 
 #### <a name="parameters"></a>Paramètres
 
-Voir [DBBINDING](/previous-versions/windows/desktop/ms716845(v=vs.85)) dans la *référence du programmeur OLE DB*.
+Consultez [DBBINDING](/previous-versions/windows/desktop/ms716845(v=vs.85)) dans le *Guide de référence du programmeur OLE DB*.
 
 *nOrdinal*<br/>
-[dans] Le numéro de colonne.
+dans Numéro de la colonne.
 
 *data*<br/>
-[dans] Le membre de données correspondant dans l’enregistrement utilisateur.
+dans Données membres correspondantes dans l’enregistrement de l’utilisateur.
 
 *length*<br/>
-[dans] La variable à lié à la longueur de la colonne.
+dans Variable à lier à la longueur de la colonne.
 
 *statut*<br/>
-[dans] La variable à lié à l’état de la colonne.
+dans Variable à lier à l’état de colonne.
 
 #### <a name="remarks"></a>Notes
 
-Utilisez cette macro lorsque vous souhaitez prendre en charge les variables de longueur et d’état. Il est utilisé dans les endroits suivants:
+Utilisez cette macro lorsque vous souhaitez prendre en charge des variables d’État et de longueur. Il est utilisé aux emplacements suivants :
 
-- Entre les [macros BEGIN_COLUMN_MAP](../../data/oledb/begin-column-map.md) et [END_COLUMN_MAP.](../../data/oledb/end-column-map.md)
+- Entre les macros [BEGIN_COLUMN_MAP](../../data/oledb/begin-column-map.md) et [END_COLUMN_MAP](../../data/oledb/end-column-map.md) .
 
-- Entre les [macros BEGIN_ACCESSOR](../../data/oledb/begin-accessor.md) et [END_ACCESSOR.](../../data/oledb/end-accessor.md)
+- Entre les macros [BEGIN_ACCESSOR](../../data/oledb/begin-accessor.md) et [END_ACCESSOR](../../data/oledb/end-accessor.md) .
 
-- Entre les [BEGIN_PARAM_MAP](../../data/oledb/begin-param-map.md) et [END_PARAM_MAP](../../data/oledb/end-param-map.md) macros.
+- Entre les macros [BEGIN_PARAM_MAP](../../data/oledb/begin-param-map.md) et [END_PARAM_MAP](../../data/oledb/end-param-map.md) .
 
 ### <a name="column_entry_ps"></a><a name="column_entry_ps"></a>COLUMN_ENTRY_PS
 
-Représente une liaison sur le ligne à la colonne spécifique dans le ramage.
+Représente une liaison sur l’ensemble de lignes à la colonne spécifique dans l’ensemble de lignes.
 
 #### <a name="syntax"></a>Syntaxe
 
@@ -833,33 +833,33 @@ COLUMN_ENTRY_PS(nOrdinal, nPrecision, nScale, data)
 
 #### <a name="parameters"></a>Paramètres
 
-Voir [DBBINDING](/previous-versions/windows/desktop/ms716845(v=vs.85)) dans la *référence du programmeur OLE DB*.
+Consultez [DBBINDING](/previous-versions/windows/desktop/ms716845(v=vs.85)) dans le *Guide de référence du programmeur OLE DB*.
 
 *nOrdinal*<br/>
-[dans] Le numéro de colonne.
+dans Numéro de la colonne.
 
 *nPrecision*<br/>
-[dans] La précision maximale de la colonne que vous souhaitez lier.
+dans Précision maximale de la colonne que vous souhaitez lier.
 
-*nScale (en)*<br/>
-[dans] L’échelle de la colonne que vous souhaitez lier.
+*nScale*<br/>
+dans Échelle de la colonne que vous souhaitez lier.
 
 *data*<br/>
-[dans] Le membre de données correspondant dans l’enregistrement utilisateur.
+dans Données membres correspondantes dans l’enregistrement de l’utilisateur.
 
 #### <a name="remarks"></a>Notes
 
-Vous permet de spécifier la précision et l’échelle de la colonne que vous souhaitez lier. Il est utilisé dans les endroits suivants:
+Vous permet de spécifier la précision et l’échelle de la colonne que vous souhaitez lier. Il est utilisé aux emplacements suivants :
 
-- Entre les [macros BEGIN_COLUMN_MAP](../../data/oledb/begin-column-map.md) et [END_COLUMN_MAP.](../../data/oledb/end-column-map.md)
+- Entre les macros [BEGIN_COLUMN_MAP](../../data/oledb/begin-column-map.md) et [END_COLUMN_MAP](../../data/oledb/end-column-map.md) .
 
-- Entre les [macros BEGIN_ACCESSOR](../../data/oledb/begin-accessor.md) et [END_ACCESSOR.](../../data/oledb/end-accessor.md)
+- Entre les macros [BEGIN_ACCESSOR](../../data/oledb/begin-accessor.md) et [END_ACCESSOR](../../data/oledb/end-accessor.md) .
 
-- Entre les [BEGIN_PARAM_MAP](../../data/oledb/begin-param-map.md) et [END_PARAM_MAP](../../data/oledb/end-param-map.md) macros.
+- Entre les macros [BEGIN_PARAM_MAP](../../data/oledb/begin-param-map.md) et [END_PARAM_MAP](../../data/oledb/end-param-map.md) .
 
 ### <a name="column_entry_ps_length"></a><a name="column_entry_ps_length"></a>COLUMN_ENTRY_PS_LENGTH
 
-Représente une liaison sur le ligne à la colonne spécifique de la base de données.
+Représente une liaison sur l’ensemble de lignes à la colonne spécifique dans la base de données.
 
 #### <a name="syntax"></a>Syntaxe
 
@@ -869,36 +869,36 @@ COLUMN_ENTRY_PS_LENGTH(nOrdinal, nPrecision, nScale, data, length)
 
 #### <a name="parameters"></a>Paramètres
 
-Voir [DBBINDING](/previous-versions/windows/desktop/ms716845(v=vs.85)) dans la *référence du programmeur OLE DB*.
+Consultez [DBBINDING](/previous-versions/windows/desktop/ms716845(v=vs.85)) dans le *Guide de référence du programmeur OLE DB*.
 
 *nOrdinal*<br/>
-[dans] Le numéro de colonne, en commençant par un. Le signet correspond à la colonne zéro.
+dans Numéro de colonne, commençant par un. Signet correspond à la colonne zéro.
 
 *nPrecision*<br/>
-[dans] La précision maximale de la colonne que vous souhaitez lier.
+dans Précision maximale de la colonne que vous souhaitez lier.
 
-*nScale (en)*<br/>
-[dans] L’échelle de la colonne que vous souhaitez lier.
+*nScale*<br/>
+dans Échelle de la colonne que vous souhaitez lier.
 
 *data*<br/>
-[dans] Le membre de données correspondant dans l’enregistrement utilisateur.
+dans Données membres correspondantes dans l’enregistrement de l’utilisateur.
 
 *length*<br/>
-[dans] La variable à lié à la longueur de la colonne.
+dans Variable à lier à la longueur de la colonne.
 
 #### <a name="remarks"></a>Notes
 
-Vous permet de spécifier la précision et l’échelle de la colonne que vous souhaitez lier. Cette macro soutient la variable *de longueur.* Il est utilisé dans les endroits suivants:
+Vous permet de spécifier la précision et l’échelle de la colonne que vous souhaitez lier. Cette macro prend en charge la variable de *longueur* . Il est utilisé aux emplacements suivants :
 
-- Entre les [macros BEGIN_COLUMN_MAP](../../data/oledb/begin-column-map.md) et [END_COLUMN_MAP.](../../data/oledb/end-column-map.md)
+- Entre les macros [BEGIN_COLUMN_MAP](../../data/oledb/begin-column-map.md) et [END_COLUMN_MAP](../../data/oledb/end-column-map.md) .
 
-- Entre les [macros BEGIN_ACCESSOR](../../data/oledb/begin-accessor.md) et [END_ACCESSOR.](../../data/oledb/end-accessor.md)
+- Entre les macros [BEGIN_ACCESSOR](../../data/oledb/begin-accessor.md) et [END_ACCESSOR](../../data/oledb/end-accessor.md) .
 
-- Entre les [BEGIN_PARAM_MAP](../../data/oledb/begin-param-map.md) et [END_PARAM_MAP](../../data/oledb/end-param-map.md) macros.
+- Entre les macros [BEGIN_PARAM_MAP](../../data/oledb/begin-param-map.md) et [END_PARAM_MAP](../../data/oledb/end-param-map.md) .
 
 ### <a name="column_entry_ps_length_status"></a><a name="column_entry_ps_length_status"></a>COLUMN_ENTRY_PS_LENGTH_STATUS
 
-Représente une liaison sur le ligne à la colonne spécifique de la base de données.
+Représente une liaison sur l’ensemble de lignes à la colonne spécifique dans la base de données.
 
 #### <a name="syntax"></a>Syntaxe
 
@@ -908,39 +908,39 @@ COLUMN_ENTRY_PS_LENGTH_STATUS(nOrdinal, nPrecision, nScale, data, length, status
 
 #### <a name="parameters"></a>Paramètres
 
-Voir [DBBINDING](/previous-versions/windows/desktop/ms716845(v=vs.85)) dans la *référence du programmeur OLE DB*.
+Consultez [DBBINDING](/previous-versions/windows/desktop/ms716845(v=vs.85)) dans le *Guide de référence du programmeur OLE DB*.
 
 *nOrdinal*<br/>
-[dans] Le numéro de colonne.
+dans Numéro de la colonne.
 
 *nPrecision*<br/>
-[dans] La précision maximale de la colonne que vous souhaitez lier.
+dans Précision maximale de la colonne que vous souhaitez lier.
 
-*nScale (en)*<br/>
-[dans] L’échelle de la colonne que vous souhaitez lier.
+*nScale*<br/>
+dans Échelle de la colonne que vous souhaitez lier.
 
 *data*<br/>
-[dans] Le membre de données correspondant dans l’enregistrement utilisateur.
+dans Données membres correspondantes dans l’enregistrement de l’utilisateur.
 
 *length*<br/>
-[dans] La variable à lié à la longueur de la colonne.
+dans Variable à lier à la longueur de la colonne.
 
 *statut*<br/>
-[dans] La variable à lié à l’état de la colonne.
+dans Variable à lier à l’état de colonne.
 
 #### <a name="remarks"></a>Notes
 
-Vous permet de spécifier la précision et l’échelle de la colonne que vous souhaitez lier. Utilisez cette macro lorsque vous souhaitez prendre en charge les variables de longueur et d’état. Il est utilisé dans les endroits suivants:
+Vous permet de spécifier la précision et l’échelle de la colonne que vous souhaitez lier. Utilisez cette macro lorsque vous souhaitez prendre en charge des variables d’État et de longueur. Il est utilisé aux emplacements suivants :
 
-- Entre les [macros BEGIN_COLUMN_MAP](../../data/oledb/begin-column-map.md) et [END_COLUMN_MAP.](../../data/oledb/end-column-map.md)
+- Entre les macros [BEGIN_COLUMN_MAP](../../data/oledb/begin-column-map.md) et [END_COLUMN_MAP](../../data/oledb/end-column-map.md) .
 
-- Entre les [macros BEGIN_ACCESSOR](../../data/oledb/begin-accessor.md) et [END_ACCESSOR.](../../data/oledb/end-accessor.md)
+- Entre les macros [BEGIN_ACCESSOR](../../data/oledb/begin-accessor.md) et [END_ACCESSOR](../../data/oledb/end-accessor.md) .
 
-- Entre les [BEGIN_PARAM_MAP](../../data/oledb/begin-param-map.md) et [END_PARAM_MAP](../../data/oledb/end-param-map.md) macros.
+- Entre les macros [BEGIN_PARAM_MAP](../../data/oledb/begin-param-map.md) et [END_PARAM_MAP](../../data/oledb/end-param-map.md) .
 
 ### <a name="column_entry_ps_status"></a><a name="column_entry_ps_status"></a>COLUMN_ENTRY_PS_STATUS
 
-Représente une liaison sur le ligne à la colonne spécifique de la base de données.
+Représente une liaison sur l’ensemble de lignes à la colonne spécifique dans la base de données.
 
 #### <a name="syntax"></a>Syntaxe
 
@@ -950,36 +950,36 @@ COLUMN_ENTRY_PS_STATUS(nOrdinal, nPrecision, nScale, data, status)
 
 #### <a name="parameters"></a>Paramètres
 
-Voir [DBBINDING](/previous-versions/windows/desktop/ms716845(v=vs.85)) dans la *référence du programmeur OLE DB*.
+Consultez [DBBINDING](/previous-versions/windows/desktop/ms716845(v=vs.85)) dans le *Guide de référence du programmeur OLE DB*.
 
 *nOrdinal*<br/>
-[dans] Le numéro de colonne.
+dans Numéro de la colonne.
 
 *nPrecision*<br/>
-[dans] La précision maximale de la colonne que vous souhaitez lier.
+dans Précision maximale de la colonne que vous souhaitez lier.
 
-*nScale (en)*<br/>
-[dans] L’échelle de la colonne que vous souhaitez lier.
+*nScale*<br/>
+dans Échelle de la colonne que vous souhaitez lier.
 
 *data*<br/>
-[dans] Le membre de données correspondant dans l’enregistrement utilisateur.
+dans Données membres correspondantes dans l’enregistrement de l’utilisateur.
 
 *statut*<br/>
-[dans] La variable à lié à l’état de la colonne.
+dans Variable à lier à l’état de colonne.
 
 #### <a name="remarks"></a>Notes
 
-Vous permet de spécifier la précision et l’échelle de la colonne que vous souhaitez lier. Cette macro soutient la variable *de statut.* Il est utilisé dans les endroits suivants:
+Vous permet de spécifier la précision et l’échelle de la colonne que vous souhaitez lier. Cette macro prend en charge la variable d' *État* . Il est utilisé aux emplacements suivants :
 
-- Entre les [macros BEGIN_COLUMN_MAP](../../data/oledb/begin-column-map.md) et [END_COLUMN_MAP.](../../data/oledb/end-column-map.md)
+- Entre les macros [BEGIN_COLUMN_MAP](../../data/oledb/begin-column-map.md) et [END_COLUMN_MAP](../../data/oledb/end-column-map.md) .
 
-- Entre les [macros BEGIN_ACCESSOR](../../data/oledb/begin-accessor.md) et [END_ACCESSOR.](../../data/oledb/end-accessor.md)
+- Entre les macros [BEGIN_ACCESSOR](../../data/oledb/begin-accessor.md) et [END_ACCESSOR](../../data/oledb/end-accessor.md) .
 
-- Entre les [BEGIN_PARAM_MAP](../../data/oledb/begin-param-map.md) et [END_PARAM_MAP](../../data/oledb/end-param-map.md) macros.
+- Entre les macros [BEGIN_PARAM_MAP](../../data/oledb/begin-param-map.md) et [END_PARAM_MAP](../../data/oledb/end-param-map.md) .
 
 ### <a name="column_entry_status"></a><a name="column_entry_status"></a>COLUMN_ENTRY_STATUS
 
-Représente une liaison sur le ligne à la colonne spécifique de la base de données.
+Représente une liaison sur l’ensemble de lignes à la colonne spécifique dans la base de données.
 
 #### <a name="syntax"></a>Syntaxe
 
@@ -989,30 +989,30 @@ COLUMN_ENTRY_STATUS(nOrdinal, data, status)
 
 #### <a name="parameters"></a>Paramètres
 
-Voir [DBBINDING](/previous-versions/windows/desktop/ms716845(v=vs.85)) dans la *référence du programmeur OLE DB*.
+Consultez [DBBINDING](/previous-versions/windows/desktop/ms716845(v=vs.85)) dans le *Guide de référence du programmeur OLE DB*.
 
 *nOrdinal*<br/>
-[dans] Le numéro de colonne.
+dans Numéro de la colonne.
 
 *data*<br/>
-[dans] Le membre de données correspondant dans l’enregistrement utilisateur.
+dans Données membres correspondantes dans l’enregistrement de l’utilisateur.
 
 *statut*<br/>
-[dans] La variable à lié à l’état de la colonne.
+dans Variable à lier à l’état de colonne.
 
 #### <a name="remarks"></a>Notes
 
-Cette macro soutient la variable *de statut.* Il est utilisé dans les endroits suivants:
+Cette macro prend en charge la variable d' *État* . Il est utilisé aux emplacements suivants :
 
-- Entre les [macros BEGIN_COLUMN_MAP](../../data/oledb/begin-column-map.md) et [END_COLUMN_MAP.](../../data/oledb/end-column-map.md)
+- Entre les macros [BEGIN_COLUMN_MAP](../../data/oledb/begin-column-map.md) et [END_COLUMN_MAP](../../data/oledb/end-column-map.md) .
 
-- Entre les [macros BEGIN_ACCESSOR](../../data/oledb/begin-accessor.md) et [END_ACCESSOR.](../../data/oledb/end-accessor.md)
+- Entre les macros [BEGIN_ACCESSOR](../../data/oledb/begin-accessor.md) et [END_ACCESSOR](../../data/oledb/end-accessor.md) .
 
-- Entre les [BEGIN_PARAM_MAP](../../data/oledb/begin-param-map.md) et [END_PARAM_MAP](../../data/oledb/end-param-map.md) macros.
+- Entre les macros [BEGIN_PARAM_MAP](../../data/oledb/begin-param-map.md) et [END_PARAM_MAP](../../data/oledb/end-param-map.md) .
 
 ### <a name="column_entry_type"></a><a name="column_entry_type"></a>COLUMN_ENTRY_TYPE
 
-Représente une liaison à la colonne spécifique de la base de données. Prend en charge le paramètre *de type.*
+Représente une liaison à la colonne spécifique dans la base de données. Prend en charge le paramètre de *type* .
 
 #### <a name="syntax"></a>Syntaxe
 
@@ -1023,13 +1023,13 @@ COLUMN_ENTRY_TYPE (nOrdinal, wType, data)
 #### <a name="parameters"></a>Paramètres
 
 *nOrdinal*<br/>
-[dans] Le numéro de colonne.
+dans Numéro de la colonne.
 
 *wType*<br/>
-[dans] Type de données d’entrée de colonne.
+dans Type de données de l’entrée de colonne.
 
 *data*<br/>
-[dans] Le membre de données correspondant dans l’enregistrement utilisateur.
+dans Données membres correspondantes dans l’enregistrement de l’utilisateur.
 
 #### <a name="remarks"></a>Notes
 
@@ -1037,7 +1037,7 @@ Cette macro est une variante spécialisée de la macro [COLUMN_ENTRY](../../data
 
 ### <a name="column_entry_type_size"></a><a name="column_entry_type_size"></a>COLUMN_ENTRY_TYPE_SIZE
 
-Représente une liaison à la colonne spécifique de la base de données. Prend en charge les paramètres *de type* et *de taille.*
+Représente une liaison à la colonne spécifique dans la base de données. Prend en charge les paramètres de *type* et de *taille* .
 
 #### <a name="syntax"></a>Syntaxe
 
@@ -1048,24 +1048,24 @@ COLUMN_ENTRY_TYPE_SIZE(nOrdinal, wType, nLength, data)
 #### <a name="parameters"></a>Paramètres
 
 *nOrdinal*<br/>
-[dans] Le numéro de colonne.
+dans Numéro de la colonne.
 
 *wType*<br/>
-[dans] Type de données d’entrée de colonne.
+dans Type de données de l’entrée de colonne.
 
-*nLength (en)*<br/>
-[dans] Taille de l’entrée de colonne dans les octets.
+*nLength*<br/>
+dans Taille de l’entrée de colonne en octets.
 
 *data*<br/>
-[dans] Le membre de données correspondant dans l’enregistrement utilisateur.
+dans Données membres correspondantes dans l’enregistrement de l’utilisateur.
 
 #### <a name="remarks"></a>Notes
 
-Cette macro est une variante spécialisée de la macro [COLUMN_ENTRY](../../data/oledb/column-entry.md) qui fournit un moyen de spécifier la taille et le type de données.
+Cette macro est une variante spécialisée de la macro [COLUMN_ENTRY](../../data/oledb/column-entry.md) qui fournit un moyen de spécifier la taille et le type des données.
 
 ### <a name="column_name"></a><a name="column_name"></a>COLUMN_NAME
 
-Représente une liaison sur le ligne à la colonne spécifique dans le ramage. Semblable à [COLUMN_ENTRY](../../data/oledb/column-entry.md), sauf que cette macro prend le nom de colonne au lieu du numéro de colonne.
+Représente une liaison sur l’ensemble de lignes à la colonne spécifique dans l’ensemble de lignes. Semblable à [COLUMN_ENTRY](../../data/oledb/column-entry.md), sauf que cette macro prend le nom de colonne à la place du numéro de colonne.
 
 #### <a name="syntax"></a>Syntaxe
 
@@ -1075,25 +1075,25 @@ COLUMN_NAME(pszName, data)
 
 #### <a name="parameters"></a>Paramètres
 
-*pszName (en)*<br/>
-[dans] Un pointeur sur le nom de la colonne. Le nom doit être une chaîne Unicode. Vous pouvez y parvenir en mettant un «L» en `L"MyColumn"`face du nom, par exemple: .
+*pszName*<br/>
+dans Pointeur vers le nom de la colonne. Le nom doit être une chaîne Unicode. Pour ce faire, vous pouvez placer un « L » devant le nom, par exemple : `L"MyColumn"` .
 
 *data*<br/>
-[dans] Le membre de données correspondant dans l’enregistrement utilisateur.
+dans Données membres correspondantes dans l’enregistrement de l’utilisateur.
 
 #### <a name="remarks"></a>Notes
 
-Les macros COLUMN_NAME_ sont utilisées aux mêmes endroits que [COLUMN_ENTRY](../../data/oledb/column-entry.md):
+Les macros COLUMN_NAME_ * sont utilisées aux mêmes emplacements que [COLUMN_ENTRY](../../data/oledb/column-entry.md):
 
-- Entre les [macros BEGIN_COLUMN_MAP](../../data/oledb/begin-column-map.md) et [END_COLUMN_MAP.](../../data/oledb/end-column-map.md)
+- Entre les macros [BEGIN_COLUMN_MAP](../../data/oledb/begin-column-map.md) et [END_COLUMN_MAP](../../data/oledb/end-column-map.md) .
 
-- Entre les [macros BEGIN_ACCESSOR](../../data/oledb/begin-accessor.md) et [END_ACCESSOR.](../../data/oledb/end-accessor.md)
+- Entre les macros [BEGIN_ACCESSOR](../../data/oledb/begin-accessor.md) et [END_ACCESSOR](../../data/oledb/end-accessor.md) .
 
-- Entre les [BEGIN_PARAM_MAP](../../data/oledb/begin-param-map.md) et [END_PARAM_MAP](../../data/oledb/end-param-map.md) macros.
+- Entre les macros [BEGIN_PARAM_MAP](../../data/oledb/begin-param-map.md) et [END_PARAM_MAP](../../data/oledb/end-param-map.md) .
 
 ### <a name="column_name_ex"></a><a name="column_name_ex"></a>COLUMN_NAME_EX
 
-Représente une liaison sur le ligne à la colonne spécifique dans le ramage. Semblable à [COLUMN_NAME](../../data/oledb/column-name.md), sauf que cette macro prend également le type de données, la taille, la précision, l’échelle, la longueur de colonne, et l’état de colonne.
+Représente une liaison sur l’ensemble de lignes à la colonne spécifique dans l’ensemble de lignes. Semblable à [column_name](../../data/oledb/column-name.md), à ceci près que cette macro prend également le type de données, la taille, la précision, l’échelle, la longueur de colonne et l’état de colonne.
 
 #### <a name="syntax"></a>Syntaxe
 
@@ -1103,37 +1103,37 @@ COLUMN_NAME_EX(pszName, wType, nLength, nPrecision, nScale, data, length, status
 
 #### <a name="parameters"></a>Paramètres
 
-*pszName (en)*<br/>
-[dans] Un pointeur sur le nom de la colonne. Le nom doit être une chaîne Unicode. Vous pouvez y parvenir en mettant un «L» en `L"MyColumn"`face du nom, par exemple: .
+*pszName*<br/>
+dans Pointeur vers le nom de la colonne. Le nom doit être une chaîne Unicode. Pour ce faire, vous pouvez placer un « L » devant le nom, par exemple : `L"MyColumn"` .
 
 *wType*<br/>
-[dans] Le type de données.
+dans Type de données.
 
-*nLength (en)*<br/>
-[dans] La taille des données dans les octets.
+*nLength*<br/>
+dans Taille des données en octets.
 
 *nPrecision*<br/>
-[dans] La précision maximale à utiliser lors de `DBTYPE_NUMERIC`l’obtention de données et *wType* est . Sinon, ce paramètre est ignoré.
+dans Précision maximale à utiliser lors de l’obtention de données et de *wType* `DBTYPE_NUMERIC` . Sinon, ce paramètre est ignoré.
 
-*nScale (en)*<br/>
-[dans] L’échelle à utiliser lors de l’obtention de données et *wType* est `DBTYPE_NUMERIC` ou `DBTYPE_DECIMAL`.
+*nScale*<br/>
+dans L’échelle à utiliser lors de l’obtention de données et de *wType* est `DBTYPE_NUMERIC` ou `DBTYPE_DECIMAL` .
 
 *data*<br/>
-[dans] Le membre de données correspondant dans l’enregistrement utilisateur.
+dans Données membres correspondantes dans l’enregistrement de l’utilisateur.
 
 *length*<br/>
-[dans] La variable à lié à la longueur de la colonne.
+dans Variable à lier à la longueur de la colonne.
 
 *statut*<br/>
-[dans] La variable à lié à l’état de la colonne.
+dans Variable à lier à l’état de colonne.
 
 #### <a name="remarks"></a>Notes
 
-Consultez [COLUMN_NAME](../../data/oledb/column-name.md) pour obtenir des informations sur l’endroit où les macros COLUMN_NAME_ sont utilisées.
+Pour plus d’informations sur l’utilisation des macros COLUMN_NAME_ *, consultez [column_name](../../data/oledb/column-name.md) .
 
 ### <a name="column_name_length"></a><a name="column_name_length"></a>COLUMN_NAME_LENGTH
 
-Représente une liaison sur le ligne à la colonne spécifique dans le ramage. Semblable à [COLUMN_NAME](../../data/oledb/column-name.md), sauf que cette macro prend également la longueur de colonne.
+Représente une liaison sur l’ensemble de lignes à la colonne spécifique dans l’ensemble de lignes. Semblable à [column_name](../../data/oledb/column-name.md), sauf que cette macro prend également une longueur de colonne.
 
 #### <a name="syntax"></a>Syntaxe
 
@@ -1143,22 +1143,22 @@ COLUMN_NAME_LENGTH(pszName, data, length)
 
 #### <a name="parameters"></a>Paramètres
 
-*pszName (en)*<br/>
-[dans] Un pointeur sur le nom de la colonne. Le nom doit être une chaîne Unicode. Vous pouvez y parvenir en mettant un «L» en `L"MyColumn"`face du nom, par exemple: .
+*pszName*<br/>
+dans Pointeur vers le nom de la colonne. Le nom doit être une chaîne Unicode. Pour ce faire, vous pouvez placer un « L » devant le nom, par exemple : `L"MyColumn"` .
 
 *data*<br/>
-[dans] Le membre de données correspondant dans l’enregistrement utilisateur.
+dans Données membres correspondantes dans l’enregistrement de l’utilisateur.
 
 *length*<br/>
-[dans] La variable à lié à la longueur de la colonne.
+dans Variable à lier à la longueur de la colonne.
 
 #### <a name="remarks"></a>Notes
 
-Consultez [COLUMN_NAME](../../data/oledb/column-name.md) pour obtenir des informations sur l’endroit où les macros COLUMN_NAME_ sont utilisées.
+Pour plus d’informations sur l’utilisation des macros COLUMN_NAME_ *, consultez [column_name](../../data/oledb/column-name.md) .
 
 ### <a name="column_name_length_status"></a><a name="column_name_length_status"></a>COLUMN_NAME_LENGTH_STATUS
 
-Représente une liaison sur le ligne à la colonne spécifique dans le ramage. Semblable à [COLUMN_NAME](../../data/oledb/column-name.md), sauf que cette macro prend également la longueur de la colonne et le statut de colonne.
+Représente une liaison sur l’ensemble de lignes à la colonne spécifique dans l’ensemble de lignes. Semblable à [column_name](../../data/oledb/column-name.md), sauf que cette macro prend également la longueur de colonne et l’état de colonne.
 
 #### <a name="syntax"></a>Syntaxe
 
@@ -1168,25 +1168,25 @@ COLUMN_NAME_LENGTH_STATUS(pszName, data, length, status )
 
 #### <a name="parameters"></a>Paramètres
 
-*pszName (en)*<br/>
-[dans] Un pointeur sur le nom de la colonne. Le nom doit être une chaîne Unicode. Vous pouvez y parvenir en mettant un «L» en `L"MyColumn"`face du nom, par exemple: .
+*pszName*<br/>
+dans Pointeur vers le nom de la colonne. Le nom doit être une chaîne Unicode. Pour ce faire, vous pouvez placer un « L » devant le nom, par exemple : `L"MyColumn"` .
 
 *data*<br/>
-[dans] Le membre de données correspondant dans l’enregistrement utilisateur.
+dans Données membres correspondantes dans l’enregistrement de l’utilisateur.
 
 *length*<br/>
-[dans] La variable à lié à la longueur de la colonne.
+dans Variable à lier à la longueur de la colonne.
 
 *statut*<br/>
-[dans] La variable à lié à l’état de la colonne.
+dans Variable à lier à l’état de colonne.
 
 #### <a name="remarks"></a>Notes
 
-Consultez [COLUMN_NAME](../../data/oledb/column-name.md) pour obtenir des informations sur l’endroit où les macros COLUMN_NAME_ sont utilisées.
+Pour plus d’informations sur l’utilisation des macros COLUMN_NAME_ *, consultez [column_name](../../data/oledb/column-name.md) .
 
 ### <a name="column_name_ps"></a><a name="column_name_ps"></a>COLUMN_NAME_PS
 
-Représente une liaison sur le ligne à la colonne spécifique dans le ramage. Semblable à [COLUMN_NAME](../../data/oledb/column-name.md), sauf que cette macro prend également la précision et l’échelle.
+Représente une liaison sur l’ensemble de lignes à la colonne spécifique dans l’ensemble de lignes. Semblable à [column_name](../../data/oledb/column-name.md), sauf que cette macro prend également la précision et l’échelle.
 
 #### <a name="syntax"></a>Syntaxe
 
@@ -1196,25 +1196,25 @@ COLUMN_NAME_PS(pszName, nPrecision, nScale, data )
 
 #### <a name="parameters"></a>Paramètres
 
-*pszName (en)*<br/>
-[dans] Un pointeur sur le nom de la colonne. Le nom doit être une chaîne Unicode. Vous pouvez y parvenir en mettant un «L» en `L"MyColumn"`face du nom, par exemple: .
+*pszName*<br/>
+dans Pointeur vers le nom de la colonne. Le nom doit être une chaîne Unicode. Pour ce faire, vous pouvez placer un « L » devant le nom, par exemple : `L"MyColumn"` .
 
 *nPrecision*<br/>
-[dans] La précision maximale de la colonne que vous souhaitez lier.
+dans Précision maximale de la colonne que vous souhaitez lier.
 
-*nScale (en)*<br/>
-[dans] L’échelle de la colonne que vous souhaitez lier.
+*nScale*<br/>
+dans Échelle de la colonne que vous souhaitez lier.
 
 *data*<br/>
-[dans] Le membre de données correspondant dans l’enregistrement utilisateur.
+dans Données membres correspondantes dans l’enregistrement de l’utilisateur.
 
 #### <a name="remarks"></a>Notes
 
-Consultez [COLUMN_NAME](../../data/oledb/column-name.md) pour obtenir des informations sur l’endroit où les macros COLUMN_NAME_ sont utilisées.
+Pour plus d’informations sur l’utilisation des macros COLUMN_NAME_ *, consultez [column_name](../../data/oledb/column-name.md) .
 
 ### <a name="column_name_ps_length"></a><a name="column_name_ps_length"></a>COLUMN_NAME_PS_LENGTH
 
-Représente une liaison sur le ligne à la colonne spécifique dans le ramage. Semblable à [COLUMN_NAME](../../data/oledb/column-name.md), sauf que cette macro prend également la précision, l’échelle et la longueur de la colonne.
+Représente une liaison sur l’ensemble de lignes à la colonne spécifique dans l’ensemble de lignes. Semblable à [column_name](../../data/oledb/column-name.md), sauf que cette macro accepte également la précision, l’échelle et la longueur de colonne.
 
 #### <a name="syntax"></a>Syntaxe
 
@@ -1224,28 +1224,28 @@ COLUMN_NAME_PS_LENGTH(pszName, nPrecision, nScale, data, length )
 
 #### <a name="parameters"></a>Paramètres
 
-*pszName (en)*<br/>
-[dans] Un pointeur sur le nom de la colonne. Le nom doit être une chaîne Unicode. Vous pouvez y parvenir en mettant un «L» en `L"MyColumn"`face du nom, par exemple: .
+*pszName*<br/>
+dans Pointeur vers le nom de la colonne. Le nom doit être une chaîne Unicode. Pour ce faire, vous pouvez placer un « L » devant le nom, par exemple : `L"MyColumn"` .
 
 *nPrecision*<br/>
-[dans] La précision maximale de la colonne que vous souhaitez lier.
+dans Précision maximale de la colonne que vous souhaitez lier.
 
-*nScale (en)*<br/>
-[dans] L’échelle de la colonne que vous souhaitez lier.
+*nScale*<br/>
+dans Échelle de la colonne que vous souhaitez lier.
 
 *data*<br/>
-[dans] Le membre de données correspondant dans l’enregistrement utilisateur.
+dans Données membres correspondantes dans l’enregistrement de l’utilisateur.
 
 *length*<br/>
-[dans] La variable à lié à la longueur de la colonne.
+dans Variable à lier à la longueur de la colonne.
 
 #### <a name="remarks"></a>Notes
 
-Consultez [COLUMN_NAME](../../data/oledb/column-name.md) pour obtenir des informations sur l’endroit où les macros COLUMN_NAME_ sont utilisées.
+Pour plus d’informations sur l’utilisation des macros COLUMN_NAME_ *, consultez [column_name](../../data/oledb/column-name.md) .
 
 ### <a name="column_name_ps_length_status"></a><a name="column_name_ps_length_status"></a>COLUMN_NAME_PS_LENGTH_STATUS
 
-Représente une liaison sur le ligne à la colonne spécifique dans le ramage. Semblable à [COLUMN_NAME](../../data/oledb/column-name.md), sauf que cette macro prend également la précision, l’échelle, la longueur de colonne, et l’état de colonne.
+Représente une liaison sur l’ensemble de lignes à la colonne spécifique dans l’ensemble de lignes. Semblable à [column_name](../../data/oledb/column-name.md), à ceci près que cette macro accepte également la précision, l’échelle, la longueur de colonne et l’état de colonne.
 
 #### <a name="syntax"></a>Syntaxe
 
@@ -1255,31 +1255,31 @@ COLUMN_NAME_PS_LENGTH_STATUS(pszName, nPrecision, nScale, data, length, status )
 
 #### <a name="parameters"></a>Paramètres
 
-*pszName (en)*<br/>
-[dans] Un pointeur sur le nom de la colonne. Le nom doit être une chaîne Unicode. Vous pouvez y parvenir en mettant un «L» en `L"MyColumn"`face du nom, par exemple: .
+*pszName*<br/>
+dans Pointeur vers le nom de la colonne. Le nom doit être une chaîne Unicode. Pour ce faire, vous pouvez placer un « L » devant le nom, par exemple : `L"MyColumn"` .
 
 *nPrecision*<br/>
-[dans] La précision maximale de la colonne que vous souhaitez lier.
+dans Précision maximale de la colonne que vous souhaitez lier.
 
-*nScale (en)*<br/>
-[dans] L’échelle de la colonne que vous souhaitez lier.
+*nScale*<br/>
+dans Échelle de la colonne que vous souhaitez lier.
 
 *data*<br/>
-[dans] Le membre de données correspondant dans l’enregistrement utilisateur.
+dans Données membres correspondantes dans l’enregistrement de l’utilisateur.
 
 *length*<br/>
-[dans] La variable à lié à la longueur de la colonne.
+dans Variable à lier à la longueur de la colonne.
 
 *statut*<br/>
-[dans] La variable à lié à l’état de la colonne.
+dans Variable à lier à l’état de colonne.
 
 #### <a name="remarks"></a>Notes
 
-Consultez [COLUMN_NAME](../../data/oledb/column-name.md) pour obtenir des informations sur l’endroit où les macros COLUMN_NAME_ sont utilisées.
+Pour plus d’informations sur l’utilisation des macros COLUMN_NAME_ *, consultez [column_name](../../data/oledb/column-name.md) .
 
 ### <a name="column_name_ps_status"></a><a name="column_name_ps_status"></a>COLUMN_NAME_PS_STATUS
 
-Représente une liaison sur le ligne à la colonne spécifique dans le ramage. Semblable à [COLUMN_NAME](../../data/oledb/column-name.md), sauf que cette macro prend également la précision, l’échelle et le statut de colonne.
+Représente une liaison sur l’ensemble de lignes à la colonne spécifique dans l’ensemble de lignes. Semblable à [column_name](../../data/oledb/column-name.md), à ceci près que cette macro accepte également la précision, l’échelle et l’état des colonnes.
 
 #### <a name="syntax"></a>Syntaxe
 
@@ -1289,28 +1289,28 @@ COLUMN_NAME_PS_STATUS(pszName, nPrecision, nScale, data, status )
 
 #### <a name="parameters"></a>Paramètres
 
-*pszName (en)*<br/>
-[dans] Un pointeur sur le nom de la colonne. Le nom doit être une chaîne Unicode. Vous pouvez y parvenir en mettant un «L» en `L"MyColumn"`face du nom, par exemple: .
+*pszName*<br/>
+dans Pointeur vers le nom de la colonne. Le nom doit être une chaîne Unicode. Pour ce faire, vous pouvez placer un « L » devant le nom, par exemple : `L"MyColumn"` .
 
 *nPrecision*<br/>
-[dans] La précision maximale de la colonne que vous souhaitez lier.
+dans Précision maximale de la colonne que vous souhaitez lier.
 
-*nScale (en)*<br/>
-[dans] L’échelle de la colonne que vous souhaitez lier.
+*nScale*<br/>
+dans Échelle de la colonne que vous souhaitez lier.
 
 *data*<br/>
-[dans] Le membre de données correspondant dans l’enregistrement utilisateur.
+dans Données membres correspondantes dans l’enregistrement de l’utilisateur.
 
 *statut*<br/>
-[dans] La variable à lié à l’état de la colonne.
+dans Variable à lier à l’état de colonne.
 
 #### <a name="remarks"></a>Notes
 
-Consultez [COLUMN_NAME](../../data/oledb/column-name.md) pour obtenir des informations sur l’endroit où les macros COLUMN_NAME_ sont utilisées.
+Pour plus d’informations sur l’utilisation des macros COLUMN_NAME_ *, consultez [column_name](../../data/oledb/column-name.md) .
 
 ### <a name="column_name_status"></a><a name="column_name_status"></a>COLUMN_NAME_STATUS
 
-Représente une liaison sur le ligne à la colonne spécifique dans le ramage. Semblable à [COLUMN_NAME](../../data/oledb/column-name.md), sauf que cette macro prend également le statut de colonne.
+Représente une liaison sur l’ensemble de lignes à la colonne spécifique dans l’ensemble de lignes. Semblable à [column_name](../../data/oledb/column-name.md), sauf que cette macro prend également l’état de colonne.
 
 #### <a name="syntax"></a>Syntaxe
 
@@ -1320,22 +1320,22 @@ COLUMN_NAME_STATUS(pszName, data, status )
 
 #### <a name="parameters"></a>Paramètres
 
-*pszName (en)*<br/>
-[dans] Un pointeur sur le nom de la colonne. Le nom doit être une chaîne Unicode. Vous pouvez y parvenir en mettant un «L» en `L"MyColumn"`face du nom, par exemple: .
+*pszName*<br/>
+dans Pointeur vers le nom de la colonne. Le nom doit être une chaîne Unicode. Pour ce faire, vous pouvez placer un « L » devant le nom, par exemple : `L"MyColumn"` .
 
 *data*<br/>
-[dans] Le membre de données correspondant dans l’enregistrement utilisateur.
+dans Données membres correspondantes dans l’enregistrement de l’utilisateur.
 
 *statut*<br/>
-[dans] La variable à lié à l’état de la colonne.
+dans Variable à lier à l’état de colonne.
 
 #### <a name="remarks"></a>Notes
 
-Consultez [COLUMN_NAME](../../data/oledb/column-name.md) pour obtenir des informations sur l’endroit où les macros COLUMN_NAME_ sont utilisées.
+Pour plus d’informations sur l’utilisation des macros COLUMN_NAME_ *, consultez [column_name](../../data/oledb/column-name.md) .
 
 ### <a name="column_name_type"></a><a name="column_name_type"></a>COLUMN_NAME_TYPE
 
-Représente une liaison sur le ligne à la colonne spécifique dans le ramage. Semblable à [COLUMN_NAME](../../data/oledb/column-name.md), sauf que cette macro prend également le type de données.
+Représente une liaison sur l’ensemble de lignes à la colonne spécifique dans l’ensemble de lignes. Semblable à [column_name](../../data/oledb/column-name.md), sauf que cette macro prend également le type de données.
 
 #### <a name="syntax"></a>Syntaxe
 
@@ -1345,22 +1345,22 @@ COLUMN_NAME_TYPE(pszName, wType, data)
 
 #### <a name="parameters"></a>Paramètres
 
-*pszName (en)*<br/>
-[dans] Un pointeur sur le nom de la colonne. Le nom doit être une chaîne Unicode. Vous pouvez y parvenir en mettant un «L» en `L"MyColumn"`face du nom, par exemple: .
+*pszName*<br/>
+dans Pointeur vers le nom de la colonne. Le nom doit être une chaîne Unicode. Pour ce faire, vous pouvez placer un « L » devant le nom, par exemple : `L"MyColumn"` .
 
 *wType*<br/>
-[dans] Le type de données.
+dans Type de données.
 
 *data*<br/>
-[dans] Le membre de données correspondant dans l’enregistrement utilisateur.
+dans Données membres correspondantes dans l’enregistrement de l’utilisateur.
 
 #### <a name="remarks"></a>Notes
 
-Consultez [COLUMN_NAME](../../data/oledb/column-name.md) pour obtenir des informations sur l’endroit où les macros COLUMN_NAME_ sont utilisées.
+Pour plus d’informations sur l’utilisation des macros COLUMN_NAME_ *, consultez [column_name](../../data/oledb/column-name.md) .
 
 ### <a name="column_name_type_ps"></a><a name="column_name_type_ps"></a>COLUMN_NAME_TYPE_PS
 
-Représente une liaison sur le ligne à la colonne spécifique dans le ramage. Semblable à [COLUMN_NAME](../../data/oledb/column-name.md), sauf que cette macro prend également le type de données, la précision et l’échelle.
+Représente une liaison sur l’ensemble de lignes à la colonne spécifique dans l’ensemble de lignes. Semblable à [column_name](../../data/oledb/column-name.md), à ceci près que cette macro prend également le type de données, la précision et l’échelle.
 
 #### <a name="syntax"></a>Syntaxe
 
@@ -1370,28 +1370,28 @@ COLUMN_NAME_TYPE_PS(pszName, wType, nPrecision, nScale, data)
 
 #### <a name="parameters"></a>Paramètres
 
-*pszName (en)*<br/>
-[dans] Un pointeur sur le nom de la colonne. Le nom doit être une chaîne Unicode. Vous pouvez y parvenir en mettant un «L» en `L"MyColumn"`face du nom, par exemple: .
+*pszName*<br/>
+dans Pointeur vers le nom de la colonne. Le nom doit être une chaîne Unicode. Pour ce faire, vous pouvez placer un « L » devant le nom, par exemple : `L"MyColumn"` .
 
 *wType*<br/>
-[dans] Le type de données.
+dans Type de données.
 
 *nPrecision*<br/>
-[dans] La précision maximale à utiliser lors de `DBTYPE_NUMERIC`l’obtention de données et *wType* est . Sinon, ce paramètre est ignoré.
+dans Précision maximale à utiliser lors de l’obtention de données et de *wType* `DBTYPE_NUMERIC` . Sinon, ce paramètre est ignoré.
 
-*nScale (en)*<br/>
-[dans] L’échelle à utiliser lors de l’obtention de données et *wType* est `DBTYPE_NUMERIC` ou `DBTYPE_DECIMAL`.
+*nScale*<br/>
+dans L’échelle à utiliser lors de l’obtention de données et de *wType* est `DBTYPE_NUMERIC` ou `DBTYPE_DECIMAL` .
 
 *data*<br/>
-[dans] Le membre de données correspondant dans l’enregistrement utilisateur.
+dans Données membres correspondantes dans l’enregistrement de l’utilisateur.
 
 #### <a name="remarks"></a>Notes
 
-Consultez [COLUMN_NAME](../../data/oledb/column-name.md) pour obtenir des informations sur l’endroit où les macros COLUMN_NAME_ sont utilisées.
+Pour plus d’informations sur l’utilisation des macros COLUMN_NAME_ *, consultez [column_name](../../data/oledb/column-name.md) .
 
 ### <a name="column_name_type_size"></a><a name="column_name_type_size"></a>COLUMN_NAME_TYPE_SIZE
 
-Représente une liaison sur le ligne à la colonne spécifique dans le ramage. Semblable à [COLUMN_NAME](../../data/oledb/column-name.md), sauf que cette macro prend également le type de données et la taille.
+Représente une liaison sur l’ensemble de lignes à la colonne spécifique dans l’ensemble de lignes. Semblable à [column_name](../../data/oledb/column-name.md), à ceci près que cette macro prend également le type et la taille des données.
 
 #### <a name="syntax"></a>Syntaxe
 
@@ -1401,25 +1401,25 @@ COLUMN_NAME_TYPE_SIZE(pszName, wType, nLength, data)
 
 #### <a name="parameters"></a>Paramètres
 
-*pszName (en)*<br/>
-[dans] Un pointeur sur le nom de la colonne. Le nom doit être une chaîne Unicode. Vous pouvez y parvenir en mettant un «L» en `L"MyColumn"`face du nom, par exemple: .
+*pszName*<br/>
+dans Pointeur vers le nom de la colonne. Le nom doit être une chaîne Unicode. Pour ce faire, vous pouvez placer un « L » devant le nom, par exemple : `L"MyColumn"` .
 
 *wType*<br/>
-[dans] Le type de données.
+dans Type de données.
 
-*nLength (en)*<br/>
-[dans] La taille des données dans les octets.
+*nLength*<br/>
+dans Taille des données en octets.
 
 *data*<br/>
-[dans] Le membre de données correspondant dans l’enregistrement utilisateur.
+dans Données membres correspondantes dans l’enregistrement de l’utilisateur.
 
 #### <a name="remarks"></a>Notes
 
-Consultez [COLUMN_NAME](../../data/oledb/column-name.md) pour obtenir des informations sur l’endroit où les macros COLUMN_NAME_ sont utilisées.
+Pour plus d’informations sur l’utilisation des macros COLUMN_NAME_ *, consultez [column_name](../../data/oledb/column-name.md) .
 
 ### <a name="column_name_type_status"></a><a name="column_name_type_status"></a>COLUMN_NAME_TYPE_STATUS
 
-Représente une liaison sur le ligne à la colonne spécifique dans le ramage. Semblable à [COLUMN_NAME](../../data/oledb/column-name.md), sauf que cette macro prend également le type de données et le statut de colonne.
+Représente une liaison sur l’ensemble de lignes à la colonne spécifique dans l’ensemble de lignes. Semblable à [column_name](../../data/oledb/column-name.md), à ceci près que cette macro prend également le type de données et l’état de colonne.
 
 #### <a name="syntax"></a>Syntaxe
 
@@ -1429,25 +1429,25 @@ COLUMN_NAME_TYPE_STATUS(pszName, wType, status, data)
 
 #### <a name="parameters"></a>Paramètres
 
-*pszName (en)*<br/>
-[dans] Un pointeur sur le nom de la colonne. Le nom doit être une chaîne Unicode. Vous pouvez y parvenir en mettant un «L» en `L"MyColumn"`face du nom, par exemple: .
+*pszName*<br/>
+dans Pointeur vers le nom de la colonne. Le nom doit être une chaîne Unicode. Pour ce faire, vous pouvez placer un « L » devant le nom, par exemple : `L"MyColumn"` .
 
 *wType*<br/>
-[dans] Le type de données.
+dans Type de données.
 
 *statut*<br/>
-[dans] La variable à lié à l’état de la colonne.
+dans Variable à lier à l’état de colonne.
 
 *data*<br/>
-[dans] Le membre de données correspondant dans l’enregistrement utilisateur.
+dans Données membres correspondantes dans l’enregistrement de l’utilisateur.
 
 #### <a name="remarks"></a>Notes
 
-Consultez [COLUMN_NAME](../../data/oledb/column-name.md) pour obtenir des informations sur l’endroit où les macros COLUMN_NAME_ sont utilisées.
+Pour plus d’informations sur l’utilisation des macros COLUMN_NAME_ *, consultez [column_name](../../data/oledb/column-name.md) .
 
 ### <a name="end_column_map"></a><a name="end_column_map"></a>END_COLUMN_MAP
 
-Marque la fin des entrées de la carte de colonne.
+Marque la fin des entrées de mappage de colonne.
 
 #### <a name="syntax"></a>Syntaxe
 
@@ -1457,18 +1457,18 @@ END_COLUMN_MAP()
 
 #### <a name="remarks"></a>Notes
 
-Il est utilisé avec un seul accesseur sur un ligne. La macro BEGIN_COLUMN_MAP est complétée par la macro END_COLUMN_MAP.
+Elle est utilisée avec un seul accesseur sur un ensemble de lignes. La macro BEGIN_COLUMN_MAP s’est terminée avec la macro END_COLUMN_MAP.
 
 #### <a name="example"></a>Exemple
 
-Voir [BEGIN_COLUMN_MAP](../../data/oledb/begin-column-map.md).
+Consultez [BEGIN_COLUMN_MAP](../../data/oledb/begin-column-map.md).
 
 ### <a name="define_command"></a><a name="define_command"></a>DEFINE_COMMAND
 
-Spécifie la commande qui sera utilisée pour créer le jeu de ligne lors de l’utilisation de la classe [CCommand.](../../data/oledb/ccommand-class.md) Accepte uniquement les types de chaînes correspondant au type d’application spécifié (ANSI ou Unicode).
+Spécifie la commande qui sera utilisée pour créer l’ensemble de lignes lors de l’utilisation de la classe [CCommand](../../data/oledb/ccommand-class.md) . Accepte uniquement les types chaîne correspondant au type d’application spécifié (ANSI ou Unicode).
 
 > [!NOTE]
-> Il est recommandé d’utiliser [DEFINE_COMMAND_EX](../../data/oledb/define-command-ex.md) au lieu de DEFINE_COMMAND.
+> Nous vous recommandons d’utiliser [DEFINE_COMMAND_EX](../../data/oledb/define-command-ex.md) au lieu de DEFINE_COMMAND.
 
 #### <a name="syntax"></a>Syntaxe
 
@@ -1478,25 +1478,25 @@ DEFINE_COMMAND(x, szCommand)
 
 #### <a name="parameters"></a>Paramètres
 
-*X*<br/>
-[dans] Le nom de la classe d’enregistrement utilisateur (commande).
+*x*<br/>
+dans Nom de la classe d’enregistrement utilisateur (commande).
 
-*szCommand (en)*<br/>
-[dans] La chaîne de commande qui sera utilisée pour créer le ligne lors de l’utilisation [de CCommand](../../data/oledb/ccommand-class.md).
+*szCommand*<br/>
+dans Chaîne de commande qui sera utilisée pour créer l’ensemble de lignes lors de l’utilisation de [CCommand](../../data/oledb/ccommand-class.md).
 
 #### <a name="remarks"></a>Notes
 
-La chaîne de commande que vous spécifiez sera utilisée comme par défaut si vous ne spécifiez pas le texte de commande dans le [CCommand::Méthode ouverte.](../../data/oledb/ccommand-open.md)
+La chaîne de commande que vous spécifiez sera utilisée comme valeur par défaut si vous ne spécifiez pas de texte de commande dans la méthode [CCommand :: Open](../../data/oledb/ccommand-open.md) .
 
-Cette macro accepte les chaînes ANSI si vous construisez votre application sous forme de chaînes ANSI, ou Unicode si vous construisez votre application sous le nom d’Unicode. Il est recommandé d’utiliser [DEFINE_COMMAND_EX](../../data/oledb/define-command-ex.md) au lieu de DEFINE_COMMAND, car le premier accepte les chaînes Unicode, quel que soit le type d’application ANSI ou Unicode.
+Cette macro accepte les chaînes ANSI si vous générez votre application en tant que chaînes ANSI ou Unicode si vous générez votre application en Unicode. Nous vous recommandons d’utiliser [DEFINE_COMMAND_EX](../../data/oledb/define-command-ex.md) au lieu de DEFINE_COMMAND, car le premier accepte les chaînes Unicode, quel que soit le type d’application ANSI ou Unicode.
 
 #### <a name="example"></a>Exemple
 
-Voir [BOOKMARK_ENTRY](../../data/oledb/bookmark-entry.md).
+Consultez [BOOKMARK_ENTRY](../../data/oledb/bookmark-entry.md).
 
 ### <a name="define_command_ex"></a><a name="define_command_ex"></a>DEFINE_COMMAND_EX
 
-Spécifie la commande qui sera utilisée pour créer le jeu de ligne lors de l’utilisation de la classe [CCommand.](../../data/oledb/ccommand-class.md) Prend en charge les applications Unicode et ANSI.
+Spécifie la commande qui sera utilisée pour créer l’ensemble de lignes lors de l’utilisation de la classe [CCommand](../../data/oledb/ccommand-class.md) . Prend en charge les applications Unicode et ANSI.
 
 #### <a name="syntax"></a>Syntaxe
 
@@ -1506,25 +1506,25 @@ DEFINE_COMMAND_EX(x, wszCommand)
 
 #### <a name="parameters"></a>Paramètres
 
-*X*<br/>
-[dans] Le nom de la classe d’enregistrement utilisateur (commande).
+*x*<br/>
+dans Nom de la classe d’enregistrement utilisateur (commande).
 
-*wszCommand wszCommand*<br/>
-[dans] La chaîne de commande qui sera utilisée pour créer le ligne lors de l’utilisation [de CCommand](../../data/oledb/ccommand-class.md).
+*wszCommand*<br/>
+dans Chaîne de commande qui sera utilisée pour créer l’ensemble de lignes lors de l’utilisation de [CCommand](../../data/oledb/ccommand-class.md).
 
 #### <a name="remarks"></a>Notes
 
-La chaîne de commande que vous spécifiez sera utilisée comme par défaut si vous ne spécifiez pas le texte de commande dans le [CCommand::Méthode ouverte.](../../data/oledb/ccommand-open.md)
+La chaîne de commande que vous spécifiez sera utilisée comme valeur par défaut si vous ne spécifiez pas de texte de commande dans la méthode [CCommand :: Open](../../data/oledb/ccommand-open.md) .
 
-Cette macro accepte les chaînes Unicode, quel que soit le type d’application. Cette macro est préférée à [DEFINE_COMMAND](../../data/oledb/define-command.md) car elle prend en charge unicode ainsi que les applications ANSI.
+Cette macro accepte les chaînes Unicode, quel que soit le type d’application. Cette macro est préférable à [DEFINE_COMMAND](../../data/oledb/define-command.md) , car elle prend en charge les applications Unicode et ANSI.
 
 #### <a name="example"></a>Exemple
 
-Voir [BOOKMARK_ENTRY](../../data/oledb/bookmark-entry.md).
+Consultez [BOOKMARK_ENTRY](../../data/oledb/bookmark-entry.md).
 
 ### <a name="begin_param_map"></a><a name="begin_param_map"></a>BEGIN_PARAM_MAP
 
-Marque le début des entrées de carte de paramètres.
+Marque le début des entrées de mappage de paramètres.
 
 #### <a name="syntax"></a>Syntaxe
 
@@ -1534,20 +1534,20 @@ BEGIN_PARAM_MAP(x)
 
 #### <a name="parameters"></a>Paramètres
 
-*X*<br/>
+*x*<br/>
 [in] Nom de la classe d’enregistrement utilisateur.
 
 #### <a name="remarks"></a>Notes
 
-Les paramètres sont utilisés par [les commandes](/previous-versions/windows/desktop/ms724608(v=vs.85)).
+Les paramètres sont utilisés par les [commandes](/previous-versions/windows/desktop/ms724608(v=vs.85)).
 
 #### <a name="example"></a>Exemple
 
-Voir l’exemple pour le [BEGIN_COLUMN_MAP](../../data/oledb/begin-column-map.md) macro.
+Consultez l’exemple de la macro [BEGIN_COLUMN_MAP](../../data/oledb/begin-column-map.md) .
 
 ### <a name="end_param_map"></a><a name="end_param_map"></a>END_PARAM_MAP
 
-Marque la fin des entrées de carte de paramètres.
+Marque la fin des entrées de mappage de paramètres.
 
 #### <a name="syntax"></a>Syntaxe
 
@@ -1557,11 +1557,11 @@ END_PARAM_MAP()
 
 #### <a name="example"></a>Exemple
 
-Voir l’exemple pour le [BEGIN_PARAM_MAP](../../data/oledb/begin-param-map.md) macro.
+Consultez l’exemple de la macro [BEGIN_PARAM_MAP](../../data/oledb/begin-param-map.md) .
 
 ### <a name="set_param_type"></a><a name="set_param_type"></a>SET_PARAM_TYPE
 
-Spécifie COLUMN_ENTRY macros qui suivent l’entrée macro SET_PARAM_TYPE, la sortie ou l’entrée/sortie.
+Spécifie COLUMN_ENTRY macros qui suivent l’entrée, la sortie ou l’entrée/sortie de la macro SET_PARAM_TYPE.
 
 #### <a name="syntax"></a>Syntaxe
 
@@ -1576,15 +1576,15 @@ SET_PARAM_TYPE(type)
 
 #### <a name="remarks"></a>Notes
 
-Les fournisseurs prennent en charge uniquement les types d’entrée/sortie de paramètres qui sont pris en charge par la source de données sous-jacente. Le type est une combinaison `DBPARAMIO` d’une ou plusieurs valeurs (voir [Structures DBBINDING](/previous-versions/windows/desktop/ms716845(v=vs.85)) dans la *référence du programmeur OLE DB )*:
+Les fournisseurs prennent en charge uniquement les types d’entrée/sortie de paramètres qui sont pris en charge par la source de données sous-jacente. Le type est une combinaison d’une ou de plusieurs `DBPARAMIO` valeurs (consultez [structures DBBINDING](/previous-versions/windows/desktop/ms716845(v=vs.85)) dans le *OLE DB Guide de référence du programmeur*) :
 
-- `DBPARAMIO_NOTPARAM`L’accesseur n’a pas de paramètres. En règle `eParamIO` générale, vous définissez à cette valeur dans les accesseurs de ligne pour rappeler à l’utilisateur que les paramètres sont ignorés.
+- `DBPARAMIO_NOTPARAM`L’accesseur n’a aucun paramètre. En règle générale, vous définissez `eParamIO` sur cette valeur dans les accesseurs de ligne pour rappeler à l’utilisateur que les paramètres sont ignorés.
 
-- `DBPARAMIO_INPUT`Un paramètre d’entrée.
+- `DBPARAMIO_INPUT`Paramètre d’entrée.
 
-- `DBPARAMIO_OUTPUT`Un paramètre de sortie.
+- `DBPARAMIO_OUTPUT`Paramètre de sortie.
 
-- `DBPARAMIO_INPUT | DBPARAMIO_OUTPUT`Le paramètre est à la fois une entrée et un paramètre de sortie.
+- `DBPARAMIO_INPUT | DBPARAMIO_OUTPUT`Le paramètre est à la fois un paramètre d’entrée et un paramètre de sortie.
 
 #### <a name="example"></a>Exemple
 
@@ -1634,6 +1634,6 @@ END_COLUMN_MAP()
 
 ## <a name="see-also"></a>Voir aussi
 
-[Macros et fonctions mondiales pour OLE DB Consumer Templates](../../data/oledb/macros-and-global-functions-for-ole-db-consumer-templates.md)<br/>
+[Macros et fonctions globales pour les modèles de consommateur OLE DB](../../data/oledb/macros-and-global-functions-for-ole-db-consumer-templates.md)<br/>
 [Modèles du consommateur OLE DB](../../data/oledb/ole-db-consumer-templates-cpp.md)<br/>
-[OLE DB Consumer Templates Référence](../../data/oledb/ole-db-consumer-templates-reference.md)
+[Informations de référence sur les modèles de consommateurs OLE DB](../../data/oledb/ole-db-consumer-templates-reference.md)
